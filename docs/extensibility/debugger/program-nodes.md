@@ -1,5 +1,5 @@
 ---
-title: Program düğümleri | Microsoft Docs
+title: Program Düğümleri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - program nodes, adding
 - program nodes, superceding
 ms.assetid: 1c5a5c13-c14d-42c3-af11-4c63f1032c8d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 084a386cc7d7f9c6d606e7015e593a4075ba53a9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 2943f74c7316495be93c2f5c20998ffa685f5d01
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351432"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738224"
 ---
 # <a name="program-nodes"></a>Program düğümleri
-Hata ayıklayıcı mimarisinde bir *program düğüm*:
+Hata ayıklama mimarisinde, bir *program düğümü:*
 
-- Basit bir program açıklamasıdır.
+- Bir programın hafif bir açıklamasıdır.
 
-- Kendisi ve onu çalışan işlemi tanımlayabilirsiniz. Öğesinden ayrıldı ve varsa, oluşturulan hata ayıklama altyapısı (DE) tanımlamak için bir program düğümü eklenebilir.
+- Kendini ve içinde yürüttüğü süreci tanımlayabilir. Bir program düğümüne eklenebilir, ayrılabilir ve varsa onu oluşturan hata ayıklama altyapısı (DE) açıklanabilir.
 
-- Tarafından temsil edilen bir [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimi, genellikle DE veya bağlantı noktası tarafından oluşturulur. Program düğümleri çağırarak bir bağlantı noktasına eklenir [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md). Bir program düğüm bir bağlantı eklendiğinde bu programı bu düğümün temsil ettiği program içeren işleme eklenir.
+- Genellikle bir DE veya bağlantı noktası tarafından oluşturulan bir [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimi tarafından temsil edilir. Program düğümleri [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)çağırarak bir bağlantı noktasına eklenir. Bir bağlantı noktasına bir program düğümü eklendiğinde, bu program düğümünün temsil ettiği programı içeren işleme eklenir.
 
-  Süre bir hata ayıklama oturumu, hata ayıklama paketi bağlı olarak uygulama başlatıldıktan sonra program düğümleri karşılık gelen programlar oluşturmak için kullanılır. Bir işlem için programları sorgulandığında programları numaralandırılır, program her düğüm için bir tane.
+  Hata ayıklama oturumu başladıktan sonra, hata ayıklama paketinin uygulanmasına bağlı olarak, program düğümleri ilgili programlar oluşturmak için kullanılır. Bir işlem programları için sorgulandığında, programlar numaralandırılır, her program düğümü için bir tane.
 
-  Bir program iliştirildiği önce IDE program basit bir açıklamasını gerekir. Bu bilgi programı düğümden elde edilebilir. Program için bağlandıktan sonra IDE programdaki tüm iş parçacıkları listesi gibi daha ayrıntılı bilgileri görüntüler. Bu bilgiler programından elde edilir.
+  Bir programa bağlanmadan önce, IDE'nin programın yalnızca hafif bir açıklamasına ihtiyacı vardır. Bu bilgiler program düğümünden elde edilebilir. Program bağlandıktan sonra, IDE programda çalışan tüm iş parçacıklarının listesi gibi daha ayrıntılı bilgiler görüntüler. Bu bilgiler programın kendisinden elde edilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Programlar](../../extensibility/debugger/programs.md)
-- [İşlemler](../../extensibility/debugger/processes.md)
-- [Hata ayıklama altyapısı](../../extensibility/debugger/debug-engine.md)
-- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Süreç](../../extensibility/debugger/processes.md)
+- [Hata ayıklama motoru](../../extensibility/debugger/debug-engine.md)
+- [Hata ayıklama kavramları](../../extensibility/debugger/debugger-concepts.md)
 - [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)
 - [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)

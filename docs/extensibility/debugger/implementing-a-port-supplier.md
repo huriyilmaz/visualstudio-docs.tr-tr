@@ -1,35 +1,35 @@
 ---
-title: Bir bağlantı noktası sağlayıcısı uygulama | Microsoft Docs
+title: Liman Tedarikçisi Nin Uygulanması | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], implementing port suppliers
 - port suppliers, implementing
 ms.assetid: 6b8579df-58df-4c7f-8112-6015993e8765
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd5ba2a96b94cce65dc901a523232b1c3e0a45b9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8218e372ad3aece922811bc20cfd7650f33296f3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66349985"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738562"
 ---
-# <a name="implement-a-port-supplier"></a>Bağlantı noktası sağlayıcısı uygulama
-Bağlantı noktası sağlayıcısı oturum hata ayıklama Yöneticisi (SDM) istek bağlantı noktaları sağlar. Bağlantı noktası sağlayıcısı, DCOM olmayan bir makine ya da yeni bir cihaz desteği gerektirdiğinde için hata ayıklama sırasında uygulanmalıdır. Örneğin, bir cep telefonu için hata ayıklama sağlamak için cep telefonu (belki de yoluyla veya bir hücre bağlantı IR) bağlanma ve bir telefonda çalışan programlar ve işlemleri numaralandırır bağlantı noktaları sağlayan bir bağlantı noktası sağlayıcısı ayarlayabilirsiniz.
+# <a name="implement-a-port-supplier"></a>Liman tedarikçisi uygulama
+Bir bağlantı noktası tedarikçisi, oturum hata ayıklama yöneticisine (SDM) istek üzerine bağlantı noktaları sağlar. Bir bağlantı noktası tedarikçisi, DCOM olmayan bir makineye hata ayıklarken veya yeni bir cihaz destek gerektirdiğinde uygulanmalıdır. Örneğin, bir cep telefonuna hata ayıklama sağlamak için, cep telefonuna bağlanan bağlantı noktaları sağlayan (belki IR veya cep bağlantısı ile) ve telefonda çalışan işlemleri ve programları numaralandırmak için bir bağlantı noktası tedarikçisi ayarlayabilirsiniz.
 
- Kendi bağlantı noktası sağlayıcısı bu durumlarda ayarlama gerekmez. Bu nedenle Windows tabanlı makineler (uzaktan hata ayıklama dahil) üzerinde hata ayıklama programları için bağlantı noktası sağlayıcıları için yerel ve ortak dil çalışma zamanı (CLR) işlemleri, Visual Studio sağlar.
+ Windows tabanlı makinelerde (uzaktan hata ayıklama dahil) programları hata ayıklamak için Visual Studio, yerel ve Ortak Dil Çalışma Zamanı (CLR) işlemleri için bağlantı noktası tedarikçileri sağlar, bu nedenle bu gibi durumlarda kendi bağlantı noktası tedarikçinizi ayarlamanıza gerek yoktur.
 
 ## <a name="in-this-section"></a>Bu bölümde
- [Uygulama ve bağlantı noktası sağlayıcısı kaydetme](../../extensibility/debugger/implementing-and-registering-a-port-supplier.md) SDM bağlantı noktalarını ve bağlantı noktası sağlayıcısı ile nasıl etkileşim kurduğu açıklanır.
+ [Bir liman tedarikçisiuygulama ve kaydettirme](../../extensibility/debugger/implementing-and-registering-a-port-supplier.md) SDM'nin liman tedarikçisi ve limanları ile nasıl etkileşimde bulunduğu açıklanmıştır.
 
- [Gerekli bağlantı noktası sağlayıcısı arabirimleri](../../extensibility/debugger/required-port-supplier-interfaces.md) bağlantı noktası sağlayıcısı almak için uygulanmalı arabirimleri belgeleri.
+ [Gerekli bağlantı noktası tedarikçisi arayüzleri](../../extensibility/debugger/required-port-supplier-interfaces.md) Bağlantı noktası tedarikçisi almak için uygulamanız gereken arabirimleri belgeler.
 
 ## <a name="related-sections"></a>İlgili bölümler
- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md) ana hata ayıklama mimari kavramlarını açıklar.
+ [Hata ayıklama kavramları](../../extensibility/debugger/debugger-concepts.md) Ana hata ayıklama mimari kavramları açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Visual Studio hata ayıklayıcı genişletilebilirliği](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
+ [Visual Studio hata ayıklama genişletilebilirlik](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

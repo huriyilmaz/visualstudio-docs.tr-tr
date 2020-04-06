@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext2::GetName | Microsoft Docs
+title: IDebugExpressionContext2::GetName | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpressionContext2::GetName
 ms.assetid: c2b70d22-17af-4986-a7e3-930910367216
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d53d7f497700d4e23587927adc0c2cee37824daa
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 500d5c1788e837a27b4affada50ecc59db122e8a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325869"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729669"
 ---
 # <a name="idebugexpressioncontext2getname"></a>IDebugExpressionContext2::GetName
-Değerlendirme bağlamı adını alır.
+Değerlendirme bağlamının adını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetName( 
 
 ## <a name="parameters"></a>Parametreler
 `pbstrName`\
-[out] Değerlendirme bağlamı adını döndürür.
+[çıkış] Değerlendirme bağlamının adını verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değerlendirme bağlamı açıklamasını addır. Bu genellikle bu tam değerlendirme içeriğe başvuruda bulunan bir ifade değerlendiricisi tarafından ayrıştırılan bir şeydir. Örneğin, c++'ta adı aşağıdaki gibidir:
+ Ad, bu değerlendirme bağlamının açıklamasıdır. Genellikle bu tam değerlendirme bağlamında başvuran bir ifade değerlendirici tarafından ayrıştırılabilir bir şeydir. Örneğin, C++'da ad aşağıdaki gibidir:
 
 ```
 "{ function-name, source-file-name, module-file-name }"

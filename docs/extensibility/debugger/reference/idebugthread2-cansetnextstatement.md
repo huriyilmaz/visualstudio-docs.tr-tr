@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::CanSetNextStatement | Microsoft Docs
+title: IDebugThread2::CanSetNextStatement | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugThread2::CanSetNextStatement
 ms.assetid: 7014af80-ff4f-4790-a34b-0528918d1fa3
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 111ace07edf163fa978a3c54628878af51cb7d02
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4232c25bfe9acd7f17c88c28aa4211a9c62175f8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66320290"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80718868"
 ---
 # <a name="idebugthread2cansetnextstatement"></a>IDebugThread2::CanSetNextStatement
-Dosyadaki geçerli yönerge işaretçisini belirli bir yığın çerçevesine ayarlayıp ayarlayamayacağını belirler.
+Geçerli yönerge işaretçisinin verilen yığın çerçevesine ayarlanıp ayarlanamayacağını belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int CanSetNextStatement ( 
 
 ## <a name="parameters"></a>Parametreler
 `pStackFrame`\
-Gelecekte kullanılmak üzere ayrılmış; null bir değere ayarlayın. Bu null değeri ise, geçerli yığın çerçevesi kullanın.
+İleride kullanım için ayrılmış; null değerine ayarlanır. Bu null değeri ise, geçerli yığın çerçevesini kullanın.
 
 `pCodeContext`\
-[in] Bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) çalıştırılmak üzere kod konumu açıklayan nesne ve onun bağlamı.
+[içinde] Yürütülmek üzere olan kod konumunu ve içeriğini açıklayan bir [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem döndürürse `S_OK`, ardından çağırın [SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md) gerçekten sonraki deyimi ayarlamak için yöntemi.
+ Bu yöntem `S_OK`dönerse, bir sonraki deyimi ayarlamak için [SetNextStatement](../../../extensibility/debugger/reference/idebugthread2-setnextstatement.md) yöntemini arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

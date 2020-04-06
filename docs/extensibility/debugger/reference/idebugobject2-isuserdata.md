@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::IsUserData | Microsoft Docs
+title: IDebugObject2::IsUserData | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject2::IsUserData method
 ms.assetid: 6ffa0d0e-f742-496d-acc7-db74c248bc45
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 94c3f6adc9dd75e1ed4ecc4c5fd7f37635099566
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ce4a7035ac3786f0cc1644e2ebbb0c142167e2b0
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66317249"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726092"
 ---
 # <a name="idebugobject2isuserdata"></a>IDebugObject2::IsUserData
-Nesne kullanıcı verilerini temsil edip etmediğini belirler.
+Nesnenin kullanıcı verilerini temsil edip etmediğini belirler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int IsUserData(
 
 ## <a name="parameters"></a>Parametreler
 `pfUser`\
-[out] Sıfır olmayan döndürür (`TRUE`) kullanıcı verilerini; nesne temsil ediyorsa sıfır (`FALSE`) kullanmıyorsa.
+[çıkış] Nesne kullanıcı`TRUE`verilerini temsil ederse sıfırsız ( ) döndürür; sıfır`FALSE`( ) değilse.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kullanıcı verilerini JustMyCode (bir modül olarak kullanıcı kodu ve bu nedenle bir yığın izlemesi görünür işaretler kullanıcı tarafından yapılandırılabilen bir seçeneği) olarak belirlenmiş bir modülün parçası olan herhangi bir nesnedir.
+ Kullanıcı verileri, JustMyCode olarak atanan bir modülün parçası olan herhangi bir nesnedir (bir modülü kullanıcı kodu olarak işaretleyen ve bu nedenle yığın izinde görülebilen kullanıcı tarafından yapılandırılabilir bir seçenek).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

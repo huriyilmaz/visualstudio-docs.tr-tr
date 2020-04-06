@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetParentField | Microsoft Docs
+title: IDebugCustomAttribute::GetParentField | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCustomAttribute::GetParentField
 ms.assetid: bcdfdf37-bfcf-4988-a7b8-4c731d0af1b0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6a99310520109dad6a1b8084405119e0a106ad89
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1fae84a4d02438335aea00c50dd9b89520d08bae
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350057"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732695"
 ---
 # <a name="idebugcustomattributegetparentfield"></a>IDebugCustomAttribute::GetParentField
-Özel öznitelik eklendiği alanını alır.
+Özel özniteliğin bağlı olduğu alanı alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetParentField(
 
 ## <a name="parameters"></a>Parametreler
 `ppField`\
-[out] Döndürür [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) özel özniteliği bağlı alanını temsil eden nesne.
+[çıkış] Özel özniteliğin bağlı olduğu alanı temsil eden [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Çağrı [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) yöntemi döndürülen [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) ne tür üst alan olmadığının nesnedir.
+ Üst öğenin ne tür bir alan olduğunu belirlemek için döndürülen [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesindeki [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) yöntemini arayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

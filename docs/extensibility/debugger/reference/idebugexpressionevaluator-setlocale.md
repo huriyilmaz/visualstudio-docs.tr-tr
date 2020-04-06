@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::SetLocale | Microsoft Docs
+title: IDebugExpressionEvaluator::SetLocale | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpressionEvaluator::SetLocale method
 ms.assetid: d3d2027d-74e2-4ae6-bcc7-59d12f873b7c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 18d0dbde0d04dcdf42b3e1fbd19841645036e5bf
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.openlocfilehash: 57ddee6e1796159c505b67982f25d1ba09684561
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "66325660"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729465"
 ---
 # <a name="idebugexpressionevaluatorsetlocale"></a>IDebugExpressionEvaluator::SetLocale
-Bu yöntem yazdırılabilir sonuçları oluşturmak için kullanılacak dili ayarlar.
+Bu yöntem yazdırılabilir sonuçlar oluşturmak için kullanılacak dili ayarlar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int SetLocale(
 
 ## <a name="parameters"></a>Parametreler
 `wLangID`\
-[in] Dil tanımlayıcısı.
+[içinde] Dil tanımlayıcısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, EE diller çalışma sırasında geçiş yapmak için (EE) ifade değerlendiricisi yüklenir ancak birden çok kez çağrılabilir. EE hata iletileri ve dizeleri uygun dilde döndürmek için bu yerel ayarı kullanır.
+ İfade değerlendiricisi (EE) yüklenirken bu yöntem birçok kez çağrılabilir, bu nedenle EE anında dilleri değiştirebilmeli. EE, hata iletilerini ve dizeleri uygun dilde döndürmek için bu yerel alanı kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

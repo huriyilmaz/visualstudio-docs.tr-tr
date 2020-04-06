@@ -1,5 +1,5 @@
 ---
-title: Kaynak Denetimi Eklentisi uygulamak için en iyi uygulamalar | Microsoft Docs
+title: Kaynak Kontrol Eklentisi Uygulamak İçin En İyi Uygulamalar | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,56 +7,56 @@ helpviewer_keywords:
 - best practices, source control plug-ins
 - source control [Visual Studio SDK], plug-ins
 ms.assetid: 85e73b73-29dc-464f-8734-ed308742c435
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 89bc4065a450f82b3cdec33e94f4e17ea700d3c7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 68491f22d63ae3ebb664b7c22188a661dccbf39a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352213"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740045"
 ---
-# <a name="best-practices-for-implementing-a-source-control-plug-in"></a>Kaynak Denetimi Eklentisi uygulamak için en iyi yöntemler
-Aşağıdaki teknik ayrıntıları'nın, güvenilir bir şekilde bir kaynak denetimi eklentisi içinde yardımcı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+# <a name="best-practices-for-implementing-a-source-control-plug-in"></a>Kaynak kontrol eklentisi uygulamak için en iyi uygulamalar
+Aşağıdaki teknik ayrıntılar, bir kaynak denetim eklentisini güvenilir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]bir şekilde uygulamanıza yardımcı olabilir.
 
 ## <a name="memory-management-issues"></a>Bellek yönetimi sorunları
- Çoğu durumda, çağıranın olan, tümleşik geliştirme ortamı (IDE), serbest bırakır ve bellek ayırır. Kaynak Denetimi Eklentisi, dizeler ve diğer öğeleri arayana ayrılan arabellekler döndürür. Özel durumlar, belirli işlevleri sonuçları ortaya çıktıkları açıklamasında belirtilmiştir.
+ Çoğu durumda, arayan olan tümleşik geliştirme ortamı (IDE), belleği salgılar ve ayırır. Kaynak denetimi eklentisi, arayanın tahsis ettiği arabellekteki dizeleri ve diğer öğeleri döndürür. Özel durumlar, oluştukları belirli işlevlerin açıklamalarında belirtilir.
 
-## <a name="arrays-of-file-names"></a>Dosya adları dizileri
- Dosyaları bir dizi geçirildiğinde, dosya adları bitişik bir dizi olarak aktarılmaz. Dosya adları için bunu bir işaretçiler dizisi geçirilir. Örneğin, [SccGet](../extensibility/sccget-function.md), dosya adları geçirilir `lpFileNames` parametresi, burada `lpFileNames` gerçekten bir işaretçi bir `char **`. `lpFileNames`[0] ad işaretçisidir `lpFileNames`[1] ikinci adı vb. işaretçisidir.
+## <a name="arrays-of-file-names"></a>Dosya adlarının dizileri
+ Bir dizi dosya geçirildiğinde, dosya adlarının bitişik bir dizi olarak geçirilir. Dosya adlarına işaretçiler dizisi olarak geçirilir. Örneğin, [SccGet'da,](../extensibility/sccget-function.md)dosya adları `lpFileNames` parametre tarafından geçirilir ve aslında `lpFileNames` `char **`bir . `lpFileNames`[0] ilk ada işaretçi, `lpFileNames`[1] ikinci adı işaretçi, ve benzeri.
 
 ## <a name="large-model"></a>Büyük model
- Tüm işaretçiler, 32 bit ve 16-bit işletim sistemlerinde bile ' dir.
+ Tüm işaretçiler, 16 bit işletim sistemlerinde bile 32 bittir.
 
-## <a name="fully-qualified-paths"></a>Tam olarak nitelenmiş yollar
- Burada dosya adlarını veya dizinleri bağımsız değişken olarak belirtilirse, tam yol veya UNC yolları, bitiş ters eğik çizgi olmadan olması gerekir. Kaynak Denetimi Eklentisi bu temel alınan kaynak denetim sistemi gereksinimi diğer bir deyişle, göreli yollar çevrilecek sorumluluğundadır.
+## <a name="fully-qualified-paths"></a>Tam nitelikli yollar
+ Dosya adlarının veya dizinlerinin bağımsız değişken olarak belirtildiği durumlarda, bunlar bitiş eğik çizgileri olmadan tam nitelikli yollar veya UNC yolları olmalıdır. Temel kaynak denetim sisteminin bir gereksinimi yse, bunları göreli yollara çevirmek kaynak denetim eklentisinin sorumluluğundadır.
 
-## <a name="specify-a-fully-qualified-path-for-the-registered-dll"></a>Kayıtlı DLL için tam nitelenmiş bir yol belirtin
- IDE DLL'leri göreli yolları artık yükler. (örneğin, *.\NewProvider.dll*). DLL Dosyasının tam yolu belirtilmelidir (örneğin, *C:\Providers\NewProvider.dll*). Bu gereksinim, yetkisiz veya başkasının kimliğine bürünülerek gerçekleştirilen kaynak denetimi DLL'lerin yüklenmesini engelleyerek IDE güvenliğini güçlendirir.
+## <a name="specify-a-fully-qualified-path-for-the-registered-dll"></a>Kayıtlı DLL için tam nitelikli bir yol belirtin
+ IDE artık göreli yollardan DL'ler yüklemez (örneğin, *.\NewProvider.dll).* DLL'nin tam bir yolu belirtilmelidir (örneğin, *C:\Providers\NewProvider.dll).* Bu gereksinim, yetkisiz veya taklit edilen kaynak denetimi DL'lerinin yüklenmesini engelleyerek IDE'nin güvenliğini güçlendirir.
 
-## <a name="check-for-an-existing-vssci-plug-in-when-you-install-your-source-control-plug-in"></a>Bir kaynak denetimi eklentiniz yüklediğinizde eklentisi varolan VSSCI denetle
- Kaynak Denetimi Eklentisi yükleme planları bir kullanıcı zaten yüklü bir var olan kaynak denetimi eklentisi olabilir. Yükleme (Kur) programı eklenti için oluşturduğunuz ilgili kayıt defteri anahtarları için mevcut değerleri olup olmadığını belirlemeniz gerekir. Bu anahtarları zaten ayarlanmışsa, Kurulum programınızı, eklentiyi varsayılan kaynak denetimi eklentisi kaydetmek ve zaten yüklü bir değiştirin kullanıcı istemelisiniz.
+## <a name="check-for-an-existing-vssci-plug-in-when-you-install-your-source-control-plug-in"></a>Kaynak kontrol eklentinizi yüklerken varolan bir VSSCI eklentisi olup yok
+ Kaynak denetimi eklentinizi yüklemeyi planlayan bir kullanıcının bilgisayarında zaten varolan bir kaynak denetim eklentisi yüklü olabilir. Oluşturduğunuz eklenti için yükleme (kurulum) programı, ilgili kayıt defteri anahtarları için varolan değerlerin olup olmadığını belirlemelidir. Bu anahtarlar zaten ayarlanmışsa, yükleme programınız kullanıcıdan eklentinizi varsayılan kaynak denetimi eklentisi olarak kaydedip kaydetmemenizi ve zaten yüklü olanın değiştirip değiştirmediğini sormalıdır.
 
-## <a name="error-result-codes-and-reporting"></a>Hata sonuç kodlarını ve Raporlama
- `SCC_OK` Dönüş kodu kaynak denetim işlevi için gösterir işlemi tüm dosyalar için başarılı oldu. İşlem başarısız olursa, karşılaşılan son hata kodu iade beklenir.
+## <a name="error-result-codes-and-reporting"></a>Hata sonuç kodları ve raporlama
+ Kaynak `SCC_OK` denetim işlevinin iade kodu, işlemin tüm dosyalar için başarılı olduğunu gösterir. İşlem başarısız olursa, karşılaşılan son hata kodunu döndürmesi beklenir.
 
- Raporlama için IDE içinde bir hata meydana gelirse, IDE raporlama için sorumlu olduğu kuralıdır. Kaynak denetim sistemi bir hata meydana gelirse, raporlama için kaynak denetimi eklentisi sorumludur. Örneğin, **şu anda seçili dosya** ise IDE bildirilebilecek **bu dosya zaten kullanıma** eklenti tarafından bildirilebilecek.
+ Raporlama kuralı, IDE'de bir hata oluşursa, bunu bildirmekten IDE'nin sorumlu olduğudur. Kaynak denetim sisteminde bir hata oluşursa, kaynak denetim eklentisi bunu bildirmekten sorumludur. Örneğin, **şu anda seçili hiçbir dosya** IDE tarafından bildirilir, **ancak bu dosya zaten kullanıma alınmış** durumda, eklenti tarafından bildirilir.
 
 ## <a name="the-context-structure"></a>Bağlam yapısı
- Çağrı sırasında [Sccınitialize](../extensibility/sccinitialize-function.md), çağıran geçişleri `ppvContext` parametresini bir void başlatılmamış bir işleyicisidir. Kaynak Denetimi Eklentisi Bu parametre yoksayabilirsiniz veya bir yapının herhangi bir türde ayırın ve bir işaretçi bu yapıya geçirilen imleci yerleştirin. IDE bu yapı tanımıyor, ancak her bir çağrı eklentide halinde bu yapıya bir işaretçi geçirir. Bu genel değişkenler kullanmadan işlev çağrıları arasında kalıcı genel durum bilgilerini korumak için kullanabileceğiniz bu eklentiye değerli bağlam önbelleği bilgilerini sağlar. Eklentinin bir çağrı yapıdaki boşaltma için sorumlu olduğu [SccUninitialize](../extensibility/sccuninitialize-function.md).
+ [SccInitialize'a](../extensibility/sccinitialize-function.md)yapılan arama sırasında, `ppvContext` arayan parametreyi geçer, bu da bir boşluğa başlamayan bir tutamaçtır. Kaynak denetimi eklentisi bu parametreyi yoksayabilir veya herhangi bir yapıyı ayırıp geçen işaretçiye işaretçi koyabilir. IDE bu yapıyı anlamaz, ancak eklentideki diğer tüm çağrılara bu yapıya işaretçi geçirir. Bu, eklentiye, genel değişkenleri kullanmadan işlev çağrıları arasında devam eden genel durum bilgilerini korumak için kullanabileceği değerli bağlam önbelleği bilgileri sağlar. Eklenti, [SccUninitialize'a](../extensibility/sccuninitialize-function.md)yapılan bir çağrıda yapının serbest leştirilmesinden sorumludur.
 
- Eklenti kümeleri `SCC_CAP_REENTRANT` içindeki bit [Sccınitialize](../extensibility/sccinitialize-function.md) (özellikle de `lpSccCaps` parametresi), birden çok içerik yapıları açık olan tüm projeleri izlemek için kullanılır.
+ Eklenti `SCC_CAP_REENTRANT` [SccInitialize'daki](../extensibility/sccinitialize-function.md) biti ayarlarsa (özellikle `lpSccCaps` parametrede), açık olan tüm projeleri izlemek için birden çok bağlam yapısı kullanılır.
 
 ## <a name="bitflags-and-other-command-options"></a>Bit bayrakları ve diğer komut seçenekleri
- Her komut için gibi [SccGet](../extensibility/sccget-function.md), IDE komut davranışını değiştirmek pek çok seçenek belirtebilirsiniz.
+ [SccGet](../extensibility/sccget-function.md)gibi her komut için IDE, komutun davranışını değiştiren birçok seçenek belirtebilir.
 
- API, belirli seçenekleri aracılığıyla IDE ile ayarını destekler `fOptions` parametresi. Bu seçeneği, şurada açıklanan [özel komutlar tarafından kullanılan bit bayrakları](../extensibility/bitflags-used-by-specific-commands.md) etkiledikleri komutları birlikte. Genel olarak, bunlar için kullanıcı olmayan girmeniz istenirdi seçeneklerdir.
+ `fOptions` API, parametre aracılığıyla Belirli seçeneklerin IDE tarafından ayarını destekler. Bu seçenekler, [belirli komutlar tarafından kullanılan Bit bayrakları](../extensibility/bitflags-used-by-specific-commands.md) ile etkiledikleri komutlarla açıklanır. Genel olarak, bunlar kullanıcıdan istenmeyeceği seçeneklerdir.
 
- Yaygın olarak kaynak denetimi eklentileri arasında değiştiğinden en kullanıcı tarafından yapılandırılabilir seçenekleri bu şekilde, tanımlı değil. Bu nedenle, önerilen mekanizmadır bir **Gelişmiş** düğmesi. Örneğin, **alma** iletişim kutusu, IDE'yi anlar, ancak aynı zamanda görüntüler bilgi görüntüler bir **Gelişmiş** düğmesi eklentisi bu komutu için seçenek vardır. Kullanıcı tıkladığında **Gelişmiş** button, IDE çağrıları [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) bit bayrakları ya da bir tarih/saat gibi bilgileri kullanıcıdan eklenti kaynak denetimi etkinleştirmek için. Geri sırasında geçirilen bir yapı bu bilgileri eklenti döndürür `SccGet` komutu.
+ Kaynak denetimi eklentileri arasında büyük farklılıklar gösterdiğinden, çoğu kullanıcı tarafından yapılandırılabilen ayar seçenekleri bu şekilde tanımlanmaz. Bu nedenle, önerilen mekanizma **Gelişmiş** bir düğmedir. Örneğin, **Al** iletişim kutusunda, IDE yalnızca anladığı bilgileri görüntüler, ancak eklentide bu komut için seçenekler varsa **Gelişmiş** düğmesi de görüntülenir. Kullanıcı **Gelişmiş** düğmesini tıklattığında, Kaynak denetimi eklentisini etkinleştirmek için [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) çağırır ve kullanıcıdan bit bayrakları veya tarih/saat gibi bilgi ister. Eklenti, bu bilgileri komut sırasında geri geçirilen bir `SccGet` yapıda döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)
-- [Kaynak Denetimi Eklentisi oluşturma](../extensibility/internals/creating-a-source-control-plug-in.md)
+- [Kaynak kontrol eklentileri](../extensibility/source-control-plug-ins.md)
+- [Kaynak kontrol eklentisi oluşturma](../extensibility/internals/creating-a-source-control-plug-in.md)

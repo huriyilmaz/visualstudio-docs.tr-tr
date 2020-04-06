@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::Parse | Microsoft Docs
+title: IDebugExpressionEvaluator::Parse | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugExpressionEvaluator::Parse method
 ms.assetid: e6e31b3a-63a7-4293-bcda-267eb78dffb6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: b732369aa5cf5a828dfad512c643f109346abcb7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d1af9d3f253a9849f54bb5a50d432b98eb4ad7b8
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66325647"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729500"
 ---
 # <a name="idebugexpressionevaluatorparse"></a>IDebugExpressionEvaluator::Parse
-Bu yöntem, ayrıştırılmış bir ifade için bir ifade dizeye dönüştürür.
+Bu yöntem, bir ifade dizesini ayrışmış bir ifadeye dönüştürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -51,28 +51,28 @@ int Parse(
 
 ## <a name="parameters"></a>Parametreler
 `upstrExpression`\
-[in] Ayrıştırılacak ifade dize.
+[içinde] Ayrışdırılacak ifade dizesi.
 
 `dwFlags`\
-[in] Bir koleksiyonu [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) ifade nasıl ayrıştırılacak belirlemek sabitler.
+[içinde] İfadenin nasıl ayrıştırılmasını belirleyen [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) sabitleri koleksiyonu.
 
 `nRadix`\
-[in] Sayısal yedeklenmesine yorumlamak için kullanılacak sayı tabanı.
+[içinde] Radix herhangi bir sayısal bilgi yorumlamak için kullanılacak.
 
 `pbstrError`\
-[out] Hata, insanlar tarafından okunabilen metin olarak döndürür.
+[çıkış] Hatayı insan tarafından okunabilir metin olarak döndürür.
 
 `pichError`\
-[out] İfade dizesinde hata başlangıcı karakter konumunu döndürür.
+[çıkış] İfade dizesinde hatanın başlangıcının karakter konumunu döndürür.
 
 `ppParsedExpression`\
-[out] Döndürür ayrıştırılmış ifadesinde bir [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) nesne.
+[çıkış] Ayrışmış ifadeyi Bir [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) nesnesinde döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, Ayrıştırılan bir ifade, gerçek bir değer üretir. Ayrıştırılmış bir ifade başka bir deyişle, bir değere dönüştürülür uyumluluğunun değerlendirilebilmesi hazırdır.
+ Bu yöntem, gerçek bir değer değil, ayrıştırılmış bir ifade üretir. Ayrıştırılmış ifade değerlendirilmeye hazırdır, yani bir değere dönüştürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)

@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_INFO_FIELDS | Microsoft Docs
+title: CONTEXT_INFO_FIELDS | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - CONTEXT_INFO_FIELDS enumeration
 ms.assetid: ef436bd3-738e-47e8-828c-8febce752439
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2ed50d43061ee714f8f892e03bb164f16e2e33d9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: b398e7ee549026750cbdff7b7fede8522116f346
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346383"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737598"
 ---
-# <a name="contextinfofields"></a>CONTEXT_INFO_FIELDS
-Bir bellek bağlamı hakkında almak için hangi bilgilerin belirtir.
+# <a name="context_info_fields"></a>CONTEXT_INFO_FIELDS
+Bellek bağlamı hakkında hangi bilgilerin alıncaya kadar alınacak larını belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -54,38 +54,38 @@ public enum enum_CONTEXT_INFO_FIELDS {
 
 ## <a name="fields"></a>Alanlar
 `CIF_MODULEURL`\
-Başlat/kullanım `bstrModuleUrl` alanını [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) yapısı.
+`bstrModuleUrl` [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) yapının alanını başlatma/kullanma.
 
 `CIF_FUNCTION`\
-Başlat/kullanım `bstrFunction` alanını `CONTEXT_INFO` yapısı.
+`CONTEXT_INFO` Yapının `bstrFunction` alanını başlatma/kullanma.
 
 `CIF_FUNCTIONOFFSET`\
-Başlat/kullanım `posFunctionOffset` alanını `CONTEXT_INFO` yapısı.
+`CONTEXT_INFO` Yapının `posFunctionOffset` alanını başlatma/kullanma.
 
 `CIF_ADDRESS`\
-Başlat/kullanım `bstrAddress` alanını `CONTEXT_INFO` yapısı.
+`CONTEXT_INFO` Yapının `bstrAddress` alanını başlatma/kullanma.
 
 `CIF_ADDRESSOFFSET`\
-Başlat/kullanım `bstrAddressOffset` alanını `CONTEXT_INFO` yapısı.
+`CONTEXT_INFO` Yapının `bstrAddressOffset` alanını başlatma/kullanma.
 
 `CIF_ALLFIELDS`\
-Başlat/tüm alanları kullanmak `CONTEXT_INFO` yapısı.
+Yapının `CONTEXT_INFO` tüm alanlarını başlatma/kullanma.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerleri bir parametresine geçirilir [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) hangi alanları göstermek için yöntemi [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) yapısı olan başlatılacak.
+Bu değerler, [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) yapısının hangi alanlarının başharfe atılolacağını belirtmek için [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) yöntemine bir parametre geçirilir.
 
-Bu bayraklar Ayrıca hangi alanları göstermek için kullanılan `CONTEXT_INFO` yapısı, kullanılan ve geçerli yapısı döndürülür.
+Bu bayraklar, yapının hangi `CONTEXT_INFO` alanlarının kullanıldığını belirtmek için de kullanılır ve yapı döndürüldüğünde geçerlidir.
 
-Bu değerleri bir bit düzeyinde OR ile birleştirilebilir.
+Bu değerler biraz veya birleştirilebilir.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md)
 - [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md)

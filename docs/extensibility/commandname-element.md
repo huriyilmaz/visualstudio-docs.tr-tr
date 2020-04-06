@@ -1,25 +1,25 @@
 ---
-title: CommandName öğesi | Microsoft Docs
+title: Komut Adı Öğesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - CommandName element (VSCT XML schema)
 - VSCT XML schema elements, CommandName
 ms.assetid: a338b767-aa7e-4536-9908-e19a50ab60ac
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4b792e7bbe1efaa1158cc517cd96494049e2b9e2
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8152942d015e21b1b80f735fd921a5ddde3674d5
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337264"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739755"
 ---
 # <a name="commandname-element"></a>CommandName öğesi
-`CommandName` Öğesi klavye kategorisinde görüntülenen metni belirtir **seçenekleri** iletişim kutusu ve **komutları** listesinde **Özelleştir** iletişim bir kutu.
+Öğe, `CommandName` **Seçenekler** iletişim kutusunda klavye kategorisinde ve **Özelleştir** iletişim kutusundaki **Komutlar** listesinde görünen metni belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,7 +40,7 @@ ms.locfileid: "66337264"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Strings öğesi](../extensibility/strings-element.md)|Metin öğeleri gibi gruplar `ButtonText` ve `CommandName`.|
+|[Dizeleri öğesi](../extensibility/strings-element.md)|Metin öğelerini grupla, örneğin. `ButtonText` `CommandName`|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

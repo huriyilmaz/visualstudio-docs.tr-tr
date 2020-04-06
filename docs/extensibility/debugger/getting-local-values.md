@@ -1,5 +1,5 @@
 ---
-title: Yerel değerleri alma | Microsoft Docs
+title: Yerel Değerler Alma | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,36 +7,36 @@ helpviewer_keywords:
 - debugging [Debugging SDK], local values
 - expression evaluation, getting local values
 ms.assetid: a10b0764-65ac-476f-bf42-b4a9c38e20de
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7ce7e8417f0b05375f1285aac24f7abb0cbab6d1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 75cc530f13de22a994eff70492f340059d2a5839
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319214"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738613"
 ---
-# <a name="get-local-values"></a>Yerel değerleri alma
+# <a name="get-local-values"></a>Yerel değerleri alın
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için bkz: [CLR ifade değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi [için, bkz.](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) [Managed expression evaluator sample](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)
 
-Yerel bir değeri almak için Visual Studio çağırır [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) bu yerel için. Bu uygulamada, sınıf `CFieldProperty` her yerel için IDebugProperty2 arabirimini uygular.
+Yerel bir değeri elde etmek için, Visual Studio bu yerel için [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) çağırır. Bu uygulamada, sınıf `CFieldProperty` her yerel için IDebugProperty2 arabirimini uygular.
 
-Bu uygulaması `IDebugProperty2::GetPropertyInfo` aşağıdaki görevleri gerçekleştirir:
+Bu uygulama `IDebugProperty2::GetPropertyInfo` aşağıdaki görevleri gerçekleştirir:
 
-1. Yerel'ın adı, özellik ve öznitelikleri alır [FIELD_INFO](../../extensibility/debugger/reference/field-info.md) yapısı sınıf örneği ve başlatılmış doldurulur.
+1. Sınıf anında doldurulduğunda ve başharfe büründüğünde doldurulan [FIELD_INFO](../../extensibility/debugger/reference/field-info.md) yapıdan yerel in adını, özelliğini ve özniteliklerini alır.
 
-2. Yerel'ın türünden alır [IDebugField](../../extensibility/debugger/reference/idebugfield.md) nesne.
+2. Yerel in türünü [IDebugField](../../extensibility/debugger/reference/idebugfield.md) nesnesinden alır.
 
-3. Yerel'ın değerini alır `IDebugField` nesne. Bu alan, yerel kullanarak bellek konumuna bağlıdır [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) nesne ve değer elde oluşan [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) nesne.
+3. `IDebugField` Yerel in değerini nesneden alır. Bu [alan, IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) nesnesini kullanarak yerelin bellek konumuna bağlıdır ve değer elde edilen [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) nesnesinden elde edilir.
 
-4. İstenen tüm özellikleri döndürür bir [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) yapısı.
+4. [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) yapısında istenen tüm özellikleri döndürür.
 
 ## <a name="managed-code"></a>Yönetilen kod
-Bu örnekte uygulanışı gösterilmektedir `IDebugProperty2::GetPropertyInfo` yönetilen kodda yerel bir yöntem için. Ayrıca, bir yardımcı işlev gösterir `Field.GetType`, yani alanın türünü almak için kullanılır. `Field.GetValue` gösterilen [yerel öğeleri değerlendirme](../../extensibility/debugger/evaluating-locals.md). Yardımcı işlevini `Field.MapModifiersToAttributes` (gösterilmemiştir) yalnızca bir alanın dönüştürür [FIELD_MODIFIERS](../../extensibility/debugger/reference/field-modifiers.md) bayraklar [DBG_ATTRIB_FLAGS](../../extensibility/debugger/reference/dbg-attrib-flags.md) değerleri.
+Bu örnek, yönetilen `IDebugProperty2::GetPropertyInfo` kodda bir yöntemin yerel için bir uygulama gösterir. Ayrıca, `Field.GetType`alanın türünü almak için kullanılan bir yardımcı işlevi de gösterir. `Field.GetValue`[yerel leri değerlendir'de](../../extensibility/debugger/evaluating-locals.md)gösterilir. Yardımcı işlevi `Field.MapModifiersToAttributes` (gösterilmez) yalnızca bir alanın [FIELD_MODIFIERS](../../extensibility/debugger/reference/field-modifiers.md) bayraklarını [DBG_ATTRIB_FLAGS](../../extensibility/debugger/reference/dbg-attrib-flags.md) değerlere dönüştürür.
 
 ```csharp
 namespace EEMC
@@ -176,7 +176,7 @@ namespace EEMC
 ```
 
 ## <a name="unmanaged-code"></a>Yönetilmeyen kod
- Bu örnekte uygulanışı gösterilmektedir `IDebugProperty2::GetPropertyInfo` yönetimsiz kod içinde yerel bir yöntem için. Ayrıca iki yardımcı işlev gösterir `FieldGetType` ve `FieldGetValue` alanın türü ve değeri, sırasıyla almak için kullanılır. `VARIANT`s olarak yazın ve alanın değeri için kullanılan bir `VARIANT` çok çeşitli değer türleri işleyebilir. Bu uygulamada `FieldGetValue` döndürür bir [IDebugField](../../extensibility/debugger/reference/idebugfield.md) sonraki nesnesini dönüştürülen bir değere bir çağrıda `FieldGetPrimitiveValue` (içinde gösterilen [yerel öğeleri değerlendirme](../../extensibility/debugger/evaluating-locals.md)).
+ Bu örnek, yönetilmeyen kodda bir yöntemin yerel için bir uygulama `IDebugProperty2::GetPropertyInfo` gösterir. Ayrıca, `FieldGetType` sırasıyla alanın türü `FieldGetValue` ve değerini almak için kullanılan iki yardımcı işlevi de gösterir. S `VARIANT`alan değeri ve türü için kullanılan `VARIANT` bir değer türleri geniş bir yelpazede işleyebilir. Bu uygulamada, `FieldGetValue` daha sonra bir çağrıda bir değere dönüştürülen bir `FieldGetPrimitiveValue` [IDebugField](../../extensibility/debugger/reference/idebugfield.md) [nesnesi](../../extensibility/debugger/evaluating-locals.md)döndürür (yerel leri değerlendir'de gösterilir).
 
 ```cpp
 STDMETHODIMP CFieldProperty::GetPropertyInfo(
@@ -439,6 +439,6 @@ HRESULT FieldGetValue( in IDebugField* pfield, out VARIANT* pvarValue )
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Örnek yerel öğeler uygulaması](../../extensibility/debugger/sample-implementation-of-locals.md)
-- [Yerel özellikleri alma](../../extensibility/debugger/getting-local-properties.md)
+- [Yerel halktan örnek uygulama](../../extensibility/debugger/sample-implementation-of-locals.md)
+- [Yerel özellikleri alın](../../extensibility/debugger/getting-local-properties.md)
 - [Değerlendirme bağlamı](../../extensibility/debugger/evaluation-context.md)

@@ -1,5 +1,5 @@
 ---
-title: FIELD_KIND | Microsoft Docs
+title: FIELD_KIND | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - FIELD_KIND enumeration
 ms.assetid: fd522b9c-52e2-42fa-939d-343347d5c3b1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 9ff49f0723153880e88a21376aadec26b250a62b
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: cafe4a34745f3b34070f7d8fed1a246c806375a4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344468"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736868"
 ---
-# <a name="fieldkind"></a>FIELD_KIND
-Yer alan türünü belirten bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesne.
+# <a name="field_kind"></a>FIELD_KIND
+[Bir IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesinde bulunan alan türünü belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -126,58 +126,58 @@ public enum enum_FIELD_KIND {
 
 ## <a name="fields"></a>Alanlar
 `FIELD_KIND_TYPE`\
-Alan yalnızca bir tür olduğunu gösterir.
+Alanın yalnızca bir tür olduğunu gösterir.
 
 `FIELD_KIND_SYMBOL`\
-Alan türü, adı ve diğer bilgileri ile bir simge olduğunu gösterir.
+Alanın türü, adı ve diğer bilgileri içeren bir sembol olduğunu gösterir.
 
 `FIELD_TYPE_PRIMITIVE`\
-Alanın bir temel veri türü olduğunu gösterir.
+Alanın ilkel bir veri türü olduğunu gösterir.
 
 `FIELD_TYPE_STRUCT`\
-Alan bir yapı olduğunu gösterir.
+Alanın bir yapı olduğunu gösterir.
 
 `FIELD_TYPE_CLASS`\
 Alanın bir sınıf olduğunu gösterir.
 
 `FIELD_TYPE_INTERFACE`\
-Alan bir arabirim olduğunu gösterir.
+Alanın bir arabirim olduğunu gösterir.
 
 `FIELD_TYPE_UNION`\
-Alanın bir birleşim olduğunu gösterir.
+Alanın bir birlik olduğunu gösterir.
 
 `FIELD_TYPE_ARRAY`\
-Alan bir dizi olduğunu gösterir.
+Alanın bir dizi olduğunu gösterir.
 
 `FIELD_TYPE_METHOD`\
-Alan bir yöntem olduğunu gösterir.
+Alanın bir yöntem olduğunu gösterir.
 
 `FIELD_TYPE_BLOCK`\
 Alanın bir blok olduğunu gösterir.
 
 `FIELD_TYPE_POINTER`\
-Alan bir işaretçi olduğunu gösterir.
+Alanın bir işaretçi olduğunu gösterir.
 
 `FIELD_TYPE_ENUM`\
-Alan listelenmiş veri türü olduğunu gösterir.
+Alanın numaralandırılmış bir veri türü olduğunu gösterir.
 
 `FIELD_TYPE_LABEL`\
-Alanın bir etiketi gösterilir.
+Alanın bir etiket olduğunu gösterir.
 
 `FIELD_TYPE_TYPEDEF`\
-Alan için bir typedef olduğunu gösterir.
+Alanın bir typedef olduğunu gösterir.
 
 `FIELD_TYPE_BITFIELD`\
 Alanın bir bit alanı olduğunu gösterir.
 
 `FIELD_TYPE_NAMESPACE`\
-Alan için bir ad alanı olduğunu gösterir.
+Alanın bir ad alanı olduğunu gösterir.
 
 `FIELD_TYPE_MODULE`\
 Alanın bir modül olduğunu gösterir.
 
 `FIELD_TYPE_DYNAMIC`\
-Alan dinamik olduğunu gösterir.
+Alanın dinamik olduğunu gösterir.
 
 `FIELD_TYPE_PROP`\
 Alanın bir özellik olduğunu gösterir.
@@ -186,31 +186,31 @@ Alanın bir özellik olduğunu gösterir.
 Alanın bir iç sınıf olduğunu gösterir.
 
 `FIELD_TYPE_REFERENCE`\
-Alanın başvuru olduğunu gösterir.
+Alanın bir başvuru olduğunu gösterir.
 
 `FIELD_TYPE_EXTENDED`\
 Daha sonraki kullanımlar için ayrılmıştır.
 
 `FIELD_SYM_MEMBER`\
-Alanın bir üyesi olduğunu gösterir.
+Alanın bir üye olduğunu gösterir.
 
 `FIELD_SYM_LOCAL`\
-Alan yerel olduğunu gösterir.
+Alanın yerel olduğunu gösterir.
 
 `FIELD_SYM_PARAMETER`\
 Alanın bir parametre olduğunu gösterir.
 
 `FIELD_SYM_THIS`\
-Alan "Bu" işaretçiyi olduğunu gösterir.
+Alanın "bu" işaretçisi olduğunu gösterir.
 
 `FIELD_SYM_GLOBAL`\
-Alan genel olduğunu gösterir.
+Alanın genel olduğunu gösterir.
 
 `FIELD_SYM_PROP_GETTER`\
-Alan özelliklerini alan gösterir.
+Alanın özellikleri aldığını gösterir.
 
 `FIELD_SYM_PROP_SETTER`\
-Alan özelliklerini ayarlar gösterir.
+Alanın özellikleri ayarladığını gösterir.
 
 `FIELD_SYM_EXTENDED`\
 Daha sonraki kullanımlar için ayrılmıştır.
@@ -222,22 +222,22 @@ Alan türleri için bir maske gösterir.
 Alan türleri için bir maske gösterir.
 
 `FIELD_SYM_MASK`\
-Sembol bilgisi için bir maske gösterir.
+Sembol bilgileri için bir maskeyi gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
-Çağrısından döndürülen [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) yöntemi.
+[GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) yöntemine yapılan bir aramadan döndürülür.
 
-Bu alanın türünü bağlı olarak [QueryInterface](/cpp/atl/queryinterface) üzerinde çağrılabilir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabiriminin daha belirli bir form arabirimi. Örneğin, varsa [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) döndürür `FIELD_TYPE_METHOD`, ardından çağırabilirsiniz `QueryInterface` miyim üzerinde`DebugField` almak için [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) arabirimi.
+Alanın türüne bağlı olarak, [QueryInterface](/cpp/atl/queryinterface) daha özel bir arabirim biçimi için [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabiriminde çağrılabilir. Örneğin, [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md) dönerse, `FIELD_TYPE_METHOD` `QueryInterface` [iDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) arabirimini almak için I'i`DebugField` arayabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: sh.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [FIELD_MODIFIERS](../../../extensibility/debugger/reference/field-modifiers.md)
 - [GetKind](../../../extensibility/debugger/reference/idebugfield-getkind.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

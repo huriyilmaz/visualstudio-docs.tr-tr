@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::GetStringCharLength | Microsoft Docs
+title: IDebugÖzellik3::GetStringCharLength | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugProperty3::GetStringCharLength
 ms.assetid: 89a8676b-6da9-4358-91c2-039bf33f99e4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 2d8cedb7ceb5b1b73a86e9c1b93aaa2ae54da579
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c1a2eb62ab748562acd8f0a894a3675f79981ccc
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66348784"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80721119"
 ---
 # <a name="idebugproperty3getstringcharlength"></a>IDebugProperty3::GetStringCharLength
-İlişkili özelliğin dizesindeki karakterlerin sayısını döndürür.
+İlişkili özelliğin dizedeki karakter sayısını döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int GetStringCharLength(
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`pLen`|[out] Özelliğin dizesindeki karakterlerin sayısını döndürür.|
+|`pLen`|[çıkış] Özelliğin dizedeki karakter sayısını verir.|
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Genellikle, bu yöntem çağrısı için bir arabellek ayırma için bir tanıtımlar olarak kullanılan [GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md) yöntemi.
+Genellikle, bu yöntem [GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md) yöntemine bir çağrı için arabellek ayırmak için bir prelüd olarak kullanılır.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CProperty** gösteren nesne [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimi.
+Aşağıdaki örnek, [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini ortaya çıkaran bir **CProperty** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 STDMETHODIMP CProperty::GetStringCharLength(ULONG *pLen)

@@ -1,5 +1,5 @@
 ---
-title: Oluşturma bir Windows Forms araç kutusu denetimi | Microsoft Docs
+title: Windows Forms Araç Kutusu Denetimi Oluşturma | Microsoft Dokümanlar
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -7,76 +7,76 @@ helpviewer_keywords:
 - toolbox
 - windows forms
 ms.assetid: 0be6ffc1-8afd-4d02-9a5d-e27dde05fde6
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3887a2d54f2744504f587b848bc1395090c3904c
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: d7e7749302252c5d56f21c58de9b6ac23f898572
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345406"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739586"
 ---
-# <a name="create-a-windows-forms-toolbox-control"></a>Bir Windows Forms araç kutusu denetimi oluşturma
+# <a name="create-a-windows-forms-toolbox-control"></a>Windows Forms Araç Kutusu Denetimi Oluşturma
 
-Visual Studio genişletilebilirlik Araçları (VS SDK) dahil Windows Forms araç kutusu denetimi öğe şablonu oluşturmanıza olanak tanıyan bir **araç kutusu** denetimi, uzantı yüklendiğinde otomatik olarak eklenir. Bu izlenecek yol, diğer kullanıcılarına dağıtabileceğiniz bir basit bir sayaç denetimi oluşturmak için şablonu kullanmayı gösterir.
+Visual Studio Genişletilebilirlik Araçları'na (VS SDK) dahil olan Windows Forms Araç Kutusu Denetimi öğesi şablonu, uzantı yüklendiğinde otomatik olarak eklenen bir **Araç Kutusu** denetimi oluşturmanıza olanak tanır. Bu izlik, diğer kullanıcılara dağıtabileceğiniz basit bir sayaç denetimi oluşturmak için şablonun nasıl kullanılacağını gösterir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
+Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak yer almaktadır. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
 
-## <a name="create-the-toolbox-control"></a>Araç kutusu denetimi oluşturma
+## <a name="create-the-toolbox-control"></a>Araç Kutusu Denetimini Oluşturma
 
-Windows Forms araç kutusu denetim şablonu tanımlanmamış kullanıcı denetimi oluşturur ve tüm denetime eklemek için gereken işlevselliği sağlayan **araç kutusu**.
+Windows Forms Araç Kutusu Denetimi şablonu tanımlanmamış bir kullanıcı denetimi oluşturur ve denetimi **Araç Kutusu'na**eklemek için gereken tüm işlevselliği sağlar.
 
-### <a name="create-an-extension-with-a-windows-forms-toolbox-control"></a>Bir Windows Forms araç kutusu denetimi ile bir uzantı oluşturma
+### <a name="create-an-extension-with-a-windows-forms-toolbox-control"></a>Windows Forms Araç Kutusu Denetimi ile uzantı oluşturma
 
-1. Adlı bir VSIX projesi oluşturun `MyWinFormsControl`. VSIX proje şablonunda bulabilirsiniz **yeni proje** iletişim kutusunda "VSIX" için arama yapın.
+1. Adlı `MyWinFormsControl`bir VSIX projesi oluşturun. "vsix" aramasını yaparak **VSIX** proje şablonunu Yeni Proje iletişim kutusunda bulabilirsiniz.
 
-2. Projeyi açtığında, ekleme bir **Windows Forms araç kutusu denetimi** adlı öğe şablonu `Counter`. İçinde **Çözüm Gezgini**, proje düğümüne sağ tıklayıp **Ekle** > **yeni öğe**. İçinde **Yeni Öğe Ekle** iletişim kutusunda, Git **Visual C#**  > **genişletilebilirlik** seçip **Windows Forms araç kutusu denetimi**
+2. Proje açıldığında, windows **forms araç kutusu denetimi** `Counter`öğesi şablonu ekleyin. Çözüm **Gezgini'nde**proje düğümüne sağ tıklayın ve**Yeni Öğe** **Ekle'yi** > seçin. Yeni **Öğe Ekle** iletişim kutusunda **Visual C#** > **Genişletilebilirlik'e** gidin ve **Windows Forms Araç Kutusu Denetimi'ni** seçin
 
-3. Bu bir kullanıcı denetimi ekler bir `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> denetiminde yerleştirmek için **araç kutusu**ve **Microsoft.VisualStudio.ToolboxControl** dağıtım için VSIX bildirimi varlık girişi.
+3. Bu bir kullanıcı denetimi `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> ekler, bir **Araç Kutusu'nda**kontrol yerleştirmek için, ve dağıtım için VSIX bildiriminde **bir Microsoft.VisualStudio.ToolboxControl** Varlık girişi.
 
-### <a name="build-a-user-interface-for-the-control"></a>Denetim için kullanıcı arabirimi oluşturma
+### <a name="build-a-user-interface-for-the-control"></a>Denetim için bir kullanıcı arabirimi oluşturma
 
-`Counter` Denetim gerektiren iki alt denetimleri: bir <xref:System.Windows.Forms.Label> geçerli sayısını görüntülemek için ve bir <xref:System.Windows.Forms.Button> sayısı 0 olarak ayarlamak için. Çağıranlar sayacı programlı olarak artırır çünkü başka bir alt denetimler gereklidir.
+Denetim `Counter` iki alt denetim <xref:System.Windows.Forms.Label> gerektirir: a geçerli sayısı <xref:System.Windows.Forms.Button> görüntülemek için ve a 0 sayısı sıfırlamak için. Arayanlar karşı sayacı programlı olarak artıya atlayacaktır, çünkü başka alt denetimler gerekli değildir.
 
 #### <a name="to-build-the-user-interface"></a>Kullanıcı arabirimini oluşturmak için
 
-1. İçinde **Çözüm Gezgini**, çift *Counter.cs* Tasarımcısı'nda açın.
+1. **Solution Explorer'da,** tasarımcıda açmak için *Counter.cs* çift tıklatın.
 
-2. Kaldırma **buraya tıklayın!** Windows Forms araç kutusu denetimi öğe şablonu eklediğinizde, varsayılan olarak dahil edilir düğmesi.
+2. Buraya **Tıklayın** kaldırın ! Windows Forms Araç Kutusu Denetimi öğesi şablonu eklediğinizde varsayılan olarak dahil edilen düğme.
 
-3. Gelen **araç kutusu**, sürükleyin bir `Label` denetimi ve ardından bir `Button` altındaki denetimi tasarım yüzeyine bırakın.
+3. Araç **Kutusundan,** bir `Label` denetimi sürükleyin ve ardından altından tasarım yüzeyine bir `Button` denetim sürükleyin.
 
-4. Genel kullanıcı denetimine 150 yeniden boyutlandırma, 50 piksel ve yeniden boyutlandırma düğme denetimi 50'ye 20 piksel.
+4. Genel kullanıcı denetimini 150, 50 piksele yeniden boyutlandırın ve düğme denetimini 50,20 piksele yeniden boyutlandırın.
 
-5. İçinde **özellikleri** penceresinde tasarım yüzeyinde denetimler için aşağıdaki değerleri ayarlayın.
+5. **Özellikler** penceresinde, tasarım yüzeyindeki denetimler için aşağıdaki değerleri ayarlayın.
 
     |Denetim|Özellik|Değer|
     |-------------|--------------|-----------|
     |`Label1`|**Metin**|""|
-    |`Button1`|**Ad**|btnReset|
-    |`Button1`|**Metin**|Sıfırlama|
+    |`Button1`|**Adı**|btnReset|
+    |`Button1`|**Metin**|Sıfırla|
 
-### <a name="code-the-user-control"></a>Kullanıcı denetimi kod
+### <a name="code-the-user-control"></a>Kullanıcı denetimini kodlama
 
-`Counter` Denetim kullanıma sunma sayacın sayaç artırılır her oluşturulması için bir olay için bir yöntem bir **sıfırlama** düğmesi ve geçerli sayı, görüntülenecek metni ve gösterilip gösterilmeyeceğini depolamak için üç özellikleri veya gizleme **sıfırlama** düğmesi. `ProvideToolboxControl` Özniteliği belirler nerede **araç kutusu** `Counter` denetimi görünür.
+Denetim, `Counter` sayacı, sayaç artırıldığında yükseltilecek bir olayı, bir **Sıfırlama** düğmesini ve geçerli sayıyı, ekran metnini depolamak için üç özelliği ve **Sıfırlama** düğmesini gösterip göstermemeyi veya gizlemeyeceğini gösteren bir yöntemi ortaya çıkarır. Öznitelik, `ProvideToolboxControl` **Denetimin** `Counter` Araç Kutusu'nda nerede görüneceğini belirler.
 
-#### <a name="to-code-the-user-control"></a>Kullanıcı denetimi kod
+#### <a name="to-code-the-user-control"></a>Kullanıcı denetimini kodlamak için
 
-1. Form, kendi yük olay işleyicisine kod penceresinde açmak için çift tıklayın.
+1. Kod penceresinde yük olayı işleyicisini açmak için formu çift tıklatın.
 
-2. Olay işleyicisi yöntemi ', sayaç değeri ve aşağıdaki örnekte gösterildiği gibi görünen metin depolamak için bir dize depolamak için bir tamsayı denetimi sınıfta oluşturun.
+2. Olay işleyicisi yönteminin üzerinde, denetim sınıfında sayaç değerini depolamak için bir tamsayı ve aşağıdaki örnekte gösterildiği gibi görüntü metnini depolamak için bir dize oluşturun.
 
     ```csharp
     int currentValue;
     string displayText;
     ```
 
-3. Aşağıdaki ortak özelliği bildirimleri oluşturun.
+3. Aşağıdaki kamu malı beyannamelerini oluşturun.
 
     ```csharp
     public int Value {
@@ -95,9 +95,9 @@ Windows Forms araç kutusu denetim şablonu tanımlanmamış kullanıcı denetim
 
     ```
 
-    Çağıranlar almak ve sayaç görüntü metnini ayarlamak için ve göstermek veya gizlemek için bu özellikleri erişebilir **sıfırlama** düğmesi. Çağıranlar, salt okunur geçerli değerini elde edebilirsiniz `Value` özelliği ancak ayarlayamıyor değeri doğrudan.
+    Arayanlar, sayacın ekran metnini almak ve ayarlamak ve **Sıfırlama** düğmesini göstermek veya gizlemek için bu özelliklere erişebilir. Arayanlar salt `Value` okunur özelliğinin geçerli değerini elde edebilir, ancak değeri doğrudan ayarlayamazlar.
 
-4. Aşağıdaki kod koymak `Load` Olay denetimi.
+4. Denetim için `Load` olaya aşağıdaki kodu koyun.
 
     ```csharp
     private void Counter_Load(object sender, EventArgs e)
@@ -108,9 +108,9 @@ Windows Forms araç kutusu denetim şablonu tanımlanmamış kullanıcı denetim
 
     ```
 
-    Ayarı **etiket** metinde <xref:System.Windows.Forms.UserControl.Load> olay değerlerine uygulanmadan önce yüklemek hedef özellikleri sağlar. Ayarı **etiket** metin Oluşturucu bir boş sonuçlanır **etiket**.
+    <xref:System.Windows.Forms.UserControl.Load> Durumda **Etiket** metninin ayarlanması, hedef özelliklerin değerleri uygulanmadan önce yüklenmesini sağlar. **Etiket** metninin oluşturucuya ayarlanması boş bir **Etiketle**sonuçlanır.
 
-5. Sayaç artırmak için aşağıdaki genel yöntem oluşturun.
+5. Sayacı nismeiçin aşağıdaki ortak yöntemi oluşturun.
 
     ```csharp
     public void Increment()
@@ -122,15 +122,15 @@ Windows Forms araç kutusu denetim şablonu tanımlanmamış kullanıcı denetim
 
     ```
 
-6. Eklemek için bir bildirim `Incremented` olaya control sınıfı.
+6. `Incremented` Olay için denetim sınıfına bir bildirim ekleyin.
 
     ```csharp
     public event EventHandler Incremented;
     ```
 
-    Çağıranlar, sayaç değeri değişikliklere yanıt vermek için bu olay işleyicileri ekleyebilirsiniz.
+    Arayanlar, sayacın değerindeki değişikliklere yanıt vermek için bu olaya işleyiciler ekleyebilir.
 
-7. Çift tıklayın ve Tasarım görünümüne dön **sıfırlama** oluşturmak için düğme `btnReset_Click` olay işleyicisi ve ardından buna aşağıdaki örnekte gösterildiği gibi doldurun.
+7. Tasarım görünümüne dönün ve olay işleyicisini `btnReset_Click` oluşturmak için **Sıfırla** düğmesini çift tıklatın ve ardından aşağıdaki örnekte gösterildiği gibi doldurun.
 
     ```csharp
     private void btnReset_Click(object sender, EventArgs e)
@@ -141,83 +141,83 @@ Windows Forms araç kutusu denetim şablonu tanımlanmamış kullanıcı denetim
 
     ```
 
-8. Hemen üzerinde sınıf tanımının içinde `ProvideToolboxControl` özniteliği bildirimi, ilk parametresinden değiştirin `"MyWinFormsControl.Counter"` için `"General"`. Bu denetimde barındıracak öğesi grubunun adını ayarlar **araç kutusu**.
+8. Sınıf tanımının hemen üstünde, öznitelik bildiriminde, `ProvideToolboxControl` ilk parametrenin değerini ' den `"MyWinFormsControl.Counter"` ' e `"General"`değiştirin Bu, **Denetimi Araç Kutusu'nda**barındıracak öğe grubunun adını ayarlar.
 
-    Aşağıdaki örnekte gösterildiği `ProvideToolboxControl` özniteliği ve ayarlanmış bir sınıf tanımı.
+    Aşağıdaki örnek, `ProvideToolboxControl` özniteliği ve ayarlanan sınıf tanımını gösterir.
 
     ```csharp
     [ProvideToolboxControl("General", false)]
     public partial class Counter : UserControl
     ```
 
-### <a name="test-the-control"></a>Denetimi test
+### <a name="test-the-control"></a>Denetimi test edin
 
- Test etmek için bir **araç kutusu** denetlemek, ilk geliştirme ortamında test edin ve içinde derlenen bir uygulamayı test edin.
+ **Bir Araç Kutusu** denetimini sınamak için önce geliştirme ortamında sınayın ve ardından derlenmiş bir uygulamada test edin.
 
-#### <a name="to-test-the-control"></a>Denetimi'ni sınamak için
+#### <a name="to-test-the-control"></a>Denetimi test etmek için
 
-1. Tuşuna **F5** için **hata ayıklamayı Başlat**.
+1. **Hata Ayıklamaya Başlamak**için **F5** tuşuna basın.
 
-    Bu komut, projeyi derler ve Visual Studio'nun yüklü denetimi olan ikinci bir deneysel örneği açılır.
+    Bu komut projeyi oluşturur ve denetimi yüklü olan Visual Studio'nun ikinci bir Deneysel örneğini açar.
 
-2. Visual Studio'nun deneysel örneğinde oluşturma bir **Windows Forms uygulaması** proje.
+2. Visual Studio'nun Deneysel örneğinde bir **Windows Forms Application** projesi oluşturun.
 
-3. İçinde **Çözüm Gezgini**, çift *Form1.cs* zaten açık değilse Tasarımcısı'nda açın.
+3. **Çözüm Gezgini'nde,** zaten açık değilse tasarımcıda açmak için *Form1.cs* çift tıklayın.
 
-4. İçinde **araç kutusu**, `Counter` denetim görüntüleneceğine **genel** bölümü.
+4. Araç **Kutusunda,** `Counter` denetim **Genel** bölümde görüntülenmelidir.
 
-5. Sürükleme bir `Counter` Formunuza denetim ve ardından bu seçeneği belirleyin. `Value`, `Message`, Ve `ShowReset` özellikleri içinde görüntülenecektir **özellikleri** birlikte öğesinden devralınan Özellikler penceresinde <xref:System.Windows.Forms.UserControl>.
+5. Denetimi `Counter` forma sürükleyin ve sonra seçin. , `Value` `Message`ve `ShowReset` özellikleri **Özellikler** penceresinde, devralınan özellikleri ile birlikte <xref:System.Windows.Forms.UserControl>görüntülenir.
 
-6. Ayarlama `Message` özelliğini `Count:`.
+6. Özelliği `Message` ' `Count:`ye ayarlayın.
 
-7. Sürükleme bir <xref:System.Windows.Forms.Button> forma denetim ve ardından düğmeyi adını ve metin özelliklerini `Test`.
+7. Denetimi <xref:System.Windows.Forms.Button> forma sürükleyin ve düğmenin ad ve metin özelliklerini `Test`.'e ayarlayın.
 
-8. Açmak için düğmeyi çift tıklatın *Form1.cs* içinde kod görünümü ve bir tıklama işleyicisi oluşturun.
+8. Kod görünümünde *Form1.cs* açmak ve bir tıklama işleyicisi oluşturmak için düğmeyi çift tıklatın.
 
-9. Tıklama işleyicisi arama `counter1.Increment()`.
+9. Tıklama işleyicisinde, `counter1.Increment()`.
 
-10. Oluşturucu işlevi çağırdıktan sonra içinde `InitializeComponent`, türü `counter1``.``Incremented +=` ve tuşuna **sekmesini** iki kez.
+10. Oluşturucu işlevinde, çağrıdan `InitializeComponent`sonra `counter1``.``Incremented +=` , yazın ve sonra **Sekme'ye** iki kez basın.
 
-    Visual Studio için bir form düzeyinde işleyici oluşturur `counter1.Incremented` olay.
+    Visual Studio olay için bir form `counter1.Incremented` düzeyi işleyicisi oluşturur.
 
-11. Vurgulayın `Throw` olay işleyicisi, türü deyiminde `mbox`ve tuşuna **sekmesini** iki kez mbox kod parçacığı bir ileti kutusu oluşturmak için.
+11. Olay `Throw` işleyicisi, yazın `mbox`ve sonra mbox kodu snippet bir ileti kutusu oluşturmak için **sekme** iki kez basın ifadesini vurgulayın.
 
-12. Aşağıdakileri sonraki satırda ekleyin `if` / `else` görünürlüğünü ayarlamak için blok **sıfırlama** düğmesi.
+12. Sonraki satırda, `if` / `else` **Sıfırla** düğmesinin görünürlüğünü ayarlamak için aşağıdaki bloğu ekleyin.
 
     ```csharp
     if (counter1.Value < 5) counter1.ShowReset = false;
     else counter1.ShowReset = true;
     ```
 
-13. Tuşuna **F5**.
+13. **F5 tuşuna**basın.
 
-    Form açılır. `Counter` Denetimi, aşağıdaki metni görüntüler.
+    Form açılır. Denetim `Counter` aşağıdaki metni görüntüler.
 
-    **Sayısı: 0**
+    **Sayı: 0**
 
-14. Tıklayın **Test**.
+14. **Test'i**tıklatın.
 
-    Sayacını artırır ve Visual Studio, bir ileti kutusu görüntüler.
+    Sayaç artışları ve Visual Studio bir ileti kutusu görüntüler.
 
 15. İleti kutusunu kapatın.
 
-    **Sıfırlama** düğme kaybolur.
+    **Sıfırlama** düğmesi kaybolur.
 
-16. Tıklayın **Test** sayaç ulaşana kadar **5** kutuları her iletiyi kapattıktan.
+16. Sayaç ileti kutularını her seferinde **kapatarak 5'e** ulaşana kadar **Test'i** tıklatın.
 
-    **Sıfırlama** düğme yeniden görüntülenir.
+    **Sıfırlama** düğmesi yeniden görüntülenir.
 
-17. Tıklayın **sıfırlama**.
+17. **Sıfırla'yı**tıklatın.
 
-    Sayaç sıfırlanır için **0**.
+    Sayaç **0'a**sıfırlanır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Yapı kurarken bir **araç kutusu** denetimi, Visual Studio, adlı bir dosya oluşturur *ProjectName.vsix* projenizin \bin\debug\ klasöründeki. Denetim yükleyerek dağıtabileceğiniz *.vsix* bir ağ veya bir Web sitesi için dosya. Kullanıcı açtığında *.vsix* dosya, denetimin yüklü ve Visual Studio için eklenen **araç kutusu** kullanıcının bilgisayarında. Alternatif olarak, karşıya *.vsix* dosyasını [Visual Studio Market](https://marketplace.visualstudio.com/) böylece kullanıcılar, göz atarak bulabilirsiniz **Araçları**  >   **Uzantılar ve güncelleştirmeler** iletişim.
+Bir Araç **Kutusu** denetimi oluşturduğunuzda, Visual Studio projenizin \bin\debug\ klasöründe *ProjectName.vsix* adlı bir dosya oluşturur. *.vsix* dosyasını bir ağa veya bir Web sitesine yükleyerek denetimi dağıtabilirsiniz. Bir kullanıcı *.vsix* dosyasını açtığında, denetim yüklenir ve kullanıcının bilgisayarındaki Visual Studio **Araç Kutusu'na** eklenir. Alternatif olarak, *.vsix* dosyasını [Visual Studio Marketplace'e](https://marketplace.visualstudio.com/) yükleyebilirsiniz, böylece kullanıcılar **Araçlar** > **Uzantıları ve Güncelleştirmeleri** iletişim kutusunda göz atarak dosyayı bulabilirler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'nun diğer bölümlerini genişletme](../extensibility/extending-other-parts-of-visual-studio.md)
-- [WPF araç kutusu denetimi oluşturma](../extensibility/creating-a-wpf-toolbox-control.md)
-- [Visual Studio'nun diğer bölümlerini genişletme](../extensibility/extending-other-parts-of-visual-studio.md)
-- [Windows Forms denetimi geliştirmenin esasları](/dotnet/framework/winforms/controls/windows-forms-control-development-basics)
+- [Visual Studio'nun diğer bölümlerini genişletin](../extensibility/extending-other-parts-of-visual-studio.md)
+- [WPF Araç Kutusu Denetimi Oluşturma](../extensibility/creating-a-wpf-toolbox-control.md)
+- [Visual Studio'nun diğer bölümlerini genişletin](../extensibility/extending-other-parts-of-visual-studio.md)
+- [Windows Forms geliştirme temellerini denetler](/dotnet/framework/winforms/controls/windows-forms-control-development-basics)

@@ -1,27 +1,27 @@
 ---
-title: GUID_ARRAY | Microsoft Docs
+title: GUID_ARRAY | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - GUID_ARRAY structure
 ms.assetid: 9e12500c-2c1c-49b1-a0ba-e08366c97eb8
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: d53413ee56700fe39470d3bbc3229f4b8b668373
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e163674b5622146ef1a270920dc7458dce2e3993
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66317534"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736649"
 ---
-# <a name="guidarray"></a>GUID_ARRAY
-Bir dizi benzersiz tanımlayıcıları kullanılabilir hata ayıklama altyapıları için açıklar.
+# <a name="guid_array"></a>GUID_ARRAY
+Kullanılabilir hata ayıklama motorları için bir dizi benzersiz tanımlayıcıyı açıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,20 +43,20 @@ public struct GUID_ARRAY
 
 ## <a name="members"></a>Üyeler
 `dwCount`\
-Dizide benzersiz tanımlayıcıları sayısı.
+Dizideki benzersiz tanımlayıcıların sayısı.
 
 `Members`\
-Benzersiz tanımlayıcıları içeren bir dizi.
+Benzersiz tanımlayıcılar içeren dizi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı tarafından döndürülen [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md) yöntemi.
+Bu yapı [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md) yöntemi ile döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: Msdbg.h
+Üstbilgi: Msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

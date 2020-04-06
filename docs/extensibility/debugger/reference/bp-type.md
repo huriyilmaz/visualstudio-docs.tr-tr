@@ -1,5 +1,5 @@
 ---
-title: BP_TYPE | Microsoft Docs
+title: BP_TYPE | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BP_TYPE enumeration
 ms.assetid: ef07191e-7966-43ab-96fb-1a0b1db3115d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 69774df555c4258ef36a65a3a18e6ce3fccbe555
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 02550141fb1857214d5bfd80d5dd86969bec9fba
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350571"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737794"
 ---
-# <a name="bptype"></a>BP_TYPE
-Kesme noktası bir kod konumu, veri konumu veya başka türde bir kesme noktası olduğunu belirtir.
+# <a name="bp_type"></a>BP_TYPE
+Kesme noktasının bir kod konumunda olup olmadığını, bir veri konumu mu yoksa başka bir kesme noktası türü mü olduğunu belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -48,28 +48,28 @@ public enum enum_BP_TYPE {
 
 ## <a name="fields"></a>Alanlar
 `BPT_NONE`\
-Hiçbir kesme noktası türünü belirtir.
+Kesme noktası türü belirtmezse.
 
 `BPT_CODE`\
-Bir kod kesme noktası belirtir.
+Kod kesme noktası belirtir.
 
 `BPT_DATA`\
 Veri kesme noktası belirtir.
 
 `BPT_SPECIAL`\
-Bir kod ya da bir veri türü olan bir kesme noktası belirtir. Bu tür kullanım dışıdır ve kullanılmamalıdır.
+Ne kod ne de veri türü olan bir kesme noktası belirtir. Bu tür amortismana dizilir ve kullanılmamalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
-Bir parametre olarak geçirilen [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) ve [GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md) yöntemleri.
+[GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md) ve [GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md) yöntemlerine parametre olarak geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [GetBreakpointType](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getbreakpointtype.md)
 - [GetBreakpointType](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getbreakpointtype.md)

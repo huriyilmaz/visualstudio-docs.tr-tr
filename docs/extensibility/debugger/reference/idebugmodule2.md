@@ -1,5 +1,5 @@
 ---
-title: IDebugModule2 | Microsoft Docs
+title: İDebugModülü2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugModule2 interface
 ms.assetid: 24c2a126-f4ab-4891-8509-8ef99b994c08
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: b621ae3b1408bc4af371243a1c34909117d40576
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: dbbea1b52133de41dd26f437aeba31a0eff5a50a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323929"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726914"
 ---
 # <a name="idebugmodule2"></a>IDebugModule2
-Bu arabirim bir modülü temsil eder — diğer bir deyişle, bir yürütülebilir bir program ölçü — bir DLL gibi.
+Bu arabirim, DLL gibi bir programın çalıştırılabilir bir birimini temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,33 +28,33 @@ Bu arabirim bir modülü temsil eder — diğer bir deyişle, bir yürütülebil
 IDebugModule2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Hata ayıklama altyapısı (DE) bir modülü temsil eder ve bu modülle ilgili bilgileri erişim sağlamak için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Hata ayıklama altyapısı (DE) bir modülü temsil etmek ve bu modül hakkındaki bilgilere erişim sağlamak için bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bir çağrı [GetModule](../../../extensibility/debugger/reference/idebugmoduleloadevent2-getmodule.md) bu arabirimi döndürür. DE gönderir [IDebugModuleLoadEvent2](../../../extensibility/debugger/reference/idebugmoduleloadevent2.md) arabirimini kullanarak oturum hata ayıklama Yöneticisi için (SDM) [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) yöntemi.
+ [GetModule](../../../extensibility/debugger/reference/idebugmoduleloadevent2-getmodule.md) için bir çağrı bu arabirimi döndürür. DE, [Olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) yöntemini kullanarak oturum hata ayıklama yöneticisine (SDM) [IDebugModuleLoadEvent2](../../../extensibility/debugger/reference/idebugmoduleloadevent2.md) arabirimini gönderir.
 
- Bu arabirim, ayrıca döndürülebilir bir [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) yapısı (bir çağrı tarafından döndürülen [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)).
+ Bu arabirim, [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) yapısında da döndürülebilir [(EnumFrameInfo'ya](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)yapılan bir çağrı yla döndürülür).
 
-- [Sonraki](../../../extensibility/debugger/reference/ienumdebugmodules2-next.md) Ayrıca bu arabirim döndürür ([EnumModules](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md) döndürür [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md) arabirimi).
+- [Sonraki](../../../extensibility/debugger/reference/ienumdebugmodules2-next.md) de bu arabirimi döndürür[(EnumModules](../../../extensibility/debugger/reference/idebugprogram2-enummodules.md) [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md) arabirimini döndürür).
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugModule2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IDebugModule2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)|Alır [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) , bu modül açıklar.|
-|[ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md)|ARTIK KULLANILMIYOR. KULLANMAYIN. Bu modüle ilişkin simgeleri yeniden yükler.|
+|[GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)|Bu modülü açıklayan [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) alır.|
+|[ReloadSymbols_Deprecated](../../../extensibility/debugger/reference/idebugmodule2-reloadsymbols-deprecated.md)|Eski. KULLANMAYıN. Bu modül için sembolleri yeniden yükler.|
 
 ## <a name="remarks"></a>Açıklamalar
- Modül bilgilerini görüntülenebilir **modülleri** IDE bir pencerenin.
+ Modül bilgileri IDE'nin **Modüller** penceresinde görüntülenebilir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

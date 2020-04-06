@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointRequest2 | Microsoft Docs
+title: IDebugBreakpointRequest2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakpointRequest2 interface
 ms.assetid: 01ac4013-96f9-4235-b289-f55f9e99558f
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55e7c73b720e326b823c3038928d7141ea732155
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f30f9698c9c81322edd6935b40c16cad6f46024c
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352912"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734922"
 ---
 # <a name="idebugbreakpointrequest2"></a>IDebugBreakpointRequest2
-Bu arabirim, oluşturma ve herhangi bir türde kesme noktası bağlama için gereken bilgileri temsil eder.
+Bu arabirim, herhangi bir kesme noktası oluşturmak ve bağlamak için gereken bilgileri temsil eder.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,31 +28,31 @@ Bu arabirim, oluşturma ve herhangi bir türde kesme noktası bağlama için ger
 IDebugBreakpointRequest2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- Oturum hata ayıklama Yöneticisi (SDM), genellikle bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ Oturum hata ayıklama yöneticisi (SDM) genellikle bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Hata ayıklama altyapısı (DE) Bu arabirim yapılan bir çağrıyla alır [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) bir bekleyen kesme noktası oluşturmak için. Bir çağrı [GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md) bu arabirimi DE alabilirsiniz.
+ Hata ayıklama altyapısı (DE) bekleyen bir kesme noktası oluşturmak için [CreatePendingBreakpoint'e](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md) yapılan bir çağrı aracılığıyla bu arabirimi alır. [GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md) için bir çağrı DE bu arabirimi alabilirsiniz.
 
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugBreakpointRequest2`.
+## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
+ Aşağıdaki tabloda `IDebugBreakpointRequest2`.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md)|Bu kesme noktası istek kesme noktası konumu türünü alır.|
-|[GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)|Bu kesme noktası istek tanımlayan kesme noktası isteği bilgilerini alır.|
+|[GetLocationType](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getlocationtype.md)|Bu kesme noktası isteğinin kesme noktası konum türünü alır.|
+|[GetRequestInfo](../../../extensibility/debugger/reference/idebugbreakpointrequest2-getrequestinfo.md)|Bu kesme noktası isteğini açıklayan kesme noktası isteği bilgilerini alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Sonra program ayıklanan yüklendi, çağrı [bağlama](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) program istenen konuma bir bekleyen kesme noktasının bağlar.
+ Program debugged yüklendikten sonra, [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) için bir arama programda istenen konuma bekleyen bir kesme noktası bağlar.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [CreatePendingBreakpoint](../../../extensibility/debugger/reference/idebugengine2-creatependingbreakpoint.md)
 - [GetBreakpointRequest](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getbreakpointrequest.md)
-- [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
+- [Bağla](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)

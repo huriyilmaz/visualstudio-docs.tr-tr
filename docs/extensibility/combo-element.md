@@ -1,25 +1,25 @@
 ---
-title: Combos öğesi | Microsoft Docs
+title: Combo Element | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Combos element (VSCT XML schema)
 - VSCT XML schema elements, Combos
 ms.assetid: 392e3063-f0a0-4130-9583-23bd2aa3fa36
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9a97163f1f7dc2a1152bc22f4bc3a68ed32b3cfe
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 18ff9d9e20ec221a86f1cce5f9c43a4e47ed6dc2
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334902"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739812"
 ---
-# <a name="combo-element"></a>Combos öğesi
-Bir açılan kutunun içinde görünen komutlar tanımlar. Şu şekilde birleşik giriş kutuları dört çeşit vardır: Aşağı açılan, DynamicCombo, IndexCombo ve MRUCombo.
+# <a name="combo-element"></a>Açılan eleman
+Açılan kutuda görünen komutları tanımlar. Açılan kutular dört türü vardır, aşağıdaki gibi: DropDownCombo, DynamicCombo, IndexCombo ve MRUCombo.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -38,28 +38,28 @@ Bir açılan kutunun içinde görünen komutlar tanımlar. Şu şekilde birleşi
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|GUID|Gerekli. GUID/ID komut tanımlayıcısı GUİD'si.|
-|kimlik|Gerekli. Kimliği bir GUID/ID komut tanımlayıcısı.|
-|defaultWidth|Gerekli. Birleşik giriş kutusu için bir piksel genişliği belirten bir tamsayı.|
-|idCommandList|Gerekli. Etkin komut hedefinin birleşik giriş kutusunda görüntülenecek öğelerin listesini almak için gönderilen bir kimliği. Kimlik denetimi ile aynı GUID kapsamda olur.|
-|öncelik|İsteğe bağlı. Bir sayısal değer yönelik önceliği belirtir.|
-|türü|İsteğe bağlı. Düğmenin türü belirten bir numaralandırılmış değeri.<br /><br /> Belirtilmemişse, düğme kullanır.<br /><br /> Aşağı açılan<br /> VSPackage'ı bu birleşik giriş kutusunun içeriğini doldurma için sorumludur. Kullanıcının herhangi bir şey bu açılan metin kutusuna yazamazsınız.<br /><br /> DynamicCombo<br /> VSPackage'ı bu birleşik giriş kutusunun içeriğini doldurmak için sorumludur. Kullanıcı bu birleşik düzenleyebilir ve ayrıca öğeleri seçin.<br /><br /> IndexCombo<br /> BT'nin dışında DynamicCombo aynı metin yerine öğenin dizinini oluşturur.<br /><br /> MRUCombo<br /> VSPackage'ı adına tümleşik geliştirme ortamı (IDE) tarafından doldurulur.  Kullanıcı bu birleşik giriş kutusunda düzenleyebilirsiniz. Son 16 girişleri birleşik giriş kutusu başına en fazla IDE hatırlar.<br /><br /> Kullanıcı bir birleşik giriş kutusunda seçerse ya da yeni bir şeyler girer, IDE uygun VSPackage size bildirir.|
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Guıd|Gereklidir. GUID/ID komut tanımlayıcısının GUID'i.|
+|id|Gereklidir. GUID/ID komut tanımlayıcısının kimliği.|
+|varsayılanGenişlik|Gereklidir. Açılan kutu için piksel genişliğini belirten bir tamsayı.|
+|idCommandList|Gereklidir. Açılan kutuda görüntülenecek öğelerin listesini almak için etkin komut hedefine gönderilen bir kimlik. Kimlik, denetimle aynı GUID kapsamında olacaktır.|
+|Öncelik|İsteğe bağlı. Önceliği belirten sayısal bir değer.|
+|type|İsteğe bağlı. Düğmetürünü belirten numaralandırılmış bir değer.<br /><br /> Verilmediği takdirde Düğme'yi kullanır.<br /><br /> DropDownCombo<br /> VSPackage bu açılan kutunun içeriğini doldurmakla yükümlüdür. Kullanıcı bu açılır metin kutusuna hiçbir şey yazamaz.<br /><br /> DynamicCombo<br /> VSPackage bu açılan kutunun içeriğini doldurmaktan sorumludur. Kullanıcı bu açılan'ı ve içinde öğeleri seçebilir.<br /><br /> IndexCombo<br /> DynamicCombo ile aynı, ancak metnin indeksini yükseltmesi dışında.<br /><br /> MRUCombo<br /> VSPackage adına entegre geliştirme ortamı (IDE) tarafından doldurulur.  Kullanıcı bu açılan kutuda edinebilir. IDE, açılan kutu başına son 16 girişi hatırlar.<br /><br /> Kullanıcı açılan kutuda bir şey seçtiğinde veya yeni bir şey girdiğinde, IDE uygun VSPackage'ı bildirir.|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|Üst öğe|İsteğe bağlı. Düğmenin üst öğe.|
-|CommandFlag|Gerekli. Bkz: [Command flag öğesi](../extensibility/command-flag-element.md). Bir düğme için geçerli CommandFlag değerler aşağıdaki gibidir.<br /><br /> -CaseSensitive<br /><br /> - CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> -DynamicVisibility<br /><br /> -Süzme<br /><br /> -IconAndText<br /><br /> -NoAutoComplete<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -StretchHorizontally|
-|Dizeler|Gerekli. Bkz: [Strings öğesi](../extensibility/strings-element.md). Alt ButtonText öğesi tanımlanmalıdır.|
-|Ek Açıklama|İsteğe bağlı bir açıklama.|
+|Üst|İsteğe bağlı. Düğmenin ana öğesi.|
+|Komut Bayrağı|Gereklidir. Bkz. [Komut bayrak öğesi.](../extensibility/command-flag-element.md) Bir Düğme için geçerli CommandFlag değerleri aşağıdaki gibidir.<br /><br /> - CaseSensitive<br /><br /> - CommandWellOnly<br /><br /> - Varsayılan Devre<br /><br /> - VarsayılanGörünmez<br /><br /> - Dinamik Görünürlük<br /><br /> - Filtre Tuşları<br /><br /> - Simgeve Metin<br /><br /> - NoAutoComplete<br /><br /> - NoButtonCustomizE<br /><br /> - NoCustomize<br /><br /> - NoKeyCustomize<br /><br /> - StretchYatay|
+|Dizeler|Gereklidir. Bkz. [Dizeleri öğesi.](../extensibility/strings-element.md) Alt ButtonText öğesi tanımlanmalıdır.|
+|Ek Açıklama|İsteğe bağlı yorum.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutları koleksiyonunu temsil eder.|
+|[Komutlar öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutların toplanmasını temsil eder.|
 
 ## <a name="example"></a>Örnek
 

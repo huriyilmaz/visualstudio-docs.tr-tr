@@ -1,26 +1,26 @@
 ---
-title: Yönetilen kodda COM sabitleri | Microsoft Docs
+title: Yönetilen Koddaki COM Sabitleri | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - managed VSPackages, COM constants and macros
 ms.assetid: b6663608-b049-44b0-a75b-080fdc5faafc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d855142ad51f5433fbf0053cfbcfc1d8bef8871d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 919d000e44b90e975543f8aa6419968a40149adf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350717"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739834"
 ---
-# <a name="com-constants-in-managed-code"></a>Yönetilen kodda COM sabitleri
-Yönetilen paket Framework (MPF) bazı standart COM sabitleri yönetilen kod için kullanılabilir hale getirir. Bu sabitler, başvuru amacıyla aşağıda listelenmiştir.
+# <a name="com-constants-in-managed-code"></a>Yönetilen koddaki COM sabitleri
+Yönetilen Paket Çerçevesi (MPF), yönetilen kod için bazı standart COM sabitlerini kullanılabilir hale getirir. Bu sabitler referans ınız için aşağıda listelenmiştir.
 
-## <a name="boolean-hresult-values"></a>Boole HRESULT değerleri
+## <a name="boolean-hresult-values"></a>Boolean HRESULT değerleri
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>
 
  <xref:Microsoft.VisualStudio.VSConstants.S_OK>
@@ -89,7 +89,7 @@ Yönetilen paket Framework (MPF) bazı standart COM sabitleri yönetilen kod iç
 
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_WRONGCOMPOBJ>
 
-## <a name="ole-dispatch-errors"></a>OLE dağıtım hataları
+## <a name="ole-dispatch-errors"></a>OLE gönderme hataları
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_ARRAYISLOCKED>
 
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_BADCALLEE>
@@ -127,4 +127,4 @@ Yönetilen paket Framework (MPF) bazı standart COM sabitleri yönetilen kod iç
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_UNKNOWNNAME>
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata işleme ve dönüş değerleri](../extensibility/error-handling-and-return-values.md)
+- [Hata işleme ve iade değerleri](../extensibility/error-handling-and-return-values.md)

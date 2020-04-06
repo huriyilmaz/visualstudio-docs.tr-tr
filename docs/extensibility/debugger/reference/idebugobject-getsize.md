@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetSize | Microsoft Docs
+title: IDebugObject::GetSize | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugObject::GetSize method
 ms.assetid: 89af423b-36eb-479d-b2de-2693455eca15
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 22d47ba6fdeb22ad44871d08419aa2e4990a83fc
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 8fd42abfc056c3b9e50d073ad335f72ac9022aa7
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323601"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726575"
 ---
 # <a name="idebugobjectgetsize"></a>IDebugObject::GetSize
-Nesnenin boyutu bayt cinsinden alır.
+Nesnenin boyutunu baytlara alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,13 +41,13 @@ int GetSize(
 
 ## <a name="parameters"></a>Parametreler
 `pnSize`\
-[out] Boyutu bayt cinsinden döndürür.
+[çıkış] Boyutu baytlarla döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kullanım [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md) bayt dizisi olarak değerini almak için yöntemi.
+ Değeri bayt dizisi olarak almak için [GetValue](../../../extensibility/debugger/reference/idebugobject-getvalue.md) yöntemini kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_DATA_STRING | Microsoft Docs
+title: BP_LOCATION_DATA_STRING | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BP_LOCATION_DATA_STRING structure
 ms.assetid: 445d6f3f-95b0-47ac-85e2-51b778240687
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
-ms.openlocfilehash: cf8e2958f55ca13ab050302a24ad9e5ae185d81a
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 75f881feaaa2068abd98d771a63024f20435d98f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66353089"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737973"
 ---
-# <a name="bplocationdatastring"></a>BP_LOCATION_DATA_STRING
-Tümleşik geliştirme ortamından (IDE) kullanıcının girebileceği bir dize temel alan veri kesme noktaları ayarlamak için kullanılır.
+# <a name="bp_location_data_string"></a>BP_LOCATION_DATA_STRING
+Kullanıcının tümleşik geliştirme ortamından (IDE) girebileceği bir dizeyi temel alan veri kesme noktalarını ayarlamak için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,26 +37,26 @@ typedef struct _BP_LOCATION_DATA_STRING {
 
 ## <a name="members"></a>Üyeler
 `pThread`\
-[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) kesme noktası oluştuğu iş parçacığını temsil eden nesne.
+Kesme noktasının oluştuğu iş parçacığı temsil eden [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
 
 `bstrContext`\
-Kod içinde kesme, genellikle bir yöntem veya işlev adı olarak görülen bir çağrı yığınında bağlamı.
+Kod içindeki kesme noktasıbağlamı, genellikle bir çağrı yığınında görüldüğü gibi bir yöntem veya işlev adı.
 
 `bstrDataExpr`\
-Veri dizesi, kesme noktası ayarlamak için kullanıcı girer.
+Kesme noktasını ayarlamak için kullanıcının girdiği veri dizesi.
 
 `dwNumElements`\
-Kesme noktası oluştuğu veri dizedeki öğe sayısı.
+Kesme noktasının oluştuğu veri dizesindeki öğe sayısı.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı üyesidir [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısı bir birleşimin parçası olarak.
+Bu yapı, bir birliğin parçası olarak [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapının bir üyesidir.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

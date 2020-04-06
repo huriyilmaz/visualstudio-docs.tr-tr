@@ -1,28 +1,28 @@
 ---
-title: AppliesTo öğesi (Visual Studio şablonları) | Microsoft Docs
+title: AapplyTo Element (Visual Studio Templates) | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
 ms.assetid: 8fb1334b-d78c-405f-98b4-786e9f6b58d7
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33288876d1a9101d96d4d2c0c0c7beb5e6f1ac72
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 39b5ee1e3cad0b4d8ddbe0fc2dfa1c2d478ec063
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66352248"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740079"
 ---
-# <a name="appliesto-element-visual-studio-templates"></a>AppliesTo öğesi (Visual Studio şablonları)
+# <a name="appliesto-element-visual-studio-templates"></a>AapplyTo öğesi (Visual Studio şablonları)
 
-Bir veya daha fazla yeteneği karşılamak için isteğe bağlı bir ifade belirtir (bkz <xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher>). Özellikleri bir özellik olarak hiyerarşi aracılığıyla proje türlerine göre sunulur [__VSHPROPID5. VSHPROPID_ProjectCapabilities](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5.VSHPROPID_ProjectCapabilities>). Bu sayede, şablon ortak uygulanabilir yeteneklere sahip birden fazla proje türü tarafından paylaşılabilir.
+Bir veya daha fazla özelliği eşleştirmek için <xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher>isteğe bağlı bir ifade belirtir (bkz. Özellikler, bir özellik __VSHPROPID5 olarak hiyerarşi aracılığıyla proje türlerine göre açığa [alınır. VSHPROPID_ProjectCapabilities.](<xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5.VSHPROPID_ProjectCapabilities>) Bu sayede, şablon ortak uygulanabilir yeteneklere sahip birden fazla proje türü tarafından paylaşılabilir.
 
-Bu öğe isteğe bağlıdır. Bir şablon dosyasında en fazla bir örnek olabilir. Bu öğe yalnızca, o anda seçili etkin projenin yeteneklerine göre bir öğe şablonunun uygulanabilir olarak tercih edilmesini sağlar. Bir öğe şablonunu uygulanamaz yapmak için kullanılamaz. Varsa `AppliesTo` yok veya ifade başarılı bir şekilde, ardından iyileştirilmiş değil `TemplateID` veya `TemplateGroupID` şablonu varsa, ürünün önceki sürümlerinde yapmak için kullanılır.
+Bu öğe isteğe bağlıdır. Bir şablon dosyasında en fazla bir örnek olabilir. Bu öğe yalnızca, o anda seçili etkin projenin yeteneklerine göre bir öğe şablonunun uygulanabilir olarak tercih edilmesini sağlar. Bir öğe şablonunu uygulanamaz yapmak için kullanılamaz. `AppliesTo` Yoksa veya ifade başarılı bir şekilde kabul `TemplateID` etmiyorsa, `TemplateGroupID` şablonu ürünün önceki sürümlerinde olduğu gibi geçerli kılmak için kullanılır.
 
-Visual Studio 2013 güncelleştirme 2 kullanıma sunmuştur. Doğru sürümü başvuru için bkz: [başvurulan derlemeler, Visual Studio 2013 SDK'sı güncelleştirme 2'de sunulan](/previous-versions/dn632168(v=vs.120)).
+Visual Studio 2013 Güncelleme 2 tanıtıldı. Doğru sürüme başvurmak için Visual [Studio 2013 SDK Update 2'de teslim edilen Başvuru derlemelerine](/previous-versions/dn632168(v=vs.120))bakın.
 
 ```xml
 <VSTemplate>
@@ -60,11 +60,11 @@ Bir metin değeri gereklidir. Bu metin projenin yeteneklerini belirtir.
 
 Geçerli ifade sözdizimi şu şekilde tanımlanır:
 
-- Yetenek ifadesi gibi "(VisualC &#124; CSharp) + (MSTest &#124; NUnit)".
+- "(VisualC &#124; CSharp) + (MSTest &#124; NUnit)" gibi yetenek ifadesi.
 
 - "&#124;" OR işlecidir.
 
-- "&" Ve "+" karakterlerinin ikisi de AND işleçleridir.
+- "&" ve "+" karakterleri hem AND işleçleridir.
 
 - "!" karakteri NOT işlecidir.
 
@@ -72,11 +72,11 @@ Geçerli ifade sözdizimi şu şekilde tanımlanır:
 
 - Null veya boş ifade bir eşleşme olarak değerlendirilir.
 
-- Proje özellikleri, bu ayrılmış karakterler dışında herhangi bir karakter olabilir: "'' :;,+-*/\\! ~&#124;& %$@^() ={}[] <>? \t\b\n\r
+- Proje yetenekleri bu ayrılmış karakterler dışında herhangi bir karakter olabilir: "''::,+-*/\\!~&#124;&%$@^()={}[]<>? \t\b\n\r
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, üç farklı şablonu göstermektedir. `Template1` tüm C# projesi türleri veya destekleyen herhangi bir proje türü geçerli `WindowsAppContainer` yeteneği. `Template2` tüm C# projeleri için geçerlidir. `Template3` olmayan C# projeleri için geçerlidir `WindowsAppContainer` projeleri.
+Aşağıdaki örnek, üç farklı şablonu göstermektedir. `Template1`tüm C# proje türleri veya `WindowsAppContainer` yeteneği destekleyen diğer proje türleri için geçerlidir. `Template2`her türlü c# projeleri için geçerlidir. `Template3`proje olmayan `WindowsAppContainer` C# projeleri için geçerlidir.
 
 ```xml
 <!--  Template 1 -->
@@ -106,5 +106,5 @@ Aşağıdaki örnek, üç farklı şablonu göstermektedir. `Template1` tüm C# 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

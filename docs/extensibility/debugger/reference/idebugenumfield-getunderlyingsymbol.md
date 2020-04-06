@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetUnderlyingSymbol | Microsoft Docs
+title: IDebugEnumField::GetUnderlyingSymbol | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugEnumField::GetUnderlyingSymbol method
 ms.assetid: c3b8a117-6708-4cfd-8ffc-5f007d706bc5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 353b6d6f2a448cb7ac1bfdc98cc489688db9ee74
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 14cac9d3f761e95b821179137f2efc23ef61b91b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345030"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80730275"
 ---
 # <a name="idebugenumfieldgetunderlyingsymbol"></a>IDebugEnumField::GetUnderlyingSymbol
-Bu yöntem döndürür bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) , numaralandırma adını temsil eder.
+Bu yöntem, numaralandırmaadını temsil eden bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) döndürür.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -41,15 +41,15 @@ int GetUnderlyingSymbol(
 
 ## <a name="parameters"></a>Parametreler
 `ppField`\
-[out] Döndürür [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) açıklayan bu sabit listesi adı.
+[çıkış] Bu numaralandırmanın adını açıklayan [IDebugField'ı](../../../extensibility/debugger/reference/idebugfield.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralandırma adını kullanarak bir bellek konumuna bağlı sabit listesi türü de içeren [bağlama](../../../extensibility/debugger/reference/idebugbinder-bind.md).
+ Numaralandırmanın adı, [Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md)kullanarak bir bellek konumuna bağlı olan numaralandırma türünü de içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)
-- [Bind](../../../extensibility/debugger/reference/idebugbinder-bind.md)
+- [Bağla](../../../extensibility/debugger/reference/idebugbinder-bind.md)

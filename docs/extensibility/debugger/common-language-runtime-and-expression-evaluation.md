@@ -1,39 +1,39 @@
 ---
-title: Ortak dil çalışma zamanı ve ifade değerlendirme | Microsoft Docs
+title: Ortak Dil Çalışma Süresi ve İfade Değerlendirme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation, and common language runtime
 ms.assetid: b36c1eb5-1aaf-48a6-b287-ee7a273d2b1c
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 803dbb75a5cc9ad2b4fc81310c3b564994fea734
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 013579473189dd9310501b76d2de0d5cf6fa5822
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351302"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739117"
 ---
-# <a name="common-language-runtime-and-expression-evaluation"></a>Ortak dil çalışma zamanı ve ifade değerlendirme
+# <a name="common-language-runtime-and-expression-evaluation"></a>Ortak dil çalışma süresi ve ifade değerlendirmesi
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için lütfen bkz [CLR ifade değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
+> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi için lütfen [CLR ifade değerlendiricilerve](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) [Yönetilen ifade değerlendirici örneğine](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)bakın.
 
- Derleyiciler, Visual Basic gibi ve C# (C-sharp olarak okunur), ortak dil çalışma zamanı (CLR) hedeflemek, Microsoft Ara dil (hangi daha sonra yerel koda derlenmiş MSIL) üretir. CLR hata ayıklama altyapısı elde edilen kodda hata ayıklamak için (DE) sağlar. Visual Studio IDE'ye özel programlama diliniz tümleştirme planlıyorsanız, MSIL olarak derlemek seçebilirsiniz ve bu nedenle kendi DE yazmanız gerekmez. Ancak, programlama diliniz bağlam içinde ifadelerin değerlendirilmesi özelliğine sahip olan bir ifade değerlendiricisi (EE) yazma gerekecektir.
+ Ortak Dil Çalışma Zamanı'nı (CLR) hedefleyen Visual Basic ve C# (C-sharp olarak okunur) gibi derleyiciler, daha sonra yerel kodla derlenen Microsoft Ara Dili (MSIL) üretir. CLR, ortaya çıkan kodu hata ayıklamak için hata ayıklama altyapısı (DE) sağlar. Özel programlama dilinizi Visual Studio IDE'ye entegre etmeyi planlıyorsanız, MSIL'e derlemeyi seçebilirsiniz ve bu nedenle kendi DE'nizi yazmak zorunda kalmamanız gerekmez. Ancak, programlama diliniz bağlamında ifadeleri değerlendirebilen bir ifade değerlendiricisi (EE) yazmanız gerekir.
 
 ## <a name="discussion"></a>Tartışma
- Bilgisayar dili ifadeleri, genellikle bir dizi veri nesneleri ve bunları yönetmek için kullanılan işleçleri kümesini üretmek için ayrıştırılır. Örneğin, "A"'i ve "büyük olasılıkla başka bir veri nesnesi içinde elde edilen B" ifadesi "A + B" Toplama işleci (+) uygulamak için veri ayrıştırılması nesneleri. Toplam veri nesneleri, işleçler ve ilişkilerini çoğunlukla temsil edilen bir programda ağacı düğümlerde işleçler ve veri nesnelerini dallar, bir ağaç olarak. Bir ifade ağacı forma bozuk genellikle ayrıştırılmış bir ağaç olarak adlandırılır.
+ Bilgisayar dili ifadeleri genellikle bir veri nesnesi kümesi ve bunları işlemek için kullanılan işleçler kümesi oluşturmak için ayrıştı. Örneğin, "A+B" ifadesi, ek işleç (+) veri nesnelerine "A" ve "B" uygulamak için ayrıştırılabilir ve bu da büyük olasılıkla başka bir veri nesnesi ile sonuçlanabilir. Toplam veri nesneleri kümesi, işleçler ve bunların ilişkilendirmeleri, ağacın düğümlerindeki işleçler ve dallardaki veri nesneleriyle birlikte, genellikle bir programda ağaç olarak temsil edilir. Ağaç biçimine ayrılmış bir ifadeye genellikle ayrıştırılmış ağaç denir.
 
- Bir ifade ayrıştırılmış bir kez sembol sağlayıcısı (SP) her veri nesnesi değerlendirmek için çağrılır. Örneğin, "A" tanımlanmışsa, hem de birden fazla metot, soru "A?" Bir değeri saptanabilen önce yanıtlanması gerekir. SP tarafından döndürülen yanıt "Beşinci yığın çerçevesinde üçüncü öğe" gibi bir şeydir veya "Bu yönteme 50 bayt statik bellek başlangıcı dışında bir ayrıldı."
+ Bir ifade ayrıştırıldıktan sonra, her veri nesnesini değerlendirmek için bir sembol sağlayıcısı (SP) çağrılır. Örneğin, "A" birden fazla yöntemde tanımlanırsa, "Hangi A?" sorusu A değeri tespit edilmeden önce cevaplanmalıdır. SP tarafından döndürülen yanıt, "Beşinci yığın çerçevesindeki üçüncü öğe" veya "Bu yönteme ayrılan statik belleğin başlangıcının ötesinde 50 bayt olan A" gibi bir şeydir.
 
- Program için MSIL üretmenin yanı sıra, CLR derleyicileri de bir Program veritabanına yazılan çok açıklayıcı hata ayıklama bilgilerini oluşturabilir ( *.pdb*) dosyası. Bir özel dil derleyicisi CLR derleyicileri olarak aynı biçimde hata ayıklama bilgisi üretir sürece, CLR'nin SP dil veri nesneleri adlı tanımlamak kullanabilirsiniz. Adlandırılmış veri nesnesi belirlendikten sonra EE bağlayıcı nesnesi ilişkilendirmek (veya bağlamak için) veri nesnesi, nesnenin değeri tutan bellek alanı kullanır. DE alın veya veri nesnesi için yeni bir değer ayarlayın.
+ ClR derleyicileri, programın kendisi için MSIL üretmenin yanı sıra, program database (*.pdb*) dosyasına yazılan çok açıklayıcı hata ayıklama bilgilerini de üretebilir. Özel bir dil derleyicisi CLR derleyicileri ile aynı biçimde hata ayıklama bilgileri ürettiği sürece, CLR'nin SP'si o dilin adlandırılmış veri nesnelerini belirleyebilir. Adlandırılmış bir veri nesnesi tanımlandıktan sonra, EE veri nesnesini söz konusu nesnenin değerini tutan bellek alanına ilişkilendirmek (veya bağlamak) için bir bağlayıcı nesnesi kullanır. DE daha sonra veri nesnesi için yeni bir değer alabilir veya ayarlayabilir.
 
- Özel bir derleyici çağırarak hata ayıklama bilgileri CLR sağlayabilir `ISymbolWriter` arabirimi (.NET Framework ad alanında tanımlanan `System.Diagnostics.SymbolStore`). MSIL olarak derleme ve bu arabirimler üzerinden hata ayıklama bilgileri yazılırken, özel bir derleyici SP'yi ve CLR DE kullanabilirsiniz Bu, büyük ölçüde özel bir dil Visual Studio IDE'ye tümleştirme kolaylaştırır.
+ Özel bir `ISymbolWriter` derleyici, arabirimi arayarak CLR hata ayıklama bilgilerini sağlayabilir (ad alanında `System.Diagnostics.SymbolStore`.NET Framework'de tanımlanır). MSIL'e derleyerek ve bu arabirimler aracılığıyla hata ayıklama bilgilerini yazarak, özel bir derleyici CLR DE ve SP'yi kullanabilir. Bu, özel bir dili Visual Studio IDE'ye entegre etmeyi büyük ölçüde kolaylaştırır.
 
- CLR DE bir ifadeyi değerlendirmek için özel EE çağırdığında bir SP ve bağlayıcı nesnesi arabirimleri ile EE DE sağlar. Bu nedenle, CLR tabanlı hata ayıklama altyapısı anlamına gelir yazma yalnızca uygun bir ifade değerlendiricisi arabirimleri uygulamak gerekli olan; CLR bağlama ve sizin için işleme sembol üstlenir.
+ CLR DE bir ifadeyi değerlendirmek için özel EE'yi aradığında, DE EE'yi bir SP ve bağlayıcı nesneye arabirimler sağlar. Bu nedenle, CLR tabanlı hata ayıklama altyapısı yazmak, yalnızca uygun ifade değerlendirici arabirimlerini uygulamak için gerekli olduğu anlamına gelir; CLR sizin için bağlama ve sembol işleme ilgilenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bir CLR ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+- [CLR ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

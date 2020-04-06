@@ -1,27 +1,27 @@
 ---
-title: BP_FLAGS90 | Microsoft Docs
+title: BP_FLAGS90 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - BP_FLAGS90 enumeration
 ms.assetid: 3e5a06c5-fb30-4b8a-b2d5-4a0570fc80bd
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 5c423b8ecf0e4591913be5ef875057a947f42614
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 5628af4a6e5c4deae3de02340e882bd2605e22d3
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66319153"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738053"
 ---
-# <a name="bpflags90"></a>BP_FLAGS90
-Geçerli değerler için isteğe bağlı bayrakları numaralandırır. İsteğe bağlı bayraklar bir kesme noktası ayarladığınızda ek bilgileri belirtmek için kullanılabilir. Bu numaralandırma genişletir [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) sabit listesi.
+# <a name="bp_flags90"></a>BP_FLAGS90
+İsteğe bağlı bayraklar için geçerli değerleri oyalar. Bir kesme noktası ayarladığınızda isteğe bağlı bayraklar ek bilgi belirtmek için kullanılabilir. Bu numaralandırma [numaralandırma BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) genişletir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -54,23 +54,23 @@ public enum enum_BP_FLAGS90
 
 ## <a name="fields"></a>Alanlar
 `BP90_FLAG_NONE`\
-Hiçbir kesme noktası bayrak belirtir.
+Kesme noktası bayrağı belirtin.
 
 `BP90_FLAG_MAP_DOCPOSITION`\
-Belge konumu kullanarak hata ayıklama altyapısı (DE) bir kesme noktası eşlemelisiniz belirtir. Bu, yalnızca Active Server Pages (ASP) gibi betik tabanlı kaynak dosyalarında ayarlanan kesme noktaları için geçerlidir.
+Hata ayıklama altyapısının (DE) belge konumunu kullanarak kesme noktasını eşlemesi gerektiğini belirtir. Bu yalnızca Active Server Pages (ASP) gibi komut dosyası yönelimli kaynak dosyalarda ayarlanan kesme noktaları için geçerlidir.
 
 `BP90_FLAG_DONT_STOP`\
-Kesme noktası hata ayıklama motoru tarafından işlenmesi gerektiğini, ancak hata ayıklama altyapısı sonuçta var. durması gerektiğini değil belirtir. diğer bir deyişle, bir [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) olay nesnesi değil gönderilmesi. Bu bayrak öncelikle izleme noktaları ile kullanılmak üzere tasarlanmıştır.
+Kesme noktasının hata ayıklama motoru tarafından işlenmesi gerektiğini, ancak hata ayıklama altyapısının nihayetinde burada durmaması gerektiğini belirtir; diğer bir de, bir [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) olay nesnesi gönderilmemelidir. Bu bayrak öncelikle izleme noktaları ile kullanılmak üzere tasarlanmıştır.
 
 `BP90_FLAG_TRACEPOINT_CONTINUE`\
-Yerel hata ayıklama altyapısı tarafından Adımlama durumu seçili olup olmadığını belirlemek için kullanılır. İzleme noktası makro çalıştırırsa BP90_FLAG_DONT_STOP ayarlanmadığından BP90_FLAG_DONT_STOP farklıdır.
+Atlama durumunun temizlenip temizlenmemesi gerektiğini belirlemek için yerel hata ayıklama altyapısı tarafından kullanılır. İzleme noktası bir makro yürütürse BP90_FLAG_DONT_STOP ayarlanmadığından, BP90_FLAG_DONT_STOP farklıdır.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: Msdbg90.h
+Üstbilgi: Msdbg90.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

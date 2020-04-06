@@ -1,25 +1,25 @@
 ---
-title: Bitmaps öğesi | Microsoft Docs
+title: Bitmaps Öğesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Bitmaps
 - Bitmaps element (VSCT XML schema)
 ms.assetid: 74652e1b-fcfa-421b-aa9f-fbc081d3b476
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00486f4edd68d2cc5e158d567a28f78ef12f8cd1
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 85310923134a6db59f1b6a3a15ac4b96a127e239
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333392"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739983"
 ---
-# <a name="bitmaps-element"></a>Bitmaps öğesi
-Grupları [Bitmap öğesi](../extensibility/bitmap-element.md) öğeleri.
+# <a name="bitmaps-element"></a>Biteşler öğesi
+[Bitmap öğe](../extensibility/bitmap-element.md) öğelerini gruplar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -37,20 +37,20 @@ Grupları [Bitmap öğesi](../extensibility/bitmap-element.md) öğeleri.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Bitmaps öğesi](../extensibility/bitmaps-element.md)|Bit eşlem öğeleri gruplandırır.|
-|[Bitmap öğesi](../extensibility/bitmap-element.md)|Bir bit eşlem tanımlar.|
+|[Biteşler öğesi](../extensibility/bitmaps-element.md)|Bitmap öğelerini gruplar.|
+|[Bitmap öğesi](../extensibility/bitmap-element.md)|Bir bit eşlemi tanımlar.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutları koleksiyonunu temsil eder.|
+|[Komutlar öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutların toplanmasını temsil eder.|
 
 ## <a name="example"></a>Örnek
 
@@ -63,5 +63,5 @@ Grupları [Bitmap öğesi](../extensibility/bitmap-element.md) öğeleri.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSPackage kullanıcı arabirimi öğelerini nasıl eklenir](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackages kullanıcı arabirimi öğelerini nasıl ekler?](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

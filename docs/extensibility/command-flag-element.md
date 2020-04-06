@@ -1,25 +1,25 @@
 ---
-title: Command Flag öğesi | Microsoft Docs
+title: Komut Bayrak Öğesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - CommandFlag element (VSCT XML schema)
 - VSCT XML schema elements, CommandFlag
 ms.assetid: 5ef63399-d2db-4dc1-97ce-be1bd4ef4e39
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a38708d6256556693b7ab1dfc8c04b79f484ee8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 7173bc1ebc5507eadf319c0374f4c878dea62857
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334845"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739782"
 ---
-# <a name="command-flag-eelement"></a>Bayrağı Eelement komutu
-Üst öğesi değiştirir.
+# <a name="command-flag-eelement"></a>Komut bayrağı Eelement
+Ana öğesini değiştirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,7 +28,7 @@ ms.locfileid: "66334845"
 ```
 
 ## <a name="attributes-and-elements"></a>Öznitelikler ve öğeler
- Aşağıdaki bölümde, geçerli öğe değerleri açıklanmaktadır.
+ Aşağıdaki bölümde geçerli öğe değerleri açıklanmaktadır.
 
 ### <a name="attributes"></a>Öznitelikler
  Yok.
@@ -37,43 +37,43 @@ ms.locfileid: "66334845"
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|AllowParams|Kullanıcı komut parametrelerinde girebilirsiniz gösterir **komut** penceresini, kurallı komut adını yazın.<br /><br /> Geçerlilik süresi: `Button`|
-|AlwaysCreate|Herhangi bir düğme veya grupları sahip olsa bile menü oluşturulur.<br /><br /> Geçerlilik süresi: `Menu`|
-|CaseSensitive|Kullanıcı girişleri büyük/küçük harfe duyarlıdır.<br /><br /> Geçerlilik süresi: `Combo`|
-|CommandWellOnly|Bu bayrak komutu üst düzey menüsünde görünmüyor ve klavye kısayolu bağlama için ek Kabuğu özelleştirme için kullanılabilir yapmak istiyorsanız geçerlidir. VSPackage'ı yükledikten sonra şu komutları açarak özelleştirebilirsiniz **seçenekleri** iletişim kutusunu ve ardından komut yerleştirme altında düzenleme **klavye ortam** kategorisi. Bu bayrak, yerleştirme kısayol menüleri, araç çubukları, menü denetleyicisi veya alt menüler etkilemez.<br /><br /> İçin geçerli: `Button`, `Combo`|
-|DefaultDisabled|Uyguladığı VSPackage'ı yüklü değilse, varsayılan olarak, komut devre dışı veya `QueryStatus` yöntemi çağrılmadı.<br /><br /> İçin geçerli: `Button`, `Combo`|
-|DefaultDocked|Varsayılan olarak panelin. Her zaman yerleşik olduğundan bu ayarı artık araç çubukları için geçerlidir.|
-|DefaultInvisible|Varsayılan olarak, komut uyguladığı VSPackage'ı yüklü değilse, görünmezdir veya `QueryStatus` yöntemi çağrılmadı.<br /><br /> Şununla Birleştir öneririz `DynamicVisibility` bayrağı.<br /><br /> İçin geçerli: `Button`, `Combo`, `Menu`|
-|DontCache|Geliştirme ortamını önbelleğe almaz `QueryStatus` bu komutun sonuçlarını yöntemi.<br /><br /> Bir menü için bu metin, menü öğelerinin önbelleğe menü denetleyicisi bildirir. Menü dinamik öğeleri veya dinamik metni olan öğeleri içerdiğinde bu bayrağı kullanın.<br /><br /> İçin geçerli: `Button`, `Menu`|
-|DynamicItemStart|Dinamik bir listesi başlangıcını gösterir. Bu sırayla çağırarak listesini oluşturmak bir ortam sunar `QueryStatus` OLECMDERR_E_UNSUPPORTED bayrağı döndürülünceye kadar liste öğelerini yöntemi. Bu, en son kullanılan (MRU) listeler ve pencere listeleri gibi öğeler için iyi çalışır.<br /><br /> Geçerlilik süresi: `Button`|
-|DynamicVisibility|Komut görünürlüğünü aracılığıyla değiştirilebilir `QueryStatus` yöntemi veya bir bağlam eklenmiştir GUID aracılığıyla `VisibilityConstraints` bölümü.<br /><br /> Menüleri ve araç penceresi araç çubukları, ancak ana pencerede görünen değil en üst düzey araç çubukları üzerinde görünmesini komutları için geçerlidir. Üst düzey araç çubuğu öğelerini devre dışı, ancak gelen OLECMDF_INVISIBLE bayrağı döndürüldüğünde, gizli olmayan `QueryStatus` yöntemi. Araç penceresi araç çubukları üzerinde görünmesini araç çubuğu komutlarını gizlenebilir.<br /><br /> Menüde, bu bayrak, tüm üyeleri gizli olduğunda bunu otomatik olarak gizlenmelidir de gösterir. Üst düzey menüler bu davranışı olduğundan bu bayrağı için alt menüler genellikle atanır.<br /><br /> Bu bayrak ile birleştirilmelidir `DefaultInvisible` bayrağı.<br /><br /> İçin geçerli: `Button`, `Combo`, `Menu`|
-|Süzme|Altında filtreleme anahtarları konusuna [Combos öğesi](../extensibility/combo-element.md).<br /><br /> Geçerlilik süresi: `Combo`|
-|FixMenuController|Bu komut, bir menü denetleyicisi üzerinde konumlandırılmış, her zaman varsayılan komuttur; diğer bir deyişle, menü denetleyicisi düğmesine kendisini seçildiğinde komutu seçilir. Menü denetleyicisi varsa `TextIsAnchorCommand` bayrağı ayarlanmış, menü denetleyicisi olan komut metnini kazanır `FixMenuController` bayrağı.<br /><br /> Yalnızca tek bir komutta menü denetleyicisi üzerinde olmalıdır `FixMenuController` bayrağı. Birden fazla komut şekilde işaretlenmişse, son komut menüsünde varsayılan komut haline gelir.<br /><br /> Geçerlilik süresi: `Button`|
-|IconAndText|Bir simge ve metin menü ve araç çubuğu üzerinde gösterir.<br /><br /> İçin geçerli: `Button`, `Combo`, `Menu`|
-|NoAutoComplete|Otomatik Tamamlama özelliği devre dışı bırakıldı.<br /><br /> Geçerlilik süresi: `Combo`|
-|NoButtonCustomize|Bu düğme özelleştirme kullanıcı izin vermez.<br /><br /> İçin geçerli: `Button`, `Combo`|
-|NoKeyCustomize|Klavye özelleştirme etkinleştirmeyin.<br /><br /> İçin geçerli: `Button`, `Combo`|
-|NoShowOnMenuController|Bu komut, bir menü denetleyicisi üzerinde konumlandırılmış, komut aşağı açılan listede görünmez.<br /><br /> Geçerlilik süresi: `Button`|
-|NotInTBList|Mevcut araç çubukları listesinde görünmüyor. Bu, yalnızca araç çubuğu menüsü türleri için geçerlidir.<br /><br /> Geçerlilik süresi: `Menu`|
-|NoToolbarClose|Kullanıcı araç çubuğunu kapatamazsınız. Bu, yalnızca araç çubuğu menüsü türleri için geçerlidir.<br /><br /> Geçerlilik süresi: `Menu`|
-|PICT|Bir simge yalnızca bir araç çubuğu, ancak yalnızca bir menü metni gösterir. Simge yok belirtilirse, tıklanabilir bir boşluk bir araç çubuğunda gösterilir.<br /><br /> Geçerlilik süresi: `Button`|
-|PostExec|Komut engelleyici olmayan hale getirir. Geliştirme ortamı, tüm ön işleme sorguları tamamlanana kadar yürütme erteler.<br /><br /> Geçerlilik süresi: `Button`|
-|RouteToDocs|Komut etkin belgeye yönlendirilir.<br /><br /> Geçerlilik süresi: `Button`|
-|StretchHorizontally|Bu bayrak ayarlandığında, minimum genişliğini birleşik giriş kutusu genişliği olur ve araç çubuğunda yer ise, birleşik giriş kutusu kullanılabilir alanı dolduracak şekilde uzatılır. Bu, yalnızca araç yatay olarak yerleştirilir ve araç çubuğunda tek bir birleşik giriş kutusunu (bayrağı ilk birleşik giriş kutusu hariç tüm sayılır) bayrağını kullanabilirsiniz oluşur.<br /><br /> Geçerlilik süresi: `Combo`|
-|TextMenuUseButton|Kullanım `ButtonText` menüleri için alan. Varsayılan alan `MenuText` belirtilmişse.<br /><br /> Geçerlilik süresi: `Button`|
-|TextChanges|Komut veya menü metni çalışma zamanında aracılığıyla genellikle değiştirilebilir `QueryStatus` yöntemi.<br /><br /> İçin geçerli: `Button`, `Menu`|
-|TextChangesButton|Geçerlilik süresi: `Button`|
-|TextIsAnchorCommand|Menü denetleyicisi için menü metnini varsayılan (bağlantı) komuttan alınır. Son komut seçilen ya da kilitli bir yer işareti komuttur. Bu bayrak ayarlanmazsa, menü denetleyicisi kendi kullanan `MenuText` alan. Ancak, menü denetleyicisi tıklayarak yine de söz konusu denetleyici son seçilen komuttan sağlar.<br /><br /> Bu bayrak ile birleştirerek öneririz `TextChanges` bayrağı.<br /><br /> Bu bayrak MenuController veya MenuControllerLatched yalnızca türü menüler için geçerlidir.<br /><br /> Geçerlilik süresi: `Menu`|
-|TextMenuCtrlUseMenu|Kullanım `MenuText` menü denetleyicisi ile sekmesindeki. Varsayılan alan `ButtonText`.<br /><br /> Geçerlilik süresi: `Button`|
-|TextMenuUseButton|Kullanım `ButtonText` menüleri için alan. Varsayılan alan `MenuText` belirtilmişse.<br /><br /> Geçerlilik süresi: `Button`|
-|TextOnly|Simge belirtilmiş olsa bile bir araç veya bir menü ancak herhangi bir simge yalnızca metin göstermek.<br /><br /> Geçerlilik süresi: `Button`|
+|İzin Params|Kullanıcıların **komutun** kanonik adını yazarken Komut penceresine komut parametrelerini girebileceğini belirtir.<br /><br /> Geçerli:`Button`|
+|Her Zaman Oluştur|Menü, grubu veya düğmesi olmasa bile oluşturulur.<br /><br /> Geçerli:`Menu`|
+|Casesensitive|Kullanıcı girişleri büyük/küçük harf duyarlıdır.<br /><br /> Geçerli:`Combo`|
+|CommandwellOnly|Komut üst düzey menüde görünmüyorsa ve örneğin klavye kısayoluna bağlamak için ek kabuk özelleştirmesi için kullanılabilir hale getirmek istiyorsanız bu bayrağı uygulayın. VSPackage yüklendikten sonra, **Seçenekler** iletişim kutusunu açıp **klavye ortamı** kategorisi altında komut yerleşimini düzenleyerek bu komutları özelleştirebilirsiniz. Bu bayrak, kısayol menülerinde, araç çubuklarına, menü denetleyicilerine veya alt menülere yapılan yerleşimi etkilemez.<br /><br /> Geçerli: `Button`,`Combo`|
+|Varsayılan Devre|Varsayılan olarak, bunu uygulayan VSPackage yüklenmezse veya `QueryStatus` yöntem çağrılmazsa komut devre dışı bırakılır.<br /><br /> Geçerli: `Button`,`Combo`|
+|Varsayılan Docked|Varsayılan olarak sabitlenmiştir. Bu ayar, her zaman sabitlendikleri için artık araç çubukları için geçerli değildir.|
+|Varsayılan Görünmez|Varsayılan olarak, bunu uygulayan VSPackage yüklenmezse veya `QueryStatus` yöntem çağrılmazsa komut görünmezdir.<br /><br /> Bunu bayrakla birleştirmenizi `DynamicVisibility` öneririz.<br /><br /> Geçerli: `Button`, `Combo`,`Menu`|
+|DontÖnbellek|Geliştirme ortamı, bu komut `QueryStatus` için yöntem sonuçlarını önbelleğe almaz.<br /><br /> Bir menü için bu, menü öğelerinin metnini önbelleğe almayan bir menü denetleyicisine söyler. Menü dinamik öğeler veya dinamik metin içeren öğeler içeriyorsa bu bayrağı kullanın.<br /><br /> Geçerli: `Button`,`Menu`|
+|DynamicItemStart|Dinamik bir listenin başlangıcını gösterir. Bu, OLECMDERR_E_UNSUPPORTED bayrağı döndürülene kadar liste `QueryStatus` öğelerindeki yöntemi art arda çağırarak ortamın bir liste oluşturmasını sağlar. Bu, en son kullanılan (MRU) listeleri ve pencere listeleri gibi öğeler için iyi çalışır.<br /><br /> Geçerli:`Button`|
+|DinamikGörünürlük|Komutun görünürlüğü `QueryStatus` yöntem veya `VisibilityConstraints` bölüme dahil olan bir bağlam GUID ile değiştirilebilir.<br /><br /> Menülerde ve araç penceresi araç çubuklarında görünen, ancak ana pencerede görünen üst düzey araç çubuklarında görünmeyen komutlar için geçerlidir. Üst düzey araç çubuğu öğeleri, OLECMDF_INVISIBLE bayrağı `QueryStatus` yöntemden döndürüldüğünde devre dışı bırakılmış, ancak gizli tutulamaz. Araç penceresi araç çubuklarında görünen araç çubuğu komutları gizlenebilir.<br /><br /> Menüde, bu bayrak, tüm üyeleri gizlendiğinde otomatik olarak gizlenmesi gerektiğini de belirtir. Üst düzey menülerde zaten bu davranış olduğundan, bu bayrak genellikle alt menülere atanır.<br /><br /> Bu bayrak `DefaultInvisible` bayrakla birleştirilmelidir.<br /><br /> Geçerli: `Button`, `Combo`,`Menu`|
+|Filtre Tuşları|[Combo Elementi](../extensibility/combo-element.md)altındaki Filtreleme Anahtarları konusuna bakın.<br /><br /> Geçerli:`Combo`|
+|FixMenuController|Bu komut bir menü denetleyicisi üzerinde konumlandırılmışsa, komut her zaman varsayılandır; diğer bir de menü denetleyici düğmesinin kendisi seçildiğinde komut seçilir. Menü denetleyicisi `TextIsAnchorCommand` bayrak kümesine sahipse, menü denetleyicisi de `FixMenuController` metnini bayrak olan komuttan alır.<br /><br /> Bir menü denetleyicisi üzerinde `FixMenuController` yalnızca bir komut bayrak olmalıdır. Birden fazla komut bu kadar işaretlenmişse, menüdeki son komut varsayılan komut olur.<br /><br /> Geçerli:`Button`|
+|Simgeve Metin|Menü de ve araç çubuğunda bir simge ve metin gösterin.<br /><br /> Geçerli: `Button`, `Combo`,`Menu`|
+|NoAutoComplete|Otomatik tamamlama özelliği devre dışı bırakılır.<br /><br /> Geçerli:`Combo`|
+|NoButtonCustomizE|Kullanıcının bu düğmeyi özelleştirmesine izin vermeyin.<br /><br /> Geçerli: `Button`,`Combo`|
+|NoKeyCustomizE|Klavye özelleştirmeyi etkinleştirme.<br /><br /> Geçerli: `Button`,`Combo`|
+|NoShowonMenuController|Bu komut bir menü denetleyicisi üzerinde konumlandırılmışsa, komut açılır listede görünmez.<br /><br /> Geçerli:`Button`|
+|Notintblist|Kullanılabilir araç çubukları listesinde görünmüyor. Bu yalnızca Araç Çubuğu menü türleri için geçerlidir.<br /><br /> Geçerli:`Menu`|
+|NoToolbarClose|Kullanıcı araç çubuğunu kapatamaz. Bu yalnızca Araç Çubuğu menü türleri için geçerlidir.<br /><br /> Geçerli:`Menu`|
+|Pıct|Araç çubuğunda yalnızca bir simge, ancak menüde yalnızca metin gösterin. Simge belirtilmemişse, araç çubuğunda tıklanabilir boş alan gösterir.<br /><br /> Geçerli:`Button`|
+|PostExec|Komutu engellemeyen yapar. Geliştirme ortamı, tüm ön işleme sorguları tamamlanana kadar yürütmeyi erteler.<br /><br /> Geçerli:`Button`|
+|RouteToDocs|Komut etkin belgeye yönlendirilir.<br /><br /> Geçerli:`Button`|
+|StretchYatay|Bu bayrak ayarlandığında, genişlik açılan kutu için minimum genişlik olur ve araç çubuğunda yer varsa, açılan kutu kullanılabilir alanı doldurmak için uzanır. Bu yalnızca araç çubuğu yatay olarak sabitlenmişse ve araç çubuğundaki yalnızca bir açılan kutu bayrağı kullanabilirse (bayrak ilk açılan kutu dışında tüm bunlara göz ardı edilir).<br /><br /> Geçerli:`Combo`|
+|TextMenuUseButton|Menüler `ButtonText` için alanı kullanın. Varsayılan alan `MenuText` belirtilirse.<br /><br /> Geçerli:`Button`|
+|Metin Değişiklikleri|Komut veya menü metni genellikle `QueryStatus` yöntem aracılığıyla çalışma zamanında değiştirilebilir.<br /><br /> Geçerli: `Button`,`Menu`|
+|Metin DeğişiklikleriDüğme|Geçerli:`Button`|
+|TextisAnchorCommand|Menü denetleyicisi için, menünün metni varsayılan (çapa) komutundan alınır. Çapa komutu seçilen veya kilitlenen son komutdur. Bu bayrak ayarlı değilse, menü denetleyicisi kendi `MenuText` alanını kullanır. Ancak, menü denetleyicisini tıklattığınızda yine de bu denetleyiciden seçilen son komutu etkinleştirin.<br /><br /> Bu bayrağı `TextChanges` bayrakla birleştirmenizi öneririz.<br /><br /> Bu bayrak yalnızca MenuController veya MenuControllerLatched türü menüler için geçerlidir.<br /><br /> Geçerli:`Menu`|
+|TextMenuCtrlUseMenu|Menü `MenuText` denetleyicileri üzerinde alanı kullanın. Varsayılan alan `ButtonText`.<br /><br /> Geçerli:`Button`|
+|TextMenuUseButton|Menüler `ButtonText` için alanı kullanın. Varsayılan alan `MenuText` belirtilirse.<br /><br /> Geçerli:`Button`|
+|Textonly|Yalnızca bir araç çubuğunda veya menüde metin gösterin, ancak simge belirtilmiş olsa bile simge yi göstermeyin.<br /><br /> Geçerli:`Button`|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Buttons öğesi](../extensibility/buttons-element.md)|Bir grubu için sağlar [Button öğesi](../extensibility/button-element.md) öğeleri.|
-|[Menus öğesi](../extensibility/menus-element.md)|VSPackage'ı uygulayan tüm menüleri tanımlar.|
+|[Düğmeler öğesi](../extensibility/buttons-element.md)|[Düğme öğesi](../extensibility/button-element.md) öğeleri için bir grup sağlar.|
+|[Menüler öğesi](../extensibility/menus-element.md)|VSPackage'ın uyguladığı tüm menüleri tanımlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (. Vsct) Dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

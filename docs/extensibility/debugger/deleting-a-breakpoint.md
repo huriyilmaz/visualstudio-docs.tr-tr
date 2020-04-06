@@ -1,31 +1,31 @@
 ---
-title: Kesme noktasını silme | Microsoft Docs
+title: Kesme Noktası Silme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - breakpoints, deleting
 - debugging [Debugging SDK], deleting breakpoints
 ms.assetid: 75a046cc-d20a-4c79-ad2d-1f18426ac5d0
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7551ee12993780544bbb9c9eb127a9bfb4364e8d
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a77be200a11eb7b3985a4c1a47e4cddaa543f900
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66345823"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738943"
 ---
 # <a name="deleting-a-breakpoint"></a>Kesme noktasını silme
-Aşağıdaki bir bekleyen kesme noktasının silerken işlemi açıklanmaktadır:
+Bekleyen bir kesme noktası nı silerken aşağıdaki işlem açıklanır:
 
 ## <a name="deletion-process"></a>Silme işlemi
- Oturum hata ayıklama Yöneticisi (SDM) çağıran [IDebugPendingBreakpoint2::Delete](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md) ondan bağlı bekleyen kesme noktasının ve ilişkili tüm kesme noktalarını kaldırmak için yöntemi.
+ Oturum hata ayıklama yöneticisi (SDM), bekleyen kesme noktasını ve ondan bağlanan tüm kopuşu kaldırmak için [IDebugPendingBreakpoint2::Delete](../../extensibility/debugger/reference/idebugpendingbreakpoint2-delete.md) yöntemini çağırır.
 
 > [!NOTE]
-> Tek bir bağlı Kesme noktasının bir çağrı tarafından da silinebilir [IDebugBoundBreakpoint2::Delete](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md).
+> Tek bir bağlı kesme noktası da [IDebugBoundBreakpoint2::Delete](../../extensibility/debugger/reference/idebugboundbreakpoint2-delete.md)bir çağrı ile silinebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcı olayları çağırma](../../extensibility/debugger/calling-debugger-events.md)
+- [Hata ayıklama olaylarını arama](../../extensibility/debugger/calling-debugger-events.md)

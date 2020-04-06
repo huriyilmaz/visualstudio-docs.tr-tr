@@ -1,5 +1,5 @@
 ---
-title: Komutlar öğenin | Microsoft Docs
+title: Komutlar Öğesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Commands element (VSCT XML schema)
 - VSCT XML schema elements, Commands
 ms.assetid: 47cf16a5-d78b-452e-86f6-b5893856dddf
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab8629fb3ef83277f1366a5141c400b8eeea70e3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 3ea2400cca19a02475caecec3d022e0b78794ae4
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341897"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739691"
 ---
-# <a name="commands-element"></a>Commands öğesi
-VSPackage araç çubuğundaki komutları koleksiyonunu temsil eder. Koleksiyon en fazla beş alt bölümlerde, aşağıdaki gibi olabilir: menüler, grupları, düğmeler, combos ve bit eşlemler.
+# <a name="commands-element"></a>Komutlar öğesi
+VSPackage araç çubuğundaki komutların toplanmasını temsil eder. Koleksiyonda aşağıdaki gibi en fazla beş alt bölüm olabilir: menüler, gruplar, düğmeler, kombinasyonlar ve bit eşlemler.
 
- Her alt alt öğesi, örneğin, \<menüsü >, bir GUID ve sayısal tanımlayıcı çifti benzersiz komut Kimliğine göre tanımlanır. GUID "komut kümesini" tanımlayan ve mantıksal olarak ilgili komutları gruplandırmak için kullanılır. VSPackage'ı diğer VSPackages tarafından tanımlanan komut kimlikleri çarpışmalardan kaçınmak için set kendi komutu tanımlamanız gerekir.
+ Her alt bölüm alt \<öğesi, örneğin, Menü>, bir GUID ve sayısal tanımlayıcı çifti benzersiz bir komut kimliği ile tanımlanır. GUID "komut kümesini" tanımlar ve mantıksal olarak ilişkili komutları gruplandırmak için kullanılır. VSPackage, diğer VSPackages tarafından tanımlanan komut iD'leriyle çakışmaları önlemek için kendi komut kümesini tanımlamalıdır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,26 +44,26 @@ VSPackage araç çubuğundaki komutları koleksiyonunu temsil eder. Koleksiyon e
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Paket|VSPackage'ı tanımlayan bir GUID, komutlar sağlar.<br /><br /> Örneğin, paket = "guidVsPackage1Pkg".|
+|Paket|Komutları sağlayan VSPackage'ı tanımlayan bir GUID.<br /><br /> Örneğin, paket="guidVsPackage1Pkg".|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Menus öğesi](../extensibility/menus-element.md)|VSPackage'ı uygulayan tüm menüleri tanımlar.|
-|[Groups öğesi](../extensibility/groups-element.md)|VSPackage'ı içinde komut gruplarını tanımlama girişleri içerir.|
-|[Buttons öğesi](../extensibility/buttons-element.md)|Düğme öğelerini gruplandırır.|
-|[Bitmaps öğesi](../extensibility/bitmaps-element.md)|Bit eşlem öğeleri gruplandırır.|
-|[Combos öğesi](../extensibility/combos-element.md)|Birleşik giriş öğelerini gruplandırır.|
+|[Menüler öğesi](../extensibility/menus-element.md)|VSPackage'ın uyguladığı tüm menüleri tanımlar.|
+|[Gruplar öğesi](../extensibility/groups-element.md)|VSPackage'daki komut gruplarını tanımlayan girişler içerir.|
+|[Düğmeler öğesi](../extensibility/buttons-element.md)|Düğme öğelerini grupla.|
+|[Biteşler öğesi](../extensibility/bitmaps-element.md)|Bitmap öğelerini gruplar.|
+|[Kombinasyon öğesi](../extensibility/combos-element.md)|Combo öğelerini gruplar.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CommandTable öğesi](../extensibility/commandtable-element.md)|VSPackage sunar IDE'nin komutları temsil eden tüm öğeleri tanımlar. Menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları Bunun olası öğeleridir.|
+|[CommandTable öğesi](../extensibility/commandtable-element.md)|VSPackage'ın IDE'ye sağladığı komutları temsil eden tüm öğeleri tanımlar. Olası öğeler menü öğeleri, menüler, araç çubukları ve açılan kutulardır.|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek nasıl kullanılacağını gösteren bir [komutlar öğenin](../extensibility/commands-element.md).
+ Aşağıdaki örnek, [KomutLar Öğesi'nin](../extensibility/commands-element.md)nasıl kullanılacağını gösterir.
 
 ```
 <Commands package="guidMyPackage">
@@ -89,5 +89,5 @@ VSPackage araç çubuğundaki komutları koleksiyonunu temsil eder. Koleksiyon e
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSPackage kullanıcı arabirimi öğelerini nasıl eklenir](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
+- [VSPackages kullanıcı arabirimi öğelerini nasıl ekler?](../extensibility/internals/how-vspackages-add-user-interface-elements.md)
 - [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

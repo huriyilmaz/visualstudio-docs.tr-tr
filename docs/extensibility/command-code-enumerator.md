@@ -1,25 +1,25 @@
 ---
-title: Komut kodu numaralandırıcısı | Microsoft Docs
+title: Komut Kodu Kod Layıcı | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - command code enumerator
 - source control plug-ins, command code enumeration
 ms.assetid: 5d2c360c-59e4-4da8-bcb4-dd07c7441e40
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f4ec14c15bbd0aa6340e30e3156e714ba5f9e074
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 15916d26ac0120417205af0bb9117a45ec0397c6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66334958"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739793"
 ---
-# <a name="command-code-enumerator"></a>Komut kodu numaralandırıcısı
-Bu Numaralandırıcının seçenekleri kullanılır [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) ve [SccPopulateList](../extensibility/sccpopulatelist-function.md)seçenekler belirtilir komutu belirtmek için.
+# <a name="command-code-enumerator"></a>Komut kodu tümumerator
+Bu enumerator, [sccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) ve [SccPopulateList](../extensibility/sccpopulatelist-function.md)seçeneklerinde seçeneklerin belirtildiği komutu belirtmek için kullanılır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -40,29 +40,29 @@ enum SCCCOMMAND {
 ```
 
 ## <a name="members"></a>Üyeler
-Karşılık gelen SCC_COMMAND_GET [SccGet](../extensibility/sccget-function.md).
+SCC_COMMAND_GET [SccGet](../extensibility/sccget-function.md)karşılık gelir.
 
-Karşılık gelen SCC_COMMAND_CHECKOUT [SccCheckout](../extensibility/scccheckout-function.md).
+SCC_COMMAND_CHECKOUT [SccCheckout](../extensibility/scccheckout-function.md)karşılık gelir.
 
-Karşılık gelen SCC_COMMAND_CHECKIN [SccCheckin](../extensibility/scccheckin-function.md).
+SCC_COMMAND_CHECKIN [SccCheckin](../extensibility/scccheckin-function.md)karşılık gelir.
 
-Karşılık gelen SCC_COMMAND_UNCHECKOUT [SccUncheckout](../extensibility/sccuncheckout-function.md).
+SCC_COMMAND_UNCHECKOUT [SccUncheckout](../extensibility/sccuncheckout-function.md)karşılık gelir.
 
-Karşılık gelen SCC_COMMAND_ADD [SccAdd](../extensibility/sccadd-function.md).
+SCC_COMMAND_ADD [SCCAdd](../extensibility/sccadd-function.md)karşılık gelir.
 
-Karşılık gelen SCC_COMMAND_REMOVE [SccRemove](../extensibility/sccremove-function.md).
+SCC_COMMAND_REMOVE [SccRemove](../extensibility/sccremove-function.md)karşılık gelir.
 
-Karşılık gelen SCC_COMMAND_DIFF [SccDiff](../extensibility/sccdiff-function.md).
+SCC_COMMAND_DIFF [SccDiff](../extensibility/sccdiff-function.md)karşılık gelir.
 
-Karşılık gelen SCC_COMMAND_HISTORY [SccHistory](../extensibility/scchistory-function.md).
+SCC_COMMAND_HISTORY [SccHistory](../extensibility/scchistory-function.md)karşılık gelir.
 
-Karşılık gelen SCC_COMMAND_RENAME [SccRename](../extensibility/sccrename-function.md).
+SCC_COMMAND_RENAME [SccRename](../extensibility/sccrename-function.md)karşılık gelir.
 
-Karşılık gelen SCC_COMMAND_PROPERTIES [SccProperties](../extensibility/sccproperties-function.md).
+SCC_COMMAND_PROPERTIES [SccProperties](../extensibility/sccproperties-function.md)karşılık gelir.
 
-Karşılık gelen SCC_COMMAND_OPTIONS [SccSetOption](../extensibility/sccsetoption-function.md).
+SCC_COMMAND_OPTIONS [SccSetOption](../extensibility/sccsetoption-function.md)karşılık gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)
+- [Kaynak kontrol eklentileri](../extensibility/source-control-plug-ins.md)
 - [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)
 - [SccPopulateList](../extensibility/sccpopulatelist-function.md)

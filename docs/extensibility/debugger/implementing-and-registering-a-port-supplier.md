@@ -1,30 +1,30 @@
 ---
-title: Uygulama ve bağlantı noktası sağlayıcısı kaydetme | Microsoft Docs
+title: Liman TedarikçisiNin Uygulanması ve Kaydedilmesi | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], registering port suppliers
 - port suppliers, registering
 ms.assetid: fb057052-ee16-4272-8e16-a4da5dda0ad4
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26767193c4489405432054ee94beb195ce8448d7
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: efa9cdd8740648b66fe7190177b5fe769c4b2539
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66344266"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738527"
 ---
-# <a name="implement-and-register-a-port-supplier"></a>Uygulama ve bağlantı noktası sağlayıcısı kaydetme
-Bağlantı noktası sağlayıcısı izlemek ve sırayla işlemlerini yönetmek bağlantı noktaları sağlamanız için rolüdür. Bir bağlantı noktası oluşturulması gerektiğinde, bağlantı noktası sağlayıcısı (oturum hata ayıklama Yöneticisi [SDM] proje sistemi tarafından seçilen kullanıcıya veya bağlantı noktası sağlayıcısı belirtilen bağlantı noktası sağlayıcısı kullanırsınız) bağlantı noktası tedarikçi GUID'e sahip CoCreate kullanılarak başlatılır. SDM sonra çağıran [CanAddPort](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) tüm bağlantı noktaları eklenip eklenemeyeceğini görmek için. Bir bağlantı noktası eklenebilir, yeni bir bağlantı noktası çağırarak istenen [AddPort](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) ve geçirerek bir [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) , bağlantı noktası açıklar. `AddPort` tarafından temsil edilen yeni bir bağlantı noktası döndüren bir [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi.
+# <a name="implement-and-register-a-port-supplier"></a>Bir liman tedarikçisiuygulama ve kaydettirme
+Bir liman tedarikçisinin rolü, süreçleri yöneten limanları izlemek ve tedarik etmektir. Bir bağlantı noktası oluşturulması gerektiğinde, bağlantı noktası tedarikçisi CoCreate ile bağlantı noktası tedarikçisi GUID (oturum hata ayıklama yöneticisi [SDM] kullanıcının seçtiği bağlantı noktası tedarikçisini veya proje sistemi tarafından belirtilen liman tedarikçisini kullanır) anında kullanılır. SDM daha sonra [canaddport'u](../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) arayayıp eklenmeyen bağlantı noktaları olup olmadığını görmek için arar. Bir bağlantı noktası eklenebilirse, [AddPort'u](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) arayarak ve bağlantı noktasını açıklayan bir [IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) geçirerek yeni bir bağlantı noktası istenir. `AddPort`[iDebugPort2](../../extensibility/debugger/reference/idebugport2.md) arabirimi tarafından temsil edilen yeni bir bağlantı noktası döndürür.
 
 ## <a name="discussion"></a>Tartışma
- Bir bağlantı noktası, bir makine ya da hata ayıklama sunucusuyla ilişkilendirilmiş bağlantı noktası sağlayıcısı tarafından oluşturulur. Bir sunucu bağlantı noktası tedarikçileri aracılığıyla numaralandırır[EnumPortSuppliers](../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md) yöntemi ve bağlantı noktası sağlayıcısı aracılığıyla bağlantı noktalarını numaralandırır [EnumPorts](../../extensibility/debugger/reference/idebugportsupplier2-enumports.md) yöntemi.
+ Bağlantı noktası, bir makine veya hata ayıklama sunucusuyla ilişkili bir bağlantı noktası tedarikçisi tarafından oluşturulur. Bir sunucu[enumPortSuppliers](../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md) yöntemi ile liman tedarikçilerini sayısallandırır ve bir liman tedarikçisi de [enumPorts](../../extensibility/debugger/reference/idebugportsupplier2-enumports.md) yöntemi ile bağlantı noktalarını oyalar.
 
- Tipik COM kayıt ek olarak, bağlantı noktası sağlayıcısı kendisi ile Visual Studio ad ve CLSID belirli kayıt defteri konumlara yerleştirerek kaydetmeniz gerekir. Hata ayıklama SDK'sı yardımcı işlevini çağırdı `SetMetric` bu işleme:, bu nedenle kaydedilecek her öğe için bir kez çağrılır:
+ Tipik COM kaydına ek olarak, bir liman tedarikçisi clsid ve adını belirli kayıt konumlarına yerleştirerek Visual Studio'ya kayıt yaptırmalıdır. Hata Ayıklama SDK yardımcı işlevi `SetMetric` bu angarya işler denir: bu nedenle, kayıtlı olması her öğe için bir kez çağrılır:
 
 ```cpp
 SetMetric(metrictypePortSupplier,
@@ -41,7 +41,7 @@ SetMetric(metrictypePortSupplier,
           NULL);
 ```
 
- Bağlantı noktası sağlayıcısı kendisini çağırarak kaydını siler `RemoveMetric` (başka bir hata ayıklama SDK'sı yardımcı işlevini), bu nedenle kaydedilen her öğe için bir kez:
+ Bir bağlantı noktası tedarikçisi, `RemoveMetric` kayıtlı her öğe için bir kez arayarak (başka bir Hata Ayıklama SDK yardımcı işlevi) arayarak kendisini kaydeder:
 
 ```cpp
 RemoveMetric(metrictypePortSupplier,
@@ -55,11 +55,11 @@ RemoveMetric(metrictypePortSupplier,
 ```
 
 > [!NOTE]
-> [Hata ayıklama için SDK Yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` ve `RemoveMetric` statik işlevler tanımlanan *dbgmetric.h* ve içine derlenmiş *ad2de.lib*. `metrictypePortSupplier`, `metricCLSID`, Ve `metricName` Yardımcıları tanımlanmış ayrıca *dbgmetric.h*.
+> [Hata ayıklama](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) `SetMetric` için SDK yardımcıları `RemoveMetric` ve statik fonksiyonlar *dbgmetric.h* tanımlanan ve *ad2de.lib*içine derlenmiştir. , `metrictypePortSupplier` `metricCLSID`ve `metricName` yardımcıları da *dbgmetric.h*tanımlanır.
 
- Bağlantı noktası sağlayıcısı yöntemlerle GUID ve ad sağlayabilirsiniz [GetPortSupplierName](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md) ve [GetPortSupplierId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md)sırasıyla.
+ Bir liman tedarikçisi adını ve GUID yöntemleri [getPortSupplierName](../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md) ve [GetPortSupplierId](../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md), sırasıyla sağlayabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Bağlantı noktası sağlayıcısı uygulama](../../extensibility/debugger/implementing-a-port-supplier.md)
-- [Hata ayıklama için SDK Yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
-- [Bağlantı noktası sağlayıcıları](../../extensibility/debugger/port-suppliers.md)
+- [Liman tedarikçisi uygulama](../../extensibility/debugger/implementing-a-port-supplier.md)
+- [Hata ayıklama için SDK yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)
+- [Liman tedarikçileri](../../extensibility/debugger/port-suppliers.md)

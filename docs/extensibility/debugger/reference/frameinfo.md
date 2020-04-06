@@ -1,5 +1,5 @@
 ---
-title: FRAMEıNFO | Microsoft Docs
+title: FRAMEINFO | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - FRAMEINFO structure
 ms.assetid: 95001b89-dddb-45bb-889d-8327994e38a5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: eb6a4a9f7408e5bcd03da464bfbc8ade3fa39e7e
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: c40361a9739bf468de2038df4325fa1ac98337c1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681094"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736787"
 ---
 # <a name="frameinfo"></a>FRAMEINFO
-Yığın çerçevesini açıklar.
+Yığın çerçeveyi açıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -65,28 +65,28 @@ public struct FRAMEINFO {
 
 ## <a name="members"></a>Üyeler
 `m_dwValidFields`\
-[FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) numaralandırmasındaki, doldurulacak alanları belirten bayrakların birleşimi.
+Hangi alanların [doldurulduğuna](../../../extensibility/debugger/reference/frameinfo-flags.md) FRAMEINFO_FLAGS numaralandırmadan gelen bayrakların birleşimi.
 
 `m_bstrFuncName`\
-Yığın çerçevesiyle ilişkili işlev adı.
+Yığın çerçevesiile ilişkili işlev adı.
 
 `m_bstrReturnType`\
-Yığın çerçevesiyle ilişkili dönüş türü.
+Yığın çerçevesiile ilişkili iade türü.
 
 `m_bstrArgs`\
-Yığın çerçevesiyle ilişkili işlevin bağımsız değişkenleri.
+Yığın çerçevesi ile ilişkili işlevin bağımsız değişkenleri.
 
 `m_bstrLanguage`\
 İşlevin uygulandığı dil.
 
 `m_bstrModule`\
-Yığın çerçevesiyle ilişkili modül adı.
+Yığın çerçevesiile ilişkili modül adı.
 
 `m_addrMin`\
-En düşük fiziksel yığın adresi.
+Minimum fiziksel yığın adresi.
 
 `m_addrMAX`\
-En büyük fiziksel yığın adresi.
+Maksimum fiziksel yığın adresi.
 
 `m_pFrame`\
 Bu yığın çerçevesini temsil eden [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) nesnesi.
@@ -95,23 +95,23 @@ Bu yığın çerçevesini temsil eden [IDebugStackFrame2](../../../extensibility
 Bu yığın çerçevesini içeren modülü temsil eden [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) nesnesi.
 
 `m_fHasDebugInfo`\
-Verilen çerçevede hata ayıklama`TRUE`bilgileri varsa sıfır olmayan ().
+Verilen çerçevede`TRUE`hata ayıklama bilgisi varsa sıfır olmayan ( )
 
 `m_fStaleCode`\
-Yığın çerçevesi artık geçerli`TRUE`olmayan kodla ilişkilendirilirse sıfır olmayan ().
+Yığın çerçevesi`TRUE`artık geçerli olmayan kodla ilişkiliyse sıfır dışı ( )
 
 `m_fAnnotatedFrame`\
-Yığın çerçevesine oturum hata`TRUE`ayıklama Yöneticisi (SDM) tarafından açıklama eklendiğinde sıfır olmayan ().
+Yığın çerçevesi`TRUE`oturum hata ayıklama yöneticisi (SDM) tarafından açıklamalı ise sıfır olmayan ( )
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı, doldurulacak [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) yöntemine geçirilir. Bu yapı Ayrıca, [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) yöntemine yapılan çağrıdan döndürülen [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) arabiriminde bulunan bir listede de bulunur.
+Bu yapı doldurulmak üzere [GetInfo](../../../extensibility/debugger/reference/idebugstackframe2-getinfo.md) yöntemine geçirilir. Bu yapı, Sırayla, [EnumFrameInfo](../../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md) yöntemine bir çağrı döndürülür [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) arabiriminde bulunan bir listede yer almaktadır.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: msdbg. h
+Üstbilgi: msdbg.h
 
-Ad alanı: Microsoft. VisualStudio. Debugger. Interop
+Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft. VisualStudio. Debugger. Interop. dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

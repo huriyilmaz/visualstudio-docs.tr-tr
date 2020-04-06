@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::Read | Microsoft Docs
+title: IDebugDisassemblyStream2::Oku | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugDisassemblyStream2::Read
 ms.assetid: 7db5f6bb-73ee-45bc-b187-c1b6aa2dfdd5
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c74ed1de1d12cc7384ee8f7d27dad910c7b9c9d5
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4a4f5c0250405c2e2a0314b52c4cbc64d749fc0a
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66310351"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80732100"
 ---
 # <a name="idebugdisassemblystream2read"></a>IDebugDisassemblyStream2::Read
-Ayrıştırılmış kodu stream'de geçerli konumundan başlayarak yönergeleri okur.
+Sökme akışındaki geçerli konumdan başlayarak yönergeleri okur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -47,26 +47,26 @@ int Read( 
 
 ## <a name="parameters"></a>Parametreler
 `dwInstructions`\
-[in] Ayrıştırmak için yönergeler sayısı. Bu değer ayrıca uzunluğunun üst sınırı olan `prgDisassembly` dizi.
+[içinde] Sökülecek talimatların sayısı. Bu değer aynı zamanda `prgDisassembly` dizinin maksimum uzunluğudur.
 
 `dwFields`\
-[in] Bayraklarının bir birleşimi [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) hangi alanları gösteren numaralandırma `prgDisassembly` doldurulması için.
+[içinde] [DISASSEMBLY_STREAM_FIELDS](../../../extensibility/debugger/reference/disassembly-stream-fields.md) numaralandırmadan hangi alanların doldurululeceğini gösteren `prgDisassembly` bayrakların birleşimi.
 
 `pdwInstructionsRead`\
-[out] Aslında çözülürken yönerge sayısını döndürür.
+[çıkış] Fiilen sökülen yönergelerin sayısını verir.
 
 `prgDisassembly`\
-[out] Bir dizi [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) ayrıştırılmış kodu, ayrıştırılmış yönerge başına bir yapı doldurulur yapılar. Bu dizinin uzunluğu tarafından dikte `dwInstructions` parametresi.
+[çıkış] Sökülen kodla doldurulan bir dizi [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapıları, sökülen yönerge başına bir yapı. Bu dizinin uzunluğu `dwInstructions` parametre tarafından dikte edilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Geçerli kapsamdaki kullanılabilir olan yönergeleri sayısı çağrılarak alınabilir [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) yöntemi.
+ Geçerli kapsamda kullanılabilen maksimum yönerge sayısı [GetSize](../../../extensibility/debugger/reference/idebugdisassemblystream2-getsize.md) yöntemini arayarak elde edilebilir.
 
- Burada sonraki yönergesi okuma geçerli konumu çağırarak değiştirilebilir [arama](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) yöntemi.
+ Bir sonraki talimatın okunduğu geçerli [konum, Arama](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) yöntemini arayarak değiştirilebilir.
 
- `DSF_OPERANDS_SYMBOLS` Bayrağı eklenebilir `DSF_OPERANDS` bayrağını `dwFields` sembol adlarını yönergeleri derlemesini açma işlemlerini uygulama zaman kullanılması gerektiğini belirtmek için parametre.
+ Yönergeleri `DSF_OPERANDS_SYMBOLS` sökerken sembol `DSF_OPERANDS` adlarının `dwFields` kullanılması gerektiğini belirtmek için parametredeki bayrağa bayrak eklenebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)

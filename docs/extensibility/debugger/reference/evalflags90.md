@@ -1,27 +1,27 @@
 ---
-title: EVALFLAGS90 | Microsoft Docs
+title: EVALFLAGS90 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - EVALFLAGS90 enumeration
 ms.assetid: 64fb0139-8b04-4726-b52c-db2e04d65498
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 24afc4456570ff0c3e5dc1eb56789984bf18ac58
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 01951885541ba4acce33f3e4f06f7106116ccc62
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66337825"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737096"
 ---
 # <a name="evalflags90"></a>EVALFLAGS90
-İfade değerlendirme denetim bayrakları için geçerli değerleri listeler. Bu numaralandırma genişletir [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) sabit listesi.
+İfade değerlendirmesini denetleyen bayraklar için geçerli değerleri okurum. Bu numaralandırma [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasını genişletir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -66,41 +66,41 @@ public enum enum_EVALFLAGS90
 
 ## <a name="fields"></a>Alanlar
 `EVAL90_RETURNVALUE`\
-Dönüş değeri varsa, değerlendirilecek belirtir.
+Varsa iade değerinin değerlendirilmesi gerektiğini belirtir.
 
 `EVAL90_NOSIDEEFFECTS`\
-Yan etkileri izin verilmeyeceğini belirtir.
+Yan etkilere izin verilmemesini belirtir.
 
 `EVAL90_ALLOWBPS`\
-Durdurma kesme noktalarında belirtir.
+Kesme noktalarında durmayı belirtir.
 
 `EVAL90_ALLOWERRORREPORT`\
-Konağa izin verilmesi için Raporlama hata belirtir. Internet Explorer'da komut ifade değerlendirmesi için kullanılır.
+Bu hatanın ana bilgisayara bildirilmesine izin verilip verilmediğini belirtir. Öncelikle Internet Explorer'da komut dosyasında ifade değerlendirmesi için kullanılır.
 
 `EVAL90_FUNCTION_AS_ADDRESS`\
-İşlev çağırma yerine adresleri olarak değerlendirilecek işlevleri zorlar.
+İşlev çağırmak yerine işlevleri adres olarak değerlendirilmeye zorlar.
 
 `EVAL90_NOFUNCEVAL`\
-İşlevi, değerlendirilen öğesinden engeller. Örneğin, düşünün `int` ifade belirteci `myExpression(int) + 10`. Bu işlev bir adres, ancak bir değer olarak değil doğru değerlendirilebilir.
+Fonksiyonun değerlendirilmesini engeller. Örneğin, ifadedeki `int` `myExpression(int) + 10`belirteci göz önünde bulundurun. Bu işlev doğru bir adres olarak değerlendirilebilir, ancak bir değer olarak değil.
 
 `EVAL90_NOEVENTS`\
-İfade değerlendirme sırasında meydana gelen olayları oturum hata ayıklama Yöneticisi (SDM) veya IDE gönderilmemelidir belirten bayrak.
+İfade değerlendirmesi sırasında meydana gelen olayların oturum hata ayıklama yöneticisine (SDM) veya IDE'ye gönderilmemesi gerektiğini belirtmek için işaretle.
 
 `EVAL90_DESIGN_TIME_EXPR_EVAL`\
-Tasarım zamanı ifade değerlendirmesi sağlar.
+Tasarım zamanı ifade değerlendirmesini sağlar.
 
 `EVAL90_ALLOW_IMPLICIT_VARS`\
-Örtük değişken oluşturmaya izin verir.
+Örtük değişken oluşturulmasına izin verir.
 
 `EVAL90_FORCE_EVALUATION_NOW`\
-Hemen oluşmasını zorlar değerlendirmesi'ni kullanın. Bu, hizmet kullanıcı isteği gibi bir istek olduğunda yararlıdır.
+Değerlendirmenin hemen gerçekleşmesine zorlar. Bu, kullanıcı isteği gibi bir isteğe hizmet verirken yararlıdır.
 
 ## <a name="requirements"></a>Gereksinimler
-Üst bilgi: Msdbg90.h
+Üstbilgi: Msdbg90.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)

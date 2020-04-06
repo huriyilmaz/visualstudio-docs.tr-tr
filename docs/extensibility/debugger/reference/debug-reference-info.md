@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REFERENCE_INFO | Microsoft Docs
+title: DEBUG_REFERENCE_INFO | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - DEBUG_REFERENCE_INFO structure
 ms.assetid: 24b83d00-d756-42a1-8083-730f998761dc
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: c22ab1a7d0cb03f66455f76c1d9878a9df76604e
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 6e31205f52151679f932877c9c4fdc56907ea59e
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346139"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737406"
 ---
-# <a name="debugreferenceinfo"></a>DEBUG_REFERENCE_INFO
+# <a name="debug_reference_info"></a>DEBUG_REFERENCE_INFO
 Bir başvuru açıklar.
 
 ## <a name="syntax"></a>Sözdizimi
@@ -53,35 +53,35 @@ public struct DEBUG_REFERENCE_INFO {
 
 ## <a name="members"></a>Üyeler
 `dwFields`\
-Bayraklarının bir birleşimi [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) hangi alanların doldurulmuş belirten sabit listesi.
+Hangi alanların [doldurulduğuna](../../../extensibility/debugger/reference/debugref-info-flags.md) DEBUGREF_INFO_FLAGS numaralandırmadaki bayrakların birleşimi.
 
 `bstrName`\
-Kullanıcı tarafından belirtilen adı [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesne.
+[IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesinin kullanıcı tarafından belirtilen adı.
 
 `bstrType`\
-Başvuru türü olarak biçimlendirilmiş bir dize.
+Biçimlendirilmiş dize olarak başvuru türü.
 
 `bstrValue`\
-Başvuru değeri olarak biçimlendirilmiş bir dize
+Biçimlendirilmiş dize olarak başvuru değeri
 
 `dwAttrib`\
-Bayraklarının bir birleşimi [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) bayrakları için hata ayıklama özellik öznitelikleri belirten sabit listesi.
+Hata ayıklama özelliği öznitelikleri için bayrakları belirten [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) numaralandırma bayraklarının birleşimi.
 
 `dwRefType`\
-Bir değer [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) güçlü veya zayıf başvuru türü olup olmadığını belirten sabit listesi.
+Başvuru türünün güçlü veya zayıf olup olmadığını belirten [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) numaralandırma değeri.
 
 `m_pReference`\
-Bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) başvuru bilgileri belirten bir nesne.
+Başvuru bilgilerini belirten bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı bir çağrısına geçirilen [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) doldurulması için yöntemi. Bu yapı ayrıca bir listeden bir parçası olarak döndürülen [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) hangi sırayla çağrısından döndürülen arabirimi [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) yöntemi.
+Bu yapı doldurulmak üzere [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) yöntemine bir çağrıya geçirilir. Bu yapı aynı zamanda, sırayla, [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) yöntemine bir çağrı döndürülür [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) arabiriminden bir listenin bir parçası olarak döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

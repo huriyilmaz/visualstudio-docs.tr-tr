@@ -1,5 +1,5 @@
 ---
-title: CONST_GUID_ARRAY | Microsoft Docs
+title: CONST_GUID_ARRAY | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - CONST_GUID_ARRAY structure
 ms.assetid: bd55e7d8-372c-4c3e-9eed-28f6b415a5db
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 4eb1cf0a94a427363bc54b7b204f20d9447db0c0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c0021ef24e0cafec0119263d2c74175f0d38d784
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66346510"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80737629"
 ---
-# <a name="constguidarray"></a>CONST_GUID_ARRAY
-Bir listesini tutan bir yapı `GUID`s.
+# <a name="const_guid_array"></a>CONST_GUID_ARRAY
+`GUID`S listesini tutan bir yapı.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,22 +43,22 @@ public struct CONST_GUID_ARRAY {
 
 ## <a name="members"></a>Üyeler
 `dwCount`\
-Sayısı `GUID`s'te `Members` dizisi.
+Dizideki s sayısı. `GUID` `Members`
 
 `Members`\
-Dizi `GUID`s.
+S `GUID`dizisi.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı geçirilir [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) yöntemi ve öğesinden döndürülen [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) ve [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) yöntemleri.
+Bu yapı [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) yöntemine aktarılır ve [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) ve [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md) yöntemlerinden döndürülür.
 
-Bu yapının bir örneğinin sahibi, ayrılan belleği serbest bırakma için sorumludur.
+Bu yapının bir örneğinin sahibi, ayrılan herhangi bir belleği serbest bırakmaktan sorumludur.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)

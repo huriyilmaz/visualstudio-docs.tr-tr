@@ -1,28 +1,28 @@
 ---
-title: IDebugDocumentChecksum2::GetChecksumAndAlgorithmId | Microsoft Docs
+title: IDebugDocumentChecksum2::GetChecksumAndAlgorithmId | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugDocumentChecksum2::GetChecksumAndAlgorithmI
 - GetChecksumAndAlgorithmI
 ms.assetid: 25efef99-0ef3-4332-a752-607605fc6e67
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 20cf33743d222e160458afcdcf186022a7405fa3
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: c26d5b9c2c45fd1ce932fc1108e4f77f2508cb31
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350088"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80731935"
 ---
 # <a name="idebugdocumentchecksum2getchecksumandalgorithmid"></a>IDebugDocumentChecksum2::GetChecksumAndAlgorithmId
-Kullanılacak bayt sayısı belirtilen belge sağlama toplamı ve algoritma tanımlayıcısını alır.
+Kullanılacak maksimum bayt sayısı verilen belge denetimini ve algoritma tanımlayıcısını alır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -46,22 +46,22 @@ public int GetChecksumAndAlgorithmId(
 
 ## <a name="parameters"></a>Parametreler
 `pRetVal`\
-[out] Sağlama algoritması için benzersiz tanımlayıcı.
+[çıkış] Checksum algoritması için benzersiz tanımlayıcı.
 
 `cMaxBytes`\
-[in] Sağlama toplamı için kullanılacak bayt sayısı.
+[içinde] Çekler için kullanılacak maksimum bayt sayısı.
 
 `pChecksum`\
-[out] Sağlama toplamı değeri.
+[çıkış] Çeklerin değeri.
 
 `pcNumBytes`\
-[out] Gerçek sağlama toplamı için kullanılan bayt sayısı.
+[çıkış] Checksum için kullanılan bayt gerçek sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, bir belge için algoritma ve sağlama toplamı almak için bu yöntemi kullanır.
+Aşağıdaki örnek, bir belge için checksum ve algoritma almak için bu yöntemi kullanır.
 
 ```cpp
 HRESULT CDebugCodeContext::GetDocumentChecksumAndAlgorithmId(GUID *pguidAlgorithm, BYTE **ppChecksum, ULONG *pcNumBytes)

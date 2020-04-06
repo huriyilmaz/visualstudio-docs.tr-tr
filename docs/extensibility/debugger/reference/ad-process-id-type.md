@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID_TYPE | Microsoft Docs
+title: AD_PROCESS_ID_TYPE | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - AD_PROCESS_ID_TYPE enumeration
 ms.assetid: 0aab80e9-285a-4697-94ac-c864d42a6aaa
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: a9df097037a84af9da63f0a98ee6cfa3b28cfcdd
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: a88fbe97cede8d343f1a96bc1917a69b8905b02b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66351387"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738195"
 ---
-# <a name="adprocessidtype"></a>AD_PROCESS_ID_TYPE
-Bir işlem kimliği yorumlama belirtir [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapısı.
+# <a name="ad_process_id_type"></a>AD_PROCESS_ID_TYPE
+[AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapısında bir işlem kimliğinin nasıl yorumlanacağı belirtilir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,21 +44,21 @@ public enum enum_AD_PROCESS_ID {
 
 ## <a name="fields"></a>Alanlar
 `AD_PROCESS_ID_SYSTEM`\
-İşlem, sistem tanımlayıcısı kimliğidir. Kullanım `ProcessId.dwProcessId` alanını [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapısı.
+İşlem Kimliği bir sistem tanımlayıcısıdır. AD_PROCESS_ID `ProcessId.dwProcessId` yapının [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) alanını kullanın.
 
 `AD_PROCESS_ID_GUID`\
-İşlem kimliği bir GUID değeridir. Kullanım `ProcessId.guidProcessId` alanını `AD_PROCESS_ID` yapısı.
+İşlem Kimliği bir GUID'dir. Yapının `ProcessId.guidProcessId` `AD_PROCESS_ID` alanını kullanın.
 
 ## <a name="remarks"></a>Açıklamalar
-İçin kullanılan `ProcessIdType` üyesi [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapısında bulunan işlem kimliği türünü tanımlamak için yapı. Nasıl yorumlanacağını belirler `ProcessId` bileşim yapısı içinde.
+Yapıda `ProcessIdType` bulunan işlem kimliği türünü tanımlamak için [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) yapısının üyesi için kullanılır. Yapıdaki birliğin `ProcessId` nasıl yorumlanacağına karar vetır.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: msdbg.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md)

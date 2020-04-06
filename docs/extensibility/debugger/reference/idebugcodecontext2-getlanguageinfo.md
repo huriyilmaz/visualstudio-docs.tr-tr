@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext2::GetLanguageInfo | Microsoft Docs
+title: IDebugCodeContext2::GetLanguageInfo | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugCodeContext2::GetLanguageInfo
 ms.assetid: 03002ef1-9fe6-44b6-b23b-ef7b86b2b21b
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 08138fcd67e7d4fd5115ac13fe1b8348f76245d8
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 465cc07b3ca75835afe0737fb22ba403acc4098b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66339009"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80734236"
 ---
 # <a name="idebugcodecontext2getlanguageinfo"></a>IDebugCodeContext2::GetLanguageInfo
 Bu kod bağlamı için dil bilgilerini alır.
@@ -43,16 +43,16 @@ int GetLanguageInfo( 
 
 ## <a name="parameters"></a>Parametreler
 `pbstrLanguage`\
-[out içinde] Gibi dil adını içeren bir dize döndürür "C++."
+[içinde, dışarı] "C++" gibi dilin adını içeren bir dize döndürür.
 
 `pguidLanguage`\
-[out içinde] Örneğin, kod bağlamı dili GUID'i döndürür `guidCPPLang`.
+[içinde, dışarı] Örneğin, kod bağlamının dili için GUID'i `guidCPPLang`döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Parametreleri en az biri null olmayan bir değer döndürmesi gerekir.
+ Parametrelerden en az birinin null olmayan bir değer döndürmesi gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)

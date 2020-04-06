@@ -1,5 +1,5 @@
 ---
-title: IDebugModule2::ReloadSymbols_Deprecated | Microsoft Docs
+title: İDebugModülü2::ReloadSymbols_Deprecated | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugModule2::ReloadSymbols method
 ms.assetid: 0f9f0133-7d58-4cd9-a6ca-1141e095749d
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 635e305c0dd88d72017048da6353f813fcc46406
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: e776434e17d90cd2c61c926bbf0100a44ecc524b
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66323955"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80726925"
 ---
-# <a name="idebugmodule2reloadsymbolsdeprecated"></a>IDebugModule2::ReloadSymbols_Deprecated
-ARTIK KULLANILMIYOR. KULLANMAYIN. Bu modüle ilişkin simgeleri yeniden yükler.
+# <a name="idebugmodule2reloadsymbols_deprecated"></a>IDebugModule2::ReloadSymbols_Deprecated
+Eski. KULLANMAYıN. Bu modül için sembolleri yeniden yükler.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -43,16 +43,16 @@ int ReloadSymbols( 
 
 ## <a name="parameters"></a>Parametreler
 `pszUrlToSymbols`\
-[in] Sembol deposu yolu.
+[içinde] Sembol deposuna giden yol.
 
 `pbstrDebugMessage`\
-[out] Örneğin modül adı modüller penceresini sağındaki görüntülenen bir durum veya hata iletisi, bir bilgilendirme iletisi döndürür.
+[çıkış] Modüller penceresinde modül adının sağında görüntülenen durum veya hata iletisi gibi bir bilgilendirme iletisi verir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Hata ayıklama altyapısı her zaman döndürmelidir `E_FAIL`.
+ Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Hata ayıklama motoru `E_FAIL`her zaman geri dönmelidir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem artık desteklenmiyor. Uygulama [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md) yöntemi yerine.
+ Bu yöntem artık desteklenmiş. Bunun yerine [LoadSymbols](../../../extensibility/debugger/reference/idebugmodule3-loadsymbols.md) yöntemini uygulayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)

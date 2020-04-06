@@ -1,30 +1,30 @@
 ---
-title: Asyncvoidmethodbuilder.m_objectıdfordebugger alanı | Microsoft Docs
+title: AsyncVoidMethodBuilder.m_objectIdForDebugger Alan | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - m_objectIdForDebugger field, AsyncVoidMethodBuilder structure [.NET Framework debug engines]
 ms.assetid: 81331a7b-6bec-46e4-a53e-515d0fad2400
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e744b766a32232470e6d79b1cf8bfba08e1636c0
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 10d63a92e2648c269c51faddc9521323c76116b1
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66350948"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80739318"
 ---
-# <a name="asyncvoidmethodbuildermobjectidfordebugger-field"></a>Asyncvoidmethodbuilder.m_objectıdfordebugger alanı
-Bu oluşturucu benzersiz olarak tanımlanabilmesi için hata ayıklayıcı tarafından kullanılan gevşek başlatılan nesneyi temsil eder.
+# <a name="asyncvoidmethodbuilderm_objectidfordebugger-field"></a>AsyncVoidMethodBuilder.m_objectIdForDebugger alanı
+Hata ayıklama nın bu oluşturucuyu benzersiz olarak tanımlamak için kullandığı lazily initialized nesneyi temsil eder.
 
- **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>
+ **Ad alanı:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll içinde)
+ **Montaj:** mscorlib (mscorlib.dll olarak)
 
- .NET Framework'den bu iç üye erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.
+ Bu iç üyeye .NET Framework'den erişemediğiniz için, ortak ara dilde (CIL) aşağıdaki sözdizimi sağlanır.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,4 +34,4 @@ Bu oluşturucu benzersiz olarak tanımlanabilmesi için hata ayıklayıcı taraf
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Runtime.CompilerServices.AsyncVoidMethodBuilder>
-- [.NET Framework için paralel uzantı dahili bileşenleri](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [.NET Framework için paralel uzantı dahili](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

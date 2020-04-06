@@ -1,31 +1,31 @@
 ---
-title: Kesme moduna girme | Microsoft Docs
+title: Kesme Moduna Girme | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - break mode
 - debugging [Debugging SDK], entering break mode
 ms.assetid: e9a8a241-cd21-4d4e-999a-283554c288b1
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a57ec499941e8e07d93d1917b9d12f5dfd7aca79
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 4bbcec8adf6468f70d95df5f291ce1e5540406cf
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66341556"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80738881"
 ---
-# <a name="enter-break-mode"></a>Kesme moduna girin
-Aşağıdaki bilgiler, bir işlevin Adımlama, imleç içerdiğinden kaynak kod satırının çalışan ya da bir kesme noktası için çalışan bir kesme noktası karşılaşıldığında oluşan işlemi açıklanmaktadır.
+# <a name="enter-break-mode"></a>Kesme modunu girin
+Aşağıdaki bilgiler, bir işleve adım attıktan sonra bir kesme noktasıyla karşılaşıldığında, imleci içinde bulunan kaynak kodu satırına doğru çalışan veya kesme noktasına çalışan işlemi açıklar.
 
 ## <a name="break-mode-process"></a>Kesme modu işlemi
 
-1. Hata ayıklama altyapısı (DE) gönderir [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md), [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md), veya diğer tüm durdurma olay Kesme moduna girmek IDE neden olacak.
+1. Hata ayıklama motoru (DE), [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md), [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md)veya ide'nin kesme moduna girmesine neden olan başka bir durdurma olayı gönderir.
 
-2. SDM çağrı yığını bilgilerini iş parçacığından aşağıdaki gibi alır:
+2. SDM, çağrı yığını bilgilerini iş parçacığından aşağıdaki gibi alır:
 
     - [IDebugThread2::EnumFrameInfo](../../extensibility/debugger/reference/idebugthread2-enumframeinfo.md)
 
@@ -33,13 +33,13 @@ Aşağıdaki bilgiler, bir işlevin Adımlama, imleç içerdiğinden kaynak kod 
 
     - [IEnumDebugFrameInfo2::Next](../../extensibility/debugger/reference/ienumdebugframeinfo2-next.md)
 
-    - [IDebugStackFrame2::GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) kaynak kod bilgisi almak için
+    - [IDebugStackFrame2::GetDocumentContext](../../extensibility/debugger/reference/idebugstackframe2-getdocumentcontext.md) kaynak kodu bilgilerini almak için
 
-    - [IDebugDocumentContext2::GetName](../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md) dosya adını almak için
+    - [IDebugDocumentContext2::Dosya](../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md) adını almak için Name getname
 
-    - [IDebugDocumentContext2::GetStatementRange](../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) deyim aralığı almak için
+    - [IDebugDocumentContext2::GetStatementRange](../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md) ifade aralığı almak için
 
     - [IDebugStackFrame2::GetCodeContext](../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) bellek bilgileri almak için
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklayıcısı olaylarını çağırma](../../extensibility/debugger/calling-debugger-events.md)
+- [Hata ayıklama olaylarını çağırma](../../extensibility/debugger/calling-debugger-events.md)

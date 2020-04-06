@@ -1,5 +1,5 @@
 ---
-title: FIELD_MODIFIERS | Microsoft Docs
+title: FIELD_MODIFIERS | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - FIELD_MODIFIERS enumeration
 ms.assetid: 1e44681c-1f03-41a9-9c04-b79f231b0822
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 10538f3728647a716a9f3f964a3deedf2a5ae5c9
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: f7a24345174854462a2118df626223a8a299cd7f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66324489"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80736848"
 ---
-# <a name="fieldmodifiers"></a>FIELD_MODIFIERS
-Alan türü için değiştiriciler belirtir.
+# <a name="field_modifiers"></a>FIELD_MODIFIERS
+Bir alan türü için değiştiriciler belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -106,46 +106,46 @@ public enum enum_FIELD_MODIFIERS {
 
 ## <a name="fields"></a>Alanlar
 `FIELD_MOD_ACCESS_TYPE`\
-Alan erişilemez gösterir.
+Alana erişilemediğini gösterir.
 
 `FIELD_MOD_ACCESS_PUBLIC`\
-Alan genel erişime sahip olduğunu gösterir.
+Alanın genel erişime sahip olduğunu gösterir.
 
 `FIELD_MOD_ACCESS_PROTECTED`\
-Alan Korumalı Erişim olduğunu gösterir.
+Alanın erişimi koruduğunu gösterir.
 
 `FIELD_MOD_ACCESS_PRIVATE`\
-Alan özel erişimi olduğunu gösterir.
+Alanın özel erişimi olduğunu gösterir.
 
 `FIELD_MOD_NOMODIFIERS`\
-Alanın hiçbir değiştiricilere sahip olduğunu gösterir.
+Alanın değiştirici olmadığını gösterir.
 
 `FIELD_MOD_STATIC`\
-Alanı statik olduğunu gösterir.
+Alanın statik olduğunu gösterir.
 
 `FIELD_MOD_CONSTANT`\
-Alan bir sabit olduğunu gösterir.
+Alanın sabit olduğunu gösterir.
 
 `FIELD_MOD_TRANSIENT`\
-Alan geçici olduğunu gösterir.
+Alanın geçici olduğunu gösterir.
 
 `FIELD_MOD_VOLATILE`\
-Alan geçici olduğunu gösterir.
+Alanın değişken olduğunu gösterir.
 
 `FIELD_MOD_ABSTRACT`\
-Alan soyut olduğunu gösterir.
+Alanın soyut olduğunu gösterir.
 
 `FIELD_MOD_NATIVE`\
-Alan yerel olduğunu gösterir.
+Alanın yerel olduğunu gösterir.
 
 `FIELD_MOD_SYNCHRONIZED`\
-Alan eşitlendiğini gösterir.
+Alanın eşitolduğunu gösterir.
 
 `FIELD_MOD_VIRTUAL`\
-Alan sanal olduğunu gösterir.
+Alanın sanal olduğunu gösterir.
 
 `FIELD_MOD_INTERFACE`\
-Alan bir arabirim olduğunu gösterir.
+Alanın bir arabirim olduğunu gösterir.
 
 `FIELD_MOD_FINAL`\
 Alanın son olduğunu gösterir.
@@ -157,45 +157,45 @@ Alanın bir sentinel olduğunu gösterir.
 Alanın bir iç sınıf olduğunu gösterir.
 
 `FIELD_TYPE_OPTIONAL`\
-Bu alan isteğe bağlı olduğunu gösterir.
+Alanın isteğe bağlı olduğunu gösterir.
 
 `FIELD_MOD_BYREF`\
-Alanın başvuru bağımsız değişkeni olduğunu gösterir. Bu, özellikle yöntem bağımsız olur.
+Alanın bir başvuru bağımsız değişkeni olduğunu gösterir. Bu özellikle yöntem bağımsız değişkenleri içindir.
 
 `FIELD_MOD_HIDDEN`\
-Alanı gizli veya başka bir bağlamda sunulan olduğunu gösterir. Örneğin, [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] statik yerel öğeler.
+Alanın gizlenmesi veya başka bir bağlamda sunulması gerektiğini gösterir; örneğin, [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] statik yerel.
 
 `FIELD_MOD_MARSHALASOBJECT`\
-Alan bir nesne ile temsil ettiğini gösteren bir `IUnknown` arabirimi.
+Alanın `IUnknown` arabirimi olan bir nesneyi temsil ettiğini gösterir.
 
 `FIELD_MOD_SPECIAL_NAME`\
-Alan özel bir adı, örneğin, sahip olduğunu gösterir `.ctor` bir oluşturucu için ([!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] yalnızca).
+Alanın özel bir adı olduğunu gösterir, `.ctor` örneğin, bir[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] oluşturucu için (yalnızca).
 
 `FIELD_MOD_HIDEBYSIG`\
-Alana sahip olduğunu gösterir `Overloads` uygulanmış anahtar sözcüğü ([!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] yalnızca).
+Alanın anahtar kelimesinin `Overloads` ona uygulandığını[!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] gösterir (yalnızca).
 
 `FIELD_MOD_WRITEONLY`\
-Alanın salt yazılır olduğunu gösterir. Bu değer yer almayan `FIELD_MOD_ALL`gibi yalnızca bu tür salt yazılır alanlar İşlev değerlendirmesi için kullanılır. Bir kullanıcı için açıkça kaldırmasını `FIELD_MOD_WRITEONLY` alanları.
+Alanın yalnızca yazma olduğunu gösterir. Bu `FIELD_MOD_ALL`değer, yalnızca yazma alanlarının tek kullanımı işlev değerlendirmesi için olduğundan, bu değere dahil edilmez. Bir kullanıcı açıkça `FIELD_MOD_WRITEONLY` alanları istemelidir.
 
 `FIELD_MOD_ACCESS_MASK`\
-Alan erişimi için bir maske gösterir.
+Alan erişimi için bir maskegösterir.
 
 `FIELD_MOD_MASK`\
-Alan değiştiricilerini için bir maske gösterir.
+Alan değiştiriciler için bir maske gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
-İçin kullanılan `dwModifiers` üyesi [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısı.
+`dwModifiers` [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısının üyesi için kullanılır.
 
-Bu değerleri de geçirilen [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md) belirli alanlar için filtre uygulamak için yöntemi.
+Bu değerler, belirli alanlar için filtrelemek için [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md) yöntemine de aktarılır.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: sh.h
 
 Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
-Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sabit Listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md)
 - [EnumFields](../../../extensibility/debugger/reference/idebugcontainerfield-enumfields.md)

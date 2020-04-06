@@ -1,24 +1,24 @@
 ---
-title: IDebugExtendedField | Microsoft Docs
+title: IDebugExtendedField | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - IDebugExtendedField interface
 ms.assetid: b491499c-af57-47da-87d6-34b7398f6591
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a9e8f8e8414b6066bb8a407449a4b588d948bc4
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: ad10050aa157b4481fa2041ec5f322451983149f
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66333215"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80729044"
 ---
 # <a name="idebugextendedfield"></a>IDebugExtendedField
-Yönetilen kod genel türleri desteklemek kullanılabilir alan türlerini genişletir.
+Yönetilen kod jeneriklerini desteklemek için kullanılabilen alan türlerini genişletir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -27,16 +27,16 @@ IDebugExtendedField : IDebugField
 ```
 
 ## <a name="methods"></a>Yöntemler
- Yöntemlere ek olarak [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimi bu arabirim, aşağıdaki yöntemleri uygular:
+ [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimindeki yöntemlere ek olarak, bu arabirim aşağıdaki yöntemleri uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[GetExtendedKind](../../../extensibility/debugger/reference/idebugextendedfield-getextendedkind.md)|Belirtilen genişletilmiş alan türünü alır.|
-|[IsClosedType](../../../extensibility/debugger/reference/idebugextendedfield-isclosedtype.md)|Alan kapalı bir tür temsil edip etmediğini belirler.|
+|[IsClosedType](../../../extensibility/debugger/reference/idebugextendedfield-isclosedtype.md)|Alanın kapalı bir türü temsil edip temsil edilip edilemeyişazını belirler.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üst bilgi: Sh.h
+ Üstbilgi: Ş.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll

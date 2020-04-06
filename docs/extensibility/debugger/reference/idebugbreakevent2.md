@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakEvent2 | Microsoft Docs
+title: IDebugBreakEvent2 | Microsoft Dokümanlar
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - IDebugBreakEvent2 interface
 ms.assetid: 57dfdbc2-4e68-4dbf-9579-006cd6fb1c62
-author: madskristensen
-ms.author: madsk
+author: acangialosi
+ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c500c6a54cc63dbcb8c7c6ad23c92d2105b9842
-ms.sourcegitcommit: 40d612240dc5bea418cd27fdacdf85ea177e2df3
+ms.openlocfilehash: 1af6ce13de529fef5e16b3bc1be7053f0e1347b6
+ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66314412"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80735396"
 ---
 # <a name="idebugbreakevent2"></a>IDebugBreakEvent2
-Bu arabirim, oturum hata ayıklama Yöneticisi (SDM) zaman uyumsuz bir sonu başarıyla tamamlandığını bildirir.
+Bu arabirim, oturum hata ayıklama yöneticisine (SDM) bir eşzamanlı molanın başarıyla tamamlandığını bildirir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -28,21 +28,21 @@ Bu arabirim, oturum hata ayıklama Yöneticisi (SDM) zaman uyumsuz bir sonu baş
 IDebugBreakEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar
- DE kullanıcı sonu bir programda desteklemek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirim uygulandığında, bu arabirimle aynı nesne üzerinde (SDM kullanan [QueryInterface](/cpp/atl/queryinterface) erişimi `IDebugEvent2` arabirimi).
+## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
+ DE, bir programdaki kullanıcı molalarını desteklemek için bu arabirimi uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde uygulanmalıdır (SDM `IDebugEvent2` [arabirime](/cpp/atl/queryinterface) erişmek için QueryInterface'i kullanır).
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- SDM çağrıları [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) zaman kullanıcı istedi Duraklatılacak ayıklanan programa. Program başarıyla duraklatıldı DE gönderir `IDebugBreakEvent2` olay. Bu olay ile gönderilen [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) ayıklanan programa eklendiğinde SDM tarafından sağlanan geri çağırma işlevi.
+ SDM, kullanıcı programın duraklatılmak üzere silinmesini istediğinde [CauseBreak'i](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md) çağırır. Program başarıyla duraklatıldı, DE `IDebugBreakEvent2` olayı gönderir. Bu olay, sdm tarafından sağlanan [iDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri arama işlevi kullanılarak gönderilir.
 
 ## <a name="remarks"></a>Açıklamalar
- Örneğin, bir kullanıcının seçim yapabileceği **tümünü Kes** komutunu **hata ayıklama** sonsuz bir döngüye çalışan bir programı ayırmak için menü. SDM çağırarak durdurmak için program söyler [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md). DE gönderir `IDebugBreakEvent2` program son ne zaman durdurur.
+ Örneğin, bir kullanıcı, sonsuz döngü çalıştıran bir programdan çıkmak için **Hata Ayıklama** menüsündeki **Tümünü Ara** komutunu seçebilir. SDM [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)arayarak durdurmak için program söyler. Program sonunda `IDebugBreakEvent2` durduğunda DE gönderir.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: msdbg.h
 
  Ad alanı: Microsoft.VisualStudio.Debugger.Interop
 
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)
