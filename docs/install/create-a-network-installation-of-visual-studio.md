@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ea7efd82aa25844e8eb33745aa53d44be1ed14f6
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.openlocfilehash: 1f9c1ffc0252f0fcd92f026c876adfc8ad694c41
+ms.sourcegitcommit: 273b657e115c1756adb84e0e56b6f2c709bcee76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80544070"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80759721"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Visual Studio'nun ağ yüklemesini oluşturma
 
@@ -297,4 +297,4 @@ Başka destek seçeneklerimiz de mevcuttur. Bir liste için [Geri Bildirim](../i
 - [Bakım temeli sırasında Visual Studio’yu güncelleştirme](update-servicing-baseline.md)
 - [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 - [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
-- [Visual Studio çevrimdışı yüklemesi için gerekli sertifikaları yükleme](/install-certificates-for-visual-studio-offline.md)
+- [Visual Studio çevrimdışı yüklemesi için gerekli sertifikaları yükleme](install-certificates-for-visual-studio-offline.md)
