@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d51aa0a5ef995abbe150160e378aa8885cc9706
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: bbed62c13fc963af382ede113b138451303d9382
+ms.sourcegitcommit: 273b657e115c1756adb84e0e56b6f2c709bcee76
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472674"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80759716"
 ---
 # <a name="msbuild-conditions"></a>MSBuild koşulları
 
@@ -40,7 +40,7 @@ MSBuild, bir öznitelik izin verilen her `Condition` yerde uygulanabilecek belir
 |()|İçerde yer alan `true` ifadelerin `true`değerlendirilmesi için değerlendiren gruplandırma mekanizması.|
 |$if$ ( %ifade% ), $else$, $endif$|Belirtilen `%expression%` özel şablon parametresinin dize değeriyle eşleşip eşleşmediğini denetler. `$if$` Koşul , ifadeleri `true`çalıştırılır; aksi `$else$` takdirde, durum kontrol edilir. `$else$` Koşul `true`ise , ifadeleri çalıştırılır; aksi takdirde, durum ifade değerlendirmesini `$endif$` sona erdirer.<br /><br /> Kullanım örnekleri için [Visual Studio proje/öğe şablonu parametre mantığına](https://stackoverflow.com/questions/6709057/visual-studio-project-item-template-parameter-logic)bakın.|
 
-Dize yöntemlerini, dizeyalnızca ilgili bölümünü karşılaştırmak <xref:System.String.TrimEnd> için işlevin kullanıldığı, .NET Framework ve .NET Core hedef çerçeveleri arasında ayrım yapmak için aşağıdaki örnekte gösterildiği gibi koşullarda kullanabilirsiniz.
+Dize yöntemlerini, .NET Framework ve .NET Core hedef çerçeveleri arasında ayrım yapmak için dizeyalnızca ilgili bölümünü karşılaştırmak için [TrimEnd()](/dotnet/api/system.string.trimend) işlevinin kullanıldığı aşağıdaki örnekte gösterildiği gibi koşullarda kullanabilirsiniz.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
