@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: cad3a644935e14a605dbef02bddc1f9337c1f5e9
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: bd6d2f394edf1a1d2c96404a8af3714fbe9550d6
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233090"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880357"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*.runsettings* dosyasi kullanarak birim testlerini yapılandır
 
@@ -330,7 +330,7 @@ Bu ayarlar, özniteliği olan test yöntemlerini çalıştıran test bağdaştı
 |Yapılandırma|Varsayılan|Değerler|
 |-|-|-|
 |**ForcedLegacyMode**|yanlış|Visual Studio 2012'de, MSTest bağdaştırıcısı daha hızlı ve daha ölçeklenebilir hale getirmek için optimize edildi. Testlerin çalışma sırası gibi bazı davranışlar Visual Studio'nun önceki sürümlerindekiyle aynı olmayabilir. Eski test bağdaştırıcısını kullanmak için bu değeri **doğru** olarak ayarlayın.<br /><br />Örneğin, birim testi için belirtilen bir *app.config* dosyanız varsa bu ayarı kullanabilirsiniz.<br /><br />Daha yeni bağdaştırıcı kullanmanıza olanak vermek için testlerinizi yeniden düzenlemenizi öneririz.|
-|**IgnoreTestImpact**|yanlış|MSTest veya Microsoft Test Yöneticisi'nde çalıştırıldığında test etkisi özelliği son değişikliklerden etkilenen testleri önceliklendirir. Bu ayar özelliği devre dışı bırakır. Daha fazla bilgi için bkz. önceki [yapıdan bu yana hangi testlerin çalıştırılması gerektiği.](https://msdn.microsoft.com/library/dd286589)|
+|**IgnoreTestImpact**|yanlış|Test etkisi özelliği, MSTest'te veya Microsoft Test Yöneticisi'nden (Visual Studio 2017'de amortismana dahil) çalıştırıldığında, son değişikliklerden etkilenen testlere öncelik verir. Bu ayar özelliği devre dışı bırakır. Daha fazla bilgi için bkz. önceki [yapıdan bu yana hangi testlerin çalıştırılması gerektiği.](https://msdn.microsoft.com/library/dd286589)|
 |**SettingsFile**||Burada MSTest bağdaştırıcısı ile kullanılacak bir test ayarları dosyası belirtebilirsiniz. Ayrıca [ayarlar menüsünden](#ide)bir test ayarları dosyası belirtebilirsiniz.<br /><br />Bu değeri belirtirseniz, **ForcedlegacyMode'u** da **doğru**olarak ayarlamanız gerekir.<br /><br />`<ForcedLegacyMode>true</ForcedLegacyMode>`|
 |**KeepExecutorAliveAfterLegacyRun**|yanlış|Test çalıştırması tamamlandıktan sonra MSTest kapatılır. Testin bir parçası olarak başlatılan herhangi bir işlem de öldürülür. Test uygulayıcısını canlı tutmak istiyorsanız, değeri **doğru**olarak ayarlayın. Örneğin, tarayıcının kodlanmış UI testleri arasında çalışmasını sağlamak için bu ayarı kullanabilirsiniz.|
 |**DeploymentEnabled**|true|Değeri, test yönteminizde belirttiğiniz **yanlış,** dağıtım öğelerine ayarlarsanız dağıtım dizinine kopyalanmaz.|

@@ -8,12 +8,12 @@ ms.assetid: 6832fe39-04d5-4d94-8a18-3e2730bad423
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 0132401df33bd65d7e328307167b6c228155bb42
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 07df32104394dffcd61d1561309b77e61593f6e6
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78169397"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880240"
 ---
 # <a name="how-to-configure-aspnet-profiler-for-load-tests-using-test-settings-in-visual-studio"></a>Nasıl yapılır: Visual Studio'daki test ayarlarını kullanarak yük testleri için ASP.NET profil oluşturucusu yapılandırın
 
@@ -22,7 +22,7 @@ ASP.NET profilci bilgilerini toplamak için ASP.NET profiloluşturucu tanıveri 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> Bu tanılama veri bağdaştırıcısı, Microsoft Test Manager kullanılarak çalıştırılan testler için kullanılamaz. Yalnızca web sitelerini kullanarak yük testleri ile ASP.NET Profiler tanı bağdaştırıcısını kullanabilirsiniz, bu da Visual Studio Enterprise gerektirir.
+> Bu tanılama veri bağdaştırıcısı, Microsoft Test Manager (Visual Studio 2017'de amortismana tabi) kullanılarak çalıştırılan testler için kullanılamaz. Yalnızca web sitelerini kullanarak yük testleri ile ASP.NET Profiler tanı bağdaştırıcısını kullanabilirsiniz, bu da Visual Studio Enterprise gerektirir.
 
 ASP.NET profil oluşturucu tanıveri bağdaştırıcısı, bir yük testi çalıştırdığınızda uygulama katmanından ASP.NET profil oluşturucu verileri toplamanızı sağlar. Profil oluşturucuyu uzun yük testleri için çalıştırmamalısınız, örneğin, bir saatten uzun süren yükleme testleri. Profil oluşturucu dosyasının büyük, belki de yüzlerce megabayt olabiliyor olmasıdır. Bunun yerine, yine de performans sorunları derin tanı yarar verecektir ASP.NET profilleyici kullanarak daha kısa yük testleri çalıştırın.
 

@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3bd667579d9ff0645e7dd2753278257a9796709
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f333cc3409056739cef7c378d9815f10439ab37e
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585645"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880370"
 ---
 # <a name="use-coded-ui-test-to-test-your-code"></a>Kodunuzu test etmek için Kodlu UI testini kullanma
 
@@ -435,7 +435,12 @@ Kodlu UI test günlüklerini kullanarak Kodlu UI testlerini çözümleyebilirsin
 
 ## <a name="whats-next"></a>Sırada ne var?
 
+::: moniker range="vs-2017"
 **Kodlu UI testlerini çalıştırmak için ek seçenekler:** Bu konuda daha önce açıklandığı gibi Kodlu UI testlerini doğrudan Visual Studio'dan çalıştırabilirsiniz. Ayrıca, Microsoft Test Yöneticisi'nden veya Azure Denetim Hatları'nı kullanarak otomatik ui testleri çalıştırabilirsiniz. Kodlanmış UI testleri otomatik olduğunda, diğer otomatik testlerin aksine, bunları çalıştırdığınızda masaüstüyle etkileşime girmeleri gerekir.
+::: moniker-end
+::: moniker range=">=vs-2019"
+**Kodlu UI testlerini çalıştırmak için ek seçenekler:** Bu konuda daha önce açıklandığı gibi Kodlu UI testlerini doğrudan Visual Studio'dan çalıştırabilirsiniz. Ayrıca, Azure Denetim Hatları'nı kullanarak otomatik leştirilmiş ui testleri çalıştırabilirsiniz. Kodlanmış UI testleri otomatik olduğunda, diğer otomatik testlerin aksine, bunları çalıştırdığınızda masaüstüyle etkileşime girmeleri gerekir.
+::: moniker-end
 
 - [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md)
 
@@ -449,7 +454,7 @@ Kodlu UI test günlüklerini kullanarak Kodlu UI testlerini çözümleyebilirsin
 
 - [Kodlanmış UI testlerini ve eylem kayıtlarını genişletme](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
 
-Kodlanmış UI testleri genellikle el ile yapılan testleri otomatikleştirmek için kullanılır. El ile yapılan testler hakkında daha fazla bilgi için Microsoft [Test Yöneticisi ile el ile yapılan testleri çalıştır'a](/azure/devops/test/mtm/run-manual-tests-with-microsoft-test-manager?view=vsts)bakın. Otomatik testler hakkında daha fazla bilgi için [Visual Studio'daki Test araçlarına](../test/improve-code-quality.md)bakın.
+Kodlanmış UI testleri genellikle el ile yapılan testleri otomatikleştirmek için kullanılır. Otomatik testler hakkında daha fazla bilgi için [Visual Studio'daki Test araçlarına](../test/improve-code-quality.md)bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

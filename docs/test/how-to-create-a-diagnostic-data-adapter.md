@@ -8,12 +8,12 @@ ms.assetid: bd7ad36c-54cb-4d2a-9aea-9d10ad98d7ba
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f196c3850c9413a7c68fd1fe67af50273915f249
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5b198d8d3e9156b8a38325034bf19ce96b742d9e
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589181"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880162"
 ---
 # <a name="how-to-create-a-diagnostic-data-adapter"></a>Nasıl kullanılır: Tanılama veri bağdaştırıcısı oluşturma
 
@@ -23,7 +23,7 @@ ms.locfileid: "75589181"
 
 Testlerinizin çalıştırıldığı makineyi veya uygulamanızı test altında çalıştırmak için kullandığınız ortamın bir parçası olan bir makineyi etkileyen bir tanılama veri bağdaştırıcısı oluşturabilirsiniz. Örneğin, testlerin çalıştırıldığı test makinenizde dosya toplamak veya uygulamanız için web sunucusu rolünde hizmet veren makinede dosya toplamak.
 
-Microsoft Test Manager'ı kullanarak veya Visual Studio'u kullanarak test ayarlarınızı oluştururken tanılama veri bağdaştırıcınıza uygun bir ad verebilirsiniz. Test ayarları, testlerinizi çalıştırdığınızda ortamınızda belirli tanısal veri bağdaştırıcılarını çalıştıracak makine rolünü tanımlamanızı sağlar. Test ayarlarınızı oluştururken tanılama veri bağdaştırıcılarınızı da yapılandırabilirsiniz. Örneğin, web sunucunuzdan özel günlükler toplayan bir tanılama veri bağdaştırıcısı oluşturabilirsiniz. Test ayarlarınızı oluşturduğunuzda, bu tanılama veri bağdaştırıcısını bu web sunucusu rolünü gerçekleştiren makine veya makinelerde çalıştırmayı seçebilir ve oluşturulan son üç günlükleri toplamak için test ayarlarınızın yapılandırmasını değiştirebilirsiniz. Test ayarları hakkında daha fazla bilgi için [bkz.](../test/collect-diagnostic-information-using-test-settings.md)
+Visual Studio veya Microsoft Test Manager (Visual Studio 2017'de amortismana tabi) kullanarak test ayarlarınızı oluştururken tanılama veri bağdaştırıcınıza, test ayarlarınızı gösteren samimi bir ad verebilirsiniz. Test ayarları, testlerinizi çalıştırdığınızda ortamınızda belirli tanısal veri bağdaştırıcılarını çalıştıracak makine rolünü tanımlamanızı sağlar. Test ayarlarınızı oluştururken tanılama veri bağdaştırıcılarınızı da yapılandırabilirsiniz. Örneğin, web sunucunuzdan özel günlükler toplayan bir tanılama veri bağdaştırıcısı oluşturabilirsiniz. Test ayarlarınızı oluşturduğunuzda, bu tanılama veri bağdaştırıcısını bu web sunucusu rolünü gerçekleştiren makine veya makinelerde çalıştırmayı seçebilir ve oluşturulan son üç günlükleri toplamak için test ayarlarınızın yapılandırmasını değiştirebilirsiniz. Test ayarları hakkında daha fazla bilgi için [bkz.](../test/collect-diagnostic-information-using-test-settings.md)
 
 Tanılama veri bağdaştırıcınızın testin o noktasında görevleri gerçekleştirebilmeleri için testlerinizi çalıştırdığınızda olaylar yükseltilir.
 
@@ -255,7 +255,7 @@ Test ayarlarınızı oluştururken yapılandırdığınız bilgileri temel alan 
 
 14. Test ayarlarınızı, testlerinizi çalıştırdığınızda bir ortamı kullanacak şekilde yapılandırma hakkında daha fazla bilgi için [bkz.](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
 
-15. Tanılama veri bağdaştırıcınızı seçmek için önce varolan bir test ayarlarını seçmeniz veya Microsoft Test Manager veya Visual Studio'dan yeni bir tane oluşturmanız gerekir. Bağdaştırıcı, test ayarlarınızın **Veri ve Tanılama** sekmesinde sınıfa atadığınız kolay adla görüntülenir.
+15. Tanılama veri bağdaştırıcınızı seçmek için önce varolan bir test ayarlarını seçmeniz veya Visual Studio veya Microsoft Test Manager'dan (Visual Studio 2017'de amortismana tabi) yeni bir tane oluşturmanız gerekir. Bağdaştırıcı, test ayarlarınızın **Veri ve Tanılama** sekmesinde sınıfa atadığınız kolay adla görüntülenir.
 
 16. Bu test ayarlarını etkin olacak şekilde ayarlayın. Test ayarları hakkında daha fazla bilgi için [bkz.](../test/collect-diagnostic-information-using-test-settings.md)
 

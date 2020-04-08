@@ -8,12 +8,12 @@ ms.assetid: ff275cfb-5df9-4710-9a91-9caabaaad34f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 350640a4db6a81d19801aedb03d0d490895f97ef
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 685b22f25c7138c4c3e7c9068ba52864e40648e1
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589220"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880149"
 ---
 # <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>Nasıl yapılır: Visual Studio'da test ayarlarını kullanarak ağ öykünme sini yapılandırın
 
@@ -24,12 +24,19 @@ Tanılama veri bağdaştırıcısını, uygulamanızı Visual Studio'dan çeşit
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
+::: moniker range="vs-2017"
 Aşağıdaki yordam, yapılandırma düzenleyicisinden ağ öykünme yapılandırmanasıl açıklanır. Bu adımlar, hem Microsoft Test Yöneticisi'ndeki hem de Visual Studio'daki yapılandırma düzenleyicisi için geçerlidir.
+::: moniker-end
+::: moniker range=">=vs-2019"
+Aşağıdaki yordam, yapılandırma düzenleyicisinden ağ öykünme yapılandırmanasıl açıklanır. Bu adımlar Visual Studio'daki yapılandırma düzenleyicisi için geçerlidir.
+::: moniker-end
 
 > [!NOTE]
-> Ağ öykünme tanılama veri bağdaştırıcısı yalnızca Visual Studio test ayarları için geçerlidir. Microsoft Test Yöneticisi'nde test ayarları için kullanılmaz.
+> Ağ öykünme tanılama veri bağdaştırıcısı yalnızca Visual Studio test ayarları için geçerlidir. Microsoft Test Manager'da test ayarları için kullanılmaz (Visual Studio 2017'de amortismana dahil edilir).
 
+::: moniker range="vs-2017"
 Yönetici ayrıcalıkları olan bir hesap ağ öykünmesi için kullanılmalıdır. El ile testler çalıştıran yerel bir rol için ağ öykünmesi seçtiyseniz, yönetici ayrıcalıklarını kullanarak Microsoft Test Yöneticisi'ni başlatmanız gerekir. Başka bir rol için ağ öykünmesi seçtiyseniz, bu rol için makinedeki test aracısının yöneticiler grubunun bir üyesi olan bir kullanıcı hesabı kullandığını doğrulamanız gerekir. Test aracınız için hesabı nasıl ayarlayacağıhakkında daha fazla bilgi için, [test aracılarını Yükle ve yapılandırma](../test/lab-management/install-configure-test-agents.md)ya da yapılandırma'ya bakın.
+::: moniker-end
 
 > [!NOTE]
 > Test aracısının varsayılan hesabı olan Ağ Hizmeti hesabı, yöneticiler grubunun bir üyesi değildir.

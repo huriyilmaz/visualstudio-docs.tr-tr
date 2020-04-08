@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: b02f8bf9542b5de4737d173835c011f59c3fdc86
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 499f335edabe77d001a1a2486e7b559abe6c7a8a
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75847298"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880344"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>Devops için bir laboratuvar ortamı kullanın
 
@@ -53,6 +53,7 @@ Team Foundation Server (TFS) ve Azure Test Planları'ndaki [yapı ve sürüm](/a
 
 Daha fazla bilgi için Yapı [kullan veya yayın yönetimini kullan'a](use-build-or-rm-instead-of-lab-management.md)bakın.
 
+::: moniker range="vs-2017"
 ## <a name="use-the-visual-studio-lab-management-features-of-microsoft-test-manager"></a>Microsoft Test Yöneticisi'nin Visual Studio Lab Management özelliklerini kullanma
 
 Visual Studio Enterprise sürümünü kullandığınızda Microsoft Test Yöneticisi'nin Visual Studio Lab Management özellikleriyle laboratuvar ortamları oluşturabilir ve yönetebilirsiniz.
@@ -136,6 +137,7 @@ Ortamlar ayarlama hakkında bilgi için bkz:
 * [Standart laboratuvar ortamları](https://msdn.microsoft.com/library/ee390842.aspx)
 * [SCVMM (sanal) ortamları](https://msdn.microsoft.com/library/ee943322.aspx)
 * [Ağ yalıtılmış ortam oluşturma ve kullanma](https://msdn.microsoft.com/library/ee518924.aspx)
+::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

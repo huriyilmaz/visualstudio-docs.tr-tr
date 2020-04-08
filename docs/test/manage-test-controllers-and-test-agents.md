@@ -7,12 +7,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efcc284291281b6e370cf51ddbe175faf8f1204c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 086601cb8cde00d63e3be85c028201922ebe5b76
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75584419"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880201"
 ---
 # <a name="manage-test-controllers-and-test-agents"></a>Test denetleyicilerini ve test aracılarını yönetme
 
@@ -20,7 +20,9 @@ Testleri uzaktan çalıştırmak, testleri birden çok makineye dağıtmak veya 
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
+::: moniker range="vs-2017"
 Laboratuvar ortamlarında testler çalıştırmak için Microsoft Test Yöneticisi'ni kullanıyorsanız, Microsoft Test Yöneticisi için **Laboratuvar Merkezi'ndeki** **Test Denetleyiciyöneticisini** kullanarak test denetleyicilerini ve aracılarını yönetirsiniz. Bu konu yalnızca testleri çalıştırmak için Visual Studio'yı kullanıyorsanız geçerlidir.
+::: moniker-end
 
 Visual Studio'da testleri çalıştırmak için test aracılarını ve test denetleyicilerini nasıl yükleyip yapılandırılabilme hakkında bilgi [için](../test/configure-test-agents-and-controllers-for-load-tests.md)bkz.
 
@@ -90,25 +92,36 @@ Farklı bir test denetleyicisine bir test aracısı eklemek isteyebilirsiniz vey
 
 Bir test aracısı kaldırılabilmesi için çevrimdışı duruma ayarlanmalıdır.
 
+::: moniker range="vs-2017"
 > [!NOTE]
 > Bu yordamı, bir denetleyiciye kayıtlı aracıları laboratuar ortamının bir parçası olarak kaldırmak için kullanamazsınız. Bu aracıları denetleyiciden kaldırmak için Microsoft Test Yöneticisi'ni kullanarak ortamı kaldırmanız gerekir.
+::: moniker-end
+::: moniker range=">=vs-2019"
+> [!NOTE]
+> Bu yordamı, bir denetleyiciye kayıtlı aracıları laboratuar ortamının bir parçası olarak kaldırmak için kullanamazsınız.
+::: moniker-end
 
 ### <a name="to-remove-a-test-agent-from-a-test-controller"></a>Test aracısını test denetleyicisinden kaldırmak için
 
-1. Test denetleyicisi bir projeye kayıtlı değilse, aşağıdaki adımları izleyin.
+::: moniker range=">=vs-2019"
+Visual Studio 2019'da, test denetleyicisi bir projeye kayıtlıysa test aracısını kaldıramazsınız.
+::: moniker-end
+Test denetleyicisi bir projeye kayıtlı değilse, aşağıdaki adımları izleyin.
 
-    1. Visual Studio'dan test projeniz için test ayarları dosyasını açın, **Rol'u** seçin ve **Denetleyici** alanı için açılan dosyadan **Test Denetleyicilerini Yönet'i** seçin.
+1. Visual Studio'dan test projeniz için test ayarları dosyasını açın, **Rol'u** seçin ve **Denetleyici** alanı için açılan dosyadan **Test Denetleyicilerini Yönet'i** seçin.
 
-         **Test Denetleyicisini Yönet** iletişim kutusu görüntülenir.
+   **Test Denetleyicisini Yönet** iletişim kutusu görüntülenir.
 
-    2. **Denetleyici** açılır listesinde, test denetleyicisini kurduğunuz bilgisayarın adını yazın. Daha önce belirli bir test denetleyicisi uyguladıysanız, listeden adı seçebilirsiniz.
+2. **Denetleyici** açılır listesinde, test denetleyicisini kurduğunuz bilgisayarın adını yazın. Daha önce belirli bir test denetleyicisi uyguladıysanız, listeden adı seçebilirsiniz.
 
-    3. **Aracılar** bölmesinde, test aracısı adını seçin. Aracı hala çevrimiçiyse, **Çevrimdışı'nı seçin.** Kaldırmak için **Kaldır'ı**seçin.
+3. **Aracılar** bölmesinde, test aracısı adını seçin. Aracı hala çevrimiçiyse, **Çevrimdışı'nı seçin.** Kaldırmak için **Kaldır'ı**seçin.
 
-        > [!NOTE]
-        > Bir test aracısını kaldırmak, test denetleyicisinden uzaklaştırılı. Test aracısını tamamen kaldırmak için test aracısı bilgisayarındaki **Programlar ve Özellikler** Denetim Masası'nı kullanın.
+   > [!NOTE]
+   > Bir test aracısını kaldırmak, test denetleyicisinden uzaklaştırılı. Test aracısını tamamen kaldırmak için test aracısı bilgisayarındaki **Programlar ve Özellikler** Denetim Masası'nı kullanın.
 
-2. Test denetleyicisi bir projeye kayıtlıysa, Microsoft Test Yöneticisi'ni kullanarak aracıyı kaldırın.
+::: moniker range="vs-2017"
+Test denetleyicisi bir projeye kayıtlıysa, Microsoft Test Yöneticisi'ni kullanarak aracıyı kaldırın.
+::: moniker-end
 
 ## <a name="change-the-settings-for-a-test-agent"></a>Test aracısının ayarlarını değiştirme
 
@@ -125,8 +138,10 @@ Aşağıdaki yordamları kullanarak bir test aracısının durumunu ve diğer ay
 
 ### <a name="to-change-the-settings-of-a-test-agent"></a>Test aracısının ayarlarını değiştirmek için
 
+::: moniker range="vs-2017"
 > [!NOTE]
 > Test aracısı bir projeye kayıtlı bir test denetleyicisine kayıtlıysa, Microsoft Test Yöneticisi'ndeki ayarları değiştirin.
+::: moniker-end
 
 1. Test denetleyicisini ve yük testi için kayıtlı aracıları yapılandırmak ve izlemek için Visual Studio'daki **Yük Testi** menüsünü seçin ve ardından **Test Denetleyicilerini Yönet'i**seçin. Diğer testler için Visual Studio'da test projeniz için test ayarları dosyasını açın, **Role'yi** seçin ve **Denetleyici** alanı için açılan dan **Test Denetleyicilerini Yönet'i** seçin.
 
@@ -157,7 +172,7 @@ Test aracısı ağırlığı ve test aracısı özniteliği değişiklikleri hem
 
 Bir test denetleyicisini yapılandırmak için **Takım Test Denetleyicisi Yapılandırma Aracı'nı**kullanmanız gerekir. Test denetleyicinizi yapılandırdığınızda, test denetleyicinizi farklı bir proje koleksiyonuyla kaydedebilir veya test denetleyicinizi bir proje koleksiyonundan kaydını çıkarabilirsiniz.
 
-Test denetleyicinizi Team Foundation Server proje koleksiyonunuza kaydetmek istiyorsanız, test denetleyicihizmeti için kullandığınız hesabın Proje Koleksiyonu için Proje Toplama Test Hizmeti Hesapları grubuna veya hesabın adedine üye olması gerekir test denetleyicisi yapılandırma aracını çalıştırmak için kullandığınız bir Proje Koleksiyonu Yöneticisi olmalıdır.
+Test denetleyicinizi Team Foundation Server proje koleksiyonunuza kaydetmek istiyorsanız, test denetleyicihizmeti için kullandığınız hesabın Proje Koleksiyonu için Project Collection Test Service Accounts grubunun bir üyesi olması veya test denetleyiciyapılandırma aracını çalıştırmak için kullandığınız hesabın Proje Koleksiyonu Yöneticisi olması gerekir.
 
 > [!NOTE]
 > Proje koleksiyonunda varolan ortamları olan bir proje koleksiyonundan bir test denetleyicisini nkaydığınızda, bu proje koleksiyonunu taşıdıysanız ve test denetleyicisini taşınan proje koleksiyonuna yeniden kaydettirseniz ortamlar yine de korunur.

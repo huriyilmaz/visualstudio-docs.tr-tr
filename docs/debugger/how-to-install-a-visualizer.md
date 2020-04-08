@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Görselleştirici yüklemesi | Microsoft Docs'
+title: 'Nasıl Yapılsın: Görselleştirici Yükleme | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,65 +17,67 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b7dfd28d70b80fd2d0f854b7db3550862b32814
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 499d644cc8374b070cedaf058b0e4dc17d155bdc
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75404367"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880266"
 ---
 # <a name="how-to-install-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Yükleme
-Görselleştirici oluşturduktan sonra, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' de kullanılabilmesi için Görselleştiriciyi yüklemelisiniz. Görselleştirici yüklenmesi basit bir işlemdir.
+Bir görselleştirici oluşturduktan sonra, görselleştiriciyi 'de [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]kullanılabilir hale getirecek şekilde yüklemeniz gerekir. Görselleştirici yüklemek basit bir işlemdir.
 
 > [!NOTE]
-> UWP uygulamalarında yalnızca standart metin, HTML, XML ve JSON Görselleştiriciler desteklenir. Özel (Kullanıcı tarafından oluşturulan) Görselleştiriciler desteklenmez.
+> UWP uygulamalarında yalnızca standart metin, HTML, XML ve JSON görselleştiricileri desteklenir. Özel (kullanıcı tarafından oluşturulan) görüntüleyiciler desteklenmez.
 
 ::: moniker range=">=vs-2019"
-### <a name="to-install-a-visualizer-for-visual-studio-2019"></a>Visual Studio 2019 için bir Görselleştirici yüklemek için
+### <a name="to-install-a-visualizer-for-visual-studio-2019"></a>Visual Studio 2019 için görselleştirici yüklemek için
   
-1. Oluşturduğunuz Görselleştiriciyi içeren DLL dosyasını bulun.
+1. Oluşturduğun görselleştiriciyi içeren DLL'yi bulun.
 
-2. [Hata ayıklayıcı yan](create-custom-visualizers-of-data.md#to-create-the-debugger-side) dll 'sini (ve bağımlı olduğu dll 'leri) aşağıdaki konumlardan birine kopyalayın:
+   Genellikle, hem hata ayıklama tarafı DLL hem de hata ayıklama tarafı DLL hedef platform olarak **Herhangi bir CPU** belirtin en iyisidir. Hata ayıklayıcı tarafı DLL **herhangi bir CPU** veya **32-bit**olmalıdır. Hata ayıklama tarafı DLL için hedef platformu debugee işlemi karşılık gelmelidir.
 
-    - *VisualStudioInstallPath* `\Common7\Packages\Debugger\Visualizers`
+2. [Debugger Side](create-custom-visualizers-of-data.md#to-create-the-debugger-side) DLL'yi (ve bağlı olduğu herhangi bir DL'yi) aşağıdaki konumlardan herhangi biri için kopyalayın:
 
-    - `My Documents\` *VisualStudioVersion* `\Visualizers`
+    - *VisualStudioInstallPath*`\Common7\Packages\Debugger\Visualizers`
+
+    - `My Documents\`*VisualStudioSürüm*`\Visualizers`
     
-3. [Hata ayıklanan yan](create-custom-visualizers-of-data.md#to-create-the-debuggee-side) dll 'yi aşağıdaki konumlardan birine kopyalayın:
+3. Hata [Ayıklama Yan](create-custom-visualizers-of-data.md#to-create-the-debuggee-side) DLL'sini aşağıdaki konumlardan herhangi biri için kopyalayın:
 
-    - *VisualStudioInstallPath* `\Common7\Packages\Debugger\Visualizers\` *Framework*
+    - *VisualStudioInstallPath* `\Common7\Packages\Debugger\Visualizers\` *Çerçevesi*
 
-    - `My Documents\` *VisualStudioVersion* `\Visualizers\` *Framework*
+    - `My Documents\`*VisualStudioSürüm* `\Visualizers\` *Çerçevesi*
 
-    Burada *Framework* şunlardan biri:
-    - `.NET Framework` çalışma zamanını çalıştıran debuggees için `net2.0`.
-    - `netstandard 2.0` (`.NET Framework v4.6.1+` ya da `.NET Core 2.0+`) destekleyen bir çalışma zamanı kullanarak debuggees için `netstandard2.0`.
-    - `.NET Core` çalışma zamanını çalıştıran debuggees için `netcoreapp`. (`.NET Core 2.0+`destekler)
+    *Çerçeve* ya nerede:
+    - `net2.0``.NET Framework` çalışma saatini çalıştıran hata ayıklamalar için.
+    - `netstandard2.0`destekleyen `netstandard 2.0` bir çalışma zamanı kullanarak hata`.NET Framework v4.6.1+` ayıklamalar için ( veya `.NET Core 2.0+`).
+    - `netcoreapp``.NET Core` çalışma saatini çalıştıran hata ayıklamalar için. (destekler `.NET Core 2.0+`)
 
 4. Hata ayıklama oturumunu yeniden başlatın.
 
 > [!NOTE]
-> Yordam, Visual Studio 2017 ve üzeri sürümlerde farklıdır. Bu makalenin [önceki sürümüne](how-to-install-a-visualizer.md?view=vs-2017) bakın.
+> Visual Studio 2017 ve daha büyük bir yöntem farklı. Bu makalenin [önceki sürümüne](how-to-install-a-visualizer.md?view=vs-2017) bakın.
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-### <a name="to-install-a-visualizer-for-visual-studio-2017-and-older"></a>Visual Studio 2017 ve daha eski bir Görselleştirici yüklemek için
+### <a name="to-install-a-visualizer-for-visual-studio-2017-and-older"></a>Visual Studio 2017 ve üzeri için görselleştirici yüklemek için
 
 > [!IMPORTANT]
-> Yalnızca .NET Framework Görselleştiriciler Visual Studio 2017 ve üzeri sürümlerde desteklenir.
+> Visual Studio 2017 ve daha büyük lerinde yalnızca .NET Framework görselleştiricileri desteklenir.
 
-1. Derleyecek Görselleştiriciyi içeren DLL 'i bulun.
+1. Oluşturduğun görselleştiriciyi içeren DLL'yi bulun.
 
-2. DLL 'yi aşağıdaki konumlardan birine kopyalayın:
+2. DLL'yi aşağıdaki konumlardan herhangi biri için kopyalayın:
 
-    - *VisualStudioInstallPath* `\Common7\Packages\Debugger\Visualizers`
+    - *VisualStudioInstallPath*`\Common7\Packages\Debugger\Visualizers`
 
-    - `My Documents\` *VisualStudioVersion* `\Visualizers`
+    - `My Documents\`*VisualStudioSürüm*`\Visualizers`
 
 3. Hata ayıklama oturumunu yeniden başlatın.
 
 > [!NOTE]
-> Uzaktan hata ayıklama için yönetilen bir Görselleştirici kullanmak istiyorsanız, uzak bilgisayardaki aynı yola DLL 'yi kopyalayın.
+> Uzaktan hata ayıklama için yönetilen bir görselleştirici kullanmak istiyorsanız, DLL'yi uzak bilgisayarda aynı yola kopyalayın.
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.

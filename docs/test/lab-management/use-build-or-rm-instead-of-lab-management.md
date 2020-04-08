@@ -9,20 +9,23 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: bd6e9b2d9ea408e451b7032a00c3c96fb0ef2b58
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ca762c103ab5b3d3e94b3117dd9570787562b002
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75566832"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880136"
 ---
 # <a name="use-azure-test-plans-instead-of-lab-management-for-automated-testing"></a>Otomatik sınama için Laboratuvar Yönetimi yerine Azure Test Planlarını kullanma
 
 Otomatik sınama veya yapı-dağıtma-test otomasyonu için Microsoft Test Yöneticisi ve Laboratuvar Yönetimi'ni kullanıyorsanız, bu konu Azure Ardışık Hatları ve Team Foundation Server (TFS) geliştirme [ve sürüm](/azure/devops/pipelines/index?view=vsts) özelliklerini kullanarak aynı hedeflere nasıl ulaşabileceğinizi açıklar.
 
+> [!NOTE]
+> Microsoft Test Yöneticisi Visual Studio 2017'de amortismana kaldırılmış ve Visual Studio 2019'da kaldırılmıştır.
+
 ## <a name="build-deploy-test-automation"></a>Yap-dağıt-test otomasyonu
 
-Microsoft Test Yöneticisi ve Laboratuvar Yönetimi, uygulamalarınızın oluşturulmasını, dağıtımını ve testini otomatikleştirmek için xaml yapı tanımına güvenir. XAML yapısı, Microsoft Test Yöneticisi'nde oluşturulan laboratuvar ortamı, test paketleri ve test ayarları gibi çeşitli yapılara ve Yapı denetleyicisi, Yapı aracıları, Test denetleyicisi ve Test aracıları gibi çeşitli altyapı bileşenlerine dayanır. bu hedefe ulaşmak. Azure Ardışık Hatları veya TFS'yi kullanarak aynı adımı daha az adımla gerçekleştirebilirsiniz.
+Microsoft Test Yöneticisi ve Laboratuvar Yönetimi, uygulamalarınızın oluşturulmasını, dağıtımını ve testini otomatikleştirmek için xaml yapı tanımına güvenir. XAML yapısı, bu amaca ulaşmak için Microsoft Test Yöneticisi'nde oluşturulan laboratuvar ortamı, test paketleri ve test ayarları gibi çeşitli yapılara ve Yapı denetleyicisi, Yapı aracıları, Test denetleyicisi ve Test aracıları gibi çeşitli altyapı bileşenlerine dayanır. Azure Ardışık Hatları veya TFS'yi kullanarak aynı adımı daha az adımla gerçekleştirebilirsiniz.
 
 | Adımlar | XAML yapısı ile | Bir yapı da veya sürümde |
 |-------|----------------------|-----------------|
@@ -53,7 +56,7 @@ Lab Center'ın self servis sağlama özelliklerinin iki farklı hedefi vardır:
 
 Ancak, [Microsoft Azure](https://azure.microsoft.com/) ve Microsoft [Azure Yığını](https://azure.microsoft.com/overview/azure-stack/)gibi daha zengin genel ve özel bulut yönetim sistemlerinin evrimi göz önüne alındığında, TFS 2017 ve ötesinde altyapı yönetimi özelliklerinin evrimi yoktur. Bunun yerine, bu tür bulut altyapıları aracılığıyla yönetilen kaynakların kolay tüketimine odaklanmadevam etmektedir.
 
-Aşağıdaki tablo, Lab Center'da gerçekleştirdiğiniz tipik etkinlikleri ve bunları SCVMM veya Azure (altyapı yönetimi etkinlikleriyse) veya TFS ve Azure DevOps Hizmetleri (test veya dağıtım varsa) aracılığıyla nasıl gerçekleştirebileceğinizi özetler. faaliyetleri):
+Aşağıdaki tablo, Lab Center'da gerçekleştirdiğiniz tipik etkinlikleri ve bunları SCVMM veya Azure (altyapı yönetimi etkinlikleriyse) veya TFS ve Azure DevOps Hizmetleri (test veya dağıtım etkinlikleri yse) aracılığıyla nasıl gerçekleştirebileceğinizi özetler:
 
 | Adımlar | Laboratuvar Merkezi ile | Bir yapı da veya sürümde |
 |-------|-----------------|-----------------------|

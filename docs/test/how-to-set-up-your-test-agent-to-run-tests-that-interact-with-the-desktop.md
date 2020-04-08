@@ -8,21 +8,28 @@ ms.assetid: 3a94dd07-6d17-402c-ae8f-7947143755c9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f4ef2d589e75c50a6cecb5364d5b458cffdfd145
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: dc00598595ee3e3d958562682900bde9aad2a353
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588973"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880188"
 ---
 # <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>Nasıl kullanılır: Test aracınızı masaüstüyle etkileşimde olan testleri çalıştıracak şekilde ayarlama
 
+::: moniker range="vs-2017"
 Masaüstüyle etkileşimde olan otomatik testler çalıştırmak istiyorsanız, aracınızı hizmet yerine bir işlem olarak çalışacak şekilde ayarlamanız gerekir. Örneğin, bir test denetleyicisi ve test aracısı kullanarak uzaktan kodlanmış bir UI testi çalıştırmak istiyorsanız veya bir test çalıştırmak ve çalıştırdığınızda bir video kaydı yakalamak istiyorsanız, aracınızı bir işlem olarak çalışacak şekilde ayarlamanız gerekir. Visual Studio'yu kullanarak test ayarlarınızdaki rollere aracılar atadığınızda veya Microsoft Test Yöneticisi'ni kullanarak ortamınızdaki rollere aracılar atadığınızda, masaüstüyle etkileşimde olması gereken rollere atanan tüm aracıların kurulumunu değiştirmeniz gerekir.
+::: moniker-end
+::: moniker range=">=vs-2019"
+Masaüstüyle etkileşimde olan otomatik testler çalıştırmak istiyorsanız, aracınızı hizmet yerine bir işlem olarak çalışacak şekilde ayarlamanız gerekir. Örneğin, bir test denetleyicisi ve test aracısı kullanarak uzaktan kodlanmış bir UI testi çalıştırmak istiyorsanız veya bir test çalıştırmak ve çalıştırdığınızda bir video kaydı yakalamak istiyorsanız, aracınızı bir işlem olarak çalışacak şekilde ayarlamanız gerekir. Visual Studio'yu kullanarak test ayarlarınızdaki rollere aracılar atadığınızda, masaüstüyle etkileşimde olması gereken rollere atanan aracıların kurulumunu değiştirmeniz gerekir.
+::: moniker-end
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
+::: moniker range="vs-2017"
 > [!WARNING]
 > Bir laboratuvar ortamı ayarlamak için Microsoft Test Yöneticisi'ni kullanıyorsanız, test aracısını yükler. Kodlanmış Kullanıcı Bulma Birimi testlerini çalıştırmak için rollerden birini yapılandırmak **istediğinizi Ortam Oluşturma** Sihirbazı'nda belirtebilirsiniz.
+:::moniker-end
 
 > [!IMPORTANT]
 > Kodlu UI testlerini çalıştırmak istediğiniz bir aracıyı çalıştıran bilgisayar kilitlenemez veya etkin bir ekran koruyucuya sahip olamaz.
@@ -73,7 +80,9 @@ Masaüstüyle etkileşimde olması gereken bir görevi gerçekleştiren bir role
    > [!NOTE]
    > İşlem olarak çalışan bir test aracısı için bilgisayarda çalışan bir bildirim alanı simgesi vardır. Test aracısının durumunu gösterir. Bu aracı kullanarak bir işlem olarak çalışıyorsa aracıyı başlatabilir, durdurabilir veya yeniden başlatabilirsiniz. Test aracısını çalışmıyorsa bir işlem olarak başlatmak için Görsel **Stüdyo'yu Başlat** > Microsoft Visual**Studio** > **Test Aracısı'nı**seçin.
 
+   ::: moniker range="vs-2017"
    Bu test aracısının test denetleyicisi Team Foundation Server'a kayıtlıysa, etkileşimli işlem olarak çalışan bir test aracısının durumu Microsoft Test Yöneticisi Için **Laboratuvar Merkezi'ndeki** **Denetleyiciler** görünümünde görüntülenir. Etkileşimli bir işlem olarak çalıştığını belirtmek için önceki bir yıldız işareti yle listelenir. Bu test aracısını yeniden başlatmak için, **Denetleyiciler** görünümü için değil, test aracısı için bilgisayarda çalışan aracı kullanmanız gerekir.
+   ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

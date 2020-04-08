@@ -11,16 +11,16 @@ ms.assetid: 02b6716f-569e-4961-938a-e790a0c74b5c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 826d16fa316340226df042b0d762d923c43d39c9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: adc77ee87bbbf07d04fd7c01a554c7c074e5bf7f
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594779"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880227"
 ---
 # <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>Nasıl kullanılır: Zor sorunları hata ayıklamaya yardımcı olmak için IntelliTrace verilerini toplama
 
-Visual Stdio'da belirli tanısal izleme bilgileri toplamak için IntelliTrace için tanısal veri bağdaştırıcısını yapılandırabilirsiniz. Testler bu bağdaştırıcıyı kullanabilir, test, uygulama için büyük miktarda tanılama olayları toplayabilir ve sonrasında bir geliştirici bu olayları, kodu izleyip bir hatanın nedenini bulmak üzere kullanabilir. IntelliTrace için tanısal veri bağdaştırıcısı manuel veya otomatik testler için kullanılabilir.
+Visual Studio'da belirli tanısal izleme bilgileri toplamak için IntelliTrace için tanısal veri bağdaştırıcısını yapılandırabilirsiniz. Testler bu bağdaştırıcıyı kullanabilir, test, uygulama için büyük miktarda tanılama olayları toplayabilir ve sonrasında bir geliştirici bu olayları, kodu izleyip bir hatanın nedenini bulmak üzere kullanabilir. IntelliTrace için tanısal veri bağdaştırıcısı manuel veya otomatik testler için kullanılabilir.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -40,14 +40,24 @@ IntelliTrace dosyasında toplanan veriler, kodunuzda bir hatayı çoğaltmak ve 
 > [!WARNING]
 > IntelliTrace için tanısal veri bağdaştırıcısı, test çalışması için testler yüklendikten sonra yapılması gereken yönetilen bir işlemi enstrümanting tarafından çalışır. İzlemek istediğiniz işlem zaten başlamışsa, işlem zaten çalıştığı için Hiçbir IntelliTrace dosyası toplanmaz. Bunu atlatmak için, testler yüklenmeden önce işlemin durdurulduğundan emin olun. Testler yüklendikten veya ilk test başladıktan sonra işlemi başlatın.
 
+::: moniker range="vs-2017"
 Aşağıdaki yordam, toplamak istediğiniz IntelliTrace verilerinin nasıl yapılandırılabildiğini açıklar. Bu adımlar, Visual Studio'daki Microsoft Test Yöneticisi'ndeki yapılandırma düzenleyicisi ve Test Ayarları iletişim kutusu için geçerlidir.
+::: moniker-end
+::: moniker range=">=vs-2019"
+Aşağıdaki yordam, toplamak istediğiniz IntelliTrace verilerinin nasıl yapılandırılabildiğini açıklar. Bu adımlar Visual Studio'daki Test Ayarları iletişim kutusuna uygulanır.
+::: moniker-end
 
 > [!NOTE]
 > IntelliTrace verilerini toplamak için kullanılan test aracısının kullanıcı hesabı yönetici grubunun bir üyesi olmalıdır. Daha fazla bilgi için [bkz.](../test/lab-management/install-configure-test-agents.md)
 
 ## <a name="configure-the-data-to-collect-with-the-intellitrace-diagnostic-data-adapter"></a>Verileri IntelliTrace tanıveri bağdaştırıcısıyla toplayacak şekilde yapılandırın
 
+::: moniker range="vs-2017"
 Bu yordamdaki adımları gerçekleştirmeden önce, test ayarlarınızı Microsoft Test Manager veya Visual Studio'dan açmanız ve **Veri ve Tanılama** sayfasını seçmeniz gerekir.
+::: moniker-end
+::: moniker range=">=vs-2019"
+Bu yordamdaki adımları gerçekleştirmeden önce Visual Studio'dan test ayarlarınızı açmanız ve **Veri ve Tanılama** sayfasını seçmeniz gerekir.
+::: moniker-end
 
 ### <a name="to-configure-the-data-to-collect-with-the-intellitrace-diagnostic-data-adapter"></a>IntelliTrace tanıveri bağdaştırıcısı ile toplamak için verileri yapılandırmak için
 
@@ -60,7 +70,7 @@ Bu yordamdaki adımları gerçekleştirmeden önce, test ayarlarınızı Microso
      Bu proxy, bir istemciden IntelliTrace ve Test Impact tanıveri bağdaştırıcıları için bir web sunucusuna http aramaları hakkında bilgi toplamanızı sağlar.
 
     > [!WARNING]
-    > IntelliTrace verilerini toplamayı planladığınız Internet Information Server 'daki (IIS) uygulama havuzu için kullanılan kimlik için özel bir hesap kullanmaya karar verirseniz, özel hesap için IIS makinesinde yerel kullanıcı profili oluşturmanız gerekir. kullanılmaktadır. Özel hesap için yerel profili, IIS makinesinde bir kez yerel olarak oturum açarak veya özel hesap kimlik bilgilerini kullanarak aşağıdaki komut satırını çalıştırarak oluşturabilirsiniz:
+    > IntelliTrace verilerini toplamayı planladığınız Internet Information Server'daki (IIS) uygulama havuzu için kullanılan kimlik için özel bir hesap kullanmaya karar verirseniz, kullanılan özel hesap için IIS makinesinde yerel kullanıcı profili oluşturmanız gerekir. Özel hesap için yerel profili, IIS makinesinde bir kez yerel olarak oturum açarak veya özel hesap kimlik bilgilerini kullanarak aşağıdaki komut satırını çalıştırarak oluşturabilirsiniz:
     >
     > **runas /user:domain\name /profil cmd.exe**
 
@@ -103,10 +113,16 @@ Bu yordamdaki adımları gerçekleştirmeden önce, test ayarlarınızı Microso
     > [!NOTE]
     > Kaydın boyutunu artırırsanız, bu kaydı test sonuçlarınız ile birlikte kaydettiğinizde bir zaman sonu sorunu oluşabilir.
 
-12. Microsoft Test Yöneticisi kullanıyorsanız **Kaydet'i**seçin. Visual Studio kullanıyorsanız, **Tamam'ı**seçin. IntelliTrace ayarları artık test ayarlarınız için yapılandırıldı ve kaydedilir.
+12. Microsoft Test Manager kullanıyorsanız (Visual Studio 2017'de amortismana uğradı), **Kaydet'i**seçin. Visual Studio kullanıyorsanız, **Tamam'ı**seçin. IntelliTrace ayarları artık test ayarlarınız için yapılandırıldı ve kaydedilir.
 
+    ::: moniker range="vs-2017"
     > [!NOTE]
     > Bu tanılama veri bağdaştırıcısının yapılandırmasını sıfırlamak için Visual Studio için **varsayılan yapılandırmaya sıfırla'yı** veya Microsoft Test Yöneticisi için **varsayılan olarak sıfırla'yı** seçin.
+    ::: moniker-end
+    ::: moniker range=">=vs-2019"
+    > [!NOTE]
+    > Bu tanılama veri bağdaştırıcısının yapılandırmasını sıfırlamak için Visual Studio'da **varsayılan yapılandırmaya sıfırla'yı** seçin.
+    ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

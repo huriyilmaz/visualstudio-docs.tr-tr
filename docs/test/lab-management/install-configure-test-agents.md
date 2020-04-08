@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27f030fb73629172e0b5a2d5d4cb27cf186bb69f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 271e9253daf4ab23a5fb06a189ac3042bc925b2a
+ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594272"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80880279"
 ---
 # <a name="install-test-agents-and-test-controllers"></a>Test aracılarını ve test denetleyicilerini yükleme
 
@@ -30,7 +30,7 @@ Aşağıdaki tablo, Visual Studio için test aracısını veya test denetleyicis
 | ---- | ------------ |
 | **Aracı** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standart ve Veri Merkezi<br />Windows Server 2012 R2 |
 | **Denetleyicisi** | Windows 10<br />Windows 8, Windows 8.1<br />Windows 7 Service Pack 1<br />Windows Server 2016 Standart ve Veri Merkezi<br />Windows Server 2012 R2 |
-| **.NET Çerçevesi** | .NET Framework 4.5 |
+| **.NET Framework** | .NET Framework 4.5 |
 
 ## <a name="install-the-test-controller-and-test-agents"></a>Test denetleyicisini ve test aracılarını yükleme
 
@@ -40,6 +40,7 @@ Visual Studio 2017, Visual Studio 2015 ve Visual Studio 2013 [ajanlarını eski 
 
 Bu yükleyiciler sanal makinelerde kolay kurulum için ISO dosyaları olarak kullanılabilir.
 
+::: moniker range="vs-2017"
 ## <a name="compatible-versions-of-tfs-microsoft-test-manager-the-test-controller-and-test-agent"></a>TFS, Microsoft Test Yöneticisi, test denetleyicisi ve test aracısının uyumlu sürümleri
 
 Aşağıdaki tabloya göre TFS, Microsoft Test Yöneticisi, test denetleyicisi ve test aracısı farklı sürümlerini karıştırabilirsiniz:
@@ -53,6 +54,23 @@ Aşağıdaki tabloya göre TFS, Microsoft Test Yöneticisi, test denetleyicisi v
 | 2015: yeni yükleme | 2013 | 2013 | 2013 |
 | 2015: 2013 veya yeni yükleme yükseltme | 2015 | 2013 | 2013 |
 | 2013 | 2015 | 2013 | 2013 |
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+## <a name="compatible-versions-of-tfs-the-test-controller-and-test-agent"></a>TFS, test denetleyicisi ve test aracısının uyumlu sürümleri
+
+Aşağıdaki tabloya göre TFS, test denetleyicisi ve test aracısı farklı sürümlerini karıştırabilirsiniz:
+
+| TFS | Denetleyicisi | Aracı |
+| --- | -------------------------------------- | ---------- | ----- |
+| 2017: 2015'ten yükseltme veya yeni yükleme | 2017 | 2017 |
+| 2017: 2015'ten yükseltme veya yeni yükleme | 2013 Güncelleme 5 | 2013 Güncelleme 5 |
+| 2017: 2015'ten yükseltme veya yeni yükleme | 2013 Güncelleme 5 | 2013 Güncelleme 5 |
+| 2015: 2013'ten yükseltme | 2013 |2013 |
+| 2015: yeni yükleme | 2013 | 2013 |
+| 2015: 2013 veya yeni yükleme yükseltme | 2013 | 2013 |
+| 2013 | 2013 | 2013 |
+::: moniker-end
 
 > [!NOTE]
 > TFS 2018 ve Azure DevOps Hizmetleri'ndeki laboratuvar yönetimi senaryoları küçümseniyor. Daha fazla bilgi için [TFS 2018 Yayın Notları'na](/visualstudio/releasenotes/tfs2018-relnotes#--removing-support-for-lab-center-and-automated-testing-flows-in-microsoft-test-manager)bakın.
@@ -67,5 +85,5 @@ Aşağıdaki tablo, Visual Studio 2013 aracıları tarafından desteklenen senar
 | - | - |
 | Visual Studio'da Yap-Dağıt-Test iş akışı | Kullanıcılar, TFS'deki yapı, dağıtma ve test senaryoları için bir [yapı ardışık hattı](/azure/devops/pipelines/index?view=vsts) (XAML yapısı değil) kullanabilir. |
 | Şirket içi uzak makineleri kullanarak yük testi (performans testi) | Şirket içinde yük testleri çalıştırmak için Test Denetleyicisi ve Test Aracıları 2013 Güncelleştirme5'i kullanın. |
-| Laboratuvar ortamı nı kullanarak Microsoft Test Yöneticisi'nden otomatik testlerin uzaktan yürütülmesi | Şu anda bu senaryo için bir alternatif yoktur. Testleri uzaktan yürütmek için yapı ve sürüm tanımlarında (XAML yapısında değil) İşlevsel Testleri Çalıştır görevini kullanmanızı öneririz. |
+| Laboratuvar ortamı kullanarak Microsoft Test Yöneticisi'nden (Visual Studio 2017'de amortismana tabi) otomatik testlerin uzaktan yürütülmesi | Şu anda bu senaryo için bir alternatif yoktur. Testleri uzaktan yürütmek için yapı ve sürüm tanımlarında (XAML yapısında değil) İşlevsel Testleri Çalıştır görevini kullanmanızı öneririz. |
 | Visual Studio'da uzaktan testler yürüten geliştiriciler | Artık desteklenmiå. |
