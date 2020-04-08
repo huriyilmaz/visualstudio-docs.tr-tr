@@ -1,6 +1,6 @@
 ---
-title: Birim testiile başlayın
-ms.date: 03/04/2020
+title: Birim testini kullanmaya başlama
+ms.date: 04/07/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
@@ -9,14 +9,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 90c3cbdee722c4cf12c515f06659cc03f3179e1e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d961af66658d6924da1b5ba38b9ec7f2a8b19aaa
+ms.sourcegitcommit: c3b6af7367bef67a02c37404534229b935f713a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78289860"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80892806"
 ---
-# <a name="get-started-with-unit-testing"></a>Birim testiile başlayın
+# <a name="get-started-with-unit-testing"></a>Birim testini kullanmaya başlama
 
 Kod durumunu korumak, kod kapsamını sağlamak ve müşterilerinizden önce hataları ve hataları bulmak için birim testlerini tanımlamak ve çalıştırmak için Visual Studio'u kullanın. Kodunuzu düzgün çalıştığından emin olmak için birim testlerinizi sık sık çalıştırın.
 
