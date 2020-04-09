@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Toplu ekleme özelliğini veya Microsoft Azure Etkin Dizin gruplarını kullanarak yöneticilerin birden çok aboneye nasıl lisans atayabileceğini öğrenin
-ms.openlocfilehash: 5a1327e497a48b6173afd4a7ad095dfcabacd098
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: eb641d86733ef794f1d53ae6eee45e0bdf4fde18
+ms.sourcegitcommit: deab74e8f41b30b28c041b048d67b3fff2cceab9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80274069"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80994446"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikyönetimi Portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Tek tek kullanıcıları eklemek için [bkz.](assign-license.md)
@@ -72,8 +72,6 @@ Bu özelliği kullanmak, abonelik atamalarınızı en üstte kaltın. Abonelikle
 
 
 > [!IMPORTANT]
->
-> Azure REKLAM gruplarının kullanımı aşamalı olarak etkinleştiriliyor.  Sözleşmeniz (ler) için etkinleştirilen özelliği hemen göremeyebilirsiniz.
 >
 > Aşağıdaki sınırlamalar, abone eklemek için Azure REKLAM gruplarının kullanımı için geçerlidir:
 > - Gruplar en az bir üye içermelidir.  Boş gruplar desteklenmez.
