@@ -75,7 +75,6 @@
 ### [Süper yöneticiler ve yöneticiler](admin-roles.md)
 ### [Anlaşma tercihlerini belirleme](admin-prefs.md)
 ### [Genel bakış](using-admin-portal.md)
-### [Video öğretici: Yönetici portalını kullanma](https://www.youtube.com/watch?v=XG-E-IDjA-w&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=3&t=0s)
 ### Abonelikleri atama
 #### [Tek kullanıcı ekleme](assign-license.md)
 #### [Birden çok kullanıcı ekleme](assign-license-bulk.md)
