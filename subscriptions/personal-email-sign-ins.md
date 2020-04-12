@@ -4,18 +4,18 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 3f4b0528-03f0-4a02-b3c3-a39292a9bbe1
-ms.date: 04/07/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 description: Visual Studio Abonelikleri – Abonelerim için Neden Hotmail veya Gmail Adreslerini Görüyorum?
-ms.openlocfilehash: e926caa8aef5a655b1f09ab8d6dbab1d70946827
-ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
+ms.openlocfilehash: 44b18bd46d55349fae5a3ece03cee9fe93240148
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808336"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223690"
 ---
 # <a name="visual-studio-subscriptions--why-do-i-see-personal-accounts-for-my-subscribers"></a>Visual Studio abonelikleri – Abonelerim için neden kişisel hesaplar görüyorum?
-Şirketler Toplu LisansLama Hizmet Merkezi'nden (VLSC) yeni Visual Studio Abonelikleri Yönetim Portalı'na geçtikten sonra, yöneticiler bazı aboneler için "Oturum Açma E-posta Adresi"nin Hotmail veya Outlook gibi kişisel bir e-posta adresi gösterdiğini görünce [şaşırdılar.](https://manage.visualstudio.com)  Daha fazla bilgi için [bu videoya](https://www.youtube.com/watch?v=J61EYaVN-dQ&list=PLReL099Y5nReJhZ6o8CQFPSBgzGCHX99_&index=6)göz atın.
+Şirketler Toplu LisansLama Hizmet Merkezi'nden (VLSC) yeni Visual Studio Abonelikleri Yönetim Portalı'na geçtikten sonra, yöneticiler bazı aboneler için "Oturum Açma E-posta Adresi"nin Hotmail veya Outlook gibi kişisel bir e-posta adresi gösterdiğini görünce [şaşırdılar.](https://manage.visualstudio.com)  
 
 ## <a name="cause"></a>Nedeni
 Bu senaryo, eski MSDN abone deneyimiyle ilişkili oturum açma işlemleri nedeniyle oluşur. Kullanıcılar, Toplu Lisans Hizmet Merkezi'nden (VLSC) Visual Studio Abonelikleri Yönetim Portalı'na değişiklik yapılmadan geçirildi. Yöneticiler, kullanıcıların abonelik avantajlarına erişmek için kişisel hesapları kullandığının farkında olmayabilir. 2016 yılında tamamlanan Visual Studio abone geçişlerinden önce, Visual Studio Aboneliğini başarıyla kullanmak için iki eylem vardı:

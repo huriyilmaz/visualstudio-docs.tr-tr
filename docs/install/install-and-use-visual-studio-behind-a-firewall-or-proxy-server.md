@@ -17,16 +17,16 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 44ffc778d398c2f9a1cfaf026d2364ee1dc27f9b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 025cf432912d38976507c93545e7c38b44d86fd8
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79303010"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223664"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Güvenlik duvarı veya proxy sunucusunun arkasına Visual Studio ve Azure Hizmetleri yükleme ve kullanma
 
-Siz veya kuruluşunuz güvenlik duvarı veya proxy sunucusu gibi güvenlik önlemleri kullanıyorsa, yükleme ve kullandığınızda en iyi deneyimi yaşamanız için "izin verme listesine" eklemek isteyebileceğin etki alanı URL'leri ve açmak isteyebileceğin bağlantı noktaları ve protokoller vardır Visual Studio ve Azure Hizmetleri.
+Siz veya kuruluşunuz güvenlik duvarı veya proxy sunucusu gibi güvenlik önlemleri kullanıyorsa, Visual Studio ve Azure Hizmetlerini yüklerken ve kullandığınızda en iyi deneyimi yaşamanız için "izin verme listesine" eklemek isteyebileceğin etki alanı URL'leri ve açmak isteyebileceğin bağlantı noktaları ve protokoller vardır.
 
 * **[Görsel Stüdyo yükle](#install-visual-studio)**: Bu tablolar, istediğiniz tüm bileşenlere ve iş yüklerine erişebilmeniz için izin listesine eklemek için etki alanı URL'lerini içerir.
 
@@ -35,7 +35,7 @@ Siz veya kuruluşunuz güvenlik duvarı veya proxy sunucusu gibi güvenlik önle
 > [!NOTE]
 > Bu makale, Windows'ta Visual Studio için yazılmıştır, ancak bazı bilgiler bir güvenlik duvarı veya proxy sunucusunun arkasına [Mac için Visual Studio yüklemek için](/visualstudio/mac/install-behind-a-firewall-or-proxy-server) de geçerlidir.
 
-## <a name="install-visual-studio"></a>Visual Studio yükleme
+## <a name="install-visual-studio"></a>Visual Studio'yu yükleme
 
 ### <a name="urls-to-add-to-an-allow-list"></a>İzin verenler listesine eklenecek URL'ler
 
@@ -147,7 +147,7 @@ Bazen, bir güvenlik duvarının veya proxy sunucusunun arkasına Visual Studio 
 
 ## <a name="get-support"></a>Destek alın
 
-Kurulumla ilgili sorunlar için [**canlı sohbet**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) destek seçeneği sunuyoruz.
+Yüklemeyle ilgili sorunlar için [**yükleme sohbeti**](https://visualstudio.microsoft.com/vs/support/#talktous) (yalnızca İngilizce) destek seçeneği sunuyoruz.
 
 Birkaç destek seçeneği daha şunlardır:
 

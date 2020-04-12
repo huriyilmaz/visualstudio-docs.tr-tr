@@ -13,12 +13,12 @@ manager: jillfra
 ms.workload:
 - dotnet
 author: mikejo5000
-ms.openlocfilehash: 4d5878e2c5950e45f65f8d56efdf53cd7b2e89ea
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b68cb720a636483a0c5e8c3193142d95dbb0afcd
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094677"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223677"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>İzlenecek yol: Yönetilen kod için birim testleri oluşturma ve çalıştırma
 
@@ -431,7 +431,7 @@ public void Debit_WhenAmountIsMoreThanBalance_ShouldThrowArgumentOutOfRange()
 
 ### <a name="retest-rewrite-and-reanalyze"></a>Yeniden test edin, yeniden yazın ve yeniden analiz edin
 
-Test altında yöntemde bir hata olduğunu `Debit` varsayalım ve yöntem, <xref:System.ArgumentOutOfRangeException> istisna dışında doğru iletiyi boş ver'den bile çıkarmaz. Şu anda, test yöntemi bu servis talebi yle işlemiyor. `debitAmount` Değer geçerliyse (yani bakiyeden daha az ve sıfırdan büyükse), hiçbir istisna yakalanır, bu nedenle assert asla işemez. Ancak, test yöntemi geçer. Bu iyi değil, çünkü özel durum atılmazsa test yönteminin başarısız olmasını istiyorsunuz.
+Şu anda, test yöntemi olması gereken tüm durumlarda işlemez. Test altındaki `Debit` yöntem, yöntem, bakiyeden <xref:System.ArgumentOutOfRangeException> (veya `debitAmount` sıfırdan küçük) daha büyük olduğunda bir fırlatmayı başaramadıysa, test yöntemi geçer. Bu iyi değil, çünkü özel durum atılmazsa test yönteminin başarısız olmasını istiyorsunuz.
 
 Bu, test yöntemindeki bir hatadır. Sorunu gidermek için, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.Fail%2A> özel durum atılmadığı durumu işlemek için test yönteminin sonuna bir assert ekleyin.
 

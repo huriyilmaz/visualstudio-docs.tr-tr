@@ -1,6 +1,6 @@
 ---
 title: Live Unit Testing
-ms.date: 03/07/2017
+ms.date: 04/07/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing
@@ -8,12 +8,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1a0ec1fd6f2fbdf4f016b1d22db5a6929b5e24
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 34200e8719ef25de3c54c612b967cf3d4f9bab85
+ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75851439"
+ms.lasthandoff: 04/12/2020
+ms.locfileid: "81223715"
 ---
 # <a name="how-to-configure-and-use-live-unit-testing"></a>Canlı Birim Testi nasıl yapılandırılır ve kullanılır?
 
@@ -130,12 +130,13 @@ Başarısız testten ürün kodunu kolayca ayıklayabilir, düzeltmeler yapabili
 
 Örneğin, önceki resimde gösterilen test hatası, yönteme geçildiğinde `true` <xref:System.Char.IsLower%2A?displayProperty=fullName> alfabetik olmayan karakterlerin döndürdeğinin test yöntemindeki yanlış bir varsayımdan kaynaklandı. Test yöntemini düzelttikten sonra, tüm testler geçmelidir. Canlı Birim Testini duraklatmak veya durdurmak zorunda değilsiniz.
 
+::: moniker range="vs-2017"
 ## <a name="test-explorer"></a>Test Gezgini
 
 **Test Gezgini,** testleri çalıştırmanızı, hata ayıklamanızı ve test sonuçlarını çözümlemenizi sağlayan bir arabirim sağlar. Canlı Birim Testi **Test Explorer**ile entegre. Canlı Birim Testi etkinleştirilemediğinde veya durdurulduğunda, **Test Gezgini** birim testlerinin durumunu en son bir test çalıştırıldığında görüntüler. Kaynak kodu değişiklikleri, testleri yeniden çalıştırmanızı gerektirir. Buna karşılık, Canlı Birim Testi etkinleştirildiğinde, **Test Gezgini'ndeki** birim testlerinin durumu hemen güncelleştirilir. Birim testlerini açıkça çalıştırmanız gerekmez.
 
 > [!TIP]
-> Üst düzey Visual Studio menüsünden **Test** > **Windows** > **Test Gezgini'ni** seçerek Test **Gezgini'ni** açın.
+> Üst düzey Visual Studio menüsünden **Test** > **Windows** > **Test Gezgini'ni** seçerek Canlı Birim **Testi'ni** açın.
 
 **Test Gezgini** penceresinde bazı testlerin soluk olduğunu fark edebilirsiniz. Örneğin, daha önce kaydedilmiş bir projeyi açtıktan sonra Canlı Birim Testi'ni etkinleştirdiğinizde, Aşağıdaki resimde görüldüğü gibi **Test Gezgini** penceresi başarısız olan test dışında tüm solukla şolmuştu. Bu durumda, Canlı Birim Testi başarısız testi yeniden çalıştırdı, ancak başarılı testleri yeniden çalıştırmadı. Bunun nedeni, Canlı Birim Testi'nin kalıcı verilerinin testlerin en son başarıyla çalıştırıldığı için herhangi bir değişiklik olmadığını belirtmiş olmasıdır.
 
@@ -148,6 +149,28 @@ Canlı Birim Testi otomatik olarak çalışan ve test sonuçlarını güncelleme
 - Test Gezgini penceresinden testleri çalıştırma veya hata ayıklama düzenli ikili çalışır, Canlı Birim Testi ise enstrümante ikili çalışır.
 - Canlı Birim Sınaması testleri çalıştırmak için yeni bir uygulama etki alanı oluşturmaz, daha çok varsayılan etki alanından testleri çalışır. **Test Gezgini** penceresinden çalıştırılatan testler yeni bir uygulama etki alanı oluşturur.
 - Canlı Birim Testi, her test tertibatında testleri sırayla çalışır. Test **Gezgini** penceresinde, birden çok testi paralel olarak çalıştırmayı seçebilirsiniz.
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+## <a name="live-unit-testing-window"></a>Canlı Ünite Test penceresi
+
+**Test Gezgini'ne**benzer şekilde **Canlı Birim Testi,** testleri çalıştırmanızı, hata ayıklamanızı ve test sonuçlarını çözümlemenizi sağlayan bir arabirim sağlar. Canlı Birim Testi etkinleştirildiğinde, **Test Gezgini'ndeki** birim testlerinin durumu hemen güncelleştirilir. Birim testlerini açıkça çalıştırmanız gerekmez. Canlı Birim Testi etkinleştirilemediğinde veya durdurulduğunda, **Canlı Birim Testi** birim testlerinin durumunu en son bir test çalıştırıldığında görüntüler. Canlı Birim Sınama'yı yeniden başlattıktan sonra, testleri yeniden çalıştırmak için kaynak kodu değişikliği gerekir.
+
+> [!TIP]
+> En üst düzey Visual Studio menüsünden **Test** > **Canlı Birim Testi** > **Başlat'ı** seçerek Canlı Birim Testini başlatın. **Diğer**Windows > Live Unit Test Penceresini **Görüntüle'yi** > kullanarak **Canlı Birim Testi** **penceresini**de açabilirsiniz.
+
+**Canlı Birim Test** penceresinde bazı testlerin soluk olduğunu fark edebilirsiniz. Örneğin, Canlı Birim Testini durdurup yeniden başlattığınızda, Aşağıdaki resimde görüldüğü gibi **Canlı Birim Testi** penceresi tüm testleri söner. Soluk test sonuçları, testin en son Canlı Birim Test çalışmasının bir parçası olmadığını gösterir. Testler yalnızca testte bir değişiklik veya testin bağımlılıkları algılandığında çalışır. Değişiklik yoksa, testi gereksiz yere çalıştırmaktan kaçınır. Bu durumda, gri leştirilmiş test sonucu hala "güncel" olsa da, en son çalıştırmanın bir parçası değildi.
+
+![Test Gezgini'nde soluk testler](media/vs-2019/lut-test-explorer.png)
+
+Kod değişikliği yaparak soluk görünen tüm testleri yeniden çalıştırabilirsiniz.
+
+Canlı Birim Testi otomatik olarak çalışan ve test sonuçlarını güncelleme ve **Test Gezgini**testleri açıkça çalışan arasında bazı farklılıklar vardır. Bu farklılıklar şunlardır:
+
+- Test Gezgini penceresinden testleri çalıştırma veya hata ayıklama düzenli ikili çalışır, Canlı Birim Testi ise enstrümante ikili çalışır.
+- Canlı Birim Sınaması testleri çalıştırmak için yeni bir uygulama etki alanı oluşturmaz, daha çok varsayılan etki alanından testleri çalışır. **Test Gezgini** penceresinden çalıştırılatan testler yeni bir uygulama etki alanı oluşturur.
+- Canlı Birim Testi, her test tertibatında testleri sırayla çalışır. Test **Gezgini** penceresinde, birden çok testi paralel olarak çalıştırmayı seçebilirsiniz.
+::: moniker-end
 
 ## <a name="large-solutions"></a>Büyük çözümler
 
