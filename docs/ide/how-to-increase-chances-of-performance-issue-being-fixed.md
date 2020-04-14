@@ -1,16 +1,16 @@
 ---
 title: Bir performans sorununun giderilmeden olasılığını nasıl artırabilirsiniz?
 description: Visual Studio'da performans sorunları göndermek için ek bilgiler ve en iyi uygulamalar
-author: seaniyer
-ms.author: seiyer
+author: madskristensen
+ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: reference
-ms.openlocfilehash: 119de27298acafee7dc563a30246b18da42f9f29
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1a83a9c16e915bde2958193c640c0981f5edc005
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75918158"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276461"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Bir performans sorununun giderilebilme olasılığını artırma
 
@@ -113,7 +113,7 @@ VS uzun bir süre yanıt vermez hale gelir.
 
 **Doğrudan tekrarlanabilir Yanıt sızması**
 
-Çökmelerle ilgili ilgili bölümde açıklandığı gibi, kolayca çoğaltılabilen, birden fazla makinede görülebilen ve küçük bir örnekte gösterilebilen sorunlar için, en değerli geri bildirim raporları sorunu yeniden oluşturma adımlarını içeren ve sorunu gösteren örnek kaynak kodu.
+Çökmelerle ilgili ilgili bölümde açıklandığı gibi, kolayca çoğaltılabilen, birden çok makinede görülebilen ve küçük bir örnekte gösterilebilen sorunlar için, en değerli geri bildirim raporları sorunu yeniden oluşturma adımlarını içeren ve sorunu gösteren örnek kaynak kodu içeren raporlardır.
 
 **Bilinmeyen Yanıt Verme**
 

@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
-ms.date: 03/18/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 description: Visual Studio aboneliğinizde yer alan Azure DevTest bireysel kredi avantajını nasıl etkinleştireceklerinizi öğrenin.
-ms.openlocfilehash: 8cf79c9f4ce9230195e2fdbf551320c3532ad42d
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: b556b90cc0c4f0904cbd6e08a34ec782f044dfae
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232031"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224491"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Microsoft Azure'u kullanma
 Visual Studio abonesi olarak, Microsoft Azure'u ek ücret ödemeden kullanabilirsiniz.  Aylık [Azure DevTest bireysel kredinizle](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)Azure, geliştirme/test için kişisel kum havuzunuzdur.  Sanal makineler, bulut hizmetleri ve diğer Azure kaynakları sağlayabilirsiniz.  Kredi tutarları abonelik düzeyine göre değişir.
@@ -42,6 +42,38 @@ Visual Studio abonesi olarak, Microsoft Azure'u ek ücret ödemeden kullanabilir
 
 0. Gelecekte kolay erişim için [Azure portalını](https://portal.azure.com) yer imi.
 
+## <a name="using-azure-without-a-visual-studio-subscription"></a>Visual Studio aboneliği olmadan Azure'u kullanma
+Visual Studio aboneliğiniz sona erdiğinde, aylık Azure geliştirme/test bireysel kredisi de dahil olmak üzere tüm abonelik avantajları artık kullanılamaz. Azure'u aylık krediyle kullanmaya devam etmek için aboneliğinizi yenilemeniz, yeni bir abonelik satın almanız veya Azure avantajını Azure geliştirme/test bireysel kredisini içeren etkin bir aboneliğe aktarmanız gerekir.  Ayrıca, geçerli Azure aboneliğinizi Kullandıkça Öde aboneliğinize dönüştürerek Aylık kredi olmadan Azure'u kullanmaya devam etmeyi de seçebilirsiniz.
+
+### <a name="continue-using-azure-with-a-monthly-credit"></a>Azure'u aylık krediyle kullanmaya devam edin
+> [!IMPORTANT]
+> Geçerli Azure aboneliğiniz devre dışı bırakılmadan veya verilerinize erişiminizi kaybetmeden önce kaynaklarınızı başka bir Azure aboneliğine aktarmanız gerekir.  
+
+Azure için aylık kredi kullanmaya devam etmenin birkaç yolu vardır.  Azure kaynaklarınızı kaydetmek için, aşağıda seçtiğiniz eylemden bağımsız olarak kaynaklarınızı başka bir Azure aboneliğine [aktarmanız](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription) gerekir. 
+
+- **Visual Studio aboneliğinizi doğrudan satın aldıysanız,** [Microsoft Mağazası](https://www.microsoft.com/store/collections/visualstudiosubscription/#:~:text=)aracılığıyla yeni bir abonelik satın alın veya aboneliğinizi yenileyin.  
+- **Kuruluşunuzdaki bir kişi kuruluşunuz için abonelik satın alırsa,** [Visual Studio abonelik yöneticinizle iletişime geçin](https://docs.microsoft.com/visualstudio/subscriptions/contact-my-admin) ve ihtiyacınız olan aylık krediyi sağlayan bir abonelik isteyin.  
+- Başka bir Microsoft hesabıyla ilişkili aynı abonelik düzeyinde **başka bir etkin Visual Studio aboneliğiniz varsa,** Visual Studio abonelik [portalına](https://my.visualstudio.com/subscriptions) [alternatif bir hesap ekleyerek](https://docs.microsoft.com/visualstudio/subscriptions/manage-vs-subscriptions#managing-my-profile) Azure avantajını başka bir etkin Visual Studio aboneliğine aktarabilirsiniz.  
+
+Değiştirmeye çalıştığınız Azure kredisi düzeyine göre gereken abonelik düzeyinizi belirleyebilirsiniz.  
+
+| Visual Studio Abonelik Düzeyi | Aylık Azure Kredisi |
+|----------------------------------|----------------------|
+| Visual Studio Enterprise         | 150 DOLAR                 |
+| Visual Studio Professional       | 50 dolar                  |
+| Visual Studio Test Uzmanı  | 50 dolar                  |
+| MSDN Platformları*                  | $100                 |
+
+*MSDN Platformlarına sahip aboneler, kendilerine yeni bir abonelik atanmasını talep etmek için bir yöneticiyle iletişime geçmelidir. 
+
+### <a name="continue-using-azure-without-a-monthly-credit"></a>Aylık kredi olmadan Azure'u kullanmaya devam edin
+
+Artık bir Visual Studio aboneliğine veya krediye ihtiyacınız yoksa ancak Azure kaynaklarınızı kullanmaya devam etmek istiyorsanız, kaynaklarınızı başka bir Azure aboneliğine [aktarın](https://docs.microsoft.com/azure/azure-resource-manager/management/move-resource-group-and-subscription) veya [harcama sınırınızı kaldırarak](https://docs.microsoft.com/azure/cost-management-billing/manage/spending-limit#remove-the-spending-limit-in-azure-portal)Azure aboneliğinizi kullandıkça öde fiyatlandırmasına dönüştürün. 
+
+Bu eylemlerden birini yapmazsanız, Azure aboneliğiniz e-posta bildirimini aldıktan 30 gün sonra devre dışı bırakılır ve silinir.  
+
+### <a name="have-a-question"></a>Sorunuz mu var?
+Kaynak aktarma, harcama sınırlarını kaldırma veya diğer Azure konularını kaldırma yla ilgili sorularınız varsa, Azure portalında [bir Azure destek isteği gönderebilirsiniz.](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) 
 
 ## <a name="eligibility"></a>Uygunluk
 |                 Abonelik Düzeyi / Program                 |           Avantaj           |                         Yenilen -ebilir?                          |
@@ -83,29 +115,6 @@ Tüm ayrıntılar için lütfen [Teknik destek](vs-tech-support.md) belgelerini 
 ### <a name="q-how-owns-the-intellectual-property-i-create-using-my-azure-devtest-individual-credit"></a>S: Azure DevTest bireysel kredimi kullanarak oluşturduğum fikri mülkiyet eve nasıl sahip olur?
 C: O şirket tarafından sağlanan kaynaklarla oluşturulan bir çalışan tarafından üretilen fikri mülkiyet, bu kaynağı sağlayan şirketin fikri mülkiyetidir. Bu nedenle, Visual Studio aboneliğinizi işvereniniz aracılığıyla aldıysanız, onların fikri mülkiyet politikaları geçerli olacaktır. 
 
-### <a name="q-ive-received-a-message-stating-that-my-access-to-azure-will-end-soon--what-can-i-do-to-continue-using-azure"></a>S: Azure'a erişimimin yakında sona ereceğini belirten bir ileti aldım.  Azure'u kullanmaya devam etmek için ne yapabilirim?
-C: Visual Studio aboneliğinizle ilişkili Azure avantajını kullandığınız ve aboneliğin süresi dolduğu veya kaldırıldığı için bu e-postayı alabilirsiniz.  Azure'u kullanmaya devam etmek için birkaç seçeneğiniz var:
-
-**Önerilen eylem:**
-
-Visual Studio Azure DevTest bireysel kredi ve indirimlerinizi kullanmaya devam etmek için aşağıdaki adımlardan birini atın:
-
-Ekibinizden veya kuruluşunuzdaki biri sizin adınıza abonelik satın alıyorsa, kuruluşunuzun Visual Studio yöneticisiyle iletişime geçin ve size ihtiyacınız olan Azure DevTest bireysel kredi tutarını hakkı veren bir Visual Studio aboneliği isteyin.   Azure aboneliğinizi aktarma konusunda endişelenmenize gerek kalmaması için lütfen yöneticiden yeni aboneliği önceki aboneliğinizin atandığı kullanıcı kimliğine atamasını isteyin.
-
-Bir aboneliği doğrudan satın alabiliyorsanız, Geçerli aboneliğinizi Microsoft [Mağazası](https://www.microsoft.com/en-us/search/result.aspx?q=visual+studio+subscription)üzerinden yenileyerek indirimden yararlanın.
-
-Tüm [abonelikleri ve bunların avantajlarını](https://visualstudio.microsoft.com/vs/pricing/)karşılaştırın.
-
-Bir Microsoft hesabı altında **aynı** abonelik düzeyinde başka bir etkin Visual Studio aboneliğiniz varsa, Visual Studio abonelik portalına alternatif bir [hesap](manage-vs-subscriptions.md#linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions) ekleyerek bu Azure avantajına bağlayabilirsiniz. Bu işe yaramazsa, Azure [avantajınızı](/azure/billing/billing-subscription-transfer/) etkin Visual Studio aboneliğine aktarmayı da deneyebilirsiniz.
-
-**Farklı** bir abonelik düzeyinde ve bir Microsoft hesabı altında başka bir etkin Visual Studio aboneliğiniz varsa, yardım için [Azure desteğine](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) başvurun.
-
-Aboneliğinizin bir harcama sınırı varsa ve süresi dolmadan önce hiçbir işlem yapmadan önce Azure aboneliğiniz devre dışı bırakılır. Kullandıkça Öde teklifine dönüştürmek ve kullanmaya devam etmek için bir ödeme aracı ekleyin ve [harcama sınırınızı kaldırın.](/azure/billing/billing-spending-limit/)
-
-Bu Visual Studio Azure aboneliğini devam etmek istemiyorsanız, sanal makineler ve veritabanları gibi kaynaklarınızı başka bir Azure aboneliğine aktarabilir ve bu aboneliği istediğiniz zaman [iptal edebilirsiniz.](https://azure.microsoft.com/support/cancel-account/)
-
-Bu e-postayı yanlışlıkla aldığınızı düşünüyorsanız, lütfen [Azure müşteri desteğine](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade)başvurun.
-
 ## <a name="support-resources"></a>Destek kaynakları
 - Azure için yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
   - Teknik Destek:[https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
@@ -123,4 +132,4 @@ Bu e-postayı yanlışlıkla aldığınızı düşünüyorsanız, lütfen [Azure
 Microsoft araçları ve hizmetleri hakkında daha fazla bilgi için aşağıdaki belgelere göz atın:
 - [Azure](/azure/)
 - [Azure DevOps](/azure/devops/)
-- [Görsel Stüdyo IDE](/visualstudio/)
+- [Visual Studio IDE](/visualstudio/)

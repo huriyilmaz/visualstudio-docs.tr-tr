@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: b99298df-0280-47fc-af73-44cd7a8ac553
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 304e8bf8a3caba5154e06e1b44b6e05dd664f9ad
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+open_to_public_contributors: false
+ms.openlocfilehash: 930dc73cb1ad38f46e8d5567468eedcb432f6b3d
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79437697"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276435"
 ---
 # <a name="visual-studio-build-tools-component-directory"></a>Visual Studio Build Tools bileşen dizini
 
@@ -52,6 +53,6 @@ Bu bileşenleri manuel yükleyiciyi kullanarak yüklemek [için Visual Studio i�
 
 * [Visual Studio iş yükü ve bileşen kimlikleri](workload-and-component-ids.md)
 * [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
-* [Visual Studio'yı yüklemek için komut satırı parametrelerini kullanma](use-command-line-parameters-to-install-visual-studio.md)
+* [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
   * [Komut satırı parametresi örnekleri](command-line-parameter-examples.md)
-* [Visual Studio'nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)
+* [Visual Studio’nun çevrimdışı yüklemesini oluşturma](create-an-offline-installation-of-visual-studio.md)

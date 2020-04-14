@@ -9,16 +9,16 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5e269e19a09aec157e38eaf8938b5995c2647803
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a47af0e87907608ec9f71de4e605772eb1caed8e
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79302835"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224569"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio'da Python ortamları oluşturma ve yönetme
 
-Python *ortamı,* Python kodunu çalıştırdığınız ve genel, sanal ve conda ortamlarını içeren bir bağlamdır. Ortam bir yorumlayıcı, kitaplık (genellikle Python Standart Kitaplığı) ve yüklü paketler kümesinden oluşur. Bu bileşenler birlikte hangi dil yapılarının ve sözdiziminin geçerli olduğunu, hangi işletim sistemi işlevlerine erişebileceğinizi ve hangi paketleri kullanabileceğinizi belirler.
+**Python ortamı,** Python kodunu çalıştırdığınız ve genel, sanal ve conda ortamlarını içeren bir bağlamdır. Ortam bir yorumlayıcı, kitaplık (genellikle Python Standart Kitaplığı) ve yüklü paketler kümesinden oluşur. Bu bileşenler birlikte hangi dil yapılarının ve sözdiziminin geçerli olduğunu, hangi işletim sistemi işlevlerine erişebileceğinizi ve hangi paketleri kullanabileceğinizi belirler.
 
 Windows'daki Visual Studio'da, ortamları yönetmek ve yeni projeler için varsayılan olarak birini seçmek için bu makalede açıklandığı gibi **Python Ortamları** penceresini kullanırsınız. Ortamların diğer yönleri aşağıdaki makalelerde yer alır:
 

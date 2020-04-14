@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 416926742da427ba7ff18c6fa07de6477361cfa3
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 260bc6ff6eb2d0bfbf0b9abd19062892c358728a
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "78235086"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224530"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Öğretici: Visual Studio'da Bir Düğüm.js ve Express uygulaması oluşturun
 
@@ -56,9 +56,9 @@ npm, Node.js için varsayılan paket yöneticisidir. Paket yöneticisi, programc
 
 ### <a name="what-is-express"></a>Ekspres nedir?
 
-Express, Node.js için web uygulamaları oluşturmak için sunucu çerçevesi olarak kullanılan bir web uygulama çerçevesidir. Express, Pug (eski adıyla Jade) gibi bir kullanıcı arabirimi oluşturmak için farklı ön uç çerçevelerini seçmenizi sağlar. Pug bu öğretici de kullanılır.
+Express, Node.js için web uygulamaları oluşturmak için sunucu çerçevesi olarak kullanılan bir web uygulama çerçevesidir. Express, Pug (eski adıyla Jade) gibi bir kullanıcı arabirimi oluşturmak için farklı ön uç çerçeveleri seçmenize olanak tanır. Pug bu öğretici de kullanılır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * Visual Studio yüklü ve Node.js geliştirme iş yükünü yüklü olmalıdır.
 

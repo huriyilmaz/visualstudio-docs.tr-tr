@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbed62c13fc963af382ede113b138451303d9382
-ms.sourcegitcommit: 273b657e115c1756adb84e0e56b6f2c709bcee76
+ms.openlocfilehash: 1f13910e2481e574e18c7a8efaee6601137c0720
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80759716"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224478"
 ---
 # <a name="msbuild-conditions"></a>MSBuild koşulları
 
@@ -29,11 +29,11 @@ MSBuild, bir öznitelik izin verilen her `Condition` yerde uygulanabilecek belir
 
 |Koşul|Açıklama|
 |---------------|-----------------|
-|'`stringA`' == '`stringB`'|Eğer eşitse `true` `stringA` `stringB`değerlendirir.<br /><br /> Örnek:<br /><br /> `Condition="'$(CONFIG)'=='DEBUG'"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir.|
-|'`stringA`' != '`stringB`'|`true` Eğer `stringB`eşit `stringA` değilse değerlendirir.<br /><br /> Örnek:<br /><br /> `Condition="'$(CONFIG)'!='DEBUG'"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir.|
+|'`stringA`' == '`stringB`'|Eğer eşitse `true` `stringA` `stringB`değerlendirir.<br /><br /> Örneğin:<br /><br /> `Condition="'$(CONFIG)'=='DEBUG'"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir. Bu çek büyük bir olay dır duyarsız.|
+|'`stringA`' != '`stringB`'|`true` Eğer `stringB`eşit `stringA` değilse değerlendirir.<br /><br /> Örneğin:<br /><br /> `Condition="'$(CONFIG)'!='DEBUG'"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir. Bu çek büyük bir olay dır duyarsız.|
 |\<, >, \<=, >=|Operandların sayısal değerlerini değerlendirir. İlişkisel değerlendirme doğruysa döndürür. `true` Operands ondalık veya hexadecimal sayı değerlendirmek gerekir. Hexadecimal sayılar "0x" ile başlamalıdır. **Not:**  XML'de, karakterler `<` `>` ve kaçılmalıdır. Sembol `<` olarak `&lt;`temsil edilir. Sembol `>` olarak `&gt;`temsil edilir.|
-|Var('`stringA`')|Ada `stringA` `true` sahip bir dosya veya klasörün var olup olmadığını değerlendirir.<br /><br /> Örnek:<br /><br /> `Condition="!Exists('$(builtdir)')"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir.|
-|HasTrailingSlash('`stringA`')|Belirtilen dize, geriye doğru çizgi ( `true` )\\veya ileri eğik çizgi (/) karakteri nin olup olmadığını değerlendirir.<br /><br /> Örnek:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir.|
+|Var('`stringA`')|Ada `stringA` `true` sahip bir dosya veya klasörün var olup olmadığını değerlendirir.<br /><br /> Örneğin:<br /><br /> `Condition="!Exists('$(builtdir)')"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir.|
+|HasTrailingSlash('`stringA`')|Belirtilen dize, geriye doğru çizgi ( `true` )\\veya ileri eğik çizgi (/) karakteri nin olup olmadığını değerlendirir.<br /><br /> Örneğin:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Basit alfasayısal dizeleri veya boolean değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak işaretleri gereklidir.|
 |!|Operand'ın `true` değerlendirilip `false`değerlendirmeme.|
 |And|Her iki `true` operands değerlendirmek `true`eğer değerlendirir.|
 |Veya|Operandlardan en az birinin .'a `true` `true`göre değerlendirilip değerlendirmeyeceklerini değerlendirir.|

@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: affad69f6821addb50686d4f41d0bdb3bd816e8e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: bfca799111c83f29924c997218c42f09bff5568a
+ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75919020"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224465"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe komut satırı seçenekleri
 
@@ -46,7 +46,7 @@ Aşağıdaki *tabloda VSTest.Console.exe* için tüm seçenekler ve bunların k�
 |**/Framework: [*framework version*]**|Test yürütmeiçin kullanılacak hedef .NET sürümü.<br />Örnek değerler `Framework35` `Framework40`, `Framework45` `FrameworkUap10`, `.NETCoreApp,Version=v1.1`, , .<br />Hedef çerçeve **Framework35**olarak belirtilirse, testler CLR 4.0 "compatibly modunda" çalıştırılır.<br />Örnek: `/Framework:framework40`|
 |**/TestCaseFilter:[*ifade*]**|Verilen ifadeyle eşleşen testler çalıştırın.<br /><\> İfadesi <\>özelliği =\>\|<\>değeri [<Expression ] biçimidir.<br />Örnek: `/TestCaseFilter:"Priority=1"`<br />Örnek: `/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />**/TestCaseFilter** komut satırı seçeneği **/Tests** komut satırı seçeneği ile kullanılamaz. <br />İfade oluşturma ve kullanma hakkında bilgi için [TestCase filtresine](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)bakın.|
 |**/?**|Kullanım bilgilerini görüntüler.|
-|**/Logger:[*uri/friendlyname*]**|Test sonuçları için bir logger belirtin.<br />Örnek: Sonuçları Visual Studio Test Sonuçları Dosyasına (TRX) kaydetmek için,<br />**/Logger:trx**<br />**[; LogFileName=\<Benzersiz dosya adı> varsayılandır]**<br />Örnek: Test sonuçlarını Team Foundation Server'da yayınlamak için TfsPublisher'ı kullanın:<br />**/logger:TfsPublisher;**<br />**Toplama=<\>proje url;**<br />**BuildName=<\>yapı adı;**<br />**TeamProject= proje\>adı<;**<br />**[; Platform=\<Varsayılanolarak "Herhangi bir CPU" >]**<br />**[; Flavor=\<Varsayılan olarak "Hata Ayıklama">]**<br />**[; RunTitle=<\>başlık ]**<br />Not: TfsPublisher logger Visual Studio 2017'de amortismana hazırdır ve Visual Studio'nun sonraki sürümlerinde desteklenmez. Bu senaryolar için, bunun yerine özel bir kaydedici kullanın. Bu kaydedici, logger'ı eski moda geçer.|
+|**/Logger:[*uri/friendlyname*]**|Test sonuçları için bir logger belirtin.<br />Örnek: Sonuçları Visual Studio Test Sonuçları Dosyasına (TRX) kaydetmek için,<br />**/Logger:trx**<br />**[; LogFileName=\<Benzersiz dosya adı> varsayılandır]**|
 |**/ListTests:[*dosya adı*]**|Listeler, verilen test kabından yapılan testleri buldu.|
 |**/ListDiscoverers**|Yüklü test keşfederlerini listeler.|
 |**/ListExecutors**|Yüklü test uygulayıcılarını listeler.|

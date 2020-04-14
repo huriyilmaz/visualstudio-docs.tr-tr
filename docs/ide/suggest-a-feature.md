@@ -3,17 +3,17 @@ title: Bir özellik önerin
 description: Geliştirici Topluluğu'nda hangi önerilerin olduğunu, nasıl öneri yapılacağını ve Visual Studio yol haritasında Microsoft tarafından önerilerin nasıl kullanıldığını açıklar.
 ms.date: 12/17/2018
 ms.topic: conceptual
-author: seaniyer
-ms.author: seiyer
+author: madskristensen
+ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3af6d0b7b9f211fb9d0aa0a4b9a96b618081b89e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: bbe6992bd48cfe28dfe3df20f5540aca76390bf1
+ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74853522"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81276494"
 ---
 # <a name="suggest-a-feature-for-visual-studio"></a>Visual Studio için özellik önerin
 
