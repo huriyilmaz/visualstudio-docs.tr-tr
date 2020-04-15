@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Toplu ekleme özelliğini veya Microsoft Azure Etkin Dizin gruplarını kullanarak yöneticilerin birden çok aboneye nasıl lisans atayabileceğini öğrenin
-ms.openlocfilehash: eb641d86733ef794f1d53ae6eee45e0bdf4fde18
-ms.sourcegitcommit: deab74e8f41b30b28c041b048d67b3fff2cceab9
+ms.openlocfilehash: a7742049cdda2568504e54d2c83259bb4a262819
+ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80994446"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81385519"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikyönetimi Portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Tek tek kullanıcıları eklemek için [bkz.](assign-license.md)
@@ -75,10 +75,10 @@ Bu özelliği kullanmak, abonelik atamalarınızı en üstte kaltın. Abonelikle
 >
 > Aşağıdaki sınırlamalar, abone eklemek için Azure REKLAM gruplarının kullanımı için geçerlidir:
 > - Gruplar en az bir üye içermelidir.  Boş gruplar desteklenmez.
-> - Grupların 1.000'den az kullanıcısı olmalıdır 
-> - Tüm kullanıcılar grubun en üst düzeyinde olmalıdır.  İç içe gruplar desteklenmiyor
-> - Yalnızca güvenilen anlaşmalar desteklenir
-> - Grubun tüm üyelerinin Azure AD hesaplarıyla ilişkili bir e-posta adresi olmalıdır
+> - Grupların 1.000'den az kullanıcısı olmalıdır. 
+> - Tüm kullanıcılar grubun en üst düzeyinde olmalıdır.  İç içe gruplar desteklenmez.
+> - Yalnızca güvenilen anlaşmalar desteklenir.
+> - Grubun tüm üyelerinin Azure AD hesaplarıyla ilişkili bir e-posta adresi olmalıdır.
 > - Azure REKLAM grupları kullanılarak eklenen abonelikler için bildirimler için ayrı e-posta adresleri desteklenmez.  
 
 1. Visual Studio Abonelikleri Yönetim Portalı'nda [https://manage.visualstudio.com](https://manage.visualstudio.com)oturum açın.
@@ -106,6 +106,7 @@ Bu özelliği kullanmak, abonelik atamalarınızı en üstte kaltın. Abonelikle
 > [!NOTE]
 > Abonelikleri daha sonra bir Azure REKLAM grubunun parçası olarak eklenen kullanıcılara ayrı ayrı atadıysanız, bunlar grubun bir parçası olarak eklenir ve artık tek tek listelenmez. Ancak, tek tek abonelik farklı bir abonelik düzeyi içinse, iki abonelik leri olacaktır.  Örnek: Bir kullanıcının tek bir Visual Studio Professional aboneliği varsa ve visual studio enterprise aboneliklerini atadığınız bir grubun üyesiyse, her ikisine de sahip olurlar.  
 
+<br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4rvvW]
 

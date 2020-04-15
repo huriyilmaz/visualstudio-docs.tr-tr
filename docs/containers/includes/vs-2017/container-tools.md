@@ -6,20 +6,20 @@ ms.author: ghogen
 ms.date: 02/01/2019
 ms.technology: vs-azure
 ms.topic: include
-ms.openlocfilehash: ae6548892010035564bf29a8eda25b736db97d2a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 627b0b1260a3ccdd401dbb170f8e2dfffadea2dc
+ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76922969"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389952"
 ---
 Visual Studio ile, konteynırlaştırılmış ASP.NET Core uygulamaları oluşturabilir, hata ayıklayabilir ve çalıştırabilir ve bunları Azure Konteyner Kayıt Defteri 'nde (ACR), Docker Hub'a, Azure Uygulama Hizmeti'ne veya kendi konteyner kayıt defterinize yayınlayabilirsiniz. Bu makalede, ACR'de yayınlayacağız.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) Web **Geliştirme,** **Azure Araçları** iş yükü ve/veya **.NET Core çapraz platform geliştirme** iş yükü yüklü
-* Azure Kapsayıcı Kayıt Defteri'nde yayımlamak için bir Azure aboneliği. [Ücretsiz deneme sürümü için kaydolun.](https://azure.microsoft.com/offers/ms-azr-0044p/)
+* Azure Kapsayıcı Kayıt Defteri'nde yayımlamak için bir Azure aboneliği. [Ücretsiz deneme sürümü için kaydolun.](https://azure.microsoft.com/free/dotnet/)
 
 ## <a name="installation-and-setup"></a>Kurulum ve kurulum
 

@@ -1,7 +1,7 @@
 ---
 title: Hata ayıklama ile çalışan işlemlere ekleme | Microsoft Dokümanlar
 ms.custom: seodec18
-ms.date: 04/08/2019
+ms.date: 04/14/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.processes.attach
@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5305be7615e426d7792d8dd3fefb2579e2ab6be
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 075f5b0df703e31ea265085f422567a4fb5298a4
+ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233019"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81385489"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısı ile çalıştırma işlemleri iliştirme
 Visual Studio hata ayıklayıcısını yerel veya uzak bir bilgisayarda çalışan bir işleme ekleyebilirsiniz. İşlem çalışmaya devam ettikten **sonra,** > İşleme Hata**Ayıklama'yı** seçin veya Visual Studio'da **Ctrl**+**Alt**+**P** tuşuna basın ve hata ayıklayıcıyı işleme eklemek için **İşleme Ekle** iletişim kutusunu kullanın.
@@ -253,15 +253,15 @@ Evrensel Windows Uygulaması (UWP) uygulamaları gibi bazı uygulama türleri i�
 
 Hata ayıklayıcının C++'da yazılmış koda eklemesi için `DebuggableAttribute`kodun . [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) bağlantı seçeneğine bağlanarak bunu kodunuza otomatik olarak ekleyebilirsiniz.
 
-İstemci tarafı komut dosyası hata ayıklama için tarayıcıda komut dosyası hata ayıklama etkinolmalıdır. Chrome'da istemci tarafındaki komut dosyasının hata ayıklama için kod türü olarak **Web kitini** seçin ve uygulama türünüze bağlı olarak, tüm Chrome `chrome.exe --remote-debugging-port=9222` örneklerini kapatmanız ve tarayıcıyı hata ayıklama modunda başlatmanız gerekebilir (komut satırından yazın).
+İstemci tarafı komut dosyası hata ayıklama için tarayıcıda komut dosyası hata ayıklama etkinolmalıdır. Chrome'da istemci tarafındaki komut dosyasının hata ayıklama için kod türü olarak **JavaScript (Chrome)** veya **JavaScript 'i (Microsoft Edge - Chromium)** seçin ve uygulama türünüze bağlı `chrome.exe --remote-debugging-port=9222` olarak, tüm Chrome örneklerini kapatmanız ve tarayıcıyı hata ayıklama modunda başlatmanız gerekebilir (komut satırından yazın). Visual Studio önceki sürümlerinde, Chrome için komut hata ayıklama **Web kiti**oldu.
 
 Visual Studio'da eklenecek bir çalıştırma işlemini hızlı bir şekilde seçmek için **Ctrl**+**Alt**+**P**yazın ve ardından işlem adının ilk harfini yazın.
 
 |Senaryo|Hata ayıklama yöntemi|İşlem adı|Notlar ve bağlantılar|
 |-|-|-|-|
 |IIS sunucusunda 4 veya 4,5 ASP.NET uzaktan hata ayıklama|Uzak araçları kullanın ve **İşleme Ekle**|*w3wp.exe*|[Uzak bir IIS bilgisayarında uzaktan hata ayıklama ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) bakın|
-|IIS sunucusunda Core ASP.NET uzaktan hata ayıklama|Uzak araçları kullanın ve **İşleme Ekle**|*dotnet.exe* veya *appname.exe*|Uygulama dağıtımı için [bkz.](https://docs.asp.net/en/latest/publishing/iis.html) Hata ayıklama için, [uzak bir IIS bilgisayarında Uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) bölümüne bakın|
-|Desteklenen uygulama türleri için yerel bir IIS sunucusunda istemci tarafındaki komut dosyası hata ayıklama |**İşleme Ekle'yi** Kullan|*chrome.exe*, *MicrosoftEdgeCP.exe*, veya *iexplore.exe*|Komut dosyası hata ayıklama etkin olmalıdır. Chrome için, Chrome'u hata ayıklama modunda çalıştırmanız ve alana **Ekle'de** **Webkit kodunu** seçmeniz gerekir.|
+|IIS sunucusunda Core ASP.NET uzaktan hata ayıklama|Uzak araçları kullanın ve **İşleme Ekle**|*w3wp.exe* veya *dotnet.exe*|.NET Core 3'ten *başlayarak, w3wp.exe* işlemi varsayılan [uygulama içi barındırma modeli](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models)için kullanılır. Uygulama dağıtımı için [bkz.](/aspnet/core/host-and-deploy/iis/) Daha ayrıntılı bilgi için uzaktan [iIS bilgisayarında Uzaktan hata ayıklama ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md#BKMK_attach) bölümüne bakın|
+|Desteklenen uygulama türleri için yerel bir IIS sunucusunda istemci tarafındaki komut dosyası hata ayıklama |**İşleme Ekle'yi** Kullan|*chrome.exe*, *MicrosoftEdgeCP.exe*, veya *iexplore.exe*|Komut dosyası hata ayıklama etkin olmalıdır. Chrome için, Chrome'u hata ayıklama `chrome.exe --remote-debugging-port=9222` modunda (komut satırından yazın) çalıştırmanız ve Alana **Ekle'de** **JavaScript 'i (Chrome)** seçmeniz gerekir.|
 |Yerel makinede C#, Visual Basic veya C++ uygulamasını hata ayıklama|Standart hata ayıklama **(F5**) veya **İşleme Ekleme'yi** kullanın|*\<appname>.exe*|Çoğu senaryoda, standart hata ayıklama kullanın ve **İşleme Eklemeyin.**|
 |Windows masaüstü uygulamasını uzaktan hata ayıklama|Uzak araçlar|Yok| [C# veya Visual Basic uygulamasını uzaktan hata ayıklama veya](../debugger/remote-debugging-csharp.md) [C++ uygulamasını uzaktan hata ayıklama](../debugger/remote-debugging-cpp.md)|
 |Linux'ta Hata Ayıklama .NET Core|**İşleme Ekle'yi** Kullan|*dotnet.exe*|SSH'yi kullanmak için, [SSH kullanarak Linux üzerinde çalışan Uzaktan hata ayıklama .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md)bölümüne bakın. |
