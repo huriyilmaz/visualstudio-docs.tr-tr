@@ -7,17 +7,22 @@ ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
 ms.date: 03/24/2020
 ms.topic: conceptual
 description: Azure DevOps'leri Visual Studio abonesi olarak nasıl kullanabileceğinizi anlayın.
-ms.openlocfilehash: 11bd1262e72042b01c2514edc3bc3158325b9417
-ms.sourcegitcommit: 67dd2aedfe9752afaec9625ed3056fa03bd2699e
+ms.openlocfilehash: a68456b93a307d97ab706e18b3790e84be547f9f
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80607175"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444836"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio aboneleri için Azure DevOps avantajları
 Etkin bir Visual Studio abonesi olarak, Azure DevOps'lerde aboneliğinize dahil olan bir dizi özelliği avantaj olarak kullanabilirsiniz. Bu aynı özellikleri, üye olduğunuz her Azure DevOps kuruluşunda, ister kuruluşu oluştursanız ister başka biri tarafından eklenmiştir.
 
 ## <a name="sign-in"></a>Oturum açma
+
+   > [!div class="mx-imgBorder"]
+   > ![Azure DevOps Karo](_img/vs-azure-devops/vs-azure-devops-tile.png)
+
+   
 Visual Studio aboneliğinizi etkinleştirmek için kullandığınız kimliği veya [alternatif kimliğinizi](vs-alternate-identity.md)kullanarak Azure DevOps'te oturum açtığınızda, bunu otomatik olarak algılarız.  Bu şekilde, hem kişisel hesabınızı hem de iş veya okul hesabınızı kullanarak Azure DevOps'lere erişmenize olanak tanıyan bir iş veya okul hesabı (Visual Studio, Office 365 veya şirket veya okul ağınızda oturum açarken kullandığınız) ekleyebilirsiniz.
 
 [Ücretsiz bir Azure DevOps organizasyonu için kaydolun](https://visualstudio.microsoft.com/team-services/)

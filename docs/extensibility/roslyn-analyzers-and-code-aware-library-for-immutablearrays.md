@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d6b26d27c77ecb578d8eef0807c35b8efb8581a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 2076bc9fe3cabbfef8d3f3fb0248724835fa83f5
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80701386"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444576"
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>ImmutableArrays için Roslyn çözümleyicileri ve kod farkında kütüphane
 
@@ -312,4 +312,4 @@ Bu örnek geliştirilen ve [bu konuşmada](https://channel9.msdn.com/events/Buil
 * [GitHub'da tamamlanmış kod](https://github.com/DustinCampbell/CoreFxAnalyzers/tree/master/Source/CoreFxAnalyzers)
 * [GitHub'da üç tür çözümleyiciye göre gruplanmış birkaç örnek](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
 * [GitHub OSS sitesindeki diğer dokümanlar](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
-* [GitHub'da Roslyn analizörleri ile uygulanan FxCop kuralları](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)
+* [GitHub'da Roslyn analizörleri ile uygulanan FxCop kuralları](https://github.com/dotnet/roslyn/tree/master/src/Features/Core/Portable/Diagnostics/Analyzers)

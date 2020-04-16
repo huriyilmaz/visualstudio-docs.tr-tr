@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinizden en iyi şekilde nasıl en iyi şekilde nasıl kurtulabilirsiniz öğrenin
-ms.openlocfilehash: 8790897f0e5169aebc020035b4c8c1d5749c230e
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 7d883092372d58f4a5bcc787daed0a99124a1704
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232353"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444887"
 ---
 # <a name="managing-subscriptions"></a>Abonelikleri yönetme
 
@@ -52,7 +52,6 @@ Avantajlar sayfasında, kullanılan abonelik mavi bayrakta belirgin bir şekilde
 **Programlar aracılığıyla edinilen abonelikler:**  Aboneliğinizi bir program aracılığıyla alırsanız, aboneliğiniz programa katılımınıza bağlıdır. Daha fazla bilgi için lütfen program kişilerinize ulaşın.
 
 - [Hayal](https://imagine.microsoft.com/about)
-- [BizSpark](https://bizspark.microsoft.com/About/Offers)
 - [Microsoft İş Ortağı Ağı](https://partner.microsoft.com)
 - [Microsoft Sertifikalı Eğitmen](https://www.microsoft.com/learning/mct-certification.aspx)
 
@@ -106,7 +105,7 @@ C: Satın alma kanalına bağlı olarak, Microsoft müşteri verilerini farklı 
 |    Toplu LisansLama Hizmet Merkezi (VLSC)              |    180          |
 |    Microsoft Ürün ve Hizmet Sözleşmesi (MPSA)    |    180          |
 |    Görsel Stüdyo Bulut Abonelikleri                   |    180          |
-|    Program (örneğin MCT, BizSpark, MPN, Imagine)          |    180          |
+|    Program (örneğin MCT, MPN, Imagine)          |    180          |
 |    Satış Için Değil (örneğin MVP, MSP)                      |    180          |
 |    DevEssentials                                       |    30           |
 

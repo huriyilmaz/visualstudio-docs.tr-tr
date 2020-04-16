@@ -12,19 +12,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f68da0d937c27d0fb3175ca87d8d749c3f1e90aa
-ms.sourcegitcommit: 316dd2182dd56b0cbde49f0cd82e9f75baa2530f
+ms.openlocfilehash: 0f49925211247e346ac3203de20a97496c54295d
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/12/2020
-ms.locfileid: "81223651"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444810"
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>Nasıl yapılsın: Editörde sözcük kaydırmayı yönetme
 
 **Word kaydırma** seçeneğini ayarlayabilir ve temizleyebilirsiniz. Bu seçenek ayarlandığında, kod düzenleyicipenceresinin geçerli genişliğinin ötesine uzanan uzun bir satırın bölümü bir sonraki satırda görüntülenir. Bu seçenek, örneğin, satır numaralandırma kullanımını kolaylaştırmak için temizlendiğinde, uzun çizgilerin uçlarını görmek için sağa kaydırabilirsiniz.
 
 > [!NOTE]
-> Bu konu Windows'daki Visual Studio için geçerlidir. Mac'teki Visual Studio için [Kaynak editöre bakın: Word wrap](/visualstudio/mac/source-editor#word-wrap).
+> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio için [Kaynak editöre bakın: Word wrap](/visualstudio/mac/source-editor#word-wrap).
 
 ## <a name="to-set-word-wrap-preferences"></a>Sözcük kaydırma tercihlerini ayarlamak için
 

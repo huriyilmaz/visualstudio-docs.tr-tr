@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d509292bc3c7a909289abf0c73babccfead31532
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: d6173d6b3525a1bd723bc859d34b889b3796d295
+ms.sourcegitcommit: c3b92a9912a5816f16c6059d1738dbc833851346
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 04/15/2020
-ms.locfileid: "81385392"
+ms.locfileid: "81397382"
 ---
 # <a name="unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor"></a>Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi'ne Bağlanılamıyor.
 Uzak hata ayıklama monitörü uzak makinede düzgün şekilde ayarlanmadığından veya uzak makineye ağ sorunları veya güvenlik duvarının varlığı nedeniyle erişilemediği için bu ileti oluşabilir.
@@ -34,6 +34,7 @@ Uzak hata ayıklama monitörü uzak makinede düzgün şekilde ayarlanmadığın
 
 - [Hata ayıklama uzak bilgisayara bağlanamıyor. Hata ayıklama, belirtilen bilgisayar adını çözemedi](#cannot_connect)
 - [Bağlantı isteği uzak hata ayıklama tarafından reddedildi](#rejected)
+- [Uzak uç noktası yla bağlantı sonlandırıldı](#connection_terminated)
 - [Bellek konumuna geçersiz erişim](#invalid_access)
 - [Uzak bilgisayarda çalışan belirtilen ada göre sunucu yok](#no_server)
 - [İstenen ad geçerliydi, ancak istenen türe ait veri bulunamadı](#valid_name)
@@ -67,17 +68,19 @@ Uzak hata ayıklama monitörü uzak makinede düzgün şekilde ayarlanmadığın
 
 Bu değerler doğruysa ve **iletiwindows kimlik doğrulama** modundan bahsediyorsa, uzaktan hata ayıklamanın doğru kimlik doğrulama modunda olup olmadığını denetleyin (**Araçlar > Seçenekleri).**
 
-## <a name="the-connection-with-the-remote-endpoint-was-terminated"></a><a name="connection_terminated"></a>Uzak uç noktası yla bağlantı sonlandırıldı
+## <a name="connection-with-the-remote-endpoint-was-terminated"></a><a name="connection_terminated"></a>Uzak uç noktası yla bağlantı sonlandırıldı
 
 Bir Azure Uygulama Hizmeti uygulamasının hata ayıklama işlemini dinliyorsanız, **İşleme Ekle**yerine Bulut Gezgini veya Sunucu Gezgini'nden [Hata Ayıklayıcı Ekleme](../debugger/remote-debugging-azure.md#remote_debug_azure_app_service) komutunu kullanmayı deneyin.
 
 Hata ayıklamak **için İşleme Ekle'yi** kullanıyorsanız:
 
-1. **İşleme Ekle** iletişim kutusunda veya proje özelliklerinde, uzak bilgisayar adının ve bağlantı noktası numarasının uzak hata ayıklama penceresinde gösterilen ad ve bağlantı noktası numarasıyla eşleştiğinden emin olun. Yanlışsa düzeltin ve yeniden deneyin.
+- **İşleme Ekle** iletişim kutusunda veya proje özelliklerinde, uzak bilgisayar adının ve bağlantı noktası numarasının uzak hata ayıklama penceresinde gösterilen ad ve bağlantı noktası numarasıyla eşleştiğinden emin olun. Yanlışsa düzeltin ve yeniden deneyin.
 
-2. Sorunu çözmeye yardımcı olacak daha ayrıntılı bilgi için sunucudaki (Windows'da Olay Görüntüleyicisi) uygulama günlüğünü denetleyin.
+- Ana bilgisayar adı kullanarak bağlanmaya çalışıyorsanız, bunun yerine bir IP adresi deneyin.
 
-3. Aksi takdirde, Visual Studio'yı Yönetici ayrıcalıklarıyla yeniden başlatmayı deneyin ve sonra yeniden deneyin.
+- Sorunu çözmeye yardımcı olacak daha ayrıntılı bilgi için sunucudaki (Windows'da Olay Görüntüleyicisi) uygulama günlüğünü denetleyin.
+
+- Aksi takdirde, Visual Studio'yı Yönetici ayrıcalıklarıyla yeniden başlatmayı deneyin ve sonra yeniden deneyin.
 
 ## <a name="invalid-access-to-memory-location"></a><a name="invalid_access"></a>Bellek konumuna geçersiz erişim
 

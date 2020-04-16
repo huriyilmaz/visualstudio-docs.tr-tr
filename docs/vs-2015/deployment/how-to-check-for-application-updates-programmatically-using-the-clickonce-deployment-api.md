@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: ClickOnce dağıtım API'sini kullanarak program aracılığıyla uygulama güncelleştirmelerini denetleme | Microsoft Docs"
+title: "Nasıl yapilir: ClickOnce Dağıtım API'sini Kullanarak Uygulama Güncelleştirmelerini Programlı Olarak Denetleyin | Microsoft Dokümanlar"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -16,53 +16,53 @@ caps.latest.revision: 11
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9c713b9e2fe78f8e9c499c1af5e60a21fd3aea13
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 5250e719cce945bdcce90a9d49d2ed8c27555612
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63442164"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444990"
 ---
-# <a name="how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api"></a>Nasıl yapılır: ClickOnce dağıtım API'sini kullanarak program aracılığıyla uygulama güncelleştirmelerini denetleme
+# <a name="how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api"></a>Nasıl yapılır: ClickOnce Dağıtım API'sini Kullanarak Program Aracılığıyla Uygulama Güncelleştirmelerini Denetleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-ClickOnce dağıtıldıktan sonra bir uygulamayı güncelleştirmek için iki yol sunar. İlk yöntemde, güncelleştirmeleri belirli aralıklarla otomatik olarak denetlemek için ClickOnce dağıtımı yapılandırabilirsiniz. İkinci yöntemde kullanan kod yazabileceğiniz <xref:System.Deployment.Application.ApplicationDeployment> güncelleştirmeleri denetlemek için sınıf tabanlı bir kullanıcı isteği gibi bir olay.  
+ClickOnce, bir uygulamayı dağıtıldıktan sonra güncelleştirmenin iki yolunu sağlar. İlk yöntemde, belirli aralıklarla güncelleştirmeleri otomatik olarak denetlemek için ClickOnce dağıtımını yapılandırabilirsiniz. İkinci yöntemde, kullanıcı isteği gibi <xref:System.Deployment.Application.ApplicationDeployment> bir olayı temel alan güncelleştirmeleri denetlemek için sınıfı kullanan kod yazabilirsiniz.  
   
- Aşağıdaki yordamları programlı bir güncelleştirme gerçekleştirmek için gereken kodu gösterir ve ayrıca programlı güncelleştirme denetimlerini etkinleştirmek için ClickOnce dağıtımını yapılandırmak nasıl açıklar.  
+ Aşağıdaki yordamlar programlı güncelleştirme gerçekleştirmek için bazı kodlar gösterir ve programlı güncelleştirme denetimlerini etkinleştirmek için ClickOnce dağıtımınızı nasıl yapılandırıştırılacak açıklar.  
   
- ClickOnce uygulaması programlı bir şekilde güncelleştirmek için güncelleştirmeler için bir konum belirtmeniz gerekir. Bu bazen bir dağıtım sağlayıcısı olarak adlandırılır. Bu özellik hakkında daha fazla bilgi için bkz. [ClickOnce güncelleştirme stratejisini seçme](../deployment/choosing-a-clickonce-update-strategy.md).  
+ ClickOnce uygulamasını programlı olarak güncelleştirmek için güncelleştirmeler için bir konum belirtmeniz gerekir. Bu bazen dağıtım sağlayıcısı olarak adlandırılır. Bu özelliği ayarlama hakkında daha fazla bilgi için [clickonce güncelleme stratejisi seçme'ye](../deployment/choosing-a-clickonce-update-strategy.md)bakın.  
   
 > [!NOTE]
-> Ayrıca, uygulamanızı bir konumdan dağıtmak, ancak başka bir güncelleştirme için aşağıda açıklanan tekniği kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Dağıtım güncelleştirmeleri için alternatif bir konum belirtme](../deployment/how-to-specify-an-alternate-location-for-deployment-updates.md).  
+> Uygulamanızı bir konumdan dağıtmak ancak başka bir konumdan güncelleştirmek için aşağıda açıklanan tekniği de kullanabilirsiniz. Daha fazla bilgi için [bkz: Dağıtım Güncelleştirmeleri için Alternatif Konum belirtin.](../deployment/how-to-specify-an-alternate-location-for-deployment-updates.md)  
   
 ### <a name="to-check-for-updates-programmatically"></a>Güncelleştirmeleri programlı olarak denetlemek için  
   
-1. Tercih edilen görsel veya komut satırı araçlarını kullanarak yeni bir Windows Forms uygulaması oluşturun.  
+1. Tercih ettiğiniz komut satırı veya görsel araçları kullanarak yeni bir Windows Forms uygulaması oluşturun.  
   
-2. Düğme, menü öğesi oluşturmak veya diğer kullanıcı arabirimi öğesi, kullanıcılarınıza güncelleştirmeleri denetlemek için istediğiniz. Bu öğenin olay işleyicisinden denetlemek ve güncelleştirmeleri yüklemek için aşağıdaki yöntemi çağırın.  
+2. Güncelleştirmeleri denetlemek için kullanıcılarınızın seçmesini istediğiniz düğme, menü öğesi veya diğer kullanıcı arabirim öğesini oluşturun. Bu öğenin olay işleyicisinden güncelleştirmeleri denetlemek ve yüklemek için aşağıdaki yöntemi arayın.  
   
      [!code-cpp[ClickOnceAPI#6](../snippets/cpp/VS_Snippets_Winforms/ClickOnceAPI/cpp/form1.cpp#6)]
      [!code-csharp[ClickOnceAPI#6](../snippets/csharp/VS_Snippets_Winforms/ClickOnceAPI/CS/Form1.cs#6)]
      [!code-vb[ClickOnceAPI#6](../snippets/visualbasic/VS_Snippets_Winforms/ClickOnceAPI/VB/Form1.vb#6)]  
   
-3. Uygulamanızı derleyin.  
+3. Başvurunuzu derlein.  
   
-### <a name="using-mageexe-to-deploy-an-application-that-checks-for-updates-programmatically"></a>Program aracılığıyla güncelleştirme kontrolü yapana bir uygulamayı dağıtmak için Mage.exe kullanma  
+### <a name="using-mageexe-to-deploy-an-application-that-checks-for-updates-programmatically"></a>Güncelleştirmeleri programlı olarak denetleyen bir uygulamayı dağıtmak için Mage.exe'yi kullanma  
   
-- Mage.exe içinde açıklandığı gibi kullanarak uygulamanızı dağıtmak için yönergeleri izleyin [izlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Dağıtım bildirimi oluşturmak için Mage.exe çağrılırken komut satırı anahtarı kullandığınızdan emin olun `providerUrl`ve burada ClickOnce güncelleştirmeleri denetle URL'sini belirtin. Gelen uygulamanızı güncelleştirme yapacaksanız [ http://www.adatum.com/MyApp ](http://www.adatum.com/MyApp), örneğin, dağıtım bildirimi oluşturmak için çağrı şuna benzeyebilir:  
+- Walkthrough'da açıklandığı gibi Mage.exe kullanarak uygulamanızı dağıtma yönergelerini [izleyin: ClickOnce Uygulamasını El Ile Dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Dağıtım bildirimini oluşturmak için Mage.exe'yi ararken, komut `providerUrl`satırı anahtarını kullandığınızdan emin olun ve ClickOnce'nin güncelleştirmeleri denetlemesi gereken URL'yi belirtin. `http://www.adatum.com/MyApp`Örneğin, uygulamanız güncellenirse, dağıtım bildirimini oluşturma çağrınız aşağıdaki gibi görünebilir:  
   
     ```  
     mage -New Deployment -ToFile WindowsFormsApp1.application -Name "My App 1.0" -Version 1.0.0.0 -AppManifest 1.0.0.0\MyApp.manifest -providerUrl http://www.adatum.com/MyApp/MyApp.application  
     ```  
   
-### <a name="using-mageuiexe-to-deploy-an-application-that-checks-for-updates-programmatically"></a>Program aracılığıyla güncelleştirme kontrolü yapana bir uygulamayı dağıtmak için MageUI.exe kullanma  
+### <a name="using-mageuiexe-to-deploy-an-application-that-checks-for-updates-programmatically"></a>Güncelleştirmeleri programlı olarak denetleyen bir uygulamayı dağıtmak için MageUI.exe'yi kullanma  
   
-- Mage.exe içinde açıklandığı gibi kullanarak uygulamanızı dağıtmak için yönergeleri izleyin [izlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Üzerinde **dağıtım seçenekleri** sekmesinde, belirleyin **Başlat konumu** alan uygulama bildiriminin ClickOnce güncelleştirmeleri kontrol etmelidir. Üzerinde **Güncelleştirme Seçenekleri** sekmesi, NET **bu uygulama güncelleştirmeleri denetlesin** onay kutusu.  
+- Walkthrough'da açıklandığı gibi Mage.exe kullanarak uygulamanızı dağıtma yönergelerini [izleyin: ClickOnce Uygulamasını El Ile Dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Dağıtım **Seçenekleri** sekmesinde, **Başlangıç Konumu** alanını uygulama bildirimine ayarlayın ClickOnce güncelleştirmeleri denetlemelidir. Güncelleştirme **Seçenekleri** sekmesinde, güncelleştirmeler onay kutusunu **denetlemesi gereken bu uygulamayı** temizleyin.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Uygulamanızı programlı güncelleştirmeyi kullanmak için tam güven izinleri olmalıdır.  
+ Uygulamanızın programlı güncelleştirmeyi kullanmak için tam güven izinlerine sahip olması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Dağıtım güncelleştirmeleri için alternatif bir konum belirtme](../deployment/how-to-specify-an-alternate-location-for-deployment-updates.md)   
- [ClickOnce güncelleştirme stratejisini seçme](../deployment/choosing-a-clickonce-update-strategy.md)   
+ [Nasıl yapilir: Dağıtım Güncelleştirmeleri için Alternatif Konum Belirt](../deployment/how-to-specify-an-alternate-location-for-deployment-updates.md)   
+ [ClickOnce Güncelleme Stratejisi Seçme](../deployment/choosing-a-clickonce-update-strategy.md)   
  [ClickOnce Uygulamalarını Yayımlama](../deployment/publishing-clickonce-applications.md)

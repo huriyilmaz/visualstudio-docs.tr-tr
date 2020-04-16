@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4056e4dedf06ffe86755bf946c77032d6f6782dd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: afd1d79d7f1846e60386d2a9478466bf7eae72e4
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80702035"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444654"
 ---
 # <a name="private-galleries"></a>Özel galeriler
 Geliştirdiğiniz denetimleri, şablonları ve araçları kuruluşunuz için intranetteki özel bir *galeriye* göndererek aşağıdaki gibi paylaşabilirsiniz:
@@ -42,9 +42,9 @@ Geliştirdiğiniz denetimleri, şablonları ve araçları kuruluşunuz için int
 
 5. **URL** alanına, özel galeriyi barındıran Atom akışı veya SharePoint sitesinin URL'sini girin.
 
-    1. Ana bilgisayar özel galeriye bağlanan bir Atom akışıysa, URL http://www.mywebsite/mygallery/atom.xmlbuna benzer: .  Bu URL bir dosyaya veya ağ yoluna başvurabilir.
+    1. Ana bilgisayar özel galeriye bağlanan bir Atom akışıysa, URL `http://www.mywebsite/mygallery/atom.xml`buna benzer: .  Bu URL bir dosyaya veya ağ yoluna başvurabilir.
 
-    2. Ana bilgisayar bir SharePoint sitesiyse, URL buna http://mysharepoint/sites/mygallery/forms/AllItems.aspxbenzer: .
+    2. Ana bilgisayar bir SharePoint sitesiyse, URL buna `http://mysharepoint/sites/mygallery/forms/AllItems.aspx`benzer: .
 
 ### <a name="manage-private-galleries"></a>Özel galerileri yönetme
  Yönetici, her bilgisayardaki sistem kayıt defterini değiştirerek özel bir galeriyi aynı anda birden fazla bilgisayarın kullanımına açabilir. Bunu gerçekleştirmek için, yeni kayıt defteri anahtarlarını ve değerlerini açıklayan bir *.pkgdef* dosyası oluşturun.  Bu dosyanın biçimi aşağıdaki gibidir.

@@ -1,5 +1,5 @@
 ---
-title: Blend 'de XAML hatalarını ayıklama | Microsoft Docs
+title: Karışımda Hata Ayıklama XAML | Microsoft Dokümanlar
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,60 +14,60 @@ caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: eeda91dad54cc189fba6f23ce6d21e6aa9a6c5da
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 8e032f9f99087df26c82b4984c2267a35236bf6e
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850513"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444641"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend'de XAML hatalarını ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Uygulamanızdaki XAML hatalarını ayıklamak için [!INCLUDE[blend_first](../includes/blend-first-md.md)] içindeki araçları kullanabilirsiniz. Bir proje oluşturduğunuzda, tüm hatalar **sonuçlar** panelinde görüntülenir. Hatayla ilgili işaretlemeyi bulmak için bir hataya çift tıklayın. Çalışmak için daha fazla yer gerekiyorsa, F12 tuşuna basarak **sonuçlar** panelini gizleyebilirsiniz.  
+Uygulamanızdaki XAML [!INCLUDE[blend_first](../includes/blend-first-md.md)] hatasını ayıklamak için araçları kullanabilirsiniz. Bir proje oluşturduğunuzda, **sonuçlar** panelinde hatalar görüntülenir. Hatayla ilgili biçimlendirmeyi bulmak için bir hatayı çift tıklatın. Çalışmak için daha fazla yere ihtiyacınız varsa, F12 tuşuna basarak **Sonuçlar** panelini gizleyebilirsiniz.  
   
 ## <a name="syntax-errors"></a>Sözdizimi hataları  
- XAML veya arka plan kod dosyaları dilin biçimlendirme kurallarını izleyememesi durumunda sözdizimi hataları oluşur. Hatanın açıklaması, nasıl düzeltileceğini anlamanıza yardımcı olabilir. Listede ayrıca dosyanın adı ve hatanın gerçekleştiği satır numarası da belirtilir. XAML hataları, **sonuçlar** panelinde **biçimlendirme** sekmesinde listelenir.  
+ XAML veya kod arkasındaki dosyalar dilin biçimlendirme kurallarına uymuyorsa sözdizimi hataları oluşur. Hatanın açıklaması, nasıl düzeltileceğini anlamanıza yardımcı olabilir. Listede ayrıca dosyanın adı ve hatanın oluştuğu satır numarası da belirtilir. XAML hataları **Sonuçlar** panelindeki **Biçimlendirme** sekmesinde listelenir.  
   
 > [!TIP]
-> XAML, XML tabanlı bir biçimlendirme dilidir ve XML sözdizimi kurallarını izler.  
+> XAML, XML tabanlı biçimlendirme dilidir ve XML sözdizimi kurallarına uyar.  
   
  XAML sözdizimi hatalarının bazı yaygın nedenleri şunlardır:  
   
 - Bir anahtar sözcük yanlış yazılmıştır veya büyük harf ayrımı yanlıştır.  
   
-- Özniteliklerin veya metin dizelerinin etrafında tırnak işaretleri eksik.  
+- Özniteliklerin veya metin dizelerin inetrafında tırnak işaretleri eksiktir.  
   
 - XAML öğesinde bir kapatma etiketi eksiktir.  
   
 - XAML öğesi, izin verilmeyen bir konumda bulunmaktadır.  
   
-  Ortak XAML sözdizimi hakkında daha fazla bilgi için bkz. [temel xaml sözdizimi Kılavuzu](https://msdn.microsoft.com/library/windows/apps/hh700351.aspx).  
+  Ortak XAML sözdizimi hakkında daha fazla bilgi için [Temel XAML sözdizimi kılavuzuna](https://msdn.microsoft.com/library/windows/apps/hh700351.aspx)bakın.  
   
-  Ayrıca, [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]' de basit kod hataları, derleme hataları ve çalışma zamanı hataları tanımlayabilir ve bunları çözebilirsiniz. Ancak, Visual Studio 'da kodun arkasındaki hataların tanımlanması ve çözümlenmesi daha kolay olabilir.  
+  Ayrıca, [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]'deki basit kod arkasındaki sözdizimi hatalarını, derleme hatalarını ve çalışma zamanı hatalarını tanımlayabilir ve çözümleyebilirsiniz. Ancak, Visual Studio'da kod arkası hatalarının tanımlanması ve çözülmesi daha kolay olabilir.  
   
-### <a name="debugging-sample-xaml-code"></a>Örnek XAML kodunda hata ayıklama  
- Aşağıdaki örnek, [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]basit bir XAML hata ayıklama oturumunda size yol gösterecektir.  
+### <a name="debugging-sample-xaml-code"></a>Örnek XAML kodunun hata ayıklanması  
+ Aşağıdaki örnek, [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]basit bir XAML hata ayıklama oturumunda size yol verecektir.  
   
 ##### <a name="to-create-a-project"></a>Bir proje oluşturmak için  
   
-1. [!INCLUDE[blend_subs](../includes/blend-subs-md.md)], **Dosya** menüsünü açın ve ardından **Yeni proje**' ye tıklayın.  
+1. Dosya [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] **menüsünü** açın ve ardından **Yeni Proje'yi**tıklatın.  
   
-    **Yeni proje** iletişim kutusunda, sol tarafta proje türlerinin bir listesi görüntülenir. Bir proje türüne tıkladığınızda, onunla ilişkili proje şablonları sağ tarafta görüntülenir.  
+    Yeni **Proje** iletişim kutusunda, sol tarafta proje türlerinin listesi görüntülenir. Proje türünü tıklattığınızda, projeyle ilişkili proje şablonları sağ tarafta görünür.  
   
-2. Proje türleri listesinde **XAML (Windows Mağazası)** öğesine tıklayın.  
+2. Proje türleri listesinde **XAML (Windows Mağazası)** seçeneğini tıklatın.  
   
-3. Proje şablonları listesinde **boş uygulama**' ya tıklayın.  
+3. Proje şablonları listesinde Boş **Uygulama'yı**tıklatın.  
   
-4. **Ad** metin kutusuna `DebuggingSample`yazın.  
+4. **Ad** metin kutusuna, `DebuggingSample`yazın.  
   
-5. **Konum** metin kutusunda projenin konumunu doğrulayın.  
+5. **Konum** metin kutusunda, projenin konumunu doğrulayın.  
   
-6. **Dil** listesinde, **görsel C#** ' e tıklayın ve ardından projeyi oluşturmak için **Tamam** ' a tıklayın.  
+6. **Dil** listesinde Visual **C#** seçeneğini tıklatın ve projeyi oluşturmak için **Tamam'ı** tıklatın.  
   
-7. Tasarım yüzeyine sağ tıklayın ve ardından **bölünmüş** görünüme geçmek Için **kaynağı görüntüle** ' ye tıklayın.  
+7. Tasarım yüzeyine sağ tıklayın ve ardından **Görünüm'e** geçmek için **Kaynağı Görüntüle'yi** tıklatın.  
   
-8. Kodun sağ üst köşesindeki **Kopyala** bağlantısına tıklayarak aşağıdaki kodu kopyalayın.  
+8. Kodun sağ üst köşesindeki **Kopyala** bağlantısını tıklatarak aşağıdaki kodu kopyalayın.  
   
    ```  
    <Grid HorizontalAlignment="Left" Height="222" VerticalAlignment="Top>  
@@ -80,7 +80,7 @@ Uygulamanızdaki XAML hatalarını ayıklamak için [!INCLUDE[blend_first](../in
   
    ```  
   
-9. Varsayılan **Kılavuzu**bulun ve açılış ve kapanış **kılavuz** etiketleri arasına kodu yapıştırın. İşiniz bittiğinde kodunuzun aşağıdaki gibi görünmesi gerekir:  
+9. Varsayılan **Izgara'yı**bulun ve kodu açma ve kapatma **Kılavuz** etiketleri arasına yapıştırın. İşinizi bitirdiğinizde, kodunuz aşağıdaki gibi görünmelidir:  
   
     ```  
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">  
@@ -95,35 +95,35 @@ Uygulamanızdaki XAML hatalarını ayıklamak için [!INCLUDE[blend_first](../in
   
     ```  
   
-10. Projeyi derlemek için CTRL + SHIFT + B tuşlarına basın.  
+10. Projeyi derlemek için Ctrl+Shift+B'ye basın.  
   
-    Projenin derlenmeyeceğini ve hataları listelerken **sonuçlar** bölmesinin uygulamanın altında göründüğünü belirten bir hata iletisi görüntülenir.  
+    Projenin oluşturulamayacağı konusunda sizi uyaran bir hata iletisi görüntülenir ve hataları listeleyen **Sonuçlar** paneli uygulamanın alt kısmında görünür.  
   
     ![Visual Studio için Blend'de XAML hatalarını ayıklama](../debugger/media/blend-debugxaml-xaml.png "blend_debugXAML_XAML")  
   
 ### <a name="resolving-xaml-errors"></a>XAML hatalarını çözme  
- XAML hataları algılandığında tasarım yüzeyi, projenizin geçersiz biçimlendirme içerdiğini belirten bir uyarı görüntüler. Hataları çözümlediğinizde, **sonuçlar** panelindeki hata listesi güncellenir. Tüm hataları çözdüyseniz tasarım yüzeyi etkinleştirilir ve uygulamanız tasarım yüzeyinde görüntülenir.  
+ XAML hataları algılandığında, tasarım yüzeyi projenizin geçersiz biçimlendirme içerdiğini belirten bir uyarı görüntüler. Hataları giderirken, **Sonuçlar** panelindeki hata listesi güncelleştirilir. Tüm hataları giderdiğinizde, tasarım yüzeyi etkinleştirilir ve uygulamanız tasarım yüzeyinde görüntülenir.  
   
-##### <a name="to-resolve-the-xaml-errors"></a>XAML hatalarını çözümlemek için  
+##### <a name="to-resolve-the-xaml-errors"></a>XAML hatalarını gidermek için  
   
-1. Listedeki ilk hataya çift tıklayın. Açıklama "< ' değeri özniteliğinde geçerli değildir." Hatayı çift tıklattığınızda, işaretçi kodda karşılık gelen konumu bulur. Önceki `Button` `<`, hata iletisinde önerildiği şekilde bir öznitelik değil, geçerlidir. Yukarıdaki kod satırına baktığınızda, `Top` özniteliği için kapatma tırnak işaretlerinin eksik olduğunu fark edeceksiniz. Kapanış tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesinin değişikliklerinizi yansıtacak şekilde güncelleştiğine dikkat edin.  
+1. Listedeki ilk hatayı çift tıklatın. Açıklama "'<' değeri öznitelik geçerli değildir." Hatayı çift tıklattığınızda, işaretçi kodda karşılık gelen konumu bulur. Önceki `<` geçerli `Button` ve hata iletisinde önerilen bir öznitelik değil. Önceki kod satırına bakarsanız, öznitelik `Top` için kapanış tırnak işaretlerinin eksik olduğunu fark esiniz. Kapanış tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesinin değişikliklerinizi yansıtacak şekilde güncellere delanın.  
   
-2. "' 0" açıklamasına çift tıklayarak bir adın başlangıcında geçerli değildir. " `Margin="0,149,0,0"` iyi biçimlendirilmiş gibi görünüyor. Ancak, `Margin` renk kodlamasının koddaki `Margin` diğer örneklerle eşleşmediğinden emin olun. Kapanış tırnak işaretleri önceki ad/değer çiftinde (`VerticalAlignment="Top`) olmadığından, `Margin="` önceki özniteliğin değerinin bir parçası olarak okunurdur ve 0 bir ad/değer çiftinin başlangıcı olarak okunurdur. `Top`için kapanan tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesi, yaptığınız değişiklikleri yansıtacak şekilde güncelleştirilir.  
+2. "'0' açıklamasını çift tıklatın bir adın başında geçerli değildir." `Margin="0,149,0,0"`iyi şekillenmiş gibi görünüyor. Ancak, renk kodlama kodundaki diğer örnekleri `Margin` `Margin` eşleşmiyor unutmayın. Kapanış tırnak işaretleri önceki ad/değer çiftinden eksik`VerticalAlignment="Top`olduğundan `Margin="` ( ), önceki özniteliğin değerinin bir parçası olarak okunur ve 0 bir ad/değer çiftinin başlangıcı olarak okunur. `Top`Kapanış tırnak işaretlerini yazın. **Değişikliklerinizi** yansıtmak için Sonuçlar panelindeki hata listesi güncellenir.  
   
-3. Kalan hataya çift tıklayın, "kapanış XML etiketi ' Button ' eşleşmiyor." İşaretçi kapanış **kılavuz** etiketinde bulunur (`</Grid>`) ve hatanın `Grid` nesnesinin içinde olması önerilir. İkinci `Button` nesnesinde kapanış etiketi eksik olduğuna dikkat edin. Kapanış `/`ekledikten sonra **sonuçlar** paneli listesi güncellenir. Artık bu ilk hatalar çözümlendiğinden, iki ek hata belirlenmiştir.  
+3. Kalan hatayı çift tıklatın, "Kapanış XML etiketi 'Düğme' uyumsuz." İşaretçi, hatanın `Grid` nesnenin içinde`</Grid>`olduğunu düşündüren kapanış **Grid** etiketinde bulunur. İkinci `Button` nesnenin kapanış etiketini kaçırdığına dikkat edin. Kapanışı `/`ekledikten **sonra, Sonuçlar** paneli listesi güncelleştirilir. Bu ilk hatalar çözüldüğüne göre, iki ek hata tanımlandı.  
   
-4. "Üye ' içerik ' tanınmıyor veya erişilebilir değil" seçeneğine çift tıklayın. `content` `c` büyük harfle yazılmalıdır. "C" alt durumunu "c" büyük harfle değiştirin.  
+4. Çift tıklayın "Üye 'içerik' tanınmıyor veya erişilemez." In `c` `content` büyük harf olmalı. Küçük harf "c"yi büyük harf "c" ile değiştirin.  
   
-5. "'<https://schemas.microsoft.com/winfx/2006/xaml>' ad alanında" mame "özelliği yok." "Mame" içindeki "d", "N" olmalıdır. "D" değerini bir "N" ile değiştirin. Artık XAML ayrıştırılabilmesine göre, uygulama tasarım yüzeyinde görünür.  
+5. Çift tıklayın "Özellik 'Mame' `https://schemas.microsoft.com/winfx/2006/xaml` ad alanında yok." "Mame"deki "M" "N" olmalı. "M" ile "N" değiştirin. Artık XAML ayrıştırılabildiği için uygulama tasarım yüzeyinde görünür.  
   
-    ![Visual Studio için Blend XAML hatalarını ayıklama](../debugger/media/blend-debugartboard-xaml.png "blend_debugArtboard_XAML")  
+    ![Visual Studio için Karışım xaml hata ayıklama](../debugger/media/blend-debugartboard-xaml.png "blend_debugArtboard_XAML")  
   
-    Projenizi derlemek için CTRL + SHIFT + B tuşlarına basın ve kalan hata olmadığını onaylayın.  
+    Projenizi oluşturmak ve kalan hata olmadığını doğrulamak için Ctrl+Shift+B tuşuna basın.  
   
 ## <a name="debugging-in-visual-studio"></a>Visual Studio'da Hata Ayıklama  
- Uygulamanızdaki kodda daha kolay hata ayıklamak için Visual Studio 'da [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] projeleri açabilirsiniz. Visual Studio 'da bir [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] projesi açmak için **Projeler** panelinde projeye sağ tıklayın ve ardından **Visual Studio 'da Düzenle**' ye tıklayın. Visual Studio 'da hata ayıklama oturumunuzu tamamladıktan sonra, tüm değişikliklerinizi kaydetmek için CTRL + SHIFT + S tuşlarına basın ve ardından [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]geri dönün. Projeyi yeniden yüklemeniz istenecektir. [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]çalışmaya devam etmek için **Tümüne Evet** ' e tıklayın.  
+ Uygulamanızdaki [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] kodu daha kolay hata ayıklamak için Visual Studio'da projeler açabilirsiniz. Visual Studio'da proje [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] açmak için **Projeler** panelindeki projeyi sağ tıklatın ve ardından Visual **Studio'da Edit'i**tıklatın. Visual Studio'daki hata ayıklama oturumunuzu tamamladıktan sonra, tüm değişikliklerinizi kaydetmek için Ctrl+Shift+S tuşuna [!INCLUDE[blend_subs](../includes/blend-subs-md.md)]basın ve sonra tekrar . Projeyi yeniden yüklemeniz istenir. Çalışmaya devam etmek için [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] **Tümüne Evet'i** tıklatın.  
   
- Uygulamanızda hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'Da Windows Mağazası uygulamalarında hata ayıklama](https://msdn.microsoft.com/library/windows/apps/hh441472.aspx).  
+ Uygulamanızın hata ayıklama hakkında daha fazla bilgi için [Visual Studio'daki Hata Ayıklama Windows Mağazası uygulamalarına](https://msdn.microsoft.com/library/windows/apps/hh441472.aspx)bakın.  
   
 ## <a name="getting-help"></a>Yardım alma  
- [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] uygulamanızda hata ayıklama konusunda daha fazla yardıma ihtiyacınız varsa, sorununuzla ilgili olarak [Windows Mağazası uygulaması topluluk forumlarında](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps) arama yapabilir veya soru gönderebilirsiniz.
+ Uygulamanızın [!INCLUDE[blend_subs](../includes/blend-subs-md.md)] hata ayıklama konusunda daha fazla yardıma ihtiyacınız varsa, sorununuzun ilgili gönderileri için [Windows Mağazası uygulama topluluk forumlarında](https://social.msdn.microsoft.com/Forums/windowsapps/home?category=windowsapps) arama yapabilir veya bir soru gönderebilirsiniz.

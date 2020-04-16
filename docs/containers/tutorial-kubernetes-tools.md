@@ -8,12 +8,12 @@ manager: jillfra
 ms.technology: vs-azure
 ms.workload:
 - azure
-ms.openlocfilehash: f5868f97301eba62d16ea68cdaa0c97c8e20edd1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 931f8c2a6d3be130ef78f59f9b3853d28fad8cd4
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75916959"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444693"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio Kubernetes Tools ile başlayın
 
@@ -21,7 +21,7 @@ Visual Studio Kubernetes Tools, Kubernetes'i hedefleyen konteyner uygulamaların
 
 Bu öğretici, bir projeye Kubernetes desteği eklemek ve AKS'de yayınlamak için Visual Studio'nun kullanılmasını kapsar. AkS'te çalışan projenizi hata ayıklamak ve test etmek için [Azure Dev Spaces'i](/azure/dev-spaces/) kullanmak istiyorsanız, bunun yerine [Azure Dev Spaces öğreticisine](/azure/dev-spaces/get-started-netcore-visualstudio) atlayabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu yeni işlevselliği kullanabilmek için şunları yapmanız gerekir:
 
@@ -40,7 +40,7 @@ Bu yeni işlevselliği kullanabilmek için şunları yapmanız gerekir:
 
     1. Azure Kubernetes Hizmet kümesi. Daha fazla bilgi için [bkz.](/azure/aks/kubernetes-walkthrough-portal#create-an-aks-cluster) Geliştirme iş istasyonunuzdan [kümeye bağlandığından](/azure/aks/kubernetes-walkthrough#connect-to-the-cluster) emin olun.
 
-    1. Helm CLI geliştirme iş istasyonunuzun üzerine yüklenir. Daha fazla bilgi için [bkz: Yükleme Helm.](https://github.com/kubernetes/helm/blob/master/docs/install.md)
+    1. Helm CLI geliştirme iş istasyonunuzun üzerine yüklenir. Daha fazla bilgi için [bkz: Yükleme Helm.](https://github.com/helm/helm-www/blob/master/content/en/docs/helm/helm_install.md)
 
     1. Komutu `helm init` kullanarak AKS kümenize karşı yapılandırılan miğfer. Bunun nasıl yapılacılaştırılaçılacıyla ilgili daha fazla bilgi için Helm' i nasıl [yapıla](/azure/aks/kubernetes-helm#configure-helm)
 ::: moniker-end

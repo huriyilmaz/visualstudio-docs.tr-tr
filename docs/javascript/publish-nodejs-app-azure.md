@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: c304aca5171e1addab9a941105f11fb534eaa5ff
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: d75bb4f5274201b7cf745ff8c7c6f27b869855c3
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74474021"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81445018"
 ---
 # <a name="publish-a-nodejs-application-to-azure-linux-app-service"></a>Bir Düğüm.js uygulamasını Azure'da yayımla (Linux Uygulama Hizmeti)
 
@@ -27,16 +27,16 @@ Bir Düğüm.js uygulamasını Azure'a yayınlarken birkaç seçenek vardır. Bu
 Bu öğretici için uygulamayı [Linux Uygulama Hizmeti'ne](/azure/app-service/containers/app-service-linux-intro)dağıtabilirsiniz.
 Linux App Service, Node.js uygulamasını çalıştırmak için bir Linux Docker kapsayıcısı dağıtır (Windows'da IIS'in arkasındaki Node.js uygulamalarını çalıştıran Windows Uygulama Hizmeti'nin aksine).
 
-Bu öğretici, Visual Studio için Node.js Tools ile yüklü bir şablondan başlayarak bir Düğüm.js uygulamasının nasıl oluşturulabileceğini, kodu GitHub'daki bir depoya nasıl itebileceğinizi ve azure web portalı üzerinden azure uygulama hizmeti sağlamanın nasıl GitHub deposu. Azure Uygulama Hizmeti'ni sağlamak ve kodu yerel bir Git deposundan itmek için komut satırını kullanmak için [bkz.](/azure/app-service/containers/quickstart-nodejs)
+Bu öğretici, Visual Studio için Node.js Tools ile yüklü bir şablondan başlayarak bir Düğüm.js uygulamasının nasıl oluşturulabileceğini, kodu GitHub'daki bir depoya nasıl itebileceğinizi ve ardından GitHub deposundan dağıtabilmeniz için Azure Web portalı üzerinden Azure Uygulama Hizmeti sağlamanın nasıl sağlanabileceğini gösterir. Azure Uygulama Hizmeti'ni sağlamak ve kodu yerel bir Git deposundan itmek için komut satırını kullanmak için [bkz.](/azure/app-service/containers/quickstart-nodejs)
 
-Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 > * Node.js projesi oluşturma
 > * Kod için Bir GitHub deposu oluşturma
 > * Azure'da Linux Uygulama Hizmeti Oluşturma
 > * Linux'a dağıtın
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * Visual Studio yüklü ve Node.js geliştirme iş yükünü yüklü olmalıdır.
 
@@ -109,7 +109,7 @@ Visual Studio için GitHub'ı kurmak için:
 
 ## <a name="create-a-linux-app-service-in-azure"></a>Azure'da Linux Uygulama Hizmeti Oluşturma
 
-1. [Azure portalında](https://portal.azure.com)oturum açın.
+1. [Azure Portal](https://portal.azure.com) oturum açın.
 
 2. Soldaki hizmetler listesinden **Uygulama Hizmetleri'ni** seçin ve sonra **Ekle'yi**tıklatın.
 
@@ -173,7 +173,7 @@ Visual Studio için GitHub'ı kurmak için:
 ## <a name="troubleshooting"></a>Sorun giderme
 
 * Düğüm.exe işlemi ölürse (diğer bir şekilde işlenmemiş bir özel durum oluşursa), kapsayıcı yeniden başlatılır.
-* Konteyner başlatıldığında, Node.js işlemini nasıl başlatacağını bulmak için çeşitli buluşsal çalışmalardan geçer. Uygulamanın ayrıntıları [generateStartupCommand.js](https://github.com/Azure-App-Service/node/blob/master/8.9.4/startup/generateStartupCommand.js)adresinde görülebilir.
+* Konteyner başlatıldığında, Node.js işlemini nasıl başlatacağını bulmak için çeşitli buluşsal çalışmalardan geçer. Uygulamanın ayrıntıları [generateStartupCommand.js](https://github.com/Azure/app-service-builtin-images/blob/master/node/8.9.4/startup/generateStartupCommand.js)adresinde görülebilir.
 * İncelemeler için SSH üzerinden çalışan konteynere bağlanabilirsiniz. Bu, Azure portalı kullanılarak kolayca yapılır. Uygulama Hizmeti'ni seçin ve **Geliştirme Araçları** bölümündesi altında **SSH'ye** ulaşana kadar araç listesini aşağı kaydırın.
 * Sorun gidermeye yardımcı olmak için, Uygulama Hizmeti için **Tanılama günlükleri** ayarlarına gidin ve **Docker Konteyner günlüğe kaydetme** ayarını **Kapalı'dan** **Dosya Sistemi'ne**değiştirin. Günlükler */home/LogFiles/*_docker.log* altındaki kapta oluşturulur ve Kutudan SSH veya FTP(S) kullanılarak erişilebilir.
 * Varsayılan olarak atanan *.azurewebsites.net URL yerine siteye özel bir etki alanı adı atanabilir. Daha fazla bilgi için, konu [Haritası Özel Etki Alanı](/azure/app-service/app-service-web-tutorial-custom-domain)bakın.

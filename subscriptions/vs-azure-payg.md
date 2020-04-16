@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 5dc7f57e-883a-4cc1-a914-06245a8cb1ff
-ms.date: 07/30/2019
+ms.date: 04/15/2020
 ms.topic: conceptual
 description: Azure'dan Önce Öde hesabınızı nasıl ayarlayabileceğinizi öğrenin.
-ms.openlocfilehash: b05f8a051a47d150b1c6670c54941820fcc73c47
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 4fdbaacd9f778d7e81667cd4faa504f877775f02
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80231979"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444862"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Azure DevTest Pay-As-You-Go subscriptions
 Bulutta ekibinizle işbirliği yapın.  Diğer abonelerle işbirliği sağlayarak ekipler ve ortamlar arasında yalıtım sağlayan birden çok Dev ve Test Pay-As-You-Go aboneliği oluşturun.  Azure'daki abonelik yazılımınız için geliştirme/test ve bulut kullanım hakları için özel indirimli saatlik ücretler alırsınız.
@@ -39,7 +39,7 @@ Bulutta ekibinizle işbirliği yapın.  Diğer abonelerle işbirliği sağlayara
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 ### <a name="q--what-if-i-want-to-make-changes-to-this-subscription"></a>S: Bu abonelikte değişiklik yapmak istersem ne olur?
 C: Azure aboneliklerinizden herhangi birinde değişiklik yapmak için:
-1. [Azure portalında](https://portal.azure.com)oturum açın.
+1. [Azure Portal](https://portal.azure.com) oturum açın.
 2. Sol bölmedeki listede **Maliyet Yönetimi + Faturalandırma'yı**seçin.
 3. Aboneliklerim kutusunda aboneliklerinizin listesini **görürsünüz.** İstenilen aboneliği tıklatın.
 4. Artık aboneliği yönetmek veya iptal etmek, yeniden adlandırmak, dizini değiştirmek veya fatura sahipliğini aktarmak için seçenekleriniz olacak.

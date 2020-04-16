@@ -1,5 +1,5 @@
 ---
-title: Çevrimdışı yüklemesini oluşturma | Microsoft Docs
+title: Çevrimdışı Yükleme Oluşturma | Microsoft Dokümanlar
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-install
@@ -13,67 +13,67 @@ caps.latest.revision: 22
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 72bf11519ec500082304fde431122d05ee65db54
-ms.sourcegitcommit: 3b48ce4649d38a7e3b095bd087739d6131e49d1b
+ms.openlocfilehash: a6a9707d517a8a43d9a9ca156a5f7291ecee9bee
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76124523"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81445072"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Visual Studio’nun Çevrimdışı Yüklemesini Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio ile ilgili en son belgeler için bkz. Visual [Studio 'nun çevrimdışı yüklemesini oluşturma](/visualstudio/install/create-an-offline-installation-of-visual-studio) veya [Visual Studio 'Nun ağ yüklemesi oluşturma](/visualstudio/install/create-a-network-installation-of-visual-studio).
+Visual Studio ile ilgili en son dokümantasyon için Visual [Studio'nun çevrimdışı yüklemesini oluştur](/visualstudio/install/create-an-offline-installation-of-visual-studio) veya [Visual Studio'nun ağ yüklemesini oluşturun](/visualstudio/install/create-a-network-installation-of-visual-studio)bölümüne bakın.
 
-Bu sayfa, Internet'e bağlı olmadıkları sırada Visual Studio 2015 yüklemeyi açıklar. Ancak, "bağlantısız" bir yükleme gerçekleştirmek için önce bir çevrimdışı yükleme düzenini Internet'e bağlı bir makinede kullanarak oluşturmanız gerekir. Bunun nasıl yapılacağı aşağıda verilmiştir.
+Bu sayfa, Internet'e bağlı değilken Visual Studio 2015'in nasıl yüklenirolduğunu açıklar. Ancak, "bağlantısı kesilmiş" bir yükleme gerçekleştirmek için, önce Internet'e bağlı bir makine kullanarak çevrimdışı yükleme düzeni oluşturmanız gerekir. Bunu şu şekilde yapabilirsiniz.
 
 > [!IMPORTANT]
-> Çevrimdışı makinenize Windows 7 SP1 veya Windows Server 2008 R2 çalıştırıyorsa, lütfen özel yönergelere bakın [çevrimdışı yükleme sorunlarını giderme](#BKMK_tshoot) bu konudaki.  Bu yönergeleri izlemelidir *önce* Visual Studio 2015'i yükleyin.
+> Çevrimdışı makineniz Windows 7 SP1 veya Windows Server 2008 R2 çalıştırıyorsa, lütfen sorun [giderme](#BKMK_tshoot) bölümündeki özel yönergeleri görün.  Visual Studio 2015'i yüklemeden *önce* bu yönergeleri izlemeniz gerekir.
 
-## <a name="BKMK_Offline"></a> Çevrimdışı yükleme oluşturarak yükleme
+## <a name="installing-by-creating-an-offline-installation"></a><a name="BKMK_Offline"></a>Çevrimdışı yükleme oluşturarak yükleme
 
 #### <a name="to-create-an-offline-installation-layout"></a>Çevrimdışı yükleme düzeni oluşturmak için
 
-1. Gelen yüklemek istediğiniz Visual Studio sürümünü seçin [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20Enterprise%202015) indirme sayfası.
+1. [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20Enterprise%202015) indirme sayfasından yüklemek istediğiniz Visual Studio sürümünü seçin.
 
-2. Dosya sisteminizdeki bir konuma yükleyiciyi indirdikten sonra Çalıştır "\<çalıştırılabilir dosya adı >/layout".
+2. Yükleyiciyi dosya sisteminizdeki bir konuma indirdikten\<sonra " çalıştırılabilir ad> /düzen" çalıştırın.
 
-     Örneğin, şunu çalıştırın: `vs_enterprise.exe /layout D:\VisualStudio2015`
+     Örneğin, çalıştırın:`vs_enterprise.exe /layout D:\VisualStudio2015`
 
-     Kullanarak `/layout` anahtarı, neredeyse tüm yükleme paketlerini yalnızca yükleme makinesi için geçerli olanları indirebilirsiniz. Bu yaklaşım, her yerden bu yükleyiciyi çalıştırmak için gereken dosyaları sağlar ve başlangıçta yüklenmemiş bileşenleri yüklemek istiyorsanız yararlı olabilir.
+     `/layout` Anahtarı kullanarak, yalnızca indirme makinesine uygulananları değil, hemen hemen tüm yükleme paketlerini indirebilirsiniz. Bu yaklaşım, bu yükleyiciyi her yerde çalıştırmak için gereken dosyaları verir ve başlangıçta yüklenmemiş bileşenleri yüklemek istiyorsanız yararlı olabilir.
 
-3. Bu komutu çalıştırdıktan sonra çevrimdışı yükleme düzenini bulunmasını istediğiniz klasörü değiştirmek izin veren bir iletişim kutusu görünür.   Ardından, **indirme** düğmesi.
+3. Bu komutu çalıştırdıktan sonra, çevrimdışı yükleme düzeninin bulunduğu klasörü değiştirmenize olanak tanıyan bir iletişim kutusu görüntülenir.   Ardından **İndir** düğmesini tıklatın.
 
-     Paket indirmesi başarılı olduğunda, kurulumun başarılı olduğunu belirten bir ileti görmeniz gerekir **! Belirtilen tüm bileşenler başarıyla alındı.**
+     Paket indirme başarılı olduğunda, Kurulum Başarılı yazan bir ileti görmeniz **gerekir! Belirtilen tüm bileşenler başarıyla elde edilmiştir.**
 
-4. Daha önce belirttiğiniz klasörünü bulun. (Örneğin, D:\VisualStudio2015. bulun) Bu klasör, paylaşılan bir konuma kopyalamak veya medya yüklemek için gereken her şeyi içerir.
+4. Daha önce belirttiğiniz klasörü bulun. (Örneğin, D:\VisualStudio2015'i bulun.) Bu klasör, paylaşılan bir konuma kopyalamak veya ortam yüklemek için gereken her şeyi içerir.
 
     > [!CAUTION]
-    > Şu anda Android SDK'sı bir çevrimdışı yükleme deneyimi desteklemez. Android SDK Kurulumu öğelerini Internet'e bağlı olmayan bir bilgisayara yüklerseniz, yükleme başarısız olabilir. Daha fazla bilgi için bu konudaki "bir çevrimdışı yükleme sorunlarını giderme" bölümüne bakın.
+    > Şu anda, Android SDK çevrimdışı yükleme deneyimini desteklemiyor. Android SDK Kurulum öğelerini internete bağlı olmayan bir bilgisayara yüklerseniz, yükleme başarısız olabilir. Daha fazla bilgi için bu konudaki "Çevrimdışı yükleme sorunu" bölümüne bakın.
 
-5. Dosya konumundan veya yükleme medyasından yüklemeyi çalıştırın.
+5. Yüklemeyi dosya konumundan veya yükleme medyasından çalıştırın.
 
 ## <a name="updating-an-offline-installation"></a>Çevrimdışı yüklemeyi güncelleştirme
- Microsoft Visual Studio 2015 için birkaç güncelleştirme yayımladı. Visual Studio yüklemenizi güncelleştirmek için yalnızca istediğiniz sürümü indirme alanından [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20Enterprise%202015) indirme sayfası. Ardından, yeni bir çevrimdışı yükleme düzeni oluşturmak için bu konuda özetlenen adımları izleyin ve Visual Studio 2015 kopyanızın güncelleştirmek için kullanın.
+ Microsoft, Visual Studio 2015 için çeşitli Güncelleştirmeler yayımladı. Visual Studio yüklemenizi güncellemek için [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20Enterprise%202015) indirme sayfasından istediğiniz sürümü indirmeniz yeterlidir. Ardından, yeni bir çevrimdışı yükleme düzeni oluşturmak için bu konuda özetlenen adımları izleyin ve ardından Visual Studio 2015 kopyanızı güncelleştirmek için kullanın.
 
-## <a name="BKMK_tshoot"></a> Çevrimdışı yükleme sorunlarını giderme
- Çevrimdışı yükleme sırasında çevrimdışı durumdan önbelleği yüklemek, bazı bileşenler ve paketleri yüklemek yükleyememeyle ilgili uyarı iletileri görebilirsiniz. Aşağıdaki tablo, bu senaryolar için olası çözümleri içerir.
+## <a name="troubleshooting-an-offline-installation"></a><a name="BKMK_tshoot"></a>Çevrimdışı yüklemede sorun giderme
+ Çevrimdışı yükleme önbelleğinizden çevrimdışı yüklediğinizde, bazı bileşenleri ve paketleri yükleyememe konusunda uyarı iletileri görebilirsiniz. Aşağıdaki tablo, bu senaryolar için olası çözümleri içerir.
 
-| Bileşen veya paket | Çözüm |
+| Bileşen veya Paket | Çözüm |
 |-|-|
-| Dotfuscator ve Analytics Community Edition 5.19.1 (Community, Professional ve Enterprise sürümleri için Visual Studio'nun yüklü olarak **Windows 7 SP1** ve **Windows Server 2008 R2**) | Çevrimdışı makinenize çalışıyorsa **Windows 7 SP1** veya **Windows Server 2008 R2**, Visual Studio 2015'i yüklemeden önce aşağıdaki adımları gerçekleştirmeniz gerekir:<br /><br /> 1. CTL dosyalarını indirmek için bir dosya veya Web sunucusu yapılandırın.<br /><br /> 2. bağlantısı kesilmiş bir ortam için Microsoft otomatik güncelleştirme URL 'sini yeniden yönlendirin.<br /><br /> Daha fazla bilgi için [yapılandırma Güvenilen Kökleri ve izin verilmeyen sertifikaları](https://technet.microsoft.com/library/dn265983.aspx) Microsoft TechNet sitesindeki sayfası. |
-| Android SDK kurulumu (API düzeyi) | Android SDK'sı (API düzeyi) paketleri yüklemek için internet bağlantısı olması gerekir. Kısıtlanmış bir ağda varsa, Visual Studio'yu yüklediğinizde aşağıdaki URL'lere erişim izin vermeniz gerekir:<br /><br /> -   https://dl.google.com:443<br />-   https://dl-ssl.google.com:443<br />-   https://dl-ssl.google.com/android/repository/*<br /> <br />Proxy ayarları ile olası sorunları çözme hakkında daha fazla bilgi için bkz. [Visual Studio 2015 yükleme hataları (Android SDK Kurulumu) bir proxy'nin arkasında](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/) blog gönderisi. |
-| Visual Studio genişletilebilirlik öğe şablonları<br /><br /> Visual Studio için GitHub uzantısı<br /><br /> Visual Studio için PowerShell araçları | Visual Studio 2015'i yüklediğinizde, internet bağlantısı yoksa, özel bir çevrimdışı yükleme düzenini oluşturmak için çevrimdışı akış kullanabilirsiniz. **Not:** özel bu akışa Visual Studio 2015 için en son güncelleştirmeleri içerir. <br /><br /> Çevrimdışı akış özel oluşturmak için aşağıdaki komutu çalıştırın: / Layout *sürücü:* \VisualStudio2015 /overridefeeduri *xml akışı URL'si*<br /><br /> Örneğin, İngilizce dil için Visual Studio 2015 Enterprise'nın özel çevrimdışı akış çalıştırın:<br /><br /> `vs_enterprise_ENU.exe /layout D:\VisualStudio2015 /overridefeeduri "https://go.microsoft.com/fwlink/?LinkID=785882&clcid0x409"`<br /><br /> Tercih ettiğiniz dilde özel bir çevrimdışı akış oluşturmak için kullanabileceğiniz URL'leri tam bir listesi için aşağıdaki tabloya bakın. |
+| Dotfuscator ve Analytics Community Edition 5.19.1 (Visual Studio'nun Topluluk, Profesyonel ve Kurumsal sürümleri için **Windows 7 SP1** ve **Windows Server 2008 R2'de**yüklenmiştir) | Çevrimdışı makineniz Windows **7 SP1** veya **Windows Server 2008 R2**çalıştırıyorsa, Visual Studio 2015'i yüklemeden önce aşağıdaki adımları gerçekleştirmeniz gerekir:<br /><br /> 1. CTL dosyalarını indirmek için bir dosyayı veya web sunucusunu yapılandırın.<br /><br /> 2. Bağlantısı kesilen bir ortam için Microsoft Otomatik Güncelleştirme URL'sini yeniden yönlendirin.<br /><br /> Daha fazla bilgi için, Microsoft TechNet sitesindeki [Güvenilir Kökleri ve İzin Verilmeyen Sertifikaları Yapılandırıyorum](https://technet.microsoft.com/library/dn265983.aspx) sayfasına bakın. |
+| Android SDK Kurulumu (API Seviyesi) | Android SDK (API Düzeyi) paketlerini yüklemek için internet bağlantınız olmalıdır. Kısıtlı bir ağdaysanız, Visual Studio'yu yüklediğinizde aşağıdaki URL'lere erişmenize izin vermelisiniz:<br /><br /> -   `https://dl.google.com:443`<br />-   `https://dl-ssl.google.com:443`<br />-   `https://dl-ssl.google.com/android/repository/*`<br /> <br />Proxy ayarlarıyla ilgili olası sorunları nasıl çözeceğiniz hakkında daha fazla bilgi için, Proxy blog gönderisinin [arkasındaki Visual Studio 2015 yükleme hatalarına (Android SDK Kurulumu)](https://blogs.msdn.microsoft.com/peterhauge/2016/09/22/visual-studio-2015-install-failures-android-sdk-setup-behind-a-proxy/) bakın. |
+| Visual Studio Genişletilebilirlik Öğe Şablonları<br /><br /> Visual Studio için GitHub Uzantısı<br /><br /> Visual Studio için PowerShell Araçları | Visual Studio 2015'i yüklediğinizde internet bağlantınız yoksa, çevrimdışı yükleme düzenini oluşturmak için özel bir çevrimdışı akış kullanabilirsiniz. **Not:**  Bu özel özet akışı, Visual Studio 2015'in en son Güncellemelerini içerir. <br /><br /> Özel çevrimdışı akışı oluşturmak için aşağıdaki komutu çalıştırın: /layout *Drive:* \VisualStudio2015 /overridefeeduri *URL-to-feed-xml*<br /><br /> Örneğin, Visual Studio 2015 Enterprise'ın İngilizce özel çevrimdışı yayını için çalıştırın:<br /><br /> `vs_enterprise_ENU.exe /layout D:\VisualStudio2015 /overridefeeduri "https://go.microsoft.com/fwlink/?LinkID=785882&clcid0x409"`<br /><br /> Seçtiğiniz dilde özel bir çevrimdışı özet akışı oluşturmak için kullanabileceğiniz URL'lerin tam listesi için aşağıdaki tabloya bakın. |
 
- Yukarıdaki tabloda açıklandığı gibi bir dile özgü özel çevrimdışı akış, oluşturmak için aşağıdaki URL'ler kullanın.
+ Yukarıdaki tabloda açıklandığı gibi, dile özel çevrimdışı akış oluşturmak için aşağıdaki URL'leri kullanın.
 
-|       Dil        |                            {1&gt;URL&lt;1}                            |
+|       Dil        |                            URL'si                            |
 |-----------------------|-----------------------------------------------------------|
-| ve  | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x804 |
+| Çince (Basitleştirilmiş)  | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x804 |
 | seçenekleri yerine | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x404 |
 |         Çekçe         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x405 |
 |        Almanca         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x407 |
-|        İngilizce        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x409 |
+|        Türkçe        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x409 |
 |        İspanyolca        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0xC0A |
 |        Fransızca         | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x40C |
 |        İtalyanca        | https://go.microsoft.com/fwlink/?LinkID=785882&clcid=0x410 |
@@ -86,4 +86,4 @@ Bu sayfa, Internet'e bağlı olmadıkları sırada Visual Studio 2015 yüklemeyi
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Visual Studio'yu yükleyin](install-visual-studio-2015.md)
+- [Visual Studio'yu yükleme](install-visual-studio-2015.md)

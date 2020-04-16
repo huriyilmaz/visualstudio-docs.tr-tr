@@ -1,5 +1,5 @@
 ---
-title: Özel galeriler | Microsoft Docs
+title: Özel Galeriler | Microsoft Dokümanlar
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,45 +11,45 @@ ms.assetid: b6b3dee7-91c5-4556-9f69-0d56b675e83b
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 097d666a839f67e657610b34641ed29da91797be
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 895fbef5459de75c7ccdc6a090fc30ec27a030f9
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68193996"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444927"
 ---
 # <a name="private-galleries"></a>Özel Galeriler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Denetimleri, şablonlar ve bunlara yayınlayarak geliştirme araçları paylaşabilirsiniz bir *özel galeri* gösterildiği gibi kuruluşunuz için intranet üzerindeki:  
+Geliştirdiğiniz denetimleri, şablonları ve araçları kuruluşunuz için intranetteki özel bir *galeriye* göndererek aşağıdaki gibi paylaşabilirsiniz:  
   
-- Bir Atom (uygun şekilde yapılandırılmış merkezi bir konuma (depo) intranet ağınızdaki RSS akışı) oluşturun. Daha fazla bilgi için [nasıl yapılır: Atom oluşturmak için özel bir galeriyi akış](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md).  
+- İntranetinizde uygun şekilde yapılandırılmış merkezi bir konuma (depo) bir Atom (RSS) beslemesi oluşturun. Daha fazla bilgi için [bkz: Özel Galeri için Atom Beslemesi Oluşturun.](../extensibility/how-to-create-an-atom-feed-for-a-private-gallery.md)  
   
-- Özel Galeri açıklayan .pkgdef dosyası dağıtın. Özel bir galeri aynı anda birçok bilgisayara bağlanmak isteyen yöneticiler için bu yapılandırmayı öneririz.  
+- Özel galeriyi açıklayan bir .pkgdef dosyası dağıtın. Özel bir galeriyi aynı anda birçok bilgisayara bağlamak isteyen yöneticiler için bu yapılandırmayı öneririz.  
   
-## <a name="adding-a-private-gallery-to-extensions-and-updates-in-visual-studio"></a>Uzantılar ve güncelleştirmeler Visual Studio'da özel bir galeri ekleme  
- Özel bir galeri kullanılabilir olduğunda, kendisine ekleyebilirsiniz **Uzantılar ve güncelleştirmeler** Visual Studio'da.  
+## <a name="adding-a-private-gallery-to-extensions-and-updates-in-visual-studio"></a>Visual Studio'da Uzantılara ve Güncellemelere Özel Galeri Ekleme  
+ Özel bir galeri kullanılabilir olduğunda, Visual Studio'daki **Uzantılar ve Güncelleştirmeler'e** ekleyebilirsiniz.  
   
- ![Uzantı Yöneticisi ekleme iletişim kutusu](../extensibility/media/em-adddialog.png "EM_AddDialog")  
+ ![Uzantı Yöneticisi Ekle İletişim Kutusu](../extensibility/media/em-adddialog.png "EM_AddDialog")  
   
-#### <a name="to-add-a-private-gallery-to-extensions-and-updates"></a>Uzantılar ve güncelleştirmeler için özel bir galeri ekleme  
+#### <a name="to-add-a-private-gallery-to-extensions-and-updates"></a>Uzantılar ve Güncelleştirmeler için özel bir galeri eklemek için  
   
-1. Menü çubuğunda, **Araçları**, **seçenekleri**.  
+1. Menü çubuğunda **Araçlar**, **Seçenekler'i**seçin.  
   
-2. İçinde **ortam** düğümünü **Uzantılar ve güncelleştirmeler**.  
+2. **Ortam** düğümünde **Uzantılar ve Güncelleştirmeler'i**seçin.  
   
-3. Seçin **Ekle** düğmesi.  
+3. **Ekle** düğmesini seçin.  
   
-4. İçinde **adı** alanında, özel galeri için bir ad girin, örneğin, `My Gallery`.  
+4. **Ad** alanına, örneğin özel galeri için bir ad `My Gallery`girin.  
   
-5. İçinde **URL** Atom akışı veya özel galeri barındıran SharePoint sitesinin URL'sini girin.  
+5. **URL** alanına, özel galeriyi barındıran Atom akışı veya SharePoint sitesinin URL'sini girin.  
   
-    1. Atom akışı ana bilgisayar ise özel Galerisine bağlanır, bu URL'yi benzeyecektir: http://www.mywebsite/mygallery/atom.xml.  Bu URL için bir dosya veya bir ağ yolu başvurabilir.  
+    1. Ana bilgisayar özel galeriye bağlanan bir Atom akışıysa, URL `http://www.mywebsite/mygallery/atom.xml`buna benzer: .  Bu URL bir dosyaya veya ağ yoluna başvurabilir.  
   
-    2. Konak, bir SharePoint sitesi ise, URL bu benzeyecektir: http://mysharepoint/sites/mygallery/forms/AllItems.aspx.  
+    2. Ana bilgisayar bir SharePoint sitesiyse, URL buna `http://mysharepoint/sites/mygallery/forms/AllItems.aspx`benzer: .  
   
-### <a name="managing-private-galleries"></a>Özel galeriler yönetme  
- Bir yönetici özel bir galeri kullanılabilir birkaç bilgisayar için aynı zamanda her bilgisayarda Sistem kayıt defterini değiştirerek yapabilirsiniz. Bunu gerçekleştirmek için yeni kayıt defteri anahtarları ve değerlerini açıklayan .pkgdef dosyası oluşturun.  Bu dosya biçimi aşağıdaki gibidir.  
+### <a name="managing-private-galleries"></a>Özel Galerileri Yönetme  
+ Yönetici, her bilgisayardaki sistem kayıt defterini değiştirerek özel bir galeriyi aynı anda birden fazla bilgisayarın kullanımına açabilir. Bunu gerçekleştirmek için, yeni kayıt defteri anahtarlarını ve değerlerini açıklayan bir .pkgdef dosyası oluşturun.  Bu dosyanın biçimi aşağıdaki gibidir.  
   
 ```  
 [$RootPath$\ExtensionManager\Repositories\{UniqueGUID}]  
@@ -63,34 +63,34 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
   
 ```  
   
- Daha fazla bilgi için [nasıl yapılır: Kayıt defteri ayarlarını kullanarak özel bir galeriyi yönetme](../extensibility/how-to-manage-a-private-gallery-by-using-registry-settings.md).  
+ Daha fazla bilgi için [bkz: Kayıt Defteri Ayarlarını Kullanarak Özel Galeriyi Yönetme](../extensibility/how-to-manage-a-private-gallery-by-using-registry-settings.md).  
   
-## <a name="installing-extensions-from-a-private-gallery"></a>Bir özel Galeriden uzantıları yükleme  
- İçin arama yapın ve Visual Studio uzantıları özel bir galeri yüklersiniz **Uzantılar ve güncelleştirmeler**. Aşağıdaki adımları adlı özel bir galeri kullanın `My Gallery`.  
+## <a name="installing-extensions-from-a-private-gallery"></a>Özel Galeriden Uzantıyükleme  
+ **Uzantılar**ve Güncellemeler özel bir galeriden Visual Studio uzantılarını arayabilir ve yükleyebilirsiniz. Aşağıdaki adımlar adlandırılmış `My Gallery`özel bir galeri kullanır.  
   
- ![Uzantı Yöneticisi'ni yükleme özel galeri](../extensibility/media/em.png "EM_")  
+ ![Uzantı Yöneticisi Yükleme Özel Galeri](../extensibility/media/em.png "EM_")  
   
-#### <a name="to-search-for-and-install-extensions-from-a-private-gallery"></a>Arama ve özel bir Galeriden uzantıları yüklemek için  
+#### <a name="to-search-for-and-install-extensions-from-a-private-gallery"></a>Özel bir galeriden uzantıları aramak ve yüklemek için  
   
-1. Menü çubuğunda, **Araçları**, **Uzantılar ve güncelleştirmeler**.  
+1. Menü çubuğunda **Araçlar,** **Uzantılar ve Güncelleştirmeler'i**seçin.  
   
-2. Sol bölmede seçin **çevrimiçi uzantılara**ve ardından **My galeri**.  
+2. Sol **bölmede, Çevrimiçi Uzantılar'ı**seçin ve ardından **Galerim'i**seçin.  
   
-3. Sağ bölmede, bir uzantı seçin ve ardından **indirme** düğmesi.  
+3. Sağ bölmede bir uzantı seçin ve ardından **İndir** düğmesini seçin.  
   
-## <a name="updating-extensions-from-a-private-gallery"></a>Özel bir galeriyi Extensions güncelleştiriliyor  
- Visual Studio Uzantıları'nın yeni sürümlerine özel galeride gönderilen değerler olarak yüklediğiniz uzantıları güncelleştirebilirsiniz. Aşağıdaki adımları adlı özel bir galeri kullanın `My Repository`.  
+## <a name="updating-extensions-from-a-private-gallery"></a>Özel Galeri'den Uzantıları Güncelleme  
+ Visual Studio uzantılarının yeni sürümleri özel galeride yayınlandığından, yüklediğiniz uzantıları güncelleştirebilirsiniz. Aşağıdaki adımlar adlandırılmış `My Repository`özel bir galeri kullanır.  
   
- ![Uzantı Yöneticisi Özel Galeri güncelleştirme](../extensibility/media/em-update.png "EM_Update")  
+ ![Uzantı Yöneticisi Özel Galeri Güncellemesi](../extensibility/media/em-update.png "EM_Update")  
   
-#### <a name="to-update-an-installed-extension-from-a-private-gallery"></a>Yüklü uzantı özel galerisinden güncelleştirmek için  
+#### <a name="to-update-an-installed-extension-from-a-private-gallery"></a>Özel bir galeriden yüklü bir uzantıyı güncelleştirmek için  
   
-1. Menü çubuğunda, **Araçları**, **Uzantılar ve güncelleştirmeler**.  
+1. Menü çubuğunda **Araçlar,** **Uzantılar ve Güncelleştirmeler'i**seçin.  
   
-2. Sol bölmede seçin **güncelleştirmeleri**ve ardından **My depo**.  
+2. Sol bölmede **Güncelleştirmeler'i**seçin ve ardından **Depom'u**seçin.  
   
-3. Sağ bölmede, bir uzantı seçin ve ardından **güncelleştirme** düğmesi.  
+3. Sağ bölmede bir uzantı seçin ve ardından **Güncelleştir** düğmesini seçin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bulma ve Visual Studio uzantıları kullanma](../ide/finding-and-using-visual-studio-extensions.md)   
+ [Visual Studio Uzantılarını Bulma ve Kullanma](../ide/finding-and-using-visual-studio-extensions.md)   
  [Visual Studio Uzantıları Gönderme](../extensibility/shipping-visual-studio-extensions.md)

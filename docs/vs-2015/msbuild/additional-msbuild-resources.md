@@ -1,5 +1,5 @@
 ---
-title: Ek MSBuild kaynakları | Microsoft Docs
+title: Ek MSBuild Kaynakları | Microsoft Dokümanlar
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -599,12 +599,12 @@ caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6460d26ea7b7240cf54dfe3379ec75634bc5465d
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: aa25e4e15406c9091e90dfd8be5c2efd0a19e41b
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847054"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81445057"
 ---
 # <a name="additional-msbuild-resources"></a>Ek MSBuild Kaynakları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -612,15 +612,15 @@ ms.locfileid: "75847054"
 Bir sorunu çözmeye çalışıyorsanız ve ihtiyacınız olan bilgileri belgelerde bulamıyorsanız, Bilgi Bankası makaleleri, geliştirici topluluğu veya ürün desteği gibi diğer kaynaklara başvurabilirsiniz.  
   
 ## <a name="knowledge-base-articles"></a>Bilgi Bankası Makaleleri  
- Ürün sorunları hakkında makaleler için Bilgi Bankası'nda (BB) çevrimiçi arama yapabilirsiniz. Tüm sorunlarla ilgili bir BB makalesi yoktur; ancak çok sayıda müşterinin karşılaştığı hatalar genellikle belgelenmiştir. [Bilgi Bankası (MSBuild arama sonuçları)](https://search.microsoft.com/supportresults.aspx?q=knowledge+base+MSBuild&x=0&y=0) Web sitesinde KB makalelerine erişebilirsiniz.  
+ Ürün sorunları hakkında makaleler için Bilgi Bankası'nda (BB) çevrimiçi arama yapabilirsiniz. Tüm sorunlarla ilgili bir BB makalesi yoktur; ancak çok sayıda müşterinin karşılaştığı hatalar genellikle belgelenmiştir. [Bilgi Bankası](https://support.microsoft.com/help/242450/how-to-query-the-microsoft-knowledge-base-by-using-keywords-and-query) Web sitesinden KB makalelerini erişebilirsiniz.  
   
 ## <a name="community-forums"></a>Topluluk Forumları  
- Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Ayrıca, başkalarının aynı sorunla ilgili paylaşım yapıp yapmadığını görmek için haber gruplarında da arama yapabilirsiniz. [MSDN forumları](https://social.msdn.microsoft.com/forums/en-US/msbuild/threads/) Web sitesinde Visual Studio MSBuild forumuna erişebilirsiniz.  
+ Forumlar, diğer geliştiriciler ve aynı zamanda Microsoft çalışanları ile etkileşimde bulunmanızı sağlar. Çözüm bulamadığınız bir hata ile karşılaşırsanız, bu sorunla ilgili sorularınızı bir forumda paylaşabilirsiniz. Ayrıca, başkalarının aynı sorunla ilgili paylaşım yapıp yapmadığını görmek için haber gruplarında da arama yapabilirsiniz. [MSDN Forumları](https://social.msdn.microsoft.com/forums/en-US/msbuild/threads/) Web sitesindeki Visual Studio MSBuild forumuna erişebilirsiniz.  
   
- [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Community kaynaklarına, [Channel 9 MSBuild](https://channel9.msdn.com/) Web sitesinde erişebilirsiniz.  
+ Kanal 9 [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] [MSBuild](https://channel9.msdn.com/) Web sitesindeki topluluk kaynaklarına erişebilirsiniz.  
   
 ## <a name="product-support"></a>Ürün Desteği  
- Diğer kaynakları denedikten sonra hala sorularınız varsa, Microsoft [Yardım ve destek](https://support.microsoft.com/) Web sitesini ziyaret ederek Microsoft Destek Hizmetleri 'ne başvurabilirsiniz. Bölgenizdeki ürün desteği hakkında daha fazla bilgi için bkz. [bizimle Iletişim kurun](../ide/talk-to-us.md).  
+ Diğer kaynakları denedikten sonra hala sorularınız varsa, [Microsoft Yardım ve Destek](https://support.microsoft.com/) Web sitesini ziyaret ederek Microsoft destek hizmetlerine başvurabilirsiniz. Bölgenizde mevcut olan ürün desteği hakkında daha fazla bilgi için bizimle [konuşun'](../ide/talk-to-us.md)a bakın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [.NET Framework Hedefleme Hatalarının Sorunlarını Giderme](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)

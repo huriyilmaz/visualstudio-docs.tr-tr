@@ -18,12 +18,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 876781cb6967f5d10dddccd54a46e218170445ab
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: 46bfa808cbf99e942d7aadd2802f51eecfcefae8
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79432366"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81444912"
 ---
 # <a name="deploying-a-visual-studio-tools-for-office-solution-using-windows-installer"></a>Windows Yükleyici'yi Kullanarak Office Çözümü için Visual Studio Araçları Dağıtma
 
@@ -122,7 +122,7 @@ Office çözümü için yükleyici oluşturmak için şu görevlerin gerçekleş
 ::: moniker-end
 ::: moniker range="=vs-2019"
 3. Yeni **Proje Ekle** iletişim **kutusunda, Kurulum Projesi** şablonu'nu seçin.
-4. **İleri**'ye tıklayın.
+4. **İleri**’ye tıklayın.
 ::: moniker-end
 
 5. **Ad** kutusuna **OfficeAddInSetup**yazın.
@@ -593,7 +593,7 @@ s
 ## <a name="about-the-authors"></a>Yazarlar Hakkında
 
 Wouter van Vugt, Office Open XML teknolojileri ve SharePoint, Microsoft Office ve ilgili .NET teknolojileri ile Office İş Uygulamaları (OBA) oluşturmaya odaklanan bağımsız bir danışman ile Microsoft MVP'sidir.
-[Wouter, OpenXmlDeveloper.org](http://openxmldeveloper.org/) ve [MSDN](/previous-versions/office/developer/office-2007/bb879915(v=office.12))gibi geliştirici topluluk sitelerine sık sık katkıda bulunmaktadır. O birkaç teknik bildiri ve makaleler yanı sıra açık XML başlıklı satırda mevcut bir kitap yayınladı: Açık e-kitap.
-Wouter, çeşitli kanallar aracılığıyla en ileri teknik içerik sunmaya odaklanan Hollandalı bir şirket olan Code-Counsel'ın kurucusudur. Onun blogunu okuyarak ve [Code-Counsel Web sitesini](http://www.code-counsel.net/)ziyaret ederek Wouter hakkında daha fazla bilgi edinebilirsiniz.
+[Wouter, MSDN](/previous-versions/office/developer/office-2007/bb879915(v=office.12))gibi geliştirici topluluk sitelerine sık sık katkıda bulunmaktadır. O birkaç teknik bildiri ve makaleler yanı sıra açık XML başlıklı satırda mevcut bir kitap yayınladı: Açık e-kitap.
+Wouter, çeşitli kanallar aracılığıyla en ileri teknik içerik sunmaya odaklanan Hollandalı bir şirket olan Code-Counsel'ın kurucusudur. Onun blogunu okuyarak Wouter hakkında daha fazla bilgi edinebilirsiniz.
 
 Ted Pattison, SharePoint MVP'si, yazarı, eğitmeni ve Ted Pattison Group'un kurucusudur. 2005 sonbaharında Ted, Microsoft'un Geliştirici Platformu Evangelizm grubu tarafından Windows SharePoint Services 3.0 ve Microsoft Office SharePoint Server 2007 için Ascend geliştirici eğitim müfredatını yazar olarak işe alındı. O zamandan beri Ted, sharepoint 2007 teknolojileri konusunda profesyonel geliştiricileri eğitmeye odaklanmıştır. Ted, Microsoft Press için Inside Windows SharePoint Services 3.0 adlı bir kitap yazmayı bitirdi ve sharepoint'in iş çözümleri oluşturmak için geliştirme platformu olarak nasıl kullanılacağına odaklandı. Ted ayrıca MSDN Magazine için Office Space başlıklı geliştirici odaklı bir köşe yazısı yazıyor.

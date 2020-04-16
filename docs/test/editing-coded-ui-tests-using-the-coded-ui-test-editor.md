@@ -11,12 +11,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 1e861c31fa2959c3bace008af7937f6686b2705f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8df6d1ea44cb9737c39653366c7b35823051d5f6
+ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589662"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81445044"
 ---
 # <a name="edit-coded-ui-tests-using-the-coded-ui-test-editor"></a>Kodlanmış UI Test Düzenleyicisi'ni kullanarak kodlanmış UI testlerini edin
 
@@ -74,7 +74,7 @@ Kodlanmış UI Test Düzenleyicisi'ni kullanarak, test yöntemlerinizdeki tüm U
 
 **UI Eylem** bölmesinde bir UI eylem özellikleri değiştirmek için, özellikleri için değiştirmek istediğiniz bir UI eylem içeren test yöntemini genişletin, UI eylem seçin ve sonra Özellikler penceresi kullanarak özellikleri değiştirin.
 
-Örneğin, bir sunucu kullanılamıyorsa ve web tarayıcınızla ilişkili bir Kullanıcı Arabirimi eyleminiz varsa **Web sayfasına git ' '<http://Contoso1/default.aspx>**, URL'yi `'http://Contoso2/default.aspx'`' olarak değiştirebilirsiniz.
+Örneğin, bir sunucu kullanılamıyorsa ve web tarayıcınızla ilişkili bir kullanıcı arabirimi eyleminiz varsa **web tarayıcınıza http http'e\/gidin: /Contoso1/default.aspx**, URL'yi . `http://Contoso2/default.aspx`
 
 ![Denetim özellikleri](../test/media/codeduitestcontrolprop.png)
 
