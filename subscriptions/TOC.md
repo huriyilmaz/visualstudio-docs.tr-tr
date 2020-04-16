@@ -2,7 +2,7 @@
 # [Yenilikler](whats-new-in-subscriptions.md)
 # Abonelikler
 ## Abonelik satın alma
-### [Perakende](https://visualstudio.microsoft.com/vs/pricing)
+### [Perakende](buy-activate-retail.md)
 ### Bulut 
 #### [Genel bakış](vscloud-overview.md)
 #### [Faturalandırma hakkında SSS](vscloud-billing-faq.md)
@@ -13,7 +13,6 @@
 #### [MPN için abonelikleri yönetme](manage-mpn-subscriptions.md)
 ### [Startup’lar için Microsoft](program-startups.md)
 ## Oturum açma 
-### [Perakende abonelikleri etkinleştirme](activate-store-subscriptions.md)
 ### [Microsoft Hesaplarıyla oturum açma](sign-in-msa.md)
 ### [İş veya okul hesaplarıyla oturum açma](sign-in-work.md)
 ### [GitHub ile oturum açma](sign-in-github.md)
