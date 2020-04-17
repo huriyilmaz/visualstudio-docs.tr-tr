@@ -2,7 +2,7 @@
 title: npm paketlerini yönetme
 description: Visual Studio, Node.js paket yöneticisini (npm) kullanarak paketleri yönetmenize yardımcı olur
 ms.custom: seodec18
-ms.date: 03/12/2020
+ms.date: 04/16/2020
 ms.topic: conceptual
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: dba657d30eedef26337c708e7ede6c5ab85ed4cc
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: ef831b5ffee172b642572535162713a53d8ae578
+ms.sourcegitcommit: eef26de3d7a5c971baedbecf3b4941fb683ddb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79550001"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81544334"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Visual Studio'da npm paketlerini yönetin
 
@@ -28,26 +28,32 @@ NPM ile Visual Studio entegrasyonu proje türünüze bağlı olarak farklıdır.
 * [ASP.NET Core](#aspnet-core-projects)
 * [Klasörü aç (Node.js)](../javascript/develop-javascript-code-without-solutions-projects.md)
 
+*package.json,* yerel olarak yüklenmiş paketler için paket bağımlılıklarını ve paket sürümlerini yönetmek için npm tarafından kullanılan bir dosyadır. Bu dosya hakkında daha fazla bilgi için [package.json yapılandırmasına](../javascript/configure-packages-with-package-json.md)bakın.
+
 > [!Important]
 > npm proje kökünde *node_modules* klasörü ve *package.json* bekliyor. Uygulamanızın klasör yapısı farklıysa, Visual Studio'yı kullanarak npm paketlerini yönetmek istiyorsanız klasör yapınızı değiştirmeniz gerekir.
 
-> [!NOTE]
-> Varolan Node.js projeleri için, projenizde npm'yi etkinleştirmek için **Varolan Düğüm.js kodu** çözüm şablonunu kullanın.
-
 ## <a name="nodejs-projects"></a>Düğüm.js projeleri
 
-Node.js projeleri için aşağıdaki yöntemlerden birini kullanın:
+Node.js projeleri için aşağıdaki görevleri gerçekleştirebilirsiniz:
 * [Solution Explorer'dan paketleri yükleme](#npmInstallWindow)
 * [Solution Explorer'dan yüklü paketleri yönetme](#solutionExplorer)
 * [Düğüm.js Etkileşimli Pencere'deki `.npm` komutu kullanın](#interactive)
 
 Bu özellikler birlikte çalışır ve projedeki proje sistemi ve *package.json* dosyasıyla senkronize olur.
 
+### <a name="prerequisites"></a>Ön koşullar
+
+Projenize npm desteği eklemek için **Düğüm.js geliştirme** iş yükünün ve Düğüm.js çalışma zamanının yüklü olması gerekir. Ayrıntılı adımlar için [bkz.](/visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json)
+
+> [!NOTE]
+> Varolan Node.js projeleri için, projenizde npm'yi etkinleştirmek için **Varolan Düğüm.js kodu** çözüm şablonundan veya [Açık klasör (Node.js)](../javascript/develop-javascript-code-without-solutions-projects.md) proje türünü kullanın.
+
 ### <a name="install-packages-from-solution-explorer-nodejs"></a><a name="npmInstallWindow"></a>Solution Explorer'dan paket yükleme (Node.js)
 
 Node.js projeleri için npm paketlerini yüklemenin en kolay yolu npm paket yükleme penceresinden geçer. Bu pencereye erişmek için projedeki **npm** düğümüne sağ tıklayın ve **Yeni npm Paketleri Yükle'yi**seçin.
 
-![Çözüm gezgininden yeni npm paketi yükleme](../javascript/media/solution-explorer-install-package.png)
+:::image type="content" source="../javascript/media/solution-explorer-install-package.png" alt-text="Çözüm gezgininden yeni npm paketi yükleme" border="true":::
 
 Bu pencerede bir paket arayabilir, seçenekleri belirtebilir ve yükleyebilirsiniz.
 
@@ -108,11 +114,17 @@ ASP.NET Core projeleri gibi projeler için, projenize npm desteğini entegre ede
 
 ### <a name="add-npm-support-to-a-project-aspnet-core"></a><a name="npmAdd"></a>Projeye npm desteği ekleme (ASP.NET Core)
 
-Projenizde zaten bir package.json dosyası yoksa, projeye bir *paket.json* dosyası ekleyerek bir etkin npm desteği ekleyebilirsiniz.
+Projenizde zaten bir *package.json* dosyası yoksa, projeye bir *package.json* dosyası ekleyerek npm desteğini etkinleştirmek için bir dosya ekleyebilirsiniz.
 
-1. Dosyayı eklemek için Solution Explorer'da projeyi sağ tıklatın ve**Yeni Öğe** **Ekle'yi** > seçin. **npm Yapılandırma Dosyası'nı**seçin, varsayılan adı kullanın ve **Ekle'yi**tıklatın.
+1. Node.js yüklü yoksa, dış çerçeveler ve kütüphaneler ile en iyi uyumluluk için [Node.js](https://nodejs.org/en/download/) web sitesinden LTS sürümünü yüklemenizi öneririz.
+
+   npm Node.js gerektirir.
+
+1. *package.json* dosyasını eklemek için Solution Explorer'daki projeyi sağ tıklatın ve**Yeni Öğe** **Ekle'yi** > seçin. **npm Yapılandırma Dosyası'nı**seçin, varsayılan adı kullanın ve **Ekle'yi**tıklatın.
 
    ![Projenize package.json ekle](../javascript/media/npm-add-package-json.png)
+
+   Listelenen npm Configuration File'ı görmüyorsanız, Node.js geliştirme araçları yüklenmez. **Düğüm geliştirme** iş yükünü eklemek için Visual Studio Yükleyicisini kullanabilirsiniz. Sonra önceki adımı tekrarlayın.
 
 1. `dependencies` *package.json'un*bir veya `devDependencies` daha fazla npm paketini ekleyin. Örneğin, dosyaya aşağıdakileri ekleyebilirsiniz:
 
@@ -126,7 +138,7 @@ Projenizde zaten bir package.json dosyası yoksa, projeye bir *paket.json* dosya
 Dosyayı kaydettiğinizde Visual Studio, Solution Explorer'daki **Bağımlılıklar / npm** düğümü altında paketi ekler. Düğümü görmüyorsanız, **package.json'a** sağ tıklayın ve **Paketleri Geri Yükle'yi**seçin.
 
 >[!NOTE]
-> Bazı senaryolarda, Solution Explorer, [burada](https://github.com/aspnet/Tooling/issues/479)açıklanan bilinen bir sorun nedeniyle bir npm paketinin *package.json* ile eşitlenmemiş olduğunu gösterebilir. Örneğin, paket yüklendiğinde yüklü değilmiş gibi görünebilir. Çoğu durumda, *package.json'u*silerek Solution Explorer'ı güncelleştirebilirsiniz, Visual Studio'yu yeniden başlatabilir ve bu makalede daha önce açıklandığı gibi *package.json* dosyasını yeniden ekleyebilirsiniz.
+> Bazı senaryolarda, Solution Explorer [burada](https://github.com/aspnet/Tooling/issues/479)açıklanan bilinen bir sorun nedeniyle yüklü npm paketleri için doğru durumu göstermeyebilir. Örneğin, paket yüklendiğinde yüklü değilmiş gibi görünebilir. Çoğu durumda, *package.json'u*silerek Solution Explorer'ı güncelleştirebilirsiniz, Visual Studio'yu yeniden başlatabilir ve bu makalede daha önce açıklandığı gibi *package.json* dosyasını yeniden ekleyebilirsiniz.
 
 ### <a name="install-packages-using-packagejson-aspnet-core"></a><a name="npmInstallPackage"></a>package.json (ASP.NET Core) kullanarak paketleri yükleyin
 
@@ -136,7 +148,7 @@ NPM dahil projeler için, kullanarak `package.json`npm paketleri yapılandırabi
 
 in in *package.json'daki* IntelliSense, bir npm paketinin belirli bir sürümünü seçmenize yardımcı olur.
 
-![npm paketini ara](../javascript/media/npm-add-package-intellisense.png)
+:::image type="content" source="../javascript/media/npm-add-package-intellisense.png" alt-text="npm paket sürümünü seçin" border="true":::
 
 Dosyayı kaydettiğinizde Visual Studio, Solution Explorer'daki **Bağımlılıklar / npm** düğümü altında paketi ekler. Düğümü görmüyorsanız, **package.json'a** sağ tıklayın ve **Paketleri Geri Yükle'yi**seçin.
 

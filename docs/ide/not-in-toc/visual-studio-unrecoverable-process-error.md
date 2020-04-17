@@ -10,12 +10,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1879be46498d851eec0fbfce71b2328bdfc9afb
-ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
+ms.openlocfilehash: c30ac5950ca9bf775b05e9f77867c119b7c7565d
+ms.sourcegitcommit: eef26de3d7a5c971baedbecf3b4941fb683ddb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81224446"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81544347"
 ---
 # <a name="visual-studio-unrecoverable-process-error"></a>Visual Studio kurtarılamaz işlem hatası
 
@@ -33,7 +33,9 @@ Aşağıda Visual Studio tarafından kullanılan proc dışı süreçlerin bir l
 
 - Microsoft.Alm.Shared.Remoting.RemoteContainer.dll
 - Microsoft.CodeAnalysis.LiveUnitTesting.EntryPoint
+- Msbuild.exe
 - PerfWatson2.exe
+- ScriptedSandbox64.exe
 - ServiceHub.Host.CLR.x86.exe
 - ServiceHub.Host.Node.x86.exe
 - ServiceHub.IdentityHost.exe
@@ -41,6 +43,9 @@ Aşağıda Visual Studio tarafından kullanılan proc dışı süreçlerin bir l
 - ServiceHub.RoslynCodeAnalysisService32.exe
 - ServiceHub.SettingsHost.exe
 - ServiceHub.VSDetouredHost.exe
+- VBCSCompiler.exe
+- VsHub.exe
+- vstest.discoveryengine.x86.exe
 - WaAppAgent.exe
 - WindowsAzureGuestAgent.exe
 - WindowsAzureTelemetryService.exe

@@ -1,82 +1,82 @@
 ---
-title: Yayımlama veya bir bulut hizmeti dağıtmak hazırlama
-description: Bulut ve depolama hesabı Hizmetleri'ni ayarlama ve Azure uygulamanızı yapılandırmak için yordamlar hakkında bilgi edinin.
+title: Bulut Hizmeti yayınlamaya veya dağıtmaya hazırlanın
+description: Bulut ve depolama hesabı hizmetlerini ayarlama ve Azure uygulamanızı yapılandırma yordamlarını öğrenin.
 author: ghogen
 manager: jillfra
 ms.assetid: 92ee2f9e-ec49-4c7a-900d-620abe5e9d8a
-ms.custom: seodec18
+ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/10/2017
 ms.author: ghogen
-ms.openlocfilehash: 81c5787e3c058848c97c69fad03827223c9fc582
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f6174f8294f3a9e990893ca9a45d77f2a069692e
+ms.sourcegitcommit: 59a8732dc563242590f7c6ccf4ced6c6d195533c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62572415"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81489668"
 ---
 # <a name="prepare-to-publish-or-deploy-a-cloud-service-from-visual-studio"></a>Visual Studio'dan bulut hizmeti yayımlamaya veya dağıtmaya hazırlanma
 
-Bir bulut hizmeti projesini yayımlamak için bu makalede açıklandığı gibi aşağıdaki hizmetleri ayarlamanız gerekir:
+Bir bulut hizmeti projesi yayınlamak için, bu makalede açıklandığı şekilde aşağıdaki hizmetleri ayarlamanız gerekir:
 
-* A **bulut hizmeti** rollerinizi Azure ortamında çalıştırmayı ve
-* A **depolama hesabı** Blob, kuyruk ve tablo hizmetlerine erişim sağlar.
+* Azure ortamındaki rollerinizi çalıştırmak için bir **bulut hizmeti** ve
+* Blob, Sıra ve Tablo hizmetlerine erişim sağlayan bir **depolama hesabı.**
 
 ## <a name="create-a-cloud-service"></a>Bulut hizmeti oluşturma
 
-Bir bulut hizmeti rollerinizi Azure ortamında çalışır. Bir bulut hizmeti Visual Studio veya aracılığıyla oluşturabilir [Azure portalında](https://portal.azure.com/) izleyen bölümlerde açıklandığı gibi.
+Bir bulut hizmeti, Azure ortamındaki rollerinizi çalıştırAr. Aşağıdaki bölümlerde açıklandığı gibi Visual Studio'da veya [Azure portalı](https://portal.azure.com/) üzerinden bir bulut hizmeti oluşturabilirsiniz.
 
-### <a name="create-a-cloud-service-from-visual-studio"></a>Visual Studio'dan bir bulut hizmeti oluşturma
+### <a name="create-a-cloud-service-from-visual-studio"></a>Visual Studio'dan bulut hizmeti oluşturma
 
-1. Önceden oluşturulmuş bir bulut hizmeti projesi ile proje Seç sağ **Yayımla**.
-1. Gerekirse, Microsoft veya Azure aboneliğinizle ilişkili kuruluş hesabıyla oturum açın ve ardından **sonraki** ilerletmek için **ayarları** sayfası.
-1. A **bulut hizmeti oluşturma ve depolama hesabı** iletişim kutusu görüntülenir (Aksi takdirde, seçin **Yeni Oluştur** gelen **bulut hizmeti** listesi).
-1. URL'niz parçası oluşturur ve benzersiz olmalıdır, bulut hizmeti için büyük küçük harf duyarsız bir ad girin. Ayrıca bir bölge veya benzeşim grubu seçin ve bir çoğaltma seçeneğini seçin.
+1. Daha önce oluşturulmuş bir Bulut Hizmeti projesinde, project'i seç seçeneğini sağ **tıklatın.**
+1. Gerekirse, Azure aboneliğinizle ilişkili Microsoft veya kuruluş hesabıyla oturum açın ve **Ayarlar** sayfasına ilerlemek için **İleri'yi** seçin.
+1. **Bulut Hizmeti Oluştur ve Depolama Hesabı** oluştur iletişim kutusu görüntülenir (değilse, Bulut **Hizmeti** listesinden **Yeni Oluştur'u** seçin).
+1. URL'nizin bir parçasını oluşturan ve benzersiz olması gereken bulut hizmetiniz için bir büyük/küçük harf duyarlı adı girin. Ayrıca bir Bölge veya Affinity Grubu seçin ve bir Çoğaltma seçeneği seçin.
 
-### <a name="create-a-cloud-service-through-the-azure-portal"></a>Azure portalı üzerinden bir bulut hizmeti oluşturma
+### <a name="create-a-cloud-service-through-the-azure-portal"></a>Azure portalı üzerinden bulut hizmeti oluşturma
 
-1. Oturum [Azure portalında](https://portal.azure.com/).
-1. Seçin **bulut Hizmetleri (Klasik)** sayfanın sol tarafındaki.
-1. Seçin **+ Ekle**, ardından (DNS adı, abonelik, kaynak grubunu ve konumu) gerekli bilgileri sağlayın. Bu noktada, daha sonra Visual Studio'da olmadığından bir paketini karşıya yüklemek gerekli değildir.
-1. Seçin **Oluştur** tıklayarak işlemi tamamlar.
+1. [Azure Portal](https://portal.azure.com/) oturum açın.
+1. Sayfanın sol tarafındaki **Bulut Hizmetleri'ni (klasik)** seçin.
+1. Seçin **+ Ekle,** ardından gerekli bilgileri (DNS adı, abonelik, kaynak grubu ve konum) sağlayın. Bu noktada bir paket yüklemenize gerek yoktur çünkü bunu daha sonra Visual Studio'da yaparsınız.
+1. İşlemi tamamlamak için **Oluştur'u** seçin.
 
 ## <a name="create-a-storage-account"></a>Depolama hesabı oluşturma
 
-Depolama hesabı Blob, kuyruk ve tablo hizmetlerine erişim sağlar. Visual Studio aracılığıyla bir depolama hesabı oluşturabilirsiniz veya [Azure portalında](https://portal.azure.com/).
+Depolama hesabı Blob, Sıra ve Tablo hizmetlerine erişim sağlar. Visual Studio veya [Azure portalı](https://portal.azure.com/)aracılığıyla bir depolama hesabı oluşturabilirsiniz.
 
-### <a name="create-a-storage-account-from-visual-studio"></a>Visual Studio'dan bir depolama hesabı oluşturma
+### <a name="create-a-storage-account-from-visual-studio"></a>Visual Studio'dan depolama hesabı oluşturma
 
-1. İçinde **Çözüm Gezgini** önceden oluşturulmuş bir bulut hizmeti projesi ile bulun **bağlı hizmetler** rolü projesi, sağ tıklatın ve seçme içinde düğüm **bağlı hizmet Ekle**. (Visual Studio 2015'te sağ **depolama** düğümünü seçip alt **depolama hesabı oluştur**.)
-1. İçinde **bağlı hizmetler** göründüğünde, liste seçin **Azure depolama ile bulut depolama**.
-1. Görüntülenen Azure depolama iletişim seçin **+ oluştur yeni depolama hesabı**, aboneliğiniz için bir ad belirtin, bir iletişim kutusu getirir fo hesabı, bir fiyatlandırma katmanı, kaynak grubunu ve konumu.
-1. Seçin **Oluştur** bitirdiğinizde. Yeni depolama hesabı, aboneliğinizdeki kullanılabilir depolama hesaplarının listesi görüntülenir.
-1. Bu hesap ve seçin seçin **Ekle**.
+1. Daha önce oluşturulmuş bir Bulut Hizmeti projesiyle **Solution Explorer'da,** Bağlı **Hizmetler** düğümünü bir rol projesi içinde bulun, sağ tıklatın ve Bağlı Hizmet **Ekle'yi**seçin. (Visual Studio 2015'te **Depolama** düğümüne sağ tıklayın ve **Depolama Hesabı Oluştur'u**seçin.)
+1. Görünen **Bağlı Hizmetler** listesinde Azure **Depolama ile Bulut Depolama'yı**seçin.
+1. Görünen Azure Depolama iletişim kutusunda, aboneliğinizi, hesabı belirten bir ad, fiyatlandırma katmanı, kaynak grubu ve konumu belirttiğiniz bir iletişim kutusunu oluşturan **+Yeni Depolama Hesabı Oluştur'u**seçin.
+1. İşi bittiğinde **Oluştur'u** seçin. Yeni depolama hesabı, aboneliğinizdeki kullanılabilir depolama hesapları listesinde görünür.
+1. Bu hesabı seçin ve **Ekle'yi**seçin.
 
-### <a name="create-a-storage-account-through-the-azure-portal"></a>Azure Portalı aracılığıyla bir depolama hesabı oluşturma
+### <a name="create-a-storage-account-through-the-azure-portal"></a>Azure portalı üzerinden bir depolama hesabı oluşturma
 
-1. Oturum [Azure portalında](https://portal.azure.com/).
-1. Seçin **+ yeni** sol üstteki.
-1. Seçin **depolama** altındaki "Azure marketi," ardından **depolama hesabı - blob, dosya, tablo, kuyruk** sağından.
-1. (Adı, dağıtım modeli ve benzeri. gerekli bilgileri sağlayın
-1. Seçin **Oluştur** tıklayarak işlemi tamamlar.
+1. [Azure Portal](https://portal.azure.com/) oturum açın.
+1. Sol üstte **+ Yeni'yi** seçin.
+1. "Azure Marketi" altında **Depolama'yı** seçin, ardından **Depolama hesabı - blob, dosya, tablo,** sağ taraftan sıra.
+1. Gerekli bilgileri (ad, dağıtım modeli vb.) sağlayın.
+1. İşlemi tamamlamak için **Oluştur'u** seçin.
 
-## <a name="configure-your-app-to-use-the-storage-account"></a>Depolama hesabı kullanmak için uygulamanızı yapılandırın
+## <a name="configure-your-app-to-use-the-storage-account"></a>Uygulamanızı depolama hesabını kullanacak şekilde yapılandırın
 
-Bir depolama hesabı oluşturduktan sonra Visual Studio'dan otomatik olarak bağlanmak URL'leri ve erişim anahtarları da dahil olmak üzere proje için hizmet yapılandırması güncelleştirir.
+Bir depolama hesabı oluşturduktan sonra, Visual Studio'dan ona bağlanmak, URL'ler ve erişim anahtarları da dahil olmak üzere projenin hizmet yapılandırmalarını otomatik olarak güncelleştirir.
 
-Bir bulut hizmeti Visual Studio kullanarak oluşturduysanız **bağlı hizmet Ekle**, açarak bağlantıları kontrol edebilirsiniz `ServiceConfiguration.Cloud.cscfg` ve `ServiceConfiguration.Local.cscfg`.
+**Bağlı Ekle Hizmetini**kullanarak Visual Studio'dan bir bulut hizmeti oluşturduysanız, `ServiceConfiguration.Cloud.cscfg` `ServiceConfiguration.Local.cscfg`bağlantıları açarak ve .
 
-Bir bulut hizmeti Azure portalından oluşturduysanız, aynı adımları izleyin [Visual Studio'dan bir depolama hesabı oluşturma](#create-a-storage-account-from-visual-studio) ancak mevcut bir hesabı yeni bir tane oluşturmak yerine. Visual Studio, daha sonra sizin için yapılandırmayı güncelleştirir.
+Azure portalı üzerinden bir bulut hizmeti oluşturduysanız, [Visual Studio'dan bir depolama hesabı oluştur'da](#create-a-storage-account-from-visual-studio) aynı adımları izleyin, ancak yeni bir hizmet oluşturmak yerine varolan hesabı seçin. Visual Studio daha sonra yapılandırmayı sizin için günceller.
 
-Yapılandırma ayarları el ile kullanın özellik sayfaları Visual Studio'da bulut hizmeti projenizi geçerli rol için (role sağ tıklayıp **özellikleri**). Daha fazla bilgi için [bir depolama hesabı bağlantı dizesi yapılandırma](vs-azure-tools-multiple-services-project-configurations.md#configuring-a-connection-string-for-a-storage-account).
+Ayarları el ile yapılandırmak için, bulut hizmeti projenizdeki geçerli rol için Visual Studio'daki özellik sayfalarını kullanın (rolü sağ tıklatın ve **Özellikler'i**seçin). Daha fazla bilgi için [bkz.](vs-azure-tools-multiple-services-project-configurations.md#configuring-a-connection-string-for-a-storage-account)
 
-### <a name="about-access-keys"></a>Erişim anahtarları hakkında
+### <a name="about-access-keys"></a>Erişim tuşları hakkında
 
-Azure portal, her bir Azure depolama hizmetleri ve hesabınız için birincil ve ikincil erişim anahtarlarını kaynaklara erişmek için kullanabileceğiniz URL'leri gösterir. Depolama Hizmetleri karşı yapılan isteklerin kimliğini doğrulamak için bu anahtarları kullanın.
+Azure portalı, Azure depolama hizmetlerinin her birinde kaynaklara erişmek için kullanabileceğiniz URL'leri ve ayrıca hesabınızın birincil ve ikincil erişim anahtarlarını gösterir. Bu anahtarları depolama hizmetlerine karşı yapılan istekleri doğrulamak için kullanırsınız.
 
-İkincil erişim tuşunu, depolama hesabınız için birincil erişim anahtarı ile aynı erişim sağlar ve bir yedek olarak birincil erişim anahtarınızı tehlikeye girdiği oluşturulur. Buna ek olarak, erişim anahtarlarınızı düzenli aralıklarla yeniden önerilir. Birincil anahtarı yeniden oluşturmak, ikincil anahtarı yeniden oluşturmak, birincil anahtar yeniden oluşturuldu kullanacak şekilde değiştirebilirsiniz ikincil anahtarını kullanmak için bir bağlantı dizesi ayarı değiştirebilirsiniz.
+İkincil erişim anahtarı, birincil erişim anahtarıyla depolama hesabınıza aynı erişimi sağlar ve birincil erişim anahtarınızın tehlikeye atılması halinde yedek olarak oluşturulur. Ayrıca, erişim anahtarlarınızı düzenli olarak yeniden oluşturmanız önerilir. Birincil anahtarı yeniden oluştururken ikincil anahtarı kullanmak için bir bağlantı dize ayarını değiştirebilir, sonra ikincil anahtarı yeniden oluştururken yeniden oluşturulan birincil anahtarı kullanmak üzere değiştirebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Visual Studio'dan Azure'a yayımlama uygulamaları hakkında daha fazla bilgi için bkz [Azure araçlarını kullanarak bir bulut hizmeti yayımlama](vs-azure-tools-publishing-a-cloud-service.md).
+Visual Studio'dan Uygulamaları Azure'a yayımlama hakkında daha fazla bilgi edinmek için Azure [Araçlarını kullanarak Bulut Hizmeti Yayımlama'ya](vs-azure-tools-publishing-a-cloud-service.md)bakın.

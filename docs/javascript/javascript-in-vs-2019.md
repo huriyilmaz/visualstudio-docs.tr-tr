@@ -11,12 +11,12 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: df4630182e89dad08360794057bda856ff4d677b
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 199a27dbfef2b7297563e87d973137e2acd9c745
+ms.sourcegitcommit: eef26de3d7a5c971baedbecf3b4941fb683ddb2d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79549944"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81544295"
 ---
 # <a name="javascript-and-typescript-in-visual-studio-2019"></a>Visual Studio 2019'da JavaScript ve TypeScript
 
@@ -38,7 +38,8 @@ Visual Studio 2019, TypeScript derlemesini projenize entegre etmek için çeşit
 * [TypeScript npm paketi](https://www.npmjs.com/package/typescript). TypeScript 2.1 veya üzeri için npm paketi projenize yüklendiğinde, TypeScript dil hizmetinin ilgili sürümü düzenleyiciye yüklenir.
 * TypeScript SDK, Visual Studio yükleyici varsayılan olarak kullanılabilir, hem de VS [Marketplace](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.typescript-331-vs2017)bağımsız bir SDK indir .
 
-Visual Studio 2019'da geliştirilen projeler için, farklı platformlarda ve ortamlarda daha fazla taşınabilirlik için TypeScript NuGet ve npm paketlerini kullanmanızı öneririz.
+> [!TIP]
+> Visual Studio 2019'da geliştirilen projeler için, farklı platformlarda ve ortamlarda daha fazla taşınabilirlik için TypeScript NuGet veya TypeScript npm paketini kullanmanızı öneririz.
 
 NuGet paketinin yaygın kullanımlarından biri TypeScript'i .NET Core CLI'yi kullanarak derlemektir. Proje dosyanızı TypeScript SDK yüklemesinden yapı hedefleri almak için el ile düzenlemesi niz yoksa, NuGet paketi TypeScript derlemesini .NET Core CLI gibi `dotnet build` komutları kullanarak `dotnet publish`etkinleştirmenin tek yoludur.
 
