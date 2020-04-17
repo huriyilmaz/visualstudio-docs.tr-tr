@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bfca799111c83f29924c997218c42f09bff5568a
-ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
+ms.openlocfilehash: 40f8bc4847201d1bd0298bc91432996ecce58d65
+ms.sourcegitcommit: 4bcd6abb89feff1cf8251e3ded73fdc30b67e347
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81224465"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81615550"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe komut satırı seçenekleri
 
@@ -43,7 +43,7 @@ Aşağıdaki *tabloda VSTest.Console.exe* için tüm seçenekler ve bunların k�
 |**/UseVsixExtensions**|Bu seçenek, test çalışmasında yüklü vsix uzantılarını (varsa) *vstest.console.exe* işlemini kullanır veya atlar.<br />Bu seçenek amortismana hazırdır. Visual Studio'nun bir sonraki büyük sürümünden itibaren bu seçenek kaldırılabilir. NuGet paketi olarak sunulan tüketen uzantılara geçin.<br />Örnek: `/UseVsixExtensions:true`|
 |**/TestAdapterPath:[*yol*]**|*vstest.console.exe* işlemini test çalışmasında belirli bir yoldan (varsa) özel test bağdaştırıcılarını kullanmaya zorlar.<br />Örnek: `/TestAdapterPath:[pathToCustomAdapters]`|
 |**/Platform:[*platform türü*]**|Test yürütmeiçin kullanılacak hedef platform mimarisi.<br />Geçerli değerler x86, x64 ve ARM'dir.|
-|**/Framework: [*framework version*]**|Test yürütmeiçin kullanılacak hedef .NET sürümü.<br />Örnek değerler `Framework35` `Framework40`, `Framework45` `FrameworkUap10`, `.NETCoreApp,Version=v1.1`, , .<br />Hedef çerçeve **Framework35**olarak belirtilirse, testler CLR 4.0 "compatibly modunda" çalıştırılır.<br />Örnek: `/Framework:framework40`|
+|**/Framework: [*framework version*]**|Test yürütmeiçin kullanılacak hedef .NET sürümü.<br />Örnek değerler `Framework35` `Framework40`, `Framework45` `FrameworkUap10`, `.NETCoreApp,Version=v1.1`, , .<br />TargetFrameworkAttribute otomatik olarak bu seçeneği montaj dan algılamak `Framework40` için kullanılır ve öznitelik olmadığında varsayılan. [TargetFrameworkAtöz'i](https://docs.microsoft.com/dotnet/api/system.runtime.versioning.targetframeworkattribute) .NET Core derlemelerinizden kaldırırsanız bu seçeneği açıkça belirtmeniz gerekir.<br />Hedef çerçeve **Framework35**olarak belirtilirse, testler CLR 4.0 "uyumluluk modunda" çalıştırılır.<br />Örnek: `/Framework:framework40`|
 |**/TestCaseFilter:[*ifade*]**|Verilen ifadeyle eşleşen testler çalıştırın.<br /><\> İfadesi <\>özelliği =\>\|<\>değeri [<Expression ] biçimidir.<br />Örnek: `/TestCaseFilter:"Priority=1"`<br />Örnek: `/TestCaseFilter:"TestCategory=Nightly|FullyQualifiedName=Namespace.ClassName.MethodName"`<br />**/TestCaseFilter** komut satırı seçeneği **/Tests** komut satırı seçeneği ile kullanılamaz. <br />İfade oluşturma ve kullanma hakkında bilgi için [TestCase filtresine](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)bakın.|
 |**/?**|Kullanım bilgilerini görüntüler.|
 |**/Logger:[*uri/friendlyname*]**|Test sonuçları için bir logger belirtin.<br />Örnek: Sonuçları Visual Studio Test Sonuçları Dosyasına (TRX) kaydetmek için,<br />**/Logger:trx**<br />**[; LogFileName=\<Benzersiz dosya adı> varsayılandır]**|
