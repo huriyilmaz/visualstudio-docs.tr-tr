@@ -10,12 +10,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e68f2bdf0559dc2bea6bd349dbf5f9bedca3671e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ab46aef69bd6356eda0925c492a029b43cc57295
+ms.sourcegitcommit: 98421670ed0b8170aaa32d3d6f8681298f401a1d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633323"
+ms.lasthandoff: 04/18/2020
+ms.locfileid: "81638039"
 ---
 # <a name="msbuild-inline-tasks"></a>MSBuild satır dışı görevler
 
@@ -52,7 +52,7 @@ MSBuild görevleri genellikle <xref:Microsoft.Build.Framework.ITask> arabirimi u
 
 - Öznitelik, `TaskFactory` satır içinde görev fabrikasını uygulayan sınıfı adlandırır.
 
-- Öznitelik `AssemblyFile` satır içinde görev fabrikasının konumunu verir. Alternatif olarak, genellikle `AssemblyName` genel montaj önbelleğinde (GAC) bulunan satır altı görev fabrikası sınıfının tam nitelikli adını belirtmek için özniteliği kullanabilirsiniz.
+- Öznitelik `AssemblyFile` satır içinde görev fabrikasının konumunu verir. Alternatif olarak, genellikle `AssemblyName` 'de `$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll`bulunan satır altı görev fabrikası sınıfının tam nitelikli adını belirtmek için özniteliği kullanabilirsiniz.
 
 `DoNothing` Görevin kalan öğeleri boştur ve satır içinde görevin sırasını ve yapısını göstermek için sağlanır. Daha sağlam bir örnek daha sonra bu konuda sunulmaktadır.
 
