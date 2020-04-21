@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2c3e7813e5e07a0fbb8f4ebf5838c883faa0fb8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 16be10dc69f203e52eb0dccc0e0738399d37ee3d
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595728"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649428"
 ---
 # <a name="debug-page-project-designer"></a>Hata Ayıklama Sayfası, Proje Tasarımcısı
 
@@ -87,5 +87,5 @@ Visual Basic uygulamanızdan SQL yordamlarının hata ayıklanmasını etkinleş
 - [Hata ayıklayıcıya ilk bakış](../../debugger/debugger-feature-tour.md)
 - [C# Hata Ayıklama Yapılandırmaları için Proje Ayarları](../../debugger/project-settings-for-csharp-debug-configurations.md)
 - [Görsel Temel Hata Ayıklama Yapılandırması için Proje Ayarları](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)
-- [Nasıl yapılır: Sınırlı İzinler ile ClickOnce Uygulamasında Hata Ayıklama](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)
+- [Güvenli ClickOnce uygulamaları](../../deployment/securing-clickonce-applications.md)
 - [Nasıl Yapılır: Yapılandırmaları Oluşturma ve Düzenleme](../../ide/how-to-create-and-edit-configurations.md)

@@ -8,12 +8,12 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 2dc938b5-37e9-4dfc-8676-5d0a91d366ab
-ms.openlocfilehash: 435185a628dbf256802ae36dae45eac60d304a54
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.openlocfilehash: c19bb72a7d5262c5d0864d12d44266c8ef016acf
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80544048"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649689"
 ---
 # <a name="what39s-new-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde yeni&#39;
 
@@ -39,6 +39,23 @@ Kuruluşunuz Azure Etkin Dizin (Azure AD) kullanıyorsa, artık abonelikleri Azu
 Ortağımız CAST Highlight tarafından sunulan avantajların genişletilmeye devam ettiğini duyurmaktan mutluluk duyuyoruz. 
 - Visual Studio Enterprise aboneliklerinde yer alan avantajın süresi altı aya uzatıldı.  
 - Visual Studio Professional aboneleri artık tek bir uygulamayı üç ay boyunca değerlendirmelerine olanak tanıyan bir abonelik alabilirler. 
+
+## <a name="2020-q2-april-june"></a>2020 Ç2 (Nisan-Haziran)
+
+### <a name="visual-studio-subscriptions-portal"></a>Görsel Stüdyo Abonelikleri Portalı
+
+Visual Studio Abonelikleri Portalı görünüm ve kullanım kolaylığı nda önemli değişikliklere uğramıştir.  
+
+- Avantajlar kutucukları yeniden boyutlandırıldı ve belirli bir kategorideki tüm döşemeleri görmek için sola veya sağa kaydırmanız gerekmeden pencerede görüntülenir. 
+- Mevcut tüm avantajlarınızı görüntülemeyi seçebilir veya Kategori Seçici'yi kullanarak yalnızca bir kategori görüntüleyebilirsiniz.
+   > [!div class="mx-imgBorder"]
+   > ![Yeni avantajlar kategori seçici](_img/whats-new/whats-new-category-picker.png)
+- Ayrıca Abonelik Seçici'yi pencerenin sağ üst köşesinden daha erişilebilir bir konuma taşıdık.
+   > [!div class="mx-imgBorder"]
+   > ![Yeni abonelik seçici](_img/whats-new/whats-new-sub-picker.png)
+- Yeni veya popüler avantajlar arayın, avantajlar listesinin en üstüne bir "Öne Çıkan avantaj" ekledik.  
+   > [!div class="mx-imgBorder"]
+   > ![Yeni özellikli yarar](_img/whats-new/whats-new-featured.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - Yeni özellikleri ile yeni [Abonelikler Yönetimi portalı](https://manage.visualstudio.com) UI göz atın

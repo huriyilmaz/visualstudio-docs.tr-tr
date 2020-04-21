@@ -4,21 +4,21 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: fc33d419-78cf-485e-b558-5b7efa900f14
-ms.date: 03/25/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 description: Belirli Visual Studio abonelikleriyle birlikte verilen DataCamp eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 0b5aa20667728847afc83c77401f8651cbad106d
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: 85545df5a38f5f8c3e3c29e6ffe1581298999562
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273991"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649586"
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde DataCamp eğitim avantajı
 Uygun Visual Studio abonelikleri DataCamp abonelikleri içerir.  DataCamp ile ihtiyacınız olan tüm veri bilimi becerilerini tarayıcınızın konforunda öğrenebilirsiniz. Ne zaman ve ne öğreneceğini sen seçeceksin. Yüklemek için hiçbir yazılım ve hiçbir özel donanım gereksinimleri ile, veri bilimi öğrenme her zamankinden daha kolaydır.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
-1. Oturum [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)aç.
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
 2. "Profesyonel Gelişim" kategorisinde DataCamp yarar karo bulun ve **Etkinleştir'e**tıklayın.
    > [!div class="mx-imgBorder"]

@@ -10,12 +10,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 5a0595fdf7331c8b2825c6092b5b29a19974887b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d1bca9bed18de822de71ca441387adeaefc65ec3
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79302261"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649391"
 ---
 # <a name="use-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları’nı Kullanma
 
@@ -157,7 +157,7 @@ Visual Studio ile çeşitli Unity oyuncularının geliştirme yapılarını hata
 
    ![Bağlanmak için Birlik'in bir örneğini seçin.](../cross-platform/media/vstu_attach-debugger.png "vstu_connection_to_unity")
 
-   **Proje**
+   **Project**
 
    Bu Birlik örneğinde çalışan Birlik projesinin adı.
 
@@ -202,7 +202,7 @@ Burada açıklanan senaryonun kaynak koduna sahip olduğunuzu varsayıldığın�
 
    DLL'nin hata ayıklama sembollerini içerdiğinden ve DLL kodunu kaynak kod formuyla eşledikleri için PDB dosyaları hata ayıklama için gereklidir. Eski çalışma süresini hedefliyorsanız, Visual Studio Tools for Unity bir DLL oluşturmak için DLL ve PDB'den gelen bilgileri kullanır. MDB dosyası, eski Unity komut dosyası altyapısı tarafından kullanılan hata ayıklama sembolü biçimidir. Yeni çalışma süresini hedefliyorsanız ve Portable-PDB kullanıyorsanız, Yeni Unity çalışma zamanı Taşınabilir PDB'leri yerel olarak tüketebildiği için Visual Studio Tools for Unity herhangi bir sembol dönüştürme yapmaya çalışmaz.
 
-   PDB üretimi hakkında daha fazla bilgiyi [burada](/visualstudio/debugger/how-to-set-debug-and-release-configurations)bulabilirsiniz. Yeni çalışma süresini hedefliyorsanız, portable-PDB'yi düzgün bir şekilde oluşturmak için lütfen "Hata Ayıklama Bilgileri"nin "Taşınabilir" olarak ayarlandıklarına emin olun. Eski çalışma süresini hedefliyorsanız, "Tam" kullanmanız gerekir.
+   PDB üretimi hakkında daha fazla bilgiyi [burada](../debugger/how-to-set-debug-and-release-configurations.md)bulabilirsiniz. Yeni çalışma süresini hedefliyorsanız, portable-PDB'yi düzgün bir şekilde oluşturmak için lütfen "Hata Ayıklama Bilgileri"nin "Taşınabilir" olarak ayarlandıklarına emin olun. Eski çalışma süresini hedefliyorsanız, "Tam" kullanmanız gerekir.
 
 4. Kodunuzu hata ayıklamak. Artık DLL kaynak kodunuzu Unity projenizin kaynak koduyla birlikte hata ayıklayabilir ve kesme noktaları ve kod üzerinden geçiş gibi alışık olduğunuz tüm hata ayıklama özelliklerini kullanabilirsiniz.
 

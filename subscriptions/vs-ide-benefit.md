@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: c4b13464-76be-40f1-ad60-ed79ee264b12
-ms.date: 03/25/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 description: Visual Studio aboneliğinize dahil olan Visual Studio IDE'yi nasıl indirip yükleyebilirsiniz öğrenin.
-ms.openlocfilehash: 154e5449603a8a92d2c2a52887fc4631b8dd0ab9
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: 84666b0fd4362002fe15b21a6f23cd96c9cdc6a1
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273978"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649547"
 ---
 # <a name="the-visual-studio-2019-benefit"></a>Visual Studio 2019 parası
 
@@ -23,7 +23,7 @@ Visual Studio abonesi olarak Visual Studio IDE'ye erişebilirsiniz.  Belirli sü
 *(Visual Studio Enterprise bu örnek için kullanılır.)*
 
 IDE'yi indirmek için:
-1. Oturum [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)aç.
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 2. Araçlar bölümünde Kiremit'i görsel studio IDE döşemesini bulun ve yardım döşemesinin altındaki **İndir** düğmesine tıklayın.  [İndirilenler](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs) sayfasından da indirebilirsiniz.
    > [!div class="mx-imgBorder"]
    > ![Visual Studio Enterprise karo](_img/vs-ide-experience/vs-ide-tile.png)

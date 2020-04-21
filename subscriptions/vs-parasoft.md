@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 00c1f300-d04e-4695-815e-775ffbf0f931
-ms.date: 03/26/2020
+ms.date: 04/20/2020
 ms.topic: conceptual
 description: Visual Studio aboneliğinizde yer alan Parasoft Virtualize/SOA Test Professional aboneliğini nasıl etkinleştireceklerinizi öğrenin.
-ms.openlocfilehash: 5f6673ecd3721232feb727ceda2c399e2ee12348
-ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
+ms.openlocfilehash: 320223c76178259d86c2abc942a5852115c6c94a
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301903"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649461"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Parasoft Virtualize/SOAtest Professional Desktop
 
@@ -47,7 +47,7 @@ Daha erken ve daha sık test edin.  Kullanılamayan gelişen uygulama ve sisteml
 
 9. İstediğiniz dili seçin ve **Tamam'ı**tıklatın.
 
-10. Parasoft SOAtest & Virtualize Kurulum Sihirbazı başlayacaktır.  **İleri**'ye tıklayın.
+10. Parasoft SOAtest & Virtualize Kurulum Sihirbazı başlayacaktır.  **İleri**’ye tıklayın.
     > [!div class="mx-imgBorder"]
     > ![Parasoft Benefit Kurulum Başlat](_img/vs-parasoft/vs-parasoft-start-install.png)
 

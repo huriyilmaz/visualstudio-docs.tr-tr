@@ -2,7 +2,7 @@
 title: Bir Düğüm.js ve Tepki uygulaması oluşturun
 description: Bu eğitimde, Visual Studio için Node.js araçlarını kullanarak bir uygulama oluşturmak
 ms.custom: mvc
-ms.date: 11/01/2019
+ms.date: 4/20/2020
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -12,18 +12,18 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 55086c473929158f50f05db790cf5842f1b696db
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 265445306babf198c3d0063252846414a589a29c
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79550021"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649236"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Öğretici: Visual Studio'da Bir Düğüm.js ve React uygulaması oluşturun
 
 Visual Studio kolayca bir Node.js proje oluşturmak ve Node.js destekleyen IntelliSense ve diğer yerleşik özellikleri deneyim sağlar. Visual Studio için bu öğreticide, Visual Studio şablonundan bir Düğüm.js web uygulama projesi oluşturursunuz. Ardından React'i kullanarak basit bir uygulama oluşturursunuz.
 
-Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 > * Node.js projesi oluşturma
 > * npm paketleri ekle
@@ -55,7 +55,7 @@ JSX, genellikle Yabancı Ay Öğelerini tanımlamak için React ile kullanılan 
 
 webpack, JavaScript dosyalarını bir tarayıcıda çalıştırabilmeleri için paketler. Ayrıca, diğer kaynakları ve varlıkları dönüştürebilir veya paketleyebilir. Genellikle, Düz JavaScript JSX veya TypeScript kodu transpile Babel veya TypeScript gibi bir derleyici belirtmek için kullanılır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * Visual Studio yüklü ve Node.js geliştirme iş yükünü yüklü olmalıdır.
 
@@ -72,7 +72,7 @@ webpack, JavaScript dosyalarını bir tarayıcıda çalıştırabilmeleri için 
 
 * Düğüm.js çalışma saatini yüklemelisiniz.
 
-    Bu öğretici sürüm 10.16.0 ile test edilmiştir.
+    Bu öğretici sürüm 12.6.2 ile test edilmiştir.
 
     Yüklü değilse, dış çerçeveler ve kitaplıklarla en iyi uyumluluk için LTS sürümünü [Node.js](https://nodejs.org/en/download/) web sitesinden yüklemenizi öneririz. Node.js 32-bit ve 64-bit mimariler için inşa edilmiştir. Visual Studio'daki Düğüm.js iş yüküne dahil olan Düğüm.js araçları her iki sürümü de destekler. Yalnızca bir tane gereklidir ve Node.js yükleyicisi aynı anda yalnızca bir tanenin yüklenmesini destekler.
     
@@ -125,7 +125,7 @@ Bu uygulama, doğru çalışması için bir dizi npm modülü gerektirir.
 
 1. Solution Explorer'da (sağ bölme), projedeki **npm** düğümüne sağ tıklayın ve **Yeni npm Paketlerini Yükle'yi**seçin.
 
-    Yeni **npm Paketleri Yükle** iletişim kutusunda, en güncel paket sürümünü yüklemeyi veya bir sürüm belirtmeyi seçebilirsiniz. Bu paketlerin geçerli sürümünü yüklemeyi seçerseniz, ancak daha sonra beklenmeyen hatalarla karşılaştıysanız, bu adımlarda daha sonra açıklanan tam paket sürümlerini yüklemeniz gerekebilir.
+    Yeni **npm Paketleri Yükle** iletişim kutusunda, en güncel paket sürümünü yüklemeyi veya bir sürüm belirtmeyi seçebilirsiniz. Bu paketlerin geçerli sürümünü yüklemeyi seçerseniz, ancak daha sonra beklenmeyen hatalarla karşılaştıysanız, daha sonra bu adımlarda açıklanan tam paket sürümlerini yüklemek isteyebilirsiniz.
 
 1. Yeni **npm Paketleri Yükle** iletişim kutusunda, tepki paketini arayın ve yüklemek için **Paketi Yükle'yi** seçin.
 
@@ -139,14 +139,14 @@ Bu uygulama, doğru çalışması için bir dizi npm modülü gerektirir.
 
     ```json
     "dependencies": {
-      "express": "~4.16.4",
+      "express": "~4.17.1",
       "path": "~0.12.7",
-      "react": "~16.6.0",
-      "react-dom": "~16.6.0",
-      "ts-loader": "~5.3.0",
-      "typescript": "~3.1.5",
-      "webpack": "~4.23.1",
-      "webpack-cli": "~3.1.2"
+      "react": "~16.13.1",
+      "react-dom": "~16.13.1",
+      "ts-loader": "~7.0.1",
+      "typescript": "~3.8.3",
+      "webpack": "~4.42.1",
+      "webpack-cli": "~3.3.11"
     }
     ```
 
@@ -154,7 +154,9 @@ Bu uygulama, doğru çalışması için bir dizi npm modülü gerektirir.
 
 1. Değişiklikleri kaydedin.
 
-1. Projenizde **npm** düğümüne sağ tıklayın ve **NPm Paketlerini Güncelleştir'i**seçin.
+1. Projenizde **npm** düğümüne sağ tıklayın ve **NPm Paketlerini Yükle'yi**seçin.
+
+    Bu komut npm yükleme komutunu doğrudan çalıştırın.
 
     Alt bölmede, paketleri yükleme de ilerleme görmek için **Çıktı** penceresini seçin. Yükleme birkaç dakika sürebilir ve sonuçları hemen göremeyebilirsiniz. Çıktıyı görmek için, **Çıktı** penceresindeki **alandan çıktıyı göster'de** **Npm'i** seçtiğinizden emin olun.
 

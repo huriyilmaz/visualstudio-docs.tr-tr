@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7173bc1ebc5507eadf319c0374f4c878dea62857
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 84138a69dbb42fc349c12276fd7cca4b593e4d47
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739782"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649362"
 ---
 # <a name="command-flag-eelement"></a>Komut bayrağı Eelement
 Ana öğesini değiştirir.
@@ -60,7 +60,6 @@ Ana öğesini değiştirir.
 |PostExec|Komutu engellemeyen yapar. Geliştirme ortamı, tüm ön işleme sorguları tamamlanana kadar yürütmeyi erteler.<br /><br /> Geçerli:`Button`|
 |RouteToDocs|Komut etkin belgeye yönlendirilir.<br /><br /> Geçerli:`Button`|
 |StretchYatay|Bu bayrak ayarlandığında, genişlik açılan kutu için minimum genişlik olur ve araç çubuğunda yer varsa, açılan kutu kullanılabilir alanı doldurmak için uzanır. Bu yalnızca araç çubuğu yatay olarak sabitlenmişse ve araç çubuğundaki yalnızca bir açılan kutu bayrağı kullanabilirse (bayrak ilk açılan kutu dışında tüm bunlara göz ardı edilir).<br /><br /> Geçerli:`Combo`|
-|TextMenuUseButton|Menüler `ButtonText` için alanı kullanın. Varsayılan alan `MenuText` belirtilirse.<br /><br /> Geçerli:`Button`|
 |Metin Değişiklikleri|Komut veya menü metni genellikle `QueryStatus` yöntem aracılığıyla çalışma zamanında değiştirilebilir.<br /><br /> Geçerli: `Button`,`Menu`|
 |Metin DeğişiklikleriDüğme|Geçerli:`Button`|
 |TextisAnchorCommand|Menü denetleyicisi için, menünün metni varsayılan (çapa) komutundan alınır. Çapa komutu seçilen veya kilitlenen son komutdur. Bu bayrak ayarlı değilse, menü denetleyicisi kendi `MenuText` alanını kullanır. Ancak, menü denetleyicisini tıklattığınızda yine de bu denetleyiciden seçilen son komutu etkinleştirin.<br /><br /> Bu bayrağı `TextChanges` bayrakla birleştirmenizi öneririz.<br /><br /> Bu bayrak yalnızca MenuController veya MenuControllerLatched türü menüler için geçerlidir.<br /><br /> Geçerli:`Menu`|

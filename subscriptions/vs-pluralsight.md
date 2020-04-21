@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
-ms.date: 03/26/2020
+ms.date: 04/20/2020
 ms.topic: conceptual
 description: Belirli Visual Studio abonelikleriyle birlikte dahil edilen Pluralsight eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: 71af6f269fe84ef633215dcb526b89dffe8481a0
-ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
+ms.openlocfilehash: 6ae0a77cf4849f0e648eeed17830911c90c8b584
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301876"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649794"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde çoğul görüşlülük eğitimi avantajları
 
@@ -25,7 +25,7 @@ Aşağıdaki tabloda, her Visual Studio abonelik türü için pluralsight abonel
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 1. Aboneliğinizi etkinleştirmek için, [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) Profesyonel Gelişim bölümünde bulunan Pluralsight avantaj döşemesindeki Kod **Al** bağlantısına bağlanın ve tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Pluralsight Yarar Karo](_img/vs-pluralsight/vs-pluralsight-3month-tile.png)
+   > ![Pluralsight Yarar Karo](_img/vs-pluralsight/vs-pluralsight-6month-tile.png)
    >
    > [!IMPORTANT]
    > Pluralsight avantaj döşemesindeki "Kod Al" bağlantısını tıklattığınızda aşağıdaki mesajı alabilirsiniz:

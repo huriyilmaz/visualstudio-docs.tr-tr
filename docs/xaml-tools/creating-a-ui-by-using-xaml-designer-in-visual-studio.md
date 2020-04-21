@@ -12,16 +12,16 @@ ms.assetid: c54969a7-d75a-4a35-9b37-af7a596a7c24
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: a2a0e25779df1e0b91a69518dc2257119e33cca4
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 31a31e413ecd39b7d15f8ea3cd0417c2493463ca
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79190344"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649618"
 ---
 # <a name="create-a-ui-by-using-xaml-designer"></a>XAML Tasarımcısı’nı kullanarak bir kullanıcı arabirimi oluşturma
 
-Visual Studio ve Blend for Visual Studio'daki XAML Designer, WPF, UWP ve Xamarin.Forms uygulamaları gibi XAML tabanlı uygulamaları tasarlamanıza yardımcı olacak görsel bir arayüz sağlar. Denetimleri Toolbox penceresinden sürükleyerek uygulamalarınız için kullanıcı arabirimleri oluşturabilir (Visual Studio için Karışım'daki Varlıklar penceresi) ve Özellikler penceresinde özellikleri ayarlayabilirsiniz. XAML'yi doğrudan XAML görünümünde de edinebilirsiniz.
+Visual Studio ve Blend for Visual Studio'daki XAML Designer, WPF ve UWP gibi XAML tabanlı uygulamalar tasarlamanıza yardımcı olacak görsel bir arayüz sağlar. Denetimleri Toolbox penceresinden sürükleyerek uygulamalarınız için kullanıcı arabirimleri oluşturabilir (Visual Studio için Karışım'daki Varlıklar penceresi) ve Özellikler penceresinde özellikleri ayarlayabilirsiniz. XAML'yi doğrudan XAML görünümünde de edinebilirsiniz.
 
 Gelişmiş kullanıcılar için [XAML Tasarımcısı'nı](https://github.com/microsoft/xaml-designer-extensibility/blob/master/documents/xaml-designer-extensibility-migration.md)bile özelleştirebilirsiniz.
 

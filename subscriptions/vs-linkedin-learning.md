@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
-ms.date: 03/25/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 description: Belirli Visual Studio aboneliklerine dahil olan LinkedIn Premium aboneliğinin bir parçası olarak yer alan LinkedIn Learning avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 57744c21123188448048b469aa06153cf81a949f
-ms.sourcegitcommit: dfa9476b69851c28b684ece66980bee735fef8fd
+ms.openlocfilehash: a0b837ce4a86b48acb690030c1a96064b336cd61
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80273965"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649522"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde LinkedIn Learning avantajı
 
@@ -23,11 +23,11 @@ LinkedIn Learning avantajınızdan yararlanmak için bir LinkedIn hesabınız ol
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 LinkedIn Premium aboneliğinizi ve LinkedIn Learning avantajınızı etkinleştirmek için:
-1. Oturum [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)aç.
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 
 2. LinkedIn Learning döşemesini Eğitim kategorisinde bulun ve **kod al** bağlantısını tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![LinkedIn Öğrenme Avantajı Karo](_img/vs-linkedin/vs-linkedin-3-month-tile.png)
+   > ![LinkedIn Öğrenme Avantajı Karo](_img/vs-linkedin/vs-linkedin-6-month-tile.png)
 
 3. Zaten bir LinkedIn hesabınız varsa ve otomatik olarak oturum açmışsanız, hemen LinkedIn Learning parası etkinleştirme sayfasına götürülürsünüz.  LinkedIn hesabınız varsa ancak otomatik olarak oturum açmadıysanız, kullanıcı adınızı ve şifrenizi girin ve oturum **açın'ı**tıklatın.  Teklifinizi etkinleştirmek için lütfen [bu adımı](#activate-your-offer) atlayın.
 

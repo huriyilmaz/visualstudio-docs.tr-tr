@@ -4,15 +4,15 @@ author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
-ms.date: 03/26/2020
+ms.date: 04/20/2020
 ms.topic: conceptual
 description: Visual Studio aboneliğinize dahil olan Windows Geliştirici Hesabı hakkında bilgi edinin.
-ms.openlocfilehash: 795eccdf72fad7df760d709b44351444b6dea424
-ms.sourcegitcommit: 104d75ade6f48538620743d1c836fb26bdd0ade5
+ms.openlocfilehash: c3764330b5ace58f976f726770fa7a3e9ed2a4ed
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301849"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649725"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Windows Geliştirici hesabı
 Belirli Visual Studio aboneliğine dahil olan Windows Geliştirici Hesabınız, Windows Mağazası'na ücretsiz ve ücretli Windows uygulamaları göndermenize olanak tanır.
@@ -22,7 +22,7 @@ Windows Geliştirici Hesabınızı kullanmak için, varolan bir hesabı kullanar
 
 Bu işlem için "özel" bir tarayıcı penceresi oluşturmanızı öneririz.  Örneğin, Google Chrome'da yeni bir "gizli" pencere oluşturun.  Internet Explorer'da yeni bir "Özel" pencere oluşturun.
 
-1. Oturum [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)aç.
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) adresinde oturum açın.
 2. Araçlar bölümündeWindows Developer Account döşemesini bulun ve avantaj döşemesinin altındaki **Kodu Al** bağlantısını tıklayın.  Kodu panonuza kopyalayın ve **ardından Etkinleştir'i**tıklatın.
    > [!div class="mx-imgBorder"]
    > ![Windows Geliştirici Yarar Döşemesi](_img/vs-windows-dev/vs-windows-dev-tile.png)
@@ -36,7 +36,7 @@ Bu işlem için "özel" bir tarayıcı penceresi oluşturmanızı öneririz.  Ö
 7. Yayımcı görüntü adınızı oluşturun.  Bu, müşterilerinizin uygulamalarınızla, eklentilerinizle ve hizmetlerinizle ilişkili olarak göreceği benzersiz ad olacaktır.
 8. Kişi bilgilerinizi ve tercih edilen e-posta dilini sağlayın, ardından **İleri'yi**tıklatın.
 9. Parolanızı doğrulamanız istenebilir.  Girin ve **Oturum Aç'ı**tıklatın.
-10. Kayıt - Ödeme sayfasında, daha önce kopyaladığınız kodu Promosyon Kodu alanına yapıştırın.  Sayfa, *ödeme gerektirmediğini*göstermek için güncellenir.  **İleri**'ye tıklayın.
+10. Kayıt - Ödeme sayfasında, daha önce kopyaladığınız kodu Promosyon Kodu alanına yapıştırın.  Sayfa, *ödeme gerektirmediğini*göstermek için güncellenir.  **İleri**’ye tıklayın.
 11. Hesap bilgilerinizi gözden geçirin, Uygulama Geliştirici Sözleşmesini gözden geçirin ve şartları ve koşulları kabul ettiğini belirtmek için onay kutusunu tıklatın.  Ardından, **Son**'a tıklayın.
 12. Windows Geliştirici Hesabınızı kullanmaya başlamak için **panoya Git'i** tıklatın!
 

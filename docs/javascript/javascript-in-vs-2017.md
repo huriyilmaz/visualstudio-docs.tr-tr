@@ -12,12 +12,12 @@ caps.latest.revision: 1
 author: bowdenk7
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 75b2a336cf9a229b4834b68e0f7bed5d6b1174f4
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+ms.openlocfilehash: 9df1b66f1a2407d523e38cd71fc9ffa993cd2d92
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233079"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649623"
 ---
 # <a name="javascript-in-visual-studio-2017"></a>Visual Studio 2017’de JavaScript
 
@@ -58,7 +58,7 @@ Tsconfig dosyası için gerekli ayarlar aşağıdaki gibidir:
 Çıktı konumu ve proje dışı klasörler gibi `node_modules` `temp`bu ayara eklenmelidir.
 - `enableAutoDiscovery`: Bu ayar, tanım dosyalarının daha önce açıklandığı gibi otomatik olarak algılanmasını ve indirilmesini sağlar.
 - `compileOnSave`: Bu ayar derleyiciye visual studio'da bir kaynak dosya kaydedilen herhangi bir zaman yeniden derlemesi gerektirebilip derlemesi gerektiğini söyler.
-- `typeAcquisition`: Bu ayar kümesi otomatik tür edinimdavranışını kontrol eder [(bu bölümde](/visualstudio/ide/javascript-intellisense#Auto)daha fazla açıklayınız)
+- `typeAcquisition`: Bu ayar kümesi otomatik tür edinimdavranışını kontrol eder [(bu bölümde](../ide/javascript-intellisense.md#Auto)daha fazla açıklayınız)
 
 JavaScript dosyalarını CommonJS modüllerine dönüştürmek ve bunları `./out` bir klasöre yerleştirmek `tsconfig.json` için aşağıdaki dosyayı kullanabilirsiniz:
 
@@ -260,7 +260,7 @@ Burada beyanname (`.d.ts`) dosya yazma [here](http://www.typescriptlang.org/docs
 Yeni dil hizmeti yürütme altyapısı yerine statik çözümle güçlendirilmeolduğundan (farklar hakkında bilgi için [bu sorunu](https://github.com/Microsoft/TypeScript/issues/4789) okuyun), artık algılanamayacak birkaç JavaScript deleği vardır.
 En yaygın desen "expando" desenidir.
 Şu anda dil hizmeti, bildirimden sonra yapıştırılmış özelliklere sahip nesneler üzerinde IntelliSense sağlayamaz.
-Örnek:
+Örneğin:
 
 ```js
 var obj = {};

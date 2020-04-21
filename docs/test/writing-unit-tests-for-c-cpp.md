@@ -8,12 +8,12 @@ manager: markl
 ms.workload:
 - cplusplus
 author: corob-msft
-ms.openlocfilehash: 354ccad121884c99541057a2e0e0a47d9d2a4341
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0eaf41dc0bf3e21dfbf4018261844181d594f0d5
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78937549"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649609"
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio'da C/C++ için birim testleri yazma
 
@@ -79,7 +79,7 @@ Test altındaki projedeki işlevlere erişimi etkinleştirmek için, test projen
 
 ### <a name="link-to-object-or-library-files"></a>Nesne veya kitaplık dosyalarına bağlantı
 
-Test kodu sınamak istediğiniz işlevleri dışa aktarmazsa, test projesinin bağımlılıklarına .obj veya .lib dosyaları ekleyebilirsiniz. Daha fazla bilgi için [bkz.](/visualstudio/test/how-to-use-microsoft-test-framework-for-cpp#object_files)
+Test kodu sınamak istediğiniz işlevleri dışa aktarmazsa, test projesinin bağımlılıklarına .obj veya .lib dosyaları ekleyebilirsiniz. Daha fazla bilgi için [bkz.](how-to-use-microsoft-test-framework-for-cpp.md#object_files)
 
 ### <a name="add-include-directives-for-header-files"></a>Üstbilgi dosyaları için #include yönergeleri ekleme
 

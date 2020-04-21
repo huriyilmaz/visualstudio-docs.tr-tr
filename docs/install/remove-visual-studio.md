@@ -22,12 +22,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b0e8c8fe10451e9e5906eabf7f4f65086d147904
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 98886df1c7fb09fa30d5c54abe19452780195b6a
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76113718"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649204"
 ---
 # <a name="remove-visual-studio"></a>Visual Studio'yı Kaldır
 
@@ -51,10 +51,10 @@ Büyük bir hata yla karşılaşırsanız ve Visual Studio'yu onaramıyor veya k
 1. Yönetici komut istemini açın. Yönetici komut istemini açmak için aşağıdaki adımları izleyin:
    * "Aramak için buraya yazın" kutusuna **cmd** yazın.
    * **Komut İstemi'ni**sağ tıklatın ve ardından **yönetici olarak Çalıştır'ı**seçin.
-1. `InstallCleanup.exe` Aracın tam yolunu girin ve tercih ettiğiniz komut satırı anahtarını ekleyin. Varsayılan olarak, aracın yolu aşağıdaki gibidir:
+1. `InstallCleanup.exe` Aracın tam yolunu girin ve tercih ettiğiniz komut satırı anahtarını ekleyin. Varsayılan olarak, aracın yolu aşağıdaki gibidir. Çift tırnak boşlukiçeren bir komut u içine:
 
    ```
-   C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe
+   "C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe"
    ```
 
    > [!NOTE]
@@ -64,7 +64,7 @@ Büyük bir hata yla karşılaşırsanız ve Visual Studio'yu onaramıyor veya k
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio yükleme](install-visual-studio.md)
+* [Visual Studio'yu yükleme](install-visual-studio.md)
 * [Visual Studio’yu güncelleştirme](update-visual-studio.md)
 * [Visual Studio’yu değiştirme](modify-visual-studio.md)
 * [Visual Studio'yu kaldırma](uninstall-visual-studio.md)

@@ -14,12 +14,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1834713ad114ab8a86e314bbe052f4873b308956
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 272d37ef9e73aa5dd0d10ca0210b18a945f993fd
+ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593583"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81649832"
 ---
 # <a name="security-page-project-designer"></a>Güvenlik Sayfası, Proje Tasarımcısı
 
@@ -76,11 +76,11 @@ Uygulamanın hata ayıklama ayarlarını kısıtlı izinlerle yapılandırmak i�
 
 - <xref:System.Security.Permissions.WebBrowserPermission>
 - <xref:System.Security.Permissions.MediaPermission>
-- [ClickOnce Uygulamaları İçin Kod Erişimi Güvenliği](../../deployment/code-access-security-for-clickonce-applications.md)
+- [ClickOnce Uygulamaları için Kod Erişim Güvenliği](../../deployment/code-access-security-for-clickonce-applications.md)
 - [Nasıl yapılır: ClickOnce Güvenlik Ayarlarını Etkinleştirme](../../deployment/how-to-enable-clickonce-security-settings.md)
 - [Nasıl yapılır: ClickOnce Uygulaması için Bir Güvenlik Bölgesi Ayarlama](../../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
 - [Nasıl yapılır: ClickOnce Uygulaması için Özel İzinleri Ayarlama](../../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
-- [Nasıl yapılır: Sınırlı İzinler ile ClickOnce Uygulamasında Hata Ayıklama](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)
-- [ClickOnce Güvenliği ve Dağıtımı](../../deployment/clickonce-security-and-deployment.md)
+- [Güvenli ClickOnce uygulamaları](../../deployment/securing-clickonce-applications.md)
+- [ClickOnce Güvenlik ve Dağıtım](../../deployment/clickonce-security-and-deployment.md)
 - [Proje Özellikleri Başvurusu](../../ide/reference/project-properties-reference.md)
 - [Gelişmiş Güvenlik Ayarları İletişim Kutusu](../../ide/reference/advanced-security-settings-dialog-box.md)
