@@ -447,7 +447,7 @@
             - name: Hata ayıklama sırasında XAML özelliklerini denetleme
               href: inspect-xaml-properties-while-debugging.md
             - name: XAML kodu çalıştırarak yazma ve hata ayıklama
-              href: xaml-hot-reload.md
+              href: ../xaml-tools/xaml-hot-reload.md
             - name: Blend'de XAML hatalarını ayıklama
               href: ../xaml-tools/debug-xaml-in-blend.md?toc=/visualstudio/debugger/toc.json
             - name: HTML ve CSS
@@ -507,7 +507,7 @@
                 - name: Hata ayıklama sırasında XAML özelliklerini denetleme
                   href: inspect-xaml-properties-while-debugging.md
                 - name: XAML kodu çalıştırarak yazma ve hata ayıklama
-                  href: xaml-hot-reload.md
+                  href: ../xaml-tools/xaml-hot-reload.md
                 - name: WPF Ağacı Görselleştiricisini kullanma
                   href: how-to-use-the-wpf-tree-visualizer.md
                 - name: WPF izleme bilgilerini görüntüleme

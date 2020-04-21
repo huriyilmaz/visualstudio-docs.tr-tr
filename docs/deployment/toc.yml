@@ -94,8 +94,6 @@
               href: how-to-set-a-security-zone-for-a-clickonce-application.md
             - name: ClickOnce uygulaması için özel izinleri ayarlama
               href: how-to-set-custom-permissions-for-a-clickonce-application.md
-            - name: Sınırlı izinler ile ClickOnce uygulamasında hata ayıklama
-              href: how-to-debug-a-clickonce-application-with-restricted-permissions.md
             - name: İstemci bilgisayarına güvenilir yayımcı ekleme
               href: how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md
             - name: Uygulama ve dağıtım bildirimlerini yeniden imzalama
