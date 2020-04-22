@@ -1,7 +1,7 @@
 ---
 title: Bir Düğüm.js ve Express uygulaması oluşturma
 description: Bu eğitimde, Visual Studio için Node.js araçlarını kullanarak bir uygulama oluşturmak
-ms.date: 09/24/2018
+ms.date: 04/20/2020
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 260bc6ff6eb2d0bfbf0b9abd19062892c358728a
-ms.sourcegitcommit: b4e0cc76d94fe8cf6d238c4cc09512d17131a195
+ms.openlocfilehash: 3d91f20dec22379d79b5f295fccf49aae0733a24
+ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81224530"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81744895"
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>Öğretici: Visual Studio'da Bir Düğüm.js ve Express uygulaması oluşturun
 
@@ -34,7 +34,7 @@ Visual Studio'yu henüz yüklemediyseniz, visual [studio indirme sayfasına](htt
 
 ::: moniker-end
 
-Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 > * Node.js projesi oluşturma
 > * Bazı kod ekleme
@@ -109,13 +109,13 @@ Bu öğreticide, Bir Düğüm.js ve ekspres uygulama için kod içeren basit bir
 
     (3) npm düğümü yüklü npm paketlerini gösterir. NPM düğümlerini aramak ve bir iletişim kutusu kullanarak npm paketlerini yüklemek veya *paketleri package.json'daki* ayarları ve npm düğümündeki sağ tıklatma seçeneklerini kullanarak yüklemek ve güncellemek için npm düğümüne sağ tıklayabilirsiniz.
 
-    (4) *package.json* yerel olarak yüklenmiş paketler için paket bağımlılıkları ve paket sürümleri yönetmek için npm tarafından kullanılan bir dosyadır. Bu dosya hakkında daha fazla bilgi için [package.json yapılandırması](../javascript/configure-packages-with-package-json.md)
+    (4) *package.json* yerel olarak yüklenmiş paketler için paket bağımlılıkları ve paket sürümleri yönetmek için npm tarafından kullanılan bir dosyadır. Daha fazla bilgi için [npm paketlerini yönet'e](../javascript/npm-package-management.md)bakın.
 
     (5) *app.js* gibi proje dosyaları proje düğümü altında gösterir. *app.js* proje başlangıç dosyası dır ve bu yüzden **kalın**gösterir . Projedeki bir dosyayı sağ tıklayarak ve **Node.js başlangıç dosyası olarak**Ayarla'yı seçerek başlangıç dosyasını ayarlayabilirsiniz.
 
 1. **npm** düğümini açın ve gerekli tüm npm paketlerinin mevcut olduğundan emin olun.
 
-    Herhangi bir paket eksikse (ünlem işareti simgesi), **npm** düğümüne sağ tıklayıp **Eksik npm Paketlerini Yükle'yi**seçebilirsiniz.
+    Herhangi bir paket eksikse (ünlem işareti simgesi), **npm** düğümüne sağ tıklayıp **NPm Paketlerini Yükle'yi**seçebilirsiniz.
 
 ## <a name="add-some-code"></a>Bazı kod ekleme
 
@@ -194,7 +194,7 @@ IntelliSense kod yazarken size yardımcı olan bir Visual Studio aracıdır.
 
     Bu iletinin son satırı, JavaScript yorumlayıcısının virgül beklediğini söyler (`,`).
 
-1. Alt bölmede **Hata Listesi** sekmesini tıklatın.
+1. Alt bölmede, Hata **Listesi** sekmesini tıklatın ve bildirilen sorun türü için **Yapı + IntelliSense'i** seçin.
 
     Dosya adı ve satır numarasıyla birlikte uyarı yı ve açıklamayı görürsünüz.
 
@@ -218,7 +218,7 @@ Bir sonraki uygulama, Visual Studio hata ayıklama ekli çalıştıracak. Bunu y
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. Microsoft Edge veya Chrome gibi Hata Ayıklama araç çubuğundaki hata ayıklama hedefini seçin.
+1. Hata ayıklama hedefini **Web Sunucusu (Google Chrome)** veya Web **Sunucusu (Microsoft Edge)** gibi hata ayıklama araç çubuğunda seçin.
 
     ::: moniker range=">=vs-2019"
     ![Hata ayıklama hedefini seçin](../javascript/media/vs-2019/tutorial-nodejs-deploy-target.png)

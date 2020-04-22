@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 680d52ff04553d399b6abeb53919d8aafd4fa792
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 56b0c0defe5593c9dc0e2111ef5984a5c51eaf55
+ms.sourcegitcommit: a7f781d5a089e6aab6b073a07f3d4d2967af8aa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79301694"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760140"
 ---
 # <a name="code-analysis-faq"></a>Kod analizi SSS
 
@@ -87,6 +87,12 @@ Kural kümelerine ve EditorConfig dosyalarına ek olarak, bazı çözümleyicile
      <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.5\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.5\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
      ...
      ```
+
+## <a name="code-analysis-solution-property-page"></a>Kod analizi çözüm özelliği sayfası
+
+**S**: Çözüm için Kod Analizi özellik sayfası nerededir?
+
+**C**: Çözüm düzeyindeki Kod Analizi özelliği sayfası daha güvenilir paylaşılan özellik grubu lehine kaldırıldı. Kod Çözümlemesi'ni proje düzeyinde yönetmek için Kod Analizi özellik sayfası hala kullanılabilir. (Yönetilen projeler için kural kümelerinden kural yapılandırması için EditorConfig'e geçiş yapmanızı da öneririz.)  Bir çözüm veya repodaki birden çok/tüm projedeki kural kümelerini paylaşmak için, paylaşılan bir sahne/hedef dosyasında veya Directory.props/Directory.targets dosyasında CodeAnalysisRuleSet özelliğine sahip bir özellik grubu tanımlamanızı öneririz. Tüm projelerinizin içe aktardığı bu tür ortak sahne veya hedefleriniz yoksa, [dizinveya alt dizinlerinde tanımlanan tüm proje dosyalarında otomatik olarak içe aktarılan bir üst düzey çözüm dizininde böyle bir özellik grubunu dizin.sahne veya Dizin hedeflerine eklemeyi](https://docs.microsoft.com/visualstudio/msbuild/customize-your-build?directorybuildprops-and-directorybuildtargets)düşünmelisiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

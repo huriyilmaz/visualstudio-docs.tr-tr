@@ -77,6 +77,7 @@
 ### Abonelikleri atama
 #### [Tek kullanıcı ekleme](assign-license.md)
 #### [Birden çok kullanıcı ekleme](assign-license-bulk.md)
+#### [Özel abonelikler atama](assign-guid.md)
 ### [Abonelikleri düzenleme](edit-license.md)
 ### [Abonelikleri silme](delete-license.md)
 ### [Abonelik arama](search-license.md)

@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: a1995353d00f9e48811f388e1d853c93850b85f4
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 882c3a148164ab88412a817abd72d0608fadf9b2
+ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "78235112"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81744980"
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-vuejs-app"></a>Quickstart: İlk Vue.js uygulamanızı oluşturmak için Visual Studio'yı kullanın
 
@@ -26,7 +26,7 @@ Visual Studio entegre geliştirme ortamı (IDE) için bu 5-10 dakikalık giriş,
 > [!IMPORTANT]
 > Bu makale, Visual Studio 2017 sürüm 15.8'den başlayarak kullanılabilen Vue.js şablonu gerektirir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * Visual Studio yüklü ve Node.js geliştirme iş yükünü yüklü olmalıdır.
 
@@ -103,19 +103,24 @@ Visual Studio entegre geliştirme ortamı (IDE) için bu 5-10 dakikalık giriş,
 
 ## <a name="build-the-project"></a>Projeyi derleme
 
+::: moniker range=">=vs-2019"
+1. Ardından, projeyi oluşturmak için **Yapı** > **Çözüm'üne** çözüm oluşturmayı seçin.
+
+1. Yapı sonuçlarını görmek için **Çıktı** penceresini denetleyin ve **listeden çıktıyı göster'i** **seçin.**
+::: moniker-end
+::: moniker range="vs-2017"
 1. (Yalnızca TypeScript projesi) Visual Studio'dan **Build** > **Clean Solution'ı**seçin.
 
-    ::: moniker range=">=vs-2019"
-    Visual Studio 2019 ile birlikte verilen TypeScript şablonunda bu adımı atlayın.
-    ::: moniker-end
+1. Ardından, projeyi oluşturmak için **Yapı** > **Çözüm'üne** çözüm oluşturmayı seçin.
 
-1. Ardından, projeyi oluşturmak için **Yapı** > **Çözüm'üne** çözüm oluşturmayı seçin. Yapı sonuçlarını görmek için **Çıktı** penceresini denetleyin ve **listeden çıktıyı göster'i** **seçin.**
+1. Yapı sonuçlarını görmek için **Çıktı** penceresini denetleyin ve **listeden çıktıyı göster'i** **seçin.**
+::: moniker-end
 
-    JavaScript Vue.js proje şablonu (ve TypeScript şablonunun `build` eski sürümleri) bir post build olayı yapılandırarak npm komut dosyasını kullanır. Bu ayarı değiştirmek istiyorsanız, Windows Gezgini'nden proje dosyasını*\<(projeadı\>.njsproj)* açın ve bu kod satırını bulun:
+JavaScript Vue.js proje şablonu (ve TypeScript şablonunun `build` eski sürümleri) bir post build olayı yapılandırarak npm komut dosyasını kullanır. Bu ayarı değiştirmek istiyorsanız, Windows Gezgini'nden proje dosyasını*\<(projeadı\>.njsproj)* açın ve bu kod satırını bulun:
 
-    ```xml
-    <PostBuildEvent>npm run build</PostBuildEvent>
-    ```
+```xml
+<PostBuildEvent>npm run build</PostBuildEvent>
+```
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
@@ -135,6 +140,6 @@ Bu Quickstart'ı tamamladığınız için tebrikler! Umarız Vue.js ile Visual S
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
+- [Vue.js](create-application-with-vuejs.md) için makale üzerinden gidin
 - [Node.js ve Express için Öğretici](tutorial-nodejs.md) ile gidin
-- [Node.js için Öğretici](tutorial-nodejs-with-react-and-jsx.md) geçmesi ve Tepki
 - [Uygulamayı Linux Uygulama Hizmetine dağıtın](../javascript/publish-nodejs-app-azure.md)

@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: af781f5735a3539d8b0e2d098bb9252bc60193fc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: edf5307984b4efc00a7c83c84fe5cb87954a93dd
+ms.sourcegitcommit: 5c804c42d24d35dcf2ba195aba9ce07031743f62
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "70180274"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81744933"
 ---
 # <a name="create-a-vuejs-application-using-nodejs-tools-for-visual-studio"></a>Visual Studio için Node.js Tools kullanarak bir Vue.js uygulaması oluşturun
 
@@ -29,7 +29,7 @@ Aşağıdaki yeni özellikler Visual Studio'da Vue.js uygulama geliştirmeyi des
 * `lang` *.vue* dosyalarındaki özniteliğin tanınması
 * Vue.js proje ve dosya şablonları
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * Visual Studio 2017 sürüm 15.8 veya daha sonraki bir sürümü yüklü ve **Node.js geliştirme** iş yükü olmalıdır.
 
@@ -51,7 +51,7 @@ Aşağıdaki yeni özellikler Visual Studio'da Vue.js uygulama geliştirmeyi des
 
     Yüklü değilseniz, [Node.js](https://nodejs.org/en/download/) web sitesinden LTS sürümünü yükleyin. Genel olarak, Visual Studio yüklenen Node.js çalışma süresini otomatik olarak algılar. Yüklü bir çalışma zamanı algılamazsa, projenizi özellikler sayfasındayüklü çalışma süresine başvurmak üzere yapılandırabilirsiniz. (Bir proje oluşturduktan sonra, proje düğümüne sağ tıklayın ve **Özellikler'i**seçin).
 
-## <a name="create-a-vuejs-project-using-a-template"></a>Şablon kullanarak Bir Vue.js projesi oluşturma
+## <a name="create-a-vuejs-project-using-nodejs"></a>Node.js kullanarak bir Vue.js projesi oluşturun
 
 Yeni bir proje oluşturmak için yeni Vue.js şablonlarını kullanabilirsiniz. Şablonun kullanımı başlamak için en kolay yoldur. Ayrıntılı adımlar [için ilk Vue.js uygulamanızı oluşturmak için Visual Studio'u kullanın'](../javascript/quickstart-vuejs-with-nodejs.md)a bakın.
 

@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 31eab6c10451bb6be9e53870bf2724c188d650f4
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: 0b4b699c01522878d83e59aadb2c6a54e9d7517f
+ms.sourcegitcommit: a7f781d5a089e6aab6b073a07f3d4d2967af8aa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649505"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760172"
 ---
 # <a name="manage-npm-packages-in-visual-studio"></a>Visual Studio'da npm paketlerini yönetin
 
@@ -84,15 +84,15 @@ npm paketleri Solution Explorer'da gösterilir. **npm** düğümü altındaki gi
 ::: moniker range=">=vs-2019"
 Aşağıdaki eylemlerden birini yapmak için **npm** düğümüne sağ tıklayın:
 
-* **Yeni npm Paketleri yükleyin** Yeni paketler yüklemek için UI'yi açar
+* **Yeni npm Paketleri yükleyin** Yeni paketler yüklemek için UI'yi açar.
 * **npm Paketleri yükleyin** *paket.json*listelenen tüm paketleri yüklemek için npm yükleme komutunu çalıştırAr. (Çalışır `npm install`.)
-* **npm Paketlerini Güncelleştir** *Paketi package.json'da*belirtilen sürüme güncelleştirir. (Çalışır `npm update --save`.)
+* **npm Paketlerini Güncelleştir** *Paketleri paket.json'da*belirtilen semver aralığına göre en son sürümlere günceller. (Çalışır `npm update --save`.). Semver aralıkları genellikle "~" veya "^" kullanılarak belirtilir. Daha fazla bilgi için, [package.json yapılandırma.](../javascript/configure-packages-with-package-json.md)
 
 Aşağıdaki eylemlerden birini yapmak için bir paket düğümüne sağ tıklayın:
 
 * **npm Paketi(ler) yükleyin** *package.json*listelenen paket sürümünü yüklemek için npm yükleme komutunu çalıştırAr. (Çalışır `npm install`.)
-* **güncelleme npm Paketi(ler)** *Paketi package.json'da*belirtilen sürüme güncelleştirir. (Çalıştır `npm update --save`.)
-* **npm Paketi(ler) kaldır** Paketi kaldırın ve *package.json* kaldırın (Çalışır `npm uninstall --save`.)
+* **güncelleme npm Paketi(ler)** *Paketi paket.json'da*belirtilen semver aralığına göre en son sürüme güncelleştirir. (Çalıştır `npm update --save`.) Semver aralıkları genellikle "~" veya "^" kullanılarak belirtilir.
+* **npm Paketi(ler) kaldır** Paketi kaldırır ve *package.json* (Çalışır `npm uninstall --save`.) kaldırır
 ::: moniker-end
 ::: moniker range="vs-2017"
 Aşağıdaki eylemlerden birini yapmak için bir paket düğümüne veya **npm** düğümüne sağ tıklayın:

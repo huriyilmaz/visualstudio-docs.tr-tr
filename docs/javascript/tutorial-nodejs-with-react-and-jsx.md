@@ -1,8 +1,8 @@
 ---
 title: Bir Düğüm.js ve Tepki uygulaması oluşturun
 description: Bu eğitimde, Visual Studio için Node.js araçlarını kullanarak bir uygulama oluşturmak
-ms.custom: mvc
-ms.date: 4/20/2020
+ms.custom: ''
+ms.date: 4/21/2020
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -12,12 +12,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 265445306babf198c3d0063252846414a589a29c
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: c6813e0ad482bb211269c9da3950842dda7f6abd
+ms.sourcegitcommit: a7f781d5a089e6aab6b073a07f3d4d2967af8aa6
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649236"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81760089"
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>Öğretici: Visual Studio'da Bir Düğüm.js ve React uygulaması oluşturun
 
@@ -106,7 +106,7 @@ webpack, JavaScript dosyalarını bir tarayıcıda çalıştırabilmeleri için 
 
     (3) npm düğümü yüklü npm paketlerini gösterir. NPM düğümlerini aramak ve bir iletişim kutusu kullanarak npm paketlerini yüklemek veya *paketleri package.json'daki* ayarları ve npm düğümündeki sağ tıklatma seçeneklerini kullanarak yüklemek ve güncellemek için npm düğümüne sağ tıklayabilirsiniz.
 
-    (4) *package.json* yerel olarak yüklenmiş paketler için paket bağımlılıkları ve paket sürümleri yönetmek için npm tarafından kullanılan bir dosyadır. Bu dosya hakkında daha fazla bilgi için [package.json yapılandırması](../javascript/configure-packages-with-package-json.md)
+    (4) *package.json* yerel olarak yüklenmiş paketler için paket bağımlılıkları ve paket sürümleri yönetmek için npm tarafından kullanılan bir dosyadır. Daha fazla bilgi için [npm paketlerini yönet'e](../javascript/npm-package-management.md)bakın.
 
     (5) *server.js* gibi proje dosyaları proje düğümüaltında gösterir. *server.js* proje başlangıç dosyasıdır ve bu yüzden **kalın**olarak görünür. Projedeki bir dosyayı sağ tıklayarak ve **Node.js başlangıç dosyası olarak**Ayarla'yı seçerek başlangıç dosyasını ayarlayabilirsiniz.
 
@@ -129,7 +129,7 @@ Bu uygulama, doğru çalışması için bir dizi npm modülü gerektirir.
 
 1. Yeni **npm Paketleri Yükle** iletişim kutusunda, tepki paketini arayın ve yüklemek için **Paketi Yükle'yi** seçin.
 
-    ![npm paketleri yükleyin](../javascript/media/tutorial-nodejs-react-install-packages.png)
+    ![npm paketleri yükleyin](../javascript/media/tutorial-nodejs-react-install-package.png)
 
     Paketi yükleme de ilerlemeyi görmek için **Çıktı** penceresini seçin (alandan **çıktıyı göster'de** **Npm'yi** seçin). Yüklendiğinde, paket **npm** düğümüaltında görünür.
 
@@ -162,7 +162,7 @@ Bu uygulama, doğru çalışması için bir dizi npm modülü gerektirir.
 
     Burada yüklendikten sonra Solution Explorer'da göründükleri gibi npm modülleri verem.
 
-    ![npm paketleri](../javascript/media/tutorial-nodejs-react-npm-modules.png)
+    ![npm paketleri](../javascript/media/tutorial-nodejs-react-npm-modules-installed.png)
 
     > [!NOTE]
     > Komut satırını kullanarak npm paketleri yüklemeyi tercih ederseniz, proje düğümüne sağ tıklayın ve **Burada Komut İstemin'i Aç'ı**seçin. Paketleri yüklemek için standart Node.js komutlarını kullanın.
@@ -312,7 +312,7 @@ Bu basit uygulama için, proje köküne yeni proje dosyaları eklersiniz. (Çoğ
 
     Komut istemi penceresi sonucu gösterir.
 
-    ![Web paketini çalıştırın](../javascript/media/tutorial-nodejs-react-run-webpack.png)
+    ![Web paketini çalıştırın](../javascript/media/tutorial-nodejs-react-run-webpack-cmd.png)
 
     Önceki çıktı yerine herhangi bir hata görürseniz, uygulamanız çalışmadan önce bunları çözmeniz gerekir. npm paket sürümleriniz bu öğreticide gösterilen sürümlerden farklıysa, bu bir hata kaynağı olabilir. Hataları düzeltmenin bir yolu, önceki adımlarda gösterilen tam sürümleri kullanmaktır. Ayrıca, bu paket sürümlerinden biri veya birkaçı amortismana kalınmışsa ve bir hataya yol açarsa, hataları düzeltmek için daha yeni bir sürüm yüklemeniz gerekebilir. npm paket sürümlerini kontrol etmek için *package.json* kullanma hakkında daha fazla bilgi için [package.json yapılandırmasına](../javascript/configure-packages-with-package-json.md)bakın.
 
@@ -342,7 +342,7 @@ Visual Studio 2019'dan itibaren bir yapı komut dosyası gereklidir. Komut satı
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-1. Geçerli hata ayıklama hedefi olarak Microsoft Edge veya Chrome'u seçin.
+1. Geçerli hata ayıklama hedefi olarak **Web Sunucusu (Google Chrome)** veya **Web Sunucusu'nu (Microsoft Edge)** seçin.
 
     ::: moniker range=">=vs-2019"
     ![Hata ayıklama hedefi olarak Chrome'u seçin](../javascript/media/vs-2019/tutorial-nodejs-react-debug-target.png)
@@ -351,12 +351,7 @@ Visual Studio 2019'dan itibaren bir yapı komut dosyası gereklidir. Komut satı
     ![Hata ayıklama hedefi olarak Chrome'u seçin](../javascript/media/tutorial-nodejs-react-debug-target.png)
     ::: moniker-end
 
-    ::: moniker range=">=vs-2019"
-    Chrome makinenizde kullanılabilse, ancak bir seçenek olarak görünmüyorsa, hata ayıklama hedef açılır listesinden **Web Tarayıcısı** **'nı (tarayıcı adı)** > seçin ve varsayılan tarayıcı hedefi olarak **Chrome'u** seçin.
-    ::: moniker-end
-    ::: moniker range="vs-2017"
-    Chrome makinenizde kullanılabilse, ancak bir seçenek olarak görünmüyorsa, hata ayıklama hedef açılır listesinden **Web Tarayıcısı (tarayıcı adı)** > **Google Chrome'u** seçin ve varsayılan tarayıcı hedefi olarak **Chrome'u** seçin.
-    ::: moniker-end
+    Chrome makinenizde mevcutsa, ancak bir seçenek olarak görünmüyorsa, hata ayıklama hedef açılır listesinden **Gözat** La'yı seçin ve varsayılan tarayıcı hedefi olarak Chrome'u seçin **(Varsayılan Olarak Ayarla'yı**seçin).
 
 1. Uygulamayı çalıştırmak için **F5** **(Hata** > **Ayıklama Başlatma Hata Ayıklama)** düğmesine veya yeşil ok düğmesine basın.
 
