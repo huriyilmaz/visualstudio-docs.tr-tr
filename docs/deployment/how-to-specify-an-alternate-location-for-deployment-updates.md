@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Dağıtım güncelleştirmeleri için alternatif bir konum belirtme | Microsoft Docs'
+title: 'Nasıl yapilir: Dağıtım Güncelleştirmeleri için Alternatif Konum Belirt | Microsoft Dokümanlar'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,53 +15,53 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d312a213f630c3cc94a5a58ab41ed2014ca13bc
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: e0484e36bb857f5d08382f86f42b2e09dda21616
+ms.sourcegitcommit: c1339f64fbeee6f17bf80fedea81afc8dac40dc0
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63406555"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82037343"
 ---
-# <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>Nasıl yapılır: Dağıtım güncelleştirmeleri için alternatif bir konum belirtme
-Yükleyebilirsiniz, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı ilk kez bir CD veya dosya paylaşımı, ancak uygulamanın Web üzerinde düzenli güncelleştirmeler için denetlemelisiniz. Böylece, uygulamanızın kendisini Web'den, ilk yüklemeden sonra güncelleştirebilirsiniz, dağıtım bildiriminde güncelleştirmeleri için alternatif bir konum belirtebilirsiniz.
+# <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>Nasıl yapilir: Dağıtım güncelleştirmeleri için alternatif bir konum belirtin
+Uygulamanızı [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] başlangıçta bir CD veya dosya paylaşımından yükleyebilirsiniz, ancak uygulamanın Web'deki periyodik güncelleştirmeleri denetlemesi gerekir. Uygulamanızın ilk yüklemesinden sonra Web'den kendisini güncelleştirebilmeleri için dağıtım bildiriminizdeki güncelleştirmeler için alternatif bir konum belirtebilirsiniz.
 
 > [!NOTE]
-> Uygulamanızı yerel olarak bu özelliği kullanmak için yüklemek için yapılandırılmalıdır. Daha fazla bilgi için [izlenecek yol: Bir ClickOnce uygulamasını el ile dağıtmak](../deployment/walkthrough-manually-deploying-a-clickonce-application.md). Ayrıca yüklerseniz, bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ağdan farklı bir konuma nedenleri ayarlama uygulama [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ilk yükleme ve sonraki tüm güncelleştirmeler için bu konumu kullanmak üzere. Uygulamanızı yerel olarak (örneğin, bir CD) yüklerseniz, orijinal medya kullanarak ilk yüklemesi gerçekleştirilir ve sonraki tüm güncelleştirmeler alternatif konumu kullanır.
+> Uygulamanız bu özelliği kullanmak için yerel olarak yüklemek için yapılandırılmalıdır. Daha fazla bilgi için [Walkthrough: ClickOnce uygulamasını el ile dağıtın.](../deployment/walkthrough-manually-deploying-a-clickonce-application.md) Ayrıca, ağdan bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama yüklerseniz, alternatif bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] konum ayarlamak, hem ilk yükleme hem de sonraki tüm güncelleştirmeler için bu konumun kullanılmasına neden olur. Uygulamanızı yerel olarak yüklerseniz (örneğin, cd'den), ilk yükleme özgün ortam kullanılarak gerçekleştirilir ve sonraki tüm güncelleştirmeler alternatif konumu kullanır.
 
-### <a name="specify-an-alternate-location-for-updates-by-using-mageuiexe-windows-forms-based-utility"></a>MageUI.exe (Windows Forms tabanlı yardımcı program) kullanarak güncelleştirmeleri için alternatif bir konum belirtme
+### <a name="specify-an-alternate-location-for-updates-by-using-mageuiexe-windows-forms-based-utility"></a>MageUI.exe (Windows Forms tabanlı yardımcı program) kullanarak güncelleştirmeler için alternatif bir konum belirtin
 
-1. Bir .NET Framework komut istemini açıp türü:
+1. Bir .NET Framework komut istemi ve türü açın:
 
-     **mageui.exe**
+     **Mageuı.exe**
 
-2. Üzerinde **dosya** menüsünde seçin **açın** uygulamanızın dağıtım bildirimini açmak için.
+2. **Dosya** menüsünde, uygulamanızın dağıtım bildirimini açmak için **Aç'ı** seçin.
 
-3. Seçin **dağıtım seçenekleri** sekmesi.
+3. Dağıtım **Seçenekleri** sekmesini seçin.
 
-4. Metin kutusuna adlı **başlatma konumu**, uygulama güncelleştirmeleri için dağıtım bildirimi içeren dizine URL'sini girin.
+4. **Başlat Konumu**adlı metin kutusuna, uygulama güncelleştirmeleri için dağıtım bildirimini içerecek dizinin URL'sini girin.
 
-5. Dağıtım bildirimi kaydedin.
+5. Dağıtım bildirimini kaydedin.
 
-### <a name="specify-an-alternate-location-for-updates-by-using-mageexe"></a>Mage.exe kullanarak güncelleştirmeleri için alternatif bir konum belirtme
+### <a name="specify-an-alternate-location-for-updates-by-using-mageexe"></a>Mage.exe kullanarak güncelleştirmeler için alternatif bir konum belirtin
 
-1. .NET Framework komut istemini açın.
+1. Bir .NET Framework komut istemi açın.
 
-2. Aşağıdaki komutu kullanarak güncelleştirme konumunu ayarlayın. Bu örnekte, *HelloWorld.exe.application* yoludur, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] her zaman .application uzantılı, uygulama bildiriminin ve *<http://adatum.com/Update/Path>* bu URL'dir[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama güncelleştirmelerini denetler.
+2. Aşağıdaki komutu kullanarak güncelleştirme konumunu ayarlayın. Bu örnekte, *HelloWorld.exe.application* her [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] zaman .application uzantısı olan uygulama bildiriminize giden yoldur ve `http://adatum.com/Update/Path` uygulama güncelleştirmelerini [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] denetleyecek URL'dir.
 
-    **Görüntü-HelloWorld.exe.application - ProviderUrl güncelleştir http://adatum.com/Update/Path**
+    **Mage -Update HelloWorld.exe.application -ProviderUrl http:\//adatum.com/Update/Path**
 
 3. Dosyayı kaydedin.
 
    > [!NOTE]
-   > Şimdi dosya ile yeniden imzalamak gerekir *Mage.exe*. Daha fazla bilgi için [izlenecek yol: Bir ClickOnce uygulamasını el ile dağıtmak](../deployment/walkthrough-manually-deploying-a-clickonce-application.md).
+   > Şimdi *Mage.exe*ile dosyayı yeniden imzalamanız gerekir. Daha fazla bilgi için [Walkthrough: ClickOnce uygulamasını el ile dağıtın.](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
 
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği
- Uygulamanızı bir CD gibi çevrimdışı bir orta yüklersiniz ve bilgisayar çevrimiçi alıyorsa [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ilk tarafından belirtilen URL denetler `<deploymentProvider>` daha yeni bir sürümü güncelleştirme konumunu içerip içermediğini belirlemek için dağıtım bildirimi içinde etiketi uygulama. Aksi halde [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ilk kurulum dizininden yerine doğrudan buradan uygulamayı yükler ve ortak dil çalışma zamanı (CLR), uygulamanızın güven belirler kullanarak düzey `<deploymentProvider>`. Bilgisayar çevrimdışı ise veya `<deploymentProvider>` erişilemiyor, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] CD ve CLR yükler yükleme noktasında dayalı güven verir; CD yükleme için bu, uygulama tam güven alır anlamına gelir. Sonraki tüm güncelleştirmeler, o güven düzeyi devralır.
+ Uygulamanızı CD gibi çevrimdışı bir ortamdan yüklerseniz ve bilgisayar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] çevrimiçiyse, güncelleştirme konumunun uygulamanın daha yeni bir sürümünü içerip içermediğinizi belirlemek için önce dağıtım bildiriminde `<deploymentProvider>` etikette belirtilen URL'yi denetler. Varsa, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı ilk yükleme dizininden değil, doğrudan oradan yükler ve ortak dil çalışma süresi (CLR) uygulamanızın güven `<deploymentProvider>`düzeyini kullanarak belirler. Bilgisayar çevrimdışıysa veya `<deploymentProvider>` erişilenemezse [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] CD'den yükler ve CLR yükleme noktasına göre güven verir; CD yüklemesi için bu, uygulamanızın tam güven aldığı anlamına gelir. Sonraki tüm güncelleştirmeler bu güven düzeyini devralır.
 
- Tüm [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] kullanan uygulamaları `<deploymentProvider>` böylece uygulamanın farklı farklı bilgisayarlarda güven düzeyleri almaz açıkça uygulama bildiriminde, ihtiyaç duydukları izinleri bildirmelidir.
+ Kullanan [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] `<deploymentProvider>` tüm uygulamalar, uygulamanın farklı bilgisayarlarda farklı güven düzeyleri almaması için, gereksinim duydukları izinleri uygulama bildirimlerinde açıkça bildirmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
+- [İzlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
 - [ClickOnce dağıtım bildirimi](../deployment/clickonce-deployment-manifest.md)
-- [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md)
-- [ClickOnce güncelleştirme stratejisini seçin](../deployment/choosing-a-clickonce-update-strategy.md)
+- [ClickOnce uygulamalarını koruma](../deployment/securing-clickonce-applications.md)
+- [ClickOnce güncelleştirme stratejisini seçme](../deployment/choosing-a-clickonce-update-strategy.md)

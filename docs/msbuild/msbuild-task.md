@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a312bfe8c88b0ac523666779970cc28e3a7c798
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ab54c5c523c833be60ef4b5d5088b6217a3111a5
+ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633180"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82072586"
 ---
 # <a name="msbuild-task"></a>MSBuild görevi
 
@@ -37,11 +37,12 @@ Başka bir MSBuild projesinden MSBuild projeleri oluşturur.
 |-----------------------------------| - |
 | `BuildInParallel` | İsteğe bağlı `Boolean` parametre.<br /><br /> `true`Eğer , `Projects` parametrede belirtilen projeler mümkünse paralel olarak inşa edilirse. `false` varsayılan değerdir. |
 | `Projects` | Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Oluşturmak için proje dosyalarını belirtir. |
-| `Properties` | İsteğe bağlı `String` parametre.<br /><br /> Alt projeye genel özellik olarak uygulanacak özellik adı/değer çiftleri yarı sütunlu sınırlı bir liste. Bu parametreyi belirttiğiniz zaman, [*MSBuild.exe*](../msbuild/msbuild-command-line-reference.md)ile oluşturduğunuzda **özellik** anahtarıolan özellikleri ayarlamaya işlevsel olarak eşdeğerdir. Örnek:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> Özellikleri `Properties` parametre üzerinden projeye geçtiğinde, MSBuild proje dosyası zaten yüklenmiş olsa bile projenin yeni bir örneğini oluşturabilir. MSBuild, belirli bir proje yolu ve benzersiz bir genel özellik kümesi için tek bir proje örneği oluşturur. Örneğin, bu davranış, configuration=Release ile *myproject.proj*adını veren birden çok MSBuild görevi oluşturmanıza olanak tanır ve *myproject.proj'un* tek bir örneğini alırsınız (görevde benzersiz özellikler belirtilmemişse). MSBuild tarafından henüz görülmemiş bir özellik belirtirseniz, MSBuild projenin diğer örneklerine paralel olarak oluşturulabilen yeni bir proje örneği oluşturur. Örneğin, Bir Sürüm yapılandırması hata ayıklama yapılandırması ile aynı anda inşa edilebilir.|
+| `Properties` | İsteğe bağlı `String` parametre.<br /><br /> Alt projeye genel özellik olarak uygulanacak özellik adı/değer çiftleri yarı sütunlu sınırlı bir liste. Bu parametreyi belirttiğiniz zaman, [*MSBuild.exe*](../msbuild/msbuild-command-line-reference.md)ile oluşturduğunuzda **özellik** anahtarıolan özellikleri ayarlamaya işlevsel olarak eşdeğerdir. Örneğin:<br /><br /> `Properties="Configuration=Debug;Optimize=$(Optimize)"`<br /><br /> Özellikleri `Properties` parametre üzerinden projeye geçtiğinde, MSBuild proje dosyası zaten yüklenmiş olsa bile projenin yeni bir örneğini oluşturabilir. MSBuild, belirli bir proje yolu ve benzersiz bir genel özellik kümesi için tek bir proje örneği oluşturur. Örneğin, bu davranış, configuration=Release ile *myproject.proj*adını veren birden çok MSBuild görevi oluşturmanıza olanak tanır ve *myproject.proj'un* tek bir örneğini alırsınız (görevde benzersiz özellikler belirtilmemişse). MSBuild tarafından henüz görülmemiş bir özellik belirtirseniz, MSBuild projenin diğer örneklerine paralel olarak oluşturulabilen yeni bir proje örneği oluşturur. Örneğin, Bir Sürüm yapılandırması hata ayıklama yapılandırması ile aynı anda inşa edilebilir.|
 | `RebaseOutputs` | İsteğe bağlı `Boolean` parametre.<br /><br /> `true`Yapılan projelerdeki hedef çıktı öğelerinin göreli yolları çağrı projesine göre ayarlanmışsa. `false` varsayılan değerdir. |
 | `RemoveProperties` | İsteğe bağlı `String` parametre.<br /><br /> Kaldırılacak genel özellikler kümesini belirtir. |
 | `RunEachTargetSeparately` | İsteğe bağlı `Boolean` parametre.<br /><br /> `true`MSBuild görevi, listedeki her hedefi aynı anda yerine teker teker MSBuild'e geçerse çağırırsa. Daha önce çağrılan `true` hedefler başarısız olsa bile sonraki hedeflerin çağrılmasını garanti etmek için bu parametreyi ayarlama. Aksi takdirde, bir yapı hatası sonraki tüm hedeflerin çağrılmasını durdurur. `false` varsayılan değerdir. |
 | `SkipNonexistentProjects` | İsteğe bağlı `Boolean` parametre.<br /><br /> Diskte `true`bulunmayan proje dosyaları atlanırsa. Aksi takdirde, bu tür projeler bir hataya neden olur. |
+|`SkipNonexistentTargets`|İsteğe bağlı `Boolean` parametre.<br /><br /> Varsa, `true`proje dosyaları var ama adlı `Targets` içermeyen atlanır. Aksi takdirde, bu tür projeler bir hataya neden olur. MSBuild 15.5 ile tanıtıldı.|
 | `StopOnFirstFailure` | İsteğe bağlı `Boolean` parametre.<br /><br /> `true`Projelerden biri oluşturulamazsa, başka proje oluşturulmayacak. Şu anda bu paralel (birden çok işlemci ile) bina desteklenmez. |
 | `TargetAndPropertyListSeparators` | İsteğe bağlı `String[]` parametre.<br /><br /> Hedef ve özelliklerin listesini madde `Project` meta verileri olarak belirtir). Ayırıcılar işleme girmeden önce kaçmış olacak. örneğin%3B (kaçan bir ';') kaçak olmayan bir ';'miş gibi muamele göreceksiniz. |
 | `TargetOutputs` | İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` salt okunur çıktı parametresi.<br /><br /> Tüm proje dosyalarından oluşturulan hedeflerin çıktılarını verir. Yalnızca belirtilen hedeflerin çıktıları döndürülür, bu hedeflerin bağlı olduğu hedeflerde var olabilecek çıktılar değil.<br /><br /> `TargetOutputs` Parametre aynı zamanda aşağıdaki meta verileri de içerir:<br /><br /> -   `MSBuildSourceProjectFile`: Çıktıları ayarlayan hedefi içeren MSBuild proje dosyası.<br />-   `MSBuildSourceTargetName`: Çıktıları belirleyen hedef. **Not:**  Her proje dosyasıveya hedefteki çıktıları ayrı ayrı tanımlamak `MSBuild` istiyorsanız, görevi her proje dosyası veya hedef için ayrı ayrı çalıştırın. Tüm proje `MSBuild` dosyalarını oluşturmak için görevi yalnızca bir kez çalıştırıyorsanız, tüm hedeflerin çıktıları tek bir dizide toplanır. |
@@ -56,7 +57,7 @@ Başka bir MSBuild projesinden MSBuild projeleri oluşturur.
 
  Bu görev yalnızca proje dosyalarını değil, çözüm dosyalarını da işleyebilir.
 
- MsBuild tarafından projelerin aynı anda oluşturulmasını sağlamak için gerekli olan yapılandırma, uzak altyapı (örneğin, bağlantı noktaları, protokoller, zaman ekinleri, yeniden denemeler vb.) içerse bile, bir yapı kullanılarak yapılandırılabilir hale getirilmelidir. yapılandırma dosyası. Mümkün olduğunda, yapılandırma öğeleri `MSBuild` görevdeki görev parametreleri olarak belirtilmelidir.
+ Yapılandırma uzak altyapı (örneğin, bağlantı noktaları, protokoller, zaman ekinleri, yeniden denemeler vb.) içerse bile, msbuild tarafından projelerin aynı anda oluşturulmasını sağlamak için gereken tüm yapılandırmalar, bir yapılandırma dosyası kullanılarak yapılandırılabilir hale getirilmelidir. Mümkün olduğunda, yapılandırma öğeleri `MSBuild` görevdeki görev parametreleri olarak belirtilmelidir.
 
  MSBuild 3.5'ten başlayarak, Çözüm projeleri artık oluşturduğu tüm alt projelerden TargetOutputs'ı yüzeye çıkar.
 

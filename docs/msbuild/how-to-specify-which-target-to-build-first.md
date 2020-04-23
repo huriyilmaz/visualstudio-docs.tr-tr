@@ -12,23 +12,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c679b2a43ec799035f9bafb6a03a546808498342
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.openlocfilehash: 7656237be5cf7906293a294885cfa3e6c8bd4e36
+ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80543981"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82072534"
 ---
 # <a name="how-to-specify-which-target-to-build-first"></a>Nasıl yapılır: İlk hangi hedefi oluşturacaklarını belirtin
 
-Proje dosyası, projenin nasıl `Target` oluşturulabileceğini tanımlayan bir veya daha fazla öğe içerebilir. Microsoft Build Engine (MSBuild) altyapısı, proje dosyası bir `DefaultTargets` öznitelik, öznitelik `InitialTargets` veya hedef **-hedef** anahtarı nı kullanarak komut satırında belirtilmediği sürece bulduğu ilk projeyi ve herhangi bir bağımlılık oluşturur.
+Proje dosyası, projenin nasıl `Target` oluşturulabileceğini tanımlayan bir veya daha fazla öğe içerebilir. Microsoft Build Engine (MSBuild) altyapısı, proje dosyası nda **hedef** anahtarı nı kullanarak `DefaultTargets` komut satırında `InitialTargets` bir öznitelik, öznitelik veya hedef belirtilmedikçe, bulduğu ilk hedefi ve herhangi bir bağımlılık oluşturur.
 ## <a name="use-the-initialtargets-attribute"></a>InitialTargets özniteliğini kullanma
 
 Hedefkomut `InitialTargets` satırında `Project` veya öznitelikte `DefaultTargets` belirtilmiş olsa bile, öğenin özniteliği ilk çalışacak bir hedef belirtir.
 
 #### <a name="to-specify-one-initial-target"></a>Bir ilk hedef belirtmek için
 
-- Öğenin özniteliği `InitialTargets` içinde varsayılan hedefi belirtin. `Project` Örnek:
+- Öğenin özniteliği `InitialTargets` içinde varsayılan hedefi belirtin. `Project` Örneğin:
 
    `<Project InitialTargets="Clean">`
 
@@ -46,7 +46,7 @@ Hedefkomut `InitialTargets` satırında `Project` veya öznitelikte `DefaultTarg
 
 #### <a name="to-specify-one-default-target"></a>Bir varsayılan hedef belirtmek için
 
-- Öğenin özniteliği `DefaultTargets` içinde varsayılan hedefi belirtin. `Project` Örnek:
+- Öğenin özniteliği `DefaultTargets` içinde varsayılan hedefi belirtin. `Project` Örneğin:
 
    `<Project DefaultTargets="Compile">`
 
@@ -64,13 +64,13 @@ Hedefkomut `InitialTargets` satırında `Project` veya öznitelikte `DefaultTarg
 
 #### <a name="to-use-a-target-other-than-the-default-target-first"></a>Önce varsayılan hedef dışında bir hedef kullanmak için
 
-- **-target** komut satırı anahtarını kullanarak hedefi ilk hedef olarak belirtin. Örnek:
+- **-target** komut satırı anahtarını kullanarak hedefi ilk hedef olarak belirtin. Örneğin:
 
      `msbuild file.proj -target:Clean`
 
 #### <a name="to-use-several-targets-other-than-the-default-targets-first"></a>Önce varsayılan hedefler dışında birkaç hedef kullanmak için
 
-- **-target** komut satırı anahtarını kullanarak, yarı kolon veya virgülle ayrılan hedefleri listele. Örnek:
+- **-target** komut satırı anahtarını kullanarak, yarı kolon veya virgülle ayrılan hedefleri listele. Örneğin:
 
      `msbuild <file name>.proj -t:Clean;Compile`
 

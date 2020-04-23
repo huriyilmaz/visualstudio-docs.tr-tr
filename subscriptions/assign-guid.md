@@ -6,12 +6,12 @@ manager: lank
 ms.date: 04/20/2020
 ms.topic: conceptual
 description: Yöneticilerin abonelere özel abonelik GUID'i nasıl kullanabileceğini öğrenin
-ms.openlocfilehash: 722aaedcd6da0224311960d1587d0c2c24eec60f
-ms.sourcegitcommit: a7f781d5a089e6aab6b073a07f3d4d2967af8aa6
+ms.openlocfilehash: e2e8cd4f5d07f218fc23c0b7b6f28ababc25263f
+ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81760165"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82072599"
 ---
 # <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio Abonelikleri Yönetim Portalı'na belirli abonelikler atama
 
@@ -49,6 +49,7 @@ Son **adım, Toplu ekleme** şablonuna indirgin, atamak istediğiniz abonelikler
 
 > [!IMPORTANT]
 > Başarılı bir yükleme sağlamak için lütfen aşağıdakileri yapın:
+> - **Toplu ekle'yi**seçtiğinizde iletişim kutusunda bağlı şablonu kullanıyorsunuz.  Gerekli tüm alanları içermeyebileceğinden şablonun yerel olarak depolanmış bir kopyasını kullanmayın.  Eski bir şablon kullanmak yüklemenin başarısız olmasını neden olur. 
 > - Şablonda **Gerekli** olarak gösterilen tüm alanlar tamamlandı.
 > - **Hata iletisi** sütununda listelenen hata yok.
 > - Her GUID şablonda yalnızca bir kez kullanılır. 
