@@ -1,8 +1,8 @@
 ---
-title: Visual Studio'yı Azure Sanal Makinesinde Kullanma
+title: Azure sanal makinesinde Visual Studio 'Yu kullanma
 titleSuffix: ''
-description: Visual Studio'nun Azure Sanal Makinesinde nasıl kullanılacağını öğrenin
-ms.date: 12/06/2019
+description: Azure sanal makinesinde Visual Studio 'Yu nasıl kullanacağınızı öğrenin
+ms.date: 04/23/2020
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,47 +17,47 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 8daf933292c521bb50d294dff2a380b130a4f2ce
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6095a3d7d8bfa7a5ee367da2c93d16113a777d0c
+ms.sourcegitcommit: 5ab22b8601db9c420691f8e57abe140e837aa720
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76113810"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82109487"
 ---
-# <a name="visual-studio-images-on-azure"></a><a id="top"> </a> Azure'da Visual Studio görüntüleri
+# <a name="visual-studio-images-on-azure"></a><a id="top"> </a> Azure 'Da Visual Studio görüntüleri
 
-Visual Studio'nun önceden yapılandırılmış bir Azure sanal makinesinde (VM) kullanılması, hiçbir şeyden güncel bir geliştirme ortamına geçmenin hızlı ve kolay bir yoludur. [Azure](https://azuremarketplace.microsoft.com/marketplace/apps/category/compute?filters=virtual-machine-images%3Bmicrosoft%3Bwindows&page=1&subcategories=application-infrastructure)Marketi'nde farklı Visual Studio yapılandırmalarına sahip sistem görüntüleri mevcuttur.
+Visual Studio 'Yu önceden yapılandırılmış bir Azure sanal makinesinde (VM) kullanmak, herhangi bir şey için bir şeyi çalışır duruma getirmenin bir geliştirme ortamına hızlı ve kolay bir yoludur. Farklı Visual Studio yapılandırmalarına sahip sistem görüntüleri [Azure Marketi](https://azuremarketplace.microsoft.com/marketplace/apps/category/compute?filters=virtual-machine-images%3Bmicrosoft%3Bwindows&page=1&subcategories=application-infrastructure)'nde kullanılabilir.
 
 Azure’da yeni misiniz? [Ücretsiz bir Azure hesabı oluşturun](https://azure.microsoft.com/free).
 
-## <a name="what-configurations-and-versions-are-available"></a>Hangi yapılandırmalar ve sürümler kullanılabilir?
+## <a name="what-configurations-and-versions-are-available"></a>Hangi yapılandırma ve sürümler mevcuttur?
 
-En son ana sürümler olan Visual Studio 2019, Visual Studio 2017 ve Visual Studio 2015'e ait görseller Azure Marketi'nde bulunabilir.  Yayımlanan her ana sürüm için, başlangıçta "web'e yayımlanan" (RTW) sürümünü ve en son güncelleştirilmiş sürümleri görürsünüz.  Bu sürümlerin her biri Visual Studio Enterprise ve Visual Studio Community sürümlerini sunar.  Bu görüntüler en son Visual Studio ve Windows güncelleştirmelerini içerecek şekilde en az her ay güncellenir.  Görüntülerin adları aynı kalırken, her görüntünün açıklaması yüklü ürün sürümünü ve görüntünün "itibariyle" tarihini içerir.
+En son ana sürümlere ait görüntüler, Visual Studio 2019, Visual Studio 2017 ve Visual Studio 2015, Azure Marketi 'nde bulunabilir.  Yayınlanan her ana sürüm için, başlangıçta "Web 'e Yayınlandı" (RTW) sürümü ve en son güncelleştirilmiş sürümleri görürsünüz.  Bu sürümlerin her biri, Visual Studio Enterprise ve Visual Studio Community sürümlerini sunar.  En son Visual Studio ve Windows güncelleştirmelerini dahil etmek için bu görüntüler en az her ay güncellenir.  Görüntülerin adları aynı olmaya devam ederken, her bir görüntünün açıklaması yüklü ürün sürümünü ve görüntünün "itibariyle" tarihini içerir.
 
-| Sürüm sürümü                                                                                                                                          | Sürümler              |    Ürün sürümü    |
+| Yayın sürümü                                                                                                                                          | Sürümler              |    Ürün sürümü    |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------:|:-----------------------:|
-| [Visual Studio 2019: En Son (Sürüm 16.4)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Kurumsal, Topluluk | Sürüm 16.4.0    |
-| [Visual Studio 2019: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | Enterprise            | Sürüm 16.0.9    |
-| [Visual Studio 2017: En Son (Sürüm 15.9)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Kurumsal, Topluluk | Sürüm 15.9.17   |
-| [Visual Studio 2017: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Kurumsal, Topluluk | Sürüm 15.0.27   |
-| [Visual Studio 2015: En Son (Güncelleme 3)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)               | Kurumsal, Topluluk | Sürüm 14.0.25431.01 |
+| [Visual Studio 2019: en son (sürüm 16,5)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019latest?tab=Overview) | Kuruluş, topluluk | Sürüm 16.5.4    |
+| [Visual Studio 2019: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio2019?tab=Overview)                         | Enterprise            | Sürüm 16.0.13    |
+| [Visual Studio 2017: en son (sürüm 15,9)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)           | Kuruluş, topluluk | Sürüm 15.9.22   |
+| [Visual Studio 2017: RTW](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)                             | Kuruluş, topluluk | Sürüm 15.0.28   |
+| [Visual Studio 2015: latest (güncelleştirme 3)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftvisualstudio.visualstudio?tab=Overview)               | Kuruluş, topluluk | Sürüm 14.0.25431.01 |
 
 > [!NOTE]
-> Microsoft hizmet ilkesine uygun olarak, Visual Studio 2015'in ilk yayımlanan (RTW) sürümünün hizmet süresi doldu. Visual Studio 2015 Update 3, Visual Studio 2015 ürün serisi için sunulan tek kalan sürümdür.
+> Microsoft hizmet ilkesine uygun olarak, Visual Studio 2015 ' nin ilk olarak yayınlanan (RTW) sürümü bakım için sona ermiştir. Visual Studio 2015 güncelleştirme 3, Visual Studio 2015 ürün satırı için sunulan tek sürümdür.
 
-Daha fazla bilgi için [Visual Studio Servis Politikası'na](/visualstudio/productinfo/vs-servicing-vs)bakın.
+Daha fazla bilgi için bkz. [Visual Studio bakım ilkesi](/visualstudio/productinfo/vs-servicing-vs).
 
-## <a name="what-features-are-installed"></a>Hangi özellikler yüklenir?
+## <a name="what-features-are-installed"></a>Hangi özellikler yüklendi?
 
-Her görüntü, Visual Studio sürümü için önerilen özellik kümesini içerir. Genellikle, yükleme içerir:
+Her görüntü, bu Visual Studio sürümü için önerilen özellik kümesini içerir. Genellikle, yükleme şunları içerir:
 
-* Her iş yükünün önerilen isteğe bağlı bileşenleri de dahil olmak üzere tüm kullanılabilir iş yükleri
-* .NET 4.6.2 ve .NET 4.7 SDK'lar, Hedefleme Paketleri ve Geliştirici Araçları
+* Her iş yükünün önerilen isteğe bağlı bileşenleri dahil tüm kullanılabilir iş yükleri
+* .NET 4.6.2 ve .NET 4,7 SDK 'Ları, hedeflenen paketleri ve Geliştirici Araçları
 * Visual F#
 * Visual Studio için GitHub Uzantısı
-* LINQ 'dan SQL Araçlarına
+* LINQ to SQL araçları
 
-Görüntüleri yaparken Visual Studio'yu yüklemek için aşağıdaki komut satırını kullanırız:
+Görüntüleri oluştururken Visual Studio 'Yu yüklemek için aşağıdaki komut satırını kullanıyoruz:
 
 ```shell
     vs_enterprise.exe --allWorkloads --includeRecommended --passive ^
@@ -71,11 +71,11 @@ Görüntüleri yaparken Visual Studio'yu yüklemek için aşağıdaki komut sat�
        --add Microsoft.VisualStudio.Component.LinqToSql
 ```
 
-Görüntüler de gereksinim duyduğunuz bir Visual Studio özelliği içermiyorsa, sayfanın sağ üst köşesindeki geri bildirim aracı aracılığıyla geri bildirim sağlayın.
+Görüntüler için gereken bir Visual Studio özelliği içermiyorsa, sayfanın sağ üst köşesindeki geri bildirim aracı aracılığıyla geri bildirim sağlayın.
 
-## <a name="what-size-vm-should-i-choose"></a>VM boyutunu seçmeliyim?
+## <a name="what-size-vm-should-i-choose"></a>Hangi boyutta VM 'yi seçmem gerekir?
 
-Azure, çok çeşitli sanal makine boyutları sunar. Visual Studio güçlü, çok iş parçacığı uygulaması olduğundan, en az iki işlemci ve 7 GB bellek içeren bir VM boyutu istiyorsunuz. Visual Studio görüntüleri için aşağıdaki VM boyutlarını öneririz:
+Azure, sanal makine boyutlarının tam bir aralığını sunar. Visual Studio güçlü, çok iş parçacıklı bir uygulama olduğundan, en az iki işlemci ve 7 GB bellek içeren bir VM boyutu istersiniz. Visual Studio görüntüleri için aşağıdaki VM boyutlarını öneririz:
 
 * Standard_D2_v3
 * Standard_D2s_v3
@@ -85,41 +85,41 @@ Azure, çok çeşitli sanal makine boyutları sunar. Visual Studio güçlü, ço
 * Standard_D2S_v2
 * Standard_D3_v2
 
-En son makine boyutları hakkında daha fazla bilgi için [Azure'daki Windows sanal makineleri için Boyutlar'a](/azure/virtual-machines/windows/sizes)bakın.
+En son makine boyutları hakkında daha fazla bilgi için bkz. [Azure 'Da Windows sanal makineleri Için boyutlar](/azure/virtual-machines/windows/sizes).
 
-Azure ile, VM'yi yeniden boyutlandırma yaparak ilk seçiminizi yeniden dengeleyebilirsiniz. Yeni bir VM'yi daha uygun bir boyuta sağlayabilir veya varolan VM'nizi farklı temel donanıma yeniden boyutlandırabilirsiniz. Daha fazla bilgi için windows [vm yeniden boyutlandırma'ya](/azure/virtual-machines/windows/resize-vm)bakın.
+Azure ile, sanal makineyi yeniden boyutlandırarak başlangıç seçiminizi yeniden dengelemeniz sağlayabilirsiniz. Daha uygun bir boyuta sahip yeni bir VM sağlayabilir veya mevcut sanal makineyi farklı temel donanımla yeniden boyutlandırabilirsiniz. Daha fazla bilgi için bkz. [Windows VM 'Yi yeniden boyutlandırma](/azure/virtual-machines/windows/resize-vm).
 
-## <a name="after-the-vm-is-running-whats-next"></a>VM çalışmaya devam ettikten sonra sırada ne var?
+## <a name="after-the-vm-is-running-whats-next"></a>VM çalışmaya başladıktan sonra ne var?
 
-Visual Studio, Azure'da "kendi lisansınızı getirin" modelini izler. Tescilli donanımyüklemede olduğu gibi, ilk adımlardan biri Visual Studio yüklemenizi lisanslamanızdır. Visual Studio'nun kilidini açmak için:
-- Visual Studio aboneliğiyle ilişkili bir Microsoft hesabıyla oturum açın
-- İlk satın alma işleminizle birlikte gelen ürün anahtarıyla Visual Studio'nun kilidini açın
+Visual Studio, "kendi lisansını getir" modelini Azure 'da izler. Özel donanım yüklemesinde olduğu gibi, ilk adımlardan biri Visual Studio yüklemenizi lisanslandır. Visual Studio 'Nun kilidini açmak için şunlardan birini yapın:
+- Visual Studio aboneliğiyle ilişkili bir Microsoft hesabı oturum açın
+- Visual Studio 'Yu ilk satın alımınızla birlikte gelen ürün anahtarıyla birlikte açın
 
-Daha fazla bilgi için Visual [Studio'da Oturum Aç](../ide/signing-in-to-visual-studio.md) ve [Visual Studio'nun kilidini nasıl açacağına](../ide/how-to-unlock-visual-studio.md)bakın.
+Daha fazla bilgi için bkz. [Visual Studio 'Da oturum açma](../ide/signing-in-to-visual-studio.md) ve [Visual Studio 'nun kilidini açma](../ide/how-to-unlock-visual-studio.md).
 
-## <a name="how-do-i-save-the-development-vm-for-future-or-team-use"></a>Geliştirme VM'sini gelecekteki veya takım kullanımı için nasıl kaydedebilirim?
+## <a name="how-do-i-save-the-development-vm-for-future-or-team-use"></a>Geliştirme sanal makinesini gelecekteki veya ekip kullanımı için Nasıl yaparım? kaydetmek istiyor musunuz?
 
-Geliştirme ortamlarının spektrumu çok büyüktür ve daha karmaşık ortamların oluşturulmasıyla ilgili gerçek bir maliyet vardır. Ortamınızın yapılandırması ne olursa olsun, yapılandırılmış VM'inizi gelecekteki kullanımiçin bir "temel görüntü" olarak veya ekibinizin diğer üyeleri için kaydedebilir veya yakalayabilirsiniz. Ardından, yeni bir VM önyükleme yaparken, azure marketi görüntüsü yerine temel görüntüden sağlarsınız.
+Geliştirme ortamlarının yelpazesi çok büyük ve daha karmaşık ortamları oluşturmaya ilişkin gerçek maliyet vardır. Ortamınızın yapılandırmasına bakılmaksızın, yapılandırılmış sanal makineyi gelecekte kullanılmak üzere veya takımınızın diğer üyeleri için "temel görüntü" olarak kaydedebilir veya yakalayabilirsiniz. Ardından, yeni bir VM 'yi önyüklerken Azure Market görüntüsü yerine temel görüntüden temin edersiniz.
 
-Hızlı bir özet: Sistem Hazırlama aracını (Sysprep) kullanın ve çalışan VM'yi kapatın ve ardından *(Şekil 1)* VM'yi Azure portalında UI üzerinden görüntü olarak yakalayın. Azure, seçtiğiniz `.vhd` depolama hesabında görüntüyü içeren dosyayı kaydeder. Yeni resim daha sonra aboneliğinizin kaynak listesinde bir Resim kaynağı olarak gösterilmektedir.
+Hızlı Özet: Sistem Hazırlama Aracı 'nı (Sysprep) kullanın ve çalışan VM 'yi kapatın ve ardından Azure portal VM 'yi bir görüntü olarak *(Şekil 1)* sanal makine aracılığıyla yakalayın. Azure, görüntüyü `.vhd` içeren dosyayı seçtiğiniz depolama hesabına kaydeder. Yeni görüntü daha sonra, aboneliğinizin kaynak listesinde bir görüntü kaynağı olarak gösterilir.
 
-![Azure portalının UI'si aracılığıyla görüntü yakalama](media/capture-vm.png)
+![Azure portal kullanıcı arabiriminden bir görüntü yakala](media/capture-vm.png)
 
-*(Şekil 1) Azure portalının UI'si aracılığıyla bir görüntü yakalayın.*
+*(Şekil 1) Azure portal kullanıcı arabiriminden bir görüntü yakalayın.*
 
-Daha fazla bilgi için bkz. [Azure'da genelleştirilmiş bir VM'nin yönetilen görüntüsünü oluştur.](/azure/virtual-machines/windows/capture-image-resource)
+Daha fazla bilgi için bkz. [Azure 'da Genelleştirilmiş BIR VM 'nin yönetilen görüntüsünü oluşturma](/azure/virtual-machines/windows/capture-image-resource).
 
 > [!IMPORTANT]
-> VM hazırlamak için Sysprep kullanmayı unutmayın. Bu adımı kaçırırsanız, Azure görüntüden bir VM sağlayamaz.
+> VM 'yi hazırlamak için Sysprep 'ı kullanmayı unutmayın. Bu adımı kaçırırsanız Azure görüntüden bir VM sağlayamaz.
 
 > [!NOTE]
-> Görüntülerin depolanması için hala bazı maliyetlere maruz kaldığınız için, bu artımlı maliyet, ihtiyacı olan her takım üyesi için VM'yi sıfırdan yeniden oluşturmak için genel gider maliyetleriyle karşılaştırıldığında önemsiz olabilir. Örneğin, 127 GB'lık bir görüntüyü tüm ekibiniz tarafından yeniden kullanılabilir bir ay boyunca oluşturmak ve depolamak birkaç dolara mal olur. Ancak, bu maliyetler, her çalışanın kendi kullanımı için düzgün yapılandırılmış bir dev kutusu oluşturmak ve doğrulamak için yatırım saatleriyle karşılaştırıldığında önemsizdir.
+> Görüntülerin depolanması için yine de bazı maliyetlerle karşılaşmanız gerekir, ancak bu artımlı maliyet, bir tane gerektiren her ekip üyesi için VM 'nin sıfırdan yeniden derlenmesi için ek gider maliyetlerine kıyasla çok önemli olabilir. Örneğin, tüm ekibiniz tarafından yeniden kullanılabilen bir ayda 127 GB görüntüsünü oluşturmak ve depolamak için birkaç dolar maliyeti vardır. Ancak, bu maliyetler her bir çalışanın, bireysel kullanımları için düzgün yapılandırılmış bir dev kutusunu oluşturmak ve doğrulamak üzere her çalışanın yatırım yaptıkları saatlere kıyasla önem altına alınır.
 
-Ayrıca, geliştirme görevlerinizin veya teknolojilerinizin geliştirme yapılandırmaları çeşitleri ve birden çok makine yapılandırması gibi daha fazla ölçek gerekebilir. Azure DevTest Labs'ı kullanarak "altın görüntünüzün" oluşturulmasını otomatikleştiren _tarifler_ oluşturabilirsiniz. Ekibinizin çalıştıran VM'leri için ilkeleri yönetmek için DevTest Labs'ı da kullanabilirsiniz. [Geliştiriciler için Azure DevTest Labs'ı kullanmak,](/azure/devtest-lab/devtest-lab-developer-lab) DevTest Labs hakkında daha fazla bilgi için en iyi kaynaktır.
+Ayrıca, geliştirme görevleriniz veya teknolojilerinizin, geliştirme yapılandırmalarının ve birden çok makine yapılandırmasının değişen özellikleri gibi daha fazla ölçeği olması gerekebilir. "Altın görüntü" oluşturmayı otomatikleştiren _Tarifler_ oluşturmak için Azure DevTest Labs kullanabilirsiniz. Takımınızın çalışan VM 'Lerinin ilkelerini yönetmek için DevTest Labs de kullanabilirsiniz. [Geliştiriciler için Azure DevTest Labs kullanmak](/azure/devtest-lab/devtest-lab-developer-lab) , DevTest Labs hakkında daha fazla bilgi için en iyi kaynaktır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Artık önceden yapılandırılmış Visual Studio görüntülerini bildiğinize göre, bir sonraki adım yeni bir VM oluşturmaktır:
+Önceden yapılandırılmış Visual Studio görüntülerini öğrenmiş olduğunuza göre, sonraki adım yeni bir VM oluşturmaktır:
 
-* [Azure portalı üzerinden Bir VM oluşturma](/azure/virtual-machines/windows/quick-create-portal)
-* [Windows Sanal Makinelere genel bakış](/azure/virtual-machines/windows/overview)
+* [Azure portal aracılığıyla VM oluşturma](/azure/virtual-machines/windows/quick-create-portal)
+* [Windows Sanal Makineleri genel bakış](/azure/virtual-machines/windows/overview)
