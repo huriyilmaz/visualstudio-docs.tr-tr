@@ -1,5 +1,5 @@
 ---
-title: Exec Görev | Microsoft Dokümanlar
+title: Exec görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,48 +18,48 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f588ae1b32b8b8d47d6323ee32d02c9053a3de32
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 634916d9ab4ef0ce3119fcb5695301598992f38c
+ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634220"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167312"
 ---
 # <a name="exec-task"></a>Yürütme görevi
 
-Belirtilen bağımsız değişkenleri kullanarak belirtilen programı veya komutu çalıştırın.
+Belirtilen bağımsız değişkenleri kullanarak belirtilen programı veya komutu çalıştırır.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda görev parametreleri `Exec` açıklanmaktadır.
+Aşağıdaki tabloda, `Exec` görevi için parametreler açıklanmaktadır.
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Command`|Gerekli `String` parametre.<br /><br /> Çalıştırmak için komut(lar). Bunlar attrib veya *program.exe,* *runprogram.bat*veya *setup.msi*gibi yürütülebilir sistem komutları olabilir.<br /><br /> Bu parametre birden çok komut satırı içerebilir. Alternatif olarak, bir toplu iş dosyasına birden çok komut koyup bu parametreyi kullanarak çalıştırabilirsiniz.|
-|`ConsoleOutput`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Her madde çıkışı, araç tarafından yayılan standart çıktı veya standart hata akışından bir satırdır. Bu yalnızca ' `ConsoleToMsBuild` olarak `true`ayarlanırsa yakalanır.|
-|`ConsoleToMsBuild`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer, `true`görev aracın standart hata ve standart çıktı sını yakalar `ConsoleOutput` ve çıktı parametresinde kullanılabilir hale getirir.<br /><br />Varsayılan: `false`.|
-|`CustomErrorRegularExpression`|İsteğe bağlı `String` parametre.<br /><br /> Araç çıkışındaki hata satırlarını noktalamak için kullanılan normal bir ifade belirtir. Bu, olağandışı biçimlendirilmiş çıktı üreten araçlar için yararlıdır.<br /><br />Varsayılan: `null` (özel işleme yok).|
-|`CustomWarningRegularExpression`|İsteğe bağlı `String` parametre.<br /><br /> Araç çıkışındaki uyarı çizgilerini noktalamak için kullanılan normal bir ifade belirtir. Bu, olağandışı biçimlendirilmiş çıktı üreten araçlar için yararlıdır.<br /><br />Varsayılan: `null` (özel işleme yok).|
-|`EchoOff`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer, `true`görev MSBuild `Command` günlüğüne genişletilmiş formu yatmayacak.<br /><br />Varsayılan: `false`.|
-|`ExitCode`|İsteğe bağlı `Int32` çıktı salt okunur parametresi.<br /><br /> Çalıştırılan komut tarafından sağlanan çıkış kodunu belirtir.|
-|`IgnoreExitCode`|İsteğe bağlı `Boolean` parametre.<br /><br /> If `true`, görev, yürütülen komut tarafından sağlanan çıkış kodunu yoksa. Aksi takdirde, `false` çalıştırılan komut sıfır olmayan bir çıkış kodu döndürürse görev döndürür.<br /><br />Varsayılan: `false`.|
-|`IgnoreStandardErrorWarningFormat`|İsteğe bağlı `Boolean` parametre.<br /><br /> , `false`çıktıda standart hata/uyarı biçimiyle eşleşen satırları seçer ve bunları hata/uyarı olarak kaydeder. Eğer `true`, bu davranışı devre dışı.<br /><br />Varsayılan: `false`.|
-|`Outputs`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Görevden çıktı öğelerini içerir. Görev `Exec` bunları kendisi ayarlamaz. Bunun yerine, onları ayarlanmış gibi sağlayabilir, böylece daha sonra projede kullanılabilir.|
-|`StdErrEncoding`|İsteğe bağlı `String` çıktı parametresi.<br /><br /> Yakalanan görev standart hata akışının kodlayıcısını belirtir. Varsayılan, geçerli konsol çıktıkodlamasidir.|
-|`StdOutEncoding`|İsteğe bağlı `String` çıktı parametresi.<br /><br /> Yakalanan görev standart çıktı akışının kodlanması belirtir. Varsayılan, geçerli konsol çıktıkodlamasidir.|
-|`WorkingDirectory`|İsteğe bağlı `String` parametre.<br /><br /> Komutun çalışacağı dizini belirtir.<br /><br />Varsayılan: Projenin geçerli çalışma dizini.|
+|`Command`|Gerekli `String` parametre.<br /><br /> Çalıştırılacak komut (lar). Bunlar, attrib gibi sistem komutları veya *program. exe*, *runprogram. bat*veya *Setup. msi*gibi yürütülebilir bir dosya olabilir.<br /><br /> Bu parametre, birden çok komut satırı içerebilir. Alternatif olarak, birden fazla komutu bir toplu iş dosyasına yerleştirebilir ve bu parametreyi kullanarak çalıştırabilirsiniz.|
+|`ConsoleOutput`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Her öğe çıktısı, araç tarafından yayılan standart çıkış veya standart hata akışından alınan bir satırdır. Bu yalnızca olarak `true`ayarlanırsa yakalanır `ConsoleToMsBuild` .|
+|`ConsoleToMsBuild`|İsteğe `Boolean` bağlı parametre.<br /><br /> Bu `true`görev, aracının standart hatasını ve standart çıkışını yakalayıp `ConsoleOutput` çıkış parametresinde kullanılabilir hale getirir.<br /><br />Varsayılan: `false`.|
+|`CustomErrorRegularExpression`|İsteğe `String` bağlı parametre.<br /><br /> Araç çıkışında hata çizgilerini belirlemek için kullanılan bir normal ifade belirtir. Bu, olağandışı biçimli çıkış üreten araçlar için kullanışlıdır.<br /><br />Varsayılan: `null` (özel işlem yok).|
+|`CustomWarningRegularExpression`|İsteğe `String` bağlı parametre.<br /><br /> Araç çıkışında uyarı çizgilerini belirlemek için kullanılan bir normal ifade belirtir. Bu, olağandışı biçimli çıkış üreten araçlar için kullanışlıdır.<br /><br />Varsayılan: `null` (özel işlem yok).|
+|`EchoOff`|İsteğe `Boolean` bağlı parametre.<br /><br /> Eğer `true`görev, genişletilmiş formunu `Command` MSBuild günlüğüne göstermeyecektir.<br /><br />Varsayılan: `false`.|
+|`ExitCode`|İsteğe `Int32` bağlı çıkış salt okunurdur parametresi.<br /><br /> Yürütülen komut tarafından belirtilen çıkış kodunu belirtir.|
+|`IgnoreExitCode`|İsteğe `Boolean` bağlı parametre.<br /><br /> İse `true`, görev yürütülen komutu tarafından belirtilen çıkış kodunu yoksayar. Aksi takdirde, çalıştırılan komutun `false` sıfır olmayan bir çıkış kodu döndürmesi durumunda görev döndürülür.<br /><br />Varsayılan: `false`.|
+|`IgnoreStandardErrorWarningFormat`|İsteğe `Boolean` bağlı parametre.<br /><br /> `false`, Çıkışta standart hata/uyarı biçimiyle eşleşen satırları seçer ve bunları hata/uyarı olarak günlüğe kaydeder. Varsa `true`, bu davranışı devre dışı bırakın.<br /><br />Varsayılan: `false`.|
+|`Outputs`|İsteğe <xref:Microsoft.Build.Framework.ITaskItem> `[]` bağlı çıkış parametresi.<br /><br /> Görevden çıkış öğelerini içerir. `Exec` Görev bunları kendisi yapmaz. Bunun yerine, daha sonra projede kullanılabilmesi için bunları ayarlamış gibi sağlayabilirsiniz.|
+|`StdErrEncoding`|İsteğe `String` bağlı çıkış parametresi.<br /><br /> Yakalanan görev standart hata akışının kodlamasını belirtir. Varsayılan değer geçerli konsol çıkış kodlamasında bulunur.|
+|`StdOutEncoding`|İsteğe `String` bağlı çıkış parametresi.<br /><br /> Yakalanan görev standart çıkış akışının kodlamasını belirtir. Varsayılan değer geçerli konsol çıkış kodlamasında bulunur.|
+|`WorkingDirectory`|İsteğe `String` bağlı parametre.<br /><br /> Komutun çalıştırılacağı dizini belirtir.<br /><br />Varsayılan: projenin geçerli çalışma dizini.|
+
+[!INCLUDE [ToolTaskExtension arguments](includes/tooltaskextension-base-params.md)]
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu görev, gerçekleştirmek istediğiniz iş için belirli bir MSBuild görevi kullanılamadığında yararlıdır. Ancak, `Exec` görev, daha belirli bir görevin aksine, çalıştırdığı aracın veya komutun sonucuna göre ek işleme veya koşullu işlemler yapamaz.
+Bu görev, gerçekleştirmek istediğiniz iş için belirli bir MSBuild görevi kullanılabilir olmadığında yararlıdır. Ancak, daha `Exec` belirli bir görevin aksine görev, çalıştığı aracın veya komutun sonucuna göre ek işlem veya koşullu işlemler yapılamaz.
 
-Görev, `Exec` doğrudan bir işlemi çağırmak yerine *cmd.exe* çağırır.
-
-Bu belgede listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.ToolTaskExtension> <xref:Microsoft.Build.Utilities.ToolTask> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [ToolTaskExtension taban sınıfına](../msbuild/tooltaskextension-base-class.md)bakın.
+Görev `Exec` , doğrudan bir işlem çağırmak yerine *cmd. exe* ' yi çağırır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte `Exec` bir komutçalıştırmak için görev kullanır.
+Aşağıdaki örnek, bir komutu `Exec` çalıştırmak için görevini kullanır.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
