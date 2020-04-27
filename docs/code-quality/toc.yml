@@ -332,6 +332,10 @@
                   href: ca1064.md
                 - name: 'CA1065: Beklenmeyen konumlarda özel durum harekete geçirmeyin'
                   href: ca1065.md
+                - name: 'CA1066: Equals’ı geçersiz kılarken IEquatable uygulayın'
+                  href: ca1066.md
+                - name: 'CA1067: IEquatable uygularken Equals’ı geçersiz kılın'
+                  href: ca1067.md
                 - name: 'CA1068: CancellationToken parametreleri en sonda olmalıdır'
                   href: ca1068.md
                 - name: 'CA2210: Derlemelerin geçerli tanımlayıcı adları olmalıdır'
@@ -426,6 +430,8 @@
                   href: ca1506.md
                 - name: 'CA1507: Dize yerine nameof kullanma'
                   href: ca1507.md
+                - name: 'CA1508: Ölü koşullu kodlardan kaçının'
+                  href: ca1508.md
             - name: Hareketlilik uyarıları
               items:
                 - name: Genel Bakış
