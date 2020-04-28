@@ -1,23 +1,23 @@
 ---
-title: Visual Studio Konteyner Araçları özellikleri oluşturmak
+title: Visual Studio kapsayıcı araçları derleme özellikleri
 author: ghogen
-description: Konteyner Araçları oluşturma sürecine genel bakış
+description: Kapsayıcı araçları derleme işlemine genel bakış
 ms.author: ghogen
 ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 3caa8a76f461515c0d2265590383861b6e10d0a1
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: 1b23d918621d79756fd77a1dd9b98009b2769ed3
+ms.sourcegitcommit: 596f92fcc84e6f4494178863a66aed85afe0bb08
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472671"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82189497"
 ---
-# <a name="container-tools-build-properties"></a>Konteyner Araçları özellikleri oluşturmak
+# <a name="container-tools-build-properties"></a>Kapsayıcı araçları derleme özellikleri
 
-MSBuild'in projenizi oluşturmak için kullandığı özellikleri ayarlayarak Visual Studio'nun konteyner projelerinizi nasıl oluşturduğunu özelleştirebilirsiniz. Örneğin, Dockerfile'ın adını değiştirebilir, resimleriniz için etiket ve etiket belirtebilir, Docker komutlarına geçirilen ek bağımsız değişkenler sağlayabilir ve Visual Studio'nun kapsayıcı ortamının dışında bina oluşturma gibi belirli performans optimizasyonları yapıp etmediğini kontrol edebilirsiniz. Ayrıca, başlatılabilen yürütülebilir adı ve sağlamak için komut satırı bağımsız değişkenleri gibi hata ayıklama özellikleri ayarlayabilirsiniz.
+MSBuild 'in projenizi oluşturmak için kullandığı özellikleri ayarlayarak, Visual Studio 'Nun kapsayıcı projelerinizi nasıl derlemediğini özelleştirebilirsiniz. Örneğin, Dockerfile adını değiştirebilir, görüntüleriniz için Etiketler ve Etiketler belirtebilir, Docker komutlarına geçirilen ek bağımsız değişkenleri sağlayabilir ve Visual Studio 'Nun kapsayıcı ortamının dışında oluşturma gibi belirli performans iyileştirmeleri yapıp getirmediğini kontrol edebilirsiniz. Ayrıca, başlatılacak yürütülebilir dosyanın adı ve sağlanacak komut satırı bağımsız değişkenleri gibi hata ayıklama özelliklerini de ayarlayabilirsiniz.
 
-Bir özelliğin değerini ayarlamak için proje dosyasını edin. Örneğin, Dockerfile'ınızın adının *MyDockerfile*olduğunu varsayalım. Proje dosyasındaki `DockerfileFile` özelliği aşağıdaki gibi ayarlayabilirsiniz.
+Bir özelliğin değerini ayarlamak için proje dosyasını düzenleyin. Örneğin, Dockerfile adlı dosyanın *Mydockerfile*olduğunu varsayalım. Proje dosyasındaki `DockerfileFile` özelliğini aşağıdaki gibi ayarlayabilirsiniz.
 
 ```xml
 <PropertyGroup>
@@ -25,37 +25,65 @@ Bir özelliğin değerini ayarlamak için proje dosyasını edin. Örneğin, Doc
 </PropertyGroup>
 ```
 
-Özellik ayarını varolan `PropertyGroup` bir öğeye ekleyebilirsiniz veya yoksa yeni `PropertyGroup` bir öğe oluşturabilirsiniz.
+Özellik ayarını varolan `PropertyGroup` bir öğeye ekleyebilirsiniz, yoksa yeni `PropertyGroup` bir öğe oluşturun.
 
-Aşağıdaki tablo, kapsayıcı projeleri için kullanılabilir MSBuild özelliklerini gösterir. NuGet paketi sürümü [Microsoft.VisualStudio.Azure.Containers.Tools.Targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets/)için geçerlidir.
+Aşağıdaki tabloda kapsayıcı projeleri için kullanılabilen MSBuild özellikleri gösterilmektedir. NuGet paketi sürümü [Microsoft. VisualStudio. Azure. containers. Tools. targets](https://www.nuget.org/packages/Microsoft.VisualStudio.Azure.Containers.Tools.Targets/)için geçerlidir.
 
 | Özellik adı | Açıklama | Varsayılan değer  | NuGet paket sürümü|
 |---------------|-------------|----------------|----------------------|
-| Konteyner Geliştirme Modu | "Ev sahibi" optimizasyonu ("Hızlı Mod" hata ayıklama) etkin olup olmadığını denetler.  İzin verilen değerler **Hızlı** ve **Düzenli'dir.** | Hızlı |1.0.1872750 veya daha yeni|
-| KonteynerVsDbgPath | VSDBG hata ayıklama için yol. | `%USERPROFILE%\vsdbg\vs2017u5` |1.0.1985401 veya daha yeni|
-| DockerDebuggeeArguments | Hata ayıklama, hata ayıklama başlatılmış yürütülebilir bu bağımsız değişkenleri geçmek için talimat verilir. | ASP.NET .NET Framework projeleri için geçerli değildir |1.7.8 veya daha yeni|
-| DockerDebuggeeProgram | Hata ayıklama yaparken, hata ayıklayanbu yürütülebilir başlatmak için talimat verilir. | .NET Core projeleri için: dotnet, ASP.NET .NET Framework projeleri: Geçerli değil (IIS her zaman kullanılır) |1.7.8 veya daha yeni|
-| DockerDebuggeeKillProgram | Bu komut, bir kapsayıcıda çalışan işlemi öldürmek için kullanılır. | ASP.NET .NET Framework projeleri için geçerli değildir |1.7.8 veya daha yeni|
-| DockerDebuggeeWorkingDirectory | Hata ayıklama yaparken hata ayıklayanın bu yolu çalışma dizini olarak kullanması talimatı verilir. | C:\app (Windows) veya /app (Linux) |1.7.8 veya daha yeni|
-| DockerDefaultTargetOS | Docker görüntüsünü oluştururken kullanılan varsayılan hedef işletim sistemi. | Visual Studio tarafından ayarlanır. |1.0.1985401 veya daha yeni|
-| DockerImageEtiketler | Docker görüntüsüne uygulanan varsayılan etiket kümesi. | com.microsoft.created-by=visual-studio;com.microsoft.visual-studio.project-name=$(MSBuildProjectName) |1.5.4 veya daha yeni|
-| DockerFastModeProjectMountDirectory|**Hızlı**Mod'da, bu özellik, proje çıktı dizininin çalışan kapsayıcıya hacim olarak monte edildiği denetimi denetler.|C:\app (Windows) veya /app (Linux)|1.9.2 veya daha yeni|
-| DockerfileBuildArguments | Docker yapı komutuna ek bağımsız değişkenler geçti. | Geçerli değildir. |1.0.1872750 veya daha yeni|
-| DockerfileContext | Docker görüntüsünü oluştururken kullanılan varsayılan bağlam, Dockerdosyasına göre bir yol olarak kullanılır. | Visual Studio tarafından ayarlanır. |1.0.1872750 veya daha yeni|
-| DockerfileFastModeStage | Görüntü hata ayıklama modunda oluştururken kullanılacak Dockerfile aşaması (yani hedef). | Dockerfile'da bulunan ilk aşama (taban) |
-| DockerfileDosya | Proje için kapsayıcıyı oluşturmak/çalıştırmak için kullanılacak varsayılan Dockerdosyasını açıklar. Bu da bir yol olabilir. | Dockerdosyası |1.0.1872750 veya daha yeni|
-| DockerfileRunArguments | Docker çalıştır komutuna ek bağımsız değişkenler geçti. | Geçerli değildir. |1.0.1872750 veya daha yeni|
-| DockerfileRunEnvironmentFiles | Docker çalışması sırasında uygulanan ortam dosyalarının yarı sütunlu sınırlı listesi. | Geçerli değildir. |1.0.1872750 veya daha yeni|
-| DockerfileTag | Docker görüntüsünü oluştururken kullanılacak etiket. Hata ayıklamada, etikete bir ":dev" eklenir. | Alfasayısal olmayan karakterleri aşağıdaki kurallarla sıyırdıktan sonra derleme adı: <br/> Elde edilen etiket tamamen sayısalsa, önek olarak "resim" eklenir (örneğin, image2314) <br/> Ortaya çıkan etiket boş bir dize ise, etiket olarak "resim" kullanılır. |1.0.1872750 veya daha yeni|
+| ContainerDevelopmentMode | "Konak oluşturma" iyileştirmesi ("hızlı mod" hata ayıklama) etkin olup olmadığını denetler.  İzin verilen değerler **hızlı** ve **normal**. | Hızlı |1.0.1872750 veya daha yeni|
+| ContainerVsDbgPath | VSDBG hata ayıklayıcısı için yol. | `%USERPROFILE%\vsdbg\vs2017u5` |1.0.1985401 veya daha yeni|
+| DockerDebuggeeArguments | Hata ayıklarken, hata ayıklayıcı, bu bağımsız değişkenleri başlatılan yürütülebilir dosyaya iletmektir. | ASP.NET .NET Framework projelerine uygulanamaz |1.7.8 veya daha yeni|
+| DockerDebuggeeProgram | Hata ayıklarken, hata ayıklayıcıda bu çalıştırılabiliri başlatması istendi. | .NET Core projeleri için: DotNet, ASP.NET .NET Framework projeleri: uygulanamaz (IIS her zaman kullanılır) |1.7.8 veya daha yeni|
+| DockerDebuggeeKillProgram | Bu komut, bir kapsayıcıda çalışan işlemi sonlandırmak için kullanılır. | ASP.NET .NET Framework projelerine uygulanamaz |1.7.8 veya daha yeni|
+| Dockerdebuggeeworkingdizini | Hata ayıklarken, hata ayıklayıcının bu yolu çalışma dizini olarak kullanması talimatı verilir. | C:\app (Windows) veya/App (Linux) |1.7.8 veya daha yeni|
+| DockerDefaultTargetOS | Docker görüntüsü oluşturulurken kullanılan varsayılan hedef işletim sistemi. | Visual Studio tarafından ayarlanır. |1.0.1985401 veya daha yeni|
+| Dockerımagelabels | Docker görüntüsüne uygulanan varsayılan etiket kümesi. | com. Microsoft. Created-By = Visual-Studio; com. Microsoft. Visual-Studio. Project-Name = $ (MSBuildProjectName) |1.5.4 veya daha yeni|
+| Dockerfastmodeprojectbağlamadizini|**Hızlı modda**, bu özellik proje çıktı dizininin çalışan kapsayıcıya birim bağlı olduğunu denetler.|C:\app (Windows) veya/App (Linux)|1.9.2 veya daha yeni|
+| DockerfileBuildArguments | [Docker Build](https://docs.docker.com/engine/reference/commandline/build/) komutuna ek bağımsız değişkenler geçirildi. | Geçerli değildir. |1.0.1872750 veya daha yeni|
+| DockerfileContext | Docker görüntüsü oluşturulurken kullanılan varsayılan bağlam, Dockerfile ile ilişkili bir yol olarak. | Visual Studio tarafından ayarlanır. |1.0.1872750 veya daha yeni|
+| DockerfileFastModeStage | Görüntü hata ayıklama modunda oluşturulurken kullanılacak Dockerfile aşaması (yani, hedef). | Dockerfile 'da bulunan ilk aşama (temel) |
+| DockerfileFile | Projenin kapsayıcısını derlemek/çalıştırmak için kullanılacak varsayılan Dockerfile öğesini açıklar. Bu bir yol da olabilir. | Dockerfile |1.0.1872750 veya daha yeni|
+| DockerfileRunArguments | [Docker Run](https://docs.docker.com/engine/reference/commandline/run/) komutuna ek bağımsız değişkenler geçirildi. | Geçerli değildir. |1.0.1872750 veya daha yeni|
+| DockerfileRunEnvironmentFiles | Docker çalıştırması sırasında uygulanan ortam dosyalarının noktalı virgülle ayrılmış listesi. | Geçerli değildir. |1.0.1872750 veya daha yeni|
+| DockerfileTag | Docker görüntüsü oluşturulurken kullanılacak etiket. Hata ayıklama sırasında, etikete bir ":d ev" eklenir. | Aşağıdaki kurallarla alfasayısal olmayan karakterleri gerçekleştirdikten sonra bütünleştirilmiş kod adı: <br/> Sonuç etiketi tümü sayısal ise, "görüntü" bir ön ek olarak eklenir (örneğin, image2314) <br/> Sonuç etiketi boş bir dizeyse, etiket olarak "görüntü" kullanılır. |1.0.1872750 veya daha yeni|
+
+## <a name="example"></a>Örnek
+
+Aşağıdaki proje dosyası bu ayarlardan bazılarının örneklerini gösterir.
+
+```xml
+ <Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>feae72bf-2368-4487-b6c6-546c19338cb1</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <!-- In CI/CD scenarios, you might need to change the context. By default, Visual Studio uses the
+         folder above the Dockerfile. The path is relative to the Dockerfile, so here the context is
+         set to the same folder as the Dockerfile. -->
+    <DockerfileContext>.</DockerfileContext>
+    <!-- Set `docker run` arguments to mount a volume -->
+    <DockerfileRunArguments>-v $(pwd)/host-folder:/container-folder:ro</DockerfileRunArguments>
+    <!-- Set `docker build` arguments to add a custom tag -->
+    <DockerfileBuildArguments>-t contoso/front-end:v2.0</DockerfileBuildArguments>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.6" />
+  </ItemGroup>
+
+</Project>
+```
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Genel olarak MSBuild özellikleri hakkında bilgi için [MSBuild Özellikleri'ne](../msbuild/msbuild-properties.md)bakın.
+MSBuild özellikleri hakkında genel bilgi için bkz. [MSBuild özellikleri](../msbuild/msbuild-properties.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Docker Oluşturma yapı özellikleri](docker-compose-properties.md)
+[Docker Compose derleme özellikleri](docker-compose-properties.md)
 
-[Konteyner Araçları başlatma ayarları](container-launch-settings.md)
+[Kapsayıcı araçları başlatma ayarları](container-launch-settings.md)
 
-[MSBuild ayrılmış ve iyi bilinen özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md)
+[MSBuild ayrılmış ve iyi bilinen Özellikler](../msbuild/msbuild-reserved-and-well-known-properties.md)
