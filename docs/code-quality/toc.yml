@@ -537,6 +537,14 @@
                   href: ca1824.md
                 - name: 'CA1825: Sıfır uzunluklu dizi ayırmalarından kaçının'
                   href: ca1825.md
+                - name: 'CA1826: Linq Numaralandırma metodu yerine property kullan'
+                  href: ca1826.md
+                - name: 'CA1827: Any kullanılabiliyorsa Count/LongCount kullanma'
+                  href: ca1827.md
+                - name: 'CA1828: AnyAsync kullanılabiliyorsa CountAsync/LongCountAsync kullanma'
+                  href: ca1828.md
+                - name: 'CA1829: Enumerable.Count metodu yerine Length/Count özelliğini kullan'
+                  href: ca1829.md
             - name: Taşınabilirlik uyarıları
               items:
                 - name: Genel Bakış
