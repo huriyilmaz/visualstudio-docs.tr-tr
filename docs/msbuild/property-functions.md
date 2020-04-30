@@ -1,5 +1,5 @@
 ---
-title: Özellik Fonksiyonları | Microsoft Dokümanlar
+title: Özellik Işlevleri | Microsoft Docs
 ms.date: 02/21/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,190 +10,190 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb4c44b4e642ff1137df7f0afe02502224060a64
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c5f1d34a6d21e6d4f413275ee21651feb7ec3dec
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79302912"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586680"
 ---
 # <a name="property-functions"></a>Özellik işlevleri
 
-Özellik işlevleri, MSBuild özellik tanımlarında görünen .NET Framework yöntemlerine yapılan çağrılardır. Görevlerin aksine, özellik işlevleri hedeflerin dışında kullanılabilir ve herhangi bir hedef çalıştırmadan önce değerlendirilir.
+Özellik işlevleri, MSBuild özellik tanımlarında görüntülenen .NET Framework yöntemlerine yapılan çağrılardır. Görevlerin aksine, özellik işlevleri hedeflerin dışında kullanılabilir ve herhangi bir hedef çalışmadan önce değerlendirilir.
 
-MSBuild görevlerini kullanmadan sistem süresini okuyabilir, dizeleri karşılaştırabilir, normal ifadeleri eşleyebilir ve yapı komut dosyanızda diğer eylemleri gerçekleştirebilirsiniz. MSBuild dizeyi sayıya ve sayıya dönüştürmeyi ve gerektiğinde diğer dönüşümleri yapmaya çalışır.
+MSBuild görevlerini kullanmadan, sistem saatini okuyabilir, dizeleri karşılaştırabilir, normal ifadelerle eşleştirebilir ve derleme betiğinizdeki diğer işlemleri gerçekleştirebilirsiniz. MSBuild, dizeyi sayı ve sayı olarak dizeye dönüştürmeye ve diğer dönüştürmeleri gereken şekilde dönüştürmeye çalışır.
 
-Özellik işlevlerinden döndürülen dize değerlerinde [kaçan özel karakterler](msbuild-special-characters.md) vardır. Değerin doğrudan proje dosyasına konurmuş gibi davranılmasını `$([MSBuild]::Unescape())` istiyorsanız, özel karakterlerden kaçmak için kullanın.
+Özellik işlevlerinden döndürülen dize değerleri [özel karakterlerin](msbuild-special-characters.md) atlanmalıdır. Değerin doğrudan proje dosyasına yerleştirilmiş gibi değerlendirilmesini istiyorsanız, özel karakterlerin atmasını kaldırmak için kullanın `$([MSBuild]::Unescape())` .
 
-Özellik işlevleri .NET Framework 4 ve sonrası ile kullanılabilir.
+Özellik işlevleri .NET Framework 4 ve üzeri sürümlerde kullanılabilir.
 
-## <a name="property-function-syntax"></a>Özellik fonksiyonu sözdizimi
+## <a name="property-function-syntax"></a>Özellik işlevi sözdizimi
 
-Bunlar üç tür özellik işlevidir; her işlevin farklı bir sözdizimi vardır:
+Bunlar, üç tür özellik işlevleridir; Her işlevde farklı bir sözdizimi vardır:
 
-- String (instance) özellik fonksiyonları
-- Statik özellik fonksiyonları
-- MSBuild özellik fonksiyonları
+- String (örnek) özellik işlevleri
+- Static özellik işlevleri
+- MSBuild özellik işlevleri
 
-### <a name="string-property-functions"></a>Dize özellik işlevleri
+### <a name="string-property-functions"></a>Dize özelliği işlevleri
 
-Tüm yapı özelliği değerleri sadece dize değerleridir. Herhangi bir özellik değeri üzerinde çalışmak için dize (örnek) yöntemlerini kullanabilirsiniz. Örneğin, bu kodu kullanarak tam bir yolu temsil eden bir yapı özelliğinden sürücü adını (ilk üç karakter) ayıklayabilirsiniz:
+Tüm derleme özelliği değerleri yalnızca dize değerleridir. Herhangi bir özellik değerinde çalışmak için dize (örnek) yöntemlerini kullanabilirsiniz. Örneğin, bu kodu kullanarak tam yolu temsil eden bir Build özelliğinden sürücü adını (ilk üç karakter) ayıklayabilirsiniz:
 
 ```
 $(ProjectOutputFolder.Substring(0,3))
 ```
 
-### <a name="static-property-functions"></a>Statik özellik fonksiyonları
+### <a name="static-property-functions"></a>Static özellik işlevleri
 
-Yapı komut dosyanızda, birçok sistem sınıfının statik özelliklerine ve yöntemlerine erişebilirsiniz. Statik bir özelliğin değerini almak için, Sınıf \<>'nin sistem sınıfının adı \<olduğu ve Özellik> özelliğin adı olduğu aşağıdaki sözdizimini kullanın.
+Yapı betiğinizdeki birçok sistem sınıfının statik özelliklerine ve yöntemlerine erişebilirsiniz. Statik bir özelliğin değerini almak için aşağıdaki sözdizimini kullanın; burada \<sınıf> sistem sınıfının adı ve \<Özellik> özelliğin adıdır.
 
 ```
 $([Class]::Property)
 ```
 
-Örneğin, yapı özelliğini geçerli tarih ve saate ayarlamak için aşağıdaki kodu kullanabilirsiniz.
+Örneğin, geçerli tarih ve saate bir Build özelliği ayarlamak için aşağıdaki kodu kullanabilirsiniz.
 
 ```xml
 <Today>$([System.DateTime]::Now)</Today>
 ```
 
-Statik bir yöntem çağırmak için, Sınıf \<> sistem sınıfının adı, \<Yöntem> yöntemin adı ve\<( Parametreler>) yöntemiçin parametre listesi olduğu aşağıdaki sözdizimini kullanın:
+Statik bir yöntemi çağırmak için aşağıdaki sözdizimini kullanın; burada \<Class> sistem sınıfının adıdır, \<Yöntem> yöntemin adıdır ve (\<parametreler>) yöntemin parametre listesidir:
 
 ```
 $([Class]::Method(Parameters))
 ```
 
-Örneğin, yapı özelliğini yeni bir GUID olarak ayarlamak için bu komut dosyasını kullanabilirsiniz:
+Örneğin, bir yapı özelliğini yeni bir GUID 'ye ayarlamak için bu betiği kullanabilirsiniz:
 
 ```xml
 <NewGuid>$([System.Guid]::NewGuid())</NewGuid>
 ```
 
-Statik özellik işlevlerinde, bu sistem sınıflarının herhangi bir statik yöntemini veya özelliğini kullanabilirsiniz:
+Statik Özellik işlevlerinde, bu sistem sınıflarının herhangi bir statik yöntemini veya özelliğini kullanabilirsiniz:
 
-- System.Byte
-- Char
-- Convert
-- Datetime
-- Decimal
-- Double
-- System.Enum
-- System.Guid
-- Sistem.Int16
-- Sistem.Int32
-- Sistem.Int64
-- System.IO.Path
-- Math
-- System.Runtime.InteropServices.OSPlatform
-- System.Runtime.InteropServices.RuntimeInformation
-- Sistem.UInt16
-- Sistem.UInt32
-- Sistem.UInt64
-- System.SByte
-- System.Single
-- System
-- System.StringComparer
-- Timespan
-- System.Text.RegularExpressions.Regex
-- System.UriBuilder
-- Version
-- Microsoft.Build.Utilities.ToolLocationHelper
+- System. Byte
+- System. Char
+- System. Convert
+- System. DateTime
+- System. Decimal
+- System. Double
+- System. Enum
+- System. Guid
+- System. Int16
+- System. Int32
+- System. Int64
+- System. ıO. Path
+- System. Math
+- System. Runtime. InteropServices. OSPlatform
+- System. Runtime. InteropServices. RunTimeInformation
+- System. UInt16
+- System. UInt32
+- System. UInt64
+- System. SByte
+- System. Single
+- System. String
+- System. StringComparer
+- System. TimeSpan
+- System. Text. RegularExpressions. Regex
+- System. UriBuilder
+- System. Version
+- Microsoft. Build. Utilities. ToolLocationHelper
 
 Ayrıca, aşağıdaki statik yöntemleri ve özellikleri kullanabilirsiniz:
 
-- System.Environment::CommandLine
-- System.Environment::ExpandEnvironmentVariables
-- System.Environment::GetEnvironmentVariable
-- System.Environment::GetEnvironmentVariables
-- System.Environment::GetFolderPath
-- System.Environment::GetLogicalSürücüler
-- System.IO.Directory::GetDirectories
-- System.IO.Directory::GetFiles
-- System.IO.Directory::GetLastAccessTime
-- System.IO.Directory::GetLastWriteTime
-- System.IO.Directory::GetParent
-- System.IO.File::Var
-- System.IO.File::GetCreationTime
-- System.IO.File::GetAttributes
-- System.IO.File::GetLastAccessTime
-- System.IO.File::GetLastWriteTime
-- System.IO.File::ReadAllText
+- System. Environment:: CommandLine
+- System. Environment:: ExpandEnvironmentVariables
+- System. Environment:: GetEnvironmentVariable
+- System. Environment:: GetEnvironmentVariables
+- System. Environment:: GetFolderPath
+- System. Environment:: GetLogicalDrives
+- System. ıO. Directory:: Getdizinler
+- System. ıO. Directory:: GetFiles
+- System. ıO. Directory:: GetLastAccessTime
+- System. ıO. Directory:: GetLastWriteTime
+- System. ıO. Directory:: GetParent
+- System. ıO. File:: Exists
+- System. ıO. File:: GetCreationTime
+- System. ıO. File:: GetAttributes
+- System. ıO. File:: GetLastAccessTime
+- System. ıO. File:: GetLastWriteTime
+- System. ıO. File:: ReadAllText
 
-### <a name="calling-instance-methods-on-static-properties"></a>Statik özelliklere örnek yöntemleri çağırma
+### <a name="calling-instance-methods-on-static-properties"></a>Statik özelliklerde örnek yöntemleri çağırma
 
-Nesne örneğini döndüren statik bir özelliğe eriştiyseniz, bu nesnenin örnek yöntemlerini çağırabilirsiniz. Örnek bir yöntem çağırmak için, Sınıf \<> sistem sınıfının adı, \<Özellik> özelliğin adı, \<Yöntem> yöntemin adı ve\<( Parametreler>) yöntemiçin parametre listesi olduğu aşağıdaki sözdizimini kullanın:
+Bir nesne örneği döndüren statik bir özelliğe eriştiğinizde, bu nesnenin örnek yöntemlerini çağırabilirsiniz. Bir örnek yöntemi çağırmak için aşağıdaki sözdizimini \<kullanın; burada Class> sistem sınıfının adıdır, \<Özellik> özelliğin adıdır, \<Yöntem> yöntemin adıdır ve (\<parametreler>) yöntemin parametre listesidir:
 
 ```
 $([Class]::Property.Method(Parameters))
 ```
 
-Sınıfın adı, ad alanı yla tam olarak nitelikli olmalıdır.
+Sınıfın adı ad alanıyla tam olarak nitelenmelidir.
 
-Örneğin, yapı özelliğini bugün geçerli tarihe ayarlamak için aşağıdaki kodu kullanabilirsiniz.
+Örneğin, bir Build özelliğini bugün geçerli tarihe ayarlamak için aşağıdaki kodu kullanabilirsiniz.
 
 ```xml
 <Today>$([System.DateTime]::Now.ToString('yyyy.MM.dd'))</Today>
 ```
 
-### <a name="msbuild-property-functions"></a>MSBuild özellik fonksiyonları
+### <a name="msbuild-property-functions"></a>MSBuild özellik işlevleri
 
-Yapınızdaki çeşitli statik yöntemlere erişilen aritmetik, bitwise mantıksal ve kaçış karakter desteği sağlamak için. Bu yöntemlere, Yöntem>'nin \<yöntemin adı ve (Parametreler\<>) yöntemin parametre listesi olduğu aşağıdaki sözdizimini kullanarak erişebilirsiniz.
+Derlemenize yönelik birkaç statik yönteme aritmetik, bit düzeyinde mantıksal ve çıkış karakteri desteği sağlamak için erişilebilir. Bu yöntemlere, \<yöntemi> yöntemin adı olduğu ve (\<parametreler>) yöntemin parametre listesi olduğu aşağıdaki sözdizimini kullanarak erişirsiniz.
 
 ```
 $([MSBuild]::Method(Parameters))
 ```
 
-Örneğin, sayısal değerlere sahip iki özelliği bir araya getirmek için aşağıdaki kodu kullanın.
+Örneğin, sayısal değerlere sahip iki özelliği birlikte eklemek için aşağıdaki kodu kullanın.
 
 ```
 $([MSBuild]::Add($(NumberOne), $(NumberTwo)))
 ```
 
-Burada MSBuild özellik işlevlerinin bir listesi:
+MSBuild özellik işlevlerinin bir listesi aşağıdadır:
 
 |İşlev imzası|Açıklama|
 |------------------------|-----------------|
-|çift Ekle(çift a, çift b)|İki çift ekleyin.|
-|uzun Ekle (uzun a, uzun b)|İki long saki ekle.|
-|çift Çıkarma (çift a, çift b)|İki dublör çıkar.|
-|uzun Çıkarma (uzun a, uzun b)|İki uzunluk çıkar.|
-|çift Çarpma (çift a, çift b)|İki katı çarpın.|
-|uzun Çarpma (uzun a, uzun b)|İki uzunla çarpın.|
-|çift Bölme (çift a, çift b)|İki katı böl.|
-|uzun Bölme (uzun a, uzun b)|İki uzunluk böl.|
-|çift Modulo(çift a, çift b)|Modulo iki çift.|
-|uzun Modulo(uzun a, uzun b)|Modulo iki uzun.|
-|string Escape(string unescape)|MSBuild kaçış kurallarına göre dize kaçış.|
-|string Unescape(string kaçtı)|MSBuild kaçış kurallarına göre dize kaçış.|
-|int BitwiseOr(int birinci, int ikinci)|Birinci ve `OR` ikinci (ilk &#124; ikinci) biraz akıllıca gerçekleştirin.|
-|int BitwiseAnd(int birinci, int ikinci)|Birinci ve `AND` ikinci (ilk & ikinci) biraz akıllıca gerçekleştirin.|
-|int BitwiseXor(int birinci, int ikinci)|Birinci ve `XOR` ikinci (ilk ^ ikinci) biraz akıllıca gerçekleştirin.|
-|int BitwiseNot(int ilk)|Biraz akıllıca `NOT` gerçekleştirin (~ilk).|
-|bool IsOsPlatform(string platformString)|Geçerli işletim sistemi platformunun. `platformString` `platformString`<xref:System.Runtime.InteropServices.OSPlatform>üyesi olmalıdır.|
-|bool IsOSUnixLike()|Geçerli işletim sistemi bir Unix sistemi ise doğrudur.|
-|string NormalizePath(params string[] yolu)|Sağlanan yolun kanonikleştirilmiş tam yolunu alır ve geçerli işletim sistemi için doğru dizin ayırıcı karakterleri içerir sağlar.|
-|string NormalizeDirectory(params string[] yolu)|Sağlanan dizinin kanonikleştirilmiş tam yolunu alır ve bir izleme eğik çizgi sağlarken geçerli işletim sistemi için doğru dizin ayırıcı karakterleri içerir sağlar.|
-|string EnsureTrailingSlash(string yolu)|Verilen yol bir izleme eğik çizgi yoksa o zaman bir ekleyin. Yol boş bir dizeise, onu değiştirmez.|
-|string GetPathOfFileAbove(string dosyası, string başlangıçDirectory)|Tam yolu arar ve geçerli yapı dosyasının konumunun üzerindeki dizin yapısındaki bir `startingDirectory`dosyaya veya belirtildiği takdirde ,|
-|GetDirectoryNameOfFileAbove(string başlangıçDirectory, string fileName)|Bir dosyanın dizinini belirtilen dizinde veya bu dizinin üzerindeki dizin yapısındaki bir konumu bulun ve döndürün.|
-|string MakeRelative(string basePath, string path)|Göreceli `path` hale `basePath`getirir. `basePath`mutlak bir dizin olmalıdır. Göreceli `path` olarak yapılamıyorsa, tam olarak döndürülür. Benzer `Uri.MakeRelativeUri`.|
-|string ValueOrDefault(string conditionValue, string defaultValue)|'defaultValue' parametresi 'conditionValue' boşsa, diğer, değer koşuldeğeriDeğer'i döndürün.|
+|Double Ekle (çift a, çift b)|İki Double Ekle.|
+|uzun ekleme (Long a, Long b)|İki Long ekleyin.|
+|Çift çıkarma (çift a, çift b)|İki Double öğesini çıkar.|
+|uzun çıkarma (Long a, Long b)|İki Long çıkar.|
+|Çift çarpma (çift a, çift b)|İki Double öğesini çarpın.|
+|uzun çarpma (Long a, Long b)|İki Long 'yi çarpın.|
+|Çift bölme (çift a, çift b)|İki Double öğesini bölün.|
+|Uzun bölme (Long a, Long b)|İki Long bölün.|
+|Çift modül (çift a, çift b)|İki Double modül.|
+|uzun mod (Long a, Long b)|Modül iki Long.|
+|dize kaçış (dize kaçışsız)|MSBuild kaçış kurallarına göre dizeyi kaçış.|
+|dize Unkaçış (dize kaçan)|MSBuild kaçış kurallarına göre dizenin kaçış işaretini kaldırın.|
+|int Bitwiseveya (int First, INT Second)|Birinci ve ikinci `OR` bir bit düzeyinde gerçekleştirin (ilk &#124; saniye).|
+|Int Bitwiseve (int First, int Second)|Birinci ve ikinci `AND` bir bit düzeyinde gerçekleştirin (ilk & saniye).|
+|Int BitwiseXor (int First, int Second)|Birinci ve ikinci `XOR` bit düzeyinde bit düzeyinde gerçekleştirin (ilk ^ saniye).|
+|Int Bitwıenot (ilk tamsayı)|Bit düzeyinde `NOT` (~ ilk) gerçekleştirin.|
+|bool ısosplatform (dize platformString)|Geçerli işletim sistemi platformunun olup olmadığını belirtin `platformString`. `platformString`öğesinin <xref:System.Runtime.InteropServices.OSPlatform>üyesi olması gerekir.|
+|bool ıosunixlike ()|Geçerli işletim sistemi bir UNIX sistemse true.|
+|String NormalizePath (params String [] yol)|Belirtilen yolun kurallı tam yolunu alır ve geçerli işletim sistemi için doğru dizin ayırıcı karakterlerini içerdiğinden emin olur.|
+|String NormalizeDirectory (params String [] yol)|Belirtilen dizinin kurallı tam yolunu alır ve sonunda eğik çizgi olduğundan emin olarak geçerli işletim sistemi için doğru dizin ayırıcı karakterlerini içerir.|
+|dize Ensugeri çekme bölgesi (dize yolu)|Verilen yolun sonunda eğik çizgi yoksa bir tane ekleyin. Yol boş bir dize ise, onu değiştirmez.|
+|String Getpathoffileyukarıdaki (dize dosyası, dize startingDirectory)|, İçin arama yapar ve geçerli derleme dosyasının konumunun üzerindeki dizin yapısındaki bir dosyanın tam yolunu ya da belirtilmişse öğesine göre `startingDirectory`döndürür.|
+|Getdirectorynameoffileyukarıdaki (dize startingDirectory, dize fileName)|Belirtilen dizinde ya da bu dizinin üzerindeki dizin yapısındaki bir konumda bulunan bir dosyanın dizinini bulun ve döndürün.|
+|String MakeRelative (dize basePath, dize yolu)|Göreli `path` hale getirir `basePath`. `basePath`mutlak bir dizin olmalıdır. Göreli `path` hale getirilmezse, harfine döndürülür. Benzer `Uri.MakeRelativeUri`.|
+|dize ValueOrDefault (dize conditionValue, String defaultValue)|' DefaultValue ' parametresindeki dizeyi yalnızca ' conditionValue ' parametresi boşsa, Else değerini döndürün.|
 
 ## <a name="nested-property-functions"></a>İç içe özellik işlevleri
 
-Aşağıdaki örnekte görüldüğü gibi, özellik işlevlerini birleştirerek daha karmaşık işlevler oluşturabilirsiniz.
+Aşağıdaki örnekte gösterildiği gibi daha karmaşık işlevler oluşturmak için özellik işlevlerini birleştirebilirsiniz.
 
 ```
 $([MSBuild]::BitwiseAnd(32, $([System.IO.File]::GetAttributes(tempFile))))
 ```
 
-Bu örnek, yol <xref:System.IO.FileAttributes> `Archive` `tempFile`tarafından verilen dosyanın bit (32 veya 0) değerini döndürür. Numaralandırılmış veri değerlerinin özellik işlevleri içinde ada göre görünemeyeceğine dikkat edin. Bunun yerine sayısal değer (32) kullanılmalıdır.
+Bu örnek, yol <xref:System.IO.FileAttributes> `Archive` `tempFile`tarafından verilen dosyanın bit (32 veya 0) değerini döndürür. Numaralandırılmış veri değerlerinin özellik işlevleri içinde ada göre görünmediğine dikkat edin. Bunun yerine sayısal değer (32) kullanılmalıdır.
 
-Meta veriler iç içe geçen özellik işlevlerinde de görünebilir. Daha fazla bilgi için [Toplu İşlem'e](../msbuild/msbuild-batching.md)bakın.
+Meta veriler, iç içe geçmiş Özellik işlevlerinde de görünebilir. Daha fazla bilgi için bkz. [toplu](../msbuild/msbuild-batching.md)işlem.
 
-## <a name="msbuild-doestaskhostexist"></a>MSBuild DoesTaskHostExist
+## <a name="msbuild-doestaskhostexist"></a>MSBuild yok Taskhostexist
 
-MSBuild'teki `DoesTaskHostExist` özellik işlevi, belirtilen çalışma zamanı ve mimari değerleri için şu anda bir görev ana bilgisayarının yüklü olup olmadığını döndürür.
+MSBuild `DoesTaskHostExist` 'teki Özellik işlevi, belirtilen çalışma zamanı ve mimari değerleri için bir görev konağının Şu anda yüklü olup olmadığını döndürür.
 
 Bu özellik işlevi aşağıdaki sözdizimine sahiptir:
 
@@ -201,9 +201,9 @@ Bu özellik işlevi aşağıdaki sözdizimine sahiptir:
 $([MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture))
 ```
 
-## <a name="msbuild-ensuretrailingslash"></a>MSBuild Güvenli TrailingSlash
+## <a name="msbuild-ensuretrailingslash"></a>MSBuild Ensuvanıingeğik çizgi
 
-MSBuild'teki `EnsureTrailingSlash` özellik işlevi, zaten yoksa, bir çizgi oluşturur.
+MSBuild `EnsureTrailingSlash` 'teki Özellik işlevi, zaten mevcut değilse sondaki eğik çizgi ekler.
 
 Bu özellik işlevi aşağıdaki sözdizimine sahiptir:
 
@@ -211,9 +211,9 @@ Bu özellik işlevi aşağıdaki sözdizimine sahiptir:
 $([MSBuild]::EnsureTrailingSlash('$(PathProperty)'))
 ```
 
-## <a name="msbuild-getdirectorynameoffileabove"></a>MSBuild GetDirectoryNameOfFileAbove
+## <a name="msbuild-getdirectorynameoffileabove"></a>MSBuild Getdirectorynameoffileyukarıdaki
 
-MSBuild `GetDirectoryNameOfFileAbove` özellik işlevi, yoldaki geçerli dizin üzerinde dizinlerde bir dosya arar.
+MSBuild `GetDirectoryNameOfFileAbove` özelliği işlevi, yoldaki geçerli dizinin üzerindeki dizinlerde bulunan bir dosyayı arar.
 
  Bu özellik işlevi aşağıdaki sözdizimine sahiptir:
 
@@ -227,9 +227,9 @@ $([MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile))
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))\EnlistmentInfo.props" Condition=" '$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), EnlistmentInfo.props))' != '' " />
 ```
 
-## <a name="msbuild-getpathoffileabove"></a>MSBuild GetPathOfFileAbove
+## <a name="msbuild-getpathoffileabove"></a>MSBuild Getpathoffileyukarıdaki
 
-MSBuild'teki `GetPathOfFileAbove` özellik işlevi, geçerli dizinin üzerindeki dizin yapısında bulunuyorsa, belirtilen dosyanın yolunu döndürür. İşlevsel olarak aramaya eşdeğerdir
+MSBuild `GetPathOfFileAbove` 'teki Özellik işlevi, geçerli dizinin üzerindeki dizin yapısında bulunuyorsa belirtilen dosyanın yolunu döndürür. Çağırmak için işlevsel olarak eşdeğerdir
 
 ```xml
 <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.props))\dir.props" />
@@ -243,9 +243,9 @@ $([MSBuild]::GetPathOfFileAbove(dir.props))
 
 ## <a name="msbuild-getregistryvalue"></a>MSBuild GetRegistryValue
 
-MSBuild `GetRegistryValue` özellik işlevi bir kayıt defteri anahtarının değerini döndürür. Bu işlev iki bağımsız değişken, anahtar adı ve değer adı alır ve kayıt defterinden değeri döndürür. Bir değer adı belirtmezseniz, varsayılan değer döndürülür.
+MSBuild `GetRegistryValue` özelliği işlevi bir kayıt defteri anahtarının değerini döndürür. Bu işlev iki bağımsız değişken alır, anahtar adı ve değer adı ve kayıt defterindeki değeri döndürür. Bir değer adı belirtmezseniz, varsayılan değer döndürülür.
 
-Aşağıdaki örnekler, bu işlevin nasıl kullanıldığını gösterir:
+Aşağıdaki örneklerde bu işlevin nasıl kullanıldığı gösterilmektedir:
 
 ```
 $([MSBuild]::GetRegistryValue(`HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\10.0\Debugger`, ``))                                  // default value
@@ -255,25 +255,25 @@ $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(Samp
 
 ## <a name="msbuild-getregistryvaluefromview"></a>MSBuild GetRegistryValueFromView
 
-MSBuild `GetRegistryValueFromView` özellik işlevi, kayıt defteri anahtarı, değeri ve bir veya daha fazla sıralı kayıt defteri görünümü verilen sistem kayıt defteri verilerini alır. Anahtar ve değer, bulunana kadar her kayıt defteri görünümünde sırayla aranır.
+MSBuild `GetRegistryValueFromView` özelliği işlevi, kayıt defteri anahtarı, değeri ve bir veya daha fazla sıralı kayıt defteri görünümü verilen sistem kayıt defteri verilerini alır. Anahtar ve değer, her kayıt defteri görünümünde, bulunana kadar sırayla aranır.
 
-Bu özellik işlevi için sözdizimi:
+Bu özellik işlevinin sözdizimi şöyledir:
 
 ```
 [MSBuild]::GetRegistryValueFromView(string keyName, string valueName, object defaultValue, params object[] views)
 ```
 
-Windows 64-bit işletim sistemi, 32 bit uygulamalar için **HKEY_LOCAL_MACHINE\SOFTWARE** kayıt defteri görünümü sunan bir **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node** kayıt defteri anahtarını korur.
+Windows 64-bit işletim sistemi, 32 bit uygulamalar için **HKEY_LOCAL_MACHINE \Software** kayıt defteri görünümü sunan bir **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node** kayıt defteri anahtarı sağlar.
 
-Varsayılan olarak, WOW64'te çalışan 32 bit lik bir uygulama 32 bit kayıt defteri görünümüne erişir ve 64 bit uygulama 64 bit kayıt defteri görünümüne erişer.
+Varsayılan olarak, WOW64 üzerinde çalışan 32 bitlik bir uygulama 32 bit kayıt defteri görünümüne erişir ve 64 bit uygulama, 64 bit kayıt defteri görünümüne erişir.
 
 Aşağıdaki kayıt defteri görünümleri kullanılabilir:
 
 |Kayıt defteri görünümü|Tanım|
 |-------------------|----------------|
-|RegistryView.Registry32|32 bit uygulama kayıt defteri görünümü.|
-|RegistryView.Registry64|64 bit uygulama kayıt defteri görünümü.|
-|RegistryView.Default|Uygulamanın yürüttüğü işlemle eşleşen kayıt defteri görünümü.|
+|RegistryView. Registry32|32 bit uygulama kayıt defteri görünümü.|
+|RegistryView. Registry64|64 bit uygulama kayıt defteri görünümü.|
+|RegistryView. Default|Uygulamanın üzerinde çalıştığı işlemle eşleşen kayıt defteri görünümü.|
 
 Bir örnek verilmiştir.
 
@@ -281,11 +281,11 @@ Bir örnek verilmiştir.
 $([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Silverlight\v3.0\ReferenceAssemblies', 'SLRuntimeInstallPath', null, RegistryView.Registry64, RegistryView.Registry32))
 ```
 
-64 bit kayıt defteri görünümünde önce ve ardından 32 bit kayıt defteri görünümünde **bakarak, ReferenceAssemblies** anahtarının **SLRuntimeInstallPath** verilerini alır.
+önce 64 bit kayıt defteri görünümüne, sonra da 32 bit kayıt defteri görünümünde arayarak **ReferenceAssemblies** anahtarının **SLRuntimeInstallPath** verilerini alır.
 
 ## <a name="msbuild-makerelative"></a>MSBuild MakeRelative
 
-MSBuild `MakeRelative` özellik işlevi, ikinci yolun göreli yolunu ilk yola göredöndürür. Her yol bir dosya veya klasör olabilir.
+MSBuild `MakeRelative` özelliği işlevi, ilk yola göre ikinci yolun göreli yolunu döndürür. Her yol bir dosya veya klasör olabilir.
 
 Bu özellik işlevi aşağıdaki sözdizimine sahiptir:
 
@@ -315,9 +315,9 @@ Output:
 
 ## <a name="msbuild-valueordefault"></a>MSBuild ValueOrDefault
 
-MSBuild `ValueOrDefault` özellik işlevi, null veya boş olmadığı sürece ilk bağımsız değişkeni döndürür. İlk bağımsız değişken boş veya boşsa, işlev ikinci bağımsız değişkeni döndürür.
+MSBuild `ValueOrDefault` Özellik işlevi, null veya boş olmadığı takdirde ilk bağımsız değişkeni döndürür. İlk bağımsız değişken null veya boşsa, işlev ikinci bağımsız değişkeni döndürür.
 
-Aşağıdaki örnekte, bu işlevin nasıl kullanıldığı gösterilmektedir.
+Aşağıdaki örnek, bu işlevin nasıl kullanıldığını gösterir.
 
 ```xml
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -340,8 +340,12 @@ Output:
 -->
 ```
 
+## <a name="msbuild-condition-functions"></a>MSBuild koşul işlevleri
+
+İşlevler `Exists` ve `HasTrailingSlash` özellik işlevleri değildir. Bu öznitelikler, `Condition` özniteliğiyle birlikte kullanılmak üzere kullanılabilir. Bkz. [MSBuild koşulları](msbuild-conditions.md).
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild özellikleri](../msbuild/msbuild-properties.md)
 
-- [MSBuild'e genel bakış](../msbuild/msbuild.md)
+- [MSBuild genel bakış](../msbuild/msbuild.md)

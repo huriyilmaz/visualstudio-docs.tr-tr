@@ -8,19 +8,19 @@ ms.assetid: 51b53778-469c-4cc9-854c-4e4992d6389b
 caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: b44e921a8e1ba13d3f0786d4633f942f94f3eaaa
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 0ec4c0a9594202b6755500d683c426238264aec3
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851284"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586974"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>Kodlanmış UI Testleriyle SharePoint 2010 Uygulamalarını Test Etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Kodlanmış UI testlerini bir SharePoint uygulamasına dahil etmek, Kullanıcı arabirimi denetimleri de dahil olmak üzere tüm uygulamanın düzgün çalıştığını doğrulamanızı sağlar. Kodlanmış UI testleri, Kullanıcı arabirimindeki değerleri ve mantığı da doğrulayabilir.
 
- **Requirements**
+ **Gereksinimler**
 
 - Visual Studio Enterprise
 
@@ -36,7 +36,7 @@ Kodlanmış UI testlerini bir SharePoint uygulamasına dahil etmek, Kullanıcı 
 ## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>SharePoint uygulamanız için kodlanmış UI testi oluşturma
  SharePoint 2010 uygulamalarınız için [KODLANMıŞ UI testleri oluşturmak](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) , diğer uygulama türleri için test oluşturma ile aynıdır. Kayıt ve kayıttan yürütme, Web düzenlemesi arabirimindeki tüm denetimler için desteklenir. Kategorileri ve Web parçalarını seçme arabirimi tüm standart Web denetimleridir.
 
- ![SharePoint Web bölümleri](../test/media/cuit-sharepoint.png "CUIT_SharePoint")
+ ![SharePoint web bölümleri](../test/media/cuit-sharepoint.png "CUIT_SharePoint")
 
 > [!NOTE]
 > Eylem kaydediyorsanız, kodu oluşturmadan önce eylemleri doğrulayın. Fare vurgusu ile ilişkili birkaç davranış olduğundan, varsayılan olarak açık olur. Kodlanmış UI testlerinizden gereksiz bir yere dikkat kaldırmayı dikkatli olun. Bunu, test için kodu düzenleyerek veya [KODLANMıŞ UI test düzenleyicisini](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)kullanarak yapabilirsiniz.
@@ -53,23 +53,23 @@ Kodlanmış UI testlerini bir SharePoint uygulamasına dahil etmek, Kullanıcı 
 > [!WARNING]
 > Herhangi bir Excel hücresine metin girme, ardından bir ok tuşu eyleminden, doğru şekilde kayıt yapmaz. Hücreleri seçmek için fareyi kullanın.
 
- Eylemleri boş bir hücreye kaydediyorsanız, hücreyi çift tıklayarak ve ardından bir metin ayarla işlemi gerçekleştirerek kodu değiştirmeniz gerekir. Bu, hücreye tıkladığınızda ve ardından herhangi bir klavye eyleminin ardından hücre içinde `textarea` etkinleştirmediği için gereklidir. Boş hücrede `setvalue` kaydetmek, hücreye tıklanana kadar mevcut olmayan `editbox` arar. Örneğin:
+ Eylemleri boş bir hücreye kaydediyorsanız, hücreyi çift tıklayarak ve ardından bir metin ayarla işlemi gerçekleştirerek kodu değiştirmeniz gerekir. Bu, hücreye tıkladığınızda ve ardından herhangi bir klavye eyleminin ardından hücre `textarea` içinde etkinleştiğinden gereklidir. Yalnızca boş hücrede `setvalue` kaydetmek, `editbox` hücreye tıklanana kadar mevcut olmayan öğesini arar. Örneğin:
 
 ```csharp
 Mouse.DoubliClick(uiItemCell,new Point(31,14));
 uiGridKeyboardInputEdit.Text=value;
 ```
 
- Boş olmayan bir hücrede eylem kaydediyorsanız, bir hücreye metin eklediğiniz anda yeni bir \<div > denetimi hücrenin bir alt öğesi olarak eklenir, daha sonra kaydetme işlemi biraz daha karmaşıktır. Yeni \<div > denetimi, az önce girdiğiniz metni içerir. Kaydedicinin, yeni \<div > denetimine eylemleri kaydetmesi gerekir; Ancak, test girilene kadar yeni \<div > denetimi mevcut olmadığından, bu yapılamıyor. Bu sorunu karşılamak için aşağıdaki kod değişikliklerini el ile yapmanız gerekir.
+ Boş olmayan bir hücrede eylem kaydediyorsanız, bir hücreye metin eklediğiniz anda, hücrenin alt öğesi olarak yeni \<bir div> denetimi eklendikçe, kaydetme biraz daha karmaşıktır. Yeni \<div> denetimi, az önce girdiğiniz metni içerir. Kaydedicinin, yeni \<div> denetimine eylemleri kaydetmesi gerekir; Ancak, test girilene kadar yeni \<div> denetimi mevcut olmadığından, bu yapılamıyor. Bu sorunu karşılamak için aşağıdaki kod değişikliklerini el ile yapmanız gerekir.
 
-1. Hücre başlatmaya gidin ve `RowIndex` ve `ColumnIndex` birincil özellikleri yapın:
+1. Hücre başlatma ve oluşturma `RowIndex` ve `ColumnIndex` birincil özellikler 'e gidin:
 
     ```csharp
     this.mUIItemCell.SearchProperties[HtmlCell.PropertyNames. RowIndex] = "3";
     this.mUIItemCell.SearchProperties[HtmlCell.PropertyNames. ColumnIndex] = "3";
     ```
 
-2. Hücrenin `HtmlDiv` çocuğu bulun:
+2. Hücrenin `HtmlDiv` alt öğesini bulun:
 
     ```csharp
     private UITestControl getControlToDoubleClick(HtmlCell cell)
@@ -85,13 +85,13 @@ uiGridKeyboardInputEdit.Text=value;
 
     ```
 
-3. `HtmlDiv`üzerinde fare çift tıklama eylemi için kod ekleyin:
+3. Üzerinde `HtmlDiv`fare çift tıklama eylemi için kod ekleyin:
 
     ```csharp
     Mouse.DoubleClick(uIItemPane, new Point(31, 14)); )
     ```
 
-4. `TextArea`metin ayarlamak için kod ekleyin:
+4. Metin ayarlamak için kod ekleyin `TextArea`:
 
     ```csharp
     uIGridKeyboardInputEdit.Text = value; }
@@ -114,7 +114,7 @@ uiGridKeyboardInputEdit.Text=value;
 
 #### <a name="testing-silverlight-web-parts"></a>Silverlight Web parçalarını test etme
 
-1. Fiddler'ı Başlatın.
+1. Fiddler'ı başlatın.
 
 2. Tarayıcı önbelleğini temizleyin. Bu gereklidir çünkü Silverlight UI Otomasyon Yardımcısı DLL 'sini içeren XAP dosyası tipik olarak önbelleğe alınır. Değiştirilen XAP dosyasının çekildiğinizden emin olmak istiyoruz, bu nedenle tarayıcı önbelleğini temizliyoruz.
 
@@ -137,11 +137,11 @@ uiGridKeyboardInputEdit.Text=value;
 
  [Kodlanmış UI testi için içerik dizini](https://blogs.msdn.microsoft.com/mathew_aniyan/2013/02/18/content-index-for-coded-ui-test/)
 
-### <a name="guidance"></a>Kılavuz
+### <a name="guidance"></a>Rehber
  [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 5 Sistem testlerini otomatikleştirme](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="forum"></a>Forum
- [Visual Studio ALM + Team Foundation Server blogu](https://blogs.msdn.com/b/visualstudioalm/)
+ [Visual Studio ALM + Team Foundation Server blogu](https://devblogs.microsoft.com/devops/welcome-to-the-visual-studio-alm-team-foundation-server-blog/)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  Kod [Web performansınızı test etmek ve sharepoint 2010 ve 2013 uygulamalarında yük](https://msdn.microsoft.com/library/20c2e469-0e4e-4296-a739-c0e8fff36e54) testi [yapmak Için UI Otomasyonu kullanma](../test/use-ui-automation-to-test-your-code.md) SharePoint [çözümlerini oluşturma](https://msdn.microsoft.com/library/4bfb1e59-97c9-4594-93f8-3068b4eb9631) [ve hata ayıklama](https://msdn.microsoft.com/library/b5f3bce2-6a51-41b1-a292-9e384bae420c) SharePoint [çözümlerini derleme ve hata ayıklama](https://msdn.microsoft.com/library/c9e7c9ab-4eb3-40cd-a9b9-6c2a896f70ae) SharePoint [uygulamalarının performansı profili](https://msdn.microsoft.com/library/61ae02e7-3f37-4230-bae1-54a498c2fae8) oluşturma

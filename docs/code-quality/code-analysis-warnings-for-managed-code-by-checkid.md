@@ -107,6 +107,7 @@ f1_keywords:
 - CA1506
 - CA1507
 - CA1508
+- CA1509
 - CA1600
 - CA1601
 - CA1700
@@ -172,6 +173,7 @@ f1_keywords:
 - CA2004
 - CA2006
 - CA2007
+- CA2009
 - CA2100
 - CA2101
 - CA2102
@@ -270,12 +272,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 554de8df2d05d0ae4f248762891dd0cec543e5a9
-ms.sourcegitcommit: 93859158465eab3423a0c0435f06490f0a456a57
+ms.openlocfilehash: 4b4b0929830f825b2c1f7fd568620a3f743308f4
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167390"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586299"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>CheckId tarafından yönetilen kod için kod analizi uyarıları
 
@@ -283,7 +285,6 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 
 | CheckId | Uyarı | Açıklama |
 |---------| - | - |
-| CA2007 | [CA2007: Doğrudan bir Görevi beklemeyin](ca2007.md) | Zaman uyumsuz bir [awaits](/dotnet/csharp/language-reference/keywords/await) Yöntem <xref:System.Threading.Tasks.Task> doğrudan bekler. Zaman uyumsuz bir yöntem <xref:System.Threading.Tasks.Task> doğrudan bekler, görevi oluşturan aynı iş parçacığında devamlılık oluşur. Bu davranış, performans açısından maliyetli olabilir ve Kullanıcı arabirimi iş parçacığında kilitlenmeye neden olabilir. Devamlılığını <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> sağlamak için çağırmayı düşünün. |
 | CA1000 | [CA1000: Genel türlerde statik üyeler belirtme](../code-quality/ca1000.md) | Genel türün statik üyesi çağrıldığında tür bağımsız değişkeni tür için belirlenmelidir. Destek çıkarımı desteklenmeyen genel örnek üyesi çağrıldığında tür bağımsız değişkeni üye için belirlenmelidir. Bu iki durumda tür bağımsız değişkenini belirleyen sözdizimi farklıdır ve kolaylıkla karıştırılır. |
 | CA1001 | [CA1001: Atılabilen alanlara sahip türler atılabilir olmalıdır](../code-quality/ca1001.md) | Bir sınıf System.IDisposable tipi örnek alanını derler ve uygular ve sınıf IDisposable'ı uygulamaz. IDisposable alanını derleyen sınıf, yönetilmeyen kaynağı dolaylı yoldan sahiplenir ve IDisposable arayüzünü uygulamalıdır. |
 | CA1002 | [CA1002: Genel listeleri gösterme](../code-quality/ca1002.md) | System. Collections. Generic. List< (/ \<(T>) >), devralma değil, performans için tasarlanan genel bir koleksiyondur. Bu nedenle, Liste herhangi bir sanal üyeyi içermiyor. Bunun yerine devralma için tasarlanmış genel koleksiyonlar maruz kalmalıdır. |
@@ -383,6 +384,7 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA1506 | [CA1506: Aşırı sınıf bağlantısından kaçının](../code-quality/ca1506.md) | Bu kural türü veya yöntemini içeren benzersiz türde başvuru sayısı belirlenerek eşlenmesiyle sınıfı ölçer. |
 | CA1507 | [CA1507: Dize yerine nameof kullanma](../code-quality/ca1507.md) | Bir dize sabit değeri, bir `nameof` ifadenin kullanılabileceği bir bağımsız değişken olarak kullanılır. |
 | CA1508 | [CA1508: Ölü koşullu kodlardan kaçının](../code-quality/ca1508.md) | Bir yöntemde, her zaman çalışma zamanında olarak `true` `false` değerlendirilen koşullu kod bulunur. Bu, koşulun `false` dalındaki ölü koda yol açar. |
+| CA1509 | [CA1509: kod ölçümleri yapılandırma dosyasında geçersiz giriş](../code-quality/ca1509.md) | [CA1501](ca1501.md), [CA1502](ca1502.md), [CA1505](ca1505.md) ve [CA1506](ca1506.md)gibi kod ölçüm kuralları, geçersiz bir girişi olan adlı `CodeMetricsConfig.txt` bir yapılandırma dosyası sağladı. |
 | CA1600 | [CA1600: Boş işlem önceliğini kullanmayın](../code-quality/ca1600.md) | İşlem önceliğini Boşta olarak ayarlamayın. Aksi durumda boş olacak ve bu nedenle beklemeyi engeller, System.Diagnostics.ProcessPriorityClass.Idle bulunan işlemleri CPU dolduracaktır. |
 | CA1601 | [CA1601: Güç durumu değişikliklerini önleyen zamanlayıcılar kullanmayın](../code-quality/ca1601.md) | Yüksek frekanslı dönemsel faaliyet CPU'yu meşgul tutar ve sabit diski gösteren güç tasarruflu zamanlayıcılarla müdahale edilir. |
 | CA1700 | [CA1700: Sabit listesi değerlerini 'Reserved' olarak adlandırmayın](../code-quality/ca1700.md) | Bu kural, "ayrılmış" içeren bir ada sahip numaralandırma üyesi şu anda kullanılmamaktadır ancak yeniden adlandırılabilir veya gelecekteki bir sürüme kaldırıldığını varsayar. Üye kaldırma veya yeniden adlandırma bölünmesi farklıdır. |
@@ -428,10 +430,10 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA1823 | [CA1823: Kullanılmayan özel alanlardan kaçının](../code-quality/ca1823.md) | Derlemede erişimi görülmeyen özel alanlar algılandı. |
 | CA1824 |[CA1824: Derlemeleri NeutralResourcesLanguageAttribute ile işaretleyin](../code-quality/ca1824.md) | NeutralResourcesLanguage özniteliği, bir derleme için nötr kültürün kaynaklarını göstermek için kullanılan dilin kaynak yöneticisini bilgilendirir. Bu ilk yüklediğiniz kaynak için arama performansını artırır ve çalışma kümenizi azaltabilir. |
 | CA1825 |[CA1825: Sıfır uzunluklu dizi ayırmalarından kaçının](../code-quality/ca1825.md) | Sıfır uzunluklu bir diziyi başlatmak gereksiz bellek ayırmaya yol açar. Bunun yerine, çağırarak <xref:System.Array.Empty%2A?displayProperty=nameWithType>statik olarak ayrılan boş dizi örneğini kullanın. Bellek ayırma, bu yöntemin tüm etkinleştirmeleri genelinde paylaşılır. |
-| CA1826 |[CA1826: LINQ sıralanabilir yöntemi yerine özelliği kullanın](../code-quality/ca1826.md) | <xref:System.Linq.Enumerable>LINQ yöntemi eşdeğer, daha verimli bir özelliği destekleyen bir tür üzerinde kullanıldı. |
-| CA1827 |[CA1827: herhangi bir kullanılabilir olduğunda Count/LongCount kullanmayın](../code-quality/ca1827.md) | <xref:System.Linq.Enumerable.Count%2A>ya <xref:System.Linq.Enumerable.LongCount%2A> da yöntemi, yöntemin <xref:System.Linq.Enumerable.Any%2A> daha verimli olacağı yerde kullanılmıştır. |
-| CA1828 |[CA1828: AnyAsync kullanılıyorsa, CountAsync/LongCountAsync kullanmayın](../code-quality/ca1828.md) | <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync%2A>ya <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.LongCountAsync%2A> da yöntemi, yöntemin <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync%2A> daha verimli olacağı yerde kullanılmıştır. |
-| CA1829 |[CA1829: sıralanabilir. Count yöntemi yerine length/Count özelliğini kullanın](../code-quality/ca1829.md) | <xref:System.Linq.Enumerable.Count%2A>LINQ yöntemi eşdeğer, daha etkin `Length` veya `Count` özelliği destekleyen bir tür üzerinde kullanıldı. |
+| CA1826 |[CA1826: Linq Numaralandırma metodu yerine property kullan](../code-quality/ca1826.md) | <xref:System.Linq.Enumerable>LINQ yöntemi eşdeğer, daha verimli bir özelliği destekleyen bir tür üzerinde kullanıldı. |
+| CA1827 |[CA1827: Any kullanılabiliyorsa Count/LongCount kullanma](../code-quality/ca1827.md) | <xref:System.Linq.Enumerable.Count%2A>ya <xref:System.Linq.Enumerable.LongCount%2A> da yöntemi, yöntemin <xref:System.Linq.Enumerable.Any%2A> daha verimli olacağı yerde kullanılmıştır. |
+| CA1828 |[CA1828: AnyAsync kullanılabiliyorsa CountAsync/LongCountAsync kullanma](../code-quality/ca1828.md) | <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.CountAsync%2A>ya <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.LongCountAsync%2A> da yöntemi, yöntemin <xref:Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.AnyAsync%2A> daha verimli olacağı yerde kullanılmıştır. |
+| CA1829 |[CA1829: Enumerable.Count metodu yerine Length/Count özelliğini kullan](../code-quality/ca1829.md) | <xref:System.Linq.Enumerable.Count%2A>LINQ yöntemi eşdeğer, daha etkin `Length` veya `Count` özelliği destekleyen bir tür üzerinde kullanıldı. |
 | CA1900 | [CA1900: Değer tür alanları taşınabilir olmalıdır](../code-quality/ca1900.md) | Bu kural açık düzene bildirilen yapıları kullanarak 64-bit işletim sistemlerinde yönetilmeyen kod sıralandığı zaman doğru olarak hizalamayı denetler. |
 | CA1901 | [CA1901: P/Invoke bildirimleri taşınabilir olmalıdır](../code-quality/ca1901.md) | Bu kural her parametresinin boyutu ve P/Invoke dönüş değeri olarak değerlendirilir ve parametrenin boyutu 32-bit ve 64-bit işletim sistemlerinde yönetilmeyen kodun başvuruya doğru olduğunu doğrular. |
 | CA1903 | [CA1903: Yalnızca hedeflenen çerçeveden API kullanın](../code-quality/ca1903.md) | Bir üye veya tür, bir üye veya projedeki hedeflenen çerçeve ile birlikte dahil edilmemiş hizmet paketinde tanıtılmış türü kullanır. |
@@ -441,6 +443,8 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA2003 |[CA2003: Fiberleri iş parçacığı olarak görmeyin](../code-quality/ca2003.md) | Yönetilen bir iş parçacığı [!INCLUDE[TLA2#tla_win32](../code-quality/includes/tla2sharptla_win32_md.md)] iş parçacığı olarak kabul ediliyor. |
 | CA2004 | [CA2004: GC.KeepAlive'a çağrıları kaldırın](../code-quality/ca2004.md) | SafeHandle kullanımını dönüştürüyorsanız, tüm GC.KeepAlive (nesne) çağrılarını kaldırın. Bu durumda, sınıflar GC.KeepAlive'a çağrı yapmamalıdır. Bu, onların bir sonlandırıcısı olmadığını kabul eder, ancak SafeHandle'ı işletim sistemini sonlandırmasına güvenin. |
 | CA2006 | [CA2006: Yerel kaynakları kapsamak için SafeHandle kullanın](../code-quality/ca2006.md) | Yönetilen kod içinde IntPtr kullanmak olası bir güvenlik ve güvenilirlik sorunu belirtebilir. IntPtr'nin tüm kullanımları onun yerine bir SafeHandle ya da benzer bir teknolojinin kullanımının gerekip gerekmediğini belirlemek için gözden geçirilmelidir. |
+| CA2007 | [CA2007: Doğrudan bir Görevi beklemeyin](ca2007.md) | Zaman uyumsuz bir [awaits](/dotnet/csharp/language-reference/keywords/await) Yöntem <xref:System.Threading.Tasks.Task> doğrudan bekler. Zaman uyumsuz bir yöntem <xref:System.Threading.Tasks.Task> doğrudan bekler, görevi oluşturan aynı iş parçacığında devamlılık oluşur. Bu davranış, performans açısından maliyetli olabilir ve Kullanıcı arabirimi iş parçacığında kilitlenmeye neden olabilir. Devamlılığını <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType> sağlamak için çağırmayı düşünün. |
+| CA2009 | [CA2009: bir ımmutablecollection değerinde ToImmutableCollection çağırmayın](ca2009.md) | `ToImmutable`Yöntem, ad alanından <xref:System.Collections.Immutable> sabit bir koleksiyonda gereksiz şekilde çağrıldı. |
 | CA2100 | [CA2100: SQL sorgularını güvenlik açıkları için inceleyin](../code-quality/ca2100.md) | Bir yöntem, yönteme dize değişkeninden oluşturulmuş dize kullanarak System.Data.IDbCommand.CommandText özelliğini ayarlar. Bu kural, dize değişkeninin kullanıcı girişi içerdiğini varsayar. Kullanıcı girişi ile oluşturulan SQL komut dizesi, SQL enjeksiyon saldırılarına karşı savunmasız durumdadır. |
 | CA2101 |[CA2101: P/Invoke dize bağımsız değişkenleri için sıralama belirtin](../code-quality/ca2101.md) | Bir platform çağırma üyesi kısmen güvenilen arayanlara izin verir, bir dize parametresine sahiptir ve dize açıkça sıralanmaz. Bu, olası bir güvenlik açığına neden olabilir. |
 | CA2102 | [CA2102: CLSCompliant olmayan özel durumları genel işleyiciler içinde yakalayın](../code-quality/ca2102.md) | RuntimeCompabilityAttribute tarafından işaretlenmemiş veya RuntimeCompability (WrapNonExceptionThrows = yanlış) ile işaretlenmiş derlemedeki bir üye, System.Exception işleyen yakalama bloğu içerir ve hemen arkasından gelen genel bir yakalama bloğu içermez. |

@@ -1,5 +1,5 @@
 ---
-title: "PTVS kullanmaya Başlarken: Visual Studio 2015 ' ayarlama | Microsoft Docs"
+title: "PTV 'leri kullanmaya başlama: Visual Studio 2015 'yi ayarlama | Microsoft Docs"
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
@@ -10,30 +10,30 @@ caps.latest.revision: 6
 author: kraigb
 ms.author: kraigb
 manager: jillfra
-ms.openlocfilehash: 073230f2b2a35a27540b9a67cfec3c4ace502eb8
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: cf841c181b3a7e0b378e53e3901a079b7136b32c
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74300492"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586992"
 ---
 # <a name="getting-started-with-ptvs-setting-up-visual-studio"></a>PTVS Kullanmaya Başlarken: Visual Studio’yu Ayarlama
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-PTVS ve ilgili kitaplıkları yükleme Visual Studio varsa hızlı bir işlemdir. Visual Studio yoksa, ücretsiz profesyonel kalitede sürüm kopyasını alabilirsiniz.
+Visual Studio kullanıyorsanız, PTV 'leri ve ilgili kitaplıkları yüklemek hızlı bir şekilde yapılır. Visual Studio yoksa, profesyonel bir kalite sürümünün ücretsiz bir kopyasını edinebilirsiniz.
 
 Bu yönergeleri, çok kısa bir [youtube videosunda](https://www.youtube.com/watch?v=_okUV47eM5c&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=1)izleyebilirsiniz.
 
-Üst düzey adımlar şunlardır: Visual Studio'yu yükleyin, PTVS yükleyin, Python ve veri kitaplıkları (Anaconda, Kanopi) yükleyin ve ardından son olarak yükleme denetlemek için.
+Üst düzey adımlar aşağıdaki gibidir: Visual Studio 'Yu yükleme, PTV yükleme, Python ve veri kitaplıklarını yükleme (Anaconda, Canopy) ve son olarak yüklemeyi denetleme.
 
-İhtiyacınız olan ilk şey, Visual Studio ' dir. Açık kaynaklı veya bireysel geliştiricisiyseniz, uzmanlar için ücretsiz ve işlevsel olan Visual Studio [Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs)'ı kullanabilirsiniz. Öğrenme, akademik araştırmada veya açık kaynak projelerine katkıda bulunma sınıf için olduğu sürece bir kuruluşta Community Edition da kullanabilirsiniz. DreamSpark, Öğrenciler ve yeni kurulan görünmelidir ve, ücretsiz için uygun olup olmadığını görmek için BizSpark program erişmek veya bir MSDN aboneliğine sahip olup işvereninizin isteyin.
+İhtiyacınız olan ilk şey Visual Studio. Açık kaynaklı veya bireysel geliştiricisiyseniz, uzmanlar için ücretsiz ve işlevsel olan Visual Studio [Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs)'ı kullanabilirsiniz. Topluluk sürümünü, ders öğrenimi, akademik araştırmalar veya açık kaynaklı projelere katkıda bulunmak için olduğu sürece bir kuruluşta de kullanabilirsiniz. Öğrenciler ve başlangıçlar, ücretsiz erişim için uygun olup olmadığını görmek için DreamSpark ve BizSpark programlarına bakmalı ya da bir MSDN aboneliğine sahip olup olmadığınız için işvereninizi sormalıdır.
 
-Visual Studio 'Yu yükledikten sonra [PTV 'leri yüklemeniz](https://archive.codeplex.com/?p=pytools)gerekir. Bu tamamen Microsoft tarafından desteklenen ve topluluğun katkı sağladığı ile açık yayımlanmaması geliştirilen bir ücretsiz, tek başına bir uzantısıdır.
+Visual Studio 'Yu yükledikten sonra [PTV 'leri yüklemeniz](https://archive.codeplex.com/?p=pytools)gerekir. Bu, Microsoft tarafından tam olarak desteklenen ve topluluktaki katkılarla birlikte geliştirilen ücretsiz ve tek başına bir uzantıdır.
 
-Şimdi [Python yüklemeniz](https://www.python.org/download/)gerekiyor. Python, topluluk tarafından korunur ve giriş sayfası python.org ' dir. Continuum Analytics, Python ve çok faydalı kitaplıklar içeren Anaconda adlı ücretsiz bir paket üretir (özellikle bilişlik ve veri işleme için) ve Canopy adında benzer bir paket üretir. Yalnızca bu ürünlerden birine yüklemeniz gerekir. Bunlardan hangisini kullandığınızdan emin değilseniz, size en güncel Python ve çok sayıda yüklemeyi zor olan paketleri sunan [Anaconda](https://www.continuum.io/downloads)ile başlayın.
+Şimdi [Python yüklemeniz](https://www.python.org/download/)gerekiyor. Python, topluluk tarafından korunur ve giriş sayfası python.org ' dir. Continuum Analytics, Python ve çok faydalı kitaplıklar içeren Anaconda adlı ücretsiz bir paket üretir (özellikle bilişlik ve veri işleme için) ve Canopy adında benzer bir paket üretir. Bu ürünlerden birini yalnızca yüklemeniz gerekir. Bunlardan hangisini kullandığınızdan emin değilseniz, size en güncel Python ve çok sayıda yüklemeyi zor olan paketleri sunan [Anaconda](https://www.anaconda.com/products/individual)ile başlayın.
 
-Visual Studio'yu başlatın ve her şeyin çalıştığından emin olun. Görünüm menüsü altında diğer Windows seçin. Öğesi adlı bir Python ortamları görürsünüz. Bu pencere, tüm PTVS algılanan Python yüklemeleri ve paketlerin yüklü olduğunu gösterir. Pencere, ayrıca, kodu düzenlerken tamamlamaları gösteren için veritabanı yenileme denetler. Bu yenileme işlemi biraz zaman alabilir, ancak işlem tamamlandıktan sonra PTVS paketleri hakkında daha fazla yararlı bilgileri gösterebilir.
+Visual Studio 'Yu başlatın ve her şeyin çalıştığından emin olun. Görünüm menüsünde diğer pencereler ' i seçin. Python ortamları adlı bir öğe görürsünüz. Bu pencerede, algılanan tüm Python yüklemeleri PTV 'leri ve yüklediğiniz tüm paketler gösterilmektedir. Pencere Ayrıca, kod düzenlenirken tamamlanmaları göstermek için veritabanı yenilemeyi de denetler. Bu yenileme işlemi biraz zaman alır, ancak tamamlandığında PTV 'ler paketler hakkında daha yararlı bilgiler gösterebilir.
 
 PI 'ler ile IPython kullanmak istiyorsanız, bu [yönergeleri](https://archive.codeplex.com/?p=pytools)izleyin.
 

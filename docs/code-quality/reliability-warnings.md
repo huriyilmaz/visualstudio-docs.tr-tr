@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e936222a95681796f5c5ca423d122995e1ea5f79
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: c4b888dbbe7a26e5ff333ec39aa0fdfcec90b429
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113262"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586205"
 ---
 # <a name="reliability-warnings"></a>Güvenilirlik uyarıları
 
@@ -27,10 +27,11 @@ Güvenilirlik uyarıları, doğru bellek ve iş parçacığı kullanımı gibi k
 
 |Kural|Açıklama|
 |----------|-----------------|
-|[CA2000: Kapsamı kaybetmeden önce verileri atın](../code-quality/ca2000.md)|Bir nesnenin sonlandırıcısının çalışmasını engelleyecek olağanüstü bir durum gerçekleşebileceği için, nesne ona olan tüm başvurular kapsam dışına çıkmadan açıkça atılmalıdır.|
-|[CA2001: Sorunlu yöntemleri çağırmaktan kaçının](../code-quality/ca2001.md)|Bir üye olası tehlikeli ya da sorunlu yöntemi çağırır.|
+|[CA2000: Kapsamı kaybetmeden önce nesneleri bırakın](../code-quality/ca2000.md)|Bir nesnenin sonlandırıcısının çalışmasını engelleyecek olağanüstü bir durum gerçekleşebileceği için, nesne ona olan tüm başvurular kapsam dışına çıkmadan açıkça atılmalıdır.|
+|[CA2001: Sorunlu metotları çağırmaktan kaçının](../code-quality/ca2001.md)|Bir üye olası tehlikeli ya da sorunlu yöntemi çağırır.|
 |[CA2002: Zayıf kimliği olan nesneleri kilitlemeyin](../code-quality/ca2002.md)|Bir nesneye uygulama etki alanları arasından erişilebiliyorsa o nesnenin zayıf bir kimliğe sahip olduğu söylenir. Zayıf kimliğe sahip bir nesne üzerinde kilit almayı deneyen iş parçacığı aynı nesne üzerinde bir kilide sahip olan farklı uygulama etki alanı içindeki ikinci iş parçacığı tarafından engellenebilir.|
-|[CA2003: Lifleri iş parçacığı olarak görmeyin](../code-quality/ca2003.md)|Yönetilen bir iş parçacığı Win32 iş parçacığı olarak kabul ediliyor.|
+|[CA2003: Fiberleri iş parçacığı olarak görmeyin](../code-quality/ca2003.md)|Yönetilen bir iş parçacığı Win32 iş parçacığı olarak kabul ediliyor.|
 |[CA2004: GC.KeepAlive'a çağrıları kaldırın](../code-quality/ca2004.md)|SafeHandle kullanımına dönüştürüyorsanız, GC 'ye yapılan tüm çağrıları kaldırın. KeepAlive (nesne). Bu durumda, sınıfların GC çağrısı olması gerekmez. Canlı tutma, sonlandırıcılardan olmadığı varsayılarak ancak işletim sistemi tanıtıcısını sonuçlandırmak için SafeHandle 'ı kullanır.|
 |[CA2006: Yerel kaynakları kapsamak için SafeHandle kullanın](../code-quality/ca2006.md)|Yönetilen kod içinde IntPtr kullanmak olası bir güvenlik ve güvenilirlik sorunu belirtebilir. IntPtr'nin tüm kullanımları onun yerine bir SafeHandle ya da benzer bir teknolojinin kullanımının gerekip gerekmediğini belirlemek için gözden geçirilmelidir.|
-|[CA2007: bir görevi doğrudan bekleme](../code-quality/ca2007.md)|Zaman uyumsuz bir yöntem, bir <xref:System.Threading.Tasks.Task> doğrudan [bekler](/dotnet/csharp/language-reference/keywords/await) .|
+|[CA2007: Doğrudan bir Görevi beklemeyin](../code-quality/ca2007.md)|Zaman uyumsuz bir [awaits](/dotnet/csharp/language-reference/keywords/await) Yöntem <xref:System.Threading.Tasks.Task> doğrudan bekler.|
+|[CA2009: bir ımmutablecollection değerinde ToImmutableCollection çağırmayın](../code-quality/ca2009.md)|`ToImmutable`Yöntem, ad alanından <xref:System.Collections.Immutable> sabit bir koleksiyonda gereksiz şekilde çağrıldı.|

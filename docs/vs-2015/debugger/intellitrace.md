@@ -22,12 +22,12 @@ caps.latest.revision: 142
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b8c0a4269dcc2b7e647effb10432a984396f395d
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: a3a3e68874bb3295f6696bbdadb3c470a7f2a4ad
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918002"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586617"
 ---
 # <a name="intellitrace"></a>IntelliTrace
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -48,23 +48,23 @@ Kodunuzun yürütme geçmişini kaydetmek ve izlemek için IntelliTrace 'i kulla
   
 |||  
 |-|-|  
-|**IntelliTrace ile uygulamamda hata ayıkla:**<br /><br /> -Geçmiş olayları göster.<br />-Geçmiş olaylarla çağrı bilgilerini göster.<br />-IntelliTrace Oturumumu Kaydet.<br />-IntelliTrace 'in topladığı verileri kontrol edin.|-   [Izlenecek yol: IntelliTrace kullanma](../debugger/walkthrough-using-intellitrace.md)<br />     [IntelliTrace Özellikleri](../debugger/intellitrace-features.md)<br />-   [IntelliTrace yapılandırma](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e)<br />-   [geçmiş hata ayıklama](../debugger/historical-debugging.md)|  
-|**Test Yöneticisi bir test oturumu sırasında IntelliTrace verisi topla**|[el ile testlerde daha fazla tanılama verisi toplama](https://msdn.microsoft.com/library/bb5a2cc0-84f5-4dfe-9560-ca3d313aefd2) -   |  
-|**Dağıtılan uygulamalardan IntelliTrace verileri toplama**|[IntelliTrace tek başına toplayıcıyı kullanarak](../debugger/using-the-intellitrace-stand-alone-collector.md) -   |  
-|**IntelliTrace günlük dosyasından (. iTrace dosyası) hata ayıklamayı Başlat.**|[kaydedilen IntelliTrace verilerini kullanarak](../debugger/using-saved-intellitrace-data.md) -   |  
+|**IntelliTrace ile uygulamamda hata ayıkla:**<br /><br /> -Geçmiş olayları göster.<br />-Geçmiş olaylarla çağrı bilgilerini göster.<br />-IntelliTrace Oturumumu Kaydet.<br />-IntelliTrace 'in topladığı verileri kontrol edin.|-   [İzlenecek yol: IntelliTrace kullanma](../debugger/walkthrough-using-intellitrace.md)<br />     [IntelliTrace Özellikleri](../debugger/intellitrace-features.md)<br />-   [IntelliTrace 'i yapılandırma](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e)<br />-   [Geçmiş hata ayıklama](../debugger/historical-debugging.md)|  
+|**Test Yöneticisi bir test oturumu sırasında IntelliTrace verisi topla**|-   [El ile testlerde daha fazla tanılama verisi toplayın](https://msdn.microsoft.com/library/bb5a2cc0-84f5-4dfe-9560-ca3d313aefd2)|  
+|**Dağıtılan uygulamalardan IntelliTrace verileri toplama**|-   [IntelliTrace tek başına toplayıcıyı kullanma](../debugger/using-the-intellitrace-stand-alone-collector.md)|  
+|**IntelliTrace günlük dosyasından (. iTrace dosyası) hata ayıklamayı Başlat.**|-   [Kayıtlı IntelliTrace verilerini kullanma](../debugger/using-saved-intellitrace-data.md)|  
   
-## <a name="IntelliTraceSupport"></a>IntelliTrace ile hangi uygulamalarda hata ayıklayabilirim?  
+## <a name="what-apps-can-i-debug-with-intellitrace"></a><a name="IntelliTraceSupport"></a>IntelliTrace ile hangi uygulamalarda hata ayıklayabilirim?  
   
 |||  
 |-|-|  
-|**Destekleniyor**|-Visual Basic ve .NET Framework C# 2,0 veya daha yüksek sürümleri kullanan görsel uygulamalar.<br />     ASP.NET, Microsoft Azure, Windows Forms, WCF, WPF, Windows Iş akışı, SharePoint 2010, SharePoint 2013 ve 64 bit uygulamalar dahil olmak üzere çoğu uygulamada hata ayıklaması yapabilirsiniz.<br />     IntelliTrace ile SharePoint uygulamalarında hata ayıklamak için bkz. [Izlenecek yol: IntelliTrace 'ı kullanarak SharePoint uygulamasında hata ayıklama](https://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4).<br />     IntelliTrace ile Microsoft Azure uygulamalarda hata ayıklamak için bkz. [IntelliTrace ve Visual Studio Ile yayımlanan bulut hizmetinde hata ayıklama](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md).|  
-|**Sınırlı destek**|- F# deneysel tabanlı uygulamalar<br />-Yalnızca olaylar için desteklenen Windows Mağazası uygulamaları|  
-|**Desteklenmiyor**|- C++, diğer diller ve betik<br />-Windows Hizmetleri, Silverlight, Xbox veya [!INCLUDE[winmobile](../includes/winmobile-md.md)] uygulamaları|  
+|**Destek**|-Visual Basic ve .NET Framework 2,0 veya daha yüksek sürümleri kullanan Visual C# uygulamaları.<br />     ASP.NET, Microsoft Azure, Windows Forms, WCF, WPF, Windows Iş akışı, SharePoint 2010, SharePoint 2013 ve 64 bit uygulamalar dahil olmak üzere çoğu uygulamada hata ayıklaması yapabilirsiniz.<br />     IntelliTrace ile SharePoint uygulamalarında hata ayıklamak için bkz. [Izlenecek yol: IntelliTrace 'ı kullanarak SharePoint uygulamasında hata ayıklama](https://msdn.microsoft.com/library/4bd80d2f-f680-4bf4-81c3-f14e8185f6a4).<br />     IntelliTrace ile Microsoft Azure uygulamalarda hata ayıklamak için bkz. [IntelliTrace ve Visual Studio Ile yayımlanan bulut hizmetinde hata ayıklama](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md).|  
+|**Sınırlı destek**|-Deneysel temelinde-F # uygulamaları<br />-Yalnızca olaylar için desteklenen Windows Mağazası uygulamaları|  
+|**Desteklenmiyor**|-C++, diğer diller ve betik<br />-Windows Hizmetleri, Silverlight, Xbox veya [!INCLUDE[winmobile](../includes/winmobile-md.md)] uygulamalar|  
   
 > [!NOTE]
 > Zaten çalışan bir işlemde hata ayıklamak istiyorsanız, IntelliTrace kullanamazsınız. IntelliTrace'i işlem başladığında başlatmanız gerekir.  
   
-## <a name="IntelliTraceVSTraditional"></a>IntelliTrace ile hata ayıklama neden?  
+## <a name="why-debug-with-intellitrace"></a><a name="IntelliTraceVSTraditional"></a>IntelliTrace ile hata ayıklama neden?  
  Geleneksel veya *canlı* hata ayıklama, geçmiş olaylar hakkında sınırlı verilerle yalnızca uygulamanızın geçerli durumunu gösterir. Bu olayları uygulamanın geçerli durumuna göre çıkarmalıyız ya da uygulamanızı yeniden çalıştırarak bu olayları yeniden oluşturmanız gerekir.  
   
  IntelliTrace bu zamanlardaki belirli olayları ve verileri kaydederek bu geleneksel hata ayıklama deneyimini genişletir. Bu, özellikle de hatanın nerede olduğunu gördüğünüzde, uygulamanızı yeniden başlatmadan uygulamanızda ne olduğunu görmenizi sağlar. IntelliTrace geleneksel hata ayıklama işlemi sırasında varsayılan olarak açıktır ve görünmez ve otomatik olarak veri toplar. Bu, geleneksel hata ayıklama ve IntelliTrace hata ayıklama arasında kaydedilen bilgileri görmek için kolayca geçiş yapmanızı sağlar. [IntelliTrace özelliklerine](../debugger/intellitrace-features.md) ve [IntelliTrace 'in hangi verileri toplayacağını görün?](#WhatData)  
@@ -95,13 +95,13 @@ Kodunuzun yürütme geçmişini kaydetmek ve izlemek için IntelliTrace 'i kulla
   
 - Dağıtılan bir uygulamada hata veya kilitlenme oluşur.  
   
-   Microsoft Azure tabanlı uygulamalarda, uygulamayı yayımlamadan önce IntelliTrace veri toplamayı yapılandırabilirsiniz. Uygulamanız çalışırken, IntelliTrace verileri bir. iTrace dosyasına kaydeder. Bkz: [IntelliTrace ve Visual Studio ile yayımlanan bulut hizmeti hata ayıklama](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md).  
+   Microsoft Azure tabanlı uygulamalarda, uygulamayı yayımlamadan önce IntelliTrace veri toplamayı yapılandırabilirsiniz. Uygulamanız çalışırken, IntelliTrace verileri bir. iTrace dosyasına kaydeder. Bkz. [IntelliTrace ve Visual Studio Ile yayınlanmış bir bulut hizmetinde hata ayıklama](../azure/vs-azure-tools-intellitrace-debug-published-cloud-services.md).  
   
    IIS 7.0, 7.5 ve 8.0'da barındırılan ASP.NET web uygulamaları ve SharePoint 2010 ya da SharePoint 2013 uygulamalarında, IntelliTrace verisini bir .iTrace dosyasına kaydetmek için Microsoft İzleme Aracısı'nı tek başına ya da System Center 2012 ile birlikte kullanın.  
   
    Bu, dağıtımdaki uygulamalarla ilgili sorunları tanılamak istediğinizde kullanışlıdır. Bkz. [IntelliTrace tek başına toplayıcıyı kullanma](../debugger/using-the-intellitrace-stand-alone-collector.md).  
   
-## <a name="WhatData"></a>IntelliTrace hangi verileri toplar?  
+## <a name="what-data-does-intellitrace-collect"></a><a name="WhatData"></a>IntelliTrace hangi verileri toplar?  
  **Olay bilgilerini toplama**  
   
  Varsayılan olarak, IntelliTrace yalnızca IntelliTrace olaylarını kaydeder: hata ayıklayıcı olayları, özel durumlar, .NET Framework olayları ve hata ayıklamanıza yardımcı olabilecek diğer sistem olayları. Hata ayıklayıcı olayları ve her zaman toplanan özel durumlar dışında toplamak istediğiniz IntelliTrace olaylarının türlerini seçebilirsiniz. Bkz. [IntelliTrace 'ı yapılandırma](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e).  
@@ -118,13 +118,13 @@ Kodunuzun yürütme geçmişini kaydetmek ve izlemek için IntelliTrace 'i kulla
   
   - Kaynak penceresinde değerini görmek için bir değişkenin üzerine fare işaretçisini getirdiğinizde görüntülenen DataTips değerleri. IntelliTrace sabitlenmiş DataTips değerlerini toplamaz.  
   
-- **Özel Durumlar**  
+- **Özel durumlar**  
   
    IntelliTrace özel durum türünü ve iletisini bu tür özel durumlar için kaydeder:  
   
   - Özel durumun ortaya çıktığı ve yakalandığı yönetilen özel durumlar  
   
-  - Yönetilmeyen özel durumlar  
+  - İşlenmeyen özel durumlar  
   
 - **.NET Framework olaylar**  
   
@@ -142,7 +142,7 @@ Kodunuzun yürütme geçmişini kaydetmek ve izlemek için IntelliTrace 'i kulla
   
    Bkz.  
   
-  - [IntelliTrace tek başına toplayıcısını kullanma](../debugger/using-the-intellitrace-stand-alone-collector.md)  
+  - [IntelliTrace tek başına toplayıcıyı kullanma](../debugger/using-the-intellitrace-stand-alone-collector.md)  
   
   - [Kayıtlı IntelliTrace verilerini kullanma](../debugger/using-saved-intellitrace-data.md)  
   
@@ -169,7 +169,7 @@ Kodunuzun yürütme geçmişini kaydetmek ve izlemek için IntelliTrace 'i kulla
   
  IntelliTrace'in ne kadar çağrı bilgisi topladığını denetlemek için, yalnızca istediğiniz modülleri belirtin. Bu, koleksiyon sırasında uygulamanızın performansını artırmaya yardımcı olabilir. Bkz. [IntelliTrace 'ı yapılandırma](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e).  
   
-## <a name="AffectPerformance"></a>IntelliTrace uygulamamı yavaşlatacak mı?  
+## <a name="will-intellitrace-slow-down-my-application"></a><a name="AffectPerformance"></a>IntelliTrace uygulamamı yavaşlatacak mı?  
  Varsayılan olarak, IntelliTrace yalnızca seçili IntelliTrace olaylarının verilerini toplar. Bu, kodunuzun yapısına ve kuruluşuna bağlı olarak uygulamanızı yavaşlatabilecek ya da yavaşlatmayabilir. Örneğin, IntelliTrace bir olayı sıklıkla kaydediyorsa, bu durum uygulamanızı yavaşlatabilir. Uygulamanızı yeniden düzenlemeyi de düşünebilirsiniz.  
   
  Çağrı bilgilerinin toplanması uygulamanızı önemli ölçüde yavaşlatabilir. Diske kaydettiğiniz IntelliTrace herhangi bir günlük dosyasının (.iTrace dosyaları) boyutunu da artırabilir. Bu etkileri en aza indirmek için yalnızca ilginiz dahilinde olan modüller için çağrı bilgilerini toplayın.  . İTrace dosyalarınızın en büyük boyutunu değiştirmek için **Araçlar**, **Seçenekler**, **IntelliTrace**, **Gelişmiş**öğesine gidin. Bkz. [IntelliTrace 'ı yapılandırma](https://msdn.microsoft.com/7657ecab-e07e-4b1b-872d-f05d966be37e).  
@@ -186,7 +186,7 @@ Kodunuzun yürütme geçmişini kaydetmek ve izlemek için IntelliTrace 'i kulla
  [Kayıtlı IntelliTrace verilerini kullanma](../debugger/using-saved-intellitrace-data.md)  
   
 ### <a name="blogs"></a>Bloglar  
- [Visual Studio ALM + Team Foundation Server](https://blogs.msdn.com/b/visualstudioalm)  
+ [Visual Studio ALM + Team Foundation Server](https://devblogs.microsoft.com/devops/welcome-to-the-visual-studio-alm-team-foundation-server-blog/)  
   
 ### <a name="forums"></a>Forumlar  
  [Visual Studio tanılama](https://social.msdn.microsoft.com/Forums/vsdebug)

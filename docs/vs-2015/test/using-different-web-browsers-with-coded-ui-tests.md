@@ -8,19 +8,19 @@ ms.assetid: a859595f-6517-43f2-9d61-c706cb55a388
 caps.latest.revision: 25
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 8a5034a13771c0ea1f7b6dcd2e073ad02e838e07
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 5234dddad13ccb52cc653a68ad1c35370a4eae18
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851212"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586341"
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>Kodlanmış UI Testleriyle Farklı Web Tarayıcıları Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Kodlanmış UI testleri, web uygulamaları için Internet Explorer'ı kullanarak testlerinizi kaydederek sınamayı otomatikleştirebilirsiniz. Bu web uygulamaları için Internet Explorer veya başka tarayıcı türleri kullanarak testinizi özelleştirebilir ve geri oynatabilirsiniz.
 
- **Requirements**
+ **Gereksinimler**
 
 - Visual Studio Enterprise
 
@@ -71,7 +71,7 @@ Kodlanmış UI testleri, web uygulamaları için Internet Explorer'ı kullanarak
 
 1. **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler**' i seçin.
 
-2. Uzantı ve güncelleştirmeler iletişim kutusunda `Selenium components for Cross Browser Testing`aratın.
+2. Uzantı ve güncelleştirmeler iletişim kutusunda için `Selenium components for Cross Browser Testing`arama yapın.
 
 3. Uzantıyı vurgulayın ve **İndir**' i seçin.
 
@@ -95,8 +95,8 @@ Kodlanmış UI testleri, web uygulamaları için Internet Explorer'ı kullanarak
 
     2. **Ortak dil çalışma zamanı özel durumları**Için, **Kullanıcı tarafından işlenmeyen**onay işaretini kaldırın.
 
-## <a name="generate"></a>*KODLANMıŞ UI testinde BrowserWindow. CurrentBrowser değiştirme seçeneğini görmüyorum.*
- Çeşitli web tarayıcıları kullanılarak kodlanmış UI testlerini desteklemeyen [!INCLUDE[vs2011_first](../includes/vs2011-first-md.md)] bir sürümünü kullanıyor olabilirsiniz. Bu tür kodlanmış UI testlerini kullanmak için Visual Studio Enterprise kullanmanız gerekir.
+## <a name="i-dont-see-the-option-to-change-browserwindowcurrentbrowser-in-the-coded-ui-test"></a><a name="generate"></a>*KODLANMıŞ UI testinde BrowserWindow. CurrentBrowser değiştirme seçeneğini görmüyorum.*
+ Çeşitli web tarayıcıları kullanılarak kodlanmış UI testlerini [!INCLUDE[vs2011_first](../includes/vs2011-first-md.md)] desteklemeyen bir sürümünü kullanıyor olabilirsiniz. Bu tür kodlanmış UI testlerini kullanmak için Visual Studio Enterprise kullanmanız gerekir.
 
  *Başka ne bilmem gerekir?*
  **Notlar**
@@ -111,13 +111,13 @@ Kodlanmış UI testleri, web uygulamaları için Internet Explorer'ı kullanarak
 
   **Uçları**
 
-- ![İpucu](../test/media/tip.png "{1&gt;İpucu&lt;1}") Çıktıyı, kodlanmış UI günlüklerinde ekran görüntülerini içerecek şekilde yapılandırabilirsiniz. Bunu yapmak için bazı yapılandırma ayarlarını QTAgent32.exe.config dosyasında ayarlamanız gerekir. Varsayılan olarak, bu dosya aşağıdaki konuma yüklenir:
+- ![İpucu](../test/media/tip.png "İpucu") Çıktıyı, kodlanmış UI günlüklerinde ekran görüntülerini içerecek şekilde yapılandırabilirsiniz. Bunu yapmak için bazı yapılandırma ayarlarını QTAgent32.exe.config dosyasında ayarlamanız gerekir. Varsayılan olarak, bu dosya aşağıdaki konuma yüklenir:
 
-   **C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE**
+   **C:\Program Files (x86) \Microsoft Visual Studio 11.0 \ Common7\ıde**
 
    Aşağıdaki değerleri ayarlayın:
 
-  - `system.diagnostics` bölümünde `EqtTraceLevel`.
+  - `EqtTraceLevel``system.diagnostics` bölümüne.
 
   - `<add name="EqtTraceLevel" value="4" />`
 
@@ -138,13 +138,13 @@ Kodlanmış UI testleri, web uygulamaları için Internet Explorer'ı kullanarak
 
  [Çapraz tarayıcı test hatalarıyla ilgili sorunları giderme](https://skydrive.live.com/redir?resid=AE5CD7309CCCC43C!182&authkey=!AEpS48i295B49FI)
 
-### <a name="guidance"></a>Kılavuz
+### <a name="guidance"></a>Rehber
  [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 2: birim testi: Içini test etme](https://msdn.microsoft.com/library/jj159340.aspx)
 
  [Visual Studio 2012 ile sürekli teslim için test etme – Bölüm 5: Sistem testlerini otomatikleştirme](https://msdn.microsoft.com/library/jj159335.aspx)
 
 ### <a name="faq"></a>SSS
- [Kodlanmış UI testleri SSS-1](https://blogs.msdn.com/b/mathew_aniyan/archive/tags/faq/)
+ [Kodlanmış UI testleri SSS-1](https://docs.microsoft.com/archive/blogs/mathew_aniyan/content-index-for-coded-ui-test)
 
  [Kodlanmış UI testleri SSS-2](https://social.msdn.microsoft.com/Forums/en-US/vsautotest/thread/3a74dd2c-cef8-4923-abbf-7a91f489e6c4)
 

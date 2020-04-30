@@ -8,19 +8,19 @@ ms.assetid: f7c25ba7-5c9c-455b-9242-701cda56f90c
 caps.latest.revision: 43
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d14de396e24874f39a09172a483ebef81a5886f2
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 900a241549cd499437ee25d8f57ed66c0c958a17
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75851226"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586911"
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>İzlenecek yol: Kodlanmış Bir UI Testi Oluşturmak Düzenlemek ve Sürdürmek
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini ve korunduğunu göstermek üzere basit bir Windows Presentation Foundation (WPF) oluşturacaksınız. İzlenecek yol çeşitli zamanlama sorunları ve yeniden düzenlemeyi denetleme tarafından kırılan testleri düzeltmeye ilişkin çözümler sağlar.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
  Bu örnek için şunlar gerekir:
 
 - Visual Studio Enterprise
@@ -29,9 +29,9 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' yi seçin.
 
-     **Yeni proje** iletişim kutusu görüntülenir.
+     **Yeni Proje** iletişim kutusu görünür.
 
-2. **Yüklü** bölmesinde, **C#görsel**' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
+2. **Yüklü** bölmede, **Visual C#** öğesini genişletin ve ardından **Windows Masaüstü**' nü seçin.
 
 3. Orta bölmede, hedef Framework açılan listesinin **.NET Framework 4,5**olarak ayarlandığını doğrulayın.
 
@@ -41,7 +41,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 6. Projeyi kaydetmek için bir klasör seçin. **Konum** metin kutusuna klasörün adını yazın.
 
-7. **Tamam**’ı seçin.
+7. **Tamam ' ı**seçin.
 
      Visual Studio için WPF Tasarımcısı açılır ve projenin MainWindow öğesini görüntüler.
 
@@ -49,11 +49,11 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 9. **Tüm WPF denetimleri** bölümünün altında, Tasarım yüzeyinde bir **düğme**, **onay kutusu** ve **ProgressBar** denetimini MainWindow üzerine sürükleyin.
 
-10. Düğme denetimini seçin. Özellikler penceresi, **ad** özelliğinin değerini button1 olarak \<ad > olarak değiştirin. Ardından **içerik** özelliğinin değerini düğme ' den Başlat ' a değiştirin.
+10. Düğme denetimini seçin. Özellikler penceresi, \<ad **özelliğinin değerini button1 olarak adı>** olarak değiştirin. Ardından **içerik** özelliğinin değerini düğme ' den Başlat ' a değiştirin.
 
-11. ProgressBar denetimini seçin. Özellikler penceresi, **ad** \<özelliği için değer değerini progressBar1 > ad olarak değiştirin. Daha sonra **100** olan **maksimum** özellik değerini **10000**olarak değiştirin.
+11. ProgressBar denetimini seçin. Özellikler penceresi **, ad> özelliği** \<için değer değerini progressBar1 olarak değiştirin. Daha sonra **100** olan **maksimum** özellik değerini **10000**olarak değiştirin.
 
-12. Onay kutusu denetimini seçin. Özellikler penceresi, **ad** \<özelliğinin değerini checkBox1 yok > olarak değiştirin ve **IsEnabled** özelliğini temizleyin.
+12. Onay kutusu denetimini seçin. Özellikler penceresi **, ad> özelliğinin** \<değerini CheckBox1 olarak değiştirin ve **IsEnabled** özelliğini temizleyin.
 
      ![Basit WPF uygulaması](../test/media/codedui-wpfapp.png "CodedUI_WPFApp")
 
@@ -118,7 +118,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 ### <a name="create-and-run-a-coded-ui-test-for-simplewpfapp"></a>SimpleWPFApp için Kodlanmış Kullanıcı Arabirimi Testi Oluşturma ve Çalıştırma
 
-1. Daha önce oluşturduğunuz SimpleWPFApp uygulamasını bulun. Varsayılan olarak, uygulama C:\Users\\< Kullanıcı adı\>\\Projects\SimpleWPFApp\SimpleWPFApp\bin\Debug\SimpleWPFApp.exe Studio \<sürüm >
+1. Daha önce oluşturduğunuz SimpleWPFApp uygulamasını bulun. Varsayılan olarak, uygulama C:\Users\\<kullanıcıadı\>\\projects\simplewpfapp\simplewpfapp\bin\debug\simplewpfapp.exe Studio \<Version> adresinde bulunur
 
 2. SimpleWPFApp uygulaması için bir masaüstü kısayolu oluşturun. SimpleWPFApp. exe ' ye sağ tıklayın ve **Kopyala**' yı seçin. Masaüstünüzde sağ tıklayıp **kısayolu Yapıştır**' ı seçin.
 
@@ -129,11 +129,11 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
      **Yeni Proje Ekle** iletişim kutusu görüntülenir.
 
-4. **Yüklü** bölmesinde, **görsel C#** ' i genişletin ve ardından **Test**' i seçin.
+4. **Yüklü** bölmede, **Visual C#**' ı genişletin ve ardından **Test**' i seçin.
 
 5. Orta bölmede, **KODLANMıŞ UI testi proje** şablonunu seçin.
 
-6. **Tamam**’ı seçin.
+6. **Tamam ' ı**seçin.
 
      Çözüm Gezgini, **CodedUITestProject1** adlı yenı kodlanmış UI test projesi çözümünüze eklenir.
 
@@ -147,7 +147,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 8. UIMap – Kodlanmış UI Test Oluşturucusu 'nda **kaydı Başlat** ' ı seçin.
 
-     ![Kaydı Başlat](../test/media/cuit-builder-record.png "CUIT_Builder_Record")
+     ![Kaydı başlat](../test/media/cuit-builder-record.png "CUIT_Builder_Record")
 
      Gerekirse, örneğin, gelen posta ile uğraşmanız gerekiyorsa kaydı duraklatabilirsiniz.
 
@@ -186,7 +186,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 3. CodedUITest1.cs dosyasında, **CodedUITestMethod** metodunu bulun, **Testleri Çalıştır**' ı sağ tıklatın veya test Gezgini ' nden testi çalıştırın.
 
-     Kodlanmış UI testi çalışırken, SimpleWPFApp görülebilir. Bir önceki yordamda yaptığınız adımları oluşturur. Ancak, test onay kutusu denetimi için onay kutusunu seçme girişiminde bulunduğunda, Test Sonuçları pencere testin başarısız olduğunu gösterir. Bunun nedeni, testin onay kutusunu seçmesini dene, ancak ilerleme çubuğu %100 tamamlanana kadar onay kutusu denetiminin devre dışı bırakıldığını unutmayın. Bu ve benzer sorunları, kodlanmış UI testi için kullanılabilen çeşitli `UITestControl.WaitForControlXXX()` yöntemlerini kullanarak düzeltebilirsiniz. Sonraki yordam, bu testin başarısız olmasına neden olan sorunu düzeltmek için `WaitForControlEnabled()` yöntemini kullanmayı gösterir. Daha fazla bilgi için bkz. [kayıttan yürütme sırasında belirli olaylar Için KODLANMıŞ UI testlerini bekleme](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).
+     Kodlanmış UI testi çalışırken, SimpleWPFApp görülebilir. Bir önceki yordamda yaptığınız adımları oluşturur. Ancak, test onay kutusu denetimi için onay kutusunu seçme girişiminde bulunduğunda, Test Sonuçları pencere testin başarısız olduğunu gösterir. Bunun nedeni, testin onay kutusunu seçmesini dene, ancak ilerleme çubuğu %100 tamamlanana kadar onay kutusu denetiminin devre dışı bırakıldığını unutmayın. Bu ve benzer sorunları, kodlanmış UI testi için kullanılabilen çeşitli `UITestControl.WaitForControlXXX()` yöntemleri kullanarak düzeltebilirsiniz. Sonraki yordam, bu testin başarısız olmasına `WaitForControlEnabled()` neden olan sorunu düzeltmek için yöntemini kullanmayı gösterir. Daha fazla bilgi için bkz. [kayıttan yürütme sırasında belirli olaylar Için KODLANMıŞ UI testlerini bekleme](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).
 
 ### <a name="edit-and-rerun-the-coded-ui-test"></a>Kodlanmış Kullanıcı Arabirimi Testini Düzenleme ve Yeniden Çalıştırma
 
@@ -200,7 +200,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
     uICheckBoxCheckBox.Checked = this.SimpleAppTestParams.UICheckBoxCheckBoxChecked;
     ```
 
-3. Bu sorunu düzeltmek için, `WaitForControlEnabled()` yöntemi kullanılarak bu satıra devam etmeden önce, kodlanmış UI testinin onay kutusu denetiminin etkinleştirilmesini beklemesini sağlayabilirsiniz.
+3. Bu sorunu düzeltmek için, `WaitForControlEnabled()` yöntemi kullanarak bu satıra devam etmeden önce, kodlanmış UI testinin CheckBox denetiminin etkinleştirilmesini beklemesini sağlayabilirsiniz.
 
     > [!WARNING]
     > UIMap.Designer.cs dosyasını değiştirmeyin. UIMap - Kodlanmış UI Test Oluşturucusu kullanarak kodu her oluşturduğunuzda, UIMapDesigner.cs dosyasında yaptığınız herhangi bir kod değişikliğinin üzerine yazılır. Kayıtlı bir yöntemi değiştirmeniz gerekiyorsa, yöntemi UIMap.cs dosyasına kopyalayıp yeniden adlandırmanız gerekir. UIMap.cs dosyası, UIMapDesigner.cs dosyasındaki yöntemleri ve özellikleri geçersiz kılmak için kullanılabilir. Kodlanmış UITest.cs dosyasındaki orijinal yönteme başvuruyu kaldırıp yeniden adlandırılan yöntem adıyla değiştirmelisiniz.
@@ -215,18 +215,18 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 7. Kodlanmış UI Test Düzenleyicisi araç çubuğundaki **kodu taşı** düğmesini seçin.
 
-8. Microsoft Visual Studio iletişim kutusu görüntülenir. Yöntem UIMap.uitest dosyasından UIMap.cs dosyasına taşınması için ve artık kodlanmış UI Test Düzenleyicisi'ni kullanarak yöntemi düzenlemenin mümkün olmayacağı konusunda uyarır. Seçin **Evet**.
+8. Microsoft Visual Studio iletişim kutusu görüntülenir. Yöntem UIMap.uitest dosyasından UIMap.cs dosyasına taşınması için ve artık kodlanmış UI Test Düzenleyicisi'ni kullanarak yöntemi düzenlemenin mümkün olmayacağı konusunda uyarır. **Evet**' i seçin.
 
      Test yöntemi UIMap.uitest dosyasından kaldırılır ve artık UI Eylemler bölmesinde görüntülenmez. Taşınan test dosyasını düzenlemek için Çözüm Gezgini'nden UIMap.cs dosyasını açın.
 
-9. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] araç çubuğunda **Kaydet**' i seçin.
+9. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Araç çubuğunda **Kaydet**' i seçin.
 
      Test yöntemi güncelleştirmeleri UIMap.Designer dosyasında kaydedilir.
 
     > [!CAUTION]
     > Yöntemi taşıdığınızda Kodlanmış UI Test Düzenleyicisi'ni kullanarak artık düzenleyemezsiniz. Özel kodunuzu eklemeli ve Kod Düzenleyicisi'ni kullanarak korumalısınız.
 
-10. Yöntemi `SimpleAppTest()` `ModifiedSimpleAppTest()` olarak yeniden adlandırın
+10. Yöntemini iken `SimpleAppTest()` olarak yeniden adlandırın`ModifiedSimpleAppTest()`
 
 11. Aşağıdaki kullanım deyimini dosyaya ekleyin:
 
@@ -236,7 +236,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
     ```
 
-12. Şu `WaitForControlEnabled()` yöntemi, daha önce tanımlanan sorunlu kod satırı önüne ekleyin:
+12. Aşağıdaki `WaitForControlEnabled()` yöntemi, daha önce tanımlanan sorunlu kod satırı önüne ekleyin:
 
     ```csharp
 
@@ -289,7 +289,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
     Mouse.Click(uIStartButton, new Point(27, 10));
     ```
 
-     Bu yordamda daha önce gelen kod satırının, yeniden düzenlenmiş Before Umap adı olan `UiStartButton`kullandığından emin olun.
+     Bu yordamın önceki kısımlarında yer alan kod satırının, yeniden düzenlenmiş Before Umap adı olan kullandığını `UiStartButton`fark edin.
 
      Sorunu düzeltmek için UIMap'e yeniden işlenmiş denetimi Kodlanmış UI Test Oluşturucusu kullanarak ekleyebilirsiniz. Testin kodunu, kodu kullanmak için sonraki yordamda gösterildiği şekilde güncelleştirebilirsiniz.
 
@@ -325,7 +325,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
 10. Çözüm Gezgini'nde, UIMap.Designer.cs dosyasını açın.
 
-11. UIMap.Designer.cs dosyasında Uıstartbutton1 özelliğini bulun. `SearchProperties` `"buttonA"`olarak ayarlandığını unutmayın:
+11. UIMap.Designer.cs dosyasında Uıstartbutton1 özelliğini bulun. `SearchProperties` Şu şekilde `"buttonA"`ayarlandığını unutmayın:
 
     ```csharp
 
@@ -349,7 +349,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
 
      Şimdi yeni eşlenen denetimi kullanmak için kodlanmış kullanıcı arabirimini değiştirebilirsiniz. Önceki yordamda işaret edildiği gibi, kodlanmış UI testindeki herhangi bir yöntemi ya da özelliği geçersiz kılmak istiyorsanız, bunu UIMap.cs dosyasında yapmalısınız.
 
-12. UIMap.cs dosyasında bir Oluşturucu ekleyin ve `UIStartButton` özelliğinin `SearchProperties` özelliğini, `"buttonA":` bir değeriyle `AutomationID` özelliğini kullanacak şekilde belirtin
+12. UIMap.cs dosyasında bir Oluşturucu ekleyin ve özelliğini bir değeri ile kullanmak `SearchProperties` `AutomationID` için özelliğinin özelliğini `UIStartButton` belirtin`"buttonA":`
 
     ```csharp
 
@@ -379,7 +379,7 @@ Bu yönergede kodlanmış UI testinin nasıl oluşturulduğunu, düzenlendiğini
  [MSDN sanal Laboratuvarı: Visual Studio 2010 ile kodlanmış UI testleri oluşturmaya giriş](https://windows.microsoft.com/en-US/windows/products/windows-media-player)
 
 ### <a name="faq"></a>SSS
- [Kodlanmış UI testleri SSS-1](https://blogs.msdn.com/b/mathew_aniyan/archive/tags/faq/)
+ [Kodlanmış UI testleri SSS-1](https://docs.microsoft.com/archive/blogs/mathew_aniyan/content-index-for-coded-ui-test)
 
  [Kodlanmış UI testleri SSS-2](https://social.msdn.microsoft.com/Forums/en-US/vsautotest/thread/3a74dd2c-cef8-4923-abbf-7a91f489e6c4)
 

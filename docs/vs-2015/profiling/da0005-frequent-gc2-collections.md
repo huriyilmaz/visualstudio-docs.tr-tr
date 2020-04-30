@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 74091a3fe2da42ce3a9d16fdfa581d7774492574
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 46e03ecb00e4a5733039e003d170f3cfe0a854ee
+ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75852305"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82586966"
 ---
 # <a name="da0005-frequent-gc2-collections"></a>DA0005: Sık kullanılan GC2 koleksiyonları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,15 +30,15 @@ Kural kimliği | DA0005 |
 | İleti | Nesnelerinizin birçoğu 2. nesil atık toplamada toplanıyor. |  
 | İleti türü | Uyarı |  
   
-## <a name="cause"></a>Sebep  
- 2\. nesil atık toplamada yüksek sayıda .NET bellek nesnesi geri kazanılır.  
+## <a name="cause"></a>Nedeni  
+ 2. nesil atık toplamada yüksek sayıda .NET bellek nesnesi geri kazanılır.  
   
 ## <a name="rule-description"></a>Kural Tanımı  
  Microsoft .NET ortak dil çalışma zamanı (CLR), uygulamanın artık kullandığı nesnelerden belleği geri kazanmak için çöp toplayıcı kullanan bir otomatik bellek yönetim mekanizması sağlar. Çöp toplayıcı, çok sayıda ayırmaların kısa süreli olduğu varsayımına bağlı olarak, oluşturma odaklı bir şekilde yapılır. Örneğin, yerel değişkenler kısa süreli olmalıdır. Yeni oluşturulan nesneler nesil 0 ' da (Gen 0) başlar ve sonra bir atık toplama çalıştırmasını sürdüren 1. nesil ve son olarak uygulama bunları kullanıyorsa 2. nesil 'e geçiş yapılır.  
   
- Nesil 0 içindeki nesneler sık ve genellikle çok verimli bir şekilde toplanır. 1\. nesil nesneler daha az ve daha az verimli bir şekilde toplanır. Son olarak, kuşak 2 ' deki uzun süreli nesneler daha az sıklıkta toplanmalıdır. Eksiksiz bir atık toplama çalıştırması olan 2. nesil koleksiyon, ayrıca en pahalı işlemdir.  
+ Nesil 0 içindeki nesneler sık ve genellikle çok verimli bir şekilde toplanır. 1. nesil nesneler daha az ve daha az verimli bir şekilde toplanır. Son olarak, kuşak 2 ' deki uzun süreli nesneler daha az sıklıkta toplanmalıdır. Eksiksiz bir atık toplama çalıştırması olan 2. nesil koleksiyon, ayrıca en pahalı işlemdir.  
   
- Bu kural, çok fazla 2. nesil atık toplama işlemi meydana geldiğinde ateşlenir. Çok fazla sayıda kısa süreli nesne, 1. kuşak ve daha sonra 2. nesil bir tam koleksiyonda toplanabiliyor ise, bellek yönetiminin maliyeti kolayca aşırı kullanılabilir hale gelebilir. Daha fazla bilgi için, MSDN Web sitesindeki Riko [maridın](https://blogs.msdn.com/ricom/archive/2003/12/04/41281.aspx) performans katmanını ' na bakın.  
+ Bu kural, çok fazla 2. nesil atık toplama işlemi meydana geldiğinde ateşlenir. Çok fazla sayıda kısa süreli nesne, 1. kuşak ve daha sonra 2. nesil bir tam koleksiyonda toplanabiliyor ise, bellek yönetiminin maliyeti kolayca aşırı kullanılabilir hale gelebilir. Daha fazla bilgi için, MSDN Web sitesindeki Riko [maridın](https://docs.microsoft.com/archive/blogs/ricom/mid-life-crisis) performans katmanını ' na bakın.  
   
 ## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma  
  Uygulamanın bellek ayırma düzenlerini anlamak için [.net bellek verileri görünümleri](../profiling/dotnet-memory-data-views.md) raporlarını gözden geçirin. Programın veri nesnelerinin hangisinin 2. nesil ve sonra geri kazanılır olduğunu anlamak için [nesne ömrü görünümünü](../profiling/object-lifetime-view.md) kullanın. Bu ayırmalara neden olan yürütme yolunu öğrenmek için [ayırmalar görünümünü](../profiling/dotnet-memory-allocations-view.md) kullanın.  
