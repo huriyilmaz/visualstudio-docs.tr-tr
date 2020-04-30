@@ -67,8 +67,8 @@
 ## [Unity Oyun Geliştirme](/visualstudio/mac/unity-tools)
 ### [Kurulum](/visualstudio/mac/setup-vsmac-tools-unity)
 ### [Unity Araçlarını Kullanma](/visualstudio/mac/using-vsmac-tools-unity)
-### [Unity’de .NET 4.x kullanma](/visualstudio/mac//visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context)
-### [Değişiklik Günlüğü](/visualstudio/mac//visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context)
+### [Unity’de .NET 4.x kullanma](/visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context)
+### [Değişiklik Günlüğü](/visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context)
 ## [Xamarin ile mobil uygulamalar](/visualstudio/mac/xamarin)
 
 # [Erişilebilirlik](/visualstudio/mac/accessibility)
