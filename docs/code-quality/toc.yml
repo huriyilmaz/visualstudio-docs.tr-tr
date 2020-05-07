@@ -432,6 +432,8 @@
                   href: ca1507.md
                 - name: 'CA1508: Ölü koşullu kodlardan kaçının'
                   href: ca1508.md
+                - name: 'CA1509: Kod ölçümleri yapılandırma dosyasında geçersiz girdi'
+                  href: ca1509.md
             - name: Hareketlilik uyarıları
               items:
                 - name: Genel Bakış
@@ -575,6 +577,8 @@
                   href: ca2006.md
                 - name: 'CA2007: Doğrudan bir Görevi beklemeyin'
                   href: ca2007.md
+                - name: 'CA2009: Bir ImmutableCollection değeri üzerinde ToImmutableCollection çağırma'
+                  href: ca2009.md
             - name: Güvenlik uyarıları
               items:
                 - name: Genel Bakış

@@ -15,4 +15,4 @@ ms.lasthandoff: 03/20/2020
 ms.locfileid: "70197193"
 ---
 > [!Note]
-> Bu makale Visual Studio 2015 için geçerlidir. En son Visual Studio belgelerini arıyorsanız, sol üstteki sürüm seçiciyi kullanın. Visual Studio 2019'a yükseltmenizi öneririz. [Buradan indirin](https://visualstudio.microsoft.com/downloads)
+> Bu makale, Visual Studio 2015 için geçerlidir. En son Visual Studio belgelerini arıyorsanız sol üstteki sürüm seçiciyi kullanın. Visual Studio 2019 ' a yükseltmeniz önerilir. [Buraya indirin](https://visualstudio.microsoft.com/downloads)
