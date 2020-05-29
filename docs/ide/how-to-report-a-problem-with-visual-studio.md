@@ -1,6 +1,6 @@
 ---
-title: Visual Studio ile ilgili bir sorun nasıl bildirilir?
-description: Visual Studio ile ilgili bir sorunu nasıl bildireceklerini öğrenin
+title: Visual Studio ile ilgili sorun bildirme
+description: Visual Studio ile ilgili sorun bildirme hakkında bilgi edinin
 ms.date: 03/11/2018
 ms.topic: conceptual
 ms.assetid: bee01179-cde5-4419-9095-190ee0ba5902
@@ -9,121 +9,118 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fca63b5e117f77d07c54f7556a603052853c7ef
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.openlocfilehash: 37dcfd6351cfa3adde4c1825518dd2bea7ce9b34
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81276507"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84180564"
 ---
-# <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Visual Studio veya Visual Studio Installer ile ilgili bir sorun nasıl bildirilir?
+# <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Visual Studio veya Visual Studio Yükleyicisi ilgili bir sorunu bildirme
 
 > [!NOTE]
-> Mac için Visual Studio [için, Mac için Visual Studio'da bir sorunu nasıl bildirin.](/visualstudio/mac/report-a-problem)
+> Mac için Visual Studio için bkz. [Mac için Visual Studio bir sorunu bildirme](/visualstudio/mac/report-a-problem).
 
-Visual Studio'dan veya yükleyicisinden gelen bir sorunu, içinde bulunan Geri Bildirim Aracı'nı kullanarak bildirebilirsiniz. Geri Bildirim Aracı, geri bildirimlerinize tanısal bilgileri kolayca eklemenize olanak tanır ve Visual Studio ekiplerinin sorunları çok daha etkili bir şekilde tanılayıp düzeltmelerine yardımcı olur. Bir sorunu bildirme adımları aşağıda verilmiştir.
+Bir sorunu Visual Studio 'dan veya yükleyicisinden dahil edilen geri bildirim aracını kullanarak rapor edebilirsiniz. Geri bildirim aracı, geri bildirimlerinize kolayca tanılama bilgileri eklemenizi sağlar ve Visual Studio ekiplerinin sorunları daha verimli bir şekilde tanılamasına ve düzeltmesine yardımcı olur. Sorun bildirme adımları aşağıda verilmiştir.
 
-1. **Visual Studio'da**sağ üst köşedeki geri bildirim simgesini seçin ve Sorun Bildir'i seçin. Geri bildirim aracına da menüden erişebilirsiniz **Geri** > **Bildirim** > Gönder**Bir Sorunu Bildirin.**
-![Visual Studio Developer Community](media/vsfeedbackentry.png) Alternatively'de bir sorun açılır penceresini bildirin, Visual Studio'yu yükleyemiyorsanız veya Visual Studio'daki geri bildirim aracına erişemiyorsanız Visual Studio **Installer'da** bir sorun bildirin.  Yükleyici'de sağ üst köşedeki geri bildirim simgesini seçin ve Sorun Bildir'i seçin.
-![Visual Studio Developer Community'de bir sorun açılır penceresi bildirme](media/installer.png)
+1. **Visual Studio 'da**sağ üst köşedeki geri bildirim simgesini seçin ve sorun bildir ' i seçin. Ayrıca, geri bildirim **aracına menü aracılığıyla**da erişebilirsiniz  >  .**geri bildirim gönder**  >  **sorun bildir**.
+![Visual Studio Geliştirici topluluğu 'nda sorun raporu oluşturma ](media/vsfeedbackentry.png) , Visual Studio 'yu yükleyemezseniz **Visual Studio yükleyicisi** bir sorun bildirin veya Visual Studio içindeki geri bildirim aracına erişemedik.  Yükleyicide, sağ üst köşedeki geri bildirim simgesini seçin ve sorun bildir ' i seçin.
+![Visual Studio Geliştirici topluluğu 'nda bir sorun açılır penceresi bildirin](media/installer.png)
 
-1. Oturum açmıyorsanız, aşağıdaki ekran görüntüsünde gösterildiği gibi **Oturum Aç'ı** seçin. Oturum açmayönergelerini ekranda izleyin.
+1. Oturum açmadıysanız, aşağıdaki ekran görüntüsünde gösterildiği gibi **oturum aç** ' ı seçin. Oturum açmak için ekrandaki yönergeleri izleyin.
 
-   ![Bir sorunu bildirmek için oturum açın](../ide/media/sign-in-new-ux.png)
+   ![Sorun bildirmek için oturum açın](../ide/media/sign-in-new-ux.png)
 
-   Oturum açKen bir sorunu bildirmekle kalmamış, aynı zamanda mevcut geri bildirimleri oylayabilir ve yorum yapabilirsiniz.
+   Oturum açtığınızda bir sorun bildiremeyebilir, ancak mevcut geri bildirimde de oy verebilir ve yorum yapabilirsiniz.
 
-1. Oturum imzaladıktan **sonra, Sorunlarınızı** ve **Etkinliğinizi** **takip ettiğim Öğeler** ekranında görebileceksiniz
+1. Oturum açtıktan sonra, **izlediğim öğelerde** **sorun** ve **etkinliğinizi** görebileceksiniz
 
-   ![Takip Ettiğim Öğeler](../ide/media/items-i-follow.png)
+   ![İzlediğim öğeler](../ide/media/items-i-follow.png)
 
-1. Visual Studio, sorununuzu aramak ve başkalarının bunu rapor edip etmeyişemelerini görmek için bir arayüz sağlar. Birisi bunu bildirdi, "up-vote" bize bildirmek için.
+1. Visual Studio, sorununuzu aramak ve başkalarının raporlanmasını sağlamak için bir arabirim sağlar. Birisi rapor verdi, bize bildirmek için "yukarı-oy" kullanın.
    > [!NOTE]
-   > Arama yapmak için lütfen arama kutusuna istediğiniz metni girin ve Enter'u tıklatın veya Arama simgesine basın.
+   > Arama yapmak için lütfen istenen metni arama kutusuna girin ve ENTER ' a tıklayın ya da arama simgesine basın.
 
-   ![Benzer sorunları arama ve oy kullanma](../ide/media/search-and-vote.png)
+   ![Benzer sorunlar için arama ve oylayın](../ide/media/search-and-vote.png)
 
-1. Karşılaştığınız sorunu bulamazsanız, ekranın alt kısmında **yeni sorunu bildir'i** seçin.
+1. Karşılaştığınız sorunu bulamazsanız, ekranın alt kısmında **yeni sorun bildir** ' i seçin.
 
-   > [!NOTE]
-   > **Yeni sorun bildir** düğmesi yalnızca Geliştirici Topluluğu için Visual Studio arabiriminde görünür. Bir sorunu doğrudan [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/) web sitesinde bildiremezsiniz.
-
-1. Sorun için, sorunu doğru Visual Studio ekibine yönlendirmemize yardımcı olacak açıklayıcı bir başlık oluşturun.
+1. Sorun için doğru Visual Studio ekibine yönlendirmemize yardımcı olacak açıklayıcı bir başlık oluşturun.
 
 1. Bize ek ayrıntılar verin ve mümkünse sorunu yeniden oluşturma adımlarını sağlayın.
 
-   ![Yeni bir sorun bildirme](../ide/media/report-new-problem.png)
+   ![Yeni bir sorun bildirin](../ide/media/report-new-problem.png)
 
-1. **Ekler** sekmesine geçmek için **İleri'yi** seçin. Burada, Microsoft'a göndermek için geçerli ekranınızı yakalayabilirsiniz. Ek ekran görüntüleri veya diğer dosyalar eklemek için **Ek Dosyalar Ekle'yi**seçin.
+1. **Ekler** sekmesine geçmek için **İleri ' yi** seçin. Burada, Microsoft 'a göndermek için geçerli ekranınızı yakalayabilirsiniz. Ek ekran görüntüleri veya başka dosyalar eklemek için **ek dosya Ekle**' yi seçin.
 
-   ![Visual Studio sorun raporuna ekran görüntüsü ekleme](media/report-a-problem-screenshot.png)
+   ![Visual Studio sorun raporuna bir ekran görüntüsü iliştirme](media/report-a-problem-screenshot.png)
 
-1. Ekran görüntüsü eklemek veya [bir repro kaydetmek](#record-a-repro)istemiyorsanız, **Özet** sekmesine geçmek için **İleri'yi** seçin.
+1. Bir ekran görüntüsü eklemek veya yeniden [üretme kaydetmek](#record-a-repro)istemiyorsanız **Özet** sekmesine gitmek için **İleri** ' yi seçin.
 
-1. Raporunuzu göndermek için gönder'i ve herhangi bir resim ve izleme veya döküm dosyaları yla birlikte **Gönder'i** seçin. (Gönder **Submit** düğmesi gri renkteyse, rapor için bir başlık ve açıklama sağladığından emin olun.)
+1. Raporunuzu, herhangi bir görüntü ve izleme ya da döküm dosyası ile birlikte göndermek için **Gönder** ' i seçin. ( **Gönder** düğmesi gri ise rapor için bir başlık ve açıklama girdiğinizden emin olun.)
 
-   Hangi verilerin toplandığı hakkında bilgi için, [topladığımız Verilere](developer-community-privacy.md#data-we-collect)bakın.
+   Toplanan veriler hakkında daha fazla bilgi için bkz. [Topladığımız veriler](developer-community-privacy.md#data-we-collect).
 
-## <a name="record-a-repro"></a>Bir repro kaydetme
+## <a name="record-a-repro"></a>Yeniden üretme Kaydet
 
-İzleme ve yığın döküm dosyaları sorunları tanılamamıza yardımcı olur. Repro adımlarınızı kaydetmek ve verileri Microsoft'a göndermek için **Sorun Bildir** aracını kullandığınızda bunu takdir ederiz. Bunu şu şekilde yapabilirsiniz:
+İzleme ve yığın dökümü dosyaları, sorunları tanılamamıza yardımcı olmak için yararlıdır. Yeniden oluşturma adımlarınızı kaydetmek ve verileri Microsoft 'a göndermek için **sorun bildir** aracını kullandığınızda teşekkür ederiz. Bunun nasıl yapılacağı aşağıda verilmiştir:
 
-1. Sorununuzun başlığını ve açıklamasını girdikten sonra **Ekler** sekmesine geçmek için **İleri'yi** seçin.
+1. Sorununuz için bir başlık ve açıklama girdikten sonra, **İleri** ' yi seçerek **ekler** sekmesine geçin.
 
 1. **Kayıt** sekmesini seçin.
 
-1. **Eylemlerinizi Kaydet**altında, sorunu orada yeniden oluşturabiliyorsanız Visual Studio'nun geçerli örneğini seçin. Eğer yapamıyorsanız, örneğin Visual Studio asıldıysa, eylemleri Visual Studio'nun yeni bir örneğine kaydetmek için ** \<>yeni bir örnek oluştur'u** seçin.
+1. **Eylemlerinizi kaydetme**altında, sorunu yeniden oluşturmak Için Visual Studio 'nun geçerli örneğini seçin. Bu durumda, örneğin Visual Studio askıda ise, **\<Create a new instance>** eylemleri Visual Studio 'nun yeni bir örneğine kaydetmek için öğesini seçin.
 
-1. **Kayıt Başlat'ı**seçin. Aracı çalıştırmak için izin verin.
+1. **Kaydı Başlat**' ı seçin. Aracı çalıştırmak için izin verin.
 
-   ![Visual Studio sorun raporunda izleme ve yığın döküm dosyası sağlamak için "Kayıt Başlat"ı seçin](../ide/media/record-dialog-box.png)
+   ![Visual Studio sorun raporuna bir izleme ve yığın döküm dosyası sağlamak için "kaydı Başlat" ı seçin](../ide/media/record-dialog-box.png)
 
-1. Steps **Kaydedici** aracı göründüğünde, sorunu yeniden oluşturan adımları gerçekleştirin.
+1. **Adım Kaydedicisi** aracı göründüğünde, sorunu yeniden oluşturmak için gereken adımları gerçekleştirin.
 
-1. Bittiğinde, **Kaydı Durdur** düğmesini seçin.
+1. İşiniz bittiğinde, **Kaydı Durdur** düğmesini seçin.
 
-1. Visual Studio'nun kaydettiğiniz bilgileri toplaması ve paketlemesi için birkaç dakika bekleyin.
+1. Visual Studio 'nun kaydettiğiniz bilgileri toplaması ve paketlemeleri için birkaç dakika bekleyin.
 
-   Hangi verilerin toplandığı hakkında bilgi için, [topladığımız Verilere](developer-community-privacy.md#data-we-collect)bakın.
+   Toplanan veriler hakkında daha fazla bilgi için bkz. [Topladığımız veriler](developer-community-privacy.md#data-we-collect).
 
-## <a name="when-further-information-is-needed-need-more-info"></a>Daha fazla bilgiye ihtiyaç duyulduğunda (Daha Fazla Bilgiye İhtiyaç)
+## <a name="when-further-information-is-needed-need-more-info"></a>Daha fazla bilgi gerektiğinde (daha fazla bilgi gerekiyor)
 
-Visual Studio 2017 Sürüm 15.5'ten başlayarak, kullanıcıların sorun raporları hakkında ek bilgi vermelerine yardımcı olacak yeni bir iş akışı vardır.
+Visual Studio 2017 sürüm 15,5 ' den başlayarak, kullanıcıların sorun raporları hakkında ek bilgiler sağlamasına yardımcı olmak için yeni bir iş akışı vardır.
 
-1. Bir Microsoft mühendisi [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) sorununu **Need More Info** durumuna ayarladığında, sorunu gönderen, oylayan, takip eden veya yorum yapan herhangi bir kullanıcı Visual Studio'daki Bir **Sorun Bildir** aracında bir bildirim alır.
+1. Bir Microsoft mühendis, [Visual Studio Geliştirici topluluk](https://developercommunity.visualstudio.com/) sorununu **daha fazla bilgi olması gereken** şekilde ayarlarsa, sorun üzerinde gönderilen, izlenen veya açıklamalı tüm kullanıcılar Visual Studio 'daki **sorun bildir** aracında bir bildirim alır.
 
-   ![Visual Studio'da Daha Fazla Bilgi Bildirimine İhtiyaç](../ide/media/nmi-notification.png)
+   ![Visual Studio 'da daha fazla bilgi bildirimi gerekiyor](../ide/media/nmi-notification.png)
 
-1. Dikkat gerektiren sorunları filtrelemek ve görünümü sıralamak için **Sorunları Görüntüle** bağlantısını tıklatın. Bu sorunlar, genel arama da onları ayırt etmek için, yanlarında bir gösterge var.
+1. Filtreleri **görüntüle** bağlantısına tıklayın ve görünüme dikkat edilmesi gereken sorunlar için sıralama yapın. Bu sorunlar, genel aramada ayrım yapmak için bunların yanında bir gösterge de vardır.
 
-1. Sorun ayrıntılarını görüntülemek için bir soruna tıklayın.
+1. Sorun ayrıntıları görünümünü görmek için bir soruna tıklayın.
 
-   ![Daha Fazla Bilgi Bildirimine İhtiyaç](../ide/media/nmi-details-view.png)
+   ![Daha fazla bilgi bildirimi gerekiyor](../ide/media/nmi-details-view.png)
 
-1. **Daha Fazla Bilgi İsteği İsteği'ni** görüntülemek için, sorun ayrıntıları görünümünde **isteklerini görüntüle ve yanıtla** bağlantısını tıklatın. Bir iletişim kutusu isteği gösterir.
+1. **Daha fazla bilgi** iste isteği görüntülemek için sorun ayrıntıları görünümündeki **istek ve yanıt bağlantısını görüntüle** bağlantısına tıklayın. Bir iletişim kutusu isteği gösterir.
 
-   ![Daha Fazla Bilgi Bildirimine İhtiyaç](../ide/media/nmi-request.png)
+   ![Daha fazla bilgi bildirimi gerekiyor](../ide/media/nmi-request.png)
 
-1. Yorum, ek veya kayıt adımları ekleyerek daha fazla bilgi sağlayabilirsiniz. Bu deneyim, yeni bir sorun bildirmeye veya bir soruna oy verirken ek bilgi sağlamaya benzer.
+1. Açıklamalar, ekler veya kayıt adımları ekleyerek daha fazla bilgi sağlayabilirsiniz. Bu deneyim, yeni bir sorunu raporlamaya veya bir sorun üzerinde oylama yaparken ek bilgi sağlamaya benzer.
 
-1. İstenen Microsoft mühendisi, sağlanan ek bilgiler hakkında bir bildirim alır. Araştırmak için yeterli bilgiye sahiplerse, sorun durumu değişir. Aksi takdirde, mühendis daha fazla bilgi ister.
+1. İstekte bulunan Microsoft mühendis, sunulan ek bilgiler hakkında bir bildirim alır. Araştırmak için yeterli bilgi varsa, sorun durumu değişir. Aksi takdirde mühendis daha da fazla bilgi ister.
 
    > [!NOTE]
-   > * Yanıtladığınızda, bildirim ortadan kalkar. Onun yerine, size teşekkür eden ve daha fazla bilgi sağlamak için bir yol kolaylaştıran bir afiş bakın.
-   > * Sorun durumu değiştikten sonra, sorunu izleyen herkes için bildirim ortadan kalkar.
-   > * Aynı **Need More Info** isteğini birden fazla kişi yanıtlayabilir.
-   > * [Geliştirici Topluluğu'nda](https://developercommunity.visualstudio.com/) doğrudan bir web tarayıcısı üzerinden erişdiğinizde Daha Fazla **Bilgi İhtiyacı** İş Akışı yoktur, ancak burada yorum ve ekleri de sağlayabilirsiniz.
+   > * Yanıt gönderdiğinizde bildirim kaybolur. Bunun yerine, sizi teşekkür eden bir başlık görürsünüz ve daha da fazla bilgi sağlamak için bir yol sağlar.
+   > * Sorunun durumu değişirse, bildirim sorunu izleyen herkes için kaybolur.
+   > * Aynı **gereksinim daha fazla bilgi** isteği üzerinde birden fazla kişi yanıt verebilir.
+   > * Doğrudan bir Web tarayıcısı üzerinden eriştiğinizde [Geliştirici topluluğu](https://developercommunity.visualstudio.com/) üzerinde **daha fazla bilgi** iş akışı gerekmez, ancak burada açıklamalar ve ekler de sağlayabilirsiniz.
 
-## <a name="search-for-solutions-or-provide-feedback"></a>Çözüm arama veya geri bildirim sağlama
+## <a name="search-for-solutions-or-provide-feedback"></a>Çözüm arayın veya geri bildirim sağlayın
 
-Bir sorunu bildirmek için Visual Studio'yu kullanmak istemiyorsanız veya kullanamıyorsanız, sorunun zaten bildirilmiş olma olasılığı ve [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) sayfasında bir çözüm yayınlanmıştır.
+Bir sorunu bildirmek için Visual Studio 'Yu kullanmak istemiyorsanız, sorun daha önce bildirilme ve [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/) sayfasında gönderilen bir çözüm olabilir.
 
-Bildirmek için bir sorun yoksa ancak bir özellik önermek istiyorsanız, bunun için de bir yer vardır. Daha fazla bilgi için [bir özellik öner](https://developercommunity.visualstudio.com/content/idea/post.html?space=8) sayfasına bakın.
+Rapor almak için bir sorununuz yoksa ancak bir özellik önermek istiyorsanız, bunun de bir yerinde olabilir. Daha fazla bilgi için bkz. [özellik önerme](https://developercommunity.visualstudio.com/content/idea/post.html?space=8) sayfası.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Visual Studio geri bildirim seçenekleri](../ide/feedback-options.md)
-* [Mac için Visual Studio ile ilgili bir sorun bildirme](/visualstudio/mac/report-a-problem)
-* [C++ ile ilgili bir sorunu bildirme](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset)
-* [Visual Studio Geliştirici Topluluğu](https://developercommunity.visualstudio.com/)
+* [Mac için Visual Studio sorun bildirme](/visualstudio/mac/report-a-problem)
+* [C++ ile ilgili sorun bildirme](/cpp/how-to-report-a-problem-with-the-visual-cpp-toolset)
+* [Visual Studio Geliştirici topluluğu](https://developercommunity.visualstudio.com/)
 * [Geliştirici Topluluğu veri gizliliği](developer-community-privacy.md)

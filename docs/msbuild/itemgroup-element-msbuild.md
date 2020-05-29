@@ -1,5 +1,5 @@
 ---
-title: ItemGroup Öğesi (MSBuild) | Microsoft Dokümanlar
+title: ItemGroup öğesi (MSBuild) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,18 +18,19 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8064ce4c13419238ca5877893a731d2ac53afb25
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c058a5986f72192a86d0e554d9e0d0b9bdce1b42
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633648"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84173518"
 ---
 # <a name="itemgroup-element-msbuild"></a>ItemGroup öğesi (MSBuild)
 
-Kullanıcı tanımlı [Öğe](../msbuild/item-element-msbuild.md) öğeleri kümesi içerir. MSBuild projesinde kullanılan her öğe, bir `ItemGroup` öğenin alt öğesi olarak belirtilmelidir.
+Kullanıcı tanımlı [öğe](../msbuild/item-element-msbuild.md) öğeleri kümesi içerir. Bir MSBuild projesinde kullanılan her öğe, bir öğesinin alt öğesi olarak belirtilmelidir `ItemGroup` .
 
-\<Proje \<> ItemGroup>
+\<Project>
+\<ItemGroup>
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -49,25 +50,25 @@ Kullanıcı tanımlı [Öğe](../msbuild/item-element-msbuild.md) öğeleri küm
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Condition`|İsteğe bağlı öznitelik. Değerlendirilecek durum. Daha fazla bilgi için [Koşullar'a](../msbuild/msbuild-conditions.md)bakın.|
-|`Label`|İsteğe bağlı öznitelik. `ItemGroup`Tanımlar.|
+|`Condition`|İsteğe bağlı öznitelik. Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
+|`Label`|İsteğe bağlı öznitelik. Öğesini tanımlar `ItemGroup` .|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Öğe](../msbuild/item-element-msbuild.md)|Yapı işleminin girdilerini tanımlar. Bir 'de sıfır `Item` veya `ItemGroup`daha fazla öğe olabilir.|
+|[Öğe](../msbuild/item-element-msbuild.md)|Yapı işlemi için girişleri tanımlar. İçinde sıfır veya daha fazla `Item` öğe olabilir `ItemGroup` .|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 | Öğe | Açıklama |
 | - | - |
-| [Proje](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
-| [Hedef](../msbuild/target-element-msbuild.md) | .NET Framework 3.5 ile `ItemGroup` başlayarak, `Target` öğe bir öğenin içinde görünebilir. Daha fazla bilgi için [Bkz. Hedefler.](../msbuild/msbuild-targets.md) |
+| [Project](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
+| [Hedef](../msbuild/target-element-msbuild.md) | .NET Framework 3,5 ' den başlayarak, `ItemGroup` öğe bir öğe içinde görünebilir `Target` . Daha fazla bilgi için bkz. [hedefler](../msbuild/msbuild-targets.md). |
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, kullanıcı tanımlı `Res` madde `CodeFiles` koleksiyonlarını `ItemGroup` gösterir ve bir öğenin içinde bildirilir. Madde koleksiyonundaki `Res` öğelerin her biri kullanıcı tanımlı alt [ÖğeMetadata](../msbuild/itemmetadata-element-msbuild.md) öğesi içerir.
+Aşağıdaki kod örneği, Kullanıcı tanımlı öğe koleksiyonlarını gösterir `Res` ve `CodeFiles` bir öğesi içinde bildirilmiştir `ItemGroup` . Öğe koleksiyonundaki öğelerin her biri `Res` Kullanıcı tanımlı bir alt [ItemMetadata](../msbuild/itemmetadata-element-msbuild.md) öğesi içerir.
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -86,8 +87,12 @@ Aşağıdaki kod örneği, kullanıcı tanımlı `Res` madde `CodeFiles` koleksi
 </Project>
 ```
 
+Basit bir proje dosyasında, normalde tek bir `ItemGroup` öğesi kullanırsınız, ancak birden çok öğe de kullanabilirsiniz `ItemGroup` . Birden çok `ItemGroup` öğe kullanıldığında, öğeler tek bir halinde birleştirilir `ItemGroup` . Örneğin, bazı öğeler `ItemGroup` içeri aktarılan bir dosyada tanımlanan ayrı bir öğe tarafından bulunabilir.
+
+ItemGroups özniteliği kullanılarak uygulanmış koşullara sahip olabilir `Condition` . Bu durumda, öğeler yalnızca koşul karşılandığında öğe listesine eklenir. Bkz. [MSBuild koşulları](msbuild-conditions.md)
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)
-- [Öğeler](../msbuild/msbuild-items.md)
+- [Öğeleri](../msbuild/msbuild-items.md)
 - [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
