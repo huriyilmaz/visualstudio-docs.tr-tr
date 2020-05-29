@@ -244,8 +244,6 @@
       items:
         - name: Uzaktan Hata Ayıklama Hataları ve Sorun Giderme
           href: remote-debugging-errors-and-troubleshooting.md
-        - name: Uzak bilgisayardaki Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisinin bu bilgisayara bağlanma izni yok
-          href: error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-does-not-have-permission-to-connect-to-this-computer.md
         - name: Uzak bilgisayara erişilmeye çalışılırken DCOM hatası oluştu. Erişim reddedildi.
           href: a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied.md
         - name: Uzak bilgisayardaki Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi farklı kullanıcı olarak çalışıyor
@@ -258,8 +256,6 @@
           href: error-kerberos-authentication-failed.md
         - name: DNS'nin Hedef Bilgisayarda Doğru Yapılandırıldığından Emin Olun
           href: error-ensure-that-dns-is-correctly-configured-on-the-target-computer.md
-        - name: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi (MSVSMON.EXE) uzak bilgisayar üzerinde çalışıyor görünmüyor.
-          href: error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running-on-the-remote-computer.md
         - name: Microsoft Visual Studio Uzaktan Hata Ayıklama İzleyicisi'ne Bağlanılamıyor.
           href: unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md
         - name: DCOM iletişimi başlatılamıyor
@@ -562,7 +558,7 @@
       items:
         - name: Grafik Tanılama (DirectX Grafiklerinde Hata Ayıklama)
           href: visual-studio-graphics-diagnostics.md
-        - name: Genel bakış
+        - name: Genel Bakış
           href: overview-of-visual-studio-graphics-diagnostics.md
         - name: Başlarken
           href: getting-started-with-visual-studio-graphics-diagnostics.md
