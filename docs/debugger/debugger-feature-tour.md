@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklayıcıya ilk bakış
-description: Visual Studio hata ayıklama sını kullanarak uygulamaları hata ayıklama ya da hata ayıklama kullanmaya başlayın
+description: Visual Studio hata ayıklayıcısını kullanarak uygulamaları hata ayıklamaya başlama
 ms.custom: ''
 ms.date: 04/08/2019
 ms.topic: tutorial
@@ -12,231 +12,229 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 93973322c40ca62396414317c2ad8875e9b94854
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: ffaeff850c739cd81569a88ae980acf837c413c1
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77578948"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184217"
 ---
-# <a name="first-look-at-the-visual-studio-debugger"></a>Visual Studio Debugger ilk bakış
+# <a name="first-look-at-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısına ilk bakış
 
-Bu konu Visual Studio tarafından sağlanan hata ayıklama araçlarını tanıtır. Visual Studio bağlamında, *uygulamanızı hata ayıklama*yaptığınızda, genellikle uygulamayı hata ayıklama ekli (yani hata ayıklama modunda) çalıştırdığınız anlamına gelir. Bunu yaptığınızda, hata ayıklayıcı, kodunuzu çalışırken ne yaptığını görmek için birçok yol sağlar. Kodunuzu gözden geçirebilir ve değişkenlerde depolanan değerlere bakabilirsiniz, değerler ne zaman değiştiğini görmek için değişkenler üzerinde saatler ayarlayabilir, kodunuzu yürütme yolunu inceleyebilirsiniz, ve diğerleri. Bu kod hata ayıklama denedim ilk kez ise, bu konu geçmeden önce [mutlak yeni başlayanlar için Hata Ayıklama](../debugger/debugging-absolute-beginners.md) okumak isteyebilirsiniz.
+Bu konuda, Visual Studio tarafından sunulan hata ayıklayıcı araçları tanıtılmaktadır. Visual Studio bağlamında, uygulamanızda *hata ayıklarken*, genellikle uygulamayı hata ayıklayıcı ekli olarak (hata ayıklayıcı modunda) çalıştırdığınız anlamına gelir. Bunu yaptığınızda, hata ayıklayıcı kodun çalışırken ne yaptığını görmek için birçok yol sunar. Kodunuzda saklanan değerlere bakabilir ve değişkenlerde depolanan değerlere bakabilirsiniz, değerlerin ne zaman değişiklik olduğunu görmek için, değişkenlerinizin yürütme yolunu inceleyebilirsiniz. Kodu ilk kez ayıklamaya çalıştığınızda, bu konuya geçmeden önce [mutlak yeni başlayanlar Için hata ayıklama](../debugger/debugging-absolute-beginners.md) işlemini okumak isteyebilirsiniz.
 
-Burada açıklanan özellikler C#, C++, Visual Basic, JavaScript ve Visual Studio tarafından desteklenen diğer diller için geçerlidir (not edilendurumlar hariç).
+Burada açıklanan özellikler C#, C++, Visual Basic, JavaScript ve Visual Studio tarafından desteklenen diğer diller için geçerlidir (aksi belirtilmedikçe).
 
-## <a name="set-a-breakpoint-and-start-the-debugger"></a>Bir kesme noktası ayarlayın ve hata ayıklamayı başlatın
+## <a name="set-a-breakpoint-and-start-the-debugger"></a>Kesme noktası ayarlama ve hata ayıklayıcıyı başlatma
 
-Hata ayıklama için uygulamanızı uygulama işlemine bağlı hata ayıklama ile başlatmanız gerekir. **F5** **(Hata Ayıklama > Başlat Hata Ayıklama**) bunu yapmanın en yaygın yoludur. Ancak, şu anda uygulama kodunuzu incelemek için herhangi bir kesme noktası ayarlamamış olabilirsiniz, bu nedenle bunu önce yapacağız ve sonra hata ayıklamaya başlayacağız. Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliğidir. Kesme noktası, Visual Studio'nun çalışan kodunuzu nerede askıya alması gerektiğini gösterir, böylece değişkenlerin değerlerine veya belleğin davranışına veya bir kod dalının çalıştırılıp çalıştırılmayacağına göz atabilirsiniz.
+Hata ayıklamak için, uygulama işlemine eklenmiş hata ayıklayıcı ile uygulamanızı başlatmanız gerekir. **F5** (**hata ayıklama > hata ayıklamayı Başlat**) bunu yapmanın en yaygın yoludur. Ancak, artık uygulama kodunuzu incelemek için herhangi bir kesme noktası ayarlanmamış olabilirsiniz; bu nedenle, önce bunu yapacağız ve ardından hata ayıklamayı başlatacak. Kesme noktaları, güvenilir hata ayıklamanın en temel ve temel özelliğidir. Bir kesme noktası, Visual Studio 'Nun çalışan kodunuzu askıya alması gerektiğini gösterir; böylece değişkenlerin değerlerine veya bellek davranışına veya kodun bir dalının çalıştırılıp çalıştırılmayacağı konusunda bir görünüm elde edebilirsiniz.
 
-Kod düzenleyicisinde açık bir dosyanız varsa, kod satırının solundaki kenar boşluğuna tıklayarak bir kesme noktası ayarlayabilirsiniz.
+Kod Düzenleyicisi 'nde açık bir dosyanız varsa, bir kod satırının solundaki kenar boşluğuna tıklayarak bir kesme noktası ayarlayabilirsiniz.
 
-![Bir Kesme Noktası Ayarlama](../debugger/media/dbg-tour-set-a-breakpoint.gif "Kesme noktası ayarlama")
+![Kesme noktası ayarlama](../debugger/media/dbg-tour-set-a-breakpoint.gif "Kesme noktası ayarlama")
 
-**Hata** **Ayıklama (Hata Ayıklama > Hata Ayıklama**başlat) veya Hata **Ayıklama** Başlat düğmesine basın Hata Ayıklama Araç Çubuğu'nda Hata ![Ayıklama](../debugger/media/dbg-tour-start-debugging.png "Hata Ayıklama'yı Başlatma") başlatın ve hata ayıklayıcı karşılaştığı ilk kesme noktasına çalışır. Uygulama henüz çalışmıyorsa, F5 hata ayıklamayı başlatır ve ilk kesme noktasında durur.
+**F5** tuşuna basın (hata ayıklama **> başlatma hata**ayıklaması) veya hata **ayıklamayı Başlat** düğmesi hata ayıklama araç çubuğunda ![başlatılır](../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") ve hata ayıklayıcı karşılaştığı ilk kesme noktasına çalışır. Uygulama henüz çalışmıyorsa, F5 hata ayıklayıcıyı başlatır ve ilk kesme noktasında durmaktadır.
 
-Kesme noktaları, kod satırını veya ayrıntılı olarak incelemek istediğiniz kod bölümünü bildiğinizde yararlı bir özelliktir.
+Kod satırını veya kodun ayrıntılı olarak incelemek istediğiniz bölümünü bildiğiniz kesme noktaları yararlı bir özelliktir.
 
-## <a name="navigate-code-in-the-debugger-using-step-commands"></a><a name="navigate"></a>Adım komutlarını kullanarak hata ayıklayıcıda kodda gezinme
+## <a name="navigate-code-in-the-debugger-using-step-commands"></a><a name="navigate"></a>Adım komutlarını kullanarak hata ayıklayıcıda kodda gezinin
 
-Uygulama kodunuzu daha hızlı gezinmeyi sağladıkları için çoğu komut için klavye kısayollarını sağlarız. (Menü komutları gibi eşdeğer komutlar parantez içinde gösterilir.)
+Çoğu komut için klavye kısayolları sağlıyoruz, çünkü uygulama kodunuzun daha hızlı bir şekilde gezinmesine dikkat edin. (Menü komutları gibi eşdeğer komutlar parantez içinde gösterilir.)
 
-Uygulamanızı hata ayıklama ekli olarak başlatmak için **F11** **(Hata Ayıklama > Adım Adım)** tuşuna basın. F11, **Step Into** komutudur ve uygulama yürütmeyi bir er seferde bir ekibe iletir. Uygulamayı F11 ile başlattığınızda, hata ayıklama yürütülen ilk deyimde kırılır.
+Uygulamanızı hata ayıklayıcı eklenmiş olarak başlatmak için, **F11** tuşuna basın (**hata ayıklama > adımla**). F11, **adımla** komutuna ve aynı anda uygulama yürütmeyi tek bir ifadeye ilerletir. Uygulamayı F11 ile başlattığınızda, hata ayıklayıcı yürütülen ilk deyimde kesilir.
 
-![F11 Adım Adım](../debugger/media/dbg-tour-f11.png "F11 Adım Adım")
+![F11 step INTO](../debugger/media/dbg-tour-f11.png "F11 step INTO")
 
-Sarı ok, hata ayıklamanın duraklatılmış olduğu ve aynı noktada uygulama yürütmesini de askıya alan deyimi temsil eder (bu bildirim henüz yürütülmedi).
+Sarı ok, hata ayıklayıcının duraklatıldığı ifadeyi temsil eder ve aynı noktada uygulama yürütmeyi de askıya alır (Bu bildirim henüz yürütülmemiştir).
 
-F11, yürütme akışını en ayrıntılı olarak incelemek için iyi bir yoldur. (Kod üzerinden daha hızlı hareket etmek için, size diğer bazı seçenekleri de gösteririz.) Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan kodu atlar (daha fazla ayrıntı istiyorsanız, [Bkz. Just My Code).](../debugger/just-my-code.md)
+F11, yürütme akışını en ayrıntılı incelemek için iyi bir yoldur. (Kod üzerinden daha hızlı hareket etmek için diğer bazı seçenekleri de göstereceğiz.) Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan koddan atlar (daha fazla ayrıntı istiyorsanız, bkz. [yalnızca kendi kodum](../debugger/just-my-code.md)).
 
 >[!NOTE]
-> Yönetilen kodda, özelliklerin ve işleçlerin (varsayılan davranış) üzerine otomatik olarak bastığınızda bilgilendirilmek isteyip istemediğiniz soran bir iletişim kutusu görürsünüz. Ayarı daha sonra değiştirmek isterseniz, **Hata Ayıklama**altında **Araçlar > Seçenekleri** menüsünde özellikleri ve **işleçler** ayarı üzerinden adım devre dışı.
+> Yönetilen kodda, özellikleri ve işleçleri (varsayılan davranış) üzerinde otomatik olarak adımla uyarılmak isteyip istemediğinizi soran bir iletişim kutusu görürsünüz. Ayarı daha sonra değiştirmek istiyorsanız, **hata ayıklama**altındaki **Araçlar > seçenekler** menüsünde **Özellikler ve işleçler üzerinde adımla** ayarını devre dışı bırakın.
 
-## <a name="step-over-code-to-skip-functions"></a>Işlevleri atlamak için kodun üzerine geçme
+## <a name="step-over-code-to-skip-functions"></a>İşlevleri atlamak için kodun üzerinde adımla
 
-İşlev veya yöntem çağrısı olan bir kod satırında olduğunuzda, **F11 yerine F10** **(Hata Ayıklama > Adımı)** tuşuna basabilirsiniz.
+Bir işlev veya yöntem çağrısı olan bir kod satırından olduğunuzda, **F11 (** **Hata Ayıkla > Step Over**) tuşuna basarak F11 yerine + tuşlarına basabilirsiniz.
 
-F10, hata ayıklayıcıyı uygulama kodunuzdaki işlevlere veya yöntemlere adım atmadan ilerler (kod hala yürütülür). F10 tuşuna basarak, ilgilenmediğiniz kodu atlayabilirsiniz. Bu şekilde, daha fazla ilgilendiğiniz koda hızla ulaşabilirsiniz.
+F10 uygulama kodunuzda işlevlere veya yöntemlere adımla hata ayıklayıcıyı ilerletir (kod yine de çalıştırılır). F10 tuşuna basarak, ilgilenmediğiniz kodu atlayabilirsiniz. Bu şekilde, daha fazla ilgilendiğiniz koda hızlı bir şekilde ulaşabilirsiniz.
 
-## <a name="step-into-a-property"></a>Bir özelliğe adım atma
+## <a name="step-into-a-property"></a>Bir özelliğe adımla
 
-Daha önce de belirtildiği gibi, varsayılan olarak hata ayıklama yönetilen özellikleri ve alanları atlar, ancak **Adım Belirli** komutu bu davranışı geçersiz kılmak için izin verir.
+Daha önce belirtildiği gibi, hata ayıklayıcı yönetilen özellikleri ve alanları atlar, ancak **belirli komuta adım** bu davranışı geçersiz kılmanıza olanak tanır.
 
-Bir özellik veya alana sağ tıklayın ve **Belirli Adım'ı**seçin, ardından kullanılabilir seçeneklerden birini seçin.
+Bir özellik veya alana sağ tıklayın ve **belirli bir adımla**' i seçin, sonra da kullanılabilir seçeneklerden birini belirleyin.
 
-![Belirli adım](../debugger/media/dbg-tour-step-into-specific.png "Belirli Bir Adım")
+![Belirli bir adımla](../debugger/media/dbg-tour-step-into-specific.png "Belirli bir adımla")
 
-Bu örnekte, **Step Into Specific** bizi `Path.set`' için koda
+Bu örnekte, **belirli bir adımla** ilgili kodu bize alır `Path.set` .
 
-![Belirli adım](../debugger/media/dbg-tour-step-into-specific-2.png "Belirli Bir Adım")
+![Belirli bir adımla](../debugger/media/dbg-tour-step-into-specific-2.png "Belirli bir adımla")
 
-## <a name="run-to-a-point-in-your-code-quickly-using-the-mouse"></a>Fareyi kullanarak kodunuzun bir noktasına hızlı bir şekilde koş
+## <a name="run-to-a-point-in-your-code-quickly-using-the-mouse"></a>Fareyi kullanarak kodunuzda bir noktaya hızla çalışma
 
-Hata ayıklayıcıdayken, soltarafta **Çalıştır'dan** Tıklat'a kadar bir kod satırının üzerinde gezin (Yürütmeyi buraya çalıştırın) düğmesi ![görünür.](../debugger/media/dbg-tour-run-to-click.png "RunToClick")
+Hata ayıklayıcı sırasında, **tıklayana** kadar Çalıştır (yürütmeyi buraya kadar Çalıştır) düğmesine tıklayana kadar bir kod satırının üzerine gelin ve ![sol tarafta görünür](../debugger/media/dbg-tour-run-to-click.png "RunToClick") .
 
 ![Tıklanan Satıra Kadar Çalıştır](../debugger/media/dbg-tour-run-to-click-2.png "Tıklanan Satıra Kadar Çalıştır")
 
 > [!NOTE]
-> **Tıklatmak Için Çalıştır** (Yürütmeyi buraya çalıştır) [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]butonundan başlayarak kullanılabilir.
+> **Tıklama Için Çalıştır** (yürütmeyi buraya kadar Çalıştır) düğmesi, ' den itibaren kullanılabilir [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] .
 
-**Tıklatmak için Çalıştır** (Yürütmeyi buraya çalıştır) düğmesini tıklatın. Hata ayıklayıcı tıklattığınız kod satırına ilerler.
+**Çalıştırmak Için Çalıştır** ' a tıklayın (yürütmeyi buraya kadar Çalıştır) düğmesine tıklayın. Hata ayıklayıcı, tıklattığınız kod satırına ilerler.
 
-Bu düğmeyi kullanmak geçici bir kesme noktası ayarlamaya benzer. Bu komut, uygulama kodunun görünür bir bölgesinde hızlı bir şekilde dolaşmak için de kullanışlıdır. Herhangi bir açık dosyada **Tıklatmak için Çalıştır'ı** kullanabilirsiniz.
+Bu düğme kullanıldığında geçici bir kesme noktası ayarlamaya benzer. Bu komut, uygulama kodunun görünür bir bölgesinde hızlıca elde etmek için de kullanışlıdır. **Çalıştır ' ı** kullanarak herhangi bir açık dosyayı tıklatabilirsiniz.
 
-## <a name="advance-the-debugger-out-of-the-current-function"></a>Hata ayıklamayı geçerli işlevden çıkarma
+## <a name="advance-the-debugger-out-of-the-current-function"></a>Hata ayıklayıcıyı geçerli işlevin dışına ilerletin
 
-Bazen hata ayıklama oturumunuza devam etmek, ancak hata ayıklamayı geçerli işlev boyunca ilerletebilirsiniz.
+Bazen hata ayıklama oturumunuzu devam ettirmek, ancak hata ayıklayıcıyı geçerli işlev aracılığıyla ilerletmek isteyebilirsiniz.
 
-**Shift + F11** tuşuna basın (veya **Hata Ayıklama > Adım Dışarı**).
+**SHIFT + F11** tuşlarına basın (veya **hata ayıklama > Step Out**).
 
-Bu komut, geçerli işlev dönene kadar uygulama yürütmesini devam ettirer (ve hata ayıklamayı ilerler).
+Bu komut, geçerli işlev dönene kadar uygulama yürütmeyi sürdürür (ve hata ayıklayıcıyı ilerletir).
 
-## <a name="run-to-cursor"></a>İmlecile çalıştır
+## <a name="run-to-cursor"></a>İmlece kadar Çalıştır
 
-Hata **Ayıklama** yı durdur un kırmızı düğmeye basarak hata ayıklamayı durdurun ![Hata Ayıklama'yı durdurun](../debugger/media/dbg-tour-stop-debugging.png "Hata Ayıklamayı Durdur") veya**F5'i** **Kaydırın.** + 
+Kodu düzenlediğinizde (hata ayıklayıcıda duraklama yerine), uygulamanızdaki bir kod satırına sağ tıklayın ve **Imlece Çalıştır**' ı seçin. Bu komut, hata ayıklamaya başlar ve geçerli kod satırında geçici bir kesme noktası ayarlar.
 
-Uygulamanızdaki bir kod satırına sağ tıklayın ve **İmlere Çalıştır'ı**seçin. Bu komut hata ayıklamayı başlatır ve geçerli kod satırında geçici bir kesme noktası ayarlar.
+![Imlece kadar Çalıştır](../debugger/media/dbg-tour-run-to-cursor.png "Imlece kadar Çalıştır")
 
-![İmlec'e Çalıştır](../debugger/media/dbg-tour-run-to-cursor.png "İmlec'e Çalıştır")
+Kesme noktaları ayarladıysanız, hata ayıklayıcı, isabet eden ilk kesme noktasında duraklatılır.
 
-Kesme noktaları ayarladıysanız, hata ayıklama çarptırdığı ilk kesme noktasında duraklar.
+**Imlece çalıştırmayı**seçtiğiniz kod satırına ulaşana kadar **F5** tuşuna basın.
 
-**İmlec'e Çalıştır'ı**seçtiğiniz kod satırına ulaşana kadar **F5** tuşuna basın.
-
-Bu komut, kodu düzenlerken ve hızlı bir şekilde geçici bir kesme noktası ayarlamak ve hata ayıklayıcıyı aynı anda başlatmak istediğinizde yararlıdır.
+Bu komut, kodu düzenlediğinizde ve hızlı bir şekilde geçici bir kesme noktası ayarlamak ve hata ayıklayıcıyı aynı anda başlatmak istediğinizde yararlıdır.
 
 > [!NOTE]
-> Hata ayıklama sırasında **Çağrı Yığını** penceresinde **Imleç için Çalıştır'ı** kullanabilirsiniz.
+> Hata ayıklarken **çağrı yığını** penceresinde **imlece imlecini** kullanabilirsiniz.
 
-## <a name="restart-your-app-quickly"></a>Uygulamanızı hızla yeniden başlatın
+## <a name="restart-your-app-quickly"></a>Uygulamanızı hızlıca yeniden başlatın
 
-Hata Ayıklama Araç Çubuğu'ndaki **(Ctrl + Shift +F5)** **Uygulamayı Yeniden** ![Başlat](../debugger/media/dbg-tour-restart.png "Uygulamayı Yeniden Başlat") düğmesini tıklatın.
+Hata ayıklama araç çubuğundaki uygulamayı **yeniden** ![Başlat](../debugger/media/dbg-tour-restart.png "Uygulamayı yeniden Başlat") düğmesine tıklayın (**CTRL + SHIFT + F5**).
 
-**Yeniden Başlat**tuşuna bastığınızda, uygulamayı durdurmak ve hata ayıklamayı yeniden başlatmak karşı zaman kazandırır. Hata ayıklayıcı, yürütme kodu tarafından vurulan ilk kesme noktasında duraklar.
+**Yeniden Başlat**'a bastığınızda, uygulamanın durdurulması ve hata ayıklayıcının yeniden başlatılması ile zaman kazandırır. Hata ayıklayıcı, kodu yürüterek vuran ilk kesme noktasında duraklatılır.
 
-Hata ayıklayıcıyı durdurmak ve kod düzenleyicisine geri dönmek istiyorsanız, **Yeniden Başlat**yerine kırmızı stop ![Hata Ayıklamayı Durdur](../debugger/media/dbg-tour-stop-debugging.png "Hata Ayıklamayı Durdur") düğmesine basabilirsiniz.
+Hata ayıklayıcıyı durdurmak ve kod düzenleyicisine geri dönmek istiyorsanız, **Yeniden Başlat**yerine kırmızı Durdur ![hata ayıklamayı Durdur](../debugger/media/dbg-tour-stop-debugging.png "Hata ayıklamayı Durdur") düğmesine basabilirsiniz.
 
-## <a name="edit-your-code-and-continue-debugging-c-vb-c-xaml"></a>Kodunuzu edin ve hata ayıklama devam (C#, VB, C++, XAML)
+## <a name="edit-your-code-and-continue-debugging-c-vb-c-xaml"></a>Kodunuzu düzenleyin ve hata ayıklamaya devam edin (C#, VB, C++, XAML)
 
-Visual Studio tarafından desteklenen çoğu dilde, hata ayıklama oturumunun ortasında kodunuzu düzenleme yapabilir ve hata ayıklama devam edebilirsiniz. Bu özelliği kullanmak için hata ayıklayıcıda duraklarken imlecinizle kodunuzu tıklatın, düzeltmeler yapın ve hata ayıklama devam etmek için **F5**, **F10**veya **F11** tuşuna basın.
+Visual Studio 'nun desteklediği çoğu dilde kodunuzu bir hata ayıklama oturumunun ortasında düzenleyebilir ve hata ayıklamaya devam edebilirsiniz. Bu özelliği kullanmak için, hata ayıklayıcıda duraklama, düzenleme yapın ve hata ayıklamaya devam etmek için **F5**, **F10**veya **F11** tuşuna basın.
 
-![Hata ayıklamayı ve hata ayıklamayı yapmaya devam etme](../debugger/media/dbg-tips-edit-and-continue.gif "EditAndContinue")
+![Düzenle ve hata ayıklamayı Sürdür](../debugger/media/dbg-tips-edit-and-continue.gif "EditAndContinue")
 
-Özelliği kullanma ve özellik sınırlamaları hakkında daha fazla bilgi için [bkz.](../debugger/edit-and-continue.md)
+Özelliği ve özellik sınırlamalarını kullanma hakkında daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).
 
-Hata ayıklama oturumu sırasında XAML kodunu değiştirmek için [bkz.](../xaml-tools/xaml-hot-reload.md)
+Bir hata ayıklama oturumu sırasında XAML kodunu değiştirmek için bkz. xaml [üzerinde çalışan xaml kodunu yazma ve hata ayıklama xaml çalışırken yeniden yükleme](../xaml-tools/xaml-hot-reload.md).
 
-## <a name="inspect-variables-with-data-tips"></a>Değişkenleri veri ipuçlarıyla inceleyin
+## <a name="inspect-variables-with-data-tips"></a>Veri ipuçları ile değişkenleri inceleyin
 
-Artık yolunuzu biraz bildiğinize göre, hata ayıklama ile uygulama durumunuzu (değişkenleri) incelemeye başlamak için iyi bir fırsatınız olur. Değişkenleri incelemenize olanak tanıyan özellikler hata ayıklamanın en yararlı özelliklerinden bazılarıdır ve bunu yapmanın farklı yolları vardır. Genellikle, bir sorunu hata ayıklamaya çalıştığınızda, değişkenlerin belirli bir uygulama durumunda olmasını beklediğiniz değerleri depolayıp depolamadığını bulmaya çalışırsınız.
+Biraz kısa bir süre içinde sizi öğrenmiş olduğunuza göre, uygulama durumunu (değişkenler) hata ayıklayıcıyla araştırmanız için iyi bir fırsattır. Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en faydalı özelliklerinden bazılarıdır ve bunu yapmak için farklı yollar vardır. Genellikle, bir sorunu ayıklamaya çalıştığınızda, değişkenlerin belirli bir uygulama durumunda olmasını istediğiniz değerleri depolayıp depoladığını bulmaya çalışıyorsunuz.
 
-Hata ayıklamada duraklatılırken, fareyle birlikte bir nesnenin üzerine gezinir ve varsayılan özellik `market 031.jpg` değerini görürsünüz (bu örnekte, dosya adı varsayılan özellik değeridir).
+Hata ayıklayıcıda duraklalarken, fareyle bir nesnenin üzerine gelin ve varsayılan özellik değerini görürsünüz (Bu örnekte, dosya adı `market 031.jpg` varsayılan özellik değeridir).
 
-![Veri İpucunu Görüntüleme](../debugger/media/dbg-tour-data-tips.gif "Veri ipucunu görüntüleme")
+![Veri Ipucunu görüntüleme](../debugger/media/dbg-tour-data-tips.gif "Veri ipucunu görüntüleme")
 
-Tüm özelliklerini (bu örnekteki `FullPath` özellik gibi) görmek için nesneyi genişletin.
+Tüm özelliklerini görmek için nesneyi genişletin ( `FullPath` Bu örnekteki özelliği gibi).
 
-Genellikle, hata ayıklama, nesnelerüzerinde özellik değerlerini denetlemek için hızlı bir yol istiyorum ve veri ipuçları bunu yapmak için iyi bir yoldur.
+Genellikle, hata ayıklarken, nesnelerdeki özellik değerlerini denetlemek için hızlı bir yol istersiniz ve veri ipuçları bunu yapmanın iyi bir yoludur.
 
 > [!TIP]
-> Desteklenen dillerin çoğunda, hata ayıklama oturumunun ortasında kodu değiştirebilirsiniz. Daha fazla bilgi için [bkz.](../debugger/edit-and-continue.md)
+> Desteklenen çoğu dilde kodu bir hata ayıklama oturumunun ortasında düzenleyebilirsiniz. Daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).
 
-## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>Otomatik ve Yerel pencerelerle değişkenleri inceleyin
+## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>Oto ve Yereller pencerelerinde değişkenleri İnceleme
 
-Hata ayıklama sırasında, kod düzenleyicisinin altındaki **Otomatikler** penceresine bakın.
+Hata ayıklarken, kod düzenleyicisinin alt kısmındaki **oto** penceresine bakın.
 
-![Otomatik Pencere](../debugger/media/dbg-tour-autos-window.png "Otomatik değişkenler penceresi")
+![Oto penceresi](../debugger/media/dbg-tour-autos-window.png "Otomatik değişkenler penceresi")
 
-Otomatik **Ler** penceresinde, değişkenleri geçerli değerleri ve türüyle birlikte görürsünüz. **Otomatik ler** penceresi, geçerli satırda veya önceki satırda kullanılan tüm değişkenleri gösterir (C++'da, pencere önceki üç kod satırındaki değişkenleri gösterir. Dillere özgü davranış için belgeleri denetleyin).
-
-> [!NOTE]
-> JavaScript'te **Yerel ler** penceresi desteklenir, ancak **Otomatik ler** penceresi desteklenmez.
-
-Sonra, Yerel **pencereye** bak. **Yerel ler** penceresi, şu anda kapsamda olan değişkenleri gösterir.
-
-![Yerel Pencere](../debugger/media/dbg-tour-locals-window.png "Yerel öğeler penceresi")
-
-Bu örnekte, `this` nesne ve `f` nesne kapsamdadır. Daha fazla bilgi için, [Bkz. Otomatik ve Yerel Windows'daki Değişkenleri İncele.](../debugger/autos-and-locals-windows.md)
-
-## <a name="set-a-watch"></a>Bir saat ayarlama
-
-İzlemek istediğiniz bir değişkeni (veya ifadeyi) belirtmek için **İzleme** penceresini kullanabilirsiniz.
-
-Hata ayıklama sırasında bir nesneye sağ tıklayın ve **İzle Ekle'yi**seçin.
-
-![İzleme Penceresi](../debugger/media/dbg-tour-watch-window.png "Gözcü penceresi")
-
-Bu örnekte, `f` nesne üzerinde bir saat seti var ve hata ayıklama ile hareket ettikçe değerinin değiştiğini görebilirsiniz. Diğer değişken pencerelerden farklı olarak, **Watch** pencereleri her zaman izlediğiniz değişkenleri gösterir (kapsam dışında olduklarında gri renktedirler).
-
-Daha fazla bilgi için bkz: [Watch ve QuickWatch Windows'u kullanarak Bir İzleme Ayarla](../debugger/watch-and-quickwatch-windows.md)
-
-## <a name="examine-the-call-stack"></a>Arama yığınını inceleme
-
-Hata ayıklama sırasında **Arama Yığını** penceresini tıklatın, bu da varsayılan olarak sağ alt bölmede açılır.
-
-![Çağrı Yığınını İncele](../debugger/media/dbg-tour-call-stack.png "Arama yığınını inceleme")
-
-**Çağrı Yığını** penceresi, yöntemlerin ve işlevlerin çağrılma sırasını gösterir. Üst satır geçerli işlevi (bu örnekteki `Update` yöntem) gösterir. İkinci `Path.set` satır, `Update` özellikten çağrıldıve benzeri gösterir. Arama yığını, bir uygulamanın yürütme akışını incelemek ve anlamak için iyi bir yoldur.
+**Oto** penceresinde, değişkenleri geçerli değerleri ve türleri ile birlikte görürsünüz. **Oto** penceresi, geçerli satırda veya önceki satırda kullanılan tüm değişkenleri gösterir (C++ ' da, pencerede önceki üç kod satırındaki değişkenler gösterilir. Dile özgü davranışın belgelerini denetleyin).
 
 > [!NOTE]
-> **Arama Yığını** penceresi Eclipse gibi bazı IDA'larda Hata Ayıklama perspektifine benzer.
+> JavaScript 'te, **Yereller** penceresi desteklenir, ancak **oto** penceresi desteklenmez.
 
-Kaynak kodu na bakmak için bir kod satırına çift tıklayabilirsiniz ve bu da hata ayıklayıcı tarafından denetlenen geçerli kapsamı değiştirir. Bu hata ayıklama ilerlemez.
+Sonra, **Yereller** penceresine bakın. **Yereller** penceresi, şu anda kapsamda olan değişkenleri gösterir.
 
-Başka şeyler yapmak için **Yığın Çağır** penceresinden sağ tıklatma menülerini de kullanabilirsiniz. Örneğin, kesme noktalarını belirli işlevlere ekleyebilir, **Uygulamanızı Çalıştır imlecini**kullanarak yeniden başlatabilir ve kaynak kodu incelemeye gidebilirsiniz. [Bkz. Nasıl: Çağrı Yığınını İnceleyin.](../debugger/how-to-use-the-call-stack-window.md)
+![Yereller penceresi](../debugger/media/dbg-tour-locals-window.png "Yerel öğeler penceresi")
 
-## <a name="examine-an-exception"></a><a name="exception"></a>Bir özel durum inceleme
+Bu örnekte, `this` nesnesi ve nesnesi `f` kapsamdadır. Daha fazla bilgi için bkz. [oto ve Yereller pencerelerinde değişkenleri İnceleme](../debugger/autos-and-locals-windows.md).
 
-Uygulamanız bir özel durum attığında, hata ayıklayıcı sizi özel durum atan kod satırına götürür.
+## <a name="set-a-watch"></a>İzleme ayarlama
 
-![Özel Durum Yardımcısı](../debugger/media/dbg-tour-exception-helper.png "Özel Durum Yardımcısı")
+Bir gözü tutmak istediğiniz bir değişken (veya bir ifade) belirtmek için bir **Gözcü** penceresi kullanabilirsiniz.
 
-Bu örnekte, **Özel Durum** Yardımcısı `System.Argument` size bir özel durum ve yolun yasal bir form olmadığını belirten bir hata iletisi gösterir. Yani, hatanın bir yöntem veya işlev bağımsız değişkeninde oluştuğunu biliyoruz.
+Hata ayıklarken, bir nesneye sağ tıklayın ve **Gözcü Ekle**' yi seçin.
 
-Bu örnekte, `DirectoryInfo` çağrı `value` değişkende depolanan boş dize üzerinde hata verdi.
+![Gözcü penceresi](../debugger/media/dbg-tour-watch-window.png "Gözcü penceresi")
 
-Özel Durum Yardımcısı hata ayıklama yardımcı olabilecek harika bir özelliktir. Ayrıca hata ayrıntılarını görüntüleme ve Özel Durum Yardımcısı'ndan saat ekleme gibi şeyler de yapabilirsiniz. Veya gerekirse, belirli bir özel durum atma koşullarını değiştirebilirsiniz. Kodunuzdaki özel durumları nasıl işlerek hakkında daha fazla bilgi için Hata [Ayıklama teknikleri ve araçlarına](../debugger/write-better-code-with-visual-studio.md)bakın.
+Bu örnekte, nesnesinde bir izleme kümesi vardır `f` ve hata ayıklayıcıda geçiş yaparken değer değişikliğini görebilirsiniz. Diğer değişken pencerelerinin aksine, **Watch** Windows her zaman izlemekte olduğunuz değişkenleri gösterir (kapsam dışında gri renkte bulunur).
+
+Daha fazla bilgi için bkz [. gözcü ve hızlı gözcü pencerelerini kullanarak Izleme ayarlama](../debugger/watch-and-quickwatch-windows.md)
+
+## <a name="examine-the-call-stack"></a>Çağrı yığınını inceleyin
+
+Hata ayıklarken **çağrı yığını** penceresine, varsayılan olarak sağ alt bölmede da açık ' a tıklayın.
+
+![Çağrı yığınını inceleyin](../debugger/media/dbg-tour-call-stack.png "Çağrı yığınını inceleyin")
+
+Çağrı yığını penceresi, yöntemlerin ve işlevlerin hangi sırada **çağrılacağını** gösterir. Üstteki satırda geçerli işlev ( `Update` Bu örnekteki yöntem) gösterilir. İkinci satır, `Update` `Path.set` özelliğinden çağrılan ve bu şekilde devam eden gösterir. Çağrı yığını, bir uygulamanın yürütme akışını incelemek ve anlamak için iyi bir yoldur.
 
 > [!NOTE]
-> Özel Durum Yardımcısı, 'den [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]başlayarak Özel Durum Yardımcısı'nın yerini aldı.
+> **Çağrı yığını** penceresi, tutulma gibi bazı NDES 'Teki hata ayıklama perspektifine benzer.
 
-Bu özel durum türünü nasıl işleyeceğinize ilişkin daha fazla seçenek görmek için **Özel Durum Ayarları** düğümünü genişletin, ancak bu tur için hiçbir şeyi değiştirmeniz gerekmez!
+Bir kod satırına çift tıklayarak bu kaynak koda bakabilir ve ayrıca hata ayıklayıcı tarafından incelenen geçerli kapsamı da değiştirebilirsiniz. Bu, hata ayıklayıcıyı ilerlemez.
+
+Ayrıca, **çağrı yığını** penceresindeki diğer işlemleri yapmak için sağ tıklama menülerini de kullanabilirsiniz. Örneğin, belirli işlevlere kesme noktaları ekleyebilirsiniz, uygulamayı **Imlece Çalıştır**' ı kullanarak yeniden başlatabilir ve kaynak kodunu inceleyebilirsiniz. Bkz. [nasıl yapılır: çağrı yığınını İnceleme](../debugger/how-to-use-the-call-stack-window.md).
+
+## <a name="examine-an-exception"></a><a name="exception"></a>Özel durumu inceleyin
+
+Uygulamanız bir özel durum oluşturduğunda, hata ayıklayıcı sizi özel durumu oluşturan kod satırına götürür.
+
+![Özel durum Yardımcısı](../debugger/media/dbg-tour-exception-helper.png "Özel durum Yardımcısı")
+
+Bu örnekte, **özel durum Yardımcısı** size bir `System.Argument` özel durum ve yolun geçerli bir form olmadığını belirten bir hata iletisi gösterir. Bu nedenle, bir yöntem veya işlev bağımsız değişkeninde oluşan hatayı biliyoruz.
+
+Bu örnekte, çağrı, `DirectoryInfo` değişkende depolanan boş dizede hata verdi `value` .
+
+Özel durum Yardımcısı, hata ayıklamanıza yardımcı olabilecek harika bir özelliktir. Hata ayrıntılarını görüntüle ve özel durum Yardımcısı 'ndan bir izleme ekleme gibi işlemler de yapabilirsiniz. Ya da gerekirse, belirli bir özel durumu oluşturma koşullarını değiştirebilirsiniz. Kodunuzda özel durumların nasıl işleneceği hakkında daha fazla bilgi için bkz. [hata ayıklama teknikleri ve araçları](../debugger/write-better-code-with-visual-studio.md).
+
+> [!NOTE]
+> Özel durum Yardımcısı, ' den itibaren özel durum yardımcısını değiştirdi [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] .
+
+Bu özel durum türünün nasıl işleneceği hakkında daha fazla seçenek görmek için **özel durum ayarları** düğümünü genişletin, ancak bu tur için herhangi bir şeyi değiştirmeniz gerekmez!
 
 ## <a name="configure-debugging"></a>Hata ayıklamayı yapılandırma
 
-Projenizi [Hata Ayıklama veya Sürüm yapılandırması](../debugger/how-to-set-debug-and-release-configurations.md)olarak yapılandırmak, hata ayıklama için proje özelliklerini yapılandırmak veya hata ayıklama için [genel ayarları](../debugger/how-to-specify-debugger-settings.md) yapılandırmak üzere yapılandırabilirsiniz. Buna ek olarak, hata ayıklayıcıyı [DebuggerDisplay](using-the-debuggerdisplay-attribute.md) özniteliği veya C/C++, [NatVis çerçevesi](create-custom-views-of-native-objects.md)gibi özellikleri kullanarak özel bilgileri görüntülemek üzere yapılandırabilirsiniz.
+Projenizi hata ayıklama [veya sürüm yapılandırması](../debugger/how-to-set-debug-and-release-configurations.md)olarak derlemek, hata ayıklama için proje özelliklerini yapılandırmak veya hata ayıklama için [genel ayarları](../debugger/how-to-specify-debugger-settings.md) yapılandırmak üzere yapılandırabilirsiniz. Buna ek olarak, hata ayıklayıcıyı, [DebuggerDisplay](using-the-debuggerdisplay-attribute.md) özniteliği gibi özellikleri kullanarak özel bilgileri görüntüleyecek şekilde veya C/C++, [Natvis çerçevesi](create-custom-views-of-native-objects.md)için de yapılandırabilirsiniz.
 
-Hata ayıklama özellikleri her proje türüne özgüdür. Örneğin, başlattığınızda uygulamaya geçmek için bir bağımsız değişken belirtebilirsiniz. Çözüm Gezgini'nde projeyi sağ tıklatarak ve **Özellikler'i**seçerek projeye özel özelliklere erişebilirsiniz. Hata ayıklama özellikleri genellikle belirli proje türüne bağlı olarak **Yapı** veya **Hata Ayıklama** sekmesinde görünür.
+Hata ayıklama özellikleri her proje türüne özeldir. Örneğin, uygulamayı başlattığınızda uygulamaya geçirilecek bir bağımsız değişken belirtebilirsiniz. Projeye özgü özelliklere Çözüm Gezgini ' de projeye sağ tıklayıp **Özellikler**' i seçerek erişebilirsiniz. Hata ayıklama özellikleri, belirli proje türüne bağlı olarak genellikle **derleme** veya **hata ayıklama** sekmesinde görüntülenir.
 
-![Proje özellikleri](../debugger/media/dbg-tour-project-properties.png "Proje özellikleri")
+![Proje Özellikleri](../debugger/media/dbg-tour-project-properties.png "Proje özellikleri")
 
-## <a name="debug-live-aspnet-apps-in-azure-app-service"></a>Azure Uygulama Hizmeti'nde uygulamaları ASP.NET canlı hata ayıklama
+## <a name="debug-live-aspnet-apps-in-azure-app-service"></a>Azure App Service 'da canlı ASP.NET uygulamalarında hata ayıklama
 
-**Anlık Görüntü Hata Ayıklayıcı,** yürütmek istediğiniz kod çalıştırıldığında üretim içi uygulamalarınızın anlık görüntüsünü alır. Hata ayıklayıcıya anlık görüntü almasını söylemek için, kodunuzda anlık noktalar ve günlük noktaları ayarlarsınız. Hata ayıklama, üretim uygulamanızın trafiğini etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Anlık Görüntü Hata Ayıklama, üretim ortamlarında oluşan sorunları çözmek için gereken süreyi önemli ölçüde azaltmanıza yardımcı olabilir.
+**Snapshot Debugger** , yürütirken ilgilendiğiniz kodun yürütüldüğü üretim içi uygulamalarınızın anlık görüntüsünü alır. Hata ayıklayıcıya bir anlık görüntü almasını söylemek için kodunuzda anlık görüntü noktaları ve günlüğe kaydetme noktaları ayarlarsınız. Hata ayıklayıcı, üretim uygulamanızın trafiğini etkilemeden tam olarak neyin yanlış gittiğini görmenizi sağlar. Snapshot Debugger, üretim ortamlarında oluşan sorunları çözmek için geçen süreyi önemli ölçüde düşürmeye yardımcı olabilir.
 
-![Anlık görüntü hata ayıklama başlatın](../debugger/media/snapshot-launch.png "Anlık görüntü hata ayıklama başlatın")
+![Snapshot Debugger 'ı başlatın](../debugger/media/snapshot-launch.png "Snapshot Debugger 'ı başlatın")
 
-Anlık görüntü koleksiyonu, Azure Uygulama Hizmeti'nde çalışan ASP.NET uygulamalar için kullanılabilir. ASP.NET uygulamaları .NET Framework 4.6.1 veya sonraki saatlerde çalışıyor olmalı ve ASP.NET Core uygulamaları .NET Core 2.0 veya daha sonra Windows'ta çalışıyor olmalıdır.
+Anlık görüntü koleksiyonu, Azure App Service çalıştıran ASP.NET uygulamaları için kullanılabilir. ASP.NET uygulamaları .NET Framework 4.6.1 veya üzeri sürümlerde çalışıyor olmalıdır ve ASP.NET Core uygulamalar Windows üzerinde .NET Core 2,0 veya sonraki sürümlerde çalışıyor olmalıdır.
 
-Daha fazla bilgi için [Bkz. Anlık Görüntü Hata Ayıklama'yı kullanarak uygulama ASP.NET Hata Ayıklama'](../debugger/debug-live-azure-applications.md)ya bakın.
+Daha fazla bilgi için bkz. [Snapshot Debugger kullanarak canlı ASP.NET uygulamalarında hata ayıklama](../debugger/debug-live-azure-applications.md).
 
-## <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise"></a>IntelliTrace adım geri (Visual Studio Enterprise) ile anlık görüntüleri görüntüleyin
+## <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise"></a>IntelliTrace adım geri (Visual Studio Enterprise) ile anlık görüntüleri görüntüleme
 
-**IntelliTrace adım geri** otomatik olarak her kesme noktası ve hata ayıklama adım olay uygulamanızın bir anlık alır. Kaydedilen anlık görüntüler, önceki kesme noktalarına veya adımlara geri dönmenizi ve uygulamanın durumunu geçmişte olduğu gibi görüntülemenizi sağlar. IntelliTrace adım geri önceki uygulama durumunu görmek istediğinizde zaman kazandırabilir, ancak hata ayıklama yeniden başlatmak veya istenen uygulama durumunu yeniden oluşturmak istemiyorum.
+**IntelliTrace adım geri** alma, her kesme noktası ve hata ayıklayıcı adım olayında uygulamanızın bir anlık görüntüsünü otomatik olarak alır. Kaydedilen anlık görüntüler, önceki kesme noktalarına veya adımlara geri dönmenize ve uygulamanın geçmişte olduğu gibi durumunu görüntülemenize imkan tanır. IntelliTrace adım geri dönüş, önceki uygulama durumunu görmek istediğinizde, ancak hata ayıklamayı yeniden başlatmak veya istenen uygulama durumunu yeniden oluşturmak istemediğinizde size zaman kazandırabilir.
 
-Hata Ayıklama araç çubuğundaki **Geri Adım** ve **İleri Adım** düğmelerini kullanarak anlık görüntüleri gezebilir ve görüntüleyebilirsiniz. Bu düğmeler, **Tanılama Araçları** penceresindeki **Olaylar** sekmesinde görünen olaylarda gezinir.
+Hata ayıklama araç çubuğundaki **geri** ve **adım ileri** düğmelerini kullanarak anlık görüntülerle gezinerek görüntüleyebilirsiniz. Bu düğmeler **Tanılama araçları** penceresindeki **Olaylar** sekmesinde görüntülenen olaylara gider.
 
-![İleri adım ve İleri Düğmeler](../debugger/media/intellitrace-step-back-icons-description.png  "İleri adım ve İleri düğmeleri")
+![Geri adımla ve Ilet düğmeleri](../debugger/media/intellitrace-step-back-icons-description.png  "Geri adımla ve Ilet düğmeleri")
 
-Daha fazla bilgi [için, IntelliTrace sayfasını kullanarak önceki uygulama durumlarını incele'ye](../debugger/view-historical-application-state.md) bakın.
+Daha fazla bilgi için bkz. [IntelliTrace kullanarak önceki uygulama durumlarını İnceleme](../debugger/view-historical-application-state.md) sayfası.
 
 ## <a name="debug-performance-issues"></a>Hata ayıklama performans sorunları
 
-Uygulamanız çok yavaş çalışıyorsa veya çok fazla bellek kullanıyorsa, uygulamanızı profil oluşturma araçlarıyla erkenden test etmeniz gerekebilir. CPU Kullanım aracı ve Memory Analyzer gibi profil oluşturma araçları hakkında daha fazla bilgi için [profil oluşturma araçlarına ilk bakışta](../profiling/profiling-feature-tour.md)bakın.
+Uygulamanız çok yavaş çalışırsa veya çok fazla bellek kullanıyorsa, uygulamanızı önce profil oluşturma araçlarıyla test etmeniz gerekebilir. CPU kullanımı aracı ve bellek Çözümleyicisi gibi profil oluşturma araçları hakkında daha fazla bilgi için bkz. [profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, birçok hata ayıklayıcı özelliğine hızlıca göz attınız. Kesme noktaları gibi bu özelliklerden birine daha ayrıntılı bir bakış isteyebilirsiniz.
+Bu öğreticide birçok hata ayıklayıcı özelliğine hızlı bir bakış sunuyoruz. Kesme noktaları gibi bu özelliklerden birine daha ayrıntılı bir bakış istemeniz gerekebilir.
 
 > [!div class="nextstepaction"]
-> [Kesme noktalarını kullanmayı öğrenin](../debugger/using-breakpoints.md)
+> [Kesme noktaları kullanmayı öğrenin](../debugger/using-breakpoints.md)

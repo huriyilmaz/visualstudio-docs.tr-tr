@@ -4,23 +4,27 @@ author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
-ms.date: 03/02/2020
+ms.date: 05/10/2020
 ms.topic: conceptual
 description: Yöneticilerin toplu ekleme özelliğini veya Microsoft Azure Active Directory gruplarını kullanarak birden çok aboneye nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: 7fb9987b0d25da1be8a01f0cef82e019c20460d1
-ms.sourcegitcommit: 1b7412f1a5b039b2b294c6001013f399ea7aa5bc
+ms.openlocfilehash: 41dd3049c790ac790b46d12b976eb3ab6457fcb2
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82564192"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84182904"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikler yönetim portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Bireysel kullanıcı eklemek için bkz. [tek kullanıcı ekleme](assign-license.md).
 
 Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullanabilir veya kuruluşunuz Microsoft Azure Active Directory (Azure AD) kullanıyorsa Azure AD gruplarını kullanabilirsiniz. Bu makalede her iki seçenek için de işlem açıklanacaktır. 
 
+<br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vxNq]
+
 ## <a name="use-bulk-add-to-assign-subscriptions"></a>Abonelik atamak için toplu ekleme kullanma
-1. Üzerinde https://manage.visualstudio.comVisual Studio abonelikleri yönetim portalında oturum açın.
+1. Üzerinde Visual Studio abonelikleri yönetim portalında oturum açın https://manage.visualstudio.com .
 
 2. Aynı anda birden çok abone eklemek için, **aboneleri Yönet** sekmesine gidin. **Ekle** sekmesini ve ardından açılan kutuda **toplu Ekle** ' yi seçin.  
 
@@ -32,6 +36,9 @@ Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullana
    > Bu şablonun en son sürümünü her zaman indirin. Daha eski bir sürüm kullanıyorsanız toplu karşıya yükleme işlemi başarısız olabilir.
 
 3. Excel elektronik tablosunda, abonelik atamak istediğiniz kişilerin bilgilerini içeren alanları doldurun. (*Başvuru* isteğe bağlı bir alandır.) İşiniz bittiğinde dosyayı yerel olarak kaydedin.
+
+    > [!NOTE]
+    > Şablondaki alanlardan biri yöneticilerin, abonelerin yazılım indirme yeteneğini etkinleştirmesine veya devre dışı bırakmasına olanak sağlar.  İndirmelerin devre dışı bırakılması, ürün anahtarlarına erişimini de devre dışı bırakır.
 
    Düzgün bir karşıya yükleme sağlamaya yardımcı olmak için aşağıdaki en iyi yöntemleri inceleyin:
 
@@ -74,6 +81,7 @@ Bu özelliğin kullanılması, abonelik atamalarınızın üstünde kalmasını 
 > [!IMPORTANT]
 >
 > Aboneler eklemek için Azure AD gruplarının kullanımı için aşağıdaki sınırlamalar geçerlidir:
+> - Yönetici, başlangıçta yönetim portalına bir grup eklerken AAD kiracısının bir üyesi olmalıdır.  Grup eklendikten sonra, grupların üyeliğinde yapılan değişiklikler yönetici katılımı gerektirmez. 
 > - Grupların en az bir üye içermesi gerekir.  Boş gruplar desteklenmiyor.
 > - Gruplar 1.000 'den az kullanıcı içermelidir. 
 > - Tüm kullanıcılar grubun en üst düzeyinde olmalıdır.  İç içe gruplar desteklenmiyor.
@@ -81,7 +89,11 @@ Bu özelliğin kullanılması, abonelik atamalarınızın üstünde kalmasını 
 > - Grubun tüm üyelerinin Azure AD hesabıyla ilişkilendirilmiş bir e-posta adresi olmalıdır.
 > - Azure AD grupları kullanılarak eklenen abonelikler için bildirimler için ayrı e-posta adresleri desteklenmez.  
 
-1. Üzerinde [https://manage.visualstudio.com](https://manage.visualstudio.com)Visual Studio abonelikleri Yönetim Portalı ' nda oturum açın.
+<br>
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4rvvW]
+
+1. Üzerinde Visual Studio abonelikleri Yönetim Portalı ' nda oturum açın [https://manage.visualstudio.com](https://manage.visualstudio.com) .
 
 2. Tek seferde birden çok abone eklemek için, **aboneleri Yönet** sekmesine gidin.
 
@@ -106,9 +118,6 @@ Bu özelliğin kullanılması, abonelik atamalarınızın üstünde kalmasını 
 > [!NOTE]
 > Daha önce bir Azure AD grubunun parçası olarak eklenen kullanıcılara ayrı ayrı abonelik atadıysanız, bunlar grubun bir parçası olarak eklenir ve artık ayrı olarak listelenmez. Ancak, bireysel abonelik farklı bir abonelik düzeyi için ise iki abonelik olur.  Örnek: bir kullanıcının tek bir Visual Studio Professional aboneliği varsa ve Visual Studio Enterprise abonelikleri atadığınız bir grubun üyesiyse, her ikisi de olur.  
 
-<br>
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vxNq]
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 ### <a name="q-can-i-choose-multiple-subscription-levels-to-be-assigned-within-an-azure-ad-group"></a>S: bir Azure AD grubunda atanmak üzere birden çok abonelik düzeyi seçebilir miyim? 

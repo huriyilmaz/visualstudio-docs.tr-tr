@@ -26,24 +26,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 13a346aa0212f4830c2c88ed866b674fc19d30bd
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: 4ae879d8ed03653959ae926cc372300db9b71b9f
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75404987"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84182657"
 ---
 # <a name="find-memory-leaks-with-the-crt-library"></a>CRT kitaplığı ile bellek sızıntılarını bulma
 
-Bellek sızıntıları, C/C++ Apps 'teki en hafif ve algılayan hata hataları arasındadır. Bellek sızıntıları, daha önce ayrılan belleği doğru şekilde serbest bırakma hatasından kaynaklanır. Küçük bir bellek sızıntısı ilk başta fark olmayabilir, ancak zaman içinde uygulamanın belleği tükendiği zaman düşük performanstan oluşan zayıf performans sorunlarına neden olabilir. Tüm kullanılabilir belleği kullanan bir sızan uygulama, diğer uygulamaların kilitlenmesine neden olabilir ve uygulamanın sorumlu olduğu konusunda karışıklık oluşturur. Hatta zararsız bellek sızıntıları, düzeltilmesi gereken diğer sorunları gösteriyor olabilir.
+Bellek sızıntıları, C/C++ uygulamalarında en hafif ve algılayan hata hataları arasındadır. Bellek sızıntıları, daha önce ayrılan belleği doğru şekilde serbest bırakma hatasından kaynaklanır. Küçük bir bellek sızıntısı ilk başta fark olmayabilir, ancak zaman içinde uygulamanın belleği tükendiği zaman düşük performanstan oluşan zayıf performans sorunlarına neden olabilir. Tüm kullanılabilir belleği kullanan bir sızan uygulama, diğer uygulamaların kilitlenmesine neden olabilir ve uygulamanın sorumlu olduğu konusunda karışıklık oluşturur. Hatta zararsız bellek sızıntıları, düzeltilmesi gereken diğer sorunları gösteriyor olabilir.
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı ve C çalışma zamanı kitaplığı (CRT), bellek sızıntılarını tespit etmenize ve belirlemenize yardımcı olabilir.
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Hata ayıklayıcı ve C çalışma zamanı kitaplığı (CRT), bellek sızıntılarını tespit etmenize ve belirlemenize yardımcı olabilir.
 
 ## <a name="enable-memory-leak-detection"></a>Bellek sızıntısı algılamayı etkinleştir
 
-Bellek sızıntılarını algılamaya yönelik birincil araçlar C/C++ Debugger ve c çalışma zamanı KITAPLıĞı (CRT) hata ayıklama yığını işlevleridir.
+Bellek sızıntılarını algılamaya yönelik birincil araçlar C/C++ hata ayıklayıcısıdır ve C çalışma zamanı kitaplığı (CRT) hata ayıklama yığını işlevleridir.
 
-Tüm hata ayıklama yığını işlevlerini etkinleştirmek için aşağıdaki deyimlerini C++ programınıza aşağıdaki sırayla ekleyin:
+Tüm hata ayıklama yığın işlevlerini etkinleştirmek için, aşağıdaki sırayla C++ programınıza aşağıdaki deyimleri ekleyin:
 
 ```cpp
 #define _CRTDBG_MAP_ALLOC
@@ -51,9 +51,9 @@ Tüm hata ayıklama yığını işlevlerini etkinleştirmek için aşağıdaki d
 #include <crtdbg.h>
 ```
 
-`#define` ifade, CRT yığın işlevlerinin temel bir sürümünü karşılık gelen hata ayıklama sürümüne eşler. `#define` deyimden ayrıldıysanız, bellek sızıntısı dökümü [daha az ayrıntılı](#interpret-the-memory-leak-report)olacaktır.
+`#define`İfade, CRT yığın işlevlerinin temel bir sürümünü karşılık gelen hata ayıklama sürümüne eşler. `#define`Deyimden ayrıldıysanız, bellek sızıntısı dökümü [daha az ayrıntılı](#interpret-the-memory-leak-report)olacaktır.
 
-*Crtdbg. h* dahil olmak üzere `malloc` ve `free` işlevleri, bellek ayırmayı ve ayırmayı izleyen hata ayıklama sürümleri, [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg) ve [_free_dbg](/cpp/c-runtime-library/reference/free-dbg)eşler. Bu eşleme yalnızca `_DEBUG`hata ayıklama yapılarında oluşur. Yayın yapıları, sıradan `malloc` ve `free` işlevlerini kullanır.
+*Crtdbg. h* dahil olmak üzere, `malloc` ve `free` işlevlerini hata ayıklama sürümleri, [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg) ve [_free_dbg](/cpp/c-runtime-library/reference/free-dbg)eşler ve bu da bellek ayırmayı ve ayırmayı kaldırma işlemlerini izler. Bu eşleme yalnızca, içeren hata ayıklama yapılarında oluşur `_DEBUG` . Yayın derlemeleri normal `malloc` ve işlevleri kullanır `free` .
 
 Yukarıdaki deyimleri kullanarak hata ayıklama yığın işlevlerini etkinleştirdikten sonra, uygulama çıkarken bir bellek sızıntısı raporu göstermek için bir uygulama çıkış noktasına bir [_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) çağrısı koyun.
 
@@ -61,23 +61,23 @@ Yukarıdaki deyimleri kullanarak hata ayıklama yığın işlevlerini etkinleşt
 _CrtDumpMemoryLeaks();
 ```
 
-Uygulamanız birden fazla çıkış içeriyorsa, `_CrtDumpMemoryLeaks` her çıkış noktasında el ile yerleştirmeniz gerekmez. Her çıkış noktasında `_CrtDumpMemoryLeaks` otomatik olarak çağrıya neden olmak için, burada gösterilen bit alanlarıyla uygulamanızın başlangıcına bir `_CrtSetDbgFlag` çağrısı koyun:
+Uygulamanızda birkaç çıkış varsa, her çıkış noktasında el ile yerleştirmeniz gerekmez `_CrtDumpMemoryLeaks` . Her çıkış noktasında otomatik çağrının yapılmasına neden olmak için `_CrtDumpMemoryLeaks` , `_CrtSetDbgFlag` burada gösterilen bit alanlarıyla uygulamanızın başlangıcına bir çağrısı koyun:
 
 ```cpp
 _CrtSetDbgFlag ( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 ```
 
-Varsayılan olarak, `_CrtDumpMemoryLeaks` **Çıkış** penceresinin **hata ayıklama** bölmesine bellek sızıntısı raporunu çıkarır. Bir kitaplık kullanıyorsanız, kitaplık çıktıyı başka bir konuma sıfırlayabilir.
+Varsayılan olarak, `_CrtDumpMemoryLeaks` **Çıkış** penceresinin **hata ayıklama** bölmesine bellek sızıntısı raporunu verir. Bir kitaplık kullanıyorsanız, kitaplık çıktıyı başka bir konuma sıfırlayabilir.
 
-Raporu başka bir konuma yönlendirmek veya burada gösterildiği gibi **Çıkış** penceresine geri dönmek için `_CrtSetReportMode` kullanabilirsiniz:
+`_CrtSetReportMode`Raporu başka bir konuma yeniden yönlendirmek veya burada gösterildiği gibi **Çıkış** penceresine geri dönmek için ' i kullanabilirsiniz:
 
 ```cpp
-_CrtSetReportMode( _CRT_ERROR, _CRTDBG_MODE_DEBUG );
+_CrtSetReportMode( _CRT_WARN, _CRTDBG_MODE_DEBUG );
 ```
 
 ## <a name="interpret-the-memory-leak-report"></a>Bellek sızıntısı raporunu yorumlama
 
-Uygulamanız `_CRTDBG_MAP_ALLOC`tanımlamıyorsa, aşağıdaki gibi görünen bir bellek sızıntısı raporu görüntüler [_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) :
+Uygulamanız tanımlanmazsa `_CRTDBG_MAP_ALLOC` , [_CrtDumpMemoryLeaks](/cpp/c-runtime-library/reference/crtdumpmemoryleaks) aşağıdakine benzer bir bellek sızıntısı raporu görüntüler:
 
 ```cmd
 Detected memory leaks!
@@ -87,7 +87,7 @@ Dumping objects ->
 Object dump complete.
 ```
 
-Uygulamanız `_CRTDBG_MAP_ALLOC`tanımlıyorsa, bellek sızıntısı raporu şöyle görünür:
+Uygulamanız tanımlıyorsa `_CRTDBG_MAP_ALLOC` , bellek sızıntısı raporu şöyle görünür:
 
 ```cmd
 Detected memory leaks!
@@ -100,21 +100,21 @@ Object dump complete.
 
 İkinci rapor, sızdırılan belleğin ilk ayrıldığı dosya adını ve satır numarasını gösterir.
 
-`_CRTDBG_MAP_ALLOC`tanımlamadığınız, bellek sızıntısı raporu şunları gösterir:
+Sizin tanımladığınız olsun `_CRTDBG_MAP_ALLOC` , bellek sızıntısı raporu şunları görüntüler:
 
-- Örnekteki `18` bellek ayırma numarası
-- Blok türü, örnekteki `normal`.
-- Onaltılık bellek konumu, örnekteki `0x00780E80`.
-- Bloğun boyutu, örnekteki `64 bytes`.
+- Örnekteki bellek ayırma numarası `18`
+- Bu, örnekteki blok türüdür `normal` .
+- Örnekteki onaltılık bellek konumu `0x00780E80` .
+- Örneğin, bloktaki blok boyutu `64 bytes` .
 - Blok içindeki ilk 16 baytlık veriler, onaltılık biçimde.
 
-Bellek bloğu türleri *normal*, *istemci*veya *CRT*. *Normal bir blok* , programınız tarafından ayrılan sıradan bellektir. *İstemci bloğu* , MFC programları tarafından yıkıcı gerektiren nesneler için kullanılan özel bir bellek bloğu türüdür. MFC `new` işleci, oluşturulmakta olan nesneye uygun şekilde normal bir blok veya istemci bloğu oluşturur.
+Bellek bloğu türleri *normal*, *istemci*veya *CRT*. *Normal bir blok* , programınız tarafından ayrılan sıradan bellektir. *İstemci bloğu* , MFC programları tarafından yıkıcı gerektiren nesneler için kullanılan özel bir bellek bloğu türüdür. MFC `new` işleci, oluşturulmakta olan nesneye uygun şekilde normal bir blok veya bir istemci bloğu oluşturur.
 
 CRT *bloğu* , kendi kullanımı için CRT kitaplığı tarafından ayrılır. CRT kitaplığı bu bloklar için ayırmayı gerçekleştirir, bu nedenle CRT kitaplığı ile ciddi sorunlar olmadıkça, bellek sızıntısı raporunda CRT blokları görünmez.
 
 Bellek sızıntısı raporlarında hiçbir şekilde görünmeyen iki tür bellek bloğu vardır. *Serbest bir blok* , serbest bırakılmış ve bu nedenle tanım sızdırılmaz bellektir. *Yoksayma bloğu* , bellek sızıntısı raporundan dışlamak üzere açıkça işaretlediğiniz bellektir.
 
-Yukarıdaki teknikler, standart CRT `malloc` işlevi kullanılarak ayrılan bellek sızıntılarını belirler. Programınız C++ `new` işlecini kullanarak bellek ayırırsa, yalnızca `operator new` çağıran dosya adı ve satır numarasını bellek sızıntısı raporunda `_malloc_dbg` görebilirsiniz. Daha kullanışlı bir bellek sızıntısı raporu oluşturmak için, ayırmayı yapan satırı raporlamak üzere aşağıdaki gibi bir makro yazabilirsiniz:
+Yukarıdaki teknikler, standart CRT işlevi kullanılarak ayrılan bellek için bellek sızıntılarını belirler `malloc` . Programınız C++ işlecini kullanarak bellek ayırırsa, `new` yalnızca `operator new` bellek sızıntısı raporundaki çağrıların bulunduğu dosya adını ve satır numarasını görebilirsiniz `_malloc_dbg` . Daha kullanışlı bir bellek sızıntısı raporu oluşturmak için, ayırmayı yapan satırı raporlamak üzere aşağıdaki gibi bir makro yazabilirsiniz:
 
 ```cpp
 #ifdef _DEBUG
@@ -126,7 +126,7 @@ Yukarıdaki teknikler, standart CRT `malloc` işlevi kullanılarak ayrılan bell
 #endif
 ```
 
-Artık `new` işlecini kodunuzda `DBG_NEW` makrosunu kullanarak değiştirebilirsiniz. Hata ayıklama yapılarında `DBG_NEW`, blok türü, dosya ve satır numarası için ek parametreler alan genel `operator new` aşırı yüklemesini kullanır. `new` aşırı yüklemesi, ek bilgileri kaydetmek için `_malloc_dbg` çağırır. Bellek sızıntısı raporlarında, sızdırılan nesnelerin ayrıldığı dosya adı ve satır numarası gösterilir. Yayın derlemeleri hala varsayılan `new`kullanır. Aşağıda bir teknik örnek verilmiştir:
+Artık `new` kodunuzda makroyu kullanarak işleci değiştirebilirsiniz `DBG_NEW` . Hata ayıklama yapılarında, `DBG_NEW` `operator new` blok türü, dosya ve satır numarası için ek parametreler alan küresel bir aşırı yüklemesi kullanır. `new` `_malloc_dbg` Ek bilgileri kaydetmek için çağrıların aşırı yüklemesi. Bellek sızıntısı raporlarında, sızdırılan nesnelerin ayrıldığı dosya adı ve satır numarası gösterilir. Yayın derlemeleri hala varsayılanı kullanır `new` . Aşağıda bir teknik örnek verilmiştir:
 
 ```cpp
 // debug_new.cpp
@@ -156,7 +156,7 @@ void main() {
 }
 ```
 
-Visual Studio hata ayıklayıcıda bu kodu çalıştırdığınızda `_CrtDumpMemoryLeaks` çağrısı, **Çıkış** penceresinde şuna benzer bir rapor oluşturur:
+Bu kodu Visual Studio hata ayıklayıcıda çalıştırdığınızda, öğesine yapılan çağrı `_CrtDumpMemoryLeaks` **Çıkış** penceresinde şuna benzer bir rapor oluşturur:
 
 ```Output
 Detected memory leaks!
@@ -170,7 +170,7 @@ Object dump complete.
 Bu çıktı, sızdırılan ayırmanın *DEBUG_NEW. cpp.*
 
 >[!NOTE]
->`new`veya başka bir dil anahtar sözcüğü adlı bir önişlemci makrosu oluşturmanızı önermiyoruz.
+>Adlı bir önişlemci makrosu `new` veya başka bir dil anahtar sözcüğü oluşturmanız önerilmez.
 
 ## <a name="set-breakpoints-on-a-memory-allocation-number"></a>Bir bellek ayırma numarasında kesme noktaları ayarlayın
 
@@ -182,15 +182,15 @@ Ayırma numarasını, bellek ayırmada bir kesme noktası ayarlamak için kullan
 
 1. Uygulamanızın başlangıcına yakın bir kesme noktası ayarlayın ve hata ayıklamayı başlatın.
 
-1. Uygulama kesme noktasında durakladığında, **hata ayıkla** > **Windows** > **Izle** ' yi seçerek bir **izleme** penceresi açın (veya **2**. **izleyin**veya **4**. izleyin).
+1. Uygulama kesme noktasında durakladığında, **Hata Ayıkla**Windows izleme 1 ' i seçerek bir **izleme** penceresi açın  >  **Windows**  >  **Watch 1** (veya **2**. **izleyin**veya **4**. izleyin).
 
-1. **Gözcü** penceresinde **ad** sütununa `_crtBreakAlloc` yazın.
+1. **Gözcü** penceresinde `_crtBreakAlloc` **ad** sütununu yazın.
 
-   CRT kitaplığının çok iş parçacıklı DLL sürümünü (/MD seçeneği) kullanıyorsanız, bağlam işlecini ekleyin: `{,,ucrtbased.dll}_crtBreakAlloc`
+   CRT kitaplığının çok iş parçacıklı DLL sürümünü (/MD seçeneği) kullanıyorsanız, bağlam işlecini ekleyin:`{,,ucrtbased.dll}_crtBreakAlloc`
    
-   Hata ayıklama simgelerinin yüklendiğinden emin olun. Aksi takdirde `_crtBreakAlloc`, *tanımlanamayan*olarak bildirilir.
+   Hata ayıklama simgelerinin yüklendiğinden emin olun. Aksi takdirde `_crtBreakAlloc` , *tanımlanamayan*olarak bildirilir.
 
-1. Tuşuna **girin**.
+1. **Enter**'a basın.
 
    Hata ayıklayıcı çağrıyı değerlendirir ve sonucu **değer** sütununa koyar. Bellek ayırmaları üzerinde herhangi bir kesme noktası ayarlanmamışsa bu değer **-1** olacaktır.
 
@@ -214,22 +214,22 @@ _CrtSetBreakAlloc(18);
 
 ## <a name="compare-memory-states"></a>Bellek durumlarını karşılaştırın
 
-Bellek sızıntılarını bulmaya yönelik başka bir teknik, anahtar noktalarında uygulamanın bellek durumunun anlık görüntülerini almayı içerir. Uygulamanızdaki belirli bir noktada bellek durumunun anlık görüntüsünü almak için bir `_CrtMemState` yapısı oluşturun ve `_CrtMemCheckpoint` işlevine geçirin.
+Bellek sızıntılarını bulmaya yönelik başka bir teknik, anahtar noktalarında uygulamanın bellek durumunun anlık görüntülerini almayı içerir. Uygulamanızdaki belirli bir noktada bellek durumunun anlık görüntüsünü almak için bir `_CrtMemState` Yapı oluşturun ve `_CrtMemCheckpoint` işleve geçirin.
 
 ```cpp
 _CrtMemState s1;
 _CrtMemCheckpoint( &s1 );
 ```
 
-`_CrtMemCheckpoint` işlevi yapıyı geçerli bellek durumunun bir anlık görüntüsüyle doldurur.
+`_CrtMemCheckpoint`İşlevi, yapıyı geçerli bellek durumunun bir anlık görüntüsüyle doldurur.
 
-`_CrtMemState` yapısının içeriğini çıkarmak için yapıyı `_ CrtMemDumpStatistics` işlevine geçirin:
+Bir yapının içeriğini çıkarmak için `_CrtMemState` yapıyı `_ CrtMemDumpStatistics` işleve geçirin:
 
 ```cpp
 _CrtMemDumpStatistics( &s1 );
 ```
 
-`_ CrtMemDumpStatistics`, aşağıdaki gibi görünen bellek durumunun dökümünü verir:
+`_ CrtMemDumpStatistics`aşağıdaki gibi görünen bellek durumunun dökümünü verir:
 
 ```cmd
 0 bytes in 0 Free Blocks.
@@ -241,7 +241,7 @@ Largest number used: 3071 bytes.
 Total allocations: 3764 bytes.
 ```
 
-Bir kod bölümünde bellek sızıntısı oluşup oluşmadığını anlamak için, bölümden önce ve sonra bellek durumunun anlık görüntülerini alabilir ve ardından iki durumu karşılaştırmak için `_ CrtMemDifference` kullanabilirsiniz:
+Bir kod bölümünde bellek sızıntısı oluşup oluşmadığını anlamak için, bölümden önce ve sonra bellek durumunun anlık görüntülerini alabilir ve ardından `_ CrtMemDifference` iki durumu karşılaştırmak için ' ı kullanabilirsiniz:
 
 ```cpp
 _CrtMemCheckpoint( &s1 );
@@ -252,16 +252,16 @@ if ( _CrtMemDifference( &s3, &s1, &s2) )
    _CrtMemDumpStatistics( &s3 );
 ```
 
-`_CrtMemDifference`, `s1` ve `s2` bellek durumlarını karşılaştırır ve (`s3`) içinde `s1` ve `s2`arasındaki fark olan bir sonuç döndürür.
+`_CrtMemDifference`bellek durumlarını karşılaştırır ve `s1` , `s2` `s3` ve arasındaki fark olan () içinde bir sonuç döndürür `s1` `s2` .
 
-Bellek sızıntılarını bulmanın bir tekniği, uygulamanızın başlangıcında ve sonunda `_CrtMemCheckpoint` çağrıları yerleştirip sonuçları karşılaştırmak için `_CrtMemDifference` kullanarak başlar. `_CrtMemDifference` bir bellek sızıntısı gösteriyorsa, sızıntı kaynağını yalıtana kadar programınızı bir ikili arama kullanarak bölmek için daha fazla `_CrtMemCheckpoint` çağrısı ekleyebilirsiniz.
+Bellek sızıntılarını bulmak için bir teknik `_CrtMemCheckpoint` , uygulamanızın başlangıcında ve sonunda çağrılar yerleştirip `_CrtMemDifference` sonuçları karşılaştırmak için kullanarak başlar. `_CrtMemDifference`Bir bellek sızıntısı gösteriyorsa, `_CrtMemCheckpoint` sızıntı kaynağını yalıtana kadar programınızı bir ikili arama kullanarak bölmek için daha fazla çağrı ekleyebilirsiniz.
 
 ## <a name="false-positives"></a>Hatalı pozitif sonuçlar
 
- `_CrtDumpMemoryLeaks`, kitaplık, iç ayırmaları CRT blokları veya istemci blokları yerine normal bloklar olarak işaretlerse, bellek sızıntılarına ilişkin hatalı göstergeler verebilir. Bu durumda, `_CrtDumpMemoryLeaks` Kullanıcı ayırmaları ve iç kitaplık ayırmaları arasındaki farkı söylemez. Kitaplık ayırmaları için genel Yıkıcılar `_CrtDumpMemoryLeaks`çağırdığınız noktadan sonra çalışıyorsa, her iç kitaplık ayırması bir bellek sızıntısı olarak bildirilir. Visual Studio .NET ' den önceki standart Şablon Kitaplığı sürümleri, `_CrtDumpMemoryLeaks` bu hatalı pozitif sonuçları rapormasına neden olabilir.
+ `_CrtDumpMemoryLeaks`bir kitaplık, iç ayırmaları CRT blokları veya istemci blokları yerine normal bloklar olarak işaretlerse, bellek sızıntılarına ilişkin hatalı göstergeler verebilir. Bu durumda, `_CrtDumpMemoryLeaks` Kullanıcı ayırmaları ve iç kitaplık ayırmaları arasındaki farkı söylemez. Kitaplık ayırmaları için genel Yıkıcılar, çağırdığınız noktadan sonra çalışıyorsa `_CrtDumpMemoryLeaks` , her iç kitaplık ayırması bir bellek sızıntısı olarak bildirilir. Visual Studio .NET ' den önceki standart Şablon Kitaplığı sürümleri, `_CrtDumpMemoryLeaks` Bu tür hatalı pozitif sonuçları raporlamayabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CRT hata ayıklama öbeği ayrıntıları](../debugger/crt-debug-heap-details.md)
-- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)
+- [CRT hata ayıklama yığın ayrıntıları](../debugger/crt-debug-heap-details.md)
+- [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)
 - [Yerel kodda hata ayıklama](../debugger/debugging-native-code.md)

@@ -1,12 +1,12 @@
 ---
-title: Visual Studio Enterprise iş yükü ve bileşen tisi'leri
+title: Visual Studio Enterprise iş yükü ve bileşen kimlikleri
 titleSuffix: ''
-description: Komut satırını kullanarak Visual Studio'yu yüklemek veya VSIX bildiriminde bağımlılık olarak belirtmek için iş yükünü ve bileşen bilgisayarlarını kullanın
+description: Komut satırını kullanarak Visual Studio 'Yu yüklemek veya bir VSıX bildiriminde bağımlılık olarak belirtmek için iş yükü ve bileşen kimliklerini kullanma
 keywords: ''
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 03/16/2020
+ms.date: 05/19/2020
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -16,12 +16,12 @@ ms.assetid: be73e3af-d87b-4d14-bd08-2e4bda074fb3
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 7b4ddc14a6409b0e8450a61ab70d7be9d4f88a3c
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.openlocfilehash: f02b93233935eedb8609dec989e38934d581373c
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81276350"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183228"
 ---
 # <a name="visual-studio-enterprise-component-directory"></a>Visual Studio Enterprise bileşen dizini
 

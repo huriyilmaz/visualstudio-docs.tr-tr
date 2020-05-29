@@ -16,22 +16,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85dbe4917d37c8d39dd8348c32d88933032ede1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d7abeeec4a640119e3089c795ac529a10f8dc09
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62900541"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84182631"
 ---
 # <a name="clickonce-cache-overview"></a>ClickOnce önbelleğine genel bakış
-Tüm [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamaları, yerel olarak yüklü veya çevrimiçi barındırılan depolanır istemci bilgisayarda bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]uygulama *önbellek*. A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Documents and Settings klasörü geçerli kullanıcının yerel ayarlarını dizininin altında gizli dizinler ailesinin bir önbellektir. Bu önbellek, derlemeleri, yapılandırma dosyaları, uygulama ve kullanıcı ayarlarını ve veri dizini gibi uygulamanın tüm dosyaları içerir. Önbellek, uygulamanın veri dizini en son sürüme geçirmek için sorumludur. Veri geçişi hakkında daha fazla bilgi için bkz. [erişen yerel ve uzak veri ClickOnce uygulamalarında](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md).
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Yerel olarak yüklenmiş veya çevrimiçi olarak barındırılan tüm uygulamalar, istemci bilgisayarda bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama *önbelleğinde*depolanır. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Önbellek, geçerli kullanıcının belgeler ve ayarlar klasörünün yerel ayarlar dizininde bulunan gizli dizinlerin bir ailesidir. Bu önbellek derlemeler, yapılandırma dosyaları, uygulama ve Kullanıcı ayarları ve veri dizini dahil tüm uygulama dosyalarını barındırır. Önbellek, uygulamanın veri dizinini en son sürüme geçirmeden de sorumludur. Veri taşıma hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarında yerel ve uzak verilere erişme](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md).
 
- Uygulama depolaması için tek bir konum sağlayarak [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] kullanıcıdan uygulamanın fiziksel yükleme yönetme görevini kazanır. Önbelleğe derlemeler ve veri dosyaları için tüm uygulamaları otomatik olarak kilitlenmesini sağlayarak uygulamalarını yalıtmak da yardımcı olur ve farklı sürümlerine birbirinden ayırın. Örneğin, yükseltme yaptığınızda bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama sürümü ve veri kaynaklarıyla önbelleğinde kendi dizinlerle sağlanır.
+ Uygulama depolaması için tek bir konum sağlayarak, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] kullanıcıdan bir uygulamanın fiziksel yüklemesini yönetme görevini devralır. Önbellek Ayrıca, tüm uygulamalar için derlemeleri ve veri dosyalarını ve bunların farklı sürümlerini birbirinden ayrı tutarak uygulamaları yalıtmaya yardımcı olur. Örneğin, bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamayı yükselttiğinizde, bu sürüm ve veri kaynakları önbellekte kendi dizinleriyle birlikte sağlanır.
 
 ## <a name="cache-storage-quota"></a>Önbellek depolama kotası
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Çevrimiçi barındırılan uygulamalar olunabilecek boşluk boyutunu sınırlayan bir kota tarafından kısıtlı [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] önbellek. Önbellek boyutu, kullanıcının tüm çevrimiçi uygulamalar için geçerlidir; tek bir kısmen güvenilen, çevrimiçi uygulama yarısı kota alanı kaplayan sınırlıdır. Yüklü uygulamalar, önbellek boyutuyla sınırlı değildir ve önbellek sınırınızı sayılmaz. Tüm [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar, önbelleğe yalnızca geçerli sürümü ve daha önce yüklü olan sürümü korur.
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]çevrimiçi olarak barındırılan uygulamalar, önbelleğin boyutunu kısıtlayan bir kota ile kaplayabilecekleri alan miktarı ile sınırlıdır [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Önbellek boyutu kullanıcının tüm çevrimiçi uygulamalarına uygulanır; tek bir kısmen güvenilen çevrimiçi uygulama, kota alanının yarısını kaplayan bir şekilde sınırlandırılmıştır. Yüklü uygulamalar önbellek boyutuyla sınırlı değildir ve önbellek sınırına göre sayılmaz. Tüm [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar için önbellek yalnızca geçerli sürümü ve daha önce yüklenen sürümü korur.
 
- Çevrimiçi 250 MB depolama alanı için varsayılan olarak, istemci bilgisayarlara sahip [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar. Veri dosyaları, bu sınır içinde sayılmaz. Bir Sistem Yöneticisi büyütebilir veya kayıt defteri anahtarını değiştirerek belirli bir istemci bilgisayar üzerinde bu kotayı azaltmak **HKEY_CURRENT_USER\Software\Classes\Software\Microsoft\Windows\CurrentVersion\Deployment\OnlineAppQuotaInKB**, önbellek boyutu kilobayt cinsinden ifade bir DWORD değeri olduğu. Örneğin, 50 MB önbellek boyutunu azaltmak amacıyla, bu değer 51200 yapmanız gerekir.
+ Varsayılan olarak, istemci bilgisayarlarda çevrimiçi uygulamalar için 250 MB depolama alanı vardır [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Veri dosyaları bu sınıra doğru sayılmaz. Bir sistem yöneticisi, önbellek boyutunu kilobayt cinsinden ifade eden bir DWORD değeri olan **\Software\classes\software\microsoft\windows\currentversion\deployment\onlineappquocontainer kb HKEY_CURRENT_USER**kayıt defteri anahtarını değiştirerek bu kotayı belirli bir istemci bilgisayarda büyütebilir veya azaltabilir. Örneğin, önbellek boyutunu 50 MB olarak azaltmak için bu değeri 51200 olarak değiştirirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulamalarında yerel ve uzak veri erişimi](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)

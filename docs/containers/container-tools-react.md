@@ -3,15 +3,15 @@ title: ASP.NET Core ve tepki verme. js ile Visual Studio kapsayıcı araçları
 author: ghogen
 description: Visual Studio kapsayıcı araçları 'nı ve Docker for Windows kullanmayı öğrenin
 ms.author: ghogen
-ms.date: 10/16/2019
+ms.date: 05/14/2020
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: 47bcdd4de4ffd938d6b9aed5a166a863873f526b
-ms.sourcegitcommit: ddd99f64a3f86508892a6d61e8a33c88fb911cc4
+ms.openlocfilehash: f7dfc0aa1346c4e888f64f7cd8f23add3056c070
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255551"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84182800"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Hızlı başlangıç: Visual Studio 'da bir tepki verme tek sayfalı uygulamayla Docker kullanma
 
@@ -47,7 +47,7 @@ Docker yüklemesi için ilk olarak [Windows Için Docker Desktop](https://docs.d
 
    ![Yeni tepki verme. js projesinin ekran görüntüsü](media/container-tools-react/vs2017/new-react-project.png)
 
-1. Proje düğümüne sağ tıklayın ve projenize bir dockerfile eklemek için **Docker desteği** **Ekle** > ' yi seçin.
+1. Proje düğümüne sağ tıklayın ve **Add** > projenize bir dockerfile eklemek için **Docker desteği** Ekle ' yi seçin.
 
    ![Docker desteği ekleme](media/container-tools-react/vs2017/add-docker-support.png)
 
@@ -59,7 +59,7 @@ Docker yüklemesi için ilk olarak [Windows Için Docker Desktop](https://docs.d
 
    ![Yeni tepki verme. js projesinin ekran görüntüsü](media/container-tools-react/vs2019/new-react-project.png)
 
-1. Proje düğümüne sağ tıklayın ve projenize bir dockerfile eklemek için **Docker desteği** **Ekle** > ' yi seçin.
+1. Proje düğümüne sağ tıklayın ve **Add** > projenize bir dockerfile eklemek için **Docker desteği** Ekle ' yi seçin.
 
    ![Docker desteği ekleme](media/container-tools-react/vs2017/add-docker-support.png)
 
@@ -72,16 +72,16 @@ Bir sonraki adım, Linux kapsayıcıları veya Windows kapsayıcıları kullanı
 
 Bir *Dockerfile*, son bir Docker görüntüsü oluşturmaya yönelik tarif, projede oluşturulur. İçindeki komutları anlamak için [Dockerfile başvurusuna](https://docs.docker.com/engine/reference/builder/) bakın.
 
-Projede *Dockerfile dosyasını* açın ve kapsayıcıda Node. js 10. x yüklemek için aşağıdaki satırları ekleyin. Düğüm paketi Yöneticisi *NPM. exe* ' nin yüklemesini sonraki adımlarda kullanılan temel görüntüye eklemek için ilk bölüme bu satırları eklediğinizden emin olun.
+Projede *Dockerfile dosyasını* açın ve kapsayıcıda Node. js 10. x yüklemek için aşağıdaki satırları ekleyin. Bu satırları her ikisi de, düğüm paketi Yöneticisi *NPM. exe* ' nin yüklemesini temel görüntüye ve bölümüne eklemek için de eklediğinizden emin olun `build` .
 
-```
+```Dockerfile
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 RUN apt-get install -y nodejs
 ```
 
 *Dockerfile* artık şuna benzer görünmelidir:
 
-```
+```Dockerfile
 FROM microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim AS base
 WORKDIR /app
 EXPOSE 80 
@@ -90,6 +90,8 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 RUN apt-get install -y nodejs
 
 FROM microsoft/dotnet:2.2-sdk-stretch AS build
+RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+RUN apt-get install -y nodejs
 WORKDIR /src
 COPY ["WebApplication37/WebApplication37.csproj", "WebApplication37/"]
 RUN dotnet restore "WebApplication37/WebApplication37.csproj"
@@ -112,7 +114,7 @@ Yeni proje iletişim kutusunun **https Için Yapılandır** onay kutusu Işaretl
 
 ## <a name="modify-the-dockerfile-windows-containers"></a>Dockerfile 'ı (Windows kapsayıcıları) değiştirme
 
-Proje düğümüne çift tıklayarak proje dosyasını açın ve aşağıdaki özelliği `<PropertyGroup>` öğesinin bir alt öğesi olarak ekleyerek proje dosyasını (*. csproj) güncelleştirin:
+Proje düğümüne çift tıklayarak proje dosyasını açın ve aşağıdaki özelliği öğesinin bir alt öğesi olarak ekleyerek proje dosyasını (*. csproj) güncelleştirin `<PropertyGroup>` :
 
    ```xml
     <DockerfileFastModeStage>base</DockerfileFastModeStage>
@@ -120,10 +122,10 @@ Proje düğümüne çift tıklayarak proje dosyasını açın ve aşağıdaki ö
 
 Dockerfile dosyasını aşağıdaki satırları ekleyerek güncelleştirin. Bu, düğümü ve NPM 'yi kapsayıcıya kopyalayacak.
 
-   1. Dockerfile 'ın ilk satırına Ekle ``# escape=` ``
+   1. ``# escape=` ``Dockerfile 'ın ilk satırına Ekle
    1. Önce aşağıdaki satırları ekleyin`FROM … base`
 
-      ```
+      ```Dockerfile
       FROM mcr.microsoft.com/powershell:nanoserver-1903 AS downloadnodejs
       SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop';$ProgressPreference='silentlyContinue';"]
       RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/dist/v10.16.3/node-v10.16.3-win-x64.zip"; `
@@ -133,17 +135,19 @@ Dockerfile dosyasını aşağıdaki satırları ekleyerek güncelleştirin. Bu, 
 
    1. Aşağıdaki satırı önce ve sonra ekleyin`FROM … build`
 
-      ```
+      ```Dockerfile
       COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
       ```
 
    1. Tüm Dockerfile artık şuna benzer görünmelidir:
 
-      ```
+      ```Dockerfile
       # escape=`
       #Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
       #For more information, please see https://aka.ms/containercompat
       FROM mcr.microsoft.com/powershell:nanoserver-1903 AS downloadnodejs
+      RUN mkdir -p C:\nodejsfolder
+      WORKDIR C:\nodejsfolder
       SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop';$ProgressPreference='silentlyContinue';"]
       RUN Invoke-WebRequest -OutFile nodejs.zip -UseBasicParsing "https://nodejs.org/dist/v10.16.3/node-v10.16.3-win-x64.zip"; `
       Expand-Archive nodejs.zip -DestinationPath C:\; `
@@ -173,7 +177,7 @@ Dockerfile dosyasını aşağıdaki satırları ekleyerek güncelleştirin. Bu, 
       ENTRYPOINT ["dotnet", "WebApplication37.dll"]
       ```
 
-1. Öğesini kaldırarak. dockerıgnore dosyasını güncelleştirin `**/bin`.
+1. Öğesini kaldırarak. dockerıgnore dosyasını güncelleştirin `**/bin` .
 
 ## <a name="debug"></a>Hata ayıklama
 
@@ -194,7 +198,7 @@ Tarayıcı, uygulamanın giriş sayfasını gösterir.
 
 Menü **araçları**> NuGet Paket Yöneticisi, **Paket Yöneticisi konsolu**' ndan **Paket Yöneticisi konsolu 'nu** (PMC) açın.
 
-Uygulamanın elde edilen Docker görüntüsü *dev*olarak etiketlendi. Görüntü, *Microsoft/DotNet* temel görüntüsünün *2,2-aspnetcore-Runtime* etiketine dayalıdır. `docker images` Komutunu **Paket Yöneticisi konsolu** (PMC) penceresinde çalıştırın. Makinedeki görüntüler görüntülenir:
+Uygulamanın elde edilen Docker görüntüsü *dev*olarak etiketlendi. Görüntü, *Microsoft/DotNet* temel görüntüsünün *2,2-aspnetcore-Runtime* etiketine dayalıdır. `docker images`Komutunu **Paket Yöneticisi konsolu** (PMC) penceresinde çalıştırın. Makinedeki görüntüler görüntülenir:
 
 ```console
 REPOSITORY        TAG                     IMAGE ID      CREATED         SIZE
@@ -205,7 +209,7 @@ microsoft/dotnet  2.2-aspnetcore-runtime  fcc3887985bb  6 days ago      255MB
 > [!NOTE]
 > **Geliştirme** görüntüsü, uygulama ikililerini ve diğer içerikleri Içermez. **hata ayıklama** yapılandırmalarında, yinelemeli düzenleme ve hata ayıklama deneyimi sağlamak için birim bağlama kullanılır. Tüm içerikleri içeren bir üretim görüntüsü oluşturmak için **yayın** yapılandırmasını kullanın.
 
-`docker ps` Komutu PMC 'de çalıştırın. Uygulamanın, kapsayıcıyı kullanarak çalıştığını unutmayın:
+`docker ps`Komutu PMC 'de çalıştırın. Uygulamanın, kapsayıcıyı kullanarak çalıştığını unutmayın:
 
 ```console
 CONTAINER ID        IMAGE                  COMMAND               CREATED             STATUS              PORTS                                           NAMES
@@ -227,7 +231,7 @@ Uygulamanın geliştirme ve hata ayıklama döngüsünü tamamladıktan sonra uy
     | **DNS Ön Eki** | Genel olarak benzersiz bir ad | Kapsayıcı kayıt defterinizi benzersiz bir şekilde tanımlayan ad. |
     | **Abonelik** | Aboneliğinizi seçin | Kullanılacak Azure aboneliği. |
     | **[Kaynak grubu](/azure/azure-resource-manager/resource-group-overview)** | myResourceGroup |  Kapsayıcı kayıt defterinizin oluşturulacağı kaynak grubunun adı. Yeni kaynak grubu oluşturmak **Yeni**'yi seçin.|
-    | **[ISTEYIN](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
+    | **[SKU](/azure/container-registry/container-registry-skus)** | Standart | Kapsayıcı kayıt defterinin hizmet katmanı  |
     | **Kayıt Defteri Konumu** | Size yakın bir konum | Size yakın bir [bölgede](https://azure.microsoft.com/regions/) veya kapsayıcı kayıt defterinizi kullanacak diğer hizmetlerin yakınında bir konum seçin. |
 
     ![Visual Studio 'nun Azure Container Registry oluştur iletişim kutusu][0]

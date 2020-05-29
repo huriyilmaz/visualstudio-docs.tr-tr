@@ -1,5 +1,5 @@
 ---
-title: ClickOnce ve uygulama ayarlarını | Microsoft Docs
+title: ClickOnce ve uygulama ayarları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -14,43 +14,43 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 153df515fc762b7262dce81d8c1d1c4fe617ad61
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a72b5bc3f3645d9af1008f2c178ab285e8b45449
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62900617"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184139"
 ---
 # <a name="clickonce-and-application-settings"></a>ClickOnce ve uygulama ayarları
-Windows Forms için uygulama ayarları oluşturmak, depolamak ve özel uygulama ve kullanıcı tercihlerini istemcide bakımını yapmayı kolaylaştırır. Uygulama ayarları dosyaları bir ClickOnce uygulamasında nasıl çalışır ve kullanıcı sonraki bir sürüme yükseltildiğinde ClickOnce ayarları nasıl geçirdiğini aşağıdaki belge açıklar.
+Windows Forms için uygulama ayarları, istemci üzerinde özel uygulama ve Kullanıcı tercihleri oluşturmayı, depolamayı ve bakımını yapmayı kolaylaştırır. Aşağıdaki belge, uygulama ayarları dosyalarının bir ClickOnce uygulamasında nasıl çalıştığını ve Kullanıcı bir sonraki sürüme yükseltildiğinde ClickOnce 'ın ayarları nasıl geçirdiğini açıklar.
 
- Aşağıdaki bilgiler yalnızca varsayılan uygulama ayarları sağlayıcısına geçerlidir \<xref:System.Configuration.LocalFileSettingsProvider > sınıfı. Özel bir sağlayıcı sağlarsanız, bu sağlayıcı, verileri nasıl depoladı ve ayarlarına sürümleri arasında yükseltme nasıl belirler. Uygulama ayarları sağlayıcıları hakkında daha fazla bilgi için bkz. [uygulama ayarları mimarisi](/dotnet/framework/winforms/advanced/application-settings-architecture).
+ Aşağıdaki bilgiler yalnızca varsayılan uygulama ayarları sağlayıcısı, sınıfı için geçerlidir <xref:System.Configuration.LocalFileSettingsProvider> . Özel bir sağlayıcı sağlarsanız, bu sağlayıcı, verileri nasıl depoladığını ve sürümler arasında ayarlarını nasıl yükseltleyeceğini tespit eder. Uygulama ayarları sağlayıcıları hakkında daha fazla bilgi için bkz. [uygulama ayarları mimarisi](/dotnet/framework/winforms/advanced/application-settings-architecture).
 
 ## <a name="application-settings-files"></a>Uygulama ayarları dosyaları
- Uygulama ayarları, iki dosya kullanır:  *\<uygulama >. exe.config* ve *user.config*burada *uygulama* Windows Forms uygulamanızın adıdır. *User.config* uygulamanızın kullanıcı kapsamlı ayarları depolar istemciye ilk kez üzerinde oluşturulur. *\<Uygulama >. exe.config*, ayarlar için varsayılan değerleri tanımlarsanız aksine, dağıtımdan önce mevcut. Visual Studio içerecektir bu dosya otomatik olarak kullandığınızda, **Yayımla** komutu. ClickOnce kullanarak uygulama oluşturursanız *Mage.exe* veya *MageUI.exe*, bu dosya ile dahil olduğundan emin olmanız gerekir, uygulama bildiriminizi uygulamanızın diğer dosyaları kullanıcının.
+ Uygulama ayarları iki dosya tüketir: * \<app> . exe. config* ve *User. config*, burada *uygulama* Windows Forms uygulamanızın adıdır. *User. config* , uygulamanız kullanıcı kapsamlı ayarları depoladığında istemci üzerinde oluşturulur. * \<app> . exe. config*, aksine, ayarlar için varsayılan değerler tanımlarsanız dağıtımdan önce mevcut olacaktır. **Yayımla** komutunu kullandığınızda, Visual Studio bu dosyayı otomatik olarak içerecektir. ClickOnce uygulamanızı *Mage. exe* veya *MageUI. exe*kullanarak oluşturursanız, uygulama bildiriminizi doldurduğunuzda bu dosyanın uygulamanızın diğer dosyalarına eklendiğinden emin olmanız gerekir.
 
- ClickOnce, uygulama kullanıcının kullanmadan dağıtılan bir Windows Forms uygulamalarındaki  *\<uygulama >. exe.config* dosya, uygulama dizininde depolanır ancak *user.config* dosyasının depolandığı kullanıcının içinde **belgeler ve ayarlar** klasör. Bir ClickOnce uygulamasında  *\<uygulama >. exe.config* ClickOnce uygulama önbelleği içinde uygulama dizininde yer alan ve *user.config* ClickOnce veri dizininde bulunur Bu uygulama için.
+ ClickOnce kullanılarak dağıtılan bir Windows Forms uygulamasında, bir uygulamanın * \<app> . exe. config* dosyası uygulama dizininde depolanır, ancak *User. config* dosyası kullanıcının **Documents and Settings** klasöründe depolanır. ClickOnce uygulamasında, * \<app> . exe. config* ClickOnce uygulama önbelleğinin içindeki uygulama dizininde bulunur ve *User. config* bu uygulamanın ClickOnce veri dizininde bulunur.
 
- Uygulamanızı nasıl dağıtmak bağımsız olarak, uygulama ayarları sağlar güvenli okuma erişimi  *\<uygulama >. exe.config*ve güvenli okuma/yazma erişimi *user.config*.
+ Uygulamanızı nasıl dağıtabileceğinizi ne olursa olsun, uygulama ayarları, * \<app> . exe. config*dosyasına güvenli okuma erişiminin yanı sıra *User. config*dosyasına güvenli okuma/yazma erişimi sağlar.
 
- Bir ClickOnce uygulamasında uygulama ayarları tarafından kullanılan yapılandırma dosyalarını boyutunu ClickOnce önbellek boyutuyla sınırlıdır. Daha fazla bilgi için [ClickOnce önbelleğine genel bakış](../deployment/clickonce-cache-overview.md).
+ ClickOnce uygulamasında, uygulama ayarları tarafından kullanılan yapılandırma dosyalarının boyutu ClickOnce önbelleğinin boyutuyla sınırlıdır. Daha fazla bilgi için bkz. [ClickOnce önbelleğine genel bakış](../deployment/clickonce-cache-overview.md).
 
-## <a name="version-upgrades"></a>Sürüm yükseltme
- Yalnızca ClickOnce uygulaması'nün her sürümü tüm diğer sürümlerden yalıtılmış olduğundan, ClickOnce uygulaması için uygulama ayarları için diğer sürümlerinde de ayarlardan yalıtılır. Kullanıcınızın, uygulamanızın sonraki bir sürüme yükseltildiğinde, uygulama ayarları en son (en yüksek numaralı) sürümün ayarları ayarlar nesnesine yeni bir ayar dosyaları birleştirme ve güncelleştirilmiş sürümü ile sağlanan ayarların karşı karşılaştırır.
+## <a name="version-upgrades"></a>Sürüm yükseltmeleri
+ ClickOnce uygulamasının her sürümü diğer tüm sürümlerden yalıtılmış olduğu gibi, bir ClickOnce uygulaması için uygulama ayarları da diğer sürümlerin ayarlarından yalıtılmıştır. Kullanıcı uygulamanızın daha sonraki bir sürümüne yükselttiğinde, uygulama ayarları en son (en yüksek sayılı) sürüm ayarlarını, güncelleştirilmiş sürümle sağlanan ayarlarla karşılaştırır ve ayarları yeni bir ayar dosyaları kümesiyle birleştirir.
 
- Aşağıdaki tabloda, uygulama ayarları kopyalamak için hangi ayarların nasıl karar verir açıklanmaktadır.
+ Aşağıdaki tabloda, uygulama ayarlarının hangi ayarların kopyalanacağını nasıl karar verdiği açıklanmaktadır.
 
 |Değişiklik türü|Yükseltme eylemi|
 |--------------------|--------------------|
-|Eklenen ayarı  *\<uygulama >. exe.config*|Yeni ayar geçerli sürüme ait birleştirilir  *\<uygulama >. exe.config*|
-|Kaldırıldığında ayarı  *\<uygulama >. exe.config*|Eski ayarı güncel sürümün kaldırılır  *\<uygulama >. exe.config*|
-|Ayarın varsayılan; değiştirildi yerel ayar hala ayarlanmış orijinal varsayılan olarak *user.config*|Ayar güncel sürümün birleştirilir *user.config* yeni varsayılan değer olarak|
-|Ayarın varsayılan; değiştirildi Varsayılan olmayan olarak ayarlanmasını *user.config*|Ayar güncel sürümün birleştirilir *user.config* korunur varsayılan olmayan değere sahip|
+|* \<app> . Exe. config* dosyasına eklenen ayar|Yeni ayar, geçerli sürümün * \<app> . exe. config dosyasında* birleştirilir|
+|* \<app> . Exe. config* öğesinden kaldırılan ayar|Eski ayar geçerli sürümden * \<app> . exe. config* öğesinden kaldırılır|
+|Ayarın varsayılan değiştirildi; Yerel ayar, *User. config* içinde hala özgün varsayılana ayarlanmış|Ayar, geçerli sürümün *User. config dosyasında* yeni varsayılan değer olarak birleştirilir|
+|Ayarın varsayılan değiştirildi; *User. config* dosyasında varsayılan olmayan ayar ayarlandı|Ayar, geçerli sürümün *User. config dosyasında* , varsayılan olmayan değerle birleştirilir|
 
-Kendi uygulama ayarları sarmalayıcı sınıfı oluşturduysanız ve güncelleştirme mantığı özelleştirmek istiyorsanız, geçersiz kılabilirsiniz \<xref:System.Configuration.ApplicationSettingsBase.Upgrade%2A > yöntemi.
+Kendi uygulama ayarları sarmalayıcı sınıfınızı oluşturduysanız ve güncelleştirme mantığını özelleştirmek istiyorsanız, yöntemini geçersiz kılabilirsiniz <xref:System.Configuration.ApplicationSettingsBase.Upgrade%2A> .
 
-## <a name="clickonce-and-roaming-settings"></a>ClickOnce ve Dolaşım ayarları
- ClickOnce ile Dolaşım ayarları, ağdaki makineler arasında izlemek ayarlar dosyanızı sağlayan çalışmaz. Dolaşım ayarlarına ihtiyacınız varsa, ağ üzerinden ayarları depolayan bir uygulama ayarları sağlayıcısı veya bir uzak bilgisayarda ayarları depolamak için kendi özel ayarları sınıflarınızı geliştirmek ihtiyacınız olacak. Ayar sağlayıcıları daha fazla bilgi için bkz. [uygulama ayarları mimarisi](/dotnet/framework/winforms/advanced/application-settings-architecture).
+## <a name="clickonce-and-roaming-settings"></a>ClickOnce ve dolaşım ayarları
+ ClickOnce, ayarlar dosyanızın bir ağdaki makineler arasında sizi izlemesini sağlayan dolaşım ayarları ile çalışmaz. Dolaşım ayarlarına ihtiyacınız varsa, ayarları ağ üzerinden depolayan bir uygulama ayarları sağlayıcısı uygulamanız veya ayarları uzak bir bilgisayarda depolamak için kendi özel ayar sınıflarınızı geliştirmeniz gerekir. Ayarlar sağlayıcıları hakkında daha fazla bilgi için bkz. [uygulama ayarları mimarisi](/dotnet/framework/winforms/advanced/application-settings-architecture).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)

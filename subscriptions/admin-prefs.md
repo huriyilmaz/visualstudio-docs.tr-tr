@@ -1,75 +1,75 @@
 ---
-title: Yönetim Portalında anlaşma tercihlerini ayarlama
+title: Yönetim portalında anlaşma tercihlerini ayarlama
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
 ms.date: 03/17/2020
 ms.topic: conceptual
-description: İdare Portalı'ndaki dil, kişiler, abonelik düzeyi ve diğerleri için tercihleri nasıl ayarlayabilirsiniz öğrenin
-ms.openlocfilehash: cbcf532620e958ca408d43295d2d4200d12ee0cd
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+description: Yönetim portalında dil, kişiler, abonelik düzeyi ve diğer kullanıcılara yönelik tercihleri ayarlama hakkında bilgi edinin
+ms.openlocfilehash: b719e60771ef8cca9b956626ca6e9e3dd91edce5
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79508764"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183502"
 ---
-# <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>İdare Portalı'ndaki anlaşmalarınız için tercihleri ayarlayın
-Süper yöneticiler, her anlaşma için küresel olarak uygulanacak Yönetim Portalı'nda (yönetici portalı) belirli tercihler belirleyebilirler.  Bu tercihler, yöneticilerinizin abone eklerken abonelik ayrıntılarını otomatik olarak doldurur ve yalnızca süper yöneticiler tarafından genel olarak değiştirilebilir.  
+# <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>Yönetim portalında anlaşmalarda tercihleri ayarlama
+Süper Yöneticiler yönetim portalında (Yönetim Portalı) her anlaşma için global olarak uygulanacak belirli tercihleri ayarlayabilir.  Bu tercihler, aboneler eklendiğinde yönetici için abonelik ayrıntılarını otomatik olarak dolduracaktır ve yalnızca süper yöneticiler tarafından genel olarak değiştirilebilir.  
 
 ## <a name="access-preferences"></a>Erişim tercihleri
-Tercihleri görüntülemek veya değiştirmek için anlaşmaüzerinde süper yönetici haklarına sahip bir oturum kimliği kullanarak [yönetici portalında](https://manage.visualstudio.com) oturum açmanız gerekir.  
+Tercihleri görüntülemek veya değiştirmek için sözleşmede süper yönetici haklarına sahip bir oturum açma KIMLIĞI kullanarak [yönetici portalında](https://manage.visualstudio.com) oturum açmış olmanız gerekir.  
 
 Tercihlerinizi ayarlamak için:
-1. Süper yönetici ayrıcalıklarına sahip bir kimlikle yönetici portalında oturum açın.
+1. Yönetim portalında süper yönetici ayrıcalıklarına sahip bir KIMLIKLE oturum açın.
 2. **Yöneticileri Yönet** sekmesine tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Yönetici Tercihleri düğmesi](_img/admin-prefs/admin-prefs-button.png)
+   > ![Yönetici tercihleri düğmesi](_img/admin-prefs/admin-prefs-button.png)
 
-3. **Anlaşma Tercihleri'ni**tıklatın.
-Sağ tarafta bir panel açılacak ve mevcut tercihleriniz görüntülenecektir. 
+3. **Anlaşma tercihleri**' ne tıklayın.
+Sağ tarafta bir panel açılır ve kullanılabilir tercihleriniz görüntülenir. 
 
    > [!div class="mx-imgBorder"]
-   > ![Yönetici Tercihleri flyout iletişim kutusu](_img/admin-prefs/admin-prefs-flyout.png)
+   > ![Yönetici tercihleri açılır kutusu](_img/admin-prefs/admin-prefs-flyout.png)
 
 ## <a name="set-your-preferences"></a>Tercihlerinizi ayarlama
-Mevcut tercihlerin her birini ve etkilerini inceleyelim. 
+Kullanılabilir tercihlerin her birini ve etkilerini keşfedelim. 
 
-### <a name="agreement"></a>Anlaşma
-Süper yönetici olduğunuz birden fazla anlaşmanız varsa, açılan yolda istediğiniz anlaşmayı seçebilirsiniz.  Belirlediğiniz tercihler yalnızca bu anlaşma için geçerli olacaktır.  Tek tek yöneticiler, abonelik atarken bu tercihlerin bazılarını ayrı ayrı geçersiz kılabilir. 
+### <a name="agreement"></a>Öz
+Süper yönetici olduğunuz birden çok anlaşmanız varsa, açılan kutuda istediğiniz sözleşmeyi seçebilirsiniz.  Ayarladığınız Tercihler yalnızca bu sözleşme için geçerlidir.  Bireysel Yöneticiler, abonelikleri atarken bu tercihlerden bazılarını büyük/küçük harfe göre geçersiz kılabilir. 
 
-Oturum açmanız için kullandığınız e-posta adresiyle ilişkili yalnızca bir anlaşma varsa, bu anlaşma görüntülenir ve açılır açılır durum devre dışı bırakılır. 
+Oturum açmak için kullandığınız e-posta adresiyle ilişkili yalnızca bir anlaşma varsa, görüntülenir ve açılır liste devre dışı bırakılır. 
 
 ### <a name="contact-email-address"></a>İletişim e-posta adresi
-Bu tercih, abonelerinizin abone portalının [abonelikler sayfasındaki](https://my.visualstudio.com/subscriptions) **Yöneticimle İletişim** düğmesini kullanarak yöneticilere ulaşmasını sağlar.  Bu tercih boş bırakılırsa, abone iletileri anlaşmadaki tüm yöneticilere ve süper yöneticilere iletilir.  Hedef kitlenizi bu kişi e-postasına uyarlamak için bir grup e-posta takma adı veya güvenlik grubu kullanmanızı öneririz. İsterseniz bir kişinin e-posta adresini de girin.
+Bu tercih, abonelerinizin abone portalının [abonelikler sayfasında](https://my.visualstudio.com/subscriptions) **yöneticime başvur** düğmesini kullanarak yöneticilere ulaşabilmesi için bir yol sağlar.  Bu tercih boş bırakılırsa, abone iletileri anlaşmada tüm yöneticilere ve süper yöneticilere iletilir.  Bu iletişim e-postasına yönelik kitlelerinizi uyarlamak için bir grup e-posta diğer adı veya güvenlik grubu kullanmanızı öneririz. İsterseniz, tek bir e-posta adresi girişi yapmayı da tercih edebilirsiniz.
 
 > [!NOTE]
-> Burada listelediğiniz e-posta adresi abonelere VERILmeyecektir.  Bir abone, abone portalında **Yöneticimle İletişim** isteği gönderdiğinde, ileti aboneye ifşa edilmeden takma ada iletilir. 
+> Burada listeettiğiniz e-posta adresi abonelere sağlanmaz.  Bir abone abone portalında **yönetici isteime bir iletişim** gönderdiğinde ileti, abone üzerinde kullanıma sunulmadan diğer ada iletilir. 
 
-### <a name="default-external-subscribers-setting"></a>Varsayılan harici abone ayarı
-Bu tercih, yöneticilerin kuruluşunuzun kiracı/dizin dışından abone ekleyip eklemeyeceğine karar vermenize olanak tanır.  Bunu kapatırsanız, dışarıdan aboneye izin verilmeyen.  Bunu etkinleştirirken ve bir yönetici dışarıdan bir abone eklemeye çalışırsa, kendi lerinden seçimlerini onaylamaları istenir ve aboneliği atamalarına izin verilir. Yöneticiler bu ayarı geçersiz kılamaz. 
+### <a name="default-external-subscribers-setting"></a>Varsayılan dış aboneler ayarı
+Bu tercih, yöneticilerin kuruluşunuzun kiracı/Dizin dışından abone ekleyip ekleyemeyeceğine karar vermenize olanak tanır.  Bunu kapatırsanız, dış abonelere izin verilmez.  Bunu etkinleştirirseniz ve bir yöneticinin dış abone ekleme denemeleri varsa, bu kullanıcıların kendi seçimini onaylamasını istenir ve aboneliği atamasına izin verilir. Yöneticiler bu ayarı geçersiz kılamaz. 
 
-### <a name="default-downloads-setting"></a>Varsayılan indirme ayarı
-Varsayılan olarak geçerli olan bu ayarı etkinleştirmek, yöneticiler yeni abonelikler oluşturduğunda abonelerin indirmelere erişmesini sağlar.  Yöneticiler, tek bir abonelik bazında indirmeleri devre dışı bırakabilir.  
+### <a name="default-downloads-setting"></a>Varsayılan indirmeler ayarı
+Varsayılan olarak açık olan bu ayarın etkinleştirilmesi, yöneticilerin yeni abonelikler oluştururken indirmelere erişmesini sağlayacaktır.  Yöneticiler, ayrı bir abonelik temelinde İndirmeleri hala devre dışı bırakabilir.  İndirmelere erişimin devre dışı bırakılması, ürün anahtarlarına erişimi de devre dışı bırakır.  
 
 ### <a name="default-subscription-level"></a>Varsayılan abonelik düzeyi
-Bu ayarı, bir abonelik kullanıcıya atandığında varsayılan olarak sözleşmenizde yer alan abonelik düzeylerinden hangilerinin seçili olduğunu belirlemek için kullanabilirsiniz.  Yöneticiler ayarı sözleşmenizdeki herhangi bir abonelik düzeyiyle değiştirebilir -- Bu, en yaygın seçiminizi tekrar tekrar yapmak zorunda kalmanızı önler. 
+Bu ayarı, bir kullanıcıya bir abonelik atandığında, sözleşmenizde bulunan abonelik düzeylerinin hangisinin varsayılan olarak seçili olduğunu anlamak için kullanabilirsiniz.  Yöneticiler ayarı sözleşmenizde herhangi bir abonelik düzeyiyle değiştirebilir; bu, en sık kullanılan seçiminizi sürekli olarak yapmayı önler. 
 
 ### <a name="default-communication-preferences"></a>Varsayılan iletişim tercihleri
-Varsayılan iletişim dili ve yerel ayar, abonelik atama işlemini kolaylaştırabilir.  Örneğin, geliştirme ekibiniz yönetici ekibinizden farklı bir ülkede dayanıyorsa, abonelerin konumuna en uygun tercihleri ayarlayabilirsiniz. Bu ayarlar, bireysel aboneler için tüm yöneticiler tarafından değiştirilebilir. 
+Varsayılan bir iletişim dili ve yerel ayar ayarlamak, abonelikleri atama sürecini kolaylaştırabilir.  Örneğin, geliştirme ekibiniz yönetici takımından farklı bir ülkeyi temel alıyorsa, abonelerin konumuna en uygun tercihleri ayarlayabilirsiniz. Bu ayarlar, bireysel aboneler için tüm yöneticiler tarafından hala değiştirilebilir. 
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
-### <a name="q--can-i-disable-the-contact-email-address-so-subscribers-cannot-contact-administrators"></a>S: Abonelerin yöneticilerle iletişim kuramamasından sonra **İlgili Kişi e-posta adresini** devre dışı edebilir miyim?
-C: Hayır - bir güvenlik grubu, grup e-posta takma adı veya tek bir e-posta adresi kullanarak hangi yöneticilerle iletişime geçileceğini belirleyebilirken, özellik devre dışı tutulamaz.
+### <a name="q--can-i-disable-the-contact-email-address-so-subscribers-cannot-contact-administrators"></a>S: abonelerin yöneticilerle iletişim kurabilmesi için **iletişim e-posta adresini** devre dışı bırakabilir miyim?
+Y: Hayır-bir güvenlik grubu, Grup e-posta diğer adı veya tek bir e-posta adresi kullanarak hangi yöneticilere bağlantı kurulabildiğini belirleyebilmeniz için özellik devre dışı bırakılamaz.
 
-### <a name="q-if-i-answer-a-subscribers-email-will-they-have-my-email-address"></a>S: Bir abonenin e-postaadresine cevap verirsem, e-posta adresim onlarda olacak mı?
-C: Yanıtınız kullandığınız e-posta istemcisinden geldiğinden, abonenin aldığı yanıt kullandığınız e-posta adresini gösterir.  Bu nedenle, bir grup diğer adını yanıtlarsanız, grup takma adını görürler.  Kendi e-posta adresinizden yanıt verirseniz, bunu görürler.  
+### <a name="q-if-i-answer-a-subscribers-email-will-they-have-my-email-address"></a>S: bir abonenin e-postasını yanıtlıyorum, e-posta adresim olur mu?
+Y: yanıtınız, kullanmakta olduğunuz herhangi bir e-posta istemcisinden geldiği için, abonenin aldığı yanıt, kullandığınız e-posta adresini gösterir.  Bu nedenle, bir grup diğer adından yanıt verirseniz, grup diğer adını görürler.  Kendi e-posta adresinizden yanıt verirseniz, bunu görür.  
 
-### <a name="q-where-can-i-find-out-more-about-the-contact-my-admin-feature-in-the-subscriber-portal"></a>S: Abone portalındaki **Yöneticimle İletişim** özelliği hakkında daha fazla bilgi nereden bulabilirim?
-C: İletişim [yönetici makalemize](contact-my-admin.md) göz atın. 
+### <a name="q-where-can-i-find-out-more-about-the-contact-my-admin-feature-in-the-subscriber-portal"></a>S: abone portalında **yöneticime başvur** özelliği hakkında daha fazla bilgi bulabilirim?
+A: [Yöneticimde Iletişim kurun](contact-my-admin.md) makalemize göz atın. 
 
-### <a name="q-if-we-dont-complete-the-contact-email-address-and-a-subscriber-uses-the-contact-my-admin-feature-who-receives-their-request"></a>S: **İletişim e-posta adresini** tamamlamazsak ve bir abone **Yöneticimle İletişim** özelliğini kullanırsa, isteklerini kim alır?
-C: **İletişim e-posta adresi** tercihinde belirli bir e-posta adresi belirlenmezse, anlaşmadaki tüm yöneticiler isteği alır. 
+### <a name="q-if-we-dont-complete-the-contact-email-address-and-a-subscriber-uses-the-contact-my-admin-feature-who-receives-their-request"></a>S: **iletişim e-posta adresini** tamamlamadığımızda bir abone, kendi Isteklerini alan **yönetici ile iletişim kurun özelliğimi** kullanıyor mu?
+Y: **ilgili e-posta adresi** tercihine belirli bir e-posta adresi ayarlanmamışsa, anlaşmada tüm yöneticiler isteği alır. 
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio Yönetim ve Abonelik Desteği](https://visualstudio.microsoft.com/support/support-overview-vs)
@@ -82,10 +82,10 @@ C: **İletişim e-posta adresi** tercihinde belirli bir e-posta adresi belirlenm
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.
-- [Tek tek abonelikler atama](assign-license.md)
+- [Ayrı abonelikler atama](assign-license.md)
 - [Birden çok abonelik atama](assign-license-bulk.md)
 - [Abonelikleri düzenleme](edit-license.md)
-- [Maksimum kullanımı belirleme](maximum-usage.md)
+- [En fazla kullanımı belirleme](maximum-usage.md)
 
 
 

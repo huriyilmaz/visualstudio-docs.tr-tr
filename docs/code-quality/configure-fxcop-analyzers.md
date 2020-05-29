@@ -9,19 +9,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b1d178adbbb847b2629ee785a7a0fa4e990a46dd
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 182042db9a744d037e295a8448f8c49a9c7b3a97
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587725"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184802"
 ---
-# <a name="configure-fxcop-analyzers"></a>FxCop çözümleyicileri yapılandırma
+# <a name="configure-fxcop-analyzers"></a>FxCop çözümleyicilerini yapılandırma
 
 [FxCop çözümleyicileri paketi](install-fxcop-analyzers.md) , eski analizler tarafından .net Compiler platform tabanlı kod Çözümleyicileri ' ne dönüştürülmüş en önemli "FxCop" kurallarından oluşur. Belirli FxCop kuralları için, kod tabanınızın hangi bölümlerinin [yapılandırılabilir seçenekler](fxcop-analyzer-options.md)aracılığıyla uygulanmasını iyileştirebilirsiniz. Her seçenek, bir [Editorconfig](https://editorconfig.org) dosyasına anahtar-değer çifti eklenerek belirtilir. Bir yapılandırma dosyası [bir projeye özgü](#per-project-configuration) olabilir veya iki ya da daha fazla proje arasında [paylaşılabilir](#shared-configuration) .
 
 > [!TIP]
-> **Çözüm Gezgini** ' de projeye sağ tıklayıp > **Yeni öğe** **Ekle** ' yi seçerek projenize bir. editorconfig dosyası ekleyin. **Yeni öğe Ekle** penceresinde, arama kutusuna **editorconfig** yazın. **Editorconfig dosyası (varsayılan)** şablonunu seçin ve **Ekle**' yi seçin.
+> **Çözüm Gezgini** ' de projeye sağ tıklayıp **Add**  >  **Yeni öğe**Ekle ' yi seçerek projenize bir. editorconfig dosyası ekleyin. **Yeni öğe Ekle** penceresinde, arama kutusuna **editorconfig** yazın. **Editorconfig dosyası (varsayılan)** şablonunu seçin ve **Ekle**' yi seçin.
 >
 > ![Visual Studio 'daki projeye editorconfig dosyası Ekle](media/add-editorconfig-file.png)
 
@@ -64,13 +64,27 @@ Bir kural *kategorisi* (adlandırma, tasarım veya performans gibi) için bir se
 |-|-|
 | dotnet_code_quality. RuleId. OptionName = OptionValue | `dotnet_code_quality.CA1040.api_surface = public` |
 
-## <a name="per-project-configuration"></a>Proje başına yapılandırma
+## <a name="enabling-editorconfig-based-configuration"></a>Editorconfig tabanlı yapılandırmayı etkinleştirme
+
+### <a name="vs2019-163-and-later--fxcopanalyzers-package-version-33x-and-later"></a>VS2019 16,3 ve üzeri + Fxcopçözümleyiciler paket sürümü 3.3. x ve üzeri
+
+Aşağıdaki kapsamlar için EditorConfig tabanlı çözümleyici yapılandırması etkinleştirilebilir:
+
+- Belirli belge (ler)
+- Belirli klasör (ler)
+- Belirli proje (ler)
+- Belirli çözümler
+- Tüm depo
+
+Yapılandırmayı etkinleştirmek için, karşılık gelen dizindeki seçeneklerle bir *. editorconfig* dosyası ekleyin. Bu dosya, EditorConfig tabanlı tanılama önem derecesi yapılandırma girdilerini de içerebilir. Daha ayrıntılı bilgi için [buraya](use-roslyn-analyzers.md#rule-severity) bakın.
+
+### <a name="prior-to-vs2019-163-or-using-an-fxcopanalyzers-package-version-prior-to-33x"></a>VS2019 16,3 öncesi veya 3.3. x öncesinde bir Fxcopçözümleyiciler paket sürümü kullanma
+
+#### <a name="per-project-configuration"></a>Proje başına yapılandırma
 
 Belirli bir proje için EditorConfig tabanlı çözümleyici yapılandırmasını etkinleştirmek üzere, projenin kök dizinine bir *. editorconfig* dosyası ekleyin.
 
-Şu anda, farklı dizin düzeylerinde bulunan (örneğin, çözüm ve proje düzeyi) "birleştirme". editorconfig dosyaları için hiyerarşik bir destek yoktur.
-
-## <a name="shared-configuration"></a>Paylaşılan yapılandırma
+#### <a name="shared-configuration"></a>Paylaşılan yapılandırma
 
 FxCop Çözümleyicisi yapılandırması için bir. editorconfig dosyasını iki veya daha fazla proje arasında paylaşabilirsiniz, ancak bazı ek adımlar gerektirir.
 

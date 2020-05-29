@@ -7,12 +7,12 @@ ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: 0810cf9d24f6ac218db59eea87a1c092abaa2a3f
-ms.sourcegitcommit: 1b7412f1a5b039b2b294c6001013f399ea7aa5bc
+ms.openlocfilehash: a90d6f3fec1f619cda397788c130f7514307effd
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82564166"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183476"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda lisans atama
 Visual Studio abonelikleri Yöneticisi olarak, bireysel kullanıcılara ve Kullanıcı gruplarına abonelik atamak için yönetim portalını kullanabilirsiniz.
@@ -20,7 +20,7 @@ Visual Studio abonelikleri Yöneticisi olarak, bireysel kullanıcılara ve Kulla
 Kullanıcı grupları için, abonelikleri nasıl atayacağınızı gösteren seçimleriniz vardır.  
 - Her seferinde bir abonelik atayabilirsiniz.
 - Ayrıca [toplu ekleme](assign-license-bulk.md) özelliğini kullanarak abone listelerini ve abonelik bilgilerini hızlıca ve kolayca karşıya yükleyebilirsiniz.
-- Kuruluşunuz Microsoft Azure Active Directory (Azure AD) kullanıyorsa, Kullanıcı gruplarına abonelik atamak için Azure AD gruplarını kullanabilirsiniz.  (Bu özellik aşamalar halinde dağıtılır ve kuruluşunuz tarafından hemen kullanılamayabilir.)
+- Kuruluşunuz Microsoft Azure Active Directory (Azure AD) kullanıyorsa, Kullanıcı gruplarına [abonelik atamak Için Azure AD gruplarını kullanabilirsiniz](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-azure-active-directory-groups-to-assign-subscriptions) .  
 
 
 ## <a name="add-a-single-subscriber"></a>Tek bir abone ekleme
@@ -39,7 +39,11 @@ Abonelik avantajlarına erişebilmeleri için bir Visual Studio aboneliğini yen
    > [!div class="mx-imgBorder"]
    > ![Abone ayrıntıları](_img/assign-license-add/subscriber-details.png)
 
-    Bu abonenin, [Visual Studio abonelikleri portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs)oturum açtıklarında yazılım indirmelerine erişimi olmasını Istiyorsanız **indirme ayarları** bölümünde indirmelerin etkin ' i açıp bırakmadığınızdan emin olun. İndirmeleri devre dışı bırakmayı seçerseniz, kullanıcının yazılım indirmelerine erişimi olmaz, ancak abonelikte yer alan diğer tüm avantajlara erişmeye devam eder.
+    > [!NOTE]
+    > Bir abone adı girdiğinizde Azure Active Directory kiracının üyelerinin görünür olması için, yöneticinin kiracının bir üyesi olması gerekir. 
+
+
+    Bu abonenin, [Visual Studio abonelikleri portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs)oturum açtıklarında yazılım indirmelerine erişimi olmasını Istiyorsanız **indirme ayarları** bölümünde indirmelerin etkin ' i açıp bırakmadığınızdan emin olun. İndirmeleri devre dışı bırakmayı seçerseniz, kullanıcının yazılım indirmelerine erişimi olmayacaktır.  Ürün anahtarlarına erişim de devre dışı bırakılır.  Abonenin abonelik kapsamındaki diğer tüm avantajlara erişimi olmaya devam edecektir.
    > [!div class="mx-imgBorder"]
    > ![İndirmelere erişim](media/access-to-downloads.png)
 

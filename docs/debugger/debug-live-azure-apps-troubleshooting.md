@@ -11,16 +11,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc0d5ce27c3241b89a1baaf540cab4f1f56d24b5
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 16d55c4e729a39f46b4b038490e92f7cb43bf98d
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911591"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84182878"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Visual Studio 'da anlık görüntü hata ayıklaması için sorun giderme ve bilinen sorunlar
 
-Bu makalede açıklanan adımlar sorununuzu gidermezse, Visual Studio 'da **sorun bildirmek** > **Yardım** > **geri bildirim gönder** ' i seçerek [Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html) 'nda sorunu arayın veya yeni bir sorun bildirin.
+Bu makalede açıklanan adımlar sorununuzu gidermezse, [Geliştirici topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html) 'nda sorunu arayın veya **Help**  >  **Send Feedback**  >  Visual Studio 'da**sorun bildir** hakkında yardım gönder ' i seçerek yeni bir sorun bildirin.
 
 ## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>Sorun: "Attach Snapshot Debugger" bir HTTP durum kodu hatası ile karşılaştı
 
@@ -30,12 +30,36 @@ Bu makalede açıklanan adımlar sorununuzu gidermezse, Visual Studio 'da **soru
 
 ### <a name="401-unauthorized"></a>(401) yetkilendirilmemiş
 
-Bu hata, Visual Studio tarafından Azure 'a verilen REST çağrısının geçersiz bir kimlik bilgisi kullandığını gösterir. Azure Active Directory Easy OAuth modülü ile bilinen bir hata bu hatayı verebilir.
+Bu hata, Visual Studio tarafından Azure 'a verilen REST çağrısının geçersiz bir kimlik bilgisi kullandığını gösterir. 
 
 Şu adımları uygulayın:
 
-* Visual Studio kişiselleştirme hesabınızın, iliştirmekte olduğunuz Azure aboneliğine ve kaynağa yönelik izinlere sahip olduğundan emin olun. Bunu belirlemenin hızlı bir yolu, kaynağın iletişim kutusunda **hata ayıklama** > **iliştirme Snapshot Debugger...**  > **Azure Kaynak** > **var olanı seçin**veya bulut Gezgini ' nde mevcut olup olmadığını denetlemiyor.
+* Visual Studio kişiselleştirme hesabınızın, iliştirmekte olduğunuz Azure aboneliğine ve kaynağa yönelik izinlere sahip olduğundan emin olun. Bunu belirlemenin hızlı bir yolu, **hata ayıklama**  >  **iliştirme Snapshot Debugger** iletişim kutusunda kaynağın kullanılabilir olup olmadığını denetlemiyor...  >  **Azure kaynağı**  >  **Mevcut**' ı veya bulut Gezgini ' ni seçin.
 * Bu hata devam ederse, bu makalenin başlangıcında açıklanan geri bildirim kanallarından birini kullanın.
+
+App Service kimlik doğrulaması/yetkilendirme 'yi (EasyAuth) etkinleştirdiyseniz, çağrı yığını hata iletisinde LaunchAgentAsync ile bir 401 hatasıyla karşılaşabilirsiniz. **İsteğin kimliği doğrulanmamış olduğunda gerçekleştirilecek eylemin** , Azure Portal **anonim isteklere izin ver (eylem yok)** olarak ayarlandığı ve D:\Home\sites\wwwroot içinde aşağıdaki içeriğe sahip bir Authorization. JSON sağlamak üzere ayarlandığından emin olun. 
+
+```
+{
+  "routes": [
+    {
+      "path_prefix": "/",
+      "policies": {
+        "unauthenticated_action": "RedirectToLoginPage"
+      }
+    },
+    {
+      "http_methods": [ "POST" ],
+      "path_prefix": "/41C07CED-2E08-4609-9D9F-882468261608/api/agent",
+      "policies": {
+        "unauthenticated_action": "AllowAnonymous"
+      }
+    }
+  ]
+}
+```
+
+İlk yol, **[IdentityProvider] Ile oturum**açmaya benzer şekilde uygulama etki alanınızı etkin bir şekilde korur. İkinci yol, snapshotdebugger 'ın önceden yüklenmiş site uzantısı App Service için *etkinleştirilmişse, snapshotdebugger tanılama aracısını başlatma* ön tanımlı eylemini gerçekleştiren, Snapshotdebugger agentlaunch uç noktasını kimlik doğrulama dışında kullanıma sunar. Authorization. JSON yapılandırması hakkında daha fazla bilgi için lütfen bkz. [URL Yetkilendirme kuralları](https://azure.github.io/AppService/2016/11/17/URL-Authorization-Rules.html).
 
 ### <a name="403-forbidden"></a>(403) yasak
 
@@ -54,8 +78,8 @@ Bu hata, Web sitesinin sunucuda bulunamadığını gösterir.
 Şu adımları uygulayın:
 
 * Bağladığınız App Service kaynağında dağıtılan ve çalışan bir Web sitenizin olduğunu doğrulayın.
-* Sitenin https://\<kaynak\>adresinde kullanılabilir olduğunu doğrulayın. azurewebsites.net
-* Özel Web uygulamasını doğru şekilde çalıştırmanın, https://\<kaynak\>. azurewebsites.net adresinden erişildiğinde 404 durum kodunu döndürmediğinden emin olun.
+* Sitenin https://. azurewebsites.net adresinde kullanılabilir olduğunu doğrulayın \<resource\>
+* Özel Web uygulamasını çalıştırmanın, https://. azurewebsites.net adresinden erişildiğinde 404 durum kodunu döndürmediğinden emin olun \<resource\>
 * Bu hata devam ederse, bu makalenin başlangıcında açıklanan geri bildirim kanallarından birini kullanın.
 
 ### <a name="406-not-acceptable"></a>(406) kabul edilemez
@@ -64,7 +88,7 @@ Bu hata, sunucunun isteğin Accept üst bilgisinde ayarlanan türe yanıt vereme
 
 Şu adımları uygulayın:
 
-* Sitenizin https://\<kaynak\>adresinde kullanılabilir olduğunu doğrulayın. azurewebsites.net
+* Sitenizin https://. azurewebsites.net adresinde kullanılabilir olduğunu doğrulayın \<resource\>
 * Sitenizin yeni örneklere geçirilmediğinden emin olun. Snapshot Debugger, bu hatayı aralıklı olarak oluşturabilecek belirli örneklere yönlendirme istekleri için ARRAffinity kavramını kullanır.
 * Bu hata devam ederse, bu makalenin başlangıcında açıklanan geri bildirim kanallarından birini kullanın.
 
@@ -173,15 +197,15 @@ Bu hatayı onarmak için Azure portal aşağıdaki uygulama ayarlarını silin v
 
 ### <a name="enable-agent-logs"></a>Aracı günlüklerini etkinleştir
 
-Aracı günlüğünü etkinleştirmek ve devre dışı bırakmak için, Visual Studio 'Yu aç *> araçlar > Seçenekler ' e gidin > Snapshot Debugger aracı günlüğünü etkinleştirin*. Bu *oturum açma işlemi için eski aracı günlüklerini sil* özelliği de etkinse, başarılı olan her Visual Studio Iliştirme önceki aracı günlüklerini siler.
+Aracı günlüğünü etkinleştirmek ve devre dışı bırakmak için, Visual Studio 'Yu aç *>araçlar>Seçenekler ' e gidin>Snapshot Debugger aracı günlüğünü etkinleştirin*. Bu *oturum açma işlemi için eski aracı günlüklerini sil* özelliği de etkinse, başarılı olan her Visual Studio Iliştirme önceki aracı günlüklerini siler.
 
 Aracı günlükleri aşağıdaki konumlarda bulunabilir:
 
 - Uygulama Hizmetleri:
-  - App Service kudu sitenize (yani, yourappservice) gidin. **SCM**. azurewebsites.net) ve hata ayıklama konsolu 'na gidin.
+  - App Service kudu sitenize (yani, yourappservice) gidin.** SCM**. azurewebsites.net) ve hata ayıklama konsolu 'na gidin.
   - Aracı günlükleri şu dizinde depolanır: D:\home\LogFiles\SiteExtensions\DiagnosticsAgentLogs\
 - VM/VMSS:
-  - SANAL makinenizde oturum açın, Aracı günlükleri şu şekilde depolanır: C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics\<Version > \SnapshotDebuggerAgent_ *. txt
+  - SANAL makinenizde oturum açın, Aracı günlükleri şu şekilde depolanır: C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.IaaSDiagnostics \<Version> \ SnapshotDebuggerAgent_ *. txt
 - AKS
   - Şu dizine gidin:/tmp/diag/AgentLogs/*
 
@@ -190,10 +214,10 @@ Aracı günlükleri aşağıdaki konumlarda bulunabilir:
 İzleme günlükleri aşağıdaki konumlarda bulunabilir:
 
 - Uygulama Hizmetleri:
-  - Hata günlüğü D:\Home\LogFiles\eventlog.xml dosyasına otomatik olarak gönderilir, olaylar `<Provider Name="Instrumentation Engine" />` veya "üretim kesme noktaları" ile işaretlenir.
+  - Hata günlüğü, D:\Home\LogFiles\eventlog.xml dosyasına otomatik olarak gönderilir, olaylar `<Provider Name="Instrumentation Engine" />` veya "üretim kesme noktaları" ile işaretlenir
 - VM/VMSS:
   - SANAL makinenizde oturum açın ve Olay Görüntüleyicisi açın.
-  - Aşağıdaki görünümü açın: *Windows günlükleri uygulama >* .
+  - Aşağıdaki görünümü açın: *Windows günlükleri uygulama>*.
   - *Üretim kesme noktalarını* veya *Izleme altyapısını*kullanarak *geçerli günlüğü* *olay kaynağına* göre filtreleyin.
 - AKS
   - İzleme altyapısı günlüğü/t MP/diag/log.txt (DockerFile içinde MicrosoftInstrumentationEngine_FileLogPath ayarla)
@@ -220,7 +244,7 @@ Anlık görüntü hata ayıklaması ve Application Insights, site işlemine yük
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio’da hata ayıklama](../debugger/index.yml)
+- [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Snapshot Debugger kullanarak canlı ASP.NET uygulamalarında hata ayıklama](../debugger/debug-live-azure-applications.md)
 - [Snapshot Debugger kullanarak canlı ASP.NET Azure sanal makine ölçek kümelerinde hata ayıkla](../debugger/debug-live-azure-virtual-machines.md)
 - [Snapshot Debugger kullanarak canlı ASP.NET Azure Kubernetes hatalarını ayıklama](../debugger/debug-live-azure-kubernetes.md)
