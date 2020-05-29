@@ -1,5 +1,5 @@
 ---
-title: '&lt;trustInfo&gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
+title: '&lt;TrustInfo &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -22,15 +22,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d6ac13c6eb76bff5ffc07043fd20063700237fc
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 5873eb18b2f803acfd5aba9444657884b1a24581
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66745591"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184438"
 ---
-# <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo&gt; öğesi (ClickOnce uygulaması)
-Uygulamanın istemci bilgisayarda çalışması gereken en düşük güvenlik izinleri açıklar.
+# <a name="lttrustinfogt-element-clickonce-application"></a>&lt;TrustInfo &gt; öğesi (ClickOnce uygulaması)
+Uygulamanın istemci bilgisayarda çalışması için gereken en düşük güvenlik izinlerini açıklar.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -67,41 +67,41 @@ Uygulamanın istemci bilgisayarda çalışması gereken en düşük güvenlik iz
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `trustInfo` Öğesi gereklidir ve içinde `asm.v2` ad alanı. Bu özniteliklere sahip ve aşağıdaki öğeleri içerir.
+ `trustInfo`Öğesi gereklidir ve `asm.v2` ad alanında bulunur. Öznitelikleri yoktur ve aşağıdaki öğeleri içerir.
 
 ## <a name="security"></a>güvenlik
- Gerekli. Bu öğenin alt öğesi olan `trustInfo` öğesi. İçerdiği `applicationRequestMinimum` öğesi ve öznitelikleri yok.
+ Gereklidir. Bu öğe, öğesinin bir alt öğesidir `trustInfo` . `applicationRequestMinimum`Öğesi içerir ve özniteliği yoktur.
 
 ## <a name="applicationrequestminimum"></a>applicationRequestMinimum
- Gerekli. Bu öğenin alt öğesi olan `security` öğesi ve içeren `PermissionSet`, `assemblyRequest`, ve `defaultAssemblyRequest`öğeleri. Bu öğenin öznitelikleri yok.
+ Gereklidir. Bu öğe, öğesinin bir alt öğesidir `security` ve `PermissionSet` ,, `assemblyRequest` ve öğelerini içerir `defaultAssemblyRequest` . Bu öğenin öznitelikleri yok.
 
 ## <a name="permissionset"></a>PermissionSet
- Gerekli. Bu öğenin alt öğesi olan `applicationRequestMinimum` öğesi ve içeren `IPermission` öğesi. Bu öğe aşağıdaki özniteliklere sahiptir.
+ Gereklidir. Bu öğe, öğesinin bir alt öğesidir `applicationRequestMinimum` ve `IPermission` öğesi içerir. Bu öğe aşağıdaki özniteliklere sahiptir.
 
 - `ID`
 
-     Gerekli. İzin kümesi tanımlar. Bu öznitelik herhangi bir değer olabilir. Kimliği başvurulduğundan `defaultAssemblyRequest` ve `assemblyRequest` öznitelikleri.
+     Gereklidir. İzin kümesini tanımlar. Bu öznitelik herhangi bir değer olabilir. KIMLIĞE `defaultAssemblyRequest` ve özniteliklerine göre başvurulur `assemblyRequest` .
 
 - `version`
 
-     Gerekli. İzni sürümünü tanımlar. Normalde bu değer, `1`.
+     Gereklidir. İznin sürümünü tanımlar. Normalde bu değer `1` .
 
 ## <a name="ipermission"></a>IPermission
- İsteğe bağlı. Bu öğenin alt öğesi olan `PermissionSet` öğesi. `IPermission` Öğesi tam olarak .NET Framework içinde izin sınıfını tanımlar. `IPermission` Öğesi izin sınıfını özelliklere karşılık gelen ek öznitelikler şu öznitelikler bulunur, ancak. Belirli bir izni sözdizimi öğrenmek için Security.config dosyasında listelenen örneklere bakın.
+ İsteğe bağlı. Bu öğe, öğesinin bir alt öğesidir `PermissionSet` . `IPermission`Öğesi .NET Framework bir izin sınıfını tam olarak tanımlar. `IPermission`Öğesi aşağıdaki özniteliklere sahiptir, ancak izin sınıfındaki özelliklere karşılık gelen ek özniteliklere sahip olabilir. Belirli bir iznin sözdizimini öğrenmek için, Security. config dosyasında listelenen örneklere bakın.
 
 - `class`
 
-     Gerekli. Tanımlayıcı adla izin sınıfını tanımlar. Örneğin, aşağıdaki kodu tanımlayan `FileDialogPermission` türü.
+     Gereklidir. İzin sınıfını tanımlayıcı ada göre tanımlar. Örneğin, aşağıdaki kod `FileDialogPermission` türü tanımlar.
 
      `System.Security.Permissions.FileDialogPermission, mscorlib, Version=1.2.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`
 
 - `version`
 
-     Gerekli. İzni sürümünü tanımlar. Genellikle bu değer, `1`.
+     Gereklidir. İznin sürümünü tanımlar. Genellikle bu değer `1` .
 
 - `Unrestricted`
 
-     Gerekli. Uygulamanın bir sınırsız kullanım hakkı bu izne ihtiyacı olup olmadığını tanımlar. Varsa `true`, izin verme koşulsuz olur. Varsa `false`, veya bu öznitelik tanımlanmamışsa, üzerinde tanımlanan izin özgü özniteliklere göre kısıtlı `IPermission` etiketi. Şu izinleri alın:
+     Gereklidir. Uygulamanın bu iznin Kısıtlanmamış izni olup olmadığını belirler. Varsa `true` , izin verme koşulsuz olur. Eğer `false` veya bu öznitelik tanımlanmamışsa, etiketinde tanımlanan izne özgü özniteliklere göre kısıtlanır `IPermission` . Aşağıdaki izinleri alın:
 
     ```xml
     <IPermission
@@ -114,59 +114,59 @@ Uygulamanın istemci bilgisayarda çalışması gereken en düşük güvenlik iz
       Unrestricted="true" />
     ```
 
-     Bu örnekte, bildirimi <xref:System.Security.Permissions.EnvironmentPermission> ise kullanıcı adı, yalnızca ortam değişkenini okumak için uygulamayı sınırlar bildirimi <xref:System.Security.Permissions.FileDialogPermission> tüm sınırsız uygulama kullanımı sağlar <xref:System.Windows.Forms.FileDialog> sınıfları.
+     Bu örnekte, için bildirimi, <xref:System.Security.Permissions.EnvironmentPermission> uygulamayı yalnızca ortam değişkeni Kullanıcı adı ' nı okumak üzere kısıtlar, ancak bildirimi, <xref:System.Security.Permissions.FileDialogPermission> uygulamanın tüm sınıfların sınırsız kullanımını sağlar <xref:System.Windows.Forms.FileDialog> .
 
 ## <a name="defaultassemblyrequest"></a>defaultAssemblyRequest
- İsteğe bağlı. Tüm derlemeler için verilen izinler kümesini tanımlar. Bu öğenin alt öğesi olan `applicationRequestMinimum` öğesi ve aşağıdaki özniteliklere sahiptir.
+ İsteğe bağlı. Tüm derlemelere verilen izin kümesini tanımlar. Bu öğe, öğesinin bir alt öğesidir `applicationRequestMinimum` ve aşağıdaki özniteliğe sahiptir.
 
 - `permissionSetReference`
 
-     Gerekli. Varsayılan izin izin kümesi kimliği tanımlar. İzin kümesi içinde bildirildiği `PermissionSet` öğesi.
+     Gereklidir. Varsayılan izin olan izin kümesinin KIMLIĞINI tanımlar. İzin kümesi, `PermissionSet` öğesinde bildirilmiştir.
 
 ## <a name="assemblyrequest"></a>assemblyRequest
- İsteğe bağlı. Belirli bir derlemenin izinlerini tanımlar. Bu öğenin alt öğesi olan `applicationRequestMinimum` öğesi ve aşağıdaki özniteliklere sahiptir.
+ İsteğe bağlı. Belirli bir derleme için izinleri tanımlar. Bu öğe, öğesinin bir alt öğesidir `applicationRequestMinimum` ve aşağıdaki özniteliklere sahiptir.
 
 - `Name`
 
-     Gerekli. Derleme adını tanımlar.
+     Gereklidir. Derleme adını tanımlar.
 
 - `permissionSetReference`
 
-     Gerekli. Bu derlemeyi izin kümesi kimliği tanımlar. İzin kümesi içinde bildirildiği `PermissionSet` öğesi.
+     Gereklidir. Bu derlemenin gerektirdiği izin kümesinin KIMLIĞINI tanımlar. İzin kümesi, `PermissionSet` öğesinde bildirilmiştir.
 
 ## <a name="requestedprivileges"></a>requestedPrivileges
- İsteğe bağlı. Bu öğenin alt öğesi olan `security` öğesi ve içeren `requestedExecutionLevel` öğesi. Bu öğenin öznitelikleri yok.
+ İsteğe bağlı. Bu öğe, öğesinin bir alt öğesidir `security` ve `requestedExecutionLevel` öğesi içerir. Bu öğenin öznitelikleri yok.
 
 ## <a name="requestedexecutionlevel"></a>requestedExecutionLevel
- İsteğe bağlı. Yürütülecek uygulamanın istekleri güvenlik düzeyini tanımlar. Bu öğenin alt öğesi yok ve aşağıdaki özniteliklere sahiptir.
+ İsteğe bağlı. Uygulama isteklerinin çalıştırılacağı güvenlik düzeyini tanımlar. Bu öğenin alt öğesi yoktur ve aşağıdaki özniteliklere sahiptir.
 
 - `Level`
 
-   Gerekli. Uygulama güvenlik düzeyini isteyen gösterir. Olası değerler şunlardır:
+   Gereklidir. Uygulamanın istediği güvenlik düzeyini gösterir. Olası değerler şunlardır:
 
-   `asInvoker`, ek izinler istenmez. Bu düzey, hiçbir ek güven istemi gerektirir.
+   `asInvoker`, ek izin isteme. Bu düzey hiçbir ek güven istemi gerektirmez.
 
-   `highestAvailable`, üst işleme kullanılabilir olan en yüksek izinler isteyen.
+   `highestAvailable`, üst işlem için kullanılabilir en yüksek izinleri istiyor.
 
    `requireAdministrator`, tam yönetici izinleri istiyor.
 
-   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamaları yalnızca bir değeri ile yükleme `asInvoker`. Başka bir değer ile yükleme başarısız olur.
+   [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]uygulamalar yalnızca değeri ile yüklenir `asInvoker` . Başka bir değerle yükleme başarısız olur.
 
 - `uiAccess`
 
-   İsteğe bağlı. Uygulama erişim korumalı kullanıcı arabirimi öğeleri için gerekli olup olmadığını gösterir. Değerleri `true` veya `false`, ve varsayılan değer false'dur. Yalnızca imzalı uygulamaları true değeri olması gerekir.
+   İsteğe bağlı. Uygulamanın korumalı Kullanıcı Arabirimi öğelerine erişim gerektirip gerektirmediğini belirtir. Değerler ya da `true` `false` şeklindedir ve varsayılan değer false 'dur. Yalnızca imzalı uygulamalar true değerine sahip olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- Varsa bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama, istemci bilgisayarda varsayılan olarak, ortak dil çalışma zamanının güven yöneticisi, kullanıcı kendisi uygulamanın yükseltilmiş düzey güven vermek istemediğini sorar vereceğinden daha fazla izin sorar. Kullanıcı hayır derse, uygulama çalışmaz; Aksi takdirde istenen izinlerle çalışacaktır.
+ Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama, istemci bilgisayardan varsayılan olarak izin vereceğinden daha fazla izin isterse, ortak dil çalışma zamanının güven Yöneticisi, uygulamaya Bu yükseltilmiş güven düzeyini vermek isterse kullanıcıyı sorar. Hayır yazmazsa uygulama çalışmaz; Aksi takdirde, istenen izinlerle çalıştırılır.
 
- Tüm izinleri kullanarak istenen `defaultAssemblyRequest` ve `assemblyRequest` dağıtım bildirimi geçerli bir güven lisansı varsa, kullanıcıya sormadan verilecektir.
+ Ve kullanılarak istenen tüm `defaultAssemblyRequest` İzinler `assemblyRequest` , dağıtım bildiriminin geçerli bir güven lisansına sahip olup olmadığını Kullanıcı istenmeden alacak şekilde verilecek.
 
- İzin yükseltilmesi hakkında daha fazla bilgi için bkz: [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md). İlke dağıtma hakkında daha fazla bilgi için bkz. [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md).
+ Izin yükseltme hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md). İlke dağıtımı hakkında daha fazla bilgi için bkz. [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md).
 
 ## <a name="examples"></a>Örnekler
- Aşağıdaki üç kod örnekleri göstermek `trustInfo` varsayılan olarak adlandırılan güvenlik bölgeleri için öğeleri — Internet ve LocalIntranet FullTrust — kullanılmak üzere bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımın uygulama bildirimi.
+ Aşağıdaki üç kod örneği, `trustInfo` bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımın uygulama bildiriminde kullanılmak üzere varsayılan adlandırılmış güvenlik bölgelerinin (Internet, LocalIntranet ve FullTrust) öğelerini gösterir.
 
- İlk örnekte `trustInfo` Internet güvenlik bölgesi varsayılan izinleri için öğesi.
+ İlk örnek, `trustInfo` Internet güvenlik bölgesinde bulunan varsayılan izinler için öğesini gösterir.
 
 ```xml
 <trustInfo>
@@ -202,7 +202,7 @@ Uygulamanın istemci bilgisayarda çalışması gereken en düşük güvenlik iz
   </trustInfo>
 ```
 
- İkinci örnekte `trustInfo` LocalIntranet güvenlik bölgesinde varsayılan izinler için öğesi.
+ İkinci örnek, `trustInfo` LocalIntranet güvenlik bölgesinde bulunan varsayılan izinler için öğesini gösterir.
 
 ```xml
 <trustInfo>
@@ -254,7 +254,7 @@ Uygulamanın istemci bilgisayarda çalışması gereken en düşük güvenlik iz
 </trustInfo>
 ```
 
- Üçüncü örnek gösterilmektedir `trustInfo` FullTrust güvenlik bölgesinde varsayılan izinler için öğesi.
+ Üçüncü örnek, `trustInfo` FullTrust güvenlik bölgesinde bulunan varsayılan izinler için öğesini gösterir.
 
 ```xml
 <trustInfo>
@@ -268,5 +268,5 @@ Uygulamanın istemci bilgisayarda çalışması gereken en düşük güvenlik iz
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Güvenilir Uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

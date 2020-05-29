@@ -1,7 +1,7 @@
 ---
-title: Yayımlama ayarlarını içe aktararak Azure'da yayımlama
-description: Visual Studio'dan Azure Uygulama Hizmeti'ne uygulama dağıtmak için yayımlama profili oluşturma ve alma
-ms.date: 05/07/2018
+title: Yayımlama ayarlarını içeri aktararak Azure 'da yayımlayın
+description: Visual Studio 'dan Azure App Service 'e uygulama dağıtmak için Yayımlama profili oluşturma ve içeri aktarma
+ms.date: 05/06/2020
 ms.topic: tutorial
 helpviewer_keywords:
 - deployment, publish settings
@@ -10,76 +10,76 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd040b613a5b982050d651f341456c5fafc2954b
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: cd316956f8e6c385cd59c017af50452b07537dc6
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "65679183"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183320"
 ---
-# <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>Visual Studio'da yayımlama ayarlarını içe aktararak bir uygulamayı Azure Uygulama Hizmetine yayımlama
+# <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>Visual Studio 'da yayımlama ayarlarını içeri aktararak uygulama Azure App Service yayımlayın
 
-Yayımlama ayarlarını içe aktarıp uygulamanızı dağıtmak için **Yayımla** aracını kullanabilirsiniz. Bu makalede, Azure Uygulama Hizmeti için yayımlama ayarlarını kullanıyoruz, ancak Yayımlama ayarlarını [IIS'den](../deployment/tutorial-import-publish-settings-iis.md)almak için benzer adımları kullanabilirsiniz. Bazı senaryolarda, yayımlama ayarları profilinin kullanımı, Visual Studio'nun her kurulumu için dağıtımın hizmete el ile yapılandırılmasından daha hızlı olabilir.
+**Yayımla aracını kullanarak** yayınlama ayarlarını içeri aktarabilir ve ardından uygulamanızı dağıtabilirsiniz. Bu makalede, Azure App Service için yayımlama ayarlarını kullanırız, ancak yayımlama ayarlarını [IIS](../deployment/tutorial-import-publish-settings-iis.md)'den içe aktarmak için de benzer adımları kullanabilirsiniz. Bazı senaryolarda, bir yayımlama ayarları profili kullanımı, her Visual Studio yüklemesi için hizmete dağıtımı el ile yapılandırmadan daha hızlı olabilir.
 
-Bu adımlar Visual Studio'daki ASP.NET, ASP.NET Core ve .NET Core uygulamaları için geçerlidir. [Python](../python/publishing-python-web-applications-to-azure-from-visual-studio.md) uygulamaları için yayımlama ayarlarını da içe aktarabilirsiniz.
+Bu adımlar, Visual Studio 'da ASP.NET, ASP.NET Core ve .NET Core uygulamaları için geçerlidir. Ayrıca, [Python](../python/publishing-python-web-applications-to-azure-from-visual-studio.md) uygulamaları için yayımlama ayarlarını içeri aktarabilirsiniz.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
-> * Azure Uygulama Hizmeti'nden yayımlama ayarları dosyası oluşturma
-> * Yayımlama ayarları dosyasını Visual Studio'ya alma
-> * Uygulamayı Azure Uygulama Hizmetine dağıtma
+> * Azure App Service bir yayımlama ayarları dosyası oluştur
+> * Yayımlama ayarları dosyasını Visual Studio 'ya aktarma
+> * Uygulamayı Azure App Service dağıtma
 
-Yayımlama ayarları dosyası (*\*.publishsettings*) Visual Studio'da oluşturulan yayımlama profilinden*\*(.pubxml)* farklıdır. Bir yayımlama ayarları dosyası Azure App Service tarafından oluşturulur ve daha sonra Visual Studio'ya aktarılabilir.
+Yayımlama ayarları dosyası (* \* . publishsettings*), Visual Studio 'da oluşturulan yayımlama profilinden (* \* . pubxml*) farklıdır. Bir yayımlama ayarları dosyası Azure App Service tarafından oluşturulur ve ardından Visual Studio 'ya aktarılabilir.
 
 > [!NOTE]
-> Visual Studio'nun bir yüklemesinden diğerine visual studio yayın profili*\*(.pubxml* dosyası) kopyalamanız gerekirse, yönetilen proje türleri için * \\<\>proje adı \Properties\PublishProfiles* klasöründe yayımlama profilini, * \<profilename\>.pubxml'ı*bulabilirsiniz. Web siteleri için *\App_Data* klasörüne bakın. Yayımlama profilleri MSBuild XML dosyalarıdır.
+> Visual Studio yayımlama profilini (* \* . pubxml* dosyası) bir Visual Studio yüklemesinden diğerine kopyalamanız gerekiyorsa, yönetilen proje türleri için * \\<ProjectName \> \Properties\PublishProfiles* klasöründe yayımlama profilini * \<profilename\> . pubxml*bulabilirsiniz. Web siteleri için *\ App_Data* klasörü altına bakın. Yayımlama profilleri MSBuild XML dosyalarıdır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 ::: moniker range=">=vs-2019"
 
-* Visual Studio 2019 yüklü ve **ASP.NET ve web geliştirme** iş yükünü olmalıdır.
+* Visual Studio 2019 ' nin yüklü olması ve **ASP.net ve Web geliştirme** iş yüküne sahip olmanız gerekir.
 
-    Visual Studio'yu henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/downloads/) gidin ve ücretsiz olarak yükleyin.
+    Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/)   sayfasına giderek ücretsiz olarak yükleme yapın.
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-* Visual Studio 2017'yi ve **ASP.NET ve web geliştirme** iş yükünü yüklemelisiniz.
+* Visual Studio 2017 ' nin yüklü olması ve **ASP.net ve Web geliştirme** iş yüküne sahip olmanız gerekir.
 
-    Visual Studio'yu henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/downloads/) gidin ve ücretsiz olarak yükleyin.
+    Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/)   sayfasına giderek ücretsiz olarak yükleme yapın.
 ::: moniker-end
 
-* Azure Uygulama Hizmeti oluşturun. Ayrıntılı talimatlar için Visual [Studio'ASP.NET Core web uygulamasını Azure'a dağıt'a](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)bakın.
+* Azure App Service oluşturun. Ayrıntılı yönergeler için bkz. [Visual Studio kullanarak Azure 'da ASP.NET Core Web uygulaması dağıtma](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs).
 
-## <a name="create-a-new-aspnet-project-in-visual-studio"></a>Visual Studio'da yeni bir ASP.NET projesi oluşturun
+## <a name="create-a-new-aspnet-project-in-visual-studio"></a>Visual Studio 'da yeni bir ASP.NET projesi oluşturma
 
-1. Visual Studio'yu çalıştıran bilgisayarda yeni bir proje oluşturun.
+1. Visual Studio çalıştıran bilgisayarda yeni bir proje oluşturun.
 
-    Doğru şablonu seçin. Bu örnekte, **ASP.NET Web Uygulaması (.NET Framework)** veya (yalnızca C# için) **ASP.NET Core Web Application'ı**seçin ve ardından **Tamam'ı**tıklatın.
+    Doğru şablonu seçin. Bu örnekte, **ASP.NET Web uygulaması (.NET Framework)** veya (yalnızca C# için **ASP.NET Core) Web uygulaması**' nı seçin ve ardından **Tamam**' a tıklayın.
 
-    Belirtilen proje şablonlarını görmüyorsanız, **Yeni Proje** iletişim kutusunun sol bölmesinde Görsel **Stüdyo Yükleyiciaç'ı Aç** bağlantısını tıklatın. Visual Studio Installer başlattı. ASP.NET ve web geliştirme iş yükünü **yükleyin.**
+    Belirtilen proje şablonlarını görmüyorsanız, **Yeni proje** iletişim kutusunun sol bölmesindeki **Visual Studio yükleyicisi aç** bağlantısına tıklayın. Visual Studio Yükleyicisi başlatılır. **ASP.net ve Web geliştirme** iş yükünü yükler.
 
-    Seçtiğiniz proje şablonu (ASP.NET veya ASP.NET Core) web sunucusunda yüklü ASP.NET sürümüne karşılık gelmelidir.
+    Seçtiğiniz proje şablonu (ASP.NET veya ASP.NET Core), Web sunucusunda yüklü ASP.NET sürümüne karşılık gelmelidir.
 
-1. **MVC** (.NET Framework) veya **Web Uygulaması (Model-View-Controller) (.NET** Core için) seçeneğini belirleyin ve Kimlik **Doğrulama'nın seçilmediğinden** emin olun ve **ardından Tamam'ı**tıklatın.
+1. **MVC** (.NET Framework) veya **Web uygulaması (Model-View-Controller)** seçeneğini belirleyin (.NET Core Için) ve **kimlik doğrulama** olmadığından emin olun ve ardından **Tamam**' a tıklayın.
 
-1. **MyWebApp** gibi bir ad yazın ve **Tamam'ı**tıklatın.
+1. **MyWebApp** gibi bir ad yazın ve **Tamam**' a tıklayın.
 
     Visual Studio projeyi oluşturur.
 
-1. Projeyi oluşturmak için **Yapı** > **Çözüm'u** seçin.
+1. **Build**  >  Projeyi derlemek için derleme**Yapı çözümünü** seçin.
 
-## <a name="create-the-publish-settings-file-in-azure-app-service"></a>Azure Uygulama Hizmeti'nde yayımlama ayarları dosyasını oluşturma
+## <a name="create-the-publish-settings-file-in-azure-app-service"></a>Azure App Service yayımlama ayarları dosyasını oluşturun
 
-1. Azure portalında Azure Uygulama Hizmeti'ni açın.
+1. Azure portal, Azure App Service açın.
 
-1. **Profili yayımla'yı** ve profili yerel olarak kaydet'i tıklatın.
+1. **Yayımlama profilini al** ' a tıklayın ve profili yerel olarak kaydedin.
 
-    ![Yayımlama profilini alın](../deployment/media/tutorial-azure-app-service-get-publish-profile.png)
+    ![Yayımlama profilini al](../deployment/media/tutorial-azure-app-service-get-publish-profile.png)
 
-    Kaydettiğiniz konumda *.publishsettings* dosya uzantısı içeren bir dosya oluşturuldu. Aşağıdaki kod, dosyanın kısmi bir örneğini (daha okunabilir bir biçimlendirmede) gösterir.
+    *. Publishsettings* dosya uzantısına sahip bir dosya, kaydettiğiniz konumda oluşturulmuştur. Aşağıdaki kod, dosyanın kısmi bir örneğini gösterir (daha okunabilir bir biçimlendirmeye).
 
     ```xml
     <publishData>
@@ -101,15 +101,15 @@ Yayımlama ayarları dosyası (*\*.publishsettings*) Visual Studio'da oluşturul
     </publishData>
     ```
 
-    Genellikle, önceki *.publishsettings dosyası Visual Studio'da kullanabileceğiniz iki yayımlama profili, biri Web Dağıtımı'nı kullanarak dağıtmak için ve diğeri ftp kullanarak dağıtmak için. Önceki kod Web Dağıtımı profilini gösterir. Profili içe aktardığınızda her iki profil de daha sonra alınır.
+    Genellikle, önceki *. publishsettings dosyası, Visual Studio 'da kullanabileceğiniz iki yayımlama profili içerir, biri Web Dağıtımı kullanarak dağıtılır ve bir FTP kullanarak dağıtabilirsiniz. Yukarıdaki kod Web Dağıtımı profilini gösterir. Profili içeri aktardığınızda, her iki profil de içeri aktarılır.
 
-## <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio'da yayımlama ayarlarını içe aktarma ve dağıtma
+## <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio 'da yayımlama ayarlarını içeri aktarın ve dağıtın
 
 [!INCLUDE [import publish settings](../deployment/includes/import-publish-settings-vs.md)]
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu eğitimde, bir yayımlama ayarları dosyası oluşturdunuz, Visual Studio'ya aktardın ve Azure Uygulama Hizmeti'ne bir ASP.NET uygulaması dağıttınız. Visual Studio'daki yayımlama seçeneklerine genel bir bakış isteyebilirsiniz.
+Bu öğreticide, bir yayımlama ayarları dosyası oluşturdunuz, Visual Studio 'ya içeri aktardınız ve Azure App Service için bir ASP.NET uygulaması dağıttınız. Visual Studio 'da yayımlama seçeneklerine genel bir bakış da isteyebilirsiniz.
 
 > [!div class="nextstepaction"]
 > [Dağıtıma ilk bakış](../deployment/deploying-applications-services-and-components.md)

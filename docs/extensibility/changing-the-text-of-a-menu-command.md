@@ -1,5 +1,5 @@
 ---
-title: Menü Komutunun Metnini Değiştirme | Microsoft Dokümanlar
+title: Menü komutunun metnini değiştirme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,21 +12,21 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff6af7bdd64342e86201af79dbe5c7968b247d6b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 88a20d9f29ae86f7946389cafd26d67c244caea7
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739839"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183697"
 ---
 # <a name="change-the-text-of-a-menu-command"></a>Menü komutunun metnini değiştirme
-Aşağıdaki adımlar, hizmeti kullanarak bir menü komutunun metin <xref:System.ComponentModel.Design.IMenuCommandService> etiketini nasıl değiştireceğini gösterir.
+Aşağıdaki adımlarda, hizmetini kullanarak bir menü komutunun metin etiketinin nasıl değiştirileceği gösterilmektedir <xref:System.ComponentModel.Design.IMenuCommandService> .
 
-## <a name="changing-a-menu-command-label-with-the-imenucommandservice"></a>IMenuCommandService ile menü komut etiketini değiştirme
+## <a name="changing-a-menu-command-label-with-the-imenucommandservice"></a>Bir menü komut etiketini ımtrcommandservice ile değiştirme
 
-1. **ChangeMenuText**adlı `MenuText` bir menü komutu ile adlı bir VSIX projesi oluşturun. Daha fazla bilgi için [bkz.](../extensibility/creating-an-extension-with-a-menu-command.md)
+1. `MenuText` **ChangeMenuText**adlı bir menü komutuyla adlı bir VSIX projesi oluşturun. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-2. *.vsct* dosyasında, aşağıdaki `TextChanges` örnekte gösterildiği gibi, menü komutunuze bayrağı ekleyin.
+2. *. Vsct* dosyasında, `TextChanges` Aşağıdaki örnekte gösterildiği gibi, menü komutunuz bayrağını ekleyin.
 
     ```xml
     <Button guid="guidChangeMenuTextPackageCmdSet" id="ChangeMenuTextId" priority="0x0100" type="Button">
@@ -52,37 +52,27 @@ Aşağıdaki adımlar, hizmeti kullanarak bir menü komutunun metin <xref:System
     }
     ```
 
-    Bu yöntemdeki menü <xref:System.ComponentModel.Design.MenuCommand.Visible%2A>komutunun <xref:System.ComponentModel.Design.MenuCommand.Checked%2A> <xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> durumunu, nesneüzerindeki , ve özellikleri değiştirerek de güncelleştirebilirsiniz.
+    Ayrıca, <xref:System.ComponentModel.Design.MenuCommand.Visible%2A> <xref:System.ComponentModel.Design.MenuCommand.Checked%2A> <xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> nesne üzerindeki, ve özelliklerini değiştirerek bu yöntemde menü komutunun durumunu güncelleştirebilirsiniz <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> .
 
-4. ChangeMenuText oluşturucuda, özgün komut başlatma ve yerleşim kodunu, menü <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> komutunu `MenuCommand`temsil eden, olay işleyicisini <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> ekleyen ve menü komutu servisine veren bir (yerine) oluşturan kodla değiştirin.
+4. ChangeMenuText oluşturucusunda, özgün komut başlatma ve yerleştirme kodunu <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> menü komutunu temsil eden bir (yerine bir) oluşturan kodla değiştirin `MenuCommand` , <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> olay işleyicisini ekler ve menü komutunu menü komutu hizmetine verir.
 
-    İşte nasıl görünmesi gerektiği:
+    Şöyle görünmelidir:
 
     ```csharp
-    private ChangeMenuText(Package package)
+    private ChangeMenuText(AsyncPackage package, OleMenuCommandService commandService)
     {
-        if (package == null)
-        {
-            throw new ArgumentNullException(nameof(package));
-        }
-
-        this.package = package;
-
-        OleMenuCommandService commandService = this.ServiceProvider.GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
-        if (commandService != null)
-        {
-            CommandID menuCommandID = new CommandID(MenuGroup, CommandId);
-            EventHandler eventHandler = this.ShowMessageBox;
-            OleMenuCommand menuItem = new OleMenuCommand(ShowMessageBox, menuCommandID);
-            menuItem.BeforeQueryStatus +=
-                new EventHandler(OnBeforeQueryStatus);
-            commandService.AddCommand(menuItem);
-        }
+        this.package = package ?? throw new ArgumentNullException(nameof(package));
+        commandService = commandService ?? throw new ArgumentNullException(nameof(commandService));
+        
+        var menuCommandID = new CommandID(CommandSet, CommandId);
+        var menuItem = new OleMenuCommand(this.Excute, menuCommandID);
+        menuItem.BeforeQueryStatus += new EventHandler(OnBeforeQueryStatus);
+        commandService.AddCommand(menuItem);
     }
     ```
 
-5. Projeyi oluşturun ve hata ayıklamaya başlayın. Visual Studio'nun deneysel örneği ortaya çıkar.
+5. Projeyi derleyin ve hata ayıklamayı başlatın. Visual Studio 'nun deneysel örneği görüntülenir.
 
-6. **Araçlar** menüsünde **ChangeMenuText'i Çağır**adlı bir komut görmeniz gerekir.
+6. **Araçlar** menüsünde **değiştirme ChangeMenuText**adlı bir komut görmeniz gerekir.
 
-7. Komutu tıklatın. **MenuItemCallback'in** çağrıldığını bildiren ileti kutusunu görmeniz gerekir. İleti kutusunu kapatırken, Araçlar menüsündeki komutun adının artık Yeni **Metin**olduğunu görmeniz gerekir.
+7. Komutuna tıklayın. **Menuitemcallback** çağrıldığında bildiren ileti kutusunu görmeniz gerekir. İleti kutusunu kapattığınızda, Araçlar menüsündeki komutun adının artık **Yeni metin**olduğunu görmeniz gerekir.

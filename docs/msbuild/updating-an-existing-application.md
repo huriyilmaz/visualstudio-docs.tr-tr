@@ -1,5 +1,5 @@
 ---
-title: Varolan bir uygulamayı MSBuild 15'e güncelleme | Microsoft Dokümanlar
+title: Mevcut bir uygulamayı MSBuild 15 ' e güncelleştirme | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: ghogen
@@ -7,44 +7,44 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d4e7d84768307964b495e8c5e97e7731b0622a1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c141d1e35db1e5ce334606b255d99ce2c0afc29b
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75597145"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184035"
 ---
-# <a name="update-an-existing-application-for-msbuild-15"></a>MSBuild 15 için varolan bir uygulamayı güncelleştirme
+# <a name="update-an-existing-application-for-msbuild-15"></a>MSBuild 15 için mevcut bir uygulamayı güncelleştirme
 
-MSBuild'in 15.0'dan önceki sürümlerinde, MSBuild Global Assembly Önbelleğinden (GAC) yüklendi ve kayıt defterine MSBuild uzantıları yüklendi. Bu, tüm uygulamaların MSBuild'in aynı sürümünü kullanmasını ve aynı Araç Kümelerine erişmesini sağladı, ancak Visual Studio'nun farklı sürümlerinin yan yana kurulumlarını engelledi.
+15,0 ' dan önceki MSBuild sürümlerinde, MSBuild genel derleme önbelleğinden (GAC) yüklendi ve MSBuild uzantıları kayıt defterine yüklendi. Bu, tüm uygulamaların aynı MSBuild sürümünü kullandı ve aynı araç kümelerine erişimi vardı, ancak Visual Studio 'nun farklı sürümlerinin yan yana yüklemelerini engelledi.
 
-Daha hızlı, daha küçük ve yan yana kurulumu desteklemek için Visual Studio 2017 ve sonraki sürümler artık MSBuild'i GAC'ye yerleştirmez veya kayıt defterini değiştirir. Ne yazık ki, bu, projeleri değerlendirmek veya oluşturmak için MSBuild API'sını kullanmak isteyen uygulamaların Visual Studio yüklemesine dolaylı olarak güvenilemeyecekleri anlamına gelir.
+Daha hızlı, daha küçük ve yan yana yüklemeyi desteklemek için, Visual Studio 2017 ve üzeri sürümler artık GAC 'de MSBuild 'e yerleştirmiyor veya kayıt defterini değiştirmiyor. Ne yazık ki bu şekilde, projeleri değerlendirmek veya oluşturmak için MSBuild API 'sini kullanmak isteyen uygulamalar, Visual Studio yüklemesinde örtülü olarak güvenemez.
 
-## <a name="use-msbuild-from-visual-studio"></a>Visual Studio'dan MSBuild'i kullanma
+## <a name="use-msbuild-from-visual-studio"></a>Visual Studio 'dan MSBuild 'i kullanma
 
-Uygulama maç yapılarınızın Visual Studio veya *MSBuild.exe*içinde yapılmasını sağlamak için, Visual Studio'dan MSBuild montajları yükleyin ve Visual Studio'da bulunan SDK'ları kullanın. Microsoft.Build.Locator NuGet paketi bu işlemi kolaylaştırır.
+Uygulamanıza ait program derlemelerinin Visual Studio veya *MSBuild. exe*içinde yapılan yapılarla eşleştiğinden emin olmak Için, Visual Studio 'dan MSBuild derlemelerini yükleyin ve Visual Studio 'Da bulunan SDK 'leri kullanın. Microsoft. Build. Locator NuGet paketi bu işlemi basitleştirir.
 
-## <a name="use-microsoftbuildlocator"></a>Microsoft.Build.Locatator'ı kullanma
+## <a name="use-microsoftbuildlocator"></a>Microsoft. Build. Locator kullanın
 
-*Microsoft.Build.Locator.dll'yi* uygulamanızla yeniden dağıtırsanız, diğer MSBuild derlemelerini dağıtmanız gerekmez.
+*Microsoft. Build. Locator. dll dosyasını* uygulamanızla yeniden dağıtırsanız, diğer MSBuild derlemelerini dağıtmanız gerekmez.
 
-MSBuild 15 ve yer bulucu API kullanmak için bir proje güncelleştirme, projenizde birkaç değişiklik gerektirir, aşağıda açıklanan. Bir projeyi güncelleştirmek için gereken değişikliklerin bir örneğini görmek için, [MSBuildLocator deposundaki örnek bir projeye yapılan taahhütlere](https://github.com/Microsoft/MSBuildLocator/commits/example-updating-to-msbuild-15)bakın.
+Bir projeyi MSBuild 15 kullanacak şekilde güncelleştirmek ve Konumlandırıcı API 'SI projenizde aşağıda açıklanan birkaç değişiklik yapılmasını gerektirir. Bir projeyi güncelleştirmek için gereken değişikliklere bir örnek görmek için bkz. [MSBuildLocator deposundaki örnek bir projeye yapılan işlemeler](https://github.com/Microsoft/MSBuildLocator/commits/example-updating-to-msbuild-15).
 
 ### <a name="change-msbuild-references"></a>MSBuild başvurularını değiştirme
 
-MSBuild'in merkezi bir konumdan yük aldığından emin olmak için, derlemelerini uygulamanızla dağıtmamanız gerekir.
+MSBuild 'in merkezi bir konumdan yüklendiğinden emin olmak için derlemelerini uygulamanızla dağıtmamalıdır.
 
-MSBuild'in merkezi bir konumdan yüklenmesinden kaçınmak için projenizi değiştirme mekanizması, MSBuild'e nasıl başvurulmaya bağlı.
+Merkezi bir konumdan MSBuild 'in yüklenmesini önlemek için projenizi değiştirme mekanizması, MSBuild 'e nasıl başvurdığınıza bağlıdır.
 
-#### <a name="use-nuget-packages-preferred"></a>NuGet paketlerini kullanın (tercih edilen)
+#### <a name="use-nuget-packages-preferred"></a>NuGet paketlerini kullan (tercih edilen)
 
-Bu yönergeler, [PackageReference tarzı NuGet referanslarını](/nuget/consume-packages/package-references-in-project-files)kullandığınızı varsayar.
+Bu yönergelerde, [Packagereference stili NuGet başvurularını](/nuget/consume-packages/package-references-in-project-files)kullandığınız varsayılır.
 
-Proje dosyanızı(lar) NuGet paketlerinden MSBuild derlemelerine başvurmak için değiştirin. NuGet'e derlemelerin yalnızca oluşturma zamanında gerekli olduğunu ve çıktı dizinine kopyalanmaması gerektiğini belirtmek için belirtin. `ExcludeAssets=runtime`
+Proje dosyanızı NuGet paketlerinden MSBuild derlemelerine başvuracak şekilde değiştirin. `ExcludeAssets=runtime`NuGet 'e derlemelerin yalnızca derleme zamanında gerekli olduğunu ve çıkış dizinine kopyalanmayacağını söylemek istediğinizi belirtin.
 
-MSBuild paketlerinin ana ve küçük sürümü, desteklemek istediğiniz Visual Studio'nun minimum sürümünden daha az veya eşit olmalıdır. Örneğin, Visual Studio 2017 ve sonraki sürümlerini desteklemek `15.1.548`istiyorsanız, başvuru paketi sürümü .
+MSBuild paketlerinin büyük ve küçük sürümü, desteklemek istediğiniz Visual Studio 'nun en düşük sürümüne eşit veya ondan daha az olmalıdır. Örneğin, Visual Studio 2017 ve sonraki sürümlerini desteklemek istiyorsanız, başvuru paketi sürümüne başvurun `15.1.548` .
 
-Örneğin, bu XML kullanabilirsiniz:
+Örneğin, bu XML 'yi kullanabilirsiniz:
 
 ```xml
 <ItemGroup>
@@ -55,7 +55,7 @@ MSBuild paketlerinin ana ve küçük sürümü, desteklemek istediğiniz Visual 
 
 #### <a name="use-extension-assemblies"></a>Uzantı derlemelerini kullanma
 
-NuGet paketlerini kullanamıyorsanız, Visual Studio ile dağıtılan MSBuild derlemelerine başvuruda bulunabilirsiniz. MSBuild'e doğrudan başvurursanız, ''ye ayarlayarak `Copy Local` çıktı dizininize `False`kopyalanmaydığından emin olun. Proje dosyasında, bu ayar aşağıdaki kod gibi görünür:
+NuGet paketlerini kullanamıyoruz, Visual Studio ile dağıtılan MSBuild derlemelerine başvurabilirsiniz. Doğrudan MSBuild 'e başvurdıysanız, ' a ayarlayarak çıkış dizininize kopyalanmadığından emin olun `Copy Local` `False` . Proje dosyasında, bu ayar aşağıdaki kodla aynı şekilde görünür:
 
 ```xml
     <Reference Include="Microsoft.Build, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -63,17 +63,17 @@ NuGet paketlerini kullanamıyorsanız, Visual Studio ile dağıtılan MSBuild de
     </Reference>
 ```
 
-#### <a name="binding-redirects"></a>Bağlama yönlendirmeleri
+#### <a name="binding-redirects"></a>Bağlama yeniden yönlendirmeleri
 
-Uygulamanızın gerekli bağlama yönlendirmelerini otomatik olarak kullandığından emin olmak için Microsoft.Build.Locator paketine başvurun, sürüm 15.1.0.0'a yönlendirin. Bağlama bu sürüme yönlendirir hem MSBuild 15 hem de MSBuild 16'yı destekler.
+Uygulamanızın 15.1.0.0 sürümüne gereken bağlama yeniden yönlendirmelerini otomatik olarak kullandığından emin olmak için Microsoft. Build. Locator paketine başvurun. Bu sürüme yeniden yönlendirme, hem MSBuild 15 hem de MSBuild 16 desteği sağlar.
 
 ### <a name="ensure-output-is-clean"></a>Çıktının temiz olduğundan emin olun
 
-Projenizi oluşturun ve microsoft.build içermediğinden emin olmak için çıktı dizinini *inceleyin.\* * *microsoft.build.locator.dll*dışındaki dll derlemeleri, bir sonraki adımda eklendi.
+Projenizi derleyin ve Microsoft. Build ' ın içermediğinden emin olmak için çıkış dizinini inceleyin *. \* *sonraki adımda eklenen *Microsoft. Build. Locator. dll*dışındaki dll derlemeleri.
 
-### <a name="add-package-reference-for-microsoftbuildlocator"></a>Microsoft.Build.Locator için paket başvurusu ekleme
+### <a name="add-package-reference-for-microsoftbuildlocator"></a>Microsoft. Build. Locator için paket başvurusu Ekle
 
-[Microsoft.Build.Locator](https://www.nuget.org/packages/Microsoft.Build.Locator/)için bir NuGet paketi başvurusu ekleyin.
+[Microsoft. Build. Locator](https://www.nuget.org/packages/Microsoft.Build.Locator/)Için bir NuGet paketi başvurusu ekleyin.
 
 ```xml
     <PackageReference Include="Microsoft.Build.Locator">
@@ -81,18 +81,44 @@ Projenizi oluşturun ve microsoft.build içermediğinden emin olmak için çıkt
     </PackageReference>
 ```
 
-Microsoft.Build.Locator paketi için belirtmeyin. `ExcludeAssets=runtime`
+`ExcludeAssets=runtime`Microsoft. Build. Locator paketi için belirtmeyin.
 
-### <a name="register-instance-before-calling-msbuild"></a>MSBuild'i aramadan önce örneği kaydet
+### <a name="register-instance-before-calling-msbuild"></a>MSBuild çağrılmadan önce örneği Kaydet
 
-MSBuild kullanan herhangi bir yöntemi çağırmadan önce Konumbelirleyici API'sine bir çağrı ekleyin.
+> [!IMPORTANT]
+> `Microsoft.Build`MSBuildLocator öğesini çağıran yöntemdeki MSBuild türlerine (ad alanından) başvuramaz. Örneğin, bunu yapabilirsiniz:
+>
+> ```csharp
+> void ThisWillFail()
+> {
+>     MSBuildLocator.RegisterDefaults();
+>     Project p = new Project(SomePath); // Could be any MSBuild type
+>     // Code that uses the MSBuild type
+> }
+> ```
+>
+> Bunun yerine şunu yapmanız gerekir:
+>
+> ```csharp
+> void MethodThatDoesNotDirectlyCallMSBuild()
+> {
+>     MSBuildLocator.RegisterDefaults();
+>     MethodThatCallsMSBuild();
+> }
+> 
+> void MethodThatCallsMSBuild()
+> {
+>     Project p = new Project(SomePath);
+>     // Code that uses the MSBuild type
+> }
+> ```
 
-Aramayı Konum belirleyici API'ye eklemenin en basit yolu,
+Konumlandırıcı API 'sine çağrı eklemenin en kolay yolu,
 
 ```csharp
 MSBuildLocator.RegisterDefaults();
 ```
 
-uygulama başlangıç kodunuzda.
+uygulamanızın başlangıç kodunda.
 
-MSBuild yükleme üzerinde ince taneli kontrol istiyorsanız, `MSBuildLocator.QueryVisualStudioInstances()` `MSBuildLocator.RegisterInstance()` el ile geçmek için bir sonucu seçebilirsiniz, ancak bu genellikle gerekli değildir.
+MSBuild yüklemesi üzerinde daha ayrıntılı denetim isterseniz, `MSBuildLocator.QueryVisualStudioInstances()` el ile geçirilecek bir sonuç seçebilirsiniz `MSBuildLocator.RegisterInstance()` , ancak bu genellikle gerekli değildir.
