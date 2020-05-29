@@ -1,16 +1,16 @@
 ---
 title: XAML'ye genel bakış
-ms.date: 01/10/2020
+ms.date: 05/20/2020
 ms.topic: reference
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 2556387f523769bba93708a9c00d1f7c62429c0f
-ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
+ms.openlocfilehash: 97f3bc7777023903d5fc38ad1bda7cde45b683b6
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75886422"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84183489"
 ---
 # <a name="overview-of-xaml"></a>XAML 'ye Genel Bakış
 
@@ -36,7 +36,7 @@ Bu belge kümesindeki makaleler, Visual Studio ve Visual Studio için Blend XAML
 
 ## <a name="whats-new"></a>Yenilikler
 
-En son bilgiler için, Visual [studio 2019 Web günlüğü gönderisinden xaml geliştirici araçlarındaki](https://devblogs.microsoft.com/visualstudio/whats-new-in-xaml-developer-tools-in-visual-studio-2019-for-wpf-uwp/) yenilikler ve YouTube 'Daki Visual Studio VIDEOSUNUN yeni [xaml özellikleri](https://youtu.be/yI9OyA4ZM2E) bölümüne bakın.
+En son bilgiler için, Visual Studio [2019 Web günlüğü gönderisinden xaml geliştirici araçlarındaki](https://devblogs.microsoft.com/visualstudio/whats-new-in-xaml-developer-tools-in-visual-studio-2019-for-wpf-uwp/) yenilikler bölümüne bakın. [Visual studio 2019 sürüm 16,7 Preview 1 blog gönderisine XAML Araç geliştirmeleri](https://devblogs.microsoft.com/visualstudio/improvements-to-xaml-tooling-in-visual-studio-2019-version-16-7-preview-1/) ve YouTube 'daki Visual STUDIO videosunun [yeni xaml özellikleri](https://youtu.be/yI9OyA4ZM2E) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

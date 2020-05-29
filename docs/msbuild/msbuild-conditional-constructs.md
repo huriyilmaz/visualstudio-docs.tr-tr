@@ -1,5 +1,5 @@
 ---
-title: MSBuild Koşullu Yapılar | Microsoft Dokümanlar
+title: MSBuild koşullu yapılar | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -22,26 +22,26 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a06849c2aa0f4ec0203a7209ffc78be438dba9e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a7d6693a24d208cab6bd3b58ce16dcba8a32b190
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633388"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84184295"
 ---
 # <a name="msbuild-conditional-constructs"></a>MSBuild koşullu yapılar
 
-MSBuild, [Seç](../msbuild/choose-element-msbuild.md), [Ne zaman](../msbuild/when-element-msbuild.md)ve [Başka Türlü](../msbuild/otherwise-element-msbuild.md) öğeleri yle birlikte bir mekanizma sağlar.)
+MSBuild,/veya öğesini [Seç](../msbuild/choose-element-msbuild.md), [ne zaman](../msbuild/when-element-msbuild.md)ve [otherwise](../msbuild/otherwise-element-msbuild.md) öğeleri ile işlemek için bir mekanizma sağlar.
 
-## <a name="use-the-choose-element"></a>Seç öğesini kullanma
+## <a name="use-the-choose-element"></a>Seçme öğesini kullanın
 
- Öğe, `Choose` biri 'ye `Condition` göre yukarıdan aşağıya doğru sırayla sınanan `true`özniteliklere sahip bir dizi `When` öğe içerir. Birden `When` fazla öğe değerlendirirse, `true`yalnızca ilki kullanılır. Bir `Otherwise` `When` öğe, varsa, bir öğe üzerinde hiçbir koşul değerlendirirse `true`değerlendirilecektir.
+ `Choose`Öğesi, `When` `Condition` bir olarak değerlendirilene kadar yukarıdan aşağıya doğru sırayla test edilen özniteliklere sahip bir dizi öğe içerir `true` . Birden fazla `When` öğe olarak değerlendirilirse `true` , yalnızca ilki kullanılır. Varsa, öğe `Otherwise` üzerinde hiçbir koşul hesaplanmıyorsa, bir öğesi değerlendirilir `When` `true` .
 
- `Choose`ve `Project` `When` `Otherwise` öğelerin alt öğeleri olarak kullanılabilir. `When`ve `Otherwise` öğeleri `ItemGroup`olabilir `PropertyGroup`, `Choose` veya alt öğeleri.
+ `Choose`öğeleri `Project` , ve öğelerinin alt öğeleri olarak kullanılabilir `When` `Otherwise` . `When`ve `Otherwise` öğeleri,, `ItemGroup` `PropertyGroup` veya `Choose` alt öğelerine sahip olabilir.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnekte, `Choose` `When` ya/veya işleme için ve öğeleri kullanır. Projenin özellikleri ve `Configuration` öğeleri, özelliğin değerine bağlı olarak ayarlanır.
+ Aşağıdaki örnek, `Choose` `When` /veya işleme için ve öğelerini kullanır. Projenin özellikleri ve öğeleri, özelliğinin değerine bağlı olarak ayarlanır `Configuration` .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
@@ -79,9 +79,21 @@ MSBuild, [Seç](../msbuild/choose-element-msbuild.md), [Ne zaman](../msbuild/whe
 </Project>
 ```
 
+Bu örnekte, bir derleyici sabitindeki bir koşul `DEFINED_CONSTANT` kullanılır. Bunlar, özelliğine dahil edilmiştir `DefinedConstants` . Normal ifade, noktalı virgülle ayrılmış bir listede tam sabiti eşleştirmek için kullanılır.
+
+```xml
+<Choose>
+   <When Condition="$([System.Text.RegularExpressions.Regex]::IsMatch(
+         $(DefineConstants), '^(.*;)*DEFINED_CONSTANT(;.*)*$'))">
+      <!-- When DEFINED_CONSTANT is defined. -->
+   </When>
+   <!-- other conditions -->
+</Choose>
+```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğeyi seçin (MSBuild)](../msbuild/choose-element-msbuild.md)
-- [Eleman (MSBuild)](../msbuild/when-element-msbuild.md)
-- [Aksi takdirde eleman (MSBuild)](../msbuild/otherwise-element-msbuild.md)
+- [Öğe seç (MSBuild)](../msbuild/choose-element-msbuild.md)
+- [Ne zaman öğesi (MSBuild)](../msbuild/when-element-msbuild.md)
+- [Otherwise öğesi (MSBuild)](../msbuild/otherwise-element-msbuild.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
