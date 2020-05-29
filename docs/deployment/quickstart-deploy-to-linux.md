@@ -1,5 +1,5 @@
 ---
-title: Linux'ta Uygulama Hizmetine Yayımla
+title: Linux üzerinde App Service yayımlayın
 ms.date: 01/29/2019
 ms.topic: quickstart
 helpviewer_keywords:
@@ -9,44 +9,54 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 1e05862aa57c24bfa8f17d551762054278dd6e52
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 1a6500b8b38cc6beef21e7da301ec8e1ef7d4bd6
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "72806865"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84173296"
 ---
-# <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>Visual Studio'ASP.NET kullanarak Linux'ta App Service'e ASP.NET Core uygulaması yayınlama
+# <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>Visual Studio kullanarak Linux 'ta App Service için ASP.NET Core uygulaması yayımlama
 
-Visual Studio 2017 sürüm 15.7'den başlayarak, aşağıdaki yöntemlerden birini kullanarak ASP.NET Core uygulamalarını Azure App Service Linux'a (kapsayıcılar kullanarak) yayınlayabilirsiniz.
+Visual Studio 2017 sürüm 15,7 ' den başlayarak, aşağıdaki yöntemlerden birini kullanarak Linux Azure App Service Linux (kapsayıcılar kullanarak) ASP.NET Core uygulamalar yayımlayabilirsiniz.
 
-* Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Ardışık Hatları](/azure/devops/pipelines/get-started-yaml?view=azdevops)ile Azure DevOps'leri kullanın.
+* Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml?view=azdevops)Ile Azure DevOps kullanın.
 
-* Uygulamaların tek seferlik (veya manuel) dağıtımı için Visual Studio'da **Yayımla** aracını kullanarak ASP.NET Core uygulamalarını Linux için Uygulama Hizmetine (kapsayıcıları kullanarak) yayınlayın.
+* Uygulamaların tek seferlik (veya el ile) dağıtımı için, Visual Studio 'daki **Yayımla** aracını kullanarak Linux için App Service ASP.NET Core uygulamalar yayımlayın (kapsayıcılar kullanarak).
 
-Bu makalede, **yayımlama** aracının tek seferlik dağıtım için nasıl kullanılacağı açıklanmaktadır.
+Bu makalede, tek seferlik dağıtım için **Yayımla** aracının nasıl kullanılacağı açıklanır.
 
 [!INCLUDE [quickstart-prereqs-azure-linux](includes/quickstart-prereqs-azure-linux.md)]
 
-## <a name="publish-to-app-service-on-linux"></a>Linux'ta Uygulama Hizmetine Yayımla
+## <a name="publish-to-azure-app-service-on-linux"></a>Linux üzerinde Azure App Service yayımlayın
 
-1. Çözüm Gezgini'nde projeyi sağ tıklatın ve **Yayımla'yı** seçin (veya **Yapı** > **Yayımla** menüsü öğesini kullanın).
+1. Çözüm Gezgini, projeye sağ tıklayın ve **Yayımla** ' yı seçin (veya **Yapı**  >  **Yayımla** menü öğesini kullanın).
 
-    ![Çözüm Gezgini'nde proje bağlamı menüsünde Yayımla komutu](../deployment/media/quickstart-publish.png "Yayımla'yı Seçin")
+    ![Çözüm Gezgini içindeki proje bağlam menüsündeki Yayımla komutu](../deployment/media/quickstart-publish.png "Yayımla ' yı seçin")
 
-1. Daha önce yayımlama profillerini yapılandırmışsanız, **Yayımla** bölmesi görüntülenir ve bu durumda **yeni profil oluştur'u**seçin.
+1. **Yayımla** Iletişim kutusunda **Azure**' u seçin.
 
-1. **Yayımlama hedef** iletişim kutusunu seç'te **App Service Linux'u**seçin.
+    ![Yayımlama hedefini seçin](../deployment/media/quickstart-publish-azure.png)
 
-    ![Azure Uygulama Hizmeti'ni seçin](../deployment/media/quickstart-publish-linux.png "Azure Uygulama Hizmeti'ni seçin")
+1. **Azure App Service (Linux)** ve **İleri ' yi**seçin.
 
-1. **Yayımla**’yı seçin. **Uygulama Hizmeti Oluştur** iletişim kutusu görüntülenir. Gerekirse Azure hesabınızla oturum açın, ardından varsayılan uygulama hizmeti ayarları alanları doldurur.
+    ![Linux üzerinde Azure App Service seçin](../deployment/media/quickstart-publish-linux-select-azure-service.png)
 
-    ![App Service oluşturun](../deployment/media/quickstart-publish-settings-app-service-linux.png "Azure Uygulama Hizmeti Oluştur")
+1. Gerekirse Azure hesabınızla oturum açın. **Yeni Azure App Service oluştur ' u seçin...**
 
-1. **Oluştur'u**seçin. Visual Studio uygulamayı Azure Uygulama Hizmetinize dağıtır ve web uygulaması tarayıcınızda yüklenir. Proje özellikleri **Yayımlama** bölmesi site NIN URL'sini ve diğer ayrıntıları gösterir.
+    ![Azure App Service yeni bir örneğini oluşturmak için bağlantı](../deployment/media/quickstart-publish-linux-create-new-link.png)
 
-    ![Profil özetini gösteren özellik bölmesi yayımlama](../deployment/media/quickstart-publish-app-service-summary.png)
+1. **Azure App Service oluştur (Linux)** iletişim kutusunda, **uygulama adı**, **kaynak grubu**ve **App Service planı** giriş alanları doldurulur. Bu adları koruyabilir veya değiştirebilirsiniz. Hazırlanıyor, **Oluştur**' u seçin.
+
+    ![Azure App Service seçin](../deployment/media/quickstart-publish-linux-create-new-dialog.png)
+
+1. **Yayımla** iletişim kutusunda yeni oluşturulan örnek otomatik olarak seçilmiştir. Hazırlık sırasında **son**' a tıklayın.
+
+    ![Azure App Service seçin](../deployment/media/quickstart-publish-linux-select-instance.png)
+
+1. **Yayımla**’yı seçin. Visual Studio uygulamayı Azure App Service dağıtır ve Web uygulaması tarayıcınıza yüklenir. Proje özellikleri **Yayımlama** bölmesi, site URL 'sini ve diğer ayrıntıları gösterir.
+
+    ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-publish-linux-summary-page.png)
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
@@ -57,7 +67,7 @@ Kaynak grubu sayfasındaki listede yer alan kaynakların silmek istediğiniz kay
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu hızlı başlangıçta, Visual Studio'nun Linux'ta App Service'e dağıtım için bir yayımlama profili oluşturmak için nasıl kullanılacağını öğrendiniz. Azure'u kullanarak Linux'ta yayımlama hakkında daha fazla bilgi isteyebilirsiniz.
+Bu hızlı başlangıçta, Linux üzerinde App Service dağıtım için bir yayımlama profili oluşturmak üzere Visual Studio 'Yu nasıl kullanacağınızı öğrendiniz. Azure kullanarak Linux 'a yayımlama hakkında daha fazla bilgi isteyebilirsiniz.
 
 > [!div class="nextstepaction"]
-> [Linux Uygulama Hizmeti](/azure/app-service/containers/app-service-linux-intro)
+> [Linux App Service](/azure/app-service/containers/app-service-linux-intro)

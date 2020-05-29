@@ -1,29 +1,29 @@
 ---
-ms.openlocfilehash: 0fc18fab56f5b46ef097cdf699e4f0569dc190c9
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 1e6c6714720d652fff266e3e852d01982c98e34a
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68143553"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84173907"
 ---
-Barındırma Sunucuları için Web Deploy 3.6, Kullanıcı Arabirimi'nden yayımlama ayarları dosyasının oluşturulmasını sağlayan ek yapılandırma özellikleri sağlar.
+Barındırma sunucuları için Web Dağıtımı 3,6, kullanıcı arabiriminden yayımlama ayarları dosyası oluşturulmasına olanak tanıyan ek yapılandırma özellikleri sağlar.
 
-1. Windows Server'da zaten yüklü olan Web Deploy 3.6'nız varsa, **Denetim Masası** > **Programları'nı** > kullanarak bir**Programı kaldırın.**
+1. Windows Server 'da zaten yüklü olan Web dağıtımı 3,6 varsa, **Denetim Masası**programları ' nı kullanarak  >  **Programs**  >  **programı**kaldırın.
 
-2. Ardından, Windows Server'da Sunucu barındırmak için Web Dağıtımı 3.6'yı yükleyin.
+2. Ardından, Windows Server 'da barındırma sunucuları için Web Dağıtımı 3,6 ' ü yükler.
 
-    Barındırma Sunucuları için Web Dağıtımı'nı yüklemek için [Web Platform Yükleyicisini (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)kullanın. (IIS'den Web Platform Installer bağlantısını bulmak için Server Manager'ın sol bölmesinde **IIS'yi** seçin. Sunucuya sağ tıklayın ve **Internet Information Services (IIS) Yöneticisi'ni**seçin.)
+    Barındırma sunucularına yönelik Web Dağıtımı yüklemek için Web Platformu Yükleyicisi (WebPI) kullanın. (Web Platformu Yükleyicisi bağlantısını IIS 'den bulmak için, Sunucu Yöneticisi sol bölmesinde **IIS** ' yi seçin. Sunucu bölmesinde, sunucuya sağ tıklayın ve **Internet Information Services (IIS) Yöneticisi**' ni seçin. Ardından **Eylemler** penceresinde **Yeni Web Platformu bileşenlerini al** bağlantısını kullanın.) Web Platformu Yükleyicisi 'ni (WebPI) [indirmelerden](https://www.microsoft.com/web/downloads/platform.aspx)de edinebilirsiniz.
 
-    Web Platformu Yükleyici'sinde, Uygulamalar sekmesinde **Sunucubarındırma için Web Dağıtımı'nı** bulabilirsiniz.
+    Web platformu yükleyicisinde, uygulamalar sekmesinde **barındırma sunucuları için Web Dağıtımı 3,6** ' i bulabilirsiniz.
 
-3. Zaten **IIS Yönetim Komut Dosyaları ve Araçları**yüklemediyseniz, şimdi yükleyin.
+3. **Daha önce IIS Yönetim betikleri ve araçları**yüklemediyseniz, şimdi yükleyebilirsiniz.
 
-    Sunucu **rollerini** > seçin**Web Server (IIS)** > **Yönetim Araçları'na**gidin ve ardından **IIS Management Scripts and Tools** rolünü seçin, **İleri'yi**tıklatın ve sonra rolü yükleyin.
+    **Sunucu rolleri**  >  **Web sunucusu (IIS)**  >  **Yönetim Araçları**' nı seçin ve ardından **IIS Yönetim betikleri ve araçları** rolünü seçin, **İleri**' ye tıklayın ve ardından rolü yükler.
 
-    ![IIS Yönetim Komut Dosyalarını ve Araçlarını Yükleme](../../deployment/media/tutorial-iis-management-scripts-and-tools.png)
+    ![IIS Yönetim betikleri ve araçları 'nı yükler](../../deployment/media/tutorial-iis-management-scripts-and-tools.png)
 
-    Yayımlama ayarları dosyasının oluşumunu etkinleştirmek için komut dosyaları ve araçlar gereklidir.
+    Yayımlama ayarları dosyasının oluşturulmasını sağlamak için betikler ve araçlar gereklidir.
 
-4. (İsteğe bağlı) Denetim Masası > Sistemi ve **Güvenlik > Yönetim Araçları > Hizmetleri'ni** açarak Web Dağıtımı'nın doğru çalıştığını doğrulayın ve Web Dağıtım **Aracısı Hizmetinin** çalıştırdığından emin olun (hizmet adı eski sürümlerde farklıdır).
+4. Seçim **Denetim Masası ' nı > sistem ve güvenlik > yönetim araçları > Hizmetleri** ' ni açarak ve **Web Deployment Agent hizmetinin** çalıştığından emin olun (hizmet adı eski sürümlerde farklı olduğundan) Web dağıtımı düzgün çalıştığını doğrulayın.
 
-    Aracı hizmeti çalışmıyorsa başlatın. Hiç mevcut değilse, **Denetim Masası > Programları > bir program kaldırın**gidin, Microsoft Web Deploy ** \<sürümünü bulmak>. ** Yüklemeyi **değiştirmeyi** seçin ve Web Dağıtma bileşenleri **için yerel sabit diske yükleneceğini** seçtiğinizden emin olun. Yüklemeyi değiştir adımlarını tamamlayın.
+    Aracı hizmeti çalışmıyorsa, başlatın. Bu, hiç yoksa, **Denetim masası > programlar > program Kaldır ' a**gidin, **Microsoft Web dağıtımı \<version> **bulun. Yüklemeyi **değiştirmeyi** seçin ve Web dağıtımı bileşenleri için **yerel sabit diske yüklenediğinizden** emin olun. Değişiklik yükleme adımlarını doldurun.
