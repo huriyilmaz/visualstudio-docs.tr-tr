@@ -910,6 +910,8 @@
           href: ide/signing-in-to-visual-studio.md
         - name: Birden çok kullanıcı hesabıyla çalışma
           href: ide/work-with-multiple-user-accounts.md
+        - name: Çok faktörlü kimlik doğrulaması gerektiren hesaplarla çalışma
+          href: ide/work-with-multi-factor-authentication.md
         - name: Deneme sürümü uzatma veya bir lisansı güncelleştirme
           href: ide/how-to-unlock-visual-studio.md
     - name: Visual Studio’nun performansını ayarlama

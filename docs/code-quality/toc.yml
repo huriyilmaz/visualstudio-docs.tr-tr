@@ -338,6 +338,10 @@
                   href: ca1067.md
                 - name: 'CA1068: CancellationToken parametreleri en sonda olmalıdır'
                   href: ca1068.md
+                - name: 'CA1069: Sabit listeleri yinelenen değerlere sahip olmamalıdır'
+                  href: ca1069.md
+                - name: 'CA1070: Olay alanlarını sanal olarak bildirme'
+                  href: ca1070.md
                 - name: 'CA2210: Derlemelerin geçerli tanımlayıcı adları olmalıdır'
                   href: ca2210.md
             - name: Belge uyarıları
@@ -579,6 +583,10 @@
                   href: ca2007.md
                 - name: 'CA2009: Bir ImmutableCollection değeri üzerinde ToImmutableCollection çağırma'
                   href: ca2009.md
+                - name: 'CA2011: Özelliği, ayarlayıcısı içinde atama'
+                  href: ca2011.md
+                - name: 'CA2015: MemoryManager’dan türetilen türler için sonlandırıcılar tanımlama<T>'
+                  href: ca2015.md
             - name: Güvenlik uyarıları
               items:
                 - name: Genel Bakış
@@ -740,12 +748,24 @@
                   href: ca3147.md
                 - name: 'CA5358: Güvenli Olmayan Şifreleme Modlarını Kullanmayın'
                   href: ca5358.md
+                - name: 'CA5359: Sertifika doğrulamasını devre dışı bırakma'
+                  href: ca5359.md
                 - name: 'CA5361: Güçlü Şifrelemenin SChannel Kullanımını Devre Dışı Bırakma'
                   href: ca5361.md
+                - name: 'CA5362: Seri durumdan çıkarılan nesne grafındaki olası başvuru döngüsü'
+                  href: ca5362.md
                 - name: 'CA5363: İstek doğrulamayı devre dışı bırakmayın'
                   href: ca5363.md
                 - name: 'CA5364: Kullanım Dışı Güvenlik Protokollerini Kullanmayın'
                   href: ca5364.md
+                - name: 'CA5365: HTTP Üst Bilgi Denetimini Devre Dışı Bırakma'
+                  href: ca5365.md
+                - name: 'CA5366: DataSet Read XML için XmlReader Kullan'
+                  href: ca5366.md
+                - name: 'CA5367: İşaretleyici Alanlarıyla Türleri Seri Hale Getirme'
+                  href: ca5367.md
+                - name: 'CA5368: Sayfadan Türetilmiş Sınıflar için ViewStateUserKey Ayarla'
+                  href: ca5368.md
                 - name: 'CA5369: Seri durumdan çıkarma için XmlReader kullanma'
                   href: ca5369.md
                 - name: 'CA5370: Okuyucuyu doğrulamak için XmlReader kullanma'
@@ -756,20 +776,50 @@
                   href: ca5372.md
                 - name: 'CA5373: Eski anahtar türetme işlevini kullanmayın'
                   href: ca5373.md
+                - name: 'CA5374: XslTransform Kullanma'
+                  href: ca5374.md
                 - name: 'CA5378: ServicePointManagerSecurityProtocols''u Devre Dışı Bırakma'
                   href: ca5378.md
+                - name: 'CA5379: Zayıf anahtar türetme işlevi algoritmasını kullanma'
+                  href: ca5379.md
                 - name: 'CA5380: Kök depoya sertifika eklemeyin'
                   href: ca5380.md
                 - name: 'CA5381: Sertifikaların kök depoya eklenmemiş olduğundan emin olun'
                   href: ca5381.md
+                - name: 'CA5382: ASP.NET Core’da güvenli tanımlama bilgileri kullan'
+                  href: ca5382.md
+                - name: 'CA5383: ASP.Net Core içinde güvenli tanımlama bilgileri kullanılmasını sağla'
+                  href: ca5383.md
+                - name: 'CA5384: Dijital imza algoritması (DSA) kullanma'
+                  href: ca5384.md
+                - name: 'CA5385: Yeterli anahtar boyutuna sahip Rivest–Shamir–Adleman (RSA) algoritmasını kullan'
+                  href: ca5385.md
                 - name: 'CA5386: SecurityProtocolType değerini sabit kodlamaktan kaçının'
                   href: ca5386.md
+                - name: 'CA5387: Yetersiz sayıda yineleme ile zayıf anahtar türetme işlevi kullanma'
+                  href: ca5387.md
+                - name: 'CA5388: Zayıf anahtar türetme işlevini kullanırken yeterli sayıda yineleme sağla'
+                  href: ca5388.md
                 - name: 'CA5389: Hedef dosya sistemi yoluna arşiv öğesinin yolunu eklemeyin'
                   href: ca5389.md
+                - name: 'CA5390: Şifreleme anahtarını sabit olarak kodlama'
+                  href: ca5390.md
+                - name: 'CA5394: Güvenli olmayan rastgelelik kullanma'
+                  href: ca5394.md
+                - name: 'CA5396: HttpCookie için HttpOnly''yi true olarak ayarla'
+                  href: ca5396.md
                 - name: 'CA5397: Kullanım dışı SslProtocols değerlerini kullanmayın'
                   href: ca5397.md
                 - name: 'CA5398: Sabit kodlanmış SslProtocols değerlerini kullanmaktan kaçının'
                   href: ca5398.md
+                - name: 'CA5399: HttpClient sertifika iptal listesi denetimi kesinlikle devre dışı bırak'
+                  href: ca5399.md
+                - name: 'CA5400: HttpClient sertifika iptal listesi denetiminin devre dışı bırakılmadığından emin olun'
+                  href: ca5400.md
+                - name: 'CA5401: Varsayılan olmayan IV için CreateEncryptor kullanma'
+                  href: ca5401.md
+                - name: 'CA5402: Varsayılan IV ile CreateEncryptor kullan'
+                  href: ca5402.md
                 - name: 'CA5403: Sertifikayı sabit olarak kodlamayın'
                   href: ca5403.md
             - name: Kullanım uyarıları
@@ -863,5 +913,11 @@
                   href: ca2242.md
                 - name: 'CA2243: Öznitelik dize harfleri doğru çözümlenmelidir'
                   href: ca2243.md
+                - name: 'CA2244: Dizine eklenmiş öğe başlatmalarını yineleme'
+                  href: ca2244.md
+                - name: 'CA2245: Bir özelliği kendisine atama'
+                  href: ca2245.md
+                - name: 'CA2246: Sembol ve üyesini aynı deyime atama'
+                  href: ca2246.md
             - name: Otomatik özelliği askıya alma
               href: automatic-feature-suspension.md
