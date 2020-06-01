@@ -7,12 +7,12 @@ ms.assetid: 59eb35fd-ec94-41ce-b24c-a8a120976bac
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 7c90cb398e174d5b023668040352de11e1caaee3
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 192cb7118a9f431ce2e7a9396b67a919fad10bb9
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386562"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200506"
 ---
 ## <a name="how-do-i-assign-visual-studio-subscriptions"></a>Visual Studio aboneliklerini nasıl atayabilirim?
 
@@ -22,7 +22,7 @@ Abonelikleri tek tek atamak için:
 
 1. [Manage.visualstudio.com](https://manage.visualstudio.com) adresinde sayfanın en üstündeki [Abonelikleri Yönet sekmesini](https://manage.visualstudio.com/subscribers) seçin
 2. Ekle’yi seçin ve abonelik atamak istediğiniz kullanıcının adını ve e-posta adresini yazın.
-    - Kuruluşunuzda Azure Active Directory kullanılıyorsa ad alanı geçerli dizininizde kişileri bulmak için arama yapar. Arama sonuçları arasından seçim yapabilir veya birini el ile ekleyebilirsiniz.
+    1. Kuruluşunuzda Azure Active Directory kullanıyorsa, ad alanı geçerli dizininizde kişi bulmak için arama yapar. Arama sonuçları arasından seçim yapabilir veya birini el ile ekleyebilirsiniz.
 3. Abonenin [Visual Studio Abonelikler Portalı](https://my.visualstudio.com/)’nda oturum açtığında yazılım indirmelerine erişmesini istiyorsanız, İndirim ayarları bölümünde indirmeler düğmesini etkin olarak bıraktığınızdan emin olun.
 4. Abonelerinize atama e-postasını hangi dilde göndereceğimizi bilmemiz için İletişim Tercihleri bölümünü tamamlayın.
 5. Atamayla ilişkilendirilmiş notlar eklemek isterseniz Başvuru bölümünü kullanın.

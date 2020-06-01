@@ -8,16 +8,16 @@ ms.technology: ''
 author: CaityBuschlen
 ms.author: cabuschl
 ms.date: 3/3/2020
-ms.openlocfilehash: 417b3e8dd4145a8f19b273d88b688af389eaf876
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: 8bbeb8a5e13ad000939057a7d476f6979b15dca8
+ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386628"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200324"
 ---
 ## <a name="how-do-i-manage-administrators"></a>Yöneticileri nasıl yönetebilirim?
 
-Süper Yöneticiyseniz, diğer Süper Yöneticileri veya Yöneticileri ekleyebilir veya kaldırabilirsiniz. Yöneticiler yalnızca aboneleri ekleyebilir veya kaldırabilir ve manage.visualstudio.com’da Yöneticileri Yönet sekmesini görmez.
+Süper Yöneticiyseniz, diğer Süper Yöneticileri veya Yöneticileri ekleyebilir veya kaldırabilirsiniz. Yöneticiler yalnızca abone ekleyip kaldırabilir ve [Yönetici Portalında](https://manage.visualstudio.com) yer alan Yöneticileri Yönet sekmesini göremez.
 
 Yöneticileri yönetmek için:
 

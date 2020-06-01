@@ -6,6 +6,8 @@
       href: ide-tour.md
     - name: Windows Kullanıcılarına yönelik Mac için Visual Studio
       href: vsmac-for-windows-users.md
+    - name: Tümleşik Terminal
+      href: integrated-terminal.md
 - name: Yükleme
   items:
     - name: Mac için Visual Studio 2019’u Yükleme
