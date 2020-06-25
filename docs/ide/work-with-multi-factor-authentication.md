@@ -1,5 +1,5 @@
 ---
-title: Multi-Factor Authentication gerektiren hesaplarla çalışma
+title: Çok faktörlü kimlik doğrulaması gerektiren hesaplarla çalışma
 ms.date: 05/27/2020
 ms.topic: conceptual
 description: Visual Studio 'Yu Multi-Factor Authentication gerektiren hesaplarla nasıl kullanacağınızı öğrenin.
@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 696664aa5aa92a3e9a675df4803a3e65e3e81f36
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 699580689bcf00d00d2a6e07f814be4d1265bb1d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84185618"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283552"
 ---
 # <a name="how-to-use-visual-studio-with-accounts-that-require-multi-factor-authentication"></a>Multi-Factor Authentication gerektiren hesaplarla Visual Studio 'Yu kullanma
 
@@ -33,7 +33,11 @@ Bu sorunlar, Visual Studio örneğinizin günde birden çok kez yeniden kimlik d
 > [!WARNING]
 > Bu iş akışının kullanılması, Visual Studio hesaplarını eklerken veya yeniden doğrularken birden fazla ek kimlik doğrulama isteminde ortaya çıkan, düşürülmüş bir deneyimi tetikleyemeyebilir. 
 
-### <a name="enabling-system-web-browser"></a>Sistem Web tarayıcısını etkinleştirme  
+### <a name="enabling-system-web-browser"></a>Sistem Web tarayıcısını etkinleştirme
+
+> [!NOTE] 
+> En iyi deneyim için, bu iş akışına devam etmeden önce sisteminizin varsayılan Web tarayıcısı verilerini temizlemeniz önerilir. Ayrıca, Windows 10 ayarlarınızda **erişim iş veya okul**altında Iş veya okul hesaplarınız varsa, lütfen bunların düzgün şekilde doğrulandıklarından emin olun.
+
 Bu iş akışını etkinleştirmek için Visual Studio 'nun Seçenekler iletişim kutusuna **(araçlar > seçenekler...)** gidin, **hesaplar** sekmesini seçin ve **hesapları ekleme ve yeniden kimlik doğrulaması altında:** açılan menüsünden **sistem Web tarayıcısı** ' nı seçin. 
 
 :::image type="content" source="media/select-system-web-browser.png" alt-text="Menüden sistem Web tarayıcısı ' nı seçin.":::
@@ -43,20 +47,22 @@ Sistem Web tarayıcısı iş akışı etkinleştirildikten sonra, hesap ayarlar�
 </br>
 :::image type="content" source="media/add-personalization-account.png" alt-text="Visual Studio 'ya yeni bir kişiselleştirme hesabı ekleyin." border="false":::
 
-Bu eylem, sisteminizin varsayılan Web tarayıcısını açar, hesabınızda oturum açmanızı ve gerekli MFA ilkelerini doğrulamanızı ister. 
+Bu eylem, sisteminizin varsayılan Web tarayıcısını açar, hesabınızda oturum açmanızı ve gerekli MFA ilkelerini doğrulamanızı ister.
+
+Geliştirme etkinliklerinizi ve kaynak yapılandırmanıza bağlı olarak, oturumunuz sırasında kimlik bilgilerinizi yeniden girmeniz istenebilir. Bu, yeni bir kaynak eklediğinizde veya daha önce CA/MFA yetkilendirme gereksinimlerini karşılamadan bir kaynağa erişmeyi denediğinizde ortaya çıkabilir.
 
 > [!NOTE] 
-> Tarayıcınızı kapatmak ek yetkilendirme istemlerini tetikleyebilmesi için tarayıcınızı en iyi deneyim için tüm süreç boyunca açık tutun. 
+> En iyi deneyim için, kaynaklarınız için tüm CA/MFA ilkeleri doğrulanmadan tarayıcınızı açık tutun. Tarayıcının kapatılması, önceden oluşturulmuş MFA durumunun kaybolmasına neden olabilir ve ek yetkilendirme istemleri isteyebilir.
 
 ## <a name="reauthenticating-an-account"></a>Bir hesabı yeniden doğrularken  
 Hesabınızla ilgili bir sorun varsa, Visual Studio sizden hesap kimlik bilgilerinizi yeniden girmeniz istenebilir.  
 
 :::image type="content" source="media/reauthenticate-account.png" alt-text="Visual Studio hesabınızı yeniden kimlik doğrulaması yapın.":::
 
-Yeniden girmeye tıkladığınızda, **kimlik bilgileriniz** sisteminizin varsayılan Web tarayıcısını açar ve kimlik bilgilerinizi otomatik olarak yenilemeyi dener. Başarısız olursa hesabınızda oturum açmanız ve gerekli MFA ilkesini doğrulamanız istenir. 
+Yeniden girmeye tıkladığınızda, **kimlik bilgileriniz** sisteminizin varsayılan Web tarayıcısını açar ve kimlik bilgilerinizi otomatik olarak yenilemeyi dener. Başarısız olursa hesabınızda oturum açmanız ve gerekli CA/MFA ilkesini doğrulamanız istenir.
 
 > [!NOTE] 
-> Tarayıcıyı kapatmak, ek yetkilendirme istemlerini tetikleyebilmesi için en iyi deneyim sayesinde tarayıcınızı tüm süreç boyunca açık tutun. 
+> En iyi deneyim için, kaynaklarınız için tüm CA/MFA ilkeleri doğrulanmadan tarayıcınızı açık tutun. Tarayıcının kapatılması, önceden oluşturulmuş MFA durumunun kaybolmasına neden olabilir ve ek yetkilendirme istemleri isteyebilir.
 
 ## <a name="how-to-opt-out-of-using-a-specific-azure-active-directory-tenant-in-visual-studio"></a>Visual Studio 'da belirli bir Azure Active Directory kiracının kullanımını devre dışı bırakma
 

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılsın: Kodlama ile dosyaları kaydet ve aç'
+title: 'Nasıl yapılır: kodlama ile dosyaları kaydetme ve açma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Unicode, bidirectional language support
 - files, encoding
@@ -13,51 +13,51 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e1e562771567a6ff4f9dc35c9e98ceb5441a074
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 72496e842841b2c55833075e890da4b7088cb489
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75596183"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284171"
 ---
-# <a name="how-to-save-and-open-files-with-encoding"></a>Nasıl yapılsın: Kodlama ile dosyaları kaydet ve aç
+# <a name="how-to-save-and-open-files-with-encoding"></a>Nasıl yapılır: kodlama ile dosyaları kaydetme ve açma
 
-Çift yönlü dilleri desteklemek için belirli karakter kodlaması içeren dosyaları kaydedebilirsiniz. Ayrıca, Visual Studio'nun dosyayı doğru şekilde görüntülemesi için dosyayı açarken bir kodlama da belirtebilirsiniz.
+Çift yönlü dilleri desteklemek için belirli karakter kodlamasına sahip dosyaları kaydedebilirsiniz. Ayrıca, dosyayı açarken bir kodlama belirtebilirsiniz, böylece Visual Studio dosyayı doğru şekilde görüntüler.
 
-## <a name="to-save-a-file-with-encoding"></a>Kodlama ile bir dosyayı kaydetmek için
+## <a name="to-save-a-file-with-encoding"></a>Kodlamalı bir dosyayı kaydetmek için
 
-1. **Dosya** menüsünden **Dosyayı Farklı Kaydet'i**seçin ve ardından **Kaydet** düğmesinin yanındaki açılır düğmeyi tıklatın.
+1. **Dosya** menüsünde **dosyayı farklı kaydet**' i seçin ve ardından **Kaydet** düğmesinin yanındaki açılan düğmeye tıklayın.
 
-     **Gelişmiş Kaydet Seçenekleri** iletişim kutusu görüntülenir.
+     **Gelişmiş kaydetme seçenekleri** iletişim kutusu görüntülenir.
 
-2. **Kodlama**altında, dosya için kullanılacak kodlamayı seçin.
+2. **Kodlama**bölümünde dosya için kullanılacak kodlamayı seçin.
 
-3. İsteğe bağlı olarak, **Satır uçlarıaltında,** satır sonu karakterleri için biçimi seçin.
+3. İsteğe bağlı olarak **satır sonları**altında satır sonu karakterlerinin biçimini seçin.
 
-     Bu seçenek, dosyayı farklı bir işletim sisteminin kullanıcılarıyla değiştirmek istiyorsanız yararlıdır.
+     Bu seçenek, dosyayı farklı bir işletim sistemi kullanıcılarıyla değiş tokuş etmek istiyorsanız yararlıdır.
 
-     Belirli bir şekilde kodlanmış olduğunu bildiğiniz bir dosyayla çalışmak istiyorsanız, Visual Studio'ya dosyayı açarken bu kodlamayı kullanmasını söyleyebilirsiniz. Kullandığınız yöntem, dosyanın projenizin bir parçası olup olmadığına bağlıdır.
+     Belirli bir şekilde kodlandığını bildiğiniz bir dosyayla çalışmak istiyorsanız, Visual Studio 'Yu dosyayı açarken bu kodlamayı kullanmasını söyleyebilirsiniz. Kullandığınız yöntem, dosyanın projenizin bir parçası olup olmamasına bağlıdır.
 
-## <a name="to-open-an-encoded-file-that-is-part-of-a-project"></a>Projenin parçası olan kodlanmış bir dosyayı açmak için
+## <a name="to-open-an-encoded-file-that-is-part-of-a-project"></a>Projenin bir parçası olan kodlanmış bir dosyayı açmak için
 
-1. **Çözüm Gezgini'nde**, dosyayı sağ tıklatın ve **ile aç'ı**seçin.
+1. **Çözüm Gezgini**, dosyaya sağ tıklayın ve **birlikte Aç**' ı seçin.
 
-2. Ile **Aç** iletişim kutusunda, dosyayı açmak için düzenleyiciyi seçin.
+2. **Birlikte Aç** iletişim kutusunda dosyayı ile açmak için düzenleyiciyi seçin.
 
-     Formlar düzenleyicisi gibi birçok Visual Studio düzenleyicisi, kodlamayı otomatik olarak algılar ve dosyayı uygun şekilde açar. Kodlama seçmenize olanak tanıyan bir düzenleyici seçerseniz, **Kodlama** iletişim kutusu görüntülenir.
+     Form Düzenleyicisi gibi birçok Visual Studio Düzenleyicisi, kodlamayı otomatik olarak algılayacak ve dosyayı uygun şekilde açacak. Bir kodlama seçmenize izin veren bir düzenleyici seçerseniz, **kodlama** iletişim kutusu görüntülenir.
 
-3. **Kodlama** iletişim kutusunda, düzenleyicinin kullanması gereken kodlamayı seçin.
+3. **Kodlama** iletişim kutusunda düzenleyicinin kullanması gereken kodlamayı seçin.
 
-## <a name="to-open-an-encoded-file-that-is-not-part-of-a-project"></a>Projenin parçası olmayan kodlanmış bir dosyayı açmak için
+## <a name="to-open-an-encoded-file-that-is-not-part-of-a-project"></a>Bir projenin parçası olmayan kodlanmış bir dosyayı açmak için
 
-1. **Dosya** menüsünde **Aç'ı**işaret edin, **Web'den** **Dosya** veya Dosya'yı seçin ve ardından açmak için dosyayı seçin.
+1. **Dosya** menüsünde **Aç**' ın üzerine gelin, Web 'den **Dosya** veya **Dosya**' yı seçin ve ardından açılacak dosyayı seçin.
 
-2. **Aç** düğmesinin yanındaki açılır düğmeyi tıklatın ve **Ile Aç'ı**seçin.
+2. **Aç** düğmesinin yanındaki açılan düğmeye tıklayın ve **birlikte Aç**' ı seçin.
 
-3. Önceki yordamdan 2 ve 3 adımlarını izleyin.
+3. Yukarıdaki yordamda 2. ve 3. adımları izleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kodlama ve satır sonları](encodings-and-line-breaks.md)
-- [Kodlama ve Windows Formlar küreselleşme](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)
-- [Uygulamaları küreselleştirin ve yerelleştirin](../ide/globalizing-and-localizing-applications.md)
+- [Kodlama ve Windows Forms Genelleştirme](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)
+- [Uygulamaları globalize ve yerelleştirme](../ide/globalizing-and-localizing-applications.md)

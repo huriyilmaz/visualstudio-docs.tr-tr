@@ -1,7 +1,7 @@
 ---
-title: Yardım Görüntüleyici dizinini kullanın
+title: Yardım Görüntüleyicisi dizinini kullan
 ms.date: 11/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Index tab [Help Viewer]
 - Help Viewer, using the index
@@ -15,70 +15,70 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f80b0d63bc7e7fdb89f69607e4529e18f26cc30
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: ff72fc3e65b48e195c8ffc9587bdbb3c5fc382be
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825938"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284964"
 ---
-# <a name="find-topics-by-using-the-help-viewer-index"></a>Yardım Görüntüleyici dizinini kullanarak, konu Bul
+# <a name="find-topics-by-using-the-help-viewer-index"></a>Yardım Görüntüleyicisi dizinini kullanarak konu bulma
 
-Dizin, yüklü içeriği konularındaki ile ilişkili anahtar sözcüklerin listesini içerir. Kendisiyle ilişkili birden fazla anahtar sözcüğü her konu olabilir ve her anahtar sözcüğün birden fazla konu ile ilişkili olabilir. Bu dizin, dizin bir kitap kullandığınız gibi aynı şekilde kullanın.
+Dizin, yüklü içerikteki konularda ilişkili anahtar sözcüklerin bir listesini içerir. Her konunun kendisiyle ilişkili birden fazla anahtar sözcüğü olabilir ve her anahtar sözcük birden fazla konuyla ilişkilendirilebilir. Bu dizini, bir kitapta Dizin kullandığınız şekilde kullanın.
 
-## <a name="to-find-a-topic-by-using-the-index"></a>Dizini kullanarak bir konu bulunamadı
+## <a name="to-find-a-topic-by-using-the-index"></a>Dizini kullanarak bir konu bulmak için
 
-Üzerinde **dizin** sekmesinde, aşağıdaki görevlerden birini gerçekleştirin:
+**Dizin** sekmesinde, aşağıdaki görevlerden birini gerçekleştirin:
 
-- Metin kutusuna aramak için anahtar sözcüğü belirtin. Örneğin, anahtar sözcükler "güncelleştir"güncelleştirme"," gibi konularda bulmak için "güncelleştir" ve "güncelleştiriliyor." belirtin
+- Metin kutusunda aranacak anahtar sözcüğünü belirtin. Örneğin, "güncelleştirme", "güncelleştirilmiş" ve "güncelleştirme" gibi anahtar kelimelerle ilgili konuları bulmak için "Güncelleştir" i belirtin.
 
-    Sekme üst kısmındaki filtre düğmesini seçerek, belirttiğiniz metni içeren tüm girişleri veya yalnızca belirttiğiniz metni içeren başlangıç girişleri görüntüleyebilirsiniz.
+    Sekmenin üst kısmında bulunan filtre düğmesini seçerek, belirttiğiniz metni içeren tüm girişleri veya yalnızca belirttiğiniz metinle başlayan girdileri gösterebilirsiniz.
 
     > [!NOTE]
-    > Filtre düğmesine daha koyu bir kenarlık arka plan üzerinde göründüğünde girdileri gerekir _içeren_ belirttiğiniz metni. Kenarlık ve arka plan görünmüyorsa girdileri gerekir _başlayın_ belirttiğiniz metni.
+    > Filtre düğmesi kenarlıklı daha koyu bir arka planda göründüğünde, girişlerin belirttiğiniz metni _içermesi_ gerekir. Arka plan ve kenarlık görünmezse, girişlerin belirttiğiniz metinle _başlaması_ gerekir.
 
-- Dizin gidin ve bir anahtar seçin.
+- Dizinde ilerleyin ve bir anahtar sözcük seçin.
 
-    Belirttiğiniz anahtar sözcüğü yalnızca bir konu ile ilişkili ise, görünür. Aksi halde, anahtar sözcüğü ile ilişkili olan tüm konuların listesi görüntülenir.
+    Belirttiğiniz anahtar sözcük yalnızca bir konuyla ilişkiliyse, görüntülenir. Aksi takdirde, bu anahtar sözcükle ilişkili tüm konuların listesi görüntülenir.
 
 ## <a name="index-search-tips"></a>Dizin arama ipuçları
 
-Dizini kullanarak basit bir işlemdir; ancak nasıl en iyi anahtar sözcükleri girin anlama dizin aramalarınızı daha verimli hale getirebilir.
+Dizinin kullanılması, normal ileri sarma işlemidir; Ancak, anahtar sözcüklerin en iyi şekilde nasıl kullanılacağını anlamak, Dizin aramalarını daha üretken hale getirir.
 
 ### <a name="general-guidelines"></a>Genel yönergeler
 
-- Dizin girişlerini gözden geçirdiğiniz. Tüm konuları aynı şekilde dizine eklenir ve en çok yardımcı olabilecek bir liste beklediğinizden daha düşük veya yüksek olabilir.
+- Dizin girişlerinde ilerleyin. Tüm konuların hepsi aynı şekilde dizinlenmez ve en çok yardımcı olabilecek bir liste, beklediğinizden daha yüksek veya daha düşük olabilir.
 
-- Dizin yok saymasıdır çünkü makaleleri gibi "bir" veya "" atlayın.
+- "A" veya "The" gibi makaleleri atlayın, çünkü dizin onları yoksayar.
 
-- Beklediğiniz girişleri bulamazsanız, girdiğiniz sözcük tersine çevirir.
+- İstediğiniz girdileri bulamazsanız, girdiğiniz sözcükleri ters çevirin.
 
-    Örneğin, "satır içi derleme kodunda hata ayıklama" tüm ilgili girişler görüntülenmiyorsa, yazmak, "hata ayıklama satır içi bütünleştirilmiş kodu" deneyin.
+    Örneğin, "satır içi derleme kodu" hata ayıklaması ", herhangi bir ilgili girişi görüntülemedığında," derleme kodu, hata ayıklama satır içi "yazarak yazmayı deneyin.
 
-- Filtreleri ile **dizin** sonuçları sayısını azaltmak için sekmesinde.
+- Sonuçların sayısını azaltmak için **Dizin** sekmesi ile filtreler kullanın.
 
 ### <a name="syntax-tips"></a>Söz dizimi ipuçları
 
-Bir giriş için bir sözcük veya tümcecik girdiğiniz bulamazsanız, aşağıdakileri deneyin:
+Girdiğiniz sözcük veya tümcecik için bir giriş bulamazsanız, aşağıdakileri deneyin:
 
-- İlk birkaç harfini veya sözcük kökü yazın. Kısmi bir dize girerek, tekil veya çoğul sözcüklerle dizine konulara alabilirsiniz.
+- Sözcüğün ilk birkaç harfini veya kökünü yazın. Kısmi bir dize girerek, tekil veya plural olan anahtar sözcüklerle dizine alınmış konulara gidebilirsiniz.
 
-    Örneğin, özellikler ve özellik yukarıda aramayı başlatmak için "Özellikleri" girin.
+    Örneğin, aramanızı Özellikler ve özellik üzerinde başlatmak için "propert" yazın.
 
-- Gerund girin (-ing) tamamlamak için istediğiniz görev için fiili biçimleri. Daha özel dizin girdileri bulmak için tam olarak aradığınız şeyi açıklayan bir sözcük ekleyin.
+- Tamamlanmasını istediğiniz görevin fiili (-İng) biçimlerini girin. Daha belirli dizin girdilerini bulmak için tam olarak istediğiniz şeyi açıklayan bir sözcük ekleyin.
 
-    Örneğin, daha fazla girişleri veya "çalışan programlar" almak için "çalışıyor" yazın. daha az alınamıyor.
+    Örneğin, daha az sayıda giriş yapmak için "çalışıyor" yazın veya daha az bilgi almak için "çalışan programlar" yazın.
 
-- Tek başına sıfat girin. Sonuçları daraltmak için tam olarak aradığınız şeyi açıklayan bir sözcük ekleyin.
+- Tek başına sıfatlar girin. Sonuçları daraltmak için tam olarak istediğiniz şeyi açıklayan bir sözcük ekleyin.
 
-    Örneğin, "Veya"COM + bileşenleri"girişleri geniş kapsamlı almak için com" girin daha az alınamıyor.
+    Örneğin, çok daha az sayıda giriş veya "COM+ bileşeni" almak için "COM+" yazın.
 
-- Bir eş anlamlı sözcük veya aradığınız fiili girin.
+- Aradığınız sözcüğün veya fiilin eşanlamlısını girin.
 
-    Örneğin, "oluşturma" terimi girdiyseniz, "oluşturmayı" deneyin.
+    Örneğin, "derleniyor" terimini girdiyseniz bunun yerine "oluşturma" seçeneğini deneyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: TOC içinde konuları bulun](../help-viewer/find-topics-toc.md)
-- [Nasıl yapılır: Konu arayın](../help-viewer/find-topics.md)
+- [Nasıl yapılır: TOC 'de konu bulma](../help-viewer/find-topics-toc.md)
+- [Nasıl yapılır: konu arama](../help-viewer/find-topics.md)
 - [Microsoft Yardım Görüntüleyicisi](../help-viewer/overview.md)

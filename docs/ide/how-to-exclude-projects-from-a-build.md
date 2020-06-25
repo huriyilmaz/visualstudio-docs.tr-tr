@@ -1,74 +1,74 @@
 ---
-title: 'Nasıl yapılsın: Projeleri yapıdan hariç tutma'
+title: 'Nasıl yapılır: bir derlemeden projeleri hariç tutma'
 ms.date: 11/04/2016
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 17a837ca-5db9-46cd-b5a7-b14ad1d2c47d
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a19c49482c45aa0a3cf5d7cb33eb106adb65b83b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c30dd912378fd933d29bff1d8828f31de58f9afa
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114807"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284327"
 ---
-# <a name="how-to-exclude-projects-from-a-build"></a>Nasıl yapılsın: Projeleri yapıdan hariç tutma
+# <a name="how-to-exclude-projects-from-a-build"></a>Nasıl yapılır: bir derlemeden projeleri hariç tutma
 
-İçerdiği tüm projeleri oluşturmadan bir çözüm oluşturabilirsiniz. Örneğin, yapıyı bozan bir projeyi hariç tutabilirsiniz. Daha sonra, sorunları araştırdıktan ve ele aldıktan sonra projeyi oluşturabilirsiniz.
+Bir çözümü, içerdiği tüm projeleri oluşturmadan oluşturabilirsiniz. Örneğin, derlemeyi kesen bir projeyi dışlayabilirsiniz. Ardından, sorunları araştırıp ve adresledikten sonra projeyi derleyebilirsiniz.
 
-Aşağıdaki yaklaşımları alarak bir projeyi hariç tutabilirsiniz:
+Aşağıdaki yaklaşımlardan yararlanarak bir projeyi hariç bırakabilirsiniz:
 
-- Etkin çözüm yapılandırmasından geçici olarak kaldırma.
+- Etkin çözüm yapılandırmasından geçici olarak kaldırılıyor.
 
 - Projeyi içermeyen bir çözüm yapılandırması oluşturma.
 
-Daha fazla bilgi için yapı [yapılandırmalarını anlayın.](../ide/understanding-build-configurations.md)
+Daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md).
 
-## <a name="to-temporarily-remove-a-project-from-the-active-solution-configuration"></a>Bir projeyi etkin çözüm yapılandırmasından geçici olarak kaldırmak için
+## <a name="to-temporarily-remove-a-project-from-the-active-solution-configuration"></a>Etkin çözüm yapılandırmasından bir projeyi geçici olarak kaldırmak için
 
-1. Menü çubuğunda**Yapı Yapılandırma Yöneticisi'ni** **seçin.** > 
+1. Menü çubuğunda Configuration Manager **Oluştur**' u seçin  >  **Configuration Manager**.
 
-2. Proje **bağlamları** tablosunda, oluşturmaktan hariç tutmak istediğiniz projeyi bulun.
+2. **Proje bağlamları** tablosunda, derlemeden dışlamak istediğiniz projeyi bulun.
 
-3. Proje için **Yapı** sütununda onay kutusunu temizleyin.
+3. Projenin **Build** sütununda, onay kutusunun işaretini kaldırın.
 
-4. **Kapat** düğmesini seçin ve ardından çözümü yeniden oluşturun.
+4. **Kapat** düğmesini seçin ve çözümü yeniden derleyin.
 
 ## <a name="to-create-a-solution-configuration-that-excludes-a-project"></a>Projeyi dışlayan bir çözüm yapılandırması oluşturmak için
 
-1. Menü çubuğunda**Yapı Yapılandırma Yöneticisi'ni** **seçin.** > 
+1. Menü çubuğunda Configuration Manager **Oluştur**' u seçin  >  **Configuration Manager**.
 
-2. Etkin **çözüm yapılandırma** listesinde ** \<Yeni>'yi **seçin.
+2. **Etkin çözüm yapılandırması** listesinde, öğesini seçin **\<New>** .
 
-3. **Ad** kutusuna, çözüm yapılandırması için bir ad girin.
+3. **Ad** kutusuna çözüm yapılandırması için bir ad girin.
 
-4. Listeden **Kopya ayarlarında,** yeni yapılandırmayı (örneğin **Hata Ayıklama)** temel almak istediğiniz çözüm yapılandırmasını seçin ve ardından **Tamam** düğmesini seçin.
+4. **Ayarları Şuradan Kopyala** listesinden, yeni yapılandırmayı temel almak istediğiniz çözüm yapılandırmasını seçin (örneğin, **hata ayıklama**) ve sonra **Tamam** düğmesini seçin.
 
-5. Configuration **Manager** iletişim kutusunda, hariç tutmak istediğiniz proje için **Yapı** sütunundaki onay kutusunu temizleyin ve ardından **Kapat** düğmesini seçin.
+5. **Configuration Manager** iletişim kutusunda, dışlamak Istediğiniz projenin **Build** sütunundaki onay kutusunun Işaretini kaldırın ve sonra **Kapat** düğmesini seçin.
 
-6. **Standart** araç çubuğunda, yeni çözüm yapılandırmasının **Çözüm Yapılandırmaları** kutusundaki etkin yapılandırma olduğunu doğrulayın.
+6. **Standart** araç çubuğunda, yeni çözüm yapılandırmasının **çözüm yapılandırmaları** kutusunda etkin yapılandırma olduğunu doğrulayın.
 
-7. Menü çubuğunda, **Çözüm** > **Oluştur'u**seçin.
+7. Menü çubuğunda **derleme**  >  **yeniden oluşturma çözümü**' ni seçin.
 
 ## <a name="skipped-projects"></a>Atlanan projeler
 
-Projeler, güncel olmadıkları veya yapılandırmanın dışında tutuldukları için yapı sırasında atlanabilir. Visual Studio, projelerinizi oluşturmak için MSBuild'i kullanır. MSBuild yalnızca dosya zaman damgaları tarafından belirlendiği gibi, çıktı girişten daha eskiyse bir hedef oluşturur. Yeniden oluşturmayı zorlamak **için, Rebuild** > **Solution**komutunu kullanın.
+Projeler, güncel olmadıkları veya yapılandırmadan dışlandığı için derleme sırasında atlanabilir. Visual Studio, projelerinizi derlemek için MSBuild kullanır. MSBuild, dosya zaman damgalarına göre belirlendiği şekilde yalnızca çıkış girdiden eskiyse bir hedef oluşturur. Yeniden derlemeyi zorlamak için, **derleme**  >  **yeniden oluşturma çözümünü**kullanın.
 
-**Çıktı** penceresinin **Yapı** bölmesinde Visual Studio, güncel olan proje sayısını, başarıyla oluşturulmuş olan sayısını, başarısız olan sayıyı ve atlanan sayıyı bildirir. Atlanan sayım, güncel oldukları için oluşturulmayan projeleri içermez. Projeler etkin yapılandırmanın dışında kaldığında, yapı sırasında atlanır. Yapı çıktısında, projenin atlalı olduğunu belirten bir ileti görürsünüz:
+**Çıkış** penceresinin **derleme** bölmesinde, Visual Studio güncel olan proje sayısını, başarıyla oluşturulan sayıyı, başarısız olan sayıyı ve atlanan sayıyı raporlar. Atlanan sayı, güncel olduklarından derlenmediği projeleri içermiyor. Projeler etkin yapılandırmadan dışlandıklarında, derleme sırasında atlanır. Yapı çıkışında, projenin atlandığını belirten bir ileti görürsünüz:
 
 ```output
 2>------ Skipped Build: Project: ConsoleApp2, Configuration: Debug x86 ------
 2>Project not selected to build for this solution configuration
 ```
 
-Projenin neden atlandığını öğrenmek için etkin yapılandırmayı`Debug x86` (önceki örnekte) not edin ve **Yapı** > **Yapılandırma Yöneticisi'ni**seçin. Bu makalede belirtildiği gibi, her yapılandırma için hangi projelerin atlandığı görüntüleyebilir veya değiştirebilirsiniz.
+Projenin neden atlandığını öğrenmek için etkin yapılandırmayı ( `Debug x86` Önceki örnekte) ve **derleme**  >  **Configuration Manager**' yı seçin. Bu makalede anlatıldığı gibi her yapılandırma için hangi projelerin atlandığını görüntüleyebilir veya değiştirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md)
-- [Nasıl yapılı: Yapılandırmalar oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md)
-- [Nasıl yapılı: Aynı anda birden çok yapılandırma oluşturma](../ide/how-to-build-multiple-configurations-simultaneously.md)
+- [Nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md)
+- [Nasıl yapılır: aynı anda birden fazla yapılandırma derleme](../ide/how-to-build-multiple-configurations-simultaneously.md)

@@ -1,6 +1,6 @@
 ---
-title: Oluşturucudan özel alan oluşturma
-ms.date: 03/10/2020
+title: Oluşturucudan özel alan ve Özellik Oluştur
+ms.date: 06/20/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
@@ -10,34 +10,34 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4eb5dd39d0fb2d4cd9ba8ade0d0408d6e36a4854
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 56bd361d2bffb4ff17b03ac6743837032d1934e1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094023"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283729"
 ---
-# <a name="generate-private-field-from-constructor"></a>Oluşturucudan özel alan oluşturma
+# <a name="generate-private-field-and-property-from-constructor"></a>Oluşturucudan özel alan ve Özellik Oluştur
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir: 
+Bu yeniden düzenleme için geçerlidir: 
 
 - C# 
 
-- Visual Basic
+**Ne:** Bir oluşturucudan özel bir alan veya özellik oluşturun. 
 
-**Ne:** Bir oluşturucudan özel alan oluşturun. 
+**Ne zaman:** Bir oluşturucudan bir özel alanı veya özelliği hızlıca eklemek ve başlatmak istiyorsunuz.
 
-**Ne zaman:** Hızlı bir şekilde bir oluşturucu özel bir alan eklemek istiyorum.
-
-**Neden:** Özel alanlar yazmak zaman alıcı ve yinelenen olabilir. Bu refactoring kullanarak hızlı ve program daha sağlam hale getirir.
+**Neden:** Özel alanlar ve Özellikler yazmak zaman alabilir ve tekrarlı olabilir. Bu yeniden düzenlemenin kullanılması hızlıdır ve programı daha sağlam hale getirir.
 
 ## <a name="how-to"></a>Nasıl yapılır 
 
-1. İmlecinizi oluşturucunun içindeki parametre adı üzerine yerleştirin.
+1. İmlecinizi Oluşturucu içindeki parametre adına yerleştirin.
 
-2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
    
-3. Alan Oluşturma **ve başlatma**seçeneğini seçin.
+3. Daha sonra aşağıdakilerden birini seçin:
+
+- **Alan oluşturun ve başlatın** veya **özellik oluşturun ve başlatın**.
 
    ![Oluşturucudan özel alan oluşturma](media/generate-private-field-from-constructor.png)
 

@@ -1,7 +1,7 @@
 ---
-title: Verilere denetimler bağlama
+title: Denetimleri verilere bağlama
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - data, displaying
 - data sources, displaying data
@@ -13,58 +13,58 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9e0746de34a16dc181baff3c8b843b123c2ae434
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3d812316de46caf7480146003f7ba1950ae3b9e2
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587036"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283040"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere denetimler bağlama
 
-Denetimlere veri bağlama ile uygulamanızın kullanıcılarına verileri görüntüleyebilirsiniz. **Veri kaynakları** penceresinden öğeleri, Visual Studio 'daki bir yüzey üzerindeki bir tasarım yüzeyine veya denetimlerine sürükleyerek bu veriye bağlı denetimler oluşturabilirsiniz.
+Verileri denetimlere bağlayarak uygulamanızın kullanıcılarına verileri görüntüleyebilirsiniz. **Veri kaynakları** penceresinden öğeleri, Visual Studio 'daki bir yüzey üzerindeki bir tasarım yüzeyine veya denetimlerine sürükleyerek bu veriye bağlı denetimler oluşturabilirsiniz.
 
-Bu konu, veriye bağlı denetimler oluşturmak için kullanabileceğiniz veri kaynaklarını anlatmaktadır. Ayrıca veri bağlamaya dahil edilen genel görevlerden bazılarını açıklar. Verilere bağlı denetimler oluşturma hakkında daha özel ayrıntılar için bkz [Visual Studio'da verilere Windows Forms bağlama denetimleri](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) ve [Visual Studio'da veri bağlama WPF denetimleri](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
+Bu konuda, veri bağlantılı denetimler oluşturmak için kullanabileceğiniz veri kaynakları açıklanmaktadır. Ayrıca, Veri bağlamada yer alan genel görevlerden bazılarını açıklar. Veriye bağlı denetimler oluşturma hakkında daha ayrıntılı bilgi için bkz. [Visual Studio 'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md) ve [Visual STUDIO 'daki verilere WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md).
 
 ## <a name="data-sources"></a>Veri kaynakları
 
-Veri bağlama bağlamında Kullanıcı Arabiriminizin bağlı bellek verileri bir veri kaynağını temsil eder. Pratikte, bir veri kaynağı bir varlık çerçevesi sınıfı, bir veri kümesi, bir .NET proxy nesnesi, bir LINQ to SQL sınıfı veya herhangi bir .NET nesne veya koleksiyon kapsüllenir bir hizmet uç noktası olabilir. Öğe sürükleyerek veriye bağlı denetimler oluşturmak bazı veri kaynakları etkinleştirmeniz **veri kaynakları** desteklerken diğer veri kaynakları penceresi. Aşağıdaki tabloda, hangi veri kaynaklarının desteklendiğini göstermektedir.
+Veri bağlama bağlamında, veri kaynağı, Kullanıcı arabiriminize bağlanabilen bellekteki verileri temsil eder. Pratik koşullarda, bir veri kaynağı bir Entity Framework sınıfı, bir veri kümesi, bir .NET proxy nesnesinde veya bir LINQ to SQL sınıfında veya herhangi bir .NET nesne veya koleksiyonda kapsüllenmiş bir hizmet uç noktası olabilir. Bazı veri kaynakları, verileri **veri kaynakları** penceresinden sürükleyerek, diğer veri kaynakları olmasa da veri bağlantılı denetimler oluşturmanıza olanak sağlar. Aşağıdaki tabloda hangi veri kaynaklarının desteklendiği gösterilmektedir.
 
-| Veri kaynağı | Sürükle ve bırak desteği **Windows Form Tasarımcısı** | Sürükle ve bırak desteği **WPF Tasarımcısı** | Sürükle ve bırak desteği **Silverlight Tasarımcısı** |
+| Veri kaynağı | **Windows Form Tasarımcısı için** sürükle ve bırak desteği | **WPF Tasarımcısında** sürükle ve bırak desteği | **Silverlight tasarımcısında** sürükle ve bırak desteği |
 | - | - | - | - |
-| Veri kümesi | Evet | Evet | Hayır |
-| Varlık Veri Modeli | Evet<sup>1</sup> | Evet | Evet |
-| LINQ to SQL sınıfları | Hayır<sup>2</sup> | Hayır<sup>2</sup> | Hayır<sup>2</sup> |
-| Hizmetler (dahil olmak üzere [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], WCF hizmetleri ve web Hizmetleri) | Evet | Evet | Evet |
-| Nesne | Evet | Evet | Evet |
-| SharePoint | Evet | Evet | Evet |
+| Veri kümesi | Yes | Evet | Hayır |
+| Varlık Veri Modeli | Evet<sup>1</sup> | Yes | Yes |
+| LINQ to SQL sınıfları | <sup>2</sup> yok | <sup>2</sup> yok | <sup>2</sup> yok |
+| Hizmetler ( [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] WCF Hizmetleri ve Web Hizmetleri dahil) | Yes | Yes | Yes |
+| Nesne | Yes | Yes | Yes |
+| SharePoint | Yes | Yes | Yes |
 
-1. Kullanarak modeli oluşturma **varlık veri modeli** Sihirbazı'nı, ardından bu nesneleri tasarımcıya sürükleyebilirsiniz.
+1. **Varlık veri modeli** Sihirbazı 'nı kullanarak modeli oluşturun ve ardından bu nesneleri tasarımcıya sürükleyin.
 
-2. LINQ to SQL sınıfları görünmez **veri kaynakları** penceresi. Ancak LINQ to SQL sınıflarını temel alan yeni bir nesne veri kaynağı ekleyin ve ardından bu nesneleri tasarımcıya verilere bağlı denetimler oluşturmak için sürükleyin. Daha fazla bilgi için [izlenecek yol: oluşturma LINQ to SQL sınıfları (O R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).
+2. LINQ to SQL sınıfları **veri kaynakları** penceresinde görünmez. Ancak, LINQ to SQL sınıfları temel alan yeni bir nesne veri kaynağı ekleyebilirsiniz ve ardından bu nesneleri tasarımcıya sürükleyerek veriye bağlı denetimler oluşturabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: LINQ to SQL sınıfları oluşturma (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).
 
 ## <a name="data-sources-window"></a>Veri Kaynakları penceresi
 
-Veri kaynakları projenize kullanılabilir öğeleri olarak **veri kaynakları** penceresi. Bu pencere, form tasarım yüzeyi projenizdeki etkin pencere olduğunda görünür veya **diğer Windows** > **veri kaynaklarını** **görüntüle** > öğesini seçerek açabilir (bir proje açıldığında). Temel alınan verilere bağlı denetimler oluşturmak için bu pencereden öğe sürükleyebilirsiniz ve sağ tıklayarak veri kaynakları da yapılandırabilirsiniz.
+Veri kaynakları, projenizde **veri kaynakları** penceresinde öğeler olarak kullanılabilir. Bu pencere, form tasarım yüzeyi projenizdeki etkin pencere olduğunda görünür veya **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek (proje açıkken) açabilirsiniz. Bu penceredeki öğeleri, temel alınan verilere bağlanan denetimler oluşturmak için sürükleyebilir ve sağ tıklayarak da veri kaynaklarını yapılandırabilirsiniz.
 
 ![Veri Kaynakları penceresi](../data-tools/media/raddata-data-sources-window.png)
 
-Görüntülenen her bir veri türü için **veri kaynakları** penceresinde varsayılan denetim öğeyi tasarımcıya sürüklediğinizde oluşturulur. Bir öğeyi **veri kaynakları** penceresinden sürüklemeden önce, oluşturulan denetimi değiştirebilirsiniz. Daha fazla bilgi için [veri kaynakları penceresinden sürüklendiğinde oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
+**Veri kaynakları** penceresinde görüntülenen her veri türü için, öğeyi tasarımcıya sürüklediğinizde varsayılan bir denetim oluşturulur. Bir öğeyi **veri kaynakları** penceresinden sürüklemeden önce, oluşturulan denetimi değiştirebilirsiniz. Daha fazla bilgi için bkz. [veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-## <a name="tasks-involved-in-binding-controls-to-data"></a>Denetimleri verilere bağlamada kullanılan görevler
+## <a name="tasks-involved-in-binding-controls-to-data"></a>Denetimlere veri bağlama ile ilgili görevler
 
-Aşağıdaki tablo bazı listeler denetimleri verilere bağlamak için gerçekleştirdiğiniz en yaygın görevleri.
+Aşağıdaki tabloda, denetimleri verilere bağlamak için gerçekleştirdiğiniz en yaygın görevlerden bazıları listelenmektedir.
 
 |Görev|Daha fazla bilgi|
 |----------| - |
-|Açık **veri kaynakları** penceresi.|Bir tasarım yüzeyine Düzenleyicisi'nde açın ve seçin **görünümü** > **veri kaynakları**.|
-|Bir veri kaynağını projenize ekleyin.|[Yeni veri kaynağı ekleme](../data-tools/add-new-data-sources.md)|
-|Bir öğe sürüklerken oluşturulan denetimi ayarlama **veri kaynakları** penceresinden tasarımcıya.|[Deneti veri kaynakları penceresinden sürüklendiğinde oluşturulacak şekilde ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|
-|Öğelerle ilişkili denetimlerin listesini değiştirin **veri kaynakları** penceresi.|[Veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md)|
-|Verilere bağlı denetimler oluşturun.|[Visual Studio'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)<br /><br /> [Visual Studio'da verilere WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)|
-|Bir nesnede veya koleksiyonda bağlayın.|[Visual Studio'da nesne bağlama](../data-tools/bind-objects-in-visual-studio.md)|
-|Kullanıcı Arabiriminde görüntülenen verileri filtreleyin.|[Bir Windows Forms uygulamasındaki verileri filtreleme ve sıralama](../data-tools/filter-and-sort-data-in-a-windows-forms-application.md)|
-|Açıklamalı alt yazılar denetimleri için özelleştirin.|[Visual Studio'nun verilere bağlı denetimler için başlık oluşturma biçimini özelleştirme](../data-tools/customize-how-visual-studio-creates-captions-for-data-bound-controls.md)|
+|**Veri kaynakları** penceresini açın.|Düzenleyicide bir tasarım yüzeyi açın ve **View**  >  **veri kaynaklarını**görüntüle ' yi seçin.|
+|Projenize bir veri kaynağı ekleyin.|[Yeni veri kaynağı ekleme](../data-tools/add-new-data-sources.md)|
+|**Veri kaynakları** penceresinden tasarımcıya bir öğe sürüklediğinizde oluşturulan denetimi ayarlayın.|[Veri Kaynakları penceresinden sürüklendiğinde denetimin oluşturulmasını ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)|
+|**Veri kaynakları** penceresindeki öğelerle ilişkili denetimlerin listesini değiştirin.|[Veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md)|
+|Veriye göre bağlantılı denetimler oluşturun.|[Visual Studio'da verilere Windows Forms denetimleri bağlama](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)<br /><br /> [Visual Studio'da verilere WPF denetimleri bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)|
+|Bir nesne veya koleksiyona bağlayın.|[Visual Studio'da nesne bağlama](../data-tools/bind-objects-in-visual-studio.md)|
+|Kullanıcı arabiriminde görünen verileri filtreleyin.|[Bir Windows Forms uygulamasındaki verileri filtreleme ve sıralama](../data-tools/filter-and-sort-data-in-a-windows-forms-application.md)|
+|Denetimler için açıklamalı alt yazıları özelleştirin.|[Visual Studio'nun verilere bağlı denetimler için başlık oluşturma biçimini özelleştirme](../data-tools/customize-how-visual-studio-creates-captions-for-data-bound-controls.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

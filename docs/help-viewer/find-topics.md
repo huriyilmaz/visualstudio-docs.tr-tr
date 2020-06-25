@@ -1,84 +1,84 @@
 ---
-title: Konu (Yardım Görüntüleyicisi) arama
+title: Konu arayın (Yardım Görüntüleyicisi)
 ms.date: 11/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 683f1b0c-1551-4bba-91fe-3855f03fdd69
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 52818e4f676d6ae9f4c02f26ad8e354b206cb2b8
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 4581d7ea0b40e2b6b519f0beafaee8744e0b46c1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67824990"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284925"
 ---
-# <a name="how-to-search-for-topics"></a>Nasıl yapılır: Konu arayın
+# <a name="how-to-search-for-topics"></a>Nasıl yapılır: konu arama
 
-Belirli bir sözcüğün içeren tüm konuları bulmak için tam metin arama özelliğini kullanabilirsiniz. Ayrıca, iyileştirmek ve joker karakter ifadeler, mantıksal işleçler ve Gelişmiş arama işleçlerini kullanarak aramanızı özelleştirin.
+Tam metin arama özelliğini kullanarak belirli bir sözcüğü içeren tüm konuları bulabilirsiniz. Ayrıca joker karakter ifadeleri, mantıksal işleçler ve gelişmiş arama işleçlerini kullanarak aramanızı iyileştirebilirsiniz ve özelleştirebilirsiniz.
 
-Açmak için **arama** sekmesini, **arama** sekmesinde **Yardım Görüntüleyici** penceresinde veya klavye kullanıcısıysanız seçin **Ctrl** + **E**.
+**Arama** sekmesini açmak için **Yardım Görüntüleyicisi** penceresinde **Ara** sekmesini seçin veya bir klavye kullanıcısı kullanıyorsanız **CTRL** + **E**' yi seçin.
 
 ## <a name="to-perform-a-full-text-search"></a>Tam metin araması gerçekleştirmek için
 
 1. Arama kutusuna bulmak istediğiniz sözcüğü yazın.
 
-2. Arama sorgusunda, varsa hangi mantıksal ve Gelişmiş arama işleçleri, aramayı uygulamak için belirtin. Tüm kullanılabilir Yardım aranacak işleçleri kullanmayın.
+2. Arama sorgusunda, arama için hangi mantıksal veya Gelişmiş arama işleçlerinin uygulanacağını belirtin. Tüm kullanılabilir yardımı aramak için işleçleri kullanmayın.
 
     > [!NOTE]
-    > İçinde **Görüntüleyici seçenekleri** iletişim kutusu, bir saat ve birincil yerel ayarınız İngilizce değilse, İngilizce içeriği dahil edilip edilmeyeceğini görüntülemek için arama sonuçlarının maksimum sayısı gibi ek tercihleri belirtebilirsiniz.
+    > **Görüntüleyici seçenekleri** iletişim kutusunda, bir kerede görüntülenecek en fazla arama sonucu sayısı ve birincil yerel ayarınız İngilizce değilse, İngilizce içerik eklenip eklenmeyeceğini gibi ek tercihleri belirtebilirsiniz.
 
-3. Seçin **Enter** anahtarı.
+3. **ENTER** tuşunu seçin.
 
-     Bir arama varsayılan olarak en fazla 200 isabetli okuma sayısının döndürür ve bunları arama sonuçlarını alanında görüntüler. Her sonuç için ek sürüm bilgileri, içeriğe bağlı olarak görüntülenebilir.
+     Arama, varsayılan olarak en fazla 200 isabet döndürür ve bunları arama sonuçları alanında görüntüler. İçeriğe bağlı olarak her bir sonuç için ek sürüm bilgileri görünebilir.
 
-4. Bir konu görüntülemek için sonuçlar listesinden başlığını seçin.
+4. Bir konuyu görüntülemek için, sonuç listesinden başlığını seçin.
 
 ## <a name="full-text-search-tips"></a>Tam metin arama ipuçları
 
-Söz dizimi sorgunuzu etkilemesi anlarsanız, sizi ilgilendiren konular döndüren daha hedeflenen aramaları oluşturabilirsiniz. Sözdizimi, özel karakterler, ayrılmış sözcükleri ve filtreleri içerir. Bu konu, sorgularınızı ipuçları, yordamlar ve kolaylaştırıyor daha iyi yardımcı olacak ayrıntılı sözdizimi bilgiler sağlar.
+Sözdiziminin sorgunuzu nasıl etkilediğini anladıysanız, yalnızca ilgilendiğiniz konuları döndüren daha hedefli aramalar oluşturabilirsiniz. Söz dizimi özel karakterler, ayrılmış sözcükler ve filtreler içerir. Bu konuda, sorgularınızı daha iyi hale getirmenize yardımcı olmak için ipuçları, yordamlar ve ayrıntılı sözdizimi bilgileri sağlanmaktadır.
 
 ### <a name="general-guidelines"></a>Genel yönergeler
 
-Aşağıdaki tabloda, bazı temel kurallara ve arama sorguları Yardımı'nda geliştirmeye yönelik yönergeleri içerir.
+Aşağıdaki tablo, yardım 'da arama sorguları geliştirmeye yönelik bazı temel kuralları ve yönergeleri içerir.
 
-|Sözdizimi|Açıklama|
+|Syntax|Description|
 |------------|-----------------|
-|Büyük/küçük harfe duyarlılık|Aramalar büyük küçük harfe duyarlı değildir. Büyük veya küçük harf karakterler kullanarak arama ölçütlerinizi geliştirin. Örneğin, "OLE" ve "ole" aynı sonuçları döndürür.|
-|Karakter birleşimleri|Yalnızca bireysel harfler için (a-z) arama yapılamıyor veya sayılar (0-9). Aktarmaya çalışırsanız arama belirli gibi "ve", "Kimden" sözcükler ayrılmıştır ve "ile", bunlar yoksayılır. Daha fazla bilgi için [sözcük aramalarına göz ardı](#stopwords) bu konunun devamındaki.|
-|Değerlendirme sırası|Arama sorguları soldan sağa doğru değerlendirilir.|
+|Büyük/küçük harf duyarlılığı|Aramalar büyük/küçük harfe duyarlı değildir. Büyük veya küçük harfli karakterler kullanarak arama ölçütlerinizi geliştirin. Örneğin, "OLE" ve "OLE" aynı sonuçları döndürür.|
+|Karakter birleşimleri|Yalnızca tek harf (a-z) veya sayı (0-9) için arama yapamazsınız. "And", "from" ve "with" gibi belirli ayrılmış kelimeleri aramaya çalışırsanız, bunlar yok sayılır. Daha fazla bilgi için, bu konunun ilerleyen kısımlarında [bulunan aramalardaki kelimelerin yoksayılan sözcükleri](#stopwords) inceleyin.|
+|Değerlendirme sırası|Arama sorguları soldan sağa değerlendirilir.|
 
 ### <a name="search-syntax"></a>Arama söz dizimi
 
-Bu dize, "sözcük1 sözcük2" gibi birden çok sözcük içeren bir arama dizesi belirtirseniz yazmakla eşdeğerdir: "sözcük1 sözcük2 ve", tüm arama dizesindeki kelimeler içeren konuların döndürür.
+"Word1 word2" gibi birden çok sözcük içeren bir arama dizesi belirtirseniz, bu dize "word1 ve word2" yazmakla eşdeğerdir, bu da yalnızca arama dizesindeki tek tek sözcüklerin bulunduğu konuları döndürür.
 
 > [!IMPORTANT]
-> - Deyim aramaları desteklenmiyor. Arama dizesinde birden fazla belirtmeniz durumunda döndürülen konuları tüm belirttiğiniz sözcükleri ancak mutlaka belirttiğiniz terimin içerir.
-> - Mantıksal işleçler, Boole sözcükler arasındaki ilişki belirtmek için kullanın. AND, OR, NOT, gibi mantıksal işleçler içerir ve yakında, daha fazla için aramanızı daraltın. Örneğin, "UNION bildirmek için" arama yaparsanız, arama sonuçlarını sözcükler "bildirim" ve "birleşim" en fazla birkaç sözcük birbirlerinden içeren konuları içerir. Daha fazla bilgi için [arama ifadelerindeki mantıksal işleçler](../help-viewer/logical-operators-search-expressions.md).
+> - Tümcecik aramaları desteklenmez. Bir arama dizesinde birden fazla sözcük belirtirseniz, döndürülen konular belirttiğiniz tüm kelimeleri içerir ancak belirttiğiniz tam ifade değildir.
+> - Arama tümceciğinin kelimeleri arasındaki ilişkiyi belirtmek için mantıksal işleçleri kullanın. Aramanızı daha da belirginleştirmek için ve, veya gibi mantıksal işleçleri dahil edebilirsiniz. Örneğin, "yakın birleşim bildirme" araması yaparsanız, arama sonuçları birbirleriyle "bildirme" ve "Union" sözcüklerini içeren konuları içerir. Daha fazla bilgi için bkz. [arama Ifadelerinde mantıksal işleçler](../help-viewer/logical-operators-search-expressions.md).
 
-### <a name="filters"></a>FilTReleri
+### <a name="filters"></a>Filtreler
 
-Gelişmiş arama işleçleri kullanarak, arama sonuçlarını daha fazla kısıtlayabilirsiniz. Yardımı, tam metin arama sonuçlarını filtrelemek için kullanabileceğiniz üç kategorileri içerir: Başlık, kod ve anahtar sözcüğü.
+Gelişmiş arama işleçlerini kullanarak arama sonuçlarını daha da kısıtlayabilirsiniz. Yardım, tam metin aramasının sonuçlarını filtrelemek için kullanabileceğiniz üç kategori içerir: Başlık, kod ve anahtar sözcük.
 
-### <a name="ranking-of-search-results"></a>Arama Sonuçları sıralama
+### <a name="ranking-of-search-results"></a>Arama sonuçlarının derecelendirmesi
 
-Arama algoritması derece yardımcı olmak için belirli ölçütleri geçerli arama sonuçları daha yüksek veya düşük sonuçlar listesinde. Genel olarak:
+Arama algoritması, arama sonuçlarının sonuçlar listesinde daha yüksek veya daha düşük bir şekilde derecelendirmesine yardımcı olmak için belirli kriterleri uygular. Genel olarak:
 
-1. Başlık arama sözcükleri içeren içerikleri olmayan içerik daha yüksek önem derecesi.
+1. Başlıktaki arama sözcüklerini içeren içerik, olmayan içerikten daha yüksek olarak derecelendirilir.
 
-2. Arama sözcükleri yakınında içeren içerik olmayan içerik daha yüksek önem derecesi.
+2. Yakın yakınlık içinde arama sözcüklerini içeren içerik, olmayan içerikten daha yüksek bir şekilde derecelendirilir.
 
-3. Daha yüksek yoğunlukta arama sözcükleri içeren içeriği daha düşük bir arama sözcükleri yoğunluğu olan içeriği, daha yüksek önem derecesi.
+3. Arama sözcüklerinin daha yüksek bir yoğunluğunu içeren içerik, arama sözcüklerini daha düşük bir yoğunlukta olan içerikten daha yüksek olarak derecelendirilir.
 
-### <a name="stopwords"> Sözcük aramaları (durdurma sözcükleri) yoksayıldı </a>
+### <a name=""></a><a name="stopwords">Aramalardaki sözcükler yoksayıldı (sözcükleri Durdur)</a>
 
-Yaygın olarak karşılaşılan bir sözcük veya durdurma sözcükleri bazen verilen sayılar, otomatik olarak bir tam metin araması sırasında yok sayılır. İfade "geçiş" için arama yaparsanız, örneğin, arama sonuçlarını "geçiş" sözcüğünü içeren konuların değil "ile ancak" görüntüler.
+Genellikle durdurma kelimeleri olarak adlandırılan yaygın olarak oluşan sözcükler veya sayılar, tam metin araması sırasında otomatik olarak yoksayılır. Örneğin, "pass through" ifadesini arıyorsanız, arama sonuçları "pass" sözcüğünü içeren, ancak "Through" sözcüğünü içeren konuları görüntüler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Mantıksal ve Gelişmiş işleçler](../help-viewer/logical-operators-search-expressions.md)
-- [Nasıl yapılır: Dizinde konu Bul](../help-viewer/find-topics-index.md)
-- [Nasıl yapılır: TOC içinde konuları bulun](../help-viewer/find-topics-toc.md)
+- [Mantıksal ve gelişmiş işleçler](../help-viewer/logical-operators-search-expressions.md)
+- [Nasıl yapılır: dizinde konu bulma](../help-viewer/find-topics-index.md)
+- [Nasıl yapılır: TOC 'de konu bulma](../help-viewer/find-topics-toc.md)
 - [Microsoft Yardım Görüntüleyicisi](../help-viewer/overview.md)

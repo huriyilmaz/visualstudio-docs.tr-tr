@@ -1,7 +1,7 @@
 ---
 title: Bir TableAdapter’ın işlevselliğini genişletme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 34a5c1601071a36ca11005503e2f443a72ca3dfe
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 245ea6791fde96c1ff08d43d138c522f43749c6b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586646"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282429"
 ---
 # <a name="extend-the-functionality-of-a-tableadapter"></a>Bir TableAdapter’ın işlevselliğini genişletme
 
@@ -32,17 +32,17 @@ Kısmi sınıflar, belirli bir sınıf için kodun birden fazla fiziksel Dosya a
 
 ## <a name="locate-tableadapters-in-code"></a>Kodda TableAdapters bulma
 
-TableAdapters, **veri kümesi Tasarımcısı**ile tasarlanırken, oluşturulan TableAdapter sınıfları <xref:System.Data.DataSet>iç içe geçmiş sınıfları değildir. TableAdapters, TableAdapter 'ın ilişkili veri kümesinin adını temel alan bir ad alanında bulunur. Örneğin, uygulamanız `HRDataSet`adlı bir veri kümesi içeriyorsa, TableAdapters ad alanında yer `HRDataSetTableAdapters` alır. (Adlandırma kuralı şu düzene uyar: *DataSetName* + `TableAdapters`).
+TableAdapters, **veri kümesi Tasarımcısı**ile tasarlanırken, oluşturulan TableAdapter sınıfları iç içe geçmiş sınıfları değildir <xref:System.Data.DataSet> . TableAdapters, TableAdapter 'ın ilişkili veri kümesinin adını temel alan bir ad alanında bulunur. Örneğin, uygulamanız adlı bir veri kümesi içeriyorsa `HRDataSet` , TableAdapters `HRDataSetTableAdapters` ad alanında yer alır. (Adlandırma kuralı şu düzene uyar: *DataSetName*  +  `TableAdapters` ).
 
-Aşağıdaki örnek, `CustomersTableAdapter`adlı bir TableAdapter `NorthwindDataSet`bir projede olduğunu varsayar.
+Aşağıdaki örnek, adlı bir TableAdapter `CustomersTableAdapter` 'ın ile bir projede olduğunu varsayar `NorthwindDataSet` .
 
 ### <a name="to-create-a-partial-class-for-a-tableadapter"></a>TableAdapter için kısmi bir sınıf oluşturmak için
 
 1. **Proje** menüsüne gidip **Sınıf Ekle**öğesini seçerek projenize yeni bir sınıf ekleyin.
 
-2. `CustomersTableAdapterExtended`sınıfı adlandırın.
+2. Sınıfı adlandırın `CustomersTableAdapterExtended` .
 
-3. **Add (Ekle)** seçeneğini belirleyin.
+3. **Ekle**'yi seçin.
 
 4. Kodu, projeniz için doğru ad alanı ve kısmi sınıf adı ile aşağıdaki gibi değiştirin:
 

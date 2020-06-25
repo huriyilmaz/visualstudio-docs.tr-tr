@@ -1,7 +1,7 @@
 ---
 title: Proje şablonları oluşturma
 ms.date: 01/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.ExportTemplateWizard
 helpviewer_keywords:
@@ -9,60 +9,60 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: f4caebfdc4e61b683e0f1407d1522f6da2328fcf
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e6f168244971a348cdb7938af463538d0fa2acaf
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591079"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284392"
 ---
-# <a name="how-to-create-project-templates"></a>Nasıl yapılı: Proje şablonları oluşturma
+# <a name="how-to-create-project-templates"></a>Nasıl yapılır: proje şablonları oluşturma
 
-Bu konu, şablonunuzu *.zip* dosyasında paketlereden **Dışa Aktarma Şablonu Sihirbazı'nı**kullanarak şablon oluşturmayı gösterir.
+Bu konu başlığı altında, şablonunuzu bir *. zip* dosyasında paketleyen **şablonu dışarı aktarma Sihirbazı 'nı**kullanarak nasıl şablon oluşturacağınız gösterilmektedir.
 
-## <a name="use-the-export-template-wizard"></a>Dışa Aktarma Şablonu Sihirbazı'nı kullanma
+## <a name="use-the-export-template-wizard"></a>Şablonu dışarı aktarma Sihirbazı 'Nı kullanma
 
 1. Bir proje oluşturun.
 
     > [!NOTE]
-    > Şablonun kaynağı olacak bir projeyi adlandırırken yalnızca geçerli tanımlayıcı karakterleri kullanın. Aksi takdirde, şablondan oluşturulan projelerde derleme hataları oluşabilir. Geçerli tanımlayıcı karakterler hakkında daha fazla bilgi için, [Bildirilen öğe adları (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/declared-elements/declared-element-names) veya [Tanımlayıcılar (C++)](/cpp/cpp/identifiers-cpp)bakın. Alternatif olarak, sınıflar ve ad alanları için "güvenli" adlar kullanmak için [Şablon parametrelerini](../ide/template-parameters.md) kullanabilirsiniz.
+    > Bir şablon için kaynak olacak bir proje adlandırırken yalnızca geçerli tanımlayıcı karakterler kullanın. Aksi takdirde, şablondan oluşturulan projelerde derleme hataları meydana gelebilir. Geçerli tanımlayıcı karakterleri hakkında daha fazla bilgi için bkz. [bildirilmemiş öğe adları (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/declared-elements/declared-element-names) veya [tanımlayıcılar (C++)](/cpp/cpp/identifiers-cpp). Alternatif olarak, sınıflar ve ad alanları için "güvenli" adlar kullanmak için [şablon parametrelerini](../ide/template-parameters.md) kullanabilirsiniz.
 
-2. Şablon olarak dışa aktarılacak hazır olana kadar projeyi edin. Örneğin, parametre değişiminin nerede yapılması gerektiğini belirtmek için kod dosyalarını da nızı dinlemek isteyebilirsiniz. [Bkz. Nasıl: Şablondaki parametreleri değiştirin.](../ide/how-to-substitute-parameters-in-a-template.md)
+2. Proje, bir şablon olarak verilmeye hazırlanana kadar projeyi düzenleyin. Örneğin, parametre değiştirmenin nerede gerçekleşmesi gerektiğini belirtmek için kod dosyalarını düzenlemek isteyebilirsiniz. Bkz. [nasıl yapılır: şablonda parametreleri değiştirme](../ide/how-to-substitute-parameters-in-a-template.md).
 
-3. **Proje** menüsünde **Dışa Aktarma Şablonu'nu**seçin.
+3. **Proje** menüsünde, **şablonu dışarı aktar**' ı seçin.
 
-   **Dışa Aktarma Şablonu Sihirbazı** açılır.
+   **Şablonu dışarı aktarma Sihirbazı** açılır.
 
-4. Şablon **Türü Seç** sayfasında **Proje Şablonu'nu**seçin. Şablona aktarmak istediğiniz projeyi seçin ve sonra **İleri'yi**seçin.
+4. **Şablon türü seç** sayfasında, **proje şablonu**' nu seçin. Bir şablona dışarı aktarmak istediğiniz projeyi seçin ve ardından **İleri**' yi seçin.
 
 ::: moniker range="vs-2017"
 
-5. Şablon **Seçeneklerini Seç** sayfasında şablonunuz için bir ad ve isteğe bağlı açıklama, simge ve önizleme resmi girin. Bu öğeler Yeni **Proje** iletişim kutusunda görünür. **Son**’u seçin.
+5. **Şablon seçeneklerini seçin** sayfasında, şablonunuz için bir ad ve isteğe bağlı olarak bir açıklama, simge ve önizleme resmi girin. Bu öğeler, **Yeni proje** iletişim kutusunda görünür. **Son**’u seçin.
 
-   Proje bir *.zip* dosyasına dışa aktarılır ve belirtilen çıktı konumuna yerleştirilir ve seçilirse Visual Studio'ya aktarılır.
+   Proje bir *. zip* dosyasına aktarılır ve belirtilen çıktı konumuna yerleştirilir ve seçilirse, Visual Studio 'ya içeri aktarılır.
 
-Şablonunuzu **Yeni Proje** iletişim kutusunda bulmak için **Yüklü'yi** genişletin ve ardından `ProjectType` *.vstemplate* dosyasındaki öğeye karşılık gelen kategoriyi genişletin. Örneğin, yüklü > **Visual C#** **altında**varsayılan olarak `<ProjectType>CSharp</ProjectType>` bir *.vstemplate* dosyası görüntülenir. Şablonunuzu, bu dizinde bir klasör oluşturarak ve şablonunuzun *.zip* dosyasını içine yerleştirerek proje türünün bir alt dizininde düzenleyebilirsiniz. Daha fazla bilgi için [bkz: Şablonları bulma ve düzenleme.](../ide/how-to-locate-and-organize-project-and-item-templates.md)
+**Yeni proje** iletişim kutusunda şablonunuzu bulmak Için, **yüklü** ' i genişletin ve ardından `ProjectType` *. vstemplate* dosyasındaki öğesine karşılık gelen kategoriyi genişletin. Örneğin, içeren bir *. vstemplate* dosyası `<ProjectType>CSharp</ProjectType>` **Installed**  >  , varsayılan olarak yüklü**Visual C#** altında görünür. Bu dizinde bir klasör oluşturup şablonun *. zip* dosyasını içine yerleştirerek, şablonunuzu proje türünün bir alt dizininde düzenleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: şablonları bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-5. Şablon **Seçeneklerini Seç** sayfasında şablonunuz için bir ad ve isteğe bağlı açıklama, simge ve önizleme resmi girin. Bu öğeler, yeni bir proje oluşturduğunuz iletişim kutusunda görünür. **Son**’u seçin.
+5. **Şablon seçeneklerini seçin** sayfasında, şablonunuz için bir ad ve isteğe bağlı olarak bir açıklama, simge ve önizleme resmi girin. Bu öğeler yeni bir proje oluşturduğunuz iletişim kutusunda görünür. **Son**’u seçin.
 
-   Proje bir *.zip* dosyasına dışa aktarılır ve belirtilen çıktı konumuna yerleştirilir ve seçilirse Visual Studio'ya aktarılır.
+   Proje bir *. zip* dosyasına aktarılır ve belirtilen çıktı konumuna yerleştirilir ve seçilirse, Visual Studio 'ya içeri aktarılır.
 
-Şablonunuzu yeni bir proje oluşturduğunuz iletişim kutusunda bulmak için, ada göre arayın veya listede ilerleyin. (Şu anda kullanıcı şablonları için dil veya proje türüne göre filtreleme mümkün değildir.)
+Yeni bir proje oluşturduğunuz iletişim kutusunda şablonunuzu bulmak için bunu ada göre arayın veya listede ilerleyin. (Dil veya proje türüne göre filtreleme, Kullanıcı şablonları için şu anda mümkün değildir.)
 
 ::: moniker-end
 
 ## <a name="other-ways-to-create-project-templates"></a>Proje şablonları oluşturmanın diğer yolları
 
-Projeyi oluşturan dosyaları bir klasörde toplayarak ve uygun meta verilere sahip bir *.vstemplate* XML dosyası oluşturarak proje şablonlarını el ile oluşturabilirsiniz. Daha fazla bilgi için [bkz: Web şablonlarını el ile oluşturun.](../ide/how-to-manually-create-web-templates.md)
+Projeyi bir klasöre oluşturan dosyaları toplayıp, uygun meta verilerle bir *. vstemplate* XML dosyası oluşturarak proje şablonlarını el ile oluşturabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: el ile Web şablonları oluşturma](../ide/how-to-manually-create-web-templates.md).
 
-Visual Studio SDK yüklüyse, **VSIX Project** şablonu kullanarak tamamlanmış şablonu dağıtım için vsix dosyasına sarabilirsiniz. Daha fazla bilgi için [VSIX proje şablonuna başlayın.](../extensibility/getting-started-with-the-vsix-project-template.md)
+Visual Studio SDK 'Sı yüklüyse, **VSIX proje** şablonunu kullanarak bir VSIX dosyasındaki tamamlanmış şablonu sardırabilirsiniz. Daha fazla bilgi için bkz. [VSIX proje şablonunu kullanmaya başlama](../extensibility/getting-started-with-the-vsix-project-template.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Nasıl yapılı: Öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
-- [VSIX proje şablonu yla başlayın](../extensibility/getting-started-with-the-vsix-project-template.md)
+- [Nasıl yapılır: öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
+- [VSıX proje şablonu ile çalışmaya başlama](../extensibility/getting-started-with-the-vsix-project-template.md)

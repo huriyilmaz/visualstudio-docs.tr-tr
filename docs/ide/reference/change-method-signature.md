@@ -1,7 +1,7 @@
 ---
 title: Metot imzasını değiştirme
-description: Yöntemin parametrelerinin sırasını kaldırın veya değiştirin. Yönteme sağ tıklayın, Hızlı Eylemler ve Yeniden Düzenleme'yi seçin ve İmzayı Değiştir'i seçin.
-ms.date: 01/26/2018
+description: Metodun parametrelerini ekleyin, kaldırın veya sırasını değiştirin. Yöntemine sağ tıklayın, hızlı eylemler ve yeniden düzenlemeler ' ı seçin ve Imzayı Değiştir ' i seçin.
+ms.date: 06/08/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
@@ -14,71 +14,79 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 97c03c798732b5d722b2dc49f3ec7ffa490b4f06
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 947f44700ef43815eb29bc3e90563afe1be68f2b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "68711256"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283896"
 ---
-# <a name="change-a-method-signature-refactoring"></a>Yöntem imza refactoring değiştirme
+# <a name="change-a-method-signature-refactoring"></a>Yöntem imzasını yeniden düzenlemeyi değiştirme
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
 - Visual Basic
 
-**Ne:** Yöntemin parametrelerinin sırasını kaldırmanızı veya değiştirmenizi sağlar.
+**Ne:** Bir yöntemin parametrelerinin sırasını kaldırmanıza veya değiştirmenize olanak sağlar.
 
 **Ne zaman:** Şu anda çeşitli konumlarda kullanılmakta olan bir yöntem parametresini taşımak veya kaldırmak istiyorsunuz.
 
-**Neden:** Parametreleri el ile kaldırAbilir ve yeniden sipariş edebilir ve ardından bu yönteme yapılan tüm çağrıları bulabilir ve bunları tek tek değiştirebilirsiniz, ancak bu hatalara neden olabilir.  Bu yeniden düzenleme aracı görevi otomatik olarak gerçekleştirir.
+**Neden:** Parametreleri el ile kaldırıp yeniden sıralayın ve sonra bu yönteme yapılan tüm çağrıları bulabilir ve bunları tek tek değiştirebilir ancak bu hatalara yol açabilir.  Bu yeniden düzenleme aracı görevi otomatik olarak gerçekleştirir.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. Metin imlecini değiştirmek için yöntemin adının veya kullanımlarından birinin içine vurgulayın veya yerleştirin:
+1. Metin imlecini, değiştirilecek metodun adının içine veya kullanımlarından birine göre vurgulayın veya yerleştirin:
 
    - C#:
 
-       ![Vurgulanan kod C #](media/changesignature-highlight-cs.png)
+       ![Vurgulanmış kod C #](media/changesignature-highlight-cs.png)
 
-   - VB:
+   - VB
 
        ![Vurgulanan kod Visual Basic](media/changesignature-highlight-vb.png)
 
-2. Ardından, aşağıdakilerden birini yapın:
+2. Sonra, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **Ctrl+R**tuşuna basın, sonra **Ctrl+V**tuşuna basın.  (Klavye kısayol'unuzun seçtiğiniz profile bağlı olarak farklı olabileceğini unutmayın.)
-      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Yeniden Çarpanlara Yönelikmenü'yü** tetiklemek ve Önizleme penceresinden **İmzayı Değiştir'i** seçin.
+      - **CTRL + R**, ardından **CTRL + V**tuşlarına basın.  (Klavye kısayolunuzun seçtiğiniz profile göre farklı olabileceğini unutmayın.)
+      - **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek ve Önizleme penceresi açılır penceresinde **imzayı Değiştir** ' i seçmek için.
    - **Fare**
-      - **Parametreleri Kaldır> > Yeniden Düzenleme'yi**seçin.
-      - **Re >factor > Yeniden Düzenle parametrelerini**seçin.
-      - Kodu sağ tıklatın, **Hızlı Eylemler ve Yeniden Faktörler** menüsünü seçin ve Önizleme penceresinden **İmzayı Değiştir'i** seçin.
+      - **Parametreleri kaldırmak > düzenle > yeniden Düzenle**' yi seçin.
+      - **Düzenle > yeniden düzenleme > parametreleri yeniden**düzenleyin ' i seçin.
+      - Koda sağ tıklayın, **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin ve Önizleme penceresi açılır penceresinde **imzayı Değiştir** ' i seçin.
 
-3. Açılan **İmzayı Değiştir** iletişim kutusunda, yöntem imzasını değiştirmek için sağ taraftaki düğmeleri kullanabilirsiniz:
+3. Açılan **Imza Değiştir** iletişim kutusunda, yöntem imzasını değiştirmek için sağ taraftaki düğmeleri kullanabilirsiniz:
 
-   ![İmza iletişim kutusunu değiştir](media/changesignature-dialog-cs.png)
+   ![Imza değiştirme iletişim kutusu](media/change-signature.png)
 
-   | Düğme | Açıklama
+   | Düğme | Description
    | ------ | ---
-   | **Yukarı/Aşağı** | Seçili parametreyi listeyi yukarı ve aşağı taşıma
-   | **Kaldır** | Seçili parametreyi listeden kaldırma
-   | **Geri yükleme** | Seçili, çapraz parametreyi listeye geri yükleme
+   | **Yukarı/aşağı** | Seçili parametreyi listede yukarı ve aşağı taşı
+   | **Ekle** | Listeye yeni bir parametre Ekle
+   | **Kaldır** | Seçili parametreyi listeden kaldır
+   | **Geri Yükleme** | Seçilen, çapraz çıkış parametresini listeye geri yükleme
 
    > [!TIP]
-   > Önizleme **başvurusu değişiklikleri** onay kutusunu kullanarak [sonucun ne olacağını görün.](../../ide/preview-changes.md)
+   > Sonucun kendisine işlemeden önce [ne olacağını görmek](../../ide/preview-changes.md) için **başvuru değişikliklerini Önizle** onay kutusunu kullanın.
 
-4. İşi bittiğinde, değişiklikleri yapmak için **Tamam** düğmesine basın.
+4. **Imza Değiştir** Iletişim kutusunda **Ekle** ' nin seçilmesi **parametre Ekle** iletişim kutusunu açar. **Parametre Ekle** iletişim kutusu bir tür adı ve parametre adı eklemenize olanak sağlar. Parametreyi bir varsayılan değerle gerekli veya isteğe bağlı hale getirmeyi seçebilirsiniz. Daha sonra çağrı sitesine bir değer ekleyip bu değere yönelik adlandırılmış bir bağımsız değişken seçebilir veya bir TODO değişkeni tanıtabilirsiniz. Her hatayı ziyaret edip her çağrı sitesini bağımsız olarak kontrol edebilmeniz ve neyin geçirileceğine karar verebilmeniz için TODO değişkeni, kodunuza bir TODO ekler. İsteğe bağlı parametrelerde çağrı sitesini tamamen atlama seçeneğiniz vardır.
 
+    ![Parametre Ekle iletişim kutusu-C #](media/add-parameter-dialog.png)
+
+5. Bir parametre ekleme işiniz bittiğinde, değişiklikleri önizlemek için **Tamam** düğmesine basın.
+
+    ![Imza değiştirme iletişim kutusu](media/change-signature.png)
+
+6. Değişiklikleri görüntülemek için **Tamam** ' a basın.
    - C#:
 
-      ![İmza sonucunu değiştir - C #](media/changesignature-result-cs.png)
+      ![Imza sonucunu Değiştir-C #](media/changesignature-result-cs.png)
 
    - Visual Basic:
 
-      ![İmza sonucunu değiştir - Visual Basic](media/changesignature-result-vb.png)
+      ![Imza sonucunu değiştirme-Visual Basic](media/changesignature-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

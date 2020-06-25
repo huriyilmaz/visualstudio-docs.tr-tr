@@ -1,7 +1,7 @@
 ---
-title: Çok dosyalı öğe şablonları oluşturma
+title: Çok dosya öğesi şablonları oluşturma
 ms.date: 01/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Visual Studio templates, creating multi-file item templates
 - multi-file item templates
@@ -9,34 +9,34 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: e8a6e5358a87e3d64b341c89b8ffd4cd3cf3e325
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 4a4f0c50fc0a3fe21da560356d3551ca85ef9d66
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75593739"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284431"
 ---
-# <a name="how-to-create-multi-file-item-templates"></a>Nasıl yapılı: Çok dosyalı öğe şablonları oluşturma
+# <a name="how-to-create-multi-file-item-templates"></a>Nasıl yapılır: birden çok dosya öğesi şablonları oluşturma
 
-Öğe şablonları yalnızca bir öğe belirtebilir, ancak bazen öğe birden çok dosyadan oluşur. Örneğin, Bir Windows Forms öğe şablonu aşağıdaki üç dosyayı gerektirir:
+Öğe şablonları yalnızca bir öğe belirtebilir, ancak bazen öğe birden çok dosyadan oluşur. Örneğin, bir Windows Forms öğesi şablonu aşağıdaki üç dosyayı gerektirir:
 
 - Formun kodunu içeren bir dosya
 
-- Formun tasarımcı bilgilerini içeren bir dosya
+- Form için tasarımcı bilgilerini içeren bir dosya
 
-- Form için katıştırılmış kaynakları içeren bir dosya
+- Form için gömülü kaynakları içeren bir dosya
 
-Çok dosyalı madde şablonları, öğe oluşturulduğunda doğru dosya uzantılarının kullanıldığından emin olmak için parametreler gerektirir. **Dışa Aktarma Şablonu**Sihirbazı'nı kullanarak çok dosyalı bir öğe şablonu oluşturursanız, bu parametreler otomatik olarak oluşturulur ve başka bir düzenleme gerekmez.
+Birden çok dosya öğesi şablonları, öğe oluşturulduğunda doğru dosya uzantılarının kullanıldığından emin olmak için parametreler gerektirir. **Şablonu dışarı aktarma Sihirbazı 'nı**kullanarak çok sunuculu bir öğe şablonu oluşturursanız, bu parametreler otomatik olarak oluşturulur ve başka bir Düzenle gerekli değildir.
 
-## <a name="use-the-export-template-wizard"></a>Dışa Aktarma Şablonu Sihirbazı'nı kullanma
+## <a name="use-the-export-template-wizard"></a>Şablonu dışarı aktarma Sihirbazı 'Nı kullanma
 
-Tek dosyalı öğe şablonu yla aynı şekilde çok dosyalı bir öğe şablonu oluşturabilirsiniz. Bkz. [Nasıl?](../ide/how-to-create-item-templates.md) Sihirbazın **Dışa Aktar'ı Seç** sayfasında, bağımlı dosyaları olan dosyayı (örneğin, Windows Forms form dosyası) seçin. Sihirbaz, şablona tasarımcı ve kaynak dosyaları gibi bağımlı dosyaları otomatik olarak içerir.
+Birden çok dosya öğesi şablonunu tek bir dosya öğesi şablonuyla aynı şekilde oluşturabilirsiniz. Bkz. [nasıl yapılır: öğe şablonları oluşturma](../ide/how-to-create-item-templates.md). Sihirbazın **dışarı aktarılacağı öğeyi seçin** sayfasında, bağımlı dosyaları olan dosyayı seçin (örneğin, bir Windows Forms form dosyası). Sihirbaz, şablonda tasarımcı ve kaynak dosyaları gibi herhangi bir bağımlı dosyayı otomatik olarak içerir.
 
-## <a name="manually-create-a-multi-file-item-template"></a>Çok dosyalı öğe şablonu el ile oluşturma
+## <a name="manually-create-a-multi-file-item-template"></a>El ile birden çok dosya öğesi şablonu oluşturma
 
-1. Tek dosyalı öğe şablonu el ile oluşturacağınız, ancak çok dosyalı öğeyi oluşturan her dosyayı eklediğiniz için öğe şablonu oluşturun.
+1. Bir tek dosya öğesi şablonunu el ile oluşturacağınız, ancak çoklu dosya öğesini oluşturan her dosyayı dahil ettiğiniz için öğe şablonunu oluşturun.
 
-1. *.vstemplate* XML dosyasında, `ProjectItem` her dosya için bir öğe `TargetFileName` ekleyin ve bu öğeye bir öznitelik ekleyin. Özniteliğin `TargetFileName` değerini $fileinputname TL olarak *ayarlayın. FileExtension*, *FileExtension* şablona dahil ediliyor dosyanın dosya uzantısı olduğu. Örnek:
+1. *. Vstemplate* XML dosyasında `ProjectItem` her bir dosya için bir öğe ekleyin ve `TargetFileName` Bu öğeye bir öznitelik ekleyin. `TargetFileName`Özniteliğin değerini *$fileinputname $ olarak ayarlayın. FileExtension*, burada *FileExtension* , şablonda yer alan dosyanın dosya uzantısıdır. Örneğin:
 
     ```xml
     <ProjectItem TargetFileName="$fileinputname$.vb">
@@ -51,23 +51,23 @@ Tek dosyalı öğe şablonu yla aynı şekilde çok dosyalı bir öğe şablonu 
     ```
 
      > [!NOTE]
-     > Bu şablondan türetilen bir öğe projeye eklendiğinde, dosya adları kullanıcının **Yeni Öğe Ekle** iletişim kutusuna girdiği addan türetilir.
+     > Bu şablondan türetilen bir öğe projeye eklendiğinde, dosya adları kullanıcının **Yeni öğe Ekle** iletişim kutusuna girdiği adından türetilir.
 
-1. Şablonunuza eklenecek dosyaları seçin, seçimi sağ tıklatın ve > **Sıkıştırılmış (sıkıştırılmış) klasörüne gönder'i**seçin. **Send to**
+1. Şablonunuza dahil edilecek dosyaları seçin, seçime sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre**Gönder ' i seçin.
 
-   Seçtiğiniz dosyalar *bir .zip* dosyasına sıkıştırılır.
+   Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
 
-1. *.zip* dosyasını kullanıcı öğesi şablonu konumuna kopyalayın. Varsayılan olarak, dizin *%USERPROFILE%\Documents\Visual \<\>Studio Version \Templates\ItemTemplates'tir.* Daha fazla bilgi için [bkz: Şablonları bulma ve düzenleme.](../ide/how-to-locate-and-organize-project-and-item-templates.md)
+1. *. Zip* dosyasını Kullanıcı öğesi şablonu konumuna kopyalayın. Varsayılan olarak dizin, *%userprofile%\, Studio \<Version\> \Templates\ıtemtemplates*şeklindedir. Daha fazla bilgi için bkz. [nasıl yapılır: şablonları bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
-1. Visual Studio'yı kapatın ve yeniden açın.
+1. Visual Studio 'Yu kapatın ve yeniden açın.
 
-1. Yeni bir proje oluşturun veya varolan bir **Project**projeyi açın ve ardından > **Project Add New Item'i** seçin veya **Ctrl**+**Shift**+A**tuşuna**basın.
+1. Yeni bir proje oluşturun veya var olan bir projeyi açın, sonra **Proje**  >  **Yeni öğe Ekle** ' yi seçin veya **CTRL** + **SHIFT** + **a**'ya basın.
 
-   Çok dosyalı öğe şablonu **Yeni Öğe Ekle** iletişim kutusunda görünür.
+   Çoklu dosya öğesi şablonu, **Yeni öğe Ekle** iletişim kutusunda görünür.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte bir Windows Forms şablonu gösterilmektedir. Bu şablona dayalı bir öğe oluşturulduğunda, oluşturulan üç dosyanın **adları, Yeni Öğe Ekle** iletişim kutusunda girilen adla eşleşir.
+Aşağıdaki örnekte bir Windows Forms şablonu gösterilmektedir. Bu şablonu temel alan bir öğe oluşturulduğunda, oluşturulan üç dosyanın adları **Yeni öğe Ekle** iletişim kutusuna girilen adla eşleşir.
 
 ```xml
 <VSTemplate Version="2.0.0" Type="Item"
@@ -95,6 +95,6 @@ Aşağıdaki örnekte bir Windows Forms şablonu gösterilmektedir. Bu şablona 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Nasıl yapılı: Öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
+- [Nasıl yapılır: öğe şablonları oluşturma](../ide/how-to-create-item-templates.md)
 - [Şablon parametreleri](../ide/template-parameters.md)
-- [Nasıl kullanılır: Şablondaki yedek parametreler](../ide/how-to-substitute-parameters-in-a-template.md)
+- [Nasıl yapılır: şablonda parametreleri değiştirme](../ide/how-to-substitute-parameters-in-a-template.md)

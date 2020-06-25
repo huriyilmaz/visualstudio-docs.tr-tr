@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl Yapılsın: Düzenleyici pencerelerini yönetme'
+title: 'Nasıl yapılır: düzenleyici pencerelerini yönetme'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - editor windows
 - windows, managing editor windows
@@ -13,46 +13,46 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af752c99c87bf470922db03bf5d4746151fa8f2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 461593e4c77d7c90210ae1bb78741a1fff9616ec
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591027"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284197"
 ---
-# <a name="how-to-manage-editor-windows"></a>Nasıl Yapılsın: Düzenleyici pencerelerini yönetme
+# <a name="how-to-manage-editor-windows"></a>Nasıl yapılır: düzenleyici pencerelerini yönetme
 
-Kod üzerinde aynı anda çeşitli konumlarda çalışabilirsiniz. Bunu, düzenleyici penceresini bölerek veya düzenleyici pencerelerinin birkaç örneğini açarak yapın.
+Tek seferde çeşitli konumlarda kod üzerinde çalışabilirsiniz. Bunu bir düzenleyici penceresini bölerek veya birkaç Düzenleyici penceresi örneğini açarak yapın.
 
 > [!NOTE]
-> Tüm düzenleyici pencereleri birden çok örneği desteklemez.
+> Tüm Düzenleyici pencereleri birden çok örneği desteklemez.
 
-## <a name="split-an-editor-window"></a>Düzenleyici pencereyi bölme
+## <a name="split-an-editor-window"></a>Bir düzenleyici penceresini bölme
 
-Düzenleyici penceresinin bir örneği, daha kolay düzenleme için iki ayrı görünüme ayrılabilir.
+Bir düzenleyici penceresinin bir örneği, daha kolay düzenleme için iki ayrı görünüme ayrılabilir.
 
-### <a name="to-split-a-pane"></a>Bölmeyi bölmek için
+### <a name="to-split-a-pane"></a>Bölmeyi bölme
 
-1. Odaklanmak için düzenleyici penceresi içinde tıklatın.
+1. Bu bileşene odaklanmak için düzenleyici penceresinin içine tıklayın.
 
-2. **Pencere** menüsünden **Böl'i**seçin.
+2. **Pencere** menüsünde **Böl**' ü seçin.
 
-     Düzenleme alanı, bir ayırıcı çubuğuyla ayrılmış iki bölmeye ayrılır. Etkin belgenin farklı bölümlerini aynı anda görüntülemek ve bunları aynı anda görüntülemek ve bunları düzenliyor için bu bölmeleri bağımsız olarak kaydırabilirsiniz. Bir bölmede yapılan değişiklikler diğerine yansıtılır.
+     Düzenle alanı, bir bölücü çubukla ayrılmış iki bölmeye ayırır. Etkin belgenin farklı parçalarını aynı anda görüntülemek ve düzenlemek için bu bölmeleri bağımsız olarak kaydırabilirsiniz. Bir bölmede yapılan tüm değişiklikler diğeri de yansıtılır.
 
     > [!TIP]
-    > Bir bölmeyi diğerinden daha büyük yapmak için, ayırıcı çubuğu yukarı veya aşağı sürükleyin.
+    > Bir bölmeyi diğerine daha büyük yapmak için, bölücü çubuğunu yukarı veya aşağı sürükleyin.
 
-### <a name="to-return-to-single-pane-view"></a>Tek bölme görünümüne dönmek için
+### <a name="to-return-to-single-pane-view"></a>Tek bölmeli görünüme geri dönmek için
 
-- **Pencere** menüsünden **Split'i kaldır'ı**seçin.
+- **Pencere** menüsünden **bölmeyi kaldır**' ı seçin.
 
-## <a name="create-new-windows"></a>Yeni pencereler oluşturma
+## <a name="create-new-windows"></a>Yeni pencereler oluştur
 
-Ayrıca, düzenleyici penceresinin birden çok örneğini de oluşturabilirsiniz. Bu özellik, farklı bölümleri ayrı, tam boyutlu düzenleyici pencerelerinde aynı anda görüntüleyebilmeniz ve bunları yapabilmeniz için uzun bir belgeyi düzenleyicinin birden fazla örneğinde açmanızı sağlar.
+Ayrıca, bir düzenleyici penceresinin birden çok örneğini de oluşturabilirsiniz. Bu özellik, farklı bölümleri aynı anda ayrı, tam boyutlu bir düzenleyici penceresinde görüntüleyebilmeniz ve düzenleyebilmeniz için bir düzenleyicinin birden fazla örneğinde uzun bir belge açmanıza olanak tanır.
 
-- **Pencere** menüsünde **Yeni Pencere'yi**tıklatın.
+- **Pencere** menüsünde **yeni pencere**' ye tıklayın.
 
-   Düzenleyicinin yeni bir sekmeli örneği eklenir.
+   Düzenleyicinin yeni bir sekmeli örneği eklendi.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

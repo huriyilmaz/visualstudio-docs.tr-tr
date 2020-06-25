@@ -1,98 +1,98 @@
 ---
-title: Windows'da Docker istemci hataları | Microsoft Dokümanlar
-description: Visual Studio'yu kullanarak Windows'da Docker'a web uygulamaları oluşturmak ve dağıtmak için Visual Studio'yu kullanırken karşılaştığınız sorunları giderin.
+title: Windows 'da Docker istemci hatalarında sorun giderme | Microsoft Docs
+description: Visual Studio kullanarak Web uygulamaları oluşturmak ve Windows üzerinde Docker 'a dağıtmak için Visual Studio kullanırken karşılaştığınız sorunları giderin.
 ms.technology: vs-azure
 author: ghogen
 manager: jillfra
 ms.custom: seodec18
 ms.assetid: 346f70b9-7b52-4688-a8e8-8f53869618d3
 ms.devlang: dotnet
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.workload: multiple
 ms.date: 01/27/2020
 ms.author: ghogen
-ms.openlocfilehash: d8aa3028a12bcfb49f2663b2bea688baf14fd7f2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1f4ca9d53900d0dc0c2392296303a94121103158
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77027277"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283118"
 ---
 # <a name="troubleshoot-visual-studio-development-with-docker"></a>Docker ile Visual Studio geliştirme sorunlarını giderme
 
-Visual Studio Container Tools ile çalışırken, uygulamanızı kurarken veya hata ayıklarken sorunlarla karşılaşabilirsiniz. Aşağıda bazı sık karşılaşılan sorun giderme adımları verilmiştir.
+Visual Studio kapsayıcı araçlarıyla çalışırken, uygulamanızı oluştururken veya hata ayıklarken sorunlarla karşılaşabilirsiniz. Aşağıda bazı yaygın sorun giderme adımları verilmiştir.
 
-## <a name="volume-sharing-is-not-enabled-enable-volume-sharing-in-the-docker-ce-for-windows-settings--linux-containers-only"></a>Ses paylaşımı etkinleştirildi. Windows ayarları için Docker CE'de ses paylaşımını etkinleştirin (yalnızca Linux kapsayıcıları)
+## <a name="volume-sharing-is-not-enabled-enable-volume-sharing-in-the-docker-ce-for-windows-settings--linux-containers-only"></a>Birim paylaşımı etkin değil. Docker CE for Windows ayarları 'nda birim paylaşımını etkinleştir (yalnızca Linux kapsayıcıları)
 
 Bu sorunu çözmek için:
 
-1. Bildirim alanında **Windows için Docker'a** sağ tıklayın ve ardından **Ayarlar'ı**seçin.
-1. **Paylaşılan Sürücüler'i** seçin ve sistemin bulunduğu sürücüyle birlikte sistem sürücüsünü paylaşın.
+1. Bildirim alanında **Docker for Windows** sağ tıklatın ve ardından **Ayarlar**' ı seçin.
+1. **Paylaşılan sürücüler** ' i seçin ve sistem sürücüsünü projenin bulunduğu sürücüyle birlikte paylaşabilirsiniz.
 
 > [!NOTE]
-> Dosyalar paylaşılan görünüyorsa, "Kimlik bilgilerini sıfırla'yı" tıklatmanız gerekebilir. ses paylaşımını yeniden etkinleştirmek için iletişim kutusunun en altında bağlantı kurun. Kimlik bilgilerini sıyrıkladıktan sonra devam etmek için Visual Studio'yı yeniden başlatmanız gerekebilir.
+> Dosyalar paylaşılan görünüyorsa, yine de "kimlik bilgilerini Sıfırla..." düğmesine tıklamanız gerekebilir. birim paylaşımını yeniden etkinleştirmek için iletişim kutusunun alt kısmındaki bağlantıyı kullanın. Kimlik bilgilerini sıfırladıktan sonra devam etmek için Visual Studio 'Yu yeniden başlatmanız gerekebilir.
 
 ![paylaşılan sürücüler](media/troubleshooting-docker-errors/shareddrives.png)
 
 > [!TIP]
-> Visual Studio 2017 sürümünden sonra Visual Studio **sürümleri, Paylaşılan Sürücüler** yapılandırılınca 15.6 istemi.
+> **Paylaşılan sürücüler** yapılandırılmadığında visual Studio 2017 sürüm 15,6 ' den sonraki Visual Studio sürümleri istemi.
 
-### <a name="container-type"></a>Konteyner tipi
+### <a name="container-type"></a>Kapsayıcı türü
 
-Bir projeye Docker desteği eklerken, bir Windows veya Linux kapsayıcısı seçersiniz. Docker ana bilgisayar aynı kapsayıcı türünü çalıştırıyor olmalıdır. Çalışan Docker örneğinde kapsayıcı türünü değiştirmek için Sistem Tepsisi Docker simgesine sağ tıklayın ve **Windows kapsayıcılarına geçiş'i seçin...** veya **Linux kapsayıcılarına geçiş...**.
+Bir projeye Docker desteği eklerken bir Windows ya da Linux kapsayıcısı seçersiniz. Docker ana bilgisayarı aynı kapsayıcı türünü çalıştırıyor olmalıdır. Çalışan Docker örneğindeki kapsayıcı türünü değiştirmek için, sistem tepsisinin Docker simgesine sağ tıklayın ve **Windows kapsayıcılarına geç...** ' i seçin veya **Linux kapsayıcılarına geç..**..
 
 ## <a name="unable-to-start-debugging"></a>Hata ayıklama başlatılamıyor
 
-Bunun nedenlerinden biri, kullanıcı profil klasörünüzde eski hata ayıklama bileşenlerine sahip olmakla ilgili olabilir. En son hata ayıklama bileşenlerinin bir sonraki hata ayıklama oturumunda karşıdan yüklenerek bu klasörleri kaldırmak için aşağıdaki komutları uygulayın.
+Bir neden, Kullanıcı profili klasörünüzde eski hata ayıklama bileşenleri bulundurmak ile ilgili olabilir. En son hata ayıklama bileşenlerinin bir sonraki hata ayıklama oturumunda indirilmesi için bu klasörleri kaldırmak üzere aşağıdaki komutları yürütün.
 
-- del %userprofile%\vsdbg
-- del %userprofile%\onecoremsvsmon
+- del%USERPROFILE%\vsdbg
+- del%userprofile%\onecoremsvsmon
 
-## <a name="errors-specific-to-networking-when-debugging-your-application"></a>Uygulamanızın hata ayıklama yaparken ağ için özel hatalar
+## <a name="errors-specific-to-networking-when-debugging-your-application"></a>Uygulamanızda hata ayıklarken ağa özgü hatalar
 
-Ev sahibi makinenizdeki ağla ilgili bileşenleri yenileyecek olan [Temizleme Kapsayıcı Ana Bilgisayar Ağı'ndan](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/master/windows-server-container-tools/CleanupContainerHostNetworking)indirilebilir komut dosyasını yürütmeyi deneyin.
+Konuk makinenizde ağla ilgili bileşenleri yenileyecek şekilde, [Temizleme kapsayıcısı konak ağı](https://github.com/MicrosoftDocs/Virtualization-Documentation/tree/master/windows-server-container-tools/CleanupContainerHostNetworking)'ndan indirilebilir betiği yürütmeyi deneyin.
 
-## <a name="mounts-denied"></a>Mounts yalanladı
+## <a name="mounts-denied"></a>Bağlama reddedildi
 
-macOS için Docker kullanırken, /usr/local/share/dotnet/sdk/NuGetFallbackFolder klasörüne başvuran bir hatayla karşılaşabilirsiniz. Klasörü Docker'daki Dosya Paylaşımı sekmesine ekleme
+MacOS için Docker kullanırken,/usr/local/share/DotNet/SDK/nugetfallbackfolder klasörüne başvurarak bir hatayla karşılaşabilirsiniz. Klasörü Docker 'daki dosya paylaşma sekmesine ekleyin
 
 ## <a name="docker-users-group"></a>Docker kullanıcıları grubu
 
-Kapsayıcılarla çalışırken Visual Studio'da aşağıdaki hatalarla karşılaşabilirsiniz:
+Kapsayıcılarla çalışırken Visual Studio 'da aşağıdaki hatayla karşılaşabilirsiniz:
 
 ```
 The current user must be in the 'docker-users' group to use Docker Desktop. 
 Add yourself to the 'docker-users' group and then log out of Windows.
 ```
 
-Docker kapsayıcılarıyla çalışma izni almak için 'docker-users' grubunun bir üyesi olmalısınız.  Windows 10'da gruba kendinizi eklemek için aşağıdaki adımları izleyin:
+Docker kapsayıcılarıyla çalışma izinlerinin olması için ' Docker-Users ' grubunun bir üyesi olmanız gerekir.  Windows 10 ' da gruba eklemek için aşağıdaki adımları izleyin:
 
-1. Başlat menüsünden **Bilgisayar Yönetimi'ni**açın.
-1. **Yerel Kullanıcıları ve Grupları**Genişletin ve **Grupları**seçin.
-1. **Docker-users** grubunu bulun, sağ tıklatın ve **gruba Ekle'yi**seçin.
+1. Başlat menüsünden **Bilgisayar Yönetimi**' ni açın.
+1. **Yerel kullanıcılar ve gruplar**' ı genişletin ve **gruplar**' ı seçin.
+1. **Docker-Users** grubunu bulun, sağ tıklayın ve **gruba ekle**' yi seçin.
 1. Kullanıcı hesabınızı veya hesaplarınızı ekleyin.
-1. Bu değişikliklerin etkili olması için oturum açın ve yeniden oturum açın.
+1. Bu değişikliklerin etkili olması için oturumu kapatın ve yeniden oturum açın.
 
-Belirli gruplara `net localgroup` kullanıcı eklemek için Yönetici komut istemi'ndeki komutu da kullanabilirsiniz.
+Ayrıca, `net localgroup` kullanıcıları belirli gruplara eklemek Için yönetici komut isteminde komutunu da kullanabilirsiniz.
 
 ```cmd
 net localgroup docker-users DOMAIN\username /add
 ```
 
-PowerShell'de [Ekle-LocalGroupMember](/powershell/module/microsoft.powershell.localaccounts/add-localgroupmember) işlevini kullanın.
+PowerShell 'de [Add-LocalGroupMember](/powershell/module/microsoft.powershell.localaccounts/add-localgroupmember) işlevini kullanın.
 
-## <a name="low-disk-space"></a>Düşük disk alanı
+## <a name="low-disk-space"></a>Yetersiz disk alanı
 
-Varsayılan olarak, Docker görüntüleri genellikle sistem sürücüsünde bulunan *%ProgramData%/Docker/* klasöründe depolar, *C:\ProgramData\Docker\*. Görüntülerin sistem sürücüsünde değerli yer kaplamasını önlemek için görüntü klasörü konumunu değiştirebilirsiniz.  Görev çubuğundaki Docker simgesinden Docker ayarlarını açın, **Daemon'u**seçin ve **Basic'ten** **Advanced'e**geçin. Düzenleme bölmesinde, Docker `graph` görüntüleri için istediğiniz konumun değerini içeren özellik ayarını ekleyin:
+Docker, varsayılan olarak, görüntüleri genellikle sistem sürücüsünde, * C:\ProgramData\Docker üzerinde bulunan *% ProgramData%/Docker/* klasöründe depolar \* . Görüntülerin sistem sürücüsünde değerli alan almasını engellemek için, görüntü klasörü konumunu değiştirebilirsiniz.  Görev çubuğundaki Docker simgesinden Docker ayarlarını açın, **Daemon**' ı seçin ve **temel** ' ten **Gelişmiş**' e geçin. Düzen bölmesinde, `graph` Docker görüntüleri için istediğiniz konumun değeri ile özellik ayarını ekleyin:
 
 ```json
     "graph": "D:\\mypath\\images"
 ```
 
-![Docker görüntü konum ayarı ekran görüntüsü](media/troubleshooting-docker-errors/docker-settings-image-location.png)
+![Docker görüntüsü konum ayarının ekran görüntüsü](media/troubleshooting-docker-errors/docker-settings-image-location.png)
 
-Docker'ı yeniden başlatmak için **Uygula'yı** tıklatın. Bu adımlar *% ProgramData%\docker\config\daemon.json*adresindeki yapılandırma dosyasını değiştirir. Daha önce oluşturulmuş görüntüler taşınmıyor.
+Docker 'ı yeniden başlatmak için **Uygula** ' ya tıklayın. Bu adımlar *üzerinde% ProgramData% \docker\config\daemon.js*yapılandırma dosyasını değiştirir. Önceden oluşturulmuş görüntüler taşınmaz.
 
-## <a name="microsoftdockertools-github-repo"></a>Microsoft/DockerTools GitHub repo
+## <a name="microsoftdockertools-github-repo"></a>Microsoft/DockerTools GitHub deposu
 
-Karşılaştığınız diğer sorunlar için [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) sorunlarına bakın.
+Karşılaştığınız diğer sorunlar için bkz. [Microsoft/DockerTools](https://github.com/microsoft/dockertools/issues) sorunları.

@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl Yapılır: WCF Veri Hizmeti Başvurusunu Güncelleme veya Kaldırma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - service references [Visual Studio]
 - WCF Data Service reference
@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 494e85049a173749d418276340389ebe826a0b0b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: f5f5a1e14a6eab7537c8ce64636f0f34378ad7f0
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184243"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282377"
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>Nasıl yapılır: WCF veri hizmeti başvurusu ekleme, güncelleştirme veya kaldırma
 
@@ -57,7 +57,7 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
 
 1. Başvuruyu projeye eklemek için **Tamam** ' ı tıklatın.
 
-     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app. config* dosyasına eklenir.
+     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app.config* dosyasına eklenir.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne çift tıklayın veya dokunun.
@@ -86,7 +86,7 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
 
 1. Başvuruyu projeye eklemek için **son** ' a tıklayın.
 
-     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app. config* dosyasına eklenir.
+     Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app.config* dosyasına eklenir.
 
 ::: moniker-end
 
@@ -108,7 +108,7 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
 
 1. Başvuruyu projeye eklemek için **Tamam** ' ı tıklatın.
 
-    Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app. config* dosyasına eklenir.
+    Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app.config* dosyasına eklenir.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne çift tıklayın veya dokunun. 
@@ -129,7 +129,7 @@ Windows Communication Foundation (WCF) veri hizmeti başvurularını yönetmeniz
 
 1. Başvuruyu projeye eklemek için **son** ' a tıklayın.
 
-    Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app. config* dosyasına eklenir.
+    Bir hizmet istemcisi (proxy) oluşturulur ve hizmeti tanımlayan meta veriler *app.config* dosyasına eklenir.
 
 ::: moniker-end
 
@@ -151,7 +151,7 @@ Bir hizmet başvurusu artık kullanılmıyorsa, çözümünüzü çözümden kal
 
 - **Çözüm Gezgini**, hizmet başvurusunu sağ tıklatın ve ardından **Sil**' e tıklayın.
 
-     Hizmet istemcisi çözümden kaldırılır ve hizmeti tanımlayan meta veriler *app. config* dosyasından kaldırılır.
+     Hizmet istemcisi çözümden kaldırılacak ve hizmeti tanımlayan meta veriler *app.config* dosyasından kaldırılacak.
 
     > [!NOTE]
     > Hizmet başvurusuna başvuruda bulunan kodların el ile kaldırılması gerekir.

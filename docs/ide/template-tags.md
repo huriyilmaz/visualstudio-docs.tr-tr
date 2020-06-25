@@ -13,12 +13,12 @@ helpviewer_keywords:
 - updating templates [Visual Studio]
 - template tagging, updating
 - template tags, updating
-ms.openlocfilehash: ef26a566229c228711ba6e57de50402df255c3dd
-ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
+ms.openlocfilehash: 37a1965712920420bdc4d784a003dbfbd2f2167a
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153025"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285224"
 ---
 # <a name="add-tags-to-project-templates"></a>Proje şablonlarına etiketler ekleme
 
@@ -44,7 +44,7 @@ Aşağıdaki eylemlerden birini gerçekleştirdiğinizde proje şablonunuzda *. 
 * [Mevcut proje şablonunuzu güncelleştirin](how-to-update-existing-templates.md).
 * [Yeni BIR VSIX proje şablonu oluşturun](../extensibility/getting-started-with-the-vsix-project-template.md).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <LanguageTag> Language Name </LanguageTag>
@@ -77,13 +77,13 @@ Yok.
 
 ### <a name="parent-elements"></a>Üst öğeler
 
-|Öğe|Açıklama|
+|Öğe|Description|
 |-------------|-----------------|
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Istenir Şablonu kategorilere ayırır ve **Yeni proje** iletişim kutusunda ya da **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
 
-Ve `Package` `ID` özniteliklerini kullanmadığınız durumlar için metin değeri gereklidir.
+Ve özniteliklerini kullanmadığınız durumlar için metin değeri gereklidir `Package` `ID` .
 
 Metin, şablonun adını sağlar.
 
@@ -95,21 +95,21 @@ Aşağıdaki listede, Visual Studio 'da kullanılabilen yerleşik Etiketler gös
 
 | Dil etiketi | Platform etiketi | Proje türü etiketi |
 | -- | -- | -- |
-| C++ (`cpp`) | Android (`android`) | Bulut (`cloud`) |
-| C# (`csharp`) | Azure (`azure`) | Console (`console`) |
-| F # (`fsharp`) | iOS (`ios`) | Masaüstü (`desktop`) |
-| Java (`java`) | Linux (`linux`) | Uzantılar (`extension`) |
-| JavaScript (`javascript`) | macOS (`macos`) | Oyunlar (`games`) |
-| Python (`python`) | tvOS (`tvos`) | IoT (`iot`) |
-| Sorgu Languate (`querylanguage`) | Windows (`windows`) | Library (`library`) |
-| TypeScript (`typescript`) | Xbox (`xbox`) | Machine Learning (`machinelearning`) |
-| Visual Basic (`visualbasic`) | | Mobile (`mobile`) |
-| | | Office (`office`) |
-| | | Diğer (`other`) |
-| | | Hizmet (`service`) |
-| | | Test (`test`) |
-| | | UWP (`uwp`) |
-| | | Web (`web`) |
+| C++ ( `cpp` ) | Android ( `android` ) | Bulut ( `cloud` ) |
+| C# ( `csharp` ) | Azure ( `azure` ) | Console ( `console` ) |
+| F # ( `fsharp` ) | iOS ( `ios` ) | Masaüstü ( `desktop` ) |
+| Java ( `java` ) | Linux ( `linux` ) | Uzantılar ( `extension` ) |
+| JavaScript ( `javascript` ) | macOS ( `macos` ) | Oyunlar ( `games` ) |
+| Python ( `python` ) | tvOS ( `tvos` ) | IoT ( `iot` ) |
+| Sorgu Languate ( `querylanguage` ) | Windows ( `windows` ) | Library ( `library` ) |
+| TypeScript ( `typescript` ) | Xbox ( `xbox` ) | Machine Learning ( `machinelearning` ) |
+| Visual Basic ( `visualbasic` ) | | Mobile ( `mobile` ) |
+| | | Office ( `office` ) |
+| | | Diğer ( `other` ) |
+| | | Hizmet ( `service` ) |
+| | | Test ( `test` ) |
+| | | UWP ( `uwp` ) |
+| | | Web ( `web` ) |
 
 ## <a name="example"></a>Örnek
 
@@ -122,7 +122,7 @@ Aşağıdaki örnek, bir Visual C# uygulaması için bir proje şablonu meta ver
         <Name>My template</Name>
         <Description>A basic template</Description>
         <Icon>TemplateIcon.ico</Icon>
-        <ProjectType>CSharp</ProjectType>
+        <ProjectType>csharp</ProjectType>
         <LanguageTag>C#</LanguageTag>
         <PlatformTag>windows</PlatformTag>
         <PlatformTag>linux</PlatformTag>

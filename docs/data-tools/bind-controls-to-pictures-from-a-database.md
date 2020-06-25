@@ -1,7 +1,7 @@
 ---
 title: Bir veritabanından resimlere denetim bağlama
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - images [Visual Basic], displaying on Windows Forms
 - data binding [Windows Forms], pictures
@@ -17,16 +17,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: a4155a246516bef074a56e5644712912b2ce5af6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e9093c2a2d7cec95e4fdd08ff4273ae8f8126a36
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587010"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282990"
 ---
 # <a name="bind-controls-to-pictures-from-a-database"></a>Bir veritabanından resimlere denetim bağlama
 
-**Veri kaynakları** penceresini, bir veritabanındaki bir görüntüyü uygulamanızdaki bir denetime bağlamak için kullanabilirsiniz. Örneğin, bir görüntüyü WPF uygulamasında bir <xref:System.Windows.Controls.Image> denetimine veya Windows Forms uygulamasındaki bir <xref:System.Windows.Forms.PictureBox> denetimine bağlayabilirsiniz.
+**Veri kaynakları** penceresini, bir veritabanındaki bir görüntüyü uygulamanızdaki bir denetime bağlamak için kullanabilirsiniz. Örneğin, bir görüntüyü <xref:System.Windows.Controls.Image> WPF uygulamasında bir denetime veya <xref:System.Windows.Forms.PictureBox> Windows Forms uygulamasındaki bir denetime bağlayabilirsiniz.
 
 Veritabanındaki resimler genellikle bayt dizileri olarak depolanır. Byte dizileri olarak depolanan **veri kaynakları** penceresindeki öğelerin denetim türü varsayılan olarak **none** olarak ayarlanmış, çünkü byte dizileri, basit bir bayt dizisinden büyük bir uygulamanın yürütülebilir dosyasına herhangi bir şey içerebildiğinden. Bir görüntüyü temsil eden **veri kaynakları** penceresinde bir bayt dizisi öğesi için veri bağlantılı bir denetim oluşturmak için, oluşturulacak denetimi seçmeniz gerekir.
 
@@ -39,7 +39,7 @@ Aşağıdaki yordamda, **veri kaynakları** penceresinin görüntenize bağlanan
 2. **Veri kaynakları** penceresinde, sütun veya özelliklerini göstermek için istenen tabloyu veya nesneyi genişletin.
 
    > [!TIP]
-   > **Veri kaynakları** penceresi açık değilse, **diğer Windows** > **veri kaynaklarını** **görüntüle** > ' yi seçerek açın.
+   > **Veri kaynakları** penceresi açık değilse, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek açın.
 
 3. Görüntü verilerinizi içeren sütunu veya özelliği seçin ve açılan denetim listesinden aşağıdaki denetimlerden birini seçin:
 

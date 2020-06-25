@@ -1,91 +1,91 @@
 ---
 title: Öğe şablonları oluşturma
 ms.date: 01/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - item templates [Visual Studio], creating
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 62004c5c96fa708f98ab49f4810ec2fc1c38eadc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0a0d4122d36c0946b6c1c98ef0f1523ce35751a6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594727"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284483"
 ---
-# <a name="how-to-create-item-templates"></a>Nasıl yapılı: Öğe şablonları oluşturma
+# <a name="how-to-create-item-templates"></a>Nasıl yapılır: öğe şablonları oluşturma
 
-Bu makalede, **Dışa Aktarma Şablonu**Sihirbazı'nı kullanarak bir madde şablonu nasıl oluşturulabileceğinizi gösterir. Şablonunuzun birden çok dosyadan oluşması durumunda, [bkz.](../ide/how-to-create-multi-file-item-templates.md)
+Bu makalede, **şablonu dışarı aktarma Sihirbazı 'nı**kullanarak bir öğe şablonu oluşturma işlemi gösterilir. Şablonunuz birden çok dosyadan oluşu, bkz. [nasıl yapılır: birden çok dosya öğesi şablonları oluşturma](../ide/how-to-create-multi-file-item-templates.md).
 
-## <a name="add-an-item-template-to-the-add-new-item-dialog-box"></a>Yeni Öğe Ekle iletişim kutusuna öğe şablonu ekleme
+## <a name="add-an-item-template-to-the-add-new-item-dialog-box"></a>Yeni öğe Ekle iletişim kutusuna bir öğe şablonu ekleyin
 
-1. Visual Studio'da bir proje oluşturun veya açın.
+1. Visual Studio 'da bir proje oluşturun veya açın.
 
-1. Projeye bir öğe ekleyin ve isterseniz değiştirin.
+1. Projeye bir öğe ekleyin ve isterseniz dosyayı değiştirin.
 
-1. Parametre değişiminin nerede yapılması gerektiğini belirtmek için kod dosyasını değiştirin. Daha fazla bilgi için [bkz: Şablondaki parametreleri değiştirin.](../ide/how-to-substitute-parameters-in-a-template.md)
+1. Kod dosyasını parametre değiştirmenin nerede olması gerektiğini belirtecek şekilde değiştirin. Daha fazla bilgi için bkz. [nasıl yapılır: şablonda parametreleri değiştirme](../ide/how-to-substitute-parameters-in-a-template.md).
 
-1. **Proje** menüsünde **Dışa Aktarma Şablonu'nu**seçin.
+1. **Proje** menüsünde, **şablonu dışarı aktar**' ı seçin.
 
-1. Şablon **Türü Seç** sayfasında **Öğe Şablonu'nu**seçin, öğeyi içeren projeyi seçin ve **sonra İleri'yi**seçin.
+1. **Şablon türü seç** sayfasında, **öğe şablonu**' nu seçin, öğeyi içeren projeyi seçin ve ardından **İleri**' yi seçin.
 
-1. **Dışa Aktarma Öğesi Seç** sayfasında, şablon oluşturmak istediğiniz öğeyi seçin ve sonra **İleri'yi**seçin.
+1. **Dışarı aktarılacak öğeyi seçin** sayfasında, şablon oluşturmak istediğiniz öğeyi seçin ve ardından **İleri**' yi seçin.
 
-1. Madde **Başvurularını Seç** sayfasında şablona eklemek için derleme başvurularını seçin ve sonra **İleri'yi**seçin.
+1. **Öğe başvurularını Seç** sayfasında, şablona dahil edilecek derleme başvurularını seçin ve ardından **İleri**' yi seçin.
 
-1. Şablon **Seçeneklerini Seç** sayfasında şablon adını ve isteğe bağlı açıklamayı, simge görüntüsünü ve önizleme resmini girin ve ardından **Bitir'i**seçin.
+1. **Şablon seçeneklerini seçin** sayfasında, şablon adını ve isteğe bağlı açıklamayı, simge görüntüsünü ve önizleme görüntüsünü girip **son**' u seçin.
 
-    Şablon dosyaları bir *.zip* dosyasına eklenir ve sihirbazda belirttiğiniz dizine kopyalanır. Varsayılan konum *%USERPROFILE%\Documents\Visual \<Studio\>sürümü \Dışa Aktarılan Şablonlarım.*
+    Şablon dosyaları bir *. zip* dosyasına eklenir ve sihirbazda belirttiğiniz dizine kopyalanır. Varsayılan konum, *%userprofile%\, Studio \<version\> \ihraç olan şablonlar*' dır.
 
-1. Seçeneği seçmediyseniz, **şablonu Dışa** Aktarma **Şablonu**Sihirbazı'nda Visual Studio'ya otomatik olarak aktarın, dışa aktarılan şablonu bulun. Ardından, kullanıcı öğesi şablon dizini kopyalayın. Varsayılan konum *%USERPROFILE%\Documents\Visual \<Studio\>sürümü \Şablonlar\ItemTemplates'* tir.
+1. Şablonu **dışarı aktarma sihirbazında** **şablonu otomatik olarak Visual Studio 'ya aktar** seçeneğini seçmediyseniz, dışarı aktarılan şablonu bulun. Ardından, bunu Kullanıcı öğesi şablon dizinine kopyalayın. Varsayılan konum, *%userprofile%\, Studio \<version\> \Templates\ıtemtemplates*şeklindedir.
 
-1. Visual Studio'yı kapatın ve yeniden açın.
+1. Visual Studio 'Yu kapatın ve yeniden açın.
 
-1. Yeni bir proje oluşturun veya varolan bir **Project**projeyi açın ve ardından > **Project Add New Item'i** seçin veya **Ctrl**+**Shift**+A**tuşuna**basın.
+1. Yeni bir proje oluşturun veya var olan bir projeyi açın, sonra **Proje**  >  **Yeni öğe Ekle** ' yi seçin veya **CTRL** + **SHIFT** + **a**'ya basın.
 
-   Öğe şablonu Yeni **Öğe Ekle** iletişim kutusunda görünür. **Dışa Aktarma Şablonu**Sihirbazı'na bir açıklama eklediyseniz, açıklama iletişim kutusunun sağ tarafında görüntülenir.
+   Öğe şablonu **Yeni öğe Ekle** iletişim kutusunda görünür. **Şablonu dışarı aktar sihirbazında**bir açıklama eklediyseniz, açıklama iletişim kutusunun sağ tarafında görünür.
 
-## <a name="enable-the-item-template-to-be-used-in-a-universal-windows-app-project"></a>Öğe şablonunun Evrensel Windows Uygulaması projesinde kullanılmasını etkinleştirme
+## <a name="enable-the-item-template-to-be-used-in-a-universal-windows-app-project"></a>Bir Evrensel Windows uygulaması projesinde kullanılacak öğe şablonunu etkinleştirin
 
-Sihirbaz, temel bir şablon oluşturmak için çok fazla çalışma yapar, ancak çoğu durumda şablonu dışa aktardıktan sonra *.vstemplate* dosyasını el ile değiştirmeniz gerekir. Örneğin, öğenin Evrensel Windows Uygulaması projesi için **Yeni Öğe Ekle** iletişim kutusunda görünmesini istiyorsanız, birkaç ek adım gerçekleştirmeniz gerekir.
+Sihirbaz temel şablon oluşturma işinin çoğunu yapar, ancak çoğu durumda, şablonu verdikten sonra *. vstemplate* dosyasını el ile değiştirmeniz gerekir. Örneğin, bir Evrensel Windows uygulaması projesi için öğenin **Yeni öğe Ekle** iletişim kutusunda görünmesini istiyorsanız birkaç ek adım gerçekleştirmeniz gerekir.
 
-1. Madde şablonu dışa aktarmak için önceki bölümdeki adımları izleyin.
+1. Bir öğe şablonunu dışarı aktarmak için önceki bölümdeki adımları izleyin.
 
-1. Oluşturulan *.zip* dosyasını ayıklayın ve *.vstemplate* dosyasını Visual Studio'da açın.
+1. Oluşturulan *. zip* dosyasını ayıklayın ve Visual Studio 'da *. vstemplate* dosyasını açın.
 
-1. C# Universal Windows projesi için öğenin içine `<TemplateData>` aşağıdaki XML'i ekleyin:
+1. C# Evrensel Windows projesi için aşağıdaki XML `<TemplateData>` öğesini öğesi içine ekleyin:
 
    ```xml
    <TemplateID>Microsoft.CSharp.Class</TemplateID>
    ```
 
-1. Visual Studio'da *.vstemplate* dosyasını kaydedin ve kapatın.
+1. Visual Studio 'da *. vstemplate* dosyasını kaydedin ve kapatın.
 
-1. *.vstemplate* dosyasını kopyalayıp *.zip* dosyasına yapıştırın.
+1. *. Vstemplate* dosyasını kopyalayıp *. zip* dosyasına yapıştırın.
 
-     **Dosyayı Kopyala** iletişim kutusu görünüyorsa, **Kopyala ve Değiştir** seçeneğini belirleyin.
+     **Dosya Kopyala** iletişim kutusu görüntülenirse, **Kopyala ve Değiştir** seçeneğini belirleyin.
 
-Artık **Yeni Öğe Ekle** iletişim kutusundan Evrensel Windows projesine bu şablonu temel alan bir öğe ekleyebilirsiniz.
+Artık, **Yeni öğe Ekle** iletişim kutusundan bu şablonu temel alan bir öğeyi Evrensel Windows projesine ekleyebilirsiniz.
 
-## <a name="enable-templates-for-specific-project-subtypes"></a>Belirli proje alt türleri için şablonları etkinleştirme
+## <a name="enable-templates-for-specific-project-subtypes"></a>Belirli proje alt türleri için şablonları etkinleştir
 
-Şablonunuzun yalnızca Windows, Office, Veritabanı veya Web gibi belirli proje alt türleri için görünmesi gerektiğini belirtebilirsiniz.
+Şablonunuzun yalnızca Windows, Office, veritabanı veya Web gibi belirli proje alt türleri için görünmesini belirtebilirsiniz.
 
-1. Öğe `ProjectType` şablonu için *.vstemplate* dosyasındaki öğeyi bulun.
+1. `ProjectType`Öğe şablonu için *. vstemplate* dosyasındaki öğesini bulun.
 
-1. Öğeden `ProjectType` hemen sonra [projectsubtype](../extensibility/projectsubtype-element-visual-studio-templates.md) öğesi ekleyin.
+1. Öğesinden hemen sonra bir [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) öğesi ekleyin `ProjectType` .
 
-1. Öğenin metin değerini aşağıdaki değerlerden birine ayarlayın:
+1. Öğesinin metin değerini aşağıdaki değerlerden birine ayarlayın:
 
     - Windows
     - Office
-    - Database
+    - Veritabanı
     - Web
 
 Örneğin: `<ProjectSubType>Database</ProjectSubType>`.
 
-Aşağıdaki örnek, **Office** projeleri için bir öğe şablonu gösterir.
+Aşağıdaki örnekte, **Office** projeleri için bir öğe şablonu gösterilmektedir.
 
 ```xml
 <VSTemplate Version="2.0.0" Type="Item" Version="2.0.0">
@@ -103,38 +103,38 @@ Aşağıdaki örnek, **Office** projeleri için bir öğe şablonu gösterir.
 </VSTemplate>
 ```
 
-## <a name="manually-create-an-item-template"></a>Öğe şablonu el ile oluşturma
+## <a name="manually-create-an-item-template"></a>El ile bir öğe şablonu oluşturun
 
 Bazı durumlarda, sıfırdan el ile bir öğe şablonu oluşturmak isteyebilirsiniz.
 
 1. Proje ve proje öğesi oluşturun.
 
-2. Proje öğesini şablon olarak kaydedilecek hazır olana kadar değiştirin.
+2. Proje öğesi bir şablon olarak kaydedilmeye hazırlanana kadar, Proje öğesini değiştirin.
 
-3. Parametre değişiminin nerede olması gerektiğini belirtmek için kod dosyasını değiştirin. Parametre değiştirme hakkında daha fazla bilgi için [bkz.](../ide/how-to-substitute-parameters-in-a-template.md)
+3. Kod dosyasını, her yerde parametre değiştirmenin nerede gerçekleşeceğini belirtecek şekilde değiştirin. Parametre değiştirme hakkında daha fazla bilgi için bkz [. nasıl yapılır: şablonda parametreleri değiştirme.](../ide/how-to-substitute-parameters-in-a-template.md)
 
-4. Bir XML dosyası oluşturun ve proje öğesi dosyanızla aynı dizinde *.vstemplate* dosya uzantısı ile kaydedin.
+4. Bir XML dosyası oluşturun ve bunu proje öğesi dosyanızdaki aynı dizinde *. vstemplate* dosya uzantısıyla kaydedin.
 
-5. Madde şablonu meta verilerini sağlamak için *.vstemplate* XML dosyasını edin. Daha fazla bilgi için şablon [şeması başvurusu (genişletilebilirlik)](../extensibility/visual-studio-template-schema-reference.md) ve önceki bölümdeki örneğe bakın.
+5. Öğe şablonu meta verileri sağlamak için *. vstemplate* XML dosyasını düzenleyin. Daha fazla bilgi için bkz. [Şablon Şeması Başvurusu (genişletilebilirlik)](../extensibility/visual-studio-template-schema-reference.md) ve önceki bölümdeki örnek.
 
-6. *.vstemplate* dosyasını kaydedin ve kapatın.
+6. *. Vstemplate* dosyasını kaydedin ve kapatın.
 
-7. **Windows Gezgini'nde**şablonunuza eklemek istediğiniz dosyaları seçin. Seçimi sağ tıklatın ve > **Sıkıştırılmış (sıkıştırılmış) klasörüne** **gönder'i**seçin. Seçtiğiniz dosyalar *bir .zip* dosyasına sıkıştırılır.
+7. **Windows Gezgini**'nde, şablonunuza dahil etmek istediğiniz dosyaları seçin. Seçime sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre**Gönder ' i seçin. Seçtiğiniz dosyalar bir *. zip* dosyasında sıkıştırılır.
 
 ::: moniker range="vs-2017"
 
-8. *.zip* dosyasını kopyalayın ve kullanıcı öğesi şablonu konumuna yapıştırın. Varsayılan dizin *%USERPROFILE%\Documents\Visual Studio 2017\Templates\ItemTemplates'* tir. Daha fazla bilgi için [bkz: Proje ve öğe şablonlarını bulma ve düzenleme.](../ide/how-to-locate-and-organize-project-and-item-templates.md)
+8. *. Zip* dosyasını kopyalayın ve Kullanıcı öğesi şablonu konumuna yapıştırın. Varsayılan dizin, *%userprofile%\, Studio 2017 \ Templates\ıtemtemplates*dizinidir. Daha fazla bilgi için bkz. [nasıl yapılır: proje ve öğe şablonlarını bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-8. *.zip* dosyasını kopyalayın ve kullanıcı öğesi şablonu konumuna yapıştırın. Varsayılan dizin *%USERPROFILE%\Documents\Visual Studio 2019\Templates\ItemTemplates'* tir. Daha fazla bilgi için [bkz: Proje ve öğe şablonlarını bulma ve düzenleme.](../ide/how-to-locate-and-organize-project-and-item-templates.md)
+8. *. Zip* dosyasını kopyalayın ve Kullanıcı öğesi şablonu konumuna yapıştırın. Varsayılan dizin, *%userprofile%\, Studio 2019 \ Templates\ıtemtemplates*dizinidir. Daha fazla bilgi için bkz. [nasıl yapılır: proje ve öğe şablonlarını bulma ve düzenleme](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Nasıl yapılı: Çok dosyalı öğe şablonları oluşturma](../ide/how-to-create-multi-file-item-templates.md)
-- [Visual Studio şablon şeması başvurusu (genişletilebilirlik)](../extensibility/visual-studio-template-schema-reference.md)
+- [Nasıl yapılır: birden çok dosya öğesi şablonları oluşturma](../ide/how-to-create-multi-file-item-templates.md)
+- [Visual Studio Şablon Şeması Başvurusu (genişletilebilirlik)](../extensibility/visual-studio-template-schema-reference.md)

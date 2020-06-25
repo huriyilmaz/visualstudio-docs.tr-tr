@@ -1,7 +1,7 @@
 ---
 title: TableAdapter’lar oluşturma ve yapılandırma
 ms.date: 09/01/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - table adapters, creating
 - creating TableAdapters
@@ -14,16 +14,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4e5a557aeeee3fca2bef0367a630dfaca04b3a74
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 90dcc8e623f258721c71ef02082500a0736764e4
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586789"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282680"
 ---
 # <a name="create-and-configure-tableadapters"></a>TableAdapter’lar oluşturma ve yapılandırma
 
-TableAdapter, uygulamanızla veritabanı arasındaki iletişimi sağlar. Veritabanına bağlanır, sorguları veya saklı yordamları çalıştırır ve yeni bir veri tablosu döndürür ya da döndürülen verilerle mevcut bir <xref:System.Data.DataTable> doldurur. Ayrıca, TableAdapters güncelleştirilmiş verileri uygulamanızdan veritabanına geri gönderebilir.
+TableAdapter, uygulamanızla veritabanı arasındaki iletişimi sağlar. Veritabanına bağlanır, sorguları veya saklı yordamları çalıştırır ve yeni bir veri tablosu döndürür ya da döndürülen verilerle var olan verileri doldurur <xref:System.Data.DataTable> . Ayrıca, TableAdapters güncelleştirilmiş verileri uygulamanızdan veritabanına geri gönderebilir.
 
 TableAdapters, aşağıdaki eylemlerden birini gerçekleştirdiğinizde sizin için oluşturulur:
 
@@ -51,38 +51,38 @@ Araç kutusundan yeni bir TableAdapter sürükleyip **veri kümesi Tasarımcıs�
 
 - Ayrıca, TableAdapter 'ın **Select**, **Insert**, **Update**ve **Delete** komutları için mevcut saklı yordamları çalıştırmayı da tercih edebilirsiniz. **Update** komutuna atanan saklı yordam, örneğin, `TableAdapter.Update()` yöntemi çağrıldığında çalıştırılır.
 
-Seçili saklı yordamdaki parametreleri veri tablosundaki karşılık gelen sütunlara eşleyin. Örneğin, saklı yordamınız tablodaki `CompanyName` sütununa geçtiğinde `@CompanyName` adlı bir parametreyi kabul ederse `@CompanyName` parametresinin **kaynak sütununu** `CompanyName`olarak ayarlayın.
+Seçili saklı yordamdaki parametreleri veri tablosundaki karşılık gelen sütunlara eşleyin. Örneğin, saklı yordamınız tablodaki sütuna geçtiğinde adlı bir parametreyi kabul ediyorsa `@CompanyName` `CompanyName` , parametresinin **kaynak sütununu** `@CompanyName` olarak ayarlayın `CompanyName` .
 
 > [!NOTE]
-> SELECT komutuna atanan saklı yordam, sihirbazın bir sonraki adımında adı ettiğiniz TableAdapter 'ın yöntemi çağırarak çalıştırılır. Varsayılan yöntem `Fill`, bu nedenle genellikle SELECT yordamını çalıştırmak için kullanılan kod `TableAdapter.Fill(tableName)`. `Fill`varsayılan adı değiştirirseniz, `Fill` adını atadığınız adla değiştirin ve "TableAdapter" değerini TableAdapter 'ın gerçek adıyla değiştirin (örneğin, `CustomersTableAdapter`).
+> SELECT komutuna atanan saklı yordam, sihirbazın bir sonraki adımında adı ettiğiniz TableAdapter 'ın yöntemi çağırarak çalıştırılır. Varsayılan yöntem ise `Fill` , genellıkle Select yordamını çalıştırmak için kullanılan kod `TableAdapter.Fill(tableName)` . Varsayılan adı ' dan değiştirirseniz `Fill` , `Fill` atadığınız adla değiştirin ve "TableAdapter" öğesini TableAdapter 'ın gerçek adıyla değiştirin (örneğin, `CustomersTableAdapter` ).
 
-- **Güncelleştirmeleri doğrudan veritabanına göndermek Için oluşturma yöntemleri** seçildiğinde `GenerateDBDirectMethods` özelliği true olarak ayarlanmasına eşdeğerdir. Özgün SQL açıklaması yeterli bilgi sağlamıyorsa veya sorgu güncelleştirilebilir bir sorgu olmadığında bu seçenek kullanılamaz. Bu durum, örneğin, bir tek (skaler) değer döndüren sorguları ve sorguları **birleştirmek** gibi meydana gelebilir.
+- **Güncelleştirmeleri doğrudan veritabanına göndermek Için oluşturma yöntemlerini** seçme `GenerateDBDirectMethods` özelliği true olarak ayarlanmasına eşdeğerdir. Özgün SQL açıklaması yeterli bilgi sağlamıyorsa veya sorgu güncelleştirilebilir bir sorgu olmadığında bu seçenek kullanılamaz. Bu durum, örneğin, bir tek (skaler) değer döndüren sorguları ve sorguları **birleştirmek** gibi meydana gelebilir.
 
 Sihirbazdaki **Gelişmiş Seçenekler** şunları sağlar:
 
 - **Generate SQL deyimleri** SAYFASıNDA tanımlanan select deyimini temel alan INSERT, Update ve delete deyimlerini oluştur
-- İyimser eşzamanlılık kullanma
+- İyimser eşzamanlılığı kullanma
 - INSERT ve UPDATE deyimlerinin çalıştırıldıktan sonra veri tablosunun yenilenip yenilenmeyeceğini belirtin
 
 ## <a name="configure-a-tableadapters-fill-method"></a>TableAdapter 'ın Fill metodunu yapılandırma
 
-Bazen TableAdapter tablosunun şemasını değiştirmek isteyebilirsiniz. Bunu yapmak için, TableAdapter 'ın birincil `Fill` yöntemini değiştirirsiniz. TableAdapters, ilişkili veri tablosunun şemasını tanımlayan bir birincil `Fill` yöntemiyle oluşturulur. Birincil `Fill` yöntemi, TableAdapter 'ı ilk kez yapılandırdığınızda girdiğiniz sorguyu veya saklı yordamı temel alır. Veri kümesi Tasarımcısı ' nda veri tablosu altındaki ilk (en üst) yöntemdir.
+Bazen TableAdapter tablosunun şemasını değiştirmek isteyebilirsiniz. Bunu yapmak için, TableAdapter 'ın birincil `Fill` yöntemini değiştirirsiniz. TableAdapters, `Fill` ilişkili veri tablosunun şemasını tanımlayan bir birincil yöntemle oluşturulur. Birincil `Fill` Yöntem, TableAdapter 'ı ilk kez yapılandırdığınızda girdiğiniz sorguyu veya saklı yordamı temel alır. Veri kümesi Tasarımcısı ' nda veri tablosu altındaki ilk (en üst) yöntemdir.
 
 ![Birden çok sorguya sahip TableAdapter](../data-tools/media/tableadapter.gif)
 
-TableAdapter 'ın Main `Fill` yönteminde yaptığınız tüm değişiklikler, ilişkili veri tablosunun şemasına yansıtılır. Örneğin, ana `Fill` yöntemindeki sorgudan bir sütunu kaldırmak, sütunu ilişkili veri tablosundan da kaldırır. Ayrıca, ana `Fill` yönteminden sütunu kaldırmak, sütunu o TableAdapter için ek sorgulardan kaldırır.
+TableAdapter 'ın Main yönteminde yaptığınız tüm değişiklikler, `Fill` ilişkili veri tablosunun şemasına yansıtılır. Örneğin, ana yöntemdeki sorgudan bir sütunu kaldırmak, `Fill` sütunu ilişkili veri tablosundan da kaldırır. Ayrıca, sütunun Main yönteminden kaldırılması, `Fill` sütunu o TableAdapter için ek sorgulardan kaldırır.
 
 TableAdapter sorgu Yapılandırma Sihirbazı 'nı kullanarak TableAdapter için ek sorgular oluşturabilir ve düzenleyebilirsiniz. Bu ek sorgular, skaler bir değer döndürmedikleri müddetçe tablo şemasına uymalıdır.  Her ek sorgunun belirttiğiniz bir adı vardır.
 
-Aşağıdaki örnek, `FillByCity`adlı ek bir sorgunun nasıl çağrılacağını göstermektedir:
+Aşağıdaki örnek, adlı ek bir sorgunun nasıl çağrılacağını göstermektedir `FillByCity` :
 
 `CustomersTableAdapter.FillByCity(NorthwindDataSet.Customers, "Seattle")`
 
 ### <a name="to-start-the-tableadapter-query-configuration-wizard-with-a-new-query"></a>TableAdapter sorgu Yapılandırma Sihirbazı 'nı yeni bir sorgu ile başlatmak için
 
-1. Kümenizde açın **veri kümesi Tasarımcısı**.
+1. Veri kümenizi **veri kümesi Tasarımcısı**açın.
 
-2. Yeni bir sorgu oluşturuyorsanız, bir **sorgu** nesnesini **araç kutusu** **sekmesinden bir** <xref:System.Data.DataTable>sürükleyin veya TableAdapter 'ın kısayol menüsünden **Sorgu Ekle** ' yi seçin. Ayrıca, ilişkili bir <xref:System.Data.DataTable>olmayan bir TableAdapter oluşturan **veri kümesi Tasarımcısı**boş bir alanına bir **sorgu** nesnesi sürükleyebilirsiniz. Bu sorgular yalnızca tek (skaler) değerler döndürebilir veya veritabanına karşı UPDATE, INSERT veya DELETE komutlarını çalıştırabilir.
+2. Yeni bir sorgu oluşturuyorsanız, bir **sorgu** nesnesini **Toolbox** 'ın **DataSet** sekmesinden bir nesne üzerine sürükleyin <xref:System.Data.DataTable> veya TableAdapter 'ın kısayol menüsünden **Sorgu Ekle** ' yi seçin. Ayrıca, ilişkili olmayan bir TableAdapter oluşturan **veri kümesi Tasarımcısı**boş bir alanına bir **sorgu** nesnesi sürükleyebilirsiniz <xref:System.Data.DataTable> . Bu sorgular yalnızca tek (skaler) değerler döndürebilir veya veritabanına karşı UPDATE, INSERT veya DELETE komutlarını çalıştırabilir.
 
 3. **Veri bağlantınızı seçin** ekranında, sorgunun kullanacağı bağlantıyı seçin veya oluşturun.
 
@@ -102,7 +102,7 @@ Aşağıdaki örnek, `FillByCity`adlı ek bir sorgunun nasıl çağrılacağın�
 - Mevcut bir TableAdapter sorgusunu düzenliyorsanız, sorguyu sağ tıklatın ve ardından kısayol menüsünden **Yapılandır** ' ı seçin.
 
     > [!NOTE]
-    > TableAdapter 'ın ana sorgusuna sağ tıklamak TableAdapter ve <xref:System.Data.DataTable> şemasını yeniden yapılandırır. TableAdapter üzerinde ek bir sorguya sağ tıklanması, ancak yalnızca seçili sorguyu yapılandırır. TableAdapter **Yapılandırma Sihirbazı** TableAdapter tanımını yeniden yapılandırır, ancak **TableAdapter sorgu Yapılandırma Sihirbazı** yalnızca seçili sorguyu yeniden yapılandırır.
+    > TableAdapter 'ın ana sorgusuna sağ tıklamak TableAdapter ve Schema 'yı yeniden yapılandırır <xref:System.Data.DataTable> . TableAdapter üzerinde ek bir sorguya sağ tıklanması, ancak yalnızca seçili sorguyu yapılandırır. TableAdapter **Yapılandırma Sihirbazı** TableAdapter tanımını yeniden yapılandırır, ancak **TableAdapter sorgu Yapılandırma Sihirbazı** yalnızca seçili sorguyu yeniden yapılandırır.
 
 ### <a name="to-add-a-global-query-to-a-tableadapter"></a>TableAdapter 'a genel sorgu eklemek için
 
@@ -110,7 +110,7 @@ Aşağıdaki örnek, `FillByCity`adlı ek bir sorgunun nasıl çağrılacağın�
 
      Bir **sorgu** nesnesini **araç** **kümesi** sekmesinden **veri kümesi Tasarımcısı**boş bir alana sürükleyerek genel sorgular eklersiniz.
 
-- İstenen görevi gerçekleştiren bir sorgu sağlayın, örneğin, `SELECT COUNT(*) AS CustomerCount FROM Customers`.
+- İstenen görevi gerçekleştiren bir sorgu sağlayın, örneğin, `SELECT COUNT(*) AS CustomerCount FROM Customers` .
 
     > [!NOTE]
     > Bir **sorgu** nesnesini doğrudan **veri kümesi Tasarımcısı** sürüklemek yalnızca skaler (tek) bir değer döndüren bir yöntem oluşturur. Seçtiğiniz sorgu veya saklı yordam tek bir değerden daha fazla döndürebileceğinden, sihirbaz tarafından oluşturulan yöntem yalnızca tek bir değer döndürür. Örneğin, sorgu döndürülen verilerin ilk satırının ilk sütununu döndürebilir.

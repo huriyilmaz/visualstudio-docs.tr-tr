@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 91c712ce396000ff9babaf70335edfd5709a3000
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: cb1d5196874956d54c01504288a4d948b12abea8
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183099"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283573"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Öğretici: Visual Studio 'da TypeScript ile ASP.NET Core uygulaması oluşturma
 
@@ -34,7 +34,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ::: moniker-end
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > [!div class="checklist"]
 > * ASP.NET Core projesi oluşturma
 > * TypeScript desteği için NuGet paketini ekleyin
@@ -97,9 +97,9 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 
 1. Proje düğümüne sağ tıklayın ve **> yeni öğe Ekle**' yi seçin. **TYPESCRIPT JSON yapılandırma dosyasını**seçin ve ardından **Ekle**' ye tıklayın.
 
-   Visual Studio, *tsconfig. JSON* dosyasını proje köküne ekler. TypeScript derleyicisi [seçeneklerini yapılandırmak](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) için bu dosyayı kullanabilirsiniz.
+   Visual Studio *tsconfig.js* dosyayı proje köküne ekler. TypeScript derleyicisi [seçeneklerini yapılandırmak](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) için bu dosyayı kullanabilirsiniz.
 
-1. *Tsconfig. JSON* dosyasını açın ve varsayılan kodu şu kodla değiştirin:
+1. *tsconfig.js* açın ve varsayılan kodu aşağıdaki kodla değiştirin:
 
    ```json
    {
@@ -162,7 +162,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 
     `lastName`Son adı koda geri eklemeyi seçin.
 
-1. *Görünümler/giriş* klasörünü açın ve *index. html*dosyasını açın.
+1. *Görünümler/giriş* klasörünü açın ve *Index. cshtml*dosyasını açın.
 
 1. Aşağıdaki HTML kodunu dosyanın sonuna ekleyin.
 
@@ -189,7 +189,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 
    Uygulamayı çalıştırdığınızda otomatik olarak oluştursa da, yapı işlemi sırasında gerçekleşen bir şeye göz atmak istiyoruz.
 
-1. *Wwwroot/js* klasörünü açın ve iki yeni dosya, *app. js* ve kaynak eşleme dosyası olan *app. js. Map*' i bulun. Bu dosyalar TypeScript derleyicisi tarafından oluşturulur.
+1. *Wwwroot/js* klasörünü açın ve iki yeni dosya, *app.js* ve kaynak eşleme dosyası olan *app.js. Map*' i bulun. Bu dosyalar TypeScript derleyicisi tarafından oluşturulur.
 
    Hata ayıklama için kaynak eşleme dosyaları gereklidir.
 
@@ -224,7 +224,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
    >[!NOTE]
    > ASP.NET Core projeleri için, istemci tarafı JavaScript ve CSS dosyalarını yüklemek üzere NPM yerine [Kitaplık Yöneticisi](https://docs.microsoft.com/aspnet/core/client-side/libman/?view=aspnetcore-3.1) 'ni veya Yarn 'yi de kullanabilirsiniz.
 
-1. Bu örnekte, projenize jQuery için bir TypeScript tanım dosyası ekleyin. *Package. JSON* dosyanıza aşağıdakini ekleyin.
+1. Bu örnekte, projenize jQuery için bir TypeScript tanım dosyası ekleyin. *package.js* dosyasına aşağıdakini ekleyin.
 
    ```json
    "devDependencies": {
@@ -237,7 +237,7 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
 1. Çözüm Gezgini paket yüklü değilse, NPM düğümüne sağ tıklayın ve **paketleri geri yükle**' yi seçin.
 
    >[!NOTE]
-   > Bazı senaryolarda Çözüm Gezgini, [burada](https://github.com/aspnet/Tooling/issues/479)açıklanan bilinen bir sorun nedeniyle NPM paketinin *Package. JSON* ile eşitlenmemiş olduğunu gösterebilir. Örneğin, paket yüklendiğinde yüklü değil olarak görünebilir. Çoğu durumda, bu makalenin önceki kısımlarında açıklandığı gibi Package *. JSON*' u silerek, Visual Studio 'yu yeniden başlatarak ve *Package. JSON* dosyasını yeniden ekleyerek Çözüm Gezgini güncelleştirebilirsiniz.
+   > Bazı senaryolarda Çözüm Gezgini, [burada](https://github.com/aspnet/Tooling/issues/479)açıklanan bilinen bir sorun nedeniyle bir NPM paketinin *package.js* eşitlenmemiş olduğunu gösteriyor olabilir. Örneğin, paket yüklendiğinde yüklü değil olarak görünebilir. Çoğu durumda, *package.js*Çözüm Gezgini güncelleştirebilir, Visual Studio 'yu yeniden başlatarak ve bu makalede daha önce anlatıldığı gibi *package.js* dosyaya yeniden ekleyebilirsiniz.
 
 1. Çözüm Gezgini, betikler klasörüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin.
 

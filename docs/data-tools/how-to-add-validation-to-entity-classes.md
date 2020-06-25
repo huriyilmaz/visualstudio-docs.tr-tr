@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: varlık sınıflarına doğrulama ekleme'
+title: 'Nasıl yapılır: Varlık sınıflarına doğrulama ekleme'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -11,14 +11,14 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3ccd83662700794e60572eed923d10452595d726
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 5d408c67b2e54fecd6404bac93d93ecfb35de162
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586568"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282351"
 ---
-# <a name="how-to-add-validation-to-entity-classes"></a>Nasıl yapılır: varlık sınıflarına doğrulama ekleme
+# <a name="how-to-add-validation-to-entity-classes"></a>Nasıl yapılır: Varlık sınıflarına doğrulama ekleme
 Varlık sınıflarını *doğrulamak* , veri nesnelerine girilen değerlerin bir nesnenin şemasındaki kısıtlamalara ve ayrıca uygulama için belirlenen kurallara uygun olduğunu onaylama işlemidir. Temel alınan veritabanına güncelleştirmeleri göndermeden önce verilerin doğrulanması, hataları azaltan iyi bir uygulamadır. Ayrıca, bir uygulama ve veritabanı arasındaki gidiş dönüşlerin olası sayısını azaltır.
 
 [Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) , kullanıcıların, tüm varlıkların ekleme, güncelleştirme ve silme sırasında çalışan tasarımcı tarafından oluşturulan kodu genişletmelerine imkan tanıyan kısmi yöntemler sağlar ve ayrıca tek tek sütun değişiklikleri sırasında ve sonrasında.
@@ -33,7 +33,7 @@ Bu yordam, bir sütundaki değer değiştiğinde verilerin nasıl doğrulandığ
 
 ### <a name="to-validate-data-during-a-columns-value-change"></a>Bir sütunun değer değişikliği sırasında verileri doğrulamak için
 
-1. **O/R tasarımcısında**yeni bir LINQ to SQL Classes dosyası ( **. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** **. dbml** dosyasına çift tıklayın.)
+1. **O/R tasarımcısında**yeni bir LINQ to SQL Classes dosyası (**. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** **. dbml** dosyasına çift tıklayın.)
 
 2. **O/R tasarımcısında**, doğrulama eklemek istediğiniz sınıfa sağ tıklayın ve sonra **kodu görüntüle**' ye tıklayın.
 
@@ -47,9 +47,9 @@ Bu yordam, bir sütundaki değer değiştiğinde verilerin nasıl doğrulandığ
 
     2. Doğrulama eklemek istediğiniz sütun için **OnCOLUMNNAMEChanging** metodunu bulun.
 
-    3. Kısmi sınıfa bir `OnCOLUMNNAMEChanging` yöntemi eklenir.
+    3. `OnCOLUMNNAMEChanging`Kısmi sınıfa bir yöntem eklenir.
 
-    4. Önce bir değer girildiğini doğrulamak ve ardından sütun için girilen değerin uygulamanız için kabul edilebilir olduğundan emin olmak için aşağıdaki kodu ekleyin. `value` bağımsız değişkeni önerilen değeri içerir, bu nedenle geçerli bir değer olduğunu onaylamak için mantık ekleyin:
+    4. Önce bir değer girildiğini doğrulamak ve ardından sütun için girilen değerin uygulamanız için kabul edilebilir olduğundan emin olmak için aşağıdaki kodu ekleyin. `value`Bağımsız değişken önerilen değeri içerir, bu nedenle geçerli bir değer olduğunu onaylamak için mantık ekleyin:
 
         ```vb
         If value.HasValue Then
@@ -60,9 +60,9 @@ Bu yordam, bir sütundaki değer değiştiğinde verilerin nasıl doğrulandığ
         End If
         ```
 
-    Projeler C# için:
+    C# projeleri için:
 
-    C# Projeler otomatik olarak olay işleyicileri oluşturmadığından, sütun değiştiren kısmi Yöntemler oluşturmak için IntelliSense 'i kullanabilirsiniz. `partial` yazın ve ardından kullanılabilir kısmi yöntemlerin listesine erişmek için bir boşluk girin. Doğrulama eklemek istediğiniz sütun için sütun değiştirme yöntemine tıklayın. Aşağıdaki kod, bir sütun değiştirme kısmi yöntemi seçtiğinizde oluşturulan koda benzer:
+    C# projeleri otomatik olarak olay işleyicileri oluşturmadığından, sütun değiştiren kısmi Yöntemler oluşturmak için IntelliSense 'i kullanabilirsiniz. `partial`Kullanılabilir kısmi yöntemlerin listesine erişmek için bir boşluk yazın. Doğrulama eklemek istediğiniz sütun için sütun değiştirme yöntemine tıklayın. Aşağıdaki kod, bir sütun değiştirme kısmi yöntemi seçtiğinizde oluşturulan koda benzer:
 
     ```csharp
     partial void OnCOLUMNNAMEChanging(COLUMNDATATYPE value)
@@ -75,17 +75,17 @@ Bu yordam, bir sütundaki değer değiştiğinde verilerin nasıl doğrulandığ
 Değişiklikler sırasında değerleri denetlemenin yanı sıra, bir bütün varlık sınıfını güncelleştirmek için bir deneme yapıldığında verileri de doğrulayabilirsiniz. Denenen bir güncelleştirme sırasında doğrulama, iş kuralları için gerekliyse, birden fazla sütundaki değerleri karşılaştırmanıza olanak sağlar. Aşağıdaki yordamda, bir bütün varlık sınıfını güncelleştirmek için bir girişim yapıldığında nasıl doğrulanacağı gösterilmektedir.
 
 > [!NOTE]
-> Varlık sınıflarının tamamlanma güncelleştirmeleri için doğrulama kodu, kısmi <xref:System.Data.Linq.DataContext> sınıfında (belirli bir varlık sınıfının parçalı sınıfında değil) yürütülür.
+> Varlık sınıflarının tamamlanma güncelleştirmeleri için doğrulama kodu, kısmi <xref:System.Data.Linq.DataContext> sınıfta yürütülür (belirli bir varlık sınıfının parçalı sınıfında yerine).
 
 ### <a name="to-validate-data-during-an-update-to-an-entity-class"></a>Bir varlık sınıfına yönelik bir güncelleştirme sırasında verileri doğrulamak için
 
-1. **O/R tasarımcısında**yeni bir LINQ to SQL Classes dosyası ( **. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** **. dbml** dosyasına çift tıklayın.)
+1. **O/R tasarımcısında**yeni bir LINQ to SQL Classes dosyası (**. dbml** dosyası) açın veya oluşturun. ( **Çözüm Gezgini** **. dbml** dosyasına çift tıklayın.)
 
 2. **O/R tasarımcısında** boş bir alana sağ tıklayın ve **kodu görüntüle**' ye tıklayın.
 
-     Kod Düzenleyicisi `DataContext`için bir kısmi sınıfla açılır.
+     Kod Düzenleyicisi, için kısmi bir sınıf ile açılır `DataContext` .
 
-3. İmleci `DataContext`kısmi sınıfına yerleştirin.
+3. İmleci için kısmi sınıfa yerleştirin `DataContext` .
 
 4. Visual Basic projeleri için:
 
@@ -93,9 +93,9 @@ Değişiklikler sırasında değerleri denetlemenin yanı sıra, bir bütün var
 
     2. **Updateentityclassname**öğesine tıklayın.
 
-    3. Kısmi sınıfa bir `UpdateENTITYCLASSNAME` yöntemi eklenir.
+    3. `UpdateENTITYCLASSNAME`Kısmi sınıfa bir yöntem eklenir.
 
-    4. Aşağıdaki kodda gösterildiği gibi `instance` bağımsız değişkenini kullanarak ayrı sütun değerlerine erişin:
+    4. `instance`Aşağıdaki kodda gösterildiği gibi bağımsız değişkenini kullanarak ayrı sütun değerlerine erişin:
 
         ```vb
         If (instance.COLUMNNAME = x) And (instance.COLUMNNAME = y) Then
@@ -104,9 +104,9 @@ Değişiklikler sırasında değerleri denetlemenin yanı sıra, bir bütün var
         End If
         ```
 
-    Projeler C# için:
+    C# projeleri için:
 
-    C# Projeler otomatik olarak olay işleyicileri oluşturmadığından, kısmi `UpdateCLASSNAME` yöntemini oluşturmak için IntelliSense 'i kullanabilirsiniz. `partial` yazın ve ardından kullanılabilir kısmi yöntemlerin listesine erişmek için bir boşluk girin. Doğrulama eklemek istediğiniz sınıf için Update metoduna tıklayın. Aşağıdaki kod, `UpdateCLASSNAME` kısmi bir yöntem seçtiğinizde oluşturulan koda benzer:
+    C# projeleri otomatik olarak olay işleyicileri oluşturmadığından, kısmi yöntemi oluşturmak için IntelliSense 'i kullanabilirsiniz `UpdateCLASSNAME` . `partial`Kullanılabilir kısmi yöntemlerin listesine erişmek için bir boşluk yazın. Doğrulama eklemek istediğiniz sınıf için Update metoduna tıklayın. Aşağıdaki kod, kısmi bir yöntemi seçtiğinizde oluşturulan koda benzer `UpdateCLASSNAME` :
 
     ```csharp
     partial void UpdateCLASSNAME(CLASSNAME instance)

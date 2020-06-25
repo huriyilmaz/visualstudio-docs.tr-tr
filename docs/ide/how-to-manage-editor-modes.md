@@ -1,7 +1,7 @@
 ---
-title: Tam ekran ve sanal alan modu
+title: Tam ekran ve sanal boşluk modu
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - word wrap
 - views, virtual space
@@ -24,44 +24,44 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 77f224a6e3a1b12ed17799ddf6a2fc5c23f5d4cc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3f8f86d635e1e57d82dd2d18084c91a9267f9a0b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591040"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284210"
 ---
-# <a name="how-to-manage-editor-modes"></a>Nasıl yapılsın: Editör modlarını yönetme
+# <a name="how-to-manage-editor-modes"></a>Nasıl yapılır: düzenleyici modlarını yönetme
 
-Visual Studio kod düzenleyicisini çeşitli ekran modlarında görüntüleyebilirsiniz.
+Visual Studio kod düzenleyicisini çeşitli görüntü modlarında görüntüleyebilirsiniz.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürüme bağlı olarak bu makalede açıklananlardan farklı olabilir. Ayarlarınızı değiştirmek için, örneğin **Genel** veya **Görsel C++** ayarlarını değiştirmek **için, Araçlar** > **İçe Ve Dışa Aktar Ayarlarını**seçin ve ardından **tüm ayarları sıfırla'yı**seçin.
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürümüne bağlı olarak bu makalede açıklananlardan farklı bir durum içerebilir. Ayarlarınızı değiştirmek (örneğin, **genel** veya **Visual C++** ayarları) için **Araçlar**  >  **içeri ve dışarı aktarma ayarları**' nı seçin ve ardından **tüm ayarları Sıfırla**' yı seçin.
 
-## <a name="enable-full-screen-mode"></a>Tam ekran modunu etkinleştirme
+## <a name="enable-full-screen-mode"></a>Tam ekran modunu etkinleştir
 
-Tüm araç pencerelerini gizlemeyi ve **tam ekran** modunu etkinleştirerek yalnızca belge pencerelerini görüntülemeyi seçebilirsiniz.
+Tüm araç pencerelerini gizlemeyi ve yalnızca **tam ekran** modunu etkinleştirerek yalnızca belge pencerelerini görüntülemeyi seçebilirsiniz.
 
-- **Tam Ekran** moduna girmek veya çıkmak için **Alt**+**Shift**+**Enter** tuşuna basın.
+- **Alt** + **Shift** + **Tam ekran** moduna girmek veya çıkmak için alt SHIFT**ENTER** tuşuna basın.
 
      -- veya --
 
-- **Komut** penceresinde `View.Fullscreen` komutu sorun.
+- Komut penceresinde komutunu verin `View.Fullscreen` . **Command**
 
-## <a name="enable-virtual-space-mode"></a>Sanal alan modunu etkinleştirme
+## <a name="enable-virtual-space-mode"></a>Sanal boşluk modunu etkinleştir
 
-**Sanal Alan** modunda, boşluklar her kod satırının sonuna eklenir. Yorumları kodunuzun yanında tutarlı bir noktada konumlandırmak için bu seçeneği belirleyin.
+**Sanal alan** modunda, her kod satırının sonuna boşluklar eklenir. Açıklamaları kodunuzun yanındaki tutarlı bir noktada konumlandırmak için bu seçeneği belirleyin.
 
-1. **Araçlar** menüsünden **Seçenekler'i** seçin.
+1. **Araçlar** menüsünde **Seçenekler** ' i seçin.
 
-2. Metin **Düzenleyicisi** klasörünü genişletin ve bu seçeneği genel olarak ayarlamak için **Tüm Diller'i** seçin veya belirli bir dil klasörünü seçin. Örneğin, yalnızca Visual Basic'te satır numaralarını açmak için **Temel** > **Metin Düzenleyicisi** düğümini seçin.
+2. **Metin düzenleyici** klasörünü genişletin ve bu seçeneği Global olarak ayarlamak Için **tüm diller** ' i seçin veya belirli bir dil klasörü seçin. Örneğin, satır numaralarını yalnızca Visual Basic açmak için **temel**  >  **metin düzenleyici** düğümünü seçin.
 
-3. **Genel** seçenekleri seçin ve **Ayarlar'ın**altında Sanal **Alanı Etkinleştir'i**seçin.
+3. **Genel** Seçenekler ' i seçin ve **Ayarlar**altında **sanal alanı etkinleştir**' i seçin.
 
     > [!NOTE]
-    > **Sanal Alan** **Sütun Seçimi** modunda etkinleştirilir. **Sanal Alan** modu etkinleştirilemediğinde, ekleme noktası doğrudan bir satırın sonundan sonrakinin ilk karakterine taşınır.
+    > **Sütun seçim** modunda **sanal alan** etkindir. **Sanal boşluk** modu etkin olmadığında, ekleme noktası bir satırın sonundan doğrudan bir sonraki ilk karaktere gider.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md)
-- [Yazı Tipleri ve Renkler, Çevre, Seçenekler iletişim kutusu](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)
+- [Visual Studio 'da pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md)
+- [Yazı tipleri ve renkler, ortam, Seçenekler iletişim kutusu](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)

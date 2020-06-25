@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01dfa23896f006dbf904a3e097e0d6fa296e0361
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 9c94fac97a340c8c315ec91e3c5ebb68cac0d516
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184581"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283352"
 ---
 # <a name="usage-warnings"></a>Kullanım Uyarıları
 
@@ -27,7 +27,7 @@ Kullanım uyarıları .NET 'in uygun kullanımını destekler.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA1801: Kullanılmayan parametreleri gözden geçirin](../code-quality/ca1801.md)|Yöntem imzası, yöntemin gövdesinde kullanılmayan bir parametre içerir.|
 |[CA1806: Metot sonuçlarını yoksaymayın](../code-quality/ca1806.md)|Yeni bir nesne oluşturulur, ancak hiç kullanılmaz veya çağrılan yeni dizeyi oluşturur ve döndürür ve yeni dize hiç kullanılmaz ya da COM veya P/Invoke yöntemi, bir HRESULT ya da hiç kullanılmayan hata kodu döndürür.|
@@ -72,6 +72,7 @@ Kullanım uyarıları .NET 'in uygun kullanımını destekler.
 |[CA2241: Biçimlendirme metotlarına doğru bağımsız değişkenleri sağlayın](../code-quality/ca2241.md)|System. String. Format öğesine geçirilen biçim bağımsız değişkeni, her nesne bağımsız değişkenine karşılık gelen bir biçim öğesi içermiyor veya tam tersi.|
 |[CA2242: NaN için doğru test edin](../code-quality/ca2242.md)|Bu ifade, değeri Single.Nan veya Double.Nan'a karşı test eder. Single.IsNan(Single) ya da Double.IsNan(Double) değerini test etmek için kullanın.|
 |[CA2243: Öznitelik dize harfleri doğru çözümlenmelidir](../code-quality/ca2243.md)|Özniteliğin dize sabit değeri bir URL, GUID veya sürüm için doğru ayrıştırılmadı.|
-|[CA2244: dizini oluşturulmuş öğe başlatmaları yinelenmeyin](../code-quality/ca2244.md)|Bir nesne başlatıcısının aynı sabit dizine sahip birden fazla dizinli öğe başlatıcısı vardır. Son başlatıcı gereksizdir.|
-|[CA2245: bir özelliği kendi kendine atama](../code-quality/ca2245.md)|Bir özellik yanlışlıkla kendisine atandı.|
-|[CA2246: bir sembol ve üyesini aynı deyime atamayın](../code-quality/ca2246.md)|Bir sembol ve üyesini atama, diğer bir deyişle, bir alan veya özellik, aynı deyimde önerilmez. Üye erişiminin, bu deyimdeki atamadan önce simgenin eski değerini veya atamasından yeni değeri kullanması amaçlandıysa, bu, net değildir.|
+|[CA2244: Dizine eklenmiş öğe başlatmalarını yineleme](../code-quality/ca2244.md)|Bir nesne başlatıcısının aynı sabit dizine sahip birden fazla dizinli öğe başlatıcısı vardır. Son başlatıcı gereksizdir.|
+|[CA2245: Bir özelliği kendisine atama](../code-quality/ca2245.md)|Bir özellik yanlışlıkla kendisine atandı.|
+|[CA2246: Sembol ve üyesini aynı deyime atama](../code-quality/ca2246.md)|Bir sembol ve üyesini atama, diğer bir deyişle, bir alan veya özellik, aynı deyimde önerilmez. Üye erişiminin, bu deyimdeki atamadan önce simgenin eski değerini veya atamasından yeni değeri kullanması amaçlandıysa, bu, net değildir.|
+|[CA2248: ' Enum. HasFlag ' için doğru ' Enum ' bağımsız değişkenini sağlayın](../code-quality/ca2248.md)|Yöntem çağrısına bir bağımsız değişken olarak geçirilen sabit listesi türü, `HasFlag` çağıran enum türünden farklı.|

@@ -1,23 +1,23 @@
 ---
 title: Bir ilişki oluşturulamıyor-Özellik iki kez listelenmiş
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: 3ced8bda-210e-4caf-9d8f-96cdbba19251
 author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: acc2a34f8980d748df45ad8437e308c889170aba
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 92999e211ec0f7265f026446e09dbc94cc3060f3
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72648742"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282806"
 ---
-# <a name="cannot-create-an-association-ltassociation-namegt---property-listed-twice"></a>Bir ilişki &lt;association adı oluşturulamıyor &gt;-Özellik iki kez listelendi
+# <a name="cannot-create-an-association-ltassociation-namegt---property-listed-twice"></a>İlişki &lt; ilişkilendirme adı oluşturulamıyor &gt; -özellik iki kez listelendi
 
-> Bir ilişki \<association adı oluşturulamıyor. Aynı özellik birden çok kez listeleniyor: \<property ad >.
+İlişki oluşturulamıyor \<association name> . Aynı özellik birden çok kez listeleniyor: \<property name> .
 
 İlişkilendirmeler, **Ilişki düzenleyici** iletişim kutusunda seçilen **ilişkilendirme özellikleri** tarafından tanımlanır. Özellikler, ilişkilendirmedeki her sınıf için yalnızca bir kez listelenebilir.
 

@@ -1,7 +1,7 @@
 ---
 title: N katmanlı uygulamalarda TableAdapter’lara kod ekleme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: e5d240726030a3a08d184b3015f56f65d9168e9f
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 3ea451ac60de971677ee2f7910b28b334c67dff3
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113325"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283105"
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>N katmanlı uygulamalarda TableAdapter’lara kod ekleme
 TableAdapter için kısmi bir sınıf dosyası oluşturarak ve buna kod ekleyerek bir TableAdapter 'ın işlevselliğini genişletebilirsiniz ( *DataSetName. DataSet. Designer* dosyasına kod eklemek yerine). Kısmi sınıflar, belirli bir sınıfın kodunu birden çok fiziksel dosyaya bölünecek şekilde etkinleştirir. Daha fazla bilgi için bkz. [kısmi](/dotnet/visual-basic/language-reference/modifiers/partial) veya [kısmi (tür)](/dotnet/csharp/language-reference/keywords/partial-type).
@@ -32,7 +32,7 @@ Varsayılan olarak, veri kümesini ve TableAdapter kodunu ayırdıktan sonra son
 > Veri kümelerini ve TableAdapters ayırabilirsiniz ( **veri kümesi proje** özelliğini ayarlayarak), projedeki mevcut kısmi veri kümesi sınıfları otomatik olarak taşınmaz. Mevcut kısmi veri kümesi sınıflarının veri kümesi projesine el ile taşınması gerekir.
 
 > [!NOTE]
-> Veri kümesi, doğrulama gerektiğinde <xref:System.Data.DataTable.ColumnChanging> ve <xref:System.Data.DataTable.RowChanging> olay işleyicileri oluşturmak için işlevsellik sağlar. Daha fazla bilgi için bkz. [n katmanlı bir veri kümesine doğrulama ekleme](../data-tools/add-validation-to-an-n-tier-dataset.md).
+> Veri kümesi, <xref:System.Data.DataTable.ColumnChanging> doğrulama gerektiğinde oluşturma ve <xref:System.Data.DataTable.RowChanging> olay işleyicileri için işlevsellik sağlar. Daha fazla bilgi için bkz. [n katmanlı bir veri kümesine doğrulama ekleme](../data-tools/add-validation-to-an-n-tier-dataset.md).
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
@@ -48,7 +48,7 @@ Varsayılan olarak, veri kümesini ve TableAdapter kodunu ayırdıktan sonra son
 
 4. Kısmi sınıf bildiriminin içine kod ekleyin.
 
-5. Aşağıdaki örnek, `NorthwindDataSet``CustomersTableAdapter` kodun nereye ekleneceğini gösterir:
+5. Aşağıdaki örnek, içindeki içine kodunun nereye ekleneceğini göstermektedir `CustomersTableAdapter` `NorthwindDataSet` :
 
     ```vb
     Partial Public Class CustomersTableAdapter
@@ -68,6 +68,6 @@ Varsayılan olarak, veri kümesini ve TableAdapter kodunu ayırdıktan sonra son
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [N katmanlı veri uygulamalarına genel bakış](../data-tools/n-tier-data-applications-overview.md)
-- [N katmanlı uygulamalarda veri kümelerine kod ekleme](../data-tools/add-code-to-datasets-in-n-tier-applications.md)
+- [N katmanlı uygulamalardaki veri kümelerine kod ekleme](../data-tools/add-code-to-datasets-in-n-tier-applications.md)
 - [TableAdapter’lar oluşturma ve yapılandırma](create-and-configure-tableadapters.md)
 - [Hiyerarşik Güncelleştirmeye Genel Bakış](hierarchical-update.md)

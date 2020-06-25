@@ -1,7 +1,7 @@
 ---
 title: Bir TableAdapter ile veritabanına doğrudan erişme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -23,26 +23,26 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8fe408c090dbdc2157cd52977d4bbed66cfe9109
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 22d84e9b4beafd64cc629a295bcfa7f9f67afb6d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586698"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282572"
 ---
 # <a name="directly-access-the-database-with-a-tableadapter"></a>Bir TableAdapter ile veritabanına doğrudan erişme
 
-`InsertCommand`, `UpdateCommand`ve `DeleteCommand`ek olarak, TableAdapters doğrudan veritabanına karşı çalıştırılabilen yöntemlerle oluşturulur. Verileri doğrudan veritabanında işlemek için bu yöntemleri (`TableAdapter.Insert`, `TableAdapter.Update`ve `TableAdapter.Delete`) çağırabilirsiniz.
+, Ve ' a ek olarak, `InsertCommand` `UpdateCommand` `DeleteCommand` TableAdapters doğrudan veritabanına karşı çalıştırılabilen yöntemlerle oluşturulur. `TableAdapter.Insert` `TableAdapter.Update` `TableAdapter.Delete` Verileri doğrudan veritabanında işlemek için bu yöntemleri (, ve) çağırabilirsiniz.
 
-Bu doğrudan yöntemleri oluşturmak istemiyorsanız, TableAdapter 'ın `GenerateDbDirectMethods` özelliğini **Özellikler** penceresinde `false` olarak ayarlayın. TableAdapter 'ın ana sorgusuna ek olarak bir TableAdapter 'a herhangi bir sorgu eklenirse, bu `DbDirect` yöntemlerini üretmeyin tek başına sorgulardır.
+Bu doğrudan yöntemleri oluşturmak istemiyorsanız, TableAdapter `GenerateDbDirectMethods` özelliğini `false` **Özellikler** penceresinde olarak ayarlayın. TableAdapter 'ın ana sorgusuna ek olarak bir TableAdapter 'a herhangi bir sorgu eklenirse, bu yöntemleri oluşturan tek başına sorgular vardır `DbDirect` .
 
 ## <a name="send-commands-directly-to-a-database"></a>Komutları doğrudan bir veritabanına gönder
 
-Gerçekleştirmeyi denediğiniz görevi gerçekleştiren TableAdapter `DbDirect` yöntemini çağırın.
+`DbDirect`Gerçekleştirmeyi denediğiniz görevi gerçekleştiren TableAdapter metodunu çağırın.
 
 ### <a name="to-insert-new-records-directly-into-a-database"></a>Yeni kayıtları doğrudan bir veritabanına eklemek için
 
-- Her bir sütunun değerlerini parametre olarak geçirerek TableAdapter 'ın `Insert` yöntemini çağırın. Aşağıdaki yordam bir örnek olarak Northwind veritabanındaki `Region` tablosunu kullanır.
+- TableAdapter `Insert` metodunu, her bir sütunun değerlerini parametre olarak geçirerek çağırın. Aşağıdaki yordam `Region` bir örnek olarak Northwind veritabanındaki tabloyu kullanır.
 
     > [!NOTE]
     > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini oluşturun.
@@ -52,7 +52,7 @@ Gerçekleştirmeyi denediğiniz görevi gerçekleştiren TableAdapter `DbDirect`
 
 ### <a name="to-update-records-directly-in-a-database"></a>Kayıtları doğrudan bir veritabanında güncelleştirmek için
 
-- TableAdapter 'ın `Update` yöntemini çağırın, her sütun için yeni ve orijinal değerlerini parametre olarak geçirerek.
+- `Update`Her sütun için yeni ve orijinal değerlerini parametre olarak geçirerek TableAdapter metodunu çağırın.
 
     > [!NOTE]
     > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini oluşturun.
@@ -62,7 +62,7 @@ Gerçekleştirmeyi denediğiniz görevi gerçekleştiren TableAdapter `DbDirect`
 
 ### <a name="to-delete-records-directly-from-a-database"></a>Kayıtları doğrudan veritabanından silmek için
 
-- Her bir sütunun değerlerini `Delete` yönteminin parametreleri olarak geçirerek TableAdapter 'ın `Delete` yöntemini çağırın. Aşağıdaki yordam bir örnek olarak Northwind veritabanındaki `Region` tablosunu kullanır.
+- `Delete`Her bir sütunun değerlerini metodun parametreleri olarak geçirerek TableAdapter metodunu çağırın `Delete` . Aşağıdaki yordam `Region` bir örnek olarak Northwind veritabanındaki tabloyu kullanır.
 
     > [!NOTE]
     > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini oluşturun.

@@ -1,75 +1,75 @@
 ---
-title: Yapı günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma | Microsoft Dokümanlar
+title: 'Nasıl yapılır: derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma | Microsoft Docs'
 ms.date: 08/28/2019
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 75d38b76-26d6-4f43-bbe7-cbacd7cc81e7
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84efda930066c4236fa4397fbadf287c6774fdb0
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: 4acf8ca4e116bfb0ab990f1b0aed66bef95820ad
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472785"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85283911"
 ---
-# <a name="how-to-view-save-and-configure-build-log-files"></a>Nasıl yapılsın: Yapı günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma
+# <a name="how-to-view-save-and-configure-build-log-files"></a>Nasıl yapılır: derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma
 
-Visual Studio IDE'de bir proje yaptıktan sonra, **Çıktı** penceresinde bu yapıyla ilgili bilgileri görüntüleyebilirsiniz. Bu bilgileri kullanarak, örneğin, bir yapı hatagiderme olabilir.
+Visual Studio IDE 'de bir proje oluşturduktan sonra, bu yapı hakkındaki bilgileri **Çıkış** penceresinde görüntüleyebilirsiniz. Bu bilgileri kullanarak, örneğin, bir derleme hatası ile ilgili sorun giderme yapabilirsiniz.
 
-- C++ projeleri için, proje oluştururken oluşturulan ve kaydedilen bir günlük dosyasında da aynı bilgileri görüntüleyebilirsiniz. 
+- C++ projeleri için aynı bilgileri bir proje oluşturduğunuzda oluşturulup kaydettiğiniz bir günlük dosyasında da görüntüleyebilirsiniz. 
 
-- Yönetilen kod projeleri için yapı çıktısı penceresinden tıklayıp **Ctrl**+**S**tuşuna basabilirsiniz. Visual Studio, **çıktı** penceresinden bilgileri bir günlük dosyasına kaydetmek için bir konum ister.
+- Yönetilen kod projeleri için, derleme çıkış penceresinde ' ne tıklayabilir ve **CTRL** + **S**' ye basabilirsiniz. Visual Studio, bilgileri **Çıkış** penceresinden bir günlük dosyasına kaydetmek için size bir konum sorar.
 
-IDE'yi, her yapı hakkında görüntülemek istediğiniz bilgileri belirtmek için de kullanabilirsiniz.
+Ayrıca, her derleme hakkında görüntülemek istediğiniz bilgi türlerini belirtmek için IDE 'yi de kullanabilirsiniz.
 
-MSBuild'i kullanarak herhangi bir proje oluşturursanız, yapı yla ilgili bilgileri kaydetmek için bir günlük dosyası oluşturabilirsiniz. Daha fazla bilgi için [bkz.](../msbuild/obtaining-build-logs-with-msbuild.md)
+MSBuild kullanarak her türlü proje oluşturuyorsanız, derleme hakkında bilgi kaydetmek için bir günlük dosyası oluşturabilirsiniz. Daha fazla bilgi için bkz. [Derleme günlüklerini alma](../msbuild/obtaining-build-logs-with-msbuild.md).
 
-## <a name="to-view-the-build-log-file-for-a-c-project"></a>C++ projesinin yapı günlüğü dosyasını görüntülemek için
+## <a name="to-view-the-build-log-file-for-a-c-project"></a>Bir C++ projesi için derleme günlük dosyasını görüntülemek için
 
-1. **Windows Gezgini** veya Dosya **Gezgini'nde,** aşağıdaki dosyayı açın (proje kök klasörüne göre): *Bırakın.*\\<ProjectName>\> Log* veya *Hata Ayıklama\\<\>ProjectName .log*
+1. **Windows Gezgini** veya **Dosya Gezgini**'nde, aşağıdaki dosyayı açın (proje kök klasörüne göre): *yayın* \\ <ProjectName> \> . Günlük * veya *hata ayıklama \\<ProjectName \> . log*
 
-## <a name="to-create-a-build-log-file-for-a-managed-code-project"></a>Yönetilen kod projesi için yapı günlüğü dosyası oluşturmak için
+## <a name="to-create-a-build-log-file-for-a-managed-code-project"></a>Yönetilen kod projesi için bir yapı günlük dosyası oluşturmak için
 
-1. Menü çubuğunda **Yapı** > **Çözüm'üne**bakın.
+1. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
 
-2. **Çıktı** penceresinde, metinde bir yere tıklayın.
+2. **Çıkış** penceresinde, metinde herhangi bir yere tıklayın.
 
-3. **Ctrl**+**S**tuşuna basın.
+3. **CTRL** + **S**tuşuna basın.
 
-   Visual Studio, yapı çıktısını kaydetmek için bir konum ister.
+   Visual Studio, derleme çıktısının kaydedileceği bir konum ister.
 
-MSBuild'i doğrudan komut satırından çalıştırarak ( `-fileLogger` `-fl`) komut satırı seçeneğini kullanarak günlükler oluşturabilirsiniz. Bkz. [MSBuild ile yapı günlükleri edinin.](../msbuild/obtaining-build-logs-with-msbuild.md)
+Ayrıca, `-fileLogger` ( `-fl` ) komut satırı seçeneğini kullanarak doğrudan komut satırından MSBuild 'i çalıştırarak da Günlükler oluşturabilirsiniz. Bkz. [MSBuild ile derleme günlükleri alma](../msbuild/obtaining-build-logs-with-msbuild.md).
 
-## <a name="to-change-the-amount-of-information-included-in-the-build-log"></a>Yapı günlüğüne dahil edilen bilgi miktarını değiştirmek için
+## <a name="to-change-the-amount-of-information-included-in-the-build-log"></a>Yapı günlüğünde bulunan bilgi miktarını değiştirmek için
 
-1. Menü çubuğunda **Araç** > **Seçenekleri'ni**seçin.
+1. Menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin.
 
-2. Projeler **ve Çözümler** sayfasında **Yap ve Çalıştır** sayfasını seçin.
+2. **Projeler ve çözümler** sayfasında, **derleme ve çalıştırma** sayfasını seçin.
 
-3. **MSBuild proje oluşturma çıktı ayrıntılı listesinde,** aşağıdaki değerlerden birini seçin ve sonra **Tamam** düğmesini seçin.
+3. **MSBuild proje derleme çıkışı ayrıntı** listesinde, aşağıdaki değerlerden birini seçin ve ardından **Tamam** düğmesini seçin.
 
-    |Ayrıntılı lık düzeyi|Açıklama|
+    |Ayrıntı düzeyi|Description|
     | - |-----------------|
-    |**Sessiz**|Yalnızca yapının bir özetini görüntüler.|
-    |**En az**|Yapının ve hataların, uyarıların ve son derece önemli olarak sınıflandırılan iletilerin bir özetini görüntüler.|
-    |**Normal**|Yapının bir özetini görüntüler; hatalar, uyarılar ve son derece önemli olarak kategorize edilen iletiler; ve yapının ana adımları. Bu ayrıntı düzeyini en sık kullanırsınız.|
-    |**Ayrıntılı**|Yapının bir özetini görüntüler; hatalar, uyarılar ve son derece önemli olarak kategorize edilen iletiler; yapının tüm adımları; ve normal öneme sahip olarak kategorize edilen iletiler.|
-    |**Tanılama**|Yapı için kullanılabilen tüm verileri görüntüler. Özel yapı komut dosyaları ve diğer yapı sorunlarıyla ilgili hata ayıklama sorunlarına yardımcı olmak için bu ayrıntı düzeyini kullanabilirsiniz.|
+    |**Sess**|Yalnızca yapı özetini görüntüler.|
+    |**En az**|Derleme ve hataların, uyarıların ve son derece önemli olarak sınıflandırılan mesajların özetini görüntüler.|
+    |**Olağan**|Derleme özetini görüntüler; yüksek oranda önemli olarak sınıflandırılan hatalar, uyarılar ve iletiler ve yapı ana adımları. En sık bu ayrıntı düzeyini kullanacaksınız.|
+    |**Ayrıntılı**|Derleme özetini görüntüler; yüksek oranda önemli olarak sınıflandırılan hatalar, uyarılar ve iletiler Tüm Yapı adımları; ve normal önem derecesine göre sınıflandırılan mesajlar.|
+    |**Tanı**|Yapı için kullanılabilen tüm verileri görüntüler. Özel derleme betiklerine ve diğer yapı sorunlarıyla ilgili sorunları ayıklamanıza yardımcı olması için bu ayrıntı düzeyini kullanabilirsiniz.|
 
-     Daha fazla bilgi için seçenekler [iletişim kutusu, Projeler ve Çözümler, Oluştur ve Çalıştır](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) ve <xref:Microsoft.Build.Framework.LoggerVerbosity>.
+     Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu, projeler ve çözümler, oluşturma ve çalıştırma](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) <xref:Microsoft.Build.Framework.LoggerVerbosity> .
 
     > [!IMPORTANT]
-    > Değişikliklerinizin **Çıktı** penceresinde (tüm projeler) ve * \<ProjectName>.txt* dosyasında (yalnızca C++ projeleri) etkili olması için projeyi yeniden oluşturmanız gerekir.
+    > Değişikliklerinizin **Çıkış** penceresinde (tüm projeler) ve * \<ProjectName> . txt* dosyasında (yalnızca C++ projeleri) etkili olması için projeyi yeniden oluşturmanız gerekir.
 
-## <a name="use-binary-logs-to-make-it-easier-to-browse-large-log-files"></a>Büyük günlük dosyalarına göz atmayı kolaylaştırmak için ikili günlükleri kullanın
+## <a name="use-binary-logs-to-make-it-easier-to-browse-large-log-files"></a>Büyük günlük dosyalarına gözatmaya daha kolay hale getirmek için ikili günlükleri kullanın
 
-İkili günlükler, büyük günlüklerde bilgi bulmanızı kolaylaştırabilecek daha zengin bir günlük tarama deneyimine sahip olmak sağlayan .NET projeleri için isteğe bağlı bir özelliktir. İkili günlükleri kullanmak için [Proje Sistemi Araçlarını](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ProjectSystemTools)yükleyin. Daha fazla bilgi [https://msbuildlog.com](https://msbuildlog.com) için bkz ve [İkili Günlük](https://github.com/microsoft/msbuild/blob/master/documentation/wiki/Binary-Log.md)
+İkili Günlükler, büyük günlüklerde bilgi bulmayı kolaylaştıran daha zengin bir günlük tarama deneyimine sahip olmanızı sağlayan, .NET projeleri için isteğe bağlı bir özelliktir. İkili günlükleri kullanmak için, [Proje sistemi araçları](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.ProjectSystemTools)'nı yükler. Daha fazla bilgi için bkz. [https://msbuildlog.com](https://msbuildlog.com) ve [ikili günlük](https://github.com/microsoft/msbuild/blob/master/documentation/wiki/Binary-Log.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'da projeler ve çözümler oluşturun ve temizleyin](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
-- [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)
+- [Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
+- [Derle ve derle](../ide/compiling-and-building-in-visual-studio.md)

@@ -9,16 +9,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 735a4cc533312bcfa3823410780b09caa4f53fde
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 4aa978098c459d9e55ef0dc1423080357e067a5b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173947"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282767"
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF ve Entity Framework 6 kullanarak basit veri uygulaması oluşturma
 
-Bu izlenecek yolda, Visual Studio 'da temel bir "veri üzerinden Forms" uygulamasının nasıl oluşturulacağı gösterilmektedir. Uygulama SQL Server LocalDB, Northwind veritabanı, Entity Framework 6 ve Windows Presentation Foundation kullanır. Ana ayrıntı görünümü ile temel veri bağlamanın nasıl yapılacağını gösterir ve ayrıca, **Ileri taşı**, **Öncekini**taşı, **başlangıca**taşı, son, **Güncelleştir** ve **Sil**düğmelerine sahip özel bir bağlama **Gezginine**sahip olur.
+Bu izlenecek yolda, Visual Studio 'da temel bir "veri üzerinden Forms" uygulamasının nasıl oluşturulacağı gösterilmektedir. Uygulama SQL Server LocalDB, Northwind veritabanı, Entity Framework 6 (Entity Framework Core değil) ve .NET Framework için Windows Presentation Foundation (.NET Core değil) kullanır. Ana ayrıntı görünümü ile temel veri bağlamanın nasıl yapılacağını gösterir ve ayrıca, **Ileri taşı**, **Öncekini**taşı, **başlangıca**taşı, son, **Güncelleştir** ve **Sil**düğmelerine sahip özel bir bağlama **Gezginine**sahip olur.
 
 Bu makalede, Visual Studio 'da veri araçları kullanılmaya odaklanılır ve temel alınan teknolojiler herhangi bir derinlikte açıklanmaz. XAML, Entity Framework ve SQL ile temel bir benzerlik olduğunu varsayar. Bu örnek, WPF uygulamaları için standart olan Model-View-ViewModel (MVVM) mimarisini de göstermez. Ancak, bu kodu birkaç değişiklik ile kendi MVVM uygulamanıza kopyalayabilirsiniz.
 

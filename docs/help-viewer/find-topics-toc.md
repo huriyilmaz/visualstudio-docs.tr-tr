@@ -1,7 +1,7 @@
 ---
-title: Yardım Görüntüleyici İçindekiler kullanın
+title: Yardım Görüntüleyicisi İçindekiler tablosunu kullanın
 ms.date: 11/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - hv_contents
 helpviewer_keywords:
@@ -15,43 +15,43 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd55a95675505648179161ae3fb7cacea6a83104
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: f9bd332b5767dbfffcfbaa44637e0cc92051f7b1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825068"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284938"
 ---
-# Nasıl yapılır: İçindekilerde konuları bulun
+# Nasıl yapılır: İçindekiler tablosunda konuları bulma
 
-İçinde **içeriği** sekmesinde bilgileri bulmak için içindekiler (TOC) kullanabilirsiniz. İçindekiler tablosu, tüm yüklü kitaplar konuları içeren genişletilebilir bir listedir. Nasıl TOC aracılığıyla gezinebileceğiniz hakkında erişilebilirlik bilgileri için bkz. [kısayol tuşları (Yardım Görüntüleyicisi)](../help-viewer/shortcut-keys.md).
+**İçindekiler** sekmesinde, bilgi bulmak için İçindekiler tablosunu (TOC) kullanabilirsiniz. İçindekiler tablosu, yüklü kitaplar 'daki tüm konuları içeren genişletilebilir bir listesidir. TOC 'de nasıl gezinilebileceğiniz hakkında erişilebilirlik bilgileri için bkz. [kısayol tuşları (Yardım Görüntüleyicisi)](../help-viewer/shortcut-keys.md).
 
 > [!IMPORTANT]
-> TOC içinde kullanılabilir konuların kapsamı seçtiğiniz filtreye bağlıdır.
+> TOC 'de bulunan konuların kapsamı, seçtiğiniz filtreye bağlıdır.
 
-## TOC için filtre
+## TOC 'yi filtrele
 
-Görünen konuların kapsamını daraltmak üzere TOC için filtre uygulayabilirsiniz **içeriği** sekmesi. Başlıkları, yalnızca belirttiğiniz terimin kök içeriyorsa listede görünür. Örneğin, "filtre olarak sorun giderme" belirtirseniz, yalnızca "sorun giderme" içeren başlıklar veya "sorun giderme" görünür. Başlıkları terim içermeyen düğümler üç nokta ile tek bir düğüm için daraltılmış ( **...** ).
+**İçindekiler** sekmesinde görünen konuların kapsamını DARALTMAK için TOC 'ye filtre uygulayabilirsiniz. başlıklar listede yalnızca belirttiğiniz terimin kökünü içeriyorsa görünür. Örneğin, bir filtre olarak "sorun giderme" belirtirseniz, yalnızca "sorun giderme" veya "sorun giderme" içeren başlıklar görüntülenir. Başlıkları terimi olmayan düğümler, üç nokta (**...**) ile tek bir düğüme daraltılır.
 
-1. Seçin **içeriği** sekmesi.
+1. **İçindekiler** sekmesini seçin.
 
-2. İçinde **filtre içeriğini** metin kutusunda, bir terimi girin.
+2. **Filtre içeriği** metin kutusuna bir terim girin.
 
 > [!NOTE]
-> Filtre çalıştırmak için bir uzun sürerse, sonuçları daha hızlı bir şekilde kullanarak görüntüleyebilir `title:` Gelişmiş arama işleci.
+> Filtrenin çalışması uzun sürüyorsa, gelişmiş arama işlecini kullanarak sonuçları daha hızlı bir şekilde görüntüleyebilirsiniz `title:` .
 
-## TOC ile bir konu Eşitle
+## Bir konuyu TOC ile senkronize etme
 
-Dizin veya tam metin arama özelliklerini kullanarak bir konu açtıysanız, TOC'yi konu penceresiyle eşitleyerek bu konunun TOC'de nerede olduğunu belirleyebilirsiniz.
+Dizin veya tam metin arama özelliklerini kullanarak bir konu açtıysanız, TOC 'yi konu penceresiyle eşitleyerek bu konunun TOC 'de nerede olduğunu belirleyebilirsiniz.
 
-1. Bir konu görüntüleyin.
+1. Bir konuyu görüntüleyin.
 
-2. Tıklayın **içindekilerde konuyu Göster** basın veya araç çubuğu düğmesini **Ctrl**+**S**.
+2. Araç çubuğundaki **içeriğe göre konuyu göster** düğmesini tıklatın veya **CTRL** + **S**tuşuna basın.
 
-     **İçeriği** sekmesi açılır ve TOC içinde konunun yerini görüntüler.
+     **İçindekiler** sekmesi açılır ve TOC 'de konunun konumunu görüntüler.
 
 ## Ayrıca bkz.
 
-- [Nasıl yapılır: Dizinde konu Bul](../help-viewer/find-topics-index.md)
-- [Nasıl yapılır: Konu arayın](../help-viewer/find-topics.md)
+- [Nasıl yapılır: dizinde konu bulma](../help-viewer/find-topics-index.md)
+- [Nasıl yapılır: konu arama](../help-viewer/find-topics.md)
 - [Microsoft Yardım Görüntüleyicisi](../help-viewer/overview.md)

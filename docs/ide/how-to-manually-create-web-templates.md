@@ -1,7 +1,7 @@
 ---
 title: Web şablonları oluşturma
 ms.date: 01/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Visual Studio templates, Web
 - templates [Visual Studio], Web
@@ -10,38 +10,38 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 245b20dd9cad465129d6c79c38e53b6379c2c09c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6870143be825469fde2be4b3448da24d54034fc1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75591014"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284184"
 ---
-# <a name="how-to-manually-create-web-templates"></a>Nasıl yapılır: Web şablonlarını el ile oluşturma
+# <a name="how-to-manually-create-web-templates"></a>Nasıl yapılır: Web şablonlarını elle oluşturma
 
-Web şablonu oluşturmak, diğer şablon türlerini oluşturmaktan farklıdır. Web projesi şablonları **Yeni Web Sitesi Ekle** iletişim kutusunda göründüğünden ve web proje öğeleri programlama diline göre kategorilere ayırıldığı için, *vstemplate* dosyasının şablonu bir web şablonu olarak belirtmesi ve programlama dilini tanımlaması gerekir.
+Web şablonu oluşturmak diğer şablon türlerini oluşturmaktan farklıdır. Web projesi şablonları **Yeni Web sitesi Ekle** iletişim kutusunda göründüğünden ve Web projesi öğeleri programlama diline göre sınıflandırıldığından, *vstemplate* dosyasının şablonu bir Web şablonu olarak belirtmesi ve programlama dilini tanımlaması gerekir.
 
 > [!NOTE]
-> Web şablonları boş bir *.webproj* dosyası içermelidir ve `Project` öğenin özniteliği `File` içinde *vstemplate* dosyasında başvurulmalıdır. Web projeleri *bir .proj* proje dosyası gerektirmese de, web şablonu için bu saplama dosyasını oluşturmak gerekir.
+> Web şablonlarının boş bir *. webproj* dosyası içermesi ve öğenin özniteliğinde *vstemplate* dosyasında başvurulması gerekir `File` `Project` . Web projeleri bir *. proj* proje dosyası gerektirmese de, Web şablonunun düzgün çalışması için bu Saplama dosyasını oluşturmanız gerekir.
 
-## <a name="to-manually-create-a-web-template"></a>El ile web şablonu oluşturmak için
+## <a name="to-manually-create-a-web-template"></a>El ile bir Web şablonu oluşturmak için
 
-1. Bir web projesi oluşturun.
+1. Bir Web projesi oluşturun.
 
-2. Projedeki dosyaları değiştirin veya silin veya projeye yeni dosyalar ekleyin.
+2. Projedeki dosyaları değiştirin veya silin ya da projeye yeni dosyalar ekleyin.
 
-3. Bir XML dosyası oluşturun ve projenizle aynı dizinde *bir vstemplate* dosya adı uzantısı ile kaydedin. Visual Studio'daki projeye eklemeyin.
+3. Bir XML dosyası oluşturun ve bunu, projenizle aynı dizinde bir *vstemplate* dosya adı uzantısıyla kaydedin. Visual Studio 'da projeye eklemeyin.
 
-4. Proje şablonu meta verilerini sağlamak için *vstemplate* XML dosyasını edin. Daha fazla bilgi için [aşağıdaki örneğe](#example)bakın.
+4. Proje şablonu meta verilerini sağlamak için *vstemplate* XML dosyasını düzenleyin. Daha fazla bilgi için [aşağıdaki örneğe](#example)bakın.
 
-5. *Vstemplate* dosyasındaki öğeyi `Web` `ProjectType` bulun ve metin değerini .
+5. `ProjectType` *Vstemplate* dosyasındaki öğesini bulun ve metin değerini olarak ayarlayın `Web` .
 
-6. Öğeyi `ProjectType` takiben, `ProjectSubType` bir öğe ekleyin ve şablonun programlama diline metin değerini ayarlayın. Programlama dili aşağıdaki değerlerden biri olabilir:
+6. Öğesini izleyerek `ProjectType` bir `ProjectSubType` öğesi ekleyin ve metin değerini şablonun programlama diline ayarlayın. Programlama dili aşağıdaki değerlerden biri olabilir:
 
-   - Csharp
+   - Step\chapter
    - VisualBasic
 
-     Örnek:
+     Örneğin:
 
      ```xml
      <TemplateData>
@@ -52,13 +52,13 @@ Web şablonu oluşturmak, diğer şablon türlerini oluşturmaktan farklıdır. 
      </TemplateData>
      ```
 
-7. Şablonunuzdaki dosyaları seçin (bu *vstemplate* dosyasını içerir), seçimi sağ tıklatın ve > **Sıkıştırılmış (sıkıştırılmış) klasörüne** **gönder'i**seçin. Dosyalar *bir .zip* dosyasına sıkıştırılır.
+7. Şablonunuzda dosyaları seçin (Bu *vstemplate* dosyasını içerir), seçime sağ tıklayın ve **Send to**  >  **Sıkıştırılmış (daraltılmış) klasöre**Gönder ' i seçin. Dosyalar bir *. zip* dosyasında sıkıştırılır.
 
-8. *.zip* şablonu dosyasını Visual Studio proje şablon dizini'ne koyun. Varsayılan olarak, bu dizin *%USERPROFILE%\Documents\Visual Studio \<Version\>\ProjectTemplates'tir.*
+8. *. Zip* şablon dosyasını Visual Studio proje şablonu dizinine yerleştirin. Varsayılan olarak, bu dizin *%userprofile%\, Studio \<Version\> \Projecttemplates*şeklindedir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, bir web projesi şablonu için temel bir *vstemplate* dosyası gösterilmektedir:
+Aşağıdaki örnekte, bir Web projesi şablonu için temel bir *vstemplate* dosyası gösterilmektedir:
 
 ```xml
 <VSTemplate Version="2.0.0" Type="Project"
@@ -84,4 +84,4 @@ Aşağıdaki örnekte, bir web projesi şablonu için temel bir *vstemplate* dos
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Visual Studio şablon şeması başvurusu (genişletilebilirlik)](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio Şablon Şeması Başvurusu (genişletilebilirlik)](../extensibility/visual-studio-template-schema-reference.md)

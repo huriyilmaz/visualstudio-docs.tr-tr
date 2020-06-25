@@ -1,8 +1,8 @@
 ---
-title: 'Nasıl yapılı: Yapılandırmalar oluşturma ve düzenleme'
+title: 'Nasıl yapılır: yapılandırma oluşturma ve düzenleme'
 ms.date: 06/21/2017
 ms.technology: vs-ide-compile
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - solution build configurations, editing
 - build configurations, creating
@@ -19,108 +19,108 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 754d2ceef776ab0dea2d8d51151d4170839173b9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a5b3ecd4abb05148130b0d87e287cbe199557951
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114705"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85284509"
 ---
-# <a name="how-to-create-and-edit-configurations"></a>Nasıl yapılı: Yapılandırmalar oluşturma ve düzenleme
+# <a name="how-to-create-and-edit-configurations"></a>Nasıl yapılır: yapılandırma oluşturma ve düzenleme
 
-Bir çözüm için birkaç yapı yapılandırması oluşturabilirsiniz. Örneğin, test edenlerinizin sorunları bulmak ve gidermek için kullanabileceği bir hata ayıklama yapısı yapılandırabilir ve farklı müşterilere dağıtabileceğiniz farklı türde yapılar yapılandırabilirsiniz.
-
-> [!NOTE]
-> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio için Bkz. [Mac için Visual Studio'da yapılandırmaoluştur ve düzenleme yapıl.](/visualstudio/mac/create-and-edit-configurations)
-
-## <a name="create-build-configurations"></a>Yapı yapılandırmaları oluşturma
-
-Varolan yapı yapılandırmalarını seçmek veya değiştirmek veya yeni yapılandırmalar oluşturmak için **Configuration Manager** iletişim kutusunu kullanabilirsiniz.
-
-**Configuration Manager** iletişim kutusunu açmak için **Solution Explorer'da,** çözüm için kısayol menüsünü açın ve ardından Configuration **Manager'ı**seçin.
+Bir çözüm için birkaç yapı yapılandırması oluşturabilirsiniz. Örneğin, sınayıcılarınızın sorunları bulmak ve gidermek için kullanabileceği bir hata ayıklama derlemesi yapılandırabilir ve farklı müşterilere dağıtabileceğiniz farklı tür yapılar yapılandırabilirsiniz.
 
 > [!NOTE]
-> Configuration **Manager** komutu kısayol menüsünde görünmüyorsa, menü çubuğundaki **Yapı** menüsünün altına bakın. Menü çubuğunda da görünmüyorsa, **Araçlar** > **Seçenekleri'ni**seçin ve ardından **Seçenekler** iletişim kutusunun sol bölmesinde Projeler **ve Çözümler** > **Genel'i**genişletin ve sağ bölmede Gelişmiş **Yapı yapılandırmalarını göster** onay kutusunu seçin.
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Mac için Visual Studio yapılandırma oluşturma ve düzenleme](/visualstudio/mac/create-and-edit-configurations).
 
-Configuration **Manager** iletişim kutusunda, çözüm genelinde bir yapı yapılandırması seçmek, varolan bir yapılandırmayı değiştirmek veya yeni bir yapılandırma oluşturmak için **Etkin çözüm yapılandırma** açılır listesini kullanabilirsiniz. Yapılandırmanın hedeflediğiniz platformu seçmek, varolan bir platformu değiştirmek veya yeni bir platform eklemek için **Etkin çözüm platformu** açılır listesini kullanabilirsiniz. **Proje bağlamları** bölmesi çözümdeki projeleri listeler. Her proje için projeye özgü bir yapılandırma ve platform seçebilir, varolanları değiştirebilir veya yeni bir yapılandırma oluşturabilir veya yeni bir platform ekleyebilirsiniz. Çözümü oluşturmak veya dağıtmak için çözüm genelindeki yapılandırmayı kullandığınızda her projenin dahil edilip edilmeyeceğini belirten onay kutuları da seçebilirsiniz.
+## <a name="create-build-configurations"></a>Derleme yapılandırması oluşturma
 
-İstediğiniz yapılandırmaları ayarladıktan sonra, bu yapılandırmalar için uygun proje özellikleri ayarlayabilirsiniz.
+**Configuration Manager** iletişim kutusunu, mevcut yapı yapılandırmalarının seçimi veya değiştirilmesi ya da yenilerini oluşturmak için kullanabilirsiniz.
 
-### <a name="set-properties-based-on-configurations"></a>Özellikleri yapılandırmalara göre ayarlama
+**Configuration Manager** iletişim kutusunu açmak için, **Çözüm Gezgini**' de çözüm için kısayol menüsünü açın ve ardından **Configuration Manager**' yı seçin.
 
-Özellikleri yapılandırmalara göre ayarlamak için **Çözüm Gezgini'nde,** proje için kısayol menüsünü açın ve ardından **Özellikler'i**seçin. Yapılandırmalarınız için özellikler ayarlayabilirsiniz. Örneğin, bir sürüm yapılandırması için, çözüm oluşturulduğunda kodun en iyi duruma getirilmiş olduğunu belirtebilir ve hata ayıklama yapılandırması için koşullu derleme sembolünün `DEBUG` dahil edildiğini belirtebilirsiniz.
+> [!NOTE]
+> **Configuration Manager** komutu kısayol menüsünde görünmezse, menü çubuğunda **derleme** menüsünün altına bakın. Burada görünmezse, menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin ve ardından **Seçenekler** iletişim kutusunun sol bölmesinde, **Projeler ve çözümler**  >  **genel**' i genişletin ve sağ bölmedeki **Gelişmiş derleme yapılandırmasını göster** onay kutusunu seçin.
 
-Özellik sayfası ayarları hakkında daha fazla bilgi için [bkz.](../ide/managing-project-and-solution-properties.md)
+**Configuration Manager** iletişim kutusunda, çözüm genelinde bir yapı yapılandırması seçmek, var olan bir yapılandırmayı değiştirmek veya yeni bir yapılandırma oluşturmak için **etkin çözüm yapılandırma** açılan listesini kullanabilirsiniz. **Etkin çözüm platformu** açılan listesini, yapılandırmanın hedeflediği platformu seçmek, var olan bir nesneyi değiştirmek veya yeni bir platform eklemek için kullanabilirsiniz. **Proje bağlamları** bölmesinde, çözümdeki projeler listelenir. Her proje için, projeye özgü bir yapılandırma ve platform seçebilir, var olanları değiştirebilir veya yeni bir yapılandırma oluşturabilir ya da yeni bir platform ekleyebilirsiniz. Çözümü derlemek veya dağıtmak için çözüm genelinde yapılandırma kullandığınızda her projenin dahil edilip edilmeyeceğini belirten onay kutularını da seçebilirsiniz.
+
+İstediğiniz konfigürasyonları ayarladıktan sonra, bu yapılandırmalara uygun proje özelliklerini ayarlayabilirsiniz.
+
+### <a name="set-properties-based-on-configurations"></a>Yapılandırma tabanlı özellikleri ayarla
+
+Yapılandırma tabanlı özellikleri ayarlamak için, **Çözüm Gezgini**' de bir proje için kısayol menüsünü açın ve ardından **Özellikler**' i seçin. Yapılandırmalarınızın özelliklerini ayarlayabilirsiniz. Örneğin, bir yayın yapılandırması için, çözüm oluşturulduğunda kodun iyileştirildiği ve hata ayıklama yapılandırmasında `DEBUG` koşullu derleme sembolünün dahil edileceğini belirtebilirsiniz.
+
+Özellik sayfası ayarları hakkında daha fazla bilgi için bkz. [Proje ve çözüm özelliklerini yönetme](../ide/managing-project-and-solution-properties.md).
 
 ## <a name="create-a-project-configuration"></a>Proje yapılandırması oluşturma
 
-1. Configuration **Manager** iletişim kutusunu açın.
+1. **Configuration Manager** iletişim kutusunu açın.
 
 2. **Proje** sütununda bir proje seçin.
 
-3. Bu projenin **Yapılandırma** açılır listesinde **Yeni'yi**seçin.
+3. Bu projenin **yapılandırma** açılan listesinde, **Yeni**' yi seçin.
 
-     **Yeni Proje Yapılandırmailetişim** kutusu açılır.
+     **Yeni proje yapılandırması** iletişim kutusu açılır.
 
-4. **Ad** kutusuna, yeni yapılandırma için bir ad girin.
+4. **Ad** kutusuna yeni yapılandırma için bir ad girin.
 
-5. Varolan bir proje yapılandırmasından özellik ayarlarını kullanmak için, açılan listeden **kopya ayarlarında** bir yapılandırma seçin.
+5. Varolan bir proje yapılandırmasından özellik ayarlarını kullanmak için, ayarları aşağı açılan listeden **Kopyala** listesinden bir yapılandırma seçin.
 
-6. Aynı anda çözüm genelinde bir yapılandırma oluşturmak için **yeni çözüm yapılandırması oluştur** onay kutusunu seçin.
+6. Aynı zamanda çözüm genelinde bir yapılandırma oluşturmak için **yeni çözüm yapılandırması oluştur** onay kutusunu seçin.
 
-## <a name="rename-a-project-configuration"></a>Proje yapılandırması yeniden adlandırma
+## <a name="rename-a-project-configuration"></a>Proje yapılandırmasını yeniden adlandırma
 
-1. Configuration **Manager** iletişim kutusunu açın.
+1. **Configuration Manager** iletişim kutusunu açın.
 
 2. **Proje** sütununda, yeniden adlandırmak istediğiniz proje yapılandırmasına sahip projeyi seçin.
 
-3. Bu proje için **Yapılandırma** açılır **listesinde, Düzenleme'yi**seçin.
+3. Bu projenin **yapılandırma** açılan listesinde **Düzenle**' yi seçin.
 
-     **Proje Yapılandırmalarını Edit** iletişim kutusu açılır.
+     **Proje yapılandırmasını düzenle** iletişim kutusu açılır.
 
 4. Değiştirmek istediğiniz proje yapılandırma adını seçin.
 
-5. **Yeniden Adlandır'ı**seçin ve ardından yeni bir ad girin.
+5. **Yeniden Adlandır**' ı seçin ve ardından yeni bir ad girin.
 
-## <a name="create-and-modify-solution-wide-build-configurations"></a>Çözüm genelinde yapı yapılandırmaları oluşturma ve değiştirme
+## <a name="create-and-modify-solution-wide-build-configurations"></a>Çözüm genelinde derleme yapılandırması oluşturma ve değiştirme
 
-### <a name="to-create-a-solution-wide-build-configuration"></a>Çözüm genelinde bir yapı yapılandırması oluşturmak için
+### <a name="to-create-a-solution-wide-build-configuration"></a>Çözüm genelinde derleme yapılandırması oluşturmak için
 
-1. Configuration **Manager** iletişim kutusunu açın.
+1. **Configuration Manager** iletişim kutusunu açın.
 
-2. Etkin **çözüm yapılandırma** açılır listesinde **Yeni'yi**seçin.
+2. **Etkin çözüm yapılandırması** açılan listesinde, **Yeni**' yi seçin.
 
-     **Yeni Çözüm Yapılandırmailetişim** kutusu açılır.
+     **Yeni çözüm yapılandırması** iletişim kutusu açılır.
 
-3. **Ad** metin kutusuna, yeni yapılandırma için bir ad girin.
+3. **Ad** metin kutusuna yeni yapılandırma için bir ad girin.
 
-4. Varolan bir çözüm yapılandırmasından ayarları kullanmak için, açılan listeden **kopya ayarlarında** bir yapılandırma seçin.
+4. Ayarları varolan bir çözüm yapılandırmasından kullanmak için, ayarları açılan listeden **Kopyala** listesinden bir yapılandırma seçin.
 
-5. Proje yapılandırmalarını aynı anda oluşturmak istiyorsanız, **yeni proje yapılandırmaları oluştur** onay kutusunu seçin.
+5. Aynı anda proje yapılandırması oluşturmak istiyorsanız **Yeni proje yapılandırması oluştur** onay kutusunu seçin.
 
 ### <a name="to-rename-a-solution-wide-build-configuration"></a>Çözüm genelinde bir yapı yapılandırmasını yeniden adlandırmak için
 
-1. Configuration **Manager** iletişim kutusunu açın.
+1. **Configuration Manager** iletişim kutusunu açın.
 
-2. Etkin **çözüm yapılandırma** açılır **listesinde, Düzenleme'yi**seçin.
+2. **Etkin çözüm yapılandırması** açılan listesinde, **Düzenle**' yi seçin.
 
-     **Çözüm Yapılandırmalarını Edit** iletişim kutusu açılır.
+     **Çözüm yapılandırmasını düzenle** iletişim kutusu açılır.
 
 3. Değiştirmek istediğiniz çözüm yapılandırma adını seçin.
 
-4. **Yeniden Adlandır'ı**seçin ve ardından yeni bir ad girin.
+4. **Yeniden Adlandır**' ı seçin ve ardından yeni bir ad girin.
 
-### <a name="to-modify-a-solution-wide-build-configuration"></a>Çözüm genelindeki yapı yapılandırmasını değiştirmek için
+### <a name="to-modify-a-solution-wide-build-configuration"></a>Çözüm genelinde bir yapı yapılandırmasını değiştirmek için
 
-1. Configuration **Manager** iletişim kutusunu açın.
+1. **Configuration Manager** iletişim kutusunu açın.
 
-2. Etkin **çözüm yapılandırma** açılır listesinde, istediğiniz yapılandırmayı seçin.
+2. **Etkin çözüm yapılandırması** açılan listesinde, istediğiniz yapılandırmayı seçin.
 
-3. Proje **bağlamları** bölmesinde, her proje için istediğiniz **Yapılandırma** ve **Platform'u** seçin ve **oluşturup oluşturmayacağını** ve **dağıtılıp dağıtılmayacağını** seçin.
+3. **Proje bağlamları** bölmesinde her proje Için istediğiniz **yapılandırma** ve **platformu** seçin **ve oluşturulup oluşturulmayacağını** ve **dağıtıp dağıtamayacağını** seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md)
-- [Visual Studio'da projeler ve çözümler oluşturun ve temizleyin](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
+- [Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
 - [Proje ve çözüm özelliklerini yönetme](managing-project-and-solution-properties.md)
-- [Yapılandırmalar oluşturma ve düzenleme (Mac için Visual Studio)](/visualstudio/mac/create-and-edit-configurations)
+- [Yapılandırma oluşturma ve düzenleme (Mac için Visual Studio)](/visualstudio/mac/create-and-edit-configurations)
