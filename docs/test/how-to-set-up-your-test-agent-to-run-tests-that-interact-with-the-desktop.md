@@ -1,87 +1,87 @@
 ---
-title: Test aracını yapılandırma
+title: Test Aracısı yapılandırma
 ms.date: 09/18/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - agents, configuring for interaction with desktop
 ms.assetid: 3a94dd07-6d17-402c-ae8f-7947143755c9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: dc00598595ee3e3d958562682900bde9aad2a353
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 994d5da8af7b00ab8af55681d4a67e9681ebbde6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880188"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287538"
 ---
-# <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>Nasıl kullanılır: Test aracınızı masaüstüyle etkileşimde olan testleri çalıştıracak şekilde ayarlama
+# <a name="how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop"></a>Nasıl yapılır: Masaüstü ile etkileşimi olan testleri çalıştırmak için test aracınızı ayarlama
 
 ::: moniker range="vs-2017"
-Masaüstüyle etkileşimde olan otomatik testler çalıştırmak istiyorsanız, aracınızı hizmet yerine bir işlem olarak çalışacak şekilde ayarlamanız gerekir. Örneğin, bir test denetleyicisi ve test aracısı kullanarak uzaktan kodlanmış bir UI testi çalıştırmak istiyorsanız veya bir test çalıştırmak ve çalıştırdığınızda bir video kaydı yakalamak istiyorsanız, aracınızı bir işlem olarak çalışacak şekilde ayarlamanız gerekir. Visual Studio'yu kullanarak test ayarlarınızdaki rollere aracılar atadığınızda veya Microsoft Test Yöneticisi'ni kullanarak ortamınızdaki rollere aracılar atadığınızda, masaüstüyle etkileşimde olması gereken rollere atanan tüm aracıların kurulumunu değiştirmeniz gerekir.
+Masaüstüyle etkileşen otomatikleştirilmiş testleri çalıştırmak istiyorsanız, aracınızı hizmet yerine işlem olarak çalışacak şekilde ayarlamanız gerekir. Örneğin, bir test denetleyicisi ve test aracısı kullanarak kodlanmış bir UI testini uzaktan çalıştırmak istiyorsanız veya bir testi çalıştırmak ve çalıştırdığınızda video kaydı yakalamak istiyorsanız, aracınızı bir işlem olarak çalışacak şekilde ayarlamanız gerekir. Visual Studio 'Yu kullanarak test ayarlarınızda rollere aracılar atadığınızda veya Microsoft Test Yöneticisi kullanarak ortamınızda rollere aracılar atadığınızda, masaüstü ile etkileşime geçmek için gereken rollere atanan aracıların kurulumunu değiştirmeniz gerekir.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Masaüstüyle etkileşimde olan otomatik testler çalıştırmak istiyorsanız, aracınızı hizmet yerine bir işlem olarak çalışacak şekilde ayarlamanız gerekir. Örneğin, bir test denetleyicisi ve test aracısı kullanarak uzaktan kodlanmış bir UI testi çalıştırmak istiyorsanız veya bir test çalıştırmak ve çalıştırdığınızda bir video kaydı yakalamak istiyorsanız, aracınızı bir işlem olarak çalışacak şekilde ayarlamanız gerekir. Visual Studio'yu kullanarak test ayarlarınızdaki rollere aracılar atadığınızda, masaüstüyle etkileşimde olması gereken rollere atanan aracıların kurulumunu değiştirmeniz gerekir.
+Masaüstüyle etkileşen otomatikleştirilmiş testleri çalıştırmak istiyorsanız, aracınızı hizmet yerine işlem olarak çalışacak şekilde ayarlamanız gerekir. Örneğin, bir test denetleyicisi ve test aracısı kullanarak kodlanmış bir UI testini uzaktan çalıştırmak istiyorsanız veya bir testi çalıştırmak ve çalıştırdığınızda video kaydı yakalamak istiyorsanız, aracınızı bir işlem olarak çalışacak şekilde ayarlamanız gerekir. Visual Studio 'Yu kullanarak test ayarlarınızda rollere aracılar atadığınızda, masaüstü ile etkileşime geçmek için gereken rollere atanan aracıların kurulumunu değiştirmeniz gerekir.
 ::: moniker-end
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ::: moniker range="vs-2017"
 > [!WARNING]
-> Bir laboratuvar ortamı ayarlamak için Microsoft Test Yöneticisi'ni kullanıyorsanız, test aracısını yükler. Kodlanmış Kullanıcı Bulma Birimi testlerini çalıştırmak için rollerden birini yapılandırmak **istediğinizi Ortam Oluşturma** Sihirbazı'nda belirtebilirsiniz.
+> Laboratuvar ortamı ayarlamak için Microsoft Test Yöneticisi kullanıyorsanız, test Aracısı yüklenir. **Ortam oluşturma Sihirbazı** 'nda, kodlanmış UI testlerini çalıştırmak için rollerden birini yapılandırmak istediğinizi belirtebilirsiniz.
 :::moniker-end
 
 > [!IMPORTANT]
-> Kodlu UI testlerini çalıştırmak istediğiniz bir aracıyı çalıştıran bilgisayar kilitlenemez veya etkin bir ekran koruyucuya sahip olamaz.
+> Kodlanmış UI testlerini çalıştırmak istediğiniz aracıyı çalıştıran bilgisayar kilitlenemez veya etkin bir ekran koruyucusu olamaz.
 
-Bir tarayıcıyı başlatan kodlanmış UI testlerini çalıştırıyorsanız, test aracısının hizmet hesabı bu tarayıcıyı başlatmak için kullanılır. Bu hizmet hesabı, bu bilgisayardaki etkin kullanıcı olan kullanıcı hesabıyla aynı olmalıdır. Aynı kullanıcı hesabı değilse, tarayıcı başlamaz.
+Tarayıcıyı başlatan kodlanmış UI testlerini çalıştırıyorsanız, bu tarayıcıyı başlatmak için test aracısının hizmet hesabı kullanılır. Bu hizmet hesabı, bu bilgisayardaki etkin kullanıcının Kullanıcı hesabı ile aynı olmalıdır. Aynı kullanıcı hesabı değilse tarayıcı başlatılmaz.
 
 > [!IMPORTANT]
-> Yapı tanımının bir parçası olarak tarayıcıyı başlatan kodlanmış bir UI testi çalıştırıyorsanız, yapı hizmetinin hizmet hesabı bu tarayıcıyı başlatmak için kullanılır. Bu hizmet hesabı, bu bilgisayardaki etkin kullanıcı olan kullanıcı hesabıyla aynı olmalıdır. Aynı kullanıcı hesabı değilse, tarayıcı başlamaz.
+> Bir yapı tanımının parçası olarak bir tarayıcı başlatan kodlanmış bir UI testi çalıştırıyorsanız, bu tarayıcıyı başlatmak için derleme hizmeti hizmet hesabı kullanılır. Bu hizmet hesabı, bu bilgisayardaki etkin kullanıcının Kullanıcı hesabı ile aynı olmalıdır. Aynı kullanıcı hesabı değilse tarayıcı başlatılmaz.
 
-Masaüstüyle etkileşimde olması gereken bir görevi gerçekleştiren bir role atanan aracıları ayarlamak için aşağıdaki yordamı kullanın.
+Masaüstüyle etkileşim kurması gereken bir görevi gerçekleştiren bir role atanan aracıları ayarlamak için aşağıdaki yordamı kullanın.
 
-## <a name="to-set-up-an-agent-to-run-as-a-process"></a>İşlem olarak çalışacak bir aracı ayarlamak için
+## <a name="to-set-up-an-agent-to-run-as-a-process"></a>Bir aracıyı işlem olarak çalışacak şekilde ayarlamak için
 
-1. İşlem olarak çalıştırmak için yüklediğiniz test aracısını yapılandırmak için **Test** > **Aracısını Çalıştırma Yapılandırma Aracı'na**gidin.
+1. Bir işlem olarak çalıştırmak üzere yüklediğiniz test aracısını yapılandırmak için **Start**  >  **Test Aracısı yapılandırma aracı**'nı Başlat ' a gidin.
 
-   **Yapılaşı Test Aracısı** iletişim kutusu görüntülenir.
+   **Test aracısını Yapılandır** iletişim kutusu görüntülenir.
 
-   ![Visual Studio için Test Aracısı Yapılandır](media/configure-test-agent.png)
+   ![Visual Studio için test aracısını yapılandırma](media/configure-test-agent.png)
 
-2. **Etkileşimli İşlem'i**seçin. Test aracısı bir hizmet yerine bir işlem olarak başlatılacaktır. **İleri**’yi seçin.
+2. **Etkileşimli işlem**' i seçin. Test Aracısı hizmet yerine işlem olarak başlatılır. **İleri**’yi seçin.
 
-3. Test aracısı işlemini çalıştıracak kullanıcının kullanıcı adını ve parolasını girin.
-
-   > [!NOTE]
-   > - İşlemi başlatmak için eklediğiniz kullanıcı, bu aracının test denetleyicisi için bilgisayardaki TeamTestAgentService grubunun bir üyesi olarak da eklenmelidir. Bu kullanıcı geçerli kullanıcıysa, bu kullanıcıyı test denetleyicisi bilgisayarına eklediğinizde oturumu kapatmanız veya yeniden başlatmanız gerekir.
-   > - Null parolalar kullanıcı hesapları için desteklenmez.
-   > - IntelliTrace veya ağ öykünme verilerini ve tanıadaptörü kullanmak istiyorsanız, kullanıcı hesabı Yöneticiler grubunun bir üyesi olmalıdır. Test aracısını çalıştıran makine En Az Ayrıcalıklı Kullanıcı Hesabı olan bir işletim sistemi çalıştırıyorsa, bunu yönetici olarak da çalıştırmanız gerekir (yükseltilmiş). Aracı kullanıcı adı aracı hizmetinde değilse, test denetleyicisinde izingerektiren eklemeye çalışır.
-   > - Test denetleyicisini kullanmaya çalışan kullanıcı test denetleyicisinin Kullanıcılar hesabında olmalıdır veya testleri denetleyiciye karşı çalıştıramaz.
-
-4. Test aracısı olan bir bilgisayarın yeniden başlatıldıktan sonra testleri çalıştırabilmesini sağlamak için, bilgisayarı test aracısı kullanıcısı olarak otomatik olarak oturum açacak şekilde ayarlayabilirsiniz. **Oturum Aç'ı otomatik olarak**seçin. Bu, kullanıcı adı ve parolayı kayıt defterinde şifreli bir biçimde saklar.
+3. Test Aracısı işlemini çalıştıracak kullanıcı için Kullanıcı adını ve parolayı girin.
 
    > [!NOTE]
-   > Uzak bir masaüstü veya konuk tabanlı bir bağlantı kullanarak laboratuvar ortamına bağlandığınızda, sık sık beklenmeyen kopukluklar yaşayabilirsiniz. Bağlantı kaybının olası bir nedeni, makinenin ağa otomatik olarak oturum açacak şekilde yapılandırılmış olmasıdır.
+   > - İşlemi başlatmak için eklediğiniz kullanıcının bu aracı için test denetleyicisi için bilgisayarda TeamTestAgentService grubunun bir üyesi olarak da eklenmesi gerekir. Bu Kullanıcı geçerli kullanıcı ise, bu kullanıcıyı test denetleyicisi bilgisayarına eklediğinizde, oturumunuzu kapatmanız veya yeniden başlatmanız gerekir.
+   > - Kullanıcı hesaplarında null parolalar desteklenmez.
+   > - IntelliTrace 'i veya ağ öykünmesi verilerini ve tanılama bağdaştırıcısını kullanmak istiyorsanız, Kullanıcı hesabının Yöneticiler grubunun bir üyesi olması gerekir. Test aracısını çalıştıran makine, en az ayrıcalıklı kullanıcı hesabı olan bir işletim sistemi çalıştırıyorsa, bunu yönetici olarak da çalıştırmanız gerekir (yükseltilmiş). Aracı Kullanıcı adı aracı hizmetinde değilse, test denetleyicisinde izinler gerektiren bu uygulamayı eklemeye çalışacaktır.
+   > - Test denetleyicisini kullanmaya çalışan Kullanıcı, test denetleyicisinin Kullanıcı hesabında olmalıdır, aksi durumda denetleyiciye karşı testleri çalıştıramazlar.
 
-5. Bu, masaüstüyle etkileşimde olması gereken otomatik testleri etkileyebileceğinden ekran koruyucunun devre dışı bırakıldığından emin olmak için **ekran koruyucunun devre dışı bırakıldığından emin olun'u**seçin.
+4. Test aracısı olan bir bilgisayarın yeniden başlattıktan sonra testleri çalıştırabilmeniz için, bilgisayarı test aracısı kullanıcısı olarak otomatik olarak oturum açmak üzere ayarlayabilirsiniz. **Otomatik oturum aç '** ı seçin. Bu işlem, Kullanıcı adını ve parolayı kayıt defterindeki şifreli bir biçimde depolar.
+
+   > [!NOTE]
+   > Laboratuvar ortamına uzak masaüstü veya konuk tabanlı bağlantı kullanarak bağlıysanız, sık sık, beklenmeyen bağlantıyı kesmeyebilirsiniz. Bağlantının kaybolmasının olası bir nedeni, makinenin ağda otomatik olarak oturum açacak şekilde yapılandırılmadır.
+
+5. BT koruyucunun devre dışı bırakıldığından emin olmak için, bu, masaüstü ile etkileşim kurması gereken otomatikleştirilmiş testleri etkileyebilecek olduğundan, **ekran koruyucunun devre dışı bırakıldığından emin olun**' ı seçin.
 
    > [!WARNING]
-   > Otomatik olarak oturum açarsanız veya ekran koruyucuyu devre dışı btanırsanız güvenlik riskleri vardır. Otomatik oturum açmayı etkinleştirerek, diğer kullanıcıların bu bilgisayarı başlatmasını ve otomatik olarak oturum açan hesabı kullanabilmesini sağlarsınız. Ekran koruyucuyu devre dışı bederseniz, bilgisayar bir kullanıcının bilgisayarın kilidini açmak için oturum açmasını istemeyebilir. Bu, bilgisayarın fiziksel erişimi olan herkesin bilgisayara erişmesini sağlar. Bu özellikleri bilgisayarda etkinleştiriseniz, bu bilgisayarların fiziksel olarak güvenli olduğundan emin olmalısınız. Örneğin, bu bilgisayarlar fiziksel olarak güvenli bir laboratuarda bulunur. **Ekran koruyucunun devre dışı bırakıldığından emin**olun'u temizlerseniz, bu ekran koruyucunuza izin vermez.
+   > Otomatik olarak oturum açtığınızda veya ekran koruyucuyu devre dışı bıraktığınızda güvenlik riskleri vardır. Otomatik oturum açma özelliğini etkinleştirerek, diğer kullanıcıların bu bilgisayarı başlatmasını ve otomatik olarak oturum açtığı hesabı kullanabilmelerini sağlayabilirsiniz. Ekran koruyucusunu devre dışı bırakırsanız, bilgisayar bir kullanıcının bilgisayarın kilidini açmak için oturum açmasını istemez. Bu, bilgisayara fiziksel erişimi olan herkesin bilgisayara erişmesini sağlar. Bu özellikleri bir bilgisayarda etkinleştirirseniz, bu bilgisayarların fiziksel olarak güvenli olduğundan emin olun. Örneğin, bu bilgisayarlar fiziksel olarak güvenli bir laboratuvarda bulunur. **Ekran koruyucunun devre dışı bırakıldığından emin olun**, bu ekran koruyucunuzu etkinleştirmez.
 
-   Aracıyı hizmet olarak çalışacak şekilde değiştirmek için bu aracı kullanabilir ve **Hizmet'i**seçebilirsiniz.
+   Aracıyı yeniden hizmet olarak çalışacak şekilde değiştirmek için bu aracı kullanabilir ve **hizmet**seçeneğini belirleyebilirsiniz.
 
-6. Değişikliklerinizi uygulamak için **Ayarlar'ı Uygula'yı**seçin.
+6. Değişikliklerinizi uygulamak için **Ayarları Uygula**' yı seçin.
 
-   Test aracınızı yapılandırmak için her adımın durumunu gösteren bir **Yapılandırma özeti** iletişim kutusu görüntülenir.
+   Test Aracınızı yapılandırma adımlarının her birinin durumunu gösteren bir **Yapılandırma Özeti** iletişim kutusu görüntülenir.
 
-7. **Yapılandırma özeti** iletişim kutusunu kapatmak için **Kapat'ı**seçin. Ardından **Test Aracısı Yapılandırma Aracısını**kapatmak için yeniden **kapat'ı** seçin.
+7. **Yapılandırma Özeti** iletişim kutusunu kapatmak için **Kapat**' ı seçin. Ardından, **Test Aracısı yapılandırma aracı**'nı kapatmak Için yeniden **Kapat** ' ı seçin.
 
    > [!NOTE]
-   > İşlem olarak çalışan bir test aracısı için bilgisayarda çalışan bir bildirim alanı simgesi vardır. Test aracısının durumunu gösterir. Bu aracı kullanarak bir işlem olarak çalışıyorsa aracıyı başlatabilir, durdurabilir veya yeniden başlatabilirsiniz. Test aracısını çalışmıyorsa bir işlem olarak başlatmak için Görsel **Stüdyo'yu Başlat** > Microsoft Visual**Studio** > **Test Aracısı'nı**seçin.
+   > İşlem olarak çalışan bir test aracısı için bilgisayarda çalışan bir bildirim alanı simgesi vardır. Test aracısının durumunu gösterir. Bu aracı kullanarak bir işlem olarak çalışıyorsa aracıyı başlatabilir, durdurabilir veya yeniden başlatabilirsiniz. Test aracısını çalışmıyorsa bir işlem olarak başlatmak için, **Start**  >  **Visual Studio**  >  **Microsoft Visual Studio Test Aracısı**' nı Başlat ' ı seçin.
 
    ::: moniker range="vs-2017"
-   Bu test aracısının test denetleyicisi Team Foundation Server'a kayıtlıysa, etkileşimli işlem olarak çalışan bir test aracısının durumu Microsoft Test Yöneticisi Için **Laboratuvar Merkezi'ndeki** **Denetleyiciler** görünümünde görüntülenir. Etkileşimli bir işlem olarak çalıştığını belirtmek için önceki bir yıldız işareti yle listelenir. Bu test aracısını yeniden başlatmak için, **Denetleyiciler** görünümü için değil, test aracısı için bilgisayarda çalışan aracı kullanmanız gerekir.
+   Bu test aracısı için test denetleyicisi Team Foundation Server kaydedilmişse, etkileşimli bir işlem olarak çalışan bir test aracısının durumu, Microsoft Test Yöneticisi için **Laboratuvar merkezindeki** **denetleyiciler** görünümünde görüntülenir. Etkileşimli bir işlem olarak çalıştığını göstermek için önceki bir yıldız simgesiyle listelenir. Bu test aracısını yeniden başlatmak için, **denetleyiciler** görünümü değil, test aracısı için bilgisayarda çalışan aracı kullanmanız gerekir.
    ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.

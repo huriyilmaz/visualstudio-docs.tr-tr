@@ -1,6 +1,6 @@
 ---
 title: Windows üzerinde Azure App Service bir Python uygulaması yayımlama
-description: Web. config dosyası için gerekli içerik de dahil olmak üzere, Visual Studio 'dan Windows üzerinde Azure App Service doğrudan bir Python web uygulaması yayımlama.
+description: web.config dosyası için gerekli içerik dahil olmak üzere Visual Studio 'dan Windows üzerinde Azure App Service doğrudan bir Python web uygulaması yayımlama.
 ms.date: 01/07/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -11,21 +11,21 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: c8e7c040fb4d6df507ed5721407655accf067fb9
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: 0564e9d36fafb32dfdefa1e5a581d298da744a0a
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586570"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289176"
 ---
 # <a name="publishing-to-azure-app-service-on-windows"></a>Windows üzerinde Azure App Service yayımlama
 
 > [!Note]
 > Bu içerik ve açıklanan özellikler kullanım dışıdır, ancak çalışmaya devam eder. Python geliştiricilerinin, mümkün olduğunda [Linux üzerinde App Service](publishing-python-web-applications-to-azure-from-visual-studio.md) 'a geçirilmesi önerilir.
 
-Visual Studio, doğrudan Windows üzerinde Azure App Service bir Python web uygulaması yayımlama olanağı sağlar. Windows üzerinde Azure App Service yayımlama, gerekli dosyaları sunucuya kopyalama ve Web sunucusuna uygulamanızı nasıl başlatacağı hakkında uygun `web.config` bir dosya ayarlama anlamına gelir.
+Visual Studio, doğrudan Windows üzerinde Azure App Service bir Python web uygulaması yayımlama olanağı sağlar. Windows üzerinde Azure App Service yayımlama, gerekli dosyaları sunucuya kopyalama ve `web.config` Web sunucusuna uygulamanızı nasıl başlatacağı hakkında uygun bir dosya ayarlama anlamına gelir.
 
-Yayımlama işlemi, Visual Studio 2017 ve üzeri ve Visual Studio 2015 arasında farklılık gösterir. Özellikle, Visual Studio 2015, oluşturma `web.config`da dahil olmak üzere bazı adımları otomatikleştirir, ancak bu Otomasyon uzun süreli esneklik ve denetimi sınırlandırır. Visual Studio 2017 ve üzeri, daha el ile adım gerektirir, ancak Python ortamınız üzerinde daha kesin bir denetim sağlar. Her iki seçenek de burada açıklanmıştır.
+Yayımlama işlemi, Visual Studio 2017 ve üzeri ve Visual Studio 2015 arasında farklılık gösterir. Özellikle, Visual Studio 2015, oluşturma da dahil olmak üzere bazı adımları otomatikleştirir, `web.config` ancak bu Otomasyon uzun süreli esneklik ve denetimi sınırlandırır. Visual Studio 2017 ve üzeri, daha el ile adım gerektirir, ancak Python ortamınız üzerinde daha kesin bir denetim sağlar. Her iki seçenek de burada açıklanmıştır.
 
 > [!Note]
 > Visual Studio 2015 ile Visual Studio 2017 ve üzeri değişikliklerle ilgili değişiklikler hakkında daha fazla bilgi için bkz. [visual 2017 Studio 'Da Azure 'Da yayımlama](https://devblogs.microsoft.com/python/publish-to-azure-in-vs-2017/), blog gönderisi.
@@ -63,7 +63,7 @@ Etkin bir Azure aboneliği ile, şu şekilde boş bir Web uygulamasıyla App Ser
 
 Azure aboneliğine gerek duymadan geçici bir App Service aşağıdaki gibi oluşturun:
 
-1. Tarayıcınızı açın [https://azure.microsoft.com/try/app-service/web/](https://azure.microsoft.com/try/app-service/web/).
+1. Tarayıcınızı açın [https://azure.microsoft.com/try/app-service/web/](https://azure.microsoft.com/try/app-service/web/) .
 1. Uygulama türü için **Web uygulaması** ' nı seçin ve ardından **İleri**' yi seçin.
 1. **Boş site**' yi ve ardından **Oluştur**' u seçin.
 1. Seçtiğiniz sosyal oturum açma bilgileriyle oturum açın ve kısa bir süre sonra, görüntülenmiş URL 'de bir kez daha kullanılır.
@@ -73,15 +73,15 @@ Azure aboneliğine gerek duymadan geçici bir App Service aşağıdaki gibi olu�
 
 Çalışan boş bir Web uygulaması (aboneliğinizde veya ücretsiz bir sitede) olan bir App Service sahip olduktan sonra, Python 'un seçili bir sürümünü [Azure App Service üzerinde Python 'U yönetme](managing-python-on-azure-app-service.md)bölümünde anlatıldığı şekilde yükleyebilirsiniz. Visual Studio 2017 ve sonrasında yayımlama için, bu makalede açıklandığı gibi, site uzantısıyla yüklenen Python Yorumlayıcısına tam yolu kaydedin.
 
-İsterseniz, paketi bu yönergedeki diğer adımların `bottle` bir parçası olarak yüklendiği için bu talimatlarda işlemi kullanarak da yükleyebilirsiniz.
+İsterseniz, paketi `bottle` Bu yönergedeki diğer adımların bir parçası olarak yüklendiği için bu talimatlarda işlemi kullanarak da yükleyebilirsiniz.
 
 ## <a name="publish-to-app-service---visual-studio-2017-and-later"></a>App Service yayımlama-Visual Studio 2017 ve üzeri
 
 Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca projenizdeki dosyaları sunucusuna kopyalar. Bu nedenle, sunucu ortamını yapılandırmak için gerekli dosyaları oluşturmak gerekir.
 
-1. Visual Studio **Çözüm Gezgini**, projeye sağ tıklayın ve **> yeni öğe Ekle...** seçeneğini belirleyin. Görüntülenen iletişim kutusunda, "Azure Web. config (Fast CGI)" şablonunu seçip Tamam ' ı seçin. Bu, proje kök dizininizde bir `web.config` dosyası oluşturur.
+1. Visual Studio **Çözüm Gezgini**, projeye sağ tıklayın ve **> yeni öğe Ekle...** seçeneğini belirleyin. Görüntülenen iletişim kutusunda, "Azure web.config (Fast CGI)" şablonunu seçip Tamam ' ı seçin. Bu, proje kök dizininizde bir `web.config` dosyası oluşturur.
 
-1. `PythonHandler` Yolu, sunucudaki Python `web.config` yüklemesiyle eşleşecek şekilde değiştirin (tam Ayrıntılar Için bkz. [IIS yapılandırma başvurusu](https://www.iis.net/configreference) (iis.net)). Örneğin, Python 3.6.1 x64 için giriş aşağıdaki gibi görünmelidir:
+1. Yolu, `PythonHandler` `web.config` sunucudaki Python yüklemesiyle eşleşecek şekilde değiştirin (tam Ayrıntılar için bkz. [IIS yapılandırma başvurusu](https://www.iis.net/configreference) (iis.net)). Örneğin, Python 3.6.1 x64 için giriş aşağıdaki gibi görünmelidir:
 
     ```xml
     <system.webServer>
@@ -93,47 +93,47 @@ Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca p
     </system.webServer>
     ```
 
-1. `WSGI_HANDLER` Girişi, kullanmakta olduğunuz `web.config` çerçeveye uygun şekilde ayarlayın:
+1. Girişi, `WSGI_HANDLER` `web.config` kullanmakta olduğunuz çerçeveye uygun şekilde ayarlayın:
 
-    - **Şişe**: aşağıda gösterildiği `app.wsgi_app` gibi parantezler ekleyin. Bu nesne bir değişken yerine bir işlev (bkz `app.py`.) olduğu için gereklidir:
+    - **Şişe**: `app.wsgi_app` aşağıda gösterildiği gibi parantezler ekleyin. Bu nesne bir değişken yerine bir işlev (bkz.) olduğu için gereklidir `app.py` :
 
         ```xml
         <!-- Bottle apps only -->
         <add key="WSGI_HANDLER" value="app.wsgi_app()"/>
         ```
 
-    - **Flask**: değeri, `WSGI_HANDLER` projenizin adıyla `<project_name>.app` `<project_name>` eşleşen olacak şekilde değiştirin. İçindeki `from <project_name> import app` ifadeye bakarak tam tanımlayıcı bulabilirsiniz `runserver.py`. Örneğin, proje "FlaskAzurePublishExample" olarak adlandırılmışsa, giriş şu şekilde görünür:
+    - **Flask**: değeri, `WSGI_HANDLER` `<project_name>.app` `<project_name>` projenizin adıyla eşleşen olacak şekilde değiştirin. İçindeki ifadeye bakarak tam tanımlayıcı bulabilirsiniz `from <project_name> import app` `runserver.py` . Örneğin, proje "FlaskAzurePublishExample" olarak adlandırılmışsa, giriş şu şekilde görünür:
 
         ```xml
         <!-- Flask apps only: change the project name to match your app -->
         <add key="WSGI_HANDLER" value="FlaskAzurePublishExample.app"/>
         ```
 
-    - **Docgo**: docgo projeleri `web.config` için iki değişiklik yapılması gerekir. İlk olarak, `WSGI_HANDLER` değeri olarak `django.core.wsgi.get_wsgi_application()` değiştirin (nesne `wsgi.py` dosyada bulunur):
+    - **Docgo**: `web.config` docgo projeleri için iki değişiklik yapılması gerekir. İlk olarak, `WSGI_HANDLER` değeri olarak değiştirin `django.core.wsgi.get_wsgi_application()` (nesne `wsgi.py` dosyada bulunur):
 
         ```xml
         <!-- Django apps only -->
         <add key="WSGI_HANDLER" value="django.core.wsgi.get_wsgi_application()"/>
         ```
 
-        İkinci olarak, öğesinin altına aşağıdaki girişi ekleyin `WSGI_HANDLER`, bunu projenizin adıyla `DjangoAzurePublishExample` değiştirin:
+        İkinci olarak, öğesinin altına aşağıdaki girişi ekleyin, bunu `WSGI_HANDLER` `DjangoAzurePublishExample` projenizin adıyla değiştirin:
 
         ```xml
         <add key="DJANGO_SETTINGS_MODULE" value="DjangoAzurePublishExample.settings" />
         ```
 
-1. **Yalnızca docgo uygulamaları**: docgo proje `settings.py` dosyasında, site URL etki alanınızı aşağıda gösterildiği `ALLOWED_HOSTS` gibi ekleyin ve ' VSPYTHON-test-02.AZUREWEBSITES.net ' öğesini, Kurstaki URL 'niz ile değiştirin:
+1. **Yalnızca docgo uygulamaları**: docgo proje `settings.py` dosyasında, site URL etki alanınızı `ALLOWED_HOSTS` aşağıda gösterildiği gibi ekleyin ve ' vspython-test-02.azurewebsites.net ' ÖĞESINI, Kurstaki URL 'niz ile değiştirin:
 
     ```python
     # Change the URL to your specific site
     ALLOWED_HOSTS = ['vspython-test-02.azurewebsites.net']
     ```
 
-    URL 'nizi diziye ekleme hatası, "DisallowedHost HTTP_HOST üst bilgisinde, '\<site URL 'si\>' hatasıyla sonuçlanır. ALLOWED_HOSTS '\<site URL 'si\>' eklemeniz gerekebilir. "
+    URL 'nizi diziye ekleme hatası, "DisallowedHost HTTP_HOST üst bilgisinde yok: ' ' hatasıyla sonuçlanır \<site URL\> . ALLOWED_HOSTS için ' ' eklemeniz gerekebilir \<site URL\> . "
 
-    Dizi boş olduğunda, Docgo 'nun otomatik olarak ' localhost 'a izin verdiğini, ancak üretim URL 'nizi eklemenin bu özellikleri kaldırdığına unutmayın. Bu nedenle, uygulamasının `settings.py`ayrı geliştirme ve üretim kopyalarını sürdürmek veya çalışma süresi değerlerini denetlemek için ortam değişkenlerini kullanmak isteyebilirsiniz.
+    Dizi boş olduğunda, Docgo 'nun otomatik olarak ' localhost 'a izin verdiğini, ancak üretim URL 'nizi eklemenin bu özellikleri kaldırdığına unutmayın. Bu nedenle, uygulamasının ayrı geliştirme ve üretim kopyalarını sürdürmek `settings.py` veya çalışma süresi değerlerini denetlemek için ortam değişkenlerini kullanmak isteyebilirsiniz.
 
-1. **Çözüm Gezgini**, projenizle aynı adlı klasörü genişletin, `static` klasöre sağ tıklayın, **> yeni öğe Ekle...** öğesini seçin, "Azure statik dosyalar Web. config" şablonunu seçin ve **Tamam**' ı seçin. Bu eylem `static` klasöründe, Python işlemesini bu klasör için devre dışı bırakan başka bir `web.config` oluşturur. Bu yapılandırma, statik dosyalar için, Python uygulamasını kullanmak yerine varsayılan web sunucusuna istekleri gönderir.
+1. **Çözüm Gezgini**, projenizle aynı adlı klasörü genişletin, klasöre sağ tıklayın `static` , **> yeni öğe Ekle...** öğesini seçin, "Azure statik dosyalar web.config" şablonunu seçin ve **Tamam**' ı seçin. Bu eylem `static` klasöründe, Python işlemesini bu klasör için devre dışı bırakan başka bir `web.config` oluşturur. Bu yapılandırma, statik dosyalar için, Python uygulamasını kullanmak yerine varsayılan web sunucusuna istekleri gönderir.
 
 1. Projenizi kaydedin, ardından Visual Studio **Çözüm Gezgini**, projeye sağ tıklayın ve **Yayımla**' yı seçin.
 
@@ -145,7 +145,7 @@ Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca p
 
     ![Azure 'Da yayımlama adım 1, Visual Studio 2017 ve üzeri, mevcut abonelikler](media/tutorials-common-publish-1a-2017.png)
 
-    b. Try.azurewebsites.net üzerinde geçici bir App Service kullanıyorsanız veya bir yayımlama profili kullanmanız gerekiyorsa, **>** **içeri aktarma profilini**bulmak için denetimi seçin, bu seçeneği belirleyin ve ardından **Yayımla**' yı seçin. Bu, daha önce indirilen `.publishsettings` dosyanın konumunu ister.
+    b. Try.azurewebsites.net üzerinde geçici bir App Service kullanıyorsanız veya bir yayımlama profili kullanmanız gerekiyorsa, **>** **içeri aktarma profilini**bulmak için denetimi seçin, bu seçeneği belirleyin ve ardından **Yayımla**' yı seçin. Bu, `.publishsettings` daha önce indirilen dosyanın konumunu ister.
 
     ![Azure 'Da yayımlama adım 1, Visual Studio 2017 ve üzeri, geçici App Service](media/tutorials-common-publish-1b-2017.png)
 
@@ -155,9 +155,9 @@ Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca p
 
     a. Uygun bir Python site uzantısının yüklü olduğundan emin olmak için [Azure App Service Python 'U yönetmek](managing-python-on-azure-app-service.md)üzere tekrar başvurun.
 
-    b. `web.config` Dosyanızdaki Python yorumlayıcı yolunu iki kez kontrol edin. Yol, seçtiğiniz site uzantısının yüklenmesi konumuyla tam olarak eşleşmelidir.
+    b. Dosyanızdaki Python yorumlayıcı yolunu iki kez kontrol edin `web.config` . Yol, seçtiğiniz site uzantısının yüklenmesi konumuyla tam olarak eşleşmelidir.
 
-    c. Uygulamanızın `requirements.txt` dosyasında listelenen paketleri yükseltmek Için kudu konsolunu kullanın: gibi ' de `web.config` `/home/python361x64`kullanılan Python klasörüne gidin ve [kudu konsolu](managing-python-on-azure-app-service.md#azure-app-service-kudu-console) bölümünde açıklandığı gibi aşağıdaki komutu çalıştırın:
+    c. Uygulamanızın dosyasında listelenen paketleri yükseltmek için kudu konsolunu kullanın: gibi ' `requirements.txt` de kullanılan Python klasörüne gidin `web.config` `/home/python361x64` ve [kudu konsolu](managing-python-on-azure-app-service.md#azure-app-service-kudu-console) bölümünde açıklandığı gibi aşağıdaki komutu çalıştırın:
 
     ```command
     python -m pip install --upgrade -r /home/site/wwwroot/requirements.txt
@@ -165,13 +165,13 @@ Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca p
 
     Bu komutu çalıştırırken izin hataları görürseniz, bu komutu, App Service varsayılan Python yüklemelerinden birinin klasöründe *değil* , site uzantı klasörünüzde çalıştırıp çalıştırdığınızı iki kez kontrol edin. Bu varsayılan ortamları değiştiremeyeceğiniz için, paket yüklenmeye çalışılması kesinlikle başarısız olur.
 
-    d. Ayrıntılı hata çıktısı için, daha ayrıntılı hata çıktısı sağlayan `web.config` `<system.webServer>` düğümü içine aşağıdaki satırı ekleyin:
+    d. Ayrıntılı hata çıktısı için, `web.config` `<system.webServer>` daha ayrıntılı hata çıktısı sağlayan düğümü içine aşağıdaki satırı ekleyin:
 
     ```xml
     <httpErrors errorMode="Detailed"></httpErrors>
     ```
 
-    e. Yeni paketleri yükledikten sonra App Service yeniden başlatmayı deneyin. Değişiklik yapıldığında yeniden başlatma gerekli değildir `web.config`, çünkü App Service her `web.config` değiştiğinde otomatik olarak yeniden başlatılır.
+    e. Yeni paketleri yükledikten sonra App Service yeniden başlatmayı deneyin. Değişiklik yapıldığında yeniden başlatma gerekli değildir `web.config` , çünkü App Service her değiştiğinde otomatik olarak yeniden başlatılır `web.config` .
 
     > [!Tip]
     > Uygulamanızın `requirements.txt` dosyasında herhangi bir değişiklik yaparsanız, bu dosyada listelenen paketleri yüklemek için yeniden Kudu konsolunu kullanmayı unutmayın.
@@ -194,7 +194,7 @@ Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca p
 1. Hedef seçin:
 
     - Azure aboneliğiniz varsa, yayımlama hedefi olarak **Microsoft Azure App Service** ' i seçin, ardından aşağıdaki iletişim kutusunda mevcut bir App Service seçin veya yeni bir tane oluşturmak için **Yeni** ' yi seçin.
-    - Try.azurewebsites.net ' den geçici bir site kullanıyorsanız, yayımlama hedefi olarak **Içeri aktar** ' ı seçin, ardından siteden indirilen `.publishsettings` dosyaya gözatıp **Tamam**' ı seçin.
+    - Try.azurewebsites.net ' den geçici bir site kullanıyorsanız, yayımlama hedefi olarak **Içeri aktar** ' ı seçin, ardından `.publishsettings` siteden indirilen dosyaya gözatıp **Tamam**' ı seçin.
 
 1. App Service ayrıntılar, aşağıdaki **Yayımla** Iletişim kutusunun **bağlantı** sekmesinde görüntülenir.
 
@@ -202,15 +202,15 @@ Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca p
 
 1. Ek ayarları gözden geçirmek için gerektiğinde **ileri >' yi** seçin.
 
-1. **Yayımla**’yı seçin. Uygulamanız Azure 'a dağıtıldığında, varsayılan tarayıcınız bu sitede açılır.
+1. **Yayımla** seçeneğini belirleyin. Uygulamanız Azure 'a dağıtıldığında, varsayılan tarayıcınız bu sitede açılır.
 
 Bu işlemin bir parçası olarak, Visual Studio aşağıdaki adımları da yapar:
 
-- Sunucuda, `web.config` uygulamanın `wsgi_app` işlevine uygun işaretçileri içeren bir dosya oluşturun ve bunun varsayılan Python 3,4 yorumlayıcısı App Service.
-- Projenin `static` klasöründeki dosyalar için işlemeyi devre dışı bırakın (Bu kuralların bulunduğu kurallar `web.config`).
+- Sunucuda, `web.config` uygulamanın işlevine uygun işaretçileri içeren bir dosya oluşturun `wsgi_app` ve bunun varsayılan Python 3,4 yorumlayıcısı App Service.
+- Projenin klasöründeki dosyalar için işlemeyi devre dışı bırakın `static` (Bu kuralların bulunduğu kurallar `web.config` ).
 - Sanal ortamı sunucuda yayımlayın.
-- Uzaktan hata `web.debug.config` ayıklamayı etkinleştirmek için bir dosya ve ptvsd hata ayıklama araçları ekleyin.
+- `web.debug.config`Uzaktan hata ayıklamayı etkinleştirmek için bir dosya ve hata ayıklama araçları ekleyin. Visual Studio 2019 sürüm 16,4 ve önceki sürümlerde hata ayıklama araçları ptvsd ' dir. Visual Studio 2019 sürüm 16,5 ve üzeri için hata ayıklama araçları hata ayıklıyorsanız GPY.
 
 Daha önce belirtildiği gibi, bu otomatik adımlar yayımlama işlemini basitleştirir, ancak Python ortamının denetimini daha kolay hale getirir. Örneğin, `web.config` dosya yalnızca sunucuda oluşturulur ancak projenize eklenmez. Yayımlama işlemi aynı zamanda sunucu yapılandırmasına güvenmek yerine, tüm sanal ortamı geliştirme bilgisayarınızdan kopyalarken daha uzun sürer.
 
-Sonuç olarak, kendi `web.config` dosyanızı sürdürmek ve doğrudan sunucudaki paketleri sürdürmek `requirements.txt` için kullanmak isteyebilirsiniz. Özellikle `requirements.txt`, geliştirme ve sunucu ortamlarınızın her zaman eşleştiğini garanti eder.
+Sonuç olarak, kendi `web.config` dosyanızı sürdürmek ve `requirements.txt` doğrudan sunucudaki paketleri sürdürmek için kullanmak isteyebilirsiniz. `requirements.txt`Özellikle, geliştirme ve sunucu ortamlarınızın her zaman eşleştiğini garanti eder.

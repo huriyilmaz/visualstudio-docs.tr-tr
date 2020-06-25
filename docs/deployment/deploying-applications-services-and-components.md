@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f10831ac398ef8fb48337436dd33253cfb32f26c
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: ab0d62efb8abc3cfbae365312a009bc6d2efea43
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183008"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286368"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>Visual Studio 'da dağıtıma ilk bakış
 
@@ -40,7 +40,7 @@ Adım adım dağıtım yönergeleri için hızlı başlangıç ve öğreticiler 
 
 Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için başka bir aracın kullanıldığı hazırlanmış bir dağıtıma başlamak için kullanılır.
 
-- **ASP.net**, **ASP.NET Core**, **Node. js**, **Python**ve. **NET Core**: yerel bir klasöre dağıtmak için Yayımla aracını kullanın. Kullanılabilecek tam seçenekler, uygulama türüne bağlıdır. Çözüm Gezgini, projenize sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırmadıysanız, **Yeni Profil oluştur**' a tıklamanız gerekir.) Sonra **klasör**' ü seçin. Daha fazla bilgi için bkz. [yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md).
+- **ASP.net**, **ASP.NET Core**, **Node.js**, **Python**ve. **NET Core**: yerel bir klasöre dağıtmak için Yayımla aracını kullanın. Kullanılabilecek tam seçenekler, uygulama türüne bağlıdır. Çözüm Gezgini, projenize sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırmadıysanız, **Yeni Profil oluştur**' a tıklamanız gerekir.) Sonra **klasör**' ü seçin. Daha fazla bilgi için bkz. [yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md).
 
     ![Yayımla ' yı seçin](../deployment/media/quickstart-publish.png)
 
@@ -48,7 +48,7 @@ Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için b
 
 ## <a name="publish-to-azure"></a>Azure’da Yayımlama
 
-- **ASP.net**, **ASP.NET Core**, **Python**ve **Node. js**: aşağıdaki yöntemlerden birini kullanarak Azure App Service veya Azure App Service Linux 'ta (kapsayıcılar kullanarak) yayımlayın.
+- **ASP.net**, **ASP.NET Core**, **Python**ve **Node.js**: aşağıdaki yöntemlerden birini kullanarak Azure App Service veya Azure App Service Linux 'ta (kapsayıcılar kullanarak) yayımlayın.
 
   - Uygulamaların sürekli (veya otomatik) dağıtımı için [Azure Pipelines](/azure/devops/pipelines/get-started-yaml?view=azdevops)Ile Azure DevOps kullanın.
 
@@ -58,7 +58,7 @@ Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için b
 
   **Yayımla** aracını kullanmak için Çözüm Gezgini ' de projeye sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırdıysanız **Yeni Profil oluştur**' a tıklamanız gerekir.) Yayımla iletişim kutusunda **App Service** veya **Azure sanal makineler**' i seçin ve ardından yapılandırma adımlarını izleyin.
 
-  ![Azure App Service seçin](../deployment/media/quickstart-publish-azure.png "Azure App Service seçin")
+  ![Azure App Service seçin](../deployment/media/quickstart-publish-azure-new.png "Azure App Service seçin")
 
   Visual Studio 2017 sürüm 15,7 ' den başlayarak, **Linux için App Service**ASP.NET Core uygulamaları dağıtabilirsiniz.
 
@@ -73,7 +73,7 @@ Yerel bir klasöre dağıtım, genellikle test için veya son dağıtım için b
 
 ## <a name="publish-to-web-or-deploy-to-network-share"></a>Web 'de yayımlama veya ağ paylaşımında dağıtma
 
-- **ASP.net**, **ASP.NET Core**, **Node. js**ve **Python**: FTP veya Web dağıtımı kullanarak bir Web sitesine dağıtmak için Yayımla aracını kullanabilirsiniz. Daha fazla bilgi için bkz. [Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md).
+- **ASP.net**, **ASP.NET Core**, **Node.js**ve **Python**: FTP veya Web dağıtımı kullanarak bir Web sitesine dağıtmak için Yayımla aracını kullanabilirsiniz. Daha fazla bilgi için bkz. [Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md).
 
     Çözüm Gezgini, projeye sağ tıklayın ve **Yayımla**' yı seçin. (Daha önce herhangi bir yayımlama profili yapılandırdıysanız **Yeni Profil oluştur**' a tıklamanız gerekir.) Yayımla aracında istediğiniz seçeneği belirleyin ve yapılandırma adımlarını izleyin.
 
@@ -91,7 +91,7 @@ Visual Studio 'dan Microsoft Store dağıtım için uygulama paketleri oluştura
 
 - **UWP**: uygulamanızı paketleyebilir ve menü öğelerini kullanarak dağıtabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio kullanarak UWP uygulaması paketleme](/windows/uwp/packaging/packaging-uwp-apps).
 
-    ![Uygulama paketi oluşturma](../deployment/media/feature-tour-create-app-package.jpg)
+    ![Uygulama paketi oluşturma](../deployment/media/feature-tour-create-app-package.png)
 
 - **Windows Masaüstü**: Visual Studio 2017 sürüm 15,4 ' den başlayarak masaüstü Köprüsü 'nü kullanarak Microsoft Store dağıtabilirsiniz. Bunu yapmak için, bir Windows uygulama paketleme projesi oluşturarak başlayın. Daha fazla bilgi için bkz. [Microsoft Store için bir masaüstü uygulaması paketleme (Masaüstü Köprüsü)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 

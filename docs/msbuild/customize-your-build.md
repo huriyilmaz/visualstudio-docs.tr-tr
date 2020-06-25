@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b0cb05948f8010964eefe101cbc77d48a149566
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 6c52c6b584db94ff3cbe8dc041c00ebe969c9faf
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180408"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288942"
 ---
 # <a name="customize-your-build"></a>Derlemenizi özelleştirme
 
@@ -80,7 +80,7 @@ c:\
 Önceki ayarları geçersiz kılan tek bir proje için bir özellik ayarlamanız veya hedef tanımlamanız gerektiğinde, bu mantığı son içeri aktarma işleminden sonra proje dosyasına koyun. Bunu bir SDK stili projesinde yapmak için, önce SDK stili özniteliğini eşdeğer içeri aktarımlarla değiştirmeniz gerekir. Bkz. [MSBuild proje SDK 'larını kullanma](how-to-use-project-sdk.md).
 
 > [!NOTE]
-> MSBuild altyapısı, herhangi bir proje (any dahil) için derleme yürütmeyi başlatmadan önce, tüm içeri aktarılan dosyalarda geliştirme sırasında okur `PreBuildEvent` , bu nedenle bu dosyaların `PreBuildEvent` yapı işleminin veya diğer herhangi bir bölümü tarafından değiştirilmesi beklenmez. Tüm değişiklikler, *MSBuild. exe* ' nin bir sonraki çağrılışında veya sonraki Visual Studio derlemesi tamamlanana kadar etkili olmaz.
+> MSBuild altyapısı, herhangi bir proje (any dahil) için derleme yürütmeyi başlatmadan önce, tüm içeri aktarılan dosyalarda geliştirme sırasında okur `PreBuildEvent` , bu nedenle bu dosyaların `PreBuildEvent` yapı işleminin veya diğer herhangi bir bölümü tarafından değiştirilmesi beklenmez. Tüm değişiklikler *MSBuild.exe* bir sonraki çağrıya veya sonraki Visual Studio derlemesi tamamlanana kadar etkili olmaz.
 
 ### <a name="use-case-multi-level-merging"></a>Kullanım örneği: çok düzeyli birleştirme
 
@@ -182,7 +182,7 @@ Aynı dizin yapısı, `$(MSBuildUserExtensionsPath)` Kullanıcı başına *%Loca
 ## <a name="customize-the-solution-build"></a>Çözüm derlemesini özelleştirme
 
 > [!IMPORTANT]
-> Çözüm derlemesini bu şekilde özelleştirmek, yalnızca *MSBuild. exe*ile komut satırı derlemeleri için geçerlidir. Visual Studio içindeki derlemeler **için geçerlidir.**
+> Çözüm derlemesini bu şekilde özelleştirmek yalnızca *MSBuild.exe*olan komut satırı derlemeleri için geçerlidir. Visual Studio içindeki derlemeler **için geçerlidir.** Bu nedenle, özelleştirmenin çözüm düzeyine konulmasının kullanılması önerilmez. Bir Çözümdeki tüm projelerin özelleştirilmesi için daha iyi bir alternatif, bu makalenin başka bir yerinde anlatıldığı gibi çözüm klasöründe *Dizin. Build. props* ve *Directory. Build. targets* dosyalarını kullanmaktır.
 
 MSBuild bir çözüm dosyası oluşturduğunda, önce onu bir proje dosyasına dönüştürür ve ardından bunu oluşturur. Oluşturulan proje dosyası, `before.{solutionname}.sln.targets` `after.{solutionname}.sln.targets` ve dizinlerine yüklenmiş hedefler de dahil olmak üzere herhangi bir hedefi tanımlamadan önce ve hedefleri içeri aktardıktan sonra içeri aktarılır `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportBefore` `$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\SolutionFile\ImportAfter` .
 

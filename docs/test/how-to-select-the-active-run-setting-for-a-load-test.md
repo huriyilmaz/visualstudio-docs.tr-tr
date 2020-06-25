@@ -1,62 +1,62 @@
 ---
-title: Yük Testi için Çalıştır Ayarı seçin
+title: Yük testi için bir çalıştırma ayarı seçin
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load tests, run settings, active
 ms.assetid: ed6ff546-acfa-4dd8-b3a2-6e7455930ca4
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 91ac811c1f55fdb9a662db679ebd2d038ecdd5dd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8400c5afcb81215078617cca00cef9aa8ce018d6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588986"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287551"
 ---
-# <a name="how-to-select-the-active-run-setting-for-a-load-test"></a>Nasıl seçilir: Yük testi için etkin çalışma ayarını seçin
+# <a name="how-to-select-the-active-run-setting-for-a-load-test"></a>Nasıl yapılır: bir yük testi için etkin çalışma ayarını seçme
 
-**Yeni Yük Testi Sihirbazı**ile yük testinizi oluşturduktan sonra, test gereksinimlerinizi ve hedeflerinize ulaşmak için senaryo özelliklerini değiştirmek için Yük Testi Düzenleyicisi'ni kullanabilirsiniz. **Load Test Editor**
+**Yeni Yük Testi Sihirbazı**yük testinizi oluşturduktan sonra, test ihtiyaçlarını ve hedeflerinizi karşılamak üzere senaryolar özelliklerini değiştirmek için **Yük Testi Düzenleyicisi** kullanabilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Yük testi, yük testinin çalışma şeklini etkileyen bir dizi özellik olan bir veya daha fazla *çalıştırma ayarı* içerebilir. Çalıştırma ayarları **Özellikler** penceresindeki kategorilere göre düzenlenir. Bir yük testi çalıştırıldığında, şu anda etkin olarak ayarlanmış çalıştırma ayarını kullanır.
+Yük testi, bir yük testinin çalışma biçimini etkileyen özellikler kümesi olan bir veya daha fazla *çalıştırma ayarı* içerebilir. Çalışma ayarları, **Özellikler** penceresindeki kategorilere göre düzenlenir. Bir yük testi çalıştırıldığında, şu anda etkin olarak ayarlanmış olan çalıştırma ayarını kullanır.
 
 > [!NOTE]
-> Çalıştırma ayarları özelliklerinin ve açıklamalarının tam listesi [için, Yükle testi çalıştırma ayarları özelliklerine](../test/load-test-run-settings-properties.md)bakın.
+> Çalışma ayarları özelliklerinin ve açıklamalarının tüm listesi için bkz. [Yük testi çalıştırma ayarları özellikleri](../test/load-test-run-settings-properties.md).
 
-Yük **testiniz, Çalışma Ayarları** klasörü altında yalnızca bir çalıştırma ayar düğümü içeriyorsa, bu düğüm her zaman etkin düğümdür. Yük testinizde birden çok çalışma ayarı düğümü varsa, yük testi çalıştırdığınızda kullanılacak olanını seçebilirsiniz. [Bkz. Nasıl Yapılır: Yük Testine Ek Çalıştırma Ayarları Ekleyin.](../test/how-to-add-additional-run-settings-to-a-load-test.md)
+Yük testiniz **çalışma ayarları** klasörü altında yalnızca bir çalıştırma ayarı düğümü içeriyorsa, bu düğüm her zaman etkin düğümdür. Yük testiniz birden çok çalışma ayarları düğümü içeriyorsa, bir yük testi çalıştırdığınızda kullanılacak birini seçebilirsiniz. Bkz. [nasıl yapılır: yük testine ek çalışma ayarları ekleme](../test/how-to-add-additional-run-settings-to-a-load-test.md).
 
-Load **Test Editor'da**etkin çalışma ayarı "[Etkin]" soneki yle tanımlanır.
+**Yük Testi Düzenleyicisi**, etkin çalıştırma ayarı "[etkin]" son eki tarafından tanımlanır.
 
 ## <a name="select-the-active-run-setting"></a>Etkin çalışma ayarını seçin
 
 1. Bir yük testi açın.
 
-2. Çalışma **Ayarları** klasörünü genişletin.
+2. **Çalışma ayarları** klasörünü genişletin.
 
-3. Etkin düğüm olmak istediğiniz çalıştır ayarları düğümüne sağ tıklayın ve ardından **Etkin Olarak Ayarla'yı**seçin.
+3. Etkin düğüm olmasını istediğiniz çalışma ayarları düğümüne sağ tıklayın ve sonra **etkin olarak ayarla**' yı seçin.
 
-     Yük **Testi Edito**r'de, etkilenen çalıştır ayar düğümü "[Etkin]" sonekiyle güncelleştirilir.
+     **Yük testi edito**r 'de, etkilenen çalışma ayarı düğümü "[etkin]" sonekiyle güncellenir.
 
-     Seçili çalıştırma ayarı etkin hale gelir ve etkin olması için farklı bir çalışma ayarı seçene kadar etkin kalır.
+     Seçilen çalıştırma ayarı etkin duruma gelir ve etkin olacak farklı bir çalışma ayarı seçene kadar etkin kalır.
 
 > [!NOTE]
-> 'li bir ortam değişkeni ayarlayarak etkin `Test.UseRunSetting=<run setting name>`çalışma ayarını geçersiz kılabilirsiniz. Bu, komut satırından veya toplu iş dosyasından bir yük testi çalıştırdığınızda kullanışlıdır. Bu, yük testinizi açmadan farklı çalışma ayarlarını seçmenize olanak tanır.
+> Adlı bir ortam değişkenini ayarlayarak etkin çalıştırma ayarını geçersiz kılabilirsiniz `Test.UseRunSetting=<run setting name>` . Bu, komut satırından veya bir toplu iş dosyasından bir yük testi çalıştırdığınızda yararlı olur. Bu, yük testinizi açmadan farklı çalışma ayarları seçmenize olanak sağlar.
 
 ## <a name="specify-the-run-setting-to-use-from-the-command-line"></a>Komut satırından kullanılacak çalıştırma ayarını belirtin
 
-Komut satırından bir ortam değişkeni ayarlayarak yük testinizdeki varsayılan çalıştırma ayarlarını geçersiz kılabilirsiniz:
+Komut satırından bir ortam değişkeni ayarlayarak, yük testinizde varsayılan çalıştırma ayarlarını geçersiz kılabilirsiniz:
 
-**Set Test.UseRunSetting=PreProdEnvironment**
+**Set test. UseRunSetting = PreProdEnvironment**
 
 Ve testi çalıştırmak için:
 
-**mstest /testkonteyneri:loadtest1.loadtest**
+**MSTest/testcontainer: LoadTest1. LoadTest**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi çalıştırma ayarlarını yapılandırma](../test/configure-load-test-run-settings.md)
-- [Yük testindeki bilgisayarlar için sayaç kümelerini ve eşik kurallarını belirtin](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
-- [Nasıl yapılır: Yük testine ek çalışma ayarları ekleme](../test/how-to-add-additional-run-settings-to-a-load-test.md)
+- [Yük testi çalıştırma ayarlarını yapılandır](../test/configure-load-test-run-settings.md)
+- [Yük testinde bilgisayarlar için sayaç kümelerini ve eşik kurallarını belirtin](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)
+- [Nasıl yapılır: yük testine ek çalışma ayarları ekleme](../test/how-to-add-additional-run-settings-to-a-load-test.md)

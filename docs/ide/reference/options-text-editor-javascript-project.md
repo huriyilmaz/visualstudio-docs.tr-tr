@@ -1,6 +1,6 @@
 ---
-title: Seçenekler, Metin Editörü, JavaScript, Proje
-ms.date: 1/15/2019
+title: Seçenekler, metin düzenleyici, JavaScript, proje
+ms.date: 06/19/2020
 ms.technology: vs-javascript
 ms.topic: reference
 f1_keywords:
@@ -13,57 +13,59 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 190cbdb2a8096415985d83fc525b997572d252c2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f6e4f5ff4e1081bbbe6aced4465afb40318048a5
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "68605920"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285367"
 ---
-# <a name="options-text-editor-javascript-project"></a>Seçenekler, Metin Editörü, JavaScript, Proje
+# <a name="options-text-editor-javascript-project"></a>Seçenekler, metin düzenleyici, JavaScript, proje
 
-Kod Düzenleyicisi'nde JavaScript ve TypeScript proje seçeneklerini belirtmek için **Seçenekler** iletişim kutusunun **Proje** sayfasını kullanın. Bu sayfaya erişmek için menü çubuğunda **Araçlar** > **Seçenekleri'ni**seçin ve ardından **Text Editor** > **JavaScript/TypeScript** > **Project'i**genişletin.
+Kod düzenleyicisinde JavaScript ve TypeScript proje seçeneklerini belirtmek için **Seçenekler** Iletişim kutusunun **Proje** sayfasını kullanın. Bu sayfaya erişmek için, menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin ve ardından **metin düzenleyici**  >  **JavaScript/TypeScript**  >  **projesi**' ni genişletin.
 
 ## <a name="project-analysis-options"></a>Proje Analizi Seçenekleri
 
-Bu seçenekler, düzenleyicinin projeleri nasıl analiz edebildiğini, tanılamayı nasıl raporladığını ve iyileştirmeler önerdiğini belirler. Düzenleyicinin bu durumları nasıl ele adadığını belirtmek için seçenekleri seçin veya temizleyin.
+Bu seçenekler, düzenleyicinin projeleri nasıl analiz eder, tanılama raporlar ve iyileştirmeler önerir. Düzenleyicinin bu durumları nasıl işleyeceğini belirlemek için seçenekleri seçin veya temizleyin.
 
 ### <a name="uielement-list"></a>UIElement listesi
 
-- **Yalnızca düzenleyicide açılan dosyaları içeren projeleri çözümleme**
-- **Yalnızca düzenleyicide açılan dosyalar için tanılama yı bildirme**
+- **Yalnızca düzenleyicide açılan dosyalar içeren projeleri analiz et**
+- **Yalnızca düzenleyicide açılan dosyalar için tanılamayı raporla**
 - **Düzeltme olmayan olası iyileştirmeler önerin**
 
-## <a name="virtual-projects-in-solution-explorer"></a>Çözüm Gezgini'nde Sanal Projeler
+## <a name="virtual-projects-in-solution-explorer"></a>Çözüm Gezgini sanal projeler
 
-Bu seçenekler, Bir Çözüm yüklendiğinde veya yüklenmediğinde Sanal Projeler'i görüntüleyip görüntülemeyeceğinizi seçmenize olanak tanır.
+Bu seçenekler, bir çözüm yüklendiğinde veya yüklü olmadığında sanal projelerin görüntülenip görüntülenmeyeceğini seçmenizi sağlar.
 
-## <a name="compile-on-save"></a>Kaydet'te derleme
+## <a name="compile-on-save"></a>Kaydetme sırasında derle
 
-Bu seçenekler, projenin parçası olmayan TypeScript dosyalarının otomatik olarak derlenip derlenmediğini belirler. Onay kutusunu seçin ve ardından kullanılacak kod oluşturma türünü seçin.
+Bu seçenekler, projenin parçası olmayan TypeScript dosyalarının otomatik olarak derlenip derlenmediğini belirtir. Visual Studio, *C:\Program Files (x86) \Microsoft SDKs\TypeScript*' de yüklü olan TypeScript 'in en son sürümünü kullanarak derlenir.
 
-### <a name="uielement-list"></a>UIElement listesi
-
-- **Projenin parçası olmayan modüller için AMD kod oluşturma yı kullanma**
-- **Projenin parçası olmayan modüller için CommonJS kod oluşturma yı kullanma**
-- **Projenin parçası olmayan modüller için UMD kod oluşturma yı kullanma**
-- **Projenin parçası olmayan modüller için Sistem kodu oluşturmayı kullanma**
-- **Projenin parçası olmayan modüller için ES2015 kod oluşturma yı kullanma**
-
-## <a name="ecmascript-version-for-files-that-are-not-part-of-a-project"></a>Projenin parçası olmayan dosyalar için ECMAScript sürümü
-
-Bu seçenekler, projenin parçası olmayan dosyalar için ECMAScript sürümünü seçmenize olanak tanır. **ECMAScript 3, ECMAScript** **5**veya **ECMAScript 6**arasında seçim yapabilirsiniz.
-
-## <a name="jsx-emit-for-tsx-files-that-are-not-part-of-a-project"></a>Projenin parçası olmayan TSX dosyaları için JSX Emit
-
-Bu seçenekler, düzenleyicinin projenin parçası olmayan TypeScript dosyalarını nasıl ele adadığını belirler.
+Onay kutusunu seçin ve ardından kullanılacak kod oluşturma türünü seçin.
 
 ### <a name="uielement-list"></a>UIElement listesi
 
-|Seçenek|Açıklama|
+- **Projenin parçası olmayan modüller için AMD kod üretimi kullanma**
+- **Projenin parçası olmayan modüller için CommonJS kod üretimini kullanın**
+- **Projenin parçası olmayan modüller için UMD kod üretimini kullanın**
+- **Projenin parçası olmayan modüller için sistem kodu oluşturmayı kullanma**
+- **Projenin parçası olmayan modüller için ES2015 kod oluşturmayı kullanma**
+
+## <a name="ecmascript-version-for-files-that-are-not-part-of-a-project"></a>Bir projenin parçası olmayan dosyalar için ECMAScript sürümü
+
+Bu seçenekler, bir projenin parçası olmayan dosyalar için ECMAScript sürümünü seçmenizi sağlar. **ECMAScript 3**, **ECMAScript 5**veya **ECMAScript 6**arasında seçim yapabilirsiniz.
+
+## <a name="jsx-emit-for-tsx-files-that-are-not-part-of-a-project"></a>Projenin parçası olmayan TSX dosyaları için JSX yayma
+
+Bu seçenekler, düzenleyicinin bir projenin parçası olmayan TypeScript dosyalarını nasıl ele aldığını tespit eder.
+
+### <a name="uielement-list"></a>UIElement listesi
+
+|Seçenek|Description|
 |------------|-----------------|
-|**Tepki Çerçevesi**|Bu seçenek seçildiğinde, Kod Düzenleyicisi *bir .js* dosya uzantısı yayır.|
-|**Korumak**|Bu seçenek seçildiğinde, Kod Düzenleyicisi JSX'i çıktının bir parçası olarak tutar ve *.jsx* dosya uzantısı yayır.|
+|**Tepki verme çerçevesi**|Bu seçenek belirlendiğinde, kod Düzenleyicisi bir *. js* dosya uzantısı yayar.|
+|**Koruyup**|Bu seçenek belirlendiğinde, kod Düzenleyicisi, JSX 'in çıktının bir parçası olarak devam eder ve bir *. JSX* dosya uzantısını yayar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

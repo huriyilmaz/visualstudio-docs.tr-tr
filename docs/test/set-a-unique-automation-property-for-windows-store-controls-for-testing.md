@@ -1,70 +1,70 @@
 ---
 title: Test Etme Amacıyla UWP Denetimleri için Benzersiz Otomasyon Özelliği Ayarlama
 ms.date: 05/31/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
 author: mikejo5000
-ms.openlocfilehash: 51e16dcaa48a08ae97bc80be1d33163c6f3af875
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 62409dc4aac8f640c7b58b112f7f86215ba2043b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75590455"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286719"
 ---
-# <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>Test için UWP denetimleri için benzersiz bir otomasyon özelliği ayarlama
+# <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>Test için UWP denetimleri için benzersiz bir Otomasyon özelliği ayarlama
 
-XAML tabanlı UWP uygulamanız için kodlanmış Kullanıcı Arabirimi testlerini çalıştırmak istiyorsanız, her denetim benzersiz bir otomasyon özelliği tarafından tanımlanmalıdır. Uygulamanızdaki XAML denetiminin türüne göre benzersiz bir otomasyon özelliği atayabilirsiniz.
+XAML tabanlı UWP uygulamanız için kodlanmış UI testlerini çalıştırmak istiyorsanız, her denetim benzersiz bir Otomasyon özelliği ile tanımlanmalıdır. Uygulamanızdaki XAML denetiminin türüne göre benzersiz bir Otomasyon özelliği atayabilirsiniz.
 
 [!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
 ## <a name="static-xaml-definition"></a>Statik XAML tanımı
 
-XAML dosyanızda tanımlanan bir denetim için benzersiz bir otomasyon özelliği belirtmek için **AutomationProperties.AutomationId'i** **veya** AutomationProperties.Name aşağıdaki örneklerde gösterildiği gibi örtülü veya açık olarak ayarlayabilirsiniz. Bu değerlerden birini ayarlamak, denetime kodlanmış bir ui testi veya eylem kaydı oluşturduğunuzda denetimi tanımlamak için kullanılabilecek benzersiz bir otomasyon özelliği sağlar.
+XAML dosyanızda tanımlanan bir denetim için benzersiz bir Otomasyon özelliği belirtmek için, aşağıdaki örneklerde gösterildiği gibi **AutomationProperties. AutomationId** veya **AutomationProperties.Name** öğesini örtük veya açık olarak ayarlayabilirsiniz. Bu değerlerden birini ayarlamak, kodlanmış UI testi veya eylem kaydı oluştururken denetimi tanımlamak için kullanılabilen benzersiz bir Otomasyon özelliği sağlar.
 
-### <a name="set-the-property-implicitly"></a>Özelliği örtülü olarak ayarlama
+### <a name="set-the-property-implicitly"></a>Özelliği örtük olarak ayarlayın
 
-Control için XAML'deki **Ad** özelliğini kullanarak **AutomationProperties.AutomationId'i** **ButtonX'e** ayarlayın.
+Denetimin XAML içindeki **Name** özelliğini kullanarak **AutomationProperties. AutomationId** öğesini **buttonx** olarak ayarlayın.
 
 ```xaml
 <Button Name="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />
 ```
 
-Denetim için XAML'deki **İçerik** özelliğini kullanarak **AutomationProperties.Name** **ButtonY** olarak ayarlayın.
+Denetimin XAML içindeki **Content** özelliğini kullanarak **AutomationProperties.Name** öğesini **buttony** olarak ayarlayın.
 
 ```xaml
 <Button Content="ButtonY" Height="31" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top" Width="140" Click="ButtonY_Click" />
 ```
 
-### <a name="set-the-property-explicitly"></a>Özelliği açıkça ayarlama
+### <a name="set-the-property-explicitly"></a>Özelliği açıkça ayarla
 
-Control için XAML'de **AutomationProperties.AutomationId'i** **ButtonX'e** ayarlayın.
+Denetim için XAML 'de **AutomationProperties. AutomationId** öğesini **buttonx** olarak ayarlayın.
 
 ```xaml
 <Button AutomationProperties.AutomationId="ButtonX" Height="31" HorizontalAlignment="Left" Margin="23,26,0,0"  VerticalAlignment="Top" Width="140" Click="ButtonX_Click" />
 ```
 
-Denetim için XAML'de **AutomationProperties.Name** açıkça **ButtonY** olarak ayarlayın.
+Denetimin XAML içinde **AutomationProperties.Name** öğesini **buttony** olarak ayarlayın.
 
 ```xaml
 <Button AutomationProperties.Name="ButtonY" Height="31" HorizontalAlignment="Left" Margin="23,76,0,0" VerticalAlignment="Top" Width="140" Click="ButtonY_Click" />
 ```
 
-## <a name="assign-unique-names"></a>Benzersiz adlar atama
+## <a name="assign-unique-names"></a>Benzersiz adlar ata
 
-Visual Studio için Karışım'da, denetimlere **AutomationProperties.Name**için benzersiz değerler veren düğmeler, liste kutuları, açılan kutular ve metin kutuları gibi etkileşimli öğelere benzersiz adlar atama seçeneğini seçebilirsiniz.
+Visual Studio için Blend ' de, denetimler, liste kutuları, Birleşik giriş kutuları ve metin kutuları gibi etkileşimli öğelere benzersiz adlar atamak için bir seçenek belirleyebilirsiniz. Bu, denetimleri **AutomationProperties.Name**için benzersiz değerler sağlar.
 
-Varolan denetimlere benzersiz adlar atamak için **Araçlar** > **Adı Etkileşimli Öğeler'i**seçin.
+Varolan denetimlere benzersiz adlar atamak için **Araçlar**  >  **adı etkileşimli öğeler**' i seçin.
 
-![Visual Studio için Blend Adı İnteraktif Elemanları](../test/media/cuit_windowsstoreproperty_blend_1.png)
+![Visual Studio için Blend etkileşimli öğeleri adlandırın](../test/media/cuit_windowsstoreproperty_blend_1.png)
 
-Eklediğiniz yeni denetimlere otomatik olarak benzersiz adlar vermek için **Seçenekler** iletişim kutusunu açmak için **Araçlar** > **Seçenekleri'ni** seçin. **XAML Designer'ı** seçin ve ardından **oluşturmada etkileşimli öğeleri otomatik olarak adlandır'ı**seçin. İletişim kutusunu kapatmak için **Tamam'ı** seçin.
+Eklediğiniz yeni denetimlere otomatik olarak benzersiz adlar vermek için, **Tools**  >  **Seçenekler** iletişim kutusunu açmak üzere Araçlar**Seçenekler** ' i seçin. **XAML Tasarımcısı** ' yi seçin ve sonra **otomatik olarak etkileşimli öğeleri oluşturma '** yı seçin. İletişim kutusunu kapatmak için **Tamam ' ı** seçin.
 
 ## <a name="use-a-data-template"></a>Veri şablonu kullanma
 
-Liste kutusundaki değerleri değişkenlere bağlamak için **ItemTemplate'i** kullanarak basit bir şablon tanımlayabilirsiniz:
+Bir liste kutusundaki değerleri değişkenlere bağlamak için **ItemTemplate** kullanarak basit bir şablon tanımlayabilirsiniz:
 
 ```xaml
 <ListBox Name="listBox1" ItemsSource="{Binding Source={StaticResource employees}}">
@@ -79,7 +79,7 @@ Liste kutusundaki değerleri değişkenlere bağlamak için **ItemTemplate'i** k
 </ListBox>
 ```
 
-Değerleri değişkenlere bağlamak için **ItemContainerStyle** ile birlikte bir şablon da kullanabilirsiniz:
+Ayrıca, değerlerini değişkenlere bağlamak için **ItemContainerStyle** içeren bir şablon da kullanabilirsiniz:
 
 ```xaml
 <ListBox Name="listBox1" ItemsSource="{Binding Source={StaticResource employees}}">
@@ -99,10 +99,10 @@ Değerleri değişkenlere bağlamak için **ItemContainerStyle** ile birlikte bi
 </ListBox>
 ```
 
-Bu örneklerin her ikisi için de, aşağıdaki kod örneğini kullanarak gösterildiği gibi, **ItemSource'un** **ToString()** yöntemini geçersiz kılmanız gerekir. Bu kod, bağlama yı kullanarak her veriye bağlı liste öğesi için benzersiz bir otomasyon özelliği ayarlayamadığından, **AutomationProperties.Name** değerinin ayarlandığından ve benzersiz olduğundan emin olur. Bu durumda Otomasyon **Properties.Name** için benzersiz bir değer ayarlamak yeterlidir.
+Bu örneklerin her ikisi için de, aşağıdaki kod örneğini kullanarak gösterildiği gibi **ItemSource**için **ToString ()** yöntemini geçersiz kılmanız gerekir. Bu kod, bağlama kullanarak her bir veri bağlama listesi öğesi için benzersiz bir Otomasyon özelliği ayarlayamadığı için **AutomationProperties.Name** değerinin ayarlanmış ve benzersiz olduğundan emin olur. Bu durumda **Automation Properties.Name** için benzersiz bir değer ayarlanması yeterlidir.
 
 > [!NOTE]
-> Bu yaklaşımı kullanarak, liste öğesinin iç içeriği bağlama yoluyla Çalışan sınıfında bir dize olarak da ayarlanabilir. Örnekte gösterildiği gibi, her liste öğesinin içindeki düğme denetimine Çalışan Kimliği olan benzersiz bir otomasyon kimliği atanır.
+> Bu yaklaşımı kullanarak, liste öğesinin iç içeriği, bağlama yoluyla çalışan sınıfında bir dizeye de ayarlanabilir. Örnekte gösterildiği gibi, her liste öğesinin içindeki düğme denetimine, çalışan KIMLIĞI olan benzersiz bir Otomasyon kimliği atanır.
 
 ```csharp
 Employee[] employees = new Employee[]
@@ -123,7 +123,7 @@ public override string ToString()
 
 ## <a name="use-a-control-template"></a>Denetim şablonu kullanma
 
-Belirli bir türün her örneğinin kodda tanımlandığında benzersiz bir otomasyon özelliği elde edilebilsin diye bir denetim şablonu kullanabilirsiniz. Şablonu, **AutomationProperty'in** denetim örneğinde benzersiz bir tağa bağlanması nı sağlayacak şekilde oluşturun. Aşağıdaki XAML, bu bağlamayı bir denetim şablonuyla oluşturmak için bir yaklaşım gösterir:
+Belirli bir türün her örneğinin, kodda tanımlandığında benzersiz bir Otomasyon özelliği elde edebilmesi için bir denetim şablonu kullanabilirsiniz. **AutomationProperty** öğesinin denetim örneğindeki BENZERSIZ bir kimliğe bağlaması için şablonu oluşturun. Aşağıdaki XAML, bu bağlamayı bir denetim şablonuyla oluşturmak için bir yaklaşımı gösterir:
 
 ```xaml
 <Style x:Key="MyButton" TargetType="Button">
@@ -140,16 +140,16 @@ Belirli bir türün her örneğinin kodda tanımlandığında benzersiz bir otom
 </Style>
 ```
 
-Bu denetim şablonu kullanılarak bir düğmenin iki örneğini tanımladığınızda, otomasyon kimliği aşağıdaki XAML'de gösterildiği gibi şablondaki denetimler için benzersiz içerik dizesi olarak ayarlanır:
+Bu denetim şablonunu kullanarak bir düğmenin iki örneğini tanımladığınızda, aşağıdaki XAML 'de gösterildiği gibi, Otomasyon KIMLIĞI şablondaki denetimlerin benzersiz içerik dizesine ayarlanır:
 
 ```xaml
 <Button Content="Button1" Style="{StaticResource MyButton}" Width="140"/>
 <Button Content="Button2" Style="{StaticResource MyButton}" Width="140"/>
 ```
 
-### <a name="dynamic-controls"></a>Dinamik kontroller
+### <a name="dynamic-controls"></a>Dinamik denetimler
 
-Kodunuzdan dinamik olarak oluşturulan ve statik olarak veya XAML dosyalarındaki şablonlar aracılığıyla oluşturulmayan denetimleriniz varsa, denetim için **İçerik** veya **Ad** özelliklerini ayarlamanız gerekir. Bu eylem, her dinamik denetimin benzersiz bir otomasyon özelliğine sahip olmasını sağlar. Örneğin, bir liste öğesi seçtiğinizde görüntülenmesi gereken bir onay kutunuz varsa, burada gösterildiği gibi bu özellikleri ayarlayabilirsiniz:
+Kodunuzda dinamik olarak veya XAML dosyalarındaki şablonlar aracılığıyla oluşturulan denetimleriniz varsa, denetimin **içerik** veya **ad** özelliklerini ayarlamanız gerekir. Bu eylem, her dinamik denetimin benzersiz bir Otomasyon özelliğine sahip olduğundan emin olur. Örneğin, bir liste öğesini seçtiğinizde gösterilmesi gereken bir onay kutusu varsa, bu özellikleri burada gösterildiği gibi ayarlayabilirsiniz:
 
 ```csharp
 private void CreateCheckBox(string txt, StackPanel panel)
@@ -165,4 +165,4 @@ private void CreateCheckBox(string txt, StackPanel panel)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UWP uygulamalarını kodlanmış UI testleriyle test edin](../test/test-uwp-app-with-coded-ui-test.md)
+- [Kodlanmış UI Testleriyle UWP uygulamalarını test etme](../test/test-uwp-app-with-coded-ui-test.md)

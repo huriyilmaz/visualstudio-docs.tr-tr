@@ -1,5 +1,5 @@
 ---
-title: ÇözümcomReference Görevi | Microsoft Dokümanlar
+title: ResolveComReference görevi | Microsoft Docs
 ms.date: 07/25/2019
 ms.topic: reference
 f1_keywords:
@@ -18,71 +18,81 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fdc6c6ccd58bcc83cc37ff3a9f7888af837ed6e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b99e743cf5bc9e3e634a8738e30d17c8e5517191
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595208"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286186"
 ---
 # <a name="resolvecomreference-task"></a>ResolveComReference görevi
 
-Bir veya daha fazla tür kitaplık adlarının veya *.tlb* dosyalarının listesini alır ve bu tür kitaplıklarını diskteki konumlara giderir.
+Bir veya daha fazla tür kitaplığı adının veya *. tlb* dosyasının bir listesini alır ve bu tür kitaplıklarını disk üzerindeki konumlara çözümler.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `ResolveCOMReference` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `ResolveCOMReference` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`DelaySign`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer, `true`ortak anahtarı derlemeye yerleştirir. Eğer, `false`tam olarak montaj imzalar.|
-|`EnvironmentVariables`|İsteğe bağlı `String[]` parametre.<br /><br /> Eşit işaretlerle ayrılmış ortam değişkenleri dizilimi. Bu değişkenler yumurtlanan *tlbimp.exe* ve *aximp.exe'ye* normal ortam bloğuna ek olarak veya seçici olarak geçersiz kılınan değişkenlere iletilir...|
-|`ExecuteAsTool`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer, `true`gerekli sarıcı montajları oluşturmak için uygun hedef çerçeve out-of-proc *tlbimp.exe* ve *aximp.exe* çalışır. Bu parametre çoklu hedefleme sağlar.|
-|`IncludeVersionInInteropName`|İsteğe bağlı `Boolean` parametre.<br /><br /> Eğer `true`, typelib sürümü sarıcı adına eklenecektir. Varsayılan değer: `false`.|
-|`KeyContainer`|İsteğe bağlı `String` parametre.<br /><br /> Ortak/özel anahtar çifti tutan bir kapsayıcı belirtir.|
-|`KeyFile`|İsteğe bağlı `String` parametre.<br /><br /> Ortak/özel anahtar çifti içeren bir öğe belirtir.|
-|`NoClassMembers`|İsteğe bağlı `Boolean`parametre.|
-|`ResolvedAssemblyReferences`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Çözümlenmiş derleme başvurularını belirtir.|
-|`ResolvedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Bu göreve girdi olarak sağlanan tür kitaplıklarının fiziksel konumlarına karşılık gelen diskteki tam nitelikli dosyaları belirtir.|
-|`ResolvedModules`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]`parametre.|
-|`SdkToolsPath`|İsteğe bağlı <xref:System.String?displayProperty=fullName> parametre.<br /><br /> `ExecuteAsTool` Varsa, `true`bu parametre hedeflenen çerçeve sürümü için SDK araçları yoluna ayarlanmalıdır.|
-|`StateFile`|İsteğe bağlı `String` parametre.<br /><br /> COM bileşen zaman damgaları için önbellek dosyasını belirtir. Eğer mevcut değilse, her çalışma tüm sarmalayıcıları yeniler.|
-|`TargetFrameworkVersion`|İsteğe bağlı `String` parametre.<br /><br /> Proje hedef çerçeve sürümünü belirtir.<br /><br /> Varsayılan değer: `String.Empty`. bu da hedef çerçeveye dayalı bir başvuru için filtreleme olmadığı anlamına gelir.|
-|`TargetProcessorArchitecture`|İsteğe bağlı `String` parametre.<br /><br /> Tercih edilen hedef işlemci mimarisini belirtir. Çeviriden sonra *tlbimp.exe*/machine bayrağına geçti.<br /><br /> Parametre <xref:Microsoft.Build.Utilities.ProcessorArchitecture>değeri.|
-|`TypeLibFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Com başvuruları için tür kitaplığı dosya yolunu belirtir. Bu parametrede yer alan öğeler madde meta verileri içerebilir. Daha fazla bilgi için aşağıdaki [TypeLibFiles öğe meta verilerine](#typelibfiles-item-metadata) bakın.|
-|`TypeLibNames`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Çözümlemek için tür kitaplık adlarını belirtir. Bu parametrede yer alan öğelerin bazı madde meta verileri içermesi gerekir. Daha fazla bilgi için aşağıdaki [TypeLibNames öğesi meta verilerine](#typelibnames-item-metadata) bakın.|
-|`WrapperOutputDirectory`|İsteğe bağlı `String` parametre.<br /><br /> Oluşturulan interop derlemesinin yerleştirildiği diskteki konum. Bu öğe meta verileri belirtilmemişse, görev proje dosyasının bulunduğu dizinin mutlak yolunu kullanır.|
+|`DelaySign`|İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , ortak anahtarı derlemeye koyar. İse `false` , derlemeyi tamamen imzalar.|
+|`EnvironmentVariables`|İsteğe bağlı `String[]` parametre.<br /><br /> Ortam değişkenlerinin çiftler dizisi, eşittir işaretleriyle ayrılmıştır. Bu değişkenler oluşturulan *tlbimp.exe* geçirilir ve normal ortam bloğunu seçerek veya seçmeli olarak geçersiz kılan *aximp.exe* ...|
+|`ExecuteAsTool`|İsteğe bağlı `Boolean` parametre.<br /><br /> `true`, Gerekli sarmalayıcı derlemelerini oluşturmak için uygun hedef çerçevesinden *tlbimp.exe* ve *aximp.exe* çalışır. Bu parametre Çoklu hedefleme etkinleştirilir.|
+|`IncludeVersionInInteropName`|İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , TypeLib sürümü sarmalayıcı adına dahil edilir. Varsayılan değer: `false`.|
+|`KeyContainer`|İsteğe bağlı `String` parametre.<br /><br /> Ortak/özel anahtar çiftini tutan bir kapsayıcı belirtir.|
+|`KeyFile`|İsteğe bağlı `String` parametre.<br /><br /> Ortak/özel anahtar çifti içeren bir öğeyi belirtir.|
+|`NoClassMembers`|İsteğe bağlı `Boolean` parametre.|
+|`ResolvedAssemblyReferences`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Çözümlenen derleme başvurularını belirtir.|
+|`ResolvedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Bu göreve giriş olarak sunulan tür kitaplıklarının fiziksel konumlarına karşılık gelen diskte tam nitelikli dosyaları belirtir.|
+|`ResolvedModules`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.|
+|`SdkToolsPath`|İsteğe bağlı <xref:System.String?displayProperty=fullName> parametre.<br /><br /> `ExecuteAsTool`İse `true` , bu parametre hedeflenen Framework sürümü için SDK araçları yoluna ayarlanmalıdır.|
+|`StateFile`|İsteğe bağlı `String` parametre.<br /><br /> COM bileşeni zaman damgaları için önbellek dosyasını belirtir. Mevcut değilse, her çalıştırma sarmalayıcılarını yeniden üretmez.|
+|`TargetFrameworkVersion`|İsteğe bağlı `String` parametre.<br /><br /> Proje hedef Framework sürümünü belirtir.<br /><br /> Varsayılan değer: `String.Empty`. Bu, hedef çerçeveye dayalı bir başvuru için filtreleme olmadığı anlamına gelir.|
+|`TargetProcessorArchitecture`|İsteğe bağlı `String` parametre.<br /><br /> Tercih edilen hedef işlemci mimarisini belirtir. Çeviri sonrasında *tlbimp.exe*/MACHINE bayrağına geçildi.<br /><br /> Parametre değeri öğesinin bir üyesi olmalıdır <xref:Microsoft.Build.Utilities.ProcessorArchitecture> .|
+|`TypeLibFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> COM başvurularının tür kitaplığı dosya yolunu belirtir. Bu parametreye dahil edilen öğeler, öğe meta verileri içerebilir. Daha fazla bilgi için aşağıdaki [TypeLibFiles öğe meta verileri](#typelibfiles-item-metadata) bölümüne bakın.|
+|`TypeLibNames`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Çözülecek tür kitaplığı adlarını belirtir. Bu parametreye dahil edilen öğeler bazı öğe meta verileri içermelidir. Daha fazla bilgi için aşağıdaki [TypeLibNames öğesi metasection](#typelibnames-item-metadata) bölümüne bakın.|
+|`WrapperOutputDirectory`|İsteğe bağlı `String` parametre.<br /><br /> Oluşturulan birlikte çalışma derlemesinin yerleştirildiği diskteki konumu. Bu öğe meta verileri belirtilmemişse, görev, proje dosyasının bulunduğu dizinin mutlak yolunu kullanır.|
 
 ## <a name="typelibnames-item-metadata"></a>TypeLibNames öğe meta verileri
 
- Aşağıdaki tabloda `TypeLibNames` parametreye geçirilen maddeler için kullanılabilir madde meta verileri açıklanmaktadır.
+ Aşağıdaki tabloda, parametresine geçirilen öğeler için kullanılabilen öğe meta verileri açıklanmaktadır `TypeLibNames` .
 
-|Meta Veriler|Açıklama|
+|Meta veri|Description|
 |--------------|-----------------|
-|`GUID`|Gerekli madde meta verileri.<br /><br /> Tür kitaplığı için GUID. Bu öğe meta verileri belirtilmemişse, görev başarısız olur.|
-|`VersionMajor`|Gerekli madde meta verileri.<br /><br /> Tür kitaplığın ana sürümü. Bu öğe meta verileri belirtilmemişse, görev başarısız olur.|
-|`VersionMinor`|Gerekli madde meta verileri.<br /><br /> Tür kitaplığın küçük sürümü. Bu öğe meta verileri belirtilmemişse, görev başarısız olur.|
-|`EmbedInteropTypes`|İsteğe bağlı `Boolean` meta veriler.<br /><br />  Eğer, `true`bu başvurudan interop türlerini doğrudan bir interop DLL oluşturmak yerine derlemenize gömün.|
-|`LocaleIdentifier`|İsteğe bağlı madde meta verileri.<br /><br /> Tür kitaplığı için Yerel Tanımlayıcı (veya LCID). Bu, bir kullanıcı, bölge veya uygulama tarafından tercih edilen insan dilini tanımlayan 32 bitlik bir değer olarak belirtilir. Bu öğe meta verileri belirtilmemişse, görev "0" varsayılan yerel tanımlayıcı kullanır.|
-|`WrapperTool`|İsteğe bağlı madde meta verileri.<br /><br /> Bu tür kitaplığı için montaj sarıcı oluşturmak için kullanılan sarıcı aracını belirtir. Bu öğe meta verileri belirtilmemişse, görev "tlbimp" varsayılan sarıcı aracını kullanır. Typelibs mevcut, büyük/küçük harf duyarsız seçimler şunlardır:<br /><br /> -   `Primary`: COM bileşeni için zaten oluşturulmuş bir birincil interop montajını kullanmak istediğinizde bu sarıcı aracını kullanın. Bu sarıcı aracını kullandığınızda, görevin başarısız lığa neden olacağından sarmalayıcı çıktı dizini belirtmeyin.<br />-   `TLBImp`: COM bileşeni için bir interop montaj oluşturmak istediğinizde bu sarıcı aracını kullanın.<br />-   `AXImp`:ActiveX Denetimi için bir interop montajı oluşturmak istediğinizde bu sarıcı aracını kullanın.|
+|`GUID`|Gerekli öğe meta verileri.<br /><br /> Tür kitaplığı için GUID. Bu öğe meta verileri belirtilmemişse, görev başarısız olur.|
+|`VersionMajor`|Gerekli öğe meta verileri.<br /><br /> Tür kitaplığının ana sürümü. Bu öğe meta verileri belirtilmemişse, görev başarısız olur.|
+|`VersionMinor`|Gerekli öğe meta verileri.<br /><br /> Tür kitaplığının ikincil sürümü. Bu öğe meta verileri belirtilmemişse, görev başarısız olur.|
+|`EmbedInteropTypes`|İsteğe bağlı `Boolean` meta veriler.<br /><br />  İse `true` , birlikte çalışma BIR DLL oluşturmak yerine bu başvurudan doğrudan birlikte çalışma türlerini derlemeye ekleyin.|
+|`LocaleIdentifier`|İsteğe bağlı öğe meta verileri.<br /><br /> Tür kitaplığının yerel ayar tanımlayıcısı (veya LCıD). Bu, bir Kullanıcı, bölge veya uygulama tarafından tercih edilen insan dilini belirleyen 32 bitlik bir değer olarak belirtilir. Bu öğe meta verileri belirtilmemişse, görev "0" varsayılan yerel ayar tanıtıcısını kullanır.|
+|`WrapperTool`|İsteğe bağlı öğe meta verileri.<br /><br /> Bu tür kitaplığı için derleme sarmalayıcısı oluşturmak için kullanılan sarmalayıcı aracını belirtir. Bu öğe meta verileri belirtilmemişse, görev "Tlbimp" öğesinin varsayılan sarmalayıcı aracını kullanır. Mevcut, büyük/küçük harf duyarsız seçenekleri şunlardır:<br /><br /> -   `Primary`: COM bileşeni için önceden oluşturulmuş bir birincil birlikte çalışma derlemesini kullanmak istediğinizde bu sarmalayıcı aracını kullanın. Bu sarmalayıcı aracını kullandığınızda, bir sarmalayıcı çıkış dizini belirtmeyin çünkü bu, görevin başarısız olmasına neden olur.<br />-   `TLBImp`: COM bileşeni için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.<br />-   `AXImp`: Bir ActiveX denetimi için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.|
 
 ## <a name="typelibfiles-item-metadata"></a>TypeLibFiles öğe meta verileri
 
- Aşağıdaki tabloda `TypeLibFiles` parametreye geçirilen maddeler için kullanılabilir madde meta verileri açıklanmaktadır.
+ Aşağıdaki tabloda, parametresine geçirilen öğeler için kullanılabilen öğe meta verileri açıklanmaktadır `TypeLibFiles` .
 
-|Meta Veriler|Açıklama|
+|Meta veri|Description|
 |--------------|-----------------|
-|`EmbedInteropTypes`|İsteğe bağlı `Boolean`parametre.<br /><br />  Eğer, `true`bu başvurudan interop türlerini doğrudan bir interop DLL oluşturmak yerine derlemenize gömün.|
-|`WrapperTool`|İsteğe bağlı madde meta verileri.<br /><br /> Bu tür kitaplığı için montaj sarıcı oluşturmak için kullanılan sarıcı aracını belirtir. Bu öğe meta verileri belirtilmemişse, görev "tlbimp" varsayılan sarıcı aracını kullanır. Typelibs mevcut, büyük/küçük harf duyarsız seçimler şunlardır:<br /><br /> -   `Primary`: COM bileşeni için zaten oluşturulmuş bir birincil interop montajını kullanmak istediğinizde bu sarıcı aracını kullanın. Bu sarıcı aracını kullandığınızda, görevin başarısız lığa neden olacağından sarmalayıcı çıktı dizini belirtmeyin.<br />-   `TLBImp`: COM bileşeni için bir interop montaj oluşturmak istediğinizde bu sarıcı aracını kullanın.<br />-   `AXImp`: ActiveX Denetimi için bir interop montajı oluşturmak istediğinizde bu sarıcı aracını kullanın.|
+|`EmbedInteropTypes`|İsteğe bağlı `Boolean` parametre.<br /><br />  İse `true` , birlikte çalışma BIR DLL oluşturmak yerine bu başvurudan doğrudan birlikte çalışma türlerini derlemeye ekleyin.|
+|`WrapperTool`|İsteğe bağlı öğe meta verileri.<br /><br /> Bu tür kitaplığı için derleme sarmalayıcısı oluşturmak için kullanılan sarmalayıcı aracını belirtir. Bu öğe meta verileri belirtilmemişse, görev "Tlbimp" öğesinin varsayılan sarmalayıcı aracını kullanır. Mevcut, büyük/küçük harf duyarsız seçenekleri şunlardır:<br /><br /> -   `Primary`: COM bileşeni için önceden oluşturulmuş bir birincil birlikte çalışma derlemesini kullanmak istediğinizde bu sarmalayıcı aracını kullanın. Bu sarmalayıcı aracını kullandığınızda, bir sarmalayıcı çıkış dizini belirtmeyin çünkü bu, görevin başarısız olmasına neden olur.<br />-   `TLBImp`: COM bileşeni için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.<br />-   `AXImp`: Bir ActiveX denetimi için birlikte çalışma derlemesi oluşturmak istediğinizde bu sarmalayıcı aracını kullanın.|
 
 > [!NOTE]
-> Bir tür kitaplığını benzersiz olarak tanımlamak için ne kadar çok bilgi sağlarsanız, görevin diskteki doğru dosyaya çözüme kavuşturulması olasılığı da o kadar artar.
+> Bir tür kitaplığını benzersiz şekilde tanımlamak için sağladığınız daha fazla bilgi, görevin diskteki doğru dosyaya çözümlenme olasılığı artar.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yukarıda listelenen parametrelere ek olarak, bu görev <xref:Microsoft.Build.Utilities.Task> sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [Görev taban sınıfına](../msbuild/task-base-class.md)bakın.
+Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından parametreleri devralır <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [görev temel sınıfı](../msbuild/task-base-class.md).
 
-Bu görevin çalışması için COM DLL'nin makineye kaydedilmesi gerekmez.
+Bu görevin çalışması için COM DLL 'nin makinede kayıtlı olması gerekmez.
+
+## <a name="msb4803-error"></a>MSB4803 hatası
+
+CLI komutlarından görevi kullanan bir projeyi çalıştırmaya çalışırsanız, şu `ResolveCOMReference` `dotnet` hatayı alırsınız:
+
+```output
+MSB4803: The task "ResolveComReference" is not supported on the .NET Core version of MSBuild. Please use the .NET Framework version of MSBuild.
+```
+
+Bu görev, komut satırından komutunu çalıştırdığınızda kullanılan MSBuild 'in .NET Core sürümünde desteklenmez `dotnet build` . MSBuild 'in .NET Framework sürümünü kullandığından, Visual Studio Geliştirici Komut İstemi [MSBuild.exe](msbuild-command-line-reference.md) çağırarak projeyi oluşturmayı deneyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

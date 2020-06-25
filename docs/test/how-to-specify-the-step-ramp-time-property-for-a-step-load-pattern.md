@@ -1,76 +1,76 @@
 ---
-title: Yük testi için Adım Yük Deseni için Adım Rampası Süresi
+title: Yük testi için adım yükleme deseninin Adım Rampa Süresi
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load tests, load patterns
 ms.assetid: 4a69e857-f93b-4907-9a01-fd1b66291205
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a40f7ce4aacfdc03b5e05becbfc83439945f7e8a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5ae00c3d9d647eff6f9df448c1681ae1d6c54bcb
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75588921"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287330"
 ---
-# <a name="how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern"></a>Nasıl yapılı: Adım yükleme deseni için adım rampası zaman özelliğini belirtin
+# <a name="how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern"></a>Nasıl yapılır: adım yükleme deseninin Adım Rampa Süresi özelliğini belirtme
 
-**Yeni Yük Testi Sihirbazı**ile yük testinizi oluşturduktan sonra, test gereksinimlerinizi ve hedeflerinize ulaşmak için senaryo özelliklerini değiştirmek için Yük Testi Düzenleyicisi'ni kullanabilirsiniz. **Load Test Editor** Daha fazla bilgi için [Bkz. Walkthrough: Bir yük testi oluşturun ve çalıştırın.](../test/walkthrough-create-and-run-a-load-test.md)
+**Yeni Yük Testi Sihirbazı**yük testinizi oluşturduktan sonra, test ihtiyaçlarını ve hedeflerinizi karşılamak üzere senaryolar özelliklerini değiştirmek için **Yük Testi Düzenleyicisi** kullanabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: yük testi oluşturma ve çalıştırma](../test/walkthrough-create-and-run-a-load-test.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> Yük testi senaryo özelliklerinin ve açıklamalarının tam listesi için [bkz.](../test/load-test-scenario-properties.md)
+> Yük testi senaryosu özelliklerinin tam listesi ve açıklamaları için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
 
-**Step Rampası Saati** özelliği **Özellikler** penceresinde ayarlanır. Yük Testi Düzenleyicisi'nde **Load Test Editor**yük testi senaryo özelliklerini edin.
+**Adım Rampa Süresi** özelliği **Özellikler** penceresinde ayarlanır. **Yük Testi Düzenleyicisi**yük testi senaryosu özelliklerini düzenleyebilirsiniz.
 
-**Step Rampası Süresi** özelliği yalnızca bir adım yük deseni yle kullanılır. Daha fazla bilgi [için, sanal kullanıcı etkinliklerini modellemek için yük desenlerini düzenle'ye](../test/edit-load-patterns-to-model-virtual-user-activities.md)bakın.
+**Adım Rampa Süresi** özelliği yalnızca bir adım yük düzeniyle birlikte kullanılır. Daha fazla bilgi için bkz. [Sanal Kullanıcı etkinliklerini modellemek için yük düzenlerini düzenleme](../test/edit-load-patterns-to-model-virtual-user-activities.md).
 
-Kullanıcı yükü arttıkça performansın nasıl değiştiğini görebilmeniz için yük testi çalışırken sunucu veya sunuculardaki yükü artırmak için bir adım yük deseni kullanılır. Örneğin, kullanıcı yükü 2.000 kullanıcıya artarken sunucunuzun veya sunucularınızın nasıl performans gösterdiğini görmek için, aşağıdaki özelliklere sahip bir adım yük deseni kullanarak 10 saatlik bir yükleme testi çalıştırabilirsiniz:
+Bir adım yük şekli, yük testi çalışırken, kullanıcı yükü arttıkça performansın nasıl değişeceğini görebileceğiniz şekilde sunucu veya sunuculardaki yükü artırmak için kullanılır. Örneğin, kullanıcı yükü 2.000 kullanıcılara artarak sunucu veya sunucularınızın nasıl çalıştığını görmek için, aşağıdaki özelliklerle bir adım yük düzeniyle birlikte 10 saatlik bir yük testi çalıştırabilirsiniz:
 
-- İlk Kullanıcı Sayısı: 100
+- İlk Kullanıcı sayısı: 100
 
-- Maksimum Kullanıcı Sayısı: 2000
+- En fazla kullanıcı sayısı: 2000
 
-- Adım Süresi (saniye): 1800
+- Adım süresi (saniye): 1800
 
-- Adım Rampası Süresi (saniye): 20
+- Adım Rampa Süresi (saniye): 20
 
-- Adım Kullanıcı Sayısı: 100
+- Adım kullanıcı sayısı: 100
 
-Bu ayarlar, 100, 200, 300 ve 2.000 kullanıcıya kadar olan kullanıcı yüklerinden 30 dakika (1800 saniye) boyunca çalışan yük testine sahiptir.
+Bu ayarlar, 100, 200, 300, 2.000 kullanıcılara kadar olan Kullanıcı yüklerine 30 dakika (1800 saniye) boyunca çalışan yük testine sahiptir.
 
 > [!NOTE]
-> **Adım Rampası Süresi** özelliği, Yeni Yük Testi Sihirbazı'nda **New Load Test Wizard**seçilemeyen bu özelliklerden yalnızca biridir.
+> **Adım Rampa Süresi** özelliği, **Yeni Yük Testi Sihirbazı**seçim için kullanılamayan bu özelliklerden yalnızca biridir.
 
-**Step Ramp Time** özelliği, bir adımdan diğerine (örneğin 100'den 200 kullanıcıya) artışın hemen değil kademeli olmasını sağlar. Örnekte, kullanıcı yükü 20 saniyelik bir süre içinde 100 kullanıcıdan 200 kullanıcıya yükseltilse (saniyede 5 kullanıcı artışı).
+**Adım Rampa Süresi** özelliği bir adımdan bir sonrakine (örneğin, 100 ' den 200 ' e kadar) kadar artışın hemen yerine aşamalı olmasını sağlar. Örnekte, kullanıcı yükü 20 saniyelik bir süre (saniyede 5 Kullanıcı artışı) üzerinden 100 ' dan 200 kullanıcıya yükseltilir.
 
-## <a name="to-edit-the-step-ramp-time-property-for-a-step-load-pattern"></a>Adım yükleme deseni için adım rampası zaman özelliğini düzenlemek için
+## <a name="to-edit-the-step-ramp-time-property-for-a-step-load-pattern"></a>Adım yükleme deseninin Adım Rampa Süresi özelliğini düzenlemek için
 
 1. Bir yük testi açın.
 
      **Yük Testi Düzenleyicisi** görüntülenir. Yük testi ağacı görüntülenir.
 
-2. Yük testi ağaçları **Senaryolar** klasöründe, adım rampası süresini belirtmek istediğiniz senaryo düğümünü açın.
+2. Yük testi ağaçları **senaryoları** klasöründe, için Adım Rampa süresini belirtmek istediğiniz senaryo düğümünü açın.
 
-3. Adım **Yük Deseni** düğümünü seçin.
+3. **Adım yük deseninin** düğümünü seçin.
 
     > [!NOTE]
-    > Senaryo için yük deseni bir adım yük deseni olmalıdır. Değilse, yük deseni şu anda senaryoyla ilişkili olan yük deseni türünü görüntüler. Daha fazla bilgi [için, sanal kullanıcı etkinliklerini modellemek için yük desenlerini düzenle'ye](../test/edit-load-patterns-to-model-virtual-user-activities.md)bakın.
+    > Senaryonun yük deseninin bir adım yük düzeniyle olması gerekir. Değilse, yük modelinde Şu anda senaryoyla ilişkili olan yük deseninin türü görüntülenir. Daha fazla bilgi için bkz. [Sanal Kullanıcı etkinliklerini modellemek için yük düzenlerini düzenleme](../test/edit-load-patterns-to-model-virtual-user-activities.md).
 
-4. **Görünüm** menüsünde **Özellikler Penceresi'ni**seçin.
+4. **Görünüm** menüsünde **Özellikler penceresi**' ni seçin.
 
      Senaryonun kategorileri ve özellikleri **Özellikler** penceresinde görüntülenir.
 
-5. **Adım Kullanıcı Sayısı** özelliği tarafından belirtilen kullanıcıları kademeli olarak eklemek için her adımda alınan saniyeler için bir sayı girerek Step Ramp **Time** özelliğinin değerini ayarlayın.
+5. Adım **Kullanıcı sayısı** özelliği tarafından belirtilen kullanıcıları aşamalı olarak eklemek için her adımda alınan saniyeler için bir sayı girerek **Adım Rampa Süresi** özelliğinin değerini ayarlayın.
 
-6. Özelliği değiştirmeyi bitirdikten sonra **Dosya** menüsünde **Kaydet'i** seçin. Daha sonra yeni **Step RampA Süresi** değerini kullanarak yük testinizi çalıştırabilirsiniz.
+6. Özelliği değiştirmeyi bitirdikten sonra **Dosya** menüsünde **Kaydet** ' i seçin. Daha sonra yeni **Adım Rampa Süresi** değerini kullanarak yük testinizi çalıştırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını edin](../test/edit-load-test-scenarios.md)
+- [Yük testi senaryolarını Düzenle](../test/edit-load-test-scenarios.md)
 - [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md)
-- [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md)
-- [Sanal kullanıcı etkinliklerini modellemek için yük modellerini düzenleme](../test/edit-load-patterns-to-model-virtual-user-activities.md)
+- [Yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md)
+- [Sanal Kullanıcı etkinliklerini modellemek için yük düzenlerini düzenleme](../test/edit-load-patterns-to-model-virtual-user-activities.md)

@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Görselleştirici yüklemesi | Microsoft Docs'
-ms.date: 11/04/2016
+ms.date: 06/10/2020
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c79fd5522447378b879443eb8dccabfe7081af4f
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 99d8c0b0181286465ffe8321470d035961803a64
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183632"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286394"
 ---
 # <a name="how-to-install-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Yükleme
 Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Görselleştirici 'yı yüklemelisiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Görselleştirici yüklenmesi basit bir işlemdir.
@@ -53,6 +53,10 @@ Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Gö
     - `net2.0`çalışma zamanını çalıştıran debuggees için `.NET Framework` .
     - `netstandard2.0``netstandard 2.0`(veya) desteği olan bir çalışma zamanı kullanan debuggees için `.NET Framework v4.6.1+` `.NET Core 2.0+` .
     - `netcoreapp`çalışma zamanını çalıştıran debuggees için `.NET Core` . (destekler `.NET Core 2.0+` )
+
+   Bağımsız bir Görselleştirici oluşturmak istiyorsanız debugayıklanan taraf DLL gereklidir. Bu DLL, yöntemlerini uygulayabilen veri nesnesi için kod içerir <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> .
+
+   Hata ayıklanan tarafı kodu çok hedefliyorsanız, hata ayıklanan tarafı DLL 'nin en düşük desteklenen TFı klasörüne yerleştirilmesi gerekir.
 
 4. Hata ayıklama oturumunu yeniden başlatın.
 

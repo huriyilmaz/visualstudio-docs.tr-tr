@@ -1,5 +1,5 @@
 ---
-title: WriteLinesToFile Görev | Microsoft Dokümanlar
+title: WriteLinesToFile Görevi | Microsoft Docs
 ms.date: 09/20/2018
 ms.topic: reference
 f1_keywords:
@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b78ac2347a5143aeb532a4bcc294551430584b4a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 27673ba3691e53540bce2249700c4453cb56c166
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77630671"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286116"
 ---
 # <a name="writelinestofile-task"></a>WriteLinesToFile görevi
 
@@ -31,25 +31,25 @@ Belirtilen öğelerin yollarını belirtilen metin dosyasına yazar.
 
 ## <a name="task-parameters"></a>Görev parametreleri
 
- Aşağıdaki tabloda görevparametreleri `WriteLinestoFile` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `WriteLinestoFile` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`File`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Öğeleri yazmak için dosyayı belirtir.|
-|`Lines`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Dosyaya yazacak öğeleri belirtir.|
-|`Overwrite`|İsteğe bağlı `Boolean` parametre.<br /><br /> If, `true`görev dosyadaki varolan içeriğin üzerine yazar.|
-|`Encoding`|İsteğe bağlı `String` parametre.<br /><br /> Örneğin, "Unicode" adlı karakter kodlamasını seçer.  Ayrıca <xref:System.Text.Encoding>bakınız.|
-|`WriteOnlyWhenDifferent`|İsteğe bağlı `Boolean` parametre.<br /><br /> `true`Eğer , belirtilen hedef dosya, varsa, görev in ne yazılı olurdu karşılaştırmak için ilk okunur. Aynıysa, dosya diske yazılmadı ve zaman damgası korunur.|
+|`File`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Öğelerin yazılacağı dosyayı belirtir.|
+|`Lines`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Dosyaya yazılacak öğeleri belirtir. Varsayılan değer boş bir liste.|
+|`Overwrite`|İsteğe bağlı `Boolean` parametre.<br /><br /> İse `true` , görev dosyadaki varolan içeriğin üzerine yazar. `false` varsayılan değerdir.|
+|`Encoding`|İsteğe bağlı `String` parametre.<br /><br /> Karakter kodlamasını seçer, örneğin, "UNICODE". Varsayılan UTF-8 ' dir.  Ayrıca bkz <xref:System.Text.Encoding> ..|
+|`WriteOnlyWhenDifferent`|İsteğe bağlı `Boolean` parametre.<br /><br /> Varsa, `true` belirtilen hedef dosya varsa, görevin yazmasıyla kıyaslamak için ilk olarak okunacaktır. Özdeş ise, dosya diske yazılmaz ve zaman damgası korunacaktır. `false` varsayılan değerdir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- `Overwrite` Ise, `true`yeni bir dosya oluşturur, dosyaya içeriğini yazın ve sonra dosyayı kapatır. Hedef dosya zaten varsa, üzerine yazılır. `Overwrite` Ise, `false`dosya içeriği ekler, zaten yoksa hedef dosya oluşturma.
+ `Overwrite`İse, `true` Yeni bir dosya oluşturur, içeriği dosyaya yazın ve sonra dosyayı kapatır. Hedef dosya zaten varsa, üzerine yazılır. `Overwrite`İse, `false` içeriği dosyaya ekler, zaten mevcut değilse hedef dosyayı oluşturur.
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki örnek, `WriteLinesToFile` `MyItems` `MyTextFile` madde koleksiyonunda belirtilen dosyaya madde koleksiyonundaki öğelerin yollarını yazmak için görevi kullanır.
+ Aşağıdaki örnek, öğe koleksiyonundaki `WriteLinesToFile` öğelerin yollarını öğe `MyItems` koleksiyonu tarafından belirtilen dosyaya yazmak için görevini kullanır `MyTextFile` .
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -70,7 +70,7 @@ Belirtilen öğelerin yollarını belirtilen metin dosyasına yazar.
 </Project>
 ```
 
-Bu örnekte, birden çok satıriçeren bir metin dosyası yazmak için katışılmış yeni satırlı bir özellik kullanırız. Bir giriş `Lines` yeni satır karakterleri katıştırılmışsa, yeni satırlar çıktı dosyasına dahil edilir. Bu şekilde, çok satırlı özelliklere başvuruyapabilirsiniz.
+Bu örnekte, birden çok satır içeren bir metin dosyası yazmak için gömülü newlines ile bir özellik kullanıyoruz. İçindeki bir giriş yeni `Lines` satır karakterleri içeriyorsa, yeni satırlar çıktı dosyasına dahil edilir. Bu şekilde, çok satırlı özelliklere başvurabilirsiniz.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

@@ -1,5 +1,5 @@
 ---
-title: CombinePath Görevi | Microsoft Dokümanlar
+title: CombinePath görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,30 +16,56 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 533f87eba9032efa7dc60ac682bbe400cb640727
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f7e6a79198ad54d3432f30fe9b57b3133a94165e
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634441"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288968"
 ---
 # <a name="combinepath-task"></a>CombinePath görevi
 
-Belirtilen yolları tek bir yolda birleştirir.
+Belirtilen yolları tek bir yol olarak birleştirir.
 ## <a name="task-parameters"></a>Görev parametreleri
 
- Aşağıdaki [tabloda CombinePath görevinin](../msbuild/combinepath-task.md)parametreleri açıklanmaktadır.
+ Aşağıdaki tabloda [CombinePath görevinin](../msbuild/combinepath-task.md)parametreleri açıklanmaktadır.
 
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`BasePath`|Gerekli `String` parametre.<br /><br /> Diğer yollar ile birleştirmek için temel yol. Göreceli bir yol, mutlak yol veya boş olabilir.|
-|`Paths`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Birleştirilmiş yolu oluşturmak için BasePath ile birleşimecek tek tek yolların listesi. Yollar göreceli veya mutlak olabilir.|
-|`CombinedPaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Bu görev tarafından oluşturulan birleşik yol.|
+|`BasePath`|Gerekli `String` parametre.<br /><br /> Diğer yollarla birleştirilecek temel yol. Göreli yol, mutlak yol veya boş olabilir.|
+|`Paths`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Birleşik yolu oluşturmak için BasePath ile birleştirilecek bağımsız yolların listesi. Yollar göreli veya mutlak olabilir.|
+|`CombinedPaths`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Bu görev tarafından oluşturulan Birleşik yol.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
+
+ Aşağıdaki örnek, `CombinePath` `$(OutputDirectory)` ile birleştirilmiş bir kök yolu `$(PublishRoot)` `$(ReleaseDirectory)` ve bir alt klasör listesi birleştirerek özelliği oluşturmak için kullanarak bir çıktı klasörü yapısının nasıl oluşturulacağını gösterir `$(LangDirectories)` .
+
+ ```xml
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PublishRoot>C:\Site1\Release</PublishRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <LangDirectories Include="en-us\;fr-fr\"/>
+  </ItemGroup>
+
+  <Target Name="CreateOutputDirectories" AfterTargets="Build">
+    <CombinePath BasePath="$(PublishRoot)" Paths="@(LangDirectories)" >
+      <Output TaskParameter="CombinedPaths" ItemName="OutputDirectories"/>
+    </CombinePath>
+    <MakeDir Directories="@(OutputDirectories)" />
+  </Target>
+```
+
+`CombinePath`Bir liste olmasına izin veren tek özellik `Paths` , bu durumda çıktının de bir listesidir. Bu nedenle, `$(PublishRoot)` * \\ C:\site1*ise ve `$(ReleaseDirectory)` * \\ sürümüdür*ve `@(LangDirectories)` *en-US \; fr-fr \\ *ise, bu örnekler klasörleri oluşturur:
+
+- C:\Site1\Release\en-us\
+- C:\Site1\Release\fr-fr\
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

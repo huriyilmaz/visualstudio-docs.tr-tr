@@ -7,12 +7,12 @@ ms.assetid: 6866dfab-c4fa-428e-bb0d-7b202c81f770
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: İş ortaklarının müşterileri için Visual Studio abonelikleri yönetme hakkında bilgi edinin.
-ms.openlocfilehash: 7d62025c5e8198a11c013b4ba4adf32a3d09c2dc
-ms.sourcegitcommit: 1b7412f1a5b039b2b294c6001013f399ea7aa5bc
+ms.openlocfilehash: 5afe34b0a28e950225e18761d22854703f466f60
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82564218"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289033"
 ---
 # <a name="partners-managing-subscriptions-on-behalf-of-customers"></a>Müşteri adına abonelikleri yöneten iş ortakları
 Visual Studio [abonelikleri yönetim portalındaki](https://manage.visualstudio.com)abonelikleri yönetmek için birkaç adım iş ortağının izlenmesi gerekir. 
@@ -30,7 +30,7 @@ Bu, [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vkAG]
 
 İş ortaklarının yeni lisans eklemesi adımları:
-- https://manage.visualstudio.com adresinde oturum açın.
+- <https://manage.visualstudio.com> adresinde oturum açın.
 - Sözleşme açılan listesini seçin ve **yeni açık lisans**seçeneğinin bulunduğu en alta kaydırın.
 - Açılır panelde, anlaşmada bulunan Yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu işaretleyin ve ardından **Gönder**' e tıklayın.
 
@@ -52,7 +52,7 @@ Bu, yeni açık lisans siparişlerinin yerleştirilmesi için geçerlidir, ancak
 
 ## <a name="new-partners-visiting-the-visual-studio-subscriptions-administration-portal-directly"></a>Visual Studio abonelikleri yönetim portalını doğrudan ziyaret eden yeni iş ortakları
 Bu senaryo, zaten yeni açık lisans siparişleri yerleştirmiş ancak [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx) 'de kaydolmamış ve doğrudan [Visual Studio abonelikleri yönetim portalına](https://manage.visualstudio.com)gidebilen yeni iş ortakları için geçerlidir.  Şu adımları uygulayın:
-- Adresini https://manage.visualstudio.comziyaret edin.
+- Adresini ziyaret edin <https://manage.visualstudio.com> .
 - Tanınan bir Kullanıcı değilsiniz hatası alıyorsunuz.
 - **OLP Iş ortakları** kayıt seçeneğini belirleyin ve siparişte kullanılan yetkilendirme numarasını, lisans numarasını, müşteri e-posta adresini girin, onay kutusunu seçin ve **Gönder**' e tıklayın.
 

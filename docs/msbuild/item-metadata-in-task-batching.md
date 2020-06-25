@@ -1,5 +1,5 @@
 ---
-title: Görev Toplu İşleminde Madde Meta Verileri | Microsoft Dokümanlar
+title: Görev toplu Işleme içindeki öğe meta verileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,32 +13,32 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92613b96d5d85a959e3426df86168c7110b74fed
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6152b0e64286c3cadedfcafb0ac530616c4012a6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633661"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288994"
 ---
-# <a name="item-metadata-in-task-batching"></a>Görev toplu işlemede madde meta verileri
+# <a name="item-metadata-in-task-batching"></a>Görev toplu işlem içindeki öğe meta verileri
 
-MSBuild, madde meta verilerine dayalı olarak madde listelerini farklı kategorilere veya toplu işlerle bölme ve her toplu iş ile bir kez görev yürütme yeteneğine sahiptir. Hangi öğelerin hangi toplu işlemle geçirildiğini tam olarak anlamak kafa karıştırıcı olabilir. Bu konu, toplu iş içeren aşağıdaki yaygın senaryoları kapsar.
+MSBuild öğe listelerini, öğe meta verilerine göre farklı kategorilere veya toplu işlemlere bölebilir ve her toplu iş ile bir kez görev çalıştırabilir. Hangi toplu işte hangi öğelerin geçtiğini tam olarak anlamak kafa karıştırıcı olabilir. Bu konuda, toplu işleme içeren aşağıdaki yaygın senaryolar ele alınmaktadır.
 
-- Madde listesini toplu işlere bölme
+- Öğe listesini toplu işlemlere bölme
 
-- Birkaç madde listesini toplu işlere bölme
+- Birkaç öğe listesini toplu işlemlere bölme
 
-- Aynı anda tek bir öğeyi toplu işleme
+- Tek seferde bir öğe toplu işleme
 
-- Madde listelerini filtreleme
+- Öğe listelerini filtreleme
 
-MSBuild ile toplu iş hakkında daha fazla bilgi için [Toplu İşlem'e](../msbuild/msbuild-batching.md)bakın.
+MSBuild ile toplu işleme hakkında daha fazla bilgi için bkz. [toplu](../msbuild/msbuild-batching.md)işlem.
 
-## <a name="divide-an-item-list-into-batches"></a>Madde listesini toplu iş lere bölme
+## <a name="divide-an-item-list-into-batches"></a>Öğe listesini toplu işlemlere bölme
 
-Toplu İşlem, madde listesini madde meta verilerine göre farklı gruplara bölmenize ve toplu işlerden her birini ayrı ayrı bir göreve geçirmenize olanak tanır. Bu, uydu derlemeleri oluşturmak için yararlıdır.
+Toplu işlem, öğe listesini öğe meta verilerine göre farklı toplu işlemlere bölmenize ve toplu işlerin her birini ayrı bir göreve iletmenize olanak tanır. Bu, uydu derlemeleri oluşturmak için kullanışlıdır.
 
-Aşağıdaki örnek, madde meta verilerine dayalı bir madde listesini toplu işlere nasıl bölünür şekilde gösterir. `ExampColl` Madde listesi, madde meta verilerine `Number` göre üç toplu iş bölümüne ayrılır. `%(ExampColl.Number)`Öznitelikteki `Text` varlığı, MSBuild'e toplu işlemenin yapılması gerektiğini belirtir. `ExampColl` Madde listesi `Number` meta verilere göre üç toplu iş bölümüne ayrılır ve her toplu iş ayrı ayrı göreve geçirilir.
+Aşağıdaki örnek, öğe listesini öğe meta verileri temelinde toplu işlemlere nasıl böleceğini gösterir. `ExampColl`Öğe listesi, öğe meta verilerine dayalı olarak üç toplu iş olarak bölünür `Number` . Özniteliğinde varlığı, `%(ExampColl.Number)` `Text` toplu Işleme yapılacak MSBuild 'i bilgilendirir. `ExampColl`Öğe listesi meta verileri temel alan üç toplu `Number` işe bölünür ve her toplu işlem göreve ayrı olarak geçirilir.
 
 ```xml
 <Project
@@ -81,14 +81,14 @@ Aşağıdaki örnek, madde meta verilerine dayalı bir madde listesini toplu iş
 
 `Number: 3 -- Items in ExampColl: Item3;Item6`
 
-## <a name="divide-several-item-lists-into-batches"></a>Birkaç öğe listesini toplu olarak bölme
+## <a name="divide-several-item-lists-into-batches"></a>Birkaç öğe listesini toplu işlemlere Böl
 
-MSBuild, aynı meta verilere dayalı olarak birden çok madde listesini toplu olarak bölebilir. Bu, birden çok derleme oluşturmak için farklı madde listelerini toplu işlerle bölmeyi kolaylaştırır. Örneğin, *.cs* dosyalarının bir uygulama toplu iş ve montaj toplu olarak bölünmüş bir madde listesi ve bir uygulama toplu ve bir derleme toplu bölünmüş kaynak dosyaları madde listesi olabilir. Daha sonra bu madde listelerini tek bir göreve geçirmek ve hem uygulamayı hem de derlemeyi oluşturmak için toplu işlemi kullanabilirsiniz.
+MSBuild, birden çok öğe listesini aynı meta verileri temel alan toplu işlemlere bölebilir. Bu, birden çok derleme oluşturmak için farklı öğe listelerini toplu işlemlere bölmek kolaylaştırır. Örneğin, bir uygulama toplu işi ve bir derleme toplu işi içine bölünen *. cs* dosyalarından oluşan bir öğe listesi ve kaynak dosyalarının bir öğe listesi, bir uygulama toplu işlemine ve bir derleme toplu işinde ayrılabilir. Daha sonra bu öğe listelerini tek bir görevde geçirmek ve hem uygulamayı hem de derlemeyi derlemek için toplu işlem kullanabilirsiniz.
 
 > [!NOTE]
-> Bir göreve geçirilen madde listesi başvurulan meta verileri içeren öğe içermezse, bu madde listesindeki her öğe her toplu iş bölümüne aktarılır.
+> Bir göreve geçirilen bir öğe listesi, başvurulan meta verilere sahip hiçbir öğe içermiyorsa, bu öğe listesindeki her öğe her toplu işe geçirilir.
 
-Aşağıdaki örnek, madde meta verilerine göre birden çok madde listesini toplu işlere nasıl böleceklerini gösterir. Ve `ExampColl` `ExampColl2` madde listelerinin her biri, madde `Number` meta verilerine göre üç toplu iş bölümüne ayrılır. `%(Number)`Öznitelikteki `Text` varlığı, MSBuild'e toplu işlemenin yapılması gerektiğini belirtir. Ve `ExampColl` `ExampColl2` madde listeleri `Number` meta verilere göre üç toplu iş bölümüne ayrılır ve her toplu iş ayrı ayrı göreve geçirilir.
+Aşağıdaki örnek, birden çok öğe listesini öğe meta verileri temelinde toplu işlemlere nasıl böleceğini gösterir. `ExampColl`Ve `ExampColl2` öğe listeleri, her biri öğe meta verilerine göre üç toplu iş olarak bölünür `Number` . Özniteliğinde varlığı, `%(Number)` `Text` toplu Işleme yapılacak MSBuild 'i bilgilendirir. `ExampColl`Ve `ExampColl2` öğesi listeleri, meta verileri temel alan üç toplu işe bölünür `Number` ve her toplu işlem göreve ayrı olarak geçirilir.
 
 ```xml
 <Project
@@ -134,11 +134,11 @@ Aşağıdaki örnek, madde meta verilerine göre birden çok madde listesini top
 
 `Number: 3 -- Items in ExampColl: Item3 ExampColl2: Item6`
 
-## <a name="batch-one-item-at-a-time"></a>Aynı anda tek öğeyi toplu
+## <a name="batch-one-item-at-a-time"></a>Tek seferde bir öğe toplu işi
 
-Toplu oluşturma, oluşturulduktan sonra her öğeye atanan iyi bilinen öğe meta verilerinde de gerçekleştirilebilir. Bu, bir koleksiyondaki her öğenin toplu iş için kullanılacak bazı meta verileri olacağını garanti eder. `Identity` Meta veri değeri her öğe için benzersizdir ve madde listesindeki her öğeyi ayrı bir toplu iş bölümüne bölmek için yararlıdır. İyi bilinen öğe meta verilerinin tam listesi için, [bilinen öğe meta verilerine](../msbuild/msbuild-well-known-item-metadata.md)bakın.
+Toplu işlem, oluşturma sırasında her öğeye atanan iyi bilinen öğe meta verileri üzerinde de gerçekleştirilebilir. Bu, bir koleksiyondaki her öğenin toplu işlem için kullanılacak bazı meta verilere sahip olmasını güvence altına alır. `Identity`Meta veri değeri her öğe için benzersizdir ve bir öğe listesindeki her öğeyi ayrı bir toplu işe bölmek için yararlıdır. İyi bilinen öğe meta verilerinin tam bir listesi için bkz. [tanınmış öğe meta verileri](../msbuild/msbuild-well-known-item-metadata.md).
 
-Aşağıdaki örnek, her maddenin birer birer birer birer toplu olarak nasıl toplu olarak işledilebildiğini gösterir. Her `Identity` öğenin meta veri değeri benzersiz `ExampColl` olduğundan, madde listesi madde listesinin bir öğesini içeren her bir toplu iş parçası olmak üzere altı toplu iş bölümüne bölünür. `%(Identity)`Öznitelikteki `Text` varlığı, MSBuild'e toplu işlemenin yapılması gerektiğini belirtir.
+Aşağıdaki örnek bir öğe listesindeki her bir öğenin tek seferde nasıl toplu olarak kullanılacağını gösterir. `Identity`Her öğenin meta veri değeri benzersiz olduğundan, `ExampColl` öğe listesi altı toplu işe bölünür, her toplu işlem öğe listesinin bir öğesini içerir. Özniteliğinde varlığı, `%(Identity)` `Text` toplu Işleme yapılacak MSBuild 'i bilgilendirir.
 
 ```xml
 <Project
@@ -174,11 +174,11 @@ Identity: 'Item5' -- Items in ExampColl: Item5
 Identity: 'Item6' -- Items in ExampColl: Item6
 ```
 
-## <a name="filter-item-lists"></a>Madde listelerini filtreleme
+## <a name="filter-item-lists"></a>Öğe listelerini filtrele
 
-Toplu İşlem, bir göreve geçmeden önce madde listesindeki belirli öğeleri filtrelemek için kullanılabilir. Örneğin, `Extension` iyi bilinen öğe meta veri değeri ne filtreleme belirli bir uzantısı olan yalnızca dosyalarda bir görev çalıştırmak için izin verir.
+Toplu işleme, bir öğe listesinden bir göreve geçirmeden önce belirli öğeleri filtrelemek için kullanılabilir. Örneğin, `Extension` iyi bilinen öğe meta veri değeri filtrelenmesi, yalnızca belirli bir uzantıya sahip dosyalarda bir görevi çalıştırmanızı sağlar.
 
-Aşağıdaki örnek, madde listesini madde meta verilerine göre toplu işlere nasıl bölerek bir göreve geçirildiğinde bu toplu işlerden nasıl filtreleneceklerini gösterir. `ExampColl` Madde listesi, madde meta verilerine `Number` göre üç toplu iş bölümüne ayrılır. Görevin özniteliği, `Condition` yalnızca `Number` madde meta veri değerine sahip `2` toplu iş birliğin göreve geçirileceğini belirtir
+Aşağıdaki örnek, bir öğe listesinin öğe meta verilerine göre toplu işlemlere nasıl bölüneceği ve sonra bu toplu işlerin bir göreve geçirildiklerinde filtreleneceğini gösterir. `ExampColl`Öğe listesi, öğe meta verilerine dayalı olarak üç toplu iş olarak bölünür `Number` . `Condition`Görevin özniteliği, göreve yalnızca bir `Number` öğe meta veri değeri olan toplu işlerin geçirileceğini belirtir `2`
 
 ```xml
 <Project
@@ -225,8 +225,8 @@ Items in ExampColl: Item2;Item5
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İyi bilinen öğe meta verileri](../msbuild/msbuild-well-known-item-metadata.md)
-- [Öğe öğesi (MSBuild)](../msbuild/item-element-msbuild.md)
-- [ItemMetaveri öğesi (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)
-- [İşlem grubu oluşturma](../msbuild/msbuild-batching.md)
+- [Item öğesi (MSBuild)](../msbuild/item-element-msbuild.md)
+- [ItemMetadata öğesi (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)
+- [Toplu İşleme](../msbuild/msbuild-batching.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)

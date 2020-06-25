@@ -1,58 +1,58 @@
 ---
-title: Web performans testleri için Kaydedici Eklentisi Oluşturma
+title: Web performans testleri için Kaydedici eklentisi oluşturma
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Web performance tests, recorder plug-in
 ms.assetid: 6fe13be1-aeb5-4927-9bff-35950e194da9
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 5e32faa4525edc79da3d759d67ad2b5676f38fc2
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3f75114683a4f456d0514af20c1c201c373bd4b0
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589166"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288019"
 ---
-# <a name="how-to-create-a-recorder-plug-in"></a>Nasıl yapilir: Kaydedici eklentisi oluşturma
+# <a name="how-to-create-a-recorder-plug-in"></a>Nasıl yapılır: Kaydedici eklentisi oluşturma
 
-Kaydedilen <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> bir web performans testini değiştirmenize olanak tanır. Değişiklik, **Web Performans Test Kaydedici** araç çubuğunda **Durdur'u** seçtikten sonra ancak testin kaydedilip Web Performans Testi Düzenleyicisi'nde sunulmasından önce oluşur.
+, <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> Kayıtlı bir Web performans testini değiştirmenize izin verir. Değişiklik, **Web performans testi kaydedici** araç çubuğunda **Durdur** ' ı seçtikten sonra, test kaydedilmeden ve Web Performans Testi Düzenleyicisi sunulmadan önce oluşur.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Kaydedici eklentisi, dinamik parametreler üzerinde kendi özel bağıntınızı gerçekleştirmenizi sağlar. Yerleşik korelasyon işleviyle, web performans testleri tamamlandıktan sonra veya **Web Performans Testi Düzenleyicisi** araç çubuğunda **Dinamik Parametreleri Web Test Parametrelerine Yükselt'i** kullandığınızda web kaydındaki dinamik parametreleri algılar. Ancak, yerleşik algılama işlevselliği her zaman tüm dinamik parametreleri bulamaz. Örneğin, genellikle değerini 5 ila 30 dakika arasında değişen alır bir oturum kimliği bulamaz. Bu nedenle, korelasyon işlemini el ile gerçekleştirmeniz gerekir.
+Bir kaydedici eklentisi, dinamik parametrelerde kendi özel bağıntılarınızı gerçekleştirmenize olanak sağlar. Yerleşik bağıntı işlevselliğiyle, Web performans testleri tamamlandığında Web kaydındaki dinamik parametreleri veya **Web Performans Testi Düzenleyicisi** araç çubuğundaki **Web testi parametrelerini Yükselt** ' i kullanarak algılar. Ancak, yerleşik algılama işlevi tüm dinamik parametreleri her zaman bulamaz. Örneğin, genellikle değerini 5 ile 30 dakika arasında değiştiren bir oturum KIMLIĞI bulmaz. Bu nedenle, bağıntı işlemini el ile gerçekleştirmeniz gerekir.
 
-Kendi <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> özel eklentiniz için kod yazmanızı sağlar. Bu eklenti, web performans testi kaydedilmeden ve Web Performans Testi Düzenleyicisi'nde sunulmadan önce korelasyon yapabilir veya web performans testini birçok şekilde değiştirebilir. Bu nedenle, belirli bir dinamik değişkenin kayıtlarınızın çoğu için korelasyon olması gerektiğini belirlerseniz, işlemi otomatikleştirebilirsiniz.
+<xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin>Kendi özel eklentiniz için kod yazmanızı sağlar. Bu eklenti, bağıntı gerçekleştirebilir veya Web performans testini, kaydedilmeden ve Web Performans Testi Düzenleyicisi sunulmadan önce birçok şekilde değiştirebilir. Bu nedenle, belirli bir dinamik değişkenin kayıtlarınızın çok fazla olması gerektiğini belirlerseniz, işlemi otomatikleştirebilirsiniz.
 
-Kaydedici eklentisi kullanılabilir diğer bazı yolları çıkarma ve doğrulama kuralları eklemek için, bağlam parametreleri ekleme veya bir web performans testinde hareketlere yorum dönüştürme.
+Bir kaydedici eklentisinin kullanılabileceği bazı diğer yollar, ayıklama ve doğrulama kuralları eklemek, bağlam parametreleri eklemek veya açıklamaları bir Web performans testinde işlemlere dönüştürmek içindir.
 
-Aşağıdaki yordamlar, kaydedici eklentisi için temel kodun nasıl oluşturulup, eklentiyi nasıl dağıtılanın ve eklentiyi nasıl çalıştırıştırılacak açıklanır. Yordamları izleyen örnek kod, özel dinamik parametre korelasyon kaydedici eklentisi oluşturmak için Visual C# nasıl kullanılacağını gösterir.
+Aşağıdaki yordamlarda, kaydedici eklentisi için ilkel kodu oluşturma, eklentiyi dağıtma ve eklentiyi yürütme açıklanır. Yordamlardan sonraki örnek kod, özel bir dinamik parametre bağıntı Kaydedici eklentisi oluşturmak Için Visual C# ' nin nasıl kullanılacağını göstermektedir.
 
 ## <a name="create-a-recorder-plug-in"></a>Kaydedici eklentisi oluşturma
 
 ### <a name="to-create-a-recorder-plug-in"></a>Kaydedici eklentisi oluşturmak için
 
-1. Bir kaydedici eklentisi oluşturmak istediğiniz web performans testi ile web performansı ve yükleme testi projesi içeren bir çözüm açın.
+1. Web performans ve yük testi projesini içeren bir çözümü, kaydedici eklentisi oluşturmak istediğiniz Web performans testini kullanarak açın.
 
-2. Çözüme yeni bir **Sınıf Kitaplığı** projesi ekleyin.
+2. Çözüme yeni bir **sınıf kitaplığı** projesi ekleyin.
 
-3. **Çözüm Gezgini'nde,** yeni sınıf kitaplığı proje klasöründe, **Başvurular** klasörüne sağ tıklayın ve **Başvuru Ekle'yi**seçin.
+3. **Çözüm Gezgini**, yeni sınıf kitaplığı proje klasöründe, **Başvurular** klasörüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.
 
     > [!TIP]
-    > Yeni bir sınıf kitaplık proje klasörüne örnek **RecorderPlugins**olduğunu.
+    > Yeni bir sınıf kitaplığı proje klasörü örneği, **Recordereklentiler**.
 
      **Başvuru Ekle** iletişim kutusu görüntülenir.
 
-4. **.NET** sekmesini seçin.
+4. **.Net** sekmesini seçin.
 
-5. Aşağı kaydırın ve **Microsoft.VisualStudio.QualityTools.WebTestFramework** seçin ve sonra **Tamam**seçin.
+5. Aşağı kaydırın ve **Microsoft. VisualStudio. QualityTools. WebTestFramework** öğesini seçin ve ardından **Tamam**' ı seçin.
 
-     **Microsoft.VisualStudio.QualityTools.WebTestFramework** **Solution Explorer'daki** **Başvurular** klasörüne eklenir.
+     **Microsoft. VisualStudio. QualityTools. WebTestFramework** , **Çözüm Gezgini** **Başvurular** klasörüne eklenir.
 
-6. Kaydedici eklentinizin kodunu yazın. İlk olarak, türetilmiştir yeni bir <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin>ortak sınıf oluşturun.
+6. Kaydedici eklentiniz için kodu yazın. İlk olarak, öğesinden türetilen yeni bir ortak sınıf oluşturun <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin> .
 
-7. <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin.PostWebTestRecording*> Yöntemi geçersiz kılın.
+7. Yöntemini geçersiz kılın <xref:Microsoft.VisualStudio.TestTools.WebTesting.WebTestRecorderPlugin.PostWebTestRecording*> .
 
     ```csharp
     public class Class1 : WebTestRecorderPlugin
@@ -64,58 +64,58 @@ Aşağıdaki yordamlar, kaydedici eklentisi için temel kodun nasıl oluşturulu
         }
     ```
 
-     Olay bağımsız değişkenleri size çalışmanız gereken iki nesne verir: kaydedilen sonuç ve kaydedilen web performans testi. Bu, belirli değerleri ararken sonucu yinelemenize ve değişiklikler yapmak için web performans testinde aynı isteğe atlamanıza olanak sağlar. Bir bağlam parametresi eklemek veya URL'nin bölümlerini parametrelendirmek istiyorsanız, web performans testini de değiştirebilirsiniz.
+     Olay bağımsız değişkenleri, birlikte çalışmak için iki nesne verecektir: kayıtlı sonuç ve kayıtlı Web performans testi. Bu, belirli değerleri bulmak için sonuç boyunca yineleme yapmanızı sağlar ve sonra değişiklik yapmak için Web performans testinde aynı isteğe atlayın. Web performans testini de yalnızca bir bağlam parametresi eklemek veya URL 'nin parçalarını parametreleştirmek istediğinizde değiştirebilirsiniz.
 
     > [!NOTE]
-    > Web performans testini değiştirirseniz, özelliği de <xref:Microsoft.VisualStudio.TestTools.WebTesting.PostWebTestRecordingEventArgs.RecordedWebTestModified*> doğru ayarlamanız gerekir:`e.RecordedWebTestModified = true;`
+    > Web performans testini değiştirirseniz, <xref:Microsoft.VisualStudio.TestTools.WebTesting.PostWebTestRecordingEventArgs.RecordedWebTestModified*> özelliği de true olarak ayarlamanız gerekecektir:`e.RecordedWebTestModified = true;`
 
-8. Web kaydı gerçekleştikten sonra kaydedici eklentisinin çalıştırmasını istediğiniz koda göre daha fazla kod ekleyin. Örneğin, aşağıdaki örnekte gösterildiği gibi özel korelasyon işlemek için kod ekleyebilirsiniz. Ayrıca, yorumları hareketlere dönüştürme veya web performans testine doğrulama kuralları ekleme gibi şeyler için bir kaydedici eklentisi oluşturabilirsiniz.
+8. Web kaydı oluştuktan sonra kaydedici eklentisinin yürütmesini istediğiniz koda göre daha fazla kod ekleyin. Örneğin, aşağıdaki örnekte gösterildiği gibi özel bağıntıyı işleyecek bir kod ekleyebilirsiniz. Ayrıca, yorumları işlemlere dönüştürme veya Web başarım testine doğrulama kuralları ekleme gibi şeyler için bir kaydedici eklentisi de oluşturabilirsiniz.
 
-9. **Yapı** menüsünde, ** \<yapı sınıfı kitaplığı proje adını>** seçin.
+9. **Yapı** menüsünde, **Oluştur \<class library project name> **' u seçin.
 
-Ardından, Visual Studio'ya kaydolması için kaydedici eklentisini dağıtın.
+Sonra, Kaydedici eklentisini Visual Studio 'ya kaydolmaları için dağıtın.
 
 ### <a name="deploy-the-recorder-plug-in"></a>Kaydedici eklentisini dağıtma
 
-Kaydedici eklentisini derledikten sonra, ortaya çıkan DLL'yi iki konumdan birine yerleştirin:
+Kaydedici eklentisini derledikten sonra, sonuçta elde edilen DLL 'yi iki konumdan birine yerleştirin:
 
-- *%ProgramFiles(x86)%\Microsoft Visual\\Studio\\[sürüm] [edition]\Common7\IDE\PrivateAssemblies\WebTestPlugins*
+- *% ProgramFiles (x86)% \ Microsoft Visual Studio \\ [sürüm] \\ [Edition] \Common7\IDE\PrivateAssemblies\WebTestPlugins*
 
-- *%USERPROFILE%\Documents\Visual Studio [sürüm]\WebTestPlugins*
+- *%Userprofile%\, Studio [sürüm] \WebTestPlugins*
 
 > [!WARNING]
-> Kaydedici eklentisini iki konumdan birine kopyaladıktan sonra, kayıt cihazı eklentisinin kaydedilmesi için Visual Studio'yu yeniden başlatmanız gerekir.
+> Kaydedici eklentisini iki konumdan birine kopyaladıktan sonra, kaydedici eklentisinin kaydedilmesi için Visual Studio 'Yu yeniden başlatmanız gerekir.
 
-### <a name="execute-the-recorder-plug-in"></a>Kaydedici eklentisini çalıştırma
+### <a name="execute-the-recorder-plug-in"></a>Kaydedici eklentisini yürütme
 
-1. Yeni bir web performans testi oluşturun.
+1. Yeni bir Web performans testi oluşturun.
 
-     **WebTestRecordPlugins** iletişim kutusunu etkinleştirin görüntülenir.
+     **Enable WebTestRecordPlugins 'i** iletişim kutusu görüntülenir.
 
-2. Kaydedici eklentisi için onay kutusunu seçin ve **Tamam'ı**seçin.
+2. Kaydedici eklentisinin onay kutusunu seçin ve **Tamam**' ı seçin.
 
-     Web performans testi kaydı tamamladıktan sonra, yeni kaydedici eklentisi yürütülür.
+     Web performans testi kaydetmeyi tamamladıktan sonra yeni Kaydedici eklentisi yürütülür.
 
     > [!WARNING]
-    > Eklentinizi kullanan bir web performans testi veya yükleme testi çalıştırdığınızda aşağıdakilere benzer bir hata alabilirsiniz:
+    > Eklentiyi kullanan bir Web performans testi veya yük testi çalıştırdığınızda aşağıdakine benzer bir hata alabilirsiniz:
     >
-    > **İstek başarısız oldu: Eklenti> olayında \<özel durum:\<Dosya veya derleme ' "Eklenti adı".dll dosyası>, Sürüm=\<n.n.n>, Culture=neutral, PublicKeyToken=null' veya bağımlılıklarından birini yükleyemedi. Sistem belirtilen dosyayı bulamıyor.**
+    > **İstek başarısız oldu: olayda özel durum \<plug-in> : dosya veya derleme ' \<"Plug-in name".dll file> , sürüm = \<n.n.n.n> , kültür = neutral, PublicKeyToken = null ' veya bağımlılıklarından biri yüklenemedi. Sistem belirtilen dosyayı bulamıyor.**
     >
-    > Bunun nedeni, eklentilerinizden herhangi birinde kod değişiklikleri yapar ve yeni bir DLL sürümü **(Sürüm=0.0.0.0)** oluşturursanız, ancak eklenti hala orijinal eklenti sürümüne başvurur. Bu sorunu gidermek için aşağıdaki adımları izleyin:
+    > Bu, eklentilerinizin herhangi birine kod değişikliği yaptığınızda ve yeni bir DLL sürümü **(sürüm = 0.0.0.0)** oluşturuyorsanız, ancak eklentinin özgün eklenti sürümüne başvurmaya devam ediyorsa oluşur. Bu sorunu düzeltmek için aşağıdaki adımları izleyin:
     >
-    > 1. Web performansı ve yükleme testi projenizde, başvurularda bir uyarı görürsünüz. Başvuruyu çıkarın ve eklentiniz DLL'ye yeniden ekleyin.
-    > 2. Eklentiyi testinizden veya uygun konumdan çıkarın ve sonra geri ekleyin.
+    > 1. Web performansı ve yük testi projenizde, başvurularda bir uyarı görürsünüz. Başvuruyu eklenti DLL 'nize kaldırın ve yeniden ekleyin.
+    > 2. Testinizden veya uygun konumdan eklentiyi kaldırın ve ardından yeniden ekleyin.
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, özel dinamik parametre korelasyon gerçekleştirmek için özelleştirilmiş bir web performans test kaydedici eklentisi oluşturmak için nasıl gösterir.
+Bu örnek, özel dinamik parametre bağıntısını gerçekleştirmek için özelleştirilmiş bir Web başarım testi Kaydedicisi eklentisinin nasıl oluşturulacağını gösterir.
 
 > [!NOTE]
-> Örnek kodun tam bir listesi bu konunun alt kısmında yer alır.
+> Örnek kodun tüm listesi bu konunun en altında bulunur.
 
 ### <a name="iterate-through-the-result-to-find-first-page-with-reportsession"></a>ReportSession ile ilk sayfayı bulmak için sonucu yineleyin
 
-Kod örneğinin bu bölümü, kaydedilen her nesne üzerinden yinelenir ve Yanıt Gövdesi'ni ReportSession için arar.
+Kod örneğinin bu bölümü, kaydedilen her nesne boyunca yinelenir ve ReportSession için yanıt gövdesini arar.
 
 ```csharp
 foreach (WebTestResultUnit unit in e.RecordedWebTestResult.Children)
@@ -130,9 +130,9 @@ foreach (WebTestResultUnit unit in e.RecordedWebTestResult.Children)
              {
 ```
 
-### <a name="add-an-extraction-rule"></a>Çıkarma kuralı ekleme
+### <a name="add-an-extraction-rule"></a>Ayıklama kuralı ekle
 
-Bir yanıt bulunduğuna göre, bir çıkarma kuralı eklemeniz gerekir. Kod örneğinin bu bölümü <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRuleReference> sınıfı kullanarak çıkarma kuralını oluşturur ve sonra çıkarma kuralını eklemek için web performans testinde doğru isteği bulur. Her sonuç nesnesi, web performans testinden doğru isteği almak için kodda kullanılan bildirimsel WebTestItemId adında yeni bir özelliğe sahiptir.
+Artık bir yanıt bulunmuştur, bir ayıklama kuralı eklemeniz gerekir. Kod örneğinin bu bölümü, sınıfını kullanarak ayıklama kuralı oluşturur <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRuleReference> ve ardından, ayıklama kuralını eklemek için Web performans testinde doğru isteği bulur. Her sonuç nesnesinin, Web performans testinin doğru isteği almak için kodda kullanılan DeclarativeWebTestItemId adlı yeni bir özelliği eklenmiştir.
 
 ```csharp
 ExtractionRuleReference ruleReference = new ExtractionRuleReference();
@@ -154,9 +154,9 @@ ExtractionRuleReference ruleReference = new ExtractionRuleReference();
      }
 ```
 
-### <a name="replace-query-string-parameters"></a>Sorgu dize parametrelerini değiştirme
+### <a name="replace-query-string-parameters"></a>Sorgu dizesi parametrelerini değiştir
 
-Şimdi kod, ReportSession'ı ad olarak içeren tüm sorgu dize parametrelerini bulur ve kod örneğinin bu bölümünde gösterildiği gibi değeri {{SessionId}} olarak değiştirir:
+Artık kod, ReportSession adlı tüm sorgu dizesi parametrelerini ad olarak bulur ve değeri kod örneğinin bu bölümünde gösterildiği gibi {{SessionID}} olarak değiştirir:
 
 ```csharp
 WebTestRequest requestInWebTest = e.RecordedWebTest.GetItem(page.DeclarativeWebTestItemId) as WebTestRequest;

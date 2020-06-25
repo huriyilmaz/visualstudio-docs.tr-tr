@@ -1,90 +1,90 @@
 ---
-title: Yük testi için Senaryo Başlangıç Gecikmelerini Yapılandırma
+title: Yük testi için senaryo başlangıç gecikmelerini yapılandırma
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - load tests, scenarios, start delays
 ms.assetid: 2f634fba-8dfa-4c7a-a8b9-be867b78d16a
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: f962306462538717df694d3bc47719fe31b1e1fe
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0d425b457056e256c5c9ed927c99adf002b78dd9
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76111483"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288799"
 ---
 # <a name="configure-scenario-start-delays-in-load-tests"></a>Yük testlerinde senaryo başlangıç gecikmelerini yapılandırma
 
-Yük Testi Düzenleyicisi ve **Özellikler** penceresini kullanarak bir yük testinde senaryo başlamadan önce bir gecikme belirtin.
+Yük Testi Düzenleyicisi ve **Özellikler** penceresini kullanarak bir senaryo yük testinde başlamadan önce bir gecikme belirtin.
 
-Örneğin, başka bir senaryonun tükettiği öğeleri üretmeye başlamak için bir senaryoya ihtiyacınız **varsa, Gecikme Başlangıç Saati** özelliğini kullanmak isteyebilirsiniz. Üreten senaryonun bazı verileri doldurmasını sağlamak için tüketen senaryoyu geciktirebilirsiniz.
+Örneğin, başka bir senaryonun tükettiği öğeleri oluşturmaya başlamak için bir senaryoya ihtiyaç duyuyorsanız, **gecikme başlangıç zamanı** özelliğini kullanmak isteyebilirsiniz. Üretim senaryosunun bazı verileri doldurmasına olanak tanımak için tüketim senaryosunu erteleyebilirsiniz.
 
-Başka bir örnek, yalnızca günün belirli bir saatinde çalıştırılabilen bir senaryonuz olabilir. Yani, bunu simüle etmek için senaryonun başlangıcını geciktirmek istiyorsunuz.
+Başka bir örnek ise yalnızca günün belirli bir saatinde çalışan bir senaryonuz olabilir. Bu nedenle, bunun benzetimini yapmak için senaryonun başlangıcını geciktirmek isteyebilirsiniz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="specify-the-delay-start-time-of-a-scenario"></a>Senaryonun gecikme başlangıç saatini belirtin
+## <a name="specify-the-delay-start-time-of-a-scenario"></a>Bir senaryonun gecikme başlangıç saatini belirtin
 
-**Özellikler** penceresindeki **Gecikme Başlangıç Saati** özelliğini değiştirmek için Yük Testi Düzenleyicisi'ni kullanarak yük testinde senaryo başlamadan önce bir gecikme belirtebilirsiniz.
-
-> [!NOTE]
-> Yük testi senaryo özelliklerinin ve açıklamalarının tam listesi için [bkz.](../test/load-test-scenario-properties.md)
-
-**Gecikme Başlangıç Saati** özelliğini kullanmak isteyebileceğin bir örnek, başka bir senaryonun tükettiği öğeleri üretmeye başlamak için bir senaryoya ihtiyaç duyduğunuz durumdur. Üreten senaryonun bazı verileri doldurmasını sağlamak için tüketen senaryoyu geciktirebilirsiniz.
-
-Başka bir örnek, yalnızca günün belirli bir saatinde çalıştırılabilen bir senaryonuz olabilir. Bu nedenle, bunu simüle etmek için senaryonun başlangıcını geciktirmek istiyorsunuz.
+**Özellikler** penceresinde **gecikme başlangıç zamanı** özelliğini değiştirmek için Yük Testi Düzenleyicisi kullanarak bir yük testinde senaryonun başlangıcından önce bir gecikme belirtebilirsiniz.
 
 > [!NOTE]
-> Çalıştırma ayarları özelliklerinin ve açıklamalarının tam listesi [için, Yükle testi senaryo özelliklerine](../test/load-test-scenario-properties.md)bakın.
+> Yük testi senaryosu özelliklerinin tam listesi ve açıklamaları için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
 
-### <a name="to-specify-the-delay-start-time-for-a-scenario"></a>Bir senaryonun gecikme başlangıç saatini belirtmek için
+**Gecikme başlangıç zamanını** kullanmak isteyebileceğiniz bir örneğe örnek olarak, başka bir senaryonun tükettiği öğeleri oluşturmaya başlamak için bir senaryoya ihtiyacınız vardır. Üretim senaryosunun bazı verileri doldurmasına olanak tanımak için tüketim senaryosunu erteleyebilirsiniz.
+
+Başka bir örnek ise yalnızca belirli bir saatte çalışan bir senaryonuz olabilir. Bu nedenle, bunun benzetimini yapmak için senaryonun başlangıcını geciktirmek isteyebilirsiniz.
+
+> [!NOTE]
+> Çalışma ayarları özelliklerinin tam listesi ve açıklamaları için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
+
+### <a name="to-specify-the-delay-start-time-for-a-scenario"></a>Bir senaryo için gecikme başlangıç saatini belirtmek için
 
 1. Bir yük testi açın.
 
      Yük Testi Düzenleyicisi görüntülenir. Yük testi ağacı görüntülenir.
 
-2. Yükleme testi ağaçları **Senaryolar** klasöründe, gecikme başlangıç saatini belirtmek istediğiniz senaryo düğümünü seçin.
+2. Yük testi ağaçları **senaryolar** klasöründe, gecikme başlangıç zamanını belirtmek istediğiniz senaryo düğümünü seçin.
 
-3. **Görünüm** menüsünde **Özellikler Penceresi'ni**seçin.
+3. **Görünüm** menüsünde **Özellikler penceresi**' ni seçin.
 
      Senaryonun kategorileri ve özellikleri **Özellikler** penceresinde görüntülenir.
 
-4. **Gecikme Başlangıç Saati** özelliğinin metin kutusuna, yük testi çalıştırıldığında senaryoyu başlatmadan önce yükleme testi başladıktan sonra bekleme süresini gösteren bir zaman değeri yazın.
+4. **Gecikme başlangıç zamanı** özelliğinin metin kutusunda, yük testi çalıştırıldığında senaryoya başlamadan önce, yük testi başladıktan sonra beklenecek süreyi belirten bir zaman değeri yazın.
 
     > [!NOTE]
-    > Senaryo için **Isınma sırasında Devre Dışı Bırak** özelliğinin değeri **True**olarak ayarlanırsa, ısınma döneminden sonra Gecikme **Başlangıç Zamanı** özellikleri zaman değeri uygulanır. **Isınma sırasında Devre Dışı** Kaldır senaryosu özelliğini kullanarak Hangi senaryoların ısınmaya dahil edildiğini kontrol edebilirsiniz.
+    > Senaryo için **Warmup özelliği sırasında Disable** değeri **true**olarak ayarlanırsa, **gecikme başlangıç zamanı** özellikleri zaman değeri, ısınma süresinden sonra uygulanır. **Warmup senaryo özelliği sırasında devre dışı bırak** ' a tıklayarak hangi senaryoların sıcak bir şekilde ekleneceğini kontrol edebilirsiniz.
 
-5. Özelliği değiştirdikten sonra **Dosya** menüsünde **Kaydet'i** seçin. Daha sonra yeni **Gecikme Başlangıç Saati** değerini kullanarak yük testinizi çalıştırabilirsiniz.
+5. Özelliği değiştirdikten sonra **Dosya** menüsünde **Kaydet** ' i seçin. Daha sonra yeni **gecikme başlangıç saati** değerini kullanarak yük testinizi çalıştırabilirsiniz.
 
-## <a name="enable-and-disable-whether-a-scenario-runs-during-the-warm-up-period"></a>Isınma döneminde bir senaryonun çalışıp çalıştırmadığını etkinleştirme ve devre dışı
+## <a name="enable-and-disable-whether-a-scenario-runs-during-the-warm-up-period"></a>Bir senaryonun ısınma dönemi boyunca çalışıp çalışmadığını etkinleştirin ve devre dışı bırakın
 
-**Isınma Sırasında Devre Dışı Bırak** özelliği **Özellikler** penceresi kullanılarak ayarlanır. Düzenleme yük testi senaryo özellikleri Yük Testi Düzenleyicisi tarafından ayarlanır.
+**Warmup sırasında Disable** özelliği **Özellikler** penceresi kullanılarak ayarlanır. Yük testi senaryosu özelliklerini düzenleyerek Yük Testi Düzenleyicisi ayarlanır.
 
-**Isınma Sırasında Devre Dışı Devre özelliği,** **Gecikme Başlangıç Saati** özelliğinde belirtilen ısınma döneminde senaryonun çalışıp çalışmaması gerektiğini belirtmek için kullanılır. Daha fazla bilgi için önceki yordamı gözden [geçirin Bir senaryonun gecikme başlangıç saatini belirtin.](#specify-the-delay-start-time-of-a-scenario)
+**Warmup sırasında devre dışı bırak** özelliği, senaryonun **gecikme başlangıç zamanı** özelliğinde belirtilen Isınma döneminde çalıştırılıp çalıştırılmayacağını veya çalıştırılmayacağını belirtmek için kullanılır. Daha fazla bilgi için, [bir senaryonun gecikme başlangıç saatini belirten](#specify-the-delay-start-time-of-a-scenario)önceki yordamı gözden geçirin.
 
 > [!NOTE]
-> Çalıştırma ayarları özelliklerinin ve açıklamalarının tam listesi [için, Yükle testi senaryo özelliklerine](../test/load-test-scenario-properties.md)bakın.
+> Çalışma ayarları özelliklerinin ve açıklamalarının tamamı bir listesi için bkz. [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md).
 
-### <a name="to-enable-or-disable-the-warm-up-period-for-a-scenario"></a>Bir senaryo için ısınma süresini etkinleştirmek veya devre dışı kılabilir
+### <a name="to-enable-or-disable-the-warm-up-period-for-a-scenario"></a>Bir senaryonun ısınma dönemini etkinleştirmek veya devre dışı bırakmak için
 
 1. Bir yük testi açın.
 
      **Yük Testi Düzenleyicisi** görüntülenir. Yük testi ağacı görüntülenir.
 
-2. Yük testi ağaçları **Senaryolar** klasöründe, ısınma davranışını değiştirmek istediğiniz senaryo düğümünü seçin.
+2. Yük testi ağaçları **senaryolar** klasöründe, ısınma davranışını değiştirmek istediğiniz senaryo düğümünü seçin.
 
-3. **Görünüm** menüsünde **Özellikler Penceresi'ni**seçin.
+3. **Görünüm** menüsünde **Özellikler penceresi**' ni seçin.
 
      Senaryonun kategorileri ve özellikleri **Özellikler** penceresinde görüntülenir.
 
-     **Isınma Sırasında Devre Dışı Bırak** özelliğinde **True** veya False'u **seçin.**
+     **Warmup sırasında devre dışı bırak** özelliğinde, **true** veya **false değerini seçin.**
 
-4. Özelliği değiştirmeyi bitirdikten sonra **Dosya** menüsünde **Kaydet'i** seçin. Daha sonra ısınma sırasında yeni **Devre Dışı Kaldır** değerini kullanarak yük testinizi çalıştırabilirsiniz.
+4. Özelliği değiştirmeyi bitirdikten sonra **Dosya** menüsünde **Kaydet** ' i seçin. Daha sonra, **Warmup değeri sırasında yeni devre dışı bırak** 'ı kullanarak yük testinizi çalıştırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yük testi senaryolarını düzenleme](../test/edit-load-test-scenarios.md)
-- [Yük testleri için test aracılarını ve test denetleyicilerini yapılandırın](../test/configure-test-agents-and-controllers-for-load-tests.md)
-- [Yük testi senaryo özellikleri](../test/load-test-scenario-properties.md)
+- [Yük testi senaryolarını düzenleniyor](../test/edit-load-test-scenarios.md)
+- [Yük testleri için test aracılarını ve test denetleyicilerini yapılandırma](../test/configure-test-agents-and-controllers-for-load-tests.md)
+- [Yük testi senaryosu özellikleri](../test/load-test-scenario-properties.md)

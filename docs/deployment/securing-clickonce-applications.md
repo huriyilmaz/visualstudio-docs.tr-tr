@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24b8416508ee5800ab581a1a58cedee1e5725cab
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: d99cbf4aaa30e1afb95a98743c223edee94d98fe
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184451"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286326"
 ---
 # <a name="secure-clickonce-applications"></a>ClickOnce uygulamalarını koruma
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]uygulamalar, kodun korumalı kaynaklara ve işlemlere erişimi sınırlamaya yardımcı olmak üzere .NET Framework kod erişimi güvenlik kısıtlamalarına tabidir. Bu nedenle, uygulamalarınızı uygun şekilde yazmak için kod erişimi güvenliğinin etkilerini anlamanız önemlidir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Uygulamalarınız erişim için Internet ve Intranet gibi tam güven veya kısmi bölgeler kullanabilir.
@@ -50,7 +50,7 @@ ms.locfileid: "84184451"
  Kod erişimi güvenliği ve ClickOnce hakkında daha fazla bilgi için bkz. [ClickOnce uygulamaları Için kod erişimi güvenliği](../deployment/code-access-security-for-clickonce-applications.md).
 
 ## <a name="code-signing-certificates"></a>Kod imzalama sertifikaları
- Dağıtım kullanarak bir uygulamayı yayımlamak için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , ortak/özel anahtar çiftini kullanarak uygulama için uygulama ve dağıtım bildirimlerini imzalayabilirsiniz. Bir bildirimi imzalama araçları, **Proje Tasarımcısı**' nın **imzalama** sayfasında kullanılabilir. Daha fazla bilgi için bkz. [Imzalama sayfası, proje Tasarımcısı](../ide/reference/signing-page-project-designer.md). Alternatif olarak, Yayımlama Sihirbazı 'nı kullanarak, yayımlama işlemi sırasında bildirimleri bir anahtar dosyası ile imzalayabilirsiniz.
+ Dağıtım kullanarak bir uygulamayı yayımlamak için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , ortak/özel anahtar çiftini kullanarak uygulama için uygulama ve dağıtım bildirimlerini imzalayabilirsiniz. Bir bildirimi imzalama araçları, **Proje Tasarımcısı**' nın **imzalama** sayfasında kullanılabilir. Daha fazla bilgi için bkz. [Imzalama sayfası, proje Tasarımcısı](../ide/reference/signing-page-project-designer.md).
 
  Bildirimler imzalandıktan sonra, Authenticode imzasına bağlı yayımcı bilgisi uygulamanın güvenilir bir kaynaktan olduğunu kullanıcıya göstermek için izinler iletişim kutusunda gösterilir.
 
@@ -66,7 +66,7 @@ ms.locfileid: "84184451"
 
  `http://servername.adatum.com/WindowsApp1.application?username=joeuser`
 
- Varsayılan olarak, sorgu dizesi bağımsız değişkenleri devre dışıdır. Bunları etkinleştirmek için, özniteliğin `trustUrlParameters` uygulamanın dağıtım bildiriminde ayarlanması gerekir. Bu değer, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] MageUI. exe ' den ve öğesinden ayarlanabilir. Sorgu dizelerini geçirmeyi etkinleştirme hakkında ayrıntılı adımlar için bkz. [nasıl yapılır: sorgu dizesi bilgilerini bir çevrimiçi ClickOnce uygulamasında alma](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md).
+ Varsayılan olarak, sorgu dizesi bağımsız değişkenleri devre dışıdır. Bunları etkinleştirmek için, özniteliğin `trustUrlParameters` uygulamanın dağıtım bildiriminde ayarlanması gerekir. Bu değer, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] MageUI.exe 'den ve öğesinden ayarlanabilir. Sorgu dizelerini geçirmeyi etkinleştirme hakkında ayrıntılı adımlar için bkz. [nasıl yapılır: sorgu dizesi bilgilerini bir çevrimiçi ClickOnce uygulamasında alma](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md).
 
  Bir komut satırı veya veritabanı için olan sorgu dizesi aracılığıyla elde edilen bağımsız değişkenleri güvenli oldukları konusunda emin olmadan geçirmeyin. Güvenli olmayan bağımsız değişkenler rasgele komutları çalıştırarak uygulamanızı yönetmek için kötü amaçlı kullanıcılara izin verebilecek veritabanı ve komut satırı kaçış karakterlerini içeren dizelerdir.
 

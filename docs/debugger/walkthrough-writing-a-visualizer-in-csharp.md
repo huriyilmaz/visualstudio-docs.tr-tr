@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f188b40938c62ae8c3692f096217618f9cb7ff6
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: b3b8a67d1b01d7f3a3ada7b391423676b9294e8d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183749"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286329"
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>İzlenecek yol: C 'de Görselleştirici Yazma\#
 
@@ -47,7 +47,7 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
 2. Sınıf kitaplığı için, gibi uygun bir ad yazın `MyFirstVisualizer` ve ardından **Oluştur** veya **Tamam**' a tıklayın.
 
-   Sınıf kitaplığını oluşturduktan sonra, burada tanımlanan sınıfları kullanabilmeniz için Microsoft. VisualStudio. Debuggervisualiciler. DLL ' ye bir başvuru eklemeniz gerekir. Ancak başvuruyu eklemeden önce, bazı sınıfları anlamlı adlara sahip olacak şekilde yeniden adlandırmanız gerekir.
+   Sınıf kitaplığını oluşturduktan sonra, burada tanımlanan sınıfları kullanabilmeniz için Microsoft.VisualStudio.DebuggerVisualizers.DLL bir başvuru eklemeniz gerekir. Ancak başvuruyu eklemeden önce, bazı sınıfları anlamlı adlara sahip olacak şekilde yeniden adlandırmanız gerekir.
 
 ### <a name="to-rename-class1cs-and-add-microsoftvisualstudiodebuggervisualizers"></a>Class1.cs yeniden adlandırmak ve Microsoft. VisualStudio. Debuggervisualiciler eklemek için
 
@@ -60,7 +60,7 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
 3. **Çözüm Gezgini**' de, **Başvurular** ' a sağ tıklayın ve kısayol menüsünde **Başvuru Ekle** ' yi seçin.
 
-4. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **Araştır** ' ı seçin ve Microsoft. VisualStudio. debuggervisualiciler. dll dosyasını bulun.
+4. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **araştır** ' ı seçin ve Microsoft.VisualStudio.DebuggerVisualizers.DLL bulun.
 
     DLL 'yi, Visual Studio 'nun yükleme dizininin * \<Visual Studio Install Directory> \Common7\IDE\PublicAssemblies* alt dizininde bulabilirsiniz.
 
@@ -106,7 +106,7 @@ Görselleştirici oluşturmak için aşağıdaki görevleri izleyin.
 
 1. **Çözüm Gezgini**' de, **Başvurular** ' a sağ tıklayın ve kısayol menüsünde **Başvuru Ekle** ' yi seçin.
 
-2. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **Araştır**' ı seçin ve System. Windows. Forms. dll dosyasını bulun.
+2. **Başvuru Ekle** iletişim kutusunda, **Araştır** sekmesinde, **araştır**' ı seçin ve System.Windows.Forms.DLL bulun.
 
     DLL 'yi *C:\Windows\Microsoft.NET\Framework\v4.0.30319*içinde bulabilirsiniz.
 
@@ -187,7 +187,7 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
 1. **Çözüm Gezgini**' de, **MyTestConsole** ' a sağ tıklayın ve kısayol menüsünde **Başvuru Ekle** ' yi seçin.
 
-2. **Başvuru Ekle** iletişim kutusunda, sekme sekmesine, Microsoft. VisualStudio. Debuggervisualiciler. dll **' yi seçin** .
+2. **Başvuru Ekle** iletişim kutusunda, sekme sekmesine **gidip** Microsoft.VisualStudio.DebuggerVisualizers.DLL öğesini seçin.
 
 3. **Tamam**'a tıklayın.
 
@@ -235,6 +235,8 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 
    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Yalnızca test bandı aracılığıyla çağırmak yerine Görselleştiriciyi kullanmak istiyorsanız, onu yüklemelisiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md).
 
+::: moniker range="vs-2017"
+
 ## <a name="create-a-visualizer-using-the-visualizer-item-template"></a>Görselleştiricisi öğesi şablonunu kullanarak Görselleştirici oluşturma
 
 Şimdiye kadar, Bu anlatım el ile Görselleştirici oluşturmayı göstermiştir. Bu bir öğrenme alıştırması olarak gerçekleştirildi. Basit bir Görselleştirici nasıl çalıştığını bildiğinize göre, bir tane oluşturmak için daha kolay bir yol vardır: görselleştiricisi öğesi şablonu.
@@ -268,6 +270,7 @@ Hata ayıklayıcı tarafında bulunan kodda, özniteliği kullanılarak hata ay�
 5. **Ekle**'ye tıklayın.
 
    Bu, hepsi bu kadar. SecondVisualizer.cs dosyasına bakın ve şablonun sizin için eklediği kodu görüntüleyin. Devam edin ve kodu deneyin. Temel bilgileri öğrenmiş olduğunuza göre, size ait daha karmaşık ve yararlı Görselleştiriciler oluşturma yönteminiz vardır.
+::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

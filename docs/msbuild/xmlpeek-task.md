@@ -1,5 +1,5 @@
 ---
-title: XmlPeek Görev | Microsoft Dokümanlar
+title: XmlPeek görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,38 +16,36 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5a76bf033fa3eb85f0626478b965285f32e5fb6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 27b535af260d205c74ef87d0325680389d1dbe58
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79094660"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85286134"
 ---
 # <a name="xmlpeek-task"></a>XmlPeek görevi
 
-XML dosyasından XPath Sorgusu tarafından belirtilen değerleri döndürür.
+XML dosyasından XPath sorgusuyla belirtilen değerleri döndürür.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `XmlPeek` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `XmlPeek` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
 |`Namespaces`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgu önekleri için ad alanlarını belirtir.|
 |`Query`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgusunu belirtir.|
-|`Result`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Bu görev tarafından döndürülen sonuçları içerir.|
-|`XmlContent`|İsteğe bağlı `String` parametre.<br /><br /> XML girişini dize olarak belirtir.|
-|`XmlInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> XML girişini bir dosya yolu olarak belirtir.|
+|`Result`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Bu görev tarafından döndürülen sonuçları içerir.|
+|`XmlContent`|İsteğe bağlı `String` parametre.<br /><br /> XML girişini bir dize olarak belirtir.|
+|`XmlInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> XML girişini dosya yolu olarak belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev <xref:Microsoft.Build.Tasks.TaskExtension> sınıftan devralınan parametreleri de devralır. <xref:Microsoft.Build.Utilities.Task> Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
-
-
+ Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
-Burada okumak için örnek `settings.config` bir XML dosyası:
+Aşağıda, okunan örnek bir XML dosyası verilmiştir `settings.config` :
 
 ```xml
 <appSettings>
@@ -55,7 +53,7 @@ Burada okumak için örnek `settings.config` bir XML dosyası:
 </appSettings>
 ```
 
-Bu örnekte, okumak `value`istiyorsanız, aşağıdaki gibi kod kullanın:
+Bu örnekte, okumak istiyorsanız, `value` aşağıdaki gibi bir kod kullanın:
 
 ```xml
 <Target Name="BeforeBuild">
@@ -74,7 +72,49 @@ Bu örnekte, okumak `value`istiyorsanız, aşağıdaki gibi kod kullanın:
 </Target>
 ```
 
+XML ad alanları ile, `Namespaces` Aşağıdaki örnekte olduğu gibi parametresini kullanırsınız. Giriş XML dosyası ile `XMLFile1.xml` :
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<class AccessModifier='public' Name='test' xmlns:s='http://nsurl'>
+  <s:variable Type='String' Name='a'>This</s:variable>
+  <s:variable Type='String' Name='b'>is</s:variable>
+  <s:variable Type='String' Name='c'>Sparta!</s:variable>
+  <method AccessModifier='public static' Name='GetVal' />
+</class>
+```
+
+Ve aşağıdaki `Target` bir proje dosyasında tanımlanır:
+
+```xml
+  <Target Name="TestPeek" BeforeTargets="Build">
+    <!-- Find the Name attributes -->
+    <XmlPeek XmlInputPath="XMLFile1.xml"
+             Query="//s:variable/@Name"
+             Namespaces="&lt;Namespace Prefix='s' Uri='http://nsurl' /&gt;">
+      <Output TaskParameter="Result" ItemName="value1" />
+    </XmlPeek>
+    <Message Text="@(value1)"/>
+    <!-- Find 'variable' nodes (XPath query includes ".") -->
+    <XmlPeek XmlInputPath="XMLFile1.xml"
+             Query="//s:variable/."
+             Namespaces="&lt;Namespace Prefix='s' Uri='http://nsurl' /&gt;">
+      <Output TaskParameter="Result" ItemName="value2" />
+    </XmlPeek>
+    <Message Text="@(value2)"/>
+  </Target>
+```
+
+Çıktı, hedeften şunları içerir `TestPeek` :
+
+```output
+  TestPeek output:
+  a;b;c
+  <s:variable Type="String" Name="a" xmlns:s="http://nsurl">This</s:variable>;<s:variable Type="String" Name="b" xmlns:s="http://nsurl">is</s:variable>;<s:variable Type="String" Name="c" xmlns:s="http://nsurl">Sparta!</s:variable>
+```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)
+- [XPath sorgu söz dizimi](https://wikipedia.org/wiki/XPath)

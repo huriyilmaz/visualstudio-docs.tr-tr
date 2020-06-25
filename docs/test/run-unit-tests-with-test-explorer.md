@@ -2,7 +2,7 @@
 title: Test Gezgini ile birim testlerini çalıştırma ve hata ayıklama
 description: Visual Studio 'da test Gezgini ile testlerin nasıl çalıştırılacağını öğrenin. Bu konu, derleme sonrasında otomatik test çalıştırmalarını etkinleştirme, test sonuçlarını görüntüleme, test listesini gruplandırma ve filtreleme, çalma listeleri oluşturma, testleri hata ayıklama ve test kısayollarını kullanma konularını ele alır.
 ms.date: 07/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.unittesting.testexplorer.overview
 author: mikejo5000
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 429892e3022854cac157605117f955fd672f8997
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 6de463fbc941273bed9b949958b9463be6ea1fa3
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182930"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285640"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Test Gezgini ile birim testleri çalıştırma
 
@@ -55,7 +55,7 @@ Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, 
 ### <a name="run-tests"></a>Testleri çalıştırma
 
 ::: moniker range="vs-2017"
-Çözümdeki tüm testleri, bir gruptaki tüm testleri veya seçtiğiniz bir test kümesini çalıştırabilirsiniz. Aşağıdakilerden birini yapın:
+Çözümdeki tüm testleri, bir gruptaki tüm testleri veya seçtiğiniz bir test kümesini çalıştırabilirsiniz. Şunlardan birini yapın:
 
 - Bir Çözümdeki tüm testleri çalıştırmak için **Tümünü Çalıştır**' ı seçin.
 
@@ -68,7 +68,7 @@ Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, 
 **Test Gezgini** penceresinin en üstündeki **geçiş/başarısızlık çubuğu** , testler çalışırken hareketlendirilir. Test çalıştırmasının sonunda, herhangi bir test başarısız olursa tüm testler başarılı veya Red durumunda, **geçiş/başarısızlık çubuğu** yeşile dönüşür.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Çözümdeki tüm testleri, bir gruptaki tüm testleri veya seçtiğiniz bir test kümesini çalıştırabilirsiniz. Aşağıdakilerden birini yapın:
+Çözümdeki tüm testleri, bir gruptaki tüm testleri veya seçtiğiniz bir test kümesini çalıştırabilirsiniz. Şunlardan birini yapın:
 
 - Bir Çözümdeki tüm testleri çalıştırmak için **Tümünü Çalıştır** simgesini seçin.
 
@@ -81,7 +81,7 @@ Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, 
 
 ### <a name="run-tests-after-every-build"></a>Her derlemeden sonra Testleri Çalıştır
 ::: moniker range="vs-2017"
-|Düğme|Açıklama|
+|Düğme|Description|
 |-|-|
 |![Derlemeden sonra Çalıştır](../test/media/ute_runafterbuild_btn.png)|Her yerel derlemeden sonra birim testlerinizi çalıştırmak için standart menüdeki **Test** ' i seçin ve ardından **Test Gezgini** araç çubuğunda **derlemeden sonra Testleri Çalıştır** ' ı seçin.|
 
@@ -149,7 +149,7 @@ Hiyerarşi ve gruplama düzeylerini **tanımlayabilir ve sonra** tercih ettiğin
 ### <a name="test-explorer-groups"></a>Test Gezgini grupları
 
 ::: moniker range="vs-2017"
-|Grup|Açıklama|
+|Grup|Description|
 |-|-----------------|
 |**Süre**|Yürütme zamanına göre test grupları: **hızlı**, **Orta**ve **yavaş**.|
 |**Sonuç**|Testleri yürütme sonuçlarına göre gruplandırır: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
@@ -157,14 +157,14 @@ Hiyerarşi ve gruplama düzeylerini **tanımlayabilir ve sonra** tercih ettiğin
 |**Project**|Projeler adına göre test grupları.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-|Grup|Açıklama|
+|Grup|Description|
 |-|-----------------|
 |**Süre**|Testleri yürütme zamanına göre gruplandırır: **hızlı**, **Orta**ve **yavaş**.|
 |**Durum**|Testleri yürütme sonuçlarına göre gruplandırır: **başarısız testler**, **Atlanan testler**, **başarılı testler**, **çalıştırılmadı**|
 |**Hedef Çerçeve** | Testleri, projeleri hedeflerine göre gruplandırır |
 |**Ad Alanı**|Testleri içerilen ad alanına göre gruplandırır.|
 |**Project**|Testleri içeren proje tarafından gruplandırır.|
-|**Sınıfı**|Testleri içerilen sınıfa göre gruplandırır.|
+|**Sınıf**|Testleri içerilen sınıfa göre gruplandırır.|
 ::: moniker-end
 
 ### <a name="traits"></a>Lerdir
@@ -175,7 +175,7 @@ Bir nitelik genellikle kategori adı/değer çiftidir, ancak tek bir kategori de
 
 Yönetilen uygulamalar için Microsoft birim testi çerçevesinde, bir öznitelikte nitelik ad/değer çifti tanımlarsınız <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> . Test çerçevesi aşağıdaki önceden tanımlı nitelikleri de içerir:
 
-|Nitelik|Açıklama|
+|Nitelik|Description|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>|Sahip kategorisi, birim test çerçevesi tarafından tanımlanır ve sahibin dize değerini sağlamanızı gerektirir.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute>|Öncelik kategorisi, birim test çerçevesi tarafından tanımlanır ve öncelik için bir tamsayı değeri sağlamanızı gerektirir.|
@@ -264,7 +264,7 @@ Farklı ölçütlere göre filtrelemek için:
 > Aramalar büyük/küçük harfe duyarlıdır ve belirtilen dizeyle ölçüt değerinin herhangi bir bölümüyle eşleşir.
 
 ::: moniker range="vs-2017"
-|Leyicisini|Açıklama|
+|Leyicisini|Description|
 |-|-----------------|
 |**Nitelik**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
 |**Project**|Test projesi adlarını eşleşmeler için arar.|
@@ -275,7 +275,7 @@ Farklı ölçütlere göre filtrelemek için:
 |**Sonuç**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-|Leyicisini|Açıklama|
+|Leyicisini|Description|
 |-|-----------------|
 |**Durum**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 |**Lerdir**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
@@ -283,7 +283,7 @@ Farklı ölçütlere göre filtrelemek için:
 |**Project**|Test projesi adlarını eşleşmeler için arar.|
 |**Hedef Çerçeve**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 |**Ad Alanı**|Test ad alanlarını eşleşmeler için arar.|
-|**Sınıfı**|Test sınıfları adlarını eşleşmeler için arar.|
+|**Sınıf**|Test sınıfları adlarını eşleşmeler için arar.|
 ::: moniker-end
 
 Bir filtrenin sonuçlarının bir alt kümesini dışlamak için aşağıdaki sözdizimini kullanın:

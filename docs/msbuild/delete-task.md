@@ -1,6 +1,6 @@
 ---
-title: Görevi Sil | Microsoft Dokümanlar
-ms.date: 11/04/2016
+title: Görevi Sil | Microsoft Docs
+ms.date: 06/11/2020
 ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#Delete
@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c9effb00c613c5a61a5a8d4d89cbbe5b785601d8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: eddb9804378a4c32de9d1b68f952bc715f32ffd6
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77634285"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288916"
 ---
 # <a name="delete-task"></a>Silme görevi
 
@@ -31,39 +31,76 @@ Belirtilen dosyaları siler.
 
 ## <a name="parameters"></a>Parametreler
 
-Aşağıdaki tabloda görevparametreleri `Delete` açıklanmaktadır.
+Aşağıdaki tablo, görevin parametrelerini açıklar `Delete` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`DeletedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıktı parametresi.<br /><br /> Başarıyla silinen dosyaları belirtir.|
-|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Dosyaları silmek için belirtir.|
-|`TreatErrorsAsWarnings`|İsteğe bağlı `Boolean` parametre<br /><br /> Hatalar `true`uyarı olarak günlüğe kaydedilirse. Varsayılan değer: `false`.|
+|`DeletedFiles`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Başarıyla silinen dosyaları belirtir.|
+|`Files`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem>`[]` parametresi.<br /><br /> Silinecek dosyaları belirtir.|
+|`TreatErrorsAsWarnings`|İsteğe bağlı `Boolean` parametre<br /><br /> Varsa `true` , hatalar uyarı olarak günlüğe kaydedilir. Varsayılan değer: `false`.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Yukarıda listelenen parametrelere ek olarak, bu görev, kendisinden sınıftan <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> devralınan sınıftan parametreleri devralır. Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 > [!WARNING]
-> `Delete` Görev ile joker kullanırken dikkatli olun. Gibi ifadeler ile yanlış dosyaları kolayca `$(SomeProperty)\**\*.*` `$(SomeProperty)/**/*.*`silebilirsiniz veya , özellikle özellik boş bir dize değerlendirir, bu durumda `Files` parametre sürücünüzün köküne değerlendirmek ve silmek istediğinizden çok daha fazla silmek.
+> Görevle joker karakter kullanırken dikkatli olun `Delete` . Ya da gibi ifadelerle yanlış dosyaları kolayca silebilirsiniz, `$(SomeProperty)\**\*.*` özellikle de `$(SomeProperty)/**/*.*` özellik boş bir dize olarak değerlendirilir, bu durumda `Files` parametre sürücünüzün köküne değerlendirilemiyor ve silmek istediğiniz kadar fazlasını silebilirsiniz.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek *MyApp.pdb*dosyasını siler.
+Aşağıdaki örnek, hedefi oluştururken *MyApp. pdb* dosyasını siler `DeleteDebugSymbolFile` .
 
 ```xml
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
 
     <PropertyGroup>
-        <AppName>MyApp</AppName>
+        <AppName>ConsoleApp1</AppName>
     </PropertyGroup>
 
-    <Target Name="DeleteFiles">
-        <Delete Files="$(AppName).pdb" />
+    <Target Name="DeleteDebugSymbolFile">
+        <Message Text="Deleting $(OutDir)$(AppName).pdb"/>
+        <Delete Files="$(OutDir)$(AppName).pdb" />
     </Target>
+  
 </Project>
+
 ```
+
+Silinen dosyaları izlemeniz gerekiyorsa, `TaskParameter` `DeletedFiles` öğe adı ile olarak öğesini aşağıdaki gibi ayarlayın:
+
+```xml
+      <Target Name="DeleteDebugSymbolFile">
+        <Delete Files="$(OutDir)$(AppName).pdb" >
+              <Output TaskParameter="DeletedFiles" ItemName="DeletedList"/>
+        </Delete>
+        <Message Text="Deleted files: '@(DeletedList)'"/>
+    </Target>
+```
+
+Görevde doğrudan joker karakter kullanmak yerine `Delete` , silinecek bir dosya oluşturun `ItemGroup` ve `Delete` Bu görevi çalıştırın. Ancak dikkatlice yerleştirdiğinizden emin olun `ItemGroup` . Bir `ItemGroup` proje dosyasına en üst düzeye yerleştirirseniz, derleme başlamadan önce, derleme işleminin bir parçası olarak oluşturulmuş herhangi bir dosya dahil değildir. Bu nedenle, `ItemGroup` bir hedef için göreve yakın bir şekilde silinecek öğelerin listesini oluşturan öğesini koyun `Delete` . Ayrıca, özelliğin boş olmadığını denetlemek için bir koşul belirtebilir ve bu sayede, sürücünün kökünde başlayan bir yol ile bir öğe listesi oluşturmayacağız.
+
+`Delete`Görev, dosyaları silmeye yöneliktir. Bir dizini silmek istiyorsanız [RemoveDir](removedir-task.md)öğesini kullanın.
+
+`Delete`Görev salt okunurdur dosyaları silmeye yönelik bir seçenek sağlamaz. Salt okuma dosyalarını silmek için, bu `Exec` görevi, `del` salt okuma dosyalarını silmeyi etkinleştirmek üzere uygun seçenekle komutu veya eşdeğerini çalıştırmak için kullanabilirsiniz. Komut satırında bir uzunluk sınırlaması olduğundan ve bu örnekte olduğu gibi boşluklar içeren dosya adlarını işlediğinizden emin olmak için, giriş öğesi listesinin uzunluğuna dikkat etmeniz gerekir:
+
+```xml
+<Target Name="DeleteReadOnly">
+  <ItemGroup>
+    <FileToDelete Include="read only file.txt"/>
+  </ItemGroup>
+  <Exec Command="del /F /Q &quot;@(FileToDelete)&quot;"/>
+</Target>
+```
+
+Genel olarak, derleme betikleri yazarken, silmenin bir işlemin mantıksal olarak bir parçası olup olmadığını göz önünde bulundurun `Clean` . Bazı dosyaları normal bir işlemin bir parçası olarak temizlenecek şekilde ayarlamanız gerekiyorsa `Clean` , bunları `@(FileWrites)` listeye ekleyebilirsiniz ve bunlar bir sonraki adımda silinir `Clean` . Daha fazla özel işleme gerekliyse, bir hedef tanımlayın ve özniteliği `BeforeTargets="Clean"` ya da `AfterTargets="Clean"` ya da hedeflerinin özel sürümünüzü tanımlayarak çalıştırmak için belirtin `BeforeClean` `AfterClean` . Bkz. [yapınızı özelleştirme](customize-your-build.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [RemoveDir Görevi](removedir-task.md)
 - [Görevler](../msbuild/msbuild-tasks.md)
 - [Görev başvurusu](../msbuild/msbuild-task-reference.md)

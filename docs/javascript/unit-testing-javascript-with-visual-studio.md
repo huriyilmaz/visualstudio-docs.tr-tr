@@ -1,8 +1,8 @@
 ---
 title: JavaScript ve TypeScript birim testi
-description: Visual Studio, Visual Studio için Node.js Araçları kullanarak JavaScript ve TypeScript kodu desteği sağlar
+description: Visual Studio, Visual Studio için Node.js araçları kullanılarak JavaScript ve TypeScript kodu desteği sağlar
 ms.date: 06/06/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
@@ -11,23 +11,23 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 4e3e0b1c1579614454580d2f5446b31c718d7f35
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: acac3eb306d12ff6976e19ae5dc1ad772691094c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183112"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289007"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Visual Studio 'da JavaScript ve TypeScript ile birim testi
 
-Visual Studio Için Node. js Araçları, bir komut istemine geçiş yapmanıza gerek kalmadan daha popüler JavaScript çerçevelerinden bazılarını kullanarak birim testleri yazmanızı ve çalıştırmanızı sağlar.
+Visual Studio Için Node.js araçları, bir komut istemine geçiş yapmanıza gerek kalmadan daha popüler JavaScript çerçevelerinden bazılarını kullanarak birim testleri yazmanızı ve çalıştırmanızı sağlar.
 
 Desteklenen çerçeveler şunlardır:
 * Mocha ([mochajs.org](https://mochajs.org/))
 * Jasmine ([Jasmine.GitHub.io](https://jasmine.github.io/))
 * Bant ([GitHub.com/substack/Tape](https://github.com/substack/tape))
 * Jest ([jestjs.io](https://jestjs.io/))
-* Çalıştırıcısı dışarı aktar (Bu Framework Visual Studio için Node.js Araçları özeldir)
+* Çalıştırıcısı dışarı aktar (Bu Framework, Visual Studio için Node.js araçlarına özeldir)
 
 En sevdiğiniz çerçeve desteklenmiyorsa, destek ekleme hakkında bilgi için bkz. [birim test çerçevesi için destek ekleme](#addingFramework) .
 
@@ -72,7 +72,7 @@ Test Gezgini 'ni açtıktan sonra ( **Test**  >  **Windows**  >  **Test Gezgini*
 ![Test Gezgini](../javascript/media/UnitTestsDiscoveryMocha.png)
 
 > [!NOTE]
-> `outdir` `outfile` Test Gezgini, TypeScript dosyalarında birim testlerinizi bulamayacağından *tsconfig. JSON*içinde or seçeneğini kullanmayın.
+> `outdir` `outfile` Test Gezgini, TypeScript dosyalarında birim testlerinizi bulamayacağından, *tsconfig.jsüzerinde*veya seçeneğini kullanmayın.
 
 ## <a name="run-tests"></a>Testleri çalıştırma
 
@@ -125,7 +125,7 @@ Test execution time: 1.5731 Seconds
 ```
 
 > [!NOTE]
-> *VSTest. Console. exe* ' nin bulunamadığını belirten bir hata alırsanız, normal bir komut istemi değil Geliştirici komut istemi açtığınızdan emin olun.
+> *vstest.console.exe* bulunamadığını belirten bir hata alırsanız, normal bir komut istemi değil Geliştirici komut istemi açtığınızdan emin olun.
 
 ## <a name="add-support-for-a-unit-test-framework"></a><a name="addingFramework"></a>Birim test çerçevesi için destek ekleme
 
@@ -145,7 +145,7 @@ Ve uygulamalarına yönelik iyi bir örnek için `find_tests` `run_tests` , Içi
 Kullanılabilir test çerçevelerini bulma işlemi Visual Studio başlangıcında oluşur. Visual Studio çalışırken bir çerçeve eklenirse, Framework 'ü algılamak için Visual Studio 'Yu yeniden başlatın. Ancak uygulamada değişiklik yaparken yeniden başlatmanız gerekmez.
 
 ## <a name="unit-tests-in-other-project-types"></a>Diğer proje türlerinde birim testleri
-Yalnızca Node. js projelerinizdeki birim testlerini yazmak sınırlı değildir. TestFramework ve TestRoot özelliklerini herhangi bir C# veya Visual Basic projesine eklediğinizde, bu testler numaralandırılır ve test Gezgini penceresini kullanarak bunları çalıştırabilirsiniz.
+Yalnızca Node.js projelerinizde birim testlerini yazmak sınırlı değildir. TestFramework ve TestRoot özelliklerini herhangi bir C# veya Visual Basic projesine eklediğinizde, bu testler numaralandırılır ve test Gezgini penceresini kullanarak bunları çalıştırabilirsiniz.
 
 Bunu etkinleştirmek için Çözüm Gezgini proje düğümüne sağ tıklayın, **Projeyi Kaldır**' ı seçin ve ardından **projeyi Düzenle**' yi seçin. Ardından proje dosyasında, bir özellik grubuna aşağıdaki iki öğeyi ekleyin.
 

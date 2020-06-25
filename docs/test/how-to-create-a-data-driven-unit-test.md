@@ -1,7 +1,7 @@
 ---
-title: Veri Odaklı Birim Testleri Oluşturma
+title: Veri tabanlı birim testleri oluşturma
 ms.date: 05/08/2019
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.test.testresults.unittest.datadriven
 - vs.test.testresults.unittest.datadriven.failure
@@ -14,42 +14,42 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: f50dad637d9efa2db347ff9f1b4828abf8c733af
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 936c6b2ee9e05d059c09c2aa074829b35b6ca5fd
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589194"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287993"
 ---
-# <a name="how-to-create-a-data-driven-unit-test"></a>Nasıl kullanılır: Veri tabanlı birim testi oluşturma
+# <a name="how-to-create-a-data-driven-unit-test"></a>Nasıl yapılır: veri temelli birim testi oluşturma
 
-Yönetilen kod için Microsoft birim test çerçevesini kullanarak bir veri kaynağından değerleri almak için bir birim test yöntemi ayarlayabilirsiniz. Yöntem, veri kaynağındaki her satır için art arda çalıştırılır ve bu da tek bir yöntem kullanarak çeşitli girdilerin test ini kolaylaştırır.
+Yönetilen kod için Microsoft birim testi çerçevesini, bir veri kaynağından değerleri almak üzere bir birim testi yöntemi ayarlamak için kullanabilirsiniz. Yöntemi, veri kaynağındaki her satır için oldukça çalışır ve bu da tek bir yöntem kullanarak çeşitli girişleri test etmelerini kolaylaştırır.
 
-Veri tabanlı birim testi oluşturmak aşağıdaki adımları içerir:
+Veri odaklı birim testi oluşturmak aşağıdaki adımları içerir:
 
 1. Test yönteminde kullandığınız değerleri içeren bir veri kaynağı oluşturun. Veri kaynağı, testi çalıştıran makinede kayıtlı herhangi bir tür olabilir.
 
-2. Test sınıfına özel <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> `TestContext` bir alan ve bir kamu malı ekleyin.
+2. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext>Test sınıfına bir Private alanı ve Public `TestContext` özelliği ekleyin.
 
-3. Birim test yöntemi oluşturun <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> ve buna bir öznitelik ekleyin.
+3. Bir birim testi yöntemi oluşturun ve buna bir <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> öznitelik ekleyin.
 
-4. Bir <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A> testte kullandığınız değerleri almak için dizinleyici özelliğini kullanın.
+4. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A>Bir testte kullandığınız değerleri almak için Indexer özelliğini kullanın.
 
-## <a name="the-method-under-test"></a>Test altındaki yöntem
+## <a name="the-method-under-test"></a>Test edilen yöntem
 
-Örnek olarak, şunları varsayalım:
+Örnek olarak, şunları olduğunu varsayalım:
 
-1. Farklı hesap `MyBank` türleri için hareketleri kabul eden ve işleyen bir çözüm.
+1. `MyBank`Farklı türdeki hesapların işlemlerini kabul eden ve işleyen adlı bir çözüm.
 
-2. Hesapların hareketlerini `MyBank` `BankDb` yöneten bir proje.
+2. `MyBank`Çağrılan `BankDb` , hesapların işlemlerini yöneten bir proje.
 
-3. Herhangi bir `Maths` işlemin `BankDb` banka için avantajlı olmasını sağlamak için matematiksel işlevleri gerçekleştiren projede çağrılan bir sınıf.
+3. `Maths` `BankDb` Herhangi bir işlemin bankaya avantajlı olduğundan emin olmak için matematik işlevlerini gerçekleştiren projede adlı bir sınıf.
 
-4. Bileşenin davranışını `BankDbTests` `BankDb` sınamak için çağrılan bir birim test projesi.
+4. `BankDbTests`Bileşenin davranışını test etmek için çağrılan bir birim test projesi `BankDb` .
 
-5. Sınıfın davranışını `Maths` `MathsTests` doğrulamak için çağrılan bir birim test sınıfı.
+5. `MathsTests`Sınıfının davranışını doğrulamak için çağrılan bir birim test sınıfı `Maths` .
 
-Bir döngü kullanarak iki `Maths` tamsayı ekleyen bir yöntemi test edeceğiz:
+`Maths`Bir döngü kullanarak iki tamsayı ekleyen ' de bir yöntemi test edeceğiz:
 
 ```csharp
 public int AddIntegers(int first, int second)
@@ -65,17 +65,17 @@ public int AddIntegers(int first, int second)
 
 ## <a name="create-a-data-source"></a>Veri kaynağı oluşturma
 
-`AddIntegers` Yöntemi sınamak için, parametreler ve döndürülmesini beklediğiniz toplam için bir dizi değer belirten bir veri kaynağı oluşturun. Bu örnekte, bir Sql Compact veritabanı `MathsData` ve aşağıdaki `AddIntegersData` sütun adlarını ve değerlerini içeren bir tablo oluştururuz
+Yöntemi test etmek için `AddIntegers` , parametreler için bir değer aralığı ve döndürülmek üzere bekleyen toplam değeri belirten bir veri kaynağı oluşturun. Bu örnekte, adlı bir SQL Compact veritabanı `MathsData` ve `AddIntegersData` Aşağıdaki sütun adlarını ve değerlerini içeren adlı bir tablo oluşturacağız
 
-|İlk Sayı|İkinci Sayi|Toplam|
+|Ilksayı|Ikincisayı|Toplam|
 |-|------------------|-|
 |0|1|1|
 |1|1|2|
 |2|-3|-1|
 
-## <a name="add-a-testcontext-to-the-test-class"></a>Test sınıfına TestBağlamı ekleme
+## <a name="add-a-testcontext-to-the-test-class"></a>Test sınıfına bir TestContext ekleyin
 
-Birim test çerçevesi, `TestContext` veri kaynaklı bir test için veri kaynağı bilgilerini depolamak için bir nesne oluşturur. Çerçeve daha sonra bu nesneyi `TestContext` oluşturduğunuz özelliğin değeri olarak ayarlar.
+Birim test çerçevesi veri `TestContext` temelli bir test için veri kaynağı bilgilerini depolamak üzere bir nesne oluşturur. Framework daha sonra bu nesneyi oluşturduğunuz özelliğin değeri olarak ayarlar `TestContext` .
 
 ```csharp
 private TestContext testContextInstance;
@@ -86,14 +86,14 @@ public TestContext TestContext
 }
 ```
 
-Test yönteminizde, verilere `DataRow` `TestContext`' nin dizinleyici özelliği nden erişebilirsiniz.
+Test yönteminde, ' `DataRow` nin Indexer özelliğinden veriye erişirsiniz `TestContext` .
 
 > [!NOTE]
-> .NET [Core, DataSource](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute) özniteliğini desteklemez. Bir .NET Core veya UWP birim test projesinde test verilerine bu şekilde erişmeye çalışırsanız, **"'TestContext' 'DataRow' tanımı içermez ve 'TestContext' türünden ilk bağımsız değişkeni kabul eden erişilebilir bir uzatma yöntemi 'DataRow' bulunamadı (bir yönergeyi veya derleme başvurusunu kaçırıyor musunuz?)"** gibi bir hata görürsünüz.
+> .NET Core, [DataSource](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute) özniteliğini desteklemez. Bu şekilde bir .NET Core veya UWP birim testi projesinde test verilerine erişmeye çalışırsanız, "' TestContext ' öğesine benzer bir hata görürsünüz ve ' **TestContext ' türünde bir ilk bağımsız değişken kabul eden hiçbir erişilebilir uzantı yöntemi bulunamadı (bir using yönergesi veya derleme başvurunuz eksik olabilir mi?)"**.
 
 ## <a name="write-the-test-method"></a>Test yöntemini yazma
 
-Test `AddIntegers` yöntemi oldukça basittir. Veri kaynağındaki her satır `AddIntegers` **için, Birinci Numara** ve **SecondNumber** sütun değerlerini parametre olarak arayın ve **toplam** sütun değerine göre geri dönüş değerini doğrulayın:
+İçin test metodu `AddIntegers` oldukça basittir. Veri kaynağındaki her satır için, `AddIntegers` parametre olarak **firstNumber** ve **secondNumber** sütun değerleriyle çağrı yapın ve döndürülen değeri **Sum** sütun değerine göre doğrulayın:
 
 ```csharp
 [DataSource(@"Provider=Microsoft.SqlServerCe.Client.4.0; Data Source=C:\Data\MathsData.sdf;", "Numbers")]
@@ -113,33 +113,33 @@ public void AddIntegers_FromDataSourceTest()
 }
 ```
 
-Yöntem, `Assert` başarısız bir `x` yinelemenin `y` değerlerini ve değerlerini görüntüleyen bir ileti içerir. Varsayılan olarak, ileri sayılmakta olan değerler ve `expected` `actual` bunlar zaten başarısız test ayrıntılarına dahil edilir.
+`Assert`Yöntemi, `x` `y` başarısız bir yinelemenin ve değerlerini görüntüleyen bir ileti içerir. Varsayılan olarak, onaylanan değerler `expected` ve `actual` başarısız test ayrıntılarına zaten dahil edilmiştir.
 
 ### <a name="specify-the-datasourceattribute"></a>DataSourceAttribute belirtin
 
-Öznitelik, `DataSource` veri kaynağının bağlantı dizesini ve test yönteminde kullandığınız tablonun adını belirtir. Bağlantı dizesindeki tam bilgiler, kullandığınız veri kaynağına bağlı olarak değişir. Bu örnekte, bir SqlServerCe veritabanı kullandık.
+`DataSource`Öznitelik, veri kaynağı için bağlantı dizesini ve test yönteminde kullandığınız tablonun adını belirtir. Bağlantı dizesindeki kesin bilgiler, kullandığınız veri kaynağı türüne bağlı olarak farklılık gösterir. Bu örnekte, SqlServerCe veritabanı kullandık.
 
 ```csharp
 [DataSource(@"Provider=Microsoft.SqlServerCe.Client.4.0;Data Source=C:\Data\MathsData.sdf", "AddIntegersData")]
 ```
 
-DataSource özniteliği üç oluşturucuya sahiptir.
+DataSource özniteliğinde üç Oluşturucu vardır.
 
 ```csharp
 [DataSource(dataSourceSettingName)]
 ```
 
-Bir parametreye sahip bir oluşturucu, çözüm için *app.config* dosyasında depolanan bağlantı bilgilerini kullanır. *dataSourceSettingsName,* bağlantı bilgilerini belirten config dosyasındaki Xml öğesinin adıdır.
+Tek parametreli bir Oluşturucu, çözüm için *app.config* dosyasında depolanan bağlantı bilgilerini kullanır. *DataSourceSettingsName* , yapılandırma dosyasındaki bağlantı bilgilerini belirten XML öğesinin adıdır.
 
-*App.config* dosyasını kullanmak, birim testinde değişiklik yapmadan veri kaynağının konumunu değiştirmenize olanak tanır. Bir *app.config* dosyasının nasıl oluşturulup kullanılacağı hakkında bilgi için Bkz. [Walkthrough: Veri Kaynağını Tanımlamak için Yapılandırma Dosyasını Kullanma](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)
+*app.config* bir dosyanın kullanılması, birim testinde değişiklik yapmadan veri kaynağının konumunu değiştirmenize olanak sağlar. Bir *app.config* dosyası oluşturma ve kullanma hakkında daha fazla bilgi için bkz [. İzlenecek yol: bir veri kaynağı tanımlamak Için yapılandırma dosyası kullanma](../test/walkthrough-using-a-configuration-file-to-define-a-data-source.md)
 
 ```csharp
 [DataSource(connectionString, tableName)]
 ```
 
-İki `DataSource` parametreye sahip oluşturucu, veri kaynağının bağlantı dizesini ve test yönteminin verilerini içeren tablonun adını belirtir.
+`DataSource`İki parametreli Oluşturucu, veri kaynağı için bağlantı dizesini ve test yöntemi için verileri içeren tablonun adını belirtir.
 
-Bağlantı dizeleri veri kaynağının türüne bağlıdır, ancak veri sağlayıcısının değişmez adını belirten bir Sağlayıcı öğesi içermelidir.
+Bağlantı dizeleri veri kaynağı türünün türüne bağlıdır, ancak veri sağlayıcısının sabit adını belirten bir sağlayıcı öğesi içermelidir.
 
 ```csharp
 [DataSource(
@@ -150,26 +150,26 @@ Bağlantı dizeleri veri kaynağının türüne bağlıdır, ancak veri sağlay�
     )]
 ```
 
-### <a name="use-testcontextdatarow-to-access-the-data"></a>Verilere erişmek için TestContext.DataRow'u kullanma
+### <a name="use-testcontextdatarow-to-access-the-data"></a>Verilere erişmek için TestContext. DataRow kullanın
 
-Tablodaki verilere erişmek `AddIntegersData` için dizinleyiciyi `TestContext.DataRow` kullanın. `DataRow`bir <xref:System.Data.DataRow> nesnedir, bu nedenle sütun değerlerini dizin veya sütun adlarıyla alın. Değerler nesne olarak döndürüldüğü için, bunları uygun türe dönüştürün:
+Tablodaki verilere erişmek için `AddIntegersData` `TestContext.DataRow` Dizin oluşturucuyu kullanın. `DataRow`bir <xref:System.Data.DataRow> nesnedir, bu nedenle sütun değerlerini dizin veya sütun adlarına göre alın. Değerler nesneler olarak döndürüldüğünden, bunları uygun türe dönüştürün:
 
 ```csharp
 int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
 ```
 
-## <a name="run-the-test-and-view-results"></a>Testi çalıştırın ve sonuçları görüntüleyin
+## <a name="run-the-test-and-view-results"></a>Testi çalıştırma ve sonuçları görüntüleme
 
-Bir test yöntemi yazmayı tamamladığınızda, test projesini oluşturun. Test **yöntemi, Testler Çalıştırılamayanlar** grubunda **Test Gezgini'nde** görünür. Test Gezgini, testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdırken, Test **Gezgini** sonuçları **Başarısız Testler**, **Geçti Testleri**ve **Çalıştırmama**testgruplarında görüntüler. Tüm testlerinizi çalıştırmak için **Tümlerini Çalıştır'ı** seçebilir veya çalıştırmak için bir test alt kümesi seçmek için **Çalıştır'ı** seçebilirsiniz.
+Bir test yöntemi yazmayı bitirdiğinizde test projesi oluşturun. Test yöntemi, **Test Gezgini** 'Nde, **çalıştırma** testi grubu ' nda görüntülenir. Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, **Test Gezgini** sonuçları **başarısız testler**, **başarılı**testler ve **çalıştırma testleri**gruplarında görüntüler. Tüm testlerinizi çalıştırmak için **Tümünü Çalıştır** ' ı seçebilirsiniz veya çalıştırılacak testlerin bir alt kümesini seçmek için **Çalıştır** ' ı seçin.
 
-**Test** Gezgini'nin üst kısmındaki test sonuçları çubuğu, testiniz çalışırken animasyonludur. Test çalışmasının sonunda, tüm testler geçtiyse çubuk yeşil veya testlerin herhangi biri başarısız olduysa kırmızı olacaktır. Test çalışmasının bir özeti, **Test Gezgini** penceresinin altındaki ayrıntılar bölmesinde görünür. Alt bölmedeki testin ayrıntılarını görüntülemek için bir test seçin.
+Test **Gezgini** 'nin en üstündeki test sonuçları çubuğu, test çalıştırmalarınız olarak hareketlendirilir. Test çalıştırmasının sonunda, testlerin hepsi başarısız olursa, tüm testler geçtiğinde veya kırmızıysa çubuk yeşil olur. Test çalıştırmasının Özeti, **Test Gezgini** penceresinin alt kısmındaki Ayrıntılar bölmesinde görünür. Alt bölmedeki bu testin ayrıntılarını görüntülemek için bir test seçin.
 
 > [!NOTE]
-> Her veri satırı ve bir özet sonucu için bir sonuç vardır. Test her veri satırında geçtiyse, özet çalışması **Geçti**olarak gösterir. Sınama herhangi bir veri satırında başarısız olduysa, özet çalışması **Başarısız**olarak gösterir.
+> Her veri satırı ve ayrıca bir Özet sonucu için bir sonuç vardır. Test her bir veri satırına geçirilirse, Özet çalıştırması **geçti**olarak gösterilir. Herhangi bir veri satırında test başarısız olursa, Özet çalıştırması **başarısız**olarak gösterilir.
 
-Örneğimizde `AddIntegers_FromDataSourceTest` yöntemi çalıştırdığınızda, sonuç çubuğu kırmızıya döner ve test yöntemi **Başarısız Testler'e**taşınır. Veri kaynağından gelen yineedilen yöntemlerden herhangi biri başarısız olursa, veri tabanlı bir sınama başarısız olur. **Test Gezgini** penceresinde başarısız bir veri tabanlı test seçtiğinizde, ayrıntılar bölmesi veri satır dizini tarafından tanımlanan her yinelemenin sonuçlarını görüntüler. Örneğimizde, algoritmanın `AddIntegers` negatif değerleri doğru işlemediği görülmektedir.
+`AddIntegers_FromDataSourceTest`Örneğimizde yöntemi çalıştırdıysanız, sonuçlar çubuğu kırmızıya döner ve test yöntemi **başarısız testlere**taşınır. Veri kaynağından yinelenen yöntemlerin herhangi biri başarısız olursa veri odaklı bir test başarısız olur. **Test Gezgini** penceresinde başarısız veri temelli bir test seçtiğinizde, Ayrıntılar bölmesi veri satırı dizini tarafından tanımlanan her yinelemenin sonuçlarını görüntüler. Örneğimizde, `AddIntegers` algoritmanın negatif değerleri doğru bir şekilde işlememesi görünür.
 
-Test altındaki yöntem düzeltildiğinde ve test yeniden çalıştırıldığında, sonuç çubuğu yeşile döner ve test yöntemi **Geçti Test** grubuna taşınır.
+Test altındaki Yöntem düzeltildiğinde ve test yeniden çalıştırıldığında, sonuçlar çubuğu yeşil olur ve test yöntemi **geçilen test** grubuna taşınır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -177,6 +177,6 @@ Test altındaki yöntem düzeltildiğinde ve test yeniden çalıştırıldığı
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext?displayProperty=fullName>
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A?displayProperty=fullName>
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert?displayProperty=fullName>
-- [Birim kodunuzu test edin](../test/unit-test-your-code.md)
+- [Kodunuzun birim testi](../test/unit-test-your-code.md)
 - [Test Gezgini ile birim testleri çalıştırma](../test/run-unit-tests-with-test-explorer.md)
-- [Microsoft birim test çerçevesi ile .NET için birim testleri yazma](../test/unit-test-your-code.md)
+- [Microsoft birim testi çerçevesi ile .NET için birim testleri yazma](../test/unit-test-your-code.md)

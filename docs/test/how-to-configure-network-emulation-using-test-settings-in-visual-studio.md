@@ -1,55 +1,55 @@
 ---
-title: Test Ayarlarını Kullanarak Ağ Öykünme'yi Yapılandır
+title: Test ayarlarını kullanarak ağ öykünmesini yapılandırma
 ms.date: 10/03/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - test settings, network emulation
 ms.assetid: ff275cfb-5df9-4710-9a91-9caabaaad34f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 685b22f25c7138c4c3e7c9068ba52864e40648e1
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 55daa1e16af45c153efced3736c46c3c27d748ac
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880149"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288188"
 ---
-# <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>Nasıl yapılır: Visual Studio'da test ayarlarını kullanarak ağ öykünme sini yapılandırın
+# <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da test ayarlarını kullanarak ağ öykünmesini yapılandırma
 
-Tanılama veri bağdaştırıcısını, uygulamanızı Visual Studio'dan çeşitli ağ ortamları altında test etmek üzere yapılandırabilirsiniz. Ayrıca, testlerinizi çalıştırdığınızda yapay ağ yükünü veya darboğazını sınamak için yapılandırılabilir.
+Uygulamanızı Visual Studio 'daki çeşitli ağ ortamları altında test etmek için tanılama veri bağdaştırıcısını yapılandırabilirsiniz. Ayrıca, testlerinizi çalıştırdığınızda yapay bir ağ yükünü veya performans sorunlarını test etmek üzere de yapılandırılabilir.
 
 > [!WARNING]
-> Testlerinizi taklit ettiğiniz ağdan daha yavaş bir türde gerçek bir ağda çalıştırıyorsanız, test yine de daha yavaş ağ hızında çalışır. Öykünme yalnızca ağ ortamını yavaşlatabilir, hızlandıramaz.
+> Testlerinizi, öykünmesi yaptığınız ağdan daha yavaş bir türde olan gerçek bir ağda çalıştırırsanız, test yine daha yavaş ağ hızında çalışmaya devam edecektir. Öykünme yalnızca ağ ortamını yavaşlatabilir, hızlandıramaz.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ::: moniker range="vs-2017"
-Aşağıdaki yordam, yapılandırma düzenleyicisinden ağ öykünme yapılandırmanasıl açıklanır. Bu adımlar, hem Microsoft Test Yöneticisi'ndeki hem de Visual Studio'daki yapılandırma düzenleyicisi için geçerlidir.
+Aşağıdaki yordamda, yapılandırma düzenleyicisinden Ağ öykünmesinin nasıl yapılandırılacağı açıklanmaktadır. Bu adımlar hem Microsoft Test Yöneticisi hem de Visual Studio 'daki yapılandırma Düzenleyicisi için geçerlidir.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Aşağıdaki yordam, yapılandırma düzenleyicisinden ağ öykünme yapılandırmanasıl açıklanır. Bu adımlar Visual Studio'daki yapılandırma düzenleyicisi için geçerlidir.
+Aşağıdaki yordamda, yapılandırma düzenleyicisinden Ağ öykünmesinin nasıl yapılandırılacağı açıklanmaktadır. Bu adımlar, Visual Studio 'daki yapılandırma Düzenleyicisi için geçerlidir.
 ::: moniker-end
 
 > [!NOTE]
-> Ağ öykünme tanılama veri bağdaştırıcısı yalnızca Visual Studio test ayarları için geçerlidir. Microsoft Test Manager'da test ayarları için kullanılmaz (Visual Studio 2017'de amortismana dahil edilir).
+> Ağ öykünmesi tanılama veri bağdaştırıcısı yalnızca Visual Studio test ayarları için geçerlidir. Microsoft Test Yöneticisi (Visual Studio 2017 ' de kullanım dışı) test ayarları için kullanılmaz.
 
 ::: moniker range="vs-2017"
-Yönetici ayrıcalıkları olan bir hesap ağ öykünmesi için kullanılmalıdır. El ile testler çalıştıran yerel bir rol için ağ öykünmesi seçtiyseniz, yönetici ayrıcalıklarını kullanarak Microsoft Test Yöneticisi'ni başlatmanız gerekir. Başka bir rol için ağ öykünmesi seçtiyseniz, bu rol için makinedeki test aracısının yöneticiler grubunun bir üyesi olan bir kullanıcı hesabı kullandığını doğrulamanız gerekir. Test aracınız için hesabı nasıl ayarlayacağıhakkında daha fazla bilgi için, [test aracılarını Yükle ve yapılandırma](../test/lab-management/install-configure-test-agents.md)ya da yapılandırma'ya bakın.
+Ağ öykünmesi için yönetici ayrıcalıklarına sahip bir hesap kullanılmalıdır. El ile testler çalıştıran yerel bir rol için ağ öykünmesi seçtiyseniz, yönetici ayrıcalıklarını kullanarak Microsoft Test Yöneticisi başlatmanız gerekir. Başka herhangi bir rol için ağ öykünmesi seçtiyseniz, söz konusu rolün makinedeki test aracısının Yöneticiler grubunun üyesi olan bir kullanıcı hesabı kullandığını doğrulamanız gerekir. Test aracınız için hesabı ayarlama hakkında daha fazla bilgi için bkz. [test aracılarını yüklemek ve yapılandırmak](../test/lab-management/install-configure-test-agents.md).
 ::: moniker-end
 
 > [!NOTE]
-> Test aracısının varsayılan hesabı olan Ağ Hizmeti hesabı, yöneticiler grubunun bir üyesi değildir.
+> Test Aracısı için varsayılan hesap olan ağ hizmeti hesabı, Yöneticiler grubunun bir üyesi değildir.
 
-**Gerçek Ağ Öykünme**
+**Gerçek ağ öykünmesi**
 
-Visual Studio tüm test türleri için yazılım tabanlı gerçek ağ öykünme kullanır. Bu yük testleri içerir. Gerçek ağ öykünme, ağ paketlerinin doğrudan manipülasyonu yla ağ koşullarını simüle eder. Gerçek ağ emülatörü, Ethernet gibi güvenilir bir fiziksel bağlantı kullanarak hem kablolu hem de kablosuz ağların davranışını taklit edebilir. Aşağıdaki ağ öznitelikleri gerçek ağ öykünme dahil edilmiştir:
+Visual Studio tüm test türleri için yazılım tabanlı doğru ağ öykünmesi kullanır. Bu yük testlerini içerir. Gerçek ağ öykünmesi, ağ paketlerinin doğrudan işlemesini sağlayarak ağ koşullarına benzetir. Gerçek ağ öykünücüsü, Ethernet gibi güvenilir bir fiziksel bağlantı kullanarak hem kablolu hem de kablosuz ağların davranışını taklit edebilir. Aşağıdaki ağ öznitelikleri, gerçek ağ öykünmesine dahil edilir:
 
-- Ağ da gidiş-dönüş süresi (gecikme süresi)
+- Ağ üzerinden gidiş dönüş süresi (gecikme)
 
 - Kullanılabilir bant genişliği miktarı
 
-- Kuyruk davranışı
+- Sıraya alma davranışı
 
 - Paket kaybı
 
@@ -57,40 +57,40 @@ Visual Studio tüm test türleri için yazılım tabanlı gerçek ağ öykünme 
 
 - Hata yayılmaları.
 
-Gerçek ağ öykünasyonu, IP adreslerine veya TCP, UDP ve ICMP gibi protokollere dayalı ağ paketlerini filtrelemede esneklik de sağlar.
+Gerçek ağ öykünmesi, ağ paketlerinin IP adresleri veya TCP, UDP ve ıCMP gibi protokollere göre filtrelenmesi için esneklik de sağlar.
 
-Gerçek ağ öykünmesi, ağ tabanlı geliştiriciler ve sınananlar tarafından istenilen test ortamını taklit etmek, performansı değerlendirmek, değişimin etkisini tahmin etmek veya teknoloji optimizasyonu hakkında kararlar almak için kullanılabilir. Donanım test yatakları ile karşılaştırıldığında, gerçek ağ öykünme çok daha ucuz ve daha esnek bir çözümdür.
+Gerçek ağ öykünmesi, ağ tabanlı geliştiriciler ve test ediciler tarafından istenen bir test ortamına öykünmek, performansı değerlendirmek, değişikliğin etkisini tahmin etmek veya teknoloji iyileştirmesi hakkında kararlar almak için kullanılabilir. Gerçek ağ öykünmesi, donanım test bedine kıyasla, çok daha ucuz ve esnek bir çözümdür.
 
-## <a name="configure-network-emulation-for-your-test-settings"></a>Test ayarlarınız için ağ öykünme yapılandırma
+## <a name="configure-network-emulation-for-your-test-settings"></a>Test ayarlarınız için ağ öykünmesini yapılandırma
 
-Bu yordamdaki adımları gerçekleştirmeden önce, Test ayarlarınızı Visual Studio'dan açmanız ve ardından **Veri ve Tanılama** sayfasını seçmeniz gerekir.
+Bu yordamdaki adımları gerçekleştirmeden önce, Visual Studio 'dan test ayarlarınızı açmanız ve sonra **veri ve tanılama** sayfasını seçmeniz gerekir.
 
-### <a name="to-configure-network-emulation-for-your-test-settings"></a>Test ayarlarınız için ağ öykünülmasını yapılandırmak için
+### <a name="to-configure-network-emulation-for-your-test-settings"></a>Test ayarlarınız için ağ öykünmesini yapılandırmak için
 
-1. Belirli bir ağa öykünmek için kullanılacak rolü seçin.
+1. Belirli bir ağı benzemek için kullanılacak rolü seçin.
 
     > [!NOTE]
-    > Ağ Öykünme bağdaştırıcısını yalnızca istemci rolüne veya sunucu rolüne göre yapılandırmanız gerekir. Bağdaştırıcıyı her iki rolde de kullanmanız gerekmez. Bağdaştırıcı, her iki rol arasındaki iletişimi etkileyen ağ gürültüsünü taklit eder, böylece her iki rolde de kullanmak zorunda kalmamanız gerekir. Gerekli olmadığı sürece, sunucu rolü üzerinde ek yükü önlemek için Ağ Öykünme bağdaştırıcısı için bir istemci rolü seçmelisiniz.
+    > Ağ öykünmesi bağdaştırıcısını yalnızca istemci rolü veya sunucu rolü üzerinde yapılandırmanız gerekir. Bağdaştırıcıyı her iki rolde de kullanmanız gerekmez. Bağdaştırıcı her iki rol arasındaki iletişimi etkileyen ağ gürültüsünü taklit eder; böylece her ikisinde de kullanmanız gerekmez. Gerekli olmadığı durumlar dışında, sunucu rolünde ek yüke engel olmak için ağ öykünmesi bağdaştırıcısı için bir istemci rolü seçmeniz gerekir.
 
-2. **Ağ Öykünme'yi** seçin ve sonra **Yapılandır'ı**seçin.
+2. **Ağ öykünmesi** ' ni seçin ve ardından **Yapılandır**' ı seçin.
 
-     Ağ öykünmesini yapılandırmak için iletişim kutusu görüntülenir.
+     Ağ öykünmesinin yapılandırılacağı iletişim kutusu görüntülenir.
 
-3. **Kullanmak üzere ağ profilini seç'in**yanındaki oku seçin ve bir test çalıştırdığınızda taklit etmek istediğiniz ağ türünü seçin (örneğin, **Kablo-DSL 768Kps).**
+3. **Kullanılacak ağ profilini seç**' in yanındaki oku seçin ve bir testi çalıştırdığınızda öykünmek istediğiniz ağ türünü seçin (örneğin, **kablo-DSL 768Kps**).
 
     > [!WARNING]
-    > Testlerinizi taklit ettiğiniz ağdan daha yavaş bir türde gerçek bir ağda çalıştırıyorsanız, test yine de daha yavaş ağ hızında çalışır. Öykünme yalnızca ağ ortamını yavaşlatabilir, hızlandıramaz.
+    > Testlerinizi, öykünmesi yaptığınız ağdan daha yavaş bir türde olan gerçek bir ağda çalıştırırsanız, test yine daha yavaş ağ hızında çalışmaya devam edecektir. Öykünme yalnızca ağ ortamını yavaşlatabilir, hızlandıramaz.
 
-4. Ağ öykünme tanılama veri bağdaştırıcısını test ayarlarına eklerseniz ve bunu yerel makinenizde kullanmayı planlıyorsanız, ağ öykünme sürücüsünü de makinenizin ağ bağdaştırıcılarından birine bağlamanız gerekir. Ağ öykünme sürücüsü, ağ öykünme tanıveri bağdaştırıcısının işlevi ne kadar gerekli. Ağ öykünme sürücüsü yüklenir ve bağdaştırıcınıza iki şekilde bağlanır:
+4. Ağ öykünmesi tanılama veri bağdaştırıcısını test ayarlarına dahil etmeniz ve yerel makinenizde kullanmayı düşünüyorsanız, ağ öykünmesi sürücüsünü Makinenizin ağ bağdaştırıcılarından birine bağlamanız gerekir. Ağ öykünmesi sürücüsü, ağ öykünmesi tanılama veri bağdaştırıcısının çalışması için gereklidir. Ağ öykünmesi sürücüsü, bağdaştırıcınıza yüklenmiş ve iki şekilde bağlanır:
 
-    - **Microsoft Visual Studio Test Aracısı ile yüklü ağ öykünme sürücüsü:** Microsoft Visual Studio Test Aracısı hem uzak makinelerde hem de yerel makinenizde kullanılabilir. Visual Studio Test Aracısı yüklediğinizde, yükleme işlemi ağ öykünme sürücüsünü ağ kartınıza bağlayan bir yapılandırma adımı içerir. Daha fazla bilgi için [bkz.](../test/lab-management/install-configure-test-agents.md)
+    - **Microsoft Visual Studio Test Aracısı ile yüklenen ağ öykünmesi sürücüsü:** Microsoft Visual Studio Test Aracısı hem uzak makinelerde hem de yerel makinenizde kullanılabilir. Bir Visual Studio Test Aracısı yüklediğinizde, yükleme işlemi ağ öykünmesi sürücüsünü ağ kartınıza bağlayan bir yapılandırma adımı içerir. Daha fazla bilgi için bkz. [test aracılarını yükleyip yapılandırma](../test/lab-management/install-configure-test-agents.md).
 
-    - **Microsoft Visual Studio Test Professional ile yüklü ağ öykünme sürücüsü:** Ağ öykünme sini'ni ilk kez kullandığınızda, ağ öykünme sürücüsünü bir ağ kartına bağlamanız istenir.
+    - **Ağ öykünmesi sürücüsü Microsoft Visual Studio Test Professional yüklendi:** Ağ öykünmesini ilk kez kullandığınızda, ağ öykünmesi sürücüsünü bir ağ kartına bağlamanız istenir.
 
     > [!TIP]
-    > Ayrıca aşağıdaki komutu kullanarak Visual Studio test aracısını yüklemeden yerel makinenizdeki komut satırından ağ öykünme sürücüsünü yükleyebilirsiniz: **VSTestConfig NETWORKEMULATION /install**
+    > Ayrıca, aşağıdaki komutu kullanarak Visual Studio test aracısını yüklemeden yerel makinenize komut satırından ağ öykünme sürücüsünü yükleyebilirsiniz: **VSTestConfig NETWORKEMULATION/install**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md)
-- [El ile testler çalıştırın (Azure Test Planları)](/azure/devops/test/run-manual-tests?view=vsts)
+- [Test ayarlarını kullanarak tanılama bilgilerini topla](../test/collect-diagnostic-information-using-test-settings.md)
+- [El ile testleri çalıştırma (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts)

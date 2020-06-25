@@ -1,75 +1,75 @@
 ---
-title: Testler Sırasında Ekran ve Ses Kaydı
+title: Testler sırasında ekran ve ses kaydetme
 ms.date: 10/03/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - test settings, recording desktop video
 ms.assetid: 2cefe8c2-430a-4cb4-bbe0-f3edb2e5bc03
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: d53f03ed711b613a44aaf7cd243bd9aadeb2c93b
-ms.sourcegitcommit: 5d1b2895d3a249c6bea30eb12b0ad7c0f0862d85
+ms.openlocfilehash: 4fb186c97126d843cc47c16fa16a836914ed2e9b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80880331"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85287772"
 ---
-# <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>Nasıl yapılır: Test ayarlarını kullanarak test sırasında ekran ve ses kayıtlarını ekleme
+# <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>Nasıl yapılır: test ayarlarını kullanarak testler sırasında ekran ve ses kayıtlarını ekleme
 
-Visual Studio'daki yapılandırma düzenleyicisinden, testi çalıştıran kullanıcının ekranını ve sesini kaydeden tanılama veri bağdaştırıcısını yapılandırabilirsiniz. Bu tanılama veri bağdaştırıcısı, test sırasında masaüstü oturumunun ekran ve ses kaydını kaydeder. Kayıt test sonucu ile kaydedilir veya bir hata eklenebilir. Diğer ekip üyeleri, yeniden oluşturulması zor olan uygulama hatalarını yalıtmak için kaydı kullanabilir.
+Visual Studio 'daki yapılandırma düzenleyicisinden, testi çalıştıran kullanıcının ekranını ve sesini kaydeden tanılama veri bağdaştırıcısını yapılandırabilirsiniz. Bu tanılama veri bağdaştırıcısı, test sırasında Masaüstü oturumunun ekran ve ses kaydını kaydeder. Kayıt, test sonucuyla birlikte kaydedilir veya bir hataya eklenebilir. Diğer takım üyeleri, yeniden oluşturulması zor olan uygulama kusurlarını yalıtmak için kayıt kullanabilir.
 
 > [!WARNING]
-> Ekran ve ses kayıtları birden çok monitör yapılandırmasını desteklemez.
+> Ekran ve ses kayıtları birden çok İzleyici yapılandırmasını desteklemez.
 
-Ekran ve ses kaydedici manuel veya otomatik testler ile kullanılabilir. Örneğin, kodlanmış bir UI testini uzaktan çalıştırdıysanız, masaüstünü kaydederken kodlanmış UI testini çalıştırmak isteyebilirsiniz. Ekran ve ses kaydının uzaktan nasıl yakalayacağı hakkında daha fazla bilgi için [bkz.](../test/how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop.md)
+Ekran ve Ses Kaydedicisi, el ile veya otomatikleştirilmiş testlerle birlikte kullanılabilir. Örneğin, kodlanmış UI testini uzaktan çalıştırırsanız, kodlanmış UI testini çalışırken görmek için masaüstünü kaydetmek isteyebilirsiniz. Bir ekran ve ses kaydını uzaktan yakalama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Masaüstü ile etkileşime sahip testleri çalıştırmak için test aracınızı ayarlama](../test/how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop.md).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-## <a name="to-configure-screen-and-voice-recording-for-your-test-settings"></a>Test ayarlarınız için ekran ve ses kaydını yapılandırmak için
+## <a name="to-configure-screen-and-voice-recording-for-your-test-settings"></a>Test ayarlarınıza yönelik ekran ve ses kaydını yapılandırmak için
 
-1. Ekranı ve sesi kaydetmek için yapılandırmak istediğiniz test ayarlarını açın. Daha fazla bilgi için bkz: [Test ederken tanı verilerini topla (Azure Test Planları)](/azure/devops/test/collect-diagnostic-data?view=vsts) veya test [ayarlarını kullanarak tanı bilgilerini topla.](../test/collect-diagnostic-information-using-test-settings.md)
+1. Ekran ve ses kaydetmek için yapılandırmak istediğiniz test ayarlarını açın. Daha fazla bilgi için bkz. test [sırasında tanılama verilerini toplama (Azure test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts) veya [test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md).
 
-2. Test ayarlarında, ekranı ve sesi kaydetmek için kullanılacak **Rolü** seçin.
+2. Test ayarları ' nda, ekran ve ses kaydetmek için kullanılacak **rolü** seçin.
 
     > [!NOTE]
-    > Manuel testler ve otomatik testler için bu testleri çalıştıran makine olacaktır.
+    > El ile testler ve otomatikleştirilmiş testler için, testleri çalıştıran makine olacaktır.
 
-3. **Ekran ve Ses Kaydedici'yi** seçin ve sonra **Yapıla'yı**seçin.
+3. **Ekran ve Ses Kaydedicisi** ' ni seçin ve ardından **Yapılandır**' ı seçin.
 
-     **Yapılaşı Tanılama Veri Bağdaştırıcısı – Ekran ve Ses Kaydedici** iletişim kutusu görüntülenir.
+     **Tanılama veri bağdaştırıcısını Yapılandır – ekran ve Ses Kaydedicisi** iletişim kutusu görüntülenir.
 
      ![Video yapılandırması](../test/media/testsettingvideoconfiggdr.png)
 
-4. (İsteğe bağlı) Kaydınızdaki ses içeriğini yakalamak için **ses kaydını etkinleştir'i** seçin.
+4. Seçim Kaydınıza ses içeriğini yakalamak için **Ses kaydını etkinleştir** ' i seçin.
 
-5. (İsteğe bağlı) Hem başarısız hem de geçmiş testler için kaydetme ekranı ve ses kayıtları belirtmek için **test çalışması geçerse kaydı kaydet'in** yanındaki onay kutusunu seçin.
+5. Seçim Kayıt Kaydet ' in yanındaki onay kutusunu seçin ve **test çalışması,** hem başarısız hem de başarılı testler için kaydetme ekran ve ses kayıtlarını belirtin.
 
     > [!WARNING]
-    > **Test çalışması geçerse kaydet kaydını**seçerseniz, kayıt sunucuda depolama alanı kullanan test sonuçlarıyla birlikte depolanır. Bu ekleri temizlemek için **Test Eki Temizleyici** aracını kullanabilirsiniz.
+    > **Test çalışması geçerse kaydı kaydet**' i seçerseniz, kayıt, sunucuda depolama alanı kullanan test sonuçlarıyla depolanır. Bu ekleri temizlemek için **Test eki temizleyici** aracı 'nı kullanabilirsiniz.
 
-6. **Ekran Kayıt Kalitesi**altında, aşağıdaki açılır liste seçeneklerini yapılandırın:
+6. **Ekran kayıt kalitesi**altında aşağıdaki açılan liste seçeneklerini yapılandırın:
 
-    1. **Kare hızı:** Ekranda ve ses kaydında saniyede kaç kare kullanmak istediğinizi belirtin. Varsayılan değer saniyede 4 karedir. 2 ile 20 arasındaki değerler belirtilebilir.
+    1. **Kare hızı:** Ekranda ve ses kaydında saniye başına kaç kare kullanmak istediğinizi belirtin. Varsayılan değer, saniye başına 4 kare olur. 2 ve 20 arasındaki değerler belirtilebilir.
 
-    2. **Bit hızı:** Ekranda ve ses kaydında saniyede kaç kilobayt kullanılacağını belirtin. Varsayılan değer 512'dır. 512 ile 10.000 arasındaki değerler belirtilebilir.
+    2. **Bit hızı:** Ekran ve ses kaydında saniye başına kaç kilobayt kullanılacağını belirtin. Varsayılan değer 512'dır. 512 ve 10.000 arasındaki değerler belirlenebilir.
 
-    3. **Kalite(1-100):** 1 ile 100 arasında bir aralık seçerek ekran ve ses kaydının kalitesini belirtebilirsiniz. Varsayılan değer 50 'dir (orta sınıf).
+    3. **Kalite (1-100):** 1 ile 100 arasında bir Aralık seçerek ekran ve ses kaydı kalitesini belirtebilirsiniz. Varsayılan değer 50 ' dir (orta Aralık).
 
-7. **Tamam'ı**seçin. Tanılama izleme toplayıcı ayarları artık yapılandırılır ve test ayarlarınız için kaydedilir.
+7. **Tamam ' ı**seçin. Tanılama izleme toplayıcısı ayarları artık test ayarlarınız için yapılandırılır ve kaydedilir.
 
     ::: moniker range="vs-2017"
     > [!TIP]
-    > Bu tanılama veri bağdaştırıcısının yapılandırmasını sıfırlamak için Visual Studio için **varsayılan yapılandırmaya sıfırla'yı** ve Microsoft Test Yöneticisi için **varsayılan olarak sıfırla'yı** seçin.
+    > Bu tanılama veri bağdaştırıcısı için yapılandırmayı sıfırlamak üzere, Visual Studio için **varsayılan yapılandırmaya Sıfırla** ' yı seçin ve Microsoft Test Yöneticisi Için varsayılana **sıfırlayın** .
     ::: moniker-end
     ::: moniker range=">=vs-2019"
     > [!TIP]
-    > Bu tanılama veri bağdaştırıcısının yapılandırmasını sıfırlamak için Visual Studio'da **varsayılan yapılandırmaya sıfırla'yı** seçin.
+    > Bu tanılama veri bağdaştırıcısı için yapılandırmayı sıfırlamak üzere Visual Studio 'da **varsayılan yapılandırmaya Sıfırla** ' yı seçin.
     ::: moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Test ederken tanılama verileri toplama (Azure Test Planları)](/azure/devops/test/collect-diagnostic-data?view=vsts)
-- [El ile yapılan testlerde tanılama verileri toplama (Azure Test Planları)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
-- [Test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md)
-- [El ile testler çalıştırın (Azure Test Planları)](/azure/devops/test/run-manual-tests?view=vsts)
+- [Test sırasında tanılama verilerini topla (Azure Test Plans)](/azure/devops/test/collect-diagnostic-data?view=vsts)
+- [Tanılama verilerini el ile testlerde topla (Azure Test Plans)](/azure/devops/test/mtm/collect-more-diagnostic-data-in-manual-tests?view=vsts)
+- [Test ayarlarını kullanarak tanılama bilgilerini topla](../test/collect-diagnostic-information-using-test-settings.md)
+- [El ile testleri çalıştırma (Azure Test Plans)](/azure/devops/test/run-manual-tests?view=vsts)

@@ -1,6 +1,6 @@
 ---
-title: Hata ayıklayıcılı veya hata ayıklayıcıolmadan profil oluşturma araçlarını çalıştırın | Microsoft Dokümanlar
-ms.date: 04/02/2020
+title: Hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırın | Microsoft Docs
+ms.date: 5/26/2020
 ms.topic: conceptual
 ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
 author: mikejo5000
@@ -8,131 +8,169 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf544b3bec9b492f1d1669549ba5501a52f7d5f2
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.openlocfilehash: 45632967c39348e8dc78dc3e2fb95227dcd86d7d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80638795"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285935"
 ---
 # <a name="run-profiling-tools-with-or-without-the-debugger"></a>Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
 
-Visual Studio performans ölçümü ve profil oluşturma araçları sunar. **CPU Kullanımı** ve **Bellek Kullanımı**gibi bazı araçlar hata ayıklayıcıyla veya hata ayıklayıcı olmadan ve Release veya Hata Ayıklama yapılandırmalarında çalıştırılabilir. **Uygulama Zaman Çizelgesi** gibi Performans **Profiler** araçları Hata Ayıklama veya Sürüm yapılarında çalıştırılabilir. **Tanılama Araçları** penceresi ve **Olaylar** sekmesi gibi hata ayıklama tümleşik araçları yalnızca hata ayıklama oturumları sırasında çalışır.
+Visual Studio, performans ölçümü ve profil oluşturma araçlarının bir seçimini sunmaktadır. CPU kullanımı ve bellek kullanımı gibi bazı araçlar, hata ayıklayıcı ile veya olmadan çalışabilir ve derleme yapılandırmalarında yayın veya hata ayıklama yapabilir. Uygulama Zaman Çizelgesi gibi performans profil oluşturucu araçları, hata ayıklama veya sürüm yapılarında çalıştırılabilir. Hata ayıklayıcı ile tümleşik araçlar, Tanılama Araçları penceresi ve olayları sekmesi gibi yalnızca hata ayıklama oturumlarında çalıştırılır.
 
 >[!NOTE]
->Hata ayıklama olmayan performans araçlarını Windows 7 ve sonraki araçlarla kullanabilirsiniz. Hata ayıklama tümleşik profil oluşturma araçlarını çalıştırmak için Windows 8 veya daha sonra olması gerekir.
+>Windows 7 ve üzeri ile hata ayıklayıcı olmayan performans araçlarını kullanabilirsiniz. Hata ayıklayıcı ile tümleşik profil oluşturma araçlarını çalıştırmak için Windows 8 veya üzeri gereklidir.
 
-Hata ayıklayıcı olmayan **Performans Profilcisi** ve hata ayıklayıcı tümleşik **Tanı Araçları** farklı bilgi ve deneyimler sağlar. Hata ayıklama tümleşik araçları, kesme noktalarını ve değişken değerleri gösterir. Hata ayıklama olmayan araçlar, sonuçları son kullanıcı deneyimine daha yakın sağlar.
+Hata ayıklayıcı olmayan performans profil oluşturucusu ve hata ayıklayıcı ile tümleşik Tanılama Araçları, farklı bilgi ve deneyimler sağlar. Hata ayıklayıcı ile tümleşik araçlar, kesme noktaları ve değişken değerleri gösterir. Hata ayıklayıcı olmayan araçlar, son kullanıcı deneyimine daha yakın sonuçlar verir.
 
-Hangi araçların ve sonuçların kullanılacağına karar vermenize yardımcı olmak için aşağıdaki noktaları göz önünde bulundurun:
+Hangi araçların ve sonuçların kullanılacağına karar vermek için aşağıdakileri göz önünde bulundurun:
 
-- Dosya G/Ç veya ağ yanıt verme sorunları gibi dış performans sorunları, hata ayıklayıcı veya hata ayıklayıcı olmayan araçlarda çok farklı gözükmez.
-- CPU yoğun aramaların neden olduğu sorunlar için, Sürüm ve Hata Ayıklama yapıları arasında önemli performans farklılıkları olabilir. Sorunun Sürüm oluştururda var olup olmadığını denetleyin.
-- Sorun yalnızca Hata Ayıklama oluşturursırasında oluşursa, büyük olasılıkla hata ayıklama olmayan araçları çalıştırmanız gerekmez. Sürüm oluşturma sorunları için hata ayıklama araçlarının daha fazla araştırma için yardımcı olup olmayacağına karar verin.
-- Sürüm yapıları, işlev çağrıları ve sabitleri oluşturma, kullanılmayan kod yollarını budama ve değişkenleri hata ayıklayıcı tarafından kullanılamayacak şekilde depolama gibi optimizasyonlar sağlar. Hata ayıklama tümleşik araçlardaki performans sayıları daha az doğrudur, çünkü Hata Ayıklama oluşturur bu optimizasyonlar eksikliği.
-- Hata ayıklama, özel durum ve modül yük olaylarını engelleme gibi gerekli hata ayıklama işlemlerini yaptığı için performans sürelerini değiştirir.
-- **Performans Profiler** araçlarında sürüm oluşturma performans numaraları en kesin ve doğrudur. Hata ayıklama ile tümleşik araç sonuçları, hata ayıklamayla ilgili diğer ölçümlerle karşılaştırmak için en yararlıdır.
+- Dosya g/ç veya ağ yanıtlama hızı sorunları gibi dış performans sorunları, hata ayıklayıcıda veya hata ayıklayıcı olmayan araçlarda çok daha farklı bir şekilde görünmez.
+- CPU yoğunluklu çağrıların neden olduğu sorunlar için, yayın ve hata ayıklama derlemeleri arasında önemli performans farklılıkları olabilir. Sorunun yayın yapılarında mevcut olup olmadığını denetleyin.
+- Sorun yalnızca hata ayıklama derlemeleri sırasında gerçekleşirse, muhtemelen hata ayıklayıcı olmayan araçları çalıştırmanız gerekmez. Yayın derlemesi sorunları için, hata ayıklayıcı araçlarının daha fazla araştırma için yardım edilip edilmeyeceğini belirleyin.
+- Yayın yapıları, işlev çağrıları ve sabitler gibi iyileştirmeler sağlar, kullanılmayan kod yollarını ayıklamalar ve hata ayıklayıcı tarafından kullanılamayan yollarla değişkenleri depolar. Hata ayıklayıcı ile tümleşik araçlarındaki performans numaraları, hata ayıklama derlemeleri bu iyileştirmelerin olmadığından daha az doğrudur.
+- Hata ayıklayıcı, özel durum ve modül yükleme olayları gibi gerekli hata ayıklama işlemlerini yaptığı için performans sürelerini değiştirir.
+- Performans profil oluşturucu araçlarındaki yayın derlemesi performans numaraları en kesin ve doğru. Hata ayıklayıcı ile tümleşik araç sonuçları, hata ayıklama ile ilgili diğer ölçülerle kıyaslamak için en yararlı seçenektir.
 
-CPU Kullanımı için, komut satırı araçlarını kullanarak aracı uzak bir makinede çalıştırabilirsiniz.
+## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a>Hata ayıklarken profil oluşturma verilerini topla
 
-## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a>Hata ayıklama sırasında profil oluşturma verilerini toplama
+**Hata ayıklama**  >  **başlatma hata ayıklamayı**seçerek veya **F5**tuşuna basarak, Visual Studio 'da hata ayıklamayı başlattığınızda, varsayılan olarak **Tanılama araçları** pencere görüntülenir. El ile açmak için **Debug**  >  **Windows**  >  **göster tanılama araçları**Hata Ayıkla ' yı seçin. **Tanılama araçları** pencere, olaylar, işlem belleğı ve CPU kullanımı hakkındaki bilgileri gösterir.
 
-**Hata** > Ayıklama**Başlat Hata Ayıklama'yı** seçerek veya **F5**tuşuna basarak Visual Studio'da hata ayıklamaya başladığınızda, **Tanılama Araçları** penceresi varsayılan olarak görüntülenir. El ile açmak için **Hata Ayıklama** > **Windows** > **Show TanıLama Araçları'nı**seçin. **Tanılama Araçları** penceresi olaylar, işlem belleği ve CPU kullanımı hakkındaki bilgileri gösterir.
+![Tanılama Araçları penceresinin ekran görüntüsü](../profiling/media/diagnostictoolswindow.png " Tanılama Araçları Penceresi")
 
-![Tanı Araçları](../profiling/media/diagnostictools-update1.png "Tanı Araçları")
+- **Bellek kullanımını**, **UI analizini**ve **CPU kullanımını**görüntüleyip görüntüleyemeyeceğinizi belirlemek için araç çubuğundaki **Ayarlar** simgesini kullanın.
 
-- **Bellek Kullanımı** veya CPU **Kullanımı**görüntülemek için olup olmadığını seçmek için araç çubuğunda **Ayarlar** simgesini kullanın.
+- Daha fazla seçenek içeren **Tanılama Araçları özellik sayfalarını** açmak için **Ayarlar** açılan listesinden **Ayarlar** ' ı seçin.
 
-- **Tanılama Araçları Özellik Sayfalarını** daha fazla seçenekle açmak için **Ayarlar** açılır **bölümündeayarlar'ı** seçin.
+- Visual Studio Enterprise çalıştırıyorsanız, **araç**  >  **seçenekleri**  >  **IntelliTrace**'e giderek IntelliTrace 'i etkinleştirebilir veya devre dışı bırakabilirsiniz.
 
-- Visual Studio Enterprise'ı çalıştırıyorsanız, Visual Studio **Tools** > **Options** > **IntelliTrace**altında IntelliTrace'i etkinleştirebilir veya devre dışı kullanabilirsiniz.
+Hata ayıklamayı durdurduğunuzda Tanılama oturumu sonlanır.
 
-Hata ayıklamayı durdurduğunuzda tanılama oturumu sona erer.
+### <a name="the-events-tab"></a>Olaylar sekmesi
 
-### <a name="the-events-tab"></a>Etkinlikler sekmesi
+Bir hata ayıklama oturumu sırasında, Tanılama Araçları penceresinin Olaylar sekmesinde oluşan tanılama olayları listelenir. Kategori ön ekleri *kesme noktası*, *Dosya*ve diğerleri, bir kategorinin listesini hızlıca taramanızı sağlar veya ilgilendiğiniz kategorileri atlar.
 
-Hata ayıklama oturumu sırasında, **Tanılama Araçları** penceresinin **Olaylar** sekmesi, oluşan tanılama olaylarını listeler. Kategori önekleri: **Breakpoint,** **Dosya**ve diğerleri, listeyi bir kategori için hızla taramanıza veya önemsin olmayan kategorileri atlamanıza izin verin.
+Belirli olay kategorilerini seçerek veya temizleyerek, olayları görünüm içinde ve dışında filtrelemek için **filtre** açılan listesini kullanın.
 
-Belirli etkinlik kategorilerini seçerek veya seçerek görüntüdeki ve olmayan olayları filtrelemek için **Filtre** açılır düşüşünü kullanın.
+![Tanılama olay filtresinin ekran görüntüsü](../profiling/media/diagnosticeventfilter.png "Tanılama olay filtresi")
 
-![Tanılama Olay Filtresi](../profiling/media/diagnosticeventfilter.png "Tanılama Olay Filtresi")
+Olay listesinde belirli bir dizeyi bulmak için arama kutusunu kullanın. Dört olayla eşleşen dize *adı* için bir aramanın sonuçları aşağıda verilmiştir:
 
-Olay listesinde belirli bir dize bulmak için arama kutusunu kullanın. Dört olayla eşleşen "ad" dizesi için yapılan aramanın sonuçları aşağıda veda edilmiştir:
+![Tanılama olayı aramasının ekran görüntüsü](../profiling/media/diagnosticseventsearch.png "Tanılama olayı arama")
 
-![Tanılama Olay Arama](../profiling/media/diagnosticseventsearch.png "Tanılama Olay Arama")
+Daha fazla bilgi için, [Tanılama Araçları penceresinin Olaylar sekmesinde arama ve filtreleme](https://devblogs.microsoft.com/devops/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window/)bölümüne bakın.
 
-Daha fazla bilgi için [Tanılama Araçları penceresinin Olaylar sekmesini arama ve filtreleme bölümüne](https://devblogs.microsoft.com/devops/searching-and-filtering-the-events-tab-of-the-diagnostic-tools-window/)bakın.
+## <a name="collect-profiling-data-without-debugging"></a>Profil oluşturma verilerini hata ayıklama olmadan topla
 
-## <a name="collect-profiling-data-without-debugging"></a>Hata ayıklama olmadan profil oluşturma verilerini toplama
+Performans verilerini hata ayıklama olmadan toplamak için, performans profil Oluşturucu araçlarını çalıştırabilirsiniz.
 
-Hata ayıklama olmadan performans verileri toplamak için **Performans Profilleyici** araçlarını çalıştırabilirsiniz. Profil oluşturma araçlarından bazılarıçalıştırmak için yönetici ayrıcalıkları gerektirir. Visual Studio'yu yönetici olarak açabilir veya tanılama oturumunu başlattığınızda araçları yönetici olarak çalıştırabilirsiniz.
+1. Visual Studio 'da bir proje açıkken, çözüm yapılandırmasını **yayın**olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı**'Nı   (veya **yerel makine**) seçin.
 
-1. Visual Studio'da açık olan bir projeyle, çözüm yapılandırmasını **Release** olarak ayarlayın ve dağıtım hedefi olarak **Yerel Windows Hata Ayıklayıcı'yı** (veya **Yerel Makineyi)** seçin.
+1. **Hata ayıklama**  >  **performans profil oluşturucuyu**seçin veya **alt** + **F2**tuşuna basın.
 
-1. **Hata Ayıklama** > **Performans Profilleyicisi'ni**seçin veya **Alt**+**F2 tuşuna**basın.
+1. Tanılama araçları başlatma sayfasında, çalıştırılacak bir veya daha fazla araç seçin. Yalnızca proje türü, işletim sistemi ve programlama dili için geçerli olan araçlar gösterilir. Bu Tanılama oturumu için devre dışı bırakılan araçları görmek için **tüm araçları göster** ' i seçin.
 
-1. Tanılama başlatma sayfasında, çalıştırmak için bir veya daha fazla araç seçin. Yalnızca proje türü, işletim sistemi ve programlama dili için geçerli olan araçlar görüntülenir. Bu tanılama oturumu için devre dışı bırakılan araçları da görmek için **tüm araçları göster'i** seçin. Seçenekleriniz bir C# UWP uygulaması için şu şekilde görünebilir:
+   ![Tanılama araçlarının ekran görüntüsü](../profiling/media/diaghubsummarypage.png "DIAG_SelectTool")
 
-   ![Tanılama araçlarını seçin](../profiling/media/diag_selecttool.png "DIAG_SelectTool")
+1. Tanılama oturumu başlatmak için **Başlat**' ı seçin.
 
-1. Tanılama oturumunu başlatmak için **Başlat'ı**seçin.
+   Oturum çalışırken, bazı araçlar tanılama araçları sayfasındaki gerçek zamanlı verilerin grafiklerini, ayrıca veri toplamayı duraklatma ve sürdürmeye yönelik denetimleri gösterir.
 
-   Oturum çalışırken, bazı araçlar tanılama araçları sayfasında gerçek zamanlı verilerin grafiklerini görüntüler.
+    ![Performans ve Tanılama merkezinde veri toplamanın ekran görüntüsü](../profiling/media/diaghubcollectdata.png "Merkez verileri topla")
 
-    ![Performans ve Tanılama Hub'ı hakkında veri toplama](../profiling/media/pdhub_collectdata.png "Hub veri toplama")
+1. Tanılama oturumunu sonlandırmak için, **toplamayı durdur**' u seçin.
 
-1. Tanılama oturumunu sona erdirmek için **Koleksiyonu Durdur'u**seçin.
+   Analiz edilen veriler **rapor** sayfasında görünür.
 
-   Analiz edilen veriler **Rapor** sayfasında görüntülenir.
+Raporları kaydedebilir ve Tanılama Araçları başlatma sayfasında **son açılan oturumlar** listesinden açabilirsiniz.
 
-Raporları kaydedebilir ve tanılama araçları başlatma **sayfasındaki Son Açılan Oturumlar** listesinden açabilirsiniz.
+![Tanılama Araçları son açılan oturumlar listesinin ekran görüntüsü](../profiling/media/diaghubopenexistingdiagsession.png "PDHUB_OpenExistingDiagSession")
 
-![Kaydedilmiş tanı oturum dosyası açma](../profiling/media/pdhub_openexistingdiagsession.png "PDHUB_OpenExistingDiagSession")
+## <a name="collect-profiling-data-from-the-command-line"></a>Komut satırından profil oluşturma verilerini toplama
 
-### <a name="the-profiling-report"></a>Profil oluşturma raporu
- ![Tanılama araçları raporu](../profiling/media/diag_report.png "DIAG_Report")
+Komut satırından performans verilerini ölçmek için, Visual Studio ya da uzak araçlarla birlikte bulunan VSDiagnostics.exe kullanabilirsiniz. Bu, Visual Studio yüklü olmayan sistemlerdeki performans izlemelerini yakalamak veya performans izlemelerinin toplanması için yararlıdır. VSDiagnostics.exe kullandığınızda, araç durduruluncaya kadar profil oluşturma verilerini yakalayan ve depolayan bir tanılama oturumuna başlarsınız. Bu noktada, bu veriler bir. diagsession dosyasına aktarılmışsa ve sonuçları çözümlemek için bu dosyayı Visual Studio 'da açabilirsiniz.
 
-|||
-|-|-|
-|![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|Zaman çizelgesi profil oluşturma oturumunun uzunluğunu, uygulama yaşam döngüsü etkinleştirme olaylarını ve kullanıcı işaretlerini gösterir.|
-|![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Mavi çubukları sürükleyip zaman çizelgesinde bir bölgeyi seçerek, raporu zaman çizelgesinin bir bölümüyle sınırlandırabilirsiniz.|
-|![3. Adım](../profiling/media/procguid_3.png "ProcGuid_3")|Her tanılama aracı bir veya daha fazla ana grafik görüntüler. Tanılama oturumunuzda birden fazla araç varsa, tüm ana grafikler görüntülenir.|
-|![Adım 4](../profiling/media/procguid_4.png "ProcGuid_4")|Her aracın ayrı grafiklerini daraltabilir ve genişletebilirsiniz.|
-|![5. Adım](../profiling/media/procguid_6.png "ProcGuid_6")|Veriler birden fazla araç içeriyorsa, araç ayrıntıları sekmeler altında toplanır.|
-|![6. Adım](../profiling/media/procguid_6a.png "ProcGuid_6a")|Raporun alt yarısında her araç için bir veya daha fazla ayrıntı görünümü gösterilir. Zaman çizelgesinin bölgelerini seçerek görünümü filtreleyebilirsiniz.|
+### <a name="launch-an-application"></a>Uygulama başlatma
 
-## <a name="run-diagnostic-sessions-on-installed-or-running-apps"></a>Yüklü veya çalıştırılan uygulamalarda tanılama oturumları çalıştırma
+1. Bir komut istemi açın ve VSDiagnostics.exe dizine geçin:
 
-Uygulamanızı Visual Studio projesinden başlatmanın yanı sıra, alternatif hedefler üzerinde tanılama oturumları da çalıştırabilirsiniz. Örneğin, Windows App Mağazası'ndan yüklenen bir uygulamadaki performans sorunlarını tanılamak isteyebilirsiniz. Performans Profilcisi'nde, **Hedef Değiştir'in**altındaki açılır listeden seçin.
+   ```
+   <Visual Studio Install Folder>\Team Tools\DiagnosticsHub\Collector\
+   ```
 
-![Tanılama araçları analiz hedefini seçin](../profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")
+2. Aşağıdaki komutla VSDiagnostics.exe başlatın:
 
-Zaten yüklü olan uygulamaları başlatabilir veya tanılama araçlarını zaten çalışmakta olan uygulamalara ve işlemlere ekleyebilirsiniz.
+   ```
+   VSDiagnostics.exe start <id> /launch:<appToLaunch> /loadConfig:<configFile>
+   ```
 
-Çözümleme hedefiniz olarak **Yürütülebilir'i** seçerseniz, yerel veya uzak bir makinede *bir .exe'ye* giden yolu girebilirsiniz. Her iki durumda *da,.exe* yerel olarak çalışır. Ancak Visual Studio'da çözümü açarak uygulamanızın profilini oluşturmanızı öneririz.
+   Aşağıdaki bağımsız değişkenleri eklemeniz gerekir:
 
-Bir UWP uygulaması **için, Çalışan Uygulama** veya **Yüklü Uygulama'yı**seçtiğinizde, uygulamayı belirtilen dağıtım hedefindeki uygulamaları bulan bir listeden seçersiniz. Bu hedef yerel veya uzak bir makine olabilir. Uzak bir makinede bir UWP uygulamasının profilini çıkarmak için **Uzak Bağlantılar** iletişim kutusunda **Evrensel (Şifrelenmemiş Protokol)** seçeneğini seçmeniz gerekir.
+   - \<id\>: Koleksiyon oturumunu tanımlar. KIMLIK 1-255 arasında bir sayı olmalıdır.
+   - \<appToLaunch\>: Başlatılacak ve profil için çalıştırılabilir dosya.
+   - \<configFile\>: Başlatmak istediğiniz koleksiyon aracısının yapılandırma dosyası.
 
-![Tanı için çalışan veya yüklü bir uygulama seçin](../profiling/media/pdhub_selectrunningapp.png "PDHUB_SelectRunningApp")
+3. Toplamayı durdurmak ve sonuçlarınızı görüntülemek için, bu makalenin devamındaki "koleksiyonu Durdur" bölümündeki adımları izleyin.
 
-> [!NOTE]
-> Profil oluşturma araçlarının uzaktan kullanılmasını gerektiren diğer senaryolar için [bkz.](../profiling/profile-apps-from-command-line.md) CPU Kullanımı ve .NET Nesne Ayırma aracı ile komut satırı araçlarını kullanabilirsiniz.
+### <a name="attach-to-an-existing-application"></a>Mevcut bir uygulamaya iliştirme
 
-## <a name="see-also"></a>Ayrıca bkz.
+1. Not Defteri gibi bir uygulama açın ve sonra işlem KIMLIĞINI (PID) almak için **Görev Yöneticisi 'ni** açın. Görev Yöneticisi 'nde, Ayrıntılar sekmesinde PID 'yi bulun **Details**   .
+2. Bir komut istemi açın ve koleksiyon Aracısı yürütülebiliri ile dizine geçin. Genellikle şu şekildedir:
 
-Tanılama geliştirme ekibinin blog gönderileri ve MSDN makaleleri şunlardır:
-- [MSDN Dergisi: Visual Studio 2015'te Hata Ayıklarken Performansı Analiz Edin](https://msdn.microsoft.com/magazine/dn973013.aspx)
+   ```
+   <Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\
+   ```
 
-- [MSDN Dergisi: Sorunları Daha Hızlı Teşhis Etmek Için IntelliTrace'i Kullanın](https://msdn.microsoft.com/magazine/dn973014.aspx)
+3. Aşağıdaki komutu yazarak VSDiagnostics.exe dosyasını başlatın.
 
-- [Blog yazısı: Visual Studio 2015 Bellek Kullanım Aracı ile Olay Handler Sızıntıları Tanılama](https://devblogs.microsoft.com/devops/diagnosing-event-handler-leaks-with-the-memory-usage-tool-in-visual-studio-2015/)
+   ```
+   VSDiagnostics.exe start <id> /attach:<pid> /loadConfig:<configFile>
+   ```
 
-- [Video: Microsoft Visual Studio Ultimate 2015'te IntelliTrace ile Tarihsel Hata Ayıklama](https://channel9.msdn.com/Events/Ignite/2015/BRK3716)
+   Aşağıdaki bağımsız değişkenleri eklemeniz gerekir:
 
-- [Video: Visual Studio 2015 Kullanarak Performans Sorunlarını Ayıklama](https://channel9.msdn.com/Events/Build/2015/3-731)
+   - \<id\>: Koleksiyon oturumunu tanımlar. KIMLIK 1-255 arasında bir sayı olmalıdır.
+   - \<pid\>: Profili eklemek istediğiniz işlemin PID 'SI, bu örnekte 1. adımda bulduğunuz PID 'dir.
+   - \<configFile\>: Başlatmak istediğiniz koleksiyon aracısının yapılandırma dosyası. Daha fazla bilgi için bkz. [aracılar Için yapılandırma dosyaları](../profiling/profile-apps-from-command-line.md).
 
-- [PerfTips: Visual Studio ile Hata Ayıklama sırasında bir bakışta Performans Bilgileri](https://devblogs.microsoft.com/devops/perftips-performance-information-at-a-glance-while-debugging-with-visual-studio/)
+4. Toplamayı durdurmak ve sonuçlarınızı görüntülemek için sonraki bölümde yer alarak bulunan adımları izleyin.
 
-- [Visual Studio 2015'te Tanılama Araçları hata ayıklama penceresi](https://devblogs.microsoft.com/devops/diagnostic-tools-debugger-window-in-visual-studio-2015/)
+### <a name="stop-collection"></a>Toplamayı durdur
 
-- [IntelliTrace in Visual Studio Enterprise 2015](https://devblogs.microsoft.com/devops/intellitrace-in-visual-studio-ultimate-2015/)
+1. Aşağıdaki komutu yazarak koleksiyon oturumunu durdurun ve çıktıyı bir dosyaya gönderin.
+
+   ```
+   VSDiagnostics.exe stop <id> /output:<path to file>
+   ```
+
+2. Önceki komuttan dosya çıktısına gidin ve toplanan bilgileri incelemek için Visual Studio 'da açın.
+
+## <a name="agent-configuration-files"></a>Aracı yapılandırma dosyaları
+
+Koleksiyon aracıları, ölçmeye çalıştığınız seçeneklere bağlı olarak, farklı veri türlerini toplamanızı sağlayan, değiştirilebilir bileşenlerdir.
+Kolaylık olması için, bu bilgileri bir aracı yapılandırma dosyasında saklayabilirsiniz. Yapılandırma dosyası, en azından,. dll dosyasının adını ve COM CLSID 'sini içeren bir. JSON dosyasıdır. Aşağıdaki klasörde bulabileceğiniz örnek yapılandırma dosyaları aşağıda verilmiştir:
+
+```
+<Visual Studio installation folder>\Team Tools\DiagnosticsHub\Collector\AgentConfigs\
+```
+
+Aracı yapılandırma dosyalarını indirmek ve görüntülemek için lütfen aşağıdaki bağlantılara bakın:
+
+- https://aka.ms/vs/diaghub/agentconfig/cpubase
+- https://aka.ms/vs/diaghub/agentconfig/cpuhigh
+- https://aka.ms/vs/diaghub/agentconfig/cpulow
+- https://aka.ms/vs/diaghub/agentconfig/database
+- https://aka.ms/vs/diaghub/agentconfig/dotnetasyncbase
+- https://aka.ms/vs/diaghub/agentconfig/dotnetallocbase
+- https://aka.ms/vs/diaghub/agentconfig/dotnetalloclow
+
+CpuUsage yapılandırması (taban/yüksek/düşük), [CPU kullanımı](../profiling/cpu-usage.md) profil oluşturma aracı için toplanan verilere karşılık gelir.
+DotNetObjectAlloc yapılandırması (taban/düşük), [.NET nesne ayırma aracı](../profiling/dotnet-alloc-tool.md)için toplanan verilere karşılık gelir.
+
+Taban/düşük/yüksek yapılandırma örnekleme hızına başvurur. Örneğin, düşük değer 100 örnek/saniye ve yüksek 4000 örnek/saniye.
+VSDiagnostics.exe aracının bir koleksiyon aracısıyla çalışması için, uygun aracı için hem DLL hem de COM CLSID gerektirir. Aracının ek yapılandırma seçenekleri de olabilir. Yapılandırma dosyası olmadan bir aracı kullanıyorsanız, aşağıdaki komutta biçimini kullanın:
+
+```
+VSDiagnostics.exe start <id> /attach:<pid> /loadAgent:<agentCLSID>;<agentName>[;<config>]
+```

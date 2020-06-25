@@ -1,7 +1,7 @@
 ---
 title: Web performans testine veri kaynağı ekleme
 ms.date: 10/03/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Web performance tests, walkthroughs
 - Web performance tests, data binding (database)
@@ -9,54 +9,54 @@ ms.assetid: 2ada376d-f168-455d-9643-6acb535360c1
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 7c7f947be01500b0d45b81d404206722ac71084a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 94ad53e4ac3d65bfe6cf08bf03f1f79c2075e03d
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75565415"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289072"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>Web performans testine veri kaynağı ekleme
 
-Form sonrası parametrelerinize farklı değerler sağlamak için verileri aynı teste (örneğin) bağlamak için veri bağlama.
+Aynı teste farklı değerler sağlamak için veri bağlama (örneğin, form gönderi parametreleriniz için farklı değerler sağlamak için).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-![Verileri web performans testine bağlama](../test/media/web_test_databinding_conceptual.png)
+![Web performans testine veri bağlama](../test/media/web_test_databinding_conceptual.png)
 
-Örnek bir ASP.NET uygulaması kullanacağız. Üç *.aspx* sayfası vardır – varsayılan sayfa, bir Kırmızı sayfa ve mavi sayfa. Varsayılan sayfada kırmızı veya mavi ve gönder düğmesini seçmek için bir radyo denetimi vardır. Diğer iki *.aspx* sayfaları çok basittir. Birinde Kırmızı adında bir etiket, diğerinde mavi adında bir etiket var. Varsayılan sayfada gönder'i seçtiğinizde, diğer sayfalardan birini görüntüleriz. [ColorWebApp](https://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) örneğini indirebilir veya kendi web uygulamanızla birlikte takip edebilirsiniz.
+Örnek bir ASP.NET uygulaması kullanacağız. Üç *. aspx* sayfası vardır: varsayılan sayfa, kırmızı sayfa ve mavi sayfa. Varsayılan sayfada kırmızı veya mavi ve bir Gönder düğmesi seçmek için bir radyo denetimi vardır. Diğer iki *. aspx* sayfası çok basittir. Birinin kırmızı adlı bir etiketi vardır ve diğeri mavi adlı bir etikete sahiptir. Varsayılan sayfada Gönder ' i seçtiğinizde, diğer sayfalardan birini görüntüyoruz. [ColorWebApp](https://code.msdn.microsoft.com/Sample-ColorWebApp-76ff7506) örneğini indirebilir veya yalnızca kendi web uygulamanızla birlikte takip edebilirsiniz.
 
-![Test edilecek web uygulamasını çalıştırma](../test/media/web_test_databinding_runwebapp.png)
+![Sınanacak Web uygulamasını çalıştırma](../test/media/web_test_databinding_runwebapp.png)
 
-Çözümünüz, web uygulamasının sayfalarında gezinen bir web performans testi de içermelidir.
+Çözümünüz, Web uygulamasının sayfalarına gözatan bir Web performans testi de içermelidir.
 
-![Web performans testi ile çözüm](../test/media/web_test_databinding_solution.png)
+![Web performans testine sahip çözüm](../test/media/web_test_databinding_solution.png)
 
 ## <a name="create-a-sql-database"></a>SQL veritabanı oluşturma
 
 ::: moniker range="vs-2017"
 
-1. Visual Studio Enterprise'ınyoksa, [Visual Studio İndirmeler](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasından indirebilirsiniz.
+1. Visual Studio Enterprise yoksa, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download) sayfasından indirebilirsiniz.
 
 2. Bir SQL veritabanı oluşturun.
 
-     ![Yeni bir SQL veritabanı ekleme](../test/media/web_test_databinding_sql_addnewdb.png)
+     ![Yeni bir SQL veritabanı Ekle](../test/media/web_test_databinding_sql_addnewdb.png)
 
-3. Bir veritabanı projesi oluşturun.
+3. Veritabanı projesi oluşturun.
 
-     ![Veritabanından yeni proje oluşturma](../test/media/web_test_databinding_sql_addnewdbproject.png)
+     ![Veritabanından yeni proje oluştur](../test/media/web_test_databinding_sql_addnewdbproject.png)
 
-4. Veritabanı projesine bir tablo ekleyin.
+4. Veritabanı projesine tablo ekleyin.
 
-     ![Veritabanı projesine yeni bir tablo ekleme](../test/media/web_test_databinding_sql_addnewdbtablename.png)
+     ![Veritabanı projesine yeni bir tablo ekleyin](../test/media/web_test_databinding_sql_addnewdbtablename.png)
 
 5. Tabloya alanlar ekleyin.
 
-     ![Tabloya alan ekleme](../test/media/web_test_databinding_sql_addnewdbaddfields.png)
+     ![Tabloya alanlar ekleyin](../test/media/web_test_databinding_sql_addnewdbaddfields.png)
 
 6. Veritabanı projesini yayımlayın.
 
-     ![Solution Explorer'dan veritabanı projesini yayımlama](../test/media/web_test_databinding_sql_addnewdbpublish.png)
+     ![Çözüm Gezgini veritabanı projesini yayımlama](../test/media/web_test_databinding_sql_addnewdbpublish.png)
 
 7. Alanlara veri ekleyin.
 
@@ -66,27 +66,27 @@ Form sonrası parametrelerinize farklı değerler sağlamak için verileri aynı
 
 ::: moniker range="vs-2019"
 
-1. Visual Studio Enterprise'ınyoksa, [Visual Studio İndirmeler](https://visualstudio.microsoft.com/downloads) sayfasından indirebilirsiniz.
+1. Visual Studio Enterprise yoksa, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasından indirebilirsiniz.
 
 2. Bir SQL veritabanı oluşturun.
 
-     ![Yeni bir SQL veritabanı ekleme](../test/media/web_test_databinding_sql_addnewdb.png)
+     ![Yeni bir SQL veritabanı Ekle](../test/media/web_test_databinding_sql_addnewdb.png)
 
-3. Bir veritabanı projesi oluşturun.
+3. Veritabanı projesi oluşturun.
 
-     ![Veritabanından yeni proje oluşturma](../test/media/web_test_databinding_sql_addnewdbproject.png)
+     ![Veritabanından yeni proje oluştur](../test/media/web_test_databinding_sql_addnewdbproject.png)
 
-4. Veritabanı projesine bir tablo ekleyin.
+4. Veritabanı projesine tablo ekleyin.
 
-     ![Veritabanı projesine yeni bir tablo ekleme](../test/media/web_test_databinding_sql_addnewdbtablename.png)
+     ![Veritabanı projesine yeni bir tablo ekleyin](../test/media/web_test_databinding_sql_addnewdbtablename.png)
 
 5. Tabloya alanlar ekleyin.
 
-     ![Tabloya alan ekleme](../test/media/web_test_databinding_sql_addnewdbaddfields.png)
+     ![Tabloya alanlar ekleyin](../test/media/web_test_databinding_sql_addnewdbaddfields.png)
 
 6. Veritabanı projesini yayımlayın.
 
-     ![Solution Explorer'dan veritabanı projesini yayımlama](../test/media/web_test_databinding_sql_addnewdbpublish.png)
+     ![Çözüm Gezgini veritabanı projesini yayımlama](../test/media/web_test_databinding_sql_addnewdbpublish.png)
 
 7. Alanlara veri ekleyin.
 
@@ -94,15 +94,15 @@ Form sonrası parametrelerinize farklı değerler sağlamak için verileri aynı
 
 ::: moniker-end
 
-## <a name="add-the-data-source"></a>Veri kaynağını ekleme
+## <a name="add-the-data-source"></a>Veri kaynağını ekleyin
 
 1. Bir veri kaynağı ekleyin.
 
      ![Web performans testine veri kaynağı ekleme](../test/media/web_test_databinding_sql_adddatasource.png)
 
-2. Veri kaynağının türünü seçin ve adlandırın.
+2. Veri kaynağı türünü seçin ve adlandırın.
 
-     ![Veritabanı kaynağını adlandırın](../test/media/web_test_databinding_sql_adddatasourcedialog.png)
+     ![Veritabanı kaynağını Adlandır](../test/media/web_test_databinding_sql_adddatasourcedialog.png)
 
 3. Bir bağlantı oluşturun.
 
@@ -114,77 +114,77 @@ Form sonrası parametrelerinize farklı değerler sağlamak için verileri aynı
 
 4. Testiniz için kullanmak istediğiniz tabloyu seçin.
 
-     ![Veri kaynağı olarak Renk tablosunu ekleme](../test/media/web_test_databinding_sql_adddatasourcedialogaddtable.png)
+     ![Veri kaynağı olarak renk tablosu ekleme](../test/media/web_test_databinding_sql_adddatasourcedialogaddtable.png)
 
-     Tablo teste bağlıdır.
+     Tablo teste bağlanır.
 
-     ![Veri Kaynakları düğümü web performans testine ekle](../test/media/web_test_databinding_requestnodeadded_mdb.png)
+     ![Web performans testine veri kaynakları düğümü ekleme](../test/media/web_test_databinding_requestnodeadded_mdb.png)
 
-5. Testi kaydet.
+5. Testi kaydedin.
 
 ## <a name="bind-the-data"></a>Verileri bağlama
 
-1. **ColorName** alanını bağla.
+1. **ColorName** alanını bağlayın.
 
-     ![ColorName alanını RadioButtonList1 değerine bağlama](../test/media/web_test_databinding_sql_binddatasource.png)
+     ![ColorName alanını RadioButtonList1 değerine bağlayın](../test/media/web_test_databinding_sql_binddatasource.png)
 
-2. **Solution Explorer'da** *Local.testsettings* dosyasını açın ve **veri kaynağı satırı başına Bir çalıştır** seçeneğini belirleyin.
+2. **Çözüm Gezgini** *yerel. testsettings* dosyasını açın ve **veri kaynağı başına bir çalıştırma satırı** seçeneğini belirleyin.
 
-     ![Test ayarları dosyasını değiştirme](../test/media/web_test_databinding_sql_testsettings.png)
+     ![Test ayarları dosyasını düzenleme](../test/media/web_test_databinding_sql_testsettings.png)
 
 3. Web performans testini kaydedin.
 
-## <a name="run-the-test-with-the-data"></a>Testi verilerle çalıştırma
+## <a name="run-the-test-with-the-data"></a>Testi verilerle çalıştırın
 
 1. Testi çalıştırın.
 
-     ![Bağlamayı doğrulamak için web performans testini çalıştırın](../test/media/web_test_databinding_sql_runtest.png)
+     ![Bağlamayı doğrulamak için Web performans testini çalıştırın](../test/media/web_test_databinding_sql_runtest.png)
 
-     İki çalıştırma her veri satırı için görüntülenir. Run 1, *Red.aspx*sayfası için bir istek gönderir ve Run 2 *blue.aspx*sayfası için bir istek gönderir.
+     Her veri satırı için iki çalışma görüntülenir. Run 1, *Red. aspx*sayfası için bir istek gönderir ve 2. çalıştırma, *Blue. aspx*sayfasına bir istek gönderir.
 
-     ![Test çalıştırma sonuçları](../test/media/web_test_databinding_sql_runresults.png)
+     ![Test çalıştırması sonuçları](../test/media/web_test_databinding_sql_runresults.png)
 
-     Bir veri kaynağına bağlandığınızda, varsayılan yanıt URL kuralını ihlal edebilirsiniz. Bu durumda, Run 2'deki hata, *red.aspx* sayfasını özgün test kaydından bekleyen kuraldan kaynaklanır, ancak veri bağlama şimdi onu *Blue.aspx* sayfasına yönlendirir.
+     Bir veri kaynağına bağladığınızda, varsayılan yanıt URL kuralını ihlal edebilirsiniz. Bu durumda, çalışma 2 ' deki hata, özgün test kaydından *Red. aspx* sayfasını bekleyen kural nedeniyle oluşur, ancak veri bağlama şimdi onu *Blue. aspx* sayfasına yönlendirir.
 
-2. **Yanıt URL** doğrulama kuralını silerek ve testi yeniden çalıştırarak doğrulama hatasını düzeltin.
+2. **Yanıt URL** doğrulama kuralını silip testi yeniden çalıştırarak doğrulama hatasını düzeltin.
 
-     ![Yanıt URL doğrulama kuralını silme](../test/media/web_test_databinding_sql_deleteresponseurl.png)
+     ![Yanıt URL 'SI doğrulama kuralını Sil](../test/media/web_test_databinding_sql_deleteresponseurl.png)
 
-     Web performans testi artık veri bağlama kullanarak geçer.
+     Web performans testi artık veri bağlamayı kullanarak geçirilir.
 
-     ![Veri bağlama yı kullanarak test geçişleri](../test/media/web_test_databinding_sql_deleteresponseurlrunresults.png)
+     ![Veri bağlamayı kullanarak test geçişleri](../test/media/web_test_databinding_sql_deleteresponseurlrunresults.png)
 
 ## <a name="q--a"></a>Soru-Cevap
 
-### <a name="q-what-databases-can-i-use-as-a-data-source"></a>S: Veri kaynağı olarak hangi veritabanlarını kullanabilirim?
+### <a name="q-what-databases-can-i-use-as-a-data-source"></a>S: veri kaynağı olarak hangi veritabanlarını kullanabilirim?
 
-**A:** Aşağıdakileri kullanabilirsiniz:
+Y **:** Aşağıdakileri kullanabilirsiniz:
 
 - Microsoft SQL Azure.
 
-- Microsoft SQL Server 2005 veya sonraki sürümlerden herhangi biri.
+- Microsoft SQL Server 2005 veya sonraki bir sürümü.
 
 - Microsoft SQL Server veritabanı dosyası (SQL Express dahil).
 
 - Microsoft ODBC.
 
-- Microsoft Access dosyası, OLE DB için .NET Framework sağlayıcısını kullanarak dosyayı kullanır.
+- OLE DB için .NET Framework sağlayıcıyı kullanan Microsoft Access dosyası.
 
-- Oracle 7.3, 8i, 9i veya 10g.
+- Oracle 7,3, 8i, 9i veya 10G.
 
-### <a name="q-how-do-i-use-a-comma-separated-value-csv-text-file-as-a-data-source"></a>S: Virgülle ayrılmış değer (CSV) metin dosyalarını veri kaynağı olarak nasıl kullanırım?
+### <a name="q-how-do-i-use-a-comma-separated-value-csv-text-file-as-a-data-source"></a>S: Nasıl yaparım? bir virgülle ayrılmış değer (CSV) metin dosyasını veri kaynağı olarak kullanmak mı istiyorsunuz?
 
-**A:** Bunun nasıl bir şekilde açıklanmıştır:
+Y **:** Şöyle:
 
-1. Proje veritabanı yapılarınızı düzenlemek ve bir öğe eklemek için bir klasör oluşturun.
+1. Proje veritabanı yapıtlarınızı düzenlemek ve bir öğe eklemek için bir klasör oluşturun.
 
-     ![Veri klasörüne yeni öğe ekleme](../test/media/web_test_databinding_foldernewitem.png)
+     ![Veri klasörüne yeni öğe Ekle](../test/media/web_test_databinding_foldernewitem.png)
 
 2. Bir metin dosyası oluşturun.
 
-     ![Yeni metin dosyası ColorData.csv adı](../test/media/web_test_databinding_foldernewitemtextfile.png)
+     ![Yeni metin dosyasını adlandırın ColorData.csv](../test/media/web_test_databinding_foldernewitemtextfile.png)
 
-3. Metin dosyasını edin ve aşağıdakileri ekleyin:
+3. Metin dosyasını düzenleyin ve aşağıdakileri ekleyin:
 
     ```text
     ColorId, ColorName
@@ -192,19 +192,19 @@ Form sonrası parametrelerinize farklı değerler sağlamak için verileri aynı
     1,Blue
     ```
 
-4. Veri kaynağını [ekle](#add-the-data-source)adımlarını kullanın, ancak veri kaynağınız olarak CSV dosyasını seçin.
+4. [Veri kaynağı ekleme](#add-the-data-source)bölümündeki adımları kullanın, ancak veri KAYNAĞıNıZ olarak CSV dosyası ' nı seçin.
 
-     ![Bir ad girin ve CSV dosyanızı seçin](../test/media/web_test_databinding_adddatasourcedialog.png)
+     ![Bir ad girin ve CSV dosyası seçin](../test/media/web_test_databinding_adddatasourcedialog.png)
 
-### <a name="q-what-if-my-existing-csv-file-does-not-contain-column-headers"></a>S: Varolan CSV dosyam sütun başlıkları içermiyorsa ne olur?
+### <a name="q-what-if-my-existing-csv-file-does-not-contain-column-headers"></a>S: var olan CSV dosyamın sütun başlıkları yoksa ne olacak?
 
-**A:** Sütun üstbilgileri ekleyemiyorumsa, CSV dosyasını veritabanı olarak ele almak için şema açıklama dosyasını kullanabilirsiniz.
+Y **:** Sütun üst bilgileri ekleyemez, CSV dosyasını veritabanı olarak değerlendirmek için bir şema açıklaması dosyası kullanabilirsiniz.
 
 1. *schema.ini*adlı yeni bir metin dosyası ekleyin.
 
-     ![Şema.ini dosyası ekle](../test/media/web_test_databinding_schemafile.png)
+     ![schema.ini dosyası Ekle](../test/media/web_test_databinding_schemafile.png)
 
-2. Verilerinizin yapısını açıklayan bilgileri eklemek için *şema.ini* dosyasını edin. Örneğin, CSV dosyasını açıklayan bir şema dosyası aşağıdaki gibi görünebilir:
+2. Verilerinizin yapısını açıklayan bilgileri eklemek için *schema.ini* dosyasını düzenleyin. Örneğin, CSV dosyasını tanımlayan bir şema dosyası şöyle görünebilir:
 
     ```text
     [testdata.csv]
@@ -215,51 +215,51 @@ Form sonrası parametrelerinize farklı değerler sağlamak için verileri aynı
 
      ![Web performans testine veri kaynağı ekleme](../test/media/web_test_databinding_sql_adddatasource.png)
 
-4. *Şema.ini* dosyası kullanıyorsanız, veri kaynağı olarak **Veritabanı'nı** (CSV dosyası değil) seçin ve adını verin.
+4. Bir *schema.ini* dosyası kullanıyorsanız, veri kaynağı olarak **veritabanı** (CSV dosyası değil) öğesini seçin ve adlandırın.
 
-     ![Veritabanı veri kaynağı ekleme](../test/media/web_test_databinding_adddatasourcecolortext.png)
+     ![Veritabanı veri kaynağı Ekle](../test/media/web_test_databinding_adddatasourcecolortext.png)
 
 5. Yeni bağlantı oluşturun.
 
      ![Yeni bağlantı seçin](../test/media/web_test_databinding_sql_adddatasourcedialogconnectionnew.png)
 
-6. OLE DB için .NET Framework Data Provider'ı seçin.
+6. OLE DB için .NET Framework Veri Sağlayıcısı seçin.
 
-     ![.NET framework OLE DB veri sağlayıcısını seçin](../test/media/web_test_databinding_adddatasourcecolortext2.png)
+     ![.NET Framework OLE DB veri sağlayıcısını seçin](../test/media/web_test_databinding_adddatasourcecolortext2.png)
 
-7. **Gelişmiş'i**seçin.
+7. **Gelişmiş**' i seçin.
 
-     ![Gelişmiş'i Seçin](../test/media/web_test_databinding_advanced.png)
+     ![Gelişmiş seçin](../test/media/web_test_databinding_advanced.png)
 
-8. Sağlayıcı özelliği için Microsoft.Jet.OLEDB.4.0'ı seçin ve **ardından Genişletilmiş Özellikleri** Met'e ayarlayın; HDR=HAYR.
+8. Sağlayıcı özelliği için, Microsoft. Jet. OLEDB. 4.0 ' ı seçin ve **genişletilmiş özellikleri** metin olarak ayarlayın; HDR = NO.
 
-     ![Gelişmiş özellikleri uygulama](../test/media/web_test_databinding_advancedproperties.png)
+     ![Gelişmiş özellikleri Uygula](../test/media/web_test_databinding_advancedproperties.png)
 
 9. Şema dosyasını içeren klasörün adını yazın ve bağlantınızı test edin.
 
-     ![Veri klasörüne giden yolu girin](../test/media/web_test_databinding_adddatasourcecolortext5.png)
+     ![Veri klasörünün yolunu girin](../test/media/web_test_databinding_adddatasourcecolortext5.png)
 
 10. Kullanmak istediğiniz CSV dosyasını seçin.
 
      ![Metin dosyasını seçin](../test/media/web_test_databinding_adddatasourcecolortext6.png)
 
-     Bitirdikten sonra, CSV dosyası tablo olarak görünür.
+     Bitirdikten sonra CSV dosyası bir tablo olarak görünür.
 
-     ![Teste eklenen veri kaynağı](../test/media/web_test_databinding_adddatasourcecolortext7.png)
+     ![Test 'e eklenen veri kaynağı](../test/media/web_test_databinding_adddatasourcecolortext7.png)
 
-### <a name="q-how-do-i-use-an-xml-file-as-a-data-source"></a>S: Bir XML dosyayı veri kaynağı olarak nasıl kullanırım?
+### <a name="q-how-do-i-use-an-xml-file-as-a-data-source"></a>S: bir XML dosyasını veri kaynağı olarak kullanmak Nasıl yaparım? mı?
 
 **Y:** Evet.
 
-1. Proje veritabanı yapılarınızı düzenlemek ve bir öğe eklemek için bir klasör oluşturun.
+1. Proje veritabanı yapıtlarınızı düzenlemek ve bir öğe eklemek için bir klasör oluşturun.
 
-     ![Veri klasörüne yeni öğe ekleme](../test/media/web_test_databinding_foldernewitem.png)
+     ![Veri klasörüne yeni öğe Ekle](../test/media/web_test_databinding_foldernewitem.png)
 
 2. Bir XML dosyası oluşturun.
 
-     ![ColorData.xml dosyası ekle](../test/media/web_test_databinding_additemxmlfile.png)
+     ![ColorData.xml dosyası Ekle](../test/media/web_test_databinding_additemxmlfile.png)
 
-3. XML dosyasını edin ve verilerinizi ekleyin:
+3. XML dosyasını düzenleyin ve verilerinizi ekleyin:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -275,25 +275,25 @@ Form sonrası parametrelerinize farklı değerler sağlamak için verileri aynı
     </ColorData>
     ```
 
-4. Veri kaynağını [ekle'deki](#add-the-data-source)adımları kullanın, ancak veri kaynağınız olarak XML dosyasını seçin.
+4. [Veri kaynağı ekleme](#add-the-data-source)bölümündeki adımları kullanın, ancak veri KAYNAĞıNıZ olarak XML dosyası ' nı seçin.
 
-     ![Bir ad girin ve XML dosyayı seçin](../test/media/web_test_databinding_adddatasourcedialogxml.png)
+     ![Bir ad girin ve XML dosyası seçin](../test/media/web_test_databinding_adddatasourcedialogxml.png)
 
-### <a name="q-can-i-add-data-binding-to-a-web-service-request-that-uses-soap"></a>S: SOAP kullanan bir web hizmeti isteğine veri bağlama ekleyebilir miyim?
+### <a name="q-can-i-add-data-binding-to-a-web-service-request-that-uses-soap"></a>S: SOAP kullanan bir Web hizmeti isteğine veri bağlama ekleyebilir miyim?
 
-**A:** Evet, SOAP XML'i el ile değiştirmeniz gerekir.
+Y **:** Evet, SOAP XML 'i el ile değiştirmeniz gerekir.
 
-1. İstek ağacındaki web hizmeti isteğini seçin ve Özellikler penceresinde String Body özelliğindeki elipsleri (...) seçin.
+1. İstek ağacındaki Web hizmeti isteğini seçin ve Özellikler penceresi dize gövdesi özelliğindeki üç nokta (...) simgesini seçin.
 
-     ![Web hizmeti dize gövdesini edin](../test/media/web_test_databinding_webservicerequest.png)
+     ![Web hizmeti dize gövdesini düzenleme](../test/media/web_test_databinding_webservicerequest.png)
 
-2. SOAP gövdesindeki değerleri aşağıdaki sözdizimi kullanarak veriye bağlı değerlerle değiştirin:
+2. SOAP gövdesindeki değerleri, aşağıdaki sözdizimini kullanarak veriye dayalı değerlerle değiştirin:
 
     ```xml
     {{DataSourceName.TableName.ColumnName}}
     ```
 
-    Örneğin, aşağıdaki kod varsa:
+    Örneğin, aşağıdaki koda sahipseniz:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -306,7 +306,7 @@ Form sonrası parametrelerinize farklı değerler sağlamak için verileri aynı
     </soap:Envelope>
     ```
 
-    Şu na göre değiştirebilirsiniz:
+    Bunu şu şekilde değiştirebilirsiniz:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -319,4 +319,4 @@ Form sonrası parametrelerinize farklı değerler sağlamak için verileri aynı
     </soap:Envelope>
     ```
 
-3. Testi kaydet.
+3. Testi kaydedin.

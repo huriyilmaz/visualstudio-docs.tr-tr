@@ -10,16 +10,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3355636eba7556a472d8ce272437fb07c30714be
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: da13cb2b249146c7a29abbab03b66f77594abf4b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184191"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285418"
 ---
 # <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>Visual Studio kullanarak bir uygulamayı yerel bir klasöre dağıtma
 
-**Yayımla** aracını, Visual Studio 'dan yerel bir klasöre ASP.NET, ASP.NET Core, .NET Core ve Python uygulamaları yayımlamak için kullanabilirsiniz. Node. js için, adımlar desteklenir, ancak kullanıcı arabirimi farklıdır.
+**Yayımla** aracını, Visual Studio 'dan yerel bir klasöre ASP.NET, ASP.NET Core, .NET Core ve Python uygulamaları yayımlamak için kullanabilirsiniz. Node.js, adımlar desteklenir, ancak kullanıcı arabirimi farklıdır.
 
 [!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
 
@@ -34,13 +34,13 @@ ms.locfileid: "84184191"
 
 1. **Yayımla** Iletişim kutusunda **klasör**' i seçin.
 
-    ![Yayımla hedefi olarak klasör seçin](../deployment/media/quickstart-publish-folder.png "Klasör Seç")
+    ![Yayımla hedefi olarak klasör seçin](../deployment/media/quickstart-publish-folder-new.png "Klasör Seç")
 
 1. Bir yol girin veya bir klasör belirtmek için **Araştır** ' ı seçin.
 
     ![Klasörün yolunu belirtin](../deployment/media/quickstart-publish-folder-path.png "Klasör Seç")
 
-1. **Yayımla**’yı seçin. Visual Studio projeyi oluşturur ve belirtilen klasöre yayımlar. Bir profil Özeti gösteren proje özellikleri **Yayımla** bölmesi görüntülenir.
+1. **Yayımla** seçeneğini belirleyin. Visual Studio projeyi oluşturur ve belirtilen klasöre yayımlar. Bir profil Özeti gösteren proje özellikleri **Yayımla** bölmesi görüntülenir.
 
     ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-publish-folder-summary.png)
 

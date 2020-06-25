@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c058a5986f72192a86d0e554d9e0d0b9bdce1b42
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: a62b4df06d1c180a6a6d62b0231dce1136fb8059
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173518"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288981"
 ---
 # <a name="itemgroup-element-msbuild"></a>ItemGroup öğesi (MSBuild)
 
@@ -32,7 +32,7 @@ Kullanıcı tanımlı [öğe](../msbuild/item-element-msbuild.md) öğeleri küm
 \<Project>
 \<ItemGroup>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ItemGroup Condition="'String A' == 'String B'"
@@ -51,17 +51,17 @@ Kullanıcı tanımlı [öğe](../msbuild/item-element-msbuild.md) öğeleri küm
 |Öznitelik|Açıklama|
 |---------------|-----------------|
 |`Condition`|İsteğe bağlı öznitelik. Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|
-|`Label`|İsteğe bağlı öznitelik. Öğesini tanımlar `ItemGroup` .|
+|`Label`|İsteğe bağlı öznitelik. Öğesini tanımlar `ItemGroup` . |
 
 ### <a name="child-elements"></a>Alt öğeleri
 
-|Öğe|Açıklama|
+|Öğe|Description|
 |-------------|-----------------|
 |[Öğe](../msbuild/item-element-msbuild.md)|Yapı işlemi için girişleri tanımlar. İçinde sıfır veya daha fazla `Item` öğe olabilir `ItemGroup` .|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
-| Öğe | Açıklama |
+| Öğe | Description |
 | - | - |
 | [Project](../msbuild/project-element-msbuild.md) | MSBuild proje dosyasının gerekli kök öğesi. |
 | [Hedef](../msbuild/target-element-msbuild.md) | .NET Framework 3,5 ' den başlayarak, `ItemGroup` öğe bir öğe içinde görünebilir `Target` . Daha fazla bilgi için bkz. [hedefler](../msbuild/msbuild-targets.md). |
@@ -90,6 +90,8 @@ Aşağıdaki kod örneği, Kullanıcı tanımlı öğe koleksiyonlarını göste
 Basit bir proje dosyasında, normalde tek bir `ItemGroup` öğesi kullanırsınız, ancak birden çok öğe de kullanabilirsiniz `ItemGroup` . Birden çok `ItemGroup` öğe kullanıldığında, öğeler tek bir halinde birleştirilir `ItemGroup` . Örneğin, bazı öğeler `ItemGroup` içeri aktarılan bir dosyada tanımlanan ayrı bir öğe tarafından bulunabilir.
 
 ItemGroups özniteliği kullanılarak uygulanmış koşullara sahip olabilir `Condition` . Bu durumda, öğeler yalnızca koşul karşılandığında öğe listesine eklenir. Bkz. [MSBuild koşulları](msbuild-conditions.md)
+
+`Label`Özniteliği, derleme davranışlarını denetlemek için bir yöntem olarak bazı yapı sistemlerinde kullanılır. Bu ayarı, daha fazla anlaşılır MSBuild betikleri oluşturmanın bir yolu olarak veya derleme eylemlerini etkileyen bir denetim ayarı olarak yalnızca bildirimlerde kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

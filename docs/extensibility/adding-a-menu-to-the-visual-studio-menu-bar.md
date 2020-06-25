@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Menü Çubuğuna Menü Ekleme | Microsoft Dokümanlar
+title: Visual Studio menü çubuğuna menü ekleme | Microsoft Docs
 ms.date: 3/16/2019
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,49 +11,51 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 91e5a6e1714dbb87abc67fbf722c3bbd1a194a5b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: b87fc73c1ed4b24ccfbd604e3bb08c9b02b62524
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740315"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85285393"
 ---
-# <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Visual Studio menü çubuğuna menü ekleme
+# <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Visual Studio menü çubuğuna bir menü ekleyin
 
-Bu gözden geçirme, Visual Studio tümleşik geliştirme ortamının (IDE) menü çubuğuna nasıl bir menü ekleyeceğinigösterir. IDE menü **çubuğu, Dosya**, **Edit**, **Görünüm**, **Pencere**ve **Yardım**gibi menü kategorileri içerir.
+Bu izlenecek yol, Visual Studio tümleşik geliştirme ortamının (IDE) menü çubuğuna bir menünün nasıl ekleneceğini gösterir. IDE menü çubuğu, **Dosya**, **düzenleme**, **görüntüleme**, **pencere**ve **Yardım**gibi menü kategorilerini içerir.
 
-Visual Studio menü çubuğuna yeni bir menü eklemeden önce, komutlarınızın varolan bir menüye yerleştirilip yerleştirilmeyeceğini göz önünde bulundurun. Komut yerleşimi hakkında daha fazla bilgi için [Visual Studio için Menüler ve komutlara](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md)bakın.
+Visual Studio menü çubuğuna yeni bir menü eklemeden önce, komutlarınızın mevcut bir menü içine yerleştirilmesi gerekip gerekmediğini göz önünde bulundurun. Komut yerleşimi hakkında daha fazla bilgi için bkz. [Visual Studio Için menüler ve komutlar](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md).
 
-Menüler projenin *.vsct* dosyasında bildirilir. Menüler ve *.vsct* dosyaları hakkında daha fazla bilgi için [Komutlar, menüler ve araç çubuklarına](../extensibility/internals/commands-menus-and-toolbars.md)bakın.
+Menüler, projenin *. vsct* dosyasında bildirilmiştir. Menüler ve *. vsct* dosyaları hakkında daha fazla bilgi için bkz. [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).
 
-Bu izbiyi tamamlayarak, **testmenüsü** adında tek bir komut içeren bir menü oluşturabilirsiniz.
+Bu yönergeyi tamamlayarak, bir komut içeren **TestMenu** adlı bir menü oluşturabilirsiniz.
 
+:::moniker range=">=vs-2019"
 > [!NOTE]
-> VS 2019'da uzantıların katkıda olduğu üst düzey menüler **Uzanlar** menüsünün altına yerleştirilir.
+> Visual Studio 2019 ' den başlayarak, uzantılara göre katkıda bulunulan üst düzey menüler **Uzantılar** menüsüne yerleştirilir.
+:::moniker-end
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yüklemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak yer almaktadır. VS SDK'yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için Visual [Studio SDK'yı yükleyin.](../extensibility/installing-the-visual-studio-sdk.md)
+Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
-## <a name="create-a-vsix-project-that-has-a-custom-command-item-template"></a>Özel komut öğesi şablonu olan bir VSIX projesi oluşturma
+## <a name="create-a-vsix-project-that-has-a-custom-command-item-template"></a>Özel bir komut öğesi şablonu olan bir VSıX projesi oluşturma
 
-1. Adlı `TopLevelMenu`bir VSIX projesi oluşturun. "vsix" aramasını yaparak **VSIX** proje şablonunu Yeni Proje iletişim kutusunda bulabilirsiniz.  Daha fazla bilgi için [bkz.](../extensibility/creating-an-extension-with-a-menu-command.md)
+1. Adlı bir VSıX projesi oluşturun `TopLevelMenu` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.  Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-2. Proje açıldığında, **TestCommand**adlı özel bir komut öğesi şablonu ekleyin. Çözüm **Gezgini'nde**proje düğümüne sağ tıklayın ve**Yeni Öğe** **Ekle'yi** >  seçin. Yeni **Öğe Ekle** iletişim kutusunda Visual **C# / Genişletilebilirlik'e** gidin ve **Özel Komut'u**seçin. Pencerenin altındaki **Ad** alanında, komut dosyası adını *TestCommand.cs*olarak değiştirin.
+2. Proje açıldığında, **TestCommand**adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >   **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#/genişletilebilirlik** ' e gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *TestCommand.cs*olarak değiştirin.
 
-## <a name="create-a-menu-on-the-ide-menu-bar"></a>IDE menü çubuğunda menü oluşturma
+## <a name="create-a-menu-on-the-ide-menu-bar"></a>IDE menü çubuğunda bir menü oluşturun
 
 ::: moniker range="vs-2017"
 
-1. **Solution**Explorer'da, *TestCommandPackage.vsct'i*açın.
+1. **Çözüm Gezgini**' de *TestCommandPackage. vsct*öğesini açın.
 
-    Dosyanın sonunda, birkaç \< \<GuidSymbol> düğümü içeren bir Semboller> düğümü vardır. guidTestCommandPackageCmdSet adlı düğümde, aşağıdaki gibi yeni bir simge ekleyin:
+    Dosyanın sonunda, \<Symbols> birkaç düğüm içeren bir düğüm vardır \<GuidSymbol> . GuidTestCommandPackageCmdSet adlı düğümde aşağıdaki şekilde yeni bir sembol ekleyin:
 
    ```xml
    <IDSymbol name="TopLevelMenu" value="0x1021"/>
    ```
 
-2. Gruplar>'den \< \<hemen önce, \<düğüm> komutlarda boş bir Menü> düğüm oluşturun. Menüler \<düğümü>, aşağıdaki \<gibi bir Menü> düğümü ekleyin:
+2. \<Menus> \<Commands> Düğümde yalnızca daha önce boş bir düğüm oluşturun \<Groups> . Düğümünde, \<Menus> \<Menu> aşağıdaki gibi bir düğüm ekleyin:
 
    ```xml
    <Menus>
@@ -68,37 +70,37 @@ Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yükle
    </Menus>
    ```
 
-    `guid` Menünün `id` ve değerleri komut kümesini ve komut kümesindeki belirli menüyü belirtir.
+    `guid`Menünün ve `id` değerleri komut kümesindeki komut kümesini ve belirli menüyü belirler.
 
-    Üst `guid` `id` öğenin ve değerlerinin ve menüyü Visual Studio menü çubuğunun Araçlar ve Eklentiler menülerini içeren bölümünde konumlandırın.
+    `guid` `id` Üst öğesi ve değerleri, Visual Studio menü çubuğunun araç ve eklenti menülerini içeren bölümündeki menüyü konumlandırır.
 
-    Dize `CommandName` değeri, metnin menü öğesinde görünmesi gerektiğini belirtir.
+    Dizenin değeri, `CommandName` metnin menü öğesinde görünmesi gerektiğini belirtir.
 
-3. \<> Gruplar bölümünde, Grup \<>'ni \<bulun ve Üst> öğesini az önce eklediğimiz menüye işaret etmek üzere değiştirin:
+3. \<Groups>Bölümünde \<Group> öğesini bulun ve \<Parent> öğesini yeni eklediğimiz menüye işaret etmek üzere değiştirin:
 
-   ```csharp
+   ```xml
    <Groups>
-         <Group guid="guidTestCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+       <Group guid="guidTestCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
            <Parent guid="guidTestCommandPackageCmdSet" id="TopLevelMenu"/>
-         </Group>
-       </Groups>
+       </Group>
+   </Groups>
    ```
 
-    Bu, grubu yeni menünün bir parçası haline getirir.
+    Bu, grubun yeni menünün bir parçasını oluşturur.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-1. **Solution**Explorer'da, *TopLevelMenuPackage.vsct'i*açın.
+1. **Çözüm Gezgini**içinde *TopLevelMenuPackage. vsct*öğesini açın.
 
-    Dosyanın sonunda, birkaç \< \<GuidSymbol> düğümü içeren bir Semboller> düğümü vardır. GuidTopLevelMenuPackageCmdSet adlı düğümde, aşağıdaki gibi yeni bir simge ekleyin:
+    Dosyanın sonunda, \<Symbols> birkaç düğüm içeren bir düğüm vardır \<GuidSymbol> . GuidTopLevelMenuPackageCmdSet adlı düğümde, aşağıdaki gibi yeni bir sembol ekleyin:
 
    ```xml
    <IDSymbol name="TopLevelMenu" value="0x1021"/>
    ```
 
-2. Gruplar>'den \< \<hemen önce, \<düğüm> komutlarda boş bir Menü> düğüm oluşturun. Menüler \<düğümü>, aşağıdaki \<gibi bir Menü> düğümü ekleyin:
+2. \<Menus> \<Commands> Düğümde yalnızca daha önce boş bir düğüm oluşturun \<Groups> . Düğümünde, \<Menus> \<Menu> aşağıdaki gibi bir düğüm ekleyin:
 
    ```xml
    <Menus>
@@ -113,47 +115,47 @@ Visual Studio 2015'ten itibaren Visual Studio SDK'yı indirme merkezinden yükle
    </Menus>
    ```
 
-    `guid` Menünün `id` ve değerleri komut kümesini ve komut kümesindeki belirli menüyü belirtir.
+    `guid`Menünün ve `id` değerleri komut kümesindeki komut kümesini ve belirli menüyü belirler.
 
-    Üst `guid` `id` öğenin ve değerlerinin ve menüyü Visual Studio menü çubuğunun Araçlar ve Eklentiler menülerini içeren bölümünde konumlandırın.
+    `guid` `id` Üst öğesi ve değerleri, Visual Studio menü çubuğunun araç ve eklenti menülerini içeren bölümündeki menüyü konumlandırır.
 
-    Dize `CommandName` değeri, metnin menü öğesinde görünmesi gerektiğini belirtir.
+    Dizenin değeri, `CommandName` metnin menü öğesinde görünmesi gerektiğini belirtir.
 
-3. \<> Gruplar bölümünde, Grup \<>'ni \<bulun ve Üst> öğesini az önce eklediğimiz menüye işaret etmek üzere değiştirin:
+3. \<Groups>Bölümünde \<Group> öğesini bulun ve \<Parent> öğesini yeni eklediğimiz menüye işaret etmek üzere değiştirin:
 
-   ```csharp
+   ```xml
    <Groups>
-         <Group guid="guidTopLevelMenuPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+       <Group guid="guidTopLevelMenuPackageCmdSet" id="MyMenuGroup" priority="0x0600">
            <Parent guid="guidTopLevelMenuPackageCmdSet" id="TopLevelMenu"/>
-         </Group>
-       </Groups>
+       </Group>
+   </Groups>
    ```
 
-    Bu, grubu yeni menünün bir parçası haline getirir.
+    Bu, grubun yeni menünün bir parçasını oluşturur.
 
 ::: moniker-end
 
-4. `Buttons` Bölümü bulun. Paket şablonunüst [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] öğesini `Button` '' olarak ayarlayan bir öğe oluşturduğuna `MyMenuGroup`dikkat edin. Sonuç olarak, bu komut menünüzde görünür.
+4. Bölümünü bulun `Buttons` . [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Paket şablonunun üst öğesi olarak ayarlanmış bir öğe ürettiğine dikkat edin `Button` `MyMenuGroup` . Sonuç olarak, bu komut menüde görünür.
 
-## <a name="build-and-test-the-extension"></a>Uzantıyı oluşturma ve test edin
+## <a name="build-and-test-the-extension"></a>Uzantıyı derleme ve test etme
 
-1. Projeyi oluşturun ve hata ayıklamaya başlayın. Deneysel örneğin bir örneği görünmelidir.
+1. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örneğin bir örneği görünmelidir.
 
 ::: moniker range="vs-2017"
 
-2. Deneme örneğindeki menü çubuğu bir **TestMenu** menüsü içermelidir.
+2. Deneysel örnekteki menü çubuğu bir **TestMenu** menüsü içermelidir.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Deneme örneğindeki **Uzantılar** menüsü bir **TestMenu** menüsü içermelidir.
+2. Deneysel örnekteki **Uzantılar** menüsü bir **TestMenu** menüsü içermelidir.
 
 ::: moniker-end
 
-3. **TestMenüsü** menüsünde, **Test Komutunu Çağır'ı**tıklatın.
+3. **TestMenu** menüsünde **test komutunu çağır**' a tıklayın.
 
-     İleti kutusu görünmeli ve "TestKomut Paketi Inside TopLevelMenu.TestCommand.MenuItemCallback()" iletisini görüntülemelidir.
+     İleti kutusu görünmelidir ve "TestCommand paketini TopLevelMenu. TestCommand. Menuıitemcallback ()" Içinde görüntüler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

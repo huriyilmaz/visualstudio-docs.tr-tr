@@ -1,109 +1,109 @@
 ---
-title: Yük testleri için Sanal Kullanıcı Etkinliğini Analiz Edin
+title: Yük testleri için sanal kullanıcı etkinliğini çözümleme
 ms.date: 10/19/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - virtual user activity chart, viewing
 ms.assetid: 8bda19b3-91c1-4daf-b6c7-09108bddadff
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c997f27e65a8e3992239fac78d52b0b4f19670c3
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 64b69ba926e3c978efa60bd9946da94d846c383f
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78169410"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85288409"
 ---
-# <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>Nasıl yapılır: Sanal kullanıcı etkinlik grafiğini kullanarak yükleme testi sırasında sanal kullanıcıların ne yaptığını analiz etme
+# <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>Nasıl yapılır: Sanal Kullanıcı Etkinlik grafiğini kullanarak yük testi sırasında sanal kullanıcıların ne yaptığını çözümleme
 
-**Sanal Kullanıcı Etkinlik Grafiği'ni**kullanarak yük testinizle ilişkili sanal kullanıcı etkinliğini görüntüleyin. Grafikteki her satır tek bir sanal kullanıcıyı temsil eder. **Sanal Kullanıcı Etkinlik Grafiği,** her sanal kullanıcının test sırasında tam olarak ne yaptığını gösterir. Kullanıcı etkinliği kalıplarını, yükleme desenlerini görebilir, başarısız veya yavaş testleri ilişkilendirebilir ve istekleri diğer sanal kullanıcı etkinliğiyle görebilirsiniz. **Sanal Kullanıcı Etkinlik Grafiği** yalnızca yük testi çalışması bittikten sonra kullanılabilir.
+**Sanal Kullanıcı Etkinlik grafiğini**kullanarak yük testinizdeki ilişkili sanal kullanıcı etkinliğini görüntüleyin. Grafikteki her satır, tek bir sanal kullanıcıyı temsil eder. **Sanal Kullanıcı etkinliği grafiği** , her bir sanal kullanıcının test sırasında hangi şekilde yürüttüğünü gösterir. Kullanıcı etkinliği düzenlerini, yükleme düzenlerini, başarısız veya yavaş testleri ilişkilendirmek ve diğer Sanal Kullanıcı etkinliğiyle istekleri görmek için bkz.. **Sanal Kullanıcı etkinliği grafiği** yalnızca yük testinin çalışması bittikten sonra kullanılabilir.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Aşağıdaki yordamlar Sanal Kullanıcı **Etkinlik Grafiği'ni**nasıl görüntüleneniz, belirli bir kullanıcının etkinliğini nasıl araştırılakullanılacağı ve filtrelemenin nasıl kullanılacağını gösterir.
+Aşağıdaki yordamlarda, **Sanal Kullanıcı Etkinlik grafiğinin**nasıl görüntüleneceği, belirli bir kullanıcının etkinliğinin nasıl araştırılacağı ve filtrelemenin nasıl kullanılacağı gösterilmektedir.
 
-## <a name="to-view-the-virtual-user-activity-chart-in-your-load-test-results"></a>Yük testi sonuçlarınızda Sanal Kullanıcı Etkinlik Grafiği'ni görüntülemek için
+## <a name="to-view-the-virtual-user-activity-chart-in-your-load-test-results"></a>Yük testi sonuçlarınızda Sanal Kullanıcı etkinliği grafiğini görüntülemek için
 
-1. Sanal kullanıcı verilerini görüntülemek için öncelikle yükleme testinizle ilişkili **Zamanlama Ayrıntıları Depolama** özelliği için Tüm Bireysel **Ayrıntılar** ayarını yapılandırmanız gerekir. Sonra yükleme testini çalıştırın.
+1. Sanal Kullanıcı verilerini görüntülemek için, önce yük testiniz ile ilişkili **Zamanlama Ayrıntıları Depolama** özelliği Için **Tüm Bireysel Ayrıntılar** ayarını yapılandırmanız gerekir. Ardından Yük testini çalıştırın.
 
-2. Yükleme testiniz çalıştırıladıktan sonra test sonuçları özet sayfası görüntülenir. Araç çubuğundaki **Kullanıcı Ayrıntısı** düğmesini seçin.
+2. Yük testiniz çalıştıktan sonra test sonuçları Özet sayfası görüntülenir. Araç çubuğunda **Kullanıcı ayrıntısı** düğmesini seçin.
 
      -veya-
 
-     Araç çubuğundaki **Grafikler** düğmesini seçerek Grafikler görünümünü açın. Bir grafiğe sağ tıklayın ve ardından **kullanıcı ayrıntısına git'i**seçin.
+     Araç çubuğundaki **grafikler** düğmesini seçerek grafikler görünümünü açın. Bir grafiğe sağ tıklayın ve sonra **Kullanıcı ayrıntısına git**' i seçin.
 
-     Bu seçeneği kullanırsanız, **Sanal Kullanıcı Etkinlik Grafiği,** testin sağ tıklatma kısmını otomatik olarak yakınlaştırır. Örneğin, işaretçiniz yaklaşık 30 saniyelik işarette bulunuyorsa, ayrıntı görünümü **Sanal Kullanıcı Etkinlik Grafiği'nin**altındaki Zaman **Dilimini Yakınlaştırma** aracındaki 30 saniyelik işarette yaklaşık olarak görüntülenir.
+     Bu seçeneği kullanırsanız, **Sanal Kullanıcı etkinliği grafiği** sağ tıklattığınız testin kısmına otomatik olarak yakınlaştıracaktır. Örneğin, işaretçiniz yaklaşık 30 saniye işaretinde bulunuyorsa, ayrıntı görünümü **Sanal Kullanıcı etkinliği grafiğinin**alt kısmındaki **zaman dilimi yakınlaştırma** aracında yaklaşık olarak 30 saniyelik bir işaret görüntüler.
 
-     Ardından, **Sanal Kullanıcı Etkinlik Grafiği'nde**belirli bir kullanıcının etkinlik ayrıntılarını araştırma'yı kullanabilirsiniz.
+     Sonra, **Sanal Kullanıcı Etkinlik grafiğinde**belirli bir kullanıcının etkinlik ayrıntılarını Araştır ' ı kullanabilirsiniz.
 
-## <a name="to-investigate-a-specific-users-activity-in-the-virtual-user-activity-chart"></a>Sanal Kullanıcı Etkinlik Grafiği'nde belirli bir kullanıcının etkinliğini araştırmak için
+## <a name="to-investigate-a-specific-users-activity-in-the-virtual-user-activity-chart"></a>Belirli bir kullanıcının etkinliğini Sanal Kullanıcı Etkinlik grafiğinde araştırmak için
 
-1. **Grafikte** belirli bir kullanıcının ayrıntılarını araştırmak istediğiniz bir alanı seçmek için Sanal Kullanıcı Etkinlik Grafiği'nin altındaki Zaman Dilimini Yakınla aracını kullanın.
+1. Grafikte belirli bir kullanıcının ayrıntılarını araştırmak istediğiniz alanı seçmek için **Sanal Kullanıcı etkinliği grafiğinin** alt kısmındaki zaman dilimini Yakınlaştır aracını kullanın.
 
-2. İşaretçini grafikteki bir ayrıntının üzerine tover. Araç ipucunda aşağıdaki bilgilerin görüntülendiğine dikkat edin:
+2. İşaretçinizi grafikteki bir ayrıntı üzerine getirin. Araç ipucunda aşağıdaki bilgilerin görüntülendiğini unutmayın:
 
-   - **Kullanıcı Kimliği**
+   - **Kullanıcı kimliği**
 
    - **Senaryo**
 
    - **Test**
 
-   - **URL** (Test veya işlemde görüntüleniyor)
+   - **URL** (bir test veya işlemde görüntülenmez)
 
    - **Sonuç**
 
-   - **Tarayıcı** (Test veya işlemde görüntüleniyor)
+   - **Tarayıcı** (bir test veya işlemde görüntülenmez)
 
    - **Ağ**
 
-   - **Başlangıç Saati**
+   - **Başlangıç Zamanı**
 
    - **Süre**
 
    - **Aracı**
 
-   - **Test günlüğü** (Test günlüğüne bağlantı)
+   - **Test günlüğü** (test günlüğüne bağlantı)
 
      > [!NOTE]
-     > Uygulamanızın hata ayıklanmasına yardımcı olmak için, **Test günlüğü** bağlantısını seçerseniz, web test sonucu veya günlük açıkla ilişkili birim test sonucu.
+     > Uygulamanızı hata ayıklamaya yardımcı olmak için, **Test günlüğü** bağlantısını, Web testi sonucunu veya günlük açma ile ilişkili birim testi sonucunu seçebilirsiniz.
 
-     Ardından, **Sanal Kullanıcı Etkinlik Grafiği'nde**bulunan filtreleme ve vurgulama işlemlerini kullanabilirsiniz.
+     Sonra, **Sanal Kullanıcı Etkinlik grafiğinde**bulunan filtreleme ve vurgulama işlemlerini kullanabilirsiniz.
 
-## <a name="to-use-filtering-options-in-the-virtual-user-activity-chart"></a>Sanal Kullanıcı Etkinlik Grafiği'nde filtreleme seçeneklerini kullanmak için
+## <a name="to-use-filtering-options-in-the-virtual-user-activity-chart"></a>Sanal Kullanıcı Etkinlik grafiğinde filtreleme seçeneklerini kullanmak için
 
-1. Ayrıntılar **Gösterge'** de, **Test,** **Sayfa**veya **Hareket'i**seçmek için açılır listeyi kullanın.
+1. **Ayrıntılar göstergesinde**, **Test**, **sayfa**veya **işlem**seçeneklerinden birini belirlemek için açılan listeyi kullanın.
 
-    **Ayrıntılar Legend paneli**
+    **Ayrıntılar gösterge bölmesi**
 
-    ![Ayrıntılar efsane paneli](../test/media/ltest_detailslegend.png)
+    ![Ayrıntılar gösterge bölmesi](../test/media/ltest_detailslegend.png)
 
-2. Yükleme testiile ilişkili hatalar, günlükler, testler, arama ve aspx sayfaları için onay kutularını seçin veya temizleyin.
+2. Yük testiyle ilişkili hatalar, Günlükler, testler, arama ve aspx sayfalarının onay kutularını seçin veya temizleyin.
 
-    **Sanal Kullanıcı Etkinlik Grafiği** buna göre güncellenir.
+    **Sanal Kullanıcı etkinliği grafiği** buna uygun şekilde güncelleştirilir.
 
-    **Sanal Kullanıcı Etkinlik Grafiği,** testleri, sayfaları ve hareketleri birkaç farklı ölçüte göre filtreleme olanağı sağlar. Görünümden belirli testleri kaldırabilir veya tüm başarılı testleri kaldırabilir veya belirli hatalarla başarısız olan testleri kaldırabilirsiniz. Günlükleri olmayan tüm testleri de kaldırabilirsiniz.
+    **Sanal Kullanıcı etkinliği grafiği** , birkaç farklı ölçüte göre testleri, sayfaları ve işlemleri filtreleme yeteneği sağlar. Görünümden belirli testleri kaldırabilir veya tüm başarılı testleri kaldırabilir veya bazı hatalarda başarısız olan testleri kaldırabilirsiniz. Ayrıca, günlüğü olmayan tüm testleri de kaldırabilirsiniz.
 
-    Örneğin, grafikteki tüm hataları kırmızı renkle gösteren **(Hataları Vurgula)** seçeneğini seçebilirsiniz. Ayrıca, grafikte yeşil renkte günlükleri olan tüm test sonuçlarını görüntüleyen **(Günlüklerle sonuçları vurgulay)** seçeneğini de seçebilirsiniz.
+    Örneğin, grafikteki tüm hataları kırmızı renkte görüntüleyen **(hataları vurgula)** seçeneğini belirleyebilirsiniz. Ayrıca, grafikte yeşil renkte renkli olan tüm test sonuçlarını görüntüleyen **(Günlükler ile sonuçları vurgula)** seçeneğini de belirleyebilirsiniz.
 
     **Filtre sonuçları paneli**
 
     ![Filtre sonuçları paneli](../test/media/ltest_filterresults.png)
 
-3. Filtre **sonuçlarında,** aşağıdaki filtre seçenekleri için onay kutularını seçin veya temizleyin:
+3. **Filtre sonuçlarında**aşağıdaki filtre seçeneklerinin onay kutularını seçin veya temizleyin:
 
-   - **Yalnızca günlüklerle sonuçları göster** Yalnızca kendileriyle ilişkili test günlükleri olan test sonuçlarını görüntüler.
+   - **Yalnızca günlükleri olan sonuçları göster** Yalnızca bunlarla ilişkili test günlükleri olan test sonuçlarını görüntüler.
 
-   - **Başarılı sonuçları göster** Başarılı sonuçlar görüntüler.
+   - **Başarılı sonuçları göster** Başarılı sonuçları görüntüler.
 
-   - **Sonuçları hatalarla göster** Sonuçları hata ayıklamada yardımcı olabilecek hatalarla görüntüler.
+   - **Hatalı sonuçları göster** Hata ayıklamada yardımcı olabilecek hatalar içeren sonuçları görüntüler.
 
      > [!NOTE]
-     > **Hata düğümüyle sonuçları göster** altında listelenen hata türlerinin listesi, Web Performans Testi Sonuçları **Görüntüleyici** araç çubuğundaki **Tablolar** düğmesini seçerek daha da araştırılabilir. Daha fazla bilgi için bkz: [Tablolar görünümünde yük testi sonuçlarını ve hatalarını analiz](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)et.
+     > **Sonuçları hatalara göre göster** düğümü altında listelenen hata türlerinin listesi, **Web performans test sonuçları Görüntüleyicisi** araç çubuğundaki **Tablolar** düğmesi seçilerek daha sonra araştırılır. Daha fazla bilgi için bkz. [Tablolar görünümünde Yük testi sonuçlarını ve hatalarını çözümleme](../test/analyze-load-test-results-and-errors-in-the-tables-view.md).
 
-     **Sanal Kullanıcı Etkinlik Grafiği** buna göre güncellenir.
+     **Sanal Kullanıcı etkinliği grafiği** buna uygun şekilde güncelleştirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ayrıntılar görünümünde sanal kullanıcı etkinliğini analiz edin](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
-- [İzole: Sorunları yalıtmak için sanal kullanıcı etkinlik grafiğini kullanma](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)
+- [Ayrıntılar görünümündeki sanal kullanıcı etkinliğini çözümleme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
+- [İzlenecek yol: sorunları yalıtmak için Sanal Kullanıcı etkinliği grafiğini kullanma](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)
