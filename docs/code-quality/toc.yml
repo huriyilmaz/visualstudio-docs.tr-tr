@@ -551,6 +551,14 @@
                   href: ca1828.md
                 - name: 'CA1829: Enumerable.Count metodu yerine Length/Count özelliğini kullan'
                   href: ca1829.md
+                - name: 'CA1831: Uygun olduğunda dize için Aralık tabanlı dizin oluşturucular yerine AsSpan kullanın'
+                  href: ca1831.md
+                - name: 'CA1832: Bir dizinin ReadOnlySpan veya ReadOnlyMemory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın'
+                  href: ca1832.md
+                - name: 'CA1833: Bir dizinin Span veya Memory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın'
+                  href: ca1833.md
+                - name: 'CA1835: Akış ReadAsync/WriteAsync metotlarının bellek aşırı yüklemelerini tercih edin'
+                  href: ca1835.md
             - name: Taşınabilirlik uyarıları
               items:
                 - name: Genel Bakış
@@ -585,6 +593,12 @@
                   href: ca2009.md
                 - name: 'CA2011: Özelliği, ayarlayıcısı içinde atama'
                   href: ca2011.md
+                - name: 'CA2012: ValueTask’leri doğru kullanın'
+                  href: ca2012.md
+                - name: 'CA2013: ReferenceEquals metodunu değer türleriyle birlikte kullanmayın'
+                  href: ca2013.md
+                - name: 'CA2014: Döngülerde stackalloc kullanmayın'
+                  href: ca2014.md
                 - name: 'CA2015: MemoryManager’dan türetilen türler için sonlandırıcılar tanımlama<T>'
                   href: ca2015.md
             - name: Güvenlik uyarıları
@@ -750,6 +764,8 @@
                   href: ca5358.md
                 - name: 'CA5359: Sertifika doğrulamasını devre dışı bırakma'
                   href: ca5359.md
+                - name: 'CA5360: Seri durumdan çıkarırken tehlikeli metotlar çağırmayın'
+                  href: ca5360.md
                 - name: 'CA5361: Güçlü Şifrelemenin SChannel Kullanımını Devre Dışı Bırakma'
                   href: ca5361.md
                 - name: 'CA5362: Seri durumdan çıkarılan nesne grafındaki olası başvuru döngüsü'
@@ -778,6 +794,12 @@
                   href: ca5373.md
                 - name: 'CA5374: XslTransform Kullanma'
                   href: ca5374.md
+                - name: 'CA5375: Hesabın paylaşılan erişim imzasını kullanmayın'
+                  href: ca5375.md
+                - name: 'CA5376: SharedAccessProtocol HttpsOnly kullanın'
+                  href: ca5376.md
+                - name: 'CA5377: Kapsayıcı düzeyinde erişim ilkesi kullan'
+                  href: ca5377.md
                 - name: 'CA5378: ServicePointManagerSecurityProtocols''u Devre Dışı Bırakma'
                   href: ca5378.md
                 - name: 'CA5379: Zayıf anahtar türetme işlevi algoritmasını kullanma'
@@ -804,8 +826,16 @@
                   href: ca5389.md
                 - name: 'CA5390: Şifreleme anahtarını sabit olarak kodlama'
                   href: ca5390.md
+                - name: 'CA5391: ASP.NET Core MVC denetleyicilerinde sahtecilik önleme belirteçleri kullanın'
+                  href: ca5391.md
+                - name: 'CA5392: P/Invokes için DefaultDllImportSearchPaths özniteliğini kullanın'
+                  href: ca5392.md
+                - name: 'CA5393: Güvenli olmayan DllImportSearchPath değeri kullanmayın'
+                  href: ca5393.md
                 - name: 'CA5394: Güvenli olmayan rastgelelik kullanma'
                   href: ca5394.md
+                - name: 'CA5395: Eylem metotları için HttpVerb özniteliği eksik'
+                  href: ca5395.md
                 - name: 'CA5396: HttpCookie için HttpOnly''yi true olarak ayarla'
                   href: ca5396.md
                 - name: 'CA5397: Kullanım dışı SslProtocols değerlerini kullanmayın'
@@ -919,5 +949,7 @@
                   href: ca2245.md
                 - name: 'CA2246: Sembol ve üyesini aynı deyime atama'
                   href: ca2246.md
+                - name: 'CA2248: Enum.HasFlag için doğru sabit listesi bağımsız değişkenini belirtin'
+                  href: ca2248.md
             - name: Otomatik özelliği askıya alma
               href: automatic-feature-suspension.md

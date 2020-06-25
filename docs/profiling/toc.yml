@@ -1,11 +1,13 @@
 - name: Profil oluşturma belgeleri
   href: index.yml
 - name: Genel Bakış
-  href: profiling-overview.md
-- name: Hızlı Başlangıçlar
   items:
     - name: Profil oluşturmaya ilk bakış
       href: profiling-feature-tour.md
+    - name: Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
+      href: running-profiling-tools-with-or-without-the-debugger.md
+- name: Hızlı Başlangıçlar
+  items:
     - name: CPU kullanımını analiz etme (yönetilen)
       href: quickstart-cpu-usage-managed.md
     - name: CPU kullanımını analiz etme (yerel)
@@ -20,12 +22,22 @@
       href: memory-usage.md
 - name: Kavramlar
   items:
-    - name: Hata ayıklayıcı ile veya hata ayıklayıcı olmadan profil oluşturma araçları çalıştırma
-      href: running-profiling-tools-with-or-without-the-debugger.md
+    - name: Performans bilgilerini toplama metotlarını anlama
+      href: understanding-performance-collection-methods-perf-profiler.md
+    - name: Profil oluşturucu ayarlarını iyileştirme
+      href: optimize-profiler-settings.md
+    - name: Aynı anda birden çok profil oluşturucu aracını kullanma
+      href: use-multiple-profiler-tools-simultaneously.md
 - name: Nasıl yapılır kılavuzları
   items:
-    - name: PerfTips kullanma
+    - name: PerfTips
       href: perftips.md
+    - name: .NET Async
+      href: analyze-async.md
+    - name: Veritabanı
+      href: analyze-database.md
+    - name: Olay Görüntüleyicisi
+      href: events-viewer.md
     - name: CPU kullanımı
       href: cpu-usage.md
     - name: Bellek kullanımı

@@ -74,6 +74,7 @@
 ### [Süper yöneticiler ve yöneticiler](admin-roles.md)
 ### [Anlaşma tercihlerini belirleme](admin-prefs.md)
 ### [Genel bakış](using-admin-portal.md)
+### [Aylık abonelikler ekleme](add-monthly-subs.md)
 ### Abonelikleri atama
 #### [Tek kullanıcı ekleme](assign-license.md)
 #### [Birden çok kullanıcı ekleme](assign-license-bulk.md)

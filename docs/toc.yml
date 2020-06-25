@@ -154,9 +154,9 @@
       href: ide/quickstart-visual-basic-console.md
 - name: Öğreticiler
   items:
-    - name: 'C#'
+    - name: C#
       href: get-started/csharp/
-    - name: 'F#'
+    - name: F#
       href: /dotnet/fsharp/
     - name: Visual Basic
       href: get-started/visual-basic/
@@ -202,7 +202,7 @@
           items:
             - name: Uygulama ayarlarını yönetme (.NET)
               href: ide/managing-application-settings-dotnet.md
-            - name: 'C# projesine uygulama yapılandırma dosyası ekleme'
+            - name: C# projesine uygulama yapılandırma dosyası ekleme
               href: ide/how-to-add-app-config-file.md
         - name: Bildirimleri imzalama
           items:
@@ -291,7 +291,7 @@
               items:
                 - name: Kod parçacıkları kullanma
                   href: ide/code-snippets.md
-                - name: 'C# kod parçacıkları başvurusu'
+                - name: C# kod parçacıkları başvurusu
                   href: ide/visual-csharp-code-snippets.md
                 - name: C++ kod parçacıkları başvurusu
                   href: ide/visual-cpp-code-snippets.md
@@ -325,10 +325,16 @@
                   href: ide/reference/generate-method.md
                 - name: Alan/özellik/yerel öğe oluşturma
                   href: ide/reference/generate-field-property-local.md
+                - name: IComparable için Karşılaştırma İşleçleri Oluşturma
+                  href: ide/reference/generate-comparison-operators.md
                 - name: Oluşturucu oluşturma
                   href: ide/reference/generate-constructor.md
                 - name: Yıkıcı oluşturma
                   href: ide/reference/generate-deconstructor.md
+                - name: Yapılar için IEquatable işleçleri oluşturma
+                  href: ide/reference/generate-equals-structs.md
+                - name: Dosya üst bilgisi ekleme
+                  href: ide/reference/add-file-header.md
                 - name: Açık tür dönüştürme ekleme
                   href: ide/reference/add-explicit-cast.md
                 - name: Metoda parametre ekleme
@@ -368,6 +374,8 @@
                   href: ide/reference/convert-for-loop-to-foreach.md
                 - name: Get metodu ve özelliği arasında dönüştürme
                   href: ide/reference/convert-get-method-to-property.md
+                - name: Normal dize ve düz metin dizesi değişmez değerleri arasında dönüştürme
+                  href: ide/reference/convert-between-regular-string-verbatim-string.md
                 - name: Yerel işlevi metoda dönüştürme
                   href: ide/reference/convert-local-function-method.md
                 - name: foreach döngüsünü LINQ’ya dönüştürme
@@ -378,6 +386,8 @@
                   href: ide/reference/convert-linq-to-foreach.md
                 - name: Switch deyimini switch ifadesine dönüştürme
                   href: ide/reference/convert-switch-statement-to-switch-expression.md
+                - name: DateTime ve TimeSpan tamamlanması
+                  href: ide/reference/datetime-timespan-completion.md
                 - name: Alanı kapsülleme
                   href: ide/reference/encapsulate-field.md
                 - name: Ayıklama arabirimi
@@ -412,6 +422,8 @@
                   href: ide/reference/remove-unreachable-code.md
                 - name: Rename
                   href: ide/reference/rename.md
+                - name: Koşullu ifadeyi basitleştirme
+                  href: ide/reference/simplify-conditional-expression.md
                 - name: Dize ilişkilendirmesini basitleştirme
                   href: ide/reference/simplify-string-interpolation.md
                 - name: Kullanımları sıralama
@@ -438,7 +450,7 @@
               href: ide/using-intellisense.md
             - name: Visual Basic IntelliSense
               href: ide/visual-basic-specific-intellisense.md
-            - name: 'C# IntelliSense'
+            - name: C# IntelliSense
               href: ide/visual-csharp-intellisense.md
             - name: JavaScript IntelliSense
               href: ide/javascript-intellisense.md
@@ -583,7 +595,7 @@
           href: ide/productivity-features.md
         - name: Üretkenlik kısayolları
           href: ide/productivity-shortcuts.md
-        - name: 'C# geliştiricileri için ipuçları'
+        - name: C# geliştiricileri için ipuçları
           displayName: ReSharper
           href: ide/csharp-developer-productivity.md
         - name: Klavye kısayollarını özelleştirme
@@ -684,9 +696,9 @@
                       href: ide/step-8-add-a-method-to-verify-whether-the-player-won.md
                     - name: '9. Adım: Diğer özellikleri deneme'
                       href: ide/step-9-try-other-features.md
-        - name: 'F#'
+        - name: F#
           items:
-            - name: 'F# geliştirme'
+            - name: F# geliştirme
               href: ide/fsharp-visual-studio.md
             - name: Eski .NET sürümlerini hedefleme
               href: ide/fsharp-target-older-dotnet-versions.md
@@ -851,7 +863,7 @@
       href: /azure/devops/pipelines/index?view=vsts
     - name: Derleme olayları belirtme (Visual Basic)
       href: ide/how-to-specify-build-events-visual-basic.md
-    - name: 'Derleme olayları belirtme (C#)'
+    - name: Derleme olayları belirtme (C#)
       href: ide/how-to-specify-build-events-csharp.md
     - name: Visual Basic'teki uyarıları yapılandırma
       href: ide/configuring-warnings-in-visual-basic.md
@@ -1122,7 +1134,7 @@
                       href: ide/code-styles-and-code-cleanup.md
                     - name: IntelliSense
                       href: ide/visual-basic-specific-intellisense.md
-                - name: 'C#'
+                - name: C#
                   items:
                     - name: Gelişmiş
                       href: ide/reference/options-text-editor-csharp-advanced.md
@@ -1140,7 +1152,7 @@
                       href: ide/reference/options-text-editor-c-cpp-formatting.md
                     - name: Görüntüle
                       href: ide/reference/options-text-editor-c-cpp-view.md
-                - name: 'F#'
+                - name: F#
                   items:
                     - name: Gelişmiş
                       href: ide/reference/options-text-editor-fsharp-advanced.md
@@ -1223,7 +1235,7 @@
               items:
                 - name: Derleme Sayfası
                   href: ide/reference/build-page-project-designer-csharp.md
-                - name: 'Gelişmiş Derleme Ayarları İletişim Kutusu (C#)'
+                - name: Gelişmiş Derleme Ayarları İletişim Kutusu (C#)
                   href: ide/reference/advanced-build-settings-dialog-box-csharp.md
             - name: 'Kod Çözümlemesi, Proje Tasarımcısı'
               href: ide/reference/code-analysis-project-designer.md

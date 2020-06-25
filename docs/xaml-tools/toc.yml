@@ -2,6 +2,8 @@
   href: index.yml
 - name: XAML'ye genel bakış
   href: xaml-overview.md
+- name: XAML kod düzenleyici
+  href: xaml-code-editor.md
 - name: XAML Tasarımcısı
   items:
     - name: Visual Studio ve Blend’de XAML tasarlama

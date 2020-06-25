@@ -8,55 +8,65 @@ metadata:
   author: mikejo5000
   ms.author: mikejo
   manager: jillfra
-  ms.date: 10/30/2019
-  ms.openlocfilehash: 94bbe9a81a38b255eba6cc6b15812743328a0f27
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.date: 06/03/2020
+  ms.openlocfilehash: 4f522f6613424c3251344207381d2eaf31705c9c
+  ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "79549925"
+  ms.lasthandoff: 06/23/2020
+  ms.locfileid: "85289124"
 landingContent:
-- title: Profil oluşturma hakkında
+- title: Kullanmaya başlayın
   linkLists:
-  - linkListType: overview
-    links:
-    - text: Profil oluşturma araçlarına ilk bakış
-      url: profiling-feature-tour.md
-  - linkListType: concept
-    links:
-    - text: Profil oluşturma araçlarını çalıştırma yolları
-      url: running-profiling-tools-with-or-without-the-debugger.md
-- title: Başlangıç
-  linkLists:
-  - linkListType: quickstart
-    links:
-    - text: CPU kullanımını analiz etme (C#, Visual Basic)
-      url: quickstart-cpu-usage-managed.md
-    - text: CPU kullanımını analiz etme (C++)
-      url: quickstart-cpu-usage-native.md
-    - text: CPU kullanımını analiz etme (ASP.NET)
-      url: quickstart-cpu-usage-aspnet.md
   - linkListType: tutorial
     links:
     - text: CPU kullanımını analiz etmeye başlayın
       url: beginners-guide-to-performance-profiling.md
     - text: Bellek kullanımını ölçmeye başlayın
       url: memory-usage.md
-- title: Daha fazla performans aracı
-  linkLists:
   - linkListType: how-to-guide
     links:
     - text: PerfTips
       url: perftips.md
-    - text: Komut satırından CPU kullanımını ölçme
-      url: profile-apps-from-command-line.md
-    - text: .NET nesneleri için bellek kullanımını ölçme
+- title: Temeller
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Profil oluşturma araçlarına ilk bakış
+      url: profiling-feature-tour.md
+    - text: Profil oluşturma araçlarını çalıştırma yolları
+      url: running-profiling-tools-with-or-without-the-debugger.md
+  - linkListType: concept
+    links:
+    - text: Performans bilgilerini toplama metotlarını anlama
+      url: understanding-performance-collection-methods-perf-profiler.md
+- title: Performans araçları
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: CPU Kullanımı
+      url: cpu-usage.md
+    - text: Veritabanı
+      url: analyze-database.md
+    - text: Olay Görüntüleyicisi
+      url: events-viewer.md
+    - text: Bellek Kullanımı
+      url: memory-usage-without-debugging2.md
+    - text: .NET Nesne Ayırma İzlemesi
       url: dotnet-alloc-tool.md
+    - text: GPU Kullanımı (Direct3D)
+      url: gpu-usage.md
+    - text: .NET Async
+      url: analyze-async.md
     - text: Kaynak tüketimini analiz etme (XAML)
       url: application-timeline.md
-    - text: GPU kullanımını analiz etme (Direct3D)
-      url: gpu-usage.md
-    - text: Ağ kullanımını analiz etme (UWP)
-      url: network-usage.md
-    - text: Enerji kullanımını analiz etme (UWP)
-      url: analyze-energy-use-in-store-apps.md
+- title: Kılavuzlar
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Profil oluşturucu ayarlarını iyileştirme
+      url: optimize-profiler-settings.md
+    - text: Komut satırından performans ölçme
+      url: profile-apps-from-command-line.md
+    - text: Aynı anda birden çok profil oluşturucu aracını kullanma
+      url: use-multiple-profiler-tools-simultaneously.md

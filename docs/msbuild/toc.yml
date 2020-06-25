@@ -11,6 +11,8 @@
         - name: Genel Bakış
           displayName: msbuild concepts
           href: msbuild-concepts.md
+        - name: MSBuild nasıl proje oluşturur
+          href: build-process-overview.md
         - name: Özellikler
           items:
             - name: MSBuild özellikleri
