@@ -1,19 +1,19 @@
 ---
 title: Uygulama Ayarları dosyasındaki bağlantı özelliği eksik veya hatalı
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: 77724510-ff59-4d43-b933-a0434e1ac597
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 23a5d9a149fb39b763df71e0dabb21314a5143a0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: afbe2f813f0bba881f85463777c704c30a45d9ce
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586204"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281506"
 ---
 # <a name="the-connection-property-in-the-application-settings-file-is-missing-or-incorrect"></a>Uygulama Ayarları dosyasındaki bağlantı özelliği eksik veya hatalı
 

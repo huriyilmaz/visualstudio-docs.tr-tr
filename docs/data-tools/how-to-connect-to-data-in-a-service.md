@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Bir Hizmetteki Verilere Bağlanma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - data [Visual Studio], connecting to web services
 - data sources, creating from web services
@@ -16,12 +16,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 01ad796faa8c722ba088143da814305844136aa3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 0b49840a2190abfd223edf5643b8d70da1a59d6b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586529"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282234"
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>Nasıl yapılır: bir hizmette verilere bağlanma
 
@@ -55,7 +55,7 @@ Sihirbazı tamamladıktan sonra projenize bir hizmet başvurusu eklenir ve [veri
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Uygulamanıza işlevsellik eklemek için, **veri kaynakları** penceresinde bir öğe seçin ve bağlantılı denetimler oluşturmak için onu bir form üzerine sürükleyin. Daha fazla bilgi için [Visual Studio'da verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).
+Uygulamanıza işlevsellik eklemek için, **veri kaynakları** penceresinde bir öğe seçin ve bağlantılı denetimler oluşturmak için onu bir form üzerine sürükleyin. Daha fazla bilgi için bkz. [Visual Studio 'da denetimleri verilere bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

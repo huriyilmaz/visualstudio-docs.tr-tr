@@ -1,5 +1,5 @@
 ---
-title: GPU kullanımı | Microsoft Dokümanlar
+title: GPU kullanımı | Microsoft Docs
 ms.date: 11/01/2018
 ms.topic: conceptual
 author: mikejo5000
@@ -7,155 +7,144 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f16a518542e8acab636da6e395fdfee8d7a25085
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6aa4cce032a5eb80a11568a83c1166b5690bd688
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62969875"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85279892"
 ---
 # <a name="gpu-usage"></a>GPU kullanımı
 
-Direct3D uygulamanızın üst düzey donanım kullanımını daha iyi anlamak için Visual Studio Performance and Diagnostics Hub'daki GPU Kullanım aracını kullanın. Uygulamanızın performansının CPU'ya mı yoksa GPU'ya mı bağlı olduğunu görmenize ve platformun donanımını nasıl daha etkili kullanabileceğinize dair fikir edinmenize yardımcı olur. GPU Kullanımı Direct3D 12, Direct3D 11 ve Direct3D 10 kullanan uygulamaları destekler; Direct2D veya OpenGL gibi diğer grafik API'lerini desteklemez.
+Direct3D uygulamanızın üst düzey donanım kullanımını daha iyi anlamak için Visual Studio performans ve tanılama hub 'ındaki GPU kullanımı aracını kullanın. Uygulamanızın performansının CPU ile bağlantılı veya GPU ile bağlantılı olup olmadığını görmenizi sağlar ve platformun donanımını daha etkin bir şekilde nasıl kullanabileceğinizi öğrenin. GPU kullanımı, Direct3D 12, Direct3D 11 ve Direct3D 10 kullanan uygulamaları destekler. Direct2D veya OpenGL gibi diğer grafik API 'Lerini desteklemez.
 
-Bu ekran görüntüsü **GPU Kullanım Raporu** penceresini gösterir:
+**GPU kullanım raporu** penceresi şöyle görünür:
 
-![CPU ve GPU zaman çizelgeleri ile GPU Kullanım raporu](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")
+![CPU ve GPU zaman çizelgeleriyle GPU kullanım raporunun ekran görüntüsü](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")
 
 ## <a name="requirements"></a>Gereksinimler
 
-GPU Kullanım aracını kullanmak için aşağıdaki gereksinimler Grafik Tanılama gereksinimlerine eklenir.
+Grafik Tanılama gereksinimlerine ek olarak, GPU kullanım aracının kullanılması için aşağıdakiler gereklidir:
 
-- Gerekli zamanlama enstrümantasyonunu destekleyen bir GPU ve sürücü.
+- Gerekli zamanlama araçlarını destekleyen bir GPU ve sürücü.
 
   > [!NOTE]
-  > Desteklenen donanım ve sürücüler hakkında daha fazla bilgi için bu belgenin [sonundadonanım ve sürücü desteğine](#hwsupport) bakın.
+  > Desteklenen donanım ve sürücüler hakkında daha fazla bilgi için bu belgenin sonundaki [donanım ve sürücü desteği](#hwsupport) bölümüne bakın.
 
-  Grafik Tanılama gereksinimleri hakkında daha fazla bilgi [için](../debugger/graphics/getting-started-with-visual-studio-graphics-diagnostics.md)bkz.
+Grafik Tanılama gereksinimleri hakkında daha fazla bilgi için bkz [. Başlarken](../debugger/graphics/getting-started-with-visual-studio-graphics-diagnostics.md).
 
-## <a name="using-the-gpu-usage-tool"></a>GPU Kullanım aracını kullanma
+## <a name="use-the-gpu-usage-tool"></a>GPU kullanımı aracını kullanma
 
- Uygulamanızı GPU Kullanım aracı altında çalıştırdığınızda, Visual Studio uygulamanızın oluşturma performansı ve GPU kullanımı hakkında gerçek zamanlı olarak üst düzey bilgileri gösteren bir tanılama oturumu oluşturur.
+Uygulamanızı GPU kullanımı aracı altında çalıştırdığınızda, Visual Studio bir Tanılama oturumu oluşturur. Bu oturum, gerçek zamanlı olarak uygulamanızın işleme performansı ve GPU kullanımı hakkında üst düzey bilgileri grafiklerinizi grafikleri.
 
-**GPU Kullanım aracını başlatmak için:**
+GPU kullanım aracı 'nı başlatmak için:
 
-1. Ana menüde **Hata Ayıklama,** ardından **Performans ve Tanılama** (Klavye: Alt+F2 tuşuna basın) seçeneğini belirleyin.
+1. Ana menüden **Hata Ayıkla**  >  **performans ve tanılama** ' yı seçin (veya klavyede alt + F2 tuşlarına basın).
 
-2. Performans ve Tanılama hub'ında, **GPU Kullanımı'nın**yanındaki kutuyu işaretleyin. İsteğe bağlı olarak, ilgilendiğiniz diğer araçların yanındaki kutuları işaretleyin. Uygulamanızın performansını daha iyi görebilmek için aynı anda birkaç Performans ve Tanılama aracı çalıştırabilirsiniz.
+2. **Performans ve tanılama** hub 'ında **GPU kullanımı**' nın yanındaki kutuyu işaretleyin. İsteğe bağlı olarak, ilgilendiğiniz diğer araçların yanındaki kutuları işaretleyin. Uygulamanızın performansının daha ayrıntılı bir görüntüsünü almak için çeşitli performans ve tanılama araçlarını eşzamanlı olarak çalıştırabilirsiniz.
 
-    ![Kullanmak istediğiniz tanılama araçlarını seçin.](media/gfx_diag_diagsession_tools.png "gfx_diag_diagsession_tools")
+    ![GPU kullanımı seçili olan performans ve tanılama hub 'ı ekran görüntüsü](media/gpuusageselected.png "GPU kullanımı seçildi")
 
    > [!NOTE]
-   > Tüm Performans ve Tanılama araçları aynı anda kullanılamaz.
+   > Tüm performans ve tanılama araçları aynı anda kullanılamaz.
 
-3. Uygulamanızı seçtiğiniz araçların altında çalıştırmak için Performans ve Tanılama merkezinin altındaki mavi **Başlat** düğmesini seçin.
+3. **Performans ve tanılama** hub 'ının en altında, uygulamanızı seçtiğiniz araçlarla çalıştırmak için **Başlat** ' ı seçin.
 
-   Gerçek zamanlı olarak görüntülenen üst düzey bilgiler çerçeve zamanlaması, kare hızı ve GPU kullanımını içerir. Bu bilgi parçalarının her biri bağımsız olarak grafiklenmiştir, ancak aralarında kolayca ilişki kurabilmeniz için ortak bir zaman ölçeği kullanın.
+Gerçek zamanlı olarak gösterilen üst düzey bilgiler çerçeve zamanlaması, kare hızı ve GPU kullanımı içerir. Bu bilgi parçalarının her biri bağımsız olarak, ilişkileri kolayca anlayabilmeniz için ortak bir zaman ölçeği kullanır.
 
-   **Kare süresi (ms)** ve **saniyedeki Kareler (FPS)** grafikler, saniyede 60 ve 30 kare performans hedeflerini gösteren iki kırmızı, yatay çizgiye sahiptir. Çerçeve **zaman** grafiğinde, grafiğiniz çizginin altında yken uygulamanız performans hedefini aşar ve grafik çizginin üzerinde olduğunda hedefi kaçırır. Saniyebaşına Kareler için grafik tam tersidir- grafiğiniz çizginin üzerinde olduğunda uygulamanız performans hedefini aşar ve grafik çizginin altında yken hedefi kaçırır. Öncelikle, bu grafikler uygulamanızın performansı hakkında üst düzey bir fikir almak ve çerçeve hızında ani bir düşüş veya GPU Kullanımındaki ani artış gibi araştırmak isteyebileceğiniz yavaşlamaları belirlemek için kullanılır.
+**Çerçeve süresi (MS)** ve **kare/saniye (fps)** grafiklerde, saniyede 60 performans hedeflerini ve saniye başına 30 kare gösteren yatay çizgiler iki kırmızı oluşur. Çerçeve zamanı grafiğinde, grafik çizginin altındakiyle, uygulamanızın performans hedefini aşması ve grafik satırın üzerinde olduğunda hedefin isabetsiz olması gerekir. Saniye başına kareler grafik için bu, bunun tersidir: grafik satırın üzerinde olduğunda uygulamanızın performans hedefini aşması ve grafik satırın altındaysa hedefi isabetsiz hale gelir. Bu grafikleri öncelikli olarak uygulamanızın performansına ilişkin üst düzey bir fikir edinmek ve araştırmak isteyebileceğiniz yavaş azaltmalar belirlemek için kullanırsınız. Örneğin, kare hızında ani bir bırakma veya GPU kullanımında ani bir bırakma görürseniz daha fazla araştırma gerekebilir.
 
-   Uygulamanız GPU Kullanımı aracı altında çalışırken, tanılama oturumu Da GPU yürütülen grafik olayları hakkında ayrıntılı bilgi toplar. Bu bilgiler, uygulamanızın donanımı nasıl kullandığına daha ayrıntılı bir rapor oluşturmak için kullanılır. Bu raporun toplanan bilgilerden oluşturulması biraz zaman aldığından, yalnızca tanılama oturumu bilgi toplama yapıldıktan sonra kullanılabilir.
+Uygulamanız GPU kullanımı aracı altında çalışırken, Tanılama oturumu GPU 'da çalıştırılan grafik olaylarıyla ilgili ayrıntılı bilgiler de toplar. Bu bilgileri uygulamanızın donanımdan nasıl yararlandığını daha ayrıntılı bir rapor oluşturmak için kullanırsınız. Bu raporun toplanan bilgilerden oluşturması biraz zaman alacağından, yalnızca Tanılama oturumu bilgi toplamayı tamamladıktan sonra kullanılabilir.
 
-   Bir performans veya kullanım sorununa daha yakından bakmak istediğinizde, raporun oluşturulabilmesi için performans bilgileri toplamayı durdurun.
+Bir performans veya kullanım sorununa daha yakından bakmak istediğinizde, rapor oluşturabilmeniz için performans bilgilerini toplamayı durdurun.
 
-**GPU Kullanım Raporu oluşturmak ve görüntülemek için:**
+GPU kullanım raporunu oluşturmak ve görüntülemek için:
 
-1. Tanılama oturumu penceresinin alt kısmında, **Koleksiyonu Durdur** bağlantısını seçin veya sol üst köşede **Durdur'a** basın.
+1. Tanılama oturumu penceresinin alt bölümünde, **koleksiyonu durdur** bağlantısını seçin veya sol üst köşedeki **Durdur** ' u seçin.
 
-   ![GPU ve CPU zamanlama bilgilerini toplayın.](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
+   ![Tanılama oturumu penceresinin ekran görüntüsü](media/gfx_diag_gpu_usage_collect.png "gfx_diag_gpu_usage_collect")
 
-2. Raporun üst kısmında, araştırmak istediğiniz sorunu gösteren grafiklerden birinden bir bölüm seçin. Seçiminiz en fazla 3 saniye uzunluğunda olabilir; daha uzun kesitler başa doğru kesilir.
+2. Raporun üst kısmında, araştırmak istediğiniz sorunu gösteren grafiklerden birindeki bir bölümü seçin. Seçiminiz en fazla 3 saniye uzunluğunda olabilir. Daha uzun bölümler başlangıca doğru kesiliyor.
 
-   ![Toplama&#45;gönderin, ayrıntıları görüntülemek için bir aralık seçin](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
+   ![Tanılama oturumu penceresinin ekran görüntüsü](media/gfx_diag_gpu_usage_select1.png "gfx_diag_gpu_usage_select1")
 
-3. Raporun alt bölümünde, **görünüm ayrıntıları** bağlantısını seçin **... **Seçiminizin ayrıntılı bir zaman çizelgesini görüntülemek için bu aralık iletisi için GPU kullanımının ayrıntılarını görüntülemek için buraya tıklayın.
+3. Seçiminizin ayrıntılı bir zaman çizelgesini görüntülemek için, raporun alt bölümünde, **... Bu Aralık iletisi için GPU kullanımının ayrıntılarını görüntülemek için buraya tıklayın** , **Ayrıntıları görüntüle**' yi seçin.
 
-   ![&#45;toplama sonrası, aralık seçili](media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")
+   ![Tanılama oturumu penceresinin, Aralık seçiliyken ekran görüntüsü](media/gfx_diag_gpu_usage_select2.png "gfx_diag_gpu_usage_select2")
 
-   Bu seçim, raporu içeren yeni bir sekmeli belge açar. GPU Kullanım raporu, cpu'da bir grafik olayının ne zaman başlatıldığını, GPU'ya ne zaman ulaştığını ve GPU'nun ne kadar süreyle yürütüldİğİni görmenize yardımcı olur. Bu bilgiler, kodunuzda artan paralellik için darboğazları ve fırsatları belirlemenize yardımcı olabilir.
+Bu seçim, raporu içeren yeni bir sekmeli belge açar. GPU kullanımı raporu, CPU 'da bir grafik olayının ne zaman başlatıldığını, GPU 'ya ulaştığında ve GPU 'nun onu çalıştırmak için ne kadar sürdüğünü görmenizi sağlar. Bu bilgiler, kodunuzda daha fazla paralellik için performans sorunlarını ve fırsatları belirlemenize yardımcı olabilir.
 
 <!-- VERSIONLESS -->
-## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>GPUView veya Windows Performans Çözümleyicisine Dışa Aktarma
+## <a name="export-to-gpuview-or-windows-performance-analyzer"></a>GPUView veya Windows Performans Çözümleyicisi 'ne aktar
 
-Visual Studio 2017 ile başlayarak bu verileri [GPUView](/windows-hardware/drivers/display/using-gpuview) ve [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)ile açabilirsiniz. Tanılama oturumunun sağ alt ağında bulunan **GpuView'da Aç** veya **WPA bağlantılarında Aç'ı** seçmeniz için.
+Visual Studio 2017 ile başlayarak, bu verileri [Gpuview](/windows-hardware/drivers/display/using-gpuview) ve [Windows Performans Çözümleyicisi](/windows-hardware/test/wpt/windows-performance-analyzer)ile açabilirsiniz. Yalnızca tanılama oturumunun sağ alt köşesinde bulunan **GpuView 'Da aç** veya **WPA bağlantılarında aç** ' ı seçin.
 
-![Açık...](media/gfx_diag_open_in.png)
+![Tanılama oturumu penceresinin, bağlantılarla vurgulanan ekran görüntüsü](media/gfx_diag_open_in.png)
 <!-- /VERSIONLESS -->
 
-## <a name="using-the-gpu-usage-report"></a>GPU Kullanım raporunu kullanma
+## <a name="use-the-gpu-usage-report"></a>GPU kullanımı raporunu kullanma
 
-GPU Kullanım raporunun üst kısmı CPU işleme etkinliği, GPU oluşturma etkinliği ve GPU kopyalama etkinliği için zaman çizelgelerini görüntüler. Bu zaman çizelgeleri, ekranın vsync gösteren açık gri, dikey çubuklar bölünür. Çubukların sıklığı, GPU Kullanım verilerinin toplandığı görüntülerden birinin **(Ekran** açılır açılır bırakArak seçili) yenileme hızıyla eşleşir. Ekran uygulamanızın performans hedefinden daha yüksek bir yenileme oranına sahip olabileceğinden, vsync ile uygulamanızın ulaşmasını istediğiniz kare hızı arasında 1'e 1 ilişkisi olmayabilir. Performans hedefini tutturmak için, bir uygulamanın tüm işlemleri tamamlaması, işleme yi yapması ve hedeflenen kare hızında Present() çağrısı yapması gerekir. Ancak, işlenen çerçeve Present() sonrabir sonraki vsync kadar görüntülenmez.
+GPU kullanımı raporunun üst bölümü, CPU işleme etkinliği, GPU işleme etkinliği ve GPU kopyalama etkinliği için zaman çizelgelerini gösterir. Bu zaman çizelgeleri, ekran vsync öğesini belirten açık gri, dikey çubuklar tarafından bölünür. Çubukların sıklığı, GPU kullanım verilerinin toplandığı bir **Görünüm (görüntü** açılan listesini kullanarak seçilir) ile eşleşen yenileme oranıyla eşleşir.
 
-Alt kısım, raporun zaman diliminde oluşan grafik olaylarının bir listesini görüntüler.
+Görüntüleme, uygulamanızın performans hedefinden daha yüksek bir yenileme hızına sahip olabileceğinden, vsync ile uygulamanızın elde olmasını istediğiniz kare hızı arasında 1-1 arasında bir ilişki olmayabilir. Bir uygulamanın, performans hedefini karşılamak için tüm işlemleri tamamlaması, işleme yapması ve `Present()` hedeflenen kare hızına çağrı yapması gerekir. Oluşturulan çerçeve, sonraki vsync 'tan sonra gösterilmez `Present()` , ancak.
 
-GPU **Kullanım Raporu** penceresi aşağıda veda edin:
+GPU kullanımı raporunun alt bölümü, raporun zaman diliminde oluşan grafik olaylarını listeler. Bir olay seçtiğinizde ilgili zaman çizelgeleriyle ilgili olaylarda bir işaret görüntülenir. Genellikle, bir CPU iş parçacığında bir olay API çağrısını gösterir, ancak GPU zaman çizelgeleriyle birindeki başka bir olay GPU 'nun görevi ne zaman tamamladığını gösterir. Benzer şekilde, bir zaman çizelgesinde bir olay seçtiğinizde, rapor raporun alt bölümünde ilgili grafik olayını vurgular.
 
-![CPU ve GPU zaman çizelgeleri ile GPU Kullanım raporu](media/gfx_diag_gpu_usage_report.png "gfx_diag_gpu_usage_report")
+Raporun üst bölümündeki zaman çizelgelerinizi yakınlaştırdığınızda, yalnızca en uzun süren olaylar görülebilir. Daha kısa bir süre olan olayları görmek için, işaret cihazındaki CTRL + tekerleği veya üst bölmenin sol alt köşesindeki ölçekleme denetimini kullanarak zaman çizelgelerine yakınlaştırın. Ayrıca, kaydedilen olaylar arasında gezinmek için zaman çizelgesi bölmesinin içeriğini sürükleyebilirsiniz.
 
-Raporun alt kısmında bir olay seçtiğinizde, ilgili zaman çizelgelerinde ilgili olaylarda bir işaretçi görüntülenir. Genellikle, CPU iş parçacığındaki bir olay API çağrısını gösterirken, GPU zaman çizelgelerinden birinde başka bir olay GPU'nun görevi ne zaman tamamladığını gösterir. Aynı şekilde, bir zaman çizelgesinde bir olay seçtiğinizde, rapor raporun alt kısmındaki ilgili olayı vurgular. Raporun üst kısmındaki zaman çizelgeleri uzaklaştırıldığında, yalnızca en çok zaman alan olaylar görünür. Daha kısa süreli olayları görmek için, işaretleme cihazınızda Ctrl + tekerleği veya üst panelin sol alt köşesindeki ölçekleme denetimini kullanarak zaman çizelgelerini yakınlaştırın. Ayrıca, kaydedilen olaylar arasında hareket etmek için zaman çizelgesi panelinin içeriğini sürükleyebilirsiniz.
-
-Aradığınızı bulmanıza yardımcı olmak için, İşlem adlarına, Iş Parçacığı adlarına ve etkinlik adına göre GPU Kullanım Raporu'na filtre uygulayın. Ayrıca, hangi ekranın yenileme hızının vysnc çizgilerini belirlediğini seçebilirsiniz. Uygulamanız işleme komutlarını gruplandırmak için [ID3DUserDefinedAnnotation](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3duserdefinedannotation) arabirimini kullanıyorsa olayları hiyerarşik olarak sıralayabilirsiniz.
+Aradığınızı bulmaya yardımcı olması için, işlem adlarına, iş parçacığı kimliklerine ve olay adına göre GPU kullanım raporunu filtreleyin. Ayrıca, vysnc satırlarını hangi görüntüleme yenileme oranının belirler ' i de seçebilirsiniz. Uygulamanız, işleme komutlarını gruplamak için [ID3DUserDefinedAnnotation](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3duserdefinedannotation) arabirimini kullanıyorsa olayları hiyerarşik olarak sıralayabilirsiniz.
 
  Daha fazla ayrıntı aşağıdadır:
 
-|Filtre denetimi|Açıklama|
+|Filtre denetimi|Description|
 |--------------------|-----------------|
-|**İşleme**|İlgilendiğiniz işlemin adı. Tanılama oturumu sırasında GPU kullanılan tüm işlemler bu açılır dahildir. Bu açılır yolda işlemle ilişkili renk, aşağıdaki zaman çizelgelerinde iş parçacığının etkinliğinin rengidir.|
-|**Iş parçacığı**|İlgilendiğiniz iş parçacığı kimliği. Çok iş parçacığı uygulamasında, bu bilgiler ilgilendiğiniz işleme ait belirli iş parçacıklarını yalıtmanıza yardımcı olabilir. Seçili iş parçacığı ile ilişkili olaylar her zaman çizelgesinde vurgulanır.|
-|**Görüntüleme**|Yenileme hızı görüntülenen ekran sayısı **Not:** Bazı sürücüler birden fazla fiziksel ekranı tek, büyük bir sanal ekran olarak sunacak şekilde yapılandırılabilir. Makinede birden fazla ekran bağlı olsa bile yalnızca bir ekran listelenmiş olarak görebilirsiniz.|
-|**Filtrele**|İlgilendiğiniz anahtar kelimeler. Raporun alt kısmındaki olaylar yalnızca bir anahtar kelimeyle tamamen veya kısmen eşleşenleri içerir. Bir semicolon (;) ile ayırarak birden çok anahtar kelime belirtebilirsiniz.|
-|**Hiyerarşi Sıralaması**|Kullanıcı işaretçileri aracılığıyla tanımlanan olay hiyerarşilerinin korunup korunmadığını veya yoksayılıp göz ardı edilemeyeceğini belirten bir onay kutusu.|
+|**İşleme**|İlgilendiğiniz işlemin adı. Tanılama oturumu sırasında GPU kullanan tüm süreçler bu açılan listeye dahil edilir. İşlemle ilişkili renk, iş parçacıklarının zaman çizelgelerine ait etkinliğinin rengidir.|
+|**Zincirinin**|İlgilendiğiniz iş parçacığı KIMLIĞI. Çok iş parçacıklı bir uygulamada, bu bilgiler ilgilendiğiniz işleme ait olan belirli iş parçacıklarını yalıtmanıza yardımcı olabilir. Seçilen iş parçacığıyla ilişkili olaylar her bir zaman çizelgesinde vurgulanır.|
+|**Görüntüleme**|Yenileme hızı gösterilen ekran sayısı. Bazı sürücüler, birden çok fiziksel ekranı tek, büyük bir sanal görüntü olarak sunacak şekilde yapılandırılabilir. Makinede birden çok görüntü eklenmiş olsa bile, yalnızca bir ekran listelendiğini görebilirsiniz.|
+|**Filtrele**|İlgilendiğiniz anahtar sözcükler. Raporun alt bölümündeki olaylar yalnızca bir anahtar sözcükle eşleşen ve kısmen veya kısmen eşleşen olanları dahil eder. Birden çok anahtar sözcüğü noktalı virgülle ayırarak belirtebilirsiniz (;).|
+|**Hiyerarşi sıralaması**|Kullanıcı işaretçileri aracılığıyla tanımlanan olay hiyerarşilerinin korunup korunmadığını veya yoksayıldığını belirten bir onay kutusu.|
 
- GPU Kullanım Raporu'nun alt kısmındaki olayların listesi her olayın ayrıntılarını görüntüler.
+GPU kullanımı raporunun alt bölümündeki olayların listesi, her bir olayın ayrıntılarını gösterir.
 
-|Sütun|Açıklama|
+|Sütun|Description|
 |------------|-----------------|
-|**Olay Adı**|Grafik olayının adı. Bir olay genellikle CPU iş parçacığı zaman çizelgesi ve GPU zaman çizelgesi olayındaki bir olaya karşılık gelir.<br /><br /> GPU Kullanımı bir olayın adını belirleyemiyorsa olay adları 'atfedilmemiş' olabilir. Daha fazla bilgi için bu tablonun altındaki nota bakın.|
-|**CPU Başlangıç (ns)**|Doğrudan3D API'yi arayarak olayın CPU'da başlatıldığı saat. Saat, uygulamanın başladığı zamana göre nanosaniye cinsinden ölçülür.|
-|**GPU Başlangıcı (ns)**|Etkinliğin GPU'da başlatıldığı saat. Saat, uygulamanın başladığı zamana göre nanosaniye cinsinden ölçülür.|
-|**GPU Süresi (ns)**|Etkinliğin GPU'da nanosaniyecinsinden tamamlanması için gereken süre.|
-|**İşlem Adı**|Etkinliğin geldiği uygulamanın adı.|
-|**İş Parçacığı Kimliği**|Olayın geldiği iş parçacığı kimliği.|
+|**Olay Adı**|Grafik olayının adı. Bir olay, genellikle bir CPU iş parçacığı zaman çizelgesinde ve bir GPU zaman çizelgesi olayında bir olaya karşılık gelir. GPU kullanımı bir olayın adını belirleyeleyemiyorsa, olay adları *öznitelik* dışı olabilir. Daha fazla bilgi için bu tablodan sonraki nota bakın.|
+|**CPU başlangıcı (NS)**|Bir Direct3D API 'SI çağırarak etkinliğin CPU 'da başlatıldığı zaman. Süre, uygulamanın başladığı zamana göre nanosaniye cinsinden ölçülür.|
+|**GPU başlangıcı (NS)**|Etkinliğin GPU 'da başlatıldığı zaman. Süre, uygulamanın başladığı zamana göre nanosaniye cinsinden ölçülür.|
+|**GPU süresi (NS)**|Etkinliğin GPU 'da tamamlanması için geçen süre nanosaniye cinsinden süre.|
+|**İşlem adı**|Olayın geldiği uygulamanın adı.|
+|**İş parçacığı KIMLIĞI**|Olayın geldiği iş parçacığı KIMLIĞI.|
 
 > [!IMPORTANT]
-> GPU'nuz veya sürücünüz gerekli enstrümantasyon özelliklerini desteklemezse, tüm olaylar 'atfedilmemiş' olarak görünür. GPU sürücünüzü güncelleştirip bu sorunla karşılaşırsanız yeniden deneyin. Daha fazla bilgi için aşağıdaki [Donanım ve sürücü desteğine](#hwsupport) bakın.
+> GPU veya sürücünüz gerekli olan izleme özelliklerini desteklemiyorsa, tüm olaylar *öznitelik*yok olarak görünür. Bu sorunla karşılaşırsanız, GPU sürücünüzü güncelleştirip yeniden deneyin. Daha fazla bilgi için bu belgenin sonundaki [donanım ve sürücü desteği](#hwsupport) bölümüne bakın.
 
-## <a name="gpu-usage-settings"></a>GPU Kullanım ayarları
+## <a name="gpu-usage-settings"></a>GPU kullanım ayarları
 
-GPU Kullanım aracını, uygulama başlar başlamaz bilgi toplamaya başlamak yerine profil oluşturma bilgilerinin toplanmasını erteleyecek şekilde yapılandırabilirsiniz. Profil oluşturma bilgilerinin boyutu önemli olabileceğinden, uygulamanızın performansındaki yavaşlamaların daha sonra görünmeyeceğini bildiğinizde bu eylem yararlıdır.
+Uygulama başladıktan hemen sonra bilgi toplamaya başlamak yerine, profil oluşturma bilgilerinin toplanmasını erteleyebilmeniz için GPU kullanım aracını yapılandırabilirsiniz. Profil oluşturma bilgilerinin boyutu önemli olabileceğinden, bu eylem, uygulamanızın performansındaki yavaşlamalarınızın daha sonra görünmeyeceği bilindiğinizde yararlıdır.
 
-**Profil oluşturmayı uygulamanın başından itibaren ertelemek için:**
+Profil oluşturma işlemini uygulamanın başından ertelemek için:
 
-1. Ana menüde **Hata Ayıklama,** ardından **Performans ve Tanılama** (Klavye: Alt+F2 tuşuna basın) seçeneğini belirleyin.
+1. Ana menüden **Hata Ayıkla**  >  **performans ve tanılama** ' yı seçin (veya klavyede alt + F2 tuşlarına basın).
 
-2. Performans ve Tanılama **hub'ında, GPU Kullanımı'nın**yanındaki **ayarlar** bağlantısını izleyin.
+2. **Performans ve tanılama** hub 'ında **GPU kullanımı**' nın yanındaki **Ayarlar** bağlantısını seçin.
 
-3. **GPU Profil Oluşturma Yapılandırması**altında, **Genel** özellik sayfasında, profil oluşturmayı ertelemek için uygulama başlangıç onay **kutusundaki Başlat profil oluşturmayı** temizleyin.
+3. **GPU profil oluşturma yapılandırması**altında, **genel** Özellik sayfasında, profil oluşturmayı ertelemek için **Uygulama başlangıcında profil oluşturmayı** Başlat onay kutusunu temizleyin.
 
-   ![GPU Kullanım koleksiyonu başladığında yapılandırın](media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")
+   ![Nesne özellik sayfalarının, koleksiyon seçeneklerini gösteren ekran görüntüsü](media/gfx_diag_gpu_usage_config.png "gfx_diag_gpu_usage_config")
 
 > [!IMPORTANT]
-> Profil oluşturmayı erteleme şu anda Direct3D 12 uygulamaları için desteklenmez.
+> Şu anda Direct3D 12 uygulamaları için profil oluşturmayı Erteleyemiyorsanız.
 
-Uygulamanızı GPU Kullanımı aracı altında çalıştırdıktan sonra, GPU Kullanım aracı penceresinin alt kısmında ek bir bağlantı kullanılabilir hale gelir. Profil oluşturma bilgileri toplamaya başlamak için, **ek ayrıntılı GPU Kullanım Verileri iletisini toplamaya başlat'ta** **Başlat** bağlantısını seçin.
+Uygulamanızı GPU kullanımı aracı altında çalıştırdıktan sonra, GPU kullanım aracı penceresinin alt bölümünde ek bir bağlantı kullanılabilir hale gelir. Profil oluşturma bilgilerini toplamaya başlamak için, **ek AYRıNTıLı GPU kullanım verileri toplamaya başlama** ' daki **Başlangıç** bağlantısını seçin.
 
 ## <a name="hardware-and-driver-support"></a><a name="hwsupport"></a>Donanım ve sürücü desteği
 
-Aşağıdaki GPU donanımı ve sürücüleri desteklenir:
+Aşağıdaki GPU donanım ve sürücüleri desteklenir:
 
-|Satıcı|GPU Açıklama|Sürücü Sürümü Gerekli|
+|Satıcı|GPU açıklaması|Sürücü sürümü gerekli|
 |------------|---------------------|-----------------------------|
-|Bilgi®|4. Nesil Intel® Çekirdek İşlemcileri ('Haswell')<br /><br /> - Intel® HD Grafikler (GT1)<br />- Intel® HD Grafik 4200 (GT2)<br />- Intel® HD Grafik 4400 (GT2)<br />- Intel® HD Grafik 4600 (GT2)<br />- Intel® HD Grafik P4600 (GT2)<br />- Intel® HD Grafik P4700 (GT2)<br />- Intel® HD Grafik 5000 (GT3)<br />- Intel® Iris™ Grafik 5100 (GT3)<br />- Intel® Iris™ Pro Graphics 5200 (GT3e)|-- (en son sürücüleri kullanın)|
-|AMD®|AMD Radeon™ HD 7000 serisi (AMD Radeon™ HD 7350-7670 hariç)<br /><br /> AMD Radeon™ GPU, AMD FirePro™ GPU'ları ve Graphics Core Next (GCN) mimarisine sahip AMD FirePro GPU hızlandırıcıları.<br /><br /> AMD® E-Serisi ve AMD A serisi Hızlandırılmış İşlem Birimleri (AKMS) Grafik Core Next (GCN) mimarisi ('Kaveri', 'Kabini', 'Temash' , 'Beema', 'Mullins') featuring|14.7 RC3 veya üzeri|
-|NVIDIA®|NVIDIA® GeForce® 400 serisi beri en çok.<br /><br /> NVIDIA® GeForce® GPU'ları, NVIDIA Quadro® GPU'ları ve NVIDIA® Tesla™ Fermi™, Kepler™ veya Maxwell™ mimarisine sahip GPU hızlandırıcıları.|343.37 veya üzeri|
+|Intel®|4. nesil Intel® Çekirdek Işlemcileri (' Haswell ')<br /><br /> -Intel® HD grafikleri (GT1)<br />-Intel® HD grafik 4200 (GT2)<br />-Intel® HD grafik 4400 (GT2)<br />-Intel® HD grafik 4600 (GT2)<br />-Intel® HD grafik P4600 (GT2)<br />-Intel® HD grafik P4700 (GT2)<br />-Intel® HD grafik 5000 (GT3)<br />-Intel® Iris™ Graphics 5100 (GT3)<br />-Intel® Iris™ Pro grafik 5200 (GT3e)|(en son sürücüleri kullanın)|
+|AMD®|Bu yana, AMD Radeon™ HD 7000-Serisi (AMD Radeon™ HD 7350-7670 hariç tutar)<br /><br /> AMD Radeon™ GPU, AMD FirePro™ GPU 'Lar ve grafik çekirdeği Ileri (GCN) mimarisine sahip AMD FirePro GPU hızlandırıcıları<br /><br /> DC Core Next (GCN) mimarisi (' Kaveri ', ' kabini ', ' Temash ', ' Beema ', ' Mullins ') özelliklerine sahip AMD® E serisi ve AMD A Serisi Hızlandırılmış Işlem birimleri (APUs)|14,7 RC3 veya üzeri|
+|NVıDıA®|NVıDıA® GeForce® 400 serisi 'nden bu yana<br /><br /> NVIDIA® GeForce® GPU 'Lar, NVıDıA Quadro® GPU 'Lar ve NVıDıA® Tesla™, Fermi™, Kepler™ veya Maxwell™ mimarisine sahiptir|343,37 veya üzeri|
 
- NVIDIA® SLI™ ve AMD Crossfire gibi Çoklu GPU yapılandırmaları™ şu anda desteklenmez. NVIDIA® Optimus™ ve AMD Endurogibi karma grafik kurulumu™ desteklenir.
-
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [DirectX Araçlarını Kullanarak Oyununuzla Zorlu Grafik Sorunlarını Çöz (video)](https://channel9.msdn.com/Events/GDC/GDC-2015/Solve-the-Tough-Graphics-Problems-with-your-Game-Using-DirectX-Tools)
-- [Visual Studio'da GPU Kullanım Aracı (video)](https://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/715)
-- [Visual Studio GPU Kullanım aracı 2013 Güncelleme 4 CTP1 (blog)](https://devblogs.microsoft.com/cppblog/gpu-usage-tool-in-visual-studio-2013-update-4-ctp1/)
-- [Visual Studio DirectX için GPU Kullanımı (blog)](https://blogs.msdn.microsoft.com/ianhu/2014/12/16/gpu-usage-for-directx-in-visual-studio/)
-- [GPUView](/windows-hardware/drivers/display/using-gpuview)
-- [Windows Performans Analizörü](/windows-hardware/test/wpt/windows-performance-analyzer)
+ NVıDıA® SLı™ ve AMD CrossFire™ gibi çok GPU özellikli yapılandırma Şu anda desteklenmiyor. NVıDıA® Optimus™ ve AMD Enduro™ gibi karma grafik kurulumları desteklenir.

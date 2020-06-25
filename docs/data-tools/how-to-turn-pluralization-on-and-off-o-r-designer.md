@@ -1,22 +1,22 @@
 ---
 title: 'Nasıl yapılır: plurseli açma ve kapatma (O-R Designer)'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 9b693bc3-303a-40a9-97ee-9cef5ca3ae81
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 54b3376f9388116f179e2b09bcd136a37f3029f5
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6675a136b2bbdc1ef19d90ee19ecf7497053bfe1
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586451"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85282053"
 ---
-# <a name="how-to-turn-pluralization-on-and-off-or-designer"></a>Nasıl yapılır: plurselleştirmeyi açma ve kapatma (O/R Tasarımcısı)
-Varsayılan olarak, **Sunucu Gezgini** veya **veritabanı Gezgini** son görüntülenen adlara sahip veritabanı nesnelerini [Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)üzerine sürüklediğinizde, oluşturulan varlık sınıflarının adları plural 'den tekil 'e değiştirilir. Bu, Örneklenmiş varlık sınıfının tek bir veri kaydıyla eşlendiği olguyu daha doğru bir şekilde temsil etmek için yapılır. Örneğin, **u/R tasarımcısına** `Customers` tablo eklemek, sınıf yalnızca tek bir müşteri için veri tutacağından, `Customer` adlı bir varlık sınıfına neden olur.
+# <a name="how-to-turn-pluralization-on-and-off-or-designer"></a>Nasıl yapılır: Çoğullaştırmayı açıp kapatma (O/R Tasarımcısı)
+Varsayılan olarak, **Sunucu Gezgini** veya **veritabanı Gezgini** son görüntülenen adlara sahip veritabanı nesnelerini [Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)üzerine sürüklediğinizde, oluşturulan varlık sınıflarının adları plural 'den tekil 'e değiştirilir. Bu, Örneklenmiş varlık sınıfının tek bir veri kaydıyla eşlendiği olguyu daha doğru bir şekilde temsil etmek için yapılır. Örneğin, `Customers` **u/R tasarımcısına** tablo eklemek, `Customer` sınıfı yalnızca tek bir müşteri için veri tutacağından, adlı bir varlık sınıfı ile sonuçlanır.
 
 > [!NOTE]
 > Pluralization, varsayılan olarak yalnızca Visual Studio 'nun Ingilizce sürümünde bulunur.
@@ -25,7 +25,7 @@ Varsayılan olarak, **Sunucu Gezgini** veya **veritabanı Gezgini** son görünt
 
 ### <a name="to-turn-pluralization-on-and-off"></a>Çoğullaştırma 'ı açmak ve kapatmak için
 
-1. Üzerinde **Araçları** menüsünü tıklatın **seçenekleri**.
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
 2. **Seçenekler** Iletişim kutusunda **veritabanı araçları**' nı genişletin.
 
@@ -34,9 +34,9 @@ Varsayılan olarak, **Sunucu Gezgini** veya **veritabanı Gezgini** son görünt
 
 3. **O/R Tasarımcısı**' na tıklayın.
 
-4. **Adların** , sınıf adlarını değiştirmemesi adına, **O/R tasarımcısını** ayarlamak için **false** = **etkin** olarak ayarlayın.
+4. **Adların** **Enabled**  =  , sınıf adlarını değiştirmemesi adına, **O/R tasarımcısını** ayarlamak için**false** olarak etkin olarak ayarlayın.
 
-5. **Adların çoğullaştırma** özelliğini **etkin** **olarak ayarlayın = ,** **O/R tasarımcısına**eklenen nesnelerin sınıf adlarına plurselleştirme kuralları uygular.
+5. **Adı** **Enabled**  =  , **O/R tasarımcısına**eklenen nesnelerin sınıf adlarına, çoğullaştırma kuralları uygulamak için**true** olarak Enabled olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

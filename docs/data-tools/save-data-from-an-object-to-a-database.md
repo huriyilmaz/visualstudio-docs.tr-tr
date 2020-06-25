@@ -1,7 +1,7 @@
 ---
 title: Verileri bir nesneden veritabanına kaydetme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,66 +15,66 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 509910730d4da095b6db622212716a8f958495d7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 4afa0d376366b154501e1a0e4488af57b4448a32
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586269"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281662"
 ---
 # <a name="save-data-from-an-object-to-a-database"></a>Verileri bir nesneden veritabanına kaydetme
 
-Nesneleri, nesne içindeki verileri TableAdapter 'ın DBDirect metotlarından birine geçirerek bir veritabanına kaydedebilirsiniz (örneğin, `TableAdapter.Insert`). Daha fazla bilgi için bkz. [TableAdapter](../data-tools/create-and-configure-tableadapters.md).
+Nesneleri, nesne içindeki verileri TableAdapter 'ın DBDirect metotlarından birine geçirerek bir veritabanına kaydedebilirsiniz (örneğin, `TableAdapter.Insert` ). Daha fazla bilgi için bkz. [TableAdapter](../data-tools/create-and-configure-tableadapters.md).
 
-Bir nesne koleksiyonundan verileri kaydetmek için, nesne koleksiyonu boyunca (örneğin, bir for-Next döngüsü) döngü yapın ve TableAdapter 'ın `DBDirect` yöntemlerinden birini kullanarak her bir nesne için değerleri veritabanına gönderin.
+Bir nesne koleksiyonundan verileri kaydetmek için, nesne koleksiyonu boyunca (örneğin, bir for-Next döngüsü) döngü yapın ve TableAdapter yöntemlerinden birini kullanarak her bir nesne için değerleri veritabanına gönderin `DBDirect` .
 
-Varsayılan olarak, doğrudan veritabanına karşı çalıştırılabilen bir TableAdapter üzerinde `DBDirect` Yöntemler oluşturulur. Bu yöntemler doğrudan çağrılabilir ve bir veritabanına güncelleştirme göndermek için <xref:System.Data.DataSet> ya da <xref:System.Data.DataTable> nesnelerin değişikliklere göre mutabık kılınmaması gerekmez.
+Varsayılan olarak, `DBDirect` Yöntemler doğrudan veritabanına karşı çalıştırılabilen bir TableAdapter üzerinde oluşturulur. Bu yöntemler doğrudan çağrılabilir ve <xref:System.Data.DataSet> <xref:System.Data.DataTable> bir veritabanına güncelleştirme göndermek için değişiklikleri mutabık kılma gerektirmez.
 
 > [!NOTE]
-> Bir TableAdapter yapılandırırken, ana sorgu `DBDirect` yöntemlerinin oluşturulması için yeterli bilgi sağlamalıdır. Örneğin, bir TableAdapter birincil anahtar sütunu tanımlanmış olmayan bir tablodan verileri sorgulamak üzere yapılandırılmışsa, `DBDirect` Yöntemler oluşturmaz.
+> Bir TableAdapter yapılandırırken, ana sorgunun oluşturulacak yöntemler için yeterli bilgi sağlaması gerekir `DBDirect` . Örneğin, bir TableAdapter birincil anahtar sütunu tanımlanmış olmayan bir tablodan verileri sorgulamak üzere yapılandırılmışsa, `DBDirect` Yöntem oluşturmaz.
 
-|TableAdapter DBDirect yöntemi|Açıklama|
+|TableAdapter DBDirect yöntemi|Description|
 | - |-----------------|
 |`TableAdapter.Insert`|Veritabanına yeni kayıtlar ekler ve bağımsız sütun değerlerini Yöntem parametreleri olarak geçirmenize olanak sağlar.|
-|`TableAdapter.Update`|Mevcut veritabanındaki kayıtları güncelleştirir. `Update` yöntemi, özgün ve yeni sütun değerlerini Yöntem parametreleri olarak alır. Orijinal değerleri özgün kaydı bulmak için kullanılır ve bu kaydı güncelleştirmek için yeni değerler kullanılır.<br /><br /> `TableAdapter.Update` yöntemi, bir veri kümesindeki değişiklikleri bir <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, <xref:System.Data.DataRow>veya bir dizi <xref:System.Data.DataRow>yöntem parametresi olarak geçirerek veritabanına geri dönmek için de kullanılır.|
-|`TableAdapter.Delete`|Yöntem parametreleri olarak geçirilen var olan kayıtların özgün sütun değerlerine göre veritabanından siler.|
+|`TableAdapter.Update`|Bir veritabanındaki mevcut kayıtları güncelleştirir. `Update`Yöntemi, özgün ve yeni sütun değerlerini Yöntem parametreleri olarak alır. Özgün değerler özgün kaydı bulmak için kullanılır ve yeni değerler bu kaydı güncelleştirmek için kullanılır.<br /><br /> `TableAdapter.Update`Yöntemi, bir veri kümesindeki değişiklikleri <xref:System.Data.DataSet> <xref:System.Data.DataTable> <xref:System.Data.DataRow> <xref:System.Data.DataRow> yöntem parametresi olarak bir,, veya dizisi alarak veritabanına geri mutabık kılmak için de kullanılır.|
+|`TableAdapter.Delete`|Yöntem parametreleri olarak geçirilen özgün sütun değerlerini temel alarak veritabanından varolan kayıtları siler.|
 
 ## <a name="to-save-new-records-from-an-object-to-a-database"></a>Bir nesneden yeni kayıtları bir veritabanına kaydetmek için
 
-- Değerleri `TableAdapter.Insert` yöntemine geçirerek kayıtları oluşturun.
+- Değerleri yöntemine geçirerek kayıtları oluşturun `TableAdapter.Insert` .
 
-     Aşağıdaki örnek, `currentCustomer` nesnesindeki değerleri `TableAdapter.Insert` yöntemine geçirerek `Customers` tabloda yeni bir müşteri kaydı oluşturur.
+     Aşağıdaki örnek, `Customers` nesnesindeki değerleri yöntemine geçirerek tabloda yeni bir müşteri kaydı oluşturur `currentCustomer` `TableAdapter.Insert` .
 
      [!code-csharp[VbRaddataSaving#23](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_1.cs)]
      [!code-vb[VbRaddataSaving#23](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_1.vb)]
 
 ## <a name="to-update-existing-records-from-an-object-to-a-database"></a>Varolan kayıtları bir nesneden bir veritabanına güncelleştirmek için
 
-- `TableAdapter.Update` yöntemini çağırarak, kaydı güncelleştirmek için yeni değerleri geçirerek ve kaydı bulmak için özgün değerleri geçirerek kayıtları değiştirin.
+- `TableAdapter.Update`Yöntemi çağırarak, kaydı güncelleştirmek için yeni değerleri geçirerek ve kaydı bulmak için özgün değerleri geçirerek kayıtları değiştirin.
 
     > [!NOTE]
-    > Nesnenizin `Update` yöntemine geçebilmesi için özgün değerleri tutması gerekir. Bu örnek, özgün değerleri depolamak için `orig` önekiyle birlikte özellikleri kullanır.
+    > Nesneniz, yönteme geçirmek için özgün değerleri sürdürmeniz gerekir `Update` . Bu örnek `orig` , özgün değerleri depolamak için bir ön eki olan özellikleri kullanır.
 
-     Aşağıdaki örnek, `Customer` nesnesindeki yeni ve özgün değerleri `TableAdapter.Update` yöntemine geçirerek `Customers` tablodaki var olan bir kaydı güncelleştirir.
+     Aşağıdaki örnek, `Customers` nesnesi içindeki yeni ve orijinal değerlerini yöntemine geçirerek tablodaki var olan bir kaydı güncelleştirir `Customer` `TableAdapter.Update` .
 
      [!code-csharp[VbRaddataSaving#24](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_2.cs)]
      [!code-vb[VbRaddataSaving#24](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_2.vb)]
 
 ## <a name="to-delete-existing-records-from-a-database"></a>Varolan kayıtları bir veritabanından silmek için
 
-- `TableAdapter.Delete` yöntemini çağırarak ve kaydı bulmak için özgün değerleri geçirerek kayıtları silin.
+- `TableAdapter.Delete`Metodu çağırarak ve kaydı bulmak için özgün değerleri geçirerek kayıtları silin.
 
     > [!NOTE]
-    > Nesnenizin `Delete` yöntemine geçebilmesi için özgün değerleri tutması gerekir. Bu örnek, özgün değerleri depolamak için `orig` önekiyle birlikte özellikleri kullanır.
+    > Nesneniz, yönteme geçirmek için özgün değerleri sürdürmeniz gerekir `Delete` . Bu örnek `orig` , özgün değerleri depolamak için bir ön eki olan özellikleri kullanır.
 
-     Aşağıdaki örnek, `Customer` nesnesindeki özgün değerleri `TableAdapter.Delete` yöntemine geçirerek `Customers` tablosundan bir kaydı siler.
+     Aşağıdaki örnek, `Customers` nesnesindeki özgün değerleri yöntemine geçirerek tablodaki bir kaydı siler `Customer` `TableAdapter.Delete` .
 
      [!code-csharp[VbRaddataSaving#25](../data-tools/codesnippet/CSharp/save-data-from-an-object-to-a-database_3.cs)]
      [!code-vb[VbRaddataSaving#25](../data-tools/codesnippet/VisualBasic/save-data-from-an-object-to-a-database_3.vb)]
 
 ## <a name="net-security"></a>.NET güvenliği
 
-Veritabanındaki tabloda seçili `INSERT`, `UPDATE`veya `DELETE` gerçekleştirmek için izninizin olması gerekir.
+`INSERT`Veritabanında seçili, veya öğesini gerçekleştirmek için izninizin olması gerekir `UPDATE` `DELETE` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

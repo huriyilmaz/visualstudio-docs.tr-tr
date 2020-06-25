@@ -1,31 +1,31 @@
 ---
 title: Seçilen sınıf bir veya birden çok DataContext yöntemi için bir dönüş türü olarak kullanıldığından silinemiyor
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: d68254a0-f3a1-47e2-aed3-a83471e1d711
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 249a5338985983509f04e0ff268b2f30e2773f71
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: faea45cc7198be91a45d0bb57a62ce2730011ee2
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113553"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281337"
 ---
 # <a name="the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods"></a>Seçilen sınıf bir veya birden çok DataContext yöntemi için bir dönüş türü olarak kullanıldığından silinemiyor
 
-Bir veya daha fazla <xref:System.Data.Linq.DataContext> yönteminin dönüş türü Seçili varlık sınıfıdır. Bir <xref:System.Data.Linq.DataContext> yöntemi için dönüş türü olarak kullanılan bir varlık sınıfını silmek, projenin derlenmesi başarısız olur. Seçili varlık sınıfını silmek için, onu kullanan <xref:System.Data.Linq.DataContext> yöntemleri belirleyin ve dönüş türlerini farklı bir varlık sınıfına ayarlayın.
+Bir veya daha fazla yöntemin dönüş türü <xref:System.Data.Linq.DataContext> Seçili varlık sınıfıdır. Bir yöntemi için dönüş türü olarak kullanılan bir varlık sınıfını silmek, <xref:System.Data.Linq.DataContext> projenin derlenmesi başarısız olur. Seçili varlık sınıfını silmek için, <xref:System.Data.Linq.DataContext> onu kullanan yöntemleri belirleyin ve dönüş türlerini farklı bir varlık sınıfına ayarlayın.
 
-<xref:System.Data.Linq.DataContext> yöntemlerinin dönüş türlerini özgün otomatik oluşturulan türlere geri döndürmek için, önce **Yöntemler** bölmesinden <xref:System.Data.Linq.DataContext> yöntemini silin ve sonra nesneyi **Sunucu Gezgini**/**veritabanı Gezgini** ' den **O/R tasarımcısına** sürükleyin.
+Yöntemlerin dönüş türlerini <xref:System.Data.Linq.DataContext> özgün otomatik oluşturulan türlere geri döndürmek için, önce <xref:System.Data.Linq.DataContext> **yöntemleri yöntemler** bölmesinden silin ve sonra nesneyi **Sunucu Gezgini** / **veritabanı Gezgini** öğesinden **O/R tasarımcısına** yeniden sürükleyin.
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-1. **Yöntemler** bölmesinde bir <xref:System.Data.Linq.DataContext> yöntemi seçerek ve **Özellikler** penceresinde **dönüş türü** özelliğini inceleyerek, bir dönüş türü olarak varlık sınıfını kullanan <xref:System.Data.Linq.DataContext> yöntemlerini belirleme.
+1. <xref:System.Data.Linq.DataContext> <xref:System.Data.Linq.DataContext> **Yöntemler** bölmesinde bir yöntem seçerek ve **Özellikler** penceresinde **dönüş türü** özelliğini inceleyerek, bir dönüş türü olarak varlık sınıfını kullanan yöntemleri belirler.
 
-2. **Dönüş türünü** farklı bir varlık sınıfına ayarlayın veya <xref:System.Data.Linq.DataContext> yöntemini Yöntemler bölmesinden silin.
+2. **Dönüş türünü** farklı bir varlık sınıfına ayarlayın veya <xref:System.Data.Linq.DataContext> yöntemi Yöntemler bölmesinden silin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

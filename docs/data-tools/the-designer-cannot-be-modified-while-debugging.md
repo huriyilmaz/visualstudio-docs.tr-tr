@@ -1,19 +1,19 @@
 ---
 title: Tasarımcı hata ayıklama sırasında değiştirilemez
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: 487dafe4-d57c-4be1-9e3a-bb0a8699b2fa
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1667277e4f833ddcd6c2b2e077898ae5c76aada4
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 483267e2e570efbcc3cc1842560014ee9ba73d11
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113573"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281454"
 ---
 # <a name="the-designer-cannot-be-modified-while-debugging"></a>Tasarımcı hata ayıklama sırasında değiştirilemez
 

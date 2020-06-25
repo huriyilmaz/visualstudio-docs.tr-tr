@@ -1,7 +1,7 @@
 ---
 title: Bir veri kümesini doldururken kısıtlamaları kapatma
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - DataRow.BeginEdit
 - DataRow.EndEdit
@@ -20,21 +20,21 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 13cde04c3a10833c25fdc351d730b866f876e8da
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 7bdb225a5b310f6f602619b2afcee610c3e9258b
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586139"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281272"
 ---
 # <a name="turn-off-constraints-while-filling-a-dataset"></a>Bir veri kümesini doldururken kısıtlamaları kapatma
 
 Bir veri kümesi kısıtlamalar içeriyorsa (örneğin, yabancı anahtar kısıtlamaları), veri kümesinde gerçekleştirilen işlemlerin sırasıyla ilgili hatalar oluşturabilir. Örneğin, ilgili üst kayıtları yüklemeden önce alt kayıtları yükleme bir kısıtlamayı ihlal edebilir ve hataya neden olabilir. Bir alt kayıt yükledikten hemen sonra kısıtlama ilgili üst kaydı denetler ve bir hata oluşturur.
 
-Geçici kısıtlama askıya almaya izin veren bir mekanizma yoksa, alt tabloya bir kayıt yüklemeye her seferinde bir hata oluşur. Bir veri kümesindeki tüm kısıtlamaları askıya almanın bir başka yolu da <xref:System.Data.DataRow.BeginEdit%2A>ve <xref:System.Data.DataRow.EndEdit%2A> özelliklerdir.
+Geçici kısıtlama askıya almaya izin veren bir mekanizma yoksa, alt tabloya bir kayıt yüklemeye her seferinde bir hata oluşur. Bir veri kümesindeki tüm kısıtlamaları askıya almanın başka bir yolu <xref:System.Data.DataRow.BeginEdit%2A> , ve <xref:System.Data.DataRow.EndEdit%2A> özellikleridir.
 
 > [!NOTE]
-> (Örneğin, <xref:System.Data.DataTable.ColumnChanging> ve <xref:System.Data.DataTable.RowChanging>) doğrulama olayları, kısıtlamalar devre dışı bırakıldığında oluşturulmaz.
+> Kısıtlamalar devre dışı bırakıldığında doğrulama olayları (örneğin, <xref:System.Data.DataTable.ColumnChanging> ve <xref:System.Data.DataTable.RowChanging> ) oluşturulmaz.
 
 ## <a name="to-suspend-update-constraints-programmatically"></a>Güncelleştirme kısıtlamalarını programlı bir şekilde askıya almak için
 
@@ -45,9 +45,9 @@ Geçici kısıtlama askıya almaya izin veren bir mekanizma yoksa, alt tabloya b
 
 ## <a name="to-suspend-update-constraints-using-the-dataset-designer"></a>Veri Kümesi Tasarımcısı kullanarak güncelleştirme kısıtlamalarını askıya almak için
 
-1. Kümenizde açın **veri kümesi Tasarımcısı**. Daha fazla bilgi için bkz. [Izlenecek yol: veri kümesi Tasarımcısı veri kümesi oluşturma](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1. Veri kümenizi **veri kümesi Tasarımcısı**açın. Daha fazla bilgi için bkz. [Izlenecek yol: veri kümesi Tasarımcısı veri kümesi oluşturma](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
 
-2. **Özellikler** penceresinde <xref:System.Data.DataSet.EnforceConstraints%2A> özelliğini `false`olarak ayarlayın.
+2. **Özellikler** penceresinde, <xref:System.Data.DataSet.EnforceConstraints%2A> özelliğini olarak ayarlayın `false` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

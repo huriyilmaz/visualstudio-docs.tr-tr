@@ -1,19 +1,19 @@
 ---
 title: Seçili veritabanı nesnelerinin biri veya daha fazlası, hedef sınıfın şemasıyla eşleşmeyen bir şema döndürüyor
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: 3794e88b-4d3d-4e7a-ade6-8208eabe3eae
 author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 24729d319d35ee400248a3f961d435e28eb38770
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: c4bba0b227321e30f86aa552add245195b34e3b5
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76113623"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281909"
 ---
 # <a name="one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class"></a>Seçili veritabanı nesnelerinin biri veya daha fazlası, hedef sınıfın şemasıyla eşleşmeyen bir şema döndürüyor
 

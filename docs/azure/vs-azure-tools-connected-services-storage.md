@@ -6,21 +6,21 @@ manager: jillfra
 assetId: 521ec044-ad4b-4828-8864-01decde2e758
 ms.custom: vs-azure
 ms.workload: azure-vs
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 03/26/2017
 ms.author: ghogen
-ms.openlocfilehash: ca65086ce7ce09a1ca288c2f5cd04c31e00f8e95
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: ddb0f2610473841a69ec69600cf9ef83cb898340
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911894"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280690"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetler 'i kullanarak Azure depolama ekleme
 
 Visual Studio ile, **bağlı hizmetler Ekle** iletişim kutusunu kullanarak aşağıdakilerden herhangi birini Azure depolama 'ya bağlayabilirsiniz:
 
-- C#bulut hizmeti
+- C# bulut hizmeti
 - .NET arka uç mobil hizmeti
 - ASP.NET Web sitesi veya hizmeti
 - ASP.NET Core hizmeti
@@ -76,5 +76,5 @@ Tamamlandıktan sonra, **bağlı hizmetler Ekle** iletişim kutusu, BLOB depolam
 
 - [MSDN Forumu: Azure depolama](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
 - [Ekip Blogu Microsoft Azure Depolama](https://blogs.msdn.microsoft.com/windowsazurestorage/)
-- [Azure depolama belgeleri](/azure/storage/)
+- [Azure Depolama belgeleri](/azure/storage/)
 - [Bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)

@@ -1,25 +1,25 @@
 ---
 title: Bu ilgili metot, aşağıdaki varsayılan ekleme, güncelleştirme ve silme metotları için yedek bir metottur
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: 62afa6da-97cf-48b9-8de3-33e4d72a0377
 author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8a7a422cff33fd361b784fd9cae6d5053fbe84fa
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 60634bb2cdc0cf85bfaee441a3fb3d3eb55b3159
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72639660"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281285"
 ---
 # <a name="this-related-method-is-the-backing-method-for-the-following-default-insert-update-or-delete-methods"></a>Bu ilgili metot, aşağıdaki varsayılan ekleme, güncelleştirme ve silme metotları için yedek bir metottur
 
-Bu ilgili yöntem, aşağıdaki varsayılan `Insert`, `Update` veya `Delete` yöntemleri için yedekleme yöntemidir. Silinirse, bu yöntemler de silinir. Devam etmek istiyor musunuz?
+Bu ilgili yöntem, aşağıdaki varsayılan `Insert` , veya yöntemleri için yedekleme yöntemidir `Update` `Delete` . Silinirse, bu yöntemler de silinir. Devam etmek istiyor musunuz?
 
-Seçilen `DataContext` yöntemi şu anda, o an `Insert`, `Update` veya `Delete` yöntemlerinden biri olarak **o/R tasarımcısında**varlık sınıflarından biri olarak kullanılmaktadır. Seçili yöntemi silmek, bu yöntemi kullanan varlık sınıfının bir güncelleştirme sırasında INSERT, Update veya Delete işlemini gerçekleştirmek için varsayılan çalışma zamanı davranışına geri dönmesi için yol açar.
+Seçilen `DataContext` Yöntem `Insert` , `Update` o anda `Delete` **o/R tasarımcısında**varlık sınıflarından biri için, veya yöntemlerinden biri olarak kullanılmaktadır. Seçili yöntemi silmek, bu yöntemi kullanan varlık sınıfının bir güncelleştirme sırasında INSERT, Update veya Delete işlemini gerçekleştirmek için varsayılan çalışma zamanı davranışına geri dönmesi için yol açar.
 
 ## <a name="selected-method-options"></a>Seçili Yöntem seçenekleri
 

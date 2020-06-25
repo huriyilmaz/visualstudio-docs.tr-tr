@@ -1,7 +1,7 @@
 ---
 title: Veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarla
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Data Sources Window, select controls
 - Windows Forms, displaying data
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5193f3e3a0a1f4a06cc4830036ecf63806a1dbee
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 8f5a3cf2d1f34ca9a3d0c2918a8f3f0a3e05260f
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586191"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281545"
 ---
 # <a name="set-the-control-to-be-created-when-dragging-from-the-data-sources-window"></a>Veri Kaynakları penceresinden sürüklendiğinde denetimin oluşturulmasını ayarlama
 
@@ -37,7 +37,7 @@ Bu bağlamda, *nesne* terimi özel bir iş nesnesi, bir varlık (varlık veri mo
 2. **Veri kaynakları** penceresinde, ayarlamak istediğiniz veri tablosu veya nesneyi temsil eden öğeyi seçin.
 
    > [!TIP]
-   > **Veri kaynakları** penceresi açık değilse, **diğer Windows** > **veri kaynaklarını** **görüntüle** > ' yi seçerek açabilirsiniz.
+   > **Veri kaynakları** penceresi açık değilse, **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçerek açabilirsiniz.
 
 3. Öğenin açılan menüsüne tıklayın ve ardından menüdeki aşağıdaki öğelerden birine tıklayın:
 

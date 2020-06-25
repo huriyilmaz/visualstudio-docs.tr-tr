@@ -1,7 +1,7 @@
 ---
 title: 'İzlenecek yol: Bir işlemde veri kaydetme'
 ms.date: 09/08/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,18 +17,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c0efdda51a52b18697828e1772eb4a71435753e8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: caeb06ac3f38293b493463ff456e222f148ef93a
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586243"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281636"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>İzlenecek yol: Bir işlemde veri kaydetme
 
-Bu izlenecek yol, <xref:System.Transactions> ad alanını kullanarak bir işlemde nasıl veri kaydedileceğini gösterir. Bu kılavuzda bir Windows Forms uygulaması oluşturacaksınız. Northwind örnek veritabanındaki iki tablo için bir veri kümesi oluşturmak üzere veri kaynağı Yapılandırma Sihirbazı 'nı kullanacaksınız. Bir Windows formuna veri bağlantılı denetimler ekleyeceksiniz ve bir TransactionScope içinde veritabanını güncelleştirmek için BindingNavigator 'ın Kaydet düğmesine ait kodu değiştirirsiniz.
+Bu izlenecek yol, ad alanını kullanarak bir işlemde nasıl veri kaydedileceğini gösterir <xref:System.Transactions> . Bu kılavuzda bir Windows Forms uygulaması oluşturacaksınız. Northwind örnek veritabanındaki iki tablo için bir veri kümesi oluşturmak üzere veri kaynağı Yapılandırma Sihirbazı 'nı kullanacaksınız. Bir Windows formuna veri bağlantılı denetimler ekleyeceksiniz ve bir TransactionScope içinde veritabanını güncelleştirmek için BindingNavigator 'ın Kaydet düğmesine ait kodu değiştirirsiniz.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
@@ -42,7 +42,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
     2. [Northwind Transact-SQL betiğini](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) panonuza kopyalayın. Bu T-SQL betiği, Northwind veritabanını sıfırdan oluşturur ve verileri veriyle doldurur.
 
-    3. T-SQL betiği sorgu düzenleyiciye yapıştırın ve ardından **yürütme** düğmesi.
+    3. T-SQL betiğini sorgu düzenleyicisine yapıştırın ve sonra **Çalıştır** düğmesini seçin.
 
        Kısa bir süre sonra sorgu çalışmayı sonlandırır ve Northwind veritabanı oluşturulur.
 
@@ -50,9 +50,9 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 İlk adım **Windows Forms bir uygulama**oluşturmaktır.
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **projesi**' ni seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
-2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
+2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
@@ -62,7 +62,7 @@ Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını 
 
 ## <a name="create-a-database-data-source"></a>Veritabanı veri kaynağı oluşturma
 
-Bu adım, Northwind örnek veritabanındaki `Customers` ve `Orders` tabloları temel alan bir veri kaynağı oluşturmak için **veri kaynağı Yapılandırma Sihirbazı** ' nı kullanır.
+Bu adım, Northwind örnek veritabanındaki ve tablolarını temel alan bir veri kaynağı oluşturmak için **veri kaynağı Yapılandırma Sihirbazı** ' nı kullanır `Customers` `Orders` .
 
 1. Veri **kaynakları** penceresini açmak Için, **veri** menüsünde **veri kaynaklarını göster**' i seçin.
 
@@ -74,7 +74,7 @@ Bu adım, Northwind örnek veritabanındaki `Customers` ve `Orders` tabloları t
 
     - Northwind örnek veritabanıyla kurulan veri bağlantısı aşağı açılan listede kullanılabilir durumdaysa bunu seçin.
 
-         veya
+         -veya-
 
     - **Yeni bağlantı** ' yı seçerek **Bağlantı Ekle/Değiştir** Iletişim kutusunu başlatın ve Northwind veritabanına bir bağlantı oluşturun.
 
@@ -84,9 +84,9 @@ Bu adım, Northwind örnek veritabanındaki `Customers` ve `Orders` tabloları t
 
 7. **Veritabanı nesnelerinizi seçin** ekranında **Tablolar** düğümünü genişletin.
 
-8. `Customers` ve `Orders` tabloları seçip **son**' u seçin.
+8. `Customers`Ve tablolarını seçip `Orders` **son**' u seçin.
 
-     **NorthwindDataSet** , projenize eklenir ve `Customers` ve `Orders` tabloları **veri kaynakları** penceresinde görünür.
+     **NorthwindDataSet** , projenize eklenir ve `Customers` `Orders` Tablolar **veri kaynakları** penceresinde görünür.
 
 ## <a name="add-controls-to-the-form"></a>Forma denetim ekleme
 
@@ -96,11 +96,11 @@ Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlant�
 
 2. Ana **müşteriler** düğümünü **veri kaynakları** penceresinden **Form1**üzerine sürükleyin.
 
-   Kayıtlar üzerinde gezinmek için bir <xref:System.Windows.Forms.DataGridView> denetimi ve araç şeridi (<xref:System.Windows.Forms.BindingNavigator>) formda görüntülenir. Bileşen tepsisinde bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter`, <xref:System.Windows.Forms.BindingSource>ve <xref:System.Windows.Forms.BindingNavigator> görüntülenir.
+   <xref:System.Windows.Forms.DataGridView>Kayıtlar üzerinde gezinmek için bir denetim ve araç şeridi ( <xref:System.Windows.Forms.BindingNavigator> ) formda görüntülenir. Bileşen tepsisinde bir [NorthwindDataSet](../data-tools/dataset-tools-in-visual-studio.md), `CustomersTableAdapter` , <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator> görüntülenir.
 
 3. İlgili **siparişler** düğümünü (ana **siparişler** düğümünü değil, **Faks** sütununun altındaki Ilişkili alt tablo düğümünü) **CustomersDataGridView**altında bulunan form üzerine sürükleyin.
 
-   Form üzerinde bir <xref:System.Windows.Forms.DataGridView> görünür. Bileşen tepsisinde bir `OrdersTableAdapter` ve <xref:System.Windows.Forms.BindingSource> görüntülenir.
+   <xref:System.Windows.Forms.DataGridView>Form üzerinde görünür. `OrdersTableAdapter`Ve <xref:System.Windows.Forms.BindingSource> bileşen tepsisinde görünür.
 
 ## <a name="add-a-reference-to-the-systemtransactions-assembly"></a>System. Transactions derlemesine bir başvuru ekleyin
 
@@ -116,7 +116,7 @@ Veri **kaynakları** penceresinden formunuza öğe sürükleyerek veri bağlant�
 
 ## <a name="modify-the-code-in-the-bindingnavigators-saveitem-button"></a>BindingNavigator 'ın saveItem düğmesinde kodu değiştirin
 
-Formunuza bırakılan ilk tablo için, varsayılan olarak, <xref:System.Windows.Forms.BindingNavigator>Kaydet düğmesinin `click` olayına kod eklenir. Ek tabloları güncelleştirmek için el ile kod eklemeniz gerekir. Bu izlenecek yol için, Kaydet düğmesinin tıklama olay işleyicisindeki mevcut kaydetme kodunu yeniden tasarlıyoruz. Ayrıca, satırın eklenmesi veya silinmesi gerektiğine bağlı olarak belirli güncelleştirme işlevlerini sağlamak için birkaç yöntem de oluşturacağız.
+Formunuza bırakılan ilk tablo için, kod varsayılan olarak `click` , üzerinde Kaydet düğmesinin olayına eklenir <xref:System.Windows.Forms.BindingNavigator> . Ek tabloları güncelleştirmek için el ile kod eklemeniz gerekir. Bu izlenecek yol için, Kaydet düğmesinin tıklama olay işleyicisindeki mevcut kaydetme kodunu yeniden tasarlıyoruz. Ayrıca, satırın eklenmesi veya silinmesi gerektiğine bağlı olarak belirli güncelleştirme işlevlerini sağlamak için birkaç yöntem de oluşturacağız.
 
 ### <a name="to-modify-the-auto-generated-save-code"></a>Otomatik olarak oluşturulan kaydetme kodunu değiştirmek için
 
@@ -129,43 +129,43 @@ Formunuza bırakılan ilk tablo için, varsayılan olarak, <xref:System.Windows.
 
 İlgili verilerde yapılan değişiklikleri mutabık kılma sırası aşağıdaki gibidir:
 
-- Alt kayıtları silin. (Bu durumda, `Orders` tablosundan kayıtları silin.)
+- Alt kayıtları silin. (Bu durumda, tablodaki kayıtları silin `Orders` .)
 
-- Üst kayıtları silin. (Bu durumda, `Customers` tablosundan kayıtları silin.)
+- Üst kayıtları silin. (Bu durumda, tablodaki kayıtları silin `Customers` .)
 
-- Üst kayıtları ekleyin. (Bu durumda, `Customers` tablosuna kayıtlar ekleyin.)
+- Üst kayıtları ekleyin. (Bu durumda, kayıtları `Customers` tablosuna ekleyin.)
 
-- Alt kayıtları ekleyin. (Bu durumda, `Orders` tablosuna kayıtlar ekleyin.)
+- Alt kayıtları ekleyin. (Bu durumda, kayıtları `Orders` tablosuna ekleyin.)
 
 ### <a name="to-delete-existing-orders"></a>Mevcut siparişleri silmek için
 
-- Aşağıdaki `DeleteOrders` yöntemini **Form1**öğesine ekleyin:
+- Aşağıdaki `DeleteOrders` yöntemi **Form1**öğesine ekleyin:
 
      [!code-vb[VbRaddataSaving#5](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_2.vb)]
      [!code-csharp[VbRaddataSaving#5](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_2.cs)]
 
 ### <a name="to-delete-existing-customers"></a>Mevcut müşterileri silmek için
 
-- Aşağıdaki `DeleteCustomers` yöntemini **Form1**öğesine ekleyin:
+- Aşağıdaki `DeleteCustomers` yöntemi **Form1**öğesine ekleyin:
 
      [!code-vb[VbRaddataSaving#6](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_3.vb)]
      [!code-csharp[VbRaddataSaving#6](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_3.cs)]
 
 ### <a name="to-add-new-customers"></a>Yeni müşteriler eklemek için
 
-- Aşağıdaki `AddNewCustomers` yöntemini **Form1**öğesine ekleyin:
+- Aşağıdaki `AddNewCustomers` yöntemi **Form1**öğesine ekleyin:
 
      [!code-vb[VbRaddataSaving#7](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_4.vb)]
      [!code-csharp[VbRaddataSaving#7](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_4.cs)]
 
 ### <a name="to-add-new-orders"></a>Yeni siparişler eklemek için
 
-- Aşağıdaki `AddNewOrders` yöntemini **Form1**öğesine ekleyin:
+- Aşağıdaki `AddNewOrders` yöntemi **Form1**öğesine ekleyin:
 
      [!code-vb[VbRaddataSaving#8](../data-tools/codesnippet/VisualBasic/save-data-in-a-transaction_5.vb)]
      [!code-csharp[VbRaddataSaving#8](../data-tools/codesnippet/CSharp/save-data-in-a-transaction_5.cs)]
 
-## <a name="run-the-application"></a>Uygulamayı çalıştırın
+## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
 Uygulamayı çalıştırmak için **F5**'e basın.
 

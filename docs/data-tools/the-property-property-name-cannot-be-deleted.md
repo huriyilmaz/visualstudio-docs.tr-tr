@@ -1,23 +1,23 @@
 ---
 title: Özellik silinemiyor
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: error-reference
 ms.assetid: 55873f74-7834-4ec1-8815-eeeb65618d87
 author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 29344a2443708d9ddaed3d90a186ab8424638664
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 91fce94babf443c974a49885263b8e7eb77d9eaa
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72640496"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281351"
 ---
-# <a name="the-property-property-name-cannot-be-deleted"></a>@No__t_0property name > özelliği silinemiyor
+# <a name="the-property-property-name-cannot-be-deleted"></a>\<property name> özelliği silinemiyor
 
-@No__t_2class adı > ve \<class adı arasındaki devralma için **ayrıştırıcı özelliği** olarak ayarlandığından \<property ad > özelliği silinemiyor >
+\<property name>Ve arasında devralmanın **ayrıştırıcı özelliği** olarak ayarlandığı için özellik silinemiyor \<class name>\<class name>
 
 Seçilen özellik, hata iletisinde belirtilen sınıflar arasındaki devralma için **ayrıştırıcı özelliği** olarak ayarlanır. Veri sınıfları arasında devralma yapılandırmasına katılımları halinde Özellikler silinemez.
 

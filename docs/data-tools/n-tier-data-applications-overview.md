@@ -1,7 +1,7 @@
 ---
 title: N Katmanlı Veri Uygulamalarına Genel Bakış
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - presentation tier
 - middle tier
@@ -13,12 +13,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 21233b94350823b1f765aa33f9304c10c43e0535
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 14527e84d5bbd2d06b2d091ba7a9d4daa9763462
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586386"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281961"
 ---
 # <a name="n-tier-data-applications-overview"></a>N katmanlı veri uygulamalarına genel bakış
 *N katmanlı* veri uygulamaları *, birden fazla*katmana ayrılan veri uygulamalarıdır. Ayrıca, "dağıtılmış uygulamalar" ve "çok katmanlı uygulamalar" olarak da bilinen n katmanlı uygulamalar, istemci ile sunucu arasında dağıtılan ayrı katmanlara ayrı işlem ayırır. Veriye erişen uygulamalar geliştirirken, uygulamayı oluşturan çeşitli katmanlar arasında açık bir ayrımı olması gerekir.
@@ -31,12 +31,12 @@ Visual Studio, geliştiricilerin n katmanlı uygulamalar oluşturmalarına yard�
 
 - [Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) , farklı ad alanlarına DataContext ve veri sınıfları oluşturmak için ayarlar sağlar. Bu, veri erişimi ve veri varlığı katmanlarının mantıksal olarak ayrılmasını mümkün bir şekilde sunar.
 
-- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) , bir uygulamadaki farklı katmanlardan DataContext 'i bir araya getirmenize olanak tanıyan <xref:System.Data.Linq.Table%601.Attach%2A> yöntemi sağlar. Daha fazla bilgi için, [LINQ to SQL Ile N katmanlı ve uzak uygulamalar](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)bölümüne bakın.
+- [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) , <xref:System.Data.Linq.Table%601.Attach%2A> bir uygulamadaki farklı katmanlardan DataContext 'i bir araya getirmenizi sağlayan yöntemini sağlar. Daha fazla bilgi için, [LINQ to SQL Ile N katmanlı ve uzak uygulamalar](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)bölümüne bakın.
 
 ## <a name="presentation-tier"></a>Sunum katmanı
 *Sunum katmanı* , kullanıcıların bir uygulamayla etkileşimde bulunduğu katmandır. Genellikle ek uygulama mantığı da içerir. Tipik sunum katmanı bileşenleri şunları içerir:
 
-- <xref:System.Windows.Forms.BindingSource> ve <xref:System.Windows.Forms.BindingNavigator>gibi veri bağlama bileşenleri.
+- Ve gibi veri bağlama bileşenleri <xref:System.Windows.Forms.BindingSource> <xref:System.Windows.Forms.BindingNavigator> .
 
 - Sunum katmanında kullanılmak üzere [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) varlık sınıfları gibi verilerin nesne temsilleri.
 
@@ -57,7 +57,7 @@ Sunu katmanı genellikle bir hizmet başvurusu (örneğin, bir [Windows Communic
 
 Aşağıdaki çizimde, Visual Studio 'da bulunan ve n katmanlı bir uygulamanın orta katmanına uyabilecek Özellikler ve teknolojiler gösterilmektedir.
 
-![orta katman bileşenleri](../data-tools/media/ntiermid.png) orta katman
+![Orta katman bileşenleri ](../data-tools/media/ntiermid.png) Orta katman
 
 Orta katman tipik olarak veri katmanına veri bağlantısı kullanarak bağlanır. Bu veri bağlantısı genellikle veri erişimi bileşeninde depolanır.
 
@@ -66,14 +66,14 @@ Orta katman tipik olarak veri katmanına veri bağlantısı kullanarak bağlanı
 
 Aşağıdaki çizimde, Visual Studio 'da bulunan ve n katmanlı bir uygulamanın veri katmanına uyabilecek Özellikler ve teknolojiler gösterilmektedir.
 
-veri katmanı](../data-tools/media/ntierdatatier.png) ![veri katmanı bileşenleri
+![Veri katmanı bileşenleri ](../data-tools/media/ntierdatatier.png) veri katmanı
 
 Veri katmanına, sunu katmanındaki istemciden doğrudan erişilemez. Bunun yerine, orta katmandaki veri erişim bileşeni, sunum ve veri katmanları arasındaki iletişim için kullanılır.
 
 ## <a name="help-for-n-tier-development"></a>N katmanlı geliştirme için yardım
 Aşağıdaki konular, n katmanlı uygulamalarla çalışma hakkında bilgi sağlar:
 
-[Veri kümeleri ile TableAdapter’ları farklı projelere ayırma](../data-tools/separate-datasets-and-tableadapters-into-different-projects.md)
+[Veri kümelerini ve TableAdapters farklı projelere ayır](../data-tools/separate-datasets-and-tableadapters-into-different-projects.md)
 
 [İzlenecek yol: n katmanlı veri uygulaması oluşturma](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 

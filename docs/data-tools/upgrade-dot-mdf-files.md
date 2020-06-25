@@ -1,7 +1,7 @@
 ---
 title: .mdf dosyalarını yükseltme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - SQL Server Express
 - SQL Server LocalDB
@@ -14,16 +14,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 195cab863554bc60478df4e80319eab80124140a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d35611dcc7b6067cf6d6166aff521ef291b8dfcd
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75586100"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85281129"
 ---
 # <a name="upgrade-mdf-files"></a>.mdf dosyalarını yükseltme
 
-Bu konu, Visual Studio 'nun daha yeni bir sürümünü yükledikten sonra bir veritabanı dosyasını ( *. mdf*) yükseltme seçeneklerini açıklamaktadır. Aşağıdaki görevler için yönergeler içerir:
+Bu konu, Visual Studio 'nun daha yeni bir sürümünü yükledikten sonra bir veritabanı dosyasını (*. mdf*) yükseltme seçeneklerini açıklamaktadır. Aşağıdaki görevler için yönergeler içerir:
 
 - Bir veritabanı dosyasını SQL Server Express LocalDB 'nin daha yeni bir sürümünü kullanacak şekilde yükseltin
 
@@ -33,7 +33,7 @@ Bu konu, Visual Studio 'nun daha yeni bir sürümünü yükledikten sonra bir ve
 
 - Varsayılan veritabanı altyapısını SQL Server Express yap
 
-SQL Server Express veya LocalDB 'nin eski bir sürümü kullanılarak oluşturulmuş bir veritabanı dosyasını ( *. mdf*) içeren bir projeyi açmak Için Visual Studio 'yu kullanabilirsiniz. Ancak, projenizi Visual Studio 'da geliştirmeye devam etmek için, bu SQL Server Express veya LocalDB sürümünün Visual Studio ile aynı makineye yüklenmiş olması veya veritabanı dosyasını yükseltmeniz gerekir. Veritabanı dosyasını yükseltirseniz, SQL Server Express veya LocalDB 'nin eski sürümlerini kullanarak bu dosyaya erişemeyeceksiniz.
+SQL Server Express veya LocalDB 'nin eski bir sürümü kullanılarak oluşturulmuş bir veritabanı dosyasını (*. mdf*) içeren bir projeyi açmak Için Visual Studio 'yu kullanabilirsiniz. Ancak, projenizi Visual Studio 'da geliştirmeye devam etmek için, bu SQL Server Express veya LocalDB sürümünün Visual Studio ile aynı makineye yüklenmiş olması veya veritabanı dosyasını yükseltmeniz gerekir. Veritabanı dosyasını yükseltirseniz, SQL Server Express veya LocalDB 'nin eski sürümlerini kullanarak bu dosyaya erişemeyeceksiniz.
 
 Ayrıca, dosyanın sürümü şu anda yüklü olan SQL Server Express veya LocalDB örneğiyle uyumlu değilse, SQL Server Express veya LocalDB 'nin önceki bir sürümüyle oluşturulmuş bir veritabanı dosyasını yükseltmeniz istenebilir. Bu sorunu çözmek için, Visual Studio dosyayı yükseltmenizi ister.
 
@@ -61,13 +61,13 @@ Bir veritabanını yükseltmeden önce aşağıdaki ölçütleri göz önünde b
 
 2. **Bağlantı ekle** iletişim kutusunda, aşağıdaki bilgileri belirtin:
 
-    - **Veri kaynağı**: `Microsoft SQL Server (SqlClient)`
+    - **Veri kaynağı**:`Microsoft SQL Server (SqlClient)`
 
-    - **Sunucu Adı**:
+    - **Sunucu adı**:
 
-        - Varsayılan sürümü kullanmak için: `(localdb)\MSSQLLocalDB`.  Bu, hangi Visual Studio sürümünün yüklü olduğuna ve ilk LocalDB örneğinin ne zaman oluşturulduğuna bağlı olarak ProjectV12 veya ProjectV13 belirtir. SQL Server Nesne Gezgini **Mssqllocaldb** düğümü, işaret ettiği sürümü gösterir.
+        - Varsayılan sürümü kullanmak için: `(localdb)\MSSQLLocalDB` .  Bu, hangi Visual Studio sürümünün yüklü olduğuna ve ilk LocalDB örneğinin ne zaman oluşturulduğuna bağlı olarak ProjectV12 veya ProjectV13 belirtir. SQL Server Nesne Gezgini **Mssqllocaldb** düğümü, **SQL Server Object Explorer** işaret ettiği sürümü gösterir.
 
-        - Belirli bir sürümü kullanmak için: `(localdb)\ProjectsV12` veya `(localdb)\ProjectsV13`; burada V12, LocalDB 2014 ve v13 Yereldb 2016 ' dir.
+        - Belirli bir sürümü kullanmak için: `(localdb)\ProjectsV12` veya `(localdb)\ProjectsV13` V12, localdb 2014 ve v13, localdb 2016 ' dir.
 
     - **Veritabanı dosyası Ekle**: birincil *. mdf* dosyasının fiziksel yolu.
 
@@ -79,7 +79,7 @@ Bir veritabanını yükseltmeden önce aşağıdaki ölçütleri göz önünde b
 
     Veritabanı yükseltilir, LocalDB veritabanı altyapısına iliştirilir ve artık LocalDB 'nin eski sürümüyle uyumlu değildir.
 
-Ayrıca, bağlantı için kısayol menüsünü açıp **Bağlantıyı Değiştir**' i seçerek LocalDB 'yi kullanmak için bir SQL Server Express bağlantısını değiştirebilirsiniz. **Bağlantıyı Değiştir** iletişim kutusunda sunucu adını `(LocalDB)\MSSQLLocalDB`olarak değiştirin. **Gelişmiş Özellikler** iletişim kutusunda, **Kullanıcı örneğinin** **false**olarak ayarlandığından emin olun.
+Ayrıca, bağlantı için kısayol menüsünü açıp **Bağlantıyı Değiştir**' i seçerek LocalDB 'yi kullanmak için bir SQL Server Express bağlantısını değiştirebilirsiniz. **Bağlantıyı Değiştir** iletişim kutusunda sunucu adını olarak değiştirin `(LocalDB)\MSSQLLocalDB` . **Gelişmiş Özellikler** iletişim kutusunda, **Kullanıcı örneğinin** **false**olarak ayarlandığından emin olun.
 
 ### <a name="to-upgrade-a-database-file-to-use-the-sql-server-express-version"></a>Bir veritabanı dosyasını SQL Server Express sürümünü kullanacak şekilde yükseltmek için
 
@@ -101,11 +101,11 @@ Ayrıca, bağlantı için kısayol menüsünü açıp **Bağlantıyı Değiştir
 
 ### <a name="to-make-sql-server-express-the-default-database-engine"></a>Varsayılan veritabanı altyapısını SQL Server Express yapmak için
 
-1. Menü çubuğunda **araçlar** > **Seçenekler**' i seçin.
+1. Menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin.
 
 2. **Seçenekler** iletişim kutusunda, **veritabanı araçları** seçeneklerini genişletin ve ardından **veri bağlantıları**' nı seçin.
 
-3. **Örnek adı SQL Server** metin kutusunda, kullanmak istediğiniz SQL Server Express veya LocalDB örneğinin adını belirtin. Örnek adlandırılmazsa, `.\SQLEXPRESS or (LocalDB)\MSSQLLocalDB`belirtin.
+3. **Örnek adı SQL Server** metin kutusunda, kullanmak istediğiniz SQL Server Express veya LocalDB örneğinin adını belirtin. Örnek adlandırılmazsa, belirtin `.\SQLEXPRESS or (LocalDB)\MSSQLLocalDB` .
 
 4. **Tamam** düğmesini seçin.
 

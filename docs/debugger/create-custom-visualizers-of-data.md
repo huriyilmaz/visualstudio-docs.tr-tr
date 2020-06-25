@@ -19,14 +19,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70c16b603f1c38eeb3e71718937e7c669ae8ebc9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 0e184507415810f64060b0d2b2e92a825d642d2e
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184555"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85280882"
 ---
 # <a name="create-custom-data-visualizers"></a>Özel veri Görselleştiriciler oluşturma
+
  *Görselleştirici* , bir [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] değişken veya nesneyi veri türüne uygun bir şekilde görüntüleyen hata ayıklayıcı Kullanıcı arabiriminin bir parçasıdır. Örneğin, bir HTML Görselleştiricisini bir HTML dizesini yorumlar ve bir tarayıcı penceresinde görüneceği şekilde sonucu görüntüler. Bit eşlem görselleştiricisi bir bit eşlem yapısını Yorumlar ve temsil ettiği grafiği görüntüler. Bazı Görselleştiriciler, değişiklik yapmanızı ve verileri görüntülemenizi sağlar.
 
  [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]Hata ayıklayıcı altı standart Görselleştiriciler içerir. Metin, HTML, XML ve JSON Görselleştiriciler dize nesnelerinde çalışır. WPF ağaç görselleştiricisi, WPF nesne görsel ağacının özelliklerini görüntüler. Veri kümesi görselleştiricisi veri kümesi, DataView ve DataTable nesneleri için geçerlidir.
@@ -74,11 +75,23 @@ Hata ayıklayıcı tarafında görselleştiricisi Kullanıcı arabirimini oluşt
 
 ### <a name="to-create-the-visualizer-object-source-for-the-debuggee-side"></a>Hata ayıklanan kenar için Görselleştirici nesne kaynağını oluşturmak için
 
-Hata ayıklayıcı tarafındaki kodda öğesini kullanarak görselleştirilecek türü (hata ayıklanan-yan nesne kaynağı) belirtirsiniz <xref:System.Diagnostics.DebuggerVisualizerAttribute> .
+Hata ayıklayıcı tarafı kodunda, <xref:System.Diagnostics.DebuggerVisualizerAttribute> öğesini, görselleştirilecek türü (hata ayıklanan-yan nesne kaynağı) () vererek düzenleyin <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> . `Target`Özelliği, nesne kaynağını ayarlar. Nesne kaynağını atlarsanız, Görselleştirici varsayılan bir nesne kaynağı kullanacaktır.
 
-1. Hata ayıklayıcı tarafı kodunda, öğesini düzenleyin ve <xref:System.Diagnostics.DebuggerVisualizerAttribute> nesne kaynağı () olarak değiştirin <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> . `Target`Özelliği, nesne kaynağını ayarlar. Nesne kaynağını atlarsanız, Görselleştirici varsayılan bir nesne kaynağı kullanacaktır.
+::: moniker range=">=vs-2019"
+Hata ayıklanan yüz kodu görselleştirilen nesne kaynağını içerir. Veri nesnesi yöntemlerini geçersiz kılabilir <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> . Bağımsız bir Görselleştirici oluşturmak istiyorsanız, bir debugayıklanan yan DLL gereklidir.
+::: moniker-end
 
-1. Görselleştirici düzenlemesine izin vermek ve veri nesnelerini göstermek için, `TransferData` veya yöntemlerini geçersiz kılın `CreateReplacementObject` <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> .
+Hata ayıklanan taraf kodunda:
+
+- Görselleştirici veri nesnelerini düzenlemesine izin vermek için, nesne kaynağı from kaynağından devralması <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> ve ya da yöntemlerini geçersiz kılmalıdır `TransferData` `CreateReplacementObject` .
+
+- Görselleştiricinizdeki çoklu hedef belirleme 'yı desteklemeniz gerekiyorsa, hata ayıklanan-tarafı proje dosyasında aşağıdaki hedef Framework takma adlarını (TFMs) kullanabilirsiniz.
+
+   ```xml
+   <TargetFrameworks>net20;netstandard2.0;netcoreapp2.0</TargetFrameworks>
+   ```
+
+   Bunlar desteklenen tek TFMs ' dir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
