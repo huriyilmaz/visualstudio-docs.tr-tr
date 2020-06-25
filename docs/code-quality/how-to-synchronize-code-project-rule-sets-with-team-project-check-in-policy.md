@@ -1,7 +1,7 @@
 ---
 title: İade ilkesiyle proje kural kümelerini eşitleme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.selecttfsruleset
 ms.assetid: 9b02f934-2db6-41ec-aaff-9c31ceec2f04
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a765bcdd6eefbb5c256603bb73c0684c8782f803
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 5e27987f7fa298ddcedf52a9f01a80f57d3d329f
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587413"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371787"
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-an-azure-devops-project-check-in-policy"></a>Nasıl yapılır: Azure DevOps projesi Iade Ilkesiyle kod proje kural kümelerini senkronize etme
 
@@ -31,7 +31,7 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 ## <a name="to-specify-a-microsoft-standard-rule-set"></a>Bir Microsoft standart kural kümesi belirtmek için
 
-1. İçinde **Çözüm Gezgini**kod projesine sağ tıklayın ve ardından **özellikleri**.
+1. **Çözüm Gezgini**, kod projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
 2. **Kod Analizi**' ne tıklayın.
 
@@ -51,19 +51,19 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 1. Gerekirse, iade ilkesini belirten kural kümesi dosyasında bir get işlemi gerçekleştirin.
 
-2. İçinde **Çözüm Gezgini**kod projesine sağ tıklayın ve ardından **özellikleri**.
+2. **Çözüm Gezgini**, kod projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
 3. **Kod Analizi**' ne tıklayın.
 
 ::: moniker range="vs-2017"
 
-4. **Bu kural kümesini Çalıştır** listesinde **\<gitmek >** ' e tıklayın.
+4. **Bu kural kümesini Çalıştır** listesinde, öğesine tıklayın **\<Browse>** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-4. **Etkin kurallar** listesinde **\<gitmek >** ' a tıklayın.
+4. **Etkin kurallar** listesinde, öğesine tıklayın **\<Browse>** .
 
 ::: moniker-end
 

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılı: Yönetilen kod için kod çözümlemeyi el ile çalıştırın'
+title: Yönetilen kod için kod analizini el ile çalıştırma
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code analysis, running
 - run code analysis
@@ -11,23 +11,23 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5fdeb56a0c0f4c5904a00ec53d64dae87aa4e9a5
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: 584ddc9953b6f1522d12722fdd9a24d71e4e1538
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79431390"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371839"
 ---
-# <a name="how-to-run-code-analysis-manually-for-managed-code-requires-visual-studio-2019-version-165-or-later"></a>Nasıl yapılır: Yönetilen kod için kod çözümlemeyi el ile çalıştırın (Visual Studio 2019 sürüm 16.5 veya sonrası gerektirir)
-Varsayılan olarak, .NET Derleyici Platformu ("Roslyn") kod çözümleyicileri, c# veya Visual Basic kodunuzu, yapı sırasında ve yapı sırasında canlı analiz yaparak yazarken analiz eder. Bu nedenle, normalde kod çözümlemesi el ile tetiklemek gerekmez. Ancak, kod çözümlemesi el ile tetiklemek isteyebilirsiniz bazı senaryolar vardır:
+# <a name="how-to-run-code-analysis-manually-for-managed-code-requires-visual-studio-2019-version-165-or-later"></a>Nasıl yapılır: yönetilen kod için kod analizini el ile çalıştırma (Visual Studio 2019 sürüm 16,5 veya üzeri gerekir)
+Varsayılan olarak, .NET Compiler Platform ("Roslyn") kod Çözümleyicileri, canlı analizler ve derleme sırasında yazı yazarken C# veya Visual Basic kodunuzu analiz eder. Bu nedenle normalde Kod analizini el ile tetiklemeniz gerekmez. Ancak, Kod analizini el ile tetiklemek isteyebileceğiniz bazı senaryolar vardır:
 
-- Varsayılan olarak, canlı kod çözümlemesi yalnızca Visual Studio'daki açık dosyalar için çözümleyicileri yürütür. Ancak, belirli bir proje veya çözümdeki tüm dosyalar için kod çözümlemesi uyarılarını görüntülemek ilginizi çekebilir. Bu nedenle, bir proje veya çözüm üzerinde bir kez kod çözümlemesi tetiklemek isteyebilirsiniz. Alternatif olarak, tüm çözüm üzerinde yürütmek için sürekli canlı kod çözümlemesi etkinleştirebilirsiniz. Daha fazla bilgi için [bkz: Yönetilen kod için canlı kod çözümlemesi kapsamını yapılandırma.](./configure-live-code-analysis-scope-managed-code.md)
-- Sürekli canlı çözümleme veya yapı zamanı çözümlemesi yerine isteğe bağlı kod analizi yürütme iş akışını tercih edebilirsiniz. Bu nedenle, canlı analiz ve/veya yapı sırasında çözümleyici yürütmeyi devre dışı kullanabilirsiniz. Çözümleme çözümlemesi hakkında bilgi için [kaynak kodu çözümlemesi nasıl devre dışı bırakılabildiğini](disable-code-analysis.md)öğrenin. Daha sonra bir proje veya çözüm üzerinde bir kez kod çözümlemesi el ile tetiklemek isteyebilirsiniz. 
+- Varsayılan olarak, canlı kod analizi yalnızca Visual Studio 'daki açık dosyalar için Çözümleyicileri yürütür. Bununla birlikte, belirli bir proje ya da Çözümdeki tüm dosyalar için kod analizi uyarılarını görüntülemeyi ilgileniyor olabilirsiniz. Bu durumda, Kod analizini bir proje veya çözüm üzerinde bir kez tetiklemeniz gerekir. Alternatif olarak, sürekli canlı kod analizini tüm çözümde yürütmek üzere etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: yönetilen kod için canlı kod analizi kapsamını yapılandırma](./configure-live-code-analysis-scope-managed-code.md).
+- Sürekli canlı analiz veya derleme zamanı analizi üzerinde isteğe bağlı kod analizi yürütme iş akışını tercih edebilirsiniz. Bu durumda, canlı analiz ve/veya derleme sırasında çözümleyici yürütmeyi devre dışı bırakabilirsiniz. Çözümlemeyi devre dışı bırakma hakkında daha fazla bilgi için bkz. [kaynak kodu analizini devre dışı bırakma](disable-code-analysis.md). Daha sonra kod analizini bir proje veya çözümde bir kez daha el ile tetiklemeniz gerekir. 
 
 ### <a name="run-code-analysis-manually"></a>Kod analizini el ile çalıştırma
 
-1. **Çözüm Gezgini'nde**projeyi tıklatın.
+1. **Çözüm Gezgini**, projeye tıklayın.
 
-2. **Analiz** menüsünde, Proje **Adı'nda Kod Çözümlemesi'ni** *Project Name*tıklatın.
+2. **Çözümle** menüsünde, *Proje adı* **üzerinde Kod analizini Çalıştır** ' a tıklayın.
 
-Kod çözümlemesi arka planda yürütmeye başlar. Sol alt köşeye doğru Visual Studio durum çubuğunda **proje> için \<kod çözümlemesi çalıştıran** iletiyi görmeniz gerekir. Kod çözümlemesi tamamlandıktan sonra durum iletisi **proje>için tamamlanan Kod çözümlemesi olarak \< **değişecektir. Hata listesi yakında tüm kod analizi tanılama ile yenilenir.
+Kod Analizi, arka planda yürütülmeye başlayacak. Visual Studio durum çubuğunda ** \<project> ... için kod analizini çalıştıran** iletiyi sol alt köşeye doğru görmeniz gerekir. Kod Analizi tamamlandığında, durum iletisi **Için \<project> kod analizi tamamlandı **olarak değişecektir. Hata listesi, kısa bir süre önce tüm kod analizi Tanılama ile yenilenir.

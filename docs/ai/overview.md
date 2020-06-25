@@ -1,43 +1,43 @@
 ---
-title: AI için Visual Studio Araçlarına Genel Bakış
+title: Visual Studio Tools for AI genel bakış
 author: jillre
 ms.author: jillfra
 manager: jillfra
 monikerRange: vs-2017
 ms.date: 11/13/2017
-ms.topic: conceptual
+ms.topic: overview
 ms.workload:
 - multiple
-ms.openlocfilehash: 388408f83fc18899ce34e2d58fdca05c713424bd
-ms.sourcegitcommit: cc58ca7ceae783b972ca25af69f17c9f92a29fc2
+ms.openlocfilehash: c138d09ec229343e38edc8bbba50a5cac73e000a
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81386458"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371514"
 ---
-# <a name="overview-of-visual-studio-tools-for-ai"></a>AI için Visual Studio Araçlarına Genel Bakış
+# <a name="overview-of-visual-studio-tools-for-ai"></a>Visual Studio Tools for AI genel bakış
 
-AI için Visual Studio Tools, derin öğrenme çözümleri oluşturmak, test etmek ve dağıtmak için kullanabileceğiniz entegre bir geliştirme ortamıdır (IDE). Aşağıdaki öğreticilerden ve örneklerden AI Tools'un nasıl kullanılacağı hakkında daha fazla bilgi edinin.
+Visual Studio Tools for AI, derin öğrenme çözümleri oluşturmak, test etmek ve dağıtmak için kullanabileceğiniz tümleşik bir geliştirme ortamıdır (IDE). Aşağıdaki öğreticiler ve örneklerden AI araçları 'nı kullanma hakkında daha fazla bilgi edinin.
 
 ## <a name="install-the-extension"></a>Uzantıyı yükleme
 
-Uzantıyı nasıl indirip yükleyeceğimiz hakkında bilgi edinmek [için AI için Görsel Stüdyo Araçlarını Yükle](installation.md) sayfasına bakın.
+Uzantıyı indirme ve yükleme hakkında bilgi edinmek için [yükleme Visual Studio Tools for AI](installation.md) sayfasına bakın.
 
 ## <a name="5-minute-quickstart"></a>5 dakikalık hızlı başlangıç 
 
-[TensorFlow ve Python](tensorflow-local.md) ile derin öğrenme çözümlerini nasıl çalıştıracağız öğrenin
+[TensorFlow ve Python](tensorflow-local.md) ile derin öğrenme çözümünü nasıl çalıştıracağınızı öğrenin
 
 ## <a name="step-by-step-tutorial"></a>Adım adım öğretici
 
-[Bulut eğitiminde Train a TensorFlow modelinden](tensorflow-vm.md) nasıl derin bir öğrenme çözümü oluşturabilirsiniz öğrenin.
+Bulut öğreticisindeki [bir TensorFlow modelini eğitme](tensorflow-vm.md) konusunda derin bir öğrenme çözümü oluşturmayı öğrenin.
 
 ## <a name="samples"></a>Örnekler
 
-[Örnekler deposundaki](https://github.com/Microsoft/samples-for-ai) ve [Machine Learning galerisindeki](https://gallery.cortanaintelligence.com/projects)örneklere göz atın.
+[Örnekler deposundaki](https://github.com/Microsoft/samples-for-ai) ve [Machine Learning galerisinde](https://gallery.cortanaintelligence.com/projects)örneklere gözatamazsınız.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Sistem gereksinimleri ve destek seçenekleri de dahil olmak üzere AI için Visual Studio Tools hakkında daha fazla bilgi edinmek [için AI için Visual Studio Tools hakkında](about-ai-tools.md) sayfaya bakın.
+Visual Studio Tools for AI hakkında daha fazla bilgi edinmek için sistem gereksinimleri ve destek seçenekleri dahil olmak üzere, [hakkında Visual Studio Tools for AI](about-ai-tools.md) sayfasına bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Visual Studio genişletilebilirlik](/visualstudio/extensibility/?view=vs-2017)
+[Visual Studio genişletilebilirliği](/visualstudio/extensibility/?view=vs-2017)

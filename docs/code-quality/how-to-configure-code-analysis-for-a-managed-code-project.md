@@ -1,7 +1,7 @@
 ---
-title: Kod Analizini Yapılandırma
+title: Kod analizini yapılandırma
 ms.date: 04/04/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.propertypages.csvb
 - vs.codeanalysis.propertypages.solution
@@ -13,84 +13,84 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98db7cda02495d207d6e9387341173ea2efe22ca
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: a8c922f0fc952cede53b9961e2e772e71a19cbb9
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79431358"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371956"
 ---
-# <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Nasıl yapilir: Yönetilen kod için eski çözümlemeyi yapılandırma
+# <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Nasıl yapılır: yönetilen kod için eski Analizi yapılandırma
 
-Visual Studio'da, yönetilen kod projesine uygulanacak kod çözümleme [kural kümeleri](../code-quality/rule-set-reference.md) listesinden seçim yapabilirsiniz. Varsayılan olarak, **Microsoft Minimum Önerilen Kurallar** kuralı kümesi seçilir, ancak istenirse farklı bir kural kümesi uygulayabilirsiniz. Kural kümeleri bir çözümde bir veya birden çok projeye uygulanabilir.
+Visual Studio 'da, yönetilen bir kod projesine uygulamak üzere kod analizi [kural kümeleri](../code-quality/rule-set-reference.md) listesinden seçim yapabilirsiniz. Varsayılan olarak, **En düşük önerilen kurallar** kural kümesi seçilidir, ancak isterseniz farklı bir kural kümesi uygulayabilirsiniz. Kural kümeleri, bir çözümdeki bir veya birden çok projeye uygulanabilir.
 
 > [!NOTE]
-> Bu makale, [.NET Derleyici Platformu tabanlı kod çözümleyicileri](use-roslyn-analyzers.md)için değil, eski çözümleme için geçerlidir.
+> Bu makale, [.net Compiler platform tabanlı kod Çözümleyicileri](use-roslyn-analyzers.md)için değil, eski analizler için geçerlidir.
 
-## <a name="configure-a-rule-set-for-a-net-framework-project"></a>.NET Framework projesi için ayarlanan kuralı yapılandırma
+## <a name="configure-a-rule-set-for-a-net-framework-project"></a>.NET Framework projesi için bir kural kümesi yapılandırma
 
-1. Projenin özellik sayfalarındaki **Kod Analizi** sekmesini açın. Bunu aşağıdaki yollardan biri olarak yapabilirsiniz:
+1. Projenin özellik sayfalarındaki **Kod Analizi** sekmesini açın. Bunu aşağıdaki yöntemlerle yapabilirsiniz:
 
-   - **Çözüm Gezgini'nde**projeyi seçin. Menü çubuğunda,**proje adı>\<için ****Yapıyı Kod Analizini** >  **Analiz** > Et'i seçin.
+   - **Çözüm Gezgini**, projeyi seçin. Menü çubuğunda **Çözümle**  >  **Configure Code Analysis**  >  **Kod analizini Yapılandır ' ı seçin. \<projectname> **
 
-   - **Solution Explorer'da** projeyi sağ tıklatın ve **Özellikler'i**seçin ve ardından **Kod Çözümlemesi** sekmesini seçin.
+   - **Çözüm Gezgini** ' de projeye sağ tıklayın ve **Özellikler**' i seçin ve ardından **Kod Analizi** sekmesini seçin.
 
-2. **Yapılandırma** ve **Platform** listelerinde yapı yapılandırmasını ve hedef platform'u seçin.
+2. **Yapılandırma** ve **Platform** listelerinde, derleme yapılandırması ve hedef platform ' u seçin.
 
 ::: moniker range="vs-2017"
 
-3. Proje seçili yapılandırmayı kullanarak her oluşturultuca kod çözümlemesi çalıştırmak için **Yapı'da Kod Çözümlemesini Etkinleştir'i**seçin. **Analyze** > Ayrıca**proje adı>analiz kodu analizini seçerek kod çözümlemesi el ile çalıştırabilirsiniz. \< ****Run Code Analysis** > 
+3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için **derlemede Kod analizini etkinleştir**' i seçin. Kod analizini, kod analizi çalıştırma kodu analizini **Çözümle**  >  **Run Code Analysis**  >  **' \<projectname> **i seçerek el ile de çalıştırabilirsiniz.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. Proje seçili yapılandırmakullanılarak her oluşturultuca kod çözümlemesi çalıştırmak için **İkili çözümleyiciler** bölümünde **yapıda Çalıştır'ı** seçin. Ayrıca eski kod çözümlemeyi el ile çalıştırabilirsiniz, [bkz.](how-to-run-legacy-code-analysis-manually-for-managed-code.md)
+3. Projenin seçili yapılandırma kullanılarak oluşturulduğu her seferinde Kod analizini çalıştırmak için, **ikili çözümleyiciler** bölümündeki **derlemede Çalıştır** ' ı seçin. Eski Kod analizini el ile de çalıştırabilirsiniz, daha fazla ayrıntı için bkz. [nasıl yapılır: yönetilen kod Için el Ile eski kod analizini çalıştırma](how-to-run-legacy-code-analysis-manually-for-managed-code.md) .
 
 ::: moniker-end
 
-4. Oluşturulan koddaki uyarıları görüntülemek **için, oluşturulan kod onay kutusundan Sonuçları Bastır'ı** temizleyin.
+4. Oluşturulan koddan gelen uyarıları görüntülemek için, **oluşturulan koddan sonuçları bastır** onay kutusunun işaretini kaldırın.
 
     > [!NOTE]
-    > Bu seçenek, formlarda ve şablonlarda hatalar ve uyarılar göründüğünde oluşturulan koddan kaynaklanan kod çözümleme hatalarını ve uyarılarını bastırmaz. Bir form veya şablon için kaynak kodu hem görüntüleyebilir hem de koruyabilirsiniz ve bu kod üzerine yazılmaz.
+    > Bu seçenek, hatalar ve uyarılar formlarda ve şablonlarda görüntülendiğinde, kod analizi hatalarını ve üretilen koddan gelen uyarıları göstermez. Bir form veya şablon için kaynak kodu görüntüleyebilir ve bakımını yapabilir ve üzerine yazılmaz.
 
 ::: moniker range="vs-2017"
 
-5. Run **bu kural kümesi** listesinde aşağıdakilerden birini yapın:
+5. **Bu kural kümesini Çalıştır** listesinde aşağıdakilerden birini yapın:
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-5. Etkin **kurallar** listesinde aşağıdakilerden birini yapın:
+5. **Etkin kurallar** listesinde aşağıdakilerden birini yapın:
 
 ::: moniker-end
 
    - Kullanmak istediğiniz kural kümesini seçin.
 
-   - Listede olmayan varolan bir özel kural kümesini bulmak için ** \<gözat>'ı** seçin.
+   - **\<Browse>** Listede olmayan mevcut bir özel kural kümesini bulmak için seçin.
 
-   - Özel bir [kural kümesi tanımlayın.](../code-quality/how-to-create-a-custom-rule-set.md)
+   - Özel bir [kural kümesi](../code-quality/how-to-create-a-custom-rule-set.md)tanımlayın.
 
-## <a name="specify-rule-sets-for-multiple-projects-in-a-solution"></a>Çözümde birden çok proje için kural kümelerini belirtin
+## <a name="specify-rule-sets-for-multiple-projects-in-a-solution"></a>Bir çözümde birden çok proje için kural kümesi belirtme
 
-Varsayılan olarak, bir çözümün yönetilen tüm projelerine *Microsoft Minimum Önerilen Kurallar* kod çözümleme kuralı kümesi atanır. Çözüm için **Özellikler** iletişim kutusunda bir çözümün projelerine atanan kural kümelerini değiştirebilirsiniz.
+Varsayılan olarak, bir çözümün tüm yönetilen projelerine, *Microsoft 'un önerilen en düşük kural* kodu çözümleme kuralı kümesi atanır. Çözümün projelerine atanmış kural kümelerini çözüm için **Özellikler** iletişim kutusunda değiştirebilirsiniz.
 
-1. Çözümü Visual Studio'da açın.
+1. Visual Studio 'da çözümü açın.
 
-2. **Çözümle** menüsünde Çözüm **için Kod Çözümlemesi'ni yapılandırır'ı**seçin.
+2. **Çözümle** menüsünde, **çözüm Için kod analizini Yapılandır**' ı seçin.
 
-3. Gerekirse, **Ortak Özellikleri**genişletin ve ardından **Kod Çözümleme Ayarlarını**seçin.
+3. Gerekirse, **ortak özellikler**' i genişletin ve ardından **Kod Analizi ayarları**' nı seçin.
 
 4. Bir veya daha fazla proje için bir kural kümesi belirtebilirsiniz:
 
-    - Tek bir proje için kural kümesi belirtmek için proje adını seçin.
+    - Tek bir proje için bir kural kümesi belirtmek üzere proje adını seçin.
 
-    - Birden çok proje için ayarlı bir kural belirtmek için **Ctrl'yi** basılı tutun ve proje adlarını seçin.
+    - Birden çok proje için bir kural kümesi belirtmek için **CTRL** tuşunu basılı tutun ve proje adlarını seçin.
 
-    - Çözümdeki tüm projeleri belirtmek için **Shift'i** basılı tutun ve proje listesinde tıklatın.
+    - Çözümdeki tüm projeleri belirtmek için **SHIFT** tuşunu basılı tutun ve proje listesine tıklayın.
 
-5. Projenin **Kural Kümesi** alanını seçin ve ardından uygulamak istediğiniz kural kümesinin adını seçin.
+5. Bir projenin **kural kümesi** alanını seçin ve ardından uygulamak istediğiniz kural kümesinin adını seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

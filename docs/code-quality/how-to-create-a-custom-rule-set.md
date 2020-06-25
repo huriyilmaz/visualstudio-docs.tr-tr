@@ -1,7 +1,7 @@
 ---
 title: Özel kod analizi kural kümesi oluşturma
 ms.date: 11/02/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.codeanalysis.addremoverulesets
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b9f23b2badb40effd4222e21ab9e67b2907513c2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 81462db07941c73b847c009ef8353b00d28fff4f
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587556"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371917"
 ---
 # <a name="customize-a-rule-set"></a>Bir kural kümesini özelleştirme
 
@@ -24,7 +24,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 ## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>Var olan bir kural kümesinden özel bir kural kümesi oluşturma
 
-Özel bir kural kümesi oluşturmak için, **kural kümesi düzenleyicisinde**yerleşik bir kural kümesi açabilirsiniz. Buradan, belirli kuralları ekleyebilir veya kaldırabilir ve bir kural ihlal edildiğinde oluşan eylemi değiştirebilirsiniz&mdash;Örneğin, bir uyarı veya hata gösterir.
+Özel bir kural kümesi oluşturmak için, **kural kümesi düzenleyicisinde**yerleşik bir kural kümesi açabilirsiniz. Buradan, belirli kuralları ekleyebilir veya kaldırabilir ve bir kural ihlal edildiğinde oluşan eylemi değiştirebilirsiniz &mdash; , örneğin bir uyarı veya hata gösterir.
 
 1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' i seçin.
 
@@ -44,9 +44,9 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
    - Özelleştirmek istediğiniz kural kümesini seçin.
 
-     \- veya -
+     \-veya
 
-   - Listede olmayan var olan bir kural kümesini belirtmek için **\<> tarayın** ' ı seçin.
+   - **\<Browse>** Listede olmayan mevcut bir kural kümesini belirtmek için seçin.
 
 4. Kural kümesi düzenleyicisinde kuralları göstermek için **Aç** ' ı seçin.
 
@@ -57,7 +57,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 **Yeni dosya** iletişim kutusundan yeni bir kural kümesi dosyası oluşturabilirsiniz:
 
-1. **Dosya** > **Yeni** > **Dosya**' yı seçin veya **CTRL**+**N**tuşuna basın.
+1. **Dosya**  >  **Yeni**  >  **Dosya**' yı seçin veya **CTRL** + **N**tuşuna basın.
 
 2. **Yeni dosya** iletişim kutusunda, sol taraftaki **genel** kategorisini seçin ve ardından **kod analizi kural kümesi**' ni seçin.
 
@@ -76,13 +76,13 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 ::: moniker range="vs-2017"
 
-3. **\<birden çok kural** kümesi seçin > **Bu kural kümesini Çalıştır**' ı seçin.
+3. **\<Choose multiple rule sets>** **Bu kural kümesini Çalıştır**' ı seçin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. **Etkin kurallardan** **> birden çok kural kümesi seçin\<** seçin.
+3. **\<Choose multiple rule sets>** **Etkin kurallar**arasından seçim yapın.
 
 ::: moniker-end
 
@@ -111,7 +111,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 - *Aynı önem derecesine* sahip bir kural kümesinde aynı kural iki veya daha fazla kez listeleniyorsa, **hata listesi**aşağıdaki uyarıyı görebilirsiniz:
 
-   **CA0063: '\[. RuleSet ' kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi. Dosya, kural kümesi şemasıyla uyumlu değil.**
+   **CA0063: ' \[ sizin]. RuleSet ' kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi. Dosya, kural kümesi şemasıyla uyumlu değil.**
 
 - Kural kümesi bir **içerme** etiketi kullanarak ayarlanmış bir alt kural içeriyorsa ve alt ve üst kural her ikisi de aynı kuralı, ancak farklı önem derecelerine sahip olarak ayarlarsa, üst kural kümesindeki önem derecesi önceliklidir. Örneğin:
 
@@ -136,7 +136,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 ## <a name="name-and-description"></a>Ad ve açıklama
 
-Düzenleyicide açık olan bir kural kümesinin görünen adını değiştirmek için, menü çubuğunda > **Özellikler penceresini** **görüntüle** ' yi seçerek **Özellikler** penceresini açın. **Ad** kutusuna görünen adı girin. Kural kümesi için bir açıklama de girebilirsiniz.
+Düzenleyicide açık olan bir kural kümesinin görünen adını değiştirmek için, **Properties** **View**  >  menü çubuğunda**Özellikler penceresini** görüntüle ' yi seçerek Özellikler penceresini açın. **Ad** kutusuna görünen adı girin. Kural kümesi için bir açıklama de girebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

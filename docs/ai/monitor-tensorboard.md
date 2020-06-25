@@ -1,28 +1,28 @@
 ---
-title: TensorBoard ile Monitör
+title: TensorBoard ile izleme
 author: jillre
 ms.author: jillfra
 manager: jillfra
 monikerRange: vs-2017
 ms.date: 11/13/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.workload:
 - multiple
-ms.openlocfilehash: b3f1244b7cabf0cf89ad544b5138165a4a336a31
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.openlocfilehash: 54b5594eea9b30ca755bd46c00cc2b6e1e0e19fc
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80638728"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371605"
 ---
-# <a name="monitor-with-tensorboard"></a>TensorBoard ile Monitör
+# <a name="monitor-with-tensorboard"></a>TensorBoard ile izleme
 
-TensorBoard ile model eğitim ilerlemenizi görselleştirebilirsiniz.
+Masorboard ile model eğitimi ilerlemesini görselleştirebilirsiniz.
 
-1. Projenizi sağ tıklatın ve **TensorBoard Çalıştır'ı**tıklatın; ardından, çıkış TensorBoard günlüklerinizin dizinini seçin.
+1. Projenize sağ tıklayın ve **TensorBoard Çalıştır**' a tıklayın. ardından, çıkış tablosu günlüklerinizin dizinini seçin.
 
-    ![çalışma tensorboard](media/monitor-tensorboard/run-tensorboard.png)
+    ![tensorboard Çalıştır](media/monitor-tensorboard/run-tensorboard.png)
 
-2. Zaman içinde azalan hataya dikkat edin, bu da kalitenin iyileştiği anlamına gelir.
+2. Hatanın zaman içinde azaldığını, yani kaliteyi geliştirdiğine dikkat edin.
 
-    ![çalışma tensorboard](media/monitor-tensorboard/tensorboard.png)
+    ![tensorboard Çalıştır](media/monitor-tensorboard/tensorboard.png)

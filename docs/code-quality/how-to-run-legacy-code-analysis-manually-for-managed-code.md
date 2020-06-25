@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılı: Yönetilen kod için eski kod çözümlemeyi el ile çalıştırma'
+title: Yönetilen kod için eski kod analizini el ile çalıştırma
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - code analysis, running
 ms.assetid: 5086d228-f92e-4515-9708-c5b89b9e9a03
@@ -10,25 +10,25 @@ ms.author: jillfra
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d2693bcff8e83839b4171bae60b138c967f10e5
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: 38c3de83dc0df39314ad236f647c69bbe614b75d
+ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79432233"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85371826"
 ---
-# <a name="how-to-run-legacy-code-analysis-manually-for-managed-code"></a>Nasıl yapılı: Yönetilen kod için eski kod çözümlemeyi el ile çalıştırma
-Kod çözümleme aracı, kaynak kodunuzdaki olası hatalar hakkında size bilgi sağlar. Kod çözümlemesi'ni bir kod projesinin her yapısında otomatik olarak çalıştırabilir ve kod çözümlemesi de el ile çalıştırabilirsiniz. Kod çözümlemesi çalıştırıldığında denetlenen kurallar, proje özelliği sayfalarının Kod Analizi sayfasında belirtilir. Daha fazla bilgi için [bkz: Yönetilen Kod Projesi için Kod Çözümlemesi'ni yapılandırın.](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
+# <a name="how-to-run-legacy-code-analysis-manually-for-managed-code"></a>Nasıl yapılır: yönetilen kod için eski kod analizini el ile çalıştırma
+Kod Analizi Aracı, kaynak kodunuzda olası hatalar hakkında bilgi sağlar. Kod analizini her bir kod projesi derlemesi ile otomatik olarak çalıştırabilirsiniz ve Kod analizini el ile de çalıştırabilirsiniz. Kod Analizi çalıştırıldığında işaretlenen kurallar, proje özelliği sayfalarının kod analizi sayfasında belirtilir. Daha fazla bilgi için bkz. [nasıl yapılır: yönetilen kod projesi Için kod analizini yapılandırma](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md).
 
-## <a name="to-run-code-analysis-manually"></a>Kod çözümlemesi el ile çalıştırmak için
+## <a name="to-run-code-analysis-manually"></a>Kod analizini el ile çalıştırmak için
 
-1. Visual Studio 2019 sürüm 16.5 veya daha sonraysanız, Visual Studio'yu başlatmadan önce komut isteminde aşağıdaki komutu uygulayın:
+1. Visual Studio 2019 sürüm 16,5 veya sonraki bir sürümü kullanıyorsanız, Visual Studio 'Yu başlatmadan önce komut isteminde aşağıdaki komutu yürütün:
 
 ```
 set EnableLegacyCodeAnalysis = true
 ```
 
-2. **Çözüm Gezgini'nde**projeyi tıklatın.
+2. **Çözüm Gezgini**, projeye tıklayın.
 
-3. **Analiz** menüsünde, Proje **Adı'nda Kod Çözümlemesi'ni** *Project Name*tıklatın.
+3. **Çözümle** menüsünde, *Proje adı* **üzerinde Kod analizini Çalıştır** ' a tıklayın.
 
