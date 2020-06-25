@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: İşlem özelliklerini görüntüleme | Microsoft Docs'
+title: Işlem özelliklerini görüntüleme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Process properties
 ms.assetid: 5d9eb6e9-2e47-40f2-bf9c-464caa703dc9
@@ -10,20 +10,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 67590777acd5848b45c312a78268ba443d9b2a74
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 41e36baf8d44aab6904362e25ba4706fc7fb1417
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847860"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349841"
 ---
-# <a name="how-to-display-process-properties"></a>Nasıl yapılır: İşlem özelliklerini görüntüleme
-Listelenen bir işlem hakkında daha fazla bilgi için [işlemler görünümü](../debugger/processes-view.md), kullanın [işlem özellikleri iletişim kutusu](../debugger/process-properties-dialog-box.md).
+# <a name="how-to-display-process-properties"></a>Nasıl yapılır: İşlem Özelliklerini Görüntüleme
+[Işlemler görünümünde](../debugger/processes-view.md)listelenen bir işlem hakkında daha fazla bilgi edinmek Için [Işlem özellikleri iletişim kutusunu](../debugger/process-properties-dialog-box.md)kullanın.
 
-### <a name="to-open-a-process-properties-dialog-box"></a>İşlem özellikleri iletişim kutusunu açmak için
+### <a name="to-open-a-process-properties-dialog-box"></a>Işlem özellikleri iletişim kutusunu açmak için
 
-1. Görüntülenen ağacından bir işlem seçin **işler görünümü**.
+1. **İşlemler görünümünde**görüntülenden bir işlem seçin.
 
-2. Gelen **görünümü** menüsünde seçin **özellikleri**.
+2. **Görünüm** menüsünde **Özellikler**' i seçin.
 
-   Özellikler iletişim kutularında, bir Görünüm penceresi başka bir öğeye tıklayın ve iletişim kutusunda seçili öğeye bilgileri gösterir kalıcı, değildir.
+   Özellikler iletişim kutuları kalıcı değildir, bu nedenle bir görünüm penceresinde başka bir öğeye tıklayabilir ve iletişim kutusu seçili öğe hakkındaki bilgileri gösterir.

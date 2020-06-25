@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Görüntüleme ve gizleme yazmaç gruplarını | Microsoft Docs'
+title: Kayıt gruplarını görüntüleme ve gizleme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.registergroups
 dev_langs:
@@ -19,30 +19,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a904bfcf147d72dde16ffe0fbf9e754c2c356bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f08e31f67f9626c15dee0b6b4b8202a0370c976b
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847799"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349906"
 ---
-# <a name="how-to-display-and-hide-register-groups-c-c-visual-basic-f"></a>Nasıl yapılır: Görüntüleme ve gizleme yazmaç gruplarını (C#, C++, Visual Basic F#)
+# <a name="how-to-display-and-hide-register-groups-c-c-visual-basic-f"></a>Nasıl yapılır: yazmaç gruplarını görüntüleme ve gizleme (C#, C++, Visual Basic, F #)
 
-**Kaydeder** pencere, yalnızca adres seviyesinde hata ayıklamayı etkin değilse kullanılabilir **seçenekleri** iletişim kutusu, **hata ayıklama** düğümünün **genel**kategorisi.
+**Yazmaçları** penceresi yalnızca, **Seçenekler** Iletişim kutusunda, **hata ayıklama** düğümünde, **genel** kategoride Adres düzeyinde hata ayıklama etkinse kullanılabilir.
 
-Dağınıklığı, azaltmak için **kaydeder** penceresi kayıtları gruplar halinde düzenler. Sağ varsa **kaydeder** penceresinde görüntüleme ya da aşağıdaki yordamı izleyerek gördüğünüz şekilde Gizle bu grupları içeren bir kısayol menüsü göreceksiniz.
+Dağınıklığı azaltmak için, **Yazmaçları** penceresi kayıtları gruplar halinde düzenler. **Yazmaçları** penceresine sağ tıkladığınızda, aşağıdaki yordamı izleyerek görebileceğiniz veya gizleyebileceğiniz bu grupları içeren bir kısayol menüsü görürsünüz.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [ayarlarına](../ide/environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
 
-## <a name="display-or-hide-register-groups"></a>YAZMAÇ gruplarını görüntüleme veya gizleme
+## <a name="display-or-hide-register-groups"></a>Kayıt gruplarını görüntüleme veya gizleme
 
-1. Sağ **kaydeder** penceresi.
+1. **Yazmaçları** penceresine sağ tıklayın.
 
-2. Kısayol menüsünde, göstermek veya gizlemek istediğiniz yazmaç gruplarını seçin.
+2. Kısayol menüsünde, göstermek veya gizlemek istediğiniz kayıt gruplarını seçin.
 
-     Seçilemez bu nedenle üzerinde hata ayıklama donanım tarafından desteklenmeyen yazmaç gruplarını kısayol menüsünde, devre dışı bırakıldı.
+     Üzerinde hata ayıklaması yaptığınız donanım tarafından desteklenmeyen kayıt grupları, kısayol menüsünde devre dışı bırakılır, bu nedenle seçilemez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Yazmaçlar Penceresi Hakkında](../debugger/how-to-use-the-registers-window.md)
+- [Nasıl Yapılır: Yazmaçlar Penceresini Kullanma](../debugger/how-to-use-the-registers-window.md)

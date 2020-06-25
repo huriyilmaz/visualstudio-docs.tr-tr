@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: İşlemler görünümünde işlem arama | Microsoft Docs'
+title: Işlemler görünümünde Işlem arama | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Processes view
 - processes, searching for
@@ -11,33 +11,33 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a6b57226b14963759bb4d78afff3beb5559a63e
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: e823ecb1f7523c1a6f094d5669f4a37a72e84f60
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64798980"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349295"
 ---
-# <a name="how-to-search-for-a-process-in-processes-view"></a>Nasıl yapılır: İşlemler Görünümünde İşlem Arama
-Belirli bir işlem işlemler görünümünde işlem kimliği veya modül dizesi arama ölçütü olarak kullanarak arayabilirsiniz. İlk arama yönünü de belirtebilirsiniz. Alanları iletişim kutusunda işlem ağacında seçilen işlem özniteliklerini gösterir.
+# <a name="how-to-search-for-a-process-in-processes-view"></a>Nasıl Yapılır: İşlemler Görünümünde İşlem Arama
+İşlem KIMLIĞINI veya modül dizesini arama ölçütü olarak kullanarak, Işlemler görünümündeki belirli bir işlemi arayabilirsiniz. Aramanın başlangıç yönünü de belirtebilirsiniz. İletişim kutusundaki alanlar, işlem ağacındaki seçili işlemin özniteliklerini gösterir.
 
-### <a name="to-search-for-a-process-in-processes-view"></a>İşlemler görünümünde işlem aramak için
+### <a name="to-search-for-a-process-in-processes-view"></a>Işlemler görünümünde bir işlem aramak için
 
-1. Bu nedenle pencereleri bu Spy ++ ve etkin bir [işlemler görünümü](../debugger/processes-view.md) penceresi görünür.
+1. Windows 'larınızı Spy + + ve etkin [süreçler görünümü](../debugger/processes-view.md) penceresi görünür olacak şekilde düzenleyin.
 
-2. Gelen **arama** menüsünde seçin **bulma işlemi**
+2. **Arama** menüsünde **işlemi bul** ' u seçin.
 
-    [İşlem arama iletişim kutusu](../debugger/process-search-dialog-box.md) açılır.
+    [Işlem arama Iletişim kutusu](../debugger/process-search-dialog-box.md) açılır.
 
-3. İşlem kimliği veya modül dizesi arama ölçütü olarak yazın.
+3. İşlem KIMLIĞINI veya bir modül dizesini arama ölçütü olarak yazın.
 
-4. Değerleri belirtmek istediğiniz değil herhangi bir alanı temizleyin.
+4. Değerlerini belirtmek istemediğiniz tüm alanları temizleyin.
 
    > [!TIP]
-   > Bulma modülü tarafından sahip olunan tüm işlemler için temizleyin **işlem** kutusuna ve modül adı yazın **Modülü** kutusu. Ardından **Sonrakini Bul** işlemleri için aramaya devam etmek için.
+   > Bir modülün sahip olduğu tüm işlemleri bulmak için, **işlem** kutusunu temizleyin ve **Modül kutusuna Modül** adını yazın. Sonra, işlem aramaya devam etmek için **Sonrakini Bul** ' u kullanın.
 
-5. Seçin **yukarı** veya **aşağı** için ilk arama yönünü.
+5. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
 
-6.           **Tamam**'ı tıklatın.
+6. **Tamam**'a tıklayın.
 
-   Eşleşen işlem bulunamadı, içinde vurgulanır **işlem görünümü** penceresi.
+   Eşleşen bir işlem bulunursa, **işlem görünümü** penceresinde vurgulanır.

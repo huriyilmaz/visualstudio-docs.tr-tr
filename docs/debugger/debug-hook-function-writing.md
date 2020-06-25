@@ -1,7 +1,7 @@
 ---
-title: Hata ayıklama kanca işlevi yazma | Microsoft Docs
+title: Hata ayıklama kanca Işlevi yazma | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vc.hooks
 dev_langs:
@@ -21,25 +21,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82145d39adc519bfd1324cc36805cea7b97b1664
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 038c976380ff1e1f0a1a7c4c150fc462f6b1d1db
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62563379"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350725"
 ---
 # <a name="debug-hook-function-writing"></a>Hata Ayıklama Kanca İşlevi Yazma
-Bu bölümde, bir dizi önceden tanımlanmış bazı noktalar normal işleme hata ayıklayıcı'nın içinde kod eklemeye izin veren yazabileceğiniz özel hata ayıklama kanca işlevleri açıklanmaktadır.
+Bu bölümde, kodunuzu hata ayıklayıcının normal işlemesi içindeki bazı önceden tanımlanmış noktalara eklemenize olanak sağlayan, yazabileceğiniz bir dizi özel hata ayıklama kanca işlevi açıklanmaktadır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [İstemci blok kanca işlevleri](../debugger/client-block-hook-functions.md) sağlayan yönergeler ve bir prototip doğrulamak veya _clıent_block bloklarında depolanan verilerin içeriklerini raporun işlevler yazma için.
+ [Istemci blok kanca işlevleri](../debugger/client-block-hook-functions.md) _CLIENT_BLOCK bloklarında depolanan verilerin içeriğini doğrulayan veya rapor eden işlevler yazmak için rehberlik ve prototip sağlar.
 
- [Atama kanca işlevleri](../debugger/allocation-hook-functions.md) bir ayırma kanca işlevini tanımlayan, farklı kullanımları inceler, kısıtlamaları noktaları ve bir prototip sağlar.
+ [Ayırma kanca işlevleri](../debugger/allocation-hook-functions.md) Bir ayırma kanca işlevini tanımlar, farklı kullanımlarını araştırır, işaret eden kısıtlamaları gösterir ve bir prototip sağlar.
 
- [Atama kancaları ve CRT bellek ayırmaları](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md) kısıtlama açıkça yoksayılıyor, atama kanca işlevleri açıklar `_CRT_BLOCK` iç bellek C çalışma zamanı kitaplık işlevleri çağrıları yaptıkları engeller. Bu konuda, atama kanca değil yoksayarsanız, ayrıca sonuçları listeler `_CRT_BLOCK` bloklarla (örnekler) ve varsayılan ayırma değiştirme kanca işlevini, **CrtDefaultAllocHook**.
+ [Ayırma kancaları ve crt bellek ayırmaları](../debugger/allocation-hooks-and-c-run-time-memory-allocations.md) `_CRT_BLOCK`İç bellek ayıran C çalışma zamanı kitaplığı işlevlerine çağrılar yaptıysanız blokları açıkça yok saymaya yönelik ayırma kanca işlevleri üzerindeki kısıtlamayı açıklar. Bu konu, ayırma kancaları `_CRT_BLOCK` blokları (örneklerle birlikte) yoksaymayan ve varsayılan ayırma kanca işlevini değiştirme, **CrtDefaultAllocHook**gibi sonuçları da listeler.
 
- [Kanca işlevlerini rapor](../debugger/report-hook-functions.md) Discusses `_CrtSetReportHook`, ayırmaları belirli türlerde odaklanmak için filtre uygulamak için kullanabileceğiniz raporlar. Bu konu, bir prototip de sağlar.
+ [Rapor kancası işlevleri](../debugger/report-hook-functions.md) `_CrtSetReportHook`Raporları, belirli ayırma türlerine odaklanmak üzere filtrelemek için kullanabileceğiniz açıklanır. Bu konu, bir prototip de sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 
-- [CRT hata ayıklama teknikleri](../debugger/crt-debugging-techniques.md) -bağlantılar için CRT hata ayıklama kitaplığı, raporlama için makroları kullanma dahil olmak üzere C çalışma zamanı kitaplığı hata ayıklama tekniklerine farkları arasında `malloc` ve `_malloc_dbg`, hata ayıklama kanca işlevlerini ve CRT yazma hata ayıklama yığını'nı tıklatın.
+- [CRT hata ayıklama teknikleri](../debugger/crt-debugging-techniques.md) -CRT hata ayıklama kitaplığı, raporlama için makrolar, ve arasındaki farklar, `malloc` `_malloc_dbg` hata ayıklama kanca işlevleri ve CRT hata ayıklama yığını gibi C çalışma zamanı kitaplığı için hata ayıklama teknikleri bağlantıları.

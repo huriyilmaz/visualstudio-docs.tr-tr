@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: WCF hizmetlerine adımla | Microsoft Docs'
+title: WCF hizmetlerine nasıl adımla | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,25 +16,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c405b4fcca91f8deddce4d65c8a4155b90af49e0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fa4097280ae388a9a941c017697e0a5e3daa44cd
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732591"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349126"
 ---
 # <a name="how-to-step-into-wcf-services"></a>Nasıl Yapılır: WCF Hizmetleri İçine Adımlama
-@No__t_0, bir WCF hizmetine adım adım ekleyebilirsiniz. WCF hizmeti istemcisiyle aynı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çözümindeyse, WCF hizmeti içindeki kesme noktalarına da basabilirsiniz.
+İçinde [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] , BIR WCF hizmetine adım adım ekleyebilirsiniz. WCF hizmeti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] istemcisiyle aynı çözümde ise, WCF hizmetinin içindeki kesme noktalarına de ulaşırsınız.
 
- Çalışma adımlaması için App. config veya Web. config dosyasında hata ayıklamanın etkinleştirilmiş olması gerekir. Hata ayıklamayı etkinleştirme ve WCF hizmetlerine adımlamayı kısıtlama hakkında daha fazla bilgi için bkz. [WCF hata ayıklama kısıtlamaları](../debugger/limitations-on-wcf-debugging.md).
+ Çalışma adımlaması için app.config veya Web.config dosyasında hata ayıklamanın etkinleştirilmiş olması gerekir. Hata ayıklamayı etkinleştirme ve WCF hizmetlerine adımlamayı kısıtlama hakkında daha fazla bilgi için bkz. [WCF hata ayıklama kısıtlamaları](../debugger/limitations-on-wcf-debugging.md).
 
 ### <a name="to-step-into-a-wcf-service"></a>Bir WCF hizmetine adım adım
 
-1. WCF istemcisi ve WCF hizmeti projelerini içeren bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çözümü oluşturun.
+1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]WCF istemcisi ve WCF hizmeti projelerini içeren bir çözüm oluşturun.
 
 2. Çözüm Gezgini, WCF Istemci projesine sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' ya tıklayın.
 
-3. App. config veya Web. config dosyasında hata ayıklamayı etkinleştirin. Daha fazla bilgi için bkz. [WCF hata ayıklama kısıtlamaları](../debugger/limitations-on-wcf-debugging.md).
+3. app.config veya web.config dosyasında hata ayıklamayı etkinleştirin. Daha fazla bilgi için bkz. [WCF hata ayıklama kısıtlamaları](../debugger/limitations-on-wcf-debugging.md).
 
 4. İstemci projesindeki, adımlamayı başlatmak istediğiniz konumda bir kesme noktası ayarlayın. Genellikle, bu, WCF hizmeti çağrısından hemen önce olacaktır.
 
@@ -42,5 +42,5 @@ ms.locfileid: "72732591"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [WCF Hizmetlerinde Hata Ayıklama](../debugger/debugging-wcf-services.md)
-- [WCE Hata Ayıklama Sınırlamaları](../debugger/limitations-on-wcf-debugging.md)
+- [WCE Hata Ayıklamasında Sınırlamalar](../debugger/limitations-on-wcf-debugging.md)
 - [Nasıl Yapılır: Kendini Barındıran WCF Hizmetinde Hata Ayıklama](../debugger/how-to-debug-a-self-hosted-wcf-service.md)

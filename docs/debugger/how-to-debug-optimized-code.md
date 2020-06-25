@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Iyileştirilmiş kodda hata ayıklama | Microsoft Docs'
+title: Iyileştirilmiş kodda hata ayıklama | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug
 dev_langs:
@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 590925a894f1bf9bfe70d9dd1bf6142fcb6a2e34
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: e3c08ce9605560173d6f29817372dee4af8d622e
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72430668"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349984"
 ---
 # <a name="how-to-debug-optimized-code"></a>Nasıl Yapılır: İyileştirilmiş Kodda Hata Ayıklama
 
@@ -52,34 +52,34 @@ ms.locfileid: "72430668"
 
   Genel ve statik değişkenler her zaman doğru şekilde gösterilir. Yapı düzeni. Bir yapıya işaretçiniz varsa ve işaretçinin değeri doğruysa, yapının her üye değişkeni doğru değeri gösterir.
 
-  Bu sınırlamalar nedeniyle, mümkün olduğunda programınızın iyileştirilmemiş bir sürümünü kullanarak hata ayıklaması yapmalısınız. Varsayılan olarak, bir C++ programın hata ayıklama yapılandırmasında iyileştirme kapalıdır ve yayın yapılandırmasında açıktır.
+  Bu sınırlamalar nedeniyle, mümkün olduğunda programınızın iyileştirilmemiş bir sürümünü kullanarak hata ayıklaması yapmalısınız. Varsayılan olarak, bir C++ programının hata ayıklama yapılandırmasında iyileştirme kapalıdır ve yayın yapılandırmasında açıktır.
 
   Ancak, bir hata yalnızca bir programın en iyi duruma getirilmiş bir sürümünde görünebilir. Bu durumda, iyileştirilmiş kodda hata ayıklaması yapmanız gerekir.
 
 ## <a name="to-turn-on-optimization-in-a-debug-build-configuration"></a>Hata ayıklama yapı yapılandırmasında iyileştirmeyi açmak için
 
-1. Yeni bir proje oluşturduğunuzda, `Win32 Debug` hedefini seçin. Programınızın tamamen ayıklanana kadar `Win32``Debug` hedefini kullanın ve bir `Win32 Release` hedefi oluşturmaya hazırlanın. Derleyici `Win32 Debug` hedefini iyileştirmez.
+1. Yeni bir proje oluşturduğunuzda `Win32 Debug` hedefi seçin. `Win32``Debug`Programınız tam olarak ayıklanana ve bir hedef oluşturmaya başlamaya kadar hedefi kullanın `Win32 Release` . Derleyici hedefi iyileştirmez `Win32 Debug` .
 
 2. Çözüm Gezgini içinde projeyi seçin.
 
 3. **Görünüm** menüsünde, **Özellik sayfaları**' na tıklayın.
 
-4. **Özellik sayfaları** iletişim kutusunda, **yapılandırma** açılan listesinde `Debug` ' in seçildiğinden emin olun.
+4. **Özellik sayfaları** iletişim kutusunda, `Debug` **yapılandırma** açılan listesinde seçili olduğundan emin olun.
 
-5. Soldaki klasör görünümünde **C/C++**  klasörü seçin.
+5. Soldaki klasör görünümünde **C/C++** klasörünü seçin.
 
-6. **C++** Klasör altında `Optimization` ' yi seçin.
+6. **C++** klasörü altında öğesini seçin `Optimization` .
 
-7. Sağdaki Özellikler listesinde `Optimization` ' ı bulun. Bunun yanındaki ayar büyük olasılıkla `Disabled (`[/od](/cpp/build/reference/od-disable-debug)`)` ' ye diyor. Diğer seçeneklerden birini (`Minimum Size``(`[/O1](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`, `Maximum Speed``(`[/o2](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`, `Full Optimization``(`[/Ox](/cpp/build/reference/ox-full-optimization)`)` veya `Custom`) seçin.
+7. Sağdaki Özellikler listesinde bulun `Optimization` . Bunun yanındaki ayar büyük olasılıkla `Disabled (` [/od](/cpp/build/reference/od-disable-debug)' i söylüyor `)` . Diğer seçeneklerden birini ( `Minimum Size``(` [/O1](/cpp/build/reference/o1-o2-minimize-size-maximize-speed) `)` , `Maximum Speed``(` [/O2](/cpp/build/reference/o1-o2-minimize-size-maximize-speed) `)` , `Full Optimization``(` [/Ox](/cpp/build/reference/ox-full-optimization) `)` veya `Custom` ) seçin.
 
-8. @No__t-1 için `Custom` seçeneğini belirlediyseniz, artık Özellikler listesinde gösterilen diğer özelliklerden herhangi biri için seçenekleri ayarlayabilirsiniz.
+8. `Custom`Seçeneğini belirlediyseniz `Optimization` , artık Özellikler listesinde gösterilen diğer özelliklerden herhangi biri için seçenekleri ayarlayabilirsiniz.
 
-9. Proje Özellikleri sayfasının yapılandırma özellikleri, CC++/, komut satırı düğümünü seçin ve **ek seçenekler** metin kutusuna `(`[/zo](/cpp/build/reference/zo-enhance-optimized-debugging)`)` ekleyin.
+9. Yapılandırma özellikleri, C/C++, proje özellikleri sayfasının komut satırı düğümünü seçin ve `(` [/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) `)` **ek seçenekler** metin kutusuna/zo ekleyin.
 
     > [!WARNING]
-    > `/Zo` Visual Studio 2013 güncelleştirme 3 veya sonraki bir sürümünü gerektirir.
+    > `/Zo`Visual Studio 2013 güncelleştirme 3 veya sonraki bir sürümünü gerektirir.
     >
-    >  @No__t ekleme-0, [Düzenle ve devam et](../debugger/edit-and-continue-visual-csharp.md)özelliğini devre dışı bırakır.
+    >  Ekleme `/Zo` , [Düzenle ve devam et](../debugger/edit-and-continue-visual-csharp.md)özelliğini devre dışı bırakır.
 
    İyileştirilmiş kodda hata ayıklarken, hangi yönergelerin gerçekten oluşturulup yürütüleceğini görmek için **ayrıştırma** penceresini kullanın. Kesme noktaları ayarladığınızda, kesme noktasının bir yönergeyle birlikte hareket edebileceğini bilmeniz gerekir. Örneğin, aşağıdaki kodu göz önünde bulundurun:
 
@@ -87,9 +87,9 @@ ms.locfileid: "72430668"
 for (x=0; x<10; x++)
 ```
 
- Bu satırda bir kesme noktası ayarladığınızı varsayalım. Kesme noktasının 10 kez beklemeniz istenebilir, ancak kod iyileştirildiğinde, kesme noktası yalnızca bir kez vuruş yapılır. Yani, ilk yönerge `x` değerini 0 olarak ayarlarsa. Derleyici bunun yalnızca bir kez yapılması gerektiğini ve döngünün dışına taşındığını algılar. Kesme noktası onunla birlikte gider. @No__t-0 değerini karşılaştıran ve artıran yönergeler döngünün içinde kalır. **Ayrıştırma** penceresini görüntülediğinizde, [adım birimi](/previous-versions/visualstudio/visual-studio-2010/ek13f001(v=vs.100)) , daha fazla denetim için otomatik olarak yönerge olarak ayarlanır ve bu, iyileştirilmiş kodla adım adım yararlı olur.
+ Bu satırda bir kesme noktası ayarladığınızı varsayalım. Kesme noktasının 10 kez beklemeniz istenebilir, ancak kod iyileştirildiğinde, kesme noktası yalnızca bir kez vuruş yapılır. Bunun nedeni, birinci yönergenin değerini 0 olarak ayarlamadır `x` . Derleyici bunun yalnızca bir kez yapılması gerektiğini ve döngünün dışına taşındığını algılar. Kesme noktası onunla birlikte gider. Karşılaştırma ve artırma yönergeleri `x` döngünün içinde kalır. **Ayrıştırma** penceresini görüntülediğinizde, [adım birimi](/previous-versions/visualstudio/visual-studio-2010/ek13f001(v=vs.100)) , daha fazla denetim için otomatik olarak yönerge olarak ayarlanır ve bu, iyileştirilmiş kodla adım adım yararlı olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

@@ -1,7 +1,7 @@
 ---
 title: WebView denetiminde hata ayıklama (UWP) | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -14,24 +14,24 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 15c9a2b489aeb091224536bfb87398197f6e4f62
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: a96e4db66ec26870ac92c52209d7aa6f22225b21
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73188659"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350647"
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>UWP uygulamasında bir WebView denetiminde hata ayıklama
 
- Bir Windows Çalışma Zamanı uygulamasındaki `WebView` denetimlerini incelemek ve hatalarını ayıklamak için Visual Studio 'Yu, uygulamanızı başlattığınızda betik hata ayıklayıcısını ekleyecek şekilde yapılandırabilirsiniz. Hata ayıklayıcıyı kullanarak `WebView` denetimleriyle etkileşimde bulunmak için iki yol vardır:
+ Windows Çalışma Zamanı uygulamasındaki denetimleri incelemek ve hatalarını ayıklamak için `WebView` Visual Studio 'yu, uygulamanızı başlattığınızda betik hata ayıklayıcısını ekleyecek şekilde yapılandırabilirsiniz. Hata ayıklayıcıyı kullanarak denetimlerle etkileşimde bulunmak için iki yol vardır `WebView` :
 
-- Bir `WebView` örneği için [DOM Gezginini](../debugger/quickstart-debug-html-and-css.md) açın, DOM öğelerini ınceleyın, CSS stili sorunları araştırın ve dinamik olarak işlenen değişiklikleri stillerde test edin.
+- Bir örnek için [DOM Gezginini](../debugger/quickstart-debug-html-and-css.md) açın `WebView` , Dom ÖĞELERINI inceleyin, CSS stili sorunları araştırın ve dinamik olarak işlenen değişiklikleri stillerde test edin.
 
-- [JavaScript Konsol](../debugger/javascript-console-commands.md?view=vs-2017) penceresinde bir hedef olarak `WebView` örneğinde görünen Web sayfasını veya `iFrame` seçin ve ardından konsol komutlarını kullanarak Web sayfası ile etkileşime geçin. Konsol, geçerli betik yürütme bağlamına erişim sağlar.
+- `iFrame`JavaScript Konsol penceresinde Web sayfasını seçin veya `WebView` bir hedef olarak örnekte görüntüleniyorsa, [JavaScript Console](../debugger/javascript-console-commands.md?view=vs-2017) konsol komutlarını kullanarak Web sayfası ile etkileşime geçin. Konsol, geçerli betik yürütme bağlamına erişim sağlar.
 
 ### <a name="attach-the-debugger-c-visual-basic-c"></a>Hata ayıklayıcıyı iliştirme (C#, Visual Basic, C++)
 
-1. Visual Studio 'da Windows Çalışma Zamanı uygulamanıza `WebView` bir denetim ekleyin.
+1. Visual Studio 'da `WebView` Windows çalışma zamanı uygulamanıza bir denetim ekleyin.
 
 2. Çözüm Gezgini, proje için kısayol menüsünden **Özellikler** ' i seçerek projenin özelliklerini açın.
 
@@ -44,21 +44,21 @@ ms.locfileid: "73188659"
     > [!NOTE]
     > JıT hata ayıklamayı devre dışı bırakarak, bazı Web sayfalarında oluşan işlenmemiş özel durumlar için iletişim kutularını gizleyebilirsiniz. Visual Studio Express, JıT hata ayıklama her zaman devre dışıdır.
 
-5. Hata ayıklamayı başlatmak için F5 'e basın.
+5. Hata ayıklamaya başlamak için F5'e basın.
 
 ### <a name="use-the-dom-explorer-to-inspect-and-debug-a-webview-control"></a>WebView denetimini incelemek ve hatalarını ayıklamak için DOM Gezginini Kullanma
 
 1. (C#, Visual Basic, C++) Betik hata ayıklayıcısını uygulamanıza ekleyin. Yönergeler için ilk bölüme bakın.
 
-2. Henüz yapmadıysanız, uygulamanıza bir `WebView` denetimi ekleyin ve hata ayıklamayı başlatmak için F5 'e basın.
+2. Henüz yapmadıysanız, uygulamanıza bir denetim ekleyin `WebView` ve hata ayıklamayı başlatmak Için F5 'e basın.
 
-3. `Webview` denetimleri içeren sayfaya gidin.
+3. `Webview`Denetim (ler) i içeren sayfaya gidin.
 
-4. **Hata Ayıkla**, **Windows**, **Dom gezgini**ve ardından denetlemek istediğiniz `WebView` URL 'Sini seçerek `WebView` denetimine yönelik DOM Gezgini penceresini açın.
+4. `WebView` **Hata Ayıkla**, **Windows**, **Dom GEZGINI**' ni seçerek denetim için DOM Gezgini penceresini açın ve ardından incelemek istediğiniz URL 'yi seçin `WebView` .
 
      ![DOM Gezgini 'ni açma](../debugger/media/js_dom_webview.png "JS_DOM_WebView")
 
-     `WebView` ilişkili DOM Gezgini, Visual Studio 'da yeni bir sekme olarak görünür.
+     İle İlişkili DOM Gezgini, `WebView` Visual Studio 'da yeni bir sekme olarak görünür.
 
 5. [DOM Gezgini 'ni kullanarak CSS stillerinde hata ayıklama](quickstart-debug-html-and-css.md)bölümünde açıklandığı gıbı canlı Dom ÖĞELERINI ve CSS stillerini görüntüleyin ve değiştirin.
 
@@ -66,20 +66,20 @@ ms.locfileid: "73188659"
 
 1. (C#, Visual Basic, C++) Betik hata ayıklayıcısını uygulamanıza ekleyin. Yönergeler için ilk bölüme bakın.
 
-2. Henüz yapmadıysanız, uygulamanıza bir `WebView` denetimi ekleyin ve hata ayıklamayı başlatmak için F5 'e basın.
+2. Henüz yapmadıysanız, uygulamanıza bir denetim ekleyin `WebView` ve hata ayıklamayı başlatmak Için F5 'e basın.
 
-3. **Hata Ayıkla**, **Windows**, **JavaScript Konsolu**seçeneklerini belirleyerek `WebView` denetimi için JavaScript Konsol penceresini açın.
+3. `WebView` **Hata Ayıkla**, **Windows**, **JavaScript Konsolu**' nu seçerek denetim için JavaScript Konsol penceresini açın.
 
      JavaScript konsol penceresi görüntülenir.
 
-4. `Webview` denetimleri içeren sayfaya gidin.
+4. `Webview`Denetim (ler) i içeren sayfaya gidin.
 
-5. Konsol penceresinde, **hedef** listedeki `WebView` denetimi tarafından görüntülenmiş Web sayfasını veya `iFrame` seçin.
+5. Konsol penceresinde, Web sayfasını veya `iFrame` `WebView` **hedef** listedeki denetim tarafından bir görüntülenmiş i seçin.
 
      ![JavaScript Konsol penceresinde hedef seçimi](../debugger/media/js_console_target.png "JS_Console_Target")
 
     > [!NOTE]
-    > Konsolunu kullanarak tek bir `WebView`, `iFrame`, sözleşmeyle veya Web çalışanıyla etkileşim kurabilirsiniz. Her öğe Web Platformu ana bilgisayarının (WWAHost. exe) ayrı bir örneğini gerektirir. Aynı anda bir ana bilgisayar ile etkileşim kurabilirsiniz.
+    > Konsolunu kullanarak tek seferde tek bir, `WebView` `iFrame` paylaşabilir veya Web çalışanı ile etkileşim kurabilirsiniz. Her öğe Web Platformu ana bilgisayarının (WWAHost.exe) ayrı bir örneğini gerektirir. Aynı anda bir ana bilgisayar ile etkileşim kurabilirsiniz.
 
 6. [Hızlı başlangıç: hata ayıklama JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md) ve [JavaScript konsol komutları](../debugger/javascript-console-commands.md?view=vs-2017)bölümünde açıklandığı gibi uygulamanızdaki değişkenleri görüntüleyin ve değiştirin ya da konsol komutlarını kullanın.
 

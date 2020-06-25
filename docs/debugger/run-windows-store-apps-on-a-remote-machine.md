@@ -1,7 +1,7 @@
 ---
-title: Uzak makinede UWP uygulamalarının hatalarını ayıklama | Microsoft Docs
+title: Uzak makinelerde UWP uygulamalarının hatalarını ayıklama | Microsoft Docs
 ms.date: 10/05/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -13,98 +13,98 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 50d307cd65bfdf534b6ca3586e69bbc27be25e36
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d208c59f08ddeb5a322d174a2c6b56dd901c2c4
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62902906"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348125"
 ---
-# <a name="debug-uwp-apps-on-remote-machines-from-visual-studio"></a>Visual Studio'dan uzak makinede UWP uygulamalarının hatalarını ayıklama
+# <a name="debug-uwp-apps-on-remote-machines-from-visual-studio"></a>Visual Studio 'dan uzak makinelerde UWP uygulamalarında hata ayıklama
 
-Visual Studio, hata ayıklama, profil ve bir evrensel Windows Platformu (UWP) uygulamasını başka bir bilgisayar veya cihaz üzerinde test çalıştırmak için kullanabilirsiniz. Visual Studio bilgisayarı dokunmatik, coğrafi konum ve fiziksel yön gibi UWP özel işlevler desteklemediğinde, uzak makinede UWP uygulaması çalıştıran özellikle yararlıdır.
+Visual Studio 'Yu kullanarak bir Evrensel Windows Platformu (UWP) uygulamasını başka bir bilgisayarda veya cihazda çalıştırabilir, hata ayıklayın, profil oluşturup test edebilirsiniz. UWP uygulamasını uzak bir makinede çalıştırmak özellikle Visual Studio bilgisayarı Touch, coğrafi konum veya fiziksel yönlendirme gibi UWP 'e özgü işlevselliği desteklemiyorsa yararlıdır.
 
-## <a name="BKMK_Prerequisites"></a> Önkoşullar
+## <a name="prerequisites"></a><a name="BKMK_Prerequisites"></a>Kaynakları
 
-Visual Studio'dan uzak bir cihazdaki bir UWP uygulamasında hata ayıklamak için:
+Visual Studio 'dan uzak bir cihazdaki UWP uygulamasında hata ayıklamak için:
 
-- Uzaktan hata ayıklama için Visual Studio projesini yapılandırılması gerekir.
-- Uzak makinede Visual Studio bilgisayarı gerekir bir ağ üzerinden bağlı veya doğrudan USB veya Ethernet kablosu ile bağlı. Internet üzerinden hata ayıklama desteklenmez.
-- Yapmanız gerekenler [Geliştirici Modu'nu](/windows/uwp/get-started/enable-your-device-for-development) hem Visual Studio bilgisayarı ve uzak makine.
-- Uzak bilgisayarlar, Visual Studio için Uzak Araçlar çalıştırmalıdır.
-  - Bazı Windows 10 sürümleri başlatın ve uzak Araçlar'ı otomatik olarak çalıştırın. Aksi takdirde, [yükleyin ve Visual Studio için Uzak Araçlar çalıştırın](#BKMK_download).
-  - Windows Mobile 10 cihazları gerektirir veya uzak araçları destek kullanmayın.
+- Visual Studio projesinin uzaktan hata ayıklama için yapılandırılması gerekir.
+- Uzak makine ve Visual Studio bilgisayar bir ağ üzerinden bağlanmalıdır veya doğrudan USB veya Ethernet kablosu üzerinden bağlanmış olmalıdır. Internet üzerinden hata ayıklama desteklenmez.
+- Hem Visual Studio bilgisayarında hem de uzak makinede [Geliştirici modunu açmanız](/windows/uwp/get-started/enable-your-device-for-development) gerekir.
+- Uzak bilgisayarlar Visual Studio için Uzak Araçlar çalıştırıyor olmalıdır.
+  - Bazı Windows 10 sürümleri, uzak araçları otomatik olarak başlatıp çalıştırır. Aksi takdirde, [Visual Studio için uzak Araçlar yükleyip çalıştırın](#BKMK_download).
+  - Windows Mobile 10 cihazları, uzak araçları gerektirmez veya desteklemez.
 
-## <a name="BKMK_ConnectVS"></a> Uzaktan hata ayıklama için Visual Studio projesi yapılandırma
-<a name="BKMK_DirectConnect"></a> Proje kullandığınız **özellikleri** için Bağlanılacak uzak cihazı belirtin. Ayarlar programlama diline bağlı olarak farklılık gösterir.
+## <a name="configure-a-visual-studio-project-for-remote-debugging"></a><a name="BKMK_ConnectVS"></a>Uzaktan hata ayıklama için bir Visual Studio projesi yapılandırma
+<a name="BKMK_DirectConnect"></a>Bağlanılacak uzak cihazı belirtmek için proje **özelliklerini** kullanırsınız. Ayarlar programlama diline bağlı olarak farklılık gösterir.
 
 > [!CAUTION]
-> Varsayılan olarak, özellik sayfasında ayarlar **Evrensel (şifrelenmemiş Protokolü)** olarak **kimlik doğrulama türü** Windows 10 uzak bağlantılar için. Ayarlamanız gerekebilir **kimlik doğrulaması yok** uzaktan hata ayıklayıcıya bağlanmak için. **Evrensel (şifrelenmemiş Protokolü)** ve **kimlik doğrulaması yok** protokollerine sahip hiçbir ağ güvenliği için geliştirme ve uzak makineler arasında aktarılan veriler savunmasızdır. Bu kimlik doğrulama türleri için yalnızca güvenilen ağlar emin kötü amaçlı veya tehlikeli trafik etkilenir değil'ı seçin.
+> Varsayılan olarak, özellik sayfası Windows 10 uzak bağlantıları için **kimlik doğrulaması türü** olarak **Evrensel (şifrelenmemiş protokol)** ayarlar. Uzaktan hata ayıklayıcıya bağlanmak için **kimlik doğrulaması yok** olarak ayarlamanız gerekebilir. **Evrensel (şifrelenmemiş protokol)** ve **kimlik doğrulama protokollerinin hiçbir** ağ güvenliği yoktur, bu nedenle geliştirme ve uzak makineler arasında geçirilen veriler savunmasızdır. Yalnızca kötü amaçlı veya güvenli olmayan trafikten riskli olduğunuzdan emin olduğunuz güvenilen ağlarda bu kimlik doğrulama türlerini seçin.
 >
->Seçerseniz **Windows kimlik doğrulaması** için **kimlik doğrulama türü**, hata ayıklama sırasında uzak makineye oturum açmanız gerekir. Uzaktan hata ayıklayıcı ayrıca altında çalışmalıdır **Windows kimlik doğrulaması** moduyla Visual Studio makinesinde aynı kullanıcı hesabı.
+>**Kimlik doğrulama türü**Için **Windows kimlik doğrulaması** ' nı seçerseniz, hata ayıklama sırasında uzak makinede oturum açmanız gerekir. Uzaktan hata ayıklayıcı aynı zamanda, Visual Studio makinesinde aynı kullanıcı hesabıyla **Windows kimlik doğrulama** modu altında çalışıyor olmalıdır.
 
-### <a name="BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects"></a> Yapılandırma bir C# veya Visual Basic projesi için uzaktan hata ayıklama
+### <a name="configure-a-c-or-visual-basic-project-for-remote-debugging"></a><a name="BKMK_Choosing_the_remote_device_for_C__and_Visual_Basic_projects"></a>Uzaktan hata ayıklama için C# veya Visual Basic projesi yapılandırma
 
-1. Seçin C# veya Visual Studio'da Visual Basic projesi **Çözüm Gezgini** seçip **özellikleri** simgesi, tuşuna **Alt** +  **Girin**, veya sağ tıklayıp seçin **özellikleri**.
+1. Visual Studio 'da C# veya Visual Basic projesi **Çözüm Gezgini** seçin ve **Özellikler** simgesini seçin, **alt** + **ENTER**tuşuna basın veya sağ tıklayıp **Özellikler**' i seçin.
 
-1. Seçin **hata ayıklama** sekmesi.
+1. **Hata Ayıkla** sekmesini seçin.
 
-1. Altında **hedef cihaz**seçin **uzak makine** uzak bir bilgisayar için veya **cihaz** doğrudan bağlı bir Windows Mobile 10 cihaz için.
+1. **Hedef cihaz**altında uzak bilgisayar Için **uzak makine** veya doğrudan bağlı bir Windows Mobile 10 cihazı için **cihaz** seçin.
 
-1. Uzak bir makine için ağ adı veya IP adresini girin **uzak makine** alanına **Bul** cihazın aranacak [Uzaktan bağlantılar iletişim kutusunda](#remote-connections).
+1. Uzak makine için, uzak **makine** alanına ağ adını veya IP adresini girin veya [uzak bağlantılar iletişim kutusunda](#remote-connections)cihazı aramak için **bul** ' u seçin.
 
-    ![Uzaktan hata ayıklama için proje özellikleri yönetilen](../debugger/media/vsrun_managed_projprop_remote.png "yönetilen hata ayıklama, proje özellikleri")
+    ![Uzaktan hata ayıklama için yönetilen proje özellikleri](../debugger/media/vsrun_managed_projprop_remote.png "Yönetilen hata ayıklama projesi özellikleri")
 
-### <a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a> Uzaktan hata ayıklama için bir C++ projesi yapılandırma
+### <a name="configure-a-c-project-for-remote-debugging"></a><a name="BKMK_Choosing_the_remote_device_for_JavaScript_and_C___projects"></a>C++ projesini uzaktan hata ayıklama için yapılandırma
 
-1. Visual Studio'da C++ projesi seçin **Çözüm Gezgini** seçip **özellikleri** simgesi, tuşuna **Alt**+**Enter**, veya sağ tıklayıp seçin **özellikleri**.
+1. Visual Studio 'da C++ projesi **Çözüm Gezgini** seçin ve **Özellikler** simgesini seçin, **alt** + **ENTER**tuşuna basın veya sağ tıklayıp **Özellikler**' i seçin.
 
-1. Seçin **hata ayıklama** sekmesi.
+1. **Hata ayıklama** sekmesini seçin.
 
-3. Altında **başlatmak için hata ayıklayıcı**seçin **uzak makine** uzak bir bilgisayar için veya **cihaz** doğrudan bağlı bir Windows Mobile 10 cihaz için.
+3. **Başlatmak Için hata ayıklayıcı**altında uzak bilgisayar Için **uzak makine** veya doğrudan bağlı bir Windows Mobile 10 cihazı için **cihaz** seçin.
 
-1. Uzak bir makine için girin veya ağ adı veya IP adresini seçin **makine adı** alanı ya da seçin ve aşağı açılan **bulun** cihazın aranacak [Uzaktan bağlantılar iletişim kutusu ](#remote-connections).
+1. Uzak makine için **makine adı** alanında ağ adını veya IP adresini girin veya seçin ya da açılan kutuyu seçin ve [uzak bağlantılar iletişim kutusunda](#remote-connections)cihazı aramak için **bul** ' u seçin.
 
-    ![Uzaktan hata ayıklama için C++ proje özelliklerini](../debugger/media/vsrun_cpp_projprop_remote.png "C++ hata ayıklama, proje özellikleri")
+    ![Uzaktan hata ayıklama için C++ proje özellikleri](../debugger/media/vsrun_cpp_projprop_remote.png "C++ hata ayıklama projesi özellikleri")
 
-### <a name="remote-connections"></a> Uzaktan bağlantılar iletişim kutusunu kullanın
+### <a name="use-the-remote-connections-dialog-box"></a><a name="remote-connections"></a>Uzak bağlantılar iletişim kutusunu kullanma
 
-İçinde **uzak bağlantıları** iletişim kutusu, belirli bir uzak bilgisayar adı veya IP adresi için veya arayabilirsiniz otomatik bağlantıları yenile yuvarlak ok simgesini seçerek algıla. İletişim kutusu, şu anda uzaktan hata ayıklayıcıyı çalıştıran cihazları yerel alt ağdaki arar. Tüm cihazlar olarak algılanabilir **uzak bağlantıları** iletişim kutusu.
+**Uzak bağlantılar** iletişim kutusunda, belirli bir uzak bilgisayar adını veya IP adresini arayabilir veya yuvarlanmış ok yenileme simgesini seçerek bağlantıları otomatik olarak tespit edebilirsiniz. İletişim kutusu yalnızca yerel alt ağdaki cihazları arar ve şu anda uzaktan hata ayıklayıcıyı çalıştırıyor. **Uzak bağlantılar** iletişim kutusunda tüm cihazlar algılanmayabilir.
 
- ![Uzak bağlantı iletişim kutusu](../debugger/media/vsrun_selectremotedebuggerdlg.png "Uzaktan bağlantılar iletişim")
+ ![Uzak bağlantı iletişim kutusu](../debugger/media/vsrun_selectremotedebuggerdlg.png "Uzak bağlantılar iletişim kutusu")
 
 >[!TIP]
->Ada göre uzak cihaza bağlanamıyorsa, IP adresini kullanarak deneyin. Uzak cihaz üzerindeki IP adresini belirlemek için girin **ipconfig** komut penceresinde. IP adresi olarak görünür **IPv4 adresi**.
+>Ada göre uzak bir cihaza bağlanamıyorsanız, IP adresini kullanmayı deneyin. IP adresini belirleme uzak cihazda, bir komut penceresinde **ipconfig** yazın. IP adresi, **IPv4 adresi**olarak görünür.
 
-## <a name="BKMK_download"></a> Visual Studio için Uzak Araçlar'ı yükleme ve indirme
+## <a name="download-and-install-the-remote-tools-for-visual-studio"></a><a name="BKMK_download"></a>Visual Studio için Uzak Araçlar indirin ve yükleyin
 
-Visual Studio'nın uzak bir bilgisayarda uygulamalarında hata ayıklamak, Visual Studio için Uzak Araçlar uzak bilgisayarda çalışmalıdır.
+Visual Studio 'nun uzak bir bilgisayardaki uygulamalarda hata ayıklaması için, uzak bilgisayarda Visual Studio için Uzak Araçlar çalışıyor olması gerekir.
 
-- Windows Mobile 10 cihazları gerektirmez veya uzak Araçlar'ı destekler.
-- (Sürüm 1703) oluşturan kişinin çalıştıran Windows 10 bilgisayarları güncelleştirmek ve uygulamayı dağıttığınızda daha sonra Windows 10 Xbox, IOT ve HoloLens cihazları uzak araçları otomatik olarak yüklenir.
-- Pre-oluşturanın güncelleştirme Windows 10 bilgisayarlarında, gerekir el ile indirin, yükleyin ve hatalarını ayıklamaya başlamadan önce uzak Araçlar uzak bilgisayar üzerinde çalışıyor olabilir.
+- Windows Mobile 10 cihazları, uzak araçları gerektirmez veya desteklemez.
+- Oluşturan güncelleştirme (sürüm 1703) ve üzeri, Windows 10 Xbox, IoT ve HoloLens cihazları çalıştıran Windows 10 bilgisayarları, uygulamayı dağıtırken uzak araçları otomatik olarak yükler.
+- Önceden oluşturucunun güncelleştirme Windows 10 bilgisayarlarında, hata ayıklamaya başlamadan önce uzak bilgisayarda Uzak araçları el ile indirmeniz, kurmanız ve çalıştırmalısınız.
 
-**Uzak araçları indirme ve yükleme için:**
+**Uzak araçları indirmek ve yüklemek için:**
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
-### <a name="BKMK_setup"></a> Uzak araçları yapılandırma
+### <a name="configure-the-remote-tools"></a><a name="BKMK_setup"></a>Uzak araçları yapılandırma
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
-## <a name="BKMK_RunRemoteDebug"></a> UWP uygulamalarında uzaktan hata ayıklama
+## <a name="debug-uwp-apps-remotely"></a><a name="BKMK_RunRemoteDebug"></a>UWP uygulamalarında uzaktan hata ayıklama
 
-Uzaktan hata ayıklama, yerel hata ayıklama ile aynı çalışır.
+Uzaktan hata ayıklama yerel hata ayıklama ile aynı şekilde çalışmaktadır.
 
-1. Uzaktan hata ayıklama İzleyicisi'Pre-oluşturanın güncelleştirme sürümlerinde Windows 10 'un emin olun (*msvsmon.exe*) uzak cihazda çalışıyor.
+1. Windows 10 ' un ön oluşturanın güncelleştirme sürümlerinde, uzak cihazda Uzaktan Hata Ayıklama İzleyicisi (*msvsmon.exe*) çalıştığından emin olun.
 
-1. Visual Studio bilgisayarda doğru hata ayıklama hedef emin olun (**uzak makine** veya **cihaz**) araç çubuğundaki yeşil ok yanında görünür.
+1. Visual Studio bilgisayarında, araç çubuğundaki yeşil okun yanında doğru hata ayıklama hedefinin (**uzak makine** veya **cihaz**) göründüğünden emin olun.
 
-1. Seçerek hata ayıklamayı Başlat **hata ayıklama** > **hata ayıklamayı Başlat**, ENTER tuşuna basın **F5**, veya araç çubuğundaki yeşil oku seçerek.
+1. **Hata ayıklamayı**  >  **Başlat hata ayıklamayı Başlat**' ı seçin, **F5**tuşuna basın veya araç çubuğunda yeşil oku seçin.
 
-   Proje yeniden derlenir, ardından dağıtır ve uzak cihazda başlar. Hata ayıklayıcı kesme noktalarında yürütmeyi askıya alır ve, üzerinden, kodun içine ve dışına müdahale edebilirsiniz.
+   Proje yeniden derlenir, ardından uzak cihaz üzerinde dağıtır ve başlatılır. Hata ayıklayıcı yürütmeyi kesme noktalarında askıya alır ve kodun içine, üzerine ve dışına bir adım ekleyebilirsiniz.
 
-1. Gerekirse, seçin **hata ayıklama** > **hata ayıklamayı Durdur** veya basın **Shift**+**F5** hata ayıklamayı durdurmak ve Uzak uygulamayı kapatın.
+1. Gerekirse hata ayıklamayı Durdur ' **u seçin**  >  **Stop Debugging** veya **Shift** + hata ayıklamayı durdurmak için SHIFT**F5** tuşuna basın ve uzak uygulamayı kapatın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Gelişmiş uzak dağıtım seçenekleri](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#advanced-remote-deployment-options)

@@ -1,7 +1,7 @@
 ---
 title: Çalışan ASP.NET işlemini bulun | Microsoft Docs
 ms.date: 11/04/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,31 +16,31 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 54aa98dd238d7a78e4ae89af05dceae0f9911478
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: c14067d58289dd0b41fa526937a0553c10934ea7
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73187662"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349613"
 ---
 # <a name="find-the-name-of-the-aspnet-process"></a>ASP.NET işleminin adını bulma
 
-Çalışan bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] uygulamasında hata ayıklamak için Visual Studio hata ayıklayıcının ada göre [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] işlem eklemesi gerekir.
+Çalışan bir uygulamada hata ayıklamak için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Visual Studio hata ayıklayıcı, [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] işleme adına göre bağlanmalıdır.
 
 **Hangi işlemin bir ASP.NET uygulamasını çalıştırmakta olduğunu öğrenmek için:**
 
-1. Uygulama çalışırken, Visual Studio 'da **hata ayıkla** > **işleme Ekle**' yi seçin.
+1. Uygulama çalışırken, Visual Studio 'da, **Debug**  >  **işleme Ekle**Hata Ayıkla ' yı seçin.
 
 1. **Işleme İliştir** iletişim kutusunda, aşağıdaki listeden işlem adının ilk harflerini yazın veya bunları arama kutusuna girin. Çalıştıran biri, ASP.NET uygulamasını çalıştırdır. Uygulamada hata ayıklamak için bu işleme iliştirin.
 
-    - *W3wp. exe* , IIS 6,0 ve üzeri.
-    - *Aspnet_wp. exe* , IIS 'nin önceki sürümleridir.
-    - *ıısexpress. exe* , iisexpress.
-    - *DotNet. exe* ASP.NET Core.
-    - *ınetinfo. exe* , işlem içi çalışan eski ASP uygulamalardır.
+    - *w3wp.exe* IIS 6,0 ve üzeri.
+    - *aspnet_wp.exe* , IIS 'nin önceki sürümleridir.
+    - *iisexpress.exe* IISExpress.
+    - *dotnet.exe* ASP.NET Core.
+    - *inetinfo.exe* , işlem içi çalışan eski ASP uygulamalardır.
 
 >[!NOTE]
->Visual Studio 2012 ve önceki sürümlerde [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] kod dosya sisteminde olabilir ve *Web dev. webserver. exe* veya *webdev. WebServer40. exe*test sunucusunda çalıştırılabilir. Bu durumda, yerel hata ayıklama için [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] işlemi yerine *webdev. webserver. exe* veya *webdev. WebServer40. exe* ' ye ekleyin.
+>Visual Studio 2012 ve önceki bir [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] kod dosya sisteminde olabilir ve *WebDev.WebServer.exe* veya *WebDev.WebServer40.exe*test sunucusunda çalıştırılabilir. Bu durumda, yerel hata ayıklama için işlem yerine *WebDev.WebServer.exe* veya *WebDev.WebServer40.exe* ekleyin [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] .
 
 **Ayrıca bkz:**
 

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: İleti günlüğü görüntülemeyi başlatıp | Microsoft Docs'
+title: Ileti günlüğü görüntüsünü başlatma ve durdurma | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - message log display, starting
 - logging, starting message log display
@@ -12,20 +12,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f1fd5a7b7951056f65604bdea67eddcc3e696da
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 7165e9a9d3a4d935e01870b6049307b5a85bdce8
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "64825008"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349048"
 ---
 # <a name="how-to-start-and-stop-the-message-log-display"></a>Nasıl yapılır: İleti Günlüğü Görüntülemeyi Başlatma ve Durdurma
-Olduğunda bir [iletiler görünümünü](../debugger/messages-view.md) penceresi, etkin bir **günlüğü Başlat** veya **Günlüğü Durdur** seçim görünür Spy ++ hakkında **iletileri** menüsünde ve karşılık gelen **günlüğü Başlat** veya **Günlüğü Durdur** araç çubuğu düğmesi etkin hale gelir.
+Bir [Iletiler görünümü](../debugger/messages-view.md) penceresi etkinken, Spy + + **iletiler** menüsünde günlüğe kaydetmeyi **Başlat** veya **günlüğü durdur** seçeneği görünür ve ilgili günlük **kaydını Başlat** veya **günlüğü durdur** araç çubuğu düğmesi etkin olur.
 
-### <a name="to-start-the-message-log-display"></a>İleti günlüğü görüntülemeyi başlatmak için
+### <a name="to-start-the-message-log-display"></a>İleti günlüğü görüntüsünü başlatmak için
 
-1. Gelen **iletileri** menüsünde seçin **günlüğü Başlat**.
+1. **İletiler** menüsünden **Günlüğü Başlat**' ı seçin.
 
-### <a name="to-stop-the-message-log-display"></a>İleti günlüğü görüntülemeyi durdurmak için
+### <a name="to-stop-the-message-log-display"></a>İleti günlüğü görüntüsünü durdurmak için
 
-1. Gelen **iletileri** menüsünde seçin **Günlüğü Durdur**.
+1. **İletiler** menüsünden **günlüğü durdur**' u seçin.

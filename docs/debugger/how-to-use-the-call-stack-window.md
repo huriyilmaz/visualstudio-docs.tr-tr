@@ -2,7 +2,7 @@
 title: Hata ayıklayıcıda çağrı yığınını görüntüle | Microsoft Docs
 ms.custom: seodec18
 ms.date: 10/29/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.callstack
 dev_langs:
@@ -29,12 +29,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21573f1f8bd49782739027f7dfc2034bb7501a2f
-ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.openlocfilehash: aa91807459ea5c2d8f576891d0eafc35336347bc
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72535985"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348750"
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-debugger"></a>Çağrı yığınını görüntüleyin ve hata ayıklayıcıda çağrı yığını penceresini kullanın
 
@@ -66,7 +66,7 @@ Kullanıcı dışı kod, [yalnızca kendi kodum](../debugger/just-my-code.md) et
 
 `[<External Code>]`
 
-## <a name="bkmk_switch"></a>Başka bir yığın çerçevesine geç (hata ayıklayıcı bağlamını değiştirin)
+## <a name="switch-to-another-stack-frame-change-the-debugger-context"></a><a name="bkmk_switch"></a>Başka bir yığın çerçevesine geç (hata ayıklayıcı bağlamını değiştirin)
 
 1. **Çağrı yığını** penceresinde, kod ve verilerini görüntülemek istediğiniz yığın çerçevesine sağ tıklayın.
 
@@ -96,21 +96,21 @@ Kullanıcı dışı kod, [yalnızca kendi kodum](../debugger/just-my-code.md) et
 
 Visual Studio Enterprise (yalnızca) ' de, hata ayıklarken çağrı yığını için kod eşlemelerini görüntüleyebilirsiniz.
 
-- **Çağrı yığını** penceresinde, kısayol menüsünü açın. **Kod haritasında çağrı yığınını göster '** i seçin **(Ctrl**  + **SHIFT**  +  **`** ).
+- **Çağrı yığını** penceresinde, kısayol menüsünü açın. **Kod haritasında çağrı yığınını göster** (**CTRL**  +  **SHIFT**) seçeneğini belirleyin  +  **`** .
 
     Daha fazla bilgi için bkz. [hata ayıklama sırasında çağrı yığınında eşleme yöntemleri](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).
 
 ![Kod haritasında çağrı yığınını göster](../debugger/media/dbg_basics_show_call_stack_on_code_map.gif "ShowCallStackOnCodeMap")
 
-## <a name="view-the-disassembly-code-for-a-function-on-the-call-stack-c-c-visual-basic-f"></a>Çağrı yığınında bir işlevin ayrıştırılmış kodunu görüntüleme (C#, C++, Visual Basic,) F#
+## <a name="view-the-disassembly-code-for-a-function-on-the-call-stack-c-c-visual-basic-f"></a>Çağrı yığınında bir işlevin ayrıştırılmış kodunu görüntüleme (C#, C++, Visual Basic, F #)
 
 - **Çağrı yığını** penceresinde, ayrıştırılmış derleme kodunu görmek istediğiniz işlevi sağ tıklatın ve **ayrıştırılmış koda git**' i seçin.
 
 ## <a name="change-the-optional-information-displayed"></a>Gösterildiği isteğe bağlı bilgileri değiştirme
 
-- **Çağrı yığını** penceresine sağ tıklayın ve **>** istediğiniz_bilgileri_ göster veya Temizle **\<** seçeneğini belirleyin.
+- **Çağrı yığını** penceresine sağ tıklayıp **göster \<**_the information that you want_**> **' i ayarlayın veya temizleyin.
 
-## <a name="bkmk_symbols"></a>Modül için yükleme sembolleri (C#, C++, Visual Basic,) F#
+## <a name="load-symbols-for-a-module-c-c-visual-basic-f"></a><a name="bkmk_symbols"></a>Modül için yükleme sembolleri (C#, C++, Visual Basic, F #)
 
 **Çağrı yığını** penceresinde, şu anda yüklü sembolleri olmayan kod için hata ayıklama sembolleri yükleyebilirsiniz. Bu semboller .NET veya Microsoft ortak sembol sunucularından indirilen sistem sembolleri veya hata ayıkladığınız bilgisayardaki bir sembol yolundaki semboller olabilir.
 
@@ -140,7 +140,7 @@ Bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-do
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çağrı Yığını penceresinde karışık kod ve eksik bilgiler](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)
+- [Çağrı yığını penceresinde karışık kod ve eksik bilgiler](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)
 - [Hata ayıklayıcıda verileri görüntüleme](../debugger/viewing-data-in-the-debugger.md)
 - [Sembol (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
 - [Kesme noktaları kullanma](../debugger/using-breakpoints.md)

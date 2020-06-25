@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: İletiler görünümünde ileti arama | Microsoft Docs'
+title: Iletiler görünümünde Ileti arama | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Message Search dialog box
 - Messages view
@@ -12,41 +12,41 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37f99c30c23461ada406bb0650f86d45d2a4a2e9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 7145732ef635d550aa883603b0f56090eb6d1278
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63388399"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349321"
 ---
-# <a name="how-to-search-for-a-message-in-messages-view"></a>Nasıl yapılır: İletiler görünümünde ileti arama
-Arama ölçütü olarak kendi tanıtıcı, tür veya ileti kimliği'ni kullanarak iletiler görünümünde belirli bir ileti için arama yapabilirsiniz. Bunlardan herhangi birini — veya bir birleşimini — geçerli arama ölçütleri olacaktır. İlk arama yönünü de belirtilebilir. Alanları iletişim kutusunda, seçili ileti özniteliklerle önceden yüklenir.
+# <a name="how-to-search-for-a-message-in-messages-view"></a>Nasıl Yapılır: İletiler Görünümünde İleti Arama
+İleti görünümünde belirli bir iletiyi, tanıtıcı, tür veya ileti KIMLIĞINI arama ölçütü olarak kullanarak arayabilirsiniz. Bunlardan herhangi biri veya bir bileşim, geçerli arama ölçütleri olacaktır. Aramanın başlangıç yönü de belirtilebilir. İletişim kutusundaki alanlar, seçili durumdaki iletinin öznitelikleriyle önceden yüklenir.
 
-### <a name="to-search-for-a-message-in-messages-view"></a>İletiler görünümünde ileti aramak için
+### <a name="to-search-for-a-message-in-messages-view"></a>Iletiler görünümünde ileti aramak için
 
-1. Bu nedenle pencereleri bu Spy ++ ve etkin bir [iletiler görünümünü](../debugger/messages-view.md) penceresi görünür.
+1. Windows 'larınızı Spy + + etkin [Iletiler görünümü](../debugger/messages-view.md) penceresi görünür olacak şekilde düzenleyin.
 
-2. Gelen **arama** menüsünde seçin **ileti Bul**.
+2. **Arama** menüsünde **ileti bul**' u seçin.
 
-    [İleti arama iletişim kutusu](../debugger/message-search-dialog-box.md) açılır.
+    [Ileti arama Iletişim kutusu](../debugger/message-search-dialog-box.md) açılır.
 
-3. Sürükleme **Bulucu Aracı** istenen aralığında. Aracı sürüklerken **ileti arama** iletişim kutusunda seçili penceresinde ayrıntılarını görüntüler.
+3. **Bulucu aracını** istenen pencerenin üzerine sürükleyin. Aracı sürüklerken **Ileti arama** iletişim kutusu seçili penceredeki ayrıntıları görüntüler.
 
-   - veya -
+   - veya
 
-     İletileri incelemek istediğiniz pencere tanıtıcısı varsa, içine yazın **işlemek** metin kutusu.
+     İletilerini incelemek istediğiniz pencerenin işleyicisine sahipseniz, bunu **tanıtıcı** metin kutusuna yazın.
 
-   - veya -
+   - veya
 
-     İleti türü ve/veya ileti kimliği, istediğiniz biliyorsanız, bunları seçin **türü** ve **ileti** açılan menüler ve Temizle **işlemek** metin kutusu.
+     İstediğiniz ileti türünü ve/veya ileti KIMLIĞINI biliyorsanız, **tür** ve **ileti** açılan menülerinden bunları seçin ve **tanıtıcı** metin kutusunu temizleyin.
 
-4. Değerleri belirtmek istediğiniz değil herhangi bir alanı temizleyin.
+4. Değerlerini belirtmek istemediğiniz tüm alanları temizleyin.
 
    > [!TIP]
-   > Ekranda kapladığı alanı azaltmak için seçin **Gizle Spy** seçeneği. Bu seçenek yalnızca bırakarak ana Spy ++ penceresini gizler **Bul penceresi** iletişim kutusu, diğer uygulamalar üzerinde görünür. Spy ++ ana pencereyi geri tıkladığınızda **Tamam** veya **iptal**, veya kaldırdığınızda **Gizle Spy ++** seçeneği.
+   > Ekran dağınıklığını azaltmak için Spy 'ı **Gizle** seçeneğini belirleyin. Bu seçenek, ana Spy + + penceresini gizleme ve yalnızca diğer uygulamalarınızın üzerine görünen **pencereyi bul** iletişim kutusunu bırakır. **Tamam** ' ı veya **iptal**' i tıklattığınızda veya **Spy + +** seçeneğini belirlediğinizde, Spy + + ana penceresi geri yüklenir.
 
-5. Seçin **yukarı** veya **aşağı** için ilk arama yönünü.
+5. Aramanın ilk yönü için **yukarı** veya **aşağı** seçeneğini belirleyin.
 
-6. **Tamam**'ı tıklatın.
+6. **Tamam**'a tıklayın.
 
-   Eşleşen bir ileti bulunursa iletileri Görünüm penceresinde vurgulanır. Bkz: [iletiler görünümünü](../debugger/messages-view.md).
+   Eşleşen bir ileti bulunursa, Iletiler görünümü penceresinde vurgulanır. Bkz. [Iletiler görünümü](../debugger/messages-view.md).

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: İletiler görünümünü denetleme | Microsoft Docs'
+title: Ileti görünümünü denetleme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Spy++, Messages View
 - Messages view, controlling
@@ -11,22 +11,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0007d1ad1e87b2e1f2d34b039b4105bb525578a7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a95e257950a93ff61c27f7ea599b0de12e09677d
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894639"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350257"
 ---
 # <a name="how-to-control-messages-view"></a>Nasıl yapılır: İletiler Görünümünü Denetleme
-Spy ++ ile içeriğini önemli ölçüde denetime sahip bir [iletiler görünümünü](../debugger/messages-view.md) penceresi. Yapabilecekleriniz [başlatma ve durdurma](../debugger/how-to-start-and-stop-the-message-log-display.md) dilediğiniz zaman ve, iletileri görüntülemeyi belirtebilirsiniz:
+Spy + + ile bir [Iletiler görünümü](../debugger/messages-view.md) penceresinin içeriği üzerinde önemli bir denetiminiz vardır. Her zaman iletileri görüntülemeyi [başlatabilir ve durdurabilirsiniz](../debugger/how-to-start-and-stop-the-message-log-display.md) ve şunları belirtebilirsiniz:
 
 - Hangi ileti türlerini görmek istiyorsunuz.
 
-- İzlemek istediğiniz windows.
+- İzlemek istediğiniz Windows.
 
-- İleti satırları görüntü biçimi.
+- İleti çizgilerinin görüntüleme biçimi.
 
-  Bu ayarlar kullanılabilir [ileti seçenekleri iletişim kutusu](../debugger/message-options-dialog-box.md), ve bunlar yalnızca etkin olarak geçerli [iletiler görünümünü](../debugger/messages-view.md) penceresi. Bu iletişim kutusunu açmak için seçin **günlük iletilerini** gelen **Spy** menüsü.
+  Bu ayarlar [Ileti seçenekleri Iletişim kutusunda](../debugger/message-options-dialog-box.md)bulunur ve yalnızca etkin [iletiler görünümü](../debugger/messages-view.md) penceresi için geçerlidir. Bu iletişim kutusunu açmak için **Spy** menüsünden **günlük iletileri** ' ni seçin.
 
-  Üç sekmeli bölme, ileti seçenekleri kullanılabilir. Daha fazla bilgi için bkz: [Windows sekmesi, ileti seçenekleri iletişim kutusu](../debugger/windows-tab-message-options-dialog-box.md), [iletiler sekmesi, ileti seçenekleri iletişim kutusu](../debugger/messages-tab-message-options-dialog-box.md), ve [çıktı sekmesi, ileti seçenekleri iletişim kutusu](../debugger/output-tab-message-options-dialog-box.md).
+  İleti seçeneklerinin üç sekmeli bölmesi vardır. Daha fazla bilgi için bkz. [Windows sekmesi, Ileti seçenekleri Iletişim kutusu](../debugger/windows-tab-message-options-dialog-box.md), [Iletiler sekmesi, Ileti seçenekleri Iletişim kutusu](../debugger/messages-tab-message-options-dialog-box.md)ve [Çıkış sekmesi, ileti seçenekleri iletişim kutusu](../debugger/output-tab-message-options-dialog-box.md).

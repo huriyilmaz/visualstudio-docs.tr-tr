@@ -1,7 +1,7 @@
 ---
 title: Hata ayıklayıcıda GPU Iş parçacıklarını görüntüleme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.gputthreads
 - vs.debug.gputhreads
@@ -18,15 +18,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 972b21c4535df37dd81da6aceaa062b39176469c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cbbb49a1017fb0bc65300f3c16050db4954e1103
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732096"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348723"
 ---
 # <a name="how-to-use-the-gpu-threads-window-c"></a>Nasıl yapılır: GPU Iş parçacıkları penceresini kullanma (C++)
-GPU Iş parçacıkları penceresinde, hata ayıklaması yaptığınız uygulamadaki GPU üzerinde çalışan iş parçacıklarını inceleyebilir ve bunlarla çalışabilirsiniz. GPU üzerinde çalışan uygulamalar hakkında daha fazla bilgi için bkz [ C++ . amp genel bakış](/cpp/parallel/amp/cpp-amp-overview).
+GPU Iş parçacıkları penceresinde, hata ayıklaması yaptığınız uygulamadaki GPU üzerinde çalışan iş parçacıklarını inceleyebilir ve bunlarla çalışabilirsiniz. GPU üzerinde çalışan uygulamalar hakkında daha fazla bilgi için bkz. [C++ amp genel bakış](/cpp/parallel/amp/cpp-amp-overview).
 
  GPU Iş parçacıkları penceresi, her bir satırın tüm sütunlarda aynı değerlere sahip olan bir GPU iş parçacığı kümesini temsil ettiği bir tablo içerir. Sütunlardaki öğeleri sıralayabilir, yeniden sıralayabilir, kaldırabilir ve gruplandırabilirsiniz. GPU Iş parçacıkları penceresinden bayrak, unbayrak, dondurma (askıda) ve çözme (devam etme) iş parçacıklarını işaretleyebilirsiniz. Aşağıdaki sütunlar, GPU Iş parçacıkları penceresinde görüntülenir:
 
@@ -103,6 +103,6 @@ GPU Iş parçacıkları penceresinde, hata ayıklaması yaptığınız uygulamad
 - GPU Iş parçacıkları penceresinde bayrak düğmesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok İş Parçacıklı Uygulamaların Hatalarını Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
-- [Nasıl Yapılır: Paralel İzleme Penceresini Kullanma](../debugger/how-to-use-the-parallel-watch-window.md)
-- [İzlenecek yol: C++ AMP Uygulamasında Hata Ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
+- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Nasıl yapılır: paralel Izleme penceresini kullanma](../debugger/how-to-use-the-parallel-watch-window.md)
+- [İzlenecek yol: C++ AMP uygulamasında hata ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)

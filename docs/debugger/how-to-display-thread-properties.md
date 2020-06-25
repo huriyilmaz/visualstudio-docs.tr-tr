@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: İş parçacığı özelliklerini görüntüleme | Microsoft Docs'
+title: Iş parçacığı özelliklerini görüntüleme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - thread properties
 ms.assetid: f0e64c0e-cdb3-4ad4-9723-09934166f3a2
@@ -10,20 +10,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fa26c20f465ced2643b5c6aa2c8625024b38ed1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ab3f98b5a47c6d950f2d95e732e05e5734c783b5
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847738"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349880"
 ---
-# <a name="how-to-display-thread-properties"></a>Nasıl yapılır: İş parçacığı özelliklerini görüntüleme
-Listelenen bir iş parçacığı hakkında daha fazla bilgi için [iş parçacıkları görünümü](../debugger/threads-view.md), kullanın [iş parçacığı Özellikleri iletişim kutusu](../debugger/thread-properties-dialog-box.md).
+# <a name="how-to-display-thread-properties"></a>Nasıl yapılır: İş Parçacığı Özelliklerini Görüntüleme
+İş [parçacıkları görünümünde](../debugger/threads-view.md)listelenen bir iş parçacığı hakkında daha fazla bilgi edinmek Için [Iş parçacığı özellikleri iletişim kutusunu](../debugger/thread-properties-dialog-box.md)kullanın.
 
-### <a name="to-open-a-thread-properties-dialog-box"></a>Bir iş parçacığı Özellikleri iletişim kutusunu açmak için
+### <a name="to-open-a-thread-properties-dialog-box"></a>Iş parçacığı özellikleri iletişim kutusunu açmak için
 
-1. Görüntülenen ağacından bir iş parçacığı seçin [iş parçacıkları görünümü](../debugger/threads-view.md).
+1. [Iş parçacıkları görünümünde](../debugger/threads-view.md)görüntülenmiş olan ağaçtan bir iş parçacığı seçin.
 
-2. Gelen **görünümü** menüsünde seçin **özellikleri**.
+2. **Görünüm** menüsünde **Özellikler**' i seçin.
 
-   Özellikler iletişim kutularında, bir Görünüm penceresi başka bir öğeye tıklayın ve iletişim kutusunda seçili öğeye bilgileri gösterir kalıcı, değildir.
+   Özellikler iletişim kutuları kalıcı değildir, bu nedenle bir görünüm penceresinde başka bir öğeye tıklayabilir ve iletişim kutusu seçili öğe hakkındaki bilgileri gösterir.

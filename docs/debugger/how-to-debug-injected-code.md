@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Püskürtülen kodda hata ayıklama | Microsoft Docs'
+title: Eklenen koddaki hataları ayıklama | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.injected
 dev_langs:
@@ -24,49 +24,49 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 35d2343343bf554df7592c8616e7697d88665baf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a63a593a907908205d6724f3faf2c06d405bf0e2
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847786"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350049"
 ---
-# <a name="how-to-debug-injected-code"></a>Nasıl yapılır: Püskürtülen kodda hata ayıklama
+# <a name="how-to-debug-injected-code"></a>Nasıl Yapılır: Püskürtülen Kodda Hata Ayıklama
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünden içeri ve dışarı aktarma ayarları seçin. Daha fazla bilgi için [ayarlarına](../ide/environment-settings.md#reset-settings).
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünden Içeri ve dışarı aktarma ayarları ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../ide/environment-settings.md#reset-settings).
 
-Öznitelikleri kullanılarak C++ programlama büyük ölçüde basitleştirebilir. Daha fazla bilgi için [kavramları](/cpp/windows/attributed-programming-concepts). Bazı öznitelikler, derleyiciye tarafından yorumlanır. Diğer öznitelikleri kod derleyici ardından derler program kaynak yerleştirir. Eklenen bu kod, daha kolay yazmanız gereken kod miktarını azaltarak programlama yapar. Bazı durumlarda, ancak bir hata uygulamanızın eklenen kod yürütülürken başarısız olmasına neden olabilir. Bu durumda, eklenen koda göz atmak isteyeceksiniz. Visual Studio eklenen kodu görmek iki yol sağlar:
+Öznitelikleri kullanmak C++ programlamayı büyük ölçüde basitleştirebilir. Daha fazla bilgi için bkz. [Kavramlar](/cpp/windows/attributed-programming-concepts). Bazı öznitelikler doğrudan derleyici tarafından yorumlanır. Diğer öznitelikler, kodu program kaynağına ekler ve derleyicinin daha sonra derler. Bu eklenen kod, yazmanız gereken kod miktarını azaltarak programlamayı kolaylaştırır. Ancak bazen bir hata, eklenen kodu yürütürken uygulamanızın başarısız olmasına neden olabilir. Bu durumda muhtemelen eklenen koda bakmak isteyeceksiniz. Visual Studio, eklenen kodu görmeniz için iki yol sunar:
 
-- Eklenen kodun görüntüleyebileceğiniz **ayrıştırılmış kodu** penceresi.
+- Eklenen kodu **ayrıştırma** penceresinde görebilirsiniz.
 
-- Kullanarak [/Fx](/cpp/build/reference/fx-merge-injected-code), özgün ve eklenen kod içeren bir birleştirilmiş kaynak dosyası oluşturabilirsiniz.
+- [/FX](/cpp/build/reference/fx-merge-injected-code)kullanarak, özgün ve eklenen kodu içeren bir birleştirilmiş kaynak dosya oluşturabilirsiniz.
 
-**Ayrıştırılmış kodu** penceresi, kaynak kodu ve öznitelikleri tarafından eklenen kod karşılık gelen derleme dili talimatlarını gösterir. Ayrıca, **ayrıştırılmış kodu** penceresi, kaynak kodu ek açıklama gösterebilir.
+**Ayrıştırılmış** pencere, kaynak koda ve öznitelikler tarafından eklenen koda karşılık gelen derleme dili talimatlarını gösterir. Ayrıca, **ayrıştırılmış** pencere, kaynak kodu ek açıklamasını gösterebilir.
 
-## <a name="to-turn-on-source-annotation"></a>Kaynak ek açıklama üzerinde etkinleştirmek için
+## <a name="to-turn-on-source-annotation"></a>Kaynak ek açıklamasını açmak için
 
-- Sağ **ayrıştırılmış kodu** penceresinde ve **kaynak kodunu Göster** kısayol menüsünden.
+- **Ayrıştırma** penceresini sağ tıklatın ve kısayol menüsünden **kaynak kodunu göster** ' i seçin.
 
-     Bir kaynak penceresinde bir öznitelik konumunu biliyorsanız, eklenen kodun bulmak için kısayol menüsünü kullanabilirsiniz **ayrıştırılmış kodu** penceresi.
+     Bir özniteliğin konumunu kaynak pencerede biliyorsanız, eklenen kodu **ayrıştırma** penceresinde bulmak için kısayol menüsünü kullanabilirsiniz.
 
 ## <a name="to-view-injected-code"></a>Eklenen kodu görüntülemek için
 
-1. Hata ayıklayıcının kesme modunda olması gerekir.
+1. Hata ayıklayıcı kesme modunda olmalıdır.
 
-2. Bir kaynak kod penceresinde, imleci eklenen kodu görüntülemek istediğiniz öznitelik önüne koyun.
+2. Bir kaynak kodu penceresinde, eklenen kodu görüntülemek istediğiniz özniteliğin önüne imleci yerleştirin.
 
-3. Sağ tıklatın ve seçin **Ayrıştırılımış** kısayol menüsünden.
+3. Sağ tıklayın ve kısayol menüsünde **ayrıştırılmış koda git** ' i seçin.
 
-     Öznitelik konumu geçerli yürütme noktasını ise, seçebileceğiniz **ayrıştırılmış kodu** penceresinden **hata ayıklama** menüsü.
+     Öznitelik konumu geçerli yürütme noktasının yakınında ise **hata ayıklama** menüsünden **ayrıştırma** penceresini seçebilirsiniz.
 
-## <a name="to-view-the-disassembly-code-at-the-current-execution-point"></a>Geçerli yürütme noktasına ilişkin ayrıştırma kodunu görüntülemek için
+## <a name="to-view-the-disassembly-code-at-the-current-execution-point"></a>Geçerli yürütme noktasındaki ayrıştırılmış kodu görüntülemek için
 
-1. Hata ayıklayıcının kesme modunda olması gerekir.
+1. Hata ayıklayıcı kesme modunda olmalıdır.
 
-2. Gelen **hata ayıklama** menüsünde seçin **Windows**, tıklatıp **ayrıştırılmış kodu**.
+2. **Hata Ayıkla** menüsünde **Windows**' u seçin ve **ayrıştırılmış derleme**' ye tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

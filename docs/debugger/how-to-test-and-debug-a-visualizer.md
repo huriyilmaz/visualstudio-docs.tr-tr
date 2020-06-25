@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Görselleştiriciyi test etme ve hata ayıklama | Microsoft Docs'
+title: Görselleştiriciyi test etme ve hata ayıklama | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a0d2fdcd0685b83f63e9354b96146c1c869b355
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1a81a8d094999585620ab6ab412c3b0610caf517
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732400"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348905"
 ---
 # <a name="how-to-test-and-debug-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Test Etme ve Hata Ayıklama
 Görselleştirici yazdıktan sonra hata ayıklaması yapmanız ve test etmeniz gerekir.
@@ -33,7 +33,7 @@ Görselleştirici hata ayıklamanın daha kolay bir yolu, Görselleştirici bir 
 
 ### <a name="to-create-a-visualizer-development-host"></a>Görselleştiricisi geliştirme konağı oluşturmak için
 
-1. Hata ayıklayıcı tarafı sınıfınıza, <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost> nesnesi oluşturan ve Show metodunu çağıran statik bir yöntem ekleyin:
+1. Hata ayıklayıcı tarafı sınıfınıza, bir <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost> nesnesi oluşturan ve Show yöntemini çağıran statik bir yöntem ekleyin:
 
     ```csharp
     public static void TestShowVisualizer(object objectToVisualize)
@@ -43,17 +43,17 @@ Görselleştirici hata ayıklamanın daha kolay bir yolu, Görselleştirici bir 
     }
     ```
 
-    Konağı oluşturmak için kullanılan parametreler, Görselleştirici (`objectToVisualize`) ve hata ayıklayıcı tarafı sınıfının türü içinde gösterilecek veri nesnesidir.
+    Konağı oluşturmak için kullanılan parametreler, Görselleştirici ( `objectToVisualize` ) ve hata ayıklayıcı tarafı sınıfının türü içinde gösterilecek veri nesnesidir.
 
-2. @No__t_0 çağırmak için aşağıdaki ifadeyi ekleyin. Görselleştiriciyi bir sınıf kitaplığında oluşturduysanız, sınıf kitaplığını çağırmak için bir yürütülebilir dosya oluşturmanız ve bu ifadeyi çalıştırılabilirinize yerleştirmeniz gerekir:
+2. Çağırmak için aşağıdaki ifadeyi ekleyin `TestShowVisualizer` . Görselleştiriciyi bir sınıf kitaplığında oluşturduysanız, sınıf kitaplığını çağırmak için bir yürütülebilir dosya oluşturmanız ve bu ifadeyi çalıştırılabilirinize yerleştirmeniz gerekir:
 
     ```csharp
     DebuggerSide.TestShowVisualizer(myString);
     ```
 
-    Daha kapsamlı bir örnek için bkz. [Izlenecek yol: bir Görselleştirici C#yazma ](../debugger/walkthrough-writing-a-visualizer-in-csharp.md).
+    Daha kapsamlı bir örnek için bkz. [Izlenecek yol: C# dilinde Görselleştirici Yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek Yol: C# ile Görselleştirici Yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)
-- [Nasıl Yapılır: Görselleştirici Yükleme](../debugger/how-to-install-a-visualizer.md)
+- [Nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)
 - [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)

@@ -1,7 +1,7 @@
 ---
 title: UWP uygulamalarında HTML ve CSS hatalarını ayıklama | Microsoft Docs
 ms.date: 07/17/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.WebClient.DomExplorer
 dev_langs:
@@ -17,12 +17,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: 75bdfe55d516deb34872007a9461a286b4d742e0
-ms.sourcegitcommit: 97623fd6190c43fed0d2ee7af92b01c375282622
+ms.openlocfilehash: 331cb056132a2d90a932ff250c9bdbb7e22e38af
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568910"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348268"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio 'da UWP uygulamalarında HTML ve CSS hatalarını ayıklama
 
@@ -32,7 +32,7 @@ DOM inceleme araçları tarafından sunulan etkileşimli hata ayıklama modelini
 
 JavaScript Konsol penceresini kullanma ve kesme noktaları ayarlama gibi diğer JavaScript hata ayıklama özellikleri hakkında bilgi için bkz. [hızlı başlangıç:](../debugger/quickstart-debug-javascript-using-the-console.md) [Visual Studio 'Da](debugging-windows-store-and-windows-universal-apps.md)JavaScript ve hata ayıklama uygulamaları.
 
-## <a name="InspectingDOM"></a>Canlı DOM inceleniyor
+## <a name="inspecting-the-live-dom"></a><a name="InspectingDOM"></a>Canlı DOM inceleniyor
 DOM Gezgini, işlenmiş sayfanın bir görünümünü gösterir ve DOM Gezgini 'ni kullanarak değerleri değiştirebilir ve sonuçları hemen görebilirsiniz. Bu, hata ayıklayıcıyı durdurup yeniden başlatmadan değişiklikleri test etmenizi sağlar. Bu yöntemi kullanarak sayfayla etkileşim kurarken, projenizdeki kaynak kodu değişmez, bu nedenle istenen kod düzeltmelerini bulduğunuzda, kaynak kodunuzda değişiklikler yaparsınız.
 
 > [!TIP]
@@ -49,22 +49,22 @@ DOM Gezgini 'ni kullanarak şunları yapabilirsiniz:
   Uygulamalarda hata ayıklarken, genellikle DOM Gezgini 'nde öğe seçmeniz gerekir. Bir öğe seçtiğinizde, DOM Gezgini 'nin sağ tarafındaki sekmelerde görüntülenen değerler, DOM Gezgini 'nde seçilen öğeyi yansıtacak şekilde otomatik olarak güncelleşilir. Sekmeler şunlardır: **Stiller**, **hesaplanan**, **Düzen**. UWP uygulamaları ayrıca **olayları** ve **değişiklik** sekmelerini destekler. Öğe seçme hakkında daha fazla bilgi için bkz. [öğeleri seçme](#SelectingElements).
 
 > [!TIP]
-> DOM Gezgini penceresi kapalıysa, yeniden açmak için **Windows** > **DOM Gezgini**>**Hata Ayıkla** ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
+> DOM Gezgini penceresi kapalıysa, **Debug** > **Windows**  >  yeniden açmak için Windows**DOM Gezgini 'nde** Hata Ayıkla ' yı seçin. Pencere yalnızca bir betik hata ayıklama oturumu sırasında görüntülenir.
 
-Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli olarak hata ayıklama işlemini öğreneceksiniz. `FlipView` denetimi kullanan ve sonra hata ayıkladığımız bir uygulama oluşturacağız. Uygulama birkaç hata içeriyor.
+Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli olarak hata ayıklama işlemini öğreneceksiniz. Bir `FlipView` denetimi kullanan ve sonra hata ayıkladığımız bir uygulama oluşturacağız. Uygulama birkaç hata içeriyor.
 
 > [!WARNING]
 > Aşağıdaki örnek uygulama bir UWP uygulamasıdır. Cordova için aynı özellikler desteklenir, ancak uygulama farklı olabilir.
 
 #### <a name="to-debug-by-inspecting-the-live-dom"></a>Canlı DOM 'ı inceleyerek hata ayıklamak için
 
-1. **Yeni proje** > **Dosya** ' yı seçerek Visual Studio 'da yeni bir çözüm oluşturun.
+1. **Dosya**  >  **Yeni proje**' ye tıklayarak Visual Studio 'da yeni bir çözüm oluşturun.
 
-2. **Windows evrensel** > **JavaScript** ' i seçin ve ardından **WinJS uygulaması**' nı seçin.
+2. **JavaScript**  >  **Windows Universal**' i seçin ve ardından **WinJS uygulaması**' nı seçin.
 
-3. Proje için `FlipViewApp`gibi bir ad yazın ve uygulamayı oluşturmak için **Tamam** ' ı seçin.
+3. Proje için bir ad yazın (gibi) `FlipViewApp` ve uygulamayı oluşturmak Için **Tamam** ' ı seçin.
 
-4. İndex. html ' nin BODY öğesinde şu kodu ekleyin:
+4. index.html 'nin BODY öğesinde şu kodu ekleyin:
 
     ```html
     <div id="flipTemplate" data-win-control="WinJS.Binding.Template"
@@ -90,7 +90,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
     }
     ```
 
-6. Default. js ' deki kodu şu kodla değiştirin:
+6. default.js kodundaki kodu şu kodla değiştirin:
 
     ```javascript
     (function () {
@@ -149,21 +149,21 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
     ![Hata ayıklama hedef listesini seçin](../debugger/media/js_select_target.png "JS_Select_Target")
 
-8. Hata **ayıklamayı başlatmak** > **Hata Ayıkla** ' yı seçin veya F5 ' e basarak uygulamanızı hata ayıklama modunda çalıştırın.
+8. Uygulamanızı **Debug**hata ayıklama  >  modunda çalıştırmak için hata**ayıklamayı Başlat**' ı seçin veya F5 tuşuna basın.
 
-    Bu, uygulamayı çalıştırır, ancak stil içinde birkaç hata olduğu için çoğunlukla boş bir ekran görürsünüz. İlk `FlipView` görüntüsü, ekranın ortasında küçük bir karede görünür.
+    Bu, uygulamayı çalıştırır, ancak stil içinde birkaç hata olduğu için çoğunlukla boş bir ekran görürsünüz. İlk `FlipView` görüntü, ekranın ortasında küçük bir karede görünür.
 
 9. Visual Studio 'ya geçin ve **DOM Gezgini** sekmesini seçin.
 
     > [!TIP]
     > Visual Studio ile çalışan uygulama arasında geçiş yapmak için Alt + Tab veya F12 tuşlarına basabilirsiniz.
 
-10. DOM Gezgini penceresinde, KIMLIĞI `"fView"`olan bölüm için DIV öğesini seçin. Doğru DIV öğesini görüntülemek ve seçmek için ok tuşlarını kullanın. (Sağ ok tuşu, bir öğenin alt öğelerini görüntülemenize olanak sağlar.)
+10. DOM Gezgini penceresinde KIMLIĞI olan bölüm için DIV öğesini seçin `"fView"` . Doğru DIV öğesini görüntülemek ve seçmek için ok tuşlarını kullanın. (Sağ ok tuşu, bir öğenin alt öğelerini görüntülemenize olanak sağlar.)
 
     ![DOM Gezgini](../debugger/media/js_dom_explorer.png "JS_DOM_Explorer")
 
     > [!TIP]
-    > Ayrıca, > > giriş isteminde `select(fView)` yazarak ve ardından ENTER tuşuna basarak JavaScript Konsol penceresinin sol alt köşesindeki DIV öğesini de seçebilirsiniz.
+    > Ayrıca, `select(fView)` >> giriş istemine yazıp ENTER tuşuna basarak, JavaScript Konsol penceresinin sol alt KÖŞESINDEKI DIV öğesini de seçebilirsiniz.
 
     DOM Gezgini penceresinin sağ tarafındaki sekmelerde görüntülenen değerler, DOM Gezgini 'nde geçerli öğeyi yansıtacak şekilde otomatik olarak günceldir.
 
@@ -171,26 +171,26 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
     Bu sekme, seçilen DOM öğesinin her bir özelliği için hesaplanan veya son değeri gösterir.
 
-12. Yükseklik CSS kuralını açın. 100 piksel olarak ayarlanmış bir satır içi stil olduğuna dikkat edin. Bu, `#fView` CSS Seçicisi için ayarlanan %100 ' lik yükseklik değeriyle tutarsız bir şekilde görünür. `#fView` seçicinin üstü çizili metni, satır içi stilin bu stille öncelikli olduğunu gösterir.
+12. Yükseklik CSS kuralını açın. 100 piksel olarak ayarlanmış bir satır içi stil olduğuna dikkat edin. Bu, CSS Seçicisi için %100 oranında ayarlanmış olan yükseklik değeriyle tutarsız bir şekilde görünür `#fView` . Seçici için üstü çizili metin `#fView` , satır içi stilin bu stille öncelikli olduğunu gösterir.
 
     Aşağıdaki çizimde, **hesaplanan** sekmesi gösterilmektedir.
 
     ![DOM Gezgini hesaplanan sekmesi](../debugger/media/js_dom_explorer_computed.png "JS_DOM_Explorer_Computed")
 
-13. Ana DOM Gezgini penceresinde, `fView` DIV öğesinin yükseklik ve genişlik için satır içi stile çift tıklayın. Artık değerleri burada düzenleyebilirsiniz. Bu senaryoda, bunları tamamen kaldırmak istiyoruz.
+13. Ana DOM Gezgini penceresinde, DIV öğesinin yükseklik ve genişlik için satır içi stile çift tıklayın `fView` . Artık değerleri burada düzenleyebilirsiniz. Bu senaryoda, bunları tamamen kaldırmak istiyoruz.
 
-14. Ana pencerede `width: 100px;height: 100px;`' a çift tıklayın, **Delete** tuşuna basın ve ardından **ENTER**tuşuna basın. ENTER tuşuna bastıktan sonra, hata ayıklama oturumunuzu durdurmadığınız halde yeni değerler uygulamaya hemen yansıtılır.
+14. Ana pencerede, çift tıklayın `width: 100px;height: 100px;` , **Delete** tuşuna basın ve ardından **ENTER**tuşuna basın. ENTER tuşuna bastıktan sonra, hata ayıklama oturumunuzu durdurmadığınız halde yeni değerler uygulamaya hemen yansıtılır.
 
     > [!IMPORTANT]
     > DOM Gezgini penceresinde öznitelikleri güncelleştirebilmeniz için, **Stiller**, **hesaplanan**ve **Düzen** sekmelerinde görüntülenen değerleri de güncelleştirebilirsiniz.
 
 15. Uygulamayı seçerek veya alt + TAB tuşlarını kullanarak uygulamaya geçiş yapın.
 
-    Artık `FlipView` denetimi Benzeticisinin veya telefon öykünücüsünün ekran boyutundan daha büyük görünüyor. Bu, amaçlanan sonuç değildir. Araştırmak için, Visual Studio 'ya geri dönün.
+    Artık `FlipView` Denetim simülatör veya telefon öykünücüsünün ekran boyutundan daha büyük görünüyor. Bu, amaçlanan sonuç değildir. Araştırmak için, Visual Studio 'ya geri dönün.
 
-16. DOM Gezgini 'nde, **hesaplanmış** sekmesini yeniden seçin ve yükseklik kuralını açın. FView öğesi, CSS 'den beklenen %100 değerini hala gösterir, ancak hesaplanan değer uygulamanın ekran yüksekliğine (örneğin, 800px, 667.67 px veya başka bir değer) eşittir, bu da bu uygulama için istiyoruz. Araştırmak için, sonraki adımlarda `fView` DIV öğesinin yüksekliğini ve genişliğini kaldırdık.
+16. DOM Gezgini 'nde, **hesaplanmış** sekmesini yeniden seçin ve yükseklik kuralını açın. FView öğesi, CSS 'den beklenen %100 değerini hala gösterir, ancak hesaplanan değer uygulamanın ekran yüksekliğine (örneğin, 800px, 667.67 px veya başka bir değer) eşittir, bu da bu uygulama için istiyoruz. Araştırmak için, sonraki adımlarda DIV öğesinin yüksekliğini ve genişliğini kaldırdık `fView` .
 
-17. **Stiller** SEKMESINDE `#fView` CSS seçicisinin yükseklik ve genişlik özelliklerinin işaretini kaldırın.
+17. **Stiller** sekmesinde CSS seçicinin yükseklik ve genişlik özelliklerinin işaretini kaldırın `#fView` .
 
     **Hesaplanan** sekmede artık 400px bir yükseklik gösterilmektedir. Bilgiler, bu değerin platform CSS dosyası olan ui-Dark. css dosyasında belirtilen. win-flipview seçicisine geldiğini gösterir.
 
@@ -210,7 +210,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
       Bu doğru görünmüyor. **Hesaplanan** sekme aynı kenar boşluğu değerlerini de gösterir.
 
-20. **Stiller** sekmesini SEÇIN ve CSS seçicisini `#fView` bulun. Burada, **Margin** özelliği için %25 değerini görürsünüz.
+20. **Stiller** sekmesini seçin ve `#fView` CSS seçiciyi bulun. Burada, **Margin** özelliği için %25 değerini görürsünüz.
 
 21. %25 ' i seçin ve 25px olarak değiştirin ve ENTER tuşuna basın.
 
@@ -222,7 +222,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
 1. Uygulama çalışmaya devam ederken Visual Studio 'ya geçin.
 
-2. Default. html dosyasını açın ve `"fView"` DIV öğesinin yüksekliğini ve genişliğini %100 olarak değiştirerek kaynak kodunuzu değiştirin.
+2. default.html 'yi açın ve DIV öğesinin Height ve Width değerlerini %100 olarak değiştirerek kaynak kodunuzu değiştirin `"fView"` .
 
 3. Hata ayıklama araç çubuğunda **Windows uygulamasını Yenile** düğmesini seçin (veya F4 tuşuna basın). Düğme şu şekilde görünür: ![Windows uygulamasını Yenile düğmesi](../debugger/media/js_refresh.png "JS_Refresh").
 
@@ -230,14 +230,14 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
     Yenileme özelliği hakkında daha fazla bilgi için bkz. [uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md).
 
-## <a name="SelectingElements"></a>Öğe seçme
+## <a name="selecting-elements"></a><a name="SelectingElements"></a>Öğe seçme
 Bir uygulamada hata ayıklarken DOM öğelerini üç şekilde seçebilirsiniz:
 
 - Doğrudan DOM Gezgini penceresinde (veya ok tuşlarını kullanarak) öğelere tıklayarak.
 
 - **Öğe seç** düğmesini (Ctrl + B) kullanarak.
 
-- [JavaScript Konsolu komutlarından](../debugger/javascript-console-commands.md?view=vs-2017)biri olan `select` komutunu kullanarak.
+- `select` [JavaScript Konsol komutlarından](../debugger/javascript-console-commands.md?view=vs-2017)biri olan komutunu kullanarak.
 
   Öğeleri seçmek için DOM Gezgini penceresini kullandığınızda ve fare işaretçisini bir öğe üzerine getirdiğinizde, ilgili öğe çalışan uygulamada vurgulanır. Bunu seçmek için DOM Gezgini 'nde öğeye tıklamalısınız veya öğeleri vurgulamak ve seçmek için ok tuşlarını kullanabilirsiniz. DOM Gezgini 'nde **öğe seç** düğmesini kullanarak da öğeleri seçebilirsiniz. Aşağıdaki çizimde **öğe seç** düğmesi gösterilmektedir.
 

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Iş parçacıklarını bayrak ve işaretini kaldır | Microsoft Docs'
+title: Iş parçacıklarını Işaretleme ve işaretini kaldırma | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -15,14 +15,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68a2ce8b6ec429b3f7f5cd782c3dac52602eff16
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e7480f953e2fca57c296d6d1641059993bfa582c
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733232"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349633"
 ---
-# <a name="how-to-flag-and-unflag-threads-c-visual-basic-c"></a>Nasıl yapılır: Iş parçacıklarını bayrak ve işaretini kaldırC#(, Visual Basic C++,)
+# <a name="how-to-flag-and-unflag-threads-c-visual-basic-c"></a>Nasıl yapılır: bayrak ve Unflag Iş parçacıkları (C#, Visual Basic, C++)
 
 **Iş parçacıkları**, **Paralel Yığınlar** (iş parçacığı görünümü), **paralel izleme**ve **GPU iş parçacıkları** pencerelerinin bir simgesi ile işaretleyerek özel dikkat sağlamak istediğiniz bir iş parçacığına bayrak atayabilirsiniz. Bu simge, ve diğer iş parçacıklarından işaretlenen iş parçacıklarını ayırt etmenize yardımcı olabilir.
 
@@ -31,7 +31,7 @@ Bayraklı iş parçacıkları Ayrıca **hata ayıklama konumu** araç çubuğund
 ### <a name="to-flag-or-unflag-a-thread"></a>Bir iş parçacığını işaretlemek veya bayrak kaldırmak için
 
 - **Iş parçacıkları** veya **paralel izleme** penceresinde ilgilendiğiniz iş parçacığını bulun ve bayrağı seçmek veya temizlemek için bayrak simgesine tıklayın.
-- **Paralel Yığınlar** penceresinde bir iş parçacığı veya iş parçacığı grubuna sağ tıklayın ve **bayrak/\<iş parçacığı >** ya da **bayrağı kaldır/\<iş parçacığı >** ' nı seçin.
+- **Paralel Yığınlar** penceresinde iş parçacığı veya iş parçacığı grubuna sağ tıklayın ve **bayrak/ \<thread> ** veya **unbayrak/ \<thread> **seçeneğini belirleyin.
 
 ### <a name="to-unflag-all-threads"></a>Tüm iş parçacıklarının bayrağını kaldır
 
@@ -61,6 +61,6 @@ Bayraklı iş parçacıkları Ayrıca **hata ayıklama konumu** araç çubuğund
 5. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok İş Parçacıklı Uygulamaların Hatalarını Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
-- [Çoklu iş parçacıklı uygulamalarda hata ayıklamaya başlayın](../debugger/get-started-debugging-multithreaded-apps.md)
+- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Çok iş parçacıklı uygulamalarda hata ayıklamaya başlama](../debugger/get-started-debugging-multithreaded-apps.md)
 - [İzlenecek yol: Iş parçacıkları penceresini kullanarak çok iş parçacıklı uygulamalarda hata ayıklama](../debugger/how-to-use-the-threads-window.md)

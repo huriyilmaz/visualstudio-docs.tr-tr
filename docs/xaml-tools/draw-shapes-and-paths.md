@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 29c74f74bbee19e414b3ee32948f3ca5338e8d53
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: b87ed03c8f513f6a9a750186d8763e56061bed98
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592989"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350829"
 ---
 # <a name="draw-shapes-and-paths"></a>Şekiller ve yollar çizin
 
@@ -86,12 +86,12 @@ Yolu seçmek için **seçim** aracını kullanın. Noktayı eklemek istediğiniz
 
 ## <a name="convert-a-shape-to-a-path"></a>Şekli yola dönüştürme
 
-Bir şekli bir yolu değiştirdiğiniz şekilde değiştirmek için şekli bir yola dönüştürün. Şekli seçin ve sonra **biçim** > **yolu** > **yola Dönüştür**' yı seçin.
+Bir şekli bir yolu değiştirdiğiniz şekilde değiştirmek için şekli bir yola dönüştürün. Şekli seçin ve sonra **Biçim**  >  **yolu**  >  **yola Dönüştür**' nu seçin.
 
-**Kısa bir video izleyin:** ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.png) [yollarla çalışma: şekli yola dönüştürme](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
+**Kısa bir video izleyin:** ![ Yollarla çalışan yüklü özellikleri yapılandırma ](../designers/media/bldadminconsoleinitialconfigicon.png) [: bir şekli yola dönüştürme](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=147).
 
 > [!NOTE]
-> **Yola Dönüştür** , 10.0.16299.0 veya üzeri en düşük `TargetPlatformVersion` sahip UWP uygulamaları için şu anda kullanılamıyor.
+> **Yola Dönüştür** , en az 10.0.16299.0 veya ÜZERI olan UWP uygulamaları için şu anda kullanılamıyor `TargetPlatformVersion` .
 
 ## <a name="combine-paths"></a>Yolları Birleştir
 
@@ -99,13 +99,16 @@ Yolları ve şekilleri tek bir yolda birleştirebilirsiniz.
 
 ![Yolları Birleştir](../designers/media/2df17a5d-a338-4ef4-96c5-dae51cc1ca8a.png)
 
-|||||
-|-|-|-|-|
-|![Birleştirme öncesi iki şekil](../designers/media/b1_1.png)|Birleştirme öncesi iki şekil|![Kesiştir](../designers/media/b1_4.png)|Kesiştir|
-|![Birleştir](../designers/media/b1_2.png)|Birleştir|![Örtüşmeyi Dışla](../designers/media/b1_5.png)|Örtüşmeyi Dışla|
-|![Böl](../designers/media/b1_3.png)|Böl|![Çıkar](../designers/media/b1_6.png)|Çıkar|
+|Sayı|Eylem|
+|-|-|
+|![Birleştirme öncesi iki şekil](../designers/media/b1_1.png)|Birleştirme öncesi iki şekil|
+|![Birleştir](../designers/media/b1_2.png)|Birleştir|
+|![Böl](../designers/media/b1_3.png)|Böl|
+|![Kesiştir](../designers/media/b1_4.png)|Kesiştir|
+|![Örtüşmeyi Dışla](../designers/media/b1_5.png)|Örtüşmeyi Dışla|
+|![Çıkar](../designers/media/b1_6.png)|Çıkar|
 
-**Kısa bir video izleyin:** ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.png) [yollarla çalışma: yolları birleştirin](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
+**Kısa bir video izleyin:** ![ Yollarla çalışan yüklü özellikleri yapılandırma ](../designers/media/bldadminconsoleinitialconfigicon.png) [: yolları birleştirin](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=195).
 
 ## <a name="create-a-compound-path"></a>Bileşik yol oluşturma
 
@@ -115,7 +118,7 @@ Bir bileşik yolu, oluşturduktan sonra istediğiniz zaman bölebilir.
 
 ![Bileşik yolu bölme](../designers/media/2157a8aa-d9a7-4de4-8de5-b10d28f08a84.png)
 
-**Kısa bir video izleyin:** ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.png) [yollarla çalışma: bileşik yol oluşturma](https://www.youtube.com/watch?v=Io5bC0-nH6Q).
+**Kısa bir video izleyin:** ![ Yollarla çalışan yüklü özellikleri yapılandırma ](../designers/media/bldadminconsoleinitialconfigicon.png) [: bileşik bir yol oluşturun](https://www.youtube.com/watch?v=Io5bC0-nH6Q).
 
 ## <a name="create-a-clipping-path"></a>Kırpma yolu oluşturma
 
@@ -123,4 +126,4 @@ Bir kırpma yolu, kırpma yolu dışına düşen maskelenmiş nesnenin kısımla
 
 ![Kırpma yolu](../designers/media/22471e98-a841-4f39-a3ef-36090cf5a625.png)
 
-**Kısa bir video izleyin:** ![yüklü özellikleri yapılandırma](../designers/media/bldadminconsoleinitialconfigicon.png) [yollarla çalışma: kırpma yolu oluşturma](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).
+**Kısa bir video izleyin:** ![ Yollarla çalışan yüklü özellikleri yapılandırma ](../designers/media/bldadminconsoleinitialconfigicon.png) [: kırpma yolu oluşturma](https://www.youtube.com/watch?v=Io5bC0-nH6Q#t=232).

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: hata ayıklayıcı ayarlarını belirtme | Microsoft Docs'
+title: Hata ayıklayıcı ayarlarını belirtme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -19,19 +19,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66e9d0fb5b7d63402c9add3ddf06b3997bc0d7d9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1e39ae29e94ff28ce10daf36e3970273d8e34e9e
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732718"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349113"
 ---
 # <a name="how-to-specify-debugger-settings"></a>Nasıl Yapılır: Hata Ayıklama Ayarlarını Belirtme
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], değişkenlerin nasıl görüntülendiğini, belirli uyarıların sunulduğunu, kesme noktalarının nasıl ayarlanacağını ve çalışan programları nasıl etkilediğini de içeren hata ayıklayıcı davranışı için çeşitli ayarları belirtebilirsiniz. **Seçenekler** iletişim kutusunda hata ayıklayıcı ayarlarını belirtirsiniz.
+İçinde [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , değişkenlerin nasıl görüntülendiğini, belirli uyarıların sunulduğunu, kesme noktalarının nasıl ayarlandığını ve çalışan programları nasıl etkilediğini de içeren hata ayıklayıcı davranışı için çeşitli ayarlar belirtebilirsiniz. **Seçenekler** iletişim kutusunda hata ayıklayıcı ayarlarını belirtirsiniz.
 
 ### <a name="to-set-debugger-options"></a>Hata ayıklayıcı seçeneklerini ayarlamak için
 
-1. **Araçlar** menüsünde **Seçenekler**' e tıklayın.
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
 2. **Seçenekler** iletişim kutusunda, **hata ayıklama** klasörünü açın.
 
@@ -45,4 +45,4 @@ ms.locfileid: "72732718"
 - [Genel, Hata Ayıklama, Seçenekler İletişim Kutusu](../debugger/general-debugging-options-dialog-box.md)
 - [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/library/bcew296c.aspx)
 - [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)
-- [Genel Derleme Komutları ve Özellikler Makroları](/cpp/build/reference/common-macros-for-build-commands-and-properties)
+- [Derleme komutları ve özellikleri için ortak makrolar](/cpp/build/reference/common-macros-for-build-commands-and-properties)

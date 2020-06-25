@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: yazı tiplerini değiştirme | Microsoft Docs'
+title: Yazı tiplerini değiştirme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - fonts, SpyHelp
 ms.assetid: 3ee22eb9-978f-4efd-a5e0-f071745496ce
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2cf933dc7277f0f4c1533ca071a391b78413b029
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5597d1f7c14e1c37c55751c85e0dc53092c3af1c
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733934"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350270"
 ---
 # <a name="how-to-change-fonts"></a>Nasıl yapılır: Yazı Tiplerini Değiştirme
 Spy + + Windows için yazı tipi, yazı tipi stili ve yazı tipi boyutunu değiştirebilirsiniz.
@@ -31,6 +31,6 @@ Spy + + Windows için yazı tipi, yazı tipi stili ve yazı tipi boyutunu deği�
    **Yazı tipini varsayılan olarak kaydet** seçeneğinin belirlenmesi, gelecekteki tüm Spy + + pencerelerinin bu yazı tipini kullanmasına neden olur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Spy++ kullanma](../debugger/using-spy-increment.md)
+- [Spy++ Kullanma](../debugger/using-spy-increment.md)
 - [Spy++ Görünümleri](../debugger/spy-increment-views.md)
 - [Spy++ Başvurusu](../debugger/spy-increment-reference.md)

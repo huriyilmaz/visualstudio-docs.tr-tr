@@ -1,9 +1,9 @@
 ---
-title: Zaman seyahat hata ayıklama Canlı ASP.NET Azure sanal makineler
-description: Kayıt ve Snapshot Debugger'ı kullanarak Azure sanal makinelerinde Canlı ASP.NET uygulamaları yeniden yürütme hakkında bilgi edinin.
+title: Zaman gezme hata ayıklama canlı ASP.NET Azure sanal makineleri
+description: Snapshot Debugger kullanarak Azure sanal makinelerinde canlı ASP.NET uygulamalarını kaydetme ve yeniden oynatma hakkında bilgi edinin.
 ms.custom: ''
 ms.date: 04/11/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - debugger
 author: poppastring
@@ -13,107 +13,107 @@ monikerRange: '>= vs-2019'
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: 53dce8b6b468dd5754b5708afccdcbe6cb908d1d
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+ms.openlocfilehash: a44ecd7faeb3ec4cea7665678050580d7e4063a9
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432222"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350634"
 ---
-# <a name="record-and-replay-live-aspnet-apps-on-azure-virtual-machines-using-the-snapshot-debugger"></a>Kayıt ve yeniden yürütme Canlı Snapshot Debugger'ı kullanarak Azure sanal makinelerinde ASP.NET uygulamaları
+# <a name="record-and-replay-live-aspnet-apps-on-azure-virtual-machines-using-the-snapshot-debugger"></a>Snapshot Debugger kullanarak Azure sanal makinelerinde canlı ASP.NET uygulamalarını kaydedin ve yeniden yürütün
 
-Visual Studio Enterprise zaman seyahat hata ayıklama (TTD) önizlemede Azure sanal makinesi (VM) üzerinde çalışan bir Web uygulaması kaydetme olanağı sağlar doğru bir şekilde yeniden oluşturmak ve yürütme yolunu yeniden yürüt. TTD anlık görüntü hata ayıklayıcısı ile tümleşir ve yalıtmak ve üretim ortamlarında yalnızca oluşabilecek sorunları belirlemenize yardımcı olmak istediğiniz durumlar herhangi bir sayıda geri sarabilir ve kodun her satırını yeniden olanak sağlar.
+Visual Studio Enterprise seyahat hata ayıklaması (TTD) önizlemesi, Azure sanal makinesinde (VM) çalışan bir Web uygulamasını kaydetme ve ardından yürütme yolunu doğru şekilde yeniden oluşturma ve yeniden yürütme özelliği sağlar. TTD, Snapshot Debugger ile tümleşir ve her bir kod satırını dilediğiniz sayıda geri sararak yeniden oynamanıza ve yalnızca üretim ortamlarında oluşabilecek sorunları ayırmanıza ve belirlemenize yardımcı olur.
 
-TTD kaydı yakalama uygulamayı durdurmak değil. Ancak, TDD kaydı önemli ölçüde işlem boyutu ve etkin iş parçacığı sayısı temel alınarak Etkenler yavaşlatmasını, çalışan bir işleme ekler.
+Bir TTD kaydının yakalanması, uygulamayı durdurmayacak. Ancak, TDD kaydı, çalışan sürecinizi önemli ölçüde artırır, işlem boyutunu ve etkin iş parçacıklarının sayısını içeren faktörlere bağlı olarak yavaşlatmayı yavaşlatır.
 
-Bu özellik, Visual Studio 2019'ın yayınlanmasıyla birlikte bir go live lisans için önizlemeye sunulmuştur.
+Bu özellik, canlı bir go lisansıyla Visual Studio 2019 sürümünün önizlemesine yönelik önizlemededir.
 
 Bu öğreticide şunları yapacaksınız:
 
 > [!div class="checklist"]
-> * Snapshot Debugger zaman seyahat etkin hata ayıklama ile Başlat
-> * Bir anlık görüntü noktası ayarlayın ve toplama bir zaman seyahat kaydetme
-> * Bir zaman hata ayıklama Başlangıç kaydı seyahat
+> * Snapshot Debugger seyahat hata ayıklaması etkinken başlatın
+> * Anlık görüntü noktası ayarlama ve zaman gezme kaydı toplama
+> * Zaman gezme kaydında hata ayıklamayı Başlat
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-* Zaman seyahat Azure sanal makineler (VM) için hata ayıklama, yalnızca Visual Studio 2019 Enterprise için kullanılabilir veya üzeri ile **Azure geliştirme iş yükü**. (Altında **tek tek bileşenler** sekmesinde bulduğunuz altında **hata ayıklama ve test** > **anlık görüntü hata ayıklayıcısı**.)
+* Azure sanal makineler (VM) için zaman seyahat hata ayıklaması, **Azure geliştirme iş yükü**Ile yalnızca Visual Studio 2019 Enterprise veya üzeri sürümlerde kullanılabilir. ( **Tek tek bileşenler** sekmesinde, **hata ayıklama ve test**  >  altında bulabilirsiniz **Anlık görüntü hata ayıklayıcısı**.)
 
-    Henüz yüklü değilse, yükleme [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/vs/).
+    Henüz yüklenmemişse, [Visual Studio 2019 Enterprise](https://visualstudio.microsoft.com/vs/)'ı yükleme.
 
-* Seyahat süresi hata ayıklama, şu Azure VM web uygulamaları için kullanılabilir:
-  * .NET Framework 4.8 veya sonraki sürümlerde çalışan ASP.NET uygulamalarından (AMD64).
+* Zaman gezme hata ayıklaması aşağıdaki Azure VM Web uygulamaları için kullanılabilir:
+  * .NET Framework 4,8 veya üzeri sürümlerde çalışan ASP.NET uygulamaları (AMD64).
 
-## <a name="start-the-snapshot-debugger-with-time-travel-debugging-enabled"></a>Snapshot Debugger zaman seyahat etkin hata ayıklama ile Başlat
+## <a name="start-the-snapshot-debugger-with-time-travel-debugging-enabled"></a>Snapshot Debugger seyahat hata ayıklaması etkinken başlatın
 
-1. Projeyi açmak, bir zaman toplamak istediğiniz için seyahat kaydı.
+1. Zaman gezisi kaydı toplamak istediğiniz projeyi açın.
 
     > [!IMPORTANT]
-    > Açmanıza gerek TTD başlatmak için *kaynak kodu sürümüyle aynı sürümü* Azure VM'yi hizmetinizle yayımlanır.
+    > TTD 'yi başlatmak için, Azure VM hizmetinize yayınlanan *kaynak kodu sürümünü* açmanız gerekir.
 
-1. Seçin **hata ayıklama > Snapshot Debugger iliştirebilmek...** . Azure web uygulamanız için Dağıtılmış VM ve bir Azure depolama hesabı seçin. Seçin **zaman seyahat hata ayıklamayı etkinleştir** Önizleme seçeneğini ve ardından **iliştirme**.
+1. **Hata ayıkla > Snapshot Debugger Ekle...** seçeneğini belirleyin. Web uygulamanızın dağıtıldığı Azure sanal makinesini ve bir Azure Depolama hesabını seçin. **Zaman gezme hata ayıklama önizlemeyi etkinleştir** seçeneğini belirleyin ve ardından **Ekle**' ye tıklayın.
 
       ![Azure kaynağı seçin](../debugger/media/time-travel-debugging-select-azure-resource-vm.png)
 
     > [!IMPORTANT]
-    > Seçtiğiniz ilk kez **Snapshot Debugger Ekle** VM'niz için IIS otomatik olarak yeniden başlatılır.
+    > VM 'niz için **Snapshot Debugger** ilk defa seçtiğinizde IIS otomatik olarak yeniden başlatılır.
 
-    Meta verileri **modülleri** başlangıçta etkinleştirilmedi. Web uygulamasına gidin ve **toplamaya Başla** düğmesi sonra etkin hale gelir. Visual Studio anlık hata ayıklama modu sunulmuştur.
+    **Modüller** için meta veriler başlangıçta etkinleştirilmez. Web uygulamasına gidin ve **koleksiyonu Başlat** düğmesine gidip etkin hale gelir. Visual Studio artık Snapshot hata ayıklama modunda.
 
    ![Anlık görüntü hata ayıklama modu](../debugger/media/snapshot-message.png)
 
     > [!NOTE]
-    > Application Insights site uzantısı, anlık görüntü hata ayıklaması da destekler. Bir "site uzantısı güncel değil" hata iletisi ile karşılaşırsanız, bkz [sorun giderme ipuçları ve anlık görüntü hata ayıklama için bilinen sorunlar](../debugger/debug-live-azure-apps-troubleshooting.md) ayrıntıları yükseltme.
+    > Application Insights site uzantısı anlık görüntü hata ayıklamayı da destekler. "Site uzantısı güncel değil" hata iletisiyle karşılaşırsanız, ayrıntıları yükseltmek için [sorun giderme ipuçlarına ve anlık görüntü hata ayıklaması için bilinen sorunlara](../debugger/debug-live-azure-apps-troubleshooting.md) bakın.
 
-   **Modülleri** penceresi gösterir, tüm modülleri Azure VM için ne zaman yüklenir (seçin **hata ayıklama > Windows > modülleri** bu pencereyi açmak için).
+   **Modüller** penceresinde, tüm modüller Azure VM için yüklendiğinde görüntülenir (Bu pencereyi açmak için **Windows > modülleri hata ayıkla >** seçin).
 
    ![Modüller penceresini denetleyin](../debugger/media/snapshot-modules.png)
 
-## <a name="set-a-snappoint-and-collect-a-time-travel-recording"></a>Bir anlık görüntü noktası ayarlayın ve toplama bir zaman seyahat kaydetme
+## <a name="set-a-snappoint-and-collect-a-time-travel-recording"></a>Anlık görüntü noktası ayarlama ve zaman gezme kaydı toplama
 
-1. Kod Düzenleyicisi'nde sol kanalda bir anlık görüntü noktası ayarlamak ilginizi çeken bir yöntemi tıklayın. Yürütecek bildiğiniz kod olduğundan emin olun.
+1. Kod Düzenleyicisi 'nde, bir anlık görüntü noktası ayarlamak için ilgilendiğiniz bir yöntemde sol cilt paya tıklayın. Bunun yürütüleceğini bildiğiniz bir kod olduğundan emin olun.
 
-   ![Bir anlık görüntü noktası ayarlayın](../debugger/media/time-travel-debugging-set-snappoint-settings.png)
+   ![Anlık görüntü noktası ayarla](../debugger/media/time-travel-debugging-set-snappoint-settings.png)
 
-1. Anlık görüntü noktası (boş Top) simgesine sağ tıklayın ve seçin **eylemleri**. İçinde **anlık görüntü ayarları** penceresinde tıklayın **eylem** onay kutusu. Ardından **bu yöntemin sonuna bir zaman seyahat izleme toplama** onay kutusu.
+1. Anlık görüntü noktası simgesine (boş top) sağ tıklayın ve **Eylemler**' i seçin. **Anlık görüntü ayarları** penceresinde, **eylem** onay kutusuna tıklayın. Daha sonra **Bu yöntemin sonuna bir zaman gezme izlemesi izleyin** onay kutusunu tıklayın.
 
-   ![Yönteminin sonuna bir zaman seyahat izleme Topla](../debugger/media/time-travel-debugging-set-snappoint-action.png)
+   ![Yöntemin sonuna bir zaman gezme izlemesi toplayın](../debugger/media/time-travel-debugging-set-snappoint-action.png)
 
-1. Tıklayın **toplamaya Başla** anlık görüntü noktasını etkinleştirmek için.
+1. Anlık görüntü noktasını açmak için **toplamayı Başlat** ' a tıklayın.
 
-   ![Anlık görüntü noktasını Aç](../debugger/media/snapshot-start-collection.png)
+   ![Anlık görüntü noktasını aç](../debugger/media/snapshot-start-collection.png)
 
-## <a name="take-a-snapshot"></a>Bir anlık görüntüsünü alın
+## <a name="take-a-snapshot"></a>Anlık görüntü alma
 
-Bir anlık görüntü noktası etkinleştirildiğinde, anlık görüntü noktası yerleştirildiği kod satırının yürütür her bir anlık görüntüsünü yakalar. Bu yürütme sunucunuzdaki gerçek bir isteği nedeni olabilir. İsabet, web sitenizin tarayıcı görünümüne gidin ve tüm eylemleri için anlık görüntü noktası zorlamak için anlık görüntü noktası ulaşılmasına neden gereklidir.
+Bir anlık görüntü noktası açık olduğunda, her bir kod satırı, her ne zaman Bu yürütmeye, sunucunuzdaki gerçek bir istek neden olmuş olabilir. Anlık görüntü noktanızı vurmaya zorlamak için Web sitenizin tarayıcı görünümüne gidin ve anlık görüntü noktanızda vuruş yapılmasına neden olan tüm eylemleri gerçekleştirin.
 
-## <a name="start-debugging-a-time-travel-recording"></a>Bir zaman hata ayıklama Başlangıç kaydı seyahat
+## <a name="start-debugging-a-time-travel-recording"></a>Zaman gezme kaydında hata ayıklamayı Başlat
 
-1. Anlık görüntü noktası isabet edildiğinde bir anlık görüntü tanılama araçları penceresinde görünür. Bu pencereyi açmak için seçin **hata ayıklama > Windows > tanılama araçlarını Göster**.
+1. Anlık görüntü noktası isabet edildiğinde, Tanılama Araçları penceresinde bir anlık görüntü görüntülenir. Bu pencereyi açmak için **hata ayıkla > Windows > tanılama araçları göster**' i seçin.
 
-   ![Bir anlık görüntü noktası açın](../debugger/media/snapshot-diagsession-window.png)
+   ![Anlık görüntü noktası açma](../debugger/media/snapshot-diagsession-window.png)
 
-1. Kod düzenleyicisinde kaydetmeyi zaman seyahat açılacak anlık görüntüsünü görüntüle bağlantısına tıklayın.
+1. Kod düzenleyicisinde zaman gezme kaydını açmak için anlık görüntüyü görüntüle bağlantısına tıklayın.
   
-   Her satır kod kullanarak TTD tarafından kaydedilen yürütebilir **devam** ve **ters devam** düğmeleri. Ayrıca, **hata ayıklama** araç için kullanılabilir **Göster sonraki deyimi**, **içine adımla**, **Step Over**, **Step Out**, **Adım geri**, **üzerinden geri adım**, **adım geriye**.
+   **Devam et** ve **geri kaydet** düğmelerini kullanarak TTD tarafından kaydedilen her kod satırını çalıştırabilirsiniz. Ayrıca, **hata ayıklama** araç çubuğu bir **sonraki Ifadeyi göstermek**, **içine**geçmek, **baştan adımla**, Step **Out**, Step **into**, geri dönme, **geri dönme**, geri dönme, adım geri **alma**için de kullanılabilir.
 
-   ![Hata Ayıklamayı Başlat](../debugger/media/time-travel-debugging-step-commands.png)
+   ![Hata ayıklamayı Başlat](../debugger/media/time-travel-debugging-step-commands.png)
 
-   Ayrıca **Yereller**, **izlemeleri**, ve **çağrı yığını** windows ve ayrıca nevyhodnocovat.
+   **Yereller**, **Izler**ve **çağrı yığını** pencerelerini de kullanabilir ve ayrıca ifadeleri de değerlendirebilirsiniz.
 
-   ![Anlık görüntü verileri İnceleme](../debugger/media/time-travel-debugging-start-debugging.png)
+   ![Anlık görüntü verilerini İnceleme](../debugger/media/time-travel-debugging-start-debugging.png)
 
-    Web sitesinin kendisinde hala çalışıyor ve son kullanıcıların herhangi bir sonraki TTD etkinliği tarafından etkilenen değildir. Varsayılan olarak anlık görüntü noktası yalnızca bir anlık görüntüsü yakalanır: anlık görüntü yakalandıktan sonra anlık görüntü noktası devre dışı bırakır. Anlık görüntü noktası başka bir anlık görüntü yakalamak istiyorsanız, anlık görüntü noktası tıklayarak tekrar açabilirsiniz **koleksiyonu Güncelleştir**.
+    Web sitesinin kendisi de canlı ve son kullanıcılar bundan sonraki bir TTD etkinliği tarafından etkilenmemektedir. Varsayılan olarak, anlık görüntü noktası başına yalnızca bir anlık görüntü yakalanır: bir anlık görüntü yakalandıktan sonra, anlık görüntü açılır. Anlık görüntü noktasında başka bir anlık görüntü yakalamak istiyorsanız, **koleksiyonu Güncelleştir**' e tıklayarak anlık görüntü noktasını yeniden açabilirsiniz.
 
-**Yardıma mı ihtiyacınız var?** Bkz: [sorun giderme ve bilinen sorunlar](../debugger/debug-live-azure-apps-troubleshooting.md) ve [anlık görüntü hata ayıklama ile ilgili SSS](../debugger/debug-live-azure-apps-faq.md) sayfaları.
+**Yardıma mı ihtiyacınız var?** [Anlık görüntü hata ayıklama sayfaları Için](../debugger/debug-live-azure-apps-faq.md) [sorun giderme ve bilinen sorunlar](../debugger/debug-live-azure-apps-troubleshooting.md) ve SSS bölümüne bakın.
 
-## <a name="set-a-conditional-snappoint"></a>Koşullu bir anlık görüntü noktası ayarlayın
+## <a name="set-a-conditional-snappoint"></a>Koşullu bir anlık görüntü noktası ayarlama
 
-Uygulamanızı belirli bir durumda yeniden oluşturmak zor ise, koşullu bir anlık görüntü noktası kullanımı yardımcı olup olmadığını göz önünde bulundurun. Bir zaman'ı toplamaktan kaçınma koşullu anlık görüntü noktaları Yardım uygulama gibi bir değişken incelemek istediğiniz belirli bir değere sahip olduğunda istenen bir durum girene kadar kaydı seyahat. [İfadeler, filtreleri kullanarak koşulları ayarlayın veya isabet sayıları](../debugger/debug-live-azure-apps-troubleshooting.md).
+Uygulamanızda belirli bir durumu yeniden oluşturmak güç alıyorsa, koşullu bir anlık görüntü noktası kullanmanın yardımcı olup olmadığını göz önünde bulundurun. Koşullu anlık görüntü noktaları, bir değişkenin incelemek istediğiniz belirli bir değere sahip olması gibi, uygulama istenen bir duruma girene kadar bir zaman seyahat kaydı toplamaktan kaçınmanıza yardımcı olur. [İfadeleri ifade, filtre veya isabet sayısı kullanarak ayarlayabilirsiniz](../debugger/debug-live-azure-apps-troubleshooting.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, Azure sanal makineler için kaydı zaman seyahat toplanacak öğrendiniz. Snapshot Debugger hakkında daha fazla bilgi okumak isteyebilirsiniz.
+Bu öğreticide, Azure sanal makineleri için zaman gezme kaydını nasıl toplayacağınızı öğrendiniz. Snapshot Debugger hakkında daha fazla ayrıntı okumak isteyebilirsiniz.
 
 > [!div class="nextstepaction"]
 > [Anlık görüntü hatalarını ayıklama hakkında SSS](../debugger/debug-live-azure-apps-faq.md)

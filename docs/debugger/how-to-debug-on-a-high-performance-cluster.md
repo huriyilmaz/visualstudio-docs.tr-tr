@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: yüksek performanslı bir kümede hata ayıklama | Microsoft Docs'
+title: Yüksek performanslı bir kümede hata ayıklama | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,18 +16,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d95c6eeadfdf1bb90471997712299ae03a945be8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 905a196b0872ac0d8665293200837861adf49795
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733660"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350075"
 ---
-# <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>Nasıl yapılır: yüksek performanslı kümede hata ayıklama (C#, Visual Basic) C++
+# <a name="how-to-debug-on-a-high-performance-cluster-c-visual-basic-c"></a>Nasıl yapılır: yüksek performanslı kümede hata ayıklama (C#, Visual Basic, C++)
 
 Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklaması, uzak bir bilgisayardaki sıradan bir programın hata ayıklamasına benzer. Ancak bazı ek hususlar vardır. Genel uzaktan kurulum gereksinimleri için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
 
- Yüksek performanslı bir kümede hata ayıklarken, uzaktan hata ayıklama için kullanılabilen tüm [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklama pencerelerini ve tekniklerini kullanabilirsiniz. Ancak uzaktan hata ayıklaması yaptığınız için dış konsol penceresi kullanılamaz.
+ Yüksek performanslı bir kümede hata ayıklarken, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Uzaktan hata ayıklama için kullanılabilen tüm hata ayıklama pencerelerini ve tekniklerini kullanabilirsiniz. Ancak uzaktan hata ayıklaması yaptığınız için dış konsol penceresi kullanılamaz.
 
  **Iş parçacıkları** penceresi ve **süreçler** penceresi özellikle paralel uygulamalarda hata ayıklamak için faydalıdır. Bu pencereleri kullanma hakkında ipuçları için bkz. [nasıl yapılır: Işlem penceresini kullanma](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100)) ve [Izlenecek yol: iş parçacıkları penceresini kullanarak hata ayıklama](../debugger/how-to-use-the-threads-window.md).
 
@@ -51,7 +51,7 @@ Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklamas
 
      MachineName =*yourmachinename*
 
-     Daha karmaşık bir filtre oluşturmak için, `&`, AND işleci, `||`, OR işleci, `!`, NOT işleci ve parantezleri kullanarak yan tümceleri birleştirebilirsiniz.
+     Daha karmaşık bir filtre oluşturmak için, yan tümceleri, `&` and işlecini, `||` , or işlecini, `!` , Not işleci ve parantezleri kullanarak birleştirebilirsiniz.
 
 4. **Tamam**'a tıklayın.
 
@@ -67,9 +67,9 @@ Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklamas
 
      —veya—
 
-     `ProcessID =` *Yourprocessıdnumber*
+     `ProcessID =`*Yourprocessıdnumber*
 
-     Daha karmaşık bir filtre oluşturmak için, `&`, AND işleci, `||`, OR işleci, `!`, NOT işleci ve parantezleri kullanarak yan tümceleri birleştirebilirsiniz.
+     Daha karmaşık bir filtre oluşturmak için, yan tümceleri, `&` and işlecini, `||` , or işlecini, `!` , Not işleci ve parantezleri kullanarak birleştirebilirsiniz.
 
 4. **Tamam**'a tıklayın.
 
@@ -81,24 +81,24 @@ Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklamas
 
 3. **Kesme noktası filtresi** iletişim kutusunda şunu yazın:
 
-     `ThreadName =` *yourthreadname*
+     `ThreadName =`*yourthreadname*
 
      —veya—
 
-     `ThreadID =` *Yourdıdnumber*
+     `ThreadID =`*Yourthreadıdnumber*
 
-     Daha karmaşık bir filtre oluşturmak için, `&`, AND işleci, `||`, OR işleci, `!`, NOT işleci ve parantezleri kullanarak yan tümceleri birleştirebilirsiniz.
+     Daha karmaşık bir filtre oluşturmak için, yan tümceleri, `&` and işlecini, `||` , or işlecini, `!` , Not işleci ve parantezleri kullanarak birleştirebilirsiniz.
 
 4. **Tamam**'a tıklayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, `marvin` adlı bir bilgisayardaki kesme noktası için bir filtrenin ve `fourier1`adlı bir iş parçacığının nasıl oluşturulacağını gösterir.
+ Aşağıdaki örnek, adlı bir bilgisayar ve adlı bir iş parçacığı için bir kesme noktası için bir filtre oluşturmayı gösterir `marvin` `fourier1` .
 
 `(MachineName = marvin) & (ThreadName = fourier1)`
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok İş Parçacıklı Uygulamaların Hatalarını Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
-- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
 - [Nasıl yapılır: süreçler penceresini kullanma](/previous-versions/visualstudio/visual-studio-2010/7h8h5sdw(v=vs.100))
 - [Çoklu Iş parçacıklı uygulamalarda hata ayıklamaya başlayın](../debugger/get-started-debugging-multithreaded-apps.md)
 - [İş parçacıkları ve süreçler](/previous-versions/visualstudio/visual-studio-2010/ms164740(v=vs.100))

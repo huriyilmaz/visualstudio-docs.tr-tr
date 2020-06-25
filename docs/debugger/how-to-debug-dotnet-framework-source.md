@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: .NET Framework kaynağında hata ayıklama | Microsoft Docs'
+title: .NET Framework kaynakta hata ayıklama | Microsoft Docs
 ms.date: 11/19/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - debugging, .NET Framework source
 ms.assetid: fc12e472-ac6a-4e77-8e22-a769e13a03b8
@@ -10,59 +10,59 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 25f40b0528b794863aabdb13ed9785d2b0c551b8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3f043aae44231608fb514e87a05717f4aeb924bc
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894280"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350101"
 ---
 # <a name="how-to-debug-net-framework-source"></a>Nasıl yapılır: .NET Framework kaynağında hata ayıklama
 
-.NET Framework kaynağında hata ayıklamak için şunları yapmalısınız:
+.NET Framework kaynakta hata ayıklamak için şunları yapmanız gerekir:
 
-- İçinde .NET Framework kaynak Adımlamayı etkinleştir.
+- .NET Framework kaynağına adımlamayı etkinleştirin.
 
-- Kod için hata ayıklama erişimine sahiptir.
+- Kod için hata ayıklama sembollerine erişin.
 
-  Hata ayıklama simgeleri hemen karşıdan yükleyin ya da daha sonra indirme seçenekleri seçebilirsiniz. Simgeleri hemen indirmeyi yoktur, bunlar uygulamanızı hata ayıklama sonraki başlatışınızda indirirsiniz. Hata ayıklama sırasında kullanabilirsiniz **modülleri** veya **çağrı yığını** indirmek ve simgeleri yüklemek için windows.
+  Hata ayıklama sembollerini hemen indirmeyi seçebilir veya daha sonra indirilmek üzere seçenekleri ayarlayabilirsiniz. Sembolleri hemen indirmezseniz, uygulamanızda hata ayıklamayı başlattığınız bir dahaki sefer indirilir. Hata ayıklama sırasında, sembolleri indirmek ve yüklemek için **modülleri** veya **çağrı yığını** pencerelerini de kullanabilirsiniz.
 
-### <a name="to-enable-stepping-into-net-framework-source"></a>.NET Framework kaynağına ilerlemesine adımlamak için
+### <a name="to-enable-stepping-into-net-framework-source"></a>.NET Framework kaynağa adımlamayı etkinleştirmek için
 
-1. Altında **Araçları** (veya **hata ayıklama**) > **seçenekleri** > **hata ayıklama** > **genel**seçin **etkinleştirme .NET Framework kaynak Adımlamayı**.
+1. **Araçlar** (veya **hata ayıklama** **>)** altında  >  **hata ayıklama**  >  **genel**' i seçin **.NET Framework kaynak adımlamayı etkinleştir**seçeneğini belirleyin.
 
-   - Yalnızca kendi kodum tablonuz varsa bir uyarı iletişim kutusu, yalnızca kendi kodum şimdi devre dışı olduğunu bildirir. **Tamam**’ı seçin.
+   - Yalnızca kendi kodum etkinleştirdiyseniz, bir uyarı iletişim kutusu size Yalnızca kendi kodum artık devre dışı bırakıldığını söyler. **Tamam**’ı seçin.
 
-   - Ayarlanmış bir yerel sembol önbellek yoksa bir uyarı iletişim kutusu, varsayılan sembol önbelleği ayarlandığını bildirir. **Tamam**’ı seçin.
+   - Yerel bir sembol önbelleği ayarlanmamışsa, bir uyarı iletişim kutusu size varsayılan bir sembol önbelleğinin ayarlandığını söyler. **Tamam**’ı seçin.
 
-1. Seçin **Tamam** kapatmak için **seçenekleri** iletişim.
+1. **Seçenekler** iletişim kutusunu kapatmak için **Tamam ' ı** seçin.
 
-### <a name="to-set-or-change-symbol-source-locations-and-loading-behavior"></a>Ayarlamak veya sembol kaynak konumları ve yükleme davranışı değiştirmek için
+### <a name="to-set-or-change-symbol-source-locations-and-loading-behavior"></a>Sembol kaynak konumlarını ve yükleme davranışını ayarlamak veya değiştirmek için
 
-1. Seçin **sembolleri** kategorisi altında **Araçları** (veya **hata ayıklama**) > **seçenekleri** > **hataayıklama**.
+1. **Araçlar** (veya **hata ayıklama**) altındaki **semboller** kategorisini seçin > **Seçenekler**  >  **hata**ayıklayın.
 
-1. Üzerinde **sembolleri** sayfasındaki **sembol dosyası (.pdb) konumlar**seçin **Microsoft sembol sunucuları** genel Microsoft sembol sunucularından sembolleri erişim için. Diğer simge konumları eklemek ve yüklenme sırasını değiştirmek için araç çubuğu düğmeleri seçin.
+1. **Simgeler** sayfasında, **sembol dosyası (. pdb) konumları**altında, genel Microsoft sembol sunucularından simgelere erişmek için **Microsoft sembol sunucuları** ' nı seçin. Diğer sembol konumlarını eklemek ve yükleme sırasını değiştirmek için araç çubuğu düğmelerini seçin.
 
-1. Yerel sembol önbelleğinizi değiştirmek için düzenlemek veya altında farklı bir konuma göz atın **önbellek sembolleri bu dizinde**.
+1. Yerel semboller önbelleğinizi değiştirmek için **Bu dizindeki önbellek sembolleri**altında farklı bir konuma düzenleyin veya tarayın.
 
-1. Simgeleri hemen karşıdan yüklemek seçin **tüm sembolleri**. Bu düğme, yalnızca hata ayıklarken kullanılabilir.
+1. Sembolleri hemen indirmek için **tüm sembolleri yükle**' yi seçin. Bu düğme yalnızca hata ayıklama sırasında kullanılabilir.
 
-   Sembolleri şimdi karşıdan yoksa, bunlar sonraki hata ayıklama işlemi başlattığınızda indirilmesi.
+   Sembolleri şimdi indirmezseniz, hata ayıklamayı bir sonraki başlatmanızda indirilir.
 
-1. Seçin **Tamam** kapatmak için **seçenekleri** iletişim.
+1. **Seçenekler** iletişim kutusunu kapatmak için **Tamam ' ı** seçin.
 
-### <a name="to-load-symbols-from-the-modules-or-call-stack-windows"></a>Modülleri veya çağrı yığını simgeleri yüklemek için windows
+### <a name="to-load-symbols-from-the-modules-or-call-stack-windows"></a>Modüller veya çağrı yığını pencerelerini sembolleri yüklemek için
 
-1. Hata ayıklama sırasında penceresini seçerek açın. **hata ayıklama** > **Windows** > **modülleri** (veya basın **Ctrl + Alt + U**) veya **hata ayıklama** > **Windows** > **çağrı yığını** (**Ctrl + Alt + C**).
+1. Hata ayıklama sırasında, Windows modüllerini **Hata Ayıkla**  >  **Windows**  >  **Modules** (veya **Ctrl + Alt + U**tuşlarına basın) veya Windows çağrı **yığını hata ayıkla**  >  **Windows**  >  **Call Stack** (**Ctrl + Alt + C**) seçeneğini belirleyerek pencereyi açın.
 
-1. Sembol yüklenmedi olmayan bir modül sağ tıklayın. İçinde **modülleri** sembol yükleme durumu penceresinde konusu **simge durumu** sütun. İçinde **çağrı yığını** penceresinde durumudur **çerçeve durumu** sütun ve çerçeve grileştirilmiş.
+1. Sembolleri yüklenmeyen bir modüle sağ tıklayın. **Modüller** penceresinde sembol yükleme durumu, **semboller durum** sütununda bulunur. **Çağrı yığını** penceresinde, durum **çerçeve durumu** sütununda, çerçeve ise gri renkte olur.
 
-   - Seçin **yük sembolleri** menüsünden bulun ve sembol dosyaları bir klasörden makinenize yükleyin.
+   - Makinenizdeki bir klasörden sembol dosyalarını bulmak ve yüklemek için menüden **sembolleri yükle** ' yi seçin.
 
-   - Seçin **sembol yükleme bilgisi** hata ayıklayıcı semboller için Aranan konumları göstermek için.
+   - Hata ayıklayıcının semboller için aradığı konumları göstermek için **sembol yükleme bilgileri** ' ni seçin.
 
-   - Seçin **sembol ayarları** açmak için **sembolleri** sayfası. Üzerinde **sembolleri** sayfasındaki **sembol dosyası (.pdb) konumlar**seçin **Microsoft sembol sunucuları** genel Microsoft sembol sunucularından sembolleri erişim için. Diğer simge konumları eklemek ve yüklenme sırasını değiştirmek için araç çubuğu düğmeleri seçin. Seçin **Tamam** iletişim kutusunu kapatmak için.
+   - **Semboller** sayfasını açmak Için **sembol ayarları** ' nı seçin. **Simgeler** sayfasında, **sembol dosyası (. pdb) konumları**altında, genel Microsoft sembol sunucularından simgelere erişmek için **Microsoft sembol sunucuları** ' nı seçin. Diğer sembol konumlarını eklemek ve yükleme sırasını değiştirmek için araç çubuğu düğmelerini seçin. İletişim kutusunu kapatmak için **Tamam ' ı** seçin.
 
 ### <a name="see-also"></a>Ayrıca bkz.
 - [Yönetilen kodda hata ayıklama](../debugger/debugging-managed-code.md)
-- [Sembol (.pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+- [Sembol (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

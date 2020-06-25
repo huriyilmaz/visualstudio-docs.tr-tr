@@ -1,7 +1,7 @@
 ---
-title: Hata ayıklama yaparken .NET kodunu decompile | Microsoft Dokümanlar
+title: Hata ayıklarken .NET kodunu derlemeyi kaldırma | Microsoft Docs
 ms.date: 2/2/2020
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 helpviewer_keywords:
@@ -13,103 +13,103 @@ manager: jillfra
 ms.workload:
 - multiple
 monikerRange: '>= vs-2019'
-ms.openlocfilehash: d63c05120842d52dd54359e128d0cc5f2a195817
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b7d9ed2f2ceeae21b85fdb8227e65715cb07bc8b
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79508751"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350569"
 ---
 # <a name="generate-source-code-from-net-assemblies-while-debugging"></a>Hata ayıklama sırasında .NET derlemelerinden kaynak kodu oluşturma
 
-Bir .NET uygulamasını hata ayıklarken, sahip olmadığınız kaynak kodunu görüntülemek istediğinizi görebilirsiniz. Örneğin, bir özel durum kırma veya kaynak bir konuma gitmek için arama yığını nı kullanma.
+Bir .NET uygulamasında hata ayıklarken, sahip olmadığınız kaynak kodu görüntülemek istediğinizi fark edebilirsiniz. Örneğin, bir özel duruma bölme veya bir kaynak konuma gitmek için çağrı yığınını kullanma.
 
 > [!NOTE]
-> * Kaynak kodu oluşturma (decompilation) sadece .NET uygulamaları için kullanılabilir ve açık kaynak [ILSpy](https://github.com/icsharpcode/ILSpy) projeye dayanmaktadır.
-> * Decompilation sadece Visual Studio 2019 16.5 ve sonraki yıllarda mevcuttur.
-> * [SuppressIldasmAttribute'in](https://docs.microsoft.com/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) bir derlemeye veya modüle uygulanması Visual Studio'nun derleme girişiminde bulunmasını engeller.
+> * Kaynak kodu oluşturma (ayrıştırılmış) yalnızca .NET uygulamalarında kullanılabilir ve açık kaynaklı [ılspy](https://github.com/icsharpcode/ILSpy) projesini temel alır.
+> * Decompilation yalnızca Visual Studio 2019 16,5 ve üzeri sürümlerde kullanılabilir.
+> * Bir derlemeye veya modüle [Suppressildasmattribute](https://docs.microsoft.com/dotnet/api/system.runtime.compilerservices.suppressildasmattribute) özniteliğini uygulamak, Visual Studio 'nun derlemeyi kaldırma girişiminde bulunmasını engeller.
 
-## <a name="generate-source-code"></a>Kaynak kodu oluşturma
+## <a name="generate-source-code"></a>Kaynak kodu oluştur
 
-Hata ayıklama yaparken ve kaynak kodu yoksa, Visual Studio **Kaynak Bulunamadı** belgesini veya derleme için semboller yoksa, Sembol **Yüklemeyok** belgeyi gösterir. Her iki belgede de geçerli konum için C# kodu oluşturan bir **Decompile kaynak kodu** seçeneği vardır. Oluşturulan C# kodu diğer kaynak kodları gibi kullanılabilir. Kodu görüntüleyebilir, değişkenleri inceleyebilir, kesme noktaları ayarlayabilirsiniz.
+Hata ayıklarken ve kaynak kodu kullanılabilir olmadığında, Visual Studio **kaynak bulunamadı** belgesini gösterir veya derleme için semboller yoksa, **hiçbir sembol yüklenmedi** . Her iki belgede de geçerli konum için C# kodu üreten bir **derleme kaynak kodu** seçeneği vardır. Oluşturulan C# kodu, diğer tüm kaynak kodlarda olduğu gibi kullanılabilir. Kodu görüntüleyebilir, değişkenleri inceleyebilir, kesme noktalarını ayarlayabilir ve benzerlerini yapabilirsiniz.
 
 ### <a name="no-symbols-loaded"></a>Yüklü sembol yok
 
-Aşağıdaki resimde **Sembol Yüklemeyok iletisi** gösterilmektedir.
+Aşağıdaki çizimde **hiçbir simge yüklenmedi** iletisi gösterilmektedir.
 
-![Sembol yüklü belgenin ekran görüntüsü](media/decompilation-no-symbol-found.png)
+![Simge yüklü belge olmayan ekran görüntüsü](media/decompilation-no-symbol-found.png)
 
 ### <a name="source-not-found"></a>Kaynak bulunamadı
 
-Aşağıdaki resimde **Kaynak Bulunamadı** iletisi gösterilmektedir.
+Aşağıdaki çizimde **kaynak bulunamadı** iletisi gösterilmektedir.
 
-![Kaynak belgesi bulunamadı belgenin ekran görüntüsü](media/decompilation-no-source-found.png)
+![Kaynak bulunamadı belgesinin ekran görüntüsü](media/decompilation-no-source-found.png)
 
-## <a name="generate-and-embed-sources-for-an-assembly"></a>Derleme için kaynak oluşturma ve gömme
+## <a name="generate-and-embed-sources-for-an-assembly"></a>Derleme için kaynakları oluşturma ve katıştırma
 
-Belirli bir konum için kaynak kodu oluşturmaya ek olarak, belirli bir .NET derlemesi için tüm kaynak kodu oluşturabilirsiniz. Bunu yapmak **için, Modüller** penceresine ve .NET derlemesinin bağlam menüsünden gidin ve ardından **Decompile kaynak kodu** komutunu seçin. Visual Studio derleme için bir sembol dosyası oluşturur ve sonra kaynağı sembol dosyasına yerzetir. Daha sonraki bir adımda, katıştirilen kaynak kodunu [ayıklayabilirsiniz.](#extract-and-view-the-embedded-source-code)
+Belirli bir konum için kaynak kodu oluşturmaya ek olarak, belirli bir .NET derlemesi için tüm kaynak kodu oluşturabilirsiniz. Bunu yapmak için **modüller** penceresine ve bir .NET derlemesinin bağlam menüsünden gidin ve ardından **kaynak kodu derlemeyi kaldırma** komutunu seçin. Visual Studio, derleme için bir sembol dosyası oluşturur ve sonra kaynağı sembol dosyasına katıştırır. Sonraki bir adımda, gömülü kaynak kodu [ayıklayabilirsiniz](#extract-and-view-the-embedded-source-code) .
 
-![Decompile kaynak komutu ile modüller penceresinde derleme bağlam menüsünün ekran görüntüsü.](media/decompilation-decompile-source-code.png)
+![Kaynak derlemeyi kaldırma komutuyla modüller penceresinde derleme bağlam menüsünün ekran görüntüsü.](media/decompilation-decompile-source-code.png)
 
-## <a name="extract-and-view-the-embedded-source-code"></a>Gömülü kaynak kodunu ayıklayın ve görüntüleyin
+## <a name="extract-and-view-the-embedded-source-code"></a>Gömülü kaynak kodu ayıklama ve görüntüleme
 
-**Modüller** penceresinin bağlam menüsündeki **Kaynak Kodu** Komutunu kullanarak bir sembol dosyasına katışdırılmış kaynak dosyaları ayıklayabilirsiniz.
+**Modüller** penceresinin bağlam menüsündeki **kaynak kodu Ayıkla** komutunu kullanarak bir sembol dosyasına katıştırılmış kaynak dosyalarını ayıklayabilirsiniz.
 
-![Ayıklama kaynakları komutu ile modüller penceresinde derleme bağlam menüsünün ekran görüntüsü.](media/decompilation-extract-source-code.png)
+![Kaynakları Ayıkla komutuyla modüller penceresinde derleme bağlam menüsünün ekran görüntüsü.](media/decompilation-extract-source-code.png)
 
-Çıkarılan kaynak dosyaları çeşitli [dosyalar](../ide/reference/miscellaneous-files.md)olarak çözüme eklenir. Çeşitli dosyalar özelliği Visual Studio'da varsayılan olarak kapalıdır. Bu **özelliği, Çözüm** > Gezgini onay kutusundaki Çeşitli dosyaları Gösteren Araçlar**Seçenekleri** > **Ortamı** > **Belgeleri'nden** > **Show Miscellaneous files in Solution Explorer** etkinleştirebilirsiniz. Bu özelliği etkinleştirmeden, ayıklanan kaynak kodunu açamazsınız.
+Ayıklanan kaynak dosyalar çözüme [çeşitli dosyalar](../ide/reference/miscellaneous-files.md)olarak eklenir. Çeşitli Dosyalar özelliği, Visual Studio 'da varsayılan olarak kapalıdır. Bu özelliği **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **belgeleri**  >  **Çözüm Gezgini onay kutusundaki çeşitli dosyaları göster ' de** etkinleştirebilirsiniz. Bu özelliği etkinleştirmeksizin ayıklanan kaynak kodunu açamazsınız.
 
-![Çeşitli dosyalar seçeneği etkin araçlar seçeneği sayfasının ekran görüntüsü.](media/decompilation-tools-options-misc-files.png)
+![Çeşitli dosyalar seçeneğinin etkinleştirildiği araçlar seçenek sayfasının ekran görüntüsü.](media/decompilation-tools-options-misc-files.png)
 
-Çıkarılan kaynak dosyaları **Çözüm Gezgini'ndeki**çeşitli dosyalarda görünür.
+Ayıklanan kaynak dosyaları **Çözüm Gezgini**içindeki çeşitli dosyalarda görüntülenir.
 
-![Çeşitli dosyaları ile çözüm explorer ekran görüntüsü.](media/decompilation-solution-explorer.png)
+![Çeşitli dosyalarla Çözüm Gezgini 'nin ekran görüntüsü.](media/decompilation-solution-explorer.png)
 
 ## <a name="known-limitations"></a>Bilinen sınırlamalar
 
-### <a name="requires-break-mode"></a>Kesme modu gerektirir
+### <a name="requires-break-mode"></a>Kesme modunu gerektirir
 
-Decompilation kullanarak kaynak kodu oluşturma yalnızca hata ayıklama kesme modunda olduğunda ve uygulama duraklatılmış olduğunda mümkündür. Örneğin, Visual Studio bir kesme noktasına veya bir özel duruma ulaştığında kesme moduna girer. **Tümlerini Kır (Tüm** simgeyi![](media/decompilation-break-all.png)kır) komutunu kullanarak kodunuzu bir sonraki çalıştığında kırmak için Visual Studio'yu kolayca tetikleyebilirsiniz.
+Ön derleme kullanarak kaynak kodu oluşturmak yalnızca hata ayıklayıcı kesme modundayken ve uygulama duraklatıldığında mümkündür. Örneğin, Visual Studio bir kesme noktasına veya bir özel duruma rastken kesme moduna girer. **Tümünü kes** komutunu ( ![ Tümünü kes simgesi) kullanarak, kodunuzun çalışması için bir dahaki sefer Visual Studio 'yu kolayca tetikleyebilirsiniz ](media/decompilation-break-all.png) .
 
-### <a name="decompilation-limitations"></a>Derleme sınırlamaları
+### <a name="decompilation-limitations"></a>Derlemeyi kaldırma sınırlamaları
 
-.NET derlemelerinde kullanılan ara biçimden (IL) kaynak kodu oluşturmanın bazı içsel sınırlamaları vardır. Bu nedenle, oluşturulan kaynak kodu özgün kaynak kodu gibi görünmüyor. Farklılıkların çoğu, özgün kaynak kodundaki bilgilerin çalışma zamanında gerekli olmadığı yerlerdedir. Örneğin, çalışma zamanında beyaz alan, açıklamalar ve yerel değişkenlerin adları gibi bilgilere gerek yoktur. Özgün kaynak kodunun yerine değil, programın nasıl yürütüldettiğini anlamak için oluşturulan kaynağı kullanmanızı öneririz.
+.NET derlemelerinde kullanılan ara biçimden (IL) kaynak kodu oluşturma bazı ilgili sınırlamalara sahiptir. Bu nedenle, oluşturulan kaynak kodu özgün kaynak kodu gibi görünmüyor. Birçok fark, çalışma zamanında orijinal kaynak kodundaki bilgilerin gerekli olmadığı yerlerde yer vardır. Örneğin, boşluk, açıklamalar ve yerel değişkenlerin adları gibi bilgiler çalışma zamanında gerekli değildir. Programın, orijinal kaynak kodu yerine nasıl çalıştığını ve nasıl çalıştığını anlamak için oluşturulan kaynağı kullanmanızı öneririz.
 
-### <a name="debug-optimized-or-release-assemblies"></a>Hata ayıklama optimize veya sürüm derlemeleri
+### <a name="debug-optimized-or-release-assemblies"></a>İyileştirilmiş veya yayın derlemelerinde hata ayıkla
 
-Derleyici optimizasyonları kullanılarak derlenen bir derlemeden derlenen kodu ayıklarken aşağıdaki sorunlarla karşılaşabilirsiniz:
-- Kesme noktaları her zaman eşleşen kaynak konumuna bağlanmayabilir.
-- Stepping her zaman doğru konuma adım olmayabilir.
-- Yerel değişkenlerin doğru adları olmayabilir.
-- Bazı değişkenler değerlendirme için kullanılamayabilir.
+Derleyici iyileştirmeleri kullanılarak derlenen bir derlemeden derlenen kodda hata ayıklarken, aşağıdaki sorunlar boyunca karşılaşabilirsiniz:
+- Kesme noktaları her zaman eşleşen kaynak konumunu bağlamayabilir.
+- Adımlamayı her zaman doğru konuma ilerlemeyebilir.
+- Yerel değişkenler doğru adlara sahip olamaz.
+- Bazı değişkenler, değerlendirme için kullanılamayabilir.
 
-Daha fazla bilgi GitHub sayısında bulunabilir: [VS Debugger icSharpCode.Decompiler entegrasyonu](https://github.com/icsharpcode/ILSpy/issues/1901).
+GitHub sorunu: [ınetcode. Decompiler Ile vs hata ayıklayıcısına tümleştirme](https://github.com/icsharpcode/ILSpy/issues/1901)hakkında daha fazla ayrıntı bulabilirsiniz.
 
-### <a name="decompilation-reliability"></a>Decompilation güvenilirlik
+### <a name="decompilation-reliability"></a>Derlemeyi kaldırma güvenilirliği
 
-Decompilation girişimleri nispeten küçük bir yüzdesi başarısızlığa neden olabilir. Bu ILSpy bir sıra noktası null-referans hatası kaynaklanmaktadır.  Bu sorunları yakalayarak ve derleme girişimini incelikle başarısız lığa uğratarak başarısızlığı hafifletmiş olduk.
+Bir dizi derleme girişiminin görece küçük bir yüzdesi hata oluşmasına neden olabilir. Bunun nedeni ılspy 'da dizi noktası null başvuru hatasıdır.  Bu sorunları ayırarak ve derleme girişimini sorunsuz bir şekilde başarısız hale getirerek hatayı hafifledik.
 
-Daha fazla bilgi GitHub sayısında bulunabilir: [VS Debugger icSharpCode.Decompiler entegrasyonu](https://github.com/icsharpcode/ILSpy/issues/1901).
+GitHub sorunu: [ınetcode. Decompiler Ile vs hata ayıklayıcısına tümleştirme](https://github.com/icsharpcode/ILSpy/issues/1901)hakkında daha fazla ayrıntı bulabilirsiniz.
 
-### <a name="limitations-with-async-code"></a>Async kodu ile sınırlamalar
+### <a name="limitations-with-async-code"></a>Zaman uyumsuz kodlu sınırlamalar
 
-Async/await kod desenli modüllerin derlenmesinin sonuçları eksik veya tamamen başarısız olabilir. Async / await ve verim devlet makineleri ILSpy uygulaması sadece kısmen uygulanır. 
+Zaman uyumsuz/await kod desenleriyle derlemeyi kaldırma modüllerinden sonuçlar tamamlanmamış veya tamamen başarısız olabilir. Zaman uyumsuz/await ve yield durumu-makinelerin ılspy uygulamasının yalnızca kısmen uygulanmış olması. 
 
-Daha fazla bilgi GitHub sayısında bulunabilir: [PDB Jeneratör Durumu](https://github.com/icsharpcode/ILSpy/issues/1422).
+GitHub sorunu: [pdb Oluşturucu durumu](https://github.com/icsharpcode/ILSpy/issues/1422)' nda daha fazla ayrıntı bulunabilir.
 
 ### <a name="just-my-code"></a>Yalnızca Kendi Kodum
 
-[Just My Code (JMC)](https://docs.microsoft.com/visualstudio/debugger/just-my-code) ayarları Visual Studio'nun sistem, çerçeve, kitaplık ve diğer kullanıcı dışı çağrıları aşmasını sağlar. Hata ayıklama oturumu **sırasında, Modüller** penceresi hata ayıklayıcının Kodum (kullanıcı kodu) olarak hangi kod modüllerini davrandığını gösterir.
+[Yalnızca kendi kodum (JMC)](https://docs.microsoft.com/visualstudio/debugger/just-my-code) ayarları, Visual Studio 'nun sistem, çerçeve, kitaplık ve diğer kullanıcı olmayan çağrılar üzerinde ilermasına olanak tanır. Bir hata ayıklama oturumu sırasında **modüller** penceresi, hata ayıklayıcının kodum (Kullanıcı kodu) olarak hangi kod modüllerine davranılması gerektiğini gösterir.
 
-Optimize edilmiş veya serbest bırakma modüllerinin decompilation kullanıcı kodu üretir. Hata ayıklayıcı, derlenmiş kullanıcı olmayan kodunuzda kırılırsa( örneğin Kaynak **Yok** penceresi görüntülenir. Yalnızca Kodumu devre dışı kalmak için,**Genel**Hata **Ayıklama** > > **Araçlar** > **Seçenekleri'ne** (veya **Hata Ayıklama** > **Seçenekleri)'ne**gidin ve ardından Yalnızca **Kodumu Etkinleştir'i**seçin.
+En iyileştirilmiş veya yayın modüllerinin derlenmesi Kullanıcı olmayan kod üretir. Hata ayıklayıcı, derlenmiş Kullanıcı olmayan kodunuzda kaparsa **kaynak** penceresi görünmez. Yalnızca kendi kodum devre dışı bırakmak için, **Tools**  >  Genel hata ayıklama > Araçlar**Seçenekler** (veya **hata ayıklama**  >  **seçenekleri**) bölümüne gidin **Debugging**  >  **General**ve **yalnızca kendi kodum etkinleştir**seçimini kaldırın.
 
-### <a name="extracted-sources"></a>Çıkarılan kaynaklar
+### <a name="extracted-sources"></a>Ayıklanan kaynaklar
 
-Bir derlemeden çıkarılan kaynak kodu aşağıdaki sınırlamaları vardır:
-- Oluşturulan dosyaların adı ve konumu yapılandırılamaz.
+Derlemeden ayıklanan kaynak kodu aşağıdaki sınırlamalara sahiptir:
+- Oluşturulan dosyaların adı ve konumu yapılandırılabilir değildir.
 - Dosyalar geçicidir ve Visual Studio tarafından silinir.
-- Dosyalar tek bir klasöre yerleştirilir ve özgün kaynakların sahip olduğu klasör hiyerarşisi kullanılmaz.
-- Her dosyanın dosya adı, dosyanın bir denetim karma sını içerir.
+- Dosyalar tek bir klasöre ve özgün kaynakların kullanılmayan tüm klasör hiyerarşisine yerleştirilir.
+- Her bir dosyanın dosya adı, dosyanın sağlama toplamı karmasını içerir.
 
 ### <a name="generated-code-is-c-only"></a>Oluşturulan kod yalnızca C#
-Decompilation yalnızca C#'da kaynak kodu dosyaları oluşturur. Başka bir dilde dosya oluşturmak için bir seçenek yoktur.
+Decompilation yalnızca C# dilinde kaynak kodu dosyaları oluşturur. Başka herhangi bir dilde dosya oluşturma seçeneği yoktur.

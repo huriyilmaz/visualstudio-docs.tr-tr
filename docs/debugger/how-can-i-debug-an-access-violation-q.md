@@ -1,8 +1,8 @@
 ---
-title: C++ Erişim ihlalinde hata ayıklama | Microsoft Docs
+title: C++ erişim ihlalinde hata ayıklama | Microsoft Docs
 ms.custom: seodec18
 ms.date: 02/05/2019
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.access
 dev_langs:
@@ -19,16 +19,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0235cc00a740069a77afd492cd585788ea666d2
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 803f81d1a26438c2134349a85369d341353e17cf
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911470"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350426"
 ---
-# <a name="how-can-i-debug-a-c-access-violation"></a>C++ Erişim ihlalinde nasıl hata ayıklayabilirim?
+# <a name="how-can-i-debug-a-c-access-violation"></a>C++ erişim Ihlalinde nasıl hata ayıklayabilirim?
 
-## <a name="problem-description"></a>Sorun açıklaması
+## <a name="problem-description"></a>Sorun Açıklaması
 
 Programımı bir erişim ihlali oluşturuyor. Bu, nasıl hata ayıklayabilirim?
 
@@ -80,4 +80,4 @@ Bu kodu Visual Studio 2015 güncelleştirme 1 ' de çalıştırırsanız, aşağ
 İşaretçinin erişim ihlaline neden neden olduğunu belirleyemediğiniz takdirde, soruna neden olan işaretçinin doğru şekilde atandığından emin olmak için kodu izleyin.  Parametre olarak geçirildiyse, doğru şekilde geçirildiğinden ve yanlışlıkla [basit bir kopya](https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy)oluşturmadığınızdan emin olun. Daha sonra, söz konusu işaretçinin programın başka bir yerinde değiştirilmediğinden emin olmak için söz konusu işaretçi için bir veri kesme noktası oluşturarak, bu değerlerin programda bir yerde yanlışlıkla değiştirilmediğini doğrulayın. Veri kesme noktaları hakkında daha fazla bilgi için [kesme noktaları kullanma](../debugger/using-breakpoints.md)içindeki veri kesme noktası bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel Kodda Hata Ayıklama SSS](../debugger/debugging-native-code-faqs.md)
+- [Yerel Kod Hata Ayıklaması SSS](../debugger/debugging-native-code-faqs.md)

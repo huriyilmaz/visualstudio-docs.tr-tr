@@ -2,7 +2,7 @@
 title: Hata ayıklama için bir .NET Framework sürümü belirtin | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -17,14 +17,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f6107d6396c6228be1d511e81003fbe7faf06c9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3ae48670fceb78ff85f395852f0a31414f37e8cf
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732633"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349074"
 ---
-# <a name="specify-an-older-net-framework-version-for-debugging-c-visual-basic-f"></a>Hata ayıklama için eski bir .NET Framework sürümü belirtinC#(, Visual Basic F#,)
+# <a name="specify-an-older-net-framework-version-for-debugging-c-visual-basic-f"></a>Hata ayıklama için eski bir .NET Framework sürümü belirtin (C#, Visual Basic, F #)
 
 Visual Studio hata ayıklayıcı, Microsoft .NET Framework 'ün eski sürümlerinin yanı sıra geçerli sürümü de hata ayıklamayı destekler. Visual Studio 'dan bir uygulama başlatırsanız hata ayıklayıcı, hata ayıklaması yaptığınız uygulamanın doğru .NET Framework sürümünü her zaman tanımlayabilir. Ancak, uygulama zaten çalışıyorsa ve **iliştirme 'yi**kullanarak hata ayıklamayı başlatırsanız, hata ayıklayıcı .NET Framework eski bir sürümünü her zaman tanımlayamayabilir. Bu durumda, şöyle bir hata iletisi alırsınız.
 
@@ -44,15 +44,15 @@ Bu hatanın göründüğü nadir durumlarda, bir kayıt defteri anahtarını, ha
 
 2. **Kayıt defteri Düzenleyicisi 'ni** (regedit) başlatın.
 
-3. **Kayıt defteri Düzenleyicisi**'NDE, HKEY_LOCAL_MACHINE klasörünü açın.
+3. **Kayıt defteri düzenleyicisinde**HKEY_LOCAL_MACHINE klasörünü açın.
 
-4. Şuraya gidin: HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine \\ {449EC4CC-30D2-4032-9256-EE18EB41B62B}
+4. Şuraya gidin: HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine \\ {449Ec4cc-30D2-4032-9256-EE18EB41B62B}
 
-    Anahtar yoksa, HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine öğesine sağ tıklayın ve **Yeni anahtar**' a tıklayın. Yeni anahtarı `{449EC4CC-30D2-4032-9256-EE18EB41B62B}` adlandırın.
+    Anahtar yoksa, HKEY_LOCAL_MACHINE \Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine ' e sağ tıklayın ve **Yeni anahtar**' a tıklayın. Yeni anahtarı adlandırın `{449EC4CC-30D2-4032-9256-EE18EB41B62B}` .
 
 5. {449EC4CC-30D2-4032-9256-EE18EB41B62B} sayfasına gittikten sonra **ad** sütununa bakın ve CLRVersionForDebugging anahtarını bulun.
 
-   1. Anahtar yoksa, {449EC4CC-30D2-4032-9256-EE18EB41B62B} öğesine sağ tıklayın ve **Yeni dize değeri**' ne tıklayın. Ardından yeni dize değerine sağ tıklayın, **Yeniden Adlandır**' a tıklayın ve `CLRVersionForDebugging` yazın.
+   1. Anahtar yoksa, {449EC4CC-30D2-4032-9256-EE18EB41B62B} öğesine sağ tıklayın ve **Yeni dize değeri**' ne tıklayın. Ardından yeni dize değerine sağ tıklayın, **Yeniden Adlandır**' a tıklayın ve yazın `CLRVersionForDebugging` .
 
 6. **CLRVersionForDebugging**öğesine çift tıklayın.
 

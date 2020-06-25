@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Kullanım Düzenle ve devam et (C#) | Microsoft Docs'
+title: Düzenle ve devam et 'i kullanma (C#) | Microsoft Docs
 ms.date: 10/04/2018
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -15,37 +15,37 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 515068f29045ef92ee7d2323f752ba2185f28cac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a88cff54679ac0deae32bfeeff1dd96526f19ea7
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62906277"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348866"
 ---
-# <a name="how-to-use-edit-and-continue-c"></a>Nasıl yapılır: Düzenle ve Devam Et’i kullanma (C#)
-Düzenle ve devam et ile değişiklikler yapabilir ve bu, durdurmak ve hata ayıklama oturumunu yeniden başlatmak zorunda kalmadan hata ayıklama sırasında kodunuzda kesme modunda değişiklikleri uygulayın.
+# <a name="how-to-use-edit-and-continue-c"></a>Nasıl Yapılır: Düzenle ve Devam Et'i Kullanma (C#)
+Düzenle ve devam et ile, hata ayıklama sırasında kodunuzda, hata ayıklama oturumunu durdurup yeniden başlatmaya gerek kalmadan, değişiklikleri hata ayıklama sırasında kesme modunda yapabilirsiniz.
 
-Düzenle ve devam et için kesme modunda, kod değişiklik yaptığınızda C# otomatik olarak gerçekleşir ardından kullanarak hata ayıklamaya devam **devam**, **adım**, veya **sonraki deyimi Ayarla**, veya hata ayıklayıcı penceresindeki bir işlevi değerlendirin.
+Kod değişikliklerini kesme modunda yaptığınızda C# için Düzenle ve devam et, sonra **devam**et, **adımla**veya **sonraki ifadeyi ayarla**ya da bir hata ayıklayıcı penceresindeki bir işlevi değerlendir ' i kullanarak hata ayıklamaya devam edin.
 
-Daha fazla bilgi için [Düzenle ve devam et (Visual C#)](../debugger/edit-and-continue-visual-csharp.md).
+Daha fazla bilgi için bkz. [Düzenle ve devam et (Visual C#)](../debugger/edit-and-continue-visual-csharp.md).
 
 >[!NOTE]
->Düzenle ve desteklenmeyen en iyi duruma getirilmiş için karma, devam et veya SQL Server ortak dil çalışma zamanı (CLR) tümleştirme kodunda. Diğer desteklenmeyen senaryolar hakkında daha fazla bilgi için bkz: [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md). Düzenle ve bu senaryoları biri ile devam etmek çalışırsanız, Düzenle ve devam et desteklenmediğini belirten bir ileti kutusu görünür.
+>Düzenle ve devam et, iyileştirilmiş, karışık veya SQL Server ortak dil çalışma zamanı (CLR) tümleştirme kodu için desteklenmez. Desteklenmeyen diğer senaryolar hakkında daha fazla bilgi için bkz. [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md). Bu senaryolarından birini düzenlemeye ve devam etmeye çalışırsanız, Düzenle ve devam et ' in desteklenmediğini belirten bir ileti kutusu görünür.
 
-**Düzenle ve Devam Et'i devre dışı bırakmak veya etkinleştirmek için:**
+**Düzenle ve devam et 'i etkinleştirmek veya devre dışı bırakmak için:**
 
-1. Hata ayıklama oturumunda kullanıyorsanız, hata ayıklamayı Durdur (**hata ayıklama** > **hata ayıklamayı Durdur** veya **Shift**+**F5**) .
+1. Hata ayıklama oturumundaysanız, hata ayıklamayı**durdurun (hata ayıklama**  >  **durdurma** veya **SHIFT** + **F5**).
 
-1. İçinde **Araçları** > **seçenekleri** (veya **hata ayıklama** > **seçenekleri**) > **hataayıklama**  >  **Genel**seçin veya temizleyin **etkinleştirme Düzenle ve devam et** onay kutusu.
+1. **Araç**  >  **seçeneklerinde** (veya **hata ayıklama**  >  **seçeneklerinde**) genel **hata ayıklama**>,  >  **General** **Düzenle ve devam et 'i etkinleştir** onay kutusunu seçin veya temizleyin.
 
-Başlattığınızda veya hata ayıklama oturumunu yeniden ayarı etkinleşir.
+Ayar, hata ayıklama oturumunu başlattığınızda veya yeniden başlattığınızda devreye girer.
 
-**Düzenle ve devam et kullanmak için:**
+**Düzenle ve devam et 'i kullanmak için:**
 
-1. , Kesme modunda hata ayıklarken sizin kaynak kodunuza bir değişiklik yapın.
+1. Hata ayıklama sırasında kesme modunda, kaynak kodunuzda bir değişiklik yapın.
 
-1. Gelen **hata ayıklama** menüsünde tıklatın **devam**, **adım**, veya **sonraki deyimi Ayarla**, veya hata ayıklayıcı penceresindeki bir işlevi değerlendirin.
+1. **Hata ayıklama** menüsünde **devam et**, **adımla**veya **sonraki ifadeyi ayarla**' ya tıklayın veya bir hata ayıklayıcı penceresindeki bir işlevi değerlendirin.
 
-   Hata ayıklama, yeni, derlenmiş kod iler devam eder.
+   Hata ayıklama yeni, derlenmiş kodla devam eder.
 
-Kod değişikliklerini bazı türleri, Düzenle ve devam et tarafından desteklenmez. Daha fazla bilgi için [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
+Bazı kod değişikliği türleri Düzenle ve devam et tarafından desteklenmez. Daha fazla bilgi için bkz. [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md).

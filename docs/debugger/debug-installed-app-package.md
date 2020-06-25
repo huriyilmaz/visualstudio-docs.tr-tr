@@ -2,7 +2,7 @@
 title: Yüklü UWP uygulama paketinde hata ayıklama | Microsoft Docs
 ms.custom: ''
 ms.date: 11/07/2018
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.installedapppackagelauncher
 - vs.debug.remote.connection
@@ -20,12 +20,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: d5c2e94e9fa80145489bddfb005b7136bdff8a71
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: eabc694665bede7d193a360a01c42366568e33c5
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211297"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350738"
 ---
 # <a name="debug-an-installed-uwp-app-package-in-visual-studio"></a>Visual Studio 'da yüklü UWP uygulama paketinde hata ayıklama
 
@@ -38,7 +38,7 @@ UWP uygulamalarında hata ayıklama hakkında daha fazla bilgi için bkz. [yükl
 
 ## <a name="debug-an-installed-uwp-app-on-a-local-machine"></a>Yerel makinede yüklü bir UWP uygulamasında hata ayıklama
 
-1. Visual Studio 'da **hata** > Ayıkla**diğer hata ayıklama hedefleri** > **yüklü uygulama paketinde**Hata Ayıkla ' yı seçin.
+1. Visual Studio 'da hata ayıkla **Debug**  >  **diğer hata ayıklama hedefleri**  >  **yüklü uygulama paketinde**Hata Ayıkla ' yı seçin.
 
 1. **Yüklü uygulama paketi hatalarını ayıkla** iletişim kutusunda, **bağlantı türü**altında **yerel makine**' yi seçin.
 
@@ -52,9 +52,9 @@ UWP uygulamalarında hata ayıklama hakkında daha fazla bilgi için bkz. [yükl
 1. **Başlat**' ı seçin veya uygulama çalışıyorsa, **Ekle**' yi seçin.
 
 > [!NOTE]
-> Ayrıca, Visual Studio 'da **hata ayıklama** > **Ekle** ' ye tıklayarak çalışan UWP veya diğer uygulama işlemlerini de iliştirebilirsiniz. Çalışan bir işleme eklemek için özgün Visual Studio projesine ihtiyacınız yoktur, ancak uygulamanın simgelerini yüklemek, için özgün koda sahip olmadığınız bir işlemde hata ayıklamanın önemli ölçüde sağlanmasına yardımcı olur. Bkz. [hata ayıklayıcıda sembol ve kaynak dosyaları belirtme](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+> Ayrıca, Visual Studio 'da **hata ayıklama**  >  **Ekle** ' ye tıklayarak çalışan UWP veya diğer uygulama işlemlerini de iliştirebilirsiniz. Çalışan bir işleme eklemek için özgün Visual Studio projesine ihtiyacınız yoktur, ancak uygulamanın simgelerini yüklemek, için özgün koda sahip olmadığınız bir işlemde hata ayıklamanın önemli ölçüde sağlanmasına yardımcı olur. Bkz. [hata ayıklayıcıda sembol ve kaynak dosyaları belirtme](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
-## <a name="remote"></a>Uzak bilgisayarda veya cihazda yüklü bir UWP uygulamasında hata ayıklama
+## <a name="debug-an-installed-uwp-app-on-a-remote-computer-or-device"></a><a name="remote"></a>Uzak bilgisayarda veya cihazda yüklü bir UWP uygulamasında hata ayıklama
 
 Visual Studio 'da bir Windows 10 cihazında veya uzak bir oluşturucunun güncelleştirme Windows 10 bilgisayarında yüklü bir UWP uygulamasını ilk kez yüklerken, uzaktan hata ayıklama araçları 'nı hedef cihaza yüklenir.
 
@@ -62,7 +62,7 @@ Visual Studio 'da bir Windows 10 cihazında veya uzak bir oluşturucunun güncel
 
 1. Windows 10 ' un ön oluşturanın güncelleştirme çalıştıran bir uzak bilgisayara bağlanıyorsanız uzak bilgisayara [Uzaktan hata ayıklayıcıyı el ile yükleyip başlatın](../debugger/remote-debugging.md) .
 
-1. Visual Studio bilgisayarında, **hata** > Ayıkla**diğer hata ayıklama hedefleri** > **yüklü uygulama paketi**hatalarını ayıkla ' yı seçin.
+1. Visual Studio bilgisayarında, **hata**Ayıkla  >  **diğer hata ayıklama hedefleri**  >  **yüklü uygulama paketi**hatalarını ayıkla ' yı seçin.
 
 1. **Yüklü uygulama paketi hatalarını ayıkla** iletişim kutusunda, **bağlantı türü**altında **uzak makine** veya **cihaz**' ı seçin.
 
@@ -78,7 +78,7 @@ Visual Studio 'da bir Windows 10 cihazında veya uzak bir oluşturucunun güncel
    1. **Kimlik doğrulama modu**' nun yanındaki bir kimlik doğrulama seçeneğini belirleyin.
 
       Çoğu uygulama için varsayılan değeri **Evrensel (şifrelenmemiş protokol)** tutun.
-   1. Seçin **seçin**.
+   1. **Seç**’i seçin.
 
 1. **Yüklü uygulama paketleri**altında, hata ayıklamak istediğiniz uygulamayı seçin veya arama kutusuna adını yazın. Çalışır olmayan yüklü uygulama paketleri **çalışmıyor** **ve çalışan uygulamalar çalışıyor.**
 
@@ -96,9 +96,9 @@ UWP uygulamalarının uzaktan dağıtımı hakkında daha fazla bilgi için bkz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio’da hata ayıklama](../debugger/index.yml)
+- [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
 - [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
-- [Windows Güvenlik Duvarı’nı uzaktan hata ayıklama için yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
+- [Uzaktan hata ayıklama için Windows güvenlik duvarını yapılandırma](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Uzaktan hata ayıklayıcı bağlantı noktası atamaları](../debugger/remote-debugger-port-assignments.md)
 - [Uzaktan hata ayıklama hataları ve sorun giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Bulucu aracını kullanma | Microsoft Docs'
+title: Nasıl yapılır-Bulucu aracını kullanma | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Window Finder Tool
 ms.assetid: 5841926b-08c3-4e43-88bd-4223d04f9aef
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f96fe87137c6b14e32fb2648e93c54a1c5b094a0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7833502c1f36adb654ecc4cc4d3b4dfb742a85b8
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732171"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348736"
 ---
 # <a name="how-to-use-the-finder-tool"></a>Nasıl yapılır: Bulucu Aracı Kullanma
 Pencere özelliklerini veya iletilerini göstermek için **pencereyi bul** Iletişim kutusunda Bulucu aracını kullanabilirsiniz. Finder aracı devre dışı bırakılan alt pencereleri de bulabilir ve devre dışı bırakılan alt pencereler çakıştığında, hangi pencerenin vurgulanmasını ayırt edebilir.
 
- ![&#43; Spy&#43; pencereyi bul iletişim kutusu](../debugger/media/icon_spy--_find.png "Icon_Spy + + _Bul") Pencereyi bul iletişim kutusunda Bulucu aracı
+ ![Spy&#43;&#43; pencere bul Iletişim kutusu](../debugger/media/icon_spy--_find.png "Icon_Spy + + _Find") Pencereyi bul iletişim kutusunda Bulucu aracı
 
  Yukarıdaki şekilde, aşağıdaki adım 3 ' ten sonra pencere bul iletişim kutusu gösterilmektedir.
 
@@ -51,5 +51,5 @@ Pencere özelliklerini veya iletilerini göstermek için **pencereyi bul** Ileti
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Spy++ Görünümleri](../debugger/spy-increment-views.md)
-- [Spy++ kullanma](../debugger/using-spy-increment.md)
+- [Spy++ Kullanma](../debugger/using-spy-increment.md)
 - [Spy++ Başvurusu](../debugger/spy-increment-reference.md)

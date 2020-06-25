@@ -2,7 +2,7 @@
 title: Yanlış parametre değerini geçen kişileri öğrenin | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.parameters
 dev_langs:
@@ -22,15 +22,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 42884cd6498f00cfe2df2d0396ff9ea6b03c2f98
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d00327315b98c4b55797187c59db3a81ee351fb0
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72734234"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350348"
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>Kimin Yanlış Parametre Değeri Geçirdiğini Nasıl Bulabilirim?
-## <a name="problem-description"></a>Sorun açıklaması
+## <a name="problem-description"></a>Sorun Açıklaması
  Yanlış parametre değeri, işlevlerimin birine geçiriliyor. Bu işlev, tüm konumdan çağrılır. Yanlış değere ne geçirdiklerinizi nasıl öğrenebilirim?
 
 ## <a name="solution"></a>Çözüm
@@ -43,15 +43,15 @@ ms.locfileid: "72734234"
 
 3. **Kesme noktası koşulu** iletişim kutusunda, **koşul** onay kutusuna tıklayın. [Gelişmiş kesme noktaları](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)konusuna bakın.
 
-4. Metin kutusuna `Var==3` gibi bir ifade girin; burada `Var`, hatalı değeri içeren parametrenin adıdır ve `3` hatalı değer geçirilir.
+4. Metin kutusuna, gibi bir ifade girin, `Var==3` burada `Var` Hatalı değeri içeren parametrenin adıdır ve `3` kendisine geçirilen hatalı değerdir.
 
 5. **True ise** radyo düğmesini seçin ve **Tamam** düğmesine tıklayın.
 
-6. Şimdi programı yeniden çalıştırın. Kesme noktası, `Var` parametresi `3` değer olduğunda, programın işlevin başlangıcında durmasına neden olur.
+6. Şimdi programı yeniden çalıştırın. Kesme noktası, parametrenin değeri olduğunda işlevin başlangıcında durmasına neden olur `Var` `3` .
 
 7. Çağırma işlevini bulmak ve kaynak koduna gitmek için çağrı yığını penceresini kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: çağrı yığını penceresini kullanma](../debugger/how-to-use-the-call-stack-window.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yerel Kodda Hata Ayıklama SSS](../debugger/debugging-native-code-faqs.md)
+- [Yerel Kod Hata Ayıklaması SSS](../debugger/debugging-native-code-faqs.md)
 - [Kesme Noktaları](https://msdn.microsoft.com/library/fe4eedc1-71aa-4928-962f-0912c334d583)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

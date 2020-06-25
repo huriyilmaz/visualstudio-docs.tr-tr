@@ -1,7 +1,7 @@
 ---
 title: Paralel Iş parçacıklarında değişkenler için bir Izleme ayarlama | Microsoft Docs
 ms.date: 04/25/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.debug.parallelwatch
 dev_langs:
@@ -17,14 +17,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0628e75c54cf0da10dc5aecdf243ae1dda3485fb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9fb0d5ac60ea5ab89b02a624488b5df4f8a7164b
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72732010"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85348632"
 ---
-# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Visual Studio 'da paralel Iş parçacıklarında değişkenler için bir Izleme ayarlamaC#(, Visual Basic C++,)
+# <a name="set-a-watch-on-variables-in-parallel-threads-in-visual-studio-c-visual-basic-c"></a>Visual Studio 'da paralel Iş parçacıklarında değişkenler için bir Izleme ayarlama (C#, Visual Basic, C++)
 Paralel izleme penceresi, bir ifadenin birden çok iş parçacığında tuttuğu değerleri aynı anda görüntüleyebilirsiniz. Her satır bir uygulamada çalışan bir iş parçacığını temsil eder, ancak bir iş parçacığı birden çok satırda gösterilebilir. Daha belirgin olarak, her satır, işlev imzası geçerli yığın çerçevesindeki işlevle eşleşen bir işlev çağrısını temsil eder. Sütunlardaki öğeleri sıralayabilir, yeniden sıralayabilir, kaldırabilir ve gruplandırabilirsiniz. İş parçacıklarını bayrak, unbayrak, dondurma (askıya al) ve çözme (devam etme). **Paralel izleme** penceresinde aşağıdaki sütunlar görüntülenir:
 
 - Özel dikkat etmek istediğiniz bir iş parçacığını işaretleyecek bayrak sütunu.
@@ -85,6 +85,6 @@ Paralel izleme penceresi, bir ifadenin birden çok iş parçacığında tuttuğu
 - **Boole ifadesine göre filtrele** kutusuna bir Boole ifadesi girin. Hata ayıklayıcı, her bir iş parçacığı bağlamı için ifadeyi değerlendirir. Yalnızca değerin `true` görüntülendiği satırlar görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çok İş Parçacıklı Uygulamaların Hatalarını Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
-- [Nasıl Yapılır: GPU İş Parçacıkları Penceresini Kullanma](../debugger/how-to-use-the-gpu-threads-window.md)
-- [İzlenecek yol: C++ AMP Uygulamasında Hata Ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)
+- [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)
+- [Nasıl yapılır: GPU Iş parçacıkları penceresini kullanma](../debugger/how-to-use-the-gpu-threads-window.md)
+- [İzlenecek yol: C++ AMP uygulamasında hata ayıklama](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)

@@ -1,7 +1,7 @@
 ---
 title: Özel durum İnceleme-Visual Studio | Microsoft Docs
 ms.date: 1/18/2020
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dae1609486ec4f3462be89b0526467dd7414647
-ms.sourcegitcommit: 8cbced0fb46959a3a2494852df1e41db1177a26c
+ms.openlocfilehash: 75d044ed5ddaf4b7eb7a66bc09c8b3de3502a50f
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76829791"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350504"
 ---
 # <a name="inspect-an-exception-using-the-exception-helper"></a>Özel durum yardımcısını kullanarak özel bir durum inceleyin 
 
@@ -38,7 +38,7 @@ Hata ayıklayıcı bir özel durumu kaparsa, bu kod satırının sağında bir �
 Özel durum Yardımcısı 'nda özel durum türünü ve özel durum iletisini anında okuyabilir ve özel durumun oluşturulup oluşturulmayacağını veya işlenmemiş olduğunu görebilirsiniz. **Ayrıntıları görüntüle** bağlantısına tıklayarak özel durum nesnesinin özelliklerini inceleyebilir ve görüntüleyebilirsiniz.
 
 ## <a name="analyze-null-references"></a>Null başvurularını çözümle
-Visual Studio 2017 ' den başlayarak hem .net hem de C/C++ Code için bir `NullReferenceException` veya `AccessViolation`Vurdığınızda, özel durum Yardımcısı 'nda null çözümleme bilgileri görürsünüz. Analiz, özel durum iletisinin altında metin olarak görüntülenir. Aşağıdaki çizimde, bilgiler "**s** null." olarak gösterilir.
+Visual Studio 2017 ' den başlayarak, hem .net hem de C/C++ kodu için, bir `NullReferenceException` veya bir veya bir yazdığınızda `AccessViolation` , özel durum Yardımcısı 'nda null analiz bilgilerini görürsünüz. Analiz, özel durum iletisinin altında metin olarak görüntülenir. Aşağıdaki çizimde, bilgiler "**s** null." olarak gösterilir.
 
 ![Özel durum Yardımcısı null Analizi](media/debugger-exception-helper-default.png)
 
@@ -55,9 +55,9 @@ Visual Studio 2017 ' den başlayarak hem .net hem de C/C++ Code için bir `NullR
 ![İç özel durum ile özel durum Yardımcısı](media/debugger-exception-helper-innerexception.png)
 
 ## <a name="inspect-rethrown-exceptions"></a>Yeniden oluşturulan özel durumları incele
-Bir özel durumun `thrown` olduğu durumlarda, özel durum Yardımcısı, çağrı yığınını özel durumun oluşturulduğu ilk zaman gösterir. Özel durum birden çok kez oluşturulursa, yalnızca özgün özel durumdan gelen çağrı yığını gösterilir.
+Bir özel durumun özel durum Yardımcısı olduğu durumlarda, özel durumun oluşturulduğu `thrown` ilk sefer çağrı yığınını gösterir. Özel durum birden çok kez oluşturulursa, yalnızca özgün özel durumdan gelen çağrı yığını gösterilir.
 
 ![Yeniden oluşturulan özel durumlarla özel durum Yardımcısı](media/debugger-exception-helper-innerexception.png)
 
 ## <a name="share-a-debug-session-with-live-share"></a>Live Share bir hata ayıklama oturumu paylaşma
-Özel durum Yardımcısı ' ndan, bağlantı **başlatma Live Share oturumu..** . ' yi kullanarak bir [live share](https://docs.microsoft.com/visualstudio/liveshare/) oturumu başlatabilirsiniz. Live Share oturumuna katılan herkes, diğer hata ayıklama bilgileriyle birlikte özel durum Yardımcısı 'nı görebilir.
+Özel durum Yardımcısı ' ndan, bağlantı **başlatma Live Share oturumu..**. ' yi kullanarak bir [live share](https://docs.microsoft.com/visualstudio/liveshare/) oturumu başlatabilirsiniz. Live Share oturumuna katılan herkes, diğer hata ayıklama bilgileriyle birlikte özel durum Yardımcısı 'nı görebilir.

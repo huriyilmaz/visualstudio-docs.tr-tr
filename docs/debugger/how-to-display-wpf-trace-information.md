@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: WPF Izleme bilgilerini görüntüleme | Microsoft Docs'
+title: WPF Izleme bilgilerini görüntüleme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -16,21 +16,21 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82c3f193c32b4e6a67bb0fe5540aa9d0020e77ea
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 362376176cfb95c4e285f6837c53d277110e3439
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733462"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349789"
 ---
 # <a name="how-to-display-wpf-trace-information"></a>Nasıl Yapılır: WPF İzleme Bilgilerini Görüntüleme
-[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)], WPF uygulamalarından hata ayıklama izleme bilgilerini alabilir ve bu bilgileri **Çıkış** penceresinde görüntüleyebilir. Hata ayıklama izleme bilgilerini göstermek için WPF izlemenin etkinleştirilmesi gerekir.
+[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)], WPF uygulamalarından hata ayıklama izleme bilgilerini alabilir ve bu bilgileri **Çıkış** penceresinde görüntüler. Hata ayıklama izleme bilgilerini göstermek için WPF izlemenin etkinleştirilmesi gerekir.
 
- WPF izlemeyi App. config dosyanızda veya <xref:System.Diagnostics.PresentationTraceSources> sınıfını kullanarak programlı bir şekilde etkinleştirebilirsiniz. WPF izlemeyi etkinleştirmenin daha kolay bir yolu, **Seçenekler** penceresini kullanmaktır. Web uygulamaları için WPF izleme desteklenmez.
+ App.Config dosyanızda WPF izlemeyi etkinleştirebilir veya sınıfını kullanarak programlı bir şekilde etkinleştirebilirsiniz <xref:System.Diagnostics.PresentationTraceSources> . WPF izlemeyi etkinleştirmenin daha kolay bir yolu, **Seçenekler** penceresini kullanmaktır. Web uygulamaları için WPF izleme desteklenmez.
 
 ### <a name="to-enable-or-customize-wpf-trace-information"></a>WPF izleme bilgilerini etkinleştirmek veya özelleştirmek için
 
-1. **Araçlar** menüsünde **Seçenekler**' i seçin.
+1. **Araçlar** menüsünde **Seçenekler**’i belirleyin.
 
 2. **Seçenekler** iletişim kutusunda, soldaki kutudan **hata ayıklama** düğümünü açın.
 
@@ -60,13 +60,13 @@ ms.locfileid: "72733462"
 
      **ActivityTracing** , durdurma, başlatma, askıya alma, aktarım ve yeniden başlatma olaylarının izlenmesini mümkün.
 
-     Bu izleme bilgilerinin ne anlama geldiğini hakkında daha fazla bilgi için bkz. <xref:System.Diagnostics.SourceLevels>.
+     Bu izleme bilgilerinin ne anlama geldiğini hakkında daha fazla bilgi için bkz <xref:System.Diagnostics.SourceLevels> ..
 
 9. **Tamam**'a tıklayın.
 
 ### <a name="to-disable-wpf-trace-information"></a>WPF izleme bilgilerini devre dışı bırakmak için
 
-1. **Araçlar** menüsünde **Seçenekler**' i seçin.
+1. **Araçlar** menüsünde **Seçenekler**’i belirleyin.
 
 2. **Seçenekler** iletişim kutusunda, soldaki kutudan **hata ayıklama** düğümünü açın.
 

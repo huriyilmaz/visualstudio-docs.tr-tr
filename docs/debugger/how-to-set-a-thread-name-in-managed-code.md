@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: yönetilen kodda Iş parçacığı adı ayarlama | Microsoft Docs'
+title: Yönetilen kodda bir Iş parçacığı adı ayarlama | Microsoft Docs
 ms.date: 04/27/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 - VB
@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b55b7b2be0fc546a9dcbbec03480f332724e7e2e
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: c3f95608b5b10cd206d4d59a6ccf876214ae045a
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85286381"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85349191"
 ---
 # <a name="how-to-set-a-thread-name-in-managed-code"></a>Nasıl Yapılır: Yönetilen Kodda İş Parçacığı Adı Ayarlama
 Visual Studio 'nun herhangi bir sürümünde iş parçacığı adlandırması mümkündür. İş parçacığı adlandırması **, iş parçacıkları penceresinde iş** parçacıklarını izlemek için yararlıdır.

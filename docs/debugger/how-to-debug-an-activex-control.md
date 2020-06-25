@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: ActiveX denetiminde hata ayıklama | Microsoft Docs'
+title: ActiveX denetiminde hata ayıklama Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vc.controls.debug
 dev_langs:
@@ -24,12 +24,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75abf76516d3827a748e1b896d4c2e8c93bb34da
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 76bc982db167624e567f88a1cf139b41cad9feb7
+ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72733877"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85350218"
 ---
 # <a name="how-to-debug-an-activex-control"></a>Nasıl Yapılır: ActiveX Denetiminde Hata Ayıklama
 
@@ -48,9 +48,9 @@ ActiveX denetimi hata ayıklaması yapmak için denetimin içinde çalışacağ�
 
 4. **Hata ayıklama** kategorisi altında, **komut** özelliğini bulun.
 
-5. Kapsayıcının yol adını belirtin. Örneğin, C:\Program Files\Explorer\IEXPLORE. EXE.
+5. Kapsayıcının yol adını belirtin. Örneğin, C:\Program Files\ınternet Explorer\IEXPLORE.EXE.
 
-6. Kapsayıcı olarak Internet Explorer 'ı belirtirseniz ve etkin masaüstü kullanıyorsanız, **komut bağımsız değişkenleri** kutusuna `/new` yazın.
+6. Kapsayıcı olarak Internet Explorer 'ı belirtirseniz ve etkin masaüstü kullanıyorsanız, `/new` **komut bağımsız değişkenleri** kutusuna yazın.
 
 7. **Tamam**'a tıklayın.
 
@@ -61,5 +61,5 @@ ActiveX denetimi hata ayıklaması yapmak için denetimin içinde çalışacağ�
 - [ActiveX Denetimleri](/cpp/mfc/activex-controls)
 - [Test Kapsayıcısı ile Özellikleri ve Olayları Test Etme](/cpp/mfc/testing-properties-and-events-with-test-container)
 - [COM ve ActiveX Hata Ayıklaması](../debugger/com-and-activex-debugging.md)
-- [Visual Studio’da hata ayıklama](../debugger/index.yml)
+- [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)
