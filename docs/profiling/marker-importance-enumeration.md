@@ -1,28 +1,28 @@
 ---
-title: marker_importance Numaralandırma | Microsoft Dokümanlar
+title: marker_importance numaralandırması | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic::marker_importance
+- cvmarkersobj/Concurrency, diagnostic::marker_importance
 helpviewer_keywords:
-- Concurrency::diagnostic::marker_importance enumeration
+- Concurrency, diagnostic::marker_importance enumeration
 ms.assetid: d5524ea0-0227-4d8e-9122-332291042df5
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b3f5cfb583ec4fceb9fb7428b08c00f6ca8e26b6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d67a1806034d55147379626b6eb4f868532e4d77
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62999967"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330734"
 ---
-# <a name="marker_importance-enumeration"></a>marker_importance numaralandırma
-Eşzamanlı Görselleştirici işaretleyicisinin önem düzeyini temsil eder.
+# <a name="marker_importance-enumeration"></a>marker_importance numaralandırması
+Bir eşzamanlılık görselleştiricisi işaretçisinin önem derecesini temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum marker_importance;
@@ -32,17 +32,17 @@ enum marker_importance;
 
 ### <a name="values"></a>Değerler
 
-|Adı|Açıklama|
+|Name|Description|
 |----------|-----------------|
-|`critical_importance`|İşaretleyicinin kritik öneme sahip olduğunu belirtir.|
-|`high_importance`|İşaretleyicinin yüksek öneme sahip olduğunu belirtir.|
-|`low_importance`|İşaretleyicinin düşük öneme sahip olduğunu belirtir.|
-|`normal_importance`|İşaretleyicinin normal öneme sahip olduğunu belirtir.|
+|`critical_importance`|İşaretin önemli öneme sahip olduğunu belirtir.|
+|`high_importance`|İşaretin yüksek önem derecesine sahip olduğunu belirtir.|
+|`low_importance`|İşaretin düşük önem derecesine sahip olduğunu belirtir.|
+|`normal_importance`|İşaretin normal öneme sahip olduğunu belirtir.|
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkersobj.h*
+ **Üst bilgi:** *cvmarkersobj. h*
 
- **Ad alanı:** Eşzamanlılık::diagnostik
+ **Ad alanı:** Eşzamanlılık::d ıagstik
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [tanılama ad alanı](../profiling/diagnostic-namespace.md)
+- [Tanılama ad alanı](../profiling/diagnostic-namespace.md)

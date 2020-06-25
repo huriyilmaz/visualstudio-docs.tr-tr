@@ -1,7 +1,7 @@
 ---
-title: CvisEnabled Fonksiyonu | Microsoft Dokümanlar
+title: CvIsEnabled Işlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvIsEnabledEx
 - cvmarkers/CvIsEnabled
@@ -14,17 +14,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92763e352d04d5aa3e88a68bad7adfcd05897027
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 53de9ee136c9bd12c732339b4c1c8a223fe1a3ac
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62945420"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330066"
 ---
-# <a name="cvisenabled-function"></a>CvIsEnabled fonksiyonu
-Herhangi bir oturumun belirtilen ETW sağlayıcısını etkinleştirip etkinleştirmediğini belirler.
+# <a name="cvisenabled-function"></a>CvIsEnabled işlevi
+Belirtilen ETW sağlayıcısını herhangi bir oturumun etkinleştirilip etkinleştirilmediğini belirler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C
 HRESULT CvIsEnabled(
@@ -38,17 +38,17 @@ HRESULT CvIsEnabledEx(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `category`Kategori.
+ `category`Alan.
 
  `level`Önem düzeyi.
 
  `pProvider`Geçerli sağlayıcı nesnesi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- Sağlayıcı şu anda etkinse S_OK. Sağlayıcı şu anda devre dışı bırakılmışsa S_FALSE. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için FAILED makrosu kullanın ve ardından S_OK/S_FALSE denetleyin.
+ Sağlayıcı Şu anda etkin ise S_OK. Sağlayıcı Şu anda devre dışıysa S_FALSE. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için başarısız makroyu kullanın ve ardından S_OK/S_FALSE kontrol edin.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üstbilgi:** *cvmarkers.h*
+ **Üst bilgi:** *cvişaretleyiciler. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)
+- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

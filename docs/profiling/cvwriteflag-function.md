@@ -1,7 +1,7 @@
 ---
-title: CvWriteFlag Fonksiyonu | Microsoft Dokümanlar
+title: CvWriteFlag Işlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvWriteFlagExVA
 - cvmarkers/CvWriteFlagExW
@@ -18,17 +18,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a5a388c8f838f182d2f1f3d3f56f84b8fbf10e6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 396edc736f61ae76aab7263bcd15bb0bfad13204
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62936686"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332157"
 ---
-# <a name="cvwriteflag-function"></a>CvWriteFlag fonksiyonu
-Eşzamanlı Görüntüleyici izleme dosyasına bir bayrak yazar.
+# <a name="cvwriteflag-function"></a>CvWriteFlag işlevi
+Eşzamanlılık görselleştiricisi izleme dosyasına bir bayrak yazar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C
 HRESULT CvWriteFlagExW(
@@ -63,25 +63,25 @@ HRESULT CvWriteFlagExVA(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `argList`Bağımsız değişkenler listesi.
+ `argList`Bağımsız değişkenlerin listesi.
 
- `category`Kategori.
+ `category`Alan.
 
  `level`Önem düzeyi.
 
- `pMarkerSeries`Geçerli işaretçi serisi bağlamı. NULL olamaz.
+ `pMarkerSeries`Geçerli işaretleyici serisi bağlamı. NULL olamaz.
 
  `pMessage`İleti biçimi dizesi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- İleti başarılı bir şekilde yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
+ İleti başarıyla yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üstbilgi:** *cvmarkers.h*
+ **Üst bilgi:** *cvişaretleyiciler. h*
 
  **Unicode:** CvWriteFlagExW, CvWriteFlagExVW
 
  <strong>ANSI:</strong> CvWriteFlagExA, CvWriteFlagExVA
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)
+- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

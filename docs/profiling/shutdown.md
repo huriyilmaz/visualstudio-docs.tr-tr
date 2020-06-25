@@ -1,7 +1,7 @@
 ---
-title: Kapatma | Microsoft Dokümanlar
+title: Kapanıyor | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: a1e37500-4ad1-4670-9737-3d9a20536386
 author: mikejo5000
 ms.author: mikejo
@@ -9,21 +9,21 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 89a08808387067b934bfd826feb2dcfbcf949aab
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 64bad66491588178dc7d80655a8e517d6daed053
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778290"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330999"
 ---
 # <a name="shutdown"></a>Kapat
-**Kapatma** seçeneği, şu anda profilli herhangi bir işlemin sona ermesini veya ayrılmasını bekler ve ardından profil oluşturucuyu kapatır ve profil oluşturma veri dosyasını kapatır. **Kapatma** seçeneği profil oluşturma çalışmasının son komutu olmalıdır.
+**Kapatma** seçeneği, şu anda profili oluşturulmuş herhangi bir işlemin bitmesini veya ayrılmasını bekler ve sonra profil oluşturucuyu kapatır ve profil oluşturma veri dosyasını kapatır. **Kapalı** seçeneği, bir profil oluşturma çalıştırmasının son komutu olmalıdır.
 
- Zaman sonu parametresi belirtilmemişse, **Kapatma** seçeneği süresiz olarak bekler. Zaman ayırma parametresi belirtilirse, seçenek profil oluşturucuyu kapatmadan veya veri dosyasını kapatmadan belirtilen saniye sayısından sonra geri döner.
+ Bir zaman aşımı parametresi belirtilmemişse, **kapatma** seçeneği süresiz olarak bekler. Bir zaman aşımı parametresi belirtilirse, seçenek profil oluşturucuyu kapatmadan veya veri dosyasını kapatmadan belirtilen saniye sayısından sonra döndürür.
 
- **Kapatma** seçeneği komut satırında belirtilen tek seçenek olmalıdır.
+ **Kapalı** seçeneği, komut satırında belirtilen tek seçenek olmalıdır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 VSPerfCmd.exe /Shutdown[:Timeout]
@@ -31,10 +31,10 @@ VSPerfCmd.exe /Shutdown[:Timeout]
 
 #### <a name="parameters"></a>Parametreler
 `Timeout`
-- (İsteğe bağlı) Belirtilirse, seçenek profil oluşturucuyu kapatmadan veya profil oluşturma veri dosyasını kapatmadan belirtilen saniye sayısından sonra döner.
+- Seçim Belirtilmişse, seçenek profil oluşturucuyu kapatmak veya profil oluşturma veri dosyasını kapatmak zorunda kalmadan, belirtilen sayıda saniyeden sonra döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Profil tek başına uygulamalar](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Web uygulamaları ASP.NET profil](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

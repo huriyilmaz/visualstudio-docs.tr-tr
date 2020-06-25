@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl Kullanılır: Rapor Görünümü Sütunlarını Özelleştir | Microsoft Dokümanlar'
+title: Rapor görünümü sütunlarını özelleştirme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.test.columnchooser.dialogbox
 helpviewer_keywords:
@@ -14,25 +14,25 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a297e6bfbed5023db97cabd370679b0de6caaab
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 58d2a7b7c83f1260427ff0d805510e08ae35c019
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778979"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329799"
 ---
-# <a name="how-to-customize-report-view-columns"></a>Nasıl kullanılır: Rapor Görünümü sütunlarını özelleştir
-Visual Studio Team System Development Edition'daki performans araçları, sorunsuz bir kullanıcı deneyimi sağlamak için entegre geliştirme ortamına (IDE) tam olarak entegre edilmiştir. Aşağıdaki liste, sütunları ekleyerek, kaldırarak ve yeniden düzenleyerek özelleştirilebilen görünümleri temsil eder:
+# <a name="how-to-customize-report-view-columns"></a>Nasıl yapılır: rapor görünümü sütunlarını özelleştirme
+Visual Studio Team System Development Edition 'daki performans araçları, sorunsuz bir kullanıcı deneyimi sağlamak için tümleşik geliştirme ortamı (IDE) ile tamamen tümleşiktir. Aşağıdaki liste sütunları ekleyerek, kaldırarak ve yeniden düzenleyerek özelleştirilebilen görünümlerin temsilcisidir:
 
 - [Modüller Görünümü](../profiling/modules-view.md)
 
-- [Fonksiyonlar Görünümü](../profiling/functions-view.md)
+- [İşlevler Görünümü](../profiling/functions-view.md)
 
 - [Satırlar Görünümü](../profiling/lines-view.md)
 
 - [Yönerge İşaretçileri (IP) Görünümü](../profiling/instruction-pointers-ips-view.md)
 
-- [Çağıran/Çağrılan Görünümü](../profiling/caller-callee-view.md)
+- [Arayan/çağrılan görünümü](../profiling/caller-callee-view.md)
 
 - [Çağrı Ağacı Görünümü](../profiling/call-tree-view.md)
 
@@ -44,16 +44,16 @@ Visual Studio Team System Development Edition'daki performans araçları, soruns
 
 - [İşlem Görünümü](../profiling/process-view.md)
 
-### <a name="to-customize-a-report-view"></a>Rapor görünümünü özelleştirmek için
+### <a name="to-customize-a-report-view"></a>Bir rapor görünümünü özelleştirmek için
 
 1. Rapor görünümünü açın.
 
-2. Rapor görünümü yüzeyine sağ tıklayın ve **ardından Sütun Ekle/Kaldır'ı**tıklatın.
+2. Rapor görünümü yüzeyine sağ tıklayın ve ardından **sütun Ekle/Kaldır**' a tıklayın.
 
-     **Sütun ekle/Kaldır** iletişim kutusu görüntülenir.
+     **Sütunları Ekle/Kaldır** iletişim kutusu görüntülenir.
 
 3. Eklemek istediğiniz sütunları seçin.
 
-4. Sütunları yeniden sıralamak için ok düğmesini tıklatın.
+4. Sütunları yeniden sıralamak için ok düğmesine tıklayın.
 
 5. **Tamam**'a tıklayın.

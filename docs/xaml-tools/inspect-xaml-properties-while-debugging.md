@@ -1,22 +1,21 @@
 ---
 title: Hata ayıklarken XAML özelliklerini İnceleme | Microsoft Docs
 ms.date: 11/12/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 390edde4-7b8d-4c89-8d69-55106b7e6b11
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: 36246f959aa49e49aa84defc203075f163c67118
-ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
+ms.openlocfilehash: 1c8ac187f5602d1c422fe5699d36deee70341b0f
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706413"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331074"
 ---
-# <a name="inspect-xaml-properties-while-debugging"></a>Hata ayıklama sırasında XAML özelliklerini denetleme 
+# <a name="inspect-xaml-properties-while-debugging"></a>Hata ayıklama sırasında XAML özelliklerini denetleme
 
 **Canlı görsel ağaç** ve **canlı Özellik GEZGINI**ile çalışan xaml kodunuzun gerçek zamanlı bir görünümünü alabilirsiniz. Bu araçlar, çalışan XAML uygulamanızın kullanıcı arabirimi öğelerinin ağaç görünümünü sağlar ve seçtiğiniz herhangi bir kullanıcı arabirimi öğesinin çalışma zamanı özelliklerini gösterir.
 
@@ -33,7 +32,7 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 
 ### <a name="create-the-project"></a>Proje oluşturma
 
-1. C# Yeni bir WPF uygulaması (**dosya** > **Yeni** > **projesi**oluşturun, ardındanC# "WPF" yazın ve **wpf uygulaması (.NET Core)** ya da **WPF uygulaması (.NET Framework)** seçin. **TestXaml**olarak adlandırın.
+1. Yeni bir C# WPF uygulaması oluşturun (**Dosya**  >  **Yeni**  >  **Proje**' ye tıklayın, ardından "C# WPF" yazın ve **WPF uygulaması (.NET Core)** ya da **WPF uygulaması (.NET Framework)** seçeneğini belirleyin. **TestXaml**olarak adlandırın.
 
 1. MainWindow. xaml ' i şu şekilde değiştirin:
 
@@ -74,14 +73,14 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
    }
    ```
 
-1. Projeyi oluşturmak ve hata ayıklamaya başlayın. (Derleme yapılandırması, yayın değil, hata ayıklama olmalıdır. Derleme konfigürasyonları hakkında daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md).)
+1. Projeyi derleyin ve hata ayıklamayı başlatın. (Derleme yapılandırması, yayın değil, hata ayıklama olmalıdır. Derleme konfigürasyonları hakkında daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md).)
 
    Pencere geldiğinde, çalışan uygulamanız içinde uygulama içi araç çubuğunun göründüğünü görmeniz gerekir.
 
-   ::: moniker range=">= vs-2019" 
+   ::: moniker range=">= vs-2019"
    ![Uygulamanın ana penceresi](../debugger/media/vs-2019/livevisualtree-app.png "LiveVIsualTree-uygulama")
    ::: moniker-end
-   ::: moniker range="vs-2017" 
+   ::: moniker range="vs-2017"
    ![Uygulamanın ana penceresi](../debugger/media/livevisualtree-app.png "LiveVIsualTree-uygulama")
    ::: moniker-end
 
@@ -93,16 +92,16 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 
 1. **Canlı görsel ağaç** penceresinde, **ContentPresenter** düğümünü genişletin. Düğme ve liste kutusu için düğüm içermelidir. Liste kutusu öğelerini bulmak için liste kutusunu (ve ardından **ScrollContentPresenter** ve **ItemsPresenter**) genişletin.
 
-   ::: moniker range=">= vs-2019" 
+   ::: moniker range=">= vs-2019"
    **ContentPresenter** düğümünü görmüyorsanız araç çubuğunda **yalnızca XAML mi göster** simgesine geçiş yapın. Visual Studio 2019 sürüm 16,4 ' den başlayarak, XAML öğelerinin görünümü varsayılan olarak yalnızca XAML 'IM özelliği kullanılarak basitleştirilmiştir. Tüm XAML öğelerini her zaman göstermek için Seçenekler ' de [Bu ayarı devre dışı](../debugger/general-debugging-options-dialog-box.md) bırakabilirsiniz.
    ::: moniker-end
 
    Pencere şuna benzemelidir:
 
-   ::: moniker range=">= vs-2019" 
+   ::: moniker range=">= vs-2019"
    ![Canlı görsel ağaçtaki ListBoxItems](../debugger/media/vs-2019/livevisualtree-listboxitems.png "LiveVisualTree-ListBoxItems")
    ::: moniker-end
-   ::: moniker range="vs-2017" 
+   ::: moniker range="vs-2017"
    ![Canlı görsel ağaçtaki ListBoxItems](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree-ListBoxItems")
    ::: moniker-end
 
@@ -110,16 +109,16 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
 
 1. Şimdi liste kutusu öğelerinden birinin özelliklerine bakalım.
 
-   **Canlı görsel ağaçtaki** ilk liste kutusu öğesini seçin ve araç çubuğundaki **özellikleri göster** simgesine tıklayın. **Canlı Özellik Gezgini** görünmelidir. **İçerik** alanının "Item1" olduğunu ve **arka plan** > **renk** alanının **#FFFFFFE0**olduğunu unutmayın.
-   
-1. **Canlı görsel ağaca** dönün ve ikinci liste kutusu öğesini seçin. **Canlı Özellik Gezgini** , **Içerik** alanının "Item2" olduğunu ve **arka plan** > **renk** alanının **#FFD3D3D3** (temaya bağlı olarak) olduğunu göstermelidir.
+   **Canlı görsel ağaçtaki** ilk liste kutusu öğesini seçin ve araç çubuğundaki **özellikleri göster** simgesine tıklayın. **Canlı Özellik Gezgini** görünmelidir. **İçerik** alanının "Item1" olduğunu ve **arka plan**  >  **rengi** alanının **#FFFFFFE0**olduğunu unutmayın.
+
+1. **Canlı görsel ağaca** dönün ve ikinci liste kutusu öğesini seçin. **Canlı Özellik Gezgini** **içerik** alanının "Item2" olduğunu ve **arka plan**  >  **rengi** alanının **#FFD3D3D3** (temaya bağlı olarak) olduğunu göstermelidir.
 
    > [!NOTE]
-   > **Canlı Özellik Gezgini** içindeki bir özelliğin etrafında sarı bir kenarlık, özellik değerinin `Color = {BindingExpression}`gibi bir bağlama üzerinden ayarlandığı anlamına gelir. Yeşil kenarlık, değerin `Color = {StaticResource MyBrush}`gibi bir kaynak kullanılarak ayarlandığı anlamına gelir.
+   > **Canlı Özellik Gezgini** içindeki bir özelliğin etrafında sarı bir kenarlık, özellik değerinin gibi bir bağlama üzerinden ayarlandığı anlamına gelir `Color = {BindingExpression}` . Yeşil kenarlık, değerinin gibi bir kaynak kullanılarak ayarlandığı anlamına gelir `Color = {StaticResource MyBrush}` .
 
    XAML gerçek yapısı, muhtemelen doğrudan ilgilenmediğiniz çok sayıda öğeye sahiptir ve kodun iyi olduğunu bilmiyorsanız, aradığınız şeyi bulmak için ağaçta gezinmek için bir sabit zaman olabilir. Bu nedenle, **canlı görsel ağaç** , incelemek istediğiniz öğeyi bulmanıza yardımcı olmak için uygulamanın kullanıcı arabirimini kullanmanıza olanak sağlayan birkaç yol içerir.
 
-   ::: moniker range=">= vs-2019" 
+   ::: moniker range=">= vs-2019"
    **Çalışan uygulamadaki öğesini seçin**. **Canlı görsel ağaç** araç çubuğunda en soldaki düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. Bu mod üzerinde, uygulamada bir UI öğesi seçebilirsiniz ve **canlı görsel ağaç** (ve **canlı Özellik Görüntüleyicisi**), düğümü ilgili öğeye ve özelliklerine karşılık gelen ağaçta göstermek için otomatik olarak güncelleştirilir. Visual Studio 2019 sürüm 16,4 ' den başlayarak, [öğe seçiminin davranışını yapılandırabilirsiniz](../debugger/general-debugging-options-dialog-box.md).
 
    **Çalışan uygulamada düzen donatıcıları görüntüleyin**. Seçimi Etkinleştir düğmesinin hemen sağında bulunan düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. **Görüntüleme düzeni donatıcıları** açık olduğunda, uygulama penceresinin seçili nesnenin sınırları üzerinde yatay ve dikey çizgiler görüntülemesine neden olur, böylece neyin ne kadar hizalanacağını görebilir ve kenar boşluklarını gösteren dikdörtgenler de gösterilir. Örneğin, hem **Select öğesini** hem de **düzeni görüntüle** ' yi açın ve uygulamada **öğe Ekle** metin bloğunu seçin. **Canlı görsel ağaçta** metin bloğu düğümünü ve **canlı Özellik görüntüleyicisinde**metin bloğu özelliklerinin yanı sıra metin bloğunun sınırları üzerindeki yatay ve dikey çizgileri görmeniz gerekir.
@@ -129,7 +128,7 @@ Bir liste görünümü ve bir düğme içeren çok basit bir WPF uygulamasını 
    **Önizleme seçimi**. Canlı görsel ağaç araç çubuğunda sol taraftaki üçüncü düğmeyi seçerek bu modu etkinleştirebilirsiniz. Bu mod, uygulamanın kaynak koduna erişiminiz varsa, öğenin bildirildiği XAML 'yi gösterir. **Öğe seç** ve **Önizleme seçimi**' ni seçin ve ardından test uygulamamızda düğmesini seçin. MainWindow. xaml dosyası Visual Studio 'da açılır ve imleç düğmenin tanımlandığı satıra yerleştirilir.
    ::: moniker-end
 
-   ::: moniker range="vs-2017" 
+   ::: moniker range="vs-2017"
    **Çalışan uygulamada seçimi etkinleştirin**. **Canlı görsel ağaç** araç çubuğunda en soldaki düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. Bu mod üzerinde, uygulamada bir UI öğesi seçebilirsiniz ve **canlı görsel ağaç** (ve **canlı Özellik Görüntüleyicisi**), düğümü ilgili öğeye ve özelliklerine karşılık gelen ağaçta göstermek için otomatik olarak güncelleştirilir.
 
    **Çalışan uygulamada düzen donatıcıları görüntüleyin**. Seçimi Etkinleştir düğmesinin hemen sağında bulunan düğmeyi seçtiğinizde bu modu etkinleştirebilirsiniz. **Görüntüleme düzeni donatıcıları** açık olduğunda, uygulama penceresinin seçili nesnenin sınırları üzerinde yatay ve dikey çizgiler görüntülemesine neden olur, böylece neyin ne kadar hizalanacağını görebilir ve kenar boşluklarını gösteren dikdörtgenler de gösterilir. Örneğin, her ikisini de **seçimi** ve **görüntüleme yerleşimini** etkinleştirin ve uygulamada **öğe Ekle** metin bloğunu seçin. **Canlı görsel ağaçta** metin bloğu düğümünü ve **canlı Özellik görüntüleyicisinde**metin bloğu özelliklerinin yanı sıra metin bloğunun sınırları üzerindeki yatay ve dikey çizgileri görmeniz gerekir.
@@ -145,7 +144,7 @@ Kaynak kodunuz olmadığında bile bu XAML araçlarını kullanabilirsiniz. Çal
 
 1. Sürüm yapılandırmasında **TestXaml** uygulamasını başlatın. **Hata ayıklama** yapılandırmasında çalışan bir işleme iliştiremezsiniz.
 
-2. Visual Studio 'nun ikinci bir örneğini açın ve **Işleme eklemek > hata ayıkla**' ya tıklayın. Kullanılabilir süreçler listesinde **TestXaml. exe dosyasını** bulun ve **Ekle**' ye tıklayın.
+2. Visual Studio 'nun ikinci bir örneğini açın ve **Işleme eklemek > hata ayıkla**' ya tıklayın. Kullanılabilir süreçler listesinde **TestXaml.exe** bulun ve **Ekle**' ye tıklayın.
 
 3. Uygulama çalışmaya başlar.
 

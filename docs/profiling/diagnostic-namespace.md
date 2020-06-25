@@ -1,28 +1,28 @@
 ---
-title: tanılama Namespace | Microsoft Dokümanlar
+title: Tanılama ad alanı | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersobj/Concurrency::diagnostic
+- cvmarkersobj/Concurrency, diagnostic
 helpviewer_keywords:
-- Concurrency::diagnostic namespace
+- Concurrency, diagnostic namespace
 ms.assetid: ad786b19-7c4c-46ee-bfb6-c4752b373a09
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 03671f314dca3c016f9524bcb246b74e0eb1f837
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 680d304a8e4d21365d82f654265ae2f34582b636
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62970090"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330257"
 ---
-# <a name="diagnostic-namespace"></a>tanılama ad alanı
-Ad `diagnostics` alanı, EşzamanlıLık Görselleştirici işaretçileri yayan işlevsellik sağlar.
+# <a name="diagnostic-namespace"></a>Tanılama ad alanı
+`diagnostics`Ad alanı eşzamanlılık görselleştiricisi işaretçilerini yayma işlevlerini sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 namespace diagnostic;
@@ -32,21 +32,21 @@ namespace diagnostic;
 
 ### <a name="classes"></a>Sınıflar
 
-|Adı|Açıklama|
+|Name|Description|
 |----------|-----------------|
 |[marker_series Sınıfı](../profiling/marker-series-class.md)|Tek bir sağlayıcı tarafından oluşturulan olayların seri kanalını temsil eder.|
-|[span Sınıfı](../profiling/span-class.md)|Uygulamanın bir aşamasını tanımlar.|
+|[Span sınıfı](../profiling/span-class.md)|Uygulamanın aşamasını tanımlar.|
 
-### <a name="enumerations"></a>Numaralandırmalar
+### <a name="enumerations"></a>Listelemeler
 
-|Adı|Açıklama|
+|Name|Description|
 |----------|-----------------|
-|[marker_importance Sabit Listesi](../profiling/marker-importance-enumeration.md)|Eşzamanlı Görselleştirici işaretleyicisinin önem düzeyini temsil eder.|
+|[marker_importance Numaralandırması](../profiling/marker-importance-enumeration.md)|Bir eşzamanlılık görselleştiricisi işaretçisinin önem derecesini temsil eder.|
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkersobj.h*
+ **Üst bilgi:** *cvmarkersobj. h*
 
- **Ad alanı:** Eşzamanlılık
+ **Ad alanı:** Zamanlı
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Eşzamanlı ad alanı (Eşzamanlılık Görselleştiricisi)](../profiling/concurrency-namespace-concurrency-visualizer.md)
+- [Eşzamanlılık ad alanı (eşzamanlılık görselleştiricisi)](../profiling/concurrency-namespace-concurrency-visualizer.md)

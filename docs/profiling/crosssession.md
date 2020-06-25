@@ -1,7 +1,7 @@
 ---
-title: Çapraz Oturum | Microsoft Dokümanlar
+title: CrossSession | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b9fcb9c3-7903-478c-9b7c-dbd94092fcba
 author: mikejo5000
 ms.author: mikejo
@@ -9,38 +9,38 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 06de982643a08e1af88073dde0fb0a9abc029900
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 019a7b74deb70176f214aefdcec4db86cec86829
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779460"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331172"
 ---
 # <a name="crosssession"></a>CrossSession
-*VSPerfCmd.exe* **CrossSession** seçeneği, profil oluşturucunun herhangi bir konsol oturumundan veri toplamasını sağlar. **Çapraz Oturum** seçeneği **Başlat** seçeneğiyle kullanılmalıdır.
+*VSPerfCmd.exe* **CrossSession** seçeneği, profil oluşturucunun herhangi bir konsol oturumundan veri toplamasını sağlar. **CrossSession** seçeneği **Start** seçeneğiyle birlikte kullanılmalıdır.
 
- **CrossSession**yerine **CS** kısaltmasını kullanabilirsiniz.
+ **CrossSession**yerine **CS** kısaltması kullanabilirsiniz.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 VSPerfCmd.exe /Start:Method /CrossSession [Options]
 ```
 
 #### <a name="parameters"></a>Parametreler
- None
+ Yok
 
-## <a name="valid-options"></a>Geçerli Seçenekler
- Başka bir oturumda profil oluşturmayı etkinleştirmek **için, Çapraz Oturum** **seçeneği** başlangıç seçeneğiyle belirtilmelidir. **CrossSession** da sonraki **VSPerfCmd Ekle** ve **Ayırma** komutlarında belirtilmelidir.
+## <a name="valid-options"></a>Geçerli seçenekler
+ Başka bir oturumda profil oluşturmayı etkinleştirmek için, **CrossSession** seçeneğinin **Start** seçeneğiyle belirtilmesi gerekir. **CrossSession** , sonraki **VSPerfCmd Attach** ve **Detach** komutlarında de belirtilmelidir.
 
- **Başlangıç:** `Method` **Başlat** seçeneği profil oluşturucuyu belirtilen profil oluşturma yöntemine başlatir.
+ **Başlangıç:** `Method` **Başlat** seçeneği, profil oluşturucuyu belirtilen profil oluşturma yöntemine başlatır.
 
- **Ekle:** _PID_[**,**_PID_] Belirtilen işlemlerin profilini çıkarmaya başlar.
+ **Attach:** _PID_[**,**_pid_] belirtilen işlemlerin profilini oluşturmaya başlıyor.
 
- **[**:**:**_PID_[,_PID_]] Belirtilen işlemlerin profilini çıkarmayı durdurur.
+ **Detach**[**:**_PID_[,_pid_]] belirtilen işlemlerin profilini oluşturmayı durduruyor.
 
 ## <a name="example"></a>Örnek
- Bu örnekte, **Çapraz Oturum** seçeneği başka bir konsol oturumunda başlatılan bir uygulamaya eklemek için kullanılır.
+ Bu örnekte, **CrossSession** seçeneği, başka bir konsol oturumunda başlatılan bir uygulamaya eklemek için kullanılır.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp /CrossSession
@@ -49,6 +49,6 @@ VSPerfCmd.exe /Attach:12345 /CS
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Profil tek başına uygulamalar](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Web uygulamaları ASP.NET profil](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

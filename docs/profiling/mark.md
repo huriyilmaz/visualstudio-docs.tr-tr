@@ -1,7 +1,7 @@
 ---
-title: İşaretle | Microsoft Dokümanlar
+title: İşaretle | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 1d72cef3-bb09-4bbb-8864-6ea0ab623ff9
 author: mikejo5000
 ms.author: mikejo
@@ -9,31 +9,31 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bf89469c4137052247b5a1fdfee7f8dc694fbcc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1b3049a253dca37090d128748b71f278aa2f7e63
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74774000"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330796"
 ---
 # <a name="mark"></a>İşaret
-*VSPerfCmd.exe* **İşareti** seçeneği, belirtilen bilgileri profil oluşturma veri dosyasına ekler. İşaret, ayrı bir VSPerfReport raporunda veya profiloluşturucu ui'nin İşaret Raporu görünümünde listelenebilir. **İşaret,** rapor ve görünüm filtrelerinde başlangıç ve bitiş noktalarını belirtmek için kullanılabilir.
+*VSPerfCmd.exe* **Mark** seçeneği, belirtilen bilgileri profil oluşturma veri dosyasına ekler. Mark, ayrı bir VSPerfReport raporunda veya profiler Kullanıcı arabiriminin Işaret raporu görünümünde listelenebilir. **İşaret** , rapor ve görüntüleme filtrelerinde başlangıç ve bitiş noktalarını belirtmek için kullanılabilir.
 
- **İşaretle** seçeneği komut satırında belirtilen tek seçenek olmalıdır.
+ **Mark** seçeneği, komut satırında belirtilen tek seçenek olmalıdır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 VSPerfCmd.exe /Mark:MarkID,[MarkName]
 ```
 
 #### <a name="parameters"></a>Parametreler
- `MarkID`Profil oluşturucu görünümlerinde ve raporlarında İşaret Kimliği olarak listelenen kullanıcı tanımlı bir tamsayı. `MarkID`benzersiz olmak zorunda değildir.
+ `MarkID`Profil Oluşturucu görünümlerinde ve raporlarında Işaret KIMLIĞI olarak listelenen kullanıcı tanımlı bir tamsayı. `MarkID`benzersiz olması gerekmez.
 
- `MarkName`(İsteğe bağlı) Profil oluşturucu görünümlerinde ve raporlarında İşaret Adı olarak listelenen kullanıcı tanımlı dize. `MarkName` Belirtilmemişse, işaret listesinin İşaret Adı alanı boştur. Tırnak işaretlerine boşluk veya ileri kesikler ("/") içeren dizeleri içine alın.
+ `MarkName`Seçim Profil Oluşturucu görünümlerinde ve raporlarında Işaret adı olarak listelenen kullanıcı tanımlı bir dize. `MarkName`Belirtilmemişse, işaret listesinin Işaret adı alanı boştur. Boşluk veya eğik çizgi ("/") içeren dizeleri tırnak işaretleri içine alın.
 
 ## <a name="example"></a>Örnek
- Bu örnek, 123 kimliği ve "TestMark" işareti adı içeren bir işaret ekler.
+ Bu örnek, KIMLIĞI 123 ve işaret adı "TestMark" olan bir işaret ekler.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -43,6 +43,6 @@ VSPerfCmd.exe /Mark:123,TestMark
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Profil tek başına uygulamalar](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Web uygulamaları ASP.NET profil](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

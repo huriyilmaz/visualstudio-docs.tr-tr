@@ -1,41 +1,41 @@
 ---
 title: XAML Hataları ve Uyarıları
 ms.date: 03/06/2018
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 34eac8a0-7ec5-4c40-b97a-0126ed367931
-author: karann-msft
+author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8a36a91f40fd4857e50d5262c1598ee096697e7
-ms.sourcegitcommit: 22deb247ad951e4971f27fdab413b158415d0584
+ms.openlocfilehash: 9b46bf15390f12e7fb0873c7e4c39abf94530821
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81276468"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330412"
 ---
 # <a name="xaml-errors-and-warnings"></a>XAML hataları ve uyarıları
 
-XAML yazarken, Visual Studio yazarken kodu analiz eder. Bir hata algılandığında kod satırında bir kıvrım görüntülenir. Dalgalı üzerinde gezinme hata veya uyarı hakkında daha fazla bilgi verir. Bazı hatalar ve uyarılar için, bir Hızlı Eylem ampul görüntülenir ve **Ctrl**+kullanılarak **.** klavye kısayolu sorunu gidermek için seçenekleri görüntüler.
+XAML yazarken, Visual Studio kodu yazarken analiz eder. Bir hata algılandığında kod satırında dalgalı bir çizgi görünür. Dalgalı çizgi üzerine gelindiğinde, hata veya uyarı hakkında daha fazla bilgi verilmektedir. Bazı hatalar ve uyarılar için hızlı bir eylem ampul görüntülenir ve **CTRL tuşunu**kullanarak + **.** klavye kısayolu, sorunu gidermeye yönelik seçenekleri görüntüler.
 
 ## <a name="error-types"></a>Hata türleri
 
-Arka planda, birden çok araç XAML'yi paralel olarak analiz edeyim. XAML hataları, hatayı algılayan araca göre aşağıdaki üç türden birine ayrılır:
+Arka planda, birden çok araç XAML 'yi paralel olarak analiz eder. XAML hataları, hatayı algılayan araca bağlı olarak aşağıdaki üç türden birine kategorize edilir:
 
-|**Tarafından algılanan hata**|**Hata kodu biçimi**|
+|**Hata algılanan**|**Hata kodu biçimi**|
 | - |-----------------|
-|XAML Dil Servisi (XAML editörü)|XLSxxxx|
+|XAML dil hizmeti (XAML Düzenleyicisi)|XLSxxxx|
 |XAML Tasarımcısı|XDGxxxx|
-|XAML'yi Edit ve Devam Et|XECxxxx|
+|XAML Düzenle ve devam et|XECxxxx|
 
 > [!Note]
-> Tüm hatalar veya uyarılar karşılık gelen bir kod var. Bu tür hatalar genellikle XAML Designer hatalarıdır.
+> Tüm hatalar veya uyarıların karşılık gelen bir kodu yoktur. Bu hatalar genellikle XAML Tasarımcısı hatalardır.
 
-## <a name="suppress-xaml-designer-errors"></a>XAML Tasarımcı hatalarını bastırma
+## <a name="suppress-xaml-designer-errors"></a>XAML Tasarımcısı hatalarını gösterme
 
-**Araçlar > Seçenekleri'ni**seçerek **Seçenekler** iletişim kutusunu açın ve ardından **XAML > Çeşitli > Metin**Düzenleyicisi'ni seçin.
+**Araçlar > seçenekler**' i seçerek **Seçenekler** iletişim kutusunu açın ve **> xaml > çeşitli metin düzenleyici**' yi seçin.
 
-XAML tasarımcı onay kutusu **tarafından algılanan hataları göster'in denetimini** kaldırın.
+**XAML Tasarımcısı tarafından algılanan hataları göster** onay kutusunun işaretini kaldırın.
 
-![XAML Tasarımcı hatalarını bastırma](media/suppress_xaml_designer_errors.png)
+![XAML Tasarımcısı hatalarını gösterme](media/suppress_xaml_designer_errors.png)

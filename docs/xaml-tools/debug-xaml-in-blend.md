@@ -6,15 +6,14 @@ ms.assetid: 29a37182-2a2c-47e4-a4a9-2d5412738fed
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.technology: vs-ide-debug
 ms.workload:
 - uwp
-ms.openlocfilehash: 04bd4540de47ec8a9da86069acb33770f9c800b8
-ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
+ms.openlocfilehash: d5d40878e40641b9a54a411af122f6207a02a7a1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706373"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331036"
 ---
 # <a name="debug-xaml-in-blend"></a>Blend'de XAML hatalarını ayıklama
 
@@ -55,11 +54,11 @@ Aşağıdaki örnek, Blend 'de basit bir XAML hata ayıklama oturumunda size yol
 
 3. Proje şablonları listesinde **boş uygulama (Evrensel Windows)** seçeneğine tıklayın.
 
-4. **Ad** metin kutusuna `DebuggingSample`yazın.
+4. **Ad** metin kutusuna yazın `DebuggingSample` .
 
 5. **Konum** metin kutusunda projenin konumunu doğrulayın.
 
-6. **Dil** listesinde, **görsel C#** ' e tıklayın ve ardından projeyi oluşturmak için **Tamam** ' a tıklayın.
+6. **Dil** listesinde, **Visual C#**' yi tıklatın ve ardından projeyi oluşturmak için **Tamam** ' ı tıklatın.
 
 7. Tasarım yüzeyine sağ tıklayın ve ardından **bölünmüş** görünüme geçmek Için **kaynağı görüntüle** ' ye tıklayın.
 
@@ -89,7 +88,7 @@ Aşağıdaki örnek, Blend 'de basit bir XAML hata ayıklama oturumunda size yol
     </Grid>
     ```
 
-10. Projeyi derlemek için **Ctrl**+**SHIFT**+**B** tuşlarına basın.
+10. **Ctrl** + **Shift** + Projeyi derlemek için CTRL SHIFT**B** tuşlarına basın.
 
     Projenin derlenmeyeceğini ve hataları listelerken **sonuçlar** bölmesinin uygulamanın altında göründüğünü belirten bir hata iletisi görüntülenir.
 
@@ -101,19 +100,19 @@ XAML hataları algılandığında tasarım yüzeyi, projenizin geçersiz biçiml
 
 #### <a name="to-resolve-the-xaml-errors"></a>XAML hatalarını çözümlemek için
 
-1. Listedeki ilk hataya çift tıklayın. Açıklama "< ' değeri özniteliğinde geçerli değildir." Hatayı çift tıklattığınızda, işaretçi kodda karşılık gelen konumu bulur. Önceki `Button` `<`, hata iletisinde önerildiği şekilde bir öznitelik değil, geçerlidir. Yukarıdaki kod satırına baktığınızda, `Top` özniteliği için kapatma tırnak işaretlerinin eksik olduğunu fark edeceksiniz. Kapanış tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesinin değişikliklerinizi yansıtacak şekilde güncelleştiğine dikkat edin.
+1. Listedeki ilk hataya çift tıklayın. Açıklama "< ' değeri özniteliğinde geçerli değildir." Hatayı çift tıklattığınızda, işaretçi kodda karşılık gelen konumu bulur. `<`Yukarıdaki, `Button` hata iletisinde önerildiği şekilde değil, geçerli bir öznitelik değil. Yukarıdaki kod satırına baktığınızda, öznitelik için kapanan tırnak işaretlerinin eksik olduğunu fark edeceksiniz `Top` . Kapanış tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesinin değişikliklerinizi yansıtacak şekilde güncelleştiğine dikkat edin.
 
-2. "' 0" açıklamasına çift tıklayarak bir adın başlangıcında geçerli değildir. " `Margin="0,149,0,0"` iyi biçimlendirilmiş gibi görünüyor. Ancak, `Margin` renk kodlamasının koddaki `Margin` diğer örneklerle eşleşmediğinden emin olun. Kapanış tırnak işaretleri önceki ad/değer çiftinde (`VerticalAlignment="Top`) olmadığından, `Margin="` önceki özniteliğin değerinin bir parçası olarak okunurdur ve 0 bir ad/değer çiftinin başlangıcı olarak okunurdur. `Top`için kapanan tırnak işaretlerini yazın. **Sonuçlar** panelindeki hata listesi, yaptığınız değişiklikleri yansıtacak şekilde güncelleştirilir.
+2. "' 0" açıklamasına çift tıklayarak bir adın başlangıcında geçerli değildir. " `Margin="0,149,0,0"`iyi biçimlendirilmiş gibi görünüyor. Ancak, renk kodlamasının, `Margin` koddaki diğer örneklerle eşleşmediğinden emin olun `Margin` . Önceki ad/değer çiftindeki () kapanış tırnak işaretleri eksik olduğundan `VerticalAlignment="Top` , `Margin="` önceki özniteliğin değerinin bir parçası olarak salt okunurdur ve 0 bir ad/değer çiftinin başlangıcı olarak okunurdur. Kapanış tırnak işaretlerini yazın `Top` . **Sonuçlar** panelindeki hata listesi, yaptığınız değişiklikleri yansıtacak şekilde güncelleştirilir.
 
-3. Kalan hataya çift tıklayın, "kapanış XML etiketi ' Button ' eşleşmiyor." İşaretçi kapanış **kılavuz** etiketinde bulunur (`</Grid>`) ve hatanın `Grid` nesnesinin içinde olması önerilir. İkinci `Button` nesnesinde kapanış etiketi eksik olduğuna dikkat edin. Kapanış `/`ekledikten sonra **sonuçlar** paneli listesi güncellenir. Artık bu ilk hatalar çözümlendiğinden, iki ek hata belirlenmiştir.
+3. Kalan hataya çift tıklayın, "kapanış XML etiketi ' Button ' eşleşmiyor." İşaretçi, **Grid** `</Grid>` hatanın nesnenin içinde olması için kapanış kılavuz etiketinde () bulunur `Grid` . İkinci `Button` nesnede kapanış etiketinin eksik olduğuna dikkat edin. Kapatmayı ekledikten sonra `/` **sonuçlar** paneli listesi güncellenir. Artık bu ilk hatalar çözümlendiğinden, iki ek hata belirlenmiştir.
 
-4. "Üye ' içerik ' tanınmıyor veya erişilebilir değil" seçeneğine çift tıklayın. `content` `c` büyük harfle yazılmalıdır. "C" alt durumunu "c" büyük harfle değiştirin.
+4. "Üye ' içerik ' tanınmıyor veya erişilebilir değil" seçeneğine çift tıklayın. `c`İçindeki, `content` büyük harf olmalıdır. "C" alt durumunu "c" büyük harfle değiştirin.
 
-5. "' MAME ' özelliği `http://schemas.microsoft.com/winfx/2006/xaml` ad alanında yok." "Mame" içindeki "d", "N" olmalıdır. "D" değerini bir "N" ile değiştirin. Artık XAML ayrıştırılabilmesine göre, uygulama tasarım yüzeyinde görünür.
+5. "' MAME ' özelliği ad alanında yok ' a çift tıklayın `http://schemas.microsoft.com/winfx/2006/xaml` ." "Mame" içindeki "d", "N" olmalıdır. "D" değerini bir "N" ile değiştirin. Artık XAML ayrıştırılabilmesine göre, uygulama tasarım yüzeyinde görünür.
 
     ![Visual Studio için Blend XAML hatalarını ayıklama](../debugger/media/blend_debugartboard_xaml.png "blend_debugArtboard_XAML")
 
-    Projenizi derlemek ve kalan hata olmadığını doğrulamak için **Ctrl**+**SHIFT**+**B** tuşlarına basın.
+    **Ctrl** + **Shift** + Projenizi derlemek için CTRL SHIFT**B** tuşlarına basın ve kalan hata olmadığını onaylayın.
 
 ## <a name="debug-in-visual-studio"></a>Visual Studio'da hata ayıklama
 

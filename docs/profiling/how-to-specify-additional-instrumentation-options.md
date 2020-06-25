@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl Yapılır: Ek Enstrümantasyon Seçenekleri Belirt | Microsoft Dokümanlar'
+title: Nasıl yapılır-ek Izleme seçenekleri belirtme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.property.advanced
 helpviewer_keywords:
@@ -14,33 +14,33 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d1f7e912ed5960c52e3f0bfa40fe9b87e91a2e6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8390c4aab0624aa59f62397e0b41bcbcc1c80cdd
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778706"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331985"
 ---
 # <a name="how-to-specify-additional-instrumentation-options"></a>Nasıl yapılır: Ek izleme seçeneklerini belirtme
 
-Visual Studio IDE'yi kullanarak veya komut satırı araçlarını kullanarak ikili araçlar alabilirsiniz. IDE içinden bir ikili enstrümanta, [VSInstr](../profiling/vsinstr.md) aracına ek enstrümantasyon seçenekleri belirterek enstrümantasyon sırasında toplanan verilerin hacmini kontrol edebilirsiniz. Bu seçenekler oturumda veya hedef düzeyde kullanılabilir. Örneğin, enstrümantasyon işlemi sırasında belirli işlevleri eklemek veya hariç tutmak için, hedef düzeyde ek enstrümantasyon seçeneğini kullanın.
+Visual Studio IDE 'yi kullanarak veya komut satırı araçlarını kullanarak ikili dosyaları seçebilirsiniz. IDE içinden bir ikili değer verirseniz, [vsinstr](../profiling/vsinstr.md) aracına ek izleme seçenekleri belirterek, izleme sırasında toplanan veri hacminin denetimini yapabilirsiniz. Bu seçenekler oturumda veya hedef düzeyinde kullanılabilir. Örneğin, izleme işlemi sırasında belirli işlevleri dahil etmek veya hariç tutmak için, hedef düzeyinde ek izleme seçeneğini kullanın.
 
 > [!IMPORTANT]
-> Eklenen her sonda, özgün programın davranışını biraz değiştirir. Bu değişiklik, analiz zamanında ek yükü neden olur. Bu ek yükün yaklaşık bir kısmı çıkarılmış olsa da, yine de çok iş parçacığı uygulamaları üzerinde ince zamanlama etkileri vardır. [VSInstr](../profiling/vsinstr.md) araç seçenekleri profil oluşturma sırasında veri toplamayı denetlemeye yardımcı olur.
+> Eklenen her araştırma, özgün programın davranışını biraz değiştirir. Bu değişiklik çözümleme sırasında ek yüke neden olur. Bu ek yükün yaklaşık bir nedeni kaldırılmış olsa da, çok iş parçacıklı uygulamalar üzerinde hala hafif zamanlama etkileri vardır. [Vsinstr](../profiling/vsinstr.md) aracı seçenekleri, profil oluşturma sırasında veri toplamayı denetlemenize yardımcı olur.
 
-## <a name="to-specify-additional-instrumentation-option"></a>Ek enstrümantasyon seçeneği belirtmek için
+## <a name="to-specify-additional-instrumentation-option"></a>Ek izleme seçeneğini belirtmek için
 
-1. **Performans Gezgini'nde,** **Performans Oturumu'nu** seçin ve ardından sağ tıklatın ve **Özellikler'i**seçin.
+1. **Performans Gezgini**' de, **performans oturumu** ' nu seçin ve ardından sağ tıklayıp **Özellikler**' i seçin.
 
-2. Özellikler **Sayfalarında**Gelişmiş **özellikleri** tıklatın.
+2. **Özellikler sayfalarında** **Gelişmiş** Özellikler ' e tıklayın.
 
-3. **Ek enstrümantasyon seçenekleri** kutusuna seçenekleri yazın.
+3. **Ek izleme seçenekleri** kutusunda seçenekler yazın.
 
-     Örneğin, profil oluşturma düzeyini belirtmek için /CONTROL:THREAD'i kullanın. Seçeneklerin tam listesi için [VSInstr'a](../profiling/vsinstr.md)bakın.
+     Örneğin, profil oluşturma düzeyini belirtmek için/CONTROL: THREAD komutunu kullanın. Seçeneklerin tamamı listesi için bkz. [vsinstr](../profiling/vsinstr.md).
 
 4. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Performans oturumlarını](../profiling/configuring-performance-sessions.md)
-yapılandırma[Komut satırından profil](../profiling/using-the-profiling-tools-from-the-command-line.md)
+[Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md) 
+ [Komut satırından profil](../profiling/using-the-profiling-tools-from-the-command-line.md)

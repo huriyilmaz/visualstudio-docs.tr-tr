@@ -1,7 +1,7 @@
 ---
-title: CvWriteAlert Fonksiyonu | Microsoft Dokümanlar
+title: CvWriteAlert Işlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvWriteAlertVA
 - cvmarkers/CvWriteAlertVW
@@ -18,17 +18,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b7cc2316168d14c6c996c4d55065771c85ffdfc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 56af9515fb9c066e56dd45a0fb91a95530f09799
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62989781"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332163"
 ---
-# <a name="cvwritealert-function"></a>CvWriteAlert fonksiyonu
-Eşzamanlı Lık Görselleştiricisi izleme dosyasına bir uyarı yazar.
+# <a name="cvwritealert-function"></a>CvWriteAlert işlevi
+Eşzamanlılık görselleştiricisi izleme dosyasına bir uyarı yazar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C
 HRESULT CvWriteAlertW(
@@ -55,21 +55,21 @@ HRESULT CvWriteAlertVA(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `argList`Bağımsız değişkenler listesi.
+ `argList`Bağımsız değişkenlerin listesi.
 
- `pMarkerSeries`Geçerli işaretçi serisi bağlamı. NULL olamaz.
+ `pMarkerSeries`Geçerli işaretleyici serisi bağlamı. NULL olamaz.
 
  `pMessage`İleti biçimi dizesi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- İleti başarılı bir şekilde yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
+ İleti başarıyla yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üstbilgi:** *cvmarkers.h*
+ **Üst bilgi:** *cvişaretleyiciler. h*
 
  **Unicode:** CvWriteAlertW, CvWriteAlertVW
 
  **ANSI:** CvWriteAlertA, CvWriteAlertVA
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)
+- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

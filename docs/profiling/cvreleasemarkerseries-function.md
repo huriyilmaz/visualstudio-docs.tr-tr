@@ -1,7 +1,7 @@
 ---
-title: CvReleaseMarkerSeries Fonksiyonu | Microsoft Dokümanlar
+title: CvReleaseMarkerSeries Işlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvReleaseMarkerSeries
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d100b7ff37ea5a3cd224fd420f14e4cb23061903
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 84db5dac77fbbc51c9f1c0e24173dcc8ca1d68c1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62974154"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332199"
 ---
-# <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries fonksiyonu
-İşaretleyici serisini yayımlar. Uygulama çökebilir aksi takdirde yayımladıktan sonra işaretserisi nesne kullanmayın. İşaretleyici serisinin serbest bırakılmaması bellek sızıntısına neden olur.
+# <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries işlevi
+Bırakma işaretçisi serisi. Bırakma işleminden sonra işaretleyici serisi nesnesi kullanmayın; aksi takdirde uygulama kilitlenebilir. İşaretleyici serisini serbest bırakma hatası, bellek sızıntısına neden olur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C
 HRESULT CvReleaseMarkerSeries(
@@ -34,10 +34,10 @@ HRESULT CvReleaseMarkerSeries(
  `pMarkerSeries`Sağlayıcı nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- S_OK işaretleyici serisi başarıyla serbest bırakıldığında veya herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
+ İşaretleyici serisi ne zaman yayınlanmışsa S_OK veya herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üstbilgi:** *cvmarkers.h*
+ **Üst bilgi:** *cvişaretleyiciler. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)
+- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

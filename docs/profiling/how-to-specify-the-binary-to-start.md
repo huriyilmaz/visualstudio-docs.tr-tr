@@ -1,7 +1,7 @@
 ---
-title: "Nasıl Yapılsın: Başlamak için İkili'yi Belirtin | Microsoft Dokümanlar"
+title: Başlamak için Ikiliyi belirtme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.property.itemlaunch
 helpviewer_keywords:
@@ -14,28 +14,28 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: fd3379b9769cfd6bfe1335b12545e635a9bde782
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 7f7cfd0d7a578d2ddaff28e9821f1d190bb2e10d
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778693"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331448"
 ---
 # <a name="how-to-specify-the-binary-to-start"></a>Nasıl yapılır: Başlatma için ikili dosya belirtme
 
-DL'ler gibi profil ikilileri için ** \<Hedef> Özellik Sayfaları** iletişim kutusuna bilgi girmeniz gerekir. Bu bilgiler, DLL projesinin arama uygulamasını nerede bulabileceğini gösterir.
+Dll 'Ler gibi ikili dosyaların profilini almak için ** \<Target> Özellik sayfaları** iletişim kutusuna bilgi girmeniz gerekir. Bu bilgi, DLL projesinin çağıran uygulamayı bulabileceği yeri gösterir.
 
-1. **Performans Gezgini'nde,** hedef ikiliyi sağ tıklatın ve ardından **Özellikler'i**tıklatın.
+1. **Performans Gezgini**, hedef ikiliye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. Özellik **Sayfaları** iletişim kutusunda Başlat **özelliklerini** tıklatın.
+2. **Özellik sayfaları** iletişim kutusunda, **başlatma** özellikleri ' ne tıklayın.
 
-3. Geçersiz **Kılma proje özellikleri** onay kutusunu seçin.
+3. **Proje özelliklerini geçersiz kıl** onay kutusunu seçin.
 
-4. **Başlatılabilir** metin kutusunda, dosya konumunu belirtin.
+4. **Başlatılacak yürütülebilir** metin kutusunda dosya konumunu belirtin.
 
-5. Bağımsız **değişkenler** metin kutusunda, uygulamayı başlatmak için gereken bağımsız değişkenleri belirtin.
+5. **Bağımsız değişkenler** metin kutusunda, uygulamayı başlatmak için gereken bağımsız değişkenleri belirtin.
 
-6. Çalışma **dizini** metin kutusunda, dizin konumunu belirtin.
+6. **Çalışma dizini** metin kutusunda dizin konumunu belirtin.
 
 7. **Tamam**'a tıklayın.
 

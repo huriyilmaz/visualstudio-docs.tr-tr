@@ -2,25 +2,25 @@
 title: Doğrudan Seçim aracı değiştirici tuşları
 titleSuffix: Blend for Visual Studio
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 21f9b951-dc2b-4d09-bd70-75caed8fb964
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1ac2ee5c5e71dd08e7c9aee81e640cf6f856b6f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0931eef87bce1a942e9c8740d248d213f1b778a4
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650950"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332317"
 ---
 # <a name="direct-selection-tool-modifier-keys-in-blend-for-visual-studio"></a>Visual Studio için Blend Doğrudan Seçim aracı değiştirici tuşları
 
-Aşağıdaki tabloda, mevcut bir yolun şeklini **doğrudan seçim** aracı ![Direct seçim aracı ](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png) ile değiştirmek için kullanabileceğiniz kısayollar listelenmektedir. Varolan bir yolda noktaları eklemek veya kaldırmak ya da varolan iki yolu birleştirmek için **kalem** aracını kullanın.
+Aşağıdaki tabloda, mevcut bir yolun şeklini **doğrudan seçim** aracı doğrudan seçim aracı ile değiştirmek için kullanabileceğiniz kısayollar listelenmektedir ![ ](../designers/media/6dd6571f-c116-451d-8dd2-1f88b8406362.png) . Varolan bir yolda noktaları eklemek veya kaldırmak ya da varolan iki yolu birleştirmek için **kalem** aracını kullanın.
 
-|Bu eylemi yapmak için|Bunu yapın|Çağrısı|
+|Bu eylemi gerçekleştirmek için|Bunu yapın|İşaretçi|
 | - |-------------|-------------|
 |Yoldaki bir nokta için tanjant tutamaçları görünür hale getirin|Yoldaki bir noktaya tıklayın|![Yoldaki bir nokta için tanjant tutamaçları görünür hale getirin](../designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png)<br /><br /> Nokta işaretçisini taşı|
 |Yola bir noktayı taşıyın|Yola bir noktayı sürükleyin|![Yola bir noktayı taşıyın](../designers/media/cfcc5f41-a666-4524-a958-50b9051130ca.png)<br /><br /> Nokta işaretçisini taşı|
@@ -37,4 +37,4 @@ Aşağıdaki tabloda, mevcut bir yolun şeklini **doğrudan seçim** aracı ![Di
 
 - [Çalışma yüzeyi değiştirici tuşları](../xaml-tools/artboard-modifier-keys-in-blend.md)
 - [Kalem aracı değiştirici tuşları](../xaml-tools/pen-tool-modifier-keys-in-blend.md)
-- [Şekiller ve yollar çizme](../xaml-tools/draw-shapes-and-paths.md)
+- [Şekiller ve yollar çizin](../xaml-tools/draw-shapes-and-paths.md)

@@ -1,21 +1,22 @@
 ---
 title: XAML kod Düzenleyicisi
+description: Visual Studio 'da XAML kod Düzenleyicisi turuna katılın
 ms.date: 06/16/2020
-ms.topic: conceptual
+ms.topic: overview
 monikerRange: vs-2019
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: d789ac099e6d0bba7a44f0d6efd7a19beec54c19
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 6421fd0139b04262ac5f1e835f010c1372c034ee
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85290709"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329173"
 ---
 # <a name="xaml-code-editor"></a>XAML kod Düzenleyicisi
 
-[Visual STUDIO IDE](../get-started/visual-studio-ide.md) 'deki xaml kod Düzenleyicisi, Windows platformu ve [Xamarin. Forms](/xamarin/xamarin-forms/user-interface/text/editor/)için WPF ve UWP uygulamaları oluşturmak için ihtiyacınız olan tüm araçları içerir. Bu makalede, XAML tabanlı uygulamalar geliştirirken ve Visual Studio 2019 ' de XAML kod Düzenleyicisi için benzersiz olan özellikler, kod düzenleyicisinin oynadığı rol özetlenmektedir.
+[Visual STUDIO IDE](../get-started/visual-studio-ide.md) 'deki xaml kod Düzenleyicisi, Windows platformu ve [Xamarin. Forms](/xamarin/xamarin-forms/user-interface/text/editor/)için WPF ve UWP uygulamaları oluşturmak için ihtiyacınız olan tüm araçları içerir. Bu makalede, XAML tabanlı uygulamalar geliştirirken kod düzenleyicisinin oynadığı rol ve Visual Studio 2019 ' deki XAML kod Düzenleyicisi için benzersiz olan özellikler özetlenmektedir.
 
 Başlamak için, açık bir WPF projesiyle IDE (tümleşik geliştirme ortamı) konusuna göz atalım. Aşağıdaki görüntüde, XAML kod Düzenleyicisi ile birlikte kullanacağınız anahtar IDE araçlarından bazıları gösterilmektedir.
 
@@ -182,7 +183,7 @@ Aşağıdaki özelliklerin çoğu, Visual Studio IDE 'de evrensel olarak sunulma
 
 Kod parçacıkları, sağ tıklama bağlam menüsü komut **parçacığını** veya klavye kısayollarının bir birleşimini (**CTRL** + **K**, **CTRL** + **X**) kullanarak bir kod dosyasına ekleyebileceğiniz yeniden kullanılabilir kod bloklarıdır. IntelliSense 'in hem yerleşik kod parçacıkları hem de el ile eklediğiniz tüm özel kod parçacıkları için çalışan XAML kod parçacıklarını göstermesini desteklediğinden, [IntelliSense](../ide/using-intellisense.md) 'i geliştirdik. Bazı kullanıma hazır xaml parçacıkları,,, `#region` `Column definition` ve içerir `Row definition` `Setter` `Tag` .
 
-![IntelliSense 'de gösterilen #region seçenekleri olan XAML kod Düzenleyicisi](media/xaml-code-snippets.png "IntelliSense 'de gösterilen #region seçenekleri olan XAML kod düzenleyicisinin ekran görüntüsü")
+![IntelliSense 'de gösterilen XAML kod parçacığı seçenekleri ile XAML kod Düzenleyicisi](media/xaml-code-snippets.png "IntelliSense 'de gösterilen XAML kod parçacığı seçenekleri ile XAML kod Düzenleyicisi ekran görüntüsü")
 
 Daha fazla bilgi için bkz. [kod parçacıkları](../ide/code-snippets.md) ve [C# kod parçacıkları](../ide/visual-csharp-code-snippets.md) sayfaları.
 

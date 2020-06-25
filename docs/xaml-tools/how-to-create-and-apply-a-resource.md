@@ -1,7 +1,7 @@
 ---
 title: Kaynak oluşturma ve uygulama
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.XamlDesigner.CreateResource
 - VS.XamlDesigner.EditResource
@@ -11,12 +11,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ac633f94c237bdff418375903e99f6f2da9e776
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2301ce14fcd3d2d8a9c5d003a05186513d950cd4
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592968"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330110"
 ---
 # <a name="how-to-create-and-apply-a-resource"></a>Kaynak oluşturma ve uygulama
 
@@ -24,7 +24,7 @@ XAML Tasarımcısı öğeler için stiller ve şablonlar, kaynaklar adlı yenide
 
 Varolan bir özellikten, [stille](xref:Windows.UI.Xaml.Style)veya [ControlTemplate](xref:Windows.UI.Xaml.Controls.ControlTemplate)'ten yeni bir kaynak oluşturduğunuzda **kaynak oluştur** iletişim kutusu, kaynağı uygulama düzeyinde, belge düzeyinde veya öğe düzeyinde tanımlamanızı sağlar. Bu düzeyler, kaynağı nerede kullanacağınızı tespit edebilir. Örneğin, kaynağı öğe düzeyinde tanımlarsanız, kaynak yalnızca sizin oluşturduğunuz öğe için uygulanabilir. Kaynağı, başka bir projede tekrar kullanabileceğiniz ayrı bir dosya olan bir [kaynak sözlüğünde](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)depolamayı da tercih edebilirsiniz.
 
-## <a name="create-a-new-resource"></a>Yeni kaynak oluştur
+## <a name="create-a-new-resource"></a>Yeni kaynak oluşturma
 
 1. XAML dosyası XAML Tasarımcısı açın, bir öğesi oluşturun veya belge anahattı penceresinde bir öğe seçin.
 
@@ -52,7 +52,7 @@ Varolan bir özellikten, [stille](xref:Windows.UI.Xaml.Style)veya [ControlTempla
 
 1. Belge Anahattı penceresinde, kaynak uygulamak istediğiniz öğeyi seçin.
 
-2. Aşağıdakilerden birini yapın:
+2. Şunlardan birini yapın:
 
    - Bir özelliğe kaynak uygulayın. **Özellikler** penceresinde, özellik değerinin yanındaki Özellik işaretçisini seçin, **yerel kaynak** veya **sistem kaynağı**' nı seçin ve açılan listeden kullanılabilir bir kaynak seçin.
 

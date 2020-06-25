@@ -1,7 +1,7 @@
 ---
-title: İş Parçacığı ve Süreç EşzamanlıLık Verilerini Toplama | Microsoft Dokümanlar
+title: Iş parçacığı toplama ve eşzamanlılık verilerini Işleme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - concurrency profiling method
 - Profiling Tools, concurrency method
@@ -11,35 +11,35 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e8fda0300aad4a331366fac0a9ebd1b559cecc9d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 39f33f2df5ad4723a612a44d1d0301bd60ed80d7
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779525"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331606"
 ---
 # <a name="collect-thread-and-process-concurrency-data"></a>İş parçacığı ve işlem eşzamanlılık verileri toplama
 
-Visual Studio Profil Oluşturma Araçları eşzamanlılık oluşturma yöntemi, profilli uygulamada bir işlevin kaynağa erişimi beklemesine neden olan her eşitleme olayı hakkında bilgi içeren kaynak çekişme verileri toplamanızı sağlar.
+Visual Studio Profil Oluşturma Araçları eşzamanlılık profili oluşturma yöntemi, profili oluşturulmuş uygulamadaki bir işlevin bir kaynağa erişim beklemesini sağlayan her eşitleme olayı hakkında bilgi içeren kaynak çekişmesini sağlar.
 
-Aşağıdaki yordamlardan birini kullanarak eşzamanlılık profil oluşturma yöntemini belirtebilirsiniz:
+Eşzamanlılık profili oluşturma yöntemini aşağıdaki yordamlardan birini kullanarak belirtebilirsiniz:
 
-- Profil Oluşturma Sihirbazı'nın ilk sayfasında **Eşzamanlılık**
-- Performans oturumu için özellikler iletişim kutusunun **Genel** sayfasında **Eşzamanlılık'ı**tıklatın.
-- Performans **Gezgini** araç çubuğunda, **Yöntem** listesinde **Eşzamanlılık'ı**tıklatın.
+- Profil oluşturma sihirbazının ilk sayfasında **eşzamanlılık** ' e tıklayın.
+- Performans oturumunun Özellikler iletişim kutusunun **genel** sayfasında **eşzamanlılık**' e tıklayın.
+- **Performans Gezgini** araç çubuğunda, **Yöntem** listesinden **eşzamanlılık**' e tıklayın.
 
 ## <a name="common-tasks"></a>Genel görevler
 
-_Performans Oturumu_**Özellik Sayfaları** iletişim kutusunda ek seçenekler belirtebilirsiniz. Bu iletişim kutusunu açmak için:
+Performans oturumunun _performans oturumu_**Özellik sayfaları** iletişim kutusunda ek seçenekleri belirtebilirsiniz. Bu iletişim kutusunu açmak için:
 
-- **Performans Gezgini'nde,** performans oturumu adını sağ tıklatın ve ardından **Özellikler'i**tıklatın.
+- **Performans Gezgini**, performans oturumu adına sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-Aşağıdaki tablodaki görevler, eşzamanlılık yöntemini kullanarak profil yaparken _Performans Oturumu_**Özellik Sayfaları** iletişim kutusunda belirtebileceğiniz seçenekleri açıklar.
+Aşağıdaki tabloda yer alan görevler, eşzamanlılık yöntemini kullanarak profil oluştururken _performans oturumu_**Özellik sayfaları** iletişim kutusunda belirtebileceğiniz seçenekleri anlatmaktadır.
 
 |Görev|İlgili İçerik|
 |----------|---------------------|
-|**Genel** sayfada, oluşturulan profil oluşturma verileri (.vsp) dosyasının adlandırma ayrıntılarını belirtin.|- [Nasıl kullanılır: Performans verisi dosya adı seçeneklerini ayarlama](../profiling/how-to-set-performance-data-file-name-options.md)|
-|**Başlat** sayfasında, kod çözümünüzde birden çok .exe projeniz varsa başlayacak uygulamayı belirtin.|- [Nasıl yapılır: Başlamak için ikiliyi belirtin](../profiling/how-to-specify-the-binary-to-start.md)|
-|Katman **Etkileşimi** sayfasında, profil oluşturma çalışmasına arama verileri ADO.NET ekleyin.|- [Katman etkileşim verilerini toplama](../profiling/collecting-tier-interaction-data.md)|
-|Windows **Sayaçları** sayfasında, profil oluşturma verilerine işaret olarak eklemek için bir veya daha fazla işletim sistemi performans sayacı belirtin.|- [Nasıl kullanılır: Windows karşı veri toplama](../profiling/how-to-collect-windows-counter-data.md)|
-|**Gelişmiş** sayfada, uygulama modülleriniz birden çok sürüm kullanıyorsa ,.NET Framework çalışma zamanının profilini belirleyin. Varsayılan olarak, yüklenen ilk sürüm profillenir.|- [Nasıl yapılsın: .NET Framework çalışma süresini belirtin](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|
+|**Genel** sayfasında, oluşturulan profil oluşturma verileri (. vsp) dosyasının adlandırma ayrıntılarını belirtin.|- [Nasıl yapılır: performans veri dosyası adı seçeneklerini ayarlama](../profiling/how-to-set-performance-data-file-name-options.md)|
+|Kod çözümünüzde birden çok. exe projeniz varsa, **Başlat sayfasında başlatılacak** uygulamayı belirtin.|- [Nasıl yapılır: başlatılacak ikiliyi belirtme](../profiling/how-to-specify-the-binary-to-start.md)|
+|**Katman etkileşimi** sayfasında, profil oluşturma çalıştırmasına ADO.NET çağrı verileri ekleyin.|- [Katman etkileşim verileri toplama](../profiling/collecting-tier-interaction-data.md)|
+|**Windows sayaçları** sayfasında, profil oluşturma verilerine işaret eklemek için bir veya daha fazla işletim sistemi performans sayacı belirtin.|- [Nasıl yapılır: Windows sayaç verileri toplama](../profiling/how-to-collect-windows-counter-data.md)|
+|**Gelişmiş** sayfasında, uygulama modülleriniz birden çok sürüm kullanıyorsa, profil yapılacak .NET Framework çalışma zamanı sürümünü belirtin. Varsayılan olarak, yüklenen ilk sürüm profili oluşturulur.|- [Nasıl yapılır: .NET Framework çalışma zamanını belirtme](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|

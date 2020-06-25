@@ -1,7 +1,7 @@
 ---
-title: CvReleaseProvider Fonksiyonu | Microsoft Dokümanlar
+title: CvReleaseProvider Işlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvReleaseProvider
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0008b7476290558c098b2241fde5c9b209933a0a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0347d3e2345defb13a67e0e0d730e010be618a21
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62974052"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332187"
 ---
-# <a name="cvreleaseprovider-function"></a>CvReleaseProvider fonksiyonu
-İşaretleyici sağlayıcısını serbest bırakır. İşaretleyici sağlayıcısının serbest bırakılması, bu sağlayıcının daha önce oluşturulmuş işaretçi serisini etkilemez. Marker serisi CvReleaseMarkerSeries çağrısı ile ayrı olarak serbest bırakılmalıdır. Sağlayıcının serbest bırakılamaması bellek sızıntısına neden olur.
+# <a name="cvreleaseprovider-function"></a>CvReleaseProvider işlevi
+Bırakma işareti sağlayıcısı. İşaretleyici sağlayıcının bırakılması, bu sağlayıcının daha önce oluşturulmuş işaretleyici serisini etkilemez. İşaretleyici serisinin, CvReleaseMarkerSeries çağrısıyla ayrı olarak serbest bırakılması gerekir. Sağlayıcı yayınlanamaması bellek sızıntısına neden olur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C
 HRESULT CvReleaseProvider(
@@ -34,10 +34,10 @@ HRESULT CvReleaseProvider(
  `pProvider`Sağlayıcı bağlamı. NULL olamaz.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Sağlayıcı başarıyla serbest bırakıldığında veya herhangi bir hata olması durumunda hata kodu S_OK. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
+ S_OK bir hata olması durumunda sağlayıcı başarıyla yayımlanmışsa veya hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üstbilgi:** *cvmarkers.h*
+ **Üst bilgi:** *cvişaretleyiciler. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)
+- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

@@ -1,8 +1,8 @@
 ---
-title: UWP Uygulamalarında HTML UI yanıt verme yeteneğini analiz edin | Microsoft Dokümanlar
+title: UWP uygulamalarında HTML UI yanıt hızını çözümleme | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - JavaScript
 helpviewer_keywords:
@@ -17,126 +17,126 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - uwp
-ms.openlocfilehash: a483d1382ea1f67c14aa4674016331bfe0f76e7d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9fdc2b7fc459d655748444759913cab903dfe782
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "73189377"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85331419"
 ---
-# <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>Evrensel Windows Apps'ta HTML UI yanıt verme yeteneğini analiz edin
-Bu konu, Evrensel Windows Uygulamaları için kullanılabilen bir performans aracı olan UI Responsiveness Profiler'ı kullanarak uygulamalarınızdaki performans sorunlarını nasıl yalıtmak gerektiğini açıklar.
+# <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>Evrensel Windows uygulamalarında HTML UI yanıt hızını çözümleme
+Bu konuda, Evrensel Windows uygulamaları için kullanılabilen bir performans aracı olan UI yanıtlama hızı Profil Oluşturucusu kullanılarak uygulamalarınızda performans sorunlarının nasıl yalıtılacağı açıklanmaktadır.
 
- UI Yanıt Verme Profiler genellikle bu belirtiler ile ortaya çıkan UI yanıt sorunları veya platform yan etkileri gibi sorunları yalıtmak yardımcı olabilir:
+ UI yanıtlama hızı Profil Oluşturucusu, genellikle bu belirtilerle oluşan Kullanıcı Arabirimi yanıt verme sorunları veya platform tarafı etkileri gibi sorunları ayırmanıza yardımcı olabilir:
 
-- UI'de yanıt eksikliği. UI iş parçacığı engelleniyorsa uygulama nın yanıt vermesi yavaş olabilir. Kullanıcı arabirimi iş parçacığı engelleyebilir bazı şeyler aşırı senkron JavaScript kodu, aşırı CSS düzeni veya CSS hesaplama çalışması, senkron XHR istekleri, çöp toplama, aşırı boya süreleri veya işlemci yoğun JavaScript kodu içerir.
+- Kullanıcı arabiriminde yanıt verme olmaması. UI iş parçacığı engellenmişse uygulamanın yanıt vermesi yavaş olabilir. UI iş parçacığını engelleyebilen bazı şeyler, aşırı zaman uyumlu JavaScript kodu, aşırı CSS düzeni veya CSS hesaplama işi, zaman uyumlu XHR istekleri, çöp toplama, aşırı boyama süreleri veya işlemci yoğunluklu JavaScript kodu içerir.
 
-- Uygulama veya sayfa için yavaş yükleme süresi. Bu genellikle kaynakları yüklemek için harcanan aşırı zaman neden olur.
+- Uygulama veya sayfa için yavaş yükleme süresi. Bu, genellikle kaynakları yüklerken geçen aşırı sürenin oluşmasına neden olur.
 
-- Beklenenden daha az sıklıkta olan görsel güncelleştirmeler. Bu, UI iş parçacığı düzgün bir kare hızını korumak için çok meşgul ise oluşur. Örneğin, UI iş parçacığı meşgulse, çerçeveler bırakılabilir. Ağ istekleri, görüntü çözme ve boyamalar gibi bazı UI dışı iş parçacığı çalışmaları da görsel güncelleştirmelerin sıklığını sınırlayabilir. (Tüm boyama UI iş parçacığı üzerinde gerçekleştirilir.)
+- Beklenenden daha az sıklıkta olan görsel güncelleştirmeler. Bu durum, Kullanıcı arabirimi iş parçacığı kesintisiz kare hızını korumak için çok meşgulse oluşur. Örneğin, Kullanıcı arabirimi iş parçacığı meşgulse, çerçeveler bırakılmış olabilir. Ağ istekleri, görüntü kod çözme ve boyar gibi bazı UI olmayan iş parçacıkları, görsel güncelleştirme sıklığını da sınırlayabilir. (Kullanıcı arabirimi iş parçacığında boyama yapılmaz.)
 
-## <a name="run-the-html-ui-responsiveness-tool"></a>HTML UI Yanıt verme aracını çalıştırma
- Visual Studio'da çalışan bir UWP uygulamanız olduğunda HTML UI Responsiveness aracını kullanabilirsiniz.
+## <a name="run-the-html-ui-responsiveness-tool"></a>HTML UI yanıt verme aracı 'nı çalıştırın
+ Visual Studio 'da açık bir UWP uygulamanız olduğunda HTML UI yanıtlama hızı aracını kullanabilirsiniz.
 
-1. Uygulamayı Visual Studio'dan, **Standart** araç çubuğunda, Başlangıç **Hata Ayıklama** listesinde çalıştırıyorsanız, **Yerel Makine** veya **Aygıt**gibi bir dağıtım hedefi seçin.
+1. Uygulamayı Visual Studio 'dan çalıştırıyorsanız, **Standart** araç çubuğunda, **hata ayıklamayı Başlat** listesinde, **yerel makine** veya **cihaz**gibi bir dağıtım hedefi seçin.
 
-2. Hata **Ayıklama** menüsünde **Performans Profiloluştur'u'nu**seçin.
+2. **Hata Ayıkla** menüsünde, performans profili **Oluşturucu**' yı seçin.
 
-     Profil oluşturucu için çözümleme hedefini değiştirmek istiyorsanız, **Hedefi Değiştir'i**seçin.
+     Profil oluşturucunun analiz hedefini değiştirmek istiyorsanız **hedefi Değiştir**' i seçin.
 
-     ![Değişim analizi hedefi](../profiling/media/js_tools_target.png "JS_Tools_Target")
+     ![Değişiklik Analizi hedefi](../profiling/media/js_tools_target.png "JS_Tools_Target")
 
-     Analiz hedefi için aşağıdaki seçenekler mevcuttur:
+     Analiz hedefi için aşağıdaki seçenekler kullanılabilir:
 
-    - **Başlangıç Projesi**. Geçerli başlangıç projesini çözümlemek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırıyorsanız, varsayılan değer olan bu ayarı kullanmanız gerekir.
+    - **Başlangıç projesi**. Geçerli başlangıç projesini analiz etmek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırıyorsanız, varsayılan değer olan bu ayarı kullanmanız gerekir.
 
-    - **Çalışan Uygulama**. Çalışan uygulamalar listesinden bir UWP uygulaması seçmek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırırken bu seçeneği kullanamazsınız.
+    - **Uygulama çalıştırılıyor**. Çalışan uygulamalar listesinden bir UWP uygulaması seçmek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırırken bu seçeneği kullanamazsınız.
 
-         Kaynak koduna erişiminiz olmadığında bilgisayarınızda çalışan uygulamaların performansını çözümlemek için bu seçeneği kullanabilirsiniz.
+         Bu seçeneği, kaynak koduna erişiminiz olmadığında bilgisayarınızda çalışan uygulamaların performansını çözümlemek için kullanabilirsiniz.
 
-    - **Yüklü Uygulama**. Çözümlemek istediğiniz yüklü bir uygulamayı seçmek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırırken bu seçeneği kullanamazsınız.
+    - **Yüklü uygulama**. Çözümlemek istediğiniz yüklü bir uygulamayı seçmek için bu seçeneği belirleyin. Uygulamayı uzak bir makinede veya cihazda çalıştırırken bu seçeneği kullanamazsınız.
 
-         Kaynak koduna erişiminiz olmadığında bilgisayarınıza yüklediğiniz uygulamaların performansını çözümlemek için bu seçeneği kullanabilirsiniz. Bu seçenek, yalnızca kendi uygulama geliştirme dışında herhangi bir uygulamanın performansını analiz etmek istediğinizde de yararlı olabilir.
+         Bu seçeneği, kaynak koduna erişiminiz olmadığında bilgisayarınıza yüklediğiniz uygulamaların performansını çözümlemek için kullanabilirsiniz. Bu seçenek ayrıca, yalnızca kendi uygulama geliştirmeniz dışındaki tüm uygulamaların performansını çözümlemek istediğinizde yararlı olabilir.
 
-3. **Kullanılabilir Araçlar'dan** **HTML UI Yanıt Verme'yi**seçin ve ardından **Başlat'ı**seçin.
+3. **Kullanılabilir araçlar**' dan **HTML UI yanıtlama hızı**' nı seçin ve ardından **Başlat**' ı seçin.
 
-4. Kullanıcı Bira Yanıt Profilleyicisini başlattığınızda, Bir Kullanıcı Hesabı Denetimi penceresi Visual Studio ETW Collector.exe'yi çalıştırmak için izninizi isteyebilir. **Evet'i**seçin.
+4. UI yanıtlama hızı profil oluşturucuyu başlattığınızda, bir kullanıcı hesabı denetim penceresi, Visual Studio ETW Collector.exe çalıştırma izninizi isteyebilir. **Evet**' i seçin.
 
-     İlgili performans senaryosunu test etmek için uygulamayla etkileşimkurun. Ayrıntılı bir iş akışı [için](#Workflow) bkz. [Isolate a visual throughput problem](#IsolateVisualThroughput)
+     İlgili performans senaryosunu test etmek için uygulamayla etkileşime geçin. Ayrıntılı bir iş akışı için bkz. [UI yanıtlama hızı sorununu yalıtma](#Workflow) ve [bir görsel işleme sorununu yalıtma](#IsolateVisualThroughput).
 
-5. Alt+Tab tuşuna basarak Visual Studio'ya geçin.
+5. Alt + Tab tuşlarına basarak Visual Studio 'ya geçiş yapın.
 
-6. Uygulamanın profilini çıkarmayı durdurmak ve profil oluşturucunun topladığı verileri görüntülemek için **Koleksiyonu Durdur'u**seçin.
+6. Uygulamanın profilini oluşturmayı durdurmak ve profil oluşturucunun topladığı verileri görüntülemek için, **toplamayı durdur**' u seçin.
 
-## <a name="isolate-an-issue"></a>Bir sorunu yalıtma
- Aşağıdaki bölümde performans sorunlarını yalıtmanıza yardımcı olacak öneriler sağlar. Örnek bir performans testi uygulaması kullanarak performans sorunlarını nasıl tanımlayıp düzelteceğime ilişkin adım adım açıklama için [Bkz.](html-ui-responsiveness.md)
+## <a name="isolate-an-issue"></a>Bir sorunu yalıtmak
+ Aşağıdaki bölümde, performans sorunlarını yalıtmanıza yardımcı olacak öneriler sunulmaktadır. Örnek performans testi uygulaması kullanarak performans sorunlarını belirleme ve çözme hakkında adım adım bir açıklama için bkz. [Izlenecek yol: UI yanıt hızını geliştirme (HTML)](html-ui-responsiveness.md).
 
-### <a name="isolate-a-ui-responsiveness-problem"></a><a name="Workflow"></a>UI yanıt verme sorununu yalıtma
- Bu adımlar, UI Responsiveness Profiler'ı daha etkili kullanmanıza yardımcı olabilecek önerilen bir iş akışı sağlar:
+### <a name="isolate-a-ui-responsiveness-problem"></a><a name="Workflow"></a>UI yanıtlama hızı sorununu yalıtma
+ Bu adımlar, UI yanıtlama hızı profil oluşturucuyu daha verimli bir şekilde kullanmanıza yardımcı olabilecek önerilen bir iş akışı sağlar:
 
-1. Uygulamanızı Visual Studio'da açın.
+1. Uygulamanızı Visual Studio 'da açın.
 
-2. Uygulamanızı UI yanıt verme sorunları için test edin. (Hata hatası yapmadan uygulamanızı başlatmak için **Ctrl**+**F5** tuşuna basın.)
+2. Uygulamanızı UI yanıtlama hızı sorunları için test edin. ( **CTRL** + tuşuna basın **F5 tuşuna** basarak uygulamanızı hata ayıklamadan başlatın.)
 
-     Bir sorun bulursanız, sorunun oluştuğu zaman dilimini daraltmayı denemek için sınama ya da davranışa neden olan tetikleyicileri tanımlamaya çalışın.
+     Bir sorun bulursanız, sorunun gerçekleştiği zaman çerçevesini daraltmaya veya davranışa neden olan Tetikleyicileri belirlemeyi denemek için teste devam edin.
 
-3. Visual Studio'ya geçin **(Alt**+**Tab**tuşuna basın) ve uygulamanızı durdurun **(Shift**+**F5).**
+3. Visual Studio 'ya geçin ( **alt** + **sekmeye**basın) ve uygulamanızı durdurun (**SHIFT** + **F5**).
 
-4. İsteğe bağlı olarak, [çözümleme için İşaret kodunu](#ProfileMark)kullanarak kodunuza kullanıcı işaretleri ekleyin.
+4. İsteğe bağlı olarak, [analiz Için Mark Code](#ProfileMark)' u kullanarak kodunuza Kullanıcı işaretleri ekleyin.
 
     > [!TIP]
-    > Kullanıcı işaretleri, profil oluşturucu verilerini görüntülerken yanıt verme sorununu belirlemenize yardımcı olabilir. Örneğin, yanıt verme sorununa neden olan bir kod bölümünün başına ve sonuna bir kullanıcı işareti ekleyebilirsiniz.
+    > Kullanıcı işaretleri, profil oluşturucu verilerini görüntülerken yanıt verme sorununu belirlemenize yardımcı olabilir. Örneğin, bir yanıt verme sorununa neden olan kod bölümünün başlangıcına ve sonuna bir kullanıcı işareti ekleyebilirsiniz.
 
-5. Önceki bölümdeki yönergeleri izleyerek UI Responsiveness Profiler'ı çalıştırın.
+5. Önceki bölümdeki yönergeleri izleyerek UI yanıt verme profil oluşturucuyu çalıştırın.
 
-6. Uygulamayı, bir UI yanıt verme sorunuyla sonuçlanan duruma getirin.
+6. Uygulamayı, UI yanıtlama hızı sorunu ile sonuçlanan duruma getirin.
 
-7. Visual Studio'ya geçin (Alt+Sekme'ye basın ve UI Responsiveness Profiler'ın profil sekmesinde **koleksiyonu durdur'u** seçin.
+7. Visual Studio 'ya geçin (Alt + Tab tuşlarına basın) ve UI yanıtlama hızı profil oluşturucunun profil oluşturucu sekmesinde **toplamayı durdur** ' ı seçin.
 
-8. Kullanıcı işaretleri eklediyseniz, bunlar profil [oluşturucunun tanılama oturumu zaman çizelgesini](#Ruler) görüntüle'de görünür. Aşağıdaki resimde, kodunuzda belirli bir işlemi belirtmek için kullanılan tek bir kullanıcı işareti gösterilmektedir.
+8. Kullanıcı işaretlerini eklediyseniz profil oluşturucunun [Tanılama oturumu zaman çizelgesini görüntüle](#Ruler) ' de görünür. Aşağıdaki çizimde, kodunuzda belirli bir işlemi belirtmek için kullanılan tek bir kullanıcı işareti gösterilmektedir.
 
-     ![Kullanıcı işaretini gösteren Tanılama Cetveli](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
+     ![Bir kullanıcı işareti gösteren tanılama cetveli](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
 
-9. Kullanıcı işaretlerini, uygulama yaşam döngüsü olaylarını veya grafiklerde görünen verileri kullanarak zaman çizelgesive profil oluşturucu grafiklerinde ilgi alanını belirleyin. Grafiklerdeki verileri analiz etmeye ve kullanmanıza yardımcı olacak bazı yönergeler aşağıda verilmiştir:
+9. Kullanıcı işaretlerini, uygulama yaşam döngüsü olaylarını veya grafiklerde görünen verileri kullanarak zaman çizelgesinde ve profil oluşturucu grafiklerde ilgilendiğiniz bir alanı belirler. Grafiklerde verileri analiz etmenize ve kullanmanıza yardımcı olacak bazı yönergeler aşağıda verilmiştir:
 
-    - [Analiz için İşaretkodunu,](#ProfileMark)uygulama yaşam döngüsü olaylarını ve bu olaylar için ilişkili zaman çizelgesini ve diğer grafiklerdeki verilerin zaman çizelgesini görüntülemek için [tanılama oturumu zaman çizelgesini](#Ruler) görüntüleyin' i kullanın.
+    - Analiz, uygulama yaşam döngüsü olayları ve bu olaylar için ilişkili zaman çizelgesi ve diğer grafiklerde bulunan verilerin zaman çizelgesi için bir [işaret kodu](#ProfileMark)görüntülemek üzere [Tanılama oturumu zaman çizelgesini görüntüle](#Ruler) ' yi kullanın.
 
-    - CPU etkinliği ve belirli bir süre boyunca işletmesi yle ilgili genel bilgileri görüntülemek için [CPU kullanım grafiğini](#CPUUtilization) kullanın. Aşırı CPU etkinliği dönemleri yanıt verme sorunları ve bırakılan çerçeveler neden olasılığı daha yüksektir.
+    - CPU etkinliği hakkındaki genel bilgileri ve belirli bir süre içinde işlem yaptığı iş türünü görüntülemek için [CPU kullanımı grafiğini](#CPUUtilization) kullanın. Aşırı CPU etkinliğinin süreleri, yanıt verme ve kayıp çerçevelerinin oluşmasına neden olabilir.
 
-    - Bir oyun veya zengin bir medya uygulaması geliştiriyorsanız, kare hızının düştüğü süreleri belirlemek için [görsel iş akışını görüntüle (FPS)](#VisualThroughput) kullanın.
+    - Bir oyun veya zengin medya uygulaması geliştiriyorsanız, çerçeve hızının bırakılmakta olduğu zaman aralıklarını belirlemek için [Görsel aktarım hızını (fps) görüntüle](#VisualThroughput) ' yi kullanın.
 
-10. Grafiğin bir bölümünü tıklatarak ve işaretçiyi seçim yapmak için sürükleyerek (veya Sekme tuşu ve ok tuşlarını kullanarak) grafiklerden birinde ilgi alanını seçin. Seçim yaparak bir zaman dilimi seçtiğinizde, zaman çizelgesi yalnızca seçilen dönemi göstermek için profil oluşturucunun alt bölmesindeki grafik ayrıntılarını belirler.
+10. Grafiğin bir bölümüne tıklayıp işaretçiyi sürükleyerek seçim yapın (ya da sekme tuşunu ve ok tuşlarını kullanarak), grafiklerinden birinde ilgilendiğiniz alanı seçin. Bir seçim yaparak bir zaman aralığı seçtiğinizde, profil oluşturucunun alt bölmesindeki zaman çizelgesi ayrıntıları grafı yalnızca seçilen zaman dilimini gösterecek şekilde değişir.
 
-     Aşağıdaki resimde, ilgi alanı vurgulanan CPU kullanım grafiği gösterilmektedir.
+     Aşağıdaki çizimde, bir ilgilendiğiniz ilgi alanına sahip CPU kullanımı grafı gösterilmektedir.
 
      ![CPU kullanım grafiği](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")
 
-11. Çok sık çalışan veya tamamlanması çok zaman alan olaylar hakkında ayrıntılı bilgi almak için [Zaman Çizelgesini Görüntüle ayrıntılarını](#TimelineDetails) kullanın. Örneğin, aşağıdakileri arayın:
+11. Çok sık çalışan veya tamamlanacak çok fazla zaman alan olaylar hakkında ayrıntılı bilgi almak için [zaman çizelgesini görüntüle ayrıntılarını](#TimelineDetails) kullanın. Örneğin, aşağıdakileri arayın:
 
-    - Olay dinleyicileri, zamanlayıcılar ve animasyon çerçevesi geri aramaları. Belirli olaya bağlı olarak, sağlanan veriler değiştirilmiş DOM öğelerinin kimliğini, değiştirilmiş CSS özelliklerinin adını, kaynak konuma bağlantı ve ilişkili olayın veya geri arama işlevinin adını içerebilir.
+    - Olay dinleyicileri, zamanlayıcılar ve animasyon çerçevesi geri çağırmaları. Belirli bir olaya bağlı olarak, girilen veriler değiştirilen DOM öğelerinin KIMLIĞINI, değiştirilen CSS özelliklerinin adını, kaynak konumun bağlantısını ve ilişkili olay veya geri arama işlevinin adını içerebilir.
 
-    - `window.getComputedStyles`'ye yapılan aramalar gibi öğeleri oluşturmayla sonuçlanan düzen veya komut dosyası olayları Olay için ilişkili DOM öğesi sağlanır.
+    - Öğesine yapılan çağrılar gibi işleme öğeleri ile sonuçlanan düzen veya betik olayları `window.getComputedStyles` . Olayın ilişkili DOM öğesi sağlanır.
 
-    - HTML ayrıştma olayları için komut dosyası değerlendirmeleri gibi uygulama tarafından yüklenen sayfalar veya URL kaynakları. Dosya adı veya kaynak sağlanır.
+    - HTML Ayrıştırma olayları için komut dosyası değerlendirmeleri gibi, uygulama tarafından yüklenen sayfalar veya URL kaynakları. Dosya adı veya kaynak sağlanır.
 
-    - [Profiler olay referansında](#profiler-event-reference)belirtilen diğer olaylar.
+    - [Profil Oluşturucu olay başvurusunda](#profiler-event-reference)belirtilen diğer olaylar.
 
     > [!TIP]
-    > Profil oluşturucudaki kullanılabilir bilgilerin çoğu zaman çizelgesi ayrıntıları grafiğinde görünür.
+    > Profiler 'daki kullanılabilir bilgilerin çoğu zaman çizelgesi ayrıntıları grafiğinde görüntülenir.
 
-12. CPU kullanımı veya görsel iş verme (FPS) grafiğinde seçilen bir alanla, daha ayrıntılı bilgi almak için **Yakınlaştırma'yı** (düğme veya bağlam menüsü) seçin. Grafiğin zaman çizelgesi yalnızca seçili zaman dilimini göstermek için değişir.
+12. CPU kullanımı veya görsel aktarım hızı (FPS) grafiğinde seçili bir alanla, daha ayrıntılı bilgi edinmek için **Yakınlaştır** ' ı (düğme veya bağlam menüsü) seçin. Grafik için zaman çizelgesi yalnızca seçili zaman dilimini gösterecek şekilde değişir.
 
-13. Yakınlaştırıldığında, CPU kullanımının veya görsel iş elde grafiğinin bir bölümünü seçin. Bir seçim yaptığınızda, profil oluşturucunun alt bölmesindeki zaman çizelgesi yalnızca seçilen dönemi göstermek için grafik ayrıntıları nı gösterir.
+13. Yakınlaştırıldığında, CPU kullanımı veya görsel işleme grafiğinin bir kısmını seçin. Bir seçim yaptığınızda, profil oluşturucunun alt bölmesindeki zaman çizelgesi ayrıntıları grafı yalnızca seçilen zaman dilimini gösterecek şekilde değişir.
 
-### <a name="isolate-a-visual-throughput-problem"></a><a name="IsolateVisualThroughput"></a>Görsel bir iş elde sorunu yalıtma
- Aşırı CPU kullanım dönemleri düşük veya tutarsız kare hızları neden olabilir. Zengin medya uygulamaları ve oyunları geliştirirseniz, görsel iş oluşturma grafiği CPU kullanım grafiğinden daha önemli veriler sağlayabilir.
+### <a name="isolate-a-visual-throughput-problem"></a><a name="IsolateVisualThroughput"></a>Görsel aktarım hızı sorununu yalıtma
+ Aşırı CPU kullanımının süreleri, düşük veya tutarsız kare oranlarına neden olabilir. Zengin medya uygulamaları ve oyunları geliştirirseniz, görsel verimlilik grafiği CPU kullanımı grafiğinden daha önemli veriler sağlayabilir.
 
- Görsel bir iş verme sorununu yalıtmak için, önceki bölümde açıklanan adımları izleyin, ancak görsel iş verme grafiğini önemli veri noktalarından biri olarak kullanın.
+ Bir görsel işleme sorununu yalıtmak için, önceki bölümde açıklanan adımları izleyin, ancak temel veri noktalarından biri olarak görsel üretilen iş grafiğini kullanın.
 
-### <a name="mark-code-for-analysis"></a><a name="ProfileMark"></a>Analiz için kodu işaretle
- Uygulama kodunun grafiklerde görünen verilerle ilişkili bir bölümünü yalıtmaya yardımcı olmak için, uygulamanızda profil oluşturucuya, işlev yürütüldİğİ anda zaman çizelgesine bir kullanıcı işareti (ters üçgen) eklemesini söyleyen bir işlev çağrısı ekleyebilirsiniz. Eklediğiniz herhangi bir kullanıcı işareti, CPU kullanım grafiği, görsel iş verme grafiği ve zaman çizelgesi ayrıntıları grafiği için zaman çizelgesinde görünür.
+### <a name="mark-code-for-analysis"></a><a name="ProfileMark"></a>Kodu analiz için işaretle
+ Grafiklerde görüntülenen verilerle ilişkili uygulama kodu bölümünü yalıtmak için uygulamanıza bir işlev çağrısı ekleyebilirsiniz. böylece, profil oluşturucunun, zaman çizelgesinde işlevin yürütüldüğü sırada bir kullanıcı işareti (ters üçgen) eklemesini sağlar. Eklediğiniz herhangi bir kullanıcı işareti, CPU kullanımı grafiğinin, görsel verimlilik grafiğinin ve zaman çizelgesi ayrıntıları grafiğinin zaman çizelgesinde görüntülenir.
 
- Kullanıcı işareti eklemek için uygulamanıza aşağıdaki kodu ekleyin. Bu örnek, olayın açıklaması olarak "veri alma" kullanır.
+ Kullanıcı işareti eklemek için, uygulamanıza aşağıdaki kodu ekleyin. Bu örnek, olayın açıklaması olarak "veri alma" kullanır.
 
 ```javascript
 if (performance && performance.mark) {
@@ -145,16 +145,16 @@ if (performance && performance.mark) {
 
 ```
 
- Fare işaretçisini kullanıcı işaretinin üzerinde dinlendirdiğinizde olayın açıklaması bir araç ipucu olarak görünür. İhtiyacınız olduğu kadar kullanıcı işareti ekleyebilirsiniz.
+ Fare işaretçisini Kullanıcı işaretinin üzerine getirdiğinizde, olayın açıklaması bir araç ipucu olarak görüntülenir. İhtiyaç duyduğunuz kadar çok kullanıcı işareti ekleyebilirsiniz.
 
 > [!NOTE]
-> `console.timeStamp`, Bir Chrome komutu da kullanıcı işareti olarak görünür.
+> `console.timeStamp`bir Chrome komutu, kullanıcı işareti olarak da görünür.
 
- Aşağıdaki resimde tanılama cetveli tek bir kullanıcı işareti ve araç ucunu gösterir.
+ Aşağıdaki çizimde, tek bir kullanıcı işareti ve onun araç ipucuyla birlikte tanılama cetveli gösterilmektedir.
 
- ![Kullanıcı işaretini gösteren Tanılama Cetveli](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
+ ![Bir kullanıcı işareti gösteren tanılama cetveli](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")
 
- Ayrıca, iki kullanıcı işareti arasında geçen süreyi göstermek için zaman çizelgesi ayrıntıları görünümünde araç tarafından oluşturulan olaylar da oluşturabilirsiniz. Aşağıdaki kod ikinci bir kullanıcı işareti ve iki kullanıcı işaretinin yürütülmesi arasında geçen sürenin bir ölçüsü ekler (önceki kod ilk kullanıcı işaretini gösterir).
+ Ayrıca, iki kullanıcı işareti arasında geçen süreyi göstermek için zaman çizelgesi ayrıntıları görünümünde araç tarafından oluşturulan olaylar oluşturabilirsiniz. Aşağıdaki kod, ikinci bir kullanıcı işareti ve iki Kullanıcı işaretinin yürütülmesi arasında geçen sürenin ölçüsünü ekler (önceki kod ilk Kullanıcı işaretini gösterir).
 
 ```javascript
 if (performance.mark && performance.measure) {
@@ -165,197 +165,197 @@ if (performance.mark && performance.measure) {
 
  İkinci kullanıcı işareti belirtilmemişse, `performance.measure` ikinci kullanıcı işareti olarak bir zaman damgası kullanır. İlk kullanıcı işareti gereklidir.
 
- Süre ölçümü, zaman çizelgesi ayrıntıları görünümünde **Kullanıcı ölçüsü** olayı olarak görünür ve seçildiğinde ayrıntılı bilgileri gösterir.
+ Süre ölçümü, zaman çizelgesi ayrıntıları görünümünde **Kullanıcı ölçü** olayı olarak görünür ve seçildiğinde ayrıntılı bilgileri gösterir.
 
- ![Zaman çizelgesi ayrıntıları görünümünde kullanıcı ölçümü olayı](../profiling/media/js_htmlvizprofiler_user_measure.png "JS_HTMLVizProfiler_User_Measure")
+ ![Zaman çizelgesi ayrıntıları görünümündeki Kullanıcı ölçümü olayı](../profiling/media/js_htmlvizprofiler_user_measure.png "JS_HTMLVizProfiler_User_Measure")
 
 ## <a name="analyze-data"></a>Verileri çözümleme
- Aşağıdaki bölümler, profil oluşturucuda görünen verileri yorumlamaya yardımcı olacak bilgiler sağlar.
+ Aşağıdaki bölümler, profil oluşturucuda görüntülenen verileri yorumlamaya yardımcı olacak bilgiler sağlar.
 
 ### <a name="view-the-diagnostic-session-timeline"></a><a name="Ruler"></a>Tanılama oturumu zaman çizelgesini görüntüleme
- Profil oluşturucunun üst kısmındaki cetvel, profilli bilgilerin zaman çizelgesini gösterir. Bu zaman çizelgesi hem CPU kullanım grafiği hem de görsel iş verme grafiği için geçerlidir.
+ Profil oluşturucunun en üstündeki cetvel profili oluşturulmuş bilgiler için zaman çizelgesini gösterir. Bu zaman çizelgesi hem CPU kullanımı grafiği hem de görsel işleme grafiği için geçerlidir.
 
- Birkaç uygulama yaşam döngüsü olayı için görüntülenen bir araç ipucuyla tanılama oturumu zaman çizelgesi şu şekilde görünür:
+ Tanılama oturumu zaman çizelgesinin çeşitli uygulama yaşam döngüsü olayları için gösterilen bir araç ipucuyla nasıl göründüğü aşağıda verilmiştir:
 
  ![Tanılama oturumu cetveli](../profiling/media/js_htmlvizprof_ruler.png "JS_HTMLVizProf_Ruler")
 
- Zaman çizelgesi, etkinleştirme olayı gibi uygulama yaşam döngüsü olaylarının ne zaman oluştuğunu ve kodunuza ekleyebileceğiniz kullanıcı işaretlerini (kullanıcı işareti üçgenleri) gösterir. Daha fazla bilgi ile araç ipuçlarını göstermek için olayları seçebilirsiniz. Kullanıcı işaretleri hakkında daha fazla bilgi için, bu konuda [çözümleme için İşaretkodu'na](#ProfileMark) bakın.
+ Zaman çizelgesi, etkinleştirme olayı gibi uygulama yaşam döngüsü olaylarının ne zaman meydana göründüğünü gösterir ve kodunuza ekleyebileceğiniz Kullanıcı işaretlerini (Kullanıcı işareti üçgenler) gösterir. Daha fazla bilgi içeren araç ipuçlarını göstermek için olayları seçebilirsiniz. Kullanıcı işaretleri hakkında daha fazla bilgi için bu konudaki [kodu analiz Için işaretle](#ProfileMark) bölümüne bakın.
 
- Uygulama yaşam döngüsü olayları elmas sembolleri olarak görünür. Bunlar aşağıdakileri içeren DOM olaylarıdır:
+ Uygulama yaşam döngüsü olayları, elmas sembolleri olarak görünür. Bunlar, aşağıdakiler dahil olmak üzere DOM olaylardır:
 
-- `DOMContentLoaded`ve `Load` genellikle kodunuzda etkinleştirilen olay işleyicisinde meydana gelen olaylar. Etkinlik için bir araç ucu belirli olayı ve URL'yi gösterir.
+- `DOMContentLoaded`ve `Load` genellikle kodunuzda etkinleştirilen olay işleyicisinde gerçekleşen olaylar. Olay için bir araç ipucu, belirli bir olayı ve URL 'YI gösterir.
 
-- Farklı bir sayfaya gidince oluşan bir gezinti olayı. Etkinlik için bir araç ipucu hedef sayfa URL'sini gösterir.
+- Farklı bir sayfaya gittiğinizde oluşan bir gezinti olayı. Olay için bir araç ipucu hedef sayfa URL 'sini gösterir.
 
-### <a name="view-cpu-utilization"></a><a name="CPUUtilization"></a>CPU kullanımını görüntüleyin
- CPU kullanım grafiği, aşırı CPU etkinliği olduğu süreleri belirlemenize olanak tanır. Uygulamanın belirli bir süre içinde ortalama CPU tüketimi hakkında bilgi sağlar. Bilgi aşağıdaki belirli kategorileri temsil edecek şekilde renk kodludur: **Yükleme**, **Komut Dosyası Oluşturma**, çöp toplama (**GC**), **Şekillendirme**, **Oluşturma**ve **Görüntü çözme**. Bu kategoriler hakkında daha fazla bilgi için, bu konuda daha sonra [Profiler olay başvurusuna](#profiler-event-reference) bakın.
+### <a name="view-cpu-utilization"></a><a name="CPUUtilization"></a>CPU kullanımını görüntüle
+ CPU kullanımı grafiği, aşırı CPU etkinliğinin zaman aralıklarını tanımlamanızı sağlar. Uygulamanın, bir süre boyunca ortalama CPU kullanımı hakkında bilgi sağlar. Bilgiler, aşağıdaki belirli kategorileri temsil edecek şekilde renk kodludur: **yükleme**, **betik oluşturma**, çöp toplama (**GC**), **Stil**oluşturma, **işleme**ve **görüntü kod çözme**. Bu Kategoriler hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında [Profil Oluşturucu olay başvurusu](#profiler-event-reference) bölümüne bakın.
 
- CPU kullanım grafiği, bir veya daha fazla CPU için CPU kullanım değerlerini tek bir yüzde değeriyle birleştirerek tüm uygulama iş parçacıklarında harcanan süreyi gösterir. Birden fazla CPU kullanımda CPU kullanım değeri yüzde 100'ü aşabilir.
+ CPU kullanım grafiğinde, bir veya daha fazla CPU için CPU kullanım değerlerini tek bir yüzde değeri olarak birleştiren tüm uygulama iş parçacıklarında harcanan süre miktarı gösterilir. Birden fazla CPU kullanımda olduğunda CPU kullanım değeri yüzde 100 ' ü aşabilir.
 
 > [!NOTE]
 > GPU kullanımı grafikte görünmez.
 
- Bu örnek, CPU kullanım grafiğinin nasıl göründüğünü gösterir:
+ Bu örnek, CPU kullanımı grafiğinin ne gibi göründüğünü gösterir:
 
  ![CPU kullanım grafiği](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")
 
- Bu grafiği kullanarak:
+ Bu grafiği şu şekilde kullanın:
 
-- Genel endişe alanlarını belirleyin.
+- Genel sorun bölgelerini belirler.
 
-- Zaman çizelgesi ayrıntıları grafiğinde görüntülemek için belirli bir zaman dilimi seçin. Bir zaman dilimi seçmek için grafiğin bir bölümünü seçin ve seçim yapmak için işaretçiyi sürükleyin.
+- Zaman çizelgesi ayrıntıları grafiğinde görüntülenecek belirli bir zaman aralığı seçin. Bir zaman aralığı seçmek için grafiğin bir kısmını seçin ve işaretçiyi sürükleyerek seçim yapın.
 
-- **Yakınlaştırma** düğmesini seçerek seçili bir zaman diliminin daha ayrıntılı görünümünü elde edin.
+- **Yakınlaştır** düğmesini seçerek seçili bir zaman döneminin daha ayrıntılı bir görünümünü alın.
 
-  Grafiği kullanma hakkında daha fazla bilgi için bu konuda [bir UI yanıt verme sorununu yalıtma konusuna](#Workflow) bakın.
+  Grafiği kullanma hakkında daha fazla bilgi için, bkz. bu konuda [UI yanıtlama hızı sorununu yalıtma](#Workflow) .
 
-### <a name="view-visual-throughput-fps"></a><a name="VisualThroughput"></a>Görsel iş akışını (FPS) görüntüleme
- Görsel iş verme grafiği, kare hızının düştüğü zaman dilimlerini belirlemenize olanak tanır. Uygulama için saniyedeki kareleri (FPS) gösterir. Bu grafik en çok oyunların ve zengin medya uygulamalarının geliştirilmesi için yararlıdır.
+### <a name="view-visual-throughput-fps"></a><a name="VisualThroughput"></a>Görsel aktarım hızını (FPS) görüntüleme
+ Görsel üretilen iş grafiği, çerçeve hızının bırakılmakta olduğu zaman aralıklarını tanımlamanızı sağlar. Uygulamanın saniye başına (FPS) kare sayısını gösterir. Bu grafik, oyunların ve zengin medya uygulamalarının geliştirilmesi için en yararlı seçenektir.
 
- Görüntülenen FPS değeri gerçek kare hızından farklı olabilir. Bu grafikteki verileri incelerken bu bilgileri aklınızda bulundurun:
+ Görüntülenmekte olan FPS değeri, gerçek kare oranından farklı bir değer içerebilir. Bu Grafikteki verileri incelerken bu bilgileri göz önünde bulundurun:
 
-- Grafik, FPS'ye uygulamanın belirli bir zamanda ulaşabileceğini gösterir. Uygulama boşta olduğunda, FPS monitör yenileme hızıyla aynıdır.
+- Grafik, uygulamanın belirli bir zamanda elde yapabileceği FPS sayısını gösterir. Uygulama boşta kaldığında, FPS, izleyici yenileme oranıyla aynı olur.
 
-- Grafik, uygulama görsel güncelleştirmegerektiren bir iş yapıyorsa gerçek FPS'yi gösterir.
+- Uygulama, görsel güncelleştirmeler gerektiren işler ise, bu grafik gerçek FPS 'yi gösterir.
 
-- Çerçeveler bırakılıyorsa grafik sıfır değerini gösterir.
+- Kareler bırakılmakta olduğunda grafik sıfır değerini gösterir.
 
-  Bu örnek, görsel iş elde grafiğinin nasıl göründüğünü gösterir:
+  Bu örnekte, görsel üretilen iş grafiğinin nasıl göründüğü gösterilmektedir:
 
-  ![Görsel iş elde grafiği](../profiling/media/js_htmlvizprof_vizthru.png "JS_HTMLVizProf_VizThru")
+  ![Görsel üretilen iş grafiği](../profiling/media/js_htmlvizprof_vizthru.png "JS_HTMLVizProf_VizThru")
 
-  Görsel iş verme grafiğini kullanarak:
+  Görsel üretilen iş grafiğini kullanarak şunları yapın:
 
-- Genel endişe alanlarını belirleyin.
+- Genel sorun bölgelerini belirler.
 
-- Zaman çizelgesi ayrıntıları grafiğinde görüntülemek için belirli bir zaman dilimi seçin. Bir zaman dilimi seçmek için grafiğin bir bölümünü seçin ve seçim yapmak için işaretçiyi sürükleyin.
+- Zaman çizelgesi ayrıntıları grafiğinde görüntülenecek belirli bir zaman aralığı seçin. Bir zaman aralığı seçmek için grafiğin bir kısmını seçin ve işaretçiyi sürükleyerek seçim yapın.
 
-- **Yakınlaştırma** düğmesini seçerek seçili bir zaman diliminin daha ayrıntılı görünümünü elde edin.
+- **Yakınlaştır** düğmesini seçerek seçili bir zaman döneminin daha ayrıntılı bir görünümünü alın.
 
-### <a name="view-timeline-details"></a><a name="TimelineDetails"></a>Zaman çizelgesi ayrıntılarını görüntüleme
- Zaman çizelgesi ayrıntıları grafiği, UI Responsiveness Profiler'ın alt bölmesinde görünür. Seçili zaman dilimlerinde en çok CPU süresini tüketen olaylar hakkında sıralı ve hiyerarşik bilgiler sağlar. Bu grafik, belirli bir olayı neyin tetiklediğini ve bazı olaylar için olayın kaynak kodla nasıl eşlenebildiğini belirlemenize yardımcı olabilir. Bu grafik, ekrana görsel güncelleştirmeleri boyamak için gereken süreyi belirlemenize de yardımcı olur.
+### <a name="view-timeline-details"></a><a name="TimelineDetails"></a>Zaman çizelgesi ayrıntılarını görüntüle
+ Zaman çizelgesi ayrıntıları grafiği, UI yanıtlama hızı profil oluşturucunun alt bölmesinde görünür. Seçilen zaman aralıklarında en fazla CPU süresini tüketen olaylar hakkında sıralı ve hiyerarşik bilgiler sağlar. Bu grafik, belirli bir olayı neyin tetikleyeceğini ve bazı olaylar için olayın kaynak koda nasıl geri eşlendiğini belirlemenize yardımcı olabilir. Bu grafik, ekranda görsel güncelleştirmeleri boyamak için gereken süreyi belirlemenize de yardımcı olur.
 
- Grafik, yavaş görsel güncelleştirmelere katkıda bulunabilecek arka plan iş parçacıkları üzerinde ui iş parçacığı nın çalışmasını ve çalışmasını gösterir. Grafikte JavaScript JIT çalışması, eşzamanlı GPU çalışması, ana bilgisayar işlemi dışında gerçekleştirilen çalışma (RuntimeBroker.exe ve dwm.exe çalışması gibi) veya Windows Runtime'ın profil oluşturma için henüz araçkullanmamış alanları (disk I/O gibi) gösterilmez.
+ Grafik, UI iş parçacığı çalıştığını ve yavaş görsel güncelleştirmelere katkıda bulunan arka plan iş parçacıklarında çalışmayı gösterir. Grafik, JavaScript JıT işini, zaman uyumsuz GPU işini, ana bilgisayar işleminin dışında (RuntimeBroker.exe ve dwm.exe iş) veya daha önce profil oluşturma (disk g/ç) için henüz eklenmemiş Windows Çalışma Zamanı alanlarında çalışmayı göstermez.
 
 > [!TIP]
-> Bir olay arka plan iş parçacığı üzerinde oluştuğunda, iş parçacığı kimliği olay adının yanındaki parantez içinde görünür.
+> Arka plan iş parçacığında bir olay gerçekleştiğinde, iş parçacığı KIMLIĞI olay adının yanında köşeli ayraç içinde görünür.
 
- Bu örnek, dom tıklama olayı nın olay dinleyicisi seçildiğinde zaman çizelgesi ayrıntıları grafiğinin nasıl göründüğünü gösterir:
+ Bu örnek, bir DOM tıklama olayı için olay dinleyicisi seçildiğinde, zaman çizelgesi ayrıntıları grafiğinin ne gibi göründüğünü gösterir:
 
  ![Zaman çizelgesi ayrıntıları grafiği](../profiling/media/js_htmlvizprof_timelinedet.png "JS_HTMLVizProf_TimelineDet")
 
- Bu resimde, **Olay adı** sütunundaki **spinAction** olay işleyicisi, seçildiğinde sizi kaynak kodundaki olay işleyicisine götürecek bir bağlantıdır. Sağ bölmede, **Geri Arama işlevi** özelliği kaynak koduna aynı bağlantıyı sağlar. Diğer özellikler de ilişkili DOM öğesi gibi olay hakkında bilgi sağlar.
+ Bu çizimde, **olay adı** sütunundaki **spinAction** olay işleyicisi, seçildiğinde kaynak kodundaki olay işleyicisine gidecektir. Sağ bölmede, **geri çağırma işlevi** özelliği kaynak koda aynı bağlantıyı sağlar. Diğer özellikler ayrıca olay hakkında, ilişkili DOM öğesi gibi bilgileri de sağlar.
 
- CPU kullanımı ve görsel iş artışı (FPS) grafiği için zaman çizelgesinin bir bölümünü seçerseniz, zaman çizelgesi ayrıntıları grafiği seçili zaman dilimi için ayrıntılı bilgileri gösterir.
+ CPU kullanımı ve görsel aktarım hızı (FPS) grafiğinde zaman çizelgesinin bir bölümünü seçerseniz, zaman çizelgesi ayrıntıları grafiğinde seçilen zaman dilimi için ayrıntılı bilgiler gösterilir.
 
- Zaman çizelgesi ayrıntıları grafiğindeki olaylar, CPU kullanım grafiğinde gösterilen aynı çalışma kategorilerini temsil edecek şekilde renk kodluolarak kodlanır. Etkinlik kategorileri ve belirli olaylar hakkında daha fazla bilgi için bu konuda [Profiler olay referansına](#profiler-event-reference) bakın.
+ Zaman çizelgesi ayrıntıları grafiğindeki olaylar, CPU kullanım grafiğinde görüntülenen aynı iş kategorilerini göstermek için renk kodludur. Olay kategorileri ve belirli olaylar hakkında daha fazla bilgi için bu konudaki [Profil Oluşturucu olay başvurusu](#profiler-event-reference) bölümüne bakın.
 
- Zaman çizelgesi ayrıntıları grafiğini kullanarak:
+ Zaman çizelgesi ayrıntıları grafiğini kullanarak şunları yapın:
 
-- Bir olayın zaman çizelgesi ve ızgara görünümünde yaklaşık başlangıç saatlerini, süresini ve bitiş saatlerini görüntüleyin. Zaman çizelgesi ayrıntıları grafiği, yakınlaştırma durumuna bağlı olarak ızgara görünümünde 30 milisaniye ile 30 saniye arasında değişen dönemleri gösterebilir. Süre değerleri için:
+- Bir zaman çizelgesinde ve kılavuz görünümünde bir olayın yaklaşık başlangıç zamanlarını, süresini ve bitiş zamanlarını görüntüleyin. Zaman çizelgesi ayrıntıları grafiğinde, yakınlaştırma durumuna bağlı olarak, kılavuz görünümünde 30 milisaniye ila 30 saniyeye kadar olan dönemler gösterilebilir. Süre değerleri için:
 
-  - Dahil süreler, etkinlik çocukları da dahil olmak üzere etkinliğin süresini temsil edir. Izgara görünümünde, bu değer ilk olarak görüntülenir.
+  - Dahil edilen süreler olay alt öğeleri de dahil olmak üzere olayın süresini temsil eder. Izgara görünümünde, önce bu değer görünür.
 
-  - Özel süreler, etkinlik çocukları dahil değil, etkinliğin süresini temsil edir. Izgara görünümünde, bu değer parantez içinde görüntülenir.
+  - Özel durumlar olay alt öğelerini dahil değil, olayın süresini temsil eder. Kılavuz görünümünde, bu değer parantez içinde görünür.
 
-- Olayın çocuklarını görüntülemek için hiyerarşideki bir olayı genişletin. Olay çocuklar üst olay tarafından yükseltilen diğer olaylardır. Örneğin, bir DOM etkinliğinde çocuk olarak görünen olay dinleyicileri olabilir. Bir olay dinleyicisi, bir düzen olayı gibi ondan kaynaklanan başka olaylara sahip olabilir.
+- Etkinliğin alt öğelerini görüntülemek için hiyerarşideki bir olayı genişletin. Olay alt öğeleri, üst olay tarafından oluşturulan diğer olaylardır. Örneğin, DOM olayında alt öğe olarak görünen olay dinleyicileri olabilir. Bir olay dinleyicisi, bir düzen olayı gibi, bundan kaynaklanan diğer olaylara sahip olabilir.
 
-- Olayları başlangıç saatine (varsayılan) veya süreye göre sıralayın. Sıralama yöntemini seçmek için listeye **göre sırala'yı** kullanın.
+- Olayları başlangıç zamanına göre (varsayılan) veya süre olarak sıralayın. Sıralama yöntemini seçmek için **sıralama ölçütü** listesini kullanın.
 
-- Ayrıntılar bölmesinde (sağ bölme) her olayın ayrıntılarını görüntüleyin. Bu örneklerde gösterdiği gibi özellikleri, belirli bir olaya bağlı olarak değişir:
+- Ayrıntılar bölmesinde her bir olayın ayrıntılarını görüntüleyin (sağ bölme). Özellikler, bu örneklerde gösterildiği gibi, belirli bir olaya bağlı olarak farklılık gösterir:
 
-  - Zamanlayıcılar, olay dinleyicileri (DOM olayları) ve animasyon çerçevesi geri aramaları **için, Geri Arama işlevi** özelliği, olay işleyicisinin veya geri arama işlevinin adı yla birlikte kaynak kod konumuna bir bağlantı sağlar.
+  - Süreölçerler, olay dinleyicileri (DOM olayları) ve animasyon çerçeve geri çağırmaları için, **geri çağırma işlevi** özelliği, olay işleyicisi veya geri çağırma işlevinin adı ile birlikte kaynak kodu konumuna bir bağlantı sağlar.
 
-  - Zamanlayıcılar, etkinlik dinleyicileri (DOM olayları), düzen olayları ve animasyon çerçevesi geri aramaları için, seçili olayın renk kodlu bir özeti ve tüm alt bölümleri **Kapsayıcı zaman özeti** bölümünde (renk kodlu halka) görünür. Görüntünün her renk kodlu dilimi bir olay türünü temsil eder. Araç ipuçları olay türü adını sağlar.
+  - Zamanlayıcılar, olay dinleyicileri (DOM olayları), Düzen olayları ve animasyon çerçeve geri çağırmaları için, seçili olayın renk kodlu bir özeti ve tüm alt öğeleri **kapsamlı zaman Özeti** bölümünde (renk kodlu halka) görünür. Resmin her renk kodlu dilimi bir olay türünü temsil eder. Araç ipuçları olay türü adını sağlar.
 
   > [!TIP]
-  > Zaman çizelgesi ayrıntıları grafiği ve **Kapsayıcı zaman özeti,** optimizasyon alanlarını belirlemenize yardımcı olabilir. Bu görünümlerden biri çok sayıda küçük görev gösteriyorsa, olay optimizasyon için bir aday olabilir. Örneğin, bir uygulama DOM öğelerini sık sık yenileyerek çok sayıda düzen ve HTML ayrıştırma olayıyla sonuçlanabilir. Bu işi toplu olarak tamamlayarak performansı en iyi duruma getirebilirsiniz.
+  > Zaman çizelgesi ayrıntıları grafiği ve **kapsamlı zaman Özeti** , en iyi duruma getirme alanını belirlemenize yardımcı olabilir. Bu görünümlerden biri çok sayıda küçük görevi gösteriyorsa, olay iyileştirme için bir aday olabilir. Örneğin, bir uygulama DOM öğelerinin sıklıkla yenilenmesi, çok sayıda düzen ve HTML Ayrıştırma olayına neden olabilir. Bu işi toplu olarak gerçekleştirerek performansı iyileştirebilirsiniz.
 
-### <a name="filter-timeline-details"></a><a name="FilterTimelineDetails"></a>Filtre zaman çizelgesi ayrıntıları
- Belirli bir olay için bağlam menüsünden **etkinliğe Filtre'yi** seçerek zaman çizelgesi ayrıntılarındaki görünümü belirli bir etkinliğe filtreleyebilirsiniz. Bu seçeneği seçtiğinizde, zaman çizelgesi ve ızgara görünümü seçili olay kapsamına alınır. CPU kullanım grafiğindeki seçim, belirli bir olayı da kapsama eder.
+### <a name="filter-timeline-details"></a><a name="FilterTimelineDetails"></a>Zaman çizelgesi ayrıntılarını filtrele
+ Belirli bir olay için bağlam menüsünden **olaya filtrele ' i** seçerek zaman çizelgesi ayrıntılarında görünümü belirli bir olaya filtreleyebilirsiniz. Bu seçeneği belirlediğinizde, zaman çizelgesi ve kılavuz görünümü seçili olaya göre kapsamlandırılır. CPU kullanımı grafiğindeki seçim Ayrıca belirli bir olaya kapsamlar sağlar.
 
  ![Zaman çizelgesini bir olaya filtreleme](../profiling/media/js_htmlvizprofiler_filtertoevent.png "JS_HTMLVizProfiler_FilterToEvent")
 
-### <a name="filter-events"></a><a name="FilterEvents"></a>Olayları filtreleme
- Verilerdeki gürültüyü azaltmak veya performans senaryonuz için ilginç olmayan verileri ortadan kaldırmak için zaman çizelgesi ayrıntıları grafiğinden bazı olayları filtreleyebilirsiniz. Olay adına veya olay süresine veya burada açıklanan belirli filtrelere göre filtre uygulayabilirsiniz.
+### <a name="filter-events"></a><a name="FilterEvents"></a>Olayları Filtrele
+ Verilerdeki paraziti azaltmak veya performans senaryonuz için ilginç olmayan verileri ortadan kaldırmak için zaman çizelgesi ayrıntıları grafiğindeki bazı olayları filtreleyebilirsiniz. Olay adına veya olay süresine göre veya burada açıklanan belirli filtrelere göre filtreleyebilirsiniz.
 
- Görüntü çözme, spekülatif indirme ve GC olaylarını filtrelemek için alt bölmedeki filtre simgesinden **Arka Plan etkinlik** seçeneğini temizleyin. Bu olaylar çok işlem yapılamaz olduğundan, varsayılan olarak gizlenirler.
+ Görüntü kodunu çözme, yansımalı indirme ve GC olaylarını filtrelemek için alt bölmedeki filtre simgesinden **arka plan etkinliği** seçeneğini temizleyin. Bu olaylar çok fazla kullanılabilir olmadığından, varsayılan olarak gizlidir.
 
  ![Zaman çizelgesindeki olayları filtreleme](../profiling/media/js_htmlvizprofiler_event_filter.png "JS_HTMLVizProfiler_Event_Filter")
 
- HTTP istek olaylarını filtrelemek **için, Ağ trafiği** seçeneğini alt bölmedeki filtre simgesinden temizleyin. Varsayılan olarak, bu olaylar zaman çizelgesi ayrıntıları grafiğinde gösterilir.
+ HTTP istek olaylarını filtrelemek için alt bölmedeki filtre simgesinden **ağ trafiği** seçeneğini temizleyin. Varsayılan olarak, bu olaylar zaman çizelgesi ayrıntıları grafiğinde gösterilir.
 
  UI iş parçacığı etkinliğini filtrelemek için **UI etkinlik** seçeneğini temizleyin.
 
 > [!TIP]
-> Bu seçeneği temizleyin ve ağ gecikmesi ile ilgili sorunları araştırmak için Ağ trafiği seçeneğini seçin.
+> Ağ gecikmesinden ilgili sorunları araştırmak için bu seçeneği temizleyin ve ağ trafiği seçeneğini belirleyin.
 
- Kullanıcı ölçülerini filtrelemek için **Kullanıcı ölçüleri** seçeneğini temizleyin. Kullanıcı ölçüleri, çocuksuz üst düzey olaylardır.
+ Kullanıcı ölçülerini filtrelemek için **Kullanıcı ölçüleri** seçeneğini temizleyin. Kullanıcı ölçüleri alt düzey olmayan en üst düzey olaylardır.
 
-### <a name="group-events-by-frame"></a><a name="GroupFrames"></a>Olayları çerçeveye göre gruplandırma
- Zaman çizelgesi ayrıntıları görünümünde görünen olayları tek tek karelere gruplayabilirsiniz. Bu çerçeve olayları araç tarafından oluşturulan olaylardır ve boya olayları arasında oluşan tüm UI iş parçacığı çalışmaları için üst düzey olay kapsayıcılarını temsil eder. Bu görünümü etkinleştirmek için, **en üst düzey olayları çerçevelere göre grupla'yı**seçin.
+### <a name="group-events-by-frame"></a><a name="GroupFrames"></a>Olayları çerçeveye göre Gruplandır
+ Zaman çizelgesi ayrıntıları görünümünde görünen olayları tek tek çerçevelere gruplayabilirsiniz. Bu çerçeve olayları, araç tarafından oluşturulan olaylardır ve boyama olayları arasında gerçekleşen tüm UI iş parçacığı işleri için üst düzey olay kapsayıcılarını temsil eder. Bu görünümü etkinleştirmek için **çerçevelere göre grup üst düzey olayları**' nı seçin.
 
- ![Üst düzey olayları çerçeveye göre gruplandırma](../profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")
+ ![Üst düzey olayları çerçeveye göre Gruplandır](../profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")
 
- Olayları kare olarak grupladığınızda, zaman çizelgesi ayrıntılarındaki üst düzey olaylar her bir kareyi temsil eşar.
+ Olayları çerçeveye göre gruplandırdığınızda, zaman çizelgesi ayrıntıları görünümündeki en üst düzey olaylar bir çerçeveyi temsil eder.
 
- ![Çerçeveye göre gruplanmış zaman çizelgesi olayları](../profiling/media/js_htmlvizprofiler_frame_grouping.png "JS_HTMLVizProfiler_Frame_Grouping")
+ ![Çerçeveye göre gruplandırılmış zaman çizelgesi olayları](../profiling/media/js_htmlvizprofiler_frame_grouping.png "JS_HTMLVizProfiler_Frame_Grouping")
 
-## <a name="save-a-diagnostic-session"></a>Tanılama oturumunu kaydetme
- Visual Studio'da, oturumla ilişkili sekmeyi kapattığınızda bir tanılama oturumu kaydedebilirsiniz. Kaydedilen oturumlar daha sonra yeniden açılabilir.
+## <a name="save-a-diagnostic-session"></a>Tanılama oturumu Kaydet
+ Visual Studio 'da, oturumla ilişkili sekmeyi kapattığınızda bir Tanılama oturumu kaydedebilirsiniz. Kaydedilen oturumlar daha sonra yeniden açılabilir.
 
-## <a name="profiler-event-reference"></a>Profiler olay başvurusu
- Profiler olayları, UI Responsiveness Profiler'da kategorize edilir ve renk kodlanır. Olay kategorileri şunlardır:
+## <a name="profiler-event-reference"></a>Profil Oluşturucu olay başvurusu
+ Profiler olayları, UI yanıtlama hızı Profil Oluşturucusu 'nda kategorilere ayrılmıştır ve renk kodludur. Bunlar olay kategorileridir:
 
-- **Yükleme.** Uygulama kaynaklarını almak ve uygulama ilk yüklendiğinde HTML ve CSS'yi ayrıştırarak harcanan zamanı gösterir. Bu ağ isteklerini içerebilir.
+- **Yükleniyor.** Uygulamanın ilk kez yüklendiği zaman uygulama kaynaklarını alırken ve HTML ve CSS 'yi ayrıştırırken harcanan süreyi belirtir. Bu, ağ isteklerini içerebilir.
 
-- **Komut dosyası.** JavaScript'i ayrıştma ve çalıştırma için harcanan zamanı gösterir. Buna DOM olayları, zamanlayıcılar, komut dosyası değerlendirmesi ve animasyon çerçevesi çalışması dahildir. Hem kullanıcı kodu hem de kitaplık kodunu içerir.
+- **Kullanımı.** JavaScript 'ı ayrıştırmayı ve çalıştırmayı harcanan süreyi belirtir. Bu, DOM olayları, zamanlayıcılar, betik değerlendirmesi ve animasyon çerçevesinin çalışmasını içerir. Hem Kullanıcı kodunu hem de kitaplık kodunu içerir.
 
-- **Gc.** Çöp toplama da harcanan zamanı gösterir.
+- **GC.** Çöp toplama sırasında harcanan süreyi belirtir.
 
-- **Stil.** CSS ayrıştma ve eleman sunusu ve düzeni hesaplamak için harcanan zamanı gösterir.
+- **Sağlayan.** CSS ayrıştırma ve öğe sunumunu ve yerleşimini hesaplama ile harcanan süreyi belirtir.
 
-- **Işleme.** Ekranı boyamak için harcanan zamanı gösterir.
+- **Çizmeye.** Ekranı boyamaya harcanan süreyi belirtir.
 
-- **Görüntü çözme.** Görüntüleri sıkıştırma ve çözme için harcanan zamanı gösterir.
+- **Görüntü kod çözme.** Görüntüleri sıkıştırmayı ve kod çözmede harcanan süreyi belirtir.
 
-  Komut dosyası ve stil kategorileri için, UI Responsiveness Profiler zaman çizelgesi ayrıntıları grafiğinde işlem yapabileceğiniz verileri sağlayabilir. Komut dosyası sorunlarını bir sorun olarak tanımlarsanız, CPU Örnekleme profilleyicisini UI Responsiveness Profiler ile çalıştırabilirsiniz. Alternatif olarak, daha ayrıntılı veri elde etmek için Visual Studio işlev profilleyicisini kullanabilirsiniz. Daha fazla bilgi için [JavaScript Memory'ye](../profiling/javascript-memory.md)bakın.
+  Komut dosyası ve stil oluşturma kategorileri için UI yanıtlama hızı Profil Oluşturucusu, zaman çizelgesi ayrıntıları grafiğinde üzerinde işlem yapmanız gerekebilecek verileri sağlayabilir. Komut dosyası sorunlarını bir sorun olarak belirlerseniz, UI yanıtlama hızı Profil Oluşturucusu ile CPU örnekleme profil oluşturucuyu çalıştırabilirsiniz. Alternatif olarak, daha ayrıntılı veriler elde etmek için Visual Studio Function Profiler 'ı kullanabilirsiniz. Daha fazla bilgi için bkz. [JavaScript hafıza](../profiling/javascript-memory.md).
 
-  Diğer etkinlik kategorileri için, uygulamanıza özellikler eklemekten kaynaklanan platform yan etkilerini tanımlayabilirsiniz, ancak bu gibi durumlarda UI Responsiveness Profiler'ı kullanarak belirli performans sorunlarını çözemeyebilirsiniz.
+  Diğer olay kategorileri için, uygulamanıza özellikler eklemenin sonucu olan platform tarafı etkilerini belirleyebilirsiniz, ancak bu durumlarda UI yanıtlama hızı profil oluşturucuyu kullanarak belirli performans sorunlarını çözemeyebilirsiniz.
 
   Bu tablo olayları ve açıklamalarını gösterir:
 
-|Olay|Olay kategorisi|Oluşur|
+|Olay|Olay kategorisi|Olduğunda gerçekleşir|
 |-----------|--------------------|-----------------|
-|CSS ayrışma|Yükleme|Yeni CSS içeriğiyle karşılaşıldı ve CSS içeriğini ayrışdırmaya çalışıldı.|
-|HTML ayrıştma|Yükleme|Yeni HTML içeriğiyle karşılaşıldı ve içeriği düğümlere ayrıştırmak ve içeriği DOM ağacına eklemek için bir girişimde bulunuldu.|
-|HTTP isteği|Yükleme|DOM'da uzak bir kaynak bulundu veya bir HTTP isteğiyle sonuçlanan bir XMLHttpRequest oluşturuldu.|
-|Spekülatif indirme|Yükleme|Sayfanın HTML içeriği, sonraki kaynaklar için sonraki HTTP isteklerinin hızlı bir şekilde zamanlanabilmesi için gerekli kaynaklar arandı.|
-|Animasyon çerçevesi geri arama işlevi|Betik Oluşturma|Tarayıcı başka bir çerçeve işleyacaktı ve bu uygulama tarafından sağlanan geri arama işlevini tetikledi.|
-|DOM etkinliği|Betik Oluşturma|Bir DOM olayı oluştu ve yürütüldü.<br /><br /> DOM `context` olayının özelliği, parantez `DOMContentLoaded` `click`içinde gösterilir.|
-|Etkinlik dinleyicisi|Betik Oluşturma|Bir olay dinleyicisi çağrıldı ve yürütüldü.|
-|Medya sorgusu dinleyicisi|Betik Oluşturma|Kayıtlı bir ortam sorgusu geçersiz kılındı ve bu da ilişkili dinleyici(ler)in yürütülmesiyle sonuçlandı.|
-|Mutasyon gözlemcisi|Betik Oluşturma|Bir veya daha fazla gözlenen DOM elementi değiştirildi ve bu da Bir MutasyonObserver'ın ilişkili geri çağırmasının yürütülmesiyle sonuçlandı.|
-|Komut dosyası değerlendirmesi|Betik Oluşturma|DOM'da yeni bir SCRIPT öğesi bulundu ve komut dosyasını ayrıştırmak ve yürütmek için bir girişimde bulunuldu.|
-|Zamanlayıcı|Betik Oluşturma|Zamanlanan bir zamanlayıcı geçti ve bu ilişkili geri arama işlevinin yürütülmesi ile sonuçlandı.|
-|Windows Runtime async geri arama fonksiyonu|Betik Oluşturma|Geri arama işlevini tetikleyen `Promise` bir async işlemi, windows runtime nesnesi tarafından tamamlandı.|
-|Windows Runtime etkinliği|Betik Oluşturma|Windows Runtime nesnesi üzerinde meydana gelen bir olay kayıtlı bir dinleyiciyi tetikledi.|
-|Atık toplama|GC|Zaman, artık kullanılmamış nesneler için bellek toplamakla harcandı.|
-|CSS hesaplama|Stil oluşturma|ETKILENEN tüm öğelerin stil özelliklerinin yeniden hesaplanmasını gerektiren DOM'da değişiklikler yapıldı.|
-|Düzen|Stil oluşturma|DOM'da, etkilenen tüm öğelerin boyutunun ve/veya konumunun yeniden hesaplanmasını gerektiren değişiklikler yapıldı.|
-|Boya|İşleme|DOM'da görsel değişiklikler yapıldı ve sayfanın bazı bölümlerini yeniden oluşturma girişiminde bulunuldu.|
-|Katmanı oluşturma|İşleme|Dom'un bağımsız olarak işlenmiş bir parçasında (katman olarak adlandırılır) görsel değişiklikler yapıldı ve değişiklikler sayfanın bir bölümünün işlenmesini gerektiriyordu.|
-|Görüntü çözme|Görüntü Çözme|Bir görüntü DOM'a dahil edildi ve görüntüyü orijinal biçiminden bit map'ine dönüştürmeye ve çözme girişiminde bulunuldu.|
-|Çerçeve|Yok|DOM'da, sayfanın etkilenen tüm bölümlerinin yeniden çizilmesi ni gerektiren görsel değişiklikler yapıldı. Bu, gruplandırma için kullanılan bir araç tarafından oluşturulan olaydır.|
-|Kullanıcı ölçüsü|Yok|Yöntem kullanılarak `performance.measure` uygulamaya özgü bir senaryo ölçüldü. Bu, kodu çözümleme için kullanılan araç tarafından oluşturulan bir olaydır.|
+|CSS ayrıştırma|Yükleniyor|Yeni CSS içeriğiyle karşılaşıldı ve CSS içeriğini ayrıştırmak için bir girişimde bulunuldu.|
+|HTML Ayrıştırma|Yükleniyor|Yeni HTML içeriğine rastlandı ve içeriği düğümlere ayrıştırmak ve içeriği DOM ağacına eklemek için bir girişimde bulunuldu.|
+|HTTP isteği|Yükleniyor|DOM 'da uzak bir kaynak bulundu veya bir HTTP isteği ile sonuçlanan bir XMLHttpRequest oluşturuldu.|
+|Yansımalı indirme|Yükleniyor|Kaynakların sonraki HTTP isteklerinin hızla zamanlanabilmesi için sayfanın HTML içeriği gerekli kaynaklar için arandı.|
+|Animasyon çerçevesi geri çağırma işlevi|Betik Oluşturma|Tarayıcı başka bir çerçeve işlemeye gidiyor ve bu, uygulama tarafından sağlanmış bir geri çağırma işlevi tetikledi.|
+|DOM olayı|Betik Oluşturma|DOM olayı gerçekleşti ve yürütüldü.<br /><br /> `context`Veya gıbı Dom olayının özelliği `DOMContentLoaded` `click` parantez içinde gösterilir.|
+|Olay dinleyicisi|Betik Oluşturma|Bir olay dinleyicisi çağrıldı ve yürütüldü.|
+|Medya sorgusu dinleyicisi|Betik Oluşturma|Kayıtlı bir medya sorgusu geçersiz kılındı ve bu, ilişkili dinleyicisinin yürütülmesine neden oldu.|
+|Mutasyon gözlemcisi|Betik Oluşturma|Bir veya daha fazla gözlemlenen DOM öğesi değiştirilmiştir ve bu da bir değiştirici ile ilgili geri aramanın yürütülmesine neden olur.|
+|Betik değerlendirmesi|Betik Oluşturma|DOM 'da yeni bir BETIK öğesi bulundu ve betiği ayrıştırmak ve yürütmek için bir girişimde bulunuldu.|
+|Zamanlayıcı|Betik Oluşturma|Zamanlanmış bir zamanlayıcı süresi geçti ve bu, ilişkili geri çağırma işlevinin yürütülmesine neden oldu.|
+|Zaman uyumsuz geri çağırma işlevini Windows Çalışma Zamanı|Betik Oluşturma|Bir geri çağırma işlevini tetikleyen zaman uyumsuz bir işlem `Promise` , Windows çalışma zamanı nesnesi tarafından tamamlandı.|
+|Windows Çalışma Zamanı olayı|Betik Oluşturma|Bir Windows Çalışma Zamanı nesnesinde gerçekleşen bir olay kayıtlı bir dinleyiciyi tetikledi.|
+|Atık toplama|GC|Artık kullanımda olmayan nesneler için bellek toplanırken harcanan zaman.|
+|CSS hesaplama|Stil oluşturma|DOM 'da, etkilenen tüm öğelerin stil özelliklerinin yeniden hesaplanmasını gerektiren değişiklikler yapıldı.|
+|Layout|Stil oluşturma|DOM 'da, etkilenen tüm öğelerin boyutunun ve/veya konumunun yeniden hesaplanmasını gerektiren değişiklikler yapıldı.|
+|Boyayın|İşleme|DOM 'da görsel değişiklikler yapıldı ve sayfanın bölümlerini yeniden oluşturma girişiminde bulunuldu.|
+|İşleme katmanı|İşleme|DOM 'ın bağımsız olarak işlenmiş bir parçasında (katman olarak adlandırılır) görsel değişiklikler yapılmıştır ve değişiklikler, sayfanın işlenmesi için gereken bir kısmı gerektirdi.|
+|Görüntü kod çözme|Görüntü kod çözme|DOM 'a bir görüntü eklenmiştir ve görüntünün özgün biçiminden bit eşlemle bir bit eşlem haline getirilme ve kodu çözme girişiminde bulunuldu.|
+|Çerçeve|Yok|DOM 'da, etkilenen tüm bölümlerin yeniden çizilmesini gerektiren görsel değişiklikler yapıldı. Bu, gruplamak için kullanılan bir araç tarafından oluşturulan olaydır.|
+|Kullanıcı ölçümü|Yok|Yöntemi kullanılarak uygulamaya özel bir senaryo ölçüldü `performance.measure` . Bu, kodu çözümlemek için kullanılan araç tarafından oluşturulan bir olaydır.|
 
 ## <a name="additional-information"></a>Ek bilgiler
 
-- UI Responsiveness Profiler hakkındaki Build 2013 konferansındaki [bu videoyu](https://channel9.msdn.com/Events/Build/2013/3-316) izleyin.
+- UI yanıtlama hızı Profil Oluşturucusu hakkında [Bu videoyu](https://channel9.msdn.com/Events/Build/2013/3-316) Build 2013 konferansında izleyin.
 
-- JavaScript kullanarak Windows için oluşturulmuş UWP uygulamaları için performans ipuçlarını okuyun. Daha fazla bilgi için [JavaScript kullanarak UWP uygulamaları için en iyi Performansı'na](/previous-versions/windows/apps/hh465194\(v\=win.10\))bakın.
+- JavaScript kullanarak Windows için tasarlanan UWP uygulamalarına yönelik performans ipuçlarını okuyun. Daha fazla bilgi için bkz. [JavaScript kullanarak UWP uygulamaları için En Iyi performans uygulamaları](/previous-versions/windows/apps/hh465194\(v\=win.10\)).
 
-- Tek iş parçacığı kod yürütme modeli ve performansı hakkında bilgi için [yürütme koduna](/previous-versions/windows/apps/hh781217\(v\=win.10\))bakın.
+- Tek iş parçacıklı kod yürütme modeli ve performansı hakkında bilgi için bkz. [kod](/previous-versions/windows/apps/hh781217\(v\=win.10\))yürütme.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)

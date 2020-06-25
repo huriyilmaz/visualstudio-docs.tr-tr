@@ -1,7 +1,7 @@
 ---
-title: CvLeaveSpan Fonksiyonu | Microsoft Dokümanlar
+title: CvLeaveSpan Işlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvLeaveSpan
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 776c24777403b9d88de31e11d0c28fe104666600
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 113d6aafbd09f6b726613405a8c1eb82f9e202e5
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62974123"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85330039"
 ---
-# <a name="cvleavespan-function"></a>CvLeaveSpan fonksiyonu
-Açık aralığının sonunu işaretler.
+# <a name="cvleavespan-function"></a>CvLeaveSpan işlevi
+Yayılımın sonunu işaretler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C
 HRESULT CvLeaveSpan(
@@ -31,13 +31,13 @@ HRESULT CvLeaveSpan(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pSpan`Önceki aramayla CvEnterSpan*'a döndürülen yayılma nesnesi. NULL olamaz.
+ `pSpan`Önceki CvEnterSpan * çağrısıyla döndürülen span nesnesi. NULL olamaz.
 
 ## <a name="return-value"></a>Dönüş Değeri
- İleti başarılı bir şekilde yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
+ İleti başarıyla yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üstbilgi:** *cvmarkers.h*
+ **Üst bilgi:** *cvişaretleyiciler. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)
+- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

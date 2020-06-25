@@ -1,7 +1,7 @@
 ---
-title: cvcreatedefaultmarkerseriesofdefaultprovider fonksiyonu | Microsoft Dokümanlar
+title: CvCreateDefaultMarkerSeriesOfDefaultProvider Işlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvCreateDefaultMarkerSeriesOfDefaultProvider
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a13174b2991b7c69535a6d1910f761890397818
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 560ecc3d66dc2bc84d2ef301654b392aee6a42b4
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62552700"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332220"
 ---
-# <a name="cvcreatedefaultmarkerseriesofdefaultprovider-function"></a>CvCreateDefaultMarkerSeriesOfDefaultProvider fonksiyonu
-Varsayılan sağlayıcının varsayılan işaretçi dizisini oluşturur.
+# <a name="cvcreatedefaultmarkerseriesofdefaultprovider-function"></a>CvCreateDefaultMarkerSeriesOfDefaultProvider işlevi
+Varsayılan bir sağlayıcının varsayılan işaretleyici serisini oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C
 HRESULT CvCreateDefaultMarkerSeriesOfDefaultProvider(
@@ -34,13 +34,13 @@ HRESULT CvCreateDefaultMarkerSeriesOfDefaultProvider(
 #### <a name="parameters"></a>Parametreler
  `ppProvider`Sağlayıcı nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
 
- `ppMarkerSeries`Marker serisi nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
+ `ppMarkerSeries`İşaretleyici serisi nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
 
 ## <a name="return-value"></a>Döndürülen değer
- Herhangi bir hata olması durumunda hem sağlayıcı hem de işaretçi serisi başarıyla oluşturulduğunda veya hata kodu S_OK. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
+ Hem sağlayıcı hem de işaretleyici serisi başarıyla oluşturulduğunda S_OK ya da herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üstbilgi:** *cvmarkers.h*
+ **Üst bilgi:** *cvişaretleyiciler. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)
+- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)
