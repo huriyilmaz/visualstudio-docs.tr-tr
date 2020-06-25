@@ -1,5 +1,5 @@
 ---
-title: MSBuild Gelişmiş Kavramlar | Microsoft Dokümanlar
+title: MSBuild gelişmiş kavramları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,29 +10,30 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f013464143929732da409f5dd9684ed73bcc705
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 56d3267e0c96747a9534f390191e9f8a84effdb8
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633453"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289293"
 ---
-# <a name="msbuild-advanced-concepts"></a>MSBuild gelişmiş kavramlar
+# <a name="msbuild-advanced-concepts"></a>MSBuild gelişmiş kavramları
 
-Bu bölümdeki belgeler, MSBuild kullanarak çalıştırdığınız yapıları geliştirmek için gelişmiş tekniklerin nasıl kullanılacağını açıklar.
+Bu bölümdeki belgeler, MSBuild kullanarak çalıştırdığınız derlemeleri geliştirmek için gelişmiş tekniklerin nasıl kullanılacağını açıklamaktadır.
 
 ## <a name="related-topics"></a>İlgili konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[İşlem grubu oluşturma](../msbuild/msbuild-batching.md)|Madde meta verilerine dayalı olarak hedeflerin ve görevlerin toplu oluşturma nasıl yapılacağını açıklar.|
-|[Dönüştürmeler](../msbuild/msbuild-transforms.md)|Bağımlılık çözümlemesini etkinleştirmek için dönüşümlerin nasıl kullanılacağını açıklar.|
-|[Visual Studio ile tümleştirme](../msbuild/visual-studio-integration-msbuild.md)|Visual Studio IDE'den kod derlediğinizde MSBuild proje dosyalarının nasıl kullanılacağını tartışır.|
-|[Paralel olarak birden çok proje oluşturma](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)|Birden çok işlemcisi veya çok çekirdekli işlemcisi olan bilgisayarlarda birden çok projenin nasıl daha hızlı oluşturulabildiğini açıklar.|
-|[Çoklu Sürüm Desteği](../msbuild/msbuild-multitargeting-overview.md)|.NET Framework'ün çeşitli sürümlerinden herhangi birinde çalışacak bir uygulamanın nasıl derlenebildiğini açıklar.|
-|[En iyi uygulamalar](../msbuild/msbuild-best-practices.md)|MSBuild komut dosyalarını yazmak için en iyi uygulamaları önerir.|
+|[Toplu İşleme](../msbuild/msbuild-batching.md)|Öğe meta verilerine göre hedeflerin ve görevlerin toplu olarak nasıl oluşturulacağını açıklar.|
+|[Dönüştürmeler](../msbuild/msbuild-transforms.md)|Bağımlılık analizini etkinleştirmek için dönüşümlerin nasıl kullanılacağını açıklar.|
+|[Visual Studio ile tümleştirme](../msbuild/visual-studio-integration-msbuild.md)|Visual Studio IDE 'den kod derlerken MSBuild proje dosyalarının nasıl kullanılacağını açıklar.|
+|[Paralel olarak birden çok proje oluşturun](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)|Birden çok işlemciyi veya çok birimli işlemciyi olan bilgisayarlarda birden çok projenin daha hızlı bir şekilde nasıl oluşturulacağını açıklar.|
+|[Çoklu sürüm desteği](../msbuild/msbuild-multitargeting-overview.md)|.NET Framework çeşitli sürümlerinden herhangi birinde çalıştırmak için bir uygulamanın nasıl derleneceğini açıklar.|
+|[En iyi uygulamalar](../msbuild/msbuild-best-practices.md)|MSBuild betikleri yazmak için en iyi yöntemleri önerir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
 - [MSBuild'de Günlük Kaydı](../msbuild/logging-in-msbuild.md)
+- [MSBuild 'in projeleri nasıl oluşturur](build-process-overview.md)

@@ -1,7 +1,7 @@
 ---
-title: 'DA0010: Pahalı GetHashCode | Microsoft Dokümanlar'
+title: DA0010-pahalı GetHashCode | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.rules.DAExpensiveGetHashCode
 - vs.performance.DA0010
@@ -14,28 +14,28 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ce982c7a98fd12749c66c89e47bd895d2fb6a5d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e94e30281163a9834453a14ca8900da616a6b884
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74777692"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328204"
 ---
 # <a name="da0010-expensive-gethashcode"></a>DA0010: Pahalı GetHashCode
 
 |||
 |-|-|
-|Kural Id|DA0010|
-|Kategori|.NET Çerçeve Kullanımı|
-|Profil oluşturma yöntemleri|Örnekleme<br /><br /> .NET Bellek|
-|İleti|GetHashCode işlevleri ucuz olmalı ve herhangi bir bellek ayırmamalıdır. Mümkünse karma kod işlevinin karmaşıklığını azaltın.|
+|Kural kimliği|DA0010|
+|Kategori|.NET Framework kullanımı|
+|Profil oluşturma yöntemleri|Örnekleme<br /><br /> .NET belleği|
+|İleti|GetHashCode işlevleri bir tek EAP olmalı ve herhangi bir bellek ayırmamalıdır. Mümkünse karma kod işlevinin karmaşıklığını azaltın.|
 |Mesaj türü|Uyarı|
 
 ## <a name="cause"></a>Nedeni
- Türünün GetHashCode yöntemine yapılan aramalar, profil oluşturma verilerinin önemli bir kısmıdır veya yöntem bellek ayırır.
+ Türün GetHashCode yöntemine yapılan çağrılar, profil oluşturma verilerinin önemli bir oranıyla veya yöntemin belleği ayırır.
 
 ## <a name="rule-description"></a>Kural açıklaması
- Karma, büyük bir koleksiyondaki belirli bir öğeyi hızla bulmak için bir tekniktir. Karma tablolar büyük olabileceğinden ve çok yüksek erişim oranlarını desteklemesi gerektiğinden, karma tablolar verimli olmalıdır. Bu gereksinimin bir sonucu da.NET Framework'deki GetHashCode yöntemlerinin bellek ayırmamasıdır. Bellek ayırma, çöp toplayıcıüzerindeki yükü artırır ve ayırma isteği sonucunda çöp toplamanın çalıştırılaması gerekli hale gelirse yöntemi olası gecikmelere maruz bırakır.
+ Karma, büyük bir koleksiyondaki belirli bir öğeyi hızlı bir şekilde bulmanın bir tekniğidir. Karma tabloları büyük olabileceğinden ve çok yüksek erişim fiyatlarını desteklemesi gerektiğinden, karma tabloların etkili olması gerekir. Bu gereksinimin bir engel, .NET Framework GetHashCode yöntemlerinin bellek ayırmamalıdır. Bellek ayırma, atık toplayıcıdaki yükü artırır ve ayırma isteğinin sonucu olarak çöp toplamayı çalıştırmak için gerekli hale gelirse, olası gecikmelerle yöntemi ortaya çıkarır.
 
-## <a name="how-to-fix-violations"></a>İhlalleri düzeltme
- Yöntemin karmaşıklığını azaltın.
+## <a name="how-to-fix-violations"></a>İhlalleri çözme
+ Metodun karmaşıklığını azaltın.

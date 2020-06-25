@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl Yapılır: Ön ve Post-Enstrüman Komutlarını Belirt | Microsoft Dokümanlar'
+title: Nasıl yapılır-ve araç sonrası komutları belirtme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.property.instrument
 helpviewer_keywords:
@@ -15,60 +15,60 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 22ad5558ed01e5bb1b8d12b7a4cc65b4d677d0cd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ba91e04342b9b78e3c6acae5296857a6f00f2aba
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778719"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328997"
 ---
-# <a name="how-to-specify-pre--and-post-instrument-commands"></a>Nasıl yapılır: Enstrüman öncesi ve sonrası komutları belirtin
+# <a name="how-to-specify-pre--and-post-instrument-commands"></a>Nasıl yapılır: ön ve araç sonrası komutları belirtme
 
-Performans oturumundaki ikililerden önce veya sonra çalışan komutları belirtebilirsiniz. Komut satırından verilebilecek herhangi bir komut bir ön enstrüman veya bir enstrüman sonrası olay olarak belirtilebilir. Örneğin, ikili araçlar enstrümante edildikten sonra yürütülen toplu iş dosyasında güçlü bir ad anahtarıyla bir derlemenin istifasını otomatikleştiren komutlar belirtebilirsiniz.
+Bir performans oturumunda ikili dosyalardan önce veya sonra çalıştırılan komutlar görüntülenir. Komut satırından verilebileceğiniz herhangi bir komut, bir ön izleme veya bir işaretleme sonrası olay olarak belirtilebilir. Örneğin, ikili dosyalar görüntülendikten sonra yürütülen bir toplu iş dosyasında tanımlayıcı ad anahtarı olan bir derlemenin çekilişini otomatikleştiren komutları belirtebilirsiniz.
 
-Profil oluşturma çalışmasındaki tüm enstrümantasyonlu ikililer veya tek tek ikililer için komutlar belirtebilirsiniz. Ancak, önce çalıştırmak için yalnızca bir ön enstrüman komutu ve enstrümantasyon işleminden sonra çalıştırmak için yalnızca bir post-enstrüman komutu belirtebilirsiniz. Hem tüm ikililer hem de tek tek ikililer için komutlar belirtemezsiniz. Tüm ikililer için komutları belirttiğiniz zaman, komutlar oturumdaki her ikilinin enstrümantasyonundan önce veya sonra çalıştırılır.
+Profil oluşturma çalıştırmasında veya tek tek ikili dosyalarda tüm belgelenmiş ikili dosyalar için komutlar belirtebilirsiniz. Ancak, daha önce çalıştırmak için yalnızca bir pre-Instrument komutu ve izleme işleminden sonra çalıştırılacak bir araç sonrası komutu belirtebilirsiniz. Tüm ikili dosyalar için ve tek tek ikililer için komut belirtemezsiniz. Tüm ikili dosyalar için komutlar belirttiğinizde, komutlar oturumdaki her bir ikilinin izleme öncesi veya sonrasında çalıştırılır.
 
-Komutların yürütüldüğü çalışma dizini, çalıştığınız [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] işletim sistemine ve profilli uygulamanın hedef platformuna bağlıdır.
+Komutların yürütüldüğü çalışma dizini, çalıştırdığınız işletim sistemine [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] ve profili oluşturulmuş uygulamanın hedef platformunda değişir.
 
-Profil oluşturma araçlarına giden yolu almak [için](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)bkz.
+Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
 
-## <a name="to-specify-pre-instrument-commands"></a>Ön enstrüman komutlarını belirtmek için
-
-1. Aşağıdaki adımlardan birini uygulayın:
-
-    - Performans oturumundaki tüm ikililer için ön enstrüman komutları belirtmek **için, Performans Gezgini'ndeki**performans oturumu düğümünü seçin ve ardından Sağ tıklatın ve **Özellikler'i**seçin.
-
-    - Belirli bir ikili için ön enstrüman komutları belirtmek için, performans oturumunun **Hedefler** listesinde ikilinin adını sağ tıklatın ve ardından **Özellikler'i**seçin.
-
-2. Özellik **Sayfalarında**, **Enstrümantasyon'u**tıklatın.
-
-3. Komut **satırı** metin kutusuna **Ön Enstrüman olaylarının**altına komutu yazın.
-
-    > [!NOTE]
-    > Komut **satırı** kutusuna göz atmak ve uygun .exe, .cmd veya .bat dosyasını seçmek için bitişik olan elips düğmesini **(...)** tıklatabilirsiniz.
-
-4. **Tamam**'a tıklayın.
-
-     Komutu çıkarmadan çalışmasını engellemek için **enstrümantasyon onay kutusundan Dışla'yı** seçin. Derleyici veya bağlayıcı ayarlarını değiştirmek için proje özelliği sayfalarını kullanın.
-
-## <a name="to-specify-post-instrument-commands"></a>Enstrüman sonrası komutları belirtmek için
+## <a name="to-specify-pre-instrument-commands"></a>Araç öncesi komutları belirtmek için
 
 1. Aşağıdaki adımlardan birini uygulayın:
 
-    - Performans oturumundaki tüm ikililer için enstrüman sonrası komutları belirtmek **için, Performans Gezgini'ndeki**performans oturumu düğümünü seçin ve ardından Sağ tıklatın ve **Özellikler'i**seçin.
+    - Bir performans oturumunda tüm ikili dosyalar için ön gereç komutlarını belirtmek üzere **Performans Gezgini**' deki performans oturumu düğümünü seçin ve ardından **Özellikler**' i seçin.
 
-    - Belirli bir ikili için enstrüman sonrası komutları belirtmek için, performans oturumunun **Hedefler** listesinde ikilinin adını sağ tıklatın ve ardından **Özellikler'i**seçin.
+    - Belirli bir ikiliye ilişkin ön gereç komutlarını belirtmek için, performans oturumunun **hedefler** listesinden ikilinin adına sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-2. Özellik **Sayfalarında**, **Enstrümantasyon'u**tıklatın.
+2. **Özellik sayfalarında**, **izleme**' ye tıklayın.
 
-3. **Post-Instrument olayları**altında **Komut satırı** metin kutusuna komutu yazın.
+3. Komut **satırı** metin kutusuna komutu, **önceden işaretleme olayları**altında yazın.
 
     > [!NOTE]
-    > Komut **satırı** kutusuna göz atmak ve uygun .exe, .cmd veya .bat dosyasını seçmek için bitişik olan elips düğmesini **(...)** tıklatabilirsiniz.
+    > **Komut satırı** kutusunun yanındaki üç nokta düğmesini **(...)** tıklatarak uygun. exe,. cmd veya. bat dosyasına gözatıp seçebilirsiniz.
 
 4. **Tamam**'a tıklayın.
 
-     Komutu çıkarmadan çalışmasını engellemek için **enstrümantasyon onay kutusundan Dışla'yı** seçin. Derleyici veya bağlayıcı ayarlarını değiştirmek için proje özelliği sayfalarını kullanın.
+     Komutun kaldırılmadan çalıştırılmasını devre dışı bırakmak için, **araçlardan Dışla** onay kutusunu seçin. Derleyici veya bağlayıcı ayarlarını değiştirmek için, proje özelliği sayfalarını kullanın.
+
+## <a name="to-specify-post-instrument-commands"></a>Araç sonrası komutları belirtmek için
+
+1. Aşağıdaki adımlardan birini uygulayın:
+
+    - Bir performans oturumunda tüm ikili dosyalar için araç sonrası komutları belirtmek için **Performans Gezgini**' deki performans oturumu düğümünü seçin ve ardından **Özellikler**' i seçin.
+
+    - Belirli bir ikiliye yönelik son araç komutlarını belirtmek için, performans oturumunun **hedefler** listesinden ikilinin adına sağ tıklayın ve ardından **Özellikler**' i seçin.
+
+2. **Özellik sayfalarında**, **izleme**' ye tıklayın.
+
+3. Komut **satırı** metin kutusuna komutu, **son izleme olayları**altında yazın.
+
+    > [!NOTE]
+    > **Komut satırı** kutusunun yanındaki üç nokta düğmesini **(...)** tıklatarak uygun. exe,. cmd veya. bat dosyasına gözatıp seçebilirsiniz.
+
+4. **Tamam**'a tıklayın.
+
+     Komutun kaldırılmadan çalıştırılmasını devre dışı bırakmak için, **araçlardan Dışla** onay kutusunu seçin. Derleyici veya bağlayıcı ayarlarını değiştirmek için, proje özelliği sayfalarını kullanın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl Yapılsın: Geçerli Oturumu Ayarlama | Microsoft Dokümanlar'
+title: Nasıl yapılır-geçerli oturumu ayarlama | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - current performance sessions
 - Performance Explorer, selecting sessions
@@ -16,28 +16,28 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 70f33888be5097d2682133cda363099bb815c5b0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: eb60a431ae1fd1f6d44b8aa1477d74705eb532d7
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778758"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328365"
 ---
 # <a name="how-to-set-the-current-session"></a>Nasıl yapılır: Geçerli oturumu ayarlama
 
-**Performans Gezgini'nde**birden çok performans oturumu açabilir ve ardından geçerli oturum olarak ayarlanacak görünür performans oturumlarından birini seçebilirsiniz.
+**Performans Gezgini**birden çok performans oturumu açabilir ve ardından geçerli oturum olarak ayarlanacak görünür performans oturumlarından birini seçebilirsiniz.
 
-Bir oturumu geçerli oturum olarak ayarladıktan sonra, **Performans Gezgini** araç çubuğunda **Başlat'ı** tıklattığınızda geçerli oturumun profilini çıkarmaya başlar.
+Geçerli oturum olarak bir oturum ayarladıktan sonra, **Performans Gezgini** araç çubuğunda **Başlat** ' a tıklamak geçerli oturumun profilini oluşturmaya başlar.
 
 ## <a name="to-set-current-performance-session"></a>Geçerli performans oturumunu ayarlamak için
 
-- **Performans Gezgini'nde,** performans oturumuna sağ tıklayın ve ardından Geçerli Oturum **Olarak Ayarla'yı**tıklatın.
+- **Performans Gezgini**, performans oturumuna sağ tıklayın ve ardından **geçerli oturum olarak ayarla**' ya tıklayın.
 
-     Oturum adı kalın görünür.
+     Oturum adı kalın olarak görünür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Performans oturumlarını](../profiling/configuring-performance-sessions.md)
-yapılandırma[Performans Gezgini penceresi](../profiling/performance-explorer-window.md)
-[Performans oturumu özellikleri](../profiling/performance-session-properties.md)
-[Performans oturumuna genel bakış](../profiling/performance-session-overview.md)
+[Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md) 
+ [Performans Gezgini penceresi](../profiling/performance-explorer-window.md) 
+ [Performans oturumu özellikleri](../profiling/performance-session-properties.md) 
+ [Performans oturumuna genel bakış](../profiling/performance-session-overview.md)

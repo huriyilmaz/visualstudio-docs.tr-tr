@@ -1,7 +1,7 @@
 ---
-title: 'DA0017: Diske aktif bellek sayfalama yüksek oranları | Microsoft Dokümanlar'
+title: DA0017-yüksek oranda diske etkin bellek sayfalaması | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.performance.17
 - vs.performance.rules.DA0017
@@ -13,40 +13,40 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 87e7c6b2d94602eca9e81098bb50bd0330b2bcd9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: dfaeedc52e7d6b2888415200e7dccf258fa96d5c
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779395"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85327954"
 ---
-# <a name="da0017-high-rates-of-paging-active-memory-to-disk"></a>DA0017: Yüksek oranda diske etkin bellek sayfalaması gerçekleşiyor.
+# <a name="da0017-high-rates-of-paging-active-memory-to-disk"></a>DA0017: Yüksek oranda diske etkin bellek sayfalaması
 
 |||
 |-|-|
-|Kural Id|DA0017|
-|Kategori|Bellek ve Sayfalama|
+|Kural kimliği|DA0017|
+|Kategori|Bellek ve disk belleği|
 |Profil oluşturma yöntemi|Tümü|
-|İleti|Diske yüksek bir arama etkin bellek oranı oluşuyor. Uygulamanız belleğe bağlı olabilir.|
+|İleti|Yüksek oranda diske etkin bellek sayfalaması gerçekleşiyor. Uygulamanız bellek ile bağlantılı olabilir.|
 |Kural türü|Bilgi|
 
- Örnekleme, .NET bellek veya kaynak çekişme yöntemlerini kullanarak profil yaptığınızda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
+ Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.
 
 ## <a name="cause"></a>Nedeni
- Profil oluşturma çalışmasında toplanan sistem performans verileri, profil oluşturma çalışması boyunca diske ve diskten gelen yüksek oranda etkin bellek oluşturma nın gerçekleştiğini gösterir. Bu düzeyde ki sayfalama oranları normalde uygulama performansını ve yanıt verme yeteneğini etkileyecektir. Algoritmaları gözden geçirerek bellek ayırmalarını azaltmayı düşünün. Uygulamanızın bellek gereksinimlerini de göz önünde bulundurmanız gerekebilir.
+ Profil oluşturma çalıştırmasında toplanan sistem performansı verileri, profil oluşturma çalıştırmasında yüksek oranda diske ve diskten etkin bellek sayfalaması olduğunu gösterir. Bu düzeydeki disk belleği ücretleri normalde uygulama performansını ve yanıt hızını etkiler. Algoritmaların yeniden gözden geçirerek bellek ayırmalarını azaltmayı göz önünde bulundurun. Ayrıca, uygulamanızın bellek gereksinimlerini dikkate almanız gerekebilir.
 
 ## <a name="rule-description"></a>Kural açıklaması
 
 > [!NOTE]
-> Etkin belleğin sayfalama düzeyleri önemli miktarda ulaştığında bu bilgilendirme kuralı yangınları. Son derece yüksek düzeyde sayfalama oluştuğunda, uyarı kuralı [DA0014: Bunun yerine disk yangınlarına etkin bellek sayfalama son derece yüksek oranlarda.](../profiling/da0014-extremely-high-rates-of-paging-active-memory-to-disk.md)
+> Bu bilgilendirme kuralı, etkin belleğin sayfalama düzeyleri önemli bir miktara ulaştığında ateşlenir. Son derece yüksek düzeyde bir sayfalama gerçekleştiğinde, uyarı kuralı [DA0014: çok yüksek oranda diske etkin bellek sayfalaması](../profiling/da0014-extremely-high-rates-of-paging-active-memory-to-disk.md) , bunun yerine başlatılır.
 
- Diske aşırı çağrıda lama, fiziksel bellek yetersizliğinden kaynaklanabilir. Sayfalama işlemleri, sayfalama dosyasının bulunduğu fiziksel diskin kullanımına hakimse, uygulama yönelimli diğer disk işlemlerini aynı diske yavaşlatabilir.
+ Disk üzerinde aşırı sayfalama, fiziksel belleğin yetersizliğinden kaynaklanabilir. Sayfalama işlemleri disk belleği dosyasının bulunduğu fiziksel disk kullanıyorsa, diğer uygulama odaklı disk işlemlerini aynı diske düşürebilir.
 
- Sayfalar genellikle diskten okunur veya toplu sayfalama işlemlerinde diske yazılır. Sayfa Çıktısı/sn sayısı genellikle Sayfa Yazma/sn sayısından çok daha büyüktür. Çünkü Pages Output/sn, sistem dosyası önbelleğinden değiştirilen veri sayfalarını da içerir. Ancak, hangi işlemin doğrudan sayfalama veya neden sorumlu olduğunu belirlemek her zaman kolay değildir.
+ Sayfalar çoğunlukla diskten okur veya toplu sayfalama işlemlerinde diske yazılır. Çıkış/sn sayısı, genellikle sayfa yazma/sn sayısından çok daha büyük (örneğin,). Sayfa çıktısı/sn aynı zamanda sistem dosyası önbelleğinden değiştirilen veri sayfalarını da içerdiğinden. Ancak, sayfalama veya neden tarafından hangi işlemin doğrudan sorumlu olduğunu belirlenmesi her zaman kolay değildir.
 
-## <a name="how-to-fix-violations"></a>İhlalleri düzeltme
- [Markalar](../profiling/marks-view.md) görünümüne gitmek için Hata Listesi penceresindeki iletiyi çift tıklatın. **Bellek\Sayfalar/sn** sütununa bakın. Sayfalama IO etkinliğinin diğerlerinden daha ağır olduğu program yürütmesinin belirli aşamaları olup olmadığını belirleyin.
+## <a name="how-to-fix-violations"></a>İhlalleri çözme
+ [İşaretler](../profiling/marks-view.md) görünümüne gitmek için hata Listesi penceresindeki iletiye çift tıklayın. **Bellek \ Sayfa/sn** sütununu bulun. Sayfalama GÇ etkinliğinin diğerlerinden daha ağır olduğu belirli program yürütme aşamaları olup olmadığını belirleme.
 
- Bir ASP.NET uygulaması için profil verilerini bir yük testi senaryosunda topluyorsanız, ek fiziksel bellekle (veya RAM) yapılandırılan bir makinede yük testini yeniden çalıştırmayı deneyin.
+ Yük testi senaryosunda bir ASP.NET uygulamasının profil verilerini topıyorsanız, yük testini ek fiziksel bellekle (veya RAM) yapılandırılmış bir makinede yeniden çalıştırmayı deneyin.
 
- Algoritmaları gözden geçirerek ve String.Concat ve String.Substring gibi bellek yoğun API'lerden kaçınarak bellek ayırmalarını azaltmayı düşünün.
+ Algoritmaları yeniden düzenleyerek ve String. Concat ve String. Substring gibi bellek kullanımı yoğun API 'lerden kaçınarak bellek ayırmalarını azaltmayı göz önünde bulundurun.

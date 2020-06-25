@@ -1,75 +1,75 @@
 ---
-title: CPU kullanımını analiz et | Microsoft Dokümanlar
+title: CPU kullanımını çözümle | Microsoft Docs
 ms.custom: seodec18
 ms.date: 04/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 88272af1733dbbaf7f46743388a8ecb6522e9f1a
-ms.sourcegitcommit: 9c1cecaff4d9955276eee7865b78d47679dd1e2a
+ms.openlocfilehash: b372e0f30c91a605be047e921bc2b7672a1cf468
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80638832"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329437"
 ---
 # <a name="analyze-cpu-usage"></a>CPU kullanımını analiz etme
 
-Uygulamanızdaki performans sorunlarını araştırmaya başlamanın iyi bir yolu, uygulamanın CPU kullanımını anlamaktır. **CPU Kullanımı** performans aracı, C++, C#/Visual Basic ve JavaScript uygulamalarında kod yürütme için harcanan CPU süresini ve yüzdesini gösterir.
+Uygulamanızdaki performans sorunlarını araştırmaya başlamak için iyi bir yöntem, CPU kullanımını anlamaktır. **CPU kullanımı** performans aracı, C++, C#/Visual Basic ve JavaScript uygulamalarında kod ÇALıŞTıRıRKEN harcanan CPU süresini ve yüzdesini gösterir.
 
-**CPU Kullanımı** aracı açık bir Visual Studio projesinde, yüklü bir Microsoft Mağazası uygulamasında veya çalışan bir uygulamaya veya işleme bağlı olarak çalıştırılabilir. Daha fazla bilgi için [bkz.](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
+**CPU kullanımı** aracı açık bir Visual Studio projesi üzerinde, yüklü bir Microsoft Store uygulamasında veya çalışan bir uygulamaya veya işleme bağlı olarak çalışabilir. Daha fazla bilgi için bkz. [hata ayıklayıcı ile veya olmayan profil oluşturma araçlarını çalıştırma](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-**Cpu Kullanım** aracını hata ayıklama ile veya hata ayıklama olmadan çalıştırabilirsiniz. Hata ayıklamada, CPU profil oluşturmayı açıp kapatabilir ve CPU kullanımının işlev başına dökümünü görebilirsiniz. Yürütme duraklatıldığında, örneğin bir kesme noktasında CPU kullanım sonuçlarını görüntüleyebilirsiniz.
+**CPU kullanımı** aracını hata ayıklama olmadan veya olmadan çalıştırabilirsiniz. Hata ayıklayıcıda, CPU profil oluşturmayı açıp kapatabilir ve CPU kullanımı için işlev başına dökümünü görebilirsiniz. Yürütme duraklatıldığında, örneğin bir kesme noktasında CPU kullanım sonuçlarını görüntüleyebilirsiniz.
 
-Aşağıdaki yönergeler, Visual Studio **Performance Profiler'ı**kullanarak cpu **kullanım** aracının hata ayıklayıcısı olmadan nasıl kullanılacağını gösterir. Örnekler, yerel bir makine de Sürüm oluşturma yı kullanır. Sürüm oluşturmaları, gerçek uygulama performansının en iyi görünümünü sağlar. Cpu kullanımını Hata Ayıklama yapılarıyla analiz etmek [için, performans profiloluşturma için Başlangıç kılavuzuna](../profiling/beginners-guide-to-performance-profiling.md)bakın.
+Aşağıdaki yönergeler, Visual Studio **performans profil oluşturucuyu**kullanarak, hata ayıklayıcı olmadan **CPU kullanımı** aracının nasıl kullanılacağını göstermektedir. Örnekler yerel bir makinede bir yayın derlemesi kullanır. Yayın yapıları gerçek uygulama performansının en iyi görünümünü sağlar. Hata ayıklama Derlemeleriyle CPU kullanımını çözümlemek için, bkz. [Başlangıç Kılavuzu, performans profili oluşturma](../profiling/beginners-guide-to-performance-profiling.md).
 
-Genellikle, yerel makine en iyi yüklü uygulama yürütme çoğaltıyor. Windows Phone uygulamaları için, doğrudan cihazdan veri toplamak en doğru verileri sağlar. Uzak bir aygıttan veri toplamak için uygulamayı Uzak Masaüstü Bağlantısı üzerinden değil, doğrudan aygıtta çalıştırın.
+Genellikle, yerel makine yüklü uygulama yürütmeyi en iyi şekilde çoğaltır. Windows Phone uygulamalar için, verilerin doğrudan cihazdan toplanması en doğru verileri sağlar. Uzak bir cihazdan veri toplamak için, uygulamayı bir Uzak Masaüstü Bağlantısı değil doğrudan cihazda çalıştırın.
 
 >[!NOTE]
->Windows 7 veya daha sonra [Performans Profilleyicisi](../profiling/profiling-feature-tour.md)kullanmak için gereklidir.
+>[Performans profil oluşturucuyu](../profiling/profiling-feature-tour.md)kullanmak için Windows 7 veya üzeri gereklidir.
 
-## <a name="collect-cpu-usage-data"></a>CPU kullanım verilerini toplama
+## <a name="collect-cpu-usage-data"></a>CPU kullanım verilerini topla
 
-1. Visual Studio projesinde, çözüm yapılandırmasını **Release** olarak ayarlayın ve dağıtım hedefi olarak **Yerel Windows Hata Ayıklayıcı'yı** (veya **Yerel Makineyi)** seçin.
+1. Visual Studio projesinde, çözüm yapılandırmasını **yayınlama** olarak ayarlayın ve dağıtım hedefi olarak **yerel Windows hata ayıklayıcısı** 'Nı (veya **yerel makine**) seçin.
 
-    ![Serbest Bırakma ve Yerel Makine'yi seçin](../profiling/media/cpuuse_selectreleaselocalmachine.png "Serbest Bırakma ve Yerel Makine'yi seçin")
+    ![Yayın ve yerel makine seçin](../profiling/media/cpuuse_selectreleaselocalmachine.png "Yayın ve yerel makine seçin")
 
-1. **Hata Ayıklama** > **Performans Profilcisi'ni**seçin.
+1. **Hata ayıklama**  >  **performans profil oluşturucuyu**seçin.
 
-1. **Kullanılabilir araçlar**altında, **CPU Kullanımı'nı**seçin ve ardından **Başlat'ı**seçin.
+1. **Kullanılabilir araçlar**' ın altında **CPU kullanımı**' nı seçin ve ardından **Başlat**' ı seçin.
 
-    ![CPU Kullanımını Seçin](../profiling/media/cpuuse_lib_choosecpuusage.png "CPU Kullanımını Seçin")
+    ![CPU kullanımını seçin](../profiling/media/cpuuse_lib_choosecpuusage.png "CPU kullanımını seçin")
 
-4. Uygulama başladıktan sonra tanılama oturumu başlar ve CPU kullanım verilerini görüntüler. Veri toplamayı bitirdiğinizde, **Koleksiyonu Durdur'u**seçin.
+4. Uygulama başladıktan sonra, Tanılama oturumu başlar ve CPU kullanım verilerini görüntüler. Verileri toplamayı tamamladığınızda, **toplamayı durdur**' u seçin.
 
-   ![CPU Kullanımını Durdur veri toplama](../profiling/media/cpu_use_wt_stopcollection.png "CPU Kullanımını Durdur veri toplama")
+   ![CPU kullanımı veri toplamayı durdur](../profiling/media/cpu_use_wt_stopcollection.png "CPU kullanımı veri toplamayı durdur")
 
-   CPU Kullanımı aracı verileri analiz eder ve raporu görüntüler.
+   CPU kullanımı aracı verileri analiz eder ve raporu görüntüler.
 
-   ![CPU Kullanım raporu](../profiling/media/cpu_use_wt_report.png "CPU Kullanım raporu")
+   ![CPU kullanımı raporu](../profiling/media/cpu_use_wt_report.png "CPU kullanımı raporu")
 
-## <a name="analyze-the-cpu-usage-report"></a>CPU Kullanım raporunu analiz edin
+## <a name="analyze-the-cpu-usage-report"></a>CPU kullanımı raporunu analiz etme
 
-Tanılama **raporu, En**yüksekten en düşüke, Toplam CPU'ya göre sıralanır. Sütun üstbilgilerini seçerek sıralama sırasını veya sıralama sütununu değiştirin. Görüntülemek için iş parçacıklarını seçmek veya seçmek için **Filtre** açılır dosyasını kullanın ve belirli bir iş parçacığı veya düğümü aramak için **Arama** kutusunu kullanın.
+Tanılama raporu, en yüksekten en düşüğe kadar **toplam CPU**'ya göre sıralanır. Sütun üstbilgilerini seçerek sıralama düzenini veya sıralama sütununu değiştirin. Görüntülenecek iş parçacıklarını seçmek veya seçimlerini kaldırmak için **filtre** açılan listesini kullanın ve belirli bir iş parçacığı veya düğüm aramak için **arama** kutusunu kullanın.
 
 ::: moniker range=">=vs-2019"
-Visual Studio 2019'dan başlayarak, çağrı ağacı görünümünde CPU'nun en yüksek yüzdesini kullanan işlev çağrılarını görmek için **Sıcak Yolu Genişlet** ve Sıcak Yolu **Göster** düğmelerini tıklatabilirsiniz.
+Visual Studio 2019 ' den başlayarak, çağrı ağacı görünümünde CPU 'nun en yüksek yüzdesini kullanan işlev çağrılarını görmek için **etkin yolu genişlet** ve **etkin yolu göster** düğmelerini tıklayabilirsiniz.
 ::: moniker-end
 
-### <a name="cpu-usage-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a>CPU Kullanım veri sütunları
+### <a name="cpu-usage-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a>CPU kullanım verileri sütunları
 
 |||
 |-|-|
-|**Toplam CPU [birim, %]**|![Toplam % veri denklemi](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> İşlev çağrıları tarafından kullanılan milisaniye ve CPU yüzdesi ve işlev tarafından çağrılan işlevler, seçili zaman aralığında. Bu, bir zaman aralığındaki toplam CPU etkinliğini kullanılabilir toplam CPU ile karşılaştıran **CPU Kullanım** zaman çizelgesi grafiğinden farklıdır.|
-|**Self CPU [birim, %]**|![Öz % denklemi](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> İşlev tarafından çağrılan işlevler hariç olmak üzere, seçili zaman aralığındaki işleve yapılan çağrılar tarafından kullanılan milisaniye ve CPU yüzdesi.|
-|**Modül**|İşleviçeren modülün adı.
+|**Toplam CPU [Birim,%]**|![Toplam% veri denklemi](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> İşlev çağrıları tarafından kullanılan milisaniye ve CPU yüzdesi ve işlev tarafından çağrılan işlevler, seçili zaman aralığında. Bu, bir zaman aralığındaki toplam CPU etkinliğini toplam kullanılabilir CPU ile karşılaştıran **CPU kullanımı** zaman çizelgesi grafiğinden farklıdır.|
+|**Self CPU [Birim,%]**|![Kendi kendine denklemi](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> İşlev tarafından çağrılan işlevler hariç olmak üzere seçilen zaman aralığındaki işleve yapılan çağrılar tarafından kullanılan milisaniye ve CPU yüzdesi.|
+|**Modül**|İşlevi içeren modülün adı.
 
-### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a>CPU Kullanımı çağrı ağacı
+### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a>CPU kullanımı çağrı ağacı
 
-Çağrı ağacını görüntülemek için, rapordaki ana düğümü seçin. **CPU Kullanımı** sayfası **Arayan/Callee** görünümüne açılır. Geçerli **Görünüm** açılır açılır düşüşünde **Çağrı Ağacı'nı**seçin.
+Çağrı ağacını görüntülemek için, rapordaki üst düğümü seçin. **CPU kullanımı** sayfası **arayan/çağrılan** görünümüne açılır. **Geçerli görünüm** açılır listesinde, **çağrı ağacı**' nı seçin.
 
 #### <a name="call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a>Çağrı ağacı yapısı
 
@@ -82,46 +82,46 @@ Visual Studio 2019'dan başlayarak, çağrı ağacı görünümünde CPU'nun en 
 
 |||
 |-|-|
-|![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|CPU Kullanımı çağrı ağaçlarındaki üst düzey düğüm bir sözde düğümdür.|
-|![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Çoğu uygulamada, **Dış Kodu Göster** seçeneği devre dışı bırakıldığında, ikinci düzey düğüm bir **[Dış Kod]** düğümüdür. Düğüm, uygulamayı başlatan ve durduran, kullanıcı ayını çizen, iş parçacığı zamanlamasını kontrol eden ve uygulamaya diğer alt düzey hizmetleri sağlayan sistem ve çerçeve kodunu içerir.|
-|![3. Adım](../profiling/media/procguid_3.png "ProcGuid_3")|İkinci düzey düğümün alt ları, ikinci düzey sistem ve çerçeve kodu tarafından çağrılan veya oluşturulan kullanıcı kodu yöntemleri ve eşzamanlı yordamlarıdır.|
-|![Adım 4](../profiling/media/procguid_4.png "ProcGuid_4")|Yöntemin alt düğümleri yalnızca üst yöntemin çağrıları için veriye sahiptir. **Dış Kodu Göster** devre dışı bırakıldığında, uygulama yöntemleri bir **[Dış Kod]** düğümü de içerebilir.|
+|![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|CPU kullanım çağrısı ağaçlarında en üst düzey düğüm bir sözde düğümdür.|
+|![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Çoğu uygulamalarda, **dış kodu göster** seçeneği devre dışı bırakıldığında, ikinci düzey düğüm bir **[Dış kod]** düğümüdür. Düğüm, uygulamayı başlatan ve durduran sistem ve çerçeve kodunu içerir, Kullanıcı arabirimini çizer, iş parçacığı zamanlamasını denetler ve uygulamaya diğer alt düzey hizmetler sağlar.|
+|![3. Adım](../profiling/media/procguid_3.png "ProcGuid_3")|İkinci düzey düğümün alt öğeleri, ikinci düzey sistem ve Framework kodu tarafından çağrılan veya oluşturulan kullanıcı kodu yöntemleri ve zaman uyumsuz yordamlardır.|
+|![4. adım](../profiling/media/procguid_4.png "ProcGuid_4")|Bir metodun alt düğümleri yalnızca üst metodun çağrılarına ait verilere sahiptir. **Dış kodu göster** devre dışı bırakıldığında, uygulama yöntemleri bir **[Dış kod]** düğümü de içerebilir.|
 
 #### <a name="external-code"></a><a name="BKMK_External_Code"></a>Dış kod
 
-Kodunuz tarafından yürütülen sistem ve çerçeve *işlevlerine dış kod*denir. Dış kod işlevleri uygulamayı başlatıp durdurur, uI'yi çizer, iş parçacığı işlemini denetler ve uygulamaya diğer düşük seviyeli hizmetler sağlar. Çoğu durumda, dış kodla ilgilenmezsiniz, bu nedenle CPU Kullanımı çağrı ağacı bir kullanıcı yönteminin dış işlevlerini tek bir **[Dış Kod]** düğümünde toplar.
+Kodunuz tarafından yürütülen System ve Framework işlevlerine *dış kod*denir. Dış kod işlevleri uygulamayı başlatıp durdurur, Kullanıcı arabirimini çizer, iş parçacığı denetimi yapın ve uygulamaya diğer alt düzey hizmetler sağlar. Çoğu durumda, dış kodla ilgilenmiyorsanız, CPU kullanım çağrısı ağacı bir Kullanıcı yönteminin dış işlevlerini tek bir **[Dış kod]** düğümüne toplar.
 
-Dış kodun çağrı yollarını görüntülemek için ana tanılama raporu sayfasında (sağ bölmede), **Filtre** açılır sayfasından **Dış Kodu Göster'i** seçin ve ardından **Uygula'yı**seçin. **CPU Kullanımı** sayfasının **Çağrı Ağacı** görünümü daha sonra dış kod çağrılarını genişletir. (Filtre **Filter** açılır sayfası ayrıntılı görünümler değil, ana tanılama sayfasında kullanılabilir.)
+Dış kodun çağrı yollarını görüntülemek için, ana tanılama raporu sayfasında (sağ bölme), **filtre** açılan listesinden **dış kodu göster** ' i seçin ve ardından **Uygula**' yı seçin. **CPU kullanımı** sayfasının **çağrı ağacı** görünümü daha sonra dış kod çağrılarını genişletir. ( **Filtre** açılan listesi, ayrıntılı görünümlerde değil, ana tanılama sayfasında kullanılabilir.)
 
-![Dış Kodu Göster](../profiling/media/cpu_use_wt_filterview.png "Dış Kodu Göster")
+![Dış kodu göster](../profiling/media/cpu_use_wt_filterview.png "Dış kodu göster")
 
-Birçok dış kod çağrı zincirleri derinden iç içe dir, bu nedenle zincirin genişliği **İşlev Adı** sütununun ekran genişliğini aşabilir. İşlev adları daha sonra ... olarak **görünür.**
+Birçok harici kod çağrısı zinciri daha fazla iç içe geçmiş olduğundan, zincirin genişliği, **Işlev adı** sütununun görüntüleme genişliğini aşabilir. Sonra işlev adları **..**. olarak görünür.
 
-![Çağrı ağacında iç içe dış kod](../profiling/media/cpu_use_wt_showexternalcodetoowide.png "Çağrı ağacında iç içe dış kod")
+![Çağrı ağacındaki iç içe dış kod](../profiling/media/cpu_use_wt_showexternalcodetoowide.png "Çağrı ağacındaki iç içe dış kod")
 
-Aradığınız işlev adını bulmak için arama kutusunu kullanın. Seçili çizginin üzerine gidin veya verileri görüntülemek için yatay kaydırma çubuğunu kullanın.
+Aradığınız bir işlev adını bulmak için arama kutusunu kullanın. Seçili çizginin üzerine gelin veya verileri görüntülemek için yatay kaydırma çubuğunu kullanın.
 
 ::: moniker range=">=vs-2019"
-![İç içe dış kodu arama](../profiling/media/vs-2019/cpu-use-wt-showexternalcodetoowide-found.png "İç içe dış kodu arama")
+![İç içe geçmiş dış kodu arayın](../profiling/media/vs-2019/cpu-use-wt-showexternalcodetoowide-found.png "İç içe geçmiş dış kodu arayın")
 ::: moniker-end
 ::: moniker range="vs-2017"
-![İç içe dış kodu arama](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "İç içe dış kodu arama")
+![İç içe geçmiş dış kodu arayın](../profiling/media/cpu_use_wt_showexternalcodetoowide_found.png "İç içe geçmiş dış kodu arayın")
 ::: moniker-end
 
-### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a>CPU kullanım çağrı ağacındaki eşzamanlı işlevler
+### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a>CPU kullanım çağrısı ağacındaki zaman uyumsuz işlevler
 
- Derleyici bir eşzamanlı yöntemle karşılaştığında, yöntemin yürütülmesini denetlemek için gizli bir sınıf oluşturur. Kavramsal olarak, sınıf bir durum makinesidir. Sınıf, özgün yöntemleri eş zamanlı olarak adlandırdığı derleyici tarafından oluşturulan işlevlere ve bunları çalıştırmak için gereken geri arama, zamanlayıcı ve yineleyicilere sahiptir. Bir üst yöntem özgün yöntemi aradığında, derleyici yöntemi üst uygulama bağlamından kaldırır ve uygulama yürütmeyi denetleyen sistem ve çerçeve kodu bağlamında gizli sınıf yöntemlerini çalıştırAr. Eşzamanlı yöntemler genellikle, ancak her zaman değil, bir veya daha fazla farklı iş parçacığı üzerinde yürütülür. Bu **kod, [Dış** **Kod]** düğümünün alt bölümü olarak CPU Kullanımı çağrı ağacında ağacın üst düğümünün hemen altında görünür.
+ Derleyici zaman uyumsuz bir yöntemle karşılaştığında, yöntemin yürütmesini denetlemek için gizli bir sınıf oluşturur. Kavramsal olarak, sınıfı bir durum makinedir. Sınıfında, özgün yöntemleri zaman uyumsuz olarak çağıran ve geri çağırmalar, Zamanlayıcı ve yineleyiciler çalıştırmak için gereken derleyici tarafından üretilmiş işlevler bulunur. Bir üst yöntem özgün yöntemi çağırdığında, derleyici yöntemi üst öğenin yürütme bağlamından kaldırır ve gizli sınıf yöntemlerini uygulama yürütmeyi denetleyen sistem ve çerçeve kodu bağlamında çalıştırır. Zaman uyumsuz yöntemler çoğunlukla, her zaman bir veya daha fazla farklı iş parçacığında yürütülürler. Bu kod, ağacın üst düğümünün hemen altındaki **[Dış kod]** düğümünün alt öğeleri olarak **CPU kullanım** çağrısı ağacında görüntülenir.
 
-Aşağıdaki örnekte, **[Dış Kod]** altında ilk iki düğüm durum makine sınıfının derleyici tarafından oluşturulan yöntemleridir. Üçüncü düğüm özgün yönteme çağrıdır.
+Aşağıdaki örnekte, **[External Code]** altındaki ilk iki düğüm, durum makinesi sınıfının derleyici tarafından oluşturulan yöntemleridir. Üçüncü düğüm, özgün yönteme yapılan çağrıdır.
 
-![Asynchronous düğümü](media/cpu_use_wt_getmaxnumberasync_selected.png "Asynchronous düğümü")
+![Zaman uyumsuz düğüm](media/cpu_use_wt_getmaxnumberasync_selected.png "Zaman uyumsuz düğüm")
 
-Neler olduğunu göstermek için oluşturulan yöntemleri genişletin:
+Oluşturulan yöntemleri genişleterek neler olduğunu gösterebilirsiniz:
 
-![Genişletilmiş asynchronous düğümü](media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "Genişletilmiş asynchronous düğümü")
+![Genişletilmiş zaman uyumsuz düğüm](media/cpu_use_wt_getmaxnumberasync_expandedcalltree.png "Genişletilmiş zaman uyumsuz düğüm")
 
-- `MainPage::GetMaxNumberAsyncButton_Click`görev değerlerinin bir listesini yönetir, sonuçların en üst kısmını görüntüler ve çıktıyı görüntüler.
+- `MainPage::GetMaxNumberAsyncButton_Click`yalnızca görev değerlerinin bir listesini yönetir, sonuçların maksimum sayısını hesaplar ve çıktıyı görüntüler.
 
-- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext`aramayı saran 48 görevi zamanlamanız ve başlatmak için `GetNumberAsync`gereken etkinliği gösterir.
+- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext`çağrıyı kaydırmak için gereken 48 görevlerini zamanlamak ve başlatmak için gereken etkinliği gösterir `GetNumberAsync` .
 
-- `MainPage::<GetNumberAsync>b__b`arayan `GetNumber`görevlerin etkinliğini gösterir.
+- `MainPage::<GetNumberAsync>b__b`çağıran görevlerin etkinliğini gösterir `GetNumber` .

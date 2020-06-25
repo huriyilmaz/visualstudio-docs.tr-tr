@@ -1,7 +1,7 @@
 ---
-title: C++ Kütüphane Başvurusu | Microsoft Dokümanlar
+title: C++ Kitaplığı başvurusu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Concurrency Visualizer SDK, C++ Library Reference
 ms.assetid: c9f8eea2-c964-485d-9ad0-55a4bf425ae7
@@ -10,23 +10,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b71679e460b904138cb0bf922da9d157f0a91c9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: d15b749d0564010cf6a67527f456a76a9db885cc
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62552986"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329190"
 ---
-# <a name="c-library-reference"></a>C++ kitaplık başvurusu
+# <a name="c-library-reference"></a>C++ Kitaplığı başvurusu
 
-Bu bölümde Eşzamanlı Görüntüleyici SDK için referans bilgileri bulunmaktadır.
+Bu bölüm Eşzamanlılık Görselleştiricisi SDK 'Sı için başvuru bilgileri içerir.
 
 > [!NOTE]
-> C++ dil standardı, kitaplıklar gibi uygulamalar için alt`_`() karakteriyle başlayan tanımlayıcıların kullanımını saklı tutar. Kodunuzda alt bir alt noktayla başlayan adları kullanmayın. Adları bu kuralı izleyen kod öğelerinin davranışı garanti edilmez ve gelecek sürümlerde değişebilir. Bu nedenlerden dolayı, bu tür kod öğeleri bu belgelerden atlanır.
+> C++ dil standardı, kitaplıklar gibi uygulamalar için bir alt çizgi () karakteriyle başlayan tanımlayıcıların kullanımını saklı tutar `_` . Kodunuzda bir alt çizgi ile başlayan adları kullanmayın. Adları bu kuralı izleyen kod öğelerinin davranışı garanti edilmez ve gelecek sürümlerde değiştirilebilir. Bu nedenlerden dolayı bu tür kod öğeleri bu belgelerden çıkarılır.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-[Eşzamanlı ad alanı (Eşzamanlılık Görselleştiricisi)](../profiling/concurrency-namespace-concurrency-visualizer.md)
+[Eşzamanlılık ad alanı (eşzamanlılık görselleştiricisi)](../profiling/concurrency-namespace-concurrency-visualizer.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

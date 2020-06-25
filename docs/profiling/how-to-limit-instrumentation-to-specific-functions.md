@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl Yapılır: Enstrümantasyonu Belirli İşlevler ile Sınırlandırın | Microsoft Dokümanlar'
+title: Belirli Işlevlerle Izleme nasıl sınırlıdır | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - performance tools, limiting instrumentation to functions
 ms.assetid: bd98d6bf-2560-4eba-b063-2facb09f87c4
@@ -11,60 +11,60 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 34a63645933a173e449cf4292cc3d014cc3ec740
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0ca92b9f4b7594abc0815038799147ac44091cb3
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74775325"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85327628"
 ---
-# <a name="how-to-limit-instrumentation-to-specific-functions"></a>Nasıl yapılır: Enstrümantasyonu belirli işlevler ile sınırlandırın
-**Performans Oturumu'nun** **Gelişmiş** sayfasında seçenekleri ayarlayarak veya ikili özellik sayfalarını hedefleyerek enstrümantasyon ve veri toplamayı bir veya daha fazla işleyle sınırlandırabilirsiniz:
+# <a name="how-to-limit-instrumentation-to-specific-functions"></a>Nasıl yapılır: belirli işlevlerle izleme sınırlandırma
+**Performans oturumunun** **Gelişmiş** sayfasında veya hedef ikili özellik sayfalarında seçenekleri ayarlayarak, izleme ve veri toplamayı bir veya daha fazla fonksiyona sınırlandırabilirsiniz:
 
-- Performans oturumu özelliği sayfasındaki işlevleri belirtirseniz, yalnızca bu işlevler oturumun tüm enstrümanted ikililerinde işletilir.
+- Performans oturumu Özellik sayfasında işlevleri belirtirseniz, yalnızca bu işlevler, oturumun tüm belgelenmiş ikili dosyalarında işaretlenir.
 
-- Hedef ikilinin özellik sayfasındaki işlevleri belirtirseniz, yalnızca o ikilideki işlevler işletilir. Performansın diğer ikili işlevleri her zamanki gibi enstrümantedir.
+- Hedef ikilinin Özellik sayfasında işlevleri belirtirseniz, yalnızca söz konusu ikilide olan işlevler işaretlenir. Performansın diğer ikili dosyalarında işlevleri her zamanki gibi işaretlenir.
 
-  Veri toplamayı bu şekilde sınırlamak, yalnızca enstrümantasyon profil oluşturma yöntemi seçildiğinde desteklenir.
+  Veri toplamayı bu şekilde sınırlandırma yalnızca, izleme profili oluşturma yöntemi seçildiğinde desteklenir.
 
 > [!NOTE]
-> Profil Oluşturma Araçları [VSInstr](../profiling/vsinstr.md) komut satırı enstrümantasyon aracıiçin kullanılabilen diğer seçenekleri ayarlamak için **Performans Oturumu** özellik sayfalarının **Gelişmiş** sayfasını da kullanabilirsiniz.
+> Ayrıca, Profil Oluşturma Araçları [vsinstr](../profiling/vsinstr.md) komut satırı araç aracı tarafından kullanılabilen diğer seçenekleri ayarlamak Için **performans oturumu** özellik sayfalarının **Gelişmiş** sayfasını da kullanabilirsiniz.
 
-### <a name="to-limit-instrumentation-to-specific-functions-in-a-performance-session"></a>Enstrümantasyonu bir performans oturumundaki belirli işlevler ile sınırlamak için
+### <a name="to-limit-instrumentation-to-specific-functions-in-a-performance-session"></a>Bir performans oturumunda belirli işlevlere yönelik izleme sınırlandırmak için
 
-1. **Performans Gezgini'nde,** oturum adını sağ tıklatın ve ardından **Özellikler'i**tıklatın.
-
-    **Özellik Sayfaları** iletişim kutusu görüntülenir.
-
-2. Özellik **Sayfaları** iletişim kutusunda **Gelişmiş'i**tıklatın.
-
-3. Ek **enstrümantasyon seçenekleri** metin kutusunda, enstrüman istediğiniz işlevlerin adını yazmak için aşağıdaki sözdizimini kullanın:
-
-    **/include:** `FuncSpec` **[;** `FuncSpec` **]**`...`
-
-    `FuncSpec`ad alanı ve işlev adıdır. Bu biçimi `Namespace`vardır **::**`FunctionName`. Birden çok işlevi ayırmak için bir yarı nokta kullanın. Bir veya daha\*fazla karakter için joker karakter belirtmek için yıldız işareti () kullanın. Örneğin, **/include:MyNS::\\*** MyNS ad alanında tüm işlevleri belirtir.
-
-   > [!NOTE]
-   > İkili işlevleri listelemek için Profil Oluşturma Araçları yükleme dizininde bir komut istemi penceresi açın (bkz. [komut satırı araçlarına giden yolu belirtin](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) ve ardından **vsinstr /DumpFuncs** yazın
-
-### <a name="to-limit-instrumentation-to-specific-functions-in-a-binary"></a>Enstrümantasyonu ikili bir fonksiyondaki belirli işlevler ile sınırlamak için
-
-1. **Performans Gezgini'nde,** performans oturumunun **Hedef** düğümünde ikili adı bulun.
-
-2. İkili adı sağ tıklatın ve sonra **Özellikler'i**tıklatın.
+1. **Performans Gezgini**, oturum adına sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
     **Özellik Sayfaları** iletişim kutusu görüntülenir.
 
-3. Özellik **Sayfaları** iletişim kutusunda **Gelişmiş'i**tıklatın.
+2. **Özellik sayfaları** Iletişim kutusunda **Gelişmiş**' e tıklayın.
 
-4. Ek **enstrümantasyon seçenekleri** metin kutusunda, enstrüman istediğiniz işlevlerin adını yazmak için aşağıdaki sözdizimini kullanın:
+3. **Ek izleme seçenekleri** metin kutusunda, işaretlemek istediğiniz işlevlerin adını yazmak için aşağıdaki sözdizimini kullanın:
 
     **/include:** `FuncSpec` **[;** `FuncSpec` **]**`...`
 
-    `FuncSpec`ad alanı ve işlev adıdır. Bu biçimi `Namespace`vardır **::**`FunctionName`. Birden çok işlevi ayırmak için bir yarı nokta kullanın. Bir veya daha\*fazla karakter için joker karakter belirtmek için yıldız işareti () kullanın. Örneğin, **/include:MyNS::\\*** MyNS ad alanında tüm işlevleri belirtir.
+    `FuncSpec`ad alanı ve işlev adıdır. Şu biçimdedir `Namespace` **::** `FunctionName` . Birden çok işlevi ayırmak için noktalı virgül kullanın. Bir \* veya daha fazla karakter için joker karakter belirtmek üzere bir yıldız işareti () kullanın. Örneğin, **/include: myNS:: \\ *** myNS ad alanındaki tüm işlevleri belirtir.
 
    > [!NOTE]
-   > İkili işlevleri listelemek için Profil Oluşturma Araçları yükleme dizininde bir komut istemi penceresi açın (bkz. [komut satırı araçlarına giden yolu belirtin](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) ve ardından **vsinstr /DumpFuncs** yazın
+   > Bir ikilinin işlevlerini listelemek için, Profil Oluşturma Araçları yükleme dizininde bir komut istemi penceresi açın (bkz [. komut satırı araçlarının yolunu belirtin](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) ve ardından **VSInstr/DumpFuncs** yazın
+
+### <a name="to-limit-instrumentation-to-specific-functions-in-a-binary"></a>Bir ikilide belirli işlevlerle izlemeyi sınırlandırmak için
+
+1. **Performans Gezgini**' de, performans oturumunun **hedefler** düğümündeki ikili adı bulun.
+
+2. İkili adına sağ tıklayın ve ardından **Özellikler**' e tıklayın.
+
+    **Özellik Sayfaları** iletişim kutusu görüntülenir.
+
+3. **Özellik sayfaları** Iletişim kutusunda **Gelişmiş**' e tıklayın.
+
+4. **Ek izleme seçenekleri** metin kutusunda, işaretlemek istediğiniz işlevlerin adını yazmak için aşağıdaki sözdizimini kullanın:
+
+    **/include:** `FuncSpec` **[;** `FuncSpec` **]**`...`
+
+    `FuncSpec`ad alanı ve işlev adıdır. Şu biçimdedir `Namespace` **::** `FunctionName` . Birden çok işlevi ayırmak için noktalı virgül kullanın. Bir \* veya daha fazla karakter için joker karakter belirtmek üzere bir yıldız işareti () kullanın. Örneğin, **/include: myNS:: \\ *** myNS ad alanındaki tüm işlevleri belirtir.
+
+   > [!NOTE]
+   > Bir ikilinin işlevlerini listelemek için, Profil Oluşturma Araçları yükleme dizininde bir komut istemi penceresi açın (bkz [. komut satırı araçlarının yolunu belirtin](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)) ve ardından **VSInstr/DumpFuncs** yazın
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Veri toplamayı denetleme](../profiling/controlling-data-collection.md)

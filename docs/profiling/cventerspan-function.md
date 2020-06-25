@@ -1,7 +1,7 @@
 ---
-title: CvEnterspan Fonksiyonu | Microsoft Dokümanlar
+title: CvEnterSpan Işlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvEnterSpanVA
 - cvmarkers/CvEnterSpanW
@@ -24,17 +24,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d501f7c1e75f5b63c82c34f2dc0a4913d7a88c7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a5bb034d4a2501175d117256364082966a97af8a
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62552638"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328965"
 ---
-# <a name="cventerspan-function"></a>CvEnterSpan fonksiyonu
-Yeni bir yayılma nın başlangıcını işaretler.
+# <a name="cventerspan-function"></a>CvEnterSpan işlevi
+Yeni bir yayılımın başlangıcını işaretler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C
 HRESULT CvEnterSpanW(
@@ -102,27 +102,27 @@ HRESULT CvEnterSpanExVA(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `argList`Bağımsız değişkenler listesi.
+ `argList`Bağımsız değişkenlerin listesi.
 
- `category`Yayılma alanının kategorisi
+ `category`Yayılma kategorisi
 
- `level`Açıklığın önem düzeyi.
+ `level`Yayılma alanının önem düzeyi.
 
- `pMarkerSeries`Geçerli işaretçi serisi bağlamı. NULL olamaz.
+ `pMarkerSeries`Geçerli işaretleyici serisi bağlamı. NULL olamaz.
 
- `pMessage`İleti biçimi dizesi. NULL olamaz.
+ `pMessage`İleti biçimli dize. NULL olamaz.
 
- `ppSpan`Elde edilen yayılma nesnesini tutacak değişkenin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
+ `ppSpan`Elde edilen span nesnesini barındıracak değişkenin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- İleti başarılı bir şekilde yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
+ İleti başarıyla yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üstbilgi:** *cvmarkers.h*
+ **Üst bilgi:** *cvişaretleyiciler. h*
 
  **Unicode:** CvEnterSpanW, CvEnterSpanVW, CvEnterSpanExW, CvEnterSpanExVW
 
  **ANSI:** CvEnterSpanA, CvEnterSpanVA, CvEnterSpanExA, CvEnterSpanExVW
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)
+- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

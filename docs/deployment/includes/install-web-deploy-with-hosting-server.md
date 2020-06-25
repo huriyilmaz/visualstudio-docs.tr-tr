@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 1e6c6714720d652fff266e3e852d01982c98e34a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: a292b37a50bbf667fa5b23f18879cd79c3f76805
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173907"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85292110"
 ---
 Barındırma sunucuları için Web Dağıtımı 3,6, kullanıcı arabiriminden yayımlama ayarları dosyası oluşturulmasına olanak tanıyan ek yapılandırma özellikleri sağlar.
 
-1. Windows Server 'da zaten yüklü olan Web dağıtımı 3,6 varsa, **Denetim Masası**programları ' nı kullanarak  >  **Programs**  >  **programı**kaldırın.
+1. Windows Server 'da zaten yüklü Web dağıtımı varsa, **Denetim Masası**programları ' nı kullanarak  >  **Programs**  >  **programı**kaldırın.
 
 2. Ardından, Windows Server 'da barındırma sunucuları için Web Dağıtımı 3,6 ' ü yükler.
 
@@ -24,6 +24,12 @@ Barındırma sunucuları için Web Dağıtımı 3,6, kullanıcı arabiriminden y
 
     Yayımlama ayarları dosyasının oluşturulmasını sağlamak için betikler ve araçlar gereklidir.
 
-4. Seçim **Denetim Masası ' nı > sistem ve güvenlik > yönetim araçları > Hizmetleri** ' ni açarak ve **Web Deployment Agent hizmetinin** çalıştığından emin olun (hizmet adı eski sürümlerde farklı olduğundan) Web dağıtımı düzgün çalıştığını doğrulayın.
+4. Seçim **Denetim masası > sistem ve güvenlik > yönetim araçları > Hizmetleri**' ni açarak Web dağıtımı doğru şekilde çalıştığını doğrulayın ve aşağıdakileri yaptığınızdan emin olun:
 
-    Aracı hizmeti çalışmıyorsa, başlatın. Bu, hiç yoksa, **Denetim masası > programlar > program Kaldır ' a**gidin, **Microsoft Web dağıtımı \<version> **bulun. Yüklemeyi **değiştirmeyi** seçin ve Web dağıtımı bileşenleri için **yerel sabit diske yüklenediğinizden** emin olun. Değişiklik yükleme adımlarını doldurun.
+    * **Web Deployment Agent hizmeti** çalışıyor (hizmet adı eski sürümlerde farklı).
+
+    * **Web yönetimi hizmeti** çalışıyor.
+
+    Aracı hizmetlerinden biri çalışmıyorsa, **Web Deployment Agent hizmetini**yeniden başlatın.
+
+    Web Deployment Agent hizmeti hiç yoksa, **Denetim masası > programlar > bir programı Kaldır ' a**gidin, **Microsoft Web dağıtımı \<version> **bulun. Yüklemeyi **değiştirmeyi** seçin ve Web dağıtımı bileşenleri için **yerel sabit diske yüklenediğinizden** emin olun. Değişiklik yükleme adımlarını doldurun.

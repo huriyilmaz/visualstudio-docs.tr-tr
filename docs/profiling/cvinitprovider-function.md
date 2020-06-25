@@ -1,7 +1,7 @@
 ---
-title: CvInitSağlayıcı Fonksiyonu | Microsoft Dokümanlar
+title: CvInitProvider Işlevi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - cvmarkers/CvInitProvider
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a97be63cd782397e984fd8dbce7da844efa07540
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: b06190568454977bfcb54d65db9011fc979f7591
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62552673"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329574"
 ---
-# <a name="cvinitprovider-function"></a>CvInitProvider fonksiyonu
-İşaretleyici sağlayıcısını başharfe adamaktadır. Diğer Eşzamanlı Görselleştirici SDK işlevleriönce çağrılmalıdır.
+# <a name="cvinitprovider-function"></a>CvInitProvider işlevi
+İşaretleyici sağlayıcısını başlatır. Diğer Eşzamanlılık Görselleştiricisi SDK işlevlerinden önce çağrılmalıdır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C
 HRESULT CvInitProvider(
@@ -32,15 +32,15 @@ HRESULT CvInitProvider(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pGuid`Sağlayıcı guid. NULL olamaz.
+ `pGuid`Sağlayıcı GUID 'i. NULL olamaz.
 
  `ppProvider`Sağlayıcı bağlamını depolayacak bir çıktı değişkeninin adresi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
- S_OK sağlayıcı başarıyla başlatılması veya herhangi bir hata olması durumunda hata kodu. Hata durumunu denetlemek için BAŞARILI/BAŞARILI makroları kullanın.
+ Sağlayıcı başarıyla başlatıldığında S_OK veya herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.
 
 ## <a name="requirements"></a>Gereksinimler
- **Üstbilgi:** *cvmarkers.h*
+ **Üst bilgi:** *cvişaretleyiciler. h*
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C++ kitaplık başvurusu](../profiling/cpp-library-reference.md)
+- [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

@@ -1,28 +1,28 @@
 ---
-title: marker_series::write_flag Yöntemi | Microsoft Dokümanlar
+title: 'marker_series:: write_flag yöntemi | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- cvmarkersojb/Concurrency::diagnostic::marker_series::write_flag
+- cvmarkersojb/Concurrency, diagnostic::marker_series::write_flag
 helpviewer_keywords:
-- Concurrency::diagnostic::marker_series::write_flag method
+- Concurrency, diagnostic::marker_series::write_flag method
 ms.assetid: ca07f388-e5d5-46fd-b991-fe6e9029a68f
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f09cca9bd1e3babccb0debc369881a0efa00fa0b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: edd141f6b99dc3836d99ebdbc4aab9af7150e4ff
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62830817"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329233"
 ---
-# <a name="marker_serieswrite_flag-method"></a>marker_series::write_flag yöntemi
-Eşzamanlı Görüntüleyici izleme dosyasına bir bayrak yazar.
+# <a name="marker_serieswrite_flag-method"></a>marker_series:: write_flag yöntemi
+Eşzamanlılık görselleştiricisi izleme dosyasına bir bayrak yazar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 void write_flag(
@@ -48,16 +48,16 @@ void write_flag(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `_Format`Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğesiyle karışık metin içeren bileşik biçim dizesi.
+ `_Format`Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğesiyle metin içeren bir bileşik biçim dizesi.
 
  `_Importance`Önem düzeyi.
 
- `_Category`Kategori.
+ `_Category`Alan.
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** *cvmarkersobj.h*
+ **Üst bilgi:** *cvmarkersobj. h*
 
- **Ad alanı:** Eşzamanlılık::diagnostik
+ **Ad alanı:** Eşzamanlılık::d ıagstik
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [marker_series sınıfı](../profiling/marker-series-class.md)

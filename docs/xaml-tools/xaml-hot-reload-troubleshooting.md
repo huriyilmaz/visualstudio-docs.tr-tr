@@ -9,15 +9,14 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.technology: vs-ide-debug
 ms.workload:
 - multiple
-ms.openlocfilehash: 73d8653b2bcf06801c18e21d9a13b21843abc7d7
-ms.sourcegitcommit: 9de7d25056da59df0941508c80c0b12766ba6580
+ms.openlocfilehash: 447725fd27ab81b85890d37a8f0df8a35ad5fbee
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77706380"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328479"
 ---
 # <a name="troubleshooting-xaml-hot-reload"></a>XAML Çalışırken Yeniden Yükleme ile ilgili sorunları giderme
 
@@ -35,24 +34,24 @@ Uygulamanızda hata ayıklarken uygulama içi araç çubuğunda "etkin yeniden y
 
 ![XAML etkin yeniden yükleme kullanılabilir](../debugger/media/xaml-hot-reload-available.png)
 
-Uygulama içi araç çubuğunu görmüyorsanız, **genel** > **hata ayıklama** > **seçeneklerini** açın. Her iki seçenek **için de xaml IÇIN UI hata ayıklama araçları 'Nı etkinleştirin** ve **xaml etkin yeniden yükleme özelliğini etkinleştirin** .
+Uygulama içi araç çubuğunu görmüyorsanız, genel **hata ayıklama**  >  **seçenekleri**' ni açın  >  **General**. Her iki seçenek **için de xaml IÇIN UI hata ayıklama araçları 'Nı etkinleştirin** ve **xaml etkin yeniden yükleme özelliğini etkinleştirin** .
 
 ![XAML etkin yeniden yüklemeyi etkinleştir](../debugger/media/xaml-hot-reload-enable.png)
 
-Bu seçenekler işaretliyse, canlı görsel ağaç (**hata ayıkla** > **Windows** > **canlı görsel ağaç**) öğesine gidin ve **çalışma zamanı araçlarının uygulama** araç çubuğunda (en solda) seçili olduğundan emin olun.
+Bu seçenekler işaretliyse, canlı görsel ağaç ' a (**Debug**  >  **Windows**  >  **Live Visual Tree**Hata Ayıkla) gidin ve **çalışma zamanı araçlarını uygulama** araç çubuğunda göster düğmesinin (en solda) seçili olduğundan emin olun.
 
 ![XAML etkin yeniden yüklemeyi etkinleştir](../debugger/media/xaml-hot-reload-show-runtime-tools.png)
 
 ## <a name="verify-that-you-use-start-debugging-rather-than-attach-to-process"></a>Işleme eklemek yerine başlatma hata ayıklamayı kullandığınızı doğrulayın
 
-XAML etkin yeniden yükleme, uygulamanın başladığı zaman `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` ortam değişkeninin 1 olarak ayarlanmasını gerektirir. Visual Studio bunu, **hata** **ayıklamayı Başlat** (veya **F5**) komutunun bir parçası olarak otomatik olarak ayarlar > . Bunun yerine, **hata ayıkla** > **Işleme Ekle** komutuyla xaml etkin yeniden yükleme kullanmak istiyorsanız, ortam değişkenini kendiniz ayarlayın.
+XAML etkin yeniden yükleme, `ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO` uygulamanın başladığı zaman ortam değişkeninin 1 olarak ayarlanmasını gerektirir. Visual Studio bunu **hata ayıklama**  >  **başlatma hata ayıklama** (veya **F5**) komutunun bir parçası olarak otomatik olarak ayarlar. Bunun yerine, işlemek için **Hata Ayıkla**komutuyla xaml etkin yeniden yükleme kullanmak istiyorsanız  >  **Attach to Process** , ortam değişkenini kendiniz ayarlayın.
 
 > [!NOTE]
-> Bir ortam değişkeni ayarlamak için, Başlat düğmesini kullanarak "ortam değişkeni" araması yapın ve **sistem ortam değişkenlerini Düzenle**' yi seçin. Açılan iletişim kutusunda, **ortam değişkenleri**' ni seçin, sonra bir kullanıcı değişkeni olarak ekleyin ve değeri `1`olarak ayarlayın. Temizlemek için, hata ayıklamayı bitirdiğinizde değişkeni kaldırın.
+> Bir ortam değişkeni ayarlamak için, Başlat düğmesini kullanarak "ortam değişkeni" araması yapın ve **sistem ortam değişkenlerini Düzenle**' yi seçin. Açılan iletişim kutusunda, **ortam değişkenleri**' ni seçin, sonra bir kullanıcı değişkeni olarak ekleyin ve değerini olarak ayarlayın `1` . Temizlemek için, hata ayıklamayı bitirdiğinizde değişkeni kaldırın.
 
 ## <a name="verify-that-your-msbuild-properties-are-correct"></a>MSBuild özelliklerinin doğru olduğundan emin olun
 
-Varsayılan olarak, kaynak bilgisi bir hata ayıklama yapılandırmasına dahildir. Proje dosyalarınızda MSBuild özellikleri (*. csproj gibi) tarafından denetlenir. WPF için, özelliği, `True`olarak ayarlanması gereken `XamlDebuggingInformation`. UWP için, özelliği, `False`olarak ayarlanması gereken `DisableXbfLineInfo`. Örnek:
+Varsayılan olarak, kaynak bilgisi bir hata ayıklama yapılandırmasına dahildir. Proje dosyalarınızda MSBuild özellikleri (*. csproj gibi) tarafından denetlenir. WPF için, özelliği `XamlDebuggingInformation` olarak ayarlanması gerekir `True` . UWP için, özelliği `DisableXbfLineInfo` olarak ayarlanması gerekir `False` . Örneğin:
 
 WPF
 

@@ -1,5 +1,5 @@
 ---
-title: RoslynCodeTaskFactory ile MSBuild Satır İçi Görevler | Microsoft Dokümanlar
+title: RoslynCodeTaskFactory ile MSBuild satır Içi görevleri | Microsoft Docs
 ms.date: 09/21/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,23 +10,23 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 658302de187d6bbeab67dedaaa816709f00436ed
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 9a1f606ed9e3d42d9f57cb941ee9518c1abfbc47
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "78865381"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289215"
 ---
-# <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>RoslynCodeTaskFactory ile MSBuild satır içinde görevler
+# <a name="msbuild-inline-tasks-with-roslyncodetaskfactory"></a>RoslynCodeTaskFactory ile MSBuild satır içi görevleri
 
-[CodeTaskFactory'ye](../msbuild/msbuild-inline-tasks.md)benzer şekilde, RoslynCodeTaskFactory, satır içi görevler olarak kullanılmak üzere bellek içi görev derlemeleri oluşturmak için çapraz platform Roslyn derleyicilerini kullanır.  RoslynCodeTaskFactory görevleri .NET Standard'ı hedef eder ve .NET Framework ve .NET Core çalışma saatlerini ve Linux ve Mac OS gibi diğer platformlarda çalışabilir.
+[CodeTaskFactory](../msbuild/msbuild-inline-tasks.md)' ye benzer şekilde, roslyncodetaskfactory, iç satır görevleri olarak kullanılmak üzere bellek içi görev derlemeleri oluşturmak için platformlar arası Roslyn derleyicileri kullanır.  RoslynCodeTaskFactory görevlerinin hedefi .NET Standard ve .NET Framework ve .NET Core çalışma zamanlarının yanı sıra Linux ve Mac OS gibi diğer platformlar üzerinde de çalışabilir.
 
 >[!NOTE]
->RoslynCodeTaskFactory yalnızca MSBuild 15.8 ve üzeri olarak mevcuttur. MSBuild sürümleri Visual Studio sürümlerini takip, bu nedenle RoslynCodeTaskFactory Visual Studio 15.8 ve daha yüksek mevcuttur.
+>RoslynCodeTaskFactory yalnızca MSBuild 15,8 ve üzeri sürümlerde kullanılabilir. MSBuild sürümleri Visual Studio sürümlerini izleyerek Visual Studio 2017 sürüm 15,8 ve üzeri sürümlerde RoslynCodeTaskFactory kullanılabilir.
 
-## <a name="the-structure-of-an-inline-task-with-roslyncodetaskfactory"></a>RoslynCodeTaskFactory ile satır içinde görevyapısı
+## <a name="the-structure-of-an-inline-task-with-roslyncodetaskfactory"></a>RoslynCodeTaskFactory ile bir satır içi görevin yapısı
 
- RoslynCodeTaskFactory satır altı görevleri [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md)ile aynı şekilde bildirilir, tek fark .NET Standard'ı hedeflemeleridir.  Satır satır görev `UsingTask` ve bunu içeren öğe genellikle bir *.targets* dosyasına dahil edilir ve gerektiğinde diğer proje dosyalarına aktarılır. Burada temel bir satır ara görevidir. Hiçbir şey etmediğine dikkat edin.
+ RoslynCodeTaskFactory satır içi görevleri, .NET Standard hedeflemediği tek fark olan [CodeTaskFactory](../msbuild/msbuild-inline-tasks.md)ile aynı şekilde bildirilmiştir.  Satır içi görev ve `UsingTask` Bu öğeyi içeren öğe, genellikle bir *. targets* dosyasına dahil edilir ve gereken şekilde diğer proje dosyalarına aktarılır. Temel bir satır içi görev aşağıda verilmiştir. Hiçbir şey yapmediğine dikkat edin.
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -46,53 +46,53 @@ ms.locfileid: "78865381"
 </Project>
 ```
 
- Örnekteki öğe, `UsingTask` görevi açıklayan üç öznitelik ve onu derleyen satır içinde görev fabrikası vardır.
+ `UsingTask`Örnekteki öğesinde, görevi tanımlayan üç öznitelik ve onu derleyen satır içi görev fabrikası vardır.
 
-- Öznitelik, `TaskName` bu durumda görevi `DoNothing`adlandırır.
+- `TaskName`Özniteliği, bu durumda görevi adlandırır `DoNothing` .
 
-- Öznitelik, `TaskFactory` satır içinde görev fabrikasını uygulayan sınıfı adlandırır.
+- `TaskFactory`Özniteliği, satır içi görev fabrikasını uygulayan sınıfı adlandırır.
 
-- Öznitelik `AssemblyFile` satır içinde görev fabrikasının konumunu verir. Alternatif olarak, genellikle `AssemblyName` genel montaj önbelleğinde (GAC) bulunan satır altı görev fabrikası sınıfının tam nitelikli adını belirtmek için özniteliği kullanabilirsiniz.
+- `AssemblyFile`Özniteliği, satır içi görev fabrikasının konumunu verir. Alternatif olarak, `AssemblyName` genellikle genel derleme önbelleğinde (GAC) bulunan satır içi görev fabrikası sınıfının tam adını belirtmek için özniteliğini kullanabilirsiniz.
 
-`DoNothing` Görevin kalan öğeleri boştur ve satır içinde görevin sırasını ve yapısını göstermek için sağlanır. Daha sağlam bir örnek daha sonra bu konuda sunulmaktadır.
+Görevin kalan öğeleri `DoNothing` boştur ve bir satır içi görevin sırasını ve yapısını göstermek için verilmiştir. Daha sonra bu konunun ilerleyen kısımlarında daha sağlam bir örnek sunulmaktadır.
 
-- Öğe `ParameterGroup` isteğe bağlıdır. Belirtildiğinde, görev için parametreleri bildirir. Giriş ve çıktı parametreleri hakkında daha fazla bilgi için, bu konuda daha sonra [Giriş ve Çıkış Parametreleri'ne](#input-and-output-parameters) bakın.
+- `ParameterGroup`Öğesi isteğe bağlıdır. Belirtildiğinde, görevin parametrelerini bildirir. Giriş ve çıkış parametreleri hakkında daha fazla bilgi için bu konunun ilerleyen kısımlarında [giriş ve çıkış parametreleri](#input-and-output-parameters) bölümüne bakın.
 
-- Öğe, `Task` görev kaynak kodunu açıklar ve içerir.
+- `Task`Öğesi, görev kaynak kodunu tanımlar ve içerir.
 
-- Öğe, `Reference` kodunuzda kullanmakta olduğunuz .NET derlemelerine yapılan başvuruları belirtir. Bu, Visual Studio'daki bir projeye başvuru eklemeye eşdeğerdir. Öznitelik, `Include` başvurulan derlemenin yolunu belirtir.
+- `Reference`Öğesi, kodunuzda kullanmakta olduğunuz .NET derlemelerine başvuruları belirtir. Bu, Visual Studio 'da bir projeye başvuru ekleme ile eşdeğerdir. `Include`Öznitelik, başvurulan derlemenin yolunu belirtir.
 
-- Öğe, `Using` erişmek istediğiniz ad alanlarını listeler. Bu, Visual `Using` C#'daki ifadeye benzer. Öznitelik, `Namespace` ad alanını içerecek şekilde belirtir.
+- `Using`Öğesi, erişmek istediğiniz ad alanlarını listeler. Bu, `Using` Visual C# içindeki ifadeye benzer. `Namespace`Öznitelik, dahil edilecek ad alanını belirtir.
 
-`Reference`ve `Using` elementler dil-agnostiktir. Satır çizgisi görevler, desteklenen .NET CodeDom dillerinden herhangi birine(örneğin, Visual Basic veya Visual C#) yazılabilir.
+`Reference`ve `Using` öğeleri dilden bağımsız değildir. Satır içi görevler desteklenen .NET CodeDom dillerinin herhangi birinde yazılabilir (örneğin, Visual Basic veya Visual C#).
 
 > [!NOTE]
-> Öğenin `Task` içerdiği öğeler görev fabrikasına, bu durumda kod görev fabrikasına özgüdir.
+> Öğesi tarafından içerilen öğeler, `Task` Bu durumda kod görev fabrikası olan görev fabrikasına özeldir.
 
 ### <a name="code-element"></a>Kod öğesi
 
-`Task` Öğe içinde görünen son alt öğe `Code` öğedir. Öğe, `Code` bir göreve derlemek istediğiniz kodu içerir veya bulur. Öğeye `Code` ne koyduğunuz, görevi nasıl yazmak istediğinize bağlıdır.
+Öğesi içinde görünecek Son alt öğe öğesi `Task` `Code` . `Code`Öğesi, bir görevde derlenmek istediğiniz kodu içerir veya konumlandırır. `Code`Öğesine yerleştirdiğiniz öğe, görevi nasıl yazmak istediğinize bağlıdır.
 
-Öznitelik, `Language` kodunuzun yazıldığı dili belirtir. Kabul edilebilir `cs` değerler C#, `vb` Visual Basic içindir.
+`Language`Özniteliği, kodunuzun yazıldığı dili belirtir. Visual Basic için kabul edilebilir değerler `cs` C# içindir `vb` .
 
-`Code` Öznitelik, `Type` öğede bulunan kod türünü belirtir.
+`Type`Özniteliği, öğesinde bulunan kodun türünü belirtir `Code` .
 
-- Değeri `Type` `Class`ise, `Code` öğe <xref:Microsoft.Build.Framework.ITask> arabirimden türetilen bir sınıfın kodunu içerir.
+- Değeri `Type` ise `Class` , `Code` öğesi arabiriminden türetilen bir sınıf için kod içerir <xref:Microsoft.Build.Framework.ITask> .
 
-- Değeri `Type` `Method`ise, kod `Execute` <xref:Microsoft.Build.Framework.ITask> arabirimin yönteminin geçersiz kılınan tanımlar.
+- Değeri `Type` ise `Method` , kod, arabirimin yöntemini geçersiz kılmayı tanımlar `Execute` <xref:Microsoft.Build.Framework.ITask> .
 
-- Değeri `Type` `Fragment`ise, kod `Execute` yöntemin içeriğini tanımlar, ancak imza veya `return` deyim ihtir.
+- Değeri `Type` ise `Fragment` , kod yöntemin içeriğini tanımlar `Execute` , ancak imza veya `return` deyimin değil.
 
-Kodun kendisi genellikle bir `<![CDATA[` işaretçi `]]>` ve bir işaretçi arasında görünür. Kod bir CDATA bölümünde olduğundan, ayrılmış karakterlerden kaçma konusunda endişelenmenize gerek yoktur, örneğin " "\<veya ">".
+Kod genellikle bir `<![CDATA[` işaret ve işaret arasında görünür `]]>` . Kod CDATA bölümünde olduğundan, kaçış ayrılmış karakterleri hakkında endişelenmenize gerek kalmaz, örneğin, " \<" or "> ".
 
-Alternatif olarak, görevinizin kodunu `Code` içeren bir dosyanın konumunu belirtmek için öğenin özniteliğini kullanabilirsiniz. `Source` Kaynak dosyadaki kod öznitelik tarafından `Type` belirtilen türde olmalıdır. `Source` Öznitelik varsa, varsayılan `Type` `Class`değeri. `Source` Yoksa, varsayılan `Fragment`değer.
+Alternatif olarak, `Source` `Code` görevin kodunu içeren bir dosyanın konumunu belirtmek için öğesinin özniteliğini kullanabilirsiniz. Kaynak dosyadaki kod, özniteliği tarafından belirtilen türde olmalıdır `Type` . `Source`Özniteliği varsa, varsayılan değeri `Type` olur `Class` . Yoksa `Source` , varsayılan değer olur `Fragment` .
 
 > [!NOTE]
-> Kaynak dosyadaki görev sınıfını tanımlarken, sınıf adının `TaskName` ilgili [UsingTask](../msbuild/usingtask-element-msbuild.md) öğesinin özniteliğiyle aynı fikirde olması gerekir.
+> Kaynak dosyada görev sınıfını tanımlarken, sınıf adı `TaskName` karşılık gelen [UsingTask](../msbuild/usingtask-element-msbuild.md) öğesinin özniteliğiyle kabul etmelidir.
 
 ## <a name="hello-world"></a>Hello World
 
- Burada RoslynCodeTaskFactory ile daha sağlam bir satır altı görevdir. HelloWorld görev görüntüler "Merhaba, dünya!" genellikle sistem konsolu veya Visual Studio **Çıkış** penceresi olan varsayılan hata günlüğe kaydetme aygıtında. Örnekteki `Reference` öğe sadece illüstrasyon için dahildir.
+ RoslynCodeTaskFactory ile daha sağlam bir satır içi görev aşağıda verilmiştir. HelloWorld görevinde "Hello, World!" görüntülenir Varsayılan hata günlüğü cihazında, genellikle sistem konsolu veya Visual Studio **çıktı** penceresidir. `Reference`Örnekteki öğesi yalnızca çizim için dahil edilmiştir.
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -117,7 +117,7 @@ Log.LogError("Hello, world!");
 </Project>
 ```
 
-HelloWorld görevini *HelloWorld.targets*adlı bir dosyaya kaydedebilir ve ardından aşağıdaki gibi bir projeden çağırabilirsiniz.
+HelloWorld *. targets*adlı bir dosyaya HelloWorld görevini kaydedebilir ve ardından bunu bir projeden aşağıdaki şekilde çağırabilirsiniz.
 
 ```xml
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -130,7 +130,7 @@ HelloWorld görevini *HelloWorld.targets*adlı bir dosyaya kaydedebilir ve ardı
 
 ## <a name="input-and-output-parameters"></a>Giriş ve çıkış parametreleri
 
- Satır satır görev parametreleri `ParameterGroup` bir öğenin alt öğeleridir. Her parametre, onu tanımlayan öğenin adını alır. Aşağıdaki kod parametreyi `Text`tanımlar.
+ Satır içi görev parametreleri bir öğenin alt öğeleridir `ParameterGroup` . Her parametre, kendisini tanımlayan öğenin adını alır. Aşağıdaki kod parametresini tanımlar `Text` .
 
 ```xml
 <ParameterGroup>
@@ -138,13 +138,13 @@ HelloWorld görevini *HelloWorld.targets*adlı bir dosyaya kaydedebilir ve ardı
 </ParameterGroup>
 ```
 
-Parametreler bu özniteliklerden birine veya birkaçına sahip olabilir:
+Parametrelerde bu özniteliklerin bir veya daha fazlası olabilir:
 
-- `Required`varsayılan olarak isteğe `false` bağlı bir özniteliktir. Eğer `true`, sonra parametre gereklidir ve görevi aramadan önce bir değer verilmelidir.
+- `Required`, varsayılan olarak bir isteğe bağlı özniteliktir `false` . `true`Daha sonra parametresi zorunludur ve görev çağrılmadan önce bir değer verilmelidir.
 
-- `ParameterType`varsayılan olarak isteğe `System.String` bağlı bir özniteliktir. System.Convert.ChangeType kullanılarak bir öğeye veya bir dizeye dönüştürülebilen bir değer olan tam nitelikli herhangi bir türe ayarlanabilir. (Başka bir deyişle, harici bir göreve ve dış görevden geçirilebilen herhangi bir tür.)
+- `ParameterType`, varsayılan olarak bir isteğe bağlı özniteliktir `System.String` . System. Convert. ChangeType kullanarak bir öğe ya da bir dizeden dönüştürülebilen bir değer olan herhangi bir tamamen nitelenmiş türe ayarlanabilir. (Başka bir deyişle, bir dış görevden ve bu bilgisayardan geçirilebilecek herhangi bir tür.)
 
-- `Output`varsayılan olarak isteğe `false` bağlı bir özniteliktir. If `true`, sonra parametre Yürüt metodundan dönmeden önce bir değer verilmelidir.
+- `Output`, varsayılan olarak bir isteğe bağlı özniteliktir `false` . İse `true` , Execute yönteminden dönmeden önce parametreye bir değer verilmelidir.
 
 Örneğin,
 
@@ -156,19 +156,19 @@ Parametreler bu özniteliklerden birine veya birkaçına sahip olabilir:
 </ParameterGroup>
 ```
 
-bu üç parametreyi tanımlar:
+Şu üç parametreyi tanımlar:
 
-- `Expression`System.String türünden gerekli bir giriş parametresitir.
+- `Expression`, System. String türünde gerekli bir giriş parametresidir.
 
-- `Files`gerekli madde listesi giriş parametresidir.
+- `Files`gerekli bir öğe listesi giriş parametresidir.
 
-- `Tally`System.Int32 tipinin bir çıkış parametresidir.
+- `Tally`, System. Int32 türünde bir çıkış parametresidir.
 
-`Code` Öğe özniteliği `Type` varsa `Fragment` veya `Method`, sonra özellikleri otomatik olarak her parametre için oluşturulur.  RoslynCodeTaskFactory'de, `Code` `Type` öğe, kaynak kodundan çıkarılan (bu `ParameterGroup`bir fark) olduğu için, öğenin `CodeTaskFactory` `Class`özniteliği varsa, kaynak kodundan çıkarılan öğeyi belirtmeniz gerekmez. Aksi takdirde, özellikler görev kaynak kodunda açıkça belirtilmelidir ve parametre tanımlarıyla tam olarak eşleşmelidir.
+`Code`Öğesinde `Type` veya özniteliği varsa `Fragment` `Method` , özellikler her parametre için otomatik olarak oluşturulur.  RoslynCodeTaskFactory içinde, `Code` öğesinin özniteliği varsa, `Type` `Class` `ParameterGroup` kaynak koddan çıkarıldığından (bunun farklılığı `CodeTaskFactory` ), öğesini belirtmeniz gerekmez. Aksi halde, özellikler, görev kaynak kodunda açıkça bildirilmelidir ve parametre tanımlarıyla tam olarak eşleşmesi gerekir.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki satır başı görev bazı iletileri günlüğe kaydeder ve bir dize döndürür.
+ Aşağıdaki satır içi görev bazı iletileri günlüğe kaydeder ve bir dize döndürür.
 
 ```xml
 <Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003' ToolsVersion="15.0">
@@ -204,7 +204,7 @@ bu üç parametreyi tanımlar:
 </Project>
 ```
 
-Bu satır satır görevleri yolları birleştirebilir ve dosya adını alabilir.
+Bu satır içi görevler, yolları birleştirebilir ve dosya adını alabilir.
 
 ```xml
 <Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003' ToolsVersion="15.0">
@@ -259,7 +259,58 @@ Bu satır satır görevleri yolları birleştirebilir ve dosya adını alabilir.
 </Project>
 ```
 
+## <a name="provide-backward-compatibility"></a>Geriye dönük uyumluluk sağla
+
+`RoslynCodeTaskFactory`İlk olarak MSBuild sürüm 15,8 ' de kullanıma sunuldu. Visual Studio 'nun önceki sürümlerini ve MSBuild 'i desteklemek istediğiniz bir durumunuz olduğunu varsayalım, ancak `RoslynCodeTaskFactory` `CodeTaskFactory` was, ancak aynı derleme betiğini kullanmak istiyorsunuz. `Choose` `$(MSBuildVersion)` `RoslynCodeTaskFactory` Aşağıdaki örnekte olduğu gibi, veya için geri dönmeksizin derleme zamanına karar vermek üzere özelliğini kullanan bir yapı kullanabilirsiniz `CodeTaskFactory` :
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition=" '$(MSBuildVersion.Substring(0,2))' >= 16 Or
+    ('$(MSBuildVersion.Substring(0,2))' == 15 And '$(MSBuildVersion.Substring(3,1))' >= 8)">
+      <PropertyGroup>
+        <TaskFactory>RoslynCodeTaskFactory</TaskFactory>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <TaskFactory>CodeTaskFactory</TaskFactory>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+  
+  <UsingTask
+    TaskName="HelloWorld"
+    TaskFactory="$(TaskFactory)"
+    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup />
+    <Task>
+      <Using Namespace="System"/>
+      <Using Namespace="System.IO"/>
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[
+         Log.LogError("Using RoslynCodeTaskFactory");
+      ]]>
+      </Code>
+    </Task>
+  </UsingTask>
+
+  <Target Name="RunTask" AfterTargets="Build">
+    <Message Text="MSBuildVersion: $(MSBuildVersion)"/>
+    <Message Text="TaskFactory: $(TaskFactory)"/>
+    <HelloWorld />
+  </Target>
+
+</Project>
+```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Görevler](../msbuild/msbuild-tasks.md)
-- [Walkthrough: Satır içinde görev oluşturma](../msbuild/walkthrough-creating-an-inline-task.md)
+- [İzlenecek yol: satır içi görev oluşturma](../msbuild/walkthrough-creating-an-inline-task.md)

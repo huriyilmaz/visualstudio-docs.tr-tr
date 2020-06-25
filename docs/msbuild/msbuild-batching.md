@@ -1,6 +1,6 @@
 ---
-title: MSBuild Toplu İşlem | Microsoft Dokümanlar
-ms.date: 11/04/2016
+title: MSBuild Toplu Işleme | Microsoft Docs
+ms.date: 06/09/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - batching [MSBuild]
@@ -11,25 +11,25 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 78aeef8ea651aac1fe2a780207474399f4bbcf09
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 6d7c72d1da270220144cd5e6167ebecb66462ba9
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633440"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85289280"
 ---
-# <a name="msbuild-batching"></a>MSBuild toplu işleme
+# <a name="msbuild-batching"></a>MSBuild Toplu işleme
 
-MSBuild, madde meta verilerine dayalı olarak madde listelerini farklı kategorilere veya toplu işlerle bölebilme ve her toplu iş ile bir hedef veya görev çalıştırma yeteneğine sahiptir.
+MSBuild öğe listelerini, öğe meta verilerine göre farklı kategorilere veya toplu işlerle böler ve her Batch ile bir kez bir hedef veya görev çalıştırır.
 
 ## <a name="task-batching"></a>Görev toplu işleme
 
-Görev toplu işleme, madde listelerini farklı gruplara bölmenin ve bu toplu işlerden her birini ayrı ayrı bir göreve geçirmenin bir yolunu sağlayarak proje dosyalarınızı basitleştirmenize olanak tanır. Bu, bir proje dosyasının birkaç kez çalıştırılabilmesine rağmen yalnızca görevin ve özniteliklerinin bir kez bildirilmesi gerektiği anlamına gelir.
+Görev toplu işleme, öğe listelerini farklı toplu işlemlere bölmek ve bu toplu işlerin her birini ayrı bir göreve geçirmek için bir yol sağlayarak Proje dosyalarınızı basitleştirmenize olanak tanır. Bu, bir proje dosyasının, birkaç kez çalıştırılabilse de, yalnızca görevin ve özniteliklerinin bir kez bildirilmesine ihtiyaç duyacağı anlamına gelir.
 
-MSBuild'in görev özniteliklerinden birinde %(ItemMetaDataName\<>) gösterimini kullanarak bir görevle toplu iş gerçekleştirmesini istediğinizi belirtirsiniz. Aşağıdaki örnek, `Example` `Color` madde listesini madde meta veri değerine göre toplu iş haline böler `MyTask` ve toplu işlerden her birini ayrı ayrı göreve geçirir.
+Görev özniteliklerinden birindeki gösterimi kullanarak, MSBuild 'i bir görevle toplu işleme gerçekleştirmesini istediğinizi belirtirsiniz `%(ItemMetaDataName)` . Aşağıdaki örnek, öğe `Example` listesini `Color` öğe meta veri değerine göre toplu işlemlere böler ve toplu işlerin her birini `MyTask` göreve ayrı geçirir.
 
 > [!NOTE]
-> Görev özniteliklerinin başka bir yerinde madde listesine başvurmazsanız veya meta veri adı\<belirsiz olabilirse, toplu iş için kullanılacak madde meta veri değerini tam olarak nitelemek için %(ItemCollection.ItemMetaDataName>) notunu kullanabilirsiniz.
+> Görev özniteliklerinin başka bir yerinde öğe listesine başvurmayın veya meta veri adı belirsiz olabilir, toplu işleme için kullanılacak öğe meta verileri değerini tamamen nitelemek için%(<ItemCollection. ItemMetaDataName>) gösterimini kullanabilirsiniz.
 
 ```xml
 <Project
@@ -53,13 +53,13 @@ MSBuild'in görev özniteliklerinden birinde %(ItemMetaDataName\<>) gösterimini
 </Project>
 ```
 
-Daha spesifik toplu iş örnekleri için, [görev toplu işlerinde Madde meta verilerine](../msbuild/item-metadata-in-task-batching.md)bakın.
+Daha özel toplu işlem örnekleri için bkz. [görev toplu işleme Içindeki öğe meta verileri](../msbuild/item-metadata-in-task-batching.md).
 
-## <a name="target-batching"></a>Hedef toplu iş
+## <a name="target-batching"></a>Hedef toplu işleme
 
-MSBuild, bir hedefin giriş ve çıktılarının hedefi çalıştırmadan önce güncel olup olmadığını denetler. Hem giriş hem de çıktı güncelse, hedef atlanır. Hedefin içindeki bir görev toplu iş kullanıyorsa, MSBuild'in her madde grubu için giriş ve çıktıgirişlerinin güncel olup olmadığını belirlemesi gerekir. Aksi takdirde, hedef her vurulduğunda gerçekleştirilir.
+MSBuild, hedefin giriş ve çıkışları hedefi çalıştırmadan önce güncel olup olmadığını denetler. Hem giriş hem de çıkış güncel olursa hedef atlanır. Bir hedefin içindeki bir görev toplu işlem kullanıyorsa, MSBuild 'in her bir öğe için giriş ve çıkış tarihinin güncel olup olmadığını belirlemesi gerekir. Aksi takdirde, hedef her vurışında yürütülür.
 
-Aşağıdaki örnekte, `Target` %(ItemMetaDataName `Outputs` \<>) gösterimi ile bir öznitelik içeren bir öğe gösterilmektedir. MSBuild `Example` madde listesini `Color` madde meta verilerine göre toplu işolarak böler ve her bir toplu iş için çıktı dosyalarının zaman damgalarını çözümler. Bir toplu iş partisinden çıkan çıktılar güncel değilse, hedef çalıştırılır. Aksi takdirde, hedef atlanır.
+Aşağıdaki örnek, `Target` gösterimiyle bir özniteliği içeren bir öğesini gösterir `Outputs` `%(ItemMetadataName)` . MSBuild öğe `Example` listesini öğe meta verileri temelinde toplu işlemlere böler `Color` ve her toplu iş için çıkış dosyalarının zaman damgalarını analiz eder. Bir toplu işteki çıktılar güncel değilse, hedef çalıştırılır. Aksi takdirde, hedef atlanır.
 
 ```xml
 <Project
@@ -85,27 +85,143 @@ Aşağıdaki örnekte, `Target` %(ItemMetaDataName `Outputs` \<>) gösterimi ile
 </Project>
 ```
 
-Hedef toplu iş için başka bir örnek için, [hedef toplu iş öğesi meta verilerine](../msbuild/item-metadata-in-target-batching.md)bakın.
+Hedef toplu işleme bir örnek için bkz. [hedef toplu işleme Içindeki öğe meta verileri](../msbuild/item-metadata-in-target-batching.md).
 
-## <a name="property-functions-using-metadata"></a>Meta verileri kullanarak özellik işlevleri
+## <a name="item-and-property-mutations"></a>Öğe ve özellik mutasyonları
 
-Toplu işlem, meta verileri içeren özellik işlevleri tarafından denetlenebilir. Örneğin,
+Bu bölümde, hedef toplu işleme veya görev toplu işi kullanılırken özellikleri ve/veya öğe meta verilerini değiştirmenin etkilerini anlamak açıklanmaktadır.
+
+Hedef toplu işleme ve görev toplu işi iki farklı MSBuild işlemi olduğundan, her durumda MSBuild 'in hangi şekilde kullandığını tam olarak anlamak önemlidir. Toplu işleme söz dizimi hedefteki bir `%(ItemMetadataName)` görevde göründüğünde, MSBuild görev toplu işlem kullanır. Hedef toplu işleme belirtmenin tek yolu, genellikle özniteliği bir hedef özniteliğinde toplu işleme söz dizimini kullanmaktır `Outputs` .
+
+Hem hedef toplu işleme hem de görev toplu işleme ile, toplu işler bağımsız olarak çalışacak şekilde düşünülebilir. Tüm toplu işlemler, özellik ve öğe meta verileri değerlerinin başlangıç durumunun bir kopyasıyla başlar. Toplu yürütme sırasında özellik değerlerinin herhangi bir mutasyonları diğer toplu işler için görünür değildir. Aşağıdaki örneği inceleyin:
+
+```xml
+  <ItemGroup>
+    <Thing Include="2" Color="blue" />
+    <Thing Include="1" Color="red" />
+  </ItemGroup>
+
+  <Target Name="DemoIndependentBatches">
+    <ItemGroup>
+      <Thing Condition=" '%(Color)' == 'blue' ">
+        <Color>red</Color>
+        <NeededColorChange>true</NeededColorChange>
+      </Thing>
+    </ItemGroup>
+    <Message Importance="high"
+             Text="Things: @(Thing->'%(Identity) is %(Color); needed change=%(NeededColorChange)')"/>
+  </Target>
+```
+
+Çıkış şöyle olur:
+
+```output
+Target DemoIndependentBatches:
+  Things: 2 is red; needed change=true;1 is red; needed change=
+```
+
+`ItemGroup`Hedefteki öğesi örtük olarak bir görevdir ve `%(Color)` `Condition` özniteliğinde görev toplu işlemi gerçekleştirilir. İki toplu işlem vardır: biri kırmızı ve diğeri mavi için. Özelliği `%(NeededColorChange)` yalnızca `%(Color)` meta veriler mavi ise ayarlanır ve bu ayar yalnızca mavi toplu iş çalıştırıldığında koşulla eşleşen tek öğeyi etkiler. `Message`Görevin özniteliği, `Text` `%(ItemMetadataName)` bir öğe dönüştürmesi içinde kullanıldığı için, söz dizimi olmasına rağmen toplu işleme tetiklemez.
+
+Toplu işlemler bağımsız olarak çalışır, ancak paralel olarak çalışmaz. Bu, toplu yürütmede değişen meta veri değerlerine eriştiğinizde farklılık yapar. Toplu yürütmede bazı meta verileri temel alan bir özelliği ayarladığınız durumda, özelliği *son* değer kümesini alır:
+
+```xml
+   <PropertyGroup>
+       <SomeProperty>%(SomeItem.MetadataValue)</SomeProperty>
+   </PropertyGroup>
+```
+
+Batch yürütmeden sonra özelliği, son değerini korur `%(MetadataValue)` .
+
+Toplu işlemler bağımsız olarak çalıştırılsa da, hedef toplu işleme ve görev toplu işleme arasındaki farkı göz önünde bulundurmanız ve hangi türün durumunuza uygulanacağını bilmenizde yarar vardır. Bu farkın önemini daha iyi anlamak için aşağıdaki örneği göz önünde bulundurun.
+
+Görevler, örtülü görevlerle görev toplu işleme gerçekleştiğinde kafa karıştırıcı olmak üzere açık yerine örtük olabilir. Bir `PropertyGroup` veya `ItemGroup` öğesi öğesinde göründüğünde `Target` , gruptaki her bir özellik bildirimi örtük olarak ayrı bir [CreateProperty](createproperty-task.md) veya [CreateItem](createitem-task.md) görevi gibi işlenir. Bu, hedef toplu olarak, hedef toplu olmadığında (özniteliğinde söz dizimi olmadığında) farklılık gösteren davranışın farklı olduğu anlamına gelir `%(ItemMetadataName)` `Outputs` . Hedef toplu yapıldığında, `ItemGroup` her hedef için bir kez yürütülür, ancak hedef toplu olmadığında, `CreateItem` veya görevlerinin örtük eşdeğerleri `CreateProperty` görev toplu işlemi kullanılarak toplu yapılır, bu nedenle hedef yalnızca bir kez yürütülür ve grup içindeki her öğe veya özellik görev toplu işleme kullanılarak ayrı olarak oluşturulur.
+
+Aşağıdaki örnek, meta verilerin kullanıldığı durumda hedef toplu işleme ve görev toplu işleme ile gösterir. A ve B klasörlerinin bulunduğu bir durumu göz önünde bulundurun:
+
+```
+A\1.stub
+B\2.stub
+B\3.stub
+```
+
+Şimdi bu iki benzer projenin çıktısına bakın.
+
+```xml
+    <ItemGroup>
+      <StubFiles Include="$(MSBuildThisFileDirectory)**\*.stub"/>
+
+      <StubDirs Include="@(StubFiles->'%(RecursiveDir)')"/>
+    </ItemGroup>
+
+    <Target Name="Test1" AfterTargets="Build" Outputs="%(StubDirs.Identity)">
+      <PropertyGroup>
+        <ComponentDir>%(StubDirs.Identity)</ComponentDir>
+        <ComponentName>$(ComponentDir.TrimEnd('\'))</ComponentName>
+      </PropertyGroup>
+
+      <Message Text=">> %(StubDirs.Identity) '$(ComponentDir)' '$(ComponentName)'"/>
+    </Target>
+```
+
+Çıkış şöyle olur:
+
+```output
+Test1:
+  >> A\ 'A\' 'A'
+Test1:
+  >> B\ 'B\' 'B'
+```
+
+Şimdi, `Outputs` hedef toplu işleme belirtilen özniteliğini kaldırın.
+
+```xml
+    <ItemGroup>
+      <StubFiles Include="$(MSBuildThisFileDirectory)**\*.stub"/>
+
+      <StubDirs Include="@(StubFiles->'%(RecursiveDir)')"/>
+    </ItemGroup>
+
+    <Target Name="Test1" AfterTargets="Build">
+      <PropertyGroup>
+        <ComponentDir>%(StubDirs.Identity)</ComponentDir>
+        <ComponentName>$(ComponentDir.TrimEnd('\'))</ComponentName>
+      </PropertyGroup>
+
+      <Message Text=">> %(StubDirs.Identity) '$(ComponentDir)' '$(ComponentName)'"/>
+    </Target>
+```
+
+Çıkış şöyle olur:
+
+```output
+Test1:
+  >> A\ 'B\' 'B'
+  >> B\ 'B\' 'B'
+```
+
+Başlığın `Test1` yalnızca bir kez yazdırıldığını, ancak önceki örnekte iki kez yazdırıldığını unutmayın. Bu, hedefin toplu olmadığı anlamına gelir.  Sonuç olarak, çıkış de farklı şekilde yapılır.
+
+Bu nedenle, hedef toplu işleme kullanılırken her bir hedef Batch her şeyi tüm özellik ve öğelerin bağımsız kopyasıyla birlikte yürütür, ancak `Outputs` özniteliği atlarsanız, özellik grubundaki tek satırlar ayrı, potansiyel olarak toplanmış görevler olarak değerlendirilir. Bu durumda, `ComponentDir` görev toplu olarak `%(ItemMetadataName)` çalıştırılır (söz dizimini kullanır), böylece `ComponentName` satır yürütülür ve her iki satır toplu işi `ComponentDir` tamamlanır ve ikinci satırda görüldüğü gibi değeri belirlenen ikinci bir değer belirlenir.
+
+## <a name="property-functions-using-metadata"></a>Meta verileri kullanan özellik işlevleri
+
+Toplu işlem, meta veri içeren özellik işlevleri tarafından denetlenebilir. Örneğin,
 
 `$([System.IO.Path]::Combine($(RootPath),%(Compile.Identity)))`
 
-bir <xref:System.IO.Path.Combine%2A> kök klasör yolunu Derleme öğesi yolu ile birleştirmek için kullanır.
+<xref:System.IO.Path.Combine%2A>bir kök klasör yolunu derleme öğesi yoluyla birleştirmek için kullanır.
 
-Özellik işlevleri meta veri değerleri içinde görünmeyebilir. Örneğin,
+Özellik işlevleri, meta veri değerleri içinde görünmeyebilir. Örneğin,
 
 `%(Compile.FullPath.Substring(0,3))`
 
-izin verilmez.
+izin verilmiyor.
 
-Özellik işlevleri hakkında daha fazla bilgi için [Bkz. Özellik işlevleri.](../msbuild/property-functions.md)
+Özellik işlevleri hakkında daha fazla bilgi için bkz. [özellik işlevleri](../msbuild/property-functions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ItemMetaveri öğesi (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)
+- [ItemMetadata öğesi (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
 - [Gelişmiş kavramlar](../msbuild/msbuild-advanced-concepts.md)

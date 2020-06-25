@@ -1,23 +1,25 @@
 ---
-ms.openlocfilehash: 69f4f4c2b55670d510652b44a203b9f0eafcc53a
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: b8002d9e911c8d8c07a5aaf5286168e49a374a7c
+ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68143532"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85292059"
 ---
 
-1. UI'de güncelleştirilmiş yapılandırma seçeneklerini göstermek için IIS Yönetim Konsolu'nu kapatın ve yeniden açın.
+1. Kullanıcı arabirimindeki güncelleştirilmiş yapılandırma seçeneklerini göstermek için IIS Yönetim Konsolu 'nu kapatın ve yeniden açın.
 
-2. IIS'de **Varsayılan Web Sitesi'ni**sağ tıklatın, Yapılandırma Web**Dağıtım Yayımla'yı** **seçin.** > 
+2. IIS 'de **varsayılan Web sitesine**sağ tıklayın, **Dağıt**  >  **Web dağıtımı yayımlamayı Yapılandır**' ı seçin.
 
-    ![Web Deploy yapılandırmayı yapılandırma](../../deployment/media/tutorial-configure-web-deploy-publishing.png)
+    ![Web Dağıtımı yapılandırmasını Yapılandır](../../deployment/media/tutorial-configure-web-deploy-publishing.png)
 
-3. **Yapılandır Web Yayımla yayımla** iletişim kutusunda, ayarları inceleyin.
+   **Dağıt** menüsünü görmüyorsanız, Web dağıtımı çalıştığını doğrulamak için yukarıdaki bölüme bakın.
 
-4. **Kurulum'u**tıklatın.
+3. **Web dağıtımı yayımlamayı Yapılandır** iletişim kutusunda, ayarları inceleyin.
 
-    **Sonuçlar** panelinde, çıktı, erişim haklarının belirtilen kullanıcıya verildiğini ve iletişim kutusunda gösterilen konumda *.publishsettings* dosya uzantısı içeren bir dosya oluşturulduğunu gösterir.
+4. **Kurulum**'a tıklayın.
+
+    **Sonuçlar** panelinde, çıkış erişim haklarının belirtilen kullanıcıya verildiğini ve iletişim kutusunda gösterilen konumda *. publishsettings* dosya uzantısına sahip bir dosyanın oluşturulduğunu gösterir.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -34,14 +36,14 @@ ms.locfileid: "68143532"
     </publishData>
     ```
 
-    Windows Server ve IIS yapılandırmanıza bağlı olarak, XML dosyasında farklı değerler görürsünüz. Gördüğünüz değerlerle ilgili birkaç ayrıntı aşağıda verebilirsiniz:
+    Windows sunucunuza ve IIS yapılandırmasına bağlı olarak, XML dosyasında farklı değerler görürsünüz. Gördüğünüz değerler hakkında bazı ayrıntılar aşağıda verilmiştir:
 
-   * Öznitelikte `publishUrl` başvurulan *msdeploy.axd* dosyası, Web Dağıtımı için dinamik olarak oluşturulmuş bir HTTP işleyicisi dosyasıdır. (Test amacıyla, `http://myhostname:8172` genellikle de çalışır.)
-   * Bağlantı `publishUrl` noktası, Web Dağıtımı için varsayılan olan 8172 bağlantı noktası olarak ayarlanır.
-   * Bağlantı `destinationAppUrl` noktası, IIS için varsayılan olan 80 bağlantı noktası olarak ayarlanır.
-   * Ana bilgisayar adını kullanarak Visual Studio'daki uzak ana bilgisayara bağlanamıyorsanız (sonraki adımlarda), IP adresini ana bilgisayar adının yerine test edin.
+   * Özniteliğinde başvurulan *MSDeploy. axd* dosyası, `publishUrl` Web dağıtımı için dinamik olarak oluşturulan bir http işleyici dosyasıdır. (Test amaçları için `http://myhostname:8172` genellikle de geçerlidir.)
+   * `publishUrl`Bağlantı noktası, Web dağıtımı için varsayılan olan bağlantı noktası 8172 ' e ayarlanır.
+   * `destinationAppUrl`Bağlantı noktası, IIS için varsayılan olan bağlantı noktası 80 ' e ayarlanır.
+   * Konak adını kullanarak Visual Studio 'da uzak ana bilgisayara bağlanamıyorsanız (sonraki adımlarda), IP adresini ana bilgisayar adı yerine test edin.
 
      > [!NOTE]
-     > Azure VM'de çalışan IIS'de yayınlıyorsanız, Ağ Güvenliği grubunda Web Dağıtımı ve IIS bağlantı noktalarını açmanız gerekir. Ayrıntılı bilgi için [IIS'yi yükle ve çalıştır'a](/azure/virtual-machines/windows/quick-create-portal#install-web-server)bakın.
+     > Azure VM 'de çalışan IIS 'de yayımlıyorsanız, ağ güvenlik grubunda Web Dağıtımı ve IIS bağlantı noktalarını açmanız gerekir. Ayrıntılı bilgi için bkz. [IIS 'ı yükleyip çalıştırma](/azure/virtual-machines/windows/quick-create-portal#install-web-server).
 
-5. Bu dosyayı Visual Studio'yu çalıştırdığınız bilgisayara kopyalayın.
+5. Bu dosyayı, Visual Studio 'Yu çalıştırdığınız bilgisayara kopyalayın.

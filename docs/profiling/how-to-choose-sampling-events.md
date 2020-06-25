@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl seçilir: Örnekleme Etkinlikleri | Microsoft Dokümanlar'
+title: Örnekleme olaylarını seçme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.property.sampling
 helpviewer_keywords:
@@ -19,49 +19,49 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 82462ae5052150da7761dfcd855e5339e1b7d821
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8473ca1f5829faa2a76b5560132c7aada152dc3a
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74779057"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329286"
 ---
-# <a name="how-to-choose-sampling-events"></a>Nasıl seçilir: Örnekleme olaylarını seçin
-Varsayılan olarak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Profil Oluşturma Araçları, profillenmiş işlem tarafından kullanılan işlemci döngüleri sayısı olarak belirtilen bir aralıkta performans verileri toplar. Bir aralıktaki varsayılan döngü sayısı 10.000.000'dir ve bu da 1 GH'lik bir bilgisayarda yaklaşık 0,01 saniyedir. Döngü sayısını bir aralıkta değiştirebilir ve örnek olayı değiştirebilirsiniz. Aşağıdaki örnek olaylar mevcuttur:
+# <a name="how-to-choose-sampling-events"></a>Nasıl yapılır: örnekleme olaylarını seçme
+Profil Oluşturma Araçları, varsayılan olarak, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profili oluşturulmuş işlem tarafından kullanılan işlemci döngüsü sayısı olarak belirtilen bir aralıkta performans verilerini toplar. Bir aralıktaki varsayılan döngü sayısı 10.000.000 ' dir ve 1 GH bir bilgisayarda yaklaşık 0,01 saniyedir. Bir aralıktaki döngü sayısını değiştirebilir ve örnek olayı değiştirebilirsiniz. Aşağıdaki örnek olaylar mevcuttur:
 
-- Saat döngüleri - CPU'ya bağlı sorunlar için.
+- Saat döngüleri-CPU ile bağlantılı sorunlar için.
 
-- Sayfa hataları - bellekle ilgili sorunlar için.
+- Sayfa hataları-bellekle ilgili sorunlar için.
 
-- Sistem aramaları - G/Ç ile ilgili sorunlar için.
+- Sistem çağrıları-g/ç ile ilgili sorunlar için.
 
-- Performans sayacı - Düşük düzeyperformans sorunları için CPU sayaçları.
+- Performans sayacı-düşük düzeydeki performans sorunları için CPU sayaçları.
 
 > [!IMPORTANT]
-> Örnekleme yöntemini kullanarak .NET bellek verilerini (ayırmalar veya nesne yaşam alanları veya her ikisi) topluyorsanız, kullanıcı tarafından belirtilen tüm örnekleme olayları göz ardı edilir ve veri toplamak için uygun bellek ayırmaları veya çöp toplama olayları veya her ikisi de kullanılır.
+> Örnekleme yöntemini kullanarak .NET bellek verileri (ayırmalar veya nesne yaşam süreleri veya her ikisi de) topluyorsanız, Kullanıcı tarafından belirtilen tüm örnekleme olayları yok sayılır ve uygun bellek ayırmaları veya çöp toplama olayları ya da her ikisi de veri toplamak için kullanılır.
 
 ### <a name="to-select-a-sample-event"></a>Örnek bir olay seçmek için
 
-1. **Performans Gezgini'nde,** performans oturumuna sağ tıklayın ve ardından **Özellikler'i**tıklatın.
+1. **Performans Gezgini**, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. Özellik **Sayfalarında,** **Örnekleme** özelliklerini tıklatın.
+2. **Özellik sayfalarında** **örnekleme** özelliklerine tıklayın.
 
-3. Örnek **olay** açılır listesinden, uygulamanızın profilini çıkarmak için kullanmak istediğiniz örnek olayı seçin.
+3. **Örnek olay** açılan listesinden, uygulamanızı profili eklemek için kullanmak istediğiniz örnek olayı seçin.
 
     > [!NOTE]
-    > **Kullanılabilir performans sayaçları** yalnızca **Örnek olay** açılır listesinden **Performans sayacını** seçerseniz etkinleştirilir.
+    > **Kullanılabilir performans sayaçları** yalnızca **örnek olay** açılan listesinden **performans sayacı** ' nı seçtiğinizde etkinleştirilir.
 
-4. **Performans sayacını**seçerseniz, **Kullanılabilir performans sayaçları** ağacı görünümü denetiminden belirli bir CPU sayacı seçin.
+4. **Performans sayacı**' nı seçerseniz, **kullanılabilir performans sayaçları** ağaç görünümü denetiminden belirli bir CPU sayacı seçin.
 
-    - **Taşınabilir Olaylar** düğümündeki sayaçlar her tür işlemcide kullanılabilir.
+    - **Taşınabilir olaylar** düğümündeki sayaçlar tüm işlemci türlerinde kullanılabilir.
 
-    - **Platform Olayları** düğümündeki sayaçlar geçerli bilgisayardaki işlemciye özgüdür ve diğer işlemci türlerinde kullanılamayabilir.
+    - **Platform olayları** düğümündeki sayaçlar, geçerli bilgisayardaki işlemciye özeldir ve diğer işlemci türlerinde kullanılamayabilir.
 
-5. Örnek bir olay seçtiğinizde, **Örnekleme aralığı** metin kutusunda varsayılan örnekleme aralığı değeri görüntülenir. Gerekirse, metin kutusuna istediğiniz değeri girebilirsiniz.
+5. Örnek bir olay seçtiğinizde, **örnekleme aralığı** metin kutusunda varsayılan bir örnekleme aralığı değeri görüntülenir. Gerekirse, metin kutusuna istediğiniz değeri girebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)
-- [Nasıl yapılır: Toplama yöntemlerini seçin](../profiling/how-to-choose-collection-methods.md)
+- [Nasıl yapılır: koleksiyon yöntemleri seçme](../profiling/how-to-choose-collection-methods.md)
 - [CPU ve Windows sayaçları](../profiling/cpu-and-windows-counters.md)
 - [Örnekleme veri değerlerini anlama](../profiling/understanding-sampling-data-values.md)
 - [Komut satırından profil](../profiling/using-the-profiling-tools-from-the-command-line.md)

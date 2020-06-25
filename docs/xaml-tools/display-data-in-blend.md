@@ -9,41 +9,41 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0614552bbbadd9a472e0780db6f277d423446966
-ms.sourcegitcommit: aa302af53de342e75793bd05b10325939dc69b53
+ms.openlocfilehash: bd48ac8f5753521240ed3feb6003d945786820a3
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75886456"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85329092"
 ---
 # <a name="display-data-in-blend-for-visual-studio"></a>Visual Studio için Blend verileri görüntüleme
 
 Sayfalarınızın yerleşimini özelleştirirken, tasarımcılarınızdan örnek verileri görüntüleyebilirsiniz. Sıfırdan örnek veri oluşturabilir veya var olan bir sınıfı kullanarak oluşturabilirsiniz. Ayrıca, çalıştırdığınızda uygulamanızda görüntülenen *canlı verilere* de bağlanabilirsiniz.
 
 > [!NOTE]
-> Blend 'deki **veri** paneli yalnızca .NET Framework hedeflenen projeler için desteklenir. .NET Core ' u hedefleyen UWP projeleri veya projeleri için desteklenmez. 
+> Blend 'deki **veri** paneli yalnızca .NET Framework hedeflenen projeler için desteklenir. .NET Core ' u hedefleyen UWP projeleri veya projeleri için desteklenmez.
 
-## <a name="generate-sample-data"></a>Örnek veri üretme
+## <a name="generate-sample-data"></a>Örnek veri oluşturma
 
-Örnek veriler oluşturmak için bir XAML belgesi açın. **Veri** panelinde **, örnek veri oluştur ![örnek** veri oluştur simgesine](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) düğmesini seçin ve ardından **Yeni örnek veriler**' i seçin.
+Örnek veriler oluşturmak için bir XAML belgesi açın. **Veri** panelinde, örnek veri **Create sample data** ![ Oluştur örnek verileri oluştur ](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) düğmesini seçin ve ardından **Yeni örnek veriler**' i seçin.
 
 **Veri panelinde verilerinizin** yapısını tanımlayın ve sonra herhangi BIR sayfadaki UI öğelerine bağlayın.
 
 ![Veri paneli](../designers/media/496d7ebc-fe46-42f6-95a8-57b0e5be5d49.png)
 
-Uygulamayı çalıştırdığınızda örnek verilerinizin sayfalarınızda görünmesini istiyorsanız **veri kaynağı seçenekleri ![veri** kaynağı seçenekleri simgesi](../designers/media/ae1fd260-4f84-420d-b196-45fde357d81d.png)' i seçin ve ardından **uygulamayı çalıştırırken etkinleştir**' i seçin.
+Uygulamayı çalıştırdığınızda örnek verilerinizin sayfalarınızda görünmesini istiyorsanız **veri kaynağı seçenekleri** ![ veri kaynağı seçenekleri simgesini seçin ](../designers/media/ae1fd260-4f84-420d-b196-45fde357d81d.png) ve ardından **uygulamayı çalıştırırken etkinleştir**' i seçin.
 
 ![Uygulama menü öğesini çalıştırırken etkinleştir](../designers/media/05d5356d-91bb-4e6b-b3f7-29b76852c4b3.png)
 
-**Kısa bir video izleyin:** ![oynatma simgesi](../designers/media/bldadminconsoleinitialconfigicon.PNG) [sıfırdan örnek veri oluşturma](https://www.bing.com/videos/search?q=blend%20data&qs=n&form=QBVR&pq=blend%20data&sc=8-7&sp=-1&sk=#view=detail&mid=F8F2449A76956D480FD2F8F2449A76956D480FD2).
+**Kısa bir video izleyin:** ![ Oynat simgesi ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [sıfırdan örnek veri oluştur](https://www.bing.com/videos/search?q=blend%20data&qs=n&form=QBVR&pq=blend%20data&sc=8-7&sp=-1&sk=#view=detail&mid=F8F2449A76956D480FD2F8F2449A76956D480FD2).
 
 ## <a name="generate-sample-data-from-a-class"></a>Bir sınıftan örnek veri oluşturma
 
 Verilerinizin yapısını tanımlayan sınıflar zaten oluşturduysanız, bunlardan örnek veri oluşturabilirsiniz.
 
-Bir sınıftan örnek veri oluşturmak için, bir XAML belgesi açın ve **veri** panelinde **, örnek veri oluştur ![örnek** veri oluştur simgesine tıklayın](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) ve sonra **sınıftan örnek veri oluştur**' a tıklayın.
+Bir sınıftan örnek veri oluşturmak için bir XAML belgesi açın ve **veri** panelinde **, örnek veri** ![ Oluştur örnek veri simgesi ](../designers/media/30540d76-7256-43ce-b5d9-4b2edf3d339f.png) düğmesine tıklayın ve ardından **sınıftan örnek veri oluştur**' a tıklayın.
 
-[Blend ile bazı veri bağlamayı karıştırmak](https://www.youtube.com/watch?v=LSwPB6CAvjg)](../designers/media/bldadminconsoleinitialconfigicon.PNG) **kısa bir video Izleyin:** ![oynat simgesi.
+**Kısa bir video izleyin:** ![ Oynat simgesi ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [Blend ile bazı veri bağlamayı karıştırma](https://www.youtube.com/watch?v=LSwPB6CAvjg).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

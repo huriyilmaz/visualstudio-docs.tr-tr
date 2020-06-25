@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl Yapılsın: Performans Oturumlarını El Ile Oluşturun | Microsoft Dokümanlar'
+title: El Ile performans oturumu oluşturma | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.performance.wizard.dllpage
 - vs.performance.wizard.exepage
@@ -15,28 +15,28 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 46c0f1bfeee785feebf1d643b0796c1308053403
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0a1701322bec623c6bb2657f78ecdcc1dc16dde1
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778836"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85327666"
 ---
 # <a name="how-to-manually-create-performance-sessions"></a>Nasıl yapılır: El ile performans oturumları oluşturma
-Performans oturumunu el ile oluşturabilirsiniz. Bunu yapmak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] için bir proje açmanız gerekmez. Daha fazla bilgi için [bkz.](../profiling/configuring-performance-sessions.md)
+El ile bir performans oturumu oluşturabilirsiniz. Bunu yapmak için ' de bir proje açmanız gerekli değildir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Daha fazla bilgi için bkz. [performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md).
 
-### <a name="to-manually-create-a-performance-session"></a>El ile performans oturumu oluşturmak için
+### <a name="to-manually-create-a-performance-session"></a>El ile bir performans oturumu oluşturmak için
 
-1. Hata **Ayıklama** menüsünde **Profiler'ı**, ardından **Performans Gezgini'ni**işaret edin ve ardından **Yeni Performans Oturumu'nu**tıklatın.
+1. **Hata Ayıkla** menüsünde **Profil Oluşturucu**' nın üzerine gelin ve **Performans Gezgini**ve ardından **yeni performans oturumu**' na tıklayın.
 
-     **Performans Gezgini'ne**boş bir performans oturumu eklenir.
+     **Performans Gezgini**bir boş performans oturumu eklenir.
 
-2. Sağ tıkla **Hedefleri**ve ardından **Hedef İkili Ekle'yi**tıklatın.
+2. **Hedefler**' e sağ tıklayın ve ardından **hedef ikilisi Ekle**' ye tıklayın.
 
-3. Hedef **İkili Ekle** iletişim kutusunda dosya adını seçin ve sonra **Aç'ı**tıklatın.
+3. **Hedef Ikili Ekle** iletişim kutusunda, dosya adını seçin ve ardından **Aç**' a tıklayın.
 
      Yeni bir ikili eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans Gezgini](../profiling/performance-explorer.md)
-- [Başlarken](../profiling/getting-started-with-performance-tools.md)
+- [Kullanmaya başlama](../profiling/getting-started-with-performance-tools.md)

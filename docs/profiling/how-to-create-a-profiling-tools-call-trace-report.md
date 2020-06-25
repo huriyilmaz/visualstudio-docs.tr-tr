@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl Yapilir: Profil Oluşturma Araçları Arama İzleme Raporu | Microsoft Dokümanlar'
+title: Nasıl yapılır-Profil Oluşturma Araçları çağrısı Izleme raporu oluşturma | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - performance tools, viewing ETW data
 - ETW [Visual Studio ALM], viewing data
@@ -12,33 +12,33 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b184310d837193679a1a5eacf2fbae4ecf29caa
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c9f434df1a2956daf49dbb6a6c5c55f06c743d44
+ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778992"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85328629"
 ---
 # <a name="how-to-create-a-profiling-tools-call-trace-report"></a>Nasıl yapılır: Profil oluşturma araçları çağrı izleme raporu oluşturma
-Profil Oluşturma Araçları için *arama izleme raporu,* uygulamanızın işlevlerine her giriş ve çıkış noktası için zamanlama bilgilerini ve işleviniz tarafından diğer işlevlere yapılan her aramayı listeler. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Arama izleme raporları, yalnızca enstrümantasyon yöntemiyle toplanmışsa, verilerin profilini çıkarmak için kullanılabilir.
+Profil Oluşturma Araçları için *çağrı izleme raporu* , [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] her giriş için zamanlama bilgilerini ve uygulamanızın işlevlerine ve işleviniz tarafından yapılan her bir işleve yapılan her çağrıyı listeler. Çağrı izleme raporları yalnızca izleme yöntemiyle toplandıysa profil oluşturma verileri için kullanılabilir.
 
 > [!NOTE]
-> Arama izleme raporlarını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' da görüntüleyemezsiniz. Virgülden ayrılmış bir değer oluşturmak için **VSPerfReport** komut satırı aracını kullanmanız gerekir (.* csv*) veya . *xml* dosyası. Bu araç hakkında daha fazla bilgi için [VSPerfReport'a](../profiling/vsperfreport.md)bakın.
+> İçinde çağrı izleme raporları görüntüleyemezsiniz [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Bir virgülle ayrılmış değer oluşturmak için **VSPerfReport** komut satırı aracını kullanmanız gerekir (.* CSV*) veya. *XML* dosyası. Bu araç hakkında daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).
 
-### <a name="to-create-a-call-trace-report"></a>Çağrı izleme raporu oluşturmak için
+### <a name="to-create-a-call-trace-report"></a>Bir çağrı izleme raporu oluşturmak için
 
-1. Komut **İstemi penceresi** açın.
+1. Bir **komut istemi** penceresi açın.
 
 2. Komut isteminde aşağıdaki komutu yazın:
 
-     *ToolsPath* **VSPerfReport** *VSPFile*  **/CallTrace [/Xml]**
+     *Araçları yolu* **VSPerfReport** *vspfile*  **/calltrace [/XML]**
 
     |||
     |-|-|
-    |*ToolsPath*|Profil Oluşturma Araçları komut satırı araçlarının yolu. Daha fazla bilgi için [bkz.](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)|
-    |*VSPDosyası*|Profil oluşturma verileri (.* vsp* veya . *vsps*) Dosya. Tam ve kısmi yollar kabul edilir.|
-    |Xml|XML biçimlendirilmiş bir rapor oluşturur.|
+    |*Araçları yolu*|Profil Oluşturma Araçları komut satırı araçlarının yolu. Daha fazla bilgi için bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).|
+    |*VSPFile*|Profil oluşturma verileri (.* VSP* veya. *vsps*) dosyasýný. Tam ve kısmi yollar kabul edilir.|
+    |Xml|XML biçimli bir rapor oluşturur.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Windows (ETW) verileri için Olay İzlemesini Toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
-- [Profil oluşturma araçları API'leri](../profiling/profiling-tools-apis.md)
+- [Nasıl yapılır: Windows için olay Izleme (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
+- [Profil araçları API 'Leri](../profiling/profiling-tools-apis.md)
