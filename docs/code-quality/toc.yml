@@ -551,6 +551,8 @@
                   href: ca1828.md
                 - name: 'CA1829: Enumerable.Count metodu yerine Length/Count özelliğini kullan'
                   href: ca1829.md
+                - name: 'CA1830: StringBuilder''da kesin tür belirtilmiş Append ve Insert metodu aşırı yüklemelerini tercih et'
+                  href: ca1830.md
                 - name: 'CA1831: Uygun olduğunda dize için Aralık tabanlı dizin oluşturucular yerine AsSpan kullanın'
                   href: ca1831.md
                 - name: 'CA1832: Bir dizinin ReadOnlySpan veya ReadOnlyMemory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın'
@@ -949,6 +951,8 @@
                   href: ca2245.md
                 - name: 'CA2246: Sembol ve üyesini aynı deyime atama'
                   href: ca2246.md
+                - name: 'CA2247: TaskCompletionSource oluşturucusuna geçirilen bağımsız değişken TaskContinuationOptions sabit listesi yerine TaskCreationOptions sabit listesi olmalı'
+                  href: ca2247.md
                 - name: 'CA2248: Enum.HasFlag için doğru sabit listesi bağımsız değişkenini belirtin'
                   href: ca2248.md
             - name: Otomatik özelliği askıya alma
