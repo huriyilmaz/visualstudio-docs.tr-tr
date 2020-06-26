@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Paket bildirimi oluşturma | Microsoft Docs'
+title: Nasıl yapılır-paket bildirimi oluşturma | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - FSharp
 - VB
@@ -18,29 +18,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d8083ca9a8d3025b1760edde96279a0cd557f722
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dc3a1263136fe4c50b2c7020e1557a7a693691b6
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62899746"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382529"
 ---
 # <a name="how-to-create-a-package-manifest"></a>Nasıl yapılır: Paket bildirimi oluşturma
-Uygulamanız için önkoşul dağıtmak için bir önyükleyici paketi kullanabilirsiniz. Paket bildirimi ancak tek ürün bildirim dosyasını her yerel ayar için bir önyükleyici paketi içerir. Yerelleştirilmiş farklı sürümleri arasında paylaşılan işlevselliği ürün bildirimine gitmeniz gerekir.
+Uygulamanıza yönelik önkoşulları dağıtmak için bir önyükleyici paketi kullanabilirsiniz. Önyükleyici paketi tek bir ürün bildirim dosyası, ancak her yerel ayar için bir paket bildirimi içerir. Farklı yerelleştirilmiş sürümler genelinde paylaşılan işlevsellik ürün bildirimine gitmelidir.
 
  Ürün bildirimleri hakkında daha fazla bilgi için bkz. [nasıl yapılır: Ürün bildirimi oluşturma](../deployment/how-to-create-a-product-manifest.md).
 
-## <a name="create-the-package-manifest"></a>Paket bildirimi oluşturma
+## <a name="create-the-package-manifest"></a>Paket bildirimini oluşturma
 
-#### <a name="to-create-the-package-manifest"></a>Paket bildirimi oluşturma
+#### <a name="to-create-the-package-manifest"></a>Paket bildirimi oluşturmak için
 
-1. Önyükleyici paketi için bir dizin oluşturun. Bu örnekte *C:\package*.
+1. Önyükleyici paketi için bir dizin oluşturun. Bu örnekte *C:\Package*kullanılmaktadır.
 
-2. Yerel ayar adı ile aşağıdaki gibi bir alt dizin oluşturma *tr* İngilizce.
+2. Yerel ayar adına sahip bir alt dizin oluşturun *(örneğin, İngilizce için)* .
 
-3. Visual Studio'da adlı bir XML dosyası oluşturun *package.xml*ve kaydetmesi *C:\package\en* klasör.
+3. Visual Studio 'da, *package.xml*ADLı bir XML dosyası oluşturun ve *C:\package\en* klasörüne kaydedin.
 
-4. Önyükleyici paket adı, bu yerelleştirilmiş paket bildirimi ve isteğe bağlı bir lisans sözleşmesi için kültürü listelemek için XML ekleyin. Aşağıdaki XML değişkenleri kullanır `DisplayName` ve `Culture`, bir sonraki öğe tanımlanır.
+4. Önyükleyici paketinin adını, bu yerelleştirilmiş paket bildirimi için kültürü ve isteğe bağlı lisans sözleşmesini listelemek için XML ekleyin. Aşağıdaki XML, `DisplayName` ve `Culture` daha sonraki bir öğesinde tanımlanan değişkenleri kullanır.
 
     ```xml
     <Package
@@ -50,7 +50,7 @@ Uygulamanız için önkoşul dağıtmak için bir önyükleyici paketi kullanabi
         LicenseAgreement="eula.txt">
     ```
 
-5. Yerel ayara özgü dizindeki tüm dosyaları listelemek için XML ekleyin. Aşağıdaki XML adında bir dosya kullanır *eula.txt* için geçerli olan **tr** yerel ayar.
+5. Yerel ayara özgü dizindeki tüm dosyaları listelemek için XML ekleyin. Aşağıdaki XML, **en** yerel ayar için geçerli olan *eula.txt* adında bir dosya kullanır.
 
     ```xml
     <PackageFiles>
@@ -58,7 +58,7 @@ Uygulamanız için önkoşul dağıtmak için bir önyükleyici paketi kullanabi
     </PackageFiles>
     ```
 
-6. Yerelleştirilebilir Dize için önyükleyici paketi tanımlamak için XML ekleyin. Hata dizeleri için aşağıdaki XML ekler **tr** yerel ayar.
+6. Önyükleyici paketi için yerelleştirilebilir dizeler tanımlamak üzere XML ekleyin. Aşağıdaki XML, **en** yerel ayar için hata dizelerini ekler.
 
     ```xml
       <Strings>
@@ -71,10 +71,10 @@ Uygulamanız için önkoşul dağıtmak için bir önyükleyici paketi kullanabi
     </Strings>
     ```
 
-7. Kopyalama *C:\package* Visual Studio önyükleyicisi dizinine klasörü. Visual Studio 2010 için bu, *\Program SDKs\Windows\v7.0A\Bootstrapper\Packages* dizin.
+7. *C:\Package* klasörünü Visual Studio önyükleyici dizinine kopyalayın. Visual Studio 2010 için bu, *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages* dizinidir.
 
 ## <a name="example"></a>Örnek
- Paket bildirimi gibi hata iletileri, Yazılım Lisans Koşulları'nı ve dil paketlerinin yerel ayara özgü bilgileri içerir.
+ Paket bildirimi, hata iletileri, yazılım lisans koşulları ve dil paketleri gibi yerel ayara özgü bilgiler içerir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

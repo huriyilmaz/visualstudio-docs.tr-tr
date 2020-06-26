@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Teknik destek için bir bağlantı belirtme | Microsoft Docs'
+title: Teknik destek için bir bağlantı belirtme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -20,30 +20,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a050ae24ddb5b796acf101e0432a5b64cd28031
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e64ef97b8b51f8a943e216bad67ec300026d5654
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898577"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382061"
 ---
-# <a name="how-to-specify-a-link-for-technical-support"></a>Nasıl yapılır: Teknik destek için bir bağlantı belirtme
-Yayımlama sırasında bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama **destek URL'si** özelliği, bir Web sayfası veya kullanıcılar nereye uygulama hakkında bilgi almak için dosya paylaşımı tanımlar. Bu özellik isteğe bağlıdır; URL sağlanırsa, uygulamanın girişinde görüntülenir **Program Ekle veya Kaldır** iletişim kutusu.
+# <a name="how-to-specify-a-link-for-technical-support"></a>Nasıl yapılır: teknik destek için bir bağlantı belirtme
+Bir uygulamayı yayımlarken [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , **Destek URL** özelliği kullanıcıların uygulama hakkında bilgi almak için gidebileceği bir Web sayfası veya dosya paylaşma tanımlar. Bu özellik isteğe bağlıdır; sağlanmışsa, URL, uygulamanın **Program Ekle veya Kaldır** iletişim kutusunda görüntülenir.
 
- **Destek URL'si** özelliği, üzerinde ayarlanabilir **Yayımla** sayfasının **Proje Tasarımcısı**.
+ **Support URL** özelliği, **Proje Tasarımcısı**' nın **Yayımla** sayfasında ayarlanabilir.
 
-### <a name="to-specify-a-support-url"></a>İçin destek URL'sini belirtme
+### <a name="to-specify-a-support-url"></a>Bir destek URL 'SI belirtmek için
 
-1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünde tıklatın **özellikleri**.
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
 
-2. Tıklayın **Yayımla** sekmesi.
+2. **Yayımla** sekmesine tıklayın.
 
-3. Tıklayın **seçenekleri** açmak için düğmeyi **yayımlama seçeneği** iletişim kutusu.
+3. **Yayımla Seçenekleri** iletişim kutusunu açmak için **Seçenekler** düğmesine tıklayın.
 
-4. Tıklayın **açıklama**.
+4. **Açıklama**' ya tıklayın.
 
-5. İçinde **destek URL'si** alanında, bir Web sitesi, Web sayfası veya UNC paylaşımı tam nitelenmiş bir yol girin.
+5. **Destek URL 'si** alanında bir Web sitesi, Web sayfası veya UNC paylaşımının tam yolunu girin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
-- [Nasıl yapılır: Yayımlama Sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: ClickOnce uygulaması için Başlat menüsü adı belirtme | Microsoft Docs'
+title: ClickOnce uygulaması için başlangıç menüsü adı belirtme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,38 +16,38 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ef1675480182796e1fe8bbe29baa5ed6a9d5f63
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 882d6f7471530a101404040368dbc6088e9b5d96
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898808"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85381931"
 ---
 # <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için Başlat menüsü adı belirtme
-Olduğunda bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] çevrimiçi ve çevrimdışı kullanım için bir uygulama yüklendiğinde, bir giriş eklenir **Başlat** menü ve **Program Ekle veya Kaldır** listesi. Varsayılan olarak, görünen adı uygulama derlemenin adı ile aynı olduğu halde ayarlayarak görünen adı değiştirebilirsiniz **ürün adı** içinde **yayımlama seçeneği** iletişim kutusu.
+Bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama hem çevrimiçi hem de çevrimdışı kullanım için yüklendiğinde, **Başlat** menüsüne ve **Program Ekle/Kaldır** listesine bir giriş eklenir. Varsayılan olarak, görünen ad uygulama derlemesinin adıyla aynıdır, ancak **Yayımlama seçenekleri** Iletişim kutusunda **ürün adı** ' nı ayarlayarak görünen adı değiştirebilirsiniz.
 
- **Ürün adı** gösterileceği *publish.htm* sayfasında; yüklü çevrimdışı bir uygulama için giriş adı olacaktır **Başlat** menü ve bu da olacaktır gösteren adı **Program Ekle veya Kaldır**.
+ **Ürün adı** *publish.htm* sayfasında görüntülenir; yüklü bir çevrimdışı uygulama için, **Başlangıç** menüsündeki girdinin adı olacaktır ve ayrıca **Program Ekle veya Kaldır**' da gösterilen ad olur.
 
- **Yayımcı adı** görünür *publish.htm* sayfa yukarıdaki **ürün adı**, ve yüklü çevrimdışı bir uygulama için uygulamanın içeren klasörün adını olacaktır simgesini **Başlat** menüsü.
+ **Yayımcı adı** , **ürün adının**üzerindeki *publish.htm* sayfasında görünür ve yüklü bir çevrimdışı uygulama için, **Başlangıç** menüsünde uygulamanın simgesini içeren klasörün adı da olacaktır.
 
- Başlangıç menüsünde kısayol veya uygulama başvurusu oluşturulan *%appdata%\Microsoft\Windows\Start Menu\Programs\\< Yayımcı adı\>*. Kısayol veya uygulama başvurusu, ürün adı ile aynı ada sahiptir.
+ Başlat menüsü kısayolu veya uygulama başvurusu, *%APPDATA%\Microsoft\Windows\Start Menu\Programs \\<yayımcı adı \> *' nda oluşturulur. Kısayol veya uygulama başvurusu, ürün adı ile aynı ada sahiptir.
 
- Ayarlayabileceğiniz **ürün adı** ve **Yayımcı adı** özelliklerinde **yayımlama seçeneği** iletişim kutusu, kullanılabilir **Yayımla** sayfası ' ın **Proje Tasarımcısı**.
+ **Ürün adı** ve **Yayımcı adı** özelliklerini, **Proje Tasarımcısı**' nın **Yayımla** sayfasında bulunan **Yayımla Seçenekleri** iletişim kutusunda ayarlayabilirsiniz.
 
-### <a name="to-specify-a-start-menu-name"></a>Başlat menüsü adı belirtmek için
+### <a name="to-specify-a-start-menu-name"></a>Başlangıç menüsü adı belirtmek için
 
-1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünde tıklatın **özellikleri**.
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
 
-2. Tıklayın **Yayımla** sekmesi.
+2. **Yayımla** sekmesine tıklayın.
 
-3. Tıklayın **seçenekleri** açmak için düğmeyi **yayımlama seçeneği** iletişim kutusu.
+3. **Yayımla Seçenekleri** iletişim kutusunu açmak için **Seçenekler** düğmesine tıklayın.
 
-4. Tıklayın **açıklama**.
+4. **Açıklama**' ya tıklayın.
 
-5. İçinde **yayımlama seçeneği** iletişim kutusunda, görüntülemek için bir ad girin **ürün adı**.
+5. **Yayımla Seçenekleri** Iletişim kutusunda **ürün adı**' nda görüntülenecek adı girin.
 
-6. İsteğe bağlı olarak, bir yayımcı adı, girebileceğiniz **Yayımcı adı**.
+6. İsteğe bağlı olarak, **Yayımcı adı**' na bir yayımcı adı girebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
-- [Nasıl yapılır: Yayımlama Sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

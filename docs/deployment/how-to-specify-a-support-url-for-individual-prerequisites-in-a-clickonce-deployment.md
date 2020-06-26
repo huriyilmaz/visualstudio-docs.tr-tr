@@ -1,7 +1,7 @@
 ---
-title: ClickOnce dağıtımı'nda Önkoşullar için destek URL'si
+title: ClickOnce dağıtımında Önkoşullar için destek URL 'SI
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,25 +15,25 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 78ba7398694e097f324695b6357abc0b35f8d3ee
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: bf474e4926403a9475860bfdc620ee4a6860f8aa
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66745576"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85381736"
 ---
-# <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>Nasıl yapılır: Bir ClickOnce dağıtımı ' bağımsız Önkoşullar için destek URL'sini belirtme
-A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım için istemci bilgisayardaki kullanılabilir olması gereken önkoşulları test [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] çalıştırmak için uygulama. Bu bağımlılıklar, gerekli en düşük sürümü .NET Framework, işletim sistemi ve genel derleme önbelleğinde (GAC) yüklenmiş herhangi bir derleme sürümünü içerir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], bu önkoşulları hiçbirini kendisini; ancak, yükleyemezsiniz bir önkoşul bulunamadı, yalnızca yükleme durdurur ve yükleme neden başarısız olduğunu açıklayan bir iletişim kutusu görüntüler.
+# <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>Nasıl yapılır: bir ClickOnce dağıtımında tek Önkoşullar için destek URL 'SI belirtme
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Dağıtım, uygulamanın çalışması için istemci bilgisayarda kullanılabilir olması gereken bazı önkoşulları test edebilir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu bağımlılıklar, .NET Framework gereken en düşük sürümü, işletim sisteminin sürümünü ve genel derleme önbelleğinde (GAC) önceden yüklenmiş olması gereken tüm derlemeleri içerir. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Ancak, bu önkoşullardan herhangi biri yüklenemez; bir önkoşul bulunamazsa, yüklemeyi durdurur ve yüklemenin neden başarısız olduğunu açıklayan bir iletişim kutusu görüntüler.
 
- Önkoşulları yüklemek için iki yöntem vardır. Bir önyükleyici uygulaması kullanarak bunları yükleyebilirsiniz. Alternatif olarak, önkoşul bulunmazsa, kullanıcılara iletişim kutusunda görüntülenir bağımsız Önkoşullar için destek URL'sini belirtebilirsiniz. Bu URL tarafından başvurulan sayfa için gereken önkoşulları yükleme yönergeleri için bağlantıları içerebilir. Bir uygulama için ayrı bir önkoşulu destek URL'si belirtmezse [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tanımlıysa, bir bütün olarak uygulamadan dağıtım bildiriminde belirtilen destek URL'sini görüntüler.
+ Önkoşulları yüklemek için iki yöntem vardır. Bunları bir önyükleyici uygulaması kullanarak yükleyebilirsiniz. Alternatif olarak, önkoşul bulunamazsa, iletişim kutusunda kullanıcılara görüntülenecek olan ayrı Önkoşullar için bir destek URL 'SI belirtebilirsiniz. Bu URL tarafından başvurulan sayfa, gerekli önkoşulu yüklemek için yönergelerin bağlantılarını içerebilir. Bir uygulama tek bir önkoşul için destek URL 'SI belirtmezse, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] tanımlanmazsa uygulamanın dağıtım bildiriminde belirtilen destek URL 'sini bir bütün olarak görüntüler.
 
- Sırada [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], *Mage.exe*, ve *MageUI.exe* tüm oluşturmak için kullanılabilir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımlar, bu araçlar hiçbiri doğrudan destek kişi için destek URL'sini belirtme Önkoşullar. Bu belge, dağıtımınızın değiştirilecek açıklar uygulama bildirimi ve bunlar için dağıtım bildirimi URL'leri destekler.
+ Ancak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , *Mage.exe*ve *MageUI.exe* her türlü dağıtım oluşturmak için kullanılabilir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] , bu araçların hiçbiri ayrı Önkoşullar için bir destek URL 'si belirtmeyi doğrudan desteklemez. Bu belgede, bu destek URL 'Lerini dahil etmek için dağıtımınızın uygulama bildirimi ve dağıtım bildiriminin nasıl değiştirileceği açıklanmaktadır.
 
-### <a name="specify-a-support-url-for-an-individual-prerequisite"></a>Tek bir önkoşulu için destek URL'sini belirtme
+### <a name="specify-a-support-url-for-an-individual-prerequisite"></a>Tek bir önkoşul için destek URL 'SI belirtin
 
-1. Uygulama bildirimini açın ( *.manifest* dosyası) için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bir metin düzenleyicisinde uygulama.
+1. Uygulamanın uygulama bildirimini ( *. manifest* dosyası) [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bir metin düzenleyicisinde açın.
 
-2. Bir işletim sistemi önkoşulları ekleme `supportUrl` özniteliğini `dependentOS` öğesi:
+2. Bir işletim sistemi önkoşulu için, `supportUrl` özniteliğini `dependentOS` öğesine ekleyin:
 
    ```xml
     <dependency>
@@ -45,7 +45,7 @@ A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım i
      </dependency>
    ```
 
-3. Belirli bir ortak dil çalışma zamanı sürümü için bir önkoşul ekleme `supportUrl` özniteliğini `dependentAssembly` ortak dil çalışma zamanı bağımlılık belirten girişi:
+3. Ortak dil çalışma zamanının belirli bir sürümüne yönelik bir önkoşul için, `supportUrl` özniteliğini `dependentAssembly` ortak dil çalışma zamanı bağımlılığını belirten girdiye ekleyin:
 
    ```xml
      <dependency>
@@ -55,7 +55,7 @@ A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım i
      </dependency>
    ```
 
-4. Genel derleme önbelleğinde önceden bir derleme için önkoşulları ayarlamak `supportUrl` için `dependentAssembly` gerekli derleme belirten öğe:
+4. Genel derleme önbelleğinde önceden yüklenmiş olması gereken bir derlemeye yönelik önkoşul için, `supportUrl` `dependentAssembly` gerekli derlemeyi belirten öğesi için öğesini ayarlayın:
 
    ```xml
      <dependency>
@@ -65,9 +65,9 @@ A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım i
      </dependency>
    ```
 
-5. İsteğe bağlı. Açık .NET Framework 4'ü hedefleyen uygulamalar için dağıtım bildirimi ( *.application* dosyası) için [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] bir metin düzenleyicisinde uygulama.
+5. İsteğe bağlı. .NET Framework 4 ' ü hedefleyen uygulamalar için, bir metin düzenleyicisinde uygulamanın dağıtım bildirimini ( *. Application* dosyası) açın [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
-6. Bir .NET Framework 4 önkoşulları ekleme `supportUrl` özniteliğini `compatibleFrameworks` öğesi:
+6. .NET Framework 4 önkoşulu için, `supportUrl` özniteliğini `compatibleFrameworks` öğesine ekleyin:
 
    ```xml
    <compatibleFrameworks  xmlns="urn:schemas-microsoft-com:clickonce.v2" supportUrl="http://adatum.com/MyApplication/CompatibleFrameworks.htm">
@@ -76,14 +76,14 @@ A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım i
    </compatibleFrameworks>
    ```
 
-7. El ile uygulama bildirimini değiştirmiş sonra gerekir, dijital sertifikayı kullanarak uygulama bildirimini yeniden imzalamanız sonra güncelleştirme ve de dağıtım bildirimini yeniden imzalamanız. Kullanım *Mage.exe* veya *MageUI.exe* kullanarak bu dosyaları yeniden olarak bağlı olarak, bu görevi gerçekleştirmek için SDK araçlarını [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] el ile yaptığınız değişiklikleri siler. Bildirimleri yeniden imzalamak için Mage.exe kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
+7. Uygulama bildirimini el ile değiştirdiyseniz, dijital sertifikanızı kullanarak uygulama bildirimini yeniden imzalamanız, sonra da dağıtım bildirimini güncelleştirip yeniden imzalamanız gerekir. Bu görevleri gerçekleştirmek için *Mage.exe* veya *MageUI.exe* SDK araçlarını kullanın, bu dosyaların yeniden oluşturulması [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] el ile yaptığınız değişiklikleri siler. Bildirimleri yeniden imzalamak için Mage.exe kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
 
 ## <a name="net-framework-security"></a>.NET Framework güvenliği
- Uygulama kısmi güvende çalıştırmak için işaretlendiyse, destek URL'sini iletişim kutusunda görüntülenmez.
+ Uygulama kısmi güvende çalışmak üzere işaretlenmişse, iletişim kutusunda Destek URL 'SI görüntülenmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)
-- [İzlenecek yol: Bir ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
-- [\<compatibleFrameworks > öğesi](../deployment/compatibleframeworks-element-clickonce-deployment.md)
+- [İzlenecek yol: ClickOnce uygulamasını el ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)
+- [\<compatibleFrameworks>dosyalarında](../deployment/compatibleframeworks-element-clickonce-deployment.md)
 - [ClickOnce ve Authenticode](../deployment/clickonce-and-authenticode.md)
 - [Uygulama dağıtımının önkoşulları](../deployment/application-deployment-prerequisites.md)

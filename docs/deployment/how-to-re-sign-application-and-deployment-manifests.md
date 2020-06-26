@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Uygulama ve Dağıtım Bildirimlerini Yeniden İmzala | Microsoft Dokümanlar'
+title: Uygulama ve dağıtım bildirimlerini yeniden imzalama | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,34 +18,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fc69ce1f79644d7f4b35fbb1c1e3a41691761390
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.openlocfilehash: 1905ea32a9899a1262e146f264e0a1179f0e8c6e
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649173"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382204"
 ---
-# <a name="how-to-re-sign-application-and-deployment-manifests"></a>Nasıl yapilir: Uygulama ve dağıtım bildirimlerini yeniden imzalama
-Windows Forms uygulamaları, Windows Presentation Foundation uygulamaları (xbap) veya Office çözümleri için uygulama bildiriminde dağıtım özelliklerinde değişiklik yaptıktan sonra, hem uygulama hem de dağıtım bildirimlerini bir sertifikayla yeniden imzalamanız gerekir. Bu işlem, değiştirilmiş dosyaların son kullanıcı bilgisayarlara yüklenmemesini sağlamaya yardımcı olur.
+# <a name="how-to-re-sign-application-and-deployment-manifests"></a>Nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama
+Uygulama bildiriminde Windows Forms uygulamalar, Windows Presentation Foundation uygulamalar (XBAP) veya Office çözümleri için dağıtım özelliklerinde değişiklikler yaptıktan sonra, hem uygulama hem de dağıtım bildirimlerini bir sertifikayla yeniden imzalamanız gerekir. Bu işlem, değiştirilen dosyaların son kullanıcı bilgisayarlarında yüklü olmamasını sağlamaya yardımcı olur.
 
- Bildirimleri yeniden imzalayabileceğiniz başka bir senaryo da, müşterilerinizin uygulama ve dağıtım bildirimlerini kendi sertifikalarıyla imzalamak istemeleridir.
+ Bildirimleri yeniden imzalayabileceğiniz başka bir senaryo ise müşterilerinizin uygulama ve dağıtım bildirimlerini kendi sertifikasıyla imzalamasını ister.
 
-## <a name="re-sign-the-application-and-deployment-manifests"></a>Uygulama ve Dağıtım Bildirimlerini Yeniden İmzalayın
- Bu yordam, uygulama bildirimi dosyanızda (*.manifest)* değişiklik yaptığınızı varsayar. Daha fazla bilgi için [bkz: Dağıtım özelliklerini değiştirme.](https://msdn.microsoft.com/library/66052a3a-8127-4964-8147-2477ef5d1472)
+## <a name="re-sign-the-application-and-deployment-manifests"></a>Uygulama ve dağıtım bildirimlerini yeniden imzalama
+ Bu yordam, uygulama bildirimi dosyanızda (*. manifest*) daha önce değişiklikler yapmış olduğunuzu varsayar. Daha fazla bilgi için bkz. [nasıl yapılır: dağıtım özelliklerini değiştirme](https://msdn.microsoft.com/library/66052a3a-8127-4964-8147-2477ef5d1472).
 
 #### <a name="to-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>Uygulama ve dağıtım bildirimlerini Mage.exe ile yeniden imzalamak için
 
-1. Visual **Studio Komut İstem** penceresi açın.
+1. Bir **Visual Studio komut istemi** penceresi açın.
 
-2. Dizinleri imzalamak istediğiniz bildirim dosyalarını içeren klasörle değiştirin.
+2. Dizinleri imzalamak istediğiniz bildirim dosyalarını içeren klasör olarak değiştirin.
 
-3. Başvuru bildirimi dosyasını imzalamak için aşağıdaki komutu yazın. *ManifestFileName'i* bildirim dosyanızın adı ve uzantısı ile değiştirin. *Sertifikayı* sertifika dosyasının göreli veya tam nitelikli yolu ile değiştirin ve *Parola'yı* sertifikanın parolasıyla değiştirin.
+3. Uygulama bildirim dosyasını imzalamak için aşağıdaki komutu yazın. *Manifestfilename* değerini bildirim dosyanızın adıyla ve uzantısıyla değiştirin. Sertifikayı sertifika dosyasının göreli veya tam *yoluyla değiştirin ve* *parolayı* sertifika parolasıyla değiştirin.
 
     ```cmd
     mage -sign ManifestFileName.manifest -CertFile Certificate -Password Password
     ```
 
-     Örneğin, bir eklenti, windows form uygulaması veya Windows Presentation Foundation tarayıcı uygulaması için bir uygulama bildirimini imzalamak için aşağıdaki komutu çalıştırabilirsiniz. Visual Studio tarafından oluşturulan geçici sertifikalar, üretim ortamlarına dağıtım için önerilmez.
+     Örneğin, bir eklenti, bir Windows form uygulaması veya bir Windows Presentation Foundation tarayıcı uygulaması için bir uygulama bildirimini imzalamak üzere aşağıdaki komutu çalıştırabilirsiniz. Visual Studio tarafından oluşturulan geçici sertifikaların üretim ortamlarına dağıtılması önerilmez.
 
     ```cmd
     mage -sign WindowsFormsApplication1.exe.manifest -CertFile ..\WindowsFormsApplication1_TemporaryKey.pfx
@@ -53,13 +53,13 @@ Windows Forms uygulamaları, Windows Presentation Foundation uygulamaları (xbap
     mage -sign WpfBrowserApplication1.exe.manifest -CertFile ..\WpfBrowserApplication1_TemporaryKey.pfx
     ```
 
-4. Yer tutucu adlarını önceki adımdaki gibi değiştirerek dağıtım bildirimi dosyasını güncelleştirmek ve imzalamak için aşağıdaki komutu yazın.
+4. Dağıtım bildirimi dosyasını güncelleştirmek ve imzalamak için, önceki adımda olduğu gibi yer tutucu adlarını değiştirerek aşağıdaki komutu yazın.
 
     ```cmd
     mage -update DeploymentManifest -appmanifest ApplicationManifest -CertFile Certificate -Password Password
     ```
 
-     Örneğin, excel eklentisi, Windows Forms uygulaması veya Windows Presentation Foundation tarayıcı uygulaması için dağıtım bildirimini güncelleştirmek ve imzalamak için aşağıdaki komutu çalıştırabilirsiniz.
+     Örneğin, bir Excel eklentisi, Windows Forms uygulaması veya bir Windows Presentation Foundation tarayıcı uygulaması için bir dağıtım bildirimini güncelleştirmek ve imzalamak için aşağıdaki komutu çalıştırabilirsiniz.
 
     ```cmd
     mage -update WindowsFormsApplication1.application -appmanifest WindowsFormsApplication1.exe.manifest -CertFile ..\WindowsFormsApplication1_TemporaryKey.pfx
@@ -67,26 +67,26 @@ Windows Forms uygulamaları, Windows Presentation Foundation uygulamaları (xbap
     mage -update WpfBrowserApplication1.xbap -appmanifest WpfBrowserApplication1.exe.manifest -CertFile ..\WpfBrowserApplication1_TemporaryKey.pfx
     ```
 
-5. İsteğe bağlı olarak, ana dağıtım bildirimini *(uygulama>.application\\\<yayımla)* sürüm dağıtım dizininize kopyalayın (*yayım\Uygulama Dosyaları\\\<>_\<sürüm>). *
+5. İsteğe bağlı olarak, ana dağıtım bildirimini (*Publish \\ \<appname> . Application*) sürüm dağıtım dizininize (*publish\Application Files \\ \<appname> _ \<version> *) kopyalayın.
 
 ## <a name="update-and-re-sign-the-application-and-deployment-manifests"></a>Uygulama ve dağıtım bildirimlerini güncelleştirin ve yeniden imzalayın
- Bu yordam, uygulama bildirimi dosyanızda zaten değişiklikler yaptığınızı varsayar (*.manifest*), ancak güncelleştirilen başka dosyalar da vardır. Dosyalar güncelleştirildiğinde, dosyayı temsil eden karma nın da güncelleştirilmelidir.
+ Bu yordam, uygulama bildirimi dosyanızda (*. manifest*) daha önce değişiklikler yapmış olduğunu, ancak güncelleştirilmiş başka dosyalar olduğunu varsayar. Dosyalar güncelleştirilirken, dosyayı temsil eden karma değeri de güncelleştirilmeleri gerekir.
 
-#### <a name="to-update-and-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>Uygulama ve dağıtım bildirimlerini Mage.exe ile güncellemek ve yeniden imzalamak için
+#### <a name="to-update-and-re-sign-the-application-and-deployment-manifests-with-mageexe"></a>Uygulama ve dağıtım bildirimlerini Mage.exe ile güncelleştirmek ve yeniden imzalamak için
 
-1. Visual **Studio Komut İstem** penceresi açın.
+1. Bir **Visual Studio komut istemi** penceresi açın.
 
-2. Dizinleri imzalamak istediğiniz bildirim dosyalarını içeren klasörle değiştirin.
+2. Dizinleri imzalamak istediğiniz bildirim dosyalarını içeren klasör olarak değiştirin.
 
-3. *.deploy* dosya uzantısını yayımlama çıktıklasöründeki dosyalardan kaldırın.
+3. Yayımla çıkış klasöründeki dosyalardan *. deploy* dosya uzantısını kaldırın.
 
-4. Güncelleştirilmiş dosyalar için yeni hashes ile uygulama bildirimini güncelleştirmek ve uygulama bildirimi dosyasını imzalamak için aşağıdaki komutu yazın. *ManifestFileName'i* bildirim dosyanızın adı ve uzantısı ile değiştirin. *Sertifikayı* sertifika dosyasının göreli veya tam nitelikli yolu ile değiştirin ve *Parola'yı* sertifikanın parolasıyla değiştirin.
+4. Uygulama bildirimini güncelleştirilmiş dosyalar için yeni karmalarla güncelleştirmek ve uygulama bildirim dosyasını imzalamak için aşağıdaki komutu yazın. *Manifestfilename* değerini bildirim dosyanızın adıyla ve uzantısıyla değiştirin. Sertifikayı sertifika dosyasının göreli veya tam *yoluyla değiştirin ve* *parolayı* sertifika parolasıyla değiştirin.
 
     ```cmd
     mage -update ManifestFileName.manifest -CertFile Certificate -Password Password
     ```
 
-     Örneğin, bir eklenti, windows form uygulaması veya Windows Presentation Foundation tarayıcı uygulaması için bir uygulama bildirimini imzalamak için aşağıdaki komutu çalıştırabilirsiniz. Visual Studio tarafından oluşturulan geçici sertifikalar, üretim ortamlarına dağıtım için önerilmez.
+     Örneğin, bir eklenti, bir Windows form uygulaması veya bir Windows Presentation Foundation tarayıcı uygulaması için bir uygulama bildirimini imzalamak üzere aşağıdaki komutu çalıştırabilirsiniz. Visual Studio tarafından oluşturulan geçici sertifikaların üretim ortamlarına dağıtılması önerilmez.
 
     ```cmd
     mage -update WindowsFormsApplication1.exe.manifest -CertFile ..\WindowsFormsApplication1_TemporaryKey.pfx
@@ -94,13 +94,13 @@ Windows Forms uygulamaları, Windows Presentation Foundation uygulamaları (xbap
     mage -update WpfBrowserApplication1.exe.manifest -CertFile ..\WpfBrowserApplication1_TemporaryKey.pfx
     ```
 
-5. Yer tutucu adlarını önceki adımdaki gibi değiştirerek dağıtım bildirimi dosyasını güncelleştirmek ve imzalamak için aşağıdaki komutu yazın.
+5. Dağıtım bildirimi dosyasını güncelleştirmek ve imzalamak için, önceki adımda olduğu gibi yer tutucu adlarını değiştirerek aşağıdaki komutu yazın.
 
     ```cmd
     mage -update DeploymentManifest -appmanifest ApplicationManifest -CertFile Certificate -Password Password
     ```
 
-     Örneğin, excel eklentisi, Windows Forms uygulaması veya Windows Presentation Foundation tarayıcı uygulaması için dağıtım bildirimini güncelleştirmek ve imzalamak için aşağıdaki komutu çalıştırabilirsiniz.
+     Örneğin, bir Excel eklentisi, Windows Forms uygulaması veya bir Windows Presentation Foundation tarayıcı uygulaması için bir dağıtım bildirimini güncelleştirmek ve imzalamak için aşağıdaki komutu çalıştırabilirsiniz.
 
     ```cmd
     mage -update WindowsFormsApplication1.application -appmanifest WindowsFormsApplication1.exe.manifest -CertFile ..\WindowsFormsApplication1_TemporaryKey.pfx
@@ -108,18 +108,18 @@ Windows Forms uygulamaları, Windows Presentation Foundation uygulamaları (xbap
     mage -update WpfBrowserApplication1.xbap -appmanifest WpfBrowserApplication1.exe.manifest -CertFile ..\WpfBrowserApplication1_TemporaryKey.pfx
     ```
 
-6. *.deploy* dosya uzantısını uygulama ve dağıtım bildirimi dosyaları dışında dosyalara geri ekleyin.
+6. Uygulama ve dağıtım bildirim dosyaları dışında *. deploy* dosya uzantısını dosyalara geri ekleyin.
 
-7. İsteğe bağlı olarak, ana dağıtım bildirimini *(uygulama>.application\\\<yayımla)* sürüm dağıtım dizininize kopyalayın (*yayım\Uygulama Dosyaları\\\<>_\<sürüm>). *
+7. İsteğe bağlı olarak, ana dağıtım bildirimini (*Publish \\ \<appname> . Application*) sürüm dağıtım dizininize (*publish\Application Files \\ \<appname> _ \<version> *) kopyalayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulamalarını koruma](../deployment/securing-clickonce-applications.md)
 - [ClickOnce uygulamaları için kod erişimi güvenliği](../deployment/code-access-security-for-clickonce-applications.md)
 - [ClickOnce ve Authenticode](../deployment/clickonce-and-authenticode.md)
 - [Güvenilir uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md)
-- [Nasıl Yapılır: ClickOnce güvenlik ayarlarını etkinleştirin](../deployment/how-to-enable-clickonce-security-settings.md)
-- [Nasıl yapilir: ClickOnce uygulaması için bir güvenlik bölgesi ayarlama](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
-- [Nasıl yapılsın: ClickOnce uygulaması için özel izinleri ayarlama](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
-- [Nasıl?](securing-clickonce-applications.md)
-- [Nasıl yapIlir: ClickOnce uygulamaları için istemci bilgisayara güvenilir bir yayımcı ekleme](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)
-- [Nasıl yapılandırılır: ClickOnce güven istemi davranışını yapılandırın](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)
+- [Nasıl yapılır: ClickOnce güvenlik ayarlarını etkinleştirme](../deployment/how-to-enable-clickonce-security-settings.md)
+- [Nasıl yapılır: ClickOnce uygulaması için güvenlik bölgesi ayarlama](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)
+- [Nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)
+- [Nasıl yapılır: kısıtlanmış izinlerle ClickOnce uygulamasında hata ayıklama](securing-clickonce-applications.md)
+- [Nasıl yapılır: ClickOnce uygulamaları için bir istemci bilgisayara güvenilir yayımcı ekleme](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)
+- [Nasıl yapılır: ClickOnce güven istemi davranışını yapılandırma](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)

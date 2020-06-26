@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c94fac97a340c8c315ec91e3c5ebb68cac0d516
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: a0ff6ba1f654f3a9b909012f159cd3daaf2892f3
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283352"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382633"
 ---
 # <a name="usage-warnings"></a>Kullanım Uyarıları
 
@@ -27,7 +27,7 @@ Kullanım uyarıları .NET 'in uygun kullanımını destekler.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-|Kural|Description|
+|Kural|Açıklama|
 |----------|-----------------|
 |[CA1801: Kullanılmayan parametreleri gözden geçirin](../code-quality/ca1801.md)|Yöntem imzası, yöntemin gövdesinde kullanılmayan bir parametre içerir.|
 |[CA1806: Metot sonuçlarını yoksaymayın](../code-quality/ca1806.md)|Yeni bir nesne oluşturulur, ancak hiç kullanılmaz veya çağrılan yeni dizeyi oluşturur ve döndürür ve yeni dize hiç kullanılmaz ya da COM veya P/Invoke yöntemi, bir HRESULT ya da hiç kullanılmayan hata kodu döndürür.|
@@ -75,4 +75,5 @@ Kullanım uyarıları .NET 'in uygun kullanımını destekler.
 |[CA2244: Dizine eklenmiş öğe başlatmalarını yineleme](../code-quality/ca2244.md)|Bir nesne başlatıcısının aynı sabit dizine sahip birden fazla dizinli öğe başlatıcısı vardır. Son başlatıcı gereksizdir.|
 |[CA2245: Bir özelliği kendisine atama](../code-quality/ca2245.md)|Bir özellik yanlışlıkla kendisine atandı.|
 |[CA2246: Sembol ve üyesini aynı deyime atama](../code-quality/ca2246.md)|Bir sembol ve üyesini atama, diğer bir deyişle, bir alan veya özellik, aynı deyimde önerilmez. Üye erişiminin, bu deyimdeki atamadan önce simgenin eski değerini veya atamasından yeni değeri kullanması amaçlandıysa, bu, net değildir.|
+|[CA2247: TaskCompletionSource oluşturucusuna geçirilen bağımsız değişken TaskContinuationOptions sabit listesi yerine TaskCreationOptions sabit listesi olmalı](../code-quality/ca2246.md)|TaskCompletionSource, temel alınan görevi denetleyen TaskCreationOptions ve görevde saklanan nesne durumunu alan oluşturucuların bulunduğu oluşturuculara sahiptir.  TaskCreationOptions yerine bir TaskContinuationOptions 'ı yanlışlıkla geçirmek, çağrının durum olarak kabul edilmesine neden olur.|
 |[CA2248: ' Enum. HasFlag ' için doğru ' Enum ' bağımsız değişkenini sağlayın](../code-quality/ca2248.md)|Yöntem çağrısına bir bağımsız değişken olarak geçirilen sabit listesi türü, `HasFlag` çağıran enum türünden farklı.|

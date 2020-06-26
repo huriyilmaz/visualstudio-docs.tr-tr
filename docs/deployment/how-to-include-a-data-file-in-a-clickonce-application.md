@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Bir ClickOnce uygulamasına bir veri dosyası dahil etme | Microsoft Docs'
+title: ClickOnce uygulamasına veri dosyası ekleme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,41 +16,41 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fd2db09937ad76c0ea4c990fcdba5c34a0f8f66c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7630d1b363afa7caeae361f607f4b73929fbba1b
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898642"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382412"
 ---
-# <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>Nasıl yapılır: Bir ClickOnce uygulamasına bir veri dosyası dahil etme
-Her [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] yüklediğiniz bir uygulama, bir veri dizini hedef bilgisayarın yerel diskte, burada uygulama yönetebilir, kendi veri atanır. Veri dosyaları, tüm dosya türlerini içerebilir: metin dosyalarını, XML dosyaları veya hatta bir Microsoft Access veritabanına (*.mdb*) dosyaları. Aşağıdaki yordamlar bir veri dosyası herhangi bir tür ekleme gösterir, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama.
+# <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulamasına bir veri dosyası dahil etme
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Yüklediğiniz her uygulamaya, uygulamanın kendi verilerini yönetebileceği hedef bilgisayarın yerel diskinde bir veri dizini atanır. Veri dosyaları herhangi bir türde dosya içerebilir: metin dosyaları, XML dosyaları, hatta Microsoft Access veritabanı (*. mdb*) dosyaları. Aşağıdaki yordamlarda, uygulamanıza herhangi bir türde veri dosyasını nasıl ekleyeceğiniz gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
 ### <a name="to-include-a-data-file-by-using-mageexe"></a>Mage.exe kullanarak bir veri dosyası eklemek için
 
-1. Uygulamanızın dosyaların geri kalanı ile birlikte uygulama dizininize veri dosyası ekleyin.
+1. Veri dosyasını uygulamanızın geri kalanı ile uygulama dizininize ekleyin.
 
-    Genellikle, uygulama dizininize dağıtımın geçerli sürümüyle etiketli bir dizin olacaktır — Örneğin, v1.0.0.0.
+    Genellikle, uygulama dizininiz dağıtımın geçerli sürümüyle etiketlenmiş bir dizin olacaktır — örneğin, v 1.0.0.0.
 
-2. Uygulama bildiriminizi listesine veri dosyasını güncelleştirin.
+2. Veri dosyasını listelemek için uygulama bildiriminizi güncelleştirin.
 
     `mage -u v1.0.0.0\Application.manifest -FromDirectory v1.0.0.0`
 
-    Bu görevi gerçekleştirme uygulama bildiriminizi dosyaların listesini yeniden oluşturur ve karma imzaları da otomatik olarak oluşturur.
+    Bu görevi gerçekleştirmek, uygulama bildiriminizde dosyaların listesini yeniden oluşturur ve ayrıca karma imzaları otomatik olarak oluşturur.
 
-3. Uygulama bildirimi, tercih edilen bir metin veya XML düzenleyicisinde açın ve bulun `file` son eklenen dosya için öğesi.
+3. Uygulama bildirimini tercih ettiğiniz metin veya XML düzenleyicisinde açın ve `file` son eklenen dosyanız için öğesini bulun.
 
-    Adlı bir XML dosyası eklediyseniz `Data.xml`, dosyanın aşağıdaki kod örneği için benzer olacaktır.
+    Adlı bir XML dosyası eklediyseniz `Data.xml` , dosya aşağıdaki kod örneğine benzer şekilde görünür.
 
    `<file name="Data.xml" hash="23454C18A2DC1D23E5B391FEE299B1F235067C59" hashalg="SHA1" asmv2:size="39500" />`
 
-4. Öznitelik Ekle `type` bu öğeye ve değerli tedarik `data`.
+4. Özniteliğini `type` Bu öğeye ekleyin ve değerini sağlayın `data` .
 
    `<file name="Data.xml" writeableType="applicationData" hash="23454C18A2DC1D23E5B391FEE299B1F235067C59" hashalg="SHA1" asmv2:size="39500" />`
 
-5. Uygulama bildiriminizi anahtar çifti veya sertifikayı kullanarak yeniden imzalayın ve ardından, dağıtım bildirimini yeniden imzalamanız.
+5. Anahtar çiftinizi veya sertifikanızı kullanarak uygulama bildiriminizi yeniden imzalayın ve ardından Dağıtım bildiriminizi yeniden imzalayın.
 
-    Uygulama bildiriminin, karma değiştiğinden, dağıtım bildirimini yeniden imzalamanız gerekir.
+    Uygulama bildiriminin karması değiştiğinden Dağıtım bildiriminizi yeniden imzalamanız gerekir.
 
     `mage -s app manifest -cf cert_file -pwd password`
 
@@ -60,27 +60,27 @@ Her [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] yüklediğ
 
 ### <a name="to-include-a-data-file-by-using-mageuiexe"></a>MageUI.exe kullanarak bir veri dosyası eklemek için
 
-1. Uygulamanızın dosyaların geri kalanı ile birlikte uygulama dizininize veri dosyası ekleyin.
+1. Veri dosyasını uygulamanızın geri kalanı ile uygulama dizininize ekleyin.
 
-2. Genellikle, uygulama dizininize dağıtımın geçerli sürümüyle etiketli bir dizin olacaktır — Örneğin, v1.0.0.0.
+2. Genellikle, uygulama dizininiz dağıtımın geçerli sürümüyle etiketlenmiş bir dizin olacaktır — örneğin, v 1.0.0.0.
 
-3. Üzerinde **dosya** menüsünde tıklayın **açın** uygulama bildiriminizi açın.
+3. **Dosya** menüsünde, uygulama bildiriminizi açmak için **Aç** ' a tıklayın.
 
-4. Seçin **dosyaları** sekmesi.
+4. **Dosyalar** sekmesini seçin.
 
-5. Uygulamanızın dosyaları içeren dizine sekmenin üstünde metin kutusuna girin ve ardından **Doldur**.
+5. Sekmenin en üstündeki metin kutusuna uygulamanızın dosyalarını içeren dizini girin ve ardından **doldur**' a tıklayın.
 
-     Veri dosyası kılavuzunda görünür.
+     Veri dosyanız kılavuzda görüntülenir.
 
-6. Ayarlama **dosya türü** veri dosyasına değerini **veri**.
+6. Veri dosyasının **dosya türü** değerini **veri**olarak ayarlayın.
 
 7. Uygulama bildirimini kaydedin ve sonra dosyayı yeniden imzalayın.
 
-     *MageUI.exe* dosyayı yeniden imzalamanızı ister.
+     *MageUI.exe* , dosyayı yeniden imzalamanız istenir.
 
-8. Dağıtım bildirimini yeniden imzalamanız
+8. Dağıtım bildiriminizi yeniden imzalama
 
-     Uygulama bildiriminin, karma değiştiğinden, dağıtım bildirimini yeniden imzalamanız gerekir.
+     Uygulama bildiriminin karması değiştiğinden Dağıtım bildiriminizi yeniden imzalamanız gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulamalarında yerel ve uzak veri erişimi](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)

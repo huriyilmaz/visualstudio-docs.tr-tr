@@ -1,7 +1,7 @@
 ---
-title: "Nasıl yapılır: CD yüklemeleri için AutoStart'ı etkinleştirme | Microsoft Docs"
+title: CD yüklemeleri için AutoStart 'ı etkinleştirme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,34 +16,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 66f5510ae63507aebb97a7f8bdfd3e367f1afc85
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6ff96cdfe412e5016c04daa2b22922b0ec47a3a3
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62928516"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85382451"
 ---
-# <a name="how-to-enable-autostart-for-cd-installations"></a>Nasıl yapılır: CD yüklemeleri için AutoStart'ı etkinleştir
-Dağıtım yaparken bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama CD-ROM veya DVD-ROM gibi çıkarılabilir medya kullanarak etkinleştirebilirsiniz `AutoStart` böylece [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama ortam eklendiğinde otomatik olarak başlatılır.
+# <a name="how-to-enable-autostart-for-cd-installations"></a>Nasıl yapılır: CD yüklemeleri için AutoStart 'ı etkinleştirme
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Uygulama, CD-ROM veya DVD-ROM gibi çıkarılabilir medya aracılığıyla dağıtıldığında, `AutoStart` [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] medya takıldığında uygulamanın otomatik olarak başlatılmasını sağlayabilirsiniz.
 
- `AutoStart` etkinleştirilebilir **Yayımla** sayfasının **Proje Tasarımcısı**.
+ `AutoStart`, **Proje Tasarımcısı**' nın **Yayımla** sayfasında etkinleştirilebilir.
 
-### <a name="to-enable-autostart"></a>AutoStart'ı etkinleştirmek için
+### <a name="to-enable-autostart"></a>AutoStart 'ı etkinleştirmek için
 
-1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünü tıklatın **özellikleri**.
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
 
-2. Tıklayın **Yayımla** sekmesi.
+2. **Yayımla** sekmesine tıklayın.
 
-3. Tıklayın **seçenekleri** düğmesi.
+3. **Seçenekler** düğmesine tıklayın.
 
-     **Yayımlama seçeneği** iletişim kutusu görüntülenir.
+     **Yayımlama seçenekleri** iletişim kutusu görüntülenir.
 
-4. Tıklayın **dağıtım**.
+4. **Dağıtım**' ye tıklayın.
 
-5. Seçin **için CD yüklemeleri, CD takıldığında Kurulumu otomatik olarak Başlat** onay kutusu.
+5. CD **takıldığında kurulumu otomatik olarak Başlat** onay kutusunu seçin.
 
-     Bir *Autorun.inf* dosya uygulama yayımlandığında yayımlama konumuna kopyalanır.
+     Uygulama yayımlandığında bir *Autorun. inf* dosyası yayımlama konumuna kopyalanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
-- [Nasıl yapılır: Yayımlama Sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+- [Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

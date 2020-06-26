@@ -1,7 +1,7 @@
 ---
-title: ClickOnce dağıtım sorunlarını giderme | Microsoft Docs
+title: ClickOnce dağıtımları sorunlarını giderme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: troubleshooting
 dev_langs:
 - VB
 - CSharp
@@ -18,45 +18,45 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eef5973eb7ec4b8779f89779fe1aad62d86f4850
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d9e3c2ca89535578e8aefbde25223ade752a2aab
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898126"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85381749"
 ---
 # <a name="troubleshoot-clickonce-deployments"></a>ClickOnce dağıtım sorunlarını giderme
-Bu konu ile en yaygın sorunları tanılamak ve gidermek yardımcı olur [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımları.
+Bu konu, dağıtımlarla ilgili en yaygın sorunları tanılamanıza ve çözmenize yardımcı olur [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
- Çoğu durumda bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama bir kullanıcının bilgisayarına indirir ve herhangi bir sorun çalıştırın. Web sunucusu veya uygulama yapılandırma sorunlarını öngörülmeyen sorunlara neden olduğu bazı durumlar vardır, ancak.
+ Çoğu durumda, bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama bir kullanıcının bilgisayarına indirilir ve herhangi bir sorun olmadan çalıştırılır. Ancak, Web sunucusu veya uygulama yapılandırma sorunlarının öngörülemeyen sorunlara neden olabileceği bazı durumlar vardır.
 
-## <a name="deployment-considerations"></a>Dağıtım konuları
+## <a name="deployment-considerations"></a>Dağıtma konuları
 
- [Nasıl yapılır: Bir ClickOnce dağıtım hataları için özel günlük dosyası konumu ayarlama](../deployment/how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors.md)
+ [Nasıl yapılır: ClickOnce dağıtım hataları için özel günlük dosyası konumu ayarlama](../deployment/how-to-set-a-custom-log-file-location-for-clickonce-deployment-errors.md)
 
- Tüm yeniden yönlendirme açıklar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] etkinleştirme hataları tek bir günlük dosyası için bir makine üzerinde.
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Bir makinedeki tüm etkinleştirme hatalarının tek bir günlük dosyasına nasıl yeniden yönlendirileceğini açıklar.
 
- [Nasıl yapılır: ClickOnce dağıtımları için ayrıntılı günlük dosyası belirtme](../deployment/how-to-specify-verbose-log-files-for-clickonce-deployments.md)
+ [Nasıl yapılır: ClickOnce dağıtımları için ayrıntılı günlük dosyaları belirtme](../deployment/how-to-specify-verbose-log-files-for-clickonce-deployments.md)
 
- Ayrıntı düzeyini açıklar, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] günlük dosyalarını yazar.
+ Günlük dosyalarına yazma ayrıntılarının nasıl artırılacağını açıklar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
  [ClickOnce dağıtımlarında sunucu ve istemci yapılandırma sorunları](../deployment/server-and-client-configuration-issues-in-clickonce-deployments.md)
 
- Web sunucunuzun indirmeyi zorlaştıracak yapılandırma ile ilgili çeşitli sorunları açıklar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar.
+ Web sunucunuzun yapılandırılması ile ilgili çeşitli sorunları açıklar ve bu da uygulamaları indirmede zorluk ortaya çıkarabilir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
- [Güvenlik, sürüm ve bildirim sorunları ClickOnce Dağıtımları](../deployment/security-versioning-and-manifest-issues-in-clickonce-deployments.md)
+ [ClickOnce dağıtımlarında güvenlik, sürüm ve bildirim sorunları](../deployment/security-versioning-and-manifest-issues-in-clickonce-deployments.md)
 
- Çevreleyen çeşitli sorunları açıklar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtımları.
+ Dağıtımların çevresindeki çeşitli sorunları açıklar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
- [ClickOnce Dağıtımları içinde belirli hataları giderme](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)
+ [ClickOnce dağıtımları içinde belirli hataları giderme](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)
 
- Belirli senaryolarda açıklayan bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım başarılı ve çözümlemek için adımları sağlar.
+ Bir dağıtımın başarılı bir şekilde başarısız olduğu belirli senaryoları açıklar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] ve bunları çözümlemek için gereken adımları sağlar.
 
- [System.Deployment.Application kullanan ClickOnce uygulamalarında hata ayıklama](../deployment/debugging-clickonce-applications-that-use-system-deployment-application.md)
+ [System. Deployment. Application kullanan ClickOnce uygulamalarında hata ayıklama](../deployment/debugging-clickonce-applications-that-use-system-deployment-application.md)
 
- System.Deployment.Application kullanan ClickOnce uygulamalarında hata ayıklama için bir teknik açıklar.
+ System. Deployment. Application kullanan ClickOnce uygulamalarında hata ayıklama için bir teknik açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ClickOnce dağıtım bildirimi](../deployment/clickonce-deployment-manifest.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

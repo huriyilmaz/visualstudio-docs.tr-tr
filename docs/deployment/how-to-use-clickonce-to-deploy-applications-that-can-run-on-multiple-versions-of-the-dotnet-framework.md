@@ -1,7 +1,7 @@
 ---
-title: Multitarget uygulamalarını dağıtmak için ClickOnce'ı kullanma
+title: Çoklu hedef uygulamaları dağıtmak için ClickOnce 'ı kullanma
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,79 +16,79 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 38418a1ca11c23ab12d64deadfb91079bc957493
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: 7ede1cb4faa437d9cff8bd1239f9c271112ccf72
+ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747490"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85381710"
 ---
-# <a name="how-to-use-clickonce-to-deploy-applications-that-can-run-on-multiple-versions-of-the-net-framework"></a>Nasıl yapılır: '.NET framework'ün birden çok sürümünde çalışan uygulamaları dağıtmak için ClickOnce'ı kullanma
-ClickOnce dağıtım teknolojisini kullanarak birden çok .NET Framework sürümünü hedefleyen bir uygulama dağıtabilirsiniz. Bu, oluşturmak ve uygulama ve dağıtım bildirimlerini güncelleştirme gerektirir.
+# <a name="how-to-use-clickonce-to-deploy-applications-that-can-run-on-multiple-versions-of-the-net-framework"></a>Nasıl yapılır: .NET Framework 'ün birden çok sürümünde çalışabilen uygulamaları dağıtmak için ClickOnce kullanma
+ClickOnce dağıtım teknolojisini kullanarak .NET Framework birden çok sürümünü hedefleyen bir uygulamayı dağıtabilirsiniz. Bunun için uygulama ve dağıtım bildirimlerini oluşturmanız ve güncelleştirmeniz gerekir.
 
 > [!NOTE]
-> Birden çok .NET Framework sürümünü hedefleyecek şekilde uygulamayı değiştirmeden önce uygulamanızın birden çok .NET Framework sürümü ile çalıştığından emin olmalısınız. Sürümü ortak dil çalışma zamanı, .NET Framework 4 ve .NET Framework 2.0, .NET Framework 3.0 ve .NET Framework 3.5 arasında farklıdır.
+> Uygulamayı .NET Framework birden çok sürümünü hedefleyecek şekilde değiştirmeden önce, uygulamanızın .NET Framework birden çok sürümü ile çalıştığından emin olmanız gerekir. Sürüm ortak dil çalışma zamanı, .NET Framework 4 ile .NET Framework 2,0, .NET Framework 3,0 ve .NET Framework 3,5 arasında farklıdır.
 
- Bu işlem, aşağıdaki adımları gerektirir:
+ Bu işlem aşağıdaki adımları gerektirir:
 
-1. Uygulama ve dağıtım bildirimlerini oluşturur.
+1. Uygulama ve dağıtım bildirimlerini oluşturun.
 
-2. Birden çok .NET Framework sürümü listelemek için dağıtım bildirimini değiştirin.
+2. Dağıtım bildirimini birden çok .NET Framework sürümünü listelemek üzere değiştirin.
 
-3. Değişiklik *app.config* uyumlu .NET Framework çalışma zamanı sürüm listelemek için dosya.
+3. *app.config* dosyasını, uyumlu .NET Framework çalışma zamanı sürümlerini listelemek üzere değiştirin.
 
-4. Bağımlı derlemeler .NET Framework derlemeleri olarak işaretlemek için uygulama bildirimini değiştirin.
+4. Bağımlı derlemeleri .NET Framework derlemeleri olarak işaretlemek için uygulama bildirimini değiştirin.
 
 5. Uygulama bildirimini imzalayın.
 
-6. Güncelleştirin ve dağıtım bildirimini imzalayın.
+6. Dağıtım bildirimini güncelleştirin ve imzalayın.
 
-### <a name="to-generate-the-application-and-deployment-manifests"></a>Uygulama ve dağıtım bildirimleri oluşturmak için
+### <a name="to-generate-the-application-and-deployment-manifests"></a>Uygulama ve dağıtım bildirimlerini oluşturmak için
 
-- Uygulamayı yayımlamak ve uygulama ve dağıtım bildirim dosyaları oluşturmak için yayınlama Sihirbazı'nı veya yayımlama sayfası Proje Tasarımcısı'nı kullanın. Daha fazla bilgi için [nasıl yapılır: Yayımlama Sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md) veya [yayımlama sayfası, Proje Tasarımcısı](../ide/reference/publish-page-project-designer.md).
+- Uygulamayı yayımlamak ve uygulama ve dağıtım bildirim dosyalarını oluşturmak için, proje Tasarımcısı ' nın Yayımla sihirbazını veya Yayımla sayfasını kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: yayımlama sihirbazını veya Yayımla sayfasını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md) [, proje Tasarımcısı](../ide/reference/publish-page-project-designer.md).
 
-### <a name="to-change-the-deployment-manifest-to-list-the-multiple-net-framework-versions"></a>Birden çok .NET Framework sürümü listelemek için dağıtım bildirimini değiştirmek için
+### <a name="to-change-the-deployment-manifest-to-list-the-multiple-net-framework-versions"></a>Dağıtım bildirimini birden çok .NET Framework sürümünü listelemek üzere değiştirmek için
 
-1. Yayımla dizininde, dağıtım bildirimini Visual Studio XML düzenleyicisi kullanarak açın. Dağıtım bildirimi sahip *.application* dosya adı uzantısı.
+1. Yayımla dizininde, Visual Studio 'da XML düzenleyicisini kullanarak dağıtım bildirimini açın. Dağıtım bildiriminin *. Application* dosya adı uzantısı vardır.
 
-2. XML kodu arasında değiştirin `<compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">` ve `</compatibleFrameworks>` ile uygulamanız için desteklenen .NET Framework sürümlerini listeler XML öğeleri.
+2. Ve öğeleri arasındaki XML kodunu, `<compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">` `</compatibleFrameworks>` uygulamanız için desteklenen .NET Framework SÜRÜMLERINI listeleyen XML ile değiştirin.
 
-     Aşağıdaki tabloda kullanılabilir .NET Framework sürümleri ve dağıtım bildirimine ekleyebileceğiniz karşılık gelen XML bazıları gösterilmektedir.
+     Aşağıdaki tabloda, kullanılabilir .NET Framework sürümlerinden bazıları ve dağıtım bildirimine ekleyebileceğiniz karşılık gelen XML gösterilmektedir.
 
     |.NET Framework sürümü|XML|
     |----------------------------|---------|
-    |4 istemcisi|\<Framework targetVersion "4.0" profile = "İstemci" supportedRuntime = = "4.0.30319" / >|
-    |4 tam|\<Framework targetVersion "4.0" profile = "Tam" supportedRuntime = = "4.0.30319" / >|
-    |3.5 istemci|\<Framework targetVersion "3.5" profile = "İstemci" supportedRuntime = = "2.0.50727" / >|
-    |3.5 tam|\<Framework targetVersion "3.5" profile = "Tam" supportedRuntime = = "2.0.50727" / >|
-    |3.0|\<Framework targetVersion "3.0" supportedRuntime = = "2.0.50727" / >|
+    |4 istemci|\<framework targetVersion="4.0" profile="Client" supportedRuntime="4.0.30319" />|
+    |4 tam|\<framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />|
+    |3,5 istemcisi|\<framework targetVersion="3.5" profile="Client" supportedRuntime="2.0.50727" />|
+    |3,5 tam|\<framework targetVersion="3.5" profile="Full" supportedRuntime="2.0.50727" />|
+    |3.0|\<framework targetVersion="3.0" supportedRuntime="2.0.50727" />|
 
-### <a name="to-change-the-appconfig-file-to-list-the-compatible-net-framework-runtime-versions"></a>Uyumlu .NET Framework çalışma zamanı sürüm listelemek için app.config dosyasını değiştirmek için
+### <a name="to-change-the-appconfig-file-to-list-the-compatible-net-framework-runtime-versions"></a>app.config dosyasını, uyumlu .NET Framework çalışma zamanı sürümlerini listelemek üzere değiştirmek için
 
-1. Çözüm Gezgini'nde açın *app.config* Visual Studio'daki XML düzenleyicisini kullanarak dosya.
+1. Çözüm Gezgini içinde, Visual Studio 'da XML düzenleyicisini kullanarak *app.config* dosyasını açın.
 
-2. XML kodu arasında değiştirin (veya ekleyin) `<startup>` ve `</startup>` ile uygulamanız için desteklenen .NET Framework çalışma zamanları listeler XML öğeleri.
+2. `<startup>` `</startup>` Uygulamanız için desteklenen .NET Framework çalışma ZAMANLARıNı listeleyen XML ile ve ÖĞELERI arasındaki XML kodunu değiştirin (veya ekleyin).
 
-     Aşağıdaki tabloda kullanılabilir .NET Framework sürümleri ve dağıtım bildirimine ekleyebileceğiniz karşılık gelen XML bazıları gösterilmektedir.
+     Aşağıdaki tabloda, kullanılabilir .NET Framework sürümlerinden bazıları ve dağıtım bildirimine ekleyebileceğiniz karşılık gelen XML gösterilmektedir.
 
-    |.NET framework çalışma zamanı sürümü|XML|
+    |.NET Framework çalışma zamanı sürümü|XML|
     |------------------------------------|---------|
-    |4 istemcisi|\<supportedRuntime version="v4.0.30319" sku=".NETFramework,Version=v4.0,Profile=Client" />|
-    |4 tam|\<supportedRuntime sürümü = "v4.0.30319" sku = ". NETFramework, sürüm = v4.0 "/ >|
-    |3.5 tam|\<supportedRuntime version="v2.0.50727"/ >|
-    |3.5 istemci|\<supportedRuntime sürümü = "v2.0.50727" sku = "İstemci" / >|
+    |4 istemci|\<supportedRuntime version="v4.0.30319" sku=".NETFramework,Version=v4.0,Profile=Client" />|
+    |4 tam|\<supportedRuntime version="v4.0.30319" sku=".NETFramework,Version=v4.0" />|
+    |3,5 tam|\<supportedRuntime version="v2.0.50727"/>|
+    |3,5 istemcisi|\<supportedRuntime version="v2.0.50727" sku="Client"/>|
 
-### <a name="to-change-the-application-manifest-to-mark-dependent-assemblies-as-net-framework-assemblies"></a>Bağımlı derlemeler .NET Framework derlemeleri olarak işaretlemek için uygulama bildirimini değiştirmek için
+### <a name="to-change-the-application-manifest-to-mark-dependent-assemblies-as-net-framework-assemblies"></a>Bağımlı derlemeleri .NET Framework derlemeleri olarak işaretlemek için uygulama bildirimini değiştirme
 
-1. Yayımla dizininde, uygulama bildirimini Visual Studio XML düzenleyicisi kullanarak açın. Dağıtım bildirimi sahip *.manifest* dosya adı uzantısı.
+1. Yayımla dizininde, Visual Studio 'da XML düzenleyicisini kullanarak uygulama bildirimini açın. Dağıtım bildiriminin *. manifest* dosya adı uzantısı vardır.
 
-2. Ekleme `group="framework"` sentinel bütünleştirilmiş kodların bağımlı XML (`System.Core`, `WindowsBase`, `Sentinel.v3.5Client`, ve `System.Data.Entity`). Örneğin, XML, aşağıdaki gibi görünmelidir:
+2. `group="framework"`Sentinel derlemeler için bağımlılık XML 'e ( `System.Core` ,, `WindowsBase` `Sentinel.v3.5Client` ve) ekleyin `System.Data.Entity` . Örneğin, XML aşağıdaki gibi görünmelidir:
 
    ```xml
    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true" group="framework">
    ```
 
-3. Sürüm numarasını güncelleştirmek `<assemblyIdentity>` Microsoft.Windows.CommonLanguageRuntime'a öğesine en küçük ortak paydası .NET Framework sürüm numarası. Uygulama, .NET Framework 3.5 ve .NET Framework 4 hedefliyse, örneğin, kullanım 2.0.50727.0 sürüm numarasını ve XML aşağıdaki gibi görünmelidir:
+3. `<assemblyIdentity>`Microsoft. Windows. CommonLanguageRuntime öğesinin sürüm numarasını en düşük ortak payda olan .NET Framework sürüm numarasına güncelleştirin. Örneğin, uygulama 3,5 .NET Framework ve .NET Framework 4 ' ü hedefliyorsa, 2.0.50727.0 sürüm numarasını kullanın ve XML aşağıdaki gibi görünmelidir:
 
    ```xml
    <dependency>
@@ -98,13 +98,13 @@ ClickOnce dağıtım teknolojisini kullanarak birden çok .NET Framework sürüm
    </dependency>
    ```
 
-### <a name="to-update-and-re-sign-the-application-and-deployment-manifests"></a>Bildirimlerini güncelleştirin ve uygulama ve dağıtım yeniden imzalamak için
+### <a name="to-update-and-re-sign-the-application-and-deployment-manifests"></a>Uygulama ve dağıtım bildirimlerini güncelleştirmek ve yeniden imzalamak için
 
-- Güncelleştirme ve uygulama ve dağıtım bildirimlerini yeniden imzalama. Daha fazla bilgi için [nasıl yapılır: Uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
+- Uygulama ve dağıtım bildirimlerini güncelleştirin ve yeniden imzalayın. Daha fazla bilgi için bkz. [nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
-- [\<compatibleFrameworks > öğesi](../deployment/compatibleframeworks-element-clickonce-deployment.md)
-- [\<bağımlılık > öğesi](../deployment/dependency-element-clickonce-application.md)
+- [\<compatibleFrameworks>dosyalarında](../deployment/compatibleframeworks-element-clickonce-deployment.md)
+- [\<dependency>dosyalarında](../deployment/dependency-element-clickonce-application.md)
 - [ClickOnce dağıtım bildirimi](../deployment/clickonce-deployment-manifest.md)
 - [Yapılandırma dosyası şeması](/dotnet/framework/configure-apps/file-schema/index)
