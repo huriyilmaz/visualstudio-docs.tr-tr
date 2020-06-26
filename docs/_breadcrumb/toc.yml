@@ -3,105 +3,101 @@
   topicHref: /
   items:
     - name: Visual Studio
-      tocHref: /visualstudio/
-      topicHref: /visualstudio/
+      tocHref: /visualstudio/windows
+      topicHref: /visualstudio/windows/index
       items:
-        - name: Windows
-          tocHref: /visualstudio/windows
-          topicHref: /visualstudio/windows/index
+        - name: IDE
+          tocHref: /visualstudio/ide/
+          topicHref: /visualstudio/ide/
           items:
-            - name: IDE
-              tocHref: /visualstudio/ide/
-              topicHref: /visualstudio/ide/
+            - name: Kod Kalitesi
+              tocHref: /visualstudio/code-quality/
+              topicHref: /visualstudio/code-quality/analyzing-application-quality-by-using-code-analysis-tools
+            - name: Çoklu Platform
+              tocHref: /visualstudio/cross-platform/
+              topicHref: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
+            - name: Veri Araçları
+              tocHref: /visualstudio/data-tools/
+              topicHref: /visualstudio/data-tools/index
+            - name: Hata Ayıklama
+              tocHref: /visualstudio/debugger/
+              topicHref: /visualstudio/debugger/index
               items:
-                - name: Kod Kalitesi
-                  tocHref: /visualstudio/code-quality/
-                  topicHref: /visualstudio/code-quality/analyzing-application-quality-by-using-code-analysis-tools
-                - name: Çoklu Platform
-                  tocHref: /visualstudio/cross-platform/
-                  topicHref: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
-                - name: Veri Araçları
-                  tocHref: /visualstudio/data-tools/
-                  topicHref: /visualstudio/data-tools/index
-                - name: Hata Ayıklama
-                  tocHref: /visualstudio/debugger/
-                  topicHref: /visualstudio/debugger/index
-                  items:
-                    - name: Arabirim Erişimi SDK'sında Hata Ayıklama
-                      tocHref: /visualstudio/debugger/debug-interface-access/
-                      topicHref: /visualstudio/debugger/debug-interface-access/debug-interface-access-sdk
-                    - name: Grafikler
-                      tocHref: /visualstudio/debugger/graphics/
-                      topicHref: /visualstudio/debugger/graphics/overview-of-visual-studio-graphics-diagnostics
-                - name: Dağıtım
-                  tocHref: /visualstudio/deployment/
-                  topicHref: /visualstudio/deployment/deploying-applications-services-and-components
-                - name: IDE Sınıf Tasarımcısı
-                  tocHref: /visualstudio/ide/class-designer
-                  topicHref: /visualstudio/ide/class-designer/designing-and-viewing-classes-and-types
-                - name: Modelleme Mimarisi
-                  tocHref: /visualstudio/modeling/
-                  topicHref: /visualstudio/modeling/analyze-and-model-your-architecture
-                - name: Profil Oluşturma
-                  tocHref: /visualstudio/profiling/
-                  topicHref: /visualstudio/profiling/index
-                - name: Sınama
-                  tocHref: /visualstudio/test/
-                  topicHref: /visualstudio/test/index
-                - name: İş Akışı Tasarımcısı
-                  tocHref: /visualstudio/workflow-designer/
-                  topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
-                - name: XAML Araçları
-                  tocHref: /visualstudio/xaml-tools/
-                  topicHref: /visualstudio/xaml-tools/
-                - name: XML Araçları
-                  tocHref: /visualstudio/xml-tools/
-                  topicHref: /visualstudio/xml-tools/xml-tools-in-visual-studio
-                - name: 'C# kullanmaya başlama'
-                  tocHref: /visualstudio/get-started/csharp/
-                  topicHref: /visualstudio/get-started/csharp/index
-                - name: Visual Basic kullanmaya başlama
-                  tocHref: /visualstudio/get-started/visual-basic/
-                  topicHref: /visualstudio/get-started/visual-basic/
-            - name: Genişletilebilirlik
-              tocHref: /visualstudio/extensibility/
-              topicHref: /visualstudio/extensibility/index
+                - name: Arabirim Erişimi SDK'sında Hata Ayıklama
+                  tocHref: /visualstudio/debugger/debug-interface-access/
+                  topicHref: /visualstudio/debugger/debug-interface-access/debug-interface-access-sdk
+                - name: Grafikler
+                  tocHref: /visualstudio/debugger/graphics/
+                  topicHref: /visualstudio/debugger/graphics/overview-of-visual-studio-graphics-diagnostics
+            - name: Dağıtım
+              tocHref: /visualstudio/deployment/
+              topicHref: /visualstudio/deployment/deploying-applications-services-and-components
+            - name: IDE Sınıf Tasarımcısı
+              tocHref: /visualstudio/ide/class-designer
+              topicHref: /visualstudio/ide/class-designer/designing-and-viewing-classes-and-types
+            - name: Modelleme Mimarisi
+              tocHref: /visualstudio/modeling/
+              topicHref: /visualstudio/modeling/analyze-and-model-your-architecture
+            - name: Profil Oluşturma
+              tocHref: /visualstudio/profiling/
+              topicHref: /visualstudio/profiling/index
+            - name: Sınama
+              tocHref: /visualstudio/test/
+              topicHref: /visualstudio/test/index
+            - name: İş Akışı Tasarımcısı
+              tocHref: /visualstudio/workflow-designer/
+              topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
+            - name: XAML Araçları
+              tocHref: /visualstudio/xaml-tools/
+              topicHref: /visualstudio/xaml-tools/
+            - name: XML Araçları
+              tocHref: /visualstudio/xml-tools/
+              topicHref: /visualstudio/xml-tools/xml-tools-in-visual-studio
+            - name: C# kullanmaya başlama
+              tocHref: /visualstudio/get-started/csharp/
+              topicHref: /visualstudio/get-started/csharp/index
+            - name: Visual Basic kullanmaya başlama
+              tocHref: /visualstudio/get-started/visual-basic/
+              topicHref: /visualstudio/get-started/visual-basic/
+        - name: Genişletilebilirlik
+          tocHref: /visualstudio/extensibility/
+          topicHref: /visualstudio/extensibility/index
+          items:
+            - name: Visual Studio SDK’nın İçinde
+              tocHref: /visualstudio/extensibility/internals/
+              topicHref: /visualstudio/extensibility/internals/inside-the-visual-studio-sdk
+            - name: Hata Ayıklayıcı Genişletilebilirliği
+              tocHref: /visualstudio/extensibility/debugger/
+              topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
               items:
-                - name: Visual Studio SDK’nın İçinde
-                  tocHref: /visualstudio/extensibility/internals/
-                  topicHref: /visualstudio/extensibility/internals/inside-the-visual-studio-sdk
-                - name: Hata Ayıklayıcı Genişletilebilirliği
-                  tocHref: /visualstudio/extensibility/debugger/
-                  topicHref: /visualstudio/extensibility/debugger/visual-studio-debugger-extensibility
-                  items:
-                    - name: Başvuru
-                      tocHref: /visualstudio/extensibility/debugger/reference/
-                      topicHref: /visualstudio/extensibility/debugger/reference/reference-visual-studio-debugging-apis
-                - name: Kullanıcı Deneyimi Yönergeleri
-                  tocHref: /visualstudio/extensibility/ux-guidelines/
-                  topicHref: /visualstudio/extensibility/ux-guidelines/visual-studio-user-experience-guidelines
-            - name: MSBuild
-              tocHref: /visualstudio/msbuild/
-              topicHref: /visualstudio/msbuild/msbuild
-            - name: JavaScript ve TypeScript
-              tocHref: /visualstudio/javascript/
-              topicHref: /visualstudio/javascript/index
-            - name: Python
-              tocHref: /visualstudio/python/
-              topicHref: /visualstudio/python/overview-of-python-tools-for-visual-studio
-            - name: R
-              tocHref: /visualstudio/rtvs/
-              topicHref: /visualstudio/rtvs/index
-            - name: Office ve SharePoint
+                - name: Başvuru
+                  tocHref: /visualstudio/extensibility/debugger/reference/
+                  topicHref: /visualstudio/extensibility/debugger/reference/reference-visual-studio-debugging-apis
+            - name: Kullanıcı Deneyimi Yönergeleri
+              tocHref: /visualstudio/extensibility/ux-guidelines/
+              topicHref: /visualstudio/extensibility/ux-guidelines/visual-studio-user-experience-guidelines
+        - name: MSBuild
+          tocHref: /visualstudio/msbuild/
+          topicHref: /visualstudio/msbuild/msbuild
+        - name: JavaScript ve TypeScript
+          tocHref: /visualstudio/javascript/
+          topicHref: /visualstudio/javascript/index
+        - name: Python
+          tocHref: /visualstudio/python/
+          topicHref: /visualstudio/python/overview-of-python-tools-for-visual-studio
+        - name: R
+          tocHref: /visualstudio/rtvs/
+          topicHref: /visualstudio/rtvs/index
+        - name: Office ve SharePoint
+          tocHref: /visualstudio/vsto/
+          topicHref: /visualstudio/vsto/office-and-sharepoint-development-in-visual-studio
+          items:
+            - name: SharePoint
+              tocHref: /visualstudio/sharepoint/
+              topicHref: /visualstudio/sharepoint/create-sharepoint-solutions
+            - name: VSTO
               tocHref: /visualstudio/vsto/
-              topicHref: /visualstudio/vsto/office-and-sharepoint-development-in-visual-studio
-              items:
-                - name: SharePoint
-                  tocHref: /visualstudio/sharepoint/
-                  topicHref: /visualstudio/sharepoint/create-sharepoint-solutions
-                - name: VSTO
-                  tocHref: /visualstudio/vsto/
-                  topicHref: /visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
-            - name: Azure Geliştirme
-              tocHref: /visualstudio/azure
-              topicHref: /visualstudio/azure/index
+              topicHref: /visualstudio/vsto/create-vsto-add-ins-for-office-by-using-visual-studio
+        - name: Azure Geliştirme
+          tocHref: /visualstudio/azure
+          topicHref: /visualstudio/azure/index
