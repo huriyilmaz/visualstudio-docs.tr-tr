@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_unmodifiedTypeId | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4f7fc73c-f524-4d7a-b378-a9ab99a96104
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 49cf159501e3f582010d514a586151e0626fc8f7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f6205bf2a80f362d803b5f5e23397a5578ddc2b3
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738968"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461590"
 ---
 # <a name="idiasymbolget_unmodifiedtypeid"></a>IDiaSymbol::get_unmodifiedTypeId
 Özgün (değiştirilmemiş) türün KIMLIĞINI alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_unmodifiedTypeId(
@@ -30,10 +30,10 @@ HRESULT get_unmodifiedTypeId(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı KIMLIĞI tutan `DWORD` için bir işaretçi.
+dışı KIMLIĞI tutan bir işaretçisi `DWORD` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Hata: Hedef işlem şu kodla sonlandı &#39;kod&#39; işlevi değerlendirilirken &#39;işlevi&#39; | Microsoft Docs'
+title: Hata-hedef işlemden &#39;işlev &#39;işlevi değerlendirilirken&#39; kodla çıkış yaptı&#39; | Microsoft Docs
 ms.date: 4/06/2018
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.process_exit_during_func_eval
 author: mikejo5000
@@ -9,39 +9,39 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75d82b6011a0dfa7f2c388e7d5f39a9ebabcd663
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: d1721196becf1f746d81fa7e3d4ff5f0371e3f57
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850824"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460784"
 ---
-# <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>Hata: Hedef işlem şu kodla sonlandı &#39;kod&#39; işlevi değerlendirilirken &#39;işlevi&#39;
+# <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>Hata: işlev &#39;işlevi değerlendirilirken hedef işleme kod &#39;kodla çıkıldı&#39;&#39;
 
-Tüm ileti metni: Hedef işlem, ' % s'function 'işlevini değerlendirirken 'code' koduyla çıkıldı.
+Tam ileti metni: ' function ' işlevi değerlendirilirken hedef işlemden ' Code ' kodu ile çıkıldı.
 
-.NET nesnelerinin durumunu incelemek kolaylaştırmak için hata ayıklayıcı ek kodu çalıştırmak için hataları ayıklanan işlem otomatik olarak zorlayacak (genellikle özellik alıcı yöntemlere ve `ToString` işlevler). Çoğu senaryoda, bu işlevlerin başarıyla tamamlanması veya hata ayıklayıcı tarafından yakalanan özel durumlar. Ancak, bunlar çekirdek sınırlarını geçen kullanıcı ileti Pompalama gerektirir veya kurtarılamaz olarak kabul edilir, özel durumlar yakalanamaz bazı durumlar vardır. Bir sonuç, özellik alıcısı veya kod yürüten ToString yöntemi bu da açıkça sonlandırır işlemi (örneğin, çağrıları `ExitProcess()`) veya yakalanamaz işlenmeyen bir özel durum oluşturur (örneğin, `StackOverflowException`) sona erer hataları ayıklanan işlem ve hata ayıklama oturumunu. Bu hata iletisiyle karşılaşırsanız, bu durum oluştu.
+.NET nesnelerinin durumunu incelemeyi kolaylaştırmak için, hata ayıklama işlemini ek kod (genellikle özellik alıcı yöntemleri ve işlevleri) çalıştırmaya otomatik olarak zorlar `ToString` . Çoğu senaryoda, bu işlevler başarıyla tamamlanır veya hata ayıklayıcı tarafından yakalanarak özel durumlar oluşturur. Ancak, çekirdek sınırları üzerinde yer aldığı, kullanıcı iletisi pompalama gerektirdiğinden veya kurtarılamaz olduğundan özel durumların yakalanamadığı bazı durumlar vardır. Sonuç olarak, işlemi açıkça sonlandıran kodu yürüten bir özellik alıcı veya ToString yöntemi (örneğin, çağrılar `ExitProcess()` ) veya yakalanamayan bir işlenmeyen özel durum oluşturur (örneğin, `StackOverflowException` ), hata ayıklanan işlemi sonlandırır ve hata ayıklama oturumunu sonlandırır. Bu hata iletisiyle karşılaşırsanız, bu oluştu.
 
-Bu sorun için yaygın nedenlerinden biri, hata ayıklayıcı kendisini çağıran bir özelliği değerlendirirken, bu bir yığın taşması özel durumu sonuçlanabilir ' dir. Yığın taşması özel durumuna geri alınamaz ve hedef işlem sonlandırılır.
+Bu sorunun yaygın bir nedeni, hata ayıklayıcı kendisini çağıran bir özelliği değerlendirirken, yığın taşması özel durumuna neden olabilir. Yığın taşması özel durumu kurtarılamıyor ve hedef işlem sonlandırılacak.
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
 Bu sorunun iki olası çözümü vardır.
 
-### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Çözüm #1: Hata ayıklayıcısı özellik alıcı veya ToString yöntemini çağırmasını engellemek 
+### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Çözüm #1: hata ayıklayıcının alıcı özelliğini veya ToString metodunu aramasını engelleyin 
 
-Hata iletisi, hata ayıklayıcı ulaşmaya çalıştık işlevin adını bildirir. İşlev adı ile bu işlevi yeniden değerlendirmeyi deneyebilirsiniz **hemen** değerlendirme hata ayıklamak için penceresi. Hata ayıklama mümkün gelen değerlendirirken **hemen** penceresi olduğundan, örtük değerlendirmeleri farklı olarak **Yereller/değişkenler/Watch** windows hata ayıklayıcı, işlenmemiş özel durumlarda keser.
+Hata mesajı, hata ayıklayıcının çağrı gerçekleştirmeye çalıştığı işlevin adını bildirir. İşlevin adı ile, değerlendirmede hata ayıklamak için bu işlevi **komut** penceresinden yeniden değerlendirmeyi deneyebilirsiniz. Doğrudan **pencereden değerlendirilirken** hata ayıklama yapılabilir çünkü, **oto s/Yereller/izleme** pencerelerinde örtük değerlendirmelere benzediğinde, hata ayıklayıcı işlenmemiş özel durumlara karşı kesilir.
 
-Bu işlev değiştirebilir, özellik Get yordamı çağırma hata ayıklayıcı engelleyebilir veya `ToString` yöntemi. Aşağıdakilerden birini deneyin:
+Bu işlevi değiştirebiliyorsanız, hata ayıklayıcının özellik alıcı veya yöntemini aramasını engelleyebilirsiniz `ToString` . Aşağıdakilerden birini deneyin:
 
-* Yöntem başka türde bir özellik alıcısı yanı sıra kodu değiştirin veya ToString yöntemi ve sorunu kaybolur.
+* Yöntemi bir özellik alıcı veya ToString yönteminin yanı sıra diğer kod türlerine de değiştirin ve sorun devam eder.
     -veya-
-* (İçin `ToString`) tanımla bir `DebuggerDisplay` öznitelik türü ve hata ayıklayıcı dışında bir şey değerlendirmek olabilir `ToString`.
+* (İçin `ToString` ) Türünde bir `DebuggerDisplay` öznitelik tanımlayın ve hata ayıklayıcının dışında bir şeyi değerlendirebilmeniz gerekir `ToString` .
     -veya-
-* (Özellik alıcısı için) PUT `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` özelliği özniteliği. Bu API Uyumluluk nedenleriyle bir özellik kalması için gereken bir yöntem varsa yararlı olabilir, ancak gerçekten bir yöntemi olması gerekir.
+* (Bir özellik alıcısı için) `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]`Özniteliği özelliğine yerleştirin. Bu, API uyumluluğu nedenleriyle bir özelliğin kalması gereken bir yönteminiz varsa, ancak gerçekten bir yöntem olması halinde yararlı olabilir.
 
-Bu yöntem değişiklik yapamazsınız, alternatif bir yönerge hedef işlem kurtulmayı ve değerlendirmeyi yeniden deneme mümkün olabilir.
+Bu yöntemi değiştiremeyeceğiniz takdirde, bir alternatif yönergede hedef işlemi bölebilir ve değerlendirmeyi yeniden deneyebilirsiniz.
 
-### <a name="solution-2-disable-all-implicit-evaluation"></a>Çözüm #2: Tüm örtülü değerlendirme devre dışı bırak
+### <a name="solution-2-disable-all-implicit-evaluation"></a>Çözüm #2: tüm örtük değerlendirmeyi devre dışı bırak
 
-Önceki çözümler sorunu yoksa, Git **Araçları** > **seçenekleri**, ayarı kaldırın **hata ayıklama**  >   **Genel** > **özellik değerlendirmesini ve diğer örtük işlev çağrılarını etkinleştir**. Bu, çoğu örtük İşlev değerlendirmesi devre dışı bırakır ve sorun çözülebilir.
+Önceki çözümler sorunu gidermezse, **Araçlar**  >  **Seçenekler**' e gidin ve **hata ayıklama**  >  **genel**  >  **etkinleştirme özelliği değerlendirmesi ve diğer örtük işlev çağrıları**seçeneğinin işaretini kaldırın. Bu, çoğu örtük işlev değerlendirmesini devre dışı bırakır ve sorunu çözmelidir.

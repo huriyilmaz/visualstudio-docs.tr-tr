@@ -1,7 +1,7 @@
 ---
-title: 'Hata: uzak bilgisayar DCOM iletişimini başlatamadı | Microsoft Docs'
+title: Hata-uzak bilgisayar DCOM iletişimini başlatamadı | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unmarshal_callback_failed
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d61fe145a8dc301c928b81f9b57f1a574865a1d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8a1f5216953adc1b257e432b1e4f1eb4d041b836
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737548"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460710"
 ---
 # <a name="error-remote-computer-could-not-initiate-dcom-communications"></a>Hata: Uzak bilgisayar DCOM iletişimini başlatamadı
 Uzak makine yerel makineyle iletişime kalkışmaya çalışırken bir DCOM hatası oluştu. Yerel makine,
@@ -39,4 +39,4 @@ Uzak makine yerel makineyle iletişime kalkışmaya çalışırken bir DCOM hata
 3. Windows kimlik doğrulamasını geri yüklemek için her iki makineyi yeniden başlatmayı deneyin. Kerberos hataları için yerel ve uzak makinelerdeki olay günlüklerini inceleyin ve bilinen sorunlar için etki alanı yöneticilerine başvurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+ [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

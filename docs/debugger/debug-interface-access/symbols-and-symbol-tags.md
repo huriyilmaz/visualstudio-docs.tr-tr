@@ -1,7 +1,7 @@
 ---
 title: Semboller ve sembol etiketleri | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,19 +12,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d2281a82926dabfde88b8d4bb9096f0e9624211
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: acef0d6809e33b969e1b6ecd874a842f0da32ae5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738527"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461065"
 ---
 # <a name="symbols-and-symbol-tags"></a>Simgeler ve Simge Etiketleri
-Derlenmiş bir programla ilgili hata ayıklama bilgileri, program veritabanı (. pdb) dosyasında hata ayıklama arabirimi erişimi (DIA) SDK API 'Leri kullanılarak erişilebilen semboller olarak depolanır. Tüm semboller bir [IDiaSymbol:: get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) ve bir [IDiaSymbol:: get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md) özelliğine sahiptir. @No__t_0 özelliği, [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırması tarafından tanımlanan simgenin türünü gösterir. @No__t_0 özelliği, bir simgenin her örneği için benzersiz tanımlayıcıyı içeren bir `DWORD` değeridir.
+Derlenmiş bir programla ilgili hata ayıklama bilgileri, program veritabanı (. pdb) dosyasında hata ayıklama arabirimi erişimi (DIA) SDK API 'Leri kullanılarak erişilebilen semboller olarak depolanır. Tüm semboller bir [IDiaSymbol:: get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) ve [ıdiasymbol:: get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md) özelliğine sahiptir. `symTag`Özelliği, [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırması tarafından tanımlanan sembolün türünü gösterir. `symIndexId`Özelliği, `DWORD` bir simgenin her örneği için benzersiz tanımlayıcıyı içeren bir değerdir.
 
- Semboller ayrıca, simgenin yanı sıra diğer simgelere yönelik başvurular ve genellikle bir [IDiaSymbol:: get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md) ya da [IDiaSymbol:: get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)ile ilgili ek bilgi belirten özelliklere sahiptir. Başvuru içeren bir özelliği sorguladığınızda, başvuru bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi olarak döndürülür. Bu tür özellikler her zaman aynı ada sahip başka bir özellikle eşleştirilir, ancak "ID" ile (örneğin, [IDiaSymbol:: get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md) ve [IDiaSymbol:: get_classParentId](../../debugger/debug-interface-access/idiasymbol-get-classparentid.md)). [Sembol konumlarındaki](../../debugger/debug-interface-access/symbol-locations.md)tablolar, [simge türlerinin sözcük hiyerarşisi](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)ve [sembol türlerinin sınıf hiyerarşisi](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md) , her farklı sembol türünün özelliklerini özetler. Bu özelliklerde ilgili bilgiler veya diğer simgelere başvurular olabilir. @No__t_0 özellikleri, ilişkili özelliklerinin yalnızca sayısal sıra tanımlayıcıları olduğundan, bunlar daha fazla tartışmalardan çıkarılır. Bunlara yalnızca parametre açıklaması için gerektiğinde başvurulur.
+ Semboller ayrıca, simgenin yanı sıra diğer simgelere yönelik başvurular ve genellikle bir [IDiaSymbol:: get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md) ya da [ıdiasymbol:: get_classParent](../../debugger/debug-interface-access/idiasymbol-get-classparent.md)gibi ek bilgileri belirten özelliklere sahiptir. Başvuru içeren bir özelliği sorguladığınızda, başvuru bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi olarak döndürülür. Bu tür özellikler her zaman aynı ada sahip başka bir özellikle eşleştirilir, ancak "ID" ile (örneğin, [IDiaSymbol:: get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md) ve [ıdiasymbol:: get_classParentId](../../debugger/debug-interface-access/idiasymbol-get-classparentid.md)). [Sembol konumlarındaki](../../debugger/debug-interface-access/symbol-locations.md)tablolar, [simge türlerinin sözcük hiyerarşisi](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)ve [sembol türlerinin sınıf hiyerarşisi](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md) , her farklı sembol türünün özelliklerini özetler. Bu özelliklerde ilgili bilgiler veya diğer simgelere başvurular olabilir. Özellikler, `*Id` ilişkili özelliklerinin yalnızca sayısal sıra tanımlayıcıları olduğundan, bunlar daha fazla tartışmalardan çıkarılır. Bunlara yalnızca parametre açıklaması için gerektiğinde başvurulur.
 
- Özelliğe erişmeye çalışırken, hiçbir hata oluşmazsa ve symbol özelliğine bir değer atanmışsa, özelliğin "Get" metodu `S_OK` döndürür. @No__t_0 dönüş değeri, özelliğin geçerli simge için geçerli olmadığını gösterir.
+ Özelliğe erişmeye çalışırken, hiçbir hata oluşmazsa ve symbol özelliğine bir değer atanmışsa, özelliğin "Get" yöntemi döndürür `S_OK` . Dönüş değeri, `S_FALSE` özelliğin geçerli simge için geçerli olmadığını gösterir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 

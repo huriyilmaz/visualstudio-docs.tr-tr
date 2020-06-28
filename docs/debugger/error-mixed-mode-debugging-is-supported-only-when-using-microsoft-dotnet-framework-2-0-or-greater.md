@@ -1,7 +1,7 @@
 ---
-title: 'Hata: karışık modda hata ayıklama yalnızca Microsoft .NET Framework 2,0 veya sonraki bir sürümü kullanılırken desteklenir | Microsoft Docs'
+title: Hata-karışık modda hata ayıklama yalnızca Microsoft .NET Framework 2,0 veya üzeri kullanılırken desteklenir | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.interop_unsupported_to_old
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c85dac85146c59d8aeba9f9cf85351b5bc17a81c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: de19f6b735f990b0e419c040291e1bf538f680f5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737619"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460630"
 ---
 # <a name="error-mixed-mode-debugging-is-supported-only-when-using-microsoft-net-framework-20-or-greater"></a>Hata: Karışık modda hata ayıklama yalnızca Microsoft .NET Framework 2.0 veya daha yenisi kullanılırken desteklenir
 Karma yerel ve yönetilen kodda hata ayıklamak için .NET Framework 2,0, 3,0 sürümüne sahip olmanız gerekir. 3,5 veya 4,0. .NET Framework önceki sürümleriyle karışık modda hata ayıklama desteklenmez.
@@ -29,4 +29,4 @@ Karma yerel ve yönetilen kodda hata ayıklamak için .NET Framework 2,0, 3,0 s�
 - .NET Framework 2,0, 3,0, 3,5 veya 4,0 sürümüne yükseltin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

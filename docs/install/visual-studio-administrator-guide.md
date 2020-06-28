@@ -1,10 +1,10 @@
 ---
 title: Visual Studio yönetici kılavuzu
 titleSuffix: ''
-description: Visual Studio'nun kurumsal ortamda nasıl dağıtılabildiğini öğrenin.
+description: Visual Studio 'Yu kurumsal bir ortamda dağıtma hakkında daha fazla bilgi edinin.
 ms.date: 03/09/2020
 ms.custom: seodec18
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - network installation, Visual Studio
 - administrator guide, Visual Studio
@@ -17,158 +17,158 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: bda9a73a7a1aabb2d288653ff4d7b20b1c40db8c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 70eb53c2e2a1625f167844d1e774915fdb1304ac
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79190284"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419269"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio yönetici kılavuzu
 
-Kuruluş ortamlarında, sistem yöneticileri genellikle yüklemeleri ağ paylaşımından veya sistem yönetim yazılımı kullanarak son kullanıcılara dağıtır. Sistem yöneticilerine ağ yükleme konumu oluşturma, yükleme varsayılanlarını önceden yapılandırma, yükleme işlemi sırasında ürün anahtarlarını dağıtma olanağı sağlayarak kurumsal dağıtımı destekleyecek Visual Studio kurulum motorunu tasarladık ve başarılı bir ürün lansmanından sonra ürün güncelleştirmelerini yönetmek için.
+Kurumsal ortamlarda, sistem yöneticileri genellikle son kullanıcılara bir ağ paylaşımından veya sistem yönetimi yazılımını kullanarak yükleme dağıtır. Sistem yöneticilerine bir ağ yükleme konumu oluşturma, Yükleme varsayılanlarını önceden yapılandırma, yükleme işlemi sırasında ürün anahtarlarını dağıtma ve başarılı bir dağıtım sonrasında ürün güncelleştirmelerini yönetme olanağı sunarak, kurumsal dağıtımı desteklemek için Visual Studio Kurulum altyapısını tasarladık.
 
-Bu yönetici kılavuzu, ağ ortamlarında kurumsal dağıtım için senaryo tabanlı yönerge sağlar.
+Bu Yönetici Kılavuzu, ağ ortamlarında kurumsal dağıtım için senaryo tabanlı yönergeler sağlar.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Visual Studio'yı kuruluşunuz genelinde dağıtmadan önce, karar vermeniz ve tamamlamanız gereken görevler vardır:
+Kuruluşunuz genelinde Visual Studio 'Yu dağıtmadan önce, yapmanız gereken birkaç karar vardır:
 
 ::: moniker range="vs-2019"
 
-* Her hedef bilgisayarın minimum [yükleme gereksinimlerini](/visualstudio/releases/2019/system-requirements/)karşıladığından emin olun.
+* Her hedef bilgisayarın [En düşük yükleme gereksinimlerini](/visualstudio/releases/2019/system-requirements/)karşıladığından emin olun.
 
-* Servis ihtiyaçlarınızı belirleyin.
+* Bakım gereksinimlerinize karar verin.
 
-  Şirketinizin bir özellik setinde daha uzun kalması gerekiyorsa ancak yine de düzenli servis güncelleştirmeleri almak istiyorsa, servis taban çizgisini kullanmayı planlayın. Daha fazla bilgi ***için*** Visual Studio ürün yaşam [döngüsü ve servis](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) sayfasının Kurumsal ve Profesyonel müşteriler için Destek seçenekleri nin yanı sıra servis taban çizgisi sayfasında [Visual Studio'yu nasıl güncelleyin](update-servicing-baseline.md) bölümüne bakın.
+  Şirketinizin bir özellik kümesi daha uzun bir süre içinde kalması, ancak hala düzenli bakım güncelleştirmelerini almak istiyorsa, bir hizmet temeli kullanmayı planlayın. Daha fazla bilgi için bkz. [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) sayfasının ***Enterprise ve Professional müşterilerine yönelik destek seçenekleri*** ve [hizmet ana hat sırasında Visual Studio 'yu güncelleştirme](update-servicing-baseline.md) sayfası.
 
-  Hizmet güncelleştirmelerini kümülatif özellik güncelleştirmeleriyle birlikte uygulamayı planlıyorsanız, en son bitleri seçebilirsiniz.
+  Toplu özellik güncelleştirmeleriyle birlikte bakım güncelleştirmelerini uygulamayı planlıyorsanız en son bitleri seçebilirsiniz.
 
 * Güncelleştirme modeline karar verin.
 
-  Tek tek istemci makinelerinin güncelleştirmeleri nereden almak istediğini? Özellikle, internetten veya şirket çapında yerel bir paylaşımdan güncelleme almak isteyip istemediğinizkarar verin. Ardından, yerel bir paylaşım kullanmayı seçerseniz, tek tek kullanıcıların kendi istemcilerini güncelleştirip güncelleştiremeyeceğine veya bir yöneticinin istemcileri programlı olarak güncelleştirmesini isteyip istemediğinizi belirleyin.
+  Tek tek istemci makinelerinin güncelleştirmeleri nereden almasını istiyorsunuz? Özellikle, güncelleştirmeleri Internet 'ten mi yoksa şirket genelindeki bir yerel paylaşımdan mı almak istediğinize karar verin. Ardından, yerel bir paylaşma kullanmayı seçerseniz, bireysel kullanıcıların kendi istemcilerini güncelleştirip güncelleştiremeyeceğine karar verin ya da bir yöneticinin istemcileri program aracılığıyla güncelleştirmesini ister misiniz?
 
-* Şirketinizin hangi [iş yüklerine ve bileşenlere](workload-and-component-ids.md?view=vs-2019) ihtiyacı olduğuna karar verin.
+* Şirketinizin ihtiyaç duyacağı [iş yüklerini ve bileşenleri](workload-and-component-ids.md?view=vs-2019) belirleyin.
 
-* [Yanıt dosyası](automated-installation-with-response-file.md?view=vs-2019) kullanıp kullanmamaya karar verin (komut dosyası dosyasındaki ayrıntıları yönetmeyi kolaylaştırır).
+* [Yanıt dosyası](automated-installation-with-response-file.md?view=vs-2019) kullanıp kullanmayacağınızı belirleyin (betik dosyasında ayrıntıların yönetimini basitleştirir).
 
-* Grup İlkesi'ni etkinleştirmek isteyip istemediğinizi ve Visual Studio'yı tek tek bilgisayarlarda müşteri geri bildirimlerini devre dışı bırakıp, visual studio'u yapılandırmak isteyip istemediğinizi belirleyin.
+* Grup ilkesi etkinleştirmek istediğinize ve Visual Studio 'Yu tek bilgisayarlarda müşteri geri bildirimini devre dışı bırakacak şekilde yapılandırmak istiyorsanız.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-* Her hedef bilgisayarın minimum [yükleme gereksinimlerini](/visualstudio/productinfo/vs2017-system-requirements-vs/)karşıladığından emin olun.
+* Her hedef bilgisayarın [En düşük yükleme gereksinimlerini](/visualstudio/productinfo/vs2017-system-requirements-vs/)karşıladığından emin olun.
 
-* Servis ihtiyaçlarınızı belirleyin.
+* Bakım gereksinimlerinize karar verin.
 
-  Şirketinizin bir özellik setinde daha uzun kalması gerekiyorsa ancak yine de düzenli servis güncelleştirmeleri almak istiyorsa, servis taban çizgisini kullanmayı planlayın. Daha fazla bilgi için Visual Studio ürün yaşam [döngüsü ve servis](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) ***sayfasının Visual Studio bölümünün eski sürümleri için destek*** ve servis taban çizgisi [sayfasındayken Visual Studio'yu Nasıl Güncelleyin bölümüne](update-servicing-baseline.md) bakın.
+  Şirketinizin bir özellik kümesi daha uzun bir süre içinde kalması, ancak hala düzenli bakım güncelleştirmelerini almak istiyorsa, bir hizmet temeli kullanmayı planlayın. Daha fazla bilgi için bkz. Visual Studio [ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) sayfasının ***eski sürümleri için destek*** ve [hizmet temeli sırasında Visual Studio 'yu güncelleştirme](update-servicing-baseline.md) .
 
-  Hizmet güncelleştirmelerini kümülatif özellik güncelleştirmeleriyle birlikte uygulamayı planlıyorsanız, en son bitleri seçebilirsiniz.
+  Toplu özellik güncelleştirmeleriyle birlikte bakım güncelleştirmelerini uygulamayı planlıyorsanız en son bitleri seçebilirsiniz.
 
 * Güncelleştirme modeline karar verin.
 
-  Tek tek istemci makinelerinin güncelleştirmeleri nereden almak istediğini? Özellikle, internetten veya şirket çapında yerel bir paylaşımdan güncelleme almak isteyip istemediğinizkarar verin. Ardından, yerel bir paylaşım kullanmayı seçerseniz, tek tek kullanıcıların kendi istemcilerini güncelleştirip güncelleştiremeyeceğine veya bir yöneticinin istemcileri programlı olarak güncelleştirmesini isteyip istemediğinizi belirleyin.
+  Tek tek istemci makinelerinin güncelleştirmeleri nereden almasını istiyorsunuz? Özellikle, güncelleştirmeleri Internet 'ten mi yoksa şirket genelindeki bir yerel paylaşımdan mı almak istediğinize karar verin. Ardından, yerel bir paylaşma kullanmayı seçerseniz, bireysel kullanıcıların kendi istemcilerini güncelleştirip güncelleştiremeyeceğine karar verin ya da bir yöneticinin istemcileri program aracılığıyla güncelleştirmesini ister misiniz?
 
-* Şirketinizin hangi [iş yüklerine ve bileşenlere](workload-and-component-ids.md?view=vs-2017) ihtiyacı olduğuna karar verin.
+* Şirketinizin ihtiyaç duyacağı [iş yüklerini ve bileşenleri](workload-and-component-ids.md?view=vs-2017) belirleyin.
 
-* [Yanıt dosyası](automated-installation-with-response-file.md?view=vs-2017) kullanıp kullanmamaya karar verin (komut dosyası dosyasındaki ayrıntıları yönetmeyi kolaylaştırır).
+* [Yanıt dosyası](automated-installation-with-response-file.md?view=vs-2017) kullanıp kullanmayacağınızı belirleyin (betik dosyasında ayrıntıların yönetimini basitleştirir).
 
-* Grup İlkesi'ni etkinleştirmek isteyip istemediğinizi ve Visual Studio'yı tek tek bilgisayarlarda müşteri geri bildirimlerini devre dışı bırakıp, visual studio'u yapılandırmak isteyip istemediğinizi belirleyin.
+* Grup ilkesi etkinleştirmek istediğinize ve Visual Studio 'Yu tek bilgisayarlarda müşteri geri bildirimini devre dışı bırakacak şekilde yapılandırmak istiyorsanız.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-## <a name="step-1---download-visual-studio-product-files"></a>Adım 1 - Visual Studio ürün dosyalarını indirin
+## <a name="step-1---download-visual-studio-product-files"></a>Adım 1-Visual Studio ürün dosyalarını Indirin
 
-* Yüklemek istediğiniz [iş yüklerini ve bileşenleri seçin.](workload-and-component-ids.md?view=vs-2019)
+* Yüklemek istediğiniz [iş yüklerini ve bileşenleri seçin](workload-and-component-ids.md?view=vs-2019) .
 
-* [Visual Studio ürün dosyaları için ağ paylaşımı oluşturun.](create-a-network-installation-of-visual-studio.md?view=vs-2019)
+* [Visual Studio ürün dosyaları için bir ağ paylaşma oluşturun](create-a-network-installation-of-visual-studio.md?view=vs-2019).
 
-## <a name="step-2---build-an-installation-script"></a>Adım 2 - Yükleme komut dosyası oluşturma
+## <a name="step-2---build-an-installation-script"></a>2. adım-yükleme betiği oluşturma
 
-* Yüklemeyi denetlemek için [komut satırı parametrelerini](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) kullanan bir yükleme komut dosyası oluşturun.
+* Yüklemeyi denetlemek için [komut satırı parametrelerini](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) kullanan bir yükleme betiği oluşturun.
 
   >[!NOTE]
-  > Yanıt [dosyalarını](automated-installation-with-response-file.md?view=vs-2019)kullanarak komut dosyalarını basitleştirebilirsiniz. Varsayılan yükleme seçeneğinizi içeren bir yanıt dosyası oluşturduğunuzdan emin olun.
+  > Komut dosyalarını bir [yanıt dosyası](automated-installation-with-response-file.md?view=vs-2019)kullanarak basitleştirebilirsiniz. Varsayılan yükleme seçeneğinizi içeren bir yanıt dosyası oluşturduğunuzdan emin olun.
 
-* (İsteğe bağlı) Kullanıcıların yazılımı ayrı olarak etkinleştirmelerine gerek kalmaması için yükleme komut dosyasının bir parçası olarak [toplu lisans ürün anahtarı uygulayın.](automatically-apply-product-keys-when-deploying-visual-studio.md?view=vs-2019)
+* Seçim Kullanıcıların yazılımı ayrı olarak etkinleştirmesine gerek kalmaması için yükleme komut dosyasının parçası olarak [bir toplu lisans ürün anahtarı uygulayın](automatically-apply-product-keys-when-deploying-visual-studio.md?view=vs-2019) .
 
-* (İsteğe bağlı) [Ürün güncelleştirmelerinin son kullanıcılarınıza ne zaman ve nereden teslim edilecek](controlling-updates-to-visual-studio-deployments.md?view=vs-2019)lerini denetlemek için ağ düzenini güncelleştirin.
+* Seçim [Ürün güncelleştirmelerinin Son kullanıcılarınıza ne zaman ve nereden teslim edildiğini denetlemek](controlling-updates-to-visual-studio-deployments.md?view=vs-2019)için ağ yerleşimini güncelleştirin.
 
-* (İsteğe bağlı) Diğer sürümlerle veya örneklerle paylaşılan bazı paketlerin yüklendiği, [paketlerin önbelleğe alınıp alınmadığı](set-defaults-for-enterprise-deployments.md?view=vs-2019) veya [paketlerin önbelleğe alınıp alınmadığı](disable-or-move-the-package-cache.md?view=vs-2019)gibi Visual Studio'nun dağıtımını etkileyen kayıt defteri ilkeleri ayarlayın.
+* Seçim Diğer sürümler veya örneklerle paylaşılan bazı paketlerin yüklendiği, [paketlerin önbelleğe](set-defaults-for-enterprise-deployments.md?view=vs-2019) alındığı veya [paketlerin önbelleğe alınıp alınmayacağı](disable-or-move-the-package-cache.md?view=vs-2019)gibi, Visual Studio 'nun dağıtımını etkileyen kayıt defteri ilkeleri ayarlayın.
 
-* (İsteğe bağlı) Grup İlkesi ayarlayın. Ayrıca Visual Studio'yı tek tek bilgisayarlardaki [müşteri geri bildirimlerini devre dışı kılabilir](../ide/visual-studio-experience-improvement-program.md) şekilde yapılandırabilirsiniz.
+* Seçim Grup ilkesi ayarlayın. [Visual Studio 'yu, tek bilgisayarlarda müşteri geri bildirimlerini devre dışı bırakmak için de yapılandırabilirsiniz](../ide/visual-studio-experience-improvement-program.md) .
 
-## <a name="step-3---deploy"></a>Adım 3 - Dağıt
+## <a name="step-3---deploy"></a>3. adım-dağıtma
 
-* Komut dosyanızı hedef geliştirici iş istasyonlarınıza çalıştırmak için seçtiğiniz dağıtım teknolojisini kullanın.
+* Komut dosyanızı hedef geliştirici iş istasyonlarınızda yürütmek için tercih ettiğiniz dağıtım teknolojinizi kullanın.
 
-## <a name="step-4---deploy-updates"></a>Adım 4 - Güncellemeleri dağıt
+## <a name="step-4---deploy-updates"></a>4. adım-güncelleştirmeleri dağıtma
 
-* Güncelleştirilmiş bileşenler eklemek için adım 1'de kullandığınız komutu düzenli olarak çalıştırarak Visual Studio'daki [en son güncellemelerle ağ konumunuzu yenileyin.](update-a-network-installation-of-visual-studio.md?view=vs-2019)
+* Güncelleştirilmiş bileşenleri eklemek için düzenli olarak 1. adımda kullandığınız komutu çalıştırarak, Visual Studio 'Nun [en son güncelleştirmeleriyle ağ konumunuzu yenileyin](update-a-network-installation-of-visual-studio.md?view=vs-2019) .
 
-  Visual Studio'yu bir güncelleştirme komut dosyası kullanarak güncelleştirebilirsiniz. Bunu yapmak için [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) komut satırı parametresini kullanın.
+  Visual Studio 'Yu bir güncelleştirme betiği kullanarak güncelleştirebilirsiniz. Bunu yapmak için [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) komut satırı parametresini kullanın.
 
-## <a name="step-5---optional-use-visual-studio-tools"></a>Adım 5 - (İsteğe Bağlı) Visual Studio araçlarını kullanın
+## <a name="step-5---optional-use-visual-studio-tools"></a>5. adım-(Isteğe bağlı) Visual Studio araçlarını kullanma
 
-İstemci makinelerinde [yüklü Visual Studio örneklerini algılamanıza ve yönetmenize](tools-for-managing-visual-studio-instances.md?view=vs-2019) yardımcı olacak çeşitli araçlar mevcuttur.
+İstemci makinelerde [yüklü Visual Studio örneklerini tespit etmenize ve yönetmenize](tools-for-managing-visual-studio-instances.md?view=vs-2019) yardımcı olacak çeşitli araçlar sunulmaktadır.
 
 ## <a name="advanced-configuration"></a>Gelişmiş yapılandırma
 
-Varsayılan olarak, Visual Studio yüklemehata listesi F1 ve kod bağlantıları bing aramalarında özel tür ekleme sağlar. Aşağıdaki kayıt defteri anahtarının değerini ilke ile değiştirerek, Visual Studio'yu arama mekanizmasını belirli kullanıcı türlerini dahil etme durumunda devre dışı düşürecek şekilde yapılandırabilirsiniz:
+Varsayılan olarak, Visual Studio yüklemesi, hata listesi F1 ve kod bağlantıları 'ndaki Bing aramalarına özel tür ekleme imkanı sunar. Visual Studio 'Yu, ilke ile aşağıdaki kayıt defteri anahtarının değerini değiştirerek, arama mekanizmanın herhangi bir özel kullanıcı türünü dahil etme özelliğini devre dışı bırakacak şekilde yapılandırabilirsiniz:
 
-**"PutCustomTypeinbingSearch" DWORD 0**
+**"Putcustomtypeınbingsearch" DWORD 0**
 
-Kayıt defteri , özel kayıt defteri kovanının *Software\Microsoft\VisualStudio\16.0_{InstanceId}\Roslyn\Internal\Diagnostics\* dizininde yer alır. Kayıt defteri kovanının nasıl açIleceğine ilişkin talimatlar [için, Visual Studio örneği için kayıt defterini düzenlemeye](tools-for-managing-visual-studio-instances.md?view=vs-2019#editing-the-registry-for-a-visual-studio-instance)bakın.
+Kayıt defteri, özel kayıt kovanının * Software\Microsoft\VisualStudio\16.0_ {InstanceId} \ Roslyn\ınternal\diagnostics \* dizininde bulunur. Kayıt defteri kovanının nasıl açılacağı hakkında yönergeler için bkz. [Visual Studio örneği için kayıt defterini düzenlemeyle](tools-for-managing-visual-studio-instances.md?view=vs-2019#editing-the-registry-for-a-visual-studio-instance).
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-## <a name="step-1---download-visual-studio-product-files"></a>Adım 1 - Visual Studio ürün dosyalarını indirin
+## <a name="step-1---download-visual-studio-product-files"></a>Adım 1-Visual Studio ürün dosyalarını Indirin
 
-* Yüklemek istediğiniz [iş yüklerini ve bileşenleri seçin.](workload-and-component-ids.md?view=vs-2017)
+* Yüklemek istediğiniz [iş yüklerini ve bileşenleri seçin](workload-and-component-ids.md?view=vs-2017) .
 
-* [Visual Studio ürün dosyaları için ağ paylaşımı oluşturun.](create-a-network-installation-of-visual-studio.md?view=vs-2017)
+* [Visual Studio ürün dosyaları için bir ağ paylaşma oluşturun](create-a-network-installation-of-visual-studio.md?view=vs-2017).
 
-## <a name="step-2---build-an-installation-script"></a>Adım 2 - Yükleme komut dosyası oluşturma
+## <a name="step-2---build-an-installation-script"></a>2. adım-yükleme betiği oluşturma
 
-* Yüklemeyi denetlemek için [komut satırı parametrelerini](use-command-line-parameters-to-install-visual-studio.md?view=vs-2017) kullanan bir yükleme komut dosyası oluşturun.
+* Yüklemeyi denetlemek için [komut satırı parametrelerini](use-command-line-parameters-to-install-visual-studio.md?view=vs-2017) kullanan bir yükleme betiği oluşturun.
 
   >[!NOTE]
-  > Yanıt [dosyalarını](automated-installation-with-response-file.md?view=vs-2017)kullanarak komut dosyalarını basitleştirebilirsiniz. Varsayılan yükleme seçeneğinizi içeren bir yanıt dosyası oluşturduğunuzdan emin olun.
+  > Komut dosyalarını bir [yanıt dosyası](automated-installation-with-response-file.md?view=vs-2017)kullanarak basitleştirebilirsiniz. Varsayılan yükleme seçeneğinizi içeren bir yanıt dosyası oluşturduğunuzdan emin olun.
 
-* (İsteğe bağlı) Kullanıcıların yazılımı ayrı olarak etkinleştirmelerine gerek kalmaması için yükleme komut dosyasının bir parçası olarak [toplu lisans ürün anahtarı uygulayın.](automatically-apply-product-keys-when-deploying-visual-studio.md?view=vs-2017)
+* Seçim Kullanıcıların yazılımı ayrı olarak etkinleştirmesine gerek kalmaması için yükleme komut dosyasının parçası olarak [bir toplu lisans ürün anahtarı uygulayın](automatically-apply-product-keys-when-deploying-visual-studio.md?view=vs-2017) .
 
-* (İsteğe bağlı) [Ürün güncelleştirmelerinin son kullanıcılarınıza ne zaman ve nereden teslim edilecek](controlling-updates-to-visual-studio-deployments.md?view=vs-2017)lerini denetlemek için ağ düzenini güncelleştirin.
+* Seçim [Ürün güncelleştirmelerinin Son kullanıcılarınıza ne zaman ve nereden teslim edildiğini denetlemek](controlling-updates-to-visual-studio-deployments.md?view=vs-2017)için ağ yerleşimini güncelleştirin.
 
-* (İsteğe bağlı) Diğer sürümlerle veya örneklerle paylaşılan bazı paketlerin yüklendiği, [paketlerin önbelleğe alınıp alınmadığı](set-defaults-for-enterprise-deployments.md?view=vs-2019) veya [paketlerin önbelleğe alınıp alınmadığı](disable-or-move-the-package-cache.md?view=vs-2017)gibi Visual Studio'nun dağıtımını etkileyen kayıt defteri ilkeleri ayarlayın.
+* Seçim Diğer sürümler veya örneklerle paylaşılan bazı paketlerin yüklendiği, [paketlerin önbelleğe](set-defaults-for-enterprise-deployments.md?view=vs-2019) alındığı veya [paketlerin önbelleğe alınıp alınmayacağı](disable-or-move-the-package-cache.md?view=vs-2017)gibi, Visual Studio 'nun dağıtımını etkileyen kayıt defteri ilkeleri ayarlayın.
 
-* (İsteğe bağlı) Grup İlkesi ayarlayın. Ayrıca Visual Studio'yı tek tek bilgisayarlardaki [müşteri geri bildirimlerini devre dışı kılabilir](../ide/visual-studio-experience-improvement-program.md) şekilde yapılandırabilirsiniz.
+* Seçim Grup ilkesi ayarlayın. [Visual Studio 'yu, tek bilgisayarlarda müşteri geri bildirimlerini devre dışı bırakmak için de yapılandırabilirsiniz](../ide/visual-studio-experience-improvement-program.md) .
 
-## <a name="step-3---deploy"></a>Adım 3 - Dağıt
+## <a name="step-3---deploy"></a>3. adım-dağıtma
 
-* Komut dosyanızı hedef geliştirici iş istasyonlarınıza çalıştırmak için seçtiğiniz dağıtım teknolojisini kullanın.
+* Komut dosyanızı hedef geliştirici iş istasyonlarınızda yürütmek için tercih ettiğiniz dağıtım teknolojinizi kullanın.
 
-## <a name="step-4---deploy-updates"></a>Adım 4 - Güncellemeleri dağıt
+## <a name="step-4---deploy-updates"></a>4. adım-güncelleştirmeleri dağıtma
 
-* Güncelleştirilmiş bileşenler eklemek için adım 1'de kullandığınız komutu düzenli olarak çalıştırarak Visual Studio'daki [en son güncellemelerle ağ konumunuzu yenileyin.](update-a-network-installation-of-visual-studio.md?view=vs-2017)
+* Güncelleştirilmiş bileşenleri eklemek için düzenli olarak 1. adımda kullandığınız komutu çalıştırarak, Visual Studio 'Nun [en son güncelleştirmeleriyle ağ konumunuzu yenileyin](update-a-network-installation-of-visual-studio.md?view=vs-2017) .
 
-  Visual Studio'yu bir güncelleştirme komut dosyası kullanarak güncelleştirebilirsiniz. Bunu yapmak için [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) komut satırı parametresini kullanın.
+  Visual Studio 'Yu bir güncelleştirme betiği kullanarak güncelleştirebilirsiniz. Bunu yapmak için [`update`](use-command-line-parameters-to-install-visual-studio.md?view=vs-2019) komut satırı parametresini kullanın.
 
-## <a name="step-5---optional-use-visual-studio-tools"></a>Adım 5 - (İsteğe Bağlı) Visual Studio araçlarını kullanın
+## <a name="step-5---optional-use-visual-studio-tools"></a>5. adım-(Isteğe bağlı) Visual Studio araçlarını kullanma
 
-İstemci makinelerinde [yüklü Visual Studio örneklerini algılamanıza ve yönetmenize](tools-for-managing-visual-studio-instances.md?view=vs-2017) yardımcı olacak çeşitli araçlar mevcuttur.
+İstemci makinelerde [yüklü Visual Studio örneklerini tespit etmenize ve yönetmenize](tools-for-managing-visual-studio-instances.md?view=vs-2017) yardımcı olacak çeşitli araçlar sunulmaktadır.
 
 ## <a name="advanced-configuration"></a>Gelişmiş yapılandırma
 
-Varsayılan olarak, Visual Studio yüklemehata listesi F1 ve kod bağlantıları bing aramalarında özel tür ekleme sağlar. Aşağıdaki kayıt defteri anahtarının değerini ilke ile değiştirerek, Visual Studio'yu arama mekanizmasını belirli kullanıcı türlerini dahil etme durumunda devre dışı düşürecek şekilde yapılandırabilirsiniz:
+Varsayılan olarak, Visual Studio yüklemesi, hata listesi F1 ve kod bağlantıları 'ndaki Bing aramalarına özel tür ekleme imkanı sunar. Visual Studio 'Yu, ilke ile aşağıdaki kayıt defteri anahtarının değerini değiştirerek, arama mekanizmanın herhangi bir özel kullanıcı türünü dahil etme özelliğini devre dışı bırakacak şekilde yapılandırabilirsiniz:
 
-**"PutCustomTypeinbingSearch" DWORD 0**
+**"Putcustomtypeınbingsearch" DWORD 0**
 
-Kayıt defteri , özel kayıt defteri kovanının *Software\Microsoft\VisualStudio\15.0_{InstanceId}\Roslyn\Internal\Diagnostics\* dizininde yer alır. Kayıt defteri kovanının nasıl açIleceğine ilişkin talimatlar [için, Visual Studio örneği için kayıt defterini düzenlemeye](tools-for-managing-visual-studio-instances.md?view=vs-2017#editing-the-registry-for-a-visual-studio-instance)bakın.
+Kayıt defteri, özel kayıt kovanının * Software\Microsoft\VisualStudio\15.0_ {InstanceId} \ Roslyn\ınternal\diagnostics \* dizininde bulunur. Kayıt defteri kovanının nasıl açılacağı hakkında yönergeler için bkz. [Visual Studio örneği için kayıt defterini düzenlemeyle](tools-for-managing-visual-studio-instances.md?view=vs-2017#editing-the-registry-for-a-visual-studio-instance).
 
 ::: moniker-end
 
@@ -177,8 +177,8 @@ Kayıt defteri , özel kayıt defteri kovanının *Software\Microsoft\VisualStud
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Komut satırı parametresi örnekleri](command-line-parameter-examples.md)
-* [Visual Studio çevrimdışı yüklemesi için gerekli sertifikaları yükleme](install-certificates-for-visual-studio-offline.md)
+* [Visual Studio çevrimdışı yükleme için gerekli sertifikaları yükleme](install-certificates-for-visual-studio-offline.md)
 * [Yükleme yapılandırmasını içeri veya dışarı aktarma](import-export-installation-configurations.md)
-* [Visual Studio Kurulum Arşivleri](https://devblogs.microsoft.com/setup/tag/vs2017/)
-* [Visual Studio ürün yaşam döngüsü ve servis](/visualstudio/releases/2019/servicing/)
-* [Senkron otomatik yükleme ayarları](../extensibility/synchronously-autoloaded-extensions.md)
+* [Visual Studio Kurulum arşivleri](https://devblogs.microsoft.com/setup/tag/vs2017/)
+* [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing/)
+* [Zaman uyumlu oto yükleme ayarları](../extensibility/synchronously-autoloaded-extensions.md)

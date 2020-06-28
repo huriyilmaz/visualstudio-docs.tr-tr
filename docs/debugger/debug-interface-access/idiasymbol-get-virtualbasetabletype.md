@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_virtualBaseTableType | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aaddb8b71ba96511af3682b442c1e5c8e84a409c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 858f149abb0bec444c43ea706e638def4ff930ce
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738834"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461443"
 ---
 # <a name="idiasymbolget_virtualbasetabletype"></a>IDiaSymbol::get_virtualBaseTableType
 Bir sanal temel tablo işaretçisinin türünü alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_virtualBaseTableType(
@@ -37,13 +37,13 @@ HRESULT get_virtualBaseTableType(
 |`pRetVal`|dışı Temel tablo türünü belirten bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.|
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Sanal temel tablo işaretçisi (`vbtptr`), sanal temel sınıflardan devralmayı işleyen bir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vtable 'da gizli bir işaretçidir. @No__t_0 devralınan sınıflara bağlı olarak farklı boyutlara sahip olabilir.
+ Sanal temel tablo işaretçisi ( `vbtptr` ), [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] sanal temel sınıflardan devralmayı işleyen bir vtable 'da gizli bir işaretçidir. , `vbtptr` Devralınan sınıflara bağlı olarak farklı boyutlarda olabilir.
 
  Bu yöntem, vbtptr boyutunu belirlemekte kullanılabilecek bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 

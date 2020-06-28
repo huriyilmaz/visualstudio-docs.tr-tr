@@ -1,7 +1,7 @@
 ---
-title: 'Hata: Web hizmetlerinde hata ayıklanırken zaman aşımı | Microsoft Docs'
+title: Hata-Web hizmetlerinde hata ayıklama sırasında zaman aşımı | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 dev_langs:
 - CSharp
 - VB
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5aba4fef3e1c787651eb961f80b3507090f250a2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: efb77689c33d263723f146f9b2484748505406b6
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736885"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460279"
 ---
 # <a name="error-timeout-while-debugging-web-services"></a>Hata: Web Hizmetlerinde Hata Ayıklarken Zaman Aşımı
 Çağıran koddan bir XML Web hizmetine adımlıyorsanız, çağrı bazen zaman aşımına uğrar ve bu da hata ayıklamaya devam edemeyebilirsiniz. Bunun gibi bir hata iletisi görebilirsiniz.

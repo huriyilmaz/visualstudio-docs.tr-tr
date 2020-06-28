@@ -1,7 +1,7 @@
 ---
-title: 'Hata: veri kesme noktası ayarlanamıyor | Microsoft Docs'
+title: Hata-veri kesme noktası ayarlanamıyor | Microsoft Docs
 ms.date: 12/3/2019
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unable_to_set_data_breakpoint
 dev_langs:
@@ -15,12 +15,12 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: 18fa63f2a6f4b6d789bad6f813cb3956a636a2d2
-ms.sourcegitcommit: 8e123bcb21279f2770b28696995450270b4ec0e9
+ms.openlocfilehash: dab5e146d510601c6e93582b6b128abcd964b4a7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75404081"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85459941"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>Veri kesme noktası hatalarında sorun giderme
 Bu sayfa, "değer değiştiğinde kes" kullanırken görülen yaygın hataları çözme konusunda size kılavuzluk eder
@@ -44,7 +44,7 @@ Yönetilen veri kesme noktaları kullanılırken oluşabilecek hataların bir li
 
     - Bir açılan menüden genişletilmeyen bir değişkende "değer değiştiğinde kes".
         - Hata ayıklayıcının, izlemek istediğiniz alanı içeren nesneyi bilmesi gerekir. Çöp toplayıcı, hata ayıklayıcının izlemek istediğiniz değişkeni tutan nesneyi bilmesi için nesneyi yığında etrafında taşıyabilir. 
-        - **Geçici çözüm**: bir veri kesme noktası ayarlamak istediğiniz nesne içindeki bir yöntem içindeyse, bir çerçeve yukarı gidin ve `locals/autos/watch` penceresini kullanarak nesneyi genişletin ve istediğiniz alana bir veri kesme noktası ayarlayın.
+        - **Geçici çözüm**: bir veri kesme noktası ayarlamak istediğiniz nesne içindeki bir yöntem içindeyse, bir çerçeve yukarı gidin ve `locals/autos/watch` nesneyi genişletmek ve istediğiniz alana bir veri kesme noktası ayarlamak için pencereyi kullanın.
 
 - *"Statik alanlar veya statik özellikler için veri kesme noktaları desteklenmiyor."*
     
@@ -56,7 +56,7 @@ Yönetilen veri kesme noktaları kullanılırken oluşabilecek hataların bir li
 
 - *"Özellik değeri değişti ve artık izlenemez."*
 
-    - Bir özellik, çalışma zamanı sırasında nasıl hesaplanacağını değiştirebilir ve bu durumda, özelliğin arttığı ve donanım sınırlamasını aşabilecek değişkenlerin sayısı artar. Aşağıya `"The property is dependent on more memory than can be tracked by the hardware."` bakın.
+    - Bir özellik, çalışma zamanı sırasında nasıl hesaplanacağını değiştirebilir ve bu durumda, özelliğin arttığı ve donanım sınırlamasını aşabilecek değişkenlerin sayısı artar. `"The property is dependent on more memory than can be tracked by the hardware."`Aşağıya bakın.
 
 - *"Özelliği, donanım tarafından izlenebileceğinden daha fazla belleğe bağımlıdır."*
     
@@ -66,7 +66,7 @@ Yönetilen veri kesme noktaları kullanılırken oluşabilecek hataların bir li
 - *"Eski C# ifade değerlendiricisi kullanılırken veri kesme noktaları desteklenmez."*
 
     - Veri kesme noktaları yalnızca eski C# ifade değerlendiricisi üzerinde desteklenir. 
-    - **Çözüm**: `Debug -> Options` giderek eski C# ifade değerlendiricisi devre dışı bırakın `Debugging -> General` `"Use the legacy C# and VB expression evaluators"`onay işaretini kaldırın.
+    - **Çözüm**: eski C# ifade değerlendiricisi, `Debug -> Options` işaretini kaldır ' ın altında olacak şekilde devre dışı bırakır `Debugging -> General` `"Use the legacy C# and VB expression evaluators"` .
 
 ## <a name="data-breakpoint-hardware-limitations"></a>Veri kesme noktası donanım sınırlamaları
 
@@ -75,8 +75,8 @@ Programınızın üzerinde çalıştığı mimari (Platform yapılandırması), 
 | Mimari | Desteklenen donanım veri kesme noktası sayısı | En fazla bayt boyutu|
 | :-------------: |:-------------:| :-------------:|
 | x86 | 4 | 4 |
-| X64 | 4 | 8 |
-| ARM | 1\. | 4 |
+| x64 | 4 | 8 |
+| ARM | 1 | 4 |
 | ARM64 | 2 | 8 |
 
 ## <a name="provide-feedback"></a>Geribildirim gönderme

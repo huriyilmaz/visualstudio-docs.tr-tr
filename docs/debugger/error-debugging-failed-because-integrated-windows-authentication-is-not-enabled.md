@@ -1,7 +1,7 @@
 ---
-title: 'Hata: tümleşik Windows kimlik doğrulaması etkinleştirilmediğinden hata ayıklama başarısız oldu | Microsoft Docs'
+title: Hata-tümleşik Windows kimlik doğrulaması etkinleştirilmediğinden hata ayıklama başarısız oldu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.webdbg_ntlm_authn_not_enabled
 dev_langs:
@@ -17,12 +17,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c508951a3b54a7f84f142c5029b5305c8ef579ea
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: b9c4f0e25449b0e108ac39662ec52a0ba9abc217
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911543"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460844"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Hata: Tümleşik Windows Kimlik Doğrulaması Etkinleştirilmediğinden Hata Ayıklama Başarısız
 Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğrulama hatası nedeniyle engellendi. Bu durum, bir Web uygulamasına veya bir XML Web hizmetine adım adım çalışırken oluşabilir. Bu hatanın bir nedeni tümleşik Windows kimlik doğrulamasının etkinleştirilmemesine neden olur. Etkinleştirmek için "tümleşik Windows kimlik doğrulamasını etkinleştirmek Için" bölümündeki adımları izleyin.
@@ -73,7 +73,7 @@ Hata ayıklamayı isteyen kullanıcının kimlik doğrulaması bir kimlik doğru
 
          Kullanıcı Access Control iletişim kutusu görünür ve devam etmek için sizden izin ister.
 
-    3. **Devam**'a tıklayın.
+    3. **Devam**’a tıklayın.
 
          Windows özellikleri iletişim kutusu görüntülenir.
 

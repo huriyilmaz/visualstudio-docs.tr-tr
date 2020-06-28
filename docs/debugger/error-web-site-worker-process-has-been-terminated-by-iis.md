@@ -1,7 +1,7 @@
 ---
-title: 'Hata: Web sitesi çalışan işlemi IIS tarafından sonlandırıldı | Microsoft Docs'
+title: Hata-Web sitesi çalışan işlemi IIS tarafından sonlandırıldı | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.web_server_process_terminated
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3231c8ba2835fb535d538e29ef7df7ea3d1c4a8a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6d61f124d906137557b17b81122eba34e471a1a4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736348"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460006"
 ---
 # <a name="error-web-site-worker-process-has-been-terminated-by-iis"></a>Hata: Web sitesi çalışan işlemi IIS tarafından sonlandırıldı
 Hata ayıklayıcı Web sitesinde kod yürütmeyi durdurdu. Bu, çalışan işlemin yanıt vermeyi durdurduğunu varsaymak için Internet Information Services (IIS) hatasına neden oldu. Bu nedenle, IIS çalışan işlemini sonlandırdı.
@@ -38,9 +38,9 @@ Hata ayıklayıcı Web sitesinde kod yürütmeyi durdurdu. Bu, çalışan işlem
 
     IIS Yöneticisi açılır.
 
-3. **Bağlantılar** bölmesinde, gerekirse \<computer adı > düğümünü genişletin.
+3. **Bağlantılar** bölmesinde, \<computer name> gerekirse düğümü genişletin.
 
-4. @No__t_0computer adı > düğümü altında **uygulama havuzları**' na tıklayın.
+4. Düğüm altında \<computer name> **uygulama havuzları**' na tıklayın.
 
 5. **Uygulama havuzları** listesinde, uygulamanızın çalıştığı havuzun adına sağ tıklayın ve ardından **Gelişmiş ayarlar**' a tıklayın.
 

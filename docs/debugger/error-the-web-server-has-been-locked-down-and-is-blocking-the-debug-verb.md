@@ -1,7 +1,7 @@
 ---
-title: 'Hata: Web sunucusu kilitli ve hata ayıklama fiilini engelliyor | Microsoft Docs'
+title: Hata-Web sunucusu kilitlenmiş ve hata ayıklama fiilini engelliyor | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.webdbg_debug_verb_blocked
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9564f077a5379f44d2beb4d7851453dd6b35fa48
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: abef1edefad63e340170e7934f4ad87cce268e46
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736948"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460370"
 ---
 # <a name="error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb"></a>Hata: Web Sunucusu Kilitli ve DEBUG Fiilini Engelliyor
 Web uygulamasına veya XML Web hizmetine adımlamak, IIS Kilitleme Aracı çalıştırıldığı ve URLScan yüklenmiş ve etkinleştirilmiş olduğundan başarısız oldu. Bu koşul, IIS 'nin hata ayıklama fiilini almasını engeller.
@@ -32,15 +32,15 @@ Web uygulamasına veya XML Web hizmetine adımlamak, IIS Kilitleme Aracı çalı
 
 ### <a name="to-enable-debugging-on-a-web-server-with-urlscan-installed"></a>URLScan yüklü bir Web sunucusunda hata ayıklamayı etkinleştirmek için
 
-1. URLScan. ini dosyasını bulun. Normalde, bunu şuna benzer bir dizinde bulacaksınız:
+1. Urlscan.ini dosyasını bulun. Normalde, bunu şuna benzer bir dizinde bulacaksınız:
 
      C:\WINNT\System32\Inetsrv\urlscan
 
 2. Dosyanın bir kopyasını oluşturun ve bunu **URLScan. old**olarak adlandırın.
 
-3. Not defteri 'Ni veya seçtiğiniz metin düzenleyicisini kullanarak URLScan. ini dosyasının özgün kopyasını açın.
+3. Urlscan.ini dosyanın özgün kopyasını Not defteri veya istediğiniz metin düzenleyicisini kullanarak açın.
 
-4. URLScan. ini dosyasında [AllowVerbs] bölümünü bulun. [AllowVerbs] bölümüne hata ayıklama ekleyin. [AllowVerbs] bölümünde EBUG;D görürseniz, fiilin açıklama eklemek için noktalı virgülü kaldırın.
+4. Urlscan.ini ' de [AllowVerbs] bölümünü bulun. [AllowVerbs] bölümüne hata ayıklama ekleyin. [AllowVerbs] bölümünde EBUG;D görürseniz, fiilin açıklama eklemek için noktalı virgülü kaldırın.
 
 5. [DenyVerbs] bölümünü bulun. [DenyVerbs] bölümünde hata ayıklama görüntülenirse, kaldırın.
 

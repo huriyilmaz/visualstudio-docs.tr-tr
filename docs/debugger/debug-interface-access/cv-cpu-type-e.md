@@ -1,7 +1,7 @@
 ---
 title: CV_CPU_TYPE_e | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,20 +12,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ccc83062427ac2ecd3f340d6e1dbbe4d988ab0af
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 82a482b570d3ed22d1b9dfe2ca3c8248a0185911
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745330"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462116"
 ---
 # <a name="cv_cpu_type_e"></a>CV_CPU_TYPE_e
 Hedef işlemciyi belirtir.
 
 > [!NOTE]
-> İşlemci, `CV_CFL_*` ön eki sonrasında Enumeration öğesinde tanımlanır.
+> İşlemci, ön ek sonrasında Enumeration öğesinde tanımlanır `CV_CFL_*` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 typedef enum CV_CPU_TYPE_e {
@@ -96,7 +96,7 @@ typedef enum CV_CPU_TYPE_e {
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-Bu Numaralandırmadaki değerler [IDiaSymbol:: get_Platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md) yöntemi çağrısıyla döndürülür.
+Bu Numaralandırmadaki değerler [IDiaSymbol:: get_Platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md) metoduna yapılan bir çağrı tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 Üst bilgi: cvconst. h

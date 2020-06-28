@@ -1,7 +1,7 @@
 ---
-title: 'Hata: Kullanıcı, sp_enable_sql_debug saklı yordamını çalıştıramadı | Microsoft Docs'
+title: Hata-Kullanıcı, saklı yordamı çalıştıramadı sp_enable_sql_debug | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 dev_langs:
 - CSharp
 - VB
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bdc6ecb03572d824f6e3b887090d67be416cdef
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c1da494b5bb8c168775e2183f41113f00d021792
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736546"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460071"
 ---
 # <a name="error-user-could-not-execute-stored-procedure-sp_enable_sql_debug"></a>Hata: Kullanıcı sp_enable_sql_debug Saklı Yordamını Yürütemedi
 

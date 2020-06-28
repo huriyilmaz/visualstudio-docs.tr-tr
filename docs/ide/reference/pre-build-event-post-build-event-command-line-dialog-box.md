@@ -29,71 +29,71 @@ helpviewer_keywords:
 - $(ProjectName)
 - build events, macros
 ms.assetid: d49b2c57-24bf-4fb2-8351-5c4b6cca938f
-author: TerryGLee
-ms.author: tglee
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 38712c25718670ea15324e3daf6fadc138cb08a6
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 594d885228de68ecf34e0644cbbe6c6899397fad
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75567924"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419204"
 ---
-# <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Önceden oluşturma olayı/post-build olay komut satırı iletişim kutusu
+# <a name="pre-build-eventpost-build-event-command-line-dialog-box"></a>Oluşturma öncesi olay/oluşturma sonrası olay komut satırı iletişim kutusu
 
-[Yapı Olayları Sayfası, Proje Tasarımcısı (C#)](../../ide/reference/build-events-page-project-designer-csharp.md) için yapı öncesi veya sonrası olayları doğrudan edit kutusuna yazabilir veya kullanılabilir makrolar listesinden yapı öncesi ve sonrası makroları seçebilirsiniz.
+[Derleme olayları sayfası, proje Tasarımcısı (C#)](../../ide/reference/build-events-page-project-designer-csharp.md) için doğrudan düzenleme kutusuna derleme öncesi veya sonrası olayları yazabilir veya kullanılabilir makrolar listesinden ön ve derleme sonrası makroları seçebilirsiniz.
 
 > [!NOTE]
-> Proje güncelse ve hiçbir yapı tetiklenmiyorsa, önceden yapı olayları çalışmaz.
+> Proje güncel değilse ve derleme tetikleniyorsa, ön derleme olayları çalışmaz.
 
 ## <a name="ui-element-list"></a>UI Öğe Listesi
 
-**Komut satırı düzenkutusu**
+**Komut satırı düzenleme kutusu**
 
-Önceden inşa veya post-build için çalışacak olayları içerir.
+Oluşturma öncesi ya da derleme sonrası için çalıştırılacak olayları içerir.
 
 > [!NOTE]
-> .bat `call` dosyalarını çalıştıran tüm yapı sonrası komutlardan önce bir deyim ekleyin. Örneğin `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat` olabilir.
+> `call`. Bat dosyalarını çalıştıran tüm derleme sonrası komutlarının önüne bir ifade ekleyin. Örneğin `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat` olabilir.
 
 **Makrolar**
 
-Komut satırı düzenkutusuna eklemek için makroların listesini görüntülemek için düzen kutusunu genişletir.
+Komut satırı düzenleme kutusuna eklenecek makroların listesini göstermek için düzenleme kutusunu genişletir.
 
 **Makro tablosu**
 
-Kullanılabilir makroları ve değerini listeler. Her birinin açıklaması için aşağıdaki Makrolar'a bakın. Komut satırı düzenkutusuna eklemek için aynı anda yalnızca bir makro seçebilirsiniz.
+Kullanılabilir makroları ve değerini listeler. Her birinin açıklaması için aşağıdaki makroları inceleyin. Komut satırı düzenleme kutusuna eklemek için tek seferde yalnızca bir makro seçebilirsiniz.
 
 **Ekle**
 
-Makro tablosunda seçilen makroyu komut satırı düzenkutusuna ekler.
+Makro tablosunda seçilen makro komut satırı düzenleme kutusuna ekler.
 
 ### <a name="macros"></a>Makrolar
 
-Bu makrolardan herhangi birini, dosyaların konumlarını belirtmek veya birden çok seçim durumunda giriş dosyasının gerçek adını almak için kullanabilirsiniz. Bu makrolar büyük/küçük harf duyarlı değildir.
+Bu makroların herhangi birini dosya konumları belirtmek için veya birden çok seçim durumunda giriş dosyasının gerçek adını almak için kullanabilirsiniz. Bu makrolar büyük/küçük harfe duyarlı değildir.
 
-|Makro|Açıklama|
+|Makroya|Açıklama|
 |-----------|-----------------|
-|`$(ConfigurationName)`|Geçerli proje yapılandırmasının adı, örneğin, "Hata Ayıklama".|
-|`$(OutDir)`|Proje dizinine göre çıktı dosyası dizinine giden yol. Bu, Çıktı Dizini özelliğinin değerine gider. Bu sondalı backslash\\'içerir.|
-|`$(DevEnvDir)`|Visual Studio'nun kurulum dizini (sürücü ve yol ile tanımlanır); '' '.\\|
+|`$(ConfigurationName)`|Geçerli proje yapılandırmasının adı, örneğin "Debug".|
+|`$(OutDir)`|Proje dizinine göre çıkış dosyası dizininin yolu. Bu, çıkış dizini özelliğinin değerini çözümler. ' ' Sonunda ters eğik çizgi içeriyor \\ .|
+|`$(DevEnvDir)`|Visual Studio yükleme dizini (sürücü ve yol ile tanımlanır); ' ' sonunda ters eğik çizgi içerir \\ .|
 |`$(PlatformName)`|Şu anda hedeflenen platformun adı. Örneğin, "AnyCPU".|
-|`$(ProjectDir)`|Projenin dizini (sürücü ve yol ile tanımlanır); '' '.\\|
-|`$(ProjectPath)`|Projenin mutlak yol adı (sürücü, yol, temel ad ve dosya uzantısı ile tanımlanır).|
+|`$(ProjectDir)`|Projenin dizini (sürücü ve yol ile tanımlanır); ' ' sonunda ters eğik çizgi içerir \\ .|
+|`$(ProjectPath)`|Projenin mutlak yol adı (sürücü, yol, taban adı ve dosya uzantısıyla tanımlanır).|
 |`$(ProjectName)`|Projenin temel adı.|
-|`$(ProjectFileName)`|Projenin dosya adı (temel ad ve dosya uzantısı ile tanımlanır).|
-|`$(ProjectExt)`|Projenin dosya uzantısı. Dosya uzantısından önce '.' içerir.|
-|`$(SolutionDir)`|Çözümün dizini (sürücü ve yol ile tanımlanır); '' '.\\|
-|`$(SolutionPath)`|Çözümün mutlak yol adı (sürücü, yol, temel ad ve dosya uzantısı ile tanımlanır).|
+|`$(ProjectFileName)`|Projenin dosya adı (taban adı ve dosya uzantısıyla tanımlanır).|
+|`$(ProjectExt)`|Projenin dosya uzantısı. Dosya uzantısından önce '. ' içerir.|
+|`$(SolutionDir)`|Çözümün dizini (sürücü ve yol ile tanımlanır); ' ' sonunda ters eğik çizgi içerir \\ .|
+|`$(SolutionPath)`|Çözümün mutlak yol adı (sürücü, yol, taban adı ve dosya uzantısıyla tanımlanır).|
 |`$(SolutionName)`|Çözümün temel adı.|
-|`$(SolutionFileName)`|Çözümün dosya adı (temel ad ve dosya uzantısı ile tanımlanır).|
-|`$(SolutionExt)`|Çözümün dosya uzantısı. Dosya uzantısından önce '.' içerir.|
-|`$(TargetDir)`|Yapı için birincil çıktı dosyasının dizini (sürücü ve yol ile tanımlanır). Bu sondalı backslash\\'içerir.|
-|`$(TargetPath)`|Yapı için birincil çıktı dosyasının mutlak yol adı (sürücü, yol, temel ad ve dosya uzantısı ile tanımlanır).|
-|`$(TargetName)`|Yapı için birincil çıktı dosyasının temel adı.|
-|`$(TargetFileName)`|Yapı için birincil çıktı dosyasının dosya adı (temel ad ve dosya uzantısı olarak tanımlanır).|
-|`$(TargetExt)`|Yapı için birincil çıktı dosyasının dosya uzantısı. Dosya uzantısından önce '.' içerir.|
+|`$(SolutionFileName)`|Çözümün dosya adı (taban adı ve dosya uzantısıyla tanımlanır).|
+|`$(SolutionExt)`|Çözümün dosya uzantısı. Dosya uzantısından önce '. ' içerir.|
+|`$(TargetDir)`|Derleme için birincil çıkış dosyasının dizini (sürücü ve yol ile tanımlanır). ' ' Sonunda ters eğik çizgi içeriyor \\ .|
+|`$(TargetPath)`|Derleme için birincil çıkış dosyasının mutlak yol adı (sürücü, yol, taban adı ve dosya uzantısıyla tanımlanır).|
+|`$(TargetName)`|Derleme için birincil çıkış dosyasının temel adı.|
+|`$(TargetFileName)`|Derleme için birincil çıkış dosyasının dosya adı (temel ad ve dosya uzantısı olarak tanımlanır).|
+|`$(TargetExt)`|Derleme için birincil çıkış dosyasının dosya uzantısı. Dosya uzantısından önce '. ' içerir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

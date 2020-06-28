@@ -1,7 +1,7 @@
 ---
 title: 'IDiaTable:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ce325c51a9dfcee32093a0a1fafe82ea6a7fdd6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7c48db236e7cd416929d26d3473c537c2d81ac06
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738744"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461333"
 ---
 # <a name="idiatableget_count"></a>IDiaTable::get_Count
 Tablodaki öğelerin sayısını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_Count ( 
@@ -36,7 +36,7 @@ HRESULT get_Count ( 
 dışı Tablodaki öğe sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

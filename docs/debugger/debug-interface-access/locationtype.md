@@ -1,7 +1,7 @@
 ---
 title: LocationType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc40cc6cc8e821db7c28a4647e36e7bad241b29f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b2fafbb25d52df6082736431727222c788d73476
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738644"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461219"
 ---
 # <a name="locationtype"></a>LocationType
 Bir sembolde bulunan konum bilgilerinin türünü gösterir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum LocationType {
@@ -42,34 +42,34 @@ enum LocationType {
 ```
 
 ## <a name="elements"></a>Öğeler
-`LocIsNull` konum bilgileri kullanılamıyor.
+`LocIsNull`Konum bilgileri kullanılamıyor.
 
-`LocIsStatic` konum statiktir.
+`LocIsStatic`Konum statiktir.
 
-`LocIsTLS` konumu iş parçacığı yerel depolama alanında.
+`LocIsTLS`Konum, iş parçacığı yerel depolama alanında.
 
-`LocIsRegRel` konum kayıt göreli.
+`LocIsRegRel`Konum, kayıt göreli.
 
-`LocIsThisRel` konum `this` görelidir.
+`LocIsThisRel`Konum `this` -göreli.
 
-`LocIsEnregistered` konum bir yazmaç içinde.
+`LocIsEnregistered`Konum bir yazmaç içinde.
 
-`LocIsBitField` konum bir bit alanıdır.
+`LocIsBitField`Konum bir bit alanıdır.
 
-`LocIsSlot` konum bir Microsoft ara dili (MSIL) yuvadır.
+`LocIsSlot`Konum bir Microsoft ara dil (MSIL) yuvadır.
 
-`LocIsIlRel` konum MSIL ile ilişkilidir.
+`LocIsIlRel`Konum MSIL ile ilişkilidir.
 
-`LocInMetaData` konumu meta verilerde.
+`LocInMetaData`Konum meta verilerde.
 
-`LocIsConstant` konum sabit bir değerde.
+`LocIsConstant`Konum sabit bir değerde.
 
-Bu Numaralandırmadaki konum türlerinin sayısını `LocTypeMax`.
+`LocTypeMax`Bu Numaralandırmadaki konum türlerinin sayısı.
 
 ## <a name="remarks"></a>Açıklamalar
 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) arabirimi için kullanılabilen özellikler simgenin görüntü dosyası içindeki konumuna bağlıdır. Daha fazla bilgi için bkz. [sembol konumları](../../debugger/debug-interface-access/symbol-locations.md).
 
-Bu Numaralandırmadaki değerler [IDiaSymbol:: get_locationType](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md) yöntemi çağrısıyla döndürülür.
+Bu Numaralandırmadaki değerler [IDiaSymbol:: get_locationType](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md) metoduna yapılan bir çağrı tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 Üst bilgi: cvconst. h

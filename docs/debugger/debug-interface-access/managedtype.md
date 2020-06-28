@@ -1,7 +1,7 @@
 ---
 title: ManagedType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: bf61dce9940279b490d9270420cc45baf0b82dc0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c53bcac98629d2dfbd1537ff4486b0a0162b4d9d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738650"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461191"
 ---
 # <a name="managedtype"></a>ManagedType
-Yönetilen bir tür (meta veriler tarafından tanımlanan herhangi bir simge veya gibi dillerin bellek ve kaynak yönetimi işlevselliği C#) bir `SymTagManagedType` simgesiyle tanımlanır.
+Yönetilen bir tür (meta veriler tarafından tanımlanan herhangi bir simge veya C# gibi dillerin bellek ve kaynak yönetimi işlevlerine yerel olarak) bir sembol tarafından tanımlanır `SymTagManagedType` .
 
 ## <a name="properties"></a>Özellikler
  Aşağıdaki tabloda bu sembol türü için ek geçerli özellikler gösterilmektedir.
@@ -31,7 +31,7 @@ Yönetilen bir tür (meta veriler tarafından tanımlanan herhangi bir simge vey
 |--------------|---------------|-----------------|
 |[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|Yönetilen sembolün adı.|
 |[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Simgenin dizin KIMLIĞI.|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|@No__t_0 döndürür ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagManagedType` ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Simge Türlerinin Sınıf Hiyerarşisi](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md)

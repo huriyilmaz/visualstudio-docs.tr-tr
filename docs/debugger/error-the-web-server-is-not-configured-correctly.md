@@ -1,7 +1,7 @@
 ---
-title: 'Hata: Web sunucusu doğru yapılandırılmamış | Microsoft Docs'
+title: Hata-Web sunucusu doğru yapılandırılmamış | Microsoft Docs
 ms.date: 09/20/2017
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.remote.projnotconfigured
 dev_langs:
@@ -16,22 +16,22 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be5db0a08a287e2611c29396e96e72719b5106a7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 711297ef00c064c482ed3a86b896566b6e019534
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736924"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460331"
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>Hata: Web sunucusu doğru yapılandırılmamış
 
-Sorunu çözmek için buradaki adımları ayrıntılandırdıktan sonra ve hata ayıklamayı yeniden denemeden önce, IIS 'yi de sıfırlamanız gerekebilir. Bunu, bir yönetici komut istemi açıp `iisreset`yazarak yapabilirsiniz.
+Sorunu çözmek için buradaki adımları ayrıntılandırdıktan sonra ve hata ayıklamayı yeniden denemeden önce, IIS 'yi de sıfırlamanız gerekebilir. Bunu, bir yönetici komut istemi açıp yazarak yapabilirsiniz `iisreset` .
 
 Bu sorunu çözmek için şu adımları uygulayın:
 
-1. Sunucuda barındırılan Web uygulaması bir yayın derlemesi olarak yapılandırılmışsa, hata ayıklama derlemesi olarak yeniden yayımlayın ve Web. config dosyasının derleme öğesinde `debug=true` içerdiğini doğrulayın. IIS 'i sıfırlayın ve yeniden deneyin.
+1. Sunucuda barındırılan Web uygulaması bir yayın derlemesi olarak yapılandırılmışsa, hata ayıklama derlemesi olarak yeniden yayımlayın ve web.config dosyasının `debug=true` derleme öğesinde içerdiğini doğrulayın. IIS 'i sıfırlayın ve yeniden deneyin.
 
-    Örneğin, bir yayın derlemesi için bir yayımlama profili kullanıyorsanız, bunu hata ayıklama ve yeniden yayımlama için değiştirin. Aksi halde, yayımlarken hata ayıklama özniteliği `false` olarak ayarlanır.
+    Örneğin, bir yayın derlemesi için bir yayımlama profili kullanıyorsanız, bunu hata ayıklama ve yeniden yayımlama için değiştirin. Aksi takdirde, hata ayıklama özniteliği yayımladığınızda olarak ayarlanır `false` .
 
 2. ISS Fiziksel yolun doğru olduğundan emin olun. IIS 'de bu ayarı, **fiziksel ayarlar > fiziksel yol** (veya daha eski IIS sürümlerindeki **Gelişmiş ayarlar** ) içinde bulabilirsiniz.
 
@@ -43,9 +43,9 @@ Bu sorunu çözmek için şu adımları uygulayın:
 
 4. ISS Sunucuda doğru ASP.NET sürümünün yüklü olduğundan emin olun.
 
-    IIS 'de ve Visual Studio projenizde eşleşmeyen ASP.NET sürümleri bu soruna neden olabilir. Web. config 'de Framework sürümünü ayarlamanız gerekebilir. IIS 'de ASP.NET yüklemek için [Web Platformu Yükleyicisi (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)kullanın. Ayrıca bkz. [ASP.NET 3,5 ve ASP.NET 4,5 kullanarak ııs 8,0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) veya ASP.NET Core, [Windows üzerinde IIS ile barındırma](https://docs.asp.net/en/latest/publishing/iis.html).
+    IIS 'de ve Visual Studio projenizde eşleşmeyen ASP.NET sürümleri bu soruna neden olabilir. Çerçeve sürümünü web.config ayarlamanız gerekebilir. IIS 'de ASP.NET yüklemek için [Web Platformu Yükleyicisi (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)kullanın. Ayrıca bkz. [ASP.NET 3,5 ve ASP.NET 4,5 kullanarak ııs 8,0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) veya ASP.NET Core, [Windows üzerinde IIS ile barındırma](https://docs.asp.net/en/latest/publishing/iis.html).
 
-4. IIS 'deki `maxConnection` sınırı çok düşükse ve çok fazla bağlantınız varsa, [bağlantı sınırını artırmanız](/iis/configuration/system.applicationhost/sites/sitedefaults/limits)gerekebilir.
+4. `maxConnection`IIS 'deki sınır çok düşükse ve çok fazla bağlantınız varsa, [bağlantı sınırını artırmanız](/iis/configuration/system.applicationhost/sites/sitedefaults/limits)gerekebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uzak IIS Bilgisayarında Uzaktan ASP.NET ile Hata Ayıklama](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)

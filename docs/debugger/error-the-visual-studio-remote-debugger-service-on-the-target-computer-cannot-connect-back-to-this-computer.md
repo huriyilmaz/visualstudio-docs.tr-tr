@@ -1,9 +1,9 @@
 ---
-title: 'Hata: Hedef bilgisayardaki Visual Studio Uzaktan Hata Ayıklayıcı hizmeti geriye bu bilgisayara bağlanamıyor'
+title: Hata-hedef bilgisayardaki Visual Studio Uzaktan Hata Ayıklayıcı hizmeti bu bilgisayara geri bağlanamıyor
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.service_access_denied_oncallback
 dev_langs:
@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 695c4c9e84ce9eb851a551dc9821bff00123a35c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 975d2d1c1f66fe06f8fc3a9568f790fbe4c21e36
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737401"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460396"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Hata: Hedef bilgisayardaki Visual Studio Uzaktan Hata Ayıklayıcı hizmeti geriye bu bilgisayara bağlanamıyor
 Bu hata, uzaktan hata ayıklayıcı hizmetinin hata ayıklaması yaptığınız bilgisayara bağlanmayı denediğinde kimlik doğrulayamayan bir kullanıcı hesabı altında çalıştığı anlamına gelir. Bu hata, eski hata ayıklama altyapısı kullanılarak uzaktan hata ayıklanırken ve uzaktan hata ayıklayıcı bir hizmet olarak çalışırken oluşabilir.
@@ -31,7 +31,7 @@ Bu hata, uzaktan hata ayıklayıcı hizmetinin hata ayıklaması yaptığınız 
 |||||
 |-|-|-|-|
 ||LocalSystem hesabı|Etki alanı hesabı|Her iki bilgisayarda da aynı Kullanıcı adı ve parolaya sahip yerel hesaplar|
-|Aynı etki alanındaki her iki bilgisayar|Evet|Evet|Evet|
+|Aynı etki alanındaki her iki bilgisayar|Yes|Yes|Yes|
 |İki yönlü güvene sahip etki alanlarındaki her iki bilgisayar|Hayır|Hayır|Evet|
 |Bir çalışma grubundaki bilgisayarlardan biri veya her ikisi|Hayır|Hayır|Evet|
 |Farklı etki alanlarındaki bilgisayarlar|Hayır|Hayır|Evet|
@@ -40,7 +40,7 @@ Bu hata, uzaktan hata ayıklayıcı hizmetinin hata ayıklaması yaptığınız 
 
 - Visual Studio Uzaktan Hata Ayıklayıcı hizmetini çalıştırdığınız hesabın, uzak bilgisayarda bir yönetici olması gerekir, böylece herhangi bir işlemde hata ayıklayabilirler.
 
-- Hesaba Ayrıca **yerel güvenlik ilkesi** yönetim aracını kullanan uzak bilgisayarda `Log on as a service` ayrıcalığı verilmelidir.
+- Ayrıca hesaba, `Log on as a service` **yerel güvenlik ilkesi** yönetim aracını kullanan uzak bilgisayarda ayrıcalık verilmelidir.
 
 - Bilgisayara erişim yerel bir hesap kullanıyorsanız, Visual Studio Uzaktan Hata Ayıklayıcı hizmetini yerel bir hesap altında çalıştırmanız gerekir.
 
@@ -76,4 +76,4 @@ Bu hata, uzaktan hata ayıklayıcı hizmetinin hata ayıklaması yaptığınız 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
-- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

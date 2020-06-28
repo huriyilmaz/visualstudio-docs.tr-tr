@@ -1,7 +1,7 @@
 ---
 title: Sorgulanıyor. Pdb dosyası | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -13,15 +13,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a22bc8fbe65795a3c5162607a12690081e565666
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 7a7cff092d06b8845993dcf1a35b271da0c0a33c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917112"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461163"
 ---
 # <a name="querying-the-pdb-file"></a>.Pdb Dosyasını Sorgulama
-Program veritabanı dosyası (uzantısı. pdb), projeyi derleyip bağlama sırasında toplanan tür ve simgesel hata ayıklama bilgilerini içeren bir ikili dosyadır. C++ **/Zi** veya **/Zi** ile BIR C/program derlerken bir PDB dosyası ya da **/debug** seçeneğiyle bir [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]veya [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] programı yapılandırdığınızda oluşturulur. Nesne dosyaları hata ayıklama bilgileri için. pdb dosyasına başvuruları içerir. Pdb dosyaları hakkında daha fazla bilgi için bkz. [pdb dosyaları](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). Bir DIA uygulaması, yürütülebilir bir görüntü içindeki çeşitli semboller, nesneler ve veri öğeleri hakkında ayrıntıları almak için aşağıdaki genel adımları kullanabilir.
+Program veritabanı dosyası (uzantısı. pdb), projeyi derleyip bağlama sırasında toplanan tür ve simgesel hata ayıklama bilgilerini içeren bir ikili dosyadır. **/Zi** veya **/Zi** ya da [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] **/Debug** seçeneğiyle bir C/C++ programı derlerken bir PDB dosyası oluşturulur. Nesne dosyaları hata ayıklama bilgileri için. pdb dosyasına başvuruları içerir. Pdb dosyaları hakkında daha fazla bilgi için bkz. [pdb dosyaları](/previous-versions/visualstudio/visual-studio-2010/yd4f8bd1(v=vs.100)). Bir DIA uygulaması, yürütülebilir bir görüntü içindeki çeşitli semboller, nesneler ve veri öğeleri hakkında ayrıntıları almak için aşağıdaki genel adımları kullanabilir.
 
 ### <a name="to-query-the-pdb-file"></a>. Pdb dosyasını sorgulamak için
 
@@ -65,7 +65,7 @@ Program veritabanı dosyası (uzantısı. pdb), projeyi derleyip bağlama sıras
     }
     ```
 
-4. Veri kaynağındaki sembolleri sorgulamak için `IDiaSession` içindeki yöntemleri kullanın.
+4. `IDiaSession`Veri kaynağındaki sembolleri sorgulamak için içindeki yöntemleri kullanın.
 
     ```C++
     CComPtr<IDiaSymbol> pglobal;
@@ -75,7 +75,7 @@ Program veritabanı dosyası (uzantısı. pdb), projeyi derleyip bağlama sıras
     }
     ```
 
-5. Simgeleri veya hata ayıklama bilgilerinin diğer öğelerini numaralandırmak ve taramak için `IDiaEnum*` arabirimlerini kullanın.
+5. `IDiaEnum*`Simgeleri veya hata ayıklama bilgilerinin diğer öğelerini numaralandırmak ve taramak için arabirimlerini kullanın.
 
     ```C++
     CComPtr<IDiaEnumTables> pTables;

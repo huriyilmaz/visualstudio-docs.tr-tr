@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_stride | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4264742a-3d91-44b9-9d14-87adbc77f0f0
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b1ff294e45404d312d445c4b76f05cc3e0d7dd95
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f3853c6883ed5feab420f0b689c0c614d57aecd7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739297"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461958"
 ---
 # <a name="idiasymbolget_stride"></a>IDiaSymbol::get_stride
 Matrisin ilerini alır veya bir dizi harcar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_stride(
@@ -30,10 +30,10 @@ HRESULT get_stride(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı İlerlemesiyle ilgili bir `DWORD` işaretçisi.
+dışı İlerleme tutan bir işaretçisi `DWORD` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

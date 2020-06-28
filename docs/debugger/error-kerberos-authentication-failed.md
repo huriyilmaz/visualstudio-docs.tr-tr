@@ -1,7 +1,7 @@
 ---
-title: 'Hata: Kerberos kimlik doğrulaması başarısız oldu | Microsoft Docs'
+title: Hata-Kerberos kimlik doğrulaması başarısız oldu | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.callback_kerberos_auth_failed
 dev_langs:
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fbe13fd3d0dc7e29fc12d369ec0865bcbc97b1a4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 07afa4aca82a83f5b7ba64ad0e9958710582a6a0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737665"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460683"
 ---
 # <a name="error-kerberos-authentication-failed"></a>Hata: Kerberos Kimlik Doğrulaması Başarısız
 Uzaktan hata ayıklama yapmayı denediğinizde aşağıdaki hata iletisini alabilirsiniz:
@@ -34,7 +34,7 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
 
 - Hedef bilgisayar veya hata ayıklayıcı Konak bilgisayar, etki alanı yerine bir çalışma grubunda bulunuyor
 
-   \- veya-
+   \-veya
 
 - Kerberos, etki alanı denetleyicisinde devre dışı bırakıldı.
 
@@ -52,12 +52,12 @@ Error: The Visual Studio Remote Debugger on the target computer cannot connect b
     ping <debugger_host_computer_name>
     ```
 
-3. @No__t_0 yanıtının ilk satırı, belirtilen bilgisayar için DNS tarafından döndürülen tam bilgisayar adını ve IP adresini gösterir.
+3. Yanıtın ilk satırı, `ping` belirtilen bilgisayar IÇIN DNS tarafından döndürülen tam bilgisayar adını ve IP adresini gösterir.
 
-4. Hata ayıklayıcı ana bilgisayarında, bir **komut istemi** penceresi açın ve `ipconfig` çalıştırın.
+4. Hata ayıklayıcı ana bilgisayarında, bir **komut istemi** penceresi açın ve komutunu çalıştırın `ipconfig` .
 
 5. IP adresi değerlerini karşılaştırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)
-- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

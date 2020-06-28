@@ -1,7 +1,7 @@
 ---
 title: CV_HREG_e | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,20 +12,20 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aac055930e9d1b016bbdc4949cbbdbee798cfaa2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ee15d5b4d6a0959397d8d62753455c7a26f01f78
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745312"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462109"
 ---
 # <a name="cv_hreg_e"></a>CV_HREG_e
 Bir hedef kayıt belirtir.
 
 > [!NOTE]
-> @No__t_0 numaralandırması burada tümüyle çoğaltılamayacak kadar büyük olduğundan, kısaltılmış bir sürüm başvuru olarak sağlanır. Eksik girişler italik olarak oluşturulur. Tüm sabit listesi, cvconst. h üstbilgi dosyasında bulunur.
+> `CV_HREG_e`Sabit listesi tamamen çoğaltılamayacak kadar büyük olduğundan, kısaltılmış bir sürüm başvuru olarak sağlanır. Eksik girişler italik olarak oluşturulur. Tüm sabit listesi, cvconst. h üstbilgi dosyasında bulunur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum CV_HREG_e {
@@ -409,27 +409,27 @@ enum CV_HREG_e {
 ```
 
 ## <a name="elements"></a>Öğeler
-CV_REG_ *, Intel 80x86 ve ix86 işlemcileri ve p kodu tarafından kullanılan Yazmaçları.
+Intel 80x86 ve ix86 işlemcileri ve p kodu tarafından kullanılan kayıt CV_REG_ *.
 
-CV_R68_ * 68K işlemcisi tarafından kullanılan kayıt.
+68K işlemcisi tarafından kullanılan kayıt CV_R68_.
 
-CV_M4_ * kayıt dizilerini MIPS 4000 serisi işlemcisi tarafından kullanılır.
+CV_M4_ * kayıt, MIPS 4000 serisi işlemcisi tarafından kullanılır.
 
-CV_ALPHA_ * dijital ekipman Corporation Alpha AıXP serisi işlemcisi tarafından kullanılan yazmaçlardır.
+CV_ALPHA_ * kayıtları, dijital ekipman Corporation Alpha AıXP serisi işlemcisi tarafından kullanılır.
 
-CV_PPC_ * Yazmaçları/IBM PowerPC işlemcisi tarafından kullanılan kayıt.
+Motorola/IBM PowerPC işlemcisi tarafından kullanılan kayıt CV_PPC_ *.
 
-CV_SH3_ * ve CV_SH_ \*, Hitachi SH3 ve Hitachi SH Serisi işlemcisi tarafından kullanılan Yazmaçları.
+CV_SH3_ * ve CV_SH_ \* , HITACHI SH3 ve HITACHI SH Serisi işlemcisi tarafından kullanılan Yazmaçları.
 
-CV_ARM_ * kayıtları gelişmiş RıSC makinesi (ARM) işlemcileri tarafından kullanılır.
+Gelişmiş RıSC makinesi (ARM) işlemcileri tarafından kullanılan kayıt CV_ARM_ *.
 
-Intel ıA64 serisi işlemciler tarafından kullanılan CV_IA64_ * Yazmaçları.
+Intel ıA64 serisi işlemciler tarafından kullanılan kayıt CV_IA64_ *.
 
-CV_TRI_ * kayıt, Infineon teknolojileri tarafından daha karmaşık bir işlemci tarafından kullanılır.
+Sonsuz EON teknolojileri tarafından daha karmaşık bir işlemci tarafından kullanılan kayıt CV_TRI_ *.
 
 CV_AM33_ * kayıtları, Matsushita/Panasonic AM33 ve ilgili işlemciler tarafından kullanılır.
 
-CV_M32R_ *, Mitsubishi M32R işlemcisi tarafından kullanılan yazmaçlardır.
+CV_M32R_ * Yazmaçları, Mitsubishi M32R işlemcisi tarafından kullanılır.
 
 ## <a name="remarks"></a>Açıklamalar
 Her işlemci türü kendi benzersiz kayıt kümesini kullanır.
@@ -446,7 +446,7 @@ Bu Numaralandırmadaki değerler aşağıdaki yöntemlere geçirilir:
 
 - [IDiaStackFrame::get_registerValue](../../debugger/debug-interface-access/idiastackframe-get-registervalue.md)
 
-## <a name="requirements"></a>Gereklilik
+## <a name="requirements"></a>Gereksinimler:
 Üst bilgi: cvconst. h
 
 ## <a name="see-also"></a>Ayrıca bkz.

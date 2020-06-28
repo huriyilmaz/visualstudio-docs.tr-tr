@@ -1,7 +1,7 @@
 ---
 title: UsingNameSpace | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d078e8af5f579556fb865a4d92084220afecc83
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3662bdc61cd98a36161bd8972a98cb4f168bc452
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738431"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460967"
 ---
 # <a name="usingnamespace"></a>UsingNameSpace
-Bazı semboller ad alanı tarafından adlandırılabilir ve daha sonra bir `SymTagUsingNameSpace` etiketiyle tanımlanır.
+Bazı semboller ad alanı tarafından adlandırılabilir ve daha sonra bir `SymTagUsingNameSpace` etiketle tanımlanır.
 
 > [!NOTE]
 > UsingNamespace sembol etiketi yalnızca yönetilen kodda görünür.
@@ -34,7 +34,7 @@ Bazı semboller ad alanı tarafından adlandırılabilir ve daha sonra bir `SymT
 |[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|Sözlü üst simgenin KIMLIĞI.|
 |[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|Ad alanı adı.|
 |[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Simgenin dizin KIMLIĞI.|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|@No__t_0 döndürür ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagNameSpace` ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Simge Türlerinin Sözcük Hiyerarşisi](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

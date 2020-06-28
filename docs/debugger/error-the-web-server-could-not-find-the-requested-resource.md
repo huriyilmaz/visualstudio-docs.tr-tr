@@ -1,7 +1,7 @@
 ---
-title: 'Hata: Web sunucusu Istenen kaynağı bulamadı | Microsoft Docs'
+title: Hata-Web sunucusu Istenen kaynağı bulamadı | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 dev_langs:
 - CSharp
 - VB
@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5c9b428a03595f387c5ff6fb6f0b8ca35172752
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5cce9afe8f27b25a01c0f6276164522a78a2ed9a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72737257"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460357"
 ---
 # <a name="error-the-web-server-could-not-find-the-requested-resource"></a>Hata: Web Sunucusu İstenilen Kaynağı Bulamadı
 Güvenlik konuları nedeniyle, IIS genel bir hata döndürdü.
@@ -33,4 +33,4 @@ Bu hatanın çok sayıda olası nedeni vardır. En yaygın nedenler, IIS yüklem
  IIS sorunlarını giderme hakkında daha fazla bilgi için bkz. [IIS yönetimi ve yönetimi](/iis/manage/provisioning-and-managing-iis/iis-management-and-administration).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata: Web Sunucusu Kilitli ve DEBUG Fiilini Engelliyor](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)
+- [Hata: Web sunucusu kilitli ve hata ayıklama fiilini engelliyor](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)

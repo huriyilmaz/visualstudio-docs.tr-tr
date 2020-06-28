@@ -1,7 +1,7 @@
 ---
 title: IDiaSymbol | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,27 +12,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c22e4b5d0fdb965cceb87fdff878c93b76e96b15
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0214d3e8d097efa31b3f8b02e67f419226a093a4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738770"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461345"
 ---
 # <a name="idiasymbol"></a>IDiaSymbol
 Bir sembol örneğinin özelliklerini açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaSymbol : IUnknown
 ```
 
 ## <a name="methods-in-alphabetical-order"></a>Alfabetik sırada Yöntemler
-Aşağıdaki tabloda `IDiaSymbol`yöntemleri gösterilmektedir.
+Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaSymbol` .
 
 > [!NOTE]
-> Semboller, simgenin türüne bağlı olarak bu yöntemlerin yalnızca bazılarına anlamlı veriler döndürür. Bir yöntem `S_OK`döndürürse, bu yöntem anlamlı veri döndürdü.
+> Semboller, simgenin türüne bağlı olarak bu yöntemlerin yalnızca bazılarına anlamlı veriler döndürür. Bir Yöntem döndürüyorsa `S_OK` , bu yöntem anlamlı veri döndürdü.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -49,8 +49,8 @@ Aşağıdaki tabloda `IDiaSymbol`yöntemleri gösterilmektedir.
 |[IDiaSymbol::findInlineeLinesByRVA](../../debugger/debug-interface-access/idiasymbol-findinlineelinesbyrva.md)|Bir istemcinin, belirtilen göreli sanal adres (RVA) içindeki Bu sembolde yer alan ve doğrudan veya dolaylı olarak satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.|
 |[IDiaSymbol::findInlineeLinesByVA](../../debugger/debug-interface-access/idiasymbol-findinlineelinesbyva.md)|Bir istemcinin, belirtilen sanal adres (VA) içindeki Bu sembolde yer alan ve doğrudan veya dolaylı olarak satır numarası bilgilerini yinelemesinden izin veren bir sabit listesi alır.|
 |[IDiaSymbol::findSymbolsByRVAForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasymbol-findsymbolsbyrvaforacceleratorpointertag.md)|Karşılık gelen bir etiket değeri verildiğinde, bu yöntem, belirtilen bir göreli sanal adresteki bu saplama işlevinde bulunan simgelerin bir listesini döndürür.|
-|[IDiaSymbol::findSymbolsForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasymbol-findsymbolsforacceleratorpointertag.md)|Bir C++ amp saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.|
-|[IDiaSymbol::get_acceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-acceleratorpointertags.md)|Bir C++ amp Hızlandırıcısı saplama işlevine karşılık gelen tüm Hızlandırıcı işaretçisi etiketi değerlerini döndürür.|
+|[IDiaSymbol::findSymbolsForAcceleratorPointerTag](../../debugger/debug-interface-access/idiasymbol-findsymbolsforacceleratorpointertag.md)|C++ AMP saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.|
+|[IDiaSymbol::get_acceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-acceleratorpointertags.md)|C++ AMP Hızlandırıcı saplama işlevine karşılık gelen tüm Hızlandırıcı işaretçisi etiketi değerlerini döndürür.|
 |[IDiaSymbol::get_access](../../debugger/debug-interface-access/idiasymbol-get-access.md)|Bir sınıf üyesinin erişim değiştiricisini alır.|
 |[IDiaSymbol::get_addressOffset](../../debugger/debug-interface-access/idiasymbol-get-addressoffset.md)|Bir adres konumunun konum kısmını alır.|
 |[IDiaSymbol::get_addressSection](../../debugger/debug-interface-access/idiasymbol-get-addresssection.md)|Bir adres konumunun bölüm kısmını alır.|
@@ -89,11 +89,11 @@ Aşağıdaki tabloda `IDiaSymbol`yöntemleri gösterilmektedir.
 |[IDiaSymbol::get_frontEndBuild](../../debugger/debug-interface-access/idiasymbol-get-frontendbuild.md)|Ön uç derleme numarasını alır.|
 |[IDiaSymbol::get_function](../../debugger/debug-interface-access/idiasymbol-get-function.md)|Ortak sembolün bir işleve başvurduğunu belirten bir bayrak alır.|
 |[IDiaSymbol::get_guid](../../debugger/debug-interface-access/idiasymbol-get-guid.md)|Simgenin GUID 'INI alır.|
-|[IDiaSymbol::get_hasAlloca](../../debugger/debug-interface-access/idiasymbol-get-hasalloca.md)|İşlevin `alloca`çağrısı içerip içermediğini gösteren bir bayrak alır.|
+|[IDiaSymbol::get_hasAlloca](../../debugger/debug-interface-access/idiasymbol-get-hasalloca.md)|İşlevin çağrısı içerip içermediğini gösteren bir bayrak alır `alloca` .|
 |[IDiaSymbol::get_hasAssignmentOperator](../../debugger/debug-interface-access/idiasymbol-get-hasassignmentoperator.md)|Kullanıcı tanımlı veri türünde tanımlanmış atama işleçleri olup olmadığını gösteren bir bayrak alır.|
 |[IDiaSymbol::get_hasCastOperator](../../debugger/debug-interface-access/idiasymbol-get-hascastoperator.md)|Kullanıcı tanımlı veri türünde tanımlanmış herhangi bir atama işleci olup olmadığını gösteren bir bayrak alır.|
 |[IDiaSymbol::get_hasDebugInfo](../../debugger/debug-interface-access/idiasymbol-get-hasdebuginfo.md)|Compiland 'ın herhangi bir hata ayıklama bilgisi içerip içermediğini gösteren bir bayrak alır.|
-|[IDiaSymbol::get_hasEH](../../debugger/debug-interface-access/idiasymbol-get-haseh.md)|İşlevin stil özel durum işleyicisine sahip C++olup olmadığını belirten bir bayrak alır.|
+|[IDiaSymbol::get_hasEH](../../debugger/debug-interface-access/idiasymbol-get-haseh.md)|İşlevin C++ stili özel durum işleyicisine sahip olup olmadığını gösteren bir bayrak alır.|
 |[IDiaSymbol::get_hasEHa](../../debugger/debug-interface-access/idiasymbol-get-haseha.md)|İşlevin zaman uyumsuz özel durum işleyicisine sahip olup olmadığını gösteren bir bayrak alır.|
 |[IDiaSymbol::get_hasInlAsm](../../debugger/debug-interface-access/idiasymbol-get-hasinlasm.md)|İşlevin satır içi derleme içerip içermediğini gösteren bir bayrak alır.|
 |[IDiaSymbol::get_hasLongJump](../../debugger/debug-interface-access/idiasymbol-get-haslongjump.md)|İşlevin longjmp komutu içerip içermediğini belirten bir bayrak alır (C stili özel durum işlemenin parçası).|
@@ -106,9 +106,9 @@ Aşağıdaki tabloda `IDiaSymbol`yöntemleri gösterilmektedir.
 |[IDiaSymbol::get_InlSpec](../../debugger/debug-interface-access/idiasymbol-get-inlspec.md)|İşlevin satır içi özniteliğiyle işaretlenip işaretlenmediğini belirten bir bayrak alır.|
 |[IDiaSymbol::get_interruptReturn](../../debugger/debug-interface-access/idiasymbol-get-interruptreturn.md)|İşlevin kesme yönergesinden dönüş yapıp kullanmadığını belirten bir bayrak alır.|
 |[IDiaSymbol::get_intro](../../debugger/debug-interface-access/idiasymbol-get-intro.md)|İşlevin temel sınıf sanal işlevi olup olmadığını belirten bir bayrak alır.|
-|[IDiaSymbol::get_isAcceleratorGroupSharedLocal](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorgroupsharedlocal.md)|Simgenin bir C++ amp Hızlandırıcısı için derlenmiş koddaki bir grup paylaşılan yerel değişkenine karşılık geldiğini belirten bir bayrak alır.|
-|[IDiaSymbol::get_isAcceleratorPointerTagLiveRange](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorpointertagliverange.md)|Simgenin bir C++ amp Hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için *Açıklama aralığı simgesine* karşılık geldiğini belirten bir bayrak alır. Tanım aralığı simgesi, bir adres yayılımı için bir değişkenin konumudur.|
-|[IDiaSymbol::get_isAcceleratorStubFunction](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorstubfunction.md)|Simgenin bir `parallel_for_each` çağrısına karşılık gelen hızlandırıcı için derlenmiş bir gölgelendirici için en üst düzey işlev simgesine karşılık geldiğini gösterir.|
+|[IDiaSymbol::get_isAcceleratorGroupSharedLocal](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorgroupsharedlocal.md)|Simgenin bir C++ AMP Hızlandırıcısı için derlenmiş kodda bir grup paylaşılan yerel değişkenine karşılık geldiğini belirten bir bayrak alır.|
+|[IDiaSymbol::get_isAcceleratorPointerTagLiveRange](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorpointertagliverange.md)|Simgenin bir C++ AMP Hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için *Açıklama aralığı simgesine* karşılık geldiğini belirten bir bayrak alır. Tanım aralığı simgesi, bir adres yayılımı için bir değişkenin konumudur.|
+|[IDiaSymbol::get_isAcceleratorStubFunction](../../debugger/debug-interface-access/idiasymbol-get-isacceleratorstubfunction.md)|Simgenin bir çağrıya karşılık gelen hızlandırıcı için derlenen bir gölgelendirici için üst düzey işlev simgesine karşılık geldiğini gösterir `parallel_for_each` .|
 |[IDiaSymbol::get_isAggregated](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md)|Verilerin birçok sembol toplamasının bir parçası olup olmadığını belirten bir bayrak alır.|
 |[IDiaSymbol::get_isCTypes](../../debugger/debug-interface-access/idiasymbol-get-isctypes.md)|Sembol dosyasının C türlerini içerip içermediğini gösteren bir bayrak alır.|
 |[IDiaSymbol::get_isCVTCIL](../../debugger/debug-interface-access/idiasymbol-get-iscvtcil.md)|Modülün ortak ara dil (CıL) ile yerel koda dönüştürülüp dönüştürülmediğini belirten bir bayrak alır.|
@@ -118,19 +118,19 @@ Aşağıdaki tabloda `IDiaSymbol`yöntemleri gösterilmektedir.
 |[IDiaSymbol::get_isLTCG](../../debugger/debug-interface-access/idiasymbol-get-isltcg.md)|Managed compiland 'in bağlayıcının LTCG ile bağlantılı olup olmadığını belirten bir bayrak alır.|
 |[IDiaSymbol::get_isMatrixRowMajor](../../debugger/debug-interface-access/idiasymbol-get-ismatrixrowmajor.md)|Matrisin satır birincil olup olmadığını belirtir.|
 |[IDiaSymbol::get_isMSILNetmodule](../../debugger/debug-interface-access/idiasymbol-get-ismsilnetmodule.md)|Managed compiland 'ın bir. netmodule olup olmadığını belirten bir bayrak alır (yalnızca meta veriler içerir).|
-|[IDiaSymbol::get_isMultipleInheritance](../../debugger/debug-interface-access/idiasymbol-get-ismultipleinheritance.md)|`this` işaretçisinin birden çok devralmayla bir veri üyesine işaret ettiğini belirtir.|
+|[IDiaSymbol::get_isMultipleInheritance](../../debugger/debug-interface-access/idiasymbol-get-ismultipleinheritance.md)|`this`İşaretçinin birden çok devralmayla bir veri üyesine işaret ettiğini belirtir.|
 |[IDiaSymbol::get_isNaked](../../debugger/debug-interface-access/idiasymbol-get-isnaked.md)|İşlevin [çıplak](/cpp/cpp/naked-cpp) özniteliğe sahip olup olmadığını belirten bir bayrak alır.|
 |[IDiaSymbol::get_isOptimizedAway](../../debugger/debug-interface-access/idiasymbol-get-isoptimizedaway.md)|Değişkenin en iyi duruma getirilip getirilmediğini belirtir.|
-|[IDiaSymbol::get_isPointerBasedOnSymbolValue](../../debugger/debug-interface-access/idiasymbol-get-ispointerbasedonsymbolvalue.md)|@No__t_0 işaretçisinin bir sembol değerini temel alarak kullanıp kullanmadığını belirtir.|
+|[IDiaSymbol::get_isPointerBasedOnSymbolValue](../../debugger/debug-interface-access/idiasymbol-get-ispointerbasedonsymbolvalue.md)|`this`İşaretçinin bir sembol değerini temel alarak çalışıp çalışmadığını belirtir.|
 |[IDiaSymbol::get_isPointerToDataMember](../../debugger/debug-interface-access/idiasymbol-get-ispointertodatamember.md)|Bu sembolün bir veri üyesine yönelik bir işaretçi olup olmadığını belirtir.|
 |[IDiaSymbol::get_isPointerToMemberFunction](../../debugger/debug-interface-access/idiasymbol-get-ispointertomemberfunction.md)|Bu sembolün bir üye işlevine yönelik bir işaretçi olup olmadığını belirtir.|
 |[IDiaSymbol::get_isReturnValue](../../debugger/debug-interface-access/idiasymbol-get-isreturnvalue.md)|Değişkenin bir dönüş değeri içerip içermediğini belirtir.|
 |[IDiaSymbol::get_isSdl](../../debugger/debug-interface-access/idiasymbol-get-issdl.md)|Modülün/SDL seçeneğiyle derlenip derlenmediğini belirtir.|
-|[IDiaSymbol::get_isSingleInheritance](../../debugger/debug-interface-access/idiasymbol-get-issingleinheritance.md)|@No__t_0 işaretçisinin tek devralma ile veri üyesine işaret ettiğini belirtir.|
+|[IDiaSymbol::get_isSingleInheritance](../../debugger/debug-interface-access/idiasymbol-get-issingleinheritance.md)|`this`İşaretçinin tek devralma ile bir veri üyesine işaret ettiğini belirtir.|
 |[IDiaSymbol::get_isSplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md)|Verilerin ayrı sembollerin toplamına bölünmediğini belirten bir bayrak alır.|
 |[IDiaSymbol::get_isStatic](../../debugger/debug-interface-access/idiasymbol-get-isstatic.md)|Bir işlev veya dönüştürücü katmanının statik olup olmadığını gösteren bir bayrak alır.|
 |[IDiaSymbol::get_isStripped](../../debugger/debug-interface-access/idiasymbol-get-isstripped.md)|Özel simgelerin sembol dosyasından bırakılıp nakledilmediğini belirten bir bayrak alır.|
-|[IDiaSymbol::get_isVirtualInheritance](../../debugger/debug-interface-access/idiasymbol-get-isvirtualinheritance.md)|@No__t_0 işaretçisinin sanal devralmayla bir veri üyesine işaret ettiğini belirtir.|
+|[IDiaSymbol::get_isVirtualInheritance](../../debugger/debug-interface-access/idiasymbol-get-isvirtualinheritance.md)|`this`İşaretçinin sanal devralmayla bir veri üyesine işaret ettiğini belirtir.|
 |[IDiaSymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)|Kaynağın dilini alır.|
 |[IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)|Bu sembol tarafından temsil edilen nesne tarafından kullanılan bellek bayt sayısını alır.|
 |[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|Simgenin sözcük üst öğesi için bir başvuru alır.|
@@ -153,7 +153,7 @@ Aşağıdaki tabloda `IDiaSymbol`yöntemleri gösterilmektedir.
 |[IDiaSymbol::get_noReturn](../../debugger/debug-interface-access/idiasymbol-get-noreturn.md)|İşlevin [noreturn](/cpp/cpp/noreturn) özniteliğiyle bildirilip aşılmadığını gösteren bir bayrak alır.|
 |[IDiaSymbol::get_noStackOrdering](../../debugger/debug-interface-access/idiasymbol-get-nostackordering.md)|Yığın arabelleği denetiminin bir parçası olarak yığın sıralaması yapılıp yapılmayacağını belirten bir bayrak alır.|
 |[IDiaSymbol::get_notReached](../../debugger/debug-interface-access/idiasymbol-get-notreached.md)|İşlevin veya etiketin hiç erişilmediğini belirten bir bayrak alır.|
-|[IDiaSymbol::get_numberOfAcceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-numberofacceleratorpointertags.md)|Bir C++ amp saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.|
+|[IDiaSymbol::get_numberOfAcceleratorPointerTags](../../debugger/debug-interface-access/idiasymbol-get-numberofacceleratorpointertags.md)|C++ AMP saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.|
 |[IDiaSymbol::get_numberOfModifiers](../../debugger/debug-interface-access/idiasymbol-get-numberofmodifiers.md)|Özgün türe uygulanan değiştiricilerin sayısını alır.|
 |[IDiaSymbol::get_numberOfRegisterIndices](../../debugger/debug-interface-access/idiasymbol-get-numberofregisterindices.md)|Kayıt dizinlerinin sayısını alır.|
 |[IDiaSymbol::get_numberOfRows](../../debugger/debug-interface-access/idiasymbol-get-numberofrows.md)|Matristeki satır sayısını alır.|
@@ -173,7 +173,7 @@ Aşağıdaki tabloda `IDiaSymbol`yöntemleri gösterilmektedir.
 |[IDiaSymbol::get_registerId](../../debugger/debug-interface-access/idiasymbol-get-registerid.md)|Konumun kayıt göstergesini alır.|
 |[IDiaSymbol::get_registerType](../../debugger/debug-interface-access/idiasymbol-get-registertype.md)|Kayıt türünü alır.|
 |[IDiaSymbol::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-relativevirtualaddress.md)|Konumun göreli sanal adresini (RVA) alır.|
-|[IDiaSymbol::get_restrictedType](../../debugger/debug-interface-access/idiasymbol-get-restrictedtype.md)|@No__t_0 işaretçisinin kısıtlı olarak işaretlenip işaretlenmediğini belirtir.|
+|[IDiaSymbol::get_restrictedType](../../debugger/debug-interface-access/idiasymbol-get-restrictedtype.md)|`this`İşaretçinin kısıtlı olarak işaretlenip işaretlenmediğini belirtir.|
 |[IDiaSymbol::get_samplerSlot](../../debugger/debug-interface-access/idiasymbol-get-samplerslot.md)|Örnekleyici yuvasını alır.|
 |[IDiaSymbol::get_scoped](../../debugger/debug-interface-access/idiasymbol-get-scoped.md)|Kullanıcı tanımlı veri türünün global olmayan bir sözcük temelli kapsamda görüntülenip görüntülenmeyeceğini belirten bir bayrak alır.|
 |[IDiaSymbol::get_signature](../../debugger/debug-interface-access/idiasymbol-get-signature.md)|Simgenin imza değerini alır.|
@@ -192,7 +192,7 @@ Aşağıdaki tabloda `IDiaSymbol`yöntemleri gösterilmektedir.
 |[IDiaSymbol::get_targetSection](../../debugger/debug-interface-access/idiasymbol-get-targetsection.md)|Bir dönüştürücü hedefinin adres bölümünü alır.|
 |[IDiaSymbol::get_targetVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-targetvirtualaddress.md)|Bir dönüştürücü hedefinin sanal adresini (VA) alır.|
 |[IDiaSymbol::get_textureSlot](../../debugger/debug-interface-access/idiasymbol-get-textureslot.md)|Doku yuvasını alır.|
-|[IDiaSymbol::get_thisAdjust](../../debugger/debug-interface-access/idiasymbol-get-thisadjust.md)|Yöntemi için mantıksal `this` ayarlanıcısı ' nı alır.|
+|[IDiaSymbol::get_thisAdjust](../../debugger/debug-interface-access/idiasymbol-get-thisadjust.md)|`this`Yöntemi için mantıksal ayarlanıcısı alır.|
 |[IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)|Bir işlevin dönüştürücü türünü alır.|
 |[IDiaSymbol::get_timeStamp](../../debugger/debug-interface-access/idiasymbol-get-timestamp.md)|Temel alınan yürütülebilir dosyanın zaman damgasını alır.|
 |[IDiaSymbol::get_token](../../debugger/debug-interface-access/idiasymbol-get-token.md)|Yönetilen bir işlevin veya değişkenin meta veri belirtecini alır.|
@@ -203,8 +203,8 @@ Aşağıdaki tabloda `IDiaSymbol`yöntemleri gösterilmektedir.
 |[IDiaSymbol::get_uavSlot](../../debugger/debug-interface-access/idiasymbol-get-uavslot.md)|Uıav yuvasını alır.|
 |[IDiaSymbol::get_udtKind](../../debugger/debug-interface-access/idiasymbol-get-udtkind.md)|Kullanıcı tanımlı bir tür (UDT) alır.|
 |[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|Kullanıcı tanımlı veri türünün hizalanmamış olup olmadığını belirten bir bayrak alır.|
-|[IDiaSymbol::get_undecoratedName](../../debugger/debug-interface-access/idiasymbol-get-undecoratedname.md)|C++ Düzenlenmiş veya bağlantı adı için, beklenmeyen adı alır.|
-|[IDiaSymbol::get_undecoratedNameEx](../../debugger/debug-interface-access/idiasymbol-get-undecoratednameex.md)|Uzantı alanının değerine göre, açıklanedilmemiş adı alan `get_undecoratedName` yönteminin uzantısı.|
+|[IDiaSymbol::get_undecoratedName](../../debugger/debug-interface-access/idiasymbol-get-undecoratedname.md)|C++ ile düzenlenmiş veya bağlantı adı için, açıklanmamalıdır adı alır.|
+|[IDiaSymbol::get_undecoratedNameEx](../../debugger/debug-interface-access/idiasymbol-get-undecoratednameex.md)|`get_undecoratedName`Uzantı alanının değerine göre, açıklanedilmemiş adı alan metodun uzantısı.|
 |[IDiaSymbol::get_unmodifiedTypeId](../../debugger/debug-interface-access/idiasymbol-get-unmodifiedtypeid.md)|Özgün (değiştirilmemiş) türün KIMLIĞINI alır.|
 |[IDiaSymbol::get_upperBound](../../debugger/debug-interface-access/idiasymbol-get-upperbound.md)|Bir FORTRAN dizi boyutunun üst sınırını alır.|
 |[IDiaSymbol::get_upperBoundId](../../debugger/debug-interface-access/idiasymbol-get-upperboundid.md)|Bir FORTRAN dizi boyutunun üst sınırının sembol tanımlayıcısını alır.|
@@ -261,7 +261,7 @@ Aşağıdaki yöntemlerden birini çağırarak bu arabirimi edinin:
 Bu örnek, belirli bir göreli sanal adreste bir işlev için yerel değişkenlerin nasıl görüntüleneceğini gösterir. Ayrıca farklı türlerin simgelerinin birbirleriyle nasıl ilişkili olduğunu gösterir.
 
 > [!NOTE]
-> `CDiaBSTR`, bir `BSTR` sarmalayan ve örnekleme kapsam dışına geçtiğinde dizeyi serbest bırakma işleminde otomatik olarak işleyen bir sınıftır.
+> `CDiaBSTR`, `BSTR` örnekleme kapsam dışına geçtiğinde bir ve otomatik olarak dizeyi serbest bırakma olarak işleyen bir sınıftır.
 
 ```C++
 void DumpLocalVars( DWORD rva, IDiaSession *pSession )
@@ -336,11 +336,11 @@ void DumpLocalVars( DWORD rva, IDiaSession *pSession )
 ```
 
 ## <a name="requirements"></a>Gereksinimler
-`Header:` dia2. h
+`Header:`Dia2. h
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

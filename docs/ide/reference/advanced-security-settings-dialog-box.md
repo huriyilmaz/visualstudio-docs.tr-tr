@@ -8,35 +8,35 @@ f1_keywords:
 helpviewer_keywords:
 - Advanced Security Settings dialog box
 ms.assetid: 2e7aefe9-6d20-4f3e-b257-aee1ebcc6f5d
-author: TerryGLee
-ms.author: tglee
+author: Mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 033c8d9c97d54b972a7bf30e9e1e04171e5b505e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5d34d1b16f36c90f4200a091050d1646fc563d33
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595845"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419087"
 ---
 # <a name="advanced-security-settings-dialog-box"></a>Gelişmiş Güvenlik Ayarları iletişim kutusu
 
-Bu iletişim kutusu, bölgede hata ayıklama yla ilgili güvenlik ayarlarını belirtmenize olanak tanır.
+Bu iletişim kutusu, bölgede hata ayıklama ile ilgili güvenlik ayarlarını belirtmenize olanak tanır.
 
-![Visual Studio'da Gelişmiş Güvenlik Ayarları iletişim kutusu](../media/advanced-security-settings.png)
+![Visual Studio 'da gelişmiş güvenlik ayarları iletişim kutusu](../media/advanced-security-settings.png)
 
-Bu iletişim kutusuna erişmek için Çözüm **Gezgini'nde**bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler'i**tıklatın. Proje **Tasarımcısı** göründüğünde Güvenlik **sekmesini** tıklatın. **Güvenlik** sayfasında **ClickOnce Güvenlik Ayarlarını Etkinleştir'i**seçin, **Bu kısmi bir güven uygulamasıdır'ı**tıklatın ve sonra **Gelişmiş'i**tıklatın.
+Bu iletişim kutusuna erişmek için **Çözüm Gezgini**' de bir proje düğümü seçin ve ardından **Proje** menüsünde **Özellikler**' e tıklayın. **Proje Tasarımcısı** göründüğünde, **güvenlik** sekmesine tıklayın. **Güvenlik** sayfasında, **ClickOnce güvenlik ayarlarını etkinleştir**' i seçin, **Bu kısmi güven uygulaması**' na tıklayın ve ardından **Gelişmiş**' e tıklayın.
 
 ## <a name="uielement-list"></a>UIElement listesi
 
-**Başvurunun menşe sitesine erişimini verme**
+**Uygulamanın kaynak sitesine erişimini verme**
 
-Bu onay kutusunu seçerseniz, uygulama yayımlandığı web sitesine veya sunucu paylaşımına erişebilir. Varsayılan olarak, bu seçenek seçilidir.
+Bu onay kutusunu seçerseniz, uygulama yayımlanan Web sitesine veya sunucu paylaşımında erişebilir. Varsayılan olarak, bu seçenek seçilidir.
 
-**Bu uygulamayı aşağıdaki URL'den indirilmiş gibi hata ayıklama**
+**Bu uygulamada aşağıdaki URL 'den indirilmiş gibi hata ayıkla**
 
-**Uygulamanın, Yayımlama** sayfasında belirttiğiniz **Yükleme URL'sine** karşılık gelen web sitesine veya sunucu paylaşımına erişmesine izin vermek zorundaysanız, bu URL'yi buraya girin. Bu seçenek, yalnızca **uygulamanın başlangıç sitesine erişimini verdiğinde** kullanılabilir.
+Uygulamanın **Yayımla** sayfasında BELIRTTIĞINIZ **yükleme URL** 'sine karşılık gelen Web sitesine veya sunucu paylaşımının erişimine izin vermeniz gerekiyorsa buraya bu URL 'yi girin. Bu seçenek yalnızca **uygulamanın kaynak sitesine erişimi** olduğunda kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

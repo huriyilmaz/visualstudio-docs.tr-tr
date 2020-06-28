@@ -1,7 +1,7 @@
 ---
 title: NameSearchOptions | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61905c0c6c40d893cc8723b711d67690133a7155
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 696ad3e659b503b27da73056dafb57c5852d5133
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738623"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461177"
 ---
 # <a name="namesearchoptions"></a>NameSearchOptions
 Sembol ve dosya adları için arama seçeneklerini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum NameSearchOptions {
@@ -43,17 +43,17 @@ enum NameSearchOptions {
 ```
 
 ## <a name="elements"></a>Öğeler
-`nsNone` seçenek belirtilmedi.
+`nsNone`Hiçbir seçenek belirtilmedi.
 
-`nsfCaseSensitive`, büyük/küçük harfe duyarlı bir ad eşleşmesi uygular.
+`nsfCaseSensitive`Büyük/küçük harfe duyarlı bir ad eşleşmesi uygular.
 
-`nsfCaseInsensitive`, büyük/küçük harfe duyarsız bir ad eşleşmesi uygular.
+`nsfCaseInsensitive`Büyük/küçük harf duyarsız bir ad eşleşmesi uygular.
 
-`nsfFNameExt` adları yollar olarak değerlendirir ve bir FileName. ext adı eşleşmesi uygular.
+`nsfFNameExt`Adları yollar olarak değerlendirir ve bir FileName. ext adı eşleşmesi uygular.
 
-`nsfRegularExpression`, joker karakter olarak yıldız (*) ve soru işareti (?) kullanarak büyük/küçük harfe duyarlı bir ad eşleşmesi uygular. (Diğer yaygın normal ifade karakterleri desteklenmez.)
+`nsfRegularExpression`Joker karakter olarak yıldız (*) ve soru işareti (?) kullanarak büyük/küçük harfe duyarlı bir ad eşleşmesi uygular. (Diğer yaygın normal ifade karakterleri desteklenmez.)
 
-`nsfUndecoratedName` yalnızca, hem düzenlenmiş hem de düzenlenmiş adlara sahip semboller için geçerlidir.
+`nsfUndecoratedName`Yalnızca, hem düzenlenmiş hem de düzenlenmiş adlara sahip semboller için geçerlidir.
 
 ## <a name="remarks"></a>Açıklamalar
 Bu Numaralandırmadaki değerler aşağıdaki yöntemlere geçirilir:

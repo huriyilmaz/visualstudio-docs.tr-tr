@@ -1,7 +1,7 @@
 ---
 title: UdtKind | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 45ed43bf65c38890ca7ebda1a6b1719532697eae
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 746ff69de6f58f85d16982522c6ac13dcbf4ce6a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738453"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460974"
 ---
 # <a name="udtkind"></a>UdtKind
 Kullanıcı tanımlı farklı tür (UDT) açıklanmaktadır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum UdtKind {

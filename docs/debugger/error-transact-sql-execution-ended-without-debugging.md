@@ -1,7 +1,7 @@
 ---
-title: 'Hata: Transact-SQL yürütmesi hata ayıklama olmadan sonlandırıldı | Microsoft Docs'
+title: Hata-Transact-SQL yürütmesi hata ayıklama olmadan sonlandırıldı | Microsoft Docs
 ms.date: 11/08/2018
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.sqlde_sql_executed_but_not_debugged
 dev_langs:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e86e24f775d8470b54ed7b9c54d27a5d3c1ee8da
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: e141fac7fba1939811c722d8e08f49531111ff7e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75916298"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460253"
 ---
 # <a name="error-transact-sql-execution-ended-without-debugging"></a>Hata: Transact-SQL yürütmesi hata ayıklaması yapılmadan sonlandı
 
@@ -30,7 +30,7 @@ Bu sorun, ağ sorunlarından veya SQL Server sorunlarından kaynaklanıyor olabi
 
 Dahil olmak üzere iki hesap vardır:
 
-- Uygulama hesabı, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] çalıştığı kullanıcı hesabıdır.
+- Uygulama hesabı, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] olarak çalışan kullanıcı hesabıdır.
 
 - Bağlantı hesabı, SQL Server bağlantısını yapmak için kullanılan kimliktir. Bu hesap, bağlantı SQL kimlik doğrulaması kullanıyor gibi, Visual Studio 'Nun çalıştırdığı kimlikle aynı değildir.
 
@@ -51,4 +51,4 @@ Dahil olmak üzere iki hesap vardır:
 - [SQL hata ayıklamayı ayarlama](/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100))
 - [Nasıl yapılır: hata ayıklama için SQL Server Izinleri ayarlama](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)
 - [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)
-- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

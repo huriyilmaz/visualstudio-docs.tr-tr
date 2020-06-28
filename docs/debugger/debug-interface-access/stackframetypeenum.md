@@ -1,7 +1,7 @@
 ---
 title: StackFrameTypeEnum | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 20b0c9dd106e5744a369ddaa6cb870788f7464d3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3f83cdb163881366a1a0bede95a07e1dae1fc50a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738547"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461100"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
 Yığın çerçeve türünü belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 enum StackFrameTypeEnum {
@@ -36,20 +36,20 @@ enum StackFrameTypeEnum {
 ```
 
 ## <a name="elements"></a>Öğeler
-`FrameTypeFPO` çerçeve işaretçisi atlandı; Mi bilgileri kullanılabilir.
+`FrameTypeFPO`Çerçeve işaretçisi atlandı; Mi bilgileri kullanılabilir.
 
-Çekirdek tuzak çerçevesini `FrameTypeTrap`.
+`FrameTypeTrap`Çekirdek Tuzak Çerçevesi.
 
-Çekirdek tuzak çerçevesini `FrameTypeTSS`.
+`FrameTypeTSS`Çekirdek Tuzak Çerçevesi.
 
-Standart EBP yığın çerçevesini `FrameTypeStandard`.
+`FrameTypeStandard`Standart EBP yığın çerçevesi.
 
-`FrameTypeFrameData` çerçeve işaretçisi atlandı; Çerçeve veri bilgileri kullanılabilir.
+`FrameTypeFrameData`Çerçeve işaretçisi atlandı; Çerçeve veri bilgileri kullanılabilir.
 
-herhangi bir hata ayıklama bilgisi olmayan `FrameTypeUnknown` çerçeve.
+`FrameTypeUnknown`Herhangi bir hata ayıklama bilgisi olmayan çerçeve.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu Numaralandırmadaki değerler, [IDiaStackFrame:: get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) yöntemi çağrısıyla döndürülür.
+Bu Numaralandırmadaki değerler, [IDiaStackFrame:: get_type](../../debugger/debug-interface-access/idiastackframe-get-type.md) metoduna yapılan bir çağrı tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 Üst bilgi: cvconst. h

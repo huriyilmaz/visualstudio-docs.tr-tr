@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_undecoratedNameEx | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 48efbc249d076853e12bc54d2e8a8d438570e740
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 25942c76d8e568d6354c9a6a2b2c69c806cde352
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72738988"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85461604"
 ---
 # <a name="idiasymbolget_undecoratednameex"></a>IDiaSymbol::get_undecoratedNameEx
-C++ Düzenlenmiş (bağlantı) adı için, açıklanunan bir adın bir kısmını veya tamamını alır.
+C++ ile düzenlenmiş (bağlantı) adı için, açıklanmamalıdır bir adın bir kısmını veya tamamını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_undecoratedNameEx( 
@@ -38,21 +38,21 @@ HRESULT get_undecoratedNameEx( 
 
  `pRetVal`
 
-dışı Düzenlenmiş bir C++ ad için, açıklanmunadı döndürür.
+dışı C++ ile düzenlenmiş bir ad için, açıklanmunadı döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t_0 aşağıdaki bayrakların bir birleşimi olabilir.
+ `undecorateOptions`Aşağıdaki bayrakların bir birleşimi olabilir.
 
 > [!NOTE]
 > Bayrak adları DIA SDK tanımlı değildir, bu nedenle kodunuza bildirimleri eklemeniz ya da ham değerleri kullanmanız gerekir.
 
-|bayrağıyla|Değer|Açıklama|
+|Bayrak|Değer|Açıklama|
 |----------|-----------|-----------------|
 |UNDNAME_COMPLETE|0x0000|Tam dekorasyonu sunar.|
 |UNDNAME_NO_LEADING_UNDERSCORES|0x0001|Microsoft genişletilmiş anahtar sözcüklerinden önde gelen alt çizgileri kaldırır.|
@@ -62,10 +62,10 @@ dışı Düzenlenmiş bir C++ ad için, açıklanmunadı döndürür.
 |UNDNAME_NO_ALLOCATION_LANGUAGE|0x0010|Bildirim dili belirticisi genişletmeyi devre dışı bırakır.|
 |UNDNAME_RESERVED1|0x0020|Ayrılamadı.|
 |UNDNAME_RESERVED2|0x0040|Ayrılamadı.|
-|UNDNAME_NO_THISTYPE|0x0060|@No__t_0 türündeki tüm değiştiricileri devre dışı bırakır.|
+|UNDNAME_NO_THISTYPE|0x0060|Türdeki tüm değiştiricileri devre dışı bırakır `this` .|
 |UNDNAME_NO_ACCESS_SPECIFIERS|0x0080|Üyeler için erişim belirticileri genişletmeyi devre dışı bırakır.|
 |UNDNAME_NO_THROW_SIGNATURES|0x0100|İşlevler ve işlevlere işaretçiler için "throw-imzalar" genişletmeyi devre dışı bırakır.|
-|UNDNAME_NO_MEMBER_TYPE|0x0200|@No__t_0 veya `virtual` üyelerini genişletmeyi devre dışı bırakır.|
+|UNDNAME_NO_MEMBER_TYPE|0x0200|Veya üyeleri genişletmeyi devre dışı bırakır `static` `virtual` .|
 |UNDNAME_NO_RETURN_UDT_MODEL|0x0400|UDT için Microsoft modelinin genişlemesini devre dışı bırakır.|
 |UNDNAME_32_BIT_DECODE|0x0800|32 bitlik adları dekorunlaştırır.|
 |UNDNAME_NAME_ONLY|0x1000|Yalnızca birincil bildirimin adını alır; yalnızca [Scope::] adını döndürür.  Şablon params 'i genişletir.|

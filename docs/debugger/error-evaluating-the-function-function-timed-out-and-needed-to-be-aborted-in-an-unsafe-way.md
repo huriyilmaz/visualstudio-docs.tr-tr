@@ -1,7 +1,7 @@
 ---
-title: 'Hata: İşlev değerlendirme &#39;işlevi&#39; zaman aşımına uğradı ve güvenli bir şekilde iptal edilmesi gerekti | Microsoft Docs'
+title: Hata-işlev &#39;işlevi değerlendiriliyor&#39; zaman aşımına uğradı ve güvenli olmayan bir şekilde durdurulmak için gerekir | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.unsafe_func_eval_abort
 author: mikejo5000
@@ -9,43 +9,43 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5baf69e697e7ceb9c6b0c5f83573dc106303cca2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f687672de4bc3511fa0c9198f7ad4145b26dcd11
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62850972"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460804"
 ---
-# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Hata: İşlev değerlendirme &#39;işlevi&#39; zaman aşımına uğradı ve güvenli bir şekilde iptal edilmesi gerekti
+# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Hata: işlev &#39;işlevi değerlendiriliyor&#39; zaman aşımına uğradı ve güvenli olmayan bir şekilde durdurulmak için gerekiyor
 
-Tüm ileti metni: 'Function' işlevinin değerlendirilmesi zaman aşımına uğradı ve güvenli bir şekilde iptal edilmesi gerekti. Bu hedef işlemi bozmuş olabilir.
+Tam ileti metni: ' function ' işlevinin değerlendirilmesi zaman aşımına uğradı ve güvenli olmayan bir şekilde durdurulmak için gereklidir. Bu, hedef işlemi bozmuş olabilir.
 
-.NET nesnelerinin durumunu incelemek daha kolay hale getirmek için ek kod (genellikle özellik alıcı yöntemlere ve ToString işlevleri) çalıştırmak için hataları ayıklanan işlem otomatik olarak hata ayıklayıcı zorlar. Çoğu tüm senaryolarda, bu işlevler hızla tamamlayın ve çok daha kolay hata ayıklama yapın. Ancak, hata ayıklayıcı korumalı alanda uygulama çalışmaz. Sonuç olarak, özellik alıcısı veya yanıt vermemeye başlıyor yerel bir işleve çağrı ToString yöntemini kurtarılamayabilir uzun zaman aşımları için neden olabilir. Bu hata iletisiyle karşılaşırsanız, bu durum oluştu.
+.NET nesnelerinin durumunu incelemeyi kolaylaştırmak için, hata ayıklama işlemini ek kod (genellikle özellik alıcı yöntemleri ve ToString işlevleri) çalıştırmaya otomatik olarak zorlar. Çoğu senaryoda, bu işlevler hızla tamamlanır ve hata ayıklamayı çok daha kolay hale getirir. Ancak, hata ayıklayıcı uygulamayı bir korumalı alana çalıştırmaz. Sonuç olarak, askıda olmayan bir yerel işleve çağıran bir özellik alıcısı veya ToString yöntemi, kurtarılabilir sürelere neden olabilecek uzun zaman aşımlarını yönlendirebilir. Bu hata iletisiyle karşılaşırsanız, bu oluştu.
 
-Bu sorun için yaygın nedenlerinden biri hata ayıklayıcı bir özellik değerlendirdiğinde, yalnızca yürütmek için denetlenen iş parçacığı olanak sağlamasıdır. Bu nedenle özelliği içinde hata ayıklanan uygulamayı çalıştırmak için diğer iş parçacıkları üzerinde bekleyen ve .NET çalışma zamanı kesme mümkün olmayan bir şekilde bekliyorsa, bu sorunu gerçekleşir.
+Bu sorunun yaygın bir nedeni, hata ayıklayıcı bir özelliği değerlendirirken yalnızca incelenen iş parçacığının çalışmasına izin verir. Bu nedenle, özellik diğer iş parçacıklarını hata ayıklanan uygulamanın içinde çalışacak şekilde bekleiyorsa ve .NET çalışma zamanının kesintiye uğramaması için bir yöntem bekliyorsa, bu sorun gerçekleşir.
 
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için
 
-Bu sorunun bazı olası çözümü vardır.
+Bu soruna yönelik birkaç olası çözüm vardır.
 
-### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Çözüm #1: Hata ayıklayıcısı özellik alıcı veya ToString yöntemini çağırmasını engellemek
+### <a name="solution-1-prevent-the-debugger-from-calling-the-getter-property-or-tostring-method"></a>Çözüm #1: hata ayıklayıcının alıcı özelliğini veya ToString metodunu aramasını engelleyin
 
-Hata iletisi, hata ayıklayıcı ulaşmaya çalıştık işlevin adını bildirir. Bu işlev değiştirebilir, özellik alıcısı veya ToString yöntemini çağırma, hata ayıklayıcı engelleyebilirsiniz. Aşağıdakilerden birini deneyin:
+Hata mesajı, hata ayıklayıcının çağrı gerçekleştirmeye çalıştığı işlevin adını bildirir. Bu işlevi değiştirebiliyorsanız, hata ayıklayıcının özellik alıcı veya ToString metodunu aramasını engelleyebilirsiniz. Aşağıdakilerden birini deneyin:
 
-* Yöntem başka türde bir özellik alıcısı yanı sıra kodu değiştirin veya ToString yöntemi ve sorunu kaybolur.
+* Yöntemi bir özellik alıcı veya ToString yönteminin yanı sıra diğer kod türlerine de değiştirin ve sorun devam eder.
     -veya-
-* (ToString için) DebuggerDisplay özniteliği türüne tanımlayın ve ToString dışında bir şey değerlendirmek hata ayıklayıcı olabilir.
+* (ToString için) Türde bir DebuggerDisplay özniteliği tanımlayın ve hata ayıklayıcının, ToString dışında bir şeyi değerlendirebilmeniz gerekir.
     -veya-
-* (Özellik alıcısı için) PUT `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` özelliği özniteliği. Bu API Uyumluluk nedenleriyle bir özellik kalması gereken bir yöntem varsa yararlı olabilir, ancak gerçekten bir yöntemi olması gerekir.
+* (Bir özellik alıcısı için) `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]`Özniteliği özelliğine yerleştirin. Bu, API uyumluluğu nedenleriyle bir özelliği kalması gereken bir yönteminiz varsa, ancak gerçekten bir yöntem olması gereken durumlarda yararlı olabilir.
 
-### <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>Çözüm #2: Değerlendirme iptal etmek için hata ayıklayıcı isteyin hedef kodu
+### <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>Çözüm #2: hedef kodun hata ayıklayıcıya değerlendirmeyi iptal etmesini isteyin
 
-Hata iletisi, hata ayıklayıcı ulaşmaya çalıştık işlevin adını bildirir. ToString yöntemi ve özellik alıcısı bazen düzgün çalışması başarısız sorunu olduğu, özellikle durumlarda kod kodu çalıştırmak için başka bir iş parçacığı gerekir ve ardından uygulama işlevi çağırabilir `System.Diagnostics.Debugger.NotifyOfCrossThreadDependency` işlevi iptal etmek için hata ayıklayıcı istemek için Değerlendirme. Bu çözüm ile açıkça bu işlevler değerlendirmek yine de mümkündür, ancak NotifyOfCrossThreadDependency çağrısı yapıldığında yürütmeyi durdurur varsayılan davranıştır.
+Hata mesajı, hata ayıklayıcının çağrı gerçekleştirmeye çalıştığı işlevin adını bildirir. Özellik alıcı veya ToString yöntemi bazen doğru bir şekilde çalışamazsa, özellikle sorunun kod çalıştırmak için başka bir iş parçacığına ihtiyacı olduğu durumlarda, uygulama işlevi `System.Diagnostics.Debugger.NotifyOfCrossThreadDependency` hata ayıklayıcıya işlev değerlendirmesini iptal etmesini istemek için çağırabilir. Bu çözümle, bu işlevleri açıkça değerlendirmek yine de mümkündür, ancak varsayılan davranış, NotifyOfCrossThreadDependency çağrısı gerçekleştiğinde yürütmenin durmasını sağlar.
 
-### <a name="solution-3-disable-all-implicit-evaluation"></a>Çözüm #3: Tüm örtülü değerlendirme devre dışı bırak
+### <a name="solution-3-disable-all-implicit-evaluation"></a>Çözüm #3: tüm örtük değerlendirmeyi devre dışı bırak
 
-Önceki çözümler sorunu yoksa, Git **Araçları** > **seçenekleri**, ayarı kaldırın **hata ayıklama**  >   **Genel** > **özellik değerlendirmesini ve diğer örtük işlev çağrılarını etkinleştir**. Bu, çoğu örtük İşlev değerlendirmesi devre dışı bırakır ve sorun çözülebilir.
+Önceki çözümler sorunu gidermezse, **Araçlar**  >  **Seçenekler**' e gidin ve **hata ayıklama**  >  **genel**  >  **etkinleştirme özelliği değerlendirmesi ve diğer örtük işlev çağrıları**seçeneğinin işaretini kaldırın. Bu, çoğu örtük işlev değerlendirmesini devre dışı bırakır ve sorunu çözmelidir.
 
-### <a name="solution-4-enable-managed-compatibility-mode"></a>Çözüm #4: Yönetilen Uyumluluk modunu etkinleştir
+### <a name="solution-4-enable-managed-compatibility-mode"></a>Çözüm #4: yönetilen uyumluluk modunu etkinleştir
 
-Eski hata ayıklama Altyapısı'na geçiş yapıyorsanız, bu hatayı gidermek mümkün olabilir. Git **Araçları** > **seçenekleri**, ayarı seçin **hata ayıklama** > **genel**  >  **Yönetilen Uyumluluk modunu kullan**. Daha fazla bilgi için [genel hata ayıklama seçenekleri](../debugger/general-debugging-options-dialog-box.md).
+Eski hata ayıklama altyapısına geçiş yaparsanız, bu hatayı ortadan kaldırabiliyor olabilirsiniz. **Araçlar**  >  **Seçenekler**' e gidin ve **hata ayıklama**  >  **genel**  >  **kullanımı yönetilen uyumluluk modunu**seçin. Daha fazla bilgi için bkz. [Genel hata ayıklama seçenekleri](../debugger/general-debugging-options-dialog-box.md).

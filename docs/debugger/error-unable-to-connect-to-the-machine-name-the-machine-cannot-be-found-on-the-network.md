@@ -1,7 +1,7 @@
 ---
-title: 'Hata: &lt;name &gt; makineye bağlanılamıyor. Makine ağ üzerinde bulunamadı. | Microsoft Docs'
+title: Hata-makine &lt; adına bağlanılamıyor &gt; . Makine ağ üzerinde bulunamadı. | Microsoft Belgeleri
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.remote.dcom_disabled
 dev_langs:
@@ -16,14 +16,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d0f820156714a726d506d8871d4e42a8dc12a23
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8618a15ab4dcd6c9bbc0d9d8ab9bf347552883b1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736830"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460149"
 ---
-# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Hata: &lt;name &gt; makineye bağlanılamıyor. Makine ağ üzerinde bulunamadı.
+# <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>Hata: makine &lt; adına bağlanılamıyor &gt; . Makine ağ üzerinde bulunamadı.
 Bu davranış, aşağıdaki koşullardan biri doğru olduğunda meydana gelir:
 
 - Uzak bilgisayarla bağlantınız kesildi.
@@ -45,5 +45,5 @@ Bu davranış, aşağıdaki koşullardan biri doğru olduğunda meydana gelir:
 - Uzak bilgisayara bağlanmak için kullandığınız parolanın geçerli olduğundan ve süresi dolmadığından emin olun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+- [Uzaktan hata ayıklama](../debugger/remote-debugging.md)
 - [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)

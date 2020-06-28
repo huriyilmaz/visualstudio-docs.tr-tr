@@ -1,7 +1,7 @@
 ---
-title: 'Hata: Yerel makinede güvenlik duvarı | Microsoft Docs'
+title: Hata-yerel makinede güvenlik duvarı | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 f1_keywords:
 - vs.debug.error.firewall.localmachine
 dev_langs:
@@ -14,14 +14,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87a1813410a092ced335f37b9df4cf6547ca1cc3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 115546a0fd3a9aad804391816ce8bac88429d0ec
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851049"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85460758"
 ---
-# <a name="error-firewall-on-local-machine"></a>Hata: Yerel makinede güvenlik duvarı
-Internet Bağlantısı Güvenlik Duvarı, Visual Studio çalıştıran makinenin yerel makinede uzaktan hata ayıklamaya izin verecek şekilde ayarlanır değil. Yönetilen veya yerel uzaktan varsayılan aktarım ile hata ayıklama için TCP 135 bağlantı noktası DCOM trafik için açılmalıdır. Dosya ve yazıcı paylaşımı açılması gerekir ve devenv.exe özel durumlar listesine eklenmesi gerekir. Bazı IPSec bağlantı noktaları açma de gerekebilir.
+# <a name="error-firewall-on-local-machine"></a>Hata: Güvenlik Duvarı Yerel Makinede
+Yerel makinedeki, Visual Studio 'Yu çalıştırdığınız makine olan Internet bağlantısı güvenlik duvarı, uzaktan hata ayıklamaya izin verecek şekilde ayarlanmadı. Varsayılan aktarımlarla yönetilen veya yerel uzaktan hata ayıklama için, DCOM trafiği için TCP 135 bağlantı noktasının açılması gerekir. Dosya ve yazıcı paylaşımının açılması gerekir ve devenv.exe özel durumlar listesine eklenmelidir. Bazı ıPSEC bağlantı noktalarının açılması de gerekebilir.
 
- Daha fazla bilgi için [uzaktan hata ayıklama](../debugger/remote-debugging.md).
+ Daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).

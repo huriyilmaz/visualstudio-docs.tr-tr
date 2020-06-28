@@ -1,7 +1,7 @@
 ---
-title: 'Hata: işlem&#39;kimliğini İnceleme izniniz yok | Microsoft Docs'
+title: Hata-işlemi&#39;s kimliğini İnceleme izniniz yok | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: troubleshooting
+ms.topic: error-reference
 dev_langs:
 - CSharp
 - VB
@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cad229f80676c3d1f7a7d23ad7a29729c834929b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f8bd1bc11d42d8aed0b816a667fe5adcc139a42c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72736229"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85459928"
 ---
-# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>Hata: işlem&#39;kimliğini İnceleme izniniz yok
+# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>Hata: işlemi&#39;s kimliğini İnceleme izniniz yok
 İşlemin kimliğini İnceleme izniniz yok. Bunun nedeni sisteminizin yapılandırması olabilir.
 
  Hata ayıklayıcı, hata ayıklama için gerekli bilgiler olan işlem kimliğini incemedi. En olası neden, Terminal Hizmetleri 'nin devre dışı bırakılmasından kaynaklanıyor. Terminal Hizmetleri hizmeti varsayılan olarak etkindir. Yeniden etkinleştirmek için bu adımları izleyin.
@@ -52,7 +52,7 @@ ms.locfileid: "72736229"
 
 1. **Başlat** ' a tıklayın ve **ardından Bilgisayarım '** a sağ tıklayın.
 
-2. **Özellikler**' i seçin.
+2. **Özellikler**'i seçin.
 
      **Sistem Özellikleri** penceresi görüntülenir.
 

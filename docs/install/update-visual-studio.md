@@ -1,10 +1,10 @@
 ---
 title: Visual Studio’yu güncelleştirme
 titleSuffix: ''
-description: Visual Studio'yu en son sürümde adım adım nasıl güncelleştirteceklerini öğrenin.
+description: Visual Studio 'Yu en son sürüme güncelleştirme, adım adım yönergeler hakkında bilgi edinin.
 ms.date: 07/31/2019
 ms.custom: seodec18
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 helpviewer_keywords:
@@ -17,271 +17,271 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 19da163c76724ae56c0e3d83f1ed795333d081d5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5d101ee2a4ce3d7a97382d829188a9902ccbd0c0
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77453401"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419152"
 ---
-# <a name="update-visual-studio-to-the-most-recent-release"></a>Visual Studio'yu en son sürümle güncelleştirin
+# <a name="update-visual-studio-to-the-most-recent-release"></a>Visual Studio 'Yu en son sürüme güncelleştirme
 
 ::: moniker range="vs-2017"
 
-Visual Studio 2017'nin en [son sürümüne](/visualstudio/releasenotes/vs2017-relnotes/) güncellemenizi öneririz, böylece her zaman en son özellikleri, düzeltmeleri ve iyileştirmeleri elde elabilirsiniz.
+En son özellikleri, düzeltmeleri ve geliştirmeleri her zaman alabilmeniz için Visual Studio 2017 ' in en [son sürümüne](/visualstudio/releasenotes/vs2017-relnotes/) güncelleştirmeniz önerilir.
 
-En yeni sürümüdenemek isterseniz Visual [Studio 2019'u](https://visualstudio.microsoft.com/downloads) indirmeyi ve yüklemeyi düşünün.
+En yeni sürümü denemek istiyorsanız bunun yerine [Visual Studio 2019](https://visualstudio.microsoft.com/downloads) ' i indirip yüklemeyi göz önünde bulundurun.
 
 > [!IMPORTANT]
-> Visual Studio'yı yüklemek, güncelleştirmek veya değiştirmek için yönetim izinleri olan bir hesapla oturum açmanız gerekir. Daha fazla bilgi için [Kullanıcı İzinleri ve Visual Studio'ya](../ide/user-permissions-and-visual-studio.md)bakın.
+> Visual Studio 'Yu yüklemek, güncelleştirmek veya değiştirmek için yönetici izinlerine sahip bir hesapla oturum açmalısınız. Daha fazla bilgi için bkz. [Kullanıcı izinleri ve Visual Studio](../ide/user-permissions-and-visual-studio.md).
 >
 > [!NOTE]
-> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio [için, Mac için Visual Studio'yı güncelleştir'e](/visualstudio/mac/update)bakın.
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Update Mac için Visual Studio](/visualstudio/mac/update).
 
-## <a name="update-visual-studio-2017-version-156-or-later"></a>Visual Studio 2017 sürümünü 15.6 veya sonrası güncelle
+## <a name="update-visual-studio-2017-version-156-or-later"></a>Visual Studio 2017 sürüm 15,6 veya üstünü Güncelleştir
 
-Doğrudan IDE içinden kullanımı kolaylaştırmak için yükleme ve güncelleme deneyimini kolaylaştırdık. Sürüm 15.6'dan visual studio'nun daha yeni sürümlerine nasıl güncellenir?
+Doğrudan IDE içinden daha kolay kullanılmasını sağlamak için yükleme ve güncelleştirme deneyimini kolaylaştırdık. Sürüm 15,6 ve sonrasında Visual Studio 'nun yeni sürümlerine nasıl güncelleştirme yapılacağı aşağıda verilmiştir.
 
 ### <a name="using-the-notifications-hub"></a>Bildirimler merkezini kullanma
 
-Bir güncelleştirme olduğunda, Visual Studio'da karşılık gelen bir bildirim bayrağı vardır.
+Bir güncelleştirme olduğunda, Visual Studio 'da karşılık gelen bir bildirim bayrağı vardır.
 
 1. Çalışmanızı kaydedin.
 
-1. **Bildirimler** merkezini açmak için bildirim bayrağını seçin ve sonra yüklemek istediğiniz güncelleştirmeyi seçin.
+1. **Bildirimler** merkezini açmak için bildirim bayrağını seçin ve ardından yüklemek istediğiniz güncelleştirmeyi seçin.
 
-   ![Bildirim merkezini kullanarak Visual Studio 2017'yi güncelleştirin](media/vs-install-notifications-hub-15dot6.png "Visual Studio 2017'de Bildirimler merkezi")
+   ![Bildirim Hub 'ını kullanarak Visual Studio 2017 'yi güncelleştirme](media/vs-install-notifications-hub-15dot6.png "Visual Studio 2017 ' de bildirimler hub 'ı")
 
       > [!TIP]
-      > Visual Studio 2017 sürümü için bir güncelleştirme kümülatiftir, bu nedenle her zaman en son sürüm numarasına sahip sürümü yüklemeyi seçin.
+      > Visual Studio 2017 sürümüne yönelik bir güncelleştirme birikimlidir, bu nedenle her zaman en son sürüm numarasıyla yüklemeyi seçin.
 
-1. **Güncelleştir** iletişim kutusu açıldığında, **Şimdi Güncelleştir'i**seçin.
+1. **Güncelleştirme** iletişim kutusu açıldığında **Şimdi Güncelleştir**' i seçin.
 
-    ![Bildirimler hub'ından Güncelle iletişim kutusunu kullanarak Visual Studio 2017'yi güncelleştirin](media/vs-update-now-from-notifications-hub.png "Visual Studio'daki Bildirimler hub'ından Güncelleştirme iletişim kutusu")
+    ![Bildirimler hub 'ından güncelleştirme iletişim kutusunu kullanarak Visual Studio 2017 'yi güncelleştirme](media/vs-update-now-from-notifications-hub.png "Visual Studio 'da bildirimler hub 'ından güncelleştirme iletişim kutusu")
 
-     Kullanıcı Erişim Denetimi iletişim kutusu açılırsa **Evet'i**seçin. Ardından, bir an için "Lütfen bekleyin" iletişim kutusu açılır ve güncelleştirmeyi başlatmak için Visual Studio Installer açılır.
+     Kullanıcı Access Control iletişim kutusu açılırsa **Evet**' i seçin. Sonra, bir "lütfen bekleyin" iletişim kutusu bir süre sonra açılabilir ve sonra Visual Studio Yükleyicisi açılarak güncelleştirmeyi başlatabilir.
 
-     ![Sürüm 15.6 yeni Visual Studio Installer deneyimi](media/visual-studio-15dot6-installer.png "Sürüm 15.6 yeni Visual Studio Installer deneyimi")
+     ![Sürüm 15,6 ' de yeni Visual Studio Yükleyicisi deneyimi](media/visual-studio-15dot6-installer.png "Sürüm 15,6 ' de yeni Visual Studio Yükleyicisi deneyimi")
 
-     Güncelleştirmeniz devam ediyor. Sonra, tamamlandığında, Visual Studio yeniden başlatılır.
+     Güncelleştirmeniz devam ediyor. Ardından, tamamlandığında Visual Studio yeniden başlatılır.
 
      > [!NOTE]
-     > Visual Studio'yu yönetici modunda çalıştırdığınızda, güncelleştirmeden sonra Visual Studio'yu el ile yeniden başlatmanız gerekir.
+     > Visual Studio 'Yu yönetici modunda çalıştırdığınızda, güncelleştirmeden sonra Visual Studio 'Yu el ile yeniden başlatmanız gerekir.
 
-### <a name="using-the-ide"></a>IDE'yi kullanma
+### <a name="using-the-ide"></a>IDE 'yi kullanma
 
-Güncelleştirmeyi denetleyebilir ve ardından Visual Studio'daki menü çubuğundan güncelleştirmeyi yükleyebilirsiniz.
-
-1. Çalışmanızı kaydedin.
-
-1. **Güncelleştirmeler için** **Yardım** > Denetimi'ni seçin.
-
-     ![Visual Studio sürüm 15.6'daki yeni Yardım menüsü](media/vs-help-menu-check-for-updates.png "Visual Studio sürüm 15.6'daki yeni Yardım menüsü")
-
-1. **Güncelleştir** iletişim kutusu açıldığında, **Şimdi Güncelleştir'i**seçin.
-
-   Güncelleştirme önceki bölümde açıklandığı gibi devam eder ve güncelleştirme başarıyla tamamlandıktan sonra Visual Studio yeniden başlatılır.
-
-   > [!NOTE]
-   > Visual Studio'yu yönetici modunda çalıştırdığınızda, güncelleştirmeden sonra Visual Studio'yu el ile yeniden başlatmanız gerekir.
-
-### <a name="using-the-visual-studio-installer"></a>Visual Studio Yükleyicisini Kullanma
-
-Visual Studio'nun önceki sürümlerinde olduğu gibi, bir güncelleştirme yüklemek için Visual Studio Installer'ı kullanabilirsiniz.
+Bir güncelleştirmeyi denetleyebilir ve sonra Visual Studio 'daki menü çubuğundan güncelleştirmeyi yükleyebilirsiniz.
 
 1. Çalışmanızı kaydedin.
 
-1. Yükleyiciyi açın. Visual Studio Yükleyici devam etmeden önce güncelleştirme gerekebilir.
+1. **Help** > **Güncelleştirmeler için yardım denetle**' yi seçin.
+
+     ![Visual Studio sürüm 15,6 ' deki yeni Yardım menüsü](media/vs-help-menu-check-for-updates.png "Visual Studio sürüm 15,6 ' deki yeni Yardım menüsü")
+
+1. **Güncelleştirme** iletişim kutusu açıldığında **Şimdi Güncelleştir**' i seçin.
+
+   Güncelleştirme, önceki bölümde açıklanan şekilde devam eder ve güncelleştirme başarıyla tamamlandıktan sonra Visual Studio yeniden başlatılır.
 
    > [!NOTE]
-   > Windows 10 çalıştıran bir bilgisayarda, Yükleyici'yi **Visual Studio Installer**olarak **V** harfinin altında veya Microsoft Visual Studio **Installer**olarak **M** harfinin altında bulabilirsiniz.
+   > Visual Studio 'Yu yönetici modunda çalıştırdığınızda, güncelleştirmeden sonra Visual Studio 'Yu el ile yeniden başlatmanız gerekir.
 
-1. Yükleyicideki **Ürün** sayfasında, daha önce yüklediğiniz Visual Studio sürümünü arayın.
+### <a name="using-the-visual-studio-installer"></a>Visual Studio Yükleyicisi kullanma
 
-1. Güncelleştirme varsa, **bir Güncelleştirme** düğmesi görürsünüz. (Yükleyicinin bir güncelleştirmenin kullanılabilir olup olmadığını belirlemesi birkaç saniye sürebilir.)
+Visual Studio 'nun önceki sürümlerinde olduğu gibi, bir güncelleştirmeyi yüklemek için Visual Studio Yükleyicisi kullanabilirsiniz.
+
+1. Çalışmanızı kaydedin.
+
+1. Yükleyiciyi açın. Devam etmeden önce Visual Studio Yükleyicisi güncelleştirilmesi gerekebilir.
+
+   > [!NOTE]
+   > Windows 10 çalıştıran bir bilgisayarda, yükleyiciyi **Visual Studio yükleyicisi**olarak **V** harfi altında veya **Microsoft Visual Studio yükleyicisi**olarak **d** harfi altında bulabilirsiniz.
+
+1. Yükleyicideki **ürün** sayfasında, daha önce yüklediğiniz Visual Studio sürümünü arayın.
+
+1. Bir güncelleştirme varsa, bir **güncelleştirme** düğmesi görürsünüz. (Yükleyicinin bir güncelleştirmenin kullanılabilir olup olmadığını belirlemesi birkaç saniye sürebilir.)
 
    Güncelleştirmeleri yüklemek için **Güncelleştir** düğmesini seçin.
 
-     ![Visual Studio Installer'ı kullanarak Visual Studio 2017'yi güncelleyin](media/update-visual-studio.png "Visual Studio Installer'ı kullanarak Visual Studio 2017'yi güncelleyin")
+     ![Visual Studio Yükleyicisi kullanarak Visual Studio 2017 ' i güncelleştirin](media/update-visual-studio.png "Visual Studio Yükleyicisi kullanarak Visual Studio 2017 ' i güncelleştirin")
 
-## <a name="update-visual-studio-2017-version-155-or-earlier"></a>Visual Studio 2017 sürümünü 15.5 veya daha önce güncelleştirin
+## <a name="update-visual-studio-2017-version-155-or-earlier"></a>Visual Studio 2017 sürüm 15,5 veya öncesini güncelleştirme
 
-Daha önceki bir sürümü kullanıyorsanız, Visual Studio 2017 sürüm 15.0 sürümünden sürüm 15.5'e nasıl bir güncelleştirme uygulayabilirsiniz.
+Önceki bir sürümü kullanıyorsanız, Visual Studio 2017 sürüm 15,0 ' den sürüm 15,5 aracılığıyla bir güncelleştirme uygulama hakkında daha fazla bilgiyi burada bulabilirsiniz.
 
-### <a name="update-by-using-the-notifications-hub"></a>Bildirimler merkezini kullanarak güncelleştirme
+### <a name="update-by-using-the-notifications-hub"></a>Bildirimler hub 'ını kullanarak güncelleştirme
 
-1. Güncelleştirmeler olduğunda, Visual Studio'da karşılık gelen bir bildirim bayrağı vardır.
+1. Güncelleştirmeler olduğunda, Visual Studio 'da karşılık gelen bir bildirim bayrağı vardır.
 
-   ![Bildirim merkezini kullanarak Visual Studio 2017'yi güncelleştirin](media/notification-flag.png "Visual Studio'da güncelleştirme Bildirimi bayrağı")
+   ![Bildirim Hub 'ını kullanarak Visual Studio 2017 'yi güncelleştirme](media/notification-flag.png "Visual Studio 'da güncelleştirme bildirimi bayrağı")
 
    **Bildirimler** merkezini açmak için bildirim bayrağını seçin.
 
-   ![Bildirim merkezini kullanarak Visual Studio 2017'yi güncelleştirin](media/notifications-hub.png "Visual Studio'da Bildirimler merkezi")
+   ![Bildirim Hub 'ını kullanarak Visual Studio 2017 'yi güncelleştirme](media/notifications-hub.png "Visual Studio 'da bildirimler hub 'ı")
 
       > [!TIP]
-      > Visual Studio 2017 sürümü için bir güncelleştirme kümülatiftir, bu nedenle her zaman en son sürüm numarasına sahip sürümü yüklemeyi seçin.
+      > Visual Studio 2017 sürümüne yönelik bir güncelleştirme birikimlidir, bu nedenle her zaman en son sürüm numarasıyla yüklemeyi seçin.
 
-1. **Uzantıları ve Güncelleştirmeleri** iletişim kutusunu açan **"Visual Studio Update" seçeneğini**belirleyin.
+1. **Uzantılar ve güncelleştirmeler** iletişim kutusunu açan **"Visual Studio Update"** i seçin.
 
-   ![Bildirimler merkezini kullanarak Visual Studio 2017'yi güncelleştirin](media/notifications-hub-select.png "Visual Studio'da Bildirimler merkezi")
+   ![Bildirimler hub 'ını kullanarak Visual Studio 2017 'yi güncelleştirme](media/notifications-hub-select.png "Visual Studio 'da bildirimler hub 'ı")
 
-1. **Uzantılar ve Güncelleştirmeler** iletişim kutusunda **Güncelleştir** düğmesini seçin.
+1. **Uzantılar ve güncelleştirmeler** Iletişim kutusunda **Güncelleştir** düğmesini seçin.
 
-   ![Bildirimler merkezini kullanarak Visual Studio 2017'yi güncelleştirin](media/notifications-extensions-and-updates.png "Visual Studio'daki Uzantılar ve Güncellemeler iletişim kutusu")
+   ![Bildirimler hub 'ını kullanarak Visual Studio 2017 'yi güncelleştirme](media/notifications-extensions-and-updates.png "Visual Studio 'da Uzantılar ve güncelleştirmeler iletişim kutusu")
 
-#### <a name="more-about-visual-studio-notifications"></a>Visual Studio bildirimleri hakkında daha fazla şey
+#### <a name="more-about-visual-studio-notifications"></a>Visual Studio bildirimleri hakkında daha fazla bilgi
 
-Visual Studio, Visual Studio'nun kendisi veya herhangi bir bileşen için bir güncelleştirme olduğunda ve ayrıca Visual Studio ortamında belirli olayların meydana geldiğini size haber verirken sizi iyi bilir.
+Visual Studio, Visual Studio 'nun kendisi için veya herhangi bir bileşen için kullanılabilir olduğunda ve ayrıca Visual Studio ortamında belirli olaylar gerçekleştiğinde size bildirir.
 
-* Bildirim bayrağı sarı olduğunda, yüklemeniz gereken bir Visual Studio ürün güncelleştirmesi vardır.
-* Bildirim bayrağı kırmızı olduğunda, lisansınızda bir sorun vardır.
-* Bildirim bayrağı siyah olduğunda, gözden geçirilmesi gereken isteğe bağlı veya bilgilendirilen iletiler vardır.
+* Bildirim bayrağı sarı olduğunda, yüklemek için kullanabileceğiniz bir Visual Studio ürün güncelleştirmesi vardır.
+* Bildirim bayrağı kırmızı olduğunda, lisansınızın bir sorunu vardır.
+* Bildirim bayrağı siyah olduğunda, gözden geçirmek için isteğe bağlı veya bilgilendirici iletiler vardır.
 
-**Bildirimler** merkezini açmak için bildirimler bayrağını seçin ve ardından harekete geçebilmek istediğiniz bildirimleri seçin. Veya bir bildirimi yoksaymayı veya reddetmeyi seçin.
+**Bildirimler merkezini** açmak için bildirimler bayrağını seçin ve ardından üzerinde işlem yapmak istediğiniz bildirimleri seçin. Veya bir bildirimi yoksaymayı veya kapatmak için seçin.
 
- ![Bildirim hub'ında isteğe bağlı veya bilgilendirici bir iletiyi görüntüleme](media/notification-flag-optional.png "Visual Studio'da isteğe bağlı veya bilgilendirici mesaj Bildirimi bayrağı")
+ ![Bildirim Hub 'ında isteğe bağlı veya bilgilendirici bir ileti görüntüleme](media/notification-flag-optional.png "Visual Studio 'da isteğe bağlı veya bilgilendirici ileti bildirim bayrağı")
 
-Bir bildirimi yoksaymayı seçerseniz, Visual Studio bildirimi göstermeyi durdurur. Yoksayılan bildirimler listesini sıfırlamak istiyorsanız, Bildirimler hub'ındaki **Ayarlar** düğmesini seçin.
+Bir bildirimi yok saymayı seçerseniz, Visual Studio bunu göstermeyi durduruyor. Yoksayılan bildirimlerin listesini sıfırlamak isterseniz, bildirimler hub 'ında **Ayarlar** düğmesini seçin.
 
-   ![Bildirim seçeneklerini görüntülemek için Bildirimler bmerkezindeki Ayarlar düğmesini seçin](media/vs-notifications-hub-settings-button.png "Bildirim seçeneklerini görüntülemek için Bildirimler bmerkezindeki Ayarlar düğmesini seçin")
+   ![Bildirim seçeneklerini görüntülemek için bildirimler hub 'ında ayarlar düğmesini seçin](media/vs-notifications-hub-settings-button.png "Bildirim seçeneklerini görüntülemek için bildirimler hub 'ında ayarlar düğmesini seçin")
 
-### <a name="update-by-using-the-visual-studio-installer"></a>Visual Studio Installer'ı kullanarak güncelleştirin
+### <a name="update-by-using-the-visual-studio-installer"></a>Visual Studio Yükleyicisi kullanarak güncelleştirin
 
-1. Yükleyiciyi açın. Devam etmeden önce yükleyiciyi güncelleştirmeniz gerekebilir. Bu durumda, bunu yapmanız istenir.
+1. Yükleyiciyi açın. Devam etmeden önce yükleyiciyi güncelleştirmeniz gerekebilir. Böyle bir durum söz konusu olduğunda bunu yapmanız istenir.
 
    > [!NOTE]
-   > Windows 10 çalıştıran bir bilgisayarda, Yükleyici'yi **Visual Studio Installer**olarak **V** harfinin altında veya Microsoft Visual Studio **Installer**olarak **M** harfinin altında bulabilirsiniz.
+   > Windows 10 çalıştıran bir bilgisayarda, yükleyiciyi **Visual Studio yükleyicisi**olarak **V** harfi altında veya **Microsoft Visual Studio yükleyicisi**olarak **d** harfi altında bulabilirsiniz.
 
-1. Yükleyicideki **Ürün** sayfasında, daha önce yüklenen Visual Studio sürümünü arayın.
+1. Yükleyicideki **ürün** sayfasında, daha önce yüklenen Visual Studio sürümünü arayın.
 
-1. Güncelleştirme varsa, **bir Güncelleştirme** düğmesi görürsünüz. (Yükleyicinin bir güncelleştirmenin kullanılabilir olup olmadığını belirlemesi birkaç saniye sürebilir.)
+1. Bir güncelleştirme varsa, bir **güncelleştirme** düğmesi görürsünüz. (Yükleyicinin bir güncelleştirmenin kullanılabilir olup olmadığını belirlemesi birkaç saniye sürebilir.)
 
    Güncelleştirmeleri yüklemek için **Güncelleştir** düğmesini seçin.
 
-     ![Visual Studio Installer'ı kullanarak Visual Studio 2017'yi güncelleyin](media/update-visual-studio.png "Visual Studio Installer'ı kullanarak Visual Studio'yu güncelleştirin")
+     ![Visual Studio Yükleyicisi kullanarak Visual Studio 2017 ' i güncelleştirin](media/update-visual-studio.png "Visual Studio Yükleyicisi kullanarak Visual Studio 'Yu güncelleştirme")
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019'un en [son sürümüne](/visualstudio/releases/2019/release-notes/) güncellemenizi öneririz, böylece her zaman en son özellikleri, düzeltmeleri ve iyileştirmeleri elde elabilirsiniz.
+En son özellikleri, düzeltmeleri ve geliştirmeleri her zaman alabilmeniz için Visual Studio 2019 ' in en [son sürümüne](/visualstudio/releases/2019/release-notes/) güncelleştirmeniz önerilir.
 
-Visual Studio 2019'u henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/downloads) gidin ve ücretsiz olarak yükleyin. Şu anda Visual Studio'nun farklı bir sürümünü kullanıyorsanız, [Visual Studio sürümlerini yan yana yükleyebilir](../install/install-visual-studio-versions-side-by-side.md)veya [Visual Studio'nun önceki sürümlerini kaldırabilirsiniz.](../install/uninstall-visual-studio.md)
+Visual Studio 2019 ' ü henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads) sayfasına giderek ücretsiz olarak yükleme yapın. Şu anda farklı bir Visual Studio sürümü kullanıyorsanız, Visual [Studio sürümlerini yan yana yükleyebilir](../install/install-visual-studio-versions-side-by-side.md)ya da [Visual Studio 'nun önceki sürümlerini kaldırabilirsiniz](../install/uninstall-visual-studio.md).
 
 > [!IMPORTANT]
-> Visual Studio'yı yüklemek, güncelleştirmek veya değiştirmek için yönetim izinleri olan bir hesapla oturum açmanız gerekir. Daha fazla bilgi için [Kullanıcı İzinleri ve Visual Studio'ya](../ide/user-permissions-and-visual-studio.md)bakın.
+> Visual Studio 'Yu yüklemek, güncelleştirmek veya değiştirmek için yönetici izinlerine sahip bir hesapla oturum açmalısınız. Daha fazla bilgi için bkz. [Kullanıcı izinleri ve Visual Studio](../ide/user-permissions-and-visual-studio.md).
 >
 > [!NOTE]
-> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio [için, Mac için Visual Studio'yı güncelleştir'e](/visualstudio/mac/update)bakın.
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [Update Mac için Visual Studio](/visualstudio/mac/update).
 
-Visual&nbsp;Studio&nbsp;2019'u şu şekilde güncelleyebilirim.
+Visual Studio 2019 ' i güncelleştirme &nbsp; &nbsp; .
 
-## <a name="use-the-visual-studio-installer"></a>Visual Studio Yükleyicisini Kullanma
+## <a name="use-the-visual-studio-installer"></a>Visual Studio Yükleyicisi kullanın
 
 1. Yükleyiciyi açın.
 
-     ![Windows'tan Visual Studio Yükleyicisini Açın](media/vs-2019/vs-installer-windows-start.png "Visual Studio Yükleyicisini Açın")
+     ![Visual Studio Yükleyicisi Windows 'tan açın](media/vs-2019/vs-installer-windows-start.png "Visual Studio Yükleyicisi açın")
 
-   Devam etmeden önce yükleyiciyi güncelleştirmeniz gerekebilir. Öyleyse, istemleri izleyin.
+   Devam etmeden önce yükleyiciyi güncelleştirmeniz gerekebilir. Bu durumda, istemleri izleyin.
 
 1. Yükleyicide, yüklediğiniz Visual Studio sürümünü arayın.
 
-   Örneğin, Visual&nbsp;Studio Community&nbsp;2019'u daha önce yüklediyseniz ve bunun için bir güncelleştirme varsa, yükleyicide bir Güncelleştirme **kullanılabilir** iletisi görüntülenir.
+   Örneğin, daha önce Visual &nbsp; Studio Community 2019 ' i yüklediyseniz &nbsp; ve bu güncelleştirme için bir güncelleştirme varsa, yükleyicide bir **güncelleştirme kullanılabilir** iletisi görüntülenir.
 
-     ![Güncellemek istediğiniz Visual Studio 2019 sürümünü seçin](media/vs-2019/vs-installer-update-visual-studio-community.png "Güncellemek istediğiniz Visual Studio 2019 sürümünü seçin")
+     ![Güncelleştirmek istediğiniz Visual Studio 2019 sürümünü seçin](media/vs-2019/vs-installer-update-visual-studio-community.png "Güncelleştirmek istediğiniz Visual Studio 2019 sürümünü seçin")
 
-1. Güncelleştirmeleri yüklemek için **Güncelleştir'i** seçin.
+1. Güncelleştirmeleri yüklemek için **Güncelleştir** ' i seçin.
 
     ![Güncelleştirmeleri yüklemek için Güncelleştir düğmesini seçin](media/vs-2019/vs-installer-choose-update-visual-studio-community.png "Güncelleştirmeleri yüklemek için Güncelleştir düğmesini seçin")
 
-1. Güncelleştirme tamamlandıktan sonra bilgisayarınızı yeniden başlatmanız istenebilir. Eğer öyleyse, bunu yapın ve sonra genellikle olduğu gibi Visual Studio başlatın.
+1. Güncelleştirme tamamlandıktan sonra bilgisayarınızı yeniden başlatmanız istenebilir. Varsa, bunu yapın ve ardından Visual Studio 'Yu genellikle yaptığınız gibi başlatın.
 
-   Bilgisayarınızı yeniden başlatmanız istenmiyorsa, Yükleyiciden Visual Studio'yu başlatmak için **Başlat'ı** seçin.
+   Bilgisayarınızı yeniden başlatmanız istenmezse, yükleyiciden Visual Studio 'yu başlatmak için **Başlat** ' ı seçin.
 
-    ![Visual Studio'yu başlatmak için Başlat düğmesini seçin](media/vs-2019/choose-launch-visual-studio-community.png "Visual Studio'yu başlatmak için Başlat düğmesini seçin")
+    ![Visual Studio 'Yu başlatmak için Başlat düğmesini seçin](media/vs-2019/choose-launch-visual-studio-community.png "Visual Studio 'Yu başlatmak için Başlat düğmesini seçin")
 
-## <a name="use-the-ide"></a>IDE'yi kullanma
+## <a name="use-the-ide"></a>IDE 'yi kullanma
 
-Visual Studio 2019'daki menü çubuğunu veya arama kutusunu kullanarak bir güncelleştirmeyi denetleyebilir ve sonra yükleyebilirsiniz.
+Bir güncelleştirmeyi denetleyebilir ve ardından menü çubuğunu veya Visual Studio 2019 arama kutusunu kullanarak yükleyebilirsiniz.
 
 ### <a name="open-visual-studio"></a>Visual Studio’yu açın
 
-1. Windows **Başlat** menüsünden **Visual Studio 2019'u**seçin.
+1. Windows **Başlat** menüsünde **Visual Studio 2019**' ı seçin.
 
-    ![Açık Görsel Stüdyo 2019](media/vs-2019/vs-installer-visual-studio-2019.png "Windows'dan Görsel Stüdyo 2019'u Aç")
+    ![Visual Studio 2019 'yi açın](media/vs-2019/vs-installer-visual-studio-2019.png "Windows 'dan Visual Studio 2019 'yi açın")
 
-1. **Başlat'ın**altında, IDE'yi açmak için herhangi bir seçenek seçin.
+1. **Kullanmaya**başlayın ' ın altında, IDE 'yi açmak için herhangi bir seçeneği belirleyin.
 
-    ![Visual Studio Yükleyicisini Açın](media/vs2019-choose-option-from-get-started.png "Visual Studio Yükleyicisini Açın")
+    ![Visual Studio Yükleyicisi açın](media/vs2019-choose-option-from-get-started.png "Visual Studio Yükleyicisi açın")
 
-    Visual Studio açılır. IDE'de Visual **Studio 2019 güncelleştirme** iletisi görüntülenir.
+    Visual Studio açılır. IDE 'de bir **Visual Studio 2019 güncelleştirme** iletisi görüntülenir.
 
-    ![IDE'de 'Visual Studio 2019 güncellemesi' mesajı](media/vs-2019/update-visual-studio-ide-message.png "IDE'de 'Visual Studio 2019 güncellemesi' mesajı")
+    ![IDE 'deki ' Visual Studio 2019 Güncelleştirmesi ' iletisi](media/vs-2019/update-visual-studio-ide-message.png "IDE 'deki ' Visual Studio 2019 Güncelleştirmesi ' iletisi")
 
-1. Visual **Studio 2019 güncelleştirme** iletisinde **ayrıntıları görüntüle'yi**seçin.
+1. **Visual Studio 2019 güncelleştirme** Iletisinde **Ayrıntıları görüntüle**' yi seçin.
 
-   ![Visual Studio 2019 IDE güncelleme iletisinde Ayrıntıları Görüntüle düğmesini seçin](media/vs-2019/update-visual-studio-ide-view-details.png "Visual Studio 2019 güncelleme iletisinde Ayrıntıları Görüntüle düğmesini seçin")
+   ![Visual Studio 2019 IDE güncelleştirme iletisinde ayrıntıları görüntüle düğmesini seçin](media/vs-2019/update-visual-studio-ide-view-details.png "Visual Studio 2019 güncelleştirme iletisindeki ayrıntıları görüntüle düğmesini seçin")
 
-1. **İndirilen ve yüklenmeye hazır Güncelleştirme** iletişim kutusunda **Güncelleştir'i**seçin.
+1. **Güncelleştirme indirildi ve yüklemeye hazırlanıyor** Iletişim kutusunda **Güncelleştir**' i seçin.
 
-     !['İndirilen ve yüklemeye hazır' iletişim kutusundaki Güncelleştir düğmesini seçin](media/vs-2019/update-ready-install-visual-studio-community-from-ide.png "'İndirilen ve yüklemeye hazır' iletişim kutusundaki Güncelleştir düğmesini seçin")
+     ![' Güncelleştirme indirilmiş ve yüklenmeye hazırlanıyor ' iletişim kutusunda Güncelleştir düğmesini seçin](media/vs-2019/update-ready-install-visual-studio-community-from-ide.png "' Güncelleştirme indirilmiş ve yüklenmeye hazırlanıyor ' iletişim kutusunda Güncelleştir düğmesini seçin")
 
-   Visual Studio günceller, kapanır ve yeniden açılır.
+   Visual Studio güncelleştirmeleri, kapanır ve sonra yeniden açılır.
 
 ### <a name="in-visual-studio"></a>Visual Studio’da
 
-1. Menü çubuğundan **Yardım'ı**seçin ve ardından **Güncelleştirmeleri Denetle'yi**seçin.
+1. Menü çubuğundan **Yardım**' ı seçin ve ardından **Güncelleştirmeleri denetle**' yi seçin.
 
-     ![Yardım menüsünden 'Güncelleştirmeleri Denetle' seçeneğini belirleyin](media/vs-2019/vs-ide-check-updates-help-menu.png "Yardım menüsünden 'Güncelleştirmeleri Denetle' seçeneğini belirleyin")
+     ![Yardım menüsünden ' güncelleştirmeleri denetle 'yi seçin](media/vs-2019/vs-ide-check-updates-help-menu.png "Yardım menüsünden ' güncelleştirmeleri denetle 'yi seçin")
 
     > [!NOTE]
-    > Güncelleştirmeleri denetlemek için IDE'deki arama kutusunu da kullanabilirsiniz. **Ctrl**+**Q**tuşuna basın , "güncelleştirmeleri denetle" yazın ve ardından eşleşen arama sonucunu seçin.
+    > Ayrıca, güncelleştirmeleri denetlemek için IDE 'deki arama kutusunu da kullanabilirsiniz. **CTRL** + **Q**tuşlarına basın, "güncelleştirmeleri denetle" yazın ve ardından eşleşen arama sonucunu seçin.
 
-1. Kullanılabilir **güncelleştirme** iletişim kutusunda **Güncelleştir'i**seçin.
+1. **Kullanılabilir güncelleştirme** Iletişim kutusunda **Güncelleştir**' i seçin.
 
-     !['İndirilen ve yüklemeye hazır' iletişim kutusundaki Güncelleştir düğmesini seçin](media/vs-2019/update-visual-studio-community-from-ide.png "'İndirilen ve yüklemeye hazır' iletişim kutusundaki Güncelleştir düğmesini seçin")
+     ![' Güncelleştirme indirilmiş ve yüklenmeye hazırlanıyor ' iletişim kutusunda Güncelleştir düğmesini seçin](media/vs-2019/update-visual-studio-community-from-ide.png "' Güncelleştirme indirilmiş ve yüklenmeye hazırlanıyor ' iletişim kutusunda Güncelleştir düğmesini seçin")
 
-   Visual Studio günceller, kapanır ve yeniden açılır.
+   Visual Studio güncelleştirmeleri, kapanır ve sonra yeniden açılır.
 
-## <a name="use-the-notifications-hub"></a>Bildirimler merkezini kullanma
+## <a name="use-the-notifications-hub"></a>Bildirimler hub 'ını kullanma
 
-1. Visual Studio'da, çalışmanızı kaydedin.
+1. Visual Studio 'da çalışmanızı kaydedin.
 
-1. **Bildirimler** merkezini açmak için Visual Studio IDE'nin sağ alt köşesinden bildirim simgesini seçin.
+1. **Bildirimler** merkezini açmak Için VISUAL Studio IDE 'nin sağ alt köşesindeki bildirim simgesini seçin.
 
-   ![Visual Studio IDE'deki bildirim simgesi](media/vs-2019/notification-bar.png "Visual Studio IDE'deki bildirim simgesi")
+   ![Visual Studio IDE 'deki bildirim simgesi](media/vs-2019/notification-bar.png "Visual Studio IDE 'deki bildirim simgesi")
 
-1. **Bildirimler**hub'ında, yüklemek istediğiniz güncelleştirmeyi seçin ve ardından **ayrıntıları görüntüle'yi**seçin.
+1. **Bildirimler hub 'ında**, yüklemek istediğiniz güncelleştirmeyi seçin ve ardından **Ayrıntıları görüntüle**' yi seçin.
 
-     ![Visual Studio 2019'da Bildirim merkezi](media/vs-2019/notification-hub-update.png "Visual Studio 2019'da Bildirim merkezi")
+     ![Visual Studio 2019 ' de Bildirim Hub 'ı](media/vs-2019/notification-hub-update.png "Visual Studio 2019 ' de Bildirim Hub 'ı")
 
       > [!TIP]
-      > Visual Studio 2019 sürümü için bir güncelleştirme kümülatiftir, bu nedenle her zaman en son sürüm numarasına sahip sürümü yüklemeyi seçin.
+      > Visual Studio 2019 sürümüne yönelik bir güncelleştirme birikimlidir, bu nedenle her zaman en son sürüm numarasıyla yüklemeyi seçin.
 
-1. Kullanılabilir **güncelleştirme** iletişim kutusunda **Güncelleştir'i**seçin.
+1. **Kullanılabilir güncelleştirme** Iletişim kutusunda **Güncelleştir**' i seçin.
 
-   Visual Studio günceller, kapanır ve yeniden açılır.
+   Visual Studio güncelleştirmeleri, kapanır ve sonra yeniden açılır.
 
 ## <a name="customize-update-settings"></a>Güncelleştirme ayarlarını özelleştirme
 
-Visual Studio'daki güncelleştirme ayarlarını yükleme modunu değiştirerek ve otomatik indirmeleri seçerek birkaç farklı şekilde özelleştirebilirsiniz.
+Visual Studio 'daki güncelleştirme ayarlarını, yükleme modunu değiştirerek ve otomatik indirmeleri seçerek gibi çeşitli yollarla özelleştirebilirsiniz.
 
 Aralarından seçim yapabileceğiniz iki yükleme modu vardır:
 
-* **İndirirken yükleme**
-* **Tümlerini indirin, sonra yükleyin**
+* **İndirme sırasında yükleme**
+* **Tümünü İndir, sonra Yükle**
 
-Makineniz boştayken güncelleştirmelerin karşıdan yüklemesine olanak tanıyan **Otomatik olarak indirgüncelleştirmeleri** ayarını da seçebilirsiniz.
+Ayrıca, makineniz boşta kaldığında güncelleştirmelerin indirilmesine izin veren **güncelleştirme ayarlarını otomatik olarak indir** seçeneğini de belirleyebilirsiniz.
 
 Bunu yapmak için:
 
-1. Menü çubuğunda **Araç** > **Seçenekleri'ni**seçin.
+1. Menü çubuğunda **Araçlar** > **Seçenekler**' i seçin.
 
-2. **Ortamı**Genişletin ve ardından **Ürün Güncelleştirmeleri'ni**seçin.
+2. **Ortam**' ı genişletin ve **ürün güncelleştirmeleri**' ni seçin.
 
-    ![Visual Studio'da ayarları güncelleştirir](media/vs-2019/update-settings-options.png)
+    ![Visual Studio 'da güncelleştirme ayarları](media/vs-2019/update-settings-options.png)
 
-3. Visual Studio güncellemeleriniz için yükleme modunu ve istediğiniz otomatik indirme seçeneklerini seçin.
+3. Visual Studio güncelleştirmelerinizde yükleme modunu ve otomatik indirme seçeneklerini belirleyin.
 
 ::: moniker-end
 
@@ -292,6 +292,6 @@ Bunu yapmak için:
 * [Visual Studio sürümlerini yan yana yükleme](install-visual-studio-versions-side-by-side.md)
 * [Visual Studio’nun ağ tabanlı yüklemesini güncelleştirme](update-a-network-installation-of-visual-studio.md)
 * [Bakım temeli sırasında Visual Studio’yu güncelleştirme](update-servicing-baseline.md)
-* [Ağ tabanlı Visual Studio dağıtımlarında denetim güncelleştirmeleri](controlling-updates-to-visual-studio-deployments.md)
+* [Ağ tabanlı Visual Studio dağıtımlarında güncelleştirmeleri denetleme](controlling-updates-to-visual-studio-deployments.md)
 * [Visual Studio’yu değiştirme](modify-visual-studio.md)
 * [Visual Studio'yu kaldırma](uninstall-visual-studio.md)

@@ -8,93 +8,93 @@ f1_keywords:
 helpviewer_keywords:
 - Build options [C#], advanced
 ms.assetid: 141f2dee-1563-4ce6-ba37-32920b082519
-author: TerryGLee
-ms.author: tglee
+author: ghogen
+ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f25f9d96cd8de8dcb140c79c7dfb3a7a5981986c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 917ef4ff685c243fa271a0966a931151cb12ed2b
+ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75595858"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85418853"
 ---
-# <a name="advanced-build-settings-dialog-box-c"></a>Gelişmiş Yapı Ayarları iletişim kutusu (C#)
+# <a name="advanced-build-settings-dialog-box-c"></a>Gelişmiş derleme ayarları iletişim kutusu (C#)
 
-Projenin **gelişmiş yapı** yapılandırma özelliklerini belirtmek için **Project Designer'ın** Gelişmiş Yapı Ayarları iletişim kutusunu kullanın. Bu iletişim kutusu yalnızca C# projeleri için geçerlidir.
+Projenin Gelişmiş derleme yapılandırma özelliklerini belirtmek için **Proje Tasarımcısı** ' nın **Gelişmiş derleme ayarları** iletişim kutusunu kullanın. Bu iletişim kutusu yalnızca C# projeleri için geçerlidir.
 
 ## <a name="general"></a>Genel
 
-Aşağıdaki seçenekler, genel gelişmiş ayarları ayarlamanızı sağlar.
+Aşağıdaki seçenekler genel Gelişmiş ayarları ayarlamanıza olanak sağlar.
 
-**Dil Sürümü**
+**Dil sürümü**
 
 ::: moniker range=">=vs-2019"
 
-Varsayılan dil sürümünün projenin hedef çerçevesine göre nasıl seçildiği hakkında bilgi sağlayan [/langversion (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/langversion-compiler-option)bağlantıları.
+Bir projenin hedef çerçevesine göre varsayılan dil sürümünün nasıl seçildiği hakkında bilgi sağlayan [/langversion (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/langversion-compiler-option)bağlantıları.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Kullanılacak dilin sürümünü belirtir. Özellik kümesi her sürümde farklıdır, bu nedenle bu seçenek derleyiciyi uygulanan özelliklerin yalnızca bir alt kümesine izin vermeye zorlamak veya yalnızca varolan bir standartla uyumlu özellikleri etkinleştirmek için kullanılabilir.
+Kullanılacak dilin sürümünü belirtir. Özellik kümesi her sürümde farklıdır, bu nedenle derleyicinin uygulanan özelliklerin yalnızca bir alt kümesine izin vermeye zorlamak veya yalnızca var olan bir standartta uyumlu özellikleri etkinleştirmek için bu seçenek kullanılabilir.
 
-Varsayılan değer C# 7.0'dır.
+Varsayılan değer C# 7,0 ' dir.
 
 ::: moniker-end
 
-**İç Derleyici Hata Raporlama**
+**İç derleyici hata bildirimi**
 
-Derleyici hatalarını Microsoft'a bildirip bildirmeyin ilerler. **İstem (varsayılan)** olarak ayarlanmışsa, bir iç derleyici hatası oluşursa, microsoft'a elektronik olarak hata raporu gönderme seçeneği verir. **Göndermeye**ayarlanırsa, otomatik olarak bir hata raporu gönderilir. **Sıraya ayarlanırsa,** hata raporları sıraya alınır. **Hiçbiri**olarak ayarlanırsa, hata yalnızca derleyicinin metin çıktısında bildirilir. Daha fazla bilgi için bkz: [/errorreport (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option).
+Derleyici hatalarının Microsoft 'a raporlanıp raporlanmayacağını belirtir. **İstem** olarak ayarlandıysa (varsayılan), iç derleyici hatası oluşursa, Microsoft 'a elektronik bir hata raporu gönderme seçeneği sunarak bir istem alırsınız. **Send**olarak ayarlandıysa, otomatik olarak bir hata raporu gönderilir. **Sıraya**ayarlandıysa, hata raporları sıraya alınır. **None**olarak ayarlanırsa, hata yalnızca derleyicinin metin çıkışında bildirilir. Daha fazla bilgi için bkz. [/errorreport (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/errorreport-compiler-option).
 
-**Aritmetik taşma/taşma olup yok**
+**Aritmetik taşma/yetersiz kalması için denetle**
 
-[Denetlenen](/dotnet/csharp/language-reference/keywords/checked) veya [işaretlenmemiş](/dotnet/csharp/language-reference/keywords/unchecked) anahtar kelimelerin kapsamında olmayan bir tamsayı aritmetik deyiminin veri türü aralığının dışında bir değerle sonuçlanıp sonuçlanmayacağını belirtir. Daha fazla bilgi için bkz/ [kontrol (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/checked-compiler-option).
+[Checked](/dotnet/csharp/language-reference/keywords/checked) veya [unchecked](/dotnet/csharp/language-reference/keywords/unchecked) anahtar kelimelerinde bulunmayan ve veri türü aralığının dışında bir değer elde eden bir tamsayı aritmetik ifadesinin çalışma zamanı özel durumuna neden olup olmayacağını belirtir. Daha fazla bilgi için bkz. [/checked (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/checked-compiler-option).
 
-**mscorlib.dll referans etmeyin**
+**Başvuruya mscorlib.dll**
 
-mscorlib.dll'nin programınıza alınıp alınmayacağını belirterek <xref:System> tüm ad alanını tanımlar. Kendi <xref:System> ad alanınızı ve nesnelerinizi tanımlamak veya oluşturmak istiyorsanız bu kutuyu işaretleyin. Daha fazla bilgi için bkz: [/nostdlib (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option).
+mscorlib.dll, tüm ad alanını tanımlayarak, programınıza içeri aktarılmayacağını belirtir <xref:System> . Kendi ad alanınızı ve nesnelerinizi tanımlamak veya oluşturmak istiyorsanız bu kutuyu işaretleyin <xref:System> . Daha fazla bilgi için bkz. [/nostdlib (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/nostdlib-compiler-option).
 
 ## <a name="output"></a>Çıktı
 
-Aşağıdaki seçenekler gelişmiş çıktı seçenekleri belirtmenizi sağlar.
+Aşağıdaki seçenekler gelişmiş çıkış seçeneklerini belirtmenizi sağlar.
 
-**Hata Ayıklama Bilgileri**
+**Hata ayıklama bilgileri**
 
-Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. Bir uygulamanın hata ayıklama performansını yapılandırma hakkında bilgi için [bkz.](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug) Bu ayarın aşağıdaki seçenekleri vardır:
+Derleyici tarafından oluşturulan hata ayıklama bilgilerinin türünü belirtir. Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fazla bilgi için bkz. [bir görüntüyü hata ayıklamayı kolaylaştırın](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug). Bu ayar aşağıdaki seçeneklere sahiptir:
 
 - **yok**
 
-   Hata ayıklama bilgisi oluşturulmaması gerektiğini belirtir.
+   Hata ayıklama bilgilerinin üretilmeyecek olduğunu belirtir.
 
-- **Tam**
+- **tümünü**
 
-   Çalışan programa hata ayıklama eklemeyi sağlar.
+   Çalışan programa hata ayıklayıcı iliştirmesini sağlar.
 
 - **pdbonly**
 
-   Program hata ayıklayıcıda başlatıldığında kaynak kodunun hata ayıklanmasına izin verir, ancak yalnızca çalışan program hata ayıklayıcıya eklendiğinde assembler görüntülenir.
+   Program hata ayıklayıcıda başlatıldığında kaynak kodu hata ayıklamasına izin verir, ancak çalışan program hata ayıklayıcıya eklendiğinde yalnızca assembler görüntülenir.
 
-- **Taşınabilir**
+- **ın**
 
-   Bir . PDB dosyası, diğer araçlar, özellikle hata ayıklayıcılar, ana yürütülebilir dosyada ne olduğu ve nasıl üretildiği hakkında bilgi sağlayan platforma özgü olmayan taşınabilir bir sembol dosyasıdır. Daha fazla bilgi için [Taşınabilir PDB'ye](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) bakın.
+   Bir oluşturur. PDB dosyası, başka araçlar, özellikle hata ayıklayıcılar, ana yürütülebilir dosyada bulunan ve nasıl üretildiği hakkında bilgi sağlayan, platforma özgü olmayan taşınabilir bir sembol dosyası. Daha fazla bilgi için bkz. [TAŞINABILIR pdb](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) .
 
-- **Katıştırılmış**
+- **eklenen**
 
-   Taşınabilir sembol bilgilerini derlemeye yerle bir eder. Harici yok. PDB dosyası üretilir.
+   Taşınabilir sembol bilgilerini derlemeye gömer. Dış değil. PDB dosyası üretildi.
 
-Daha fazla bilgi için bkz: [/hata ayıklama (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option).
+Daha fazla bilgi için bkz. [/Debug (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/debug-compiler-option).
 
-**Dosya Hizalama**
+**Dosya hizalaması**
 
-Çıktı dosyasındaki bölümlerin boyutunu belirtir. Geçerli değerler **512**, **1024**, **2048**, **4096**, ve **8192**. Bu değerler bayt cinsinden ölçülür. Her bölüm, çıktı dosyasının boyutunu etkileyen, bu değerin bir katı olan bir sınırüzerinde hizalanır. Daha fazla bilgi için bkz: [/filealign (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/filealign-compiler-option).
+Çıkış dosyasındaki bölümlerin boyutunu belirtir. Geçerli değerler **512**, **1024**, **2048**, **4096**ve **8192**. Bu değerler bayt cinsinden ölçülür. Her bölüm, çıkış dosyasının boyutunu etkileyen bu değerin birden çok katı olan bir sınıra göre hizalanacaktır. Daha fazla bilgi için bkz. [/filealign (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/filealign-compiler-option).
 
-**Kütüphane Taban Adresi**
+**Kitaplık temel adresi**
 
-DLL yüklemek için tercih edilen temel adresi belirtir. Bir DLL için varsayılan temel adres .NET Framework ortak dil çalışma süresi tarafından ayarlanır. Daha fazla bilgi için bkz: [/baseaddress (C# Derleyici Seçenekleri)](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option).
+DLL 'nin yükleneceği tercih edilen temel adresi belirtir. Bir DLL için varsayılan temel adres .NET Framework ortak dil çalışma zamanı tarafından ayarlanır. Daha fazla bilgi için bkz. [/BaseAddress (C# derleyici seçenekleri)](/dotnet/csharp/language-reference/compiler-options/baseaddress-compiler-option).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# derleyici seçenekleri](/dotnet/csharp/language-reference/compiler-options/index)
-- [Yapı sayfası, Proje Tasarımcısı (C#)](../../ide/reference/build-page-project-designer-csharp.md)
+- [Derleme sayfası, proje Tasarımcısı (C#)](../../ide/reference/build-page-project-designer-csharp.md)
