@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: findFile | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d9751127007b4e7823cf6d2ae35ed2fe80cb83b8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2ba8422ed2be8f06ac64fb9c7fa81c5b1b3c3f3c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742289"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465827"
 ---
 # <a name="idiasessionfindfile"></a>IDiaSession::findFile
 Kaynak dosyalarını compiland ve adına göre alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT findFile ( 
@@ -36,11 +36,11 @@ HRESULT findFile ( 
 #### <a name="parameters"></a>Parametreler
  `pCompiland`
 
-'ndaki Arama için bağlam olarak kullanılacak compiland 'yi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi. Tüm uygulamalarda kaynak dosyaları bulmak için bu parametreyi `NULL` olarak ayarlayın.
+'ndaki Arama için bağlam olarak kullanılacak compiland 'yi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi. `NULL`Tüm uygulamalarda kaynak dosyaları bulmak için bu parametreyi olarak ayarlayın.
 
  `name`
 
-'ndaki Alınacak kaynak dosyanın adını belirtir. Tüm kaynak dosyalarının alınabilmesi için bu parametreyi `NULL` olarak ayarlayın.
+'ndaki Alınacak kaynak dosyanın adını belirtir. Bu parametreyi, alınacak `NULL` tüm kaynak dosyaları için olarak ayarlayın.
 
  `option`
 
@@ -51,7 +51,7 @@ HRESULT findFile ( 
 dışı Alınan kaynak dosyalarının listesini içeren bir [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 

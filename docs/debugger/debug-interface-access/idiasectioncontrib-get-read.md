@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSectionContrib:: get_read | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 206415f45c4f4f087b99064f772a679f15eb1506
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d60224ef5726559f781c49562dad0e8d8d9960d4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742567"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466198"
 ---
 # <a name="idiasectioncontribget_read"></a>IDiaSectionContrib::get_read
 Bölümün okunup okunamayacağını gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_read ( 
@@ -33,10 +33,10 @@ HRESULT get_read ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bölüm okunbiliyorsanız `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
+dışı `TRUE`Bölüm okunabilecek ise döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_addressTaken | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f452aa01f29d25ad1674c6bc2f5494a745733793
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 6b62a848d70b59a1764220c806123b0edd03edf2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741065"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464354"
 ---
 # <a name="idiasymbolget_addresstaken"></a>IDiaSymbol::get_addressTaken
 Başka bir simgenin bu simgenin adresine başvuruda bulunup bulunmadığını gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_addressTaken ( 
@@ -33,16 +33,16 @@ HRESULT get_addressTaken ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Başka bir simge bu adrese başvuruyorsa `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
+dışı `TRUE`Başka bir simgenin bu adrese başvuruyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, `A` başvuruları `B`. Bu nedenle, sembol `A` `get_addressTaken` yöntemi `TRUE` döndürür.
+ Aşağıdaki örnekte, `B` başvuruları `A` . Bu nedenle, `A` simgenin `get_addressTaken` yöntemi döndürür `TRUE` .
 
 ```C++
 int A  = 0;

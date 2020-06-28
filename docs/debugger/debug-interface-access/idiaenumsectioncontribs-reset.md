@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumSectionContribs:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b319a753cd425c64129df29607da9a6fcbeaa6a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 08a630f2a417edb2f7e34619cd6258c1aaaf6c3c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744290"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468102"
 ---
 # <a name="idiaenumsectioncontribsreset"></a>IDiaEnumSectionContribs::Reset
 Bir numaralandırma dizisini başlangıca sıfırlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 HRESULT Reset();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- @No__t_0 döndürür.
+ `S_OK` döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)

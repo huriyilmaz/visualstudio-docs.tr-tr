@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSymbolsByAddr | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d8cddaa39635be534e2247b48a370ed88b29ab4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 92062883ea97fdc6251ffa600e31230fb448f73b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743823"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467584"
 ---
 # <a name="idiaenumsymbolsbyaddr"></a>IDiaEnumSymbolsByAddr
 Veri kaynağında bulunan çeşitli sembolleri ele alarak sıralar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumSymbolsByAddr : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda `IDiaEnumSymbolsByAddr` yöntemleri gösterilmektedir.
+Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaEnumSymbolsByAddr` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -41,7 +41,7 @@ Aşağıdaki tabloda `IDiaEnumSymbolsByAddr` yöntemleri gösterilmektedir.
 |[IDiaEnumSymbolsByAddr::Clone](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr-clone.md)|Bir nesnenin kopyasını oluşturur.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu arabirim, adrese göre gruplanmış simgeler sağlar. Türe göre gruplanmış simgelerle çalışmak için `SymTagUDT` (Kullanıcı tanımlı tür) veya `SymTagBaseClass`, [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) arabirimini kullanın.
+Bu arabirim, adrese göre gruplanmış simgeler sağlar. Türe göre gruplandırılan simgelerle çalışmak için (örneğin, `SymTagUDT` Kullanıcı tanımlı tür) veya `SymTagBaseClass` [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) arabirimini kullanın.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
 [IDiaSession:: getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md) metodunu çağırarak bu arabirimi elde edin.
@@ -98,7 +98,7 @@ void ShowSymbolsByAddress(IDiaSession *pSession)
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

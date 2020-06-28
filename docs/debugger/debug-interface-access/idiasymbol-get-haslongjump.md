@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_hasLongJump | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fb1e23d252b7cb4f2685a9b07d6e3e92db801bd
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9aa43688b8fd3bb69cd8d44181da22924932e900
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740496"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463703"
 ---
 # <a name="idiasymbolget_haslongjump"></a>IDiaSymbol::get_hasLongJump
 İşlevin [longjmp](/cpp/c-runtime-library/reference/longjmp) komutunun bir kullanımını içerip içermediğini belirten bir bayrak alır (bir [setjmp](/cpp/c-runtime-library/reference/setjmp) komutuyla eşleştirilmiş, bu, özel durum işlemenin C stili yöntemini oluşturur).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_hasLongJump
@@ -33,13 +33,13 @@ HRESULT get_hasLongJump
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı İşlev bir `longjmp` komutu içeriyorsa `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
+dışı `TRUE`İşlev bir komut içeriyorsa döndürür `longjmp` ; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 

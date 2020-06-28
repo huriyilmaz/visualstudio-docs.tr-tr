@@ -1,7 +1,7 @@
 ---
 title: 'IDiaFrameData:: get_program | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 135f2b0a042dd74b573a0746831a48fb27e7c2a9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d5a9f25c3913519b50131ec5860e127bef3ddc11
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743513"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467269"
 ---
 # <a name="idiaframedataget_program"></a>IDiaFrameData::get_program
 Geçerli işleve yapılan çağrıdan önce kayıt kümesini hesaplamak için kullanılan program dizesini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_program ( 
@@ -36,18 +36,18 @@ HRESULT get_program ( 
 dışı Program dizesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Program dizesi, bir prolog oluşturmak için yorumlanan bir makro dizisidir. Örneğin, tipik bir yığın çerçevesi `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`Program dizesini kullanabilir. Biçim, işleçlerin işlenenleri izlediği ters Lehçe gösterimidir. `T0` yığındaki geçici bir değişkeni temsil eder. Bu örnek aşağıdaki adımları gerçekleştirir:
+ Program dizesi, bir prolog oluşturmak için yorumlanan bir makro dizisidir. Örneğin, tipik bir yığın çerçevesi Program dizesini kullanabilir `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="` . Biçim, işleçlerin işlenenleri izlediği ters Lehçe gösterimidir. `T0`yığında geçici bir değişkeni temsil eder. Bu örnek aşağıdaki adımları gerçekleştirir:
 
-1. Kayıt `ebp` içeriğini `T0`taşıyın.
+1. Kayıt içeriğini içine taşıyın `ebp` `T0` .
 
-2. Adres oluşturmak için `T0` değerine `4` ekleyin, bu adresten değeri alın ve kayıt `eip`değeri depolayın.
+2. `4` `T0` Bir adres oluşturmak, bu adresten değeri almak ve kayıt sırasında değeri depolamak için içindeki değerine ekleyin `eip` .
 
-3. `T0` depolanan adresten değeri alın ve bu değeri yazmaç `ebp`olarak depolayın.
+3. İçinde depolanan adresten değeri alın `T0` ve bu değeri kayıt ' de saklayın `ebp` .
 
-4. `T0` değerine `8` ekleyin ve bu değeri yazmaç `esp`olarak depolayın.
+4. `8`İçindeki değerine ekleyin `T0` ve bu değeri yazmaç içinde depolayın `esp` .
 
    Program dizesinin CPU 'ya ve geçerli yığın çerçevesi tarafından temsil edilen işlev için ayarlanan çağırma kuralına özel olduğunu unutmayın.
 

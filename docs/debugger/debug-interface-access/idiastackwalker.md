@@ -1,7 +1,7 @@
 ---
 title: Idiastackdenetçisi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2366c933bf072c295b29d06ff5610bd3735c0077
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4d80e20200966c65258485782fec5865158f114a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741515"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464851"
 ---
 # <a name="idiastackwalker"></a>IDiaStackWalker
 . Pdb dosyasındaki bilgileri kullanarak bir yığın izlenecek yöntemler sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaStackWalker: IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda `IDiaStackWalker` yöntemleri gösterilmektedir.
+Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaStackWalker` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -40,10 +40,10 @@ Aşağıdaki tabloda `IDiaStackWalker` yöntemleri gösterilmektedir.
 Bu arabirim, yüklü bir modül için yığın çerçevelerinin listesini almak için kullanılır. Yöntemlerin her birine, yığın çerçevelerinin listesini oluşturmak için gerekli bilgileri sağlayan bir [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) nesnesi (istemci uygulaması tarafından uygulanır) geçirilir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bu arabirim, sınıf tanımlayıcısı `CLSID_DiaStackWalker` ve `IID_IDiaStackWalker` arabirim KIMLIĞI ile `CoCreateInstance` yöntemi çağırarak elde edilir. Örnek, bu arabirimin nasıl elde edilildiği gösterilmektedir.
+Bu arabirim, `CoCreateInstance` yöntemi sınıf tanımlayıcısıyla `CLSID_DiaStackWalker` ve arabirim kimliğiyle çağırarak elde edilir `IID_IDiaStackWalker` . Örnek, bu arabirimin nasıl elde edilildiği gösterilmektedir.
 
 ## <a name="example"></a>Örnek
-Bu örnek, `IDiaStackWalker` arabiriminin nasıl alınacağını gösterir.
+Bu örnek, arabirimin nasıl alınacağını gösterir `IDiaStackWalker` .
 
 ```C++
 
@@ -64,7 +64,7 @@ if (FAILED(hr))
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isDataAligned | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 27a03dbc66cd3ba46fc080d856c559eabc7e289e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 00507b5d69f46657968407170d9633f1d84c8e4f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740254"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463430"
 ---
 # <a name="idiasymbolget_isdataaligned"></a>IDiaSymbol::get_isDataAligned
 Kullanıcı tanımlı türün (UDT) belirli bir bellek sınırına hizalanıp Hizalanmadığını belirten bir bayrak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_isDataAligned(
@@ -33,16 +33,16 @@ HRESULT get_isDataAligned(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı UDT bir bellek sınırına hizalanmışsa `TRUE` döndürür; Aksi takdirde, `FALSE`döndürür.
+dışı `TRUE`Udt bir bellek sınırına hizalanmışsa döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> `S_FALSE` dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik genellikle yürütülebilir dosya, varsayılan olmayan veri hizalamayla derlendiğinde ayarlanır. Örneğin, Microsoft C++ derleyicisi, *#* bir bayt değeri olan/ZP<em>#</em>komut satırı seçeneği ile veri hizalamasını değiştirebilir.
+ Bu özellik genellikle yürütülebilir dosya, varsayılan olmayan veri hizalamayla derlendiğinde ayarlanır. Örneğin, Microsoft C++ derleyicisi, veri hizalamasını <em>#</em> bir bayt değeri olan/ZP komut satırı seçeneğiyle değiştirebilir *#* .
 
 ## <a name="requirements"></a>Gereksinimler
 

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumSymbols:: get__NewEnum | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dccfb37d2abe38a9fd1c805f03acd7172ca01af6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d988d40df1033c95b57d916b7d1587deff109254
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743956"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467787"
 ---
 # <a name="idiaenumsymbolsget__newenum"></a>IDiaEnumSymbols::get__NewEnum
-Bu Numaralandırıcının <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> sürümünü alır.
+<xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT>Bu Numaralandırıcı sürümünü alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get__NewEnum ( 
@@ -33,10 +33,10 @@ HRESULT get__NewEnum ( 
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-dışı Bu Numaralandırıcı <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> sürümünü temsil eden `IUnknown` arabirimini döndürür.
+dışı `IUnknown`Bu Numaralandırıcı sürümünü temsil eden arabirimi döndürür <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT> .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

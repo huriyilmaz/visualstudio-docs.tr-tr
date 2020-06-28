@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumSegments:: Next | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34062b654cbaccec053c5ac50bfb041d37a0f4e6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f8e87efa1ed616a38ccb79fec1e286417c10124b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744197"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468032"
 ---
 # <a name="idiaenumsegmentsnext"></a>IDiaEnumSegments::Next
 Sabit Listesi dizisinde belirtilen sayıda segment alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT Next ( 
@@ -46,7 +46,7 @@ dışı Segmentleri temsil eden istenen [IDiaSegment](../../debugger/debug-inter
 dışı Getirilen Numaralandırıcı içindeki segmentlerin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür. Daha fazla kesim yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla kesim yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSectionContribs | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e332bacdeaeca00d4e43d80807ee5f95c51c7e93
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ebc0fe8391c6390d62cffbb591c4cef1ea52976f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744244"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468074"
 ---
 # <a name="idiaenumsectioncontribs"></a>IDiaEnumSectionContribs
 Veri kaynağında bulunan çeşitli bölüm katkılarını numaralandırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumSectionContribs : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda `IDiaEnumSectionContribs` yöntemleri gösterilmektedir.
+Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaEnumSectionContribs` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -47,7 +47,7 @@ Aşağıdaki tabloda `IDiaEnumSectionContribs` yöntemleri gösterilmektedir.
 Bu arabirimi [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) yönteminden alın. Ayrıntılar için örneğe bakın.
 
 ## <a name="example"></a>Örnek
-Bu örnek, `IDiaEnumSectionContribs` arabiriminin nasıl alınacağını (`GetEnumSectionContribs` işlevinin) ve (`ShowSectionContribs` işlevi) nasıl kullanılacağını gösterir. Bölüm katkıları kullanmanın daha kapsamlı bir örneği için bkz. [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) arabirimi.
+Bu örnek, arabirimin nasıl alınacağını ( `GetEnumSectionContribs` işlevin) ve nasıl kullanılacağını ( `ShowSectionContribs` işlev) gösterir `IDiaEnumSectionContribs` . Bölüm katkıları kullanmanın daha kapsamlı bir örneği için bkz. [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) arabirimi.
 
 ```C++
 
@@ -104,7 +104,7 @@ void ShowSectionContribs(IDiaSession *pSession)
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

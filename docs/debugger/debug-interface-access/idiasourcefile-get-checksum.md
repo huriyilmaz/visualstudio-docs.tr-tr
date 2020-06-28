@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSourceFile:: get_checksum | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f4367a7862dabe248dfbe08e64c45598abe3679
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1ff6b04322bca213d5eeddfbc0f7ea4b01bb9226
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741840"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465309"
 ---
 # <a name="idiasourcefileget_checksum"></a>IDiaSourceFile::get_checksum
 Sağlama toplamı baytlarını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_checksum ( 
@@ -39,21 +39,21 @@ HRESULT get_checksum ( 
 
  `pcbData`
 
-dışı Sağlama toplamı baytlarının sayısını döndürür. Bu parametre `NULL` olamaz.
+dışı Sağlama toplamı baytlarının sayısını döndürür. Bu parametre olamaz `NULL` .
 
  `data`
 
-[in, out] Sağlama toplamı baytları ile doldurulmuş bir arabellek. Bu parametre `NULL`, `pcbData` gereken bayt sayısını döndürür.
+[in, out] Sağlama toplamı baytları ile doldurulmuş bir arabellek. Bu parametre ise `NULL` , `pcbData` gereken bayt sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Sağlama toplamı baytları oluşturmak için kullanılan sağlama toplamı algoritmasının türünü öğrenmek için [IDiaSourceFile:: get_checksumType](../../debugger/debug-interface-access/idiasourcefile-get-checksumtype.md) yöntemini çağırın.
 
  Sağlama toplamı genellikle kaynak dosyanın görüntüsünden oluşturulur, böylece kaynak dosyadaki değişiklikler sağlama toplamı baytlarında değişikliklere yansıtılır. Sağlama toplamı baytları dosyanın yüklü görüntüsünden oluşturulmuş bir sağlama toplamıyla eşleşmiyorsa, dosyanın hasar görmüş veya ile oynanmış olarak kabul edilmesi gerekir.
 
- Tipik sağlama toplamı 32 bayttan fazla değil, ancak bir sağlama toplamı en büyük boyut olduğunu varsaymaz. Sağlama toplamını almak için gereken bayt sayısını almak için `data` parametresini `NULL` olarak ayarlayın. Ardından uygun boyutun bir arabelleğini ayırın ve bu yöntemi yeni arabellekle bir kez daha çağırın.
+ Tipik sağlama toplamı 32 bayttan fazla değil, ancak bir sağlama toplamı en büyük boyut olduğunu varsaymaz. `data` `NULL` Sağlama toplamını almak için gereken bayt sayısını almak için parametresini olarak ayarlayın. Ardından uygun boyutun bir arabelleğini ayırın ve bu yöntemi yeni arabellekle bir kez daha çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaPropertyStorage:: ReadLONG | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: af9d65c571c5e0a281b968d922c9b5170bd1c561
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 697d93af1256d76e5448de5cbc34e04ffc26927f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742897"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466583"
 ---
 # <a name="idiapropertystoragereadlong"></a>IDiaPropertyStorage::ReadLONG
-Bir özellik kümesindeki `LONG` değerleri okur.
+`LONG`Bir özellik kümesindeki değerleri okur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT ReadDLONG ( 
@@ -34,17 +34,17 @@ HRESULT ReadDLONG ( 
 #### <a name="parameters"></a>Parametreler
  `id`
 
-'ndaki Okunacak özelliğin tanımlayıcısı (`PROPID` `ULONG` olarak WTypes. h içinde tanımlanmıştır).
+'ndaki Okunacak özelliğin tanımlayıcısı ( `PROPID` WTypes. h olarak bir olarak tanımlanır `ULONG` ).
 
  `pValue`
 
 dışı Özellik değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde bir hata kodu döndürür. Özellik `LONG` türünde değilse `E_INVALIDARG` döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür. `E_INVALIDARG`Özelliğin tür olup olmadığını döndürür `LONG` .
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t_0, Windows tarafından 32 bitlik işaretli bir tamsayı olarak tanımlanır.
+ `LONG`, Windows tarafından 32 bitlik işaretli bir tamsayı olarak tanımlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

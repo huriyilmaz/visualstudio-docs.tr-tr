@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: Symsareequıv | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 61cfc582f11670af8c956c3334681284ce5172a6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fe609d53571e6ffcd8e18919f0351e29c0329b46
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741863"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465365"
 ---
 # <a name="idiasessionsymsareequiv"></a>IDiaSession::symsAreEquiv
 İki sembolün eşdeğer olup olmadığını denetler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT symsAreEquiv ( 
@@ -38,10 +38,10 @@ HRESULT symsAreEquiv ( 
 
  `symbolB`
 
-'ndaki Karşılaştırmada kullanılan ikinci `IDiaSymbol` nesnesi.
+'ndaki `IDiaSymbol`Karşılaştırmada kullanılan ikinci nesne.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Semboller eşdeğer ise `S_OK`döndürür; Aksi takdirde, `S_FALSE`döndürür, semboller eşit değildir. Aksi takdirde, bir hata kodu döndürün.
+ Semboller eşdeğer ise, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` simgeler eşdeğer değildir. Aksi takdirde, bir hata kodu döndürün.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

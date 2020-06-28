@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_compilerName | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fd64d2f1a18df2d41a7d39f4ce474d601e194c7
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 49491d2d9934a20e9d40c0dcd5aadeed3ef27ca7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740811"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464081"
 ---
 # <a name="idiasymbolget_compilername"></a>IDiaSymbol::get_compilerName
 [Compiland](../../debugger/debug-interface-access/compiland.md)oluşturmak için kullanılan derleyicinin adını döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_compilerName (
@@ -31,13 +31,13 @@ HRESULT get_compilerName (
 ```
 
 #### <a name="parameters"></a>Parametreler
- Derleyicinin Unicode adını içeren bir BSTR 'ye Işaretçi `pName`.
+ `pName`Derleyicinin Unicode adını içerecek bir BSTR 'ye yönelik işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
 

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_frontEndMinor | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b329cd69d010cba4e3667bde0d7b976389037bb
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 43c3ab40a694dd2ae8623bc3ed6654cf93b0a3ca
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740640"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463857"
 ---
 # <a name="idiasymbolget_frontendminor"></a>IDiaSymbol::get_frontEndMinor
 Ön uç ikincil sürüm numarasını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_frontEndMinor ( 
@@ -36,15 +36,15 @@ HRESULT get_frontEndMinor ( 
 dışı Ön. son ikincil sürüm numarasını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
  Derleyici genellikle iki birincil öğeden oluşur: kaynak kodu bir ara forma ayrıştırmayı işleyen ön uç (Ayrıştırıcı) ve ara formu derlemeye dönüştüren bir arka uç (kod Oluşturucu). Ön uç için arka uçtan farklı bir sürüme sahip olması seyrek değildir.
 
- Ön uç veya arka uç sürüm numarası üç bölümden oluşur: \<major >. \<minor >. \<build >, \<major > Ana sürüm numarasıdır, \<minor > ikincil sürüm numarasıdır ve \<build > yapı numarasıdır. Örneğin, 13.10.3077.
+ Ön uç veya arka uç sürüm numarası üç bölümden oluşur: \<major> . \<minor> . \<build> , burada \<major> ana sürüm numarasıdır, \<minor> ikincil sürüm numarasıdır ve \<build> yapı numarasıdır. Örneğin, 13.10.3077.
 
 ## <a name="requirements"></a>Gereksinimler
 

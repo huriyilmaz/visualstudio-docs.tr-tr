@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackFrame:: get_rawLVarInstanceValue | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b1118517988f6a790cd4f6732eba3bc8a9fc25a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5a45568ea62a767d06a33c324f0f05a1f697e93f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741628"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464984"
 ---
 # <a name="idiastackframeget_rawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
 Bu yöntem belirtilen yerel değişkenin değerini ham bayt olarak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_rawLVarInstanceValue(
@@ -36,11 +36,11 @@ HRESULT get_rawLVarInstanceValue(
 #### <a name="parameters"></a>Parametreler
  `pInstance`
 
-'ndaki Değerini almak için bir yerel değişken örneğini temsil eden bir `IDiaLVarInstance` nesnesi.
+'ndaki `IDiaLVarInstance`Değerini almak için bir yerel değişken örneğini temsil eden nesne.
 
  `cbDataMax`
 
-'ndaki Arabellekteki `pbData` tarafından işaret edilen en fazla bayt sayısı. Bu en fazla 8 bayt (`sizeof(ULONGLONG)`) olabilir.
+'ndaki Arabellekte tarafından işaret edilen en fazla bayt sayısı `pbData` . Bu en fazla 8 bayt ( `sizeof(ULONGLONG)` ) olabilir.
 
  `pcbData`
 
@@ -48,10 +48,10 @@ dışı Arabellekte depolanan gerçek bayt sayısını döndürür.
 
  `pbData`
 
-dışı Verilerle doldurulacak bir arabellek. Bu `NULL` olamaz.
+dışı Verilerle doldurulacak bir arabellek. Bu, olamaz `NULL` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

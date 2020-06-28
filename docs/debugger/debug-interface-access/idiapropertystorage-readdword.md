@@ -1,7 +1,7 @@
 ---
 title: 'IDiaPropertyStorage:: ReadDWORD | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1764ec83a69dcc5daff267767594473bf690b341
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9d654fdfdfeacc9071081a65f3ad94b2ad240ae5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742904"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466590"
 ---
 # <a name="idiapropertystoragereaddword"></a>IDiaPropertyStorage::ReadDWORD
-Bir özellik kümesindeki `DWORD` değerleri okur.
+`DWORD`Bir özellik kümesindeki değerleri okur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT ReadDWORD ( 
@@ -34,17 +34,17 @@ HRESULT ReadDWORD ( 
 #### <a name="parameters"></a>Parametreler
  `id`
 
-'ndaki Okunacak özelliğin tanımlayıcısı (`PROPID` `ULONG` olarak WTypes. h içinde tanımlanmıştır).
+'ndaki Okunacak özelliğin tanımlayıcısı ( `PROPID` WTypes. h olarak bir olarak tanımlanır `ULONG` ).
 
  `pValue`
 
 dışı Özellik değerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde bir hata kodu döndürür. Özellik `DWORD` türünde değilse `E_INVALIDARG` döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür. `E_INVALIDARG`Özelliğin tür olup olmadığını döndürür `DWORD` .
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t_0, Windows tarafından 32 bitlik işaretsiz tamsayı olarak tanımlanır.
+ `DWORD`, Windows tarafından 32 bitlik işaretsiz tamsayı olarak tanımlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)
