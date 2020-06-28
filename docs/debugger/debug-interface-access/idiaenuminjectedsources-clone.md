@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumInjectedSources:: Clone | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9baba1709e3e89a982c0347cb744950a14cbb0b8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a9a16b1c42bc7eedd04636a9b7bbdd6f9216463e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744550"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468296"
 ---
 # <a name="idiaenuminjectedsourcesclone"></a>IDiaEnumInjectedSources::Clone
 Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT Clone ( 
@@ -36,7 +36,7 @@ HRESULT Clone ( 
 dışı Numaralandırıcı yinelemesi içeren bir [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) nesnesi döndürür. Eklenen kaynaklar çoğaltılamaz, yalnızca Numaralandırıcı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

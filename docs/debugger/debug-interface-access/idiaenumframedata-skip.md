@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumFrameData:: Skip | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c49aaf1f648a52e1701088b6579eda55cde6c355
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 02c56c0b49844b72384d641a53eb513c2a504acb
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744566"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468310"
 ---
 # <a name="idiaenumframedataskip"></a>IDiaEnumFrameData::Skip
 Bir numaralandırma dizisindeki belirtilen sayıda çerçeve verisi öğesini atlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT Skip ( 
@@ -36,7 +36,7 @@ HRESULT Skip ( 
 'ndaki Atlanacak numaralandırma dizisindeki çerçeve verisi öğelerinin sayısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, atlanacak daha fazla kayıt yoksa `S_FALSE` döndürür.
+ Başarılı olursa, öğesini döndürür `S_OK` ; Aksi takdirde, `S_FALSE` atlanacak daha fazla kayıt yoksa döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)

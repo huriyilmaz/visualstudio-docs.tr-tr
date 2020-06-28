@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumDebugStreamData | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5929f6f36c183d3a580ab605d313695cb584664
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b12c0c8823bbaf687e7157c272b64e50e7dd02b1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744846"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468429"
 ---
 # <a name="idiaenumdebugstreamdata"></a>IDiaEnumDebugStreamData
 Hata ayıklama veri akışındaki kayıtlara erişim sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumDebugStreamData : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda `IDiaEnumDebugStreamData` yöntemleri gösterilmektedir.
+Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaEnumDebugStreamData` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -46,7 +46,7 @@ Aşağıdaki tabloda `IDiaEnumDebugStreamData` yöntemleri gösterilmektedir.
 Bu arabirim bir hata ayıklama veri akışındaki kayıt akışını temsil eder. Her kaydın boyutu ve yorumu, kaydın geldiği veri akışına bağımlıdır. Bu arabirim, sembol dosyasındaki ham veri baytlarına etkin bir şekilde erişim sağlar.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-@No__t_2 nesnesini almak için [IDiaEnumDebugStreams:: Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md) veya [IDiaEnumDebugStreams:: Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md) yöntemlerini çağırın.
+Bir nesne almak için [IDiaEnumDebugStreams:: Item](../../debugger/debug-interface-access/idiaenumdebugstreams-item.md) veya [IDiaEnumDebugStreams:: Next](../../debugger/debug-interface-access/idiaenumdebugstreams-next.md) yöntemlerini çağırın `IDiaEnumDebugStreamData` .
 
 ## <a name="example"></a>Örnek
  Bu örnekte, tek bir veri akışına ve kayıtlarına nasıl erişebileceğiniz gösterilmektedir.
@@ -107,7 +107,7 @@ void PrintStreamData(IDiaEnumDebugStreamData* pStream)
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

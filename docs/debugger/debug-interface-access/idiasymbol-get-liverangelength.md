@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_liveRangeLength | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b663ef54959544764016fe59e4b0fb41607854b1
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: dac0c302fa85533624f58eac1538f8c8ba076e5b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739928"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463045"
 ---
 # <a name="idiasymbolget_liverangelength"></a>IDiaSymbol::get_liveRangeLength
 Yerel simgenin geçerli olduğu adres aralığının uzunluğunu döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_liveRangeLength ( 
@@ -36,7 +36,7 @@ HRESULT get_liveRangeLength ( 
 dışı Adres aralığının uzunluğunu döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 > [!NOTE]
 > Döndürülen bir hata kodu, simgenin canlı Aralık bilgilerine sahip olmadığı anlamına gelir.
@@ -48,7 +48,7 @@ dışı Adres aralığının uzunluğunu döndürür.
 
  Kitaplık: diaguid. lib
 
- DLL: msdia100. dll
+ DLL: msdia100.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumDebugStreams:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56bc5efdc7141b3364633fce07eff1ed251d6175
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fb5ef1ab5a0267d334f407c0a777a67aad77e5f1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744712"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468387"
 ---
 # <a name="idiaenumdebugstreamsreset"></a>IDiaEnumDebugStreams::Reset
 Bir numaralandırma dizisini başlangıca sıfırlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 HRESULT Reset ();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- @No__t_0 döndürür.
+ `S_OK` döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

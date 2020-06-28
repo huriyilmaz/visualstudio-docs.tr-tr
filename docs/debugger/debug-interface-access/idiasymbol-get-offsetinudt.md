@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_offsetInUdt | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0eeffba743d7fae1d473c45eb350fbfc8bcd0b9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cb70f66ca23f9710b2d41e39b4cd626829a095d0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739566"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462611"
 ---
 # <a name="idiasymbolget_offsetinudt"></a>IDiaSymbol::get_offsetInUdt
 UDT içindeki bir üyenin Kullanıcı tanımlı türünün (UDT) başlangıcına olan sapmayı alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_offsetInUdt( 
@@ -36,10 +36,10 @@ HRESULT get_offsetInUdt( 
 dışı Sembol konumunun bayt cinsinden sapmasını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
  Bu işlev, iyileştirilmiş bir derlemede yalnızca yerel kayıtlarda kullanılır.
@@ -49,7 +49,7 @@ dışı Sembol konumunun bayt cinsinden sapmasını döndürür.
 
  Kitaplık: diaguid. lib
 
- DLL: msdia100. dll
+ DLL: msdia100.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

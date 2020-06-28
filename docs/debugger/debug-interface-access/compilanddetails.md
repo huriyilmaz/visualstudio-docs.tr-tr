@@ -1,7 +1,7 @@
 ---
 title: CompilandDetails | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b0bcedda06119149413895415272c1a18934bce7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: da102a8968bc3e29091f6b4b58ee6ef78c6c3fb3
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85280830"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462255"
 ---
 # <a name="compilanddetails"></a>CompilandDetails
 Compiland bilgileri, bir `SymTagCompiland` etiketle (düşük ayrıntı) ve bir `SymTagCompilandDetails` etiketle (yüksek ayrıntı) simgeler arasında bölünür. `SymTagCompilandDetails`bir sembol ile kullanılamayan compiland hakkında çok fazla bilgi sağlar `SymTagCompiland` .
@@ -25,7 +25,7 @@ Compiland bilgileri, bir `SymTagCompiland` etiketle (düşük ayrıntı) ve bir 
 ## <a name="properties"></a>Özellikler
  Aşağıdaki tabloda, bu sembol türü için geçerli olan özellikler gösterilmektedir.
 
-|Özellik|Veri türü|Description|
+|Özellik|Veri türü|Açıklama|
 |--------------|---------------|-----------------|
 |[IDiaSymbol::get_backEndBuild](../../debugger/debug-interface-access/idiasymbol-get-backendbuild.md)|`DWORD`|Derleyicinin arka uç derleme numarası.|
 |[IDiaSymbol::get_backEndMajor](../../debugger/debug-interface-access/idiasymbol-get-backendmajor.md)|`DWORD`|Derleyicinin arka uç ana sürüm numarası.|

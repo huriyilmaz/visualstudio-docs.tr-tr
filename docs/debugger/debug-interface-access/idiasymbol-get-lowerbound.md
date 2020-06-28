@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_lowerBound | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ba113964ae316d7f887ccd558b804a4135865004
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d190ae0d2652eee465526aec6122326b6108f322
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739864"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462933"
 ---
 # <a name="idiasymbolget_lowerbound"></a>IDiaSymbol::get_lowerBound
 Bir FORTRAN dizi boyutunun alt sınırını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_lowerBound ( 
@@ -36,10 +36,10 @@ HRESULT get_lowerBound ( 
 dışı Bir FORTRAN dizi boyutunun alt sınırını temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: IDiaAddressMap::p ut_relativeVirtualAddressEnabled | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d733a51bd599b85dcc6d1121b8d21e1a687a351
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5a2e69bf6626cd11d82164a707c2611884b36411
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745038"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468562"
 ---
 # <a name="idiaaddressmapput_relativevirtualaddressenabled"></a>IDiaAddressMap::put_relativeVirtualAddressEnabled
 İstemcinin, göreli sanal adreslerin (RVA) hesaplanmasını ve kullanımını etkinleştirmesine veya devre dışı bırakmasına izin verir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT put_relativeVirtualAddressEnabled ( 
@@ -33,17 +33,17 @@ HRESULT put_relativeVirtualAddressEnabled ( 
 #### <a name="parameters"></a>Parametreler
  NewVal
 
-'ndaki Etkinleştirmek için `TRUE` veya devre dışı bırakmak için `FALSE`.
+'ndaki `TRUE`Öğesini etkinleştirmek veya `FALSE` devre dışı bırakmak için olarak ayarlayın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  DIA arabirimleri tarafından tanımlanan hata ayıklama nesnelerinin adresleri ve yürütülebilir dosyanın görüntü tabanına göreli olarak, göreli sanal adresler olarak alınabilir.
 
  RVA kullanımı, kesimler başlangıçta bir PDB dosyasından yüklendiğinde etkinleştirilir. RVA öğesinin geçerli durumunu almak için [IDiaAddressMap:: get_relativeVirtualAddressEnabled](../../debugger/debug-interface-access/idiaaddressmap-get-relativevirtualaddressenabled.md) yöntemini çağırın.
 
- [IDiaAddressMap:: set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) yöntemi için başarılı bir çağrıdan yeni görüntü üstbilgileri kurulduktan sonra RVA etkinleştirmek için `put_relativeVirtualAddress` yöntemi çağrılmalıdır.
+ `put_relativeVirtualAddress` [IDiaAddressMap:: set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) yöntemi için başarılı bir çağrıdan sonra RVA etkinleştirmek üzere yöntemi çağrılmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)

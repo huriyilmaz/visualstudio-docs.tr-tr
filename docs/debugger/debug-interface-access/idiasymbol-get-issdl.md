@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isSdl | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 6aa0e116-da75-4643-a4d7-d8e142231e21
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01503bca82046ace7f27cf4f80c163944009e89b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: abca9e52087a8cebd44ee21f9791a2ce290731d0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740079"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463206"
 ---
 # <a name="idiasymbolget_issdl"></a>IDiaSymbol::get_isSdl
 Modülün/SDL seçeneğiyle derlenip derlenmediğini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_isSdl(
@@ -30,10 +30,10 @@ HRESULT get_isSdl(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Modülün/SDL seçeneğiyle derlenip derlenmediğini belirten `BOOL` işaretçisi.
+dışı `BOOL`Modülün/SDL seçeneğiyle derlenip derlenmeyeceğini belirten bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

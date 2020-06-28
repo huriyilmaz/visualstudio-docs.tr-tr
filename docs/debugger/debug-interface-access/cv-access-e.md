@@ -1,7 +1,7 @@
 ---
 title: CV_access_e | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbe338ba9d3aa6cbc795606c3fa285526afdfd36
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 00be9f52b8cac067e1d8482fe0378737c68909c4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745363"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462150"
 ---
 # <a name="cv_access_e"></a>CV_access_e
 Üye işlevlerinin ve değişkenlerinin görünürlük kapsamını (erişim düzeyi) belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 typedef enum CV_access_e {
@@ -35,12 +35,12 @@ typedef enum CV_access_e {
 ## <a name="elements"></a>Öğeler
 CV_private üyesinin özel erişimi vardır.
 
-CV_protected üyesinin korumalı erişimi vardır.
+CV_protected üyesinin erişimi korumalı.
 
-CV_public üyesinin ortak erişimi vardır.
+CV_public üyenin ortak erişimi vardır.
 
 ## <a name="remarks"></a>Açıklamalar
-@No__t_0 erişim belirticisi, genellikle sınıfın hem özel hem de korumalı öğelerine erişimi olan üye olmayan işlevler tarafından kullanıldığından, burada dahil değildir. @No__t_1 erişimi olan sembolleri bulmak için [IDiaSymbol:: get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) yöntemini kullanın.
+`friend`Genellikle sınıfın hem özel hem de korumalı öğelerine erişimi olan üye olmayan işlevler tarafından kullanıldığından, erişim belirticisi buraya dahil edilmez. Access ile sembolleri bulmak için [IDiaSymbol:: get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) metodunu kullanın `SymTagFriend` .
 
 ## <a name="requirements"></a>Gereksinimler
 Üst bilgi: cvconst. h

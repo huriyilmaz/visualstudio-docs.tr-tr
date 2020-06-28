@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_rank | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c5cff86464a4034ad869cdfe231a88ad128dbf52
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 75e21d5af58d857f81d76bfa78af1d476f47f104
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739482"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462520"
 ---
 # <a name="idiasymbolget_rank"></a>IDiaSymbol::get_rank
 Bir FORTRAN çok boyutlu dizisinin derecesini (boyut sayısı) alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_rank ( 
@@ -36,13 +36,13 @@ HRESULT get_rank ( 
 dışı Bir FORTRAN çok boyutlu dizisindeki boyut sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> `S_FALSE` dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Rank, dizinin `myarray[1,2,3]`olarak bildirildiği bir dizideki boyut sayısını ifade eder. Bu örnekte 3 ve 3 boyutlu bir sıralama vardır. Sıralama, her boyut için C++ bir dizi dizi kavramını kullanan için geçerlidir (yani,`myarray[1][2][3]`).
+ Rank, dizinin olarak bildirildiği bir dizideki boyut sayısını ifade eder `myarray[1,2,3]` . Bu örnekte 3 ve 3 boyutlu bir sıralama vardır. Sıralama, her boyut için dizi dizisi kavramını kullanan C++ için geçerlidir (yani, `myarray[1][2][3]` ).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

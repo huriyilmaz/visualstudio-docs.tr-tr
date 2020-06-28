@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumInjectedSources:: Item | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 91be2f4f437cfeed30b0741d10bf719ba0ed2b71
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 76e89c89bca8b164645c71df6083b230850e61ca
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744511"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468275"
 ---
 # <a name="idiaenuminjectedsourcesitem"></a>IDiaEnumInjectedSources::Item
 Eklenen kaynağı bir dizin aracılığıyla alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT Item ( 
@@ -34,14 +34,14 @@ HRESULT Item ( 
 #### <a name="parameters"></a>Parametreler
  dizin
 
-'ndaki Alınacak [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) nesnesinin dizini. Dizin, `count` [IDiaEnumInjectedSources:: get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md) yöntemi tarafından döndürülen 0 ' dan `count`-1 aralığındadır.
+'ndaki Alınacak [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) nesnesinin dizini. Dizin, `count` `count` [IDiaEnumInjectedSources:: get_Count](../../debugger/debug-interface-access/idiaenuminjectedsources-get-count.md) yöntemi tarafından döndürülen 0 ile-1 aralığıdır.
 
  ınjectedsource
 
 dışı Eklenen kaynağı temsil eden bir [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

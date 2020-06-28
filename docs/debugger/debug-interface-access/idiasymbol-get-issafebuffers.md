@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isSafeBuffers | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f4c3ab653c0a5540410d8e3e0b5426c4d0bcde5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 84123d88bc379ea670caca90d66207fc6e16f26f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740083"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463213"
 ---
 # <a name="idiasymbolget_issafebuffers"></a>IDiaSymbol::get_isSafeBuffers
-Güvenli bir arabellek için preprocesser yönergesinin kullanılıp kullanılmayacağını belirten bir bayrak alır. [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) `SymTagFunction` olarak ayarlandığında kullanın.
+Güvenli bir arabellek için preprocesser yönergesinin kullanılıp kullanılmayacağını belirten bir bayrak alır. [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) olarak ayarlandığında kullanın `SymTagFunction` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_isSafeBuffers( 
@@ -33,13 +33,13 @@ HRESULT get_isSafeBuffers( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı İşaretçi güvenli bir arabellek için Önişlemci yönergesi kullanıyorsa `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
+dışı `TRUE`İşaretçi güvenli bir arabellek için Önişlemci yönergesi kullanıyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -48,7 +48,7 @@ dışı İşaretçi güvenli bir arabellek için Önişlemci yönergesi kullanı
 
  Kitaplık: diaguid. lib
 
- DLL: msdia100. dll
+ DLL: msdia100.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

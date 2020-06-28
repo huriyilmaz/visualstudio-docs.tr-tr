@@ -1,7 +1,7 @@
 ---
 title: 'IDiaDataSource:: Loaddatafromistread | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b2bcf657b4404ed72059351175d124a9c07abb46
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7a6a19d926ead4c2c38ff69544311caa1f726b3e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744949"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468513"
 ---
 # <a name="idiadatasourceloaddatafromistream"></a>IDiaDataSource::loadDataFromIStream
 Bellek içi veri akışı aracılığıyla erişilen bir program veritabanı (. pdb) dosyasında depolanan hata ayıklama verilerini hazırlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT loadDataFromIStream ( 
@@ -33,10 +33,10 @@ HRESULT loadDataFromIStream ( 
 #### <a name="parameters"></a>Parametreler
  pIStream
 
-'ndaki Kullanılacak veri akışını temsil eden bir <xref:IStream> nesnesi.
+'ndaki <xref:IStream>Kullanılacak veri akışını temsil eden nesne.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.
 
 |Değer|Açıklama|
 |-----------|-----------------|
@@ -45,7 +45,7 @@ HRESULT loadDataFromIStream ( 
 |E_UNEXPECTED|Veri kaynağı zaten hazırlandı.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, bir yürütülebilir dosya için hata ayıklama verilerinin bir <xref:IStream> nesnesi aracılığıyla bellekten elde etmesine olanak tanır.
+ Bu yöntem, bir yürütülebilir dosya için hata ayıklama verilerinin bir nesne aracılığıyla bellekten elde etmesine olanak tanır <xref:IStream> .
 
  Bir. pdb dosyasını doğrulama olmadan yüklemek için [IDiaDataSource:: loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) metodunu kullanın.
 

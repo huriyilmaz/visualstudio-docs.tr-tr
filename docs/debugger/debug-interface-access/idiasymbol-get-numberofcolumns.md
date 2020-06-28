@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_numberOfColumns | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 64834351-e2c9-4f1c-9dc0-2abb5478bc63
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca99493f136c1a932f45fe719c52a9d85a1a852e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 69634b4f577607844b18e126018a0acd8d27ec9b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739682"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462751"
 ---
 # <a name="idiasymbolget_numberofcolumns"></a>IDiaSymbol::get_numberOfColumns
 Matristeki sütun sayısını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_numberOfColumns(
@@ -30,10 +30,10 @@ HRESULT get_numberOfColumns(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Matriste sütun sayısını tutan `DWORD` için bir işaretçi.
+dışı `DWORD`Matriste sütun sayısını tutan bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

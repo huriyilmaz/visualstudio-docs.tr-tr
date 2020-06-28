@@ -1,7 +1,7 @@
 ---
-title: 'IDiaSymbol:: get_Offset | Microsoft Docs'
+title: 'IDiaSymbol:: get_offset | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: feb7620e507c5e57cf025211e42d541440af22f3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 71105c6c3f93f259bdb6ce8e5f46abe30c5953c2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739583"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462618"
 ---
 # <a name="idiasymbolget_offset"></a>IDiaSymbol::get_offset
-Sembol konumunun sapmasını alır. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) `LocIsRegRel` veya `LocIsBitField` olduğunda kullanın.
+Sembol konumunun sapmasını alır. [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) veya olduğunda kullanın `LocIsRegRel` `LocIsBitField` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_offset ( 
@@ -36,13 +36,13 @@ HRESULT get_offset ( 
 dışı Sembol konumunun bayt cinsinden sapmasını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu fark, daha önce belirlenen bilinen bir noktadan. Örneğin, `LocIsBitField` bir konum türünün konumu genellikle kapsayan sınıfın başından itibaren oluşur.
+ Bu fark, daha önce belirlenen bilinen bir noktadan. Örneğin, bir `LocIsBitField` konum türünün konumu genellikle kapsayan sınıfın başından itibaren olur.
 
 ## <a name="requirements"></a>Gereksinimler
 

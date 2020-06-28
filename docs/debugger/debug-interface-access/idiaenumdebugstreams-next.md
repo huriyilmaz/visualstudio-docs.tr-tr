@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumDebugStreams:: Next | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63b66729192c9c976ecd226ab21aad73b94bf9f2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e61e7c1d7d955c5586c19ec21a43fd4ab9abea5b
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744723"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468394"
 ---
 # <a name="idiaenumdebugstreamsnext"></a>IDiaEnumDebugStreams::Next
 Sabit Listesi dizisinde belirtilen sayıda hata ayıklama akışı alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT Next ( 
@@ -46,7 +46,7 @@ dışı Alınmakta olan hata ayıklama akışlarını temsil eden [IDiaEnumDebug
 dışı Döndürülen hata ayıklama akışlarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Daha fazla akış yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla akış yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

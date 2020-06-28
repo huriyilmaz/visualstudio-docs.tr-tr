@@ -1,7 +1,7 @@
 ---
 title: 'IDiaDataSource:: openSession | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7dd6ab61db3e3bafd594298aa41d32bce64d4941
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b49c90374975865edcac8a94c504e1fa991d711a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744927"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468506"
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
 Sembolleri sorgulamak için bir oturum açar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT openSession ( 
@@ -36,18 +36,18 @@ ppSession
 dışı Açık oturumu temsil eden bir [IDiaSession](../../debugger/debug-interface-access/idiasession.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |E_UNEXPECTED|[IDiaDataSource](../../debugger/debug-interface-access/idiadatasource.md) nesnesi daha önce bir sembol kaynağı ile başlatılmamış.|
-|E_INVALIDARG|Geçersiz `ppSession` parametresi.|
+|E_INVALIDARG|Geçersiz `ppSession` parametre.|
 |E_OUTOFMEMORY|Oturumu açmak için yeterli bellek yok.|
 
 ## <a name="remarks"></a>Açıklamalar
 Bu yöntem bir veri kaynağı için bir [IDiaSession](../../debugger/debug-interface-access/idiasession.md) nesnesi açar.
 
-nesneleri `IDiaSession` veri kaynağına sorguları uygular. Bir oturum, her hata ayıklama sembolleri kümesi için bir adres alanını yönetir. Veri kaynağı sembolleri tarafından tanımlanan. exe veya. dll dosyası birden çok adres aralığında etkin ise (örneğin, birden çok işlem yüklendiği için), her bir adres aralığı için bir oturum kullanılmalıdır.
+`IDiaSession`nesneler veri kaynağına sorguları uygular. Bir oturum, her hata ayıklama sembolleri kümesi için bir adres alanını yönetir. Veri kaynağı sembolleri tarafından tanımlanan. exe veya. dll dosyası birden çok adres aralığında etkin ise (örneğin, birden çok işlem yüklendiği için), her bir adres aralığı için bir oturum kullanılmalıdır.
 
 ## <a name="example"></a>Örnek
 

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumDebugStreams:: öğe | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a07669e36d397550c28d1cc4a5de2ad300763e6
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 27484ce70b9e98ef7351d03d00ed91515b34e9af
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744736"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468408"
 ---
 # <a name="idiaenumdebugstreamsitem"></a>IDiaEnumDebugStreams::Item
 Bir dizin veya ad aracılığıyla hata ayıklama akışı alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT Item (
@@ -34,14 +34,14 @@ HRESULT Item (
 #### <a name="parameters"></a>Parametreler
 dizin
 
-'ndaki Alınacak hata ayıklama akışının dizini veya adı. Bir tamsayı değişkeni kullanılırsa, `count` [IDiaEnumDebugStreams:: get_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md) yöntemi tarafından döndürülen `count`-1 aralığında olmalıdır.
+'ndaki Alınacak hata ayıklama akışının dizini veya adı. Bir tamsayı değişkeni kullanılırsa, bu, `count` `count` [IDiaEnumDebugStreams:: get_Count](../../debugger/debug-interface-access/idiaenumdebugstreams-get-count.md) yöntemi tarafından döndürülen 0 ile-1 aralığında olmalıdır.
 
 akış
 
 dışı Belirtilen hata ayıklama akışını temsil eden bir [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
 

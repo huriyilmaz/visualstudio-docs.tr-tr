@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_lexicalParent | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87d44f2c8dfb723f9f2653d6f9d89a2c1c71ef5f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d1a381fe495208bf3dd1f530a2d5e3dffd7c3c76
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739966"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463066"
 ---
 # <a name="idiasymbolget_lexicalparent"></a>IDiaSymbol::get_lexicalParent
 Simgenin sözcük üst öğesi için bir başvuru alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_lexicalParent ( 
@@ -36,10 +36,10 @@ HRESULT get_lexicalParent ( 
 dışı Simgenin sözcük üst öğesini temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
  Bir simgenin sözcük üst öğesi kapsayan işlev veya modüldür. Örneğin, işlev parametresinin veya yerel değişkenin sözlü üst öğesi işlevin kendisidir, çünkü işlevin alt öğe üst öğesi içinde tanımlandığı modüldür.

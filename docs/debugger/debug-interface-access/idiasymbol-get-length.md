@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_length | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 114d9f7b00bbe5d322e7b6893e96fbbabec9d002
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2d9adc7949b0a6df886ceda0c1ddc6f3b9ee90d4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739978"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463073"
 ---
 # <a name="idiasymbolget_length"></a>IDiaSymbol::get_length
 Bu sembol tarafından temsil edilen nesne tarafından kullanılan bit veya bayt sayısını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_length ( 
@@ -36,13 +36,13 @@ HRESULT get_length ( 
 dışı Bu sembol tarafından temsil edilen nesne tarafından kullanılan bayt veya bellek bitlerinin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Simgenin [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) `LocIsBitField`, bu yöntemin döndürdüğü uzunluk bit içinde olur; Aksi takdirde, uzunluk diğer tüm konum türleri için bayt cinsinden olur.
+ Simgenin [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) ise `LocIsBitField` , bu yöntemin döndürdüğü uzunluk bit olarak olur; aksi takdirde, uzunluk diğer tüm konum türleri için bayt cinsinden olur.
 
 ## <a name="example"></a>Örnek
 

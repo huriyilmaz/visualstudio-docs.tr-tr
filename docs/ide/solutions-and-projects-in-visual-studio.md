@@ -1,6 +1,6 @@
 ---
 title: Çözümler ve projeler
-ms.date: 10/05/2017
+ms.date: 06/26/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.addnewitem
@@ -20,12 +20,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 742ee7a8450c5d2cf4d7a167a1977b3c1c18ef21
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: ad0ee64afa78a962271d2b702ee525287c5b2457
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285237"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468736"
 ---
 # <a name="solutions-and-projects-in-visual-studio"></a>Visual Studio 'da çözümler ve projeler
 
@@ -53,7 +53,7 @@ Bir proje bir *çözüm*içinde yer alır. Adına rağmen çözüm bir "yanıt" 
 
 Visual Studio, çözümlerin ayarlarını depolamak için iki dosya türü (*. sln* ve *. suo*) kullanır:
 
-|Dahili numara|Name|Description|
+|Dahili numara|Adı|Açıklama|
 |---------------|----------|-----------------|
 |. sln|Visual Studio çözümü|Çözümdeki projeleri, proje öğelerini ve çözüm öğelerini düzenler.|
 |. suo|Çözüm Kullanıcı seçenekleri|Kesme noktaları gibi kullanıcı düzeyindeki ayarları ve özelleştirmeleri depolar.|
@@ -74,13 +74,16 @@ Yeni bir proje oluşturduktan sonra, projeyi ve çözümü ve ilişkili öğeler
 
 Birçok menü komutu, **Çözüm Gezgini**çeşitli öğelerde sağ tıklama menüsünde bulunur. Bu komutlar bir proje oluşturma, NuGet paketlerini yönetme, bir başvuru ekleme, bir dosyayı yeniden adlandırma ve Testleri çalıştırma, yalnızca birkaç kez adlandırma içerir. **Çözüm Gezgini** üstündeki araç çubuğunda, bir çözüm görünümünden klasör görünümüne geçiş yapmak, gizli dosyaları göstermek, tüm düğümleri daraltmak ve daha fazlası için düğmeler bulunur.
 
+> [!TIP]
+> Çözüm Gezgini kapattıysanız ve yeniden açmak istiyorsanız, menü çubuğundan **pencere**  >  **düzeni penceresini Sıfırla** ' yı seçin.
+
 ASP.NET Core projeleri için, dosyaların **Çözüm Gezgini**nasıl iç içe yerleşdiğini özelleştirebilirsiniz. Daha fazla bilgi için bkz. [Çözüm Gezgini dosya iç içe geçirmeyi özelleştirme](file-nesting-solution-explorer.md).
 
-> [!TIP]
-> Çözüm Gezgini görünen simgelerin bir listesini görüntülemek için [sınıf görünümü ve nesne tarayıcısı simgeleri](class-view-and-object-browser-icons.md) sayfasına bakın.
+Çözüm Gezgini görünen simgelerin bir listesini görüntülemek için, bkz. [sınıf görünümü ve nesne tarayıcısı simgeleri](class-view-and-object-browser-icons.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio IDE](../get-started/visual-studio-ide.md)
+- [Projeleri taşıma, geçirme ve yükseltme](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
 - [Projeler ve çözümler (Mac için Visual Studio)](/visualstudio/mac/projects-and-solutions)
 - [Proje öğeleri ekleme ve kaldırma (Mac için Visual Studio)](/visualstudio/mac/add-and-remove-project-items)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isLTCG | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d3fa97d5612b61151d9c435b91f500c87af0b23
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 009fcf437f56852e324e392f6a5691dd23e23ebc
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740210"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463367"
 ---
 # <a name="idiasymbolget_isltcg"></a>IDiaSymbol::get_isLTCG
 [Compiland](../../debugger/debug-interface-access/compiland.md) 'ın, tüm program iyileştirmesine yardımcı olan [/LTCG (bağlama zamanı kodu oluşturma)](/cpp/build/reference/ltcg-link-time-code-generation)bağlayıcı anahtarıyla bağlanıp bağlanmadığını belirten bir bayrak alır. Bu anahtar yalnızca yönetilen kod için geçerlidir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_iSLTCG(
@@ -33,13 +33,13 @@ HRESULT get_iSLTCG(
 #### <a name="parameters"></a>Parametreler
  pFlag
 
-dışı @No__t_1/LTCG bağlayıcı anahtarıyla bağlanmışsa `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
+dışı `TRUE` `compiland` ' Nin/LTCG bağlayıcı anahtarıyla bağlantılı olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 

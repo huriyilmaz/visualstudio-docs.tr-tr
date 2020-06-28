@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_objectFileName | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 21793872-4879-4e4d-b527-dcf70aa7fb31
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e7717e6fbf19fdf8f14e7667db171991319fb3b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d578ddc7510aaec82418bd7a637d9edef7c9f708
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739631"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462716"
 ---
 # <a name="idiasymbolget_objectfilename"></a>IDiaSymbol::get_objectFileName
 Nesne dosyası adını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_objectFilename(
@@ -30,10 +30,10 @@ HRESULT get_objectFilename(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Nesne dosyası adını tutan `BSTR` için bir işaretçi.
+dışı `BSTR`Nesne dosyası adını tutan bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_noInline | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e5cc592f6be2e3fdd4f791c637e588e10a187ae2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 74a2cd3daa2c1ca466b0e302c916a220fa31e7d0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739743"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462842"
 ---
 # <a name="idiasymbolget_noinline"></a>IDiaSymbol::get_noInline
 İşlevin satır içi değil olarak işaretlenip işaretlenmediğini belirten bir bayrak alır ( [noinline](/cpp/cpp/noinline) özniteliği kullanılarak).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_noInline(
@@ -33,13 +33,13 @@ HRESULT get_noInline(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı İşlevin `noinline` özniteliği varsa `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
+dışı `TRUE`İşlevin özniteliğe sahip olup olmadığını döndürür `noinline` ; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 

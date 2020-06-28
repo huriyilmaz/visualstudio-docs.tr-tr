@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumLineNumbers:: Next | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 07402ef7028ecfb7bb5b2c6e33ae06bc98ffe709
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1546c0bc7b8682b918d583769a9f580323c9dda4
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744384"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468212"
 ---
 # <a name="idiaenumlinenumbersnext"></a>IDiaEnumLineNumbers::Next
 Sabit Listesi dizisinde belirtilen sayıda satır numarasını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT Next ( 
@@ -46,7 +46,7 @@ dışı İstenen satır numaralarını temsil eden [IDiaLineNumber](../../debugg
 dışı Getirilen Numaralandırıcı içindeki satır numaralarının sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Daha fazla satır numarası yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla satır numarası yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_numberOfRegisterIndices | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1ec8b8ea-e423-4327-8dc0-a390e6e3ffb0
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6074f8d4954ced530640bedcd60ab397a2840e98
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 21ca59f0cef5e8e4a1771d2a20da12af17ec6fb5
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739656"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462730"
 ---
 # <a name="idiasymbolget_numberofregisterindices"></a>IDiaSymbol::get_numberOfRegisterIndices
 Kayıt dizinlerinin sayısını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_numberOfRegisterIndices(
@@ -30,10 +30,10 @@ HRESULT get_numberOfRegisterIndices(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Kayıt dizinlerinin sayısını tutan `DWORD` için bir işaretçi.
+dışı `DWORD`Kayıt dizinlerinin sayısını tutan bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaAddressMap:: get_addressMapEnabled | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b518cf3728279ea8db267d01867fa66ceae35b21
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e23f5752229ece7ecac02362c294bc661d109039
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745187"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468597"
 ---
 # <a name="idiaaddressmapget_addressmapenabled"></a>IDiaAddressMap::get_addressMapEnabled
 Belirli bir oturum için bir adres eşlemesinin yapılıp yapılmayacağını belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_addressMapEnabled ( 
@@ -33,15 +33,15 @@ HRESULT get_addressMapEnabled ( 
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-dışı Adres eşlemesi etkinse `TRUE` döndürür.
+dışı `TRUE`Adres eşlemesinin etkin olup olmadığını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Yürütülebilir son işlemciler bazen yürütülebilir dosyayı güncelleştirebilir. DIA, sembollerin yeni düzene çevirisini desteklemek için bir mekanizma içerir.
 
- İstemci uygulamaları, [IDiaSession](../../debugger/debug-interface-access/idiasession.md) arabiriminden [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md) arabirimini alarak ve [IDiaAddressMap:: set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) yöntemini ve ardından bir çağrısını çağırarak, [belirli bir oturumun adres eşlemesini ayarlayabilir. IDiaAddressMap::p ut_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) yöntemi. @No__t_0 yöntemi, `put_addressMapEnabled` metodunu çağırma sonuçlarını döndürür.
+ İstemci uygulamaları, [IDiaSession](../../debugger/debug-interface-access/idiasession.md) arabiriminden [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md) arabirimini alarak ve [ıdiaaddressmap:: Set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) yöntemini çağırarak ve sonra [IDiaAddressMap::p ut_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) yöntemine bir çağrı yaparak belirli bir oturumun adres eşlemesini ayarlayabilir. `get_addressMapEnabled`Yöntemi, yöntemini çağırma sonuçlarını döndürür `put_addressMapEnabled` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)

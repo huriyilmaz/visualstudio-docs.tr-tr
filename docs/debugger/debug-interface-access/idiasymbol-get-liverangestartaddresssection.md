@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_liveRangeStartAddressSection | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a23f0661d8af6417d754fd7a71c66c5dd3ef1135
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2b8ba63eb1b68cc5e630e650bff80d86d6fb0b3f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739900"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463031"
 ---
 # <a name="idiasymbolget_liverangestartaddresssection"></a>IDiaSymbol::get_liveRangeStartAddressSection
 Yerel sembolün geçerli olduğu aralığın başlangıç adresinin bölüm bölümünü döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_liveRangeStartAddressSection ( 
@@ -36,7 +36,7 @@ HRESULT get_liveRangeStartAddressSection ( 
 dışı Başlangıç adres aralığının bölüm bölümünü döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 > [!NOTE]
 > Döndürülen bir hata kodu, simgenin canlı Aralık bilgilerine sahip olmadığı anlamına gelir.
@@ -51,7 +51,7 @@ dışı Başlangıç adres aralığının bölüm bölümünü döndürür.
 
  Kitaplık: diaguid. lib
 
- DLL: msdia100. dll
+ DLL: msdia100.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

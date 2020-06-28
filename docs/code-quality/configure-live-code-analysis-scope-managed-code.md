@@ -7,74 +7,74 @@ helpviewer_keywords:
 - background analysis
 - analysis scope
 - full solution analysis
-author: jillre
-ms.author: jillfra
+author: Mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 300e3f276a45cfe2115311c7d27eedce365616cf
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: 5b1e4362755bbbfa9ea220fcbdf92abf92723521
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79432240"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462129"
 ---
-# <a name="how-to-configure-live-code-analysis-scope-for-managed-code"></a>Nasıl yapilir: Yönetilen kod için canlı kod çözümleme kapsamını yapılandırma
+# <a name="how-to-configure-live-code-analysis-scope-for-managed-code"></a>Nasıl yapılır: yönetilen kod için canlı kod analizi kapsamını yapılandırma
 
-## <a name="what-is-live-code-analysis-for-managed-code"></a>Yönetilen kod için "Canlı kod analizi" nedir?
-Visual Studio, editörde kaynak dosyaları düzenlerken *arka plan çözümlemesi*olarak da adlandırılan bir dizi canlı kod analizini yürütür. Bazıları kabul edilebilir bir Visual Studio IDE düzenleme deneyimi için minimal analiz gereklidir. Bazıları IDE özellikleri için geliştirilmiş yanıt içindir. Bazıları Roslyn çözümleyicilerinden tanılama ve kod düzeltmeleri gibi ek IDE işlevselliği etkinleştirmek için olsa da. İşlevsellik durumuna bağlı olarak, bu analizler aşağıdaki gibi gruplandırılabilir:
+## <a name="what-is-live-code-analysis-for-managed-code"></a>Yönetilen kod için "canlı kod analizi" nedir?
+Visual Studio, düzenleyicide kaynak dosyaları düzenlediğinizde *arka plan Analizi*olarak da adlandırılan, bir dizi Canlı Kod analizini yürütür. Bir kısmı, kabul edilebilir bir Visual Studio IDE düzenlemesi deneyimi için en az analiz gerektirir. Bazıları IDE özellikleri için iyileştirilmiş yanıt verme içindir. Bu bir nedenle, Roslyn çözümleyicilerinin tanılama ve kod düzeltmeleri gibi ek IDE işlevlerini etkinleştirmektir. İşlevlere bağlı olarak, bu çözümlemeler aşağıdaki gibi gruplandırılabilir:
 
-- **Tanılamanın arka plan hesaplaması**: Kaynak dosyalardaki hataları, uyarıları ve önerileri hesaplamak için analiz. Bu tanılama, hata listesindeki girişler ve düzenleyicide dalgalı olarak gösteriş. Bunlar iki kategoriye ayırılabilir:
-    - C# ve Visual Basic derleyici tanılama
-    - Roslyn analizör tanılama, içerir:
+- **Tanılama arka plan hesaplama**: kaynak dosyalardaki hataları, uyarıları ve önerileri hesaplamak için analiz. Bu Tanılamalar, hata listesinde ve düzenleyicide dalgalı çizgiler olarak giriş gösterir. Bunlar iki kategoride sınıflandırılabilirler:
+    - C# ve Visual Basic derleyici tanılaması
+    - Şunları içeren Roslyn Çözümleyicisi tanılaması:
 
-        - Kod stili önerileri için yerleşik IDE çözümleyicileri ve
+        - Yerleşik IDE, kod stili önerilerini ve
         - Geçerli çözümdeki projeler için [yüklenen](./install-roslyn-analyzers.md) üçüncü taraf çözümleyici paketleri.
 
-- **Diğer arka plan analizleri**: IDE özellikleriiçin duyarlılık ve Visual Studio etkileşimini geliştirmek için analiz. Bu tür analizlere örnek olarak şunlar verilebilir:
-    - Açık dosyaların arka plan ayrıştisi.
-    - Belirli IDE özelliklerinin daha iyi yanıt verme özelliği ne kadar önemli simgeler gerçekleştirmek için açık dosyalara sahip projelerin arka plan derlemesi.
+- **Diğer arka plan analizleri**: IDE özelliklerine yönelik yanıt verme ve Visual Studio etkileşimini artırmaya yönelik analiz. Bu analizler için bazı örnekler şunlardır:
+    - Açık dosyaları arka planda ayrıştırma.
+    - Belirli IDE özelliklerinde iyileştirilmiş yanıt verme için sembolleri gerçekleştirmek üzere açık dosyaları olan projelerin arka plan derlenmesi.
     - Sözdizimi ve sembol önbellekleri oluşturma.
-    - Formlar, denetimler vb. gibi kaynak dosyalar için tasarımcı ilişkilendirme algılama
+    - Formlar, denetimler vb. kaynak dosyaları için tasarımcı ilişkilendirmesi algılanıyor.
 
 ## <a name="default-analysis-scope"></a>Varsayılan analiz kapsamı
 
-Varsayılan olarak, visual _studio'da açılan_ tüm dosyalar için tanılamanın arka plan hesaplaması için canlı kod çözümlemesi yürütülür. Yukarıda belirtilen _diğer arka plan analizlerinin_ birkaçı, en az bir açık dosyaya sahip olan tüm projeler için yürütülür. Birkaç arka plan analizleri tüm çözüm için yürütmek iken.
+Varsayılan olarak, Visual Studio 'da _açılan_ tüm dosyalar için tanılama 'nın arka plan hesaplama için canlı kod analizi yürütülür. Yukarıda belirtilen _diğer arka plan analizlerinin_ birkaçı, en az bir açık dosya içeren tüm projeler için yürütülür. Tüm çözüm için birkaç arka plan analizleri yürütüyoruz.
 
 ## <a name="custom-analysis-scope"></a>Özel analiz kapsamı
 
-Her arka plan çözümlemesi varsayılan kapsamı, müşteri senaryolarının ve çözümlerinin çoğu için en iyi kullanıcı deneyimi, işlevselliği ve performansı için ayarlanmıştır. Ancak, müşterilerin arka plan çözümlemesi azaltmak veya artırmak için bu kapsamı özelleştirmek isteyebilirsiniz durumlar vardır. Örnek:
+Her bir arka plan analizinin varsayılan kapsamı, çoğu müşteri senaryosu ve çözümü için en iyi kullanıcı deneyimi, işlevselliği ve performansı için ayarlanmıştır. Ancak, müşterilerin arka plan analizini azaltmak veya artırmak üzere bu kapsamı özelleştirmek isteyebileceğiniz durumlar vardır. Örneğin:
 
-- Güç tasarrufu modu: Kullanıcılar dizüstü bilgisayar pili ile çalışıyorsa, daha uzun pil ömrü için güç tüketimini en aza indirmek isteyebilirler. Bu senaryoda, arka plan çözümlemesi en aza indirmek isteyebilirsiniz.
-- İsteğe bağlı kod analizi: Kullanıcılar canlı çözümleyici yürütmeyi kapatmayı ve isteğe bağlı kod çözümlemesi manuel olarak çalıştırmayı tercih ederlerse, arka plan çözümlemesi en aza indirmek isterler. [Bkz. Nasıl: İsteğe bağlı kod çözümlemesi el ile çalıştırın.](./how-to-run-code-analysis-manually-for-managed-code.md)
-- Tam çözüm analizi: Kullanıcılar, düzenleyicide açık olup olmadıklarına bakılmaksızın, çözümdeki tüm dosyalardaki tüm tanılamaları her zaman görmek istiyorlarsa. Bu senaryoda, tüm çözüm için arka plan çözümleme kapsamını en üst düzeye çıkarmak isteyebilirsiniz.
+- Güç tasarrufu modu: kullanıcılar dizüstü pille çalışıyorsa, daha uzun pil ömrü için güç tüketimini en aza indirmek isteyebilir. Bu senaryoda, arka plan analizini en aza indirmek istiyoruz.
+- İsteğe bağlı kod analizi: kullanıcılar gerçek zamanlı çözümleyici yürütmeyi kapatmayı ve isteğe bağlı kod analizini el ile çalıştırmayı tercih ediyorsanız, arka plan analizini en aza indirmek istedikleri olur. Bkz. [nasıl yapılır: isteğe bağlı kod analizini el ile çalıştırma](./how-to-run-code-analysis-manually-for-managed-code.md).
+- Tam çözüm Analizi: kullanıcılar, düzenleyicide açık olup olmadıkları bağımsız olarak, Çözümdeki tüm dosyalardaki tüm tanılamayı her zaman görmek istiyorlarsa. Bu senaryoda, tüm çözüme arka plan Analizi kapsamını en üst düzeye çıkarmak istiyoruz.
 
-Visual Studio 2019 sürüm 16.5'ten başlayarak, kullanıcılar C# ve Visual Basic projeleri için tanılama hesaplaması da dahil olmak üzere tüm canlı kod analizlerinin kapsamını açıkça özelleştirebilirler. Kullanılabilir analiz kapsamları şunlardır:
+Visual Studio 2019 sürüm 16,5 ' den başlayarak, kullanıcılar C# ve Visual Basic projeleri için tanılama hesaplaması dahil olmak üzere tüm canlı kod analizinin kapsamını açıkça özelleştirebilir. Kullanılabilir analiz kapsamları şunlardır:
 
-- **Geçerli belge**: Yalnızca düzenleyicideki geçerli veya görünür dosyayı yürütmek için canlı kod çözümleme kapsamını en aza indirir.
-- **Açık belgeler**: Yukarıdaki bölümde açıklandığı gibi varsayılan canlı kod analizi kapsamı.
-- **Tüm çözüm**: Tüm çözümdeki tüm dosya ve projeler için yürütmek için canlı kod analizi kapsamını en üst düzeye çıkarır.
+- **Geçerli belge**: yalnızca düzenleyicideki geçerli veya görünür dosya için yürütmek üzere canlı kod analizi kapsamını en aza indirir.
+- **Açık belgeler**: Yukarıdaki bölümde açıklandığı gibi, varsayılan canlı kod analizi kapsamı.
+- Tüm **çözüm**: tüm çözüm içindeki tüm dosyalar ve projeler için yürütülecek canlı kod analizi kapsamını en üst düzeye çıkarır.
 
-Aşağıdaki adımları izleyerek Araçlar Seçenekleri iletişim kutusunda yukarıdaki özel çözümleme kapsamlarından birini seçebilirsiniz:
+Aşağıdaki adımları izleyerek, Araçlar Seçenekler iletişim kutusunda Yukarıdaki özel analiz kapsamları arasından birini seçebilirsiniz:
 
-1. **Seçenekler** iletişim kutusunu açmak için Visual Studio'daki menü çubuğunda **Araç** > **Seçenekleri'ni**seçin.
+1. **Seçenekler** iletişim kutusunu açmak için, Visual Studio 'daki menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin.
 
-2. **Seçenekler** iletişim kutusunda Metin **Düzenleyicisi** > **C#** veya **Temel** > **Gelişmiş'i**seçin.
+2. **Seçenekler** iletişim kutusunda **metin düzenleyici**  >  **C#** veya **temel**  >  **Gelişmiş**' i seçin.
 
-3. Çözümleme kapsamını özelleştirmek için istediğiniz **Arka Plan çözümleme kapsamını** seçin. Bitirdiğinde **Tamam'ı** seç.
+3. Analiz kapsamını özelleştirmek için istenen **arka plan Analizi kapsamını** seçin. İşiniz bittiğinde **Tamam ' ı** seçin.
 
 ![Analiz kapsamı.](./media/background-analysis-scope.png)
 
 > [!NOTE]
-> Visual Studio 2019 sürüm 16.5'ten önce, kullanıcılar **Araçlar** > **Seçenekleri** > **Metin Düzenleyicisi** > **C#** veya **Temel** > **Gelişmiş** sekmesinden tam çözüm analizi **ni etkinleştir** onay kutusunu kullanarak tanılama hesaplaması için analiz kapsamını tüm çözüme özelleştirebilirler. Önceki Visual Studio sürümlerinde arka plan çözümlemesi kapsamını en aza indirmek için destek yoktur.
+> Kullanıcılar, Visual Studio 2019 sürüm 16,5 ' den önce, **Araçlar**Seçenekler metin Düzenleyicisi **Enable full solution analysis**  >  **Options**  >  **Text Editor**  >  **C#** veya **temel**  >  **Gelişmiş** sekmesinden tam çözüm analizini etkinleştir onay kutusunu kullanarak tüm çözüme tanılama hesaplaması için analiz kapsamını özelleştirebilir. Önceki Visual Studio sürümlerindeki arka plan Analizi kapsamını en aza indirme desteği yoktur.
 
-## <a name="automatically-minimize-live-code-analysis-scope"></a>Canlı kod analizi kapsamını otomatik olarak en aza indirir
+## <a name="automatically-minimize-live-code-analysis-scope"></a>Canlı Kod Analizi kapsamını otomatik olarak Küçült
 
-Visual Studio 200 MB veya daha az sistem belleği kullanılabilir olduğunu algılarsa, canlı kod çözümleme kapsamını "Geçerli Belge"ye otomatik olarak en aza indirir. Bu durumda, Visual Studio'nun bazı özellikleri devre dışı bırakıldığını bildiren bir uyarı görüntülenir. Bir düğme, isterseniz önceki çözümleme kapsamına geri dönmenizi sağlar.
+Visual Studio 200 MB veya daha az sistem belleği olduğunu algılarsa, canlı kod analizi kapsamını "geçerli belge" olarak en aza indirir. Bu gerçekleşirse, Visual Studio 'Nun bazı özellikleri devre dışı bırakıldığını bildiren bir uyarı görüntülenir. Bir düğme isterseniz, önceki Analiz kapsamına geri geçiş yapmanızı sağlar.
 
-![Analiz kapsamını en aza indiren uyarı metni](./media/fsa_alert.png)
+![Uyarı metni simge durumuna küçültme analiz kapsamı](./media/fsa_alert.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Otomatik özelliği askıya alma](./automatic-feature-suspension.md)
-- [Güç tasarrufu modu özelliği isteği](https://github.com/dotnet/roslyn/issues/38429)
+- [Güç tasarrufu modu özellik isteği](https://github.com/dotnet/roslyn/issues/38429)

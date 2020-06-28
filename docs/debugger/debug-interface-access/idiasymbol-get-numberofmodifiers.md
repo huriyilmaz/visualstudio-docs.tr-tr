@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_numberOfModifiers | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 61ff7431-1994-4f7e-a182-1817f16f60a9
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e034f081f8a279a65134c40e5ee485cd1d08d9b3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 42f1e1b4e918acce3bfd749532283f6e3fb6e1ac
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739666"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462750"
 ---
 # <a name="idiasymbolget_numberofmodifiers"></a>IDiaSymbol::get_numberOfModifiers
 Özgün türe uygulanan değiştiricilerin sayısını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_numberOfModifiers(
@@ -30,10 +30,10 @@ HRESULT get_numberOfModifiers(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Özgün türe uygulanan değiştiricilerin sayısını belirten bir `DWORD` işaretçisi.
+dışı `DWORD`Özgün türe uygulanan değiştiricilerin sayısını belirten bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_noStackOrdering | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a9c93119ee89355c9aae5c91caa185c9a1a6bb5d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c82b8c4836d97f02fa84aec500d961911f993df3
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739719"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462793"
 ---
 # <a name="idiasymbolget_nostackordering"></a>IDiaSymbol::get_noStackOrdering
 Bu işlev, yığın arabelleği denetiminin ([/GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check) derleyici seçeneği) bir parçası olarak yığın sıralaması yapılıp yapılmayacağını belirten bir bayrak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_noStackOrdering(
@@ -33,13 +33,13 @@ HRESULT get_noStackOrdering(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Yığın arabelleği denetiminin parçası olarak yığın sıralaması yapılamadığını `TRUE` döndürür; Aksi takdirde, `FALSE`döndürür.
+dışı Yığın `TRUE` arabelleği denetiminin bir parçası olarak yığın sıralaması yapılamadığını, aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> `S_FALSE` dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 
@@ -50,4 +50,4 @@ dışı Yığın arabelleği denetiminin parçası olarak yığın sıralaması 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
-- [/GS (Arabellek Güvenlik Denetimi)](/cpp/build/reference/gs-buffer-security-check)
+- [/GS (arabellek güvenlik denetimi)](/cpp/build/reference/gs-buffer-security-check)

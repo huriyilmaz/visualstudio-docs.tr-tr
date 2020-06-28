@@ -1,7 +1,7 @@
 ---
 title: Sembol türlerinin sınıf hiyerarşisi | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c42ea4bb2d5c2ad91538bec8b31774a5a41aa4d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ed6817c5c01b66143739b2f81899f2b58886d8e8
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745452"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462276"
 ---
 # <a name="class-hierarchy-of-symbol-types"></a>Simge Türlerinin Sınıf Hiyerarşisi
 Aşağıdaki tablo, sınıf hiyerarşisindeki sembol türlerini açıklar.
@@ -31,7 +31,7 @@ Aşağıdaki tablo, sınıf hiyerarşisindeki sembol türlerini açıklar.
 |[PointerType](../../debugger/debug-interface-access/pointertype.md)|İşaretçi türleri simgesi.|
 |[ArrayType](../../debugger/debug-interface-access/arraytype.md)|Dizi türleri için sembol.|
 |[BaseType](../../debugger/debug-interface-access/basetype.md)|Taban türleri sembolü|
-|[Tür Tanımı (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/typedef-debug-interface-access-sdk.md)|Diğer türlerin adlarını tanıtan simge.|
+|[Typedef (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/typedef-debug-interface-access-sdk.md)|Diğer türlerin adlarını tanıtan simge.|
 |[BaseClass](../../debugger/debug-interface-access/baseclass.md)|Kullanıcı tanımlı türün (UDT) her temel sınıfı için kullanılan simge.|
 |[Arkadaş (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/friend-debug-interface-access-sdk.md)|Friend sınıfları ve arkadaş işlevleri sembolü.|
 |[FunctionType](../../debugger/debug-interface-access/functiontype.md)|Her benzersiz işlev imzası için simge.|

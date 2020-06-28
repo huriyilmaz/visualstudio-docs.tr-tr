@@ -1,7 +1,7 @@
 ---
 title: DiaAddressMapEntry | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 54b326116b1e1b677a997b264cf0c168a93febb0
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8cae8159c893229f02e9598e932d7bc19efc2f4a
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745259"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468681"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
 Adres eşlemesindeki bir girişi açıklar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 struct DiaAddressMapEntry {
@@ -32,22 +32,22 @@ struct DiaAddressMapEntry {
 ```
 
 ## <a name="elements"></a>Öğeler
-A görüntüsünde göreli bir sanal adres (RVA) `rva`.
+`rva`A görüntüsündeki göreli bir sanal adres (RVA).
 
-göreli sanal adres `rva` `rvaTo` B görüntüsünde eşlenir.
+`rvaTo`Göreli sanal adres `rva` B görüntüsünde eşlenir.
 
 ## <a name="remarks"></a>Açıklamalar
-Adres eşlemesi, bir görüntü düzeninden (A) diğerine (B) bir çeviri sağlar. @No__t_1 tarafından sıralanan `DiaAddressMapEntry` yapılarının bir dizisi, bir adres haritasını tanımlar.
+Adres eşlemesi, bir görüntü düzeninden (A) diğerine (B) bir çeviri sağlar. `DiaAddressMapEntry`Sıralanmış bir yapı dizisi `rva` bir adres haritasını tanımlar.
 
-Bir adresi `addrA`, görüntü A 'daki bir adrese çevirmek için, `addrB`, görüntü B 'de aşağıdaki adımları uygulayın:
+Bir adresi çevirmek için, `addrA` A görüntüsünde adrese, `addrB` görüntü B ' de aşağıdaki adımları gerçekleştirin:
 
-1. @No__t_0 için haritada arama yapın, en büyük `rva` `addrA` küçüktür veya eşittir.
+1. Haritada, `e` en büyükten `rva` küçük veya eşit olan girdiyi arayın `addrA` .
 
-2. @No__t_0 ayarlayın.
+2. Ayarlayın `delta = addrA - e.rva` .
 
-3. @No__t_0 ayarlayın.
+3. Ayarlayın `addrB = e.rvaTo + delta` .
 
-    [IDiaAddressMap:: set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) yöntemine bir dizi `DiaAddressMapEntry` yapısı geçirilir.
+    `DiaAddressMapEntry`Yapı dizisi [IDiaAddressMap:: set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) metoduna geçirilir.
 
 ## <a name="requirements"></a>Gereksinimler
 Üstbilgi: dia2. h

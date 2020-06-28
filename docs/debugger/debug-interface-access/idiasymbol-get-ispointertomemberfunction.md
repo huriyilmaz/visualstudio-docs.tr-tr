@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isPointerToMemberFunction | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: aa9b5599-9602-41be-ab50-d84b90bee72f
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1cbbc9a38ef8d92233175380455fbe8c8291263
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a13c9c43c5f79a37c569b74d423f3748e5bd6a53
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740117"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463248"
 ---
 # <a name="idiasymbolget_ispointertomemberfunction"></a>IDiaSymbol::get_isPointerToMemberFunction
 Bu sembolün bir üye işlevine yönelik bir işaretçi olup olmadığını belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_isPointerToMemberFunction(
@@ -30,10 +30,10 @@ HRESULT get_isPointerToMemberFunction(
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bu sembolün üye işlevine yönelik bir işaretçi olup olmadığını belirten `BOOL` işaretçisi.
+dışı `BOOL`Bu simgenin bir üye işlevine yönelik bir işaretçi olup olmadığını belirten bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

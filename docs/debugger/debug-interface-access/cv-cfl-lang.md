@@ -1,7 +1,7 @@
 ---
 title: CV_CFL_LANG | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fb684d0ff68e5ede6b0847ef9aeba1821ecafcc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ac8910ebe012e1edbaa6c26695027214db4e66c2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745341"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462136"
 ---
 # <a name="cv_cfl_lang"></a>CV_CFL_LANG
 Uygulamanın veya bağlı modülün kaynak kodu dilini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 typedef enum CV_CFL_LANG {
@@ -49,7 +49,7 @@ typedef enum CV_CFL_LANG {
 ## <a name="elements"></a>Öğeler
 CV_CFL_C uygulama dili C 'dir.
 
-CV_CFL_CXX uygulama dili C++.
+CV_CFL_CXX uygulama dili C++ ' dır.
 
 CV_CFL_FORTRAN uygulama dili FORTRAN.
 
@@ -59,15 +59,15 @@ CV_CFL_PASCAL uygulama dili Pascal.
 
 CV_CFL_BASIC uygulama dili temel.
 
-CV_CFL_COBOL uygulama dili COBOL.
+Uygulama dili CV_CFL_COBOL COBOL.
 
-CV_CFL_LINK uygulaması bağlayıcı tarafından oluşturulan bir modüldür.
+CV_CFL_LINK uygulama bağlayıcı tarafından oluşturulan bir modüldür.
 
-CV_CFL_CVTRES uygulaması, CVTRES aracıyla dönüştürülen bir kaynak modülüdür.
+CV_CFL_CVTRES uygulama, CVTRES aracıyla dönüştürülen bir kaynak modülüdür.
 
-CV_CFL_CVTPGD uygulaması, CVTPGD aracıyla oluşturulan bir POGO iyileştirilmiş modüldür.
+CV_CFL_CVTPGD uygulama, CVTPGD aracı ile oluşturulmuş bir POGO iyileştirilmiş modüldür.
 
-CV_CFL_CSHARP uygulama dili C#.
+CV_CFL_CSHARP uygulama dili C# ' dir.
 
 CV_CFL_VB uygulama dili Visual Basic.
 
@@ -82,7 +82,7 @@ CV_CFL_MSIL uygulama dili bilinmeyen bir Microsoft ara dili (MSIL), büyük olas
 CV_CFL_HLSL uygulama dili yüksek düzey gölgelendirici dilidir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu Numaralandırmadaki değerler [IDiaSymbol:: get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md) yöntemi çağrısıyla döndürülür.
+Bu Numaralandırmadaki değerler [IDiaSymbol:: get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md) metoduna yapılan bir çağrı tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 Üst bilgi: cvconst. h

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaAddressMap:: set_addressMap | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8414788af44d78943088b78b2d3e42a5a8d8c50b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4af506da822a7f8e38a8952d7c1d0d15fc1995d2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745022"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468555"
 ---
 # <a name="idiaaddressmapset_addressmap"></a>IDiaAddressMap::set_addressMap
 Görüntü düzeni çevirilerini desteklemek için bir adres haritası sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT set_addressMap ( 
@@ -35,7 +35,7 @@ HRESULT set_addressMap ( 
 #### <a name="parameters"></a>Parametreler
  `cbData`
 
-'ndaki `data` parametresindeki öğelerin sayısı.
+'ndaki Parametresindeki öğelerin sayısı `data` .
 
  `data[]`
 
@@ -43,13 +43,13 @@ HRESULT set_addressMap ( 
 
  `imagetoSymbols`
 
-[in] `data` parametresi yeni görüntü düzeninden özgün düzene (hata ayıklama sembolleri tarafından açıklandığı gibi) bir harita tanımlıyorsa `TRUE`. `data` özgün düzenden alınan yeni görüntü düzenine bir eşleme ise `FALSE`.
+[in] `TRUE` `data`parametresi yeni görüntü düzeninden özgün düzene (hata ayıklama sembolleri tarafından açıklandığı gibi) bir harita tanımlıyorsa. `FALSE`, `data` özgün düzenden alınan yeni görüntü düzenine bir haritadır.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu, genellikle, program veritabanı (. pdb) dosyasındaki adres çevirisi haritalarını alır. Bu değerler eksikse, [IDiaAddressMap:: set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) yöntemi iki kez çağrılır, `imagetoSymbols` parametresi `TRUE` ve bir kez `imagetoSymbols` parametresi `FALSE`olarak ayarlanır. Her iki çeviri eşlemesi sağlanmamışsa, [IDiaAddressMap::P ut_addressmapenabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) yöntemi kullanılarak adres Haritası çevirileri etkinleştirilemez.
+ Bu, genellikle, program veritabanı (. pdb) dosyasındaki adres çevirisi haritalarını alır. Bu değerler eksikse, [IDiaAddressMap:: set_imageHeaders](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) yöntemi iki kez çağrılır; parametresi olarak ayarlanmış `imagetoSymbols` `TRUE` parametresi ile bir kez olarak ayarlanır `imagetoSymbols` `FALSE` . Her iki çeviri eşlemesi sağlanmamışsa, [IDiaAddressMap::p ut_addressMapEnabled](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) yöntemi kullanılarak adres Haritası çevirileri etkinleştirilemez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [DiaAddressMapEntry Yapısı](../../debugger/debug-interface-access/diaaddressmapentry.md)

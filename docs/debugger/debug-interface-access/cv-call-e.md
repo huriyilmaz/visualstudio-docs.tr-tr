@@ -1,7 +1,7 @@
 ---
 title: CV_call_e | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5deb59d4bbee06e505ba10bf1d4f08b1b06aa62d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: afab1aef58616bfa925fd9f37aacf195eb569c96
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745349"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462143"
 ---
 # <a name="cv_call_e"></a>CV_call_e
 Bir işlev için çağırma kuralını belirtir.
@@ -25,7 +25,7 @@ Bir işlev için çağırma kuralını belirtir.
 > [!NOTE]
 > Burada yalnızca en yaygın numaralandırma değerleri belgelenmiştir. Tüm sabit listesi, cvconst. h üstbilgi dosyasında bulunur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 typedef enum CV_call_e {
@@ -43,16 +43,16 @@ CV_CALL_NEAR_C, neredeyse sağdan sola gönderim kullanan bir işlev çağırma 
 
 CV_CALL_NEAR_FAST, kayıt ile neredeyse soldan sağa gönderim kullanan bir işlev çağırma kuralını belirtir. Çağrılan işlev, yığın temizlemek için parametre baytlarının toplamını kullanır.
 
-CV_CALL_NEAR_STD yakın standart çağrı (sağdan sola gönderim) kullanan bir işlev çağırma kuralını belirtir.
+CV_CALL_NEAR_STD, neredeyse standart bir çağrı (sağdan sola gönderim) kullanan bir işlev çağırma kuralını belirtir.
 
-CV_CALL_NEAR_SYS yakın sistem çağrısını kullanan bir işlev çağırma kuralını belirtir.
+CV_CALL_NEAR_SYS, yakın sistem çağrısını kullanan bir işlev çağırma kuralını belirtir.
 
-CV_CALL_THISCALL `this` çağrısı kullanarak bir işlev çağırma kuralını belirtir (`this` işaretçi kayıt içine geçirildi).
+CV_CALL_THISCALL, çağrı kullanarak bir işlev çağırma kuralını belirtir `this` ( `this` kayıt sırasında geçirilen işaretçi).
 
 CV_CALL_CLRCALL, ortak dil çalışma zamanı (CLR) tarafından kullanılan bir işlev çağırma kuralını belirtir (yönetilen kod çağırma kuralı olarak da bilinir).
 
 ## <a name="remarks"></a>Açıklamalar
-Bu Numaralandırmadaki değerler [IDiaSymbol:: get_callingConvention](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md) yöntemi çağrısıyla döndürülür.
+Bu Numaralandırmadaki değerler [IDiaSymbol:: get_callingConvention](../../debugger/debug-interface-access/idiasymbol-get-callingconvention.md) metoduna yapılan bir çağrı tarafından döndürülür.
 
 ## <a name="requirements"></a>Gereksinimler
 Üst bilgi: cvconst. h

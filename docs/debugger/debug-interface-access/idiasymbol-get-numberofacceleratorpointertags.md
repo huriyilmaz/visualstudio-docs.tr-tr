@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_numberOfAcceleratorPointerTags | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1886e3ec-b227-4187-8d93-c5144b4b77ae
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 47c5827348c7b7cb450017a0e6176d71f555c841
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a4690afe754db2c5e82d200de780d28aae3c652e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739695"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462778"
 ---
 # <a name="idiasymbolget_numberofacceleratorpointertags"></a>IDiaSymbol::get_numberOfAcceleratorPointerTags
-Bir C++ amp saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.
+C++ AMP saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_numberOfAcceleratorPointerTags(
@@ -30,13 +30,13 @@ HRESULT get_numberOfAcceleratorPointerTags(
 #### <a name="parameters"></a>Parametreler
  `count`
 
-dışı Bir C++ amp saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını tutan `DWORD` işaretçisi.
+dışı Bir `DWORD` C++ amp saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısını tutan bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, bir C++ amp Hızlandırıcısı saplama işlevine karşılık gelen bir `IDiaSymbol` arabiriminde çağrılır.
+ Bu yöntem, `IDiaSymbol` C++ amp Hızlandırıcı saplama işlevine karşılık gelen bir arabirim üzerinde çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

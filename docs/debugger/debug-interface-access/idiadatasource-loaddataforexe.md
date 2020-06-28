@@ -1,7 +1,7 @@
 ---
 title: 'IDiaDataSource:: loadDataForExe | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a86abb00ebc090c37f03a5533376ae0b9c3e8ae
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 2ed61f8ffc95d0004213483d5b5d507c45ef2647
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744967"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468520"
 ---
 # <a name="idiadatasourceloaddataforexe"></a>IDiaDataSource::loadDataForExe
 . Exe/. dll dosyasıyla ilişkili hata ayıklama verilerini açar ve hazırlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT loadDataForExe (
@@ -43,10 +43,10 @@ searchPath
 
 pCallback
 
-'ndaki Bir hata ayıklama geri [çağırması](../../debugger/debug-interface-access/idialoadcallback.md), [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md), [ıdareadexeatoffsetcallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)ve/veya [ıdareadexeatrboş allback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) arabirimleri gibi bir hata ayıklama geri çağırma arabirimini destekleyen bir nesne için `IUnknown` arabirimi.
+'ndaki Bir `IUnknown` hata ayıklama geri [çağırması](../../debugger/debug-interface-access/idialoadcallback.md), [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md), [ıdareadexeatoffsetcallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md)ve/veya [ıdareadexeatrboş allback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) arabirimleri gibi bir hata ayıklama geri çağırma arabirimini destekleyen bir nesne için arabirim.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda, bu yöntem için olası hata kodlarının bazıları gösterilmektedir.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda, bu yöntem için olası hata kodlarının bazıları gösterilmektedir.
 
 |Değer|Açıklama|
 |-----------|-----------------|
@@ -60,9 +60,9 @@ Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
 ## <a name="remarks"></a>Açıklamalar
 . Exe/. dll dosyasının hata ayıklama üst bilgisi, ilişkili hata ayıklama veri konumunu adlandırır.
 
-Bu yöntem hata ayıklama üstbilgisini okur ve hata ayıklama verilerini arar ve hazırlar. Aramanın ilerleme durumu isteğe bağlı olarak, geri çağrılar aracılığıyla raporlanabilmesi ve denetlenemeyebilir. Örneğin, `IDiaDataSource::loadDataForExe` yöntemi bir hata ayıklama dizinini bulduğunda ve işlediğinde, [ıaloadcallback:: NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md) çağrılır.
+Bu yöntem hata ayıklama üstbilgisini okur ve hata ayıklama verilerini arar ve hazırlar. Aramanın ilerleme durumu isteğe bağlı olarak, geri çağrılar aracılığıyla raporlanabilmesi ve denetlenemeyebilir. Örneğin, yöntem bir hata ayıklama dizini bulduğunda ve işlediğinde, [ıaloadcallback:: NotifyDebugDir](../../debugger/debug-interface-access/idialoadcallback-notifydebugdir.md) çağrılır `IDiaDataSource::loadDataForExe` .
 
-[Iareaareadexeatoffsetcallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md) ve [ıareadexeatrboş allback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) arabirimleri, bir dosyaya doğrudan standart üzerinden erişilebiliyorsa, istemci uygulamanın yürütülebilir dosyadan veri okumak için alternatif yöntemler sağlamasına izin verir dosya g/ç.
+[Iareaareadexeatoffsetcallback](../../debugger/debug-interface-access/idiareadexeatoffsetcallback.md) ve [ıseareadexeatrboş allback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md) arabirimleri, bir dosyaya doğrudan standart dosya g/ç aracılığıyla erişilebilmesi durumunda, istemci uygulamanın yürütülebilir dosyadan veri okumak için alternatif yöntemler sağlamasına izin verir.
 
 Bir. pdb dosyasını doğrulama olmadan yüklemek için [IDiaDataSource:: loadDataFromPdb](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) metodunu kullanın.
 

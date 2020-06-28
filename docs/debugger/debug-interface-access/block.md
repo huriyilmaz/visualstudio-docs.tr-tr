@@ -1,7 +1,7 @@
 ---
 title: Engelle | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -14,15 +14,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c39c69900859957f0d0746c688334f31c8419d5f
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 45e1d97c694806857d9ee7920e6d4fd640db4582
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745465"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462275"
 ---
 # <a name="block"></a>Blok
-Her kod bloğu bir `SymTagBlock` simgesiyle tanımlanır. Blok sembolleri, işlevler içinde iç içe kapsamları belirlemek için kullanılır.
+Her kod bloğu bir sembol tarafından tanımlanır `SymTagBlock` . Blok sembolleri, işlevler içinde iç içe kapsamları belirlemek için kullanılır.
 
 ## <a name="properties"></a>Özellikler
  Aşağıdaki tabloda, bu sembol türü için geçerli olan özellikler gösterilmektedir.
@@ -38,7 +38,7 @@ Her kod bloğu bir `SymTagBlock` simgesiyle tanımlanır. Blok sembolleri, işle
 |[IDiaSymbol::get_name](../../debugger/debug-interface-access/idiasymbol-get-name.md)|`BSTR`|Bloğun adını döndürür (genellikle boş bir dizedir).|
 |[IDiaSymbol::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasymbol-get-relativevirtualaddress.md)|`DWORD`|Bu bloğun, sözcük üst öğesiyle ilişkili sanal adresini döndürür.|
 |[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Simgenin dizin KIMLIĞI.|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|@No__t_0 döndürür ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagBlock` ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|Yürütülebilir dosya içindeki bu bloğun sanal adresini döndürür.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

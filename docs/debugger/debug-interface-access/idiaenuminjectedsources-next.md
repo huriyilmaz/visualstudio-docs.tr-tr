@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumInjectedSources:: Next | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 84dd3e1d107b8e55d5e94979627d1c1586534127
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 76f5aa24efe6ce479de2a312943613b8262d0118
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744491"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468268"
 ---
 # <a name="idiaenuminjectedsourcesnext"></a>IDiaEnumInjectedSources::Next
 Sabit Listesi dizisinde belirtilen sayıda eklenen kaynağı alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT Next ( 
@@ -46,7 +46,7 @@ dışı İstenen eklenmiş kaynakları temsil eden [IDiaInjectedSource](../../de
 dışı Getirilen Numaralandırıcı içindeki eklenen kaynak sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Daha fazla eklenen kaynak yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla eklenen kaynak yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

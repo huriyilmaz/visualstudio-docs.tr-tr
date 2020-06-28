@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_language | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb7a7fa688825ce341417f695766a37ddb00028b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3e7dc0a0a640a9d3921801a9077b32ade5921ff7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739996"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463122"
 ---
 # <a name="idiasymbolget_language"></a>IDiaSymbol::get_language
 Kaynağın dilini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_language ( 
@@ -33,13 +33,13 @@ HRESULT get_language ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı [CV_CFL_LANG sabit](../../debugger/debug-interface-access/cv-cfl-lang.md) listesi numaralandırmasından, kaynağın dilini belirten bir değer döndürür.
+dışı Kaynak dilini belirten [CV_CFL_LANG numaralandırma](../../debugger/debug-interface-access/cv-cfl-lang.md) numaralandırmasından bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

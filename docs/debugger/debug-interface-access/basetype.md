@@ -1,7 +1,7 @@
 ---
 title: BaseType | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fbf1366c069139660c242bb27264c0a516fba22
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: d49969f1897529de770063be1a7acc0f035e5ef9
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745521"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462290"
 ---
 # <a name="basetype"></a>BaseType
-Temel türler `SymTagBaseType` simgelerle tanımlanır.
+Temel türler semboller tarafından tanımlanır `SymTagBaseType` .
 
 ## <a name="properties"></a>Özellikler
  Aşağıdaki tabloda bu sembol türü için ek geçerli özellikler gösterilmektedir.
@@ -28,14 +28,14 @@ Temel türler `SymTagBaseType` simgelerle tanımlanır.
 |Özellik|Veri türü|Açıklama|
 |--------------|---------------|-----------------|
 |[IDiaSymbol::get_baseType](../../debugger/debug-interface-access/idiasymbol-get-basetype.md)|`DWORD`|[BasicType numaralandırması](../../debugger/debug-interface-access/basictype.md)değerlerinden biri.|
-|[IDiaSymbol::get_constType](../../debugger/debug-interface-access/idiasymbol-get-consttype.md)|`BOOL`|temel tür const olarak işaretlenmişse `TRUE`.|
+|[IDiaSymbol::get_constType](../../debugger/debug-interface-access/idiasymbol-get-consttype.md)|`BOOL`|`TRUE`temel tür const olarak işaretlenmişse.|
 |[IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)|`LONGLONG`|Taban türünün bayt cinsinden boyutu.|
 |[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|Kapsayan [compiland](../../debugger/debug-interface-access/compiland.md)'ın simgesi.|
 |[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|Sözlü üst simgenin KIMLIĞI.|
 |[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Simgenin dizin KIMLIĞI.|
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|@No__t_0 döndürür ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|
-|[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|`BOOL`|temel tür hizalanmamış ise `TRUE`.|
-|[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|temel tür geçici olarak işaretlenmişse `TRUE`.|
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagBaseType` ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|
+|[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|`BOOL`|`TRUE`temel tür hizalanmamış ise.|
+|[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE`temel tür geçici olarak işaretlenmişse.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [BasicType Numaralandırması](../../debugger/debug-interface-access/basictype.md)

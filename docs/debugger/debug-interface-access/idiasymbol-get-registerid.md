@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_registerId | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ffd349b56c4292de04d5d7a38e82eeafed6775e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f252d02a137ada627c0c546e1f1ac79118f76de9
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72739458"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462478"
 ---
 # <a name="idiasymbolget_registerid"></a>IDiaSymbol::get_registerId
-[LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) `LocIsEnregistered` olarak ayarlandığında konumun kayıt göstergesini alır.
+[LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) olarak ayarlandığında konumun kayıt göstergesini alır `LocIsEnregistered` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_registerId ( 
@@ -36,13 +36,13 @@ HRESULT get_registerId ( 
 dışı Konumun kayıt göstergesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
- Sembol bir yazmaç ile ilişkili ise, yani sembolün [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) `LocIsRegRel` olarak ayarlandıysa, `get_registerId` yöntemini ve sonra simgenin bulunduğu kaydın sapmasını almak Için [IDiaSymbol:: get_Offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md) yöntemine bir çağrı yapın. kutusunun.
+ Sembol bir yazmaç ile ilişkili ise, yani sembolün [LocationType numaralandırması](../../debugger/debug-interface-access/locationtype.md) olarak ayarlandıysa `LocIsRegRel` , bu yöntemi, simgenin bulunduğu `get_registerId` kaydın sapmasını almak için [ıdiasymbol:: get_Offset](../../debugger/debug-interface-access/idiasymbol-get-offset.md) yöntemine bir çağrı izler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

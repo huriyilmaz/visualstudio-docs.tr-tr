@@ -1,7 +1,7 @@
 ---
 title: 'IDiaDataSource:: loadAndValidateDataFromPdb | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 97afff946827c37ec2f84457016525377977dc8b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3e3a4b73cbbfe16cb87108c5f157dada135e71ee
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744998"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468541"
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
 Açılır ve program veritabanı (. pdb) dosyasının belirtilen imza bilgilerini eşleştirdiğini doğrular ve. pdb dosyasını hata ayıklama veri kaynağı olarak hazırlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT loadAndValidateDataFromPdb ( 
@@ -40,7 +40,7 @@ HRESULT loadAndValidateDataFromPdb ( 
 
 `pcsig70`
 
-'ndaki . Pdb dosya imzasına göre doğrulanacak GUID imzası. Yalnızca [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] ve üzeri sürümlerde bulunan. pdb dosyalarının GUID imzaları vardır.
+'ndaki . Pdb dosya imzasına göre doğrulanacak GUID imzası. Yalnızca ve sonraki sürümlerinde bulunan. pdb dosyalarının [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] GUID imzaları vardır.
 
 `sig`
 
@@ -51,7 +51,7 @@ HRESULT loadAndValidateDataFromPdb ( 
 'ndaki Doğrulanacak yaş değeri. Yaş, bilinen bir zaman değerine karşılık gelmez; bir. pdb dosyasının karşılık gelen bir. exe dosyası ile eşitlenmemiş olup olmadığını anlamak için kullanılır.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Aşağıdaki tabloda bu yöntem için olası dönüş değerleri gösterilmektedir.
 
 |Değer|Açıklama|
 |-----------|-----------------|

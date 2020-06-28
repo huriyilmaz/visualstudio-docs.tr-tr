@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumDebugStreamData:: get_name | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edabdf0b24a0aa7cee6e021d86719621e4e7eac3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 37cd52af7326454b0b684ad97f9cde088a8a5679
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744867"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468471"
 ---
 # <a name="idiaenumdebugstreamdataget_name"></a>IDiaEnumDebugStreamData::get_name
 Hata ayıklama veri akışının adını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_Name ( 
@@ -36,7 +36,7 @@ HRESULT get_Name ( 
 dışı Hata ayıklama veri akışının adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)

@@ -1,7 +1,7 @@
 ---
 title: Numaralandırmalar ve yapılar | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6769af8a417c111de6c8dfc68cd7cda548eaa24c
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 5c7441e25533ca29f84d55779942b0bfb785dd9f
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745219"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468660"
 ---
 # <a name="enumerations-and-structures"></a>Numaralandırmalar ve Yapılar
 
@@ -28,7 +28,7 @@ Bunlar, DIA SDK tarafından kullanılan numaralandırmalar ve yapılardır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-### <a name="enumerations"></a>Numaralandırmalar
+### <a name="enumerations"></a>Listelemeler
 
 - [BasicType Numaralandırması](../../debugger/debug-interface-access/basictype.md)
 

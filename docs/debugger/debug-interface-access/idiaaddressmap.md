@@ -1,7 +1,7 @@
 ---
 title: IDiaAddressMap | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e06acf045ce1893762d5c898752dd6bc40de50a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ddf4b1c2a6a22170fb52da200bbd53c2b6b96e62
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744986"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468534"
 ---
 # <a name="idiaaddressmap"></a>IDiaAddressMap
 DIA SDK hata ayıklama nesneleri için sanal ve göreli sanal adresleri nasıl hesaplatığına ilişkin denetim sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaAddressMap : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda `IDiaAddressMap` yöntemleri gösterilmektedir.
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaAddressMap` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -43,17 +43,17 @@ IDiaAddressMap : IUnknown
 |[IDiaAddressMap::set_addressMap](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md)|Görüntü düzeni çevirilerini desteklemek için bir adres haritası sağlar.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu arabirim tarafından sunulan denetim, sağladığınız iki veri kümesinde kapsüllenir: görüntü üstbilgileri ve adres eşlemeleri. Çoğu istemci, bir görüntüyle ilgili doğru hata ayıklama bilgilerini bulmak için [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodunu kullanır ve yöntem genellikle gerekli tüm üst bilgileri ve haritalar verilerini bulabilir. Ancak bazı istemciler özelleştirilmiş işleme ve veri aramayı uygular. Bu istemciler, arama sonuçlarıyla DIA SDK sağlamak için `IDiaAddressMap` arabiriminin yöntemlerini kullanır.
+ Bu arabirim tarafından sunulan denetim, sağladığınız iki veri kümesinde kapsüllenir: görüntü üstbilgileri ve adres eşlemeleri. Çoğu istemci, bir görüntüyle ilgili doğru hata ayıklama bilgilerini bulmak için [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodunu kullanır ve yöntem genellikle gerekli tüm üst bilgileri ve haritalar verilerini bulabilir. Ancak bazı istemciler özelleştirilmiş işleme ve veri aramayı uygular. Bu istemciler, `IDiaAddressMap` arama sonuçlarıyla DIA SDK sağlamak için arabirimin yöntemlerini kullanır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Bu arabirim, DIA oturum nesnesinden kullanılabilir. İstemci, `IDiaAddressMap` arabirimini almak için genellikle [IDiaSession](../../debugger/debug-interface-access/idiasession.md)nesne arabirimindeki `QueryInterface` yöntemini çağırır.
+ Bu arabirim, DIA oturum nesnesinden kullanılabilir. İstemci, `QueryInterface` arabirimi almak için genellikle [IDiaSession](../../debugger/debug-interface-access/idiasession.md)olan DIA oturum nesne arabirimindeki yöntemi çağırır `IDiaAddressMap` .
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: dia2. h
 
  Kitaplık: diaguid. lib
 
- DLL: Msdia80. dll
+ DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

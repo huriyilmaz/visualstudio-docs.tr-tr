@@ -1,7 +1,7 @@
 ---
 title: IDiaDataSource | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 453be1d77f1d2b1759e3de4433225cf97d026054
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c9f8730fb864a70e7f649d5e8b4920d916c07c11
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744912"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468492"
 ---
 # <a name="idiadatasource"></a>IDiaDataSource
 Hata ayıklama sembolleri kaynağına erişimi başlatır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaDataSource : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda `IDiaDataSource` yöntemleri gösterilmektedir.
+Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaDataSource` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -41,10 +41,10 @@ Aşağıdaki tabloda `IDiaDataSource` yöntemleri gösterilmektedir.
 |[IDiaDataSource::openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md)|Sembolleri sorgulamak için bir oturum açar.|
 
 ## <a name="remarks"></a>Açıklamalar
-@No__t_0 arabiriminin yükleme yöntemlerinden birine yapılan çağrı, sembol kaynağını açar. [IDiaDataSource:: openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) yöntemine yapılan başarılı bir çağrı, veri kaynağını sorgulamayı destekleyen bir [IDiaSession](../../debugger/debug-interface-access/idiasession.md) arabirimi döndürüyor. Load yöntemi dosyayla ilgili bir hata döndürürse, [IDiaDataSource:: get_lastError](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md) yöntemi dönüş değeri hatayla ilişkili dosya adını içerir.
+Arabirimin yükleme yöntemlerinden birine yapılan çağrı `IDiaDataSource` , sembol kaynağını açar. [IDiaDataSource:: openSession](../../debugger/debug-interface-access/idiadatasource-opensession.md) yöntemine yapılan başarılı bir çağrı, veri kaynağını sorgulamayı destekleyen bir [IDiaSession](../../debugger/debug-interface-access/idiasession.md) arabirimi döndürüyor. Load yöntemi dosyayla ilgili bir hata döndürürse, [IDiaDataSource:: get_lastError](../../debugger/debug-interface-access/idiadatasource-get-lasterror.md) yöntemi dönüş değeri hatayla ilişkili dosya adını içerir.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bu arabirim, sınıf tanımlayıcısı `CLSID_DiaSource` ve `IID_IDiaDataSource` arabirim KIMLIĞI ile `CoCreateInstance` işlevi çağırarak elde edilir. Örnek, bu arabirimin nasıl elde edilildiği gösterilmektedir.
+Bu arabirim, `CoCreateInstance` işlevi sınıf tanımlayıcısıyla `CLSID_DiaSource` ve arabirim kimliğiyle çağırarak elde edilir `IID_IDiaDataSource` . Örnek, bu arabirimin nasıl elde edilildiği gösterilmektedir.
 
 ## <a name="example"></a>Örnek
 
@@ -67,7 +67,7 @@ if (FAILED(hr))
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

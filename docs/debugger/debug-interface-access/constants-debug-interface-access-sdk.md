@@ -1,7 +1,7 @@
 ---
 title: Sabitler (hata ayıklama arabirimi erişim SDK 'Sı) | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -13,18 +13,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b10ab87f056bc153ec41c125b0e01ddefa139b80
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3fa6037253141df1111ef3bc57fac9c718d826dc
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72745406"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85462241"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>Sabitler (Arabirim Erişimi SDK'sında Hata Ayıklama)
 Bu dize sabitleri, bir program hata ayıklama veritabanı (PDB) dosyasının DIA SDK aracılığıyla çeşitli bölümlerini belirlemek için kullanılabilir.
 
 ## <a name="constants"></a>Sabitler
-Aşağıdakiler C/C++ makrolar olarak bildirilmiştir.
+Aşağıdakiler C/C++ makroları olarak bildirilmiştir.
 
 |Makroya|Değer|
 |-----------|-----------|

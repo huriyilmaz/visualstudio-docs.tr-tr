@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumInjectedSources | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: feaf5d372279c6ab24053058a14aba4b3a71fd78
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8ecd669e546f12972c2a11c3b038322ceaf18fc1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744465"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468247"
 ---
 # <a name="idiaenuminjectedsources"></a>IDiaEnumInjectedSources
 Veri kaynağında yer alan çeşitli eklenen kaynakları numaralandırın.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaEnumInjectedSources : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda `IDiaEnumInjectedSources` yöntemleri gösterilmektedir.
+Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaEnumInjectedSources` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -44,10 +44,10 @@ Aşağıdaki tabloda `IDiaEnumInjectedSources` yöntemleri gösterilmektedir.
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bu arabirim, belirli bir kaynak dosyanın adı ile [IDiaSession:: findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md) yöntemi çağırarak veya `IDiaEnumInjectedSources` arabiriminin GUID 'Si Ile [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) metodunu çağırarak elde edilir.
+Bu arabirim, belirli bir kaynak dosyanın adı ile [IDiaSession:: findInjectedSource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md) yöntemi çağırarak veya arabirimin GUID 'Si Ile [IDiaSession:: getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md) metodunu çağırarak elde edilir `IDiaEnumInjectedSources` .
 
 ## <a name="example"></a>Örnek
-Bu örnek, `IDiaEnumInjectedSources` arabiriminin nasıl alınacağını (`GetEnumInjectedSources` işlevinin) ve (`DumpAllInjectedSources` işlevi) nasıl kullanılacağını gösterir. @No__t_1 işlevinin bir uygulaması için [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) arabirimine bakın. Alternatif bir çıktı için, bkz. [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) arabirimi.
+Bu örnek, arabirimin nasıl alınacağını ( `GetEnumInjectedSources` işlevin) ve nasıl kullanılacağını ( `DumpAllInjectedSources` işlev) gösterir `IDiaEnumInjectedSources` . İşlevin bir uygulaması için bkz. [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) arabirimi `PrintPropertyStorage` . Alternatif bir çıktı için, bkz. [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) arabirimi.
 
 ```C++
 
@@ -110,7 +110,7 @@ void DumpAllInjectedSources( IDiaSession* pSession)
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

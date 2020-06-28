@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumLineNumbers:: Reset | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d13040c3a35b1a41d3d03641194e563abc80e6de
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8bc2225a35f663a54f1c521364146b8b65f30be7
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744378"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468205"
 ---
 # <a name="idiaenumlinenumbersreset"></a>IDiaEnumLineNumbers::Reset
 Bir numaralandırma dizisini başlangıca sıfırlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```C++
 HRESULT Reset();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- @No__t_0 döndürür.
+ `S_OK` döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)
