@@ -1,7 +1,7 @@
 ---
 title: 'IDiaFrameData:: get_allocatesBasePointer | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 283ef71b32c186956804cb3afe121af53a99abfc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a8c51b335e0d13752ee2f3c6c68c17b5f2b76a9d
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743648"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467430"
 ---
 # <a name="idiaframedataget_allocatesbasepointer"></a>IDiaFrameData::get_allocatesBasePointer
 Taban işaretçisinin bu adres aralığındaki kod için ayrılmış olup olmadığını gösteren bir bayrak alır. Bu yöntem kullanım dışıdır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_allocatesBasePointer ( 
@@ -33,13 +33,13 @@ HRESULT get_allocatesBasePointer ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Taban işaretçisi ayrılmışsa `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
+dışı `TRUE`Bir taban işaretçisi ayrıldıysanız döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu özellik yalnızca FPO_DATA 'e erişmiş kod tarafından veya [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) yöntemi tarafından döndürülen program dizesi `NULL` olarak kullanılmalıdır. Aksi takdirde, program dizesi önceki kayıt değerlerini hesaplamak için gereken tüm bilgileri içerir.
+ Bu özellik yalnızca FPO_DATA veya [IDiaFrameData:: get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md) yöntemi tarafından döndürülen program dizesi olduğunda, yalnızca önceden erişilen kod tarafından kullanılmalıdır `NULL` . Aksi takdirde, program dizesi önceki kayıt değerlerini hesaplamak için gereken tüm bilgileri içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

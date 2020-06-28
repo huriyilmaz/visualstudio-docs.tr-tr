@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: Findınlineelinesbyaddr | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: bb70e408-eed1-4c9c-b5b1-44323125f48b
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 496f6b569b3ac02c625ddf18406b78fdb1687be2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4de373985230524dfe12703545a4690090ffce8e
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742229"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465806"
 ---
 # <a name="idiasessionfindinlineelinesbyaddr"></a>IDiaSession::findInlineeLinesByAddr
 Bir istemcinin, belirtilen ana sembolüyle doğrudan veya dolaylı olarak satır numarası bilgilerini, belirtilen üst simgeye göre veya belirtilen adres aralığında bulundurarak yinelemesinden izin veren bir sabit listesi alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT findInlineeLinesByAddr ( 
@@ -32,7 +32,7 @@ HRESULT findInlineeLinesByAddr ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki Üst öğeyi temsil eden `IDiaSymbol` nesne.
+'ndaki `IDiaSymbol`Üst öğeyi temsil eden nesne.
 
  `isect`
 
@@ -48,10 +48,10 @@ HRESULT findInlineeLinesByAddr ( 
 
  `ppResult`
 
-dışı Alınan satır numaralarının listesini içeren `IDiaEnumLineNumbers` nesnesini barındırır.
+dışı `IDiaEnumLineNumbers`Alınan satır numaralarının listesini içeren bir nesnesi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

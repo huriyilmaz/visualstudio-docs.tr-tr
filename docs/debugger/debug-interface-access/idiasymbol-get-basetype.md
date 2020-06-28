@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_baseType | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a3d1bb8b2f3095fd35488c47f823e7b3603995b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: aea1205abf5c7a4bf7e4fd6b035651cc7ad52be6
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740912"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464207"
 ---
 # <a name="idiasymbolget_basetype"></a>IDiaSymbol::get_baseType
 Bu sembolün temel türünü alır<em>.</em>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_baseType (
@@ -36,10 +36,10 @@ HRESULT get_baseType (
 dışı Simgenin temel türünü belirten [BasicType numaralandırma](../../debugger/debug-interface-access/basictype.md) numaralandırmasından bir değer döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="remarks"></a>Açıklamalar
 Bir simgenin temel türü, ilk olarak simgenin türü ve sonra temel tür için döndürülen tür için bir alan tarafından belirlenebilir. Bazı sembollerin temel bir tür (örneğin, bir yapı adı) olamayacağını unutmayın.

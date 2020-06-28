@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: findChildren | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f3c62271f6324e50a68de393cfa668c69ba4a935
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7f1fe583ba4932f4f534886ed1c9af34e900ba67
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741295"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464592"
 ---
 # <a name="idiasymbolfindchildren"></a>IDiaSymbol::findChildren
 Simgenin alt öğelerini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT findChildren ( 
@@ -36,11 +36,11 @@ HRESULT findChildren ( 
 #### <a name="parameters"></a>Parametreler
  `symtag`
 
-'ndaki [SymTagEnum numaralandırmasında](../../debugger/debug-interface-access/symtagenum.md)tanımlandığı şekilde alınacak alt öğelerin sembol etiketlerini belirtir. Tüm alt öğelerin alınabilmesi için `SymTagNull` olarak ayarlayın.
+'ndaki [SymTagEnum numaralandırmasında](../../debugger/debug-interface-access/symtagenum.md)tanımlandığı şekilde alınacak alt öğelerin sembol etiketlerini belirtir. `SymTagNull`Tüm alt öğelerin alınması için olarak ayarlayın.
 
  `name`
 
-'ndaki Alınacak alt öğelerin adını belirtir. Tüm alt öğelerin alınabilmesi için `NULL` olarak ayarlayın.
+'ndaki Alınacak alt öğelerin adını belirtir. `NULL`Tüm alt öğelerin alınması için olarak ayarlayın.
 
  `compareFlags`
 
@@ -51,7 +51,7 @@ HRESULT findChildren ( 
 dışı Alınan alt simgelerin listesini içeren bir [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Simgenin en az bir alt öğesi bulunursa `S_OK` döndürür veya alt öğe bulunmazsa `S_FALSE` döndürür; Aksi takdirde bir hata kodu döndürür.
+ `S_OK`Simgenin en az bir alt öğesi bulunursa veya `S_FALSE` alt öğe bulunmazsa öğesini döndürür; Aksi takdirde bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Bu yöntem, ilk parametre olarak bu sembolle [IDiaSession:: findChildren](../../debugger/debug-interface-access/idiasession-findchildren.md) yöntemini çağırmaya benzer.

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isAcceleratorGroupSharedLocal | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 17a20542-5b45-478f-bb80-0d56031aadb5
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d6cf755121f851e652cce251ace2105e6773822
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1110f0882e8281955fa4efdf41a1355405bdd557
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740329"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463507"
 ---
 # <a name="idiasymbolget_isacceleratorgroupsharedlocal"></a>IDiaSymbol::get_isAcceleratorGroupSharedLocal
-Simgenin bir C++ amp Hızlandırıcısı için derlenmiş koddaki bir grup paylaşılan yerel değişkenine karşılık geldiğini belirten bir bayrak alır.
+Simgenin bir C++ AMP Hızlandırıcısı için derlenmiş kodda bir grup paylaşılan yerel değişkenine karşılık geldiğini belirten bir bayrak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_isAcceleratorGroupSharedLocal(
@@ -30,10 +30,10 @@ HRESULT get_isAcceleratorGroupSharedLocal(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı Simgenin bir C++ amp Hızlandırıcısı için derlenmiş koddaki bir grup paylaşılan yerel değişkenine karşılık geldiğini belirten `BOOL` işaretçisi. @No__t_0, `get_baseDataSlot` ve `get_baseDataOffset` yöntemleri değişkeni için depolama konumu bilgilerini almak üzere kullanılabilir.
+dışı `BOOL`Simgenin bir C++ amp Hızlandırıcısı için derlenmiş kodda paylaşılan bir yerel değişkene karşılık geldiğini gösteren bir işaretçisi. İse `TRUE` , `get_baseDataSlot` ve `get_baseDataOffset` yöntemleri değişkeni için depolama konumu bilgilerini almak üzere kullanılabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

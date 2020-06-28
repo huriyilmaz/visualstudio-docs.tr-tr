@@ -1,7 +1,7 @@
 ---
 title: IDiaInjectedSource | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,43 +12,43 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 994f454372883f2516d1eab03bf1152693969b16
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7ae7095d2be479c5e7789a478b8d27632a1d2faa
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743316"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467010"
 ---
 # <a name="idiainjectedsource"></a>IDiaInjectedSource
 , DIA veri kaynağında depolanan eklenmiş kaynak koduna erişir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaInjectedSource : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda `IDiaInjectedSource`yöntemleri gösterilmektedir.
+Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaInjectedSource` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
 |[IDiaInjectedSource::get_crc](../../debugger/debug-interface-access/idiainjectedsource-get-crc.md)|Kaynak kodun baytlarından hesaplanan Döngüsel artıklık denetimi (CRC) alır.|
 |[IDiaInjectedSource::get_length](../../debugger/debug-interface-access/idiainjectedsource-get-length.md)|Kodun bayt sayısını alır.|
 |[IDiaInjectedSource::get_filename](../../debugger/debug-interface-access/idiainjectedsource-get-filename.md)|Kaynak için dosya adını alır.|
-|[IDiaInjectedSource::get_filename](../../debugger/debug-interface-access/idiainjectedsource-get-objectfilename.md)|Kaynağın derlendiği nesne dosya adını alır.|
+|[IDiaInjectedSource::get_objectFilename](../../debugger/debug-interface-access/idiainjectedsource-get-objectfilename.md)|Kaynağın derlendiği nesne dosya adını alır.|
 |[IDiaInjectedSource::get_virtualFilename](../../debugger/debug-interface-access/idiainjectedsource-get-virtualfilename.md)|Dosya olmayan kaynak koda verilen adı alır; diğer bir deyişle, eklenen kod.|
 |[IDiaInjectedSource::get_sourceCompression](../../debugger/debug-interface-access/idiainjectedsource-get-sourcecompression.md)|Kullanılan kaynak sıkıştırma göstergesini alır.|
 |[IDiaInjectedSource::get_source](../../debugger/debug-interface-access/idiainjectedsource-get-source.md)|Kaynak kodu baytlarını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
-Eklenen kaynak, derleme sırasında eklenen metindir. Bu, ' de C++kullanılan Önişlemci `#include` anlamına gelmez.
+Eklenen kaynak, derleme sırasında eklenen metindir. Bu, C++ ' da kullanılan ön işlemci anlamına gelmez `#include` .
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-[IDiaEnumInjectedSources:: Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md) veya [IDiaEnumInjectedSources:: Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md) yöntemlerini çağırarak bu arabirimi elde edin. `IDiaInjectedSource` arabirimini alma örneği için bkz. [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) arabirimi.
+[IDiaEnumInjectedSources:: Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md) veya [IDiaEnumInjectedSources:: Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md) yöntemlerini çağırarak bu arabirimi elde edin. Arabirimi alma örneği için bkz. [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) arabirimi `IDiaInjectedSource` .
 
 ## <a name="example"></a>Örnek
-Bu örnek `IDiaInjectedSource` arabiriminden kullanılabilir verileri görüntüler. [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) arabirimini kullanan alternatif bir yaklaşım Için, [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) arabirimindeki örneğe bakın.
+Bu örnek, arabiriminden kullanılabilir olan verileri görüntüler `IDiaInjectedSource` . [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) arabirimini kullanan alternatif bir yaklaşım Için, [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) arabirimindeki örneğe bakın.
 
 ```C++
 void PrintInjectedSource(IDiaInjectedSource* pSource)
@@ -117,7 +117,7 @@ void PrintInjectedSource(IDiaInjectedSource* pSource)
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

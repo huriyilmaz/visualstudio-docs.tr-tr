@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumTables:: get_Count | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2a03072d2987275144d0e89b678e5282b077f0e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: fed5b7f6cf3b18e854a9607b163b5e538f734915
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743781"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467570"
 ---
 # <a name="idiaenumtablesget_count"></a>IDiaEnumTables::get_Count
 Tablo sayısını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_Count (    LONG* pRetVal
@@ -36,7 +36,7 @@ HRESULT get_Count (    LONG* pRetVal
 dışı Tablo sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)

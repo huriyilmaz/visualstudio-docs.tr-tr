@@ -1,7 +1,7 @@
 ---
 title: 'IDiaInjectedSource:: get_filename | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3aa2929ac592d475896eff0c1969115f971a8572
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: cc7a1ced59f2a1126df1cf2db3348d9d26fb1461
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743372"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467073"
 ---
 # <a name="idiainjectedsourceget_filename"></a>IDiaInjectedSource::get_filename
 Kaynak için dosya adını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_filename ( 
@@ -36,7 +36,7 @@ HRESULT get_filename ( 
 dışı Kaynak için dosya adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: findInlineeLinesByRVA | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 7a74d5ee-0dbf-47c0-92b4-47ec03b13ce9
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6cf587d9e369ac32c72df5e1fd7a9005ef417177
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 9469415682d7347aa3d51ee09878e31e28e85f62
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742203"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465722"
 ---
 # <a name="idiasessionfindinlineelinesbyrva"></a>IDiaSession::findInlineeLinesByRVA
 Bir istemcinin, belirtilen ana sembolüyle doğrudan veya dolaylı olarak satır numarası bilgileri üzerinden yineleyebilir ve belirtilen göreli sanal adres (RVA) içinde yer alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT findInlineeLinesByRVA ( 
@@ -34,7 +34,7 @@ HRESULT findInlineeLinesByRVA ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki Üst öğeyi temsil eden `IDiaSymbol` nesne.
+'ndaki `IDiaSymbol`Üst öğeyi temsil eden nesne.
 
  `rva`
 
@@ -46,10 +46,10 @@ HRESULT findInlineeLinesByRVA ( 
 
  `ppResult`
 
-dışı Alınan satır numaralarının listesini içeren `IDiaEnumLineNumbers` nesnesini barındırır.
+dışı `IDiaEnumLineNumbers`Alınan satır numaralarının listesini içeren bir nesnesi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

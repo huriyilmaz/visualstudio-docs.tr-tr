@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSession:: findInlineFramesByVA | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: df9e68f6-e0a4-4cf6-b11d-61c40351e0cd
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dca26021909220f9bb68a6794c299ec6c5a3d75a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: c241662b2d80beb31fb62bcd3b5b9f4ff133a2ff
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742139"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465687"
 ---
 # <a name="idiasessionfindinlineframesbyva"></a>IDiaSession::findInlineFramesByVA
 Bir istemcinin belirtilen bir sanal adresteki (VA) tüm satır içi çerçevelerde yineleme yapmasına izin veren bir sabit listesi alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT findInlineFramesByVA ( 
@@ -32,7 +32,7 @@ HRESULT findInlineFramesByVA ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki Üst öğeyi temsil eden `IDiaSymbol` nesne.
+'ndaki `IDiaSymbol`Üst öğeyi temsil eden nesne.
 
  `va`
 
@@ -40,10 +40,10 @@ HRESULT findInlineFramesByVA ( 
 
  `ppResult`
 
-dışı Alınan çerçevelerin listesini içeren `IDiaEnumSymbols` nesnesini barındırır.
+dışı `IDiaEnumSymbols`Alınan çerçevelerin listesini içeren bir nesnesi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSession](../../debugger/debug-interface-access/idiasession.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSectionContrib:: get_discardable | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6048f83b2f5e01790f771ae61e7a9a0fc8f329a4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1adb64767baa61e8c48739df93808aeac22266bb
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742671"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466268"
 ---
 # <a name="idiasectioncontribget_discardable"></a>IDiaSectionContrib::get_discardable
 Bölümün atılıp atılamayacağını gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_discardable ( 
@@ -33,10 +33,10 @@ HRESULT get_discardable ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bölüm gerektiği gibi bellekten atılabileceği `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
+dışı `TRUE`Bölüm gerektiği gibi bellekten atılabileceği takdirde döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

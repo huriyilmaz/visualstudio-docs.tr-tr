@@ -1,7 +1,7 @@
 ---
 title: IDiaStackFrame | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a54bd52f3783bb0bedc279cffafab2f21e0b0f39
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e3cadcfd8fed1818e18d276503c0843e0567addf
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741551"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464914"
 ---
 # <a name="idiastackframe"></a>IDiaStackFrame
 Yığın çerçevesinin özelliklerini gösterir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaStackFrame : IUnknown
@@ -35,7 +35,7 @@ Bu arabirim tarafından desteklenen yöntemler aşağıda verilmiştir:
 |------------|-----------------|
 |[IDiaStackFrame::get_allocatesBasePointer](../../debugger/debug-interface-access/idiastackframe-get-allocatesbasepointer.md)|Temel işaretçinin bu adres aralığındaki kod için ayrıldığını belirten bir bayrak alır. Bu yöntem kullanım dışıdır.|
 |[IDiaStackFrame::get_base](../../debugger/debug-interface-access/idiastackframe-get-base.md)|Çerçevenin adres temelini alır.|
-|[IDiaStackFrame::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md)|C++ Özel durum işlemenin etkin olduğunu belirten bir bayrak alır.|
+|[IDiaStackFrame::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-cplusplusexceptionhandling.md)|C++ özel durum işlemenin etkin olduğunu belirten bir bayrak alır.|
 |[IDiaStackFrame::get_functionStart](../../debugger/debug-interface-access/idiastackframe-get-functionstart.md)|Bloğun bir işlevin giriş noktasını içerdiğini belirten bir bayrak alır.|
 |[IDiaStackFrame::get_lengthLocals](../../debugger/debug-interface-access/idiastackframe-get-lengthlocals.md)|Yığına gönderilen yerel değişkenlerin bayt sayısını alır.|
 |[IDiaStackFrame::get_lengthParams](../../debugger/debug-interface-access/idiastackframe-get-lengthparams.md)|Yığına gönderilen parametrelerin bayt sayısını alır.|
@@ -54,7 +54,7 @@ Bu arabirim tarafından desteklenen yöntemler aşağıda verilmiştir:
 Yığın çerçevesi, yürütmesi sırasında işlev çağrısının soyutlamasıdır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-[IDiaEnumStackFrames:: Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md) metodunu çağırarak bu arabirimi elde edin. @No__t_1 arabirimini edinme hakkında bir örnek için bkz. [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) arabirimi.
+[IDiaEnumStackFrames:: Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md) metodunu çağırarak bu arabirimi elde edin. Arabirimi edinme hakkında bir örnek için bkz. [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) arabirimi `IDiaStackFrame` .
 
 ## <a name="example"></a>Örnek
 Bu örnek, yığın çerçevesinin çeşitli özniteliklerini görüntüler.
@@ -105,7 +105,7 @@ void PrintStackFrame(IDiaStackFrame* pFrame)
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

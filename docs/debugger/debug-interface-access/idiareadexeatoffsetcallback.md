@@ -1,7 +1,7 @@
 ---
 title: IDiaReadExeAtOffsetCallback | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8498b0189a1d5bfb876417d4719adb3487065d5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: a8db3960aebe4edc1669f2e7fbe4d40b60618bd0
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72742822"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466471"
 ---
 # <a name="idiareadexeatoffsetcallback"></a>IDiaReadExeAtOffsetCallback
 İstemci uygulamasının dosya konumuyla belirtilen bir yürütülebilir dosya bayt sağlaması için izin sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaReadExeAtOffsetCallback : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda `IDiaReadExeAtOffsetCallback` yöntemleri gösterilmektedir.
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaReadExeAtOffsetCallback` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -46,7 +46,7 @@ IDiaReadExeAtOffsetCallback : IUnknown
 
  Kitaplık: diaguid. lib
 
- DLL: Msdia80. dll
+ DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

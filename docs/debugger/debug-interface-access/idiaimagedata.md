@@ -1,7 +1,7 @@
 ---
 title: IDiaImageData | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 75a81ae23db90b06915e7090a9f2918be3ff18ae
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 39bc89e9b41f4d1c384476e673d116cb1cd08159
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743401"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467136"
 ---
 # <a name="idiaimagedata"></a>IDiaImageData
 Modülün veya görüntünün temel konumunun ve bellek uzaklarının ayrıntılarını gösterir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaImageData : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda `IDiaImageData` yöntemleri gösterilmektedir.
+Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaImageData` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -38,13 +38,13 @@ Aşağıdaki tabloda `IDiaImageData` yöntemleri gösterilmektedir.
 |[IDiaImageData::get_imageBase](../../debugger/debug-interface-access/idiaimagedata-get-imagebase.md)|Görüntünün dayanmanız gereken bellek konumunu alır.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bazı hata ayıklama akışları (XDATA, PDATA) de görüntüde depolanan verilerin kopyalarını içerir. Bu akış veri nesneleri `IDiaImageData` arabirimi için sorgulanabilir. Ayrıntılar için bu konudaki "çağıranlar için Notlar" bölümüne bakın.
+Bazı hata ayıklama akışları (XDATA, PDATA) de görüntüde depolanan verilerin kopyalarını içerir. Bu akış veri nesneleri arabirim için sorgulanabilir `IDiaImageData` . Ayrıntılar için bu konudaki "çağıranlar için Notlar" bölümüne bakın.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
-Bir [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesnesinde `QueryInterface` çağırarak bu arabirimi elde edin. Tüm hata ayıklama akışlarının `IDiaImageData` arabirimini desteklemediğini unutmayın. Örneğin, şu anda yalnızca XDATA ve PDATA akışları `IDiaImageData` arabirimini destekler.
+`QueryInterface`Bir [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) nesnesini çağırarak bu arabirimi edinin. Tüm hata ayıklama akışlarının arabirimi desteklemediğini unutmayın `IDiaImageData` . Örneğin, şu anda yalnızca XDATA ve PDATA akışları `IDiaImageData` arabirimi destekler.
 
 ## <a name="example"></a>Örnek
-Bu örnek, `IDiaImageData` arabirimini destekleyen her türlü akış için hata ayıklama akışlarını arar. Böyle bir akış bulunursa, bu akış hakkında bazı bilgiler görüntülenir.
+Bu örnekte, arabirimi destekleyen tüm akışlar için hata ayıklama akışlarının hepsi aranır `IDiaImageData` . Böyle bir akış bulunursa, bu akış hakkında bazı bilgiler görüntülenir.
 
 ```C++
 void ShowImageData(IDiaSession *pSession)
@@ -115,7 +115,7 @@ void ShowImageData(IDiaSession *pSession)
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

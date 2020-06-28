@@ -1,7 +1,7 @@
 ---
 title: IDiaEnumSymbolsByAddr::P Rev | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70265976e5c6e7c2b3f536f2b8648aaba44df528
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 8fe7ced486524c7409532e140f48f841b5e55078
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743854"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467647"
 ---
 # <a name="idiaenumsymbolsbyaddrprev"></a>IDiaEnumSymbolsByAddr::Prev
 Önceki sembolleri sırasıyla adrese göre alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT Prev ( 
@@ -46,7 +46,7 @@ dışı İstenen sembolleri temsil eden [IDiaSymbol](../../debugger/debug-interf
 dışı Getirilen Numaralandırıcı içindeki simgelerin sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Önceki semboller yoksa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Önceki semboller yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Bu yöntem, Numaralandırıcı konumunu getirilen öğe sayısına göre güncelleştirir.

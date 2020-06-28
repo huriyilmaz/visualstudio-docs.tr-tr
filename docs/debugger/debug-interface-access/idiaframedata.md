@@ -1,7 +1,7 @@
 ---
 title: IDiaFrameData | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d586cfe3e78a320ffed42e7181463eb79a6b313a
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ee2f68066de6a41e6fd6a1cf4143613a7597d6f1
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743463"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467185"
 ---
 # <a name="idiaframedata"></a>IDiaFrameData
 Yığın çerçevesinin ayrıntılarını gösterir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaFrameData : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
-Aşağıdaki tabloda `IDiaFrameData` yöntemleri gösterilmektedir.
+Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaFrameData` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -45,7 +45,7 @@ Aşağıdaki tabloda `IDiaFrameData` yöntemleri gösterilmektedir.
 |[IDiaFrameData::get_lengthSavedRegisters](../../debugger/debug-interface-access/idiaframedata-get-lengthsavedregisters.md)|Yığına gönderilen kaydedilmiş yazmaçların bayt sayısını alır.|
 |[IDiaFrameData::get_program](../../debugger/debug-interface-access/idiaframedata-get-program.md)|Geçerli işleve yapılan çağrıdan önce kayıt kümesini hesaplamak için kullanılan program dizesini alır.|
 |[IDiaFrameData::get_systemExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-systemexceptionhandling.md)|Sistem özel durum işlemenin etkin olduğunu belirten bir bayrak alır.|
-|[IDiaFrameData::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md)|C++ Özel durum işlemenin etkin olduğunu belirten bir bayrak alır.|
+|[IDiaFrameData::get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md)|C++ özel durum işlemenin etkin olduğunu belirten bir bayrak alır.|
 |[IDiaFrameData::get_functionStart](../../debugger/debug-interface-access/idiaframedata-get-functionstart.md)|Bloğun bir işlevin giriş noktasını içerdiğini gösteren bir bayrak alır.|
 |[IDiaFrameData::get_allocatesBasePointer](../../debugger/debug-interface-access/idiaframedata-get-allocatesbasepointer.md)|Taban işaretçisinin bu adres aralığındaki kod için ayrıldığını gösteren bir bayrak alır. Bu yöntem kullanım dışıdır.|
 |[IDiaFrameData::get_type](../../debugger/debug-interface-access/idiaframedata-get-type.md)|Derleyiciye özgü çerçeve türünü alır.|
@@ -59,7 +59,7 @@ Aşağıdaki tabloda `IDiaFrameData` yöntemleri gösterilmektedir.
  [IDiaEnumFrameData:: Next](../../debugger/debug-interface-access/idiaenumframedata-next.md) veya [IDiaEnumFrameData:: Item](../../debugger/debug-interface-access/idiaenumframedata-item.md) metotlarını çağırarak bu arabirimi elde edin. Ayrıntılar için bkz. [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) arabirimi.
 
 ## <a name="example"></a>Örnek
- Bu örnekte bir `IDiaFrameData` nesnesinin özellikleri yazdırılır. @No__t_1 arabiriminin nasıl elde edilildiği hakkında bir örnek için bkz. [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) arabirimi.
+ Bu örnek, bir nesnenin özelliklerini yazdırır `IDiaFrameData` . Arabirimin nasıl alındıklarına ilişkin bir örnek için bkz. [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) arabirimi `IDiaFrameData` .
 
 ```C++
 void PrintFrameData(IDiaFrameData* pFrameData){
@@ -117,7 +117,7 @@ void PrintFrameData(IDiaFrameData* pFrameData){
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

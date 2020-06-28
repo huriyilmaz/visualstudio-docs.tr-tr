@@ -1,7 +1,7 @@
 ---
 title: Ialoadcallback | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ca58a206fec15bb8a9ae7f68a278a4530be47d8
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 435dc337ea3f1caad2ad99031d9be872d80337e2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743033"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466723"
 ---
 # <a name="idialoadcallback"></a>IDiaLoadCallback
 DIA sembol konumlandırma yordamının geri çağırmaları alır, böylece bir kullanıcı arabiriminin konum denemesinin ilerlemesini raporlemelerini sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaLoadCallback : IUnknown
@@ -49,7 +49,7 @@ IDiaLoadCallback : IUnknown
 
  Kitaplık: diaguid. lib
 
- DLL: Msdia80. dll
+ DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

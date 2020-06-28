@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_acceleratorPointerTags | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 30e13cee-e511-49ec-affd-99b0097071b2
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f36b4bf9fdd362f4941e33745d59d481a473c607
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e2da182992999a582ea30f570734b366178a9521
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741109"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464410"
 ---
 # <a name="idiasymbolget_acceleratorpointertags"></a>IDiaSymbol::get_acceleratorPointerTags
-Bir C++ amp Hızlandırıcısı saplama işlevine karşılık gelen tüm Hızlandırıcı işaretçisi etiketi değerlerini döndürür.
+C++ AMP Hızlandırıcı saplama işlevine karşılık gelen tüm Hızlandırıcı işaretçisi etiketi değerlerini döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_acceleratorPointerTags(
@@ -32,21 +32,21 @@ HRESULT get_acceleratorPointerTags(
 #### <a name="parameters"></a>Parametreler
  `cnt`
 
-'ndaki Çıktı dizisinin boyutu `pPointerTags`.
+'ndaki Çıktı dizisinin boyutu `pPointerTags` .
 
  `pcnt`
 
-dışı C++ Amp Hızlandırıcısı saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısı.
+dışı C++ AMP Hızlandırıcı saplama işlevindeki Hızlandırıcı işaretçisi etiketlerinin sayısı.
 
  `pPointerTags`
 
-dışı C++ Amp Hızlandırıcısı saplama işlevindeki Hızlandırıcı işaretçisi etiketi değerleriyle doldurulmuş `DWORD` dizi işaretçisi.
+dışı `DWORD`C++ amp Hızlandırıcı saplama işlevindeki Hızlandırıcı işaretçisi etiket değerleriyle doldurulmuş bir dizi işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, bir C++ amp Hızlandırıcısı saplama işlevine karşılık gelen bir `IDiaSymbol` arabiriminde çağrılır.
+ Bu yöntem, `IDiaSymbol` C++ amp Hızlandırıcı saplama işlevine karşılık gelen bir arabirim üzerinde çağrılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

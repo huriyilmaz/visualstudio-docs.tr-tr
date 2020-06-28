@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSourceFile:: get_uniqueId | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30a210c12384cbde55dafe6f3410b8fc840e8507
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: b3f159211854e5b408d34c253a77893caf763bf2
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741787"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465201"
 ---
 # <a name="idiasourcefileget_uniqueid"></a>IDiaSourceFile::get_uniqueId
 Bu görüntü için benzersiz bir basit tamsayı anahtar değeri alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_uniqueId ( 
@@ -36,7 +36,7 @@ HRESULT get_uniqueId ( 
 dışı Bu görüntü için benzersiz olan bir basit tamsayı anahtar değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Dizeler yerine anahtarları karşılaştırma, satır numarası işlemeyi hızlandırabilir.

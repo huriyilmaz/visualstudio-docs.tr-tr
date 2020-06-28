@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_isAcceleratorPointerTagLiveRange | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: d195aec4-6d3c-42e0-88a5-3d463539f0b8
@@ -10,17 +10,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bd5a24a136bb9c04366449a91d825ddbecff2957
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e13ac37e96dc7c50b48e3dcfd91fa3379de18fca
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740317"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463514"
 ---
 # <a name="idiasymbolget_isacceleratorpointertagliverange"></a>IDiaSymbol::get_isAcceleratorPointerTagLiveRange
-Simgenin bir C++ amp Hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için *Açıklama aralığı simgesine* karşılık geldiğini belirten bir bayrak alır. Tanım aralığı simgesi, bir adres yayılımı için bir değişkenin konumudur.
+Simgenin bir C++ AMP Hızlandırıcısı için derlenmiş koddaki bir işaretçi değişkeninin etiket bileşeni için *Açıklama aralığı simgesine* karşılık geldiğini belirten bir bayrak alır. Tanım aralığı simgesi, bir adres yayılımı için bir değişkenin konumudur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_isAcceleratorPointerTagLiveRange(
@@ -30,10 +30,10 @@ HRESULT get_isAcceleratorPointerTagLiveRange(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı Simgenin tanım aralığı simgesine karşılık gelmesini belirten `BOOL` işaretçisi.
+dışı `BOOL`Simgenin, açıklama aralığı simgesine karşılık geldiğini gösteren bir işaretçisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

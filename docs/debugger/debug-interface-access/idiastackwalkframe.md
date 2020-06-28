@@ -1,7 +1,7 @@
 ---
 title: IDiaStackWalkFrame | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,24 +12,24 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b2657127726e387e81a5b28c639abbaa5399019
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ee80b9bbb6d16f2aa4264491593d1864bdade690
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741436"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464809"
 ---
 # <a name="idiastackwalkframe"></a>IDiaStackWalkFrame
 [IDiaFrameData:: Execute](../../debugger/debug-interface-access/idiaframedata-execute.md) yönteminin etkinleştirmeleri arasında yığın bağlamını korur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaStackWalkFrame : IUnknown
 ```
 
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
- Aşağıdaki tabloda `IDiaStackWalkFrame` yöntemleri gösterilmektedir.
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaStackWalkFrame` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
@@ -43,14 +43,14 @@ IDiaStackWalkFrame : IUnknown
  Bu arabirim, kayıt ve yazma ve dönüş adreslerini okuma ve yazma için program yürütme sırasında kullanılır.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- İstemci uygulaması bu arabirimi uygular ve arabirim örneğini [IDiaFrameData:: Execute](../../debugger/debug-interface-access/idiaframedata-execute.md) yöntemine geçirir. Bu arabirimin aynı örneği yeniden kullanılır ve `execute` yönteminin her çağrılması sırasında yazmaçların durumunu korumak için yeniden kullanılır. @No__t_0 yöntemi, dönüş adresini belirleyebilmek için de bu arabirimi kullanır.
+ İstemci uygulaması bu arabirimi uygular ve arabirim örneğini [IDiaFrameData:: Execute](../../debugger/debug-interface-access/idiaframedata-execute.md) yöntemine geçirir. Bu arabirimin aynı örneği yeniden kullanılır ve her yöntemin çağrılması sırasında yazmaçların durumunu korumak için yeniden kullanılır `execute` . `execute`Bu yöntem, dönüş adresini belirlemekte de bu arabirimi kullanır.
 
 ## <a name="requirements"></a>Gereksinimler
  Üstbilgi: dia2. h
 
  Kitaplık: diaguid. lib
 
- DLL: Msdia80. dll
+ DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

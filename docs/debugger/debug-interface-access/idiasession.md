@@ -1,7 +1,7 @@
 ---
 title: IDiaSession | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,29 +12,29 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f983275974ed0ec3fb0e6091f5b9e73cdccd76ef
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e7fb8c5336a14180b3742fa02a91e6532b6e5831
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741850"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465351"
 ---
 # <a name="idiasession"></a>IDiaSession
 Hata ayıklama sembolleri için bir sorgu bağlamı sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDiaSession : IUnknown
 ```
 
 ## <a name="methods"></a>Yöntemler
-Aşağıdaki tabloda `IDiaSession` yöntemleri gösterilmektedir.
+Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaSession` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[IDiaSession::get_loadAddress](../../debugger/debug-interface-access/idiasession-get-loadaddress.md)|Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini alır. Bu, `put_loadAddress` metoduna geçirilen değerdir.|
-|[IDiaSession::put_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)|Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini ayarlar. **Note:**  @No__t_1 nesnesini alırken ve nesnesini kullanmaya başlamadan önce bu yöntemi çağırmak önemlidir.|
+|[IDiaSession::get_loadAddress](../../debugger/debug-interface-access/idiasession-get-loadaddress.md)|Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini alır. Bu, yöntemine geçirilen değerdir `put_loadAddress` .|
+|[IDiaSession::put_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)|Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini ayarlar. **Note:**  `IDiaSession`Nesne alırken ve nesnesini kullanmaya başlamadan önce bu yöntemi çağırmak önemlidir.|
 |[IDiaSession::get_globalScope](../../debugger/debug-interface-access/idiasession-get-globalscope.md)|Genel kapsama bir başvuru alır.|
 |[IDiaSession::getEnumTables](../../debugger/debug-interface-access/idiasession-getenumtables.md)|Sembol deposunda bulunan tüm tablolar için bir Numaralandırıcı alır.|
 |[IDiaSession::getSymbolsByAddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md)|Statik konumlarda tüm adlandırılmış semboller için bir Numaralandırıcı alır.|
@@ -71,10 +71,10 @@ Aşağıdaki tabloda `IDiaSession` yöntemleri gösterilmektedir.
 |[IDiaSession::findAcceleratorInlineesByLinenum](../../debugger/debug-interface-access/idiasession-findacceleratorinlineesbylinenum.md)|Belirtilen kaynak konumuna karşılık gelen satır içi çerçeveler için simgelerin bir listesini döndürür.|
 
 ## <a name="remarks"></a>Açıklamalar
-@No__t_1 nesnesi oluşturulduktan sonra [IDiaSession::P ut_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yöntemini çağırmak önemlidir — ve sembollerin herhangi bir sanal adres (VA) özelliklerine erişilebilir olması için `put_loadAddress` yöntemine geçirilen değer sıfırdan farklı olmalıdır. Yükleme adresi, hata ayıklamakta olan yürütülebilir dosyayı yükleyen herhangi bir programdan gelir. Örneğin, yürütülebilir dosyanın yükleme adresini almak için `GetModuleInformation` Win32 işlevini çağırabilirsiniz, çalıştırılabilir dosya tanıtıcısı verilir.
+Nesne oluşturulduktan sonra [IDiaSession::p ut_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yöntemini çağırmak önemlidir `IDiaSession` — ve simgelere geçirilen değer, `put_loadAddress` sembollerin herhangi BIR sanal adres (VA) özelliklerinin erişilebilir olması için sıfır dışında bir değer olmalıdır. Yükleme adresi, hata ayıklamakta olan yürütülebilir dosyayı yükleyen herhangi bir programdan gelir. Örneğin, yürütülebilir dosya için `GetModuleInformation` bir tanıtıcı verilen yükleme adresini almak üzere Win32 işlevini çağırabilirsiniz.
 
 ## <a name="example"></a>Örnek
-Bu örnek, DIA SDK genel başlatmanın bir parçası olarak `IDiaSession` arabiriminin nasıl alınacağını gösterir.
+Bu örnek, `IDiaSession` DIA SDK genel başlatmanın bir parçası olarak arabirimin nasıl alınacağını gösterir.
 
 ```C++
 CComPtr<IDiaDataSource> pSource;
@@ -114,7 +114,7 @@ void InitializeDIA(const char *szFilename)
 
 Kitaplık: diaguid. lib
 
-DLL: Msdia80. dll
+DLL: msdia80.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Arabirimler (Arabirim Erişimi SDK'sında Hata Ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)

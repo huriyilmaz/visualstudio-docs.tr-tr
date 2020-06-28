@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_interruptReturn | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b4790748e7b2ea727e9e964fb94a52ddf67ffb70
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3173eb31ec10b812f6ca300d1e95a3c938fa1368
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740367"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463563"
 ---
 # <a name="idiasymbolget_interruptreturn"></a>IDiaSymbol::get_interruptReturn
-İşlevin kesme yönergesinin bir dönüşü içerip içermediğini belirten bir bayrak alır (örneğin, x86 derleme kodu `iret`).
+İşlevin kesme yönergesinin bir dönüşü içerip içermediğini belirten bir bayrak alır (örneğin, x86 derleme kodu `iret` ).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_interruptReturn(
@@ -33,13 +33,13 @@ HRESULT get_interruptReturn(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı İşlevin kesme yönergesinin bir dönüşü varsa `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
+dışı `TRUE`İşlevin kesme yönergesinin bir dönüşü varsa döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri, özelliğin simge için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 

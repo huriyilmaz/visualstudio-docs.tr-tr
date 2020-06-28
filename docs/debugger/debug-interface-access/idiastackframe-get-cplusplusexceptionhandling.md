@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackFrame:: get_cplusplusExceptionHandling | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d78a4c73d7954f48c87c1eafec4d0b35fc1292ef
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ebc2e4042185b17d7e2f670456cf124c5ce079fe
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741756"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85465124"
 ---
 # <a name="idiastackframeget_cplusplusexceptionhandling"></a>IDiaStackFrame::get_cplusplusExceptionHandling
-Özel durum işlemenin etkin olup olmadığını C++ gösteren bir bayrak alır.
+C++ özel durum işlemenin etkin olup olmadığını gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_cplusplusExceptionHandling ( 
@@ -33,13 +33,13 @@ HRESULT get_cplusplusExceptionHandling ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bu çerçeve için C++ özel durum işleme etkin ise `TRUE` döndürür; Aksi takdirde,`FALSE`döndürür.
+dışı `TRUE`C++ özel durum işlemenin bu çerçeve için geçerli olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür. Özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Özelliğin desteklenip desteklenmediğini döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- C++özel durum işleme, yapılandırılmış veya sistem özel durum işlemeyle aynı değil.
+ C++ özel durum işleme, yapılandırılmış veya sistem özel durum işlemeyle aynı değildir.
 
  Yapılandırılmış özel durum işlemenin geçerli olup olmadığını anlamak için, [IDiaStackFrame:: get_systemExceptionHandling](../../debugger/debug-interface-access/idiastackframe-get-systemexceptionhandling.md) yöntemini çağırın.
 

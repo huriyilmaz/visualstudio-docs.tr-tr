@@ -1,7 +1,7 @@
 ---
 title: 'Ialoadcallback:: NotifyOpenDBG | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 70607af90469594491223afa5f316dc63bf935b3
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 0d4572df216e04e645cae92bf479d17166edc256
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743077"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466751"
 ---
 # <a name="idialoadcallbacknotifyopendbg"></a>IDiaLoadCallback::NotifyOpenDBG
 Bir aday. dbg dosyası açıldığında çağırılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT NotifyOpenDBG ( 
@@ -38,10 +38,10 @@ HRESULT NotifyOpenDBG ( 
 
  `resultCode`
 
-'ndaki Bu dosyaya uygulanan yükün başarısını (`S_OK`) veya başarısızlığını belirten kod.
+'ndaki `S_OK`Bu dosyaya uygulanan yükün başarısını () veya başarısızlığını belirten kod.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür. Dönüş kodu genellikle yok sayılır.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Dönüş kodu genellikle yok sayılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)
