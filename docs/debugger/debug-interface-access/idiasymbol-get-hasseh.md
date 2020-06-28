@@ -1,7 +1,7 @@
 ---
 title: 'IDiaSymbol:: get_hasSEH | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e96216b5e33031405df3b01a3f76412a544bb51
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e0f9e7b1dc2fb5a338dc2cd2edbf3cf9d0eb2441
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72740431"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85463668"
 ---
 # <a name="idiasymbolget_hasseh"></a>IDiaSymbol::get_hasSEH
-İşlevin [yapılandırılmış özel durum işleme (CC++/)](/cpp/cpp/structured-exception-handling-c-cpp) (örneğin, __try/\__except blokları) içerip içermediğini belirten bir bayrak alır.
+İşlevin [yapılandırılmış özel durum işleme (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) içerip içermediğini belirten bir bayrak alır (örneğin, __try/ \_ _Except blokları).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_hasSEH(
@@ -33,13 +33,13 @@ HRESULT get_hasSEH(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı İşlevin yapılandırılmış özel durum işleme blokları varsa `TRUE` döndürür; Aksi takdirde, `FALSE` döndürür.
+dışı `TRUE`İşlevin yapılandırılmış özel durum işleme blokları varsa döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, `S_FALSE` veya hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
 
 > [!NOTE]
-> @No__t_0 dönüş değeri özelliğin sembol için kullanılamadığı anlamına gelir.
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.
 
 ## <a name="requirements"></a>Gereksinimler
 

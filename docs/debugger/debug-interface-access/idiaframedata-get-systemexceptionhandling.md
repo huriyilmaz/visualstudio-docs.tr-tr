@@ -1,7 +1,7 @@
 ---
 title: 'IDiaFrameData:: get_systemExceptionHandling | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e73ed8ae4aacf739463b1c6ab1f8f30c51a7fb2
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 78a40caf8f2f974386f43ba9aeecfbdc4c71c766
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743488"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85467206"
 ---
 # <a name="idiaframedataget_systemexceptionhandling"></a>IDiaFrameData::get_systemExceptionHandling
 Sistem özel durum işlemenin etkin olup olmadığını gösteren bir bayrak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_systemExceptionHandling ( 
@@ -33,15 +33,15 @@ HRESULT get_systemExceptionHandling ( 
 #### <a name="parameters"></a>Parametreler
  pRetVal
 
-dışı Sistem özel durum işleme etkinse `TRUE` döndürür; Aksi takdirde, `FALSE`döndürür.
+dışı `TRUE`Sistem özel durum işleme geçerli olduğunda döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK`döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Sistem özel durum işleme, yapılandırılmış özel durum işleme olarak daha yaygın olarak bilinir.
 
- Özel durum işlemenin geçerli olup olmadığını anlamak için, [IDiaFrameData:: get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md) yöntemini çağırın. C++
+ C++ özel durum işlemenin geçerli olup olmadığını anlamak için, [IDiaFrameData:: get_cplusplusExceptionHandling](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md) yöntemini çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaEnumSegments:: Item | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 101821e3c00d3aeac9b131ee5a11ab9a01e090a9
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: e03c01efb9f2dca13009a7dc7eeb8282b5c9082c
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72744178"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468046"
 ---
 # <a name="idiaenumsegmentsitem"></a>IDiaEnumSegments::Item
 Bir segmenti bir dizin aracılığıyla alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT Item ( 
@@ -34,14 +34,14 @@ HRESULT Item ( 
 #### <a name="parameters"></a>Parametreler
  dizin
 
-'ndaki Alınacak [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) nesnesinin dizini. Dizin, `count` [IDiaEnumSegments:: get_Count](../../debugger/debug-interface-access/idiaenumsegments-get-count.md) yöntemi tarafından döndürülen `count`-1 aralığında olur.
+'ndaki Alınacak [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) nesnesinin dizini. Dizin 0 `count` -1 aralığında, burada `count` [IDiaEnumSegments:: get_Count](../../debugger/debug-interface-access/idiaenumsegments-get-count.md) yöntemi tarafından döndürülür.
 
- deki
+ segment
 
 dışı İstenen segmenti temsil eden bir [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaEnumSegments](../../debugger/debug-interface-access/idiaenumsegments.md)

@@ -1,7 +1,7 @@
 ---
 title: 'IDiaStackWalkFrame:: searchForReturnAddressStart | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ad1c42a39b9c35cc1436488e19481f2b286b6f5
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 361aa5083f0d3abafc42ddbacf9bee4e464a3336
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72741457"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85464816"
 ---
 # <a name="idiastackwalkframesearchforreturnaddressstart"></a>IDiaStackWalkFrame::searchForReturnAddressStart
 Belirtilen adreste veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT searchForReturnAddressStart ( 
@@ -43,10 +43,10 @@ HRESULT searchForReturnAddressStart ( 
 
  `returnAddress`
 
-dışı @No__t_0 için en yakın işlev dönüş adresini döndürür.
+dışı En yakın işlev dönüş adresini döndürür `startAddress` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür; Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

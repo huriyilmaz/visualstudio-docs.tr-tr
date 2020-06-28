@@ -1,7 +1,7 @@
 ---
 title: 'IDiaLineNumber:: get_statement | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a37052944f74e36b488541074a0033f5b8aca9e
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 3ea4a05bfccddeedb29110ea6ee44f34f85534a8
+ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72743125"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85466849"
 ---
 # <a name="idialinenumberget_statement"></a>IDiaLineNumber::get_statement
 Bu satır bilgisinin program kaynağında bir ifade yerine bir deyimin başlangıcını açıkladığını belirten bir bayrak alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```C++
 HRESULT get_statement ( 
@@ -33,10 +33,10 @@ HRESULT get_statement ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı Bu satır bilgilerinde program kaynağındaki bir deyimin başlangıcını açıkladıysanız `TRUE` döndürür.
+dışı `TRUE`Bu satır bilgisinin program kaynağındaki bir deyimin başlangıcını açıkladıysanız döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa `S_OK` döndürür. Bu özellik desteklenmiyorsa `S_FALSE` döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Deyimler birden çok satıra yayılabilir. Bu yöntem, ilişkili satır numarasının böyle bir çok satırlı deyimin başlangıcını işaretlemeyeceğini gösterir.
