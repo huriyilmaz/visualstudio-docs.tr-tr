@@ -15,33 +15,33 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3ccd8f9fa201e2cdfabfb7f6354d6df4718c572e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b953a97d557e28cce50f554acc03797d4be38220
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652749"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534881"
 ---
-# <a name="ca1408-do-not-use-autodual-classinterfacetype"></a>CA1408: AutoDual ClassInterfaceType kullanma
+# <a name="ca1408-do-not-use-autodual-classinterfacetype"></a>CA1408: AutoDual ClassInterFaceType kullanmayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotUseAutoDualClassInterfaceType|
 |CheckId|CA1408|
 |Kategori|Microsoft. çalışabilirliği|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Bir bileşen nesne modeli (COM) görünür türü, <xref:System.Runtime.InteropServices.ClassInterfaceType> ' nin `AutoDual` değerine ayarlanmış <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> özniteliğiyle işaretlenir.
+## <a name="cause"></a>Nedeni
+ Bileşen nesne modeli (COM) görünür türü <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> özniteliği değeri olarak ayarlanan özniteliğiyle işaretlenir `AutoDual` <xref:System.Runtime.InteropServices.ClassInterfaceType> .
 
 ## <a name="rule-description"></a>Kural Tanımı
- Çift arabirim kullanan türler, belirli bir arabirim düzenine bağlanmak için istemcileri etkinleştirir. Gelecek sürümdeki değişiklikler, türün düzeni veya bazı temel türler, arayüze bağlanan COM istemcilerini kesintiye uğratır. Varsayılan olarak, <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> özniteliği belirtilmemişse, yalnızca bir dağıtım arabirimi kullanılır.
+ Çift arabirim kullanan türler, belirli bir arabirim düzenine bağlanmak için istemcileri etkinleştirir. Gelecek sürümdeki değişiklikler, türün düzeni veya bazı temel türler, arayüze bağlanan COM istemcilerini kesintiye uğratır. Varsayılan olarak, <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> öznitelik belirtilmemişse, yalnızca bir dağıtım arabirimi kullanılır.
 
  Aksi belirtilmedikçe genel olmayan genel türler COM 'a görünür; Tüm ortak ve genel türler COM 'da görünmez.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> özniteliğinin değerini <xref:System.Runtime.InteropServices.ClassInterfaceType> ' nin `None` değerine değiştirin ve arabirimi açık olarak tanımlayın.
+ Bu kural ihlalini onarmak için <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> özniteliğinin değerini `None` değerini değiştirin <xref:System.Runtime.InteropServices.ClassInterfaceType> ve arabirimi açık olarak tanımlayın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Türün düzeninin ve temel türlerinin sonraki bir sürümde değişmemesini gerekmedikçe, bu kuraldan bir uyarıyı bastırmayın.
@@ -55,7 +55,7 @@ ms.locfileid: "72652749"
 ## <a name="related-rules"></a>İlgili kurallar
  [CA1403: Otomatik yerleşim türleri COM görünebilir olmamalıdır](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)
 
- [CA1412: ComSource Arabirimlerini IDispatch olarak işaretleyin](../code-quality/ca1412-mark-comsource-interfaces-as-idispatch.md)
+ [CA1412: ComSource arabirimlerini IDispatch olarak işaretleyin](../code-quality/ca1412-mark-comsource-interfaces-as-idispatch.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Yönetilmeyen kod ile](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258) birlikte çalışabilirlik Için [sınıf arabirimi](https://msdn.microsoft.com/733c0dd2-12e5-46e6-8de1-39d5b25df024) [niteleyen .NET türlerini](https://msdn.microsoft.com/library/4b8afb52-fb8d-4e65-b47c-fd82956a3cdd) tanıtma

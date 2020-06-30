@@ -1,49 +1,49 @@
 ---
-title: 'Nasıl yapılır: Uzantıları için kural tabanlı UI bağlamı kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: Uzantılar için kural tabanlı kullanıcı arabirimi bağlamını kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.topic: conceptual
 ms.assetid: 8dd2cd1d-d8ba-49b9-870a-45acf3a3259d
 caps.latest.revision: 8
 ms.author: gregvanl
-ms.openlocfilehash: ccdba95816d77e5282e978d508da581d9240ef06
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 26f66f635b2c248af01067d9dbd96fd997593593
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62425755"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535570"
 ---
-# <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Nasıl yapılır: Visual Studio Uzantıları için Kural Tabanlı UI Bağlamı Kullanma
+# <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>Nasıl Yapılır: Visual Studio Uzantıları için Kural Tabanlı UI Bağlamı Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio VSPackages belirli zaman yüklenmesini sağlayan iyi bilinen <xref:Microsoft.VisualStudio.Shell.UIContext>s etkinleşir. Ancak, bu UI bağlamları sertifikalarıdır, uzantı yazarları bırakarak seçeneği yoktur çok iyi değildir ancak noktasından önce etkinleştirir kullanılabilir bir UI bağlamı seçmek için gerçekten yüklenecek VSPackage'ı istedikleri. İyi bilinen UI bağlamı bir listesi için bkz. <xref:Microsoft.VisualStudio.Shell.KnownUIContexts>.
+Visual Studio, belirli bir tanınmış s etkinleştirildiğinde VSPackages yüklemesine olanak tanır <xref:Microsoft.VisualStudio.Shell.UIContext> . Ancak, bu kullanıcı arabirimi bağlamları çok hassas değildir, ancak uzantı yazarlarının hiçbir seçim yapmadan, ancak VSPackage 'ın yüklenmesini gerçekten istediği noktadan önce etkinleştiren kullanılabilir bir kullanıcı arabirimi bağlamını seçer. İyi bilinen kullanıcı arabirimi bağlamlarının bir listesi için bkz <xref:Microsoft.VisualStudio.Shell.KnownUIContexts> ..
 
- Paketler yüklenirken bir performans etkisi olabilir ve bunlar gerekenden daha çabuk yüklenirken en iyi yöntem değildir. Visual Studio 2015, kural tabanlı UI bağlamı, altında çalışacağı bir UI bağlamı etkinleştirildi ve ilişkili VSPackages yüklenen kesin koşulları tanımlamak uzantı yazarları sağlayan bir mekanizma kavramını sundu.
+ Paketlerin yüklenmesi bir performans etkisine sahip olabilir ve bu uygulamaların gerekenden daha önce yüklenmesi en iyi uygulamadır. Visual Studio 2015, kural tabanlı kullanıcı arabirimi bağlamları kavramını kullanıma sunmuştur ve bu sayede uzantı yazarlarının, Kullanıcı arabirimi bağlamı etkinleştirilmiş ve ilişkili VSPackages 'nin altında kesin koşulları tanımlamasına imkan tanıyan bir mekanizma.
 
-## <a name="rule-based-ui-context"></a>Kural tabanlı UI bağlamı
- Bir "kural" Yeni kullanıcı Arabirimi bağlamında (GUID) oluşur ve bir veya daha fazla "Terms" başvuran bir Boole ifadesi mantıksal birlikte "ve", "veya", "not" işlemleri. "Terms" çalışma zamanında dinamik olarak değerlendirilir ve kendi koşulları değişiklikleri her ifade tekrar değerlendirilir. İfade doğru olarak değerlendirildiğinde, ilişkili UI bağlamı etkinleştirildi. Aksi takdirde kullanıcı Arabirimi de-activated bağlamıdır.
+## <a name="rule-based-ui-context"></a>Kural tabanlı kullanıcı arabirimi bağlamı
+ "Rule" yeni bir kullanıcı arabirimi bağlamından (GUID) ve mantıksal "ve", "veya", "değil" işlemlerine göre birleştirilmiş bir veya daha fazla "terim" başvurusu yapan bir Boolean ifadeden oluşur. "Terimler", çalışma zamanında dinamik olarak değerlendirilir ve her bir terim değiştiğinde ifade yeniden değerlendirilir. İfade true olarak değerlendirilirse, ilişkili UI bağlamı etkinleştirilir. Aksi takdirde, Kullanıcı arabirimi bağlamı da devre dışı bırakılır.
 
- Kural tabanlı UI bağlamı çeşitli şekillerde kullanılabilir:
+ Kural tabanlı kullanıcı arabirimi bağlamı çeşitli yollarla kullanılabilir:
 
-1. Görünürlük kısıtlamaları komutları ve araç pencerelerini belirtin. UI bağlamı kural karşılanana kadar bu komutları/tools windows gizleyebilirsiniz.
+1. Komutlar ve araç pencereleri için görünürlük kısıtlamalarını belirtin. Kullanıcı arabirimi bağlam kuralı karşılanana kadar komutlar/araçlar pencerelerini gizleyebilirsiniz.
 
-2. Otomatik yükü sınırlamaları: otomatik yük, yalnızca kural karşılandığında paketleri
+2. Otomatik yükleme kısıtlamaları olarak: yalnızca kural karşılandığında paketleri otomatik yükle
 
-3. Geciken görevi: Belirtilen geçtikten ve kural hala karşılanana kadar yükleme gecikmesi.
+3. Gecikmeli görev: belirtilen bir Aralık geçene ve kural karşılanana kadar yükleme gecikmesi.
 
-   Mekanizması herhangi bir Visual Studio uzantısı tarafından kullanılıyor olabilir.
+   Mekanizması herhangi bir Visual Studio uzantısı tarafından kullanılabilir.
 
-## <a name="create-a-rule-based-ui-context"></a>Bir kural tabanlı UI bağlamı oluşturur
- Yalnızca ".config" uzantılı dosyalar için geçerli bir menü komutu sunan TestPackage adlı bir uzantı olduğunu varsayalım. VS2015 önce TestPackage yüklemek için en iyi seçenek olduğu zaman <xref:Microsoft.VisualStudio.Shell.KnownUIContexts.SolutionExistsAndFullyLoadedContext%2A> UI bağlamı etkinleştirilmediği. Yüklenen çözüm .config dosyasını bile içeremez olduğundan bu verimli değildir. Bize bakın yalnızca bir dosya açıldığında .config uzantısına sahip bir UI bağlamı etkinleştirmek için kural tabanlı UI bağlamı kullanılabilir nasıl seçilir ve bu UI bağlamı etkinleştirildiğinde TestPackage yükleyin.
+## <a name="create-a-rule-based-ui-context"></a>Kural tabanlı kullanıcı arabirimi bağlamı oluşturma
+ Yalnızca ". config" uzantısına sahip dosyalar için geçerli olan bir menü komutu sunan TestPackage adlı bir uzantıya sahip olduğunuzu varsayalım. VS2015 önce, UI bağlamı etkinleştirildiğinde en iyi seçenek TestPackage 'i yükleiydi <xref:Microsoft.VisualStudio.Shell.KnownUIContexts.SolutionExistsAndFullyLoadedContext%2A> . Bu, yüklenen çözüm bir. config dosyası içerememesine rağmen etkili değildir. Yalnızca. config uzantılı bir dosya seçildiğinde ve kullanıcı ARABIRIMI bağlamı etkinleştirildiğinde TestPackage 'i kullanarak bir UI bağlamını etkinleştirmek için kurallar tabanlı kullanıcı arabirimi bağlamının nasıl kullanılabileceğini görelim.
 
-1. Yeni bir Uıcontext GUID tanımlayın ve VSPackage sınıfa eklemek <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> ve <xref:Microsoft.VisualStudio.Shell.ProvideUIContextRuleAttribute>.
+1. Yeni bir UIContext GUID tanımlayın ve VSPackage sınıfına ve öğesine ekleyin <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideUIContextRuleAttribute> .
 
-    Örneğin, yeni Uıcontext varsayalım "UIContextGuid" olan eklenecek. Oluşturulan GUID (Araçlar'ı tıklatarak bir GUID oluşturabilirsiniz -> GUID Oluştur) "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B" olduğu. Ardından aşağıdakileri ekleyin, paket sınıf içinde:
+    Örneğin, yeni bir UIContext "Uıcontextguid" ekleneceğini varsayalım. Oluşturulan GUID (araçlara tıklayarak bir GUID oluşturabilirsiniz-> Guid oluştur) "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B" olur. Ardından paket sınıfınızın içine aşağıdakini ekleyin:
 
    ```csharp
    public const string UIContextGuid = "8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B";
    ```
 
-    Öznitelikler için aşağıdakileri ekleyin: (Bu özniteliklerin ayrıntıları daha sonra açıklanacaktır)
+    Öznitelikler için şunları ekleyin: (Bu özniteliklerin ayrıntıları daha sonra açıklanacaktır)
 
    ```csharp
    [ProvideAutoLoad(TestPackage.UIContextGuid)]
@@ -54,17 +54,17 @@ Visual Studio VSPackages belirli zaman yüklenmesini sağlayan iyi bilinen <xref
        termValues: new[] { "HierSingleSelectionName:.config$" })]
    ```
 
-    Bu meta veriler, yeni Uıcontext GUID (8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B) ve tek bir terimi, "DotConfig" başvuran bir ifade tanımlayın. Geçerli seçim etkin olan hiyerarşi, normal ifade deseniyle eşleşen bir ada sahipse, "DotConfig" terimi true olarak değerlendirilen "\\.config$" (".config" ile biter). Hata ayıklama için yararlı kuralı için isteğe bağlı bir ad (varsayılan) değerini tanımlar.
+    Bu meta veriler, yeni UIContext GUID (8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B) ve tek bir terime başvuran bir ifade ("DotConfig") tanımlar. Etkin hiyerarşideki geçerli seçimin ". config $" normal ifade düzeniyle eşleşen bir adı olduğunda "DotConfig" terimi true olarak değerlendirilir \\ (". config" ile biter). (Varsayılan) değeri, hata ayıklama için yararlı bir kural için isteğe bağlı bir ad tanımlar.
 
-    Öznitelik değerleri daha sonra derleme zamanında oluşturulan pkgdef eklenir.
+    Öznitelik değerleri, derleme zamanı sırasında oluşturulan pkgdef öğesine eklenir.
 
-2. VSCT dosyasına TestPackage'nın komutları için uygun komutları için "DynamicVisibility" bayrak ekleyin:
+2. TestPackage komutları için VSCT dosyasında, uygun komutlara "DynamicVisibility" bayrağını ekleyin:
 
    ```xml
    <CommandFlag>DynamicVisibility</CommandFlag>
    ```
 
-3. VSCT görünürlüklerini kısmında yeni Uıcontext #1'de tanımlanan GUID için uygun komutları bağlayın:
+3. VSCT 'ın görünürlükleri bölümünde, uygun komutları #1 tanımlı yeni Uıtext GUID 'sine bağlayın:
 
    ```xml
    <VisibilityConstraints>
@@ -72,30 +72,30 @@ Visual Studio VSPackages belirli zaman yüklenmesini sağlayan iyi bilinen <xref
    </VisibilityConstraints>
    ```
 
-4. Semboller bölümünde Uıcontext tanımını ekleyin:
+4. Semboller bölümünde UIContext tanımını ekleyin:
 
    ```xml
    <GuidSymbol name="guidTestUIContext" value="{8B40D5E2-5626-42AE-99EF-3DD1EFF46E7B}" />
    ```
 
-    Şimdi, *.config dosyalar için bağlam menüsü komutları yalnızca seçili öğe Çözüm Gezgini'nde ".config" dosyasıdır ve bu komutlardan birini seçilene kadar paket yüklenmez görünür olur.
+    Artık, *. config dosyaları için bağlam menüsü komutları yalnızca Çözüm Gezgini 'ndeki seçili öğe bir ". config" dosyası olduğunda görünür ve bu komutlardan biri seçilene kadar paket yüklenmez.
 
-   Ardından, paket yalnızca, kendisine bekliyoruz yüklendiğini doğrulamak için bir hata ayıklayıcı kullanalım. TestPackage hata ayıklamak için:
+   Daha sonra, paketin yalnızca öğesini beklediğimiz sırada yüklediğini doğrulamak için bir hata ayıklayıcı kullanalım. TestPackage hata ayıklaması yapmak için:
 
-5. Bir kesim noktası <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> yöntemi.
+5. Yönteminde bir kesme noktası ayarlayın <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> .
 
-6. TestPackage oluşturun ve hata ayıklamaya başlayın.
+6. TestPackage oluşturun ve hata ayıklamayı başlatın.
 
-7. Bir proje oluşturun veya açın.
+7. Bir proje oluşturun veya birini açın.
 
-8. Herhangi bir dosya uzantısı .config dışında seçin. Kesme noktası isabet değil.
+8. Uzantısı. config dışında herhangi bir dosya seçin. Kesme noktası isabet ettirilmemelidir.
 
 9. App.Config dosyasını seçin.
 
-   TestPackage yükler ve kesme noktasında durur.
+   TestPackage kesme noktasında yüklenir ve durmaktadır.
 
 ## <a name="adding-more-rules-for-ui-context"></a>UI bağlamı için daha fazla kural ekleme
- UI bağlamı kuralları Boolean ifadeler olduğundan, bir kullanıcı Arabirimi içeriği için daha kısıtlı kuralları ekleyebilirsiniz. Örneğin, yukarıdaki UI bağlamında, kural yalnızca bir proje içeren bir çözüm ne zaman yüklendi geçerli olduğunu belirtebilirsiniz. Bu şekilde, komutları, bir ".config" dosyası açarsanız bir projenin bir parçası olarak değil bir tek başına dosya olarak görünmez.
+ UI bağlam kuralları Boole ifadeleri olduğundan, bir UI bağlamı için daha kısıtlı kurallar ekleyebilirsiniz. Örneğin, yukarıdaki kullanıcı arabirimi bağlamında, kuralın yalnızca proje içeren bir çözüm yüklendiğinde uygulanacağını belirtebilirsiniz. Bu şekilde, bir ". config" dosyasını bir projenin parçası olarak değil tek başına bir dosya olarak açarsanız komutlar gösterilmez.
 
 ```csharp
 [ProvideAutoLoad(TestPackage.UIContextGuid)]
@@ -106,12 +106,12 @@ Visual Studio VSPackages belirli zaman yüklenmesini sağlayan iyi bilinen <xref
     termValues: new[] { VSConstants.UICONTEXT_SolutionHasSingleProject_string , VSConstants.UICONTEXT_SolutionHasMultipleProjects_string , "HierSingleSelectionName:.config$" })]
 ```
 
- Artık üç şartları ifade başvuruyor. İlk iki terimin "SingleProject" ve "MultipleProjects" (GUID'ler tarafından) iyi bilinen diğer UI bağlamları bakın. Üçüncü terimi, daha önce tanımladığımız kural tabanlı UI bağlamı "DotConfig" dir.
+ Artık ifade üç koşullara başvurur. İlk iki terim olan "SingleProject" ve "MultipleProjects", iyi bilinen diğer kullanıcı arabirimi bağlamlarına (GUID 'lerine göre) başvurur. "DotConfig" üçüncü terimi, daha önce tanımladığımız kural tabanlı kullanıcı arabirimi bağlamıdır.
 
 ## <a name="delayed-activation"></a>Gecikmeli etkinleştirme
- Kurallar, isteğe bağlı bir "gecikmesi" olabilir. Gecikme süresini milisaniye cinsinden belirtilir. Varsa, o zaman aralığına göre geciktirileceği bir kuralın UI bağlamı devre dışı bırakma ve etkinleştirme gecikme neden olur. Kural değişikliklerini önce gecikme aralığı yedeklerseniz, hiçbir şey olmaz. Bu mekanizma "başlatma adımlar - üzerinde zamanlayıcılar güvenmek veya boşta bildirimlere kaydolma olmadan özellikle tek seferlik başlatma basamaklandırmak için" kullanılabilir.
+ Kuralların isteğe bağlı bir "gecikmesi" olabilir. Gecikme milisaniye cinsinden belirtilir. Varsa, gecikme bir kuralın Kullanıcı arabirimi bağlamının etkinleştirilmesinin veya devre dışı bırakılmasının bu zaman aralığı ile ertelenmesini sağlar. Kural gecikme aralığından önce geri değişirse hiçbir şey olmaz. Bu mekanizma, zamanlayıcılara bağlı olmadan veya boşta bildirimleri için kayıt yaptırmadan, özellikle bir kerelik başlatma adımları için "hazırlama" işlemi yapmak için kullanılabilir.
 
- Örneğin, 100 milisaniye gecikme için test yük kuralınızı belirtebilirsiniz:
+ Örneğin, test yükleme kuralınızı 100 milisaniyelik bir gecikme olacak şekilde belirtebilirsiniz:
 
 ```csharp
 [ProvideAutoLoad(TestPackage.UIContextGuid)]
@@ -124,28 +124,28 @@ Visual Studio VSPackages belirli zaman yüklenmesini sağlayan iyi bilinen <xref
 ```
 
 ## <a name="term-types"></a>Terim türleri
- Terim desteklenen çeşitli türleri şunlardır:
+ Desteklenen çeşitli terim türleri şunlardır:
 
-|||
+|Terim türü|Description|
 |-|-|
-|{nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn}|GUID, bir kullanıcı Arabirimi bağlamına başvuruyor. Terimi, UI bağlamı etkin ve false Aksi durumda olduğunda true olur.|
-|HierSingleSelectionName:\<deseni >|Terim Seçimi etkin hiyerarşideki tek bir öğedir ve seçilen öğenin adı "deseni" tarafından verilen .net normal ifadeyle eşleşen olduğunda true olur.|
-|UserSettingsStoreQuery:\<sorgu >|"sorgu", sıfır olmayan bir değerde hesaplanmalıdır kullanıcı ayarları deposuna tam yolunu temsil eder. Sorgu, "koleksiyonu" ve "propertyName" en son eğik çizgi ayrılır.|
-|ConfigSettingsStoreQuery:\<sorgu >|"sorgu", sıfır olmayan bir değerde hesaplanmalıdır yapılandırma ayarları deposuna tam yolunu temsil eder. Sorgu, "koleksiyonu" ve "propertyName" en son eğik çizgi ayrılır.|
-|ActiveProjectFlavor:\<projectTypeGuid >|Seçili olan projeye markdown'lar her terimi true (toplu olarak) ve GUID belirli proje türüyle eşleşen bir özellik vardır.|
-|ActiveEditorContentType:\<contentType >|Seçili belgeyi belirtilen içerik türü metin düzenleyiciyle olduğunda terimi true olur.|
-|ActiveProjectCapability:\<ifadesi >|Etkin proje özellikleri sağlanan ifade eşleştiğinde true bir terimdir. VB gibi bir ifade olabilir &#124; CSharp|
-|SolutionHasProjectCapability:\<ifadesi >|Yukarıdaki benzer; ancak terimi olduğunda true ifade ile eşleşen tüm yüklenen proje çözümü vardır.|
-|SolutionHasProjectFlavor:\<projectTypeGuid >|Her bir çözüm (toplu) özellikli proje varsa ve GUID belirli proje türüyle eşleşen bir özellik terimi true olur.|
+|{nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn}|GUID, bir UI bağlamını ifade eder. Kullanıcı arabirimi bağlamı etkin olduğunda terim true, aksi durumda false olur.|
+|HierSingleSelectionName:\<pattern>|Etkin hiyerarşide seçim tek bir öğe olduğunda ve seçili öğenin adı "model" tarafından verilen .net normal ifadesiyle eşleştiğinde, terim true olur.|
+|UserSettingsStoreQuery:\<query>|"sorgu", sıfır olmayan bir değer olarak değerlendirilmesi gereken Kullanıcı ayarları deposunun tam yolunu temsil eder. Sorgu, son eğik çizgiden bir "Collection" ve "propertyName" olarak bölünür.|
+|ConfigSettingsStoreQuery:\<query>|"sorgu", sıfır olmayan bir değer olarak değerlendirilmesi gereken yapılandırma ayarları deposunun tam yolunu temsil eder. Sorgu, son eğik çizgiden bir "Collection" ve "propertyName" olarak bölünür.|
+|ActiveProjectFlavor:\<projectTypeGuid>|Şu anda seçili olan proje flavokken (toplanmış) ve belirtilen proje türü GUID 'SI ile eşleşen bir Flavor olduğunda, terim doğru olacaktır.|
+|ActiveEditorContentType:\<contentType>|Seçili belge, verilen içerik türüne sahip bir metin Düzenleyicisi olduğunda, terim true olur.|
+|ActiveProjectCapability:\<Expression>|Etkin proje özellikleri, belirtilen ifadeyle eşleştiğinde, terim true olur. İfade, VB &#124; CSharp gibi bir şey olabilir|
+|SolutionHasProjectCapability:\<Expression>|Yukarıdaki ifadeye benzer ancak çözüm, ifadeyle eşleşen herhangi bir yüklü projeye sahip olduğunda terim doğrudur.|
+|SolutionHasProjectFlavor:\<projectTypeGuid>|Bir çözümde flavored (toplanmış) projesi olduğunda ve belirtilen proje türü GUID 'SI ile eşleşen bir Flavor olduğunda terim true olur.|
 
-## <a name="compatibility-with-cross-version-extension"></a>Sürümler arası uzantısı ile uyumluluk
- Tabanlı UI bağlamı Visual Studio 2015'te yeni bir özelliktir ve önceki sürümleri için unity'nin değil kuralı. Bu, Visual Studio 2013'te otomatik olarak yüklenir ve önceki olması gerekir, ancak otomatik-Visual Studio 2015'te yüklenmesini önlemek için kural tabanlı UI bağlamı yararlanabilir Visual Studio'nun birden çok sürümünü hedefleyen uzantıları/paketleri ile ilgili bir sorun oluşturur.
+## <a name="compatibility-with-cross-version-extension"></a>Sürümler arası uzantıyla uyumluluk
+ Kural tabanlı kullanıcı arabirimi bağlamları, Visual Studio 2015 ' deki yeni bir özelliktir ve önceki sürümlere verilmez. Bu, Visual Studio 'nun Visual Studio 2013 ve önceki sürümlerinde otomatik olarak yüklenmesi gereken, ancak Visual Studio 2015 ' de otomatik olarak yüklenmesini engellemek için kural tabanlı kullanıcı arabirimi bağlamlarından faydalanabilecek uzantılar/paketlerle ilgili bir sorun oluşturur.
 
- Gibi paketlerin desteklemek için AutoLoadPackages girişleri kayıt defterinde girişi Visual Studio 2015'te ve üstünde olarak atlanması gerektiğini belirtmek için değer alanında bir bayrak şimdi sağlayabilirsiniz. Bu bayrak seçeneğine ekleyerek yapılabilir <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags>. VSPackage artık ekleyebilirsiniz **SkipWhenUIContextRulesActive** seçeneğini kendi <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> giriş yoksayılan Visual Studio 2015'te ve yukarıdaki belirtmek için özniteliği.
+ Bu tür paketleri desteklemek için, kayıt defterindeki oto Loadpackages girdileri artık girişin Visual Studio 2015 ve üzeri sürümlerde atlanması gerektiğini göstermek için değer alanında bir bayrak sağlayabilir. Bu, öğesine bir bayrak seçeneği eklenerek yapılabilir <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags> . VSPackages artık, girişin Visual Studio 2015 ve üzeri sürümlerde yoksayılıp sayılmayacağını belirtmek için kendi özniteliğine **Skipwhenuicontextrulesactive** seçeneğini ekleyebilirler <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> .
 
-## <a name="extensible-ui-context-rules"></a>Genişletilebilir UI bağlamı kuralları
- Bazı durumlarda, paketleri statik UI bağlamı kurallarını kullanamazsınız. Örneğin, komut durumu, içeri aktarılan MEF sağlayıcıları tarafından desteklenen Düzenleyicisi türlere göre olacak şekilde genişletilebilirlik destekleyen bir paket olduğunu varsayalım. Komut geçerli düzen türünü destekleyen bir uzantısı varsa etkindir. Bu gibi durumlarda koşullarına bağlı olarak hangi MEF uzantıların kullanılabilir olduğunu değiştirirsiniz olduğundan paket statik bir UI bağlamı kural kullanamazsınız.
+## <a name="extensible-ui-context-rules"></a>Genişletilebilir UI bağlam kuralları
+ Bazen, paketler statik UI bağlamı kurallarını kullanamaz. Örneğin, komut durumunun içeri aktarılan MEF sağlayıcıları tarafından desteklenen düzenleyici türlerini temel aldığı gibi, genişletilebilirliği destekleyen bir paketiniz olduğunu varsayalım. Geçerli düzenleme türünü destekleyen bir uzantı varsa komut etkinleştirilir. Bu tür durumlarda, şartlar hangi MEF uzantılarının kullanılabilir olduğuna bağlı olarak değişecağından, paketin kendisi statik bir UI bağlam kuralını kullanamaz.
 
- Kural tabanlı UI bağlamı gibi paketlerin desteklemek için bir sabit kodlanmış ifadesi destek "*", katılması ile tüm aşağıdaki koşulları gösterir veya. Bu ana paket tanımlamak bilinen bir kural tabanlı UI bağlamı sağlar ve bu bağlam komut durumuna bağlayın. Daha sonra ana paket için hedeflenen herhangi bir MEF uzantısına şartlarının başka koşullar veya ana ifade etkilemeden destekler düzenleyiciler için ekleyebilirsiniz.
+ Bu tür paketleri desteklemek için, kural tabanlı kullanıcı arabirimi bağlamları, aşağıdaki tüm koşulların veya ile birleştirildiğini belirten, "*" sabit kodlanmış ifadesini destekler. Bu, ana paketin bilinen bir kural tabanlı kullanıcı arabirimi bağlamını tanımlamasına ve komut durumunu bu bağlama bağlamaktır. Daha sonra ana paket için hedeflenen MEF uzantısı, diğer terimleri veya ana ifadeyi etkilemeden desteklediği düzenleyicilerin koşullarını ekleyebilir.
 
- Oluşturucu <xref:Microsoft.VisualStudio.Shell.ProvideExtensibleUIContextRuleAttribute.%23ctor%2A> belgeleri Genişletilebilir UI bağlamı kuralları sözdizimi gösterilmektedir.
+ Oluşturucu <xref:Microsoft.VisualStudio.Shell.ProvideExtensibleUIContextRuleAttribute.%23ctor%2A> belgeleri, GENIŞLETILEBILIR UI bağlam kuralları için söz dizimini gösterir.

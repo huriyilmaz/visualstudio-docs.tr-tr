@@ -1,5 +1,5 @@
 ---
-title: VSIX Renk Derleyicisi | Microsoft Dokümanlar
+title: VSıX renk derleyicisi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 99395da7-ec34-491d-9baa-0590d23283ce
@@ -8,19 +8,19 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f414a56bb05a23b6efef19aa7c99292b8a40038a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 5059a15c483f648c2248321c7ba8271a634d0c69
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80703896"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536103"
 ---
 # <a name="vsix-color-compiler"></a>VSIX Renk Derleyicisi
-Visual Studio Extension Color Compiler aracı, mevcut Visual Studio temaları için renkleri temsil eden bir .xml dosyasını alan ve bu renklerin Visual Studio'da kullanılabilmesi için .pkgdef dosyasına coveryapan bir konsol uygulamasıdır. .xml dosyaları arasındaki farkları karşılaştırmak kolay olduğundan, bu araç kaynak denetiminde özel renkleri yönetmek için yararlıdır. Ayrıca yapının çıktısı geçerli bir .pkgdef dosyası olacak şekilde yapı ortamlarına bağlanabilir.
+Visual Studio Uzantı rengi derleyici aracı, var olan Visual Studio temaları için renkleri temsil eden bir. xml dosyası alan ve bu renklerin Visual Studio 'da kullanılabilmesi için bir. pkgdef dosyasına bağlayan bir konsol uygulamasıdır. . Xml dosyaları arasındaki farkları karşılaştırmak çok kolay olduğundan, bu araç kaynak denetimindeki özel renkleri yönetmek için yararlıdır. Ayrıca derleme ortamlarına, derleme çıkışının geçerli bir. pkgdef dosyası olması için de bağlanabilir.
 
- **Tema XML şema**
+ **Tema XML şeması**
 
- Tam bir tema .xml dosyası şuna benzer:
+ Tüm bir Theme. xml dosyası şuna benzer:
 
 ```xml
 <Themes>
@@ -42,7 +42,7 @@ Visual Studio Extension Color Compiler aracı, mevcut Visual Studio temaları i�
 
  **Tema**
 
- \<Tema> öğesi tüm bir tema tanımlar. Bir tema en az \<bir Kategori> öğesi içermelidir. Tema öğeleri şu şekilde tanımlanır:
+ \<Theme>Öğesi bir temanın tamamını tanımlar. Bir tema en az bir öğe içermelidir \<Category> . Tema öğeleri şöyle tanımlanır:
 
 ```xml
 <Theme Name="name" GUID="guid">
@@ -50,25 +50,23 @@ Visual Studio Extension Color Compiler aracı, mevcut Visual Studio temaları i�
 </Theme>
 ```
 
-|||
-|-|-|
 |**Öznitelik**|**Tanım**|
-|Adı|[Gerekli] Temanın adı|
-|GUID|[Gerekli] Temanın GUID 'si (GUID biçimlendirmeile eşleşmelidir)|
-
- Visual Studio için özel renkler oluştururken, bu renklerin aşağıdaki temalar için tanımlanması gerekir. Belirli bir tema için renk yoksa, Visual Studio Eksik renkleri Işık temuzundan yüklemeye çalışır.
-
-|||
 |-|-|
-|**Tema adı**|**Tema GUID**|
+|Name|Istenir Temanın adı|
+|GUID|Istenir Temanın GUID 'SI (GUID biçimlendirmesine uymalıdır)|
+
+ Visual Studio için özel renkler oluştururken, bu renklerin aşağıdaki Temalar için tanımlanması gerekir. Belirli bir tema için bir renk yoksa, Visual Studio açık temadaki eksik renkleri yüklemeye çalışır.
+
+|**Tema adı**|**Tema GUID 'SI**|
+|-|-|
 |Açık|{de3dbbcd-f642-433c-8353-8f1df4370aba}|
-|Koyu|{1ded0138-47ce-435e-84ef-9ec1f439b749}|
+|Koyu|{1ded0138-47ce-435E-84ef-9ec1f439b749}|
 |Mavi|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|
-|Yüksek Kontrast|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|
+|Yüksek Karşıtlık|{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}|
 
  **Kategori**
 
- \<Kategori> öğesi bir temadaki renk koleksiyonunu tanımlar. Kategori adları mantıksal gruplandırmalar sağlar ve mümkün olduğunca dar bir şekilde tanımlanmalıdır. Bir kategori en az \<bir Renk> öğesi içermelidir. Kategori öğeleri şu şekilde tanımlanır:
+ \<Category>Öğesi, bir temadaki renklerin koleksiyonunu tanımlar. Kategori adları mantıksal gruplandırmaları sağlar ve mümkün olduğunca dar olarak tanımlanmalıdır. Kategori en az bir \<Color> öğe içermelidir. Kategori öğeleri şöyle tanımlanır:
 
 ```xml
 <Category Name="name" GUID="guid">
@@ -76,15 +74,14 @@ Visual Studio Extension Color Compiler aracı, mevcut Visual Studio temaları i�
  </Category>
 ```
 
-|||
-|-|-|
 |**Öznitelik**|**Tanım**|
-|Adı|[Gerekli] Kategorinin adı|
-|GUID|[Gerekli] Kategorinin GUID (GUID biçimlendirme eşleşmesi gerekir)|
+|-|-|
+|Name|Istenir Kategorinin adı|
+|GUID|Istenir Kategorinin GUID 'SI (GUID biçimlendirmesine uymalıdır)|
 
  **Renk**
 
- \<Renk> öğesi, bir bileşen veya UI durumu için bir renk tanımlar. Bir renk için tercih edilen adlandırma düzeni [UI türü] [Durum] olur. Gereksiz olduğu için "renk" sözcüğü kullanmayın. Renk, öğe türünü ve durumları veya rengin uygulanacağı "durum" öğesini açıkça belirtmelidir. Bir renk boş olmamalı ve arka \<plan> ve \<Foreground> öğesinden birini veya her ikisini içermelidir. Renk öğeleri şu şekilde tanımlanır:
+ \<Color>Öğesi bir bileşen veya Kullanıcı arabirimi durumu için bir renk tanımlar. Bir renk için tercih edilen adlandırma şeması [UI türü] [State]. Gereksiz olduğu için "Color" sözcüğünü kullanmayın. Renk, öğe türünü ve durumları ya da rengin uygulanacağı "durumu" açıkça göstermelidir. Bir renk boş olmamalı ve bir ve öğelerinin bir veya her ikisini de içermelidir \<Background> \<Foreground> . Renk öğeleri şöyle tanımlanır:
 
 ```xml
 <Color Name="name">
@@ -93,31 +90,29 @@ Visual Studio Extension Color Compiler aracı, mevcut Visual Studio temaları i�
  </Color>
 ```
 
-|||
-|-|-|
 |**Öznitelik**|**Tanım**|
-|Adı|[Gerekli] Rengin adı|
+|-|-|
+|Name|Istenir Rengin adı|
 
- **Arka plan ve/veya Ön Plan**
+ **Arka plan ve/veya ön plan**
 
- \<Arka Plan \<> ve Foreground> öğeleri bir rengin değerini ve türünü bir UI öğesinin arka planı veya ön planı için tanımlar. Bu elementlerin çocuğu yok.
+ \<Background>Ve \<Foreground> öğeleri bir kullanıcı arabirimi öğesinin arka plan veya ön planı için bir rengin değerini ve türünü tanımlar. Bu öğelerin alt öğesi yok.
 
 ```xml
 <Background Type="type" Source="int" />
 <Foreground Type="type" Source="int" />
 ```
 
-|||
-|-|-|
 |**Öznitelik**|**Tanım**|
-|Tür|[Gerekli] Rengin türü. Aşağıdakilerden biri olabilir:<br /><br /> *CT_INVALID:* Renk geçersiz veya ayarlı değil.<br /><br /> *CT_RAW:* Ham ARGB değeri.<br /><br /> *CT_COLORINDEX:* KULLANMAYıN.<br /><br /> *CT_SYSCOLOR:* SysColor bir Windows sistem rengi.<br /><br /> *CT_VSCOLOR:* __VSSYSCOLOREX'dan görsel stüdyo rengi.<br /><br /> *CT_AUTOMATIC:* Otomatik renk.<br /><br /> *CT_TRACK_FOREGROUND:* KULLANMAYıN.<br /><br /> *CT_TRACK_BACKGROUND:* KULLANMAYıN.|
-|Kaynak|[Gerekli] Hexadecimal temsil edilen rengin değeri|
+|-|-|
+|Tür|Istenir Rengin türü. Aşağıdakilerden biri olabilir:<br /><br /> *CT_INVALID:* Renk geçersiz veya ayarlı değil.<br /><br /> *CT_RAW:* Ham ARGB değeri.<br /><br /> *CT_COLORINDEX:* KULLANMAYıN.<br /><br /> *CT_SYSCOLOR:* Syscreng'ten bir Windows sistem rengi.<br /><br /> *CT_VSCOLOR:* __VSSYSCOLOREX bir Visual Studio rengi.<br /><br /> *CT_AUTOMATIC:* Otomatik renk.<br /><br /> *CT_TRACK_FOREGROUND:* KULLANMAYıN.<br /><br /> *CT_TRACK_BACKGROUND:* KULLANMAYıN.|
+|Kaynak|Istenir Onaltılık renkle temsil edilen rengin değeri|
 
- __VSCOLORTYPE numaralandırma tarafından desteklenen tüm değerler, Tür özniteliğindeki şema tarafından desteklenir. Ancak, yalnızca CT_RAW ve CT_SYSCOLOR kullanmanızı öneririz.
+ __VSCOLORTYPE numaralandırması tarafından desteklenen tüm değerler, tür özniteliğinde şema tarafından desteklenir. Ancak, yalnızca CT_RAW ve CT_SYSCOLOR kullanmanızı öneririz.
 
- **Hep birlikte**
+ **Hepsi birlikte**
 
- Bu, geçerli bir tema .xml dosyasının basit bir örneğidir:
+ Bu, geçerli bir Theme. xml dosyasının basit bir örneğidir:
 
 ```xml
 <Themes>
@@ -131,36 +126,35 @@ Visual Studio Extension Color Compiler aracı, mevcut Visual Studio temaları i�
 </Themes>
 ```
 
-## <a name="how-to-use-the-tool"></a>Aracı nasıl kullanılır?
- **Sözdizimi**
+## <a name="how-to-use-the-tool"></a>Aracı kullanma
+ **Syntax**
 
- VsixColorCompiler \<XML \<dosya> PkgDef dosyası isteğe bağlı Args>> \<
+ Valtcolorcompiler \<XML file> \<PkgDef file>\<Optional Args>
 
- **Bağımsız Değişkenler**
+ **Arguments**
 
-||||
+|**Anahtar adı**|**Notlar**|**Gerekli veya Isteğe bağlı**|
 |-|-|-|
-|**Anahtar adı**|**Notlar**|**Gerekli veya İsteğe Bağlı**|
-|Adsız (.xml dosyası)|Bu, ilk adlanmayan parametredir ve XML dosyasına dönüştürme yoludur.|Gerekli|
-|İsimsiz (.pkgdef dosyası)|Bu ikinci adsız parametredir ve oluşturulan .pkgdef dosyasının çıktı yoludur.<br /><br /> Varsayılan: \<XML Dosya Adı>.pkgdef|İsteğe bağlı|
-|/noLogo|Bu bayrağı ayarlamak, ürün ve telif hakkı bilgilerinin yazdırılmalarını durdurur.|İsteğe bağlı|
-|/?|Yardım bilgilerini yazdırın.|İsteğe bağlı|
-|/help|Yardım bilgilerini yazdırın.|İsteğe bağlı|
+|Adlandırılmamış (. xml dosyası)|Bu ilk adlandırılmamış parametredir ve dönüştürülecek XML dosyasının yoludur.|Gerekli|
+|Adlandırılmamış (. pkgdef dosyası)|Bu ikinci adlandırılmamış parametredir ve oluşturulan. pkgdef dosyası için çıkış yoludur.<br /><br /> Varsayılan: \<XML Filename> . pkgdef|İsteğe Bağlı|
+|/noLogo|Bu bayrak ayarlandığında, ürün ve telif hakkı bilgilerinin yazdırılması durduruluyor.|İsteğe Bağlı|
+|/?|Yardım bilgilerini yazdır.|İsteğe Bağlı|
+|/help|Yardım bilgilerini yazdır.|İsteğe Bağlı|
 
  **Örnekler**
 
-- VsixColorCompiler D:\xml\colors.xml D:\pkgdef\colors.pkgdef
+- Valtcolorcompiler D:\xml\colors.xml D:\pkgdef\colors.pkgdef
 
-- VsixColorCompiler D:\xml\colors.xml /noLogo
+- Valtcolorcompiler D:\xml\colors.xml/noLogo
 
 ## <a name="notes"></a>Notlar
 
-- Bu araç, VC++ çalışma zamanının en son sürümünün yüklenmesini gerektirir.
+- Bu araç, VC + + çalışma zamanının en son sürümünün yüklü olmasını gerektirir.
 
-- Yalnızca tek dosyalar desteklenir. Klasör yolları üzerinden toplu dönüştürme desteklenmez.
+- Yalnızca tek dosyalar desteklenir. Klasör yolları aracılığıyla toplu dönüştürme desteklenmiyor.
 
 ## <a name="sample-output"></a>Örnek çıktı
- Araç tarafından oluşturulan .pkgdef dosyası aşağıdaki tuşlara benzer olacaktır:
+ Araç tarafından oluşturulan. pkgdef dosyası aşağıdaki anahtarlara benzer olacaktır:
 
 ```
 [$RootKey$\Themes\{de3dbbcd-f642-433c-8353-8f1df4370aba}\Environment]

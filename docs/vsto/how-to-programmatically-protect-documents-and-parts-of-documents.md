@@ -1,7 +1,7 @@
 ---
-title: Program aracılığıyla belgeleri ve belge parçalarını koruma
+title: Belge ve belge parçalarını programlama yoluyla koruma
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,63 +14,63 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 30cb3d0b9ad04a3a0195f3b58ba5856de94d09d4
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 4654a2c218470e0d5e2a1ddd54a88de5c4546f7b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402182"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537845"
 ---
-# <a name="how-to-programmatically-protect-documents-and-parts-of-documents"></a>Nasıl yapılır: Program aracılığıyla belgeleri ve belge parçalarını koruma
-  Kullanıcılar belgeyi düzenlemeler yapmasını önlemek için Microsoft Office Word belgeleri koruma ekleyebilirsiniz.
+# <a name="how-to-programmatically-protect-documents-and-parts-of-documents"></a>Nasıl yapılır: program aracılığıyla belgeleri ve belge parçalarını koruma
+  Kullanıcıların belgede herhangi bir düzenleme yapmasını engellemek için, Microsoft Office Word belgelerine koruma ekleyebilirsiniz.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- Böylece belirtilen kullanıcılar yalnızca belgenin alanları düzenleyebilir, belgedeki belirli alanların özel durumlar olarak işaretleyebilirsiniz. Örneğin, belirli bir yer işareti hariç tüm belgeyi korumak isteyebilirsiniz. Böylece parola alışık oldukları sürece kullanıcılar Belge korumasını kaldıramaz, isteğe bağlı olarak bir parola ekleyebilirsiniz.
+ Ayrıca, belirtilen kullanıcıların yalnızca belgenin bu bölgelerini düzenleyebilmeleri için belgenin belirli bölümlerini özel durumlar olarak işaretleyebilirsiniz. Örneğin, belirli bir yer işareti hariç tüm belgeyi korumak isteyebilirsiniz. Parolayı bilediklerinde kullanıcıların belge korumasını kaldıramaması için isteğe bağlı olarak bir parola ekleyebilirsiniz.
 
 > [!NOTE]
-> Aşağıdaki örnek, parola koruması kullanmaz; Ancak, bir parola belge koruması eklerken göz önünde bulundurmak isteyebilirsiniz. Daha fazla bilgi için belge koruyucu örneğine bakın [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md).
+> Aşağıdaki örnek parola korumasını kullanmaz; Ancak, belge koruması eklerken bir parola kullanmayı düşünmek isteyebilirsiniz. Daha fazla bilgi için bkz. [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)hakkında belge koruyucu örneği.
 
- İçerik denetimleri, belge bölümlerini koruma için de kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: İçerik denetimlerini kullanarak belge bölümlerini koruma](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md).
+ Ayrıca, belge parçalarını korumak için içerik denetimlerini de kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: içerik denetimlerini kullanarak belge bölümlerini koruma](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md).
 
-## <a name="protect-a-document-that-is-part-of-a-document-level-customization"></a>Belge düzeyi özelleştirmesi parçası olan bir belgeyi koru
+## <a name="protect-a-document-that-is-part-of-a-document-level-customization"></a>Belge düzeyinde özelleştirmenin parçası olan bir belgeyi koruma
 
-### <a name="to-protect-a-document-that-is-part-of-a-document-level-customization"></a>Belge düzeyi özelleştirmesi parçası olan bir belgeyi korumak için
+### <a name="to-protect-a-document-that-is-part-of-a-document-level-customization"></a>Belge düzeyinde özelleştirmenin parçası olan bir belgeyi korumak için
 
-1. Çağrı <xref:Microsoft.Office.Tools.Word.Document.Protect%2A> yöntemi `ThisDocument` projenizdeki sınıfı.
-
-     [!code-vb[Trin_VstcoreWordAutomation#111](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#111)]
-     [!code-csharp[Trin_VstcoreWordAutomation#111](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#111)]
-
-### <a name="to-exclude-a-bookmark-control-from-document-protection"></a>Bir yer işareti denetimi belge korumadan dışlamak için
-
-1. Kullanarak tüm belgeyi korumak <xref:Microsoft.Office.Tools.Word.Document.Protect%2A> yöntemi.
+1. <xref:Microsoft.Office.Tools.Word.Document.Protect%2A> `ThisDocument` Projenizdeki sınıfının yöntemini çağırın.
 
      [!code-vb[Trin_VstcoreWordAutomation#111](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#111)]
      [!code-csharp[Trin_VstcoreWordAutomation#111](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#111)]
 
-2. Dışlama `Bookmark1` belge koruması.
+### <a name="to-exclude-a-bookmark-control-from-document-protection"></a>Bir yer işareti denetimini belge korumadan dışlamak için
+
+1. Yöntemini kullanarak tüm belgeyi koruyun <xref:Microsoft.Office.Tools.Word.Document.Protect%2A> .
+
+     [!code-vb[Trin_VstcoreWordAutomation#111](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#111)]
+     [!code-csharp[Trin_VstcoreWordAutomation#111](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#111)]
+
+2. `Bookmark1`Belge korumasından hariç tutun.
 
      [!code-vb[Trin_VstcoreWordAutomation#112](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#112)]
      [!code-csharp[Trin_VstcoreWordAutomation#112](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#112)]
 
-### <a name="compile-the-code"></a>Kod derleme
- Bu kod örnekleri kullanmak için onlardan çalıştırın `ThisDocument` projenizdeki sınıfı. Bu kod örnekleri, varsayılır <xref:Microsoft.Office.Tools.Word.Bookmark> adlı Denetim `Bookmark1` bu kodu göründüğü belgesi.
+### <a name="compile-the-code"></a>Kodu derle
+ Bu kod örneklerini kullanmak için `ThisDocument` projenizdeki sınıftan çalıştırın. Bu kod örnekleri <xref:Microsoft.Office.Tools.Word.Bookmark> `Bookmark1` , bu kodun göründüğü belge üzerinde adında var olan bir denetiminiz olduğunu varsayar.
 
-## <a name="protect-a-document-by-using-a-vsto-add-in"></a>Bir VSTO eklentisi kullanarak belgeyi koruma
+## <a name="protect-a-document-by-using-a-vsto-add-in"></a>VSTO eklentisini kullanarak bir belgeyi koruma
 
-### <a name="to-protect-a-document-by-using-an-application-level-vsto-add-in"></a>Bir uygulama düzeyinde VSTO eklentisi kullanarak bir belgeyi korumak için
+### <a name="to-protect-a-document-by-using-an-application-level-vsto-add-in"></a>Uygulama düzeyi VSTO eklentisini kullanarak bir belgeyi korumak için
 
-1. Çağrı <xref:Microsoft.Office.Interop.Word._Document.Protect%2A> yöntemi <xref:Microsoft.Office.Interop.Word.Document> korumak istediğiniz.
+1. Korumak istediğiniz <xref:Microsoft.Office.Interop.Word._Document.Protect%2A> öğesinin yöntemini çağırın <xref:Microsoft.Office.Interop.Word.Document> .
 
-     Aşağıdaki kod örneği, etkin belgeyi korur. Bu kod örneği kullanmak için çalıştırın `ThisAddIn` projenizdeki sınıfı.
+     Aşağıdaki kod örneği etkin belgeyi korur. Bu kod örneğini kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#111](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#111)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#111](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#111)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Belge düzeyi çözümlerde belge koruması](../vsto/document-protection-in-document-level-solutions.md)
+- [Belge düzeyi çözümlerde Belge koruması](../vsto/document-protection-in-document-level-solutions.md)
 - [Office belgelerinde parola koruması](../vsto/password-protection-on-office-documents.md)
-- [Nasıl yapılır: Kodun kısıtlı izinle belgelerin arkasında çalışmasına izin](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)
-- [Nasıl yapılır: Word belgelerine yer işareti denetimi ekleme](../vsto/how-to-add-bookmark-controls-to-word-documents.md)
-- [Office çözümleri oluşturma ve tasarlama](../vsto/designing-and-creating-office-solutions.md)
+- [Nasıl yapılır: kodun, kısıtlı izinlerle belgelerin arkasında çalışmasına Izin verme](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)
+- [Nasıl yapılır: Word belgelerine yer Işareti denetimleri ekleme](../vsto/how-to-add-bookmark-controls-to-word-documents.md)
+- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)

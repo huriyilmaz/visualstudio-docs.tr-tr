@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Word yerleşik iletişim kutularını program aracılığıyla kullanma'
+title: "Nasıl yapılır: Word 'de program aracılığıyla yerleşik iletişim kutuları kullanma"
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,42 +13,42 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f8037e4d91aa7706c7ffd7b9f32778dfeac79488
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2c3273b22d98be1c22cf0c8cea2cb57e277b9b48
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961647"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537624"
 ---
-# <a name="how-to-programmatically-use-built-in-dialog-boxes-in-word"></a>Nasıl yapılır: Word yerleşik iletişim kutularını program aracılığıyla kullanma
-  Microsoft Office Word ile çalışırken, kullanıcı girişi için iletişim kutularını görüntülemek için gerektiğinde zamanlar vardır. Kendi oluşturabilirsiniz, ancak aynı zamanda sunulan yerleşik Word iletişim kutularını, kullanarak yaklaşımı isteyebileceğiniz <xref:Microsoft.Office.Interop.Word.Dialogs> koleksiyonunu <xref:Microsoft.Office.Interop.Word.Application> nesne. Bu, 200'den fazla yerleşik iletişim kutuları, sabit listeleri temsil edilen erişmenize olanak sağlar.
+# <a name="how-to-programmatically-use-built-in-dialog-boxes-in-word"></a>Nasıl yapılır: Word 'de program aracılığıyla yerleşik iletişim kutuları kullanma
+  Microsoft Office sözcükle çalışırken, Kullanıcı girişi için iletişim kutularını görüntüetmeniz gerektiğinde zaman vardır. Kendinizinkini oluşturabilseniz de, Word 'de, nesne koleksiyonunda gösterilen yerleşik iletişim kutularını kullanma yaklaşımını de isteyebilirsiniz <xref:Microsoft.Office.Interop.Word.Dialogs> <xref:Microsoft.Office.Interop.Word.Application> . Bu, sabit listesi olarak temsil edilen yerleşik iletişim kutularının 200 üstünden erişmenizi sağlar.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="display-dialog-boxes"></a>Görünen iletişim kutuları
- Bir iletişim kutusu görüntülemek için değerlerinden kullanın <xref:Microsoft.Office.Interop.Word.WdWordDialog> sabit listesi oluşturmak için bir <xref:Microsoft.Office.Interop.Word.Dialog> görüntülemek istediğiniz iletişim kutusunu temsil eden nesne. Ardından, arama <xref:Microsoft.Office.Interop.Word.Dialog.Show%2A> yöntemi <xref:Microsoft.Office.Interop.Word.Dialog> nesne.
+## <a name="display-dialog-boxes"></a>İletişim kutularını görüntüle
+ Bir iletişim kutusunu göstermek için, <xref:Microsoft.Office.Interop.Word.WdWordDialog> <xref:Microsoft.Office.Interop.Word.Dialog> göstermek istediğiniz iletişim kutusunu temsil eden bir nesne oluşturmak için numaralandırmanın değerlerinden birini kullanın. Ardından, <xref:Microsoft.Office.Interop.Word.Dialog.Show%2A> nesnesinin yöntemini çağırın <xref:Microsoft.Office.Interop.Word.Dialog> .
 
- Aşağıdaki kod örneğinde nasıl görüntüleneceğini gösterir **Dosya Aç** iletişim kutusu. Bu örneği kullanmak için çalıştırın `ThisDocument` veya `ThisAddIn` projenizdeki sınıfı.
+ Aşağıdaki kod örneği, **Dosya Aç** iletişim kutusunun nasıl görüntüleneceğini gösterir. Bu örneği kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
  [!code-vb[Trin_VstcoreWordAutomation#100](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#100)]
  [!code-csharp[Trin_VstcoreWordAutomation#100](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#100)]
 
-### <a name="access-dialog-box-members-that-are-available-through-late-binding"></a>Geç bağlama aracılığıyla kullanılabilir olan erişim iletişim kutusu üyeler
- Bazı özellikleri ve yöntemleri Word iletişim kutularını yalnızca geç bağlama aracılığıyla kullanılabilir. Visual Basic projelerinde **Option Strict** açıktır, bu üyelere erişim için yansıma kullanmalısınız. Daha fazla bilgi için [Office çözümlerinde geç bağlama](../vsto/late-binding-in-office-solutions.md).
+### <a name="access-dialog-box-members-that-are-available-through-late-binding"></a>Geç bağlama aracılığıyla kullanılabilen iletişim kutusu üyelerine erişin
+ Word içindeki iletişim kutularının bazı özellikleri ve yöntemleri yalnızca geç bağlama aracılığıyla kullanılabilir. **Option Strict** açık olan Visual Basic projelerinde, bu üyelere erişmek için yansıma kullanmanız gerekir. Daha fazla bilgi için bkz. [Office çözümlerinde geç bağlama](../vsto/late-binding-in-office-solutions.md).
 
- Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir **adı** özelliği **Dosya Aç** iletişim kutusunda, Visual Basic projelerinde **Option Strict** kapalı veya Visual C# hedefleyen projelerde [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]. Bu örneği kullanmak için çalıştırın `ThisDocument` veya `ThisAddIn` projenizdeki sınıfı.
+ Aşağıdaki kod örneği, **Option Strict** ' in, veya ' i hedefleyen Visual C# projelerindeki Visual Basic projelerde **Dosya Aç** iletişim kutusunun **ad** özelliğinin nasıl kullanılacağını gösterir [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] . Bu örneği kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
  [!code-vb[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#122)]
  [!code-csharp[Trin_VstcoreWordAutomation#122](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#122)]
 
- Aşağıdaki kod örneği, yansıma erişmek için kullanılacak gösterilmiştir **adı** özelliği **Dosya Aç** iletişim kutusunda, Visual Basic projelerinde **Option Strict** olduğu . Bu örneği kullanmak için çalıştırın `ThisDocument` veya `ThisAddIn` projenizdeki sınıfı.
+ Aşağıdaki kod örneği, **seçeneğinin katı** olduğu Visual Basic projelerde **Dosya Aç** iletişim kutusunun **Name** özelliğine erişmek için Reflection 'ın nasıl kullanılacağını gösterir. Bu örneği kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Program aracılığıyla Word iletişim kutularını gizli modda kullanma](../vsto/how-to-programmatically-use-word-dialog-boxes-in-hidden-mode.md)
+- [Nasıl yapılır: gizli modda program aracılığıyla Word iletişim kutuları kullanma](../vsto/how-to-programmatically-use-word-dialog-boxes-in-hidden-mode.md)
 - [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)
-- [Option strict deyimi](/dotnet/visual-basic/language-reference/statements/option-strict-statement)
+- [Option Strict ekstresi](/dotnet/visual-basic/language-reference/statements/option-strict-statement)
 - [Yansıma (C#)](/dotnet/csharp/programming-guide/concepts/reflection)
 - [Yansıma (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)

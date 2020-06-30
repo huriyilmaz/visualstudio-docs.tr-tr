@@ -20,16 +20,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bcdb1b2b6dc4b64d180eb03fc76b26b4ef16e9d0
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 1ac7ca0e59a479aff3386486d2ceaf061038db68
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911411"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536584"
 ---
 # <a name="intellitrace-features-c-visual-basic-c"></a>IntelliTrace Özellikleri (C#, Visual Basic, C++)
 
-Uygulamanızı kaydetmek için IntelliTrace 'i kullanabilirsiniz. bu sayede, durumunu (çağrı yığını ve yerel değişken değerleri) yürütmenin farklı noktalarında incelemenizi sağlayabilirsiniz. Her zamanki gibi hata ayıklamaya başlamanız yeterlidir. IntelliTrace varsayılan olarak açıktır ve bilgi IntelliTrace 'in, **Olaylar** sekmesinin altındaki yeni **Tanılama araçları** penceresinde kayıt olduğunu görebilirsiniz. bir olay seçin ve **geçmiş hata ayıklamayı etkinleştir ' e tıklayın** bu olay için kaydedilen çağrı yığınını ve yerelleri görmek için.
+Uygulamanızı kaydetmek için IntelliTrace 'i kullanabilirsiniz. bu sayede, durumunu (çağrı yığını ve yerel değişken değerleri) yürütmenin farklı noktalarında incelemenizi sağlayabilirsiniz. Her zamanki-IntelliTrace varsayılan olarak açıktır ve bilgi IntelliTrace 'in kayıt olduğunu **Olaylar** sekmesinin altındaki yeni **Tanılama araçları** penceresinde görebilirsiniz. bir olay seçin ve bu olay için kaydedilen çağrı yığınını ve yerelleri görmek Için **geçmiş hata ayıklamayı etkinleştir** ' e tıklayın.
 
 Adım adım bir açıklama için bkz. [Izlenecek yol: IntelliTrace kullanma](../debugger/walkthrough-using-intellitrace.md).
 
@@ -40,21 +40,21 @@ IntelliTrace 'in açık olduğunu onaylamak için **araçlar > seçenekler > Int
 > [!NOTE]
 > **IntelliTrace** seçenekleri sayfasındaki tüm ayarların kapsamı, tek tek projeler veya çözümler değil, bir bütün olarak Visual Studio. Bu ayarlarda yapılan bir değişiklik, tüm Visual Studio örnekleri, tüm hata ayıklama oturumları ve tüm projeler veya çözümler için geçerlidir.
 
-## <a name="ChooseEvents"></a>IntelliTrace 'in kaydettiği olayları seçin (C#, Visual Basic)
+## <a name="choose-the-events-that-intellitrace-records-c-visual-basic"></a><a name="ChooseEvents"></a>IntelliTrace 'in kaydettiği olayları seçin (C#, Visual Basic)
 
 Belirli IntelliTrace olayları için kayıt açma veya kapatma yapabilirsiniz.
 
 Hata ayıklaması yapıyorsanız, hata ayıklamayı durdurun. IntelliTrace **> IntelliTrace olayları > araçlar > seçenekler**' e gidin. IntelliTrace 'in kaydetmesini istediğiniz olayları seçin.
 
-## <a name="Snapshots"></a>Anlık görüntü toplaC#(, Visual Basic C++,)
+## <a name="collect-snapshots-c-visual-basic-c"></a><a name="Snapshots"></a>Anlık görüntü topla (C#, Visual Basic, C++)
 
-Bu varsayılan olarak etkin değildir, ancak IntelliTrace her kesme noktası ve hata ayıklayıcı adımı olayındaki uygulamanızın anlık görüntülerini yakalayabilir ve bu anlık görüntüleri bir geçmiş hata ayıklama oturumunda görüntüleyebilirsiniz. Anlık görüntü, tam uygulama durumlarınızın görünümünü sağlar. Anlık görüntülerin yakalanmasını etkinleştirmek için **araçlar > seçenekler > ıntellitrace > genel**' e gidin ve **IntelliTrace anlık görüntülerini (yönetilen ve yerel)** seçin. Daha fazla bilgi için bkz. [IntelliTrace kullanarak önceki uygulama durumlarını İnceleme](../debugger/view-historical-application-state.md).
+Bu varsayılan olarak etkin değildir, ancak IntelliTrace her kesme noktası ve hata ayıklayıcı adımı olayındaki uygulamanızın anlık görüntülerini yakalayabilir ve bu anlık görüntüleri bir geçmiş hata ayıklama oturumunda görüntüleyebilirsiniz. Anlık görüntü, tam uygulama durumlarınızın görünümünü sağlar. Anlık görüntülerin yakalanmasını etkinleştirmek için **araçlar > seçenekler > ıntellitrace > Genel**' e gidin ve **IntelliTrace anlık görüntülerini (yönetilen ve yerel)** seçin. Daha fazla bilgi için bkz. [IntelliTrace kullanarak önceki uygulama durumlarını İnceleme](../debugger/view-historical-application-state.md).
 
 Anlık görüntüler Visual Studio Enterprise 2017 sürüm 15,5 ve üzeri sürümlerde kullanılabilir ve Windows 10 yıldönümü güncelleştirmesi veya üstünü gerektirir.  .NET Core ve ASP.NET Core uygulamaları için, Visual Studio Enterprise 2017 sürüm 15,7 gereklidir. Windows 'u hedefleyen yerel uygulamalar için Visual Studio Enterprise 2017 sürüm 15,9 Preview 2 gereklidir.
 
-## <a name="GoingFurther"></a>IntelliTrace olaylarını toplayın ve bilgileri çağırın (C#, Visual Basic)
+## <a name="collect-intellitrace-events-and-call-information-c-visual-basic"></a><a name="GoingFurther"></a>IntelliTrace olayları ve çağrı bilgilerini toplayın (C#, Visual Basic)
 
-Bu varsayılan olarak etkin değildir, ancak IntelliTrace Yöntem çağrılarını olaylarla birlikte kaydedebilir. Yöntem çağrılarını toplamayı etkinleştirmek için **araçlar > seçenekler > ıntellitrace > genel**' e gidin ve **IntelliTrace olayları ve çağrı bilgileri ' ni seçin (yalnızca yönetilen)** .
+Bu varsayılan olarak etkin değildir, ancak IntelliTrace Yöntem çağrılarını olaylarla birlikte kaydedebilir. Yöntem çağrılarını toplamayı etkinleştirmek için **araçlar > seçenekler > ıntellitrace > Genel**' e gidin ve **IntelliTrace olayları ve çağrı bilgileri ' ni seçin (yalnızca yönetilen)**.
 
 Çağrı bilgileri şu anda .NET Core ve ASP.NET Core uygulamaları için kullanılamaz.
 
@@ -71,7 +71,7 @@ Kod penceresinin solunda görünen gezinti payını kullanabilirsiniz. Gezinti c
 
 Gezinti cilt payı, geçmiş hata ayıklama modundaki Yöntem çağrıları ve olaylar aracılığıyla iletme ve geri ileretmenize olanak tanır. Geçmiş hata ayıklama hakkında daha fazla bilgi için bkz. [geçmiş hata ayıklama](../debugger/historical-debugging.md). Birkaç komuta sahiptir:
 
-|||
+|Komut|Description|
 |-|-|
 |**Hata ayıklayıcı bağlamını burada ayarla**|Hata ayıklama bağlamını göründüğü çağrı zaman çerçevesi olarak ayarlayın.<br /><br /> Bu simge yalnızca geçerli çağrı yığınında görünür.|
 |**Çağrı sitesine dön**|İşaretçiyi ve hata ayıklama bağlamını geçerli işlevin çağrıldığı yere geri taşıyın.<br /><br /> Canlı hata ayıklama modundaysanız, bu komut tarihinde geçmiş hata ayıklamayı açar. Özgün yürütme kesmesine geri gittiğinizde geçmiş hata ayıklama kapatılır ve canlı hata ayıklama açılır.|
@@ -84,7 +84,7 @@ Gezinti cilt payı, geçmiş hata ayıklama modundaki Yöntem çağrıları ve o
 
 Metotları yalnızca Yöntem çağrı bilgileri etkinleştirildiğinde arayabilirsiniz. IntelliTrace geçmişine belirli bir satır veya yöntem için arama yapabilirsiniz. Hata ayıklayıcı yürütmesi durdurulduğunda, bağlam menüsünü görmek için işlevin gövdesinin içine sağ tıklayın ve **Bu satırı IntelliTrace Içinde ara** ' ya tıklayın veya **IntelliTrace içinde bu yöntemi**arayın.
 
-### <a name="ControlCallData"></a>Ne kadar çağrı bilgisi IntelliTrace kaydı olduğunu denetleme
+### <a name="control-how-much-call-information-intellitrace-records"></a><a name="ControlCallData"></a>Ne kadar çağrı bilgisi IntelliTrace kaydı olduğunu denetleme
 
 Varsayılan olarak IntelliTrace, çözümünüz tarafından kullanılan tüm modüllerle ilgili bilgileri kaydeder. IntelliTrace 'i yalnızca sizi ilgilendiren modüller için çağrı bilgilerini kaydedecek şekilde ayarlayabilirsiniz. **Araçlar > seçenekler > ıntellitrace > modüller**' de dahil edilecek modülleri veya IntelliTrace 'ten dışlanacak modülleri belirtebilirsiniz. IntelliTrace yalnızca belirttiğiniz modüllerden kaynaklı olayları ve ilgilendiğiniz modüller içinde gerçekleşen yöntemi çağırır.
 
@@ -92,11 +92,11 @@ Birden çok modül eklemek için dizenin başında veya sonunda * joker karakter
 
 Modül sayısını en düşük düzeyde tutmaya çalışın. Toplanabilecek daha az veri olduğundan daha iyi bir performans alırsınız. Ayrıca, alınacak daha az veri olduğu için Kullanıcı arabiriminde daha az gürültü da alırsınız.
 
-## <a name="SaveSession"></a>IntelliTrace verilerini dosyaya kaydet (C#, Visual Basic,) C++
+## <a name="save-intellitrace-data-to-file-c-visual-basic-c"></a><a name="SaveSession"></a>IntelliTrace verilerini dosyaya kaydet (C#, Visual Basic, C++)
 
 IntelliTrace 'in topladığı verileri, hata ayıklarken IntelliTrace **oturumunu > ıntellitrace > kaydetmek** ve uygulama bir kesme durumunda olduğu sırada kaydedebilirsiniz. Menü öğesi devre dışıdır ve uygulama hala çalışıyorsa veya hata ayıklamayı durdurduysanız veri IntelliTrace 'in topladığı verileri kaydedemeyeceksiniz.
 
-IntelliTrace ' i **> ıntellitrace > Gelişmiş ' >** e giderek ve **IntelliTrace kayıtlarını bu dizinde depola**' yı seçerek bir dosyaya otomatik olarak kaydedilecek IntelliTrace 'i yapılandırabilirsiniz. Ayrıca oluşturulan dosya için bir küme boyutu yapılandırabilirsiniz. Bu, IntelliTrace 'in boş alan tükendiği eski verileri üzerine yazmasına neden olur. Visual Studio, otomatik olarak kaydedildiğinde ve Visual Studio barındırma işlemi (VSHost. exe) açık olduğunda her IntelliTrace oturumunda iki dosya oluşturur.
+IntelliTrace ' i **> ıntellitrace > Gelişmiş ' >** e giderek ve **IntelliTrace kayıtlarını bu dizinde depola**' yı seçerek bir dosyaya otomatik olarak kaydedilecek IntelliTrace 'i yapılandırabilirsiniz. Ayrıca oluşturulan dosya için bir küme boyutu yapılandırabilirsiniz. Bu, IntelliTrace 'in boş alan tükendiği eski verileri üzerine yazmasına neden olur. Visual Studio otomatik olarak kaydedildiğinde her IntelliTrace oturumu için iki dosya oluşturur ve Visual Studio barındırma işlemi (vshost.exe) açıktır.
 
 > [!TIP]
 > Disk alanından tasarruf etmek için, artık ihtiyacınız olmadığında dosyaları otomatik olarak kaydetmeyi devre dışı bırakın. Var olan tüm dosyalar silinmez. Bağlam menüsünden her zaman isteğe bağlı olarak dosya kaydedebilirsiniz.
@@ -123,7 +123,7 @@ IntelliTrace verilerini dosyaya kaydettiğinizde, IntelliTrace 'in topladığı 
 
 ## <a name="forums"></a>Forumlar
 
-[Visual Studio hata ayıklayıcısı](https://social.msdn.microsoft.com/Forums/en-US/home)
+[Visual Studio Hata Ayıklayıcısı](https://social.msdn.microsoft.com/Forums/en-US/home)
 
 ## <a name="videos"></a>Videolar
 

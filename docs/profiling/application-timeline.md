@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 26da567918ea25f212c4c03e87e81d5cc18b60ab
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 0bb76de0d62ab504090d9ac1864ba7ee5627f69d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285992"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537286"
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>Kaynak tüketimini ve UI iş parçacığı etkinliğini çözümleme (XAML)
 
@@ -100,7 +100,7 @@ Ayrıntılar görünümü, raporu analiz ettiğiniz zamandan çok zaman harcaman
 
 Aşağıdaki olaylar desteklenir:
 
-|||
+|Name|Description|
 |-|-|
 |**SDP**|XAML dosyalarını ayrıştırmak ve nesne oluşturmak için harcanan süre.<br /><br /> **Zaman çizelgesi ayrıntılarında** **ayrıştırma** düğümünü genişletme, kök olay nedeniyle ayrıştırılmış tüm XAML dosyalarının bağımlılık zincirini görüntüler. Bu ipucu, performans duyarlı senaryolarda gereksiz dosya ayrıştırmayı ve nesne oluşturmayı belirlemenize ve bunları en iyi hale getirmenize olanak tanır.|
 |**Layout**|Büyük uygulamalarda, ekran üzerinde aynı anda binlerce öğe görüntülenebilir. Bu görüntü, düşük bir kullanıcı arabirimi kare hızına ve buna karşılık gelen kötü uygulama yanıt verme hızına yol açabilir. Düzen olayı her bir öğenin (yani, düzenleme, ölçü, ApplyTemplate, ArrangeOverride ve MeasureOverride) nasıl yerleştirmekte olan maliyeti doğru şekilde belirler. Ayrıca, düzen geçişinin parçası olan görsel ağaçlar da oluşturur. Bu görselleştirmeyi, hangi mantıksal ağaçların çıkartarken veya diğer erteleme mekanizmalarının düzen geçişini iyileştirmek için değerlendirmek için kullanabilirsiniz.|
@@ -116,7 +116,7 @@ Aşağıdaki olaylar desteklenir:
 
 **Zaman çizelgesi ayrıntıları** görünümü girişlerinin ek açıklamalarını sıralamak, filtrelemek ve belirtmek Için **zaman çizelgesi ayrıntıları** araç çubuğunu kullanın.
 
-|||
+|Name|Description|
 |-|-|
 |**Sıralama ölçütü**|Başlangıç zamanına veya olay uzunluğuna göre sıralayın.|
 |![Olayları çerçeveye göre Gruplandır](../profiling/media/timeline_groupbyframes.png "TIMELINE_GroupByFrames")|Olayları çerçeveye göre gruplandıran üst düzey bir **çerçeve** kategorisini ekler veya kaldırır.|

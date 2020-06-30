@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: fddcff8bb51216097689a86bd25718a0727c2b45
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5294840e4669f28f4e8a04978274ad130d1397ee
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672928"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535739"
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>Yönetilen Kod için Kod Analizi Uyarıları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -30,14 +30,14 @@ Yönetilen Kod Analizi Aracı, yönetilen kod kitaplıklarında kural ihlallerin
 
  Aşağıdaki tabloda her uyarı için belirtilen bilgi türü gösterilmektedir.
 
-|Öğe|Açıklama|
+|Öğe|Description|
 |----------|-----------------|
 |Tür|Kural için TypeName.|
 |CheckId|Kural için benzersiz tanımlayıcı. CheckId ve Category bir uyarının kaynak üzerinde gizlemesi için kullanılır.|
 |Kategori|Uyarının kategorisi.|
 |Yeni Değişiklik|Kural ihlalinin düzeltilme düzeltmesinin önemli bir değişiklik olup olmadığı. Son değişiklik, ihlale neden olan hedefe bağımlılığı olan bir derlemenin yeni sabit sürümle yeniden derlenmeyeceği veya değişiklik nedeniyle çalışma zamanında başarısız olabileceği anlamına gelir. Birden çok düzeltme kullanılabilir olduğunda ve en az bir düzeltme, Son değişiklik olduğunda ve bir düzeltme yoksa, ' kırılmamış ' ve ' kırılmamış ' seçeneklerinin her ikisi de belirtilir.|
-|Sebep|Kuralın bir uyarı oluşturmasına neden olan özel yönetilen kod.|
-|Açıklama|Uyarının arkasındaki sorunları açıklar.|
+|Nedeni|Kuralın bir uyarı oluşturmasına neden olan özel yönetilen kod.|
+|Description|Uyarının arkasındaki sorunları açıklar.|
 |İhlaller Nasıl Düzeltilir?|Kaynak kodun kuralı karşılamak için nasıl değiştirileceğini ve bir uyarı oluşturmasını engellemesini açıklar.|
 |Uyarılar Bastırıldığında|Kuraldan bir uyarı bastırmasının ne kadar güvenli olduğunu açıklar.|
 |Örnek kod|Kuralı ihlal eden örnekleri ve kuralı karşılayan örnekleri düzeltildi.|
@@ -45,19 +45,19 @@ Yönetilen Kod Analizi Aracı, yönetilen kod kitaplıklarında kural ihlallerin
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-|||
+|Öğe|Değer|
 |-|-|
-|[CheckId Uyarıları](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|Tüm uyarıları CheckId 'ye göre listeler|
-|[Şifreleme Uyarıları](../code-quality/cryptography-warnings.md)|Şifrelemeyi doğru şekilde kullanarak daha güvenli kitaplıkları ve uygulamaları destekleyen uyarılar.|
-|[Tasarım Uyarıları](../code-quality/design-warnings.md)|@No__t_0 tasarım yönergeleri tarafından belirtilen şekilde doğru kitaplık tasarımını destekleyen uyarılar.|
+|[CheckId 'ye göre uyarılar](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|Tüm uyarıları CheckId 'ye göre listeler|
+|[Şifreleme uyarıları](../code-quality/cryptography-warnings.md)|Şifrelemeyi doğru şekilde kullanarak daha güvenli kitaplıkları ve uygulamaları destekleyen uyarılar.|
+|[Tasarım uyarıları](../code-quality/design-warnings.md)|Tasarım yönergeleriyle belirtilen şekilde doğru kitaplık tasarımını destekleyen uyarılar [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .|
 |[Genelleştirme Uyarıları](../code-quality/globalization-warnings.md)|Uluslararası kitaplıkları ve uygulamaları destekleyen uyarılar.|
-|[Birlikte Çalışabilirlik Uyarıları](../code-quality/interoperability-warnings.md)|COM istemcileriyle etkileşimi destekleyen uyarılar.|
-|[Bakım Uyarıları](../code-quality/maintainability-warnings.md)|Kitaplığı ve uygulama bakımını destekleyen uyarılar.|
-|[Hareketlilik Uyarıları](../code-quality/mobility-warnings.md)|Verimli güç kullanımını destekleyen uyarılar.|
-|[Adlandırma Uyarıları](../code-quality/naming-warnings.md)|@No__t_0 Tasarım Yönergelerinin adlandırma kurallarına uygunluğunu destekleyen uyarılar.|
-|[Performans Uyarıları](../code-quality/performance-warnings.md)|Yüksek performanslı kitaplıkları ve uygulamaları destekleyen uyarılar.|
-|[Taşınabilirlik Uyarıları](../code-quality/portability-warnings.md)|Farklı platformlarda taşınabilirliği destekleyen uyarılar.|
-|[Güvenilirlik Uyarıları](../code-quality/reliability-warnings.md)|Doğru bellek ve iş parçacığı kullanımı gibi kitaplık ve uygulama güvenilirliğini destekleyen uyarılar.|
-|[Güvenlik Uyarıları](../code-quality/security-warnings.md)|Daha güvenli kitaplıkları ve uygulamaları destekleyen uyarılar.|
-|[Kullanım Uyarıları](../code-quality/usage-warnings.md)|@No__t_0 uygun kullanımı destekleyen uyarılar.|
-|[Kod Çözümleme İlkesi Hataları](../code-quality/code-analysis-policy-errors.md)|Kod Analizi ilkesi iadede karşılanmıyorsa oluşan hatalar.|
+|[Birlikte çalışabilirlik uyarıları](../code-quality/interoperability-warnings.md)|COM istemcileriyle etkileşimi destekleyen uyarılar.|
+|[Bakımsız uyarılar](../code-quality/maintainability-warnings.md)|Kitaplığı ve uygulama bakımını destekleyen uyarılar.|
+|[Mobility uyarıları](../code-quality/mobility-warnings.md)|Verimli güç kullanımını destekleyen uyarılar.|
+|[Adlandırma uyarıları](../code-quality/naming-warnings.md)|Tasarım Yönergelerinin adlandırma kurallarına uygunluğunu destekleyen uyarılar [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .|
+|[Performans uyarıları](../code-quality/performance-warnings.md)|Yüksek performanslı kitaplıkları ve uygulamaları destekleyen uyarılar.|
+|[Taşınabilirlik uyarıları](../code-quality/portability-warnings.md)|Farklı platformlarda taşınabilirliği destekleyen uyarılar.|
+|[Güvenilirlik uyarıları](../code-quality/reliability-warnings.md)|Doğru bellek ve iş parçacığı kullanımı gibi kitaplık ve uygulama güvenilirliğini destekleyen uyarılar.|
+|[Güvenlik uyarıları](../code-quality/security-warnings.md)|Daha güvenli kitaplıkları ve uygulamaları destekleyen uyarılar.|
+|[Kullanım uyarıları](../code-quality/usage-warnings.md)|Uygulamasının uygun kullanımını destekleyen uyarılar [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .|
+|[Kod Analiz İlkesi Hataları](../code-quality/code-analysis-policy-errors.md)|Kod Analizi ilkesi iadede karşılanmıyorsa oluşan hatalar.|

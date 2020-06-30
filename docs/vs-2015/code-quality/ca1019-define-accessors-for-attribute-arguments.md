@@ -15,24 +15,24 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 4e77f3a4eec7495e6b4abe13bec93d341f961463
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ec9be9dae502ec48570a85576f483518ed0d75d6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662011"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534959"
 ---
-# <a name="ca1019-define-accessors-for-attribute-arguments"></a>CA1019: Öznitelik bağımsız değişkenleri için erişimcileri tanımlayın
+# <a name="ca1019-define-accessors-for-attribute-arguments"></a>CA1019: Öznitelik bağımsız değişkenleri için erişimciler tanımlayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DefineAccessorsForAttributeArguments|
 |CheckId|CA1019|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Yapıcısında bir öznitelik, karşılık gelen özellikleri olmayan bağımsız değişkenleri tanımlar.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -50,7 +50,7 @@ ms.locfileid: "72662011"
 
 ## <a name="custom-attributes-example"></a>Özel öznitelikler örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, zorunlu (konumsal) bir parametre tanımlayan iki özniteliği gösterir. Özniteliğin ilk uygulanması yanlış tanımlanmış. İkinci uygulama doğru.
 
 ### <a name="code"></a>Kod
@@ -59,7 +59,7 @@ ms.locfileid: "72662011"
 
 ## <a name="positional-and-named-arguments"></a>Konumsal ve adlandırılmış bağımsız değişkenler
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Konumsal ve adlandırılmış bağımsız değişkenler, kitaplığınızın tüketicilerine açık hale gelir ve bu da bağımsız değişkenler öznitelik için zorunludur ve hangi bağımsız değişkenler isteğe bağlıdır.
 
  Aşağıdaki örnek, hem Konumsal hem de adlandırılmış bağımsız değişkenlere sahip bir özniteliğin bir uygulamasını gösterir.
@@ -67,14 +67,14 @@ ms.locfileid: "72662011"
 ### <a name="code"></a>Kod
  [!code-csharp[FxCop.Design.AttributeAccessorsNamed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AttributeAccessorsNamed/cs/FxCop.Design.AttributeAccessorsNamed.cs#1)]
 
-### <a name="comments"></a>Açıklamalar
+### <a name="comments"></a>Yorumlar
  Aşağıdaki örnek, özel özniteliğin iki özelliğe nasıl uygulanacağını gösterir.
 
 ### <a name="code"></a>Kod
  [!code-csharp[FxCop.Design.AttributeAccessorsNamedApplied#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AttributeAccessorsNamedApplied/cs/FxCop.Design.AttributeAccessorsNamedApplied.cs#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1813: Korumasız özniteliklerden kaçının](../code-quality/ca1813-avoid-unsealed-attributes.md)
+ [CA1813: Mühürsüz özniteliklerden kaçının](../code-quality/ca1813-avoid-unsealed-attributes.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Öznitelikler](https://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b)

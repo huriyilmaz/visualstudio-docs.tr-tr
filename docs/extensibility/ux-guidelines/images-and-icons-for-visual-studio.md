@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: e72d0ce7435a067ef9aa16ccc5b2daa7602926bf
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 7de4488a8304b21b578b2ad5ac2c29deafcf1b0a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184828"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537546"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio İçin Görüntüler ve Simgeler
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a>Visual Studio 'da görüntü kullanımı
@@ -60,44 +60,38 @@ ms.locfileid: "84184828"
 #### <a name="concept-development"></a>Kavram geliştirme
  Visual Studio Kullanıcı arabirimi içinde çok çeşitli simge türlerini içerir. Geliştirme sırasında simge türünü dikkatle düşünün. Simge öğeleriniz için belirsiz veya seyrek olmayan UI nesneleri kullanmayın. Akıllı etiket simgesiyle birlikte bu durumlarda sembolik için kabul edin. Soldaki soyut etiketin anlamı, sağdaki Kullanıcı arabirimi tabanlı sürümden daha belirgin olduğunu unutmayın:
 
-|||
-|-|-|
 |**Sembolik canlandırın 'nin doğru kullanımı**|**Sembolik Imagery 'nin yanlış kullanımı**|
+|-|-|
 |![Doğru akıllı etiket simgesi](../../extensibility/ux-guidelines/media/0404-01_smarttagcorrect.png "0404-01_SmartTagCorrect")|![Hatalı akıllı etiket simgesi](../../extensibility/ux-guidelines/media/0404-02_smarttagincorrect.png "0404-02_SmartTagIncorrect")|
 
  Standart, kolayca tanınabilir Kullanıcı arabirimi öğelerinin simgeler için iyi bir şekilde çalıştığını örnekler vardır. Bu tür bir örnek pencere ekleyin:
 
-|||
-|-|-|
 |**Bir simgenin içinde doğru Kullanıcı arabirimi öğesi**|**Bir simgede hatalı UI öğesi**|
+|-|-|
 |![Pencereyi doğru Ekle simgesi](../../extensibility/ux-guidelines/media/0404-03_addwindowcorrect.png "0404-03_AddWindowCorrect")|![Yanlış pencere Ekle simgesi](../../extensibility/ux-guidelines/media/0404-04_addwindowincorrect.png "0404-04_AddWindowIncorrect")|
 
  Simgenin anlamı için önemli olmadığı sürece belgeyi temel öğe olarak kullanmayın. Belge Ekle (aşağıdaki) sayfasında belge öğesi olmadan anlamı kaybolur, ancak bu anlamı yenilemek için belge öğesini yenileme işlemi gereksizdir.
 
-|||
-|-|-|
 |**Belge simgesinin doğru kullanımı**|**Belge simgesinin yanlış kullanımı**|
+|-|-|
 |![Doğru belge simgesi](../../extensibility/ux-guidelines/media/0404-05_documenticoncorrect.png "0404-05_DocumentIconCorrect")|![Belge simgesi yanlış](../../extensibility/ux-guidelines/media/0404-06_documenticonincorrect.png "0404-06_DocumentIconIncorrect")|
 
  "Göster" kavramı, gösterilmekte olan tüm dosyaları göster örneğinde olduğu gibi en iyi şekilde gösterilen simgeyle temsil edilmelidir. Kaynak görünümü örneğinde olduğu gibi, gerekirse "görüntüleme" kavramını göstermek için bir lens benzetimini kullanılabilir.
 
-|||
-|-|-|
 |**Göster**|**Görünümü**|
+|-|-|
 |![Simgeyi göster](../../extensibility/ux-guidelines/media/0404-07_show.png "0404-07_Show")|![Görünüm simgesi](../../extensibility/ux-guidelines/media/0404-08_view.png "0404-08_View")|
 
  Sağa bakan Büyüteç simgesi yalnızca arama, bulma ve gözatmayı temsil etmelidir. Artı işareti veya eksi işareti ile sola bakan varyant yalnızca Yakınlaştır/Büyüt ' i temsil etmelidir.
 
-|||
-|-|-|
 |**Aramanız**|**Yakınlaştırma**|
+|-|-|
 |![Arama simgesi](../../extensibility/ux-guidelines/media/0404-09_search.png "0404-09_Search")|![Yakınlaştır simgesi](../../extensibility/ux-guidelines/media/0404-10_zoom.png "0404-10_Zoom")|
 
  Ağaç görünümlerinde, hem klasör simgesini hem de değiştiricisini kullanmayın. Kullanılabilir olduğunda yalnızca değiştirici kullanın.
 
-|||
-|-|-|
 |**Doğru ağaç görünümü simgeleri**|**Ağaç görünümü simgeleri yanlış**|
+|-|-|
 |Doğru ağaç görünümü simgesi ![&#40;1&#41;](../../extensibility/ux-guidelines/media/0404-11_treeviewcorrect1.png "0404-11_TreeViewCorrect1") ![ağaç görünümü simgesini &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-12_treeviewcorrect2.png "0404-12_TreeViewCorrect2")|![Hatalı ağaç görünümü simgesi &#40;1&#41;](../../extensibility/ux-guidelines/media/0404-13_treeviewincorrect1.png "0404-13_TreeViewIncorrect1") ![ağaç görünümü simgesi &#40;2&#41;](../../extensibility/ux-guidelines/media/0404-14_treeviewincorrect2.png "0404-14_TreeViewIncorrect2")|
 
 ### <a name="style-details"></a>Stil ayrıntıları
@@ -127,23 +121,20 @@ ms.locfileid: "84184828"
 
  İdeal hizalama ve dengeyi elde etmek için simgenin temel öğesini eylem glifleri ile engellemeyi önleyin. Glifi Taban öğesinin sol üst kısmına yerleştirin. Ek bir öğe eklerken, simgenin hizalamasını ve dengesini göz önünde bulundurun.
 
-|||
-|-|-|
 |**Hizalama ve dengeyi doğru**|**Hizalama ve bakiye yanlış**|
+|-|-|
 |![Simge dengesini ve hizalamayı Düzeltme](../../extensibility/ux-guidelines/media/0404-22_alignbalancecorrect.png "0404-22_AlignBalanceCorrect")|![Yanlış simge dengesi ve hizalaması](../../extensibility/ux-guidelines/media/0404-23_alignbalanceincorrect.png "0404-23_AlignBalanceIncorrect")|
 
  Öğeleri paylaşan ve kümeler halinde kullanılan simgeler için boyut eşliği sağlayın. Yanlış eşleştirmeden, dairenin ve okun büyük boyutlu olduğunu ve eşleşmediğini unutmayın.
 
-|||
-|-|-|
 |**Doğru boyut eşliği**|**Yanlış boyut eşliği**|
+|-|-|
 |![Doğru simge boyutu ve eşliği](../../extensibility/ux-guidelines/media/0404-24_sizeparitycorrect.png "0404-24_SizeParityCorrect")|![Yanlış simge boyutu ve eşlik](../../extensibility/ux-guidelines/media/0404-25_sizeparityincorrect.png "0404-25_SizeParityIncorrect")|
 
  Tutarlı çizgi ve görsel ağırlıklar kullanın. Oluşturduğunuz simgenin yan yana karşılaştırma kullanarak diğer simgelere nasıl Karşılaştırıldığı değerlendirin. Tüm 16x16 çerçevesini hiçbir şekilde kullanmayın, 15x15 veya daha küçük kullanın. Negatif-pozitif (koyu-hafif) oran 50/50 olmalıdır.
 
-|||
-|-|-|
 |**Sıfırdan olumlu oranı doğru yapın**|**Negatif-pozitif oranına yanlış**|
+|-|-|
 |![Simgeler &#40;1&#41;için görsel ağırlığı düzeltin](../../extensibility/ux-guidelines/media/0404-26_visualweightcorrect1.png "0404-26_VisualWeightCorrect1")<br /><br /> ![Simgeler &#40;2&#41;için görsel ağırlığı düzeltin](../../extensibility/ux-guidelines/media/0404-27_visualweightcorrect2.png "0404-27_VisualWeightCorrect2")<br /><br /> ![Simgeler &#40;3&#41;için doğru görsel ağırlığı](../../extensibility/ux-guidelines/media/0404-28_visualweightcorrect3.png "0404-28_VisualWeightCorrect3")|![Simgeler için yanlış görsel ağırlık](../../extensibility/ux-guidelines/media/0404-29_visualweightincorrect.png "0404-29_VisualWeightIncorrect")|
 
  Öğeleri öğe bütünlüğünden ödün vermeden derlemek için basit, karşılaştırılabilir şekiller ve tamamlayıcı açıları kullanın. Mümkün olduğunda 45 ° veya 90 ° açı kullanın.
@@ -163,16 +154,14 @@ ms.locfileid: "84184828"
 
  Hafif kaynakları yalnızca bir nesneye gerekli açıklık eklerken kullanın.
 
-|||
-|-|-|
 |**Doğru ışık kaynağı**|**Hatalı ışık kaynağı**|
+|-|-|
 |![Simgeler için ışık kaynaklarını düzeltin](../../extensibility/ux-guidelines/media/0404-34_lightsourcescorrect.png "0404-34_LightSourcesCorrect")|![Simgeler için hatalı açık kaynaklar](../../extensibility/ux-guidelines/media/0404-35_lightsourcesincorrect.png "0404-35_LightSourcesIncorrect")|
 
  Yalnızca okunabilirliği geliştirmek veya metaphor ile daha iyi iletişim kurmak için anahatları kullanın. Negatif pozitif (koyu-hafif) bakiye 50/50 olmalıdır.
 
-|||
-|-|-|
 |**Ana hatlarıyla doğru kullanımı**|**Anahatların yanlış kullanımı**|
+|-|-|
 |![Doğru anahatlar](../../extensibility/ux-guidelines/media/0404-36_outlinescorrect.png "0404-36_OutlinesCorrect")|![Yanlış anahatlar](../../extensibility/ux-guidelines/media/0404-37_outlinesincorrect.png "0404-37_OutlinesIncorrect")|
 
 #### <a name="icon-types"></a>Simge türleri
@@ -269,11 +258,11 @@ ms.locfileid: "84184828"
 ### <a name="base-palette"></a>Temel palet
  Tüm standart simgeler üç temel renk içerir. Simgeler, 3B araç simgeleri için bir veya iki özel durum ile degradeler veya bırakma gölgeleri içermez.
 
-|Kullanım|Adı|Değer (açık Tema)|Basılı|Örnek|
+|Kullanım|Name|Değer (açık Tema)|Basılı|Örnek|
 |-----------|----------|---------------------------|------------|-------------|
 |Arka plan/koyu|VS BG|424242/66, 66, 66|![Renk örneği 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![Temel palet örneği](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405-02_BasePaletteExample")|
 |Ön plan/açık|VS FG|F0EFF1/240.239.241|![F0EFF1 örneği](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||
-|Anahat|KARŞı|F6F6F6/246.246.246|![F6F6F6 örneği](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")||
+|Ana hat|KARŞı|F6F6F6/246.246.246|![F6F6F6 örneği](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")||
 
  Taban renklere ek olarak, her simge genişletilmiş paletten bir ek renk içerebilir.
 
@@ -282,7 +271,7 @@ ms.locfileid: "84184828"
 #### <a name="action-modifiers"></a>Eylem değiştiricileri
  Aşağıdaki dört renk, eylem değiştiricilerine gereken eylem türlerini gösterir:
 
-|Kullanım|Adı|Değer (tüm temalar)|Basılı|
+|Kullanım|Name|Değer (tüm temalar)|Basılı|
 |-----------|----------|--------------------------|------------|
 |Pozitif|VS eylemi yeşil|388A34/56138, 52|![Renk örneği 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|
 |Negatif|VS eylemi Red|A1260D/161, 38, 13|![A1260D örneği](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|
@@ -292,47 +281,47 @@ ms.locfileid: "84184828"
 ##### <a name="examples"></a>Örnekler
  Yeşil, "Ekle", "Çalıştır", "Play" ve "Validate" gibi pozitif eylem değiştiricilerinde kullanılır.
 
-|||||
+|Çalıştır|Sorguyu Yürüt|Tüm adımları Yürüt|Denetim Ekle|
 |-|-|-|-|
-|![Çalıştır simgesi](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />Çalıştır|![Sorgu simgesini Yürüt](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405-04_ExecuteQuery")<br />Sorguyu Yürüt|![Tüm adımları Yürüt simgesi](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405-05_PlayAllSteps")<br />Tüm adımları Yürüt|![Denetim simgesi ekle](../../extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405-06_AddControl")<br />Denetim Ekle|
+|![Çalıştır simgesi](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Sorgu simgesini Yürüt](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405-04_ExecuteQuery")|![Tüm adımları Yürüt simgesi](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405-05_PlayAllSteps")|![Denetim simgesi ekle](../../extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405-06_AddControl")|
 
  Kırmızı, "Sil", "Durdur", "Iptal" ve "Kapat" gibi negatif Eylem değiştiricileri için kullanılır.
 
-|||||
+|İlişkiyi Sil|Sütunu Sil|Sorguyu durdur|Çevrimdışı bağlantı|
 |-|-|-|-|
-|![İlişki Sil simgesi](../../extensibility/ux-guidelines/media/0405-07_deleterelationship.png "0405-07_DeleteRelationship")<br />İlişkiyi Sil|![Sütun Sil simgesi](../../extensibility/ux-guidelines/media/0405-08_deletecolumn.png "0405-08_DeleteColumn")<br />Sütunu Sil|![Sorgu simgesini durdur](../../extensibility/ux-guidelines/media/0405-09_stopquery.png "0405-09_StopQuery")<br />Sorguyu durdur|![Çevrimdışı bağlantı simgesi](../../extensibility/ux-guidelines/media/0405-10_connectionoffline.png "0405-10_ConnectionOffline")<br />Çevrimdışı bağlantı|
+|![İlişki Sil simgesi](../../extensibility/ux-guidelines/media/0405-07_deleterelationship.png "0405-07_DeleteRelationship")|![Sütun Sil simgesi](../../extensibility/ux-guidelines/media/0405-08_deletecolumn.png "0405-08_DeleteColumn")|![Sorgu simgesini durdur](../../extensibility/ux-guidelines/media/0405-09_stopquery.png "0405-09_StopQuery")|![Çevrimdışı bağlantı simgesi](../../extensibility/ux-guidelines/media/0405-10_connectionoffline.png "0405-10_ConnectionOffline")|
 
  Mavi, "Aç", "Next," "Previous," "Import," ve "Export" gibi en yaygın olarak oklar olarak temsil edilen bağımsız eylem değiştiricilerine uygulanır.
 
-|||||
+|Alana git|Toplu Iade etme|Adres Düzenleyicisi|İlişkilendirme Düzenleyicisi|
 |-|-|-|-|
-|![Alan simgesine git](../../extensibility/ux-guidelines/media/0405-11_gotofield.png "0405-11_GoToField")<br />Alana git|![Toplu denetim&#45;simgesi](../../extensibility/ux-guidelines/media/0405-12_batchedcheckin.png "0405-12_BatchedCheckIn")<br />Toplu Iade etme|![Adres Düzenleyicisi simgesi](../../extensibility/ux-guidelines/media/0405-13_addresseditor.png "0405-13_AddressEditor")<br />Adres Düzenleyicisi|![İlişkilendirme düzenleyici simgesi](../../extensibility/ux-guidelines/media/0405-14_associationeditor.png "0405-14_AssociationEditor")<br />İlişkilendirme Düzenleyicisi|
+|![Alan simgesine git](../../extensibility/ux-guidelines/media/0405-11_gotofield.png "0405-11_GoToField")|![Toplu denetim&#45;simgesi](../../extensibility/ux-guidelines/media/0405-12_batchedcheckin.png "0405-12_BatchedCheckIn")|![Adres Düzenleyicisi simgesi](../../extensibility/ux-guidelines/media/0405-13_addresseditor.png "0405-13_AddressEditor")|![İlişkilendirme düzenleyici simgesi](../../extensibility/ux-guidelines/media/0405-14_associationeditor.png "0405-14_AssociationEditor")|
 
  Koyu altın öncelikle "yeni" değiştiricisi için kullanılır.
 
-|||||
+|Yeni Proje|Yeni grafik oluştur|Yeni birim testi|Yeni liste öğesi|
 |-|-|-|-|
-|![Yeni proje simgesi](../../extensibility/ux-guidelines/media/0405-15_newproject.png "0405-15_NewProject")<br />Yeni Proje|![Yeni grafik simgesi oluştur](../../extensibility/ux-guidelines/media/0405-16_createnewgraph.png "0405-16_CreateNewGraph")<br />Yeni grafik oluştur|![Yeni birim testi simgesi](../../extensibility/ux-guidelines/media/0405-17_newunittest.png "0405-17_NewUnitTest")<br />Yeni birim testi|![Yeni liste öğesi simgesi](../../extensibility/ux-guidelines/media/0405-18_newlistitem.png "0405-18_NewListItem")<br />Yeni liste öğesi|
+|![Yeni proje simgesi](../../extensibility/ux-guidelines/media/0405-15_newproject.png "0405-15_NewProject")|![Yeni grafik simgesi oluştur](../../extensibility/ux-guidelines/media/0405-16_createnewgraph.png "0405-16_CreateNewGraph")|![Yeni birim testi simgesi](../../extensibility/ux-guidelines/media/0405-17_newunittest.png "0405-17_NewUnitTest")|![Yeni liste öğesi simgesi](../../extensibility/ux-guidelines/media/0405-18_newlistitem.png "0405-18_NewListItem")|
 
 #### <a name="special-cases"></a>Özel durumlar
  Özel durumlarda, renkli bir eylem değiştiricisi bağımsız bir simge olarak bağımsız olarak kullanılabilir. Simge için kullanılan renk, simgenin ilişkilendirildiği eylemleri yansıtır. Bu kullanım aşağıdakiler de dahil olmak üzere küçük bir simge alt kümesiyle sınırlandırılmıştır:
 
-||||||
+|Çalıştır|Durdur|Sil|Kaydet|Geri git|
 |-|-|-|-|-|
-|![Çalıştır simgesi](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />Çalıştır|![Durdur simgesi](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")<br />Durdur|![Simgeyi Sil](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")<br />Sil|![Kaydet simgesi](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")<br />Kaydet|![Geri git simgesi](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")<br />Geri git|
+|![Çalıştır simgesi](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")|![Durdur simgesi](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405-19_Stop")|![Simgeyi Sil](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405-20_Delete")|![Kaydet simgesi](../../extensibility/ux-guidelines/media/0405-21_save.png "0405-21_Save")|![Geri git simgesi](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405-22_NavigateBack")|
 
 ### <a name="code-hierarchy-palette"></a>Kod hiyerarşisi paleti
 
 #### <a name="folder"></a>Klasör
 
-|Kullanım|Adı|Değer (tüm temalar)|Basılı|Örnek|
+|Kullanım|Name|Değer (tüm temalar)|Basılı|Örnek|
 |-----------|----------|--------------------------|------------|-------------|
 |Klasörler|Klasör|DCB67A/220.182.122|![DCB67A örneği](../../extensibility/ux-guidelines/media/0405_dcb67a.png "0405_DCB67A")|![Klasör rengi simgesi](../../extensibility/ux-guidelines/media/0405-23_foldercolor.png "0405-23_FolderColor")|
 
 #### <a name="visual-studio-languages"></a>Visual Studio dilleri
  Visual Studio 'da kullanılabilen ortak dillerin veya platformların her biri ilişkili bir renge sahiptir. Bu renkler temel simgenin üzerinde veya bileşik simgelerin sağ üst köşesinde görünen dil değiştiricilerinde kullanılır.
 
-|Kullanım|Adı|Değer (tüm temalar)|Basılı|
+|Kullanım|Name|Değer (tüm temalar)|Basılı|
 |-----------|----------|--------------------------|------------|
 |ASP, HTML, WPF|ASP HTML WPF mavi|0095D7/0149.215|![Renk örneği 0095D7](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|
 |C++|CPP mor|9B4F96/155, 79150|![Renk örneği 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|
@@ -346,15 +335,18 @@ ms.locfileid: "84184828"
 
 ##### <a name="examples-of-icons-with-language-modifiers"></a>Dil değiştiricilerine sahip simgeler örnekleri
 
-|||||||
+|VB|C#|F#|JavaScript|Python|
 |-|-|-|-|-|-|
-|![Visual Basic simgesi](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")<br />VB|![C&#35; simgesi](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")<br />C#|![C&#43;&#43; simgesi](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")<br />C++|![F&#35; simgesi](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")<br />F#|![JavaScript simgesi](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")<br />JavaScript|![Python simgesi](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")<br />Python|
+|![Visual Basic simgesi](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")|![C&#35; simgesi](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")|![C&#43;&#43; simgesi](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405-27_CPlusPlus")|![F&#35; simgesi](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")|![JavaScript simgesi](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405-29_JavaScript")|![Python simgesi](../../extensibility/ux-guidelines/media/0405-30_python.png "0405-30_Python")|
+
+|HTML|WPF|ASP|CSS|TypeScript|
+|-|-|-|-|-|-|
 |![HTML simgesi](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![WPF simgesi](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405-32_WPF")<br />WPF|![ASP simgesi](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405-33_ASP")<br />ASP|![CSS simgesi](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![TypeScript simgesi](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript||
 
 #### <a name="intellisense"></a>IntelliSense
  IntelliSense simgeleri özel bir renk paleti kullanır. Bu renkler, kullanıcıların IntelliSense açılan listesinde farklı öğeler arasında hızlı bir şekilde ayrım yapmanıza yardımcı olmak için kullanılır.
 
-|Kullanım|Adı|Değer (tüm temalar)|Basılı|
+|Kullanım|Name|Değer (tüm temalar)|Basılı|
 |-----------|----------|--------------------------|------------|
 |Sınıf, olay|VS eylemi turuncu|C27D1A/194125, 26|![C27D1A örneği](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|
 |Genişletme yöntemi, yöntemi, modülü, temsilci|VS eylemi mor|652D90/101, 45144|![Renk örneği 652D90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|
@@ -364,15 +356,18 @@ ms.locfileid: "84184828"
 
 ##### <a name="examples-of-intellisense-icons"></a>IntelliSense simgeleri örnekleri
 
-||||||
+|Sınıf|Özel olay|Temsilci|Yöntem arkadaş|Alan|
 |-|-|-|-|-|
-|![IntelliSense sınıf simgesi](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405-36_IntelliSenseClass")<br />Sınıf|![IntelliSense özel olay simgesi](../../extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405-37_IntelliSensePrivateEvent")<br />Özel olay|![IntelliSense temsilci simgesi](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405-38_IntelliSenseDelegate")<br />Temsilci|![IntelliSense yöntemi arkadaş simgesi](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405-39_IntelliSenseMethodFriend")<br />Yöntem arkadaş|![Alan simgesi](../../extensibility/ux-guidelines/media/0405-40_field.png "0405-40_Field")<br />Alan|
-|![IntelliSense korumalı Enum öğesi simgesi](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405-41_IntelliSenseProtectedEnumItem")<br />Korumalı Enum öğesi|![IntelliSense nesne simgesi](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405-42_IntelliSenseObject")<br />Nesne|![IntelliSense şablon simgesi](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405-43_IntelliSenseTemplate")<br />Şablon|![IntelliSense özel durum kısayol simgesi](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405-44_IntelliSenseExceptionShortcut")<br />Özel durum kısayolu||
+|![IntelliSense sınıf simgesi](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405-36_IntelliSenseClass")|![IntelliSense özel olay simgesi](../../extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405-37_IntelliSensePrivateEvent")|![IntelliSense temsilci simgesi](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405-38_IntelliSenseDelegate")|![IntelliSense yöntemi arkadaş simgesi](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405-39_IntelliSenseMethodFriend")|![Alan simgesi](../../extensibility/ux-guidelines/media/0405-40_field.png "0405-40_Field")|
+
+|Korumalı Enum öğesi|Nesne|Şablon|Özel durum kısayolu|
+|-|-|-|-|
+|![IntelliSense korumalı Enum öğesi simgesi](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405-41_IntelliSenseProtectedEnumItem")|![IntelliSense nesne simgesi](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405-42_IntelliSenseObject")|![IntelliSense şablon simgesi](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405-43_IntelliSenseTemplate")|![IntelliSense özel durum kısayol simgesi](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405-44_IntelliSenseExceptionShortcut")|
 
 ### <a name="notifications"></a>Bildirimler
  Visual Studio 'daki bildirimler, durumu göstermek için kullanılır. Bildirim paleti aşağıdaki durum düzeylerine sahip bildirimleri tanımlamak için aşağıdaki dört rengi ve siyah ya da beyaz ön plan dolgusu seçeneklerini kullanır.
 
-|Kullanım|Adı|Değer (tüm temalar)|Basılı|
+|Kullanım|Name|Değer (tüm temalar)|Basılı|
 |-----------|----------|--------------------------|------------|
 |Durum: nötr|Uyarı mavi (VS mavi)|1BA1E2/27.161.226|![Renk örneği 1BA1E2](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|
 |Durum: pozitif|Bildirim yeşili (VS yeşil)|339933/51153, 51|![Renk örneği 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|
@@ -383,6 +378,6 @@ ms.locfileid: "84184828"
 
 #### <a name="examples-of-notification-icons"></a>Bildirim simgeleri örnekleri
 
-|||||
+|Uyarı|Uyarı|Tamamla|Durdur|
 |-|-|-|-|
-|![Uyarı simgesi](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")<br />Uyarı|![Uyarı simgesi](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")<br />Uyarı|![Tamam simgesi](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")<br />Tamamla|![Durdur simgesi](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")<br />Durdur|
+|![Uyarı simgesi](../../extensibility/ux-guidelines/media/0405-45_alert.png "0405-45_Alert")|![Uyarı simgesi](../../extensibility/ux-guidelines/media/0405-48_warning.png "0405-48_Warning")|![Tamam simgesi](../../extensibility/ux-guidelines/media/0405-46_complete.png "0405-46_Complete")|![Durdur simgesi](../../extensibility/ux-guidelines/media/0405-47_stop.png "0405-47_Stop")|

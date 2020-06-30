@@ -15,24 +15,24 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 78702298bab484a95bb8108150415ec0b31ede7d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ad467e880b3281a75db2627108af0e0b2f90ea99
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662906"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534465"
 ---
-# <a name="ca2214-do-not-call-overridable-methods-in-constructors"></a>CA2214: Geçersiz kılınabilir yöntemleri oluşturucular içinde çağırmayın
+# <a name="ca2214-do-not-call-overridable-methods-in-constructors"></a>CA2214: Geçersiz kılınabilir metotları oluşturucular içinde çağırmayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotCallOverridableMethodsInConstructors|
 |CheckId|CA2214|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Korumasız bir türün Oluşturucusu sınıfında tanımlanmış sanal bir yöntemi çağırır.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -45,7 +45,7 @@ ms.locfileid: "72662906"
  Bu kuraldan uyarıyı bastırmayın. Sanal yöntem çağrısını ortadan kaldırmak için oluşturucunun yeniden tasarlanması gerekir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bu kuralı ihlal eden etkisini gösterir. Test uygulaması, temel sınıfının (`BadlyConstructedType`) oluşturucusunun yürütülmesine neden olan `DerivedType` örneğini oluşturur. `BadlyConstructedType` ' ın Oluşturucusu, `DoSomething` sanal metodunu yanlış çağırır. Çıktının gösterdiği gibi, `DerivedType.DoSomething()` yürütülür ve `DerivedType` oluşturucusunun yürütmeden önce bunu yapar.
+ Aşağıdaki örnek, bu kuralı ihlal eden etkisini gösterir. Test uygulaması `DerivedType` , kendi temel sınıf () oluşturucusunun yürütülmesine neden olan bir örneği oluşturur `BadlyConstructedType` . `BadlyConstructedType`oluşturucusunun sanal yöntemi yanlış bir şekilde çağırır `DoSomething` . Çıktının gösterdiği gibi,, `DerivedType.DoSomething()` yürütülür, ve kurucu yürütmeden önce bunu yapar `DerivedType` .
 
  [!code-csharp[FxCop.Usage.CtorVirtual#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.CtorVirtual/cs/FxCop.Usage.CtorVirtual.cs#1)]
  [!code-vb[FxCop.Usage.CtorVirtual#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.CtorVirtual/vb/FxCop.Usage.CtorVirtual.vb#1)]
@@ -53,5 +53,5 @@ ms.locfileid: "72662906"
  Bu örnek aşağıdaki çıktıyı üretir.
 
  **Temel ctor çağrılıyor.** 
-**türetilen Dosometem çağrıldı, başlatıldı mı? ** **Türetilmiş ctor çağrısı 
-.**
+ **Türetilmiş Dosometem çağrıldı, başlatıldı mı? ** 
+ **Türetilmiş bir ctor çağrısı yok.**

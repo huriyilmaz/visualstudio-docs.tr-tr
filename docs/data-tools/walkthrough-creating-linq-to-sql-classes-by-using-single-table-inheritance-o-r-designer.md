@@ -11,15 +11,15 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: c9e6974f1b676b623c58eea451270bde98ddcff7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: afe4063f2d96b2ae46664ec6642ec1a4e98ab892
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75585983"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535271"
 ---
 # <a name="walkthrough-create-linq-to-sql-classes-by-using-single-table-inheritance-or-designer"></a>İzlenecek yol: tek tablo devralma (O/R Designer) kullanarak LINQ to SQL sınıfları oluşturma
-[Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) , genellikle ilişkisel sistemlerde uygulanan tek tablo devralmayı destekler. Bu izlenecek yol, [nasıl yapılır: u/R tasarımcısını kullanarak devralmayı yapılandırma](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) konusuna sağlanan genel adımlara ve [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]devralma kullanımını göstermek için bazı gerçek veriler sağlar.
+[Visual Studio 'daki LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) , genellikle ilişkisel sistemlerde uygulanan tek tablo devralmayı destekler. Bu izlenecek yol, [nasıl yapılır: O/R Tasarımcısı kullanılarak devralmayı yapılandırma](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md) konusunun ve içindeki devralmanın kullanımını göstermek için bazı gerçek veriler sunan genel adımlara genişletilir [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] .
 
 Bu izlenecek yol sırasında aşağıdaki görevleri gerçekleştirirsiniz:
 
@@ -27,7 +27,7 @@ Bu izlenecek yol sırasında aşağıdaki görevleri gerçekleştirirsiniz:
 
 - Windows Forms uygulaması oluşturun.
 
-- Bir projeye [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] dosyası ekleyin.
+- [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]Bir projeye dosya ekleyin.
 
 - Yeni varlık sınıfları oluşturun.
 
@@ -38,7 +38,7 @@ Bu izlenecek yol sırasında aşağıdaki görevleri gerçekleştirirsiniz:
 - Verileri bir Windows formunda görüntüleyin.
 
 ## <a name="create-a-table-to-inherit-from"></a>Devralması için bir tablo oluşturun
-Kalıtımın nasıl çalıştığını görmek için küçük bir `Person` tablosu oluşturun, bunu temel sınıf olarak kullanın ve bundan devralan bir `Employee` nesnesi oluşturun.
+Kalıtımın nasıl çalıştığını görmek için küçük bir tablo oluşturun `Person` , bunu temel sınıf olarak kullanın ve bundan `Employee` devralan bir nesne oluşturun.
 
 ### <a name="to-create-a-base-table-to-demonstrate-inheritance"></a>Devralmayı göstermek üzere bir temel tablo oluşturmak için
 
@@ -49,13 +49,13 @@ Kalıtımın nasıl çalıştığını görmek için küçük bir `Person` tablo
 
 2. **Tablo Tasarımcısı**, tabloya aşağıdaki sütunları ekleyin:
 
-    |Sütun Adı|Veri Türü|Null değerlere izin ver|
+    |Sütun adı|Veri Türü|Null değerlere izin ver|
     |-----------------|---------------|-----------------|
     |**ID**|**int**|**Yanlýþ**|
-    |**Türü**|**int**|**True**|
+    |**Tür**|**int**|**Değeri**|
     |**FirstName**|**nvarchar (200)**|**Yanlýþ**|
     |**Soyadı**|**nvarchar (200)**|**Yanlýþ**|
-    |**Manager**|**int**|**True**|
+    |**Manager**|**int**|**Değeri**|
 
 3. KIMLIK sütununu birincil anahtar olarak ayarlayın.
 
@@ -70,9 +70,8 @@ Kalıtımın doğru yapılandırıldığını doğrulayabilmeniz için tablonun 
 
 2. Aşağıdaki verileri tabloya kopyalayın. (Bunu kopyalayabilir ve ardından **sonuçlar** bölmesinde tüm satırı seçerek tabloya yapıştırabilirsiniz.)
 
-    ||||||
+    |**ID**|**Tür**|**FirstName**|**Soyadı**|**Manager**|
     |-|-|-|-|-|
-    |**ID**|**Türü**|**FirstName**|**Soyadı**|**Manager**|
     |**1**|**1**|**Gamze**|**Wallace**|**DEĞER**|
     |**2**|**1**|**Carlos**|**Grilo dili**|**DEĞER**|
     |**3**|**1**|**Yael**|**Peled**|**DEĞER**|
@@ -86,14 +85,14 @@ Kalıtımın doğru yapılandırıldığını doğrulayabilmeniz için tablonun 
     |**11**|**2**|**Mindy**|**Martin**|**3**|
     |**12**|**2**|**UK**|**Kwok**|**3**|
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturun
+## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
 Artık tabloyu oluşturduğunuza göre, devralmayı yapılandırmayı göstermek için yeni bir proje oluşturun.
 
 ### <a name="to-create-the-new-windows-forms-application"></a>Yeni Windows Forms uygulamasını oluşturmak için
 
-1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **projesi**' ni seçin.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
-2. Sol bölmedeki **görsel C#**  veya **Visual Basic** ' i genişletin ve ardından **Windows Masaüstü**' nü seçin.
+2. Sol bölmedeki **Visual C#** veya **Visual Basic** genişletip **Windows Masaüstü**' nü seçin.
 
 3. Orta bölmede **Windows Forms uygulama** proje türünü seçin.
 
@@ -138,7 +137,7 @@ Artık tabloyu oluşturduğunuza göre, devralmayı yapılandırmayı göstermek
 
 11. **Devralma varsayılan** özelliğini **Person**olarak ayarlayın.
 
-12. Projeyi oluşturun.
+12. Projeyi derleyin.
 
 ## <a name="query-the-inherited-class-and-display-the-data-on-the-form"></a>Devralınan sınıfı sorgulama ve verileri formda görüntüleme
 Artık, nesne modelinde belirli bir sınıf için sorgular oluşturacak biçimde kod eklersiniz.
@@ -147,9 +146,9 @@ Artık, nesne modelinde belirli bir sınıf için sorgular oluşturacak biçimde
 
 1. Bir **liste kutusunu** **Form1**üzerine sürükleyin.
 
-2. `Form1_Load` olay işleyicisi oluşturmak için forma çift tıklayın.
+2. Olay işleyicisi oluşturmak için forma çift tıklayın `Form1_Load` .
 
-3. `Form1_Load` olay işleyicisine aşağıdaki kodu ekleyin:
+3. Aşağıdaki kodu `Form1_Load` olay işleyicisine ekleyin:
 
     ```vb
     Dim dc As New DataClasses1DataContext
@@ -174,7 +173,7 @@ Artık, nesne modelinde belirli bir sınıf için sorgular oluşturacak biçimde
     }
     ```
 
-## <a name="test-the-application"></a>Uygulamayı test edin
+## <a name="test-the-application"></a>Uygulamayı test etme
 Uygulamayı çalıştırın ve liste kutusunda görüntülenen kayıtların tüm çalışanlar ( **tür** sütununda 2 değeri olan kayıtlar) olduğunu doğrulayın.
 
 ### <a name="to-test-the-application"></a>Uygulamayı test etmek için
@@ -191,4 +190,4 @@ Uygulamayı çalıştırın ve liste kutusunda görüntülenen kayıtların tüm
 - [İzlenecek yol: LINQ to SQL sınıfları oluşturma (O-R Designer)](how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md)
 - [Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)
 - [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)
-- [Nasıl yapılır: Visual Basic veya içinde nesne modeli oluşturmaC#](/dotnet/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp)
+- [Nasıl yapılır: Visual Basic veya C 'de nesne modeli oluşturma #](/dotnet/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp)

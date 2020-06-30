@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla Visio belgelerini yazdırma'
+title: 'Nasıl yapılır: program aracılığıyla Visio belgelerini yazdırma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,36 +13,36 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4bf492c866a43a0098fbcad5660a19c57fc90a3a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0e31a55e49d42311b5ec5fff82769584cc55ce09
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955874"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537806"
 ---
-# <a name="how-to-programmatically-print-visio-documents"></a>Nasıl yapılır: Program aracılığıyla Visio belgelerini yazdırma
-  Tam bir Microsoft Office Visio belgesi ya da yalnızca belirli bir sayfa yazdırabilir.
+# <a name="how-to-programmatically-print-visio-documents"></a>Nasıl yapılır: program aracılığıyla Visio belgelerini yazdırma
+  Tüm Microsoft Office Visio belgelerini veya yalnızca belirli bir sayfayı yazdırabilirsiniz.
 
- Yazdırma yöntemleri hakkında daha fazla ayrıntı için VBA başvuru belgelerine bakın [Microsoft.Office.Interop.Visio.Document.Print](/office/vba/api/Visio.Document.Print) yöntemi ve [Microsoft.Office.Interop.Visio.Page.Print](/office/vba/api/Visio.Page.Print) yöntemi .
+ Yazdırma yöntemleri hakkında daha fazla bilgi için,Microsoft.Office.Interop.Visio.Document için VBA başvuru belgelerine bakın [. Print](/office/vba/api/Visio.Document.Print) yöntemi ve [Microsoft. Office. Interop. Visio. Page. Print](/office/vba/api/Visio.Page.Print) yöntemi.
 
-## <a name="print-a-visio-document"></a>Visio belgelerini yazdırma
+## <a name="print-a-visio-document"></a>Visio belgesi Yazdır
 
-### <a name="to-print-a-complete-document"></a>Belgenin tamamını yazdırmak için
+### <a name="to-print-a-complete-document"></a>Tüm belgeyi yazdırmak için
 
-- Çağrı `Microsoft.Office.Interop.Visio.Document.Print` yöntemi `Microsoft.Office.Interop.Visio.Document` yazdırmak istediğiniz nesne.
+- Yazdırmak istediğiniz `Microsoft.Office.Interop.Visio.Document.Print` nesnenin yöntemini çağırın `Microsoft.Office.Interop.Visio.Document` .
 
-     Aşağıdaki kod örneği, etkin belgeyi yazdırır. Bu örneği kullanmak için kodu çalıştırın `ThisAddIn` projenizdeki sınıfı.
+     Aşağıdaki kod örneği etkin belgeyi yazdırır. Bu örneği kullanmak için, `ThisAddIn` projenizdeki sınıfından kodu çalıştırın.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#8](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#8)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#8](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#8)]
 
-## <a name="print-a-page-of-a-visio-document"></a>Visio belgesi bir sayfayı yazdır
+## <a name="print-a-page-of-a-visio-document"></a>Visio belgesi sayfası yazdırma
 
 ### <a name="to-print-a-page-of-a-document"></a>Belgenin bir sayfasını yazdırmak için
 
-- Çağrı `Microsoft.Office.Interop.Visio.Pages.Print` yöntemi `Microsoft.Office.Interop.Visio.Pages` yazdırmak istediğiniz nesne.
+- Yazdırmak istediğiniz `Microsoft.Office.Interop.Visio.Pages.Print` nesnenin yöntemini çağırın `Microsoft.Office.Interop.Visio.Pages` .
 
-     Aşağıdaki kod örneği, ilk sayfa etkin belgenin yazdırır. Bu örneği kullanmak için kodu çalıştırın `ThisAddIn` projenizdeki sınıfı.
+     Aşağıdaki kod örneği, etkin belgenin ilk sayfasını yazdırır. Bu örneği kullanmak için, `ThisAddIn` projenizdeki sınıfından kodu çalıştırın.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#9](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#9)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#9](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#9)]
@@ -50,7 +50,7 @@ ms.locfileid: "62955874"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visio çözümleri](../vsto/visio-solutions.md)
 - [Visio nesne modeline genel bakış](../vsto/visio-object-model-overview.md)
-- [Nasıl yapılır: Program aracılığıyla yeni Visio belgeleri oluşturma](../vsto/how-to-programmatically-create-new-visio-documents.md)
-- [Nasıl yapılır: Program aracılığıyla Visio belgelerini açma](../vsto/how-to-programmatically-open-visio-documents.md)
-- [Nasıl yapılır: Visio belgelerini program aracılığıyla kapatma](../vsto/how-to-programmatically-close-visio-documents.md)
-- [Nasıl yapılır: Program aracılığıyla Visio belgelerini kaydetme](../vsto/how-to-programmatically-save-visio-documents.md)
+- [Nasıl yapılır: program aracılığıyla yeni Visio belgeleri oluşturma](../vsto/how-to-programmatically-create-new-visio-documents.md)
+- [Nasıl yapılır: program aracılığıyla Visio belgelerini açma](../vsto/how-to-programmatically-open-visio-documents.md)
+- [Nasıl yapılır: program aracılığıyla Visio belgelerini kapatma](../vsto/how-to-programmatically-close-visio-documents.md)
+- [Nasıl yapılır: program aracılığıyla Visio belgelerini kaydetme](../vsto/how-to-programmatically-save-visio-documents.md)

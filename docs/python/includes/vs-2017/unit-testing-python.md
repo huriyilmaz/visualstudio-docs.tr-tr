@@ -1,8 +1,8 @@
 ---
 title: Birim testi Python kodu
-description: Visual Studio'da Python kodu için birim testini ayarlamak, test gezgini testlerini keşfetmek, çalıştırmak ve hata ayıklamak için tüm avantajlardan yararlanır.
+description: Visual Studio 'da Python kodu için birim testi ayarlamak, test Gezgini özelliklerinden yararlanarak testleri bulmaya, çalıştırmaya ve hata ayıklamanıza yönelik tüm avantajlardan yararlanır.
 ms.date: 09/18/2019
-ms.topic: include
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,20 +10,20 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9843b47e38d5d33a25c455efe619dfcc033fb334
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 032732f19855b9ba5c97c2e5281e8385f9ace3be
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "71933432"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535349"
 ---
-## <a name="discover-and-view-tests"></a>Testleri keşfedin ve görüntüleyin
+## <a name="discover-and-view-tests"></a>Testleri bulma ve görüntüleme
 
-Visual Studio, sözleşmeye göre testleri adları `test`ile başlayan yöntemler olarak tanımlar. Bu davranışı görmek için aşağıdakileri yapın:
+Kurala göre, Visual Studio Testleri adları ile başlayan yöntemler olarak tanımlar `test` . Bu davranışı görmek için aşağıdakileri yapın:
 
-1. Visual Studio'da yüklü bir [Python projesi](../../managing-python-projects-in-visual-studio.md) açın, projenize sağ tıklayın,**Yeni Öğe** **Ekle'yi** > seçin, ardından **Python Birim Testi'ni** seçin ve ardından **Ekle'yi**seçin.
+1. Visual Studio 'da yüklü bir [Python projesi](../../managing-python-projects-in-visual-studio.md) açın, projenize sağ tıklayın, **Add**  >  **Yeni öğe**Ekle ' yi seçin, sonra **Python birim testi** ' ni ve ardından **Ekle**' yi seçin.
 
-1. Bu eylem, standart `unittest` modülü içeri aktaran, test sınıfı `unittest.TestCase`türeten ve komut `unittest.main()` dosyasını doğrudan çalıştırdığınızda çağıran kodlu *test1.py* bir dosya oluşturur:
+1. Bu eylem, standart *test1.py* modülünü içeri aktaran `unittest` , öğesinden bir test sınıfı türetilen `unittest.TestCase` ve `unittest.main()` betiği doğrudan çalıştırırsanız çağıran bir test1.py dosyası oluşturur:
 
     ```python
 
@@ -37,53 +37,53 @@ Visual Studio, sözleşmeye göre testleri adları `test`ile başlayan yöntemle
         unittest.main()
     ```
 
-1. Gerekirse dosyayı kaydedin ve ardından**Test Windows** > **Test Gezgini** menüsü komutuyla Sına **Test** >  **Gezgini'ni** açın.
+1. Gerekirse dosyayı kaydedin ve test **Gezgini** ' **ni test**  >  **Windows**  >  **Gezgini** menü komutuyla açın.
 
-1. **Test Explorer** testiçin projenizde arama lar ve bunları aşağıda gösterildiği gibi görüntüler. Bir testi çift tıklatma, kaynak dosyasını açar.
+1. **Test Gezgini** projenizde testler için arama yapar ve bunları aşağıda gösterildiği gibi görüntüler. Bir teste çift tıklamak, kaynak dosyasını açar.
 
-    ![Varsayılan test_A gösteren Test Gezgini](../../media/unit-test-A.png)
+    ![Varsayılan test_A gösteren test Gezgini](../../media/unit-test-A.png)
 
-1. Projenize daha fazla test ekledikçe, araç çubuğundaki menüye **göre Grup'u** kullanarak Test **Gezgini'ndeki** görünümü düzenleyebilirsiniz:
+1. Projenize daha fazla test eklediğinizde, araç çubuğundaki **grupla** menüsünü kullanarak **Test Gezgini** 'nde görünümü düzenleyebilirsiniz:
 
-    ![Explorer Grubunu Araç Çubuğu menüsüne göre sınar](../../media/unit-test-group-menu.png)
+    ![Araç çubuğu menüsü Ile gezgin grubunu sınar](../../media/unit-test-group-menu.png)
 
-1. Testleri ada göre filtrelemek için **Arama** alanına metin de girebilirsiniz.
+1. Testleri ada göre filtrelemek için **arama** alanına da metin girebilirsiniz.
 
-Modül ve yazma testleri hakkında daha fazla bilgi için [Python 2.7 belgelerine](https://docs.python.org/2/library/unittest.html) veya [Python 3.7 belgelerine](https://docs.python.org/3/library/unittest.html) (python.org) bakın. `unittest`
+Modül ve test yazma hakkında daha fazla bilgi için `unittest` bkz. [Python 2,7 belgeleri](https://docs.python.org/2/library/unittest.html) veya [python 3,7 belgeleri](https://docs.python.org/3/library/unittest.html) (Python.org).
 
 ## <a name="run-tests"></a>Testleri çalıştırma
 
-**Test Gezgini'nde** testleri çeşitli şekillerde çalıştırabilirsiniz:
+**Test Gezgini** 'nde testleri çeşitli yollarla çalıştırabilirsiniz:
 
-- **Tüm** açıkça gösterilen testleri (filtrelere tabi) çalıştırın.
-- **Çalıştır** menüsü, başarısız, geçmiş veya testleri grup olarak çalıştırmama komutları verir.
-- Bir veya daha fazla test seçebilir, sağ tıklatabilir ve **Seçili Testleri Çalıştır'ı**seçebilirsiniz.
+- **Tümünü Çalıştır** tüm gösterilen testleri açıkça çalıştırır (filtrelere tabidir).
+- **Çalıştır** menüsü, bir grup olarak başarısız, geçti veya Çalıştır testleri çalıştırma komutları sağlar.
+- Bir veya daha fazla test seçebilir, sağ tıklayıp **Seçili Testleri Çalıştır**' ı seçebilirsiniz.
 
-Testler arka planda çalışır ve **Test Gezgini** tamamladığı gibi her testin durumunu güncelleştirir:
+Arka planda çalıştırılan testler ve **Test Gezgini** , tamamlandığında her testin durumunu güncelleştirir:
 
-- Geçen testler yeşil bir kene ve testi çalıştırmak için geçen süreyi gösterir:
+- Testleri geçirmek yeşil bir onay işareti ve testi çalıştırmak için geçen süreyi gösterir:
 
     ![test_A geçti durumu](../../media/unit-test-A-pass.png)
 
-- Başarısız testler, konsol çıktısını ve `unittest` test çalışmasından çıktıyı gösteren bir **Çıktı** bağlantısına sahip bir kırmızı çapraz gösterir:
+- Başarısız testler, konsol çıkışını ve Test çalıştırmasında çıktıyı gösteren bir **Çıkış** bağlantısı ile kırmızı bir çapraz bir çarpı gösterir `unittest` :
 
-    ![test_A başarısız durum](../../media/unit-test-A-fail.png)
+    ![başarısız test_A durumu](../../media/unit-test-A-fail.png)
 
-    ![test_A akıl ile başarısız oldu](../../media/unit-test-A-fail-reason.png)
+    ![test_A neden ile başarısız oldu](../../media/unit-test-A-fail-reason.png)
 
 ## <a name="debug-tests"></a>Hata ayıklama testleri
 
-Birim testleri kod parçaları olduğundan, diğer kodlar gibi hatalara maruz kalıyorlar ve bazen hata ayıklayıcıda çalıştırılması gerekir. Hata ayıklamada kesme noktaları ayarlayabilir, değişkenleri inceleyebilir ve kod üzerinden adım atabilirsiniz. Visual Studio ayrıca birim testleri için tanılama araçları sağlar.
+Birim testleri kod parçaları olduğundan, diğer tüm kodlar gibi hatalara tabidir ve bazen bir hata ayıklayıcıda çalıştırılması gerekir. Hata ayıklayıcıda kesme noktaları ayarlayabilir, değişkenleri inceleyebilir ve koddaki adımları izleyebilirsiniz. Visual Studio, birim testleri için de tanılama araçları sağlar.
 
-Hata ayıklamaya başlamak için, kodunuzda bir başlangıç kesme noktası ayarlayın, ardından Test **Gezgini'nde** testi (veya seçimi) sağ tıklatın ve **Hata Ayıklama Seçili Testleri**seçin. Visual Studio, python hata ayıklayıcısını uygulama kodunda olduğu gibi başlatır.
+Hata ayıklamayı başlatmak için kodunuzda bir başlangıç kesme noktası ayarlayın ve **Test Gezgini** 'nde teste (veya bir seçime) sağ tıklayın ve **Seçili testlerin hatalarını ayıkla**' yı seçin. Visual Studio, Python hata ayıklayıcısını uygulama kodu gibi başlatır.
 
-![Testin hata ayıklama](../../media/unit-test-debugging.png)
+![Bir testte hata ayıklama](../../media/unit-test-debugging.png)
 
-**Ayrıca, Seçili Testler için Analiz Kodu Kapsamını**da kullanabilirsiniz. Daha fazla bilgi için [bkz.](../../../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
+Ayrıca **Seçili testler Için kod kapsamını analiz et**' i de kullanabilirsiniz. Daha fazla bilgi için bkz. kod [kapsamını kullanarak ne kadar kodun test edildiğini belirleme](../../../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
 
 ### <a name="known-issues"></a>Bilinen sorunlar
 
-- Hata ayıklamaya başlarken, Visual Studio hata ayıklamayı başlatmak ve durdurmak için görünür ve sonra yeniden başlar. Bu beklenen bir davranıştır.
-- Birden çok testhatayaparken, her biri bağımsız olarak çalıştırılır ve bu da hata ayıklama oturumunu kesintiye uğratır.
-- Visual Studio hata ayıklama yaparken zaman zaman bir test başlatmak için başarısız olur. Normalde, testi yine hata ayıklama girişimi başarılı olur.
-- Hata ayıklama yaparken, bir testten uygulamaya çıkmak `unittest` mümkündür. Normalde, bir sonraki adım programın sonuna kadar çalışır ve hata ayıklama durur.
+- Hata ayıklama başlatılırken, Visual Studio başlatma ve hata ayıklamayı durdurma gibi görünür ve sonra yeniden başlatılır. Bu beklenen bir davranıştır.
+- Birden çok teste hata ayıklarken, her biri bağımsız olarak çalıştırılır ve hata ayıklama oturumunu keser.
+- Hata ayıklama sırasında Visual Studio zaman zaman bir test başlatamaz. Normal olarak, testi yeniden ayıklamaya çalışırken başarılı olur.
+- Hata ayıklarken, uygulamaya bir test dışına geçmek mümkündür `unittest` . Normalde, sonraki adım programın sonuna kadar çalışır ve hata ayıklamayı sonlandırır.

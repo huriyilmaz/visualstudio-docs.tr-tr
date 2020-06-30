@@ -8,12 +8,12 @@ ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 07/23/2019
 ms.author: ghogen
-ms.openlocfilehash: 18e2789af3a699dacee9a9e8c1f1846ee8622800
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f1c02e1fdc0c72ac23cb65605f324608a7fc33d7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283183"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536896"
 ---
 # <a name="deploy-to-docker-hub"></a>Docker Hub’a dağıtma
 
@@ -29,17 +29,17 @@ Docker Hub deponuz yoksa, [Docker Hub](https://hub.docker.com/)'da bir tane olu�
 
 1. Proje düğümüne sağ tıklayın ve **Yayımla...** seçeneğini belirleyin. Dağıtım seçeneklerini gösteren bir ekran görüntülenir.
 
-   ![](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
+   ![Dağıtım seçeneklerinin ekran görüntüsü](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
 
 1. **Bir yayımlama hedefi seçin**altında **Container Registry**' yi seçin ve ardından **Docker Hub**' ı seçin. **Docker Hub** iletişim kutusu görüntülenir.
 
-   ![](media/deploy-docker-hub/container-tools-docker-hub-credentials.png)
+   ![Docker Hub iletişim kutusunun ekran görüntüsü](media/deploy-docker-hub/container-tools-docker-hub-credentials.png)
 
 1. Kendi deponuza bağlanıyorsanız (bir kuruluşun parçası değil), **kişisel bir depoda yayımlama** onay kutusunu işaretli olarak bırakın. Deponun sahibi bir kuruluşa aitse, onay kutusunu temizleyin ve kuruluş adını girin. Docker hesabınız için, bağlandığınız depoya erişim izni olan Docker Kullanıcı adınızı ve parolanızı girin ve ardından **Kaydet**' i seçin.  
 
-   Visual Studio görüntünüzü Docker Hub 'ına dağıtmaya çalışır.  Başarılı olursa, **Yayımla** ekranı depo görüntüsü, resim etiketi, depo ve derleme yapılandırması * * (örneğin, **Sürüm**) URL 'si ile birlikte görüntülenir.
+   Visual Studio görüntünüzü Docker Hub 'ına dağıtmaya çalışır.  Başarılı olursa, **Yayımla** ekranı depo görüntüsü, resim etiketi, depo ve derleme yapılandırması (örneğin, **Sürüm**) için URL ile birlikte görüntülenir.
 
-   ![](media/deploy-docker-hub/container-tools-docker-hub-finished.png)
+   ![Yayın ekranının ekran görüntüsü](media/deploy-docker-hub/container-tools-docker-hub-finished.png)
 
 1. Bu sayfadaki **Yayımla** düğmesine tıklayarak görüntüyü dilediğiniz zaman güncelleştirebilirsiniz.  Ya da, URL 'nin altındaki bağlantıları kullanarak profili değiştirebilir veya kaldırabilirsiniz.
 

@@ -9,66 +9,66 @@ caps.latest.revision: 11
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: ee221f0c1da32694e869177399981cc16ce901f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a8042b228a481dc3d720d8b422963db41abbddcd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68145286"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533841"
 ---
 # <a name="vsperf"></a>VSPerf
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanım **VsPerf** komut satırı aracı:  
+**VSPerf** komut satırı aracını kullanarak şunları yapın:  
   
-1. Visual Studio cihazda yüklü değilse Windows Store uygulamaları komut satırından profil.  
+1. Cihaza Visual Studio yüklü olmadığında, komut satırından Windows Mağazası uygulamalarını profile.  
   
-2. Masaüstü uygulamalarını Windows 8 ve Windows Server 2012 uygulamalar örnekleme profili oluşturma yöntemi kullanarak profil.  
+2. Örnekleme profili oluşturma yöntemini kullanarak Windows 8 masaüstü uygulamalarını ve Windows Server 2012 uygulamalarını profili oluşturma.  
   
    Profil oluşturma seçenekleriniz hakkında daha fazla bilgi için bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
-## <a name="BKMK_In_this_topic"></a> Bu konudaki  
- Bu konu ile kullanabileceğiniz seçenekler açıklanmaktadır `vsperf.exe` komut satırı aracı. Bu konuda aşağıdaki bölümleri içerir:  
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a>Bu konuda  
+ Bu konu, komut satırı aracı ile kullanabileceğiniz seçenekleri açıklar `vsperf.exe` . Konusu aşağıdaki bölümleri içerir:  
   
- [Yalnızca Windows Store uygulamaları](#BKMK_windows_store_apps_only)  
+ [Yalnızca Windows Mağazası uygulamaları](#BKMK_windows_store_apps_only)  
   
- [Masaüstü uygulamalarını Windows 8 ve Windows Server 2012 uygulamalar](#BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only)  
+ [Yalnızca Windows 8 masaüstü uygulamaları ve Windows Server 2012 uygulamaları](#BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only)  
   
  [Tüm uygulamalar](#BKMK_All_applications)  
   
-## <a name="BKMK_windows_store_apps_only"></a> Yalnızca Windows Store uygulamaları  
- Bu seçenekler yalnızca Windows Store uygulamaları için geçerlidir.  
+## <a name="windows-store-apps-only"></a><a name="BKMK_windows_store_apps_only"></a>Yalnızca Windows Mağazası uygulamaları  
+ Bu seçenekler yalnızca Windows Mağazası uygulamaları için geçerlidir.  
   
-|||  
+|Seçenek|Description|  
 |-|-|  
-|**/App: {AppName}**|Profil oluşturucuyu başlatır ve Başlat Menüsü'nden başlatılmak üzere belirtilen uygulama bekler.<br /><br /> Çalıştırma `vsperf /listapps` Pakettamadı yüklü uygulamalar ve uygulama adı görüntülemek için.|  
-|**/ Paket: {Pakettamadı}**|Profil oluşturucuyu başlatır ve Başlat Menüsü'nden başlatılmak üzere belirtilen uygulama bekler.<br /><br /> Çalıştırma `vsperf /listapps` Pakettamadı yüklü uygulamalar ve uygulama adı görüntülemek için.|  
-|**/js**|Profil oluşturma JavaScript uygulamaları için gereklidir.<br /><br /> JavaScript uygulamalarından performans verilerini topla.<br /><br /> Sadece/Package kullanımı veya / ekleyin.|  
-|**/noclr**|İsteğe bağlı. CLR veri toplamaz.<br /><br /> Sadece/Package kullanımı veya / ekleyin.<br /><br /> En iyi duruma getirilmesi, yönetilen sembol çözülecektir.|  
-|**/listapps**|Yüklü uygulama adları ve PackageFullNames listeleyin.|  
+|**/App: {AppName}**|Profil oluşturucuyu başlatır ve başlangıç menüsünden belirtilen uygulamanın başlatılmasını bekler.<br /><br /> `vsperf /listapps`Yüklenen uygulamaların uygulama adını ve PackageFullName 'ni görüntülemek için öğesini çalıştırın.|  
+|**/Package: {PackageFullName}**|Profil oluşturucuyu başlatır ve başlangıç menüsünden belirtilen uygulamanın başlatılmasını bekler.<br /><br /> `vsperf /listapps`Yüklenen uygulamaların uygulama adını ve PackageFullName 'ni görüntülemek için öğesini çalıştırın.|  
+|**/JS**|JavaScript uygulamalarının profilini oluşturmak için gereklidir.<br /><br /> JavaScript uygulamalarından performans verileri toplayın.<br /><br /> Yalnızca/Package veya/attachile kullanın.|  
+|**/noclr**|İsteğe bağlı. CLR verileri toplama.<br /><br /> Yalnızca/Package veya/attachile kullanın.<br /><br /> İyileştirme, yönetilen semboller çözümlenmez.|  
+|**/listapps**|Yüklü uygulama adlarını ve PackageFullNames listesini listeleyin.|  
   
-## <a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a> Masaüstü uygulamalarını Windows 8 ve Windows Server 2012 uygulamalar  
- Bu seçenekler, Windows Store apps üzerinde çalışmaz.  
+## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a><a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a>Yalnızca Windows 8 masaüstü uygulamaları ve Windows Server 2012 uygulamaları  
+ Bu seçenekler Windows Mağazası uygulamaları üzerinde çalışmaz.  
   
-|||  
+|Seçenek|Description|  
 |-|-|  
-|**/ launch: {yürütülebilir}**|Başlatır ve belirtilen yürütülebilir dosya profil oluşturma başlar.|  
-|**args: {ExecutableArguments}**|Geçirilecek komut satırı bağımsız değişkenlerini belirtir **/başlatma** hedef.|  
-|**/ Console**|Çalıştırmaları **/başlatma** hedef yeni bir komut penceresinde.|  
+|**/Launch: {executable}**|Başlatılır ve belirtilen yürütülebilir dosyanın profilini oluşturmaya başlar.|  
+|**/args: {ExecutableArguments}**|**/Launch** hedefini geçirmek için komut satırı bağımsız değişkenlerini belirtir.|  
+|**/Console**|Yeni bir komut penceresinde **/Launch** hedefini çalıştırır.|  
   
-## <a name="BKMK_All_applications"></a> Tüm uygulamalar  
- Bu seçenek, herhangi bir Windows 8 veya Windows Server 2012 uygulama için geçerlidir.  
+## <a name="all-applications"></a><a name="BKMK_All_applications"></a>Tüm uygulamalar  
+ Bu seçenek, herhangi bir Windows 8 veya Windows Server 2012 uygulaması için geçerlidir.  
   
-|||  
+|Seçenek|Description|  
 |-|-|  
-|**/ ekleme: {PID&#124;ProcessName} [, PID&#124;ProcessName]...**|Belirtilen işlemlerden veri toplar.<br /><br /> İşlem kimliği (PID) görüntülemek ve işlem adları çalışan uygulamalar için Görev Yöneticisi'ni kullanın.|  
-|**/ file:{ReportName}**|İsteğe bağlı. Çıkış dosyası (varolan dosyanın üzerine yazar) belirtir.<br /><br /> Sadece/Package kullanımı veya / ekleyin.|  
-|**/ Pause**|Veri koleksiyonu duraklatın.|  
-|**/Resume**|Veri koleksiyonu devam ettirin.|  
-|**/ stop**|Veri toplama işlemini durdurun ve hedef işlemleri sonlandırın.|  
-|**/ detach**|Veri toplamayı Durdur, ancak çalışmaya devam hedef işlemler sağlar.|  
-|**/ Status**|Profil Oluşturucu durumunu gösterir.|  
+|**/Attach: {PID&#124;ProcessName} [, PID&#124;ProcessName]...**|Belirtilen işlemlerden verileri toplar.<br /><br /> Çalışan uygulamaların işlem kimliğini (PID) ve işlem adlarını görüntülemek için Görev Yöneticisi 'ni kullanın.|  
+|**/File: {ReportName}**|İsteğe bağlı. Çıkış dosyasını belirtir (varolan dosyanın üzerine yazar).<br /><br /> Yalnızca/Package veya/attachile kullanın.|  
+|**/Pause**|Veri toplamayı duraklatın.|  
+|**/Resume sistemde**|Veri toplamayı sürdürür.|  
+|**/Stop**|Veri toplamayı durdurun ve hedef süreçlerini sonlandırın.|  
+|**/Detach**|Veri toplamayı durdurun, ancak hedef işlemlerin çalışmaya devam etmesine izin verin.|  
+|**/Status**|Profil Oluşturucu durumunu göster.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)   
+ [Windows 8 ve Windows Server 2012 uygulamalarındaki performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)   
  [Komut Satırından Profil Oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md)

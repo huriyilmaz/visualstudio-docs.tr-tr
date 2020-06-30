@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla Yazımı denetleme'
+title: 'Nasıl yapılır: belgelerde program aracılığıyla yazımı denetleme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,25 +13,25 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 26eb7e0798fbcf6aad33dd45892a23fb0d54b812
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 93ba9d9907135952f7408652bfb36f440d23138d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62575708"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537858"
 ---
-# <a name="how-to-programmatically-check-spelling-in-documents"></a>Nasıl yapılır: Program aracılığıyla Yazımı denetleme
-  Belgede yazım denetimi yapmak için kullanın <xref:Microsoft.Office.Interop.Word._Application.CheckSpelling%2A> yöntemi. Bu yöntem, sağlanan parametresi doğru yazıldığından emin olup olmadığını gösteren bir Boole değeri döndürür.
+# <a name="how-to-programmatically-check-spelling-in-documents"></a>Nasıl yapılır: belgelerde program aracılığıyla yazımı denetleme
+  Belgedeki Yazımı denetlemek için <xref:Microsoft.Office.Interop.Word._Application.CheckSpelling%2A> yöntemini kullanın. Bu yöntem, sağlanan parametrenin doğru yazıldığını belirten bir Boole değeri döndürür.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="to-check-spelling-and-display-results-in-a-message-box"></a>Yazım denetimi ve sonuçları bir ileti kutusu içinde görüntülemek için
+## <a name="to-check-spelling-and-display-results-in-a-message-box"></a>Yazımı denetlemek ve sonuçları bir ileti kutusunda göstermek için
 
-1. Çağrı <xref:Microsoft.Office.Interop.Word._Application.CheckSpelling%2A> yöntemi ve yazım hataları denetlemek için metin aralığı geçirin. Bu kod örneği kullanmak için çalıştırın `ThisDocument` veya `ThisAddIn` projenizdeki sınıfı.
+1. Yöntemi çağırın <xref:Microsoft.Office.Interop.Word._Application.CheckSpelling%2A> ve yazım hatalarını denetlemek için bir metin aralığı geçirin. Bu kod örneğini kullanmak için, `ThisDocument` `ThisAddIn` projenizdeki veya sınıfından çalıştırın.
 
      [!code-vb[Trin_VstcoreWordAutomation#113](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#113)]
      [!code-csharp[Trin_VstcoreWordAutomation#113](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#113)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Program aracılığıyla tanımlama ve belgelerde aralıkları seçin](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [Nasıl yapılır: belgelerde aralıkları program aracılığıyla tanımlama ve seçme](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)
