@@ -1,18 +1,18 @@
 ---
 title: 'Nasıl yapılır: Etki Alanına Özgü Dil Tasarımcısını Genişletme'
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa03e43276c7c995c5f494c5325dd79716dcf998
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aa5b3166606312bb74560f207e6e1d0e6065bb2c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605601"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532592"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Nasıl yapılır: Etki Alanına Özgü Dil Tasarımcısını Genişletme
 
@@ -68,7 +68,7 @@ Bu konudaki herhangi bir uzantıyı test etmek için çözümü derleyin ve çal
 
 Uzantıları ana Visual Studio 'ya ve diğer bilgisayarlara dağıtmak için şu adımları izleyin:
 
-1. VSIX projenizde VSIX yükleme dosyasını, bin \\ * \\ \*. VSIX ' de bulun.
+1. VSIX projenizde VSIX yükleme dosyasını bin \\ * \\ \* . vsix ' de bulun
 
 2. Bu dosyayı hedef bilgisayara kopyalayın ve ardından Windows Gezgini 'nde (veya dosya Gezgini) çift tıklayın.
 
@@ -84,7 +84,7 @@ Uzantıyı kaldırmak için şu adımları izleyin:
 
 DSL Tasarımcısı yüzeyinde veya DSL Gezgini penceresinde kısayol menü komutu görünmesini sağlamak için, aşağıdaki gibi bir sınıf yazın.
 
-Sınıf `ICommandExtension` uygulamalıdır ve özniteliği `DslDefinitionModelCommandExtension` sahip olmalıdır.
+Sınıfının uygulanması `ICommandExtension` ve özniteliğine sahip olması gerekir `DslDefinitionModelCommandExtension` .
 
 ```csharp
 using System.Collections.Generic;

@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Şekil veya Dekoratörde bir Click için Araya Girme'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 author: JoshuaPartlow
@@ -9,18 +9,18 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f4923a858d9d46c477f50df2a08440a10e9309ef
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 58d447526d83fec406b6fc20a08edcec37de89ae
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114515"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532528"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>Nasıl yapılır: Şekil veya Dekoratörde bir Click için Araya Girme
 Aşağıdaki yordamlarda, bir şekle veya bir simge dekoratmasına tıklamanın nasıl ele alınacağını gösterilmektedir. Tıklama, Çift tıklama, sürükme ve diğer hareketleri yakalayabilir ve öğenin yanıt vermesini sağlayabilirsiniz.
 
 ## <a name="to-intercept-clicks-on-shapes"></a>Şekillerdeki tıklamaları kesme
- DSL projesinde, oluşturulan kod dosyalarından ayrı bir kod dosyasında, şekil sınıfı için kısmi bir sınıf tanımı yazın. `OnDoubleClick()` veya `On...`başlayan bir ada sahip diğer yöntemlerden birini geçersiz kılın. Örneğin:
+ DSL projesinde, oluşturulan kod dosyalarından ayrı bir kod dosyasında, şekil sınıfı için kısmi bir sınıf tanımı yazın. `OnDoubleClick()`Ya da ile başlayan bir ada sahip diğer yöntemlerden birini geçersiz kılın `On...` . Örneğin:
 
 ```csharp
 public partial class MyShape // change
@@ -34,10 +34,10 @@ public partial class MyShape // change
 ```
 
 > [!NOTE]
-> Olayın, kapsayan şekle veya diyagrama geçirilmesini istemediğiniz müddetçe, `e.Handled` `true`olarak ayarlayın.
+> `e.Handled`Olayın, `true` kapsayan şekle veya diyagrama geçirilmesini istemediğiniz müddetçe, olarak ayarlanır.
 
 ## <a name="to-intercept-clicks-on-decorators"></a>Dekoratörler üzerinde tıklama tıklamalarını kesme
- Görüntü Dekoratörleri bir OnDoubleClick yöntemine sahip olan ImageField sınıfının bir örneğine taşınır. Bir ImageField alt sınıfı yazarsanız tıklama işlemlerini izleyebilirsiniz. Alanlar ınitialeshapefields yönteminde ayarlanır. Bu nedenle, normal ImageField yerine alt sınıflarınızın örneğini oluşturmak için bu yöntemi değiştirmeniz gerekir. Initialeshapefields yöntemi şekil sınıfının oluşturulan kodunda bulunur. Aşağıdaki yordamda açıklandığı gibi `Generates Double Derived` özelliğini ayarlarsanız şekil sınıfını geçersiz kılabilirsiniz.
+ Görüntü Dekoratörleri bir OnDoubleClick yöntemine sahip olan ImageField sınıfının bir örneğine taşınır. Bir ImageField alt sınıfı yazarsanız tıklama işlemlerini izleyebilirsiniz. Alanlar ınitialeshapefields yönteminde ayarlanır. Bu nedenle, normal ImageField yerine alt sınıflarınızın örneğini oluşturmak için bu yöntemi değiştirmeniz gerekir. Initialeshapefields yöntemi şekil sınıfının oluşturulan kodunda bulunur. Aşağıdaki yordamda açıklandığı gibi özelliğini ayarlarsanız şekil sınıfını geçersiz kılabilirsiniz `Generates Double Derived` .
 
  Initialeshapefields bir örnek yöntemi olsa da, her bir sınıf için yalnızca bir kez çağırılır. Bu nedenle, diyagramdaki her bir şekil için değil her bir sınıftaki her bir alan için yalnızca bir Click ' in bir örneği bulunur. Kullanıcı bir örneğe çift tıkladığında, örnekteki kodun gösterdiği gibi, hangi örneğin isabet olduğunu belirlemeniz gerekir.
 
@@ -47,7 +47,7 @@ public partial class MyShape // change
 
 2. Simge dekoratörü olan bir şekil seçin veya oluşturun ve bunu bir etki alanı sınıfıyla eşleyin.
 
-3. `GeneratedCode` klasöründeki dosyalardan ayrı bir kod dosyasında, ImageField öğesinin yeni alt sınıfını oluşturun:
+3. Klasöründeki dosyalardan ayrı bir kod dosyasında `GeneratedCode` , ImageField öğesinin yeni alt sınıfını oluşturun:
 
     ```csharp
     using Microsoft.VisualStudio.Modeling;
@@ -133,7 +133,7 @@ public partial class MyShape // change
 
 - Bir dizi fare olay işleyicisi oluşturulduğunda her bir bölme örneğine eklenir.
 
-- `ClassShape.MouseDown` olay geçerli öğeyi depolar.
+- `ClassShape.MouseDown`Olay geçerli öğeyi depolar.
 
 - Fare geçerli öğeden dışarı taştığında, imleci ayarlayan ve serbest bırakılana kadar fare yakalayan bir MouseAction örneği oluşturulur.
 
