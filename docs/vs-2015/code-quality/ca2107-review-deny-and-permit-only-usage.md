@@ -15,40 +15,40 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 32339852d67d4f3f28fedd204a056440ad49e075
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7f273ea5f58babf7a0c04f6b0758732d43aab7db
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72665960"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547777"
 ---
-# <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Gözden geçirmeyi reddet ve yalnızca kullanımına izin ver
+# <a name="ca2107-review-deny-and-permit-only-usage"></a>CA2107: Gözden geçirmeyi reddedin ve yalnızca kullanımına izin verin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ReviewDenyAndPermitOnlyUsage|
 |CheckId|CA2107|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir yöntem, PermitOnly veya güvenlik reddetme eylemini belirten bir güvenlik denetimi içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- [Permıtonly yöntemini](https://msdn.microsoft.com/8c7bdb7f-882f-45b7-908c-6cbaa1767649) ve <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> güvenlik eylemlerinin kullanılması yalnızca gelişmiş [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] güvenlik bilgisine sahip olanlar tarafından kullanılmalıdır. Bu güvenlik eylemlerini kullanan kod güvenlik incelemesi altından geçmelidir.
+ [Permıtonly yönteminin](https://msdn.microsoft.com/8c7bdb7f-882f-45b7-908c-6cbaa1767649) ve <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName> güvenlik eylemlerinin kullanılması yalnızca gelişmiş bir güvenlik bilgisine sahip olanlar tarafından kullanılmalıdır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . Bu güvenlik eylemlerini kullanan kod güvenlik incelemesi altından geçmelidir.
 
  Reddet, bir güvenlik talebine yanıt olarak oluşan yığın ilerimizin varsayılan davranışını değiştirir. Çağrı yığınındaki çağıranların gerçek izinlerinden bağımsız olarak reddetme yöntemi süresince verilmemelidir olması gereken izinleri belirtmenize olanak tanır. Yığın ilerleyerek reddetme tarafından güvenliği sağlanmış bir yöntemi algılarsa ve istenen izin reddedilen izinlere dahil ediliyorsa, yığın ilerleme durumunda başarısız olur. PermitOnly Ayrıca yığın yürüme 'nin varsayılan davranışını değiştirir. Kod, çağıranların izinlerinden bağımsız olarak yalnızca izin verilen izinleri belirtmesini sağlar. Yığın, PermitOnly tarafından güvenliği sağlanan bir yöntemi algılarsa ve istenen izin PermitOnly tarafından belirtilen izinlere dahil edilmezse, yığın ilerleme durumunda başarısız olur.
 
- Bu eylemlere dayanan kod, sınırlı kullanışlılığı ve hafif davranışları nedeniyle güvenlik açıklarına karşı dikkatle değerlendirilmelidir. Aşağıdakileri göz önünde bulundurun:
+ Bu eylemlere dayanan kod, sınırlı kullanışlılığı ve hafif davranışları nedeniyle güvenlik açıklarına karşı dikkatle değerlendirilmelidir. Aşağıdaki topluluklara bir göz atın:
 
 - [Bağlantı talepleri](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) deny veya PermitOnly 'dan etkilenmez.
 
 - Reddetme veya PermitOnly, yığının ilerlemesini neden olan talebe göre aynı yığın çerçevesinde gerçekleşirse, güvenlik eylemlerinin hiçbir etkisi olmaz.
 
-- Yol tabanlı izinleri oluşturmak için kullanılan değerler, genellikle birden çok şekilde belirtilebilir. Bir yolun tek bir biçimine erişiminin reddedilmesi tüm formlara erişimi reddedemez. Örneğin, bir dosya paylaşımı \\ \Server\Share bir ağ sürücüsüne eşlenmişse, paylaşımdaki bir dosyaya erişimi reddetmek için, \\ \Server\Share\File, X:\File ve dosyaya erişen tüm diğer yolları reddetmeniz gerekir.
+- Yol tabanlı izinleri oluşturmak için kullanılan değerler, genellikle birden çok şekilde belirtilebilir. Bir yolun tek bir biçimine erişiminin reddedilmesi tüm formlara erişimi reddedemez. Örneğin, bir dosya paylaşımı \\ \Server\share bir ağ sürücüsüne eşlenmişse, paylaşımdaki bir dosyaya erişimi reddetmek için \\ \Server\share\file, x:\Dosya ve dosyaya erişen tüm diğer yolları reddetmeniz gerekir.
 
-- Bir <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>, reddetme veya Permıtonly 'a ulaşılmadan önce bir yığın yürümesini sonlandırabilir.
+- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>Reddet veya PermitOnly 'a ulaşılmadan önce bir yığını sonlandırabilir.
 
 - Bir reddetme işlemi herhangi bir etkiye sahipse, bir çağıranın reddetme tarafından engellenen bir izni olduğunda, çağıran doğrudan korumalı kaynağa erişimi Reddet seçeneğini atlayarak doğrudan erişebilir. Benzer şekilde, çağıranın reddetme izni yoksa, yığın yürüme olmadan başarısız olur.
 
@@ -73,11 +73,11 @@ ms.locfileid: "72665960"
  Bu örnek aşağıdaki çıktıyı üretir.
 
  **Talep: arayanın reddi, onaylanan izin Ile isteğe bağlı olarak hiçbir etkiye sahip değildir.** 
-**LinkDemand: arayanın reddetme işlemi, onaylanan Izinle LinkDemand üzerinde hiçbir etkiye sahip değil.** 
-**LinkDemand: arayanın reddi LinkDemand ile korunan kodla hiçbir etkiye sahip değil.** **LinkDemand 
-, bu reddetme ile hiçbir etkisi yoktur LinkDemand korumalı kod.**
+ **LinkDemand: arayanın reddetme işlemi, onaylanan Izinle LinkDemand üzerinde hiçbir etkiye sahip değildir.** 
+ **LinkDemand: arayanın reddi, LinkDemand ile korunan kodla hiçbir etkiye sahip değildir.** 
+ **LinkDemand: Bu reddetme, LinkDemand ile korunan kodla hiçbir etkiye sahip değildir.**
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Security.CodeAccessPermission.PermitOnly%2A?displayProperty=fullName><xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>
+ <xref:System.Security.CodeAccessPermission.PermitOnly%2A?displayProperty=fullName> <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>
  <xref:System.Security.CodeAccessPermission.Deny%2A?displayProperty=fullName>
  <xref:System.Security.IStackWalk.PermitOnly%2A?displayProperty=fullName>
  [PermitOnly yöntemini kullanarak](https://msdn.microsoft.com/8c7bdb7f-882f-45b7-908c-6cbaa1767649) [güvenlik denetimlerini geçersiz kılan](https://msdn.microsoft.com/4acdeff5-fc05-41bf-8505-7387cdbfca28) [güvenli kodlama yönergeleri](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)

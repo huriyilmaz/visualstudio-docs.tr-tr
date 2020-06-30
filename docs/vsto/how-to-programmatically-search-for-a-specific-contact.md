@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla belirli bir kişi arama'
+title: 'Nasıl yapılır: program aracılığıyla belirli bir kişi arama'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,15 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: feff583d28bf53f4bffc9b425d52902688b80a4b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8d8b2302586fc09fcfec6420d97374197eae7e67
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63000327"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547075"
 ---
-# <a name="how-to-programmatically-search-for-a-specific-contact"></a>Nasıl yapılır: Program aracılığıyla belirli bir kişi arama
-  Bu örnek, belirli bir kişi için Outlook Kişiler klasörü adı ve Soyadı arar. Örnek bir kişi adlı olduğunu varsayar **John Evans** Kişiler klasöründe bulunur.
+# <a name="how-to-programmatically-search-for-a-specific-contact"></a>Nasıl yapılır: program aracılığıyla belirli bir kişi arama
+  Bu örnek, belirli bir kişi için bir Outlook kişileri klasörünü adı ve soyadı olarak arar. Örnek, Kişiler klasöründe **John Evans** adlı bir kişinin bulunduğunu varsayar.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -31,4 +31,4 @@ ms.locfileid: "63000327"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kişi öğeleriyle çalışma](../vsto/working-with-contact-items.md)
-- [VSTO eklentileri programlama kullanmaya başlayın](../vsto/getting-started-programming-vsto-add-ins.md)
+- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)

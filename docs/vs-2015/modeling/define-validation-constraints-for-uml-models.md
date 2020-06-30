@@ -11,12 +11,12 @@ caps.latest.revision: 49
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 32f249b971e8a37bc5b596203cde6bc7b0bcf6f1
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: 258fc138f032d34e57df69386b6849fc3a0650a0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75849735"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547595"
 ---
 # <a name="define-validation-constraints-for-uml-models"></a>UML modelleri için doğrulama kısıtlamaları tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -35,7 +35,7 @@ Modelin belirttiğiniz bir koşulu karşılayıp karşılamadığını test eden
 ## <a name="applying-validation-constraints"></a>Doğrulama kısıtlamalarını uygulama
  Doğrulama kısıtlamaları üç durumda uygulanır: bir modeli kaydettiğinizde; bir modeli açtığınızda; **mimari** menüsünde **UML modelini doğrula** ' ya tıkladığınızda. Her durumda, genellikle bu durum için tanımlanan kısıtlamalar uygulanır, ancak genellikle her kısıtlamayı birden fazla durumda uygulamak üzere tanımlarsınız.
 
- Doğrulama hataları [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hataları penceresinde raporlanır ve hatalı model öğelerini seçmek için hataya çift tıklayabilirsiniz.
+ Doğrulama hataları [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hatalar penceresinde raporlanır ve hatalı model öğelerini seçmek için hataya çift tıklayabilirsiniz.
 
  Doğrulama uygulama hakkında daha fazla bilgi için bkz. [UML modelinizi doğrulama](../modeling/validate-your-uml-model.md).
 
@@ -55,7 +55,7 @@ Modelin belirttiğiniz bir koşulu karşılayıp karşılamadığını test eden
     Daha fazla bilgi için bkz. [doğrulama kısıtlamasını değerlendirme](#Implementing).
 
    > [!IMPORTANT]
-   > **. Cs** dosyalarınızın aşağıdaki `using` ifadesini içerdiğinden emin olun:
+   > **. Cs** dosyalarınızın aşağıdaki ifadeyi içerdiğinden emin olun `using` :
    >
    >  `using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;`
 
@@ -63,9 +63,9 @@ Modelin belirttiğiniz bir koşulu karşılayıp karşılamadığını test eden
 
 4. F5 'e basarak kısıtlamalarınızı test edin. Daha fazla bilgi için bkz. [doğrulama kısıtlaması yürütme](#Executing).
 
-5. Projeniz tarafından oluşturulan dosya **sepeti\\\*\\\*. vsix** dosyasını kopyalayarak başka bir bilgisayara menü komutunu yükler. Daha fazla bilgi için bkz. [Uzantı yükleme ve kaldırma](#Installing).
+5. Menü komutunu, projeniz tarafından oluşturulan **bin \\ \* \\ \* . vsix** dosyasını kopyalayarak başka bir bilgisayara yükler. Daha fazla bilgi için bkz. [Uzantı yükleme ve kaldırma](#Installing).
 
-   Diğer **. cs** dosyalarını eklediğinizde, genellikle aşağıdaki `using` deyimlerini yapmanız gerekir:
+   Diğer **. cs** dosyalarını eklediğinizde, genellikle aşağıdaki deyimleri yapmanız gerekir `using` :
 
 ```csharp
 using System.Collections.Generic;
@@ -85,13 +85,13 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     1. **Dosya** menüsünde, **Yeni**, **Proje**' yi seçin.
 
-    2. **Yüklü şablonlar**altında, **görsel C#**  veya **Visual Basic**' i genişletin ve ardından Orta sütundaki **sınıf kitaplığı**' nı seçin.
+    2. **Yüklü şablonlar**altında **Visual C#** veya **Visual Basic**' i genişletin ve ardından Orta sütundaki **sınıf kitaplığı**' nı seçin.
 
 2. Çözümünüz bir tane içermiyorsa, bir VSıX projesi oluşturun:
 
     1. **Çözüm Gezgini**, çözümün kısayol menüsünde, **Ekle**, **Yeni proje**' yi seçin.
 
-    2. **Yüklü şablonlar**altında,  **C# görsel** veya **Visual Basic**' ı genişletin, ardından **genişletilebilirlik**' i seçin. Orta sütunda **VSIX projesi**' ne tıklayın.
+    2. **Yüklü şablonlar**altında **Visual C#** veya **Visual Basic**' i genişletin, ardından **genişletilebilirlik**' i seçin. Orta sütunda **VSIX projesi**' ne tıklayın.
 
 3. VSıX projesini çözümün başlangıç projesi olarak ayarlayın.
 
@@ -105,17 +105,17 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     3. **Varlıklar** sekmesinde **Yeni**' yi seçin ve iletişim kutusunda, şunu ayarlayın:
 
-          = **MEF bileşeni** **yazın**
+         **Tür**  =  **MEF bileşeni**
 
-         **Kaynak** = **geçerli çözümdeki bir proje**
+         **Kaynak**  =  **Geçerli çözümdeki bir proje**
 
-         *Sınıf kitaplığı projenizden* **Proje** = 
+         **Proje**  =  *Sınıf kitaplığı projeniz*
 
 #### <a name="to-define-the-validation-class"></a>Doğrulama sınıfını tanımlamak için
 
 1. Doğrulama projesi şablonundan kendi VSıX 'i ile bir doğrulama sınıfı oluşturduysanız, bu yordama ihtiyacınız yoktur.
 
-2. Doğrulama sınıfı projesinde, aşağıdaki [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] derlemelerine başvuruları ekleyin:
+2. Doğrulama sınıfı projesinde, aşağıdaki derlemelere başvurular ekleyin [!INCLUDE[TLA2#tla_net](../includes/tla2sharptla-net-md.md)] :
 
      `Microsoft.VisualStudio.Modeling.Sdk.[version]`
 
@@ -178,24 +178,24 @@ using Microsoft.VisualStudio.Uml.Classes;
     }
     ```
 
-## <a name="Executing"></a>Doğrulama kısıtlaması yürütülüyor
+## <a name="executing-a-validation-constraint"></a><a name="Executing"></a>Doğrulama kısıtlaması yürütülüyor
  Test amaçları için doğrulama yöntemlerinizi hata ayıklama modunda yürütün.
 
 #### <a name="to-test-the-validation-constraint"></a>Doğrulama kısıtlamasını test etmek için
 
 1. **F5**tuşuna basın veya **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' ı seçin.
 
-     Deneysel bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği başlar.
+     Deneysel bir örneği [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlar.
 
-     **Sorun giderme**: yeni bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlamazsa:
+     **Sorun giderme**: yeni bir başlamazsa [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
     - Birden çok projeniz varsa, VSıX projesinin çözümün başlangıç projesi olarak ayarlandığından emin olun.
 
-    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]tam yol adı olduğundan emin olun:
+    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle tam yol adı olduğundan emin olun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
-2. Deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], bir modelleme projesi açın veya oluşturun ve bir modelleme diyagramı açın veya oluşturun.
+2. Deneysel içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , bir modelleme projesi açın veya oluşturun ve bir modelleme diyagramı açın veya oluşturun.
 
 3. Önceki bölümde verilen örnek kısıtlama için bir test ayarlamak için:
 
@@ -215,12 +215,12 @@ using Microsoft.VisualStudio.Uml.Classes;
 
     - Doğru `Export` ve `ValidationMethod` öznitelikleri doğrulama yöntemlerine iliştirilir.
 
-    - `ValidationCategories.Menu`, `ValidationMethod` özniteliği için bağımsız değişkenine dahildir ve mantıksal OR (&#124;) kullanılarak diğer değerlerle birlikte oluşturulur.
+    - `ValidationCategories.Menu`, özniteliği için bağımsız değişkenine dahildir `ValidationMethod` ve MANTıKSAL OR (&#124;) kullanılarak diğer değerlerle birlikte oluşturulur.
 
     - Tüm `Import` ve `Export` özniteliklerinin parametreleri geçerlidir.
 
-## <a name="Implementing"></a>Kısıtlama değerlendiriliyor
- Doğrulama yöntemi, uygulamak istediğiniz doğrulama kısıtlamasının doğru mi yoksa yanlış mi olduğunu belirlemelidir. True ise, hiçbir şey yapmaz. Yanlış ise, `ValidationContext` parametresi tarafından sunulan yöntemleri kullanarak bir hata bildirmelidir.
+## <a name="evaluating-the-constraint"></a><a name="Implementing"></a>Kısıtlama değerlendiriliyor
+ Doğrulama yöntemi, uygulamak istediğiniz doğrulama kısıtlamasının doğru mi yoksa yanlış mi olduğunu belirlemelidir. True ise, hiçbir şey yapmaz. Yanlış ise, parametre tarafından sunulan yöntemleri kullanarak bir hata bildirmeli `ValidationContext` .
 
 > [!NOTE]
 > Doğrulama yöntemleri modeli değiştirmemelidir. Kısıtlamaların ne zaman veya hangi sırada yürütüleceğini garanti yoktur. Doğrulama çalıştırmasının içindeki bir doğrulama yönteminin ardışık yürütmeleri arasında bilgi geçirmek istiyorsanız, [birden çok doğrulamayı koordine](#ContextCache)etme altında açıklanan bağlam önbelleğini kullanabilirsiniz.
@@ -256,35 +256,35 @@ public void ValidateSomething
 
  Her doğrulama yönteminin öznitelikleri ve parametreleri aşağıdaki gibidir:
 
-|||
+|İmza|Description|
 |-|-|
 |`[Export(typeof(System.Action <ValidationContext, object>))]`|Yöntemi, Managed Extensibility Framework (MEF) kullanarak doğrulama kısıtlaması olarak tanımlar.|
-|`[ValidationMethod (ValidationCategories.Menu)]`|Doğrulamanın gerçekleştirileceği zaman belirtir. Birden fazla seçeneği birleştirmek&#124;istiyorsanız BIT düzeyinde OR () kullanın.<br /><br /> `Menu` = doğrulama menüsü tarafından çağırılır.<br /><br /> `Save` = modeli kaydederken çağırılır.<br /><br /> model açılırken `Open` = çağrılır. `Load` = modeli kaydederken çağrılır, ancak bir nedeni için kullanıcıyı, modeli yeniden açmak mümkün olmayabileceğini uyarır. Model ayrıştırıldıktan önce yükleme sırasında da çağırılır.|
-|`public void ValidateSomething`<br /><br /> `(ValidationContext context,`<br /><br /> `IElement element)`|İkinci parametreyi, kısıtlamasının uygulanmasını istediğiniz öğe türüne göre `IElement` değiştirin. Kısıtlama yöntemi belirtilen türdeki tüm öğelerde çağrılacaktır.<br /><br /> Yöntemin adı önemli değildir.|
+|`[ValidationMethod (ValidationCategories.Menu)]`|Doğrulamanın gerçekleştirileceği zaman belirtir. Birden fazla seçeneği birleştirmek istiyorsanız bit düzeyinde OR (&#124;) kullanın.<br /><br /> `Menu`= Doğrula menüsü tarafından çağırılır.<br /><br /> `Save`= modeli kaydederken çağrılır.<br /><br /> `Open`= modeli açma sırasında çağrılır. `Load`= modeli kaydederken çağrılır, ancak bir nedeni için kullanıcıyı, modeli yeniden açmak mümkün olmayabileceğini uyarır. Model ayrıştırıldıktan önce yükleme sırasında da çağırılır.|
+|`public void ValidateSomething`<br /><br /> `(ValidationContext context,`<br /><br /> `IElement element)`|İkinci parametreyi, `IElement` kısıtlamasının uygulanmasını istediğiniz öğe türüne göre değiştirin. Kısıtlama yöntemi belirtilen türdeki tüm öğelerde çağrılacaktır.<br /><br /> Yöntemin adı önemli değildir.|
 
  İkinci parametrede farklı türlerle istediğiniz kadar çok doğrulama yöntemi tanımlayabilirsiniz. Doğrulama çağrıldığında her bir doğrulama yöntemi parametre türüne uyan her model öğesinde çağrılır.
 
 ### <a name="reporting-validation-errors"></a>Doğrulama hatalarını bildirme
- Bir hata raporu oluşturmak için, `ValidationContext`tarafından sunulan yöntemleri kullanın:
+ Bir hata raporu oluşturmak için, tarafından sunulan yöntemleri kullanın `ValidationContext` :
 
  `context.LogError("error string", errorCode, elementsWithError);`
 
-- `"error string"` [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] görünür Hata Listesi
+- `"error string"`[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]hata listesi görünür
 
-- `errorCode`, hatanın benzersiz tanımlayıcısı olması gereken bir dizedir
+- `errorCode`hatanın benzersiz tanımlayıcısı olması gereken bir dizedir
 
-- `elementsWithError` modeldeki öğeleri tanımlar. Kullanıcı hata raporuna çift tıkladığında, bu öğeyi temsil eden şekil seçilir.
+- `elementsWithError`modeldeki öğeleri tanımlar. Kullanıcı hata raporuna çift tıkladığında, bu öğeyi temsil eden şekil seçilir.
 
-  `LogError(),`, `LogWarning()` ve `LogMessage()` iletileri hata listesinin farklı bölümlerine yerleştirir.
+  `LogError(),``LogWarning()`ve `LogMessage()` iletileri hata listesinin farklı bölümlerine yerleştirebilirsiniz.
 
 ## <a name="how-validation-methods-are-applied"></a>Doğrulama yöntemlerinin uygulanma şekli
  , Bir sınıfın öznitelikleri ve bir işlemin parametreleri gibi ilişkiler ve daha büyük öğelerin parçaları dahil olmak üzere modeldeki her öğeye uygulanır.
 
- Her doğrulama yöntemi, ikinci parametresindeki türe uyan her öğeye uygulanır. Diğer bir deyişle, örneğin, ikinci bir parametresi `IUseCase` bir doğrulama yöntemi ve onun üst türü `IElement`ile başka bir şekilde tanımlarsanız, bu yöntemlerin her ikisi de modeldeki her kullanım örneğine uygulanır.
+ Her doğrulama yöntemi, ikinci parametresindeki türe uyan her öğeye uygulanır. Diğer bir deyişle, örneğin, ikinci parametresi `IUseCase` ve onun üst türü ile bir doğrulama yöntemi tanımlarsanız `IElement` , bu yöntemlerin her ikisi de modeldeki her kullanım örneğine uygulanır.
 
  Türlerin hiyerarşisi [UML model öğe türlerinde](../modeling/uml-model-element-types.md)özetlenir.
 
- Ayrıca, öğelere aşağıdaki ilişkileri uygulayarak erişebilirsiniz. Örneğin, `IClass`bir doğrulama yöntemi tanımlamanız durumunda, kendi özelliklerine sahip olabilirsiniz:
+ Ayrıca, öğelere aşağıdaki ilişkileri uygulayarak erişebilirsiniz. Örneğin, üzerinde bir doğrulama yöntemi tanımlamanız durumunda `IClass` , kendi özelliklerine sahip olabilirsiniz:
 
 ```
 public void ValidateTypeName(ValidationContext context, IClass c)
@@ -304,7 +304,7 @@ public void ValidateTypeName(ValidationContext context, IClass c)
 ```
 
 ### <a name="creating-a-validation-method-on-the-model"></a>Modelde doğrulama yöntemi oluşturma
- Her doğrulama çalışması sırasında bir doğrulama yönteminin tam olarak bir kez çağrıldığından emin olmak istiyorsanız, `IModel`doğrulayabilirsiniz:
+ Her doğrulama çalışması sırasında bir doğrulama yönteminin tam olarak bir kez çağrıldığından emin olmak istiyorsanız şunları doğrulayabilirsiniz `IModel` :
 
 ```
 using Microsoft.VisualStudio.Uml.AuxiliaryConstructs; ...
@@ -318,7 +318,7 @@ public void ValidateModel(ValidationContext context, IModel model)
 ### <a name="validating-shapes-and-diagrams"></a>Şekilleri ve diyagramları doğrulama
  Doğrulama yöntemlerinin birincil amacı modeli doğrulayacağından, diyagramlar ve şekiller gibi görüntüleme öğelerinde doğrulama yöntemleri çağrılmaz. Ancak diyagram bağlamını kullanarak geçerli diyagrama erişebilirsiniz.
 
- Doğrulama sınıfınıza içeri aktarılan özellik olarak `DiagramContext` bildirin:
+ Doğrulama sınıfınıza `DiagramContext` içeri aktarılan özellik olarak bildirin:
 
 ```
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
@@ -327,7 +327,7 @@ using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
 public IDiagramContext DiagramContext { get; set; }
 ```
 
- Bir doğrulama yönteminde, varsa geçerli odak diyagramına erişmek için `DiagramContext` kullanabilirsiniz:
+ Bir doğrulama yönteminde, varsa `DiagramContext` geçerli odak diyagramına erişmek için kullanabilirsiniz:
 
 ```
 [Export(typeof(System.Action<ValidationContext, object>))]
@@ -342,29 +342,29 @@ public void ValidateModel(ValidationContext context, IModel model)
     { ...
 ```
 
- Bir hatayı günlüğe kaydetmek için şeklin gösterdiği model öğesini edinmeniz gerekir, çünkü `LogError`bir şekil geçiremezsiniz:
+ Bir hatayı günlüğe kaydetmek için, şekle bir şekil geçiremediği için şeklin gösterdiği model öğesini edinmeniz gerekir `LogError` :
 
 ```
 IUseCase useCase = useCaseShape.Element;
 context.LogError(... , usecase);
 ```
 
-### <a name="ContextCache"></a>Birden çok doğrulamayı koordine etme
+### <a name="coordinating-multiple-validations"></a><a name="ContextCache"></a>Birden çok doğrulamayı koordine etme
  Doğrulama çağrıldığında, örneğin bir diyagram menüsünden Kullanıcı tarafından her bir doğrulama yöntemi her bir model öğesine uygulanır. Bu, doğrulama çerçevesinin tek bir çağrısında aynı yöntemin farklı öğelere birçok kez uygulanabileceğini gösterir.
 
  Bu, öğeler arasındaki ilişkilerle ilgilenen doğrulamalar için bir sorun gösterir. Örneğin, ' den başlayan bir doğrulama yazabilir, bir kullanım örneği ve bir döngü olmadığını doğrulamak için **dahil etme** ilişkilerinden geçiş yapabilirsiniz. Ancak yöntem, çok sayıda **ekleme** bağlantısı olan bir modelde her kullanım örneğine uygulandığında, modelin aynı alanlarının tekrar tekrar işlenmesi olasıdır.
 
  Bu durumdan kaçınmak için, doğrulama çalıştırması sırasında bilgilerin korunduğu bir bağlam önbelleği vardır. Doğrulama yöntemlerinin farklı yürütmeleri arasında bilgi geçirmek için kullanabilirsiniz. Örneğin, bu doğrulama çalıştırmasında zaten ele alınmış öğelerin bir listesini saklayabilirsiniz. Önbellek her doğrulama çalıştırmasının başlangıcında oluşturulur ve farklı doğrulama çalıştırmaları arasında bilgi geçirmek için kullanılamaz.
 
-|||
+|Syntax|Description|
 |-|-|
 |`context.SetCacheValue<T> (name, value)`|Bir değer depola|
 |`context.TryGetCacheValue<T> (name, out value)`|Bir değer alın. Başarılı olursa true döndürür.|
 |`context.GetValue<T>(name)`|Bir değer alın.|
 |`Context.GetValue<T>()`|Belirtilen türde bir değer alır.|
 
-## <a name="Installing"></a>Uzantı yükleme ve kaldırma
- Hem kendi bilgisayarınıza hem de diğer bilgisayarlara bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantısı yükleyebilirsiniz.
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Uzantı yükleme ve kaldırma
+ Bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantıyı, hem kendi bilgisayarınıza hem de diğer bilgisayarlara yükleyebilirsiniz.
 
 #### <a name="to-install-an-extension"></a>Uzantı yüklemek için
 
@@ -372,17 +372,17 @@ context.LogError(... , usecase);
 
     1. **Çözüm Gezgini**, VSIX projesinin kısayol menüsünde **klasörü Windows Gezgini 'nde aç**' ı seçin.
 
-    2. Dosya **bin\\\*bulun \\** _yourproject_ **. vsix**
+    2. Dosya ** \\ \* bin \\ **' i_Proje_**. vsix** ' i bulun
 
 2. **. Vsix** dosyasını, uzantıyı yüklemek istediğiniz hedef bilgisayara kopyalayın. Bu, kendi bilgisayarınız veya başka bir tane olabilir.
 
-    - Hedef bilgisayar, **kaynak. Extension. valtmanifest**içinde belirttiğiniz [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] sürümlerinden birine sahip olmalıdır.
+    - Hedef bilgisayar, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **kaynak. Extension. valtmanifest**içinde belirttiğiniz sürümlerden birine sahip olmalıdır.
 
 3. Hedef bilgisayarda **. vsix** dosyasını açın.
 
      **Visual Studio Uzantı Yükleyicisi** açılır ve uzantıyı yüklüyor.
 
-4. [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]başlatın veya yeniden başlatın.
+4. Başlatın veya yeniden başlatın [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
 #### <a name="to-uninstall-an-extension"></a>Bir uzantıyı kaldırmak için
 
@@ -392,11 +392,11 @@ context.LogError(... , usecase);
 
 3. Uzantıyı seçin ve ardından **Kaldır**' ı seçin.
 
-   Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı şu konumda silerek uzantıyı kaldırabilirsiniz: *% LocalAppData%* genellikle *DriveName*: \Users\\*UserName*\AppData\Local:
+   Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı *% LocalAppData%* tipik olarak *DriveName*: \Users \\ *Kullanıcı adı*\AppData\Local olan şu konumdan silerek uzantıyı kaldırabilirsiniz:
 
-   *% LocalAppData%* **\microsoft\visualstudio\\[sürüm] \Extensions**
+   *% LocalAppData%* **\microsoft\visualstudio \\ [sürüm] \Extensions**
 
-## <a name="Example"></a>Örneğinde
+## <a name="example"></a><a name="Example"></a>Örneğinde
  Bu örnek, öğeler arasındaki bağımlılık ilişkisindeki döngüleri bulur.
 
  Her ikisini de Kaydet ve Doğrula menü komutunda doğrular.

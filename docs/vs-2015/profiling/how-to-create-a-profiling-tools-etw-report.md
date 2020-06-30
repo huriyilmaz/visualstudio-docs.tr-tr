@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Profil oluşturma araçları ETW raporu oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: Profil Oluşturma Araçları ETW raporu oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -9,35 +9,35 @@ caps.latest.revision: 13
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 6b172ffbf481ea077d099288b3b79254b89b13a5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 7dc74f0486ac7196cf406994ee603bc6c0cf4c25
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432738"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548011"
 ---
-# <a name="how-to-create-a-profiling-tools-etw-report"></a>Nasıl yapılır: Profil oluşturma araçları ETW raporu oluşturma
+# <a name="how-to-create-a-profiling-tools-etw-report"></a>Nasıl yapılır: Profil Oluşturma Araçları ETW Raporu Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir performans oturumu içinde kaydedilen ETW olayları için olay izleme Windows (ETW) raporu listeler [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] profil oluşturma araçları. ETW verilerini bir ikili (.etl) dosyasında toplanır. Bu rapor hakkında daha fazla bilgi için bkz. [olay izleme için Windows (ETW) raporu](../profiling/event-tracing-for-windows-etw-report.md).  
+Windows için olay Izleme (ETW) raporu, Profil Oluşturma Araçları bir performans oturumunda kaydedilen ETW olaylarını listeler [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . ETW verileri bir ikili (. etl) dosyasında toplanır. Bu rapor hakkında daha fazla bilgi için bkz. [Windows Için olay izleme (ETW) raporu](../profiling/event-tracing-for-windows-etw-report.md).  
   
 > [!NOTE]
-> Arabirimdeki ETW raporları görüntüleyemez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+> İçin arabirimindeki ETW raporlarını görüntüleyemezsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
-- Arabirimi kullanarak ETW veri toplama hakkında bilgi için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], bkz: [nasıl yapılır: Olay izleme için Windows (ETW) verilerini toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md).  
+- Arabirimini kullanarak ETW verilerinin nasıl toplanacağı hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bkz. [nasıl yapılır: Windows Için olay Izleme (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md).  
   
-- Bir komut istemi'nden ETW veri toplama hakkında daha fazla bilgi için bkz: [VSPerfCmd](../profiling/vsperfcmd.md) ve [olayları](../profiling/events-vsperfcmd.md).  
+- Bir komut isteminden ETW verilerinin nasıl toplanacağı hakkında daha fazla bilgi için bkz. [VSPerfCmd](../profiling/vsperfcmd.md) ve [Events](../profiling/events-vsperfcmd.md).  
   
-  Kullanarak ETW raporu oluşturma **VSReport / summary: etw** komutu. ETW verilerini içeren .etl, profil oluşturma veri (.vsp veya .vsps) dosyası olarak aynı dizinde olmalıdır. Varsayılan olarak, bir virgülle ayrılmış değer (.csv) dosyası olarak rapor oluşturulur. Daha fazla bilgi için [VSPerfReport](../profiling/vsperfreport.md).  
+  **VSReport/Summary: ETW** komutunu kullanarak ETW raporunu oluşturabilirsiniz. ETW verilerini içeren. etl, profil oluşturma verileri (. vsp veya. vsps) dosyası ile aynı dizinde olmalıdır. Varsayılan olarak, rapor bir virgülle ayrılmış değer (. csv) dosyası olarak oluşturulur. Daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).  
   
 ### <a name="to-generate-an-etw-report"></a>ETW raporu oluşturmak için  
   
-- İçinde bir **komut istemi** penceresinde aşağıdaki komutu yazın:  
+- **Komut istemi** penceresinde, aşağıdaki komut satırını yazın:  
   
-     *ToolsPath* **VSPerfReport** *VSPFile* **/Summary:ETW [/ XML]**  
+     *Araçları yolu* **VSPerfReport** *vspfile*  **/summary: ETW [/XML]**  
   
-    |||  
+    |Komut öğesi|Description|  
     |-|-|  
-    |*ToolsPath*|Profil oluşturma araçları yardımcı program yolu. Daha fazla bilgi için [komut satırı araçları yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).|  
-    |*VSPFile*|Profil oluşturma veri (.vsp veya .vsps) dosyası. Tam ve kısmi yollar kabul edilir.|  
-    |Xml|XML'de biçimlendirilmiş bir rapor oluşturur.|
+    |*Araçları yolu*|Profil Oluşturma Araçları yardımcı programının yolu. Daha fazla bilgi için bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).|  
+    |*VSPFile*|Profil oluşturma verileri (. vsp veya. vsps) dosyası. Tam ve kısmi yollar kabul edilir.|  
+    |Xml|XML biçiminde biçimlendirilen bir rapor oluşturur.|

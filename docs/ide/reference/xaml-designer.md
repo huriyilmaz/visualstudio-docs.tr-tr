@@ -1,5 +1,5 @@
 ---
-title: XAML Tasarımcı seçenekleri sayfası
+title: XAML Tasarımcısı seçenekleri sayfası
 ms.date: 03/02/2017
 ms.topic: reference
 f1_keywords:
@@ -10,101 +10,101 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 9a925e7f3c31b8347148c15b050692fcee26fcb1
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 45c7a5ba87c006332b601b93143cbf8acfda16b5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585619"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547309"
 ---
-# <a name="xaml-designer-options-page"></a>XAML Tasarımcı seçenekleri sayfası
+# <a name="xaml-designer-options-page"></a>XAML Tasarımcısı seçenekleri sayfası
 
-Öğelerin ve özniteliklerin XAML belgelerinizde nasıl biçimlendiğini belirtmek için **XAML Designer** seçenekleri sayfasını kullanın. Bu sayfayı açmak için **Araçlar** menüsünü seçin ve ardından **Seçenekler'i**seçin. **XAML Designer** özellik sayfasına erişmek için **XAML Designer** düğümadını seçin. Belgeyi açtığınızda XAML Tasarımcısı ayarları uygulanır. Bu nedenle, ayarlarda değişiklik yaparsanız, değişiklikleri görmek için Visual Studio'yu kapatıp yeniden açmanız gerekir.
+Öğelerin ve özniteliklerin XAML belgelerinizde nasıl biçimlendirileceğini belirtmek için **XAML Tasarımcısı** seçenekleri sayfasını kullanın. Bu sayfayı açmak için **Araçlar** menüsünü ve ardından **Seçenekler**' i seçin. **XAML Tasarımcısı** Özellik sayfasına erişmek için **XAML Tasarımcısı** düğümünü seçin. XAML Tasarımcısı ayarları, belgeyi açtığınızda uygulanır. Bu nedenle, ayarlarda değişiklik yaparsanız değişiklikleri görmek için Visual Studio 'Yu kapatıp yeniden açmanız gerekir.
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünde **Ayarlar İçe Ve Dışa Aktar'ı** seçin. Daha fazla bilgi [için, ayarları Sıfırla'ya](../environment-settings.md#reset-settings)bakın.
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
 
-## <a name="enable-xaml-designer"></a>XAML Tasarımcısını Etkinleştir
+## <a name="enable-xaml-designer"></a>XAML Tasarımcısı etkinleştir
 
-Seçildiğinde, bu ayar XAML Tasarımcısı'nı etkinleştirirken. XAML Tasarımcısı, XAML belgelerini görüntülemeniz için görsel bir çalışma alanı sağlar. Kaynaklar ve veri bağlama için IntelliSense gibi Visual Studio'daki belirli işlevler, XAML Tasarımcısının etkinleştirilmesini gerektirir.
+Seçildiğinde, bu ayar XAML Tasarımcısı etkinleştirilir. XAML Tasarımcısı XAML belgelerini düzenlemeniz için görsel bir çalışma alanı sağlar. Visual Studio 'da kaynak ve veri bağlama için IntelliSense gibi bazı işlevler, XAML Tasarımcısı etkinleştirilmesini gerektirir.
 
-Aşağıdaki ayarlar yalnızca XAML Designer etkinleştirildiğinde geçerlidir. Bu seçeneği değiştirirseniz, ayarın etkili olması için Visual Studio'yu yeniden başlatmanız gerekir.
+Aşağıdaki ayarlar yalnızca XAML Tasarımcısı etkin olduğunda geçerlidir. Bu seçeneği değiştirirseniz, ayarın etkili olması için Visual Studio 'Yu yeniden başlatmanız gerekir.
 
 ## <a name="default-document-view"></a>Varsayılan belge görünümü
 
-XAML belgeleri yüklendiğinde Tasarım görünümünün görünüp görünmediğini denetlemek için bu ayarı kullanın.
+XAML belgeleri yüklendiğinde Tasarım görünümü görünüp başlatılmayacağını denetlemek için bu ayarı kullanın.
 
-|||
+|Name|Description|
 |-|-|
-|**Kaynak Görünümü**|XAML görünümünde yalnızca XAML kaynağının görünüp görünmediğini belirtir. Bu, büyük belgeleri yüklerken kullanışlıdır.|
-|**Tasarım Görünümü**|XAML görünümünde yalnızca görsel bir XAML Tasarımcısının görünüp görünmediğini belirtir.|
-|**Görünümü Böl**|Hem görsel XAML Tasarımcısı'nın hem de XAML kaynağının XAML görünümünde **(Split Oryantasyon** ayarına dayalı konum) yan yana görünüp görünmediğini belirtir.|
+|**Kaynak görünümü**|XAML görünümünde yalnızca XAML kaynağının görünüp başlatılmayacağını belirtir. Büyük belgeler yüklenirken bu faydalıdır.|
+|**Tasarım Görünümü**|XAML görünümünde yalnızca bir görsel XAML Tasarımcısı görünüp başlatılmayacağını belirtir.|
+|**Bölünmüş görünüm**|Hem görsel XAML Tasarımcısı hem de XAML kaynağının XAML görünümünde bir diğerinin yanında görünüp görünmediğini belirtir ( **bölünmüş yön** ayarına göre konum).|
 
-## <a name="split-orientation"></a>Bölünmüş Oryantasyon
+## <a name="split-orientation"></a>Yönü Böl
 
-XAML belgesini düzenlerken XAML Tasarımcısının ne zaman ve nasıl görüneceklerini denetlemek için bu ayarı kullanın. Bu ayarlar yalnızca **Varsayılan belge görünümü** Split **Görünümü**olarak ayarlandığında geçerlidir.
+XAML belgesi düzenlenirken XAML Tasarımcısı ne zaman ve nasıl görüneceğini denetlemek için bu ayarı kullanın. Bu ayarlar yalnızca **varsayılan belge görünümü** **bölünmüş görünüme**ayarlandığında geçerlidir.
 
-|||
+|Name|Description|
 |-|-|
-|**Dikey**|XAML kaynağı XAML görünümünün sol tarafında, XAML Tasarımcısı ise diğer tarafta görünür.|
-|**Yatay**|XAML Tasarımcısı XAML görünümünün üst kısmında, XAML kaynağı ise altında görünür.|
-|**Varsayılan**|XAML belgesi, belgenin projesi tarafından hedeflenen platform için önerilen bölünmüş yönlendirmeyi kullanır. Çoğu platform için bu **Yatay**eşdeğerdir.|
+|**Dikey**|Xaml kaynağı XAML görünümünün sol tarafında görünür ve XAML Tasarımcısı diğer tarafta görüntülenir.|
+|**Yatay**|XAML Tasarımcısı XAML görünümünün üst kısmında görünür ve XAML kaynağı bunun altında görünür.|
+|**Varsayılan**|XAML belgesi, belge projesinin hedeflediği platform için önerilen bölünmüş yönlendirmeyi kullanır. Çoğu platformda bu **yatay**olarak eşdeğerdir.|
 
-## <a name="zoom-by-using"></a>Kullanarak yakınlaştırma
+## <a name="zoom-by-using"></a>Kullanarak Yakınlaştır
 
-Bir XAML belgesini düzenlerken yakınlaştırmanın nasıl çalıştığını belirlemek için bu ayarı kullanın.
+Bir XAML belgesi düzenlenirken yakınlaştırmanın nasıl çalıştığını anlamak için bu ayarı kullanın.
 
-|||
+|Name|Description|
 |-|-|
-|**Fare tekerleği**|Fare tekerleği kaydırarak XAML Tasarımcısını yakınlaştırın.|
-|**Ctrl + fare tekerleği**|Fare tekerleğinde kaydırma yaparken **Ctrl** tuşuna basarak XAML Tasarımcısını yakınlaştırın.|
-|**Alt + fare tekerleği**|Fare tekerleği kaydırırken **Alt** tuşuna basarak XAML Tasarımcısını yakınlaştırın.|
+|**Fare tekerleği**|Fare tekerleğini kaydırarak XAML Tasarımcısı yakınlaştırın.|
+|**Ctrl + fare tekerleği**|Fare tekerleğini kaydırırken **CTRL** tuşuna basarak XAML Tasarımcısı yakınlaştırın.|
+|**Alt + fare tekerleği**|Fare tekerleğini kaydırırken **alt** tuşuna basarak XAML Tasarımcısı yakınlaştırın.|
 
-Bu ayarlar, Bir XAML belgesini düzenlerken Tasarımcı davranışını belirler.
+Bu ayarlar bir XAML belgesi düzenlenirken tasarımcı davranışını belirlenir.
 
-|||
+|Name|Description|
 |-|-|
-|**Oluşturma da etkileşimli öğeleri otomatik olarak adlandırın**|Tasarımcıya bir tane eklediğinizde, yeni bir etkileşimli öğe için varsayılan bir ad sağlanıp sağlanmadığını belirtir.|
-|**Öğe oluşturmada otomatik olarak düzen özelliklerini ekleme**|Tasarımcıya bir tane eklediğinizde düzen özelliklerinin yeni bir öğe için sağlanıp sağlanmadığını belirtir. Düzen özellikleri, kenar boşluğu ve Dikey Hizalama gibi bir denetimin düzenini etkileyen özelliklerdir. Aşağıdaki XAML, bu seçenek seçili ve seçilmeden bir Düğmenin nasıl oluşturulduğunu gösterir:<br />`<Button Content="Button" HorizontalAlignment="Left" Margin="245,56,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>`<br />`<Button Content="Button" Grid.Row="1"/>`|
-|**Dörtgen tabanlı düzeni kullanma**|Şu anda seçili denetimin üst kapsayıcının en yakın kenarlarına hizalanıp hizalamadığını belirtir. Bu onay kutusu temizlenirse, denetim hizalamaları taşıma sırasında değişmez veya işlem oluşturur.|
-|**Araç kutusu öğelerini otomatik olarak doldurma**|Geçerli çözümdeki kullanıcı denetimlerinin ve özel denetimlerin Araç Kutusu'nda otomatik olarak gösterip gösterilmediğini belirtir.|
+|**Etkileşimli öğeleri oluşturma sırasında otomatik olarak Adlandır**|Tasarımcıya bir tane eklediğinizde yeni bir etkileşimli öğe için varsayılan bir ad verilip verilmeyeceğini belirtir.|
+|**Öğe oluşturma üzerine düzen özelliklerini otomatik olarak ekle**|Tasarımcıya bir tane eklediğinizde yeni bir öğe için Düzen özelliklerinin verilip verilmeyeceğini belirtir. Düzen özellikleri, bir denetimin yerleşimini etkileyen, örneğin Margin ve VerticalAlignment olanlardır. Aşağıdaki XAML, bu seçenek seçili olmadan ve ile bir düğmenin nasıl oluşturulduğunu gösterir:<br />`<Button Content="Button" HorizontalAlignment="Left" Margin="245,56,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75"/>`<br />`<Button Content="Button" Grid.Row="1"/>`|
+|**Çeyrek tabanlı düzeni kullan**|Seçili olan denetimin üst kapsayıcının en yakın kenarlarına hizalanacağını belirtir. Bu onay kutusu silinirse, bir taşıma veya oluşturma işlemi sırasında denetim hizalamaları değişmez.|
+|**Araç kutusu öğelerini otomatik olarak doldur**|Geçerli çözümdeki Kullanıcı denetimlerinin ve özel denetimlerin araç kutusunda otomatik olarak gösterilip gösterilmeyeceğini belirtir.|
 
-## <a name="settings-blend-only"></a>Ayarlar (Yalnızca karışım)
+## <a name="settings-blend-only"></a>Ayarlar (yalnızca Blend)
 
-Karışım'ı kullanarak XAML dosyalarını düzenlerken ayarları belirlemek için bu seçenekleri kullanın.
+Blend kullanarak XAML dosyalarını düzenlenirken ayarları öğrenmek için bu seçenekleri kullanın.
 
-|||
+|Name|Description|
 |-|-|
-|**Kullanarak yakınlaştırma**|Fare tekerleğikaydırarak veya fare tekerleğinde kaydırma yaparken **Ctrl** veya **Alt** tuşuna basarak XAML Tasarımcısını yakınlaştırın.|
-|**Tip birimleri**|Tasarımcıüzerindeki ölçümlerin puanlara mı yoksa piksellere mi dayandığını belirtir. Evrensel Windows Uygulamaları noktaları desteklemediği için, **Puan** seçilirse birimler otomatik olarak piksele dönüştürülür.|
+|**Kullanarak Yakınlaştır**|Fare tekerleğini kaydırarak veya fare tekerleğini kaydırırken **CTRL** ya da **Alt** tuşuna basarak XAML Tasarımcısı yakınlaştırın.|
+|**Tür birimleri**|Tasarımcıda ölçümlerin noktalara veya piksellere dayalı olup olmadığını belirtir. Evrensel Windows uygulamaları noktaları desteklemediğinden, **işaret** seçilirse birimler otomatik olarak piksellere dönüştürülür.|
 
-## <a name="artboard-blend-only"></a>Artboard (Sadece Karışım)
+## <a name="artboard-blend-only"></a>Çalışma yüzeyi (yalnızca Blend)
 
-Karışım'da XAML belgelerini düzenlerken XAML Tasarımcısı davranışını belirlemek için bu ayarları kullanın.
+Blend 'de XAML belgelerini düzenlenirken XAML Tasarımcısı davranışını öğrenmek için bu ayarları kullanın.
 
-### <a name="snapping"></a>Yakalamaya
+### <a name="snapping"></a>Yaslama
 
-|||
+|Name|Description|
 |-|-|
-|**Tutturma ızgarası göster**|Bu seçenek seçildiğinde, denetimleri hizalamanıza yardımcı olmak için tasarımcıda ızgara çizgileri görünür. Gridlines'a Tutturma seçeneği seçildiğinde, tasarımcıya eklenen denetimler bu ızgara **çizgilerine** tutturun.|
-|**Gridlines'a tutturma**|Denetimler eklendiğinde veya tasarımcının etrafında taşındığında, ızgara çizgilerine yapıştılar.|
-|**Izgara çizgisi aralığı**|Piksel veya noktalardaki Kılavuz çizgilerarasındaki aralığı belirtir **(Tür birimleri** ayarına göre belirlenir).|
-|**Snapline'a yapışma**|Denetimlerin snapline yapışıp yapışmadığını belirtir.|
-|**Varsayılan kenar boşluğu**|**Snap to snaplines** etkinleştirildiğinde, denetim ile piksel veya noktalardaki snaplines arasındaki aralığı belirtir **(Tür birimleri** ayarına göre belirlenir).|
-|**Varsayılan dolgu**|**Snap to snaplines** etkinleştirildiğinde, denetim ile piksel veya noktalardaki snaplines arasındaki ekstra aralığı belirtir **(Tür birimleri** ayarına göre belirlenir).|
+|**Yaslama kılavuzunu göster**|Bu seçenek belirlendiğinde, denetimleri hizalamaya yardımcı olmak için tasarımcıda kılavuz çizgileri belirir. **Kılavuza yapış** seçeneği belirlendiğinde tasarımcıya eklenen denetimler bu kılavuz çizgilerine ek olarak eklenir.|
+|**Kılavuz çizgilerine yasla**|Tasarımcı etrafına denetimler eklendiğinde veya taşındığında, kılavuz çizgilere yaslar.|
+|**Kılavuz çizgisi aralığı**|Kılavuz çizgileri arasındaki boşluğu piksel veya punto ( **tür birimleri** ayarı tarafından belirlendiği şekilde) ile belirtir.|
+|**Ek bileşen çizgilere yasla**|Denetimlerin ek çizgi çizgilere eklenip eklenmeyeceğini belirtir.|
+|**Varsayılan kenar boşluğu**|**Anlık görüntü çizgilere yapış** etkinleştirildiğinde, denetim ve anlık görüntü çizgileri arasındaki aralığı piksel veya punto ( **tür birimleri** ayarı tarafından belirlendiği gibi) olarak belirtir.|
+|**Varsayılan doldurma**|**Anlık görüntü çizgilere yapış** etkinleştirildiğinde, denetim ve anlık görüntü çizgileri arasındaki ek boşluğu piksel veya noktalara ( **tür birimleri** ayarı tarafından belirlendiği gibi) belirtir.|
 
 ### <a name="animation"></a>Animasyon
 
-Karma'da bağımlı (hızlandırılmış olmayan) animasyonlar etkinleştirildiğinde bir uyarının görünüp görünmediğini belirlemek için bu ayarı kullanın.
+Blend 'de bağımlı (hızlandırılmayan) animasyonlar etkinleştirildiğinde bir uyarının görünüp başlatılmayacağını anlamak için bu ayarı kullanın.
 
 ### <a name="effects"></a>Etkiler
 
-XAML Tasarımcısı'nda Blend'i kullanarak XAML dosyalarını düzenlerken efektlerin oluşturulup işlenmediğini belirlemek için bu ayarları kullanın.
+Blend kullanarak XAML Tasarımcısı XAML dosyaları düzenlenirken efektlerin işlenip işlenmeyeceğini anlamak için bu ayarları kullanın.
 
-|||
+|Name|Description|
 |-|-|
-|**Efektleri oluşturma**|XAML Designer'da Blend'i kullanarak XAML dosyalarını düzenlerken efektlerin işleyip işlemediğini belirtir.|
-|**Yakınlaştırma eşiği**|**Render efektleri** onay kutusu seçildiğinde hangi efektlerin işlendiği yakınlaştırma yüzdesini belirtir. Bu ayarın ötesine yakınlaştırırsanız, efektler artık XAML Tasarımcısı'nda işlemez.|
+|**İşleme efektleri**|Blend kullanarak XAML Tasarımcısı XAML dosyalarını düzenlenirken efektlerin işlenip işlenmeyeceğini belirtir.|
+|**Yakınlaştırma eşiği**|**İşleme etkileri** onay kutusu seçildiğinde efektlerin işleme yüzdesini belirtir. Bu ayarın ötesine yaklaşırsanız, efektler artık XAML Tasarımcısı işlemez.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

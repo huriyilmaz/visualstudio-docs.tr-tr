@@ -1,7 +1,7 @@
 ---
-title: Store & program aracılığıyla Excel aralıklarında veri değerlerini alma
+title: Excel aralıklarında program aracılığıyla tarih değerlerini depolama & alma
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -19,71 +19,71 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d855ffd91ccdc07a2d69401d7a8611175cc60941
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: e4cea02af59b6b6a8457d964bdce802e1e2b2b84
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67328917"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546971"
 ---
-# <a name="how-to-programmatically-store-and-retrieve-date-values-in-excel-ranges"></a>Nasıl yapılır: Program aracılığıyla Excel aralıklarında veri değerlerini metin formatında depolayabileceği ve
-  Değerleri depolanıp bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi veya yerel Excel range nesnesi.
+# <a name="how-to-programmatically-store-and-retrieve-date-values-in-excel-ranges"></a>Nasıl yapılır: program aracılığıyla Excel aralıklarında tarih değerlerini depolama ve alma
+  Bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimde veya yerel Excel Aralık nesnesinde değerleri saklayabilir ve alabilirsiniz.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- Tarihinde veya sonrasında 1/1/1900 Visual Studio'da Office geliştirme araçlarını kullanarak bir aralıkta kalan bir tarih değeri depolarsanız, OLE Otomasyon (OA) biçiminde depolanır. Kullanmalısınız <xref:System.DateTime.FromOADate%2A> OLE Otomasyon (OA) tarih değerini almak için yöntemi. Tarih 1/1/1900'den eskiyse, bir dize olarak depolanır.
+ Visual Studio 'da Office geliştirme araçları 'nı kullanarak bir aralıktaki 1/1/1900 veya sonraki bir tarih değerini depolarsanız, OLE Automation (OA) biçiminde depolanır. <xref:System.DateTime.FromOADate%2A>OLE Otomasyonu (OA) tarihlerinin değerini almak için yöntemini kullanmanız gerekir. Tarih 1/1/1900 ' den daha eski ise, bir dize olarak depolanır.
 
 > [!NOTE]
-> OLE Otomasyonu tarihleri 1900 ilk iki ay boyunca Excel tarihleri farklıdır. Ayrıca farklar vardır, **1904 sistem tarihi** seçeneği denetlenir. Aşağıdaki kod örnekleri, bu farklılıkları içermez.
+> Excel tarihleri, 1900 ayın ilk iki ayı için OLE Otomasyon tarihlerinden farklıdır. Ayrıca, **1904 tarih sistemi** seçeneği işaretliyse farklılık da vardır. Aşağıdaki kod örnekleri bu farklılıkları gidermez.
 
 ## <a name="use-a-namedrange-control"></a>NamedRange denetimi kullanma
 
-- Bu örnek için belge düzeyi özelleştirmeleri içindir. Aşağıdaki kod, bir sayfa sınıfında değil yerleştirilmelidir `ThisWorkbook` sınıfı.
+- Bu örnek, belge düzeyi özelleştirmeleri içindir. Aşağıdaki kod, sınıfında değil, bir sayfa sınıfına yerleştirilmelidir `ThisWorkbook` .
 
-### <a name="to-store-a-date-value-in-a-named-range"></a>Adlandırılmış aralıkta bir tarih değeri depolamak için
+### <a name="to-store-a-date-value-in-a-named-range"></a>Adlandırılmış bir aralıkta bir tarih değeri depolamak için
 
-1. Oluşturma bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetim hücresinde **A1**.
+1. <xref:Microsoft.Office.Tools.Excel.NamedRange> **A1**hücresinde bir denetim oluştur.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#50](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#50)]
      [!code-vb[Trin_VstcoreExcelAutomation#50](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#50)]
 
-2. Değeri olarak bugünün tarihini ayarlayın `NamedRange1`.
+2. Bugünün tarihini değerini olarak ayarlayın `NamedRange1` .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#51](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#51)]
      [!code-vb[Trin_VstcoreExcelAutomation#51](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#51)]
 
-### <a name="to-retrieve-a-date-value-from-a-named-range"></a>Adlandırılmış bir aralıktan bir tarih değerini almak için
+### <a name="to-retrieve-a-date-value-from-a-named-range"></a>Adlandırılmış bir aralıktan tarih değeri almak için
 
-1. Tarih değerini almak `NamedRange1`.
+1. Tarih değerini öğesinden alın `NamedRange1` .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#52](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#52)]
      [!code-vb[Trin_VstcoreExcelAutomation#52](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#52)]
 
-## <a name="use-native-excel-ranges"></a>Yerel Excel aralıkları kullanın
+## <a name="use-native-excel-ranges"></a>Yerel Excel aralıklarını kullan
 
-### <a name="to-store-a-date-value-in-a-native-excel-range-object"></a>Yerel bir Excel range nesnesinde bir tarih değeri depolamak için
+### <a name="to-store-a-date-value-in-a-native-excel-range-object"></a>Yerel Excel Aralık nesnesinde bir tarih değeri depolamak için
 
-1. Oluşturma bir <xref:Microsoft.Office.Interop.Excel.Range> hücreyi temsil eden **A1**.
+1. <xref:Microsoft.Office.Interop.Excel.Range> **A1**hücresini temsil eden bir oluştur.
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#25](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#25)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#25](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#25)]
 
-2. Değeri olarak bugünün tarihini ayarlayın `rng`.
+2. Bugünün tarihini değerini olarak ayarlayın `rng` .
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#26](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#26)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#26](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#26)]
 
-### <a name="to-retrieve-a-date-value-from-a-native-excel-range-object"></a>Yerel bir Excel range nesnesinden bir tarih değerini almak için
+### <a name="to-retrieve-a-date-value-from-a-native-excel-range-object"></a>Yerel Excel Aralık nesnesinden bir tarih değeri almak için
 
-1. Tarih değerini almak `rng`.
+1. Tarih değerini öğesinden alın `rng` .
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#27](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#27)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#27](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#27)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Aralıklarla çalışma](../vsto/working-with-ranges.md)
+- [Aralıklar ile çalışma](../vsto/working-with-ranges.md)
 - [Excel nesne modeline genel bakış](../vsto/excel-object-model-overview.md)
 - [NamedRange denetimi](../vsto/namedrange-control.md)
-- [Nasıl yapılır: Koddaki çalışma sayfası aralıklarına program aracılığıyla bakma](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)
-- [Nasıl yapılır: Çalışma sayfalarına NamedRange denetimleri ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
+- [Nasıl yapılır: koddaki çalışma sayfası aralıklarına program aracılığıyla başvurma](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)
+- [Nasıl yapılır: çalışma sayfalarına NamedRange denetimleri ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

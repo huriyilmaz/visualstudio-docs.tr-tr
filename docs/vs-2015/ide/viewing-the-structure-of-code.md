@@ -28,12 +28,12 @@ caps.latest.revision: 32
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 44036f519ae4d2b718c6eee40317e15fd4574077
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1a860fbb88bb15786fad5fdf277f8f65b245056b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663090"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545021"
 ---
 # <a name="viewing-the-structure-of-code"></a>Kod Yapısını Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -57,7 +57,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 > [!NOTE]
 > Visual Studio sürümü ve kullandığınız ayarlar IDE 'deki özellikleri etkileyebilir. Bu konu başlığı altında açıklananlardan farklı olabilirler.
 
-## <a name="BKMK_ClassView"></a>Sınıf Görünümü (Visual Basic, C#, C++)
+## <a name="class-view-visual-basic-c-c"></a><a name="BKMK_ClassView"></a>Sınıf Görünümü (Visual Basic, C#, C++)
  **Sınıf görünümü** , **Çözüm Gezgini** bir parçası olarak ve ayrı bir pencerede gösterilir. **Sınıf görünümü** pencere, bir uygulamanın öğelerini görüntüler. Üstteki bölmede ad alanları, türler, arabirimler, numaralandırmalar ve sınıflar görüntülenir ve alt bölmede üst bölmede seçilen türe ait Üyeler görüntülenir. Bu pencereyi kullanarak, kaynak kodundaki üye tanımlarına (veya öğe çözümünüz dışında tanımlanmışsa **nesne tarayıcısı** taşıyabilirsiniz) geçebilirsiniz.
 
  **Sınıf görünümü**öğelerini görüntülemek için bir proje derlemek zorunda değilsiniz. Projenizdeki kodu değiştirirken pencere yenilenir.
@@ -69,17 +69,17 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 ### <a name="class-view-toolbar"></a>Sınıf Görünümü araç çubuğu
  Sınıf Görünümü araç çubuğu aşağıdaki komutları içerir.
 
-|||
+|Komut|Description|
 |-|-|
 |**Yeni klasör**|Sık kullanılan öğeleri düzenleyebileceğiniz bir sanal klasör veya alt klasör oluşturur. Bunlar, etkin çözüm (. suo) dosyasına kaydedilir. Kodunuzda bir öğeyi yeniden adlandırdıktan veya sildikten sonra, bir sanal klasörde hata düğümü olarak görünebilir. Bu sorunu düzeltmek için, hata düğümünü silin. Bir öğeyi yeniden adlandırdıysanız proje hiyerarşisinden klasörü yeniden klasöre taşıyabilirsiniz.|
 |**Geri**|Daha önce seçilen öğeye gider.|
-|**Tirler**|Sonraki seçili öğeye gider.|
+|**İleri**|Sonraki seçili öğeye gider.|
 |**Sınıf diyagramını görüntüle** (yalnızca yönetilen kod projeleri)|**Sınıf görünümü**bir ad alanı veya tür seçtiğinizde kullanılabilir hale gelir. Bir ad alanı seçildiğinde, sınıf diyagramı içindeki tüm türleri gösterir. Bir tür seçildiğinde, sınıf diyagramı yalnızca bu türü gösterir.|
 
 ### <a name="class-view-settings"></a>Sınıf Görünümü ayarları
  Araç çubuğundaki **Sınıf Görünümü ayarları** düğmesi aşağıdaki ayarlara sahiptir.
 
-|||
+|Name|Description|
 |-|-|
 |**Temel türleri göster**|Temel türler görüntülenir.|
 |**Türetilmiş türleri göster**|Türetilmiş türler görüntülenir.|
@@ -94,23 +94,23 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 ### <a name="class-view-shortcut-menu"></a>Sınıf Görünümü kısayol menüsü
  **Sınıf görünümü** kısayol menüsü, seçilen proje türüne bağlı olarak aşağıdaki komutları içerebilir.
 
-|||
+|Komut|Description|
 |-|-|
 |**Tanıma Git**|Öğe açık projede tanımlanmamışsa, kaynak kodundaki veya **nesne tarayıcısı**içindeki öğenin tanımını bulur.|
 |**Tanıma gözatatıon**|**Nesne tarayıcısı**seçili öğeyi görüntüler.|
-|**Tüm başvuruları bul**|Şu anda seçili olan nesne öğesini bulur ve sonuçları **Bul sonuçları** penceresinde görüntüler.|
+|**Tüm Başvuruları Bul**|Şu anda seçili olan nesne öğesini bulur ve sonuçları **Bul sonuçları** penceresinde görüntüler.|
 |**Türe Filtre Uygula** (yalnızca yönetilen kod)|Yalnızca seçilen türü veya ad alanını görüntüler. **Bul** kutusunun yanında bulunan **bul** (X) düğmesini seçerek filtreyi kaldırabilirsiniz.|
 |**Kopyala**|Öğenin tam adını kopyalar.|
 |**Alfabetik olarak Sırala**|Türleri ve üyeleri ada göre alfabetik olarak listeler.|
 |**Üye türüne göre sırala**|Türlerine göre sırasıyla türler ve üyeleri listeler (Bu tür sınıfların önüne ve arabirimlerin önüne arabirimler ve yöntemlerin önündeki Yöntemler).|
 |**Üye erişimine göre sırala**|Türleri ve üyeleri, genel veya özel gibi erişim türüne göre sıralar.|
 |**Üye türüne göre grupla**|Türleri ve üyeleri nesne türüne göre gruplar halinde sıralar.|
-|**Bildirime git** (C++ yalnızca kod)|Varsa, kaynak kodundaki tür veya üyenin bildirimini görüntüler.|
+|**Bildirime git** (yalnızca C++ kod)|Varsa, kaynak kodundaki tür veya üyenin bildirimini görüntüler.|
 |**Tanıma Git**|Varsa, kaynak kodundaki tür veya üyenin tanımını görüntüler.|
 |**Başvuruya git**|Varsa, kaynak kodundaki tür veya üyenin başvurusunu görüntüler.|
 |**Çağrı hiyerarşisini görüntüle**|Seçilen yöntemi **çağrı hiyerarşisi** penceresinde görüntüler.|
 
-## <a name="BKMK_CallHierarchy"></a>Çağrı hiyerarşisi (Visual Basic, C#, C++)
+## <a name="call-hierarchy-visual-basic-c-c"></a><a name="BKMK_CallHierarchy"></a>Çağrı hiyerarşisi (Visual Basic, C#, C++)
  **Çağrı hiyerarşisi** penceresi, belirli bir yöntemin (veya özelliğin veya oluşturucunun) nerede çağrıldığını gösterir ve bu yöntemden çağrılan yöntemleri listeler. Belirli bir kapsamdaki Yöntemler arasında arayan/çağrılan ilişkilerini gösteren çağrı grafiğinin birden çok düzeyini görüntüleyebilirsiniz.
 
  **Çağrı hiyerarşisi** penceresini bir Yöntem (veya özellik veya Oluşturucu) seçerek ve ardından kısayol menüsünde **sınıf hiyerarşisini görüntüle** ' yi seçerek görüntüleyebilirsiniz. Ekran aşağıdaki resme benzemelidir.
@@ -125,16 +125,16 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 
  **Çağrı hiyerarşisi** penceresindeki kısayol menüsü aşağıdaki komutları içerir.
 
-|||
+|Komut|Description|
 |-|-|
 |**Yeni kök olarak ekle**|Seçili düğümü yeni bir kök düğüm olarak ekler.|
 |**Kökü Kaldır**|Seçili kök düğümü ağaç görünümü bölmesinden kaldırır.|
 |**Tanıma Git**|Bir yöntemin orijinal tanımına gider.|
-|**Tüm başvuruları bul**|Seçili yönteme ait tüm başvuruları projede bulur.|
+|**Tüm Başvuruları Bul**|Seçili yönteme ait tüm başvuruları projede bulur.|
 |**Kopyala**|Seçili düğümü kopyalar (alt düğümlerini değil).|
-|**Yenileyebilir**|Bilgileri yeniler.|
+|**Yenile**|Bilgileri yeniler.|
 
-## <a name="BKMK_ObjectBrowser"></a>Nesne Tarayıcısı
+## <a name="object-browser"></a><a name="BKMK_ObjectBrowser"></a>Nesne Tarayıcısı
  **Nesne tarayıcısı** , projelerinizdeki kodun açıklamalarını görüntüler.
 
  **Nesne tarayıcısı**görüntülemek istediklerinizi filtreleyebilirsiniz. Pencerenin üst kısmındaki aşağı açılan listeyi kullanarak aşağıdaki seçenekler arasından seçim yapabilirsiniz:
@@ -147,7 +147,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 
 - Özel bir bileşen kümesi
 
-  Özel bileşenler, yönetilen kod yürütülebilir dosyaları, kitaplık derlemeleri, tür kitaplıkları ve. ocx dosyalarını içerebilir. Özel bileşenler eklemek C++ mümkün değildir. Özel ayarlar Visual Studio Kullanıcı uygulaması dizinine kaydedilir,%APPDATA%\Roaming\Microsoft\VisualStudio\11.0\ObjBrowEX.dat.
+  Özel bileşenler, yönetilen kod yürütülebilir dosyaları, kitaplık derlemeleri, tür kitaplıkları ve. ocx dosyalarını içerebilir. C++ özel bileşenleri eklemek mümkün değildir. Özel ayarlar Visual Studio Kullanıcı uygulaması dizinine kaydedilir,%APPDATA%\Roaming\Microsoft\VisualStudio\11.0\ObjBrowEX.dat.
 
   **Nesne tarayıcısı** sol bölmesinde .NET Framework ve com bileşenleri gibi fiziksel kapsayıcılar gösterilmektedir. Kapsayıcı düğümlerini içerdikleri ad alanlarını görüntüleyecek şekilde genişletebilir ve ardından içerdikleri türleri göstermek için ad alanlarını genişletebilirsiniz. Bir tür seçtiğinizde, üyeleri (Özellikler ve yöntemler gibi) sağ bölmede listelenir. Sağ alt bölmede seçili öğeyle ilgili ayrıntılı bilgiler görüntülenir.
 
@@ -160,7 +160,7 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 ### <a name="object-browser-settings"></a>Nesne Tarayıcısı ayarları
  Araç çubuğundaki **nesne tarayıcısı ayarları** düğmesini kullanarak, aşağıdaki görünümlerden birini belirtebilirsiniz.
 
-|||
+|Name|Description|
 |-|-|
 |**Ad alanlarını görüntüle**|Sol bölmedeki fiziksel kapsayıcılar yerine ad alanlarını görüntüler. Birden fazla fiziksel kapsayıcıda depolanan ad alanları birleştirilir.|
 |**Kapsayıcıları görüntüle**|Sol bölmedeki ad alanları yerine fiziksel kapsayıcıları görüntüler. **Ad alanlarını** ve **Görünüm kapsayıcılarını** görüntüleme birbirini dışlamalı ayarlar.|
@@ -177,10 +177,10 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 ### <a name="object-browser-shortcut-menu-commands"></a>Nesne Tarayıcısı kısayol menü komutları
  **Nesne tarayıcısı** kısayol menüsünde, seçilen öğenin türüne bağlı olarak aşağıdaki komutlar bulunabilir.
 
-|||
+|Komut|Description|
 |-|-|
 |**Tanıma gözatatıon**|Seçili öğenin birincil düğümünü gösterir.|
-|**Tüm başvuruları bul**|Şu anda seçili olan nesne öğesini bulur ve sonuçları **Bul sonuçları** penceresinde görüntüler.|
+|**Tüm Başvuruları Bul**|Şu anda seçili olan nesne öğesini bulur ve sonuçları **Bul sonuçları** penceresinde görüntüler.|
 |**Türe göre filtrele**|Yalnızca seçilen türü veya ad alanını görüntüler. **Aramayı Temizle** düğmesini seçerek filtreyi kaldırabilirsiniz.|
 |**Kopyala**|Öğenin tam adını kopyalar.|
 |**Kaldır**|Kapsam özel bir bileşen kümesi ise, seçili bileşeni kapsamdan kaldırır.|
@@ -188,12 +188,12 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 |**Nesne türüne göre sırala**|Türlerine göre sırasıyla türler ve üyeleri listeler (Bu tür sınıfların önüne ve arabirimlerin önüne arabirimler ve yöntemlerin önündeki Yöntemler).|
 |**Nesne erişimine göre sırala**|Türleri ve üyeleri, genel veya özel gibi erişim türüne göre sıralar.|
 |**Nesne türüne göre Gruplandır**|Türleri ve üyeleri nesne türüne göre gruplar halinde sıralar.|
-|**Bildirime git** (C++ yalnızca projeler)|Varsa, kaynak kodundaki tür veya üyenin bildirimini görüntüler.|
+|**Bildirime git** (yalnızca C++ projeleri)|Varsa, kaynak kodundaki tür veya üyenin bildirimini görüntüler.|
 |**Tanıma Git**|Varsa, kaynak kodundaki tür veya üyenin tanımını görüntüler.|
 |**Başvuruya git**|Varsa, kaynak kodundaki tür veya üyenin başvurusunu görüntüler.|
 |**Çağrı hiyerarşisini görüntüle**|Seçilen yöntemi **çağrı hiyerarşisi** penceresinde görüntüler.|
 
-## <a name="BKMK_CodeDefinition"></a>Kod tanımı penceresi (C#, C++)
+## <a name="code-definition-window-c-c"></a><a name="BKMK_CodeDefinition"></a>Kod tanımı penceresi (C#, C++)
  **Kod tanımı** penceresi, etkin projedeki seçili bir türün veya üyenin tanımını görüntüler. Tür veya üye kod düzenleyicisinde veya bir kod görünümü penceresinde seçilebilir.
 
  Bu pencere salt okunurdur, ancak içinde kesme noktaları veya yer işaretleri ayarlayabilirsiniz. Görüntülenmiş tanımı değiştirmek için kısayol menüsünde **tanımı Düzenle** ' yi seçin. Bu, kaynak dosyayı kod düzenleyicisinde açar ve ekleme noktasını tanımın başladığı satıra taşıdır.
@@ -201,13 +201,13 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
 ### <a name="code-definition-shortcut-menu"></a>Kod tanımı kısayol menüsü
  **Kod tanımı** penceresindeki kısayol menüsü, programlama diline bağlı olarak aşağıdaki komutları içerebilir.
 
-|||
+|Komut|Description|
 |-|-|
 |**Birim testleri oluşturma**|Seçili öğe için birim testleri oluşturur.|
 |**Sıralı diyagram oluştur**|Bir yöntem seçildiğinde, bir sıralı diyagram oluşturur.|
 |**Özel erişimci oluştur**|Çözümde bir birim testi varsa, testin koda erişmek için kullandığı bir yöntem oluşturur.|
 |**Tanıma Git**|Tanımı (veya kısmi sınıflar için tanımları) bulur ve **sonuçları bul** penceresinde görüntüler.|
-|**Tüm başvuruları bul**|Çözümdeki türe veya üyeye başvuruları bulur.|
+|**Tüm Başvuruları Bul**|Çözümdeki türe veya üyeye başvuruları bulur.|
 |**Çağrı hiyerarşisini görüntüle**|Yöntemi **çağrı hiyerarşisi** penceresinde görüntüler.|
 |**Çağırma testlerini göster**|Projede birim testleri varsa, seçilen kodu çağıran testleri gösterir.|
 |**Çağırma testleri çalıştırma**|Projede birim testleri varsa, seçilen kod için testleri çalıştırır.|
@@ -222,4 +222,4 @@ Visual Studio projelerindeki nesneleri ve üyeleri ve .NET Framework bileşenler
  **Belge Anahattı** penceresini, bir XAML sayfası veya bir Windows form TASARıMCıSı veya HTML sayfaları gibi tasarımcı görünümleriyle birlikte kullanabilirsiniz. Bu pencere, form veya sayfanın mantıksal yapısını görüntüleyebilmeniz ve derin gömülü veya gizli denetimleri bulabilmeniz için öğeleri bir ağaç görünümünde görüntüler.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Sınıf Görünümü ve Nesne Tarayıcısı Simgeleri](../ide/class-view-and-object-browser-icons.md)
+ [Sınıf Görünümü ve Nesne Tarayıcısı simgeleri](../ide/class-view-and-object-browser-icons.md)

@@ -11,25 +11,25 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: bcfce9a80d02e525212d3f59173df4a7e8fbe968
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ca8f049da83b99da7d36ebf74e756dd95f738d64
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662700"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546477"
 ---
-# <a name="ca2143-transparent-methods-should-not-use-security-demands"></a>CA2143: Saydam yöntemler güvenlik taleplerini kullanmamalıdır
+# <a name="ca2143-transparent-methods-should-not-use-security-demands"></a>CA2143: Saydam metotlar güvenlik taleplerini kullanmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|TransparentMethodsShouldNotDemand|
 |CheckId|CA2143|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Bir Tranparent türü veya yöntemi bildirimli olarak bir <xref:System.Security.Permissions.SecurityAction?displayProperty=fullName> `.Demand` talep ile işaretlenir veya yöntem <xref:System.Security.CodeAccessPermission.Demand%2A?displayProperty=fullName> yöntemini çağırır.
+## <a name="cause"></a>Nedeni
+ Bir Tranparent türü ya da yöntemi bildirimli olarak bir talep ile işaretlenir ya da yöntemi <xref:System.Security.Permissions.SecurityAction?displayProperty=fullName> `.Demand` <xref:System.Security.CodeAccessPermission.Demand%2A?displayProperty=fullName> yöntemini çağırır.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Saydam güvenlik kodu, bir işlemin güvenlik doğrulaması için sorumlu olmamalıdır ve bu nedenle izin talep edilmemelidir. Saydam güvenlik kodu, güvenlik kararını vermek için tüm talepleri kullanmalıdır ve güvenli kritik kod, saydam koda tüm talepleri vermek için güvenmemelidir. Güvenlik istekleri gerçekleştiren tüm kodlar, bunun yerine güvenli kritik öneme sahip olmalıdır.

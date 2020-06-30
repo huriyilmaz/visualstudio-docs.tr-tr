@@ -15,28 +15,28 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 922cd713867e1e1017a0f13490a08c0950b2afbf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b9931d29c818d95785146558637c32237e2c5276
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652681"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547855"
 ---
 # <a name="ca1415-declare-pinvokes-correctly"></a>CA1415: P/Invoke'ları doğru bildirin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DeclarePInvokesCorrectly|
 |CheckId|CA1415|
 |Kategori|Microsoft. çalışabilirliği|
 |Yeni Değişiklik|Bölünmez olmayan-parametreyi bildiren P/Invoke derleme dışında görülemez. Parçalama-parametreyi bildiren P/Invoke, derleme dışında görünebilirler.|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Platform çağırma yöntemi yanlış bir şekilde bildirilmiştir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Platform çağırma yöntemi yönetilmeyen koda erişir ve [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] veya <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> `Declare` anahtar sözcüğü kullanılarak tanımlanır. Şu anda, bu kural ÇAKıŞAN bir yapı parametresine işaretçi olan Win32 işlevlerini hedefleyen platform çağırma yöntemi bildirimlerini arar ve karşılık gelen yönetilen parametre <xref:System.Threading.NativeOverlapped?displayProperty=fullName> yapısına yönelik bir işaretçi değildir.
+ Platform çağırma yöntemi yönetilmeyen koda erişir ve `Declare` içindeki veya içinde anahtar sözcüğü kullanılarak tanımlanır [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> . Şu anda, bu kural ÇAKıŞAN bir yapı parametresine işaretçi olan Win32 işlevlerini hedefleyen platform çağırma yöntemi bildirimlerini arar ve karşılık gelen yönetilen parametre bir yapıya işaretçi değildir <xref:System.Threading.NativeOverlapped?displayProperty=fullName> .
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kuralın ihlalini onarmak için platform çağırma yöntemini doğru bir şekilde bildirin.

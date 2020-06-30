@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla Excel hesapları çalıştırma'
+title: 'Nasıl yapılır: program aracılığıyla Excel hesaplamalarını çalıştırma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,48 +15,48 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bd6562a48a66c1c73cd281fb4510e2df737f6a04
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a02e86864065d2c626de2f6e7fea7528554f1391
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955686"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547387"
 ---
-# <a name="how-to-programmatically-run-excel-calculations"></a>Nasıl yapılır: Program aracılığıyla Excel hesapları çalıştırma
-  Benzer bir süreç hesaplamaları çalıştırmak için kullandığınız bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi veya yerel Excel range nesnesi.
+# <a name="how-to-programmatically-run-excel-calculations"></a>Nasıl yapılır: program aracılığıyla Excel hesaplamalarını çalıştırma
+  Bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimde veya yerel Excel Aralık nesnesinde hesaplamalar çalıştırmak için benzer bir işlem kullanırsınız.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
-## <a name="run-calculations-in-a-namedrange-control"></a>NamedRange denetimi içinde hesaplamaları çalıştırma
- Aşağıdaki örnek, oluşturur bir <xref:Microsoft.Office.Tools.Excel.NamedRange> hücreden A1 ve hücre hesaplar. Bu kod, bir sayfa sınıfında değil yerleştirilmelidir `ThisWorkbook` sınıfı.
+## <a name="run-calculations-in-a-namedrange-control"></a>NamedRange Denetiminde hesaplamalar çalıştırma
+ Aşağıdaki örnek, <xref:Microsoft.Office.Tools.Excel.NamedRange> a1 hücresini oluşturur ve sonra hücreyi hesaplar. Bu kod, sınıfında değil, bir sayfa sınıfına yerleştirilmelidir `ThisWorkbook` .
 
-### <a name="to-run-calculations-in-a-namedrange-control"></a>NamedRange denetimi içinde hesaplamaları çalıştırmak için
+### <a name="to-run-calculations-in-a-namedrange-control"></a>Bir NamedRange Denetiminde hesaplamalar çalıştırmak için
 
-1. Adlandırılmış aralık oluşturun.
+1. Adlandırılmış aralığı oluşturun.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#75](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#75)]
      [!code-vb[Trin_VstcoreExcelAutomation#75](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#75)]
 
-2. Çağrı <xref:Microsoft.Office.Tools.Excel.NamedRange.Calculate%2A> belirtilen aralığın yöntemi.
+2. <xref:Microsoft.Office.Tools.Excel.NamedRange.Calculate%2A>Belirtilen aralığın yöntemini çağırın.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#76](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#76)]
      [!code-vb[Trin_VstcoreExcelAutomation#76](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#76)]
 
-## <a name="run-calculations-in-a-native-excel-range"></a>Yerel bir Excel aralığında hesaplamaları çalıştırma
+## <a name="run-calculations-in-a-native-excel-range"></a>Yerel bir Excel aralığında hesaplamalar çalıştırma
 
-### <a name="to-run-calculations-in-a-native-excel-range"></a>Yerel bir Excel aralığında hesaplamaları çalıştırmak için
+### <a name="to-run-calculations-in-a-native-excel-range"></a>Yerel bir Excel aralığında hesaplamalar çalıştırmak için
 
-1. Adlandırılmış aralık oluşturun.
+1. Adlandırılmış aralığı oluşturun.
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#30](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#30)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#30](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#30)]
 
-2. Çağrı <xref:Microsoft.Office.Interop.Excel.Range.Calculate%2A> belirtilen aralığın yöntemi.
+2. <xref:Microsoft.Office.Interop.Excel.Range.Calculate%2A>Belirtilen aralığın yöntemini çağırın.
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#31](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#31)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#31](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#31)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Aralıklarla çalışma](../vsto/working-with-ranges.md)
+- [Aralıklar ile çalışma](../vsto/working-with-ranges.md)
 - [NamedRange denetimi](../vsto/namedrange-control.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

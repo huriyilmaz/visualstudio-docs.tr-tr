@@ -1,5 +1,5 @@
 ---
-title: Yorum İşareti Profili | Microsoft Dokümanlar
+title: CommentMarkProfile | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: d45bab6b909fffa107158236d9050632f114c530
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 2972f9d470bebe3a65b7d525aa2b358d68ad5f1c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74772799"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546594"
 ---
 # <a name="commentmarkprofile"></a>CommentMarkProfile
-İşlev, `CommentMarkProfile` sayısal bir işaretçi ve metin dizesini . *vsp* dosyası. İşaret ve yorumun eklenmesi `CommentMarkProfile` için, işlevi içeren iş parçacığıiçin profil oluşturma nın ON olması gerekir.
+`CommentMarkProfile`İşlevi, içinde bir sayısal işaret ve metin dizesi ekler.* VSP* dosyası. İşaret ve Açıklama eklenecek şekilde, işlevi içeren iş parçacığının profil oluşturma `CommentMarkProfile` açık olmalıdır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
@@ -33,46 +33,46 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkProfile(
 #### <a name="parameters"></a>Parametreler
  `lMarker`
 
- Eklemek için sayısal işaretçi. İşaretleyici 0'dan (sıfır) büyük veya eşit olmalıdır.
+ Eklenecek sayısal işaret. İşaretleyici 0 (sıfır) değerinden büyük veya buna eşit olmalıdır.
 
  `szComment`
 
- Eklemek için metin dizesini işaretçi. Dize NULL sonlandırıcı dahil olmak üzere 256 karakterden az olmalıdır.
+ Eklenecek metin dizesinin işaretçisi. Dize, NULL Sonlandırıcı dahil 256 karakterden az olmalıdır.
 
-## <a name="property-valuereturn-value"></a>Özellik değeri/iade değeri
- İşlev, **numaralandırma PROFILE_COMMAND_STATUS** kullanarak başarı veya başarısızlığı gösterir. İade değeri aşağıdakilerden biri olabilir:
+## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
+ İşlev, **PROFILE_COMMAND_STATUS** numaralandırma kullanılarak başarılı veya başarısız olduğunu gösterir. Dönüş değeri aşağıdakilerden biri olabilir:
 
-|Numaralayıcı|Açıklama|
+|Sının|Description|
 |----------------|-----------------|
-|MARK_ERROR_MARKER_RESERVED|Parametre 0'dan küçük veya eşittir. Bu değerler ayrılmıştır. İşaret ve açıklama kaydedilmez.|
-|MARK_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldığında NEVER olarak ayarlandı. İşaret ve açıklama kaydedilmez.|
-|MARK_ERROR_MODE_OFF|Profil oluşturma modu, işlev çağrıldığında KAPALI olarak ayarlandı. İşaret ve açıklama kaydedilmez.|
+|MARK_ERROR_MARKER_RESERVED|Parametre 0 ' dan küçük veya buna eşit. Bu değerler ayrılmıştır. İşaret ve açıklama kaydedilmez.|
+|MARK_ERROR_MODE_NEVER|Profil oluşturma modu, işlev çağrıldığında hiçbir zaman olarak ayarlanmıştır. İşaret ve açıklama kaydedilmez.|
+|MARK_ERROR_MODE_OFF|İşlev çağrıldığında profil oluşturma modu OFF olarak ayarlanmıştır. İşaret ve açıklama kaydedilmez.|
 |MARK_ERROR_NO_SUPPORT|Bu bağlamda işaret desteği yok. İşaret ve açıklama kaydedilmez.|
-|MARK_ERROR_OUTOFMEMORY|Olayı kaydetmek için bellek kullanılamadı. İşaret ve açıklama kaydedilmez.|
-|MARK_TEXTTOOLONG|Dize en fazla 256 karakteri aşıyor. Açıklama dizesi kesilir ve işaret ve açıklama kaydedilir.|
-|MARK_OK|MARK_OK başarıyı göstermek için döndürülür.|
+|MARK_ERROR_OUTOFMEMORY|Olayı kaydetmek için bellek yoktu. İşaret ve açıklama kaydedilmez.|
+|MARK_TEXTTOOLONG|Dize en fazla 256 karakter sınırını aşıyor. Açıklama dizesi kesilir ve işaret ve açıklama kaydedilir.|
+|MARK_OK|Başarıyı göstermek için MARK_OK döndürülür.|
 
 ## <a name="remarks"></a>Açıklamalar
- İşaret profili işlevini içeren iş parçacığının profil oluşturma durumu, VSInstr Mark komutu yla veya işlevlerle (CommentMarkAtProfile, CommentMarkProfile veya MarkProfile) eklenen işaretler ve yorumlar da üzerinde olmalıdır.
+ İşaret profili işlevini içeren iş parçacığının profil oluşturma durumu, VSInstr Mark komutuyla veya işlevlerle (CommentMarkAtProfile, CommentMarkProfile veya MarkProfile) eklenen işaretler ve açıklamalar olduğunda açık olmalıdır.
 
- Profil işaretleri kapsamda geneldir. Örneğin, bir iş parçacığına eklenen bir profil işareti, veri kesiminin başlangıcını veya sonunu işaretlemek için kullanılabilir. *vsp* dosyası.
+ Profil işaretleri kapsamda geneldir. Örneğin, bir iş parçacığında yerleştirilen bir profil işareti, içindeki herhangi bir iş parçacığında bir veri segmentinin başlangıcını veya sonunu işaretlemek için kullanılabilir. *VSP* dosyası.
 
 > [!IMPORTANT]
-> CommentMarkProfile yöntemi sadece enstrümantasyon ile kullanılabilir.
+> CommentMarkProfile yöntemi, yalnızca izleme ile kullanılabilir.
 
-## <a name="net-framework-equivalent"></a>.NET Çerçeve eşdeğeri
+## <a name="net-framework-equivalent"></a>.NET Framework eşdeğeri
  Microsoft.VisualStudio.Profiler.dll
 
-## <a name="function-information"></a>Fonksiyon bilgileri
+## <a name="function-information"></a>İşlev bilgileri
 
-|||
+|Öğe|Değer|
 |-|-|
-|**Üst bilgi**|VSPerf.h ekle|
-|**Kitaplığı**|VSPerf.lib kullanın|
-|**Unicode**|(Unicode) ve `CommentMarkProfileW` `CommentMarkProfileA` (ANSI) olarak uygulanır.|
+|**Üst bilgi**|VSPerf. h dahil et|
+|**Kitaplık**|VSPerf. lib kullanın|
+|**Unicode**|`CommentMarkProfileW`(Unicode) ve `CommentMarkProfileA` (ANSI) olarak uygulanır.|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod, CommentMarkProfile işlev çağrısını göstermektedir. Örnek, kodun işlev çağrısı nı çağırıp çağırmadığını belirlemek için Win32 dize makrolarının ve Unicode derleyici ayarlarının [!INCLUDE[vcpransi](../profiling/includes/vcpransi_md.md)] kullanımını varsayar.
+ Aşağıdaki kod, CommentMarkProfile işlev çağrısını gösterir. Örnek, kodun işlev çağrısını çağırıp çağırmadığını öğrenmek için Win32 dize makroları ve Unicode derleyicisi ayarlarının kullanımını varsayar [!INCLUDE[vcpransi](../profiling/includes/vcpransi_md.md)] .
 
 ```cpp
 void ExerciseCommentMarkProfile()
@@ -111,4 +111,4 @@ void ExerciseCommentMarkProfile()
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio profilci API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)
+- [Visual Studio profil oluşturucu API başvurusu (yerel)](../profiling/visual-studio-profiler-api-reference-native.md)

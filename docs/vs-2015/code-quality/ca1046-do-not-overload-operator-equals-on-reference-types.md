@@ -15,24 +15,24 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 519faf2d49cb74d60d342d6bcf449f211076b0b4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 118c29473db09d5ed0a4fa447e27e593a88f98b3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661093"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546763"
 ---
-# <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046: Başvuru türlerinde eşittir işleçlerini aşırı yüklemeyin
+# <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046: Eşittir işlecini başvuru türlerinde aşırı yüklemeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotOverloadOperatorEqualsOnReferenceTypes|
 |CheckId|CA1046|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Ortak veya iç içe ortak başvuru türü eşitlik işlecini aşırı yükler.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -56,12 +56,12 @@ ms.locfileid: "72661093"
 
  Bu örnek aşağıdaki çıktıyı üretir.
 
- **a = yeni (2, 2) ve b = yeni (2, 2) eşittir mi?
-** **c ve a eşit değildir mi? Evet**
-**b ve a = =? **
-**c ve a yok = =? Evet**
+ **a = yeni (2, 2) ve b = yeni (2, 2) eşittir mi? ** 
+ **C ve a eşit değildir mi? Evet** 
+ **b ve a = =? ** 
+ **C ve a yok = =? Evet**
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1013: Eşittir işlecini ekleme ve çıkarmayı aşırı yükleyerek aşırı yükleyin](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
+ [CA1013: Toplama ve çıkarmayı aşırı yüklediğinizde eşittir işlecini aşırı yükleyin](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Object.Equals%2A?displayProperty=fullName> [eşitlik işleçleri](https://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a)
+ <xref:System.Object.Equals%2A?displayProperty=fullName>[Eşitlik işleçleri](https://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a)

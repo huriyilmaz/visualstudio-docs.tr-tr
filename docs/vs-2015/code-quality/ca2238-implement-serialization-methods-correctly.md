@@ -15,26 +15,26 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0f5239ca22a30b171c53c96f3be33062b860f78b
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 98e825fd5543b928569b99218c9054aff666e0fe
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918756"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545151"
 ---
-# <a name="ca2238-implement-serialization-methods-correctly"></a>CA2238: Serileştirme yöntemlerini doğru uygulama
+# <a name="ca2238-implement-serialization-methods-correctly"></a>CA2238: Serileştirme metotlarını doğru uygulayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio ile ilgili en son belgeler için bkz. [CA2238: serileştirme yöntemlerini doğru uygulama](/visualstudio/code-quality/ca2238-implement-serialization-methods-correctly).
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ImplementSerializationMethodsCorrectly|
 |CheckId|CA2238|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Parçalama-Yöntem derleme dışında görünüyorsa.<br /><br /> Kırılmamış-Yöntem, derleme dışında görünür değilse.|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Seri hale getirme olayı tanıtan yöntem türü, doğru imzaya, dönüş türüne veya görünürlüğe sahip değil.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -48,7 +48,7 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA2238: serileştirme yönt
 
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute?displayProperty=fullName>
 
-  Serileştirme olay işleyicileri <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>türünde tek bir parametre alır, `void`döndürür ve `private` görünürlüğe sahiptir.
+  Serileştirme olay işleyicileri, türünde tek bir parametre alır <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> , döndürür `void` ve `private` görünürlüğe sahiptir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini düzeltmek için, serileştirme olay işleyicisinin imzasını, dönüş türünü veya görünürlüğünü düzeltin.
@@ -63,7 +63,7 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA2238: serileştirme yönt
  [!code-vb[FxCop.Usage.SerializationEventHandlers#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.SerializationEventHandlers/vb/FxCop.Usage.SerializationEventHandlers.vb#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA2236: ISerializable türler üzerinde taban sınıf yöntemlerini çağırın](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)
+ [CA2236: ISerializable türler üzerinde taban sınıf metotlarını çağırın](../code-quality/ca2236-call-base-class-methods-on-iserializable-types.md)
 
  [CA2240: ISerializable'ı doğru uygulayın](../code-quality/ca2240-implement-iserializable-correctly.md)
 
@@ -73,6 +73,6 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA2238: serileştirme yönt
 
  [CA2237: ISerializable türleri SerializableAttribute ile işaretleyin](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
- [CA2239: İsteğe bağlı alanlar için seri durumdan çıkarma metotları sağlayın](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)
+ [CA2239: İsteğe bağlı metotlar için serileştirme kaldırma metotları sağlayın](../code-quality/ca2239-provide-deserialization-methods-for-optional-fields.md)
 
  [CA2120: Serileştirme oluşturucularının güvenliğini sağlayın](../code-quality/ca2120-secure-serialization-constructors.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Yer işareti metnini program aracılığıyla güncelleştirme'
+title: 'Nasıl yapılır: yer işareti metnini program aracılığıyla güncelleştirme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,72 +14,72 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 436fefd425da46cea6a8cd1aba95fb9eb14362f7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9b76c239606a4bf0d6da203bd4eea45a11162706
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63418956"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546958"
 ---
-# <a name="how-to-programmatically-update-bookmark-text"></a>Nasıl yapılır: Yer işareti metnini program aracılığıyla güncelleştirme
-  Sonraki bir zamanda ya da yer işaretindeki metnin yerine metnin alabilmeleri Microsoft Office Word belgesindeki bir yer tutucu yer işareti içinde metin ekleyebilirsiniz. Ayrıca belge düzeyinde özelleştirme geliştiriyorsanız metinde güncelleştirebilirsiniz bir <xref:Microsoft.Office.Tools.Word.Bookmark> veriye bağlı denetim. Daha fazla bilgi için [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md).
+# <a name="how-to-programmatically-update-bookmark-text"></a>Nasıl yapılır: yer işareti metnini program aracılığıyla güncelleştirme
+  Metni daha sonra alabilmeniz veya bir yer işaretinin içindeki metni değiştirmek için Microsoft Office Word belgesinde yer tutucu yer işaretine metin ekleyebilirsiniz. Belge düzeyi özelleştirmesi geliştiriyorsanız, verilere bağlanan bir denetimdeki metni de güncelleştirebilirsiniz <xref:Microsoft.Office.Tools.Word.Bookmark> . Daha fazla bilgi için bkz. [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md).
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
  Yer işareti nesnesi iki türden biri olabilir:
 
-- A <xref:Microsoft.Office.Tools.Word.Bookmark> konak kontrolü.
+- Bir <xref:Microsoft.Office.Tools.Word.Bookmark> konak denetimi.
 
-   <xref:Microsoft.Office.Tools.Word.Bookmark> denetimleri uzatma yerel <xref:Microsoft.Office.Interop.Word.Bookmark> veri bağlamayı ve olayları açığa etkinleştirerek nesneleri. Konak denetimleri hakkında daha fazla bilgi için bkz: [konak öğelerini ve denetimlerine genel bakış için ana bilgisayar](../vsto/host-items-and-host-controls-overview.md).
+   <xref:Microsoft.Office.Tools.Word.Bookmark>denetimler <xref:Microsoft.Office.Interop.Word.Bookmark> , veri bağlamayı etkinleştirerek ve olayları ortaya çıkaran yerel nesneleri genişletir. Konak denetimleri hakkında daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
-- Yerel <xref:Microsoft.Office.Interop.Word.Bookmark> nesne.
+- Yerel bir <xref:Microsoft.Office.Interop.Word.Bookmark> nesne.
 
-   <xref:Microsoft.Office.Interop.Word.Bookmark> olayları ya da veri bağlama becerileri nesneleri yoktur.
+   <xref:Microsoft.Office.Interop.Word.Bookmark>nesneler, olay veya veri bağlama özelliklerine sahip değildir.
 
-  Yer işaretine metin atadığınızda, davranış arasındaki farklı bir <xref:Microsoft.Office.Interop.Word.Bookmark> ve <xref:Microsoft.Office.Tools.Word.Bookmark>. Daha fazla bilgi için [yer işareti denetimi](../vsto/bookmark-control.md).
+  Bir yer işaretine metin atadığınızda, davranış bir ve arasında farklılık gösterir <xref:Microsoft.Office.Interop.Word.Bookmark> <xref:Microsoft.Office.Tools.Word.Bookmark> . Daha fazla bilgi için bkz. [Bookmark Control](../vsto/bookmark-control.md).
 
-## <a name="use-host-controls"></a>Konak denetimleri kullanın
+## <a name="use-host-controls"></a>Konak denetimlerini kullanma
 
-### <a name="to-update-bookmark-contents-using-a-bookmark-control"></a>Bir yer işareti denetimi kullanarak yer işareti içeriklerini güncelleştirmek için
+### <a name="to-update-bookmark-contents-using-a-bookmark-control"></a>Yer işareti içeriğini bir yer işareti denetimi kullanarak güncelleştirmek için
 
-1. İsteyen bir yordamı oluşturmak bir `bookmark` yer işaretinin adı bağımsız değişkeni ve `newText` atamak dize bağımsız değişkeni <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> özelliği.
+1. `bookmark`Yer işaretinin adı için bir bağımsız değişken alan ve `newText` özelliğine atanacak dize için bir bağımsız değişken alan bir yordam oluşturun <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> .
 
     > [!NOTE]
-    > Metne atama <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> veya <xref:Microsoft.Office.Tools.Word.Bookmark.FormattedText%2A> özelliği bir <xref:Microsoft.Office.Tools.Word.Bookmark> silinecek yer işareti denetimi neden olmaz.
+    > <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> <xref:Microsoft.Office.Tools.Word.Bookmark.FormattedText%2A> Bir denetimin veya özelliğine metin atama <xref:Microsoft.Office.Tools.Word.Bookmark> , yer işaretinin silinmesine neden olmaz.
 
      [!code-vb[Trin_VstcoreWordAutomation#63](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#63)]
      [!code-csharp[Trin_VstcoreWordAutomation#63](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#63)]
 
-2. Ata *newText* dizesinden <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> özelliği <xref:Microsoft.Office.Tools.Word.Bookmark>.
+2. *NewText* dizesini <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> öğesinin özelliğine atayın <xref:Microsoft.Office.Tools.Word.Bookmark> .
 
      [!code-vb[Trin_VstcoreWordAutomation#64](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#64)]
      [!code-csharp[Trin_VstcoreWordAutomation#64](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#64)]
 
-## <a name="use-word-objects"></a>Word nesneleri kullanma
+## <a name="use-word-objects"></a>Word nesnelerini kullanma
 
-### <a name="to-update-bookmark-contents-using-a-word-bookmark-object"></a>Bir Word yer işareti nesnesini kullanarak yer işareti içeriği güncelleştirmek için
+### <a name="to-update-bookmark-contents-using-a-word-bookmark-object"></a>Yer işareti içeriğini bir Word Bookmark nesnesi kullanarak güncelleştirmek için
 
-1. Sahip bir yordam oluşturma bir `bookmark` bağımsız değişken adını <xref:Microsoft.Office.Interop.Word.Bookmark>ve `newText` atamak dize bağımsız değişkeni <xref:Microsoft.Office.Interop.Word.Range.Text%2A> yer işaretinin özelliği.
+1. `bookmark`Adı için bağımsız değişkenine sahip bir yordam <xref:Microsoft.Office.Interop.Word.Bookmark> ve `newText` yer işaretinin özelliğine atanacak dize için bir bağımsız değişken oluşturun <xref:Microsoft.Office.Interop.Word.Range.Text%2A> .
 
     > [!NOTE]
-    > Yerel bir sözcüğe metin atama <xref:Microsoft.Office.Interop.Word.Bookmark> nesnenin silinmesi yer işareti neden olur.
+    > Yerel bir Word nesnesine metin atama <xref:Microsoft.Office.Interop.Word.Bookmark> , yer işaretinin silinmesine neden olur.
 
      [!code-vb[Trin_VstcoreWordAutomation#65](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#65)]
      [!code-csharp[Trin_VstcoreWordAutomation#65](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#65)]
 
-2. Ata *newText* dizesinden <xref:Microsoft.Office.Interop.Word.Range.Text%2A> özelliği yer işaretinin otomatik olarak siler. Yer işaretine yeniden eklersiniz <xref:Microsoft.Office.Interop.Word.Bookmarks> koleksiyonu.
+2. *NewText* dizesini yer işaretinin özelliğine atayın <xref:Microsoft.Office.Interop.Word.Range.Text%2A> ve bu, yer işaretini otomatik olarak siler. Sonra yer işaretini koleksiyona yeniden ekleyin <xref:Microsoft.Office.Interop.Word.Bookmarks> .
 
-     Aşağıdaki kod örneği belge düzeyi özelleştirmesinde kullanılabilir.
+     Aşağıdaki kod örneği, belge düzeyi özelleştirmesinde kullanılabilir.
 
      [!code-vb[Trin_VstcoreWordAutomation#66](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#66)]
      [!code-csharp[Trin_VstcoreWordAutomation#66](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#66)]
 
-     Aşağıdaki kod örneği, VSTO eklentisi içinde kullanılabilir. Bu örnek etkin belgeyi kullanır.
+     Aşağıdaki kod örneği bir VSTO eklentisi içinde kullanılabilir. Bu örnek etkin belgeyi kullanır.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#66](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#66)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#66](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#66)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Word belgelerine program aracılığıyla metin ekleme](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
+- [Nasıl yapılır: program aracılığıyla Word belgelerine metin ekleme](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
 - [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md)
 - [Yer işareti denetimi](../vsto/bookmark-control.md)

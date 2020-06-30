@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: belgelere yönetilen kod uzantıları Iliştirme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,35 +13,35 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 8fb212f9c5441d697cfa92feee7dc18fab9270d2
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: f44b153ac7d55704ba649a7dc09860518a5e76b7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985971"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547530"
 ---
 # <a name="how-to-attach-managed-code-extensions-to-documents"></a>Nasıl yapılır: belgelere yönetilen kod uzantıları Iliştirme
   Varolan bir Microsoft Office Word belgesine veya Microsoft Office Excel çalışma kitabına bir özelleştirme derlemesi ekleyebilirsiniz. Belge veya çalışma kitabı, Visual Studio 'daki Microsoft Office projeleri ve geliştirme araçları tarafından desteklenen herhangi bir dosya biçiminde olabilir. Daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerinin mimarisi](../vsto/architecture-of-document-level-customizations.md).
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Bir Word veya Excel belgesine özelleştirme eklemek için <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfının <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> yöntemini kullanın. <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> sınıfı Microsoft Office yüklü olmayan bir bilgisayarda çalışacak şekilde tasarlandığından, bu yöntemi, doğrudan Microsoft Office geliştirmeyle ilgili olmayan çözümlerde (konsol veya Windows Forms uygulaması gibi) kullanabilirsiniz.
+ Bir Word veya Excel belgesine özelleştirme eklemek için, <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> sınıfının yöntemini kullanın <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> . <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>Sınıfı Microsoft Office yüklü olmayan bir bilgisayarda çalışacak şekilde tasarlandığından, bu yöntemi doğrudan Microsoft Office geliştirmeyle ilgili olmayan çözümlerde (konsol veya Windows Forms uygulaması gibi) kullanabilirsiniz.
 
 > [!NOTE]
 > Kod, belirtilen belgenin sahip olmadığı denetimleri bekliyorsa, özelleştirme yükleme başarısız olur.
 
 ### <a name="to-attach-managed-code-extensions-to-a-document"></a>Yönetilen kod uzantılarını bir belgeye eklemek için
 
-1. Konsol uygulaması veya Windows Forms projesi gibi Microsoft Office gerektirmeyen bir projede, *Microsoft. VisualStudio. Tools. Applications. ServerDocument. dll* dosyasına bir başvuru ekleyin ve  *Microsoft. VisualStudio. Tools. Applications. Runtime. dll* derlemeleri.
+1. Konsol uygulaması veya Windows Forms projesi gibi Microsoft Office gerektirmeyen bir projede, *Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll* ve *Microsoft.VisualStudio.Tools.Applications.Runtime.dll* derlemelerine bir başvuru ekleyin.
 
 2. Aşağıdaki **Içeri aktarmaları** veya **using** deyimlerini, kod dosyanızın en üstüne ekleyin.
 
      [!code-csharp[Trin_VstcoreDeployment#4](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#4)]
      [!code-vb[Trin_VstcoreDeployment#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#4)]
 
-3. Statik <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> yöntemini çağırın.
+3. Statik yöntemi çağırın <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> .
 
-     Aşağıdaki kod örneği <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> aşırı yüklemeyi kullanır. Bu aşırı yükleme, belgenin tam yolunu ve belgeye iliştirmek istediğiniz özelleştirme için dağıtım bildiriminin konumunu belirten bir <xref:System.Uri> alır. Bu örnekte, **WordDocument1. docx** adlı bir Word belgesinin masaüstünde olduğu ve dağıtım bildiriminin de aynı zamanda masaüstündeki **Yayımla** adlı bir klasörde bulunduğu varsayılmaktadır.
+     Aşağıdaki kod örneği <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.AddCustomization%2A> aşırı yüklemeyi kullanır. Bu aşırı yükleme, belgenin tam yolunu alır ve <xref:System.Uri> belgeye iliştirmek istediğiniz özelleştirme için dağıtım bildiriminin konumunu belirtir. Bu örnek, **WordDocument1.docx** adlı bir Word belgesinin masaüstünde olduğunu ve dağıtım bildiriminin, aynı zamanda masaüstündeki **Yayımla** adlı bir klasörde bulunduğunu varsayar.
 
      [!code-csharp[Trin_VstcoreDeployment#3](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#3)]
      [!code-vb[Trin_VstcoreDeployment#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#3)]

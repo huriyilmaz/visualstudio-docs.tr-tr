@@ -15,30 +15,30 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d3e94f308936f898e555b1ad38e6a9d50051a276
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ecf829251cbeab600cb95f8f0c0b0173cd7338d4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72659547"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546282"
 ---
-# <a name="ca2204-literals-should-be-spelled-correctly"></a>CA2204: Değişmez değerler doğru yazılmalıdır
+# <a name="ca2204-literals-should-be-spelled-correctly"></a>CA2204: Harfler doğru yazılmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|LiteralsShouldBeSpelledCorrectly|
 |CheckId|CA2204|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir yöntem, yerelleştirilmiş bir dize gerektiren bir parametre veya özellikte kullanılan bir sabit dize geçirir ve sabit dize, Microsoft yazım denetleyicisi kitaplığı tarafından tanınmayan bir veya daha fazla sözcük içeriyor.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Bu kural, aşağıdaki durumlardan biri veya daha fazlası doğru olduğunda bir parametreye veya özelliğe değer olarak geçirilen bir sabit dize denetler:
 
-- Parametrenin veya özelliğin <xref:System.ComponentModel.LocalizableAttribute> özniteliği true olarak ayarlandı.
+- <xref:System.ComponentModel.LocalizableAttribute>Parametrenin veya özelliğin özniteliği true olarak ayarlandı.
 
 - Parametre veya özellik adı "metin", "Ileti" veya "başlık" içerir.
 
@@ -57,4 +57,4 @@ ms.locfileid: "72659547"
 ## <a name="related-rules"></a>İlgili kurallar
  [CA1704: Tanımlayıcılar doğru yazılmalıdır](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)
 
- [CA1703: Kaynak dizeler doğru yazılmalıdır](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+ [CA1703: Kaynak dizeleri doğru yazılmalıdır](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)

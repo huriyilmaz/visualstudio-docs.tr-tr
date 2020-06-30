@@ -8,28 +8,28 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9d4ca2668f2d6241e9a3cca88b4722ee5348abc3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 27d837c09e5f2f90796c149bf58d1114d7e6352d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667417"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546321"
 ---
 # <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153: Bozuk Durum Özel Durumlarını İşlemekten Kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|AvoidHandlingCorruptedStateExceptions|
 |CheckId|CA2153|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  [Bozuk durum özel durumları (CSE)](https://msdn.microsoft.com/magazine/dd419661.aspx) , işlemde belleğin bozulma olduğunu gösterir. Bir saldırgan bozuk bellek bölgesine bir yararlanma işlemi gerçekleştirilebileceği takdirde, işlemin çökmesine izin vermek yerine bunları yakalama güvenlik açıklarına yol açabilir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- CSE, bir işlemin durumunun bozuk olduğunu ve sistem tarafından yakalanmadığını gösterir. Bozuk durum senaryosunda, bir genel işleyici yalnızca uygun `HandleProcessCorruptedStateExceptions` özniteliğiyle yönteminizin işaretlenmesi durumunda özel durumu yakalar. Varsayılan olarak, [ortak dil çalışma zamanı (CLR)](https://msdn.microsoft.com/library/8bs2ecf4.aspx) CSEs için catch işleyicilerini çağırmaz.
+ CSE, bir işlemin durumunun bozuk olduğunu ve sistem tarafından yakalanmadığını gösterir. Bozuk durum senaryosunda, bir genel işleyici yalnızca özel özniteliği olan yöntemi işaret ederseniz özel durumu yakalar `HandleProcessCorruptedStateExceptions` . Varsayılan olarak, [ortak dil çalışma zamanı (CLR)](https://msdn.microsoft.com/library/8bs2ecf4.aspx) CSEs için catch işleyicilerini çağırmaz.
 
  İşlemin bu tür özel durumlar yakalanmadan kilitlenmesine izin vermek en güvenli seçenektir, hatta günlük kodu, saldırganların bellek bozulması hatalarından faydalara izin verebilir.
 
@@ -38,7 +38,7 @@ ms.locfileid: "72667417"
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu uyarıyı çözmek için aşağıdakilerden birini yapmalısınız:
 
- 1. @No__t_0 özniteliğini kaldırın. Bu, CSEs 'nin catch işleyicilerine geçirilmediği varsayılan çalışma zamanı davranışına geri döner.
+ 1. Özniteliği kaldırın `HandleProcessCorruptedStateExceptions` . Bu, CSEs 'nin catch işleyicilerine geçirilmediği varsayılan çalışma zamanı davranışına geri döner.
 
  2. Özel özel durum türlerini yakalayacak işleyicilerin tercih halinde genel catch işleyicisini kaldırın.  Bu, işleyici kodunun güvenli bir şekilde işleyebileceğini (çok nadir) kabul eden bir CSEs içerebilir.
 

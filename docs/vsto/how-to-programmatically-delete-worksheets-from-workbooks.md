@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: çalışma kitaplarındaki çalışma sayfalarını program aracılığıyla silme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 04c7eafd99d122c0b502e4b804b050bf7c59761f
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 38aa92ae1c320ae9eb5ad4bdb1e43b761048661f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985836"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547140"
 ---
 # <a name="how-to-programmatically-delete-worksheets-from-workbooks"></a>Nasıl yapılır: çalışma kitaplarındaki çalışma sayfalarını program aracılığıyla silme
   Çalışma kitabındaki tüm çalışma sayfalarını silebilirsiniz. Çalışma sayfasını silmek için çalışma sayfası konak öğesini kullanın veya çalışma kitabının sayfalar koleksiyonunu kullanarak çalışma sayfasına erişin.
@@ -26,7 +26,7 @@ ms.locfileid: "72985836"
  [!INCLUDE[appliesto_xlalldocapp](includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="use-the-worksheet-host-item"></a>Çalışma sayfası konak öğesini kullan
- Belge düzeyi özelleştirmesindeki çalışma sayfası tasarım zamanında eklendiyse, belirtilen çalışma sayfasını silmek için <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> yöntemini kullanın. Aşağıdaki kod, çalışma sayfası konak öğesine doğrudan başvurarak çalışma kitabını çalışma kitabından siler.
+ Belge düzeyi özelleştirmesindeki çalışma sayfası tasarım zamanında eklendiyse, <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> belirtilen çalışma sayfasını silmek için yöntemini kullanın. Aşağıdaki kod, çalışma sayfası konak öğesine doğrudan başvurarak çalışma kitabını çalışma kitabından siler.
 
 > [!IMPORTANT]
 > Bu kod yalnızca aşağıdaki proje şablonlarından birini kullanarak oluşturduğunuz projelerde çalışır:
@@ -40,13 +40,13 @@ ms.locfileid: "72985836"
 
 ### <a name="to-delete-a-worksheet-by-using-a-worksheet-host-item"></a>Çalışma sayfası konak öğesi kullanarak çalışma sayfasını silmek için
 
-1. `Sheet1`<xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> yöntemini çağırın.
+1. Yöntemini çağırın <xref:Microsoft.Office.Tools.Excel.Worksheet.Delete%2A> `Sheet1` .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#17](codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#17)]
      [!code-vb[Trin_VstcoreExcelAutomation#17](codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#17)]
 
 ## <a name="use-the-sheets-collection-of-the-excel-workbook"></a>Excel çalışma kitabının sayfalar koleksiyonunu kullanın
- Aşağıdaki durumlarda Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Sheets> koleksiyonuyla çalışma sayfalarına erişin:
+ Aşağıdaki durumlarda Microsoft Office Excel koleksiyonu aracılığıyla çalışma sayfalarına erişin <xref:Microsoft.Office.Interop.Excel.Sheets> :
 
 - Bir VSTO eklentisinin çalışma sayfasını silmek istiyorsunuz.
 
@@ -59,7 +59,7 @@ ms.locfileid: "72985836"
 
 ### <a name="to-delete-a-worksheet-by-using-the-sheets-collection-of-the-excel-workbook"></a>Excel çalışma kitabının sayfalar koleksiyonunu kullanarak bir çalışma sayfasını silmek için
 
-1. <xref:Microsoft.Office.Interop.Excel.Sheets> koleksiyonunun <xref:Microsoft.Office.Interop.Excel._Worksheet.Delete%2A> yöntemini çağırın.
+1. <xref:Microsoft.Office.Interop.Excel._Worksheet.Delete%2A>Koleksiyonun yöntemini çağırın <xref:Microsoft.Office.Interop.Excel.Sheets> .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#18](codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#18)]
      [!code-vb[Trin_VstcoreExcelAutomation#18](codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#18)]

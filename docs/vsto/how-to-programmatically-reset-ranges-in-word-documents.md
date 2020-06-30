@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Word belgelerinde aralıkları program aracılığıyla sıfırlama'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,57 +13,57 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 622d807da832c4c07baf8b62c902c2b1d25cc14d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8f1978a280a26af3b2a21e0bc5a4c9a238a723a9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955710"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547127"
 ---
 # <a name="how-to-programmatically-reset-ranges-in-word-documents"></a>Nasıl yapılır: Word belgelerinde aralıkları program aracılığıyla sıfırlama
-  Kullanım <xref:Microsoft.Office.Interop.Word.Range.SetRange%2A> bir Microsoft Office Word belgesi var olan bir aralıkta yeniden boyutlandırmak için yöntemi.
+  <xref:Microsoft.Office.Interop.Word.Range.SetRange%2A>Microsoft Office Word belgesinde mevcut bir aralığı yeniden boyutlandırmak için yöntemini kullanın.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="to-reset-an-existing-range"></a>Var olan bir aralığı sıfırlamak için
+## <a name="to-reset-an-existing-range"></a>Mevcut bir aralığı sıfırlamak için
 
-1. Belgedeki ilk yedi karakterlerle başlayan bir başlangıç aralığı ayarlayın.
+1. Belgedeki ilk yedi karakterle başlayan bir başlangıç aralığı ayarlayın.
 
-     Aşağıdaki kod örneği belge düzeyi özelleştirmesinde kullanılabilir.
+     Aşağıdaki kod örneği, belge düzeyi özelleştirmesinde kullanılabilir.
 
      [!code-vb[Trin_VstcoreWordAutomation#43](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#43)]
      [!code-csharp[Trin_VstcoreWordAutomation#43](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#43)]
 
-     Aşağıdaki kod örneği, VSTO eklentisi içinde kullanılabilir. Bu kod, etkin belgeyi kullanır.
+     Aşağıdaki kod örneği bir VSTO eklentisi içinde kullanılabilir. Bu kod etkin belgeyi kullanır.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#43](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#43)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#43](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#43)]
 
-2. Kullanım <xref:Microsoft.Office.Interop.Word.Range.SetRange%2A> ikinci cümlenin aralığı başlatmak ve beşinci cümlenin sonuna sonlandırmak için.
+2. <xref:Microsoft.Office.Interop.Word.Range.SetRange%2A>Aralığı ikinci tümcede başlatmak ve beşinci tümcenin sonunda sonlandırmak için kullanın.
 
      [!code-vb[Trin_VstcoreWordAutomation#44](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#44)]
      [!code-csharp[Trin_VstcoreWordAutomation#44](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#44)]
 
 ## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirmesi örneği
 
-### <a name="to-reset-an-existing-range-in-a-document-level-customization"></a>Belge düzeyi özelleştirmesinde mevcut bir aralığı sıfırlamak için
+### <a name="to-reset-an-existing-range-in-a-document-level-customization"></a>Belge düzeyi özelleştirmesindeki mevcut bir aralığı sıfırlamak için
 
-1. Aşağıdaki örnek bir belge düzeyi özelleştirmesi için tam bir örnek gösterilmektedir. Bu kodu kullanmak için çalıştırın `ThisDocument` projenizdeki sınıfı.
+1. Aşağıdaki örnekte, belge düzeyi özelleştirmesi için tam örnek gösterilmektedir. Bu kodu kullanmak için `ThisDocument` projenizdeki sınıftan çalıştırın.
 
      [!code-vb[Trin_VstcoreWordAutomation#42](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#42)]
      [!code-csharp[Trin_VstcoreWordAutomation#42](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#42)]
 
-## <a name="vsto-add-in-example"></a>VSTO eklenti örneği
+## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
 
-### <a name="to-reset-an-existing-range-in-a-vsto-add-in"></a>Bir VSTO eklentisi, mevcut bir aralığı sıfırlamak için
+### <a name="to-reset-an-existing-range-in-a-vsto-add-in"></a>VSTO eklentideki mevcut bir aralığı sıfırlamak için
 
-1. Aşağıdaki örnek, VSTO eklentisi için tam bir örnek gösterir. Bu kodu kullanmak için çalıştırın `ThisAddIn` projenizdeki sınıfı.
+1. Aşağıdaki örnekte, VSTO eklentisi için tam örnek gösterilmektedir. Bu kodu kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#42](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#42)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#42](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#42)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Belgelerde aralıkları program aracılığıyla genişletme](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
-- [Nasıl yapılır: Program aracılığıyla tanımlama ve belgelerde aralıkları seçin](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
-- [Nasıl yapılır: Program aracılığıyla aralıkta başlangıç ve bitiş karakterlerini alma](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
-- [Nasıl yapılır: Aralıkları veya seçimleri program aracılığıyla daraltma](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)
+- [Nasıl yapılır: belgelerde aralıkları program aracılığıyla genişletme](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
+- [Nasıl yapılır: belgelerde aralıkları program aracılığıyla tanımlama ve seçme](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [Nasıl yapılır: aralıklarda program aracılığıyla başlangıç ve bitiş karakterlerini alma](../vsto/how-to-programmatically-retrieve-start-and-end-characters-in-ranges.md)
+- [Nasıl yapılır: belgelerde aralıkları veya seçimleri program aracılığıyla daraltma](../vsto/how-to-programmatically-collapse-ranges-or-selections-in-documents.md)

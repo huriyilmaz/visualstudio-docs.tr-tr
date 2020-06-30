@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Outlook kişilerini program aracılığıyla silme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,15 +13,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 55ee5698ce1cb36a79a596124dedd681e6da4bdf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4412c86652d08fb1c415b4753bfb18a903a0b0d9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62814631"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545944"
 ---
 # <a name="how-to-programmatically-delete-outlook-contacts"></a>Nasıl yapılır: Outlook kişilerini program aracılığıyla silme
-  Bu örnek, bir kişiyi siler. Örnek "Armando Pinto" adlı bir kişi bulunduğunu varsayar **kişiler** klasör.
+  Bu örnek, bir kişiyi siler. Örnek, **kişiler** klasöründe "Armando Pinto" adlı bir kişinin bulunduğunu varsayar.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -31,5 +31,5 @@ ms.locfileid: "62814631"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kişi öğeleriyle çalışma](../vsto/working-with-contact-items.md)
-- [Nasıl yapılır: Program aracılığıyla belirli bir kişi arama](../vsto/how-to-programmatically-search-for-a-specific-contact.md)
-- [Nasıl yapılır: Program aracılığıyla Outlook Kişilerine erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)
+- [Nasıl yapılır: program aracılığıyla belirli bir kişi arama](../vsto/how-to-programmatically-search-for-a-specific-contact.md)
+- [Nasıl yapılır: program aracılığıyla Outlook kişilerine erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)

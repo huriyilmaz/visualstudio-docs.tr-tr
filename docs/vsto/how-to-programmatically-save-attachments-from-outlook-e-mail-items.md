@@ -1,7 +1,7 @@
 ---
-title: Ekleri Outlook e-posta öğelerinden program aracılığıyla kaydetme
+title: Outlook e-posta öğelerinden ekleri program aracılığıyla Kaydet
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - CSharp
 helpviewer_keywords:
@@ -15,19 +15,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e7e0cff4761b26bac8265592b681d4e56f2ad92f
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: 9fbe6099a8928397a7d885ac72c4f34da2da6af0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67328958"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545892"
 ---
-# <a name="how-to-programmatically-save-attachments-from-outlook-email-items"></a>Nasıl yapılır: Ekleri Outlook e-posta öğelerinden program aracılığıyla kaydetme
+# <a name="how-to-programmatically-save-attachments-from-outlook-email-items"></a>Nasıl yapılır: Outlook e-posta öğelerinden program aracılığıyla ekleri kaydetme
 
-Bu örnek, posta gelen kutusunda alındığında e-posta eklerini belirli bir klasöre kaydeder.
+Bu örnek, e-posta eki, posta gelen kutusuna alındığında belirtilen klasöre kaydedilir.
 
 > [!IMPORTANT]
-> Bu örnek adlı bir klasör eklerseniz çalışır **TestFileSave** C dizininin köküne.
+> Bu örnek yalnızca C dizininin köküne **TestFileSave** adlı bir klasör eklerseniz geçerlidir.
 
 [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -38,6 +38,6 @@ Bu örnek, posta gelen kutusunda alındığında e-posta eklerini belirli bir kl
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Posta öğeleriyle çalışma](../vsto/working-with-mail-items.md)
-- [Nasıl yapılır: Program aracılığıyla klasörü ada göre alma](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
-- [Nasıl yapılır: Bir e-posta iletisi alındığında program aracılığıyla işlem gerçekleştirme](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)
-- [Nasıl yapılır: Belirli klasör içinde program aracılığıyla arama yapma](../vsto/how-to-programmatically-search-within-a-specific-folder.md)
+- [Nasıl yapılır: program aracılığıyla bir klasörü ada göre alma](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
+- [Nasıl yapılır: e-posta iletisi alındığında program aracılığıyla eylem gerçekleştirme](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)
+- [Nasıl yapılır: belirli bir klasör içinde program aracılığıyla arama](../vsto/how-to-programmatically-search-within-a-specific-folder.md)

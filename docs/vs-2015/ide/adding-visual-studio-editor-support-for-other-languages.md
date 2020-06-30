@@ -15,12 +15,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7138784201a1ac036047e1c8df362727fa393b51
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e9dbd245edd81907197e23c0d193a01cc07424b4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72620782"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548115"
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>Visual Studio düzenleyicisine diğer diller için destek ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -34,18 +34,46 @@ Visual Studio düzenleyicisinin farklı bilgisayar dillerini okumayı ve gezinme
 
  Visual Studio şu anda [TextMate Grammars](https://manual.macromates.com/en/language_grammars)kullanarak aşağıdaki diller için sözdizimi renklendirme ve temel ifade tamamlama desteği sunmaktadır. En sevdiğiniz dil tabloda değilse, bu, endişelenmeyin, siz de ekleyebilirsiniz.
 
-|||||||
-|-|-|-|-|-|-|
-|Dosyasýný|F#|Java|MARKDOWN|Rust|Visual Basic|
-|Eljure|Sayfasına|JavaDoc|Objective-C|ShaderLab|Visual C#|
-|CMake|Groovy|JSON|Perl|ShellScript|Visual C++|
-|CoffeeScript|HTML|BÜYÜKTÜR|Python|SQL|VBNet|
-|CSS|INI|ISTEMCIYI|R|SWIFT|XML|
-|Docker|Jade|Marka|Söyleniş|TypeScript|YAML|
+- Dosyasýný
+- F#
+- Java
+- Markdown
+- Rust
+- Visual Basic
+- Clojure
+- Go
+- JavaDoc
+- Objective-C
+- ShaderLab
+- C#
+- CMake
+- Groovy
+- JSON
+- Perl
+- ShellScript
+- Visual C++
+- CoffeeScript
+- HTML
+- BÜYÜKTÜR
+- Python
+- SQL
+- VBNet
+- CSS
+- INI
+- ISTEMCIYI
+- R
+- Swift
+- XML
+- Docker
+- Jade
+- Marka
+- Ruby
+- TypeScript
+- YAML
 
  Visual Studio, sözdizimi renklendirme ve temel deyimin tamamlanmasına ek olarak [şuraya git](https://blogs.msdn.microsoft.com/benwilli/2015/04/09/visual-studio-tip-3-use-navigate-to/)adlı bir özelliğe de sahiptir. Bu özellik, kod dosyalarında, dosya yollarında ve kod sembollerine hızlıca arama yapmanızı sağlar. Visual Studio aşağıdaki diller için desteğe git sağlar.
 
-- Sayfasına
+- Başlayın
 
 - Java
 
@@ -68,17 +96,17 @@ Visual Studio düzenleyicisinin farklı bilgisayar dillerini okumayı ve gezinme
 
  Aşağıdaki klasöre Visual Studio için yeni bir TextMate dilbilgisi ekleyin:
 
- % userprofile% \\. vs\Extensions
+ % userprofile% \\ . Vs\extensions
 
  Bu temel yol altında, durumunuza uygulandıklarında aşağıdaki klasörleri ekleyin:
 
-|Klasör adı|Açıklama|
+|Klasör adı|Description|
 |-----------------|-----------------|
-|\\ *\<language adı >*|Dil klasörü. *@No__t_1language adı >* dilin adıyla değiştirin. Örneğin, **\Matlab**.|
-|\ Sözdizimleri|Dilbilgisi klasörü. Dil için **MATLAB. JSON**gibi Grammar. JSON dosyalarını içerir.|
+|\\*\<language name>*|Dil klasörü. *\<language name>* Dilin adıyla değiştirin. Örneğin, **\Matlab**.|
+|\ Sözdizimleri|Dilbilgisi klasörü. Dil için **Matlab.js**gibi Grammar. JSON dosyalarını içerir.|
 |\ Kod parçacıkları|Parçacıklar klasörü. Dil için kod parçacıkları içerir.|
 
- Windows 'da% userprofile%, şu yola çözümleniyor: c:\Users \\ *\<user adı >* . Uzantılar klasörü sisteminizde yoksa, oluşturmanız gerekir. Klasör zaten varsa gizli olacaktır.
+ Windows 'da% userprofile% şu yolu çözer: c:\Users \\ *\<user name>* . Uzantılar klasörü sisteminizde yoksa, oluşturmanız gerekir. Klasör zaten varsa gizli olacaktır.
 
  TextMate dilbilgisi oluşturma hakkında ayrıntılı bilgi için bkz. [TextMate – dile giriş dilbilgisi: HTML 'de gömülü kaynak kodu sözdizimi vurgulamayı ekleme](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/) ve [bir TextMate paketi için dil dilbilgisi ve özel tema oluşturma hakkında notlar](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle).
 

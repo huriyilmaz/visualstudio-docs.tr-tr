@@ -15,28 +15,28 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d20407d7cc708ac785e4a792bf8e64768ea58540
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6d63ef6ff3647742e931fd05f59c66b40059ad00
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667386"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546373"
 ---
-# <a name="ca2200-rethrow-to-preserve-stack-details"></a>CA2200: Yığın ayrıntılarını korumak için yeniden fırlatma
+# <a name="ca2200-rethrow-to-preserve-stack-details"></a>CA2200: Yığın ayrıntılarını korumak için yeniden fırlatın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|RethrowToPreserveStackDetails|
 |CheckId|CA2200|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Bir özel durum yeniden oluşturulur ve `throw` bildiriminde özel durum açıkça belirtilir.
+## <a name="cause"></a>Nedeni
+ Bir özel durum yeniden oluşturulur ve özel durum `throw` deyimde açıkça belirtilir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir özel durum oluşturulduktan sonra, içerdiği bilgilerin bir kısmı yığın izgıdır. Yığın izlemesi, özel durumu oluşturan yöntemiyle başlayan ve özel durumu yakalayan yöntemle biten Yöntem çağrısı hiyerarşisinin bir listesidir. @No__t_0 deyimindeki özel durum belirtilerek bir özel durum yeniden oluşturulursa, yığın izlemesi geçerli yöntemde yeniden başlatılır ve özel durumu oluşturan özgün Yöntem ve geçerli yöntem arasındaki yöntem çağrılarının listesi kaybedilir. Özgün yığın izleme bilgilerini özel durumla birlikte tutmak için, özel durumu belirtmeden `throw` ifadesini kullanın.
+ Bir özel durum oluşturulduktan sonra, içerdiği bilgilerin bir kısmı yığın izgıdır. Yığın izlemesi, özel durumu oluşturan yöntemiyle başlayan ve özel durumu yakalayan yöntemle biten Yöntem çağrısı hiyerarşisinin bir listesidir. Deyimdeki özel durum belirtilerek bir özel durum yeniden oluşturulursa `throw` , yığın izlemesi geçerli yöntemde yeniden başlatılır ve özel durumu oluşturan özgün yöntem ile geçerli yöntem arasındaki yöntem çağrılarının listesi kaybedilir. Özgün yığın izleme bilgilerini özel durumla birlikte tutmak için, `throw` özel durumu belirtmeden ifadesini kullanın.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kuralın ihlalini onarmak için özel durumu açıkça belirtmeden özel durumu yeniden oluşturun.
@@ -45,7 +45,7 @@ ms.locfileid: "72667386"
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, kuralı ve `CatchAndRethrowImplicitly` ' i ihlal eden `CatchAndRethrowExplicitly` ' ı bir yöntemi gösterir.
+ Aşağıdaki örnek, kuralını `CatchAndRethrowExplicitly` karşılayan kuralı ve yöntemi ihlal eden bir yöntemi gösterir `CatchAndRethrowImplicitly` .
 
  [!code-csharp[FxCop.Usage.Rethrow#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.Rethrow/cs/FxCop.Usage.Rethrow.cs#1)]
  [!code-vb[FxCop.Usage.Rethrow#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.Rethrow/vb/FxCop.Usage.Rethrow.vb#1)]

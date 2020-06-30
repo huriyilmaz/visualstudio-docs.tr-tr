@@ -1,7 +1,7 @@
 ---
 title: Diyagramları görüntü olarak dışarı aktarma
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - modeling diagrams, saving
 - diagrams - modeling, saving modeling diagrams
@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 56b7839985871333bb120057efde92e58baebdec
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2e433e47d04a2beb1521aba65be664f7c7efd44f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596625"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547608"
 ---
 # <a name="export-diagrams-as-images"></a>Diyagramları görüntü olarak dışarı aktarma
 
@@ -38,7 +38,7 @@ Hangi Visual Studio sürümlerini bu özelliği desteklediğini görmek için bk
 
 2. **Ad** listesinde, **Microsoft XPS Belge Yazıcısı**' nı seçin ve ardından **Tamam**' a tıklayın.
 
-3. **Dosyayı farklı kaydet** iletişim kutusunda, dosyayı bir **XPS belgesi (\*. XPS)** dosyası olarak kaydedin.
+3. **Dosyayı farklı kaydet** iletişim kutusunda, dosyayı bir **XPS belgesi ( \* . XPS)** dosyası olarak kaydedin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

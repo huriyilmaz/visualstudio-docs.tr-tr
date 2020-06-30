@@ -15,25 +15,25 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b190e007cfdb016e54148cf0295c68baf68c5033
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a240a6eea86075bbf7f721f8620b6d135d594c20
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661958"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546672"
 ---
-# <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Uygun yerlerde özellikler kullan
+# <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Uygun yerlerde özellikleri kullanın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|UsePropertiesWhereAppropriate|
 |CheckId|CA1024|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Ortak veya korumalı bir yöntemin `Get` ile başlayan bir adı vardır, hiçbir parametre kullanmaz ve dizi olmayan bir değer döndürür.
+## <a name="cause"></a>Nedeni
+ Ortak veya korumalı bir yöntem ile başlayan `Get` , hiçbir parametre içermeyen ve dizi olmayan bir değer döndüren bir ada sahiptir.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Çoğu durumda, özellikler verileri ve yöntemleri eylemler gerçekleştirir. Özellikler, alanları gibi erişilir, bu da daha kolay kullanılmasını sağlar. Bu koşullardan biri mevcutsa, bir özellik olmak için bir yöntem iyi bir adaydır:
@@ -67,7 +67,7 @@ ms.locfileid: "72661958"
 ## <a name="controlling-property-expansion-in-the-debugger"></a>Hata ayıklayıcıda Özellik genişletmeyi denetleme
  Programcıların bir özelliği kullanmaktan kaçınmasının nedeni, hata ayıklayıcının otomatik olarak genişletmesine engel olmasıdır. Örneğin, özelliği büyük bir nesne ayırmayı veya bir P/Invoke çağırmayı içerebilir, ancak aslında herhangi bir observable yan etkisi olmayabilir.
 
- @No__t_0 uygulayarak hata ayıklayıcının özellikleri otomatik olarak genişletmesinin engellenmesini sağlayabilirsiniz. Aşağıdaki örnek, bir örnek özelliğine uygulanan bu özniteliği gösterir.
+ Hata ayıklayıcının, özellikleri uygulayarak otomatik olarak genişletmesinin engellenmesini sağlayabilirsiniz <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName> . Aşağıdaki örnek, bir örnek özelliğine uygulanan bu özniteliği gösterir.
 
 ```vb
 Imports System

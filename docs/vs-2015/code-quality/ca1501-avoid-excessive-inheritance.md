@@ -15,24 +15,24 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a2106042b552efbe824d7517abcc86e322b57aa9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: cf797ad67b7df2eb1f3ba1246e965ed6ebbd586d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607862"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547868"
 ---
-# <a name="ca1501-avoid-excessive-inheritance"></a>CA1501: Aşırı devralmadan kaçın
+# <a name="ca1501-avoid-excessive-inheritance"></a>CA1501: Aşırı devralmadan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|AvoidExcessiveInheritance|
 |CheckId|CA1501|
 |Kategori|Microsoft. Bakımolmaması|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Devralma hiyerarşisinde düzeyleri dörtten fazla olan türdür.
 
 ## <a name="rule-description"></a>Kural Tanımı

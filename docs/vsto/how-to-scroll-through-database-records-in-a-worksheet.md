@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Çalışma sayfasındaki veritabanı kayıtları arasında kaydırma'
+title: 'Nasıl yapılır: çalışma sayfasındaki veritabanı kayıtlarını kaydırma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +15,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f0b3c6a8a9292ceda03c9d0020b78d9518ca49d9
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 8127a5f61e292fb777be4854796535bbe01226aa
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252040"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545801"
 ---
-# <a name="how-to-scroll-through-database-records-in-a-worksheet"></a>Nasıl yapılır: Çalışma sayfasındaki veritabanı kayıtları arasında kaydırma
+# <a name="how-to-scroll-through-database-records-in-a-worksheet"></a>Nasıl yapılır: çalışma sayfasındaki veritabanı kayıtlarını kaydırma
   Aşağıdaki yordamda, Microsoft Office bir Excel çalışma sayfasındaki veritabanı tablosundan, son kullanıcının tüm kayıtlarda gezindiğini etkinleştiren denetimlerle tek bir alan göstermek için tasarımcının nasıl kullanılacağı gösterilmektedir.
 
- Tasarımcıyı yalnızca belge düzeyinde projeler içinde kullanabilirsiniz. Bununla birlikte, denetimleri de ekleyebilir ve çalışma zamanında programlı olarak verilere bağlayabilirsiniz. Daha fazla bilgi için bkz [. İzlenecek yol: VSTO eklenti projesinde](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md)basit veri bağlama.
+ Tasarımcıyı yalnızca belge düzeyinde projeler içinde kullanabilirsiniz. Bununla birlikte, denetimleri de ekleyebilir ve çalışma zamanında programlı olarak verilere bağlayabilirsiniz. Daha fazla bilgi için bkz. [Izlenecek yol: VSTO eklentisi projesinde basit veri bağlama](../vsto/walkthrough-simple-data-binding-in-vsto-add-in-project.md).
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
@@ -39,9 +39,9 @@ ms.locfileid: "71252040"
 
 4. Denetim listesini açın ve **NamedRange**' i seçin.
 
-5. <xref:Microsoft.Office.Tools.Excel.NamedRange> Denetimi, verilerin görünmesini istediğiniz hücreye sürükleyin.
+5. Denetimi, <xref:Microsoft.Office.Tools.Excel.NamedRange> verilerin görünmesini istediğiniz hücreye sürükleyin.
 
-6. Araç kutusu **Windows Forms** sekmesinden, çalışmasayfanıza bir <xref:System.Windows.Forms.BindingNavigator> denetim ekleyin ve kullanmak istediğiniz denetimleri ayarlayın. Daha fazla bilgi için bkz. [BindingNavigator denetimine &#40;genel&#41;bakış Windows Forms](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms).
+6. **Araç kutusu** **Windows Forms** sekmesinden, <xref:System.Windows.Forms.BindingNavigator> çalışma sayfanıza bir denetim ekleyin ve kullanmak istediğiniz denetimleri ayarlayın. Daha fazla bilgi için bkz. [BindingNavigator denetimine genel bakış &#40;Windows Forms&#41;](/dotnet/framework/winforms/controls/bindingnavigator-control-overview-windows-forms).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)

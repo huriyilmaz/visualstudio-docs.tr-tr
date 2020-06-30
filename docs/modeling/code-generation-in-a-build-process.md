@@ -1,7 +1,7 @@
 ---
 title: Derleme Sürecinde Kod Oluşturma
 ms.date: 03/22/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - text templates, build tasks
 - text templates, transforming by using msbuild
@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e01136b845124d74c22ceb1c7cab877a8e2d1d04
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1fd7538782bff80ee12ac0aa0e66c0daa4da2d5c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590559"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546724"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>Yapı işleminde metin dönüşümünü çağır
 
@@ -26,7 +26,7 @@ ms.locfileid: "75590559"
 
 Kullandığınız oluşturma motoruna bağlı olarak, yapı görevleri farklı işlevleri yerine getirebilirler. Visual Studio 'da çözümü oluşturduğunuzda, [hostspecific = "true"](../modeling/t4-template-directive.md) özniteliği ayarlandıysa bir metin şablonu Visual Studio API 'Sine (EnvDTE) erişebilir. Bu, çözümü komut satırından oluşturduğunuzda ya da Visual Studio aracılığıyla bir sunucu derlemesi başlattığınızda doğru değildir. Bu durumlarda, yapı MSBuild tarafından oluşturulur ve farklı bir T4 ana bilgisayar kullanılır. Bu, MSBuild kullanarak bir metin şablonu oluşturduğunuzda, proje dosya adları gibi şeylere aynı şekilde erişemeyeceğiniz anlamına gelir. Ancak, [Yapı parametrelerini kullanarak ortam bilgilerini metin şablonlarına ve yönerge işlemcilere geçirebilirsiniz](#parameters).
 
-## <a name="buildserver"></a>Makinelerinizi yapılandırma
+## <a name="configure-your-machines"></a><a name="buildserver"></a>Makinelerinizi yapılandırma
 
 Geliştirme bilgisayarınızda derleme görevlerini etkinleştirmek için, Visual Studio için modelleme SDK 'sını yükler.
 
@@ -36,22 +36,22 @@ Geliştirme bilgisayarınızda derleme görevlerini etkinleştirmek için, Visua
 
 - % ProgramFiles (x86)% \ Microsoft Visual Studio\2019\community\msbuild\microsoft\visualstudio\v16.0\textşablon oluşturma
 
-  - Microsoft. VisualStudio. Textşablon. SDK. Host. 15.0. dll
+  - Microsoft.VisualStudio.TextTemplating.Sdk.Host.15.0.dll
   - Microsoft.TextTemplating.Build.Tasks.dll
   - Microsoft.TextTemplating.targets
 
 - % ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
 
-  - Microsoft. VisualStudio. Textşablon. 15.0. dll
-  - Microsoft. VisualStudio. Textşablon. Interfaces. 15.0. dll
-  - Microsoft. VisualStudio. Textşablon. VSHost. 15.0. dll
+  - Microsoft.VisualStudio.TextTemplating.15.0.dll
+  - Microsoft.VisualStudio.TextTemplating.Interfaces.15.0.dll
+  - Microsoft.VisualStudio.TextTemplating.VSHost.15.0.dll
 
 - % ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies
 
-  - Microsoft. VisualStudio. Textşablon. model. 15.0. dll
+  - Microsoft.VisualStudio.TextTemplating.Modeling.15.0.dll
 
 > [!TIP]
-> Bir yapı sunucusunda Textşablon oluşturma derleme hedeflerini çalıştırırken bir Microsoft. CodeAnalysis yöntemi için `MissingMethodException` alırsanız, Roslyn derlemelerinin derleme yürütülebiliriyle aynı dizinde olan *Roslyn* adlı bir dizinde olduğundan emin olun (örneğin, *MSBuild. exe*).
+> `MissingMethodException`Bir yapı sunucusunda Textşablon oluşturma derleme hedeflerini çalıştırırken Microsoft. CodeAnalysis yöntemi için, Roslyn derlemelerinin derleme yürütülebiliriyle aynı dizinde olan *Roslyn* adlı bir dizinde olduğundan emin olun (örneğin, *msbuild.exe*).
 
 ## <a name="edit-the-project-file"></a>Proje dosyasını düzenleme
 
@@ -65,7 +65,7 @@ MSBuild 'teki bazı özellikleri yapılandırmak için proje dosyanızı düzenl
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`
 
-\- veya -
+\-veya
 
 `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`
 
@@ -147,7 +147,7 @@ Salt okunur dosyaların üzerine yazılması gerektiğini belirtmek için bu öz
 
 ## <a name="customize-the-build-process"></a>Yapı işlemini özelleştirme
 
-Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleşir. Dönüşümden önce ve sonra çağrılan görevleri, `$(BeforeTransform)` özellikleri ve `$(AfterTransform)`ayarlayarak tanımlayabilirsiniz:
+Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleşir. Dönüşümden önce ve sonra çağrılan görevleri ve özelliklerini ayarlayarak tanımlayabilirsiniz `$(BeforeTransform)` `$(AfterTransform)` :
 
 ```xml
 <PropertyGroup>
@@ -162,9 +162,9 @@ Oluşturma işleminde diğer görevlerden önce metin dönüştürme gerçekleş
   </Target>
 ```
 
-`AfterTransform`, dosya listelerine başvurabilirsiniz:
+`AfterTransform`' De, dosya listelerine başvurabilirsiniz:
 
-- GeneratedFiles - işlem tarafından yazılan dosyaların listesi. Mevcut salt okuma dosyalarını içeren dosyalar için `%(GeneratedFiles.ReadOnlyFileOverwritten)` true olur. Bu dosyalar kaynak denetiminden denetlenebilir.
+- GeneratedFiles - işlem tarafından yazılan dosyaların listesi. Varolan salt okuma dosyalarını içeren dosyalar için `%(GeneratedFiles.ReadOnlyFileOverwritten)` doğru olacaktır. Bu dosyalar kaynak denetiminden denetlenebilir.
 
 - NonGeneratedFiles - üzerine yazılmamış, salt okunur dosyaların listesi.
 
@@ -184,7 +184,7 @@ Bu özellikler yalnızca MSBuild tarafından kullanılır. Visual Studio'da kod 
 </ItemGroup>
 ```
 
-Yeniden yönlendirileceği yararlı bir klasör `$(IntermediateOutputPath)`.
+Yeniden yönlendirileceği yararlı bir klasör `$(IntermediateOutputPath)` .
 
 Bir çıkış dosya adı belirtirseniz, şablonlarda çıkış yönergesinde belirtilen uzantıya göre öncelik kazanır.
 
@@ -220,7 +220,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </PropertyGroup>
 ```
 
-## <a name="parameters"></a>Yapı bağlamı verilerini şablonlara geçirme
+## <a name="pass-build-context-data-into-the-templates"></a><a name="parameters"></a>Yapı bağlamı verilerini şablonlara geçirme
 
 Proje dosyasında parametre değerlerini ayarlayabilirsiniz. Örneğin, [Yapı](../msbuild/msbuild-properties.md) özelliklerini ve [ortam değişkenlerini](../msbuild/how-to-use-environment-variables-in-a-build.md)geçirebilirsiniz:
 
@@ -233,7 +233,7 @@ Proje dosyasında parametre değerlerini ayarlayabilirsiniz. Örneğin, [Yapı](
 </ItemGroup>
 ```
 
-Bir metin şablonunda, şablon yönergesinde `hostspecific` ayarlayın. Değerleri almak için [Parameter](../modeling/t4-parameter-directive.md) yönergesini kullanın:
+Bir metin şablonunda, `hostspecific` şablon yönergesinde öğesini ayarlayın. Değerleri almak için [Parameter](../modeling/t4-parameter-directive.md) yönergesini kullanın:
 
 ```
 <#@template language="c#" hostspecific="true"#>
@@ -252,9 +252,9 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 ```
 
 > [!NOTE]
-> `ResolveParameterValue` yalnızca MSBuild kullandığınızda `T4ParameterValues` verileri alır. Visual Studio kullanarak şablonu dönüştürdüğünüzde, parametrelerin varsayılan değerleri vardır.
+> `ResolveParameterValue``T4ParameterValues`yalnızca MSBuild 'i kullandığınızda verileri alır. Visual Studio kullanarak şablonu dönüştürdüğünüzde, parametrelerin varsayılan değerleri vardır.
 
-## <a name="msbuild"></a>Derleme ve ekleme yönergeleri içindeki proje özelliklerini kullanma
+## <a name="use-project-properties-in-assembly-and-include-directives"></a><a name="msbuild"></a>Derleme ve ekleme yönergeleri içindeki proje özelliklerini kullanma
 
 **$ (SolutionDir)** gibi Visual Studio makroları MSBuild 'de çalışmıyor. Bunun yerine, proje özelliklerini kullanabilirsiniz.
 
@@ -283,7 +283,7 @@ Artık derlemede ve ekleme yönergelerinde proje özelliklerini kullanabilirsini
 
 Bu yönergeler, hem MSBuild içinde hem de Visual Studio ana bilgisayarlarında T4parameterValues değerlerini alır.
 
-## <a name="q--a"></a>Soru - Yanıt
+## <a name="q--a"></a>Soru-Cevap
 
 **Neden yapı sunucusundaki şablonları dönüştürmek istiyorum? Kodumu iade etmeden önce Visual Studio 'daki şablonları zaten dönüştürtim.**
 
@@ -303,13 +303,13 @@ Dahil edilen bir dosyayı veya şablon tarafından okunan başka bir dosyayı g�
 
 ::: moniker range="vs-2017"
 
-- `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets` üzerinde T4 MSbuild şablonunda iyi bir kılavuzluk vardır
+- Şu adreste T4 MSbuild şablonunda iyi bir kılavuzluk vardır:`%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets` üzerinde T4 MSbuild şablonunda iyi bir kılavuzluk vardır
+- Şu adreste T4 MSbuild şablonunda iyi bir kılavuzluk vardır:`%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 

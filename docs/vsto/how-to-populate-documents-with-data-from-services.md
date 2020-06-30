@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: belgeleri hizmetlerdeki verilerle doldurma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4f53000f7d6aa8bdd8261bbe5658607918b6b449
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 01e2a83f464576d1ca780daa17c0d9478f0caa14
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985864"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547153"
 ---
 # <a name="how-to-populate-documents-with-data-from-services"></a>Nasıl yapılır: belgeleri hizmetlerdeki verilerle doldurma
 
@@ -35,7 +35,7 @@ Aşağıdaki örnek, tasarım zamanında belgelere veriye dayalı denetimlerin n
 
 2. **Veri kaynakları** penceresinden istediğiniz tabloyu veya alanı belgenize sürükleyin.
 
-     Belgede bir denetim oluşturulur, projenizdeki nesne sınıfına bağlı bir <xref:System.Windows.Forms.BindingSource> oluşturulur ve hizmet için sınıflar oluşturulur.
+     Belge üzerinde bir denetim oluşturulur, <xref:System.Windows.Forms.BindingSource> projenizdeki nesne sınıfına bağlı olan bir oluşturulur ve hizmet için sınıflar oluşturulur.
 
 3. Kodunuzda, 1. adımda ' ye bağladığınız Web hizmeti sınıfının bir örneğini oluşturun.
 
@@ -45,9 +45,9 @@ Aşağıdaki örnek, tasarım zamanında belgelere veriye dayalı denetimlerin n
 
      Kullandığınız yöntemler Web hizmetinin sunduğu yöntemlere bağlıdır.
 
-6. Web hizmetinden veri yanıtını <xref:System.Windows.Forms.BindingSource><xref:System.Windows.Forms.BindingSource.DataSource%2A> özelliğine atayın.
+6. Web hizmetinden veri yanıtını <xref:System.Windows.Forms.BindingSource.DataSource%2A> öğesinin özelliğine atayın <xref:System.Windows.Forms.BindingSource> .
 
-Projeyi çalıştırdığınızda, denetimler veri kaynağındaki ilk kaydı görüntüler. <xref:System.Windows.Forms.BindingSource>nesneleri kullanarak para birimi olaylarını işleyerek kayıtlarda gezinmeyi etkinleştirebilirsiniz.
+Projeyi çalıştırdığınızda, denetimler veri kaynağındaki ilk kaydı görüntüler. İçindeki nesneleri kullanarak para birimi olaylarını işleyerek kayıtlar arasında kaydırma yapabilirsiniz <xref:System.Windows.Forms.BindingSource> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

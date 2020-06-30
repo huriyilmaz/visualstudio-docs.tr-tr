@@ -11,17 +11,17 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 487047b7dd3096e65a6e287d79d91d3029f3dc5a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 12132622900d5698a6b78a1914c687a369d7dc03
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72608990"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547738"
 ---
-# <a name="ca2133-delegates-must-bind-to-methods-with-consistent-transparency"></a>CA2133: Temsilciler tutarlı saydamlığı olan yöntemlere bağlanmalıdır
+# <a name="ca2133-delegates-must-bind-to-methods-with-consistent-transparency"></a>CA2133: Temsilciler tutarlı saydamlığı olan metotlara bağlanmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DelegatesMustBindWithConsistentTransparency|
 |CheckId|CA2133|
@@ -31,8 +31,8 @@ ms.locfileid: "72608990"
 > [!NOTE]
 > Bu uyarı yalnızca CoreCLR (CLR 'nin Silverlight Web uygulamalarına özgü sürümü) çalıştıran koda uygulanır.
 
-## <a name="cause"></a>Sebep
- Bu uyarı, <xref:System.Security.SecurityCriticalAttribute> ile işaretlenmiş bir temsilciyi saydam olan veya <xref:System.Security.SecuritySafeCriticalAttribute> ile işaretlenen bir yönteme bağlayan bir yöntem üzerinde ateşlenir. Uyarı, saydam veya kritik bir yöntem için kritik güvenli temsilciyi bağlayan yöntemi de tetikler.
+## <a name="cause"></a>Nedeni
+ Bu uyarı, ile işaretlenmiş bir temsilciyi, <xref:System.Security.SecurityCriticalAttribute> saydam olan veya ile işaretlenmiş bir yönteme bağlayan bir yöntem üzerinde ateşlenir <xref:System.Security.SecuritySafeCriticalAttribute> . Uyarı, saydam veya kritik bir yöntem için kritik güvenli temsilciyi bağlayan yöntemi de tetikler.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Temsilci türleri ve bağlandıkları Yöntemler tutarlı saydamlığa sahip olmalıdır. Saydam ve güvenli kritik temsilciler yalnızca diğer saydam veya kritik öneme sahip yöntemlere bağlanamaz. Benzer şekilde, kritik temsilciler yalnızca kritik yöntemlere bağlanamaz. Bu bağlama kuralları yalnızca bir temsilci aracılığıyla bir yöntemi çağırabilen kodun aynı yöntemi doğrudan de çağrılabilir olmasını güvence altına alabilir. Örneğin, bağlama kuralları saydam kodun saydam bir temsilci aracılığıyla doğrudan kritik kodu aramasını engeller.

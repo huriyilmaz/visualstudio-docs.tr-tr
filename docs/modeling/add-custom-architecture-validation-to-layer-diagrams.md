@@ -1,7 +1,7 @@
 ---
 title: Bağımlılık diyagramlarına özel mimari doğrulaması ekleme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - dependency diagrams, adding custom validation
 author: JoshuaPartlow
@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f7c3c37feb2f2d68817807f056ee470f0d0d05f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 98482eed6c1ed5a8ac2e3bbb7b5ada6af9517c1d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597236"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546932"
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Bağımlılık diyagramlarına özel mimari doğrulaması ekleme
 
@@ -47,7 +47,7 @@ Doğrulayıcı oluşturmanın en hızlı yöntemi, proje şablonunu kullanmaktı
    > [!WARNING]
    > Şablonun düzgün çalışmasını sağlamak için:
    >
-   > - `errorSourceNodes` ve `errorTargetNodes`isteğe bağlı bağımsız değişkenleri kaldırmak için `LogValidationError` çağrılarını düzenleyin.
+   > - `LogValidationError`İsteğe bağlı bağımsız değişkenleri kaldırmak için çağrılarını düzenleyin `errorSourceNodes` `errorTargetNodes` .
    > - Özel özellikler kullanıyorsanız, [bağımlılık diyagramlarına özel özellikler ekle](../modeling/add-custom-properties-to-layer-diagrams.md)bölümünde bahsedilen güncelleştirmeyi uygulayın.
 
 2. Doğrulamayı tanımlamak için kodu düzenleyin. Daha fazla bilgi için bkz. [programlama doğrulaması](#programming).
@@ -87,11 +87,11 @@ Katman Doğrulayıcıları, komutlar ve diğer uzantıları içeren bir VSıX ol
 
     2. **Yeni varlık Ekle** iletişim kutusunda, şunu ayarlayın:
 
-         **Type** = **Microsoft.VisualStudio.MefComponent**
+         **Tür**  =  **Microsoft. VisualStudio. MefComponent**
 
-         **Kaynak** = **geçerli çözümdeki bir proje**
+         **Kaynak**  =  **Geçerli çözümdeki bir proje**
 
-         *Doğrulayıcı projenize* **Proje** = 
+         **Proje**  =  *Doğrulayıcı projeniz*
 
 5. Ayrıca, katman doğrulaması olarak da eklemeniz gerekir:
 
@@ -99,11 +99,11 @@ Katman Doğrulayıcıları, komutlar ve diğer uzantıları içeren bir VSıX ol
 
     2. **Yeni varlık Ekle** iletişim kutusunda, şunu ayarlayın:
 
-         **Microsoft. VisualStudio. mimari Turetools. Layer. Validator** = **yazın** . Bu, açılan listedeki seçeneklerden biri değildir. Bunu klavyeden girmeniz gerekir.
+         **Tür**  =  **Microsoft. VisualStudio. mimari Turetools. Layer. Validator**. Bu, açılan listedeki seçeneklerden biri değildir. Bunu klavyeden girmeniz gerekir.
 
-         **Kaynak** = **geçerli çözümdeki bir proje**
+         **Kaynak**  =  **Geçerli çözümdeki bir proje**
 
-         *Doğrulayıcı projenize* **Proje** = 
+         **Proje**  =  *Doğrulayıcı projeniz*
 
 6. Katman doğrulama projesine dönün ve aşağıdaki proje başvurularını ekleyin:
 
@@ -111,10 +111,10 @@ Katman Doğrulayıcıları, komutlar ve diğer uzantıları içeren bir VSıX ol
     |-|-|
     |Microsoft.VisualStudio.GraphModel.dll|Mimari grafiğini okuyun|
     |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Katmanlarla ilişkili kod DOM 'ı okuyun|
-    |Microsoft. VisualStudio. mimari Turetools. Extensibility. Layer. dll|Katman modelini okuyun|
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Katman modelini okuyun|
     |Microsoft. VisualStudio. mimari Turetools. Extensibility|Şekilleri ve diyagramları okuyun ve güncelleştirin.|
-    |System.ComponentModel.Composition|Managed Extensibility Framework (MEF) kullanarak doğrulama bileşenini tanımlama|
-    |Microsoft.VisualStudio.Modeling.Sdk.[version]|Modelleme uzantıları tanımlama|
+    |System. ComponentModel. Composition|Managed Extensibility Framework (MEF) kullanarak doğrulama bileşenini tanımlama|
+    |Microsoft. VisualStudio. model. SDK. sürümünüze|Modelleme uzantıları tanımlama|
 
 7. Bu konunun sonundaki örnek kodu, doğrulanmak üzere kodu içerecek şekilde Doğrulayıcı Kitaplığı projesindeki sınıf dosyasına kopyalayın. Daha fazla bilgi için bkz. [programlama doğrulaması](#programming).
 
@@ -125,7 +125,7 @@ Katman Doğrulayıcıları, komutlar ve diğer uzantıları içeren bir VSıX ol
 
 9. VSıX 'i Visual Studio 'nun ana örneğine veya başka bir bilgisayara yüklemek için VSıX projesinin **bin** dizininde **. vsix** dosyasını bulun. VSıX 'i yüklemek istediğiniz bilgisayara kopyalayın. Windows Gezgini 'nde VSıX dosyasına çift tıklayın.
 
-## <a name="programming"></a>Programlama doğrulaması
+## <a name="programming-validation"></a><a name="programming"></a>Programlama doğrulaması
 
 Katman doğrulama uzantısı tanımlamak için aşağıdaki özelliklere sahip bir sınıf tanımlarsınız:
 
@@ -148,10 +148,10 @@ Katman doğrulama uzantısı tanımlamak için aşağıdaki özelliklere sahip b
     } }
   ```
 
-- Bir hata keşfettiğiniz zaman, `LogValidationError()`kullanarak rapor edebilirsiniz.
+- Bir hata keşfettiğiniz zaman, kullanarak rapor edebilirsiniz `LogValidationError()` .
 
   > [!WARNING]
-  > İsteğe bağlı `LogValidationError`parametrelerini kullanmayın.
+  > İsteğe bağlı parametrelerini kullanmayın `LogValidationError` .
 
 Kullanıcı **Mimariyi Doğrula** menü komutunu çağırdığında, katman çalışma zamanı sistemi katmanları ve bunların yapılarını analiz etmek için bir grafik oluşturur. Grafik dört bölümden oluşur:
 
@@ -163,18 +163,18 @@ Kullanıcı **Mimariyi Doğrula** menü komutunu çağırdığında, katman çal
 
 - Doğrulayıcı tarafından bulunan hataları temsil eden düğümler.
 
-Grafik oluşturulduğunda, standart doğrulama yöntemi çağrılır. Bu tamamlandığında, yüklenmiş tüm uzantı doğrulama yöntemleri belirtilmemiş sırada çağırılır. Grafik, grafiği tarayabileceğiniz ve bulduğu hataları rapor eden her bir `ValidateArchitecture` yöntemine geçirilir.
+Grafik oluşturulduğunda, standart doğrulama yöntemi çağrılır. Bu tamamlandığında, yüklenmiş tüm uzantı doğrulama yöntemleri belirtilmemiş sırada çağırılır. Grafik her metoda geçirilir ve bu, `ValidateArchitecture` grafiği tarayabilmesi ve bulduğu hataları bildirebilir.
 
 > [!NOTE]
 > Bu, etki alanına özgü dillerde kullanılabilen doğrulama işlemiyle aynı değildir.
 
 Doğrulama yöntemleri, bir katman modelini veya Doğrulanmakta olan kodu değiştirmemelidir.
 
-Grafik modeli <xref:Microsoft.VisualStudio.GraphModel>tanımlanmıştır. Asıl sınıfları <xref:Microsoft.VisualStudio.GraphModel.GraphNode> ve <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.
+Grafik modeli içinde tanımlanmıştır <xref:Microsoft.VisualStudio.GraphModel> . Asıl sınıfları <xref:Microsoft.VisualStudio.GraphModel.GraphNode> ve ' dir <xref:Microsoft.VisualStudio.GraphModel.GraphLink> .
 
 Her bir düğüm ve her bağlantı, temsil ettiği öğe veya ilişki türünü belirten bir veya daha fazla kategoriye sahiptir. Tipik bir grafiğin düğümleri aşağıdaki kategorilere sahiptir:
 
-- Dsl.LayerModel
+- DSL. LayerModel
 
 - DSL. Layer
 
@@ -194,7 +194,7 @@ Her bir düğüm ve her bağlantı, temsil ettiği öğe veya ilişki türünü 
 
 Katmanların koddaki öğelere olan bağlantıları "temsil" kategorisine sahiptir.
 
-## <a name="debugging"></a>Hata ayıklama doğrulaması
+## <a name="debugging-validation"></a><a name="debugging"></a>Hata ayıklama doğrulaması
 
 Katman doğrulama uzantınızdaki hataları ayıklamak için CTRL + F5 tuşlarına basın. Visual Studio 'nun deneysel bir örneği açılır. Bu örnekte, bir katman modeli açın veya oluşturun. Bu modelin, kodla ilişkilendirilmesi ve en az bir bağımlılığı olması gerekir.
 
@@ -216,9 +216,9 @@ Doğrulama kodunuzu güncelleştirdiğinizde, Validate komutunu test etmeden ön
 
 Doğrulama ayrı bir işlemde çalışır. Bu nedenle, doğrulama yönteminizin kesme noktaları tetiklenmeyecektir. Doğrulama başladığında işlem ayıklayıcıyı işleme açıkça iliştirmelidir.
 
-Hata ayıklayıcıyı doğrulama işlemine iliştirmek için, doğrulama yönteminizin başlangıcında `System.Diagnostics.Debugger.Launch()` bir çağrı ekleyin. Hata ayıklama iletişim kutusu göründüğünde, Visual Studio 'nun ana örneğini seçin.
+Hata ayıklayıcıyı doğrulama işlemine iliştirmek için, doğrulama yönteminizin başlangıcında öğesine bir çağrı ekleyin `System.Diagnostics.Debugger.Launch()` . Hata ayıklama iletişim kutusu göründüğünde, Visual Studio 'nun ana örneğini seçin.
 
-Alternatif olarak, `System.Windows.Forms.MessageBox.Show()`bir çağrı ekleyebilirsiniz. İleti kutusu göründüğünde, Visual Studio 'nun ana örneğine gidin ve **Hata Ayıkla** menüsünde **işleme Ekle**' ye tıklayın. **GraphCmd. exe**adlı işlemi seçin.
+Alternatif olarak, öğesine bir çağrı ekleyebilirsiniz `System.Windows.Forms.MessageBox.Show()` . İleti kutusu göründüğünde, Visual Studio 'nun ana örneğine gidin ve **Hata Ayıkla** menüsünde **işleme Ekle**' ye tıklayın. **Graphcmd.exe**adlı işlemi seçin.
 
 CTRL + F5 tuşuna basarak (**hata ayıklama olmadan Başlat**) deneysel örneği her zaman başlatın.
 
@@ -226,7 +226,7 @@ CTRL + F5 tuşuna basarak (**hata ayıklama olmadan Başlat**) deneysel örneği
 
 Doğrulama uzantınızı, uygun bir Visual Studio sürümünün yüklü olduğu bir bilgisayara yüklemek için hedef bilgisayarda VSıX dosyasını açın.
 
-## <a name="example"></a>Örnek kod
+## <a name="example-code"></a><a name="example"></a>Örnek kod
 
 ```csharp
 using System;

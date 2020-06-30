@@ -17,12 +17,12 @@ caps.latest.revision: 38
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: db619767725159900adf9b18075c45c020df888d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 907d075f597799edd582c9f2bae693eac92c0b2c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670370"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544969"
 ---
 # <a name="outlining"></a>Anahat Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,15 +40,15 @@ Bir kod bölgesini daraltarak bir, bir artı işareti (+) altında görünmesi i
 
  Aşağıdaki komutlar **düzenleme/anahat** alt menüsünde bulunabilir.
 
-|||
+|Komut|Description|
 |-|-|
-|Seçimi Gizle|(CTRL + M, CTRL + H)-ana hat için, örneğin `if` bir blok için kullanılamayan seçili bir kod bloğunu daraltır. Özel bölgeyi kaldırmak için, **geçerli gizlemeyi durdur** (veya CTRL + M, CTRL + U) kullanın. Visual Basic ' de kullanılamaz.|
+|Seçimi Gizle|(CTRL + M, CTRL + H)-ana hat için, örneğin bir blok için kullanılamayacak seçili bir kod bloğunu daraltır `if` . Özel bölgeyi kaldırmak için, **geçerli gizlemeyi durdur** (veya CTRL + M, CTRL + U) kullanın. Visual Basic ' de kullanılamaz.|
 |Anahat genişletmeyi değiştirme|-İmleç, iç içe daraltılmış bir bölümde yer aldığı zaman, en içteki ana hat bölümünün geçerli gizli veya genişletilmiş durumunu tersine çevirir.|
 |Tüm Anahatlamayı aç|(CTRL + M, CTRL + L)-tüm bölgeleri aynı daraltılmış veya genişletilmiş duruma ayarlar. Bazı bölgeler genişletilir ve bazıları daraltıldı, daraltılan bölgeler genişletilir.|
 |Anahat oluşturmayı durdur|(CTRL + M, CTRL + P)-tüm belgeye ilişkin tüm ana hat bilgilerini kaldırır.|
 |Geçerli gizlemeyi durdur|(CTRL + M, CTRL + U)-Şu anda seçili olan Kullanıcı tanımlı bölgenin ana hat bilgilerini kaldırır. Visual Basic ' de kullanılamaz.|
 |Tanımlara Daralt|(CTRL + M, CTRL + O)-tüm türlerin üyelerini daraltır.|
-|Engellemeyi daralt: \<logical sınır >|(Görsel C++) İşlevde ekleme noktasını içeren bir bölgeyi daraltır. Örneğin, ekleme noktası bir döngü içinde yer alıyorsa, döngü gizlenir.|
-|Tüm içinde daralt: \<logical yapıları >|(Görsel C++) İşlev içindeki tüm yapıları daraltır.|
+|Engellemeyi daralt:\<logical boundary>|(Visual C++) İşlevde ekleme noktasını içeren bir bölgeyi daraltır. Örneğin, ekleme noktası bir döngü içinde yer alıyorsa, döngü gizlenir.|
+|İçindeki hepsini daralt:\<logical structures>|(Visual C++) İşlev içindeki tüm yapıları daraltır.|
 
  Genişletmek veya daraltmak istediğiniz metin bölgelerini tanımlamak için Visual Studio SDK 'sını de kullanabilirsiniz. Bkz. [Izlenecek yol: Ana hat](../extensibility/walkthrough-outlining.md).

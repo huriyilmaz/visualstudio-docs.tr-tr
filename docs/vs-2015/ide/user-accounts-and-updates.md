@@ -9,12 +9,12 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 92bbfc3612a34d354dee6288d66f2cf96c1e107c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f3ed1bd914655109606c1472227fb73c10d5b7a0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289397"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547621"
 ---
 # <a name="user-accounts-and-updates"></a>Kullanıcı hesapları ve güncelleştirmeler
 
@@ -27,7 +27,7 @@ Visual Studio 'Nun kendisi bağlı bir ortamdır. Oturum açarak, Kullanıcı he
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|||
+|Başlık|Açıklama|
 |-|-|
 |[Visual Studio'da Oturum Açma](../ide/signing-in-to-visual-studio.md)|Visual Studio 'da nasıl ve nasıl oturum açılacağını açıklar.|
 |[Birden çok kullanıcı hesabıyla çalışma](../ide/work-with-multiple-user-accounts.md)|Birden çok Microsoft hesabı ve/veya iş veya okul hesabını, tüm hesaplarınızdan gelen kaynak ve hizmetlere erişimi etkinleştirmek üzere nasıl ilişkilendireceğini açıklar.|

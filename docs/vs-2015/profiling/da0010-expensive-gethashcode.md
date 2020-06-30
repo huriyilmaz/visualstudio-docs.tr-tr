@@ -14,27 +14,27 @@ caps.latest.revision: 16
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a0a2947f0bd6758de62a4a11d78390d38a503271
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: af234cd130d06c2a76c5ddbc958a67eb064d9128
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919039"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547582"
 ---
 # <a name="da0010-expensive-gethashcode"></a>DA0010: Pahalı GetHashCode
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio ile ilgili en son belgeler için bkz. [DA0010: pahalı GetHashCode](/visualstudio/profiling/da0010-expensive-gethashcode).  
 
-|||  
+|Öğe|Değer|  
 |-|-|  
-|Kural Kimliği|DA0010|  
+|Kural kimliği|DA0010|  
 |Kategori|.NET Framework kullanımı|  
 |Profil oluşturma yöntemleri|Örnekleme<br /><br /> .NET belleği|  
 |İleti|GetHashCode işlevleri bir tek EAP olmalı ve herhangi bir bellek ayırmamalıdır. Mümkünse karma kod işlevinin karmaşıklığını azaltın.|  
 |Mesaj türü|Uyarı|  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  Türün GetHashCode yöntemine yapılan çağrılar, profil oluşturma verilerinin önemli bir oranıyla veya yöntemin belleği ayırır.  
   
 ## <a name="rule-description"></a>Kural Tanımı  

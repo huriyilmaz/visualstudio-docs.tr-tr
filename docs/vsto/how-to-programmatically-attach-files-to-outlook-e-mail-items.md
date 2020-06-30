@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Outlook e-posta öğelerine program aracılığıyla dosya ekleme'
+title: 'Nasıl yapılır: program aracılığıyla Outlook e-posta öğelerine dosya iliştirme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 707c3bb2b6bec9f8db1744d1f28acd4e90a45a57
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a6cde83fa59f45cbc45e56738f09ccf3099f5c02
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62575630"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546139"
 ---
-# <a name="how-to-programmatically-attach-files-to-outlook-email-items"></a>Nasıl yapılır: Outlook e-posta öğelerine program aracılığıyla dosya ekleme
-  Bu örnek, bir dosya için yeni bir posta öğesi ekler ve Armando Pinto gönderir. Örnekte, alıcı olarak Armando Pinto adlı bir kişi var. varsayılır.
+# <a name="how-to-programmatically-attach-files-to-outlook-email-items"></a>Nasıl yapılır: program aracılığıyla Outlook e-posta öğelerine dosya iliştirme
+  Bu örnek, yeni bir posta öğesine bir dosya iliştirir ve Armando Pinto 'ya gönderir. Örnekte, Armando Pinto adlı bir kişinin alıcı olarak varolduğu varsayılır.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -33,6 +33,6 @@ ms.locfileid: "62575630"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Posta öğeleriyle çalışma](../vsto/working-with-mail-items.md)
-- [Nasıl yapılır: Program aracılığıyla e-posta gönderme](../vsto/how-to-programmatically-send-e-mail-programmatically.md)
-- [Nasıl yapılır: Ekleri Outlook e-posta öğelerinden program aracılığıyla kaydetme](../vsto/how-to-programmatically-save-attachments-from-outlook-e-mail-items.md)
-- [Nasıl yapılır: Program aracılığıyla bir e-posta öğesi oluşturma](../vsto/how-to-programmatically-create-an-e-mail-item.md)
+- [Nasıl yapılır: program aracılığıyla e-posta gönderme](../vsto/how-to-programmatically-send-e-mail-programmatically.md)
+- [Nasıl yapılır: Outlook e-posta öğelerinden program aracılığıyla ekleri kaydetme](../vsto/how-to-programmatically-save-attachments-from-outlook-e-mail-items.md)
+- [Nasıl yapılır: program aracılığıyla e-posta öğesi oluşturma](../vsto/how-to-programmatically-create-an-e-mail-item.md)

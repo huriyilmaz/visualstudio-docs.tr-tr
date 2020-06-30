@@ -15,25 +15,25 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: efa328fdff9c357e0183fc2ca80e4d77d4f6782e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 19077a63d5aa22bda3f968943703a82488e2745d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661111"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545294"
 ---
-# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824: Derlemeleri NeutralResourcesLanguageAttribute ile işaretleme
+# <a name="ca1824-mark-assemblies-with-neutralresourceslanguageattribute"></a>CA1824: Derlemeleri NeutralResourcesLanguageAttribute ile işaretleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|MarkAssembliesWithNeutralResourcesLanguage|
 |CheckId|CA1824|
 |Kategori|Microsoft. Performance|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Bir derleme, **resx**tabanlı bir kaynak içerir ancak buna <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> uygulanmaz.
+## <a name="cause"></a>Nedeni
+ Bir derleme, **resx**tabanlı bir kaynak içerir ancak <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=fullName> ona uygulanmaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
  **NeutralResourcesLanguage** özniteliği, bir derleme için nötr kültürün kaynaklarını göstermek için kullanılan dilin **ResourceManager** değerini bilgilendirir. Aynı kültürden kaynakları bağımsız kaynaklar diliyle ararken **ResourceManager** otomatik olarak ana derlemede bulunan kaynakları kullanır. Geçerli iş parçacığı için geçerli kullanıcı arabirimi kültürüne sahip bir uydu derlemesini aramak yerine bunu yapar. Bu ilk yüklediğiniz kaynak için arama performansını artırır ve çalışma kümenizi azaltabilir.

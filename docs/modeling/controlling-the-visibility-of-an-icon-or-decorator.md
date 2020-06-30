@@ -1,18 +1,18 @@
 ---
 title: Bir Simgenin veya Dekoratörün Görünürlüğünü Denetleme
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76db7caa14050c924706763214e92a6ee3d68975
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 1d2082f7e26d3e335ed88bbced0f59d6d6c4780c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748497"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546658"
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>Bir Simgenin veya Dekoratörün Görünürlüğünü Denetleme
 *Dekoratör* , etki alanına özgü DILDE (DSL) bir şekil üzerinde görüntülenen bir simge veya metin satırıdır. Modelin özelliklerinin durumuna bağlı olarak dekoratörün görünmesini ve kaybolmasını sağlayabilirsiniz. Örneğin, bir kişiyi temsil eden bir şekil üzerinde, kişinin cinsiyetine, alt öğe sayısına ve buna bağlı olarak görünen farklı simgelere sahip olabilirsiniz.
@@ -58,13 +58,13 @@ ms.locfileid: "72748497"
 
 1. Etki alanı sınıfına hesaplanmış bir etki alanı özelliği ekleyin. **Özellikler** penceresinde aşağıdaki değerleri ayarlayın:
 
-     **Igözatılabilen =** `False` **-Bu, özelliği kullanıcıdan gizler**
+     **Isgözatılabilen =** `False` **-Bu, özelliği kullanıcıdan gizler**    
 
-     **Tür =** `Calculated` **-Bu, değerini hesaplayan kodu sağlayacaksınız** .
+     **Tür =** `Calculated` **-Bu, değerini hesaplayan kodu sağlayacaksınız demektir**    
 
      Örnek, **Dekoratorcontrol** **adı**
 
-     **Tür**  =  `Boolean`
+     **Türüyle** = `Boolean`
 
      Daha fazla bilgi için bkz. [hesaplanan ve özel depolama özellikleri](../modeling/calculated-and-custom-storage-properties.md).
 
@@ -76,7 +76,7 @@ ms.locfileid: "72748497"
 
     3. **Filter özelliğinde**, denetim özelliği **dekoratorcontrol**' u seçin.
 
-    4. **Görünürlük girişleri**altında `True` girin.
+    4. **Görünürlük girişleri**altında girin `True` .
 
 3. **Çözüm Gezgini** araç çubuğunda **Tüm Şablonları Dönüştür** ' e tıklayın.
 

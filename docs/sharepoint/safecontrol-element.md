@@ -12,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e6b47254a80c9cdadab6ca18f2fb8c3e8540fbd0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6c9936054c5cc622e6f335d81d1568ebed16518f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827352"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547933"
 ---
 # <a name="safecontrol-element"></a>SafeControl öğesi
-  ASPX denetim ya da herhangi bir SharePoint sitesinde ASPX sayfasında erişmek herhangi bir kullanıcı için güvenli olarak tasarlanmış bir Web Bölümü temsil eder.
+  Herhangi bir kullanıcının SharePoint sitesindeki herhangi bir ASPX sayfasına erişmesi için güvenli olarak belirlenmiş bir ASPX denetimi veya Web bölümü temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <SafeControl Assembly = "Name of assembly that contains the safe control"
@@ -40,34 +40,34 @@ ms.locfileid: "62827352"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|**Assembly**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> ASPX denetimi veya Web Bölümü tanımlandığı derlemenin adı. Bu öznitelik varsayılan olarak kullandığı **$SharePoint.Project.AssemblyFullName$** parametredir derleme adı. Daha fazla bilgi için [değiştirilebilir parametreler](../sharepoint/replaceable-parameters.md).|
-|**IsSafe**|İsteğe bağlı **xs:boolean** özniteliği.<br /><br /> ASPX denetimi veya Web Bölümü güvenilmeyen kullanıcıların erişim için güvenli olup olmadığını belirtir.|
-|**IsSafeAgainstScript**|İsteğe bağlı **xs:boolean** özniteliği.<br /><br /> Güvenilmeyen kullanıcıların görüntüleyebilir veya Web Bölümü ve ASPX denetim özelliklerini düzenleme olup olmadığını belirtir.|
-|**Ad**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu koleksiyondaki güvenli denetim giriş adı.|
-|**Namespace**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> ASPX denetim ya da Web Bölümü ad alanı.|
-|**typeName**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Web Bölümü ve ASPX denetim türü adı.|
+|**Bütünleştirilmiş Kod**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> ASPX denetiminin veya Web bölümünün tanımlandığı derlemenin adı. Varsayılan olarak, bu öznitelik derleme adı için **$SharePoint. Project. AssemblyFullName $** değiştirilebilen parametresini kullanır. Daha fazla bilgi için bkz. [değiştirilebilen parametreler](../sharepoint/replaceable-parameters.md).|
+|**IsSafe**|İsteğe bağlı **xs: Boolean** özniteliği.<br /><br /> ASPX denetiminin veya Web bölümünün güvenilmeyen kullanıcıların erişmesi için güvenli olup olmadığını belirtir.|
+|**Issafeagaınstscript**|İsteğe bağlı **xs: Boolean** özniteliği.<br /><br /> Güvenilmeyen kullanıcıların ASPX denetiminin veya Web bölümünün özelliklerini görüntüleyip görüntüleyemeyeceğini veya düzenleyip düzenleyemeyeceğini belirtir.|
+|**Adı**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Koleksiyondaki bu güvenli denetim girişinin adı.|
+|**Ad Alanı**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> ASPX denetiminin veya Web bölümünün ad alanı.|
+|**'Ta**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> ASPX denetiminin veya Web bölümünün tür adı.|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
 
 ### <a name="parent-elements"></a>Üst öğeler
 
-|Öğe|Açıklama|
+|Öğe|Description|
 |-------------|-----------------|
-|[SafeControls](../sharepoint/safecontrols-element.md)|ASPX denetimleri ve Web bölümleri, herhangi bir SharePoint sitesinde ASPX sayfasında erişmek herhangi bir kullanıcı için güvenli olarak belirlenmiş bir koleksiyonunu temsil eder.|
+|[SafeControls](../sharepoint/safecontrols-element.md)|Herhangi bir kullanıcının SharePoint sitesindeki herhangi bir ASPX sayfasına erişmesi için güvenli olarak belirlenmiş bir ASPX denetimleri ve Web Bölümleri koleksiyonunu temsil eder.|
 
 ## <a name="remarks"></a>Açıklamalar
- Güvenli denetimler hakkında daha fazla bilgi için bkz: [proje öğelerinde paketleme ve dağıtım bilgileri sağlayan](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).
+ Güvenli denetimler hakkında daha fazla bilgi için bkz. [Proje Öğelerinde Paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).
 
 ## <a name="element-information"></a>Öğe bilgileri
 
-|||
+|Özellik|Değer|
 |-|-|
-|**Namespace**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Şema adı**|SharePoint proje öğesi şema|
-|**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
-|**Boş olabilir**|Hayır|
+|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
+|**Şema adı**|SharePoint proje öğesi şeması|
+|**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)
-- [Proje öğelerinde paketleme ve dağıtım bilgileri sağlayın](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
+- [Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)

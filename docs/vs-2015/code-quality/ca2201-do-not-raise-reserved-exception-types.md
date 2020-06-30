@@ -15,24 +15,24 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a550226a5ea1edb3b30e317be6b5682f4c204d52
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9533a597a33deaed17ff2a73d56ef306ea7b5613
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667370"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546347"
 ---
-# <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: Ayrılmış özel durum türleri oluşturmayın
+# <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: Ayrılmış özel durum türlerini harekete geçirmeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotRaiseReservedExceptionTypes|
 |CheckId|CA2201|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir yöntem, çok genel olan veya çalışma zamanı tarafından ayrılmış bir özel durum türü oluşturur.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -56,31 +56,31 @@ ms.locfileid: "72667370"
 
   **Genel özel durumlar throw**
 
-  Bir kitaplıkta veya çerçevede <xref:System.Exception> veya <xref:System.SystemException> gibi genel bir özel durum türü oluşturursanız, müşterileri nasıl ele alınacağını bilmeyen bilinmeyen özel durumlar da dahil olmak üzere tüm özel durumları yakalayacak şekilde zorlar.
+  Ya da bir kitaplık ya da çerçevede gibi genel bir özel durum türü oluşturursanız, <xref:System.Exception> <xref:System.SystemException> müşterileri nasıl ele alınacağını bilmeyen bilinmeyen özel durumlar da dahil olmak üzere tüm özel durumları yakalayacak şekilde zorlar.
 
-  Bunun yerine, çerçevede zaten bulunan daha fazla türetilmiş bir tür oluşturun ya da <xref:System.Exception> türetilen kendi türünü oluşturun.
+  Bunun yerine, çerçevede zaten bulunan daha fazla türetilmiş bir tür oluşturun ya da ' den türetilen kendi türünü oluşturun <xref:System.Exception> .
 
   **Belirli özel durumlar oluşturun**
 
   Aşağıdaki tabloda, bir özelliğin set erişimcisinde value parametresi de dahil olmak üzere parametresini doğruladığınızda, parametreleri ve hangi özel durumların oluşturulacağı gösterilmektedir:
 
-|Parametre açıklaması|Özel Durum|
+|Parametre açıklaması|Özel durum|
 |---------------------------|---------------|
-|`null` başvurusu|<xref:System.ArgumentNullException?displayProperty=fullName>|
+|`null`başvurunun|<xref:System.ArgumentNullException?displayProperty=fullName>|
 |İzin verilen değer aralığının dışında (bir koleksiyon veya liste için Dizin gibi)|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|
-|Geçersiz `enum` değeri|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|
-|Bir yöntemin parametre belirtimlerini karşılamayan bir biçim içerir (`ToString(String)` için biçim dizesi gibi)|<xref:System.FormatException?displayProperty=fullName>|
+|Geçersiz `enum` değer|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|
+|Bir yöntemin parametre belirtimlerini karşılamayan bir biçim içerir (örneğin, için biçim dizesi gibi `ToString(String)` )|<xref:System.FormatException?displayProperty=fullName>|
 |Aksi takdirde geçersiz|<xref:System.ArgumentException?displayProperty=fullName>|
 
- Bir nesnenin geçerli durumu için bir işlem geçersiz olduğunda <xref:System.InvalidOperationException?displayProperty=fullName>
+ Bir nesnenin geçerli durumu için geçersiz bir işlem<xref:System.InvalidOperationException?displayProperty=fullName>
 
- Atılmış bir nesne üzerinde bir işlem gerçekleştirildiğinde <xref:System.ObjectDisposedException?displayProperty=fullName>
+ Atılmış bir nesne üzerinde bir işlem gerçekleştirildiğinde<xref:System.ObjectDisposedException?displayProperty=fullName>
 
- Bir işlem desteklenmediği zaman (örneğin, geçersiz kılınan bir akışta) throw <xref:System.NotSupportedException?displayProperty=fullName> oluşturma için açılan bir akışta **yazma**
+ Bir işlem desteklenmadığında (örneğin, geçersiz kılınan bir **akışta** ) throw<xref:System.NotSupportedException?displayProperty=fullName>
 
- Bir dönüştürme bir taşma ile sonuçlanacaksa (örneğin, açık bir atama işleci aşırı yüklemesi) throw <xref:System.OverflowException?displayProperty=fullName>
+ Bir dönüştürme bir taşma ile sonuçlanacaksa (örneğin, açık bir atama işleci aşırı yüklemesi) throw<xref:System.OverflowException?displayProperty=fullName>
 
- Diğer tüm durumlarda, <xref:System.Exception> türettiği kendi türünü oluşturmayı düşünün ve bunu oluşturun.
+ Diğer tüm durumlar için, ' den türetilen kendi türünü oluşturmayı düşünün <xref:System.Exception> ve bunu oluşturun.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kuralın ihlalini onarmak için, oluşturulan özel durumun türünü ayrılmış türlerden biri olmayan belirli bir türe değiştirin.

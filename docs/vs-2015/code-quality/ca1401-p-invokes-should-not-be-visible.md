@@ -15,28 +15,28 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f3f867f14f7a2eca4482f1f8d5fb48149f02f43f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 9f13669959a5874c74753d304371b8ab7db14d4e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661367"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547296"
 ---
 # <a name="ca1401-pinvokes-should-not-be-visible"></a>CA1401: P/Invoke'lar görünür olmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|PInvokesShouldNotBeVisible|
 |CheckId|CA1401|
 |Kategori|Microsoft. çalışabilirliği|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Ortak bir türdeki ortak veya korumalı yöntemin <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> özniteliği vardır (Ayrıca [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `Declare` anahtar sözcüğü tarafından uygulanır).
+## <a name="cause"></a>Nedeni
+ Ortak bir türdeki ortak veya korumalı yöntemin <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> özniteliği vardır (Ayrıca içindeki anahtar sözcüğü tarafından da uygulanır `Declare` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ).
 
 ## <a name="rule-description"></a>Kural Tanımı
- @No__t_0 özniteliğiyle işaretlenen Yöntemler (veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `Declare` anahtar sözcüğü kullanılarak tanımlanan Yöntemler), yönetilmeyen koda erişmek için platform çağırma hizmetleri 'ni kullanır. Bu tür yöntemler açıkta kalmamalıdır. Bu yöntemleri özel veya dahili tutarak, kayıt yapanların yönetilmeyen API 'lere, aksi takdirde çağıramazlar.
+ <xref:System.Runtime.InteropServices.DllImportAttribute>Öznitelik (veya içindeki anahtar sözcüğü kullanılarak tanımlanan Yöntemler) ile işaretlenen Yöntemler, `Declare` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] yönetilmeyen koda erişmek Için platform çağırma hizmetleri 'ni kullanır. Bu tür yöntemler açıkta kalmamalıdır. Bu yöntemleri özel veya dahili tutarak, kayıt yapanların yönetilmeyen API 'lere, aksi takdirde çağıramazlar.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kuralın ihlalini onarmak için yöntemin erişim düzeyini değiştirin.

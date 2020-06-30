@@ -29,12 +29,12 @@ caps.latest.revision: 245
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 4395dbc212514a71f8c4119d8f0778280dee81aa
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: d70016229ad9599c7ededbefaf08744f2bb6f351
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75847626"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548089"
 ---
 # <a name="map-dependencies-across-your-solutions"></a>Çözümlerinizdeki bağımlılıkları eşleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -51,7 +51,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 - [Kod eşlemeleriyle karmaşık kodu anlama](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understanding-complex-code-with-Code-Map-ENU)
 
-## <a name="GetStarted"></a>Kod eşlemeleriyle çalışmaya başlama
+## <a name="get-started-with-code-maps"></a><a name="GetStarted"></a>Kod eşlemeleriyle çalışmaya başlama
  **Kod eşlemelerini kullanmak için aşağıdakilerden birini yapmanız gerekir**:
 
 - Visual Studio Enterprise: kod düzenleyicisinden, Çözüm Gezgini, Sınıf Görünümü veya Nesne Tarayıcısı kod haritaları oluşturun.
@@ -63,13 +63,13 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
  **Bu dillerdeki kod bağımlılıklarını eşleyebilirsiniz**:
 
-- Visual C# .NET veya çözüm ya da derlemelerde .NET Visual Basic (. dll veya. exe)
+- Visual C# .NET veya çözüm ya da derlemelerdeki .NET Visual Basic (. dll veya. exe)
 
-- Visual C++ projelerinde yerel veya yönetilen C++ C veya kod, üst bilgi dosyaları (. h veya `#include`) veya ikili dosyalar
+- Visual C++ projelerinde yerel veya yönetilen C veya C++ kodu, üst bilgi dosyaları (. h veya `#include` ) ya da ikili dosyalar
 
 - X + + projeleri ve Microsoft Dynamics AX için .NET modüllerinden oluşturulan derlemeler
 
-  **Note:** C# Veya Visual Basic .net dışındaki projeler için, bir kod eşlemesi başlatmak veya varolan bir kod eşlemesine öğe eklemek için daha az seçenek vardır. Örneğin, bir C++ projenin metin düzenleyicisinde bir nesneye sağ tıklayıp bir kod haritasına ekleyebilirsiniz. Ancak, Çözüm Gezgini, Sınıf Görünümü ve Nesne Tarayıcısı bağımsız kod öğelerini veya dosyalarını sürükleyip bırakabilirsiniz.
+  **Note:** C# veya .NET Visual Basic dışındaki projeler için, kod eşlemesi başlatmak veya varolan bir kod eşlemesine öğe eklemek için daha az seçenek vardır. Örneğin, bir C++ projesinin metin düzenleyicisinde bir nesneye sağ tıklayıp bir kod haritasına ekleyebilirsiniz. Ancak, Çözüm Gezgini, Sınıf Görünümü ve Nesne Tarayıcısı bağımsız kod öğelerini veya dosyalarını sürükleyip bırakabilirsiniz.
 
 #### <a name="to-see-the-overall-dependencies-across-your-solution"></a>Çözümünüz genelinde genel bağımlılıkları görmek için
 
@@ -91,7 +91,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 4. Çözümünüzdeki belirli bağımlılıkları görüntülemek için kod eşlemelerini nasıl kullanabileceğinizi anlamak için [belirli bağımlılıklara bakın](#SeeSpecificSource) .
 
-### <a name="CreateEmptyMap"></a>Çözümünüze yeni bir boş kod eşlemesi eklemek için
+### <a name="to-add-a-new-empty-code-map-to-your-solution"></a><a name="CreateEmptyMap"></a>Çözümünüze yeni bir boş kod eşlemesi eklemek için
 
 1. **Çözüm Gezgini**' de, en üst düzey çözüm Düğümünüzün kısayol menüsünü açın. **Ekle** ' yi ve ardından **Yeni öğe**' yi seçin.
 
@@ -105,7 +105,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 1. **Mimari** menüsünü açın ve **Yeni kod Haritası**' nı seçin.
 
-     \- veya -
+     \-veya
 
 2. **Dosya** menüsünü açın ve **Yeni** ' yi seçip **Dosya**' yı seçin.
 
@@ -115,9 +115,9 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
      Artık çözümünüz klasörlerinde görünmeyen boş bir haritanız var.
 
-## <a name="SeeOverviewSource"></a>Genel bağımlılıklara bakın
+## <a name="see-overall-dependencies"></a><a name="SeeOverviewSource"></a>Genel bağımlılıklara bakın
 
-### <a name="OverviewSource"></a>Çözümünüz genelinde bağımlılıklara bakın
+### <a name="see-dependencies-across-your-solution"></a><a name="OverviewSource"></a>Çözümünüz genelinde bağımlılıklara bakın
 
 1. **Mimari** menüsünde **çözüm Için kod Haritası Oluştur**' u seçin.
 
@@ -127,7 +127,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 2. Proje türü simgelerinin listesini (örneğin, test, Web ve telefon Projesi), kod öğelerini (sınıflar, Yöntemler ve özellikler gibi) ve ilişki türlerini (örneğin, devralır, Implements ve çağrılar) göstermek veya gizlemek için kod Haritası araç çubuğundaki **gösterge** düğmesini kullanın.
 
-    ![Derlemelerin&#45;en üst düzey bağımlılık grafiği](../modeling/media/dependencygraph-toplevelassemblies.png "DependencyGraph_TopLevelAssemblies")
+    ![Derlemelerin üst&#45;düzeyi bağımlılık grafiği](../modeling/media/dependencygraph-toplevelassemblies.png "DependencyGraph_TopLevelAssemblies")
 
     Bu örnek çözüm, Çözüm klasörlerini (**testler** ve **Bileşenler**), test projelerini, Web projelerini ve derlemeleri içerir. Varsayılan olarak, tüm kapsama ilişkileri *Grup*olarak görünür ve bu, genişletebilir ve daraltabilirsiniz. **Dışlar** grubu, platform bağımlılıkları da dahil olmak üzere çözümünüzün dışındaki her şeyi içerir. Dış derlemeler yalnızca kullanılan öğeleri gösterir. Varsayılan olarak, sistem tabanlı türler, dağınıklığı azaltmak için haritada gizlidir.
 
@@ -139,7 +139,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
     ![Kod haritasında düğüm genişletme](../modeling/media/dependencygraph-containment.png "DependencyGraph_Containment")
 
-    Ya da öğeyi seçip artı tuşuna basarak ( **+** ) klavyeyi kullanın. Daha derin kod düzeylerini araştırmak için ad alanları, türler ve Üyeler için de aynısını yapın.
+    Ya da öğeyi seçip artı tuşuna () basarak klavyeyi kullanın **+** . Daha derin kod düzeylerini araştırmak için ad alanları, türler ve Üyeler için de aynısını yapın.
 
    > [!TIP]
    > Fare, klavye ve dokunma kullanarak kod eşlemeleriyle çalışma hakkında daha fazla bilgi için bkz. [kod haritalarını inceleyin ve yeniden düzenleyin](../modeling/browse-and-rearrange-code-maps.md).
@@ -183,13 +183,13 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
     Ayrıca bkz:
 
-- [Kod haritalarına göz atma ve bunları yeniden düzenleme](../modeling/browse-and-rearrange-code-maps.md)
+- [Kod eşlemelerine göz atma ve bunları yeniden düzenleme](../modeling/browse-and-rearrange-code-maps.md)
 
 - [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
 
 - [Bir çözümleyici çalıştırarak](../modeling/find-potential-problems-using-code-map-analyzers.md)kodunuzda olası sorunları bulun.
 
-### <a name="OverviewCompiled"></a>Derlemelerin veya ikili dosyaların üzerindeki bağımlılıklara bakın
+### <a name="see-dependencies-across-assemblies-or-binaries"></a><a name="OverviewCompiled"></a>Derlemelerin veya ikili dosyaların üzerindeki bağımlılıklara bakın
 
 1. [Boş bir kod haritası oluşturun](#GetStarted)veya var olan bir kod haritasını (. dgml dosyası) açın.
 
@@ -198,7 +198,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 > [!NOTE]
 > Derlemeleri veya ikili dosyaları yalnızca Visual Studio 'Yu aynı Kullanıcı Access Control (UAC) izinleri düzeyinde çalıştırıyorsanız Windows Gezgini veya dosya Gezgini 'nden sürükleyebilirsiniz. Örneğin, UAC açıksa ve Visual Studio 'Yu yönetici olarak çalıştırıyorsanız, Windows Gezgini veya dosya Gezgini sürükleme işlemini engelleyecektir. Bu sorunu geçici olarak çözmek için, her ikisinin de aynı izin düzeyiyle çalıştığından emin olun veya UAC 'yi kapatın.
 
-## <a name="SeeSpecificSource"></a>Belirli bağımlılıklara bakın
+## <a name="see-specific-dependencies"></a><a name="SeeSpecificSource"></a>Belirli bağımlılıklara bakın
  Örneğin, bekleyen değişikliklerle bazı dosyalarda gerçekleştirilecek bir kod incelemesinin olduğunu varsayalım. Bu değişikliklerle ilgili bağımlılıkları görmek için, bu dosyalardan bir kod Haritası oluşturabilirsiniz.
 
  ![Kod haritasında belirli bağımlılıkları göster](../modeling/media/codemapsspecificdependenciesintro.png "Codemapsspecificbağımlıcıesgirişi")
@@ -236,7 +236,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
      Bir **derleme**için şunları seçin:
 
-    |||
+    |Seçenek|Description|
     |-|-|
     |**Bu başvuruların derlemelerini göster**|Bu derlemenin başvurduğu derlemeleri ekleyin. Dış derlemeler **dışlar** grubunda görünür.|
     |**Buna başvuran derlemeleri göster**|Çözümde bu derlemeye başvuran derlemeleri ekleyin.|
@@ -245,7 +245,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
      Bir **sınıf** veya **arabirim**için şunları seçin:
 
-    |||
+    |Seçenek|Description|
     |-|-|
     |**Temel türleri göster**|Bir sınıf için taban sınıfı ve uygulanan arabirimleri ekleyin.<br /><br /> Bir arabirim için temel arabirimleri ekleyin.|
     |**Türetilmiş türleri göster**|Bir sınıf için türetilmiş sınıfları ekleyin.<br /><br /> Bir arabirim için türetilmiş arabirimleri ve uygulama sınıflarını veya yapılarını ekleyin.|
@@ -258,7 +258,7 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
      Bir **Yöntem**için şunları seçin:
 
-    |||
+    |Seçenek|Description|
     |-|-|
     |**Bu çağrıların yöntemlerini göster**|Bu yöntemin çağırdığı yöntemleri ekleyin.|
     |**Bu başvuruların alanlarını göster**|Bu yöntemin başvurduğu alanları ekleyin.|
@@ -268,14 +268,14 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
      Bir **alan** veya **özellik**için şunları seçin:
 
-    |||
+    |Seçenek|Description|
     |-|-|
     |**Kapsayan türü göster**|Üst türü ekleyin.|
     |**Kapsayan türü, ad alanını ve derlemeyi göster**|Üst kapsayıcı hiyerarşisini ekleyin.|
 
      ![Bu üye tarafından çağrılan yöntemleri göster](../modeling/media/codemapsshowrelatedmethods.png "Codemapsshowrelatedmetotları")
 
-7. Haritada ilişkiler gösterilmektedir. Bu örnekte, `Find` yöntemi tarafından çağrılan yöntemler ve çözüm ya da harici olarak.
+7. Haritada ilişkiler gösterilmektedir. Bu örnekte, yöntemi tarafından çağrılan yöntemler `Find` ve çözüm veya dışarıdan konumu.
 
      ![Kod haritasında belirli bağımlılıkları göster](../modeling/media/codemapsspecificdependenciesintro.png "Codemapsspecificbağımlıcıesgirişi")
 
@@ -283,12 +283,12 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
      ![Ekranı basitleştirmek için Filtre bölmesini kullanın](../modeling/media/almcodemapfilterpane.png "ALMCodeMapFilterPane")
 
-## <a name="SeeSourceHeader"></a>Bkz. C ve C++ kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıklar
- Projeler için C++ daha fazla kapsamlı haritalar oluşturmak istiyorsanız, bu projelerde tarama bilgileri derleyici seçeneğini ( **/fr**) ayarlayın. Bkz [./fr,/fr (oluştur. Sbr dosyası)](https://msdn.microsoft.com/library/3fd8f88b-3924-4feb-9393-287036a28896). Aksi durumda, bir ileti görüntülenir ve bu seçeneği ayarlamanızı ister. **Tamam**' ı seçerseniz, bu seçeneği yalnızca geçerli harita için ayarlar. İletiyi sonraki tüm haritalar için gizlemeyi seçebilirsiniz. Bu iletiyi gizlerseniz, yeniden görünmesini sağlayabilirsiniz. Anahtarı `0` veya silmek için aşağıdaki kayıt defteri anahtarını ayarlayın:
+## <a name="see-dependencies-between-c-and-c-source-files-and-header-files"></a><a name="SeeSourceHeader"></a>C ve C++ kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıklara bakın
+ C++ projeleri için daha fazla eşleme oluşturmak istiyorsanız, bu projelerde tarama bilgileri derleyici seçeneğini (**/fr**) ayarlayın. Bkz [./fr,/fr (oluştur. Sbr dosyası)](https://msdn.microsoft.com/library/3fd8f88b-3924-4feb-9393-287036a28896). Aksi durumda, bir ileti görüntülenir ve bu seçeneği ayarlamanızı ister. **Tamam**' ı seçerseniz, bu seçeneği yalnızca geçerli harita için ayarlar. İletiyi sonraki tüm haritalar için gizlemeyi seçebilirsiniz. Bu iletiyi gizlerseniz, yeniden görünmesini sağlayabilirsiniz. Aşağıdaki kayıt defteri anahtarını anahtarı olarak ayarlayın `0` veya anahtarı silin:
 
  **HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0\NativeProvider: oto Enablesbr**
 
- Visual C++ projeleri içeren bir çözümü açtığınızda, IntelliSense veritabanını güncelleştirmek biraz zaman alabilir. Bu süre boyunca, IntelliSense veritabanı güncelleştirmeyi bitirene kadar üstbilgi (. h veya `#include`) dosyaları için kod haritaları oluşturmeyebilirsiniz. Visual Studio durum çubuğunda güncelleştirme ilerleme durumunu izleyebilirsiniz. Bazı IntelliSense ayarları devre dışı bırakıldığı için görünen sorunları veya iletileri çözümlemek için bkz. [C ve C++ Code Maps Ile ilgili sorun giderme](#Troubleshooting).
+ Visual C++ projeleri içeren bir çözümü açtığınızda, IntelliSense veritabanını güncelleştirmek biraz zaman alabilir. Bu süre boyunca, `#include` IntelliSense veritabanı güncelleştirmeyi bitirene kadar üstbilgi (. h veya) dosyaları için kod haritaları oluşturmeyebilirsiniz. Visual Studio durum çubuğunda güncelleştirme ilerleme durumunu izleyebilirsiniz. Bazı IntelliSense ayarları devre dışı bırakıldığı için görünen sorunları veya iletileri çözümlemek için bkz. [C ve C++ kodu için Maps sorunlarını giderme](#Troubleshooting).
 
 - Çözümünüzdeki tüm kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıkları görmek için **mimari** menüsünde, **Içerme dosyaları grafiğini oluştur**' u seçin.
 
@@ -296,29 +296,29 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 - Şu anda açık olan dosya ile ilgili kaynak dosyaları ve üstbilgi dosyaları arasındaki bağımlılıkları görmek için kaynak dosyayı veya üstbilgi dosyasını açın. Dosya kısayol menüsünü dosyanın içinde herhangi bir yerde açın. **Ekleme dosyalarının grafiğini oluştur**' ı seçin.
 
-     ![.&#45;H dosyası için ilk düzey bağımlılık grafiği](../modeling/media/dependencygraph-native-firstlevel.png "DependencyGraph_Native_FirstLevel")
+     ![. H dosyası için ilk&#45;düzeyi bağımlılık grafiği](../modeling/media/dependencygraph-native-firstlevel.png "DependencyGraph_Native_FirstLevel")
 
-### <a name="Troubleshooting"></a>C ve C++ Code haritaları sorunlarını giderme
- Bu öğeler C ve C++ Code için desteklenmez:
+### <a name="troubleshoot-maps-for-c-and-c-code"></a><a name="Troubleshooting"></a>C ve C++ kodu için Maps sorunlarını giderme
+ Bu öğeler C ve C++ kodu için desteklenmez:
 
 - Temel türler, üst hiyerarşiyi içeren haritalar üzerinde görünmez.
 
-- Çoğu **göster** menü öğesi C ve C++ Code için kullanılamaz.
+- Çoğu **göster** menü öğesi C ve C++ kodu için kullanılamaz.
 
-  Bu sorunlar, C ve C++ Code için kod haritaları oluşturduğunuzda oluşabilir:
+  C ve C++ kodu için kod eşlemeleri oluşturduğunuzda bu sorunlar oluşabilir:
 
-|**Sorun**|**Olası nedeni**|**Çözümleme**|
+|**Konuda**|**Olası nedeni**|**Çözünürlük**|
 |---------------|------------------------|--------------------|
 |Kod eşlemesi oluşturulamadı.|Çözümdeki hiçbir proje başarıyla oluşturulmadı.|Oluşan yapı hatalarını giderip eşlemeyi yeniden oluşturun.|
-|**mimari** menüsünden bir kod Haritası oluşturmaya çalıştığınızda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] yanıt vermemeye başladı.|Program veritabanı (.pdb) dosyası bozulmuş olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Çözümü yeniden oluşturun ve tekrar deneyin.|
-|IntelliSense göz atma veritabanı için belirli ayarlar devre dışı bırakılır.|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**seçenekleri** iletişim kutusunda belirli IntelliSense ayarları devre dışı bırakılabilir.|Bunları etkinleştirmek için ayarları etkinleştirin.<br /><br /> Bkz. [Seçenekler, metin düzenleyici, CC++/, gelişmiş](../ide/reference/options-text-editor-c-cpp-advanced.md).|
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]**mimari** menüsünden bir kod Haritası oluşturmaya çalıştığınızda yanıt vermemeye çalışır.|Program veritabanı (.pdb) dosyası bozulmuş olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Çözümü yeniden oluşturun ve tekrar deneyin.|
+|IntelliSense göz atma veritabanı için belirli ayarlar devre dışı bırakılır.|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **Seçenekler** Iletişim kutusunda belirli IntelliSense ayarları devre dışı bırakılabilir.|Bunları etkinleştirmek için ayarları etkinleştirin.<br /><br /> Bkz. [Seçenekler, metin düzenleyici, C/C++, gelişmiş](../ide/reference/options-text-editor-c-cpp-advanced.md).|
 |**Bilinmeyen Yöntemler** bir yöntem düğümünde görünür.<br /><br /> Yöntemin adı çözümlenemediği için bu sorun oluşur.|İkili dosya temel konum değişikliği tablosuna sahip olmayabilir.|Bağlayıcının **/fixed: No** seçeneğini açın.<br /><br /> Bkz. [/Fixed (sabit temel adres)](https://msdn.microsoft.com/library/929bba5e-b7d8-40ed-943e-056aa3710fc5).|
 ||Program veritabanı (.pdb) dosyası oluşturulmamış olabilir.<br /><br /> .pdb dosyası; tür, yöntem ve kaynak dosya bilgileri gibi hata ayıklama bilgilerini depolar.|Bağlayıcının **/Debug** seçeneğini açın.<br /><br /> Bkz. [/Debug (hata ayıklama bilgisi oluştur)](https://msdn.microsoft.com/library/1af389ae-3f8b-4d76-a087-1cdf861e9103).|
 ||.pdb dosyasını beklenen konumda açamıyor veya bulamıyor.|.pdb dosyasının beklenen konumlarda var olduğundan emin olun.|
 ||Hata ayıklama bilgileri, .pdb dosyasından çıkarıldı.|Bağlayıcı içinde **/Pdbçıkarıldı** seçeneği kullanıldıysa, bunun yerine tüm. pdb dosyasını dahil edin.<br /><br /> Bkz. [/Pdbçıkarıldı (özel sembolleri Strip)](https://msdn.microsoft.com/library/9b9e0070-6a13-4142-8180-19c003fbbd55).|
-||Arayan bir işlev değildir ve ikili dosyada bir dönüştürücü ya da veri bölümünde bir işaretçidir.|Çağıran bir dönüştürücü olduğunda, dönüştürücü kullanmaktan kaçınmak için `_declspec(dllimport)` kullanmayı deneyin.<br /><br /> Bkz.<br /><br /> -   [genel kurallar ve sınırlamalar](https://msdn.microsoft.com/library/6c48902d-4259-4761-95d4-e421d69aa050)<br />[__declspec (dllimport) kullanarak Işlev çağrılarını Içeri aktarmaya](https://msdn.microsoft.com/library/6b53c616-0c6d-419a-8e2a-d2fff20510b3) -   <br />-   [dllexport, dllimport](https://msdn.microsoft.com/library/ff95b645-ef55-4e72-b848-df44657b3208)|
+||Arayan bir işlev değildir ve ikili dosyada bir dönüştürücü ya da veri bölümünde bir işaretçidir.|Çağıran bir dönüştürücü olduğunda, `_declspec(dllimport)` dönüştürücü kullanmaktan kaçınmak için kullanmayı deneyin.<br /><br /> Bkz.<br /><br /> -   [Genel kurallar ve sınırlamalar](https://msdn.microsoft.com/library/6c48902d-4259-4761-95d4-e421d69aa050)<br />-   [__Declspec (dllimport) kullanarak Işlev çağrılarını içeri aktarma](https://msdn.microsoft.com/library/6b53c616-0c6d-419a-8e2a-d2fff20510b3)<br />-   [dllexport, dllimport](https://msdn.microsoft.com/library/ff95b645-ef55-4e72-b848-df44657b3208)|
 
-## <a name="RenderMoreQuickly"></a>Kod eşlemelerinin daha hızlı işlemesini sağlama
+## <a name="make-code-maps-render-more-quickly"></a><a name="RenderMoreQuickly"></a>Kod eşlemelerinin daha hızlı işlemesini sağlama
  İlk kez bir eşleme oluşturduğunuzda, Visual Studio bulduğu tüm bağımlılıkların dizinini oluşturur. Özellikle büyük çözümler için bu işlem biraz zaman alabilir, ancak performansı daha sonra iyileştirir. Kodunuz değişirse, Visual Studio yalnızca güncelleştirilmiş kodu yeniden dizinler. Haritanın işlemeyi tamamlaması için geçen süreyi en aza indirmek için aşağıdakileri göz önünde bulundurun:
 
 - [Yalnızca ilgilendiğiniz bağımlılıkları eşleyin.](#SeeSpecificSource)
@@ -329,24 +329,24 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 - Kod Haritası araç çubuğundaki üst öğeleri **dahil et** düğmesine sahip otomatik ekleme özelliğini devre dışı bırakın.
 
-- İhtiyacınız olmayan düğümleri ve bağlantıları kaldırmak için doğrudan kod eşleme dosyasını düzenleyin. Haritanın değiştirilmesi temeldeki kodu etkilemez. Bkz: [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
+- İhtiyacınız olmayan düğümleri ve bağlantıları kaldırmak için doğrudan kod eşleme dosyasını düzenleyin. Haritanın değiştirilmesi temeldeki kodu etkilemez. Bkz. [dgml dosyalarını düzenleyerek kod eşlemelerini özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md).
 
   ![Derleme ve ekleme üst öğeleri düğmelerini atla](../modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")
 
   Visual Studio, 1 GB bellekle çalışabilse de, Visual Studio kod dizinini oluştururken ve Haritayı oluştururken uzun gecikmeleri önlemek için bilgisayarınızın en az 2 GB belleğe sahip olmasını öneririz.
 
-  Bir proje öğesinin **Çıkış Dizinine Kopyala** özelliği **her zaman Kopyala**olarak ayarlandığında, haritalar oluşturmak veya Çözüm Gezgini haritaya öğe eklemek daha fazla zaman alabilir. Bu, artımlı yapılarla ve Visual Studio'nun projeyi her seferinde yeniden oluşturmasıyla ilgili sorunlara neden olabilir. Performansı artırmak için bu özelliği, **daha yeniyse** veya `PreserveNewest`kopyalamak üzere değiştirin. Bkz. [Artımlı derlemeler](../msbuild/incremental-builds.md).
+  Bir proje öğesinin **Çıkış Dizinine Kopyala** özelliği **her zaman Kopyala**olarak ayarlandığında, haritalar oluşturmak veya Çözüm Gezgini haritaya öğe eklemek daha fazla zaman alabilir. Bu, artımlı yapılarla ve Visual Studio'nun projeyi her seferinde yeniden oluşturmasıyla ilgili sorunlara neden olabilir. Performansı artırmak için, bu özelliği **daha yeni** veya olarak Kopyala olacak şekilde değiştirin `PreserveNewest` . Bkz. [Artımlı derlemeler](../msbuild/incremental-builds.md).
 
   Tamamlanan eşleme yalnızca başarıyla oluşturulmuş kod için bağımlılıkları gösterir. Belirli bileşenler için yapı hataları oluşursa, bu hatalar haritada görüntülenir. Harita üzerinde mimari kararlar vermeden önce bir bileşenin gerçekten oluşturup bu bağımlılıkları kullandığından emin olun.
 
-## <a name="SavingExporting"></a>Kod eşlemelerini paylaşma
+## <a name="share-code-maps"></a><a name="SavingExporting"></a>Kod eşlemelerini paylaşma
 
 ### <a name="share-the-map-with-other-visual-studio-users"></a>Eşlemeyi diğer Visual Studio kullanıcılarıyla paylaşma
  Haritayı kaydetmek için **Dosya** menüsünü kullanın.
 
- veya
+ -veya-
 
- Haritayı belirli projenin bir parçası olarak kaydetmek için harita araç çubuğunda, **paylaşma**, \<*codemapname*> **. dgml** **' i** seçin ve ardından Haritayı kaydetmek istediğiniz projeyi seçin.
+ Haritayı belirli projenin bir parçası olarak kaydetmek için, harita araç çubuğunda, **paylaşma**, **Move** \<*CodeMapName*> **. dgml**' i seçin ve ardından Haritayı kaydetmek istediğiniz projeyi seçin.
 
  ![Haritayı başka bir projeye taşıma](../modeling/media/codemapsmovemapmenu.png "CodeMapsMoveMapMenu")
 
@@ -373,16 +373,16 @@ Kodunuzun içindeki bağımlılıkları anlamak istediğinizde kod haritaları o
 
 2. Dosyayı kaydetmek istediğiniz yere gidin.
 
-3. Kod eşlemesini adlandırın. **Farklı kaydet türü** kutusunun **XPS dosyaları (\*. XPS)** olarak ayarlandığından emin olun. **Kaydet**’i seçin.
+3. Kod eşlemesini adlandırın. **Farklı kaydet türü** kutusunun **XPS dosyaları ( \* . XPS)** olarak ayarlandığından emin olun. **Kaydet**'i seçin.
 
 ## <a name="what-else-can-i-do"></a>Başka ne yapabilirim?
 
-- [Uygulamalarınızda hata ayıklamak için kod haritalarını kullanma](../modeling/use-code-maps-to-debug-your-applications.md)
+- [Uygulamalarınızda hata ayıklamak için kod eşlemelerini kullanma](../modeling/use-code-maps-to-debug-your-applications.md)
 
 - [Hata ayıklarken çağrı yığınında eşleştirme yöntemleri](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)
 
 - [Kod haritası çözümleyicilerini kullanarak olası sorunları bulma](../modeling/find-potential-problems-using-code-map-analyzers.md)
 
-- [Kod haritalarına göz atma ve bunları yeniden düzenleme](../modeling/browse-and-rearrange-code-maps.md)
+- [Kod eşlemelerine göz atma ve bunları yeniden düzenleme](../modeling/browse-and-rearrange-code-maps.md)
 
 - [DGML dosyalarını düzenleyerek kod haritalarını özelleştirme](../modeling/customize-code-maps-by-editing-the-dgml-files.md)

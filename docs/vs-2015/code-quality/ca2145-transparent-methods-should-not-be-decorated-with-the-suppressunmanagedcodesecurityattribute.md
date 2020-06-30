@@ -11,31 +11,31 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 6bffa680fa39014ffa96feec997b5eca63ee08ff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d5eb16130aef42abcf9fddf533d0253864a75114
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72610218"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546412"
 ---
-# <a name="ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute"></a>CA2145: Saydam yöntemler SuppressUnmanagedCodeSecurityAttribute ile donatılmamalıdır
+# <a name="ca2145-transparent-methods-should-not-be-decorated-with-the-suppressunmanagedcodesecurityattribute"></a>CA2145: Saydam metotlar SuppressUnmanagedCodeSecurityAttribute ile donatılmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|TransparentMethodsShouldNotUseSuppressUnmanagedCodeSecurity|
 |CheckId|CA2145|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Saydam bir yöntem, <xref:System.Security.SecuritySafeCriticalAttribute> yöntemiyle işaretlenmiş bir yöntem ya da bir yöntemi içeren bir tür <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliğiyle işaretlenir.
+## <a name="cause"></a>Nedeni
+ Saydam bir yöntem, yöntemiyle işaretlenmiş bir yöntem <xref:System.Security.SecuritySafeCriticalAttribute> veya bir yöntemi içeren bir tür, <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliğiyle işaretlenir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- @No__t_0 özniteliğiyle donatılmış Yöntemler, onu çağıran herhangi bir yönteme yerleştirilmiş bir örtülü LinkDemand 'a sahiptir. Bu LinkDemand, çağıran kodun kritik güvenlikli olmasını gerektirir. SuppressUnmanagedCodeSecurity kullanan yöntemi <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretlemek, bu gereksinimi, metodun çağıranları için daha belirgin hale getirir.
+ Özniteliği ile donatılmış Yöntemler, <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> onu çağıran herhangi bir yönteme yerleştirilmiş bir örtülü LinkDemand 'a sahiptir. Bu LinkDemand, çağıran kodun kritik güvenlikli olmasını gerektirir. SuppressUnmanagedCodeSecurity kullanan yöntemi <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretlemek, bu gereksinimi metodun çağıranları için daha belirgin hale getirir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için yöntemi veya türü <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretleyin.
+ Bu kural ihlalini onarmak için yöntemini veya türünü <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
@@ -43,4 +43,4 @@ ms.locfileid: "72610218"
 ### <a name="code"></a>Kod
  [!code-csharp[FxCop.Security.CA2145.TransparentMethodsShouldNotUseSuppressUnmanagedCodeSecurity#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.security.ca2145.transparentmethodsshouldnotusesuppressunmanagedcodesecurity/cs/ca2145.cs#1)]
 
-### <a name="comments"></a>Açıklamalar
+### <a name="comments"></a>Yorumlar

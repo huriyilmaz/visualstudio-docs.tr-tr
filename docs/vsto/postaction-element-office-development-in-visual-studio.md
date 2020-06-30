@@ -1,7 +1,7 @@
 ---
-title: "&lt;postAction&gt; öğesi (Visual Studio'da Office Geliştirme)"
+title: "&lt;Postatransaction &gt; öğesi (Visual Studio 'Da Office geliştirme)"
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 53cf47ef9a78ebb54c377e19b4f7fbad444bbfcd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 149aa0cf8543f5b5b1b5ada18a8b2f0e58f063d0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976527"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546945"
 ---
-# <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;postAction&gt; öğesi (Visual Studio'da Office Geliştirme)
-  `postAction` Öğesinin `vstav3` ad alanı içerir `entrypoint` öğeleri ve tüm `postActionData` Office çözümleri yüklendikten sonra çalışan dağıtım sonrası eylemleri ile ilişkili olan öğeler.
+# <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;Postatransaction &gt; öğesi (Visual Studio 'Da Office geliştirme)
+  `postAction`Ad alanı öğesi, `vstav3` `entrypoint` `postActionData` Office çözümleri yüklendikten sonra çalıştırılan dağıtım sonrası eylemlerle ilişkili öğeleri ve tüm öğeleri içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <postAction>
@@ -36,22 +36,22 @@ ms.locfileid: "62976527"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `postAction` Öğe isteğe bağlıdır ve durumda `vstav3` ad alanı. Bir `postAction` her dağıtım sonrası eylemi için uygulama bildiriminde tanımlanan öğe.
+ `postAction`Öğesi isteğe bağlıdır ve `vstav3` ad alanıdır. `postAction`Her dağıtım sonrası eylemi için uygulama bildiriminde tanımlanan bir öğe vardır.
 
- `postAction` Öğesi özniteliklere sahip değildir.
+ `postAction`Öğesinde hiç öznitelik yok.
 
- `postAction` Aşağıdaki öğelere sahiptir.
+ `postAction`Aşağıdaki öğelere sahiptir.
 
-### <a name="entrypoint"></a>Giriş noktası
- İsteğe bağlı. Rolü `entryPoint` öğesinde `vstav3` ad alanı içinde tanımlanan [ &#60;giriş noktaları&#62; öğesi &#40;Visual Studio'da Office geliştirme&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md).
+### <a name="entrypoint"></a>Noktası
+ İsteğe bağlı. `entryPoint` `vstav3` Ad alanındaki öğesinin rolü [&#60;entryPoints&#62; öğesi &#40;Visual Studio 'da Office geliştirme&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)' nde tanımlanmıştır.
 
 ### <a name="postactiondata"></a>postActionData
- İsteğe bağlı. Rolü `postActionData` öğesinde `vstav3` ad alanı içinde tanımlanan [ &#60;postActionData&#62; öğesi &#40;Visual Studio'da Office geliştirme&#41;](../vsto/postactiondata-element-office-development-in-visual-studio.md).
+ İsteğe bağlı. `postActionData`Ad alanındaki öğesinin rolü, `vstav3` [Visual Studio&#41;Office geliştirme &#40;&#60;postactiondata&#62; öğesinde ](../vsto/postactiondata-element-office-development-in-visual-studio.md)tanımlanmıştır.
 
-## <a name="post-deployment-action-example"></a>Dağıtım sonrası eylemi örneği
+## <a name="post-deployment-action-example"></a>Dağıtım sonrası eylem örneği
 
-### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir `postAction` öğesi kullanılarak dağıtılan bir Office çözümü için uygulama bildiriminde [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+### <a name="description"></a>Description
+ Aşağıdaki kod örneği, `postAction` kullanılarak dağıtılan bir Office çözümü için uygulama bildiriminde bulunan öğesini gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -74,4 +74,4 @@ ms.locfileid: "62976527"
 
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

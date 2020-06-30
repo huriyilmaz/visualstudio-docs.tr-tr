@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 907b3deeadd0a56f9e47a6e17a40579a0c9ffa64
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 8470ec4acf686c016088c5f474539a1ab7ed85df
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985878"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547205"
 ---
 # <a name="how-to-populate-documents-with-data-from-a-database"></a>Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma
 
@@ -36,7 +36,7 @@ Aşağıdaki örnek, tasarımcı kullanarak belge düzeyi projelerde veri bağla
 
 ### <a name="to-populate-a-document-with-data-from-a-database"></a>Belgeyi bir veritabanındaki verilerle doldurmak için
 
-1. Belgeyi tasarımcıda açık olacak şekilde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]bir Word belge düzeyi projesi açın.
+1. Belge düzeyinde bir proje açın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve belgeyi tasarımcıda açın.
 
 2. **Veri kaynakları** penceresini açın ve veritabanından bir veri kaynağı oluşturun. Daha fazla bilgi için bkz. [yeni bağlantılar ekleme](../data-tools/add-new-connections.md).
 
@@ -52,17 +52,17 @@ Denetime ek olarak, aşağıdaki verilerle ilgili nesneler projenize otomatik ol
 
 - Veritabanına bağladığınız veri tablolarını kapsülleyen türü belirtilmiş bir veri kümesi. Daha fazla bilgi için bkz. [Visual Studio 'Da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md).
 
-- Denetimi türü belirtilmiş veri kümesine bağlayan bir <xref:System.Windows.Forms.BindingSource>. Daha fazla bilgi için bkz. [BindingSource Bileşenine Genel Bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview).
+- <xref:System.Windows.Forms.BindingSource>Denetimi türü belirtilmiş veri kümesine bağlayan bir. Daha fazla bilgi için bkz. [BindingSource Bileşenine Genel Bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview).
 
 - Türü belirtilmiş veri kümesini veritabanına bağlayan bir TableAdapter. Daha fazla bilgi için bkz. [TableAdapters oluşturma ve yapılandırma](../data-tools/create-and-configure-tableadapters.md).
 
 - Hiyerarşik güncelleştirmeleri etkinleştirmek için veri kümesindeki tablo bağdaştırıcılarını koordine etmek üzere kullanılan bir TableAdapterManager. Daha fazla bilgi için bkz. [sıradüzensel Update](../data-tools/hierarchical-update.md) ve [TableAdapterManager Reference](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
 
-Projeyi çalıştırdığınızda, denetim veri kaynağındaki ilk kaydı görüntüler. Kullanıcıların kayıtlarda gezinme olanağı sağlamak için <xref:System.Windows.Forms.BindingSource> kullanabilirsiniz.
+Projeyi çalıştırdığınızda, denetim veri kaynağındaki ilk kaydı görüntüler. <xref:System.Windows.Forms.BindingSource>Kullanıcıların kayıtlarda gezinme özelliğini etkinleştirmek için kullanabilirsiniz.
 
 ### <a name="to-scroll-through-the-records"></a>Kayıtlar arasında gezinmek için
 
-- <xref:System.Windows.Forms.BindingSource.MoveNext%2A> ve <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>gibi <xref:System.Windows.Forms.BindingSource> yöntemler kullanın.
+- <xref:System.Windows.Forms.BindingSource>Ve gibi yöntemleri kullanın <xref:System.Windows.Forms.BindingSource.MoveNext%2A> <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> .
 
 Yazılan veri kümesine ve veritabanına güncelleştirmelerin gönderilmesi hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 

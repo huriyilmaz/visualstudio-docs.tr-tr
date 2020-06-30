@@ -15,30 +15,30 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ebc6732e559b70e753a44b14cf45b7de9fc150d4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e115b4d327f1ac45673de491ceaffc90941e1111
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668176"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546789"
 ---
-# <a name="ca1047-do-not-declare-protected-members-in-sealed-types"></a>CA1047: Korumalı türlerde korunan üyeleri bildirmeyin
+# <a name="ca1047-do-not-declare-protected-members-in-sealed-types"></a>CA1047: Sealed türlerde protected üyeler bildirmeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotDeclareProtectedMembersInSealedTypes|
 |CheckId|CA1047|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Ortak tür `sealed` ' dır (Visual Basic 'te `NotInheritable`) ve korumalı bir üye veya korumalı iç içe geçmiş bir tür bildirir. Bu kural, bu düzene uymalıdır <xref:System.Object.Finalize%2A> yöntemler için ihlaller raporlamaz.
+## <a name="cause"></a>Nedeni
+ Ortak bir tür `sealed` ( `NotInheritable` Visual Basic 'te) ve korumalı bir üye ya da korumalı bir iç içe tür bildirir. Bu kural yöntemler için ihlalleri raporlamaz <xref:System.Object.Finalize%2A> , bu da bu düzene uymalıdır.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Türler, devralmasına erişebileceğiniz veya üyeyi geçersiz kılmak için korunan üyelerin türlerini bildirir. Tanım olarak, korumalı türler üzerinde korunan yöntemlerin çağrılabilmesi için korumalı bir türden devralma yapılamaz.
 
- C# Derleyici bu hata için bir uyarı verir.
+ C# derleyicisi bu hata için bir uyarı verir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini onarmak için üyenin erişim düzeyini özel olarak değiştirin veya türü devralınabilir yapın.

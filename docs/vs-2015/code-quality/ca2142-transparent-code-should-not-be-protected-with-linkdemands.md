@@ -11,37 +11,37 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a9d8986e9d1e6fc3f614e23fff3f6a24c1cc6e91
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aa6bd9dcacc5fb863199c740a71c824f14739052
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72602774"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546438"
 ---
 # <a name="ca2142-transparent-code-should-not-be-protected-with-linkdemands"></a>CA2142: Saydam kod LinkDemands ile korunmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|TransparentMethodsShouldNotBeProtectedWithLinkDemands|
 |CheckId|CA2142|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Saydam bir yöntem <xref:System.Security.Permissions.SecurityAction> veya diğer güvenlik talebi gerektirir.
+## <a name="cause"></a>Nedeni
+ Saydam bir yöntem, <xref:System.Security.Permissions.SecurityAction> ya da başka bir güvenlik talebi gerektirir.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Bu kural, bunlara erişen LinkDemands gerektiren saydam yöntemleri tetikler. Saydam güvenlik kodu, bir işlemin güvenlik doğrulaması için sorumlu olmamalıdır ve bu nedenle izin talep edilmemelidir. Saydam yöntemlerin güvenlik açısından nötr olması gerektiğinden, herhangi bir güvenlik kararı getirmemelidir. Ayrıca, güvenlik kararları veren güvenli kritik kod, daha önce böyle bir karar vermek için saydam koda bağlı olmamalıdır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için, saydam yöntemdeki bağlantı talebini kaldırın veya güvenlik istekleri gibi güvenlik denetimleri yapıyorsa, yöntemi <xref:System.Security.SecuritySafeCriticalAttribute> özniteliğiyle işaretleyin.
+ Bu kural ihlalini onarmak için, saydam yöntemdeki bağlantı talebini kaldırın veya <xref:System.Security.SecuritySafeCriticalAttribute> güvenlik istekleri gibi güvenlik denetimleri yapıyorsa yöntemi özniteliğiyle işaretleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, yöntem saydam olduğu ve <xref:System.Security.Permissions.SecurityAction> içeren bir LinkDemand <xref:System.Security.PermissionSet> ile işaretlenmiş olduğundan kural yöntemi üzerinde ateşlenir.
+ Aşağıdaki örnekte, yöntemi saydam olduğu ve içeren bir LinkDemand ile işaretlenmiş olduğundan kural yöntemi üzerinde ateşlenir <xref:System.Security.PermissionSet> <xref:System.Security.Permissions.SecurityAction> .
 
  [!code-csharp[FxCop.Security.CA2142.TransparentMethodsShouldNotBeProtectedWithLinkDemands#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.security.ca2142.transparentmethodsshouldnotbeprotectedwithlinkdemands/cs/ca2142 -transparentmethodsshouldnotbeprotectedwithlinkdemands.cs#1)]
 

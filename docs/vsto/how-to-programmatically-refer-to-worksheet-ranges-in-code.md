@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Koddaki çalışma sayfası aralıklarına program aracılığıyla bakma'
+title: 'Nasıl yapılır: koddaki çalışma sayfası aralıklarına program aracılığıyla başvurma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,45 +15,45 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2e82b884965c5c7362951c7d94199f90c93fbfc3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 93673fcc270ce2f1ac43804cb1d794281f28c702
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955969"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547400"
 ---
-# <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>Nasıl yapılır: Koddaki çalışma sayfası aralıklarına program aracılığıyla bakma
-  Benzer bir süreç içeriğine başvurmak için kullandığınız bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi veya yerel Excel range nesnesi.
+# <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>Nasıl yapılır: koddaki çalışma sayfası aralıklarına program aracılığıyla başvurma
+  Bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimin veya yerel Excel Aralık nesnesinin içeriğine başvurmak için benzer bir işlem kullanırsınız.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="use-a-namedrange-control"></a>NamedRange denetimi kullanma
- Aşağıdaki örnek ekler bir <xref:Microsoft.Office.Tools.Excel.NamedRange> çalışma ve hücre aralığı içinde metin ekler.
+ Aşağıdaki örnek bir <xref:Microsoft.Office.Tools.Excel.NamedRange> çalışma sayfasına bir ekler ve sonra aralıktaki hücreye metin ekler.
 
 ### <a name="to-refer-to-a-namedrange-control"></a>NamedRange denetimine başvurmak için
 
-1. Bir dizeye atama <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> özelliği <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi. Bu kod, bir sayfa sınıfında değil yerleştirilmelidir `ThisWorkbook` sınıfı.
+1. Denetimin özelliğine bir dize atayın <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> <xref:Microsoft.Office.Tools.Excel.NamedRange> . Bu kod, sınıfında değil, bir sayfa sınıfına yerleştirilmelidir `ThisWorkbook` .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#46](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#46)]
      [!code-vb[Trin_VstcoreExcelAutomation#46](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#46)]
 
-## <a name="use-native-excel-ranges"></a>Yerel Excel aralıkları kullanın
- Aşağıdaki örnek, bir çalışma sayfasına yerel Excel aralığı ekler ve hücre aralığı içinde metin ekler.
+## <a name="use-native-excel-ranges"></a>Yerel Excel aralıklarını kullan
+ Aşağıdaki örnek, bir çalışma sayfasına yerel bir Excel aralığı ekler ve sonra aralıktaki hücreye metin ekler.
 
-### <a name="to-refer-to-a-native-range-object"></a>Bir yerel aralığı nesnesine başvurmak için
+### <a name="to-refer-to-a-native-range-object"></a>Yerel bir Aralık nesnesine başvurmak için
 
-1. Bir dizeye atama <xref:Microsoft.Office.Interop.Excel.Range.Value2%2A> aralık özelliği.
+1. Aralığın özelliğine bir dize atayın <xref:Microsoft.Office.Interop.Excel.Range.Value2%2A> .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#47)]
      [!code-vb[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#47)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Aralıklarla çalışma](../vsto/working-with-ranges.md)
-- [Nasıl yapılır: Program aracılığıyla çalışma sayfaları Yazımı denetleme](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)
-- [Nasıl yapılır: Program aracılığıyla çalışma kitaplarındaki aralıklara biçimler uygulama](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
-- [Nasıl yapılır: Program aracılığıyla otomatik biçimde aralıkları artımlı şekilde değişen verilerle ile doldurun.](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)
-- [Nasıl yapılır: Program aracılığıyla çalışma sayfası aralıklarında metin arama](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md)
+- [Aralıklar ile çalışma](../vsto/working-with-ranges.md)
+- [Nasıl yapılır: çalışma sayfalarında program aracılığıyla yazımı denetleme](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)
+- [Nasıl yapılır: program aracılığıyla çalışma kitaplarındaki aralıklara stil uygulama](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
+- [Nasıl yapılır: artımlı değişen verilerle aralıkları program aracılığıyla otomatik olarak doldur](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)
+- [Nasıl yapılır: çalışma sayfası aralıklarında program aracılığıyla metin arama](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md)
 - [NamedRange denetimi](../vsto/namedrange-control.md)
-- [Konak öğelerine ve denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
-- [Konak denetimlerinin ve konak öğelerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
+- [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

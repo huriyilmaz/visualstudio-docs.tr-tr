@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Kısayol menülerine komut ekleme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82c26022f0c88f1ce125c64f5ec3b2df8d20346e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 1ad27481799718d9d2b0872d7a43837fc822ca40
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986022"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546204"
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>Nasıl yapılır: Kısayol menülerine komut ekleme
   Bu konu başlığı altında, VSTO eklentisi kullanarak bir Office uygulamasındaki kısayol menüsüne nasıl komut ekleyeceğiniz gösterilmektedir.
@@ -27,22 +27,22 @@ ms.locfileid: "72986022"
 
 ### <a name="to-add-commands-to-shortcut-menus-in-office"></a>Office 'teki Kısayol menülerine komut eklemek için
 
-1. Belge düzeyi veya VSTO eklenti projesine **ŞERIT XML** öğesi ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md). İçindeki
+1. Belge düzeyi veya VSTO eklenti projesine **ŞERIT XML** öğesi ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: Şeriti özelleştirmeye başlama](../vsto/how-to-get-started-customizing-the-ribbon.md). İçinde
 
 2. **Çözüm Gezgini**, **ThisAddin.cs** veya **ThisAddIn. vb**öğesini seçin.
 
-3. Menü çubuğunda  > **kodu** **görüntüle** ' yi seçin.
+3. Menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**.
 
      **ThisAddIn** sınıfı dosyası kod düzenleyicisinde açılır.
 
-4. Aşağıdaki kodu **ThisAddIn** sınıfına ekleyin. Bu kod `CreateRibbonExtensibilityObject` yöntemini geçersiz kılar ve Şerit XML sınıfını Office uygulamasına döndürür.
+4. Aşağıdaki kodu **ThisAddIn** sınıfına ekleyin. Bu kod, yöntemini geçersiz kılar `CreateRibbonExtensibilityObject` ve ŞERIT XML sınıfını Office uygulamasına döndürür.
 
      [!code-csharp[Trin_WordAddIn_Menus#1](../vsto/codesnippet/CSharp/trin_wordaddin_menus.cs/thisaddin.cs#1)]
      [!code-vb[Trin_WordAddIn_Menus#1](../vsto/codesnippet/VisualBasic/trin_wordaddin_menus.vb/thisaddin.vb#1)]
 
-5. **Çözüm Gezgini**, Şerit XML dosyasını seçin. Varsayılan olarak, Şerit XML dosyası *Ribbon1. xml*olarak adlandırılır.
+5. **Çözüm Gezgini**, Şerit XML dosyasını seçin. Varsayılan olarak, Şerit XML dosyası *Ribbon1.xml*olarak adlandırılır.
 
-6. Menü çubuğunda  > **kodu** **görüntüle** ' yi seçin.
+6. Menü çubuğunda kodu **görüntüle**' yi seçin  >  **Code**.
 
      Şerit XML dosyası kod düzenleyicisinde açılır.
 
@@ -72,7 +72,7 @@ ms.locfileid: "72986022"
 
 8. **Çözüm Gezgini**' de **MyRibbon.cs** veya **MyRibbon. vb**öğesini seçin.
 
-9. İşlemek istediğiniz her denetim için `Ribbon1` sınıfına bir geri çağırma yöntemi ekleyin.
+9. `Ribbon1`İşlemek istediğiniz her denetim için sınıfa bir geri çağırma yöntemi ekleyin.
 
      Aşağıdaki geri çağırma yöntemi **düğme** düğmesini işler. Bu kod, etkin belgeye curser 'ın geçerli konumundaki bir dize ekler.
 

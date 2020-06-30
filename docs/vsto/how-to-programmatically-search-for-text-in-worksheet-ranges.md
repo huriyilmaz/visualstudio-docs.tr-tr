@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfası aralıklarında program aracılığıyla metin arama'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,22 +14,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0ffc06c2f50f7a304ef76ac1451ee47419143afb
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 4d35d24f9132a9b279316b53fbb13e3bfa094994
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985815"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547036"
 ---
 # <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>Nasıl yapılır: çalışma sayfası aralıklarında program aracılığıyla metin arama
-  <xref:Microsoft.Office.Interop.Excel.Range> nesnesinin <xref:Microsoft.Office.Interop.Excel.Range.Find%2A> yöntemi, Aralık içinde metin aramanızı sağlar. Bu metin, `#NULL!` veya `#VALUE!`gibi bir çalışma sayfası hücresinde görünebilen herhangi bir hata dizesi de olabilir. Hata dizeleri hakkında daha fazla bilgi için bkz. [hücre hata değerleri](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values).
+  <xref:Microsoft.Office.Interop.Excel.Range.Find%2A>Nesnesinin yöntemi, <xref:Microsoft.Office.Interop.Excel.Range> Aralık içinde metin aramanızı sağlar. Bu metin, veya gibi bir çalışma sayfası hücresinde görünebilen hata dizelerinden herhangi biri de olabilir `#NULL!` `#VALUE!` . Hata dizeleri hakkında daha fazla bilgi için bkz. [hücre hata değerleri](/office/vba/excel/Concepts/Cells-and-Ranges/cell-error-values).
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- Aşağıdaki örnek, `Fruits` adlı bir aralığı arar ve "elmalar" sözcüğünü içeren hücreler için yazı tipini değiştirir. Bu yordam Ayrıca, Aramayı yinelemek için önceden ayarlanmış arama ayarlarını kullanan <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> yöntemini kullanır. Aramadan sonra hücreyi belirtirsiniz ve <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> yöntemi Rest 'i işler.
+ Aşağıdaki örnek adlı bir aralığı arar `Fruits` ve "elmalar" sözcüğünü içeren hücreler için yazı tipini değiştirir. Bu yordam <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> , Aramayı yinelemek için önceden ayarlanmış arama ayarlarını kullanan yöntemini de kullanır. Aramadan sonra hücreyi belirtirsiniz ve <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> Yöntem Rest 'i işler.
 
 > [!NOTE]
-> <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A> yönteminin araması, aralığın sonuna ulaştıktan sonra arama aralığının başlangıcına geri sarar. Kodunuzun, aramanın sonsuz bir döngüde sarılmadığından emin olması gerekir. Örnek yordam, <xref:Microsoft.Office.Interop.Excel.Range.Address%2A> özelliğini kullanarak bunu işlemenin bir yolunu gösterir.
+> <xref:Microsoft.Office.Interop.Excel.Range.FindNext%2A>Metodun araması, aralığın sonuna ulaştıktan sonra arama aralığının başlangıcına geri sarar. Kodunuzun, aramanın sonsuz bir döngüde sarılmadığından emin olması gerekir. Örnek yordam, özelliğini kullanarak bunu işlemenin bir yolunu gösterir <xref:Microsoft.Office.Interop.Excel.Range.Address%2A> .
 
 ## <a name="to-search-for-text-in-a-worksheet-range"></a>Çalışma sayfası aralığında metin aramak için
 
@@ -48,7 +48,7 @@ ms.locfileid: "72985815"
     [!code-csharp[Trin_VstcoreExcelAutomation#60](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#60)]
     [!code-vb[Trin_VstcoreExcelAutomation#60](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#60)]
 
-4. Bulunan ilk aralığı (`firstFind`) **hiçbir şey**ile karşılaştırın. `firstFind` hiçbir değer içermiyorsa, kod bulunan aralığı (`currentFind`) yerine depolar.
+4. Bulunan ilk aralığı ( `firstFind` ) **hiçbir şey**ile karşılaştırın. `firstFind`Değer içermiyorsa, kod bulunan aralığı () yerine depolar `currentFind` .
 
     [!code-csharp[Trin_VstcoreExcelAutomation#61](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#61)]
     [!code-vb[Trin_VstcoreExcelAutomation#61](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#61)]

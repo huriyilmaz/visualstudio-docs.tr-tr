@@ -1,7 +1,7 @@
 ---
-title: Otomatik doldurma artımlı olarak veri aralıkları program aracılığıyla değiştirme
+title: Artımlı olarak veri aralıklarını otomatik olarak değiştirme
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,46 +15,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a514f83d12cd00c4a7792ae0bf2483fdd916897a
-ms.sourcegitcommit: 13ab9a5ab039b070b9cd9251d0b83dd216477203
+ms.openlocfilehash: 076381c93d11c2d13bdd89ea5c36c0039e15ef71
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177692"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547478"
 ---
-# <a name="how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data"></a>Nasıl yapılır: Program aracılığıyla otomatik biçimde aralıkları artımlı şekilde değişen verilerle ile doldurun.
-  <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> Yöntemi <xref:Microsoft.Office.Interop.Excel.Range> nesne değerlerle otomatik olarak çalışma sayfasındaki bir aralığı doldurmanıza olanak sağlar. Çoğu zaman <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> yöntemi artımlı olarak artan veya azalan bir aralıktaki değerleri depolamak için kullanılır. Gelen isteğe bağlı bir sabit sağlanarak davranış belirtebilirsiniz <xref:Microsoft.Office.Interop.Excel.XlAutoFillType> sabit listesi.
+# <a name="how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data"></a>Nasıl yapılır: artımlı değişen verilerle aralıkları program aracılığıyla otomatik olarak doldur
+  <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A>Nesnesinin yöntemi, <xref:Microsoft.Office.Interop.Excel.Range> çalışma sayfasındaki bir aralığı değerleri otomatik olarak doldurmanıza olanak sağlar. Genellikle, <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> yöntemi bir aralıktaki artımlı veya azalan değerleri depolamak için kullanılır. Sabit listesinden isteğe bağlı bir sabit sağlayarak davranışı belirtebilirsiniz <xref:Microsoft.Office.Interop.Excel.XlAutoFillType> .
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- İki aralık kullanırken belirtmelisiniz <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A>:
+ Kullanırken iki Aralık belirtmeniz gerekir <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> :
 
-- Çağıran aralık <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> dolgu başlangıç noktasını belirtir ve bir başlangıç değeri içeren yöntemi.
+- <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A>Dolgunun başlangıç noktasını belirten ve bir başlangıç değeri içeren yöntemi çağıran Aralık.
 
-- Bir parametre olarak geçirilen doldurmak istediğiniz aralık <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> yöntemi. Hedef aralığın başlangıç değeri içeren aralığını içermelidir.
+- Doldurmanız istediğiniz Aralık, yöntemine parametre olarak geçirilir <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> . Bu hedef Aralık, ilk değeri içeren aralığı içermelidir.
 
     > [!NOTE]
-    > Geçiremezsiniz bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi <xref:Microsoft.Office.Interop.Excel.Range>. Daha fazla bilgi için [konak denetimlerinin ve konak öğelerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).
+    > Yerinde bir denetim geçiremezsiniz <xref:Microsoft.Office.Tools.Excel.NamedRange> <xref:Microsoft.Office.Interop.Excel.Range> . Daha fazla bilgi için bkz. [konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).
 
 ## <a name="example"></a>Örnek
  [!code-csharp[Trin_VstcoreExcelAutomation#49](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#49)]
  [!code-vb[Trin_VstcoreExcelAutomation#49](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#49)]
 
-## <a name="compile-the-code"></a>Kod derleme
- İlk hücrenin doldurmak istediğiniz aralığın başlangıç değeri içermelidir.
+## <a name="compile-the-code"></a>Kodu derle
+ Doldurmanız istediğiniz aralığın ilk hücresi bir başlangıç değeri içermelidir.
 
- Örnek, üç bölgeleri dolgu gerektirir:
+ Örnek üç bölge doldurmanız gerekir:
 
-- Sütun B beş iş günü eklemektir. Başlangıç değeri için tür **Pazartesi** B1 hücresine.
+- B sütunu beş haftanın günü dahil edilir. İlk değer için B1 hücresine **Pazartesi** yazın.
 
-- Sütun C'yi, beşinci aya dahil etmektir. Başlangıç değeri için tür **Ocak** hücresinde C1.
+- C sütunu beş ay dahil edilir. İlk değer için C1 hücresinde **Ocak** yazın.
 
-- Sütun D numaraları, iki her satır için artan bir dizi eklemektir. Başlangıç değerleri için tür **4** D1 hücresinde ve **6** D2 hücresine.
+- Sütun D, her satır için iki ile artan bir dizi sayı içerir. İlk değerler için, D2 hücresindeki D1 ve **6** hücresindeki **4** yazın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Aralıklarla çalışma](../vsto/working-with-ranges.md)
-- [Nasıl yapılır: Koddaki çalışma sayfası aralıklarına program aracılığıyla bakma](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)
-- [Nasıl yapılır: Program aracılığıyla çalışma kitaplarındaki aralıklara biçimler uygulama](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
-- [Nasıl yapılır: Program aracılığıyla Excel hesapları çalıştırma](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md)
-- [Konak öğelerine ve denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
+- [Aralıklar ile çalışma](../vsto/working-with-ranges.md)
+- [Nasıl yapılır: koddaki çalışma sayfası aralıklarına program aracılığıyla başvurma](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)
+- [Nasıl yapılır: program aracılığıyla çalışma kitaplarındaki aralıklara stil uygulama](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
+- [Nasıl yapılır: program aracılığıyla Excel hesaplamalarını çalıştırma](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md)
+- [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

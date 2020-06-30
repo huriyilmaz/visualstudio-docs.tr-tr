@@ -15,24 +15,24 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: b9c91a7c9833d3d9d5ae283c28ae4d437bd07734
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4267b4f55f78106a4d1e8f3b2f9b296be9ddf618
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658744"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546542"
 ---
 # <a name="ca2112-secured-types-should-not-expose-fields"></a>CA2112: Güvenli türler alanları açığa çıkarmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|SecuredTypesShouldNotExposeFields|
 |CheckId|CA2112|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Ortak veya korumalı bir tür ortak alanlar içerir ve bir [bağlantı taleplerine](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)göre güvenli hale getirilir.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -45,7 +45,7 @@ ms.locfileid: "72658744"
  Hem güvenlik sorunları hem de iyi tasarım için genel alanları ortak hale getirerek ihlalleri çözmeniz gerekir. Alan güvenli kalması gereken bilgileri içermiyorsa ve alanın içeriğine bağlı değilseniz, bu kuraldan bir uyarıyı gizleyebilirsiniz.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, güvenli olmayan alanları olan bir kitaplık türü (`SecuredTypeWithFields`), kitaplık türünün örneklerini oluşturabileceğiniz bir tür (`Distributor`) ve hatalı bir şekilde örnekleri, türleri oluşturma iznine sahip değildir ve bir Örneğin, türün güvenliğini sağlayan izne sahip olmasa da, örneğin alanları.
+ Aşağıdaki örnek, `SecuredTypeWithFields` güvenli olmayan alanları olan bir kitaplık türünden () oluşur, `Distributor` kitaplık türünün örneklerini oluşturabileceğiniz bir tür () ve yanlış bir şekilde örnekleri, türü güvenlik altına alan izne sahip olmasa bile bir örneğin alanlarını okuyabilen uygulama kodu.
 
  Aşağıdaki kitaplık kodu, kuralı ihlal ediyor.
 
@@ -63,10 +63,10 @@ ms.locfileid: "72658744"
 
  Bu örnek aşağıdaki çıktıyı üretir.
 
- **Bir SecuredTypeWithFields örneği oluşturuluyor.** **güvenli tür alanları 
-:22, 33** 
-**güvenli türün alanını değiştirme..** . 
-**önbelleğe alınmış nesne alanları: 99, 33**
+ **Bir SecuredTypeWithFields örneği oluşturuluyor.** 
+ **Güvenli tür alanları: 22, 33** 
+ **Güvenli türün alanı değiştiriliyor...** 
+ **Önbelleğe alınmış nesne alanları: 99, 33**
 ## <a name="related-rules"></a>İlgili kurallar
  [CA1051: Görünür örnek alanlarını bildirmeyin](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)
 

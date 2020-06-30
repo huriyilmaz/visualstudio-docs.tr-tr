@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Özel belge özelliklerini oluşturma ve değiştirme'
+title: 'Nasıl yapılır: özel belge özelliklerini oluşturma ve değiştirme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,30 +14,30 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7d6ef8332a5adc21e25f2a414c5b359e48cf1ba7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6dd4f4ada36be4ef7b70f4f32d659abb10c8a62a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825802"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547218"
 ---
-# <a name="how-to-create-and-modify-custom-document-properties"></a>Nasıl yapılır: Özel belge özelliklerini oluşturma ve değiştirme
-  Yukarıda listelenen Microsoft Office uygulamaları ile belgeleri depolanan yerleşik özellikler sağlar. Ayrıca, oluşturun ve belge ile depolamak istediğiniz ek bilgiler varsa, özel belge özelliklerini değiştirin.
+# <a name="how-to-create-and-modify-custom-document-properties"></a>Nasıl yapılır: özel belge özelliklerini oluşturma ve değiştirme
+  Yukarıda listelenen Microsoft Office uygulamalar, belgelerle depolanan yerleşik özellikler sağlar. Ayrıca, belgeyle birlikte depolamak istediğiniz ek bilgiler varsa özel belge özelliklerini oluşturabilir ve değiştirebilirsiniz.
 
  [!INCLUDE[appliesto_docprops](../vsto/includes/appliesto-docprops-md.md)]
 
- Özel özellikleri ile çalışmak için bir belge CustomDocumentProperties özelliğini kullanın. Örneğin, Microsoft Office Excel için belge düzeyi projede kullanın <xref:Microsoft.Office.Tools.Excel.Workbook.CustomDocumentProperties%2A> özelliği `ThisWorkbook` sınıfı. Bir VSTO eklenti projesinde Excel kullanmak <xref:Microsoft.Office.Interop.Excel._Workbook.CustomDocumentProperties%2A> özelliği bir <xref:Microsoft.Office.Interop.Excel.Workbook> nesne. Bu özellikleri döndürür bir <xref:Microsoft.Office.Core.DocumentProperties> bir koleksiyon nesne, <xref:Microsoft.Office.Core.DocumentProperty> nesneleri. Kullanabileceğiniz `Item` adı veya dizin koleksiyonundaki belirli bir özelliği almak için koleksiyonun özelliği.
+ Özel özelliklerle çalışmak için bir belgenin CustomDocumentProperties özelliğini kullanın. Örneğin, Excel Microsoft Office için belge düzeyi projesinde, <xref:Microsoft.Office.Tools.Excel.Workbook.CustomDocumentProperties%2A> sınıfının özelliğini kullanın `ThisWorkbook` . Excel için VSTO eklentisi projesinde, <xref:Microsoft.Office.Interop.Excel._Workbook.CustomDocumentProperties%2A> bir nesnesinin özelliğini kullanın <xref:Microsoft.Office.Interop.Excel.Workbook> . Bu özellikler <xref:Microsoft.Office.Core.DocumentProperties> nesne koleksiyonu olan bir nesnesi döndürür <xref:Microsoft.Office.Core.DocumentProperty> . `Item`Belirli bir özelliği ada veya koleksiyon içindeki dizine göre almak için koleksiyonun özelliğini kullanabilirsiniz.
 
- Aşağıdaki örnek, bir özel özellik Excel için belge düzeyi özelleştirmesinde ekleyin ve bir değer atamak gösterilmiştir.
+ Aşağıdaki örnek, Excel için belge düzeyi özelleştirmesindeki özel bir özelliğin nasıl ekleneceğini gösterir ve bu değere bir değer atar.
 
 ## <a name="example"></a>Örnek
  [!code-vb[Trin_VstcoreProgramming#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#6)]
  [!code-csharp[Trin_VstcoreProgramming#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/ThisWorkbook.cs#6)]
 
 ## <a name="robust-programming"></a>Güçlü programlama
- Erişmeye `Value` özelliği tanımsız özellikleri için bir özel durum oluşturur.
+ `Value`Tanımsız özellikler için özelliğe erişme girişimi bir özel durum oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSTO eklentilerini programlama](../vsto/programming-vsto-add-ins.md)
-- [Belge düzeyi özelleştirmelerini programlama](../vsto/programming-document-level-customizations.md)
-- [Nasıl yapılır: Okuma ve yazma için belge özellikleri](../vsto/how-to-read-from-and-write-to-document-properties.md)
+- [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)
+- [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md)
+- [Nasıl yapılır: belge özelliklerinden okuma ve yazma](../vsto/how-to-read-from-and-write-to-document-properties.md)

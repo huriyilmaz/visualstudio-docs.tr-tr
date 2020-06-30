@@ -1,7 +1,7 @@
 ---
 title: Office çözümleri için dağıtım bildirimleri
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -15,26 +15,26 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3c96f0d87f5a49add1f0e8cebb61bab9659277e6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3540420d07bd158b19f0b078f01cfdb37ce18beb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62972401"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547556"
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Office çözümleri için dağıtım bildirimleri
-  Bir dağıtım bildirimi, bir Office çözümü dağıtım ayarlarını açıklayan ve geçerli uygulama sürümü tanımlayan bir XML dosyasıdır.
+  Dağıtım bildirimi, bir Office çözümünün dağıtım ayarlarını açıklayan ve geçerli uygulama sürümünü tanımlayan bir XML dosyasıdır.
 
- Visual Studio'da Office geliştirme kullanan [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] dağıtım bildirim şeması tanımlanan [ClickOnce dağıtım bildirimi](../deployment/clickonce-deployment-manifest.md) başvuru.
+ Visual Studio 'da Office geliştirme, [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] [ClickOnce dağıtım bildirimi](../deployment/clickonce-deployment-manifest.md) başvurusunda tanımlanan dağıtım bildirimi şemasını kullanır.
 
 ## <a name="remarks"></a>Açıklamalar
- Office çözümleri için dağıtım bildirimi dosyasının geçerli sürümü ve diğer dağıtım ayarlarını tanımlar. Uygulama bildirimi ve çözüm ve çözüm içindeki tüm dosyaları geçerli sürümü açıklanmaktadır.
+ Office çözümleri için dağıtım bildirim dosyası, geçerli sürümü ve diğer dağıtım ayarlarını tanımlar. Uygulama bildirimine başvurur ve çözümün geçerli sürümünü ve çözüm içindeki tüm dosyaları açıklar.
 
 ## <a name="file-name-syntax"></a>Dosya adı sözdizimi
- Bir dağıtım bildirimi dosyasının adı ile bitmelidir *.vsto* uzantısı. Standart olmasına rağmen [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] dağıtım bildirimi uzantı Visual Studio dosyayı işlemek araçları Office çalışma zamanı için etkinleştirmek üzere farklıdır.
+ Dağıtım bildirim dosyasının adı *. VSTO* uzantısıyla bitmelidir. Standart bir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] dağıtım bildirimi olsa da, uzantı Office çalışma zamanının Visual Studio Araçları dosyayı işlemesini sağlamak için farklıdır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, Office çözümü için Visual Studio Araçları için bir dağıtım bildirimi gösterir.
+ Aşağıdaki kod örneği, bir Office çözümü için Visual Studio Araçları dağıtım bildirimini gösterir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

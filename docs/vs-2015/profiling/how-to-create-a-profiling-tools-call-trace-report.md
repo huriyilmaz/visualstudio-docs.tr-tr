@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir profil oluşturma araçları çağrı izleme raporu oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: Profil Oluşturma Araçları çağrısı Izleme raporu oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,35 +12,35 @@ caps.latest.revision: 24
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 03c039d0059e3e5768681ece9bb547b0f4eb7783
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: fbf92b38f9408455e10048fbd4a5e84fdf822ea2
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432756"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547998"
 ---
-# <a name="how-to-create-a-profiling-tools-call-trace-report"></a>Nasıl yapılır: Bir profil oluşturma araçları çağrı izleme raporu oluşturma
+# <a name="how-to-create-a-profiling-tools-call-trace-report"></a>Nasıl yapılır: Profil Oluşturma Araçları Çağrı İzleme Raporu Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-*Çağrı izleme raporu* için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] profil oluşturma araçları, uygulamanızın işlevlerine her giriş ve çıkış noktası ve işlevinizden diğer işlevlere her çağrı için zamanlama bilgisi listeler. Çağrı izleme raporları, yalnızca cihaz atama yöntemi ile toplandı ise profil oluşturma verisi için kullanılabilir.  
+Profil Oluşturma Araçları için *çağrı izleme raporu* , [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] her giriş için zamanlama bilgilerini ve uygulamanızın işlevlerine ve işleviniz tarafından yapılan her bir işleve yapılan her çağrıyı listeler. Çağrı izleme raporları yalnızca izleme yöntemiyle toplandıysa profil oluşturma verileri için kullanılabilir.  
   
 > [!NOTE]
-> Çağrı izleme raporları görüntüleyemez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Kullanmalısınız **VSPerfReport** virgülle ayrılmış değer (.csv) veya Xml dosyası oluşturmak için komut satırı aracı. Bu araç hakkında daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).  
+> İçinde çağrı izleme raporları görüntüleyemezsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Bir virgülle ayrılmış değer (. csv) veya XML dosyası oluşturmak için **VSPerfReport** komut satırı aracını kullanmanız gerekir. Bu araç hakkında daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).  
   
-### <a name="to-create-a-call-trace-report"></a>Çağrı izleme raporu oluşturmak için  
+### <a name="to-create-a-call-trace-report"></a>Bir çağrı izleme raporu oluşturmak için  
   
-1. Açık bir **komut istemi**penceresi.  
+1. Bir **komut istemi**penceresi açın.  
   
-2. Komut satırında, aşağıdaki komutu yazın:  
+2. Komut isteminde aşağıdaki komutu yazın:  
   
-     *ToolsPath* **VSPerfReport** *VSPFile* **/calltrace [/ XML]**  
+     *Araçları yolu* **VSPerfReport** *vspfile*  **/calltrace [/XML]**  
   
-    |||  
+    |Komut öğesi|Description|
     |-|-|  
-    |*ToolsPath*|Profil Araçları komut satırı araçları yolu. Daha fazla bilgi için [komut satırı araçları yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).|  
-    |*VSPFile*|Profil oluşturma veri (.vsp veya .vsps) dosyası. Tam ve kısmi yollar kabul edilir.|  
-    |Xml|Bir Xml biçimli rapor üretir.|  
+    |*Araçları yolu*|Profil Oluşturma Araçları komut satırı araçlarının yolu. Daha fazla bilgi için bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).|  
+    |*VSPFile*|Profil oluşturma verileri (. vsp veya. vsps) dosyası. Tam ve kısmi yollar kabul edilir.|  
+    |Xml|XML biçimli bir rapor oluşturur.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: İçin Windows (ETW) verilerini izleme olayını Topla](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)   
+ [Nasıl yapılır: Windows için olay Izleme (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)   
  [Profil Araçları API'leri](../profiling/profiling-tools-apis.md)

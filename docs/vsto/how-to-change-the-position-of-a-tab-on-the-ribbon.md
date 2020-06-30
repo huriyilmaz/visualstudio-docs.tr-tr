@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Şeritteki sekmenin konumunu değiştirme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bf943f9df4499b30e294e4d7e8bf48b25aa52eab
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 8f821ea2a469fc06f80a7aaea96d07274d02a81d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985982"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544865"
 ---
 # <a name="how-to-change-the-position-of-a-tab-on-the-ribbon"></a>Nasıl yapılır: Şeritteki sekmenin konumunu değiştirme
   Bir Şeritteki özel sekmelerin sırasını **sekme koleksiyonu düzenleyicisini**kullanarak değiştirebilirsiniz. Şeritteki yerleşik bir sekmeden önce veya sonra özel sekmeler yerleştirebilirsiniz. Yerleşik sekme, zaten bir Microsoft Office uygulamasının şeridinde bulunan bir sekmedir. Örneğin, **veri** sekmesi Excel 'deki yerleşik bir sekmedir.
@@ -26,7 +26,7 @@ ms.locfileid: "72985982"
 
 ### <a name="to-change-the-order-of-tabs-on-the-ribbon"></a>Şeritteki sekmelerin sırasını değiştirmek için
 
-1. **Çözüm Gezgini**içindeki Şerit kod dosyasını ( *. vb* veya *. cs* dosyası) seçin.
+1. **Çözüm Gezgini**içindeki Şerit kod dosyasını (*. vb* veya *. cs* dosyası) seçin.
 
 2. **Görünüm** menüsünde **Tasarımcı**' ya tıklayın.
 

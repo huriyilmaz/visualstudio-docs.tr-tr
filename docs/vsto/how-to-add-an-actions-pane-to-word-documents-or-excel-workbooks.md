@@ -1,7 +1,7 @@
 ---
-title: Word belgelerine veya Excel çalışma kitaplarına Eylemler bölmesi ekleme
+title: Word belgelerine veya Excel çalışma kitaplarına eylemler bölmesi ekleme
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,62 +15,62 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: aed3ace3765bb9f160117503deb7373e12e510ad
-ms.sourcegitcommit: 13ab9a5ab039b070b9cd9251d0b83dd216477203
+ms.openlocfilehash: 2d24ec3a17c9e0824c6b7aaffeaaac02c1c4f76e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66177775"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546230"
 ---
-# <a name="how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks"></a>Nasıl yapılır: Word Belgelerine veya Excel Çalışma Kitaplarına Eylemler Bölmesi Ekleme
-  Microsoft Office Word belgesi veya Microsoft Excel çalışma kitabına Eylemler bölmesi ekleme için önce bir Windows Forms kullanıcı denetimi oluşturun. Ardından, kullanıcı denetimine ekleyin <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> özelliği `ThisDocument.ActionsPane` alan (Word) veya `ThisWorkbook.ActionsPane` projenizdeki alan (Excel).
+# <a name="how-to-add-an-actions-pane-to-word-documents-or-excel-workbooks"></a>Nasıl Yapılır: Word Belgelerine veya Excel Çalışma Kitaplarına Eylemler Bölmesi Ekleme
+  Bir Microsoft Office Word belgesine veya Microsoft Excel çalışma kitabına eylemler bölmesi eklemek için, önce bir Windows Forms Kullanıcı denetimi oluşturun. Daha sonra, Kullanıcı denetimini <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> `ThisDocument.ActionsPane` projenizdeki alan (Word) veya `ThisWorkbook.ActionsPane` alan (Excel) özelliğine ekleyin.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="creating-the-user-control"></a>Kullanıcı denetimi oluşturma
- Aşağıdaki yordam, Word kullanıcı denetimi oluşturma veya Excel proje gösterir. Ayrıca bir düğme tıklandığında, metin belge veya çalışma kitabındaki Yazar kullanıcı denetimine ekler.
+ Aşağıdaki yordamda, bir Word veya Excel projesinde kullanıcı denetiminin nasıl oluşturulacağı gösterilmektedir. Ayrıca, tıklatıldığında belgeye veya çalışma kitabına metin yazan Kullanıcı denetimine bir düğme ekler.
 
 #### <a name="to-create-the-user-control"></a>Kullanıcı denetimi oluşturmak için
 
-1. Word veya Excel belge düzeyi projenizi Visual Studio'da açın.
+1. Word veya Excel belge düzeyi projenizi Visual Studio 'da açın.
 
-2. Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**.
+2. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın.
 
-3. İçinde **Yeni Öğe Ekle** iletişim kutusunda **Eylemler bölmesi denetimi**, adlandırın **HelloControl**, tıklatıp **Ekle**.
-
-    > [!NOTE]
-    > Alternatif olarak ekleyebileceğiniz bir **kullanıcı denetimi** projenize öğesi. Tarafından oluşturulan sınıflar **Eylemler bölmesi denetimi** ve **kullanıcı denetimi** öğeleri işlevsel olarak eşdeğerdir.
-
-4. Gelen **Windows Forms** sekmesinde **araç** sürükleyin bir **düğmesi** denetimi denetimi sürükleyin.
+3. **Yeni öğe Ekle** Iletişim kutusunda **Eylemler bölmesi denetimi**' ni seçin, **Merhaba denetimini**adlandırın ve **Ekle**' ye tıklayın.
 
     > [!NOTE]
-    > Denetim Tasarımcısı'nda görünür değilse, çift tıklayarak **HelloControl** içinde **Çözüm Gezgini**.
+    > Alternatif olarak, projenize bir **Kullanıcı denetim** öğesi ekleyebilirsiniz. **Eylemler bölmesi denetimi** ve **Kullanıcı denetimi** öğeleri tarafından oluşturulan sınıflar, işlevsel olarak eşdeğerdir.
 
-5. Koda ekleme <xref:System.Windows.Forms.Control.Click> düğmesi olay işleyicisi. Aşağıdaki örnek, bir Microsoft Office Word belgesi için kod gösterir.
+4. **Araç kutusunun** **Windows Forms** sekmesinden denetim üzerine bir **düğme** denetimi sürükleyin.
+
+    > [!NOTE]
+    > Denetim tasarımcıda görünmüyorsa, **Çözüm Gezgini**' de **HelloControl** ' a çift tıklayın.
+
+5. <xref:System.Windows.Forms.Control.Click>Düğmenin olay işleyicisine kodu ekleyin. Aşağıdaki örnek bir Microsoft Office Word belgesi için kodu gösterir.
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#12](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/HelloControl.cs#12)]
      [!code-vb[Trin_VstcoreActionsPaneWord#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/HelloControl.vb#12)]
 
-6. C# ' düğmesine tıklayarak bir olay işleyicisi eklemeniz gerekir. Bu kodu koyabilirsiniz `HelloControl` Oluşturucusu çağrısından sonra `InitializeComponent`.
+6. C# ' de, düğme tıklayı için bir olay işleyicisi eklemeniz gerekir. `HelloControl`Çağrısından sonra bu kodu oluşturucuya yerleştirebilirsiniz `InitializeComponent` .
 
-     Olay işleyicileri oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
+     Olay işleyicilerini oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#13](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/HelloControl.cs#13)]
 
-## <a name="add-the-user-control-to-the-actions-pane"></a>Eylemler bölmesi kullanıcı denetimi Ekle
- Eylemler bölmesinde göstermek için kullanıcı denetimine ekleme <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> özelliği `ThisDocument.ActionsPane` alan (Word) veya `ThisWorkbook.ActionsPane` alan (Excel).
+## <a name="add-the-user-control-to-the-actions-pane"></a>Eylemler bölmesine Kullanıcı denetimini ekleme
+ Eylemler bölmesini göstermek için, <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> `ThisDocument.ActionsPane` alan (Word) veya `ThisWorkbook.ActionsPane` alan (Excel) özelliğine kullanıcı denetimini ekleyin.
 
-### <a name="to-add-the-user-control-to-the-actions-pane"></a>Eylemler bölmesi kullanıcı denetimi eklemek için
+### <a name="to-add-the-user-control-to-the-actions-pane"></a>Eylemler bölmesine Kullanıcı denetimi eklemek için
 
-1. Aşağıdaki kodu ekleyin `ThisDocument` veya `ThisWorkbook` sınıf düzeyi bildirimle sınıfı (Bu kod bir yönteme eklemeyin).
+1. Aşağıdaki kodu `ThisDocument` `ThisWorkbook` bir sınıf düzeyi bildirimi olarak veya sınıfına ekleyin (Bu kodu bir yönteme eklemeyin).
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#14](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#14)]
      [!code-vb[Trin_VstcoreActionsPaneWord#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#14)]
 
-2. Aşağıdaki kodu ekleyin `ThisDocument_Startup` olay işleyicisine `ThisDocument` sınıfı veya `ThisWorkbook_Startup` olay işleyicisine `ThisWorkbook` sınıfı.
+2. `ThisDocument_Startup`Sınıfının olay işleyicisine `ThisDocument` veya `ThisWorkbook_Startup` sınıfının olay işleyicisine aşağıdaki kodu ekleyin `ThisWorkbook` .
 
      [!code-csharp[Trin_VstcoreActionsPaneWord#15](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#15)]
      [!code-vb[Trin_VstcoreActionsPaneWord#15](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#15)]
@@ -78,5 +78,5 @@ ms.locfileid: "66177775"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md)
 - [İzlenecek yol: Eylemler bölmesinden belgeye metin ekleme](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)
-- [Nasıl yapılır: Eylemler bölmelerindeki Düzen denetim yönetme](../vsto/how-to-manage-control-layout-on-actions-panes.md)
+- [Nasıl yapılır: eylemler bölmelerinde denetim yerleşimini yönetme](../vsto/how-to-manage-control-layout-on-actions-panes.md)
 - [İzlenecek yol: Eylemler bölmesinden belgeye metin ekleme](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md)

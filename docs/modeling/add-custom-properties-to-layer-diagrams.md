@@ -1,7 +1,7 @@
 ---
 title: Bağımlılık diyagramlarına özel özellikler ekleme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - dependency diagrams, adding custom properties
 author: JoshuaPartlow
@@ -9,12 +9,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3623a0c2380188cbb16f6186bddc3f3f2f0c3bd7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3c68d8a75ca8203a790684506ffd44b3d890648a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75590598"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546931"
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>Bağımlılık diyagramlarına özel özellikler ekleme
 
@@ -22,7 +22,7 @@ Bağımlılık diyagramları için uzantı kodu yazdığınızda, değerleri bir
 
 ## <a name="non-visible-properties"></a>Görünür olmayan özellikler
 
-Yalnızca kodunuzun bir bağımlılık diyagramında herhangi bir öğeye değer iliştirmek istiyorsanız, MEF bileşeni tanımlamanız gerekmez. [ILayerElement](/previous-versions/ff644511(v=vs.140))içinde `Properties` adlı bir sözlük var. Yalnızca herhangi bir katman öğesinin sözlüğüne sıralanabilecek değerleri eklemeniz yeterlidir. Bu, bağımlılık diyagramının bir parçası olarak kaydedilir.
+Yalnızca kodunuzun bir bağımlılık diyagramında herhangi bir öğeye değer iliştirmek istiyorsanız, MEF bileşeni tanımlamanız gerekmez. `Properties` [ILayerElement](/previous-versions/ff644511(v=vs.140))içinde adlı bir sözlük var. Yalnızca herhangi bir katman öğesinin sözlüğüne sıralanabilecek değerleri eklemeniz yeterlidir. Bu, bağımlılık diyagramının bir parçası olarak kaydedilir.
 
 ## <a name="editable-properties"></a>Düzenlenebilir özellikler
 
@@ -38,7 +38,7 @@ Yalnızca kodunuzun bir bağımlılık diyagramında herhangi bir öğeye değer
 >     <MefComponent>Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.Provider.dll</MefComponent>
 >     ```
 >
-> 3. Visual Studio uygulama Başlat menüsünün **Visual Studio Araçları** bölümünde **Geliştirici komut istemi**' i açın. Girin:
+> 3. Visual Studio uygulama Başlat menüsünün **Visual Studio Araçları** bölümünde **Geliştirici komut istemi**' i açın. Şunları girin:
 >
 >      `devenv /rootSuffix /updateConfiguration`
 >
@@ -63,9 +63,9 @@ public class MyProperty : PropertyExtension<ILayerElement>
 
 [ILayerElement](/previous-versions/ff644511(v=vs.140)) veya türetilmiş sınıflarından herhangi birini içeren özellikleri tanımlayabilirsiniz:
 
-- `ILayerModel`-model
+- `ILayerModel`-Model
 
-- `ILayer`-her katman
+- `ILayer`-Her katman
 
 - `ILayerDependencyLink`-Katmanlar arasındaki bağlantılar
 
@@ -75,7 +75,7 @@ public class MyProperty : PropertyExtension<ILayerElement>
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod tipik bir özel özellik tanımlayıcısıdır. Katman modelinde (`ILayerModel`), kullanıcının özel doğrulama yöntemi için değer sağlamasına imkan tanıyan bir Boole özelliği tanımlar.
+Aşağıdaki kod tipik bir özel özellik tanımlayıcısıdır. `ILayerModel`Kullanıcının özel bir doğrulama yöntemi için değer sağlamasına imkan tanıyan katman modelinde () bir Boole özelliği tanımlar.
 
 ```csharp
 using System;

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla toplantı isteği oluşturma'
+title: 'Nasıl yapılır: program aracılığıyla toplantı isteği oluşturma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 62ccf3b170b05e5954bc217f032480ecd1f8a921
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 48233a051b42b01d5dce2c1a0fb4819882897d3f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62575166"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546022"
 ---
-# <a name="how-to-programmatically-create-a-meeting-request"></a>Nasıl yapılır: Program aracılığıyla toplantı isteği oluşturma
-  Bu örnek, Microsoft Office Outlook'ta bir toplantı isteği oluşturur ve istek için gerekli bir katılımcı gönderir.
+# <a name="how-to-programmatically-create-a-meeting-request"></a>Nasıl yapılır: program aracılığıyla toplantı isteği oluşturma
+  Bu örnek Outlook Microsoft Office bir toplantı isteği oluşturur ve isteği gerekli bir katılımcıya gönderir.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -32,4 +32,4 @@ ms.locfileid: "62575166"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Takvim öğeleriyle çalışma](../vsto/working-with-calendar-items.md)
-- [VSTO eklentileri programlama kullanmaya başlayın](../vsto/getting-started-programming-vsto-add-ins.md)
+- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)

@@ -15,37 +15,37 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 73f94c45568a55cc098dd223deca9dab404f44ff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b584e355f5b64984f57dd17606dfb0a2f781c62d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651642"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547673"
 ---
-# <a name="ca2217-do-not-mark-enums-with-flagsattribute"></a>CA2217: Numaralandırmaları FlagsAttribute ile işaretlemeyin
+# <a name="ca2217-do-not-mark-enums-with-flagsattribute"></a>CA2217: Sabit listelerini FlagsAttribute ile işaretlemeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotMarkEnumsWithFlags|
 |CheckId|CA2217|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Dışarıdan görünür bir numaralandırma, <xref:System.FlagsAttribute> ile işaretlenir ve Numaralandırmadaki veya diğer tanımlı değerlerin bir birleşimi olmayan bir ya da daha fazla değere sahiptir.
+## <a name="cause"></a>Nedeni
+ Dışarıdan görünür bir sabit listesi ile işaretlenir <xref:System.FlagsAttribute> ve Numaralandırmadaki bir veya daha fazla değere sahip olan bir ya da daha fazla değere sahip olur.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Sabit listesi yalnızca numaralandırmada tanımlanan her bir değer iki veya bir tanımlı Değerler birleşimi olduğunda <xref:System.FlagsAttribute> bulunmalıdır.
+ Sabit listesi <xref:System.FlagsAttribute> yalnızca numaralandırmada tanımlanan her bir değer iki veya bir tanımlı Değerler birleşimi olduğunda bulunmalıdır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için, Numaralandırmadaki <xref:System.FlagsAttribute> kaldırın.
+ Bu kuralın ihlalini onarmak için, <xref:System.FlagsAttribute> Numaralandırmadaki kaldırın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, 2 ' nin üssü olan 3 değerini, ya da tanımlı değerlerden herhangi birinin birleşimini içeren bir numaralandırma, renk gösterir. Renk numaralandırması <xref:System.FlagsAttribute> olarak işaretlenmemelidir.
+ Aşağıdaki örnek, 2 ' nin üssü olan 3 değerini, ya da tanımlı değerlerden herhangi birinin birleşimini içeren bir numaralandırma, renk gösterir. Renk numaralandırması ile işaretlenmemelidir <xref:System.FlagsAttribute> .
 
  [!code-cpp[FxCop.Usage.EnumNoFlags#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Usage.EnumNoFlags/cpp/FxCop.Usage.EnumNoFlags.cpp#1)]
  [!code-csharp[FxCop.Usage.EnumNoFlags#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.EnumNoFlags/cs/FxCop.Usage.EnumNoFlags.cs#1)]
@@ -59,7 +59,7 @@ ms.locfileid: "72651642"
  [!code-vb[FxCop.Usage.EnumNoFlags2#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.EnumNoFlags2/vb/FxCop.Usage.EnumNoFlags2.vb#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1027: Numaralandırmaları FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+ [CA1027: Sabit listelerini FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  <xref:System.FlagsAttribute?displayProperty=fullName>

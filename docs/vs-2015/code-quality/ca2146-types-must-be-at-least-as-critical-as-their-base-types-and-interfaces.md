@@ -11,28 +11,28 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ab621ade120a257508eddbf9527f674b5fda8748
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2316d6e555fa091d26392aee71b774489c81a379
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72610183"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546399"
 ---
 # <a name="ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces"></a>CA2146: Türler en az kendi taban türleri ve arabirimleri kadar kritik olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|Typesmusbeatliastakaralama Ticalasbasetypes|
 |CheckId|CA2146|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Saydam bir tür, <xref:System.Security.SecuritySafeCriticalAttribute> veya <xref:System.Security.SecurityCriticalAttribute> ile işaretlenmiş bir türden türetilir veya <xref:System.Security.SecuritySafeCriticalAttribute> özniteliğiyle işaretlenmiş bir tür <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretlenmiş bir türden türetilir.
+## <a name="cause"></a>Nedeni
+ Saydam bir tür, veya ile işaretlenmiş bir türden türetilir veya özniteliğiyle işaretlenmiş bir tür özniteliğiyle işaretlenmiş <xref:System.Security.SecuritySafeCriticalAttribute> <xref:System.Security.SecurityCriticalAttribute> bir türden <xref:System.Security.SecuritySafeCriticalAttribute> türetilir <xref:System.Security.SecurityCriticalAttribute> .
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, kendi temel türü kadar kritik olmayan saydam güvenlik özniteliğine sahip bir tür türetildiğinde veya arabirim uygulandığında tetiklenir. Yalnızca kritik türler, kritik temel türlerden veya kritik arabirimleri uygulayanlardan türeyebilir ve sadece kritik ya da kritik güvenli türler, kritik güvenli temel türler veya kritik güvenli arabirim uygulamalarından türeyebilir. Düzey 2 saydamlığının içindeki bu kuralın ihlalleri, türetilmiş tür için bir <xref:System.TypeLoadException> ile sonuçlanır.
+ Bu kural, kendi temel türü kadar kritik olmayan saydam güvenlik özniteliğine sahip bir tür türetildiğinde veya arabirim uygulandığında tetiklenir. Yalnızca kritik türler, kritik temel türlerden veya kritik arabirimleri uygulayanlardan türeyebilir ve sadece kritik ya da kritik güvenli türler, kritik güvenli temel türler veya kritik güvenli arabirim uygulamalarından türeyebilir. Düzey 2 saydamlığının içindeki bu kuralın ihlalleri <xref:System.TypeLoadException> türetilmiş tür için bir ile sonuçlanır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu ihlalin giderilmesi için, türetilmiş veya uygulama türünü, en az temel tür veya arabirim olarak kritik olan bir saydamlık özniteliğiyle işaretleyin.

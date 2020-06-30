@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Çalışma sayfalarını program aracılığıyla koruma'
+title: 'Nasıl yapılır: program aracılığıyla çalışma sayfalarını koruma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +15,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 931bfba9aeac76132ca2dd5e6115abef9869a1df
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: d51a6557b2204d7b6ff3d8865c82de091f5a59d0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254581"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545905"
 ---
-# <a name="how-to-programmatically-protect-worksheets"></a>Nasıl yapılır: Çalışma sayfalarını program aracılığıyla koruma
+# <a name="how-to-programmatically-protect-worksheets"></a>Nasıl yapılır: program aracılığıyla çalışma sayfalarını koruma
   Microsoft Office Excel 'deki koruma özelliği, kullanıcıların ve kodun bir çalışma sayfasındaki nesneleri değiştirmelerini önlemeye yardımcı olur. Varsayılan olarak, korumayı etkinleştirdikten sonra tüm hücreler kilitlenir.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "71254581"
 > [!NOTE]
 > Korunan çalışma sayfasının bölümlerine Windows Forms denetimleri ekleyemezsiniz.
 
-## <a name="use-the-designer"></a>Tasarımcıyı Kullanma
+## <a name="use-the-designer"></a>Tasarımcıyı kullanma
 
 ### <a name="to-protect-a-worksheet-in-the-designer"></a>Tasarımcıda çalışma sayfasını korumak için
 
@@ -53,23 +53,23 @@ ms.locfileid: "71254581"
 
 ### <a name="to-protect-a-worksheet-by-using-code-in-a-document-level-customization"></a>Belge düzeyi özelleştirmesindeki kodu kullanarak çalışma sayfasını korumak için
 
-1. Çalışma sayfasının <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A> yöntemini çağırın. Bu örnek, adlı `Sheet1`bir çalışma sayfasıyla çalıştığınızı varsayar.
+1. <xref:Microsoft.Office.Tools.Excel.Worksheet.Protect%2A>Çalışma sayfasının yöntemini çağırın. Bu örnek, adlı bir çalışma sayfasıyla çalıştığınızı varsayar `Sheet1` .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#27](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#27)]
      [!code-vb[Trin_VstcoreExcelAutomation#27](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#27)]
 
 ### <a name="to-protect-a-worksheet-by-using-code-in-a-vsto-add-in"></a>VSTO eklentideki kodu kullanarak çalışma sayfasını korumak için
 
-1. Etkin çalışma sayfasının yöntemini çağırın. <xref:Microsoft.Office.Interop.Excel._Worksheet.Protect%2A>
+1. <xref:Microsoft.Office.Interop.Excel._Worksheet.Protect%2A>Etkin çalışma sayfasının yöntemini çağırın.
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#17)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#17](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#17)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma sayfalarıyla çalışma](../vsto/working-with-worksheets.md)
-- [Nasıl yapılır: Çalışma sayfalarından program aracılığıyla korumayı kaldırma](../vsto/how-to-programmatically-remove-protection-from-worksheets.md)
-- [Nasıl yapılır: Program aracılığıyla çalışma kitaplarını koruma](../vsto/how-to-programmatically-protect-workbooks.md)
-- [Nasıl yapılır: Çalışma sayfalarını program aracılığıyla gizleme](../vsto/how-to-programmatically-hide-worksheets.md)
+- [Nasıl yapılır: çalışma sayfalarından program aracılığıyla korumayı kaldırma](../vsto/how-to-programmatically-remove-protection-from-worksheets.md)
+- [Nasıl yapılır: program aracılığıyla çalışma kitaplarını koruma](../vsto/how-to-programmatically-protect-workbooks.md)
+- [Nasıl yapılır: program aracılığıyla çalışma sayfalarını gizleme](../vsto/how-to-programmatically-hide-worksheets.md)
 - [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
 - [Çalışma sayfası konak öğesi](../vsto/worksheet-host-item.md)
 - [Office Projelerindeki Nesnelere Genel erişim](../vsto/global-access-to-objects-in-office-projects.md)

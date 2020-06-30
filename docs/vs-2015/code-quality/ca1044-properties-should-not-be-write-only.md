@@ -15,24 +15,24 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: aa2d07337ec48e41a9d8ad82602a387159192f92
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2ca0fb61c0973553ee6d410bc8b2718d19aeb28c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668270"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546867"
 ---
 # <a name="ca1044-properties-should-not-be-write-only"></a>CA1044: Özellikler salt yazılır olmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|PropertiesShouldNotBeWriteOnly|
 |CheckId|CA1044|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Public veya protected özelliği bir set erişimcisine sahiptir ancak get erişimcisine sahip değildir.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -45,7 +45,7 @@ ms.locfileid: "72668270"
  Bu kuraldan bir uyarıyı bastırmamanızı önemle tavsiye edilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, `BadClassWithWriteOnlyProperty`, salt yazılır özelliği olan bir türdür. `GoodClassWithReadWriteProperty` düzeltilen kodu içerir.
+ Aşağıdaki örnekte, `BadClassWithWriteOnlyProperty` salt yazılır özelliği olan bir türdür. `GoodClassWithReadWriteProperty`düzeltilen kodu içerir.
 
  [!code-csharp[FxCop.Design.PropertiesNotWriteOnly#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.PropertiesNotWriteOnly/cs/FxCop.Design.PropertiesNotWriteOnly.cs#1)]
  [!code-vb[FxCop.Design.PropertiesNotWriteOnly#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.PropertiesNotWriteOnly/vb/PropertiesNotWriteOnly.vb#1)]
