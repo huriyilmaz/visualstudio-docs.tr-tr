@@ -9,12 +9,12 @@ caps.latest.revision: 13
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b2e1fd025d559889f0ea41d39879e251e80fa64
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: f837822e47c911e3c27d9d41e31ae9cd448d4fc5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586694"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520503"
 ---
 # <a name="analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis"></a>Visual Studio statik Kod analizini kullanarak Mağaza uygulamalarının kod kalitesini çözümleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,14 +26,14 @@ Visual Studio 'daki Kod Analizi Aracı, bir dizi yaygın kusur ve iyi programlam
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|||
+|Başlık|Açıklama|
 |-|-|
 |[Visual Basic ve C# kod kalitesini analiz etme](../test/analyze-visual-basic-and-csharp-code-quality-in-store-apps-using-visual-studio-static-code-analysis.md)|Visual Basic ve C# projelerinde kod analizini kullanın.|
 |[C++ kod kalitesini analiz etme](../test/analyze-cpp-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)|C++ projelerinde kod analizini kullanın.|
 
 ## <a name="more-code-analysis-info"></a>Daha fazla kod analizi bilgisi
 
-|||
+|Başlık|Açıklama|
 |-|-|
 |[MSDN Kitaplığı 'nda kod analizi](https://msdn.microsoft.com/library/dd264897.aspx)|Visual Studio Ultimate, Visual Studio Premium ve Visual Studio Professional Kod analizini kullanma hakkında daha fazla bilgi edinin.|
 |[MSDN Kod Analizi ekip blogu](https://blogs.msdn.com/b/codeanalysis/)|Kod Analizi ekip bloguna teknik incelemeler ve örnekler de dahil olmak üzere daha fazla bilgi bulabilirsiniz.|

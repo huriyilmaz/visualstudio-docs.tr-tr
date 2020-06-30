@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 6dd7261b1cb3a39d792cd3129b18a4a271191be0
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: a33d5b8d18f18fb6bf7a2420603d994d845ce8f2
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85328215"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520802"
 ---
 # <a name="da0007-avoid-using-exceptions-for-control-flow"></a>DA0007: Denetim akışı için özel durumlar kullanmaktan kaçının
 
-|||
+|Öğe|Değer|
 |-|-|
 |Kural kimliği|DA0007|
 |Kategori|.NET Framework kullanımı|

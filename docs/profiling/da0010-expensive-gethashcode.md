@@ -14,16 +14,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: e94e30281163a9834453a14ca8900da616a6b884
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 8f94277822d1fcd4210f0f8d79591fc4e2ed3d9e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85328204"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520685"
 ---
 # <a name="da0010-expensive-gethashcode"></a>DA0010: Pahalı GetHashCode
 
-|||
+|Öğe|Değer|
 |-|-|
 |Kural kimliği|DA0010|
 |Kategori|.NET Framework kullanımı|

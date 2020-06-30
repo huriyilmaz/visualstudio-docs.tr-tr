@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c35ba03c2f93af0705910b8f89dd835c985e3e60
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fe3f92adea762058b6b4414f0bf9596d77ab698e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587790"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521322"
 ---
 # <a name="code-analysis-application-errors"></a>Kod analizi uygulama hataları
 
@@ -26,14 +26,14 @@ Bu bölüm, yönetilen kod Analizi Aracı tarafından oluşturulan hata iletiler
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|||
+|Kod|Description|
 |-|-|
 |[CA0001](ca0001.md)|Yönetilen kod analizi aracında beklenen bir hata koşulunu göstermediği bir özel durum oluştu.|
 |[CA0051](ca0051.md)|Hiçbir kural seçilmedi.|
 |[CA0052](ca0052.md)|Analiz edilecek hedef seçilmedi.|
 |[CA0053](ca0053.md)|Kural derlemesi yüklenemedi.|
 |[CA0054](ca0054.md)|Özel bir kural derlemesinde geçersiz XML kaynakları vardır.|
-|[CA0055](ca0055.md)|Dosya yüklenemedi: yol >\<|
+|[CA0055](ca0055.md)|Dosya yüklenemedi:\<path>|
 |[CA0056](ca0056.md)|Proje dosyası, çözümleme aracının yanlış bir sürümüne sahip.|
 |[CA0057](ca0057.md)|İhlaller geçerli hedef ve kural kümesiyle eşlenemez.|
 |[CA0058](ca0058.md)|Başvurulan derlemeler yüklenemiyor.|
@@ -54,9 +54,9 @@ Bu bölüm, yönetilen kod Analizi Aracı tarafından oluşturulan hata iletiler
 |[CA0503](ca0503.md)|Özelliği kullanım dışıdır. Yerine geçen özelliği kullanın|
 |[CA0504](ca0504.md)|Kural dizini olmadığından yoksayıldı|
 |[CA0505](ca0505.md)|Özelliği kullanım dışıdır. Yerine geçen özelliği kullanın|
-|[FxCopCmd Hataları](fxcopcmd-errors.md)|Yönetilen kod analizi hataları.|
+|[FxCopCmd hataları](fxcopcmd-errors.md)|Yönetilen kod analizi hataları.|
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-- [Kod Çözümleme İlkesi Hataları](../code-quality/code-analysis-policy-errors.md)
+- [Kod Analiz İlkesi Hataları](../code-quality/code-analysis-policy-errors.md)
 - [Yönetilen Kod Kalitesini Analiz Etme](../code-quality/code-analysis-for-managed-code-overview.md)

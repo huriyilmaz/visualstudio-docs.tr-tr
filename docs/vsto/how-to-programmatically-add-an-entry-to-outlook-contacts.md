@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla Outlook Kişilerine bir giriş ekleyin'
+title: 'Nasıl yapılır: Outlook Kişilerine Program aracılığıyla giriş ekleme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,15 +12,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ed0f8a873655180ef2464b5b31c631dbd7d2d4ad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c4d692833f7dba49a539bbaafec2156f7426170b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967715"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520113"
 ---
-# <a name="how-to-programmatically-add-an-entry-to-outlook-contacts"></a>Nasıl yapılır: Program aracılığıyla Outlook Kişilerine bir giriş ekleyin
-  Bu örnek, yeni kişi oluşturur ve yeni kişi veri girer.
+# <a name="how-to-programmatically-add-an-entry-to-outlook-contacts"></a>Nasıl yapılır: Outlook Kişilerine Program aracılığıyla giriş ekleme
+  Bu örnek yeni bir kişi oluşturur ve yeni kişiye veri girer.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -30,6 +30,6 @@ ms.locfileid: "62967715"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kişi öğeleriyle çalışma](../vsto/working-with-contact-items.md)
-- [Nasıl yapılır: Randevuları program aracılığıyla oluşturma](../vsto/how-to-programmatically-create-appointments.md)
-- [Nasıl yapılır: Program aracılığıyla Outlook Kişilerine erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)
-- [Nasıl yapılır: Program aracılığıyla bir e-posta adresi arama](../vsto/how-to-programmatically-search-for-an-e-mail-address-in-contacts.md)
+- [Nasıl yapılır: program aracılığıyla randevu oluşturma](../vsto/how-to-programmatically-create-appointments.md)
+- [Nasıl yapılır: program aracılığıyla Outlook kişilerine erişme](../vsto/how-to-programmatically-access-outlook-contacts.md)
+- [Nasıl yapılır: kişilerde program aracılığıyla e-posta adresi arama](../vsto/how-to-programmatically-search-for-an-e-mail-address-in-contacts.md)

@@ -1,7 +1,7 @@
 ---
 title: GetVstoSolutionMetadata işlevi
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -10,17 +10,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d7714e78e897e6c8b391a6c30e9a548671ce80c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aebbedaab7e7ac342f6d6ace191d820f6a0c8090
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62796047"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520191"
 ---
 # <a name="getvstosolutionmetadata-function"></a>GetVstoSolutionMetadata işlevi
-  Bu API Office altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.
+  Bu API, Office altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```csharp
 HRESULT WINAPI GetVstoSolutionMetadata(
@@ -34,7 +34,7 @@ HRESULT WINAPI GetVstoSolutionMetadata(
 |Parametre|Açıklama|
 |---------------|-----------------|
 |*lpwszSolutionMetadataKey*|Kullanmayın.|
-|*ppSolutionInfo*|Kullanmayın.|
+|*Ppsolutionınfo*|Kullanmayın.|
 
-## <a name="return-value"></a>Dönüş değeri
- İşlev başarılı olursa, döndürür **S_OK**. İşlev başarısız olursa hata kodu döndürür.
+## <a name="return-value"></a>Döndürülen değer
+ İşlev başarılı olursa, **S_OK**döndürür. İşlev başarısız olursa, bir hata kodu döndürür.

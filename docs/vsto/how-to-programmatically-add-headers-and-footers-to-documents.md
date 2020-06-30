@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla belgelere üstbilgiler ve altbilgiler ekleme'
+title: 'Nasıl yapılır: belgelere program aracılığıyla üstbilgiler ve altbilgiler ekleme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7859657b52e5d96280646387f70686d2804e6fe7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 52724103df17a1eaaf364f255f127a576beda798
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967627"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85519931"
 ---
-# <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>Nasıl yapılır: Program aracılığıyla belgelere üstbilgiler ve altbilgiler ekleme
-  Metin için üstbilgiler ve altbilgiler belgenize kullanarak ekleyebileceğiniz <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> özelliği ve <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> özelliği <xref:Microsoft.Office.Interop.Word.Section>. Her bir belge bölümü, üç üstbilgiler ve altbilgiler içerir:
+# <a name="how-to-programmatically-add-headers-and-footers-to-documents"></a>Nasıl yapılır: belgelere program aracılığıyla üstbilgiler ve altbilgiler ekleme
+  Özelliği ve özelliğini kullanarak belgenizdeki üstbilgilere ve altbilgilere metin ekleyebilirsiniz <xref:Microsoft.Office.Interop.Word.Section.Headers%2A> <xref:Microsoft.Office.Interop.Word.Section.Footers%2A> <xref:Microsoft.Office.Interop.Word.Section> . Bir belgenin her bölümü üç üst bilgi ve alt bilgi içerir:
 
 - <xref:Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterPrimary>
 
@@ -31,45 +31,45 @@ ms.locfileid: "62967627"
 
 - <xref:Microsoft.Office.Interop.Word.WdHeaderFooterIndex.wdHeaderFooterFirstPage>
 
-  Yordamları, belge düzeyinde özelleştirmeler ve VSTO eklentileri için farklıdır.
+  Yordamlar belge düzeyinde özelleştirmeler ve VSTO eklentileri için farklıdır.
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
 ## <a name="document-level-customizations"></a>Belge düzeyinde özelleştirmeler
- Aşağıdaki kod örnekleri kullanmak için onlardan çalıştırın `ThisDocument` projenizdeki sınıfı.
+ Aşağıdaki kod örneklerini kullanmak için, bunları `ThisDocument` projenizdeki sınıfından çalıştırın.
 
-### <a name="to-add-text-to-footers-in-the-document"></a>Altbilgi belgesi metin eklemek için
+### <a name="to-add-text-to-footers-in-the-document"></a>Belgedeki altbilgilere metin eklemek için
 
-1. Aşağıdaki kod örneği, her bölümüne belgesinin birincil alt bilgisi eklenecek metin yazı tipini ayarlar ve sonra alt bilgi metni ekler.
+1. Aşağıdaki kod örneği, belgenin her bölümünün birincil altbilgisine eklenecek metnin yazı tipini ayarlar ve altbilgiye metin ekler.
 
      [!code-vb[Trin_VstcoreWordAutomation#114](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#114)]
      [!code-csharp[Trin_VstcoreWordAutomation#114](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#114)]
 
-### <a name="to-add-text-to-headers-in-the-document"></a>Üst bilgileri belgede metin eklemek için
+### <a name="to-add-text-to-headers-in-the-document"></a>Belgedeki üstbilgilere metin eklemek için
 
-1. Aşağıdaki kod örneği, belgedeki her üst bilgisindeki sayfa numarasını gösteren bir alan ekler ve ardından metni üstbilgisinin sağa hizalar Paragraf hizalamasını ayarlar.
+1. Aşağıdaki kod örneği, belgedeki her bir başlıktaki sayfa numarasını göstermek için bir alan ekler ve sonra metnin üstbilginin sağına hizalanmasını sağlayacak şekilde paragraf hizalamasını ayarlar.
 
      [!code-vb[Trin_VstcoreWordAutomation#116](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#116)]
      [!code-csharp[Trin_VstcoreWordAutomation#116](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#116)]
 
 ## <a name="vsto-add-ins"></a>VSTO eklentileri
- Aşağıdaki kod örnekleri kullanmak için onlardan çalıştırın `ThisAddIn` projenizdeki sınıfı.
+ Aşağıdaki kod örneklerini kullanmak için, bunları `ThisAddIn` projenizdeki sınıfından çalıştırın.
 
-### <a name="to-add-text-to-footers-in-a-document"></a>Altbilgi bir belgede metin eklemek için
+### <a name="to-add-text-to-footers-in-a-document"></a>Belgedeki altbilgilere metin eklemek için
 
-1. Aşağıdaki kod örneği, her bölümüne belgesinin birincil alt bilgisi eklenecek metin yazı tipini ayarlar ve sonra alt bilgi metni ekler. Bu kod örneği, etkin belgeyi kullanır.
+1. Aşağıdaki kod örneği, belgenin her bölümünün birincil altbilgisine eklenecek metnin yazı tipini ayarlar ve altbilgiye metin ekler. Bu kod örneği etkin belgeyi kullanır.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#114](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#114)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#114](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#114)]
 
-### <a name="to-add-text-to-headers-in-the-document"></a>Üst bilgileri belgede metin eklemek için
+### <a name="to-add-text-to-headers-in-the-document"></a>Belgedeki üstbilgilere metin eklemek için
 
-1. Aşağıdaki kod örneği, belgedeki her üst bilgisindeki sayfa numarasını gösteren bir alan ekler ve ardından metni üstbilgisinin sağa hizalar Paragraf hizalamasını ayarlar. Bu kod örneği, etkin belgeyi kullanır.
+1. Aşağıdaki kod örneği, belgedeki her bir başlıktaki sayfa numarasını göstermek için bir alan ekler ve sonra metnin üstbilginin sağına hizalanmasını sağlayacak şekilde paragraf hizalamasını ayarlar. Bu kod örneği etkin belgeyi kullanır.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#116](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#116)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#116](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#116)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Program aracılığıyla yeni belgeler oluşturma](../vsto/how-to-programmatically-create-new-documents.md)
-- [Nasıl yapılır: Belgelerde aralıkları program aracılığıyla genişletme](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
-- [Nasıl yapılır: Program aracılığıyla bulunan öğeler arasında döngü](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
+- [Nasıl yapılır: program aracılığıyla yeni belgeler oluşturma](../vsto/how-to-programmatically-create-new-documents.md)
+- [Nasıl yapılır: belgelerde aralıkları program aracılığıyla genişletme](../vsto/how-to-programmatically-extend-ranges-in-documents.md)
+- [Nasıl yapılır: belgelerdeki bulunan öğeler aracılığıyla program aracılığıyla döngü yapma](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)
