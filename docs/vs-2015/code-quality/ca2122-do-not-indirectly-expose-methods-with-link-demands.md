@@ -15,28 +15,28 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 099e5f3f9a09eef57ce1b888601f61e85ceb97c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 846ce010cddfd505bb967ec612a5c31dd8321977
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72643399"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544332"
 ---
-# <a name="ca2122-do-not-indirectly-expose-methods-with-link-demands"></a>CA2122: Bağlantı talepleri olan yöntemleri dolaylı olarak açığa çıkarmayın
+# <a name="ca2122-do-not-indirectly-expose-methods-with-link-demands"></a>CA2122: Bağlantı talepleri olan metotları dolaylı olarak açığa çıkarmayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotIndirectlyExposeMethodsWithLinkDemands|
 |CheckId|CA2122|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Ortak veya korumalı bir üyenin [bağlantı talepleri](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) vardır ve herhangi bir güvenlik denetimi gerçekleştirmediğinden bir üye tarafından çağırılır.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bağlantı talebi, yalnızca o anki çağırıcı izinlerini denetler. Bir üye `X` çağıranların güvenlik taleplerini yoksa ve bir bağlantı talebi tarafından korunan kodu çağırırsa, gerekli izne sahip olmayan bir çağıran, korumalı üyeye erişmek için `X` kullanabilir.
+ Bağlantı talebi, yalnızca o anki çağırıcı izinlerini denetler. Bir üye, `X` arayanlara güvenlik talebi yapıyorsa ve bir bağlantı talebi tarafından korunan kodu çağırırsa, gerekli izni olmayan bir çağıran, `X` korunan üyeye erişmek için kullanabilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bir güvenlik [verileri ekleyin ve](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6) isteğe bağlı olarak, bağlantıya talep korumalı üyeye güvenli olmayan erişim sağlamaz.
@@ -45,7 +45,7 @@ ms.locfileid: "72643399"
  Bu kuraldan bir uyarıyı güvenle bastırmak için, kodunuzun çağıranlar için bir bozucu şekilde kullanılabilecek işlemlere veya kaynaklara erişimini vermediğinden emin olmanız gerekir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örneklerde, kuralı ihlal eden bir kitaplık ve kitaplığın zayıflılığını gösteren bir uygulama gösterilmektedir. Örnek kitaplık, birlikte kuralı ihlal eden iki yöntem sağlar. @No__t_0 yöntemi, ortam değişkenlerine sınırsız erişim talebi ile korunmuş olur. @No__t_0 yöntemi, arayanlara `EnvironmentSetting` çağırmadan önce hiçbir güvenlik talebi yapmaz.
+ Aşağıdaki örneklerde, kuralı ihlal eden bir kitaplık ve kitaplığın zayıflılığını gösteren bir uygulama gösterilmektedir. Örnek kitaplık, birlikte kuralı ihlal eden iki yöntem sağlar. `EnvironmentSetting`Yöntemi, ortam değişkenlerine sınırsız erişim talebi ile korunmuş olur. `DomainInformation`Yöntemi çağrı yapmadan önce arayanlara güvenlik talebi yapmaz `EnvironmentSetting` .
 
  [!code-csharp[FxCop.Security.UnsecuredDoNotCall#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.UnsecuredDoNotCall/cs/FxCop.Security.UnsecuredDoNotCall.cs#1)]
 

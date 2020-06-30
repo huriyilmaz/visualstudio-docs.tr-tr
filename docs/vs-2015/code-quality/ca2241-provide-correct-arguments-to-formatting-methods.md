@@ -16,28 +16,28 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 112065b2a8b9a88241ce62dda7b32a2f2c22fc75
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1dfd770efd4d690930155d2486b8ff1859065272
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672022"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543656"
 ---
-# <a name="ca2241-provide-correct-arguments-to-formatting-methods"></a>CA2241: Biçimlendirme yöntemlerine doğru bağımsız değişkenleri sağlayın
+# <a name="ca2241-provide-correct-arguments-to-formatting-methods"></a>CA2241: Biçimlendirme metotlarına doğru bağımsız değişkenleri sağlayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ProvideCorrectArgumentsToFormattingMethods|
 |CheckId|CA2241|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- @No__t_1, <xref:System.Console.Write%2A> veya <xref:System.String.Format%2A?displayProperty=fullName> gibi bir yönteme geçirilen `format` dize bağımsız değişkeni, her bir nesne bağımsız değişkenine karşılık gelen bir biçim öğesi içermez ya da tam tersi.
+## <a name="cause"></a>Nedeni
+ `format`,, Veya gibi bir yönteme geçirilen dize bağımsız değişkeni, <xref:System.Console.WriteLine%2A> <xref:System.Console.Write%2A> <xref:System.String.Format%2A?displayProperty=fullName> her bir nesne bağımsız değişkenine karşılık gelen bir biçim öğesi içermez veya tam tersi de geçerlidir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- @No__t_0, <xref:System.Console.Write%2A> ve <xref:System.String.Format%2A> gibi yöntemlere yönelik bağımsız değişkenler, birkaç <xref:System.Object?displayProperty=fullName> örneği tarafından izlenen bir biçim dizesinden oluşur. Biçim dizesi, {index [, hizalama] [: formatString]} biçiminde metin ve katıştırılmış biçim öğelerinden oluşur. ' index ', hangi nesnelerden biçimlendirileceğini gösteren sıfır tabanlı bir tamsayıdır. Bir nesne, biçim dizesinde karşılık gelen bir dizin içermiyorsa, nesne yok sayılır. ' İndex ' tarafından belirtilen nesne yoksa, çalışma zamanında bir <xref:System.FormatException?displayProperty=fullName> oluşturulur.
+ , Ve gibi yöntemlere yönelik bağımsız değişkenler, <xref:System.Console.WriteLine%2A> <xref:System.Console.Write%2A> <xref:System.String.Format%2A> ardından birkaç örnek tarafından bir biçim dizesi oluşur <xref:System.Object?displayProperty=fullName> . Biçim dizesi, {index [, hizalama] [: formatString]} biçiminde metin ve katıştırılmış biçim öğelerinden oluşur. ' index ', hangi nesnelerden biçimlendirileceğini gösteren sıfır tabanlı bir tamsayıdır. Bir nesne, biçim dizesinde karşılık gelen bir dizin içermiyorsa, nesne yok sayılır. ' İndex ' tarafından belirtilen nesne yoksa, <xref:System.FormatException?displayProperty=fullName> çalışma zamanında bir oluşturulur.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini onarmak için her bir nesne bağımsız değişkeni için bir biçim öğesi sağlayın ve her biçim öğesi için bir nesne bağımsız değişkeni sağlayın.

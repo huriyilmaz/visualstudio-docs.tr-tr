@@ -1,18 +1,18 @@
 ---
 title: Bir Çözümde Birden Çok DSL
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b5d21d3954a402e7ce8eb26c34d6a6a5c237309a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f2eef29db24da3be0a9376ea76a9a1a551af9e1a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658339"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542603"
 ---
 # <a name="multiple-dsls-in-one-solution"></a>Bir Çözümde Birden Çok DSL
 
@@ -30,9 +30,9 @@ Birden çok DSLs 'yi bütünleştirmek için birkaç teknik kullanabilirsiniz. D
 
    - Her bir DSL 'yi farklı bir dosya adı uzantısıyla oluşturduğunuzdan emin olun.
 
-   - **DSL** ve **DslPackage** projelerinin adlarını farklı olacak şekilde değiştirin. Örneğin: `Dsl1`, `DslPackage1`, `Dsl2`, `DslPackage2`.
+   - **DSL** ve **DslPackage** projelerinin adlarını farklı olacak şekilde değiştirin. Örneğin: `Dsl1` ,, `DslPackage1` `Dsl2` , `DslPackage2` .
 
-   - Her **DslPackage \* \ Source.Extension.tt**, bu satırı doğru DSL projesi adına güncelleştirin:
+   - Her **DslPackage \* \ Source.Extension.tt**içinde, bu satırı doğru DSL projesi adına güncelleştirin:
 
       `string dslProjectName = "Dsl2";`
 
@@ -40,19 +40,19 @@ Birden çok DSLs 'yi bütünleştirmek için birkaç teknik kullanabilirsiniz. D
 
 2. DSLs 'lerin VSıX bildirimlerini birleştirin:
 
-   1. _Yourvaltıproject_ **\Source.Extension.manifest**açın.
+   1. _Yourvaltıproject_**\Source.Extension.manifest**açın.
 
    2. Her DSL için **Içerik Ekle** ve Ekle ' yi seçin:
 
-       - bir **MEF bileşeni** olarak proje `Dsl*`
+       - `Dsl*`**MEF bileşeni** olarak proje
 
-       - bir **MEF bileşeni** olarak proje `DslPackage*`
+       - `DslPackage*`**MEF bileşeni** olarak proje
 
-       - projeyi **vs paketi** olarak `DslPackage*`
+       - `DslPackage*`**vs paketi** olarak proje
 
-3. Çözümü oluşturun.
+3. Çözümü derleyin.
 
-   Elde edilen VSıX her iki DSLs 'i de yükleyecek. F5 'i kullanarak bunları test edebilir veya **\\ \*. vsix**' _yi dağıtabilirsiniz._
+   Elde edilen VSıX her iki DSLs 'i de yükleyecek. F5 'i kullanarak bunları test edebilir veya _Yourvaltproject_**\Bin\Debug \\ \* . vsix**' yi dağıtabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

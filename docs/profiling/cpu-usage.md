@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b372e0f30c91a605be047e921bc2b7672a1cf468
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: e5ab97f3db8e5d44aa649455c313a5681ed93c8c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85329437"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543396"
 ---
 # <a name="analyze-cpu-usage"></a>CPU kullanımını analiz etme
 
@@ -61,7 +61,7 @@ Visual Studio 2019 ' den başlayarak, çağrı ağacı görünümünde CPU 'nun 
 
 ### <a name="cpu-usage-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a>CPU kullanım verileri sütunları
 
-|||
+|Name|Description|
 |-|-|
 |**Toplam CPU [Birim,%]**|![Toplam% veri denklemi](../profiling/media/cpu_use_wt_totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> İşlev çağrıları tarafından kullanılan milisaniye ve CPU yüzdesi ve işlev tarafından çağrılan işlevler, seçili zaman aralığında. Bu, bir zaman aralığındaki toplam CPU etkinliğini toplam kullanılabilir CPU ile karşılaştıran **CPU kullanımı** zaman çizelgesi grafiğinden farklıdır.|
 |**Self CPU [Birim,%]**|![Kendi kendine denklemi](../profiling/media/cpu_use_wt_selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> İşlev tarafından çağrılan işlevler hariç olmak üzere seçilen zaman aralığındaki işleve yapılan çağrılar tarafından kullanılan milisaniye ve CPU yüzdesi.|
@@ -80,7 +80,7 @@ Visual Studio 2019 ' den başlayarak, çağrı ağacı görünümünde CPU 'nun 
 ![Çağrı ağacı yapısı](../profiling/media/cpu_use_wt_getmaxnumbercalltree_annotated.png "Çağrı ağacı yapısı")
 ::: moniker-end
 
-|||
+|Görüntü|Description|
 |-|-|
 |![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|CPU kullanım çağrısı ağaçlarında en üst düzey düğüm bir sözde düğümdür.|
 |![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Çoğu uygulamalarda, **dış kodu göster** seçeneği devre dışı bırakıldığında, ikinci düzey düğüm bir **[Dış kod]** düğümüdür. Düğüm, uygulamayı başlatan ve durduran sistem ve çerçeve kodunu içerir, Kullanıcı arabirimini çizer, iş parçacığı zamanlamasını denetler ve uygulamaya diğer alt düzey hizmetler sağlar.|

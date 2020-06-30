@@ -1,5 +1,5 @@
 ---
-title: Kullanarak Paralel Yığınlar penceresini | Microsoft Docs
+title: Paralel Yığınlar penceresini kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,110 +18,109 @@ caps.latest.revision: 22
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: df764ac38f437be33b71e7a816709a46234f751e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: e89125c8e1dea25ab02fe64c21b8166e9d65194a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65684167"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542226"
 ---
 # <a name="using-the-parallel-stacks-window"></a>Paralel Yığınlar Penceresini Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Paralel Yığınlar** penceresi, çok iş parçacıklı uygulamalarda hata ayıklama işlemi yaparken yararlıdır. Kendi **iş parçacıkları görünümü** gösterir, uygulamanızdaki tüm iş parçacıkları için yığın bilgileri çağırın. İş parçacıkları ve bu iş parçacıkları üzerinde yığın çerçevelerini arasında gezinmenize olanak tanır. Yönetilen kodda **Görevler görünümü** gösterir çağrı yığını <xref:System.Threading.Tasks.Task?displayProperty=fullName> nesneleri. Yerel kodda **Görevler görünümü** gösterir çağrı yığını [görev grupları](https://msdn.microsoft.com/library/42f05ac3-2098-494a-ba84-737fcdcad077), [paralel algoritmalar](https://msdn.microsoft.com/library/045dca7b-4d73-4558-a44c-383b88a28473), [zaman uyumsuz aracılar](https://msdn.microsoft.com/library/6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a)ve [Basit görevler](https://msdn.microsoft.com/library/9aba278c-e0c9-4ede-b7c6-fedf7a365d90).  
+Çoklu iş parçacıklı uygulamalarda hata ayıklarken **Paralel Yığınlar** penceresi faydalıdır. **Iş parçacıkları görünümü** uygulamanızdaki tüm iş parçacıkları için çağrı yığını bilgilerini gösterir. Bu iş parçacıklarında iş parçacıkları ve yığın çerçeveleri arasında gezinmenize imkan tanır. Yönetilen kodda, **Görevler Görünümü** nesnelerin çağrı yığınlarını gösterir <xref:System.Threading.Tasks.Task?displayProperty=fullName> . Yerel kodda, **Görevler Görünümü** [görev gruplarının](https://msdn.microsoft.com/library/42f05ac3-2098-494a-ba84-737fcdcad077), [paralel algoritmaların](https://msdn.microsoft.com/library/045dca7b-4d73-4558-a44c-383b88a28473), [zaman uyumsuz aracıların](https://msdn.microsoft.com/library/6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a)ve [hafif görevlerin](https://msdn.microsoft.com/library/9aba278c-e0c9-4ede-b7c6-fedf7a365d90)çağrı yığınlarını gösterir.  
   
 ## <a name="threads-view"></a>İş Parçacıkları Görünümü  
- A B ve dış kod ana gittiğiniz tek bir iş parçacığı aşağıda gösterilmiştir. Diğer iki iş parçacığı bazı dış koddan çalışmaya ve B ve dış kod devam iş parçacıkları ve C ve ardından bazı AnonymousMethod devam diğer iş parçacığı biri, bir sorun oluştu.  
+ Aşağıdaki çizimde ana öğesinden A 'ya ve sonra da bazı harici koda giden bir iş parçacığı gösterilmektedir. Bir dış koddan daha sonra bir diğer iş parçacığı başlatılır, ancak B ile devam eden iş parçacıklarından biri ve sonra bazı harici kodlar ve diğer iş parçacığı C ve daha sonra bazı AnonymousMethod ile devam eder.  
   
- ![İş parçacıkları, Paralel Yığınlar penceresini görünümünde](../debugger/media/parallel-stacksthread.png "Parallel_StacksThread")  
+ ![Paralel Yığınlar penceresinde iş parçacıkları görünümü](../debugger/media/parallel-stacksthread.png "Parallel_StacksThread")  
   
- Çizimde, geçerli iş parçacığı arama yolunu mavi renkle vurgulanır ve etkin yığın çerçevesini sarı bir ok ile belirtilir. Geçerli yığın çerçevesi, farklı bir yöntemde seçerek değiştirebilirsiniz **Paralel Yığınlar** penceresi. Ayrıca seçtiğiniz yönteme geçerli iş parçacığı zaten başka bir iş parçacığı veya bir parçası olup olmamasına bağlı olarak geçerli iş parçacığı, geçiş de neden olabilir. Aşağıdaki tabloda ana özelliklerini açıklayan **Paralel Yığınlar** çizimde gösterildiği gibi penceresi.  
+ Çizimde, geçerli iş parçacığının çağrı yolu mavi renkle vurgulanır ve etkin yığın çerçevesi sarı oka göre belirlenir. **Paralel Yığınlar** penceresinde farklı bir yöntem seçerek geçerli yığın çerçevesini değiştirebilirsiniz. Bu, seçtiğiniz yöntemin geçerli iş parçacığının veya başka bir iş parçacığının parçası olmasına bağlı olarak, geçerli iş parçacığını değiştirmeye da neden olabilir. Aşağıdaki tabloda, çizimde gösterildiği gibi **Paralel Yığınlar** penceresinin ana özellikleri açıklanmaktadır.  
   
-|Belirtme çizgisi harf|Öğe adı|Açıklama|  
+|Belirtme çizgisi harfi|Öğe Adı|Description|  
 |--------------------|------------------|-----------------|  
-|BİR|Çağrı yığını Segment veya düğüm|Bir dizi bir veya daha fazla iş parçacığı için bağlamı yöntemi içerir. Ardından ona bağlı ok satır düğüm yok, iş parçacıkları için tüm arama yolunu temsil eder.|  
-|B|Mavi Vurgu|Geçerli iş parçacığı arama yolunu belirtir.|  
-|C|Satırları oku|İş parçacıkları için tüm arama yolu oluşturan düğümlerin bağlanın.|  
-|D|Düğüm üst araç ipucu|Bu düğüm, arama yolu paylaşan her bir iş parçacığı kullanıcı tanımlı adını ve Kimliğini gösterir.|  
-|E|Bağlam yöntemi|Aynı yöntem bir veya daha fazla yığın çerçevelerini temsil eder.|  
-|F|Araç İpucu bağlamında yöntemi|İş Parçacıkları görünümü'nde, tüm iş parçacıkları tabloda benzer gösterir **iş parçacıkları** penceresi. Görev Görünümü'nde, tüm görevleri bir tablodaki benzer gösterir **Paralel Görevler** penceresi.|  
+|A|Çağrı yığını segmenti veya düğümü|Bir veya daha fazla iş parçacığı için bir dizi yöntem bağlamı içerir. Düğüme bağlı ok çizgileri yoksa, iş parçacıklarının tüm çağrı yolunu temsil eder.|  
+|B|Mavi vurgu|Geçerli iş parçacığının çağrı yolunu gösterir.|  
+|C|Ok çizgileri|İş parçacığı (ler) için tüm çağrı yolunu oluşturmak üzere düğümleri bağlayın.|  
+|D|Düğüm üstbilgisindeki araç ipucu|Çağrı yolu bu düğümü paylaşan her iş parçacığının KIMLIĞINI ve Kullanıcı tanımlı adını gösterir.|  
+|E|Yöntem bağlamı|Aynı yöntemde bir veya daha fazla yığın çerçevesini temsil eder.|  
+|F|Yöntem bağlamında araç ipucu|Iş parçacıkları görünümünde, bir tablodaki tüm iş parçacıklarını **Iş parçacıkları** penceresine benzer şekilde gösterir. Görev görünümünde, **paralel görevler** penceresine benzer şekilde bir tablodaki tüm görevleri gösterir.|  
   
- Ayrıca, Paralel Yığınlar penceresini gösteren bir **Kuşbakışı Görünüm** graf pencereye sığdırmak için çok büyük olduğunda ana bölmede simgesi. Grafın tamamında penceresinde görmek için simgesine tıklayabilirsiniz.  
+ Ayrıca Paralel Yığınlar penceresi, Graph pencereye sığmayacak kadar büyük olduğunda ana bölmedeki bir **kuşbakışı görünümü** simgesini gösterir. Penceredeki tüm grafiği görmek için simgeye tıklayabilirsiniz.  
   
-## <a name="method-context-icons"></a>Bağlam simgeler yöntemi  
- Aşağıdaki tabloda, etkin ve geçerli yığın çerçevesi hakkında bilgi sağlayan simgeleri açıklanmaktadır:  
+## <a name="method-context-icons"></a>Yöntem bağlamı simgeleri  
+ Aşağıdaki tabloda, etkin ve geçerli yığın çerçeveleri hakkında bilgi sağlayan simgeler açıklanmaktadır:  
   
-|||  
-|-|-|  
-|Simge|Açıklama|  
-|![Paralel Yığınlar sarı ok](../debugger/media/icon-parallelyellowarrow.gif "Icon_ParallelYellowArrow")|Yöntem bağlamı geçerli iş parçacığının etkin yığın çerçevesini içerdiğini gösterir.|  
-|![Paralel Yığınlar İş parçacıkları simgesi](../debugger/media/icon-parallelthreads.gif "Icon_ParallelThreads")|Yöntem bağlamı geçerli olmayan bir iş parçacığının etkin yığın çerçevesini içerdiğini gösterir.|  
-|![Paralel Yığınlar yeşil ok](../debugger/media/icon-parallelgreenarrow.gif "Icon_ParallelGreenArrow")|Yöntem bağlamı geçerli yığın çerçevesi içerdiğini gösterir. Bu yöntem adı göründüğü tüm düğümlerin bold olarak belirlenmiştir.|  
+|Simge|Description|  
+|-|-|
+|![Paralel Yığınlar sarı ok](../debugger/media/icon-parallelyellowarrow.gif "Icon_ParallelYellowArrow")|Yöntem bağlamının geçerli iş parçacığının etkin yığın çerçevesini içerdiğini belirtir.|  
+|![Paralel Yığınlar Iş parçacıkları simgesi](../debugger/media/icon-parallelthreads.gif "Icon_ParallelThreads")|Yöntem bağlamının geçerli olmayan bir iş parçacığının etkin yığın çerçevesini içerdiğini belirtir.|  
+|![Paralel Yığınlar yeşil ok](../debugger/media/icon-parallelgreenarrow.gif "Icon_ParallelGreenArrow")|Yöntem bağlamının geçerli yığın çerçevesini içerdiğini belirtir. Bu yöntem adı, göründüğü tüm düğümlerde kalın olur.|  
   
 ## <a name="toolbar-controls"></a>Araç çubuğu denetimleri  
- Aşağıdaki şekil ve tabloda Paralel Yığınlar araç çubuğundaki denetimleri açıklanmaktadır.  
+ Aşağıdaki çizim ve tablo, Paralel Yığınlar araç çubuğunda bulunan denetimleri anlatmaktadır.  
   
- ![Paralel Yığınlar penceresi araç çubuğu](../debugger/media/parallel-stackstoolbar.png "Parallel_StacksToolbar")  
+ ![Paralel Yığınlar penceresinde araç çubuğu](../debugger/media/parallel-stackstoolbar.png "Parallel_StacksToolbar")  
   
-|Belirtme çizgisi harf|Denetim|Açıklama|  
+|Belirtme çizgisi harfi|Denetim|Description|  
 |--------------------|-------------|-----------------|  
-|BİR|İş parçacıklarının/görevlerin birleşik giriş kutusu|Görünüm arasında iş parçacığı yığınları çağırın ve çağrı yığınları görevlerin geçiş yapar. Görevler görünümü ve iş parçacıkları görünümü daha fazla bilgi için bkz.|  
-|B|Yalnızca bayrak eklenmiş olanları göster|Gösterir gibi diğer hata ayıklama pencerelerinde bayrağı yalnızca iş parçacığı için yığınları çağırın **GPU iş parçacıkları** penceresi ve **paralel izleme** penceresi.|  
-|C|Metot görünümünü Aç/Kapat|Yığın görünümü ve yöntem görünümü arasında geçiş yapar. Daha fazla bilgi için yöntemi görmek.|  
-|D|Geçerli yığın çerçevesine otomatik Kaydır|Geçerli yığın çerçevesi Autoscrolls diyagram görünümünde olduğunu. Geçerli yığın çerçevesi başka windows değiştirirken veya büyük diyagramlarında yeni kesme noktasına ulaşma bu özellik yararlıdır.|  
-|E|Yakınlaştırma denetimini Aç/Kapat|Yakınlaştırma denetimini gizler veya gösterir. Kullanarak veya CTRL tuşuna basarak ve fare tekerleğini yakınlaştırma denetimi görünürlüğünü bakılmaksızın kapatma yakınlaştırma yapabilirsiniz **CTRL + SHIFT + '+'** yakınlaştırmak için ve **CTRL + SHIFT +'-'** uzaklaştırmak için. Tuşuna basarak **CTRL + F8** ekrana sığacak şekilde Yakınlaştır.|  
+|A|İş parçacıkları/görevler açılan kutusu|Görünümü iş parçacıklarının çağrı yığınları ve görev yığınları arasında geçirir. Daha fazla bilgi için bkz. görevler görünümü ve Iş parçacıkları görünümü.|  
+|B|Yalnızca bayraklı göster|Yalnızca diğer hata ayıklama pencerelerinin (örneğin, **GPU Iş parçacıkları** penceresi ve **paralel izleme** penceresi) işaretlenen iş parçacıkları için çağrı yığınlarını gösterir.|  
+|C|Yöntem görünümünü değiştirme|Yığın görünümü ve Yöntem görünümü arasında geçiş yapar. Daha fazla bilgi için bkz. Yöntem görünümü.|  
+|D|Geçerli yığın çerçevesine Otomatik Kaydır|Diyagramı geçerli yığın çerçevesinin görünümü olacak şekilde oto kaydır. Bu özellik, geçerli yığın çerçevesini diğer pencerelerin değiştirirken veya büyük diyagramlarda yeni bir kesme noktasına vurdığınızda yararlıdır.|  
+|E|Yakınlaştırma denetimini değiştirme|Yakınlaştırma denetimini gösterir veya gizler. Ayrıca, yakınlaştırma denetiminin görünürlüğüne veya yakınlaştırmak için CTRL **+ SHIFT + ' +** ' tuşlarını kullanarak, **yakınlaştırmak için CTRL** tuşuna basarak ve fare tekerleğini açıp kapatabilirsiniz. **CTRL + F8** tuşlarına basmak ekrana sığacak şekilde yakınlaşacaktır.|  
   
 ### <a name="context-menu-items"></a>Bağlam menüsü öğeleri  
- Aşağıdaki şekil ve tabloda, iş parçacıkları görünümü veya Görevler görünümü yöntemi bağlamda sağ tıklattığınızda, kullanılabilen kısayol menüsü öğelerini açıklar. Son altı öğe, doğrudan çağrı yığını penceresinden ödünç ve yeni bir davranış sunar.  
+ Aşağıdaki çizim ve tablo, Iş parçacıkları görünümü veya Görevler görünümünde bir yöntem bağlamına sağ tıkladığınızda kullanılabilen kısayol menü öğelerini anlatmaktadır. Son altı öğe doğrudan çağrı yığını penceresinden ödünç alınır ve yeni bir davranış sunmaz.  
   
- ![Paralel Yığınlar penceresi kısayol menüsü](../debugger/media/parallel-contmenu.png "Parallel_ContMenu")  
+ ![Paralel Yığınlar penceresinde kısayol menüsü](../debugger/media/parallel-contmenu.png "Parallel_ContMenu")  
   
-|Menü Öğesi|Açıklama|  
+|Menü Öğesi|Description|  
 |---------------|-----------------|  
-|Bayrağı|Seçili öğeyi işaretler.|  
-|İşaretini kaldır|Seçili öğeyi unflags.|  
-|Dondurma|Seçili öğeyi donuyor.|  
-|Çözme|Seçili öğeyi thaws.|  
-|Görev (iş parçacığı) geçin|Araç çubuğunda birleşik giriş kutusu aynı işlevi gerçekleştirir, ancak aynı yığın çerçevesini vurgulanmış halde tutar.|  
-|Kaynak koduna Git|Kullanıcı sağ yığın çerçevesi için karşılık gelen kaynak kodu konumuna gider.|  
-|Çerçeveye geçiş yap|Çağrı yığını penceresinde karşılık gelen menü komutu ile aynıdır. Ancak, Paralel Yığınlar ile birden çok çerçeve için bir yöntem bağlamı karşılık gelebilir. Bu nedenle, her biri belirli bir yığın çerçevesini temsil eden alt menüler, menü öğesi vardır. Yığın çerçevelerini biri geçerli iş parçacığı üzerinde olduğunda, ardından bu yığın çerçevesi için karşılık gelen menü seçilir.|  
-|Ayrıştırma için Git|Kullanıcı sağ yığın çerçevesi için karşılık gelen ayrıştırma penceresinde konumuna gider.|  
-|Dış Kodu Göster|Dış kodu gizler veya gösterir.|  
-|Onaltılık gösterim|Ondalık ve onaltılık görünen arasında geçiş yapar.|  
-|Sembol Yükleme Bilgisi|Karşılık gelen iletişim kutusunu görüntüler.|  
-|Sembol ayarları|Karşılık gelen iletişim kutusunu görüntüler.|  
+|Bayrak|Seçili öğeyi bayraklar.|  
+|İşaretsiz|Seçili öğenin bayraklarını kaldır.|  
+|Amazsınız|Seçili öğeyi dondurur.|  
+|Çözme|Seçili öğeyi Thaw.|  
+|Göreve git (Iş parçacığı)|Araç çubuğundaki Birleşik giriş kutusuyla aynı işlevi gerçekleştirir, ancak aynı yığın çerçevesini vurgulatutar.|  
+|Kaynak koduna git|Kullanıcının sağ tıkladığını yığın çerçevesine karşılık gelen kaynak kodundaki konuma gider.|  
+|Çerçeveye geçiş yap|Çağrı yığını penceresinde karşılık gelen menü komutuyla aynı. Ancak, paralel yığınlarla birden çok çerçeve bir yöntem bağlamına karşılık gelebilir. Bu nedenle, menü öğesi, her biri belirli bir yığın çerçevesini temsil eden alt menülere sahiptir. Yığın çerçevelerinden biri geçerli iş parçacığından geliyorsa, bu yığın çerçevesine karşılık gelen menü seçilidir.|  
+|Ayrıştırılmış koda git|Kullanıcının sağ tıkladığını yığın çerçevesine karşılık gelen ayrıştırma penceresindeki konuma gider.|  
+|Dış kodu göster|Dış kodu gösterir veya gizler.|  
+|Onaltılı ekran|Ondalık ve onaltılık görüntü arasında geçiş yapar.|  
+|Sembol Yükleme Bilgisi|İlgili iletişim kutusunu görüntüler.|  
+|Sembol ayarları|İlgili iletişim kutusunu görüntüler.|  
   
 ## <a name="tasks-view"></a>Görevler görünümü  
- Uygulamanızı kullanıyorsa <xref:System.Threading.Tasks.Task?displayProperty=fullName> nesneleri (yönetilen kod için) veya `task_handle` paralellik ifade etmek için (yerel kod için) nesneleri, geçiş yapmak Paralel Yığınlar penceresi araç çubuğu birleşik giriş kutusunda kullanabilirsiniz *Görevler görünümü*. Görev Görünümü görevleri yerine iş parçacığı çağrı yığınlarını gösterir. Görevler görünümü iş parçacıkları Görünümü'ndeki aşağıdaki şekilde farklıdır:  
+ Uygulamanız, <xref:System.Threading.Tasks.Task?displayProperty=fullName> paralellik sağlamak için nesneleri (yönetilen kod) veya `task_handle` nesneleri (yerel kod) kullanıyorsa, *Görevler görünümüne*geçmek için Paralel Yığınlar penceresi araç çubuğundaki Birleşik giriş kutusunu kullanabilirsiniz. Görevler Görünümü iş parçacıkları yerine görevlerin çağrı yığınlarını gösterir. Görevler görünümü Iş parçacıkları görünümünden aşağıda gösterildiği gibi farklıdır:  
   
-- Görevler ile çalışan iş parçacığı çağrı yığınlarını gösterilmez.  
+- Görevleri çalıştırmayan iş parçacıklarının çağrı yığınları gösterilmez.  
   
-- Görevleri çalıştıran iş parçacığı çağrı yığınlarını görsel olarak göster görevlere ait ilgilendiren çerçeveleri için altındaki ve üstündeki atılır.  
+- Görevleri çalıştıran iş parçacıklarının çağrı yığınları, görevlerle ilgili en ilgili kareleri göstermek için en üstte ve en altta görsel olarak kırpılmakta.  
   
-- Birden çok görev bir iş parçacığı üzerinde olduğunda, bu görevlerin çağrı yığınları farklı düğümlere bölünür.  
+- Bir iş parçacığında birden çok görev olduğunda, bu görevlerin çağrı yığınları ayrı düğümlere bölünür.  
   
-  Paralel Yığınlar Görevler görünümü sağ ve sol taraftaki karşılık gelen iş parçacıkları görünümü aşağıda gösterilmiştir.  
+  Aşağıdaki çizimde, solda ve ilgili Iş parçacıkları görünümündeki Paralel Yığınlar görevler görünümü gösterilmektedir.  
   
-  ![Görevler Paralel Yığınlar penceresini görünümünde](../debugger/media/parallel-tasksview.png "Parallel_TasksView")  
+  ![Paralel Yığınlar penceresinde görevler görünümü](../debugger/media/parallel-tasksview.png "Parallel_TasksView")  
   
-  Tüm çağrı yığınını görmek için yalnızca iş parçacığı yığın çerçevesi sağ tıklatıp ardından görünümüne dönebilirsiniz **iş parçacığına Git**.  
+  Tüm çağrı yığınını görmek için, bir yığın çerçevesine sağ tıklayıp sonra **Iş parçacığına git**' e tıklayarak Iş parçacıkları görünümüne geri geçmeniz yeterlidir.  
   
-  Bir yöntem bağlamı gelerek önceki tabloda açıklandığı gibi ek bilgileri görebilirsiniz. Aşağıdaki görüntüde iş parçacıkları görünümü ve Görevler görünümü için araç ipucunda bilgileri gösterir.  
+  Önceki tabloda açıklandığı gibi, bir yöntem bağlamının üzerine gelindiğinde, ek bilgi görebilirsiniz. Aşağıdaki görüntüde, Iş parçacıkları görünümü ve görevler görünümü için araç ipucunda bulunan bilgiler gösterilmektedir.  
   
-  ![Paralel Yığınlar penceresini araç ipuçlarında](../debugger/media/parallel-stack-tooltips.png "Parallel_Stack_Tooltips")  
+  ![Paralel Yığınlar penceresinde araç ipuçları](../debugger/media/parallel-stack-tooltips.png "Parallel_Stack_Tooltips")  
   
-## <a name="method-view"></a>Metot görüntüle  
- İş Parçacıkları görünümü veya Görevler görünümünde, araç çubuğundaki yöntemi görünümü simgesine tıklayarak geçerli yöntemi grafikte Özet. Yöntemi bir bakışta tüm yöntemleri çağırmak ya da geçerli yöntemi tarafından çağrılır tüm iş parçacıkları üzerinde görüntüler. Aşağıdaki çizimde, iş parçacıkları görünümü ve de aynı bilgileri yöntemi Görünümü'nde nasıl göründüğünü gösterir.  
+## <a name="method-view"></a>Yöntem görünümü  
+ Herhangi bir Iş parçacığı görünümü veya görevler görünümünden, araç çubuğundaki Yöntem görünümü simgesine tıklayarak grafiği geçerli yöntemde Özet olarak ekleyebilirsiniz. Yöntem görünümü, ya da çağıran ya da geçerli yöntem tarafından çağrılan tüm iş parçacıklarında tüm yöntemleri gösterir. Aşağıdaki çizimde bir Iş parçacığı görünümü ve ayrıca aynı bilgilerin Yöntem görünümünde nasıl göründüğü gösterilmektedir.  
   
- ![Paralel Yığınlar penceresini yöntemi görünümünde](../debugger/media/parallel-methodview.png "Parallel_MethodView")  
+ ![Paralel Yığınlar penceresinde Yöntem görünümü](../debugger/media/parallel-methodview.png "Parallel_MethodView")  
   
- Yeni bir yığın çerçevesine geçiş, bu yöntem geçerli yöntemi olun ve tüm çağıranlar ve çağrılanlar yeni yöntem için gösterilecek yol. Bu, bazı iş parçacıklarının görünmesini veya kaybolmasını bu yöntem çağrı yığınlarıyla görüntülenip bağlı olarak bu görünümden neden olabilir. Yığın görünümüne dönmek için görünümü araç çubuğu düğmesini tıklatın.  
+ Yeni bir yığın çerçevesine geçerek, bu yöntemi geçerli yöntemi yapar ve yeni yöntem için pencerenin tüm çağıranları ve calkaları göstermesini sağlar. Bu yöntem, yöntemin çağrı yığınlarında görünüp görünmediğini bağlı olarak görünümde bazı iş parçacıklarının görünmesine veya görünmemesine neden olabilir. Yığın görünümüne dönmek için, yöntem görünümü araç çubuğu düğmesine tekrar tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Paralel uygulamada hata ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md)   
- [Hata ayıklayıcı temel bilgileri](../debugger/debugger-basics.md)   
+ [İzlenecek yol: paralel uygulamada hata ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md)   
+ [Hata ayıklayıcı temelleri](../debugger/debugger-basics.md)   
  [Yönetilen kodda hata ayıklama](../debugger/debugging-managed-code.md)   
- [Paralel Programlama](https://msdn.microsoft.com/library/4d83c690-ad2d-489e-a2e0-b85b898a672d)   
- [Görevleri penceresini kullanma](../debugger/using-the-tasks-window.md)   
- [İzlenecek yol: Paralel uygulamada hata ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md)   
+ [Paralel programlama](https://msdn.microsoft.com/library/4d83c690-ad2d-489e-a2e0-b85b898a672d)   
+ [Görevler penceresini kullanma](../debugger/using-the-tasks-window.md)   
+ [İzlenecek yol: paralel uygulamada hata ayıklama](../debugger/walkthrough-debugging-a-parallel-application.md)   
  [Task Sınıfı](../extensibility/debugger/task-class-internal-members.md)

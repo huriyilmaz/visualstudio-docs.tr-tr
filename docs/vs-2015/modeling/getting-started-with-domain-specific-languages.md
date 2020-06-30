@@ -9,12 +9,12 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c7e8ca0fa1558ce0a2d37d4e11a35ba10a27fd2d
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 6fe720b380133d15f9bc60485896d4b7acbf2c4b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919090"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543201"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>Etki Alanına Özgü Dillerle Çalışmaya Başlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -24,7 +24,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>Etki alanına özgü dille ne yapabilirsiniz?
  Etki alanına özgü dil, genellikle grafik olan ve belirli bir amaç için kullanılmak üzere tasarlanan bir gösterimidir. Bunun aksine, UML gibi dillerin genel amaçlı olması gerekir. Bir DSL 'de model öğesi türlerini ve bunların ilişkilerini ve bunların ekranda nasıl sunulduğunu tanımlayabilirsiniz.
 
- Bir DSL tasarladıktan sonra, bir Visual Studio Tümleştirme Uzantısı (VSıX) paketinin parçası olarak dağıtabilirsiniz. Kullanıcılar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]içindeki DSL ile çalışır:
+ Bir DSL tasarladıktan sonra, bir Visual Studio Tümleştirme Uzantısı (VSıX) paketinin parçası olarak dağıtabilirsiniz. Kullanıcılar, içindeki DSL ile çalışır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
  ![Aile ağacı diyagramı, araç kutusu ve gezgin](../modeling/media/familyt-instance.png "FamilyT_Instance")
 
@@ -32,19 +32,19 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
  DSLs 'nin asıl uygulamalarından biri program kodu, yapılandırma dosyaları ve diğer yapıtları oluşturmak için kullanılır. Özellikle büyük projelerde ve ürün satırlarında, bir ürünün çeşitli varyantlarının oluşturulması durumunda, DSLs 'deki değişken yönlerinin birçoğu, güvenilirlikte büyük bir artış ve gereksinimler değişikliklerine çok hızlı yanıt verebilir.
 
- Bu genel bakışın geri kalanında, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]' de alana özgü dil oluşturma ve kullanma ile ilgili temel işlemleri tanıtan bir izlenecek yol vardır.
+ Bu genel bakışın geri kalanında, ' de alana özgü dil oluşturma ve kullanma ile ilgili temel işlemleri tanıtan bir izlenecek yol vardır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-## <a name="prerequisites"></a>Prerequisites
- Bir DSL tanımlamak için aşağıdaki bileşenler yüklemiş olmanız gerekir:
+## <a name="prerequisites"></a>Önkoşullar
+ Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
 
-|||
+|Ürün|İndirme bağlantısı|
 |-|-|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](https://www.visualstudio.com/)|
 |[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index?view=azure-devops&viewFallbackFrom=vsts)|
 |Visual Studio için modelleme SDK 'Sı|[MSDK 'yi indir](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-a-dsl-solution"></a>DSL çözümü oluşturma
- Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil proje şablonunu kullanarak yeni bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümü oluşturursunuz.
+ Yeni bir etki alanına özgü dil oluşturmak için, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] etki alanına özgü dil proje şablonunu kullanarak yeni bir çözüm oluşturursunuz.
 
 #### <a name="to-create-a-dsl-solution"></a>DSL çözümü oluşturmak için
 
@@ -56,7 +56,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
     ![DSL oluştur iletişim kutusu](../modeling/media/create-dsldialog.png "Create_DSLDialog")
 
-4. **Ad** kutusuna **FamilyTree**yazın. **Tamam**'ı tıklatın.
+4. **Ad** kutusuna **FamilyTree**yazın. **Tamam**'a tıklayın.
 
     **Etki alanına özgü dil Sihirbazı** açılır ve şablon DSL çözümlerinin listesini görüntüler.
 
@@ -92,9 +92,9 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 - **DSL projesi** Bu proje, etki alanına özgü dili tanımlayan kodu içerir.
 
-- **DslPackage projesi** Bu proje, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]içinde DSL örneklerinin açılmasına ve düzenlenmesine izin veren kodu içerir.
+- **DslPackage projesi** Bu proje, DSL örneklerinin ' de açılıp düzenlenmesine izin veren kodu içerir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-## <a name="Debugging"></a>DSL 'yi çalıştırma
+## <a name="running-the-dsl"></a><a name="Debugging"></a>DSL 'yi çalıştırma
  DSL çözümünü, oluşturduktan hemen sonra çalıştırabilirsiniz. Daha sonra, her değişiklikten sonra çözümü yeniden çalıştırarak DSL tanımını kademeli olarak değiştirebilirsiniz.
 
 #### <a name="to-experiment-with-the-dsl"></a>DSL 'yi denemek için
@@ -106,13 +106,13 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 2. F5 tuşuna basın veya **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.
 
-    DSL derlemeleri ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]deneysel örneğine yüklenir.
+    DSL derlemeleri ve deneysel örneğine yüklenir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-    Deneysel bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği başlar. Deneysel örnek, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantılarının hata ayıklama amacıyla kaydedildiği, ayarlarını kayıt defterinin ayrı bir alt ağacında alır. Normal [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örnekleri orada kayıtlı uzantılara erişemez.
+    Deneysel bir örneği [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlar. Deneysel örnek, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantıların hata ayıklama amacıyla kaydedildiği, kayıt defterinin ayrı bir alt ağacından ayarlarını alır. Normal örneklerinin, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] orada kayıtlı uzantılara erişimi yoktur.
 
-3. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]deneysel örneğinde, **Çözüm Gezgini** **Test** adlı model dosyasını açın.
+3. Deneysel örneğinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , **Çözüm Gezgini** **Test** adlı model dosyasını açın.
 
-    \- veya -
+    \-veya
 
     Hata ayıklama projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **öğe**' ye tıklayın. **Öğe Ekle** iletişim kutusunda, DSL 'nizin dosya türünü seçin.
 
@@ -128,7 +128,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 5. Bunları değiştirmek için şekillerin etiketlerine tıklayın.
 
-   Deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] aşağıdaki örneğe benzeyecektir:
+   Deneysel aboneliğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] aşağıdaki örneğe benzeyecektir:
 
    ![](../modeling/media/dsl-min.png "DSL_min")
 
@@ -139,12 +139,12 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
  Bir modeli düzenlediğinizde, bir modeli **Gezgin** görünümünde ağaç olarak görüntüleyebilirsiniz. Diyagrama şekil eklerken, model öğeleri de gezgin 'de görüntülenir. Diyagram olmasa bile gezgin kullanılabilir.
 
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]hata ayıklama örneğinde Gezginini göremiyorsanız, **Görünüm** menüsünde **diğer pencereler**' e gidin ve ardından *dil >* **Gezgini**' ne\<tıklayın.
+ Gezginini hata ayıklama örneğinde göremiyorsanız [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , **Görünüm** menüsünde **diğer pencereler**' i işaret edin ve ardından gezgin ' i tıklatın *\<Your Language>* **Explorer**.
 
 ### <a name="the-api-of-your-dsl"></a>DSL API 'SI
  DSL 'niz, DSL örnekleri olan modelleri okumanızı ve güncelleştirmenizi sağlayan bir API oluşturur. API 'nin bir uygulaması, bir modelden metin dosyaları üretmesidir. Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
- Hata ayıklama çözümünde ". tt" uzantılı şablon dosyalarını açın. Bu örneklerde modellerden nasıl metin oluşturabileceğiniz ve DSL 'nizin API 'sini test etmeniz için nasıl izin oluşturabileceğiniz gösterilmektedir. Örneklerden biri, [!INCLUDE[csprcs](../includes/csprcs-md.md)]diğer [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]yazılır.
+ Hata ayıklama çözümünde ". tt" uzantılı şablon dosyalarını açın. Bu örneklerde modellerden nasıl metin oluşturabileceğiniz ve DSL 'nizin API 'sini test etmeniz için nasıl izin oluşturabileceğiniz gösterilmektedir. Örneklerden biri, içinde diğeri içinde yazılmıştır [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)] .
 
  Her şablon dosyası altında oluşturduğu dosyadır. Çözüm Gezgini şablon dosyasını genişletin ve oluşturulan dosyayı açın.
 
@@ -156,13 +156,13 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 ##### <a name="to-regenerate-text-files-after-you-change-the-model-file"></a>Model dosyasını değiştirdikten sonra metin dosyalarını yeniden oluşturmak için
 
-1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]deneysel örneğinde, model dosyasını kaydedin.
+1. Deneysel örneğinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , model dosyasını kaydedin.
 
 2. Her. tt dosyasındaki dosya adı parametresinin, denemeleri için kullandığınız model dosyasına başvurduğundan emin olun. . Tt dosyasını kaydedin.
 
 3. **Çözüm Gezgini**araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın.
 
-    \- veya -
+    \-veya
 
     Yeniden oluşturmak istediğiniz şablonlara sağ tıklayın ve ardından **özel araç Çalıştır**' a tıklayın.
 
@@ -174,7 +174,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
  Daha fazla bilgi için bkz. [etki alanına özgü dilden kod oluşturma](../modeling/generating-code-from-a-domain-specific-language.md) ve [etki alanına özgü bir dili özelleştirmek için kod yazma](../modeling/writing-code-to-customise-a-domain-specific-language.md).
 
 ## <a name="customizing-the-dsl"></a>DSL 'yi özelleştirme
- DSL tanımını değiştirmek istediğinizde, deneysel örneği kapatın ve ana [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneğindeki tanımı güncelleştirin.
+ DSL tanımını değiştirmek istediğinizde, deneysel örneği kapatın ve ana örnekteki tanımı güncelleştirin [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 > [!NOTE]
 > DSL tanımını değiştirdikten sonra, önceki sürümleri kullanarak oluşturduğunuz test modellerinde bilgileri kaybedebilirsiniz.  Örneğin, hata ayıklama çözümü, bazı şekiller ve bağlayıcılar içeren örnek adlı bir dosya içerir. DSL tanımınızı geliştirmeye başladıktan sonra, bunlar görünür olmayacaktır ve dosyayı kaydettiğinizde kaybedilir.
@@ -198,7 +198,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
     2. Özellikler penceresi açın ve aynı anda DSL Gezginini ve özelliklerini görebilmek için konumlandırın.
 
-    3. DSL Gezgini ' nde **Düzenleyici**, **araç kutusu sekmeleri**, *DSL >\<* ve ardından **Araçlar**' ı genişletin.
+    3. DSL Gezgini ' nde **Düzenleyici**, **araç kutusu sekmeleri**, *\<your DSL>* ve ardından **Araçlar**' ı genişletin.
 
     4. **ExampleElement öğesine**tıklayın. Bu, öğeleri oluşturmak için kullanılan araç kutusu öğesidir.
 
@@ -214,9 +214,9 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
     2. Çözüm Gezgini araç çubuğunda **Tüm Şablonları Dönüştür** ' e tıklayın
 
-    3. F5 tuşuna basın. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] deneysel örneği görünene kadar bekleyin.
+    3. F5 tuşuna basın. Deneysel örneği görünene kadar bekleyin [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-4. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Deneysel örneğindeki hata ayıklama çözümünde bir test modeli dosyası açın. Öğeleri araç kutusu 'ndan üzerine sürükleyin. DSL Gezgini 'ndeki araç başlıklarının ve tür adlarının değiştiğini unutmayın.
+4. Deneysel örneğinin hata ayıklama çözümünde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir test modeli dosyası açın. Öğeleri araç kutusu 'ndan üzerine sürükleyin. DSL Gezgini 'ndeki araç başlıklarının ve tür adlarının değiştiğini unutmayın.
 
 5. Model dosyasını kaydedin.
 
@@ -322,7 +322,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
     1. **DSL Gezgini**' nde **Düzenleyici** ve **araç kutusu sekmeleri**' ni genişletin.
 
-    2. *DSL >\<* sağ tıklayın ve sonra **Yeni öğe Ekle aracı**' na tıklayın.
+    2. Sağ tıklayın *\<your DSL>* ve ardından **Yeni öğe Ekle aracı**' na tıklayın.
 
     3. Yeni aracının **Name** özelliğini ayarlayın ve **sınıf** özelliğini Town olarak ayarlayın.
 
@@ -330,7 +330,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 7. Kasabalarında şubeleri ve kişiler arasında bağlantı oluşturmak için bir bağlayıcı aracı oluşturun.
 
-    1. *DSL >\<* sağ tıklayın ve sonra **yeni bağlayıcı aracı ekle**' ye tıklayın.
+    1. Sağ tıklayın *\<your DSL>* ve ardından **yeni bağlayıcı aracı ekle**' ye tıklayın.
 
     2. Yeni aracın ad özelliğini ayarlayın.
 
@@ -340,7 +340,7 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 
 8. DSL tanımını kaydedin, **Tüm Şablonları Dönüştür**' e tıklayın ve **F5**tuşuna basın.
 
-9. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]deneysel örneğinde bir test modeli dosyası açın. Kasabalarında şubeleri ve kişiler arasında kasalar ve bağlantılar oluşturmak için yeni araçları kullanın. Yalnızca doğru öğe türleri arasında bağlantı oluştururıbildiğinize dikkat edin.
+9. Deneysel örneğinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , bir test modeli dosyası açın. Kasabalarında şubeleri ve kişiler arasında kasalar ve bağlantılar oluşturmak için yeni araçları kullanın. Yalnızca doğru öğe türleri arasında bağlantı oluştururıbildiğinize dikkat edin.
 
 10. Her birinin yaşadığı kasayı listeleyen kodu oluşturun. Metin şablonları, bu tür kodları çalıştırabileceğiniz yerlerden biridir. Örneğin, hata ayıklama çözümünde varolan Sample.tt dosyasını aşağıdaki kodu içerecek şekilde değiştirebilirsiniz:
 
@@ -372,29 +372,29 @@ Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluştu
 ## <a name="validation-and-commands"></a>Doğrulama ve komutlar
  Doğrulama kısıtlamaları ekleyerek bu DSL 'yi daha da geliştirebilirsiniz. Bu kısıtlamalar, modelin doğru bir durumda olduğundan emin olmak için tanımlayabileceğiniz yöntemlerdir. Örneğin, bir alt öğenin Doğum tarihinin üst öğelerinden daha sonra olduğundan emin olmak için bir kısıtlama tanımlayabilirsiniz. DSL kullanıcısı kısıtlamaların herhangi birini kesen bir model kaydetmeye çalışırsa doğrulama özelliği bir uyarı görüntüler. Daha fazla bilgi için bkz. [etki alanına özgü bir dilde doğrulama](../modeling/validation-in-a-domain-specific-language.md).
 
- Kullanıcının çağırabileceği menü komutlarını da tanımlayabilirsiniz. Komutları modeli değiştirebilir. Ayrıca, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve dış kaynaklarla diğer modellerle etkileşime girebilirler. Daha fazla bilgi için bkz. [nasıl yapılır: standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
+ Kullanıcının çağırabileceği menü komutlarını da tanımlayabilirsiniz. Komutları modeli değiştirebilir. Ayrıca, dış kaynaklarla ve içindeki diğer modellerle etkileşime girebilirler [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [nasıl yapılır: standart menü komutunu değiştirme](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md).
 
 ## <a name="deploying-the-dsl"></a>DSL dağıtma
- Diğer kullanıcıların etki alanına özgü dili kullanmasına izin vermek için bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı (VSıX) dosyası dağıtırsınız. Bu, DSL çözümünü yapılandırdığınızda oluşturulur.
+ Diğer kullanıcıların, etki alanına özgü dili kullanmasına izin vermek için bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Uzantı (VSIX) dosyası dağıtırsınız. Bu, DSL çözümünü yapılandırdığınızda oluşturulur.
 
- Çözümünüzün bin klasöründe. vsix dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın. Bu bilgisayarda VSıX dosyasına çift tıklayın. DSL, bu bilgisayardaki tüm [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneklerinde kullanılabilir.
+ Çözümünüzün bin klasöründe. vsix dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın. Bu bilgisayarda VSıX dosyasına çift tıklayın. DSL, bu bilgisayardaki tüm örneklerinde kullanılabilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
- Aynı yordamı kullanarak DSL 'yi kendi bilgisayarınıza yükleyebilirsiniz. bu sayede [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Deneysel örneğini kullanmanız gerekmez.
+ Aynı yordamı kullanarak, Deneysel örneğini kullanmak zorunda olmadığınız için DSL 'yi kendi bilgisayarınıza yükleyebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
- Daha fazla bilgi için [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
+ Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](../modeling/deploying-domain-specific-language-solutions.md).
 
-## <a name="Reset"></a>Eski deneysel DSLs 'ler kaldırılıyor
- Artık istemediğiniz deneysel DSLs 'Leri oluşturduysanız, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Deneysel örneğini sıfırlayarak bunları bilgisayarınızdan kaldırabilirsiniz.
+## <a name="removing-old-experimental-dsls"></a><a name="Reset"></a>Eski deneysel DSLs 'ler kaldırılıyor
+ Artık istemediğiniz deneysel DSLs 'Leri oluşturduysanız deneysel örneği sıfırlayarak bunları bilgisayarınızdan kaldırabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
- Bu, bilgisayarınızdan tüm deneysel DSLs 'Leri ve diğer deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantılarını kaldırır. Bunlar hata ayıklama modunda yürütülen uzantılardır.
+ Bu, bilgisayarınızdan tüm deneysel DSLs 'Leri ve diğer deneysel uzantıları kaldırır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Bunlar hata ayıklama modunda yürütülen uzantılardır.
 
- Bu yordam, VSıX dosyası çalıştırılarak tamamen yüklenmiş olan DSLs 'leri veya diğer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantılarını kaldırmaz.
+ Bu yordam [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , VSIX dosyası çalıştırılarak tamamen yüklenmiş olan DSLs 'leri veya diğer uzantıları kaldırmaz.
 
 #### <a name="to-reset-the-visual-studio-experimental-instance"></a>Visual Studio Deneysel örneğini sıfırlamak için
 
 1. **Başlat**' a tıklayın, **tüm programlar**, **Microsoft Visual Studio 2010 SDK**ve **araçlar**' a tıklayın ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın**.
 
-2. Hala kullanmak istediğiniz deneysel DSLs 'leri veya diğer deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantılarını yeniden derleyin.
+2. Hala kullanmak istediğiniz deneysel DSLs 'leri veya diğer deneysel uzantıları yeniden derleyin [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Modelleri, sınıfları ve Ilişkileri anlama,](../modeling/understanding-models-classes-and-relationships.md) [etki alanına özgü dil](../modeling/how-to-define-a-domain-specific-language.md) [Visualizaton ve modelleme SDK 'sını](https://www.microsoft.com/download/details.aspx?id=48148) tanımlama

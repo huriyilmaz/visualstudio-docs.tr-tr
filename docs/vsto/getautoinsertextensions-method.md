@@ -1,7 +1,7 @@
 ---
-title: Getautoınsertextensions metodu
+title: Getautoınserbir yöntemi
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -10,19 +10,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fb767ec7301a1d4e0f29003971b017339228fc9f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f5d88af6f24306b7b243359c9797a2cb7e7449bc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62972284"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543513"
 ---
-# <a name="getautoinsertextensions-method"></a>Getautoınsertextensions metodu
-  Hata ayıklama sırasında otomatik olarak eklenmesi için Office için uygulamalar hakkında bilgi alır.
+# <a name="getautoinsertextensions-method"></a>Getautoınserbir yöntemi
+  Hata ayıklama sırasında otomatik olarak eklenecek Office uygulamaları hakkında bilgi alır.
 
- Bu yöntem, gelecekte kullanılmak üzere ayrılmıştır.
+ Bu yöntem gelecekte kullanılmak üzere ayrılmıştır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```csharp
 HRESULT GetAutoInsertExtensions(
@@ -34,10 +34,10 @@ HRESULT GetAutoInsertExtensions(
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|*psaExtensionNames*|Office için uygulamalar uzantı adları.|
+|*psaExtensionNames*|Office uygulamalarının uzantı adları.|
 
-## <a name="return-value"></a>Dönüş değeri
- Yöntemi başarıyla tamamlanıp tamamlanmadığını belirten bir HRESULT değer.
+## <a name="return-value"></a>Döndürülen değer
+ Metodun başarıyla tamamlanıp tamamlanmadığını gösteren bir HRESULT değeri.
 
 ## <a name="remarks"></a>Açıklamalar
- Her uygulama için eklenecek Office altındaki bir değere karşılık gelen bir Office uygulaması uzantı adı olarak döndürülen **HKEY_CURRENT_USER\Software\Microsoft\Office\WEF\Developer**. Konak, bu kayıt defteri değerlerini arayın ve uzantılar otomatik olarak ekler.
+ Office 'in ekleneceği her bir uygulama, **HKEY_CURRENT_USER \Software\Microsoft\Office\WEF\Developer**altındaki bir değere karşılık gelen bir Office uygulaması uzantı adı olarak döndürülür. Konağın bu değerleri kayıt defterinde araması ve sonra otomatik olarak uzantıları eklemesi gerekir.

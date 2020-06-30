@@ -15,39 +15,39 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: af41fc5576cbcd56589680d99c0cd5c0dfd6e6f1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 0afa6950a6ad876cdcfdcc1a56dd143422b9d44f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664762"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544358"
 ---
-# <a name="ca2119-seal-methods-that-satisfy-private-interfaces"></a>CA2119: Özel arabirimleri karşılayan yöntemleri mühürleyin
+# <a name="ca2119-seal-methods-that-satisfy-private-interfaces"></a>CA2119: Özel arabirimleri karşılayan metotları mühürleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|SealMethodsThatSatisfyPrivateInterfaces|
 |CheckId|CA2119|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Devralınabilir bir ortak tür, `internal` (Visual Basic) arabirimindeki bir (`Friend`) geçersiz kılınabilir Yöntem uygulamasını sağlar.
+## <a name="cause"></a>Nedeni
+ Devralınabilir bir ortak tür, bir `internal` (Visual Basic) arabiriminde geçersiz kılınabilir bir yöntem uygulamasını sağlar `Friend` .
 
 ## <a name="rule-description"></a>Kural Tanımı
- Arabirim yöntemleri, uygulama türü tarafından değiştirilemeyen genel erişilebilirliği vardır. İç arabirim, arabirimini tanımlayan derlemenin dışında uygulanması amaçlanan bir sözleşme oluşturur. @No__t_0 (Visual Basic `Overridable`) kullanarak bir iç arabirimin yöntemini uygulayan ortak bir tür, metodun, derlemenin dışında olan türetilmiş bir tür tarafından geçersiz kılınmasına izin verir. Tanımlama derlemesinde ikinci bir tür yöntemi çağırırsa ve yalnızca dahili bir sözleşme bekliyorsa, bunun yerine dış derlemede geçersiz kılınan yöntem yürütüldüğünde davranışın güvenliği tehlikeye girebilir. Bu, bir güvenlik açığı oluşturur.
+ Arabirim yöntemleri, uygulama türü tarafından değiştirilemeyen genel erişilebilirliği vardır. İç arabirim, arabirimini tanımlayan derlemenin dışında uygulanması amaçlanan bir sözleşme oluşturur. (Visual Basic) değiştiricisini kullanarak bir iç arabirimin yöntemini uygulayan ortak tür, `virtual` `Overridable` metodun, derlemenin dışında olan türetilmiş bir tür tarafından geçersiz kılınmasına izin verir. Tanımlama derlemesinde ikinci bir tür yöntemi çağırırsa ve yalnızca dahili bir sözleşme bekliyorsa, bunun yerine dış derlemede geçersiz kılınan yöntem yürütüldüğünde davranışın güvenliği tehlikeye girebilir. Bu, bir güvenlik açığı oluşturur.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kuralın ihlal edildiğini onarmak için, aşağıdakilerden birini kullanarak metodun derleme dışında geçersiz kılınmasını engelleyin:
 
-- Bildirim türünü `sealed` (`NotInheritable` Visual Basic) yapın.
+- Bildirim türünü `sealed` ( `NotInheritable` Visual Basic) yapın.
 
-- Bildirim türünün erişilebilirliğini `internal` (Visual Basic `Friend`) olarak değiştirin.
+- Bildirim türünün erişilebilirliğini `internal` ( `Friend` Visual Basic) olarak değiştirin.
 
 - Tüm ortak oluşturucuları bildirim türünden kaldırın.
 
-- Yöntemi `virtual` değiştiricisini kullanmadan uygulayın.
+- Değiştiricisini kullanmadan yöntemi uygulayın `virtual` .
 
 - Yöntemi açıkça uygulayın.
 
@@ -55,7 +55,7 @@ ms.locfileid: "72664762"
  Dikkatli bir gözden geçirdikten sonra, yöntem derleme dışında geçersiz kılınırsa, açıktan yararlanabilen güvenlik sorunları yoksa, bu kuraldan bir uyarıyı gizlemek güvenlidir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bu kuralı ihlal eden `BaseImplementation` olan bir türü gösterir.
+ Aşağıdaki örnek, `BaseImplementation` Bu kuralı ihlal eden bir türü gösterir.
 
  [!code-cpp[FxCop.Security.SealMethods1#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Security.SealMethods1/cpp/FxCop.Security.SealMethods1.cpp#1)]
  [!code-csharp[FxCop.Security.SealMethods1#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.SealMethods1/cs/FxCop.Security.SealMethods1.cs#1)]

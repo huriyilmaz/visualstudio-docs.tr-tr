@@ -15,28 +15,28 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a0d5546c6f6a2f5dbd0c6063f4a1dfd40ce1d7bb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7429251a66ce2fe22a825a153cb90248faabb9fd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658731"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544371"
 ---
 # <a name="ca2111-pointers-should-not-be-visible"></a>CA2111: İşaretçiler görünür olmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|PointersShouldNotBeVisible|
 |CheckId|CA2111|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Ortak veya korumalı <xref:System.IntPtr?displayProperty=fullName> veya <xref:System.UIntPtr?displayProperty=fullName> alanı salt okunurdur.
+## <a name="cause"></a>Nedeni
+ Ortak veya korumalı <xref:System.IntPtr?displayProperty=fullName> veya <xref:System.UIntPtr?displayProperty=fullName> alan salt okunurdur.
 
 ## <a name="rule-description"></a>Kural Tanımı
- <xref:System.IntPtr> ve <xref:System.UIntPtr>, yönetilmeyen belleğe erişmek için kullanılan işaretçi türleridir. Bir işaretçi özel, iç veya salt okunurdur değilse, kötü amaçlı kod işaretçinin değerini değiştirebilir, bu da, bellekteki rastgele konumlara erişime izin verebilir veya uygulama ya da sistem arızalarına neden olabilir.
+ <xref:System.IntPtr>ve <xref:System.UIntPtr> yönetilmeyen belleğe erişmek için kullanılan işaretçi türleridir. Bir işaretçi özel, iç veya salt okunurdur değilse, kötü amaçlı kod işaretçinin değerini değiştirebilir, bu da, bellekteki rastgele konumlara erişime izin verebilir veya uygulama ya da sistem arızalarına neden olabilir.
 
  İşaretçi alanını içeren türe erişimi güvenli hale getirmek istiyorsanız, bkz. [CA2112: güvenli türler alanları kullanıma sunmamalıdır](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
 
@@ -57,4 +57,4 @@ ms.locfileid: "72658731"
  [CA1051: Görünür örnek alanlarını bildirmeyin](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.IntPtr?displayProperty=fullName><xref:System.UIntPtr?displayProperty=fullName>
+ <xref:System.IntPtr?displayProperty=fullName> <xref:System.UIntPtr?displayProperty=fullName>

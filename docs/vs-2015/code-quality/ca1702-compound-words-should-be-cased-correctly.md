@@ -15,26 +15,26 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 854e9a492f422957e64e1a4b6a00bc7c39b81c46
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: f9dc15cec4012d2b63eb5f21c25bd709961c95c8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919247"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544085"
 ---
-# <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702: Bileşik sözcüklerin küçük/büyük harfleri doğru yazılmalıdır
+# <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702: Bileşik sözcüklerin büyük küçük harfleri doğru olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio ile ilgili en son belgeler için bkz. [CA1702: Bileşik sözcüklerin doğru şekilde kullanılması gerekir](/visualstudio/code-quality/ca1702-compound-words-should-be-cased-correctly).
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|CompoundWordsShouldBeCasedCorrectly|
 |CheckId|CA1702|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Parçalara ayırma-derlemeler üzerinde harekete geçirildi.<br /><br /> Tür parametrelerinde harekete geçirildiğinde, bozmasız değildir.|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir tanımlayıcının adı birden çok sözcük içeriyor ve sözcüklerden en az biri, doğru şekilde desteklenmeyen bir bileşik sözcük gibi görünüyor.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -49,11 +49,11 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA1702: Bileşik sözcükle
  Bileşik sözcüğün her iki bölümü de yazım sözlüğü tarafından tanınıyorsa ve amaç iki sözcükten birini kullanıyorsa, bu kuraldan bir uyarıyı gizlemek güvenlidir.
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1701: Kaynak dize bileşik sözcüklerinin küçük/büyük harfleri doğru yazılmalıdır](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+ [CA1701: Kaynak dizesi bileşik sözcüklerin büyük küçük harfleri doğru olmalıdır](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
 
- [CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+ [CA1709: Tanımlayıcılar doğru büyük küçük harfe sahip olmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
- [CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708: Tanımlayıcılar yalnızca büyük küçük harfle birbirinden farklı olmamalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Adlandırma yönergeleri](https://msdn.microsoft.com/library/fc076d66-9b5f-42d3-aa65-61d970c794a3) [büyük/küçük kuralları](https://msdn.microsoft.com/library/4c4ea526-9203-486f-b72d-29d61c5b3c6d)

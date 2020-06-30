@@ -1,7 +1,7 @@
 ---
-title: "Nasıl yapılır: Bir Şerit Şerit Tasarımcısından Şerit XML'ine verebilir."
+title: "Nasıl yapılır: Şerit Tasarımcısından Şerit XML 'ine şerit aktarma"
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,54 +18,54 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 17d6efe4aa18682c6777128113f6fa60347f8950
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 57918e8a51a3948a2c69eb0c8ab5438b147e44f0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419510"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543474"
 ---
-# <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Nasıl yapılır: Bir Şerit Şerit Tasarımcısından Şerit XML'ine verebilir.
-  **Şerit (Görsel Tasarımcı)** öğesi, tüm olası şeridi özelleştirme türlerini desteklemez. Şerit Gelişmiş şekilde özelleştirmek için Şerit Tasarımcısından Şerit XML'ine verebilir ve XML doğrudan düzenlemek.
+# <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Nasıl yapılır: Şerit Tasarımcısından Şerit XML 'ine şerit aktarma
+  **Şerit (görsel Tasarımcı)** öğesi, tüm olası Şerit özelleştirmesi türlerini desteklemiyor. Şeriti gelişmiş yöntemlerle özelleştirmek için, tasarımcıyı tasarımcıdan Şerit XML 'Ine aktarabilir ve XML 'i doğrudan düzenleyebilirsiniz.
 
 > [!NOTE]
-> Tüm özellik değerlerini Şerit XML dosyasında görünür. Daha fazla bilgi için [Şerite Genel Bakış](../vsto/ribbon-overview.md).
+> Tüm özellik değerleri Şerit XML dosyasında görünmez. Daha fazla bilgi için bkz. [Şerit 'e genel bakış](../vsto/ribbon-overview.md).
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
-### <a name="to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Bir Şerit Şerit Tasarımcısından Şerit XML'ine dışarı aktarmak için
+### <a name="to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Şerit Tasarımcısından Şerit XML 'ine bir şerit dışarı aktarmak için
 
-1. Şerit kod dosyasını sağ tıklatın **Çözüm Gezgini**ve ardından **Görünüm Tasarımcısı**.
+1. **Çözüm Gezgini**' de şerit kodu dosyasına sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
 
-2. Şerit Tasarımcısını sağ tıklayın ve ardından **dışarı Şerit XML**.
+2. Şerit Tasarımcısına sağ tıklayın ve ardından **ŞERIDI XML 'e aktar**' a tıklayın.
 
-     Visual Studio Ribbon XML dosyasındaki ve bir Şerit XML kod dosyası projenize ekler.
+     Visual Studio, projenize bir Şerit XML dosyası ve Şerit XML kodu dosyası ekler.
 
-3. Şerit kod sınıfında ile başlayan açıklamaları bulmak `TODO:`.
+3. Şerit kod sınıfında, ile başlayan açıklamaları bulun `TODO:` .
 
-4. Bu açıklamalar için kod bloğu kopyalayın **ThisAddIn**, **ThisWorkbook**, veya **ThisDocument** , geliştirdiğiniz çözümü türünü bağlı olarak, sınıf.
+4. Bu açıklamalarda kod bloğunu, geliştirmekte olduğunuz çözüm türüne bağlı olarak **ThisAddIn**, **ThisWorkbook**veya **ThisDocument** sınıfına kopyalayın.
 
-     Bu kod, bulmak ve kendi özel Şerit'i yüklemek Microsoft Office uygulamasını sağlar. Daha fazla bilgi için [Ribbon XML](../vsto/ribbon-xml.md).
+     Bu kod, Microsoft Office uygulamasının özel şeritinizi bulmasını ve yüklemesini sağlar. Daha fazla bilgi için bkz. [ŞERIT XML](../vsto/ribbon-xml.md).
 
-5. İçinde **ThisAddIn**, **ThisWorkbook**, veya **ThisDocument** sınıfından, kod bloğunun açıklamasını kaldırın.
+5. **ThisAddIn**, **ThisWorkbook**veya **ThisDocument** sınıfında, kod bloğunun açıklamasını kaldırın.
 
-     Kodun açıklamasını kaldırın, sonra aşağıdaki örneğe benzemelidir. Bu örnekte, Şerit sınıfı olarak adlandırılan `MyRibbon`.
+     Kodun açıklamasını belirledikten sonra, aşağıdaki örneğe benzemelidir. Bu örnekte, Şerit sınıfı çağırılır `MyRibbon` .
 
      [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]
      [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]
 
-6. Geçiş için Ribbon XML kodunu ve bulma `Ribbon Callbacks` bölge.
+6. Şerit XML kod dosyasına geçin ve `Ribbon Callbacks` bölgeyi bulun.
 
-     Burada, bir düğmeye tıklanması gibi kullanıcı eylemlerini işlemek için geri çağırma yöntemleri yazdığınız budur.
+     Bu, bir düğmeye tıklanması gibi kullanıcı eylemlerini işlemek için geri çağırma yöntemleri yazacağınız yerdir.
 
-7. Şerit Tasarımcısı kod yazdığınız her bir olay işleyicisi için bir geri çağırma yöntemi oluşturun.
+7. Şerit Tasarımcı kodunda yazdığınız her olay işleyicisi için bir geri çağırma yöntemi oluşturun.
 
-8. Tüm olay işleyici kodu olay işleyicilerindeki geri çağırma yöntemlerine taşıyın ve Ribbon genişletilebilirliği (RibbonX) programlama modeliyle çalışmak için kodu değiştirin.
+8. Olay işleyicilerinden tüm olay işleyici kodunuzu geri çağırma yöntemlerine taşıyın ve şerit genişletilebilirliği (RibbonX) programlama modeliyle çalışmak için kodu değiştirin.
 
-     Geri çağırma yöntemleri yazmak ve RibbonX programlama modelini kullanma hakkında daha fazla bilgi için bkz: [Ribbon XML](../vsto/ribbon-xml.md).
+     Geri çağırma yöntemlerini yazma ve RibbonX programlama modelini kullanma hakkında daha fazla bilgi için bkz. [RIBBON XML](../vsto/ribbon-xml.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Şerite Genel Bakış](../vsto/ribbon-overview.md)
+- [Şerite genel bakış](../vsto/ribbon-overview.md)
 - [Şerit Tasarımcısı](../vsto/ribbon-designer.md)
 - [Şerit XML](../vsto/ribbon-xml.md)
 - [İzlenecek yol: Şerit Tasarımcısını kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)

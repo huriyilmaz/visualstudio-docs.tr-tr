@@ -15,26 +15,26 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5a06e87f8d28ceb225e240d7702a47e00122feea
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: fe6b90ef971bd00392381f47860d85f34e10dc26
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919173"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544033"
 ---
 # <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707: Tanımlayıcılar alt çizgi içermemelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio ile ilgili en son belgeler için bkz. [CA1707: tanımlayıcılar alt çizgi içermemelidir](/visualstudio/code-quality/ca1707-identifiers-should-not-contain-underscores).
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|IdentifiersShouldNotContainUnderscores|
 |CheckId|CA1707|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Parçalara ayırma-derlemeler üzerinde ne zaman tetiklenir<br /><br /> Tür parametrelerine ne zaman kabarık olmayan|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir tanımlayıcının adı, alt çizgi (_) karakterini içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -49,6 +49,6 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA1707: tanımlayıcılar a
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+ [CA1709: Tanımlayıcılar doğru büyük küçük harfe sahip olmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
- [CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708: Tanımlayıcılar yalnızca büyük küçük harfle birbirinden farklı olmamalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

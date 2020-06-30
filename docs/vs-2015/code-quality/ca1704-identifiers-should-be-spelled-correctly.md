@@ -15,24 +15,24 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 56ac5e60964621859c77bf53dc4f6c14480b4a83
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b5e078fc1bb7fe247d541e7695e98c2de76c2466
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669248"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544072"
 ---
 # <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704: Tanımlayıcılar doğru yazılmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|IdentifiersShouldBeSpelledCorrectly|
 |CheckId|CA1704|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Tanımlayıcının adı, Microsoft yazım denetleyicisi kitaplığı tarafından tanınmayan bir veya daha fazla sözcük içeriyor. Bu kural oluşturucuları veya Get ve set özellik erişimcileri gibi özel adlandırılmış üyeleri denetlemez.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -44,14 +44,14 @@ ms.locfileid: "72669248"
 
 - Baştaki ve sondaki kesme işaretleri kaldırılır. Örneğin, ' sender ' simgeleştirir "sender".
 
-- Alt çizgiler bir belirtecin sonunu işaret eder ve kaldırılır. Örneğin, hello_world Token, "Hello", "World" olarak simgeleştirir.
+- Alt çizgiler bir belirtecin sonunu işaret eder ve kaldırılır. Örneğin, "Hello", "World" olarak simgeleştirir Hello_world.
 
-- Gömülü ve işaretleri kaldırılır. Örneğin, & "biçim" olarak simgeleştirir.
+- Gömülü ve işaretleri kaldırılır. Örneğin,&"biçim" olarak simgeleştirir.
 
   Varsayılan olarak, yazım denetleyicisinin Ingilizce (en) sürümü kullanılır. Şu anda başka bir dil sözlüğü yok.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini düzeltmek için sözcüğün yazımını düzeltin veya sözcüğü CustomDictionary. xml adlı özel bir sözlüğe ekleyin. Sözlüğü aracın yükleme dizinine, proje dizinine veya Kullanıcı profili altındaki araçla ilişkili dizine yerleştirin (%USERPROFILE%\Application Data \\...). Özel sözlüğün [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir projeye nasıl ekleneceğini öğrenmek için bkz. [nasıl yapılır: kod analizi sözlüğünü özelleştirme](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
+ Bu kural ihlalini düzeltmek için sözcüğün yazımını düzeltin veya CustomDictionary.xml adlı özel bir sözlüğe sözcük ekleyin. Sözlüğü aracının yükleme dizinine, proje dizinine veya Kullanıcı profili altındaki araçla ilişkili dizine yerleştirin (%USERPROFILE%\Application Data \\ ...). İçindeki bir projeye özel sözlüğün nasıl ekleneceğini öğrenmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bkz. [nasıl yapılır: kod analizi sözlüğünü özelleştirme](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
 
 - Sözlük/kelimeler/tanınan yol altında ihlale neden olmaması gereken sözcükler ekleyin.
 
@@ -90,13 +90,13 @@ ms.locfileid: "72669248"
  Bu kuraldan bir uyarıyı, yalnızca sözcüğün kasıtlı olarak yanlış yazıldığına ve sözcüğün sınırlı bir kitaplık kümesine uygulandığına karşı gizleyin. Doğru yazılmış sözcükler, yeni yazılım kitaplıkları için gerekli olan öğrenme eğrisini azaltır.
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA2204: Değişmez değerler doğru yazılmalıdır](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
+ [CA2204: Harfler doğru yazılmalıdır](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
 
- [CA1703: Kaynak dizeler doğru yazılmalıdır](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
+ [CA1703: Kaynak dizeleri doğru yazılmalıdır](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
 
- [CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+ [CA1709: Tanımlayıcılar doğru büyük küçük harfe sahip olmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
- [CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708: Tanımlayıcılar yalnızca büyük küçük harfle birbirinden farklı olmamalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
  [CA1707: Tanımlayıcılar alt çizgi içermemelidir](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
 

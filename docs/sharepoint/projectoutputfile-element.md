@@ -12,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2673b22bf502f019f0a10361c9d0cef9d5ac1b8c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 12f399b7a09c18c77482475575ca387a11955762
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62816843"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542395"
 ---
 # <a name="projectoutputfile-element"></a>ProjectOutputFile öğesi
-  SharePoint'te dağıtıldığında ile proje öğesi eklemek için ayrı bir proje çıktısını temsil eder.
+  SharePoint 'e dağıtıldığında proje öğesiyle birlikte dahil edilecek ayrı bir projenin çıkışını temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectOutputFile ProjectId = "GUID of the project"
@@ -41,33 +41,33 @@ ms.locfileid: "62816843"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|**Projectıd**|Gerekli **xs: String** özniteliği.<br /><br /> Eklemek istediğiniz bağımlı projenin çıktı olan GUID. Bu karşılık gelir **ProjectGuid** bağımlı proje dosyasında öğe.|
-|**ProjectPath**|Gerekli **xs: String** özniteliği.<br /><br /> Dahil etmek istediğiniz çıkış olan bağımlı projenin proje dosya adı dahil olmak üzere göreli yol. SharePoint proje öğesi içeren SharePoint projesinin kök klasörüne göreli yoludur.|
-|**Hedef**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bağımlı proje çıktısı dağıtım kök klasörünün göreli SharePoint sunucusunda dağıtılıp bulunduğu yol. Dağıtım türü tarafından belirtilen dağıtım kök klasörü belirlenir **türü** özniteliği.<br /><br /> Daha fazla bilgi için açıklamalar için bkz. **dağıtım yolu** ve **dağıtım kökü** özelliklerini SharePoint Proje öğeleri [geliştirme SharePoint çözümleri](../sharepoint/developing-sharepoint-solutions.md).|
-|**Tür**|Gerekli **xs: String** özniteliği.<br /><br /> Bağımlı proje çıktısı için kullanılacak dağıtım türü. Açıklama için olası değerler hakkında daha fazla bilgi için bkz **dağıtım türü** özelliğin SharePoint proje öğelerinin [geliştirme SharePoint çözümleri](../sharepoint/developing-sharepoint-solutions.md).|
+|**ProjectId**|Gerekli **xs: String** özniteliği.<br /><br /> Dahil etmek istediğiniz çıktıyı içeren bağımlı projenin GUID 'SI. Bu, bağımlı proje dosyasındaki **ProjectGuid** öğesine karşılık gelir.|
+|**ProjectPath**|Gerekli **xs: String** özniteliği.<br /><br /> Dahil etmek istediğiniz çıktıyı içeren bağımlı projenin proje dosyası adı da dahil olmak üzere göreli yol. Bu yol, SharePoint proje öğesini içeren SharePoint projesinin kök klasörüne görelidir.|
+|**Hedef**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bağımlı proje çıkışının, dağıtım kök klasörüne göre SharePoint sunucusunda dağıtılacağı yol. Dağıtım kök klasörü, **tür** özniteliği tarafından belirtilen dağıtım türü tarafından belirlenir.<br /><br /> Daha fazla bilgi için [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)bölümünde SharePoint proje öğelerinin **dağıtım yolu** ve **dağıtım kök** özellikleri için açıklamalara bakın.|
+|**Tür**|Gerekli **xs: String** özniteliği.<br /><br /> Bağımlı projenin çıktısı için kullanılacak dağıtımın türü. Olası değerler hakkında daha fazla bilgi için SharePoint [çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)bölümünde SharePoint proje öğelerinin **dağıtım türü** özelliğinin açıklamasına bakın.|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
 
 ### <a name="parent-elements"></a>Üst öğeler
 
-|Öğe|Açıklama|
+|Öğe|Description|
 |-------------|-----------------|
-|[Dosyalar](../sharepoint/files-element.md)|SharePoint'te dağıtıldığında SharePoint proje öğesi ile dahil edilecek dosyalar belirtir.|
+|[Dosyalar](../sharepoint/files-element.md)|SharePoint 'e dağıtıldığında SharePoint proje öğesiyle birlikte içerilecek dosyaları belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
- Kullanım **ProjectOutputFile** bir projenin çıkışı SharePoint Proje öğesinin dağıtımına dahil edilecek öğe. Farklı bir proje veya proje öğesi içeren projenin belirtebilirsiniz. Daha fazla bilgi için [proje öğelerinde paketleme ve dağıtım bilgileri sağlayan](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).
+ Bir projenin çıkışını SharePoint proje öğesinin dağıtımına dahil etmek için **ProjectOutputFile** öğesini kullanın. Farklı bir proje veya proje öğesini içeren aynı proje belirtebilirsiniz. Daha fazla bilgi için bkz. [Proje Öğelerinde Paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).
 
 ## <a name="element-information"></a>Öğe bilgileri
 
-|||
+|Özellik|Değer|
 |-|-|
-|**Namespace**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Şema adı**|SharePoint proje öğesi şema|
-|**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
-|**Boş olabilir**|Hayır|
+|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
+|**Şema adı**|SharePoint proje öğesi şeması|
+|**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)
-- [Proje öğelerinde paketleme ve dağıtım bilgileri sağlayın](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
+- [Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
 - [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)

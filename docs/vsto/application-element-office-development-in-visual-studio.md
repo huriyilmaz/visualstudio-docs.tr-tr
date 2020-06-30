@@ -1,8 +1,8 @@
 ---
-title: "&lt;Uygulama&gt; öğesi (Visual Studio'da Office Geliştirme)"
+title: "&lt;Application &gt; öğesi (Visual Studio 'Da Office geliştirme)"
 titleSuffix: ''
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -13,17 +13,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 80652f6752b87cf0413b0b3166b0cf3292231c25
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3540df77b4498376dcde389730e17e7506647fb8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62942919"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543747"
 ---
-# <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;Uygulama&gt; öğesi (Visual Studio'da Office Geliştirme)
-  `application` Öğesinin `vstav3` ad alanı, Office çözümleri açıklamasını sarmalar. Belge düzeyi özelleştirmeleri ve VSTO eklentileri için farklı alt öğeleridir.
+# <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;Application &gt; öğesi (Visual Studio 'Da Office geliştirme)
+  `application` `vstav3` Ad alanı öğesi Office çözümlerinin açıklamalarını sarmalar. Alt öğeler, belge düzeyi özelleştirmeleri ve VSTO eklentileri için farklıdır.
 
-## <a name="syntax-for-document-level-customizations"></a>Belge düzeyi özelleştirmeleri için söz dizimi
+## <a name="syntax-for-document-level-customizations"></a>Belge düzeyi özelleştirmeleri sözdizimi
 
 ```xml
 <application>
@@ -36,7 +36,7 @@ ms.locfileid: "62942919"
 </application>
 ```
 
-## <a name="syntax-for-application-level-add-ins"></a>Uygulama düzeyi eklentileri için söz dizimi
+## <a name="syntax-for-application-level-add-ins"></a>Uygulama düzeyi eklentileri sözdizimi
 
 ```xml
 <application>
@@ -54,19 +54,19 @@ ms.locfileid: "62942919"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `application` Öğesinin `vstav3` ad alanı içinde yer alan tüm özelleştirme özgü bilgileri sarmalayan düğümü `vstov4` ad alanı.
+ `application`Ad alanı öğesi, `vstav3` ad alanında bulunan özelleştirmeye özgü tüm bilgileri sarmalayan düğümdür `vstov4` .
 
- `application` Öğesi özniteliklere sahip değildir.
+ `application`Öğesinde hiç öznitelik yok.
 
- `application` Öğesinin şu öğe.
+ `application`Öğesi aşağıdaki öğeye sahiptir.
 
 ### <a name="customization"></a>Özelleştirme
- Rolü `customization` öğesinde `vstov3` ad alanı içinde tanımlanan [ &#60;özelleştirme&#62; öğesi &#40;Visual Studio'da Office geliştirme&#41;](../vsto/customization-element-office-development-in-visual-studio.md).
+ `customization` `vstov3` Ad alanındaki öğesinin rolü [&#60;özelleştirme&#62; öğesi Visual Studio 'da Office geliştirme&#41;&#40;](../vsto/customization-element-office-development-in-visual-studio.md)tanımlanmıştır.
 
 ## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirmesi örneği
 
-### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir bir `application` kullanılarak dağıtılan bir belge düzeyinde Office çözüm öğesinde [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+### <a name="description"></a>Description
+ Aşağıdaki kod örneği, `application` kullanılarak dağıtılan belge düzeyi Office çözümünde bir öğe gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -82,10 +82,10 @@ ms.locfileid: "62942919"
 </vstav3:application>
 ```
 
-## <a name="vsto-add-in-example"></a>VSTO eklenti örneği
+## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
 
-### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir bir `application` kullanılarak dağıtılan uygulama düzeyinde Office çözümünü öğesinde [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+### <a name="description"></a>Description
+ Aşağıdaki kod örneği, `application` kullanılarak dağıtılan uygulama düzeyi Office çözümünde bir öğe gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -123,4 +123,4 @@ ms.locfileid: "62942919"
 
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

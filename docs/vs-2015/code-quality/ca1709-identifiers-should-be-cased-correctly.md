@@ -15,33 +15,33 @@ caps.latest.revision: 30
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c4da0414c9923a8ed7bb01456f38000433641522
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 14c50ed94f05401cc5575af9f8b98472c35b261d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919227"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544007"
 ---
-# <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır
+# <a name="ca1709-identifiers-should-be-cased-correctly"></a>CA1709: Tanımlayıcılar doğru büyük küçük harfe sahip olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio ile ilgili en son belgeler için bkz. [CA1709: tanımlayıcılar doğru şekilde olmalıdır](/visualstudio/code-quality/ca1709-identifiers-should-be-cased-correctly).
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|IdentifiersShouldBeCasedCorrectly|
 |CheckId|CA1709|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Parçalara ayırma-derlemeler, ad alanları, türler, Üyeler ve parametreler üzerinde tetiklenir.<br /><br /> Genel tür parametrelerinde harekete geçirildiğinde, bölünmez.|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Tanımlayıcının adı doğru değil.
 
- \- veya -
+ \-veya
 
  Bir tanımlayıcının adı iki harfli bir kısaltma içerir ve ikinci harf küçük harftir.
 
- \- veya -
+ \-veya
 
  Bir tanımlayıcının adı, üç veya daha fazla büyük harf kısaltması içerir.
 
@@ -65,4 +65,4 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA1709: tanımlayıcılar d
  Ayrıca, kod analizi özel sözlüğüne belirli hüküm, kısaltmalar ve kısaltmalar ekleyebilirsiniz. Özel sözlükte belirtilen terimler bu kuralın ihlallerine neden olmaz. Daha fazla bilgi için bkz. [nasıl yapılır: kod analizi sözlüğünü özelleştirme](../code-quality/how-to-customize-the-code-analysis-dictionary.md)
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708: Tanımlayıcılar yalnızca büyük küçük harfle birbirinden farklı olmamalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

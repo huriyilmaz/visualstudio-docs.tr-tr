@@ -9,18 +9,18 @@ caps.latest.revision: 14
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 432a0eddece867972e5c5159f734b4589c22e218
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 53caca1d98b4074867757ae01d8cc9efa9692952
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74299925"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542993"
 ---
 # <a name="tips-and-tricks-for-visual-studio"></a>Visual Studio için İp Uçları ve Püf Noktaları
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konudaki kısayolları kullanarak, Visual Studio'da daha kolay gezinebilirsiniz. Daha fazla genel bilgi için bkz. [Visual Studio 'Da klavye kısayolları](default-keyboard-shortcuts-in-visual-studio.md). Visual Studio 'Yu erişilebilirlik için iyileştirme hakkında daha fazla bilgi için bkz. [erişilebilirlik ipuçları ve püf noktaları](../ide/reference/accessibility-tips-and-tricks.md).
+Bu konudaki kısayolları kullanarak Visual Studio 'da daha kolay gezinebilirsiniz. Daha fazla genel bilgi için bkz. [Visual Studio 'Da klavye kısayolları](default-keyboard-shortcuts-in-visual-studio.md). Visual Studio 'Yu erişilebilirlik için iyileştirme hakkında daha fazla bilgi için bkz. [erişilebilirlik ipuçları ve püf noktaları](../ide/reference/accessibility-tips-and-tricks.md).
 
 - [Pencere yönetimi](../ide/tips-and-tricks-for-visual-studio.md#BKMK_WindowMgmt)
 
@@ -38,106 +38,106 @@ Bu konudaki kısayolları kullanarak, Visual Studio'da daha kolay gezinebilirsin
 
 - [Uygulama yaşam döngüsü yönetimi](../ide/tips-and-tricks-for-visual-studio.md#BKMK_ALM)
 
-## <a name="BKMK_WindowMgmt"></a>Pencere yönetimi
+## <a name="window-management"></a><a name="BKMK_WindowMgmt"></a>Pencere yönetimi
 
-|||
+|Komut|Kısayol|
 |-|-|
-|Kayan sekme gruplarını sürükleme|Çoklu seçme için CTRL + tıklatma|
-|Yüzen Ekranı Kapla|Başlık çubuğunu çift tıklatma|
-|Yüzen pencereyi yeniden Tuttur|CTRL + çift tıklama başlık çubuğu|
-|Etkin belgeyi Kapat|Ctrl+F4|
-|Açık dosya listesini göster|Ctrl + Alt + Aşağı|
-|Tüm kayan Windows Göster|Ctrl+Shift+M|
+|Kayan sekme kaynakları ' nı sürükleyin|Çoklu seçim için CTRL + tıklama|
+|Kayan pencereyi büyüt|Başlık çubuğuna çift tıklayın|
+|Kayan pencereyi yeniden yerleştir|CTRL + başlık çubuğunu çift tıklatın|
+|Etkin belgeyi kapat|Ctrl+F4|
+|Açık dosya listesini göster|Ctrl + alt + aşağı|
+|Tüm kayan pencereleri göster|Ctrl+Shift+M|
 
-## <a name="BKMK_WindowShortcuts"></a>Pencere kısayolları
+## <a name="window-shortcuts"></a><a name="BKMK_WindowShortcuts"></a>Pencere kısayolları
 
-|||
+|Komut|Kısayol|
 |-|-|
-|Taşı/Dock kayan Windows|Win + Sol / Win + sağ|
-|En üst düzeye/Windows simge durumuna küçült|Win + yukarı / Win + aşağı|
-|Atlama listesi göster|Win+Alt+n|
-|Yeni örnek Başlat|Win + Shift + n|
-|Windows arasında geçiş yapma|Win+n|
+|Kayan pencereleri taşı/yerleştir|Win + sol/Win + sağ|
+|Pencereleri en üst düzeye çıkarın/küçültün|Win + up/Win + aşağı|
+|Sıçrama listesini göster|Win + alt + n|
+|Yeni örnek Başlat|Win + SHIFT + n|
+|Pencereler arasında geçiş yap|Win + n|
 
-## <a name="BKMK_Search"></a>Visual Studio arama
+## <a name="visual-studio-search"></a><a name="BKMK_Search"></a>Visual Studio arama
 
-|||
+|Komut|Kısayol|
 |-|-|
-|Çözüm Gezgini araması|Ctrl+;|
-|Herhangi bir araç penceresine arama kutusuna odak Yerleştir|Alt +' araç penceresi odağa sahip olduğunda|
+|Çözüm Gezgini arama|Ctrl+;|
+|Odağı herhangi bir araç penceresinde arama kutusuna yerleştir|Araç penceresi odağa sahip olduğunda alt + '|
 |Hızlı Başlat|Ctrl+Q|
-|Kapsam sonuçlarını Hızlı Başlat|-@opt seçenekleri<br />-@cmd komutları<br />-@mru en son kullanılan<br />-@doc açık belgeler|
-|Araçlar seçeneklerinde arayın|Ctrl + E|
+|Hızlı başlatma kapsamı sonuçları|- @opt Seçenekler<br />- @cmd Komutlar<br />- @mru En son kullanılan<br />- @doc Açık belgeler|
+|Araç seçeneklerinde ara|CTRL + E|
 
-## <a name="BKMK_EditorFind"></a>Düzenleyiciyi bul
+## <a name="editor-find"></a><a name="BKMK_EditorFind"></a>Düzenleyiciyi bul
 
-|||
+|Komut|Kısayol|
 |-|-|
 |Hızlı Bul|Ctrl+F|
-|Sonraki sonucu Hızlı Bul|Enter|
-|Önceki sonucu Hızlı Bul|Shift+Enter|
-|Hızlı Bul açılır liste Genişlet|Alt + Aşağı Ok|
-|Bul seçeneğini bırakma|Esc|
+|Sonraki sonucu hızlı bul|Enter|
+|Önceki sonuca hızlı bul|Shift+Enter|
+|Hızlı bul Genişlet açılan liste|Alt + aşağı|
+|Bulmayı kapat|Esc|
 |Hızlı Değiştir|Ctrl+H|
-|Hızlı Değiştir Sonrakini Değiştir|Alt+R|
-|Hızlı Değiştir Tümünü Değiştir|Alt + A|
+|Hızlı Değiştir sonrakini Değiştir|Alt+R|
+|Hızlı değiştirme tümünü değiştir|Alt+A|
 |Dosyalarda Bul|Ctrl+Shift+F|
 |Dosyalarda Değiştir|Ctrl+Shift+H|
 
-## <a name="BKMK_CodeEditor"></a>Kod Düzenleyicisi
+## <a name="code-editor"></a><a name="BKMK_CodeEditor"></a>Kod Düzenleyicisi
 
-|||
+|Komut|Kısayol|
 |-|-|
-|IntelliSense Öneri Modu|Ctrl + Alt + Ara (çubuğu iki durumlu)|
-|IntelliSense göstermeye zorlama|Ctrl+J|
-|Akıllı etiketler|Ctrl+.|
-|Kod parçacığı Seçici|CTRL + K, X veya?, sekme (VB)|
+|IntelliSense öneri modu|Ctrl + Alt + ara çubuğu (geçiş)|
+|IntelliSense göstermeyi zorla|Ctrl+J|
+|Akıllı Etiketler|Ctrl+.|
+|Kod parçacığı seçici|CTRL + K, X veya?, Tab (VB)|
 |Şununla Çevrele|CTRL + K, S|
-|Hızlı bilgi göster|CTRL + K, ı|
-|Gidin|Ctrl+,|
+|Hızlı bilgileri göster|CTRL + K, ı|
+|Şuraya gidin|Ctrl+,|
 |Tanıma Git|F12|
-|Tanıma göz at|Alt+F12|
-|Tanıma Git yığını|CTRL + SHIFT + 8 (geri), Ctrl + SHIFT + 7 (İleri)|
-|Vurgulanan başvurulara gidin|CTRL + SHIFT + Yukarı (önceki), Ctrl + SHIFT + Aşağı (sonraki)|
-|Düzenleyici yakınlaştırma|CTRL + üst karakter + > (içeri), Ctrl + Shift + < (dışarı)|
-|Blok seçimi|Alt tuşunu basılı tutup fareyi, SHIFT + Alt + ok tuşları sürükleyin|
-|Satırı Yukarı/Aşağı Taşı|Alt + Yukarı / Alt + Aşağı Ok|
-|Tanıma göz at|Alt+F12|
-|Özet tanım penceresini kapatın|Esc|
-|Özet tanım penceresini normal belge sekemsine yükseltin|Ctrl+Alt+Home|
-|Birden fazla gözlem tanım pencereleri arasında gezinme|Ctrl+Alt+- ve Ctrl+Alt+=|
-|Birden fazla gözlem sonuçları arasında gezinin|F8ve Shift+F8|
-|Kod Düzenleyicisi penceresi ve Özet tanım penceresi arasında geçiş yapma|Shift+Esc|
+|Tanıma Göz At|Alt+F12|
+|Tanım yığınına git|CTRL + SHIFT + 8 (geri), CTRL + SHIFT + 7 (Ileri)|
+|Vurgulanan başvurularda gezin|CTRL + SHIFT + yukarı (önceki), CTRL + SHIFT + aşağı (Ileri)|
+|Düzenleyici Yakınlaştırma|CTRL + SHIFT +> (Içinde), CTRL + SHIFT +< (out)|
+|Blok Seçimi|Alt ve sürükleme fare, SHIFT + alt + ok tuşlarını tut|
+|Çizgiyi yukarı/aşağı taşı|Alt + yukarı/alt + aşağı|
+|Tanıma Göz At|Alt+F12|
+|Özet Tanım penceresini kapat|Esc|
+|Özet Tanım penceresini normal belge sekmesine yükselt|Ctrl+Alt+Home|
+|Birden çok gözatma tanımı penceresi arasında gezinme|Ctrl+Alt+- ve Ctrl+Alt+=|
+|Birden çok göz atma sonucu arasında gezinme|F8ve Shift+F8|
+|Kod Düzenleyicisi penceresi ve Özet Tanım penceresi arasında geçiş yap|Shift+Esc|
 
-## <a name="BKMK_Toolbars"></a>Çubuklarındaki
+## <a name="toolbars"></a><a name="BKMK_Toolbars"></a>Çubuklarındaki
 
-|||
+|Komut|Kısayol|
 |-|-|
-|Düğme ekleme|Araç çubuğu taşma düğmesini tıklatın|
-|Standart araç çubuğundaki açılan Bul|Ctrl+D|
-|Metin kutusu komut modunu bulma|Tür ">"|
-|Yeni diğer ad oluştur|> diğer ad NewAlias komutu|
+|Düğme Ekle|Araç çubuğu taşma düğmesine tıklayın|
+|Standart araç çubuğunda arama açılan kutusu|Ctrl+D|
+|Metin kutusu komut modunu bul|">" yazın|
+|Yeni diğer ad oluştur|>Alias NewAlias komutu|
 
-## <a name="BKMK_Debugging"></a> Hata Ayıklama
+## <a name="debugging"></a><a name="BKMK_Debugging"></a> Hata Ayıklama
 
-|||
+|Komut|Kısayol|
 |-|-|
-|Hata Ayıklamayı Başlat|F5|
+|Hata ayıklamayı Başlat|F5|
 |Hata ayıklamayı Durdur|Shift+F5|
-|Hata ayıklamayı yeniden başlatın|Ctrl+Shift+F5|
-|Üzerinden adımla|F10|
-|Adımla|F11|
-|Dışına adımla|Shift+F11|
-|İmlece kadar Çalıştır|Ctrl+F10|
+|Hata ayıklamayı yeniden Başlat|Ctrl+Shift+F5|
+|Adımla|F10|
+|Adımla| F11|
+|Dışarı adımla|Shift+F11|
+|Imlece kadar Çalıştır|Ctrl+F10|
 |Sonraki Deyimi Belirle|Ctrl+Shift+F10|
-|Küme ve iki durumlu kesme noktası|F9|
+|Kesme noktası ayarlama ve değiştirme|F9|
 |Kesme noktasını devre dışı bırak|Ctrl+F9|
 |Komut Penceresi|Ctrl+Alt+I|
-|Komut penceresi komut modu|Tür ">"|
-|Komut penceresi temizleme arabelleği|> cls|
-|Komut penceresi yazdırma değeri|? varname|
+|Komut penceresi komut modu|">" yazın|
+|Anında pencere temizleme arabelleği|>CLS|
+|Anında pencere yazdırma değeri|? varname|
 
-## <a name="BKMK_ALM"></a>Uygulama yaşam döngüsü yönetimi
+## <a name="application-lifecycle-management"></a><a name="BKMK_ALM"></a>Uygulama yaşam döngüsü yönetimi
 
 Bkz. [klavye kısayolları: Visual Studio Online, TFS web portalı ve Takım Gezgini](/azure/devops/project/navigation/keyboard-shortcuts?view=vsts).
 

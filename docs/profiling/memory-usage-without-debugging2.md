@@ -13,12 +13,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 62ac71a3aa707958bd0c7f107185d141e339b2b7
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 5fe336962a9d631a01438fdd4620fd27e2affc44
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332142"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543357"
 ---
 # <a name="analyze-memory-usage-without-the-debugger"></a>Hata ayıklayıcı olmadan bellek kullanımını analiz etme
 
@@ -76,7 +76,7 @@ Numaralar, yeni Visual Studio Windows 'da ayrıntılı **bellek kullanımı** ra
 
   ![Anlık görüntü görünümü bağlantıları](../profiling/media/memuse__snapshotview_numbered.png "Anlık görüntü görünümü bağlantıları")
 
-|||
+|Görüntü|Description|
 |-|-|
 |![1. Adım](../profiling/media/procguid_1.png "ProcGuid_1")|Anlık görüntü çekilirken bellekteki toplam bayt sayısı.<br /><br /> Tür örneklerinin toplam boyutuna göre sıralanmış bir anlık görüntü ayrıntıları raporu göstermek için bu bağlantıyı seçin.|
 |![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Anlık görüntü çekilirken bellekteki toplam nesne sayısı.<br /><br /> Bu bağlantıyı, türlerin örnek sayısına göre sıralanmış bir anlık görüntü ayrıntıları raporu göstermek için seçin.|
@@ -130,7 +130,7 @@ Her iki bağlantı de aynı raporu açar. Tek fark, **yönetilen yığın** ağa
 
 Anlık görüntü ayrıntıları raporundaki **yönetilen yığın** ağacı aşağıdaki sütunlara sahiptir:
 
-|||
+|Name|Description|
 |-|-|
 |**Nesne türü**|Tür veya nesne örneğinin adı.|
 |**Biriktirme**|Türün nesne örneklerinin sayısı. Bir örnek için **sayı** her zaman 1 ' dir.|
@@ -152,7 +152,7 @@ Anlık görüntü ayrıntıları raporundaki **yönetilen yığın** ağacı aş
 
 Bir anlık görüntü ayrıntıları raporundaki **başvurulan türler** ağacı aşağıdaki sütunlara sahiptir. **Başvurulan bir nesne** ağacının **başvuru sayısı** sütunu yok.
 
-|||
+|Name|Description|
 |-|-|
 |**Nesne türü** veya **örneği**|Türün veya örneğin adı.|
 |**Başvuru sayısı**|Türler için, türün nesne örneklerinin sayısı.|
@@ -176,7 +176,7 @@ Her iki bağlantı de aynı raporu açar. Tek fark, rapordaki **yönetilen yığ
 
 Anlık görüntü farkı raporundaki **yönetilen yığın** ağacı aşağıdaki sütunlara sahiptir:
 
-|||
+|Name|Description|
 |-|-|
 |**Nesne türü**|Tür veya nesne örneğinin adı.|
 |**Biriktirme**|Birincil anlık görüntüdeki bir türün örneklerinin sayısı. Bir örnek için **sayı** her zaman 1 ' dir.|
@@ -203,7 +203,7 @@ Anlık görüntü farkı raporundaki **yönetilen yığın** ağacı aşağıdak
 
 Bir anlık görüntü farkı raporundaki **başvurulan türler** ağacı aşağıdaki sütunlara sahiptir. **Başvurulan nesneler** ağacının **örneği**, **boyutu (bayt)**, **kapsamlı boyut (bayt)** ve **Modül** sütunları vardır.
 
-|||
+|Name|Description|
 |-|-|
 |**Nesne türü** veya **örneği**|Tür veya nesne örneğinin adı.|
 |**Başvuru sayısı**|Birincil anlık görüntüdeki bir türün örneklerinin sayısı.|

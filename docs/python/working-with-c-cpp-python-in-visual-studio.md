@@ -1,8 +1,8 @@
 ---
 title: Python için C++ uzantıları yazma
-description: Visual Studio, CPython ve PyBind11 kullanarak Python için karışık modhatabing dahil olmak üzere bir C++ uzantısı oluşturma nın bir walkthrough.
+description: Visual Studio, Cpithon ve PyBind11 kullanarak Python için C++ uzantısı oluşturma konusunda izlenecek yol, karışık modda hata ayıklama da dahil.
 ms.date: 11/19/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,51 +10,51 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9c81984e8921e44e32b58ae7f5c5c27c5fe8b12f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 0871361d25131b493838bac12945a64a19a0f173
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62956981"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543734"
 ---
 # <a name="create-a-c-extension-for-python"></a>Python için C++ uzantısı oluşturma
 
-C++ (veya C) ile yazılmış modüller, Python yorumlayıcısının yeteneklerini genişletmek ve düşük düzeyli işletim sistemi yeteneklerine erişimi sağlamak için yaygın olarak kullanılır. Üç ana modül türü vardır:
+C++ (veya C) ile yazılan modüller genellikle bir Python yorumlayıcısının yeteneklerini genişletmek için ve alt düzey işletim sistemi özelliklerine erişimi etkinleştirmek için kullanılır. Üç tür modül birincil vardır:
 
-- Hızlandırıcı modülleri: Python yorumlanmış bir dil olduğundan, daha yüksek performans için C++'da belirli kod parçaları yazılabilir.
-- Sarmalayıcı modülleri: Varolan C/C++ arabirimlerini Python koduna maruz bırakveya Python'dan kullanımı kolay daha "Pythonik" API'yi ortaya çıkar.
-- Düşük düzeyli sistem erişim modülleri: CPython çalışma zamanının, işletim sisteminin veya altta yatan donanımın alt düzey özelliklerine erişmek için oluşturulmuştur.
+- Hızlandırıcı modülleri: Python, yorumlanan bir dil olduğundan, daha yüksek performans için belirli kod parçaları C++ dilinde yazılabilir.
+- Sarmalayıcı modüller: mevcut C/C++ arabirimlerini Python kodu için kullanıma sunun veya Python 'dan kullanımı kolay bir "pythonic" API 'sini kullanıma sunun.
+- Düşük düzey sistem erişim modülleri: CPython çalışma zamanının, işletim sisteminin veya temel alınan donanımın alt düzey özelliklerine erişmek için oluşturulur.
 
-Bu makalede, cpython için hiperbolik bir teğet hesaplayan ve Python kodundan çağıran bir C++ uzantı modülü oluşturma yoluyla yürür. Yordam, C++'da aynı yordamı uygulamanın göreceli performans kazancını göstermek için ilk olarak Python'da uygulanır.
+Bu makalede, bir hiperbolik tanjantı hesaplayan ve Python kodundan çağıran Cpyıthon için bir C++ uzantı modülü oluşturma adımları anlatılmaktadır. Bu yordam, C++ ' ta aynı yordamın uygulanması için göreli performans kazancı göstermek üzere Python 'da ilk olarak uygulanır.
 
-Bu makalede, C++ Python için kullanılabilir hale getirmek için iki yol da göstermektedir:
+Bu makale ayrıca, C++ ' ın Python için kullanılabilir hale getirme için iki yol gösterir:
 
-- [Python belgelerinde](https://docs.python.org/3/c-api/) açıklandığı gibi standart CPython uzantıları
-- [PyBind11](https://github.com/pybind/pybind11), sadeliği nedeniyle C++ 11 için tavsiye edilir.
+- [Python belgelerinde](https://docs.python.org/3/c-api/) açıklandığı gibi standart Cpenthon uzantıları
+- [PyBind11](https://github.com/pybind/pybind11), C++ 11 basitliği nedeniyle önerilir.
 
-Bu makalenin sonunda [alternatif yaklaşımlar](#alternative-approaches) altında bu ve diğer araçlar arasında bir karşılaştırma bulunur.
+Bu ve diğer yollardan bir karşılaştırma, bu makalenin sonundaki [alternatif yaklaşımlar](#alternative-approaches) altında bulunur.
 
-Bu izlenecek yoldan tamamlanan örnek [python-samples-vs-cpp-extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub) bulunabilir.
+Bu izlenecek yolda tamamlanan örnek [Python-Samples-vs-cpp-Extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub) üzerinde bulunabilir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Visual Studio 2017 veya daha sonra hem **C++ ile Masaüstü Geliştirme** hem de Varsayılan seçeneklerle yüklü **Python Geliştirme** iş yükleri.
-- Python **Geliştirme** iş yükünde, Python yerel **geliştirme araçları**için sağdaki kutuyu da seçin. Bu seçenek, bu makalede açıklanan yapılandırmanın çoğunu ayarlar. (Bu seçenek, C++ iş yükünü de otomatik olarak içerir.)
+- Visual Studio 2017 veya üzeri, **C++ Ile masaüstü geliştirme** ve **Python geliştirme** iş yükleri için varsayılan seçeneklerle birlikte yüklenir.
+- **Python geliştirme** iş yükünde, **Python yerel geliştirme araçları**için sağdaki kutuyu da seçin. Bu seçenek, bu makalede açıklanan yapılandırmanın çoğunu ayarlar. (Bu seçenek ayrıca C++ iş yükünü otomatik olarak içerir.)
 
-    ![Python yerel geliştirme araçları seçeneğini seçme](media/cpp-install-native.png)
+    ![Python yerel geliştirme araçları seçeneğini belirleme](media/cpp-install-native.png)
 
     > [!Tip]
-    > Veri **bilimi ve analitik uygulamalar** iş yükünü yüklemek, Python ve **Python yerel geliştirme araçları** seçeneğini de içerir.
+    > **Veri bilimi ve analitik uygulamalar** iş yükü yükleme, varsayılan olarak Python ve **Python yerel geliştirme araçları** seçeneğini de içerir.
 
-Daha fazla bilgi için Visual Studio'nun diğer sürümlerini kullanma da dahil olmak üzere [Visual Studio için Python yükle'sini yükleyin](installing-python-support-in-visual-studio.md)bölümüne bakın. Python'u ayrı olarak yüklerseniz, hata **ayıklama sembollerini karşıdan yükleme** ve yükleyicide **Gelişmiş Seçenekler** altında **hata ayıklama ikililerini karşıdan yükleme** seçeneğini seçtiğinizden emin olun. Bu seçenek, hata ayıklama oluşturmayı seçerseniz, gerekli hata ayıklama kitaplıklarına sahip olduğunuzu sağlar.
+Daha fazla bilgi için bkz. Visual Studio 'nun diğer sürümlerini kullanma dahil olmak üzere [Visual Studio Için Python desteğini yüklemeyin](installing-python-support-in-visual-studio.md). Python 'u ayrı olarak yüklerseniz, **hata ayıklama sembollerini indir** ve yükleyicideki **Gelişmiş Seçenekler** altında **hata ayıklama ikililerini indir** ' i seçtiğinizden emin olun. Bu seçenek, hata ayıklama derlemesi oluşturmayı seçerseniz gerekli hata ayıklama kitaplıklarının kullanılabilir olmasını sağlar.
 
-## <a name="create-the-python-application"></a>Python uygulamasını oluşturma
+## <a name="create-the-python-application"></a>Python uygulaması oluşturma
 
-1. **Dosya** > **Yeni** > **Projesi'ni**seçerek Visual Studio'da yeni bir Python projesi oluşturun. "Python"u arayın, **Python Application** şablonunu seçin, uygun bir ad ve konum verin ve **Tamam'ı**seçin.
+1. **Dosya**  >  **Yeni**  >  **Proje**' ye tıklayarak Visual Studio 'da yeni bir Python projesi oluşturun. "Python" araması yapın, **Python uygulama** şablonunu seçin, uygun bir ad ve konum verin ve **Tamam**' ı seçin.
 
-1. C++ ile çalışmak için 32 bit Python yorumlayıcısı kullanmanız gerekir (Python 3.6 veya üzeri önerilir). Visual **Studio'nun Çözüm Gezgini** penceresinde proje düğümünün genişletilmesini ve **Python Ortamları** düğümünün genişletilmesi. 32 bitlik bir ortamı varsayılan olarak görmüyorsanız (kalın veya genel **varsayılan**olarak etiketlenmiş), [proje için Python ortamı nı seçin'deki](selecting-a-python-environment-for-a-project.md)yönergeleri izleyin. Yüklü 32 bit bir yorumlayıcınız yoksa, [bkz.](installing-python-interpreters.md)
+1. C++ ile çalışma, 32 bitlik bir Python yorumlayıcısı kullanmanızı gerektirir (Python 3,6 veya üzeri önerilir). Visual Studio 'nun **Çözüm Gezgini** penceresinde, proje düğümünü genişletin ve ardından **Python ortamları** düğümünü genişletin. Varsayılan olarak 32 bitlik bir ortam görmüyorsanız (kalın veya **genel varsayılan**ile etiketlenmiş), [bir proje Için Python ortamı seçme](selecting-a-python-environment-for-a-project.md)konusundaki yönergeleri izleyin. 32 bit yorumlayıcı yüklü değilse bkz. [Python yorumlayıcıları 'Nı yükleme](installing-python-interpreters.md).
 
-1. Projenin *.py* dosyasında, hiperbolik bir teğetin hesaplanmasını karşılaştıran (daha kolay karşılaştırma için matematik kitaplığını kullanmadan uygulanan) aşağıdaki kodu yapıştırın. [Python düzenleme özelliklerinden](editing-python-code-in-visual-studio.md)bazılarını deneyimlemek için kodu el ile girmekten çekinmeyin.
+1. Projenin *. Kopyala* dosyasında, bir hiperbolik tanjantın (daha kolay karşılaştırma için matematik kitaplığı kullanılmadan uygulanır) hesaplamasını kıyaslandıran aşağıdaki kodu yapıştırın. [Python düzenlemesi özelliklerinden](editing-python-code-in-visual-studio.md)bazılarını denemek için kodu el ile girmeyi de ücretsiz olarak deneyin.
 
     ```python
     from itertools import islice
@@ -91,56 +91,56 @@ Daha fazla bilgi için Visual Studio'nun diğer sürümlerini kullanma da dahil 
         test(lambda d: [tanh(x) for x in d], '[tanh(x) for x in d] (Python implementation)')
     ```
 
-1. Sonuçları görmek için Hata Ayıklama **(Ctrl**+**F5)** olmadan **Hata Ayıklama** > **Başlat'ı** kullanarak programı çalıştırın. Kıyaslama `COUNT` çalışması nın ne kadar süreceğini değiştirmek için değişkeni ayarlayabilirsiniz. Bu gözden geçirme nin amaçları için, sayım yaklaşık iki saniye sürecek şekilde saymayı ayarlayın.
+1. Sonuçları görmek için hata **ayıklama**  >  **olmadan Başlat** (**CTRL** + **F5**) komutunu kullanarak programı çalıştırın. Bu `COUNT` değişkeni, kıyaslama süresini değiştirmek için ayarlayabilirsiniz. Bu izlenecek yolun amaçları doğrultusunda, sayımı iki saniye boyunca alacak şekilde ayarlayın.
 
 > [!TIP]
-> Kıyaslama ları çalıştırırken, Visual Studio hata ayıklayıcıiçinde kod çalıştırırken oluşan genel giderleri önlemek için hata**ayıklama yapmadan** **hata** > ayıklama yı her zaman kullanın.
+> Kıyaslama çalıştırılırken, **Debug**  >  Visual Studio hata ayıklayıcısında kod çalıştırırken oluşan ek yükün oluşmasını önlemek için her zaman hata ayıklama**olmadan Başlat** ' ı kullanın.
 
-## <a name="create-the-core-c-projects"></a>Çekirdek C++ projelerini oluşturma
+## <a name="create-the-core-c-projects"></a>Core C++ projelerini oluşturma
 
-"Superfastcode" ve "superfastcode2" adlı iki özdeş C++ projesi oluşturmak için bu bölümdeki yönergeleri izleyin. Daha sonra her projede C++ kodunu Python'a maruz bırakmak için farklı araçlar kullanırsınız.
+"Superfastcode" ve "superfastcode2" adlı iki özdeş C++ projesi oluşturmak için bu bölümdeki yönergeleri izleyin. Daha sonra, C++ kodunu Python 'da kullanıma sunmak için her bir projede farklı yollardan yararlanabilirsiniz.
 
-1. Ortam değişkeninin `PYTHONHOME` kullanmak istediğiniz Python yorumlayıcısına ayarlandığınızdan emin olun. Visual Studio'daki C++ projeleri python uzantısı oluştururken kullanılan *python.h*gibi dosyaları bulmak için bu değişkene güvenir.
+1. `PYTHONHOME`Ortam değişkeninin kullanmak Istediğiniz Python Yorumlayıcısına ayarlandığından emin olun. Visual Studio 'daki C++ projeleri, Python uzantısı oluştururken kullanılan *Python. h*gibi dosyaları bulmak için bu değişkene bağımlıdır.
 
-1. **Solution Explorer'da** çözüme sağ tıklayın ve**Yeni Proje** **Ekle'yi** > seçin. Visual Studio çözümü hem Python hem de C++ projelerini birlikte içerebilir (Python için Visual Studio kullanmanın avantajlarından biridir).
+1. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin. Visual Studio çözümü, hem Python hem de C++ projelerini birlikte içerebilir (Python için Visual Studio kullanmanın avantajlarından biridir).
 
-1. "C++"da arama yapın, **Boş projeyi**seçin, ikinci proje için "superfastcode" ("superfastcode2" adını belirtiniz) ve **Tamam'ı**seçin.
+1. "C++" üzerinde arama yapın, **boş proje**' yi seçin, "superfastcode" (ikinci proje için "superfastcode2") adını belirtin ve **Tamam**' ı seçin.
 
     > [!Tip]
-    > Visual Studio'da yüklü **olan Python yerel geliştirme araçlarıyla,** aşağıda açıklananların çoğuna sahip olan Python **Uzantı Modülü** şablonuyla başlayabilirsiniz. Bu walkthrough için, ancak, boş bir proje ile başlayan adım adım uzatma modülü bina gösterir. İşlemi anladıktan sonra şablon, kendi uzantılarınızı yazarken size zaman kazandırır.
+    > Visual Studio 'da **Python yerel geliştirme araçları** sayesinde, bunun yerine, aşağıda açıklananlar daha fazla olan Python **uzantı modülü** şablonuyla başlayabilirsiniz. Bu kılavuzda, ancak boş bir projeden başlamak, uzantı modülünün adım adım şekilde oluşturulmasını gösterir. İşlemi anladıktan sonra şablon, kendi uzantılarınızı yazarken size zaman kazandırır.
 
-1. **Kaynak Dosyalar** düğümüne sağ tıklayarak yeni projede bir C++ dosyası oluşturun, ardından**Yeni Öğe** `module.cpp` **Ekle'yi** > seçin, **C++ Dosyasını**seçin, adlandırın ve **Tamam'ı**seçin.
+1. Yeni projede, **kaynak dosyaları** düğümüne sağ tıklayıp yeni öğe **Ekle**' yi seçin,  >  **New Item** **C++ dosyası**' nı seçin `module.cpp` ve ardından **Tamam**' ı seçin.
 
     > [!Important]
-    > *.cpp* uzantılı bir dosya, izleyen adımlardaki C++ özellik sayfalarını açmak için gereklidir.
+    > *. Cpp* uzantısına sahip bir dosya, Izleyen adımlarda C++ Özellik sayfalarını açmak için gereklidir.
 
-1. **Çözüm Gezgini'nde**C++ projesine sağ tıklayın, **Özellikler'i**seçin.
+1. **Çözüm Gezgini**' de C++ projesine sağ tıklayın, **Özellikler**' i seçin.
 
-1. Görünen **Özellik Sayfaları** iletişim kutusunun üst kısmında, **Yapılandırmayı** **Tüm Yapılandırmalar** ve **Platform** için **Win32**olarak ayarlayın.
+1. Görüntülenen **Özellik sayfaları** iletişim kutusunun üst kısmında, **yapılandırmayı** **tüm yapılandırmalar** ve **Platform** için **Win32**olarak ayarlayın.
 
-1. Aşağıdaki tabloda açıklandığı gibi belirli özellikleri ayarlayın, sonra **Tamam'ı**seçin.
+1. Aşağıdaki tabloda açıklandığı gibi belirli özellikleri ayarlayın ve ardından **Tamam**' ı seçin.
 
     | Tab | Özellik | Değer |
     | --- | --- | --- |
-    | **Genel** | **Genel** > **Hedef Adı** | Python'dan başvurmak istediğiniz şekilde modülün adını ifadelerde `from...import` belirtin. Python için modülü tanımlarken C++'da aynı adı kullanırsınız. Projenin adını modül adı olarak kullanmak istiyorsanız, varsayılan değeri **$(ProjectName)** bırakın. |
-    | | **Genel** > **Hedef Uzantısı** | **.pyd** |
-    | | **Proje Varsayılan yapılandırma** > **türü** | **Dinamik Kitaplık (.dll)** |
-    | **C/C++** > **Genel** | **Ek Dahil Dizinler** | Python *ekle* klasörünü yüklemenize uygun olarak `c:\Python36\include`ekleyin, örneğin.  |
-    | **C/C++** > **Ön işlemci** | **Önişlemci Tanımları** | **Yalnızca CPython** `Py_LIMITED_API;` : dize başına ekleyin (semicolon dahil). Bu tanım, Python'dan arayaabileceğiniz bazı işlevleri kısıtlar ve kodu Python'un farklı sürümleri arasında daha taşınabilir hale getirir. PyBind11 ile çalışıyorsanız, bu tanımı eklemeyin, aksi takdirde yapı hataları görürsünüz. |
-    | **C/C++** > **Kod Oluşturma** | **Çalışma Zamanı Kitaplığı** | **Çok iş parçacığı DLL (/MD)** (aşağıdaki Uyarı'ya bakın) |
-    | **Linker** > **Genel** | **Ek Kütüphane Dizinleri** | Yüklemeniz için uygun *.lib* dosyaları içeren Python *libs* `c:\Python36\libs`klasörünü ekleyin, örneğin. *(.py* dosyaları içeren *Lib* klasörünü *değil.lib* *not* dosyalarını içeren *libs* klasörünü işaret etmeyi unutmayın.) |
+    | **Genel** | **Genel**  >  **Hedef adı** | Deyimlerdeki Python 'dan başvurmak istediğiniz modülün adını belirtin `from...import` . Python için modül tanımlarken aynı adı C++ ' da kullanırsınız. Projenin adını modül adı olarak kullanmak istiyorsanız, **$ (ProjectName)** varsayılan değerini bırakın. |
+    | | **Genel**  >  **Hedef uzantısı** | **. PYD** |
+    | | **Proje Varsayılanları**  >  **Yapılandırma türü** | **Dinamik kitaplık (. dll)** |
+    | **C/C++**  >  **Genel** | **Ek Içerme dizinleri** | Yükleme için uygun şekilde Python *içerme* klasörünü (örneğin,) ekleyin `c:\Python36\include` .  |
+    | **C/C++**  >  **Önişlemci** | **Önişlemci tanımları** | **Yalnızca CPython**: `Py_LIMITED_API;` dizenin başına (noktalı virgül dahil) ekleyin. Bu tanım, Python 'dan çağırabilmeniz için bazı işlevleri kısıtlar ve kodu farklı Python sürümleri arasında taşınabilir hale getirir. PyBind11 ile çalışıyorsanız, bu tanımı eklemeyin, aksi takdirde derleme hatalarını görürsünüz. |
+    | **C/C++**  >  **Kod oluşturma** | **Çalışma zamanı kitaplığı** | **Çok iş PARÇACıKLı dll (/MD)** (aşağıdaki uyarıya bakın) |
+    | **Bağlayıcı**  >  **Genel** | **Ek kitaplık dizinleri** | Yükleme için uygun şekilde *. lib* dosyaları içeren Python *Kitaplıklar* klasörünü ekleyin (örneğin,) `c:\Python36\libs` . (. Lib *dosyalarını Içeren* *LIB* klasörünü *değil* , *. lib* dosyalarını içeren *LIBS* klasörünü işaret ettiğinizden emin olun.) |
 
     > [!Tip]
-    > Proje özelliklerinde C/C++ sekmesini görmüyorsanız, bunun nedeni projenin C/C++ kaynak dosyaları olarak tanımladığı dosyaları içermemesidir. *.c* veya *.cpp* uzantısı olmayan bir kaynak dosya oluşturursanız bu durum oluşabilir. Örneğin, yeni öğe `module.coo` iletişim `module.cpp` kutusu yerine yanlışlıkla girdiyseniz, Visual Studio dosyayı oluşturur, ancak dosya türünü C/C++ özellikleri sekmesini etkinleştiren "C/C+ Kodu" olarak ayarlamaz. Bu tür yanlış tanımlama, dosyayı `.cpp`yeniden adlandırsanız bile durum devam eder. Dosya türünü düzgün ayarlamak **için, Solution Explorer'da**dosyayı sağ tıklatın, **Özellikler'i**seçin, ardından **Dosya Türünü** **C/C++ Kodu'na**ayarlayın.
+    > Proje özelliklerinde C/C++ sekmesini görmüyorsanız, proje C/C++ kaynak dosyaları olarak tanımladığı herhangi bir dosya içermediği için olur. *. C* veya *. cpp* uzantısı olmadan bir kaynak dosyası oluşturursanız bu durum oluşabilir. Örneğin, `module.coo` `module.cpp` daha önce yeni öğe iletişim kutusu yerine yanlışlıkla girdiyseniz, Visual Studio dosyayı oluşturur ancak dosya türünü "C/C + Code" olarak (c/C++ özellikleri sekmesini etkinleştirir) olarak ayarlar. Bu tür hatalı kimlik, dosyayı ile yeniden adlandırsanız bile durum durumunda kalır `.cpp` . Dosya türünü düzgün bir şekilde ayarlamak için **Çözüm Gezgini**dosyasında dosyaya sağ tıklayın, **Özellikler**' i seçin ve ardından **dosya türünü** **C/C++ kodu**olarak ayarlayın.
 
     > [!Warning]
-    > Hata ayıklama yapılandırması için bile **C/C++** > **Kod Oluşturma** > **Çalışma Zamanı Kitaplığı** seçeneğini her zaman hata ayıklama yapılandırmasına **(/MD)** ayarlayın, çünkü bu ayar hata ayıklama olmayan Python ikililerinin oluşturduğu şeydir. CPython ile, Çok iş **parçacığı hata ayıklama DLL (/MDd)** seçeneğini ayarlarsanız, **Hata Ayıklama** yapılandırması oluşturmak **C1189 hatası üretir: Py_LIMITED_API Py_DEBUG, Py_TRACE_REFS ve Py_REF_DEBUG ile uyumsuzdur.** Ayrıca, yapı hatasını önlemek için (CPython ile gerekli olan, ancak PyBind11 ile değil) kaldırırsanız, `Py_LIMITED_API` Python modülü almaya çalışırken çöker. (Kilitlenme, DLL'nin daha `PyModule_Create` sonra açıklandığı gibi, Fatal Python hatasının çıktı iletisi ile birlikte **gerçekleşir: PyThreadState_Get: geçerli iş parçacığı yoktur**.)
+    > Hata ayıklama **C/C++**  >  **Code Generation**  >  olmayan Python ikililerinin ile oluşturulduğu durum, bu ayar, hata ayıklama yapılandırması için bile C/C++ kod oluşturma**çalışma zamanı kitaplığı** seçeneğini her zaman **çok iş parçacıklı DLL (/MD)** olarak ayarlayın. CPython ile, **çok iş parçacıklı hata ayıklama dll (/MDd)** seçeneğini ayarlamanız durumunda, hata **ayıklama** yapılandırması oluşturmak **C1189, Py_TRACE_REFS ve Py_REF_DEBUG Py_DEBUG uyumlu değildir: Py_LIMITED_API**. Ayrıca, `Py_LIMITED_API` derleme hatasını önlemek için (CPython, PyBind11 değil) öğesini kaldırırsanız, modül içeri aktarmaya çalışırken Python kilitleniyor. (Kilitlenme, DLL 'in `PyModule_Create` , **önemli Python hatası: PyThreadState_Get: geçerli iş parçacığı olmayan**çıkış iletisiyle daha sonra açıklanan çağrısı içinde olur.)
     >
-    > /MDd seçeneği Python hata ayıklama ikilileri oluşturmak için kullanılır *(python_d.exe*gibi), ancak bir uzantısı DLL için seçerek hala yapı hatası neden `Py_LIMITED_API`olur .
+    > /MDd seçeneği, Python hata ayıklama ikililerini (örneğin *python_d.exe*) oluşturmak için kullanılır, ancak uzantı dll 'si için seçilmesi hala derleme hatasına neden olur `Py_LIMITED_API` .
 
-1. C++ projesine sağ tıklayın ve yapılandırmalarınızı test etmek için **Yapı'yı** seçin (hem **Hata Ayıklama** hem de **Sürüm).** *.pyd* dosyaları **Hata Ayıklama** ve **Serbest Bırakma**altındaki **çözüm** klasöründe yer alır, C++ proje klasöründe değil.
+1. C++ projesine sağ tıklayın ve yapılandırmaların ( **hata ayıklama** ve **yayın**) test etmek için **Oluştur** ' u seçin. *. PYD* dosyaları, C++ proje klasörünün kendisi değil, **hata ayıklama** ve **yayın**altındaki **çözüm** klasöründe bulunur.
 
-1. C++ projesinin *module.cpp* dosyasına aşağıdaki kodu ekleyin:
+1. Aşağıdaki kodu C++ projesinin *Module. cpp* dosyasına ekleyin:
 
     ```cpp
     #include <Windows.h>
@@ -161,29 +161,29 @@ Daha fazla bilgi için Visual Studio'nun diğer sürümlerini kullanma da dahil 
     }
     ```
 
-1. Kodunuzun doğru olduğunu doğrulamak için C++ projesini yeniden oluşturun.
+1. Kodunuzun doğru olduğunu onaylamak için C++ projesini tekrar oluşturun.
 
-1. Bunu daha önce yapmadıysanız, aynı içeriklere sahip "superfastcode2" adlı ikinci bir proje oluşturmak için yukarıdaki adımları yineleyin.
+1. Daha önce yapmadıysanız, aynı içeriğe sahip "superfastcode2" adlı ikinci bir proje oluşturmak için yukarıdaki adımları tekrarlayın.
 
-## <a name="convert-the-c-projects-to-extensions-for-python"></a>C++ projelerini Python uzantılarına dönüştürme
+## <a name="convert-the-c-projects-to-extensions-for-python"></a>C++ projelerini Python için uzantılara Dönüştür
 
-C++ DLL'yi Python için bir uzantı haline getirmek için, önce dışa aktarılan yöntemleri Python türleri ile etkileşimde bulunmak üzere değiştirirsiniz. Daha sonra modülü dışa aktaran bir işlev ve modül yöntemlerinin tanımlarını eklersiniz.
+C++ DLL 'yi Python için bir uzantıya dönüştürmek üzere, ilk olarak, içe aktarılmış yöntemleri Python türleriyle etkileşim kuracak şekilde değiştirirsiniz. Daha sonra modül yöntemlerinin tanımlarıyla birlikte modülü dışarı aktaran bir işlev eklersiniz.
 
-İzleyen bölümler, hem CPython uzantılarını hem de PyBind11'i kullanarak bu adımların nasıl gerçekleştirildiğini açıklar.
+Aşağıdaki bölümlerde, bu adımların her ikisi de Cpyıthon uzantılarını ve PyBind11 kullanarak nasıl gerçekleştirileceği açıklanmaktadır.
 
-### <a name="cpython-extensions"></a>CPython uzantıları
+### <a name="cpython-extensions"></a>Cpyıthon uzantıları
 
-Python 3.x için bu bölümde gösterilenler hakkında bilgi almak için, [Python/C API Başvuru Kılavuzu'na](https://docs.python.org/3/c-api/index.html) ve özellikle [python.org'daki Modül Nesneleri'ne](https://docs.python.org/3/c-api/module.html) bakın (Python'un sürümünü sağ üstteki açılır denetimden doğru belgeleri görüntülemek için seçmeyi unutmayın).
+Python 3. x için bu bölümde gösterilmekte olan bir arka plan için, [Python/C API başvurusu el kitabına](https://docs.python.org/3/c-api/index.html) ve Python.org üzerindeki özellikle [Modül nesnelerine](https://docs.python.org/3/c-api/module.html) bakın (doğru belgeleri görüntülemek için sağ üstteki aşağı açılan denetimden Python sürümünüzü seçmenizi unutmayın).
 
-Python 2.7 ile çalışıyorsanız, bunun yerine [C veya C++ ile Python 2.7'yi genişletme](https://docs.python.org/2.7/extending/extending.html) ve [Uzantı Modüllerini Python 3'e (python.org) taşımaya](https://docs.python.org/2.7/howto/cporting.html) bakın.
+Python 2,7 ile çalışıyorsanız, [C veya C++ Ile python 2,7](https://docs.python.org/2.7/extending/extending.html) ' i genişletmek ve [Python 3 ' e](https://docs.python.org/2.7/howto/cporting.html) (Python.org) uzantı modülleri eklemek için bunun yerine bakın.
 
-1. *Module.cpp'nin*üst kısmında *Python.h*bulunmaktadır:
+1. *Module. cpp*' nin en üstünde *Python. h*' yi ekleyin:
 
     ```cpp
     #include <Python.h>
     ```
 
-1. Python `tanh_impl` türlerini kabul etmek ve `PyOjbect*`döndürmek için yöntemi değiştirin (a , yani):
+1. Metodu, `tanh_impl` Python türlerini kabul etmek ve döndürmek için değiştirin (a `PyOjbect*` , yani):
 
     ```cpp
     PyObject* tanh_impl(PyObject *, PyObject* o) {
@@ -193,7 +193,7 @@ Python 2.7 ile çalışıyorsanız, bunun yerine [C veya C++ ile Python 2.7'yi g
     }
     ```
 
-1. C++ `tanh_impl` işlevinin Python'a nasıl sunulduğunu tanımlayan bir yapı ekleyin:
+1. C++ `tanh_impl` Işlevinin Python 'a nasıl sunulduğunu tanımlayan bir yapı ekleyin:
 
     ```cpp
     static PyMethodDef superfastcode_methods[] = {
@@ -206,7 +206,7 @@ Python 2.7 ile çalışıyorsanız, bunun yerine [C veya C++ ile Python 2.7'yi g
     };
     ```
 
-1. Özellikle deyimi kullanırken Python kodunuzda modülü başvurmak istediğiniz şekilde tanımlayan bir `from...import` yapı ekleyin. (Yapılandırma **Özellikleri** > **Genel** > **Hedef Adı**altında proje özelliklerindeki değeri eşleştirin.) Aşağıdaki örnekte, "superfastcode" modül adı Python'da kullanabileceğiniz `from superfastcode import fast_tanh` anlamına gelir, çünkü `fast_tanh` . `superfastcode_methods` (C++ projesinin dahili dosya adları, *module.cpp*gibi, önemsizdir.)
+1. Özel olarak ifadesini kullanırken, Python kodunuzda başvurmak istediğiniz modülü tanımlayan bir yapı ekleyin `from...import` . ( **Yapılandırma özellikleri**  >  altındaki proje özelliklerinde bu değeri eşleştirin **Genel**  >  **Hedef adı**.) Aşağıdaki örnekte, "superfastcode" modül adı, `from superfastcode import fast_tanh` içinde tanımlandığı Için Python 'da kullanabileceğiniz anlamına gelir `fast_tanh` `superfastcode_methods` . ( *Module. cpp*gibi C++ projesine yönelik dosya adları önemsizdir.)
 
     ```cpp
     static PyModuleDef superfastcode_module = {
@@ -218,7 +218,7 @@ Python 2.7 ile çalışıyorsanız, bunun yerine [C veya C++ ile Python 2.7'yi g
     };
     ```
 
-1. Python'un modülü yüklerken çağırdığı ve `PyInit_<module-name>` &lt;modül adı verilmesi gereken&gt; ve modül adının C++ projesinin **Genel** > **Hedef Adı** özelliğiyle tam olarak eşleştiği (diğer bir şekilde proje tarafından oluşturulmuş *.pyd'nin* dosya adıile eşleştiği) bir yöntem ekleyin.
+1. Modül `PyInit_<module-name>` &lt; adının &gt; C++ projesinin **genel**  >  **hedef adı** özelliğiyle tam olarak eşleştiği (yani, proje tarafından oluşturulan *. PYD* dosya adı ile eşleşmesi), adlandırılmış olması gereken modülü yüklediğinde Python tarafından çağrı yaptığı bir yöntem ekleyin.
 
     ```cpp
     PyMODINIT_FUNC PyInit_superfastcode() {
@@ -226,21 +226,21 @@ Python 2.7 ile çalışıyorsanız, bunun yerine [C veya C++ ile Python 2.7'yi g
     }
     ```
 
-1. Kodunuzu doğrulamak için hedef yapılandırmayı **Serbest Bırakma** ve C++ projesini yeniden oluşturmaya ayarlayın. Hatalarla karşılaşırsanız, aşağıdaki [Sorun Giderme](#troubleshooting) bölümüne bakın.
+1. Kodunuzu doğrulamak için hedef yapılandırmayı **serbest bırakma** ve C++ projesini yeniden derleme olarak ayarlayın. Hatalarla karşılaşırsanız aşağıdaki [sorun giderme](#troubleshooting) bölümüne bakın.
 
 ### <a name="pybind11"></a>PyBind11
 
-Önceki bölümdeki adımları tamamladıysanız, C++ kodu için gerekli modül yapılarını oluşturmak için çok sayıda ortak kodu kullandığınızı kesinlikle fark etmişsinizdir. PyBind11, c++ üstbilgi dosyasındaki makrolar aracılığıyla işlemi basitleştirir ve aynı sonucu çok daha az kodla gerçekleştirir. Bu bölümde gösterilenler hakkında bilgi için [Bkz. PyBind11 temelleri](https://github.com/pybind/pybind11/blob/master/docs/basics.rst) (github.com).
+Önceki bölümde yer alan adımları tamamladıysanız, C++ kodu için gerekli modül yapılarını oluşturmak üzere çok sayıda ortak kod kullanıldığını kesinlikle fark etmiş olursunuz. PyBind11, bir C++ üstbilgi dosyasındaki makroları, çok daha az kodla aynı sonucu gerçekleştiren makrolarla basitleştirir. Bu bölümde gösterilmekte olan arka plan için bkz. [PyBind11 temelleri](https://github.com/pybind/pybind11/blob/master/docs/basics.rst) (GitHub.com).
 
-1. Pip kullanarak PyBind11 `pip install pybind11` `py -m pip install pybind11`yükleyin: veya .
+1. PIP: veya kullanarak PyBind11 'i yükler `pip install pybind11` `py -m pip install pybind11` .
 
-1. *Module.cpp*üst kısmında, *pybind11.h*içerir:
+1. *Module. cpp*' nin en üstünde, *pybind11. h*öğesini ekleyin:
 
     ```cpp
     #include <pybind11/pybind11.h>
     ```
 
-1. *module.cpp'nin*alt kısmında, `PYBIND11_MODULE` C++ fonksiyonunun giriş noktasını tanımlamak için makroyu kullanın:
+1. *Module. cpp*' nin en altında, `PYBIND11_MODULE` C++ işlevine giriş noktasını tanımlamak için makrosunu kullanın:
 
     ```cpp
     namespace py = pybind11;
@@ -258,37 +258,37 @@ Python 2.7 ile çalışıyorsanız, bunun yerine [C veya C++ ile Python 2.7'yi g
     }
     ```
 
-1. Hedef yapılandırmayı **Serbest Bırakma** ve kodunuzu doğrulamak için C++ projesini oluşturmaya ayarlayın. Hatalarla karşılaşırsanız, sorun giderme yle ilgili bir sonraki bölüme bakın.
+1. Kodunuzu doğrulamak için hedef yapılandırmayı **serbest bırakma** ve C++ projesini derleme olarak ayarlayın. Hatalarla karşılaşırsanız sorun giderme konusunda bir sonraki bölüme bakın.
 
 ### <a name="troubleshooting"></a>Sorun giderme
 
-C++ modülü aşağıdaki nedenlerden dolayı derlemeyi başaramayabilir:
+C++ modülü aşağıdaki nedenlerden dolayı derlenmeyebilir:
 
-- *Python.h'yi* bulamıyor (**E1696: kaynak dosyasını açamamak "Python.h"** ve/veya **C1083: Dosyayı açamazsınız: "Python.h": Böyle bir dosya veya dizin yok):** Proje özelliklerindeki **C/C++** > **Ek** > **Ek Dizinlerdeki** yolun Python yüklemenizin *dahil* klasörüne işaret ettiğini doğrulayın. Çekirdek C++ projesini oluştur'un altındaki adım [6'ya](#create-the-core-c-projects)bakın.
+- *Python. h* (**E1696: kaynak dosyası açılamıyor "Python. h"** ve/veya **C1083: içerme dosyası açılamıyor: "Python. h": böyle bir dosya veya dizin yok**): **C/C++**  >  **genel**  >  **ek dahil** , proje özelliklerindeki yolun, Python yüklemenizin *içerme* klasörünü işaret ettiğini doğrulayın. [Core C++ projesi oluşturma](#create-the-core-c-projects)altındaki 6. adıma bakın.
 
-- Python kitaplıklarını bulamıyoruz: **Proje** > **General** > özelliklerindeki Bağlantı Genel**Ek Kitaplık Dizinleri'ndeki** yolun Python yüklemenizin *libs* klasörünü işaret ettiğini doğrulayın. Çekirdek C++ projesini oluştur'un altındaki adım [6'ya](#create-the-core-c-projects)bakın.
+- Python kitaplıkları bulunamıyor: **bağlayıcı**  >  **General**  >  , proje özelliklerindeki genel**Ek kitaplık dizinlerindeki** yolun Python yüklemenizin *LIBS* klasörüne işaret ettiğini doğrulayın. [Core C++ projesi oluşturma](#create-the-core-c-projects)altındaki 6. adıma bakın.
 
-- Hedef mimariyle ilgili bağlayıcı hataları: C++ hedefinin proje mimarisini Python yüklemenizinkiyle eşleşecek şekilde değiştirin. Örneğin, C++ projesiyle x64'u hedefliyorsanız ancak Python yüklemeniz x86 ise C++ projesini x86'yı hedef alacak şekilde değiştirin.
+- Hedef mimarisiyle ilgili bağlayıcı hataları: C++ hedefinin proje mimarisini Python yüklemenizin ile eşleşecek şekilde değiştirin. Örneğin, C++ projesi ile x64 'u hedefliyorsanız, ancak Python yüklemeniz x86 ise, C++ projesini Target x86 olarak değiştirin.
 
 ## <a name="test-the-code-and-compare-the-results"></a>Kodu test edin ve sonuçları karşılaştırın
 
-Artık Python uzantıları olarak yapılandırılan DL'ler olduğuna göre, Python projesinden bunlara başvurabilir, modülleri içe aktarabilir ve yöntemlerini kullanabilirsiniz.
+Dll 'Leri artık Python uzantıları olarak yapılandırılmış olduğuna göre, bu dosyalara Python projesinden başvurabilir, modülleri içeri aktarabilir ve yöntemlerini kullanabilirsiniz.
 
-### <a name="make-the-dll-available-to-python"></a>DLL'yi Python için kullanılabilir hale getirin
+### <a name="make-the-dll-available-to-python"></a>DLL dosyasını Python için kullanılabilir hale getirme
 
-DLL'yi Python'da kullanılabilir hale getirmenin iki yolu vardır.
+DLL 'yi Python için kullanılabilir hale getirmek için iki yol vardır.
 
-Python projesi ve C++ projesi aynı çözümdeyse ilk yöntem çalışır. Solution **Explorer'a**gidin, Python projenizdeki **Başvuru** düğümüne sağ tıklayın ve ardından **Başvuru Ekle'yi**seçin. Görünen iletişim kutusunda **Projeler** sekmesini seçin, hem **superfastcode** hem de **superfastcode2** projelerini seçin ve ardından **Tamam'ı**seçin.
+Python projesi ve C++ projesi aynı çözümde ise, ilk yöntem işe yarar. **Çözüm Gezgini**' e gidin, Python projenizde **Başvurular** düğümüne sağ tıklayın ve ardından **Başvuru Ekle**' yi seçin. Görüntülenen iletişim kutusunda, **Projeler** sekmesini seçin, hem **superfastcode** ve **superfastcode2** projelerini hem de **Tamam**' ı seçin.
 
 ![Superfastcode projesine başvuru ekleme](media/cpp-add-reference.png)
 
-Aşağıdaki adımlarda açıklanan alternatif yöntem, modülü genel Python ortamına yükleyerek diğer Python projelerine de kullanılabilir hale getirir. (Bunu yapmak genellikle Visual Studio 2017 sürüm 15.5 ve daha önceki ortam için IntelliSense tamamlama veritabanını yenilemenizi gerektirir. Modülü ortamdan çıkarırken yenileme de gereklidir.)
+Aşağıdaki adımlarda açıklanan alternatif yöntem, modülü genel Python ortamına yükleyerek diğer Python projeleri için de kullanılabilir hale getirir. (Bunu yapmak genellikle Visual Studio 2017 sürüm 15,5 ve önceki sürümlerde bu ortam için IntelliSense tamamlama veritabanını yenilemektir. Modül ortamdan kaldırılırken yenileme de gereklidir.)
 
-1. Visual Studio 2017 veya daha sonra kullanıyorsanız, Visual Studio yükleyicisini çalıştırın, **Değiştir'i**seçin, **Bireysel Bileşenler** > **Derleyicileri seçin, araçlar oluşturun ve çalışma saatleri** > **Visual C++ 2015.3 v140 araç seti**. Python (Windows için) Visual Studio 2015 (sürüm 14.0) ile oluşturulmuş olduğundan ve bu araçların burada açıklanan yöntem aracılığıyla bir uzantı oluşturulurken kullanılabilir olmasını beklediğinden bu adım gereklidir. (Python'un 32 bit sürümünü yüklemeniz ve DLL'yi x64 değil Win32'ye hedeflemeniz gerekebileceğini unutmayın.)
+1. Visual Studio 2017 veya sonraki bir sürümünü kullanıyorsanız, Visual Studio yükleyicisini çalıştırın, **Değiştir**' i seçin, **tek tek bileşenler**  >  **derleyicileri, derleme araçları ve çalışma zamanları**  >  **Visual C++ 2015,3 v140 araç takımı**' nı seçin. Python (Windows için), Visual Studio 2015 (sürüm 14,0) ile oluşturulmuş olduğundan ve burada açıklanan yöntem aracılığıyla bir uzantı oluşturulurken bu araçların kullanılabilmesini beklediği için bu adım gereklidir. (Python 'un 32 bitlik bir sürümünü yüklemeniz ve DLL 'yi, x64 değil, Win32 'e hedeflemek) gerekebileceğini unutmayın.)
 
-1. Projeye sağ tıklayarak ve**Yeni Öğe** **Ekle'yi** > seçerek C++ projesinde *setup.py* adlı bir dosya oluşturun. Ardından **C++ Dosyası (.cpp)** seçeneğini `setup.py`seçin, dosyayı adlandırın ve **Tamam'ı** seçin (dosyayı *.py* uzantısı ile adlandırmak Visual Studio'nun C++ dosya şablonunu kullanmasına rağmen dosyayı Python olarak tanımasını sağlar). Dosya düzenleyicide göründüğünde, uzantı yöntemine uygun olarak aşağıdaki kodu yapıştırın:
+1. C++ projesinde *Setup.py* adlı bir dosya oluşturun ve projeye sağ tıklayıp **Add**  >  **Yeni öğe**Ekle ' yi seçin. Ardından **C++ dosyası (. cpp)** öğesini seçin, dosyayı adlandırın `setup.py` ve **Tamam** ' ı seçin (dosyanın *. Kopyala* uzantısıyla adlandırılması, Visual Studio 'nun bunu C++ dosya şablonunu kullanarak Python olarak tanımasını sağlar). Dosya düzenleyicide göründüğünde, uzantı yöntemine uygun şekilde aşağıdaki kodu yapıştırın:
 
-    **CPython uzantıları (superfastcode projesi):**
+    **CPython uzantıları (superfastcode Projesi):**
 
     ```python
     from distutils.core import setup, Extension, DEBUG
@@ -301,9 +301,9 @@ Aşağıdaki adımlarda açıklanan alternatif yöntem, modülü genel Python or
         )
     ```
 
-    Bu komut dosyasındaki belgeler için [C ve C++ uzantıları](https://docs.python.org/3/extending/building.html) oluşturma (python.org) yazısına bakın.
+    Bu betik hakkındaki belgeler için bkz. [C ve C++ uzantıları oluşturma](https://docs.python.org/3/extending/building.html) (Python.org).
 
-    **PyBind11 (superfastcode2 projesi):**
+    **PyBind11 (superfastcode2 Projesi):**
 
     ```python
     import os, sys
@@ -328,7 +328,7 @@ Aşağıdaki adımlarda açıklanan alternatif yöntem, modülü genel Python or
     )
     ```
 
-1. *setup.py* kodu, Python'a komut satırından kullanıldığında Visual Studio 2015 C++ araç kümesini kullanarak uzantıyı oluşturmasını bildirir. Yükseltilmiş bir komut istemi açın, C++ projesini içeren klasöre gidin (diğer bir *setup.py)* klasöre gidin ve aşağıdaki komutu girin:
+1. *Setup.py* kodu, Python 'a, komut satırından kullanıldığında Visual Studio 2015 C++ araç takımını kullanarak uzantıyı oluşturmasını sağlar. Yükseltilmiş bir komut istemi açın, C++ projesini (yani *Setup.py*içeren klasör) içeren klasöre gidin ve aşağıdaki komutu girin:
 
     ```command
     pip install .
@@ -340,11 +340,11 @@ Aşağıdaki adımlarda açıklanan alternatif yöntem, modülü genel Python or
     py -m pip install .
     ```
 
-### <a name="call-the-dll-from-python"></a>Python'dan DLL'yi arayın
+### <a name="call-the-dll-from-python"></a>Python 'dan DLL 'i çağırma
 
-DLL'yi önceki bölümde açıklandığı gibi Python'da kullanıma sunduktan `superfastcode.fast_tanh` sonra, artık Python kodundan ve işlevlerini arayabilir ve `superfastcode2.fast_tanh2` performanslarını Python uygulamasıyla karşılaştırabilirsiniz:
+Önceki bölümde açıklandığı gibi, DLL dosyasını Python için kullanılabilir hale geçirdikten sonra, `superfastcode.fast_tanh` `superfastcode2.fast_tanh2` Python kodundan ve işlevlerini Python uygulamasıyla de karşılaştırabilirsiniz:
 
-1. DL'lerden dışa aktarılan yöntemleri aramak ve çıktılarını görüntülemek için *.py* dosyanıza aşağıdaki satırları ekleyin:
+1. Dll 'lerden içe aktarılmış yöntemleri çağırmak ve çıktılarını göstermek için *. Kopyala* dosyanıza aşağıdaki satırları ekleyin:
 
     ```python
     from superfastcode import fast_tanh
@@ -354,7 +354,7 @@ DLL'yi önceki bölümde açıklandığı gibi Python'da kullanıma sunduktan `s
     test(lambda d: [fast_tanh2(x) for x in d], '[fast_tanh2(x) for x in d] (PyBind11 C++ extension)')
     ```
 
-1. Python programını çalıştırın **(Hata Ayıklama veya** **Ctrl**+**F5**olmadan Hata**Ayıklama** > Başlat) ve C++ yordamlarının Python uygulamasından yaklaşık beş ila yirmi kat daha hızlı çalışmasını gözlemleyin. Tipik çıktı aşağıdaki gibi görünür:
+1. Python programını**çalıştırın (hata ayıklama**  >  **olmadan Başlat** veya **CTRL** + **F5**) ve C++ yordamlarının Python uygulamasından yaklaşık beş ila yirmi kat daha hızlı çalışacağını gözlemleyin. Tipik çıktı aşağıdaki gibi görünür:
 
     ```output
     Running benchmarks with COUNT = 500000
@@ -365,51 +365,51 @@ DLL'yi önceki bölümde açıklandığı gibi Python'da kullanıma sunduktan `s
     [fast_tanh2(x) for x in d] (PyBind11 C++ extension) took 0.204 seconds
     ```
 
-    Hata **Ayıklama olmadan Başlat** komutu devre dışı bırakılırsa, **Solution Explorer'daki** Python projesini sağ tıklatın ve Başlangıç Projesi **olarak ayarla'yı**seçin.
+    **Hata ayıklama olmadan Başlat** komutu devre dışıysa, **Çözüm Gezgini** ' de Python projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
-1. Farklar `COUNT` daha belirgin olacak şekilde değişkeni artırmayı deneyin. Hata Ayıklama **yapısı** daha az optimize olduğundan ve çeşitli hata denetimleri içerdiğinden, C++ modülünün **hata ayıklama** yapısı da **Sürüm** yapısından daha yavaş çalışır. Karşılaştırma için bu yapılandırmalar arasında geçiş yapmakiçin çekinmeyin.
+1. `COUNT`Farkların daha fazla görünmesi için değişkeni artırmayı deneyin. Hata **ayıklama** derlemesi daha az iyileştirildiğinden ve çeşitli hata denetimleri Içerdiğinden, C++ modülünün **hata ayıklama** derlemesi bir **yayın** yapıından daha yavaş çalışır. Karşılaştırma için bu yapılandırmaların arasında geçiş yapmak ücretsizdir.
 
 > [!NOTE]
-> Çıktıda, PyBind11 uzantısı cpython uzantısı kadar hızlı olmadığını görebilirsiniz, ancak düz Python uygulamasından önemli ölçüde daha hızlıdır. Aradaki fark, PyBind11'in C++ arabirimini önemli ölçüde daha basit hale getirmek için sunduğu az miktardaki çağrı başına yükünden kaynaklanmaktadır. Bu çağrı başına fark aslında oldukça önemsizdir: test kodu uzantı işlevlerini 500.000 kez aradığı için, burada gördüğünüz sonuçlar bu yükü büyük ölçüde yükseltebilir! Genellikle, bir C++ işlevi burada kullanılan `fast_tanh[2]` önemsiz yöntemlerden çok daha fazla iş yapar ve bu durumda ek yükü önemsizdir. Ancak, saniyede binlerce kez çağrılabilecek yöntemler uyguluyorsanız, CPython yaklaşımını kullanmak PyBind11'den daha iyi performansa neden olabilir.
+> Çıktıda, PyBind11 uzantısının CPython uzantısı kadar hızlı olmadığını, ancak yine de düz Python uygulamasından daha hızlı bir şekilde daha hızlı olduğunu görebilirsiniz. Fark, PyBind11 tarafından C++ arabirimini önemli ölçüde daha kolay hale getirmek için çok az sayıdaki çağrı başına yükün olmamasıdır. Bu çağrı başına fark, gerçekten göz ardı edilebilir: test kodu, 500.000 kez uzantı işlevlerini çağırdığı için, burada gördüğünüz sonuçlar bu ek yükü önemli ölçüde ortadan kaldırır! Genellikle, bir C++ işlevi burada kullanılan önemsiz metotlardan çok daha fazla çalışır `fast_tanh[2]` ve bu durumda ek yük önemli değildir. Ancak, saniyede binlerce kez çağrılabilen Yöntemler gerçekleştiriyorsanız, Cponthon yaklaşımını kullanmak PyBind11 göre daha iyi performans sağlayabilir.
 
-## <a name="debug-the-c-code"></a>C++ kodunu hata ayıklama
+## <a name="debug-the-c-code"></a>C++ kodunda hata ayıklama
 
-Visual Studio, Python ve C++ kodunu birlikte hata ayıklamayı destekler. Bu **bölüm, superfastcode** projesini kullanarak işlem boyunca yürür; adımlar **superfastcode2** projesi için aynıdır.
+Visual Studio, Python ve C++ kod hatalarını birlikte ayıklamayı destekler. Bu bölüm, **superfastcode** projesini kullanarak işlemi adım adım gösterir. adımlar **superfastcode2** projesi için aynıdır.
 
-1. **Solution Explorer'da**Python projesine sağ tıklayın, **Özellikler'i**seçin, **Hata Ayıklama** sekmesini seçin ve ardından hata **ayıklama** > yerel**kodu hata ayıklama** seçeneğini seçin.
+1. **Çözüm Gezgini**' de Python projesine sağ tıklayın, **Özellikler**' i seçin, **Hata Ayıkla** sekmesini seçin ve ardından hata ayıklama **Debug**  >  **yerel kod hata ayıklamayı etkinleştir** seçeneğini belirleyin.
 
     > [!Tip]
-    > Yerel kod hata ayıklamaetkinleştirdiğinizde, Python çıkış penceresi, program tamamlandığında size her zamanki **basın tuşunu** vermeden duraklatmaya devam etmek için hemen kaybolabilir. Duraklatma zorlamak için, yerel kod hata `-i` ayıklama etkinleştirdiğinizde Hata **Ayıklama** sekmesinde**Yorumlayıcı Bağımsız Değişkenler** **çalıştır** > seçeneği ekleyin. Bu bağımsız değişken, Python yorumlayıcısını kod bittikten sonra etkileşimli moda sokar ve bu noktada çıkmak için **Ctrl**+**Z** > **Enter** tuşuna basmanızı bekler. (Alternatif olarak, Python kodunuzu değiştirmenin sakıncası yoksa, `import os` `os.system("pause")` programın sonuna ek ve ekstreler ekleyebilirsiniz. Bu kod özgün duraklatma istemini yineler.)
+    > Yerel kod hata ayıklamasını etkinleştirdiğinizde, bir program her ne kadar her zaman, duraklatmaya **devam etmek için herhangi bir tuşa basmadan** , Python çıkış penceresi hemen kaybolabilir. Bir duraklatma zorlamak için, `-i` **Run**  >  yerel kod hata ayıklamasını etkinleştirdiğinizde **hata ayıklama** sekmesindeki**yorumlayıcı bağımsız değişkenlerini** Çalıştır alanına seçeneği ekleyin. Bu bağımsız değişken, kod bittikten sonra Python yorumlayıcısını etkileşimli moda koyar, bu noktada **Ctrl** + çıkmak için CTRL**Z**  >  **ENTER** tuşlarına basmanız önerilir. (Alternatif olarak, Python kodunuzun değiştirilmesini görmüyorsanız `import os` `os.system("pause")` programınızın sonuna ve deyimlerini ekleyebilirsiniz. Bu kod, özgün duraklatma uyarısını çoğaltır.)
 
-1. Özellik değişikliklerini kaydetmek için **Dosya** > **Kaydet'i** seçin.
+1. **File**  >  Özellik değişikliklerini kaydetmek için dosya**Kaydet** ' i seçin.
 
-1. Yapı yapılandırmasını Visual Studio araç çubuğunda **Hata Ayıklama** olarak ayarlayın.
+1. Visual Studio araç çubuğunda derleme yapılandırmasını **hata ayıklama** olarak ayarlayın.
 
-    ![Yapı yapılandırmasını Hata Ayıklama olarak ayarlama](media/cpp-set-debug.png)
+    ![Derleme yapılandırması hata ayıklama olarak ayarlanıyor](media/cpp-set-debug.png)
 
-1. `COUNT` Kod genellikle hata ayıklayıcıda çalıştırılabilmek daha uzun sürdüğünden, *.py* dosyanızdaki değişkeni yaklaşık beş kat daha küçük bir `500000` `100000`değerle değiştirmek isteyebilirsiniz (örneğin, hata ayıklayıcıdan değiştirin).
+1. Kod hata ayıklayıcıda genellikle daha uzun sürdüğü için, `COUNT` *. Kopyala* dosyanızdaki değişkeni beş kat daha küçük bir değere değiştirmek isteyebilirsiniz (örneğin, öğesini `500000` olarak değiştirin `100000` ).
 
-1. C++ `tanh_impl` kodunuzda, yöntemin ilk satırında bir kesme noktası ayarlayın ve hata ayıklayıcıyı **(F5** veya Hata >  **Ayıklama****Hata Ayıklama Başlatma) başlatın.** Hata ayıklayıcı, kod çağrıldığında durur. Kesme noktası isabet edilmezse, yapılandırmanın **Hata Ayıklama** olarak ayarlanıp ayarlanmadığını ve projeyi kaydettiğinizi (hata ayıklayıcıyı başlatırken otomatik olarak gerçekleşmez) denetleyin.
+1. C++ kodunuzda, yöntemin ilk satırında bir kesme noktası ayarlayın `tanh_impl` ve ardından hata ayıklayıcıyı başlatın (**F5** veya **Debug**  >  **Start Debugging**). Hata ayıklayıcı, bu kod çağrıldığında duraklar. Kesme noktası isabet değilse, yapılandırmanın **hata ayıklama** olarak ayarlandığını ve projeyi kaydettiğinizden (hata ayıklayıcı başlatılırken otomatik olarak gerçekleşmeyecek) emin olun.
 
-    ![C++ kodunda bir kesme noktasında durma](media/cpp-debugging.png)
+    ![C++ kodunda kesme noktasında durdurma](media/cpp-debugging.png)
 
-1. Bu noktada C++ koduna basabilir, değişkenleri inceleyebilir ve böylece devam edebilirsiniz. Bu özellikler [Hata Ayıklama C++ ve Python'da birlikte](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)ayrıntılı olarak açıklanmaktadır.
+1. Bu noktada, C++ kodunda ilerleyebileceğiniz gibi değişkenleri inceleyebilir ve bu şekilde devam edebilirsiniz. Bu özellikler, [hata ayıklama C++ ve Python ile birlikte](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)ayrıntılı olarak açıklanmıştır.
 
 ## <a name="alternative-approaches"></a>Alternatif yaklaşımlar
 
-Aşağıdaki tabloda açıklandığı gibi Python uzantıları oluşturmak için çeşitli araçlar vardır. CPython ve PyBind11 için ilk iki girişleri zaten bu makalede ele alınmıştır.
+Aşağıdaki tabloda açıklandığı gibi Python uzantıları oluşturmak için çeşitli araçlar vardır. Cpıthon ve PyBind11 için ilk iki giriş bu makalede zaten ele alınmıştır.
 
-| Yaklaşım | Vintage | Temsilci kullanıcı(lar) | Pro(lar) | Con(lar) |
+| Yaklaşım | Vinsat | Temsilci Kullanıcı (ler) | Pro (ler) | Con (ler) |
 | --- | --- | --- | --- | --- |
-| CPython için C/C++ uzantı modülleri | 1991 | Standart Kitaplık | [Kapsamlı belgeler ve öğreticiler](https://docs.python.org/3/c-api/). Tam kontrol. | Derleme, taşınabilirlik, referans yönetimi. Yüksek C bilgisi. |
-| [PyBind11](https://github.com/pybind/pybind11) (C++için önerilir) | 2015 |  | Varolan C++ kodunun Python bağlamalarını oluşturmak için yalnızca üstbilgi için hafif, üstbilgi kitaplığı. Birkaç bağımlılık. PyPy uyumluluğu. | Daha yeni, daha az olgun. C++11 özelliklerinin yoğun kullanımı. Desteklenen derleyicilerin kısa listesi (Visual Studio dahildir). |
-| Cython (C için önerilir) | 2007 | [gevent](https://www.gevent.org/), [kivy](https://kivy.org/) | Python gibi. Son derece olgun. Yüksek performans. | Derleme, yeni sözdizimi, yeni araç zinciri. |
-| [Boost.Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | | Hemen hemen her C++ derleyicisi ile çalışır. | Büyük ve karmaşık kütüphaneler paketi; eski derleyiciler için birçok geçici çözüm içerir. |
-| ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | Derleme yok, geniş kullanılabilirlik. | C yapılarına erişim ve mutasyona uğrama sıcak ve hataya yatkın. |
-| Yu -dum | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | Aynı anda birçok dil için bağlamalar oluşturun. | Python tek hedef ise aşırı yükü. |
-| cffi | 2013 | [kriptografi](https://cryptography.io/en/latest/), [pypy](https://pypy.org/) | Entegrasyon kolaylığı, PyPy uyumluluğu. | Daha yeni, daha az olgun. |
-| [cppyy](https://cppyy.readthedocs.io/en/latest/) | 2017 | | C++'ı kullanarak cffi'ye benzer. | Yeni, VS 2017 ile ilgili bazı sorunlar olabilir. |
+| Cpyıthon için C/C++ uzantı modülleri | 1991 | Standart Kitaplık | [Kapsamlı belge ve öğreticiler](https://docs.python.org/3/c-api/). Toplam denetim. | Derleme, taşınabilirlik, başvuru yönetimi. Yüksek C bilgisi. |
+| [PyBind11](https://github.com/pybind/pybind11) (C++ için önerilir) | 2015 |  | Mevcut C++ kodunun Python bağlamalarını oluşturmak için yalnızca hafif ve üst bilgi kitaplığı. Birkaç bağımlılık. PyPy uyumluluğu. | Daha yeni, daha az olgun. C++ 11 özelliklerinin ağır kullanımı. Desteklenen derleyicilerin kısa listesi (Visual Studio dahildir). |
+| Cython (C için önerilir) | 2007 | [gevent](https://www.gevent.org/), [kivy](https://kivy.org/) | Python benzeri. Yüksek olgun. Yüksek performans. | Derleme, yeni sözdizimi, yeni araç zinciri. |
+| [Boost. Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | | Yalnızca her C++ derleyicisi ile birlikte kullanılır. | Büyük ve karmaşık kitaplıklar paketi; Eski derleyiciler için birçok geçici çözüm içerir. |
+| ctypes | 2003 | [scryptoto](https://github.com/wbond/oscrypto) | Derleme, geniş kullanılabilirlik yok. | C yapılarına erişme ve bunları azaltma ve hataya açıktır. |
+| YÜZIK | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | Aynı anda birçok dil için bağlama oluşturun. | Python tek hedef ise aşırı yük yükü. |
+| cffi | 2013 | [şifreleme](https://cryptography.io/en/latest/), [PyPy](https://pypy.org/) | Tümleştirme kolaylığı, PyPy uyumluluğu. | Daha yeni, daha az olgun. |
+| [cppyy](https://cppyy.readthedocs.io/en/latest/) | 2017 | | C++ kullanarak cffı 'ye benzer. | Daha yeni bir deyişle VS 2017 ile ilgili bazı sorunlar olabilir. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-Bu izlenecek yoldan tamamlanan örnek [python-samples-vs-cpp-extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub) bulunabilir.
+Bu izlenecek yolda tamamlanan örnek [Python-Samples-vs-cpp-Extension](https://github.com/Microsoft/python-sample-vs-cpp-extension) (GitHub) üzerinde bulunabilir.

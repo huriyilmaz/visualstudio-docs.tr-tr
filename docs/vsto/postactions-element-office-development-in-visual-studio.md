@@ -1,7 +1,7 @@
 ---
-title: "&lt;postActions&gt; öğesi (Visual Studio'da Office Geliştirme)"
+title: "&lt;Postalamalar &gt; öğesi (Visual Studio 'Da Office geliştirme)"
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 548396e6393720824c93c07e55046ec2d91797a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bfe9ae171f0f6fac1c2b5add5340de1c11f3da0f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62561475"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544423"
 ---
-# <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;postActions&gt; öğesi (Visual Studio'da Office Geliştirme)
-  `postActions` Öğesinin `vstav3` ad alanı içeren tüm `postAction` Office çözümleri yüklendikten sonra çalışan dağıtım sonrası eylemleri açıklayan öğeleri.
+# <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;Postalamalar &gt; öğesi (Visual Studio 'Da Office geliştirme)
+  `postActions`Ad alanı öğesi, `vstav3` `postAction` Office çözümleri yüklendikten sonra çalıştırılan dağıtım sonrası eylemleri açıklayan tüm öğeleri içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <postActions>
@@ -38,19 +38,19 @@ ms.locfileid: "62561475"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `postActions` Öğe isteğe bağlıdır ve durumda `vstav3` ad alanı. Yalnızca bir tane `postActions` uygulama bildiriminde tanımlanan öğe.
+ `postActions`Öğesi isteğe bağlıdır ve `vstav3` ad alanıdır. `postActions`Uygulama bildiriminde tanımlı yalnızca bir öğe vardır.
 
- `postActions` Öğesi özniteliklere sahip değildir.
+ `postActions`Öğesinde hiç öznitelik yok.
 
- `postActions` şu öğe var.
+ `postActions`Aşağıdaki öğeye sahiptir.
 
-### <a name="postaction"></a>postAction
- İsteğe bağlı. Rolü `postAction` öğesinde `vstav3` ad alanı içinde tanımlanan [ &#60;postAction&#62; öğesi &#40;Visual Studio'da Office geliştirme&#41;](../vsto/postaction-element-office-development-in-visual-studio.md).
+### <a name="postaction"></a>Postaeylemi
+ İsteğe bağlı. `postAction`Ad alanındaki öğesinin rolü, `vstav3` [Visual&#41;Studio 'da Office geliştirme &#40;&#60;postatransaction&#62; öğesi ](../vsto/postaction-element-office-development-in-visual-studio.md)içinde tanımlanmıştır.
 
-## <a name="post-deployment-action-example"></a>Dağıtım sonrası eylemi örneği
+## <a name="post-deployment-action-example"></a>Dağıtım sonrası eylem örneği
 
-### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir `postActions` öğesi kullanılarak dağıtılan bir Office çözümü için uygulama bildiriminde [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+### <a name="description"></a>Description
+ Aşağıdaki kod örneği, `postActions` kullanılarak dağıtılan bir Office çözümünün uygulama bildiriminde bulunan öğesini göstermektedir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -75,4 +75,4 @@ ms.locfileid: "62561475"
 
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

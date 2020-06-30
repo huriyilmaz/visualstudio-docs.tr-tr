@@ -1,9 +1,9 @@
 ---
-title: "&lt;entryPoint&gt; öğesi (Visual Studio'da Office Geliştirme)"
+title: "&lt;entryPoint &gt; öğesi (Visual Studio 'Da Office geliştirme)"
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -16,17 +16,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bd3da83a25a05690e56d229f61ee709473171dd7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 17f57b90b7c6aa4c254b2b55ee838a3086193ef7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62799783"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543604"
 ---
-# <a name="ltentrypointgt-element-office-development-in-visual-studio"></a>&lt;entryPoint&gt; öğesi (Visual Studio'da Office Geliştirme)
-  Her `entryPoint` öğesinin `vstav3` ad alanı, ne zaman çalıştırılması gerektiğini özelleştirme bütünleştirilmiş kodu tanımlayan bu [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] uygulama yüklenir.
+# <a name="ltentrypointgt-element-office-development-in-visual-studio"></a>&lt;entryPoint &gt; öğesi (Visual Studio 'Da Office geliştirme)
+  `entryPoint`Ad alanındaki her öğe, `vstav3` Bu uygulama yüklendiğinde çalıştırılması gereken bir özelleştirme derlemesini tanımlar [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <entryPoint class>
@@ -35,27 +35,27 @@ ms.locfileid: "62799783"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `entryPoint` Öğesi gereklidir ve içinde `vstav3` ad alanı.
+ `entryPoint`Öğesi gereklidir ve `vstav3` ad alanında bulunur.
 
- Her `entryPoint` öğesi yalnızca bir özelleştirme bütünleştirilmiş kodu içerebilir. Birden çok da olabilir `entryPoint` uygulama bildiriminde tanımlanan öğeleri.
+ Her `entryPoint` öğe yalnızca bir özelleştirme derlemesi içerebilir. `entryPoint`Uygulama bildiriminde tanımlanmış birden fazla öğe olabilir.
 
- `entryPoint` Öğesinde şu öznitelikler bulunur.
+ `entryPoint`Öğesi aşağıdaki özniteliklere sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`class`|Gerekli. Yürütülecek bir özelleştirme bütünleştirilmiş kodu tanımlar. Bu öznitelik sözdizimi *gt;NamespaceName.ClassName &*.|
+|`class`|Gereklidir. Yürütülecek bir özelleştirme derlemesini tanımlar. Bu özniteliğin söz dizimi *NamespaceName. ClassName*' dir.|
 
- `entryPoint` şu öğe var.
+ `entryPoint`Aşağıdaki öğeye sahiptir.
 
-### <a name="assemblyidentity"></a>assemblyIdentity
- Gerekli. `assemblyIdentity` Öğesinde `vstav3` ad alanı başvuruyor varolan `assemblyIdentity` öğesinde [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] uygulama bildirimi.
+### <a name="assemblyidentity"></a>AssemblyIdentity
+ Gereklidir. `assemblyIdentity`Ad alanındaki öğesi, `vstav3` uygulama bildiriminde varolan bir öğeyi ifade eder `assemblyIdentity` [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] .
 
- Rolü `assemblyIdentity` ve özniteliklerini tanımlanmış [ &#60;assemblyIdentity&#62; öğesi &#40;ClickOnce uygulaması&#41;](../deployment/assemblyidentity-element-clickonce-application.md).
+ `assemblyIdentity`Ve özniteliklerinin rolü, [ClickOnce uygulama&#41;&#40;&#62; öğesi&#60;assemblyIdentity ](../deployment/assemblyidentity-element-clickonce-application.md)içinde tanımlanır.
 
 ## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirmesi örneği
 
-### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir `entryPoint` bildiriminde bir uygulamada kullanılarak dağıtılan bir belge düzeyinde Office çözümü için [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+### <a name="description"></a>Description
+ Aşağıdaki kod örneği, `entryPoint` kullanılarak dağıtılan bir belge düzeyi Office çözümü için uygulama bildirimindeki öğeleri gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -94,10 +94,10 @@ ms.locfileid: "62799783"
 </vstav3:entryPoint>
 ```
 
-## <a name="vsto-add-in-example"></a>VSTO eklenti örneği
+## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
 
-### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir bir `entryPoint` öğesi kullanılarak dağıtılan bir uygulama düzeyinde Office çözümü için uygulama bildiriminde [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+### <a name="description"></a>Description
+ Aşağıdaki kod örneği, `entryPoint` kullanılarak dağıtılan uygulama düzeyi Office çözümü için uygulama bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -116,4 +116,4 @@ ms.locfileid: "62799783"
 
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

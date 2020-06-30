@@ -15,28 +15,28 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 2b734a5de257273312e5125c5f481ff889cd33e0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 10cfa03adb74871fb42a6e1c2ce4ab4ba6bcae75
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72664750"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544345"
 ---
 # <a name="ca2120-secure-serialization-constructors"></a>CA2120: Serileştirme oluşturucularının güvenliğini sağlayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|SecureSerializationConstructors|
 |CheckId|CA2120|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Tür, <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> arabirimini uygular, bir temsilci veya arabirim değildir ve kısmen güvenilen çağıranlara izin veren bir derlemede bildirilmiştir. Türün bir <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> nesnesi ve <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> nesnesi (serileştirme oluşturucusunun imzası) alan bir Oluşturucusu vardır. Bu Oluşturucu bir güvenlik denetimi tarafından güvenli değildir, ancak türdeki bir veya daha fazla normal Oluşturucu güvenli hale getirilir.
+## <a name="cause"></a>Nedeni
+ Türü <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> arabirimini uygular, bir temsilci veya arabirim değildir ve kısmen güvenilen çağıranlara izin veren bir derlemede bildirilmiştir. Türün bir nesne ve nesne alan bir Oluşturucusu vardır <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> (serileştirme oluşturucusunun imzası). Bu Oluşturucu bir güvenlik denetimi tarafından güvenli değildir, ancak türdeki bir veya daha fazla normal Oluşturucu güvenli hale getirilir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, özel serileştirme desteği olan türler için geçerlidir. Bir tür, <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> arabirimini uyguluyorsa özel Serileştirmeyi destekler. Serileştirme Oluşturucusu gereklidir ve <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> yöntemi kullanılarak serileştirilmiş nesneleri yeniden serileştirmek veya yeniden oluşturmak için kullanılır. Serileştirme Oluşturucusu nesneleri ayırdığı ve Başlatan, normal oluşturucularda bulunan güvenlik denetimlerinin de serileştirme oluşturucusunda de mevcut olması gerekir. Bu kuralı ihlal ederseniz, başka bir örnek oluşturmayan çağıranlar bunu yapmak için serileştirme oluşturucusunu kullanabilir.
+ Bu kural, özel serileştirme desteği olan türler için geçerlidir. Bir tür, arabirimini uyguluyorsa özel Serileştirmeyi destekler <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> . Serileştirme Oluşturucusu gereklidir ve yöntemi kullanılarak serileştirilmiş nesneleri yeniden serileştirmek veya yeniden oluşturmak için kullanılır <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> . Serileştirme Oluşturucusu nesneleri ayırdığı ve Başlatan, normal oluşturucularda bulunan güvenlik denetimlerinin de serileştirme oluşturucusunda de mevcut olması gerekir. Bu kuralı ihlal ederseniz, başka bir örnek oluşturmayan çağıranlar bunu yapmak için serileştirme oluşturucusunu kullanabilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini onarmak için serileştirme oluşturucuyu, diğer oluşturucuları koruanlarla aynı olan güvenlik taleplerine karşı koruyun.
@@ -55,5 +55,5 @@ ms.locfileid: "72664750"
  [CA2237: ISerializable türleri SerializableAttribute ile işaretleyin](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName><xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>
+ <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>
  <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>

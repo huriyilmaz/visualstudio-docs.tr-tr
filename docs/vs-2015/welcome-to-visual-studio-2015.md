@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 2015'e Hoş Geldiniz | Microsoft Dokümanlar
+title: Visual Studio 2015 'e hoş geldiniz | Microsoft Docs
 titleSuffix: ''
 ms.date: 04/16/2020
 ms.prod: visual-studio-dev14
@@ -13,92 +13,102 @@ ms.assetid: ba237712-f8c4-4d13-854b-ab4a16afa309
 caps.latest.revision: 128
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5d24a6725a50cc892a1bf4170127158ac835bfe4
-ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
+ms.openlocfilehash: f3252ea7cada8261a97832e4e621849e0fb0c91e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82072612"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543721"
 ---
 # <a name="welcome-to-visual-studio-2015"></a>Visual Studio 2015’e Hoş Geldiniz
 [!INCLUDE[vs2017banner](includes/vs2017banner.md)]
 
-Visual Studio'ya hoş geldiniz! Cihazlar veya masaüstü uygulamaları için, web ve bulut için harika uygulamalar oluşturmak için ihtiyacınız olan her şeye sahipiz. iOS, Android ve Windows için kodları tek bir IDE'ye yazın. Harika IntelliSense, kolay kod gezinme, hızlı yapılar ve hızlı dağıtım alın. Visual Studio üretkenliğinizi artırır ve işinizi tek başına veya daha büyük bir ekibin parçası olarak yapmayı kolaylaştırır.
+Visual Studio 'ya hoş geldiniz! Web ve bulutta cihazlar için harika uygulamalar oluşturmak için ihtiyacınız olan her şeyi sunuyoruz. İOS, Android ve Windows için bir IDE 'de kod yazın. Harika IntelliSense, kolay kod gezintisi, hızlı derlemeler ve hızlı dağıtım kazanın. Visual Studio, üretkenliğinizi artırır ve işinizi tek başına veya daha büyük bir ekibin parçası olarak kolayca yapmayı kolaylaştırır.
 
 > [!NOTE]
-> [Visual Studio 2015 güncelleme 3](https://docs.microsoft.com/visualstudio/releasenotes/vs2015-update3-vs)için sürüm notları için buraya tıklayın.
+> [Visual Studio 2015](https://docs.microsoft.com/visualstudio/releasenotes/vs2015-update3-vs)için sürüm notları güncelleştirme 3 ' e tıklayın.
 >
-> [Visual Studio 2017](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)sürüm notları için tıklayınız.
+> [Visual Studio 2017](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)sürüm notları için buraya tıklayın.
 
- [Visual Studio Community 2015'i](https://visualstudio.microsoft.com/vs/older-downloads/) hemen kodlamaya başlamak için ücretsiz olarak indirin. Platformlar arası geliştirme yapmak istiyorsanız, isteğe bağlı paketleri yüklediğinizden emin olun. Visual Studio Professional veya Visual Studio Enterprise ile daha fazla özellik elde edebilirsiniz.
+ Hemen kodlamaya başlamak için [Visual Studio Community 2015](https://visualstudio.microsoft.com/vs/older-downloads/) ' i ücretsiz indirin. Platformlar arası geliştirme yapmak istiyorsanız, isteğe bağlı paketleri yüklediğinizden emin olun. Visual Studio Professional veya Visual Studio Enterprise daha fazla özellik edinebilirsiniz.
 
- Hemen atlayın, yeni bir proje oluşturun ve kod yazmaya başlayın. Oluşturmak istediğiniz uygulama türünü seçin. Ya da araçlara aşina olmak için [Visual Studio IDE'de](./ide/visual-studio-ide.md) bir tur atabilirsiniz.
+ Hemen atlayın, yeni bir proje oluşturun ve kod yazmaya başlayın. Oluşturmak istediğiniz uygulamanın türünü seçin. Ya da araçları hakkında bilgi sahibi olmak için [Visual STUDIO IDE](./ide/visual-studio-ide.md) turuna ulaşabilirsiniz.
 
- Ve uygulamanızı daha hızlı yazmanıza yardımcı olacak örnekleri bulmak için [kod galerimizi](https://code.msdn.microsoft.com/) keşfetmeyi unutmayın!
+ Uygulamanızı daha hızlı yazmanıza yardımcı olacak örnekler bulmak için [kod galerimizi](https://code.msdn.microsoft.com/) araştırmayın!
 
- Visual Studio 2015'i [Visual Studio İndirme'den](https://visualstudio.microsoft.com/vs/older-downloads/)indirerek yükleyebilirsiniz. Yükleme işlemi hakkında daha fazla bilgi edinmek için Visual [Studio 2015'i Yükle'ye](./install/install-visual-studio-2015.md)bakın.
+ Visual Studio 2015 ' i [Visual Studio indirmelerden](https://visualstudio.microsoft.com/vs/older-downloads/)indirerek yükleyebilirsiniz. Yükleme işlemi hakkında daha fazla bilgi edinmek için bkz. [Visual Studio 2015 'Yi yükleme](./install/install-visual-studio-2015.md).
 
 ## <a name="extend-visual-studio"></a>Visual Studio’yu Genişletme
- Kodlama sırasında sık kullandığınız bir araç veya komut dosyası eklemek için kendi Visual Studio uzantınızı ekleyin. Kendi araçlarınızı Visual Studio IDE'ye entegre etmek için özel menü öğeleri ve araç pencereleri oluşturabilirsiniz. Visual Studio düzenleyicisini kodu çözümlemek ve düzeltmek için genişletebilir veya ihtiyacınız olanı içerecek şekilde yeni bir proje türü ekleyebilirsiniz.
+ Kodlama sırasında sık kullandığınız bir araç veya betiği dahil etmek için kendi Visual Studio uzantınızı ekleyin. Visual Studio IDE ile kendi araçlarınızı bütünleştirmek için özel menü öğeleri ve araç pencereleri oluşturabilirsiniz. Kodu çözümlemek ve onarmak için Visual Studio düzenleyicisini genişletebilir veya yalnızca istediğiniz şeyi içerecek şekilde yeni bir proje türü ekleyebilirsiniz.
 
- Visual Studio Genişletilebilirlik Araçları'nın (VS SDK) en son sürümünü bulmak için [Visual Studio SDK'ya](./extensibility/visual-studio-sdk.md)bakın.
+ Visual Studio Genişletilebilirlik Araçları (VS SDK) en son sürümünü bulmak için bkz. [Visual STUDIO SDK](./extensibility/visual-studio-sdk.md).
 
- Kendi kod analizörlerinizi ve kod üreticilerinizi yazmak için [.NET Derleyici Platformu'nu (Roslyn)](https://github.com/dotnet/Roslyn) kullanabilirsiniz. 
+ Kendi kod Çözümleyicileri ve kod oluşturanlar yazmak için [.net Compiler platform (Roslyn)](https://github.com/dotnet/Roslyn) kullanabilirsiniz. 
 
- [Visual Studio](https://visualstudiogallery.msdn.microsoft.com/)Marketplace Visual Studio IDE uzantıları bulun. Market'teki uzantılar, Geliştirme topluluğumuzun yanı sıra Microsoft geliştiricileri tarafından da oluşturulur.
+ [Visual Studio Market](https://visualstudiogallery.msdn.microsoft.com/)VISUAL Studio IDE için uzantıları bulun. Market 'teki uzantılar, Microsoft geliştiricilerin yanı sıra geliştirme topluluğumuza göre oluşturulmuştur.
 
-## <a name="build-apps-for-android-ios-and-windows"></a>Android, iOS ve Windows için uygulamalar oluşturun
- Android, iOS ve Windows cihazlar için uygulamalar oluşturmak için Visual Studio'yı kullanabilirsiniz. [Visual Studio'da Platformötesi Mobil Geliştirme](./cross-platform/cross-platform-mobile-development-in-visual-studio.md)hakkında daha fazla bilgi edinin.
+## <a name="build-apps-for-android-ios-and-windows"></a>Android, iOS ve Windows için uygulama oluşturma
+ Android, iOS ve Windows cihazlarına yönelik uygulamalar oluşturmak için Visual Studio 'Yu kullanabilirsiniz. [Visual Studio 'Da platformlar arası mobil geliştirme](./cross-platform/cross-platform-mobile-development-in-visual-studio.md)hakkında daha fazla bilgi edinin.
 
- Evrensel Windows Uygulamaları (UWP) hakkında bilgi için [bkz.](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+ Evrensel Windows uygulamaları (UWP) hakkında daha fazla bilgi için bkz. [Evrensel Windows platformu (UWP) uygulaması nedir?](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
 
- Uygulama gereksinimlerinize ve kullanmak istediğiniz dile bağlı olarak ihtiyacınız olan araçları seçin.
+ Uygulamanızın gereksinimlerine ve kullanmak istediğiniz dile göre ihtiyacınız olan araçları seçin.
 
-- [Visual Studio için Xamarin](./cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md): Tüm cihazlar için C#'da ortak kod tabanı
+- [Visual Studio Için Xamarin](./cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md): tüm cihazlar için C# dilinde ortak kod tabanı
 
-- [Visual Studio ile Apache Cordova](https://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42): HTML, CSS ve JavaScript veya Typescript için ortak bir kod tabanı
+- [Visual Studio ile Apache Cordova](https://msdn.microsoft.com/library/db446f2c-6ba4-4c76-aac5-4c66f43b8c42): HTML, CSS ve JavaScript ya da TypeScript için ortak kod tabanı
 
-- [Birlik için Visual Studio Tools:](./cross-platform/visual-studio-tools-for-unity.md)C 2D/3D oyun geliştirme #
+- [Unity için Visual Studio Araçları](./cross-platform/visual-studio-tools-for-unity.md): C 'de 2B/3B oyun geliştirme #
 
-- [Platform ötesi Mobil Geliştirme için C++](./cross-platform/visual-cpp-for-cross-platform-mobile-development.md): C++'da paylaşılan kod kitaplıkları ve uygulamaları
+- [Platformlar arası mobil geliştirme için c++](./cross-platform/visual-cpp-for-cross-platform-mobile-development.md): c++ ' da paylaşılan kod kitaplıkları ve uygulamalar
 
-- [Android için Visual Studio Emülatörü](./cross-platform/visual-studio-emulator-for-android.md): Android için Visual Studio Emülatörü: Hata ayıklama ve IDE ne olursa olsun Android uygulamaları test
+- [Android Için Visual Studio öykünücüsü](./cross-platform/visual-studio-emulator-for-android.md): Android Için Visual Studio öykünücüsü: IDE 'niz ne olduğuna bakılmaksızın Android uygulamalarınızı hata ayıklama ve test etme
 
 ## <a name="connect-your-apps-to-services"></a>Uygulamalarınızı hizmetlere bağlayın
- Bu hizmetlere kutudan bağlayabilirsiniz (her hizmet için bir hesabınız olduğunu varsayarak):
+ Bu hizmetlere bu hizmetlere bağlanabilirsiniz (her hizmet için bir hesabınız olduğunu varsayarak):
 
 - [Azure Mobile Apps](https://azure.microsoft.com/documentation/services/mobile-services/)
 
-- [Azure Storage](https://azure.microsoft.com/documentation/services/storage/)
+- [Azure Depolama](https://azure.microsoft.com/documentation/services/storage/)
 
-- Bulutta depolanan verilere bağlanmak için Office 365 REST API'lerini kendi uygulamanıza entegre edin. Daha fazla bilgi için [bu örneklere](https://docs.microsoft.com/samples/browse/?products=office-365&term=REST)bakın.
+- Bulutta depolanan verilere bağlanmak için Office 365 REST API 'Lerini kendi uygulamanıza tümleştirin. Daha fazla bilgi için [bu örneklere](https://docs.microsoft.com/samples/browse/?products=office-365&term=REST)bakın.
 
-## <a name="write-great-web-apps-with-aspnet"></a>ASP.NET ile harika web uygulamaları yazın
- [ASP.NET 5,](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.0) MVC, WebAPI ve SignalR için yapılan önemli bir güncelleştirmedir ve Windows, Mac ve Linux'ta çalışır.  ASP.NET, size modern bulut tabanlı web uygulamaları ve hizmetleri oluşturmak için yalın ve birleştirilebilir .NET yığını sağlamak üzere sıfırdan tasarlanmıştır.
+## <a name="write-great-web-apps-with-aspnet"></a>ASP.NET ile harika web uygulamaları yazma
+ [ASP.NET 5](https://docs.microsoft.com/aspnet/core/?view=aspnetcore-3.0) , MVC, Webapı ve SignalR için önemli bir güncelleştirmedir ve Windows, Mac ve Linux üzerinde çalışır.  ASP.NET, modern bulut tabanlı Web uygulamaları ve hizmetleri oluşturmak için size en baştan ve birleştirilebilir bir .NET yığını sunmak üzere tasarlanmıştır.
 
-## <a name="build-test-and-manage-your-code"></a>Kodunuzu oluşturma, test edin ve yönetin
+## <a name="build-test-and-manage-your-code"></a>Kodunuzu oluşturun, test edin ve yönetin
 
-### <a name="check-in-your-code"></a>Kodunuzu iade edin
- Bir takımda çalışıyorsanız, takımdaki herkesin aynı kod tabanını kullanması için kodun en son sürümlerini de paylaşmanız gerekir. Visual Studio, Git veya TFVC (Team Foundation Version Control) ile sürüm kontrolü sağlamak için Visual Studio Team Services veya Team Foundation Server ile sorunsuz bir şekilde entegre edilmiştir. Yerel bir sunucunun bakımı olmadan kodunuzu bulutta depolamak için Visual Studio Team Services'ı kullanın. Şirket içi sunucunuz olmasını istiyorsanız Team Foundation Server'ı kullanın. Bir kod projesi oluşturduğunuzher zaman, sürüm denetimine ekleme seçeneğiniz vardır. İhtiyaçlarınız için en iyi sürüm kontrol sisteminin hangisi olduğunu öğrenmek [için](https://docs.microsoft.com/azure/devops/repos/tfvc/comparison-git-tfvc?view=azure-devops)bkz.
+### <a name="check-in-your-code"></a>Kodunuzu iade etme
+ Bir ekip üzerinde çalışıyorsanız, ekibin en son sürümlerini aynı kod tabanını kullanamayacak şekilde paylaşmanız gerekir. Visual Studio, git veya TFVC (Team Foundation Sürüm Denetimi) ile sürüm denetimi sağlamak için Visual Studio Team Services veya Team Foundation Server ile sorunsuz bir şekilde tümleşir. Bir yerel sunucu bakımı olmadan kodunuzu bulutta depolamak için Visual Studio Team Services kullanın. Şirket içi bir sunucusuna sahip olmak istiyorsanız Team Foundation Server kullanın. Her kod projesi oluşturduğunuzda, onu sürüm denetimine ekleme seçeneğiniz vardır. Gereksinimlerinize en uygun sürüm denetimi sistemi hakkında bilgi edinmek için, bkz. [projeniz için doğru sürüm denetimini seçme](https://docs.microsoft.com/azure/devops/repos/tfvc/comparison-git-tfvc?view=azure-devops).
 
-### <a name="build-your-app"></a>Uygulamanızı oluşturma
- [Uygulamanızı yerel olarak oluşturabilir](./ide/compiling-and-building-in-visual-studio.md) ve doğru çalıştığından emin olabilirsiniz. Ardından, uygulamanızla ilgili sorunları gidermek için [hata ayıklama araçlarını](./debugger/debugging-in-visual-studio.md) kullanın. Veya paylaşılan yapı sunucularında veya bulutta projeler oluşturabilirsiniz. Ekibinizdeki devs'in sürüm denetiminde denetlemiş olduğu kodu oluşturmak için yapı işleminizi otomatikleştirin. Örneğin, her gece veya bu kod her iade edildiğinde bir veya daha fazla proje oluşturabilirsiniz.
+### <a name="build-your-app"></a>Uygulamanızı derleme
+ [Uygulamanızı yerel olarak](./ide/compiling-and-building-in-visual-studio.md) oluşturabilir ve düzgün çalıştığından emin olabilirsiniz. Ardından, uygulamanızda herhangi bir sorunu gidermek için [hata ayıklama araçlarını](./debugger/debugging-in-visual-studio.md) kullanın. Ya da paylaşılan yapı sunucularında veya bulutta projeler oluşturabilirsiniz. Takımınızın sürüm denetimine denetlediği kodu oluşturmak için derleme işleminizi otomatikleştirin. Örneğin, her bir veya daha fazla projeyi her bir kod iade edildiğinde her gece veya bir kez oluşturabilirsiniz.
 
 ### <a name="test-your-app"></a>Uygulamanızı test etme
- Uygulamanızın kalitesini artırmak için [birim testleri oluşturun.](./test/unit-test-your-code.md) Bu testler, her giriş yaptığınızda ve yapınızın bir parçası olarak çalıştırılabilir.
+ Uygulamanızın kalitesini artırmak için [birim testleri oluşturun](./test/unit-test-your-code.md) . Bu sınamalar, her iade etme sırasında ve derlemeniz kapsamında çalıştırılabilir.
 
- Uygulamanız için manuel ve otomatik testler planlayın, oluşturun ve çalıştırın. Test planları, paketler, test örnekleri ve test sonuçlarınız Visual Studio Team Services ile bulutta veya Team Foundation Server ile çevrimiçi olarak depolanır. [Uygulamayı test etme](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)hakkında daha fazla bilgi edinin.
+ Uygulamanız için el ile ve otomatikleştirilmiş testler planlayın, oluşturun ve çalıştırın. Test planları, paketler, test çalışmaları ve test sonuçlarınız, Team Foundation Server ile Visual Studio Team Services veya şirket içi bulutta depolanır. [Uygulamayı test etme](https://msdn.microsoft.com/library/73baa961-c21f-43fe-bb92-3f59ae9b5945)hakkında daha fazla bilgi edinin.
 
-### <a name="deliver-your-teams-code-faster"></a>Ekibinizin kodunu daha hızlı teslim edin
- Ekibinizin üyeleri arasındaki engelleri kaldırın ve işbirliğini geliştirin. Daha da ileri gidin ve uygulamanızın serbest bırakılmasını, üretime kadar geliştirmenizin her aşamasına otomatikleştirin. Canlı yayında uygulamanızın performansını ve kullanılabilirliğini izleyin. Müşterilerinizin uygulamanızı gerçekte nasıl kullandığına ilişkin gerçek zamanlı kullanım verileri toplayın. Daha fazla bilgi için [DevOps ve Uygulama Yaşam Döngüsü Yönetimi'ne](https://msdn.microsoft.com/library/74a1f71d-7f23-4c71-8fd7-89ede614fab6) bakın.
+### <a name="deliver-your-teams-code-faster"></a>Takımınızın kodunu daha hızlı sunun
+ Ekibinizin üyeleri arasındaki engelleri kaldırın ve işbirliğini artırın. Daha fazla ilerleyin ve geliştirme sürecinde uygulamanızın her aşamasına kadar her aşamada uygulamanızı otomatik hale getirin. Canlı olduğunda uygulamanızın performansını ve kullanılabilirliğini izleyin. Müşterilerinizin uygulamanızı gerçekten kullanma hakkında gerçek zamanlı kullanım verileri toplayın. Daha fazla ayrıntı için bkz. [DevOps ve uygulama yaşam döngüsü yönetimi](https://msdn.microsoft.com/library/74a1f71d-7f23-4c71-8fd7-89ede614fab6) .
 
-## <a name="whats-new"></a>Yeni bir şey var mı?
+## <a name="whats-new"></a>Yenilikler nelerdir?
 
-|||||
-|-|-|-|-|
-|[Visual Studio 2015'teki yenilikler](./what-s-new-in-visual-studio-2015.md)|[C'ye Yenilikler #](https://msdn.microsoft.com/library/9f18dc26-27fa-4603-a639-b573f07a117b)|[.NET Framework'deki yenilikler](https://msdn.microsoft.com/library/1d971dd7-10fc-4692-8dac-30ca308fc0fa)|[Azure DevOps Server için yenilikler](/azure/devops/server/whats-new)|
-|[C++ için yenilikler](https://docs.microsoft.com/previous-versions/hh409293(v=vs.140))|[Visual Basic’teki Yenilikler](https://msdn.microsoft.com/library/d7e97396-7f42-4873-a81c-4ebcc4b6ca02)|[JavaScript için yenilikler](https://docs.microsoft.com/visualstudio/javascript/javascript-in-visual-studio?view=vs-2015#whats-new-in-javascript)||
-|[Python](./python/getting-started-with-python.md)||||
+- [Visual Studio 2015 ' deki yenilikler](./what-s-new-in-visual-studio-2015.md)
+
+- [C 'deki yenilikler #](https://msdn.microsoft.com/library/9f18dc26-27fa-4603-a639-b573f07a117b)
+
+- [.NET Framework yenilikleri](https://msdn.microsoft.com/library/1d971dd7-10fc-4692-8dac-30ca308fc0fa)
+
+- [Azure DevOps Server yenilikler](/azure/devops/server/whats-new)
+
+- [C++ yenilikleri](https://docs.microsoft.com/previous-versions/hh409293(v=vs.140))
+
+- [Visual Basic’teki Yenilikler](https://msdn.microsoft.com/library/d7e97396-7f42-4873-a81c-4ebcc4b6ca02)
+
+- [JavaScript yenilikleri](https://docs.microsoft.com/visualstudio/javascript/javascript-in-visual-studio?view=vs-2015#whats-new-in-javascript)
+
+- [Python](./python/getting-started-with-python.md)
 
 ## <a name="in-this-section"></a>Bu bölümde
 
@@ -106,7 +116,7 @@ Visual Studio'ya hoş geldiniz! Cihazlar veya masaüstü uygulamaları için, we
 
 - [Visual Studio 2015'i Yükleme](./install/install-visual-studio-2015.md)
 
-- [Port, Geçiş ve Görsel Stüdyo Projelerini Yükseltme](./porting/porting-migrating-and-upgrading-visual-studio-projects.md)
+- [Visual Studio projelerini bağlantı noktası, geçirme ve yükseltme](./porting/porting-migrating-and-upgrading-visual-studio-projects.md)
 
 - [Visual Studio IDE](./ide/visual-studio-ide.md)
 
@@ -114,11 +124,11 @@ Visual Studio'ya hoş geldiniz! Cihazlar veya masaüstü uygulamaları için, we
 
 - [Visual Studio'da verilere erişime](./data-tools/accessing-data-in-visual-studio.md)
 
-- [Platform ötesi mobil geliştirme](./cross-platform/cross-platform-mobile-development-in-visual-studio.md)
+- [Platformlar arası mobil geliştirme](./cross-platform/cross-platform-mobile-development-in-visual-studio.md)
 
 - [Visual Basic](https://docs.microsoft.com/dotnet/visual-basic/?view=vs-2015)
 
-- [C #](https://docs.microsoft.com/dotnet/csharp/?view=vs-2015)
+- [C#](https://docs.microsoft.com/dotnet/csharp/?view=vs-2015)
 
 - [Visual C++](https://msdn.microsoft.com/library/e8dcc44c-a3e2-4ffe-887c-fd15b18dc458)
 
@@ -128,4 +138,4 @@ Visual Studio'ya hoş geldiniz! Cihazlar veya masaüstü uygulamaları için, we
 
 - [Visual F#](https://msdn.microsoft.com/library/66f52f8a-a034-4c32-bb83-fa5b030faa4d)
 
-- [Bizimle Konuşun](./ide/talk-to-us.md)
+- [Bizimle iletişime geçin](./ide/talk-to-us.md)

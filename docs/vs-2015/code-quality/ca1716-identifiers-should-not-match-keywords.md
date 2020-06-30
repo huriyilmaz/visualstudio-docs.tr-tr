@@ -15,24 +15,24 @@ caps.latest.revision: 23
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f81aec5973d1915ba646c20c3b84186443678754
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 67a3588a857a0eea7d338217f975ed593dfdad52
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669096"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543708"
 ---
-# <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: Tanımlayıcılar anahtar sözcüklerle eşleşmemelidir
+# <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: Tanımlayıcılar anahtar sözcükler ile eşleşmemelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|IdentifiersShouldNotMatchKeywords|
 |CheckId|CA1716|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir ad alanı, tür veya bir sanal ya da arabirim üyesi, programlama dilinde ayrılmış bir anahtar sözcükle eşleşir.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -46,10 +46,10 @@ ms.locfileid: "72669096"
 
 - C++/CLI
 
-  Büyük/küçük harfe duyarsız karşılaştırma, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] anahtar kelimeleri için kullanılır ve diğer diller için büyük/küçük harfe duyarlı karşılaştırma kullanılır.
+  Anahtar sözcükler için büyük/küçük harfe duyarsız karşılaştırma kullanılır [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ve diğer diller için büyük/küçük harfe duyarlı karşılaştırma kullanılır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Anahtar sözcük listesinde görünmeyen bir ad seçin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Tanımlayıcının API kullanıcılarını şaşırmadığına ve kitaplığın [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] kullanılabilir tüm dillerde kullanılabilir olduğunu ikna ediyorsanız, bu kuraldan bir uyarıyı gizleyebilirsiniz.
+ Tanımlayıcının API kullanıcılarını şaşırmadığına ve kitaplığın içindeki kullanılabilir tüm dillerde kullanılabilir olduğunu ikna ediyorsanız, bu kuraldan bir uyarıyı gizleyebilirsiniz [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .

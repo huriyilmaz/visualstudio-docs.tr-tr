@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Kod çalıştırmadan Office çözümlerini açma'
+title: 'Nasıl yapılır: kod çalıştırmadan Office çözümlerini açma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -18,39 +18,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 366416e4f18435bd01391657eb2fc4f65f8a4d62
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: d84515c2c3159b61b96f77555b23eef0df0ae961
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441775"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543487"
 ---
-# <a name="how-to-open-office-solutions-without-running-code"></a>Nasıl yapılır: Kod çalıştırmadan Office çözümlerini açma
-  Yönetilen kod uzantıları ile oluşturulan Microsoft Office çözümü son kullanıcı Office uygulamasında güvenlik ayarı Yüksek olarak ayarlansa bile çalışır. .NET derleme kod güvenliği, Microsoft Office tarafından değil, Microsoft .NET Framework tarafından yönetilen olmasıdır.
+# <a name="how-to-open-office-solutions-without-running-code"></a>Nasıl yapılır: kod çalıştırmadan Office çözümlerini açma
+  Yönetilen kod uzantılarıyla oluşturulan Microsoft Office çözüm, son kullanıcının Office uygulamasındaki güvenlik ayarı yüksek olarak ayarlanmış olsa bile çalıştırılır. Bunun nedeni, .NET derleme kodu güvenliğinin Microsoft Office tarafından değil Microsoft .NET Framework tarafından yönetilmektedir.
 
- Ancak, kod çalıştırmadan bir belgeyi açmak için ne zaman isteyebileceğiniz zamanlar vardır. Örneğin, belge açıldığında çalıştırılan kod içeriği değiştirebilir, ancak önce kod değişiklikleri, belgenin görünümünü güncelleştirmek istediğiniz. Belirli bilgiler belge içinde göndermek isteyebilirsiniz veya kod çalıştırın ve büyük olasılıkla içeriği alter istiyor musunuz.
+ Ancak, kodu çalıştırmadan bir belgeyi açmak isteyebileceğiniz durumlar vardır. Örneğin, belge açıldığında çalışan kod içerikleri değiştirebilir, ancak kod değiştirilmeden önce belgenin görünme şeklini güncelleştirmek isteyebilirsiniz. Ya da belgeyi içindeki belirli bilgileri bir kişiye göndermek isteyebilirsiniz ve kodun çalıştırılmasını ve muhtemelen içerikleri değiştirmesini istemezsiniz.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Bir belge veya bütünleştirilmiş kodu çalıştırmadan yönetilen kod uzantıları içeren çalışma kitabını açmak için birkaç yolu vardır.
+ Derleme kodunu çalıştırmadan yönetilen kod uzantıları içeren bir belge veya çalışma kitabı açmak için birkaç yol vardır.
 
-## <a name="to-bypass-the-assembly-by-using-the-shift-key"></a>Shift tuşunu kullanarak derleme atlamak için
+## <a name="to-bypass-the-assembly-by-using-the-shift-key"></a>Shift tuşunu kullanarak derlemeyi atlamak için
 
-- Açık belgeler ve çalışma kitaplarından **dosya** menüsünü tutarken **Shift** Word ve Excel belge açılırken başlatma olayları oluşturma önlemek için anahtarı.
+- Belge açılırken Word ve Excel 'in başlatma olaylarını oluşturmasını engellemek için **SHIFT** tuşunu basılı tutarken **Dosya** menüsünden Belge ve çalışma kitaplarını açın.
 
     > [!NOTE]
-    > Bir belge veya çalışma kitabından açarsanız **Başlarken** görev bölmesi, basılı **Shift** kodu atlamaz. Ayrıca SHIFT tuşunu basılı olayları belge açıldıktan sonra gerçekleştirilen engellemez.
+    > **Başlarken** görev bölmesinden bir belge veya çalışma kitabı açarsanız, **SHIFT** tuşunu basılı tutmak kodu atlamaz. Ayrıca, SHIFT 'in basılı tutulması, olayların belge açıldıktan sonra oluşturulmasını engellemez.
 
-     Bu yöntem, kodu çalıştıran ve belgeyi değiştirmeden olmadan değişiklik yapmak için bir belge açmak istiyorsanız kullanışlıdır.
+     Bu yöntem, kod çalıştırmadan ve belgeyi değiştirmeden değişiklik yapmak için bir belge açmak istiyorsanız yararlıdır.
 
-## <a name="to-bypass-an-assembly-by-renaming-or-removing-it"></a>Yeniden adlandırma veya kaldırmadan bir derlemenin atlamak için
+## <a name="to-bypass-an-assembly-by-renaming-or-removing-it"></a>Yeniden adlandırarak veya kaldırarak bir derlemeyi atlamak için
 
-- Derleme bulunduğu bilgisayarda gerekli izinlere sahipseniz, yeniden adlandırabilir veya belge veya çalışma kitabı bulunamıyor derlemeyi kaldırın. Bu, Office belge her açıldığında gerçekleştirilen hatayla sonuçlanır.
+- Derlemenin bulunduğu bilgisayarda gerekli izinleriniz varsa, belge veya çalışma kitabının onu bulamadığı şekilde derlemeyi yeniden adlandırabilir veya kaldırabilirsiniz. Bu, Office belgesi her açıldığında bir hata oluşunca oluşur.
 
-     Çözüm, birden çok kişi tarafından kullanılıyorsa, bu yöntem çözümü için tümünün çalışmasını engeller. Bu sorun kod veya başvurulan bir sunucu bulunan ve tüm kullanıcıların yürütme engellemek istiyorsanız yararlı olabilir.
+     Çözüm birden çok kişi tarafından kullanılıyorsa, bu yöntem çözümün tümünün tarafından çalıştırılmasını önler. Bu, kodda veya başvurulan sunucuda bir sorun bulunursa ve tüm kullanıcıların bunu yürütmesini durdurmak istiyorsanız yararlı olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümleri güvenliğini sağlama](../vsto/securing-office-solutions.md)
+- [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
-- [Office çözümleri oluşturma ve tasarlama](../vsto/designing-and-creating-office-solutions.md)
+- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
 - [Office çözümlerinde uygulama ve dağıtım bildirimleri](../vsto/application-and-deployment-manifests-in-office-solutions.md)

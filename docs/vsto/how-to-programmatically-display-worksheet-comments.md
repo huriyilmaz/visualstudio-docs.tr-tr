@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla çalışma sayfası açıklamalarını görüntüleme'
+title: 'Nasıl yapılır: program aracılığıyla çalışma sayfası açıklamalarını görüntüleme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,33 +13,33 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cc030fed25409f5c034abfd07f1f9358bfea593b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0fc84e2726cd7a70b8fc59b0f1ac2b3377f9c4af
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812702"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543370"
 ---
-# <a name="how-to-programmatically-display-worksheet-comments"></a>Nasıl yapılır: Program aracılığıyla çalışma sayfası açıklamalarını görüntüleme
-  Programlı olarak göster ve Microsoft Office Excel çalışma sayfalarında açıklamaları gizle.
+# <a name="how-to-programmatically-display-worksheet-comments"></a>Nasıl yapılır: program aracılığıyla çalışma sayfası açıklamalarını görüntüleme
+  Microsoft Office Excel çalışma sayfalarındaki açıklamaları programlı bir şekilde gösterebilir ve gizleyebilirsiniz.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
-## <a name="to-display-all-comments-on-a-worksheet-in-a-document-level-customization"></a>Belge düzeyi özelleştirmesindeki bir çalışma sayfasındaki tüm açıklamaları görüntülemek için
+## <a name="to-display-all-comments-on-a-worksheet-in-a-document-level-customization"></a>Belge düzeyi özelleştirmesindeki çalışma sayfasındaki tüm açıklamaları göstermek için
 
-1. Ayarlama <xref:Microsoft.Office.Interop.Excel.Comment.Visible%2A> özelliğini **true** açıklamaları göstermek istiyorsanız aksi **false**. Bu kod, bir sayfa sınıfında değil yerleştirilmelidir `ThisWorkbook` sınıfı.
+1. <xref:Microsoft.Office.Interop.Excel.Comment.Visible%2A>Açıklamaları göstermek istiyorsanız özelliği **true** olarak ayarlayın; Aksi takdirde **false**. Bu kod, sınıfında değil, bir sayfa sınıfına yerleştirilmelidir `ThisWorkbook` .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#31](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#31)]
      [!code-vb[Trin_VstcoreExcelAutomation#31](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#31)]
 
-## <a name="to-display-all-comments-on-a-worksheet-in-an-application-level-vsto-add-in"></a>Çalışma sayfasındaki bir uygulama düzeyinde VSTO eklenti tüm açıklamaları görüntülemek için
+## <a name="to-display-all-comments-on-a-worksheet-in-an-application-level-vsto-add-in"></a>Uygulama düzeyindeki bir VSTO eklentisinin çalışma sayfasındaki tüm açıklamaları görüntüleme
 
-1. Ayarlama <xref:Microsoft.Office.Interop.Excel.Comment.Visible%2A> özelliğini **true** açıklamaları göstermek istiyorsanız aksi **false**.
+1. <xref:Microsoft.Office.Interop.Excel.Comment.Visible%2A>Açıklamaları göstermek istiyorsanız özelliği **true** olarak ayarlayın; Aksi takdirde **false**.
 
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#21](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#21)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#21](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#21)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çalışma sayfaları ile çalışma](../vsto/working-with-worksheets.md)
-- [Nasıl yapılır: Programlı olarak ekleyin ve çalışma yorumları Sil](../vsto/how-to-programmatically-add-and-delete-worksheet-comments.md)
-- [Konak öğelerine ve denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
+- [Çalışma sayfalarıyla çalışma](../vsto/working-with-worksheets.md)
+- [Nasıl yapılır: program aracılığıyla çalışma sayfası açıklamalarını ekleme ve silme](../vsto/how-to-programmatically-add-and-delete-worksheet-comments.md)
+- [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)

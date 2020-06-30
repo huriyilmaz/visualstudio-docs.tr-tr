@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Excel aralıklarına program aracılığıyla renk uygulama'
+title: 'Nasıl yapılır: program aracılığıyla Excel aralıklarına renk uygulama'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,46 +14,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 56ecbfcdaf22132f63df1ecf5eadba97dee426af
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0d4a99e2e71e6a87b304ceea45a3cd595f911ff1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817287"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543461"
 ---
-# <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>Nasıl yapılır: Excel aralıklarına program aracılığıyla renk uygulama
-  Metin bir hücre aralığı içinde bir renk uygulamak için kullanmak bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi veya yerel Excel range nesnesi.
+# <a name="how-to-programmatically-apply-color-to-excel-ranges"></a>Nasıl yapılır: program aracılığıyla Excel aralıklarına renk uygulama
+  Bir hücre aralığı içindeki metne renk uygulamak için bir <xref:Microsoft.Office.Tools.Excel.NamedRange> Denetim veya yerel Excel Aralık nesnesi kullanın.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="use-a-namedrange-control"></a>NamedRange denetimi kullanma
- Bu örnek için belge düzeyi özelleştirmeleri içindir.
+ Bu örnek, belge düzeyi özelleştirmeleri içindir.
 
-### <a name="to-apply-color-to-a-namedrange-control"></a>Renk NamedRange denetimine uygulamak için
+### <a name="to-apply-color-to-a-namedrange-control"></a>NamedRange denetimine renk uygulamak için
 
-1. Oluşturma bir <xref:Microsoft.Office.Tools.Excel.NamedRange> hücre A1 denetimi.
+1. <xref:Microsoft.Office.Tools.Excel.NamedRange>A1 hücresinde bir denetim oluştur.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#65](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#65)]
      [!code-vb[Trin_VstcoreExcelAutomation#65](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#65)]
 
-2. Metin rengini ayarlama <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi.
+2. Denetimdeki metnin rengini ayarlayın <xref:Microsoft.Office.Tools.Excel.NamedRange> .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#66](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#66)]
      [!code-vb[Trin_VstcoreExcelAutomation#66](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#66)]
 
-## <a name="use-native-excel-ranges"></a>Yerel Excel aralıkları kullanın
+## <a name="use-native-excel-ranges"></a>Yerel Excel aralıklarını kullan
 
-### <a name="to-apply-color-to-a-native-excel-range-object"></a>Yerel bir Excel aralık nesnesi için renk uygulamak için
+### <a name="to-apply-color-to-a-native-excel-range-object"></a>Yerel Excel Aralık nesnesine renk uygulamak için
 
-1. Hücre A1, bir aralık oluşturun ve sonra metnin rengini ayarlayın.
+1. A1 hücresinde bir Aralık oluşturun ve sonra metnin rengini ayarlayın.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#67](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#67)]
      [!code-vb[Trin_VstcoreExcelAutomation#67](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#67)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Aralıklarla çalışma](../vsto/working-with-ranges.md)
+- [Aralıklar ile çalışma](../vsto/working-with-ranges.md)
 - [NamedRange denetimi](../vsto/namedrange-control.md)
-- [Nasıl yapılır: Program aracılığıyla çalışma kitaplarındaki aralıklara biçimler uygulama](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
-- [Nasıl yapılır: Koddaki çalışma sayfası aralıklarına program aracılığıyla bakma](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)
-- [Genişletilmiş nesneleri kullanarak Excel'i otomatikleştirmek](../vsto/automating-excel-by-using-extended-objects.md)
+- [Nasıl yapılır: program aracılığıyla çalışma kitaplarındaki aralıklara stil uygulama](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)
+- [Nasıl yapılır: koddaki çalışma sayfası aralıklarına program aracılığıyla başvurma](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)
+- [Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)
