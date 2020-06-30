@@ -1,7 +1,7 @@
 ---
 title: 'İzlenecek yol: Özel Metin Şablonu Konağı Oluşturma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - walkthroughs [text templates], custom host
 - text templates, custom host walkthrough
@@ -13,12 +13,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: 3d578161d43de68d85f3b7704c9fd69fe4e268ea
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3979f93de6040078a5b1e4315cadc4f7faa4728e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593544"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532229"
 ---
 # <a name="walkthrough-create-a-custom-text-template-host"></a>İzlenecek yol: Özel Metin Şablonu Konağı Oluşturma
 
@@ -35,7 +35,7 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 
 - Özel ana bilgisayarı sınama.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu kılavuzu tamamlamak için aşağıdakilere ihtiyacınız vardır:
 
@@ -51,9 +51,9 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
 
 2. Aşağıdaki derlemelere başvurular ekleyin:
 
-   - **Microsoft.VisualStudio.TextTemplating.\*.0**
+   - **Microsoft. VisualStudio. Textşablon oluşturma. \* . 0**
 
-   - **Microsoft.VisualStudio.TextTemplating.Interfaces.10.0 and later versions**
+   - **Microsoft. VisualStudio. Textşablon. Interfaces. 10.0 ve sonraki sürümler**
 
 3. Program.cs veya Module1.vb dosyasındaki kodu aşağıdaki kodla değiştirin:
 
@@ -714,11 +714,11 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
    End Namespace
    ```
 
-4. Yalnızca [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] için, **Proje** menüsünü açın ve **CustomHost özellikleri**' ne tıklayın. **Başlangıç nesnesi** listesinde, **CustomHost. program**' ya tıklayın.
+4. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]Yalnızca Için **Proje** menüsünü açın ve **CustomHost özellikleri**' ne tıklayın. **Başlangıç nesnesi** listesinde, **CustomHost. program**' ya tıklayın.
 
-5. Üzerinde **dosya** menüsünü tıklatın **Tümünü Kaydet**.
+5. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
 
-6. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
+6. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
 ## <a name="test-the-custom-host"></a>Özel Konağı test etme
 
@@ -726,7 +726,7 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
 
 ### <a name="to-create-a-text-template-to-test-the-custom-host"></a>Özel ana bilgisayarı sınamak amacıyla metin şablonu oluşturmak için
 
-1. Bir metin dosyası oluşturun ve `TestTemplate.tt`adlandırın.
+1. Bir metin dosyası oluşturun ve bunu adlandırın `TestTemplate.tt` .
 
      Dosyayı oluşturmak için herhangi bir metin düzenleyicisi (ör. Notepad) kullanabilirsiniz.
 
@@ -786,7 +786,7 @@ Bu kılavuzda, yürütülebilir bir uygulamada, komut satırından çağrılabil
      `<YOUR PATH>CustomHost\bin\Debug\CustomHost.exe`
 
     > [!NOTE]
-    > Adresi yazmak yerine, **Windows Gezgini** 'Nde CustomHost. exe dosyasına gidip dosyayı komut istemi penceresine sürükleyebilirsiniz.
+    > Adresi yazmak yerine, **Windows Gezgini** 'nde dosyaya CustomHost.exe gidip dosyayı komut istemi penceresine sürükleyebilirsiniz.
 
 3. Bir boşluk yazın.
 

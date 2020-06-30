@@ -12,12 +12,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: cd455969c93d4ebdea3c2f1a36fadd1ca93f2758
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c04ef8f015b081e29891d7439b783e3851376210
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72654854"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531554"
 ---
 # <a name="shortcut-keys-help-viewer"></a>Kısayol Tuşları (Yardım Görüntüleyicisi)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -26,57 +26,57 @@ Aşağıdaki tablodaki kısayol tuşlarını kullanarak Microsoft Yardım Görü
 
 |Alan|U|Eylem|
 |----------|---------------|------------|
-|Genel uygulama|Alan|Düzenleme alanları dışında herhangi bir yere girmek yerine kullanın.|
-|Genel uygulama|F1|Geçerli Kullanıcı arabirimi öğesiyle ilgili yardım 'ı açın.|
-|Genel uygulama|F11|Tam ekran görünümü ve normal görünüm arasında geçiş yapın.|
-|Araç Çubuğu|Geri Al tuşu<br /><br /> Veya<br /><br /> Alt + sol ok|Önceki sayfayı görüntüleyin.|
+|Genel Uygulama|Alan|Düzenleme alanları dışında herhangi bir yere girmek yerine kullanın.|
+|Genel Uygulama|F1|Geçerli Kullanıcı arabirimi öğesiyle ilgili yardım 'ı açın.|
+|Genel Uygulama| F11|Tam ekran görünümü ve normal görünüm arasında geçiş yapın.|
+|Araç Çubuğu|Geri Al tuşu<br /><br /> -VEYA-<br /><br /> Alt + sol ok|Önceki sayfayı görüntüleyin.|
 |Araç Çubuğu|Alt + sağ ok|Sonraki sayfayı görüntüleyin.|
 |Araç Çubuğu|Alt + Home|Yardım gözden geçiren giriş sayfasını görüntüleyin.|
-|Araç Çubuğu|CTRL + S|İçindekiler tablosunda geçerli konuyu vurgulayın ( **İçindekiler** sekmesinde).|
+|Araç Çubuğu|Ctrl + S|İçindekiler tablosunda geçerli konuyu vurgulayın ( **İçindekiler** sekmesinde).|
 |Araç Çubuğu|CTRL + D|Geçerli konuyu **Sık Kullanılanlar** sekmesine ekleyin.|
 |Araç Çubuğu|CTRL + F|Geçerli konu içinde metin arayabilmeniz için konu alanındaki bul çubuğunu görüntüleyin.|
 |Araç Çubuğu|CTRL + P|Geçerli sayfayı yazdır.|
-|Araç Çubuğu|CTRL + F2|Geçerli sayfanın baskı önizlemesini görüntüleyin.|
+|Araç Çubuğu|Ctrl + F2|Geçerli sayfanın baskı önizlemesini görüntüleyin.|
 |Araç Çubuğu|CTRL + O|**Görüntüleyici seçenekleri** iletişim kutusunu görüntüleyin.|
 |Araç Çubuğu|CTRL + SHIFT + d|**Içeriği Yönet** sekmesini görüntüleyin.|
-|Gezginlerini|Alt + C<br /><br /> Veya<br /><br /> CTRL + SHIFT + C|**İçindekiler** sekmesini görüntüleyin.|
-|Gezginlerini|Alt + ı<br /><br /> Veya<br /><br /> CTRL + SHIFT + ı|**Dizin** sekmesini görüntüleyin.|
-|Gezginlerini|Alt + F<br /><br /> Veya<br /><br /> CTRL + SHIFT + F|**Sık Kullanılanlar** sekmesini görüntüleyin.|
-|Gezginlerini|Alt + S<br /><br /> Veya<br /><br /> CTRL + E<br /><br /> Veya<br /><br /> Ctrl + Shift + S|**Arama** sekmesini görüntüleyin.|
-|Gezginlerini|Alt + a<br /><br /> Veya<br /><br /> CTRL + SHIFT + d|**Içeriği Yönet** sekmesini görüntüleyin.|
-|Konu|Kısayol menü tuşu<br /><br /> VEYA<br /><br /> SHIFT + F10|Geçerli UI öğesi için kısayol menüsünü görüntüler.|
-|Konu|Yukarı Ok|Belgenin başlangıcına doğru her seferinde bir satır başı kaydırın.|
-|Konu|Aşağı Ok|Tek seferde belgenin sonuna doğru ilerleyin.|
-|Konu|Sayfa yukarı|Belgenin başlangıcına doğru her seferinde bir ekran kaydırın.|
-|Konu|Sayfa aşağı|Belgenin sonuna doğru bir ekran kaydırmak için bir seferde bir ekran.|
-|Konu|Ana Sayfası|Belgenin başlangıcına gidin.|
-|Konu|End|Belgenin sonuna taşı.|
-|Konu|CTRL + F|Bu sayfada arama metni bulun.|
-|Konu|F5|Geçerli sayfayı yenileyin.|
-|Konu|CTRL + P|Geçerli sayfayı yazdır.|
-|Konu|CTRL + F2|Geçerli sayfanın baskı önizlemesini görüntüleyin.|
-|Konu|Oluşturulurken|Geçerli sayfa için **Özellikler** iletişim kutusunu görüntüleyin.|
-|Konu|CTRL + T|Ön planda başka bir içerik sekmesi açın.|
-|Konu|CTRL + tıklama|Ön planda yeni bir sekmede bağlantı açın.|
-|Konu|CTRL + SEKME|Sekmelerin arasından soldan sağa geçiş yapın.|
-|Konu|CTRL + SHIFT + TAB|Sekmeler arasında sağdan sola geçiş yapın.|
-|Konu|CTRL + W|Geçerli sekmeyi kapatın.|
-|Konu|CTRL + *sayı*|*Sayının* 1 ile 9 arasında olduğu belirli bir sekmeye geçin ve hangi sekmenin sırada olduğunu gösterir.|
-|Konu|Ctrl + Alt + F4|Diğer içerik sekmelerini kapatın.|
-|Konu|CTRL + SHIFT + artı Işareti|Yakınlaştırmayı %10 oranında arttırın.|
-|Konu|CTRL + eksi Işareti|%10 oranında yakınlaştırmayı azalt.|
-|Konu|CTRL + 0 (sıfır)|Yakınlaştırmayı %100 olarak değiştirin.|
-|Dizin|Tab|Anahtar sözcük girdisinden anahtar sözcük listesine kaydır.|
-|Dizin|CTRL + K|Belirttiğiniz anahtar sözcüğü içeren girişleri ve belirttiğiniz anahtar sözcüğü ile başlayan girdileri gösterme arasında geçiş yapın.|
-|Larını|CTRL + SHIFT + del|Göz atma geçmişinizi temizleyin.|
-|Larını|Tuşunun|Belirtilen öğeyi silin.|
-|Larını|CTRL + N|Sık Kullanılanlar içinde bir klasör oluşturun.|
-|Larını|F2|Belirtilen sık kullanılanı veya klasörü yeniden adlandırın.|
+|Gezginlerini|Alt + C<br /><br /> -VEYA-<br /><br /> Ctrl + Shift + C|**İçindekiler** sekmesini görüntüleyin.|
+|Gezginlerini|Alt + ı<br /><br /> -VEYA-<br /><br /> CTRL + SHIFT + ı|**Dizin** sekmesini görüntüleyin.|
+|Gezginlerini|Alt + F<br /><br /> -VEYA-<br /><br /> Ctrl + Shift + F|**Sık Kullanılanlar** sekmesini görüntüleyin.|
+|Gezginlerini|Alt + S<br /><br /> -VEYA-<br /><br /> CTRL + E<br /><br /> -VEYA-<br /><br /> Ctrl + Shift + S|**Arama** sekmesini görüntüleyin.|
+|Gezginlerini|Alt + M<br /><br /> -VEYA-<br /><br /> CTRL + SHIFT + d|**Içeriği Yönet** sekmesini görüntüleyin.|
+|Konu başlığı|Kısayol menü tuşu<br /><br /> OR<br /><br /> Shift + F10|Geçerli UI öğesi için kısayol menüsünü görüntüler.|
+|Konu başlığı|Yukarı Ok|Belgenin başlangıcına doğru her seferinde bir satır başı kaydırın.|
+|Konu başlığı|Aşağı Ok|Tek seferde belgenin sonuna doğru ilerleyin.|
+|Konu başlığı|Page Up|Belgenin başlangıcına doğru her seferinde bir ekran kaydırın.|
+|Konu başlığı|Page Down|Belgenin sonuna doğru bir ekran kaydırmak için bir seferde bir ekran.|
+|Konu başlığı|Giriş Sayfası|Belgenin başlangıcına gidin.|
+|Konu başlığı|End|Belgenin sonuna taşı.|
+|Konu başlığı|CTRL + F|Bu sayfada arama metni bulun.|
+|Konu başlığı|F5|Geçerli sayfayı yenileyin.|
+|Konu başlığı|CTRL + P|Geçerli sayfayı yazdır.|
+|Konu başlığı|Ctrl + F2|Geçerli sayfanın baskı önizlemesini görüntüleyin.|
+|Konu başlığı|F4|Geçerli sayfa için **Özellikler** iletişim kutusunu görüntüleyin.|
+|Konu başlığı|CTRL + T|Ön planda başka bir içerik sekmesi açın.|
+|Konu başlığı|CTRL + tıklama|Ön planda yeni bir sekmede bağlantı açın.|
+|Konu başlığı|Ctrl + Sekme|Sekmelerin arasından soldan sağa geçiş yapın.|
+|Konu başlığı|CTRL + SHIFT + TAB|Sekmeler arasında sağdan sola geçiş yapın.|
+|Konu başlığı|CTRL + W|Geçerli sekmeyi kapatın.|
+|Konu başlığı|CTRL + *sayı*|*Sayının* 1 ile 9 arasında olduğu belirli bir sekmeye geçin ve hangi sekmenin sırada olduğunu gösterir.|
+|Konu başlığı|Ctrl + Alt + F4|Diğer içerik sekmelerini kapatın.|
+|Konu başlığı|CTRL + SHIFT + artı Işareti|Yakınlaştırmayı %10 oranında arttırın.|
+|Konu başlığı|CTRL + eksi Işareti|%10 oranında yakınlaştırmayı azalt.|
+|Konu başlığı|CTRL + 0 (sıfır)|Yakınlaştırmayı %100 olarak değiştirin.|
+|Dizin oluşturma|Tab|Anahtar sözcük girdisinden anahtar sözcük listesine kaydır.|
+|Dizin oluşturma|CTRL + K|Belirttiğiniz anahtar sözcüğü içeren girişleri ve belirttiğiniz anahtar sözcüğü ile başlayan girdileri gösterme arasında geçiş yapın.|
+|Sık Kullanılanlar|CTRL + SHIFT + del|Göz atma geçmişinizi temizleyin.|
+|Sık Kullanılanlar|Del|Belirtilen öğeyi silin.|
+|Sık Kullanılanlar|CTRL + N|Sık Kullanılanlar içinde bir klasör oluşturun.|
+|Sık Kullanılanlar|F2|Belirtilen sık kullanılanı veya klasörü yeniden adlandırın.|
 |İçerik & Dizin & arama|CTRL + D|Belirtilen konuyu **Sık Kullanılanlar** sekmesine ekleyin.|
 |İçerik & Dizin & arama & Sık Kullanılanlar|CTRL + P|Belirtilen konuyu yazdır.|
-|İçerik & Dizin & arama & Sık Kullanılanlar|CTRL + F2|Belirtilen konunun baskı önizlemesini görüntüleyin.|
+|İçerik & Dizin & arama & Sık Kullanılanlar|Ctrl + F2|Belirtilen konunun baskı önizlemesini görüntüleyin.|
 |İçerik & Dizin & arama & Sık Kullanılanlar|CTRL + tıklama|Konuyu yeni bir sekmede açın.|
-|Ara|Esc|Arama metin kutusunu temizleyin.|
+|Arayın|Esc|Arama metin kutusunu temizleyin.|
 |Görüntüleyici Seçenekleri|Alt + T|Odağı **metin boyutu** listesiyle değiştirin.|
 |Görüntüleyici Seçenekleri|Alt + S|Odağı **en fazla arama sonuçları** listesine değiştirin.|
 |Görüntüleyici Seçenekleri|Alt + H|Odağı, **kaydedilen en fazla geçmiş girdileri** listesine göre değiştirin.|
@@ -90,23 +90,21 @@ Aşağıdaki tablodaki kısayol tuşlarını kullanarak Microsoft Yardım Görü
 
  **Pencere yönetimi**
 
-|||
+|**U**|**Eylem**|
 |-|-|
-|**U**|**Ön**|
 |CTRL + L|Yardım Görüntüleyici yerleşimini varsayılan düzene sıfırlayın ve tüm konu sekmelerini kapatın.|
-|CTRL + SEKME|İlk tuş vuruşu, odağı **sekme seçimi** menüsüne verir. Sonraki tuş vuruşu, odağı en üstteki menü öğesine, sonraki tuş vuruşlarının sırayla yukarıdan aşağıya doğru sıralı şekilde vermesini sağlar. Bir menü öğesi odağa sahip olduğunda, ENTER tuşu bu öğeyi etkin sekmeye getirir.|
+|Ctrl + Sekme|İlk tuş vuruşu, odağı **sekme seçimi** menüsüne verir. Sonraki tuş vuruşu, odağı en üstteki menü öğesine, sonraki tuş vuruşlarının sırayla yukarıdan aşağıya doğru sıralı şekilde vermesini sağlar. Bir menü öğesi odağa sahip olduğunda, ENTER tuşu bu öğeyi etkin sekmeye getirir.|
 |CTRL + SHIFT + TAB|İlk tuş vuruşu, odağı **sekme seçimi** menüsüne verir. Sonraki tuş vuruşu, odağı alt menü öğesine ve sonraki tuş vuruşlarının sonunda, aşağıdan yukarıya doğru sıralı menü öğelerine sağlar. Bir menü öğesi odağa sahip olduğunda, ENTER tuşu bu öğeyi etkin sekmeye getirir.|
 |Alt + I, alt + S, alt + C, alt + F, alt + M|Gezinti ve içerik yönetimi sekmeleri yuvalandırıldığınızda bu kısayol tuşları çalışmaz.|
 
  **Içeriği Yönet**
 
-|||
+|**U**|**Eylem**|
 |-|-|
-|**U**|**Ön**|
 |Alt + D|Yükleme kaynağını disk olarak değiştirin.|
 |Alt + O|Yükleme kaynağını çevrimiçi olarak değiştirin.|
 |Tab|Odağı **yerel depo yolu** metin kutusuna değiştirin.|
-|Tab|Odağı **taşımaya Dönüştür...** Bu.|
+|Tab|Odağı **taşımaya Dönüştür...** tıklayın.|
 |Alt + V|**Içeriği taşı** iletişim kutusunu açın.|
 |Ctrl + Alt + F|Odağı, **filtre belgeleri** metin kutusuna değiştirin.|
 |Tab|Odağı belge listesine değiştirin.|
