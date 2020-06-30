@@ -15,33 +15,33 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 34054f6f444e503077c1e81da9f08ae2832d635a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: be60d2a1dcb769a0b7a8574984de3d288bf57af4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661427"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538885"
 ---
 # <a name="ca1309-use-ordinal-stringcomparison"></a>CA1309: Sıralı StringComparison kullanın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|UseOrdinalStringComparison|
 |CheckId|CA1309|
 |Kategori|Microsoft. Globalization|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Dil olmayan bir dize karşılaştırma işlemi, <xref:System.StringComparison> parametresini **sıra** veya **OrdinalIgnoreCase**olarak ayarlamayın.
+## <a name="cause"></a>Nedeni
+ Dilsel olmayan bir dize karşılaştırma işlemi, <xref:System.StringComparison> parametreyi **Ordinal** veya **OrdinalIgnoreCase**olarak ayarlamayın.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Çok sayıda dize işlemi, <xref:System.String.Compare%2A?displayProperty=fullName> ve <xref:System.String.Equals%2A?displayProperty=fullName> yöntemlerinin en önemlileri, artık bir parametre olarak <xref:System.StringComparison?displayProperty=fullName> numaralandırma değeri kabul eden bir aşırı yükleme sağlıyor.
+ Çok sayıda dize işlemi, <xref:System.String.Compare%2A?displayProperty=fullName> ve <xref:System.String.Equals%2A?displayProperty=fullName> yöntemleri, artık bir <xref:System.StringComparison?displayProperty=fullName> sabit listesi değerini parametre olarak kabul eden bir aşırı yükleme sağlar.
 
  **StringComparison. Ordinal** ya da **StringComparison. OrdinalIgnoreCase**belirttiğinizde, dize karşılaştırması dil olmayan bir işlem olur. Yani, doğal dile özgü özellikler, karşılaştırma kararları verilirken yok sayılır. Bu, kararların basit bayt karşılaştırmaları temel aldığı ve kültüre göre parametreli büyük/küçük harf veya denklik tablolarının yoksayılmasına yol gösterir. Sonuç olarak, parametresini **StringComparison. Ordinal** ya da **StringComparison. OrdinalIgnoreCase**olarak ayarlayarak, kodunuz genellikle hızlanır, doğruluk artar ve daha güvenilir hale gelir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için, dize karşılaştırma yöntemini bir parametre olarak <xref:System.StringComparison?displayProperty=fullName> numaralandırmayı kabul eden bir aşırı yüklemeye değiştirin ve **Ordinal** ya da **OrdinalIgnoreCase**belirtin. Örneğin, `String.Compare(str1, str2)` ' ı `String.Compare(str1, str2, StringComparison.Ordinal)` ' e değiştirin.
+ Bu kural ihlalini onarmak için, dize karşılaştırma yöntemini bir parametre olarak numaralandırmayı kabul eden bir aşırı yükleme olarak değiştirin <xref:System.StringComparison?displayProperty=fullName> ve **Ordinal** ya da **OrdinalIgnoreCase**belirtin. Örneğin, olarak değiştirin `String.Compare(str1, str2)` `String.Compare(str1, str2, StringComparison.Ordinal)` .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Kitaplık veya uygulama sınırlı bir yerel hedef kitle için tasarlanıyorsa veya geçerli kültürün semantiğinin kullanılması gerektiğinde, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.

@@ -15,28 +15,28 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3e98c2ea598bcf73b919ba10ef1ea0b53c2a40f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e30dd2945820a61aa7c96d4e6c6fd59354e0c3ae
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651968"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540744"
 ---
 # <a name="ca2221-finalizers-should-be-protected"></a>CA2221: Sonlandırıcılar korunmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|FinalizersShouldBeProtected|
 |CheckId|CA2221|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Ortak tür, Aile (korumalı) erişimi belirtmeyen bir Sonlandırıcı uygular.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Sonlandırıcılar aile erişim değiştiricisi kullanmalıdır. Bu kural, Visual Basic ve Visual C# C++ derleyicileri tarafından zorlanır.
+ Sonlandırıcılar aile erişim değiştiricisi kullanmalıdır. Bu kural C#, Visual Basic ve Visual C++ derleyicileri tarafından zorlanır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini onarmak için sonlandırıcıyı aile erişimi olacak şekilde değiştirin.

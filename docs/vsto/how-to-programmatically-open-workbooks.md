@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla çalışma kitaplarını açma'
+title: 'Nasıl yapılır: program aracılığıyla çalışma kitaplarını açma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,36 +13,36 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: facf3cbeb6635324e74244983fcb33138ad64cfe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 10a849d8545565e450cd099b32a9e3e8f7f11b56
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812398"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537910"
 ---
-# <a name="how-to-programmatically-open-workbooks"></a>Nasıl yapılır: Program aracılığıyla çalışma kitaplarını açma
-  <xref:Microsoft.Office.Interop.Excel.Workbooks> Microsoft Office Excel koleksiyonda mümkün kılar açık olan tüm çalışma kitapları ile ve çalışma kitaplarını açma.
+# <a name="how-to-programmatically-open-workbooks"></a>Nasıl yapılır: program aracılığıyla çalışma kitaplarını açma
+  <xref:Microsoft.Office.Interop.Excel.Workbooks>Microsoft Office Excel 'deki koleksiyon, tüm açık çalışma kitapları ile çalışmayı ve çalışma kitaplarını açmayı olanaklı kılar.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="to-open-an-existing-workbook"></a>Mevcut bir çalışma kitabını açmak için
 
-1. Kullanım <xref:Microsoft.Office.Interop.Excel.Workbooks.Open%2A> yöntemi <xref:Microsoft.Office.Interop.Excel.Workbooks> yolu çalışma kitabına geçirme koleksiyonu.
+1. <xref:Microsoft.Office.Interop.Excel.Workbooks.Open%2A> <xref:Microsoft.Office.Interop.Excel.Workbooks> Çalışma kitabının yolunu geçirerek koleksiyonun yöntemini kullanın.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#2](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#2)]
      [!code-vb[Trin_VstcoreExcelAutomation#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#2)]
 
-## <a name="compile-the-code"></a>Kod derleme
- Bu kod örneği için aşağıdakiler gereklidir:
+## <a name="compile-the-code"></a>Kodu derle
+ Bu kod örneği şunları gerektirir:
 
-- Adlı bir çalışma kitabı `YourWorkbook.xls` adlı bir dizinde bulunmalıdır `Test` c sürücüsünün
+- Adlı bir çalışma kitabı `YourWorkbook.xls` , C sürücüsünde adlı bir dizinde bulunmalıdır `Test` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çalışma kitaplarıyla çalışma](../vsto/working-with-workbooks.md)
-- [Nasıl yapılır: Metin dosyalarını program aracılığıyla çalışma kitapları olarak açma](../vsto/how-to-programmatically-open-text-files-as-workbooks.md)
-- [Nasıl yapılır: Yeni çalışma kitaplarını program aracılığıyla oluşturma](../vsto/how-to-programmatically-create-new-workbooks.md)
-- [Nasıl yapılır: Çalışma kitaplarını program aracılığıyla kaydetme](../vsto/how-to-programmatically-save-workbooks.md)
-- [Nasıl yapılır: Çalışma kitaplarını program aracılığıyla kapatma](../vsto/how-to-programmatically-close-workbooks.md)
-- [Konak denetimlerinin ve konak öğelerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Çalışma kitaplarında çalışma](../vsto/working-with-workbooks.md)
+- [Nasıl yapılır: program aracılığıyla metin dosyalarını çalışma kitabı olarak açma](../vsto/how-to-programmatically-open-text-files-as-workbooks.md)
+- [Nasıl yapılır: program aracılığıyla yeni çalışma kitapları oluşturma](../vsto/how-to-programmatically-create-new-workbooks.md)
+- [Nasıl yapılır: program aracılığıyla çalışma kitaplarını kaydetme](../vsto/how-to-programmatically-save-workbooks.md)
+- [Nasıl yapılır: program aracılığıyla çalışma kitaplarını kapatma](../vsto/how-to-programmatically-close-workbooks.md)
+- [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)
-- [Konak öğelerine ve denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
+- [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)

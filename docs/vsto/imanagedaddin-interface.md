@@ -1,7 +1,7 @@
 ---
 title: IManagedAddin arabirimi
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: interface
 dev_langs:
 - VB
 - CSharp
@@ -12,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 320b20fa40250ca47dd414b362059e152eba2c3b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b436d76164b1744cffe16593149f64d219d04bf1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63420988"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541134"
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin arabirimi
-  Uygulama yükleyen bir bileşen oluşturmak için Imanagedaddin arabirimi VSTO eklentileri yönetilen. Bu arabirim 2007 Microsoft Office sistemi eklendi.
+  Yönetilen VSTO Eklentilerini yükleyen bir bileşen oluşturmak için IManagedAddin arabirimini uygulayın. Bu arabirim 2007 Microsoft Office sistemine eklenmiştir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 [
@@ -41,48 +41,48 @@ interface IManagedAddin : IUnknown
 ```
 
 ## <a name="methods"></a>Yöntemler
- Imanagedaddin arabirimi tarafından tanımlanan yöntemler aşağıdaki tabloda listelenmiştir.
+ Aşağıdaki tabloda, IManagedAddin arabirimi tarafından tanımlanan Yöntemler listelenmiştir.
 
-|Ad|Açıklama|
+|Name|Description|
 |----------|-----------------|
-|[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Microsoft Office çağırılır uygulama yönetilen bir VSTO eklentisi yükler.|
-|[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Yalnızca Microsoft Office önce çağırılır, yönetilen bir VSTO eklentisi uygulamasını kaldırır.|
+|[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Microsoft Office bir uygulama yönetilen bir VSTO eklentisini yüklediğinde çağırılır.|
+|[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Microsoft Office bir uygulama, yönetilen VSTO eklentisini kaldırmadan hemen önce çağırılır.|
 
 ## <a name="remarks"></a>Açıklamalar
- 2007 Microsoft Office sistemi ile başlayarak, Microsoft Office uygulamaları, Office, VSTO eklentileri yükünü dengeleyebilmek için Imanagedaddin arabirimi kullanın. Kendi VSTO eklentisi yükleyici oluşturmak için Imanagedaddin arabirimi uygulayabilir ve çalışma zamanı için VSTO VSTO eklentisi yükleyicisini kullanmak yerine eklentileri, yönetilen (*VSTOLoader.dll*) ve [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. Daha fazla bilgi için [mimarisi, VSTO eklentileri](../vsto/architecture-of-vsto-add-ins.md).
+ Microsoft Office uygulamalar, 2007 Microsoft Office sisteminden başlayarak Office VSTO Eklentilerini yüklemeye yardımcı olması için IManagedAddin arabirimini kullanın. VSTO eklentisi yükleyicisini (*VSTOLoader.dll*) kullanmak yerine, yönetilen VSTO eklentileri IÇIN kendi VSTO eklenti yükleyicinizi ve çalışma zamanını oluşturmak üzere IManagedAddin arabirimini uygulayabilirsiniz [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Daha fazla bilgi için bkz. [VSTO eklentileri mimarisi](../vsto/architecture-of-vsto-add-ins.md).
 
-## <a name="how-managed-add-ins-are-loaded"></a>Yönetilen eklentiler yüklenen nasıl
- Aşağıdaki adımlar, bir uygulama başladığında gerçekleşir:
+## <a name="how-managed-add-ins-are-loaded"></a>Yönetilen eklentiler nasıl yüklenir
+ Bir uygulama başlatıldığında aşağıdaki adımlar oluşur:
 
-1. Uygulama, aşağıdaki kayıt defteri anahtarı altında girişleri arayarak VSTO eklentileri bulur:
+1. Uygulama, aşağıdaki kayıt defteri anahtarı altındaki girdileri arayarak VSTO Eklentilerini bulur:
 
-    **HKEY_CURRENT_USER\Software\Microsoft\Office\\ *\<uygulama adı >* \Addins\\**
+    **HKEY_CURRENT_USER \Software\Microsoft\Office \\ *\<application name>* \ eklentileri\\**
 
-    Bu kayıt defteri anahtarı altında her girişin bir VSTO eklentisinin benzersiz kimliğidir. Genellikle, VSTO eklenti derlemesinin adını budur.
+    Bu kayıt defteri anahtarı altındaki her giriş, VSTO eklentisinin benzersiz KIMLIĞIDIR. Genellikle, bu, VSTO eklenti derlemesinin adıdır.
 
-2. Uygulama arayan bir `Manifest` her VSTO eklentisi için giriş altındaki girişi.
+2. Uygulama, `Manifest` her VSTO eklentisi için giriş altında bir giriş arar.
 
-    Yönetilen VSTO eklentileri depolayabileceğiniz bir bildirimde tam yolunu `Manifest` altında girdisi **HKEY_CURRENT_USER\Software\Microsoft\Office\\ _\<uygulama adı >_ \Addins\\  _\<eklenti kimliği >_ **. VSTO eklentisi yükünü dengeleyebilmek için kullanılan bilgileri sağlayan bir dosya (genellikle, bir XML dosyası) bildirimidir.
+    Yönetilen VSTO eklentileri `Manifest` **HKEY_CURRENT_USER \Software\microsoft\office \\ _\<application name>_ \\ _\<add-in ID>_ \ AddIns**altındaki girişte bir bildirimin tam yolunu saklayabilir. Bildirim, VSTO eklentisini yüklemeye yardımcı olmak için kullanılan bilgileri sağlayan bir dosyadır (genellikle bir XML dosyasıdır).
 
-3. Uygulama bulursa bir `Manifest` girişi, uygulama yönetilen bir VSTO eklentisi yükleyici bileşeni yüklemek çalışır. Imanagedaddin arabirimi uygulayan bir COM nesnesi oluşturmak deneyerek uygulamanın bunu yapar.
+3. Uygulama bir `Manifest` giriş bulursa, uygulama yönetilen BIR VSTO eklentisi yükleyici bileşeni yüklemeye çalışır. Uygulama, IManagedAddin arabirimini uygulayan bir COM nesnesi oluşturmaya çalışırken bunu yapar.
 
-    [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Bir VSTO eklentisi yükleyici bileşeni içerir (*VSTOLoader.dll*), veya uygulama tarafından kendi Imanagedaddin arabirimi oluşturabilirsiniz.
+    , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] BIR VSTO eklentisi yükleyici bileşeni (*VSTOLoader.dll*) içerir veya IManagedAddin arabirimini uygulayarak kendi kendinize de oluşturabilirsiniz.
 
-4. Uygulama çağrıları [IManagedAddin::Load](../vsto/imanagedaddin-load.md) yöntemi ve değerini geçişlerinde `Manifest` girişi.
+4. Uygulama, [IManagedAddin:: Load](../vsto/imanagedaddin-load.md) yöntemini çağırır ve girdinin değerini geçirir `Manifest` .
 
-5. [IManagedAddin::Load](../vsto/imanagedaddin-load.md) yöntemi VSTO VSTO yüklenmekte eklentisi için uygulama etki alanı ve güvenlik ilkesi yapılandırma gibi eklentiyi yüklemek için gerekli görevleri gerçekleştirir.
+5. [IManagedAddin:: Load](../vsto/imanagedaddin-load.md) yöntemi, YÜKLENMEKTE olan VSTO eklentisi için uygulama etki alanını ve güvenlik ilkesini yapılandırma gıbı, VSTO eklentisini yüklemek için gereken görevleri gerçekleştirir.
 
-   Tarafından yönetilen bulmak ve yüklemek için Microsoft Office uygulamalarını kullanmaktadır anahtarlar VSTO eklentileri için kayıt hakkında daha fazla bilgi için bkz: [VSTO eklentileri için kayıt defteri girdileri](../vsto/registry-entries-for-vsto-add-ins.md).
+   Microsoft Office uygulamalar tarafından yönetilen VSTO eklentileri bulma ve yükleme için kullanılan kayıt defteri anahtarları hakkında daha fazla bilgi için bkz. [VSTO eklentileri Için kayıt defteri girişleri](../vsto/registry-entries-for-vsto-add-ins.md).
 
-## <a name="guidance-to-implement-imanagedaddin"></a>Imanagedaddin uygulamak için kılavuz
- Imanagedaddin uygularsanız, uygulama aşağıdaki CLSID içeren DLL kaydetmeniz gerekir:
+## <a name="guidance-to-implement-imanagedaddin"></a>IManagedAddin uygulama kılavuzu
+ IManagedAddin uygularsanız, uygulamayı içeren DLL 'yi aşağıdaki CLSID 'yi kullanarak kaydetmeniz gerekir:
 
  99D651D7-5F7C-470E-8A3B-774D5D9536AC
 
- Microsoft Office uygulamaları, bu CLSID Imanagedaddin uygulayan COM nesne oluşturmak için kullanın.
+ Microsoft Office uygulamalar, IManagedAddin uygulayan COM nesnesini oluşturmak için bu CLSID 'yi kullanır.
 
 > [!CAUTION]
-> Bu CLSID tarafından da kullanılan *VSTOLoader.dll* içinde [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. Bu nedenle, kendi VSTO eklentisi yükleyici ve çalışma zamanı bileşeni oluşturma Imanagedaddin kullanırsanız, VSTO dayanan eklentileri çalıştıran bilgisayarlara bileşeniniz dağıtamazsınız [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)].
+> Bu CLSID, içinde *VSTOLoader.dll* tarafından da kullanılır [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Bu nedenle, kendi VSTO eklenti yükleyicinizi ve çalışma zamanı bileşenini oluşturmak için IManagedAddin kullanıyorsanız, bileşeninizi ' i kullanan VSTO Eklentilerini çalıştıran bilgisayarlara dağıtamazsınız [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Yönetilmeyen API Başvurusu &#40;Visual Studio'da Office geliştirme&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)
+- [Yönetilmeyen API başvurusu &#40;Visual Studio 'da Office geliştirme&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)

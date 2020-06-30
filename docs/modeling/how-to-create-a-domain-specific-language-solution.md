@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Etki Alanına Özgü Dil Çözümü Oluşturma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.designerwizard
 helpviewer_keywords:
@@ -13,21 +13,21 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 175da19782927f8c84b9fae0e6d9820a22bd891a
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 844f3eb97ed9e07aa8125688d2bfe8944249b008
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594675"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541797"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Nasıl yapılır: Etki Alanına Özgü Dil Çözümü Oluşturma
 Özel bir Visual Studio çözümü kullanılarak, etki alanına özgü dil (DSL) oluşturulur.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
 
-- {1&gt;Visual Studio&lt;1}
+- Visual Studio
 - Visual Studio SDK ( **Visual Studio uzantısı geliştirme** iş yükünün parçası olarak yüklenir)
 - Modelleme SDK 'Sı (Visual Studio bileşeni olarak yüklenir)
 
@@ -38,7 +38,7 @@ Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
 1. Yeni bir **alana özgü dil Tasarımcısı** PROJESI oluşturarak dsl Sihirbazı 'nı başlatın.
 
    > [!NOTE]
-   > Tercihen, kod oluşturmak için kullanılabilecek proje için seçtiğiniz adın geçerli bir görsel C# tanımlayıcı olması gerekir.
+   > Tercihen, proje için seçtiğiniz ad, kod oluşturmak için kullanılabilecek geçerli bir Visual C# tanımlayıcısı olmalıdır.
 
    ::: moniker range="vs-2017"
 
@@ -65,7 +65,7 @@ Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
    > [!NOTE]
    > Güvenilmeyen kaynaklardan metin şablonlarını çalıştıracağınızı belirten bir ileti görürseniz, **Tamam**' a tıklayın. Bu iletiyi tekrar görünmeyecek şekilde ayarlayabilirsiniz.
 
-## <a name="settings"></a>DSL Tasarımcısı Sihirbazı sayfaları
+## <a name="the-dsl-designer-wizard-pages"></a><a name="settings"></a>DSL Tasarımcısı Sihirbazı sayfaları
  Birçok alandan birini varsayılan değerlerinden farklı bırakabilirsiniz. Ancak, dosya uzantısı alanını ayarladığınızdan emin olun.
 
 ### <a name="solution-settings-page"></a>Çözüm ayarları sayfası
@@ -73,7 +73,7 @@ Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
 Oluşturmak istediğiniz DSL 'ye benzer bir şablon seçin. Farklı şablonlar, uygun başlangıç noktaları sağlar. Bir çözüm şablonu seçtiğinizde, sihirbaz bir açıklama görüntüler. Çözüm şablonları hakkında daha fazla bilgi için bkz. [etki alanına özgü dil çözümü şablonu seçme](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
  **Etki alanına özgü dilinizi ne adlandırmak istiyorsunuz?**
-Çözüm adı varsayılan olarak belirlenmiştir. Kod bu değerden oluşturulur. C# Sınıf adı olarak geçerli olmalıdır.
+Çözüm adı varsayılan olarak belirlenmiştir. Kod bu değerden oluşturulur. C# sınıf adı olarak geçerli olmalıdır.
 
 ### <a name="file-extension-page"></a>Dosya uzantısı sayfası
  **Model dosyalarının kullanması gereken uzantı nedir?**
@@ -87,11 +87,11 @@ Yeni bir dosya uzantısı yazın.
 
 - Farklı bir dosya uzantısı yazın.
 
-     \- veya -
+     \-veya
 
 - Visual Studio Deneysel örneğini sıfırlayın. Bu, daha önce oluşturduğunuz tüm DSLs 'lerin kaydını siler. **Başlat** menüsünde, **tüm programlar**, **Microsoft Visual Studio 2010 SDK**ve **araçlar**' a tıklayın ve ardından **Microsoft Visual Studio 2010 Deneysel örneğini sıfırlayın**. Yeniden kullanmak istediğiniz tüm diğer DSLs 'leri yeniden oluşturabilirsiniz.
 
-     \- veya -
+     \-veya
 
 - Bu dosya uzantısını kullanan bir Visual Studio uzantısı bilgisayarınızda tamamen yüklüyse, kaldırın. **Araçlar** menüsünde, **Uzantı Yöneticisi**' ne tıklayın.
 
@@ -119,4 +119,4 @@ Bu, varsayılan olarak şirketinizden ve ürün adınızdan oluşan bir addır.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır: Etki Alanına Özgü bir Dili Tanımlama](../modeling/how-to-define-a-domain-specific-language.md)
-- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

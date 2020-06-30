@@ -15,17 +15,17 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 318b7b8adddd674a9b8ecb93441d69a76ab574dd
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: ba64c27cde5f335f32cca362417078a5c9ed13e3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586781"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538586"
 ---
 # <a name="ca2001-avoid-calling-problematic-methods"></a>CA2001: Sorunlu metotları çağırmaktan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|AvoidCallingProblematicMethods|
 |CheckId|CA2001|
@@ -40,11 +40,11 @@ ms.locfileid: "82586781"
 
  Bu kuralın ihlali, bir üye aşağıdaki yöntemlerden birini çağırdığında oluşur.
 
-|Yöntem|Açıklama|
+|Yöntem|Description|
 |------------|-----------------|
 |<xref:System.GC.Collect%2A?displayProperty=fullName>|GC çağrılıyor. Toplama, uygulama performansını önemli ölçüde etkileyebilir ve nadiren gereklidir. Daha fazla bilgi için bkz. MSDN 'de [Riko Marianı 'Nin performans](https://docs.microsoft.com/archive/blogs/ricom/when-to-call-gc-collect) ve blog girişi.|
-|<xref:System.Threading.Thread.Resume%2A?displayProperty=fullName><br /><br /> <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>|Thread. Suspend ve Thread. özgeçmişi öngörülemeyen davranışları nedeniyle kullanım dışı bırakıldı.  <xref:System.Threading> Ad <xref:System.Threading.Monitor>alanındaki <xref:System.Threading.Mutex>diğer sınıfları kullanın, örneğin,, ve <xref:System.Threading.Semaphore> iş parçacıklarını senkronize etmek ya da kaynakları korumak için.|
-|<xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A?displayProperty=fullName>|DangerousGetHandle çağrısını yöntemi, geçerli olmayan bir tanıtıcı döndürebildiğinden bir güvenlik riski taşıyor. DangerousGetHandle çağrısını yönteminin <xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A> nasıl güvenli <xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A> bir şekilde kullanılacağı hakkında daha fazla bilgi için bkz. ve yöntemleri.|
+|<xref:System.Threading.Thread.Resume%2A?displayProperty=fullName><br /><br /> <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>|Thread. Suspend ve Thread. özgeçmişi öngörülemeyen davranışları nedeniyle kullanım dışı bırakıldı.  Ad alanındaki diğer sınıfları kullanın, örneğin,, <xref:System.Threading> <xref:System.Threading.Monitor> <xref:System.Threading.Mutex> ve <xref:System.Threading.Semaphore> iş parçacıklarını senkronize etmek ya da kaynakları korumak için.|
+|<xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A?displayProperty=fullName>|DangerousGetHandle çağrısını yöntemi, geçerli olmayan bir tanıtıcı döndürebildiğinden bir güvenlik riski taşıyor. <xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A> <xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A> DangerousGetHandle çağrısını yönteminin nasıl güvenli bir şekilde kullanılacağı hakkında daha fazla bilgi için bkz. ve yöntemleri.|
 |<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>|Bu yöntemler, beklenmeyen konumlardan derleme yükleyebilir. Örneğin, bkz. Suzanne Cook 'ın .NET CLR notları blog gönderileri [LoadFile vs. LoadFrom](https://docs.microsoft.com/archive/blogs/suzcook/loadfile-vs-loadfrom) ve derlemeleri yükleyen yöntemler hakkında BILGI Için MSDN Web sitesinde [bağlama bağlamı seçme](https://docs.microsoft.com/archive/blogs/suzcook/choosing-a-binding-context) .|
 |[Cosetproxypaket](https://msdn.microsoft.com/library/ms692692.aspx) (Ole32)<br /><br /> [CoInitializeSecurity](https://msdn.microsoft.com/library/ms693736.aspx) (Ole32)|Yönetilen bir işlemde kullanıcı kodunun yürütülmeye başladığı zaman, Cosetproxypaket güvenilir bir şekilde çağrılamaz. Ortak dil çalışma zamanı (CLR), kullanıcıların P/Invoke işleminin başarılı olmasını engelleyebilen başlatma eylemleri alır.<br /><br /> Yönetilen bir uygulama için Cosetproxyıncall çağrısı yapmanız gerekiyorsa, bir yerel kod (C++) yürütülebilirini kullanarak işlemi başlatmanız, yerel kodda Cosetproxyıncall çağrısı yapmanız ve sonra yönetilen kod uygulamanızı işlem içinde başlatmanız önerilir. (Bir çalışma zamanı sürüm numarası belirttiğinizden emin olun.)|
 

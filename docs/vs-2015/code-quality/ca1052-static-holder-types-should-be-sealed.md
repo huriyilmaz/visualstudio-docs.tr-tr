@@ -15,17 +15,17 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 75498be48e5ed4e723a95c5193001720db878458
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 14231cc4dcde5aed5cabc2d8a6172a002c0ba6bf
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668896"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539756"
 ---
 # <a name="ca1052-static-holder-types-should-be-sealed"></a>CA1052: Static tutucu türler sealed olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|StaticHolderTypesShouldBeSealed|
 |CheckId|CA1052|
@@ -36,17 +36,17 @@ ms.locfileid: "72668896"
  Ortak veya korumalı tür yalnızca statik Üyeler içeriyor ve [Sealed](https://msdn.microsoft.com/library/8e4ed5d3-10be-47db-9488-0da2008e6f3f) ([NotInheritable](https://msdn.microsoft.com/library/5c4da7c9-9562-4653-a947-1972e992f9f9)) değiştiricisi ile bildirilmemiş.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, türü türetilmiş bir türde geçersiz kılınabilen bir işlev sağlamadığından, yalnızca statik üyeleri içeren bir türün devralınabilmesi için tasarlanmadığını varsayar. Devralınmayan bir tür, bir temel tür olarak kullanımını önlemek için `sealed` değiştiricisiyle işaretlenmelidir.
+ Bu kural, türü türetilmiş bir türde geçersiz kılınabilen bir işlev sağlamadığından, yalnızca statik üyeleri içeren bir türün devralınabilmesi için tasarlanmadığını varsayar. Devralınmayan bir tür, `sealed` bir temel tür olarak kullanımını yasaklamak için değiştiriciyle işaretlenmelidir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için, türü `sealed` olarak işaretleyin. @No__t_0 2,0 veya önceki bir sürümü hedefliyorsanız, türü `static` olarak işaretlemek daha iyi bir yaklaşımdır. Bu şekilde, sınıfın oluşturulmasını önlemek için özel bir Oluşturucu bildirmek zorunda kalmaktan kaçının.
+ Bu kural ihlalini onarmak için türü olarak işaretleyin `sealed` . [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]2,0 veya daha önceki bir sürümü hedefliyorsanız, türü olarak işaretlemek daha iyi bir yaklaşımdır `static` . Bu şekilde, sınıfın oluşturulmasını önlemek için özel bir Oluşturucu bildirmek zorunda kalmaktan kaçının.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Yalnızca tür devralınacak şekilde tasarlandıysa, bu kuraldan bir uyarı gizleyin. @No__t_0 değiştiricinin yokluğu, türün temel tür olarak yararlı olduğunu önerir.
+ Yalnızca tür devralınacak şekilde tasarlandıysa, bu kuraldan bir uyarı gizleyin. Değiştiricinin yokluğu, `sealed` türün temel tür olarak yararlı olmasını önerir.
 
 ## <a name="example-of-a-violation"></a>Ihlalin örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, kuralı ihlal eden bir türü gösterir.
 
 ### <a name="code"></a>Kod
@@ -56,11 +56,11 @@ ms.locfileid: "72668896"
 
 ## <a name="fix-with-the-static-modifier"></a>Statik değiştiriciyle onarma
 
-### <a name="description"></a>Açıklama
- Aşağıdaki örnek, türü `static` değiştiricisi ile işaretleyerek bu kural ihlalinin nasıl düzeltileceğini gösterir.
+### <a name="description"></a>Description
+ Aşağıdaki örnek, türü değiştiriciyle işaretleyerek bu kural ihlalinin nasıl düzeltileceğini gösterir `static` .
 
 ### <a name="code"></a>Kod
  [!code-csharp[FxCop.Design.StaticMembersFixed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.StaticMembersFixed/cs/FxCop.Design.StaticMembersFixed.cs#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1053: Statik tutucu türlerinde oluşturucular olmamalıdır ](../code-quality/ca1053-static-holder-types-should-not-have-constructors.md)
+ [CA1053: Static tutucu türlerin oluşturucuları olmamalıdır](../code-quality/ca1053-static-holder-types-should-not-have-constructors.md)

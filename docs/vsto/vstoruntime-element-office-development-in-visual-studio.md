@@ -1,7 +1,7 @@
 ---
-title: "&lt;vstoRuntime&gt; öğesi (Visual Studio'da Office Geliştirme)"
+title: "&lt;vstoRuntime &gt; öğesi (Visual Studio 'Da Office geliştirme)"
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 98f483748cce9c3a053c800f9bdd6e0f3d651da2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 985afe50d7c6edcfdb34e2ca046f59c5f7b664a0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982132"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541888"
 ---
-# <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoRuntime&gt; öğesi (Visual Studio'da Office Geliştirme)
-  `vstoRuntime` Öğesinin `vstav3` ad alanı, belirli bir Office çözümü için Office çalışma zamanı için Visual Studio Araçları'nın desteklenen bir sürümünü içerir.
+# <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoRuntime &gt; öğesi (Visual Studio 'Da Office geliştirme)
+  `vstoRuntime`Ad alanı öğesi, `vstav3` belirli bir Office çözümü için Office çalışma zamanının Visual Studio Araçları desteklenen bir sürümünü içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <vstoRuntime
@@ -34,20 +34,20 @@ ms.locfileid: "62982132"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `vstoRuntime` Öğesi gereklidir ve içinde `vstav3` ad alanı. Office çözümünü Office çalışma zamanı için Visual Studio Araçları'nın iki sürümü destekliyorsa, var olan iki `vstoRuntime` uygulama bildiriminde öğeler.
+ `vstoRuntime`Öğesi gereklidir ve `vstav3` ad alanında bulunur. Office çözümü, Office çalışma zamanı için Visual Studio Araçları iki sürümünü destekliyorsa, `vstoRuntime` uygulama bildiriminde iki öğe vardır.
 
- `vstoRuntime` Öğesinde şu öznitelikler bulunur.
+ `vstoRuntime`Öğesi aşağıdaki özniteliklere sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`release`|Gerekli. Office çalışma zamanı için Visual Studio Araçları'nın sürümü.|
-|`version`|Gerekli. Office çalışma zamanı için Visual Studio Araçları sürüm numarası.|
-|`supportUrl`|İsteğe bağlı. Office çalışma zamanı için Visual Studio Araçları yükleme konumunu bağlayın.|
+|`release`|Gereklidir. Office çalışma zamanı için Visual Studio Araçları yayın sürümü.|
+|`version`|Gereklidir. Office çalışma zamanı Visual Studio Araçları sürüm numarası.|
+|`supportUrl`|İsteğe bağlı. Office çalışma zamanı Visual Studio Araçları yükleme konumuna bağlantı.|
 
- `vstoRuntime` öğe yok.
+ `vstoRuntime`öğesi yok.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneğinde gösterilmiştir `vstoRuntime` öğesi kullanılarak dağıtılan bir Office çözümü için uygulama bildiriminde [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+ Aşağıdaki kod örneği, `vstoRuntime` kullanılarak dağıtılan bir Office çözümünün uygulama bildiriminde bulunan öğesini göstermektedir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ```xml
 <vstav3:vstoRuntime
@@ -60,4 +60,4 @@ ms.locfileid: "62982132"
 
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

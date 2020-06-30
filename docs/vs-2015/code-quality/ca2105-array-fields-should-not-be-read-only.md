@@ -15,28 +15,28 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7599359899ca4860913b5bc0dd601fd06d9b8b54
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: db52bf869642a5bdcc28eeb0792b295ae314a508
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666020"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538677"
 ---
 # <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105: Dizi alanları salt okunur olmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ArrayFieldsShouldNotBeReadOnly|
 |CheckId|CA2105|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir diziyi tutan ortak veya korumalı bir alan salt okunurdur.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Dizi içeren bir alana `readonly` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]`ReadOnly`) değiştiricisini uyguladığınızda, alan farklı bir diziye başvuracak şekilde değiştirilemez. Bir dizinin öğeleri salt okunur bir alanda depolanmış olsa bile değiştirilebilir. Herkese açık bir şekilde erişilebilen salt yazılır bir dizinin öğelerine dayalı işlemler yapan veya kararları veren kod, açıktan yararlanılır bir güvenlik açığı içerebilir.
+ `readonly` `ReadOnly` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Bir dizi içeren bir alana (ın) değiştiricisini uyguladığınızda, alan farklı bir diziye başvuracak şekilde değiştirilemez. Bir dizinin öğeleri salt okunur bir alanda depolanmış olsa bile değiştirilebilir. Herkese açık bir şekilde erişilebilen salt yazılır bir dizinin öğelerine dayalı işlemler yapan veya kararları veren kod, açıktan yararlanılır bir güvenlik açığı içerebilir.
 
  Ortak bir alana sahip olmanın CA1051 tasarım kuralını da ihlal ettiğini unutmayın [: görünür örnek alanlarını bildirme](../code-quality/ca1051-do-not-declare-visible-instance-fields.md).
 
@@ -50,10 +50,10 @@ ms.locfileid: "72666020"
   İkinci yaklaşımı seçerseniz, alanı bir özelliği ile değiştirmeyin; dizileri döndüren Özellikler performansı olumsuz etkiler. Daha fazla bilgi için bkz. [CA1819: Properties dizileri döndürmemelidir](../code-quality/ca1819-properties-should-not-return-arrays.md).
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan bir uyarının dışlanmasını kesinlikle önerilmez. Neredeyse bir salt okuma alanının içeriğinin önemli olmadığı neredeyse hiçbir senaryo meydana gelir. Bu durumda senaryonuz varsa iletiyi dışlamak yerine `readonly` değiştiricisini kaldırın.
+ Bu kuraldan bir uyarının dışlanmasını kesinlikle önerilmez. Neredeyse bir salt okuma alanının içeriğinin önemli olmadığı neredeyse hiçbir senaryo meydana gelir. Bu durumda senaryonuz varsa, `readonly` iletiyi dışlamak yerine değiştiriciyi kaldırın.
 
 ## <a name="example"></a>Örnek
- Bu örnek, bu kuralı ihlal eden tehlikeleri gösterir. İlk bölüm, güvenli olmayan iki alan (`grades` ve `privateGrades`) içeren `MyClassWithReadOnlyArrayField`türü olan bir örnek kitaplık gösterir. Alan `grades` geneldir ve bu nedenle herhangi bir çağırana karşı savunmasız olur. `privateGrades` alan özeldir, ancak `GetPrivateGrades` yöntemi tarafından çağıranlara döndürüldüğünden güvenlik açığı devam etmektedir. `securePrivateGrades` alanı, `GetSecurePrivateGrades` yöntemi tarafından güvenli bir şekilde sunulur. İyi tasarım uygulamalarını izlemek için özel olarak bildirilmiştir. İkinci bölüm `grades` ve `privateGrades` üyelerinde depolanan değerleri değiştiren kodu gösterir.
+ Bu örnek, bu kuralı ihlal eden tehlikeleri gösterir. İlk bölüm, `MyClassWithReadOnlyArrayField` güvenli olmayan iki alan (ve) içeren bir türü olan örnek bir kitaplığı gösterir `grades` `privateGrades` . Alan `grades` geneldir ve bu nedenle herhangi bir çağırana karşı savunmasız olur. Alan `privateGrades` özeldir, ancak yöntem tarafından çağıranlara döndürüldüğünden hala güvenlik açığı vardır `GetPrivateGrades` . `securePrivateGrades`Alan, yöntemi tarafından güvenli bir şekilde sunulur `GetSecurePrivateGrades` . İyi tasarım uygulamalarını izlemek için özel olarak bildirilmiştir. İkinci bölüm, ve üyelerinde depolanan değerleri değiştiren kodu gösterir `grades` `privateGrades` .
 
  Örnek sınıf kitaplığı aşağıdaki örnekte görünür.
 
@@ -66,7 +66,7 @@ ms.locfileid: "72666020"
 
  Bu örnekteki çıktı:
 
- **Değişiklik yapmadan önce: Notlar: 90, 90, 90 özel notlar: 90, 90, 90 Secure notlar, 90, 90, 90**
-**değiştirildikten sonra: Notlar: 90, 555, 90 özel notlar: 90, 555, 90 güvenli notlar, 90, 90, 90**
+ **Değişiklik yapmadan önce: Notlar: 90, 90, 90 özel notlar: 90, 90, 90 Secure notlar, 90, 90, 90** 
+ **Değişiklik sonrasında: Notlar: 90, 555, 90 özel notlar: 90, 555, 90 Secure notlar, 90, 90, 90**
 ## <a name="see-also"></a>Ayrıca Bkz.
  <xref:System.Array?displayProperty=fullName> <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>

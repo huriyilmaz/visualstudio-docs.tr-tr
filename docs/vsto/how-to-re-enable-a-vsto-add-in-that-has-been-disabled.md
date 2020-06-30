@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Bir VSTO devre dışı bırakılmış eklentiyi yeniden etkinleştirme'
+title: 'Nasıl yapılır: devre dışı bırakılmış bir VSTO eklentisini yeniden etkinleştirme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VST.Warning.DisabledAddIn
 dev_langs:
@@ -16,64 +16,64 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9cdb05328d2a59eb61c57f8f028ade1af0f7ce2f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 3575e119f4da3ca3050a28243104fb4773089cf3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63418807"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541264"
 ---
-# <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>Nasıl yapılır: Bir VSTO devre dışı bırakılmış eklentiyi yeniden etkinleştirme
-  Microsoft Office uygulamaları, beklenmedik şekilde davranmasına VSTO Add-Ins devre dışı bırakabilirsiniz. Uygulamanın VSTO eklenti yüklemez, hata ayıklamayı denediğinizde, uygulama sabit devre dışı ya da geçici olarak devre dışı bırakılmış VSTO eklenti gerekebilir.
+# <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>Nasıl yapılır: devre dışı bırakılmış bir VSTO eklentisini yeniden etkinleştirme
+  Microsoft Office uygulamalar, beklenmedik şekilde davranan VSTO eklentilerini devre dışı bırakabilir. Bir uygulama, hata ayıklamaya çalıştığınızda VSTO eklentisini yüklemezse, uygulama, VSTO eklentisini devre dışı bırakmış veya geçici olarak devre dışı bırakmış olabilir.
 
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]
 
-## <a name="hard-disabled-vsto-add-ins"></a>Sabit özelliği devre dışı bırakılmış VSTO eklentileri
- Sabit devre dışı bırakma, uygulama beklenmedik bir şekilde kapatmak VSTO eklentisi neden olduğunda oluşabilir. Hata ayıklayıcıyı, ayrıca geliştirme bilgisayarınızda oluşabilir <xref:Microsoft.Office.Tools.AddIn.Startup> olay işleyicisinde, VSTO eklentisi yürütülüyor.
+## <a name="hard-disabled-vsto-add-ins"></a>Sabit devre dışı bırakılmış VSTO eklentileri
+ Bir VSTO eklentisi uygulamanın beklenmedik şekilde kapatılmasına neden olduğunda, sabit devre dışı bırakma gerçekleşebilir. Ayrıca, <xref:Microsoft.Office.Tools.AddIn.Startup> VSTO eklentiinizdeki olay işleyicisi yürütülürken hata ayıklayıcıyı durdurursanız, geliştirme bilgisayarınızda da meydana gelebilir.
 
-### <a name="to-re-enable-a-vsto-add-in"></a>Bir VSTO eklentisini yeniden etkinleştirmek için
+### <a name="to-re-enable-a-vsto-add-in"></a>VSTO eklentisini yeniden etkinleştirmek için
 
-1. Uygulamada, tıklayın **dosya** sekmesi.
+1. Uygulamada, **Dosya** sekmesine tıklayın.
 
-2. Tıklayın *ApplicationName* **seçenekleri** düğmesi.
+2. *ApplicationName* **seçenekleri** düğmesine tıklayın.
 
-3. Kategorileri bölmesinden **eklentileri**.
+3. Kategoriler bölmesinde, **Eklentiler**' i tıklatın.
 
-4. Ayrıntılar bölmesinde, VSTO eklentisi göründüğünü doğrulayın **devre dışı uygulama eklentileri** listesi.
+4. Ayrıntılar bölmesinde, VSTO eklentisinin **devre dışı bırakılmış uygulama eklentileri** listesinde göründüğünü doğrulayın.
 
-     **Adı** sütunu derlemenin adını belirtir ve **konumu** sütun uygulama bildiriminin tam yolu belirtir.
+     **Ad** sütunu derlemenin adını belirtir ve **Location** sütunu uygulama bildiriminin tam yolunu belirtir.
 
-5. İçinde **Yönet** kutusunun **devre dışı öğeler**ve ardından **Git**.
+5. **Yönet** kutusunda, **devre dışı öğeler**' i ve sonra **Git**' i tıklatın.
 
-6. VSTO eklentisi seçip tıklayın **etkinleştirme**.
+6. VSTO eklentisini seçin ve **Etkinleştir**' e tıklayın.
 
-7. **Kapat**'ı tıklatın.
+7. **Kapat**' a tıklayın.
 
-## <a name="soft-disabled-vsto-add-ins"></a>Yazılım özelliği devre dışı bırakılmış VSTO eklentileri
- Bir VSTO eklentisi beklenmedik bir şekilde kapatmak uygulamanın neden olmayan bir hata oluşturursa, geçici olarak devre dışı bırakma ortaya çıkabilir. Sırasında işlenmeyen bir özel durum oluşturursa, bir uygulama geçici bir VSTO eklentisi devre dışı bırakabilir <xref:Microsoft.Office.Tools.AddIn.Startup> olay işleyicisi yürütüyordur.
+## <a name="soft-disabled-vsto-add-ins"></a>Geçici olarak devre dışı VSTO eklentileri
+ Bir VSTO eklentisi uygulamanın beklenmedik şekilde kapatılmasına neden olmayan bir hata ürettiğinden, geçici devre dışı bırakma gerçekleşebilir. Örneğin, bir uygulama, olay işleyicisi yürütülürken işlenmeyen bir özel durum oluşturursa, VSTO eklentisini geçici olarak devre dışı bırakabilir <xref:Microsoft.Office.Tools.AddIn.Startup> .
 
 > [!NOTE]
-> Bir yazılım özelliği devre dışı bırakılmış VSTO eklentisini yeniden etkinleştirmeniz, uygulamayı hemen VSTO eklentisi yüklemeye çalışır. Başlangıçta VSTO eklentisi geçici olarak devre dışı bırakma uygulamaya neden olan sorunu düzelttik değil, uygulama geçici VSTO eklentisi tekrar devre dışı bırakır.
+> Geçici olarak devre dışı bırakılmış bir VSTO eklentisini yeniden etkinleştirdiğinizde, uygulama doğrudan VSTO eklentisini yüklemeye çalışır. İlk olarak uygulamanın, VSTO eklentisini geçici olarak devre dışı bırakmasına neden olan sorun düzeltilmediyse, uygulama VSTO eklentisini yeniden devre dışı bırakır.
 
-### <a name="to-re-enable-a-vsto-add-in"></a>Bir VSTO eklentisini yeniden etkinleştirmek için
+### <a name="to-re-enable-a-vsto-add-in"></a>VSTO eklentisini yeniden etkinleştirmek için
 
-1. Uygulamada, tıklayın **dosya** sekmesi.
+1. Uygulamada, **Dosya** sekmesine tıklayın.
 
-2. Tıklayın *ApplicationName* **seçenekleri** düğmesi.
+2. *ApplicationName* **seçenekleri** düğmesine tıklayın.
 
-3. Kategorileri bölmesinden **eklentileri**.
+3. Kategoriler bölmesinde, **Eklentiler**' i tıklatın.
 
-4. Ayrıntılar bölmesinde, VSTO eklentisi göründüğünü doğrulayın **etkin olmayan uygulama eklentileri** listesi.
+4. Ayrıntılar bölmesinde, VSTO eklentisinin **etkin olmayan uygulama eklentileri** listesinde göründüğünü doğrulayın.
 
-     **Adı** sütunu derlemenin adını belirtir ve **konumu** sütun uygulama bildiriminin tam yolu belirtir.
+     **Ad** sütunu derlemenin adını belirtir ve **Location** sütunu uygulama bildiriminin tam yolunu belirtir.
 
-5. İçinde **Yönet** kutusunun **COM eklentileri**ve ardından **Git**.
+5. **Yönet** kutusunda, **com eklentileri**' ne ve ardından **Git**' e tıklayın.
 
-6. İçinde **COM eklentileri** devre dışı bırakılmış VSTO eklentisi yanındaki onay kutusunu iletişim kutusunda seçin.
+6. **Com eklentileri** iletişim kutusunda, devre DıŞı bırakılmış VSTO eklentisinin yanındaki onay kutusunu işaretleyin.
 
-7. **Tamam**'ı tıklatın.
+7. **Tamam**'a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümleri oluşturun](../vsto/building-office-solutions.md)
+- [Office çözümleri oluşturma](../vsto/building-office-solutions.md)
 - [Office projelerinde hata ayıklama](../vsto/debugging-office-projects.md)
-- [VSTO eklentilerini programlama](../vsto/programming-vsto-add-ins.md)
+- [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)

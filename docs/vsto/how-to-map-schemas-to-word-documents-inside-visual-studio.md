@@ -1,9 +1,9 @@
 ---
-title: 'Nasıl yapılır: Şemaları Visual Studio içindeki Word belgeleriyle eşleştirme'
+title: 'Nasıl yapılır: şemaları Visual Studio içindeki Word belgeleriyle eşleme'
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,53 +16,53 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4c6f9ee9a7b636c6c12bfe2f8debcc05911e3b04
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 281d9dc18ae1d0550ba844e58d4e39c3723c8dfb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441763"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538157"
 ---
-# <a name="how-to-map-schemas-to-word-documents-inside-visual-studio"></a>Nasıl yapılır: Şemaları Visual Studio içindeki Word belgeleriyle eşleştirme
-  **Önemli** Microsoft Word ile ilgili bu konu kümesindeki bilgileri avantajı ve kişiler ve kimin bulunur Amerika Birleşik Devletleri ve kendi bölgeler dışında veya servis kullanan kuruluşlar için özel olarak sunulan veya geliştirme üzerinde çalışan programlar Ocak Microsoft uygulaması belirli işlevlerin ne zaman kaldırıldı 2010'dan önce Microsoft lisanslı Microsoft Word ürünler, Microsoft Word için özel XML ilgili. Bu bilgileri Microsoft Word ile ilgili değil okuma veya kişi ve kuruluşların Amerika Birleşik Devletleri ya da kullanarak veya Microsoft tarafından 10 Ocak 2010'dan sonra lisansına sahip Microsoft Word ürünleri üzerinde çalışan programlar geliştirme alt bölgeleri tarafından kullanılan ; Bu ürünlerin bu tarihten önce lisanslı veya satın alınan ve Amerika Birleşik Devletleri dışında kullanım için lisanslı ürünleri aynı davranmaz.
+# <a name="how-to-map-schemas-to-word-documents-inside-visual-studio"></a>Nasıl yapılır: şemaları Visual Studio içindeki Word belgeleriyle eşleme
+  **Önemli** Microsoft Word ile ilgili bu konu başlığı altında verilen bilgiler, Microsoft Word 'deki özel XML ile ilgili belirli bir işlevselliğin uygulanmasını kaldırdıkları zaman, Birleşik Devletler ve bölgeleri dışında bulunan veya Microsoft tarafından Microsoft tarafından lisanslanan Microsoft Word ürünleri, Microsoft 'un Microsoft Word ile ilgili belirli işlevlerin bir uygulamasını kaldırdığınızda Microsoft 'un 2010 Ocak 'tan önce lisanslı olduğu kişiler ve kuruluşların avantajı ve kullanımı için özel olarak sunulur. Microsoft Word ile ilgili bu bilgiler, Birleşik Devletler veya şirket içinde çalışan ya da Microsoft tarafından, 10 Ocak 2010 ' den sonra Microsoft tarafından lisanslanan Microsoft Word ürünlerini kullanan bireyler veya kuruluşlar tarafından okunamaz veya kullanılmıyor olabilir. Bu ürünler, bu tarihten önce lisanslanan ürünlerle aynı veya satın alınmadan ve Birleşik Devletler dışında kullanılmak üzere lisanslanmaz.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
- Belge, Visual Studio'da açıkken bir XML Şeması belge eşleyebilirsiniz. Visual Studio'nun dışında belge açıldığında kullandığınız aynı Microsoft Office Word araçları kullanırsınız. Office proje önce belgeye şema eşleştirdiğinizde veya Word çözümünüzü oluşturduktan sonra aynı nesneleri oluşturur.
+ Visual Studio 'da belge açıkken bir XML şemasını belgeyle eşleyebilirsiniz. Belge Visual Studio dışında açıldığında kullandığınız Microsoft Office Word araçlarını kullanırsınız. Office projesi, Word çözümünüzü oluşturmadan önce veya sonra şemayı belgeyle eşleştirdiğinizde aynı nesneleri oluşturur.
 
-## <a name="to-map-an-xml-schema-to-a-word-document-in-visual-studio"></a>Visual Studio'da bir Word belgesi bir XML Şeması eşlemek için
+## <a name="to-map-an-xml-schema-to-a-word-document-in-visual-studio"></a>Visual Studio 'da bir Word belgesi ile bir XML şemasını eşlemek için
 
-1. Visual Studio içindeki Word belgesi veya şablonu projesi açın.
+1. Visual Studio içinde Word belgesi veya şablon projesini açın.
 
-2. Belgenin tasarımcıya odağı taşımak için tıklayın.
+2. Odağı tasarımcıya taşımak için belgeye tıklayın.
 
-3. Şerit üzerinde tıklayın **Geliştirici** sekmesi.
+3. Şeritte **Geliştirici** sekmesine tıklayın.
 
     > [!NOTE]
-    > Varsa **Geliştirici** sekme görünür değilse, önce görünür olmalıdır. Daha fazla bilgi için [nasıl yapılır: Şeritte Geliştirici sekmesini gösterme](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
+    > **Geliştirici** sekmesi görünür değilse, önce onu göstermelisiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Şeritte Geliştirici sekmesini gösterme](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
 
-4. İçinde **XML** grubunda **şema**.
+4. **XML** grubunda, **şema**' ya tıklayın.
 
-     **Şablonları ve eklentileri** iletişim kutusu açılır.
+     **Şablonlar ve eklentiler** iletişim kutusu açılır.
 
-5. Tıklayın **XML Şeması** sekmesi.
+5. **XML şeması** sekmesine tıklayın.
 
-6. Tıklayın **şema ekleme**.
+6. **Şema ekle**' ye tıklayın.
 
-     **Şema Ekle** iletişim kutusu açılır.
+     **Şema ekle** iletişim kutusu açılır.
 
-7. Şema dosyasına göz atın, onu seçin ve ardından **açık**.
+7. Şema dosyanıza gidin, dosyayı seçin ve ardından **Aç**' a tıklayın.
 
      **Şema ayarları** iletişim kutusu açılır.
 
-8. Bir ad atayın veya tıklayın **Tamam** şema olmadan bir diğer ad eklemek için.
+8. Bir diğer ad atayın veya şemayı bir diğer ad olmadan eklemek için **Tamam 'a** tıklayın.
 
-9. **Tamam**'ı tıklatın.
+9. **Tamam**'a tıklayın.
 
      **XML yapısı** penceresi açılır.
 
-10. Öğeleri sürükleme **XML yapısı** belgenizi oluşturulacak ilgili denetimlerin, istediğiniz yerde penceresine.
+10. Öğeleri **XML yapısı** penceresinden, belgenizde ilgili denetimlerin oluşturulmasını istediğiniz yerlere sürükleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Şemaları Visual Studio içindeki çalışma sayfalarıyla eşleştirme](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)
-- [XML şemaları ve belge düzeyi özelleştirmelerdeki veriler](../vsto/xml-schemas-and-data-in-document-level-customizations.md)
+- [Nasıl yapılır: şemaları Visual Studio içindeki çalışma sayfalarına eşleme](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)
+- [Belge düzeyi özelleştirmelerde XML şemaları ve verileri](../vsto/xml-schemas-and-data-in-document-level-customizations.md)

@@ -15,25 +15,25 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 647fef2968971cddb6a14cc19e53eed979b9c151
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 772c9bee3f43c42701bfa460c622f4a225ec59cb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661514"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539184"
 ---
 # <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301: Yinelenen hızlandırıcılardan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|AvoidDuplicateAccelerators|
 |CheckId|CA1301|
 |Kategori|Microsoft. Globalization|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Bir tür <xref:System.Windows.Forms.Control?displayProperty=fullName> genişletir ve bir kaynak dosyasında depolanan aynı erişim anahtarlarına sahip iki veya daha fazla üst düzey denetim içerir.
+## <a name="cause"></a>Nedeni
+ Bir tür <xref:System.Windows.Forms.Control?displayProperty=fullName> , bir kaynak dosyasında depolanan özdeş erişim anahtarlarına sahip iki veya daha fazla üst düzey denetimi genişletir ve içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Giriş anahtarı, bir hızlandırıcı olarak da bilinir, ALT anahtarını kullanarak klavye giriş denetimini sağlar. Birden çok denetimin yinelenen erişim tuşları varsa, erişim tuşunun davranışı iyi tanımlı değildir. Kullanıcı, erişim anahtarını kullanarak amaçlanan denetime erişemeyebilir ve hedeflenen bir denetim etkinleştirilmiş olabilir.
@@ -47,9 +47,9 @@ ms.locfileid: "72661514"
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, aynı erişim anahtarlarına sahip iki denetim içeren en az bir form gösterilmektedir. Anahtarlar, gösterilmemiş bir kaynak dosyasında depolanır; Ancak, değerleri açıklamalı `checkBox.Text` satırlarda görüntülenir. Yinelenen hızlandırıcıların davranışı, `checkBox.Text` satırları, yorumlanma karşılıkları ile değiştirerek incelenebilir. Ancak, bu durumda, örnek kuraldan bir uyarı oluşturmaz.
+ Aşağıdaki örnekte, aynı erişim anahtarlarına sahip iki denetim içeren en az bir form gösterilmektedir. Anahtarlar, gösterilmemiş bir kaynak dosyasında depolanır; Ancak, değerleri, açıklamalı `checkBox.Text` satırlarda görüntülenir. Yinelenen hızlandırıcıların davranışı, `checkBox.Text` satırları açıklamalı çıkış karşılıklarıyla birlikte değiş tokuşu yaparak incelenebilir. Ancak, bu durumda, örnek kuraldan bir uyarı oluşturmaz.
 
  [!code-csharp[FxCop.Globalization.AvoidDuplicateAccels#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.AvoidDuplicateAccels/cs/FxCop.Globalization.AvoidDuplicateAccels.cs#1)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [masaüstü uygulamalarında kaynakları](https://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890) <xref:System.Resources.ResourceManager?displayProperty=fullName>
+ <xref:System.Resources.ResourceManager?displayProperty=fullName>[Masaüstü uygulamalarındaki kaynaklar](https://msdn.microsoft.com/library/8ad495d4-2941-40cf-bf64-e82e85825890)

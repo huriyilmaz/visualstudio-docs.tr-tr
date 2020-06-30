@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Word tablolarına program aracılığıyla satır ve sütun ekleme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,20 +14,20 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cc8fbc80a58afcb6f2256c56b1071276c50f319b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 0097692c77d0b472c808876e9017b514b6416fc6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985839"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538079"
 ---
 # <a name="how-to-programmatically-add-rows-and-columns-to-word-tables"></a>Nasıl yapılır: Word tablolarına program aracılığıyla satır ve sütun ekleme
-  Microsoft Office Word tablosunda hücreler satırlar ve sütunlar halinde düzenlenir. Tabloya satır eklemek için <xref:Microsoft.Office.Interop.Word.Rows> nesnesinin <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> yöntemini ve sütun eklemek için <xref:Microsoft.Office.Interop.Word.Columns> nesnesinin <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> yöntemini kullanabilirsiniz.
+  Microsoft Office Word tablosunda hücreler satırlar ve sütunlar halinde düzenlenir. <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> <xref:Microsoft.Office.Interop.Word.Rows> Tabloya satır eklemek için nesnesinin yöntemini ve <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> <xref:Microsoft.Office.Interop.Word.Columns> sütun eklemek için nesne yöntemini kullanabilirsiniz.
 
  [!INCLUDE[appliesto_wdalldocapp](includes/appliesto-wdalldocapp-md.md)]
 
 ## <a name="document-level-customization-examples"></a>Belge düzeyi özelleştirmesi örnekleri
- Aşağıdaki kod örnekleri, belge düzeyi özelleştirmesinde kullanılabilir. Bu örnekleri kullanmak için projenizdeki `ThisDocument` sınıfından çalıştırın. Bu örneklerde, özelleştirmenizin ilişkilendirildiği belgenin en az bir tablo olduğunu varsaymaktadır.
+ Aşağıdaki kod örnekleri, belge düzeyi özelleştirmesinde kullanılabilir. Bu örnekleri kullanmak için `ThisDocument` projenizdeki sınıftan çalıştırın. Bu örneklerde, özelleştirmenizin ilişkilendirildiği belgenin en az bir tablo olduğunu varsaymaktadır.
 
 > [!IMPORTANT]
 > Bu kod yalnızca aşağıdaki proje şablonlarından birini kullanarak oluşturduğunuz projelerde çalışır:
@@ -41,20 +41,20 @@ ms.locfileid: "72985839"
 
 ### <a name="to-add-a-row-to-a-table"></a>Tabloya satır eklemek için
 
-1. Tabloya satır eklemek için <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> yöntemini kullanın.
+1. <xref:Microsoft.Office.Interop.Word.Rows.Add%2A>Tabloya satır eklemek için yöntemini kullanın.
 
      [!code-vb[Trin_VstcoreWordAutomation#95](codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#95)]
      [!code-csharp[Trin_VstcoreWordAutomation#95](codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#95)]
 
 ### <a name="to-add-a-column-to-a-table"></a>Tabloya sütun eklemek için
 
-1. <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> yöntemini kullanın ve sonra tüm sütunları aynı genişliğe getirmek için <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> metodunu kullanın.
+1. Yöntemini kullanın <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> ve sonra <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> tüm sütunları aynı genişliğe getirmek için yöntemini kullanın.
 
      [!code-vb[Trin_VstcoreWordAutomation#96](codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#96)]
      [!code-csharp[Trin_VstcoreWordAutomation#96](codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#96)]
 
 ## <a name="vsto-add-in-examples"></a>VSTO eklentisi örnekleri
- Aşağıdaki kod örnekleri bir VSTO eklentisi içinde kullanılabilir. Örnekleri kullanmak için, bunları projenizdeki `ThisAddIn` sınıfından çalıştırın. Bu örneklerde, etkin belgenin en az bir tablo olduğunu varsaymaktadır.
+ Aşağıdaki kod örnekleri bir VSTO eklentisi içinde kullanılabilir. Örnekleri kullanmak için bunları `ThisAddIn` projenizdeki sınıftan çalıştırın. Bu örneklerde, etkin belgenin en az bir tablo olduğunu varsaymaktadır.
 
 > [!IMPORTANT]
 > Bu kod yalnızca Word VSTO eklenti şablonlarını kullanarak oluşturduğunuz projelerde çalışır.
@@ -63,14 +63,14 @@ ms.locfileid: "72985839"
 
 ### <a name="to-add-a-row-to-a-table"></a>Tabloya satır eklemek için
 
-1. Tabloya satır eklemek için <xref:Microsoft.Office.Interop.Word.Rows.Add%2A> yöntemini kullanın.
+1. <xref:Microsoft.Office.Interop.Word.Rows.Add%2A>Tabloya satır eklemek için yöntemini kullanın.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#95](codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#95)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#95](codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#95)]
 
 ### <a name="to-add-a-column-to-a-table"></a>Tabloya sütun eklemek için
 
-1. <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> yöntemini kullanın ve sonra tüm sütunları aynı genişliğe getirmek için <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> metodunu kullanın.
+1. Yöntemini kullanın <xref:Microsoft.Office.Interop.Word.Columns.Add%2A> ve sonra <xref:Microsoft.Office.Interop.Word.Columns.DistributeWidth%2A> tüm sütunları aynı genişliğe getirmek için yöntemini kullanın.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#96](codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#96)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#96](codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#96)]

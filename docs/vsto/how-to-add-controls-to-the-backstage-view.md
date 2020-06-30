@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Backstage görünümüne denetimler ekleme '
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -20,12 +20,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 87cea877928baf52b0442ed9b0d952fcf649f155
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 5b4ea5cdcd869f16f987e9431359511831af9573
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986019"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538352"
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>Nasıl yapılır: Backstage görünümüne denetimler ekleme
   **Dosya** sekmesine tıkladığınızda açılan menüye denetim eklemek Için şerit tasarımcısını kullanabilirsiniz. Uygulamayı çalıştırdığınızda, **Dosya** sekmesine eklediğiniz denetimler, **Eklentiler**adlı bir grup görünür.

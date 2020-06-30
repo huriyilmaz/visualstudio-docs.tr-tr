@@ -1,8 +1,8 @@
 ---
-title: IIS için Python web uygulamalarını yapılandırma
-description: Python web uygulamalarını Windows sanal makinesinden Internet Information Services ile çalışacak şekilde yapılandırma.
+title: IIS için Python Web Apps 'i yapılandırma
+description: Python web uygulamalarını bir Windows sanal makinesinden Internet Information Services çalışacak şekilde yapılandırma.
 ms.date: 12/06/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -11,37 +11,37 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 551cff18849f0e8ad9fcd6f2c1e08561291b177f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3c756f3d9a89294ecce054650037be3f7b26c291
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62957382"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540939"
 ---
-# <a name="configure-python-web-apps-for-iis"></a>IIS için Python web uygulamalarını yapılandırma
+# <a name="configure-python-web-apps-for-iis"></a>IIS için Python Web Apps 'i yapılandırma
 
-Internet Information Services (IIS) windows bilgisayarında bir web sunucusu olarak kullanırken [(Azure'daki Windows sanal makineleri](/azure/architecture/reference-architectures/n-tier/windows-vm)dahil), Python uygulamalarının Python kodunu düzgün bir şekilde işleyebilmeleri için *web.config* dosyalarına belirli ayarlar eklemesi gerekir. Bilgisayarın kendisi de Python web uygulaması gerektirir herhangi bir paket ile birlikte yüklü olmalıdır.
+Windows bilgisayarda Internet Information Services (IIS) Web sunucusu olarak kullanırken ( [Azure 'Daki Windows sanal makineler](/azure/architecture/reference-architectures/n-tier/windows-vm)dahil), Python uygulamaları IIS 'nin Python kodunu düzgün bir şekilde işleyebilmesi için *web.config* dosyalarında belirli ayarları içermesi gerekir. Bilgisayarın kendisi de, Web uygulamasının gerektirdiği tüm paketlerle birlikte Python 'un yüklü olması gerekir.
 
 > [!Note]
-> Bu makalede, daha önce Windows'da Azure Uygulama Hizmeti'nde Python yapılandırma kılavuzu yer alıyordu. Bu senaryoda kullanılan Python uzantıları ve Windows ana bilgisayarları Linux'taki Azure Uygulama Hizmeti lehine küçümsülme lerine neden olmuştur. Daha fazla bilgi için [bkz.](publishing-python-web-applications-to-azure-from-visual-studio.md) Önceki makalede, ancak, Python [uzantıları ile Windows'da Uygulama Hizmetini Yönetme](managing-python-on-azure-app-service.md)hala kullanılabilir.
+> Bu makale daha önce Windows üzerinde Azure App Service Python yapılandırma kılavuzunu içeriyordu. Bu senaryoda kullanılan Python uzantıları ve Windows Konakları, Linux üzerinde Azure App Service kullanım dışı bırakılmıştır. Daha fazla bilgi için bkz. [Python uygulamalarını Azure App Service (Linux) Ile yayımlama](publishing-python-web-applications-to-azure-from-visual-studio.md). Ancak önceki makale, [Python uzantılarıyla Windows üzerinde App Service yönetirken](managing-python-on-azure-app-service.md)hala kullanılabilir.
 
-## <a name="install-python-on-windows"></a>Windows'a Python'u yükleme
+## <a name="install-python-on-windows"></a>Windows 'a Python 'u yükler
 
-Bir web uygulamasını çalıştırmak için, öncelikle Python'un gerekli [sürümünü, Python'u Yükle yorumlayıcılarında](installing-python-interpreters.md)açıklandığı şekilde doğrudan Windows ana bilgisayar makinesine yükleyin.
+Bir Web uygulamasını çalıştırmak için, Python [yorumlayıcıları](installing-python-interpreters.md)'nı oluşturma bölümünde açıklandığı gibi, önce gerekli Python sürümünüzü doğrudan Windows ana makinesine yüklemeniz gerekir.
 
-Daha sonraki adımlar `python.exe` için tercümanın konumunu kaydedin. Kolaylık sağlamak için, bu konumu PATH ortamı değişkeninize ekleyebilirsiniz.
+`python.exe`Sonraki adımlar için yorumlayıcı konumunu kaydedin. Kolaylık olması için, bu konumu PATH ortam değişkeniniz için ekleyebilirsiniz.
 
-## <a name="install-packages"></a>Paketleri yükleme
+## <a name="install-packages"></a>Paketleri yükler
 
-Özel bir ana bilgisayar kullanırken, uygulamanızı sanal bir ortam yerine çalıştırmak için genel Python ortamını kullanabilirsiniz. Buna göre, uygulamanızın tüm gereksinimlerini yalnızca bir komut isteminde `pip install -r requirements.txt` çalıştırarak genel ortama yükleyebilirsiniz.
+Adanmış bir konak kullanırken, uygulamanızı sanal bir ortam yerine çalıştırmak için genel Python ortamını kullanabilirsiniz. Buna uygun olarak, bir komut isteminde çalıştırarak uygulamanızın tüm gereksinimlerini genel ortama yükleyebilirsiniz `pip install -r requirements.txt` .
 
-## <a name="set-webconfig-to-point-to-the-python-interpreter"></a>Python yorumlayıcısını işaret etmek için web.config'i ayarlayın
+## <a name="set-webconfig-to-point-to-the-python-interpreter"></a>web.config Python yorumlayıcıya işaret etmek için ayarla
 
-Uygulamanızın *web.config* dosyası, Windows'ta çalışan IIS (7+) web sunucusuna Python isteklerini HttpPlatform (önerilir) veya FastCGI aracılığıyla nasıl işlemesi gerektiği konusunda talimat verir. Visual Studio sürümleri 2015 ve önceki otomatik olarak bu değişiklikleri yapmak. Visual Studio 2017 ve sonrası *kullanırken, web.config'i* el ile değiştirmeniz gerekir.
+Uygulamanızın *web.config* dosyası, Windows ÜZERINDE çalışan IIS (7 +) Web sunucusuna httpplatform (önerilen) veya FastCGI aracılığıyla Python isteklerini nasıl işleyeceğinizi bildirir. Visual Studio sürümleri 2015 ve öncesi, bu değişiklikleri otomatik olarak yapar. Visual Studio 2017 ve üstünü kullanırken *web.config* el ile değiştirmeniz gerekir.
 
 ### <a name="configure-the-httpplatform-handler"></a>HttpPlatform işleyicisini yapılandırma
 
-HttpPlatform modülü soket bağlantılarını doğrudan bağımsız bir Python işlemine geçirir. Bu geçiş, istediğiniz herhangi bir web sunucusunu çalıştırmanızı sağlar, ancak yerel bir web sunucusu çalıştıran bir başlangıç komut dosyası gerektirir. Komut dosyasını `<httpPlatform>` *web.config*öğesinde belirtirsiniz, `processPath` öznitelik site uzantısının Python yorumlayıcısına `arguments` ve öznitelik komut dosyanıza ve sağlamak istediğiniz bağımsız değişkenlere işaret eder:
+HttpPlatform modülü, yuva bağlantılarını doğrudan bir tek başına Python işlemine geçirir. Bu geçiş, istediğiniz herhangi bir Web sunucusunu çalıştırmanıza izin verir, ancak yerel bir Web sunucusu çalıştıran bir başlatma betiği gerektirir. Komut dosyasını `<httpPlatform>` *web.config*öğesinde belirtirsiniz; burada `processPath` öznitelik, site uzantısının Python yorumlayıcısını ve `arguments` özniteliği, betiğinizi ve sağlamak istediğiniz bağımsız değişkeni gösterir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -64,17 +64,17 @@ HttpPlatform modülü soket bağlantılarını doğrudan bağımsız bir Python 
 </configuration>
 ```
 
-Burada `HTTP_PLATFORM_PORT` gösterilen ortam değişkeni, yerel sunucunuzun localhost'tan gelen bağlantılar için dinlemesi gereken bağlantı noktasını içerir. Bu örnek, bu durumda, `SERVER_PORT`istenirse başka bir ortam değişkeninin nasıl oluşturulacak olduğunu da gösterir.
+`HTTP_PLATFORM_PORT`Burada gösterilen ortam değişkeni, yerel sunucunuzun localhost bağlantıları için dinlemesi gereken bağlantı noktasını içerir. Bu örnek ayrıca, isterseniz başka bir ortam değişkeninin nasıl oluşturulacağını gösterir `SERVER_PORT` .
 
-### <a name="configure-the-fastcgi-handler"></a>FastCGI işleyicisini yapılandırın
+### <a name="configure-the-fastcgi-handler"></a>FastCGI işleyicisini yapılandırma
 
-FastCGI istek düzeyinde çalışan bir arayüzdür. IIS gelen bağlantıları alır ve her isteği bir veya daha fazla kalıcı Python işlemlerinde çalışan bir WSGI uygulamasına iletir.
+FastCGI, istek düzeyinde çalışacak bir arabirimdir. IIS, gelen bağlantıları alır ve her isteği bir veya daha fazla kalıcı Python işlemde çalışan bir WSGI uygulamasına iletir.
 
-Kullanmak için, ilk yüklemek ve [pypi.org/project/wfastcgi/](https://pypi.io/project/wfastcgi)açıklandığı gibi wfastcgi paketi yapılandırmak.
+Bunu kullanmak için, önce [pypi.org/Project/wfastcgi/](https://pypi.io/project/wfastcgi)sitesinde açıklandığı gibi wfastcgı paketini yükleyip yapılandırın.
 
-Ardından, uygulamanızın *web.config* dosyasını *python.exe* ve *wfastcgi.py* için tam `PythonHandler` yolları içerecek şekilde değiştirin. Aşağıdaki adımlar Python'un *c:\python36-32'de* yüklü olduğunu ve uygulama kodunuzc:\home\site\wwwroot; *c:\home\site\wwwroot* yollarınız için buna göre ayarlayın:
+Daha sonra, *python.exe* ve *wfastcgi.py* için tam yolları içerecek şekilde uygulamanızın *web.config* dosyasını değiştirin `PythonHandler` . Aşağıdaki adımlar, Python 'un *c:\python36-32* 'e yüklendiğini ve uygulama kodunuzun *c:\home\site\wwwroot*; yolunda olduğunu varsayar. yollarınız için uygun şekilde ayarlayın:
 
-1. `PythonHandler` *Web.config'deki* girişi, yolun Python yükleme konumuyla eşleşerek değiştirin (tam ayrıntılar için [IIS Configuration Reference](https://www.iis.net/configreference) (iis.net) adresine bakın).
+1. `PythonHandler` *web.config* girişi, yol Python yüklemesi konumuyla eşleşecek şekilde değiştirin (tam Ayrıntılar Için bkz. [ııs yapılandırma başvurusu](https://www.iis.net/configreference) (iis.net)).
 
     ```xml
     <system.webServer>
@@ -86,7 +86,7 @@ Ardından, uygulamanızın *web.config* dosyasını *python.exe* ve *wfastcgi.py
     </system.webServer>
     ```
 
-1. `<appSettings>` *web.config*bölümünde , için `WSGI_HANDLER`anahtar `WSGI_LOG` ekle , `PYTHONPATH`(isteğe bağlı) ve:
+1. `<appSettings>` *web.config*bölümünde, için anahtarlar ekleyin `WSGI_HANDLER` `WSGI_LOG` (isteğe bağlı) ve `PYTHONPATH` :
 
     ```xml
     <appSettings>
@@ -97,52 +97,52 @@ Ardından, uygulamanızın *web.config* dosyasını *python.exe* ve *wfastcgi.py
     </appSettings>
     ```
 
-    Bu `<appSettings>` değerler uygulamanız için ortam değişkenleri olarak kullanılabilir:
+    Bu `<appSettings>` değerler, uygulamanız için ortam değişkenleri olarak kullanılabilir:
 
-    - Değer `PYTHONPATH` serbestçe uzatılabilir, ancak uygulamanızın kökünü içermelidir.
-    - `WSGI_HANDLER`uygulamanızdan içe aktarılabilir bir WSGI uygulamasına işaret etmelidir.
-    - `WSGI_LOG`isteğe bağlıdır, ancak uygulamanızın hata ayıklanması için önerilir.
+    - Değeri, `PYTHONPATH` ücretsiz olarak genişletilebilir, ancak uygulamanızın kökünü içermelidir.
+    - `WSGI_HANDLER`uygulamanızdan bir WSGI uygulaması Importable öğesine işaret etmelidir.
+    - `WSGI_LOG`isteğe bağlıdır, ancak uygulamanızda hata ayıklama için önerilir.
 
-1. `WSGI_HANDLER` *web.config'deki* girişi kullandığınız çerçeveye uygun olarak ayarlayın:
+1. `WSGI_HANDLER` *web.config* girişi, kullanmakta olduğunuz çerçeveye uygun şekilde ayarlayın:
 
-    - **Şişe**: Aşağıda gösterildiği gibi sonra `app.wsgi_app` parantez olduğundan emin olun. Bu nesne bir değişken yerine bir işlev *(bkz. app.py)* olduğundan gereklidir:
+    - **Şişe**: aşağıda gösterildiği gibi parantezleri yazdığınızdan emin olun `app.wsgi_app` . Bu, nesne bir işlev olduğu için (bkz. *app.py*) bir değişken değil, bu gereklidir:
 
         ```xml
         <!-- Bottle apps only -->
         <add key="WSGI_HANDLER" value="app.wsgi_app()"/>
         ```
 
-    - **Şişe**: Projenizin `<project_name>.app` `<project_name>` adı ile `WSGI_HANDLER` eşleşen değeri değiştirin. Runserver.py'daki ifadeye bakarak tam `from <project_name> import app` *tanımlayıcıyı*bulabilirsiniz. Örneğin, proje "FlaskAzurePublishExample" olarak adlandırılırsa, giriş aşağıdaki gibi görünür:
+    - **Flask**: değeri, `WSGI_HANDLER` `<project_name>.app` `<project_name>` projenizin adıyla eşleşen olacak şekilde değiştirin. `from <project_name> import app` *Runserver.py*içindeki ifadeye bakarak tam tanımlayıcıyı bulabilirsiniz. Örneğin, proje "FlaskAzurePublishExample" olarak adlandırılmışsa, giriş şu şekilde görünür:
 
         ```xml
         <!-- Flask apps only: change the project name to match your app -->
         <add key="WSGI_HANDLER" value="flask_iis_example.app"/>
         ```
 
-    - **Django : Django**projeleri için *web.config* için iki değişiklik gereklidir. İlk olarak, `WSGI_HANDLER` değeri `django.core.wsgi.get_wsgi_application()` değiştirin (nesne *wsgi.py* dosyasındadır):
+    - **Docgo**: docgo projeleri için *web.config* için iki değişiklik yapılması gerekir. İlk olarak, `WSGI_HANDLER` değeri olarak değiştirin `django.core.wsgi.get_wsgi_application()` (nesne *wsgi.py* dosyasında bulunur):
 
         ```xml
         <!-- Django apps only -->
         <add key="WSGI_HANDLER" value="django.core.wsgi.get_wsgi_application()"/>
         ```
 
-        İkinci olarak, projenizin `WSGI_HANDLER`adı ile `DjangoAzurePublishExample` değiştirerek aşağıdaki girişi ekleyin:
+        İkinci olarak, öğesinin altına aşağıdaki girişi ekleyin, bunu `WSGI_HANDLER` `DjangoAzurePublishExample` projenizin adıyla değiştirin:
 
         ```xml
         <add key="DJANGO_SETTINGS_MODULE" value="django_iis_example.settings" />
         ```
 
-1. **Yalnızca Django uygulamaları : Django**projesinin *settings.py* dosyasında, sitenizin `ALLOWED_HOSTS` URL etki alanını veya IP adresini aşağıda gösterildiği gibi ekleyin ve '1.2.3.4'ü URL veya IP adresinizle değiştirin:
+1. **Yalnızca docgo uygulamaları**: docgo projesinin *Settings.py* dosyasında, SITE URL 'sini veya IP adresini `ALLOWED_HOSTS` aşağıda gösterildiği gibi ekleyin ve ' 1.2.3.4 ' i, URL 'niz veya IP adresiniz ile değiştirin:
 
     ```python
     # Change the URL or IP address to your specific site
     ALLOWED_HOSTS = ['1.2.3.4']
     ```
 
-    Url'nizi diziye ekleyememesi, **DisallowedHost hata / Geçersiz HTTP_HOST\<üstbilgi: ' site URL'si\>'. ALLOWED_HOSTS '\<site\>URL'si ' eklemeniz gerekebilir.**
+    URL 'niz diziye eklenemedi **' ' HTTP_HOST üst bilgisindeki/geçersiz hata ile başarısız oldu: ' \<site URL\> '. \<site URL\>ALLOWED_HOSTS için ' ' eklemeniz gerekebilir.**
 
-    Dizi boşolduğunda, Django'nun otomatik olarak 'localhost' ve '127.0.0.1' izin verdiğini, ancak üretim URL'nizi eklemenin bu özellikleri kaldırdığını unutmayın. Bu nedenle, *settings.py*ayrı geliştirme ve üretim kopyalarını korumak veya çalışma süresi değerlerini denetlemek için ortam değişkenlerini kullanmak isteyebilirsiniz.
+    Dizi boş olduğunda, Docgo 'nun otomatik olarak ' localhost ' ve ' 127.0.0.1 ' olarak izin verdiğini, ancak üretim URL 'nizi eklemenin bu özellikleri kaldırdığına bakın. Bu nedenle, *Settings.py*'in ayrı geliştirme ve üretim kopyalarını sürdürmek veya çalışma süresi değerlerini denetlemek için ortam değişkenlerini kullanmak isteyebilirsiniz.
 
-## <a name="deploy-to-iis-or-a-windows-vm"></a>IIS'ye veya Windows VM'ye dağıtma
+## <a name="deploy-to-iis-or-a-windows-vm"></a>IIS 'ye veya Windows VM 'ye dağıtma
 
-Projenizdeki doğru *web.config* dosyası yla, **Solution Explorer'da**projenin bağlam menüsünde **Yayımla** komutunu kullanarak ve seçenek, **IIS, FTP, vb.** seçerek IIS çalıştıran bilgisayara yayımlayabilirsiniz. Bu durumda, Visual Studio sadece sunucuya proje dosyalarını kopyalar; tüm sunucu tarafı yapılandırmadan siz sorumlusunuz.
+Projenizdeki doğru *web.config* dosyası ile, **Çözüm Gezgini**, projenin bağlam menüsündeki **Yayımla** komutunu kullanarak ve IIS **, FTP, vb.** seçeneklerini belirleyerek IIS çalıştıran bilgisayara yayımlayabilirsiniz. Bu durumda, Visual Studio yalnızca proje dosyalarını sunucuya kopyalar; Tüm sunucu tarafı yapılandırmadan sorumlu olursunuz.

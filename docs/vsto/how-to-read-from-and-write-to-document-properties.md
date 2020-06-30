@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: belge özelliklerinden okuma ve yazma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 71a4b1a84c4544f4dc2b359e391f3c9f768e8eee
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: adad9ec70290f426ce7c3c59ad13ff8636a69463
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985806"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541329"
 ---
 # <a name="how-to-read-from-and-write-to-document-properties"></a>Nasıl yapılır: belge özelliklerinden okuma ve yazma
   Belge özelliklerini bir belge ile birlikte saklayabilirsiniz. Office uygulamaları yazar, başlık ve konu gibi çeşitli yerleşik özellikler sağlar. Bu konuda, Excel ve Microsoft Office Word Microsoft Office belge özelliklerinin nasıl ayarlanacağı gösterilmektedir.
@@ -30,11 +30,11 @@ ms.locfileid: "72985806"
 ## <a name="set-document-properties-in-excel"></a>Excel 'de belge özelliklerini ayarlama
  Excel 'deki yerleşik özelliklerle çalışmak için aşağıdaki özellikleri kullanın:
 
-- Belge düzeyi projesinde, `ThisWorkbook` sınıfının <xref:Microsoft.Office.Tools.Excel.Workbook.BuiltinDocumentProperties%2A> özelliğini kullanın.
+- Belge düzeyi projesinde, <xref:Microsoft.Office.Tools.Excel.Workbook.BuiltinDocumentProperties%2A> sınıfının özelliğini kullanın `ThisWorkbook` .
 
-- VSTO eklenti projesinde, bir <xref:Microsoft.Office.Interop.Excel.Workbook> nesnesinin <xref:Microsoft.Office.Interop.Excel._Workbook.BuiltinDocumentProperties%2A> özelliğini kullanın.
+- VSTO eklenti projesinde, <xref:Microsoft.Office.Interop.Excel._Workbook.BuiltinDocumentProperties%2A> nesnesinin özelliğini kullanın <xref:Microsoft.Office.Interop.Excel.Workbook> .
 
-  Bu özellikler, <xref:Microsoft.Office.Core.DocumentProperty> nesnelerinin bir koleksiyonu olan <xref:Microsoft.Office.Core.DocumentProperties> nesnesini döndürür. Koleksiyonun `Item` özelliğini, belirli bir özelliği ada veya koleksiyon içindeki dizine göre almak için kullanabilirsiniz.
+  Bu özellikler <xref:Microsoft.Office.Core.DocumentProperties> nesne koleksiyonu olan bir nesnesi döndürür <xref:Microsoft.Office.Core.DocumentProperty> . `Item`Belirli bir özelliği ada veya koleksiyon içindeki dizine göre almak için koleksiyonun özelliğini kullanabilirsiniz.
 
   Aşağıdaki kod örneği, belge düzeyindeki bir projedeki yerleşik **düzeltme numarası** özelliğinin nasıl değiştirileceğini gösterir.
 
@@ -45,7 +45,7 @@ ms.locfileid: "72985806"
      [!code-vb[Trin_VstcoreProgramming#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#7)]
      [!code-csharp[Trin_VstcoreProgramming#7](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/ThisWorkbook.cs#7)]
 
-2. `Revision Number` özelliğini bir artırın.
+2. `Revision Number`Özelliği bir ile artırın.
 
      [!code-vb[Trin_VstcoreProgramming#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#8)]
      [!code-csharp[Trin_VstcoreProgramming#8](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/ThisWorkbook.cs#8)]
@@ -53,11 +53,11 @@ ms.locfileid: "72985806"
 ## <a name="set-document-properties-in-word"></a>Word 'de belge özelliklerini ayarla
  Word 'de yerleşik özelliklerle çalışmak için aşağıdaki özellikleri kullanın:
 
-- Belge düzeyi projesinde, `ThisDocument` sınıfının <xref:Microsoft.Office.Tools.Word.Document.BuiltInDocumentProperties%2A> özelliğini kullanın.
+- Belge düzeyi projesinde, <xref:Microsoft.Office.Tools.Word.Document.BuiltInDocumentProperties%2A> sınıfının özelliğini kullanın `ThisDocument` .
 
-- VSTO eklenti projesinde, bir <xref:Microsoft.Office.Interop.Word.Document> nesnesinin <xref:Microsoft.Office.Interop.Word._Document.BuiltInDocumentProperties%2A> özelliğini kullanın.
+- VSTO eklenti projesinde, <xref:Microsoft.Office.Interop.Word._Document.BuiltInDocumentProperties%2A> nesnesinin özelliğini kullanın <xref:Microsoft.Office.Interop.Word.Document> .
 
-  Bu özellikler, <xref:Microsoft.Office.Core.DocumentProperty> nesnelerinin bir koleksiyonu olan <xref:Microsoft.Office.Core.DocumentProperties> nesnesini döndürür. Koleksiyonun `Item` özelliğini, belirli bir özelliği ada veya koleksiyon içindeki dizine göre almak için kullanabilirsiniz.
+  Bu özellikler <xref:Microsoft.Office.Core.DocumentProperties> nesne koleksiyonu olan bir nesnesi döndürür <xref:Microsoft.Office.Core.DocumentProperty> . `Item`Belirli bir özelliği ada veya koleksiyon içindeki dizine göre almak için koleksiyonun özelliğini kullanabilirsiniz.
 
   Aşağıdaki kod örneği, belge düzeyindeki bir projede yerleşik **Konu** özelliğinin nasıl değiştirileceğini gösterir.
 
@@ -68,13 +68,13 @@ ms.locfileid: "72985806"
      [!code-csharp[Trin_VstcoreProgrammingWord#1](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingWordCS/ThisDocument.cs#1)]
      [!code-vb[Trin_VstcoreProgrammingWord#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingWordVB/ThisDocument.vb#1)]
 
-2. `Subject` özelliğini "teknik Inceleme" olarak değiştirin.
+2. `Subject`Özelliği "Teknik İnceleme" olarak değiştirin.
 
      [!code-csharp[Trin_VstcoreProgrammingWord#2](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingWordCS/ThisDocument.cs#2)]
      [!code-vb[Trin_VstcoreProgrammingWord#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingWordVB/ThisDocument.vb#2)]
 
 ## <a name="robust-programming"></a>Güçlü programlama
- Örneklerde, Excel için belge düzeyindeki bir projede `ThisWorkbook` sınıfında ve Word için belge düzeyindeki bir projede bulunan `ThisDocument` sınıfında kod yazdığınızı varsaymaktadır.
+ Örneklerde, kodu `ThisWorkbook` Excel için belge düzeyindeki bir projede ve `ThisDocument` Word için belge düzeyindeki bir proje sınıfında yazdığınız varsayılır.
 
  Word ve Excel ve nesneleriyle çalışabilseniz de Microsoft Office kullanılabilir yerleşik belge özellikleri listesini sağlar. Tanımsız bir özelliğe erişme girişimi bir özel durum oluşturur.
 

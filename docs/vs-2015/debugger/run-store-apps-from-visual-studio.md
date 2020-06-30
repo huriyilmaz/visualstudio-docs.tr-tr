@@ -1,5 +1,5 @@
 ---
-title: Çalıştırma Store uygulamaları
+title: Mağaza uygulamalarını çalıştırma
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,26 +14,26 @@ caps.latest.revision: 15
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 3d5dfe0d5e5e9af35334629bd2bcd27f414dac11
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2ac3e8ec68553159972e88538d8a4bc1ec49ce50
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68154176"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540315"
 ---
-# <a name="run-store-apps-from-visual-studio"></a>Visual Studio'dan Store uygulamaları çalıştırma
+# <a name="run-store-apps-from-visual-studio"></a>Visual Studio’dan Store uygulamaları çalıştırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Çok çeşitli cihazlar üzerinde Store uygulamaları çalıştırma ve Visual Studio ile çalıştırın ve bu uygulamaları ile etkileşim kurmak için çeşitli yollarla sağlar. Hata ayıklama, profil ve uygulama geliştirme sırasında test etmek kolay hale getirmek için "F5" deneyimi geliştirilmiştir.
+Mağaza uygulamaları çok çeşitli cihazlarda çalışır ve Visual Studio size bu uygulamaları çalıştırmak ve bunlarla etkileşim kurmak için kullanabileceğiniz çeşitli yollar sağlar. Geliştirme sırasında uygulamaları hata ayıklama, profil oluşturma ve test etme işlemlerini kolaylaştırmak için "F5" deneyimi geliştirilmiştir.
 
- ![Degugging'ı başlatın ve hedef seçin](../debugger/media/vsrun-dropdownlist.png "VSRUN_DropDownList")
+ ![Bir kaldırma işlemi başlatın ve hedef seçin](../debugger/media/vsrun-dropdownlist.png "VSRUN_DropDownList")
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|||
+|Başlık|Açıklama|
 |-|-|
-|[Yerel makinede Microsoft Store uygulamaları çalıştırma](../debugger/run-windows-store-apps-on-the-local-machine.md)|Windows Store uygulamanızı Visual Studio cihazda çalıştırın.|
-|[Simülatörde Microsoft Store uygulamaları çalıştırma](../debugger/run-windows-store-apps-in-the-simulator.md)|Windows Store uygulamanızı taklit eden bir masaüstü penceresinde çalıştırma [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] dokunma ve yön gibi işlevleri.|
-|[Uzak makinede Microsoft Store uygulamaları çalıştırma](../debugger/run-windows-store-apps-on-a-remote-machine.md)|Dağıtın ve Visual Studio makinesine bir ağ üzerinden veya doğrudan Ethernet kablosu ile bağlı bir cihazda, Windows Store uygulaması çalıştırın.|
-|[Öykünücüde Windows Phone uygulamaları çalıştırma](../debugger/run-windows-phone-apps-in-the-emulator.md)|Windows Store uygulamanızı Windows Phone taklit eden bir masaüstü penceresinde çalıştırın.|
-|[Visual Studio’dan Microsoft Store uygulamaları dağıtma](../debugger/deploy-windows-store-apps-from-visual-studio.md)|Dağıtma ve Windows Store uygulamanızda geçici test etmek için bir cihazı kaydedin.|
+|[Yerel makinede Microsoft Store uygulamaları çalıştırma](../debugger/run-windows-store-apps-on-the-local-machine.md)|Windows mağazası uygulamanızı Visual Studio cihazında çalıştırın.|
+|[Simülatörde Microsoft Store uygulamaları çalıştırma](../debugger/run-windows-store-apps-in-the-simulator.md)|Windows mağazası uygulamanızı [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] , dokunmatik ve yönlendirme gibi işlevlere benzetim yapan bir masaüstü penceresinde çalıştırın.|
+|[Uzak makinede Windows Mağazası uygulamalarını çalıştırma](../debugger/run-windows-store-apps-on-a-remote-machine.md)|Windows mağazası uygulamanızı bir ağ üzerinden veya doğrudan Ethernet kablosu aracılığıyla Visual Studio makinesine bağlı bir cihazda dağıtın ve çalıştırın.|
+|[Öykünücüde Windows Phone uygulamaları çalıştırma](../debugger/run-windows-phone-apps-in-the-emulator.md)|Windows mağazası uygulamanızı bir Windows Phone taklit eden bir masaüstü penceresinde çalıştırın.|
+|[Visual Studio’dan Microsoft Store uygulamaları dağıtma](../debugger/deploy-windows-store-apps-from-visual-studio.md)|Windows mağazası uygulamanızı, geçici test için bir cihaza dağıtın ve kaydedin.|

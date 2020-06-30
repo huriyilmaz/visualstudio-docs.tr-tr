@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 9fa92e773c3dc130d0c0fc0ce05cc270dc9b6e53
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ef5ccc0cf432a5c6782b76c4623bfdc55f66a8b5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669004"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538561"
 ---
 # <a name="code-analysis-application-errors"></a>Kod Analiz Uygulama Hataları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -27,14 +27,14 @@ Bu bölüm, yönetilen kod Analizi Aracı tarafından oluşturulan hata iletiler
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-|||
+|Öğe|Değer|
 |-|-|
 |[CA0001](ca0001.md)|Yönetilen kod analizi aracında beklenen bir hata koşulunu göstermediği bir özel durum oluştu.|
 |[CA0051](ca0051.md)|Hiçbir kural seçilmedi.|
 |[CA0052](ca0052.md)|Analiz edilecek hedef seçilmedi.|
 |[CA0053](ca0053.md)|Kural derlemesi yüklenemedi.|
 |[CA0054](ca0054.md)|Özel bir kural derlemesinde geçersiz XML kaynakları vardır.|
-|[CA0055](ca0055.md)|Dosya yüklenemedi: \<yol >|
+|[CA0055](ca0055.md)|Dosya yüklenemedi:\<path>|
 |[CA0056](ca0056.md)|Proje dosyası, çözümleme aracının yanlış bir sürümüne sahip.|
 |[CA0057](ca0057.md)|İhlaller geçerli hedef ve kural kümesiyle eşlenemez.|
 |[CA0058](ca0058.md)|Başvurulan derlemeler yüklenemiyor.|
@@ -55,7 +55,7 @@ Bu bölüm, yönetilen kod Analizi Aracı tarafından oluşturulan hata iletiler
 |[CA0503](ca0503.md)|Özelliği kullanım dışıdır. Yerini alan özelliği kullanın|
 |[CA0504](ca0504.md)|Kural dizini olmadığından yoksayıldı|
 |[CA0505](ca0505.md)|Özelliği kullanım dışıdır. Yerini alan özelliği kullanın|
-|[FxCopCmd Hataları](fxcopcmd-errors.md)|Yönetilen kod analizi hataları.|
+|[FxCopCmd hataları](fxcopcmd-errors.md)|Yönetilen kod analizi hataları.|
 
 ## <a name="related-sections"></a>İlgili Bölümler
 

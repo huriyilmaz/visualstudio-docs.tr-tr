@@ -1,7 +1,7 @@
 ---
 title: Belgelere program aracılığıyla resim ve Word art ekleme
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,14 +16,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 45b3030875539035f93bd340354e7041028200d2
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 621051c827b08e66d68bc348401c2a939e279bcf
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253820"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538092"
 ---
-# <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>Nasıl yapılır: Belgelere program aracılığıyla resim ve Word art ekleme
+# <a name="how-to-programmatically-add-pictures-and-word-art-to-documents"></a>Nasıl yapılır: belgelere program aracılığıyla resim ve Word art ekleme
   Belgelerinize, tasarım zamanında veya çalışma zamanında resim ve çizim nesneleri ekleyebilirsiniz. WordArt, Microsoft Office Word belgelerine dekoratif metin eklemenize olanak sağlar. Bu özel metin efektleri, özelleştirebileceğiniz ve belgenize ekleyebileceğiniz çizim nesneleridir.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "71253820"
 
 ### <a name="to-add-a-picture-at-the-cursor-location"></a>İmleç konumuna resim eklemek için
 
-1. <xref:Microsoft.Office.Interop.Word.InlineShapes> Koleksiyonun yöntemini çağırın ve dosyanın adını geçirin. <xref:Microsoft.Office.Interop.Word.InlineShapes.AddPicture%2A>
+1. <xref:Microsoft.Office.Interop.Word.InlineShapes.AddPicture%2A>Koleksiyonun yöntemini çağırın <xref:Microsoft.Office.Interop.Word.InlineShapes> ve dosyanın adını geçirin.
 
      [!code-vb[Trin_VstcoreWordAutomation#108](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#108)]
      [!code-csharp[Trin_VstcoreWordAutomation#108](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#108)]
@@ -78,7 +78,7 @@ ms.locfileid: "71253820"
      [!code-vb[Trin_VstcoreWordAutomation#109](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#109)]
      [!code-csharp[Trin_VstcoreWordAutomation#109](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#109)]
 
-2. Belgedeki nesnesinin<xref:Microsoft.Office.Interop.Word.Shapes>yönteminiçağırın. <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A>
+2. <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> <xref:Microsoft.Office.Interop.Word.Shapes> Belgedeki nesnesinin yöntemini çağırın.
 
      [!code-vb[Trin_VstcoreWordAutomation#110](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#110)]
      [!code-csharp[Trin_VstcoreWordAutomation#110](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#110)]
@@ -90,18 +90,18 @@ ms.locfileid: "71253820"
      [!code-vb[Trin_VstcoreWordAutomationAddIn#109](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#109)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#109](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#109)]
 
-2. Etkin belgenin <xref:Microsoft.Office.Interop.Word.Shapes> nesnesinin (veya belirttiğiniz farklı bir belgenin) yönteminiçağırın.<xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A>
+2. <xref:Microsoft.Office.Interop.Word.Shapes.AddTextEffect%2A> <xref:Microsoft.Office.Interop.Word.Shapes> Etkin belgenin nesnesinin (veya belirttiğiniz farklı bir belgenin) yöntemini çağırın.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#110](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#110)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#110](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#110)]
 
-## <a name="compile-the-code"></a>Kod derleme
+## <a name="compile-the-code"></a>Kodu derle
 
-- C sürücüsünde *SamplePicture. jpg* adlı bir resim bulunmalıdır.
+- C sürücüsünde *SamplePicture.jpg* adlı bir resim bulunmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Varolan belgeleri program aracılığıyla açma](../vsto/how-to-programmatically-open-existing-documents.md)
-- [Nasıl yapılır: Program aracılığıyla Word belgelerine metin ekleme](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
-- [Nasıl yapılır: Aramalardan sonra programlı olarak seçimleri geri yükleme](../vsto/how-to-programmatically-restore-selections-after-searches.md)
-- [Nasıl yapılır: Program aracılığıyla belgeleri kaydetme](../vsto/how-to-programmatically-save-documents.md)
+- [Nasıl yapılır: program aracılığıyla varolan belgeleri açma](../vsto/how-to-programmatically-open-existing-documents.md)
+- [Nasıl yapılır: program aracılığıyla Word belgelerine metin ekleme](../vsto/how-to-programmatically-insert-text-into-word-documents.md)
+- [Nasıl yapılır: aramadan sonra program aracılığıyla seçimleri geri yükleme](../vsto/how-to-programmatically-restore-selections-after-searches.md)
+- [Nasıl yapılır: program aracılığıyla belgeleri kaydetme](../vsto/how-to-programmatically-save-documents.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)
