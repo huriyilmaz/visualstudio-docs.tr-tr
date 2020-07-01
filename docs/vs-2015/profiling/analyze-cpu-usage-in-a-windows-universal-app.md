@@ -15,17 +15,17 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 robots: noindex,nofollow
-ms.openlocfilehash: 8d296c8803127cdbc2e6c72f86dcfba968e2b940
-ms.sourcegitcommit: bdccab4c2dbd50ea8adaaf88c69c9ca32db88099
+ms.openlocfilehash: def581f547db19a8db4cebc4d63739ff09bb5fab
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144791"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85531670"
 ---
 # <a name="analyze-cpu-usage-in-a-windows-universal-app"></a>Windows Evrensel uygulamasında CPU kullanımını analiz etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content.exe "windows_and_phone_content")  
+Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
   
  Uygulamanızdaki performans sorunlarını araştırmanız gerektiğinde, baştan başlamak, CPU 'YU nasıl kullandığını öğreniyor. **CPU kullanımı** Aracı, CPU 'nun kod yürütme süresini harcadığı zamanı gösterir. Belirli senaryolara odaklanmak için CPU kullanımı, [XAML UI yanıt verme](https://msdn.microsoft.com/library/4ff84cd1-4e63-4fda-b34f-3ef862a6e480) Aracı, [CPU kullanım aracı](../profiling/cpu-usage.md) aracı veya tek bir tanılama oturumunda her iki araçla çalıştırılabilir.  
   
@@ -34,10 +34,10 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
   
  Bu izlenecek yol, basit bir Windows Evrensel XAML uygulamasının CPU kullanımını toplama ve çözümleme konusunda size kılavuzluk eden bir işlemdir.  
   
-## <a name="BKMK_Create_the_CpuUseDemo_project"></a>CpuUseDemo projesi oluşturma  
+## <a name="create-the-cpuusedemo-project"></a><a name="BKMK_Create_the_CpuUseDemo_project"></a>CpuUseDemo projesi oluşturma  
  **Cpuusedemo** , CPU kullanım verilerinin nasıl toplanacağını ve çözümlendiğini göstermek için oluşturulmuş bir uygulamadır. Düğmeler, bir işleve birden çok çağrının en büyük değerini seçen bir yöntemi çağırarak bir sayı üretir. Çağrılan işlev çok fazla sayıda rastgele değer oluşturur ve sonra son olanı döndürür. Veriler bir metin kutusunda görüntülenir.  
   
-1. BlankApp şablonunu kullanarak C# **cpuusedemo** adlı yeni bir Windows Evrensel uygulama projesi oluşturun.  
+1. **BlankApp** şablonunu kullanarak **cpuusedemo** adlı yeni bir C# Windows Universal App projesi oluşturun.  
   
      ![CpuUseDemoProject oluşturma](../profiling/media/cpu-use-newproject.png "CPU_USE_NewProject")  
   
@@ -47,7 +47,7 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
   
 4. Uygulamayı derleyin ve deneyin. Uygulama, CPU kullanımı veri analizinin bazı yaygın durumlarını gösterecek kadar basittir.  
   
-## <a name="BKMK_Collect_CPU_usage_data"></a>CPU kullanım verilerini topla  
+## <a name="collect-cpu-usage-data"></a><a name="BKMK_Collect_CPU_usage_data"></a>CPU kullanım verilerini topla  
  ![Simülatör 'de uygulamanın yayın yapısını Çalıştır](../profiling/media/cpu-use-wt-setsimulatorandretail.png "CPU_USE_WT_SetSimulatorAndRetail")  
   
 1. Visual Studio 'da dağıtım hedefini **simülatör** olarak ayarlayın ve **Yayınla**çözüm yapılandırmasını yapın.  
@@ -72,40 +72,40 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
   
    ![CpuUsage raporu](../profiling/media/cpu-use-wt-report.png "CPU_USE_WT_Report")  
   
-## <a name="BKMK_Analyze_the_CPU_Usage_report"></a>CPU kullanımı raporunu analiz etme  
+## <a name="analyze-the-cpu-usage-report"></a><a name="BKMK_Analyze_the_CPU_Usage_report"></a>CPU kullanımı raporunu analiz etme  
   
-### <a name="BKMK_CPU_utilization_timeline_graph"></a>CPU kullanımı zaman çizelgesi grafiği  
- ![Cpukullanım &#40;%&#41; zaman çizelgesi grafiği](../profiling/media/cpu-use-wt-timelinegraph.png "CPU_USE_WT_TimelineGraph")  
+### <a name="cpu-utilization-timeline-graph"></a><a name="BKMK_CPU_utilization_timeline_graph"></a>CPU kullanımı zaman çizelgesi grafiği  
+ ![Cpukullanım &#40;% &#41; zaman çizelgesi grafiği](../profiling/media/cpu-use-wt-timelinegraph.png "CPU_USE_WT_TimelineGraph")  
   
- CPU kullanım grafiğinde, uygulamanın CPU etkinliği, cihazdaki tüm işlemci çekirdekleri için tüm CPU süresinin yüzdesi olarak gösterilir. Bu raporun verileri bir çift çekirdekli makinede toplandı. İki büyük ani artışlar iki düğme tıklamasının CPU etkinliğini temsil eder. `GetMaxNumberButton_Click` tek bir çekirdekli bir işlem gerçekleştirerek, yöntemin grafik yüksekliğinin hiçbir zaman %50 ' ı aşmadığını anlamlı hale getirir. `GetMaxNumberAsycButton_Click` her iki çekirdekte zaman uyumsuz olarak çalışır; bu nedenle, her iki çekirdekte CPU kaynaklarının tümünün kullanılmasıyla hemen sonra ani bir daha yakın olduğunu araştırır.  
+ CPU kullanım grafiğinde, uygulamanın CPU etkinliği, cihazdaki tüm işlemci çekirdekleri için tüm CPU süresinin yüzdesi olarak gösterilir. Bu raporun verileri bir çift çekirdekli makinede toplandı. İki büyük ani artışlar iki düğme tıklamasının CPU etkinliğini temsil eder. `GetMaxNumberButton_Click`tek bir çekirdek üzerinde zaman uyumlu olarak gerçekleştirerek yöntemin grafik yüksekliğinin hiçbir zaman %50 ' ı aşmadığını anlamlı hale getirir. `GetMaxNumberAsycButton_Click`Her iki çekirdekte zaman uyumsuz olarak çalışır; bu nedenle, her iki çekirdekte CPU kaynaklarının tümünün kullanılmasıyla hemen sonra ani bir daha yakın olduğunu araştırır.  
   
-#### <a name="BKMK_Select_timeline_segments_to_view_details"></a>Ayrıntıları görüntülemek için zaman çizelgesi segmentlerini seçin  
+#### <a name="select-timeline-segments-to-view-details"></a><a name="BKMK_Select_timeline_segments_to_view_details"></a>Ayrıntıları görüntülemek için zaman çizelgesi segmentlerini seçin  
  GetMaxNumberButton_Click verilerine odaklanmak için **Tanılama oturumu** zaman çizelgesindeki seçim çubuklarını kullanın:  
   
  ![GetMaxNumberButton&#95;seçili öğesine tıklayın](../profiling/media/cpu-use-wt-getmaxnumberreport.png "CPU_USE_WT_GetMaxNumberReport")  
   
  **Tanılama oturumu** zaman çizelgesi artık seçili segmentte harcanan süreyi (Bu raporda 2 saniyeden uzun bir süre) görüntüler ve çağrı ağacını seçimde çalıştırılan yöntemlere filtreler.  
   
- Şimdi `GetMaxNumberAsyncButton_Click` segmentini seçin.  
+ Şimdi segmenti seçin `GetMaxNumberAsyncButton_Click` .  
   
- ![GetMaxNumberAsyncButton&#95;rapor seçimi](../profiling/media/cpu-use-wt-getmaxnumberasync-selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
+ ![GetMaxNumberAsyncButton&#95;rapor seçimi ' ne tıklayın](../profiling/media/cpu-use-wt-getmaxnumberasync-selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
   
- Bu yöntem `GetMaxNumberButton_Click`daha hızlı bir şekilde tamamlanır, ancak çağrı ağacı girişlerinin anlamı daha az belirgin olur.  
+ Bu yöntem yaklaşık bir saniyeden daha hızlı tamamlanır `GetMaxNumberButton_Click` , ancak çağrı ağacı girişlerinin anlamı daha az belirgin olur.  
   
-### <a name="BKMK_The_CPU_Usage_call_tree"></a>CPU kullanımı çağrı ağacı  
- Çağrı ağacı bilgilerini anlamak için `GetMaxNumberButton_Click` segmentini yeniden seçin ve çağrı ağacı ayrıntılarına bakın.  
+### <a name="the-cpu-usage-call-tree"></a><a name="BKMK_The_CPU_Usage_call_tree"></a>CPU kullanımı çağrı ağacı  
+ Çağrı ağacı bilgilerini anlamak için, segmenti yeniden seçin `GetMaxNumberButton_Click` ve çağrı ağacı ayrıntılarına bakın.  
   
-#### <a name="BKMK_Call_tree_structure"></a>Çağrı ağacı yapısı  
- ![GetMaxNumberButton&#95;çağrı ağacı öğesine tıklayın](../profiling/media/cpu-use-wt-getmaxnumbercalltree-annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
+#### <a name="call-tree-structure"></a><a name="BKMK_Call_tree_structure"></a>Çağrı ağacı yapısı  
+ ![GetMaxNumberButton&#95;çağrı ağacı ' na tıklayın](../profiling/media/cpu-use-wt-getmaxnumbercalltree-annotated.png "CPU_USE_WT_GetMaxNumberCallTree_annotated")  
   
-|||  
+|Görüntü|Açıklama|  
 |-|-|  
-|![1. adım](../profiling/media/procguid-1.png "ProcGuid_1")|CPU kullanım çağrısı ağaçlarında en üst düzey düğüm bir sözde düğümdür|  
-|![2. adım](../profiling/media/procguid-2.png "ProcGuid_2")|Çoğu uygulamalarda, **dış kodu göster** seçeneği devre dışı bırakıldığında, ikinci düzey düğüm, uygulamayı başlatan ve durduran sistem ve çerçeve kodunu içeren bir **[Dış kod]** düğümüdür, Kullanıcı arabirimini çizer, iş parçacığı zamanlamasını denetler ve diğer uygulamaya alt düzey hizmetler.|  
-|![3. adım](../profiling/media/procguid-3.png "ProcGuid_3")|İkinci düzey düğümün alt öğeleri, ikinci düzey sistem ve Framework kodu tarafından çağrılan veya oluşturulan kullanıcı kodu yöntemleri ve zaman uyumsuz yordamlardır.|  
+|![1. Adım](../profiling/media/procguid-1.png "ProcGuid_1")|CPU kullanım çağrısı ağaçlarında en üst düzey düğüm bir sözde düğümdür|  
+|![2. Adım](../profiling/media/procguid-2.png "ProcGuid_2")|Çoğu uygulamalarda, **dış kodu göster** seçeneği devre dışı bırakıldığında, ikinci düzey düğüm, uygulamayı başlatan ve durduran sistem ve çerçeve kodunu içeren bir **[Dış kod]** düğümüdür, Kullanıcı arabirimini çizer, iş parçacığı zamanlamasını denetler ve uygulamaya diğer alt düzey hizmetler sağlar.|  
+|![3. Adım](../profiling/media/procguid-3.png "ProcGuid_3")|İkinci düzey düğümün alt öğeleri, ikinci düzey sistem ve Framework kodu tarafından çağrılan veya oluşturulan kullanıcı kodu yöntemleri ve zaman uyumsuz yordamlardır.|  
 |![4. adım](../profiling/media/procguid-4.png "ProcGuid_4")|Bir metodun alt düğümleri yalnızca üst yöntemin çağrıları için veri içerir. **Dış kodu göster** devre dışı bırakıldığında, uygulama yöntemleri bir **[Dış kod]** düğümü de içerebilir.|  
   
-#### <a name="BKMK_External_Code"></a>Dış kod  
+#### <a name="external-code"></a><a name="BKMK_External_Code"></a>Dış kod  
  Dış kod, System ve Framework bileşenlerinde yazdığınız kod tarafından yürütülen işlevlerden oluşur. Dış kod, uygulamayı başlatıp durduran, Kullanıcı arabirimini çizdiğiniz, iş parçacığı denetleyen ve diğer alt düzey Hizmetleri uygulamaya sağlayan işlevleri içerir. Çoğu durumda, harici kod ile ilgilenmezsiniz ve bu nedenle CPU kullanımı çağrı ağacı bir Kullanıcı yönteminin dış işlevlerini tek bir **[harici kod]** düğümüne toplar.  
   
  Dış kodun çağrı yollarını görüntülemek istediğinizde, **filtre görünümü** listesinden **dış kodu göster** ' i seçin ve ardından **Uygula**' yı seçin.  
@@ -120,43 +120,43 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
   
  ![İç içe geçmiş dış kodu arayın](../profiling/media/cpu-use-wt-showexternalcodetoowide-found.png "CPU_USE_WT_ShowExternalCodeTooWide_Found")  
   
-### <a name="BKMK_Call_tree_data_columns"></a>Ağaç veri sütunlarını çağır  
+### <a name="call-tree-data-columns"></a><a name="BKMK_Call_tree_data_columns"></a>Ağaç veri sütunlarını çağır  
   
-|||  
+|Özellik|Açıklama|  
 |-|-|  
 |**Toplam CPU (%)**|![Toplam% veri denklemi](../profiling/media/cpu-use-wt-totalpercentequation.png "CPU_USE_WT_TotalPercentEquation")<br /><br /> İşleve yapılan çağrılar ve işlev tarafından çağrılan işlevler tarafından kullanılan seçili zaman aralığındaki uygulamanın CPU etkinliğinin yüzdesi. Bu, bir zaman aralığındaki uygulamanın toplam etkinliğini toplam kullanılabilir CPU kapasitesine karşılaştıran **CPU kullanımı** zaman çizelgesi grafiğinden farklı olduğunu unutmayın.|  
 |**Self CPU (%)**|![Kendi kendine denklemi](../profiling/media/cpu-use-wt-selflpercentequation.png "CPU_USE_WT_SelflPercentEquation")<br /><br /> İşlev tarafından çağrılan işlevlerin etkinliği hariç olmak üzere, işlev çağrıları tarafından kullanılan seçili zaman aralığındaki uygulamanın CPU etkinliğinin yüzdesi.|  
 |**Toplam CPU (MS)**|Seçili zaman aralığındaki işleve yapılan çağrılar ve işlev tarafından çağrılan işlevler için harcanan milisaniye sayısı.|  
 |**Self CPU (MS)**|Seçili zaman aralığındaki işleve yapılan çağrılar ve işlev tarafından çağrılan işlevler için harcanan milisaniye sayısı.|  
-|**Module**|İşlevi içeren modülün adı veya [Dış kod] düğümündeki işlevleri içeren modül sayısı.|  
+|**Modül**|İşlevi içeren modülün adı veya [Dış kod] düğümündeki işlevleri içeren modül sayısı.|  
   
-### <a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a>CPU kullanım çağrısı ağacındaki zaman uyumsuz işlevler  
+### <a name="asynchronous-functions-in-the-cpu-usage-call-tree"></a><a name="BKMK_Asynchronous_functions_in_the_CPU_Usage_call_tree"></a>CPU kullanım çağrısı ağacındaki zaman uyumsuz işlevler  
  Derleyici zaman uyumsuz bir yöntemle karşılaştığında, yöntemin yürütmesini denetlemek için gizli bir sınıf oluşturur. Kavramsal olarak, sınıfı, özgün yöntemin işlemlerini zaman uyumsuz olarak çağıran derleyici tarafından oluşturulan işlevlerin bir listesini ve bunları doğru bir şekilde gereken geri çağırmaları, zamanlayıcıyı ve yineleyicilerini çağıran bir durum makinedir. Özgün yöntem bir üst yöntem tarafından çağrıldığında, çalışma zamanı, yöntemi üst öğenin yürütme bağlamından kaldırır ve gizli sınıfın yöntemlerini, uygulamanın yürütülmesini denetleyen sistem ve çerçeve kodu bağlamında çalıştırır. Zaman uyumsuz yöntemler çoğunlukla, her zaman bir veya daha fazla farklı iş parçacığında yürütülürler. Bu kod, ağacın üst düğümünün hemen altındaki **[Dış kod]** düğümünün alt ÖĞELERI olarak CPU kullanım çağrısı ağacında gösterilir.  
   
- Bunu örneğimizde görmek için zaman çizelgesinde `GetMaxNumberAsyncButton_Click` segmentini yeniden seçin.  
+ Bunu örneğimizde görmek için `GetMaxNumberAsyncButton_Click` zaman çizelgesinde segmenti yeniden seçin.  
   
- ![GetMaxNumberAsyncButton&#95;rapor seçimi](../profiling/media/cpu-use-wt-getmaxnumberasync-selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
+ ![GetMaxNumberAsyncButton&#95;rapor seçimi ' ne tıklayın](../profiling/media/cpu-use-wt-getmaxnumberasync-selected.png "CPU_USE_WT_GetMaxNumberAsync_Selected")  
   
  **[External Code]** altındaki ilk iki düğüm, durum makinesi sınıfının derleyici tarafından oluşturulan yöntemleridir. Üçüncü, özgün metoda yapılan çağrıdır. Oluşturulan yöntemlerin genişletilmesi, neler olduğunu gösterir.  
   
- ![Genişletilmiş GetMaxNumberAsyncButton&#95;tıklama çağrı ağacı](../profiling/media/cpu-use-wt-getmaxnumberasync-expandedcalltree.png "CPU_USE_WT_GetMaxNumberAsync_ExpandedCallTree")  
+ ![Genişletilmiş GetMaxNumberAsyncButton&#95;çağrı ağacı ' na tıklayın](../profiling/media/cpu-use-wt-getmaxnumberasync-expandedcalltree.png "CPU_USE_WT_GetMaxNumberAsync_ExpandedCallTree")  
   
-- `MainPage::GetMaxNumberAsyncButton_Click` çok az; görev değerlerinin bir listesini yönetir, sonuçların maksimum sayısını hesaplar ve çıktıyı görüntüler.  
+- `MainPage::GetMaxNumberAsyncButton_Click`çok az; görev değerlerinin bir listesini yönetir, sonuçların maksimum sayısını hesaplar ve çıktıyı görüntüler.  
   
-- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext`, `GetNumberAsync`çağrısını sarması gereken 48 görevlerini zamanlamak ve başlatmak için gereken etkinliği gösterir.  
+- `MainPage+<GetMaxNumberAsyncButton_Click>d__3::MoveNext`çağrıyı kaydırmak için gereken 48 görevlerini zamanlamak ve başlatmak için gereken etkinliği gösterir `GetNumberAsync` .  
   
-- `MainPage::<GetNumberAsync>b__b`, `GetNumber`çağıran görevlerin etkinliğini gösterir.  
+- `MainPage::<GetNumberAsync>b__b`çağıran görevlerin etkinliğini gösterir `GetNumber` .  
   
-## <a name="BKMK_Next_steps"></a> Sonraki adımlar  
+## <a name="next-steps"></a><a name="BKMK_Next_steps"></a>Sonraki adımlar  
  CpuUseDemo uygulaması en parlak uygulamalar değildir, ancak bunu kullanarak yardımcı programını, performans ve tanılama hub 'ındaki zaman uyumsuz işlem ve diğer araçlarla denemeler yapmak için kullanabilirsiniz.  
   
-- `MainPage::<GetNumberAsync>b__b`, GetNumber metodunu yürüttüğünden daha fazla zaman harcadığını unutmayın. Bu sürenin çoğu zaman uyumsuz işlemlerin ek yüküdür. Görev sayısını artırmayı deneyin (MainPage.xaml.cs `NUM_TASKS` sabitinde ayarlanır) ve `GetNumber` yineleme sayısını azaltarak (`MIN_ITERATIONS` değerini değiştirin). Koleksiyon senaryosunu çalıştırın ve `MainPage::<GetNumberAsync>b__b`CPU etkinliğini orijinal CPU kullanımı tanılama oturumunda ile karşılaştırın. Görevleri azaltmayı ve yinelemeleri artırmayı deneyin.  
+- `MainPage::<GetNumberAsync>b__b`[Dış kod] Içinde GetNumber metodunu yürüttüğünden daha fazla zaman harcadığını unutmayın. Bu sürenin çoğu zaman uyumsuz işlemlerin ek yüküdür. Görev sayısını artırmayı deneyin ( `NUM_TASKS` MainPage.xaml.cs 'in sabitinde ayarlanır) ve içindeki yineleme sayısını azaltın `GetNumber` ( `MIN_ITERATIONS` değeri değiştirin). Koleksiyon senaryosunu çalıştırın ve CPU etkinliğini `MainPage::<GetNumberAsync>b__b` ORIJINAL CPU kullanımı tanılama oturumunda olacak şekilde karşılaştırın. Görevleri azaltmayı ve yinelemeleri artırmayı deneyin.  
   
 - Kullanıcılar genellikle uygulamanızın gerçek performansını dikkate vermez; Bu uygulamalar, algılanan performans ve uygulamanın yanıt verme bilgilerini dikkate alırlar. XAML Kullanıcı Arabirimi yanıt verme aracı, Kullanıcı arabirimi iş parçacığında, yanıt verdiğini algılanan etkinliğin ayrıntılarını gösterir.  
   
      Tanılama ve performans hub 'ında yeni bir oturum oluşturun ve hem XAML UI yanıt verme aracını hem de CPU kullanımı aracını ekleyin. Toplama senaryosunu çalıştırın. Bu konuyu en fazla okumadıysanız, rapor büyük olasılıkla henüz iletişime etmemiş olduğunuz herhangi bir şeyi söylemez, ancak iki yöntem için **UI Iş parçacığı kullanım** zaman çizelgesi grafiğindeki farklılıklar göz harcar. Karmaşık, gerçek dünyada uygulamalar, araçların birleşimi çok faydalı olabilir.  
   
-## <a name="BKMK_MainPage_xaml"></a>MainPage. xaml  
+## <a name="mainpagexaml"></a><a name="BKMK_MainPage_xaml"></a>MainPage. xaml  
   
 ```csharp  
 <Page  
@@ -191,7 +191,7 @@ Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content
   
 ```  
   
-## <a name="BKMK_MainPage_xaml_cs"></a>MainPage.xaml.cs  
+## <a name="mainpagexamlcs"></a><a name="BKMK_MainPage_xaml_cs"></a>MainPage.xaml.cs  
   
 ```csharp  
 using System;  
