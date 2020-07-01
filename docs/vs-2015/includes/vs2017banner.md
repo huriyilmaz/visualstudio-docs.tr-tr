@@ -1,6 +1,6 @@
 ---
-title: include dosyası
-description: include dosyası
+title: dosya dahil etme
+description: dosya dahil etme
 ms.custom: include file
 author: ghogen
 ms.author: ghogen

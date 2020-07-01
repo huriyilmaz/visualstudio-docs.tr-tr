@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68189483"
 ---
-UI
+Kullanıcı arabirimi

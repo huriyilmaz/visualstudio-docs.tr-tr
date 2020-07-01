@@ -8,4 +8,4 @@ ms.lasthandoff: 07/15/2019
 ms.locfileid: "68145041"
 ---
 > [!NOTE]
-> **Metin şablonu dönüştürme** bileşeni parçası olarak otomatik olarak yüklenir **Visual Studio uzantısı geliştirme** iş yükü. Buradan ayrıca yükleyebilirsiniz **tek tek bileşenler** sekmesinde Visual Studio Yükleyicisi'nin altında **SDK'lar, kitaplıklar ve çerçeveler** kategorisi. Yükleme **modelleme SDK'sı** bileşenini **tek tek bileşenler** sekmesi.
+> **Metin şablonu dönüştürme** bileşeni, **Visual Studio uzantısı geliştirme** iş yükünün bir parçası olarak otomatik olarak yüklenir. Ayrıca, **SDK 'ları, kitaplıkları ve çerçeveler** kategorisi altındaki Visual Studio yükleyicisi **bireysel bileşenler** sekmesinden da yükleyebilirsiniz. **Tek tek bileşenler** SEKMESINDEN **modelleme SDK** bileşenini yükler.
