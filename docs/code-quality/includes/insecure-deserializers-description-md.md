@@ -10,4 +10,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68147091"
 ---
-Güvenli olmayan deserializers güvenilmeyen verileri işlenirken savunmasızdır. Bir saldırgan kötü amaçlı yan etkileri olan nesneleri eklemesine beklenmeyen türler seri hale getirilmiş verileri değiştirebilir. Güvenli olmayan bir seri durumdan çıkarıcının karşı bir saldırı, örneğin, temel işletim sistemi komutları yürütün, ağ üzerinden iletişim kurmak veya dosyaları silin.
+Güvenilmeyen verilerin serisi kaldırılırken güvenli olmayan seri hale getiriciler savunmasızdır. Saldırgan, kötü amaçlı yan etkileri olan nesneleri eklemek için seri hale getirilmiş verileri beklenmedik türleri içerecek şekilde değiştirebilir. Güvenli olmayan bir seri hale getiriciye karşı saldırı, örneğin, temel alınan işletim sisteminde komutlar yürütme, ağ üzerinden iletişim kurma veya dosyaları silme gibi bir saldırı olabilir.
