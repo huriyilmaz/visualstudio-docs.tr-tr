@@ -1,8 +1,8 @@
 ---
-title: Klasör Elemanı (Visual Studio Proje Şablonları) | Microsoft Dokümanlar
+title: Folder öğesi (Visual Studio proje şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Folder
 helpviewer_keywords:
@@ -13,19 +13,21 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb256b8be0dd9ce68f193750bf3ff5a383d5f073
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: b05ef44896e5cd428584c7efed267f130597ee35
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80711462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769592"
 ---
-# <a name="folder-element-visual-studio-project-templates"></a>Klasör öğesi (Visual Studio proje şablonları)
-Projeye eklenecek bir klasör belirtir.
+# <a name="folder-element-visual-studio-project-templates"></a>Folder öğesi (Visual Studio proje şablonları)
+Projeye eklenecek klasörü belirtir.
 
- \<VSTemplate \<> Şablonİçerik \< \<> Proje> Klasör>
+ \<VSTemplate> \<TemplateContent>
+ \<Project>
+ \<Folder>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <Folder Name="Project Folder">
@@ -42,27 +44,27 @@ Projeye eklenecek bir klasör belirtir.
 |Öznitelik|Açıklama|
 |---------------|-----------------|
 |`Name`|Gerekli öznitelik.<br /><br /> Proje klasörünün adı.|
-|`TargetFolderName`|İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda klasöre verecek adı belirtir. Bu öznitelik, bir klasör adı oluşturmak için parametre değiştirme kullanmak veya doğrudan *.zip* dosyasında kullanılamayacak uluslararası bir dize içeren bir klasöre isim vermek için yararlıdır.|
+|`TargetFolderName`|İsteğe bağlı öznitelik.<br /><br /> Şablondan bir proje oluşturulduğunda klasöre verilecek adı belirtir. Bu öznitelik, bir klasör adı oluşturmak veya bir klasörü doğrudan *. zip* dosyasında kullanılamayan uluslararası bir dizeyle adlandırmak üzere parametre değişimini kullanmak için yararlıdır.|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|`Folder`|Projeye eklemek için bir klasör belirtir. `Folder`öğeleri alt `Folder` öğeleri içerebilir.|
-|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|Projeye eklemek için bir dosya belirtir.|
+|`Folder`|Projeye eklenecek klasörü belirtir. `Folder`öğeler, alt `Folder` öğeleri içerebilir.|
+|[ProjectItem](../extensibility/projectitem-element-visual-studio-item-templates.md)|Projeye eklenecek bir dosya belirtir.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Project](../extensibility/project-element-visual-studio-templates.md)|[TemplateContent'in](../extensibility/templatecontent-element-visual-studio-templates.md)isteğe bağlı alt öğesi.|
+|[Project](../extensibility/project-element-visual-studio-templates.md)|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)öğesinin isteğe bağlı alt öğesi.|
 
 ## <a name="remarks"></a>Açıklamalar
- `Folder`isteğe bağlı `Project`bir çocuktur.
+ `Folder`, öğesinin isteğe bağlı bir alt öğesidir `Project` .
 
- Proje öğelerini şablondaki klasörlere düzenlemek için aşağıdaki yöntemlerden birini kullanabilirsiniz:
+ Bir şablondaki klasörler halinde proje öğelerini düzenlemek için aşağıdaki yöntemlerden herhangi birini kullanabilirsiniz:
 
-- Şablon *.zip* dosyasına klasörleri ekleyin ve `ProjectItem` öğelerde hiçbir `Folder` öğe olmadan dosyaya giden yolu belirterek *.vstemplate* dosyasındaki projeye ekleyin. Bu önerilen yöntemdir. Örnek:
+- Klasörleri template *. zip* dosyasına dahil edin ve öğe içinde dosya yolunu belirterek *. vstemplate* dosyasındaki projeye ekleyin ( `ProjectItem` hiçbir öğesi olmadan) `Folder` . Önerilen yöntem budur. Örneğin:
 
      `...`
 
@@ -72,7 +74,7 @@ Projeye eklenecek bir klasör belirtir.
 
      `...`
 
-- Şablon *.zip* dosyasındaki klasörleri ekleyin ve öğeleri içeren `Folder` *.vstemplate* dosyasındaki projeye ekleyin. Örnek:
+- Klasörleri template *. zip* dosyasına dahil edin ve *. vstemplate* dosyasındaki öğeleri öğeleriyle birlikte bu klasöre ekleyin `Folder` . Örneğin:
 
      `...`
 
@@ -86,7 +88,7 @@ Projeye eklenecek bir klasör belirtir.
 
      `...`
 
-- Şablon *.zip* dosyasına klasörler eklemeyin, `TargetFileName` `ProjectItem` ancak öğenin özniteliğini kullanarak klasörler ekleyin. Örnek:
+- Şablon *. zip* dosyasına klasörler eklemeyin, ancak öğesinin özniteliğini kullanarak klasörler ekleyin `TargetFileName` `ProjectItem` . Örneğin:
 
      `...`
 
@@ -97,7 +99,7 @@ Projeye eklenecek bir klasör belirtir.
      `...`
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows uygulaması için proje şablonu için meta veriler gösterilmiştir.
+ Aşağıdaki örnek, bir Windows uygulaması için bir proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -126,6 +128,6 @@ Projeye eklenecek bir klasör belirtir.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
 - [ProjectItem öğesi (Visual Studio öğe şablonları)](../extensibility/projectitem-element-visual-studio-item-templates.md)

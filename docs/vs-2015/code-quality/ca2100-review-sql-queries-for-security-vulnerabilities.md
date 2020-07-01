@@ -16,25 +16,25 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e7258ec98937e7ea84773e788234e5a34772e9d4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 797c071cdc74c36afeece304bfa4c708d7bf7147
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652190"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521218"
 ---
 # <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100: SQL sorgularını güvenlik açıkları için inceleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ReviewSqlQueriesForSecurityVulnerabilities|
 |CheckId|CA2100|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Yöntemi, yöntemine dize bağımsız değişkeninden oluşturulan bir dize kullanarak <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> özelliğini ayarlar.
+## <a name="cause"></a>Nedeni
+ Yöntemi, <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> yöntemine dize bağımsız değişkeninden oluşturulan bir dize kullanarak özelliği ayarlar.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Bu kural, dize değişkeninin kullanıcı girişi içerdiğini varsayar. Kullanıcı girişi ile oluşturulan SQL komut dizesi, SQL enjeksiyon saldırılarına karşı savunmasız durumdadır. Bir SQL ekleme saldırısında, kötü niyetli bir Kullanıcı, bir sorgunun tasarımını değiştiren ve temel alınan veritabanına yetkisiz erişim elde eden bir giriş sağlar. Tipik teknikler, SQL sabit dize sınırlayıcısı olan tek tırnak işareti veya kesme işareti ekleme işlemini içerir; bir SQL yorumunu belirten iki tire; ve yeni bir komutun izlediği noktalı virgül. Kullanıcı girişi sorgunun bir parçası olmalıdır, saldırı riskini azaltmak için, verimlilik sırasıyla listelenen aşağıdakilerden birini kullanın.
@@ -45,7 +45,7 @@ ms.locfileid: "72652190"
 
 - Komut dizesini oluşturmadan önce hem tür hem de içerik için Kullanıcı girişini doğrulayın.
 
-  Aşağıdaki [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] türleri <xref:System.Data.IDbCommand.CommandText%2A> özelliğini uygular veya bir dize bağımsız değişkeni kullanarak özelliği ayarlamış olan oluşturucular sağlar.
+  Aşağıdaki [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] türler <xref:System.Data.IDbCommand.CommandText%2A> özelliği uygular veya bir dize bağımsız değişkeni kullanarak özelliği ayarlamış olan oluşturucular sağlar.
 
 - <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> ve <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>
 
@@ -80,11 +80,11 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
  Komut metni herhangi bir kullanıcı girişi içermiyorsa, bu kuraldan bir uyarıyı gizlemek güvenlidir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, parametreli bir komut dizesi kullanarak kuralı karşılayan `UnsafeQuery` ve kuralı ihlal eden bir yöntemi gösterir, `SaferQuery`.
+ Aşağıdaki örnek, kuralı `UnsafeQuery` ve `SaferQuery` parametreli bir komut dizesi kullanarak kuralı karşılayan yöntemini ihlal eden bir yöntemi gösterir.
 
  [!code-cpp[FxCop.Security.ReviewSqlQueries#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Security.ReviewSqlQueries/cpp/FxCop.Security.ReviewSqlQueries.cpp#1)]
  [!code-csharp[FxCop.Security.ReviewSqlQueries#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Security.ReviewSqlQueries/cs/FxCop.Security.ReviewSqlQueries.cs#1)]
  [!code-vb[FxCop.Security.ReviewSqlQueries#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Security.ReviewSqlQueries/vb/FxCop.Security.ReviewSqlQueries.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Güvenliğe Genel Bakış](https://msdn.microsoft.com/library/33e09965-61d5-48cc-9e8c-3b047cc4f194)
+ [Güvenliğe genel bakış](https://msdn.microsoft.com/library/33e09965-61d5-48cc-9e8c-3b047cc4f194)

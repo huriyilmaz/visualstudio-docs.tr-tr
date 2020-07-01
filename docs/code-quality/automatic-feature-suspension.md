@@ -10,63 +10,63 @@ helpviewer_keywords:
 - performance
 - low-memory
 ms.assetid: 572c15aa-1fd0-468c-b6be-9fa50e170914
-author: TerryGLee
-ms.author: tglee
+author: Mikejo5000
+ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e8480eb57a08905c2a593adbab519ae793638888
-ms.sourcegitcommit: 92361aac3665a934faa081e1d1ea89a067b01c5b
+ms.openlocfilehash: 236a95cd8d4af8da91199bf79e7c9fe3aa0d49af
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79431247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769481"
 ---
 # <a name="automatic-feature-suspension"></a>Otomatik özelliği askıya alma
 
-Kullanılabilir sistem belleğiniz 200 MB veya daha az düşerse, Visual Studio kod düzenleyicisinde aşağıdaki iletiyi görüntüler:
+Kullanılabilir sistem belleğiniz 200 MB veya daha az kalırsa, Visual Studio kod düzenleyicisinde şu iletiyi görüntüler:
 
-![Tam çözüm çözümlemesi askıya alma metni](../code-quality/media/fsa_alert.png)
+![Tam çözüm analizini askıya alarak uyarı metni](../code-quality/media/fsa_alert.png)
 
-Visual Studio düşük bir bellek durumu algıladığında, sabit kalmasına yardımcı olmak için bazı gelişmiş özellikleri otomatik olarak askıya akarar. Visual Studio eskisi gibi çalışmaya devam ediyor, ancak performansı bozulur.
+Visual Studio düşük bellekli bir durum algıladığında, kararlı kalmasını sağlamak için bazı gelişmiş özellikleri otomatik olarak askıya alır. Visual Studio daha önce olduğu gibi çalışmaya devam eder, ancak performansı düşer.
 
-Düşük bellek durumunda, aşağıdaki eylemler gerçekleşir:
+Düşük bellek koşulunda aşağıdaki işlemler gerçekleşir:
 
-- Visual C# ve Visual Basic için canlı kod analizi minimum kapsama indirgenir.
+- Visual C# ve Visual Basic için canlı kod analizi, en az sayıda kapsama indirgenecek.
 
-- Visual C# ve Visual Basic için [Çöp Toplama](/dotnet/standard/garbage-collection/index) (GC) düşük gecikme modu devre dışı bırakılır.
+- Visual C# için [çöp toplama](/dotnet/standard/garbage-collection/index) (GC) düşük gecikme modu ve Visual Basic devre dışı bırakıldı.
 
-- Visual Studio önbellekleri kızartılır.
+- Visual Studio önbellekleri temizlendi.
 
-## <a name="improve-visual-studio-performance"></a>Visual Studio performansını artırın
+## <a name="improve-visual-studio-performance"></a>Visual Studio performansını geliştirme
 
-Büyük çözümler veya düşük bellek koşullarıyla uğraşırken Visual Studio performansını nasıl artırılanız ile ilgili ipuçları ve püf noktaları [için, büyük çözümler için Performans](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)hususları'na bakın.
+Büyük çözümlerle veya düşük bellek koşullarıyla çalışırken Visual Studio performansının nasıl iyileştirecağıyla ilgili ipuçları ve püf noktaları için bkz. [büyük çözümler Için performans konuları](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
 
-## <a name="live-code-analysis-is-reduced-to-minimal-scope"></a>Canlı kod analizi minimum kapsama indirgenir
+## <a name="live-code-analysis-is-reduced-to-minimal-scope"></a>Canlı Kod Analizi, en az sayıda kapsama indirgenmiş
 
-Varsayılan olarak, canlı kod çözümlemesi açık belgeler ve projeler için yürütür. Bu çözümleme kapsamını geçerli belgeye indirgenecek veya tüm çözüme yükseltilecek şekilde özelleştirebilirsiniz. Daha fazla bilgi için [bkz: Yönetilen kod için canlı kod çözümlemesi kapsamını yapılandırma.](./configure-live-code-analysis-scope-managed-code.md) Düşük bellek durumunda, Visual Studio canlı analiz kapsamını geçerli belgeye indirgenmeye zorlar. Ancak, görüntülendiğinde bilgi çubuğundaki **Yeniden etkinleştir** düğmesini seçerek veya Visual Studio'yu yeniden başlatarak tercih ettiğiniz analiz kapsamını yeniden etkinleştirebilirsiniz. Seçenekler iletişim kutusu her zaman geçerli canlı kod çözümleme kapsam ayarlarını gösterir.
+Varsayılan olarak, açık belgeler ve projeler için canlı kod analizi yürütülür. Bu analiz kapsamını, geçerli belgeye indirgenecek veya tüm çözüme artmış olacak şekilde özelleştirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: yönetilen kod için canlı kod analizi kapsamını yapılandırma](./configure-live-code-analysis-scope-managed-code.md). Düşük bellek koşulunda, Visual Studio canlı analiz kapsamını geçerli belgeye indirgenmeye zorlar. Ancak, veya Visual Studio 'Yu yeniden başlatarak, görüntülenen bilgi çubuğundaki **yeniden etkinleştir** düğmesini seçerek tercih ettiğiniz analiz kapsamını yeniden etkinleştirebilirsiniz. Seçenekler iletişim kutusu her zaman geçerli canlı kod analizi kapsam ayarlarını gösterir.
 
-## <a name="gc-low-latency-disabled"></a>GC düşük gecikmeli devre dışı
+## <a name="gc-low-latency-disabled"></a>GC düşük gecikme süresi devre dışı
 
-GC düşük gecikme modunu yeniden etkinleştirmek için Visual Studio'yı yeniden başlatın. Varsayılan olarak Visual Studio, yazmanızın herhangi bir GC operasyonunu engellemediğinden emin olmak için her yazdığınızda GC düşük gecikme moduna olanak tanır. Ancak, düşük bellek durumu Visual Studio'nun otomatik süspansiyon uyarısını görüntülemesine neden oluyorsa, GC düşük gecikme modu bu oturum için devre dışı bırakılır. Visual Studio'yu yeniden başlatmak varsayılan GC davranışını yeniden etkinleştirir. Daha fazla bilgi için bkz. <xref:System.Runtime.GCLatencyMode>.
+GC düşük gecikmeli modunu yeniden etkinleştirmek için Visual Studio 'Yu yeniden başlatın. Varsayılan olarak, yazılarınızın herhangi bir GC işlemini engellemediğinden emin olmak için her yazarken, Visual Studio GC düşük gecikme süresi modunu sağlar. Ancak, düşük bellek durumu Visual Studio 'Nun otomatik askıya alma uyarısını görüntülemesine neden oluyorsa, GC düşük gecikme modu bu oturum için devre dışıdır. Visual Studio 'Yu yeniden başlatmak için varsayılan GC davranışı etkinleştirilir. Daha fazla bilgi için bkz. <xref:System.Runtime.GCLatencyMode>.
 
-## <a name="visual-studio-caches-flushed"></a>Visual Studio önbellekleri kızartılmış
+## <a name="visual-studio-caches-flushed"></a>Visual Studio önbellekleri temizlendi
 
-Geçerli geliştirme oturumunuza devam ederseniz veya Visual Studio'yu yeniden başlatırsanız, tüm Visual Studio önbellekleri hemen boşaltılır, ancak yeniden doldurulmaya başlar. Sifonlanan önbellekler aşağıdaki özellikler için önbellekleri içerir:
+Geçerli geliştirme oturumunuza devam ederseniz veya Visual Studio 'yu yeniden başlatırsanız, tüm Visual Studio önbellekleri hemen boşaltılır, ancak yeniden oluşturmaya başlar. Temizlenen önbellekler aşağıdaki özelliklere yönelik önbellekleri içerir:
 
-- Tüm referansları bulun
+- Tüm başvuruları bul
 
-- Gezinme
+- Şuraya gidin
 
-- Kullanma Ekle
+- Kullanarak Ekle
 
-Buna ek olarak, dahili Visual Studio işlemleri için kullanılan önbellekler de temizlenir.
+Ayrıca, iç Visual Studio işlemleri için kullanılan önbellekler da temizlenir.
 
 > [!NOTE]
-> Otomatik özellikli süspansiyon uyarısı, oturum başına değil, çözüm başına yalnızca bir kez gerçekleşir. Bu, Visual Basic'ten Visual C# (veya tam tersi) geçiş yapıp başka bir düşük bellek koşuluyla karşılaştığınızda, başka bir otomatik özellik süspansiyon uyarısı alabileceğiniz anlamına gelir.
+> Otomatik Özellik askıya alma uyarısı, her oturum için değil, her çözüm temelinde yalnızca bir kez gerçekleşir. Bu, Visual Basic 'den Visual C# ' ye (veya tam tersi) geçiş yaptıysanız ve başka bir düşük bellek koşuluyla çalıştırırsanız, başka bir otomatik özellik askıya alma uyarısı elde edebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapilir: Yönetilen kod için canlı kod çözümleme kapsamını yapılandırma](./configure-live-code-analysis-scope-managed-code.md)
+- [Nasıl yapılır: yönetilen kod için canlı kod analizi kapsamını yapılandırma](./configure-live-code-analysis-scope-managed-code.md)
 - [Atık Toplamanın Temelleri](/dotnet/standard/garbage-collection/fundamentals)
 - [Büyük çözümler için performans konuları](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)

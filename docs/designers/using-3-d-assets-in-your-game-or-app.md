@@ -1,7 +1,7 @@
 ---
-title: Oyununuzda veya Uygulamanızda 3B Varlıkları Kullanma
+title: Oyununuzda veya uygulamanızda 3B varlıkları kullanma
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VC.Project.ImageContentTask.ContentOutput
 - VC.Project.MeshContentTask.ContentOutput
@@ -15,124 +15,124 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d38f87970d5f9ff6d90befc61073cc4ed3d4ca92
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 3821262a456f9e3e764555fce5fc883b42d4ae9e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768652"
 ---
-# <a name="how-to-use-3d-assets-in-your-game-or-app"></a>Nasıl kullanılır: Oyununuzda veya uygulamanızda 3B varlıkları kullanın
+# <a name="how-to-use-3d-assets-in-your-game-or-app"></a>Nasıl yapılır: Oyununuzda veya uygulamanızda 3B varlıklar kullanma
 
-Bu makalede, Visual Studio'nun 3B varlıkları işlemek ve bunları yapılarınıza dahil etmek için nasıl kullanabileceğiniz açıklanmaktadır.
+Bu makalede, Visual Studio 'Yu kullanarak 3B varlıkları nasıl işleyebileceğinizi ve bunları derlemelerinize nasıl dahil kullanabileceğinizi açıklar.
 
-Visual Studio'daki araçları 3B varlıklar oluşturmak için kullandıktan sonra, bir sonraki adım bunları uygulamanızda kullanmaktır. Ancak, bunları kullanabilmek için önce varlıklarınızın DirectX'in anlayabileceği bir biçime dönüştürülmesi gerekir. Visual Studio, varlıklarınızı dönüştürmenize yardımcı olmak için, üretebileceği her tür varlık için yapı özelleştirmeleri sağlar. Yapınızdaki varlıkları eklemek için tek yapmanız gereken, yapı özelleştirmelerini kullanacak, varlıkları projenize ekleyecek ve varlıkları doğru yapı özelleştirmesini kullanacak şekilde yapılandırmaktır. Bundan sonra, varlıkları uygulamanıza yükleyebilir ve directx kaynaklarını oluşturarak ve doldurarak bunları kullanabilirsiniz.
+3D varlıklar oluşturmak için Visual Studio 'daki araçları kullandıktan sonra, bir sonraki adım bunları uygulamanızda kullanmaktır. Ancak, bunları kullanabilmeniz için, varlıklarınızın DirectX 'in anlayabilmesi için bir biçime dönüştürülmesi gerekir. Varlıklarınızı dönüştürmenizi kolaylaştırmak için Visual Studio, üretebileceğini her bir varlık türü için derleme özelleştirmeleri sağlar. Derlemenize varlıkları dahil etmek için tüm yapmanız gerekir derleme özelleştirmelerini kullanmak için projenizi yapılandırmak, varlıkları projenize eklemek ve doğru yapı özelleştirmesini kullanmak için varlıkları yapılandırmak. Bundan sonra, varlıkları uygulamanıza yükleyebilir ve diğer herhangi bir DirectX uygulamasında olduğu gibi DirectX kaynaklarını oluşturarak ve doldurarak kullanabilirsiniz.
 
-## <a name="configure-your-project"></a>Projenizi yapılandırın
+## <a name="configure-your-project"></a>Projenizi yapılandırma
 
-3B varlıklarınızı yapınızın bir parçası olarak dağıtmadan önce Visual Studio'nun dağıtmak istediğiniz varlık türlerini bilmesi gerekiyor. Visual Studio zaten birçok yaygın dosya türleri hakkında bilir, ancak uygulamaların sadece belirli türleri 3D varlıkları kullanmak çünkü, Visual Studio bir proje dosyaları bu tür inşa edeceğini varsaymaz. Visual Studio'ya, uygulamanızın her varlık türü için sağlanan farklı dosya türlerini yararlı bir şekilde nasıl işleyebilirlerini söyleyen *yapı özelleştirmelerini*(Visual Studio'ya nasıl yararlı bir şekilde işlenirsiniz) kullanarak bu tür varlıkları kullandığını söyleyebilirsiniz. Bu özelleştirmeler proje başına uygulandığından, tek yapmanız gereken projenize uygun özelleştirmeleri eklemektir.
+3D varlıklarınızı yapınızı bir parçası olarak dağıtmadan önce, Visual Studio 'nun dağıtmak istediğiniz varlık türleri hakkında bilgi sahibi olması gerekir. Visual Studio birçok ortak dosya türünü zaten biliyor, ancak yalnızca belirli türlerde uygulamalar 3B varlıkları kullandığından, Visual Studio bir projenin bu tür dosyaları derleneceğini varsaymaz. Visual Studio 'Da uygulamanızın bu tür varlıkları kullandığını, Visual Studio 'nun her varlık türü için *sunulan, farklı*dosya türlerini kullanışlı bir şekilde nasıl işleyeceğini söyleyen dosyalar olduğunu söyleyebilirsiniz. Bu özelleştirmeler proje başına temelinde uygulandığından, tüm yapmanız gereken, projenize uygun özelleştirmeler eklemektir.
 
-### <a name="to-add-the-build-customizations-to-your-project"></a>Yapı özelleştirmelerini projenize eklemek için
+### <a name="to-add-the-build-customizations-to-your-project"></a>Projenize yapı özelleştirmeleri eklemek için
 
-1. **Çözüm Gezgini'nde,** proje için kısayol menüsünü açın ve ardından **Bağımlılıklar** > **Oluşturma Özelleştirmeleri'ni**seçin.
+1. **Çözüm Gezgini**' de, proje için kısayol menüsünü açın ve ardından **yapı bağımlılıkları**  >  **Derleme özelleştirmeleri**' ni seçin.
 
-   **Visual C++ Yapı Özelleştirmeler Dosyaları** iletişim kutusu görüntülenir.
+   **Visual C++ yapı özelleştirmeleri dosyaları** iletişim kutusu görüntülenir.
 
-2. **Kullanılabilir Yapı Özelleştirme Dosyaları**altında, aşağıdaki tabloda açıklandığı gibi, projenizde kullanmak istediğiniz varlık türlerine karşılık gelen onay kutularını seçin:
+2. **Kullanılabilir yapı özelleştirmesi dosyaları**altında, aşağıdaki tabloda açıklandığı gibi, projenizde kullanmak istediğiniz varlık türlerine karşılık gelen onay kutularını seçin:
 
-    |Varlık türü|Özelleştirme Adı Oluşturma|
+    |Varlık türü|Yapı özelleştirmesi adı|
     |----------------| - |
-    |Dokular ve görüntüler|**ImageContentTask(.targets, .props)**|
-    |3D Modeller|**MeshContentTask(.targets, .props)**|
-    |Gölgelendiriciler|**ShaderGraphContentTask(.targets, .props)**|
+    |Dokular ve görüntüler|**ImageContentTask (. targets,. props)**|
+    |3B modeller|**MeshContentTask (. targets,. props)**|
+    |Gölgelendiriciler|**ShaderGraphContentTask (. targets,. props)**|
 
 3. **Tamam** düğmesini seçin.
 
-## <a name="include-assets-in-your-build"></a>Yapınıza varlıkları ekleme
+## <a name="include-assets-in-your-build"></a>Derlemenize varlıklar ekleyin
 
-Artık projeniz kullanmak istediğiniz farklı türde 3B varlıkları bildiğine göre, bir sonraki adım hangi dosyaların 3B varlıklar olduğunu ve ne tür varlıklar olduğunu söylemektir.
+Artık projeniz kullanmak istediğiniz farklı türlerdeki 3B varlıkların olduğunu öğrendiğinden, bir sonraki adım, hangi dosyaların 3B varlıklar olduğunu ve ne tür varlıkların olduğunu söyleyecektir.
 
-### <a name="to-add-an-asset-to-your-build"></a>Yapınıza bir varlık eklemek için
+### <a name="to-add-an-asset-to-your-build"></a>Derlemenize bir varlık eklemek için
 
-1. **Çözüm Gezgini'nde,** projenizde, bir varlığın kısayol menüsünü açın ve ardından **Özellikler'i**seçin.
+1. **Çözüm Gezgini**, projenizde bir varlığın kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
-   Varlığın **Özellik Sayfası** iletişim kutusu görüntülenir.
+   Varlığın **özellik sayfası** iletişim kutusu görüntülenir.
 
-2. **Yapılandırma** ve **Platform** özelliklerinin değişikliklerinizin uygulanmasını istediğiniz değerlere ayarlı olduğundan emin olun.
+2. **Yapılandırma** ve **Platform** özelliklerinin, değişikliklerinizin uygulanmasını istediğiniz değerlere ayarlandığından emin olun.
 
-3. **Yapılandırma Özellikleri** **altında, Genel'i**seçin ve ardından özellik ızgarasında, **Genel** **altında, Öğe Türü** özelliğini uygun içerik ardışık öğe türüne ayarlayın. Örneğin, bir resim veya doku dosyası için **Görüntü İçerik Ardışık Alanı'nı**seçin.
+3. **Yapılandırma özellikleri**' nin altında **genel**' i seçin ve sonra özellik kılavuzunda, **genel**altında, **öğe türü** özelliğini uygun içerik ardışık düzen öğe türü olarak ayarlayın. Örneğin, bir görüntü veya doku dosyası için **görüntü içeriği Işlem hattı**' nı seçin.
 
     > [!IMPORTANT]
-    > Varsayılan olarak, Visual Studio, Visual Studio'da yerleşik olan **Resim** öğesi türünü kullanarak birçok görüntü dosyası türünün kategorilere alınması gerektiğini varsayar. Bu nedenle, görüntü içeriği ardışık tarafından işlenmesini istediğiniz her görüntünün **Madde Türü** özelliğini değiştirmeniz gerekir. 3B modeller ve görsel gölgeli grafikler için diğer içerik boru hattı kaynak dosyaları doğru Öğe Türü için **varsayılan.**
+    > Varsayılan olarak, Visual Studio, Visual Studio 'da yerleşik olarak bulunan **görüntü** öğesi türü kullanılarak birçok görüntü dosyası türünün kategorize olması gerektiğini varsayar. Bu nedenle, görüntü içeriği ardışık düzeni tarafından işlenmesini istediğiniz her bir görüntünün **öğe türü** özelliğini değiştirmeniz gerekir. 3B modeller ve Visual gölgelendirici grafik için diğer içerik ardışık düzen kaynak dosyalarının doğru **öğe türü**için varsayılan türü.
 
 4. **Tamam** düğmesini seçin.
 
-Aşağıda üç içerik ardışık madde türleri ve bunların ilişkili kaynak ve çıktı dosya türleri verilmiştir.
+Aşağıda üç içerik ardışık düzen öğe türü ve ilişkili kaynak ve çıkış dosyası türleri verilmiştir.
 
-|Madde Türü|Kaynak dosya türleri|Çıktı dosyası biçimi|
+|Öğe türü|Kaynak dosya türleri|Çıkış dosyası biçimi|
 |---------------| - | - |
-|**Görüntü İçerik Boru Hattı**|Taşınabilir Ağ Grafikleri (*.png*)<br /><br /> JPEG (*.jpg*, *.jpeg*, *.jpe*, *.jfif*)<br /><br /> Doğrudan Çekme Yüzeyi (*.dds*)<br /><br /> Grafik Değişim Biçimi (*.gif*)<br /><br /> Bitmap (*.bmp*, *.dib*)<br /><br /> Tagged Resim Dosyası Formatı (*.tif*, *.tiff*)<br /><br /> Targa (*.tga*)|DirectDraw Yüzeyi (*.dds*)|
-|**Kafes İçerik Boru Hattı**|AutoDesk FBX Değişim Dosyası (*.fbx*)<br /><br /> Collada DAE Dosyası (*.dae*)<br /><br /> Wavefront OBJ Dosya (*.obj*)|3B örgü dosyası (*.cmo*)|
-|**Gölgeli İçerik Boru Hattı**|Görsel Shader Grafiği (*.dgsl*)|Derlenmiş Shader Çıkışı (*.cso*)|
+|**Görüntü Içeriği ardışık düzeni**|Taşınabilir Ağ Grafikleri (*. png*)<br /><br /> JPEG (*. jpg*, *. jpeg*, *. jpe*, *.* JI)<br /><br /> Doğrudan çizim yüzeyi (*. DDS*)<br /><br /> Grafik Değişim Biçimi (*. gif*)<br /><br /> Bit eşlem (*. bmp*, *. dib*)<br /><br /> Etiketli resim dosyası biçimi (*. tif*, *. tiff*)<br /><br /> Targa (*. tga*)|DirectDraw yüzeyi (*. DDS*)|
+|**Kafes Içerik ardışık düzeni**|AutoDesk FBX değişim dosyası (*. fbx*)<br /><br /> Collada Dade dosyası (*. Dade*)<br /><br /> Wavefront OBJ dosyası (*. obj*)|3B ağ dosyası (*. CMO*)|
+|**Gölgelendirici Içerik ardışık düzeni**|Görsel Gölgelendirici Grafiği (*. dgsl*)|Derlenen gölgelendirici çıkışı (*. cso*)|
 
-## <a name="configure-asset-content-pipeline-properties"></a>Varlık içeriği boru hattı özelliklerini yapılandırma
+## <a name="configure-asset-content-pipeline-properties"></a>Varlık içeriği ardışık düzen özelliklerini yapılandırma
 
-Her varlık dosyasının içerik ardışık özelliklerini belirli bir şekilde oluşturulacak şekilde ayarlayabilirsiniz.
+Her bir varlık dosyasının içerik ardışık düzen özelliklerini belirli bir şekilde oluşturulacak şekilde ayarlayabilirsiniz.
 
-### <a name="to-configure-content-pipeline-properties"></a>İçerik ardışık yapı özelliklerini yapılandırmak için
+### <a name="to-configure-content-pipeline-properties"></a>İçerik ardışık düzen özelliklerini yapılandırmak için
 
-1. **Çözüm Gezgini'nde,** projenizde varlık dosyasının kısayol menüsünü açın ve ardından **Özellikler'i**seçin.
+1. **Çözüm Gezgini**, projenizde varlık dosyasının kısayol menüsünü açın ve ardından **Özellikler**' i seçin.
 
-   Varlığın **Özellik Sayfası** iletişim kutusu görüntülenir.
+   Varlığın **özellik sayfası** iletişim kutusu görüntülenir.
 
-2. **Yapılandırma** ve **Platform** özelliklerinin, değişikliklerinizin uygulanmasını istediğiniz değerlere ayarlandığınızdan emin olun.
+2. **Yapılandırma** ve **Platform** özelliklerinin, değişikliklerinizin uygulanmasını istediğiniz değerlere ayarlandığından emin olun.
 
-3. **Yapılandırma Özellikleri**altında, içerik ardışık dizi düğüm (örneğin, doku ve görüntü varlıkları için Görüntü **İçerik Ardışık Alanı)** seçin ve daha sonra özellik ızgarasında, özellikleri uygun değerlere ayarlayın. Örneğin, bir doku kıymetinin oluşturma zamanındaki mipmaps'i oluşturmak için **Mips oluştur** özelliğini **Evet**olarak ayarlayın.
+3. **Yapılandırma özellikleri**altında, içerik ardışık düzeni düğümünü seçin (örneğin, doku ve görüntü varlıkları Için **görüntü içeriği işlem hattı** ) ve sonra özellik kılavuzunda, özellikleri uygun değerlere ayarlayın. Örneğin, derleme zamanında bir doku varlığı için mı haritaları oluşturmak için, **MIPS oluştur** özelliğini **Evet**olarak ayarlayın.
 
 4. **Tamam** düğmesini seçin.
 
-### <a name="image-content-pipeline-configuration"></a>Görüntü içeriği ardışık yapı yapılandırması
+### <a name="image-content-pipeline-configuration"></a>Görüntü içeriği ardışık düzen yapılandırması
 
-Bir doku varlığı oluşturmak için görüntü içeriği pipeline aracını kullandığınızda, dokuyu çeşitli şekillerde sıkıştırabilir, MIP düzeylerinin oluşturma zamanında oluşturulup oluşturulmayacağını belirtebilir ve çıktı dosyasının adını değiştirebilirsiniz.
-
-|Özellik|Açıklama|
-|--------------|-----------------|
-|**Sıkıştır**|Çıktı dosyası için kullanılan sıkıştırma türünü belirtir.<br /><br /> Şu seçenekleri kullanabilirsiniz:<br /><br /> -   **Sıkıştırma Yok**<br />-   **BC1_UNORM sıkıştırma**<br />-   **BC1_UNORM_SRGB sıkıştırma**<br />-   **BC2_UNORM sıkıştırma**<br />-   **BC2_UNORM_SRGB sıkıştırma**<br />-   **BC3_UNORM sıkıştırma**<br />-   **BC3_UNORM_SRGB sıkıştırma**<br />-   **BC4_UNORM sıkıştırma**<br />-   **BC4_SNORM sıkıştırma**<br />-   **BC5_UNORM sıkıştırma**<br />-   **BC5_SNORM sıkıştırma**<br />-   **BC6H_UF16 sıkıştırma**<br />-   **BC6H_SF16 sıkıştırma**<br />-   **BC7_UNORM sıkıştırma**<br />-   **BC7_UNORM_SRGB sıkıştırma**<br /><br /> DirectX'in farklı sürümlerinde hangi sıkıştırma biçimlerinin desteklendiği hakkında bilgi için [DXGI için Programlama Kılavuzu'na](/windows/win32/direct3ddxgi/dx-graphics-dxgi-overviews)bakın.|
-|Önceden çarpılmış alfa biçimine dönüştürme|**Evet,** görüntüyü çıktı dosyasında önceden çarpılmış alfa biçimine dönüştürmek için; aksi takdirde, **Hayır**. Yalnızca çıktı dosyası değiştirilir, kaynak görüntü değişmez.|
-|**Mips oluşturun**|**Evet,** inşa zamanında tam bir MIP zinciri oluşturmak ve çıktı dosyasına eklemek için; aksi takdirde, **Hayır**. **Hayır**ve kaynak dosya zaten bir mipmap zinciri içeriyorsa, çıktı dosyasında bir MIP zinciri olacaktır; aksi takdirde, çıktı dosyasında MIP zinciri olmaz.|
-|**İçerik Çıktısı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıktı dosyasının dosya adı uzantısını değiştirmenin dosya biçimi üzerinde hiçbir etkisi yoktur.|
-
-### <a name="mesh-content-pipeline-configuration"></a>Kafes içerik ardışık yapı yapılandırması
-
-Bir kafes varlık oluşturmak için kafes içerik ardışık yapı aracını kullandığınızda, çıktı dosyasının adını değiştirebilirsiniz.
+Bir doku varlığı oluşturmak için görüntü içeriği ardışık düzen aracını kullandığınızda, dokuyu çeşitli yollarla sıkıştırabilir, MıP düzeylerinin derleme zamanında oluşturulup oluşturulmayacağını belirtebilir ve çıkış dosyasının adını değiştirebilirsiniz.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|**İçerik Çıktısı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıktı dosyasının dosya adı uzantısını değiştirmenin dosya biçimi üzerinde hiçbir etkisi yoktur.|
+|**Madı**|Çıktı dosyası için kullanılan sıkıştırma türünü belirtir.<br /><br /> Şu seçenekleri kullanabilirsiniz:<br /><br /> -   **Sıkıştırma yok**<br />-   **BC1_UNORM sıkıştırma**<br />-   **BC1_UNORM_SRGB sıkıştırma**<br />-   **BC2_UNORM sıkıştırma**<br />-   **BC2_UNORM_SRGB sıkıştırma**<br />-   **BC3_UNORM sıkıştırma**<br />-   **BC3_UNORM_SRGB sıkıştırma**<br />-   **BC4_UNORM sıkıştırma**<br />-   **BC4_SNORM sıkıştırma**<br />-   **BC5_UNORM sıkıştırma**<br />-   **BC5_SNORM sıkıştırma**<br />-   **BC6H_UF16 sıkıştırma**<br />-   **BC6H_SF16 sıkıştırma**<br />-   **BC7_UNORM sıkıştırma**<br />-   **BC7_UNORM_SRGB sıkıştırma**<br /><br /> DirectX 'in farklı sürümlerinde hangi sıkıştırma biçimlerinin desteklendiği hakkında bilgi için bkz. [DXGı Için Programlama Kılavuzu](/windows/win32/direct3ddxgi/dx-graphics-dxgi-overviews).|
+|Önceden çoğaltılmış alfa biçimine Dönüştür|**Evet** , görüntüyü çıkış dosyasında önceden çarpılan Alfa biçimine dönüştürmek için. Aksi takdirde, **Hayır**. Yalnızca çıkış dosyası değiştirildiğinde, kaynak görüntü değiştirilmez.|
+|**MIPS oluştur**|Derleme zamanında tam MıP zinciri oluşturmak ve bunu çıkış dosyasına dahil etmek için **Evet** ; Aksi takdirde, **Hayır**. **Hayır**ise ve kaynak dosya zaten bir mipmap zinciri içeriyorsa, çıkış dosyası bir MIP zincirine sahip olur; Aksi takdirde, çıkış dosyası MıP zincirine sahip olmaz.|
+|**İçerik çıkışı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısının değiştirilmesinin dosya biçimi üzerinde hiçbir etkisi yoktur.|
 
-### <a name="shader-content-pipeline-configuration"></a>Gölgeli içerik ardışık yapı yapılandırması
+### <a name="mesh-content-pipeline-configuration"></a>Kafes içerik ardışık düzen yapılandırması
 
-Gölgeli bir varlık oluşturmak için gölgeli içerik ardışık aracını kullandığınızda, çıktı dosyasının adını değiştirebilirsiniz.
+Bir kafes varlığı oluşturmak için kafes içerik ardışık düzen aracını kullandığınızda, çıkış dosyasının adını değiştirebilirsiniz.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|**İçerik Çıktısı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıktı dosyasının dosya adı uzantısını değiştirmenin dosya biçimi üzerinde hiçbir etkisi yoktur.|
+|**İçerik çıkışı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısının değiştirilmesinin dosya biçimi üzerinde hiçbir etkisi yoktur.|
+
+### <a name="shader-content-pipeline-configuration"></a>Gölgelendirici içerik ardışık düzen yapılandırması
+
+Gölgelendirici varlığı oluşturmak için gölgelendirici içerik ardışık düzen aracını kullandığınızda, çıkış dosyasının adını değiştirebilirsiniz.
+
+|Özellik|Açıklama|
+|--------------|-----------------|
+|**İçerik çıkışı**|Çıktı dosyasının adını belirtir. **Önemli:**  Çıkış dosyasının dosya adı uzantısının değiştirilmesinin dosya biçimi üzerinde hiçbir etkisi yoktur.|
 
 ## <a name="load-and-use-3d-assets-at-run-time"></a>Çalışma zamanında 3B varlıkları yükleme ve kullanma
 
 ### <a name="use-textures-and-images"></a>Dokuları ve görüntüleri kullanma
 
-Direct3D doku kaynakları oluşturmak için işlevler sağlar. Direct3D 11'de, D3DX11 yardımcı program kitaplığı doğrudan görüntü dosyalarından doku kaynakları ve kaynak görünümleri oluşturmak için ek işlevler sağlar. Direct3D 11'de doku kaynağı nın nasıl oluşturulacaaçık daha fazla bilgi için [Dokular'a](/windows/win32/direct3d11/overviews-direct3d-11-resources-textures)bakın. Görüntü dosyasından doku kaynağı veya kaynak görünümü oluşturmak için D3DX11 kitaplığını nasıl kullanacağımız hakkında daha fazla bilgi için [bkz.](/windows/win32/direct3d11/overviews-direct3d-11-resources-textures-how-to)
+Direct3D, doku kaynakları oluşturmak için işlevler sağlar. Direct3D 11 ' de, D3DX11 yardımcı program kitaplığı, doğrudan görüntü dosyalarından doku kaynakları ve kaynak görünümleri oluşturmak için ek işlevler sağlar. Direct3D 11 ' de doku kaynağı oluşturma hakkında daha fazla bilgi için bkz. [dokular](/windows/win32/direct3d11/overviews-direct3d-11-resources-textures). Bir görüntü dosyasından doku kaynağı veya kaynak görünümü oluşturmak için D3DX11 kitaplığını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir dokuyu dosyadan doku başlatma](/windows/win32/direct3d11/overviews-direct3d-11-resources-textures-how-to).
 
-### <a name="use-3d-models"></a>3B modelleri kullanma
+### <a name="use-3d-models"></a>3B modeller kullanma
 
-Direct3D 11, 3B modellerden kaynak oluşturmak için işlev sağlamaz. Bunun yerine, 3B model dosyasını okuyan ve 3B modeli ve modelin gerektirdiği kaynakları (örneğin dokular veya gölgeli) temsil eden tepe noktası ve dizin arabellekleri oluşturan kod yazmanız gerekir.
+Direct3D 11, 3D modellerden kaynak oluşturmak için işlevler sağlamaz. Bunun yerine, 3B model dosyasını okuyan ve 3B modeli ve modelin gerektirdiği tüm kaynakları (örneğin, dokular veya gölgelendiriciler) temsil eden köşe ve dizin arabellekleri oluşturan bir kod yazmanız gerekir.
 
-### <a name="use-shaders"></a>Gölgeli kullanma
+### <a name="use-shaders"></a>Gölgelendiriciler kullanma
 
-Direct3D, gölgeli kaynaklar oluşturmak ve bunları programlanabilir grafik ardışık lığına bağlamak için işlevler sağlar. Direct3D'de gölgeli bir kaynağın nasıl oluşturulup boru hattına nasıl bağlanılabildiğini öğrenmek [için HLSL programlama kılavuzuna](/windows/win32/direct3dhlsl/dx-graphics-hlsl-pguide)bakın.
+Direct3D, gölgelendirici kaynakları oluşturmak ve bunları programlanabilir grafik ardışık düzenine bağlamak için işlevler sağlar. Direct3D 'de gölgelendirici kaynağı oluşturma ve ardışık düzene bağlama hakkında daha fazla bilgi için bkz. [HLSL Için Programlama Kılavuzu](/windows/win32/direct3dhlsl/dx-graphics-hlsl-pguide).
 
-Programlanabilir grafik ardışık lıkta, ardışık yolun her aşaması, ardışık yolun bir sonraki aşamasına anlayabileceği şekilde biçimlendirilmiş bir sonuç vermelidir. Shader Designer yalnızca piksel gölgeleyicileri oluşturabildiği için, aldığı verilerin beklediği biçimde olduğundan emin olmak uygulamanız kadardır. Piksel gölgeleyicisinden önce çeşitli programlanabilir gölgelenebilir aşamalar oluşur ve geometrik dönüşümler gerçekleştirir(tepe noktası gölgeleyici, gövde gölgeleyicisi, etki alanı gölgeleyicisi ve geometri gölgeleyicisi). Programlanabilir olmayan tessellation aşaması da piksel shader önce oluşur. Bu aşamalardan hangisi piksel gölgelendirmeden doğrudan önce gelirse gelsin, sonucunu bu biçimde vermelidir:
+Programlanabilir grafik ardışık düzeninde, işlem hattının her bir aşaması, anlanabilir bir şekilde biçimlendirilen bir sonuç olan işlem hattının sonraki aşamasına vermelidir. Gölgelendirici Tasarımcısı yalnızca Piksel gölgelendiricileri oluşturabileceğinden, bu, aldığı verilerin beklediği biçimde olduğundan emin olmak için uygulamanıza ait olduğu anlamına gelir. Birkaç programlanabilir gölgelendirici aşaması, piksel gölgelendiriciden önce oluşur ve geometrik dönüşümler, köşe gölgelendiricisi, kabuk gölgelendiricisi, etki alanı gölgelendiricisi ve geometri gölgelendirici gerçekleştirir. Programlanabilir olmayan mozaik döşeme aşaması, piksel gölgelendiriciden önce de gerçekleşir. Bu aşamaların ne kadar doğrudan piksel gölgelendiricisinin önünde olduğuna bakılmaksızın, bunun sonucunu bu biçimde vermelidir:
 
 ```hlsl
 struct PixelShaderInput
@@ -148,7 +148,7 @@ struct PixelShaderInput
 };
 ```
 
-Gölgelendirmenizde kullandığınız Gölgeli Tasarımcı düğümlerine bağlı olarak, bu tanımlara göre biçimde ek veri sağlamanız da gerekebilir:
+Gölgelendiricide kullandığınız gölgelendirici tasarımcı düğümlerine bağlı olarak, bu tanımlara göre biçimdeki ek verileri de sağlamanız gerekebilir:
 
 ```hlsl
 Texture2D Texture1 : register( t0 );
@@ -213,8 +213,8 @@ cbuffer MiscVars : register(b3)
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Nasıl yapılı: Mipmaps içeren bir doku dışa aktarma](../designers/how-to-export-a-texture-that-contains-mipmaps.md)|Önceden hesaplanmış mipmaps içeren bir doku dışa aktarmak için Görüntü İçerik Ardışık Alanı'nın nasıl kullanılacağını açıklar.|
-|[Nasıl yapılır: Ön çarpımlı alfa kullanan dokuyu dışarı aktarma](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|Önceden çarpılmış alfa değerleri içeren bir doku dışa aktarmak için Görüntü İçeriği Ardışık Alanı'nın nasıl kullanılacağını açıklar.|
-|[Nasıl kullanılır: Direct2D veya JavaScript uygulamalarıyla kullanmak için bir doku dışa aktarma](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|Direct2D veya JavaScript uygulamasında kullanılabilecek bir doku dışa aktarmak için Görüntü İçerik Ardışık Alanı'nın nasıl kullanılacağını açıklar.|
-|[Oyunlar ve uygulamalar için 3B varlıklarla çalışma](../designers/working-with-3-d-assets-for-games-and-apps.md)|Visual Studio'nun dokular ve görüntüler, 3B modeller ve gölgeli leri içeren 3B varlıkları oluşturma ve işleme için sağladığı düzenleme araçlarını açıklar.|
-|[Nasıl yapılır: Gölgeli dışa aktarma](../designers/how-to-export-a-shader.md)|Shader Designer'dan gölgeli nin nasıl dışa aktarılabildiğini açıklar.|
+|[Nasıl yapılır: MIN haritaları içeren bir dokuyu dışarı aktarma](../designers/how-to-export-a-texture-that-contains-mipmaps.md)|Önceden hesaplanan Mımage haritaları içeren bir dokuyu dışarı aktarmak için görüntü Içeriği ardışık düzeni 'nin nasıl kullanılacağını açıklar.|
+|[Nasıl yapılır: Ön çarpımlı alfa kullanan dokuyu dışarı aktarma](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)|Ön çarpılmış Alfa değerlerini içeren bir dokuyu dışarı aktarmak için görüntü Içeriği ardışık düzeninin nasıl kullanılacağını açıklar.|
+|[Nasıl yapılır: Direct2D veya JavaScript uygulamaları ile kullanmak için doku dışarı aktarma](../designers/how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md)|Direct2D veya JavaScript uygulamasında kullanılabilen bir dokuyu dışarı aktarmak için görüntü Içeriği ardışık düzeni 'nin nasıl kullanılacağını açıklar.|
+|[Oyunlar ve uygulamalar için 3B varlıklarla çalışma](../designers/working-with-3-d-assets-for-games-and-apps.md)|Visual Studio 'Nun dokuları ve görüntüleri, 3B modelleri ve gölgelendiricileri içeren 3B varlıklar oluşturmak ve işlemek için sağladığı düzenleme araçlarını açıklar.|
+|[Nasıl yapılır: gölgelendiriciyi dışarı aktarma](../designers/how-to-export-a-shader.md)|Gölgelendirici tasarımcısından bir gölgelendiricinin nasıl dışarı aktarılacağını açıklar.|

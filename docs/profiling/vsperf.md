@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 00f8543c2fdb204a165292844cb5bf5b925c63e8
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: c58033e89742650dc097a7469cbf62d7b6168509
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85330491"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520373"
 ---
 # <a name="vsperf"></a>VSPerf
 **VSPerf** komut satırı aracını kullanarak şunları yapın:
@@ -28,7 +28,7 @@ ms.locfileid: "85330491"
 ## <a name="uwp-apps-only"></a>Yalnızca UWP uygulamaları
  Bu seçenekler yalnızca UWP uygulamaları için geçerlidir.
 
-|||
+|Seçenek|Açıklama|
 |-|-|
 |**/App: {AppName}**|Profil oluşturucuyu başlatır ve başlangıç menüsünden belirtilen uygulamanın başlatılmasını bekler.<br /><br /> `vsperf /listapps`Yüklenen uygulamaların uygulama adını ve PackageFullName 'ni görüntülemek için öğesini çalıştırın.|
 |**/Package: {PackageFullName}**|Profil oluşturucuyu başlatır ve başlangıç menüsünden belirtilen uygulamanın başlatılmasını bekler.<br /><br /> `vsperf /listapps`Yüklenen uygulamaların uygulama adını ve PackageFullName 'ni görüntülemek için öğesini çalıştırın.|
@@ -39,7 +39,7 @@ ms.locfileid: "85330491"
 ## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a>Yalnızca Windows 8 masaüstü uygulamaları ve Windows Server 2012 uygulamaları
  Bu seçenekler UWP uygulamaları üzerinde çalışmaz.
 
-|||
+|Seçenek|Açıklama|
 |-|-|
 |**/Launch: {executable}**|Başlatılır ve belirtilen yürütülebilir dosyanın profilini oluşturmaya başlar.|
 |**/args: {ExecutableArguments}**|**/Launch** hedefini geçirmek için komut satırı bağımsız değişkenlerini belirtir.|
@@ -48,7 +48,7 @@ ms.locfileid: "85330491"
 ## <a name="all-applications"></a>Tüm uygulamalar
  Bu seçenek, herhangi bir Windows 8 veya Windows Server 2012 uygulaması için geçerlidir.
 
-|||
+|Seçenek|Açıklama|
 |-|-|
 |**/Attach: {PID&#124;ProcessName} [, PID&#124;ProcessName]...**|Belirtilen işlemlerden verileri toplar.<br /><br /> Çalışan uygulamaların işlem kimliğini (PID) ve işlem adlarını görüntülemek için Görev Yöneticisi 'ni kullanın.|
 |**/File: {ReportName}**|İsteğe bağlı. Çıkış dosyasını belirtir (varolan dosyanın üzerine yazar).<br /><br /> Yalnızca/Package veya/attachile kullanın.|

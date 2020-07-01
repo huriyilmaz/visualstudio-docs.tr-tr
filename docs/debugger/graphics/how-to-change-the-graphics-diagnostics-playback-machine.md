@@ -1,19 +1,19 @@
 ---
 title: 'Nasıl yapılır: Grafik Tanılama kayıttan yürütme makinesini değiştirme | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1b9aa3ea-29a0-4e21-bc57-936f33537b5c
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a41caf3f866c4a21d0a44fc69932066b2b7d923
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 4f057e2e4f9d39fd3c5d985b3f0d19751d508614
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72735059"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769378"
 ---
 # <a name="how-to-change-the-graphics-diagnostics-playback-machine"></a>Nasıl Yapılır: Grafik Tanılama Kayıttan Yürütme Makinesini Değiştirme
 Grafik bilgilerini yerel makinenizi kullanarak veya uzak bir makine ya da cihaz kullanarak çalabilirsiniz.
@@ -25,7 +25,7 @@ Grafik bilgilerini yerel makinenizi kullanarak veya uzak bir makine ya da cihaz 
 
 1. Grafik günlüğü Belgesi penceresinde, **kayıttan yürütme makinesi** bağlantısını seçin. **Uzaktan hata ayıklayıcı bağlantıları** iletişim kutusu görüntülenir.
 
-2. **El Ile yapılandırma**altında, **Adres** özelliğinde `localhost` girin.
+2. **El Ile yapılandırma**altında, **Adres** özelliğinde, girin `localhost` .
 
 3. **Kimlik doğrulama modu** özelliğini **yok**olarak ayarlayın.
 

@@ -26,7 +26,7 @@ Bu bölüm, yönetilen kod Analizi Aracı tarafından oluşturulan hata iletiler
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Kod|Description|
+|Kod|Açıklama|
 |-|-|
 |[CA0001](ca0001.md)|Yönetilen kod analizi aracında beklenen bir hata koşulunu göstermediği bir özel durum oluştu.|
 |[CA0051](ca0051.md)|Hiçbir kural seçilmedi.|

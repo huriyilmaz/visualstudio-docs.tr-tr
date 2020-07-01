@@ -8,34 +8,34 @@ helpviewer_keywords:
 - Set Radix command
 - Debug.SetRadix command
 ms.assetid: 6ffd1554-7530-4da4-b5f5-e276a5034f3b
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f920311301b722c11bea4a9f4eb90e9aa7663d80
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e88dc1318e29ddf35073b78218eb113fe8952aac
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72747728"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769653"
 ---
 # <a name="set-radix-command"></a>Sayı Tabanını Ayarla Komutu
-İntesayı değerlerini görüntülemek için kullanılan sayısal tabanı ayarlar veya döndürür.
+Tamsayı değerlerini göstermek için kullanılan sayısal temeli ayarlar veya döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 Debug.SetRadix [10 | 16 | hex | dec]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
-`10`veya `16` `hex` veya`dec`
+## <a name="arguments"></a>Bağımsız değişkenler
+`10`veya `16` veya `hex` veya`dec`
 
-İsteğe bağlı. Ondalık (10 veya aralık) veya hexadecimal (16 veya hex) gösterir. Bir bağımsız değişken atlanırsa, geçerli radix değeri döndürülür.
+İsteğe bağlı. Ondalık (10 veya Dec) ya da onaltılı (16 veya onaltılı) anlamına gelir. Bir bağımsız değişken atlanırsa, geçerli taban değeri döndürülür.
 
 ## <a name="example"></a>Örnek
-Bu örnek, tamsayı değerlerini hexadecimal biçimde görüntülemek için ortamı ayarlar.
+Bu örnek, ortamı tamsayı değerlerini onaltılık biçimde görüntüleyecek şekilde ayarlar.
 
 ```cmd
 >Debug.SetRadix hex
@@ -43,7 +43,7 @@ Bu örnek, tamsayı değerlerini hexadecimal biçimde görüntülemek için orta
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

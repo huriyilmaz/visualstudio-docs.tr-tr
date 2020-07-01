@@ -1,7 +1,7 @@
 ---
 title: GetValidCompatibleFramework işlevi
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -10,17 +10,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b975a4b4b2c1b4ae3f6ef0f1d6d23769bb4c77c7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2219417fe8ddae3d11d0e624ad12d3de80e290dd
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62788702"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520230"
 ---
 # <a name="getvalidcompatibleframework-function"></a>GetValidCompatibleFramework işlevi
-  Bu API Office altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.
+  Bu API, Office altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```csharp
 HRESULT WINAPI GetValidCompatibleFramework(
@@ -36,5 +36,5 @@ HRESULT WINAPI GetValidCompatibleFramework(
 |*lpwszCompatibleFrameworksXML*|Kullanmayın.|
 |*pbstrValidFrameworkTag*|Kullanmayın.|
 
-## <a name="return-value"></a>Dönüş değeri
- İşlev başarılı olursa, döndürür **S_OK**. İşlev başarısız olursa hata kodu döndürür.
+## <a name="return-value"></a>Döndürülen değer
+ İşlev başarılı olursa, **S_OK**döndürür. İşlev başarısız olursa, bir hata kodu döndürür.

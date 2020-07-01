@@ -6,12 +6,12 @@ ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
 caps.latest.revision: 38
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 4352575c811d76241721fc8343b6a48c012eddb7
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 102e41e45caac8d0567786579130e0953ec68b30
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917410"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85521244"
 ---
 # <a name="image-service-and-catalog"></a>Görüntü Hizmeti ve Kataloğu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -20,9 +20,8 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 
  Visual Studio 2015 ' de tanıtılan görüntü hizmeti, geliştiricilerin, görüntülendikleri bağlam için doğru tema da dahil olmak üzere, görüntüyü görüntülemesi için en iyi görüntüleri ve kullanıcının seçilen temasını almasını sağlar. Görüntü hizmetini benimseme, varlık bakımı, HDPı ölçeklendirme ve tema ile ilgili önemli sorun noktalarını ortadan kaldırmaya yardımcı olur.  
 
-|||  
-|-|-|  
 |**Günümüzde sorunlar**|**Çözümler**|  
+|-|-|  
 |Arka plan rengi karıştırma|Yerleşik Alfa karışımı|  
 |Tema (bazı) görüntüleri|Tema meta verileri|  
 |Yüksek Karşıtlık modu|Alternatif Yüksek Karşıtlık kaynaklar|  
@@ -102,12 +101,11 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 </Symbols>  
 ```  
 
-|||  
-|-|-|  
 |**Subelement**|**Tanım**|  
-|Al|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|  
+|-|-|  
+|İçeri Aktar|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır|  
 |Guid|Sembol bir GUID 'YI temsil eder ve GUID biçimlendirmesi ile eşleşmelidir|  
-|Kimlik|Sembol bir KIMLIĞI temsil eder ve negatif olmayan bir tamsayı olmalıdır|  
+|ID|Sembol bir KIMLIĞI temsil eder ve negatif olmayan bir tamsayı olmalıdır|  
 |Dize|Sembol rastgele bir dize değerini temsil eder|  
 
  Semboller büyük/küçük harfe duyarlıdır ve $ (sembol-adı) sözdizimi kullanılarak başvurulur:  
@@ -118,11 +116,10 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 </Image>  
 ```  
 
- Bazı semboller tüm bildirimler için önceden tanımlanmıştır. Bunlar, \<kaynak > URI özniteliğinde veya \<> öğesini yerel makinedeki başvuru yollarına aktarmak için kullanılabilir.  
+ Bazı semboller tüm bildirimler için önceden tanımlanmıştır. Bunlar, \<Source> veya öğesinin URI özniteliğinde \<Import> yerel makinedeki yollara başvurmak için kullanılabilir.  
 
-|||  
-|-|-|  
 |**Sembol**|**Açıklama**|  
+|-|-|  
 |CommonProgramFiles|% CommonProgramFiles% ortam değişkeninin değeri|  
 |LocalAppData|% LocalAppData% ortam değişkeninin değeri|  
 |ManifestFolder|Bildirim dosyasını içeren klasör|  
@@ -133,9 +130,9 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 
  **Görüntü**  
 
- \<Image > öğesi bir bilinen ad tarafından başvurulabilen bir görüntü tanımlar. Birlikte alınan GUID ve ID, görüntü bilinen adını oluşturur. Görüntünün bilinen adı, tüm görüntü kitaplığı genelinde benzersiz olmalıdır. Birden fazla görüntüde bilinen bir ad varsa, kitaplığı oluştururken karşılaşılan ilk, korunan bir addır.  
+ \<Image>Öğesi, bir bilinen ad tarafından başvurulabilen bir görüntü tanımlar. Birlikte alınan GUID ve ID, görüntü bilinen adını oluşturur. Görüntünün bilinen adı, tüm görüntü kitaplığı genelinde benzersiz olmalıdır. Birden fazla görüntüde bilinen bir ad varsa, kitaplığı oluştururken karşılaşılan ilk, korunan bir addır.  
 
- En az bir kaynak içermesi gerekir. Boyut açısından nötr kaynaklar, çok çeşitli boyutlarda en iyi sonuçları verir, ancak gerekli değildir. Hizmet, \<görüntü > öğesinde tanımlanmayan ve boyut nötr kaynak olmayan bir görüntünün bir görüntüsü sorulursa, hizmet en iyi boyuta özgü kaynağı seçip istenen boyuta ölçeklendirecektir.  
+ En az bir kaynak içermesi gerekir. Boyut açısından nötr kaynaklar, çok çeşitli boyutlarda en iyi sonuçları verir, ancak gerekli değildir. Hizmette, öğesinde tanımlı olmayan bir boyut görüntüsü istenirse \<Image> ve bir boyut nötr kaynağı yoksa, hizmet en iyi boyuta özgü kaynağı seçer ve istenen boyuta göre ölçeklendirirsiniz.  
 
 ```xml  
 <Image Guid="guid" ID="int" AllowColorInversion="true/false">  
@@ -144,16 +141,15 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 </Image>  
 ```  
 
-|||  
-|-|-|  
 |**Öznitelik**|**Tanım**|  
+|-|-|  
 |Guid|Istenir Görüntü adının GUID bölümü|  
-|Kimlik|Istenir Görüntü adının KIMLIK kısmı|  
+|ID|Istenir Görüntü adının KIMLIK kısmı|  
 |Allowcolorınversion|[İsteğe bağlı, varsayılan doğru] Görüntünün, koyu bir arka planda kullanıldığında, renkleri program aracılığıyla ters çevrimeyeceğini gösterir.|  
 
  **Kaynak**  
 
- \<Source > öğesi, tek bir görüntü kaynağı varlığını (XAML ve PNG) tanımlar.  
+ \<Source>Öğesi, tek bir görüntü kaynağı varlığını (XAML ve PNG) tanımlar.  
 
 ```xml  
 <Source Uri="uri" Background="background">  
@@ -164,35 +160,33 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Öznitelik** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            **Tanım**                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|      Uri      |                                                                                                                                                                                                                                                                                                               Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx)<br />-Mutlak bir bileşen kaynağı başvurusu<br />-Yerel kaynak içeren bir dosyanın yolu                                                                                                                                                                                                                                                                                                               |
+|      Kullanılmamışsa      |                                                                                                                                                                                                                                                                                                               Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](https://msdn.microsoft.com/library/aa970069\(v=vs.100\).aspx)<br />-Mutlak bir bileşen kaynağı başvurusu<br />-Yerel kaynak içeren bir dosyanın yolu                                                                                                                                                                                                                                                                                                               |
 |  Arka Plan   | Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> *Hafif:* Kaynak açık bir arka planda kullanılabilir.<br /><br /> <em>Koyu:</em> Kaynak, koyu bir arka planda kullanılabilir.<br /><br /> *Highkarşıtlıklı:* Kaynak Yüksek Karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> *High, Stlight:* Kaynak Yüksek Karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> Üst *sınır:* Kaynak, Yüksek Karşıtlık modundaki karanlık bir arka planda kullanılabilir.<br /><br /> Arka plan özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> Arka plan hafif, *koyu*, *ince*bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. Arka plan atlanırsa veya *Highkontrast*olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir. |
 |               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
- \<kaynak > öğesi, aşağıdaki isteğe bağlı alt öğeleri tam olarak bir tane içerebilir:  
+ Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğeler için tam olarak birine sahip olabilir:  
 
-||||  
+|**Dosyalarında**|**Öznitelikler (tüm gerekli)**|**Tanım**|  
 |-|-|-|  
-|**Öğe**|**Öznitelikler (tüm gerekli)**|**Tanım**|  
-|\<boyutu >|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|  
-|\<SizeRange >|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|  
-|\<boyutlar >|Width, Height|Kaynak, belirtilen genişlik ve yüksekliğin (cihaz birimlerinde) görüntüleri için kullanılacaktır.|  
-|\<DimensionRange >|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Kaynak, en düşük genişlik/yükseklikten (cihaz birimleri cinsinden) en fazla genişlik/yükseklik arasındaki görüntüler için kullanılacaktır.|  
+|\<Size>|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|  
+|\<SizeRange>|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|  
+|\<Dimensions>|Genişlik, yükseklik|Kaynak, belirtilen genişlik ve yüksekliğin (cihaz birimlerinde) görüntüleri için kullanılacaktır.|  
+|\<DimensionRange>|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Kaynak, en düşük genişlik/yükseklikten (cihaz birimleri cinsinden) en fazla genişlik/yükseklik arasındaki görüntüler için kullanılacaktır.|  
 
- \<kaynak > öğesi, yönetilen bir derleme yerine yerel bir derlemeden yüklenen \<kaynak > tanımlayan isteğe bağlı bir \<NativeResource > alt öğesi de içerebilir.  
+ Bir \<Source> öğesi \<NativeResource> , \<Source> yönetilen bir derleme yerine yerel bir derlemeden yüklenen bir öğesini tanımlayan isteğe bağlı bir alt öğesi de olabilir.  
 
 ```xml  
 <NativeResource Type="type" ID="int" />  
 ```  
 
-|||  
-|-|-|  
 |**Öznitelik**|**Tanım**|  
+|-|-|  
 |Tür|Istenir Yerel kaynağın türü, XAML veya PNG|  
-|Kimlik|Istenir Yerel kaynağın tamsayı KIMLIĞI bölümü|  
+|ID|Istenir Yerel kaynağın tamsayı KIMLIĞI bölümü|  
 
  **'I**  
 
- \<ImageList > öğesi, tek bir şeridinde döndürülebilecek bir görüntü koleksiyonunu tanımlar. Şerit gerektiğinde isteğe bağlı olarak oluşturulur.  
+ \<ImageList>Öğesi, tek bir şeridinde döndürülebilecek bir görüntü koleksiyonunu tanımlar. Şerit gerektiğinde isteğe bağlı olarak oluşturulur.  
 
 ```xml  
 <ImageList>  
@@ -201,12 +195,11 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
  </ImageList>  
 ```  
 
-|||  
-|-|-|  
 |**Öznitelik**|**Tanım**|  
+|-|-|  
 |Guid|Istenir Görüntü adının GUID bölümü|  
-|Kimlik|Istenir Görüntü adının KIMLIK kısmı|  
-|Harici|[İsteğe bağlı, varsayılan yanlış] Resim adının geçerli bildirimde bir görüntüye başvuruda bulunup bulunmadığını gösterir.|  
+|ID|Istenir Görüntü adının KIMLIK kısmı|  
+|Dış|[İsteğe bağlı, varsayılan yanlış] Resim adının geçerli bildirimde bir görüntüye başvuruda bulunup bulunmadığını gösterir.|  
 
  İçerilen görüntünün bilinen adı, geçerli bildirimde tanımlanan bir görüntüye başvurmak zorunda değildir. İçerilen görüntü görüntü kitaplığında bulunamazsa, yerine boş bir yer tutucu görüntüsü kullanılır.  
 
@@ -215,15 +208,15 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 ### <a name="first-steps-managed"></a>İlk adımlar (yönetilen)  
  Görüntü hizmetini kullanmak için, aşağıdaki derlemelerin bazılarına veya tümüne projenize başvurular eklemeniz gerekir:  
 
-- **Microsoft. VisualStudio. ımagecatalog. dll**  
+- **Microsoft.VisualStudio.ImageCatalog.dll**  
 
   - Yerleşik görüntü kataloğu Knownbilinen adlarını kullanıyorsanız gereklidir  
 
-- **Microsoft. VisualStudio. Imaging. dll**  
+- **Microsoft.VisualStudio.Imaging.dll**  
 
   - WPF Kullanıcı arabiriminizdeki **çapraz görüntü** ve **ImageThemingUtilities** kullanıyorsanız gereklidir  
 
-- **Microsoft. VisualStudio. Imaging. Interop. 14.0. DesignTime. dll**  
+- **Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll**  
 
   - **Imagebilinen** ve **ImageAttributes** türlerini kullanırsanız gereklidir  
 
@@ -235,15 +228,15 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 
   - **EmbedInteropTypes** true olarak ayarlanmalıdır  
 
-- **Microsoft. VisualStudio. Utilities. dll**  
+- **Microsoft.VisualStudio.Utilities.dll**  
 
   - ImageThemingUtilities için **Brühtocolorconverter** kullanırsanız gereklidir. WPF Kullanıcı arabiriminizdeki **ImageBackgroundColor**  
 
-- **Microsoft. VisualStudio. Shell.\<VSVersion >. 0**  
+- **Microsoft. VisualStudio. Shell. \<VSVersion> . 0**  
 
   - **IVsUIObject** türünü kullanırsanız gereklidir  
 
-- **Microsoft. VisualStudio. Shell. Interop. 10.0. dll**  
+- **Microsoft.VisualStudio.Shell.Interop.10.0.dll**  
 
   - WinForms ile ilgili UI yardımcıları kullanıyorsanız gereklidir  
 
@@ -312,7 +305,7 @@ Bu kılavuz kitabı, Visual Studio görüntü hizmeti ve Visual Studio 2015 ' de
 
  Mevcut WPF Kullanıcı arabirimini güncelleştirmek, üç temel adımdan oluşan görece basit bir işlemdir:  
 
-1. Kullanıcı arabirimindeki tüm \<resim > öğelerini \<çapraz görüntü > öğeleriyle değiştirme  
+1. \<Image>Kullanıcı arabiriminizdeki tüm öğeleri öğelerle değiştirin \<CrispImage>  
 
 2. Tüm kaynak özniteliklerini bilinen ad öznitelikleri olarak değiştir  
 
@@ -493,7 +486,7 @@ Bitmap bitmap = (Bitmap)GelUtilities.GetObjectData(uiObj); // Use this if you ne
 
  **My. vsct dosyası aynı zamanda Visual Studio 'nun eski sürümleri tarafından okunmalıdır?**  
 
- Visual Studio 'nun eski sürümleri **Iconisbilinen ad** komut bayrağını tanımıyor. Görüntü hizmetindeki görüntüleri destekleyen Visual Studio sürümlerinde kullanabilirsiniz, ancak eski stil görüntülerini Visual Studio 'nun eski sürümlerinde kullanmaya devam edebilirsiniz. Bunu yapmak için,. vsct dosyasını değiştirmeden bırakır (ve bu nedenle Visual Studio 'nun eski sürümleriyle uyumludur) ve bir. vsct dosyasının \<bit > eşlemlerinde tanımlanan GUID/ID çiftlerinden, görüntü bilinen adı GUID/ID çiftleriyle eşleşen bir CSV (virgülle ayrılmış değerler) dosyası oluşturun.  
+ Visual Studio 'nun eski sürümleri **Iconisbilinen ad** komut bayrağını tanımıyor. Görüntü hizmetindeki görüntüleri destekleyen Visual Studio sürümlerinde kullanabilirsiniz, ancak eski stil görüntülerini Visual Studio 'nun eski sürümlerinde kullanmaya devam edebilirsiniz. Bunu yapmak için,. vsct dosyasını değişmeden bırakarak (Visual Studio 'nun eski sürümleriyle uyumludur) ve bir. vsct dosyasının öğesinde tanımlanan GUID/ID çiftlerinden, \<Bitmaps> görüntü bilinen adı GUID/ID çiftleriyle eşleşen BIR CSV (virgülle ayrılmış değerler) dosyası oluşturun.  
 
  Eşleme CSV dosyasının biçimi:  
 
@@ -509,7 +502,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 [ProvideMenuResource("MyPackage.ctmenu", 1, IconMappingFilename="IconMappings.csv")]  
 ```  
 
- **Imappingfilename** , $PackageFolder $ (Yukarıdaki örnekte olduğu gibi) ' de dolaylı olarak belirtilen göreli bir yoldur veya bir ortam değişkeni tarafından tanımlanan bir dizinde (örneğin, @ "%userprofile%\dir1\dir2\mymappingfile.exe") açıkça bir mutlak yol.  
+ **Imappingfilename** , $PackageFolder $ (Yukarıdaki örnekte olduğu gibi) ' de dolaylı olarak belirtilen göreli bir yoldur veya bir ortam değişkeni tarafından tanımlanan bir dizinde (örneğin, @ "% UserProfile% \dir1\dir2\MyMappingFile.csv" gibi) açıkça bir mutlak yol olarak belirtilmiş.  
 
 ## <a name="how-do-i-port-a-project-system"></a>Nasıl yaparım? bir proje sistemi mi?  
  **Bir proje için ımagetakma adlar sağlama**  
@@ -570,17 +563,17 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
 2. Yalnızca **Knowntakma adlar**kullanıyorsanız şunları yapın:  
 
-   - Bildirimin \<görüntülerini > bölümünü \<görüntülerle/> değiştirin.  
+   - \<Images>Bildirimin bölümünü ile değiştirin \<Images/> .  
 
-   - Tüm alt görüntü kimliklerini (\<ımagestrip adı > _ # #) kaldırın.  
+   - Tüm alt görüntü kimliklerini (_ # # ile herhangi bir şey \<imagestrip name> ) kaldırın.  
 
    - Önerilen: AssetsGuid sembolünü ve resim şeridi sembolünü, kullanımına uyacak şekilde yeniden adlandırın.  
 
-   - Her bir **containedimage**GUID 'sini $ (ımagecatalogguid) ile değiştirin, her bir **CONTAINEDIMAGE**kimliğini $ (\<bilinen ad >) ile değiştirin ve her bir **containedimage** öğesine External = "true" özniteliğini ekleyin  
+   - Her bir **containedimage**GUID 'sini $ (ımagecatalogguid) ile değiştirin, her bir **CONTAINEDIMAGE**kimliğini $ () ile değiştirin \<moniker> ve her bir **containedimage** öğesine External = "true" özniteliğini ekleyin  
 
-       - \<bilinen ad >, görüntüyle eşleşen **Knownbilinen** adıyla değiştirilmelidir, ancak "Knowntakma adları" ile değiştirilmelidir. adından kaldırılır.  
+       - \<moniker>görüntüyle eşleşen **knownbilinen** adıyla değiştirilmelidir, ancak "Knowntakma adları" ile değiştirilmelidir. adından kaldırılır.  
 
-   - < Import manifest = "$ (ManifestFolder)\\,\> sembolleri \<bölümünün en üstüne\>\Microsoft.VisualStudio.ImageCatalog.imagemanifest"/> < göreli install dizin yolunu ekleyin.  
+   - <Import manifest = "$ (ManifestFolder) \\<göreli install dir Path to \> \Microsoft.VisualStudio.ImageCatalog.imagemanifest"/to \> bölümünün en üstüne ekleyin \<Symbols> .  
 
        - Göreli yol, bildirim için kurulum yazma bölümünde tanımlanan dağıtım konumuna göre belirlenir.  
 
@@ -657,7 +650,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 ### <a name="samples"></a>Örnekler  
  GitHub 'daki Visual Studio örneklerinden bazıları, görüntü hizmetinin çeşitli Visual Studio genişletilebilirlik noktalarının parçası olarak nasıl kullanılacağını gösterecek şekilde güncelleştirilmiştir.  
 
- En son örnekler için [http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples) işaretleyin.  
+ [http://github.com/Microsoft/VSSDK-Extensibility-Samples](https://github.com/Microsoft/VSSDK-Extensibility-Samples)En son örnekleri denetleyin.  
 
 ### <a name="tooling"></a>Araçlar  
  Görüntü hizmeti ile birlikte çalışarak Kullanıcı arabirimi oluşturma/güncelleştirme konusunda yardımcı olmak üzere görüntü hizmeti için bir dizi destek aracı oluşturulmuştur. Her araç hakkında daha fazla bilgi için araçlarla birlikte gelen belgelere bakın. Araçlar, [Visual Studio 2015 SDK 'sının](https://msdn.microsoft.com/library/bb166441.aspx) bir parçası olarak dahil edilmiştir.  
@@ -668,7 +661,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
  **ManifestToCode**  
 
- Manifest to Code aracı bir görüntü bildirim dosyası alır ve kod (C++, C#, veya vb) ya da. vsct dosyalarındaki bildirim değerlerine başvurmak için bir sarmalayıcı dosyası oluşturur.  
+ Manifest to Code aracı bir görüntü bildirim dosyası alır ve koddaki (C++, C# veya VB) veya. vsct dosyalarındaki bildirim değerlerine başvurmak için bir sarmalayıcı dosyası oluşturur.  
 
  **ImageLibraryViewer**  
 
@@ -676,7 +669,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
 ## <a name="faq"></a>SSS  
 
-- \<başvurusunu yüklerken dahil etmeniz gereken bağımlılıklar var = "Microsoft. VisualStudio. *. Interop. 14.0. DesignTime "/>?  
+- Yükleme sırasında dahil etmeniz gereken bağımlılıklar var \<Reference Include="Microsoft.VisualStudio.*.Interop.14.0.DesignTime" /> mı?  
 
   - Tüm birlikte çalışma dll 'Lerinde EmbedInteropTypes = "true" olarak ayarlayın.  
 
@@ -690,9 +683,8 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 
   - Bunlar, CPS 'in takma adlar kullanacak şekilde güncelleştirildiği zaman kaldırılmıştır. Artık **StockIconService**çağrısı yapmanız gerekmez, Istenen **KNOWNBILINEN** adı, CPS yardımcı programlarında **toprojectsystemtype ()** genişletme yöntemini kullanarak yönteme veya özelliğe geçirmeniz yeterlidir. **ImageName** 'Den **knowntakma adlarıyla** bir eşleme bulabilirsiniz:  
 
-    |||  
-    |-|-|  
     |**Görüntü**|**Knownbilinen ad**|  
+    |-|-|  
     |ImageName. OfflineWebApp|Knownımageıds. Web|  
     |GörüntüAdı. WebReferencesFolder|Knownımageıds. Web|  
     |ImageName. OpenReferenceFolder|Knownımageıds. Folderaçıldı|  
@@ -706,25 +698,25 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |ImageName. OpenExcludedFolder|Knownımageıds. Hiddenfolderaçıldı|  
     |ImageName. ExcludedFile|Knownımageıds. HiddenFile|  
     |ImageName. Dependentdosyası|Knownımageıds. GenerateFile|  
-    |ImageName. MissingFile|Knownımageıds. DocumentWarning|  
+    |ImageName. MissingFile|KnownImageIds.DocumentWarning|  
     |GörüntüAdı. WindowsForm|Knownımageıds. WindowsForm|  
     |ImageName. WindowsUserControl|Knownımageıds. UserControl|  
     |ImageName. Windowsbileşeni|Knownımageıds. ComponentFile|  
-    |GörüntüAdı. XmlSchema|Knownımageıds. XMLSchema|  
-    |ImageName. XmlFile|Knownımageıds. XMLFile|  
+    |ImageName.Xmlşeması|KnownImageIds.XMLşeması|  
+    |ImageName.Xmldosyası|KnownImageIds.XMLdosyası|  
     |GörüntüAdı. WebForm|Knownımageıds. Web|  
     |GörüntüAdı. WebService|Knownımageıds. WebService|  
     |GörüntüAdı. WebUserControl|Knownımageıds. WebUserControl|  
     |GörüntüAdı. WebCustomUserControl|Knownımageıds. WebCustomControl|  
     |ImageName. AspPage|Knownımageıds. ASPFile|  
     |GörüntüAdı. GlobalApplicationClass|Knownımageıds. SettingsFile|  
-    |GörüntüAdı. WebConfig|Knownımageıds. ConfigurationFile|  
-    |GörüntüAdı. HtmlPage|KnownImageIds.HTMLFile|  
+    |GörüntüAdı. WebConfig|KnownImageIds.ConfigurationFile|  
+    |ImageName.HtmlPage|KnownImageIds.HTMLFile|  
     |ImageName. StyleSheet|Knownımageıds. StyleSheet|  
-    |ImageName. ScriptFile|Knownımageıds. JSScript|  
-    |ImageName. TextFile|Knownımageıds. Document|  
+    |ImageName. ScriptFile|KnownImageIds.JSbetiği|  
+    |ImageName. TextFile|KnownImageIds.Document|  
     |ImageName. SettingsFile|Knownımageıds. Settings|  
-    |ImageName. resources|Knownımageıds. DocumentGroup|  
+    |ImageName. resources|KnownImageIds.DocumentGroup|  
     |GörüntüAdı. bit eşlem|Knownımageıds. Image|  
     |ImageName. Icon|Knownımageıds. IconFile|  
     |ImageName. Image|Knownımageıds. Image|  
@@ -732,7 +724,7 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |ImageName. XWorld|Knownımageıds. XWorldFile|  
     |GörüntüAdı. ses|Knownımageıds. Sound|  
     |ImageName. video|Knownımageıds. Media|  
-    |GörüntüAdı. cab|Knownımageıds. Cabprojesi|  
+    |ImageName.Cab|KnownImageIds.CABprojesi|  
     |ImageName. jar|Knownımageıds. JARFile|  
     |ImageName. DataEnvironment|Knownımageıds. DataTable|  
     |ImageName. önizleme dosyası|Knownımageıds. Report|  
@@ -752,13 +744,13 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GörüntüAdı. SharedImportReference|Knownımageıds. SharedProject|  
     |ImageName. SharedProjectCs|Knownımageıds. CSSharedProject|  
     |ImageName. SharedProjectVc|Knownımageıds. CPPSharedProject|  
-    |ImageName. SharedProjectJs|Knownımageıds. JSSharedProject|  
-    |ImageName. CSharpCodeFile|KnownImageIds.CSFileNode|  
-    |ImageName. VisualBasicCodeFile|KnownImageIds.VBFileNode|  
+    |ImageName. SharedProjectJs|KnownImageIds.JSSharedProject|  
+    |ImageName. CSharpCodeFile|Knownımageıds. CSFileNode|  
+    |ImageName. VisualBasicCodeFile|Knownımageıds. VBFileNode|  
 
   - Tamamlanma listesi sağlayıcımı güncelleştiriyorum. Eski **Standartglyphgroup** ve **standardglif** değerleriyle hangi **knowntakma adları** eşleşiyor?  
 
-    ||||  
+    |Name|Name|Name|  
     |-|-|-|  
     |GlyphGroupClass|Glyphitempublik|Classpublik|  
     |GlyphGroupClass|GlyphItemInternal|Classınterternal|  
@@ -949,20 +941,20 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
     |GlyphGroupError||StatusError|  
     |GlyphBscFile||Sınıfdosyası|  
     |GlyphAssembly||Başvuru|  
-    |GlyphLibrary||Kitaplığı|  
+    |GlyphLibrary||Kitaplık|  
     |GlyphVBProject||VBProjectNode|  
     |GlyphCoolProject||CSProjectNode|  
     |GlyphCppProject||CPPProjectNode|  
-    |Glyphdialogıd||İletişim kutusu|  
+    |Glyphdialogıd||İletişim|  
     |GlyphOpenFolder||Klasör açıldı|  
     |GlyphClosedFolder||FolderClosed|  
     |GlyphArrow||Sonrakine sonra|  
     |GlyphCSharpFile||CSFileNode|  
-    |GlyphCSharpExpansion||Kod parçacığı|  
+    |GlyphCSharpExpansion||Kod Parçacığı|  
     |Glyphanahtar sözcüğü||Intellisenseanahtar sözcüğü|  
     |Glyphınformation||StatusInformation|  
     |GlyphReference||ClassMethodReference|  
-    |Glyphözyineleme||{1&gt;Yineleme&lt;1}|  
+    |Glyphözyineleme||Özyineleme|  
     |Glyphxmlıtıtem||Etiket|  
     |Glyphjkeskinproject||DocumentCollection|  
     |Glyphjnetdocument||Belge|  

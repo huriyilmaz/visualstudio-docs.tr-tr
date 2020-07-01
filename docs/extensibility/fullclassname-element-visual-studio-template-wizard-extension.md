@@ -1,8 +1,8 @@
 ---
-title: FullClassName öğesi (VS şablon sihirbazı uzantısı)
+title: FullClassName Öğesi (VS Şablon Sihirbazı uzantısı)
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#FullClassName
 helpviewer_keywords:
@@ -13,19 +13,20 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3e533fdf5b5497b17949581801721136b18bc2d1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: ed9ceb57f49d8c08b75aa140e45a0f4268f4336c
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80711425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769604"
 ---
-# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>FullClassName öğesi (Visual Studio şablon sihirbazı uzantısı)
-`IWizard` Arabirimi uygulayan sınıfın tam nitelikli adı.
+# <a name="fullclassname-element-visual-studio-template-wizard-extension"></a>FullClassName Öğesi (Visual Studio Şablon Sihirbazı uzantısı)
+Arabirimi uygulayan sınıfın tam adı `IWizard` .
 
- \<VSTemplate \<> WizardExtension> ... \<FullClassName>
+ \<VSTemplate> \<WizardExtension>
+... \<FullClassName>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <FullClassName>ClassName</FullClassName>
@@ -44,18 +45,18 @@ ms.locfileid: "80711425"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Şablon sihirbazını özelleştirmek için kayıt öğelerini içerir.|
+|[WizardExtension](../extensibility/wizardextension-element-visual-studio-templates.md)|Şablon Sihirbazı ' nı özelleştirmek için kayıt öğelerini içerir.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Bu `IWizard` metin, arabirimi uygulayan sınıfı belirtir. Belirtilen [sınıf, Derleme](../extensibility/assembly-element-visual-studio-template-wizard-extension.md) öğesi tarafından belirtilen derlemede olmalıdır.
+ Bu metin, arabirimini uygulayan sınıfı belirtir `IWizard` . Belirtilen sınıf, [derleme](../extensibility/assembly-element-visual-studio-template-wizard-extension.md) öğesi tarafından belirtilen derlemede bulunmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
- `FullClassName`gerekli bir alt `WizardExtension`öğedir.
+ `FullClassName`, öğesinin gerekli bir alt öğesidir `WizardExtension` .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows uygulaması için standart proje şablonu için meta veriler gösterilmektedir.
+ Aşağıdaki örnek, bir Windows uygulaması için Standart proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 <VSTemplate Version="3.0.0" Type="Item"
@@ -86,6 +87,6 @@ ms.locfileid: "80711425"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Nasıl kullanılır: Proje şablonları ile sihirbazları kullanma](../extensibility/how-to-use-wizards-with-project-templates.md)
+- [Nasıl yapılır: Sihirbazları Proje Şablonlarıyla Kullanma](../extensibility/how-to-use-wizards-with-project-templates.md)

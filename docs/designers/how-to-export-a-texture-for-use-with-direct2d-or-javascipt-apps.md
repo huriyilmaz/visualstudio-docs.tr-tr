@@ -1,43 +1,43 @@
 ---
-title: Direct2D ve JavaScript uygulamaları için Doku Verme
+title: Direct2D ve JavaScript uygulamaları için bir dokuyu dışarı aktarma
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 241c25fe-764e-4e1b-ad32-b1377dcbb605
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d163aafa8b00ce1d59b1fc7b597ab5ca535a1ee
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 546f7255b1c2846bdbd05bba0593b30bad9beacd
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72635506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768999"
 ---
-# <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascript-apps"></a>Nasıl kullanılır: Direct2D veya JavaScript uygulamalarıyla kullanmak için bir doku dışa aktarma
+# <a name="how-to-export-a-texture-for-use-with-direct2d-or-javascript-apps"></a>Nasıl yapılır: Direct2D veya JavaScript uygulamaları ile kullanmak için doku dışarı aktarma
 
-Görüntü İçerik Ardışık Etki Alanı, Direct2D'nin dahili işleme kurallarıyla uyumlu dokular oluşturabilir. Bu tür dokular Direct2D kullanan uygulamalarda ve JavaScript kullanılarak oluşturulan UWP uygulamalarında kullanım için uygundur.
+Görüntü Içeriği ardışık düzeni, Direct2D's iç işleme kurallarıyla uyumlu dokular oluşturabilir. Bu tür dokular, Direct2D kullanan uygulamalarda ve JavaScript kullanılarak oluşturulan UWP uygulamalarında kullanım için uygundur.
 
-Bu belge şu etkinlikleri gösterir:
+Bu belge Şu etkinlikleri gösterir:
 
-- Kaynak görüntünün Görüntü İçerik Ardışık Alanı tarafından işlenecek şekilde yapılandırılması.
+- Görüntü Içeriği ardışık düzeni tarafından işlenecek kaynak görüntüyü yapılandırma.
 
-- Görüntü İçerik Ardışık Bir Yapılandırma,Direct2D veya JavaScript uygulamasında kullanabileceğiniz bir doku oluşturacak şekilde yapılandırır.
+- Direct2D veya JavaScript uygulamasında kullanabileceğiniz bir doku oluşturmak için görüntü Içeriği ardışık düzenini yapılandırma.
 
-  - Blok sıkıştırılmış *.dds* dosyası oluşturun.
+  - Blok ile sıkıştırılmış bir *. DDS* dosyası oluşturun.
 
-  - Önceden çoğaltılmış alfa oluşturun.
+  - Ön çarpılmış Alfa Oluştur.
 
-  - Mipmap neslini devre dışı.
+  - Mipmap oluşturmayı devre dışı bırakın.
 
-## <a name="rendering-conventions-in-direct2d"></a>Direct2D'de kuralları oluşturma
+## <a name="rendering-conventions-in-direct2d"></a>Direct2D 'de işleme kuralları
 
-Direct2D bağlamında kullanılan dokular bu Direct2D dahili işleme kurallarına uygun olmalıdır:
+Direct2D bağlamında kullanılan dokuların bu Direct2D iç işleme kurallarına uyması gerekir:
 
-- Direct2D, önceden çoğaltılmış alfayı kullanarak şeffaflık ve saydamlığı uygular. Direct2D ile kullanılan dokular, doku saydamlık veya saydamlık kullanmasa bile, önceden çoğaltılmış alfa içermelidir. Önceden çarpılmış alfa hakkında daha fazla bilgi için [bkz.](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md)
+- Direct2D, ön çarpılmış alfa kullanarak saydamlığı ve ayrımı uygular. Doku saydamlığı veya ayrımı kullanmıyor olsa bile, Direct2D ile kullanılan dokuların ön çarpılmış Alfa içermesi gerekir. Ön çarpılmış Alfa hakkında daha fazla bilgi için bkz. [nasıl yapılır: ön çarpılmış Alfa içeren dokuyu dışarı aktarma](../designers/how-to-export-a-texture-that-has-premultiplied-alpha.md).
 
-- Doku, aşağıdaki blok sıkıştırma biçimlerinden biri kullanılarak *.dds* biçiminde sağlanmalıdır:
+- Dokunun, bu blok sıkıştırma biçimlerinden biri kullanılarak *. DDS* biçiminde sağlanması gerekir:
 
   - BC1_UNORM sıkıştırma
 
@@ -45,23 +45,23 @@ Direct2D bağlamında kullanılan dokular bu Direct2D dahili işleme kuralların
 
   - BC3_UNORM sıkıştırma
 
-- Mipmaps desteklenmez.
+- MIN haritaları desteklenmez.
 
 ### <a name="to-create-a-texture-thats-compatible-with-direct2d-rendering-conventions"></a>Direct2D işleme kurallarıyla uyumlu bir doku oluşturmak için
 
-1. Temel bir doku ile başlayın. Varolan bir görüntüyü yükleyin veya nasıl açıklanabilirsiniz: [Temel bir doku oluşturun.](../designers/how-to-create-a-basic-texture.md) *.dds* biçiminde blok sıkıştırmayı desteklemek için, 100x100, 128x128 veya 256x192 gibi dört boyutun katları olan genişlik ve yüksekliğe sahip bir doku belirtin. Mipmapping desteklenmedığından, doku kare olmak zorunda değildir ve iki boyutunda bir güç olması gerekmez.
+1. Temel bir dokuyla başlayın. Mevcut bir görüntüyü yükleyin veya [nasıl yapılır: temel doku oluşturma](../designers/how-to-create-a-basic-texture.md)bölümünde açıklandığı gibi yeni bir tane oluşturun. *. DDS* biçimindeki blok sıkıştırmasını desteklemek için, boyutun boyutunun dört katı olan genişlik ve yüksekliğe sahip bir doku belirtin, örneğin, 100x100, 128x128 veya 256x192. II eşlemesi desteklenmediğinden, dokunun kare olması gerekmez ve iki boyutta bir üssü olmalıdır.
 
-2. Doku dosyasını Görüntü İçerik Ardışık Alanı tarafından işlenir şekilde yapılandırın. **Çözüm Gezgini'nde,** oluşturduğunuz doku dosyasının kısayol menüsünü açın ve ardından **Özellikler'i**seçin. Yapılandırma **Özellikleri** > **Genel** sayfasında, **Madde Türü** özelliğini Görüntü İçerik **Ardışık Alanı**olarak ayarlayın. **İçerik** özelliğinin **Evet** ve **İçten Dışla** olarak Ayarlandıktan emin **olun, Hayır**olarak ayarlandı ve ardından **Uygula** düğmesini seçin. **Resim İçeriği Yapı Denetimi** yapılandırma özelliği sayfası görüntülenir.
+2. Doku dosyasını görüntü Içeriği ardışık düzeni tarafından işlenecek şekilde yapılandırın. **Çözüm Gezgini**' de, az önce oluşturduğunuz doku dosyasının kısayol menüsünü açın ve ardından **Özellikler**' i seçin. **Yapılandırma özellikleri**  >  **genel** sayfasında, **öğe türü** özelliğini **görüntü içeriği ardışık düzeni**olarak ayarlayın. **İçerik** özelliğinin **Evet** olarak ayarlandığından ve **derlemeden hariç tut** ' un **Hayır**olarak ayarlandığından emin olun ve ardından **Uygula** düğmesini seçin. **Görüntü Içeriği ardışık düzen** yapılandırma özelliği sayfası görüntülenir.
 
-3. Çıktı biçimini blok sıkıştırılmış biçimlerden birine ayarlayın. Yapılandırma **Özellikleri** > **Resim İçerik Boru Hattı** > **Genel** sayfasında, sıkıştırma **(/sıkıştırma:BC3_UNORM) BC3_UNORM** **sıkıştır** özelliğini ayarlayın. Gereksinimlerinize bağlı olarak diğer BC1, BC2 veya BC3 biçimlerinden herhangi birini seçebilirsiniz. Direct2D şu anda BC4, BC5, BC6 veya BC7 dokularını desteklemiyor. Farklı BC biçimleri hakkında daha fazla bilgi için, [Blok sıkıştırma (Direct3D 10)](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression)bakın.
+3. Çıkış biçimini, blok ile sıkıştırılmış biçimlerden birine ayarlayın. **Yapılandırma özellikleri**  >  **görüntüsü içerik ardışık düzeni**  >  **genel** sayfasında, **Sıkıştır** özelliğini **BC3_UNORM Compression (/Compress: BC3_UNORM)** olarak ayarlayın. Gereksinimlerinize bağlı olarak diğer BC1, BC2 veya BC3 biçimlerinden birini seçebilirsiniz. Direct2D Şu anda BC4, BC5, BC6 veya BC7 dokularını desteklemez. Farklı BC biçimleri hakkında daha fazla bilgi için bkz. [blok sıkıştırma (Direct3D 10)](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-resources-block-compression).
 
    > [!NOTE]
-   > Belirtilen sıkıştırma biçimi, Görüntü İçerik Ardışık Alanı tarafından üretilen dosyanın biçimini belirler. Bu, kaynak görüntü dosyasının diskte depolandığı biçimi belirleyen Görüntü Düzenleyicisi'ndeki kaynak görüntünün **Biçim** özelliğinden farklıdır. *working format* Genellikle, sıkıştırılmış bir çalışma biçimi istemezsiniz.
+   > Belirtilen sıkıştırma biçimi, görüntü Içeriği ardışık düzeni tarafından üretilen dosyanın biçimini belirler. Bu, görüntü düzenleyicisinde kaynak görüntünün **Biçim** özelliğinden farklıdır. Bu, disk üzerinde depolanan kaynak görüntü dosyasının biçimini ( *çalışma biçimi*) belirler. Genellikle, sıkıştırılmış bir çalışma biçimi istemezsiniz.
 
-4. Önceden çoğaltılmış alfa kullanan çıktı üretmek için Görüntü İçerik Ardışık Alanı'nı yapılandırın. Yapılandırma **Özellikleri** > **Resim İçerik Boru Hattı** > **Genel** sayfasında, **Önceden çarpılmış alfa biçimi** özelliğini Evet **(/generatepremultipliedalpha)** olarak ayarlayın.
+4. Görüntü Içeriği ardışık düzenini, ön çarpılmış alfa kullanan çıkış oluşturacak şekilde yapılandırın. **Yapılandırma özellikleri**  >  **görüntüsü içerik ardışık düzeni**  >  **genel** sayfasında, **önceden çarpılan Alfa biçimi** özelliğini **Evet (/generatepremultipliedalpha)** olarak ayarlayın.
 
-5. Mipmaps oluşturmaması için görüntü içeriği ardışık yapıyı yapılandırın. Configuration **Properties** > **Image Content Pipeline** > **Genel** sayfasında, **Mips oluştur** özelliğini **No**olarak ayarlayın.
+5. Görüntü içeriği ardışık düzenini, MIN için MIT haritaları oluşturmamasını sağlayacak şekilde yapılandırın. **Yapılandırma özellikleri**  >  **görüntüsü içerik ardışık düzeni**  >  **genel** sayfasında, **MIPS özelliğini oluştur** ' u **Hayır**olarak ayarlayın.
 
 6. **Tamam** düğmesini seçin.
 
-   Projeyi oluşturduğunuzda, Görüntü İçerik Ardışık Alanı kaynak görüntüyü çalışma biçiminden belirttiğiniz çıktı biçimine dönüştürür—dönüştürme önceden çoğaltılmış alfa oluşturmayı içerir ve sonuç projenin çıktı dizinine kopyalanır.
+   Projeyi oluşturduğunuzda, görüntü Içeriği ardışık düzeni kaynak görüntüyü çalışma biçiminden belirlediğiniz çıkış biçimine dönüştürür — dönüştürme, ön çarpılmış Alfa oluşturmayı içerir — ve sonuç projenin çıkış dizinine kopyalanır.

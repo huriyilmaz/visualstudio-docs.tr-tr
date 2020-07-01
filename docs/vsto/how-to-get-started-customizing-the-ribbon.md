@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Şeriti özelleştirmeye başlama'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a9b0f1ef704f5dd1426374e23806e5950ed5f6bb
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: be311f87862f4447d903294508927735d3507b08
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255855"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520074"
 ---
 # <a name="how-to-get-started-customizing-the-ribbon"></a>Nasıl yapılır: Şeriti özelleştirmeye başlama
   Bir Microsoft Office uygulamasının Şeridini özelleştirmek için bir Office projesine **Şerit (görsel Tasarımcı)** veya **Şerit (XML)** öğesi ekleyin.
@@ -47,13 +47,13 @@ ms.locfileid: "71255855"
 
    - Dikey çubuk (|)
 
-   - Ters eğik\\çizgi ()
+   - Ters eğik çizgi ( \\ )
 
    - İki nokta (:)
 
    - Çift tırnak işareti (")
 
-   - Küçüktür (\<)
+   - Küçüktür ( \< )
 
    - Büyüktür (>)
 
@@ -65,7 +65,7 @@ ms.locfileid: "71255855"
 
    - Windows veya DOS için ayrılan adlar ("nul", "AUX", "Con", "COM1", "lpt1" vb.)
 
-4. **Tamam**'ı tıklatın.
+4. **Tamam**'a tıklayın.
 
    Şerit öğesi **Çözüm Gezgini**görünür. Sonraki adımlar hakkında daha fazla bilgi için bkz. [Şerite genel bakış](../vsto/ribbon-overview.md).
 

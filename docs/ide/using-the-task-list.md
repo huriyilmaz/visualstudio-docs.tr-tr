@@ -1,7 +1,7 @@
 ---
 title: Görev Listesini Kullanma
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - TaskListWindow
 - VS.TaskList
@@ -14,47 +14,47 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db39850350f99e6c046996f6408973cbc6543868
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: abd6d73c7b312cf00062307370ba2f7aebe6694e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75594233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768624"
 ---
 # <a name="use-the-task-list"></a>Görev Listesini Kullanma
 
-Belirteçler ve özel belirteçler `TODO` gibi `HACK`kod yorumlarını izlemek ve sizi doğrudan kodda önceden tanımlanmış bir konuma götürecek kısayolları yönetmek için **Görev Listesi'ni** kullanın. Kaynak kodundaki konumuna gitmek için listedeki öğeyi tıklatın.
+Ve **Task List** , veya özel belirteçler gibi belirteçleri kullanan kod açıklamalarını izlemek `TODO` `HACK` ve sizi doğrudan kodda önceden tanımlanmış bir konuma götürür kısayolları yönetmek için görev listesi kullanın. Kaynak kodundaki konumuna gitmek için listedeki öğeye tıklayın.
 
 > [!NOTE]
-> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio için [Görev yorumlarına bakın (Mac için Visual Studio)](/visualstudio/mac/task-comments).
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [görev açıklamaları (Mac için Visual Studio)](/visualstudio/mac/task-comments).
 
 ## <a name="the-task-list-window"></a>Görev Listesi penceresi
 
-**Görev Listesi** açık olduğunda, uygulama penceresinin alt kısmında görünür.
+**Görev listesi** açık olduğunda, uygulama penceresinin alt kısmında görünür.
 
-Görev **Listesini**açmak için**Görev Listesini** **Görüntüle'yi** > seçin veya klavyeden **Ctrl**+**\\**,**T**tuşuna basın.
+**Görev listesi**açmak için görev listesi **görüntüle**' yi seçin  >  **Task List**veya klavyeden **CTRL** + **\\** ,**T**tuşlarına basın.
 
 ![Görev Listesi penceresi](../ide/media/vs2015_task_list.png)
 
-Listenin sıralama sırasını değiştirmek için, herhangi bir sütunun üstbilgisini seçin. Arama sonuçlarınızı daha da hassaslaştırmak için **Shift** tuşuna basın ve ikinci bir sütun üstbilgisini tıklatın. Alternatif olarak, kısayol menüsünde **Sırayla'yı**seçin ve ardından bir üstbilgi seçin. Arama sonuçlarınızı daha da hassaslaştırmak için **Shift** tuşuna basın ve ikinci bir üstbilgi seçin.
+Listenin sıralama düzenini değiştirmek için herhangi bir sütunun üst bilgisini seçin. Arama sonuçlarınızı daha da belirginleştirmek için **SHIFT** tuşuna basın ve ikinci bir sütun başlığına tıklayın. Alternatif olarak, kısayol menüsünde **sıralama ölçütü**' ni seçin ve ardından bir başlık seçin. Arama sonuçlarınızı daha da belirginleştirmek için **SHIFT** tuşuna basın ve ikinci bir başlık seçin.
 
-Kısayol menüsünde sütunları göstermek veya gizlemek için **Sütunları Göster'i**seçin. Göstermek veya gizlemek istediğiniz sütunları seçin.
+Sütunları göstermek veya gizlemek için, kısayol menüsünde **sütunları göster**' i seçin. Göstermek veya gizlemek istediğiniz sütunları seçin.
 
-Sütunların sırasını değiştirmek için, herhangi bir sütun üstbilgisini istediğiniz konuma sürükleyin.
+Sütunların sırasını değiştirmek için herhangi bir sütun başlığını istediğiniz konuma sürükleyin.
 
 ## <a name="user-tasks"></a>Kullanıcı görevleri
 
-Visual Studio 2015'te kullanıcı görev özelliği kaldırıldı. Visual Studio 2013 ve önceki kullanıcı görev verilerine sahip bir çözüm *açtığınızda,.suo* dosyanızdaki kullanıcı görev verileri etkilenmez, ancak kullanıcı görevleri görev listesinde görüntülenmez.
+Kullanıcı görevi özelliği Visual Studio 2015 ' de kaldırılmıştır. Visual Studio 2013 ve önceki sürümlerinden Kullanıcı görevi verileri içeren bir çözümü açtığınızda, *. suo* dosyanızdaki Kullanıcı görevi verileri etkilenmez, ancak Kullanıcı görevleri görev listesinde gösterilmez.
 
-Kullanıcı görev verilerinize erişmeye ve güncellemeye devam etmek istiyorsanız, Visual Studio 2013'te projeyi açın ve kullanıcı görevlerinin içeriğini tercih ettiğiniz proje yönetim aracına (Team Foundation Server gibi) kopyalayın.
+Kullanıcı görev verilerinize erişmeye ve güncelleştirmeye devam etmek istiyorsanız, projeyi Visual Studio 2013 açın ve Kullanıcı görevlerinin içeriğini tercih ettiğiniz proje yönetim aracına (Team Foundation Server gibi) kopyalayın.
 
 ## <a name="tokens-and-comments"></a>Belirteçler ve açıklamalar
 
-Kodunuzda bir yorum işaretçisi ve önceden tanımlanmış bir belirteç öncesinde ki bir açıklama da **Görev Listesi'nde**görünür. Örneğin, aşağıdaki C# açıklamasının üç ayrı bölümü vardır:
+Kodunuzda bir açıklama işaretçisi ve önceden tanımlanmış bir belirteç bulunan bir yorum de **görev listesi**görüntülenir. Örneğin, aşağıdaki C# açıklamasının üç ayrı bölümü vardır:
 
-- Yorum işaretçisi (`//`)
+- Açıklama işaretçisi ( `//` )
 
-- Belirteç, örneğin`TODO`( )
+- Belirteç, örneğin ( `TODO` )
 
 - Açıklama (metnin geri kalanı)
 
@@ -62,53 +62,53 @@ Kodunuzda bir yorum işaretçisi ve önceden tanımlanmış bir belirteç önces
 // TODO: Load state from previously suspended application
 ```
 
-Önceden `TODO` tanımlanmış bir belirteç olduğundan, bu `TODO` açıklama listede bir görev olarak görünür.
+`TODO`, Önceden tanımlanmış bir belirteç olduğundan, bu açıklama listede bir `TODO` görev olarak görünür.
 
 > [!NOTE]
-> Varsayılan belirteçler yalnızca C/C++, C#ve VB dilleri için kullanılabilir. Diğer diller için **Özel belirteçler** bölümüne bakın.
+> Varsayılan belirteçler yalnızca C/C++, C# ve VB dilleri için kullanılabilir. Diğer diller için bkz. **özel belirteçler** bölümü.
 
 ### <a name="custom-tokens"></a>Özel belirteçler
 
-Varsayılan olarak, Visual Studio aşağıdaki belirteçleri `HACK`içerir: `TODO`, , `UNDONE`ve `UnresolvedMergeConflict`. Bunlar büyük/küçük harfe duyarlı değildir. Ayrıca kendi özel belirteçlerinizi de oluşturabilirsiniz.
+Varsayılan olarak, Visual Studio aşağıdaki belirteçleri içerir: `HACK` , `TODO` , `UNDONE` ve `UnresolvedMergeConflict` . Bunlar büyük/küçük harfe duyarlı değildir. Ayrıca kendi özel belirteçlerinizi de oluşturabilirsiniz.
 
-Özel bir belirteç oluşturmak için:
+Özel belirteç oluşturmak için:
 
-1. **Araçlar** menüsünde **Seçenekler'i**seçin.
+1. **Araçlar** menüsünde **Seçenekler**' i seçin.
 
-2. **Çevre** klasörünü açın ve ardından **Görev Listesi'ni**seçin.
+2. **Ortam** klasörünü açın ve ardından **görev listesi**öğesini seçin.
 
-   [Görev Listesi seçenekleri sayfası](../ide/reference/task-list-environment-options-dialog-box.md) görüntülenir.
+   [Görev listesi Seçenekler sayfası](../ide/reference/task-list-environment-options-dialog-box.md) görüntülenir.
 
    ![Visual Studio Görev Listesi](../ide/media/vs2015_task_list_options.png)
 
-3. **Ad** metin kutusuna, örneğin **HATA**belirteç adınızı girin.
+3. **Ad** metin kutusuna, belirteç adınızı girin, örneğin **hata**.
 
-4. **Öncelik** açılır listesinde, yeni belirteç için varsayılan bir öncelik seçin.
+4. **Öncelik** açılan listesinde, yeni belirteç için varsayılan önceliği seçin.
 
-5. **Ekle'yi**seçin.
+5. **Ekle**' yi seçin.
 
 > [!TIP]
-> Bir ad girdikten sonra **Ekle** düğmesi etkin olur. **Ekle'yi**tıklatmadan önce bir ad girmeniz gerekir.
+> Ad girdikten sonra **Ekle** düğmesi etkin hale gelir. **Ekle**' ye tıklamadan önce bir ad girmeniz gerekir.
 
 ### <a name="c-todo-comments"></a>C++ TODO açıklamaları
 
-Varsayılan olarak, C++ TODO yorumları **Görev Listesi'nde**görüntülenir.
+Varsayılan olarak, C++ TODO açıklamaları **görev listesi**görüntülenir.
 
-**Araçlar** menüsünde C++ TODO yorumlarını kapatmak için **Seçenekler** > **Metin Düzenleyicisi** > **C/C++** > **Görünüm** > **Açıklama Görevlerini Sıralıyorum'u**seçin ve değeri **false**olarak ayarlayın.
+C++ Todo açıklamalarını kapatmak için, **Araçlar** menüsünde **Seçenekler**  >  **metin düzenleyici**  >  **C/C++**  >  **görünümü**  >  **Açıklama görevlerini numaralandır**' ı seçin ve değeri **false**olarak ayarlayın.
 
 ## <a name="shortcuts"></a>Kısayollar
 
-*Kısayol,* **Koddaki Görev Listesi'nde**izlenen yer imidir. Normal bir yer imi daha farklı bir simge vardır. Koddaki ilgili konuma gitmek için **Görev Listesi'ndeki** kısayolu çift tıklatın.
+*Kısayol* , **görev listesi**izlenen koddaki bir yer işaretidir. Bu, düzenli bir yer işaretine göre farklı bir simgeye sahiptir. Koddaki ilgili konuma gitmek için **görev listesi** kısayoluna çift tıklayın.
 
-![Visual Studio Görev Listesi Kısayol Simgesi](../ide/media/vs2015_task_list_bookmark.png)
+![Visual Studio Görev Listesi kısayol simgesi](../ide/media/vs2015_task_list_bookmark.png)
 
 ### <a name="create-a-shortcut"></a>Kısayol oluşturma
 
-Kısayol oluşturmak için işaretçiyi kısayol yerleştirmek istediğiniz koda ekleyin. **Yer İşaretlerini** >  **Edit** > **Görev Listesi Kısayolu Ekle'yi** seçin veya Ctrl**K**, **Ctrl**+ **Ctrl**+**H**tuşuna basın.
+Bir kısayol oluşturmak için, işaretçiyi bir kısayol yerleştirmek istediğiniz koda ekleyin. **Edit**  >  **Yer imlerini**Düzenle  >  **görev listesi kısayolunu** seçin veya **CTRL** + **K**, **CTRL** + **H**tuşlarına basın.
 
-Koddaki kısayollar arasında gezinmek için, listede bir kısayol seçin ve ardından kısayol menüsünden **Sonraki Görev** veya **Önceki Görev'i** seçin.
+Koddaki kısayollar arasında gezinmek için listeden bir kısayol seçin ve sonra kısayol menüsünden **sonraki görev** veya **önceki görev** ' i seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görev Listesi, Çevre, Seçenekler iletişim kutusu](../ide/reference/task-list-environment-options-dialog-box.md)
-- [Görev yorumları (Mac için Visual Studio)](/visualstudio/mac/task-comments)
+- [Görev Listesi, ortam, Seçenekler iletişim kutusu](../ide/reference/task-list-environment-options-dialog-box.md)
+- [Görev açıklamaları (Mac için Visual Studio)](/visualstudio/mac/task-comments)

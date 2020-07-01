@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68154715"
 ---
-  **Uygulama hedefi:** Bu konu başlığı altındaki bilgiler, belgeye uygulanır\-düzeyi projelerine ve VSTO Ekle\-projelerinde şu uygulamalar için: Excel; InfoPath 2013 ve InfoPath 2010; Outlook; PowerPoint; Proje; Visio; Word. Daha fazla bilgi için [Office uygulaması ve proje türüne göre kullanılabilen özellikler](../../vsto/features-available-by-office-application-and-project-type.md).
+  **Uygulama hedefi:** Bu konudaki bilgiler, \- Şu uygulamalar için belge düzeyi projelerine ve VSTO eklentisi \- projelerine yöneliktir: Excel; InfoPath 2013 ve InfoPath 2010; Office Programlarında Proje \ Sözcük. Daha fazla bilgi için bkz. [Office uygulaması ve proje türü tarafından kullanılabilen özellikler](../../vsto/features-available-by-office-application-and-project-type.md).

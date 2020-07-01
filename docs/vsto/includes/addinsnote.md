@@ -11,4 +11,4 @@ ms.lasthandoff: 04/02/2020
 ms.locfileid: "80573180"
 ---
 > [!NOTE]
-> Office deneyimini birden çok platformda genişleten çözümler geliştirmek ister misiniz? Yeni Office [Eklentileri modeline](/office/dev/add-ins/)göz atın. Office Eklentileri VSTO Eklentileri ve çözümlerine kıyasla küçük bir ayak izine sahiptir ve bunları HTML5, JavaScript, CSS3 ve XML gibi hemen hemen tüm web programlama teknolojilerini kullanarak oluşturabilirsiniz.
+> Office deneyimini birden çok platformda genişleten çözümler geliştirilirken de ilgileniyor musunuz? Yeni [Office eklentileri modeline](/office/dev/add-ins/)göz atın. Office eklentilerinin VSTO eklentileri ve çözümleri ile karşılaştırıldığında küçük bir ayak izi vardır ve HTML5, JavaScript, CSS3 ve XML gibi neredeyse her türlü Web programlama teknolojisini kullanarak bunları oluşturabilirsiniz.

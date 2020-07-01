@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: çalışma sayfalarını bir veritabanındaki verilerle doldurma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0a1e01f5c9fc1372cda4d7d31f8ba56b90e166e7
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.openlocfilehash: 1b594014b2564b5730c1895a007294ee66e07637
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985855"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85520126"
 ---
 # <a name="how-to-populate-worksheets-with-data-from-a-database"></a>Nasıl yapılır: çalışma sayfalarını bir veritabanındaki verilerle doldurma
 
@@ -41,9 +41,9 @@ Aşağıdaki örnek, tasarımcı kullanarak belge düzeyi projelerde veri bağla
 
 Çalışma sayfasında aşağıdaki denetimlerden biri oluşturuldu:
 
-- Bir alanı sürüklerseniz, çalışma sayfasında bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi oluşturulur. Daha fazla bilgi için bkz. [NamedRange denetimi](../vsto/namedrange-control.md).
+- Bir alanı sürüklerseniz, <xref:Microsoft.Office.Tools.Excel.NamedRange> çalışma sayfasında bir denetim oluşturulur. Daha fazla bilgi için bkz. [NamedRange denetimi](../vsto/namedrange-control.md).
 
-- Bir tablo sürüklerseniz, çalışma sayfasında bir <xref:Microsoft.Office.Tools.Excel.ListObject> denetimi oluşturulur. Daha fazla bilgi için bkz. [ListObject denetimi](../vsto/listobject-control.md).
+- Bir tablo sürüklerseniz, <xref:Microsoft.Office.Tools.Excel.ListObject> çalışma sayfasında bir denetim oluşturulur. Daha fazla bilgi için bkz. [ListObject denetimi](../vsto/listobject-control.md).
 
 **Veri kaynakları** penceresinde tablo veya alanı seçerek ve ardından açılan listeden farklı bir denetim seçerek farklı bir denetim ekleyebilirsiniz.
 
@@ -53,17 +53,17 @@ Denetime ek olarak, aşağıdaki verilerle ilgili nesneler projenize otomatik ol
 
 - Veritabanına bağladığınız veri tablolarını kapsülleyen türü belirtilmiş bir veri kümesi. Daha fazla bilgi için bkz. [Visual Studio 'Da veri kümesi araçları](../data-tools/dataset-tools-in-visual-studio.md).
 
-- Denetimi türü belirtilmiş veri kümesine bağlayan bir <xref:System.Windows.Forms.BindingSource>. Daha fazla bilgi için bkz. [BindingSource Bileşenine Genel Bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview).
+- <xref:System.Windows.Forms.BindingSource>Denetimi türü belirtilmiş veri kümesine bağlayan bir. Daha fazla bilgi için bkz. [BindingSource Bileşenine Genel Bakış](/dotnet/framework/winforms/controls/bindingsource-component-overview).
 
 - Türü belirtilmiş veri kümesini veritabanına bağlayan bir TableAdapter. Daha fazla bilgi için bkz. [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
 
 - Hiyerarşik güncelleştirmeleri etkinleştirmek için veri kümesindeki tablo bağdaştırıcılarını koordine etmek üzere kullanılan bir TableAdapterManager. Daha fazla bilgi için bkz. [sıradüzensel Update](../data-tools/hierarchical-update.md) ve [TableAdapterManager Reference](../data-tools/fill-datasets-by-using-tableadapters.md#tableadaptermanager-reference).
 
-Projeyi çalıştırdığınızda, denetim veri kaynağındaki ilk kaydı görüntüler. Kullanıcıların kayıtlarda gezinme olanağı sağlamak için <xref:System.Windows.Forms.BindingSource> kullanabilirsiniz.
+Projeyi çalıştırdığınızda, denetim veri kaynağındaki ilk kaydı görüntüler. <xref:System.Windows.Forms.BindingSource>Kullanıcıların kayıtlarda gezinme özelliğini etkinleştirmek için kullanabilirsiniz.
 
 ### <a name="to-scroll-through-the-records"></a>Kayıtlar arasında gezinmek için
 
-- <xref:System.Windows.Forms.BindingSource.MoveNext%2A> ve <xref:System.Windows.Forms.BindingSource.MovePrevious%2A>gibi <xref:System.Windows.Forms.BindingSource> yöntemler kullanın.
+- <xref:System.Windows.Forms.BindingSource>Ve gibi yöntemleri kullanın <xref:System.Windows.Forms.BindingSource.MoveNext%2A> <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> .
 
 Yazılan veri kümesine ve veritabanına güncelleştirmelerin gönderilmesi hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md).
 

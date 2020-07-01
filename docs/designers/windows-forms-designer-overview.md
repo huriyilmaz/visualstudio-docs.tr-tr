@@ -1,45 +1,45 @@
 ---
-title: Windows Forms uygulamalarını tasarlayın
+title: Windows Forms uygulamaları tasarlama
 ms.date: 08/09/2019
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - Windows Forms Designer
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 171cdffa569b342bdbc7dd0da1c8da218e1d622c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 03619582a30893c161c44c880a0d9cf6c9766d0b
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768763"
 ---
 # <a name="windows-forms-designer-overview"></a>Windows Form Tasarımcısı’na genel bakış
 
-Visual Studio'daki Windows Forms Designer, Windows Forms tabanlı uygulamalar oluşturmak için hızlı bir geliştirme çözümü sağlar. Windows Forms Designer, bir forma kolayca denetim eklemenize, düzenlemenize ve etkinlikleri için kod yazmanıza olanak tanır. Windows Formlar hakkında daha fazla bilgi için [Windows Formlar genel bakış](/dotnet/framework/winforms/windows-forms-overview)bilgisine bakın.
+Visual Studio 'daki Windows Form Tasarımcısı, Windows Forms tabanlı uygulamalar oluşturmak için hızlı bir geliştirme çözümü sağlar. Windows Form Tasarımcısı, forma kolayca denetim eklemenizi, bunları düzenlemenizi ve olayları için kod yazmanızı sağlar. Windows Forms hakkında daha fazla bilgi için bkz. [Windows Forms genel bakış](/dotnet/framework/winforms/windows-forms-overview).
 
 ## <a name="functionality"></a>İşlev
 
-Tasarımcıyı kullanarak şunları yapabilirsiniz:
+Tasarımcı kullanarak şunları yapabilirsiniz:
 
-- Bir forma bileşenler, veri denetimleri veya Windows tabanlı denetimler ekleyin.
+- Form için bileşenleri, veri denetimlerini veya Windows tabanlı denetimleri ekleyin.
 
-- Bu form için tasarımcıdaki formu çift `Load` tıklatın ve bu form için kod yazın veya form üzerindeki denetimi çift tıklatın ve denetimin varsayılan olayı için kod yazın.
+- Tasarımcıda forma çift tıklayın ve `Load` Bu formun olayına kod yazın veya formdaki bir denetime çift tıklayın ve denetimin varsayılan olayı için kod yazın.
 
-- Denetimi seçip bir ad yazarak denetimin Metin özelliğini düzenleme.
+- Denetimi seçip bir ad yazarak bir denetimin metin özelliğini düzenleyin.
 
-- Fare veya ok tuşları ile hareket ettirerek seçili denetimin yerleşimini ayarlayın. Benzer şekilde, Ctrl ve ok tuşlarını kullanarak yerleşimi daha hassas bir şekilde ayarlayın. Son olarak, Shift ve ok tuşlarını kullanarak denetimin boyutunu ayarlayın.
+- Seçili denetimin yerleşimini fareyle veya ok tuşlarıyla taşıyarak ayarlayın. Benzer şekilde, CTRL ve ok tuşlarını kullanarak yerleşimi daha kesin bir şekilde ayarlayın. Son olarak, Shift ve ok tuşlarını kullanarak denetimin boyutunu ayarlayın.
 
-- Tıklatırken **Shift** veya **Ctrl'yi** seçerek birden çok denetim seçin. Sing **Shift**+click kullanırken, seçilen ilk denetim boyutu hizalarken veya değiştirirken baskın denetimdir. **Ctrl**+click kullanırken, seçilen son denetim baskındır, bu nedenle her yeni denetim eklendiğinde baskın kontrol değişir. Alternatif olarak, seçmek istediğiniz denetimlerin etrafında bir seçim dikdörtgeni sürükleyerek birden çok denetim seçebilirsiniz.
+- Tıklatırken **SHIFT** veya **CTRL** ' i seçerek birden çok denetim seçin. SHIFT + tıklama **tuşlarını**kullanırken, seçilen ilk denetim, boyutu hizalarken veya düzenleme yaparken baskın denetimdir. **CTRL**+ tıklama kullanılırken, seçilen son denetim baskın olduğundan, baskın denetim her yeni denetim eklenmiş şekilde değişir. Alternatif olarak, seçmek istediğiniz denetimlerin çevresine bir seçim dikdörtgeni sürükleyerek birden çok denetim seçebilirsiniz.
 
 > [!NOTE]
-> Formun kaynağında değişiklik yapmak için Kaynak Düzenleyicisi'ni değil, Windows Forms*Designer'ı*kullanın. Form tabanlı .resx dosyasını edinirseniz, Kaynak Düzenleyicisi'nde yaptığınız değişikliklerin kaybolabileceğine dair bir uyarı görürsünüz. Bunun nedeni, Windows Forms Designer'ın .resx dosyasını oluşturmasıdır.
+> Formun kaynak (*. resx*) dosyasında değişiklik yapmak Için kaynak düzenleyicisini değil Windows Form Tasarımcısı kullanın. Form tabanlı. resx dosyasını düzenlerseniz, kaynak düzenleyicisinde yaptığınız değişikliklerin kaybedilmesi gerektiğini belirten bir uyarı görürsünüz. Bunun nedeni Windows Form Tasarımcısı. resx dosyasını oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Formlarına genel bakış](/dotnet/framework/winforms/windows-forms-overview)
+- [Windows Forms genel bakış](/dotnet/framework/winforms/windows-forms-overview)
 - [Windows Forms denetimleri](/dotnet/framework/winforms/controls/)
-- [Windows Formlarında Kullanıcı girişi](/dotnet/framework/winforms/user-input-in-windows-forms)
-- [Windows Formlarında veri bağlama](/dotnet/framework/winforms/windows-forms-data-binding)
+- [Windows Forms Kullanıcı girişi](/dotnet/framework/winforms/user-input-in-windows-forms)
+- [Windows Forms veri bağlama](/dotnet/framework/winforms/windows-forms-data-binding)
 - [Windows Forms uygulamalarını geliştirin](/dotnet/framework/winforms/advanced/)
 - <xref:System.Windows.Forms?displayProperty=fullName>API başvurusu

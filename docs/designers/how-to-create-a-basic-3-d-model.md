@@ -1,79 +1,79 @@
 ---
-title: Nasıl?
+title: 'Nasıl yapılır: temel 3B model oluşturma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a0d97966-2df8-449b-a8cf-5a19684dc773
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ce16e436172a7d369f2df8342f6b027b574056ab
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: dbd0b2a092e47eab053d4150fd2139fb0dbdf6ea
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85769259"
 ---
 # <a name="how-to-create-a-basic-3d-model"></a>Nasıl yapılır: Temel 3B model oluşturma
 
-Bu makalede, temel bir 3B model oluşturmak için Model Düzenleyicisi nasıl kullanılacağı nı gösterin. Aşağıdaki faaliyetler kapsanmaktadır:
+Bu makalede, temel bir 3B model oluşturmak için Model Düzenleyicisi 'nin nasıl kullanılacağı gösterilmektedir. Aşağıdaki etkinlikler ele alınmıştır:
 
 - Sahneye nesne ekleme
 
-- Yüzleri ve kenarları seçme
+- Yüzeyleri ve kenarları seçme
 
 - Seçimleri çevirme
 
-- **Subdivide yüz** ve **Ekstrüzyon yüz** araçlarını kullanma
+- Alt **bölüme** yüz ve **yükseltme** araçları 'nı kullanma
 
-- **Üçgenkomutunu** kullanma
+- **Üçgenlere ayır** komutunu kullanma
 
 ## <a name="create-a-basic-3d-model"></a>Temel 3B model oluşturma
-Model Düzenleyicisi'ni kullanarak oyununuz veya uygulamanız için 3B modeller ve sahneler oluşturabilir ve değiştirebilirsiniz. Aşağıdaki adımlar, bir evin basitleştirilmiş 3B modelini oluşturmak için Model Düzenleyicisi'nin nasıl kullanılacağını gösterir. Basitleştirilmiş bir model, hala oluşturulmakta olan son sanat varlıkları için stand-in, çarpışma algılama için bir kafes olarak veya temsil ettiği nesne daha ayrıntılı işlemeden yararlanamayacak kadar uzakta olduğunda kullanılacak düşük ayrıntılı bir model olarak kullanılabilir.
+Oyununuzun veya uygulamanızın 3B modellerini ve sahneleri oluşturmak ve değiştirmek için model düzenleyicisini kullanabilirsiniz. Aşağıdaki adımlarda, bir evin Basitleştirilmiş 3B modelini oluşturmak için Model Düzenleyicisi 'nin nasıl kullanılacağı gösterilmektedir. Basitleştirilmiş bir model, hala oluşturulmakta olan son resim varlıkları için, çarpışma algılaması için bir ağ olarak veya temsil ettiği nesne daha ayrıntılı işlemeden yararlanmak için çok uzakta bir model olarak kullanılabilir.
 
-Bitirdikten sonra, model aşağıdaki gibi görünmelidir:
+İşiniz bittiğinde, modelin şöyle görünmesi gerekir:
 
 ![Basitleştirilmiş evin tamamlanmış modeli](../designers/media/gfx_model_demo_house_final.png)
 
-Başlamadan önce **Özellikler** penceresinin ve **Araç Kutusunun** görüntülendiğinden emin olun.
+Başlamadan önce, **Özellikler** penceresi ve **araç kutusunun** görüntülendiğinden emin olun.
 
-### <a name="to-create-a-simplified-3d-model-of-a-house"></a>Bir evin basitleştirilmiş 3B modelini oluşturmak için
+### <a name="to-create-a-simplified-3d-model-of-a-house"></a>Bir evin Basitleştirilmiş 3B modelini oluşturmak için
 
-1. Çalışmak için bir 3B model oluşturun. Projenize nasıl bir model ekleyeceğiniz hakkında bilgi için Model Düzenleyicisi'ndeki Başlangıç Bölümü'ne bakın. [Model Editor](../designers/model-editor.md)
+1. Çalışmak için bir 3B model oluşturun. Projenize bir model ekleme hakkında daha fazla bilgi için, bkz. [Model Düzenleyicisi](../designers/model-editor.md)'ndeki Başlarken bölümü.
 
-2. Sahneye bir küp ekleyin. **Toolbox** penceresinde, **Şekiller** **altında, Küp'ü** seçin ve ardından tasarım yüzeyine taşıyın.
+2. Sahneye küp ekleyin. **Araç kutusu** penceresinde, **şekiller**altında **küp** ' i seçin ve tasarım yüzeyine taşıyın.
 
-3. Yüz seçimine geçin. Model Düzenleyicisi araç çubuğunda **Yüzü Seç'i**seçin.
+3. Yüz seçimine geçiş yapın. Model Düzenleyicisi araç çubuğunda **yüz seç**' i seçin.
 
-4. Küpün üst kısmını böl. Yüz seçimi modunda, seçim için etkinleştirmek için küpü bir kez seçin ve ardından üst yüzü seçmek için küpün üst ünü seçin. Model Düzenleyicisi araç **çubuğunda, Alt Bölme yüzü'ni**seçin. Bu, küpün üst kısmına eşit büyüklüktedört bölüme bölen yeni tepe ler ekler.
+4. Küpün üst kısmını alt bölümlere ayır. Yüz seçimi modunda, seçim için etkinleştirmek üzere küpü bir kez seçin ve ardından en üstteki yüzü seçmek için küpün en üstünü seçin. Model Düzenleyicisi araç çubuğunda alt **bölümlere**ayır ' ı seçin. Bu, küpün en üstüne, eşit olarak boyutlandırılmış dört bölüme bölünmüş yeni köşeler ekler.
 
-    ![Küpün üst kısmı bölündü](../designers/media/gfx_model_demo_house_subdiv.png)
+    ![Küpün üst bölümü alt bölünmüştür](../designers/media/gfx_model_demo_house_subdiv.png)
 
-5. Küpün iki bitişik tarafını (örneğin, küpün ön ve sağ taraflarını) ekstrüzyon. Yüz seçim modunda, seçim için etkinleştirmek için küpü bir kez seçin ve ardından küpün bir tarafını seçin. **Ctrl** tuşuna basın ve basılı tutun, önce seçtiğiniz tarafa bitişik olan küpün başka bir tarafını seçin ve ardından Model Düzenleyiciaraç çubuğunda **Ekstrüzyon yüzünü**seçin.
+5. Küpün iki bitişik tarafını — Örneğin, küpün ön ve sağ taraflarından yükseltme. Yüz seçimi modunda, seçim için etkinleştirmek üzere küpü bir kez seçtikten sonra küpün bir tarafını seçin. **CTRL** tuşunu basılı tutarak, önce seçtiğiniz tarafa bitişik olan küpün başka bir tarafını seçin ve ardından Model Düzenleyicisi araç çubuğunda, **yükseltme yüzü**' ni seçin.
 
-    ![Küpün kenarları ekstrüzyon edildi.](../designers/media/gfx_model_demo_house_extrude.png)
+    ![Küpün tarafları yükseltilmiş](../designers/media/gfx_model_demo_house_extrude.png)
 
-6. Ekstrüzyonlardan birini uzatın. Az önce ekstrüzyon yaptığınız yüzlerden birini seçin ve ardından Model Düzenleyiciaraç çubuğunda **Çeviri** aracını seçin ve çeviri manipülatörü ekstrüzyonla aynı yönde hareket ettirin.
+6. Extrusbir kısmını genişletin. Az önce yükseltme yaptığınız yüzlerin birini seçin ve ardından Model Düzenleyicisi araç çubuğunda **çevir** aracını seçin ve çeviri işletini aynı yönde, aynı yönde taşıyın.
 
-    ![Küpün bir tarafı daha fazla ekstrüzyon olmuştur.](../designers/media/gfx_model_demo_house_extend.png)
+    ![Küpün bir tarafı daha fazla yükseltilmiş.](../designers/media/gfx_model_demo_house_extend.png)
 
-7. Modeli üçgen. Model Düzenleyicisi araç çubuğunda **Gelişmiş** > **Araçları** > **Üçgen'i**seçin.
+7. Model üçgenlere ayır. Model Düzenleyicisi araç çubuğunda **Gelişmiş**  >  **Araçlar**  >  **üçgenlere ayır**' ı seçin.
 
-8. Evin çatısını oluşturun. Model Düzenleyicisi araç çubuğunda **Kenar Seç'i** seçerek kenar seçim moduna geçin ve ardından etkinleştirmek için küpü seçin. Burada gösterilen kenarları seçerken **Ctrl** tuşuna basın ve basılı tutun:
+8. Evin çatı ' ini oluşturun. Model Düzenleyicisi araç çubuğunda **kenar Seç** ' i seçerek kenar seçimi moduna geçin ve sonra etkinleştirmek için küpü seçin. Burada gösterilen kenarları seçerken **CTRL** tuşuna basın ve basılı tutun:
 
-    ![Çatının zirvesini oluşturacak kenarlar](../designers/media/gfx_model_demo_house_edges.png)
+    ![Tavan tepe düzeyini oluşturacak kenarlar](../designers/media/gfx_model_demo_house_edges.png)
 
-    Kenarlar seçildiğinde, Model Düzenleyicisi araç çubuğunda Çeviri **aracını** seçin ve ardından evin çatısını oluşturmak için çeviri manipülatörü yukarı doğru hareket ettirin.
+    Kenarlar seçildiğinde, model **Düzenleyicisi araç çubuğunda çeviri aracını seçin** ve ardından evin çatı evini oluşturmak için çeviriyi yukarı doğru taşıyın.
 
-   Basitleştirilmiş ev modeli tamamlandı. Burada düz gölgeleme uygulanan, yine son model:
+   Basitleştirilmiş ev modeli tamamlanmıştır. Aşağıda, düz gölgeleme uygulanmış son model tekrar verilmiştir:
 
    ![Basitleştirilmiş evin tamamlanmış modeli](../designers/media/gfx_model_demo_house_final.png)
 
-   Bir sonraki adım olarak, bu 3B modele bir gölge uygulayabilirsiniz. Bilgi için [bkz: 3B modele gölgeuygulayın.](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+   Bir sonraki adım olarak, bu 3B modele bir gölgelendirici uygulayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: 3B modele gölgelendirici uygulama](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılsın: Model 3D arazi](../designers/how-to-model-3-d-terrain.md)
-- [Model düzenleyici](../designers/model-editor.md)
+- [Nasıl yapılır: 3B terbotları modelleme](../designers/how-to-model-3-d-terrain.md)
+- [Model düzenleyicisi](../designers/model-editor.md)
 - [Gölgelendirici tasarımcısı](../designers/shader-designer.md)

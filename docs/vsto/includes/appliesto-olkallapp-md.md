@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68144555"
 ---
-  **Uygulama hedefi:** Bu konu başlığı altındaki bilgiler VSTO eklemek için geçerli\-Outlook projelerindeki. Daha fazla bilgi için [Office uygulaması ve proje türüne göre kullanılabilen özellikler](../../vsto/features-available-by-office-application-and-project-type.md).
+  **Uygulama hedefi:** Bu konudaki bilgiler, \- Outlook IÇIN VSTO eklentisi projelerine yöneliktir. Daha fazla bilgi için bkz. [Office uygulaması ve proje türü tarafından kullanılabilen özellikler](../../vsto/features-available-by-office-application-and-project-type.md).
