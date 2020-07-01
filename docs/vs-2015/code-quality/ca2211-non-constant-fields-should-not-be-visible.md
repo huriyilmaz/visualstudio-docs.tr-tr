@@ -15,24 +15,24 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: db2c667d0a3823460a084dc1e4806501d9b26693
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: aa67c33eac5d618c0a080323720775beea7b68c3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662965"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548219"
 ---
 # <a name="ca2211-non-constant-fields-should-not-be-visible"></a>CA2211: Sabit olmayan alanlar görünür olmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|NonConstantFieldsShouldNotBeVisible|
 |CheckId|CA2211|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Ortak veya korumalı bir statik alan sabit değildir ve salt okunurdur.
 
 ## <a name="rule-description"></a>Kural Tanımı

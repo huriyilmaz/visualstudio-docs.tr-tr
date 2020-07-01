@@ -1,7 +1,7 @@
 ---
 title: Kod Oluşturma ve T4 Metin Şablonları
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - VS.ToolsOptionsPages.TextTemplating.TextTemplating
 helpviewer_keywords:
@@ -15,16 +15,16 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f0eba8b4850ee845414084ef766fce30f9efd7e6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: fbcd41461ab57e3bbb5fb48849ddde8593c587fb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75597223"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548245"
 ---
 # <a name="code-generation-and-t4-text-templates"></a>Kod Oluşturma ve T4 Metin Şablonları
 
-Visual Studio 'da, bir *T4 metin şablonu* metin dosyası oluşturabilen bir metin blokları ve Denetim mantığı karışımından oluşur. Denetim mantığı [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] veya [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]program kodunun parçaları olarak yazılmıştır. Visual Studio 2015 güncelleştirme 2 ve sonrasında, T4 şablonları yönergelerinden C# sürüm 6,0 özelliklerini kullanabilirsiniz. Oluşturulan dosya, bir Web sayfası veya bir kaynak dosyası gibi herhangi bir türde metin veya herhangi bir dilde program kaynak kodu olabilir.
+Visual Studio 'da, bir *T4 metin şablonu* metin dosyası oluşturabilen bir metin blokları ve Denetim mantığı karışımından oluşur. Denetim mantığı, veya içindeki program kodu parçaları olarak yazılır [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] . Visual Studio 2015 güncelleştirme 2 ve sonrasında, T4 şablonları yönergelerinde C# sürüm 6,0 özelliklerini kullanabilirsiniz. Oluşturulan dosya, bir Web sayfası veya bir kaynak dosyası gibi herhangi bir türde metin veya herhangi bir dilde program kaynak kodu olabilir.
 
 İki tür T4 metin şablonu vardır: çalışma zamanı ve tasarım zamanı.
 
@@ -96,4 +96,4 @@ Metin şablonu dönüştürme özelliği *T4*olarak adlandırılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Etki Alanına Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)
+- [Alana Özgü Dilden Kod Oluşturma](../modeling/generating-code-from-a-domain-specific-language.md)

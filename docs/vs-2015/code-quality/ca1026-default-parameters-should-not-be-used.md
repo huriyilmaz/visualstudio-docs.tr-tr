@@ -15,30 +15,30 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 8fffbdc2cf9f4e09fe98c8e14b6692802ab3f275
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a63d6e788dd1722d0c593469b225a4f1aeb4738d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661952"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548453"
 ---
 # <a name="ca1026-default-parameters-should-not-be-used"></a>CA1026: Varsayılan parametreler kullanılmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DefaultParametersShouldNotBeUsed|
 |CheckId|CA1026|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Dışarıdan görünen bir tür, varsayılan bir parametre kullanan dışarıdan görünür bir yöntem içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Varsayılan parametreleri kullanan yöntemlere ortak dil belirtimi (CLS) altında izin verilir; Ancak, CLS, derleyicilerin bu parametrelere atanan değerleri yoksaymasına olanak tanır. Varsayılan parametre değerlerini yoksayması gereken derleyiciler için yazılan kod, her varsayılan parametre için açıkça bağımsız değişken sağlamalıdır. Programlama dilleri arasında istediğiniz davranışı sürdürmek için, varsayılan parametreleri kullanan yöntemlerin varsayılan parametreleri sağlayan yöntem aşırı yüklemeleri ile değiştirilmelidir.
 
- Derleyici, yönetilen koda eriştiğinde yönetilen uzantının C++ varsayılan parametrelerinin değerlerini yoksayar. Visual Basic Derleyicisi, [Isteğe bağlı](https://msdn.microsoft.com/library/4571ce88-a539-4115-b230-54eb277c6aa7) anahtar sözcüğünü kullanan Varsayılan parametrelere sahip yöntemleri destekler.
+ Derleyici, yönetilen koda eriştiğinde C++ için yönetilen uzantının varsayılan parametrelerinin değerlerini yoksayar. Visual Basic Derleyicisi, [Isteğe bağlı](https://msdn.microsoft.com/library/4571ce88-a539-4115-b230-54eb277c6aa7) anahtar sözcüğünü kullanan Varsayılan parametrelere sahip yöntemleri destekler.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini onarmak için varsayılan parametreleri kullanan yöntemi varsayılan parametreleri sağlayan yöntem aşırı yüklemeleri ile değiştirin.
@@ -52,7 +52,7 @@ ms.locfileid: "72661952"
  [!code-vb[FxCop.Design.DefaultParameters#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.DefaultParameters/vb/FxCop.Design.DefaultParameters.vb#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1025: Tekrarlanan bağımsız değişkenleri params dizisi ile değiştirin](../code-quality/ca1025-replace-repetitive-arguments-with-params-array.md)
+ [CA1025: Yinelenen bağımsız değişkenleri params dizisiyle değiştirin](../code-quality/ca1025-replace-repetitive-arguments-with-params-array.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

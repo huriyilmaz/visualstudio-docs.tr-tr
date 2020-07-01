@@ -9,12 +9,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 368dfd4c67277305672a89be9e5ab811d341b009
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 1fc548f5e051be878382d81bd040accbb13e9755
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85330019"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548128"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>Nasıl yapılır: Performans veri dosyası adlandırma seçeneklerini ayarlama
 
@@ -24,7 +24,7 @@ Varsayılan olarak, profil oluşturma verilerini (.* VSP*) dosyası aşağıdaki
 
 Performans oturumunun Özellikler iletişim kutusunun **genel** sayfasında herhangi bir adlandırma parametresini değiştirebilirsiniz.
 
-|||
+|Parametre|Açıklama|
 |-|-|
 |*Yol*|Raporu içeren dizin. Varsayılan konum, çözüm klasörüdür veya kullanıcının projeleri ve çözümleri için varsayılan konumdur.|
 |*VSP dosyası*|Profil oluşturma veri dosyasının adı. Varsayılan ad, profil oluşturulan çözümün veya yürütülebilir dosyanın adıdır.|
@@ -39,7 +39,7 @@ Performans oturumunun Özellikler iletişim kutusunun **genel** sayfasında herh
 
 3. **Rapor**' ın altında, aşağıdaki ayarlardan birini değiştirin:
 
-    |||
+    |Name|Description|
     |-|-|
     |**Rapor konumu**|Profil oluşturma veri dosyalarını depolamak için bir dizin belirtin.|
     |**Rapor adı**|Dosyalar için bir temel ad belirtin.|

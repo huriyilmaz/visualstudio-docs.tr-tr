@@ -1,7 +1,7 @@
 ---
 title: Model Gezginini Özelleştirme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.dsldesigner.explorerbehavior
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 96c12ac2063e6b3ac04e3c0e9b0c20c69ea91a35
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 625ba0d592d0dbdaa8cb910c366852fe32c5f220
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75589714"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548375"
 ---
 # <a name="customizing-the-model-explorer"></a>Model Gezginini Özelleştirme
 Etki alanına özgü dil tasarlayana ait Gezgin görünümünü ve davranışını aşağıdaki şekilde değiştirebilirsiniz:
@@ -33,14 +33,14 @@ Etki alanına özgü dil tasarlayana ait Gezgin görünümünü ve davranışın
  Oluşturulan gezgin 'in pencere başlığını değiştirmek için, **DSL Gezgini**'Nde **Gezgin davranışı** ' nı seçin ve ardından **Özellikler** penceresinde **başlık** özelliğini istediğiniz başlığa ayarlayın.
 
 ## <a name="changing-the-tab-icon"></a>Sekme simgesini değiştirme
- Gezgin 'in sekme simgesini değiştirmek için. BMP dosyasında 16x16 piksellik bir simge kullanın. Simge dosyasını \DslPackage\Resources\ klasörüne yerleştirin ve ardından dosya adını **Modelexplorertoolwindowbitmap. bmp**olarak değiştirin. Örneğin, Visual Studio Setup. ico simge dosyasını. bmp biçiminde değiştirebilir ve **DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**olarak yeniden adlandırabilirsiniz. Oluşturulan tasarımcı, **Çözüm Gezgini**birlikte yuvalandığında, bu simgeyi gezgin 'in sekmesinde görüntüler.
+ Gezgin 'in sekme simgesini değiştirmek için. BMP dosyasında 16x16 piksellik bir simge kullanın. Simge dosyasını \DslPackage\Resources\ klasörüne yerleştirin ve ardından dosya adını **ModelExplorerToolWindowBitmaps.bmp**değiştirin. Örneğin, Visual Studio Setup. ico simge dosyasını. bmp biçiminde değiştirebilir ve **DSLLanguageName\DslPackage\Resources\ModelExplorerToolWindowBitmaps.bmp**olarak yeniden adlandırabilirsiniz. Oluşturulan tasarımcı, **Çözüm Gezgini**birlikte yuvalandığında, bu simgeyi gezgin 'in sekmesinde görüntüler.
 
 ## <a name="setting-custom-icons-on-explorer-nodes"></a>Gezgin düğümlerinde özel simgeler ayarlama
  Gezgin düğüm ayarlarını kullanarak, gezginizdeki düğümleri özelleştirebilirsiniz. Aşağıdaki yordam, bir düğüme bir simgenin nasıl ekleneceğini gösterir.
 
 #### <a name="to-add-an-icon-to-an-explorer-node"></a>Gezgin düğümüne simge eklemek için
 
-1. Görev akışı çözüm şablonunu kullanarak bir [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] çözümü oluşturun.
+1. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]Görev akışı çözüm şablonunu kullanarak bir çözüm oluşturun.
 
 2. Çözümdeki **Dsl\resources** klasörüne 16x16 piksellik bir simge içeren bir. bmp dosyası yerleştirin.
 
@@ -113,4 +113,4 @@ Etki alanına özgü dil tasarlayana ait Gezgin görünümünü ve davranışın
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

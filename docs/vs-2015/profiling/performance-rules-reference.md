@@ -9,32 +9,32 @@ caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b522f777be495392a39e5a89724fc5657be6ac95
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 48659a0b5981d545a706abfcaa7c3db24052cd20
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68190369"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548414"
 ---
 # <a name="performance-rules-reference"></a>Performans Kuralları Başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Profil Araçları performans kurallarını, ek uyarılar ve uygulamanızın performansı hakkında bilgi sağlar. Performans kuralları profil oluşturma yürütmesine Windows ve işlemci performans sayaçları gibi kaynaklardan toplanan verileri analiz edin. Kural iletileri hata çıkış penceresinde görünür [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] tümleşik geliştirme ortamı. İletiler, aşağıdaki kural düzeylerinden birini listelenmiştir:  
+Profil Oluşturma Araçları performans kuralları, uygulamanızın performansı hakkında ek uyarılar ve bilgiler sağlar. Performans kuralları, Windows ve işlemci performans sayaçları gibi kaynaklardan toplanan bir profil oluşturma çalıştırmasında verileri analiz eder. Kural iletileri tümleşik geliştirme ortamının hata çıktısı penceresinde görüntülenir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] . İletiler aşağıdaki kural düzeylerinden biriyle listelenir:  
   
-|||  
+|Kategori|Description|  
 |-|-|  
-|**Hata:**|Çoğu performans sorunlarını yükseltebilir hataları olmadığından bazı kurallar hata iletileri oluşturur. Bir hata iletisi, profil oluşturma verilerini toplamak için bir hata gösterebilir.|  
-|**Uyarı**|Uyarılar, olası performans sorunlarını kaynağı olabilir veya iyileştirmeler avantajlı olmayabilir, uygulamanızın bir bölümünü gösterir.|  
-|**Bilgi**|Bilgi iletilerini analizi bir kural koşulu, bir hata iletisi oluşturmak için eşiği ulaşmadı veya bilgi iletisi kullanışlıdır ancak bir performans sorunu yansıtmaz gösterir.|  
+|**Hata**|Birçok performans sorunu sağ hata olmadığından, birkaç kural hata iletileri oluşturur. Bir hata iletisi, profil oluşturma verilerini toplamanın bir başarısızlığını gösterebilir.|  
+|**Uyarı**|Uyarılar, uygulamanızın bir performans sorunları kaynağı olabilecek veya iyileştirmelerin avantajlarından faydalanabilecek bir alanını gösterir.|  
+|**Bilgi**|Bilgi iletileri bir kural koşulunun analizinin bir hata iletisi oluşturmak için eşiğe ulaşamadığını veya iletideki bilgilerin yararlı olduğunu ancak bir performans sorununu yansıtmadığından emin olduğunu gösterir.|  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kimliğe Göre Performans Kuralları](../profiling/performance-rules-by-id.md)  
+ [KIMLIĞE göre performans kuralları](../profiling/performance-rules-by-id.md)  
   
- Profil Araçları performans kuralları dört kategoriler halinde düzenlenmiştir:  
+ Profil Oluşturma Araçları performans kuralları dört kategoride düzenlenmiştir:  
   
-|||  
+|Kategori|Description|  
 |-|-|  
-|[.NET Framework Kullanımı Performans Kuralları](../profiling/dotnet-framework-usage-performance-rules.md)|Yardımcı kurallar, .NET Framework verimli bir şekilde kullanın.|  
-|[Bellek ve Disk Belleği Performans Kuralları](../profiling/memory-and-paging-performance-rules.md)|Yönetilen bellek ve disk belleği uygulamanızın davranışını analiz kuralları.|  
-|[Profil Araçları Kullanım Kuralları](../profiling/profiling-tools-usage-rules.md)|Yardımcı kuralları profil oluşturma araçları verimli bir şekilde kullanın.|  
-|[Kaynak İzleme Performans Kuralları](../profiling/resource-monitoring-performance-rules.md)|İşlemci ve bellek kullanımı, bir profil oluşturma hakkında bilgi iletileri çalıştırın.|
+|[Kullanım performans kuralları .NET Framework](../profiling/dotnet-framework-usage-performance-rules.md)|.NET Framework verimli bir şekilde kullanmanıza yardımcı olan kurallar.|  
+|[Bellek ve disk belleği performans kuralları](../profiling/memory-and-paging-performance-rules.md)|Uygulamanızın yönetilen bellek ve sayfalama davranışını çözümleyen kurallar.|  
+|[Kullanım kuralları Profil Oluşturma Araçları](../profiling/profiling-tools-usage-rules.md)|Profil Oluşturma Araçları verimli bir şekilde kullanmanıza yardımcı olan kurallar.|  
+|[Kaynak Izleme performans kuralları](../profiling/resource-monitoring-performance-rules.md)|Profil oluşturma çalıştırmasında işlemci ve bellek kullanımı hakkında bilgi iletileri.|
