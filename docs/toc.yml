@@ -1464,5 +1464,7 @@
           href: ide/report-a-problem-perfview.md
     - name: Bir özellik önerin
       href: ide/suggest-a-feature.md
+    - name: Geliştirici Topluluğu yönergeleri
+      href: ide/developer-community-guidelines.md
     - name: Geliştirici Topluluğu veri gizliliği
       href: ide/developer-community-privacy.md

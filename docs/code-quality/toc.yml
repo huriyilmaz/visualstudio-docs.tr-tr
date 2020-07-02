@@ -511,6 +511,8 @@
                   href: ca1802.md
                 - name: 'CA1804: Kullanılmayan yerelleri kaldırın'
                   href: ca1804.md
+                - name: 'CA1805: Gerekmediği durumlarda başlatmayın'
+                  href: ca1805.md
                 - name: 'CA1806: Metot sonuçlarını yoksaymayın'
                   href: ca1806.md
                 - name: 'CA1809: Aşırı yerellerden kaçının'
@@ -603,6 +605,8 @@
                   href: ca2014.md
                 - name: 'CA2015: MemoryManager’dan türetilen türler için sonlandırıcılar tanımlama<T>'
                   href: ca2015.md
+                - name: 'CA2016: CancellationToken parametresini, parametre alan metotlara iletin'
+                  href: ca2016.md
             - name: Güvenlik uyarıları
               items:
                 - name: Genel Bakış
