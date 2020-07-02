@@ -15,24 +15,24 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7de098d264dbdd6d7d9daea385de2e03d4e1ba35
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 29cc322dd59dc0de66af8f92a46524d15b0022c7
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72653819"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539587"
 ---
-# <a name="ca1053-static-holder-types-should-not-have-constructors"></a>CA1053: Statik tutucu türlerinde oluşturucular bulunmamalıdır
+# <a name="ca1053-static-holder-types-should-not-have-constructors"></a>CA1053: Static tutucu türlerin oluşturucuları olmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|StaticHolderTypesShouldNotHaveConstructors|
 |CheckId|CA1053|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Ortak veya iç içe geçmiş ortak tür yalnızca statik üyeleri bildirir ve ortak veya korumalı varsayılan bir oluşturucu vardır.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -48,6 +48,6 @@ ms.locfileid: "72653819"
  Bu kuraldan uyarıyı bastırmayın. Oluşturucunun varlığı türün statik bir tür olmadığını önerir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bu kuralı ihlal eden bir türü gösterir. Kaynak kodunda varsayılan Oluşturucu olmadığına dikkat edin. Bu kod bir derlemeye derlendiğinde, C# derleyici varsayılan bir Oluşturucu ekler ve bu kuralı ihlal eder. Bunu düzeltmek için özel bir Oluşturucu bildirin.
+ Aşağıdaki örnek, bu kuralı ihlal eden bir türü gösterir. Kaynak kodunda varsayılan Oluşturucu olmadığına dikkat edin. Bu kod bir derlemeye derlendiğinde, C# derleyicisi varsayılan bir Oluşturucu ekleyecektir, bu da kuralı ihlal eder. Bunu düzeltmek için özel bir Oluşturucu bildirin.
 
  [!code-csharp[FxCop.Design.StaticTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.StaticTypes/cs/FxCop.Design.StaticTypes.cs#1)]

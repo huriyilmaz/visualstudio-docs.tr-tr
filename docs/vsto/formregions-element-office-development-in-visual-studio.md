@@ -1,9 +1,9 @@
 ---
-title: "&lt;formRegions&gt; öğesi (Visual Studio'da Office Geliştirme)"
+title: "&lt;FormRegion &gt; öğesi (Visual Studio 'Da Office geliştirme)"
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -16,17 +16,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 68a24560df1da153702cfca2a206ea38cc8fac94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6f98c74c2df998f0e79f5b95a316a7917304e029
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62972336"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85538365"
 ---
-# <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;formRegions&gt; öğesi (Visual Studio'da Office Geliştirme)
-  `formRegions` Öğesinin `vstov4` ad alanı, VSTO eklentisi ile ilişkili olan Microsoft Office Outlook form bölgeleri içerir.
+# <a name="ltformregionsgt-element-office-development-in-visual-studio"></a>&lt;FormRegion &gt; öğesi (Visual Studio 'Da Office geliştirme)
+  `formRegions`Ad alanı öğesi, `vstov4` bir VSTO eklentisi ile Ilişkili Microsoft Office Outlook form bölgelerini içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <formRegions>
@@ -36,21 +36,21 @@ ms.locfileid: "62972336"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `formRegions` Öğesinin `vstov4` ad alanı içeren tüm `formRegion` bir Outlook VSTO eklentisi için öğeleri. Yalnızca Outlook VSTO form bölgeleri içeren eklentileri için gereklidir.
+ `formRegions`Ad alanı öğesi, `vstov4` `formRegion` bir Outlook VSTO eklentisi için tüm öğeleri içerir. Yalnızca form bölgelerini içeren Outlook VSTO eklentileri için gereklidir.
 
- Yalnızca bir `formRegions` uygulama bildiriminde tanımlanan öğe.
+ `formRegions`Uygulama bildiriminde tanımlı yalnızca bir öğe olabilir.
 
- `formRegions` Öğesi özniteliklere sahip değildir.
+ `formRegions`Öğesinde hiç öznitelik yok.
 
- `formRegions` Öğesinin şu öğe.
+ `formRegions`Öğesi aşağıdaki öğeye sahiptir.
 
-### <a name="formregion"></a>formRegion
- VSTO Outlook form bölgeleri içeren eklentileri için gereklidir. `formRegion` Öğe içinde tanımlanan [ &#60;formRegion&#62; öğesi &#40;Visual Studio'da Office geliştirme&#41;](../vsto/formregion-element-office-development-in-visual-studio.md).
+### <a name="formregion"></a>Bağımsız
+ Form bölgelerini içeren Outlook VSTO eklentileri için gereklidir. `formRegion`Öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#60;FormRegion&#62; öğesinde ](../vsto/formregion-element-office-development-in-visual-studio.md)tanımlanmıştır.
 
-## <a name="vsto-add-in-example"></a>VSTO eklenti örneği
+## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir bir `formRegions` öğesi kullanılarak dağıtılan bir uygulama düzeyinde Office çözümü için uygulama bildiriminde [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+ Aşağıdaki kod örneği, `formRegions` kullanılarak dağıtılan uygulama düzeyi Office çözümü için uygulama bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -69,4 +69,4 @@ ms.locfileid: "62972336"
 
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

@@ -1,7 +1,7 @@
 ---
-title: Gelen kutusundan, program aracılığıyla okunmamış iletileri alma
+title: Gelen kutusundan program aracılığıyla okunmamış iletiler al
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b9a718d6a8ee4eb633b34e1e12f85d578dc99fa6
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.openlocfilehash: dc913379546c80eef70671ea0ecbd441001e6ab5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2019
-ms.locfileid: "67328935"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537611"
 ---
-# <a name="how-to-programmatically-retrieve-unread-messages-from-the-inbox"></a>Nasıl yapılır: Program aracılığıyla okunmamış iletileri Kutusu'ndan alma
-  Bu örnek, Outlook'tan okunmamış e-posta iletilerini alır **gelen** ve öğe sayısını görüntüler.
+# <a name="how-to-programmatically-retrieve-unread-messages-from-the-inbox"></a>Nasıl yapılır: gelen kutusundan program aracılığıyla okunmamış iletileri alma
+  Bu örnekte Outlook **gelen kutusundan** okunmamış e-posta iletileri alınır ve öğe sayısı görüntülenir.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "67328935"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Posta öğeleriyle çalışma](../vsto/working-with-mail-items.md)
-- [VSTO eklentileri programlama kullanmaya başlayın](../vsto/getting-started-programming-vsto-add-ins.md)
-- [Nasıl yapılır: Program aracılığıyla bir e-posta öğesi oluşturma](../vsto/how-to-programmatically-create-an-e-mail-item.md)
-- [Nasıl yapılır: Program aracılığıyla e-posta gönderme](../vsto/how-to-programmatically-send-e-mail-programmatically.md)
-- [Nasıl yapılır: Bir e-posta iletisi alındığında program aracılığıyla işlem gerçekleştirme](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)
+- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)
+- [Nasıl yapılır: program aracılığıyla e-posta öğesi oluşturma](../vsto/how-to-programmatically-create-an-e-mail-item.md)
+- [Nasıl yapılır: program aracılığıyla e-posta gönderme](../vsto/how-to-programmatically-send-e-mail-programmatically.md)
+- [Nasıl yapılır: e-posta iletisi alındığında program aracılığıyla eylem gerçekleştirme](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)

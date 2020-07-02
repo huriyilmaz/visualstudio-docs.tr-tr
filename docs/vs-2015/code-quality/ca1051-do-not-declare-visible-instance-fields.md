@@ -15,39 +15,39 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 41332ab7d729f7b2187ccace6b05fe2d17763a0d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 076ce3858774d44e2d6c4c25205ced74b7a41bf0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72672514"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539769"
 ---
-# <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: Görünür örnek alanlarını bildirme
+# <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: Görünür örnek alanlarını bildirmeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotDeclareVisibleInstanceFields|
 |CheckId|CA1051|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Dışarıdan görünen bir türün dışarıdan görünür bir örnek alanı vardır.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir alanın birincil kullanım alanının uygulama ayrıntısı olması gerekir. Alanlar `private` veya `internal` olmalı ve özellikler kullanılarak gösterilmelidir. Bir alana erişmek için bir özelliğe erişmek kolaydır ve bir özelliğin erişimcilerinin kodu, önemli değişikliklere bildirmeden tür özellikleri genişleyebilir. Yalnızca bir özel veya iç alanın değerini döndüren Özellikler bir alana erişim için en iyi duruma getirilir; çok az performans kazancı, Özellikler üzerinde dışarıdan görünür alanların kullanımıyla ilişkilendirilmiştir.
+ Bir alanın birincil kullanım alanının uygulama ayrıntısı olması gerekir. Alanlar `private` `internal` , veya özellikleri kullanılarak sunulmalıdır. Bir alana erişmek için bir özelliğe erişmek kolaydır ve bir özelliğin erişimcilerinin kodu, önemli değişikliklere bildirmeden tür özellikleri genişleyebilir. Yalnızca bir özel veya iç alanın değerini döndüren Özellikler bir alana erişim için en iyi duruma getirilir; çok az performans kazancı, Özellikler üzerinde dışarıdan görünür alanların kullanımıyla ilişkilendirilmiştir.
 
- Dışarıdan görünür, `public`, `protected` ve `protected internal` (`Public`, `Protected` ve `Protected Friend`) erişilebilirlik düzeylerinde anlamına gelir.
+ Dışarıdan görünür,, `public` , `protected` ve `protected internal` ( `Public` `Protected` `Protected Friend` Visual Basic) erişilebilirlik düzeylerine başvurur.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için, alanı `private` veya `internal` yapın ve dışarıdan görünür bir özellik kullanarak sunun.
+ Bu kural ihlalini onarmak için, alanı oluşturun `private` veya `internal` dışarıdan görünebilir bir özellik kullanarak sunun.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın. Dışarıdan görünen alanlar, özelliklerde kullanılamayan avantajlar sağlamaz. Ayrıca, ortak alanlar [bağlantı taleplerine](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)karşı korunamaz. Bkz. [CA2112: güvenli türler alanları kullanıma sunmamalıdır](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bu kuralı ihlal eden bir türü (`BadPublicInstanceFields`) gösterir. `GoodPublicInstanceFields` düzeltilen kodu gösterir.
+ Aşağıdaki örnek, `BadPublicInstanceFields` Bu kuralı ihlal eden bir türü () gösterir. `GoodPublicInstanceFields`düzeltilen kodu gösterir.
 
  [!code-csharp[FxCop.Design.TypesPublicInstanceFields#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.TypesPublicInstanceFields/cs/FxCop.Design.TypesPublicInstanceFields.cs#1)]
 
@@ -55,4 +55,4 @@ ms.locfileid: "72672514"
  [CA2112: Güvenli türler alanları açığa çıkarmamalıdır](../code-quality/ca2112-secured-types-should-not-expose-fields.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Bağlantı talepleri](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)
+ [Bağlantı Talepleri](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d)

@@ -15,39 +15,39 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 6e16fff154b5c0df660b06e5bf9e9e838762adff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 18da0471b1ac62f0e61b303c60b46c15cdc2e428
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661483"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539015"
 ---
 # <a name="ca1302-do-not-hardcode-locale-specific-strings"></a>CA1302: Yerel özel dizeleri doğrudan programın içine gömmeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotHardcodeLocaleSpecificStrings|
 |CheckId|CA1302|
 |Kategori|Microsoft. Globalization|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir yöntem, belirli sistem klasörlerinin yolunun bir bölümünü temsil eden bir dize sabiti kullanır.
 
 ## <a name="rule-description"></a>Kural Tanımı
- @No__t_0 numaralandırması özel sistem klasörlerine başvuran Üyeler içerir. Bu klasörlerin konumları farklı işletim sistemlerinde farklı değerlere sahip olabilir, Kullanıcı konumların bazılarını değiştirebilir ve konumlar yerelleştirilir. Özel bir klasöre örnek olarak, [!INCLUDE[winxp](../includes/winxp-md.md)] "C:\WINDOWS\system32" olan ve [!INCLUDE[win2kfamily](../includes/win2kfamily-md.md)] üzerinde "C:\WINNT\system32" olan sistem klasörüdür. @No__t_0 yöntemi <xref:System.Environment.SpecialFolder> numaralandırmasında ilişkilendirilen konumları döndürür. @No__t_0 tarafından döndürülen konumlar yerelleşmiş ve çalışmakta olan bilgisayar için uygundur.
+ <xref:System.Environment.SpecialFolder?displayProperty=fullName>Sabit Listesi özel sistem klasörlerine başvuran Üyeler içerir. Bu klasörlerin konumları farklı işletim sistemlerinde farklı değerlere sahip olabilir, Kullanıcı konumların bazılarını değiştirebilir ve konumlar yerelleştirilir. Özel bir klasöre örnek olarak "C:\WINDOWS\system32" ve üzerinde "C:\WINNT\system32" olan sistem klasörü bulunur [!INCLUDE[winxp](../includes/winxp-md.md)] [!INCLUDE[win2kfamily](../includes/win2kfamily-md.md)] . <xref:System.Environment.GetFolderPath%2A?displayProperty=fullName>Yöntemi, numaralandırmada ilişkili konumları döndürür <xref:System.Environment.SpecialFolder> . Tarafından döndürülen konumlar <xref:System.Environment.GetFolderPath%2A> yerelleştirilmiştir ve çalışmakta olan bilgisayar için uygundur.
 
- Bu kural, <xref:System.Environment.GetFolderPath%2A> yöntemi kullanılarak alınan klasör yollarını ayrı dizin düzeylerinde simgeleştirir. Her dize sabit değeri belirteçlerle karşılaştırılır. Bir eşleşme bulunursa, yöntemin belirteçle ilişkili sistem konumuna başvuran bir dize oluşturmakta olduğu varsayılır. Taşınabilirlik ve Yerelleştirilebilirlik için, dize sabit değerlerini kullanmak yerine özel sistem klasörlerinin konumlarını almak üzere <xref:System.Environment.GetFolderPath%2A> yöntemini kullanın.
+ Bu kural, <xref:System.Environment.GetFolderPath%2A> metodu ayrı Dizin düzeylerine kullanarak alınan klasör yollarını simgeleştirir. Her dize sabit değeri belirteçlerle karşılaştırılır. Bir eşleşme bulunursa, yöntemin belirteçle ilişkili sistem konumuna başvuran bir dize oluşturmakta olduğu varsayılır. Taşınabilirlik ve Yerelleştirilebilirlik için, <xref:System.Environment.GetFolderPath%2A> dize sabit değerlerini kullanmak yerine özel sistem klasörlerinin konumlarını almak için yöntemini kullanın.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için <xref:System.Environment.GetFolderPath%2A> yöntemini kullanarak konumu alın.
+ Bu kural ihlalini onarmak için, yöntemini kullanarak konumu alın <xref:System.Environment.GetFolderPath%2A> .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Dize sabit değeri <xref:System.Environment.SpecialFolder> numaralandırmasıyla ilişkili sistem konumlarından birine başvurmak için kullanılmıyorsa, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.
+ Dize sabit değeri, numaralandırmada ilişkili sistem konumlarından birine başvurmak için kullanılmıyorsa, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir <xref:System.Environment.SpecialFolder> .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bu kuraldan üç uyarı üreten ortak uygulama verileri klasörünün yolunu oluşturur. Sonra örnek, <xref:System.Environment.GetFolderPath%2A> yöntemini kullanarak yolu alır.
+ Aşağıdaki örnek, bu kuraldan üç uyarı üreten ortak uygulama verileri klasörünün yolunu oluşturur. Daha sonra örnek, yöntemini kullanarak yolunu alır <xref:System.Environment.GetFolderPath%2A> .
 
  [!code-csharp[FxCop.Globalization.HardcodedLocaleStrings#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.HardcodedLocaleStrings/cs/FxCop.Globalization.HardcodedLocaleStrings.cs#1)]
  [!code-vb[FxCop.Globalization.HardcodedLocaleStrings#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Globalization.HardcodedLocaleStrings/vb/FxCop.Globalization.HardcodedLocaleStrings.vb#1)]

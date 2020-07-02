@@ -40,7 +40,7 @@ ms.locfileid: "85538586"
 
  Bu kuralın ihlali, bir üye aşağıdaki yöntemlerden birini çağırdığında oluşur.
 
-|Yöntem|Description|
+|Yöntem|Açıklama|
 |------------|-----------------|
 |<xref:System.GC.Collect%2A?displayProperty=fullName>|GC çağrılıyor. Toplama, uygulama performansını önemli ölçüde etkileyebilir ve nadiren gereklidir. Daha fazla bilgi için bkz. MSDN 'de [Riko Marianı 'Nin performans](https://docs.microsoft.com/archive/blogs/ricom/when-to-call-gc-collect) ve blog girişi.|
 |<xref:System.Threading.Thread.Resume%2A?displayProperty=fullName><br /><br /> <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>|Thread. Suspend ve Thread. özgeçmişi öngörülemeyen davranışları nedeniyle kullanım dışı bırakıldı.  Ad alanındaki diğer sınıfları kullanın, örneğin,, <xref:System.Threading> <xref:System.Threading.Monitor> <xref:System.Threading.Mutex> ve <xref:System.Threading.Semaphore> iş parçacıklarını senkronize etmek ya da kaynakları korumak için.|

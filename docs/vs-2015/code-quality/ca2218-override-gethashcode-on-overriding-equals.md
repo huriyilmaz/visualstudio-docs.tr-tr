@@ -64,7 +64,7 @@ ms.locfileid: "85538807"
 
 ## <a name="class-example"></a>Sınıf örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki örnek, bu kuralı ihlal eden bir sınıfı (başvuru türü) gösterir.
 
 ### <a name="code"></a>Kod
@@ -78,7 +78,7 @@ ms.locfileid: "85538807"
 
 ## <a name="structure-example"></a>Yapı örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki örnek, bu kuralı ihlal eden bir yapıyı (değer türü) gösterir.
 
 ### <a name="code"></a>Kod

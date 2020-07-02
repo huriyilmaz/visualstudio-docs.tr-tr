@@ -46,7 +46,7 @@ ms.locfileid: "85539756"
 
 ## <a name="example-of-a-violation"></a>Ihlalin örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki örnek, kuralı ihlal eden bir türü gösterir.
 
 ### <a name="code"></a>Kod
@@ -56,7 +56,7 @@ ms.locfileid: "85539756"
 
 ## <a name="fix-with-the-static-modifier"></a>Statik değiştiriciyle onarma
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki örnek, türü değiştiriciyle işaretleyerek bu kural ihlalinin nasıl düzeltileceğini gösterir `static` .
 
 ### <a name="code"></a>Kod

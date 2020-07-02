@@ -1,7 +1,7 @@
 ---
-title: "&lt;Güncelleştirme&gt; öğesi (Visual Studio'da Office Geliştirme)"
+title: "&lt;Update &gt; öğesi (Visual Studio 'Da Office geliştirme)"
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 461fae79e3af346d64017166b6dae3ace67599e1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 241bddb8c79a01bb1ba6921486a4dc46d99940cc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967539"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537390"
 ---
-# <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;Güncelleştirme&gt; öğesi (Visual Studio'da Office Geliştirme)
-  `update` Öğesi çözüm denetleyecek güncelleştirmeleri aralığını belirtir.
+# <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;Update &gt; öğesi (Visual Studio 'Da Office geliştirme)
+  `update`Öğesi, çözümün güncelleştirmeleri denet, zaman aralığını belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <update
@@ -37,30 +37,30 @@ ms.locfileid: "62967539"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `update` Öğesi gereklidir ve içinde `vstav3` ad alanı.
+ `update`Öğesi gereklidir ve `vstav3` ad alanında bulunur.
 
- `update` Öğesinde şu öznitelikler bulunur.
-
-|Öznitelik|Açıklama|
-|---------------|-----------------|
-|`enabled`|Gerekli. Aşağıdaki değerlerden biri etkin ayarlayın:<br /><br /> -   **doğru** güncelleştirmeleri denetlemek için.<br />-   **false** güncelleştirmeleri denetleme önlemek için.|
-
- `update` Öğesi şu alt öğelerden sahiptir.
-
-### <a name="expiration"></a>süre sonu
- `expiration` Öğesi gereklidir ve içinde `vstav3` ad alanı. Bu öğe çözüm denetleyen güncelleştirmeleri aralığını belirtir.
-
- `expiration` Öğesinde şu öznitelikler bulunur.
+ `update`Öğesi aşağıdaki özniteliklere sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`maximumAge`| Gerekli. Bu, bir tamsayıya eşit ayarlayın.|
-|`unit`|Gerekli. Ayarlama `unit` aşağıdaki değerlerden biri olarak:<br /><br /> -   **saat**<br />-   **gün**<br />-   **Hafta**|
+|`enabled`|Gereklidir. Etkinleştirilen değeri aşağıdaki değerlerden birine ayarlayın:<br /><br /> -   güncelleştirmeleri denetlemek için **true** .<br />-   güncelleştirmelerin denetlenmesini engellemek için **false** .|
 
-## <a name="example-of-always-checking-for-updates"></a>Her zaman güncelleştirmeleri denetleme örneği
+ `update`Öğesi aşağıdaki alt öğeleri içerir.
+
+### <a name="expiration"></a>dolmadan
+ `expiration`Öğesi gereklidir ve `vstav3` ad alanında bulunur. Bu öğe, çözümün güncelleştirmeleri denetlediğinde kullanılacak aralığı belirtir.
+
+ `expiration`Öğesi aşağıdaki özniteliklere sahiptir.
+
+|Öznitelik|Açıklama|
+|---------------|-----------------|
+|`maximumAge`| Gereklidir. Bunu bir tamsayıya eşit olarak ayarlayın.|
+|`unit`|Gereklidir. `unit`Aşağıdaki değerlerden birine ayarlayın:<br /><br /> -   **saatlerinin**<br />-   **miş**<br />-   **hafta**|
+
+## <a name="example-of-always-checking-for-updates"></a>Güncelleştirmelerin her zaman denetlenme örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir bir `update` her zaman Office çözümlerinde güncelleştirmeleri denetlemek için ayarlanmış olan öğe.
+ Aşağıdaki kod örneği, `update` Office çözümlerinde güncelleştirmeleri her zaman denetlenecek şekilde ayarlanmış bir öğe göstermektedir.
 
 ### <a name="code"></a>Kod
 
@@ -68,10 +68,10 @@ ms.locfileid: "62967539"
 <vstav3:update enabled="true" />
 ```
 
-## <a name="example-of-setting-a-default-update-interval"></a>Varsayılan güncelleştirme aralığını ayarlama örneği
+## <a name="example-of-setting-a-default-update-interval"></a>Varsayılan güncelleştirme aralığı ayarlama örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir bir `update` Office çözümleri için uygulama bildiriminde öğesi. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+ Aşağıdaki kod örneği, `update` Office çözümleri için bir uygulama bildiriminde bir öğe gösterir. Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -86,4 +86,4 @@ ms.locfileid: "62967539"
 - [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md)
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

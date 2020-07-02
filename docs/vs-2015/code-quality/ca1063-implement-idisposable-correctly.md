@@ -15,25 +15,25 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1fe2982ab9e1b3951583b268eadb44c97c8e4805
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 04691d2344b232906676180122ad67fff5405891
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663630"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539366"
 ---
 # <a name="ca1063-implement-idisposable-correctly"></a>CA1063: IDisposable'ı doğru uygulayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ImplementIDisposableCorrectly|
 |CheckId|CA1063|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- `IDisposable` doğru uygulanmadı. Bu sorunun bazı nedenleri aşağıda listelenmiştir:
+## <a name="cause"></a>Nedeni
+ `IDisposable`doğru uygulanmadı. Bu sorunun bazı nedenleri aşağıda listelenmiştir:
 
 - IDisposable, sınıfında yeniden uygulanır.
 
@@ -59,21 +59,21 @@ ms.locfileid: "72663630"
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Kodunuzu inceleyin ve aşağıdaki çözümlerden hangisinin bu ihlalin düzelceğini saptayın.
 
-- @No__t_0 tarafından uygulanan arabirimler listesinden IDisposable 'yi kaldırın ve bunun yerine temel sınıf Dispose uygulamasını geçersiz kılın.
+- Tarafından uygulanan arabirimler listesinden IDisposable 'yi kaldırın {0} ve bunun yerine temel sınıf Dispose uygulamasını geçersiz kılın.
 
-- @No__t_0 türünden sonlandırıcıyı kaldırın, Dispose (bool disposing) öğesini geçersiz kılın ve sonlandırma mantığını ' disposing ' değeri false olan kod yoluna koyun.
+- Sonlandırıcıyı türden kaldırın {0} , Dispose (bool disposing) öğesini geçersiz kılın ve sonlandırma mantığını ' disposing ' değeri false olan kod yoluna koyun.
 
-- @No__t_0 kaldırın, Dispose (bool disposing) öğesini geçersiz kılın ve Dispose mantığını ' disposing ' değeri true olduğunda kod yoluna koyun.
+- {0}Dispose (bool disposing) öğesini kaldırın, geçersiz kılın ve Dispose mantığını ' disposing ' in true olduğu kod yoluna koyun.
 
-- @No__t_0 public ve Sealed olarak bildirildiği için emin olun.
+- {0}Public ve Sealed olarak bildirildiği emin olun.
 
-- @No__t_0 ' Dispose ' olarak yeniden adlandırın ve Public ve Sealed olarak belirtilen şekilde ayarlandığından emin olun.
+- {0}' Dispose ' olarak yeniden adlandırın ve Public ve Sealed olarak bildirildiği şekilde ayarlandığından emin olun.
 
-- @No__t_0 korumalı, sanal ve korumasız olarak bildirildiği için emin olun.
+- {0}Korunan, sanal ve korumasız olarak bildirildiği emin olun.
 
-- @No__t_0, Dispose (true) yöntemini çağıracak şekilde değiştirin ve ardından GC çağırır. Geçerli nesne örneğinde (' this ' veya ' Me ' [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) SuppressFinalize ve sonra döndürür.
+- {0}Dispose (true) yöntemini çağıracak şekilde değiştirin ve ardından GC çağırır. Geçerli nesne örneğinde (' this ' veya ' Me ') SuppressFinalize [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ve sonra döndürür.
 
-- @No__t_0, Dispose (false) yöntemini çağıracak ve sonra geri döndüren şekilde değiştirin.
+- {0}Öğesini Dispose (false) yöntemini çağıracak ve sonra geri döndüren şekilde değiştirin.
 
 - Korumasız bir kök IDisposable sınıfı yazıyorsanız, IDisposable uygulamasının bu bölümde daha önce açıklanan modele uyduğundan emin olun.
 

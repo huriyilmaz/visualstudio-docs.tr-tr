@@ -69,7 +69,7 @@ namespace Samples
 
 ## <a name="example-violation"></a>Örnek Ihlali
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Aşağıdaki örnek, `static` Bu kuralı ihlal eden bir yöntemi gösterir.
 
 ### <a name="code"></a>Kod
@@ -80,7 +80,7 @@ namespace Samples
 
 ## <a name="example-fix"></a>Örnek onarma
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Önceki örnekteki ihlalin giderilmesi için, yöntemini bir örnek yöntemi olarak değiştirebilirsiniz, ancak bu örnekte bu anlamlı değildir. Daha iyi bir çözüm, yöntemin `ComVisible(false)` com 'dan görülemeyeceğini diğer geliştiricilere açık hale getirmek üzere yöntemine açıkça uygulanmasıdır.
 
  Aşağıdaki örnek <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> yöntemi için geçerlidir.

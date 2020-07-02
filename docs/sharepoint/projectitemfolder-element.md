@@ -1,5 +1,5 @@
 ---
-title: Projectıtemfolder öğesi | Microsoft Docs
+title: ProjectItemFolder öğesi | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 124716f8c40a8adc0a0ae1a28cda21dcb5e00ddf
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 38f8f70cc6480554441809e33c4083735600fbbb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62562708"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85539821"
 ---
 # <a name="projectitemfolder-element"></a>ProjectItemFolder öğesi
   Eşlenmiş bir klasörü temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectItemFolder Target = "Path of SharePoint folder the mapped folder corresponds to"
@@ -39,8 +39,8 @@ ms.locfileid: "62562708"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|**Hedef**|Gerekli **xs: dize** özniteliği.<br /><br /> Eşlenmiş klasör, dağıtım kök klasörünün göreli karşılık gelen SharePoint yükleme klasörünün yolu. Dağıtım türü tarafından belirtilen dağıtım kök klasörü belirlenir **türü** özniteliği.<br /><br /> Daha fazla bilgi için açıklamalar için bkz. **dağıtım yolu** ve **dağıtım kökü** özelliklerini SharePoint Proje öğeleri [geliştirme SharePoint çözümleri](../sharepoint/developing-sharepoint-solutions.md).|
-|**Tür**|Gerekli **xs: String** özniteliği.<br /><br /> Eşlenmiş klasör için dağıtım türü. Açıklama için olası değerler hakkında daha fazla bilgi için bkz **dağıtım türü** özelliğin SharePoint proje öğelerinin [geliştirme SharePoint çözümleri](../sharepoint/developing-sharepoint-solutions.md).|
+|**Hedef**|Gerekli **xs: String** özniteliği.<br /><br /> SharePoint yüklemesinde, eşlenen klasörün dağıtım kök klasörüne göre karşılık geldiği klasörün yolu. Dağıtım kök klasörü, **tür** özniteliği tarafından belirtilen dağıtım türü tarafından belirlenir.<br /><br /> Daha fazla bilgi için [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)bölümünde SharePoint proje öğelerinin **dağıtım yolu** ve **dağıtım kök** özellikleri için açıklamalara bakın.|
+|**Tür**|Gerekli **xs: String** özniteliği.<br /><br /> Eşlenen klasör için dağıtım türü. Olası değerler hakkında daha fazla bilgi için SharePoint [çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)bölümünde SharePoint proje öğelerinin **dağıtım türü** özelliğinin açıklamasına bakın.|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -49,19 +49,19 @@ ms.locfileid: "62562708"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ProjectItem](../sharepoint/projectitem-element.md)|Bir SharePoint proje öğesi temsil eder. Gerekli kök öğesidir bu öğe *.spdata* dosya.|
+|[ProjectItem](../sharepoint/projectitem-element.md)|Bir SharePoint proje öğesini temsil eder. Bu öğe, *. spdata* dosyasının gerekli kök öğesidir.|
 
 ## <a name="remarks"></a>Açıklamalar
- Eşlenen klasörler hakkında daha fazla bilgi için bkz: [nasıl yapılır: eşlenmiş klasörler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md).
+ Eşlenen klasörler hakkında daha fazla bilgi için bkz. [nasıl yapılır: eşlenmiş klasör ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md).
 
 ## <a name="element-information"></a>Öğe bilgileri
 
-|||
+|Özellik|Değer|
 |-|-|
-|**Namespace**|http:\/\/schemas.microsoft.com/VisualStudio/2010/<br>SharePointTools/SharePointProjectItemModel|
-|**Şema adı**|SharePoint proje öğesi şema|
-|**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
-|**Boş olabilir**|Hayır|
+|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/2010/<br>SharePointTools/Sharepointprojectıtemmodel|
+|**Şema adı**|SharePoint proje öğesi şeması|
+|**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)

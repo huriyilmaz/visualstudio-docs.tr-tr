@@ -1,7 +1,7 @@
 ---
 title: Bu projeyi oluşturmak için kullanılan çalışma kitabı tasarımcının yükleyemeyeceği ActiveX denetimleri içeriyor
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: error-reference
 f1_keywords:
 - VST.SelectDocWizard.ContainsActiveXControls
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 27feb1c6a85740d8a9287ce3a2a47800595e178a
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 4485489b48c4d1b03b608c6072cfc859e8bc8f59
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253787"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537351"
 ---
 # <a name="the-workbook-used-to-create-this-project-contains-activex-controls-that-the-designer-cannot-load"></a>Bu projeyi oluşturmak için kullanılan çalışma kitabı tasarımcının yükleyemeyeceği ActiveX denetimleri içeriyor
   Program aracılığıyla bir Word belgesi veya Excel çalışma sayfasına bir denetim eklediğinizde, belgeyi veya çalışma kitabını kaydettiğinizde ve sonra belge veya çalışma kitabını temel alan yeni bir belge düzeyi çözümü oluşturduğunuzda bu hata görüntülenir.

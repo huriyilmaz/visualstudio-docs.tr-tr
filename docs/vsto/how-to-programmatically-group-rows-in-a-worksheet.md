@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Çalışma sayfasında satırları program aracılığıyla Grup'
+title: 'Nasıl yapılır: çalışma sayfasında program aracılığıyla satırları gruplama'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -20,46 +20,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 269ecdb67fe58a5ad2aff6af63ba6ea45647811a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 759ba8c6e0796b25a87e8bf0b08795aed5bade05
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63412614"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537884"
 ---
-# <a name="how-to-programmatically-group-rows-in-a-worksheet"></a>Nasıl yapılır: Çalışma sayfasında satırları program aracılığıyla Grup
-  Bir veya daha fazla satırı gruplayabilirsiniz. Çalışma grubu oluşturmak için bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi veya yerel Excel range nesnesi.
+# <a name="how-to-programmatically-group-rows-in-a-worksheet"></a>Nasıl yapılır: çalışma sayfasında program aracılığıyla satırları gruplama
+  Bir veya daha çok tam satırı gruplandırabilirsiniz. Çalışma sayfasında bir grup oluşturmak için, bir <xref:Microsoft.Office.Tools.Excel.NamedRange> Denetim veya yerel Excel Aralık nesnesi kullanın.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="use-a-namedrange-control"></a>NamedRange denetimi kullanma
- Eklerseniz bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi için belge düzeyi projesinde tasarım zamanında denetimi program aracılığıyla bir grup oluşturmak için kullanabilirsiniz. Aşağıdaki örnek üç olduğunu varsayar <xref:Microsoft.Office.Tools.Excel.NamedRange> aynı çalışma sayfasındaki denetimleri: `data2001`, `data2002`, ve `dataAll`. Çalışma sayfasındaki tüm satırın her adlandırılmış aralık ifade eder.
+ <xref:Microsoft.Office.Tools.Excel.NamedRange>Tasarım zamanında belge düzeyi projesine bir denetim eklerseniz, bu denetimi program aracılığıyla bir grup oluşturmak için kullanabilirsiniz. Aşağıdaki örnek, <xref:Microsoft.Office.Tools.Excel.NamedRange> aynı çalışma sayfasında üç denetimin olduğunu varsayar: `data2001` , `data2002` ve `dataAll` . Her bir adlandırılmış aralık çalışma sayfasındaki tüm bir satırı ifade eder.
 
-### <a name="to-create-a-group-of-namedrange-controls-on-a-worksheet"></a>Çalışma sayfasındaki NamedRange denetimlerinin bir grup oluşturmak için
+### <a name="to-create-a-group-of-namedrange-controls-on-a-worksheet"></a>Çalışma sayfasında NamedRange denetimleri grubu oluşturmak için
 
-1. Üç adlandırılmış aralıklar çağırarak grup <xref:Microsoft.Office.Tools.Excel.NamedRange.Group%2A> her aralığın yöntemi. Bu kod, bir sayfa sınıfında değil yerleştirilmelidir `ThisWorkbook` sınıfı.
+1. Her bir aralığın yöntemini çağırarak üç adlandırılmış aralığı gruplayın <xref:Microsoft.Office.Tools.Excel.NamedRange.Group%2A> . Bu kod, sınıfında değil, bir sayfa sınıfına yerleştirilmelidir `ThisWorkbook` .
 
      [!code-csharp[Trin_VstcoreExcelAutomation#32](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#32)]
      [!code-vb[Trin_VstcoreExcelAutomation#32](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#32)]
 
     > [!NOTE]
-    > Satırları çözmek için çağrı <xref:Microsoft.Office.Tools.Excel.NamedRange.Ungroup%2A> yöntemi.
+    > Satırları çözmek için <xref:Microsoft.Office.Tools.Excel.NamedRange.Ungroup%2A> yöntemini çağırın.
 
-## <a name="use-native-excel-ranges"></a>Yerel Excel aralıkları kullanın
- Kod üç Excel aralıkları adlı olduğunu varsayar `data2001`, `data2002`, ve `dataAll` çalışma sayfasında.
+## <a name="use-native-excel-ranges"></a>Yerel Excel aralıklarını kullan
+ Kod,, `data2001` `data2002` , ve bir çalışma sayfasında adlı üç Excel aralığınız olduğunu varsayar `dataAll` .
 
-### <a name="to-create-a-group-of-excel-ranges-in-a-worksheet"></a>Çalışma sayfasında Excel aralıklarında bir grup oluşturmak için
+### <a name="to-create-a-group-of-excel-ranges-in-a-worksheet"></a>Çalışma sayfasında Excel aralıkları grubu oluşturmak için
 
-1. Üç adlandırılmış aralıklar çağırarak grup <xref:Microsoft.Office.Interop.Excel.Range.Group%2A> her aralığın yöntemi. Aşağıdaki örnek üç olduğunu varsayar <xref:Microsoft.Office.Interop.Excel.Range> adlarında `data2001`, `data2002`, ve `dataAll` aynı çalışma sayfasında. Çalışma sayfasındaki tüm satırın her adlandırılmış aralık ifade eder.
+1. Her bir aralığın yöntemini çağırarak üç adlandırılmış aralığı gruplayın <xref:Microsoft.Office.Interop.Excel.Range.Group%2A> . Aşağıdaki örnek,, <xref:Microsoft.Office.Interop.Excel.Range> ve adlı üç denetimin `data2001` `data2002` `dataAll` aynı çalışma sayfasında olduğunu varsayar. Her bir adlandırılmış aralık çalışma sayfasındaki tüm bir satırı ifade eder.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#33](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#33)]
      [!code-vb[Trin_VstcoreExcelAutomation#33](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#33)]
 
     > [!NOTE]
-    > Satırları çözmek için çağrı <xref:Microsoft.Office.Interop.Excel.Range.Ungroup%2A> yöntemi.
+    > Satırları çözmek için <xref:Microsoft.Office.Interop.Excel.Range.Ungroup%2A> yöntemini çağırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çalışma sayfaları ile çalışma](../vsto/working-with-worksheets.md)
+- [Çalışma sayfalarıyla çalışma](../vsto/working-with-worksheets.md)
 - [NamedRange denetimi](../vsto/namedrange-control.md)
-- [Nasıl yapılır: Çalışma sayfalarına NamedRange denetimleri ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
+- [Nasıl yapılır: çalışma sayfalarına NamedRange denetimleri ekleme](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)
