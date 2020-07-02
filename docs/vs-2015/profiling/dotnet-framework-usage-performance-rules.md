@@ -1,5 +1,5 @@
 ---
-title: .NET framework kullanımı performans kuralları | Microsoft Docs
+title: Kullanım performans kuralları .NET Framework | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -9,32 +9,32 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: a9c976560b39fd8a9146733d78cd3a094ed3b118
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: afae57f3223d24a4524f89f1669883de6ef1dd18
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68202460"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532814"
 ---
 # <a name="net-framework-usage-performance-rules"></a>.NET Framework Kullanımı Performans Kuralları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kategorideki.NET Framework kullanımı performans kuralları iyileştirilebilir ve aynı zamanda çöp toplama ve performans sorunlarını araştırılan kilit çakışması gibi daha genel kullanım düzenlerini tanımlamak belirli yöntemleri belirleyin.  
+The.NET Framework kullanım kategorisindeki performans kuralları, en iyi duruma getirilebilen ve ayrıca performans sorunları araştırılan çöp toplama ve kilit çekişmesi gibi daha genel kullanım düzenlerini tanımlayan belirli yöntemleri belirler.  
   
-|||  
+|Kural|Açıklama|  
 |-|-|  
-|[DA0001: Birleştirmeler için StringBuilder kullanma](../profiling/da0001-use-stringbuilder-for-concatenations.md)|Çağrılar <xref:System.String.Concat%28System.String%2CSystem.String%29?displayProperty=fullName> profil oluşturma verilerinin önemli bir kısmı olan. Kullanmayı <xref:System.Text.StringBuilder> birden çok kesimi dizeleri oluşturmak için sınıf.|  
-|[DA0005: Sık kullanılan GC2 koleksiyonları](../profiling/da0005-frequent-gc2-collections.md)|Görece yüksek sayıda .NET bellek nesneleri nesil 2 çöp toplamada kazanılır. Çok kısa süreli nesneleri nesil 1 toplamadan, bellek yönetimi maliyetini kolayca aşırı hale gelebilir.|  
-|[DA0006: Değer türleri için Equals() üzerine yazın](../profiling/da0006-override-equals-parens-for-value-types.md)|Çağrılar `Equals` yöntemi veya bir genel değer türü eşitlik işleçleri olan profil oluşturma verilerinin önemli bir kısmı. Daha verimli bir yöntem uygulamayı düşünün.|  
-|[DA0007: Denetim akışı için özel durumlar kullanmaktan kaçının](../profiling/da0007-avoid-using-exceptions-for-control-flow.md)|Yüksek oranda .NET Framework özel durum işleyicileri profil oluşturma verileri adı veriliyordu. Oluşan özel durumların sayısını azaltmak için başka bir denetim akışı mantığı kullanmayı düşünün.|  
-|[DA0010: Pahalı GetHashCode](../profiling/da0010-expensive-gethashcode.md)|Çağrılar `GetHashCode` türü yöntemi olan profil oluşturma verilerinin önemli bir kısmı veya `GetHashCode` yöntemi bellek ayırır. Yöntem karmaşıklığını azaltın.|  
-|[DA0011: Pahalı CompareTo](../profiling/da0011-expensive-compareto.md)|`CompareTo` Pahalı türü yöntemi veya yöntem bellek ayırır. Karmaşıklığını azaltın `CompareTo` yöntemi.|  
-|[DA0012: Önemli miktarda Yansıma](../profiling/da0012-significant-amount-of-reflection.md)|Çağrılar <xref:System.Reflection?displayProperty=fullName> gibi yöntemler <xref:System.Reflection.IReflect.InvokeMember%2A> ve <xref:System.Reflection.IReflect.GetMember%2A> veya türü yöntemleri gibi <xref:System.Type.InvokeMember%2A> profil oluşturma verilerinin önemli bir kısmı olan. Mümkün olduğunda, erken bağlama yöntemlerine bağımlı derlemelerin bu yöntemler yerine göz önünde bulundurun.|  
-|[DA0013: Yüksek oranda String.Split veya String.Substring kullanımı](../profiling/da0013-high-usage-of-string-split-or-string-substring.md)|Çağrılar <xref:System.String.Split%2A?displayProperty=fullName> veya <xref:System.String.Substring%2A> profil oluşturma verilerinin büyük bir kısmı yöntemlerdir. Kullanmayı <xref:System.String.IndexOf%2A> veya <xref:System.String.IndexOfAny%2A> bir dizedeki bir alt dizenin bulunup bulunmadığını sınıyorsanız.|  
-|[DA0018: Yönetilen bellek limitlerinde çalışan 32 bit Uygulama](../profiling/da0018-32-bit-application-running-at-process-managed-memory-limits.md)|Profil oluşturma çalışması sırasında toplanan sistem verilerini, .NET Framework bellek 32-bit işlem içinde yönetilen yığınlar ulaşan en büyük boyutu yığınlardaki yaklaşıldığında gösterir. Uygulama tarafından yönetilen kaynaklarının kullanımını en iyi duruma getirme ve .NET bellek profil oluşturma yöntemini kullanarak yeniden profil oluşturmayı göz önünde bulundurun.|  
-|[DA0021: Yüksek oranda 1. nesil atık toplama](../profiling/da0021-high-rate-of-gen-1-garbage-collections.md)|.NET bellek nesneleri görece yüksek sayıda kuşak 1 çöp toplamada kazanılır. Çok kısa süreli nesneleri nesil 0 toplamadan, bellek yönetimi maliyetini kolayca aşırı hale gelebilir.|  
-|[DA0022: Yüksek oranda 2. nesil atık toplama](../profiling/da0022-high-rate-of-gen-2-garbage-collections.md)|Çok sayıda .NET bellek nesneleri nesil 2 çöp toplamada kazanılır. Çok kısa süreli nesneleri nesil 1 toplamadan, bellek yönetimi maliyetini kolayca aşırı hale gelebilir. Bu kural, oranda kilit çakışması kural DA0005 üst eşik değerini aştığında tetikler.|  
-|[DA0023: Yüksek GC CPU süresi](../profiling/da0023-high-gc-cpu-time.md)|Profil oluşturma sırasında toplanan sistem performansı verilerini toplam uygulama işleme süresi ile karşılaştırıldığında, çöp toplamaya harcanan süreyi önemli olduğunu gösterir.|  
-|[DA0024: Aşırı GC CPU Süresi](../profiling/da0024-excessive-gc-cpu-time.md)|Profil oluşturma sırasında toplanan sistem performansı verilerini toplam uygulama işleme süresi ile karşılaştırıldığında, çöp toplamaya harcanan süreyi aşırı yüksek olduğunu gösterir. Bu kural, çöp toplamaya harcanan süreyi kural DA0023 üst eşik değerini aştığında tetikler.|  
-|[DA0038: Yüksek Oranda Kilit çakışması](../profiling/da0038-high-rate-of-lock-contentions.md)|Toplanan sistem performansı verilerini profil oluşturma verileriyle birlikte önemli ölçüde yüksek oranda kilit çakışması uygulama yürütme sırasında oluştuğunu gösterir. Çekişme nedenini bulmak için eşzamanlılık profili oluşturma yöntemi kullanarak yeniden profil oluşturmayı göz önünde bulundurun.|  
-|[DA0039: Çok Yüksek Oranda Kilit çakışması](../profiling/da0039-very-high-rate-of-lock-contentions.md)|Toplanan sistem performansı verilerini profil oluşturma verileriyle birlikte bir aşırı yüksek oranda kilit çakışması uygulama yürütme sırasında oluştuğunu gösterir. Çekişme nedenini bulmak için eşzamanlılık profili oluşturma yöntemi kullanarak yeniden profil oluşturmayı göz önünde bulundurun. Bu kural, oranda kilit çakışması kural DA0038 üst eşik değerini aştığında tetikler.|
+|[DA0001: Birleştirmeler için StringBuilder kullanma](../profiling/da0001-use-stringbuilder-for-concatenations.md)|İçin yapılan çağrılar <xref:System.String.Concat%28System.String%2CSystem.String%29?displayProperty=fullName> , profil oluşturma verilerinin önemli bir orandır. <xref:System.Text.StringBuilder>Birden çok kesimden dizeler oluşturmak için sınıfını kullanmayı düşünün.|  
+|[DA0005: Sık kullanılan GC2 koleksiyonları](../profiling/da0005-frequent-gc2-collections.md)|2. nesil atık toplamada, görece yüksek sayıda .NET bellek nesnesi geri kazanılır. Çok fazla sayıda kısa süreli nesne, 1. nesil toplandıktan sonra bellek yönetiminin maliyeti kolayca aşırı olabilir.|  
+|[DA0006: Değer türleri için Equals() üzerine yazın](../profiling/da0006-override-equals-parens-for-value-types.md)|`Equals`Bir ortak değer türünün yöntemine veya eşitlik işleçlerine yapılan çağrılar, profil oluşturma verilerinin önemli bir orandır. Daha verimli bir yöntem uygulamayı düşünün.|  
+|[DA0007: Denetim akışı için özel durumlar kullanmaktan kaçının](../profiling/da0007-avoid-using-exceptions-for-control-flow.md)|Profil oluşturma verilerinde yüksek oranda .NET Framework özel durum işleyicileri çağrıldı. Oluşturulan özel durumların sayısını azaltmak için diğer denetim akışı mantığını kullanmayı göz önünde bulundurun.|  
+|[DA0010: Pahalı GetHashCode](../profiling/da0010-expensive-gethashcode.md)|Türü yöntemine yapılan çağrılar, `GetHashCode` profil oluşturma verilerinin önemli bir oranıyla veya `GetHashCode` yöntemin belleği ayırır. Metodun karmaşıklığını azaltın.|  
+|[DA0011: Pahalı CompareTo](../profiling/da0011-expensive-compareto.md)|`CompareTo`Türünün yöntemi pahalıdır veya yöntem belleği ayırır. Metodun karmaşıklığını azaltın `CompareTo` .|  
+|[DA0012: Önemli miktarda Yansıma](../profiling/da0012-significant-amount-of-reflection.md)|Ve gibi yöntemleri yazmak gibi yöntemlere yapılan çağrılar, <xref:System.Reflection?displayProperty=fullName> <xref:System.Reflection.IReflect.InvokeMember%2A> <xref:System.Reflection.IReflect.GetMember%2A> <xref:System.Type.InvokeMember%2A> profil oluşturma verilerinin önemli bir orandır. Mümkün olduğunda, bu yöntemleri bağımlı derlemelerin yöntemlerine erken bağlama ile değiştirmeyi göz önünde bulundurun.|  
+|[DA0013: Yüksek oranda String.Split veya String.Substring kullanımı](../profiling/da0013-high-usage-of-string-split-or-string-substring.md)|Veya yöntemlerine yapılan çağrılar, <xref:System.String.Split%2A?displayProperty=fullName> <xref:System.String.Substring%2A> profil oluşturma verilerinin önemli bir bölümüdür. <xref:System.String.IndexOf%2A> <xref:System.String.IndexOfAny%2A> Bir dizedeki alt dizenin varlığını test ediyorsanız veya kullanmayı düşünün.|  
+|[DA0018: Yönetilen bellek limitlerinde çalışan 32 bit Uygulama](../profiling/da0018-32-bit-application-running-at-process-managed-memory-limits.md)|Profil oluşturma işlemi sırasında toplanan sistem verileri, approached .NET Framework bellek yığınlarının, yönetilen yığınlardaki 32 bitlik bir işlemde ulaşabileceği maksimum boyut olduğunu gösterir. .NET bellek profili oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün ve yönetilen kaynakların uygulama tarafından kullanımını en iyi duruma getirme işlemini yapın.|  
+|[DA0021: Yüksek oranda 1. nesil atık toplama](../profiling/da0021-high-rate-of-gen-1-garbage-collections.md)|2. nesil atık toplamada, görece yüksek sayıda .NET bellek nesnesi geri kazanılır. Çok fazla sayıda kısa süreli nesne, nesil 0 topladıktan sonra bellek yönetiminin maliyeti kolayca aşırı olabilir.|  
+|[DA0022: Yüksek oranda 2. nesil atık toplama](../profiling/da0022-high-rate-of-gen-2-garbage-collections.md)|2. nesil atık toplamada yüksek sayıda .NET bellek nesnesi geri kazanılır. Çok fazla sayıda kısa süreli nesne, 1. nesil toplandıktan sonra bellek yönetiminin maliyeti kolayca aşırı olabilir. Bu kural, kilit çekişmelerinin oranı kural DA0005 üst eşik değerini aştığında ateşlenir.|  
+|[DA0023: Yüksek GC CPU süresi](../profiling/da0023-high-gc-cpu-time.md)|Profil oluşturma sırasında toplanan sistem performansı verileri, atık toplamada harcanan sürenin toplam uygulama işleme süresi ile karşılaştırıldığında önemli olduğunu gösterir.|  
+|[DA0024: Aşırı GC CPU Süresi](../profiling/da0024-excessive-gc-cpu-time.md)|Profil oluşturma sırasında toplanan sistem performansı verileri, atık toplamada harcanan sürenin toplam uygulama işleme süresi ile karşılaştırıldığında çok yüksek olduğunu gösterir. Bu kural, atık toplamada harcanan sürenin miktarı DA0023 kuralının üst eşik değerini aştığında ateşlenir.|  
+|[DA0038: Yüksek Oranda Kilit çakışması](../profiling/da0038-high-rate-of-lock-contentions.md)|Profil oluşturma verileriyle toplanan sistem performansı verileri, uygulama yürütmesi sırasında önemli ölçüde yüksek bir kilit çekişmesinin gerçekleştiğini gösterir. Çekişmelerin nedenini bulmak için eşzamanlılık profil oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün.|  
+|[DA0039: Çok Yüksek Oranda Kilit çakışması](../profiling/da0039-very-high-rate-of-lock-contentions.md)|Profil oluşturma verileriyle toplanan sistem performansı verileri, uygulama yürütme sırasında aşırı yüksek bir kilit çekişmesinin gerçekleştiğini gösterir. Çekişmelerin nedenini bulmak için eşzamanlılık profil oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün. Bu kural, kilit çekişmelerinin oranı kural DA0038 üst eşik değerini aştığında ateşlenir.|

@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 64f739039d17af7fbee9718da93e8610e2619a85
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.openlocfilehash: ce7d30b66106b8d0d861fcf782a77ee7f461196b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586953"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532047"
 ---
 # <a name="memory-usage-without-debugging"></a>Hata Ayıklayıcı Olmadan Bellek Kullanımı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "82586953"
   
   Anlık görüntü görünümünün resimdeki numaralandırılmış öğeler, bellek kullanımı rapor görünümlerini açan bağlantılardır.  
   
-|||  
+|Görüntü|Açıklama|  
 |-|-|  
 |![1. Adım](../profiling/media/procguid-1.png "ProcGuid_1")|Bağlantı metni, anlık görüntü çekilirken bellekteki toplam bayt sayısını gösterir.<br /><br /> Tür örneklerinin toplam boyutuna göre sıralanmış bir anlık görüntü ayrıntıları raporu göstermek için bu bağlantıyı seçin.|  
 |![2. Adım](../profiling/media/procguid-2.png "ProcGuid_2")|Bağlantı metni, anlık görüntü çekilirken bellekteki toplam nesne sayısını gösterir.<br /><br /> Türlerin örnek sayısına göre sıralanan bir anlık görüntü ayrıntıları raporunu göstermek için bu bağlantıyı seçin.|  
@@ -135,7 +135,7 @@ ms.locfileid: "82586953"
   
  ![Yönetilen yığın ağacı](../profiling/media/memuse-snapshotdetails-managedheaptree.png "MEMUSE__SnapshotDetails_ManagedHeapTree")  
   
-|||  
+|Name|Açıklama|  
 |-|-|  
 |**Nesne türü**|Tür veya nesne örneğinin adı.|  
 |**Biriktirme**|Türün nesne örneklerinin sayısı. Bu sayı her zaman bir örnek için 1 ' dir.|  
@@ -154,7 +154,7 @@ ms.locfileid: "82586953"
   
  ![Örnekler için başvurulan objeler ağacı](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
   
-|||  
+|Name|Açıklama|  
 |-|-|  
 |**Nesne türü/örneği**|Tür veya nesne örneğinin adı.|  
 |**Boyut (bayt)**|Bir tür için, türün içindeki nesnelerin boyutu hariç olmak üzere, türünün tüm örneklerinin boyutu.<br /><br /> Bir örnek için, nesnesinin içindeki nesnelerin boyutu hariç nesnenin boyutu.|  
@@ -176,7 +176,7 @@ ms.locfileid: "82586953"
   
  **Sayı**, **Boyut (bayt)** ve **kapsamlı boyut (bayt)** sütunlarının resimde daraltıldığına dikkat edin.  
   
-|||  
+|Name|Açıklama|  
 |-|-|  
 |**Nesne türü**|Tür veya nesne örneğinin adı.|  
 |**Biriktirme**|Birincil anlık görüntüdeki bir türün örneklerinin sayısı. Bir örnek için **sayı** her zaman 1 ' dir.|  
@@ -196,7 +196,7 @@ ms.locfileid: "82586953"
   
  ![Örnekler için başvurulan objeler ağacı](../profiling/media/memuse-snapshotdetails-referencedobjects-instance.png "MEMUSE_SnapshotDetails_ReferencedObjects_Instance")  
   
-|||  
+|Name|Açıklama|  
 |-|-|  
 |**Nesne türü/örneği**|Tür veya nesne örneğinin adı.|  
 |**Boyut (bayt)**|Örnek için, örneğin, birincil anlık görüntüdeki nesnenin boyutu, örnekteki nesnelerin boyutu hariç.<br /><br /> Bir tür için, örnekte yer alan nesnelerin boyutu hariç olmak üzere birincil anlık görüntüdeki tür örneklerinin toplam boyutu.|  

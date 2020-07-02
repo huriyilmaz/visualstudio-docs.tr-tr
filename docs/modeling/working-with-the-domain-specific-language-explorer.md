@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, DSL Explorer
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ede0f61d2cec78ac4981e487b72eb4d78508c98
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: caf7d395c08a8c1e8c21f933ba63c8943813831b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748157"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532190"
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>Etki Alanına Özgü Dil Gezgini ile Çalışma
 **DSL Gezgini** bir ağaç görünümünde çeşitli bilgi türlerini görüntüler. DSL Gezgini 'ndeki öğelerin birçoğu hakkında daha fazla bilgi için bkz. [etki alanına özgü dil tanımlama](../modeling/how-to-define-a-domain-specific-language.md).

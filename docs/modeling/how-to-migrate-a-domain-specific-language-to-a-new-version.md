@@ -1,30 +1,30 @@
 ---
 title: 'Nasıl yapılır: Etki Alanına Özgü Dili Yeni Sürüme Geçirme'
 ms.date: 11/04/2016
-ms.topic: conceptual
-author: jillre
-ms.author: jillfra
+ms.topic: how-to
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6be4a8205935d131d880923e721e342ea904134d
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: f8bdaea1267d0bf69078aec5739291e72db8dfda
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72747547"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532617"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>Nasıl yapılır: Etki Alanına Özgü Dili Yeni Sürüme Geçirme
-@No__t_2 ile dağıtılan [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] sürümünden [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] için, etki alanına özgü dili tanımlayan ve kullanan projeleri geçirebilirsiniz.
+[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]İle dağıtılan sürümüne, etki alanına özgü dili tanımlayan ve kullanan projeleri geçirebilirsiniz [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)] .
 
- Bir geçiş aracı [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] bir parçası olarak sağlanır. Araç, DSL araçlarını kullanan veya tanımlayan Visual Studio projelerini ve çözümlerini dönüştürür.
+ Bir geçiş aracı bir parçası olarak sağlanır [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)] . Araç, DSL araçlarını kullanan veya tanımlayan Visual Studio projelerini ve çözümlerini dönüştürür.
 
  Geçiş aracını açıkça çalıştırmanız gerekir: Visual Studio 'da bir çözüm açtığınızda bu otomatik olarak başlatılmaz. Araç ve ayrıntılı kılavuz belgesi şu yolda bulunabilir:
 
  **% Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
 ## <a name="before-you-migrate-your-dsl-projects"></a>DSL projelerinizi geçirmeden önce
- Geçiş Aracı, Visual Studio proje dosyalarını ( **. csproj**) ve çözüm dosyalarını ( **. sln**) değiştirir.
+ Geçiş Aracı, Visual Studio proje dosyalarını (**. csproj**) ve çözüm dosyalarını (**. sln**) değiştirir.
 
 #### <a name="to-prepare-projects-for-migration"></a>Projeleri geçişe hazırlamak için.
 
@@ -57,11 +57,11 @@ ms.locfileid: "72747547"
 
 4. Projeleri dönüştürün.
 
-   1. **Dönüştür**' e tıklayın.
+   1. **Dönüştür**'e tıklayın.
 
-        Her proje dosyası dönüştürüldükten sonra _Project._ **csproj** 'un bir kopyası _Project_ **. VS2008. csproj** olarak kaydedilir
+        Her proje dosyası dönüştürüldükten sonra _Project._**csproj** 'un bir kopyası _Project_**. VS2008. csproj** olarak kaydedilir
 
-        Her çözümün bir kopyası **. sln** , _Solution_ **. VS2008. sln** olarak kaydedilir
+        Her çözümün bir kopyası _solution_**. sln** , _Solution_**. VS2008. sln** olarak kaydedilir
 
    2. Bildirilen tüm başarısız dönüştürmeleri araştırın.
 

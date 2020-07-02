@@ -12,12 +12,12 @@ caps.latest.revision: 36
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 67946ffb674a7f4a2346229b958ba8316d6ff919
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: af4123b24ab9286e306a1034de4416a31ae76f2b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850486"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533074"
 ---
 # <a name="define-a-gesture-handler-on-a-modeling-diagram"></a>Modelleme diyagramında hareket işleyicisi tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -42,23 +42,23 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
 
 1. **Yeni proje** iletişim kutusunda, **modelleme projeleri**' nin altında, **hareket uzantısı**' nı seçin.
 
-2. Yeni projede **. cs** dosyasını açın ve hareket işleyicinizi uygulamak için `GestureExtension` sınıfını değiştirin.
+2. Yeni projede **. cs** dosyasını açın ve `GestureExtension` hareket işleyicinizi uygulamak için sınıfını değiştirin.
 
     Daha fazla bilgi için, bkz. [hareket Işleyicisini uygulama](#Implementing).
 
 3. F5 tuşuna basarak hareket işleyicisini test edin. Daha fazla bilgi için bkz. [hareket Işleyicisini yürütme](#Executing).
 
-4. Projeniz tarafından oluşturulan dosya **sepeti\\\*\\\*. vsix** ' i kopyalayarak hareket işleyicisini başka bir bilgisayara yükler. Daha fazla bilgi için bkz. [Uzantı yükleme ve kaldırma](#Installing).
+4. Hareket işleyicisini, projeniz tarafından oluşturulan **bin \\ \* \\ \* . vsix** dosyasını kopyalayarak başka bir bilgisayara yükler. Daha fazla bilgi için bkz. [Uzantı yükleme ve kaldırma](#Installing).
 
    Alternatif yordam aşağıda verilmiştir:
 
 #### <a name="to-create-a-separate-class-library-dll-project-for-the-gesture-handler"></a>Hareket işleyicisi için ayrı bir sınıf kitaplığı (DLL) projesi oluşturmak için
 
-1. Yeni bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümünde veya var olan bir çözümde bir sınıf kitaplığı projesi oluşturun.
+1. Yeni bir çözümde ya da var olan bir çözümde bir sınıf kitaplığı projesi oluşturun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
    1. **Dosya** menüsünde, **Yeni**, **Proje**' yi seçin.
 
-   2. **Yüklü şablonlar**altında, **görsel C#**  veya **Visual Basic**' i genişletin, ardından Orta sütundaki **sınıf kitaplığı**' nı seçin.
+   2. **Yüklü şablonlar**altında **Visual C#** veya **Visual Basic**' i genişletin, ardından Orta sütundaki **sınıf kitaplığı**' nı seçin.
 
 2. Aşağıdaki başvuruları projenize ekleyin.
 
@@ -74,7 +74,7 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
 
     `System.Windows.Forms`
 
-    `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer`: buna yalnızca Katman diyagramlarını genişletirken ihtiyacınız vardır. Daha fazla bilgi için bkz. [Katman diyagramlarını genişletme](../modeling/extend-layer-diagrams.md).
+    `Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer`– Buna yalnızca Katman diyagramlarını uzatıyorsunuz yapmanız gerekir. Daha fazla bilgi için bkz. [Katman diyagramlarını genişletme](../modeling/extend-layer-diagrams.md).
 
 3. Projeye bir sınıf dosyası ekleyin ve içeriğini aşağıdaki koda ayarlayın.
 
@@ -210,7 +210,7 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
 
     1. **Çözüm Gezgini**, çözümün kısayol menüsünde, **Ekle**, **Yeni proje**' yi seçin.
 
-    2. **Yüklü şablonlar**altında,  **C# görsel** veya **Visual Basic**' ı genişletin, ardından **genişletilebilirlik**' i seçin. Orta sütunda **VSIX projesi**' ni seçin.
+    2. **Yüklü şablonlar**altında **Visual C#** veya **Visual Basic**' i genişletin, ardından **genişletilebilirlik**' i seçin. Orta sütunda **VSIX projesi**' ni seçin.
 
 3. VSıX projesini çözümün başlangıç projesi olarak ayarlayın.
 
@@ -224,30 +224,30 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
 
     3. **Varlıklar** sekmesinde **Yeni**' yi seçin ve iletişim kutusunda, şunu ayarlayın:
 
-          = **MEF bileşeni** **yazın**
+         **Tür**  =  **MEF bileşeni**
 
-         **Kaynak** = **geçerli çözümdeki bir proje**
+         **Kaynak**  =  **Geçerli çözümdeki bir proje**
 
-         *Sınıf kitaplığı projenizden* **Proje** = 
+         **Proje**  =  *Sınıf kitaplığı projeniz*
 
-## <a name="Executing"></a>Hareket Işleyicisini yürütme
+## <a name="executing-the-gesture-handler"></a><a name="Executing"></a>Hareket Işleyicisini yürütme
  Test amaçları için, hareket işleyicinizi hata ayıklama modunda yürütün.
 
 #### <a name="to-test-the-gesture-handler"></a>Hareket işleyicisini test etmek için
 
 1. **F5**tuşuna basın veya **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' a tıklayın.
 
-    Deneysel bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği başlar.
+    Deneysel bir örneği [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlar.
 
-    **Sorun giderme**: yeni bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlamazsa:
+    **Sorun giderme**: yeni bir başlamazsa [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
    - Birden çok projeniz varsa, VSıX projesinin çözümün başlangıç projesi olarak ayarlandığından emin olun.
 
-   - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde Özellikler ' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]tam yol adı olduğundan emin olun:
+   - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde Özellikler ' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle tam yol adı olduğundan emin olun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
         `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
-2. Deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], bir modelleme projesi açın veya oluşturun ve bir modelleme diyagramı açın veya oluşturun. Hareket işleyici sınıfınızın özniteliklerinde listelenen türlerden birine ait bir diyagram kullanın.
+2. Deneysel içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , bir modelleme projesi açın veya oluşturun ve bir modelleme diyagramı açın veya oluşturun. Hareket işleyici sınıfınızın özniteliklerinde listelenen türlerden birine ait bir diyagram kullanın.
 
 3. Diyagramda herhangi bir yere çift tıklayın. Çift tıklama işleyiciniz çağrılmalıdır.
 
@@ -259,32 +259,32 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
 
 - Tüm `Import` ve `Export` özniteliklerinin parametreleri geçerlidir.
 
-- `CanDragDrop` yöntemi `false`döndürmedi.
+- `CanDragDrop`Yöntem döndürülmedi `false` .
 
 - Kullandığınız model diyagramın türü (UML sınıfı, sırası, vb.), hareket işleyicisi sınıf özniteliklerinden biri olarak [ClassDesignerExtension], [SequenceDesignerExtension] vb. olarak listelenir.
 
 - Bu tür hedef ve bırakılan öğe için önceden tanımlanmış bir yerleşik işlev yok.
 
-## <a name="Implementing"></a>Hareket Işleyicisini uygulama
+## <a name="implementing-the-gesture-handler"></a><a name="Implementing"></a>Hareket Işleyicisini uygulama
 
 ### <a name="the-gesture-handler-methods"></a>Hareket Işleyici yöntemleri
- Hareket işleyicisi sınıfı <xref:Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement.IGestureExtension>uygular ve dışarı aktarır. Tanımlamanız gereken yöntemler şunlardır:
+ Hareket işleyicisi sınıfı uygular ve dışarı aktarır <xref:Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement.IGestureExtension> . Tanımlamanız gereken yöntemler şunlardır:
 
-|||
+|İmza|Açıklama|
 |-|-|
-|`bool CanDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|`dragEvent` başvuruda bulunulan kaynak öğenin bu hedefte bırakılmasına izin vermek için `true` döndürün.<br /><br /> Bu yöntem modelde değişiklik yapmamalıdır. Kullanıcı fareyi taşırken ok durumunu belirlemede kullanıldığından, bu değer hızlı bir şekilde çalışmalıdır.|
-|`void OnDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|`dragEvent`ve hedefte başvurulan kaynak nesnesine göre modeli güncelleştirin.<br /><br /> Kullanıcı fareyi sürüklemeye sonra bıraktığında çağırılır.|
-|`void OnDoubleClick (ShapeElement target, DiagramPointEventArgs pointEvent)`|`target`, kullanıcının çift tıkladığını şekildir.|
+|`bool CanDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|`true`İçinde başvurulan kaynak öğenin bu hedefte bırakılmasına izin vermek için geri dönün `dragEvent` .<br /><br /> Bu yöntem modelde değişiklik yapmamalıdır. Kullanıcı fareyi taşırken ok durumunu belirlemede kullanıldığından, bu değer hızlı bir şekilde çalışmalıdır.|
+|`void OnDragDrop (ShapeElement target, DiagramDragEventArgs dragEvent)`|İçinde başvurulan kaynak nesnesine ve hedefe göre modeli güncelleştirin `dragEvent` .<br /><br /> Kullanıcı fareyi sürüklemeye sonra bıraktığında çağırılır.|
+|`void OnDoubleClick (ShapeElement target, DiagramPointEventArgs pointEvent)`|`target`kullanıcının çift tıkladığını şekildir.|
 
- Dosyalar, .NET Sınıf görünümündeki düğümler gibi çok çeşitli diğer öğeleri de yalnızca UML değil de kabul edebilecek işleyiciler yazabilirsiniz. Kullanıcı bu öğelerden herhangi birini bir UML diyagramına sürükleyebilir ve öğelerin seri hale getirilmiş biçimini çözebilen bir `OnDragDrop` yöntemi yazabilirsiniz. Kod çözme yöntemleri bir öğe türünden diğerine farklılık gösterir.
+ Dosyalar, .NET Sınıf görünümündeki düğümler gibi çok çeşitli diğer öğeleri de yalnızca UML değil de kabul edebilecek işleyiciler yazabilirsiniz. Kullanıcı bu öğelerden herhangi birini bir UML diyagramına sürükleyebilir, bu da `OnDragDrop` öğelerin seri hale getirilmiş biçimini çözebilen bir yöntem yazmanızı sağladı. Kod çözme yöntemleri bir öğe türünden diğerine farklılık gösterir.
 
  Bu yöntemlerin parametreleri şunlardır:
 
 - `ShapeElement target`. Kullanıcının üzerine bir şeyi sürüklemiş olduğu şekil veya diyagram.
 
-    `ShapeElement`, UML modelleme araçlarının temelini oluşturan uygulamadaki bir sınıftır. UML model ve diyagramlarını tutarsız bir duruma getirme riskini azaltmak için bu sınıfın yöntemlerini doğrudan kullanmanızı öneririz. Bunun yerine, öğeyi bir `IShape`sarın ve [diyagramda BIR UML modeli görüntüleme](../modeling/display-a-uml-model-on-diagrams.md)bölümünde açıklanan yöntemleri kullanın.
+    `ShapeElement`, UML modelleme araçlarının temelini oluşturan uygulamadaki bir sınıftır. UML model ve diyagramlarını tutarsız bir duruma getirme riskini azaltmak için bu sınıfın yöntemlerini doğrudan kullanmanızı öneririz. Bunun yerine, öğesini bir içinde sarın `IShape` ve [DIYAGRAMDA bir UML modeli görüntüleme](../modeling/display-a-uml-model-on-diagrams.md)bölümünde açıklanan yöntemleri kullanın.
 
-  - `IShape`almak için:
+  - Şunu almak için `IShape` :
 
       ```
       IShape targetIShape = target.CreateIShape(target);
@@ -317,7 +317,7 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
     System.Windows.Forms.IDataObject data = eventArgs.Data;
     ```
 
-     Birçok farklı türdeki öğeleri, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]farklı bölümlerinden veya Windows masaüstünden sürükleyebilirsiniz. Farklı öğe türleri `IDataObject`farklı yollarla kodlanır. Öğeleri bundan ayıklamak için, uygun nesne türü için belgelere bakın.
+     Birçok farklı türdeki öğeleri, farklı veya Windows masaüstünden bir diyagram üzerine sürükleyebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Farklı öğe türleri içinde farklı yollarla kodlanır `IDataObject` . Öğeleri bundan ayıklamak için, uygun nesne türü için belgelere bakın.
 
      Kaynak nesneniz UML Model Gezgini 'nden veya başka bir UML diyagramından sürüklenen bir UML öğesi ise, bir UML [model öğelerini IDataObject 'Den al](../modeling/get-uml-model-elements-from-idataobject.md)' a bakın.
 
@@ -334,7 +334,7 @@ Visual Studio 'da, kullanıcının öğeleri bir UML diyagramına çift tıklad�
 [Import] public IDiagramContext DiagramContext { get; set; }
 ```
 
- `IDiagramContext` bildirimi, metotlarda diyagrama, geçerli seçime ve modele erişen kod yazmanıza olanak tanır:
+ Bildirimi, `IDiagramContext` metotlarda diyagrama, geçerli seçime ve modele erişen kod yazmanıza izin verir:
 
 ```
 IDiagram diagram = this.DiagramContext.CurrentDiagram;
@@ -348,8 +348,8 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
  Daha fazla bilgi için bkz. [UML modeline gitme](../modeling/navigate-the-uml-model.md).
 
-## <a name="Installing"></a>Uzantı yükleme ve kaldırma
- Hem kendi bilgisayarınıza hem de diğer bilgisayarlara bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantısı yükleyebilirsiniz.
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Uzantı yükleme ve kaldırma
+ Bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantıyı, hem kendi bilgisayarınıza hem de diğer bilgisayarlara yükleyebilirsiniz.
 
 #### <a name="to-install-an-extension"></a>Uzantı yüklemek için
 
@@ -357,17 +357,17 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
     1. **Çözüm Gezgini**, VSIX projesinin kısayol menüsünde **klasörü Windows Gezgini 'nde aç**' ı seçin.
 
-    2. Dosya **bin\\\*bulun \\** _yourproject_ **. vsix**
+    2. Dosya ** \\ \* bin \\ **' i_Proje_**. vsix** ' i bulun
 
 2. **. Vsix** dosyasını, uzantıyı yüklemek istediğiniz hedef bilgisayara kopyalayın. Bu, kendi bilgisayarınız veya başka bir tane olabilir.
 
-     Hedef bilgisayar, **kaynak. Extension. valtmanifest**içinde belirttiğiniz [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] sürümlerinden birine sahip olmalıdır.
+     Hedef bilgisayar, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **kaynak. Extension. valtmanifest**içinde belirttiğiniz sürümlerden birine sahip olmalıdır.
 
 3. Hedef bilgisayarda **. vsix** dosyasını açın.
 
      **Visual Studio Uzantı Yükleyicisi** açılır ve uzantıyı yüklüyor.
 
-4. [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]başlatın veya yeniden başlatın.
+4. Başlatın veya yeniden başlatın [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
 #### <a name="to-uninstall-an-extension"></a>Bir uzantıyı kaldırmak için
 
@@ -379,9 +379,9 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>) {...}
 
    Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı öğesinden silerek uzantıyı kaldırabilirsiniz:
 
-   *% LocalAppData%* **\Local\microsoft\visualstudio\\[sürüm] \Extensions**
+   *% LocalAppData%* **\Local\microsoft\visualstudio \\ [sürüm] \Extensions**
 
-## <a name="DragExample"></a>Örneğinde
+## <a name="example"></a><a name="DragExample"></a>Örneğinde
  Aşağıdaki örnek, bir bileşen diyagramından sürüklenen bir bileşenin bölümlerine ve bağlantı noktalarına bağlı olarak bir sıralı diyagramda Yaşam çizgilerinin nasıl oluşturulacağını gösterir.
 
  Test etmek için F5 'e basın. Visual Studio 'nun deneysel bir örneği açılır. Bu örnekte, bir UML modeli açın ve bileşen diyagramında bir bileşen oluşturun. Bu bileşene bazı arabirimler ve iç bileşen bölümleri ekleyin. Arabirimleri ve parçaları seçin. Ardından arabirimleri ve parçaları sıralı diyagram üzerine sürükleyin. (Sıralı diyagram için bileşen diyagramından sekmeye kadar sürükleyin ve sonra sıralı diyagramda aşağı taşıyın.) Her arabirim ve bölüm için bir yaşam çizgisi görüntülenir.
@@ -517,7 +517,7 @@ public class CreateLifelinesFromComponentParts : IGestureExtension
 
 ```
 
- `GetModelElementsFromDragEvent()` kodu, [IDataObject 'den UML model öğelerini Al](../modeling/get-uml-model-elements-from-idataobject.md)bölümünde açıklanmaktadır.
+ Kodu, `GetModelElementsFromDragEvent()` [IDataObject 'den UML model öğelerini Al](../modeling/get-uml-model-elements-from-idataobject.md)bölümünde açıklanmaktadır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Modelleme uzantısı tanımlama ve YÜKLEMEYI](../modeling/define-and-install-a-modeling-extension.md) [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md) [Modelleme Diyagramında Menü komutu tanımlama modelleme diyagramı üzerinde BIR menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md) UML [API ile programlama](../modeling/programming-with-the-uml-api.md) [için doğrulama kısıtlamaları tanımlama](../modeling/define-validation-constraints-for-uml-models.md)

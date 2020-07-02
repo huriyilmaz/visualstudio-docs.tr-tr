@@ -1,45 +1,45 @@
 ---
 title: 'Nasıl yapılır: Bir Öğede CLR Özniteliklerini Ayarlama'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - vs.dsltools.EditAttributesDialog
 helpviewer_keywords:
 - Domain-Specific Language, custom attrributes
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f943f9713e4432f0b06242a2f66acae6b390e5cc
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: ebda963bf1afa55fa8d7f98774c72a75d242ceef
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72748365"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532463"
 ---
 # <a name="how-to-set-clr-attributes-on-an-element"></a>Nasıl yapılır: Bir Öğede CLR Özniteliklerini Ayarlama
-Özel öznitelikler, etki alanı öğelerine, şekillere, bağlayıcılara ve diyagramlarına eklenebilen özel özniteliklerdir. @No__t_0 sınıfından devralan herhangi bir özniteliği ekleyebilirsiniz.
+Özel öznitelikler, etki alanı öğelerine, şekillere, bağlayıcılara ve diyagramlarına eklenebilen özel özniteliklerdir. Sınıfından devralan herhangi bir özniteliği ekleyebilirsiniz `System.Attribute` .
 
 ### <a name="to-add-a-custom-attribute"></a>Özel bir öznitelik eklemek için
 
 1. **DSL Gezgini**' nde, özel öznitelik eklemek istediğiniz öğeyi seçin.
 
-2. **Özellikler** penceresinde, **özel öznitelikler** özelliğinin yanındaki gezinme ( **...** ) simgesine tıklayın.
+2. **Özellikler** penceresinde, **özel öznitelikler** özelliğinin yanındaki gezinme (**...**) simgesine tıklayın.
 
      **Öznitelikleri Düzenle** iletişim kutusu açılır.
 
-3. **Ad** sütununda **\<add özniteliği >** ' ne tıklayın ve öznitebir adının adını yazın. ENTER tuşuna basın.
+3. **Ad** sütununda, **\<add attribute>** özniteliðin adını tıklayın ve yazın. ENTER tuşuna basın.
 
-4. Öznitelik adının altındaki satır parantez ' nu gösterir. Bu satırda, öznitelik için bir parametre türü yazın (örneğin, `string`) ve ardından ENTER tuşuna basın.
+4. Öznitelik adının altındaki satır parantez ' nu gösterir. Bu satırda, öznitelik için bir parametre türü yazın (örneğin, `string` ) ve ardından ENTER tuşuna basın.
 
-5. **Ad özelliği** sütununda, uygun bir ad yazın, örneğin `MyString`.
+5. **Ad özelliği** sütununda, örneğin, uygun bir ad yazın `MyString` .
 
 6. **Tamam**'a tıklayın.
 
      **Özel öznitelikler** özelliği artık özniteliği aşağıdaki biçimde görüntüler:
 
-     `[` *AttributeName* `(` *ParameterName* `=` *türü* `)]`
+     `[`*AttributeName* `(` *ParameterName* `=` *Tür*`)]`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

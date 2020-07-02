@@ -1,25 +1,25 @@
 ---
 title: DSL 'de standart menü komutunu değiştirme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - .vsct files, adding commands to a domain-specific language
 - Domain-Specific Language, adding custom commands
-author: jillre
-ms.author: jillfra
+author: JoshuaPartlow
+ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ae2aa04eb415ee5c4b7aaa41ea4c6abb49333f7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a7236c074bda17023c989c744042db2de4046558
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72605258"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532502"
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>Nasıl yapılır: Etki Alanına Özgü bir Dilde Standart Menü Komutunu Değiştirme
 
-DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan davranışı değiştirebilirsiniz. Örneğin, hassas bilgileri dışladığı için **kesmeyi** değiştirebilirsiniz. Bunu yapmak için, komut kümesi sınıfındaki yöntemleri geçersiz kılabilirsiniz. Bu sınıflar, DslPackage projesindeki CommandSet.cs dosyasında tanımlanır ve <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> türetilir.
+DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan davranışı değiştirebilirsiniz. Örneğin, hassas bilgileri dışladığı için **kesmeyi** değiştirebilirsiniz. Bunu yapmak için, komut kümesi sınıfındaki yöntemleri geçersiz kılabilirsiniz. Bu sınıflar, DslPackage projesindeki CommandSet.cs dosyasında tanımlanır ve öğesinden türetilir <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet> .
 
 > [!NOTE]
 > Kendi Menü komutlarınızı oluşturmak isterseniz, bkz. [nasıl yapılır: kısayol menüsüne komut ekleme](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
@@ -28,11 +28,11 @@ DSL 'niz içinde otomatik olarak tanımlanan bazı standart komutlardan oluşan 
 
 ### <a name="to-discover-what-commands-you-can-modify"></a>Değiştirebileceğiniz komutları öğrenmek için
 
-1. @No__t_0 projesinde, `GeneratedCode\CommandSet.cs` açın. Bu C# dosya, `CommandSet.tt` bir yan kuruluşu olarak Çözüm Gezgini bulunabilir.
+1. `DslPackage`Projesinde öğesini açın `GeneratedCode\CommandSet.cs` . Bu C# dosyası, ' ın bir yan kuruluşu olarak Çözüm Gezgini bulunabilir `CommandSet.tt` .
 
-2. Bu dosyada adları "`CommandSet`" ile biten, örneğin `Language1CommandSet` ve `Language1ClipboardCommandSet` olan sınıfları bulun.
+2. Adları "" ile biten bu dosyadaki sınıfları bulur `CommandSet` , örneğin `Language1CommandSet` ve `Language1ClipboardCommandSet` .
 
-3. Her komut kümesi sınıfında, "`override`" yazın ve ardından bir boşluk girin. IntelliSense, geçersiz kılabileceğiniz yöntemlerin bir listesini gösterir. Her komutun adları "`ProcessOnStatus`" ve "`ProcessOnMenu`" başlayan bir çift yöntemi vardır.
+3. Her komut kümesi sınıfında, "" yazın ve `override` ardından bir boşluk girin. IntelliSense, geçersiz kılabileceğiniz yöntemlerin bir listesini gösterir. Her komutun adı " `ProcessOnStatus` " ve "" olan bir çift yöntemi vardır `ProcessOnMenu` .
 
 4. Komut kümesi sınıflarından hangilerinin değiştirmek istediğiniz komutu içerdiğini göz önünde görürsünüz.
 
@@ -53,7 +53,7 @@ Komut kümesi sınıfının kısmi bildirimini içeren yeni bir dosya oluşturun
 
      `{ ...  internal partial class Language1CommandSet : ...`
 
-2. **DslPackage**' de, **özel kod**adlı bir klasör oluşturun. Bu klasörde, `CommandSet.cs` adlı yeni bir sınıf dosyası oluşturun.
+2. **DslPackage**' de, **özel kod**adlı bir klasör oluşturun. Bu klasörde adlı yeni bir sınıf dosyası oluşturun `CommandSet.cs` .
 
 3. Yeni dosyada, oluşturulan kısmi sınıfla aynı ad alanına ve ada sahip kısmi bir bildirim yazın. Örneğin:
 
@@ -70,7 +70,7 @@ Komut kümesi sınıfının kısmi bildirimini içeren yeni bir dosya oluşturun
 
 ## <a name="override-the-command-methods"></a>Komut yöntemlerini geçersiz kılın
 
-Çoğu komutun iki ilişkili yöntemi vardır: `ProcessOnStatus` gibi bir ada sahip yöntem... komutun görünür ve etkin olup olmayacağını belirler. Kullanıcı diyagrama sağ tıkladığında çağrılır ve hızlı bir şekilde yürütülecektir ve hiçbir değişiklik yapmamalıdır. `ProcessOnMenu`... Kullanıcı komuta tıkladığında çağrılır ve komutun işlevini gerçekleştirmesi gerekir. Bu yöntemlerin birini ya da her ikisini de geçersiz kılmak isteyebilirsiniz.
+Çoğu komutun iki ilişkili yöntemi vardır:... gibi bir ada sahip Yöntem `ProcessOnStatus` komutun görünür ve etkin olup olmayacağını belirler. Kullanıcı diyagrama sağ tıkladığında çağrılır ve hızlı bir şekilde yürütülecektir ve hiçbir değişiklik yapmamalıdır. `ProcessOnMenu`... Kullanıcı komuta tıkladığında çağrılır ve komutun işlevini gerçekleştirmesi gerekir. Bu yöntemlerin birini ya da her ikisini de geçersiz kılmak isteyebilirsiniz.
 
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>Komutun bir menüde göründüğü zaman değiştirmek için
 
@@ -131,7 +131,7 @@ Aşağıdaki parçalar genellikle bu yöntemler içinde yararlı olur:
 
 - `this.CurrentSelection`. Kullanıcının sağ tıklamış olduğu şekil, bu şekil ve bağlayıcılar listesine her zaman dahildir. Kullanıcı diyagramın boş bir kısmına tıkladığında diyagram, listenin tek üyesidir.
 
-- Kullanıcı diyagramın boş bir bölümüne tıklandığı `true`  -  `this.IsDiagramSelected()`.
+- `this.IsDiagramSelected()` - `true`Kullanıcı diyagramın boş bir kısmına tıklamıştır.
 
 - `this.IsCurrentDiagramEmpty()`
 

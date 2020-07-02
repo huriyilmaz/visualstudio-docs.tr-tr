@@ -1,7 +1,7 @@
 ---
 title: Etki Alanına Özgü Dil Araçları Kullanıcı Arabirimine Genel Bakış
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - vs.dsltools.dsldesigner.editor
 helpviewer_keywords:
@@ -11,12 +11,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51d6139caa84be5097ececd700c73aa6e231174f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: af28ca94639b1c6a800c0c43e41d3ccabb74d9bb
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75566117"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532411"
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>Etki Alanına Özgü Dil Araçları Kullanıcı Arabirimine Genel Bakış
 Visual Studio 'da ilk olarak bir Alana Özgü Dil Araçları (DSL araçları) çözümü açtığınızda, Kullanıcı arabirimi aşağıdaki resme benzeyecektir.
@@ -25,7 +25,7 @@ Visual Studio 'da ilk olarak bir Alana Özgü Dil Araçları (DSL araçları) ç
 
  Aşağıdaki tabloda, Kullanıcı arabiriminin bölümlerinin nasıl kullanıldığı açıklanmaktadır.
 
-|**Öğe**|**Tanım**|
+|**Dosyalarında**|**Tanım**|
 |-|-|
 |Diyagram|Diyagram, etki alanı modelini görüntüler.<br /><br /> Diyagramda iki kenar vardır. Bir taraf modellerinizde öğelerin türlerini tanımlar. Diğer kenar, modellerinizin ekranda nasıl görüneceğini tanımlar.|
 |Araç Kutusu|Diyagrama etki alanı sınıfları ve şekil türleri eklemek için araç kutusundan Araçlar ' a sürükleyin. İlişkiler, bağlayıcılar ve şekil haritaları eklemek için araca tıklayın, ardından diyagramdaki kaynak düğümüne ve ardından hedef düğüme tıklayın.|
@@ -49,5 +49,5 @@ Visual Studio 'da ilk olarak bir Alana Özgü Dil Araçları (DSL araçları) ç
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Etki Alanına Özgü Dil Araçlarına Genel Bakış](../modeling/overview-of-domain-specific-language-tools.md)
-- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
 - [Etki Alanına Özgü Dili Özelleştirme ve Genişletme](../modeling/customizing-and-extending-a-domain-specific-language.md)

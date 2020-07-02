@@ -1,18 +1,18 @@
 ---
 title: 'Nasıl yapılır: Program Kodunda Dosyadan Model Açma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fae71f748f1f64480c046ae157e1fbca0dd0bec9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 19cec066d66b08d3f02f3885908722aad047172b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75594623"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85532489"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Nasıl yapılır: Program Kodunda Dosyadan Model Açma
 
@@ -33,15 +33,15 @@ Uygulama projenizin **hedef çerçevesini** .NET Framework 4 veya üzeri olarak 
 > [!NOTE]
 > Hedef Framework **.NET Framework 4 Istemci profili**olmamalıdır.
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
 
 Bu başvuruları Visual Studio uygulama projenize ekleyin:
 
 - `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 
-  - **Başvuru Ekle** iletişim kutusunda **.net** sekmesinde bunu görmüyorsanız, **gözden** geçirme sekmesine tıklayın ve `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`' a gidin.
+  - **Başvuru Ekle** iletişim kutusunda **.net** sekmesinde bunu görmüyorsanız, **Gözden** geçirme sekmesine tıklayın ve öğesine gidin `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\` .
 
-- Dsl projenizin bin klasörü altında bulacağınız DSL derlemenizin olması gerekir. Genellikle kendi adı şu biçimdedir: *yourcompany*. *Projeniz*`.Dsl.dll`.
+- Dsl projenizin bin klasörü altında bulacağınız DSL derlemenizin olması gerekir. Genellikle kendi adı şu biçimdedir: *yourcompany*. *Yourprojem* `.Dsl.dll` .
 
 ## <a name="important-classes-in-the-dsl"></a>DSL 'deki önemli sınıflar
 
@@ -49,11 +49,11 @@ DSL 'yi okuyan kodu yazmadan önce, DSL 'niz tarafından oluşturulan sınıflar
 
 Şunları belirlemeniz gereken sınıflardır:
 
-- *YourDslRootClass* -bu, `DslDefinition.dsl`kök sınıfın adıdır.
+- *YourDslRootClass* -bu, içindeki kök sınıfın adıdır `DslDefinition.dsl` .
 
-- *Yourdslname* `SerializationHelper`-Bu sınıf DSL projenizdeki `SerializationHelper.cs` tanımlanmıştır.
+- *Yourdslname* `SerializationHelper` -Bu sınıf `SerializationHelper.cs` DSL projenizde tanımlanmıştır.
 
-- *Yourdslname* `DomainModel`-Bu sınıf DSL projenizdeki `DomainModel.cs` tanımlanmıştır.
+- *Yourdslname* `DomainModel` -Bu sınıf `DomainModel.cs` DSL projenizde tanımlanmıştır.
 
 ## <a name="read-from-a-file"></a>Dosyadan okuma
 
