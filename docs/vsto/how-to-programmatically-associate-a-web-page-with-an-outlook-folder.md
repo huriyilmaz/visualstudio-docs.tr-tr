@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla web sayfasını Outlook klasörüyle ilişkilendirme'
+title: 'Nasıl yapılır: program aracılığıyla bir Web sayfasını Outlook klasörüyle ilişkilendirme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e83f8b7f6bcdb790b5e545aa76426bc05f0735f5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b8d44ffc46557243d2681b8f8b4a3b85d1cd9be6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817315"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546152"
 ---
-# <a name="how-to-programmatically-associate-a-web-page-with-an-outlook-folder"></a>Nasıl yapılır: Program aracılığıyla web sayfasını Outlook klasörüyle ilişkilendirme
-  Bu örnek adlı bir klasör için denetler `HtmlView` Microsoft Office Outlook'ta. Klasör mevcut değilse, kod klasörü oluşturur ve bir Web sayfası atar. Klasör varsa, kod klasör içeriğini görüntüler.
+# <a name="how-to-programmatically-associate-a-web-page-with-an-outlook-folder"></a>Nasıl yapılır: program aracılığıyla bir Web sayfasını Outlook klasörüyle ilişkilendirme
+  Bu örnek Outlook Microsoft Office adında bir klasör olup olmadığını denetler `HtmlView` . Klasör yoksa, kod klasörü oluşturur ve ona bir Web sayfası atar. Klasör varsa, kod klasör içeriğini görüntüler.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -31,5 +31,5 @@ ms.locfileid: "62817315"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Klasörlerle çalışma](../vsto/working-with-folders.md)
-- [Nasıl yapılır: Program aracılığıyla klasörü ada göre alma](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
-- [Nasıl yapılır: Program aracılığıyla özel klasör öğeleri oluşturma](../vsto/how-to-programmatically-create-custom-folder-items.md)
+- [Nasıl yapılır: program aracılığıyla bir klasörü ada göre alma](../vsto/how-to-programmatically-retrieve-a-folder-by-name.md)
+- [Nasıl yapılır: program aracılığıyla özel klasör öğeleri oluşturma](../vsto/how-to-programmatically-create-custom-folder-items.md)

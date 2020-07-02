@@ -8,22 +8,22 @@ helpviewer_keywords:
 - list call stack command
 - Debug.ListCallStack command
 ms.assetid: a8b20bf2-81d2-4069-aea8-23e6b15b4347
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f62852550c161566832a7ab78d4058d1d14028f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 34de768f41079311505ae7948502bb4356814ec7
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72748718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770682"
 ---
 # <a name="list-call-stack-command"></a>Çağrı Yığınını Listele Komutu
 Geçerli çağrı yığınını görüntüler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 Debug.ListCallStack [/Count:number] [/ShowTypes:yes|no]
@@ -33,68 +33,68 @@ Debug.ListCallStack [/Count:number] [/ShowTypes:yes|no]
 [/ShowExternalCode:yes|no] [Thread:n] [index]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
 `index`\
-İsteğe bağlı. Geçerli yığın çerçevesini ayarlar ve çıktı görüntülemez.
+İsteğe bağlı. Geçerli yığın çerçevesini ayarlar ve çıkış görüntülemez.
 
 ## <a name="switches"></a>Anahtarlar
-Her anahtar tam formu veya kısa bir form kullanılarak çağrılabilir.
+Her anahtar, tamamı ya da kısa bir form kullanılarak çağrılabilir.
 
-/Sayı:`number` [veya] /C:`number`
+/Count: `number` [veya]/c:`number`
 
-İsteğe bağlı. Görüntülenecek maksimum çağrı yığını sayısı. Varsayılan değer sınırsızdır.
+İsteğe bağlı. Görüntülenecek en fazla çağrı yığını sayısı. Varsayılan değer sınırsızdır.
 
-/ShowTypes:`yes` `no`&#124;[veya]`yes` /T:&#124;`no`
+/ShowTypes: `yes`&#124;`no` [veya]/t: `yes`&#124;`no`
 
-İsteğe bağlı. Parametre türlerinin görüntülenip görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer. `yes`
+İsteğe bağlı. Parametre türlerinin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` .
 
-/ShowNames:`yes` `no`&#124;[veya]`yes` /N:&#124;`no`
+/ShowNames: `yes`&#124;`no` [veya]/n: `yes`&#124;`no`
 
-İsteğe bağlı. Parametre adlarının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer. `yes`
+İsteğe bağlı. Parametre adlarının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` .
 
-/ShowValues:`yes` `no`&#124;[veya]`yes` /V:&#124;`no`
+/ShowValues: `yes`&#124;`no` [veya]/v: `yes`&#124;`no`
 
-İsteğe bağlı. Parametre değerlerinin gösterip gösterilemeyeceğini belirtir. Varsayılan değer. `yes`
+İsteğe bağlı. Parametre değerlerinin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` .
 
-/ShowModule:`yes` `no`&#124;[veya]`yes` /M:&#124;`no`
+/ShowModule: `yes`&#124;`no` [veya]/m: `yes`&#124;`no`
 
-İsteğe bağlı. Modül adının görüntülenip görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer. `yes`
+İsteğe bağlı. Modül adının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `yes` .
 
-/ShowLineOffset:`yes` `no`&#124;[veya]`yes` /#:&#124;`no`
+/Showlinekayması: `yes`&#124;`no` [veya]/#: `yes`&#124;`no`
 
-İsteğe bağlı. Hat ofsetinin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer. `no`
+İsteğe bağlı. Çizgi kaydırın görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no` .
 
-/ShowByteOffset:`yes` `no`&#124;[veya]`yes` /B:&#124;`no`
+/Showbytekayması: `yes`&#124;`no` [veya]/b: `yes`&#124;`no`
 
-İsteğe bağlı. Bayt mahsulünün gösterip göstermeyeceğini belirtir. Varsayılan değer. `no`
+İsteğe bağlı. Bayt kaydırının görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no` .
 
-/ShowLanguage:`yes` `no`&#124;[veya]`yes` /L:&#124;`no`
+/ShowLanguage: `yes`&#124;`no` [veya]/l: `yes`&#124;`no`
 
-İsteğe bağlı. Dili gösterip göstermeyeceğini belirtir. Varsayılan değer. `no`
+İsteğe bağlı. Dilin görüntülenip görüntülenmeyeceğini belirtir. Varsayılan değer `no` .
 
-/IncludeCallsAcrossThreads:`yes` `no`&#124;[veya]`yes` /I:&#124;`no`
+/Includecallsacrossthreads: `yes`&#124;`no` [veya]/i: `yes`&#124;`no`
 
-İsteğe bağlı. Diğer iş parçacıklarına veya diğer iş parçacıklarından gelen çağrıların dahil edilip edilemeyeceğini belirtir. Varsayılan değer. `no`
+İsteğe bağlı. Diğer iş parçacıklarından veya çağrıların eklenip eklenmeyeceğini belirtir. Varsayılan değer `no` .
 
-/ShowExternalCode:`yes`&#124;`no`
+/ShowExternalCode: `yes`&#124;`no`
 
-İsteğe bağlı. Çağrı yığını için Yalnızca Kodum'un görüntülenip görüntülenip görüntülenmeyeceğini belirtir. Yalnızca Kodum kapalıyken, kullanıcı olmayan tüm kod görüntülenir. Yalnızca Kodum açıktı, kullanıcı olmayan kod `[external]` çağrı yığını çıkışında olduğu gibi görüntülenir.
+İsteğe bağlı. Callstack için Yalnızca kendi kodum gösterilip gösterilmeyeceğini belirtir. Yalnızca kendi kodum kapalıyken, tüm Kullanıcı dışı kod görüntülenir. Yalnızca kendi kodum açık olduğunda, çağrı yığını çıkışında Kullanıcı olmayan kod görüntülenir `[external]` .
 
-Iş parçacığı:`n`
+Zincirinin`n`
 
-İsteğe bağlı. İş parçacığı `n`için çağrı yığınını görüntüler. İş parçacığı belirtilmemişse, geçerli iş parçacığı için çağrı yığını nı görüntüler.
+İsteğe bağlı. İş parçacığı için çağrı yığını 'i görüntüler `n` . Hiçbir iş parçacığı belirtilmemişse, geçerli iş parçacığı için çağrı yığınını görüntüler.
 
 ## <a name="remarks"></a>Açıklamalar
-Bağımsız değişkenlerde veya anahtarlarda yapılan değişiklikler, bu komutun gelecekteki çağrıları için geçerlidir. Debug.ListCallStackby kendisi sorunu varsa, tüm arama yığını görüntüler. Örneğin, bir dizin belirtirseniz,
+Bağımsız değişkenlerde veya anahtarlarda yapılan değişiklikler, bu komutun gelecekteki etkinleştirmeleri için geçerlidir. Kendi kendine hata ayıkla. Listcallstackbir sorun varsa, tüm çağrı yığını görüntülenir. Bir dizin belirtirseniz, örneğin
 
 ```cmd
 Debug.ListCallStack 2
 ```
 
-sonra geçerli yığın çerçevesi bu çerçeveye ayarlanır (bu durumda, ikinci kare).
+sonra geçerli yığın çerçevesi bu çerçeveye ayarlanır (Bu örnekte ikinci kare).
 
-Ayrıca bu komutu önceden tanımlanmış takma adı olan kb'yi kullanarak da yazabilirsiniz. Örneğin,
+Bu komutu, önceden tanımlanmış bir diğer ad olan KB kullanarak da yazabilirsiniz. Örneğin,
 
 ```cmd
 kb 2
@@ -110,9 +110,9 @@ geçerli yığın çerçevesini ikinci çerçeveye ayarlamak için.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ayrıştırılmış Kodu Listele Komutu](../../ide/reference/list-disassembly-command.md)
-- [Liste Konuları Komutu](../../ide/reference/list-threads-command.md)
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Ayrıştırılmış kodu Listele komutu](../../ide/reference/list-disassembly-command.md)
+- [Iş parçacıklarını Listele komutu](../../ide/reference/list-threads-command.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

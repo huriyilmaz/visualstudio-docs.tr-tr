@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla özel bir takvim oluşturma'
+title: 'Nasıl yapılır: program aracılığıyla özel bir takvim oluşturma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,15 +14,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 653340d3a682664670998c874344bfc931105892
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aab9e14c7fa4b4c70b2e61eca382af2ce787148c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62575227"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546061"
 ---
-# <a name="how-to-programmatically-create-a-custom-calendar"></a>Nasıl yapılır: Program aracılığıyla özel bir takvim oluşturma
-  Bu örnek adlı yeni bir Takvim klasörü oluşturur **PersonalCalendar**ve ardından yeni bir randevu öğesi oluşturur ve Takvim klasörüne ekler. Kod, daha sonra Takvim klasörünü görüntüler.
+# <a name="how-to-programmatically-create-a-custom-calendar"></a>Nasıl yapılır: program aracılığıyla özel bir takvim oluşturma
+  Bu örnek, **Kişisel takvim**adlı yeni bir takvim klasörü oluşturur ve yeni bir randevu öğesi oluşturur ve bunu Takvim klasörüne ekler. Kod daha sonra Takvim klasörünü görüntüler.
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
@@ -31,5 +31,5 @@ ms.locfileid: "62575227"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Takvim öğeleriyle çalışma](../vsto/working-with-calendar-items.md)
-- [Nasıl yapılır: Randevuları program aracılığıyla oluşturma](../vsto/how-to-programmatically-create-appointments.md)
-- [Nasıl yapılır: Program aracılığıyla toplantı isteği oluşturma](../vsto/how-to-programmatically-create-a-meeting-request.md)
+- [Nasıl yapılır: program aracılığıyla randevu oluşturma](../vsto/how-to-programmatically-create-appointments.md)
+- [Nasıl yapılır: program aracılığıyla toplantı isteği oluşturma](../vsto/how-to-programmatically-create-a-meeting-request.md)

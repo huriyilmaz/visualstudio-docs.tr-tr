@@ -15,31 +15,31 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c3f1cca5dd33047a4d19c78013dd535e0e9dd6f2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d375b64bbc877cb377157f13b3e4cfa7c7cf1592
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607761"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547881"
 ---
-# <a name="ca1504-review-misleading-field-names"></a>CA1504: Yanlış alan adlarını gözden geçirin
+# <a name="ca1504-review-misleading-field-names"></a>CA1504: Yanıltıcı alan adlarını gözden geçirin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ReviewMisleadingFieldNames|
 |CheckId|CA1504|
 |Kategori|Microsoft. Bakımolmaması|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Bir örnek alanının adı "s_" ile başlar veya bir `static` adı ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `Shared`) alanında "m_" ile başlar.
+## <a name="cause"></a>Nedeni
+ Bir örnek alanının adı "s_" ile başlar veya bir `static` ( `Shared` ın [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ) alanının adı "m_" ile başlar.
 
 ## <a name="rule-description"></a>Kural Tanımı
  "S_" ile başlayan alan adları, birçok kullanıcı tarafından statik verilerle ilişkilendirilir. Benzer şekilde, "m_" ile başlayan alan adları, örnek (üye) verilerle ilişkilendirilir. Daha kolay yönetilebilir kod için adlar genellikle kullanılan kurallara uymalıdır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kuralın ihlalini onarmak için, uygun öneki kullanarak alanı yeniden adlandırın. Alternatif olarak, `static` değiştiricisini ekleyerek veya kaldırarak alanı geçerli soneke kabul edin.
+ Bu kuralın ihlalini onarmak için, uygun öneki kullanarak alanı yeniden adlandırın. Alternatif olarak, değiştirici ekleyerek veya kaldırarak alanı geçerli sonek ile kabul edin `static` .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.

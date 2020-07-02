@@ -15,30 +15,30 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9f843efe0aa17b6e87fdb047e1f98a3715ae11af
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 19ae3a4fdc620343f18aa0845c33e1d73529adfe
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603321"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546802"
 ---
-# <a name="ca1048-do-not-declare-virtual-members-in-sealed-types"></a>CA1048: Korumalı türlerde sanal üyeleri bildirme
+# <a name="ca1048-do-not-declare-virtual-members-in-sealed-types"></a>CA1048: Sealed türlerde virtual üyeler bildirmeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotDeclareVirtualMembersInSealedTypes|
 |CheckId|CA1048|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Ortak tür korumalıdır ve `virtual` (Visual Basic `Overridable`) ve son değil bir yöntem bildirir. Bu kural, bu düzene uymalıdır olması gereken temsilci türleri için ihlalleri raporlamaz.
+## <a name="cause"></a>Nedeni
+ Ortak bir tür Sealed olur ve her ikisi de `virtual` ( `Overridable` Visual Basic) ve son olmayan bir yöntem bildirir. Bu kural, bu düzene uymalıdır olması gereken temsilci türleri için ihlalleri raporlamaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Türler yöntemi sanal olarak bildirir, böylece devralan türler sanal yöntemin uygulanmasını geçersiz kılabilir. Tanım olarak, korumalı bir türden bir sanal yöntem anlamsız bir şekilde bir korumalı türden devralma yapılamaz.
 
- Visual Basic .NET ve C# derleyiciler, türlerin bu kuralı ihlal edeceğini izin vermez.
+ Visual Basic .NET ve C# derleyicileri, türlerin bu kuralı ihlal edeceğini izin vermez.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini onarmak için, yöntemi sanal değil veya türü devralınabilir yapın.

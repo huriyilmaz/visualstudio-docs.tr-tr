@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: çevrimdışı veya sunucuda kullanmak üzere verileri önbelleğe alma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,28 +17,28 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 551d27cf8d40f2e6e9c996b031fa6c4e0a233355
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: ce295e299e4accb2d79655675f6264a1497b8d69
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189571"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546191"
 ---
 # <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Nasıl yapılır: çevrimdışı veya sunucuda kullanmak üzere verileri önbelleğe alma
   Çevrimdışı kullanılabilir olması için bir veri öğesini belgede önbelleğe alınacak şekilde işaretleyebilirsiniz. Bu, belge bir sunucuda depolandığında belgedeki verilerin diğer kodla değiştirilmesini de olanaklı kılar.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Veri öğesi kodunuzda bildirildiği sırada veya bir <xref:System.Data.DataSet>kullanıyorsanız, **Özellikler** penceresinde bir özelliği ayarlayarak önbelleğe alınacak bir veri öğesini işaretleyebilirsiniz. <xref:System.Data.DataSet> veya <xref:System.Data.DataTable>olmayan bir veri öğesini önbelleğe alırsanız, belgede önbelleğe alma ölçütlerini karşıladığından emin olun. Daha fazla bilgi için bkz. [önbelleği verileri](../vsto/caching-data.md).
+ Veri öğesi kodunuzda bildirildiği sırada veya kullanıyorsanız, <xref:System.Data.DataSet> **Özellikler** penceresinde bir özellik ayarlayarak önbelleğe alınacak bir veri öğesini işaretleyebilirsiniz. Veya olmayan bir veri öğesini önbelleğe alırsanız <xref:System.Data.DataSet> <xref:System.Data.DataTable> , belgede önbelleğe alma ölçütlerini karşıladığından emin olun. Daha fazla bilgi için bkz. [önbelleği verileri](../vsto/caching-data.md).
 
 > [!NOTE]
-> **Önbelleğe alınmış** ve **WithEvents** olarak işaretlenen Visual Basic kullanılarak oluşturulan veri kümeleri ( **veri kaynakları** penceresinden veya **CacheInDocument** özelliği true olarak ayarlanan **araç kutusundan** sürüklenen veri kümeleri dahil)) önbellekte adlarının önüne bir alt çizgi sahiptir. Örneğin, bir veri kümesi oluşturup **müşterileri**olarak ayarlarsanız, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> adı önbellekteki **müşteriler** olur. Bu önbelleğe alınmış öğeye erişmek için <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> kullandığınızda, **müşteriler**yerine **_müşteriler** belirtmeniz gerekir.
+> **Önbelleğe alınmış** ve **WithEvents** olarak işaretlenen Visual Basic kullanılarak oluşturulan veri kümeleri ( **veri kaynakları** penceresinden veya **CacheInDocument** özelliği **true**olarak ayarlanan **araç kutusu** dahil), önbellekte adlarına önek eklenmiş bir alt çizgi vardır. Örneğin, bir veri kümesi oluşturup **müşterileri**olarak ayarlarsanız, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> ad önbellekte **_Customers** olur. <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument>Bu önbelleğe alınmış öğeye erişmek için kullandığınızda, **müşteriler**yerine **_Customers** belirtmeniz gerekir.
 
 ### <a name="to-cache-data-in-the-document-using-code"></a>Kodu kullanarak belgedeki verileri önbelleğe almak için
 
-1. Veri öğesi için, bir Word projesinde `ThisDocumen`t sınıfı veya bir Excel projesindeki `ThisWorkbook` sınıfı gibi, projenizdeki bir konak öğesi sınıfının bir üyesi olarak bir ortak alan veya özellik bildirin.
+1. Projenizdeki bir konak öğesi sınıfının bir üyesi olarak veri öğesi için bir ortak alan veya özellik bildirin; Örneğin, `ThisDocumen` bir Word projesindeki t sınıfı veya bir `ThisWorkbook` Excel projesindeki sınıfı.
 
-2. Veri öğesini belgenin veri önbelleğinde depolanacak şekilde işaretlemek için <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> özniteliğini üyeye uygulayın. Aşağıdaki örnek, bir <xref:System.Data.DataSet>için bu özniteliği bir alan bildirimine uygular.
+2. <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>Veri öğesini belgenin veri önbelleğinde depolanacak şekilde işaretlemek için özniteliği üyeye uygulayın. Aşağıdaki örnek, bu özniteliği bir için alan bildirimine uygular <xref:System.Data.DataSet> .
 
      [!code-csharp[Trin_VstcoreDataExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#11)]
      [!code-vb[Trin_VstcoreDataExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#11)]

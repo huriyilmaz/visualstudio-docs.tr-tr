@@ -1,18 +1,18 @@
 ---
 title: Windows Forms'a Diyagram Ekleme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 94425c9f3bc586847f43589f7abdcef2295cf1b9
-ms.sourcegitcommit: f3f668ecaf11b4c2738ebc91923c6b5e38e74670
+ms.openlocfilehash: 3e81a5ff10cd6e309ffbf17e40ffbaa9ec88f185
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76114618"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547634"
 ---
 # <a name="embed-a-diagram-in-a-windows-form"></a>Windows Formunda bir Diyagram ekleme
 
@@ -67,7 +67,7 @@ Bir DSL diyagramını, Visual Studio penceresinde görünen bir Windows denetimi
 
 ## <a name="update-the-form-using-store-events"></a>Mağaza olaylarını kullanarak formu güncelleştirme
 
-1. Form tasarımcısında `listBox1`adlı bir **ListBox** ekleyin. Bu, modeldeki öğelerin bir listesini görüntüler. *Mağaza olayları*kullanılarak modeliyle eşitlenir. Daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+1. Form tasarımcısında adlı bir **ListBox** ekleyin `listBox1` . Bu, modeldeki öğelerin bir listesini görüntüler. *Mağaza olayları*kullanılarak modeliyle eşitlenir. Daha fazla bilgi için bkz. [olay Işleyicileri değişiklikleri model dışında yayma](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
 2. Özel kod dosyasında, DocView sınıfına yönelik diğer yöntemleri geçersiz kılın:
 

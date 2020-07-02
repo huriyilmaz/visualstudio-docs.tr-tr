@@ -15,24 +15,24 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1b7c4c82add8644a1c2c213536c2ad3c0097c3a6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 30eee67d54e4fc3c73b265240fff82b0729e1cfc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661984"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546659"
 ---
 # <a name="ca1023-indexers-should-not-be-multidimensional"></a>CA1023: Dizin oluşturucular çok boyutlu olmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|IndexersShouldNotBeMultidimensional|
 |CheckId|CA1023|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Ortak veya korumalı bir tür, birden fazla dizin kullanan ortak veya korumalı bir Dizin Oluşturucu içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -45,13 +45,13 @@ ms.locfileid: "72661984"
  Bu kuraldan bir uyarıyı yalnızca standart olmayan Dizin Oluşturucu gereksinimini dikkatle ele aldıktan sonra gizleyin.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, kuralı ihlal eden çok boyutlu bir Dizin Oluşturucu ile `DayOfWeek03` türünü gösterir. Dizin Oluşturucu bir dönüştürme türü olarak görülebilir ve bu nedenle bir yöntem olarak daha uygun şekilde kullanıma sunulabilir. Tür, kuralı karşılamak için `RedesignedDayOfWeek03` ' da yeniden tasarlanmıştır.
+ Aşağıdaki örnek, `DayOfWeek03` kuralını ihlal eden çok boyutlu bir Dizin Oluşturucu ile bir türü gösterir. Dizin Oluşturucu bir dönüştürme türü olarak görülebilir ve bu nedenle bir yöntem olarak daha uygun şekilde kullanıma sunulabilir. Türü, kuralı karşılamak için ' de yeniden tasarlanmıştır `RedesignedDayOfWeek03` .
 
  [!code-cpp[FxCop.Design.OneDimensionForIndexer#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.OneDimensionForIndexer/cpp/FxCop.Design.OneDimensionForIndexer.cpp#1)]
  [!code-csharp[FxCop.Design.OneDimensionForIndexer#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.OneDimensionForIndexer/cs/FxCop.Design.OneDimensionForIndexer.cs#1)]
  [!code-vb[FxCop.Design.OneDimensionForIndexer#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.OneDimensionForIndexer/vb/FxCop.Design.OneDimensionForIndexer.vb#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1043: Dizin oluşturucular için tamsayı veya dize bağımsız değişkeni kullanın](../code-quality/ca1043-use-integral-or-string-argument-for-indexers.md)
+ [CA1043: Dizin oluşturucular için tam sayı veya dize bağımsız değişken kullanın](../code-quality/ca1043-use-integral-or-string-argument-for-indexers.md)
 
- [CA1024: Uygun yerlerde özellikler kullanın](../code-quality/ca1024-use-properties-where-appropriate.md)
+ [CA1024: Uygun yerlerde özellikleri kullanın](../code-quality/ca1024-use-properties-where-appropriate.md)

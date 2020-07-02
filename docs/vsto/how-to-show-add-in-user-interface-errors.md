@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Eklenti kullanıcı arayüzü hatalarını gösterme'
+title: 'Nasıl yapılır: eklenti Kullanıcı arayüzü hatalarını gösterme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,35 +15,35 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 78cc4d2e85e2f7a5347fe0c8927c855160fbb511
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 49985589c021192454bf0dd58929c9ef5646aec9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441786"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545788"
 ---
-# <a name="how-to-show-add-in-user-interface-errors"></a>Nasıl yapılır: Eklenti kullanıcı arayüzü hatalarını gösterme
-  Microsoft Office kullanıcı arabirimini (UI) ve başarısız olursa, işlemek VSTO eklentisi eşleşmeye çalışıyorsa, varsayılan olarak, hata iletisi görüntülenir. Ancak, Microsoft Office uygulamaları için kullanıcı Arabirimi ile ilgili hata iletileri görüntülemek için yapılandırabilirsiniz. Bu iletiler, özel bir Şerit bulunmamasının veya neden bir Şerit görünür ancak denetim yok görünür belirlemeye yardımcı olması için kullanabilirsiniz.
+# <a name="how-to-show-add-in-user-interface-errors"></a>Nasıl yapılır: eklenti Kullanıcı arayüzü hatalarını gösterme
+  Varsayılan olarak, bir VSTO eklentisi Microsoft Office Kullanıcı arabirimini (UI) işlemeyi denerse ve başarısız olursa, hata iletisi gösterilmez. Ancak, Kullanıcı arabirimiyle ilgili hatalara yönelik iletileri göstermek için Microsoft Office uygulamaları yapılandırabilirsiniz. Bu iletileri, özel bir şeridin neden görünmediğini veya bir şeridin neden göründüğünü, ancak hiçbir denetimin görünmediğini belirlemede yardımcı olması için kullanabilirsiniz.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
-## <a name="to-show-vsto-add-in-user-interface-errors"></a>VSTO eklenti kullanıcı arayüzü hatalarını göstermek için
+## <a name="to-show-vsto-add-in-user-interface-errors"></a>VSTO eklentisi Kullanıcı arabirimi hatalarını göstermek için
 
 1. Uygulamayı başlatın.
 
-2. Tıklayın **dosya** sekmesi.
+2. **Dosya** sekmesine tıklayın.
 
-3. Tıklayın **seçenekleri**.
+3. **Seçenekler**’e tıklayın.
 
-4. Kategorileri bölmesinden **Gelişmiş**.
+4. Kategoriler bölmesinde **Gelişmiş**' e tıklayın.
 
-5. Ayrıntılar bölmesinde seçin **kullanıcı arayüzü hatalarını gösterme VSTO eklentisi**ve ardından **Tamam**.
+5. Ayrıntılar bölmesinde, **VSTO eklentisi Kullanıcı arabirimi hatalarını göster**' i seçin ve ardından **Tamam**' a tıklayın.
 
     > [!NOTE]
-    > Outlook için **kullanıcı arayüzü hatalarını gösterme VSTO eklentisi** onay kutusu bulunan **Geliştirici** Ayrıntılar bölümünde. Diğer uygulamalar için onay kutusunu bulunan **genel** Ayrıntılar bölümünde.
+    > Outlook için, **VSTO eklentisi Kullanıcı arabirimi hatalarını göster** onay kutusu, ayrıntılar bölmesinin **Geliştirici** bölümünde bulunur. Diğer uygulamalar için, onay kutusu Ayrıntılar bölmesinin **genel** bölümünde bulunur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office kullanıcı arabirimini özelleştirme](../vsto/office-ui-customization.md)
+- [Office UI özelleştirmesi](../vsto/office-ui-customization.md)
 - [Outlook form bölgeleri oluşturma](../vsto/creating-outlook-form-regions.md)
-- [Şerite Genel Bakış](../vsto/ribbon-overview.md)
+- [Şerite genel bakış](../vsto/ribbon-overview.md)
 - [Eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md)

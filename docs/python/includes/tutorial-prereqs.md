@@ -1,20 +1,20 @@
 ---
 ms.topic: include
-ms.openlocfilehash: 38e4f8a6e0ae111627c756857417a173ae49c4d1
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 4c17c2c28504ee8f1491173b5d72ceba8f430ab9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "68193047"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85570190"
 ---
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 ::: moniker range="vs-2017"
-- Visual Studio 2017 Python iş yükü yüklü. Talimatlar için Visual [Studio' da Python ile Çalışma - Adım 0](../tutorial-working-with-python-in-visual-studio-step-00-installation.md)' a bakın.
+- Python iş yükünün yüklü olduğu Visual Studio 2017. Yönergeler için bkz. [Visual Studio 'Da Python Ile çalışma-adım 0](../tutorial-working-with-python-in-visual-studio-step-00-installation.md).
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-- Visual Studio 2019 Python iş yükü yüklü. Talimatlar için Visual [Studio' da Python ile Çalışma - Adım 0](../tutorial-working-with-python-in-visual-studio-step-00-installation.md)' a bakın.
+- Python iş yükünün yüklü olduğu Visual Studio 2019. Yönergeler için bkz. [Visual Studio 'Da Python Ile çalışma-adım 0](../tutorial-working-with-python-in-visual-studio-step-00-installation.md).
 ::: moniker-end
 
-Ayrıca Visual Studio'nun python tools for Visual Studio yüklü önceki bir sürümünü de kullanabilirsiniz. [Bkz. Visual Studio'da Python'u Yükle desteği.](../installing-python-support-in-visual-studio.md)
+Ayrıca, yüklü Visual Studio için Python Araçları Visual Studio 'nun önceki bir sürümünü de kullanabilirsiniz. Bkz. [Visual Studio 'Da Python desteğini Yüklemeyi](../installing-python-support-in-visual-studio.md).

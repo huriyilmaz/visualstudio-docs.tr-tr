@@ -1,7 +1,7 @@
 ---
 title: Sözcük kaydırma
 ms.date: 11/07/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - word wrap
 - editors, text viewing
@@ -12,45 +12,45 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f49925211247e346ac3203de20a97496c54295d
-ms.sourcegitcommit: 7b60e81414a82c6d34f6de1a1f56115c9cd26943
+ms.openlocfilehash: c4bf76643ce1ea6e2f449c54fbc31d441418becf
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81444810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770333"
 ---
-# <a name="how-to-manage-word-wrap-in-the-editor"></a>Nasıl yapılsın: Editörde sözcük kaydırmayı yönetme
+# <a name="how-to-manage-word-wrap-in-the-editor"></a>Nasıl yapılır: düzenleyicide sözcük kaydırmayı yönetme
 
-**Word kaydırma** seçeneğini ayarlayabilir ve temizleyebilirsiniz. Bu seçenek ayarlandığında, kod düzenleyicipenceresinin geçerli genişliğinin ötesine uzanan uzun bir satırın bölümü bir sonraki satırda görüntülenir. Bu seçenek, örneğin, satır numaralandırma kullanımını kolaylaştırmak için temizlendiğinde, uzun çizgilerin uçlarını görmek için sağa kaydırabilirsiniz.
+**Sözcük kaydır** seçeneğini ayarlayabilir ve temizleyebilirsiniz. Bu seçenek ayarlandığında, uzun bir çizginin, kod düzenleyici penceresinin geçerli genişliğini aşan kısmı sonraki satırda görüntülenir. Örneğin, satır numaralandırma kullanımını kolaylaştırmak için bu seçenek temizlendiğinde, uzun çizgilerin uçlarını görmek için sağa kaydırma yapabilirsiniz.
 
 > [!NOTE]
-> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio için [Kaynak editöre bakın: Word wrap](/visualstudio/mac/source-editor#word-wrap).
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için bkz. [kaynak Düzenleyicisi: sözcük kaydır](/visualstudio/mac/source-editor#word-wrap).
 
-## <a name="to-set-word-wrap-preferences"></a>Sözcük kaydırma tercihlerini ayarlamak için
+## <a name="to-set-word-wrap-preferences"></a>Sözcük kaydırmayı tercihleri ayarlamak için
 
 1. **Araçlar** menüsünde **Seçenekler**’i belirleyin.
 
-2. Metin **Düzenleyicisi** klasöründe, bu seçeneği genel olarak ayarlamak için **Tüm Diller** alt klasöründeki **Genel** seçenekleri seçin.
+2. **Metin düzenleyici** klasöründe, bu seçeneği küresel olarak ayarlamak Için **tüm diller** alt klasöründeki **genel** seçenekleri seçin.
 
-     — veya —
+     veya
 
-     Programlama yaptığınız dil için alt klasördeki **Genel** seçenekleri seçin.
+     Programlamadaki dilin alt klasöründeki **genel** seçenekleri seçin.
 
-3. **Ayarlar**altında **Word kaydırma** seçeneğini seçin veya temizleyin.
+3. **Ayarlar**altında **sözcük kaydır** seçeneğini belirleyin veya temizleyin.
 
-     Word **kaydırma** seçeneği seçildiğinde, sözcük kaydırma seçeneği **için görsel glifleri göster** etkinleştirilir.
+     **Sözcük kaydır** seçeneği belirlendiğinde **sözcük kaydırması Için görsel glifleri göster** seçeneği etkinleştirilmiştir.
 
-4. Uzun bir çizginin ikinci bir satıra kaydırıldığı bir dönüş ok göstergesi görüntülemeyi tercih **ederseniz, Word Wrap için görsel glifleri göster** seçeneğini belirleyin. Gösterge oklarını görüntülememek istiyorsanız bu seçeneği temizleyin.
+4. Uzun bir çizginin ikinci bir satıra kaydırılacağını gösteren bir dönüş oku göstergesini görüntülemeyi tercih ediyorsanız, **sözcük kaydırma için görsel glifleri göster** seçeneğini belirleyin. Gösterge oklarını görüntülememayı tercih ediyorsanız bu seçeneği temizleyin.
 
     > [!NOTE]
-    > Bu hatırlatma okları kodunuza eklenmez; bunlar yalnızca görüntü amaçlıdır.
+    > Bu anımsatıcı okları kodunuza eklenmez; Bunlar yalnızca görüntüleme amaçlıdır.
 
 ## <a name="known-issues"></a>Bilinen sorunlar
 
-Not Defteri++, Yüce Metin veya Visual Studio Kodu'nda sözcük kaydırma'ya aşinaysanız, Visual Studio'nun diğer editörlerden farklı davrandığını n ardından aşağıdaki sorunlardan haberdar olun:
+Not defteri + +, alt açık metin veya Visual Studio Code Word sarması hakkında bilgi sahibiyseniz, Visual Studio 'Nun diğer düzenleyicilerle farklı davrandığı aşağıdaki sorunlardan haberdar olun:
 
-* [Üçlü tıklama tüm satırı seçmez](https://developercommunity.visualstudio.com/content/problem/268989/triple-click-doesnt-select-whole-line-when-word-wr.html)
-* [End tuşuna iki kez basıldığında imleci satır sonuna taşımaz](https://developercommunity.visualstudio.com/content/problem/138274/pressing-end-key-twice-should-move-cursor-to-end-o.html)
+* [Üçlü tıklama tüm satırı seçmeyin](https://developercommunity.visualstudio.com/content/problem/268989/triple-click-doesnt-select-whole-line-when-word-wr.html)
+* [Bitiş tuşuna iki kez basıldığında imleç satır sonuna taşınamaz](https://developercommunity.visualstudio.com/content/problem/138274/pressing-end-key-twice-should-move-cursor-to-end-o.html)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,24 +9,24 @@ caps.latest.revision: 6
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: e5dee78ef3c487541363e9e290e54a8f3d68cf3b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 48c3f55b60add1691fe31c764f31673bbf1ab47b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72667423"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546360"
 ---
 # <a name="ca2151-fields-with-critical-types-should-be-security-critical"></a>CA2151: Kritik türler içeren alanlar güvenlik açısından kritik olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName||
 |CheckId|CA2151|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Güvenlik saydam alanı veya güvenli kritik alanı bildirilir. Türü güvenlik açısından kritik olarak belirtilir. Örneğin:
 
 ```csharp
@@ -41,13 +41,13 @@ ms.locfileid: "72667423"
    }
 ```
 
- Bu örnekte `m_field`, güvenlik açısından kritik olan bir türün güvenlik saydam alanıdır.
+ Bu örnekte, `m_field` güvenlik açısından kritik olan bir türün güvenlik saydam bir alanıdır.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Kritik güvenlik türlerini kullanmak için türe başvuran kod güvenliği kritik veya güvenlik güvenli kritik olmalıdır. Dolaylı başvuru olsa bile bu doğrudur. Örneğin, kritik bir türü olan saydam alana başvuru yaptığınızda, kodunuz güvenlik açısından kritik veya güvenlik güvenli olmalıdır. Bu nedenle, bir güvenlik saydam veya güvenlik güvenli kritik alana erişmek mümkün olmayacaktır, çünkü saydam kod hala alana erişemeyecektir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için alanı <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretleyin ya da alan ETH güvenliği saydam veya güvenli kritik tarafından başvurulan türü oluşturun.
+ Bu kural ihlalini onarmak için, alanı <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretleyin veya alan ETH güvenliği saydam veya güvenli kritik tarafından başvurulan türü oluşturun.
 
 ```csharp
 // Fix 1: Make the referencing field security critical
@@ -80,4 +80,4 @@ ms.locfileid: "72667423"
 ### <a name="code"></a>Kod
  [!code-csharp[FxCop.Security.CA2145.TransparentMethodsShouldNotUseSuppressUnmanagedCodeSecurity#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.security.ca2145.transparentmethodsshouldnotusesuppressunmanagedcodesecurity/cs/ca2145.cs#1)]
 
-### <a name="comments"></a>Açıklamalar
+### <a name="comments"></a>Yorumlar

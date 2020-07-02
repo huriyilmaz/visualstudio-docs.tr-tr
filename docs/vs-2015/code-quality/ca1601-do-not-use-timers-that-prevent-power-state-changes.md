@@ -15,24 +15,24 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 95f13604908ad45c5f33a011fec886bba90d0bd8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 7928b2fff8c12ca3f0cc3c58bee31fe5809517e5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669283"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545645"
 ---
 # <a name="ca1601-do-not-use-timers-that-prevent-power-state-changes"></a>CA1601: Güç durumu değişikliklerini önleyen zamanlayıcılar kullanmayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotUseTimersThatPreventPowerStateChanges|
 |CheckId|CA1601|
 |Kategori|Microsoft. Mobility|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir zamanlayıcının bir saniye başına birden fazla kez gerçekleşmesi için ayarlanmış bir aralığı vardır.
 
 ## <a name="rule-description"></a>Kural Tanımı

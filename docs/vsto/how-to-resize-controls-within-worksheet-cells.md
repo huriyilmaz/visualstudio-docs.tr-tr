@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Çalışma sayfası hücrelerinin içindeki denetimleri yeniden boyutlandırma'
+title: 'Nasıl yapılır: çalışma sayfası hücreleri içinde denetimleri yeniden boyutlandırma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +15,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 08c65be450c45d7797984105723d5ae1b01a2d63
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: f2d22973e13ee77b66de303041f8b6a765b4b93a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71252068"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545879"
 ---
-# <a name="how-to-resize-controls-within-worksheet-cells"></a>Nasıl yapılır: Çalışma sayfası hücrelerinin içindeki denetimleri yeniden boyutlandırma
+# <a name="how-to-resize-controls-within-worksheet-cells"></a>Nasıl yapılır: çalışma sayfası hücreleri içinde denetimleri yeniden boyutlandırma
   Çalışma sayfasındaki sütunları veya satırları yeniden boyutlandırdığınızda, hücrelerdeki tüm konak denetimleri yeniden boyutlandırıldı hücrenin Yükseklik veya genişliğine otomatik olarak yeniden boyutlandırılır. Windows Forms denetimleri varsayılan olarak otomatik olarak yeniden boyutlandırılır.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "71252068"
      Denetimi içeren hücreyi yeniden boyutlandırdığınızda, denetim hücreye sığacak şekilde yeniden boyutlandırılır.
 
 ## <a name="resize-controls-at-run-time"></a>Çalışma zamanında denetimleri yeniden boyutlandırma
- Çalışma zamanında bir Windows Forms denetimi ekler ve denetimin konumu olarak bir <xref:Microsoft.Office.Interop.Excel.Range> olarak geçirirseniz, aralığı içeren çalışma sayfası hücresi yeniden boyutlandırılırken denetim otomatik olarak yeniden boyutlandırılır.
+ Çalışma zamanında bir Windows Forms denetimi ekler ve <xref:Microsoft.Office.Interop.Excel.Range> denetimin konumu olarak bir olarak geçirirseniz, aralığı içeren çalışma sayfası hücresi yeniden boyutlandırılırken denetim otomatik olarak yeniden boyutlandırılır.
 
 ### <a name="to-make-controls-resize-with-cells-at-run-time"></a>Denetimlerin çalışma zamanında hücrelerle yeniden boyutlandırılması için
 
@@ -58,7 +58,7 @@ ms.locfileid: "71252068"
      Denetimi içeren hücreyi yeniden boyutlandırdığınızda, denetim hücreye sığacak şekilde yeniden boyutlandırılır.
 
 ## <a name="reset-control-placement"></a>Denetim yerleşimini Sıfırla
- `Placement` Özelliği aşağıdaki<xref:Microsoft.Office.Interop.Excel.XlPlacement> değerlerden birine ayarlayarak denetimin yerleşimini ve yeniden boyutlandırılmasını sıfırlayabilirsiniz:
+ `Placement`Özelliği aşağıdaki değerlerden birine ayarlayarak denetimin yerleşimini ve yeniden boyutlandırılmasını sıfırlayabilirsiniz <xref:Microsoft.Office.Interop.Excel.XlPlacement> :
 
 - <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>
 
@@ -68,7 +68,7 @@ ms.locfileid: "71252068"
 
 ### <a name="to-change-the-behavior-of-a-control-so-that-it-does-not-resize-or-move-with-the-cell"></a>Bir denetimin davranışını yeniden boyutlandırmaması veya hücreyle birlikte hareket ettirmek üzere değiştirmek için
 
-1. Denetimin yerleşim özelliğini çağırın ve değerini olarak <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>ayarlayın.
+1. Denetimin yerleşim özelliğini çağırın ve değerini olarak ayarlayın <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating> .
 
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#6)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#6)]
@@ -76,6 +76,6 @@ ms.locfileid: "71252068"
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office belgelerindeki denetimler](../vsto/controls-on-office-documents.md)
 - [Nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
-- [Nasıl yapılır: Yazdırırken çalışma sayfalarındaki denetimleri gizle](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)
+- [Nasıl yapılır: yazdırırken çalışma sayfalarında denetimleri gizleme](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)
 - [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
 - [Office belgelerindeki Windows Forms denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)

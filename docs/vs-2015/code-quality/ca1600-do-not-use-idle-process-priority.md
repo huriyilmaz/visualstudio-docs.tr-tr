@@ -15,31 +15,31 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d4260db808d9c50f78388cf6ba976f7ace52e6a3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 3f6233136dcf7f1db5d622a02419d33e0eedacf5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669291"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545684"
 ---
 # <a name="ca1600-do-not-use-idle-process-priority"></a>CA1600: Boş işlem önceliğini kullanmayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotUseIdleProcessPriority|
 |CheckId|CA1600|
 |Kategori|Microsoft. Mobility|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Bu kural, işlem `ProcessPriorityClass.Idle` olarak ayarlandığında oluşur.
+## <a name="cause"></a>Nedeni
+ Bu kural, işlem olarak ayarlandığında oluşur `ProcessPriorityClass.Idle` .
 
 ## <a name="rule-description"></a>Kural Tanımı
- İşlem önceliğini Boşta olarak ayarlamayın. @No__t_0 olan süreçler, aksi durumda boşta kalması durumunda CPU 'nun kaplamasına neden olur ve bu nedenle beklemeyi engeller.
+ İşlem önceliğini Boşta olarak ayarlamayın. Bu işlem, `System.Diagnostics.ProcessPriorityClass.Idle` Aksi durumda boşta kaldığında CPU 'yu kaplayacaktır ve bu nedenle beklemeyi engeller.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- İşlem `ProcessPriorityClass.BelowNormal` olarak ayarlayın.
+ İşlem olarak ayarlayın `ProcessPriorityClass.BelowNormal` .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kural yalnızca boş işlem önceliği gerekli olduğunda ve hareketlilik konuları güvenli bir şekilde yoksayılarak bastırılır.

@@ -1,7 +1,7 @@
 ---
 title: Hedeflenen .NET çerçeveleri
 ms.date: 03/31/2020
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
 - framework targeting [Visual Studio]
@@ -11,115 +11,115 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 48d770f5d88e19c749c1a1e657c369089d4c7afb
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.openlocfilehash: b7c3c2b6b81f8f7793bda35c6b220e43caee9b5f
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80472726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770455"
 ---
-# <a name="framework-targeting-overview"></a>Çerçeve hedeflemegenel bakış
+# <a name="framework-targeting-overview"></a>Çerçeve hedefleme genel bakış
 
-Visual Studio'da,.NET'in projenizin hedeflemesini istediğiniz sürümünü belirtebilirsiniz. Çerçeve hedefleme, uygulamanın yalnızca belirtilen çerçeve sürümünde kullanılabilen işlevselliği kullandığını garanti eder. .NET Framework uygulamalarının başka bir bilgisayarda çalıştırAbilmesi için, uygulama nın hedeflenen çerçeve sürümünün bilgisayarda yüklenen çerçeve sürümüyle uyumlu olması gerekir.
+Visual Studio 'da, projenizin hedeflemesini istediğiniz .NET sürümünü belirtebilirsiniz. Framework hedefleme, uygulamanın yalnızca belirtilen Framework sürümünde kullanılabilen işlevselliği kullanmasını garantilemeye yardımcı olur. .NET Framework uygulamaların başka bir bilgisayarda çalışması için, uygulamanın hedeflediği çerçeve sürümü, bilgisayarda yüklü olan Framework sürümüyle uyumlu olmalıdır.
 
-Visual Studio çözümü,.NET'in farklı sürümlerini hedefleyen projeler içerebilir.  Ancak, .NET'in yalnızca tek bir sürümüne karşı tek bir yapı için başvuru koşullu larını kullanarak veya her sürüm için özyinelemeli olarak farklı ikililer oluşturabileceğinizi unutmayın.  Hedef çerçeveler hakkında daha fazla bilgi için [Hedef çerçevelerine](/dotnet/standard/frameworks)bakın.
+Visual Studio çözümü, .NET 'in farklı sürümlerini hedefleyen projeler içerebilir.  Bununla birlikte, tek bir yapı için başvuru koşulalları kullanarak yalnızca bir .NET sürümü için derleme yapabileceğinizi veya her sürüm için yinelemeli olarak farklı ikili dosyaları derlemeyi istediğinizi unutmayın.  Hedef çerçeveler hakkında daha fazla bilgi için bkz. [hedef çerçeveler](/dotnet/standard/frameworks).
 
 > [!TIP]
-> Ayrıca farklı platformlar için uygulamaları hedefleyebilirsiniz. Daha fazla bilgi için [Multitargeting'e](../msbuild/msbuild-multitargeting-overview.md)bakın.
+> Farklı platformlar için de uygulama hedefleyebilirsiniz. Daha fazla bilgi için bkz. [Çoklu hedefleme](../msbuild/msbuild-multitargeting-overview.md).
 
-## <a name="framework-targeting-features"></a>Çerçeve hedefleme özellikleri
+## <a name="framework-targeting-features"></a>Framework hedefleme özellikleri
 
-Çerçeve hedeflemesi aşağıdaki özellikleri içerir:
+Framework Hedefleme aşağıdaki özellikleri içerir:
 
-- Daha önceki bir çerçeve sürümünü hedefleyen bir proje yi açtığınızda, Visual Studio projeyi otomatik olarak yükseltebilir veya hedefi olduğu gibi bırakabilir.
+- Önceki bir Framework sürümünü hedefleyen bir projeyi açtığınızda, Visual Studio projeyi otomatik olarak yükseltebilir veya hedefi olduğu gibi bırakabilir.
 
 - Bir .NET Framework projesi oluşturduğunuzda, hedeflemek istediğiniz .NET Framework sürümünü belirtebilirsiniz.
 
-- Tek bir projede [birden çok çerçeveyi hedefleyebilirsiniz.](/dotnet/standard/frameworks#how-to-specify-target-frameworks)
+- Çoklu çerçeveleri tek bir projede [hedefleyebilirsiniz](/dotnet/standard/frameworks#how-to-specify-target-frameworks) .
 
-- Aynı çözümdeki birkaç projenin her birinde .NET'in farklı bir sürümünü hedefleyebilirsiniz.
+- Aynı çözümdeki birçok projenin her birinde .NET 'in farklı bir sürümünü hedefleyebilirsiniz.
 
-- Varolan bir projenin hedeflediğiniz .NET sürümünü değiştirebilirsiniz.
+- Mevcut projenin hedeflediği .NET sürümünü değiştirebilirsiniz.
 
-   Bir projenin hedeflediğiniz .NET sürümünü değiştirdiğinizde, Visual Studio başvurularda ve yapılandırma dosyalarında gerekli değişiklikleri yapar.
+   Bir projenin hedeflediği .NET sürümünü değiştirdiğinizde, Visual Studio başvuru ve yapılandırma dosyalarında gerekli tüm değişiklikleri yapar.
 
-Daha önceki bir çerçeve sürümünü hedefleyen bir proje üzerinde çalışırken, Visual Studio geliştirme ortamını aşağıdaki gibi dinamik olarak değiştirir:
+Önceki bir Framework sürümünü hedefleyen bir projede çalışırken, Visual Studio geliştirme ortamını dinamik olarak aşağıdaki gibi değiştirir:
 
-- **Yeni Öğe Ekle** iletişim kutusundaki öğeleri, **Yeni Başvuru Ekle** iletişim kutusunu ve Hedefsürüm'te bulunmayan seçenekleri atlayan **Hizmet Başvurusu Ekle** iletişim kutusunu filtreler.
+- **Yeni öğe Ekle** iletişim kutusu, **Yeni Başvuru Ekle** iletişim kutusu ve hedeflenen sürümde kullanılamayan seçimleri atlamak için **hizmet başvurusu Ekle** iletişim kutusu içindeki öğelere filtre uygular.
 
-- Hedeflenen sürümde bulunmayandenetimleri kaldırmak ve birden çok denetim kullanılabilir olduğunda yalnızca en güncel denetimleri göstermek için **Araç Kutusu'ndaki** özel denetimleri filtreler.
+- **Araç kutusundaki** özel denetimleri filtreleyerek, hedeflenen sürümde mevcut olmayan olanları kaldırabilir ve birden fazla denetim kullanılabilir olduğunda yalnızca en güncel denetimleri gösterebilirsiniz.
 
-- **Hedeflenen** sürümde bulunmayan dil özelliklerini atlatır.
+- Hedeflenen sürümde kullanılamayan dil özelliklerini atlamak için **IntelliSense** 'e filtre uygular.
 
-- Hedeflenen sürümde bulunmayanözellikleri atlamak için **Özellikler** penceresindeki özellikleri filtreler.
+- **Özellikler** penceresindeki özellikleri, hedeflenen sürümde mevcut olmayan olanları atlamak için filtreler.
 
-- Hedeflenen sürümde bulunmayan seçenekleri atlamak için menü seçeneklerini filtreler.
+- Hedeflenen sürümde kullanılamayan seçenekleri atlamak için menü seçeneklerini filtreler.
 
-- Yapılar için derleyicinin sürümünü ve hedeflenen sürüme uygun derleyici seçeneklerini kullanır.
+- Derlemeler için, derleyici sürümünü ve hedeflenen sürüm için uygun olan derleyici seçeneklerini kullanır.
 
 > [!NOTE]
-> - Çerçeve hedefleme, uygulamanızın doğru çalışacağına dair garanti vermez. Uygulamanızın hedeflenen sürüme karşı çalıştığından emin olmak için uygulamanızı test etmeniz gerekir.
-> - .NET Framework 2.0'ın altındaki çerçeve sürümlerini hedefleyemezsiniz.
+> - Framework hedefleme, uygulamanızın doğru şekilde çalışacağını garanti etmez. Hedeflenen sürüme karşı çalıştığından emin olmak için uygulamanızı test etmeniz gerekir.
+> - 2,0 .NET Framework aşağıdaki Framework sürümlerini hedeflenemez.
 
 ## <a name="select-a-target-framework-version"></a>Hedef çerçeve sürümü seçin
 
-Bir .NET Framework projesi oluşturduğunuzda, proje şablonu seçtikten sonra hedef .NET Framework sürümünü seçebilirsiniz. Kullanılabilir çerçeveler listesi, seçili şablon türü için geçerli olan yüklü çerçeve sürümlerini içerir. Çerçeve proje şablonları non-.NET için ,örneğin .NET Core şablonları, **Framework** açılır listesi görünmez.
+Bir .NET Framework projesi oluşturduğunuzda, bir proje şablonu seçtikten sonra hedef .NET Framework sürümünü seçebilirsiniz. Kullanılabilir çerçeveler listesi, seçilen şablon türü için geçerli olan yüklü çerçeve sürümlerini içerir. Non-.NET Framework proje şablonları için, örneğin .NET Core şablonları için, **çerçeve** açılan listesi görünmez.
 
 ::: moniker range="vs-2017"
 
-![VS 2017'de çerçeve düşüşü](media/vside-newproject-framework.png)
+![VS 2017 ' deki çerçeve açılan düzeyi](media/vside-newproject-framework.png)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-![VS 2019'da çerçeve düşüşü](media/vs-2019/configure-new-project-framework.png)
+![VS 2019 ' de çerçeve açılan kutusu](media/vs-2019/configure-new-project-framework.png)
 
 ::: moniker-end
 
 ## <a name="change-the-target-framework"></a>Hedef çerçeveyi değiştirme
 
-Varolan bir Visual Basic, C#veya F# projesinde, proje özellikleri iletişim kutusundaki hedef .NET sürümünü değiştirirsiniz. C++ projeleri için hedef sürümü nasıl değiştireceğiniz hakkında bilgi için, bunun yerine [hedef çerçeve ve platform araç kümesini nasıl değiştireceğiniz](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset) e bakın.
+Mevcut bir Visual Basic, C# veya F # projesinde, proje özellikleri iletişim kutusunda hedef .NET sürümünü değiştirirsiniz. C++ projelerinin hedef sürümünü değiştirme hakkında daha fazla bilgi için, bkz. [hedef Framework ve platform araç takımını değiştirme](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset) .
 
-1. **Çözüm Gezgini'nde,** değiştirmek istediğiniz proje için sağ tıklatın menüsünü açın ve ardından **Özellikler'i**seçin.
+1. **Çözüm Gezgini**, değiştirmek istediğiniz proje için sağ tıklama menüsünü açın ve ardından **Özellikler**' i seçin.
 
-1. **Özellikler** penceresinin sol sütununda **Uygulama** sekmesini seçin.
+1. **Özellikler** penceresinin sol sütununda **uygulama** sekmesini seçin.
 
-   ![Proje özellikleri Uygulama sekmesi](../ide/media/vs_slnexplorer_properties_applicationtab.png)
+   ![Proje özellikleri uygulama sekmesi](../ide/media/vs_slnexplorer_properties_applicationtab.png)
 
    > [!NOTE]
-   > Bir UWP uygulaması oluşturduktan sonra, Windows veya .NET'in hedeflenen sürümünü değiştiremezsiniz.
+   > UWP uygulaması oluşturduktan sonra, Windows veya .NET 'in hedeflenen sürümünü değiştiremezsiniz.
 
-1. Hedef **Çerçeve** listesinde istediğiniz sürümü seçin.
+1. **Hedef çerçeve** listesinde, istediğiniz sürümü seçin.
 
-1. Görünen doğrulama iletişim kutusunda **Evet** düğmesini seçin.
+1. Görüntülenen doğrulama iletişim kutusunda **Evet** düğmesini seçin.
 
-   Projenin yüklemesi kaldırılır. Yeniden yüklendiğinde, az önce seçtiğiniz .NET sürümünü hedefler.
+   Projenin yüklemesi kaldırılır. Yeniden yüklediğinde, yeni seçtiğiniz .NET sürümünü hedefler.
 
 > [!NOTE]
-> Kodunuz .NET'in hedeflediğiniz farklı bir sürümüne başvurular içeriyorsa, kodu derlediğinizde veya çalıştırdığınızda hata iletileri görünebilir. Bu hataları gidermek için başvuruları değiştirin. [Bkz. Sorun Giderme .NET hedefleme hataları.](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)
+> Kodunuz, hedeflenmeden farklı bir .NET sürümüne başvurular içeriyorsa, kodu derlerken veya çalıştırdığınızda hata iletileri görünebilir. Bu hataları gidermek için başvuruları değiştirin. Bkz. [.net hedefleme hatalarında sorun giderme](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md).
 
 > [!TIP]
-> Hedef çerçeveye bağlı olarak, proje dosyasında aşağıdaki şekillerde temsil edilebilir:
+> Hedef çerçeveye bağlı olarak, proje dosyasında aşağıdaki yollarla temsil edilebilir:
 >
 > - Bir .NET Core uygulaması için:`<TargetFramework>netcoreapp2.1</TargetFramework>`
-> - Bir .NET Standart uygulaması için:`<TargetFramework>netstandard2.0</TargetFramework>`
-> - Bir .NET Framework uygulaması için:`<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>`
+> - .NET Standard bir uygulama için:`<TargetFramework>netstandard2.0</TargetFramework>`
+> - .NET Framework bir uygulama için:`<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>`
 
-## <a name="resolve-system-and-user-assembly-references"></a>Sistem ve kullanıcı derleme başvurularını çözme
+## <a name="resolve-system-and-user-assembly-references"></a>Sistem ve Kullanıcı derleme başvurularını çözümle
 
-Bir .NET sürümünü hedeflemek için öncelikle uygun montaj başvurularını yüklemeniz gerekir. [.NET'in](https://www.microsoft.com/net/download/windows) farklı sürümleri için geliştirici paketlerini .NET indirmeler sayfasından indirebilirsiniz.
+.NET sürümünü hedeflemek için, önce uygun derleme başvurularını yüklemeniz gerekir. .Net [İndirmeleri](https://www.microsoft.com/net/download/windows) sayfasına farklı .NET sürümleri için geliştirici paketleri indirebilirsiniz.
 
-.NET Framework projeleri için, **Başvuru Ekle** iletişim kutusu, projeye yanlışlıkla eklenememesi için hedef .NET Framework sürümüyle ilgili olmayan sistem derlemelerini devre dışı kılabilir. (Sistem derlemeleri .NET Framework sürümünde yer alan *.dll* dosyalarıdır.) Hedeflenen sürümden daha yüksek bir çerçeve sürümüne ait başvurular çözülmez ve böyle bir başvuruya bağlı denetimler eklenemez. Böyle bir başvuruyu etkinleştirmek istiyorsanız, projenin .NET Framework hedefini başvuruyu içeren bir hedefe sıfırlayın.
+.NET Framework projeleri için, **Başvuru Ekle** iletişim kutusu, hedef .NET Framework sürümüne ait olmayan sistem derlemelerini devre dışı bırakarak, bir projeye istem dışı eklenememelidir. (Sistem derlemeleri .NET Framework sürümünde yer alan *. dll* dosyalarıdır.) Hedeflenen sürümden daha yüksek bir çerçeve sürümüne ait olan başvurular çözümlenmeyecektir ve bu tür bir başvuruya bağlı olan denetimler eklenemez. Böyle bir başvuruyu etkinleştirmek istiyorsanız, projenin .NET Framework hedefini başvuruyu içeren bir tane olarak sıfırlayın.
 
-Derleme başvuruları hakkında daha fazla bilgi için tasarım [zamanında derlemeleri](../msbuild/resolving-assemblies-at-design-time.md)çözümle'ye bakın.
+Derleme başvuruları hakkında daha fazla bilgi için bkz. [tasarım zamanında derlemeleri çözümleme](../msbuild/resolving-assemblies-at-design-time.md).
 
-## <a name="enable-linq"></a>LINQ'yi etkinleştir
+## <a name="enable-linq"></a>LINQ 'ı etkinleştir
 
-.NET Framework 3.5 veya sonraki hedefiniyaptığınızda, **System.Core'a** bir <xref:System.Linq> başvuru ve (yalnızca Visual Basic'te) için proje düzeyinde bir alma işlemi otomatik olarak eklenir. LINQ özelliklerini kullanmak istiyorsanız, (yalnızca `Option Infer` Visual Basic'te) açmanız gerekir. Hedefi daha önceki bir .NET Framework sürümüne değiştirirseniz, başvuru ve alma işlemi otomatik olarak kaldırılır. Daha fazla bilgi için [LINQ ile çalışma 'ya](/dotnet/csharp/tutorials/working-with-linq)bakın.
+.NET Framework 3,5 veya sonraki bir sürümü hedeflediğinizde, **System. Core** 'a yönelik bir başvuru ve <xref:System.Linq> (yalnızca Visual Basic ' de) için bir proje düzeyi içeri aktarma otomatik olarak eklenir. LINQ özelliklerini kullanmak istiyorsanız, `Option Infer` (yalnızca Visual Basic) öğesini de açmanız gerekir. Hedefi önceki bir .NET Framework sürümü olarak değiştirirseniz başvuru ve içeri aktarma otomatik olarak kaldırılır. Daha fazla bilgi için bkz. [LINQ Ile çalışma](/dotnet/csharp/tutorials/working-with-linq).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hedef çerçeveler](/dotnet/standard/frameworks)
-- [Çok hedefleme (MSBuild)](../msbuild/msbuild-multitargeting-overview.md)
-- [Nasıl yapılır: Hedef çerçeveyi ve platform araç kümesini değiştirme (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)
+- [Çoklu hedefleme (MSBuild)](../msbuild/msbuild-multitargeting-overview.md)
+- [Nasıl yapılır: hedef Framework ve platform araç takımını değiştirme (C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)

@@ -11,30 +11,30 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5e8e88401a6fbe3ab7dc635dadee9215b049b2d5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: bee810ed938d316e92095ad47062ed5ad9cd456f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72602840"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546451"
 ---
 # <a name="ca2141transparent-methods-must-not-satisfy-linkdemands"></a>CA2141:Transparent yöntemleri LinkDemands'i karşılamamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|TransparentMethodsMustNotSatisfyLinkDemands|
 |CheckId|CA2141|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Bir güvenlik saydam yöntemi, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) özniteliğiyle işaretlenmemiş bir derlemede bir yöntemi çağırır veya bir güvenlik saydam yöntemi bir tür ya da yöntem için <xref:System.Security.Permissions.SecurityAction> `.LinkDemand` karşılar.
+## <a name="cause"></a>Nedeni
+ Bir güvenlik saydam yöntemi, (aptca) özniteliğiyle işaretlenmemiş bir derlemede bir yöntemi çağırır <xref:System.Security.AllowPartiallyTrustedCallersAttribute> veya bir güvenlik saydam yöntemi bir <xref:System.Security.Permissions.SecurityAction> `.LinkDemand` tür ya da yöntem için öğesini karşılar.
 
 ## <a name="rule-description"></a>Kural Tanımı
  LinkDemand 'in yerine bir güvenlik duyarlı işlem, yanlışlıkla ayrıcalık yükselmesine neden olabilir. Güvenliği saydam kod, güvenlik açısından kritik kod ile aynı güvenlik denetimi gereksinimlerine tabi olmadığından, bağlantı taleplerini karşılamamalıdır. Güvenlik kuralı kümesi düzey 1 derlemelerindeki saydam Yöntemler, tüm bağlantı taleplerinin çalışma zamanında tam taleplerine dönüştürülmesini sağlar ve bu da performans sorunlarına neden olabilir. Güvenlik kuralı set Level 2 derlemeleri içinde, bir LinkDemand ile yararlanmaya çalıştıklarında, saydam Yöntemler tam zamanında (JıT) derleyicide derlenmeyecektir.
 
- 2\. düzey güvenliği güvenlik düzeyine sahip olan derlemelerde, bir bağlantı talebini karşılamak için bir güvenlik saydam yöntemi veya APTCA olmayan bir derlemede bir yöntemi çağırmak, bir <xref:System.MethodAccessException> oluşturur; Düzey 1 derlemelerde LinkDemand tam talep haline gelir.
+ 2. düzey güvenliği güvenlik düzeyine sahip olan derlemelerde, bir bağlantı talebini karşılamak için bir güvenlik saydam yöntemi veya bir APTCA derlemesinde bir yöntemi çağırmak çalışır a <xref:System.MethodAccessException> ; düzey 1 derlemelerde LinkDemand tam bir talep haline gelir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini onarmak için, erişim yöntemini <xref:System.Security.SecurityCriticalAttribute> veya <xref:System.Security.SecuritySafeCriticalAttribute> özniteliğiyle işaretleyin ya da bağlantı talebini erişilen yöntemden kaldırın.

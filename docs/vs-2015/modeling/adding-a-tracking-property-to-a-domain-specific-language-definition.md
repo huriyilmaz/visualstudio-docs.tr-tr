@@ -13,12 +13,12 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 60823c1fe17613f36e800a2cdf69dd19049ddb27
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 382d5dc5ee416d901e1b73b7b2fb346e83abbef6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919112"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545580"
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>Etki Alanına Özgü Dil Tanımıma İzleme Özelliği Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -45,14 +45,14 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
 
 - **Özellikler** penceresinde, izleme özelliği kullanıcı durumunda olduğunda, değeri kalın yazı tipinde görüntülenir.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Ön koşullar
  Bu yönergeyi başlatabilmeniz için önce şu bileşenleri yüklemeniz gerekir:
 
-|||
+|Ürün|İndirme bağlantısı|
 |-|-|
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]|[https://www.visualstudio.com/](https://www.visualstudio.com/)|
 |[!INCLUDE[vssdk_current_short](../includes/vssdk-current-short-md.md)]|[Visual Studio SDK](../extensibility/visual-studio-sdk.md)|
-|{1&gt;{2&gt;Visual Studio Görselleştirme ve Modelleme SDK'sı&lt;2}&lt;1}|[Modelleme SDK Indirmesi](https://www.microsoft.com/download/details.aspx?id=48148)|
+|Visual Studio görselleştirme ve modelleme SDK|[Modelleme SDK Indirmesi](https://www.microsoft.com/download/details.aspx?id=48148)|
 
 ## <a name="creating-the-dsl-project"></a>DSL projesi oluşturma
  Etki alanına özgü diliniz için projeyi oluşturun.
@@ -65,17 +65,17 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
 
     1. En **az Allanguage** şablonunu seçin.
 
-    2. Etki alanına özgü dil için varsayılan adı kullanın, `TrackingPropertyDSL`.
+    2. Etki alanına özgü dil için varsayılan adı kullanın `TrackingPropertyDSL` .
 
-    3. Model dosyalarının uzantısını `trackingPropertyDsl`olarak ayarlayın.
+    3. Model dosyalarının uzantısını olarak ayarlayın `trackingPropertyDsl` .
 
     4. Model dosyaları için varsayılan şablon simgesini kullanın.
 
-    5. Ürünün adını `Product Name`olarak ayarlayın.
+    5. Ürünün adını olarak ayarlayın `Product Name` .
 
-    6. Şirketin adını `Company Name`olarak ayarlayın.
+    6. Şirketin adını olarak ayarlayın `Company Name` .
 
-    7. Çözümdeki projeler için kök ad alanı için varsayılan değeri kullanın, `CompanyName.ProductName.TrackingPropertyDSL`.
+    7. Çözümdeki projeler için kök ad alanı için varsayılan değeri kullanın `CompanyName.ProductName.TrackingPropertyDSL` .
 
     8. Sihirbazın derlemeleriniz için tanımlayıcı ad anahtar dosyası oluşturmasına izin verin.
 
@@ -96,27 +96,27 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
 
 1. DSL tasarımcısında, **ExampleModel** etki alanı sınıfına sağ tıklayın, **Ekle**' nin üzerine gelin ve **DomainProperty**' ye tıklayın.
 
-    1. Yeni özelliği `DefaultNamespace`olarak adlandırın.
+    1. Yeni özelliği adlandırın `DefaultNamespace` .
 
-    2. Yeni özelliğin **Özellikler** penceresinde, **varsayılan değeri** `DefaultNamespace`olarak ayarlayın ve **Type** öğesini **String**olarak ayarlayın.
+    2. Yeni özelliğin **Özellikler** penceresinde, **varsayılan değeri** olarak ayarlayın `DefaultNamespace` ve **Type** öğesini **String**olarak ayarlayın.
 
-2. **ExampleModel** etki alanı sınıfına, `CustomElements`adlı bir etki alanı özelliği ekleyin.
+2. **ExampleModel** etki alanı sınıfına, adlı bir etki alanı özelliği ekleyin `CustomElements` .
 
      Yeni özellik için **Özellikler** penceresinde, **tür** ' ü **hesaplanacak**olarak ayarlayın.
 
-3. **ExampleElement** etki alanı sınıfına, `Namespace`adlı bir etki alanı özelliği ekleyin.
+3. **ExampleElement** etki alanı sınıfına, adlı bir etki alanı özelliği ekleyin `Namespace` .
 
      Yeni özellik için **Özellikler** penceresinde, set **yanlış**olarak **gözatılabilir** ve **tür** ' i **CustomStorage**olarak ayarlayın.
 
-4. **ExampleElement** etki alanı sınıfına, `IsNamespaceTracking`adlı bir etki alanı özelliği ekleyin.
+4. **ExampleElement** etki alanı sınıfına, adlı bir etki alanı özelliği ekleyin `IsNamespaceTracking` .
 
-     Yeni özelliğin **Özellikler** penceresinde **, ayarla '** yı **yanlış**olarak, **varsayılan değeri** `true`olarak ayarlayın ve **tür** ' i **Boolean**olarak ayarlayın.
+     Yeni özellik için **Özellikler** penceresinde **, Ayarla özelliği** **yanlış**olarak, **varsayılan değeri** olarak ayarlayın `true` ve **tür** ' i **Boolean**olarak ayarlayın.
 
 #### <a name="to-update-the-diagram-elements-and-dsl-details"></a>Diyagram öğelerini ve DSL ayrıntılarını güncelleştirmek için
 
 1. DSL tasarımcısında, **ExampleShape** Geometry şekline sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **metin dekoratörü**' ne tıklayın.
 
-    1. Yeni metin dekoratörü `NamespaceDecorator`adlandırın.
+    1. Yeni metin dekoratisini adlandırın `NamespaceDecorator` .
 
     2. Metin dekoratörü için **Özellikler** penceresinde, **konumu** **InnerBottomLeft**olarak ayarlayın.
 
@@ -152,20 +152,20 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
 
 #### <a name="to-create-the-code-files"></a>Kod dosyalarını oluşturmak için
 
-1. **Çözüm Gezgini**, **DSL** projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' e tıklayın. Yeni klasörü `CustomCode`olarak adlandırın.
+1. **Çözüm Gezgini**, **DSL** projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve **Yeni klasör**' e tıklayın. Yeni klasörü adlandırın `CustomCode` .
 
 2. Yeni **CustomCode** klasörüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni öğe**' ye tıklayın.
 
-3. **Kod dosyası** şablonunu seçin, **adı** `NamespaceTrackingProperty.cs`olarak ayarlayın ve ardından **Tamam**' a tıklayın.
+3. **Kod dosyası** şablonunu seçin, **adını** olarak ayarlayın `NamespaceTrackingProperty.cs` ve ardından **Tamam**' a tıklayın.
 
      NamespaceTrackingProperty.cs dosyası oluşturulup düzenlenmek üzere açılır.
 
-4. Klasöründe aşağıdaki kod dosyalarını oluşturun: `ExampleModel.cs,``HelperClasses.cs`, `Serialization.cs`ve `TypeDescriptor.cs`.
+4. Klasöründe aşağıdaki kod dosyalarını oluşturun: `ExampleModel.cs,``HelperClasses.cs` , `Serialization.cs` , ve `TypeDescriptor.cs` .
 
-5. **DslPackage** projesinde ayrıca bir `CustomCode` klasörü oluşturun ve buna bir `Package.cs` kod dosyası ekleyin.
+5. **DslPackage** projesinde Ayrıca bir `CustomCode` klasör oluşturun ve bu klasöre bir `Package.cs` kod dosyası ekleyin.
 
 ## <a name="adding-helper-classes-to-support-tracking-properties"></a>Izleme özelliklerini desteklemek için yardımcı sınıfları ekleme
- HelperClasses.cs dosyasına `TrackingHelper` ve `CriticalException` sınıfları aşağıdaki şekilde ekleyin. Bu sınıfların ilerleyen kısımlarında bu sınıflara başvurabileceksiniz.
+ HelperClasses.cs dosyasına `TrackingHelper` ve `CriticalException` sınıflarını aşağıdaki gibi ekleyin. Bu sınıfların ilerleyen kısımlarında bu sınıflara başvurabileceksiniz.
 
 #### <a name="to-add-the-helper-classes"></a>Yardımcı sınıfları eklemek için
 
@@ -245,10 +245,10 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
     ```
 
 ## <a name="adding-custom-code-for-the-custom-type-descriptor"></a>Özel tür tanımlayıcısı için özel kod ekleme
- `ExampleModel` etki alanı sınıfı için tür tanımlayıcısı için `GetCustomProperties` yöntemini uygulayın.
+ `GetCustomProperties`Etki alanı sınıfı için tür tanımlayıcısı için yöntemini uygulayın `ExampleModel` .
 
 > [!NOTE]
-> `ExampleModel` çağrıları için özel tür tanımlayıcısı için DSL araçlarının üretme kodu `GetCustomProperties`; ancak DSL araçları yöntemi uygulayan kod oluşturmaz.
+> DSL araçlarının çağrılar için özel tür tanımlayıcısı için üretme kodu `ExampleModel` `GetCustomProperties` ; ancak dsl araçları yöntemi uygulayan kod oluşturmaz.
 
  Bu yöntemin tanımlanması, ad alanı izleme özelliği için izleme özelliği tanımlayıcısı oluşturur. Ayrıca, izleme özelliğinin özniteliklerini sağlamak **Özellikler** penceresinin özelliği doğru görüntülemesini sağlar.
 
@@ -341,16 +341,16 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
     ```
 
 ## <a name="adding-custom-code-for-the-model"></a>Model için özel kod ekleme
- `ExampleModel` etki alanı sınıfı için `GetCustomElementsValue` yöntemini uygulayın.
+ `GetCustomElementsValue` `ExampleModel` Etki alanı sınıfı için yöntemini uygulayın.
 
 > [!NOTE]
-> DSL araçlarının `ExampleModel` çağrıları için üretme kodu `GetCustomElementsValue`; ancak DSL araçları yöntemi uygulayan kod oluşturmaz.
+> DSL araçlarının çağrılar için üretme kodu `ExampleModel` `GetCustomElementsValue` ; ancak dsl araçları yöntemi uygulayan kod oluşturmaz.
 
- `GetCustomElementsValue` yönteminin tanımlanması, `ExampleModel`'ın CustomElements hesaplanan özelliğine yönelik mantığı sağlar. Bu yöntem, Kullanıcı tarafından güncelleştirilmiş bir değere sahip bir ad alanı izleme özelliğine sahip `ExampleElement` etki alanı sınıflarının sayısını sayar ve bu sayıyı modeldeki toplam öğelerin bir oranı olarak temsil eden bir dize döndürür.
+ Yöntemi tanımlama, ' `GetCustomElementsValue` nin CustomElements 'ın hesaplanan özelliğine ilişkin mantığı sağlar `ExampleModel` . Bu yöntem `ExampleElement` , Kullanıcı tarafından güncelleştirilmiş bir değere sahip bir ad alanı izleme özelliğine sahip olan etki alanı sınıflarının sayısını sayar ve bu sayıyı modeldeki toplam öğelerin bir oranı olarak temsil eden bir dize döndürür.
 
- Ayrıca, `ExampleModel`bir `OnDefaultNamespaceChanged` yöntemi ekleyin ve `ExampleModel` çağırmak için `DefaultNamespacePropertyHandler` iç içe sınıfının `OnValueChanged` yöntemini geçersiz kılın.
+ Ayrıca, `OnDefaultNamespaceChanged` öğesine bir yöntemi ekleyin `ExampleModel` ve `OnValueChanged` `DefaultNamespacePropertyHandler` çağrısı yapmak için iç içe sınıfının metodunu geçersiz kılın `ExampleModel` `OnDefaultNamespaceChanged` .
 
- DefaultNamespace özelliği ad alanı izleme özelliğini hesaplamak için kullanıldığından, `ExampleModel` DefaultNamespace değerinin değiştiği tüm `ExampleElement` etki alanı sınıflarını bilgilendirmelidir.
+ DefaultNamespace özelliği ad alanı izleme özelliğini hesaplamak için kullanıldığından, `ExampleModel` `ExampleElement` DefaultNamespace değerinin değiştiği tüm etki alanı sınıflarını bilgilendirmelidir.
 
 #### <a name="to-modify-the-property-handler-for-the-tracked-property"></a>İzlenen özellik için özellik işleyicisini değiştirme
 
@@ -418,14 +418,14 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
     ```
 
 ## <a name="adding-custom-code-for-the-tracking-property"></a>Izleme özelliği için özel kod ekleme
- `ExampleElement` etki alanı sınıfına bir `CalculateNamespace` yöntemi ekleyin.
+ `CalculateNamespace` `ExampleElement` Etki alanı sınıfına bir yöntem ekleyin.
 
- Bu yöntemin tanımlanması `ExampleModel`CustomElements 'ın hesaplanan özelliğine yönelik mantığı sağlar. Bu yöntem, Kullanıcı durumunda bir ad alanı izleme özelliğine sahip `ExampleElement` etki alanı sınıflarının sayısını sayar ve bu sayıyı modeldeki toplam öğelerin bir oranı olarak temsil eden bir dize döndürür.
+ Bu yöntemin tanımlanması, ' nin CustomElements 'ın hesaplanan özelliğine yönelik mantığı sağlar `ExampleModel` . Bu yöntem, `ExampleElement` Kullanıcı durumunda tarafından güncellenen bir ad alanı izleme özelliğine sahip olan etki alanı sınıflarının sayısını sayar ve bu sayıyı modeldeki toplam öğelerin bir oranı olarak temsil eden bir dize döndürür.
 
- Ayrıca, `ExampleElement` etki alanı sınıfının özel depolama özelliğini almak ve ayarlamak için ve için depolama alanı ekleyin.
+ Ayrıca, ve için depolama alanı ekleyin ve alan sınıfının özel depolama özelliğini alır ve ayarlar `ExampleElement` .
 
 > [!NOTE]
-> DSL araçlarının `ExampleModel` için üretme kodu, Get ve set yöntemlerini çağırır; ancak DSL araçları, yöntemleri uygulayan kod oluşturmaz.
+> DSL araçlarının oluşturabileceği kod `ExampleModel` Get ve set yöntemlerini çağırır; ancak dsl araçları, yöntemleri uygulayan kod oluşturmaz.
 
 #### <a name="to-add-the-method-for-the-custom-type-descriptor"></a>Özel tür tanımlayıcısına yönelik yöntemi eklemek için
 
@@ -591,7 +591,7 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
  XML serileştirme için özel yükleme sonrası davranışını desteklemek üzere kod ekleyin.
 
 > [!NOTE]
-> DSL araçlarının üretme kodu `OnPostLoadModel` ve `OnPostLoadModelAndDiagram` yöntemlerini çağırır; ancak DSL araçları, bu yöntemleri uygulayan kod oluşturmaz.
+> DSL araçlarının üretme kodu `OnPostLoadModel` ve `OnPostLoadModelAndDiagram` yöntemlerini çağırır; ancak, dsl araçları bu yöntemleri uygulayan kod oluşturmaz.
 
 #### <a name="to-add-code-to-support-the-custom-post-load-behavior"></a>Özel yükleme sonrası davranışını desteklemek üzere kod eklemek için
 
@@ -718,15 +718,15 @@ Bu izlenecek yol, bir izleme özelliğinin bir etki alanı modeline nasıl eklen
     ```
 
 ## <a name="testing-the-language"></a>Dili test etme
- Sonraki adım, izleme özelliğinin doğru çalıştığını doğrulayabilmeniz için DSL tasarımcısını [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] yeni bir örneğinde oluşturup çalıştırlemektir.
+ Sonraki adım, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] izleme özelliğinin doğru çalıştığını doğrulayabilmeniz IÇIN DSL tasarımcısını yeni bir örneğinde derleyip çalıştırmak için kullanılır.
 
 #### <a name="to-exercise-the-language"></a>Dili uygulamak için
 
-1. Üzerinde **derleme** menüsünde tıklatın **çözümü yeniden derle**.
+1. **Derle** menüsünde **çözümü yeniden derle**' ye tıklayın.
 
-2. Üzerinde **hata ayıklama** menüsünü tıklatın **hata ayıklamayı Başlat**.
+2. **Hata ayıkla** menüsünde **Hata Ayıklamayı Başlat**’a tıklayın.
 
-     [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] deneysel derlemesi, boş bir test dosyası içeren **hata ayıklama** çözümünü açar.
+     Deneysel derlemesi, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] boş bir test dosyası Içeren **hata ayıklama** çözümünü açar.
 
 3. **Çözüm Gezgini**, test. trackingPropertyDsl dosyasına çift tıklayarak tasarımcı içinde açın ve tasarım yüzeyine tıklayın.
 

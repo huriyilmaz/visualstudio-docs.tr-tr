@@ -17,24 +17,24 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5c3e624e4210e59406fd1d5955cd37c2e83ed79a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6f11125f43fd06b0442d1c40cbd4da41e346fd1d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72602861"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546464"
 ---
 # <a name="ca2140-transparent-code-must-not-reference-security-critical-items"></a>CA2140: Saydam kod güvenlik kritik nesnelerine başvurmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|TransparentMethodsMustNotReferenceCriticalCode|
 |CheckId|CA2140|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Saydam bir yöntem:
 
 - Güvenlik açısından kritik güvenlik özel durum türünü işler
@@ -54,16 +54,16 @@ ms.locfileid: "72602861"
 - Güvenlik açısından kritik olarak işaretlenen bir tür döndürür
 
 ## <a name="rule-description"></a>Kural Tanımı
- @No__t_0 özniteliğiyle işaretlenmiş bir kod öğesi güvenlik açısından kritiktir. Saydam bir yöntem, kritik güvenlik öğesini kullanamaz. Saydam bir tür, <xref:System.TypeAccessException>, <xref:System.MethodAccessException> veya <xref:System.FieldAccessException> olan güvenlik açısından kritik bir tür kullanmayı denerse.
+ Özniteliğiyle işaretlenmiş bir kod öğesi <xref:System.Security.SecurityCriticalAttribute> güvenlik açısından kritik ' dir. Saydam bir yöntem, kritik güvenlik öğesini kullanamaz. Saydam bir tür, bir güvenlik kritik türünü kullanmayı denerse, <xref:System.TypeAccessException> <xref:System.MethodAccessException> veya <xref:System.FieldAccessException> oluşturulur.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kuralın ihlalini onarmak için aşağıdakilerden birini yapın:
 
-- Güvenlik kritik kodunu kullanan kod öğesini <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretleyin
+- Güvenlik açısından kritik kodu kullanan kod öğesini <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretle
 
-     \- veya-
+     \-veya
 
-- @No__t_0 özniteliğini güvenlik açısından kritik olarak işaretlenen kod öğelerinden kaldırın ve bunun yerine bunları <xref:System.Security.SecuritySafeCriticalAttribute> veya <xref:System.Security.SecurityTransparentAttribute> özniteliğiyle işaretleyin.
+- <xref:System.Security.SecurityCriticalAttribute>Özniteliği güvenlik açısından kritik olarak işaretlenen kod öğelerinden kaldırın ve bunun yerine bunları <xref:System.Security.SecuritySafeCriticalAttribute> veya <xref:System.Security.SecurityTransparentAttribute> özniteliğiyle işaretleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
@@ -74,7 +74,7 @@ ms.locfileid: "72602861"
  [!code-csharp[FxCop.Security.CA2140.TransparentMethodsMustNotReferenceCriticalCode#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.security.ca2140.transparentmethodsmustnotreferencecriticalcode/cs/ca2140 - transparentmethodsmustnotreferencecriticalcode.cs#1)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Security.SecurityTransparentAttribute><xref:System.Security.SecurityCriticalAttribute>
+ <xref:System.Security.SecurityTransparentAttribute> <xref:System.Security.SecurityCriticalAttribute>
  <xref:System.Security.SecurityTransparentAttribute>
  <xref:System.Security.SecurityTreatAsSafeAttribute>
  <xref:System.Security?displayProperty=fullName>

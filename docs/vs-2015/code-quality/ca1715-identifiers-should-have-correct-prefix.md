@@ -15,29 +15,29 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1e85929202d36be2e6dcc2b08b5b2a60e7656b27
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: fe362a58a047c8594d09bc6985c48d16f21d3b76
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919185"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545606"
 ---
-# <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Tanımlayıcıların önekleri doğru olmalıdır
+# <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Tanımlayıcılar doğru ön eke sahip olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio ile ilgili en son belgeler için bkz. [CA1715: tanımlayıcılar doğru öneke sahip olmalıdır](/visualstudio/code-quality/ca1715-identifiers-should-have-correct-prefix).
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|IdentifiersShouldHaveCorrectPrefix|
 |CheckId|CA1715|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Arabirimler üzerinde harekete geçirildiğinde.<br /><br /> Genel tür parametrelerinde ortaya çıkarılmayan-bölünmez.|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Dışarıdan görünen bir arabirimin adı büyük harfle ' ı ' ile başlamıyor.
 
- veya
+ -veya-
 
  Dışarıdan görünen bir tür veya yöntemde genel tür parametresinin adı, büyük harfle başlamamış.
 
@@ -85,4 +85,4 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA1715: tanımlayıcılar d
  [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4/vb/FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4.vb#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1722: Tanımlayıcıların önekleri yanlış olmamalıdır](../code-quality/ca1722-identifiers-should-not-have-incorrect-prefix.md)
+ [CA1722: Tanımlayıcılar yanlış ön ek içermemelidir](../code-quality/ca1722-identifiers-should-not-have-incorrect-prefix.md)

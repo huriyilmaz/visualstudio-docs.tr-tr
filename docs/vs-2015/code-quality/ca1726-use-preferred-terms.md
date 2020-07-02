@@ -14,26 +14,26 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 639a42e26442e31f7bbbbb2245af0289c6a04fd8
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 96e0614bc5c08c83008af4e67a2aa865f08f74f3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918233"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547816"
 ---
 # <a name="ca1726-use-preferred-terms"></a>CA1726: Tercih edilen terimleri kullanın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio ile ilgili en son belgeler için bkz. [CA1726: tercih edilen terimleri kullanın](/visualstudio/code-quality/ca1726-use-preferred-terms).
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|UsePreferredTerms|
 |CheckId|CA1726|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Parçalara ayırma-derlemeler üzerinde harekete geçirildiğinde<br /><br /> Tür parametrelerinde harekete geçirildiğinde, bozmasız|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Dışarıdan görünen bir tanımlayıcının adı, tercih edilen terim varolduğunda alternatif olarak bir terim içerir. Alternatif olarak, ad Işaret veya bayraklarını içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -73,4 +73,4 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA1726: tercih edilen terim
  Yalnızca tanımlayıcının adı kasıtlı olarak belirtilmişse ve özellikle de tercih edilen dönem yerine özgün terimiyle ilişkili olduğunda bu kuraldan bir uyarı gizleyin.
 
 ## <a name="related-rules"></a>İlgili kurallar
- [Adlandırma Uyarıları](../code-quality/naming-warnings.md)
+ [Adlandırma uyarıları](../code-quality/naming-warnings.md)

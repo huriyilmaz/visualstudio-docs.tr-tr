@@ -1,7 +1,7 @@
 ---
 title: "Nasıl Yapılır: Düzenleyicide URL'leri Bağlantılar Olarak Görüntüleme"
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - URLs, opening
 - Code Editor, displaying URLs
@@ -12,36 +12,36 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aefabb480830f7fc649bc73d47a3b47594100616
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 80ad0fcc7409bd91f24ef197ef12ed64610a2e0b
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75569094"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770347"
 ---
 # <a name="how-to-display-urls-as-links-in-the-editor"></a>Nasıl Yapılır: Düzenleyicide URL'leri Bağlantılar Olarak Görüntüleme
 
-Kod Düzenleyicisi'nin kodunuzda Tek düzen Kaynak Konum belirleyicilerini (URL'leri) etkin bağlantılar olarak ele alamasını seçebilirsiniz. Bu özelliği kullandığınızda, URL'ler:
+Kod düzenleyicisinin kodunuzda Tekdüzen Kaynak Konum belirleyicilerinin (URL 'Ler) etkin bağlantılar olarak kabul edilebilir olmasını seçebilirsiniz. Bu özelliği kullandığınızda, URL 'Ler:
 
-- Altı çizili görün.
+- Altı çizili olarak görünür.
 
-- Üzerlerinde gezinirken bir **Araç İpucu** görüntüleyin.
+- Üzerine geldiğinizde bir **araç ipucu** görüntüleyin.
 
-- Linke **ctrl**+**tıkladığınızda** belirtilen web sitesini açmaya çalış. Varsayılan olarak, web sitesi dahili web tarayıcısında görüntülenir.
+- Bağlantıya **CTRL** + **tıkladığınızda** gösterilen Web sitesini açmaya çalışın. Varsayılan olarak, Web sitesi iç Web tarayıcısında görüntülenir.
 
 ## <a name="display-urls-as-links"></a>URL’leri bağlantı olarak görüntüleme
 
 1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
-2. **Metin Düzenleyici'yi**tıklatın.
+2. **Metin düzenleyici**' ye tıklayın.
 
-3. Yalnızca bir dil seçeneğini değiştirmek için, söz sözleilgili klasörü genişletin ve **Genel'i**seçin.
+3. Yalnızca bir dilin seçeneğini değiştirmek için bu dilin klasörünü genişletin ve **genel**' i seçin.
 
      —veya—
 
-     Tüm diller için seçeneği değiştirmek için **Tüm Diller** klasörünü genişletin ve **Genel'i**seçin.
+     Tüm dillerin seçeneğini değiştirmek için **tüm diller** klasörünü genişletin ve **genel**' i seçin.
 
-4. **Ekran**altında , **tek tıklamayla URL gezinmesini etkinleştir'i**seçin.
+4. **Görüntü**altında, **tek tıklamayla URL gezintisini etkinleştir ' i**seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

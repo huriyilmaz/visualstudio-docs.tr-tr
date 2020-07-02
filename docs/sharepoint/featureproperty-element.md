@@ -44,7 +44,7 @@ ms.locfileid: "85546529"
 
 ### <a name="parent-elements"></a>Üst öğeler
 
-|Öğe|Description|
+|Öğe|Açıklama|
 |-------------|-----------------|
 |[FeatureProperties](../sharepoint/featureproperties-element.md)|SharePoint 'e dağıtıldığında bir özelliğe dahil olan özellik değerlerinin koleksiyonunu temsil eder.|
 

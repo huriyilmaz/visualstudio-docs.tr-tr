@@ -16,39 +16,39 @@ caps.latest.revision: 31
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0f5789b514d645fc670acf9307e4714c160c3b4c
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: c87836f99684c7e16c022e3e9f15bf546ba82d62
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918181"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547790"
 ---
-# <a name="ca1801-review-unused-parameters"></a>CA1801: Kullanılmayan parametreleri gözden geçir
+# <a name="ca1801-review-unused-parameters"></a>CA1801: Kullanılmayan parametreleri gözden geçirin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio ile ilgili en son belgeler için bkz. [CA1801: Kullanılmayan parametreleri gözden geçirme](/visualstudio/code-quality/ca1801-review-unused-parameters).
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ReviewUnusedParameters|
 |CheckId|CA1801|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Bozuk olmayan-üye, yaptığınız değişiklikten bağımsız olarak, derleme dışında görünür değilse.<br /><br /> Parçalama-üyeyi, gövdesi içinde parametresini kullanacak şekilde değiştirirseniz.<br /><br /> Parçalama-parametreyi kaldırırsanız ve derleme dışında görünür hale gelir.|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Yöntem imzası, yöntemin gövdesinde kullanılmayan bir parametre içerir. Bu kural aşağıdaki yöntemleri incelemez:
 
 - Bir temsilci tarafından başvurulan Yöntemler.
 
 - Olay işleyicileri olarak kullanılan yöntemler.
 
-- `abstract` (Visual Basic`MustOverride`) değiştiricisiyle belirtilen Yöntemler.
+- `abstract`( `MustOverride` Visual Basic) değiştiricisiyle belirtilen Yöntemler.
 
-- `virtual` (Visual Basic`Overridable`) değiştiricisiyle belirtilen Yöntemler.
+- `virtual`( `Overridable` Visual Basic) değiştiricisiyle belirtilen Yöntemler.
 
-- `override` (Visual Basic`Overrides`) değiştiricisiyle belirtilen Yöntemler.
+- `override`( `Overrides` Visual Basic) değiştiricisiyle belirtilen Yöntemler.
 
-- `extern` (Visual Basic`Declare` ifadesiyle) değiştiricisiyle belirtilen Yöntemler.
+- `extern`( `Declare` Visual Basic) değiştiricisiyle belirtilen Yöntemler.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Yöntem gövdesinde kullanılmayan sanal olmayan metotlarda bulunan parametreleri gözden geçirin ve bunlara erişmek için hata etrafında doğruluk olmadığından emin olun. Kullanılmayan parametreler bakım ve performans maliyetleri doğurur.
@@ -67,8 +67,8 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA1801: Kullanılmayan para
  [!code-csharp[FxCop.Usage.ReviewUnusedParameters#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.ReviewUnusedParameters/cs/FxCop.Usage.ReviewUnusedPerameters.cs#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1811: Çağrılmayan özel kodlardan kaçının](../code-quality/ca1811-avoid-uncalled-private-code.md)
+ [CA1811: Çağırılmayan özel kodlardan kaçının](../code-quality/ca1811-avoid-uncalled-private-code.md)
 
- [CA1812: Örneklendirilmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+ [CA1812: Örneklenmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
- [CA1804: Kullanılmayan yerel öğeleri kaldırın](../code-quality/ca1804-remove-unused-locals.md)
+ [CA1804: Kullanılmayan yerelleri kaldırın](../code-quality/ca1804-remove-unused-locals.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Şeritte Geliştirici sekmesini göster'
+title: 'Nasıl yapılır: Şeritte Geliştirici sekmesini gösterme'
 ms.date: 08/14/2019
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,19 +13,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7b6641cca4ef2288452b2f6959482b311a5b07a4
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 41070c92d0c27c1ee8fbf480f7461c22421b8fdc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551779"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545853"
 ---
-# <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>Nasıl yapılır: Şeritte Geliştirici sekmesini göster
-  Bir Office uygulamasının şeridinde **Geliştirici** sekmesine erişmek için, varsayılan olarak görünmediğinden bu sekmeyi gösterecek şekilde yapılandırmanız gerekir. Örneğin, Word için belge düzeyi özelleştirmeye eklemek <xref:Microsoft.Office.Tools.Word.GroupContentControl> istiyorsanız bu sekmeyi göstermeli.
+# <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>Nasıl yapılır: Şeritte Geliştirici sekmesini gösterme
+  Bir Office uygulamasının şeridinde **Geliştirici** sekmesine erişmek için, varsayılan olarak görünmediğinden bu sekmeyi gösterecek şekilde yapılandırmanız gerekir. Örneğin, <xref:Microsoft.Office.Tools.Word.GroupContentControl> Word için belge düzeyi özelleştirmeye eklemek istiyorsanız bu sekmeyi göstermeli.
 
 > [!NOTE]
-> Bu kılavuz yalnızca Office 2010 veya üzeri uygulamalar için geçerlidir. Bu sekmeyi 2007 Microsoft Office sisteminde göstermek istiyorsanız, bu konunun [aşağıdaki sürümüne bakın: Şeritte](https://web.archive.org/web/20140303033431/msdn.microsoft.com/library/bb608625(v=vs.90).aspx
-)Geliştirici sekmesini görüntüleyin.
+> Bu kılavuz yalnızca Office 2010 veya üzeri uygulamalar için geçerlidir. Bu sekmeyi 2007 Microsoft Office sisteminde göstermek istiyorsanız, bu konunun aşağıdaki sürümüne bakın [: Şeritte Geliştirici sekmesini gösterme](https://web.archive.org/web/20140303033431/msdn.microsoft.com/library/bb608625(v=vs.90).aspx
+).
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
@@ -50,7 +50,7 @@ ms.locfileid: "69551779"
 
      Aşağıdaki şekilde Office 2013 ' deki **Seçenekler** düğmesi gösterilmektedir.
 
-     ![Outlook 2013 Preview 'Daki Seçenekler düğmesi](../vsto/media/vsto-office2013-optionsbutton.png "Outlook 2013 Preview 'Daki Seçenekler düğmesi")
+     ![Outlook 2013 Preview 'daki Seçenekler düğmesi](../vsto/media/vsto-office2013-optionsbutton.png "Outlook 2013 Preview 'daki Seçenekler düğmesi")
 
 3. _ApplicationName_**seçenekleri** Iletişim kutusunda, **Şeridi Özelleştir** düğmesini seçin.
 
@@ -60,7 +60,7 @@ ms.locfileid: "69551779"
 
 4. Ana sekmeler listesinde, **Geliştirici** onay kutusunu seçin.
 
-     Aşağıdaki şekilde, Word 2010 ve [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)]içindeki Geliştirici onay kutusu gösterilmektedir. Bu onay kutusunun konumu, bu konunun en üstündeki "uygulandığı öğe" bölümünde listelenen tüm diğer uygulamalarda benzerdir.
+     Aşağıdaki şekilde, Word 2010 ve içindeki **Geliştirici** onay kutusu gösterilmektedir [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] . Bu onay kutusunun konumu, bu konunun en üstündeki "uygulandığı öğe" bölümünde listelenen tüm diğer uygulamalarda benzerdir.
 
      ![Word Seçenekleri iletişim kutusunda Geliştirici onay kutusu](../vsto/media/vsto-office2010-developercheckbox.png "Word Seçenekleri iletişim kutusunda Geliştirici onay kutusu")
 

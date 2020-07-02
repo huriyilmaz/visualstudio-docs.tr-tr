@@ -35,7 +35,7 @@ Profil Oluşturma Araçları için *çağrı izleme raporu* , [!INCLUDE[vsprvs](
   
      *Araçları yolu* **VSPerfReport** *vspfile*  **/calltrace [/XML]**  
   
-    |Komut öğesi|Description|
+    |Komut öğesi|Açıklama|
     |-|-|  
     |*Araçları yolu*|Profil Oluşturma Araçları komut satırı araçlarının yolu. Daha fazla bilgi için bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).|  
     |*VSPFile*|Profil oluşturma verileri (. vsp veya. vsps) dosyası. Tam ve kısmi yollar kabul edilir.|  

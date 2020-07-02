@@ -1,8 +1,8 @@
 ---
-title: LocationField Element (Visual Studio Proje Şablonları) | Microsoft Dokümanlar
+title: LocationField öğesi (Visual Studio proje şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#LocationField
 helpviewer_keywords:
@@ -13,19 +13,20 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d993e84bec41486ef4dce6ad98c61f23ab2a46bd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 8a5f2f47eef9c3cb047b5550e466585ef70e8f4e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80702880"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770021"
 ---
 # <a name="locationfield-element-visual-studio-project-templates"></a>LocationField öğesi (Visual Studio proje şablonları)
-**Yeni Proje** iletişim kutusundaki **Konum** metin kutusunun proje şablonu için etkin, devre dışı veya gizli olup olmadığını belirtir.
+**Yeni proje** Iletişim kutusundaki **konum** metin kutusunun etkin, devre dışı veya proje şablonu için gizli olup olmadığını belirtir.
 
- \<VSTemplate \<> ŞablonVeri> \<LocationAlan>
+ \<VSTemplate> \<TemplateData>
+ \<LocationField>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <LocationField> Enabled/Disabled/Hidden </LocationField>
@@ -44,28 +45,28 @@ ms.locfileid: "80702880"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırıyor ve Yeni **Proje'de**nasıl görüntülenebildiğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni projede**nasıl görüntüleneceğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
  Geçerli metin değerleri şunlardır:
 
-- `Enabled`, **Yeni Proje** iletişim kutusunun **Konum** kutusunun etkin olduğunu belirtir.
+- `Enabled`**Yeni proje** Iletişim kutusunun **konum** kutusunun etkin olduğunu belirtir.
 
-- `Disabled`, **Yeni Proje** iletişim kutusunun **Konum** kutusunun devre dışı bırakıldığını belirtir.
+- `Disabled`**Yeni proje** Iletişim kutusunun **konum** kutusunun devre dışı olduğunu belirtir.
 
-- `Hidden`, **Yeni Proje** iletişim kutusunun **Konum** kutusunun gizli olduğunu belirtir.
+- `Hidden`**Yeni proje** Iletişim kutusunun **konum** kutusunun gizlendiğini belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
  Varsayılan değer: `Enabled`.
 
- **Yeni Proje** iletişim kutusundaki **Konum** metin kutusu, kullanıcıların yeni projelerin kaydedildiği varsayılan dizini değiştirmesini sağlar.
+ **Yeni proje** Iletişim kutusundaki **konum** metin kutusu, kullanıcıların, yeni projelerin kaydedildiği varsayılan dizini değiştirmesine olanak sağlar.
 
- `Location` Öğede belirtilen değer yalnızca temel proje sistemi destekliyorsa iletişim kutusu tarafından onurlanır.
+ Öğesinde belirtilen değer `Location` yalnızca temel alınan proje sistemi destekliyorsa iletişim kutusu tarafından kabul edilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, şablonun [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] meta verileri gösteriş verilmiştir.
+ Aşağıdaki örnek, bir şablon için meta verileri gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"
@@ -93,5 +94,5 @@ ms.locfileid: "80702880"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

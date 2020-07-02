@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Office çözümlerini imzalama'
+title: 'Nasıl yapılır: Office çözümlerini Imzalama'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,39 +14,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 1fff7555c17f4fdac43de2690f8e133cc32881db
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 23afc171fd97620b3e6801b8d199da6890198d8b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971127"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545762"
 ---
-# <a name="how-to-sign-office-solutions"></a>Nasıl yapılır: Office çözümlerini imzalama
-  Bir çözüm oturum açarsanız, kanıt olarak sertifika kullanarak çözüme güven verebilirsiniz. Birden çok çözüm için aynı sertifikayı kullanabilirsiniz ve tüm çözümleri hiçbir ek güvenlik ilkesi güncelleştirmeleriyle güvenilen olacaktır.
+# <a name="how-to-sign-office-solutions"></a>Nasıl yapılır: Office çözümlerini Imzalama
+  Bir çözümü imzalayıp, kanıt olarak sertifikayı kullanarak çözüme güven verebilirsiniz. Aynı sertifikayı birden çok çözüm için kullanabilirsiniz ve tüm çözümlere ek güvenlik ilkesi güncelleştirmeleri olmadan güvenilirsiniz.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
- Uygulamayı el ile düzenlemeniz ve dağıtım bildirimlerini bildirim oluşturma ve düzenleme aracı kullanarak (*mage.exe* ve *mageui.exe*), kullanabilmeniz için önce bildirimleri yeniden imzalamanız gerekir. Daha fazla bilgi için [nasıl yapılır: Uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
+ Uygulama ve dağıtım bildirimlerini Bildirim Oluşturma ve Düzenleme Aracı (*mage.exe* ve *mageui.exe*) kullanarak el ile düzenlerseniz, bunları kullanabilmeniz için önce bildirimleri yeniden imzalamanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md).
 
-## <a name="sign-by-using-a-certificate"></a>Bir sertifika kullanarak oturum açın
- Bir sertifika benzersiz bir anahtar ve çözüm yayıncısı kimliğini içeren bir dosyadır. Bir sertifika yetkilisinden sertifika satın alın veya kendi sertifikanızı oluşturun ve sahip bir sertifika yetkilisi imzalayın.
+## <a name="sign-by-using-a-certificate"></a>Sertifika kullanarak imzala
+ Sertifika, bir benzersiz anahtar ve Çözüm yayımcısının kimliğini içeren bir dosyadır. Bir sertifika yetkilisinden sertifika satın alabilir veya kendi sertifikanızı oluşturabilir ve bir sertifika yetkilisi oturum açmasını sağlayabilirsiniz.
 
- Visual Studio Office çözümleri hata ayıklamayı etkinleştirmek için geçici bir sertifika ile imzalar. Dağıtılan çözümleri durum kanıtı geçici bir sertifika kullanmamalıdır.
+ Visual Studio, hata ayıklamayı etkinleştirmek için Office çözümlerini geçici bir sertifikayla imzalar. Dağıtılmış çözümlerinde geçici sertifikayı kanıt olarak kullanmamalısınız.
 
-### <a name="to-sign-an-office-solution-by-using-a-certificate"></a>Bir sertifika kullanarak Office çözümü imzalamak için
+### <a name="to-sign-an-office-solution-by-using-a-certificate"></a>Bir Office çözümünü sertifika kullanarak imzalamak için
 
-1. Üzerinde **proje** menüsünü tıklatın _SolutionName_**özellikleri**.
+1. **Proje** menüsünde, _SolutionName_**özellikleri**' ne tıklayın.
 
-2. Tıklayın **imzalama** sekmesi.
+2. **İmzalama** sekmesine tıklayın.
 
-3. Seçin **ClickOnce bildirimlerini imzala**.
+3. **ClickOnce bildirimlerini imzala**' yı seçin.
 
-4. Tıklayarak sertifikayı bulun **Store ' seçin** veya **dosyadan Seç** ve sertifikada gezinin.
+4. **Mağazadan Seç** ' e tıklayarak sertifikayı bulun veya dosyadan **seçim** yapın ve sertifikaya gidin.
 
-5. Doğru sertifikayı kullanılmakta olduğunu doğrulamak için tıklayın **daha fazla ayrıntı** sertifika bilgileri görüntülemek için.
+5. Doğru sertifikanın kullanıldığını doğrulamak için, sertifika bilgilerini görüntülemek üzere **diğer ayrıntılar** ' a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümleri güvenliğini sağlama](../vsto/securing-office-solutions.md)
+- [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)
 - [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md)
 - [İmzalama Sayfası, Proje Tasarımcısı](../ide/reference/signing-page-project-designer.md)

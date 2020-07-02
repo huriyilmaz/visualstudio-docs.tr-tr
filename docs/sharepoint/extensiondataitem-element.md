@@ -1,5 +1,5 @@
 ---
-title: Extensiondataıtem öğesi | Microsoft Docs
+title: ExtensionDataItem öğesi | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 658fb63227f4c4532038d537bde7cc10ca2c4f5e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 295ee649cec01e50b237b4fad1798806d460727b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967389"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546555"
 ---
 # <a name="extensiondataitem-element"></a>ExtensionDataItem öğesi
-  Anahtar/değer biçiminde SharePoint proje öğesi ile ilişkili bir özel veri öğesi. Dize, anahtar ve değer olmalıdır.
+  Anahtar/değer biçiminde SharePoint proje öğesiyle ilişkili özel bir veri öğesi. Anahtar ve değer dizeler olmalıdır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ExtensionDataItem Key = "Key of the data item"
@@ -36,8 +36,8 @@ ms.locfileid: "62967389"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|**Key**|Gerekli **xs: dize** özniteliği.<br /><br /> Depolamak ve almak veri öğesi için kullanılan anahtar.|
-|**Değer**|Gerekli **xs: String** özniteliği.<br /><br /> Veriler öğesinin değeri.|
+|**Anahtar**|Gerekli **xs: String** özniteliği.<br /><br /> Veri öğesini depolamak ve almak için kullanılan anahtar.|
+|**Değer**|Gerekli **xs: String** özniteliği.<br /><br /> Veri öğesinin değeri.|
 
 ### <a name="child-elements"></a>Alt öğeleri
  Yok.
@@ -46,19 +46,19 @@ ms.locfileid: "62967389"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ExtensionData](../sharepoint/extensiondata-element.md)|SharePoint proje öğesi ile ilişkilendirilmiş özel veri öğelerinin bir koleksiyonunu temsil eder.|
+|[ExtensionData](../sharepoint/extensiondata-element.md)|SharePoint proje öğesiyle ilişkili özel veri öğelerinin koleksiyonunu temsil eder.|
 
 ## <a name="remarks"></a>Açıklamalar
- İlişkilendirdiğinizde özel veri sahip bir SharePoint proje öğesi kullanarak <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> özelliği bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> nesnesi, Visual Studio verileri yeni bir kaydeder **Extensiondataıtem** öğesinde `.spdata` dosya Proje öğesi. Daha fazla bilgi için [SharePoint Proje sisteminin uzantılarında veri kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).
+ Bir nesnenin özelliğini kullanarak özel verileri bir SharePoint proje öğesiyle ilişkilendirdiğinizde <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> , Visual Studio verileri proje öğesi için dosyadaki yeni bir **ExtensionDataItem** öğesine kaydeder `.spdata` . Daha fazla bilgi için bkz. [SharePoint proje sisteminin uzantılarında verileri kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).
 
 ## <a name="element-information"></a>Öğe bilgileri
 
-|||
+|Özellik|Değer|
 |-|-|
-|**Namespace**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Şema adı**|SharePoint proje öğesi şema|
-|**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
-|**Boş olabilir**|Hayır|
+|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
+|**Şema adı**|SharePoint proje öğesi şeması|
+|**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md)

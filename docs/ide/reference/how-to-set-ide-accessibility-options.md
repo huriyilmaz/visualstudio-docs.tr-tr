@@ -1,10 +1,10 @@
 ---
-title: 'Nasıl yapılı: IDE erişilebilirlik seçeneklerini ayarlama'
-description: Visual Studio'da, okuma sı düşük görme yetisine sahip kişiler ve yazma becerisi sınırlı kişiler de dahil olmak üzere, entegre geliştirme ortamını (IDE) herkesin kullanmasını kolaylaştıracak erişilebilirlik seçeneklerini nasıl belirleyeceğinizi öğrenin.
+title: 'Nasıl yapılır: IDE erişilebilirlik seçeneklerini ayarlama'
+description: Visual Studio 'da kendi tümleşik geliştirme ortamının (IDE), okuma güçlüğü çeken kişiler ve yazma sınırlaması olan kişiler de dahil olmak üzere herkesin kullanması için daha kolay hale gelen erişilebilirlik seçeneklerini nasıl ayarlayacağınızı öğrenin.
 ms.date: 08/23/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
@@ -13,123 +13,123 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 63bba4e8defcd727f05dbc209aa2f48f7d5f2c92
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: ac857d961b1ae736645ba2cfda3f1ef5755d0fa1
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "70107777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770283"
 ---
-# <a name="how-to-set-ide-accessibility-options"></a>Nasıl yapılı: IDE erişilebilirlik seçeneklerini ayarlama
+# <a name="how-to-set-ide-accessibility-options"></a>Nasıl yapılır: IDE erişilebilirlik seçeneklerini ayarlama
 
-Visual Studio, görme yetisi düşük olan kişilerin okumasını ve yazma becerisi sınırlı olan kişiler için daha kolay olmasını sağlayan özellikler içerir. Örneğin, düzenleyicilerdeki metnin boyutunu ve rengini değiştirebilir, araç çubuklarındaki metin ve düğmelerin boyutunu değiştirebilir ve bir işlevi veya deyimi tamamlamanıza yardımcı olacak ayarları değiştirebilirsiniz.
+Visual Studio, görme zorluğu olan kişilerin yazmasını ve yazma zorluğu çeken kişileri daha kolay hale getirmeye yönelik özellikler içerir. Örneğin, düzenleyicilerde metnin boyutunu ve rengini değiştirebilir, araç çubuklarında metin ve düğmelerin boyutunu değiştirebilir ve bir işlevi veya ifadeyi tamamlamanıza yardımcı olması için ayarları değiştirebilirsiniz.
 
-Buna ek olarak, Visual Studio en sık yazılan karakterleri daha erişilebilir hale getiren Dvorak klavye düzenlerini destekler. Visual Studio ile kullanılabilen varsayılan klavye kısayollarını da özelleştirebilirsiniz. Daha fazla bilgi için [bkz.](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
+Ayrıca, Visual Studio, en sık yazılan karakterleri daha erişilebilir hale getirmek için Dvorak klavye düzenlerini destekler. Ayrıca, Visual Studio ile kullanılabilen varsayılan klavye kısayollarını özelleştirebilirsiniz. Daha fazla bilgi için bkz. [klavye kısayollarını tanımlamak ve özelleştirmek](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
 
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya sürüme bağlı olarak değişebilen burada açıklananlardan farklı olabilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünde **Ayarlar İçe Ve Dışa Aktar'ı** seçin. Daha fazla bilgi [için, ayarları Sıfırla'ya](../environment-settings.md#reset-settings)bakın.
+> Gördüğünüz iletişim kutuları ve menü komutları burada açıklananlardan farklı olabilir. Bu, etkin ayarlarınıza veya sürümüne bağlı olarak farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [ayarları sıfırlama](../environment-settings.md#reset-settings).
 
 ::: moniker range="vs-2017"
 
 > [!TIP]
-> En son erişilebilirlik güncelleştirmeleri hakkında daha fazla bilgi edinmek için [Visual Studio 2017 sürüm 15.3 blog gönderisinde Erişilebilirlik geliştirmelerine](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) bakın.
+> Son erişilebilirlik güncelleştirmeleri hakkında daha fazla bilgi edinmek için [Visual Studio 2017 sürüm 15,3](https://devblogs.microsoft.com/visualstudio/accessibility-improvements-in-visual-studio-2017-version-15-3/) blog gönderisine bakın.
 
 ::: moniker-end
 
-## <a name="editors-dialogs-and-tool-windows"></a>Editörler, iletişim kutuları ve araç pencereleri
+## <a name="editors-dialogs-and-tool-windows"></a>Düzenleyiciler, diyaloglar ve araç pencereleri
 
-Varsayılan olarak, Visual Studio'daki iletişim kutuları ve araç pencereleri işletim sistemiyle aynı yazı tipi boyutunu ve renklerini kullanır. IDE, iletişim kutuları, araç çubukları ve araç pencerelerinin çerçevesiiçin renk ayarları bir renk düzenine dayanır: açık veya koyu. Seçenekler iletişim kutusundaki geçerli renk temesini [değiştirebilirsiniz: Ortam > Genel.](../../ide/reference/general-environment-options-dialog-box.md)
+Varsayılan olarak, Visual Studio 'daki iletişim kutuları ve araç pencereleri işletim sistemiyle aynı yazı tipi boyutunu ve renklerini kullanır. IDE, iletişim kutuları, araç çubukları ve araç pencerelerinin çerçevesinin renk ayarları bir renk düzenini temel alarak: açık veya koyu. Seçenekler iletişim kutusunda geçerli renk temasını değiştirebilirsiniz [: ortam > genel](../../ide/reference/general-environment-options-dialog-box.md).
 
-Ayrıca, düzenleyicinin Kod görünümünde açılır pencereleri de görüntüleyebilirsiniz. Bu pencereler, bir işlevi veya deyimi tamamlamak için geçerli nesne ve parametreler üzerinde kullanılabilir üyeler ile isteyebilir. Bu pencereler yazmakta güçlük çekiyorsanız yararlı olabilir. Ancak, bazı kullanıcılar için sorunlu olabilir kod düzenleyicisi, odak müdahale.
+Ayrıca, düzenleyicinin kod görünümünde açılır pencereleri de görüntüleyebilirsiniz. Bu pencereler geçerli nesne üzerindeki kullanılabilir Üyeler ve bir işlevi veya ifadeyi tamamlamaya yönelik parametreler için sizi uyarır. Yazma güçlüğü çekiyorsanız, bu pencereler yararlı olabilir. Ancak, bu kişiler, bazı kullanıcılar için sorunlu olabilecek kod düzenleyicisine odaklanmayı engellemez.
 
-Açılır pencereleri şu şekilde kapatabilirsiniz:
+Açılır pencereleri devre dışı bırakma:
 
-1. **Araçlar** menüsünden **Seçenekler'i**seçin.
+1. **Araçlar** menüsünde **Seçenekler**' i seçin.
 
-1. **Metin Düzenleyici** > **Tüm Diller** > **Genel**seçin.
+1. **Metin düzenleyici**  >  **tüm diller**  >  **genel**' i seçin.
 
-1. Otomatik **liste üyelerini** ve **Parametre bilgi** onay kutularını temizleyin.
+1. **Otomatik liste üyeleri** ve **parametre bilgileri** onay kutularını temizleyin.
 
-Tümleşik geliştirme ortamındaki (IDE) pencereleri çalışma şeklinize en uygun şekilde yeniden düzenleyebilirsiniz. Her araç pencereni sabitleyebilir, yüzdürebilir, gizleyebilir veya otomatik olarak gizleyebilirsiniz. Pencere düzenlerini nasıl değiştireceğimiz hakkında daha fazla bilgi için [bkz.](../../ide/customizing-window-layouts-in-visual-studio.md)
+Tümleşik geliştirme ortamındaki (IDE) pencereleri, çalışma şeklinize en uygun şekilde yeniden düzenleyebilirsiniz. Her bir araç penceresini yerleştirme, kaydırma, gizleme veya otomatik olarak gizleme yapabilirsiniz. Pencere düzenlerini değiştirme hakkında daha fazla bilgi için bkz. [pencere düzenlerini özelleştirme](../../ide/customizing-window-layouts-in-visual-studio.md).
 
 ### <a name="change-the-size-of-text"></a>Metin boyutunu değiştirme
 
-**Komut** penceresi, **Hemen** penceresi ve **Çıktı** penceresi gibi metin tabanlı araç pencerelerinin ayarlarını **Araçlar** > **Seçenekleri** > **Ortamı** > **Yazı Tipleri ve Renkleri'ni**kullanarak değiştirebilirsiniz.
+**Araç** **Command** **Immediate** **Output**  >  **seçenekleri**  >  **ortam**  >  **yazı tiplerini ve renklerini**kullanarak komut penceresi, anlık pencere ve çıkış penceresi gibi metin tabanlı araç pencerelerinin ayarlarını değiştirebilirsiniz.
 
-Açılan liste **için Göster ayarlarında** **[Tüm Metin Aracı Windows]** seçeneğini seçtiğinizde, varsayılan ayar **Öğe ön planında** ve Öğe **arka planı** açılır listelerinde **Varsayılan** olarak listelenir. Bu ayarları değiştirmek için **Özel** düğmesini seçin.
+**Ayarları göster** açılan listesinde **[tüm metin araç pencereleri]** seçeneğini belirlediğinizde, varsayılan ayar **öğe ön planı** ve **öğe arka plan** açılan listelerinde **varsayılan** olarak listelenir. Bu ayarları değiştirmek için **özel** düğmesini seçin.
 
-Ayrıca, metnin düzenleyicide nasıl görüntüleneceğine yönelik ayarları da değiştirebilirsiniz. Aşağıdaki adımları uygulayın:
+Ayrıca, metnin düzenleyicide nasıl görüntüleneceği için ayarları değiştirebilirsiniz. Aşağıdaki adımları uygulayın:
 
-1. **Araçlar** menüsünden **Seçenekler'i**seçin.
+1. **Araçlar** menüsünde **Seçenekler**' i seçin.
 
-1. **Çevre** > **Yazı Tipleri ve Renkleri**seçin.
+1. **Ortam**  >  **yazı tiplerini ve renklerini**seçin.
 
-1. Açılan menü **için Göster ayarlarında** bir seçenek seçin.
+1. **Ayarları göster** açılan menüsünde bir seçenek belirleyin.
 
-    Bir düzenleyicideki metin için yazı tipi boyutunu değiştirmek için **Metin Düzenleyicisi'ni**seçin.
+    Bir düzenleyicideki metnin yazı tipi boyutunu değiştirmek için **metin düzenleyici**' yi seçin.
 
-    Metin tabanlı araç pencerelerinde metin yazı tipi boyutunu değiştirmek için **[Tüm Metin Aracı Windows]** seçeneğini belirleyin.
+    Metin tabanlı araç penceresinde metnin yazı tipi boyutunu değiştirmek için **[tüm metin araç pencereleri]** öğesini seçin.
 
-    Bir düzenleyicideki ToolTip metninin yazı tipi boyutunu değiştirmek için **Düzenleyici Araç İpucu'nu**seçin.
+    Bir düzenleyicideki Araç Ipucu metninin yazı tipi boyutunu değiştirmek için **Düzenleyici araç ipucu**' nu seçin.
 
-    Deyim tamamlama açılır pencerelerinde metin için yazı tipi boyutunu değiştirmek için **Deyim Tamamlama'yı**seçin.
+    Ekstre tamamlama açılır penceresinde metin yazı tipi boyutunu değiştirmek için, **ekstre tamamlama**' yı seçin.
 
-1. **Görüntü öğelerinden** **Düz Metin'i**seçin.
+1. **Görüntüleme öğelerinden** **düz metin**' i seçin.
 
-1. **Yazı Tipi'nde**yeni bir yazı tipi seçin.
+1. **Yazı tipi**' nde yeni bir yazı tipi türü seçin.
 
-1. **Boyut,** yeni bir yazı tipi boyutu seçin.
+1. **Boyut**' da, yeni bir yazı tipi boyutu seçin.
 
     > [!TIP]
-    > Metin tabanlı araç pencereleri ve düzenleyiciler için metin boyutunu sıfırlamak için **Varsayılanları Kullan'ı**seçin.
+    > Metin tabanlı araç pencereleri ve düzenleyicilerinin metin boyutunu sıfırlamak için **Varsayılanları Kullan**' ı seçin.
 
-7. **Tamam'ı**seçin.
+7. **Tamam ' ı**seçin.
 
-### <a name="change-the-colors-that-are-used-in-the-ide"></a>IDE'de kullanılan renkleri değiştirme
+### <a name="change-the-colors-that-are-used-in-the-ide"></a>IDE 'de kullanılan renkleri değiştirme
 
-Düzenleyicideki metin, kenar boşluğu göstergeleri, beyaz alan ve kod öğeleri için varsayılan renkleri değiştirmeyi seçebilirsiniz. Aşağıdaki adımları uygulayın:
+Metin, kenar boşluğu göstergeleri, boşluk ve düzenleyicideki kod öğeleri için varsayılan renkleri değiştirmeyi tercih edebilirsiniz. Aşağıdaki adımları uygulayın:
 
-1. **Araçlar** menüsünden **Seçenekler'i**seçin.
+1. **Araçlar** menüsünde **Seçenekler**' i seçin.
 
-1. **Çevre** klasöründe **Yazı Tipleri ve Renkler'i**seçin.
+1. **Ortam** klasöründe, **yazı tipleri ve renkler**' i seçin.
 
-1. **Için Göster ayarlarında,** **Metin Düzenleyici'yi**seçin.
+1. **Ayarları göster**bölümünde **metin düzenleyici**' yi seçin.
 
-1. **Görüntü öğelerinden,** **Düz Metin,** **Gösterge Kenar Boşluğu,** Görünür Beyaz **Boşluk,** HTML Öznitelik Adı veya **XML** **Özniteliği**gibi ekranı değiştirmeniz gereken bir öğe seçin.
+1. **Görüntüleme öğelerinden** **düz metin**, **Gösterge kenar boşluğu**, **görünür**boşluk, **HTML öznitelik adı**veya **XML özniteliği**gibi görüntülemesi gereken görünümü olan bir öğe seçin.
 
-1. Aşağıdaki seçeneklerden ekran ayarlarını seçin: **Öğe ön planı,** **Öğe arka planı**ve **Kalın**.
+1. Aşağıdaki seçeneklerden görüntüleme ayarları ' nı seçin: **öğe ön planı**, **öğe arka planı**ve **kalın**.
 
-1. **Tamam'ı**seçin.
+1. **Tamam ' ı**seçin.
 
 > [!TIP]
-> İşletim sisteminizdeki tüm uygulama pencereleri için yüksek kontrastlı renkler kullanmak için **Sol Alt**+**Sol Shift**+**PrtScn**tuşuna basın. Visual Studio açıksa, yüksek kontrastlı renkleri tam olarak uygulamak için kapatın ve yeniden açın.
+> İşletim sisteminizdeki tüm uygulama pencerelerinin yüksek karşıtlık renklerini kullanmak için **sol alt** + **Sol SHIFT** + **PrtScn**tuşuna basın. Visual Studio açıksa, yüksek karşıtlık renklerini tam olarak uygulamak için kapatın ve yeniden açın.
 
 ## <a name="toolbars"></a>Araç Çubukları
 
-Araç çubuğu kullanılabilirliğini ve erişilebilirliği artırmak için araç çubuğu düğmelerine metin ekleyebilirsiniz.
+Araç çubuğu kullanılabilirliğini ve erişilebilirliğini geliştirmek için araç çubuğu düğmelerine metin ekleyebilirsiniz.
 
 ### <a name="to-assign-text-to-toolbar-buttons"></a>Araç çubuğu düğmelerine metin atamak için
 
-1. **Araçlar** menüsünden **Özelleştir'i**seçin.
+1. **Araçlar** menüsünde **Özelleştir**' i seçin.
 
-1. **Özelleştir** iletişim kutusunda **Komutlar** sekmesini seçin.
+1. **Özelleştir** Iletişim kutusunda **Komutlar** sekmesini seçin.
 
-1. **Araç Çubuğu'nu**seçin ve ardından metni görüntülemek istediğiniz düğmeyi içeren araç çubuğu adını seçin.
+1. **Araç çubuğu**' nu seçin ve ardından metnini görüntülemeyi düşündüğünüz düğmeyi içeren araç çubuğu adını seçin.
 
 1. Listede, değiştirmek istediğiniz komutu seçin.
 
-1. **Seçimi Değiştir'i**seçin.
+1. **Seçimi Değiştir**' i seçin.
 
-1. **Resim ve Metin'i**seçin.
+1. **Görüntü ve metin**seçin.
 
-### <a name="to-modify-the-displayed-text-in-a-button"></a>Düğmede görüntülenen metni değiştirmek için
+### <a name="to-modify-the-displayed-text-in-a-button"></a>Bir düğmedeki görüntülenecek metni değiştirmek için
 
-1. **Seçimi Değiştir'i**yeniden seçin.
+1. **Seçimi Değiştir**' i yeniden seçin.
 
-1. **In Name'e**bitişik olarak, seçili düğme için yeni bir alt yazı ekleyin.
+1. **Ad**alanına bitişik, Ekle seçili düğme için yeni bir başlık girin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio'nun erişilebilirlik özellikleri](../../ide/reference/accessibility-features-of-visual-studio.md)
+* [Visual Studio 'nun erişilebilirlik özellikleri](../../ide/reference/accessibility-features-of-visual-studio.md)
 * [Mac için Visual Studio için erişilebilirlik](/visualstudio/mac/accessibility/)
 * [Erişilebilir uygulamalar tasarlamak için kaynaklar](../../ide/reference/resources-for-designing-accessible-applications.md)

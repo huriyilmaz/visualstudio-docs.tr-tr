@@ -15,24 +15,24 @@ caps.latest.revision: 32
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f7b830e9d3a045bb54394a91d94e036613af7d1f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5da2e2bf26bb1894987caa8b748181d952bd7c18
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72607869"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85547842"
 ---
 # <a name="ca1502-avoid-excessive-complexity"></a>CA1502: Aşırı karmaşıklıktan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|AvoidExcessiveComplexity|
 |CheckId|CA1502|
 |Kategori|Microsoft. Bakımolmaması|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir yöntemin aşırı döngüsel karmaşıklığı vardır.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -50,14 +50,14 @@ ms.locfileid: "72607869"
  Bu kural ihlalini onarmak için, döngüsel karmaşıklığını azaltmak üzere yöntemi yeniden düzenleyin.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Karmaşıklığın kolayca azaltılamamasının ve yöntemin anlaşılması, test edilmesi ve bakımının kolay olması durumunda bu kuraldan bir uyarının gösterilmesinin güvenli olması güvenlidir. Özellikle, büyük `switch` `Select` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)])) içeren bir yöntem, dışarıda bırakma için bir adaydır. Kod tabanını geliştirme döngüsündeki geç hale getirme veya daha önce sevk edilen koddaki çalışma zamanı davranışında beklenmedik bir değişikliği tanıtma riski, kodu yeniden düzenlemenin bakım avantajlarının ağır olduğunu ortadan kaldırır.
+ Karmaşıklığın kolayca azaltılamamasının ve yöntemin anlaşılması, test edilmesi ve bakımının kolay olması durumunda bu kuraldan bir uyarının gösterilmesinin güvenli olması güvenlidir. Özellikle, büyük `switch` (ın) ifadesini içeren bir yöntem `Select` , [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] dışlama için bir adaydır. Kod tabanını geliştirme döngüsündeki geç hale getirme veya daha önce sevk edilen koddaki çalışma zamanı davranışında beklenmedik bir değişikliği tanıtma riski, kodu yeniden düzenlemenin bakım avantajlarının ağır olduğunu ortadan kaldırır.
 
 ## <a name="how-cyclomatic-complexity-is-calculated"></a>Döngüsel karmaşıklığı nasıl hesaplanır
  Döngüsel karmaşıklığı aşağıdaki 1 eklenerek hesaplanır:
 
-- Dal sayısı (`if`, `while` ve `do`)
+- Dal sayısı ( `if` , `while` ve gibi `do` )
 
-- Bir `switch` `case` deyim sayısı
+- `case`İçindeki deyim sayısı`switch`
 
   Aşağıdaki örneklerde, değişen döngüsel karmaşıklıkları olan Yöntemler gösterilmektedir.
 

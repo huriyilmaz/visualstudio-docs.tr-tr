@@ -1,7 +1,7 @@
 ---
-title: Veri kopyalama ve çalışma sayfaları arasında program aracılığıyla biçimlendirme
+title: Çalışma sayfalarında verileri ve biçimlendirmeyi program aracılığıyla kopyalama
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,15 +15,15 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b90704d6d9fe555920fb042939079bd53884cfbe
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
+ms.openlocfilehash: 07baa23b6fd276e8fb8452934dc6361544d16038
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402204"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85546113"
 ---
-# <a name="how-to-programmatically-copy-data-and-formatting-across-worksheets"></a>Nasıl yapılır: Veri ve biçimlendirme çalışma sayfaları arasında program aracılığıyla kopyalama
-  Verileri bir sayfada bir aralıktan çalışma kitabındaki diğer tüm sayfaları kullanarak kopyalayabilirsiniz <xref:Microsoft.Office.Interop.Excel.Worksheets.FillAcrossSheets%2A> yöntemi. Bir aralığı belirtin ve verileri, biçimlendirme veya her ikisi de kopyalamak istediğiniz.
+# <a name="how-to-programmatically-copy-data-and-formatting-across-worksheets"></a>Nasıl yapılır: çalışma sayfaları arasında program aracılığıyla veri kopyalama ve biçimlendirme
+  Yöntemini kullanarak bir sayfadaki bir aralıktaki verileri bir çalışma kitabındaki diğer tüm sayfalara kopyalayabilirsiniz <xref:Microsoft.Office.Interop.Excel.Worksheets.FillAcrossSheets%2A> . Bir Aralık ve verileri, biçimlendirmeyi veya her ikisini de kopyalamak isteyip istemediğinizi belirtin.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
@@ -31,11 +31,11 @@ ms.locfileid: "66402204"
  [!code-csharp[Trin_VstcoreExcelAutomation#44](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#44)]
  [!code-vb[Trin_VstcoreExcelAutomation#44](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#44)]
 
-## <a name="compile-the-code"></a>Kod derleme
- Bu örnek adlı bir aralık gerektirir `rangeData` çalışma sayfasında.
+## <a name="compile-the-code"></a>Kodu derle
+ Bu örnek, çalışma sayfasında adlı bir Aralık gerektirir `rangeData` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Çalışma sayfaları ile çalışma](../vsto/working-with-worksheets.md)
-- [Nasıl yapılır: Program aracılığıyla çalışma kitapları için yeni çalışma sayfaları ekleme](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
-- [Nasıl yapılır: Program aracılığıyla seçili hücreler içeren çalışma sayfalarındaki satırlarda biçimlendirmeyi değiştirme](../vsto/how-to-programmatically-change-formatting-in-worksheet-rows-containing-selected-cells.md)
+- [Çalışma sayfalarıyla çalışma](../vsto/working-with-worksheets.md)
+- [Nasıl yapılır: program aracılığıyla çalışma kitaplarına yeni çalışma sayfaları ekleme](../vsto/how-to-programmatically-add-new-worksheets-to-workbooks.md)
+- [Nasıl yapılır: seçili hücreleri içeren çalışma sayfası satırlarında program aracılığıyla biçimlendirmeyi değiştirme](../vsto/how-to-programmatically-change-formatting-in-worksheet-rows-containing-selected-cells.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

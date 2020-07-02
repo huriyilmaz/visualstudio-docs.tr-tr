@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Debug.ListDisassembly command
 - list disassembly command
 ms.assetid: eb363e35-e86a-4121-966f-991210c27e2a
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aaeab2e65088b8f1bfce3a6a12f8cd66c3245b75
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 91319a8d25aaec6bdd676ed6d709dffc47100195
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72747931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770643"
 ---
 # <a name="list-disassembly-command"></a>Ayrıştırılmış Kodu Listele Komutu
-Hata ayıklama işlemini başlatir ve hataların nasıl işleneceğini belirtmenize olanak tanır.
+Hata ayıklama işlemini başlatır ve hataların nasıl işleneceğini belirtmenizi sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cmd
 Debug.ListDisassembly [/count:number] [/endaddress:expression]
@@ -32,31 +32,31 @@ Debug.ListDisassembly [/count:number] [/endaddress:expression]
 ```
 
 ## <a name="switches"></a>Anahtarlar
-Her anahtar tam formu veya kısa bir form kullanılarak çağrılabilir.
+Her anahtar, tamamı ya da kısa bir form kullanılarak çağrılabilir.
 
-/count: `number` [veya] /c: `number` [veya] `number` /length: [veya] /l:`number`
+/Count: `number` [veya]/c: `number` [veya]/length: `number` [veya]/l:`number`
 
-İsteğe bağlı. Görüntülenecek yönerge sayısı. Varsayılan değer 8'dir.
+İsteğe bağlı. Görüntülenecek yönerge sayısı. Varsayılan değer 8 ' dir.
 
-/endaddress: `expression` [veya] /e:`expression`
+/endadddress: `expression` [veya]/e:`expression`
 
-İsteğe bağlı. Sökmeyi durduracak adres.
+İsteğe bağlı. Ayrıştırılmış kodun durdurulacağı adres.
 
-/codebaytlar:`yes` `no`&#124;[veya] /bayt:`yes`&#124;`no` [veya] /b:`yes`&#124;`no`
+/codebytes: `yes`&#124;`no` [veya]/bytes: `yes`&#124;`no` [veya]/b: `yes`&#124;`no`
 
-İsteğe bağlı. Kod baytlarının gösterip görüntülemeyeceğini gösterir. Varsayılan değer. `no`
+İsteğe bağlı. Kod baytlarının görüntülenip görüntülenmeyeceğini gösterir. Varsayılan değer `no` .
 
-/kaynak:`yes` `no`&#124;[veya]`yes` /s:&#124;`no`
+/Source: `yes`&#124;`no` [veya]/s: `yes`&#124;`no`
 
-İsteğe bağlı. Kaynak kodunun görüntülenip görüntülenip görüntülenmeyeceğini gösterir. Varsayılan değer. `no`
+İsteğe bağlı. Kaynak kodun görüntülenip görüntülenmeyeceğini gösterir. Varsayılan değer `no` .
 
-/sembolnames:`yes` `no`&#124;[veya]`yes` /adlar:&#124;`no` `yes` [veya] /n:&#124;`no`
+/symbolnames: `yes`&#124;`no` [veya]/names: `yes`&#124;`no` [veya]/n: `yes`&#124;`no`
 
-İsteğe bağlı. Sembol adlarının gösterip görüntülemeyeceğini gösterir. Varsayılan değer. `yes`
+İsteğe bağlı. Sembol adlarının görüntülenip görüntülenmeyeceğini gösterir. Varsayılan değer `yes` .
 
- [/satır`yes` numaraları: `no`&#124;]
+ [/linenumbers: `yes`&#124;`no` ]
 
-İsteğe bağlı. Kaynak koduyla ilişkili satır numaralarının görüntülenmesini sağlar. /kaynak anahtarının /linenumbers `yes` anahtarını kullanma değeri olmalıdır.
+İsteğe bağlı. Kaynak kodla ilişkili satır numaralarının görüntülenmesine izin vermez. /Linenumbers anahtarını kullanmak için/Source anahtarının bir değeri olmalıdır `yes` .
 
 ## <a name="example"></a>Örnek
 
@@ -66,9 +66,9 @@ Her anahtar tam formu veya kısa bir form kullanılarak çağrılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Liste Çağrı Yığını Komutu](../../ide/reference/list-call-stack-command.md)
-- [Liste Konuları Komutu](../../ide/reference/list-threads-command.md)
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Çağrı yığınını Listele komutu](../../ide/reference/list-call-stack-command.md)
+- [Iş parçacıklarını Listele komutu](../../ide/reference/list-threads-command.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

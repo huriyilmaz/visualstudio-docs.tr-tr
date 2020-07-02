@@ -1,5 +1,5 @@
 ---
-title: 'CA1700: ayrılmış &#39;&#39; Enum değerlerini adlandırma | Microsoft Docs'
+title: 'CA1700: Enum değerlerini &#39;ayrılmış&#39; olarak adlandırma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -15,24 +15,24 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9b5ddeb77a255bcfab121746cd8748c6fcb1f113
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 57f2a2e5959860a99a921101ff5782f9bce9ace3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669311"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545658"
 ---
-# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700: ayrılmış Enum değerlerini &#39;adlandırma&#39;
+# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700: &#39;Enum değerlerini ayrılmış&#39; olarak adlandırın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotNameEnumValuesReserved|
 |CheckId|CA1700|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir numaralandırma üyesinin adı "ayrılmış" sözcüğünü içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -40,7 +40,7 @@ ms.locfileid: "72669311"
 
  Ayrılmış bir üye kullanmak yerine gelecekteki sürümde numaralandırmaya yeni bir üye ekleyin. Çoğu durumda, ek olarak özgün üyelerin değerlerinin değişmesine neden olmadığı sürece yeni üyenin eklenmesi bir son değişiklik değildir.
 
- Sınırlı sayıda durumda, özgün Üyeler orijinal değerlerini korusa bile bir üyenin eklenmesi Son değişiklik olur. Birincil olarak, yeni üye, tüm üye listesini kapsayan ve varsayılan durumda özel durum oluşturan dönüş değerindeki bir `switch` ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `Select`) ifadesinde kullanan çağıranlar olmadan mevcut kod yollarından geri döndürülemez. İkincil bir sorun, istemci kodunun <xref:System.Enum.IsDefined%2A?displayProperty=fullName> gibi yansıma yöntemlerinden davranış değişikliğini işleyemeyebilir. Buna uygun olarak, yeni üyenin mevcut metotlardan döndürülmesi gerekiyorsa veya kötü yansıma kullanımı nedeniyle bilinen bir uygulama uyumsuzluğu oluşursa, tek bölünemez çözüm şu şekilde olur:
+ Sınırlı sayıda durumda, özgün Üyeler orijinal değerlerini korusa bile bir üyenin eklenmesi Son değişiklik olur. Birincil olarak, yeni üye, `switch` `Select` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] tüm üye listesini kapsayan ve varsayılan durumda özel durum oluşturan dönüş değerindeki bir (ın) bildiriminde bir (ın) ifadesinde olmayan çağıranlar olmadan mevcut kod yollarından geri döndürülemez. İkincil bir sorun, istemci kodunun gibi yansıma yöntemlerinden davranış değişikliğini işleyemeyebilir <xref:System.Enum.IsDefined%2A?displayProperty=fullName> . Buna uygun olarak, yeni üyenin mevcut metotlardan döndürülmesi gerekiyorsa veya kötü yansıma kullanımı nedeniyle bilinen bir uygulama uyumsuzluğu oluşursa, tek bölünemez çözüm şu şekilde olur:
 
 1. Özgün ve yeni üyeleri içeren yeni bir sabit listesi ekleyin.
 
@@ -55,12 +55,12 @@ ms.locfileid: "72669311"
  Şu anda kullanılan bir üyenin veya daha önce sevk edilen kitaplıklarda bu kuraldan bir uyarının görüntülenmesini güvenlidir.
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA2217: Numaralandırmaları FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+ [CA2217: Sabit listelerini FlagsAttribute ile işaretlemeyin](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
- [CA1712: Numaralandırma değerleri için tür adıyla önek kullanmayın](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
+ [CA1712: Sabit listesi değerlerine tür adını önek olarak eklemeyin](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
 
- [CA1028: Numaralandırma depolaması Int32 olmalıdır](../code-quality/ca1028-enum-storage-should-be-int32.md)
+ [CA1028: Sabit listesi depolaması Int32 olmalıdır](../code-quality/ca1028-enum-storage-should-be-int32.md)
 
- [CA1008: Numaralandırmalar sıfır değerine sahip olmalıdır](../code-quality/ca1008-enums-should-have-zero-value.md)
+ [CA1008: Sabit listelerinin sıfır değeri olmalıdır](../code-quality/ca1008-enums-should-have-zero-value.md)
 
- [CA1027: Numaralandırmaları FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+ [CA1027: Sabit listelerini FlagsAttribute ile işaretleyin](../code-quality/ca1027-mark-enums-with-flagsattribute.md)

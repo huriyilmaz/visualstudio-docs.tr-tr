@@ -9,22 +9,22 @@ helpviewer_keywords:
 - list source command
 - ListSource command
 ms.assetid: e45f08d2-f4a3-49c3-9452-aa60508e2f74
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c211773f20ab4643b62c8c71fc6ae6581a91987
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 286cfa87de96b75e8b79d9ee3bc31e84d7761670
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72747899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770622"
 ---
 # <a name="list-source-command"></a>Kaynağı Listele Komutu
-Kaynak kodunun belirtilen satırlarını görüntüler.
+Belirtilen kaynak kodu satırlarını görüntüler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 Debug.ListSource [/Count:number] [/Current] [/File:filename]
@@ -32,28 +32,28 @@ Debug.ListSource [/Count:number] [/Current] [/File:filename]
 ```
 
 ## <a name="switches"></a>Anahtarlar
-/Sayım:`number`
+Biriktirme`number`
 
 İsteğe bağlı. Görüntülenecek satır sayısını belirtir.
 
-/Akım
+/Current
 
 İsteğe bağlı. Geçerli satırı gösterir.
 
-/Dosya:`filename`
+Dosyasýný`filename`
 
-İsteğe bağlı. Dosyanın gösteriş yolu. Dosya adı belirtilmemişse, komut geçerli deyimsatırının kaynak kodunu gösterir.
+İsteğe bağlı. Gösterilecek dosyanın yolu. Dosya adı belirtilmemişse, komut geçerli deyimin satırı için kaynak kodunu gösterir.
 
-/Satır:`number`
+Satırı`number`
 
 İsteğe bağlı. Belirli bir satır numarasını gösterir.
 
-/ShowLineNumbers:`yes|no`
+ShowLineNumbers`yes|no`
 
-İsteğe bağlı. Satır numaralarının görüntülenip görüntülenip görüntülenmeyeceğini belirtir.
+İsteğe bağlı. Satır numaralarının görüntülenip görüntülenmeyeceğini belirtir.
 
 ## <a name="example"></a>Örnek
-Bu örnek, form1.vb dosyasının 4 satırındaki kaynak kodunu listeler ve satır numaraları görünür.
+Bu örnek, satır numaraları görünür olan Form1. vb dosyasının 4. satırından kaynak kodu listeler.
 
 ```
 Debug.ListSource /File:"C:\Visual Studio Projects\Form1.vb" /Line:4 /ShowLineNumbers:yes
@@ -61,5 +61,5 @@ Debug.ListSource /File:"C:\Visual Studio Projects\Form1.vb" /Line:4 /ShowLineNum
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
