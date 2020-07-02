@@ -1,9 +1,9 @@
 ---
-title: "&lt;friendlyName&gt; öğesi (Visual Studio'da Office Geliştirme)"
+title: "&lt;friendlyName &gt; öğesi (Visual Studio 'Da Office geliştirme)"
 titleSuffix: ''
 ms.custom: seodec18
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: d038e825173f95ddfe4106022c7c9924090b3a5f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6629212fcc981ba3decb3b02d63975bc9826dc1f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62972362"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541667"
 ---
-# <a name="ltfriendlynamegt-element-office-development-in-visual-studio"></a>&lt;friendlyName&gt; öğesi (Visual Studio'da Office Geliştirme)
-  `friendlyName` Öğesinin `vstov4` ad alanı, yüklü programlar listesinde görüntülenen adını depolar.
+# <a name="ltfriendlynamegt-element-office-development-in-visual-studio"></a>&lt;friendlyName &gt; öğesi (Visual Studio 'Da Office geliştirme)
+  `friendlyName`Ad alanı öğesi, `vstov4` yüklü programlar listesinde görünen adı depolar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <friendlyName>
@@ -32,14 +32,14 @@ ms.locfileid: "62972362"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `friendlyName` Öğe konusu `vstov4` ad alanı. Değer, bilgisayarda yüklü programlar listesinde ve Microsoft Office uygulamasının COM, VSTO eklentileri iletişim kutusu görünür.
+ `friendlyName`Öğesi `vstov4` ad alanıdır. Değer, bilgisayardaki yüklü programlar listesinde ve Microsoft Office uygulamaların COM VSTO eklentileri iletişim kutusunda görünür.
 
- `friendlyName` Öğesinin özniteliği ya da alt öğeleri.
+ `friendlyName`Öğesinde hiç öznitelik veya alt öğe yok.
 
-## <a name="vsto-add-in-example"></a>VSTO eklenti örneği
+## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir `friendlyName` kullanılarak dağıtılan bir uygulama düzeyi çözümü öğesinde [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+ Aşağıdaki kod örneği, `friendlyName` kullanılarak dağıtılan bir uygulama düzeyi çözümünde öğesini gösterir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -53,4 +53,4 @@ ms.locfileid: "62972362"
 
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

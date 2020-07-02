@@ -15,24 +15,24 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3968d81e8ee18b4b0a56bed50f7aa1f121e1c074
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f689dfd6c1d39bbd03d522a33ed8c5639a3da9f8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663251"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545489"
 ---
-# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: Temel türleri parametre olarak geçirmeyi düşünün
+# <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: Parametre olarak temel türleri geçmeyi düşünün
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ConsiderPassingBaseTypesAsParameters|
 |CheckId|CA1011|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Yöntem bildirimi türetilmiş bir tür olan biçimsel bir parametre içerir ve yöntem yalnızca parametrenin temel türünün üyelerini çağırır.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -46,18 +46,18 @@ ms.locfileid: "72663251"
 
 - yöntemi, türetilmiş tür tarafından belirtilen belirli işlevselliği gerektiriyorsa
 
-   \- veya-
+   \-veya
 
 - yalnızca türetilmiş tür veya daha türetilmiş bir tür metoduna zorlamak için yöntemine geçirilir.
 
   Bu durumlarda, derleyici ve çalışma zamanı tarafından belirtilen güçlü tür denetimi nedeniyle kod daha sağlam olacaktır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, yalnızca bir <xref:System.IO.FileStream> nesnesi ile kullanılabilen ve bu kuralı ihlal eden `ManipulateFileStream` yöntemini gösterir. İkinci bir yöntem olan `ManipulateAnyStream`, <xref:System.IO.FileStream> parametresini <xref:System.IO.Stream> kullanarak değiştirerek kuralı karşılar.
+ Aşağıdaki örnek, `ManipulateFileStream` yalnızca bir nesnesi ile kullanılabilen ve bu kuralı ihlal eden bir yöntemi gösterir <xref:System.IO.FileStream> . İkinci bir yöntem, `ManipulateAnyStream` <xref:System.IO.FileStream> parametresini bir kullanarak değiştirerek kuralını karşılar <xref:System.IO.Stream> .
 
  [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/cpp/FxCop.Design.ConsiderPassingBaseTypes.cpp#1)]
  [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/cs/FxCop.Design.ConsiderPassingBaseTypes.cs#1)]
  [!code-vb[FxCop.Design.ConsiderPassingBaseTypes#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ConsiderPassingBaseTypes/vb/FxCop.Design.ConsiderPassingBaseTypes.vb#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1059: Üyeler belli somut türleri göstermemelidir](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)
+ [CA1059: Üyeler belirli somut türleri kullanıma sunmamalıdır](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

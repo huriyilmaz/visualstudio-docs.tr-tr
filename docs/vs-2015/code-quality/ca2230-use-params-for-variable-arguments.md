@@ -15,33 +15,33 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: a690544a7ed03094587a2aaf1c44b7ed68e8f2a9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ce66e04272618b9df2ab1957af305bb9bf40ee9c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662826"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540367"
 ---
 # <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: Değişken bağımsız değişkenler için params kullanın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|UseParamsForVariableArguments|
 |CheckId|CA2230|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Ortak veya korumalı bir tür, `VarArgs` çağırma kuralını kullanan ortak veya korumalı bir yöntem içerir.
+## <a name="cause"></a>Nedeni
+ Ortak veya korumalı bir tür, çağırma kuralını kullanan ortak veya korumalı bir yöntem içerir `VarArgs` .
 
 ## <a name="rule-description"></a>Kural Tanımı
- @No__t_0 çağırma kuralı, değişken sayıda parametre alan belirli yöntem tanımlarıyla birlikte kullanılır. @No__t_0 çağırma kuralını kullanan bir yöntem ortak dil belirtimi (CLS) uyumlu değil ve programlama dilleri arasında erişilebilir olmayabilir.
+ `VarArgs`Çağırma kuralı, değişken sayıda parametre alan belirli yöntem tanımlarıyla birlikte kullanılır. Çağırma kuralını kullanan bir yöntem `VarArgs` ortak dil belirtimi (CLS) uyumlu değil ve programlama dilleri arasında erişilebilir olmayabilir.
 
- ' C#De, bir yöntemin parametre listesi `__arglist` anahtar sözcüğüyle sona erdiğinde `VarArgs` çağırma kuralı kullanılır. Visual Basic, `VarArgs` çağırma kuralını desteklemez ve Visual C++ , yalnızca elips `...` gösterimini kullanan yönetilmeyen kodda kullanılmasına izin verir.
+ C# ' de, `VarArgs` yöntemin parametre listesi anahtar sözcüğüyle sona erdiğinde çağırma kuralı kullanılır `__arglist` . Visual Basic `VarArgs` , çağırma kuralını desteklemez ve Visual C++ yalnızca elips gösterimini kullanan yönetilmeyen kodda kullanılmasına izin verir `...` .
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- İçindeki C#bu kuralın ihlalini onarmak için `__arglist` yerine [params](https://msdn.microsoft.com/library/1690815e-b52b-4967-8380-5780aff08012) anahtar sözcüğünü kullanın.
+ C# dilinde bu kuralın ihlalini onarmak için yerine [params](https://msdn.microsoft.com/library/1690815e-b52b-4967-8380-5780aff08012) anahtar sözcüğünü kullanın `__arglist` .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
@@ -52,4 +52,4 @@ ms.locfileid: "72662826"
  [!code-csharp[FxCop.Usage.UseParams#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.UseParams/cs/FxCop.Usage.UseParams.cs#1)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Reflection.CallingConventions?displayProperty=fullName> [Dil bağımsızlığı ve dilden bağımsız bileşenler](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)
+ <xref:System.Reflection.CallingConventions?displayProperty=fullName>[Dil bağımsızlığı ve dilden bağımsız bileşenler](https://msdn.microsoft.com/library/4f0b77d0-4844-464f-af73-6e06bedeafc6)

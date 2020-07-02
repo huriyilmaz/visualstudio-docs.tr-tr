@@ -8,36 +8,36 @@ caps.latest.revision: 7
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 558e205fa37569bfa12d7b93f989d0f8ebabab43
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2b3e06bb7a150c4bb07eefc0571818f1127fe460
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669056"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545125"
 ---
 # <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: Güvensiz XSLT Betiği Yürütme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|Insecurexsltscriptexecution|
 |CheckId|CA3076|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- .NET uygulamalarında [Genişletilebilir Stil sayfaları Dil Dönüşümleri (XSLT)](https://support.microsoft.com/kb/313997) çalıştırıyorsanız, işlemci [güvenilir olmayan URI başvurularını](https://msdn.microsoft.com/ba3e4d4f-1ee7-4226-a51a-78a1f1b5bd8a) , saldırganlar için duyarlı bilgileri açığa çıkartabilir ve bunların reddedilmesine karşı önde bir şekilde çözümleyebilir Hizmet ve çapraz site saldırıları.
+## <a name="cause"></a>Nedeni
+ .NET uygulamalarında [Genişletilebilir Stil sayfaları Dil Dönüşümleri (XSLT)](https://support.microsoft.com/kb/313997) çalıştırıyorsanız, işlemci GÜVENLI [olmayan URI başvurularını](https://msdn.microsoft.com/ba3e4d4f-1ee7-4226-a51a-78a1f1b5bd8a) , saldırganlar için duyarlı bilgileri açığa çıkartabilir ve hizmet reddi ve siteler arası saldırıları çözümleyebilir.
 
 ## <a name="rule-description"></a>Kural Tanımı
  [XSLT](https://msdn.microsoft.com/6377ce5f-3c45-42a6-b7a9-ec8da588b60c) , XML verilerini dönüştürmek için bir World WIDE Web KONSORSIYUMU (W3C) standardıdır. XSLT genellikle, XML verilerini HTML, sabit uzunlukta metin, virgülle ayrılmış metin veya farklı bir XML biçimi gibi diğer biçimlere dönüştürmek üzere stil sayfaları yazmak için kullanılır. Varsayılan olarak yasaklanmış olmasına karşın, bunu projeniz için etkinleştirmeyi tercih edebilirsiniz.
 
- Bir saldırı yüzeyi açığa çıkarmadığından emin olmak için, bu kural XslCompiledTransform her seferinde tetiklenir. <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> kötü amaçlı betik işlemeye izin veren <xref:System.Xml.Xsl.XsltSettings> ve <xref:System.Xml.XmlResolver> ' in güvensiz birleşim örneklerini alır.
+ Bir saldırı yüzeyi açığa çıkarmadığından emin olmak için, bu kural XslCompiledTransform her seferinde tetiklenir.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> <xref:System.Xml.Xsl.XsltSettings> <xref:System.Xml.XmlResolver> , ve kötü amaçlı betik işlemeye izin veren güvenli olmayan birleşim örneklerini alır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
 
-- Güvenli olmayan XsltSettings bağımsız değişkenini XsltSettings ile değiştirin. <xref:System.Xml.Xsl.XsltSettings.Default%2A> ya da belge işlev ve betik yürütmeyi devre dışı bırakmış bir örnekle.
+- Güvenli olmayan XsltSettings bağımsız değişkenini XsltSettings ile değiştirin.<xref:System.Xml.Xsl.XsltSettings.Default%2A> ya da belge işlev ve betik yürütmeyi devre dışı bırakmış bir örnekle.
 
-- @No__t_0 bağımsız değişkenini null ya da bir <xref:System.Xml.XmlSecureResolver> örneğiyle değiştirin.
+- <xref:System.Xml.XmlResolver>Bağımsız değişkeni null veya bir örnekle değiştirin <xref:System.Xml.XmlSecureResolver> .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Girişin güvenilen bir kaynaktan geldiğinden emin olmadığınız için, bu uyarıdan bir kuralı engellemez.

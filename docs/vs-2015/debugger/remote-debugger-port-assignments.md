@@ -9,54 +9,53 @@ caps.latest.revision: 8
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: c1e70ec3ba50e5be1ed532bb4a88cbdd500af09c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2628d8929a0d2b6fd3561f88c81cfaa3b62564f0
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68195168"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85542109"
 ---
 # <a name="remote-debugger-port-assignments"></a>Uzaktan Hata Ayıklayıcı Bağlantı Noktası Atamaları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio uzaktan hata ayıklayıcı, bir uygulama veya bir arka plan hizmeti olarak çalıştırabilirsiniz. Bir uygulama olarak yürütüldüğünde, varsayılan olarak şu şekilde atanan bir bağlantı noktası kullanır:  
+Visual Studio Uzaktan Hata Ayıklayıcı, bir uygulama veya arka plan hizmeti olarak çalıştırılabilir. Uygulama olarak çalıştırıldığında, varsayılan olarak aşağıdaki şekilde atanmış bir bağlantı noktası kullanır:  
   
-- Visual Studio 2015: 4020  
+- Visual Studio 2015:4020  
   
-- Visual Studio 2013 için: 4018  
+- Visual Studio 2013:4018  
   
-- Visual Studio 2012 için: 4016  
+- Visual Studio 2012:4016  
   
-  Diğer bir deyişle, her sürüm için 2 tarafından uzaktan hata ayıklayıcı için atanan bağlantı noktası numarası artırılır. Farklı bir bağlantı noktası numarası gibi ayarlayabilirsiniz. Şu bağlantı noktası numaraları daha sonraki bir bölümde ayarlama açıklanmaktadır.  
+  Diğer bir deyişle, uzaktan hata ayıklayıcıya atanan bağlantı noktasının numarası, her sürüm için 2 ile artırılır. Dilediğiniz farklı bir bağlantı noktası numarası belirleyebilirsiniz. Daha sonraki bir bölümde bağlantı noktası numaralarının nasıl ayarlanacağını açıklayacağız.  
   
-## <a name="the-remote-debugger-port-on-32-bit-operating-systems"></a>32 bit işletim sistemlerinde uzaktan hata ayıklayıcı bağlantı noktası  
- (Visual Studio 2015) gelen TCP 4020 ana bağlantı noktası ve tüm senaryolar için gereklidir. Bu komut satırı veya uzaktan hata ayıklayıcı penceresinde yapılandırabilirsiniz.  
+## <a name="the-remote-debugger-port-on-32-bit-operating-systems"></a>32 bit Işletim sistemlerinde uzaktan hata ayıklayıcı bağlantı noktası  
+ TCP 4020 (Visual Studio 2015 ' de) ana bağlantı noktasıdır ve tüm senaryolar için gereklidir. Bunu komut satırından ya da uzaktan hata ayıklayıcı penceresinden yapılandırabilirsiniz.  
   
- Uzaktan hata ayıklayıcı penceresinde **Araçlar / Seçenekler**, TCP/IP bağlantı noktası numarasını ayarlayın.  
+ Uzaktan hata ayıklayıcı penceresinde, **Araçlar/Seçenekler**' e tıklayın ve TCP/IP bağlantı noktası numarasını ayarlayın.  
   
- Uzaktan hata ayıklayıcı ile komut satırında başlatmak **/bağlantı noktası** geçiş: **msvsmon/Port \<bağlantı noktası numarası >** .  
+ Komut satırında, **/Port** anahtarı: **msvsmon/Port \<port number> **ile uzaktan hata ayıklayıcıyı başlatın.  
   
- Komut satırı anahtarları hata ayıklama Uzaktan Yardım'daki tüm uzaktan hata ayıklayıcıyı bulabilirsiniz (basın **F1** veya **Yardım / kullanım** uzaktan hata ayıklayıcı penceresinde).  
+ Uzaktan hata ayıklama yardımında tüm uzaktan hata ayıklayıcı komut satırı anahtarlarını bulabilir (uzaktan hata ayıklayıcı penceresinde **F1** tuşuna basın veya **Yardım/kullanım** ' ye tıklayabilirsiniz).  
   
-## <a name="the-remote-debugger-port-on-64-bit-operating-systems"></a>64-bit işletim sistemlerinde uzaktan hata ayıklayıcı bağlantı noktası  
- Uzaktan hata ayıklayıcı 64-bit sürümünü başlatıldığında, varsayılan olarak 4020 bağlantı noktasını kullanır.  Bir 32 bit işlemde hata ayıklamak, uzaktan hata ayıklayıcı 64-bit sürümünü 4021 bağlantı noktası üzerinde uzaktan hata ayıklayıcı bir 32-bit sürümü başlatır. 32-bit uzaktan hata ayıklayıcı çalıştırırsanız, 4020 kullanır ve 4021 kullanılmaz.  
+## <a name="the-remote-debugger-port-on-64-bit-operating-systems"></a>64 bit Işletim sistemlerinde uzaktan hata ayıklayıcı bağlantı noktası  
+ Uzaktan hata ayıklayıcının 64 bit sürümü başlatıldığında varsayılan olarak 4020 bağlantı noktasını kullanır.  32 bitlik bir işlemde hata ayıklaması yaparsanız, uzaktan hata ayıklayıcı 'nın 64 bit sürümü, bağlantı noktası 4021 üzerinde uzaktan hata ayıklayıcı 'nın 32 bit bir sürümünü başlatır. 32 bitlik uzaktan hata ayıklayıcıyı çalıştırırsanız, 4020 kullanır ve 4021 kullanılmaz.  
   
- Bu bağlantı noktası, komut satırından yapılandırılabilir: **Msvsmon/wow64port \<bağlantı noktası numarası >** .  
+ Bu bağlantı noktası komut satırından yapılandırılabilir: **msvsmon/wow64port \<port number> **.  
   
 ## <a name="the-discovery-port"></a>Bulma bağlantı noktası  
- UDP 3702, ağ üzerinde çalışan uzaktan hata ayıklayıcı örneklerini bulmak için kullanılır (örneğin, **Bul** iletişim kutusunda **iliştirme** iletişim). Yalnızca makine adı veya IP adresi hedef bilgisayarın olduğunu bilmesinin başka bir şekilde varsa isteğe bağlı, bu nedenle uzaktan hata ayıklayıcı, çalışan bir makine bulmak için kullanılır. Bağlantı noktası numarası yapılandırılamaz için bu bulma, standart bir bağlantı noktasıdır.  
+ UDP 3702, ağda uzaktan hata ayıklayıcının çalışan örneklerini bulmak için kullanılır (örneğin, **Işleme İliştir** Iletişim kutusunda **bul** iletişim kutusu). Yalnızca uzaktan hata ayıklayıcıyı çalıştıran bir makineyi bulmak için kullanılır; bu nedenle, hedef bilgisayarın makine adını veya IP adresini bilmenin başka bir yolu varsa bu isteğe bağlıdır. Bu, bulma için standart bir bağlantı noktasıdır, bu nedenle bağlantı noktası numarası yapılandırılamaz.  
   
- Bulmayı etkinleştirmek istemiyorsanız, devre dışı keşif ile komut satırından msvsmon başlatabilirsiniz:  **Msvsmon /nodiscovery**.  
+ Bulmayı etkinleştirmek istemiyorsanız, msvsmon 'yi bulma devre dışı: **msvsmon/nodiscovery**ile komut satırından başlatabilirsiniz.  
   
-## <a name="remote-debugger-ports-on-azure"></a>Azure uzaktan hata ayıklayıcı bağlantı noktaları  
- Aşağıdaki bağlantı noktaları, Azure üzerinde uzaktan hata ayıklayıcı tarafından kullanılır. Bulut hizmeti bağlantı noktalarını tek tek bir VM üzerindeki bağlantı noktalarına eşlenir. TCP tüm bağlantı noktaları şunlardır.  
-  
-||||  
-|-|-|-|  
-|**bağlantı**|**Bulut hizmeti bağlantı noktası**|**VM üzerindeki bağlantı noktası**|  
-|Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector|30400|30398|  
-|Microsoft.WindowsAzure.Plugins.RemoteDebugger.Forwarder|31400|31398|  
-|Microsoft.WindowsAzure.Plugins.RemoteDebugger.FileUpload|32400|32398|  
+## <a name="remote-debugger-ports-on-azure"></a>Azure 'da uzaktan hata ayıklayıcı bağlantı noktaları  
+ Aşağıdaki bağlantı noktaları, Azure 'da uzaktan hata ayıklayıcı tarafından kullanılır. Bulut hizmetindeki bağlantı noktaları, tek bir VM 'deki bağlantı noktalarıyla eşleştirilir. Tüm bağlantı noktaları TCP ' dir.  
+
+|**Bağlantı**|**Bulut hizmetindeki bağlantı noktası**|**VM 'deki bağlantı noktası**|  
+|-|-|-|
+|Microsoft. WindowsAzure. Eklentiler. RemoteDebugger. Connector|30400|30398|  
+|Microsoft. WindowsAzure. Eklentiler. RemoteDebugger. Iletici|31400|31398|  
+|Microsoft. WindowsAzure. Eklentiler. RemoteDebugger. FileUpload|32400|32398|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+ [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

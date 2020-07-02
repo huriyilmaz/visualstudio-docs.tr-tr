@@ -15,31 +15,31 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9297ea0bb24eed54d0134a5f3c0fce87e6757adb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4adcae1c1cc616cdbcf5a7aa15342d221c2f4300
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662882"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540588"
 ---
 # <a name="ca2228-do-not-ship-unreleased-resource-formats"></a>CA2228: Yayımlanmamış kaynak biçimlerini yollamayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotShipUnreleasedResourceFormats|
 |CheckId|CA2228|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Bir kaynak dosyası, şu anda desteklenmeyen bir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sürümü kullanılarak oluşturuldu.
+## <a name="cause"></a>Nedeni
+ Bir kaynak dosyası, şu anda desteklenmeyen bir sürümü kullanılarak oluşturuldu [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .
 
 ## <a name="rule-description"></a>Kural Tanımı
- @No__t_0 yayın öncesi sürümleri kullanılarak oluşturulan kaynak dosyaları, .NET Framework desteklenen sürümleri tarafından kullanılamayabilir.
+ Yayın öncesi sürümleri kullanılarak oluşturulan kaynak dosyaları, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .NET Framework desteklenen sürümleri tarafından kullanılamayabilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]k desteklenen bir sürümünü kullanarak kaynak oluşturun.
+ Bu kural ihlalini onarmak için, bir k sürümünün desteklenen bir sürümünü kullanarak kaynağı oluşturun [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.

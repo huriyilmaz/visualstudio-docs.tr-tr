@@ -12,12 +12,12 @@ caps.latest.revision: 39
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c38150dd84ef8898b2aa894a614dfb79e289b593
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.openlocfilehash: ef79d1be0b88ecdafa8691189bbc95291a6417ed
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75850447"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544995"
 ---
 # <a name="define-and-install-a-modeling-extension"></a>Modelleme uzantısı tanımlama ve yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -32,7 +32,7 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 ## <a name="creating-a-modeling-extension-solution"></a>Modelleme uzantısı çözümü oluşturma
  Bir modelleme uzantısı tanımlamak için şu projeleri içeren bir çözüm oluşturmanız gerekir:
 
-- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tümleştirme Uzantısı (VSıX) projesi. Bu, uzantınızın bileşenleri için yükleyici olarak davranan bir dosya oluşturur.
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Tümleştirme Uzantısı (VSIX) projesi. Bu, uzantınızın bileşenleri için yükleyici olarak davranan bir dosya oluşturur.
 
 - Program kodu içeren bileşenler için gereken bir sınıf kitaplığı projesi.
 
@@ -44,17 +44,17 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
 1. **Dosya** menüsünde, **Yeni**, **Proje**' yi seçin.
 
-2. **Yüklü şablonlar**altında, **görsel C#**  veya **Visual Basic**' yi seçin ve ardından **sınıf kitaplığı**' nı seçin.
+2. **Yüklü şablonlar**altında **Visual C#** veya **Visual Basic**seçin, sonra **sınıf kitaplığı**' nı seçin.
 
 #### <a name="to-create-a-vsix-project"></a>VSıX projesi oluşturmak için
 
 1. Kod içeren bir bileşen oluşturuyorsanız, önce sınıf kitaplığı projesinin oluşturulması en kolay yoldur. Kodunuzu bu projeye ekleyeceksiniz.
 
-2. Bir VSIX projesi oluşturun.
+2. VSıX projesi oluşturun.
 
     1. **Çözüm Gezgini**, çözümün kısayol menüsünde, **Ekle**, **Yeni proje**' yi seçin.
 
-    2. **Yüklü şablonlar**altında,  **C# görsel** veya **Visual Basic**' ı genişletin, ardından **genişletilebilirlik**' i seçin. Orta sütunda **VSIX projesi**' ni seçin.
+    2. **Yüklü şablonlar**altında **Visual C#** veya **Visual Basic**' i genişletin, ardından **genişletilebilirlik**' i seçin. Orta sütunda **VSIX projesi**' ni seçin.
 
 3. VSıX projesini çözümün başlangıç projesi olarak ayarlayın.
 
@@ -72,19 +72,19 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
     2. Kod içeren bir bileşen için **yeni varlık Ekle** iletişim kutusunda bu alanları ayarlayın:
 
-        |||
+        |Alan|Değer|
         |-|-|
-        |**Tür** =|**Microsoft. VisualStudio. MefComponent**|
-        |**Kaynak** =|**Geçerli çözümdeki bir proje**|
+        |**Türüyle** =|**Microsoft. VisualStudio. MefComponent**|
+        |**Kaynaktaki** =|**Geçerli çözümdeki bir proje**|
         |**Project** =|*Sınıf kitaplığı projeniz*|
-        |**Bu klasöre ekle** =|*olmamalıdır*|
+        |**Bu klasöre Ekle** =|*olmamalıdır*|
 
          Diğer bileşen türleri için, sonraki bölümde bulunan bağlantılara bakın.
 
 ## <a name="developing-the-component"></a>Bileşen geliştirme
  Bir menü komutu veya hareket işleyicisi gibi her bir bileşen için ayrı bir işleyici tanımlamanız gerekir. Aynı sınıf kitaplığı projesine çeşitli işleyiciler yerleştirebilirsiniz. Aşağıdaki tabloda farklı tür işleyici özetlenmektedir.
 
-|Uzantı türü|Konu|Her bileşenin genellikle nasıl bildirildiği|
+|Uzantı türü|Konu başlığı|Her bileşenin genellikle nasıl bildirildiği|
 |--------------------|-----------|----------------------------------------------|
 |Menü komutu|[Modelleme diyagramında menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md)|`[ClassDesignerExtension]`<br /><br /> `// or other diagram types`<br /><br /> `[Export(typeof(ICommandExtension))]`<br /><br /> `public class MyCommand : ICommandExtension`<br /><br /> `{...`|
 |Sürükleyip bırakma veya çift tıklama|[Modelleme diyagramında hareket işleyicisi tanımlama](../modeling/define-a-gesture-handler-on-a-modeling-diagram.md)|`[ClassDesignerExtension]`<br /><br /> `// or other diagram types`<br /><br /> `[Export(typeof(IGestureExtension))]`<br /><br /> `public class MyGesture : IGestureExtension`<br /><br /> `{...`|
@@ -97,9 +97,9 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
 #### <a name="to-run-an-extension-during-its-development"></a>Geliştirme sırasında bir uzantıyı çalıştırmak için
 
-1. [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **hata ayıklama** menüsünde, **hata ayıklamayı Başlat**' ı seçin.
+1. [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' ı seçin.
 
-     Proje oluşturulur ve yeni bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] örneği deneysel modda başlatılır.
+     Proje oluşturulur ve yeni bir örneği [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] deneysel modda başlatılır.
 
     - Alternatif olarak, **hata ayıklama olmadan Başlat**' ı seçebilirsiniz. Bu, programı başlatmak için geçen süreyi azaltır.
 
@@ -109,14 +109,14 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
 3. **Hata ayıklama olmadan Başlat** ' ı kullandıysanız, ancak hata ayıklayıcıyı kullanmak Istiyorsanız, Visual Studio 'nun ana örneğine dönün. **Hata Ayıkla** menüsünde, **İşleme İliştir ' e**tıklayın. İletişim kutusunda, **devenv**program adına sahip, Visual Studio 'nun Deneysel örneğini seçin.
 
-## <a name="Installing"></a>Uzantı yükleme ve kaldırma
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Uzantı yükleme ve kaldırma
  Uzantınızı kendi bilgisayarınızda veya diğer bilgisayarlarda Visual Studio 'nun ana örneğinde çalıştırmak için aşağıdaki adımları gerçekleştirin.
 
 1. Bilgisayarınızda, uzantı projeniz tarafından oluşturulan **. vsix** dosyasını bulun.
 
     1. **Çözüm Gezgini**' de, projenizin kısayol menüsünde **klasörü Windows Gezgini 'nde aç**' ı seçin.
 
-    2. Dosya **bin\\\*bulun \\** _yourproject_ **. vsix**
+    2. Dosya ** \\ \* bin \\ **' i_Proje_**. vsix** ' i bulun
 
 2. **. Vsix** dosyasını, uzantıyı yüklemek istediğiniz hedef bilgisayara kopyalayın. Bu, kendi bilgisayarınız veya başka bir tane olabilir.
 
@@ -130,15 +130,15 @@ Visual Studio 'da, modelleme diyagramları için uzantıları tanımlayabilirsin
 
 #### <a name="to-uninstall-an-extension"></a>Bir uzantıyı kaldırmak için
 
-1. Üzerinde **Araçları** menüsünü tıklatın **Uzantılar ve güncelleştirmeler**.
+1. **Araçlar** menüsünde **Uzantılar ve Güncelleştirmeler**’e tıklayın.
 
 2. **Yüklü uzantıları**genişletin.
 
 3. Uzantıyı seçin ve ardından **Kaldır**' a tıklayın.
 
-   Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı şu konumda silerek uzantıyı kaldırabilirsiniz: *% LocalAppData%* genellikle *DriveName*: \Users\\*UserName*\AppData\Local:
+   Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı *% LocalAppData%* tipik olarak *DriveName*: \Users \\ *Kullanıcı adı*\AppData\Local olan şu konumdan silerek uzantıyı kaldırabilirsiniz:
 
-   *% LocalAppData%* **\microsoft\visualstudio\\[sürüm] \Extensions**
+   *% LocalAppData%* **\microsoft\visualstudio \\ [sürüm] \Extensions**
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [UML genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md) [Özel Modelleme Araç kutusu öğesi](../modeling/define-a-custom-modeling-toolbox-item.md) [UML modelleriyle ilgili doğrulama kısıtlamalarını tanımlama](../modeling/define-validation-constraints-for-uml-models.md) [Modelleme Diyagramında Menü komutu tanımlama](../modeling/define-a-menu-command-on-a-modeling-diagram.md)

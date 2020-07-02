@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Word belgelerine XMLNode denetimleri ekleme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,60 +13,60 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f0f849088a2c3cc726adc6054aef1ff7a7c1c52f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: bd0429374b175da3260c3605f39c90cf2dffb841
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63427414"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544904"
 ---
 # <a name="how-to-add-xmlnode-controls-to-word-documents"></a>Nasıl yapılır: Word belgelerine XMLNode denetimleri ekleme
-  **Önemli** Microsoft Word ile ilgili bu konu kümesindeki bilgileri avantajı ve kişiler ve kimin bulunur Amerika Birleşik Devletleri ve kendi bölgeler dışında veya servis kullanan kuruluşlar için özel olarak sunulan veya geliştirme üzerinde çalışan programlar Ocak Microsoft uygulaması belirli işlevlerin ne zaman kaldırıldı 2010'dan önce Microsoft lisanslı Microsoft Word ürünler, Microsoft Word için özel XML ilgili. Bu bilgileri Microsoft Word ile ilgili değil okuma veya kişi ve kuruluşların Amerika Birleşik Devletleri ya da kullanarak veya Microsoft tarafından 10 Ocak 2010'dan sonra lisansına sahip Microsoft Word ürünleri üzerinde çalışan programlar geliştirme alt bölgeleri tarafından kullanılan ; Bu ürünlerin bu tarihten önce lisanslı veya satın alınan ve Amerika Birleşik Devletleri dışında kullanım için lisanslı ürünleri aynı davranmaz.
+  **Önemli** Microsoft Word ile ilgili bu konu başlığı altında verilen bilgiler, Microsoft Word 'deki özel XML ile ilgili belirli bir işlevselliğin uygulanmasını kaldırdıkları zaman, Birleşik Devletler ve bölgeleri dışında bulunan veya Microsoft tarafından Microsoft tarafından lisanslanan Microsoft Word ürünleri, Microsoft 'un Microsoft Word ile ilgili belirli işlevlerin bir uygulamasını kaldırdığınızda Microsoft 'un 2010 Ocak 'tan önce lisanslı olduğu kişiler ve kuruluşların avantajı ve kullanımı için özel olarak sunulur. Microsoft Word ile ilgili bu bilgiler, Birleşik Devletler veya şirket içinde çalışan ya da Microsoft tarafından, 10 Ocak 2010 ' den sonra Microsoft tarafından lisanslanan Microsoft Word ürünlerini kullanan bireyler veya kuruluşlar tarafından okunamaz veya kullanılmıyor olabilir. Bu ürünler, bu tarihten önce lisanslanan ürünlerle aynı veya satın alınmadan ve Birleşik Devletler dışında kullanılmak üzere lisanslanmaz.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
- Bir Microsoft Office Word belgesi için yinelenmeyen bir XML şemasını eşlediğinizde, Visual Studio otomatik olarak ekler bir <xref:Microsoft.Office.Tools.Word.XMLNode> belgenize denetimi. Yinelenen XML Şeması öğelerini eşleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Word belgelerine XMLNodes denetimleri ekleme](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md).
+ Yinelenmeyen bir XML şeması öğesini bir Microsoft Office Word belgesiyle eşleştirdiğinizde, Visual Studio belgenize otomatik olarak bir <xref:Microsoft.Office.Tools.Word.XMLNode> denetim ekler. Yinelenen XML şeması öğelerini eşleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Word belgelerine XMLNodes denetimleri ekleme](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md).
 
 > [!NOTE]
-> <xref:Microsoft.Office.Tools.Word.XMLNode> Denetim kullanılabilir değil **araç kutusu** veya **veri kaynakları** penceresi ve programlı olarak oluşturulamıyor.
+> <xref:Microsoft.Office.Tools.Word.XMLNode>Denetim, **araç kutusu** veya **veri kaynakları** penceresinde kullanılamaz ve program aracılığıyla oluşturulamaz.
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-### <a name="to-add-an-xmlnode-control-to-a-document"></a>XMLNode denetimi bir belgeye eklemek için
+### <a name="to-add-an-xmlnode-control-to-a-document"></a>Belgeye bir XMLNode denetimi eklemek için
 
-1. Visual Studio tasarımcıda Şerit üzerindeki belgeyi tıklatın **Geliştirici** sekmesi.
+1. Visual Studio Tasarımcısı ' nın belgesinde, şeritte, **Geliştirici** sekmesine tıklayın.
 
     > [!NOTE]
-    > Varsa **Geliştirici** sekme görünür değilse, önce görünür olmalıdır. Daha fazla bilgi için [nasıl yapılır: Şeritte Geliştirici sekmesini gösterme](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
+    > **Geliştirici** sekmesi görünür değilse, önce onu göstermelisiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Şeritte Geliştirici sekmesini gösterme](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
 
-2. İçinde **XML** grubunda **şema**.
+2. **XML** grubunda, **şema**' ya tıklayın.
 
-     **Şablonları ve eklentileri** iletişim kutusu açılır.
+     **Şablonlar ve eklentiler** iletişim kutusu açılır.
 
-3. Tıklayın **XML Şeması** sekmesi.
+3. **XML şeması** sekmesine tıklayın.
 
-4. Tıklayın **şema ekleme**.
+4. **Şema ekle**' ye tıklayın.
 
-     **Şema Ekle** iletişim kutusu açılır.
+     **Şema ekle** iletişim kutusu açılır.
 
-5. Yinelenmeyen şema öğeleri içeren bir XML Şeması Seç **Şema Ekle** iletişim kutusu ve tıklatın **açık**.
+5. **Şema ekle** iletişim kutusundan tekrarlamayan şema öğelerini IÇEREN bir XML şeması seçin ve **Aç**' a tıklayın.
 
      **Şema ayarları** iletişim kutusu görüntülenir.
 
-6. Bir ad atayın veya tıklayın **Tamam** şema olmadan bir diğer ad eklemek için.
+6. Bir diğer ad atayın veya şemayı bir diğer ad olmadan eklemek için **Tamam 'a** tıklayın.
 
-     Şema eklenir **Şema Ekle** iletişim kutusu.
+     Şema, **şema ekle** iletişim kutusuna eklenir.
 
-7. İçinde **Şema Ekle** iletişim kutusu, tıklayın **Tamam**.
+7. **Şema ekle** Iletişim kutusunda **Tamam**' a tıklayın.
 
 8. **XML yapısı** görev bölmesi açılır.
 
-9. Yinelenmeyen bir şema öğesine tıklayarak **XML yapısı** belgeye eklemek için görev bölmesi.
+9. **XML yapısı** görev bölmesindeki tekrarlamayan şema öğesine tıklayarak belgeyi belgeye ekleyin.
 
-     Bir <xref:Microsoft.Office.Tools.Word.XMLNode> denetim oluşturulur ve projeye eklendi.
+     Bir <xref:Microsoft.Office.Tools.Word.XMLNode> Denetim oluşturulup projeye eklenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [XMLNode denetimi](../vsto/xmlnode-control.md)
-- [Genişletilmiş nesneleri kullanarak Word'ü otomatikleştirirken](../vsto/automating-word-by-using-extended-objects.md)
-- [Konak öğelerine ve denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
-- [Konak denetimlerinin ve konak öğelerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Genişletilmiş nesneleri kullanarak Word 'Ü otomatikleştirme](../vsto/automating-word-by-using-extended-objects.md)
+- [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
+- [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

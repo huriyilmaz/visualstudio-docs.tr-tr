@@ -15,34 +15,34 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 56d53717afc8cd966903e75f77e1745de0031745
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ba654496d80654f0d9790a01bbc41326f7a5f13e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662840"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540497"
 ---
 # <a name="ca2229-implement-serialization-constructors"></a>CA2229: Serileştirme oluşturucularını uygulayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ImplementSerializationConstructors|
 |CheckId|CA2229|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Tür <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> arabirimini uygular, bir temsilci veya arabirim değildir ve aşağıdaki koşullardan biri doğrudur:
+## <a name="cause"></a>Nedeni
+ Türü <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> arabirimini uygular, bir temsilci veya arabirim değildir ve aşağıdaki koşullardan biri doğru olur:
 
-- Türün bir <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> nesnesi ve bir <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> nesnesi (serileştirme oluşturucusunun imzası) alan bir oluşturucusu yok.
+- Türün bir nesne ve nesne alan bir oluşturucusu yok <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> (serileştirme oluşturucusunun imzası).
 
 - Tür korumasız ve serileştirme Oluşturucusu için erişim değiştiricisi korunmuyor (aile).
 
 - Tür sealed ve serileştirme Oluşturucusu için erişim değiştiricisi özel değildir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, özel serileştirme desteği olan türler için geçerlidir. Bir tür, <xref:System.Runtime.Serialization.ISerializable> arabirimini uyguluyorsa özel Serileştirmeyi destekler. Serileştirme Oluşturucu, <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> yöntemi kullanılarak seri hale getirilen nesneleri seri durumdan çıkarmak veya yeniden oluşturmak için gereklidir.
+ Bu kural, özel serileştirme desteği olan türler için geçerlidir. Bir tür, arabirimini uyguluyorsa özel Serileştirmeyi destekler <xref:System.Runtime.Serialization.ISerializable> . Serileştirme Oluşturucu, yöntemi kullanılarak seri hale getirilen nesneleri seri durumdan çıkarmak veya yeniden oluşturmak için gereklidir <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> .
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini düzeltmek için seri hale getirme yapıcısını uygular. Kapalı bir sınıf için kurucusunu özel yapın; aksi takdirde korunmuş yapın.
@@ -59,5 +59,5 @@ ms.locfileid: "72662840"
  [CA2237: ISerializable türleri SerializableAttribute ile işaretleyin](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName><xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>
+ <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>
  <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Yazdırırken çalışma sayfası denetimlerini gizleme'
+title: 'Nasıl yapılır: yazdırırken çalışma sayfalarında denetimleri gizleme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,34 +15,34 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bb7ee0a937e6cb901704763e1f4ead478d99e0e8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 336723f60a2cd90dc63db24e981dd06e0388cb9c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419437"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544813"
 ---
-# <a name="how-to-hide-controls-on-worksheets-when-printing"></a>Nasıl yapılır: Yazdırırken çalışma sayfası denetimlerini gizleme
-  Windows Forms denetimleri içeren bir Microsoft Office Excel belge yazdırma sırasında denetimleri yazdırılan çalışma sayfalarında görünür. Bir çalışma sayfası yazdırma sırasında denetimleri gizleyebilirsiniz.
+# <a name="how-to-hide-controls-on-worksheets-when-printing"></a>Nasıl yapılır: yazdırırken çalışma sayfalarında denetimleri gizleme
+  Windows Forms denetimleri içeren bir Microsoft Office Excel belgesi yazdırdığınızda, denetimler yazdırılmış çalışma sayfasında görünür. Çalışma sayfası yazdırılırken denetimleri gizleyebilirsiniz.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
 > [!NOTE]
-> Verileri görüntüleyen denetimler gizlerseniz bir <xref:Microsoft.Office.Tools.Excel.Controls.TextBox>, denetiminde verileri yazdırılan çalışma sayfalarında görünür olmaz.
+> Gibi verileri görüntüleyen denetimleri gizlerseniz <xref:Microsoft.Office.Tools.Excel.Controls.TextBox> , denetimdeki veriler, yazdırılan çalışma sayfasında görünür olmayacaktır.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="to-hide-controls-when-a-worksheet-is-printed"></a>Bir çalışma sayfası denetimlerini gizle yazdırıldığında
+## <a name="to-hide-controls-when-a-worksheet-is-printed"></a>Bir çalışma sayfası yazdırıldığında denetimleri gizlemek için
 
-1. Oluşturun veya Excel projenizi Visual Studio'da açın ve doğrulayın **Sayfa1** Tasarımcısı'nda görülebilir. Proje oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Visual Studio'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Visual Studio 'da bir Excel projesi oluşturun veya açın ve **Sheet1** ' in tasarımcıda görünür olduğunu doğrulayın. Proje oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-2. Gelen **ortak denetimleri** sekmesinde **araç kutusu**, sürükleyin bir <xref:Microsoft.Office.Tools.Excel.Controls.Button> denetlemek için bir hücre `Sheet1`.
+2. **Araç kutusunun** **ortak denetimler** sekmesinden, bir <xref:Microsoft.Office.Tools.Excel.Controls.Button> denetimi üzerindeki bir hücreye sürükleyin `Sheet1` .
 
-3. İçinde **özellikleri** penceresinde <xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A> özelliğini **False**.
+3. **Özellikler** penceresinde, <xref:Microsoft.Office.Tools.Excel.Controls.Button.PrintObject%2A> özelliğini **false**olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office belgelerindeki denetimler](../vsto/controls-on-office-documents.md)
-- [Windows Forms denetimlerine Office belgeleri genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md)
+- [Office belgelerindeki Windows Forms denetimlerine genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md)
 - [Nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
-- [Nasıl yapılır: Çalışma sayfası hücreleri içinde denetimleri yeniden boyutlandırma](../vsto/how-to-resize-controls-within-worksheet-cells.md)
+- [Nasıl yapılır: çalışma sayfası hücreleri içinde denetimleri yeniden boyutlandırma](../vsto/how-to-resize-controls-within-worksheet-cells.md)

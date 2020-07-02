@@ -15,24 +15,24 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 366932c83328c6810e0103308db1c73a3e3076cb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 77ec48a1164c7065ba5033ef51eb704b8361dc1c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671604"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544462"
 ---
-# <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721: Tür adları alma yöntemleriyle eşleşmemelidir
+# <a name="ca1721-property-names-should-not-match-get-methods"></a>CA1721: Özellik adları get metotları ile eşleşmemelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|PropertyNamesShouldNotMatchGetMethods|
 |CheckId|CA1721|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Ortak veya korumalı bir üyenin adı ' Get ' ile başlar ve diğer bir deyişle ortak veya korumalı bir özelliğin adıyla eşleşir. Örneğin, ' GetColor ' adlı bir yöntemi ve ' Color ' adlı bir özelliği içeren bir tür bu kuralı ihlal ediyor.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -56,4 +56,4 @@ ms.locfileid: "72671604"
  [!code-vb[FxCop.Naming.GetMethod#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Naming.GetMethod/vb/FxCop.Naming.GetMethod.vb#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1024: Uygun yerlerde özellikler kullanın](../code-quality/ca1024-use-properties-where-appropriate.md)
+ [CA1024: Uygun yerlerde özellikleri kullanın](../code-quality/ca1024-use-properties-where-appropriate.md)

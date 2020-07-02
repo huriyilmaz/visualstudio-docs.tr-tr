@@ -15,24 +15,24 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f68ab71d9ce4fab1b0612f15d866c58e302a317e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 726cde42eb08ee5508481887fae2e9d2b059256c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671501"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543877"
 ---
-# <a name="ca1806-do-not-ignore-method-results"></a>CA1806: Yöntem sonuçlarını yoksaymayın
+# <a name="ca1806-do-not-ignore-method-results"></a>CA1806: Metot sonuçlarını yoksaymayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotIgnoreMethodResults|
 |CheckId|CA1806|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bu uyarının birkaç olası nedeni vardır:
 
 - Yeni bir nesne oluşturulur ancak hiç kullanılmaz.
@@ -52,7 +52,7 @@ ms.locfileid: "72671501"
 
  If yöntemi B yöntemini çağırırsa, ancak B yönteminin döndürdüğü yeni dize örneğini kullanmaz. Örneği bir bağımsız değişken olarak başka bir yönteme geçirin, örneği bir değişkene atayın. Ya da gerekli değilse çağrıyı kaldırın.
 
- veya
+ -veya-
 
  If yöntemi B yöntemini çağırırsa, ancak yöntemin döndürdüğü HRESULT veya hata kodunu kullanmaz. Sonucu bir koşullu ifadede kullanın, sonucu bir değişkene atayın ya da başka bir yönteme bağımsız değişken olarak geçirin.
 

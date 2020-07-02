@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla yeni Visio belgeleri oluşturma'
+title: 'Nasıl yapılır: program aracılığıyla yeni Visio belgeleri oluşturma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,68 +13,68 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 61fb1302ffb0a068122c333e196178dfa2b30d86
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 171ad93caf6b5c13d000073a0d7f7e82282b9b4a
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62574843"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541537"
 ---
-# <a name="how-to-programmatically-create-new-visio-documents"></a>Nasıl yapılır: Program aracılığıyla yeni Visio belgeleri oluşturma
-  Yeni Microsoft Office Visio çizim belgesi oluşturduğunuzda, ona ekleme `Microsoft.Office.Interop.Visio.Documents` açık Visio belgeleri koleksiyonu. Sonuç olarak, `Microsoft.Office.Interop.Visio.Documents.Add` yöntemi yeni bir Visio çizim belgesi oluşturur. Daha fazla bilgi için bkz: VBA başvuru belgelerine [Microsoft.Office.Interop.Visio.Documents.Add](/office/vba/api/Visio.Documents.Add) yöntemi.
+# <a name="how-to-programmatically-create-new-visio-documents"></a>Nasıl yapılır: program aracılığıyla yeni Visio belgeleri oluşturma
+  Yeni bir Microsoft Office Visio çizim belgesi oluşturduğunuzda, bu dosyayı `Microsoft.Office.Interop.Visio.Documents` Açık Visio belgeleri koleksiyonuna eklersiniz. Sonuç olarak, `Microsoft.Office.Interop.Visio.Documents.Add` yöntemi yeni bir Visio çizim belgesi oluşturur. Daha fazla bilgi için,Microsoft.Office.Interop.Visio.Documtları için VBA başvuru belgelerine bakın [. Yöntem ekleyin](/office/vba/api/Visio.Documents.Add) .
 
-## <a name="create-new-blank-documents"></a>Yeni bir boş belge oluşturma
+## <a name="create-new-blank-documents"></a>Yeni boş belge oluştur
 
 ### <a name="to-create-a-new-document"></a>Yeni bir belge oluşturmak için
 
-- Kullanım `Microsoft.Office.Interop.Visio.Documents.Add` şablona dayalı yeni, boş bir belge oluşturmak için yöntemi.
+- `Microsoft.Office.Interop.Visio.Documents.Add`Bir şablonu temel alan yeni boş bir belge oluşturmak için yöntemini kullanın.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#1](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#1)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#1](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#1)]
 
 ## <a name="create-documents-copied-from-existing-documents"></a>Mevcut belgelerden kopyalanmış belgeler oluşturma
- `Microsoft.Office.Interop.Visio.Documents.Add` Yöntemi, mevcut bir Visio belgesini kopyası olan yeni bir belge oluşturabilirsiniz. Diyagramın tam yolunu ve dosya adını sağlamanız gerekir.
+ `Microsoft.Office.Interop.Visio.Documents.Add`Yöntemi, var olan Visio belgesinin bir kopyası olan yeni bir belge oluşturabilir. Diyagramın dosya adını ve tam yolunu sağlamanız gerekir.
 
-### <a name="to-create-a-new-document-that-is-copied-from-an-existing-document"></a>Mevcut bir belgesinden kopyalanan bir yeni belge oluşturma
+### <a name="to-create-a-new-document-that-is-copied-from-an-existing-document"></a>Varolan bir belgeden kopyalanmış yeni bir belge oluşturmak için
 
-- Çağrı `Microsoft.Office.Interop.Visio.Documents.Add` yöntemi ve bir Visio diyagramını yolunu belirtin.
+- Yöntemi çağırın `Microsoft.Office.Interop.Visio.Documents.Add` ve Visio diyagramının yolunu belirtin.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#2](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#2)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#2](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#2)]
 
-## <a name="create-stencils-copied-from-existing-stencils"></a>Mevcut örnekleri kopyalanan şablon oluşturma
- [Microsoft.Office.Interop.Visio.Documents.Add](/office/vba/api/Visio.Documents.Add) yöntemi, mevcut bir Visio Kalıbı kopyası olan yeni bir şablon oluşturabilirsiniz. Şablon tam yolunu ve dosya adını sağlamanız gerekir.
+## <a name="create-stencils-copied-from-existing-stencils"></a>Varolan kalıplardan kopyalanmış şablonlar oluşturma
+ [Microsoft.Office.Interop.Visio.Documlar. Add](/office/vba/api/Visio.Documents.Add) yöntemi, var olan bir Visio kalıbının kopyası olan yeni bir kalıp oluşturabilir. Kalıbın dosya adını ve tam yolunu sağlamanız gerekir.
 
-### <a name="to-create-a-new-stencil-that-is-copied-from-an-existing-stencil"></a>Varolan kalıptan kopyalanır ve yeni bir şablon oluşturmak için
+### <a name="to-create-a-new-stencil-that-is-copied-from-an-existing-stencil"></a>Mevcut bir kalıptan kopyalanmış yeni bir kalıp oluşturmak için
 
-- Çağrı `Microsoft.Office.Interop.Visio.Documents.Add` yöntemi ve şablon yolunu belirtin.
+- Yöntemi çağırın `Microsoft.Office.Interop.Visio.Documents.Add` ve kalıbın yolunu belirtin.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#3](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#3)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#3](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#3)]
 
-## <a name="create-documents-based-on-existing-templates"></a>Var olan şablonları temel alan belgeler oluşturma
- `Microsoft.Office.Interop.Visio.Documents.Add` Yöntemi yeni bir belge oluşturabilirsiniz (bir *.vsd* dosya) mevcut bir Visio şablonunu temel alarak (bir *.vst* dosyası). Bu yöntem, şablonlar, stillerini ve şablon çalışma alanının parçası olan ayarları kopyalar. Şablonun tam yolunu ve dosya adını sağlamanız gerekir.
+## <a name="create-documents-based-on-existing-templates"></a>Mevcut şablonları temel alan belgeler oluşturma
+ `Microsoft.Office.Interop.Visio.Documents.Add`Yöntemi, var olan bir Visio şablonuna (bir *. VST* dosyası) dayalı yeni bir belge ( *. VSD* dosyası) oluşturabilir. Bu yöntem şablon çalışma alanının bir parçası olan kalıpları, stilleri ve ayarları kopyalar. Şablonun dosya adını ve tam yolunu sağlamanız gerekir.
 
 ### <a name="to-create-a-new-document-that-is-based-on-an-existing-template"></a>Mevcut bir şablonu temel alan yeni bir belge oluşturmak için
 
-- Çağrı `Microsoft.Office.Interop.Visio.Documents.Add` yöntemi ve şablonun yolunu belirtin.
+- Yöntemi çağırın `Microsoft.Office.Interop.Visio.Documents.Add` ve şablonun yolunu belirtin.
 
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#4](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#4)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#4](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#4)]
 
-## <a name="compile-the-code"></a>Kod derleme
- Bu kod örneği için aşağıdakiler gereklidir:
+## <a name="compile-the-code"></a>Kodu derle
+ Bu kod örneği şunları gerektirir:
 
-- Adlı bir Visio belgesini `myDrawing.vsd` adlı bir dizinde bulunmalıdır `Test` içinde *Belgelerim* klasöründe (Windows XP ve daha önce) veya *belgeleri* klasöründe (Windows Vista için).
+- Adlı bir Visio belgesi `myDrawing.vsd` `Test` , Belgelerim klasöründe (Windows XP ve önceki sürümler *My Documents* için) veya *Belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
 
-- Adlı bir Visio belgesini `myStencil.vss` adlı bir dizinde bulunmalıdır `Test` içinde *Belgelerim* klasöründe (Windows XP ve daha önce) veya *belgeleri* klasöründe (Windows Vista için).
+- Adlı bir Visio belgesi `myStencil.vss` `Test` , Belgelerim klasöründe (Windows XP ve önceki sürümler *My Documents* için) veya *Belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
 
-- Adlı bir Visio belgesini `myTemplate.vst` adlı bir dizinde bulunmalıdır `Test` içinde *Belgelerim* klasöründe (Windows XP ve daha önce) veya *belgeleri* klasöründe (Windows Vista için).
+- Adlı bir Visio belgesi `myTemplate.vst` `Test` , Belgelerim klasöründe (Windows XP ve önceki sürümler *My Documents* için) veya *Belgeler* klasöründe (Windows Vista için) adlı bir dizinde bulunmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visio çözümleri](../vsto/visio-solutions.md)
 - [Visio nesne modeline genel bakış](../vsto/visio-object-model-overview.md)
-- [Nasıl yapılır: Program aracılığıyla Visio belgelerini açma](../vsto/how-to-programmatically-open-visio-documents.md)
-- [Nasıl yapılır: Visio belgelerini program aracılığıyla kapatma](../vsto/how-to-programmatically-close-visio-documents.md)
-- [Nasıl yapılır: Program aracılığıyla Visio belgelerini kaydetme](../vsto/how-to-programmatically-save-visio-documents.md)
-- [Nasıl yapılır: Program aracılığıyla Visio belgelerini yazdırma](../vsto/how-to-programmatically-print-visio-documents.md)
+- [Nasıl yapılır: program aracılığıyla Visio belgelerini açma](../vsto/how-to-programmatically-open-visio-documents.md)
+- [Nasıl yapılır: program aracılığıyla Visio belgelerini kapatma](../vsto/how-to-programmatically-close-visio-documents.md)
+- [Nasıl yapılır: program aracılığıyla Visio belgelerini kaydetme](../vsto/how-to-programmatically-save-visio-documents.md)
+- [Nasıl yapılır: program aracılığıyla Visio belgelerini yazdırma](../vsto/how-to-programmatically-print-visio-documents.md)

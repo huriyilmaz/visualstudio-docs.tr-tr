@@ -15,31 +15,31 @@ caps.latest.revision: 18
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 86dc7042a48faa200ef9c360829b1756bc261ab0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5685ad7a760e00392b5f9684cdf399ee320d4a0c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72652724"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540263"
 ---
-# <a name="ca1412-mark-comsource-interfaces-as-idispatch"></a>CA1412: ComSource Arabirimlerini IDispatch olarak işaretleyin
+# <a name="ca1412-mark-comsource-interfaces-as-idispatch"></a>CA1412: ComSource arabirimlerini IDispatch olarak işaretleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|MarkComSourceInterfacesAsIDispatch|
 |CheckId|CA1412|
 |Kategori|Microsoft. çalışabilirliği|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Bir tür <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> özniteliğiyle işaretlenir ve en az bir belirtilen arabirim, `InterfaceIsDispatch` değerine ayarlanmış <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> özniteliğiyle işaretlenmez.
+## <a name="cause"></a>Nedeni
+ Bir tür, <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> özniteliğiyle işaretlenmiş ve en az bir belirtilen arabirim, <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> değer olarak ayarlanan öznitelik ile işaretlenmemiş `InterfaceIsDispatch` .
 
 ## <a name="rule-description"></a>Kural Tanımı
- <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>, bir sınıfın bileşen nesne modeli (COM) istemcilerine sunduğu olay arabirimlerini belirlemek için kullanılır. Visual Basic 6 COM istemcilerinin olay bildirimleri almasını sağlamak için bu arabirimlerin `InterfaceIsIDispatch` olarak sunulmalıdır. Varsayılan olarak, bir arabirim <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> özniteliğiyle işaretlenmemişse, Çift arabirim olarak sunulur.
+ <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>, bir sınıfın bileşen nesne modeli (COM) istemcilerine sunduğu olay arabirimlerini belirlemek için kullanılır. Bu arabirimler, `InterfaceIsIDispatch` Visual Basic 6 com istemcilerinin olay bildirimleri almasını sağlamak için olarak sunulmalıdır. Varsayılan olarak, bir arabirim <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> özniteliğiyle işaretlenmemişse, Çift arabirim olarak sunulur.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> özniteliğini ekleyin veya değiştirin. bu sayede değeri, <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> özniteliğiyle belirtilen tüm arabirimler için ınterfaceisidispatch olarak ayarlanır.
+ Bu kural ihlalini onarmak için özniteliği, özniteliği <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> ile belirtilen tüm arabirimler için değeri ınterfaceisidispatch olarak ayarlanacak şekilde ekleyin veya değiştirin <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.
@@ -51,7 +51,7 @@ ms.locfileid: "72652724"
  [!code-vb[FxCop.Interoperability.MarkIDispatch#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Interoperability.MarkIDispatch/vb/FxCop.Interoperability.MarkIDispatch.vb#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1408: AutoDual ClassInterfaceType kullanma](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
+ [CA1408: AutoDual ClassInterFaceType kullanmayın](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Nasıl yapılır: com havuzu tarafından Işlenen olayları](https://msdn.microsoft.com/7c9944b2-e951-4c3e-a0a1-59b2ae37d7fd) [, yönetilmeyen kodla birlikte çalışma](https://msdn.microsoft.com/library/ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258)

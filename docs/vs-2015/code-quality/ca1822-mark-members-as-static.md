@@ -15,40 +15,40 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0ce4aa6aef9c70d0d628603afa7a256c309f280d
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 2416eb24c21ef0e61bdb6db3de66c892e1eb699f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917937"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545346"
 ---
-# <a name="ca1822-mark-members-as-static"></a>CA1822: Üyeleri statik olarak işaretleyin
+# <a name="ca1822-mark-members-as-static"></a>CA1822: Üyeleri static olarak işaretleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio ile ilgili en son belgeler için bkz. [CA1822: üyeleri static olarak işaretleme](/visualstudio/code-quality/ca1822-mark-members-as-static).
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|MarkMembersAsStatic|
 |CheckId|CA1822|
 |Kategori|Microsoft. Performance|
-|Yeni Değişiklik|Bozuk olmayan-üye, yaptığınız değişiklikten bağımsız olarak, derleme dışında görünür değilse.<br /><br /> Parçalama-`this` anahtar sözcüğünü kullanarak üyeyi bir örnek üyesi olarak değiştirirseniz.<br /><br /> Parçalama-üyeyi bir örnek üyesinden statik üyeye değiştirirseniz ve derleme dışında görünür durumdaysa.|
+|Yeni Değişiklik|Bozuk olmayan-üye, yaptığınız değişiklikten bağımsız olarak, derleme dışında görünür değilse.<br /><br /> Parçalara ayırma olmayan bir üyeyi yalnızca anahtar sözcüğü olan bir örnek üye olarak değiştirirseniz `this` .<br /><br /> Parçalama-üyeyi bir örnek üyesinden statik üyeye değiştirirseniz ve derleme dışında görünür durumdaysa.|
 
-## <a name="cause"></a>Sebep
- Örnek verilerine erişmeyen bir üye statik olarak işaretlenmez ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]içinde paylaşılır).
+## <a name="cause"></a>Nedeni
+ Örnek verilerine erişmeyen bir üye statik olarak işaretlenmemiş (içinde paylaşılan [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ).
 
 ## <a name="rule-description"></a>Kural Tanımı
- Örnek veri veya çağrı örnek yöntemlerinin erişmez üyeleri işaretlenebilir olarak statik (paylaşılan [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]). Yöntemleri statik olarak işaretledikten sonra, derleyici sanal olmayan arama sitelerini bu üyelere yayar. Sanal olmayan çağrı sitelerini yayma, geçerli nesne işaretçisinin null olmadığından emin olan her bir çağrı için çalışma zamanında bir denetim yapılmasını engeller. Bu, performansa duyarlı kod için ölçülebilir bir performans kazancı elde edebilir. Bazı durumlarda, geçerli nesne örneğine erişim hatası, doğruluk sorununu temsil eder.
+ Örnek verilerine erişmeyen Üyeler veya çağrı örnekleri metotları statik (içinde paylaşılan) olarak işaretlenebilir [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] . Yöntemleri statik olarak işaretledikten sonra, derleyici sanal olmayan arama sitelerini bu üyelere yayar. Sanal olmayan çağrı sitelerini yayma, geçerli nesne işaretçisinin null olmadığından emin olan her bir çağrı için çalışma zamanında bir denetim yapılmasını engeller. Bu, performansa duyarlı kod için ölçülebilir bir performans kazancı elde edebilir. Bazı durumlarda, geçerli nesne örneğine erişim hatası, doğruluk sorununu temsil eder.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Üyeyi statik (veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]içinde paylaşılan) olarak işaretleyin ya da uygunsa Yöntem gövdesinde ' this '/' Me ' kullanın.
+ Üyeyi statik (veya paylaşılan) olarak işaretleyin [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ya da uygunsa Yöntem gövdesinde ' this '/' Me ' kullanın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Daha önce sevk edilen kodun bir uyarı olması için bu kuraldan daha önce sevkedilme bir uyarı görüntülenmesini güvenlidir.
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1811: Çağrılmayan özel kodlardan kaçının](../code-quality/ca1811-avoid-uncalled-private-code.md)
+ [CA1811: Çağırılmayan özel kodlardan kaçının](../code-quality/ca1811-avoid-uncalled-private-code.md)
 
- [CA1812: Örneklendirilmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+ [CA1812: Örneklenmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
- [CA1804: Kullanılmayan yerel öğeleri kaldırın](../code-quality/ca1804-remove-unused-locals.md)
+ [CA1804: Kullanılmayan yerelleri kaldırın](../code-quality/ca1804-remove-unused-locals.md)

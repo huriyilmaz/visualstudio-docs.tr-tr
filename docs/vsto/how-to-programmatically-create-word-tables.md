@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla Word tabloları oluşturma'
+title: 'Nasıl yapılır: program aracılığıyla Word tabloları oluşturma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,86 +13,86 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 24a365ba239e4d87e179bfecd664aa31aef0f359
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a1bc20b277df90ae963d257137373457a0196e72
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62574917"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544761"
 ---
-# <a name="how-to-programmatically-create-word-tables"></a>Nasıl yapılır: Program aracılığıyla Word tabloları oluşturma
-  <xref:Microsoft.Office.Interop.Word.Tables> Koleksiyon üyesi olduğu <xref:Microsoft.Office.Interop.Word.Document>, <xref:Microsoft.Office.Tools.Word.Document>, <xref:Microsoft.Office.Interop.Word.Selection>, ve <xref:Microsoft.Office.Interop.Word.Range> sınıflarıyla bu içeriklerden herhangi birinde bir tablo oluşturabileceğiniz anlamına gelir. Kullandığınız <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> yöntemi <xref:Microsoft.Office.Interop.Word.Tables> belirli bir aralıkta bir tablo eklemek için koleksiyonu.
+# <a name="how-to-programmatically-create-word-tables"></a>Nasıl yapılır: program aracılığıyla Word tabloları oluşturma
+  <xref:Microsoft.Office.Interop.Word.Tables>Koleksiyon,, ve sınıflarının bir üyesidir <xref:Microsoft.Office.Interop.Word.Document> ve <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Interop.Word.Selection> <xref:Microsoft.Office.Interop.Word.Range> Bu bağlamlardan herhangi birinde bir tablo oluşturabileceğiniz anlamına gelir. <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> <xref:Microsoft.Office.Interop.Word.Tables> Belirtilen aralıktaki bir tabloyu eklemek için koleksiyonun yöntemini kullanırsınız.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="create-tables-in-document-level-customizations"></a>Belge düzeyi özelleştirmelerde tabloları oluşturma
+## <a name="create-tables-in-document-level-customizations"></a>Belge düzeyi özelleştirmelerde tablo oluşturma
 
-### <a name="to-add-a-table-to-a-document"></a>Bir belge için bir tablo eklemek için
+### <a name="to-add-a-table-to-a-document"></a>Bir belgeye tablo eklemek için
 
-- Kullanım <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> üç satır ve belgenin başına dört sütun içeren bir tablo eklemek için yöntemi.
+- <xref:Microsoft.Office.Interop.Word.Tables.Add%2A>Belgenin başlangıcında üç satırdan ve dört sütundan oluşan bir tablo eklemek için yöntemini kullanın.
 
-   Aşağıdaki kod örneği kullanmak için çalıştırın `ThisDocument` projenizdeki sınıfı.
+   Aşağıdaki kod örneğini kullanmak için, `ThisDocument` projenizdeki sınıfından çalıştırın.
 
    [!code-vb[Trin_VstcoreWordAutomation#86](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#86)]
    [!code-csharp[Trin_VstcoreWordAutomation#86](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#86)]
 
-  Bir tablo oluşturduğunuzda, otomatik olarak eklenir <xref:Microsoft.Office.Interop.Word.Tables> koleksiyonunu <xref:Microsoft.Office.Tools.Word.Document> konak öğesi. Ardından tabloda öğe numarası kullanarak başvurabilirsiniz <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> özelliği, aşağıdaki kodda gösterildiği gibi.
+  Bir tablo oluşturduğunuzda, otomatik olarak <xref:Microsoft.Office.Interop.Word.Tables> <xref:Microsoft.Office.Tools.Word.Document> konak öğesi koleksiyonuna eklenir. Ardından, <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> aşağıdaki kodda gösterildiği gibi özelliğini kullanarak tabloya öğe numarası ile başvurabilirsiniz.
 
 ### <a name="to-refer-to-a-table-by-item-number"></a>Öğe numarasına göre bir tabloya başvurmak için
 
-1. Kullanım <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> özelliği ve tedarik başvurmak istediğiniz tabloyu öğe sayısı.
+1. Özelliğini kullanın <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> ve başvurmak istediğiniz tablonun öğe numarasını sağlayın.
 
-    Aşağıdaki kod örneği kullanmak için çalıştırın `ThisDocument` projenizdeki sınıfı.
+    Aşağıdaki kod örneğini kullanmak için, `ThisDocument` projenizdeki sınıfından çalıştırın.
 
     [!code-vb[Trin_VstcoreWordAutomation#87](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#87)]
     [!code-csharp[Trin_VstcoreWordAutomation#87](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#87)]
 
-   Her <xref:Microsoft.Office.Interop.Word.Table> nesne de sahip bir <xref:Microsoft.Office.Interop.Word.Table.Range%2A> biçimlendirme ayarlamanıza olanak sağlayan özellik öznitelikleri.
+   Her <xref:Microsoft.Office.Interop.Word.Table> nesnenin Ayrıca <xref:Microsoft.Office.Interop.Word.Table.Range%2A> biçimlendirme özniteliklerini ayarlamanıza olanak tanıyan bir özelliği vardır.
 
-### <a name="to-apply-a-style-to-a-table"></a>Bir tabloya bir stil uygulamak için
+### <a name="to-apply-a-style-to-a-table"></a>Tabloya bir stil uygulamak için
 
-1. Kullanım <xref:Microsoft.Office.Interop.Word.Table.Style%2A> tabloya Word yerleşik stil uygulamak için özellik.
+1. <xref:Microsoft.Office.Interop.Word.Table.Style%2A>Yerleşik stillerden birini tabloya uygulamak için özelliğini kullanın.
 
-     Aşağıdaki kod örneği kullanmak için çalıştırın `ThisDocument` projenizdeki sınıfı.
+     Aşağıdaki kod örneğini kullanmak için, `ThisDocument` projenizdeki sınıfından çalıştırın.
 
      [!code-vb[Trin_VstcoreWordAutomation#88](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#88)]
      [!code-csharp[Trin_VstcoreWordAutomation#88](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#88)]
 
-## <a name="create-tables-in-vsto-add-ins"></a>VSTO eklentileri tablo oluşturma
+## <a name="create-tables-in-vsto-add-ins"></a>VSTO eklentilerinde tablo oluşturma
 
-### <a name="to-add-a-table-to-a-document"></a>Bir belge için bir tablo eklemek için
+### <a name="to-add-a-table-to-a-document"></a>Bir belgeye tablo eklemek için
 
-- Kullanım <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> üç satır ve belgenin başına dört sütun içeren bir tablo eklemek için yöntemi.
+- <xref:Microsoft.Office.Interop.Word.Tables.Add%2A>Belgenin başlangıcında üç satırdan ve dört sütundan oluşan bir tablo eklemek için yöntemini kullanın.
 
-   Aşağıdaki kod örneği, etkin belgeye bir tablo ekler. Bu örneği kullanmak için çalıştırın `ThisAddIn` projenizdeki sınıfı.
+   Aşağıdaki kod örneği, etkin belgeye bir tablo ekler. Bu örneği kullanmak için, `ThisAddIn` projenizdeki sınıfından çalıştırın.
 
    [!code-vb[Trin_VstcoreWordAutomationAddIn#86](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#86)]
    [!code-csharp[Trin_VstcoreWordAutomationAddIn#86](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#86)]
 
-  Bir tablo oluşturduğunuzda, otomatik olarak eklenir <xref:Microsoft.Office.Interop.Word.Tables> koleksiyonunu <xref:Microsoft.Office.Interop.Word.Document>. Ardından tabloda öğe numarası kullanarak başvurabilirsiniz <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> özelliği, aşağıdaki kodda gösterildiği gibi.
+  Bir tablo oluşturduğunuzda, otomatik olarak <xref:Microsoft.Office.Interop.Word.Tables> koleksiyonuna eklenir <xref:Microsoft.Office.Interop.Word.Document> . Ardından, <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> aşağıdaki kodda gösterildiği gibi özelliğini kullanarak tabloya öğe numarası ile başvurabilirsiniz.
 
 ### <a name="to-refer-to-a-table-by-item-number"></a>Öğe numarasına göre bir tabloya başvurmak için
 
-1. Kullanım <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> özelliği ve tedarik başvurmak istediğiniz tabloyu öğe sayısı.
+1. Özelliğini kullanın <xref:Microsoft.Office.Interop.Word.Tables.Item%2A> ve başvurmak istediğiniz tablonun öğe numarasını sağlayın.
 
-    Aşağıdaki kod örneği, etkin belgeyi kullanır. Bu örneği kullanmak için çalıştırın `ThisAddIn` projenizdeki sınıfı.
+    Aşağıdaki kod örneği etkin belgeyi kullanır. Bu örneği kullanmak için, `ThisAddIn` projenizdeki sınıfından çalıştırın.
 
     [!code-vb[Trin_VstcoreWordAutomationAddIn#87](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#87)]
     [!code-csharp[Trin_VstcoreWordAutomationAddIn#87](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#87)]
 
-   Her <xref:Microsoft.Office.Interop.Word.Table> nesne de sahip bir <xref:Microsoft.Office.Interop.Word.Table.Range%2A> biçimlendirme ayarlamanıza olanak sağlayan özellik öznitelikleri.
+   Her <xref:Microsoft.Office.Interop.Word.Table> nesnenin Ayrıca <xref:Microsoft.Office.Interop.Word.Table.Range%2A> biçimlendirme özniteliklerini ayarlamanıza olanak tanıyan bir özelliği vardır.
 
-### <a name="to-apply-a-style-to-a-table"></a>Bir tabloya bir stil uygulamak için
+### <a name="to-apply-a-style-to-a-table"></a>Tabloya bir stil uygulamak için
 
-1. Kullanım <xref:Microsoft.Office.Interop.Word.Table.Style%2A> tabloya Word yerleşik stil uygulamak için özellik.
+1. <xref:Microsoft.Office.Interop.Word.Table.Style%2A>Yerleşik stillerden birini tabloya uygulamak için özelliğini kullanın.
 
-     Aşağıdaki kod örneği, etkin belgeyi kullanır. Bu örneği kullanmak için çalıştırın `ThisAddIn` projenizdeki sınıfı.
+     Aşağıdaki kod örneği etkin belgeyi kullanır. Bu örneği kullanmak için, `ThisAddIn` projenizdeki sınıfından çalıştırın.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#88](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#88)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#88](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#88)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Metin ve biçimlendirme Word tablolarında hücrelere program aracılığıyla ekleme](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)
+- [Nasıl yapılır: Word tablolarında hücrelere program aracılığıyla metin ve biçimlendirme ekleme](../vsto/how-to-programmatically-add-text-and-formatting-to-cells-in-word-tables.md)
 - [Nasıl yapılır: Word tablolarına program aracılığıyla satır ve sütun ekleme](../vsto/how-to-programmatically-add-rows-and-columns-to-word-tables.md)
-- [Nasıl yapılır: Belge özellikleriyle Word tablolarını program aracılığıyla doldurma](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)
+- [Nasıl yapılır: program aracılığıyla Word tablolarını belge özellikleriyle doldurma](../vsto/how-to-programmatically-populate-word-tables-with-document-properties.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

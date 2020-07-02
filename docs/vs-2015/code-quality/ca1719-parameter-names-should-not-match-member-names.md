@@ -15,24 +15,24 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: cb8eceef7b171fac436011ea17c4d1a9d4806055
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5024d2ddb7f31593c8eaedfc2fb421b4a0e9b0a4
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669070"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545372"
 ---
-# <a name="ca1719-parameter-names-should-not-match-member-names"></a>CA1719: Parametre adları üye adlarıyla eşleşmemelidir
+# <a name="ca1719-parameter-names-should-not-match-member-names"></a>CA1719: Parametre adları üye adları ile eşleşmemelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ParameterNamesShouldNotMatchMemberNames|
 |CheckId|CA1719|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Dışarıdan görünen bir üyenin adı, büyük/küçük harfe duyarsız bir karşılaştırmayla eşleşir, parametrelerinden birinin adı.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -45,8 +45,8 @@ ms.locfileid: "72669070"
  Yeni geliştirme için, bu kuraldan bir uyarıyı bastırmalısınız hiçbir bilinen senaryo oluşmaz. Gönderim kitaplıkları için, bu kuraldan bir uyarıyı bastırın.
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+ [CA1709: Tanımlayıcılar doğru büyük küçük harfe sahip olmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
- [CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708: Tanımlayıcılar yalnızca büyük küçük harfle birbirinden farklı olmamalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
  [CA1707: Tanımlayıcılar alt çizgi içermemelidir](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)

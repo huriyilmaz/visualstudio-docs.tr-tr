@@ -15,24 +15,24 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f0ac183321bd2a3070b1f1ddc54402b74c8fb823
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ece9105e8a0a854837924e4a2d4f4ec485a5e202
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668411"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543942"
 ---
-# <a name="ca1814-prefer-jagged-arrays-over-multidimensional"></a>CA1814: Basit dizileri çok boyutlu dizilere tercih edin
+# <a name="ca1814-prefer-jagged-arrays-over-multidimensional"></a>CA1814: Çok boyutlu diziler yerine basit dizileri tercih edin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|PreferJaggedArraysOverMultidimensional|
 |CheckId|CA1814|
 |Kategori|Microsoft. Performance|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir üye çok boyutlu bir dizi olarak bildirilmiştir.
 
 ## <a name="rule-description"></a>Kural Tanımı

@@ -2,7 +2,7 @@
 title: Python projeleri için özel menü komutlarını tanımlama
 description: Proje ve hedef dosyalarını düzenleyerek yürütülebilir programları, betikleri, modülleri, satır içi kod parçacıklarını ve PIP 'yi çağırmak için Visual Studio 'daki Python proje bağlam menüsüne özel komutlar ekleyebilirsiniz.
 ms.date: 11/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: aee42648eb4a2de3611d20fc0ca83ff898ad1fa9
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: f0e56b7db76d308a55f7d6bd24930e258385b0f9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183086"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540874"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>Python projeleri için özel komutlar tanımlama
 
@@ -42,7 +42,7 @@ Her özel komut bir Python dosyası, bir Python modülü, satır içi Python kod
 
 ## <a name="walkthrough-add-a-command-to-a-project-file"></a>İzlenecek yol: proje dosyasına bir komut ekleme
 
-Özel komutlarla ilgili bilgi edinmek için, bu bölümde bir projenin başlangıç dosyasını doğrudan *Python. exe*kullanarak çalıştıran basit bir örnek gösterilmektedir. (Böyle bir komut, **hata ayıklama**  >  kullanma ile etkin şekilde aynıdır **Hata ayıklama olmadan Başlat**.)
+Bu bölümde, özel komutlar hakkında bilgi edinmek için, bir projenin başlangıç dosyasını doğrudan *python.exe*kullanarak çalıştıran basit bir örnek gösterilmektedir. (Böyle bir komut, **hata ayıklama**  >  kullanma ile etkin şekilde aynıdır **Hata ayıklama olmadan Başlat**.)
 
 1. **Python uygulama** şablonunu kullanarak "Python-customcommands" adlı yeni bir proje oluşturun. (Bkz. hızlı başlangıç: işlemden daha önce alışkın değilseniz yönergeler için [bir şablondan Python projesi oluşturma](quickstart-02-python-in-visual-studio-project-from-template.md) .)
 
@@ -62,7 +62,7 @@ Her özel komut bir Python dosyası, bir Python modülü, satır içi Python kod
 
 1. Visual Studio 'ya geri dönün ve dosya değişikliğini istediğinizde, **yeniden yükle** ' yi seçin. Ardından, eklediğiniz satırlar yalnızca Pylınt komutunu içeren varsayılan özellik grubunu çoğaltdığından, **PyLint çalıştırma** hâlâ burada gösterilen tek öğe olduğunu görmek için **Python** menüsünü yeniden denetleyin `<PythonCommands>` .
 
-1. Proje dosyası ile düzenleyiciye geçiş yapın ve `<Target>` öğesinden sonra aşağıdaki tanımı ekleyin `<PropertyGroup>` . Bu makalenin ilerleyen kısımlarında açıklandığı gibi, bu `Target` öğe, bir konsol penceresinde *Python. exe* ' yi kullanarak başlangıç dosyasını ("startupfile" özelliği tarafından tanımlanır) çalıştırmak için özel bir komut tanımlar. Özniteliği, `ExecuteIn="consolepause"` kapatmadan önce bir tuşa basmanız için bekleyen bir konsol kullanır.
+1. Proje dosyası ile düzenleyiciye geçiş yapın ve `<Target>` öğesinden sonra aşağıdaki tanımı ekleyin `<PropertyGroup>` . Bu makalenin ilerleyen kısımlarında açıklandığı gibi, bu `Target` öğe, bir konsol penceresinde *python.exe* kullanarak başlangıç dosyasını ("startupfile" özelliği tarafından tanımlanır) çalıştırmak için özel bir komut tanımlar. Özniteliği, `ExecuteIn="consolepause"` kapatmadan önce bir tuşa basmanız için bekleyen bir konsol kullanır.
 
     ```xml
     <Target Name="Example_RunStartupFile" Label="Run startup file" Returns="@(Commands)">
@@ -133,9 +133,9 @@ Her özel komut bir Python dosyası, bir Python modülü, satır içi Python kod
 
 | Öznitelik | Gerekli | Açıklama |
 | --- | --- | --- |
-| Adı | Evet | Visual Studio projesi içindeki komut için tanımlayıcı. Bu ad, `<PythonCommands>` komutun Python alt menüsünde görünmesi için özellik grubuna eklenmelidir. |
-| Etiketle | Evet | Python alt menüsünde görünen kullanıcı arabirimi görünen adı. |
-| Döndürülenler | Evet | `@(Commands)`, Hedefi bir komut olarak tanıtan içermelidir. |
+| Name | Yes | Visual Studio projesi içindeki komut için tanımlayıcı. Bu ad, `<PythonCommands>` komutun Python alt menüsünde görünmesi için özellik grubuna eklenmelidir. |
+| Etiketle | Yes | Python alt menüsünde görünen kullanıcı arabirimi görünen adı. |
+| Döndürülenler | Yes | `@(Commands)`, Hedefi bir komut olarak tanıtan içermelidir. |
 
 ### <a name="createpythoncommanditem-attributes"></a>CreatePythonCommandItem öznitelikleri
 
@@ -143,13 +143,13 @@ Tüm öznitelik değerleri büyük/küçük harfe duyarlıdır.
 
 | Öznitelik | Gerekli | Açıklama |
 | --- | --- | --- |
-| Öğesi | Evet | Target özniteliğinin neleri içerdiğini ve bağımsız değişkenler özniteliğiyle birlikte nasıl kullanıldığını belirtir:<ul><li>**yürütülebilir**: hedef içinde adlı yürütülebilir dosyayı, doğrudan komut satırına girildiği gibi bağımsız değişkenlerde değeri ekleyerek çalıştırın. Değer yalnızca bağımsız değişken içermeyen bir program adı içermelidir.</li><li>**betik**: Target içindeki filename ve ardından bağımsız değişkenlerdeki değer ile *Python. exe* ' yi çalıştırın.</li><li>**Modül**: `python -m` sonra, hedefteki modül adı ve ardından bağımsız değişkenlerde değeri ile çalıştırın.</li><li>**kod**: hedefte bulunan satır içi kodu çalıştırın. Bağımsız değişkenler değeri yok sayılır.</li><li>**PIP**: `pip` target içindeki komutla, sonra bağımsız değişkenler Ile çalıştırın; executeın "output" olarak ayarlanır, ancak, PIP komutu kabul eder `install` ve paket adı olarak hedefi kullanır.</li></ul> |
-| Hedef | Evet | TargetType öğesine bağlı olarak kullanılacak dosya adı, modül adı, kod veya PIP komutu. |
-| Arguments | İsteğe Bağlı | Hedefe verilecek bağımsız değişkenlerin (varsa) bir dizesini belirtir. TargetType olduğunda, `script` bağımsız değişkenlerin *Python. exe*değil Python programına verildiğini unutmayın. TargetType için yok sayıldı `code` . |
-| Executeın | Evet | Komutun çalıştırılacağı ortamı belirtir:<ul><li>**konsol**: (varsayılan) hedefi ve bağımsız değişkenleri doğrudan komut satırına girilmiş gibi çalıştırır. Hedef çalışırken bir komut penceresi görünür, sonra otomatik olarak kapatılır.</li><li>**consolepause**: konsol ile aynı, ancak pencereyi kapatmadan önce bir KeyPress için bekler.</li><li>**Çıkış**: hedefi çalıştırır ve sonuçları Visual Studio 'daki **Çıkış** penceresinde görüntüler. TargetType, "PIP" ise, Visual Studio paket adı olarak hedefi kullanır ve bağımsız değişkenleri ekler.</li><li>**REPL**: [Python etkileşimli](python-interactive-repl-in-visual-studio.md) penceresinde hedefi çalıştırır; Pencerenin başlığı için isteğe bağlı görünen ad kullanılır.</li><li>**hiçbiri**: konsoluyla aynı şekilde davranır.</li></ul>|
+| Öğesi | Yes | Target özniteliğinin neleri içerdiğini ve bağımsız değişkenler özniteliğiyle birlikte nasıl kullanıldığını belirtir:<ul><li>**yürütülebilir**: hedef içinde adlı yürütülebilir dosyayı, doğrudan komut satırına girildiği gibi bağımsız değişkenlerde değeri ekleyerek çalıştırın. Değer yalnızca bağımsız değişken içermeyen bir program adı içermelidir.</li><li>**betik**: *python.exe* , hedefte dosya adı Ile ve ardından bağımsız değişkenlerdeki değerle çalıştırın.</li><li>**Modül**: `python -m` sonra, hedefteki modül adı ve ardından bağımsız değişkenlerde değeri ile çalıştırın.</li><li>**kod**: hedefte bulunan satır içi kodu çalıştırın. Bağımsız değişkenler değeri yok sayılır.</li><li>**PIP**: `pip` target içindeki komutla, sonra bağımsız değişkenler Ile çalıştırın; executeın "output" olarak ayarlanır, ancak, PIP komutu kabul eder `install` ve paket adı olarak hedefi kullanır.</li></ul> |
+| Hedef | Yes | TargetType öğesine bağlı olarak kullanılacak dosya adı, modül adı, kod veya PIP komutu. |
+| Arguments | İsteğe Bağlı | Hedefe verilecek bağımsız değişkenlerin (varsa) bir dizesini belirtir. TargetType olduğunda `script` , bağımsız değişkenlerin *python.exe*değil Python programına verildiğini unutmayın. TargetType için yok sayıldı `code` . |
+| Executeın | Yes | Komutun çalıştırılacağı ortamı belirtir:<ul><li>**konsol**: (varsayılan) hedefi ve bağımsız değişkenleri doğrudan komut satırına girilmiş gibi çalıştırır. Hedef çalışırken bir komut penceresi görünür, sonra otomatik olarak kapatılır.</li><li>**consolepause**: konsol ile aynı, ancak pencereyi kapatmadan önce bir KeyPress için bekler.</li><li>**Çıkış**: hedefi çalıştırır ve sonuçları Visual Studio 'daki **Çıkış** penceresinde görüntüler. TargetType, "PIP" ise, Visual Studio paket adı olarak hedefi kullanır ve bağımsız değişkenleri ekler.</li><li>**REPL**: [Python etkileşimli](python-interactive-repl-in-visual-studio.md) penceresinde hedefi çalıştırır; Pencerenin başlığı için isteğe bağlı görünen ad kullanılır.</li><li>**hiçbiri**: konsoluyla aynı şekilde davranır.</li></ul>|
 | Başlangıç | İsteğe Bağlı | Komutun çalıştırılacağı klasör. |
 | ErrorRegex<br>WarningRegEx | İsteğe Bağlı | Yalnızca ExecuteIn olduğunda kullanılır `output` . Her iki değer de, Visual Studio 'Nun **hata listesi** penceresinde hata ve uyarıları göstermek için komut çıkışını ayrıştırmak için bir normal ifade belirtir. Belirtilmemişse, komut **hata listesi** penceresini etkilemez. Visual Studio 'Nun beklediği hakkında daha fazla bilgi için bkz. [adlandırılmış yakalama grupları](#named-capture-groups-for-regular-expressions). |
-| RequiredPackages | İsteğe Bağlı | [*Requirements. txt*](https://pip.pypa.io/en/stable/user_guide/#requirements-files) (Pip.readthedocs.io) ile aynı biçimi kullanan komuta ait paket gereksinimlerinin bir listesi. Örneğin, **Pylınt komutunu çalıştırın** , örneğin belirtir `pylint>=1.0.0` . Komutu çalıştırmadan önce, Visual Studio listedeki tüm paketlerin yüklü olduğunu denetler. Visual Studio eksik paketleri yüklemek için PIP kullanır. |
+| RequiredPackages | İsteğe Bağlı | [*requirements.txt*](https://pip.pypa.io/en/stable/user_guide/#requirements-files) (Pip.readthedocs.io) ile aynı biçimi kullanan komuta ait paket gereksinimlerinin bir listesi. Örneğin, **Pylınt komutunu çalıştırın** , örneğin belirtir `pylint>=1.0.0` . Komutu çalıştırmadan önce, Visual Studio listedeki tüm paketlerin yüklü olduğunu denetler. Visual Studio eksik paketleri yüklemek için PIP kullanır. |
 | Ortam | İsteğe Bağlı | Komutu çalıştırmadan önce tanımlanacak ortam değişkenleri dizesi. Her değişken, formunu \<NAME> = \<VALUE> noktalı virgülle ayırarak birden çok değişken ile kullanır. Birden çok değeri olan bir değişken, ' NAME = DEĞER1; içinde olduğu gibi tek veya çift tırnak içinde bulunmalıdır. DEĞER2 '. |
 
 #### <a name="named-capture-groups-for-regular-expressions"></a>Normal ifadeler için adlandırılmış yakalama grupları
@@ -306,7 +306,7 @@ Web projeleri için **sunucu Başlat** ve **hata ayıklama sunucu** komutların�
   </Target>
 ```
 
-*[Fxthomas/example. pyproj. xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), izin ile kullanılır.*
+*[Fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub) öğesinden, izin ile kullanılır.*
 
 ### <a name="generate-windows-installer"></a>Windows Installer oluştur
 
@@ -325,7 +325,7 @@ Web projeleri için **sunucu Başlat** ve **hata ayıklama sunucu** komutların�
   </Target>
 ```
 
-*[Fxthomas/example. pyproj. xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), izin ile kullanılır.*
+*[Fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub) öğesinden, izin ile kullanılır.*
 
 ### <a name="generate-wheel-package"></a>Tekerlek paketi oluştur
 
@@ -345,7 +345,7 @@ Web projeleri için **sunucu Başlat** ve **hata ayıklama sunucu** komutların�
 </Target>
 ```
 
-*[Fxthomas/example. pyproj. xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub), izin ile kullanılır.*
+*[Fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa) (GitHub) öğesinden, izin ile kullanılır.*
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
@@ -390,4 +390,4 @@ Büyük olasılıkla, ile bir konsol komutu çalıştırmaya çalışıyoruz `Ex
 
 ### <a name="executable-command-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>Yürütülebilir komut "iç veya dış komut, çalıştırılabilir program veya toplu iş dosyası olarak tanınmıyor"
 
-Kullanırken `TargetType="executable"` , içindeki değeri `Target` *yalnızca* *Python* veya *Python. exe* gibi herhangi bir bağımsız değişken olmadan program adı olmalıdır. Tüm bağımsız değişkenleri özniteliğe taşıyın `Arguments` .
+Kullanırken `TargetType="executable"` , içindeki değeri `Target` *yalnızca* *Python* veya *python.exe* gibi herhangi bir bağımsız değişken olmadan program adı olmalıdır. Tüm bağımsız değişkenleri özniteliğe taşıyın `Arguments` .

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Çalışma sayfalarına XMLMappedRange denetimleri ekleme'
+title: 'Nasıl yapılır: çalışma sayfalarına XMLMappedRange denetimleri ekleme'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,56 +13,56 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 60f1fe8330e3a40676738c4187273ee60215db6d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 1d69e705e8f537ba3636422ad6883a7633e03322
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63427442"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544891"
 ---
-# <a name="how-to-add-xmlmappedrange-controls-to-worksheets"></a>Nasıl yapılır: Çalışma sayfalarına XMLMappedRange denetimleri ekleme
-  Microsoft Office Excel hücresine bir XML öğesi eşlediğinizde, Visual Studio otomatik olarak ekler bir <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> çalışma denetimi.
+# <a name="how-to-add-xmlmappedrange-controls-to-worksheets"></a>Nasıl yapılır: çalışma sayfalarına XMLMappedRange denetimleri ekleme
+  Bir XML öğesini Microsoft Office Excel içindeki bir hücreyle eşleştirdiğinizde, Visual Studio otomatik olarak <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> çalışma sayfanıza bir denetim ekler.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
 > [!NOTE]
-> <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> Denetim üzerinde kullanılabilir değil **araç kutusu** veya **veri kaynakları** penceresi. Ayrıca, oluşturulamıyor <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> programlı olarak denetler.
+> <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>Denetim, **araç kutusu** veya **veri kaynakları** penceresinde kullanılamaz. Ayrıca, <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> programlı olarak denetim oluşturamazsınız.
 
-## <a name="to-add-an-xmlmappedrange-control-to-a-worksheet"></a>XMLMappedRange denetimi bir çalışma sayfasına eklemek için
+## <a name="to-add-an-xmlmappedrange-control-to-a-worksheet"></a>Bir çalışma sayfasına XMLMappedRange denetimi eklemek için
 
-1. Visual Studio tasarımcıda Excel çalışma kitabını açın.
+1. Visual Studio tasarımcısında Excel çalışma kitabını açın.
 
-2. Denetim eklemek istediğiniz çalışma sayfasını açın.
+2. Denetimi eklemek istediğiniz çalışma sayfasını açın.
 
-3. Üzerinde **Geliştirici** sekmesinde **kaynak**.
+3. **Geliştirici** sekmesinde **kaynak**' a tıklayın.
 
     > [!NOTE]
-    > Varsa **Geliştirici** sekmesi, Şerit üzerinde görünür değilse, onu etkinleştirmeniz gerekir. Daha fazla bilgi için [nasıl yapılır: Şeritte Geliştirici sekmesini gösterme](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
+    > **Geliştirici** sekmesi şeritte görünür değilse, etkinleştirmeniz gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: Şeritte Geliştirici sekmesini gösterme](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
 
-     **XML kaynağı** görev bölmesi görünür.
+     **XML kaynağı** görev bölmesi görüntülenir.
 
-4. İçinde **XML kaynağı** görev bölmesi, tıklayın **XML eşlemeleri**.
+4. **XML kaynağı** görev bölmesinde, **XML eşlemeleri**' ne tıklayın.
 
-5. İçinde **XML eşlemeleri** iletişim kutusu, tıklayın **Ekle**.
+5. **XML eşlemeleri** Iletişim kutusunda **Ekle**' ye tıklayın.
 
      **XML kaynağı** iletişim kutusu görüntülenir.
 
-6. XML şemasından seçin **XML kaynağı** iletişim kutusu ve tıklatın **açık**.
+6. **XML kaynağı** iletişim kutusundan bir XML şeması seçin ve **Aç**' a tıklayın.
 
-     Şema eklenir **XML eşlemeleri** iletişim kutusu.
+     Şema, **XML eşlemeleri** iletişim kutusuna eklenir.
 
-7. İçinde **XML eşlemeleri** iletişim kutusu, tıklayın **Tamam**.
+7. **XML eşlemeleri** Iletişim kutusunda **Tamam**' a tıklayın.
 
-8. Bir öğeyi sürükleyin **XML kaynağı** çalışma sayfasındaki bir hücreyi görev bölmesi.
+8. **XML kaynağı** görev bölmesindeki bir öğeyi çalışma sayfasındaki bir hücreye sürükleyin.
 
-     Bir <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> oluşturulur ve projeye eklendi.
+     Bir <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> oluşturulur ve projeye eklenir.
 
     > [!NOTE]
-    > Bir üst öğeden sürüklerseniz **XML kaynağı** görev bölmesi, bir <xref:Microsoft.Office.Tools.Excel.ListObject> denetim oluşturulur.
+    > Bir üst öğeyi **XML kaynağı** görev bölmesinden sürüklerseniz bir <xref:Microsoft.Office.Tools.Excel.ListObject> denetim oluşturulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [XmlMappedRange denetimi](../vsto/xmlmappedrange-control.md)
-- [Genişletilmiş nesneleri kullanarak Excel'i otomatikleştirmek](../vsto/automating-excel-by-using-extended-objects.md)
-- [Konak öğelerine ve denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
-- [Konak denetimlerinin ve konak öğelerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
-- [Nasıl yapılır: Şemaları Visual Studio içindeki çalışma sayfalarıyla eşleştirme](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)
+- [Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md)
+- [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
+- [Konak öğelerinin ve konak denetimlerinin programlama sınırlamaları](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Nasıl yapılır: şemaları Visual Studio içindeki çalışma sayfalarına eşleme](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)

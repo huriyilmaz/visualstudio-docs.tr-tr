@@ -23,7 +23,7 @@ ms.locfileid: "85541797"
 # <a name="how-to-create-a-domain-specific-language-solution"></a>Nasıl yapılır: Etki Alanına Özgü Dil Çözümü Oluşturma
 Özel bir Visual Studio çözümü kullanılarak, etki alanına özgü dil (DSL) oluşturulur.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu yordamı başlatabilmeniz için önce şu bileşenleri yükleyebilirsiniz:
 

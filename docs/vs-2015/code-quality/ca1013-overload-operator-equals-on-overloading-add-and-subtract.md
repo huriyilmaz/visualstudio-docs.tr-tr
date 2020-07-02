@@ -19,30 +19,30 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: dd1c144f04150e3965e2c0264b80147cbd9b8f19
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2304b78073b806dfc4aec9686f061d946b379ded
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663208"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545424"
 ---
-# <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: Eşittir işlecini ekleme ve çıkarmayı aşırı yükleyerek aşırı yükleyin
+# <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: Toplama ve çıkarmayı aşırı yüklediğinizde eşittir işlecini aşırı yükleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|OverloadOperatorEqualsOnOverloadingAddAndSubtract|
 |CheckId|CA1013|
-|Kategori|Microsoft.Design|
+|Kategori|Microsoft. Design|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir genel ya da korumalı tür eşitlik imlecini uygulamadan ekleme ya da çıkarma işleçlerini uygular.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir türün örnekleri toplama ve çıkarma gibi işlemler kullanılarak birleştirilebilmesi için, aynı anayent değerlerine sahip olan her iki örnek için `true` döndürmek üzere neredeyse her zaman eşitlik tanımlamanız gerekir.
+ Bir türün örnekleri toplama ve çıkarma gibi işlemler kullanılarak birleştirilebilmesi için, `true` aynı yapısal değerlere sahip olan her iki örnek için her zaman eşitlik tanımlamanız gerekir.
 
- Eşitlik işlecinin aşırı yüklenmiş bir uygulamasında varsayılan eşitlik işlecini kullanamazsınız. Bunun yapılması, yığın taşmasına neden olur. Eşitlik işlecini uygulamak için uygulamanızdaki Object. Equals yöntemini kullanın. Aşağıdaki örnekte bakın.
+ Eşitlik işlecinin aşırı yüklenmiş bir uygulamasında varsayılan eşitlik işlecini kullanamazsınız. Bunun yapılması, yığın taşmasına neden olur. Eşitlik işlecini uygulamak için uygulamanızdaki Object. Equals yöntemini kullanın. Aşağıdaki örneğe bakın.
 
 ```vb
 If (Object.ReferenceEquals(left, Nothing)) Then
@@ -65,7 +65,7 @@ return left.Equals(right);
  Eşitlik işlecinin varsayılan uygulanması tür için doğru davranışı sağlıyorsa, bu kuraldan bir uyarının görüntülenmesini güvenli hale getirir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bu kuralı ihlal eden bir türü (`BadAddableType`) tanımlar. Bu tür, eşitlik için aynı alan değerlerinin test `true` olan iki örneği oluşturmak için eşitlik işlecini uygulamalıdır. Tür `GoodAddableType` düzeltilen uygulamayı gösterir. Bu türün aynı zamanda eşitsizlik işlecini uyguladığını ve diğer kuralları karşılamak için <xref:System.Object.Equals%2A> geçersiz kılmalarını unutmayın. Ayrıca, tüm uygulama <xref:System.Object.GetHashCode%2A>de uygular.
+ Aşağıdaki örnek, `BadAddableType` Bu kuralı ihlal eden bir türü () tanımlar. Bu tür, eşitlik için aynı alan değerleri test eden iki örnek oluşturmak için eşitlik işlecini uygulamalıdır `true` . Tür, `GoodAddableType` düzeltilen uygulamayı gösterir. Bu türün aynı zamanda eşitsizlik işlecini ve <xref:System.Object.Equals%2A> diğer kuralları karşılamak için geçersiz kılmaları uyguladığını unutmayın. Ayrıca, uygulamanın tamamı de uygulanır <xref:System.Object.GetHashCode%2A> .
 
  [!code-csharp[FxCop.Design.AddAndSubtract#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AddAndSubtract/cs/FxCop.Design.AddAndSubtract.cs#1)]
 
@@ -76,10 +76,10 @@ return left.Equals(right);
 
  Bu örnek aşağıdaki çıktıyı üretir.
 
- **Hatalı tür: {2,2} {2,2} eşit mi? **
-**iyi tür yok: {3,3} {3,3} eşit mi? Evet**
-**iyi tür: {3,3} {3,3} = =?   Evet**
-**yanlış tür: {2,2} {9,9} eşittir mi? **
-**iyi tür yok: {3,3} {9,9} = =?   Hayır**
+ **Hatalı tür: {2,2} {2,2} eşittir mi? ** 
+ **İyi tür yok: {3,3} {3,3} eşittir mi? Evet** 
+ **iyi tür: {3,3} {3,3} = =?   Evet** 
+ **Hatalı tür: {2,2} {9,9} eşittir mi? ** 
+ **İyi tür yok: {3,3} {9,9} = =?   Hayır**
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Eşitlik İşleçleri](https://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a)
+ [Eşitlik Işleçleri](https://msdn.microsoft.com/library/bc496a91-fefb-4ce0-ab4c-61f09964119a)

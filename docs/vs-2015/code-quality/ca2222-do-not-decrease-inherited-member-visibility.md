@@ -15,24 +15,24 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 3dda56e6980133b0e33893fbb814c4a3a7008c49
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 04109e821d3a739b96ad63e1a441089a5d479cd8
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72656052"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540783"
 ---
 # <a name="ca2222-do-not-decrease-inherited-member-visibility"></a>CA2222: Devralınan üye görünürlüğünü azaltmayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotDecreaseInheritedMemberVisibility|
 |CheckId|CA2222|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Korumasız bir türdeki özel bir yöntem, bir temel tür içinde belirtilen ortak bir yöntemle aynı imzaya sahip. Özel yöntem son değil.
 
 ## <a name="rule-description"></a>Kural Tanımı

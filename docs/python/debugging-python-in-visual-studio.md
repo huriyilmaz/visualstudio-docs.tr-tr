@@ -2,7 +2,7 @@
 title: Python kodunda hata ayıklama
 description: Visual Studio, kesme noktaları ayarlama, atlama, değerleri İnceleme, özel durumlara bakma ve etkileşimli pencerede hata ayıklama dahil olmak üzere Python kodu için zengin hata ayıklama sağlar.
 ms.date: 05/12/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 293e431fb00f6817fdbba19186613345cb90275a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 2fdbd2e7f47e75b4d80d07f6af3a6f998dfd72d6
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285653"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541160"
 ---
 # <a name="debug-your-python-code"></a>Python kodunuzda hata ayıklama
 
@@ -66,7 +66,7 @@ Koşulları ayarlarken, Ayrıca, isteğe bağlı olarak yürütmeye devam etmek 
 
 Bir kesme noktasında durdurulduktan sonra, yeniden kesmeden önce kod veya kod blokları çalıştırmak için çeşitli yöntemlere sahip olursunuz. Bu komutlar, en üstteki hata ayıklama araç çubuğu, **hata ayıklama** menüsü, kod düzenleyicisinde sağ tıklama bağlam menüsünde ve klavye kısayolları (tüm komutlar tüm yerlerde olmasa da) dahil olmak üzere birkaç yerde mevcuttur:
 
-| Özellik | U | Description |
+| Özellik | U | Açıklama |
 | --- | --- | --- |
 | **Devam et** | **F5** | Sonraki kesme noktasına ulaşılana kadar kodu çalıştırır. |
 | **Adımla** | **F11** | Sonraki ifadeyi çalıştırır ve duraklar. Next ifadesinde bir işlev çağrısı varsa, hata ayıklayıcı çağrılan işlevin ilk satırında duraklar. |
@@ -106,7 +106,7 @@ Bir dize değeri incelenirken (, `str` , `unicode` `bytes` ve `bytearray` tüm d
 
 HTML, XML ve JSON görselleştirmeleri, sözdizimi vurgulaması ve ağaç görünümleri olan ayrı açılan pencereler halinde görünür.
 
-### <a name="exceptions"></a>Özel durumlar
+### <a name="exceptions"></a>Özel Durumlar
 
 Programınızda hata ayıklama sırasında bir hata oluşursa, ancak bunun için bir özel durum işleyiciniz yoksa, hata ayıklayıcı özel durum noktasında kesilir:
 
@@ -132,7 +132,7 @@ Varsayılan olarak, hata ayıklayıcı programınızı standart Python başlatı
 
 ### <a name="launch-mode-options"></a>Başlatma modu seçenekleri
 
-| Seçenek | Description |
+| Seçenek | Açıklama |
 | --- | --- |
 | **Standart Python başlatıcısı** | , Cponthon, IronPython ve stackless Python gibi varyantlar ile uyumlu olan taşınabilir Python 'da yazılmış hata ayıklama kodunu kullanır. Saf Python kodunda hata ayıklamak için en iyi deneyimi sağlar. Çalışan bir *python.exe* işlemine iliştirmeye çalıştığınızda, bu başlatıcı kullanılır. Bu başlatıcı Ayrıca, Cpkullanım için [karışık modda hata ayıklama](debugging-mixed-mode-c-cpp-python-in-visual-studio.md) sağlar ve C/C++ kodu ile Python kodu arasında sorunsuz bir şekilde ilerlemenize olanak tanır. |
 | **Web başlatıcısı** | Varsayılan tarayıcınızı başlatma sırasında başlatır ve şablonların hata ayıklamasını sağlar. Daha fazla bilgi için [Web şablonu hata ayıklama](python-web-application-project-templates.md#debugging) bölümüne bakın. |
@@ -141,7 +141,7 @@ Varsayılan olarak, hata ayıklayıcı programınızı standart Python başlatı
 
 ### <a name="run-options-search-paths-startup-arguments-and-environment-variables"></a>Çalıştırma seçenekleri (arama yolları, başlangıç bağımsız değişkenleri ve ortam değişkenleri)
 
-| Seçenek | Description |
+| Seçenek | Açıklama |
 | --- | --- |
 | **Arama yolları** | Bu değerler, projenin **Çözüm Gezgini** **arama yolları** düğümünde gösterilenlerin eşleşmesinden eşleşir. Bu değeri burada değiştirebilirsiniz, ancak klasörlere gözatmanıza ve yolları göreli biçime otomatik olarak dönüştürmenize olanak tanıyan **Çözüm Gezgini** kullanımı daha kolaydır. |
 | **Betik bağımsız değişkenleri** | Bu bağımsız değişkenler, komut dosyanızı başlatmak için kullanılan komuta, betiğinizin dosya adından sonra görünen komuta eklenir. Buradaki ilk öğe, `sys.argv[1]` `sys.argv[2]` betiğinizin, ikincisi, vb. için kullanılabilir. |
@@ -161,7 +161,7 @@ Hata ayıklama oturumu sırasında kullanabileceğiniz iki etkileşimli Windows 
 
 **Hata ayıklama etkileşimli** penceresi, [Standart REPL komutlarına](python-interactive-repl-in-visual-studio.md#meta-commands)ek olarak özel meta komutları destekler:
 
-| Komut | Arguments | Description |
+| Komut | Arguments | Açıklama |
 | --- | --- | --- |
 | `$continue`, `$cont`, `$c` | Geçerli deyimden programı çalıştırmaya başlar. |
 | `$down`, `$d` | Geçerli çerçeveyi yığın izlemesinde bir düzey aşağı taşıyın. |

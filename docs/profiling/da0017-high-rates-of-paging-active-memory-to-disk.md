@@ -13,16 +13,16 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: dfaeedc52e7d6b2888415200e7dccf258fa96d5c
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 06295c1b158fe25b481b2aa036f8448895c546f5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85327954"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544709"
 ---
 # <a name="da0017-high-rates-of-paging-active-memory-to-disk"></a>DA0017: Yüksek oranda diske etkin bellek sayfalaması
 
-|||
+|Öğe|Değer|
 |-|-|
 |Kural kimliği|DA0017|
 |Kategori|Bellek ve disk belleği|

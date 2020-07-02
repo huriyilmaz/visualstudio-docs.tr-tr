@@ -16,28 +16,28 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 308c970eb21faa7e725559d0451706899b62fd19
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f01495e4238461d0b1dfe5a13a208b528df1581f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662813"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540302"
 ---
-# <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231: ValueType.Equals değerini geçersiz kılmada eşittir işlecini aşırı yükle
+# <a name="ca2231-overload-operator-equals-on-overriding-valuetypeequals"></a>CA2231: Eşittir işlecini ValueType.Equals'ı geçersiz kılarak aşırı yükleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|OverloadOperatorEqualsOnOverridingValueTypeEquals|
 |CheckId|CA2231|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Değer türü <xref:System.Object.Equals%2A?displayProperty=fullName> geçersiz kılar, ancak eşitlik işlecini uygulamaz.
+## <a name="cause"></a>Nedeni
+ Değer türü geçersiz kılınır <xref:System.Object.Equals%2A?displayProperty=fullName> ancak eşitlik işlecini uygulamaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Çoğu programlama dilinde, değer türleri için eşitlik işlecinin (= =) varsayılan bir uygulamasý yoktur. Programlama diliniz operatör aşırı yüklerini destekliyorsa, eşitlik işlecini uygulamayı düşünmelisiniz. Davranışı <xref:System.Object.Equals%2A> özdeş olmalıdır.
+ Çoğu programlama dilinde, değer türleri için eşitlik işlecinin (= =) varsayılan bir uygulamasý yoktur. Programlama diliniz operatör aşırı yüklerini destekliyorsa, eşitlik işlecini uygulamayı düşünmelisiniz. Davranışı ile özdeş olmalıdır <xref:System.Object.Equals%2A> .
 
  Eşitlik işlecinin aşırı yüklenmiş bir uygulamasında varsayılan eşitlik işlecini kullanamazsınız. Bunun yapılması, yığın taşmasına neden olur. Eşitlik işlecini uygulamak için uygulamanızdaki Object. Equals yöntemini kullanın. Örneğin:
 
@@ -67,13 +67,13 @@ return left.Equals(right);
  [!code-csharp[FxCop.Usage.EqualsGetHashCode#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.EqualsGetHashCode/cs/FxCop.Usage.EqualsGetHashCode.cs#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1046: Başvuru türlerinde eşittir işleçlerini aşırı yüklemeyin](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+ [CA1046: Eşittir işlecini başvuru türlerinde aşırı yüklemeyin](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
 
  [CA2225: İşleç aşırı yüklemeleri adlandırılmış alternatiflere sahiptir](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
 
  [CA2226: İşleçler simetrik aşırı yüklemelere sahip olmalıdır](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
 
- [CA2224: Eşittir işlecini aşırı yükleyerek eşittiri geçersiz kılın](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
+ [CA2224: Eşittir işlecini aşırı yüklerken Equals'ı geçersiz kılın](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
 
  [CA2218: GetHashCode'u Eşittir'i geçersiz kılarak geçersiz kılın](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
 

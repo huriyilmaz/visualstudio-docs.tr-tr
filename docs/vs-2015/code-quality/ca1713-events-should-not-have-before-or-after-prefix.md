@@ -15,24 +15,24 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7286272e121cf5054013576c4278f787c8423d79
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b05c39a9d8a4a004359baf63919eb427c25fa5d9
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669147"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543968"
 ---
-# <a name="ca1713-events-should-not-have-before-or-after-prefix"></a>CA1713: Olaylarda önce veya sonra önek olmamalıdır
+# <a name="ca1713-events-should-not-have-before-or-after-prefix"></a>CA1713: Olaylar önce ya da sonra önekine sahip olmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|EventsShouldNotHaveBeforeOrAfterPrefix|
 |CheckId|CA1713|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir olayın adı ' before ' veya ' After ' ile başlar.
 
 ## <a name="rule-description"></a>Kural Tanımı

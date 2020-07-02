@@ -15,35 +15,35 @@ caps.latest.revision: 25
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: d1b4c0c5bcf22db6558f156fd1acd0be94026b08
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e669d87ad5ecc53c1523db16ab77578c6a703a33
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661058"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545268"
 ---
 # <a name="ca1901-pinvoke-declarations-should-be-portable"></a>CA1901: P/Invoke bildirimleri taşınabilir olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|PInvokeDeclarationsShouldBePortable|
 |CheckId|CA1901|
 |Kategori|Microsoft. taşınabilirlik|
 |Yeni Değişiklik|Parçalama-P/Invoke derlemenin dışında görünüyorsa. Bölünmez olmayan-P/Invoke derlemenin dışında görünür değilse.|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bu kural, her parametrenin boyutunu ve bir P/Invoke dönüş değerini değerlendirir ve 32-bit ve 64 bit platformlarındaki yönetilmeyen koda sıralanmış olarak bunların boyutunun doğru olduğunu doğrular. Bu kuralın en yaygın ihlali, platforma bağımlı, işaretçi boyutunda bir değişkenin gerekli olduğu sabit boyutlu bir tamsayıyı iletmektir.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Aşağıdaki senaryolardan biri bu kuralın oluştuğunu ihlal ediyor:
 
-- Dönüş değeri veya parametresi, `IntPtr` olarak yazılması gerektiğinde sabit boyutlu bir tamsayı olarak yazılır.
+- Dönüş değeri veya parametresi, olarak yazılması gerektiğinde sabit boyutlu bir tamsayı olarak yazılır `IntPtr` .
 
-- Dönüş değeri veya parametresi, sabit boyutlu bir tamsayı olarak yazılması gerektiğinde bir `IntPtr` olarak yazılır.
+- Dönüş değeri veya parametresi, `IntPtr` sabit boyutlu bir tamsayı olarak yazılması gerektiğinde bir olarak yazılır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- @No__t_2 veya `UInt32` yerine tutamaçları temsil etmek için `IntPtr` veya `UIntPtr` kullanarak bu ihlalin düzelini çözebilirsiniz.
+ `IntPtr` `UIntPtr` Veya yerine tutamaçları temsil etmek için veya kullanarak bu ihlalin düzeltmesini çözebilirsiniz `Int32` `UInt32` .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu uyarıyı gizmemelisiniz.
@@ -60,7 +60,7 @@ internal class NativeMethods
 }
 ```
 
- Bu örnekte, `nIconIndex` parametresi, 32 bitlik bir platformda 4 bayt genişliğinde ve 64 bitlik bir platformda 8 bayt genişliğinde olan bir `IntPtr` olarak bildirilmiştir. Aşağıdaki yönetilmeyen bildirimde, `nIconIndex` ' ın tüm platformlarda 4 baytlık işaretsiz bir tamsayı olduğunu görebilirsiniz.
+ Bu örnekte, `nIconIndex` parametresi `IntPtr` , 32 bitlik bir platformda 4 bayt genişliğinde olan ve 64 bitlik bir platformda 8 bayt genişliğinde olan bir olarak bildirilmiştir. Aşağıdaki yönetilmeyen bildirimde, `nIconIndex` tüm platformlarda 4 baytlık işaretsiz bir tamsayı olduğunu görebilirsiniz.
 
 ```csharp
 HICON ExtractIcon(HINSTANCE hInst, LPCTSTR lpszExeFileName,
@@ -79,4 +79,4 @@ internal class NativeMethods{
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Taşınabilirlik Uyarıları](../code-quality/portability-warnings.md)
+ [Taşınabilirlik uyarıları](../code-quality/portability-warnings.md)

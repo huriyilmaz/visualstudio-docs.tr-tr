@@ -40,7 +40,7 @@ Bir kod bölgesini daraltarak bir, bir artı işareti (+) altında görünmesi i
 
  Aşağıdaki komutlar **düzenleme/anahat** alt menüsünde bulunabilir.
 
-|Komut|Description|
+|Komut|Açıklama|
 |-|-|
 |Seçimi Gizle|(CTRL + M, CTRL + H)-ana hat için, örneğin bir blok için kullanılamayacak seçili bir kod bloğunu daraltır `if` . Özel bölgeyi kaldırmak için, **geçerli gizlemeyi durdur** (veya CTRL + M, CTRL + U) kullanın. Visual Basic ' de kullanılamaz.|
 |Anahat genişletmeyi değiştirme|-İmleç, iç içe daraltılmış bir bölümde yer aldığı zaman, en içteki ana hat bölümünün geçerli gizli veya genişletilmiş durumunu tersine çevirir.|

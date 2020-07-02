@@ -15,28 +15,28 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: fe5967ef099794b6c71029e9d03d959dd83b01dc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8d86f4a9ecbdfff451fed21f93c0fe6a7679d471
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72647065"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543955"
 ---
-# <a name="ca1813-avoid-unsealed-attributes"></a>CA1813: Korumasız özniteliklerden kaçının
+# <a name="ca1813-avoid-unsealed-attributes"></a>CA1813: Mühürsüz özniteliklerden kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|AvoidUnsealedAttributes|
 |CheckId|CA1813|
 |Kategori|Microsoft. Performance|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Ortak tür <xref:System.Attribute?displayProperty=fullName> ' dan devralınır, soyut değildir ve korumalı değildir (Visual Basic `NotInheritable`).
+## <a name="cause"></a>Nedeni
+ Ortak bir tür öğesinden devralınır <xref:System.Attribute?displayProperty=fullName> , soyut değildir ve korumalı değildir ( `NotInheritable` Visual Basic).
 
 ## <a name="rule-description"></a>Kural Tanımı
- @No__t_0 sınıf kitaplığı özel öznitelikleri almak için yöntemler sağlar. Varsayılan olarak, bu yöntemler öznitelik devralma hiyerarşisinde arama yapın; Örneğin <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName>, belirtilen öznitelik türünü veya belirtilen öznitelik türünü genişleten öznitelik türlerini arar. Özniteliği mühürde devralma hiyerarşisinde arama kaldırılır ve performans iyileştirebilirler.
+ [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]Sınıf Kitaplığı özel özniteliklerin alınması için yöntemler sağlar. Varsayılan olarak, bu yöntemler öznitelik devralma hiyerarşisinde arama yapın; Örneğin <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> , belirtilen öznitelik türünü veya belirtilen öznitelik türünü genişleten öznitelik türlerini arar. Özniteliği mühürde devralma hiyerarşisinde arama kaldırılır ve performans iyileştirebilirler.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini onarmak için öznitelik türünü mühürleyin veya soyut hale getirin.
@@ -51,9 +51,9 @@ ms.locfileid: "72647065"
  [!code-vb[FxCop.Performance.AttributesSealed#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Performance.AttributesSealed/vb/FxCop.Performance.AttributesSealed.vb#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1019: Öznitelik bağımsız değişkenleri için erişimcileri tanımlayın](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
+ [CA1019: Öznitelik bağımsız değişkenleri için erişimciler tanımlayın](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
 
- [CA1018: Öznitelikleri AttributeUsageAttribute ile işaretleyin](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)
+ [CA1018: Öznitelikleri AttributeUsageAttribute ile işaretle](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Öznitelikler](https://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b)

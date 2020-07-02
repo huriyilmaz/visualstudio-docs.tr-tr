@@ -1,8 +1,8 @@
 ---
-title: "&lt;eklenti&gt; öğesi (Visual Studio'da Office Geliştirme)"
+title: "&lt;AddIn &gt; öğesi (Visual Studio 'Da Office geliştirme)"
 titleSuffix: ''
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +15,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 3ab7b0617f09b98c9e30c7f198ef0e2aaa301e33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cf922799301aef67ee70c480dd9e0823382cbd47
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931004"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543773"
 ---
-# <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;eklenti&gt; öğesi (Visual Studio'da Office Geliştirme)
-  **Eklentisi** öğesinin `vstav3` ad alanı, Microsoft Office, VSTO eklentileri ve Visual Studio ile geliştirilen belge düzeyi özelleştirmeleri için özel bilgiler içerir.
+# <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;AddIn &gt; öğesi (Visual Studio 'Da Office geliştirme)
+  Ad alanının **addin** öğesi, `vstav3` Visual Studio Ile geliştirilen Microsoft Office VSTO eklentileri ve belge düzeyi özelleştirmelerine özgü bilgiler içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <addIn>
@@ -50,28 +50,28 @@ ms.locfileid: "62931004"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- **Eklentisi** öğesinin `vstav3` ad alanı Office çözümünün ve Microsoft Office uygulamasının hakkındaki bilgileri içerir. Bu öğe aşağıdaki ad alanında olması gerekir: `vstav3=urn:schemas-microsoft-com:vsta.v3`. Alt öğeleri de bu ad alanında olması gerekir.
+ Ad alanının **addin** öğesi `vstav3` Office çözümü ve Microsoft Office uygulaması hakkında bilgi içerir. Bu öğe şu ad alanında olmalıdır: `vstav3=urn:schemas-microsoft-com:vsta.v3` . Alt öğeler de bu ad alanında olmalıdır.
 
- `addin` Öğesi özniteliklere sahip değildir.
+ `addin`Öğesinde hiç öznitelik yok.
 
- `addin` Öğesi şu alt öğelerden sahiptir.
+ `addin`Öğesi aşağıdaki alt öğeleri içerir.
 
-### <a name="entrypoints"></a>giriş noktaları
- Gerekli. **Giriş noktaları** öğesi açıklanan [ &#60;giriş noktaları&#62; öğesi &#40;Visual Studio'da Office geliştirme&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md).
+### <a name="entrypoints"></a>entryPoints
+ Gereklidir. **EntryPoints** öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#62;&#60;entryPoints ](../vsto/entrypoints-element-office-development-in-visual-studio.md)öğesinde açıklanmıştır.
 
 ### <a name="update"></a>update
- Gerekli. **Güncelleştirme** öğesi açıklanan [ &#60;güncelleştirme&#62; öğesi &#40;Visual Studio'da Office geliştirme&#41;](../vsto/update-element-office-development-in-visual-studio.md).
+ Gereklidir. **Update** öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#60;Update&#62; öğesi ](../vsto/update-element-office-development-in-visual-studio.md)açıklanmaktadır.
 
-### <a name="postactions"></a>postActions
- İsteğe bağlı. **PostActions** öğesi açıklanan [ &#60;postActions&#62; öğesi &#40;Visual Studio'da Office geliştirme&#41;](../vsto/postactions-element-office-development-in-visual-studio.md).
+### <a name="postactions"></a>Postalamalar
+ İsteğe bağlı. **Postalamalar** öğesi, [Visual&#41;Studio 'da Office geliştirme &#40;&#60;postalamalar&#62; öğesi ](../vsto/postactions-element-office-development-in-visual-studio.md)içinde açıklanmıştır.
 
 ### <a name="application"></a>uygulama
- Gerekli. **Uygulama** öğesi açıklanan [ &#60;uygulama&#62; öğesi &#40;Visual Studio'da Office geliştirme&#41;](../vsto/application-element-office-development-in-visual-studio.md).
+ Gereklidir. **Uygulama** öğesi, [Visual Studio 'da Office geliştirme &#40;&#41;uygulama&#62; öğesi&#60;](../vsto/application-element-office-development-in-visual-studio.md)açıklanmaktadır.
 
 ## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirmesi örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir **eklentisi** kullanılarak dağıtılan bir belge düzeyinde Office çözüm öğesinde [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+ Aşağıdaki kod örneği, kullanılarak dağıtılan belge düzeyi Office çözümünde **eklenti öğesini gösterir** [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -132,10 +132,10 @@ ms.locfileid: "62931004"
 </vstav3:addIn>
 ```
 
-## <a name="vsto-add-in-example"></a>VSTO eklenti örneği
+## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir **eklentisi** kullanılarak dağıtılmış uygulama düzeyi Office çözümünü öğesinde [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md).
+ Aşağıdaki kod örneği, kullanılarak dağıtılan uygulama düzeyi Office çözümünde **eklenti öğesini gösterir** [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -194,4 +194,4 @@ ms.locfileid: "62931004"
 
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

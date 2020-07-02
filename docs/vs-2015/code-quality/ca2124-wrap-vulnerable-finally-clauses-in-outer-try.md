@@ -1,5 +1,5 @@
 ---
-title: "CA2124: Dış TRY 'da savunmasız finally yan tümcelerini sarın | Microsoft Docs"
+title: 'CA2124: açık olan finally yan tümcelerini dış TRY içinde sarın | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -15,17 +15,17 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 7a2a296f5dd3680209c14849b5bd863c01e6351d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4e191ca10456f133e1213961ca2d1ed9cb8e040b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72660241"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544306"
 ---
 # <a name="ca2124-wrap-vulnerable-finally-clauses-in-outer-try"></a>CA2124: Savunmasız sonunda yan tümcelerini dış deneme içine sarmalayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|WrapVulnerableFinallyClausesInOuterTry|
 |CheckId|CA2124|
@@ -33,16 +33,16 @@ ms.locfileid: "72660241"
 |Yeni Değişiklik|Kırılmamış|
 
 ## <a name="cause"></a>Nedeni
- @No__t_0 1,0 sürümleri ve 1,1 ' de, genel veya korumalı bir yöntem bir `try` / `catch` / `finally` bloğunu içerir. @No__t_0 bloğu güvenlik durumunu sıfırlayıp bir `finally` bloğunun içine alınmaz.
+ Öğesinin 1,0 ve 1,1 sürümlerinde [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] , genel veya korumalı bir yöntem bir `try` / `catch` / `finally` blok içerir. `finally`Blok güvenlik durumunu sıfırlayıp bir blok içine alınmaz `finally` .
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, çağrı yığınında mevcut olan kötü amaçlı özel durum filtrelerine açık olabilecek [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 1,0 ve 1,1 sürümlerini hedefleyen koddaki `try` / `finally` bloklarını bulur. Kimliğe bürünme gibi hassas işlemler try bloğunda gerçekleşirse ve bir özel durum oluşturulursa, filtre `finally` bloğundan önce çalıştırılabilir. Kimliğe bürünme örneği için bu, filtrenin kimliğine bürünülen kullanıcı olarak yürütüleceği anlamına gelir. Filtreler Şu anda yalnızca Visual Basic ' de uygulardır.
+ Bu kural `try` / `finally` , [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] çağrı yığınında mevcut olan kötü amaçlı özel durum filtrelerindekilerle açık olabilecek, 1,0 ve 1,1 sürümlerini hedefleyen koddaki blokları bulur. Kimliğe bürünme gibi hassas işlemler try bloğunda gerçekleşirse ve bir özel durum oluşturulursa, filtre bloğundan önce yürütülür `finally` . Kimliğe bürünme örneği için bu, filtrenin kimliğine bürünülen kullanıcı olarak yürütüleceği anlamına gelir. Filtreler Şu anda yalnızca Visual Basic ' de uygulardır.
 
 > [!WARNING]
-> @No__t_0 2,0 sürümleri ve sonrasında, çalışma zamanı, otomatik olarak özel durum bloğunu içeren yöntemin içinde ortaya çıkarsa, bir `try` / `catch` kötü amaçlı özel durum filtrelerinden /  bloğunu otomatik olarak korur.
+> Sürüm 2,0 ve üzeri sürümlerde, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `try` / `catch` /  `finally` sıfırlama işlemi özel durum bloğunu içeren yöntem içinde doğrudan gerçekleşirse, çalışma zamanı kötü amaçlı özel durum filtrelerinden bir bloğu otomatik olarak korur.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Sarmalanmamış `try` / `finally` bir dış try bloğuna yerleştirin. Aşağıdaki ikinci örneğe bakın. Bu, `finally` ' i filtre kodundan önce yürütmeye zorlar.
+ Sarmalanmamış `try` / `finally` bir dış try bloğuna yerleştirin. Aşağıdaki ikinci örneğe bakın. Bu, `finally` kodu filtre kodundan önce yürütmeye zorlar.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.

@@ -15,24 +15,24 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 212abc1fa5e2debfaf7ca81d82c8d94e9ddb0879
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 2dc43e92b92b6f963900057a76dfe88e38a3638f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658884"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545229"
 ---
 # <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225: İşleç aşırı yüklemeleri adlandırılmış alternatiflere sahiptir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|OperatorOverloadsHaveNamedAlternates|
 |CheckId|CA2225|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Operatör aşırı yüklemesi bulundu ve beklenen adlandırılmış alternatif yöntem bulunamadı.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -44,19 +44,19 @@ ms.locfileid: "72658884"
 |---------|------------------|-----------|--------------------|
 |+ (ikili)|+|+ (ikili)|Ekle|
 |+=|+=|+=|Ekle|
-|&|'|&|Bitwiseve|
+|&|And|&|Bitwiseve|
 |&=|Ve =|&=|Bitwiseve|
 |&#124;|Veya|&#124;|Bitwiseveya|
 |&#124;=|Or =|&#124;=|Bitwiseveya|
 |--|Yok|--|Azaltma|
-|/|/|/|Sayısına|
-|/=|/=|/=|Sayısına|
+|/|/|/|Böl|
+|/=|/=|/=|Böl|
 |==|=|==|Eşittir|
-|^|XOR|^|XOR|
-|^=|XOR =|^=|XOR|
+|^|Xor|^|Xor|
+|^=|XOR =|^=|Xor|
 |>|>|>|Karşılaştır|
 |>=|>=|>=|Karşılaştır|
-|++|Yok|++|Ilamadı|
+|++|Yok|++|Artış|
 |<>|!=|Eşittir|
 |<<|<<|<<|Leftshıft|
 |<<=|<<=|<<=|Leftshıft|
@@ -67,23 +67,23 @@ ms.locfileid: "72658884"
 |!|Yok|!|LogicalNot|
 |%|Mod|%|Mod veya geri kalanı|
 |%=|Yok|%=|Mod|
-|* (ikili)|*|*|Bilirsiniz|
-|*=|Yok|*=|Bilirsiniz|
-|~|Başlatılmadı|~|Onestamamlayıcısı|
+|* (ikili)|*|*|Çarp|
+|*=|Yok|*=|Çarp|
+|~|Not|~|Onestamamlayıcısı|
 |>>|>>|>>|Sağa kaydırma|
 =|Yok|>>=|Sağa kaydırma|
-|-(ikili)|-(ikili)|-(ikili)|Çıkarma|
-|-=|Yok|-=|Çıkarma|
+|-(ikili)|-(ikili)|-(ikili)|Çıkar|
+|-=|Yok|-=|Çıkar|
 |true|IsTrue|Yok|IsTrue (özellik)|
 |-(birli)|Yok|-|Negate|
-|+ (birli)|Yok|+|artı|
-|false|IsFalse|False|IsTrue (özellik)|
+|+ (birli)|Yok|+|Artı|
+|yanlış|IsFalse|False|IsTrue (özellik)|
 
  Seçili dilde N/A = = aşırı yüklenemez.
 
- Kural Ayrıca, `ToSomeType` ve `FromSomeType` adlı yöntemleri denetleyerek bir türdeki (`SomeType`) örtük ve açık atama işleçlerini da denetler.
+ Kural ayrıca `SomeType` , ve adlı yöntemleri denetleyerek bir tür () içinde örtük ve açık tür dönüştürme işleçlerini da kontrol eder `ToSomeType` `FromSomeType` .
 
- ' C#De, bir ikili işleç aşırı yüklendiğinde, varsa karşılık gelen atama işleci de dolaylı olarak aşırı yüklenmiştir.
+ C# ' de, bir ikili işleç aşırı yüklendiğinde karşılık gelen atama işleci de dolaylı olarak aşırı yüklenmiştir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kuralın ihlalini onarmak için, işleci için alternatif yöntemi uygulayın; Önerilen alternatif adı kullanarak adlandırın.
@@ -92,17 +92,17 @@ ms.locfileid: "72658884"
  Paylaşılan bir kitaplık uygulamadıysanız bu kuraldan bir uyarıyı bastırmayın. Uygulamalar bu kuraldan bir uyarıyı yok sayabilir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bu kuralı ihlal eden bir yapıyı tanımlar. Örneği düzeltmek için, yapıya bir ortak `Add(int x, int y)` yöntemi ekleyin.
+ Aşağıdaki örnek, bu kuralı ihlal eden bir yapıyı tanımlar. Örneği düzeltmek için, yapıya ortak bir `Add(int x, int y)` Yöntem ekleyin.
 
  [!code-csharp[FxCop.Usage.OperatorOverloadsHaveNamedAlternates#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperatorOverloadsHaveNamedAlternates/cs/FxCop.Usage.OperatorOverloadsHaveNamedAlternates.cs#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1046: Başvuru türlerinde eşittir işleçlerini aşırı yüklemeyin](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+ [CA1046: Eşittir işlecini başvuru türlerinde aşırı yüklemeyin](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
 
  [CA2226: İşleçler simetrik aşırı yüklemelere sahip olmalıdır](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
 
- [CA2224: Eşittir işlecini aşırı yükleyerek eşittiri geçersiz kılın](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
+ [CA2224: Eşittir işlecini aşırı yüklerken Equals'ı geçersiz kılın](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
 
  [CA2218: GetHashCode'u Eşittir'i geçersiz kılarak geçersiz kılın](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
 
- [CA2231: ValueType.Equals değerini geçersiz kılmada eşittir işlecini aşırı yükle](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
+ [CA2231: Eşittir işlecini ValueType.Equals'ı geçersiz kılarak aşırı yükleyin](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)

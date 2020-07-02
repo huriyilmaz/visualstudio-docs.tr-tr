@@ -43,7 +43,7 @@ interface IManagedAddin : IUnknown
 ## <a name="methods"></a>Yöntemler
  Aşağıdaki tabloda, IManagedAddin arabirimi tarafından tanımlanan Yöntemler listelenmiştir.
 
-|Name|Description|
+|Name|Açıklama|
 |----------|-----------------|
 |[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Microsoft Office bir uygulama yönetilen bir VSTO eklentisini yüklediğinde çağırılır.|
 |[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Microsoft Office bir uygulama, yönetilen VSTO eklentisini kaldırmadan hemen önce çağırılır.|

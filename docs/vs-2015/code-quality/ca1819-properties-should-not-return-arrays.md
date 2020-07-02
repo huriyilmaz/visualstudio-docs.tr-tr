@@ -15,24 +15,24 @@ caps.latest.revision: 24
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5c85efc3e601eb9e0d887043c50b30587e51321e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: a96d2164cbd6c03cb0d191b2d0c3c4607468209c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668369"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545333"
 ---
 # <a name="ca1819-properties-should-not-return-arrays"></a>CA1819: Özellikler diziler döndürmemelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|PropertiesShouldNotReturnArrays|
 |CheckId|CA1819|
 |Kategori|Microsoft. Performance|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Ortak bir türdeki ortak veya korumalı özellik bir dizi döndürür.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -53,7 +53,7 @@ ms.locfileid: "72668369"
  [!code-csharp[FxCop.Performance.PropertyArrayViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyArrayViolation/cs/FxCop.Performance.PropertyArrayViolation.cs#1)]
  [!code-vb[FxCop.Performance.PropertyArrayViolation#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyArrayViolation/vb/FxCop.Performance.PropertyArrayViolation.vb#1)]
 
-### <a name="comments"></a>Açıklamalar
+### <a name="comments"></a>Yorumlar
  Bu kural ihlalini onarmak için, özelliği bir metodu yapın ya da özelliği bir dizi yerine bir koleksiyon döndürecek şekilde değiştirin.
 
 ## <a name="change-the-property-to-a-method-example"></a>Özelliği bir yöntem örneği olarak değiştirin
@@ -85,12 +85,12 @@ ms.locfileid: "72668369"
  [!code-csharp[FxCop.Performance.PropertyModifyViolation#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyModifyViolation/cs/FxCop.Performance.PropertyModifyViolation.cs#1)]
  [!code-vb[FxCop.Performance.PropertyModifyViolation#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyModifyViolation/vb/FxCop.Performance.PropertyModifyViolation.vb#1)]
 
-### <a name="comments"></a>Açıklamalar
- Aşağıdaki örnek, özelliği bir <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName> döndürecek şekilde değiştirerek ihlalin düzeltir.
+### <a name="comments"></a>Yorumlar
+ Aşağıdaki örnek, öğesini döndürecek şekilde özelliğini değiştirerek ihlalin düzeltir <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName> .
 
 ### <a name="code"></a>Kod
  [!code-csharp[FxCop.Performance.PropertyModifyFixed#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyModifyFixed/cs/FxCop.Performance.PropertyModifyFixed.cs#1)]
  [!code-vb[FxCop.Performance.PropertyModifyFixed#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Performance.PropertyModifyFixed/vb/FxCop.Performance.PropertyModifyFixed.vb#1)]
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1024: Uygun yerlerde özellikler kullanın](../code-quality/ca1024-use-properties-where-appropriate.md)
+ [CA1024: Uygun yerlerde özellikleri kullanın](../code-quality/ca1024-use-properties-where-appropriate.md)

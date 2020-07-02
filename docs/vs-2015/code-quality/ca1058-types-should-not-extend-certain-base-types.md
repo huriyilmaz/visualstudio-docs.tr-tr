@@ -15,24 +15,24 @@ caps.latest.revision: 26
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 9a4663fe3bc09b27bad9eeec05e325f07a3de6f3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d8e267b1e6203759efc91936a3b13059368a3862
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72603060"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545398"
 ---
-# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Türler belli temel türleri genişletmemelidir
+# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Türler belirli temel türleri aşmamalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|TypesShouldNotExtendCertainBaseTypes|
 |CheckId|CA1058|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Dışarıdan görünen tür belirli temel türleri genişletir. Şu anda, bu kural aşağıdaki türlerden türetilen türleri raporlar:
 
 - <xref:System.ApplicationException?displayProperty=fullName>
@@ -52,9 +52,9 @@ ms.locfileid: "72603060"
 - <xref:System.Collections.Stack?displayProperty=fullName>
 
 ## <a name="rule-description"></a>Kural Tanımı
- @No__t_0 sürüm 1 ' de, <xref:System.ApplicationException> yeni özel durumlar türetmeniz önerilir. Öneri değişmiştir ve yeni özel durumlar, <xref:System> ad alanındaki <xref:System.Exception?displayProperty=fullName> veya alt sınıflarından türetilmelidir.
+ [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]Sürüm 1 ' de, ' den yeni özel durumlar türetmeniz önerilir <xref:System.ApplicationException> . Öneri değişmiştir ve yeni özel durumlar <xref:System.Exception?displayProperty=fullName> , ad alanındaki alt sınıflarından veya birini türetmelidir <xref:System> .
 
- Temel alınan nesne modelinin veya veri kaynağının XML görünümünü oluşturmak istiyorsanız <xref:System.Xml.XmlDocument> alt sınıfını oluşturmayın.
+ <xref:System.Xml.XmlDocument>Temel alınan nesne modeli veya veri kaynağı için BIR xml görünümü oluşturmak istiyorsanız, alt sınıfını oluşturmayın.
 
 ### <a name="non-generic-collections"></a>Genel olmayan Koleksiyonlar
  Mümkün olan her durumda genel koleksiyonları kullanın ve/veya genişletin. Daha önce sevk etmediğiniz takdirde, kodunuzda genel olmayan koleksiyonları genişletmeyin.
@@ -87,4 +87,4 @@ public class MyReadOnlyCollection : ReadOnlyCollection<T>
  Bu kural ihlalini onarmak için, türü farklı bir temel türden veya genel bir koleksiyondan türetebilirsiniz.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- @No__t_0 ilgili ihlaller için bu kuraldan bir uyarıyı bastırmayın. @No__t_0 ilgili ihlaller için bu kuraldan bir uyarıyı gizlemek güvenlidir. Kod daha önce yayınlanmışsa, genel olmayan bir koleksiyon hakkında uyarı bastırmak güvenlidir.
+ Bu kuraldan ilgili ihlalleri öğrenmek için bir uyarı göstermez <xref:System.ApplicationException> . Bu kuraldan ilgili ihlalleri öğrenmek için bir uyarı görüntülenmesini güvenlidir <xref:System.Xml.XmlDocument> . Kod daha önce yayınlanmışsa, genel olmayan bir koleksiyon hakkında uyarı bastırmak güvenlidir.

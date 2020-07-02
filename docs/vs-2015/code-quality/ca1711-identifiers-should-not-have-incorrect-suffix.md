@@ -15,24 +15,24 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f59a1c88701cf132a46c66eb6550f03eb870d63d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1e753083e9b4bda1e33553021ccb0027a2af2533
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72669175"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544020"
 ---
-# <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711: Tanımlayıcıların sonekleri yanlış olmamalıdır
+# <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711: Tanımlayıcılar yanlış sonek içermemelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|IdentifiersShouldNotHaveIncorrectSuffix|
 |CheckId|CA1711|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir tanımlayıcı yanlış bir son eke sahip.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -44,12 +44,12 @@ ms.locfileid: "72669175"
 |------------|--------------------------|
 |Öznitelik|<xref:System.Attribute?displayProperty=fullName>|
 |Koleksiyon|<xref:System.Collections.ICollection?displayProperty=fullName><br /><br /> <xref:System.Collections.IEnumerable?displayProperty=fullName><br /><br /> <xref:System.Collections.Queue?displayProperty=fullName><br /><br /> <xref:System.Collections.Stack?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName><br /><br /> <xref:System.Data.DataSet?displayProperty=fullName><br /><br /> <xref:System.Data.DataTable?displayProperty=fullName>|
-|Sözlüğünü|<xref:System.Collections.IDictionary?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>|
+|Sözlük|<xref:System.Collections.IDictionary?displayProperty=fullName><br /><br /> <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>|
 |EventArgs|<xref:System.EventArgs?displayProperty=fullName>|
 |Çalışılıyor|Bir olay işletici temsilcisi|
-|Özel Durum|<xref:System.Exception?displayProperty=fullName>|
+|Özel durum|<xref:System.Exception?displayProperty=fullName>|
 |İzin|<xref:System.Security.IPermission?displayProperty=fullName>|
-|Sıra|<xref:System.Collections.Queue?displayProperty=fullName>|
+|Kuyruk|<xref:System.Collections.Queue?displayProperty=fullName>|
 |Yığın|<xref:System.Collections.Stack?displayProperty=fullName>|
 |Akış|<xref:System.IO.Stream?displayProperty=fullName>|
 
@@ -57,7 +57,7 @@ ms.locfileid: "72669175"
 
 - Temsilci
 
-- Enum
+- Sabit listesi
 
 - Impl - yerine 'Core' kullanın
 
@@ -72,7 +72,7 @@ ms.locfileid: "72669175"
  Sonekte uygulama etki alanında açık bir anlama sahip olmadığı sürece bu kuraldan bir uyarıyı bastırmayın.
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1710: Tanımlayıcıların sonekleri doğru olmalıdır](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
+ [CA1710: Tanımlayıcılar doğru soneke sahip olmalıdır](../code-quality/ca1710-identifiers-should-have-correct-suffix.md)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Öznitelikler](https://msdn.microsoft.com/library/ee0038ef-b247-4747-a650-3c5c5cd58d8b) [nib: olaylar ve temsilciler](https://msdn.microsoft.com/d98fd58b-fa4f-4598-8378-addf4355a115)

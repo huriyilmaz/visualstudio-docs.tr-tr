@@ -1,7 +1,7 @@
 ---
 title: ListObject denetimine yeni satır eklendiğinde verileri doğrula
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,48 +14,48 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f65bbc374c1d0ec2a940ff98fcc6f04e5391b2db
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 2b9ed8428f9dd0325678cb91a847609aed76f9b5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71255678"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85541173"
 ---
 # <a name="how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control"></a>Nasıl yapılır: ListObject denetimine yeni bir satır eklendiğinde verileri doğrulama
-  Kullanıcılar, verilere bağlanan bir <xref:Microsoft.Office.Tools.Excel.ListObject> denetime yeni satırlar ekleyebilir. Veri kaynağına değişiklikleri uygulamadan önce kullanıcının verilerini doğrulayabilirsiniz.
+  Kullanıcılar <xref:Microsoft.Office.Tools.Excel.ListObject> , verilere bağlanan bir denetime yeni satırlar ekleyebilir. Veri kaynağına değişiklikleri uygulamadan önce kullanıcının verilerini doğrulayabilirsiniz.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="data-validation"></a>Veri doğrulama
- <xref:Microsoft.Office.Tools.Excel.ListObject> Veriye<xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow> bağlanan bir satır öğesine her eklendiğinde olay tetiklenir. Bu olayı, veri doğrulamayı gerçekleştirmek için işleyebilirsiniz. Örneğin, uygulamanız yalnızca 18 yaş ve 65 yaşar arasındaki çalışanların veri kaynağına eklenebildiğini gerektiriyorsa, girilen yaş satırı, satır eklenmeden önce bu aralıkta yer aldığından emin olun.
+ Veriye bağlanan bir satır öğesine her eklendiğinde <xref:Microsoft.Office.Tools.Excel.ListObject> <xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow> olay tetiklenir. Bu olayı, veri doğrulamayı gerçekleştirmek için işleyebilirsiniz. Örneğin, uygulamanız yalnızca 18 yaş ve 65 yaşar arasındaki çalışanların veri kaynağına eklenebildiğini gerektiriyorsa, girilen yaş satırı, satır eklenmeden önce bu aralıkta yer aldığından emin olun.
 
 > [!NOTE]
 > İstemciye ek olarak sunucu üzerinde kullanıcı girişini her zaman denetlemeniz gerekir. Daha fazla bilgi için bkz. [güvenli istemci uygulamaları](/dotnet/framework/data/adonet/secure-client-applications).
 
 ### <a name="to-validate-data-when-a-new-row-is-added-to-data-bound-listobject"></a>Veri bağlantılı ListObject 'e yeni bir satır eklendiğinde verileri doğrulamak için
 
-1. Kimliği ve <xref:System.Data.DataTable> sınıf düzeyinde değişken oluşturun.
+1. KIMLIĞI ve sınıf düzeyinde değişken oluşturun <xref:System.Data.DataTable> .
 
      [!code-csharp[Trin_VstcoreHostControlsExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#8)]
      [!code-vb[Trin_VstcoreHostControlsExcel#8](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#8)]
 
-2. Yeni <xref:System.Data.DataTable> bir oluşturun ve `Sheet1` sınıfın `Startup` olay işleyicisine (belge düzeyi projesinde) veya `ThisAddIn` sınıfa (VSTO eklenti projesinde) örnek sütunlar ve veriler ekleyin.
+2. Yeni bir oluşturun <xref:System.Data.DataTable> ve `Startup` sınıfın olay işleyicisine `Sheet1` (belge düzeyi projesinde) veya `ThisAddIn` sınıfa (VSTO eklenti projesinde) örnek sütunlar ve veriler ekleyin.
 
      [!code-csharp[Trin_VstcoreHostControlsExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#9)]
      [!code-vb[Trin_VstcoreHostControlsExcel#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#9)]
 
-3. Girilen yaş kabul edilebilir `list1_BeforeAddDataBoundRow` Aralık dahilinde olup olmadığını denetlemek için olay işleyicisine kod ekleyin.
+3. `list1_BeforeAddDataBoundRow`Girilen yaş kabul edilebilir aralık dahilinde olup olmadığını denetlemek için olay işleyicisine kod ekleyin.
 
      [!code-csharp[Trin_VstcoreHostControlsExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#10)]
      [!code-vb[Trin_VstcoreHostControlsExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#10)]
 
-## <a name="compile-the-code"></a>Kod derleme
- Bu kod örneği, bu kodun göründüğü çalışma sayfasında <xref:Microsoft.Office.Tools.Excel.ListObject> var `list1` olan bir ada sahip olduğunuzu varsayar.
+## <a name="compile-the-code"></a>Kodu derle
+ Bu kod örneği <xref:Microsoft.Office.Tools.Excel.ListObject> `list1` , bu kodun göründüğü çalışma sayfasında var olan bir ada sahip olduğunuzu varsayar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSTO Eklentilerindeki Word belgelerini ve Excel çalışma kitaplarını çalışma zamanında genişletme](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [Office belgelerindeki denetimler](../vsto/controls-on-office-documents.md)
 - [Çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md)
 - [ListObject denetimi](../vsto/listobject-control.md)
-- [Genişletilmiş nesneleri kullanarak Excel'i otomatikleştirmek](../vsto/automating-excel-by-using-extended-objects.md)
+- [Genişletilmiş nesneleri kullanarak Excel 'i otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md)
 - [Nasıl yapılır: ListObject sütunlarını verilerle eşleme](../vsto/how-to-map-listobject-columns-to-data.md)

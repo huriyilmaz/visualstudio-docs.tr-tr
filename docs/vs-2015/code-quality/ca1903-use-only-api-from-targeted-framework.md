@@ -15,26 +15,26 @@ caps.latest.revision: 9
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: fa0d771d99ac8e7a4f4091db90a607cce970bc38
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 10649b4106a280089fd6b086167c7e92bff1300b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75917823"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545255"
 ---
 # <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903: Yalnızca hedeflenen çerçeveden API kullanın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Visual Studio ile ilgili en son belgeler için bkz. [CA1903: hedeflenen çerçeveden yalnızca API kullanma](/visualstudio/code-quality/ca1903-use-only-api-from-targeted-framework).
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|UseOnlyApiFromTargetedFramework|
 |CheckId|CA1903|
 |Kategori|Microsoft. taşınabilirlik|
 |Yeni Değişiklik|Parçalama-dışarıdan görünen bir üyenin veya türün imzasına karşı harekete geçirildi.<br /><br /> Bir yöntemin gövdesinde Tetiklenmeyen-bölünmez.|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Üye veya tür, projenin hedeflenen çerçevesine dahil olmayan bir hizmet paketinde tanıtılan bir üye veya tür kullanıyor.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -42,13 +42,13 @@ Visual Studio ile ilgili en son belgeler için bkz. [CA1903: hedeflenen çerçev
 
  **Hedef Framework ve hizmet paketi bağımlılıkları**
 
-|||
+|Öğe|Değer|
 |-|-|
 |Hedef Framework olduğunda|İçinde tanıtılan üyelerin kullanımları ateşlenir|
 |.NET Framework 2.0|.NET Framework 2,0 SP1, .NET Framework 2,0 SP2|
 |.NET Framework 3.0|.NET Framework 2,0 SP1, .NET Framework 2,0 SP2, .NET Framework 3,0 SP1, .NET Framework 3,0 SP2|
-|.NET Framework 3.5|.NET Framework 3.5 SP1|
-|.NET Framework 4|YOK|
+|.NET Framework 3.5|.NET Framework 3.5 SP1 |
+|.NET Framework 4|Yok|
 
  Projenin hedef çerçevesini değiştirmek için, bkz. [belirli bir .NET Framework sürümünü hedefleme](../ide/targeting-a-specific-dotnet-framework-version.md).
 

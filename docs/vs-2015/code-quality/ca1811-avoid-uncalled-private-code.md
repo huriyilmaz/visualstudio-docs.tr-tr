@@ -15,24 +15,24 @@ caps.latest.revision: 22
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: ccc439e0d84d1fced4ba0359385a6964356d5df6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 223b2ff9aa25ddd94a3c62eb9e641127a1cace4e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72668456"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543825"
 ---
-# <a name="ca1811-avoid-uncalled-private-code"></a>CA1811: Çağrılmayan özel kodlardan kaçının
+# <a name="ca1811-avoid-uncalled-private-code"></a>CA1811: Çağırılmayan özel kodlardan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|AvoidUncalledPrivateCode|
 |CheckId|CA1811|
 |Kategori|Microsoft. Performance|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Özel veya iç (derleme düzeyi) bir üyenin derlemede çağıranları yok, ortak dil çalışma zamanı tarafından Çağrılmıyor ve bir temsilci tarafından çağrılmıyor. Aşağıdaki Üyeler bu kural tarafından denetlenmiyor:
 
 - Açık arabirim üyeleri.
@@ -41,7 +41,7 @@ ms.locfileid: "72668456"
 
 - Serileştirme oluşturucuları.
 
-- @No__t_0 veya <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> ile işaretlenen Yöntemler.
+- Veya ile işaretlenmiş <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> Yöntemler <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> .
 
 - Geçersiz kılan Üyeler.
 
@@ -55,8 +55,8 @@ ms.locfileid: "72668456"
  Bu kuraldan bir uyarıyı gizlemek güvenlidir.
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1812: Örneklendirilmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
+ [CA1812: Örneklenmemiş iç sınıflardan kaçının](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)
 
- [CA1801: Kullanılmayan parametreleri gözden geçir](../code-quality/ca1801-review-unused-parameters.md)
+ [CA1801: Kullanılmayan parametreleri gözden geçirin](../code-quality/ca1801-review-unused-parameters.md)
 
- [CA1804: Kullanılmayan yerel öğeleri kaldırın](../code-quality/ca1804-remove-unused-locals.md)
+ [CA1804: Kullanılmayan yerelleri kaldırın](../code-quality/ca1804-remove-unused-locals.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Program aracılığıyla bulunan öğeler arasında döngü'
+title: 'Nasıl yapılır: belgelerdeki bulunan öğeler aracılığıyla program aracılığıyla döngü yapma'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,65 +14,65 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 22f8035cc7c1b09e7fd54f3c10842237ee6273b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e200f910e002bb9380bd5a1b556dc6f1cab08810
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62812421"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544748"
 ---
-# <a name="how-to-programmatically-loop-through-found-items-in-documents"></a>Nasıl yapılır: Program aracılığıyla bulunan öğeler arasında döngü
-  <xref:Microsoft.Office.Interop.Word.Find> Sınıfında bir <xref:Microsoft.Office.Interop.Word.Find.Found%2A> döndüren özellik **true** olduğunda Aranan öğe bulundu. Bulunan tüm örnekleri arasında döngü bir <xref:Microsoft.Office.Interop.Word.Range> kullanarak <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> yöntemi.
+# <a name="how-to-programmatically-loop-through-found-items-in-documents"></a>Nasıl yapılır: belgelerdeki bulunan öğeler aracılığıyla program aracılığıyla döngü yapma
+  <xref:Microsoft.Office.Interop.Word.Find>Sınıfında <xref:Microsoft.Office.Interop.Word.Find.Found%2A> , Aranan öğe bulunduğunda **true değeri** döndüren bir özelliği vardır. Yöntemini kullanarak içinde bulunan tüm örnekleri içinde döngü yapabilirsiniz <xref:Microsoft.Office.Interop.Word.Range> <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> .
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="to-loop-through-found-items"></a>Bulunan öğeler arasında döngü
+## <a name="to-loop-through-found-items"></a>Bulunan öğeler arasında döngü uygulamak için
 
-1. Bildirme bir <xref:Microsoft.Office.Interop.Word.Range> nesne.
+1. Bir <xref:Microsoft.Office.Interop.Word.Range> nesne bildirin.
 
-    Aşağıdaki kod örneği belge düzeyi özelleştirmesinde kullanılabilir.
+    Aşağıdaki kod örneği, belge düzeyi özelleştirmesinde kullanılabilir.
 
     [!code-vb[Trin_VstcoreWordAutomation#79](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#79)]
     [!code-csharp[Trin_VstcoreWordAutomation#79](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#79)]
 
-    Aşağıdaki kod örneği, VSTO eklentisi içinde kullanılabilir. Bu örnek etkin belgeyi kullanır.
+    Aşağıdaki kod örneği bir VSTO eklentisi içinde kullanılabilir. Bu örnek etkin belgeyi kullanır.
 
     [!code-vb[Trin_VstcoreWordAutomationAddIn#79](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#79)]
     [!code-csharp[Trin_VstcoreWordAutomationAddIn#79](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#79)]
 
-2. Kullanım <xref:Microsoft.Office.Interop.Word.Find.Found%2A> belge dizenin tüm oluşumlarını arayın ve bir tam sayı değişkeni her zaman 1 artırmak için bir döngü özelliğinde dize bulundu.
+2. <xref:Microsoft.Office.Interop.Word.Find.Found%2A>Belgedeki dizeyi tüm tekrarlamalarını aramak için döngüsünde özelliğini kullanın ve dize her bulunduğunda tamsayı değişkenini 1 artırın.
 
     [!code-vb[Trin_VstcoreWordAutomation#80](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#80)]
     [!code-csharp[Trin_VstcoreWordAutomation#80](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#80)]
 
-3. Bir ileti kutusunda dizenin bulunup sayısını görüntüler.
+3. Bir ileti kutusunda dizenin kaç kez bulunmuştur görüntüleyin.
 
     [!code-vb[Trin_VstcoreWordAutomation#81](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#81)]
     [!code-csharp[Trin_VstcoreWordAutomation#81](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#81)]
 
-   Aşağıdaki örnekler, ayrıntılı bir yöntemi gösterir.
+   Aşağıdaki örneklerde, tamamlanmış yöntemi gösterilmektedir.
 
 ## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirmesi örneği
 
-### <a name="to-loop-through-items-in-a-document-level-customization"></a>Belge düzeyi özelleştirmesinde öğeler arasında döngü için
+### <a name="to-loop-through-items-in-a-document-level-customization"></a>Belge düzeyi özelleştirmesindeki öğeler arasında döngü gerçekleştirmek için
 
-1. Aşağıdaki örnek, bir belge düzeyi özelleştirmesi için tam kod gösterilir. Bu kodu kullanmak için çalıştırın `ThisDocument` projenizdeki sınıfı.
+1. Aşağıdaki örnek, belge düzeyi özelleştirmesi için tam kodu gösterir. Bu kodu kullanmak için `ThisDocument` projenizdeki sınıftan çalıştırın.
 
      [!code-vb[Trin_VstcoreWordAutomation#78](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#78)]
      [!code-csharp[Trin_VstcoreWordAutomation#78](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#78)]
 
-## <a name="vsto-add-in-example"></a>VSTO eklenti örneği
+## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
 
-### <a name="to-loop-through-items-in-a-vsto-add-in"></a>Bir VSTO eklentisi öğeler arasında döngü için
+### <a name="to-loop-through-items-in-a-vsto-add-in"></a>VSTO eklentideki öğeler arasında döngü uygulamak için
 
-1. Aşağıdaki örnek, VSTO eklentisi için tam kod gösterilmektedir. Bu kodu kullanmak için çalıştırın `ThisAddIn` projenizdeki sınıfı.
+1. Aşağıdaki örnek, bir VSTO eklentisi için tam kodu gösterir. Bu kodu kullanmak için `ThisAddIn` projenizdeki sınıftan çalıştırın.
 
      [!code-vb[Trin_VstcoreWordAutomationAddIn#78](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#78)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#78](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#78)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Program aracılığıyla arama ve belgelerdeki rext değiştirin](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
-- [Nasıl yapılır: Program aracılığıyla Word arama seçeneklerini ayarlama](../vsto/how-to-programmatically-set-search-options-in-word.md)
-- [Nasıl yapılır: Program aracılığıyla tanımlama ve belgelerde aralıkları seçin](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
-- [Nasıl yapılır: Program aracılığıyla aramalardan sonra seçimleri geri yükleme](../vsto/how-to-programmatically-restore-selections-after-searches.md)
+- [Nasıl yapılır: belgelerde yeniden metin arama ve değiştirme](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)
+- [Nasıl yapılır: Word 'de program aracılığıyla arama seçeneklerini ayarlama](../vsto/how-to-programmatically-set-search-options-in-word.md)
+- [Nasıl yapılır: belgelerde aralıkları program aracılığıyla tanımlama ve seçme](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)
+- [Nasıl yapılır: aramadan sonra program aracılığıyla seçimleri geri yükleme](../vsto/how-to-programmatically-restore-selections-after-searches.md)
 - [Office çözümlerinde isteğe bağlı parametreler](../vsto/optional-parameters-in-office-solutions.md)

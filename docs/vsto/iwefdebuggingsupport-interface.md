@@ -39,7 +39,7 @@ interface IWefDebuggingSupport : IUnknown
 ## <a name="methods"></a>Yöntemler
  Aşağıdaki tabloda IWefDebuggingSupport arabiriminin tanımladığı Yöntemler listelenmiştir.
 
-|Name|Description|
+|Name|Açıklama|
 |----------|-----------------|
 |[Getautoınserbir yöntemi](../vsto/getautoinsertextensions-method.md)|Hata ayıklama sırasında otomatik olarak eklenecek Office uygulamaları hakkında bilgi alır.|
 |[SetWefProcessId yöntemi](../vsto/setwefprocessid-method.md)|Web uzantıları çerçevesi (WEF) içeriğini çalıştıracak işlem tanımlayıcısı sağlar.|

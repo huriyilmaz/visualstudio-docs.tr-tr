@@ -15,24 +15,24 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1fab269e8f583f8b55f52eb70a5a813450f8a184
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 4c1071617572af44a73f98953fd435623190e0e3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658888"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540848"
 ---
 # <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: Üyeler dönüş türünden daha fazla farklı olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|MembersShouldDifferByMoreThanReturnType|
 |CheckId|CA2223|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  İki ortak veya korumalı üyenin, dönüş türü dışında aynı imzaları vardır.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -45,7 +45,7 @@ ms.locfileid: "72658888"
  Bu kuraldan uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, Microsoft ara dili (MSIL), bu kuralı ihlal eden bir türü gösterir. Bu kuralın veya Visual Basic .NET kullanılarak C# ihlal edilemez olduğunu unutmayın.
+ Aşağıdaki örnekte, Microsoft ara dili (MSIL), bu kuralı ihlal eden bir türü gösterir. Bu kuralın C# veya Visual Basic .NET kullanılarak ihlal edilemez olduğunu unutmayın.
 
 ```
 

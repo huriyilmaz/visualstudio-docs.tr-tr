@@ -20,12 +20,12 @@ caps.latest.revision: 27
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 14bae318e052d0c1eb0e23638c0ad78b70e62f7d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ad2a26e36c83c4a3b3ad051504bc3944663ee2ad
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72670418"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544982"
 ---
 # <a name="microsoft-help-viewer"></a>Microsoft Yardım Görüntüleyicisi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -50,7 +50,7 @@ Microsoft Yardım Görüntüleyicisi kullanarak, yerel bilgisayarınızdaki çe�
 ## <a name="navigating-the-help-viewer"></a>Yardım görüntüleyicisinde gezinme
  Gezinti sekmelerini kullanarak yüklü içerikte bilgi bulabilir, konu sekmesinde veya sekmelerde yüklü içeriği görüntüleyebilir ve **Içeriği Yönet** sekmesini kullanarak içeriği yönetebilirsiniz. Ayrıca, araç çubuğundaki düğmeleri kullanarak ek görevler gerçekleştirebilir ve pencerenin sağ alt köşesinde ek bilgiler bulabilirsiniz.
 
-|||
+|Senaryo|Açıklama|
 |-|-|
 |Gezinti|**İçindekiler** sekmesini kullanarak, yüklü içeriği hiyerarşi olarak görüntüleyebilir ve görüntülenen başlıkları filtrelemek için ölçüt belirtebilirsiniz.<br /><br /> **Arama** sekmesini kullanarak, kod ve konu başlıkları dahil olmak üzere, içeriğin herhangi bir yerindeki terimleri arayabilirsiniz.<br /><br /> **Dizin sekmesini kullanarak** dizinde arama yapabilir, girişleri filtrelemek için ölçütler belirtebilir ve dizin girişlerinin belirttiğiniz metni içermesini veya kullanmaya başlamasını isteyebilirsiniz.<br /><br /> Sık **Kullanılanlar** sekmesini kullanarak sık kullandığınız konuların bağlantılarını kaydedebilir ve son zamanlarda görüntülediğiniz konuların bir listesini görüntüleyebilirsiniz.|
 |Konu görüntüleme|Her konu bir sekmede görünür ve aynı anda birden fazla konuyu açabilirsiniz.|

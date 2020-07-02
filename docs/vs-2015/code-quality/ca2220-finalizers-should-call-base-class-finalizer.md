@@ -15,37 +15,37 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1a4538c66d351956da8168d4f84c1895190ab453
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 5d9139314d52c4c50de84a45f227e6df5715bf02
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663585"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85540666"
 ---
 # <a name="ca2220-finalizers-should-call-base-class-finalizer"></a>CA2220: Sonlandırıcılar taban tür sonlandırıcıları çağırmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|FinalizersShouldCallBaseClassFinalizer|
 |CheckId|CA2220|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- @No__t_0 geçersiz kılan bir tür, temel sınıfında <xref:System.Object.Finalize%2A> yöntemini çağırmaz.
+## <a name="cause"></a>Nedeni
+ Geçersiz kılan bir tür <xref:System.Object.Finalize%2A?displayProperty=fullName> , <xref:System.Object.Finalize%2A> kendi temel sınıfında yöntemini çağırmaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Sonlandırılma, devralma hiyerarşisi aracılığıyla gönderilmelidir. Bunun için, türlerin kendi <xref:System.Object.Finalize%2A> yöntemi içindeki temel sınıf <xref:System.Object.Finalize%2A> yöntemini çağırması gerekir. C# Derleyici, çağrıyı temel sınıf sonlandırıcısını otomatik olarak ekler.
+ Sonlandırılma, devralma hiyerarşisi aracılığıyla gönderilmelidir. Bunun için, türlerin <xref:System.Object.Finalize%2A> kendi metodu içinden temel sınıf yöntemini çağırması gerekir <xref:System.Object.Finalize%2A> . C# derleyicisi, çağrıyı temel sınıf sonlandırıcısını otomatik olarak ekler.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kuralın ihlalini onarmak için, <xref:System.Object.Finalize%2A> yönteminizin temel türünün <xref:System.Object.Finalize%2A> yöntemini çağırın.
+ Bu kuralın ihlalini onarmak için, yöntemden temel türün <xref:System.Object.Finalize%2A> yöntemini çağırın <xref:System.Object.Finalize%2A> .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın. Ortak dil çalışma zamanını hedefleyen bazı derleyiciler, temel türün sonlandırıcısını Microsoft ara dili 'ne (MSIL) bir çağrı ekler. Bu kuraldaki bir uyarı bildirilmezse, derleyicisinde çağrı eklemez ve kodunuza eklemeniz gerekir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki Visual Basic örnek, temel sınıfında <xref:System.Object.Finalize%2A> yöntemini doğru şekilde çağıran bir tür `TypeB` gösterir.
+ Aşağıdaki Visual Basic örnek, `TypeB` temel sınıfında yöntemini doğru şekilde çağıran bir türü gösterir <xref:System.Object.Finalize%2A> .
 
  [!code-vb[FxCop.Usage.IDisposableBaseCalled#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Usage.IDisposableBaseCalled/vb/FxCop.Usage.IDisposableBaseCalled.vb#1)]
 

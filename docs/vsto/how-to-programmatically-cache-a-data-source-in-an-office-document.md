@@ -1,7 +1,7 @@
 ---
 title: Office belgesindeki önbelleğe alma veri kaynağı programlama
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,43 +16,43 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 241ce42c2d411fdaf611f3a7f2b52eb40c8c32a2
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: 8ec3a38d109de561e3cba77951764dd8dd9479df
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189589"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544774"
 ---
 # <a name="how-to-programmatically-cache-a-data-source-in-an-office-document"></a>Nasıl yapılır: bir Office belgesinde program aracılığıyla veri kaynağını önbelleğe alma
-  Bir belge içindeki veri önbelleğine, <xref:Microsoft.Office.Tools.Word.Document>, <xref:Microsoft.Office.Tools.Excel.Workbook>veya <xref:Microsoft.Office.Tools.Excel.Worksheet>gibi bir konak öğesinin `StartCaching` yöntemini çağırarak programlı bir şekilde veri nesnesi ekleyebilirsiniz. Bir konak öğesinin `StopCaching` yöntemini çağırarak veri önbelleğinden veri nesnesini kaldırın.
+  `StartCaching`,, Veya gibi bir konak öğesinin yöntemini çağırarak bir belgedeki veri önbelleğine programlı bir şekilde veri nesnesi ekleyebilirsiniz <xref:Microsoft.Office.Tools.Word.Document> <xref:Microsoft.Office.Tools.Excel.Workbook> <xref:Microsoft.Office.Tools.Excel.Worksheet> . Bir konak öğesinin yöntemini çağırarak veri önbelleğinden veri nesnesini kaldırın `StopCaching` .
 
- `StartCaching` yöntemi ve `StopCaching` yöntemi hem özeldir, ister IntelliSense 'de görünürler.
+ `StartCaching`Yöntemi ve `StopCaching` yöntemi hem özeldir, ister IntelliSense 'de görünürler.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Veri önbelleğine veri nesnesi eklemek için `StartCaching` yöntemini kullandığınızda, veri nesnesinin <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> özniteliğiyle birlikte bildirilmesine gerek yoktur. Ancak veri nesnesi, veri önbelleğine eklenmek üzere belirli gereksinimleri karşılamalıdır. Daha fazla bilgi için bkz. [önbelleği verileri](../vsto/caching-data.md).
+ Veri `StartCaching` önbelleğine veri nesnesi eklemek için yöntemini kullandığınızda, veri nesnesinin özniteliğiyle birlikte bildirilmesine gerek yoktur <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> . Ancak veri nesnesi, veri önbelleğine eklenmek üzere belirli gereksinimleri karşılamalıdır. Daha fazla bilgi için bkz. [önbelleği verileri](../vsto/caching-data.md).
 
 ## <a name="to-programmatically-cache-a-data-object"></a>Bir veri nesnesini programlı bir şekilde önbelleğe almak için
 
-1. Veri nesnesini bir yöntem içinde değil sınıf düzeyinde bildirin. Bu örnekte, programlama yoluyla önbelleğe almak istediğiniz `dataSet1` adlı <xref:System.Data.DataSet> bildirdiğiniz varsayılır.
+1. Veri nesnesini bir yöntem içinde değil sınıf düzeyinde bildirin. Bu örnek, <xref:System.Data.DataSet> `dataSet1` programlama yoluyla önbelleğe almak istediğiniz bir adlandırılmış adı bildirdiğinizi varsayar.
 
      [!code-csharp[Trin_VstcoreDataExcel#12](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#12)]
      [!code-vb[Trin_VstcoreDataExcel#12](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#12)]
 
-2. Veri nesnesini oluşturun ve sonra belge veya çalışma sayfası örneğinin `StartCaching` yöntemini çağırın ve veri nesnesinin adını geçirin.
+2. Veri nesnesini oluşturun ve sonra `StartCaching` belge veya çalışma sayfası örneği yöntemini çağırın ve veri nesnesinin adını geçirin.
 
      [!code-csharp[Trin_VstcoreDataExcel#13](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#13)]
      [!code-vb[Trin_VstcoreDataExcel#13](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#13)]
 
 ## <a name="to-stop-caching-a-data-object"></a>Veri nesnesini önbelleğe almayı durdurmak için
 
-1. Belge veya çalışma sayfası örneğinin `StopCaching` yöntemini çağırın ve veri nesnesinin adını geçirin. Bu örnek, `dataSet1` adlı ve önbelleğe almayı durdurmak istediğiniz <xref:System.Data.DataSet> olduğunu varsayar.
+1. `StopCaching`Belge veya çalışma sayfası örneği yöntemini çağırın ve veri nesnesinin adını geçirin. Bu örnek, <xref:System.Data.DataSet> önbelleğe almayı durdurmak istediğiniz bir adlandırılmış olduğunu varsayar `dataSet1` .
 
      [!code-csharp[Trin_VstcoreDataExcel#14](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#14)]
      [!code-vb[Trin_VstcoreDataExcel#14](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#14)]
 
     > [!NOTE]
-    > Bir belge veya çalışma sayfasının `Shutdown` olayı için olay işleyicisinden `StopCaching` çağırmayın. `Shutdown` olayın ortaya çıkarılışında, veri önbelleğini değiştirmek çok geç. `Shutdown` olayı hakkında daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
+    > `StopCaching` `Shutdown` Bir belge veya çalışma sayfası olayı için olay işleyicisinden çağırmayın. `Shutdown`Olayın ortaya çıkarılışında, veri önbelleğini değiştirmek çok geç olur. Olay hakkında daha fazla bilgi için `Shutdown` bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

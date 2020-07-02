@@ -15,24 +15,24 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f1498624d4f79a60854a624ee5c4053a3343f515
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 97bd41e51c8d6b5415ffb91c5696c7055f46cf7c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663164"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545411"
 ---
-# <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Derlemeleri AssemblyVersionAttribute ile işaretleme
+# <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Derlemeleri AssemblyVersionAttribute ile işaretleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|MarkAssembliesWithAssemblyVersion|
 |CheckId|CA1016|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Derlemenin sürüm numarası yok.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -42,20 +42,20 @@ ms.locfileid: "72663164"
 
 - Sürüm numarası
 
-- ayarı
+- Culture (Kültür)
 
 - Ortak anahtar (kesin adlandırılmış derlemeler için).
 
-  @No__t_0, derlemeyi benzersiz bir şekilde tanımlamak ve kesin adlandırılmış derlemelerdeki türlere bağlamak için sürüm numarasını kullanır. Sürüm numarası, sürüm ve yayımcı ilkesi ile birlikte kullanılır. Varsayılan olarak uygulamalar yalnızca oluşturulmuş derleme sürümlerini çalıştırır.
+  , [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Bir derlemeyi benzersiz olarak tanımlamak ve kesin adlandırılmış derlemelerdeki türlere bağlamak için sürüm numarasını kullanır. Sürüm numarası, sürüm ve yayımcı ilkesi ile birlikte kullanılır. Varsayılan olarak uygulamalar yalnızca oluşturulmuş derleme sürümlerini çalıştırır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> özniteliğini kullanarak derlemeye bir sürüm numarası ekleyin. Aşağıdaki örnekte bakın.
+ Bu kural ihlalini onarmak için, özniteliğini kullanarak derlemeye bir sürüm numarası ekleyin <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> . Aşağıdaki örneğe bakın.
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Üçüncü taraflar tarafından veya bir üretim ortamında kullanılan derlemeler için bu kuraldan bir uyarıyı bastırmayın.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, <xref:System.Reflection.AssemblyVersionAttribute> özniteliği uygulanmış bir derlemeyi gösterir.
+ Aşağıdaki örnek, özniteliği uygulanmış bir derlemeyi gösterir <xref:System.Reflection.AssemblyVersionAttribute> .
 
  [!code-cpp[FxCop.Design.AssembliesVersion#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.AssembliesVersion/cpp/FxCop.Design.AssembliesVersion.cpp#1)]
  [!code-csharp[FxCop.Design.AssembliesVersion#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AssembliesVersion/cs/FxCop.Design.AssembliesVersion.cs#1)]

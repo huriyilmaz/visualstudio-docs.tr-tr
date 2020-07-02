@@ -11,12 +11,12 @@ caps.latest.revision: 33
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 36a0772730718047f2b9d6fc6bc36c30a211a2af
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 1a65f42dafca696bfa638964b825410b576d4845
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72657998"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85544293"
 ---
 # <a name="creating-a-ui-by-using-blend-for-visual-studio"></a>Visual Studio için Blend’i kullanarak kullanıcı arabirimi oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -40,12 +40,12 @@ Visual Studio için Blend XAML tabanlı Windows Masaüstü, Web, [Windows Phone]
 
 - [Özellikler panelinin turu](#Properties)
 
-## <a name="Tools"></a>Araçlar paneli turu
+## <a name="tour-of-the-tools-panel"></a><a name="Tools"></a>Araçlar paneli turu
  Uygulamanızdaki nesneleri oluşturmak ve değiştirmek için Visual Studio için Blend **Araçlar** panelini kullanabilirsiniz. Nesneleri bir araç seçip çalışma yüzeyinde farenizle çizerek bir araç seçerek oluşturursunuz.
 
  ![Araçlar paneli](../designers/media/blend5toolspanel.png "Blend5Toolspanel")
 
-|||||
+|Görüntü|Araç türü|Görüntü|Araç türü|
 |-|-|-|-|
 |![](../designers/media/b1-1.png "B1_1")|**Seçim araçları** Nesneleri ve yolları seçin.<br /><br /> İç içe geçmiş nesneler ve yol kesimleri seçmek için **doğrudan seçim** aracını kullanın.|![Belirtme A](../designers/media/b5-label-a.png "b5_label_A")|**Gradyan ve fırça araçları**|
 |![](../designers/media/b1-2.png "B1_2")|**Araçları görüntüle** Kaydırma ve yakınlaştırma gibi çalışma yüzeyi görünümünü ayarlayın.|![Belirtme çizgisi B](../designers/media/b5-label-b.png "b5_label_B")|**Yol araçları**|
@@ -56,12 +56,12 @@ Visual Studio için Blend XAML tabanlı Windows Masaüstü, Web, [Windows Phone]
 
  **Kısa bir video izleyin:** [araç çubuğunun](https://www.youtube.com/watch?v=VkdUJcvoo54&list=PLBDF977B2F1DAB358&index=4) ![yüklü özelliklerini yapılandırın](../designers/media/bldadminconsoleinitialconfigicon.PNG "Bldadminconsoleınitialconfigıcon") .
 
-## <a name="Assets"></a>Varlıklar paneli turu
+## <a name="tour-of-the-assets-panel"></a><a name="Assets"></a>Varlıklar paneli turu
  Visual Studio 'daki **araç kutusuna** benzer şekilde, **varlıklar** panelinde tüm denetimleri bulabilirsiniz. Denetimlere ek olarak, **varlıklar** panelinde stiller, medya, davranışlar ve efektler dahil olmak üzere çalışma yüzeyinizi ekleyebileceğiniz her şeyi bulabilirsiniz.
 
  ![Varlıklar paneli](../designers/media/blend5-assets-panel.png "Blend5_Assets_panel")
 
-|||
+|Görüntü|Açıklama|
 |-|-|
 |![](../designers/media/b1-1.png "B1_1")|**Arama kutusu** Varlık listesini filtrelemek için **arama** kutusuna yazın.|
 |![](../designers/media/b1-2.png "B1_2")|**Kılavuz modu ve liste modu** **Kılavuz modu** görünümü Ile varlıkların **liste modu** görünümü arasında geçiş yapın.|
@@ -69,12 +69,12 @@ Visual Studio için Blend XAML tabanlı Windows Masaüstü, Web, [Windows Phone]
 |![](../designers/media/b1-4.png "B1_4")|**Stiller** Kaynak sözlüğünde bulunan tüm stilleri görüntüleyin.|
 |![](../designers/media/b1-5.png "B1_5")|**Açıklama** Seçili varlıklar kategorisi veya alt kategorisinin açıklamasını görüntüleyin.|
 
-## <a name="Objects"></a>Nesneler ve Zaman Çizelgesi paneli turu
+## <a name="tour-of-the-objects-and-timeline-panel"></a><a name="Objects"></a>Nesneler ve Zaman Çizelgesi paneli turu
  Çalışma yüzeyinizdeki nesneleri düzenlemek ve isterseniz bunlara animasyon uygulamak için bu paneli kullanın.
 
  ![Animasyon modundaki nesne ve zaman çizelgesi paneli](../designers/media/b5-object-timeline-animation.png "b5_object_timeline_animation")
 
-|||
+|Görüntü|Açıklama|
 |-|-|
 |![](../designers/media/b1-1.png "B1_1")|**Nesne görünümü** Bir belgenin görsel ağacını görüntüleyin. Farklı ayrıntı düzeylerinde ayrıntıya gidebilirsiniz. Çalışma yüzeyinde daha fazla nesne düzenlemek için Katmanlar da ekleyebilirsiniz. Böylece bunları bir grup olarak kilitleyebilir ve gizleyebilirsiniz.|
 |![](../designers/media/b1-2.png "B1_2")|**Kayıt modu göstergesi** Özellik değişikliklerini bir zaman çizelgesinde kayıt yapıp görmeyeceğinizi öğrenin.|
@@ -93,12 +93,12 @@ Visual Studio için Blend XAML tabanlı Windows Masaüstü, Web, [Windows Phone]
 |![](../designers/media/b1-15.png "B1_15")|**Zaman çizelgesi yakınlaştırma** Zaman çizelgesinin yakınlaştırma çözünürlüğünü ayarlayın. Yakınlaştırma bir animasyonu daha ayrıntılı düzenlemenize izin verir ve uzaklaştırmaysa daha uzun süreler boyunca neler olduğuna ilişkin daha kapsamlı bir özet gösterir. Yakınlaştırma yapar, ancak zaman içinde istediğiniz konumunda bir ana kare ayarlayamazsınız, yaslama çözünürlüğünün yeterince yüksek olarak ayarlandığını doğrulayın.|
 |![Belirtme çizgisi 16](../designers/media/b5-label-16.png "b5_label_16")|**Zaman çizelgesi bileşim alanı** Zaman çizelgesini görüntüleyin ve sürükleyerek veya kısayol menülerini kullanarak ana kareleri taşıyın.|
 
-## <a name="Properties"></a>Özellikler panelinin turu
+## <a name="tour-of-the-properties-panel"></a><a name="Properties"></a>Özellikler panelinin turu
  Bir nesnenin özelliklerini görüntülemek ve değiştirmek için bu paneli kullanın. Bunları doğrudan çalışma yüzeyinde da ayarlayabilirsiniz. Bunu yaparsanız, özellik değişiklikleri **Özellikler** panelinde yansıtılır.
 
- ![Özellikler bölmesi](../designers/media/blend5-properties-panel.png "Blend5_properties_panel")
+ ![Özellikler paneli](../designers/media/blend5-properties-panel.png "Blend5_properties_panel")
 
- **Kategoriler** Özelliklerin kategorilerini genişletin ve daraltın. Kategori ayrıntılarını göstermek veya gizlemek için **Genişlet** ![](../designers/media/6375953d-074c-421a-bbb3-6f5055b67b64.png "6375953d-074C-421a-BBB3-6f5055b67b64") ' e tıklayın ve ![Daralt](../designers/media/b5-collapse-button.png "b5_collapse_button") ' ı **daraltın** .
+ **Kategoriler** Özelliklerin kategorilerini genişletin ve daraltın. **Expand** ![](../designers/media/6375953d-074c-421a-bbb3-6f5055b67b64.png "6375953d-074C-421a-BBB3-6f5055b67b64") Kategori ayrıntılarını göstermek veya gizlemek için Genişlet ' e tıklayın ve ![Daralt](../designers/media/b5-collapse-button.png "b5_collapse_button") ' ı **daraltın** .
 
 |                                                                                                         |                                                                                                                                                                                                                                  |
 |---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

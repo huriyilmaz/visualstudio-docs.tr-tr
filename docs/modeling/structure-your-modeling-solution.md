@@ -1,18 +1,18 @@
 ---
 title: Modelleme çözümünüzün yapısını oluşturma
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57edf4253840294968238793bf9f3b24326a1e3f
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: cc4eba7dc4d185cbd8eb4f1b073fce8b0c9fb07e
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75591950"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85545047"
 ---
 # <a name="structure-your-modeling-solution"></a>Modelleme çözümünüzün yapısını oluşturma
 
@@ -20,7 +20,7 @@ Bir geliştirme projesinde modelleri etkin bir şekilde kullanmak için, takım 
 
 Bir projede veya alt projede hızlı bir şekilde başlamak için, seçtiğiniz proje yapısını izleyen bir proje şablonu olması yararlı olur. Bu konu, böyle bir şablonun nasıl oluşturulacağını ve kullanılacağını açıklar.
 
-Bu konu, birkaç takım üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığınızı ve belki de birçok takıma sahip olduğunu varsayar. Projenin kodu ve modelleri [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]gibi bir kaynak denetimi sisteminde depolanır. En az bazı takım üyeleri, model geliştirmek için Visual Studio kullanır ve diğer takım üyeleri diğer Visual Studio sürümlerini kullanarak modelleri görüntüleyebilir.
+Bu konu, birkaç takım üyesi gerektirecek kadar büyük bir proje üzerinde çalıştığınızı ve belki de birçok takıma sahip olduğunu varsayar. Projenin kodu ve modelleri, gibi bir kaynak denetimi sisteminde depolanır [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] . En az bazı takım üyeleri, model geliştirmek için Visual Studio kullanır ve diğer takım üyeleri diğer Visual Studio sürümlerini kullanarak modelleri görüntüleyebilir.
 
 Hangi Visual Studio sürümlerinin her bir aracı ve modelleme özelliğini desteklediğini görmek için bkz. [mimari ve modelleme araçları Için sürüm desteği](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
@@ -72,7 +72,7 @@ Orta veya büyük bir projede, ekibin yapısı uygulamanın yapısına göre bel
 
 #### <a name="use-a-separate-package-for-each-layer"></a>Her katman için ayrı bir paket kullanın
 
-1. Her katmanın çözümünde mimari modelleme projesini ekleyin. İçinde **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, fareyle **Ekle**ve ardından **mevcut proje**. Tek modelleme projesine artık her bir çözümden erişilebilir: mimari proje ve her katmanın geliştirme projesi.
+1. Her katmanın çözümünde mimari modelleme projesini ekleyin. **Çözüm Gezgini**, çözüm düğümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Varolan proje**' ye tıklayın. Tek modelleme projesine artık her bir çözümden erişilebilir: mimari proje ve her katmanın geliştirme projesi.
 
 2. Paylaşılan modelde, her katman için bir paket oluşturun: **Çözüm Gezgini**, modelleme projesini seçin. **UML Model Gezgini**' nde model kök düğümüne sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **paket**' e tıklayın.
 

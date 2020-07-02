@@ -15,24 +15,24 @@ caps.latest.revision: 28
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: f5a36ee8cffc221d15243ff72e2e71558e867319
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 401fbfbccfeeeeec5cbdc0e791b110d1b5f0201b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72645404"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85543981"
 ---
-# <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812: Örneklendirilmemiş iç sınıflardan kaçının
+# <a name="ca1812-avoid-uninstantiated-internal-classes"></a>CA1812: Örneklenmemiş iç sınıflardan kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|AvoidUninstantiatedInternalClasses|
 |CheckId|CA1812|
 |Kategori|Microsoft. Performance|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bir derleme düzeyi türünün örneği, derleme içindeki kod tarafından oluşturulmaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -44,31 +44,31 @@ ms.locfileid: "72645404"
 
 - Soyut türler
 
-- Numaralandırmalar
+- Listelemeler
 
 - Temsilciler
 
 - Derleyicinin yayınlaması dizi türleri
 
-- Örneklenemez ve yalnızca `static` (`Shared` Visual Basic) yöntemlerinde tanımlayan türler.
+- Örneklenemez ve `static` `Shared` yalnızca (Visual Basic) yöntemleri tanımlayan türler.
 
-  Çözümlenmekte olan derlemeye <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName> uygularsanız, bir alanın başka bir `friend` derlemesi tarafından kullanılıp kullanılmadığını söyleyeceğinden, bu kural `internal` olarak işaretlenen herhangi bir Oluşturucu üzerinde gerçekleşmeyecektir.
+  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute?displayProperty=fullName>Çözümlenmekte olan derlemeye uygularsanız, bu kural, `internal` bir alanın başka bir derleme tarafından kullanılıp kullanılmadığını söyleyeceğinden, olarak işaretlenen herhangi bir Oluşturucu üzerinde gerçekleşmeyecektir `friend` .
 
-  @No__t_0 kodu analizinde bu kısıtlamayı geçici olarak çözemeseniz bile, her `friend` derlemesi Analize mevcutsa, dış tek başına FxCop iç oluşturucular üzerinde gerçekleşmeyecektir.
+  Kod çözümlemede bu sınırlamaya geçici bir çözüm yapmasanız bile [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , her `friend` derleme analizde varsa dış tek başına FxCop iç oluşturucular üzerinde gerçekleşmeyecektir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini onarmak için, türü kaldırın veya onu kullanan kodu ekleyin. Tür yalnızca statik yöntemler içeriyorsa, derleyicinin varsayılan bir ortak örnek Oluşturucu yaymasını engellemek için aşağıdakilerden birini türüne ekleyin:
 
-- 1,0 ve 1,1 sürümlerini [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] hedefleyen türler için özel Oluşturucu.
+- 1,0 ve 1,1 sürümlerini hedefleyen türler için özel Oluşturucu [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .
 
-- @No__t_2 hedefleyen türler için `static` (Visual Basic `Shared`) değiştiricisi.
+- `static` `Shared` Hedeflenen türler için (Visual Basic) değiştirici [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan bir uyarıyı gizlemek güvenlidir. Aşağıdaki durumlarda bu uyarıyı bastırmalarını öneririz:
 
-- Sınıfı, <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> gibi geç bağlantılı yansıma yöntemleriyle oluşturulur.
+- Sınıfı, gibi geç bağlantılı yansıma yöntemleriyle oluşturulur <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> .
 
-- Sınıf, çalışma zamanı veya [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] tarafından otomatik olarak oluşturulur. Örneğin, <xref:System.Configuration.IConfigurationSectionHandler?displayProperty=fullName> veya <xref:System.Web.IHttpHandler?displayProperty=fullName> uygulayan sınıflar.
+- Sınıf, çalışma zamanı veya çalışma zamanı tarafından otomatik olarak oluşturulur [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] . Örneğin, veya uygulayan sınıflar <xref:System.Configuration.IConfigurationSectionHandler?displayProperty=fullName> <xref:System.Web.IHttpHandler?displayProperty=fullName> .
 
 - Sınıfı, yeni kısıtlaması olan bir genel tür parametresi olarak geçirilir. Örneğin, aşağıdaki örnek bu kuralı yükseltir.
 
@@ -94,8 +94,8 @@ ms.locfileid: "72645404"
   Bu durumlarda, bu uyarıyı bastırdığınız için tavsiye ederiz.
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1811: Çağrılmayan özel kodlardan kaçının](../code-quality/ca1811-avoid-uncalled-private-code.md)
+ [CA1811: Çağırılmayan özel kodlardan kaçının](../code-quality/ca1811-avoid-uncalled-private-code.md)
 
- [CA1801: Kullanılmayan parametreleri gözden geçir](../code-quality/ca1801-review-unused-parameters.md)
+ [CA1801: Kullanılmayan parametreleri gözden geçirin](../code-quality/ca1801-review-unused-parameters.md)
 
- [CA1804: Kullanılmayan yerel öğeleri kaldırın](../code-quality/ca1804-remove-unused-locals.md)
+ [CA1804: Kullanılmayan yerelleri kaldırın](../code-quality/ca1804-remove-unused-locals.md)
