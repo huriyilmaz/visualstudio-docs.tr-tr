@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: XML şemasından XML kod parçacığı oluşturma'
+title: 'Nasıl Yapılır: XML Şemasından XML Kod Parçacığı Oluşturma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2c128d2a-aaa6-4814-aa95-e07056afe338
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec320018cc64e774751c312ca4cdeb94a6d53a9c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 3c7dff8e1bb211343ccc44e0d1fd33d96c102283
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592691"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817183"
 ---
 # <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>Nasıl yapılır: XML şemasından XML kod parçacığı oluşturma
 
@@ -33,13 +33,13 @@ Bu özellik yalnızca öğelerde kullanılabilir. Aşağıdaki kurallar da geçe
 
 - İmleç, öğe adının hemen sağına yerleştirilmelidir.
 
-Oluşturulan kod parçacığı tüm gerekli öznitelikleri ve öğeleri içerir. `minOccurs` sıfırdan büyükse, en fazla 100 örneğe kadar, bu öğenin gereken minimum örnek sayısı kod parçacığına dahil edilir. Şemada bulunan sabit değerler, kod parçacığında sabit değerlerle sonuçlanır. `xsd:any` ve `xsd:anyAttribute` öğeleri yok sayılır ve ek bir kod parçacığı yapılarıyla sonuçlanır.
+Oluşturulan kod parçacığı tüm gerekli öznitelikleri ve öğeleri içerir. Birden `minOccurs` büyükse, en fazla 100 örneğe kadar, o öğenin gereken minimum örnek sayısı kod parçacığına dahil edilir. Şemada bulunan sabit değerler, kod parçacığında sabit değerlerle sonuçlanır. `xsd:any`ve `xsd:anyAttribute` öğeleri yok sayılır ve ek kod parçacığı yapıları gerektirmez.
 
 Varsayılan değerler oluşturulur ve düzenlenebilir değerler olarak belirtilmiştir. Şema varsayılan bir değer belirtiyorsa, bu varsayılan değer kullanılır. Ancak, şema varsayılan değeri boş bir dize ise, düzenleyici varsayılan değerleri aşağıdaki şekilde oluşturur:
 
 - Şema türü herhangi bir numaralandırma modeli içeriyorsa, doğrudan veya dolaylı olarak bir birleşim türü üye aracılığıyla, şema nesne modelinde bulunan ilk Numaralandırılmış değer varsayılan olarak kullanılır.
 
-- Şema türü Atomik bir tür ise, düzenleyici Atomik türü alır ve atomik tür adını ekler. Türetilmiş basit bir tür için temel basit türü kullanır. Liste türü için atomik tür `itemType`. Bir birleşim için atomik tür, ilk `memberType`atomik türüdür.
+- Şema türü Atomik bir tür ise, düzenleyici Atomik türü alır ve atomik tür adını ekler. Türetilmiş basit bir tür için temel basit türü kullanır. Bir liste türü için atomik tür ' dir `itemType` . Bir birleşim için atomik tür, birinconun atomik türüdür `memberType` .
 
 ## <a name="example"></a>Örnek
 
@@ -54,31 +54,31 @@ Bu bölümdeki adımlarda, XML düzenleyicisinin şema tarafından oluşturulan 
 
 2. **Şablonlar** bölmesinde **XML dosyası** ' nı seçin ve **Aç**' a tıklayın.
 
-     Düzenleyicide yeni bir dosya açılır. Dosya, `<?xml version="1.0" encoding="utf-8">`varsayılan bir XML bildirimi içerir.
+     Düzenleyicide yeni bir dosya açılır. Dosya varsayılan bir XML bildirimi içerir `<?xml version="1.0" encoding="utf-8">` .
 
-3. Belge Özellikleri penceresinde, **şemalar** alanındaki ( **...** ) düğmesine tıklayın.
+3. Belge Özellikleri penceresinde, **şemalar** alanındaki (**...**) düğmesine tıklayın.
 
      **Xsd şemaları** iletişim kutusu görüntülenir.
 
-4. **Ekle**'yi tıklatın.
+4. **Ekle**'ye tıklayın.
 
      **XSD şeması aç** iletişim kutusu görüntülenir.
 
 5. Şema dosyasını seçin ve **Aç**' a tıklayın.
 
-6. **Tamam**'ı tıklatın.
+6. **Tamam**'a tıklayın.
 
      XML şeması artık XML belgesiyle ilişkili.
 
 ### <a name="to-generate-an-xml-snippet"></a>XML parçacığı oluşturmak için
 
-1. Düzenleyici bölmesine `<` yazın.
+1. `<`Düzenleyici bölmesine yazın.
 
 2. Üyeler listesi olası öğeleri görüntüler:
 
      yorum eklemek için **!--** .
 
-     **!** Belge türü eklemek IÇIN DOCTYPE.
+     **! **Belge türü eklemek IÇIN DOCTYPE.
 
      **?** bir işleme yönergesi eklemek için.
 
@@ -86,11 +86,11 @@ Bu bölümdeki adımlarda, XML düzenleyicisinin şema tarafından oluşturulan 
 
 3. Üye listesinden **kişi** ' yi seçin ve **ENTER**tuşuna basın.
 
-     Düzenleyici, Başlangıç etiketini `<Contact` ekler ve imleci öğe adından sonra konumlandırır.
+     Düzenleyici başlangıç etiketini ekler `<Contact` ve imleci öğe adından sonra konumlandırır.
 
-4. Şema bilgilerine göre `Contact` öğesi için XML verisi oluşturmak için **Tab** tuşuna basın.
+4. Şema bilgilerine göre öğesi için XML verisi oluşturmak için **Tab** tuşuna basın `Contact` .
 
-## <a name="input"></a>Giriş
+## <a name="input"></a>Girdi
 
 Aşağıdaki şema dosyası, izlenecek yol tarafından kullanılır.
 
@@ -139,9 +139,9 @@ Aşağıdaki şema dosyası, izlenecek yol tarafından kullanılır.
 </xs:schema>
 ```
 
-### <a name="output"></a>Çıkış
+### <a name="output"></a>Çıktı
 
-Aşağıda, `Contact` öğesiyle ilişkili şema bilgilerine göre oluşturulan XML verileri verilmiştir. `bold` olarak işaretlenen öğeler, XML kod parçacığında düzenlenebilir alanları tasarmı.
+Aşağıda öğesiyle ilişkili şema bilgilerine göre oluşturulan XML verileri verilmiştir `Contact` . `bold`XML kod parçacığında düzenlenebilir alanları belirleyin olarak işaretlenen öğeler.
 
 ```xml
 <Contact>

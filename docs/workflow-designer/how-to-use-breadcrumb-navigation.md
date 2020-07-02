@@ -1,21 +1,21 @@
 ---
 title: 'İş Akışı Tasarımcısı-nasıl yapılır: Içerik Haritası gezintisini kullanma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 4a688056-37dc-406a-9071-be2141e192fe
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 291badb04c791305f655e187ff7853fc8c5087a1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 2a432d7cfc40ad6116f570d0e7beb4bfc5b40493
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75584575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817469"
 ---
-# <a name="how-to-use-breadcrumb-navigation"></a>Nasıl yapılır: Içerik Haritası gezintisini kullanma
+# <a name="how-to-use-breadcrumb-navigation"></a>Nasıl Yapılır: İçerik Haritası Gezintisini Kullanma
 
 İş Akışı Tasarımcısı ' de görüntülenen etkinlik kümesini değiştirmek için üç ana yol vardır:
 
@@ -38,7 +38,7 @@ ms.locfileid: "75584575"
 2. Genişletme durumunun durumu düğme tıklatılarak değiştirildiğinde, genişletmenin yeni durumu XAML 'ye kaydedilir.
 
     > [!WARNING]
-    > Tüm etkinlikler yerinde genişletilebilecek. Bir etkinliğin bir yerde genişletilmediği iki durum vardır: etkinliğin üst öğesi alt öğelerinin yerinde genişletilme yapmasına izin vermez (örneğin, bir akış çizelgesi içindeki etkinlikler yerinde genişletilemez) veya etkinlik Tasarımcısı kendine kendisine izin vermez yerinde genişletilir. İş Akışı Tasarımcısı ' de yer alan etkinlik tasarımcılarının hiçbiri ikinci davranışa sahip olsa da, bazı özel etkinlikler bu davranışı gösterebilir.
+    > Tüm etkinlikler yerinde genişletilebilecek. Bir etkinliğin bir yerde genişletilmediği iki durum vardır: etkinliğin üst öğesi alt öğelerinin yerinde genişletilmesini sağlamıyor, (örneğin, bir akış çizelgesi içindeki etkinlikler yerinde genişletilemez) veya etkinlik Tasarımcısı kendine ait bir yerde genişleme izin vermez. İş Akışı Tasarımcısı ' de yer alan etkinlik tasarımcılarının hiçbiri ikinci davranışa sahip olsa da, bazı özel etkinlikler bu davranışı gösterebilir.
 
 ## <a name="expanding-all-or-collapsing-all-activities"></a>Tüm etkinlikleri genişletme veya daraltma
 
@@ -47,7 +47,7 @@ ms.locfileid: "75584575"
 2. Tümünü Genişlet veya Tümünü Daralt durumunu uyguladıktan sonra, her etkinliğe daha önce uygulanan duruma bakmak için geri dönerek görüntülenen **geri yükle** düğmesine tıklayabilirsiniz.
 
     > [!WARNING]
-    > <xref:System.Activities.Statements.Flowchart>gibi bir etkinlik Genişlemeden sonra, **Tümünü Genişlet** ve **Tümünü Daralt** düğmeleri Ile Ilişkili işlevler, **akış çizelgesi** tasarımcısında devre dışıdır. **Akış çizelgesi** Tasarımcısı hakkında daha fazla bilgi için, bkz. [akış çizelgesi](../workflow-designer/flowchart-activity-designer.md) konusu.
+    > Örneğin, gibi bir etkinlik <xref:System.Activities.Statements.Flowchart> Genişlemeden sonra, **Tümünü Genişlet** ve **Tümünü Daralt** düğmeleri Ile ilişkili işlevler, **akış çizelgesi** tasarımcısında devre dışıdır. **Akış çizelgesi** Tasarımcısı hakkında daha fazla bilgi için, bkz. [akış çizelgesi](../workflow-designer/flowchart-activity-designer.md) konusu.
 
     > [!WARNING]
     > Tümünü Genişlet, **Switch** ve **TryCatch** etkinlik tasarımcıları 'nda özel bir etkiye de sahiptir. **Tümünü Genişlet**' e tıkladığınızda tüm anahtar örnekleri ve tüm dene/yakala/finally blokları görüntülenir. Tümünü **geri yükle** veya **Daralt** ' a tıkladığınızda bu tasarımcılar varsayılan durumlarına döndürülür. Bu, içeriğini görüntülemek için tek bir servis talebine/bloğa tıklayabilirsiniz.

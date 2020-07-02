@@ -1,7 +1,7 @@
 ---
 title: 'İş Akışı Tasarımcısı-nasıl yapılır: Ifade düzenleyicisini kullanma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - System.Activities.Presentation.View.ExpressionTextBox.UI
 ms.assetid: b5f961dd-6dda-41a9-9cae-0383d479ef3d
@@ -10,18 +10,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aff5654214809cf2f57767005153ba557df487c1
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 04c0fdaab87c88028b8c14ca59e93fa93e74be74
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75584549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817443"
 ---
-# <a name="how-to-use-the-expression-editor"></a>Nasıl yapılır: Ifade düzenleyicisini kullanma
+# <a name="how-to-use-the-expression-editor"></a>Nasıl Yapılır: İfade Düzenleyicisini Kullanma
 
 Ifade Düzenleyicisi, ifadeleri girmek ve değerlendirmek için birçok iş akışı aktivitelerinde kullanılan bir İş Akışı Tasarımcısı denetimidir. Ifade Düzenleyicisi, diğer özelliklerin yanı sıra IntelliSense, renklendirme, ParamInfo, Error dalgalı çizgiler dahil olmak üzere tam kapsamlı bir IDE düzenleme deneyimi sağlar. Derleyici, ifadeyi girdikten sonra doğrular. İfade geçersizse, bir hata simgesi görüntülenir. Düzenleyici Ayrıca bir **Ifade Düzenleyicisi** iletişim kutusu olarak açılabilir.
 
-İfadeler değişmez değerlerdir veya bağımsız değişkenlere veya özelliklere göre Visual Basic kodudur. Bunlar, yeni bir değer sağlamak için işlemlerle birleştirilmiş değer öğeleri (örneğin, değişkenler, sabitler, sabit değerler, Özellikler) içerirler. Uygulamalar, kullanan C#bir programda olsa bile vb.NET sözdizimi kullanılarak yazılır. Bu, büyük/küçük harf, tek bir eşittir işareti ("=" yerine "=") kullanılarak gerçekleştirilmiş olması anlamına gelir, Boole işleçleri "& &" ve "| |" sembolleri yerine "and" ve "veya" kelimeleridir ve **null**yerine **hiçbir şey** kullanılmaz. Visual Basic ifade ve işleçler hakkında daha fazla bilgi için ve bazı örnekler için bkz. [Visual Basic işleçler ve ifadeler](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100)).
+İfadeler değişmez değerlerdir veya bağımsız değişkenlere veya özelliklere göre Visual Basic kodudur. Bunlar, yeni bir değer sağlamak için işlemlerle birleştirilmiş değer öğeleri (örneğin, değişkenler, sabitler, sabit değerler, Özellikler) içerirler. Uygulamalar C# kullanan bir programda olsa bile, VB.NET sözdizimi kullanılarak ifadeler yazılır. Bu, büyük/küçük harf, tek bir eşittir işareti ("=" yerine "=") kullanılarak gerçekleştirilmiş olması anlamına gelir, Boole işleçleri "&&" ve "| |" sembolleri yerine "and" ve "veya" kelimeleridir ve **null**yerine **hiçbir şey** kullanılmaz. Visual Basic ifade ve işleçler hakkında daha fazla bilgi için ve bazı örnekler için bkz. [Visual Basic işleçler ve ifadeler](/previous-versions/visualstudio/visual-studio-2010/a1w3te48(v=vs.100)).
 
 **Ifade Düzenleyicisi** aşağıdaki gibi davranır:
 
@@ -38,14 +38,14 @@ Ifade Düzenleyicisi, ifadeleri girmek ve değerlendirmek için birçok iş akı
 
 1. Visual Studio 'da yeni veya var olan bir iş akışı projesi açın.
 
-2. İş akışınıza <xref:System.Activities.Statements.Assign> etkinliği ekleyin.
+2. <xref:System.Activities.Statements.Assign>İş akışınıza etkinlik ekleyin.
 
     > [!NOTE]
-    > Birden çok iş akışı etkinliği ifade düzenleyicilerine sahiptir. İfade TextBlocks, değişken tasarımcısında, bağımsız değişken tasarımcısında ve dinamik bağımsız değişken tasarımcısında de görünür. <xref:System.Activities.Statements.Assign> etkinliği örnek olarak kullanılır.
+    > Birden çok iş akışı etkinliği ifade düzenleyicilerine sahiptir. İfade TextBlocks, değişken tasarımcısında, bağımsız değişken tasarımcısında ve dinamik bağımsız değişken tasarımcısında de görünür. <xref:System.Activities.Statements.Assign>Etkinlik örnek olarak kullanılır.
 
-3. <xref:System.Activities.Statements.Assign> etkinliği için Etkinlik tasarımcısında sol ifade düzenleyicisine tıklayın.
+3. Etkinlik için Etkinlik tasarımcısında sol ifade düzenleyicisine tıklayın <xref:System.Activities.Statements.Assign> .
 
-     Gri filigran dizeleri **\<** ve **\<bir VB ifadesi girer >** <xref:System.Activities.Statements.Assign> etkinliğinde ifade düzenleyicileri için varsayılan metin dizeleridir.
+     Gri filigran dizeleri **\<To>** ve **\<Enter a VB Expression>** etkinlik içindeki ifade düzenleyicileri için varsayılan metin dizeleridir <xref:System.Activities.Statements.Assign> .
 
 4. Deyiminizi girin. Bir dize girerseniz, dizenin etrafına tırnak işareti yerleştirdiğinizden emin olun. İfade bağımsız değişkenini bir değişkene bağlamayı seçerseniz, tırnak işaretlerini kapalı bırakın.
 

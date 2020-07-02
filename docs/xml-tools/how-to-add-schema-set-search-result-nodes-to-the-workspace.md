@@ -1,19 +1,19 @@
 ---
 title: XML şema kümesi arama sonucu düğümlerini çalışma alanına ekleme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ff33b3cc-4db9-4b4e-9378-b45ed5999b18
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bdb21c2b9ce3f6a79bf24738c84fcb3064c24cb
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: d94544fd017809b32b7a144b16da4515e6b2e4bb
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592795"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816325"
 ---
 # <a name="how-to-add-schema-set-search-result-nodes-to-the-workspace"></a>Nasıl yapılır: şema kümesi arama sonucu düğümlerini çalışma alanına ekleme
 
@@ -38,4 +38,4 @@ Bu örnek, örnek [satın alma siparişi şemasını](../xml-tools/sample-xsd-fi
 
      ![XML şema Gezgini arama sonucu](../xml-tools/media/schemaexplorersearchresult.gif)
 
-     `purchaseOrder` düğümü ve `PurchaseOrderType` düğümü, [Grafik görünümünün](../xml-tools/graph-view.md)tasarım yüzeyinde birbirini izleyen bir şekilde görünür. İki düğüm ilişkili olduğundan (`purchaseOrder` öğesi `PurchaseOrderType` türünde), aralarında bir ok çizilir.
+     `purchaseOrder`Düğüm ve düğüm, `PurchaseOrderType` [Grafik görünümünün](../xml-tools/graph-view.md)tasarım yüzeyinde birbirini izleyen bir şekilde görünür. İki düğüm ilişkili olduğundan ( `purchaseOrder` öğe `PurchaseOrderType` türünde olduğundan) aralarında bir ok çizilir.

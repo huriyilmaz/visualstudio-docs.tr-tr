@@ -3,7 +3,7 @@ title: Beklenen ' = ' (JavaScript) | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1011
 dev_langs:
@@ -14,12 +14,12 @@ ms.assetid: a8ce6fbf-8663-4770-8fba-677d04c84825
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 518140ebbddcee917a03bad6ec776e4c84b248d1
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: acc91513cc7f230a150ca87eea5cddc4681e43d3
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72573386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816598"
 ---
 # <a name="expected--javascript"></a>Beklenen '=' (JavaScript)
 Koşullu derleme deyimleriyle kullanılacak bir değişken oluşturmaya çalıştınız, ancak değişken ile atamak istediğiniz değer arasında eşittir işareti yerleştirmedi.  

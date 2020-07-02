@@ -3,7 +3,7 @@ title: "' Catch ' bekleniyor | Microsoft Docs"
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1033
 dev_langs:
@@ -14,12 +14,12 @@ ms.assetid: f1cd947f-eba2-411e-8e84-8ca86f608643
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8cad981e4ba469f67645aca601e6b58c18e1fab6
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 1d9950573e7bbeefe3594d77df2ae41c12f77ed3
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72573433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816693"
 ---
 # <a name="expected-catch"></a>'catch' bekleniyor.
 Özel durum işleme **TRY** bloğunu kullandınız, ancak ilişkili **catch** ifadesini yazmadınız. Özel durum işleme mekanizması, başarısız olabilecek kodun yanı ve bir özel durum oluşursa, bir **TRY** bloğunun içine sarmalanması gereken kodu gerektirir. Özel durumlar **throw** deyimi kullanılarak **TRY** bloğunun içinden oluşturulur ve bir veya daha fazla **catch** deyimi ile **TRY** bloğunun dışında yakalanır.  

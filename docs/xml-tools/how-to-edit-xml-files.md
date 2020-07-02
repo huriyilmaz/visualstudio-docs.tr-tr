@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: XML dosyalarını düzenleme'
+title: 'Nasıl Yapılır: XML Dosyalarını Düzenleme'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 07fa3ecf-6345-4d30-9d85-d5ef5b083319
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 216718627936ac7f519c1a6a28a30886e8ae9c27
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1ce3e41b2fe9dfdb080e23fb4270454bbd57f7ef
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817209"
 ---
 # <a name="how-to-edit-xml-files"></a>Nasıl yapılır: XML dosyalarını düzenleme
 
@@ -32,7 +32,7 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyaya çift t�
 
 3. **Ad** alanına dosya adını girin ve **Ekle**' ye basın.
 
-   XML dosyası projeye eklenir ve XML düzenleyicisinde açılır. Dosya, `<?xml version="1.0" encoding="utf-8" ?>`varsayılan XML bildirimini içerir.
+   XML dosyası projeye eklenir ve XML düzenleyicisinde açılır. Dosya varsayılan XML bildirimini içerir, `<?xml version="1.0" encoding="utf-8" ?>` .
 
 ## <a name="add-an-existing-xml-file-to-a-project"></a>Bir projeye var olan bir XML dosyası Ekle
 
@@ -50,7 +50,7 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyaya çift t�
 
 2. Yeni bir XML dosyası oluşturmak için **XML dosyasını** seçin; veya yeni bir XSLT stil sayfası oluşturmak için **XSLT dosyası** ' nı seçin.
 
-3. Tıklayın **açık**.
+3. **Aç**'a tıklayın.
 
 ## <a name="create-an-empty-project-for-xml-files"></a>XML dosyaları için boş bir proje oluştur
 
@@ -58,11 +58,11 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyaya çift t�
 
 1. **Dosya** menüsünden **Yeni** > **Proje**' yi seçin.
 
-   **Yeni proje** iletişim kutusu görüntülenir.
+   **Yeni Proje** iletişim kutusu görünür.
 
 2. Seçtiğiniz kod dilini seçin ve **boş proje (.NET Framework)** şablonunu seçin.
 
-3. **Tamam**'ı tıklatın.
+3. **Tamam**'a tıklayın.
 
 ::: moniker-end
 
@@ -72,7 +72,7 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyaya çift t�
 
 2. Şablon arama kutusuna **boş proje** girin, **boş proje (.NET Framework)** şablonunu seçin ve ardından **İleri**' ye tıklayın.
 
-3. **Oluştur**'u tıklatın.
+3. **Oluştur**'a tıklayın.
 
 ::: moniker-end
 

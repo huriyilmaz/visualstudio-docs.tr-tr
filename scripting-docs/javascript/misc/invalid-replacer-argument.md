@@ -3,7 +3,7 @@ title: Geçersiz yeniden değiştirici bağımsız değişkeni | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5035
 dev_langs:
@@ -15,22 +15,22 @@ caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9ba76a2121dfb3853e38bacbdf49c985103c2a35
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 452af60c37e4a56996438cc2957e9b69ccee98ef
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72573804"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816832"
 ---
 # <a name="invalid-replacer-argument"></a>Geçersiz değiştirici bağımsız değişken
-Geçerli olmayan bir bağımsız değişkenle `JSON.stringify` çağırma girişiminde bulunuldu. `replacer` bağımsız değişkeni bir işlev veya dizi olmalıdır.  
+`JSON.stringify`Geçerli olmayan bir bağımsız değişkenle Invoke yapılmaya çalışıldı. `replacer`Bağımsız değişken bir işlev veya dizi olmalıdır.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- `replacer` bağımsız değişkenini bir işlev veya dizi olarak değiştirin.  
+- `replacer`Bağımsız değişkeni bir işlev veya dizi olarak değiştirin.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekteki kod, `memberfilter` bir işlev veya dizi yerine bir nesne olduğundan, bir çalışma zamanı hatasına neden olur.  
+ Bu örnekteki kod, bir `memberfilter` işlev veya dizi yerine bir nesne olduğundan, bir çalışma zamanı hatasına neden olur.  
   
 ```JavaScript  
 var contact = new Object();  
@@ -46,5 +46,5 @@ var jsontext = JSON.stringify(contact, memberfilter, "\t");
   
 ## <a name="see-also"></a>Ayrıca bkz.  
  [JSON nesnesi](../../javascript/reference/json-object-javascript.md)   
- [JSON. Parse işlevi](../../javascript/reference/json-parse-function-javascript.md)   
+ [JSON. Parse Işlevi](../../javascript/reference/json-parse-function-javascript.md)   
  [JavaScript Çalışma zamanı Hataları](../../javascript/reference/javascript-run-time-errors.md)

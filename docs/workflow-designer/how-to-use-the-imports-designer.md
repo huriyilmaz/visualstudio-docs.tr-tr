@@ -1,7 +1,7 @@
 ---
 title: 'İş Akışı Tasarımcısı-nasıl yapılır: Içeri aktarmalar tasarımcısını kullanma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - System.Activities.Presentation.View.ImportDesigner.UI
 ms.assetid: 61328ab6-9b66-4e12-8630-22e30ee8c9d1
@@ -10,16 +10,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f221efea08444a4dc3e31ade2a081753eb77242c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 77da016b062d032965fcf7042cedba2004e3fdf5
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817430"
 ---
-# <a name="how-to-use-the-imports-designer"></a>Nasıl yapılır: Içeri aktarmalar tasarımcısını kullanma
+# <a name="how-to-use-the-imports-designer"></a>Nasıl Yapılır: İçeri Aktarmalar Tasarımcısını Kullanma
 
-İçeri aktarmalar Tasarımcısı, ifadeleriniz içinde kullanacağınız türler için ad alanları girmenize olanak sağlar. **Içeri aktarmalar** **veya Visual Basic** anahtar kelimeleriyle çok benzer ve C#içeri aktarmalar tasarımcısında ad alanlarını belirtmek, yalnızca ifadenizde tam bir sürüm türü adı yerine bir tür adı girmenizi sağlar.
+İçeri aktarmalar Tasarımcısı, ifadeleriniz içinde kullanacağınız türler için ad alanları girmenize olanak sağlar. İçeri **aktarmalar** veya Visual Basic ve C# ' deki anahtar sözcükleri **kullanarak** çok benzer şekilde, Imports tasarımcısında ad alanlarını belirtmek, tam nitelikli bir sürüm türü adı yerine ifadenizde bir tür adı girmenizi sağlar.
 
 İçeri aktarmalar Tasarımcısı, Kullanıcı arabirimindeki her iki değişikliğe ve iş akışı kaydedildiğinde yapılan değişikliklere tepki verir. İş akışı kaydedildiğinde, ad alanları içeri aktarmalar tasarımcısına otomatik olarak eklenebilir. Bunlar aşağıdakileri içerir:
 

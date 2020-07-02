@@ -1,19 +1,19 @@
 ---
 title: XML şema Gezgini 'nden çalışma alanına düğüm ekleme
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 3b5a5749-9693-4b29-b0c2-8e07e0e55514
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2049b8da1caa4e0af0afc52aec6e75f499d85b8b
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 751e291188e6357343936d61d56f07bd86f97eaf
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816403"
 ---
 # <a name="how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer"></a>Nasıl yapılır: XML şema Gezgini 'nden çalışma alanına düğüm ekleme
 
@@ -26,23 +26,23 @@ Bu konu başlığı altında, XML şema **Gezgini**' nden [XML şema Tasarımcı
 
 1. [Nasıl yapılır: xsd şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)bölümündeki adımları izleyin.
 
-2. XSD Explorer 'daki `PurchaseOrderType` düğümüne sağ tıklayın. **Grafik görünümünde göster '** i seçin.
+2. `PurchaseOrderType`XSD Explorer 'da düğüme sağ tıklayın. **Grafik görünümünde göster '** i seçin.
 
-     `purchaseOrderType` düğümü grafik görünümünün tasarım yüzeyinde görünür.
+     `purchaseOrderType`Düğüm, grafik görünümünün tasarım yüzeyinde görünür.
 
 ## <a name="to-drag-and-drop-a-node-on-to-a-view"></a>Bir düğümü bir görünüme sürükleyip bırakmak için
 
-1. Grafik görünümündeki `PurchaseOrderType` düğümüne sağ tıklayın. **XML şema Gezgininde Göster '** i seçin.
+1. `PurchaseOrderType`Grafik görünümündeki düğüme sağ tıklayın. **XML şema Gezgininde Göster '** i seçin.
 
      Düğüm, **XML şema Gezgini**'nde vurgulanır.
 
-2. **XML şeması gezgininde** `PurchaseOrderType` düğümüne sağ tıklayın ve **tüm başvuruları göster**' i seçin.
+2. `PurchaseOrderType` **XML şema Gezgini** ' nde düğüme sağ tıklayın ve **tüm başvuruları göster**' i seçin.
 
-     `purchaseOrder` düğümü vurgulanır.
+     `purchaseOrder`Düğüm vurgulanır.
 
-3. `purchaseOrder` düğümünü grafik görünümüne sürükleyin.
+3. `purchaseOrder`Düğümü grafik görünümüne sürükleyin.
 
-     `purchaseOrder` düğümü ve `PurchaseOrderType` düğümü, grafik görünümünün tasarım yüzeyinde birbirini izleyen bir şekilde görünür. İki düğüm ilişkili olduğundan (`purchaseOrder` öğesi `PurchaseOrderType` türünde), aralarında bir ok çizilir.
+     `purchaseOrder`Düğüm ve düğüm, `PurchaseOrderType` Grafik görünümünün tasarım yüzeyinde birbirini izleyen bir şekilde görünür. İki düğüm ilişkili olduğundan ( `purchaseOrder` öğe `PurchaseOrderType` türünde olduğundan) aralarında bir ok çizilir.
 
 ## <a name="to-add-nodes-using-the-schema-explorer-search-capability"></a>Şema Gezgini arama özelliğini kullanarak düğüm eklemek için
 
@@ -56,7 +56,7 @@ Bu konu başlığı altında, XML şema **Gezgini**' nden [XML şema Tasarımcı
 
      ![XML şema Gezgini arama sonucu](../xml-tools/media/schemaexplorersearchresult.gif)
 
-     `purchaseOrder` düğümü ve `PurchaseOrderType` düğümü, [Grafik görünümünün](../xml-tools/graph-view.md)tasarım yüzeyinde birbirini izleyen bir şekilde görünür. İki düğüm ilişkili olduğundan (`purchaseOrder` öğesi `PurchaseOrderType` türünde), aralarında bir ok çizilir.
+     `purchaseOrder`Düğüm ve düğüm, `PurchaseOrderType` [Grafik görünümünün](../xml-tools/graph-view.md)tasarım yüzeyinde birbirini izleyen bir şekilde görünür. İki düğüm ilişkili olduğundan ( `purchaseOrder` öğe `PurchaseOrderType` türünde olduğundan) aralarında bir ok çizilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

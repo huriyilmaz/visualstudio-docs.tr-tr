@@ -3,7 +3,7 @@ title: Tarih nesnesi bekleniyor | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5006
 dev_langs:
@@ -14,15 +14,15 @@ ms.assetid: d6ab82e6-ca64-46b4-a06c-5c6b0aa057cb
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 10af48c4804df3b5513df71578b948abe73ff8c2
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 969f2bcb578d74ac02a7bdaa6984de5948e49e27
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72572892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817612"
 ---
 # <a name="date-object-expected"></a>Tarih nesnesi bekleniyor
-`Date`dışında bir türün nesnesi üzerinde **date. prototype. ToString** veya **date. prototype.** bir yöntemini çağırmaya çalıştınız. Bu tür çağrının nesnesinin `Date`türünde olması gerekir. Örneğin:  
+Dışındaki bir türün nesnesi üzerinde **date. prototype. ToString** veya **date. prototype.** bir yöntemini çağırmaya çalıştınız `Date` . Bu tür çağrının nesnesinin türünde olması gerekir `Date` . Örneğin:  
   
 ```JavaScript  
 var o = new Object;  
@@ -32,9 +32,9 @@ o.f();
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- `Date`türündeki nesnelerde yalnızca **date. prototype. ToString** veya **date. prototype.** bir yöntemi çağırın.  
+- Yalnızca tür nesnelerinde **date. prototype. ToString** veya **date. prototype.** bir yöntemlerini çağırın `Date` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Tarih nesnesi](../../javascript/reference/date-object-javascript.md)   
- [getdate metodu (Tarih)](../../javascript/reference/getdate-method-date-javascript.md)   
+ [Date nesnesi](../../javascript/reference/date-object-javascript.md)   
+ [getDate metodu (Tarih)](../../javascript/reference/getdate-method-date-javascript.md)   
  [İç Nesneler](../../javascript/intrinsic-objects-javascript.md)

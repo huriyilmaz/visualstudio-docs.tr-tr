@@ -1,19 +1,19 @@
 ---
 title: 'İzlenecek yol: XML Düzenleyicisi özelliklerini kullanma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: ea8dc357-2e66-455a-aec2-7ccaccfc9adf
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d2cf35730b70fc8c8bbec392c73b444b6e8e0aaa
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 1cebf6f7621fb5fada37b8e4592efd429bdc85e6
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817404"
 ---
 # <a name="walkthrough-use-xml-editor-features"></a>İzlenecek yol: XML Düzenleyicisi özelliklerini kullanma
 
@@ -28,53 +28,53 @@ Bu izlenecek yolda, yeni bir XML belgesi oluşturma adımları gösterilmektedir
 
 2. **Şablonlar** bölmesinde **XML dosyası** ' nı seçin ve **Aç**' a tıklayın.
 
-     Düzenleyicide yeni bir dosya açılır. Dosya, `<?xml version="1.0" encoding="utf-8">`varsayılan bir XML bildirimi içerir.
+     Düzenleyicide yeni bir dosya açılır. Dosya varsayılan bir XML bildirimi içerir `<?xml version="1.0" encoding="utf-8">` .
 
-3. Belge Özellikleri penceresinde, **şemalar** alanındaki ( **...** ) düğmesine tıklayın.
+3. Belge Özellikleri penceresinde, **şemalar** alanındaki (**...**) düğmesine tıklayın.
 
      **Xsd şemaları** iletişim kutusu görüntülenir.
 
-4. **Ekle**'yi tıklatın.
+4. **Ekle**'ye tıklayın.
 
      **XSD şeması aç** iletişim kutusu görüntülenir.
 
 5. *HireDate. xsd* dosyasını seçin ve **Aç**' a tıklayın.
 
-6. **Tamam**'ı tıklatın.
+6. **Tamam**'a tıklayın.
 
      XML şeması artık XML belgesiyle ilişkili. XML şeması belgeyi doğrulamak için kullanılır. IntelliSense tarafından geçerli öğelerin üye listesini doldurmak için de kullanılır.
 
 ## <a name="to-add-data"></a>Veri eklemek için
 
-1. Düzenleyici bölmesine `<` yazın.
+1. `<`Düzenleyici bölmesine yazın.
 
      Üyeler listesi olası öğeleri görüntüler:
 
     - yorum eklemek için **!--** .
 
-    - **!** Belge türü eklemek IÇIN DOCTYPE.
+    - **! **Belge türü eklemek IÇIN DOCTYPE.
 
     - **?** bir işleme yönergesi eklemek için.
 
     - kök öğeyi eklemek için **çalışan** .
 
-2. Bir yorum düğümü eklemek için **&lt;!--** seçin ve **ENTER**tuşuna basın.
+2. Açıklama düğümü eklemek için ** &lt; !--** seçin ve **ENTER**tuşuna basın.
 
      Düzenleyici bir açıklama sonu etiketi ekler ve imleci başlangıç ve bitiş açıklaması etiketleri arasına yerleştirir.
 
 3. **Test XML dosyasına**yazın.
 
-4. Yeni bir satıra `<`yazın ve üye listesinden **çalışan** ' ı seçin.
+4. Yeni bir satıra yazın `<` ve üye listesinden **çalışan** ' ı seçin.
 
-     Düzenleyici, bir XML öğesi `<employee`başlangıcını ekler. Bu noktada, öğeye öznitelikler ekleyebilir veya `>`yazarak Başlangıç etiketini kapatabilirsiniz.
+     Düzenleyici bir XML öğesinin başlangıcını ekler, `<employee` . Bu noktada, öğeye öznitelikler ekleyebilir veya yazarak Başlangıç etiketini kapatabilirsiniz `>` .
 
-5. Etiketi kapatmak için `>` yazın.
+5. `>`Etiketi kapatmak için yazın.
 
 6. Düzenleyici bitiş etiketini ekler. Bitiş etiketi, bir doğrulama hatasını gösteren dalgalı alt çizgiyle eklenir. **Araç ipucu** iletiyi görüntüler: **' Employee ' öğesinin içeriği eksik. ' ID ' bekleniyor**.
 
-7. `<` yazın ve üye listesinden **kimliği** seçin. `>`yazın.
+7. `<`Üye listesinden **ID** yazın ve seçin. Ardından yazın `>` .
 
-     Düzenleyici, XML öğesini ekler, `<ID></ID>`ve imleci ID başlangıç etiketinden sonra konumlandırır.
+     Düzenleyici, XML öğesini ekler `<ID></ID>` ve IMLECI ID başlangıç etiketinden sonra konumlandırır.
 
 8. **ABC**yazın.
 
@@ -88,15 +88,15 @@ Bu izlenecek yolda, yeni bir XML belgesi oluşturma adımları gösterilmektedir
 
      Dalgalı alt çizgi ve **araç Ipucu** ID öğesi değeri altında temizlenir. Çalışan bitiş etiketi için **araç ipucu** artık iletiyi görüntülüyor: **' Employee ' öğesinin içeriği eksik. ' İşe alma tarihi ' bekleniyor**.
 
-11. İmleci ID End etiketinden sonra yerleştirin, `<`yazın, üye listesinden **işe alma tarihi** ' ni seçin ve `>`yazın.
+11. İmleci ID End etiketinden sonra yerleştirin, yazın `<` , üye listesinden **işe alma tarihi** ' ni seçin ve ardından yazın `>` .
 
-     Düzenleyici, bir XML öğesi ekler, `<hire-date></hire-date>`ve imleci, işe alma tarihi başlangıç etiketinden sonra konumlandırır.
+     Düzenleyici, XML öğesini ekler `<hire-date></hire-date>` ve sonra, işe alma tarihi başlangıç etiketinden sonra imleci konumlandırır.
 
 12. İşe alma tarihi değeri için **2003-01-10** yazın.
 
 ## <a name="to-format-the-xml-document"></a>XML belgesini biçimlendirmek için
 
-- XML Düzenleyicisi araç çubuğunda **belge Biçimlendir** düğmesini seçin veya **CTRL**+**E**,**D**' ye basın.
+- XML Düzenleyicisi araç çubuğunda **belge Biçimlendir** düğmesini seçin veya **CTRL** + **E**,**D**' ye basın.
 
    ![Visual Studio 'da XML belgesi biçimlendirme düğmesi](media/format-xml-document.png)
 
@@ -106,7 +106,7 @@ Bu izlenecek yolda, yeni bir XML belgesi oluşturma adımları gösterilmektedir
 
 1. **Dosya** menüsündeki **Farklı Kaydet** seçeneğini belirleyin.
 
-     **Dosyayı farklı kaydet** iletişim kutusu görüntülenir. Varsayılan dosya adı *' XMLFile1 '* .
+     **Dosyayı farklı kaydet** iletişim kutusu görüntülenir. Varsayılan dosya adı *' XMLFile1 '*.
 
 2. XML belgesi için dosya adı ve konum girin ve **Kaydet**' e tıklayın.
 

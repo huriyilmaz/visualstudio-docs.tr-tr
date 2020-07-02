@@ -3,7 +3,7 @@ title: Nesne bekleniyor | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5007
 dev_langs:
@@ -14,23 +14,23 @@ ms.assetid: 5d88c93d-e5b5-4b11-9bb5-bf1a5e41ccc3
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1611596d844d43ef72663154dc48791830dfe29f
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 28eec125914f0207fbdf79a39ea2140dd74d6d0d
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72573730"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816234"
 ---
 # <a name="object-expected"></a>Nesne bekleniyor
-`Object`dışında bir türün nesnesi üzerinde bir yöntemi veya özelliği çağırmaya çalıştınız ya da bir `Object` gerektiğinde `Object` dışında bir türün bağımsız değişkenini geçirtiniz.  
+Öğesinden farklı bir türün bir nesnesi üzerinde bir yöntem veya özellik çağırmaya çalıştınız `Object` veya bir tür bağımsız değişkenini, `Object` gerekli olduğu zaman dışında başka bir türde geçirtiniz `Object` .  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Yalnızca `Object`türündeki nesnelerde yöntemi veya özelliği çağırın.  
+- Yalnızca türündeki nesnelerde metodu veya özelliği çağırın `Object` .  
   
-- Nesne olmayan bir bağımsız değişken için hata oluşursa, `Object`türünde bir nesne geçirin.  
+- Nesne olmayan bir bağımsız değişken için hata oluşursa, türünde bir nesne geçirin `Object` .  
   
-- `Object`türünde bir nesne yerine tanımsız veya null başvurusunun döndürülüp çağrılmadığını denetleyin.  
+- Türünde bir nesne yerine tanımsız veya null başvurusunun döndürülüp çağrılmadığını denetleyin `Object` .  
   
      Örneğin, aşağıdaki kodda myVar öğesinde bu hatayı alırsanız:  
   

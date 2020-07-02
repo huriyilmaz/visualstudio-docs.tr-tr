@@ -3,7 +3,7 @@ title: Dizi uzunluğu sonlu pozitif bir tamsayı olmalıdır | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5029
 dev_langs:
@@ -14,19 +14,19 @@ ms.assetid: 1a467040-4702-4178-848f-418a5974e907
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 69494f1485a97ff4f2c98cf2493e5d0bc5b8aa9f
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: fa8b9a85c0c7457cb06d36fd3cd849ce48484b46
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817092"
 ---
 # <a name="array-length-must-be-a-finite-positive-integer"></a>Dizi uzunluğu sonlu pozitif bir tamsayı olmalıdır
 **Dizi** oluşturucusunu, tam sayı olmayan bir bağımsız değişkenle çağırırsınız (tam sayılar sıfır ve pozitif tamsayılar kümesinden oluşur).  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Yalnızca yeni bir `Array` nesnesi oluşturulurken pozitif tamsayılar kullanın. Tamsayı olmayan tek bir öğe içeren bir dizi oluşturmak istiyorsanız bunu iki adımlı bir işlemde yapın. Önce bir öğesi olan bir dizi oluşturun, ardından değeri ilk öğeye (dizi [0]) yerleştirin. Aşağıda bu hatayı üreten bir örnek verilmiştir.  
+- Yalnızca yeni bir nesne oluştururken pozitif tamsayılar kullanın `Array` . Tamsayı olmayan tek bir öğe içeren bir dizi oluşturmak istiyorsanız bunu iki adımlı bir işlemde yapın. Önce bir öğesi olan bir dizi oluşturun, ardından değeri ilk öğeye (dizi [0]) yerleştirin. Aşağıda bu hatayı üreten bir örnek verilmiştir.  
   
     ```JavaScript  
     var piArray = new Array(3.14159);  
@@ -42,4 +42,4 @@ ms.locfileid: "72576086"
      En büyük tamsayı değeri (yaklaşık 4.000.000.000) dışında bir dizinin boyutu için üst sınır yoktur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Dizileri Kullanma](../../javascript/advanced/using-arrays-javascript.md)
+ [Dizileri kullanma](../../javascript/advanced/using-arrays-javascript.md)

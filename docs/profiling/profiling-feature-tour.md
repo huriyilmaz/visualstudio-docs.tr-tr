@@ -12,14 +12,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 89006ab582a48f7f3be54b4eb459903b64af7daf
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 7c1f2583b0624691405ec3ef5a88aa11cb796327
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85280269"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816702"
 ---
-# <a name="quickstart-first-look-at-profiling-tools"></a>Hızlı başlangıç: profil oluşturma araçlarına Ilk bakış
+# <a name="first-look-at-profiling-tools"></a>Profil oluşturma araçlarına ilk bakış
 
 Visual Studio, uygulama türüne bağlı olarak farklı türlerde performans sorunlarını tanılamanıza yardımcı olacak çeşitli profil araçları sağlar. Bu makalede, en yaygın profil oluşturma araçlarına hızlı bir bakış sunuyoruz.
 
@@ -131,7 +131,7 @@ ADO.NET veya Entity Framework Core kullanan .NET Core uygulamaları için [verit
 
 Araç, her sorguyu bir liste görünümünde gösterir. Sorgu başlangıç saati ve süresi gibi bilgileri görebilirsiniz.
 
-![Ayırma](./media/db-gotosource.png "Ayırma")
+![Ayırmasını](./media/db-gotosource.png "Ayırma")
 
 ::: moniker-end
 
@@ -199,14 +199,14 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 |Performans aracı|Windows masaüstü|UWP|ASP.NET/ASP.NET Core|
 |----------------------|---------------------|-------------|-------------|
 |[PerfTips](../profiling/perftips.md)|evet|evet|evet|
-|[CPU Kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
+|[CPU kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
 |[Bellek kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
 |[.NET nesne ayırma](../profiling/dotnet-alloc-tool.md)|Evet (yalnızca .NET)|evet|evet|
 |[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|evet|evet|hayır|
 |[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|evet|evet|hayır|
-|[Olay Görüntüleyicisi](../profiling/perftips.md)|evet|evet|evet|
-|[.NET zaman uyumsuz](../profiling/perftips.md)|Evet (yalnızca .NET)|evet|evet|
-|[Veritabanı](../profiling/perftips.md)|Evet (yalnızca .NET Core)|hayır|Evet (yalnızca ASP.NET Core)|
+|[Olay Görüntüleyicisi](../profiling/events-viewer.md)|evet|evet|evet|
+|[.NET Async](../profiling/analyze-async.md)|Evet (yalnızca .NET)|evet|evet|
+|[Veritabanı](../profiling/analyze-database.md)|Evet (yalnızca .NET Core)|hayır|Evet (yalnızca ASP.NET Core)|
 |[Performans Gezgini](../profiling/performance-explorer.md)|hayır|hayır|hayır|
 |[IntelliTrace](../debugger/intellitrace.md)|Yalnızca Visual Studio Enterprise .NET|Yalnızca Visual Studio Enterprise .NET|Yalnızca Visual Studio Enterprise .NET|
 ::: moniker-end
@@ -214,7 +214,7 @@ Aşağıda, Visual Studio tekliflerinin farklı araçları ve bunları kullanabi
 ::: moniker range="vs-2017"
 |Performans aracı|Windows masaüstü|UWP|ASP.NET/ASP.NET Core|
 |----------------------|---------------------|-------------|-------------|
-|[CPU Kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
+|[CPU kullanımı](../profiling/cpu-usage.md)|evet|evet|evet|
 |[Bellek kullanımı](../profiling/memory-usage.md)|evet|evet|evet|
 |[GPU Kullanımı](/visualstudio/debugger/graphics/gpu-usage)|evet|evet|hayır|
 |[Uygulama Zaman Çizelgesi](../profiling/application-timeline.md)|evet|evet|hayır|

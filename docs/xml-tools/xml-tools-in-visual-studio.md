@@ -1,7 +1,7 @@
 ---
 title: XML Düzenleyicisi ve şema Tasarımcısı
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - vb.xmldesigner
 helpviewer_keywords:
@@ -32,16 +32,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 87a5f069d5255a744e256bc9f7d1b48a135e85d8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e763fa3475f26b9742ea5fb7061978e711eb22ea
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816429"
 ---
-# <a name="xml-tools-in-visual-studio"></a>Visual Studio'daki XML araçları
+# <a name="overview-of-xml-tools-in-visual-studio"></a>Visual Studio 'da XML araçlarına genel bakış
 
-*Genişletilebilir Biçimlendirme Dili (XML)* veri tanımlamak için bir biçim sağlayan bir biçimlendirme dilidir. XML, Genişletilebilir Stil sayfası dili (XSL) ve geçişli stil sayfaları (CSS) gibi ilişkili stil sayfalarını kullanarak verileri ve sunumunu ayırır. Visual Studio, XML, XSLT ve XML şemaları ile çalışmayı kolaylaştıran araçlar ve özellikler içerir.
+*Genişletilebilir Biçimlendirme Dili (XML)* , verileri tanımlamaya yönelik biçim sağlayan bir biçimlendirme dilidir. XML, Genişletilebilir Stil sayfası dili (XSL) ve geçişli stil sayfaları (CSS) gibi ilişkili stil sayfalarını kullanarak verileri ve sunumunu ayırır. Visual Studio, XML, XSLT ve XML şemaları ile çalışmayı kolaylaştıran araçlar ve özellikler içerir.
 
 ## <a name="xml-editor"></a>XML düzenleyicisi
 

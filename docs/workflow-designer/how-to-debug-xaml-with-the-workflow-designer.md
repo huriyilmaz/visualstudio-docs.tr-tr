@@ -1,21 +1,21 @@
 ---
 title: 'İş Akışı Tasarımcısı: XAML hatalarını ayıklama'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: d9305dbc-af62-4bdd-b03f-c54e3fe9ecc7
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 81c3e20e858fb8501c1c1a564a91270af6a4aaa3
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 9be7c8da251a9698e0fceba64e3941ba8fbdf803
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75593947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85817521"
 ---
-# <a name="how-to-debug-xaml-with-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısı ile XAML hatalarını ayıklama
+# <a name="how-to-debug-xaml-with-the-workflow-designer"></a>Nasıl Yapılır: İş Akışı Tasarımcısı ile XAML Hatalarını Ayıklama
 
 İş akışları XAML bakımından tanımlanmıştır. İş akışının Kullanıcı arabirimi temsili, iş akışını tanımlayan XAML ağacının üzerine kurulmuştur. Hata ayıklama deneyimi İş Akışı Tasarımcısı hata ayıklama iş akışlarıyla benzerdir. Örneğin, XAML hatalarını ayıklarken, Yereller, izle ve iş parçacıkları Windows İş Akışı Tasarımcısı hata ayıklamayla aynı şekilde çalışır. Ayrıca, XAML hata ayıklaması sırasında çağrı yığını görünümü, iş akışı için yürütme akışının satır tabanlı hiyerarşik görünümüdür.
 
@@ -37,4 +37,4 @@ ms.locfileid: "75593947"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl Yapılır: İş Akışlarında Kesme Noktası Ayarlama](../workflow-designer/how-to-set-breakpoints-in-workflows.md)
-- [Hata ayıklama iş akışları](debugging-workflows-with-the-workflow-designer.md)
+- [İş akışları hata ayıklama](debugging-workflows-with-the-workflow-designer.md)
