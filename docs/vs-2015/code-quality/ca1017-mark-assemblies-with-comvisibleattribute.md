@@ -15,37 +15,37 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 505e5780b8a50113aaf98ea7dbac767d280bebb6
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 17f0a540a436316d3a4fb3b71a2a51b1c5a90a6d
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662062"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535076"
 ---
-# <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Derlemeleri ComVisibleAttribute ile işaretleme
+# <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Derlemeleri ComVisibleAttribute ile işaretleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|MarkAssembliesWithComVisible|
 |CheckId|CA1017|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Bir derlemeye <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> özniteliği uygulanmaz.
+## <a name="cause"></a>Nedeni
+ Bir bütünleştirilmiş koda <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> uygulanmış özniteliği yok.
 
 ## <a name="rule-description"></a>Kural Tanımı
- @No__t_0 özniteliği, COM istemcilerinin yönetilen koda nasıl erişebileceğini belirler. İyi tasarım derlemelerin açıkça COM görünürlüğünde gösterildiğini belirler. Tüm derleme için COM görünürlüğü ayarlanabilir ve sonra bağımsız türler ve tür üyeleri için geçersiz kılınabilir. Özniteliği yoksa, derlemenin içerikleri COM istemcileri tarafından görülebilir.
+ <xref:System.Runtime.InteropServices.ComVisibleAttribute>Özniteliği, com istemcilerinin yönetilen koda nasıl erişebileceğini belirler. İyi tasarım derlemelerin açıkça COM görünürlüğünde gösterildiğini belirler. Tüm derleme için COM görünürlüğü ayarlanabilir ve sonra bağımsız türler ve tür üyeleri için geçersiz kılınabilir. Özniteliği yoksa, derlemenin içerikleri COM istemcileri tarafından görülebilir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için, derlemeye özniteliğini ekleyin. Derlemenin COM istemcilerine görünür olmasını istemiyorsanız, özniteliğini uygulayın ve değerini `false` olarak ayarlayın.
+ Bu kural ihlalini onarmak için, derlemeye özniteliğini ekleyin. Derlemenin COM istemcilerine görünür olmasını istemiyorsanız, özniteliğini uygulayın ve değerini olarak ayarlayın `false` .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
- Bu kuraldan uyarıyı bastırmayın. Derlemenin görünür olmasını istiyorsanız, özniteliğini uygulayın ve değerini `true` olarak ayarlayın.
+ Bu kuraldan uyarıyı bastırmayın. Derlemenin görünür olmasını istiyorsanız, özniteliğini uygulayın ve değerini olarak ayarlayın `true` .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, COM istemcilerine görünür olmasını engellemek için <xref:System.Runtime.InteropServices.ComVisibleAttribute> özniteliği uygulanmış bir derlemeyi gösterir.
+ Aşağıdaki örnek, <xref:System.Runtime.InteropServices.ComVisibleAttribute> com istemcilerine görünür olmasını engellemek için özniteliği uygulanmış bir derlemeyi gösterir.
 
  [!code-cpp[FxCop.Design.AssembliesCom#1](../snippets/cpp/VS_Snippets_CodeAnalysis/FxCop.Design.AssembliesCom/cpp/FxCop.Design.AssembliesCom.cpp#1)]
  [!code-csharp[FxCop.Design.AssembliesCom#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.AssembliesCom/cs/FxCop.Design.AssembliesCom.cs#1)]

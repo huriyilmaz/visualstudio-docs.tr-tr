@@ -15,32 +15,32 @@ caps.latest.revision: 17
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 34ebe4848bbbe49b9a67449795f0aea7d104af8b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: f6d228b0fbf5507ba135f9ddc35d6d8b161f0011
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671632"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534855"
 ---
 # <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720: Tanımlayıcılar tür adları içermemelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|IdentifiersShouldNotContainTypeNames|
 |CheckId|CA1720|
 |Kategori|Microsoft. Naming|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Dışarıdan görünen bir üyenin bir parametresinin adı bir veri türü adı içerir.
 
- veya
+ -veya-
 
  Dışarıdan görünen bir üyenin adı dile özgü bir veri türü adı içerir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Parametrelerin ve üyelerin adları, geliştirme araçları tarafından sağlanması beklenen, kendi türlerini tanımlamaya kıyasla anlamını iletmek için daha iyi kullanılır. Üye adları için, bir veri türü adı kullanılması gerekiyorsa dile özgü bir ad kullanın. Örneğin, C# tür adı ' int ' yerine dilden bağımsız veri türü adı, Int32 kullanın.
+ Parametrelerin ve üyelerin adları, geliştirme araçları tarafından sağlanması beklenen, kendi türlerini tanımlamaya kıyasla anlamını iletmek için daha iyi kullanılır. Üye adları için, bir veri türü adı kullanılması gerekiyorsa dile özgü bir ad kullanın. Örneğin, C# tür adı ' int ' yerine, dilden bağımsız veri türü adı olan Int32 kullanın.
 
  Parametre veya üyenin adındaki her bir ayrık belirteç, büyük/küçük harfe duyarsız bir şekilde aşağıdaki dile özgü veri türü adlarına karşı denetlenir:
 
@@ -84,7 +84,7 @@ ms.locfileid: "72671632"
 
 - Nesnesi
 
-- Boole değeri
+- Boole
 
 - Char
 
@@ -112,7 +112,7 @@ ms.locfileid: "72671632"
 
 - Kaydetmeye
 
-- Çağrısı
+- İşaretçi
 
 - Uıınptr
 
@@ -141,10 +141,10 @@ ms.locfileid: "72671632"
  Tür tabanlı parametre ve üye adlarının zaman zaman kullanımı uygun olabilir. Bununla birlikte, yeni geliştirme için, bu kuraldan bir uyarıyı bastırdığınızda bilinen senaryolar oluşmaz. Daha önce sevk edilen kitaplıklarda, bu kuraldan bir uyarıyı bastırdığınızda kalabilirsiniz.
 
 ## <a name="related-rules"></a>İlgili kurallar
- [CA1709: Tanımlayıcıların büyük/küçük harfleri doğru yazılmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+ [CA1709: Tanımlayıcılar doğru büyük küçük harfe sahip olmalıdır](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
- [CA1708: Tanımlayıcılar örnekten daha fazla farklı olmalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+ [CA1708: Tanımlayıcılar yalnızca büyük küçük harfle birbirinden farklı olmamalıdır](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
  [CA1707: Tanımlayıcılar alt çizgi içermemelidir](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
 
- [CA1719: Parametre adları üye adlarıyla eşleşmemelidir](../code-quality/ca1719-parameter-names-should-not-match-member-names.md)
+ [CA1719: Parametre adları üye adları ile eşleşmemelidir](../code-quality/ca1719-parameter-names-should-not-match-member-names.md)

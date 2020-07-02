@@ -1,5 +1,5 @@
 ---
-title: Hata Ayıklama Çoklu İşlemler | Microsoft Dokümanlar
+title: Birden çok Işlemde hata ayıkla | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,208 +20,206 @@ caps.latest.revision: 19
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 9a2679825d41a6360dde05e7511d607f8be69dfa
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.openlocfilehash: 97d98522e011023cb3a021a69c9a82e8bb34cef3
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79302555"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533282"
 ---
 # <a name="debug-multiple-processes"></a>Birden Çok İşlemde Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Hata ayıklama işlemlerini şu şekilde başlatabilirsiniz, işlemler arasında geçiş yapabilirsiniz, yürütmeyi kırın ve devam edin, kaynakta adım atın, hata ayıklamayı durdurun ve işlemleri sonlandırmaveya ayırma.  
+İşte hata ayıklama işlemlerine başlamak, süreçler arasında geçiş yapmak, yürütme işlemine devam etmek, kaynak adım adım, hata ayıklamayı durdurmak ve işlemlerden ayrılmak veya kullanımdan çıkarmak.  
   
-## <a name="contents"></a><a name="BKMK_Contents"></a>Içeriği  
- [Birden çok sürecin yürütme davranışını yapılandırma](#BKMK_Configure_the_execution_behavior_of_multiple_processes)  
+## <a name="contents"></a><a name="BKMK_Contents"></a>Dekiler  
+ [Birden çok işlemin yürütme davranışını yapılandırma](#BKMK_Configure_the_execution_behavior_of_multiple_processes)  
   
- [Kaynak ve simge (.pdb) dosyalarını bulma](#BKMK_Find_the_source_and_symbol___pdb__files)  
+ [Kaynak ve sembol (. pdb) dosyalarını bulma](#BKMK_Find_the_source_and_symbol___pdb__files)  
   
- [VS çözümünde birden çok işlemi başlatın, bir işleme takın, hata ayıklayıcıda otomatik olarak bir işlem başlatın](#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
+ [VS çözümünde birden çok işlem başlatma, işleme iliştirme, hata ayıklayıcıda otomatik olarak bir işlem başlatma](#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
   
- [Geçiş işlemleri, kesme ve yürütme devam, kaynak üzerinden adım](#BKMK_Switch_processes__break_and_continue_execution__step_through_source)  
+ [İşlem değiştirme, kesme ve yürütme devam etme, kaynak adımla](#BKMK_Switch_processes__break_and_continue_execution__step_through_source)  
   
- [Hata ayıklamayı durdurma, sonlandırma veya işlemlerden ayırma](#BKMK_Stop_debugging__terminate_or_detach_from_processes)  
+ [Hata ayıklamayı Durdur, Sonlandır veya işlemlerden ayır](#BKMK_Stop_debugging__terminate_or_detach_from_processes)  
   
-## <a name="configure-the-execution-behavior-of-multiple-processes"></a><a name="BKMK_Configure_the_execution_behavior_of_multiple_processes"></a>Birden çok sürecin yürütme davranışını yapılandırma  
- Varsayılan olarak, hata ayıklayıcıda birden çok işlem çalışırken, hata ayıklama komutlarının kırılması, basması ve durdurulması genellikle tüm işlemleri etkiler. Örneğin, bir işlem bir kesme noktasında askıya alındığınızda, diğer tüm işlemlerin yürütülmesi de askıya alınır. Yürütme komutlarının hedefleri üzerinde daha fazla denetim elde etmek için bu varsayılan davranışı değiştirebilirsiniz.  
+## <a name="configure-the-execution-behavior-of-multiple-processes"></a><a name="BKMK_Configure_the_execution_behavior_of_multiple_processes"></a>Birden çok işlemin yürütme davranışını yapılandırma  
+ Varsayılan olarak, hata ayıklayıcıda birden çok işlem çalıştığında, kesme, atlama ve durdurma hata ayıklayıcı komutları genellikle tüm işlemlerin etkisini etkiler. Örneğin, bir işlem kesme noktasında askıya alındığında, diğer tüm işlemlerin yürütülmesi de askıya alınır. Yürütme komutlarının hedefleri üzerinde daha fazla denetim kazanmak için bu varsayılan davranışı değiştirebilirsiniz.  
   
-1. Hata **Ayıklama** menüsünde **Seçenekler ve Ayarlar'ı**seçin.  
+1. **Hata Ayıkla** menüsünde, **Seçenekler ve ayarlar**' ı seçin.  
   
-2. Hata **Ayıklama,** **Genel** sayfada, bir işlem onay kutusunu **kırdığında tüm işlemleri kırın.**  
+2. **Hata ayıklama**, **genel** sayfasında, **bir işlem kesildiğinde tüm işlemleri kes** onay kutusunu temizleyin.  
   
-   ![Üstte](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [İçerdekilere](#BKMK_Contents) Dön  
+   ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-## <a name="find-the-source-and-symbol-pdb-files"></a><a name="BKMK_Find_the_source_and_symbol___pdb__files"></a>Kaynak ve simge (.pdb) dosyalarını bulma  
- Bir işlemin kaynak kodunda gezinmek için hata ayıklayıcının işlemin kaynak dosyalarına ve sembol dosyalarına erişmesi gerekir. Bkz. [Simge (.pdb) ve Kaynak Dosyaları Belirt.](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
+## <a name="find-the-source-and-symbol-pdb-files"></a><a name="BKMK_Find_the_source_and_symbol___pdb__files"></a>Kaynak ve sembol (. pdb) dosyalarını bulma  
+ Bir işlemin kaynak kodunda gezinmek için, hata ayıklayıcının işlemin kaynak dosyalarına ve sembol dosyalarına erişmesi gerekir. Bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
- Bir işlem için dosyalara erişemezseniz, Disassemby penceresini kullanarak gezinebilirsiniz. Bkz. [Nasıl Yapılır: Sökme Penceresini Kullanma](../debugger/how-to-use-the-disassembly-window.md)  
+ Bir işlem için dosyalara erişemiyorsanız, ayrıştırma penceresini kullanarak gidebilirsiniz. Bkz [. nasıl yapılır: ayrıştırma penceresini kullanma](../debugger/how-to-use-the-disassembly-window.md)  
   
- ![Üstte](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [İçerdekilere](#BKMK_Contents) Dön  
+ ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-## <a name="start-multiple-processes-in-a-vs-solution-attach-to-a-process-automatically-start-a-process-in-the-debugger"></a><a name="BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger"></a>VS çözümünde birden çok işlemi başlatın, bir işleme takın, hata ayıklayıcıda otomatik olarak bir işlem başlatın  
+## <a name="start-multiple-processes-in-a-vs-solution-attach-to-a-process-automatically-start-a-process-in-the-debugger"></a><a name="BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger"></a>VS çözümünde birden çok işlem başlatma, işleme iliştirme, hata ayıklayıcıda otomatik olarak bir işlem başlatma  
   
-- [Visual Studio çözümünde birden fazla işlemi hata ayıklamaya başlayın](#BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution) • [Başlangıç projesini değiştirme](#BKMK_Change_the_startup_project) • Bir [çözümde belirli bir projeyi başlatın](#BKMK_Start_a_specific_project_in_a_solution) • [Bir çözümde birden fazla proje başlatın](#BKMK_Start_multiple_projects_in_a_solution) • [Bir işleme bağlanma](#BKMK_Attach_to_a_process) • [Hata ayıklayıcıda otomatik olarak bir işlem başlatın](#BKMK_Automatically_start_an_process_in_the_debugger)  
+- [Visual Studio çözümünde birden çok işlemde hata ayıklamaya başlayın](#BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution) • [Başlangıç projesini değiştirme](#BKMK_Change_the_startup_project) • [bir çözümdeki belirli bir projeyi başlatın](#BKMK_Start_a_specific_project_in_a_solution) • bir [çözümde birden çok](#BKMK_Start_multiple_projects_in_a_solution) proje başlatın • bir [işleme iliştirme](#BKMK_Attach_to_a_process) • bir işlem [hata ayıklayıcısında otomatik olarak başlatılır](#BKMK_Automatically_start_an_process_in_the_debugger)  
   
 > [!NOTE]
-> Hata ayıklama, alt proje aynı çözümde olsa bile, hata ayıklama işlemi tarafından başlatılan bir alt işleme otomatik olarak bağlanmaz. Alt işlemin hata sını ayıklamak için:  
+> Hata ayıklayıcı, alt proje aynı çözümde olsa bile, hata ayıklanan bir işlem tarafından başlatılan bir alt işleme otomatik olarak eklemez. Bir alt işlemde hata ayıklamak için:  
 > 
-> - Başlatıldıktan sonra alt işleme takın.  
+> - Başlatıldıktan sonra alt işleme iliştir.  
 > 
 >   -veya-  
->   - Alt işlemi hata ayıklamanın yeni bir örneğinde otomatik olarak başlatmak için Windows'u yapılandırın.  
+>   - Hata ayıklayıcının yeni bir örneğinde alt işlemi otomatik olarak başlatmak için Windows 'ı yapılandırın.  
   
-### <a name="start-debugging-multiple-processes-in-a-visual-studio-solution"></a><a name="BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution"></a>Visual Studio çözümünde birden çok işlemi hata ayıklamaya başlayın  
- Visual Studio çözümünde bağımsız olarak çalıştırılabilen birden fazla projeniz varsa (ayrı işlemlerde çalışan projeler), hata ayıklamanın hangi projelerin başlayacağını seçebilirsiniz.  
+### <a name="start-debugging-multiple-processes-in-a-visual-studio-solution"></a><a name="BKMK_Start_debugging_multiple_processes_in_a_Visual_Studio_solution"></a>Visual Studio çözümünde birden çok işlemi hata ayıklamaya başlama  
+ Bağımsız olarak çalışabilen bir Visual Studio çözümünde birden çok projeniz olduğunda (ayrı işlemlerde çalışan projeler), hata ayıklayıcının başlayacağı projeleri seçebilirsiniz.  
   
- ![Bir projenin başlangıç türünü değiştirme](../debugger/media/dbg-execution-startmultipleprojects.png "DBG_Execution_StartMultipleProjects")  
+ ![Projenin başlangıç türünü değiştirme](../debugger/media/dbg-execution-startmultipleprojects.png "DBG_Execution_StartMultipleProjects")  
   
 #### <a name="change-the-startup-project"></a><a name="BKMK_Change_the_startup_project"></a>Başlangıç projesini değiştirme  
- Bir çözüm için başlangıç projesini değiştirmek için, Çözüm Gezgini'ndeki projeyi seçin ve ardından bağlam menüsünden **Başlangıç Projesi olarak ayarla'yı** seçin.  
+ Bir çözümün başlangıç projesini değiştirmek için Çözüm Gezgini ' de projeyi seçin ve bağlam menüsünden **Başlangıç projesi olarak ayarla** ' yı seçin.  
   
-#### <a name="start-a-specific-project-in-a-solution"></a><a name="BKMK_Start_a_specific_project_in_a_solution"></a>Çözümde belirli bir projeyi başlatma  
- Varsayılan başlangıç projesini değiştirmeden bir çözüm için proje başlatmak için Çözüm Gezgini'nde projeyi seçin ve ardından bağlam menüsünden **Hata Ayıklama'yı** seçin. Daha sonra Başlat yeni örneği seçebilir veya **yeni bir örne** **Adım Atlayabilirsiniz.**  
+#### <a name="start-a-specific-project-in-a-solution"></a><a name="BKMK_Start_a_specific_project_in_a_solution"></a>Çözümdeki belirli bir projeyi başlatma  
+ Varsayılan başlangıç projesini değiştirmeden bir çözüme bir proje başlatmak için Çözüm Gezgini ' de projeyi seçin ve bağlam menüsünden **Hata Ayıkla** ' yı seçin. Sonra **Yeni örnek Başlat** ' ı veya **yeni örneğe adımla**öğesini seçebilirsiniz.  
   
- ![Vs](../debugger/media/pcs-backtotop.png "PCS_BackToTop") çözümünde en üste geri [dön, bir işleme iliştirin, hata ayıklayıcıda otomatik olarak bir işlem başlatın](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
+ ![En üstteki](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [bir vs çözümünde birden çok işleme, bir işleme iliştirme, hata ayıklayıcıda otomatik olarak bir işlem başlatma](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
   
- ![Üstte](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [İçerdekilere](#BKMK_Contents) Dön  
+ ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-#### <a name="start-multiple-projects-in-a-solution"></a><a name="BKMK_Start_multiple_projects_in_a_solution"></a>Çözümde birden çok proje başlatma  
+#### <a name="start-multiple-projects-in-a-solution"></a><a name="BKMK_Start_multiple_projects_in_a_solution"></a>Bir çözümde birden çok proje başlatma  
   
-1. Çözüm Gezgini'nde çözümü seçin ve ardından bağlam menüsünde **Özellikler'i** seçin.  
+1. Çözüm Gezgini içinde çözümü seçin ve bağlam menüsünde **Özellikler** ' i seçin.  
   
-2. **Özellikler** iletişim kutusunda **Ortak Özellikler**, **Başlangıç Projesi'ni** seçin.  
+2. **Özellikler** Iletişim kutusunda **ortak özellikler**, **Başlangıç projesi** ' ni seçin.  
   
-3. Değiştirmek istediğiniz her proje için, hata **ayıklama olmadan** **Başlat,** Başlat veya **Yok'u**seçin.  
+3. Değiştirmek istediğiniz her proje için **Başlat**, **hata ayıklama olmadan Başlat**veya **hiçbiri**seçeneklerinden birini belirleyin.  
   
-   ![Vs](../debugger/media/pcs-backtotop.png "PCS_BackToTop") çözümünde en üste geri [dön, bir işleme iliştirin, hata ayıklayıcıda otomatik olarak bir işlem başlatın](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
+   ![En üstteki](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [bir vs çözümünde birden çok işleme, bir işleme iliştirme, hata ayıklayıcıda otomatik olarak bir işlem başlatma](../debugger/debug-multiple-processes.md#BKMK_Start_multiple_processes_in_a_VS_solution__attach_to_a_process__automatically_start_a_process_in_the_debugger)  
   
-   ![Üstte](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [İçerdekilere](#BKMK_Contents) Dön  
+   ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-### <a name="attach-to-a-process"></a><a name="BKMK_Attach_to_a_process"></a>Bir işleme ekleme  
- Hata ayıklama, uzak bir aygıtta çalışan programlar da dahil olmak üzere Visual Studio dışındaki işlemlerde çalışan programlara da *ekleyebilir.* Bir programa iliştirdikten sonra hata ayıklama yürütme komutlarını kullanabilir, program durumunu inceleyebilir ve böylece devam edebilirsiniz. Programın hata ayıklama bilgileriyle oluşturulup oluşturulmadığına ve programın kaynak koduna erişip erişmediğinize ve ortak dil çalışma zamanı JIT derleyicisinin hata ayıklama bilgilerini izleyip izlemediğine bağlı olarak programı denetleme yeteneğiniz sınırlı olabilir.  
+### <a name="attach-to-a-process"></a><a name="BKMK_Attach_to_a_process"></a>Bir işleme iliştirme  
+ Hata ayıklayıcı, uzak bir cihazda çalışan programlar dahil *olmak üzere Visual* Studio dışındaki işlemlerde çalışan programlara da eklenebilir. Bir programa ekledikten sonra hata ayıklayıcı yürütme komutlarını kullanabilir, program durumunu inceleyebilir ve bu şekilde devam edebilirsiniz. Programın hata ayıklama bilgileri ile oluşturulup yüklenmediğini ve programın kaynak koduna erişip erişemeyeceğini ve ortak dil çalışma zamanı JıT derleyicisinin hata ayıklama bilgilerini izlemediğine bağlı olarak, programı inceleme olanağınız sınırlı olabilir.  
   
- Daha fazla bilgi için [Çalışan İşlemlere Ekle'ye](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) bakın.  
+ Daha fazla bilgi için bkz. [çalışan Işlemlere iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md) .  
   
- **Yerel makinenizde çalışan bir işleme ekleme**  
+ **Yerel makinenizde çalışan bir işleme iliştirme**  
   
- **Hata Ayıklama'yı**seçin, **İşleme Ekle.** **İşleme Ekle** iletişim kutusunda, **Kullanılabilir İşlemler** listesinden işlemi seçin ve sonra **Ekle'yi**seçin.  
+ **Hata Ayıkla**, **İşleme İliştir**' i seçin. **Işleme İliştir** iletişim kutusunda, **kullanılabilir işlemler** listesinden Işlemi seçin ve ardından **Ekle**' yi seçin.  
   
- ![İşlem iletişim kutusuna ekle](../debugger/media/dbg-attachtoprocessdlg.png "DBG_AttachToProcessDlg")  
+ ![Işleme İliştir iletişim kutusu](../debugger/media/dbg-attachtoprocessdlg.png "DBG_AttachToProcessDlg")  
   
- ![Üstte](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [İçerdekilere](#BKMK_Contents) Dön  
+ ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-### <a name="automatically-start-a-process-in-the-debugger"></a><a name="BKMK_Automatically_start_an_process_in_the_debugger"></a>Hata ayıklamada otomatik olarak bir işlem başlatma  
- Bazen, başka bir işlem tarafından başlatılan bir program için başlangıç kodunu hata ayıklamanız gerekebilir. Örnekler arasında hizmetler ve özel kurulum eylemleri yer alır. Bu senaryolarda hata ayıklamanın başlatılmasını sağlayabilir ve uygulamanız başladığında otomatik olarak ekleyebilirsiniz.  
+### <a name="automatically-start-a-process-in-the-debugger"></a><a name="BKMK_Automatically_start_an_process_in_the_debugger"></a>Hata ayıklayıcıda otomatik olarak bir işlem Başlat  
+ Bazen, başka bir işlem tarafından başlatılan bir program için başlangıç kodunda hata ayıklaması yapmanız gerekebilir. Örnekler, hizmetler ve özel kurulum eylemleri içerir. Bu senaryolarda, uygulamanız başladığında hata ayıklayıcının başlamasını ve otomatik olarak iliştirmeyi sağlayabilirsiniz.  
   
-1. Kayıt Defteri Düzenleyicisi 'ni başlatın (**regedit.exe**).  
+1. Kayıt Defteri Düzenleyicisi 'Ni (**regedit.exe**) başlatın.  
   
-2. **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options** klasörüne gidin.  
+2. **HKEY_LOCAL_MACHINE \Software\Microsoft\Windows Nt\currentversion\ımage dosya yürütme seçenekleri** klasörüne gidin.  
   
-3. Hata ayıklamada başlatmak istediğiniz uygulamaklasörünü seçin.  
+3. Hata ayıklayıcıda başlamasını istediğiniz uygulamanın klasörünü seçin.  
   
-    Uygulamanın adı alt klasör olarak listelenmiyorsa, **Resim Dosyası Yürütme Seçenekleri'ni** seçin ve ardından bağlam menüsünde Yeni , **Anahtar'ı**seçin. **Key** Yeni anahtarı seçin, kısayol menüsünde **Yeniden Adlandır'ı** seçin ve ardından uygulamanın adını girin.  
+    Uygulamanın adı bir alt klasör olarak listelenmiyorsa, **görüntü dosyası yürütme seçenekleri** ' ni seçin ve bağlam menüsünde **Yeni**, **anahtar** ' ı seçin. Yeni anahtarı seçin, kısayol menüsünde **Yeniden Adlandır** ' ı seçin ve ardından uygulamanın adını girin.  
   
-4. Uygulama klasörünün bağlam menüsünde **Yeni**, **String Değeri'ni**seçin.  
+4. Uygulama klasörünün bağlam menüsünde **Yeni**, **dize değeri**' ni seçin.  
   
-5. Yeni değerin adını **Yeni Değer'den** ' e `debugger`değiştirin  
+5. Yeni **değerin adını olarak değiştirin** `debugger` .  
   
-6. Hata ayıklama girişinin bağlam menüsünde **Değiştir'i**seçin.  
+6. Hata ayıklayıcı girişinin bağlam menüsünde **Değiştir**' i seçin.  
   
-7. String'i Edit iletişim kutusunda `vsjitdebugger.exe` **Değer veri** kutusuna yazın.  
+7. Dizeyi Düzenle iletişim kutusunda, `vsjitdebugger.exe` **Değer verisi** kutusuna yazın.  
   
-    ![String iletişim kutusunu edit](../debugger/media/dbg-execution-automaticstart-editstringdlg.png "DBG_Execution_AutomaticStart_EditStringDlg")  
+    ![Dizeyi Düzenle iletişim kutusu](../debugger/media/dbg-execution-automaticstart-editstringdlg.png "DBG_Execution_AutomaticStart_EditStringDlg")  
   
-   ![Regedit.exe'de otomatik hata ayıklama başlangıç girişi](../debugger/media/dbg-execution-automaticstart-result.png "DBG_Execution_AutomaticStart_Result")  
+   ![regedit.exeotomatik hata ayıklayıcı başlatma girişi](../debugger/media/dbg-execution-automaticstart-result.png "DBG_Execution_AutomaticStart_Result")  
   
-   ![Üstte](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [İçerdekilere](#BKMK_Contents) Dön  
+   ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-## <a name="switch-processes-break-and-continue-execution-step-through-source"></a><a name="BKMK_Switch_processes__break_and_continue_execution__step_through_source"></a>Geçiş işlemleri, kesme ve yürütme devam, kaynak üzerinden adım  
+## <a name="switch-processes-break-and-continue-execution-step-through-source"></a><a name="BKMK_Switch_processes__break_and_continue_execution__step_through_source"></a>İşlem değiştirme, kesme ve yürütme devam etme, kaynak adımla  
   
-- [İşlemler arasında geçiş](#BKMK_Switch_between_processes) • [Kesme, adım atma ve devam komutları](#BKMK_Break__step__and_continue_commands)  
+- [Süreçler arasında geçiş yap](#BKMK_Switch_between_processes) • [Break, Step ve Continue komutları](#BKMK_Break__step__and_continue_commands)  
   
-### <a name="switch-between-processes"></a><a name="BKMK_Switch_between_processes"></a>İşlemler arasında geçiş  
- Hata ayıklama sırasında birden çok işleme ekleyebilirsiniz, ancak yalnızca bir işlem hata ayıklayıcı herhangi bir zamanda etkindir. Etkin veya *geçerli* işlemi Hata Ayıklama Konumu araç çubuğunda veya **İşlemler** penceresinde ayarlayabilirsiniz. İşlemler arasında geçiş yapmak için her iki işlemde de kesme modunda olması gerekir.  
+### <a name="switch-between-processes"></a><a name="BKMK_Switch_between_processes"></a>Süreçler arasında geçiş yap  
+ Hata ayıklarken birden çok işleme iliştirebilirsiniz, ancak belirli bir zamanda hata ayıklayıcıda yalnızca bir işlem etkin olur. Hata ayıklama konumu araç çubuğunda veya **işlemler** penceresinde etkin veya *geçerli* işlemi ayarlayabilirsiniz. Süreçler arasında geçiş yapmak için her iki işlem de kesme modunda olmalıdır.  
   
  **Geçerli işlemi ayarlamak için**  
   
-- Hata Ayıklama Konumu araç çubuğunda, **İşlem** listesi kutusunu görüntülemek için **İşlem'i** seçin. Geçerli işlem olarak belirlemek istediğiniz işlemi seçin.  
+- Hata ayıklama konumu araç **çubuğunda, işlem liste kutusunu** görüntülemek için **işlem** ' ı seçin. Geçerli işlem olarak belirtmek istediğiniz işlemi seçin.  
   
-   ![İşlemler arasında geçiş](../debugger/media/dbg-execution-switchbetweenmodules.png "DBG_Execution_SwitchBetweenModules")  
+   ![Süreçler arasında geçiş yap](../debugger/media/dbg-execution-switchbetweenmodules.png "DBG_Execution_SwitchBetweenModules")  
   
-   Hata **Ayıklama Konumu** araç çubuğu görünmüyorsa, **Araçlar** **,Özelleştir'i**seçin. Araç **Çubukları** sekmesinde **Hata Ayıklama Konumu'nu**seçin.  
+   **Hata ayıklama konumu** araç çubuğu görünür değilse, **Araçlar**, **Özelleştir**' i seçin. **Araç çubukları** sekmesinde **hata ayıklama konumu**' nu seçin.  
   
-- **İşlemler** penceresini açın (kısayol **Ctrl+Alt+Z),** geçerli işlem olarak ayarlamak istediğiniz işlemi bulun ve çift tıklatın.  
+- **İşlemler** penceresini açın (kısayol **Ctrl + Alt + Z**), geçerli işlem olarak ayarlamak istediğiniz işlemi bulun ve çift tıklayın.  
   
-   ![İşlemler penceresi](../debugger/media/dbg-processeswindow.png "DBG_ProcessesWindow")  
+   ![İşlem penceresi](../debugger/media/dbg-processeswindow.png "DBG_ProcessesWindow")  
   
-   Geçerli işlem sarı bir okla işaretlenir.  
+   Geçerli işlem sarı bir ok ile işaretlendi.  
   
-  Bir projeye geçiş, hata ayıklama amacıyla geçerli işlemi ayarlar. Görüntülediğiniz herhangi bir hata ayıklama penceresi geçerli işlemin durumunu gösterir ve tüm basamaklama komutları yalnızca geçerli işlemi etkiler.  
+  Bir projeye geçiş yapmak, geçerli işlemi hata ayıklama amacıyla ayarlar. Görüntülediğiniz herhangi bir hata ayıklayıcı penceresi geçerli işlemin durumunu gösterir ve tüm Adımlama komutları yalnızca geçerli işlemi etkiler.  
   
-  Üst Geçiş ![işlemlerine geri dön,](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [yürütmeyi kırın ve devam edin, kaynakta adım atın](../debugger/debug-multiple-processes.md#BKMK_Switch_processes__break_and_continue_execution__step_through_source)  
+  ![Üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Anahtar işlemlerine dön, kesme ve yürütmeye devam etme, kaynak adımla](../debugger/debug-multiple-processes.md#BKMK_Switch_processes__break_and_continue_execution__step_through_source)  
   
-  ![Üstte](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [İçerdekilere](#BKMK_Contents) Dön  
+  ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-### <a name="break-step-and-continue-commands"></a><a name="BKMK_Break__step__and_continue_commands"></a>Komutları kesme, basamakla ve devam et  
-  
-> [!NOTE]
-> Varsayılan olarak, kesme, devam ve adım hata ayıklama komutları debugged olan tüm işlemleri etkiler. Bu davranışı değiştirmek için bkz: [Birden çok işlemin yürütme davranışını yapılandır](#BKMK_Configure_the_execution_behavior_of_multiple_processes)  
-  
-||||  
-|-|-|-|  
-|**Komut**|**Bir işlem kırıldığında tüm işlemleri bozun**<br /><br /> Denetlenen (Varsayılan)|**Bir işlem kırıldığında tüm işlemleri bozun**<br /><br /> Temizlenmiş|  
-|**Hata ayıklama** menüsü:<br /><br /> -   **Tümlerini Kır**|Tüm süreçler bozulur.|Tüm süreçler bozulur.|  
-|**Hata ayıklama** menüsü:<br /><br /> -   **Devam**|Tüm süreçler devam ediyor.|Askıya alınan tüm işlemler devam ediyor.|  
-|**Hata ayıklama** menüsü:<br /><br /> -   **Adım Adım**<br />-   **Adım Adım**<br />-   **Dışarı Adım**|Geçerli işlem adımlarsırasında tüm işlemler çalıştırın.<br /><br /> Sonra tüm süreçler bozulur.|Geçerli işlem adımları.<br /><br /> Askıya alınan işlemler devam ediyor.<br /><br /> Çalışma işlemleri devam ediyor.|  
-|**Hata ayıklama** menüsü:<br /><br /> -   **Geçerli İşleme Adım At**<br />-   **Geçerli İşlemin Üzerine Adım At**<br />-   **Şu anki İşlemi dışarı çıkar**|Yok|Geçerli işlem adımları.<br /><br /> Diğer işlemler varolan durumlarını korur (askıya alınır veya çalışır).|  
-|Kaynak penceresi<br /><br /> -   **Kesme noktası**|Tüm süreçler bozulur.|Yalnızca kaynak penceresi işlemi tatili.|  
-|Kaynak penceresi bağlam menüsü:<br /><br /> -   **İmlecile çalıştır**<br /><br /> Kaynak penceresi geçerli işlemde olmalıdır.|Kaynak pencere işlemi imlece çalışırken ve sonra kırılırken tüm işlemler çalışır.<br /><br /> Sonra diğer tüm işlemler bozulur.|Kaynak pencere işlemi imleç için çalışır.<br /><br /> Diğer işlemler varolan durumlarını korur (askıya alınır veya çalışır).|  
-|**İşlemler** penceresi bağlam menüsü:<br /><br /> -   **Kesme İşlemi**|Yok|Seçili işlem tatili.<br /><br /> Diğer işlemler varolan durumlarını korur (askıya alınır veya çalışır).|  
-|**İşlemler** penceresi bağlam menüsü:<br /><br /> -   **İşleme Devam Et**|Yok|Seçili işlem devam eder.<br /><br /> Diğer işlemler varolan durumlarını korur (askıya alınır veya çalışır).|  
-  
- Üst Geçiş ![işlemlerine geri dön,](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [yürütmeyi kırın ve devam edin, kaynakta adım atın](../debugger/debug-multiple-processes.md#BKMK_Switch_processes__break_and_continue_execution__step_through_source)  
-  
- ![Üstte](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [İçerdekilere](#BKMK_Contents) Dön  
-  
-## <a name="stop-debugging-terminate-or-detach-from-processes"></a><a name="BKMK_Stop_debugging__terminate_or_detach_from_processes"></a>Hata ayıklamayı durdurma, sonlandırma veya işlemlerden ayırma  
-  
-- [Komutları durdurma, sonlandırma ve ayırma](#BKMK_Stop__terminate__and_detach_commands)  
-  
-  Varsayılan olarak, **hata ayıklama**da hata ayıklama açık olduğunda Hata **Ayıklama durdurun** , hata ayıklama sona erer veya işlemin hata ayıklayıcı açıldı nasıl bağlı olarak tüm işlemlerden ayırıyor:  
-  
-- Geçerli işlem hata ayıklama başlatıldıysa, bu işlem sonlandırılır.  
-  
-- Hata ayıklama işlemini geçerli işleme bağlarsanız, hata ayıklama işleminden ayrılır ve işlemi çalışır durumda bırakır.  
-  
-  Örneğin, Bir Visual Studio çözümünden bir işlemi hata ayıklamaya başlarsanız, zaten çalışan başka bir işleme iliştirin ve ardından **Hata Ayıklama'yı Durdur'u**seçin, hata ayıklama oturumu sona erer, Visual Studio'da başlatılan işlem sonlandırılırken, eklediğiniz işlem çalışmaya devam edilir. Hata ayıklamayı durdurma şeklinizi denetlemek için aşağıdaki yordamları kullanabilirsiniz.  
+### <a name="break-step-and-continue-commands"></a><a name="BKMK_Break__step__and_continue_commands"></a>Kes, adımla ve Continue komutları  
   
 > [!NOTE]
-> **Bir işlem seçeneği kırıldığında tüm işlemleri** kesme hata ayıklama veya sonlandırma ve işlemlerden ayırma durdurma etkilemez.  
+> Varsayılan olarak, break, Continue ve Step debugger komutları, hata ayıklamakta olan tüm işlemlerin etkisini etkiler. Bu davranışı değiştirmek için, bkz [. birden çok işlemin yürütme davranışını yapılandırma](#BKMK_Configure_the_execution_behavior_of_multiple_processes)  
   
- **Hata Ayıklamayı Durdurma'nın tek bir işlemi nasıl etkilediğini değiştirmek için**  
+|**Komut**|**Bir işlem kesildiğinde tüm işlemleri kes**<br /><br /> Checked (varsayılan)|**Bir işlem kesildiğinde tüm işlemleri kes**<br /><br /> Temizlenen|  
+|-|-|-|
+|**Hata ayıklama** menüsü:<br /><br /> -   **Tümünü kes**|Tüm süreçler kesilir.|Tüm süreçler kesilir.|  
+|**Hata ayıklama** menüsü:<br /><br /> -   **Devam**|Tüm süreçler sürdürülür.|Tüm askıya alınmış süreçler sürdürülür.|  
+|**Hata ayıklama** menüsü:<br /><br /> -   **Adımla**<br />-   **Adımla**<br />-   **Dışarı adımla**|Tüm işlemler geçerli işlem adımları sırasında çalışır.<br /><br /> Sonra tüm süreçler kesilir.|Geçerli işlem adımları.<br /><br /> Askıya alınan işlem özgeçmişi.<br /><br /> Çalışan süreçler devam eder.|  
+|**Hata ayıklama** menüsü:<br /><br /> -   **Geçerli Işleme adımla**<br />-   **Geçerli Işlemin üzerinde adımla**<br />-   **Geçerli Işlemi adımla**|Yok|Geçerli işlem adımları.<br /><br /> Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|  
+|Kaynak penceresi<br /><br /> -   **Ilı**|Tüm süreçler kesilir.|Yalnızca kaynak pencere işlem sonları.|  
+|Kaynak penceresi bağlam menüsü:<br /><br /> -   **İmlece kadar Çalıştır**<br /><br /> Kaynak pencere geçerli işlemde olmalıdır.|Tüm işlemler, kaynak pencere işlemi imlece ve sonra kesilir.<br /><br /> Diğer tüm süreçler kesilir.|Kaynak pencere işlemi imleç için çalışır.<br /><br /> Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|  
+|**İşlem** penceresi bağlam menüsü:<br /><br /> -   **Işlemi kes**|Yok|Seçilen işlem sonları.<br /><br /> Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|  
+|**İşlem** penceresi bağlam menüsü:<br /><br /> -   **Işleme devam et**|Yok|Seçilen işlem devam ettirir.<br /><br /> Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|  
   
-- **İşlemler** penceresini açın (kısayol **Ctrl+Alt+Z**). Bir işlem seçin ve hata **ayıklama durdurulan** onay kutusunu seçerken Ayır'ı seçin veya temizleyin.  
+ ![Üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [Anahtar işlemlerine dön, kesme ve yürütmeye devam etme, kaynak adımla](../debugger/debug-multiple-processes.md#BKMK_Switch_processes__break_and_continue_execution__step_through_source)  
   
-### <a name="stop-terminate-and-detach-commands"></a><a name="BKMK_Stop__terminate__and_detach_commands"></a>Komutları durdurma, sonlandırma ve ayırma  
+ ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
-|||  
-|-|-|  
+## <a name="stop-debugging-terminate-or-detach-from-processes"></a><a name="BKMK_Stop_debugging__terminate_or_detach_from_processes"></a>Hata ayıklamayı Durdur, Sonlandır veya işlemlerden ayır  
+  
+- [Durdur, sonlandır ve ayır komutları](#BKMK_Stop__terminate__and_detach_commands)  
+  
+  Hata ayıklayıcıda birden çok işlem açıkken hata **ayıklamayı Durdur** **' u**seçtiğinizde, hata ayıklayıcı, işlemin hata ayıklayıcıda nasıl açıldığını bağlı olarak tüm süreçlerden sonlanır veya ayırır:  
+  
+- Geçerli işlem hata ayıklayıcıda başlatılmışsa, bu işlem sonlandırılır.  
+  
+- Hata ayıklayıcıyı geçerli işleme eklediyseniz, hata ayıklayıcı işlemden ayırır ve işlemi çalışır halde bırakır.  
+  
+  Örneğin, bir Visual Studio çözümünden bir işlem hata ayıklaması başlatırsanız, zaten çalışmakta olan başka bir işleme bağlanabilir ve ardından **hata ayıklamayı Durdur**' u seçerseniz, eklediğiniz işlem sona erdiğinde, Visual Studio 'da başlatılan işlem sonlandırılır, ancak eklediğiniz işlem çalışır durumda kalır. Hata ayıklamayı durdurduğunuz yöntemi denetlemek için aşağıdaki yordamları kullanabilirsiniz.  
+  
+> [!NOTE]
+> **Tek bir işlem kesmesi** seçeneği, hata ayıklamayı durdurmayı veya sonlandırılmasını veya işlemlerden ayırmayı etkilemez.  
+  
+ **Durduran hata ayıklamanın tek bir işlemi etkileme biçimini değiştirmek için**  
+  
+- **Süreçler** penceresini açın (kısayol **Ctrl + Alt + Z**). Bir işlem seçin ve ardından **hata ayıklama durdurulduğunda ayır** onay kutusunu seçin veya temizleyin.  
+  
+### <a name="stop-terminate-and-detach-commands"></a><a name="BKMK_Stop__terminate__and_detach_commands"></a>Durdur, sonlandır ve ayır komutları  
+  
 |**Komut**|**Açıklama**|  
-|**Hata ayıklama** menüsü:<br /><br /> -   **Hata Ayıklamayı Durdur**|Hata **ayıklama seçeneği durduğunda** davranış **İşlemler** penceresi ayırma tarafından değiştirilmediği sürece:<br /><br /> 1. Hata ayıklama ile başlatılan işlemler sonlandırılır.<br />2. Ekli işlemler hata ayıklamadan ayrılır.|  
-|**Hata ayıklama** menüsü:<br /><br /> -   **Tümlerini Sonlandır**|Tüm işlemler sonlandırılır.|  
-|**Hata ayıklama** menüsü:<br /><br /> -   **Tümlerini Ayır**|Hata ayıklama tüm işlemlerden ayrılır.|  
-|**İşlemler** penceresi bağlam menüsü:<br /><br /> -   **Ayırma İşlemi**|Hata ayıklama, seçili işlemden ayrılır.<br /><br /> Diğer işlemler varolan durumlarını korur (askıya alınır veya çalışır).|  
-|**İşlemler** penceresi bağlam menüsü:<br /><br /> -   **İşlemi Sonlandırma**|Seçili işlem sonlandırılır.<br /><br /> Diğer işlemler varolan durumlarını korur (askıya alınır veya çalışır).|  
-|**İşlemler** penceresi bağlam menüsü:<br /><br /> -   **Hata ayıklama dururken ayırma**|**Hata Ayıklama**davranışını geçiştir , Seçili işlem için **Hata Ayıklama'yı Durdurun:**<br /><br /> - Kontrol: Hata ayıklama işleminden ayrılır.<br />- Temizlendi: İşlem sonlandırılır.|  
+|-|-|  
+|**Hata ayıklama** menüsü:<br /><br /> -   **Hata ayıklamayı Durdur**|Davranış, **hata ayıklama durdurulduğunda** **işlem** penceresi Ayır seçeneği tarafından değiştirilmediği takdirde:<br /><br /> 1. hata ayıklayıcı tarafından başlatılan işlem sonlandırılır.<br />2. eklenen süreçler hata ayıklayıcıdan ayrılır.|  
+|**Hata ayıklama** menüsü:<br /><br /> -   **Tümünü Sonlandır**|Tüm süreçler sonlandırılır.|  
+|**Hata ayıklama** menüsü:<br /><br /> -   **Tümünü Ayır**|Hata ayıklayıcı tüm işlemlerden ayırır.|  
+|**İşlem** penceresi bağlam menüsü:<br /><br /> -   **Işlem ayır**|Hata ayıklayıcı seçili işlemden ayırır.<br /><br /> Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|  
+|**İşlem** penceresi bağlam menüsü:<br /><br /> -   **Işlemi Sonlandır**|Seçilen işlem sonlandırıldı.<br /><br /> Diğer süreçler mevcut durumlarını (askıya alındı veya çalışıyor) korur.|  
+|**İşlem** penceresi bağlam menüsü:<br /><br /> -   **Hata ayıklama durdurulduğunda ayır**|Seçilen işlem için **hata ayıklama**, **hata ayıklamayı Durdur** davranışını değiştirir:<br /><br /> -Checked: hata ayıklayıcı işlemden ayırır.<br />-İşaretsiz: işlem sonlandırılır.|  
   
- ![Üstten başhata](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [ayıklama, sonlandırma veya işlemlerden ayırma](../debugger/debug-multiple-processes.md#BKMK_Stop_debugging__terminate_or_detach_from_processes)  
+ ![Başa](../debugger/media/pcs-backtotop.png "PCS_BackToTop") dön [, hata ayıklamayı Durdur, sonlandırma veya işlemlerden ayır](../debugger/debug-multiple-processes.md#BKMK_Stop_debugging__terminate_or_detach_from_processes)  
   
- ![Üstte](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [İçerdekilere](#BKMK_Contents) Dön  
+ ![En üst](../debugger/media/pcs-backtotop.png "PCS_BackToTop") [içeriğe](#BKMK_Contents) dön  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sembol (.pdb) ve Kaynak Dosyaları Belirt](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
- [Çalışan İşlemlere Ekle](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
- [Hata Ayıklayıcı ile Kod da gezinme](../debugger/navigating-through-code-with-the-debugger.md)   
- [Just-In-Time Hata Ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md)   
+ [Sembol (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+ [Çalışan Işlemlere iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
+ [Hata ayıklayıcı ile kod arasında gezinme](../debugger/navigating-through-code-with-the-debugger.md)   
+ [Tam zamanında hata ayıklama](../debugger/just-in-time-debugging-in-visual-studio.md)   
  [Çok İş Parçacıklı Uygulamalarda Hata Ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)

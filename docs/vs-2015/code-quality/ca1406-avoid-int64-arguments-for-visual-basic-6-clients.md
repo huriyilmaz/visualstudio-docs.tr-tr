@@ -15,33 +15,33 @@ caps.latest.revision: 16
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: c20ea7bd7bba6f221395c7e2c21d6c1dcc241fb4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b6ab93c24cd97d498ae886c7a9184fd4a5f111f1
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661290"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534920"
 ---
 # <a name="ca1406-avoid-int64-arguments-for-visual-basic-6-clients"></a>CA1406: Visual Basic 6 istemcileri için Int64 bağımsız değişkenlerinden kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|AvoidInt64ArgumentsForVB6Clients|
 |CheckId|CA1406|
 |Kategori|Microsoft. çalışabilirliği|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Özellikle bileşen nesne modeli (COM) tarafından görünür olarak işaretlenen bir tür, <xref:System.Int64?displayProperty=fullName> bağımsız değişkeni alan bir üye bildirir.
+## <a name="cause"></a>Nedeni
+ Özellikle bileşen nesne modeli (COM) tarafından görünür olarak işaretlenen bir tür, bağımsız değişken alan bir üye bildirir <xref:System.Int64?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Kural Tanımı
  Visual Basic 6 COM istemcisi 64-bit tamsayıya erişemez.
 
- Varsayılan olarak, aşağıdakiler COM 'a görünür: derlemeler, ortak türler, ortak türlerdeki ortak örnek üyeleri ve tüm ortak değer türleri üyeleri. Ancak, hatalı pozitif sonuçları azaltmak için bu kural, türün COM görünürlüğünü açık bir şekilde ifade etmek için gereklidir; kapsayan bütünleştirilmiş kod, <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> `false` ayarlanmış olarak işaretlenmelidir ve tür, <xref:System.Runtime.InteropServices.ComVisibleAttribute> `true` olarak işaretli olmalıdır.
+ Varsayılan olarak, aşağıdakiler COM 'a görünür: derlemeler, ortak türler, ortak türlerdeki ortak örnek üyeleri ve tüm ortak değer türleri üyeleri. Ancak, hatalı pozitif sonuçları azaltmak için bu kural, türün COM görünürlüğünü açık bir şekilde ifade etmek için gereklidir; kapsayan bütünleştirilmiş kod, olarak ayarlanmış olarak işaretlenmelidir <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> `false` ve türü <xref:System.Runtime.InteropServices.ComVisibleAttribute> olarak kümesiyle işaretlenmelidir `true` .
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Değeri her zaman 32 bitlik bir integral olarak ifade edilebilir bir parametre için bu kural ihlalini onarmak için, parametre türünü <xref:System.Int32?displayProperty=fullName> olarak değiştirin. Parametrenin değeri 32 bitlik bir integral olarak ifade edilebileceğinden daha büyük olabilir, parametre türünü <xref:System.Decimal?displayProperty=fullName> olarak değiştirin. @No__t_0 ve <xref:System.Double?displayProperty=fullName> <xref:System.Int64> veri türünün üst aralıklarında duyarlık kaybı olduğunu unutmayın. Üyenin COM tarafından görülebilmesi amaçlıyoksa, <xref:System.Runtime.InteropServices.ComVisibleAttribute> ' ı `false` olarak ayarlayın.
+ Değeri her zaman 32 bitlik bir integral olarak ifade edilebilir bir parametre için bu kural ihlalini onarmak için, parametre türünü olarak değiştirin <xref:System.Int32?displayProperty=fullName> . Parametrenin değeri 32 bitlik bir integral olarak ifade edilebileceğinden daha büyük olabilir, parametre türünü olarak değiştirin <xref:System.Decimal?displayProperty=fullName> . Hem hem de <xref:System.Single?displayProperty=fullName> <xref:System.Double?displayProperty=fullName> veri türünün üst aralıklarında duyarlık kaybı olduğunu unutmayın <xref:System.Int64> . Üyenin COM 'a görünür olması belirtilmemişse, <xref:System.Runtime.InteropServices.ComVisibleAttribute> kümesini olarak işaretleyin `false` .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Visual Basic 6 COM istemcilerinin türe erişememesi durumunda, bu kuraldan bir uyarının görüntülenmesini güvenli hale gelir.

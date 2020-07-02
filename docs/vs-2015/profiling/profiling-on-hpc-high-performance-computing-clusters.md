@@ -21,42 +21,42 @@ caps.latest.revision: 27
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: eeb5375d636ef16fde658b88dbf662cdd9f1e27d
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
+ms.openlocfilehash: b63f9ddf29ff74a4aa4bf089c266e12e37bb2f50
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983802"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535544"
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>HPC (Yüksek Performanslı Hesaplama) Kümelerinde Profil Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsPreExt](../includes/vspreext-md.md)] veya [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] Profil Oluşturma Araçları örnekleme yöntemini kullanarak Microsoft Windows HPC kümelerinin işlem düğümlerinde profil oluşturabilirsiniz. HPC hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [büyük işlem: HPC & Batch](https://azure.microsoft.com/solutions/big-compute/) .  
+Veya Profil Oluşturma Araçları örnekleme yöntemini kullanarak Microsoft Windows HPC kümelerinin işlem düğümlerinde profil oluşturabilirsiniz [!INCLUDE[vsPreExt](../includes/vspreext-md.md)] [!INCLUDE[vsUltExt](../includes/vsultext-md.md)] . HPC hakkında daha fazla bilgi için bkz. Microsoft Web sitesinde [büyük işlem: HPC & Batch](https://azure.microsoft.com/solutions/big-compute/) .  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Ön koşullar  
  Bir HPC işlem düğümünde profil yapmak için aşağıdakileri yapmanız gerekir:  
   
-- Microsoft HPC Pack 2008 ' i [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)]ile aynı bilgisayara yükler. Bilgisayar HPC kümesinin bir parçası olmak zorunda değildir. HPC Pack 'i [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=2800)' nde yükleyebilirsiniz.  
+- Microsoft HPC Pack 2008 'i ile aynı bilgisayara yükler [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] . Bilgisayar HPC kümesinin bir parçası olmak zorunda değildir. HPC Pack 'i [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=2800)' nde yükleyebilirsiniz.  
   
-- HPC işlem düğümüne Profil Oluşturma Araçları [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] ve tek başına sürümünü yükler. Hem [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] hem de tek başına profil Oluşturucu için yükleme programları [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] yükleme medyasında bulunabilir. **Göz önünde** [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] yükledikten ve Profil Oluşturma Araçları yüklemeden önce işlemi yeniden başlatmanız gerekir.  
+- [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)]HPC işlem düğümüne profil oluşturma araçları ve tek başına sürümünü yükler. Yükleme medyasında hem hem de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] tek başına profil Oluşturucu için yükleme programları vardır [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] . **Göz önünde** ' İ yükledikten sonra ve Profil Oluşturma Araçları yüklemeden önce işlemi yeniden başlatmanız gerekir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .  
   
-  [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] ve tek başına Profil Oluşturma Araçları etkin bir HPC işlem düğümüne yüklemek ve küme makinesinde profil oluşturmayı etkinleştirmek için şu adımları izleyin:  
+  [!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)]Etkin BIR HPC işlem düğümüne ve tek başına profil oluşturma araçları yüklemek ve küme makinesinde profil oluşturmayı etkinleştirmek için şu adımları izleyin:  
   
 1. HPC Pack ile yüklenen komut istemi penceresini açın.  
   
 2. Aşağıdaki komutları ayrı komut istemlerine yazın:  
   
-    1. `clusrun /all /scheduler:` *% Headnode%% FxPath%* `/q /norestart`  
+    1. `clusrun /all /scheduler:`*% Headnode%% FxPath%*`/q /norestart`  
   
-    2. `clusrun /all /scheduler:` *% Headnode%* `shutdown /r /t 0 /d u:4:2 /c "Microsoft .NET Framework install required restart"`  
+    2. `clusrun /all /scheduler:`*% Headnode%*`shutdown /r /t 0 /d u:4:2 /c "Microsoft .NET Framework install required restart"`  
   
-    3. %% *ProfilerPath% `/q /norestart` `clusrun /all /scheduler:`% Headnode*  
+    3. `clusrun /all /scheduler:`*% Headnode%% ProfilerPath%*`/q /norestart`  
   
-|||  
+|Söz dizimi öğesi|Açıklama|  
 |-|-|  
 |*Baş düğümüne*|Kümenin baş düğümünün adı.|  
-|*% FxPath%*|[!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)] yükleyicisinin yolu. [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] yükleme medyasında yol: WCU\dotNetFramework\ dotNetFx40_Full_x86_x64. exe|  
-|*% ProfilerPath%*|Profil Oluşturma Araçları yükleyicisinin bağımsız sürümünün yolu. [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] yükleme medyasında yol: tek başına Profiler\x64\ vs_profiler. exe|  
+|*% FxPath%*|[!INCLUDE[net_v40_long](../includes/net-v40-long-md.md)]Yükleyicinin yolu. [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)]Yükleme medyasında yol: WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe|  
+|*% ProfilerPath%*|Profil Oluşturma Araçları yükleyicisinin bağımsız sürümünün yolu. [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)]Yükleme medyasında yol: tek başına Profiler\x64\vs_profiler.exe|  
   
 ## <a name="profiling-on-an-hpc-compute-node"></a>HPC Işlem düğümünde profil oluşturma  
  HPC kümesi ve hedef bilgilerini belirtmek için HPC performans sihirbazını kullanarak bir profil oluşturma oturumu yapılandırırsınız. Performans oturumu özellik sayfalarında ek seçenekler belirleyebilirsiniz. Profil Oluşturma Araçları, gerekli hedef ikilileri otomatik olarak dağıtır ve profil oluşturucu ve HPC uygulamasını başlatır.  
@@ -69,11 +69,11 @@ ms.locfileid: "73983802"
   
 3. Sihirbazın ikinci sayfasında, profil atamak istediğiniz uygulamayı seçin.  
   
-    - [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]Şu anda açık olan bir projenin profilini almak için, **bir veya daha fazla kullanılabilir proje** seçeneğini belirleyin ve ardından listeden proje adını seçin.  
+    - İçinde açık olan bir projeyi profil için [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] , **bir veya daha fazla kullanılabilir proje** seçeneğini belirleyin ve ardından listeden proje adını seçin.  
   
     - Açık bir projede olmayan bir ikilinin profilini eklemek için **çalıştırılabilir (. EXE dosyası)** seçeneğini.  
   
-4. **İleri**'ye tıklayın.  
+4. **İleri**’ye tıklayın.  
   
 5. Sihirbazın üçüncü sayfasında:  
   
@@ -85,7 +85,7 @@ ms.locfileid: "73983802"
   
     - **Dağıtım konumu**' nda HPC sunucusunun dağıtım için görüntüleri hazırlamak üzere kullandığı dizinin yolunu belirtin.  
   
-6. **İleri**'ye tıklayın.  
+6. **İleri**’ye tıklayın.  
   
 7. Sihirbazın dördüncü sayfasında:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "73983802"
   
          HPC kümesindeki belirli bir düğümde çalışan işlem veya işlemlerin profilini belirlemek için **düğüm üzerinde profil** seçeneğini belirleyin ve ardından açılan listeden düğümü seçin.  
   
-8. **İleri**'ye tıklayın.  
+8. **İleri**’ye tıklayın.  
   
 9. Sihirbazın beşinci sayfasında, profil oluşturucuyu ve profil oluşturma işlemini hemen başlatmayı veya Performans Gezgini kullanarak daha sonra profil oluşturmayı başlatmayı seçebilirsiniz.  
   
@@ -139,13 +139,13 @@ ms.locfileid: "73983802"
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|**Proje adı**|Geçerli [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] projesinin veya çözümün adı.|  
+|**Proje adı**|Geçerli [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] Proje veya çözümün adı.|  
 |**Profil Oluşturucu durdurulduğunda temizle**|Doğru olduğunda, yürütme dizinine dağıtılan ikilileri kaldırır. Kullanıcı programı tarafından oluşturulan dosyalar ve dizinler bu adımda kaldırılmaz. Yürütme dizini ve dağıtım dizini IDE tarafından oluşturulduysa, IDE bunları kaldırmaya çalışır, ancak IDE tarafından dağıtılmayan dosyalar varsa bunu yapmaz.|  
-|**Dağıtılacak ek dosyalar**|İşlem düğümünde dağıtılacak ek dosyaların noktalı virgülle ayrılmış bir listesini belirtir. Bir iletişim kutusunu kullanarak birden çok dosya seçmek için üç nokta düğmesini ( **...** ) tıklayabilirsiniz.|  
-|**Mpiexec komutu**|MPı uygulamasını Başlatan uygulamayı belirtir. Varsayılan değer **Mpiexec. exe** ' dir|  
-|**Mpiexec bağımsız değişkenleri**|Mpiexec. exe komutuna geçirilecek bağımsız değişkenleri belirtir.|  
+|**Dağıtılacak ek dosyalar**|İşlem düğümünde dağıtılacak ek dosyaların noktalı virgülle ayrılmış bir listesini belirtir. Bir iletişim kutusunu kullanarak birden çok dosya seçmek için üç nokta düğmesini (**...**) tıklayabilirsiniz.|  
+|**Mpiexec komutu**|MPı uygulamasını Başlatan uygulamayı belirtir. Varsayılan değer **mpiexec.exe**|  
+|**Mpiexec bağımsız değişkenleri**|mpiexec.exe komutuna geçirilecek bağımsız değişkenleri belirtir.|  
 |**Kümede istenen düğümler**|Uygulamanın çalıştırılacağı kümedeki düğüm sayısını belirtir.|  
-|**CRT dosyaları dağıtma**|Doğru olduğunda, küme üzerinde C/C++ çalışma süresini dağıtır.|  
+|**CRT dosyaları dağıtma**|Doğru olduğunda, kümede C/C++ çalışma süresini dağıtır.|  
 |**Ön profil betiği**|Profil oluşturma oturumu başlamadan önce yerel geliştirme bilgisayarında çalıştırılacak betiğin yolunu ve dosya adını belirtir.|  
 |**Profil öncesi betik bağımsız değişkenleri**|Profil öncesi betiğe geçirilecek bağımsız değişkenleri belirtir.|  
 |**Profil sonrası betiği**|Profil oluşturma oturumu bittikten sonra yerel geliştirme bilgisayarında çalıştırılacak betiğin yolunu ve dosya adını belirtir.|  

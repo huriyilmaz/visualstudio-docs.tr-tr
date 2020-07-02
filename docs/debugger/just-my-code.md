@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58e233be301630b00031bb90cd95fc78c2697c4e
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 867477fd3e490f91e81fb91c8be267ede83c8d2c
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85348437"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536571"
 ---
 # <a name="debug-only-user-code-with-just-my-code"></a>Yalnızca Yalnızca kendi kodum ile Kullanıcı kodunda hata ayıkla
 
@@ -185,7 +185,7 @@ Bir *. natstepfilter* dosyası, bu söz dizimi Ile bir XML dosyasıdır:
 
 ```
 
-|Öğe|Description|
+|Öğe|Açıklama|
 |-------------|-----------------|
 |`Function`|Gereklidir. Kullanıcı dışı işlevler olarak bir veya daha fazla işlevi belirtir.|
 |`Name`|Gereklidir. Eşleştirilecek tam işlev adını belirten bir ECMA-262 biçimli normal ifade. Örneğin:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> içindeki tüm yöntemlerin `MyNS::MyClass` Kullanıcı dışı kod olarak kabul edileceğini hata ayıklayıcıya söyler. Eşleşme büyük/küçük harfe duyarlıdır.|
@@ -196,7 +196,7 @@ Bir *. natstepfilter* dosyası, bu söz dizimi Ile bir XML dosyasıdır:
 
 <a name="BKMK_JS_User_and_non_user_code"></a>JavaScript Yalnızca kendi kodum, kodu aşağıdaki sınıflandırmalardaki kategorilere ayırarak, yığın görüntüsünü Adımlama ve çağır ' a denetler:
 
-|||
+|Sınıflandırma|Açıklama|
 |-|-|
 |**MyCode**|Sahip olduğunuz ve denetlediğiniz Kullanıcı kodu.|
 |**LibraryCode**|Düzenli olarak kullandığınız kitaplıklardaki Kullanıcı olmayan kod ve uygulamanız doğru şekilde çalışır (örneğin, WinJS veya jQuery).|
@@ -279,7 +279,7 @@ Dosyalar *üzerindeMycode.js* bu söz dizimini kullanır:
 
 **Eval**, **Function**ve **ScriptBlock** anahtar değer çiftleri, dinamik olarak üretilen kodun sınıflandırıldığını belirleme:
 
-|||
+|Name|Açıklama|
 |-|-|
 |**Dğer**|Ana bilgisayar tarafından sunulan işleve bir dize geçirerek yürütülen komut dosyası `eval` . Varsayılan olarak, eval betiği **MyCode**olarak sınıflandırılır.|
 |**İşlev**|Oluşturucuya bir dize geçirerek yürütülen komut dosyası `Function` . Varsayılan olarak, Işlev betiği **Librarycode**olarak sınıflandırılır.|
@@ -295,7 +295,7 @@ Değeri şu anahtar sözcüklerden birine değiştirebilirsiniz:
 
 **MyCode**, **Kitaplıklar**ve **ilişkisiz** anahtar değer çiftleri bir sınıflandırmayla dahil etmek istediğiniz URL 'leri veya dosyaları belirtir:
 
-|||
+|Name|Açıklama|
 |-|-|
 |**MyCode**|**MyCode**olarak sınıflandırılan bir URL veya dosya dizisi.|
 |**Kitaplıklar**|**Librarycode**olarak sınıflandırılan bir URL veya dosya dizisi.|

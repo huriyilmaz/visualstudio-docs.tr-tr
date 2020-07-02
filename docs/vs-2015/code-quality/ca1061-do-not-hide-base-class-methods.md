@@ -15,24 +15,24 @@ caps.latest.revision: 11
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 24579e6aa3ba1bf70ed6f195091152b60f3232a3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: c884eb569d5682326d2dc667363f991467171386
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72604009"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533360"
 ---
-# <a name="ca1061-do-not-hide-base-class-methods"></a>CA1061: Taban sınıf yöntemlerini gizlemeyin
+# <a name="ca1061-do-not-hide-base-class-methods"></a>CA1061: Temel sınıf metotlarını gizlemeyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DoNotHideBaseClassMethods|
 |CheckId|CA1061|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Türetilmiş bir tür, aynı ada sahip ve temel yöntemlerinden biri ile aynı sayıda parametreye sahip bir yöntem bildirir; bir veya daha fazla parametre, temel yöntemde karşılık gelen parametrenin temel türüdür; ve kalan parametrelerde, temel yöntemde karşılık gelen parametrelerle özdeş olan türler vardır.
 
 ## <a name="rule-description"></a>Kural Tanımı

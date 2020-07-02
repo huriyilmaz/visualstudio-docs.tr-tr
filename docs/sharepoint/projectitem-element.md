@@ -12,17 +12,17 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2768a2e55b3e38158f2ef6b856a653a1a2c12dfa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 44fc1b918960f0268d916ccfa560f118cea47144
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62562409"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536883"
 ---
 # <a name="projectitem-element"></a>ProjectItem öğesi
-  Bir SharePoint proje öğesi temsil eder. Bu öğe gerekli kök öğe, *.spdata* dosya.
+  Bir SharePoint proje öğesini temsil eder. Bu öğe *. spdata* dosyasının gerekli kök öğesi.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <ProjectItem DefaultFile = "File that opens in the editor when you open the project item"
@@ -46,34 +46,34 @@ ms.locfileid: "62562409"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|**DefaultFile**|İsteğe bağlı **xs: dize** özniteliği.<br /><br /> SharePoint proje öğesi içinde açtığınızda Visual Studio Düzenleyicisi'nde açılır dosyanın dosya adı dahil olmak üzere yolun göreli **Çözüm Gezgini**. İçeren klasöründen göreli yoludur *.spdata* dosya.|
-|**FeatureReceiverClass**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint Proje öğesinin özellik alıcısı sınıfı tam adı. Özellik alıcıları hakkında daha fazla bilgi için bkz: [proje öğelerinde paketleme ve dağıtım bilgileri sağlayan](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).|
-|**FeatureReceiverAssembly**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint Proje öğesinin özellik alıcısı tanımlayan bir derlemeye tam adını belirtir. Özellik alıcıları hakkında daha fazla bilgi için bkz: [proje öğelerinde paketleme ve dağıtım bilgileri sağlayan](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md). Tam olarak nitelenmiş derleme adları hakkında daha fazla bilgi için bkz: [derleme adları](/dotnet/framework/app-domains/assembly-names).|
-|**SupportedTrustLevels**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint proje öğesi destekleyen güven düzeyleri belirtir. Bu değer aşağıdaki dizelerini biri olabilir: Korumalı, FullTrust veya tüm. Değer Sandboxed hem FullTrust belirtir.<br /><br /> Atadığınız değerine karşılık gelen bir özel SharePoint proje öğesi türü içinde bu özniteliğin değeri <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels%2A> özelliği uygulamanızda <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> yöntemi. Bu öznitelik için farklı bir değer belirtirseniz, belirttiğiniz aynı güven düzeyine belirtir, böylece Visual Studio değerin üzerine yazar <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels%2A> özelliği.|
-|**SupportedDeploymentScopes**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint proje öğesi destekleyen dağıtım kapsamları belirtir. Bu değer, bir veya daha fazla aşağıdaki dizelerden oluşan bir virgülle ayrılmış bir dizedir: Grup, Site, Web, WebApplication veya paket. Örneğin: `Web, Site`.<br /><br /> Atadığınız değerine karşılık gelen bir özel SharePoint proje öğesi türü içinde bu özniteliğin değeri <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> özelliği uygulamanızda <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> yöntemi. Bu öznitelik için farklı bir değer belirtirseniz, belirttiğiniz aynı güven düzeyine belirtir, böylece Visual Studio değerin üzerine yazar <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> özelliği.|
-|**Tür**|Gerekli **xs: String** özniteliği.<br /><br /> SharePoint proje öğesi için tanımlayıcı. Özel bir SharePoint proje öğesi türü içinde tanımlayıcı geçirdiğiniz dizedir <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>. Daha fazla bilgi için [nasıl yapılır: Bir SharePoint proje öğesi türü tanımlayacağınızı](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).<br /><br /> Visual Studio ile birlikte gelen yerleşik SharePoint Proje öğeleri için tanımlayıcılar listesi için bkz. [genişletmek SharePoint Proje öğeleri](../sharepoint/extending-sharepoint-project-items.md).|
+|**DefaultFile**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> **Çözüm Gezgini**' de SharePoint proje öğesini açtığınızda, Visual Studio Düzenleyicisi 'nde açılan dosyanın dosya adı da dahil olmak üzere göreli yol. Yol, *. spdata* dosyasını içeren klasörden görelidir.|
+|**FeatureReceiverClass**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint proje öğesi için bir özellik alıcısı sınıfının tam adı. Özellik alıcıları hakkında daha fazla bilgi için bkz. [Proje Öğelerinde Paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md).|
+|**FeatureReceiverAssembly**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint proje öğesi için bir özellik alıcısı tanımlayan bir derlemenin tam adını belirtir. Özellik alıcıları hakkında daha fazla bilgi için bkz. [Proje Öğelerinde Paketleme ve dağıtım bilgilerini sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md). Tam derleme adları hakkında daha fazla bilgi için bkz. [derleme adları](/dotnet/framework/app-domains/assembly-names).|
+|**SupportedTrustLevels**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint proje öğesinin desteklediği güven düzeylerini belirtir. Bu değer şu dizelerden biri olabilir: korumalı, FullTrust veya ALL. All değeri hem korumalı hem de FullTrust belirler.<br /><br /> Özel bir SharePoint proje öğesi türünde, bu özniteliğin değeri, yöntemi uygulamanızda özelliği atadığınız değere karşılık gelir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> . Bu öznitelik için farklı bir değer belirtirseniz, Visual Studio, özellikte belirttiğiniz güven düzeyini belirtecek şekilde değerin üzerine yazar <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedTrustLevels%2A> .|
+|**SupportedDeploymentScopes**|İsteğe bağlı **xs: String** özniteliği.<br /><br /> Bu SharePoint proje öğesinin desteklediği dağıtım kapsamlarını belirtir. Bu değer, şu dizelerden birini veya daha fazlasını içeren, virgülle ayrılmış bir dizedir: Farm, site, Web, WebApplication veya Package. Örneğin, `Web, Site`<br /><br /> Özel bir SharePoint proje öğesi türünde, bu özniteliğin değeri, yöntemi uygulamanızda özelliği atadığınız değere karşılık gelir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> . Bu öznitelik için farklı bir değer belirtirseniz, Visual Studio, özellikte belirttiğiniz güven düzeyini belirtecek şekilde değerin üzerine yazar <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition.SupportedDeploymentScopes%2A> .|
+|**Tür**|Gerekli **xs: String** özniteliği.<br /><br /> SharePoint proje öğesi için tanımlayıcı. Özel bir SharePoint proje öğesi türünde, tanımlayıcı öğesine geçirdiğiniz dizedir <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> . Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).<br /><br /> Visual Studio 'Ya dahil olan yerleşik SharePoint proje öğeleri için tanımlayıcıların listesi için bkz. [SharePoint proje öğelerini genişletme](../sharepoint/extending-sharepoint-project-items.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ExtensionData](../sharepoint/extensiondata-element.md)|İsteğe bağlı öğe.<br /><br /> SharePoint proje öğesi ile ilişkilendirilmiş özel veri öğelerinin bir koleksiyonunu temsil eder.<br /><br /> Yalnızca bir içerebilir **ExtensionData** öğesi.|
-|[FeatureProperties](../sharepoint/featureproperties-element.md)|İsteğe bağlı öğe.<br /><br /> SharePoint'te dağıtıldığında bir özellikle birlikte eklenen özellik değerleri koleksiyonunu temsil eder.<br /><br /> Yalnızca bir içerebilir **FeatureProperties** öğesi.|
-|[Dosyalar](../sharepoint/files-element.md)|İsteğe bağlı **FileCollectionType** öğesi.<br /><br /> SharePoint olmayan bağımlı proje çıktısı gibi özellik öğesi dosyaları SharePoint proje öğesi ile dağıtmak için dosyaları belirtir.<br /><br /> Ya da içeren bir **dosyaları** veya **Projectıtemfolder** öğesi, ancak ikisine birden değil.|
-|[Projectıtemfolder](../sharepoint/projectitemfolder-element.md)|İsteğe bağlı **ProjectItemFolderType** öğesi.<br /><br /> Eşlenmiş bir klasörü temsil eder.<br /><br /> Ya da içeren bir **dosyaları** veya **Projectıtemfolder** öğesi, ancak ikisine birden değil.|
-|[SafeControls](../sharepoint/safecontrols-element.md)|İsteğe bağlı öğe.<br /><br /> ASPX denetimleri ve Web bölümleri, herhangi bir SharePoint sitesinde ASPX sayfasında erişmek herhangi bir kullanıcı için güvenli olarak belirlenmiş bir koleksiyonunu temsil eder.<br /><br /> Yalnızca bir içerebilir **SafeControls** öğesi.|
+|[ExtensionData](../sharepoint/extensiondata-element.md)|İsteğe bağlı öğe.<br /><br /> SharePoint proje öğesiyle ilişkili özel veri öğelerinin koleksiyonunu temsil eder.<br /><br /> Yalnızca bir **ExtensionData** öğesi dahil edebilirsiniz.|
+|[FeatureProperties](../sharepoint/featureproperties-element.md)|İsteğe bağlı öğe.<br /><br /> SharePoint 'e dağıtıldığında bir özelliğe dahil olan özellik değerlerinin koleksiyonunu temsil eder.<br /><br /> Yalnızca bir **FeatureProperties** öğesi ekleyebilirsiniz.|
+|[Dosyalar](../sharepoint/files-element.md)|İsteğe bağlı **FileCollectionType** öğesi.<br /><br /> Özellik öğesi dosyaları ve bağımlı SharePoint olmayan projelerin çıktısı gibi SharePoint proje öğesiyle dağıtılacak dosyaları belirtir.<br /><br /> Bir **Dosya** ya da **ProjectItemFolder** öğesi ekleyin, ancak ikisini birden kullanmayın.|
+|[ProjectItemFolder](../sharepoint/projectitemfolder-element.md)|İsteğe bağlı **ProjectItemFolderType** öğesi.<br /><br /> Eşlenmiş bir klasörü temsil eder.<br /><br /> Bir **Dosya** ya da **ProjectItemFolder** öğesi ekleyin, ancak ikisini birden kullanmayın.|
+|[SafeControls](../sharepoint/safecontrols-element.md)|İsteğe bağlı öğe.<br /><br /> Herhangi bir kullanıcının SharePoint sitesindeki herhangi bir ASPX sayfasına erişmesi için güvenli olarak belirlenmiş bir ASPX denetimleri ve Web Bölümleri koleksiyonunu temsil eder.<br /><br /> Yalnızca bir **SafeControls** öğesi dahil edebilirsiniz.|
 
 ### <a name="parent-elements"></a>Üst öğeler
  Yok.
 
 ## <a name="element-information"></a>Öğe bilgileri
 
-|||
+|Özellik|Değer|
 |-|-|
-|**Namespace**|http:\/\/schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|
-|**Şema adı**|SharePoint proje öğesi şema|
-|**Doğrulama dosyası**|ProjectItemModelSchema.xsd|
-|**Boş olabilir**|Hayır|
+|**Ad Alanı**|http: \/ \/ schemas.Microsoft.com/VisualStudio/<br>2010/SharePointTools/Sharepointprojectıtemmodel|
+|**Şema adı**|SharePoint proje öğesi şeması|
+|**Doğrulama dosyası**|Projectıtemmodelschema. xsd|
+|**Boş olabilir**|No|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[SharePoint proje öğesi şema rseference](../sharepoint/sharepoint-project-item-schema-reference.md)
+[SharePoint proje öğesi şeması rseference](../sharepoint/sharepoint-project-item-schema-reference.md)

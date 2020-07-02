@@ -30,14 +30,14 @@ Yönetilen Kod Analizi Aracı, yönetilen kod kitaplıklarında kural ihlallerin
 
  Aşağıdaki tabloda her uyarı için belirtilen bilgi türü gösterilmektedir.
 
-|Öğe|Description|
+|Öğe|Açıklama|
 |----------|-----------------|
 |Tür|Kural için TypeName.|
 |CheckId|Kural için benzersiz tanımlayıcı. CheckId ve Category bir uyarının kaynak üzerinde gizlemesi için kullanılır.|
 |Kategori|Uyarının kategorisi.|
 |Yeni Değişiklik|Kural ihlalinin düzeltilme düzeltmesinin önemli bir değişiklik olup olmadığı. Son değişiklik, ihlale neden olan hedefe bağımlılığı olan bir derlemenin yeni sabit sürümle yeniden derlenmeyeceği veya değişiklik nedeniyle çalışma zamanında başarısız olabileceği anlamına gelir. Birden çok düzeltme kullanılabilir olduğunda ve en az bir düzeltme, Son değişiklik olduğunda ve bir düzeltme yoksa, ' kırılmamış ' ve ' kırılmamış ' seçeneklerinin her ikisi de belirtilir.|
 |Nedeni|Kuralın bir uyarı oluşturmasına neden olan özel yönetilen kod.|
-|Description|Uyarının arkasındaki sorunları açıklar.|
+|Açıklama|Uyarının arkasındaki sorunları açıklar.|
 |İhlaller Nasıl Düzeltilir?|Kaynak kodun kuralı karşılamak için nasıl değiştirileceğini ve bir uyarı oluşturmasını engellemesini açıklar.|
 |Uyarılar Bastırıldığında|Kuraldan bir uyarı bastırmasının ne kadar güvenli olduğunu açıklar.|
 |Örnek kod|Kuralı ihlal eden örnekleri ve kuralı karşılayan örnekleri düzeltildi.|

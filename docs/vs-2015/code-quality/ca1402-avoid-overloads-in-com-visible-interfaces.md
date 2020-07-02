@@ -15,24 +15,24 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 258b7ba1444cd990c3ec68ebfd5faccc945439e8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: b5c1e3af0e35bf92d72e853948c455893b417998
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72661344"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534946"
 ---
 # <a name="ca1402-avoid-overloads-in-com-visible-interfaces"></a>CA1402: COM görünebilir arabirimler içinde aşırı yüklemelerden kaçının
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|AvoidOverloadsInComVisibleInterfaces|
 |CheckId|CA1402|
 |Kategori|Microsoft. çalışabilirliği|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Bileşen nesne modeli (COM) görünür arabirimi, aşırı yüklenmiş yöntemleri bildirir.
 
 ## <a name="rule-description"></a>Kural Tanımı
@@ -55,7 +55,7 @@ void SomeMethod_3(int valueOne, int valueTwo);
  Visual Basic 6 COM istemcileri, ad içinde bir alt çizgi kullanarak arabirim yöntemleri uygulayamaz.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kuralın ihlalini onarmak için, aşırı yüklenmiş yöntemleri adların benzersiz olması için yeniden adlandırın. Alternatif olarak, erişilebilirliği `internal` (`Friend` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) olarak değiştirerek veya `false` olarak ayarlanan <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> özniteliğini uygulayarak arabirimi COM 'a görünmez hale getirebilirsiniz.
+ Bu kuralın ihlalini onarmak için, aşırı yüklenmiş yöntemleri adların benzersiz olması için yeniden adlandırın. Alternatif olarak, erişilebilirliği `internal` ( `Friend` ın) olarak değiştirerek [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] veya <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> özniteliğini olarak ayarlayarak, arabirimi com 'a görünmez hale getirin `false` .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Bu kuraldan uyarıyı bastırmayın.

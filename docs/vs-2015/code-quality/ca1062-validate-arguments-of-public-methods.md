@@ -16,33 +16,33 @@ caps.latest.revision: 29
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 50044b51a3e576ff7d1c11b19b2f498f99b63019
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 377906675d70a712f8ca72b0b6e4d8a6864c1fbc
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72663653"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533243"
 ---
-# <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062: Genel yöntemlerin bağımsız değişkenlerini doğrulayın
+# <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062: Genel metotların bağımsız değişkenlerini doğrulayın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|ValidateArgumentsOfPublicMethods|
 |CheckId|CA1062|
 |Kategori|Microsoft. Design|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- Dışarıdan görülebilen bir yöntem, bağımsız değişkenin `null` (Visual Basic `Nothing`) olup olmadığını doğrulamadan başvuru bağımsız değişkenlerinden birine başvurur.
+## <a name="cause"></a>Nedeni
+ Dışarıdan görünen bir yöntem, bağımsız değişkenin `null` (Visual Basic) olup olmadığını doğrulamadan başvuru bağımsız değişkenlerinden birine başvurur `Nothing` .
 
 ## <a name="rule-description"></a>Kural Tanımı
- Dışarıdan görünen yöntemlere geçirilen tüm başvuru bağımsız değişkenleri `null` ' a karşı denetlenmelidir. Uygunsa, bağımsız değişken `null` olduğunda <xref:System.ArgumentNullException> oluşturun.
+ Dışarıdan görünen yöntemlere geçirilen tüm başvuru bağımsız değişkenleri için gözden geçirilmesi gerekir `null` . Uygunsa, <xref:System.ArgumentNullException> bağımsız değişken olduğunda bir oluşturun `null` .
 
- Ortak veya korumalı olarak bildirildiği için bir yöntem bilinmeyen bir derlemeden çağrılabilecek ise, yöntemin tüm parametrelerini doğrulamanız gerekir. Yöntem yalnızca bilinen derlemeler tarafından çağrılabilir şekilde tasarlanmışsa, yöntemi iç yapmanız ve <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini yöntemi içeren derlemeye uygulamanız gerekir.
+ Ortak veya korumalı olarak bildirildiği için bir yöntem bilinmeyen bir derlemeden çağrılabilecek ise, yöntemin tüm parametrelerini doğrulamanız gerekir. Yöntemi yalnızca bilinen derlemeler tarafından çağrılabilir şekilde tasarlanmışsa, yöntemi iç yapmanız ve <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliğini, yöntemi içeren derlemeye uygulamanız gerekir.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için her başvuru bağımsız değişkenini `null` ' a karşı doğrulayın.
+ Bu kural ihlalini onarmak için her başvuru bağımsız değişkenini ile karşılaştırarak doğrulayın `null` .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Başvuru yapılan parametrenin işlev içindeki başka bir yöntem çağrısı tarafından doğrulandığından eminseniz, bu kuraldan bir uyarıyı gizleyebilirsiniz.
@@ -55,16 +55,16 @@ ms.locfileid: "72663653"
  [!code-vb[FxCop.Design.ValidateArguments#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/vb/FxCop.Design.ValidateArguments.vb#1)]
 
 ## <a name="example"></a>Örnek
- @No__t_0, bu kural, parametreleri doğrulamayı yapan başka bir yönteme geçirmekte olduğunu algılamaz.
+ [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]' De, bu kural, parametreleri doğrulamayı yapan başka bir yönteme geçirmekte olduğunu algılamaz.
 
  [!code-csharp[FxCop.Design.ValidateArguments#2](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/cs/fxcop.design.validatearguments.copyctors.cs#2)]
  [!code-csharp[FxCop.Design.ValidateArguments#2](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/cs/FxCop.Design.ValidateArguments.cs#2)]
  [!code-vb[FxCop.Design.ValidateArguments#2](../snippets/visualbasic/VS_Snippets_CodeAnalysis/FxCop.Design.ValidateArguments/vb/FxCop.Design.ValidateArguments.vb#2)]
 
 ## <a name="example"></a>Örnek
- Başvuru nesneleri olan alan veya özellikleri dolduran kopya oluşturucular, CA1062 kuralını da ihlal edebilir. Bu ihlal, kopya oluşturucusuna geçirilen kopyalanmış nesne `null` (Visual Basic `Nothing`) olabileceğinden meydana gelir. İhlalin çözülmesi için, kopyalanmış nesnenin null olup olmadığını denetlemek üzere statik (Visual Basic ile paylaşılan) metodunu kullanın.
+ Başvuru nesneleri olan alan veya özellikleri dolduran kopya oluşturucular, CA1062 kuralını da ihlal edebilir. Bu ihlal, kopya oluşturucusuna geçirilen kopyalanmış nesne `null` (Visual Basic) olabileceğinden meydana gelir `Nothing` . İhlalin çözülmesi için, kopyalanmış nesnenin null olup olmadığını denetlemek üzere statik (Visual Basic ile paylaşılan) metodunu kullanın.
 
- Aşağıdaki `Person` sınıfı örneğinde, `Person` kopya oluşturucusuna geçirilen `other` nesnesi `null` olabilir.
+ Aşağıdaki `Person` sınıf örneğinde, `other` kopya oluşturucuya geçirilen nesne olabilir `Person` `null` .
 
 ```
 
@@ -89,7 +89,7 @@ public class Person
 ```
 
 ## <a name="example"></a>Örnek
- Aşağıdaki düzeltilen `Person` örneğinde, kopyalama oluşturucusuna geçirilen `other` nesnesi, önce `PassThroughNonNull` yönteminde null değeri denetlenir.
+ Aşağıdaki düzeltilen `Person` örnekte, `other` Copy oluşturucusuna geçirilen nesne, öncelikle yönteminde null değeri denetlenir `PassThroughNonNull` .
 
 ```
 public class Person

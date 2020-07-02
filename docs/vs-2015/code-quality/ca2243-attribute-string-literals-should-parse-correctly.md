@@ -15,28 +15,28 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 62a2adc6f01e5cb26a6af26d71a124f8b81e07fb
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 09e932651576f9b6d595657ad024b8f2697ad016
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72671970"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535752"
 ---
 # <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243: Öznitelik dize harfleri doğru çözümlenmelidir
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|AttributeStringLiteralsShouldParseCorrectly|
 |CheckId|CA2243|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Özniteliğin dize sabit değeri bir URL, GUID veya sürüm için doğru ayrıştırılmadı.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Öznitelikleri <xref:System.Attribute?displayProperty=fullName> ' dan türetildiğinden ve öznitelikler derleme zamanında kullanıldığından, kurucularına yalnızca sabit değerler geçirilebilir. URL 'Leri, GUID 'Leri ve sürümleri temsil etmesi gereken öznitelik parametreleri <xref:System.Uri?displayProperty=fullName>, <xref:System.Guid?displayProperty=fullName> ve <xref:System.Version?displayProperty=fullName> olarak yazılamıyor, çünkü bu türler sabitler olarak gösterilemez. Bunun yerine, dizeler tarafından temsil etmelidir.
+ Öznitelikleri öğesinden türetildiğinden <xref:System.Attribute?displayProperty=fullName> ve öznitelikleri derleme zamanında kullanıldığından, kurucularına yalnızca sabit değerler geçirilebilir. <xref:System.Uri?displayProperty=fullName> <xref:System.Guid?displayProperty=fullName> <xref:System.Version?displayProperty=fullName> Bu türler sabitler olarak temsil edilemediğinden, URL 'Leri, GUID 'leri ve sürümleri temsil etmesi gereken öznitelik parametreleri,, ve olarak türlenemez. Bunun yerine, dizeler tarafından temsil etmelidir.
 
  Parametresi bir dize olarak yazıldığı için, derleme zamanında hatalı biçimlendirilmiş bir parametrenin geçirilmesi mümkündür.
 
@@ -62,4 +62,4 @@ ms.locfileid: "72671970"
 - ' Uri ', ' urn ' veya ' URL ' içeren parametreler, System. Uri olarak ayrıştırılamıyor.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [CA1054: URI parametreleri dizeler olmamalıdır](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
+ [CA1054: URI parametreleri dize olmamalıdır](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)

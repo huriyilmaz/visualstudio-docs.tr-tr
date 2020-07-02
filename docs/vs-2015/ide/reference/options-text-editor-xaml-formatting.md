@@ -31,12 +31,12 @@ caps.latest.revision: 20
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 319e09d2438b23c217f7820fe4288758a595be56
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 537223aab878aee2fb00e9417d0415f0a17d2dd5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662217"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534140"
 ---
 # <a name="options-text-editor-xaml-formatting"></a>Seçenekler, Metin Düzenleyici, XAML, Biçimlendirme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -59,9 +59,9 @@ Aşağıdaki olaylardan herhangi biri algılandığında otomatik biçimlendirme
 
   Hangi olayların otomatik biçimlendirmeye neden olduğunu belirtebilirsiniz.
 
-|||
+|Name|Açıklama|
 |-|-|
-|**Bitiş etiketi veya basit etiket tamamlandığında**|Bir bitiş etiketi veya basit bir etiket yazmayı bitirdiğinizde otomatik biçimlendirme gerçekleşir. Basit bir etiketin öznitelikleri yoktur, örneğin `<Button />`.|
+|**Bitiş etiketi veya basit etiket tamamlandığında**|Bir bitiş etiketi veya basit bir etiket yazmayı bitirdiğinizde otomatik biçimlendirme gerçekleşir. Basit bir etiketin öznitelikleri yoktur, örneğin `<Button />` .|
 |**Başlangıç etiketi tamamlandığında**|Başlangıç etiketi yazmayı bitirdiğinizde otomatik biçimlendirme gerçekleşir.|
 |**Panodan yapıştırılırken**|Otomatik biçimlendirme, panodaki XAML 'yi XAML görünümüne yapıştırdığınızda oluşur.|
 
@@ -70,7 +70,7 @@ Bu ayar, öznitelik değerlerinin tek veya çift tırnak işareti içine alınm�
 
 Bu seçeneği ayarladıktan sonra, yalnızca Tasarımcı kullanılarak veya XAML görünümünde el ile eklenen öznitelikler etkilenir.
 
-|||
+|Name|Açıklama|
 |-|-|
 |**Çift tırnak işareti (")**|Öznitelik değerleri çift tırnak içine alınır.<br /><br /> `<Button Name="button1">Hello</Button>`|
 |**Tek tırnak (')**|Öznitelik değerleri tek tırnak içine alınır.<br /><br /> `<Button Name='button1'>Hello</Button>`|
@@ -78,15 +78,15 @@ Bu seçeneği ayarladıktan sonra, yalnızca Tasarımcı kullanılarak veya XAML
 ## <a name="tag-wrapping"></a>Etiket sarmalama
 Etiket sarmalama için bir satır uzunluğu belirtebilirsiniz. Etiket kaydırma etkinleştirildiğinde, daha sonra tasarımcı kullanılarak eklenen XAML, uygun şekilde sarmalanır.
 
-|||
+|Name|Açıklama|
 |-|-|
 |**Belirtilen uzunluğu aşan etiketleri sarın**|Çizgilerin, **uzunluğa**göre belirtilen satır uzunluğuna kaydırılıp kaydırılmayacağını belirtir.|
-|**Uzunluklu**|Bir çizginin içerebileceği karakter sayısı. Gerekirse, bazı XAML satırları belirtilen satır uzunluğunu aşabilir.|
+|**Uzunluk**|Bir çizginin içerebileceği karakter sayısı. Gerekirse, bazı XAML satırları belirtilen satır uzunluğunu aşabilir.|
 
 ## <a name="attribute-spacing"></a>Öznitelik aralığı
 Özniteliklerin XAML belgenizde nasıl düzenlendiğini denetlemek için bu ayarı kullanın
 
-|||
+|Name|Açıklama|
 |-|-|
 |**Öznitelikler arasındaki newlines ve boşlukları koru**|Öznitelikler arasındaki yeni satırlar ve boşluklar otomatik biçimlendirmeden etkilenmez.<br /><br /> `<Button Height="23" Name="button1"`<br /><br /> `Width="75">Hello</Button>`|
 |**Öznitelikler arasına tek boşluk Ekle**|Öznitelikler bir satır kaplar ve bitişik öznitelikleri ayıran bir alandır. Etiket kaydırma ayarları uygulanır.<br /><br /> `<Button Height="23" Name="button1" Width="75">Hello</Button>`|
@@ -105,28 +105,28 @@ Etiket sarmalama için bir satır uzunluğu belirtebilirsiniz. Etiket kaydırma 
 ## <a name="auto-insert"></a>Otomatik Ekle
 Etiketlerin ve tekliflerin otomatik olarak ne zaman oluşturulduğunu denetlemek için bu ayarı kullanın.
 
-|||
+|Name|Açıklama|
 |-|-|
 |**Kapatma etiketleri**|Açılış etiketini (>) karakterden daha uzun bir öğe kapatma etiketinin otomatik olarak oluşturulup oluşturulmayacağını belirtir.|
 |**Öznitelik teklifleri**|Ekstre tamamlama açılan listesinden bir öznitelik değeri seçildiğinde kapsayan tekliflerin oluşturulup oluşturulmayacağını belirtir.|
 |**MarkupExtensions için kapatma ayraçları**|Açma küme ayracı ({) yazdığınızda bir işaretleme uzantısının kapanış ayracı (}) otomatik olarak oluşturulup oluşturulmayacağını belirtir.|
 |**MarkupExtension parametrelerini ayırmak için virgüller**|Bir biçimlendirme uzantısına birden fazla parametre yazdığınızda virgüllerin oluşturulup oluşturulmayacağını belirtir.|
 
-## <a name="default-view"></a>Varsayılan görünüm
+## <a name="default-view"></a>Varsayılan Görünüm
 XAML belgeleri yüklendiğinde Tasarım görünümü görünüp başlatılmayacağını denetlemek için bu ayarı kullanın.
 
-|||
+|Name|Açıklama|
 |-|-|
 |**Belgeleri her zaman tam XAML görünümünde aç**|XAML belgelerinin Tasarım görünümü olmadan yalnızca XAML görünümünde görünüp görünmeyeceğini belirtir. Büyük belgeleri yüklemek için faydalıdır.|
 
 ## <a name="toolbox"></a>Araç Kutusu
 Araç kutusunda Kullanıcı denetimleri ve özel denetimlerin gösterilip gösterilmeyeceğini belirtmek için bu ayarı kullanın.
 
-|||
+|Name|Açıklama|
 |-|-|
 |**Araç kutusu öğelerini otomatik olarak doldur**|Geçerli çözümdeki Kullanıcı denetimlerinin ve özel denetimlerin araç kutusunda otomatik olarak gösterilip gösterilmeyeceğini belirtir.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
-[WPF 'de xaml](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) 
- nasıl yapılır: XAML[ve kod Izlenecek](https://msdn.microsoft.com/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c) yol 
-[xaml görünüm ayarlarını değiştirme](https://msdn.microsoft.com/aee87c79-ca01-4f84-8fb7-a9e47048ee47)
+[WPF](https://msdn.microsoft.com/library/5d858575-a83b-42df-ad3f-047ed2d6e3c8) 
+ 'de xaml [Nasıl yapılır: XAML görünüm ayarlarını değiştirme](https://msdn.microsoft.com/aee87c79-ca01-4f84-8fb7-a9e47048ee47) 
+ [XAML ve kod talimatları](https://msdn.microsoft.com/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)

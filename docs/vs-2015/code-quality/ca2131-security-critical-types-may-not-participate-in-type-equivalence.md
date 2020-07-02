@@ -11,28 +11,28 @@ caps.latest.revision: 12
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 0d32ebc08866a14755ddb8b2c70e2dd0c4ce61f1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: ccd556a5929e56597de678ad4ad8ea6c101b7c7f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72655504"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535895"
 ---
 # <a name="ca2131-security-critical-types-may-not-participate-in-type-equivalence"></a>CA2131: Güvenlik kritik türleri tür eşdeğerliğine katılamaz
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|CriticalTypesMustNotParticipateInTypeEquivalence|
 |CheckId|CA2131|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Tür eşdeğerlik ve türün kendisi veya bir üye ya da bir tür, <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle birlikte işaretlenir.
+## <a name="cause"></a>Nedeni
+ Tür denklik türüne, türüne ve türe veya bir üyeye ya da türüne katılan özniteliği ile işaretlenir <xref:System.Security.SecurityCriticalAttribute> .
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bu kural, herhangi kritik türler veya kritik yöntemleri içeren türler veya tür eşdeğerliğine katılan alanlar tetiklendiğinde başlatılır. CLR böyle bir türü algıladığında, çalışma zamanında bir <xref:System.TypeLoadException> ile yüklenemez. Tipik olarak bu kural, kullanıcılar tlbimp'e güvenmek yerine el ile tür eşdeğerliği uyguladığında başlar ve derleyiciler tür eşdeğerliği yapar.
+ Bu kural, herhangi kritik türler veya kritik yöntemleri içeren türler veya tür eşdeğerliğine katılan alanlar tetiklendiğinde başlatılır. CLR böyle bir türü algıladığında, çalışma zamanında yükleme başarısız olur <xref:System.TypeLoadException> . Tipik olarak bu kural, kullanıcılar tlbimp'e güvenmek yerine el ile tür eşdeğerliği uyguladığında başlar ve derleyiciler tür eşdeğerliği yapar.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kuralın ihlalini onarmak için SecurityCritical özniteliğini kaldırın.
@@ -46,4 +46,4 @@ ms.locfileid: "72655504"
  [!code-csharp[FxCop.Security.CA2131.CriticalTypesMustNotParticipateInTypeEquivalence#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.security.ca2131.criticaltypesmustnotparticipateintypeequivalence/cs/ca2131 - criticaltypesmustnotparticipateintypeequivalence.cs#1)]
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Güvenliği saydam kod, düzey 2](https://msdn.microsoft.com/library/4d05610a-0da6-4f08-acea-d54c9d6143c0)
+ [Güvenliği Saydam Kod, 2. Düzey](https://msdn.microsoft.com/library/4d05610a-0da6-4f08-acea-d54c9d6143c0)

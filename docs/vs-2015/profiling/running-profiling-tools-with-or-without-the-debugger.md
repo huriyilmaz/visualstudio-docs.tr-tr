@@ -9,12 +9,12 @@ caps.latest.revision: 12
 author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: b242bd0eec4f7faa3f7a27923de289c494ccf798
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: 6fb07e9bc6c308e27e3ad054c5aeb0b12c092054
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298200"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534010"
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>Hata Ayıklayıcı ile veya Hata Ayıklayıcı Olmadan Profil Oluşturma Araçlarını Çalıştırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -38,7 +38,7 @@ Visual Studio artık, bazıları hata ayıklayıcı ile veya olmayan bir dizi pe
   
      Hata ayıklama derlemeleri, sürüm derlemelerinin sağladığı belirli iyileştirmeler yoktur, örneğin işlev çağrıları ve sabitler, kullanılmayan kod yollarını ayıklamalar ve hata ayıklayıcı tarafından kullanılamayacak yollarla değişkenleri depolar. Hata ayıklayıcı, hata ayıklama için gerekli olan belirli işlemleri gerçekleştirdiğinden (örneğin, özel durum ve modül yükleme olayları) performans sürelerini değiştirir. Bu nedenle, hata ayıklayıcı ile tümleşik araçlarındaki performans numaraları yalnızca onlarca milisaniye içinde doğru olur. Hata ayıklayıcı olmayan araçlarla yayın yapılandırmalarının performans numaraları çok daha kesindir.  
   
-## <a name="BKMK_Quick_start__Collect_diagnostic_data"></a>Hata ayıklarken profil oluşturma verilerini topla  
+## <a name="collect-profiling-data-while-debugging"></a><a name="BKMK_Quick_start__Collect_diagnostic_data"></a>Hata ayıklarken profil oluşturma verilerini topla  
  Aşağıdaki bölüm yerel olarak hata ayıklama ile ilgilidir. Daha sonraki bölümlerde, bir cihazda hata ayıklama veya uzaktan hata ayıklama hakkında bilgi edinebilirsiniz.  
   
 1. Hata ayıklamak istediğiniz projeyi açın, ardından hata **Ayıkla/hata ayıklamayı Başlat** **(ya da** araç çubuğundan veya **F5**' i Başlat) seçeneğine tıklayın.  
@@ -99,14 +99,14 @@ Visual Studio artık, bazıları hata ayıklayıcı ile veya olmayan bir dizi pe
 ## <a name="the-profiling-report"></a>Profil oluşturma raporu  
  ![Tanılama araçları raporu](../profiling/media/diag-report.png "DIAG_Report")  
   
-|||  
+|Görüntü|Açıklama|  
 |-|-|  
-|![1. adım](../profiling/media/procguid-1.png "ProcGuid_1")|Zaman çizelgesi profil oluşturma oturumunun uzunluğunu, uygulama yaşam döngüsü etkinleştirme olaylarını ve kullanıcı işaretlerini gösterir.|  
-|![2. adım](../profiling/media/procguid-2.png "ProcGuid_2")|Mavi çubukları sürükleyip zaman çizelgesinde bir bölgeyi seçerek, raporu zaman çizelgesinin bir bölümüyle sınırlandırabilirsiniz.|  
-|![3. adım](../profiling/media/procguid-3.png "ProcGuid_3")|Bir araç, bir veya daha fazla ana grafik görüntüler. Tanılama oturumunuz birden çok araç ile oluşturulduysa, tüm ana grafikler görüntülenir.|  
+|![1. Adım](../profiling/media/procguid-1.png "ProcGuid_1")|Zaman çizelgesi profil oluşturma oturumunun uzunluğunu, uygulama yaşam döngüsü etkinleştirme olaylarını ve kullanıcı işaretlerini gösterir.|  
+|![2. Adım](../profiling/media/procguid-2.png "ProcGuid_2")|Mavi çubukları sürükleyip zaman çizelgesinde bir bölgeyi seçerek, raporu zaman çizelgesinin bir bölümüyle sınırlandırabilirsiniz.|  
+|![3. Adım](../profiling/media/procguid-3.png "ProcGuid_3")|Bir araç, bir veya daha fazla ana grafik görüntüler. Tanılama oturumunuz birden çok araç ile oluşturulduysa, tüm ana grafikler görüntülenir.|  
 |![4. adım](../profiling/media/procguid-4.png "ProcGuid_4")|Tek tek grafikleri daraltabilir ve genişletebilirsiniz.|  
-|![5. adım](../profiling/media/procguid-6.png "ProcGuid_6")|Verileriniz birden çok araçtan bilgi içerdiğinde, araç ayrıntıları sekmeler altında toplanır.|  
-|![6. adım](../profiling/media/procguid-6a.png "ProcGuid_6a")|Bir araç, bir veya daha fazla ayrıntı görünümüne sahip olabilir. Görünüm, zaman çizelgesinin seçili bölgesine göre filtrelenir.|  
+|![5. Adım](../profiling/media/procguid-6.png "ProcGuid_6")|Verileriniz birden çok araçtan bilgi içerdiğinde, araç ayrıntıları sekmeler altında toplanır.|  
+|![6. Adım](../profiling/media/procguid-6a.png "ProcGuid_6a")|Bir araç, bir veya daha fazla ayrıntı görünümüne sahip olabilir. Görünüm, zaman çizelgesinin seçili bölgesine göre filtrelenir.|  
   
 ## <a name="setting-the-analysis-target-to-another-device"></a>Analiz hedefini başka bir cihazla ayarlama  
  Visual Studio projesinden uygulamanızı başlatmanın yanı sıra, alternatif hedeflerde tanılama oturumları da çalıştırabilirsiniz. Örneğin, Windows uygulama mağazasından yüklenmiş uygulamanızın bir sürümünde performans sorunlarını tanılamak isteyebilirsiniz.  

@@ -11,12 +11,12 @@ caps.latest.revision: 63
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: fc633c0cad752203b8dadca81de0f18f4e9b1b3e
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: 4b6481a56b4cbc254baaee3ae087201df69c371b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918844"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534218"
 ---
 # <a name="define-a-menu-command-on-a-modeling-diagram"></a>Modelleme diyagramında menü komutu tanımlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -39,7 +39,7 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
 1. **Yeni proje** iletişim kutusunda, **modelleme projeleri**' nin altında, **komut uzantısı**' nı seçin.
 
-2. Yeni projede **. cs** dosyasını açın ve `CommandExtension` sınıfını değiştirip komutu uygulayın.
+2. Yeni projede **. cs** dosyasını açın ve `CommandExtension` komutunu uygulamak için sınıfını değiştirin.
 
     Daha fazla bilgi için, bkz. [menü komutunu uygulama](#Implementing).
 
@@ -47,7 +47,7 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
 4. F5 tuşuna basarak menü komutunu test edin. Daha fazla bilgi için, bkz. [menü komutunu yürütme](#Executing).
 
-5. Projeniz tarafından oluşturulan dosya **sepeti\\\*\\\*. vsix** dosyasını kopyalayarak başka bir bilgisayara menü komutunu yükler. Daha fazla bilgi için bkz. [Uzantı yükleme ve kaldırma](#Installing).
+5. Menü komutunu, projeniz tarafından oluşturulan **bin \\ \* \\ \* . vsix** dosyasını kopyalayarak başka bir bilgisayara yükler. Daha fazla bilgi için bkz. [Uzantı yükleme ve kaldırma](#Installing).
 
    Alternatif yordam aşağıda verilmiştir:
 
@@ -57,7 +57,7 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
    1. **Dosya** menüsünde, **Yeni**, **Proje**' yi seçin.
 
-   2. **Yüklü şablonlar**altında, **görsel C#**  veya **Visual Basic**' yi seçin. Orta sütundaki **sınıf kitaplığı**' nı seçin.
+   2. **Yüklü şablonlar**altında **Visual C#** veya **Visual Basic**seçin. Orta sütundaki **sınıf kitaplığı**' nı seçin.
 
    3. Yeni bir çözüm oluşturmak mı yoksa zaten açtığınız bir VSıX çözümüne bir bileşen eklemek mi istediğinizi belirtmek için **çözüm** ayarlayın.
 
@@ -67,17 +67,17 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
    |                                                                                                    Başvuru                                                                                                    |                                                                                                  Bunu yapmanıza izin verir                                                                                                  |
    |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                                                                                        System.ComponentModel.Composition                                                                                        |                                         [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)kullanarak bileşenleri tanımlayın.                                          |
-   |                                                                                      Microsoft.VisualStudio.Uml.Interfaces                                                                                      |                                                                                        Model öğelerinin özelliklerini okuyun ve değiştirin.                                                                                         |
+   |                                                                                        System. ComponentModel. Composition                                                                                        |                                         [Managed Extensibility Framework (MEF)](https://msdn.microsoft.com/library/6c61b4ec-c6df-4651-80f1-4854f8b14dde)kullanarak bileşenleri tanımlayın.                                          |
+   |                                                                                      Microsoft. VisualStudio. Uml. Interfaces                                                                                      |                                                                                        Model öğelerinin özelliklerini okuyun ve değiştirin.                                                                                         |
    |                                                                             Microsoft. VisualStudio. mimari Turetools. Extensibility                                                                              |                                                                                      Model öğeleri oluşturun, diyagramlarda şekilleri değiştirin.                                                                                       |
-   |                                                                                  Microsoft.VisualStudio.Modeling.Sdk.[version]                                                                                  | Model olay işleyicilerini tanımlayın.<br /><br /> Modelinizdeki değişiklikler serisini yalıtır. Daha fazla bilgi için bkz. [işlemleri kullanarak UML model güncelleştirmelerini bağlama](../modeling/link-uml-model-updates-by-using-transactions.md). |
+   |                                                                                  Microsoft. VisualStudio. model. SDK. sürümünüze                                                                                  | Model olay işleyicilerini tanımlayın.<br /><br /> Modelinizdeki değişiklikler serisini yalıtır. Daha fazla bilgi için bkz. [işlemleri kullanarak UML model güncelleştirmelerini bağlama](../modeling/link-uml-model-updates-by-using-transactions.md). |
    |                                                            Microsoft. VisualStudio. model. SDK. diyagramlar. sürümünüze<br /><br /> (her zaman gerekli değil)                                                             |                                                                                   Hareket işleyicileri için ek Diyagram öğelerine erişin.                                                                                   |
    | Microsoft. VisualStudio. mimari Turetools. Extensibility. Layer<br /><br /> Yalnızca Katman diyagramlarındaki komutlar için gereklidir. Daha fazla bilgi için bkz. [Katman diyagramlarını genişletme](../modeling/extend-layer-diagrams.md). |                                                                                             Bir katman diyagramında komutları tanımlayın.                                                                                              |
 
 3. Projeye bir sınıf dosyası ekleyin ve içeriğini aşağıdaki koda ayarlayın.
 
    > [!NOTE]
-   > Ad alanı, sınıf adı ve `Text` tarafından döndürülen değeri tercihinize göre değiştirin.
+   > Ad alanı, sınıf adı ve tarafından döndürülen değeri tercihinize göre değiştirin `Text` .
    >
    >  Birden çok komut tanımlarsanız, bunlar menüde sınıf adlarının alfabetik düzeninde görünürler.
 
@@ -148,7 +148,7 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
     1. **Çözüm Gezgini**, çözümün kısayol menüsünde, **Ekle**, **Yeni proje**' yi seçin.
 
-    2. **Yüklü şablonlar**altında,  **C# görsel** veya **Visual Basic**' ı genişletin, ardından **genişletilebilirlik**' i seçin. Orta sütunda **VSIX projesi**' ni seçin.
+    2. **Yüklü şablonlar**altında **Visual C#** veya **Visual Basic**' i genişletin, ardından **genişletilebilirlik**' i seçin. Orta sütunda **VSIX projesi**' ni seçin.
 
 3. Çözüm Gezgini, VSıX projesinin kısayol menüsünde **Başlangıç projesi olarak ayarla**' yı seçin.
 
@@ -160,19 +160,19 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
     3. **Varlıklar** sekmesinde **Yeni**' yi seçin ve iletişim kutusunda, şunu ayarlayın:
 
-          = **MEF bileşeni** **yazın**
+         **Tür**  =  **MEF bileşeni**
 
-         **Kaynak** = **geçerli çözümdeki bir proje**
+         **Kaynak**  =  **Geçerli çözümdeki bir proje**
 
-         *Sınıf kitaplığı projenizden* **Proje** = 
+         **Proje**  =  *Sınıf kitaplığı projeniz*
 
-## <a name="Implementing"></a>Menü komutunu uygulama
- Menü komut sınıfı <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension>için gerekli yöntemleri uygular.
+## <a name="implementing-the-menu-command"></a><a name="Implementing"></a>Menü komutunu uygulama
+ Menü komut sınıfı için gerekli yöntemleri uygular <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> .
 
-|||
+|İmza|Açıklama|
 |-|-|
 |`string Text { get; }`|Menü öğesinin etiketini döndürün.|
-|`void QueryStatus(IMenuCommand command);`|Kullanıcı diyagramda sağ tıkladığında çağırılır.<br /><br /> Bu yöntem modeli değiştirmemelidir.<br /><br /> Komutun görünmesini ve etkinleştirilmesini isteyip istemediğinizi öğrenmek için `DiagramContext.CurrentDiagram.SelectedShapes` kullanın.<br /><br /> Kurmak<br /><br /> Kullanıcı diyagramda sağ tıkladığında komutun menüde görünmesi gerekiyorsa `true` -   `command.Visible`<br />kullanıcının menüdeki komuta tıkla, `true` `command.Enabled` -   <br />Menü etiketini dinamik olarak ayarlamak için `command.Text` -   |
+|`void QueryStatus(IMenuCommand command);`|Kullanıcı diyagramda sağ tıkladığında çağırılır.<br /><br /> Bu yöntem modeli değiştirmemelidir.<br /><br /> `DiagramContext.CurrentDiagram.SelectedShapes`Komutun görünmesini ve etkinleştirilmesini isteyip istemediğinizi öğrenmek için kullanın.<br /><br /> Kurmak<br /><br /> -   `command.Visible``true`Kullanıcı diyagramda sağ tıkladığında komutun menüde görünmesi gerekir<br />-   `command.Enabled``true`Kullanıcı menüdeki komutuna tıkladıysanız<br />-   `command.Text`Menü etiketini dinamik olarak ayarlamak için|
 |`void Execute (IMenuCommand command);`|Görünür ve etkinse Kullanıcı menü öğesine tıkladığında çağırılır.|
 
 ### <a name="accessing-the-model-in-code"></a>Koddaki modele erişme
@@ -184,7 +184,7 @@ Visual Studio 'da, UML diyagramının kısayol menülerinde ek menü öğeleri t
 
  ...
 
- `IDiagramContext` bildirimi, metotlarda diyagrama, geçerli seçime ve modele erişen kod yazmanıza olanak tanır:
+ Bildirimi, `IDiagramContext` metotlarda diyagrama, geçerli seçime ve modele erişen kod yazmanıza izin verir:
 
 ```
 IDiagram diagram = this.DiagramContext.CurrentDiagram;
@@ -202,31 +202,31 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
  Ayrıca API, öğelerin özelliklerini değiştirmenizi, öğeleri ve ilişkileri silmenizi ve yeni öğeler ve ilişkiler oluşturmanızı sağlar.
 
- Varsayılan olarak, Execute yönteminde yaptığınız her değişiklik ayrı bir işlemde gerçekleştirilir. Kullanıcı her değişikliği ayrı olarak geri alabilir. Değişiklikleri tek bir işlemde gruplandırmak isterseniz, [işlem kullanarak UML model güncelleştirmelerini bağlama](../modeling/link-uml-model-updates-by-using-transactions.md)bölümünde açıklandığı gibi bir <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ILinkedUndoTransaction> kullanın.
+ Varsayılan olarak, Execute yönteminde yaptığınız her değişiklik ayrı bir işlemde gerçekleştirilir. Kullanıcı her değişikliği ayrı olarak geri alabilir. Değişiklikleri tek bir işlemde gruplandırmak isterseniz, <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ILinkedUndoTransaction> [Işlem kullanarak UML model güncelleştirmelerini bağlama](../modeling/link-uml-model-updates-by-using-transactions.md)bölümünde açıklandığı gibi bir kullanın.
 
 ### <a name="use-the-ui-thread-for-updates"></a>Güncelleştirmeler için UI Iş parçacığını kullanma
  Bazı durumlarda, bir arka plan iş parçacığından modelde güncelleştirme yapmak yararlı olabilir. Örneğin, komutunuz yavaş bir kaynaktaki verileri yüklerse, kullanıcının sürmekte olan değişiklikleri görebilmesi ve gerekirse işlemi iptal edebilmesi için bir parantez içine bir iş parçacığında yüklemeyi yapabilirsiniz.
 
  Ancak, model deposunun iş parçacığı güvenli olmadığı farkında olmalısınız. Güncelleştirme yapmak için Kullanıcı arabirimi (UI) iş parçacığını her zaman kullanmanız gerekir ve mümkünse arka plan işlemi devam ederken kullanıcının düzenlemeler yapmasını önleyin. Bir örnek için bkz. [arka plan iş parçacığından UML modelini güncelleştirme](../modeling/update-a-uml-model-from-a-background-thread.md).
 
-## <a name="Executing"></a>Menü komutu yürütülüyor
+## <a name="executing-the-menu-command"></a><a name="Executing"></a>Menü komutu yürütülüyor
  Test amaçları için, komut hata ayıklama modunda komutunu yürütün.
 
 #### <a name="to-test-the-menu-command"></a>Menü komutunu test etmek için
 
 1. **F5**tuşuna basın veya **Hata Ayıkla** menüsünde, **hata ayıklamayı Başlat**' ı seçin.
 
-     Deneysel bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği başlar.
+     Deneysel bir örneği [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlar.
 
-     **Sorun giderme**: yeni bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] başlamazsa:
+     **Sorun giderme**: yeni bir başlamazsa [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
     - Birden çok projeniz varsa, VSıX projesinin çözümün başlangıç projesi olarak ayarlandığından emin olun.
 
-    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]tam yol adı olduğundan emin olun:
+    - Çözüm Gezgini, başlangıç veya yalnızca projenin kısayol menüsünde **Özellikler**' i seçin. Proje özellikleri düzenleyicisinde **Hata Ayıkla** sekmesini seçin. **dış program Başlat** alanındaki dizenin, genellikle tam yol adı olduğundan emin olun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :
 
          `C:\Program Files\Microsoft Visual Studio [version]\Common7\IDE\devenv.exe`
 
-2. Deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], bir modelleme projesi açın veya oluşturun ve bir modelleme diyagramı açın veya oluşturun. Menü komut sınıfınızın özniteliklerinde listelenen türlerden birine ait bir diyagram kullanın.
+2. Deneysel içinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , bir modelleme projesi açın veya oluşturun ve bir modelleme diyagramı açın veya oluşturun. Menü komut sınıfınızın özniteliklerinde listelenen türlerden birine ait bir diyagram kullanın.
 
 3. Diyagram üzerinde herhangi bir yerde kısayol menüsünü açın. Komutunuz menüde görünmelidir.
 
@@ -234,14 +234,14 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     - Menü komut projesi, VSıX projesindeki **kaynak. Extensions. manifest** içindeki **VARLıKLAR** sekmesinde bir MEF bileşeni olarak listelenir.
 
-    - `Import` ve `Export` özniteliklerinin parametreleri geçerlidir.
+    - `Import`Ve `Export` özniteliklerinin parametreleri geçerlidir.
 
-    - `QueryStatus` yöntemi `command`ayarlamadır.`Enabled` veya `false`alanları `Visible`.
+    - Yöntemi ' i `QueryStatus` ayarlamadır `command` .`Enabled` veya `Visible` alanları `false` .
 
-    - Kullandığınız model diyagramın türü (UML sınıfı, sırası, vb.) menü komut sınıfı özniteliklerinden biri olarak `[ClassDesignerExtension]`, `[SequenceDesignerExtension]` ve bu şekilde listelenir.
+    - Kullandığınız model diyagramın türü (UML sınıfı, sırası, vb.) menü komut sınıfı özniteliklerinden biri olarak listelenir `[ClassDesignerExtension]` `[SequenceDesignerExtension]` ve bu şekilde devam eder.
 
-## <a name="Installing"></a>Uzantı yükleme ve kaldırma
- Hem kendi bilgisayarınıza hem de diğer bilgisayarlara bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantısı yükleyebilirsiniz.
+## <a name="installing-and-uninstalling-an-extension"></a><a name="Installing"></a>Uzantı yükleme ve kaldırma
+ Bir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] uzantıyı, hem kendi bilgisayarınıza hem de diğer bilgisayarlara yükleyebilirsiniz.
 
 #### <a name="to-install-an-extension"></a>Uzantı yüklemek için
 
@@ -249,17 +249,17 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
     1. **Çözüm Gezgini**, VSIX projesinin kısayol menüsünde **klasörü Windows Gezgini 'nde aç**' ı seçin.
 
-    2. Dosya **bin\\\*bulun \\** _yourproject_ **. vsix**
+    2. Dosya ** \\ \* bin \\ **' i_Proje_**. vsix** ' i bulun
 
 2. **. Vsix** dosyasını, uzantıyı yüklemek istediğiniz hedef bilgisayara kopyalayın. Bu, kendi bilgisayarınız veya başka bir tane olabilir.
 
-     Hedef bilgisayar, **kaynak. Extension. valtmanifest**içinde belirttiğiniz [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] sürümlerinden birine sahip olmalıdır.
+     Hedef bilgisayar, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] **kaynak. Extension. valtmanifest**içinde belirttiğiniz sürümlerden birine sahip olmalıdır.
 
 3. Hedef bilgisayarda, örneğin çift tıklayarak **. vsix** dosyasını açın.
 
      **Visual Studio Uzantı Yükleyicisi** açılır ve uzantıyı yüklüyor.
 
-4. [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]başlatın veya yeniden başlatın.
+4. Başlatın veya yeniden başlatın [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] .
 
 #### <a name="to-uninstall-an-extension"></a>Bir uzantıyı kaldırmak için
 
@@ -271,10 +271,10 @@ foreach (IElement element in modelStore.AllInstances<IUseCase>()) {...}
 
    Nadiren, hatalı bir uzantı yükleme başarısız olur ve hata penceresinde bir rapor oluşturur, ancak Uzantı Yöneticisi 'nde görünmez. Bu durumda, dosyayı öğesinden silerek uzantıyı kaldırabilirsiniz:
 
-   *% LocalAppData%* **\Local\microsoft\visualstudio\\[sürüm] \Extensions**
+   *% LocalAppData%* **\Local\microsoft\visualstudio \\ [sürüm] \Extensions**
 
-## <a name="MenuExample"></a>Örneğinde
- Aşağıdaki örnek, bir sınıf diyagramında iki öğenin adlarını değiş tokuş edecek bir menü komutu için kodu gösterir. Bu kodun bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantısı projesinde oluşturulması ve önceki bölümlerde açıklandığı gibi yüklenmesi gerekir.
+## <a name="example"></a><a name="MenuExample"></a>Örneğinde
+ Aşağıdaki örnek, bir sınıf diyagramında iki öğenin adlarını değiş tokuş edecek bir menü komutu için kodu gösterir. Bu kodun bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantı projesinde oluşturulması ve önceki bölümlerde açıklandığı gibi yüklenmesi gerekir.
 
 ```
 using System.Collections.Generic; // for IEnumerable

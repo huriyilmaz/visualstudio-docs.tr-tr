@@ -15,31 +15,31 @@ caps.latest.revision: 19
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 1adc8f610644d736bc4546d8299457ba0234a1d9
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: d7879d8b2aa9eb4ece1ce07f89681b6c0b0f5f31
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72658669"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534712"
 ---
-# <a name="ca2114-method-security-should-be-a-superset-of-type"></a>CA2114: Yöntem güvenliği türün bir üst kümesi olmalıdır
+# <a name="ca2114-method-security-should-be-a-superset-of-type"></a>CA2114: Metot güvenliği türün bir üst kümesi olmalıdır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|MethodSecurityShouldBeASupersetOfType|
 |CheckId|CA2114|
 |Kategori|Microsoft.Security|
 |Yeni Değişiklik|Yeni|
 
-## <a name="cause"></a>Sebep
- Bir tür, bildirime dayalı güvenliğe sahiptir ve yöntemlerinden biri aynı güvenlik eylemi için bildirim güvenliğine sahiptir ve güvenlik eylemi [bağlantı talepleri](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) veya [Devralma talepleri](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)değildir ve tür tarafından denetlenen izinler, bir alt kümesi değildir. Yöntem tarafından denetlenen izinler.
+## <a name="cause"></a>Nedeni
+ Bir tür bildirime dayalı güvenliğe sahiptir ve yöntemlerinden biri aynı güvenlik eylemi için bildirim güvenliğine sahiptir ve güvenlik eylemi [bağlantı taleplerine](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) veya [Devralma taleplerine](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9)sahip değildir ve tür tarafından denetlenen izinler, yöntem tarafından denetlenen izinlerin bir alt kümesi değildir.
 
 ## <a name="rule-description"></a>Kural Tanımı
- Bir yöntemde aynı eylem için hem Yöntem düzeyinde hem de tür düzeyinde bildirime sahip bir güvenlik bulunmalıdır. İki denetim birleştirilmez; yalnızca Yöntem düzeyi talep uygulanır. Örneğin, bir tür bir izin `X` ' dır ve yöntemlerinden biri izin `Y` ' i isterse, kod, yöntemi yürütmek için `X` iznine sahip olmalıdır.
+ Bir yöntemde aynı eylem için hem Yöntem düzeyinde hem de tür düzeyinde bildirime sahip bir güvenlik bulunmalıdır. İki denetim birleştirilmez; yalnızca Yöntem düzeyi talep uygulanır. Örneğin, bir tür taleplerine izin varsa `X` ve metotlarından biri izin isterse `Y` , kodun yöntemi yürütme izni olması gerekmez `X` .
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Her iki eylemin de gerekli olduğundan emin olmak için kodunuzu gözden geçirin. Her iki eylem de gerekliyse, yöntem düzeyi eyleminin tür düzeyinde belirtilen güvenliği içerdiğinden emin olun. Örneğin, tür için izin `X`, ve yöntemi de isteğe bağlı izin `Y` ' i isterse, yöntemi açıkça talep `X` ve `Y` olmalıdır.
+ Her iki eylemin de gerekli olduğundan emin olmak için kodunuzu gözden geçirin. Her iki eylem de gerekliyse, yöntem düzeyi eyleminin tür düzeyinde belirtilen güvenliği içerdiğinden emin olun. Örneğin, türü için izin talebinde bulunursa `X` ve yöntemi de isteğe bağlı izin içeriyorsa `Y` , yöntemi açık bir şekilde talep etmelidir `X` ve olmalıdır `Y` .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Yöntemin tür tarafından belirtilen güvenliği gerektirmiyorsa, bu kuraldan bir uyarıyı gizlemek güvenlidir. Ancak, bu sıradan bir senaryo değildir ve dikkatli bir tasarım incelemesi gereksinimini gösterebilir.
@@ -58,8 +58,8 @@ ms.locfileid: "72658669"
 
  Bu örnek aşağıdaki çıktıyı üretir.
 
- **[Tüm izinler] kişisel bilgiler: 6/16/1964 12:00:00 ö
-** **[yazma izni yok (türe göre talep edilmiş)] kişisel BILGILER: 6/16/1964 12:00:00 ö
-** **[okuma izni yok (yöntem tarafından talep edilen)] kişisel erişim bilgi: Istek başarısız oldu.**
+ **[Tüm izinler] kişisel bilgiler: 6/16/1964 12:00:00** 
+ **[Yazma Izni yok (türe göre talep edilmiş)] kişisel bilgiler: 6/16/1964 12:00:00** 
+ **[Okuma Izni yok (yöntem tarafından talep edilen)] kişisel bilgilere erişilemedi: istek başarısız oldu.**
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Güvenli kodlama yönergeleri](https://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177) [Devralma talepleri](https://msdn.microsoft.com/28b9adbb-8f08-4f10-b856-dbf59eb932d9) [bağlantı talepleri](https://msdn.microsoft.com/library/a33fd5f9-2de9-4653-a4f0-d9df25082c4d) [verileri ve modelleme](https://msdn.microsoft.com/library/8c37635d-e2c1-4b64-a258-61d9e87405e6)

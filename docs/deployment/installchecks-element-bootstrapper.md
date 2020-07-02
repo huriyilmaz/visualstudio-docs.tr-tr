@@ -1,5 +1,5 @@
 ---
-title: '&lt;InstallChecks&gt; öğesi (Önyükleyici) | Microsoft Docs'
+title: '&lt;Installdenetimlerin &gt; öğesi (önyükleyici) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -15,17 +15,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 79bbb413c31c77e59ec39b706d4937421096168f
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: c7ba4da072a586bdc09993b77200a769be3940ab
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747525"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536311"
 ---
-# <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;InstallChecks&gt; öğesi (Önyükleyici)
-`InstallChecks` Öğesinin desteklediği tüm uygulama için uygun önkoşulların yüklendiğinden emin olmak için yerel bilgisayara karşı testler çeşitli başlatılıyor.
+# <a name="ltinstallchecksgt-element-bootstrapper"></a>&lt;Installdenetimlerin &gt; öğesi (önyükleyici)
+`InstallChecks`Öğesi, bir uygulamaya yönelik tüm uygun önkoşulların yüklendiğinden emin olmak için yerel bilgisayara karşı çeşitli testlerin başlatılmasını destekler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <InstallChecks>
@@ -70,81 +70,81 @@ ms.locfileid: "66747525"
 ```
 
 ## <a name="assemblycheck"></a>AssemblyCheck
- Bu öğe isteğe bağlı alt öğesidir `InstallChecks`. Her örneği için `AssemblyCheck`, önyükleyici öğe tarafından belirtilen derleme genel derleme önbelleğinde (GAC) mevcut olduğundan emin olun. Hiçbir öğe içeren ve aşağıdaki özniteliklere sahiptir.
+ Bu öğe, öğesinin isteğe bağlı bir alt öğesidir `InstallChecks` . Her bir örneği için `AssemblyCheck` Önyükleyici, genel derleme önbelleğinde (GAC) öğe tarafından tanımlanan derlemenin mevcut olduğundan emin olur. Öğesi içermez ve aşağıdaki özniteliklere sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Property`|Gerekli. Sonucu depolamak için özellik adı. Bu özellik, bir test başvurulabilir `InstallConditions` bir alt öğesi olan `Command` öğesi. Daha fazla bilgi için [ \<komutları > öğesi](../deployment/commands-element-bootstrapper.md).|
-|`Name`|Gerekli. Denetlenecek bütünleştirilmiş kodun tam adı.|
-|`PublicKeyToken`|Gerekli. Kısaltılmış formun ortak anahtarın bu kesin adlı derleme ile ilişkili. Tüm derlemeler GAC içinde depolanan bir adı, sürümü ve bir ortak anahtar olmalıdır.|
-|`Version`|Gerekli. Derleme sürümü.<br /><br /> Sürüm numarası şu biçimdedir \< *ana sürüm*>.\< *podverze*>.\< *derleme sürümü*>.\< *düzeltme sürümü*>.|
-|`Language`|İsteğe bağlı. Yerelleştirilmiş bir derleme dili. Varsayılan değer `neutral`.|
-|`ProcessorArchitecture`|İsteğe bağlı. Bu yükleme tarafından hedeflenen bilgisayarı işlemcisini. Varsayılan değer `msil`.|
+|`Property`|Gereklidir. Sonucu depolayacak özelliğin adı. Bu özelliğe, öğesinin alt öğesi olan öğesinin altındaki bir testten başvurulabilir `InstallConditions` `Command` . Daha fazla bilgi için bkz. [ \<Commands> öğesi](../deployment/commands-element-bootstrapper.md).|
+|`Name`|Gereklidir. Denetlenecek derlemenin tam adı.|
+|`PublicKeyToken`|Gereklidir. Bu kesin adlandırılmış bütünleştirilmiş kod ile ilişkili ortak anahtarın kısaltılmış biçimi. GAC 'de depolanan tüm derlemeler bir ada, sürüme ve ortak anahtara sahip olmalıdır.|
+|`Version`|Gereklidir. Derlemenin sürümü.<br /><br /> Sürüm numarası şu biçimdedir \<*major version*> ... \<*minor version*> \<*build version*> \<*revision version*> .|
+|`Language`|İsteğe bağlı. Yerelleştirilmiş bir derlemenin dili. `neutral` varsayılan değerdir.|
+|`ProcessorArchitecture`|İsteğe bağlı. Bu yüklemenin hedeflediği bilgisayar işlemcisi. `msil` varsayılan değerdir.|
 
 ## <a name="externalcheck"></a>ExternalCheck
- Bu öğe isteğe bağlı alt öğesidir `InstallChecks`. Her örneği için `ExternalCheck`, önyükleyici isimlendirilmiş harici program ayrı bir işlemde yürütür ve çıkış kodu tarafından belirtilen özellik depolar `Property`. `ExternalCheck` karmaşık bağımlılık denetimlerini uygulamak için veya bir bileşenin varlığını denetlemek için tek yolu, örneği olduğunda yararlıdır.
+ Bu öğe, öğesinin isteğe bağlı bir alt öğesidir `InstallChecks` . Her bir örneği için `ExternalCheck` , önyükleyici adlandırılmış dış programı ayrı bir işlemde yürütür ve onun çıkış kodunu tarafından belirtilen özellikte depolar `Property` . `ExternalCheck`karmaşık bağımlılık denetimleri uygulamak için veya bir bileşenin varlığını denetetmenin tek yolu bu örneği oluşturmak için kullanışlıdır.
 
- `ExternalCheck` hiçbir öğe içeren ve aşağıdaki özniteliklere sahiptir.
+ `ExternalCheck`öğesi içermez ve aşağıdaki özniteliklere sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Property`|Gerekli. Sonucu depolamak için özellik adı. Bu özellik, bir test başvurulabilir `InstallConditions` bir alt öğesi olan `Command` öğesi. Daha fazla bilgi için [ \<komutları > öğesi](../deployment/commands-element-bootstrapper.md).|
-|`PackageFile`|Gerekli. Yürütmek için dış program. Programın Kurulum dağıtım paketinin bir parçası olmalıdır.|
-|`Arguments`|İsteğe bağlı. Yürütülebilir dosya tarafından adlandırılan komut satırı bağımsız değişkenleri sağlayan `PackageFile`.|
+|`Property`|Gereklidir. Sonucu depolayacak özelliğin adı. Bu özelliğe, öğesinin alt öğesi olan öğesinin altındaki bir testten başvurulabilir `InstallConditions` `Command` . Daha fazla bilgi için bkz. [ \<Commands> öğesi](../deployment/commands-element-bootstrapper.md).|
+|`PackageFile`|Gereklidir. Yürütülecek harici program. Program, kurulum dağıtım paketinin parçası olmalıdır.|
+|`Arguments`|İsteğe bağlı. Tarafından adlandırılan yürütülebilir dosyaya komut satırı bağımsız değişkenleri sağlar `PackageFile` .|
 
-## <a name="filecheck"></a>FileCheck
- Bu öğe isteğe bağlı alt öğesidir `InstallChecks`. Her örneği için `FileCheck`, önyükleyici adlandırılmış dosyanın var olduğundan ve dosyanın sürüm numarasını döndürür olup olmadığını belirler. Dosya bir sürüm numarasına sahip değilse, önyükleyici tarafından adlandırılan özelliği ayarlar `Property` 0. Dosya mevcut değilse `Property` herhangi bir değere ayarlı değil.
+## <a name="filecheck"></a>Dosya denetimi
+ Bu öğe, öğesinin isteğe bağlı bir alt öğesidir `InstallChecks` . Her bir örneği için `FileCheck` , önyükleyici adlandırılmış dosyanın mevcut olup olmadığını tespit eder ve dosyanın sürüm numarasını döndürür. Dosyanın bir sürüm numarası yoksa, önyükleyici adlı özelliği ile `Property` 0 olarak ayarlar. Dosya yoksa, `Property` herhangi bir değere ayarlı değildir.
 
- `FileCheck` hiçbir öğe içeren ve aşağıdaki özniteliklere sahiptir.
+ `FileCheck`öğesi içermez ve aşağıdaki özniteliklere sahiptir.
 
 | Öznitelik | Açıklama |
 |-----------------| - |
-| `Property` | Gerekli. Sonucu depolamak için özellik adı. Bu özellik, bir test başvurulabilir `InstallConditions` bir alt öğesi olan `Command` öğesi. Daha fazla bilgi için [ \<komutları > öğesi](../deployment/commands-element-bootstrapper.md). |
-| `FileName` | Gerekli. Bulunacak dosya adı. |
-| `SearchPath` | Gerekli. Disk veya dosyayı aramak bir klasör. Bu göreli bir yol olmalıdır `SpecialFolder` atanır; Aksi takdirde, mutlak bir yol olmalıdır. |
-| `SpecialFolder` | İsteğe bağlı. Windows veya çok özel anlamlı olan bir klasörü [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]. Yorumlamak için varsayılandır `SearchPath` mutlak bir yol olarak. Geçerli değerler şunlardır:<br /><br /> `AppDataFolder`. Bu uygulama veri klasörü [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama; geçerli kullanıcının belirli.<br /><br /> `CommonAppDataFolder`. Tüm kullanıcılar tarafından kullanılan uygulama veri klasörü.<br /><br /> `CommonFilesFolder`. Geçerli kullanıcı için ortak dosyalar klasörü.<br /><br /> `LocalDataAppFolder`. Gezici olmayan uygulamalar için veri klasörü.<br /><br /> `ProgramFilesFolder`. 32-bit uygulamalar için standart Program dosyaları klasörü.<br /><br /> `StartUpFolder`. Sistem başlangıçta başlatılan tüm uygulamalara içeren klasör.<br /><br /> `SystemFolder`. 32-bit sistem DLL içeren klasör.<br /><br /> `WindowsFolder`. Windows sistemi yüklemesi içeren klasör.<br /><br /> `WindowsVolume`. Sürücü veya Windows sistemi yüklemesi içeren bölümü. |
-| `SearchDepth` | İsteğe bağlı. Derinliğinde adlandırılmış dosya alt klasörleri aramak istediğiniz. Arama derinliği öncelikli olur. Varsayılan arama tarafından belirtilen en üst düzey klasör sınırlar 0 ' dır `SpecialFolder` ve **SearchPath**. |
+| `Property` | Gereklidir. Sonucu depolayacak özelliğin adı. Bu özelliğe, öğesinin alt öğesi olan öğesinin altındaki bir testten başvurulabilir `InstallConditions` `Command` . Daha fazla bilgi için bkz. [ \<Commands> öğesi](../deployment/commands-element-bootstrapper.md). |
+| `FileName` | Gereklidir. Bulunacak dosyanın adı. |
+| `SearchPath` | Gereklidir. Dosyanın aranacağı disk veya klasör. Bu, atanmışsa göreli bir yol olmalıdır `SpecialFolder` ; Aksi takdirde, mutlak bir yol olmalıdır. |
+| `SpecialFolder` | İsteğe bağlı. Windows ya da ile özel anlamlı bir klasör [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Varsayılan değer `SearchPath` mutlak yol olarak yorumlanamıyor. Geçerli değerler şunlardır:<br /><br /> `AppDataFolder`. Bu [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama için geçerli kullanıcıya özgü uygulama verileri klasörü.<br /><br /> `CommonAppDataFolder`. Tüm kullanıcılar tarafından kullanılan uygulama verileri klasörü.<br /><br /> `CommonFilesFolder`. Geçerli Kullanıcı için ortak dosyalar klasörü.<br /><br /> `LocalDataAppFolder`. Dolaşım olmayan uygulamalar için veri klasörü.<br /><br /> `ProgramFilesFolder`. 32 bitlik uygulamalar için standart program dosyaları klasörü.<br /><br /> `StartUpFolder`. Sistem başlangıcında başlatılan tüm uygulamaları içeren klasör.<br /><br /> `SystemFolder`. 32 bitlik sistem dll 'Leri içeren klasör.<br /><br /> `WindowsFolder`. Windows sistem yüklemesini içeren klasör.<br /><br /> `WindowsVolume`. Windows sistem yüklemesini içeren sürücü veya bölüm. |
+| `SearchDepth` | İsteğe bağlı. Adlandırılmış dosya için alt klasörlerin aranacağı derinlik. Arama öncelikle derinlemesine bir değer. Varsayılan değer 0 ' dır. Bu, aramayı ve SearchPath tarafından belirtilen en üst düzey klasöre `SpecialFolder` kısıtlar **SearchPath**. |
 
 ## <a name="msiproductcheck"></a>MsiProductCheck
- Bu öğe isteğe bağlı alt öğesidir `InstallChecks`. Her örneği için `MsiProductCheck`, önyükleyici belirtilen Microsoft Windows Installer yükleme tamamlanana kadar çalıştırıldı olup olmadığını denetler. Özellik değeri, yüklü bir ürün durumuna bağlı olarak ayarlanır. Ürününün yüklü olduğu, pozitif bir değer belirtir. 0 veya -1'de gösterir, yüklü değil. (Lütfen Windows Installer SDK MsiQueryFeatureState daha fazla bilgi için bkz.) . Windows Installer bilgisayarda yüklü değilse `Property` ayarlı değil.
+ Bu öğe, öğesinin isteğe bağlı bir alt öğesidir `InstallChecks` . Önyükleyici, her bir örneği için `MsiProductCheck` , belirtilen Microsoft Windows Installer yüklemesinin tamamlanana kadar çalıştırılıp çalıştırılmadığını kontrol eder. Özellik değeri, yüklü ürünün durumuna bağlı olarak ayarlanır. Pozitif bir değer ürünün yüklü olduğunu, 0 veya-1 olduğunu gösterir. (Daha fazla bilgi için lütfen bkz. MsiQueryFeatureState Windows Installer SDK işlevi.) . Windows Installer bilgisayarda yüklü değilse, `Property` ayarlı değildir.
 
- `MsiProductCheck` hiçbir öğe içeren ve aşağıdaki özniteliklere sahiptir.
+ `MsiProductCheck`öğesi içermez ve aşağıdaki özniteliklere sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Property`|Gerekli. Sonucu depolamak için özellik adı. Bu özellik, bir test başvurulabilir `InstallConditions` bir alt öğesi olan `Command` öğesi. Daha fazla bilgi için [ \<komutları > öğesi](../deployment/commands-element-bootstrapper.md).|
-|`Product`|Gerekli. Yüklü ürüne GUİD'i.|
-|`Feature`|İsteğe bağlı. Yüklenen uygulamanın belirli bir özellik için GUID.|
+|`Property`|Gereklidir. Sonucu depolayacak özelliğin adı. Bu özelliğe, öğesinin alt öğesi olan öğesinin altındaki bir testten başvurulabilir `InstallConditions` `Command` . Daha fazla bilgi için bkz. [ \<Commands> öğesi](../deployment/commands-element-bootstrapper.md).|
+|`Product`|Gereklidir. Yüklü ürün için GUID.|
+|`Feature`|İsteğe bağlı. Yüklenen uygulamanın belirli bir özelliği için GUID.|
 
 ## <a name="registrycheck"></a>RegistryCheck
- Bu öğe isteğe bağlı alt öğesidir `InstallChecks`. Her örneği için `RegistryCheck`, önyükleyici belirtilen kayıt defteri anahtarının var olup var veya belirtilen değer olup olmadığını denetler.
+ Bu öğe, öğesinin isteğe bağlı bir alt öğesidir `InstallChecks` . Önyükleyici, her bir örneği için `RegistryCheck` belirtilen kayıt defteri anahtarının var olup olmadığını veya belirtilen değere sahip olup olmadığını denetler.
 
- `RegistryCheck` hiçbir öğe içeren ve aşağıdaki özniteliklere sahiptir.
-
-|Öznitelik|Açıklama|
-|---------------|-----------------|
-|`Property`|Gerekli. Sonucu depolamak için özellik adı. Bu özellik, bir test başvurulabilir `InstallConditions` bir alt öğesi olan `Command` öğesi. Daha fazla bilgi için [ \<komutları > öğesi](../deployment/commands-element-bootstrapper.md).|
-|`Key`|Gerekli. Kayıt defteri anahtarı adı.|
-|`Value`|İsteğe bağlı. Alınacak kayıt defteri değeri adı. Varsayılan değer metninin döndürmek için varsayılandır. `Value` bir dize veya bir DWORD olması gerekir.|
-
-## <a name="registryfilecheck"></a>RegistryFileCheck
- Bu öğe isteğe bağlı alt öğesidir `InstallChecks`. Her örneği için `RegistryFileCheck`, önyükleyici ilk yol, dosyayı belirtilen kayıt defteri anahtarından almaya çalışırken belirtilen dosya sürümünü alır. Kayıt defterinde bir değer olarak belirtilen bir dizindeki bir dosya aramak istiyorsanız bu özellikle yararlıdır.
-
- `RegistryFileCheck` hiçbir öğe içeren ve aşağıdaki özniteliklere sahiptir.
+ `RegistryCheck`öğesi içermez ve aşağıdaki özniteliklere sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Property`|Gerekli. Sonucu depolamak için özellik adı. Bu özellik, bir test başvurulabilir `InstallConditions` bir alt öğesi olan `Command` öğesi. Daha fazla bilgi için [ \<komutları > öğesi](../deployment/commands-element-bootstrapper.md).|
-|`Key`|Gerekli. Kayıt defteri anahtarı adı. Değeri olarak bir dosya yolu sürece yorumlanır `File` özniteliği. Bu anahtar yoksa `Property` ayarlı değil.|
-|`Value`|İsteğe bağlı. Alınacak kayıt defteri değeri adı. Varsayılan değer metninin döndürmek için varsayılandır. `Value` bir dize olmalıdır.|
-|`FileName`|İsteğe bağlı. Bir dosya adı. Belirtilmişse alınan kayıt defteri anahtarından değer bir dizin yolu olarak kabul edilir ve bu ad, kendisine eklenir. Belirtilmezse, kayıt defterinden döndürülen değer tam yolu bir dosya olduğu varsayılır.|
-|`SearchDepth`|İsteğe bağlı. Derinliğinde adlandırılmış dosya alt klasörleri aramak istediğiniz. Arama derinliği öncelikli olur. Varsayılan arama kayıt defteri anahtarının değeri tarafından belirtilen en üst düzey klasör kısıtlayan 0 ' dır.|
+|`Property`|Gereklidir. Sonucu depolayacak özelliğin adı. Bu özelliğe, öğesinin alt öğesi olan öğesinin altındaki bir testten başvurulabilir `InstallConditions` `Command` . Daha fazla bilgi için bkz. [ \<Commands> öğesi](../deployment/commands-element-bootstrapper.md).|
+|`Key`|Gereklidir. Kayıt defteri anahtarının adı.|
+|`Value`|İsteğe bağlı. Alınacak kayıt defteri değerinin adı. Varsayılan değer varsayılan değerin metnini döndürmemelidir. `Value`bir dize ya da DWORD olmalıdır.|
+
+## <a name="registryfilecheck"></a>Registryfılecheck
+ Bu öğe, öğesinin isteğe bağlı bir alt öğesidir `InstallChecks` . Her örneği için, `RegistryFileCheck` önyükleyici belirtilen dosyanın sürümünü alır, ilk önce belirtilen kayıt defteri anahtarından dosyanın yolunu almaya çalışıyor. Bu özellikle, kayıt defterinde bir değer olarak belirtilen dizinde bir dosya aramak istiyorsanız yararlıdır.
+
+ `RegistryFileCheck`öğesi içermez ve aşağıdaki özniteliklere sahiptir.
+
+|Öznitelik|Açıklama|
+|---------------|-----------------|
+|`Property`|Gereklidir. Sonucu depolayacak özelliğin adı. Bu özelliğe, öğesinin alt öğesi olan öğesinin altındaki bir testten başvurulabilir `InstallConditions` `Command` . Daha fazla bilgi için bkz. [ \<Commands> öğesi](../deployment/commands-element-bootstrapper.md).|
+|`Key`|Gereklidir. Kayıt defteri anahtarının adı. Değeri, öznitelik ayarlanmadığı sürece bir dosyanın yolu olarak yorumlanır `File` . Bu anahtar yoksa, `Property` ayarlı değildir.|
+|`Value`|İsteğe bağlı. Alınacak kayıt defteri değerinin adı. Varsayılan değer varsayılan değerin metnini döndürmemelidir. `Value`bir dize olmalıdır.|
+|`FileName`|İsteğe bağlı. Bir dosyanın adı. Belirtilmişse, kayıt defteri anahtarından elde edilen değerin bir dizin yolu olduğu varsayılır ve bu ad bu ada eklenir. Belirtilmemişse, kayıt defterinden döndürülen değerin bir dosyanın tam yolu olduğu varsayılır.|
+|`SearchDepth`|İsteğe bağlı. Adlandırılmış dosya için alt klasörlerin aranacağı derinlik. Arama öncelikle derinlemesine bir değer. Varsayılan değer, aramayı kayıt defteri anahtarının değeri tarafından belirtilen en üst düzey klasöre kısıtlayan 0 ' dır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Altındaki öğeler `InstallChecks` çalıştırılan testleri tanımlayın, bunları yürütülmez. Testleri yürütmek için oluşturmalısınız `Command` öğeleri altında `Commands` öğesi.
+ Altındaki öğeler, `InstallChecks` Çalıştırılacak Testleri tanımladıklarında, bunları yürütmez. Testleri yürütmek için `Command` öğesi altında öğeler oluşturmalısınız `Commands` .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneğinde `InstallChecks` öğesi ürün dosyasında .NET Framework için kullanılır.
+ Aşağıdaki kod örneği, `InstallChecks` .NET Framework ürün dosyasında kullanılan öğeyi gösterir.
 
 ```xml
 <InstallChecks>
@@ -154,25 +154,25 @@ ms.locfileid: "66747525"
 ```
 
 ## <a name="installconditions"></a>InstallConditions
- Zaman `InstallChecks` olan değerlendirilir, bunlar özellikleri oluşturmak. Özellikleri tarafından kullanılan `InstallConditions` bir paket yükleyin, atlama, başarısız veya belirlemek için. Aşağıdaki tabloda `InstallConditions`:
+ `InstallChecks`Değerlendirildiğinde, özellikler üretir. Daha sonra Özellikler tarafından `InstallConditions` , bir paketin yüklenmesi, Atlanmasının veya başarısız olup olmadığını anlamak için kullanılır. Aşağıdaki tabloda şunları listelenmektedir `InstallConditions` :
 
-|||
+|Koşul|Açıklama|
 |-|-|
-|`FailIf`|Varsa `FailIf` koşul true olarak değerlendirilir, paket başarısız olur. Koşulların geri kalanını değerlendirilmez.|
-|`BypassIf`|Varsa `BypassIf` koşul true olarak değerlendirilir, paket atlanır. Koşulların geri kalanını değerlendirilmez.|
+|`FailIf`|Herhangi bir `FailIf` koşul true olarak değerlendirilirse, paket başarısız olur. Koşulların geri kalanı değerlendirilmeyecektir.|
+|`BypassIf`|Herhangi bir `BypassIf` koşul true olarak değerlendirilirse, paket atlanır. Koşulların geri kalanı değerlendirilmeyecektir.|
 
 ## <a name="predefined-properties"></a>Önceden tanımlanmış özellikler
- Aşağıdaki tabloda `BypassIf` ve `FailIf` öğeleri:
+ Aşağıdaki tabloda `BypassIf` ve `FailIf` öğeleri listelenmektedir:
 
-|Özellik|Notlar|Olası değerler|
+|Özellik|Notlar|Olası Değerler|
 |--------------|-----------|---------------------|
-|`Version9X`|Windows 9 X işletim sistemi sürüm numarası.|4.10 Windows 98 =|
-|`VersionNT`|Windows NT tabanlı bir işletim sistemi sürüm numarası.|Major.Minor.ServicePack<br /><br /> 5.0 Windows 2000 =<br /><br /> 5.1.0 Windows XP =<br /><br /> 5.1.2 Windows XP Professional SP2 =<br /><br /> 5.2.0 = Windows Server 2003|
-|`VersionNT64`|64 bit Windows NT tabanlı bir işletim sistemi sürüm numarası.|Aynı daha önce bahsedilen.|
-|`VersionMsi`|Windows Installer hizmeti sürüm numarası.|2.0 Windows Installer 2.0 =|
-|`AdminUser`|Bir kullanıcının Windows NT tabanlı bir işletim sistemi üzerinde yönetici ayrıcalıklarına sahip olup olmadığını belirtir.|0 = yönetici ayrıcalığı yok<br /><br /> 1 = yönetici ayrıcalıkları|
+|`Version9X`|Windows 9X işletim sisteminin sürüm numarası.|4,10 = Windows 98|
+|`VersionNT`|Windows NT tabanlı bir işletim sisteminin sürüm numarası.|Ana. Ikincil. hizmetpaketi<br /><br /> 5,0 = Windows 2000<br /><br /> 5.1.0 = Windows XP<br /><br /> 5.1.2 = Windows XP Professional SP2<br /><br /> 5.2.0 = Windows Server 2003|
+|`VersionNT64`|64 bitlik Windows NT tabanlı bir işletim sisteminin sürüm numarası.|Daha önce bahsedildiği gibi.|
+|`VersionMsi`|Windows Installer hizmetinin sürüm numarası.|2,0 = Windows Installer 2,0|
+|`AdminUser`|Bir kullanıcının Windows NT tabanlı bir işletim sisteminde yönetici ayrıcalıklarına sahip olup olmadığını belirtir.|0 = Yönetici ayrıcalıkları yok<br /><br /> 1 = Yönetici ayrıcalıkları|
 
- Örneğin, Windows 95 çalıştıran bir bilgisayara yükleme engellemek için aşağıdaki gibi bir kod kullanın:
+ Örneğin, Windows 95 çalıştıran bir bilgisayarda yüklemeyi engellemek için aşağıdaki gibi bir kod kullanın:
 
 ```xml
 <!-- Block install on Windows 95 -->
@@ -180,5 +180,5 @@ ms.locfileid: "66747525"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [\<Komutları > öğesi](../deployment/commands-element-bootstrapper.md)
+- [\<Commands>dosyalarında](../deployment/commands-element-bootstrapper.md)
 - [Ürün ve paket şema başvurusu](../deployment/product-and-package-schema-reference.md)

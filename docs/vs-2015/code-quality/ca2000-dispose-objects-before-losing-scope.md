@@ -16,33 +16,33 @@ caps.latest.revision: 32
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 89e0797afdcf299bb466018049a6d1217c5ad2dd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: e3de3246980ead0b20d471321a9696451aed81ac
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72666152"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85534777"
 ---
-# <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: Kapsamı kaybetmeden önce verileri atın
+# <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: Kapsamı kaybetmeden önce nesneleri bırakın
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|DisposeObjectsBeforeLosingScope|
 |CheckId|CA2000|
 |Kategori|Microsoft. güvenilirliği|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
- @No__t_0 türünün yerel bir nesnesi oluşturuldu ancak nesnenin tüm başvuruları kapsam dışına çıkarılmadan nesne atılamaz.
+## <a name="cause"></a>Nedeni
+ Bir türün yerel nesnesi <xref:System.IDisposable> oluşturuldu ancak nesnenin tüm başvuruları kapsam dışına çıkarılmadan nesne atılamaz.
 
 ## <a name="rule-description"></a>Kural Tanımı
  Bir atılabilir nesnesi, tüm başvuruları kapsam dışına çıkarılmadan önce açıkça atılmaz, çöp toplayıcı nesnenin sonlandırıcısını çalıştırdığında, nesne belirsiz bir zamanda silinir. Nesnenin sonlandırıcısını çalışmasını engelleyecek olağanüstü bir olay ortaya çıkabilecek için, bunun yerine nesne açıkça atılmalıdır.
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için, tüm başvuruları kapsam dışına önce nesne üzerinde <xref:System.IDisposable.Dispose%2A> çağırın.
+ Bu kuralın ihlalini onarmak için, <xref:System.IDisposable.Dispose%2A> tüm başvuruları kapsam dışı olmadan önce nesne üzerinde çağrı yapın.
 
- @No__t_3 uygulayan nesneleri kaydırmak için `using` deyimin ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `Using`) kullanabileceğinizi unutmayın. Bu şekilde Sarmalanan nesneler, `using` bloğunun kapandığı zaman otomatik olarak silinir.
+ `using` `Using` [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Uygulayan nesneleri kaydırmak için ifadesini (içinde) kullanabileceğinizi unutmayın `IDisposable` . Bu şekilde Sarmalanan nesneler, bloğun kapandığı zaman otomatik olarak elden alınacaktır `using` .
 
  Aşağıda, using ifadesinin IDisposable nesnelerini korumak için yeterli olmadığı ve CA2000 oluşmasına neden olabileceği bazı durumlar verilmiştir.
 
@@ -78,18 +78,18 @@ ms.locfileid: "72666152"
 
 - `tempPort`, yöntem işlemlerinin başarılı olduğunu test etmek için kullanılır.
 
-- `port`, yöntemin dönüş değeri için kullanılır.
+- `port`, yönteminin dönüş değeri için kullanılır.
 
-  @No__t_0 oluşturulur ve bir `try` bloğunda açılır ve diğer tüm gerekli işler aynı `try` bloğunda gerçekleştirilir. @No__t_0 bloğunun sonunda, açılan bağlantı noktası döndürülecek `port` nesnesine atanır ve `tempPort` nesnesi `null` olarak ayarlanır.
+  `tempPort`Oluşturulur ve bir `try` blokta açılır ve diğer tüm gerekli işler aynı `try` blokta gerçekleştirilir. `try`Bloğun sonunda, açılan bağlantı noktası `port` döndürülecek nesneye atanır ve `tempPort` nesne olarak ayarlanır `null` .
 
-  @No__t_0 bloğu `tempPort` değerini denetler. Null değilse, yöntemdeki bir işlem başarısız olur ve tüm kaynakların serbest olduğundan emin olmak için `tempPort` kapalıdır. Döndürülen bağlantı noktası nesnesi, metodun işlemleri başarılı olursa Açık SerialPort nesnesini içerir veya bir işlem başarısız olursa null olur.
+  `finally`Bloğu değerini denetler `tempPort` . Null değilse, yöntemindeki bir işlem başarısız olur ve `tempPort` tüm kaynakların serbest bırakılmış olduğundan emin olmak için kapalıdır. Döndürülen bağlantı noktası nesnesi, metodun işlemleri başarılı olursa Açık SerialPort nesnesini içerir veya bir işlem başarısız olursa null olur.
 
   [!code-csharp[FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope#1](../snippets/csharp/VS_Snippets_CodeAnalysis/fxcop.reliability.ca2000.disposeobjectsbeforelosingscope/cs/fxcop.reliability.ca2000.disposeobjectsbeforelosingscope.cs#1)]
   [!code-vb[FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/fxcop.reliability.ca2000.disposeobjectsbeforelosingscope/vb/fxcop.reliability.ca2000.disposeobjectsbeforelosingscope.vb#1)]
   [!code-vb[FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope#1](../snippets/visualbasic/VS_Snippets_CodeAnalysis/fxcop.reliability.ca2000.disposeobjectsbeforelosingscope/vb/fxcop.reliability.ca2000.disposeobjectsbeforelosingscope.vboverflow.vb#1)]
 
 ## <a name="example"></a>Örnek
- Varsayılan olarak, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] derleyicisinde tüm aritmetik işleçler taşma için denetlenir. Bu nedenle, herhangi bir Visual Basic aritmetik işlemi bir <xref:System.OverflowException> oluşturabilir. Bu, CA2000 gibi kurallarda beklenmeyen ihlallere neden olabilir. Örneğin, Visual Basic derleyici, StreamReader atılmasına neden olacak bir özel durum oluşturabilecek ekleme için bir taşma denetimi yönergesi yaydığı için, aşağıdaki CreateReader1 işlevi bir CA2000 ihlaline neden olur.
+ Varsayılan olarak, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] derleyicide tüm aritmetik işleçler taşma için denetlenir. Bu nedenle, herhangi bir Visual Basic aritmetik işlemi oluşturabilir <xref:System.OverflowException> . Bu, CA2000 gibi kurallarda beklenmeyen ihlallere neden olabilir. Örneğin, Visual Basic derleyici, StreamReader atılmasına neden olacak bir özel durum oluşturabilecek ekleme için bir taşma denetimi yönergesi yaydığı için, aşağıdaki CreateReader1 işlevi bir CA2000 ihlaline neden olur.
 
  Bunu yapmak için, projenizdeki Visual Basic derleyicisinden taşma denetimleri yaymayı devre dışı bırakabilir veya kodunuzu aşağıdaki CreateReader2 işlevinde olarak değiştirebilirsiniz.
 
@@ -98,4 +98,4 @@ ms.locfileid: "72666152"
 <!-- TODO: review snippet reference  [!CODE [FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope.VBOverflow#1](FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope.VBOverflow#1)]  -->
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.IDisposable> [Dispose deseninin](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)
+ <xref:System.IDisposable>[Dispose kriteri](https://msdn.microsoft.com/library/31a6c13b-d6a2-492b-9a9f-e5238c983bcb)

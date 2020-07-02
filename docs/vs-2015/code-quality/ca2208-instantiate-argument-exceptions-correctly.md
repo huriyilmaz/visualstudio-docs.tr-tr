@@ -15,24 +15,24 @@ caps.latest.revision: 21
 author: jillre
 ms.author: jillfra
 manager: wpickett
-ms.openlocfilehash: 5b5e1525d1ee706f9cd46a58c022763d2ed234bf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 6a63ebb7f3946926864c4dd882c281b5dcd7c6c5
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72662692"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85535843"
 ---
 # <a name="ca2208-instantiate-argument-exceptions-correctly"></a>CA2208: Bağımsız değişken özel durumlarını doğru örnekleyin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-|||
+|Öğe|Değer|
 |-|-|
 |TypeName|InstantiateArgumentExceptionsCorrectly|
 |CheckId|CA2208|
 |Kategori|Microsoft. Usage|
 |Yeni Değişiklik|Kırılmamış|
 
-## <a name="cause"></a>Sebep
+## <a name="cause"></a>Nedeni
  Olası nedenler aşağıdaki durumları içerir:
 
 - Bir özel durum türünün varsayılan (parametresiz) oluşturucusuna bir çağrı yapılır veya [System. ArgumentException] öğesinden türetilir (<!-- TODO: review code entity reference <xref:assetId:///System.ArgumentException?qualifyHint=True&amp;autoUpgrade=True>  -->).
@@ -42,26 +42,26 @@ ms.locfileid: "72662692"
 ## <a name="rule-description"></a>Kural Tanımı
  Varsayılan oluşturucuyu çağırmak yerine, daha anlamlı bir özel durum iletisi sağlanmasını sağlayan Oluşturucu aşırı yüklemelerinin birini çağırın. Özel durum iletisi, geliştiriciyi hedeflemelidir ve hata koşulunu açıkça açıklamalı ve özel durumu nasıl düzeltebileceğiniz veya kaçınmalıdır.
 
- @No__t_0 ve türetilen türlerin bir ve iki dize Oluşturucusu imzaları `message` ve `paramName` parametrelere göre tutarlı değildir. Bu oluşturucuların doğru dize bağımsız değişkenleriyle çağrıldığından emin olun. İmzalar aşağıdaki gibidir:
+ Ve türetilmiş türlerindeki bir ve iki dize Oluşturucusu imzaları <xref:System.ArgumentException> ve parametreleri açısından tutarlı değildir `message` `paramName` . Bu oluşturucuların doğru dize bağımsız değişkenleriyle çağrıldığından emin olun. İmzalar aşağıdaki gibidir:
 
- <xref:System.ArgumentException> (dize `message`)
+ <xref:System.ArgumentException>(dize `message` )
 
- <xref:System.ArgumentException> (dize `message`, dize `paramName`)
+ <xref:System.ArgumentException>(dize `message` , dize `paramName` )
 
- <xref:System.ArgumentNullException> (dize `paramName`)
+ <xref:System.ArgumentNullException>(dize `paramName` )
 
- <xref:System.ArgumentNullException> (dize `paramName`, dize `message`)
+ <xref:System.ArgumentNullException>(dize `paramName` , dize `message` )
 
- <xref:System.ArgumentOutOfRangeException> (dize `paramName`)
+ <xref:System.ArgumentOutOfRangeException>(dize `paramName` )
 
- <xref:System.ArgumentOutOfRangeException> (dize `paramName`, dize `message`)
+ <xref:System.ArgumentOutOfRangeException>(dize `paramName` , dize `message` )
 
- <xref:System.DuplicateWaitObjectException> (dize `parameterName`)
+ <xref:System.DuplicateWaitObjectException>(dize `parameterName` )
 
- <xref:System.DuplicateWaitObjectException> (dize `parameterName`, dize `message`)
+ <xref:System.DuplicateWaitObjectException>(dize `parameterName` , dize `message` )
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
- Bu kural ihlalini onarmak için, bir ileti veya bir parametre adı alan veya her ikisini de çağıran bir Oluşturucu çağırın ve <xref:System.ArgumentException> ' ın türü olarak bağımsız değişkenlerin uygun olduğundan emin olun.
+ Bu kural ihlalini onarmak için ileti, parametre adı veya her ikisini de alan bir Oluşturucu çağırın ve bağımsız değişkenlerin Çağrılmakta olan tür için uygun olduğundan emin olun <xref:System.ArgumentException> .
 
 ## <a name="when-to-suppress-warnings"></a>Uyarılar Bastırıldığında
  Yalnızca parametreli bir oluşturucunun doğru dize bağımsız değişkenleriyle çağrılması durumunda bu kuraldan bir uyarının gösterilmemesi güvenlidir.

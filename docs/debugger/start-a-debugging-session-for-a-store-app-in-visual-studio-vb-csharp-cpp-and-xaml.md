@@ -35,12 +35,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: b11ea380f9012bc64f577d2da54a4a88b9f94daf
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: c4e025603fef11e278aee21b3c44f8d35d7cd34b
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85348242"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536558"
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app"></a>UWP uygulaması için hata ayıklama oturumu başlatma
 
@@ -76,7 +76,7 @@ Hata ayıklama kesme noktasına ulaşılana kadar devam eder, yürütmeyi el ile
 
 Visual Studio araç çubuğunda veya projenin hata ayıklama özelliği sayfasında hata ayıklama hedefini ayarlayabilirsiniz. Aşağıdaki seçeneklerden birini belirtin:
 
-|||
+|Name|Açıklama|
 |-|-|
 |**Yerel Makine**|Yerel makinenizdeki geçerli oturumdaki uygulamada hata ayıklayın.|
 |**Simülatör**|UWP uygulamaları için Visual Studio benzeticisinde uygulamada hata ayıklayın. Simülatör, yerel makinede mevcut olmayan dokunma hareketleri ve cihaz döndürme gibi cihaz işlevlerine benzetim yapan bir masaüstü penceresidir. Simülatör seçeneği, yalnızca uygulamanızın **hedef platformunun min. Version** değeri yerel makinedeki işletim sistemine eşit veya ondan küçükse kullanılabilir. Daha fazla bilgi için bkz. [simülatörde UWP uygulamaları çalıştırma](../debugger/run-windows-store-apps-in-the-simulator.md).|
@@ -114,7 +114,7 @@ C++ uygulamalarında, Visual Studio varsayılan olarak yerel kod ile hata ayıkl
 
 - C++ uygulamaları için **hata ayıklama** özellik sayfasındaki **hata ayıklayıcı türü** açılır listesinden aşağıdaki hata ayıklayıcılarından birini seçin.
 
-|||
+|Name|Açıklama|
 |-|-|
 |**Yalnızca yönetilen**|Uygulamanızdaki yönetilen kodda hata ayıklayın. JavaScript kodu ve yerel C/C++ kodu yok sayılır.|
 |**Yalnızca yerel**|Uygulamanızda Yerel C/C++ kodunda hata ayıklayın. Yönetilen kod ve JavaScript kodu yok sayılır.|

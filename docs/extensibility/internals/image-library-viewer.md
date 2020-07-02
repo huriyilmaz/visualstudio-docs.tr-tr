@@ -1,5 +1,5 @@
 ---
-title: Resim Kitaplığı Görüntüleyici | Microsoft Dokümanlar
+title: Görüntü Kitaplığı Görüntüleyici | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 9d9c7fbb-ebae-4b20-9dd8-3c9070c0d0d1
@@ -8,35 +8,35 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7c5eda24c235cddec99cb5177c6ed315978bc6f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: d9714879f93af052e244134ce225b07317455921
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80707744"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85536350"
 ---
 # <a name="image-library-viewer"></a>Görüntü Kitaplığı Görüntüleyicisi
-Visual Studio Image Library Viewer aracı, kullanıcının bunları Visual Studio'nun yapacağı şekilde işlemesine izin vererek görüntü bildirimlerini yükleyebilir ve arayabilir. Kullanıcı arka planı, boyutları, DPI'yi, yüksek kontrastı ve diğer ayarları değiştirebilir. Araç ayrıca her görüntü manifestosu için yükleme bilgilerini görüntüler ve görüntü bildirimindeki her görüntü için kaynak bilgileri görüntüler. Bu araç aşağıdakiler için yararlıdır:
+Visual Studio Görüntü Kitaplığı Görüntüleyicisi Aracı, görüntü bildirimleri yükleyip arayabilir ve bu sayede, kullanıcının bunları Visual Studio ile aynı şekilde değiştirmesine izin verebilirsiniz. Kullanıcı arka plan, boyut, DPı, yüksek karşıtlık ve diğer ayarları değiştirebilir. Araç ayrıca her görüntü bildirimi için bilgileri yükleme ve görüntü bildirimindeki her bir görüntü için kaynak bilgilerini görüntüler. Bu araç için yararlı olur:
 
 1. Hataları tanılama
 
-2. Özel görüntü bildirimlerinde özniteliklerin doğru şekilde ayarlanmasını sağlama
+2. Özel görüntü bildirimlerinde özniteliklerin doğru şekilde ayarlandığından emin olma
 
-3. Visual Studio uzantısı Visual Studio tarzına uygun görüntüleri kullanabilmek için Visual Studio Resim Kataloğu'nda görüntü arama
+3. Visual Studio görüntü kataloğunda, Visual Studio uzantısının Visual Studio 'nun stiline uyan görüntüleri kullanabilmesi için resimleri arama
 
-   ![Görüntü Kitaplığı Görüntüleyici Kahraman](../../extensibility/internals/media/image-library-viewer-hero.png "Görüntü Kitaplığı Görüntüleyici Kahraman")
+   ![Görüntü Kitaplığı Görüntüleyicisi Hero](../../extensibility/internals/media/image-library-viewer-hero.png "Görüntü Kitaplığı Görüntüleyicisi Hero")
 
-   **Resim lakabı**
+   **Görüntü bilinen adı**
 
-   Resim takma adı (veya kısaca takma adı), Resim Kitaplığı'ndaki bir görüntü varlığını veya resim listesi kıymetini benzersiz olarak tanımlayan bir GUID:ID çiftidir.
+   Resim bilinen adı (veya Short için bilinen ad), görüntü kitaplığındaki bir görüntü varlığını veya görüntü listesi varlığını benzersiz şekilde tanımlayan bir GUID: ID çiftidir.
 
-   **Resim manifestosu dosyaları**
+   **Görüntü bildirim dosyaları**
 
-   Görüntü bildirimi (.imagemanifest) dosyaları, görüntü varlıkları kümesini tanımlayan XML dosyaları, bu varlıkları temsil eden moniker'ler ve her varlığı temsil eden gerçek görüntü veya görüntülerdir. Görüntü bildirimleri, eski Web-hizmetleri desteği için bağımsız görüntüler veya resim listeleri tanımlayabilir. Ayrıca, varlık üzerinde veya her varlığın arkasındaki tek tek görüntülerde bu varlıkların ne zaman ve nasıl görüntüleneceğini değiştirmek üzere ayarlanabilen öznitelikler vardır.
+   Görüntü bildirimi (. ımagemanifest) dosyaları, bir görüntü varlıkları kümesini, bu varlıkları temsil eden bilinen adları ve her bir varlığı temsil eden gerçek görüntüyü ya da görüntüleri tanımlayan XML dosyalarıdır. Görüntü bildirimleri, eski Kullanıcı arabirimi desteği için tek başına görüntüleri veya görüntü listelerini tanımlayabilir. Ayrıca, varlık üzerinde veya her bir kıymetin arkasındaki ayrı görüntülerde ayarlanabilir öznitelikler vardır ve bu varlıkların ne zaman ve nasıl görüntüleneceğini değiştirebilirsiniz.
 
-   **Görüntü manifesto şeması**
+   **Görüntü bildirim şeması**
 
-   Tam bir görüntü manifestosu şuna benzer:
+   Tüm görüntü bildirimi şöyle görünür:
 
 ```xml
 <ImageManifest>
@@ -55,9 +55,9 @@ Visual Studio Image Library Viewer aracı, kullanıcının bunları Visual Studi
 </ImageManifest>
 ```
 
- **Sembol**
+ **Symbols**
 
- Okunabilirlik ve bakım yardımı olarak, görüntü bildirimi öznitelik değerleri için semboller kullanabilir. Semboller şu şekilde tanımlanır:
+ Bir okunabilirlik ve bakım Yardımcısı olarak, görüntü bildirimi öznitelik değerleri için semboller kullanabilir. Semboller şöyle tanımlanır:
 
 ```xml
 <Symbols>
@@ -68,15 +68,14 @@ Visual Studio Image Library Viewer aracı, kullanıcının bunları Visual Studi
 </Symbols>
 ```
 
-|||
+|**Subelement**|**Tanım**|
 |-|-|
-|**Alt öğesi**|**Tanım**|
-|İçeri Aktarma|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini alır.|
-|Guid|Sembol bir GUID'i temsil eder ve GUID biçimlendirmesini eşleştirmelidir.|
-|Kimlik|Sembol bir kimliği temsil eder ve negatif olmayan bir tamsayı olmalıdır.|
-|Dize|Sembol rasgele bir dize değerini temsil eder.|
+|İçeri Aktar|Geçerli bildirimde kullanılmak üzere verilen bildirim dosyasının sembollerini içeri aktarır.|
+|Guid|Sembol bir GUID 'YI temsil eder ve GUID biçimlendirmesine uymalıdır.|
+|ID|Sembol bir KIMLIĞI temsil eder ve negatif olmayan bir tamsayı olmalıdır.|
+|Dize|Sembol rastgele bir dize değerini temsil eder.|
 
- Semboller büyük/küçük harf duyarlıdır ve $(sembol adı) sözdizimi kullanılarak başvurulur:
+ Semboller büyük/küçük harfe duyarlıdır ve $ (sembol-adı) sözdizimi kullanılarak başvurulur:
 
 ```xml
 <Image Guid="$(ShellCommandGuid)" ID="$(cmdidSaveAll)" >
@@ -84,24 +83,23 @@ Visual Studio Image Library Viewer aracı, kullanıcının bunları Visual Studi
 </Image>
 ```
 
- Bazı semboller tüm manifestolar için önceden tanımlanır. Bunlar, yerel makinedeki yollara \<başvurmak için \<Kaynak> veya Alma> öğesinin Uri özniteliğinde kullanılabilir.
+ Bazı semboller tüm bildirimler için önceden tanımlanmıştır. Bunlar, \<Source> veya öğesinin URI özniteliğinde \<Import> yerel makinedeki yollara başvurmak için kullanılabilir.
 
-|||
+|**Sembol**|**Açıklama**|
 |-|-|
-|**Sembolü**|**Açıklama**|
-|Ortak Program Dosyaları|%CommonProgramFiles% ortam değişkeninin değeri|
-|Localappdata|%LocalAppData% ortam değişkeninin değeri|
+|CommonProgramFiles|% CommonProgramFiles% ortam değişkeninin değeri|
+|LocalAppData|% LocalAppData% ortam değişkeninin değeri|
 |ManifestFolder|Bildirim dosyasını içeren klasör|
-|Mydocuments|Geçerli kullanıcının Belgelerim klasörünün tam yolu|
-|ProgramFiles|%ProgramFiles% ortam değişkeninin değeri|
+|MyDocuments|Geçerli kullanıcının Belgelerim klasörünün tam yolu|
+|ProgramFiles|% ProgramFiles% ortam değişkeninin değeri|
 |Sistem|Windows\System32 klasörü|
-|Windir|%WinDir% ortam değişkeninin değeri|
+|Dizini|% WinDir% ortam değişkeninin değeri|
 
  **Görüntü**
 
- \<Görüntü> öğesi, bir takma alabilen bir görüntü tanımlar. Guid ve kimlik birlikte görüntü lakabını oluşturur. Görüntünün takma adı tüm görüntü kitaplığında benzersiz olmalıdır. Birden fazla görüntüde belirli bir lakap varsa, kütüphaneyi oluştururken karşılaşılan ilk görüntü korunur.
+ \<Image>Öğesi, bir bilinen ad tarafından başvurulabilen bir görüntü tanımlar. Birlikte alınan GUID ve ID, görüntü bilinen adını oluşturur. Görüntünün bilinen adı, tüm görüntü kitaplığı genelinde benzersiz olmalıdır. Birden fazla görüntüde bilinen bir ad varsa, kitaplığı oluştururken karşılaşılan ilk, korunan bir addır.
 
- En az bir kaynak içermelidir. Boyut-nötr kaynaklar boyutları geniş bir yelpazede en iyi sonuçları verecek olsa da, bunlar gerekli değildir. Hizmetten \<Görüntü> öğesinde tanımlanmamış bir boyutun görüntüsü istenirse ve boyut-nötr kaynak yoksa, hizmet en büyük boyuta özgü kaynağı seçer ve istenen boyuta ölçeklendirilir.
+ En az bir kaynak içermesi gerekir. Boyut nötr kaynaklar çok çeşitli boyutlarda en iyi sonuçları verecektir, ancak bu zorunlu değildir. Hizmette, öğesinde tanımlı olmayan bir boyut görüntüsü istenirse \<Image> ve bir boyut nötr kaynağı yoksa, hizmet en iyi boyuta özgü kaynağı seçer ve istenen boyuta göre ölçeklendirirsiniz.
 
 ```xml
 <Image Guid="guid" ID="int" AllowColorInversion="true/false">
@@ -110,16 +108,15 @@ Visual Studio Image Library Viewer aracı, kullanıcının bunları Visual Studi
 </Image>
 ```
 
-|||
-|-|-|
 |**Öznitelik**|**Tanım**|
-|Guid|[Gerekli] Resim lakabının GUID bölümü|
-|Kimlik|[Gerekli] Resim lakabının kimlik bölümü|
-|ColorInversion'a İzin Ver|[İsteğe bağlı, varsayılan true] Koyu bir arka plan da kullanıldığında görüntünün renklerini programlı olarak ters çevirip kullanamayacağını gösterir.|
+|-|-|
+|Guid|Istenir Görüntü adının GUID bölümü|
+|ID|Istenir Görüntü adının KIMLIK kısmı|
+|Allowcolorınversion|[İsteğe bağlı, varsayılan doğru] Görüntünün, koyu bir arka planda kullanıldığında, renkleri program aracılığıyla ters çevrimeyeceğini gösterir.|
 
  **Kaynak**
 
- \<Kaynak> öğesi tek bir görüntü kaynağı varlık (XAML ve PNG) tanımlar.
+ \<Source>Öğesi, tek bir görüntü kaynağı varlığını (XAML ve PNG) tanımlar.
 
 ```xml
 <Source Uri="uri" Background="background">
@@ -127,37 +124,34 @@ Visual Studio Image Library Viewer aracı, kullanıcının bunları Visual Studi
  </Source>
 ```
 
-|||
-|-|-|
 |**Öznitelik**|**Tanım**|
-|Urı|[Gerekli] Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> - Application:/// yetkisini kullanan bir [Paket URI](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br /><br /> - Mutlak bileşen kaynak başvurusu<br /><br /> - Yerel kaynak içeren bir dosyaya giden yol|
-|Arka plan|[İsteğe bağlı] Kaynağın hangi arka planda kullanılacağını gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> - *Işık*: Kaynak, hafif bir arka plan üzerinde kullanılabilir.<br /><br /> - *Koyu :* Kaynak koyu bir arka plan üzerinde kullanılabilir.<br /><br /> - *HighContrast*: Kaynak Yüksek Kontrast modunda herhangi bir arka plan üzerinde kullanılabilir.<br /><br /> - *HighContrastLight*: Kaynak, Yüksek Kontrastlı modda açık arka planda kullanılabilir.<br /><br /> -*HighContrastDark*: Kaynak Yüksek Kontrast modunda koyu bir arka plan üzerinde kullanılabilir.<br /><br /> Arka **Plan** özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> **Arka plan** *Açık,* *Koyu*, *HighContrastLight*veya *HighContrastDark*ise, kaynağın renkleri asla ters çevrilmez. **Arka plan** atlanırsa veya *HighContrast*olarak ayarlanmışsa, kaynağın renklerinin ters çevrilmesi görüntünün **AllowColorInversion** özniteliği tarafından denetlenir.|
+|-|-|
+|Kullanılmamışsa|Istenir Görüntünün nereden yüklenebileceğini tanımlayan bir URI. Aşağıdakilerden biri olabilir:<br /><br /> -Application:///yetkilisini kullanan bir [paket URI 'si](/dotnet/framework/wpf/app-development/pack-uris-in-wpf)<br /><br /> -Mutlak bir bileşen kaynağı başvurusu<br /><br /> -Yerel kaynak içeren bir dosyanın yolu|
+|Arka Plan|Seçim Kaynağın kullanılması amaçlanan arka plan türünü gösterir.<br /><br /> Aşağıdakilerden biri olabilir:<br /><br /> - *Işık*: kaynak açık bir arka planda kullanılabilir.<br /><br /> - *Koyu*: kaynak koyu bir arka planda kullanılabilir.<br /><br /> - *Highkarşıtlıklı*: kaynak yüksek karşıtlık modundaki herhangi bir arka planda kullanılabilir.<br /><br /> - *Highdeğişken Stlight*: kaynak yüksek karşıtlık modundaki hafif bir arka planda kullanılabilir.<br /><br /> -Üst *sınır*: kaynak, yüksek karşıtlık modunda koyu bir arka planda kullanılabilir.<br /><br /> **Arka plan** özniteliği atlanırsa, kaynak herhangi bir arka planda kullanılabilir.<br /><br /> **Arka plan** hafif, *koyu*, *Ince*bir *şekilde veya daha* *ince*, kaynak renkleri hiçbir şekilde ters çevrilmez. **Arka plan** atlanırsa veya *highkontrast*olarak ayarlandıysa, kaynak renklerinin Inversion değeri görüntünün **allowcolorınversion** özniteliği tarafından denetlenir.|
 
- Kaynak \<> öğesi tam olarak aşağıdaki isteğe bağlı alt öğelerden birine sahip olabilir:
+ Bir \<Source> öğe, aşağıdaki isteğe bağlı alt öğeler için tam olarak birine sahip olabilir:
 
-||||
+|**Dosyalarında**|**Öznitelikler (tüm gerekli)**|**Tanım**|
 |-|-|-|
-|**Öğe**|**Öznitelikler (tüm gerekli)**|**Tanım**|
-|\<Boyut>|Değer|Kaynak, verilen boyutun (aygıt birimlerinde) görüntüleri için kullanılacaktır. Görüntü kare olacak.|
-|\<SizeRange>|MinSize, MaxSize|Kaynak, MinSize'dan MaxSize'a (cihaz birimlerinde) kadar olan görüntüler için kapsamlı olarak kullanılacaktır. Görüntü kare olacak.|
-|\<Boyutlar>|Genişlik, Yükseklik|Kaynak, verilen genişlik ve yükseklik görüntüleri için (aygıt birimlerinde) kullanılacaktır.|
-|\<Boyut Aralığı>|MinWidth, MinHeight,<br /><br /> Maksimum Genişlik, Maksimum Yükseklik|Kaynak, en düşük genişlik/yükseklikten maksimum genişliğe/yüksekliğe (aygıt birimlerinde) kadar olan görüntüler için kullanılacaktır.|
+|\<Size>|Değer|Kaynak, verilen boyutun (cihaz birimlerinde) görüntüleri için kullanılacaktır. Resim kare olacak.|
+|\<SizeRange>|MinSize, MaxSize|Kaynak, MinSize ' den MaxSize 'a (cihaz birimlerinde) dahil olmak üzere, dahil edilecek görüntüler için kullanılacaktır. Resim kare olacak.|
+|\<Dimensions>|Genişlik, yükseklik|Kaynak, belirtilen genişlik ve yüksekliğin (cihaz birimlerinde) görüntüleri için kullanılacaktır.|
+|\<DimensionRange>|MinWidth, MinHeight,<br /><br /> MaxWidth, MaxHeight|Kaynak, en düşük genişlik/yükseklikten (cihaz birimleri cinsinden) en fazla genişlik/yükseklik arasındaki görüntüler için kullanılacaktır.|
 
- Kaynak> öğesi, yönetilen \<bir derleme yerine yerel bir \<derlemeden yüklenen kaynak> tanımlayan isteğe bağlı NativeResource> alt öğesine de sahip olabilir. \<
+ Bir \<Source> öğesi \<NativeResource> , \<Source> yönetilen bir derleme yerine yerel bir derlemeden yüklenen bir öğesini tanımlayan isteğe bağlı bir alt öğesi de olabilir.
 
 ```xml
 <NativeResource Type="type" ID="int" />
 ```
 
-|||
-|-|-|
 |**Öznitelik**|**Tanım**|
-|Tür|[Gerekli] XAML veya PNG yerel kaynağın türü|
-|Kimlik|[Gerekli] Yerel kaynağın tamsayı kimlik bölümü|
+|-|-|
+|Tür|Istenir Yerel kaynağın türü, XAML veya PNG|
+|ID|Istenir Yerel kaynağın tamsayı KIMLIĞI bölümü|
 
- **ımagelist**
+ **'I**
 
- \<ImageList> öğesi, tek bir şeritte döndürülebilen bir görüntü koleksiyonunu tanımlar. Şerit gerektiği gibi, talep üzerine inşa edilmiştir.
+ \<ImageList>Öğesi, tek bir şeridinde döndürülebilecek bir görüntü koleksiyonunu tanımlar. Şerit gerektiğinde isteğe bağlı olarak oluşturulur.
 
 ```xml
 <ImageList>
@@ -166,67 +160,66 @@ Visual Studio Image Library Viewer aracı, kullanıcının bunları Visual Studi
  </ImageList>
 ```
 
-|||
-|-|-|
 |**Öznitelik**|**Tanım**|
-|Guid|[Gerekli] Resim lakabının GUID bölümü|
-|Kimlik|[Gerekli] Resim lakabının kimlik bölümü|
-|Dış|[İsteğe bağlı, varsayılan yanlış] Resim lakabının geçerli bildirimde bir görüntüye başvurup başvurulmadığını gösterir.|
+|-|-|
+|Guid|Istenir Görüntü adının GUID bölümü|
+|ID|Istenir Görüntü adının KIMLIK kısmı|
+|Dış|[İsteğe bağlı, varsayılan yanlış] Resim adının geçerli bildirimde bir görüntüye başvuruda bulunup bulunmadığını gösterir.|
 
- İçe sahip görüntünün takma başlığı, geçerli bildirimde tanımlanan bir görüntüye başvurmak zorunda değildir. İçerdiği görüntü görüntü kitaplığında bulunamıyorsa, yerine boş bir yer tutucu görüntüsü kullanılır.
+ İçerilen görüntünün bilinen adı, geçerli bildirimde tanımlanan bir görüntüye başvurmak zorunda değildir. İçerilen görüntü görüntü kitaplığında bulunamazsa, yerine boş bir yer tutucu görüntüsü kullanılır.
 
-## <a name="how-to-use-the-tool"></a>Aracı nasıl kullanılır?
- **Özel bir görüntü bildirimini doğrulama**
+## <a name="how-to-use-the-tool"></a>Aracı kullanma
+ **Özel görüntü bildirimini doğrulama**
 
- Özel bir bildirim oluşturmak için, bildirimi otomatik oluşturmak için ManifestFromResources aracını kullanmanızı öneririz. Özel bildirimi doğrulamak için Resim Kitaplığı Görüntüleyici'yi başlatın ve Dosya > Yolları'nı seçin... Arama Dizinleri iletişim kutusunu açmak için. Araç, görüntü bildirimlerini yüklemek için arama dizinlerini kullanır, ancak bir bildirimdeki görüntüleri içeren .dll dosyalarını bulmak için bunları da kullanır, bu nedenle bu iletişim kutusuna hem manifesto hem de DLL dizinleri eklediğinden emin olun.
+ Özel bir bildirim oluşturmak için, bildirimi AutoGenerate için ManifestFromResources aracını kullanmanız önerilir. Özel bildirimi doğrulamak için, görüntü kitaplığı görüntüleyicisini başlatın ve dosya > yolu ayarla... seçeneğini belirleyin. Dizin Ara iletişim kutusunu açmak için. Araç, görüntü bildirimleri yüklemek için arama dizinlerini kullanır, ancak aynı zamanda bir bildirimde bulunan görüntüleri içeren. dll dosyalarını bulmak için bu iletişim kutusunu kullanacaktır, bu nedenle bu iletişim kutusunda hem bildirim hem de DLL dizinlerini eklediğinizden emin olun.
 
- ![Resim Kitaplığı Görüntüleyici Arama](../../extensibility/internals/media/image-library-viewer-search.png "Resim Kitaplığı Görüntüleyici Arama")
+ ![Görüntü Kitaplığı Görüntüleyicisi arama](../../extensibility/internals/media/image-library-viewer-search.png "Görüntü Kitaplığı Görüntüleyicisi arama")
 
- Bildirimleri ve karşılık gelen DL'leri aramak için yeni arama dizinlerini seçmek için **Ekle...** seçeneğini tıklatın. Araç bu arama dizinlerini hatırlar ve bir dizinin işaretlerini işaretleyerek veya denetlemeden açılabilir veya kapatılabilir.
+ Bildirimleri ve bunlara karşılık gelen DLL 'Leri aramak üzere yeni arama dizinleri seçmek için **Ekle...** ' ye tıklayın. Araç bu arama dizinlerini hatırlayacaktır ve bir dizini denetleyerek veya denetleyerek devre dışı bırakabilirsiniz.
 
- Varsayılan olarak, araç Visual Studio yükleme dizinini bulmaya çalışır ve bu dizinleri arama dizinleri listesine ekler. Aracın bulamadığı dizinleri el ile ekleyebilirsiniz.
+ Araç, varsayılan olarak Visual Studio install dizinini bulmaya çalışır ve bu dizinleri arama dizinleri listesine ekler. Aracın bulamadığı dizinleri el ile ekleyebilirsiniz.
 
- Tüm bildirimler yüklendikten sonra, araç **arka plan** renklerini, **DPI'yi,** **yüksek kontrastı**veya görüntü için gri **ölçeklendirmeyi** değiştirmek için kullanılabilir, böylece kullanıcı görüntü varlıklarını çeşitli ayarlar için doğru şekilde işlendiğini doğruolarak denetleyebilir.
+ Tüm bildirimler yüklendikten sonra, bir kullanıcının çeşitli ayarlar için doğru şekilde işlenip işlenmeyeceğini doğrulamak üzere görüntü varlıklarını görsel olarak inceleyebilmesi için **arka plan** renklerini, **DPI**, **yüksek karşıtlık**veya **gri ölçeklendirmeyi** değiştirmek için araç kullanılabilir.
 
- ![Resim Kitaplığı Görüntüleyici Arka Planı](../../extensibility/internals/media/image-library-viewer-background.png "Resim Kitaplığı Görüntüleyici Arka Planı")
+ ![Görüntü Kitaplığı Görüntüleyicisi arka planı](../../extensibility/internals/media/image-library-viewer-background.png "Görüntü Kitaplığı Görüntüleyicisi arka planı")
 
- Arka plan rengi Açık, Koyu veya özel bir değer olarak ayarlanabilir. "Özel Renk" seçeneğinin seçilmesi bir renk seçimi iletişim kutusunu açar ve daha sonra kolayca geri çağırmak için bu özel rengi arka plan açılan kutusunun altına ekler.
+ Arka plan rengi, ışık, koyu veya özel bir değere ayarlanabilir. "Özel renk" seçildiğinde, bir renk seçim iletişim kutusu açılır ve daha sonra kolayca geri çekmek için arka plan Birleşik giriş kutusunun altına özel renk eklenir.
 
- ![Resim Kitaplığı Görüntüleyici Özel Renk](../../extensibility/internals/media/image-library-viewer-custom-color.png "Resim Kitaplığı Görüntüleyici Özel Renk")
+ ![Görüntü Kitaplığı Görüntüleyicisi özel rengi](../../extensibility/internals/media/image-library-viewer-custom-color.png "Görüntü Kitaplığı Görüntüleyicisi özel rengi")
 
- Görüntü lakabını seçmek, sağdaki Görüntü Ayrıntıları bölmesinde o takma anın arkasındaki her gerçek görüntüye ait bilgileri görüntüler. Bölme ayrıca, kullanıcıların bir takma adı ada veya ham GUID:ID değerine göre kopyalamasına da olanak tanır.
+ Görüntü bilinen adı seçildiğinde, sağ taraftaki görüntü ayrıntıları bölmesinde söz konusu bilinen her bir görüntüye ait bilgiler görüntülenir. Bölmesi ayrıca, kullanıcıların bir adı ada veya ham GUID: ID değerine göre kopyalamasını sağlar.
 
- ![Resim Kitaplığı GörüntüLeyici Görüntü Ayrıntıları](../../extensibility/internals/media/image-library-viewer-image-details.png "Resim Kitaplığı GörüntüLeyici Görüntü Ayrıntıları")
+ ![Görüntü Kitaplığı Görüntüleyicisi görüntü ayrıntıları](../../extensibility/internals/media/image-library-viewer-image-details.png "Görüntü Kitaplığı Görüntüleyicisi görüntü ayrıntıları")
 
- Her görüntü kaynağı için görüntülenen bilgiler, görüntülenecek arka plan türünü, temalı olup olmadığını veya Yüksek Karşıtlığı destekleyip desteklemediğini, hangi boyutlarda geçerli olduğunu veya boyut açısından nötr olup olmadığını ve görüntünün yerel bir derlemeden gelip gelmediğini içerir.
+ Her görüntü kaynağı için görüntülenen bilgiler, bu dosyanın ne tür bir arka plan olduğunu, tema uygulanıp erişemeyeceğini veya Yüksek Karşıtlık destekleyip desteklemediğini, ne kadar geçerli olduğunu veya boyutun bağımsız olduğunu ve görüntünün yerel bir derlemeden geldiğini gösterir.
 
- ![Resim Kitaplığı Görüntüleyici Can Teması](../../extensibility/internals/media/image-library-viewer-can-theme.png "Resim Kitaplığı Görüntüleyici Can Teması")
+ ![Görüntü Kitaplığı Görüntüleyicisi teması olabilir](../../extensibility/internals/media/image-library-viewer-can-theme.png "Görüntü Kitaplığı Görüntüleyicisi teması olabilir")
 
- Bir görüntü bildirimini doğrularken, manifesto ve görüntü DLL'yi gerçek dünya konumlarında dağıtmanızı öneririz. Bu, göreli yolların doğru çalıştığını ve görüntü kitaplığı nın manifesto yu ve görüntü DLL'yi bulup yükleyebileceğini doğrular.
+ Bir görüntü bildirimi doğrulanırken, bildirim ve görüntü DLL 'sini gerçek dünya konumlarında dağıtmanızı öneririz. Bu, tüm göreli yolların doğru çalıştığını ve görüntü kitaplığının bildirim ve görüntü DLL 'sini bulup yükleyebildiğini doğrular.
 
- **Resim kataloğu KnownMonikers aranıyor**
+ **Image Catalog Knowntakma adları aranıyor**
 
- Visual Studio stilini daha iyi eşleştirmek için Visual Studio uzantısı, kendi tasarımını oluşturmak ve kullanmak yerine Visual Studio Resim Kataloğu'ndaki görüntüleri kullanabilir. Bu, bu görüntüleri korumak zorunda kalmama avantajına sahiptir ve visual studio'nun desteklediği tüm DPI ayarlarında doğru görünmesi için görüntünün yüksek DPI destekli bir görüntüye sahip olacağını garanti eder.
+ Visual Studio stilini daha iyi eşleştirmek için, Visual Studio uzantısı kendi oluşturup kullanmak yerine Visual Studio görüntü kataloğunda görüntüleri kullanabilir. Bu, bu görüntüleri sürdürmeme avantajına sahiptir ve görüntünün, Visual Studio 'Nun desteklediği tüm DPı ayarlarında doğru görünmesi için yüksek DPı olan bir yedekleme görüntüsüne sahip olmasını güvence altına alır.
 
- Görüntü kitaplığı görüntüleyici, kullanıcının görüntü kıymetini temsil eden lakabı bulabilmesi ve bu lakabı kodda kullanabilmesi için bir bildirimin aranmasına izin verir. Görüntüleri aramak için arama kutusuna istediğiniz arama terimini girin ve Enter tuşuna basın. Alttaki durum çubuğu, tüm bildirimlerdeki toplam görüntülerden kaç eşleşme bulunduğunu görüntüler.
+ Görüntü Kitaplığı Görüntüleyicisi, bir kullanıcının bir görüntü varlığını temsil eden bilinen adı bulabilmesi ve bu bilinen adı kodda kullanması için bir bildirimin aranmasına olanak tanır. Görüntü aramak için, arama kutusuna istenen arama terimini girin ve ENTER tuşuna basın. En alttaki durum çubuğunda, tüm bildirimlerde toplam görüntüden kaç eşleşme bulunmuştur görüntülenir.
 
- ![Resim Kitaplığı Görüntüleyici Filtresi](../../extensibility/internals/media/image-library-viewer-filter.png "Resim Kitaplığı Görüntüleyici Filtresi")
+ ![Görüntü Kitaplığı Görüntüleyicisi filtresi](../../extensibility/internals/media/image-library-viewer-filter.png "Görüntü Kitaplığı Görüntüleyicisi filtresi")
 
- Mevcut manifestolarda görüntü monikers ararken, arama ve sadece Visual Studio Image Catalog monikers, diğer kasıtlı olarak kamuya açık monikers veya kendi özel monikers kullanmanızı öneririz. Herkese açık olmayan moniker kullanıyorsanız, özel Kullanıcı Arabirimi bozulabilir veya bu genel olmayan monikers ve görüntüler değiştirilir veya güncelleştirildiğinde beklenmedik şekillerde görüntüleri değiştirilebilir.
+ Mevcut bildirimlerdeki görüntü takma adlarını ararken, yalnızca Visual Studio görüntü kataloğu 'nun bilinen adlarını, diğer kasıtlı olarak erişilebilen diğer adları veya kendi özel takma adlarını aramanızı ve kullanmanızı öneririz. Ortak bilinen adlar kullanırsanız, özel kullanıcı arabirimi bozulmuş olabilir veya bu ortak adlar ve görüntüler değiştirildiğinde veya güncelleştirilirse, görüntülerinin beklenmedik yollarla değiştirilmesini sağlayabilirsiniz.
 
- Ayrıca, GUID ile arama yapmak mümkündür. Bu arama türü, listeyi tek bir bildirime veya bu bildirimin birden çok GUID içeriyorsa tek bir bildirimin tek bir alt bölümüne filtrelemek için yararlıdır.
+ Ayrıca, GUID 'ye göre arama mümkündür. Bu arama türü, bildirim birden çok GUID içeriyorsa listenin tek bir bildirime veya bir bildirimin tek alt bölümüne göre filtrelemek için yararlıdır.
 
- ![Resim Kitaplığı Görüntüleyici Filtre GUID](../../extensibility/internals/media/image-library-viewer-filter-guid.png "Resim Kitaplığı Görüntüleyici Filtre GUID")
+ ![Görüntü Kitaplığı Görüntüleyicisi filtre GUID 'SI](../../extensibility/internals/media/image-library-viewer-filter-guid.png "Görüntü Kitaplığı Görüntüleyicisi filtre GUID 'SI")
 
- Son olarak, kimlikle arama yapmak da mümkündür.
+ Son olarak, KIMLIĞE göre arama da mümkündür.
 
- ![Resim Kitaplığı Görüntüleyici Filtre Kimliği](../../extensibility/internals/media/image-library-viewer-filter-id.png "Resim Kitaplığı Görüntüleyici Filtre Kimliği")
+ ![Görüntü Kitaplığı Görüntüleyicisi filtre KIMLIĞI](../../extensibility/internals/media/image-library-viewer-filter-id.png "Görüntü Kitaplığı Görüntüleyicisi filtre KIMLIĞI")
 
 ## <a name="notes"></a>Notlar
 
-- Varsayılan olarak, araç Visual Studio yükleme dizininde bulunan çeşitli görüntü bildirimlerini çeker. Kamuya açık monikers olan tek **Microsoft.VisualStudio.ImageCatalog** bildirimidir. GUID: ae27a6b0-e345-4288-96df-5eaf394ee369 (özel bir manifesto bu GUID geçersiz **kılma)** Türü: BilinenMonikers
+- Araç, varsayılan olarak Visual Studio Install dizininde birçok görüntü bildirimini çeker. **Microsoft. VisualStudio. ımagecatalog** bildirimi, genel olarak tüketilebilir bilinen adlar olan tek bir addır. GUID: ae27a6b0-e345-4288-96df-5eaf394ee369 (özel bir bildirimde bu GUID **'yi geçersiz kılma** ) tür: knowntakma adlar
 
-- Araç bulduğu tüm görüntü bildirimlerini yüklemek için başlatmayı dener, bu nedenle uygulamanın gerçekten görünmesi birkaç saniye sürebilir. Ayrıca, bildirimleri yüklerken yavaş veya yanıt vermeyen olabilir.
+- Araç, bulduğu tüm görüntü bildirimlerini yüklemeye çalışır, bu nedenle uygulamanın gerçekten görünmesi birkaç saniye sürebilir. Bildirimler yüklenirken de yavaş veya yanıt vermiyor olabilir.
 
 ## <a name="sample-output"></a>Örnek Çıktı
  Bu araç herhangi bir çıktı oluşturmaz.

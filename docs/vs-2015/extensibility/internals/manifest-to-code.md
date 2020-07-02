@@ -1,61 +1,60 @@
 ---
-title: Koda bildirme | Microsoft Docs
+title: Manifest to Code | Microsoft Docs
 ms.date: 11/15/2016
 ms.topic: conceptual
 ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
 caps.latest.revision: 5
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 5dd39ecfb25b4b21f7a9064da7621bcc77aab791
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cb9b02e10a2d263a39e7ae6a150e452ff8321d9f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68192646"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85537065"
 ---
 # <a name="manifest-to-code"></a>Manifest to Code
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kod aracı bildirime .imagemanifest dosya için Visual Studio Görüntü hizmeti alır ve C++, C#, VB veya Visual Studio uzantıları .vsct dosyaları görüntü bildirim değerleri başvuru için bir sarmalayıcı dosya veya oluşturur bir konsol uygulamasıdır. Bu araç, Visual Studio Görüntü hizmeti doğrudan isteyen görüntülerden veya kodu kendi kullanıcı Arabirimi ve işleme işlemez API'ler aracılığıyla bildirim değerleri geçirme için kullanılabilir sarmalayıcı dosyaları oluşturur.  
+Manifest to Code Aracı, Visual Studio Image hizmeti için bir. ımagemanifest dosyası alan ve Visual Studio uzantıları için C++, C#, VB veya. vsct dosyalarındaki görüntü bildiriminin değerlerine başvurmak için bir sarmalayıcı dosyası ya da dosyaları oluşturan bir konsol uygulamasıdır. Bu araç, doğrudan Visual Studio görüntü hizmetinden görüntü istemek için veya kod kendi Kullanıcı arabirimini ve işlemesini karşılamıyorsa API 'Ler aracılığıyla bildirim değerlerini iletmek için kullanılabilecek sarmalayıcı dosyalar oluşturur.  
   
-## <a name="how-to-use-the-tool"></a>Aracı'nı kullanma  
- **Söz dizimi**  
+## <a name="how-to-use-the-tool"></a>Aracı kullanma  
+ **Syntax**  
   
- ManifestToCode /manifest:\<görüntü bildirim dosyası > /language:\<kod dili > \<isteğe bağlı bağımsız değişken >  
+ ManifestToCode/manifest: \<Image Manifest file> /Language: \<Code Language>\<Optional Args>  
   
- **Bağımsız Değişkenler**  
+ **Arguments**  
   
-||||  
+|**Anahtar adı**|**Notlar**|**Gerekli veya Isteğe bağlı**|  
 |-|-|-|  
-|**Anahtar adı**|**Notlar**|**Gerekli veya isteğe bağlı**|  
-|bildirim /|Oluşturulacak veya güncelleştirilecek bir kod sarmalayıcısını kullanılacak görüntü bildiriminin yolu.|Gerekli|  
-|/Language|İçinde bir kod sarmalayıcısını üretileceği dil.<br /><br /> Geçerli değerler: CPP, C++, CS, CSharp C#, VB veya VSCT değerleri büyük/küçük harfe duyarsızdır.<br /><br /> VSCT dilini seçeneği /monikerClass, /classAccess ve/Namespace seçenekleri göz ardı edilir.|Gerekli|  
-|/imageIdClass|İmageIdClass ve aracı tarafından oluşturulan ilişkili dosya adı. C++ dil seçeneği için yalnızca .h dosyaları oluşturulur.<br /><br /> Varsayılan: \<Bildirim yolu > \MyImageIds. \<Lang Ext >|İsteğe Bağlı|  
-|/monikerClass|MonikerClass ve aracı tarafından oluşturulan ilişkili dosya adı. C++ dil seçeneği için yalnızca .h dosyaları oluşturulur. VSCT dilini göz ardı edilir.<br /><br /> Varsayılan: \<Bildirim yolu > \MyMonikers. \<Lang Ext >|İsteğe Bağlı|  
-|/classAccess|İmageIdClass ve monikerClass ait erişim değiştiricisinin. Erişim değiştiricisi verilen dil için geçerli olduğundan emin olun. VSCT dil seçeneğini göz ardı edilir.<br /><br /> Varsayılan: Ortak|İsteğe Bağlı|  
-|/ namespace|Bir kod sarmalayıcısını içinde tanımlanan ad alanı. VSCT dil seçeneğini göz ardı edilir. Her iki '.' veya '::' seçtiğiniz dil seçeneğini bağımsız olarak geçerli ad alanı ayırıcısı olan.<br /><br /> Varsayılan: Myımages|İsteğe Bağlı|  
-|/ nologo|Bu bayrak ayarlandığında, ürün ve telif hakkı bilgileri yazdırmasının durdurur.|İsteğe Bağlı|  
-|/?|Yardım bilgi yazdırır.|İsteğe Bağlı|  
-|/help|Yardım bilgi yazdırır.|İsteğe Bağlı|  
+|/MANIFEST|Kod sarmalayıcısı oluşturmak veya güncelleştirmek için kullanılacak görüntü bildiriminin yolu.|Gerekli|  
+|/Language|Kod sarmalayıcısı oluşturmak için kullanılacak dil.<br /><br /> Geçerli değerler: CPP, C++, CS, CSharp, C#, VB veya VSCT değerleri büyük/küçük harfe duyarsızdır.<br /><br /> VSCT Language seçeneği için/monikerClass,/classAccess ve/Namespace seçenekleri yok sayılır.|Gerekli|  
+|/ımageıdclass|Imageıdclass ve araç tarafından oluşturulan ilişkili dosya adı. C++ dil seçeneği için yalnızca. h dosyaları oluşturulur.<br /><br /> Varsayılan: \<Manifest Path> \Myımageıds.\<Lang Ext>|İsteğe Bağlı|  
+|/monikerClass|Araç tarafından oluşturulan monikerClass ve ilişkili dosyanın adı. C++ dil seçeneği için yalnızca. h dosyaları oluşturulur. Bu, VSCT dili için yoksayılır.<br /><br /> Varsayılan: \<Manifest Path> \MyMonikers.\<Lang Ext>|İsteğe Bağlı|  
+|/classAccess|Imageıdclass ve monikerClass için erişim değiştiricisi. Erişim değiştiricisinin verilen dil için geçerli olduğundan emin olun. Bu, VSCT dili seçeneği için yoksayılır.<br /><br /> Varsayılan: genel|İsteğe Bağlı|  
+|/Namespace|Kod sarmalayıcısı içinde tanımlanan ad alanı. Bu, VSCT dili seçeneği için yoksayılır. '. ' veya ':: ', seçilen dil seçeneğinden bağımsız olarak geçerli ad alanı ayırıcıları.<br /><br /> Varsayılan: myImages|İsteğe Bağlı|  
+|/noLogo|Bu bayrak ayarlandığında, ürün ve telif hakkı bilgilerinin yazdırılması durduruluyor.|İsteğe Bağlı|  
+|/?|Yardım bilgilerini yazdır.|İsteğe Bağlı|  
+|/help|Yardım bilgilerini yazdır.|İsteğe Bağlı|  
   
  **Örnekler**  
   
-- ManifestToCode /manifest:D:\MyManifest.imagemanifest /language:CSharp  
+- ManifestToCode/manifest: D:\mymanifest.exe ımagemanifest/Language: CSharp  
   
-- ManifestToCode /manifest:D:\MyManifest.imagemanifest /language:C++/Namespace: benim:: Namespace /imageIdClass:MyImageIds /monikerClass:MyMonikers /classAccess:friend  
+- ManifestToCode/manifest: D:\mymanifest.exe ımagemanifest/Language: C++/Namespace: My:: Namespace/ımageıdclass: Myımageıds/monikerClass: Mytakma ad/classAccess: arkadaş  
   
-- ManifestToCode /manifest:D:\MyManifest.imagemanifest /language:VSCT /imageIdClass:MyImageIds  
+- ManifestToCode/manifest: D:\mymanifest.exe ımagemanifest/Language: VSCT/ımageıdclass: Myımageıds  
   
 ## <a name="notes"></a>Notlar  
   
-- Bu araç bildiriminden kaynakları aracı tarafından oluşturulan görüntüyü bildirimleri ile kullanmanızı öneririz.  
+- Bu aracı, Manifest from Resources aracı tarafından oluşturulan görüntü bildirimleri ile kullanmanızı öneririz.  
   
-- Araç, yalnızca kod sarmalayıcılar için Sembol girişler arar. Bir görüntü bildirimi sembol içeriyorsa, oluşturulan kod sarmalayıcıları boş olur. Ardından, bir resim veya simge kullanmayan görüntü bildiriminde görüntü kümesi ise, bir kod sarmalayıcısını edilmeyecek.  
+- Araç, kod sarmalayıcıları oluşturmak için yalnızca sembol girdilerine bakar. Görüntü bildiriminde sembol yoksa, oluşturulan kod sarmalayıcıları boş olur. Görüntü bildiriminde sembolleri kullanmayan bir görüntü veya resim kümesi varsa, bunlar kod sarmalayıcısından çıkarılır.  
   
 ## <a name="sample-output"></a>Örnek çıktı  
  **C# sarmalayıcıları**  
   
- Basit görüntü kimliği ve resim bilinen adı bir çift sınıflar için C# şuna benzeyecektir kod aşağıda:  
+ C# için bir çift basit görüntü KIMLIĞI ve resim bilinen adı sınıfları aşağıdaki koda benzer olacaktır:  
   
 ```csharp  
 //-----------------------------------------------------------------------------  
@@ -98,7 +97,7 @@ namespace MyImages
   
  **C++ sarmalayıcıları**  
   
- Basit görüntü kimliği ve resim bilinen adı bir çift sınıfları C++ benzer için aşağıdaki kodu:  
+ C++ için bir çift basit görüntü KIMLIĞI ve resim bilinen adı sınıfları aşağıdaki koda benzer olacaktır:  
   
 ```cpp  
 //-----------------------------------------------------------------------------  
@@ -155,9 +154,9 @@ __declspec(selectany) const ImageMoniker MyMonikers::MyImage2 = { MyImageIds::As
 }  
 ```  
   
- **Visual Basic sarmalayıcıları**  
+ **Sarmalayıcılar Visual Basic**  
   
- Visual Basic benzer olacaktır basit görüntü kimliği ve resim bilinen adı bir çift sınıfları kod aşağıda:  
+ Visual Basic için bir çift basit görüntü KIMLIĞI ve resim bilinen adı sınıfları aşağıdaki koda benzer olacaktır:  
   
 ```vb  
 ' -----------------------------------------------------------------------------  
@@ -211,9 +210,9 @@ Namespace MyImages
 End Namespace  
 ```  
   
- **VSCT sarmalayıcı**  
+ **VSCT sarmalayıcısı**  
   
- Resim kimlikleri .vsct dosyası için bir dizi şuna benzer olacaktır:  
+ Bir. vsct dosyası için bir görüntü kimliği kümesi şuna benzer olacaktır:  
   
 ```xml  
 <?xml version='1.0' encoding='utf-8'?>  

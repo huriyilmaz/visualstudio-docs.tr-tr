@@ -1,8 +1,8 @@
 ---
-title: Python için karışık mod hata ayıklama
-description: Aynı anda Ortamlar arasında adım atma, değerleri görüntüleme ve ifadeleri değerlendirme dahil olmak üzere Visual Studio'da C++ ve Python hata ayıklama.
+title: Python için karışık modda hata ayıklama
+description: Ortamlar arasında adımlamayı, değerleri görüntülemeyi ve ifadeleri değerlendirmeyi de içeren Visual Studio 'da C++ ve Python için aynı anda hata ayıklayın.
 ms.date: 11/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: JoshuaPartlow
 ms.author: joshuapa
 manager: jillfra
@@ -10,113 +10,113 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: bc90d659a32c14f92e1eff058dd22d4a17d0b1cb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 953ff26a6094a9de9dcf974d5e4cb5a02aaa503f
+ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75679006"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85533568"
 ---
-# <a name="debug-python-and-c-together"></a>Hata Ayıklama Python ve C++ birlikte
+# <a name="debug-python-and-c-together"></a>Python ve C++ ile birlikte hata ayıklama
 
-En düzenli Python hata ayıklayıcıları yalnızca Python kodunun hata ayıklama destekler. Ancak uygulamada Python, yüksek performans gerektiren senaryolarda veya platform API'lerini doğrudan çağırabilme yeteneğinde C veya C++ ile birlikte kullanılır. (Bkz. Bir gözden geçirme için [Python için C++ uzantısı oluştur.)](working-with-c-cpp-python-in-visual-studio.md)
+Çoğu normal Python hata ayıklayıcıları yalnızca Python kodunun hata ayıklamasını destekler. Bununla birlikte, Python, yüksek performans gerektiren senaryolarda C veya C++ ile birlikte kullanılır ve platform API 'Lerini doğrudan çağırabilme olanağı sağlar. (Bkz. bir izlenecek yol için bkz. [Python Için C++ uzantısı oluşturma](working-with-c-cpp-python-in-visual-studio.md) .)
 
-Visual Studio, Visual Studio yükleyicisinde **Python Geliştirme** iş yükü için Python yerel **geliştirme araçları** seçeneğini seçmeniz koşuluyla, Python ve yerel C/C++ için entegre, eşzamanlı karma mod hata ayıklama sağlar.
+Visual Studio, Python ve yerel C/C++ için tümleşik, eşzamanlı karışık modda hata ayıklama sağlar ve Visual Studio yükleyicisindeki **Python geliştirme** iş yükü için **Python yerel geliştirme araçları** seçeneğini belirleyebilirsiniz.
 
 > [!Note]
-> Visual Studio 2015 ve öncesi yıllarda Visual Studio 1.x için Python Tools ile karma modlu hata ayıklama kullanılamaz.
+> Visual Studio 2015 ve önceki sürümlerde Visual Studio için Python Araçları 1. x ile karışık modda hata ayıklama kullanılamaz.
 
-Karışık mod hata ayıklama özellikleri, bu makalede açıklandığı gibi şunlardır:
+Karma mod hata ayıklama özellikleri, bu makalede açıklandığı gibi aşağıdakileri içerir:
 
 - Birleşik çağrı yığınları
-- Python ve yerel kod arasındaki adım
-- Her iki kod türünde de kesme noktaları
-- Bkz. Nesnelerin yerel çerçevelerde Python gösterimleri ve tam tersi
-- Python projesi veya C++ projesi bağlamında hata ayıklama
+- Python ve yerel kod arasında adımla
+- Her iki kod türündeki kesme noktaları
+- Yerel çerçevelerdeki nesnelerin Python temsillerine veya bunun tersini görün
+- Python projesi veya C++ projesi bağlamı içinde hata ayıklama
 
-![Visual Studio'da Python için karışık mod hata ayıklama](media/mixed-mode-debugging.png)
+![Visual Studio 'da Python için karışık modda hata ayıklama](media/mixed-mode-debugging.png)
 
 |   |   |
 |---|---|
-| ![video için film kamera simgesi](../install/media/video-icon.png "Nasıl yapılacağını görmek için") | Visual Studio ile yerel C modüllerinin oluşturulması, test edilmesi ve hata ayıklanmasına giriş için [Deep Dive: Create Native Modules](https://youtu.be/D9RlT06a1EI) (youtube.com, 9m 09s) bölümüne bakın. Video visual studio 2015 ve 2017 için geçerlidir. |
+| ![video için film kamerası simgesi](../install/media/video-icon.png "Nasıl yapılacağını görmek için") | Visual Studio ile yerel C modülleri oluşturmaya, test etmeye ve hata ayıklamaya giriş için bkz. [derinlemesine bakış: yerel modüller oluşturma](https://youtu.be/D9RlT06a1EI) (YouTube.com, 9 dk 09s). Video hem Visual Studio 2015 hem de 2017 için geçerlidir. |
 
-## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Python projesinde karışık mod hata ayıklamayı etkinleştirme
+## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Python projesinde karışık modda hata ayıklamayı etkinleştir
 
-1. **Solution Explorer'da**Python projesine sağ tıklayın, **Özellikler'i**seçin, **Hata Ayıklama** sekmesini seçin ve ardından **yerel kodu hata ayıklama özelliğini etkinleştir'i**seçin. Bu seçenek, tüm hata ayıklama oturumları için karışık mod sağlar.
+1. **Çözüm Gezgini**' de Python projesine sağ tıklayın, **Özellikler**' i seçin, **Hata Ayıkla** sekmesini seçin ve ardından **yerel kod hata ayıklamayı etkinleştir**' i seçin. Bu seçenek tüm hata ayıklama oturumları için karışık mod sağlar.
 
-    ![Yerel kod hata ayıklama etkinleştirme](media/mixed-mode-debugging-enable-native.png)
+    ![Yerel kod hata ayıklamasını etkinleştirme](media/mixed-mode-debugging-enable-native.png)
 
     > [!Tip]
-    > Yerel kod hata ayıklamaetkinleştirdiğinizde, Python çıkış penceresi, program tamamlandığında size her zamanki **basın tuşunu** vermeden duraklatmaya devam etmek için hemen kaybolabilir. Duraklatma zorlamak için, yerel kod hata `-i` ayıklama etkinleştirdiğinizde Hata **Ayıklama** sekmesinde**Yorumlayıcı Bağımsız Değişkenler** **çalıştır** > seçeneği ekleyin. Bu bağımsız değişken, Python yorumlayıcısını kod bittikten sonra etkileşimli moda sokar ve bu noktada çıkmak için **Ctrl**+**Z** > **Enter** tuşuna basmanızı bekler.
+    > Yerel kod hata ayıklamasını etkinleştirdiğinizde, bir program her ne kadar her zaman, duraklatmaya **devam etmek için herhangi bir tuşa basmadan** , Python çıkış penceresi hemen kaybolabilir. Bir duraklatma zorlamak için, `-i` **Run**  >  yerel kod hata ayıklamasını etkinleştirdiğinizde **hata ayıklama** sekmesindeki**yorumlayıcı bağımsız değişkenlerini** Çalıştır alanına seçeneği ekleyin. Bu bağımsız değişken, kod bittikten sonra Python yorumlayıcısını etkileşimli moda koyar, bu noktada **Ctrl** + çıkmak için CTRL**Z**  >  **ENTER** tuşlarına basmanız önerilir.
 
-1. Karışık mod hata ayıklayıcısını varolan bir işleme **(İşleme Hata** > **Ayıklama)** takarken, **Kod Türü Seç** iletişim kutusunu açmak için **Seç** düğmesini kullanın. Ardından **hata ayıklama bu kod türleri** seçeneğini ayarlayın ve listede hem **Yerel** Hem de **Python'u** seçin:
+1. Karışık modda hata ayıklayıcıyı varolan bir işleme iliştirirken (**hata ayıklama**  >  **işleme ekleme**), **Select** düğmesini kullanarak **kod türünü seç** iletişim kutusunu açın. Sonra **Bu kod türlerini hata ayıkla** seçeneğini belirleyin ve listede hem **Yerel** hem de **Python** 'u seçin:
 
     ![Yerel ve Python kod türlerini seçme](media/mixed-mode-debugging-code-type.png)
 
-    Kod türü ayarları kalıcıdır, bu nedenle daha sonra farklı bir işleme iliştirirken karışık mod hata ayıklamaişlemini devre dışı kakmak istiyorsanız **Python** kod türünü temizleyin.
+    Kod türü ayarları kalıcıdır, bu nedenle daha sonra farklı bir işleme eklenirken karışık modda hata ayıklamayı devre dışı bırakmak istiyorsanız **Python** kod türünü temizleyin.
 
-    Diğer kod türlerini **Yerel'e**ek olarak veya bunun yerine seçmek mümkündür. Örneğin, yönetilen bir uygulama, yerel uzantı modüllerini kullanan CPython'u barındırıyorsa ve üçünü de hata ayıklamak istiyorsanız, **python,** **yerel**ve **yönetilen** leri, birleşik arama yığınları ve üç çalışma süresi arasında adım atma dahil olmak üzere birleştirilmiş hata ayıklama deneyimi için birlikte denetleyebilirsiniz.
+    Diğer kod türlerini, veya yerine, **Yerel**olarak veya yerine seçebilirsiniz. Örneğin, yönetilen bir uygulama, sırasıyla yerel uzantı modüllerini kullanır ve bu üç üçüne hata ayıklamak istiyorsanız, **Python**, **Yerel**ve **yönetilen** bir hata ayıklama deneyimi için birleştirilmiş çağrı yığınlarını ve üç çalışma alanı arasında adımlamayı bir araya getirebilirsiniz.
 
-1. Karışık modda ilk kez hata ayıklamaya başladığınızda, **Python Symbols Required** iletişim kutusunu görebilirsiniz [(bkz. karışık mod hata ayıklama için Semboller).](debugging-symbols-for-mixed-mode-c-cpp-python.md) Belirli bir Python ortamı için yalnızca bir kez semboller yüklemeniz gerekir. Visual Studio yükleyicisi (Visual Studio 2017 ve sonrası) aracılığıyla Python desteğini yüklerseniz semboller otomatik olarak dahil edilir.
+1. Karma modda hata ayıklamaya ilk kez başladığınızda, bir **Python sembolleri gerekli** iletişim kutusu görebilirsiniz (bkz. [karışık mod hata ayıklama sembolleri](debugging-symbols-for-mixed-mode-c-cpp-python.md)). Sembolleri, belirli bir Python ortamı için yalnızca bir kez yüklemeniz gerekir. Visual Studio yükleyicisi aracılığıyla Python desteği yüklerseniz semboller otomatik olarak eklenir (Visual Studio 2017 ve üzeri).
 
-1. Hata ayıklama yaparken standart Python'un kaynak kodunu [https://www.python.org/downloads/source/](https://www.python.org/downloads/source/)kullanılabilir hale getirmek için, sürümünüze uygun arşivi ziyaret edin ve bir klasöre ayıklayın. Daha sonra Visual Studio'u sizden ne istenirse istendiği noktada o klasördeki belirli dosyalara yönlendirirsiniz.
+1. Hata ayıklarken standart Python 'nun kendisi için kaynak kodu kullanılabilir hale getirmek için, [https://www.python.org/downloads/source/](https://www.python.org/downloads/source/) sürümünüz için uygun Arşivi indirin ve bir klasöre ayıklayın. Ardından, Visual Studio 'Yu bu klasördeki belirli dosyalara hangi noktada sorar.
 
-## <a name="enable-mixed-mode-debugging-in-a-cc-project"></a>C/C++ projesinde karışık mod hata ayıklamayı etkinleştirme
+## <a name="enable-mixed-mode-debugging-in-a-cc-project"></a>C/C++ projesinde karışık modda hata ayıklamayı etkinleştir
 
-Visual Studio (2017 sürüm 15.5 ve sonrası) bir C/C++ projesinden karışık mod hata ayıklamayı destekler (örneğin, [Python'u python.org açıklandığı gibi başka bir uygulamaya katıştırırken).](https://docs.python.org/3/extending/embedding.html) Karışık mod hata ayıklamayı etkinleştirmek için, C/C++ projesini **Python/Yerel Hata Ayıklama'yı**başlatmak için yapılandırın:
+Visual Studio (2017 sürüm 15,5 ve üzeri), bir C/C++ projesinden karışık modda hata ayıklamayı destekler (örneğin, [Python.org ' de açıklandığı gibi başka bir uygulamaya Python](https://docs.python.org/3/extending/embedding.html)eklenirken). Karışık modda hata ayıklamayı etkinleştirmek için, C/C++ projesini **Python/yerel hata ayıklamayı**başlatmak üzere yapılandırın:
 
-1. **Solution Explorer'daki** C/C++ projesine sağ tıklayın ve **Özellikler'i**seçin.
-1. Hata **Ayıklama** sekmesini seçin, **başlatmaiçin Hata** **Ayıklama'dan Python/Yerel Hata Ayıklama'yı** seçin ve **Tamam'ı**seçin.
+1. **Çözüm Gezgini** ' de C/C++ projesine sağ tıklayın ve **Özellikler**' i seçin.
+1. **Hata ayıklama** sekmesini seçin, **başlatılacak hata ayıklayıcıdan** **Python/yerel hata ayıklama** öğesini seçin ve **Tamam**' ı seçin.
 
-    ![C/C++ projesinde Python/Native hata ayıklayıcısı seçme](media/mixed-mode-debugging-select-cpp-debugger.png)
+    ![Bir C/C++ projesinde Python/Native hata ayıklayıcıyı seçme](media/mixed-mode-debugging-select-cpp-debugger.png)
 
 > [!Note]
-> **Python/Yerel Hata Ayıklama'yı** seçme seçeneğiniz yoksa, önce VS yükleyicisini kullanarak **Python yerel geliştirme araçlarını** yüklemeniz gerekir. Python geliştirme iş yükü altında bir seçenek olarak bulabilirsiniz. Daha fazla bilgi için [Windows'da Visual Studio'da Python desteği nasıl yüklenir'](installing-python-support-in-visual-studio.md)e bakın.
+> **Python/yerel hata ayıklamayı** seçme seçeneğiniz yoksa, önce vs yükleyicisini kullanarak **Python yerel geliştirme araçlarını** yüklemeniz gerekir. Bunu, Python geliştirme iş yükü altında bir seçenek olarak bulabilirsiniz. Daha fazla bilgi için bkz. [Windows üzerinde Visual Studio 'Da Python desteği nasıl yüklenir](installing-python-support-in-visual-studio.md).
 
-Bu yöntemi kullanarak, hata ayıklayıcının bağlı olmayacağı bir alt *python.exe* işlemi *oluşturduğundan, py.exe* başlatıcısının kendisini hata ayıklamadığınızı unutmayın. *Python.exe'yi* doğrudan bağımsız değişkenlerle başlatmak istiyorsanız, **Python/Native Hata Ayıklama** özelliklerindeki **(önceki** resimde gösterilen) Komut seçeneğini değiştirerek *python.exe'ye*tam yolu belirtin, ardından **Komut Bağımsız Değişkenleri'ndeki**bağımsız değişkenleri belirtin.
+Bu yöntemi kullanarak, hata ayıklayıcının iliştirilemediği bir alt *python.exe* işlemini oluşturduğundan *py.exe* başlatıcısı 'nın kendisinde hata ayıklayamayacağınız farkında olun. Bağımsız değişkenlerle *python.exe* doğrudan başlatmak istiyorsanız **Python/yerel hata ayıklama** özelliklerindeki (önceki görüntüde gösterilen) **komut** seçeneğini değiştirerek *python.exe*tam yolunu belirtin ve ardından **komut bağımsız**değişkenlerinde bağımsız değişkenleri belirtin.
 
-### <a name="attaching-the-mixed-mode-debugger"></a>Karışık mod hata ayıklama ekleme
+### <a name="attaching-the-mixed-mode-debugger"></a>Karışık modda hata ayıklayıcıyı iliştirme
 
-Visual Studio'nun önceki tüm sürümlerinde, C/C++ projeleri yalnızca yerel hata ayıklayıcısı kullandığından, visual studio'da bir Python projesi başlatılırken doğrudan karma mod hata ayıklama etkinleştirilir. Ancak, hata ayıklama yı ayrı ayrı ekleyebilirsiniz:
+Visual Studio 'nun önceki tüm sürümlerinde doğrudan karışık modda hata ayıklama yalnızca Visual Studio 'da bir Python projesi başlatılırken etkindir çünkü C/C++ projeleri yalnızca yerel hata ayıklayıcıyı kullanır. Ancak, hata ayıklayıcıyı ayrı olarak iliştirebilirsiniz:
 
-1. Hata ayıklama olmadan C++ projesini başlatın ( Hata Ayıklama veya **Ctrl**+**F5**olmadan**Hata Ayıklama** > **Başlat).**
-1. İşleme **Hata Ayıklama** > **Ekle'yi**seçin. Görünen iletişim kutusunda, uygun işlemi seçin ve **python'u**seçebileceğiniz **Kod Türünü Seç** iletişim kutusunu açmak için **Seç** düğmesini kullanın:
+1. C++ projesini hata ayıklama olmadan**başlatın (hata ayıklama**  >  **olmadan Başlat** veya **CTRL** + **F5**).
+1. İşleme **Ekle hata ayıkla**öğesini seçin  >  **Attach to Process**. Görüntülenen iletişim kutusunda, uygun işlemi seçin ve ardından **seçim** düğmesini kullanarak **Python**seçebileceğiniz **kod türünü seç** iletişim kutusunu açın:
 
-    ![Hata ayıklama takarken hata ayıklama türü olarak Python'u seçme](media/mixed-mode-debugging-attach-type.png)
+    ![Hata ayıklayıcı eklenirken hata ayıklama türü olarak Python seçme](media/mixed-mode-debugging-attach-type.png)
 
-1. Bu iletişim kutusunu kapatmak için **Tamam'ı** seçin ve hata ayıklamayı başlatmak için **Ekle'yi** seçin.
-1. Hata ayıklayıcıyı takma fırsatınız olmadan önce hata ayıklamak istediğiniz Python kodunu aramadığından emin olmak için C++ uygulamasında uygun bir duraklama veya gecikme getirmeniz gerekebilir.
+1. Bu iletişim kutusunu kapatmak için **Tamam** ' ı seçin ve ardından hata ayıklayıcıyı başlatmak için **iliştirin** .
+1. Hata ayıklayıcıyı iliştirme şansınız olmadan önce, hata ayıklamak istediğiniz Python kodunu çağırmadığından emin olmak için C++ uygulamasında uygun bir duraklatma veya gecikme yapmanız gerekebilir.
 
-## <a name="mixed-mode-specific-features"></a>Karışık moda özgü özellikler
+## <a name="mixed-mode-specific-features"></a>Karma moda özgü özellikler
 
 - [Birleşik çağrı yığını](#combined-call-stack)
-- [Python ve yerel kod arasındaki adım](#step-between-python-and-native-code)
-- [PyObject değerleri yerel kodgörünümü](#pyobject-values-view-in-native-code)
-- [Python kodunda yerel değerler görünümü](#native-values-view-in-python-code)
+- [Python ve yerel kod arasında adımla](#step-between-python-and-native-code)
+- [Yerel koddaki PyObject değerleri görünümü](#pyobject-values-view-in-native-code)
+- [Python kodundaki yerel değerler görünümü](#native-values-view-in-python-code)
 
 ### <a name="combined-call-stack"></a>Birleşik çağrı yığını
 
-**Çağrı Yığını** penceresi, hem yerel hem de Python yığın çerçevelerini ara sıra gösterir ve geçişler ikisi arasında işaretlenir:
+**Çağrı yığını** penceresi hem yerel hem de Python yığın çerçevelerini araya eklemeli, aralarında iki arasında işaretlenmiş geçişlerle birlikte görüntülenir:
 
-![Karışık mod hata ayıklama ile birleşik arama yığını](media/mixed-mode-debugging-call-stack.png)
+![Karışık modda hata ayıklama ile Birleşik çağrı yığını](media/mixed-mode-debugging-call-stack.png)
 
-**Araçlar** >  > **General** > **Enable Just My Code** **Options****Debugging** **[External Code]** > Seçenekleri Hata Ayıklama Genel IDamı Yalnızca Kodumu Etkinleştir seçeneği ayarlanmışsa, geçiş yönünü belirtmeden geçişler [Dış Kod] olarak görünür.
+Geçiş yönü belirtilmeden geçişler **[Dış kod]** olarak görünür yalnızca kendi kodum, **Tools**  >  **Options**  >  genel etkinleştir için**hata ayıklama**seçenekleri  >  **General**  >  **Enable Just My Code** seçeneği ayarlanırsa Araçlar Seçenekler.
 
-Herhangi bir çağrı çerçevesine çift tıklatma, onu etkin kılar ve mümkünse uygun kaynak kodunu açar. Kaynak kodu kullanılamıyorsa, çerçeve hala etkin hale getirilir ve yerel değişkenler denetlenebilir.
+Herhangi bir çağrı çerçevesini çift tıklamak etkin hale getirir ve mümkünse uygun kaynak kodu açar. Kaynak kodu kullanılabilir değilse, çerçeve hala etkin hale getirilir ve yerel değişkenler incelenebilir.
 
-### <a name="step-between-python-and-native-code"></a>Python ve yerel kod arasındaki adım
+### <a name="step-between-python-and-native-code"></a>Python ve yerel kod arasında adımla
 
-**Step Into** (**F11**) veya **Step Out** (**Shift**+**F11**) komutlarını kullanırken, karışık mod hata ayıklayıcı kod türleri arasındaki değişiklikleri doğru şekilde işler. Örneğin, Python C'de uygulanan bir tür yöntemi çağırdığında, bu yönteme çağrıya adım atma yöntemi uygulayan yerel işlevin başında durur. Benzer şekilde, yerel kod python kodunun çağrılmış olmasıyla sonuçlanan bazı Python API işlevini çağırdığında. Örneğin, Python işlevi `PyObject_CallObject` başında Python durur başlangıçta tanımlanan bir işlev değeri üzerinde bir adım. Python'dan yerel e vere kadar adım atmak, [Python'dan çağrılan yerel](https://docs.python.org/3/library/ctypes.html)işlevler için de desteklenir.
+**Step Into** (**F11**) veya **Step Out** (**SHIFT** + **F11**) komutlarının kullanıldığı durumlarda, karışık modda hata ayıklayıcı kod türleri arasındaki değişiklikleri doğru şekilde işler. Örneğin, Python, C 'de uygulanan bir türün yöntemini çağırdığında, yöntemi çağıran yerel işlevin başlangıcında bu yönteme atlama yapılır. Benzer şekilde, yerel kod, Python kodunun çağrılması ile sonuçlanan bazı Python API işlevlerini çağırır. Örneğin, Python `PyObject_CallObject` işlevinin başlangıcında, Python 'da ilk olarak tanımlanan bir işlev değerinde bir üzerinde adımlanın. Python 'dan Native 'e Adımlama, [ctypes](https://docs.python.org/3/library/ctypes.html)aracılığıyla Python 'dan çağrılan yerel işlevler için de desteklenir.
 
-### <a name="pyobject-values-view-in-native-code"></a>PyObject değerleri yerel kodgörünümü
+### <a name="pyobject-values-view-in-native-code"></a>Yerel koddaki PyObject değerleri görünümü
 
-Yerel (C veya C++) bir çerçeve etkin olduğunda, yerel değişkenleri hata ayıklama **Yerel leri** penceresinde gösterir. Yerel Python uzantımodüllerinde, bu değişkenlerin `PyObject` çoğu türdedir (typedef için `_object`dir), veya birkaç temel Python türü (aşağıdaki listeye bakın). Karışık mod hata ayıklamada, bu değerler **[Python görünümü]** etiketli ek bir alt düğüm sunar. Genişletildiğinde, bu düğüm değişkenin Python gösterimini gösterir ve aynı nesneye başvuran yerel bir değişkenin Python çerçevesinde bulunsun da aynı olduğunu görürsünüz. Bu düğümün çocukları değiştirilebilir.
+Yerel (C veya C++) çerçevesi etkin olduğunda, yerel değişkenleri hata ayıklayıcı **Yereller** penceresinde görünür. Yerel Python uzantısı modüllerinde, bu değişkenlerin çoğu türü `PyObject` (için bir typedef `_object` ) ya da başka bir temel Python türü (aşağıdaki listeye bakın) vardır. Karışık modda hata ayıklamada, bu değerler **[Python görünümü]** etiketli ek bir alt düğüm sunar. Bu düğüm, genişletildiğinde, bir Python çerçevesinde aynı nesneye başvuran yerel bir değişken varsa, değişkenin Python gösterimini gösterir. Bu düğümün alt öğeleri düzenlenebilir.
 
-![Yerel ler penceresinde Python Görünümü](media/mixed-mode-debugging-python-view.png)
+![Yereller penceresinde Python görünümü](media/mixed-mode-debugging-python-view.png)
 
-Bu özelliği devre dışı katmak için **Yerel Ler** penceresinde herhangi bir yere sağ tıklayın ve **Python** > **Show Python Görünüm Düğümleri** menüsü seçeneğini değiştirin:
+Bu özelliği devre dışı bırakmak için **Yereller** penceresinde herhangi bir yere sağ tıklayın ve **Python**  >  **görünüm düğümlerini göster** menü seçeneğini değiştirin:
 
-![Yerel Ler penceresinde Python Görünümünü Etkinleştirme](media/mixed-mode-debugging-enable-python-view.png)
+![Yereller penceresinde Python görünümünü etkinleştirme](media/mixed-mode-debugging-enable-python-view.png)
 
 **[Python görünümü]** düğümlerini gösteren C türleri (etkinse):
 
@@ -135,25 +135,25 @@ Bu özelliği devre dışı katmak için **Yerel Ler** penceresinde herhangi bir
 - `PyStringObject`
 - `PyUnicodeObject`
 
-**[Python görünümü]** kendi yazdığınız türler için otomatik olarak görünmez. Python 3.x uzantıları yazarken, herhangi bir nesne sonuçta `ob_base` **[Python görünümü]** görünmesine neden olan yukarıdaki türlerden biri bir alana sahip olduğundan, bu eksikliği genellikle bir sorun değildir.
+**[Python görünümü]** yazdığınız türler için otomatik olarak görünmez. Python 3. x için uzantı yazma sırasında, genellikle herhangi bir nesne yukarıdaki türlerden birine sahip olduğu için bu eksik bir sorun değildir çünkü bu, `ob_base` **[Python görünümü]** ' nin görünmesine neden olur.
 
-Ancak Python 2.x için, her nesne türü genellikle üstbilgisini satır içinde alanlar topluluğu olarak bildirir ve `PyObject` özel yazar türleri ile C/C++ kodundaki tür sistemi düzeyinde arasında bir ilişki yoktur. Bu tür özel türler için **[Python görünümü]** düğümlerini etkinleştirmek için Python [dizinyükleme dizinindeki](installing-python-support-in-visual-studio.md#install-locations) *PythonDkm.natvis* dosyasını edin ve C veya C++ sınıfınız için XML'ye başka bir öğe ekleyin.
+Ancak Python 2. x için, her nesne türü genellikle üst bilgisini bir satır içi alan koleksiyonu olarak bildirir ve özel olarak yazılan türler arasında ve `PyObject` C/C++ kodunda sistem düzeyinde tür ilişkisi yoktur. Bu tür özel türler için **[Python görünümü]** düğümlerini etkinleştirmek Için, [Python araçları Install dizinindeki](installing-python-support-in-visual-studio.md#install-locations) *PythonDkm. natvis* dosyasını düzenleyin ve C struct veya C++ sınıfınız için XML 'e başka bir öğe ekleyin.
 
-Alternatif (ve daha iyi) bir seçenek [PEP 3123](https://www.python.org/dev/peps/pep-3123/) takip etmek ve yerine açık `PyObject ob_base;` bir alan kullanmak `PyObject_HEAD`, her zaman geriye dönük uyumluluk nedenlerle mümkün olmayabilir rağmen.
+Alternatif (ve daha iyi) seçeneği, [Pep 3123](https://www.python.org/dev/peps/pep-3123/) ' `PyObject ob_base;` i takip `PyObject_HEAD` etmekle birlikte, geriye doğru uyumluluk nedenleriyle her zaman mümkün olmayabilir.
 
-### <a name="native-values-view-in-python-code"></a>Python kodunda yerel değerler görünümü
+### <a name="native-values-view-in-python-code"></a>Python kodundaki yerel değerler görünümü
 
-Önceki bölüme benzer şekilde, Python çerçevesi etkin olduğunda **Yereller** penceresinde yerel değerler için bir **[C++ görünümü]** etkinleştirebilirsiniz. Bu özellik varsayılan olarak etkinleştirilmez, bu nedenle **Yerel Ler** penceresinde sağ tıklayarak ve **Python** > **Show C++ Görünüm Düğümleri** menüsü seçeneğini değiştirerek etkinleştirirsiniz.
+Önceki bölüme benzer şekilde, bir Python çerçevesi etkin olduğunda **Yereller** penceresindeki yerel değerler için bir **[C++ görünümü]** sağlayabilirsiniz. Bu özellik varsayılan olarak etkin değildir, bu nedenle **Yereller** penceresinde sağ tıklayıp **Python**  >  **göster C++ görünüm düğümleri** menü seçeneğini değiştirerek etkinleştirin.
 
-![Yerel ler penceresinde C++ Görünümünü Etkinleştirme](media/mixed-mode-debugging-enable-cpp-view.png)
+![Locals penceresinde C++ görünümünü etkinleştirme](media/mixed-mode-debugging-enable-cpp-view.png)
 
-**[C++ görünüm]** düğümü, yerel bir çerçevede göreceğiniz değerle aynı olan temel C/C++ yapısının bir temsilini sağlar. Örneğin, Python uzun tamsayı `_longobject` için `PyLongObject` bir örnek (typedef olan) gösterir ve kendi yazdığınız yerel sınıflar için türleri çıkartmaya çalışır. Bu düğümün çocukları değiştirilebilir.
+**[C++ View]** düğümü, bir değer Için temeldeki C/C++ yapısının bir gösterimini sağlar ve bir yerel çerçevede gördüklerle aynıdır. Örneğin, bir `_longobject` `PyLongObject` Python uzun tamsayısı için (bir typedef olan) örneğini gösterir ve kendi yazdığınız yerel sınıfların türlerini çıkarmaya çalışır. Bu düğümün alt öğeleri düzenlenebilir.
 
-![Yerel ler penceresinde C++ Görünümü](media/mixed-mode-debugging-cpp-view.png)
+![Locals penceresinde C++ görünümü](media/mixed-mode-debugging-cpp-view.png)
 
-Bir nesnenin alt alanı türdeyse `PyObject`veya diğer desteklenen türlerden biriyse, bir **[Python görünümü]** gösterim düğümü (bu gösterimler etkinse) vardır ve bağlantıların doğrudan Python'a maruz kalınmadığı nesne grafiklerinde gezinmeyi mümkün kılar.
+Bir nesnenin alt alanı tür `PyObject` veya desteklenen diğer türlerden biri ise, bir **[Python görünümü]** temsili düğümüne sahiptir (Bu gösterimler etkinse), bağlantıların doğrudan Python 'a sunulmadığı nesne grafiklerine gidebilmesini sağlar.
 
-Nesnenin türünü belirlemek için Python nesne meta verilerini kullanan **[Python görünümü]** düğümlerinin aksine, **[C++ görünümü]** için benzer şekilde güvenilir bir mekanizma yoktur. Genel olarak konuşursak, Python değeri (yani bir `PyObject` başvuru) göz önüne alındığında, hangi C/C++ yapısının onu desteklediğini güvenilir bir şekilde belirlemek mümkün değildir. Karışık mod hata ayıklama, işlev işaretçisi türlerine sahip nesnenin türündeki `PyTypeObject` `ob_type` (alanı tarafından başvurulan gibi) çeşitli alanlara bakarak bu türü tahmin etmeye çalışır. Bu işlev işaretçilerinden biri çözülebilen bir işleve başvuruyorsa ve bu işlevin türünden daha spesifik bir `self` parametresi `PyObject*`varsayılsa, bu tür destek türü olarak kabul edilir. Örneğin, belirli `ob_type->tp_init` bir nesneaşağıdaki işlevi işaret ederse:
+Nesnenin türünü belirlemekte Python nesne meta verilerini kullanan **[Python View]** düğümlerinden farklı olarak **[C++ görünümü]** için benzer bir güvenilir mekanizma yoktur. Genellikle bir Python değeri (yani bir `PyObject` başvuru) verildiğinde, hangi C/C++ yapısının bu dosyayı yedekleyeceğini güvenilir bir şekilde belirleme mümkün değildir. Karışık modda hata ayıklayıcı, nesne türünün ( `PyTypeObject` alanı tarafından başvurulan `ob_type` ) işlev işaretçisi türleri olan çeşitli alanlarına bakarak bu türü tahmin etmeye çalışır. Bu işlev işaretçilerinden biri çözülebilenbir işleve başvuruyorsa ve bu işlev `self` , ' den daha belirgin bir parametreye sahipse `PyObject*` , bu tür, yedekleme türü olarak kabul edilir. Örneğin, `ob_type->tp_init` belirli bir nesne aşağıdaki işlev gösteriyorsa:
 
 ```c
 static int FobObject_init(FobObject* self, PyObject* args, PyObject* kwds) {
@@ -161,34 +161,34 @@ static int FobObject_init(FobObject* self, PyObject* args, PyObject* kwds) {
 }
 ```
 
-sonra hata ayıklama doğru nesnenin C türü olduğunu `FobObject`anlayabilir. Daha kesin bir tür `tp_init`belirleyemiyorsa, diğer alanlara geçer. Bu alanlardan herhangi birinden türü çıkaramıyorsa, **[C++ görünümü]** düğümü nesneyi örnek `PyObject` olarak sunar.
+ardından, hata ayıklayıcı nesnenin C türünün olduğunu doğru şekilde belirleyebilir `FobObject` . ' Den daha kesin bir tür belirleyeleyemiyorsa `tp_init` , diğer alanlara gider. Bu alanlardan herhangi birinden türü çıkarılamıyor, **[C++ View]** düğümü nesneyi bir örnek olarak gösterir `PyObject` .
 
-Her zaman özel yazartürleri için yararlı bir gösterim almak için, türü kaydederken en az bir özel işlevi `self` kaydetmek ve güçlü bir şekilde yazılmış bir parametre kullanmak en iyisidir. Çoğu tür doğal olarak bu gereksinimi yerine getirmek; bu durumda değilse, o `tp_init` zaman genellikle bu amaç için kullanmak için en uygun giriştir. Yalnızca hata ayıklayıcı türü çıkarımını etkinleştirmek `tp_init` için mevcut olan bir tür için sahte bir uygulama, yukarıdaki kod örneğinde olduğu gibi hemen sıfır döndürebilir.
+Özel olarak yazılan türler için her zaman yararlı bir gösterim sağlamak üzere, türü kaydederken en az bir özel işlevi kaydetmek ve kesin belirlenmiş bir parametre kullanmak en iyisidir `self` . Çoğu tür, bu gereksinimi doğal olarak karşılar; Böyle bir durum söz konusu değilse, `tp_init` genellikle bu amaçla kullanmak için en kullanışlı girdidir. `tp_init`Yalnızca hata ayıklayıcı tür çıkarımı sağlamak için mevcut olan bir tür için tam bir uygulama, yukarıdaki kod örneğinde olduğu gibi hemen sıfır döndürebilir.
 
-## <a name="differences-from-standard-python-debugging"></a>Standart Python hata ayıklama farklılıkları
+## <a name="differences-from-standard-python-debugging"></a>Standart Python hata ayıklamasının farkları
 
-Karışık mod hata ayıklayıcısı, bazı ek özellikler sunması açısından [standart Python hata ayıklayıcısından](debugging-python-in-visual-studio.md) farklıdır, ancak Python ile ilgili bazı özelliklerden yoksundur:
+Karışık modda hata ayıklayıcı, bazı ek özellikler sunmakta ancak Python ile ilgili bazı özelliklere sahip olmayan [Standart Python hata ayıklayıcısından](debugging-python-in-visual-studio.md) farklıdır:
 
-- Desteklenmeyen özellikler: koşullu kesme noktaları, **Hata Ayıklama Etkileşimli** pencere ve platform ötesi uzaktan hata ayıklama.
-- **Hemen** pencere: kullanılabilir ancak burada listelenen tüm sınırlamalar da dahil olmak üzere işlevselliğinin sınırlı bir alt kümesi ile.
-- Desteklenen Python sürümleri: Yalnızca CPython 2.7 ve 3.3+
-- Visual Studio Shell: Python'u Visual Studio Shell ile kullanırken (örneğin, tümleşik yükleyiciyi kullanarak yüklediyseniz), Visual Studio C++ projelerini açamaz ve C++ dosyalarının düzenleme deneyimi yalnızca temel bir metin düzenleyicisi dir. Ancak, C/C++ hata ayıklama ve karışık mod hata ayıklama, kaynak kodu yla Shell'de tam olarak desteklenir, yerel koda adım atar ve hata ayıklama pencerelerinde C++ ifade değerlendirmesi.
-- Nesneleri görüntüleme ve genişletme: **Yerel olarak** Python nesneleri ve Hata ayıklama aracı pencerelerinde **izle,** karışık modhatager yalnızca nesnelerin yapısını gösterir. Özellikleri otomatik olarak değerlendirmez veya hesaplanmış öznitelikleri göstermez. Koleksiyonlar için yalnızca yerleşik koleksiyon türleri için`tuple`öğeleri `list` `dict`gösterir `set`( , , , , . Özel koleksiyon türleri, bazı yerleşik koleksiyon türünden devralınmadıkları sürece koleksiyon olarak görselleştirilmez.
+- Desteklenmeyen özellikler: koşullu kesme noktaları, **hata ayıklama etkileşimli** penceresi ve platformlar arası uzaktan hata ayıklama.
+- **Komut** penceresi: burada listelenen tüm sınırlamalar dahil olmak üzere, işlevlerinin sınırlı bir alt kümesiyle birlikte kullanılabilir.
+- Desteklenen Python sürümleri: CPython 2,7 ve 3.3 + yalnızca.
+- Visual Studio Kabuğu: Visual Studio Kabuğu ile Python kullanırken (örneğin, tümleşik yükleyiciyi kullanarak yüklediyseniz), Visual Studio C++ projelerini açamaz ve C++ dosyaları için düzenleme deneyimi yalnızca temel bir metin düzenleyicidir. Ancak, C/C++ hata ayıklama ve karışık modda hata ayıklama, kaynak kodu ile kabukta tam olarak desteklenir, yerel koda adımlanıyor ve hata ayıklayıcı Windows 'ta C++ ifade değerlendirmesi.
+- Nesneleri görüntüleme ve genişletme: **Yereller** halinde Python nesnelerini görüntülerken ve hata ayıklayıcı araç pencerelerini **izlerken** , karışık modda hata ayıklayıcı yalnızca nesnelerin yapısını gösterir. Özellikleri otomatik olarak değerlendirmez veya hesaplanan öznitelikleri göstermez. Koleksiyonlar için yalnızca yerleşik koleksiyon türleri ( `tuple` , `list` , `dict` ,) için öğeleri gösterir `set` . Özel koleksiyon türleri, bazı yerleşik koleksiyon türünden devralınmadıkları sürece koleksiyonlar olarak görselleştirimez.
 - İfade değerlendirmesi: aşağıya bakın.
 
 ### <a name="expression-evaluation"></a>İfade değerlendirmesi
 
-Standart Python hata ayıklayıcı, bir G/Ç işlemi veya diğer benzer sistem çağrısında engellenmemesi sürece, hata ayıklama işlemi kodun herhangi bir noktasında duraklatılmış olduğunda **İzle** ve **Hemen** pencerelerinde rasgele Python ifadelerinin değerlendirilmesine olanak tanır. Karışık modhatabing,rasgele ifadeler yalnızca Python kodunda durdurulduğunda, bir kesme noktasından sonra veya koda adım attığında değerlendirilebilir. İfadeler yalnızca kesme noktasının veya basamak işleminin oluştuğu iş parçacığında değerlendirilebilir.
+Standart Python hata ayıklayıcı, bir g/ç işleminde veya başka benzer sistem çağrısında engellenmediği sürece, hata ayıklanan işlem kodda herhangi bir noktada duraklatıldığında, **izleme** ve **anında** Windows 'da rastgele Python ifadelerinin değerlendirilmesine olanak tanır. Karma mod hata ayıklamada, rastgele ifadeler yalnızca Python kodunda durdurulduğunda, bir kesme noktasından sonra veya koda adımlarken değerlendirilebilirler. İfadeler yalnızca kesme noktasının veya Adımlama işleminin gerçekleştiği iş parçacığında değerlendirilebilir.
 
-Yerel kodda veya yukarıdaki koşulların geçerli olmadığı Python kodunda durdurulduğunda (örneğin, bir adım çıkarma işleminden sonra veya farklı bir iş parçacığı üzerinde), ifade değerlendirmesi şu anda seçili olan yerel ve genel değişkenlere erişmekle sınırlıdır çerçeve, alanlarına erişme ve yerleşik koleksiyon türlerini gerçek lerle dizine ekleyerek. Örneğin, aşağıdaki ifade herhangi bir bağlamda değerlendirilebilir (tüm tanımlayıcıların varolan değişkenlere ve uygun türdeki alanlara başvurması koşuluyla):
+Yerel kodda durdurulduğunda veya yukarıdaki koşulların uygulanmamakta olduğu Python kodunda (örneğin, bir adım dışı işlemden sonra veya farklı bir iş parçacığında), ifade değerlendirmesi, şu anda seçili olan çerçevenin kapsamındaki yerel ve genel değişkenlere erişim, alanlarına erişme ve yerleşik koleksiyon türlerini değişmez değerler ile dizin oluşturma ile sınırlıdır. Örneğin, aşağıdaki ifade herhangi bir bağlamda değerlendirilebilir (tüm tanımlayıcıların mevcut değişkenlere ve uygun türdeki alanlara başvurabileceği belirtildi):
 
 ```python
 foo.bar[0].baz['key']
 ```
 
-Karışık mod hata ayıklama da bu tür ifadeleri farklı şekilde çözer. Tüm üye erişim işlemleri yalnızca nesnenin doğrudan parçası olan alanları (örneğin, `__dict__` kendi veya `__slots__`veya , veya python `tp_members`üzerinden Python'a maruz `__getattr__` `__getattribute__` kalan yerel bir yapının alanı gibi) arar ve herhangi bir veya açıklayıcı mantığı yok sayar. Benzer şekilde, tüm dizin oluşturma işlemleri yoksama `__getitem__`ve koleksiyonların iç veri yapılarına doğrudan erişin.
+Karma mod hata ayıklayıcı Ayrıca bu tür ifadeleri farklı çözümler. Tüm üye erişim işlemleri, yalnızca nesnenin bir parçası olan (veya içindeki bir giriş `__dict__` `__slots__` ya da Python ile Python 'un açığa çıkarılan yerel bir yapının alanı `tp_members` ) ve herhangi bir `__getattr__` `__getattribute__` veya tanımlayıcı mantığını yok sayan alanlara bakar. Benzer şekilde, tüm dizin oluşturma işlemleri `__getitem__` , koleksiyonların iç veri yapılarına doğrudan göz ardı eder ve erişir.
 
-Tutarlılık adına, bu ad çözümleme düzeni, geçerli durak noktasında rasgele ifadelere izin verilip verilmedidiğine bakılmaksızın, sınırlı ifade değerlendirmesi için kısıtlamalarla eşleşen tüm ifadeler için kullanılır. Tam özellikli bir değerlendirici kullanılabilir olduğunda uygun Python semantiklerini zorlamak için, ifadeyi parantez içine avurun:
+Tutarlılık açısından, bu ad çözümleme şeması, geçerli durma noktasında rastgele ifadelere izin verilip verilmeyeceğini fark etmeksizin sınırlı ifade değerlendirmesi için kısıtlamalarla eşleşen tüm ifadeler için kullanılır. Tam özellikli bir değerlendirici kullanılabilir olduğunda doğru Python semantiğini zorlamak için, ifadeyi parantez içine alın:
 
 ```python
 (foo.bar[0].baz['key'])

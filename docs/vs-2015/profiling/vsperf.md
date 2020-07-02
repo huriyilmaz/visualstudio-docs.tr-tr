@@ -39,7 +39,7 @@ ms.locfileid: "85533841"
 ## <a name="windows-store-apps-only"></a><a name="BKMK_windows_store_apps_only"></a>Yalnızca Windows Mağazası uygulamaları  
  Bu seçenekler yalnızca Windows Mağazası uygulamaları için geçerlidir.  
   
-|Seçenek|Description|  
+|Seçenek|Açıklama|  
 |-|-|  
 |**/App: {AppName}**|Profil oluşturucuyu başlatır ve başlangıç menüsünden belirtilen uygulamanın başlatılmasını bekler.<br /><br /> `vsperf /listapps`Yüklenen uygulamaların uygulama adını ve PackageFullName 'ni görüntülemek için öğesini çalıştırın.|  
 |**/Package: {PackageFullName}**|Profil oluşturucuyu başlatır ve başlangıç menüsünden belirtilen uygulamanın başlatılmasını bekler.<br /><br /> `vsperf /listapps`Yüklenen uygulamaların uygulama adını ve PackageFullName 'ni görüntülemek için öğesini çalıştırın.|  
@@ -50,7 +50,7 @@ ms.locfileid: "85533841"
 ## <a name="windows-8-desktop-applications-and-windows-server-2012-applications-only"></a><a name="BKMK_Windows_8_classic_applications_and_Windows_Server_2012_applications_only"></a>Yalnızca Windows 8 masaüstü uygulamaları ve Windows Server 2012 uygulamaları  
  Bu seçenekler Windows Mağazası uygulamaları üzerinde çalışmaz.  
   
-|Seçenek|Description|  
+|Seçenek|Açıklama|  
 |-|-|  
 |**/Launch: {executable}**|Başlatılır ve belirtilen yürütülebilir dosyanın profilini oluşturmaya başlar.|  
 |**/args: {ExecutableArguments}**|**/Launch** hedefini geçirmek için komut satırı bağımsız değişkenlerini belirtir.|  
@@ -59,7 +59,7 @@ ms.locfileid: "85533841"
 ## <a name="all-applications"></a><a name="BKMK_All_applications"></a>Tüm uygulamalar  
  Bu seçenek, herhangi bir Windows 8 veya Windows Server 2012 uygulaması için geçerlidir.  
   
-|Seçenek|Description|  
+|Seçenek|Açıklama|  
 |-|-|  
 |**/Attach: {PID&#124;ProcessName} [, PID&#124;ProcessName]...**|Belirtilen işlemlerden verileri toplar.<br /><br /> Çalışan uygulamaların işlem kimliğini (PID) ve işlem adlarını görüntülemek için Görev Yöneticisi 'ni kullanın.|  
 |**/File: {ReportName}**|İsteğe bağlı. Çıkış dosyasını belirtir (varolan dosyanın üzerine yazar).<br /><br /> Yalnızca/Package veya/attachile kullanın.|  

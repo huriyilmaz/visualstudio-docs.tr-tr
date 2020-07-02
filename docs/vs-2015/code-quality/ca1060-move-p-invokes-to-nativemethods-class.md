@@ -66,7 +66,7 @@ ms.locfileid: "85533438"
 
 ## <a name="nativemethods-example"></a>NativeMethods örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  **NativeMethods** sınıfı **SuppressUnmanagedCodeSecurityAttribute**kullanılarak işaretlenmemelidir, çünkü içine yerleştirilen P/Invoke, **UnmanagedCode** izni gerektirir. Çoğu uygulama yerel bilgisayardan çalıştığından ve tam güvenle birlikte çalıştığı için, bu genellikle bir sorun değildir. Ancak, yeniden kullanılabilir kitaplıklar geliştiriyorsanız, bir **SafeNativeMethods** veya **UnsafeNativeMethods** sınıfı tanımlamayı göz önünde bulundurmanız gerekir.
 
  Aşağıdaki örnek, user32.dll **Messagebip** işlevini sarmalayan bir **Interaction. bip** yöntemi gösterir. **Messagebip** P/Invoke, **NativeMethods** sınıfına konur.
@@ -77,7 +77,7 @@ ms.locfileid: "85533438"
 
 ## <a name="safenativemethods-example"></a>SafeNativeMethods örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Herhangi bir uygulamaya güvenle açık olabilecek ve herhangi bir yan etkisi olmayan P/Invoke metotları **SafeNativeMethods**adlı bir sınıfa yerleştirilmelidir. İzinleriniz için gereken izinlere sahip değilsiniz ve nereden çağrıldığının üzerine çok dikkat etmeniz gerekmez.
 
  Aşağıdaki örnek, kernel32.dll **GetTickCount** işlevini sarmalayan bir **Environment. TickCount** özelliğini gösterir.
@@ -88,7 +88,7 @@ ms.locfileid: "85533438"
 
 ## <a name="unsafenativemethods-example"></a>UnsafeNativeMethods örneği
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
  Güvenli bir şekilde çağrılamayan ve yan etkileri **UnsafeNativeMethods**adlı bir sınıfa yerleştirilecek olan P/Invoke yöntemleri. Bu yöntemlerin kullanıcıya istem dışı olarak gösterilmediğinden emin olmak için dikkatli bir şekilde denetlenmesi gerekir. Rule [CA2118: SuppressUnmanagedCodeSecurityAttribute kullanımını gözden geçirin](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md) bu konuda yardımcı olabilir. Alternatif olarak, yöntemler onları kullandıklarında **UnmanagedCode** yerine talep edilen başka bir izne sahip olmalıdır.
 
  Aşağıdaki örnek, user32.dll **ShowCursor** işlevini sarmalayan bir **Cursor. Hide** metodunu gösterir.
