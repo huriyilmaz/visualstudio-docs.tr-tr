@@ -1,19 +1,19 @@
 ---
 title: XML şema tasarımcısında Içerik modeli görünümünü kullanarak düğümleri inceleyin
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: c42ddac8-b0e3-48d6-9832-112a19d6c104
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5a7e6e311a4fbd02973edf94c6eb117f69d6cea
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 81bf6294aeac9a23168bf9cf9aaec26efbfc6c1f
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815987"
 ---
 # <a name="how-to-examine-the-content-model-of-nodes-using-the-content-model-view"></a>Nasıl yapılır: Içerik modeli görünümünü kullanarak düğümlerin içerik modelini Inceleme
 
@@ -27,18 +27,18 @@ Bu konu, [Içerik modeli görünümünü](../xml-tools/content-model-view.md)kul
 
 3. XML şeması örnek kodunu [örnek xml şemasından kopyalayın: satın alma sırası şeması](../xml-tools/sample-xsd-file-purchase-order-schema.md) , varsayılan olarak yeni xsd dosyasına eklenen kodu değiştirmek için yapıştırın.
 
-4. XML düzenleyicisinde `purchaseOrder` öğesine sağ tıklayıp **XML Explorer 'Da göster '** i seçerek şema Gezgininde `purchaseOrder` öğesini seçin.
+4. `purchaseOrder` `purchaseOrder` XML düzenleyicisinde öğesine sağ tıklayıp **XML Explorer 'da göster**' i seçerek şema Gezgini ' nde öğesini seçin.
 
-5. XML Explorer 'da `purchaseOrder` sağ tıklayın ve **Içerik modeli görünümünde göster**' i seçin.
+5. `purchaseOrder`XML Explorer 'da öğesine sağ tıklayın ve **Içerik modeli görünümünde göster**' i seçin.
 
-     Içerik modeli görünümü `purchaseOrder` öğesini tasarım yüzeyinde görüntüler.
+     Içerik modeli görünümü, `purchaseOrder` öğesini tasarım yüzeyinde görüntüler.
 
-6. Her bir düğüme çift tıklayarak veya her bir düğümün sağ tarafındaki çift oka tıklayarak `shipTo`, `billTo`ve `items` düğümlerini genişletin.
+6. Her bir `shipTo` `billTo` `items` düğüme çift tıklayarak veya her bir düğümün sağ tarafındaki çift oka tıklayarak,, ve düğümlerini genişletin.
 
-     `purchaseOrder` öğenin düğümleri artık genişletilir ve öğenin içerik modelini görebilirsiniz.
+     `purchaseOrder`Öğenin düğümleri artık genişletilir ve öğenin içerik modelini görebilirsiniz.
 
-7. `purchaseOrder` öğesinin altındaki herhangi bir düğüme tıklayın ve seçili düğümün şema kümesinde nerede olduğunu görmek için içerik haritası çubuğuna bakın.
+7. Öğesinin altındaki herhangi bir düğüme tıklayın `purchaseOrder` ve seçili düğümün şema kümesinde nerede olduğunu görmek için içerik haritası çubuğuna bakın.
 
 8. Belge değiştirmek için XSD araç çubuğundaki **belgeleri göster** düğmesine tıklayın. Ayrıca, belge değiştirmek için tasarım yüzeyine sağ tıklayabilirsiniz.
 
-9. `purchaseOrder` düğümüne sağ tıklayıp XML örnek belgesini görmek için **örnek XML oluştur** ' u seçin.
+9. `purchaseOrder`XML örnek belgesini görmek için düğüme sağ tıklayın ve **örnek XML oluştur** ' u seçin.

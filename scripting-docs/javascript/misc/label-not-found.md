@@ -3,7 +3,7 @@ title: Etiket bulunamadı | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1026
 dev_langs:
@@ -14,12 +14,12 @@ ms.assetid: 79e32926-b03f-457b-997c-2bb2ec8a1ec5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4acfb93808a588ed7efb4e256627f816e26a0137
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 3af2451efdea5ac3f71ae17fc5919e9f443e86db
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72573775"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815766"
 ---
 # <a name="label-not-found"></a>Etiket bulunamadı
 Varolmayan bir etikete başvuru yaptınız. Etiketler kod bloklarını işaretlemek için kullanılabilir, ancak belirtilen kapsam içinde benzersiz olmalıdır.  
@@ -31,7 +31,7 @@ Varolmayan bir etikete başvuru yaptınız. Etiketler kod bloklarını işaretle
 - Geçerli kapsamda tanımlanmış olan etiketlere tüm etiket başvurularının yapıldığından emin olun (buna ileri tanımları dahildir).  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
- [Etiketli ifade](../../javascript/reference/labeled-statement-javascript.md)   
+ [Etiketli Ifade](../../javascript/reference/labeled-statement-javascript.md)   
  [Switch deyimleri](../../javascript/reference/switch-statement-javascript.md)   
  [Break ekstresi](../../javascript/reference/break-statement-javascript.md)   
- [continue Deyimi](../../javascript/reference/continue-statement-javascript.md)
+ [Continue bildirisi](../../javascript/reference/continue-statement-javascript.md)

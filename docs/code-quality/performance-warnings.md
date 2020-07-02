@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24436a76841ae663f733e7c76eeb16065ed1f57b
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.openlocfilehash: a3fc631a2a99dd6090893393ee20ecec23945713
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85382672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814934"
 ---
 # <a name="performance-warnings"></a>Performans Uyarıları
 Performans uyarıları yüksek performanslı kitaplıkları ve uygulamaları destekler.
@@ -33,6 +33,7 @@ Performans uyarıları yüksek performanslı kitaplıkları ve uygulamaları des
 | [CA1801: Kullanılmayan parametreleri gözden geçirin](../code-quality/ca1801.md) | Yöntem imzası, yöntemin gövdesinde kullanılmayan bir parametre içerir. |
 | [CA1802: Uygun yerlerde sabitleri kullanın](../code-quality/ca1802.md) | Bir alan statik ve salt okunur (paylaşılan ve salt okunur) olarak tanımlanır [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ve derleme zamanında oluşturulabilir bir değer ile başlatılır. Hedeflenen alana atanan değer derleme zamanında oluşturulabilir olduğundan, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] değerin çalışma zamanı yerine derleme zamanında hesaplanabilmesi için bildirimi const (const) alanı olarak değiştirin. |
 | [CA1804: Kullanılmayan yerelleri kaldırın](../code-quality/ca1804.md) | Kullanılmayan yerel değişkenler ve gereksiz atamaların derleme boyutunu artırır ve performansı düşürür. |
+| [CA1805: gereksiz yere başlatma](../code-quality/ca1805.md) | .NET çalışma zamanı, oluşturucuyu çalıştırmadan önce, başvuru türlerindeki tüm alanları varsayılan değerlerine başlatır. Çoğu durumda, bir alanı varsayılan değerine açıkça başlatmak, bakım maliyetlerine eklenen ve performansı düşürebilir (örneğin, daha fazla derleme boyutuyla). |
 | [CA1806: Metot sonuçlarını yoksaymayın](../code-quality/ca1806.md) | Yeni bir nesne oluşturulur, ancak hiçbir zaman kullanılmaz veya yeni bir dize oluşturan ve döndüren bir yöntem çağrılır ve yeni dize hiçbir zaman kullanılmaz veya bir bileşen nesne modeli (COM) ya da P/Invoke yöntemi hiçbir zaman kullanılmayan bir HRESULT veya hata kodu döndürür. |
 | [CA1809: Aşırı yerellerden kaçının](../code-quality/ca1809.md) | Bir değeri bellek yerine işlemci yazmacında tutmak yaygın bir performans iyileştirmesidir ve buna "değeri kaydetmek denir".  Tüm yerel değişkenlerin kaydedilme olasılığını artırmak için yerel değişken sayısını 64 olarak sınırlandırın. |
 | [CA1810: Başvuru türü statik alanları satır içinden başlatın](../code-quality/ca1810.md) | Bir tür açık statik yapıcı bildirdiğinde, JIT derleyici her bir statik yöntemi kontrol ekler ve türün yapıcı örneği statik yapıcının daha önceden çağrıldığından emin olur. Statik oluşturucu denetimleri performansı düşürebilir. |

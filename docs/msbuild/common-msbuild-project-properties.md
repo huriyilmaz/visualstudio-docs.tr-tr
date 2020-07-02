@@ -18,14 +18,14 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 238b963aceebd2bfdae38c2f4032955c1bd0c0c6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 62f372be9ffa6ae76503550616c6b3612aad6146
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770865"
 ---
-# <a name="common-msbuild-project-properties"></a>Ortak MSBuild proje özellikleri
+# <a name="common-msbuild-project-properties"></a>Yaygın MSBuild proje özellikleri
 
 Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild 'in sağladığı *. targets* dosyalarına eklenen sık kullanılan özellikler listelenmiştir.
 
@@ -33,7 +33,7 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 
 ## <a name="list-of-common-properties-and-parameters"></a>Ortak özellikler ve parametrelerin listesi
 
-| Özellik veya parametre adı | Proje türleri | Description |
+| Özellik veya parametre adı | Proje türleri | Açıklama |
 |------------------------------------| - | - |
 | Adtiontalbpaths | .NET | Derleyicilerin başvuru derlemelerini arayacağı ek klasörleri belirtir. |
 | AddModules | .NET | Derleyicinin, belirtilen dosyalardaki tüm tür bilgilerini derlediğiniz proje için kullanılabilir hale getirmesine neden olur. Bu özellik, `/addModules` derleyici anahtarıyla eşdeğerdir. |
@@ -51,7 +51,7 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 | CleanFile | Tümü | "Temiz önbellek" olarak kullanılacak dosyanın adı. Temizleme önbelleği, temizleme işlemi sırasında silinecek oluşturulan dosyaların bir listesidir. Dosya, yapı işlemi tarafından ara çıkış yoluna konur.<br /><br /> Bu özellik yalnızca yol bilgilerine sahip olmayan dosya adlarını belirtir. |
 | Sayfasının | .NET | Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir. Bu özellik, `/codepage` derleyici anahtarıyla eşdeğerdir. |
 | CompilerResponseFile | .NET | Derleyici görevlerine geçirilebilecek, isteğe bağlı bir yanıt dosyası. |
-| Yapılandırma | Tümü | Oluşturmakta olduğunuz yapılandırma, "Debug" veya "Release" olabilir. |
+| Yapılandırma | Tümü | Oluşturduğunuz `Debug` `Release` ve genellikle çözüm ve proje düzeylerinde yapılandırılabilen yapılandırma. |
 | CscToolPath | C# | *csc.exe*yolu, C# derleyicisidir. |
 | CustomBeforeMicrosoftCommonTargets | Tümü | Ortak hedefler içeri aktarmadan önce otomatik olarak içeri aktarılacak bir proje dosyasının veya hedef dosyanın adı. |
 | DebugSymbols | Tümü | Sembolün derleme tarafından oluşturulup oluşturulmayacağını gösteren bir Boolean değer.<br /><br /> Komut satırında **-p:DebugSymbols = false** ayarı, program veritabanı (*. pdb*) sembol dosyalarının oluşturulmasını devre dışı bırakır. |
@@ -136,4 +136,4 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
+- [Yaygın MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)

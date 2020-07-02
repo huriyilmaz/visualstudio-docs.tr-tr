@@ -3,90 +3,90 @@ title: Unity’de .NET 4.x kullanma
 author: therealjohn
 ms.author: johmil
 ms.date: 08/29/2018
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: E2C9420F-A5D5-4472-9020-2B63FB27A133
 ms.technology: vs-unity-tools
 ms.workload:
 - unity
-ms.openlocfilehash: 5fb521ff1769f1d742dc1ce67080e98aecb417ad
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: e824951556124f080f14cdd9f440037decf5146f
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75944232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815142"
 ---
 # <a name="using-net-4x-in-unity"></a>Unity’de .NET 4.x kullanma
 
-Unity komut dosyasının altında yatan teknolojiler olan C# ve .NET, Microsoft'un bunları ilk olarak 2002'de yayımladığından beri güncelleştirmeleri almaya devam etti. Ancak Unity geliştiricileri, C# dili ve .NET Framework'e eklenen yeni özelliklerin sürekli akışının farkında olmayabilir. Bunun nedeni, Unity 2017.1'den önce Unity'nin .NET 3,5 eşdeğer komut dosyası çalışma zamanı, eksik yıllar güncelleştirmeleri kullanmasıdır.
+Unity betiği temel alan teknolojiler olan C# ve .NET, Microsoft tarafından ilk olarak 2002 içinde piyasaya sürülmesinden beri güncelleştirmeleri almaya devam etti. Ancak Unity geliştiricileri, C# diline eklenen yeni özelliklerin sürekli akışını bilmeyebilir ve .NET Framework. Bunun nedeni, Unity 2017,1 ' den önce Unity 'nin bir .NET 3,5 eşdeğer betik çalışma zamanı (eksik güncelleştirme) kullandığından dolayı.
 
-Unity 2017.1'in yayınlanmasıyla birlikte Unity, komut dosyası çalışma zamanının deneysel bir sürümünü .NET 4.6, C# 6 uyumlu bir sürüme yükseltti. Unity 2018.1'de .NET 4.x eşdeğer çalışma süresi artık deneysel olarak kabul edilmezken, eski .NET 3.5 eşdeğer çalışma süresi artık eski sürüm olarak kabul edilir. Unity 2018.3'ün yayınlanmasıyla birlikte Unity, yükseltilmiş komut dosyası çalışma süresini varsayılan seçim haline getirmeyi ve C# 7'ye daha da güncelleştirilmelerini hedefliyor. Daha fazla bilgi ve bu yol haritasındaki en son güncellemeler için Unity'nin [blog gönderisini](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/) okuyun veya [Deneysel Komut Dosyası Önizlemeleri forumunu](https://forum.unity.com/forums/experimental-scripting-previews.107/)ziyaret edin. Bu arada, .NET 4.x komut dosyası çalışma süresi ile şimdi mevcut yeni özellikler hakkında daha fazla bilgi edinmek için aşağıdaki bölümlere göz atın.
+Unity 2017,1 sürümü ile Unity, betik çalışma zamanının bir .NET 4,6, C# 6 uyumlu sürümüne yükseltildiğini deneysel bir sürümünü sunmuştur. Unity 2018,1 ' de, .NET 4. x eşdeğeri çalışma zamanı artık deneysel olarak değerlendirilmez, ancak eski .NET 3,5 denk çalışma zamanı artık eski sürüm olarak kabul edilir. Unity 2018,3 sürümü sayesinde Unity, yükseltilen betik çalışma zamanını varsayılan seçimi yapmak ve C# 7 ' ye daha da sonra güncelleştirmek için yansıtılacak. Bu yol haritasında daha fazla bilgi ve en son güncelleştirmeler için Unity 'nin [blog postasını](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/) okuyun veya [deneysel betik önizlemeleri forumunu](https://forum.unity.com/forums/experimental-scripting-previews.107/)ziyaret edin. Bu sırada, artık .NET 4. x Scripting Runtime ile kullanılabilen yeni özellikler hakkında daha fazla bilgi edinmek için aşağıdaki bölümlere göz atın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-* [Birlik 2017.1 ve üzeri](https://unity3d.com/) (2018.2 önerilir)
+* [Unity 2017,1 veya üzeri](https://unity3d.com/) (2018,2 önerilir)
 * [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=vs+2017+download)
 
-## <a name="enabling-the-net-4x-scripting-runtime-in-unity"></a>Unity'de .NET 4.x komut dosyası çalışma süresini etkinleştirme
+## <a name="enabling-the-net-4x-scripting-runtime-in-unity"></a>Unity 'de .NET 4. x Scripting çalışma zamanını etkinleştirme
 
-.NET 4.x komut dosyası çalışma süresini etkinleştirmek için aşağıdaki adımları izleyin:
+.NET 4. x Scripting çalışma zamanını etkinleştirmek için aşağıdaki adımları uygulayın:
 
-1. Oyuncu > > **Proje Ayarlarını Edit'i**seçerek Birlik Denetçisi'nde PlayerSettings'i açın.
+1. **> proje ayarlarını düzenle > oynatıcı**' yı seçerek Unity denetçisinde playersettings ' i açın.
 
-1. **Yapılandırma** başlığı altında, **Komut Dosyası Çalışma Zamanı Sürümü** açılır dosyasını tıklatın ve **.NET 4.x Equivalent'yi**seçin. Birlik'i yeniden başlatmanız istenir.
+1. **Yapılandırma** başlığı altında, **komut dosyası çalışma zamanı sürüm** açılan listesine tıklayın ve **.NET 4. x eşdeğerini**seçin. Unity 'yi yeniden başlatmanız istenir.
 
-![.NET 4.x eşdeğerini seçin](media/vstu_scripting-runtime-version.png)
+![.NET 4. x eşdeğerini seçin](media/vstu_scripting-runtime-version.png)
 
-## <a name="choosing-between-net-4x-and-net-standard-20-profiles"></a>.NET 4.x ve .NET Standart 2.0 profilleri arasında seçim
+## <a name="choosing-between-net-4x-and-net-standard-20-profiles"></a>.NET 4. x ve .NET Standard 2,0 profillerinin arasından seçim yapma
 
-.NET 4.x eşdeğer komut dosyası çalışma süresine geçtikten sonra, Player Settings **(> Proje Ayarlarını > Player)** açılır menüsünü kullanarak **Api Uyumluluk Düzeyini** belirtebilirsiniz. İki seçenek vardır:
+.NET 4. x eşdeğer betik çalışma zamanına geçiş yaptıktan sonra, PlayerSettings (**> proje ayarlarını düzenle > Player**) açılır menüsünü kullanarak **API uyumluluk düzeyini** belirtebilirsiniz. İki seçenek vardır:
 
-* **.NET Standart 2.0**. Bu profil, .NET Foundation tarafından yayınlanan [.NET Standart 2.0 profiliyle](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md) eşleşir. Unity, yeni projeler için .NET Standard 2.0 önerir. Boyut kısıtlamalı platformlar için avantajlı olan .NET 4.x'ten daha küçüktür. Ayrıca, Unity, Bu profili Birliğin desteklediği tüm platformlarda desteklemeyi taahhüt etmiştir.
+* **.NET Standard 2,0**. Bu profil, .NET Foundation tarafından yayımlanan [.NET Standard 2,0 profiliyle](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md) eşleşir. Unity yeni projeler için .NET Standard 2,0 önerir. Boyut kısıtlı platformlar için avantajlı olan .NET 4. x 'ten daha küçüktür. Ayrıca Unity, Unity 'nin desteklediği tüm platformlarda bu profili desteklemeye kararlıdır.
 
-* **.NET 4.x**. Bu profil en son .NET 4 API'sine erişim sağlar. .NET Framework sınıf kitaplıklarında bulunan tüm kodu içerir ve .NET Standart 2.0 profillerini de destekler. Projeniz .NET Standart 2.0 profilinde yer almayan API'nin bir parçasını gerektiriyorsa .NET 4.x profilini kullanın. Ancak, bu API'nin bazı bölümleri Birlik'in tüm platformlarında desteklenmeyebilir.
+* **.NET 4. x**. Bu profil, en son .NET 4 API 'sine erişim sağlar. .NET Framework sınıfı kitaplıklarında bulunan tüm kodu içerir ve .NET Standard 2,0 profillerini de destekler. Projeniz .NET Standard 2,0 profilinde bulunmayan API 'nin bir parçasını gerektiriyorsa .NET 4. x profilini kullanın. Ancak, bu API 'nin bazı bölümleri Unity 'nin tüm platformlarında desteklenmeyebilir.
 
-Unity'nin [blog gönderisinde](https://blogs.unity3d.com/2018/03/28/updated-scripting-runtime-in-unity-2018-1-what-does-the-future-hold/)bu seçenekler hakkında daha fazla bilgi edinebilirsiniz.
+Bu seçenekler hakkında daha fazla bilgi için Unity 'nin [Blog](https://blogs.unity3d.com/2018/03/28/updated-scripting-runtime-in-unity-2018-1-what-does-the-future-hold/)gönderisine erişebilirsiniz.
 
-### <a name="adding-assembly-references-when-using-the-net-4x-api-compatibility-level"></a>.NET 4.x Api Uyumluluk Düzeyini kullanırken montaj başvuruları ekleme
+### <a name="adding-assembly-references-when-using-the-net-4x-api-compatibility-level"></a>.NET 4. x API Uyumluluk düzeyi kullanılırken derleme başvuruları ekleme
 
-**Api Uyumluluk Düzeyi** açılır sayısındaki .NET Standart 2.0 ayarını kullanırken, API profilindeki tüm derlemeler başvurulur ve kullanılabilir. Ancak, daha büyük .NET 4.x profilini kullanırken, Unity gemilerinin bulunduğu bazı derlemeler varsayılan olarak başvurulmaz. Bu API'leri kullanmak için, bir derleme başvurusu el ile eklemeniz gerekir. Unity editör kurulumunuzun **MonoBleedingEdge/lib/mono** dizininde Unity gemi derlemelerini görüntüleyebilirsiniz:
+**API Uyumluluk düzeyi** açılan menüsünde .NET Standard 2,0 ayarını KULLANıRKEN, API profilindeki tüm derlemelere başvurulur ve kullanılabilir. Ancak, daha büyük .NET 4. x profilini kullanırken, Unity 'nin birlikte geldiği derlemelerin bazılarına varsayılan olarak başvurulmuyor. Bu API 'Leri kullanmak için el ile bir derleme başvurusu eklemeniz gerekir. Unity 'nin birlikte bulunan derlemelerini, Unity Düzenleyicisi yüklemenizin **MonoBleedingEdge/lib/mono** dizininde görüntüleyebilirsiniz:
 
 ![MonoBleedingEdge dizini](media/vstu_monobleedingedge.png)
 
-Örneğin, .NET 4.x profilini kullanıyorsanız ve kullanmak `HttpClient`istiyorsanız System.Net.Http.dll için bir montaj başvurusu eklemeniz gerekir. Onsuz, derleyici bir derleme başvurusu eksik şikayet edecektir:
+Örneğin, .NET 4. x profilini kullanıyorsanız ve kullanmak istiyorsanız `HttpClient` , System.Net.Http.dll için bir derleme başvurusu eklemeniz gerekir. Bu olmadan derleyici, bir derleme başvurunuz eksik olduğunu şikayet eder:
 
-![eksik montaj başvurusu](media/vstu_missing-reference.png)
+![eksik bütünleştirilmiş kod başvurusu](media/vstu_missing-reference.png)
 
-Visual Studio, her açıldığında Unity projeleri için .csproj ve .sln dosyalarını yeniler. Sonuç olarak, doğrudan Visual Studio'ya montaj başvuruları ekleyemezsiniz, çünkü projeyi yeniden açtıktan sonra kaybolurlar. Bunun yerine, **mcs.rsp** adlı özel bir metin dosyası kullanılmalıdır:
+Visual Studio her açılışında Unity projeleri için. csproj ve. sln dosyalarını yeniden oluşturur. Sonuç olarak, proje yeniden alındıktan sonra kaybolabilecek olduğundan doğrudan Visual Studio 'da derleme başvuruları ekleyemezsiniz. Bunun yerine, **MCS. rsp** adlı özel bir metin dosyası kullanılmalıdır:
 
-1. Unity projenizin kök **Varlıklar** dizininde **mcs.rsp** adlı yeni bir metin dosyası oluşturun.
+1. Unity projenizin kök **varlıklar** dizininde **MCS. rsp** adlı yeni bir metin dosyası oluşturun.
 
-1. Boş metin dosyasındaki ilk satıra `-r:System.Net.Http.dll` girin: ve sonra dosyayı kaydedin. "System.Net.Http.dll"i, bir başvuru eksik olabilecek herhangi bir dahil derlemeyle değiştirebilirsiniz.
+1. Boş metin dosyasının ilk satırında, şunu girin: `-r:System.Net.Http.dll` ve sonra dosyayı kaydedin. "System.Net.Http.dll" öğesini bir başvuru eksik olabilecek herhangi bir dahil edilen derlemeyle değiştirebilirsiniz.
 
 1. Unity düzenleyicisini yeniden başlatın.
 
-## <a name="taking-advantage-of-net-compatibility"></a>.NET uyumluluğundan yararlanma
+## <a name="taking-advantage-of-net-compatibility"></a>.NET uyumluluğundan yararlanın
 
-Yeni C# sözdizimi ve dil özelliklerine ek olarak, .NET 4.x komut dosyası oluşturma çalışma süresi, Unity kullanıcılarına eski .NET 3.5 komut dosyası çalışma süresiyle uyumsuz olan büyük bir .NET paketleri kitaplığına erişim sağlar.
+Yeni C# sözdizimi ve dil özelliklerine ek olarak, .NET 4. x Scripting Runtime, Unity kullanıcılarına eski .NET 3,5 komut dosyası çalışma zamanı ile uyumlu olmayan çok sayıda .NET paketi kitaplığı erişimi sağlar.
 
-### <a name="add-packages-from-nuget-to-a-unity-project"></a>NuGet'den Bir Birlik projesine paket ekleme
+### <a name="add-packages-from-nuget-to-a-unity-project"></a>NuGet 'ten bir Unity projesine paket ekleme
 
-[NuGet](https://www.nuget.org/) ,NET'in paket yöneticisidir. NuGet Visual Studio entegre edilmiştir. Ancak, Unity projeleri NuGet paketleri eklemek için özel bir işlem gerektirir. Bunun nedeni, Unity'de bir proje açtığınızda, Visual Studio proje dosyalarının yeniden oluşturulması ve gerekli yapılandırmaların geri alınmasıdır. NuGet'den Birlik projenize bir paket eklemek için aşağıdakileri yapın:
+[NuGet](https://www.nuget.org/) , .NET için paket yöneticisidir. NuGet, Visual Studio ile tümleşiktir. Ancak Unity projeleri, NuGet paketleri eklemek için özel bir işlem gerektirir. Bunun nedeni, Unity 'de bir proje açtığınızda, Visual Studio proje dosyalarının yeniden oluşturulması ve gerekli yapılandırmaların geri alınması nedeniyle oluşur. NuGet 'den Unity projenize bir paket eklemek için aşağıdakileri yapın:
 
-1. Eklemek istediğiniz uyumlu bir paketi bulmak için NuGet'e göz atın (.NET Standart 2.0 veya .NET 4.x). Bu örnek, JSON ile çalışmak için popüler bir paket olan [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/).NET Standart 2.0 projesine eklemeyi gösterir.
+1. Eklemek istediğiniz uyumlu bir paketi bulmak için NuGet 'e gözatıp (.NET Standard 2,0 veya .NET 4. x). Bu örnek, .NET Standard 2,0 projesine JSON ile çalışmaya yönelik popüler bir paket olan [JSON.net](https://www.nuget.org/packages/Newtonsoft.Json/)eklemeyi gösterir.
 
 1. **İndir** düğmesine tıklayın:
 
-    ![indirme düğmesi](media/vstu_nuget-download.png)
+    ![İndir düğmesi](media/vstu_nuget-download.png)
 
-1. İndirilen dosyayı bulun ve uzantıyı **.nupkg'dan** **.zip'e**değiştirin.
+1. İndirilen dosyayı bulun ve uzantıyı **. nupkg** konumundan **. zip**olarak değiştirin.
 
-1. Zip dosyası içinde, **lib/netstandard2.0** dizinine gidin ve **Newtonsoft.Json.dll** dosyasını kopyalayın.
+1. ZIP dosyası içinde **lib/Netstandard 2.0** dizinine gidin ve **Newtonsoft.Json.dll** dosyasını kopyalayın.
 
-1. Unity projenizin kök **Varlıklar** klasöründe **Eklentiler**adlı yeni bir klasör oluşturun. Eklentiler Unity'de özel bir klasör adıdır. Daha fazla bilgi için [Birlik belgelerine](https://docs.unity3d.com/Manual/Plugins.html) bakın.
+1. Unity projenizin kök **varlıklar** klasöründe, **Eklentiler**adlı yeni bir klasör oluşturun. Eklentiler, Unity 'de özel bir klasör adıdır. Daha fazla bilgi için [Unity belgelerine](https://docs.unity3d.com/Manual/Plugins.html) bakın.
 
-1. **Newtonsoft.Json.dll** dosyasını Unity projenizin **Eklentileri** dizinine yapıştırın.
+1. **Newtonsoft.Json.dll** dosyasını Unity projenizin **Eklentiler** dizinine yapıştırın.
 
-1. Unity projenizin **Varlıklar** dizininde **link.xml** adlı bir dosya oluşturun ve aşağıdaki XML'yi ekleyin.  Bu, Unity'nin bytecode sıyırma işleminin il2CPP platformuna dışa aktarırken gerekli verileri kaldırmamasını sağlar.  Bu adım bu kitaplığa özgü olsa da, Yansıma'yı benzer şekillerde kullanan diğer kitaplıklarla ilgili sorunlarla karşılaşabilirsiniz.  Daha fazla bilgi için lütfen bu konuda [Birlik'in dokümanlarına](https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html) bakın.
+1. Unity projenizin **varlıklar** dizininde **link.xml** adlı bir dosya oluşturun ve aşağıdaki XML 'i ekleyin.  Bu, Unity 'nin bytecode 'un bir IL2CPP platformuna aktarılırken gerekli verileri kaldırmadığından emin olmanızı sağlar.  Bu adım bu kitaplığa özel olmakla birlikte, yansıma kullanan diğer kitaplıklarla benzer yollarla sorun yaşayabilirsiniz.  Daha fazla bilgi için lütfen bu konudaki [Unity 'nin docs](https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html) bölümüne bakın.
 
     ```xml
     <linker>
@@ -96,7 +96,7 @@ Yeni C# sözdizimi ve dil özelliklerine ek olarak, .NET 4.x komut dosyası olu�
     </linker>
     ```
 
-Her şey yerinde, artık Json.NET paketi kullanabilirsiniz.
+Her şey olduğunda, artık Json.NET paketini kullanabilirsiniz.
 
 ```csharp
 using Newtonsoft.Json;
@@ -126,15 +126,15 @@ public class JSONTest : MonoBehaviour
 }
 ```
 
-Bu, bağımlılıkları olmayan bir kitaplık kullanmanın basit bir örneğidir. NuGet paketleri diğer NuGet paketlerine güvendiğinde, bu bağımlılıkları el ile indirmeniz ve projeye aynı şekilde eklemeniz gerekir.
+Bu, bağımlılığı olmayan bir kitaplığın kullanılmasına ilişkin basit bir örnektir. NuGet paketleri diğer NuGet paketlerine güvendiğinizde, bu bağımlılıkları el ile indirmeniz ve aynı şekilde projeye eklemeniz gerekir.
 
 ## <a name="new-syntax-and-language-features"></a>Yeni sözdizimi ve dil özellikleri
 
-Güncelleştirilmiş komut dosyası çalışma süresini kullanmak, Unity geliştiricilerinc# 6'ya ve bir dizi yeni dil özelliğine ve sözdizimine erişmelerini sağlar.
+Güncelleştirilmiş betik çalışma zamanının kullanılması, Unity geliştiricilerine C# 6 ve yeni dil özellikleri ve söz dizimi için erişim sağlar.
 
-### <a name="auto-property-initializers"></a>Otomatik özellik başlangıç layıcıları
+### <a name="auto-property-initializers"></a>Otomatik Özellik başlatıcıları
 
-Unity'nin .NET 3.5 komut dosyası çalışma zamanında, otomatik özellik sözdizimi başharfe sahip olmayan özellikleri hızlı bir şekilde tanımlamayı kolaylaştırır, ancak başlatma komut dosyanızın başka bir yerinde gerçekleşmesi zorunludur. Şimdi .NET 4.x çalışma süresi ile, otomatik özellikleri aynı satırda başlatma mümkündür:
+Unity 'nin .NET 3,5 Scripting Runtime sürümünde, Auto-property sözdizimi, başlatılmamış özellikleri hızlı bir şekilde tanımlamanızı kolaylaştırır, ancak başlatma işlemi betiğinizdeki başka bir yerde gerçekleşecektir. Artık .NET 4. x çalışma zamanı ile, otomatik özellikleri aynı satırda başlatmak mümkündür:
 
 ```csharp
 // .NET 3.5
@@ -146,7 +146,7 @@ public int Health { get; set; } = 100;
 
 ### <a name="string-interpolation"></a>Dize ilişkilendirme
 
-Eski .NET 3.5 çalışma süresi ile, dize concatenation garip sözdizimi gerekli. Şimdi .NET 4.x çalışma süresi ile, [ `$` string enterpolasyon](/dotnet/csharp/language-reference/tokens/interpolated) özelliği ifadeler daha doğrudan ve okunabilir sözdizimi dizeleri içine eklenmesini sağlar:
+Eski .NET 3,5 çalışma zamanı ile dize birleştirme gereken garip söz dizimi. Artık .NET 4. x çalışma zamanı ile [ `$` dize ilişkilendirme](/dotnet/csharp/language-reference/tokens/interpolated) özelliği, ifadelerin daha doğrudan ve okunabilir bir sözdiziminde dizelere eklenmesine izin verir:
 
 ```csharp
 // .NET 3.5
@@ -159,7 +159,7 @@ Debug.Log($"Player health: {Health}");
 
 ### <a name="expression-bodied-members"></a>İfade gövdeli üyeler
 
-.NET 4.x çalışma zamanında bulunan yeni C# sözdizimi ile [lambda ifadeleri](/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) işlevlerin gövdesini değiştirerek daha kısa bir şekilde kullanabilir:
+.NET 4. x çalışma zamanı 'nda bulunan daha yeni C# sözdizimi ile, [lambda ifadeleri](/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions) daha kısa yapmak için işlevlerin gövdesini değiştirebilir:
 
 ```csharp
 // .NET 3.5
@@ -172,7 +172,7 @@ private int TakeDamage(int amount)
 private int TakeDamage(int amount) => Health -= amount;
 ```
 
-İfade gövdeli üyeleri salt okunur özelliklerde de kullanabilirsiniz:
+Ayrıca, salt okuma özelliklerinde ifade-Bodied Üyeler de kullanabilirsiniz:
 
 ```csharp
 // .NET 4.x
@@ -181,9 +181,9 @@ public string PlayerHealthUiText => $"Player health: {Health}";
 
 ### <a name="task-based-asynchronous-pattern-tap"></a>Görev Tabanlı Zaman Uyumsuz Desen (TAP)
 
-[Eş zamanlı programlama,](/dotnet/csharp/async) uygulamanızın yanıt vermemesine neden olmadan zaman alıcı işlemlerin gerçekleşmesini sağlar. Bu işlevsellik, kodun uzun süren işlemlerin tamamlanmasını beklemesine de olanak tanır ve bu işlemlerin sonuçlarına bağlı olarak kodla devam eder. Örneğin, bir dosyanın yüklenmesini veya ağ işleminin tamamlanmasını bekleyebilirsiniz.
+Zaman [uyumsuz programlama](/dotnet/csharp/async) , uygulamanızın yanıt vermemesine neden olmadan zaman alma işlemlerinin gerçekleşmesini sağlar. Bu işlevsellik Ayrıca, bu işlemlerin sonuçlarına bağlı olan koda devam etmeden önce kodunuzun zaman tüketen işlemlerin bitmesini beklemesini sağlar. Örneğin, bir dosyanın yüklenmesini veya bir ağ işleminin tamamlanmasını bekleyebilirsiniz.
 
-Unity'de, asynchronous programlama genellikle [ortak yordamlarla](https://docs.unity3d.com/Manual/Coroutines.html)gerçekleştirilir. Ancak C# 5'ten bu yana .NET geliştirmede tercih edilen eşzamanlı programlama yöntemi [System.Threading.Task](/dotnet/api/system.threading.tasks.task)ile `async` `await` birlikte Görev [Tabanlı Asynchronous Pattern (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) ve anahtar kelimeler olmuştur. Özetle, bir `async` işlevde `await` uygulamanızın geri kalanının güncellenmesini engellemeden görevin tamamlanmasını sağlayabilirsiniz:
+Unity 'de, zaman uyumsuz programlama genellikle [eş](https://docs.unity3d.com/Manual/Coroutines.html)yordamlar ile gerçekleştirilir. Ancak, C# 5 ' de, .NET geliştirmede zaman uyumsuz programlama için tercih edilen yöntem, [Task-based Asynchronous Pattern (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) `async` `await` [System. Threading. Task](/dotnet/api/system.threading.tasks.task)ile ve anahtar sözcüklerini kullanarak görev tabanlı zaman uyumsuz bir modeldir (TAP). Özet ' de bir `async` işlevde, `await` uygulamanızın geri kalanını güncelleştirmeden önce bir görevin tamamlanması gerekir:
 
 ```csharp
 // Unity coroutine
@@ -223,35 +223,35 @@ public class AsyncAwaitExample : MonoBehaviour
 }
 ```
 
-TAP karmaşık bir konudur, Birlik özgü nüansları geliştiriciler dikkate almalıdır. Sonuç olarak, TAP Birlik'teki ortak yordamların evrensel bir yerine değildir; ancak, kaldıraç için başka bir araçtır. Bu özelliğin kapsamı bu makalenin ötesindedir, ancak bazı genel en iyi uygulamalar ve ipuçları aşağıda verilmiştir.
+DOKUNUN, Unity 'ye özgü nuslar geliştiricilerin göz önünde bulundurulması gereken karmaşık bir konudur. Sonuç olarak, Unity 'de eş olmayan bir evrensel değişiklik değildir seçeneğine dokunun. Ancak, daha fazla yararlanmak için başka bir araçtır. Bu özelliğin kapsamı Bu makalenin dışındadır, ancak bazı genel en iyi uygulamalar ve ipuçları aşağıda verilmiştir.
 
-#### <a name="getting-started-reference-for-tap-with-unity"></a>Unity ile TAP için referans almaya başlama
+#### <a name="getting-started-reference-for-tap-with-unity"></a>Unity ile dokunma için Başlarken başvurusu
 
-Bu ipuçları, TAP in Unity ile başlamanıza yardımcı olabilir:
+Bu ipuçları Unity 'de dokunarak çalışmaya başlamanıza yardımcı olabilir:
 
-* Beklenen asenkron fonksiyonlar dönüş türüne [`Task`](/dotnet/api/system.threading.tasks.task) veya [`Task<TResult>`](/dotnet/api/system.threading.tasks.task-1).
-* Bir görevi döndüren eşendin işlevleri, adlarına **"Async"** sonekini eklemelidir. "Async" soneki, bir işlevin her zaman beklenen olması gerektiğini gösterir yardımcı olur.
-* Yalnızca geleneksel `async void` senkron koddan async işlevlerini ateşleyen işlevler için dönüş türünü kullanın. Bu tür işlevler kendilerini bekleyemez ve adlarında "Async" soneki olmamalıdır.
-* Unity, async işlevlerinin varsayılan olarak ana iş parçacığı üzerinde çalışmasını sağlamak için UnitySynchronizationContext'ı kullanır. Unity API'ye ana iş parçacığı nın dışında erişilemez.
-* Arka plan iş parçacıklarındaki görevleri gibi [`Task.Run`](https://msdn.microsoft.com/library/hh195051.aspx) yöntemlerle [`Task.ConfigureAwait(false)`](https://msdn.microsoft.com/library/system.threading.tasks.task.configureawait.aspx)çalıştırmak mümkündür. Bu teknik, performansı artırmak için ana iş parçacığından pahalı işlemleri boşaltmak için yararlıdır. Ancak, arka plan iş parçacığı [kullanmak, hata](https://wikipedia.org/wiki/Race_condition)ayıklamanın zor olduğu, yarış koşulları gibi sorunlara yol açabilir.
-* Unity API'ye ana iş parçacığı dışında erişilemez.
-* İş parçacığı kullanan görevler Unity WebGL oluşturur desteklenmez.
+* Beklenmeye yönelik olarak beklenen zaman uyumsuz işlevlerin dönüş türü veya olmalıdır [`Task`](/dotnet/api/system.threading.tasks.task) [`Task<TResult>`](/dotnet/api/system.threading.tasks.task-1) .
+* Bir görevi döndüren zaman uyumsuz işlevlerin adlarına **"Async"** soneki eklenmiş olması gerekir. "Async" soneki, bir işlevin her zaman beklenmiş olması gerektiğini belirtmenize yardımcı olur.
+* Yalnızca `async void` geleneksel zaman uyumlu koddan zaman uyumsuz işlevleri çalıştıran işlevler için dönüş türünü kullanın. Bu işlevlerin kendisi beklenmez ve adlarında "Async" sonekine sahip olmamalıdır.
+* Unity, zaman uyumsuz işlevlerin varsayılan olarak ana iş parçacığında çalışmasını sağlamak için UnitySynchronizationContext kullanır. Unity API 'SI ana iş parçacığı dışında erişilebilir değildir.
+* Görevleri, ve gibi yöntemlerle arka plan iş parçacıklarında çalıştırmak mümkündür [`Task.Run`](https://msdn.microsoft.com/library/hh195051.aspx) [`Task.ConfigureAwait(false)`](https://msdn.microsoft.com/library/system.threading.tasks.task.configureawait.aspx) . Bu teknik, performansı geliştirmek için ana iş parçacığından pahalı işlemleri devrederde yararlıdır. Ancak, arka plan iş parçacıklarını kullanmak, [yarış durumları](https://wikipedia.org/wiki/Race_condition)gibi hata ayıklama zor olan sorunlara yol açabilir.
+* Unity API 'SI ana iş parçacığı dışında erişilebilir değildir.
+* İş parçacıklarını kullanan görevler Unity WebGL Derlemeleriyle desteklenmez.
 
-#### <a name="differences-between-coroutines-and-tap"></a>Ortak yordamlar ve TAP arasındaki farklar
+#### <a name="differences-between-coroutines-and-tap"></a>Eş yordam ve dokunma arasındaki farklılıklar
 
-Coroutines ve TAP / async-await arasında bazı önemli farklılıklar vardır:
+Eş yordam ve TAP/Async-Await arasında bazı önemli farklılıklar vardır:
 
-* Eş yordamlar değerleri döndüremez, ancak `Task<TResult>` döndürebilir.
-* Bir try-catch deyimi `yield` koyarak, ortak yordamlarla hata işlemeyi zorlaştıramazsınız. Ancak, try-catch TAP ile çalışır.
-* Unity'nin ortak yordam özelliği, MonoBehaviour'tan türeyen sınıflarda kullanılamaz. TAP bu tür sınıflarda eşzamanlı programlama için harika.
-* Bu noktada, Unity, TAP'ın ortak yordamların toptan yerine değiştirilmesini önermez. Profil oluşturma, belirli bir proje için bir yaklaşımın belirli sonuçlarını diğerine karşı bilmenin tek yoludur.
+* Coroutines değer döndüremez, ancak bu `Task<TResult>` olabilir.
+* Bir `yield` try-catch ifadesine ekleyemezsiniz ve bunlarla hata işlemenin zor olmasını sağlayabilirsiniz. Ancak, try-catch, dokunarak çalışır.
+* Unity 'nin eş yordam olamaz özelliği monodavranış sınıfından türemeyen sınıflarda kullanılamaz. TAP, bu tür sınıflarda zaman uyumsuz programlama için harika.
+* Bu noktada Unity, eş yordamın toptan yerini alacak şekilde dokunma önerisinde yoktur. Profil oluşturma, belirli bir proje için bir yaklaşımdan kaynaklanan belirli sonuçları öğrenmenin tek yoludur.
 
 > [!NOTE]
-> Unity 2018.2 itibariyle, mola noktaları ile async yöntemleri hata ayıklama tam olarak desteklenmez; ancak [bu işlevselliğin Unity 2018.3'te olması beklenmektedir.](https://twitter.com/jbevain/status/900043560665235456)
+> Unity 2018,2 itibariyle, kesme noktaları ile zaman uyumsuz yöntemlerin hata ayıklaması tam olarak desteklenmez; Ancak, [Bu Işlevsellik Unity 2018,3 ' de beklenmektedir](https://twitter.com/jbevain/status/900043560665235456).
 
 ### <a name="nameof-operator"></a>nameof işleci
 
-İşleç, `nameof` bir değişkenin, yazın veya üyenin dize adını alır. Kullanışlı olduğu `nameof` bazı durumlarda günlük hataları ve bir enum dize adını almak vardır:
+`nameof`İşleci bir değişkenin, türün veya üyenin dize adını alır. `nameof`Yararlı olarak verilen bazı durumlar, hataları günlüğe kaydetme ve bir sabit listesinin dize adını alma:
 
 ```csharp
 // Get the string name of an enum:
@@ -272,9 +272,9 @@ private void RecordHighScore(string playerName)
 }
 ```
 
-### <a name="caller-info-attributes"></a>Arayan bilgi öznitelikleri
+### <a name="caller-info-attributes"></a>Arayan bilgileri öznitelikleri
 
-[Arayan bilgi öznitelikleri,](/dotnet/csharp/programming-guide/concepts/caller-information) bir yöntemin arayanı çağıran hakkında bilgi sağlar. Arayan Bilgileri özniteliği yle kullanmak istediğiniz her parametre için varsayılan değer sağlamanız gerekir:
+[Çağıran bilgi öznitelikleri](/dotnet/csharp/programming-guide/concepts/caller-information) bir yöntemin çağıranı hakkında bilgi sağlar. Bir arayan bilgileri özniteliğiyle kullanmak istediğiniz her parametre için bir varsayılan değer sağlamalısınız:
 
 ```csharp
 private void Start ()
@@ -300,7 +300,7 @@ public void ShowCallerInfo(string message,
 
 ### <a name="using-static"></a>Statik kullanma
 
-[Statik kullanarak](/dotnet/csharp/language-reference/keywords/using-static) sınıf adını yazmadan statik işlevleri kullanmanıza olanak sağlar. Statik kullanarak, aynı sınıftan birkaç statik işlev kullanmanız gerekiyorsa, zaman ve zaman tasarrufu yapabilirsiniz:
+[Statik kullanmak](/dotnet/csharp/language-reference/keywords/using-static) , sınıf adını yazmadan statik işlevleri kullanmanıza olanak sağlar. Statik kullanarak, aynı sınıftan birkaç statik işlev kullanmanız gerekiyorsa, boşluk ve zaman kazanabilirsiniz:
 
 ```csharp
 // .NET 3.5
@@ -331,21 +331,21 @@ public class UsingStaticExample: MonoBehaviour
 }
 ```
 
-## <a name="il2cpp-considerations"></a>IL2CPP Hususlar
+## <a name="il2cpp-considerations"></a>IL2CPP konuları
 
-Oyununuzu iOS gibi platformlara dışa aktarırken, Unity IL2CPP motorunu kullanarak IL2CPP motorunu kullanarak IL'den C++ koduna "transpile" ve daha sonra hedef platformun yerel derleyicisi kullanılarak derlenir. Bu senaryoda, Yansıma'nın bölümleri ve `dynamic` anahtar kelimenin kullanımı gibi desteklenmeyen birkaç .NET özelliği vardır. Bu özellikleri kendi kodunuzda kullanarak kontrol edebilirsiniz, ancak akılda Birlik ve IL2CPP ile yazılmış değildi 3 parti DLs ve SDK'lar kullanarak sorunlarla karşılaşabilirsiniz. Bu konu hakkında daha fazla bilgi için lütfen Unity'nin sitesindeki [Komut Dosyası Kısıtlamaları](https://docs.unity3d.com/Manual/ScriptingRestrictions.html) dokümanlarına bakın.
+Oyununuzu iOS gibi platformlarda dışa aktarırken, Unity, IL2CPP altyapısını, daha sonra hedef platformun yerel derleyicisi kullanılarak derlenen C++ koduna "derleyin" olarak kullanır. Bu senaryoda, yansıma parçaları ve anahtar sözcüğünün kullanımı gibi desteklenmeyen bazı .NET özellikleri vardır `dynamic` . Bu özellikleri kendi kodunuzda kullanarak denetleyebilirken, Unity ve IL2CPP ile yazılmayan 3. taraf dll 'Leri ve SDK 'Ları kullanarak sorunlar yaşayabilirsiniz. Bu konu hakkında daha fazla bilgi için lütfen Unity 'nin sitesindeki [betik kısıtlamaları](https://docs.unity3d.com/Manual/ScriptingRestrictions.html) belgelerine bakın.
 
-Ayrıca, yukarıdaki Json.NET örnekte belirtildiği gibi, Unity IL2CPP dışa aktarma işlemi sırasında kullanılmayan kodu sökmeye çalışır.  Bu genellikle bir sorun olmasa da, Yansıma kullanan kitaplıklar ile yanlışlıkla dışa aktarma zamanında belirlenemeyen çalışma zamanında çağrılacak özellikleri veya yöntemleri şeritleyebilir.  Bu sorunları gidermek için, ekleme işlemini çalıştırmamak için derlemelerin ve ad alanlarının listesini içeren bir **link.xml** dosyasını projenize ekleyin.  Tüm ayrıntılar için lütfen [Unity'nin bytecode sıyırma ile ilgili dokümanlarına](https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html)bakın.
+Ayrıca, yukarıdaki Json.NET örneğinde belirtildiği gibi Unity, IL2CPP dışa aktarma işlemi sırasında kullanılmayan kodu kullanıma açmaya çalışır.  Bu genellikle bir sorun olmasa da, yansıma kullanan kitaplıklar sayesinde, yanlışlıkla dışa aktarma zamanında belirlenemeyecek çalışma zamanında çağrılacak özellikleri veya yöntemleri açabilir.  Bu sorunları gidermek için, projenize, ortaya çıkan işlemi çalıştırmayan derlemelerin ve ad alanlarının listesini içeren bir **link.xml** dosyası ekleyin.  Tam Ayrıntılar için lütfen bkz. [Unity 'nin belge bytecode üzerinde çaba](https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html)
 
-## <a name="net-4x-sample-unity-project"></a>.NET 4.x Örnek Birlik Projesi
+## <a name="net-4x-sample-unity-project"></a>.NET 4. x örnek Unity projesi
 
-Örnek birkaç .NET 4.x özelliğinden örnekler içerir. Projeyi karşıdan yükleyebilir veya Kaynak Kodu [GitHub'da](https://github.com/Microsoft/unity-scripting-upgrade)görüntüleyebilirsiniz.
+Örnek, çeşitli .NET 4. x özelliklerine örnek içerir. Projeyi indirebilir veya [GitHub](https://github.com/Microsoft/unity-scripting-upgrade)'da kaynak kodu görüntüleyebilirsiniz.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-* [Unity Blog - Unity 2018.2'de Çalışma Zamanı İyileştirmeleri Yazma](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/)
-* [C Tarihi #](/dotnet/csharp/whats-new/csharp-version-history)
-* [C# 6'daki Yenilikler](/dotnet/csharp/whats-new/csharp-6)
-* [Unity'de asynchronous programlama, Coroutine ve TAP kullanma](/archive/blogs/appconsult/unity-coroutine-tap-en-us)
-* [Unity 2017'de Coroutines Yerine Async-Await](http://www.stevevermeulen.com/index.php/2017/09/using-async-await-in-unity3d-2017/)
-* [Birlik Forumu - Deneysel Scripting Önizlemeler](https://forum.unity.com/forums/experimental-scripting-previews.107/)
+* [Unity blog-betik oluşturma çalışma zamanı geliştirmeleri 2018,2](https://blogs.unity3d.com/2018/07/11/scripting-runtime-improvements-in-unity-2018-2/)
+* [C geçmişi #](/dotnet/csharp/whats-new/csharp-version-history)
+* [C# 6 ' daki yenilikler](/dotnet/csharp/whats-new/csharp-6)
+* [Unity 'de eş zamanlı olmayan programlama, Coroutine ve TAP 'ı kullanma](/archive/blogs/appconsult/unity-coroutine-tap-en-us)
+* [Unity 2017 ' de eş zamanlı olmayan-await](http://www.stevevermeulen.com/index.php/2017/09/using-async-await-in-unity3d-2017/)
+* [Unity Forumu-deneysel betik önizlemeleri](https://forum.unity.com/forums/experimental-scripting-previews.107/)

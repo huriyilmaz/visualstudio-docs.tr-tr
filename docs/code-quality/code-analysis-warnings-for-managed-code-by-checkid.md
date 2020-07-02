@@ -145,6 +145,7 @@ f1_keywords:
 - CA1802
 - CA1803
 - CA1804
+- CA1805
 - CA1806
 - CA1809
 - CA1810
@@ -288,12 +289,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d9c4834604d4f77d53dc0ff7bb725eae3312779
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.openlocfilehash: 3f8188a83a11811cc73a3b38c45df8dd7d27d1c1
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85382685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814817"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>CheckId tarafından yönetilen kod için kod analizi uyarıları
 
@@ -432,6 +433,7 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA1801 | [CA1801: Kullanılmayan parametreleri gözden geçirin](../code-quality/ca1801.md) | Yöntem imzası, yöntemin gövdesinde kullanılmayan bir parametre içerir. |
 | CA1802 |[CA1802: Uygun yerlerde sabitleri kullanın](../code-quality/ca1802.md) |Bir alan statik ve salt okunur (paylaşılan ve salt okunur) olarak tanımlanır [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ve derleme zamanında oluşturulabilir bir değer kullanılarak başlatılır. Hedeflenen alana atanan değer derleme zamanında oluşturulabilir olduğundan, [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] değerin çalışma zamanı yerine derleme zamanında hesaplanabilmesi için bildirimi const (const) alanı olarak değiştirin. |
 | CA1804 | [CA1804: Kullanılmayan yerelleri kaldırın](../code-quality/ca1804.md) | Kullanılmayan yerel değişkenler ve gereksiz atamaların derleme boyutunu artırır ve performansı düşürür. |
+| CA1805 | [CA1805: gereksiz yere başlatma](../code-quality/ca1805.md) | .NET çalışma zamanı, oluşturucuyu çalıştırmadan önce, başvuru türlerindeki tüm alanları varsayılan değerlerine başlatır. Çoğu durumda, bir alanı varsayılan değerine açıkça başlatmak, bakım maliyetlerine eklenen ve performansı düşürebilir (örneğin, daha fazla derleme boyutuyla). |
 | CA1806 | [CA1806: Metot sonuçlarını yoksaymayın](../code-quality/ca1806.md) | Yeni bir nesne oluşturulur, ancak hiç kullanılmaz veya çağrılan yeni dizeyi oluşturur ve döndürür ve yeni dize hiç kullanılmaz ya da COM veya P/Invoke yöntemi, bir HRESULT ya da hiç kullanılmayan hata kodu döndürür. |
 | CA1809 |[CA1809: Aşırı yerellerden kaçının](../code-quality/ca1809.md) | Bir değeri bellek yerine işlemci yazmacında tutmak yaygın bir performans iyileştirmesidir ve buna "değeri kaydetmek denir". Tüm yerel değişkenlerin kaydedilme olasılığını artırmak için yerel değişken sayısını 64 olarak sınırlandırın. |
 | CA1810 | [CA1810: Başvuru türü statik alanları satır içinden başlatın](../code-quality/ca1810.md) | Bir tür açık statik yapıcı bildirdiğinde, JIT derleyici her bir statik yöntemi kontrol ekler ve türün yapıcı örneği statik yapıcının daha önceden çağrıldığından emin olur. Statik oluşturucu denetimleri performansı düşürebilir. |

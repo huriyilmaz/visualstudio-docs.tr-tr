@@ -1,7 +1,7 @@
 ---
-title: Başlatma süresini iyileştirme
+title: Başlangıç zamanını geliştirme
 ms.date: 11/15/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - startup time [Visual Studio]
 - optimizing performance [Visual Studio]
@@ -14,62 +14,62 @@ f1_keywords:
 - vs.performancecenter
 ms.workload:
 - multiple
-ms.openlocfilehash: 4824939b4ef3ed1bc7fa48b2508fc891c984a3c5
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 399bab1b95a7f17166f205902d04a1abec10e6dd
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770967"
 ---
-# <a name="optimize-visual-studio-startup-time"></a>Visual Studio başlangıç süresini optimize edin
+# <a name="optimize-visual-studio-startup-time"></a>Visual Studio başlangıç zamanını iyileştirin
 
-Visual Studio mümkün olduğunca hızlı ve verimli bir şekilde başlamak için tasarlanmıştır. Ancak, bazı Visual Studio uzantıları ve araç pencereleri yüklendiklerinde başlangıç süresini olumsuz etkileyebilir. **Görsel Stüdyo Performansını Yönet** iletişim kutusunda yavaş uzantıların ve araç pencerelerinin davranışını denetleyebilirsiniz. Performansı artırmaya ilişkin daha genel ipuçları için [Visual Studio performans ipuçlarıve püf noktalarına](../ide/visual-studio-performance-tips-and-tricks.md)bakın.
+Visual Studio, mümkün olduğunca hızlı ve etkili bir şekilde başlamak için tasarlanmıştır. Ancak, belirli Visual Studio uzantıları ve araç pencereleri, yüklendiklerinde başlangıç süresini olumsuz etkileyebilir. Yavaş uzantıların ve araç pencerelerinin davranışını **Visual Studio performansını Yönet** iletişim kutusunda kontrol edebilirsiniz. Performansı iyileştirme hakkında daha fazla genel ipucu için bkz. [Visual Studio performans ipuçları ve püf noktaları](../ide/visual-studio-performance-tips-and-tricks.md).
 
 ## <a name="startup-behavior"></a>Başlangıç davranışı
 
-Visual Studio, başlangıç süresini uzatmayı önlemek _için, isteğe bağlı_ bir yaklaşım kullanarak uzantıları yükler. Bu davranış, uzantıların Visual Studio başladıktan hemen sonra değil, gerektiği gibi açılmıyor anlamına gelir. Ayrıca, önceki Visual Studio oturumunda açık bırakılan araç pencereleri başlangıç süresini yavaşlatabildiği için Visual Studio, başlangıç süresini etkilemeyi önlemek için araç pencerelerini daha akıllı bir şekilde açar.
+Başlangıç süresini genişletmemek için, Visual Studio _isteğe bağlı_ bir yaklaşım kullanarak uzantıları yükler. Bu davranış, uzantıların Visual Studio başladıktan hemen sonra açılmayacağı, ancak gerekli olduğu anlamına gelir. Ayrıca, önceki bir Visual Studio oturumunda açık olan araç pencereleri başlangıç süresini yavaşlatabileceğinden, Visual Studio başlangıç süresini etkilememek için araç pencerelerini daha akıllı bir şekilde açar.
 
-Visual Studio yavaş başlatma algılarsa, yavaşlamaya neden olan uzantı veya araç penceresi hakkında sizi uyaran bir açılır ileti görüntülenir. İleti, Görsel Stüdyo **Performansını Yönet** iletişim kutusuna bir bağlantı sağlar. Bu iletişim kutusuna menü çubuğundan**Görsel Stüdyo Performansını Yönetmene** **Yardım'ı** > seçerek de erişebilirsiniz.
+Visual Studio yavaş başlangıç algılarsa, yavaşlamaya neden olan uzantı veya araç penceresine uyarı veren bir açılır ileti görüntülenir. İleti, **Visual Studio performansını Yönet** iletişim kutusu için bir bağlantı sağlar. Bu iletişim kutusuna **Help**  >  , menü çubuğundan**Visual Studio performansının yönetimine** Yardım ' i seçerek de erişebilirsiniz.
 
-![Görsel Stüdyo Performansı yönetin - pop-up okuma 'Biz bu uzantısı fark ettik ... Visual Studio'nun yavaşlaması](../ide/media/vside_perfdialog_popup.png)
+![Visual Studio performansı-açılan menü okumayı yönetme ' uzantısının olduğunu belirledik... Visual Studio 'Yu yavaşlayor '](../ide/media/vside_perfdialog_popup.png)
 
-İletişim kutusu, başlangıç performansını etkileyen uzantıları ve araçlar pencerelerini listeler. Başlatma performansını artırmak için uzantı ve araç penceresi ayarlarını değiştirebilirsiniz.
+İletişim kutusu, başlangıç performansını etkileyen Uzantılar ve araçlar pencerelerini listeler. Başlangıç performansını artırmak için uzantı ve araç penceresi ayarlarını değiştirebilirsiniz.
 
-## <a name="to-change-extension-settings-to-improve-startup-solution-load-and-typing-performance"></a><a name="extensions" />Başlatmayı, çözüm yükünü ve yazma performansını iyileştirmek için uzantı ayarlarını değiştirmek için
+## <a name="to-change-extension-settings-to-improve-startup-solution-load-and-typing-performance"></a><a name="extensions" />Başlangıç, çözüm yükleme ve yazma performansını geliştirmek için uzantı ayarlarını değiştirme
 
-1. Menü çubuğundan Görsel Stüdyo Performansını **Yönet'e Yardım'ı** > **Manage Visual Studio Performance** seçerek **Görsel Stüdyo Performansını Yönet** iletişim kutusunu açın.
+1. **Help**Menü çubuğundan Visual Studio performansını Yönet ' i seçerek **Visual Studio performansını Yönet** iletişim kutusunu açın  >  **Manage Visual Studio Performance** .
 
-    Bir uzantı Visual Studio'nun başlatılmasını, çözüm yüklemesini veya yazılmasıyavaşlıyorsa, **uzantı, Uzantılar** > **Başlangıç** (veya **Çözüm Yükleme** veya **Yazma)** altındaki **Görsel Stüdyo Performansını Yönet** iletişim kutusunda görünür.
+    Bir uzantı Visual Studio başlatma, çözüm yükleme veya yazma için yavaşanıyorsa, uzantı, **Uzantılar**başlangıcı (veya çözüm yükleme veya yazma) altındaki **Visual Studio performansını Yönet** iletişim kutusunda görünür  >  **Startup** **Solution Load** **Typing**.
 
-    ![Visual Studio performansını yönet - uzantıgörünümü](../ide/media/vside_perfdialog_extensions.png)
+    ![Visual Studio performansı-uzantıları görünümünü yönetme](../ide/media/vside_perfdialog_extensions.png)
 
-2. Devre dışı kalmak istediğiniz uzantıyı seçin ve ardından **Devre Dışı Devre düğmesini** seçin.
+2. Devre dışı bırakmak istediğiniz uzantıyı seçin ve **devre dışı bırak** düğmesini seçin.
 
-**Uzantı Yöneticisi'ni** veya **Görsel Stüdyo Performansını Yönet** iletişim kutusunu kullanarak uzantıyı gelecek oturumlar için her zaman yeniden etkinleştirebilirsiniz.
+Uzantı **Yöneticisi** veya **Visual Studio performansını Yönet** iletişim kutusunu kullanarak, gelecekteki oturumların uzantısını her zaman yeniden etkinleştirebilirsiniz.
 
-## <a name="to-change-tool-window-settings-to-improve-startup-time"></a><a name="tool-windows" />Başlangıç süresini iyileştirmek için araç penceresi ayarlarını değiştirmek için
+## <a name="to-change-tool-window-settings-to-improve-startup-time"></a><a name="tool-windows" />Başlatma süresini artırmak üzere araç penceresi ayarlarını değiştirmek için
 
-1. Menü çubuğundan Görsel Stüdyo Performansını **Yönet'e Yardım'ı** > **Manage Visual Studio Performance** seçerek **Görsel Stüdyo Performansını Yönet** iletişim kutusunu açın.
+1. **Help**Menü çubuğundan Visual Studio performansını Yönet ' i seçerek **Visual Studio performansını Yönet** iletişim kutusunu açın  >  **Manage Visual Studio Performance** .
 
-    Bir araç penceresi Visual Studio'nun başlatılmasını yavaşlatıyorsa, araç penceresi **Araç Windows** > **Başlangıç**altında Visual **Studio Performance'ı Yönet** iletişim kutusunda görünür.
+    Bir araç penceresi Visual Studio başlangıcını yavaşlayorsa araç penceresi, **araç Windows**başlangıcı altındaki **Visual Studio performansını Yönet** iletişim kutusunda görünür  >  **Startup**.
 
-2. Davranışı değiştirmek istediğiniz araç penceresini seçin.
+2. Davranışını değiştirmek istediğiniz araç penceresini seçin.
 
-3. Aşağıdaki üç seçenekten birini seçin:
+3. Aşağıdaki üç seçenekten birini belirleyin:
 
-   - **Varsayılan davranışı kullanma:** Araç penceresi için varsayılan davranış. Bu seçeneğin seçili tutulması başlangıç performansını artırmaz.
+   - **Varsayılan davranışı kullan:** Araç penceresi için varsayılan davranış. Bu seçeneğin seçili tutulması, başlangıç performansını iyileştirmeyecektir.
 
-   - **Başlangıçta pencereyi göstermeyin:** Belirtilen araç penceresi, önceki bir oturumda açık bıraksanız bile Visual Studio'yu açtığınızda her zaman kapalıdır. İhtiyacınız olduğunda araç penceresini uygun menüden açabilirsiniz.
+   - **Başlangıçta pencere gösterme:** Belirtilen araç penceresi, önceki bir oturumda açık bıraktığınız halde, Visual Studio 'Yu açtığınızda her zaman kapalıdır. Araç penceresini, ihtiyacınız olduğunda uygun menüden açabilirsiniz.
 
-   - **Başlangıçta otomatik gizleme penceresi:** Bir önceki oturumda bir araç penceresi açık bırakılmışsa, bu seçenek, araç penceresinin başlatılmasını önlemek için başlangıçta araç penceresinin grubunu daraltır. Bir araç penceresi sık sık kullanıyorsanız, bu seçenek iyi bir seçimdir. Araç penceresi hala kullanılabilir, ancak artık Visual Studio başlangıç süresini olumsuz etkilemez.
+   - **Başlangıçta pencereyi otomatik gizle:** Bir araç penceresi önceki bir oturumda açık bırakılmış ise, bu seçenek araç penceresinin başlatılmasını önlemek için başlangıçta araç penceresinin grubunu daraltır. Bu seçenek, genellikle bir araç penceresi kullanıyorsanız iyi bir seçenektir. Araç penceresi hala kullanılabilir, ancak artık Visual Studio başlangıç zamanını olumsuz şekilde etkilemesiz.
 
-     ![Visual Studio performansını yönet - araç windows görünümü](../ide/media/vside_perfdialog_toolwindows.png)
+     ![Visual Studio performansı yönetme-araç Windows görünümü](../ide/media/vside_perfdialog_toolwindows.png)
 
 > [!NOTE]
-> Visual Studio 2017'nin önceki bazı sürümlerinde **hafif çözüm yükü**adı verilen bir özellik vardı. Geçerli sürümlerde, yönetilen kod yükünü içeren büyük çözümler, hafif çözüm yükü olmasa bile öncekinden çok daha hızlı yüklenir.
+> Visual Studio 2017 ' nin bazı önceki sürümlerinde **basit çözüm yükü**adlı bir özellik vardı. Geçerli sürümlerde, basit çözüm yükü olmadan bile, yönetilen kod yükünü içeren büyük çözümler daha önceden daha hızlıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio performansını iyileştirme](../ide/optimize-visual-studio-performance.md)
 - [Visual Studio performans ipuçları ve püf noktaları](../ide/visual-studio-performance-tips-and-tricks.md)
-- [Visual Studio blog - Visual Studio 2017 sürümü 15.6 ile çözümleri daha hızlı yükleyin](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)
+- [Visual Studio blogu-Visual Studio 2017 sürüm 15,6 ile çözümleri daha hızlı yükleme](https://devblogs.microsoft.com/visualstudio/load-solutions-faster-with-visual-studio-2017-version-15-6/)

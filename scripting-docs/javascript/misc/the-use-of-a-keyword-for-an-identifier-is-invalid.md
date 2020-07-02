@@ -1,9 +1,9 @@
 ---
-title: Tanımlayıcı için bir anahtar sözcük kullanımı geçersiz. | Microsoft Docs
+title: Tanımlayıcı için bir anahtar sözcük kullanımı geçersiz | Microsoft Docs
 ms.date: 01/18/2017
 ms.prod: visual-studio-windows
 ms.technology: vs-javascript
-ms.topic: reference
+ms.topic: error-reference
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1048
 dev_langs:
@@ -14,16 +14,16 @@ ms.assetid: 04951b3b-a8b5-4d36-94f8-d2daee1ce0f8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d4de3dd669dfb54fc01704b03989fa90d4412cfe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5518c865ba1d0c7b1d1f4938983dd9b3278e6557
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63006192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85816049"
 ---
 # <a name="the-use-of-a-keyword-for-an-identifier-is-invalid"></a>Tanımlayıcı için bir anahtar sözcük kullanımı geçersiz
-1048: Tanımlayıcı için bir anahtar sözcük kullanımı geçersiz  
+1048: tanımlayıcı için bir anahtar sözcük kullanımı geçersiz  
   
- Bir anahtar sözcüğü bir değişken, işlev veya başka bir kullanıcı tanımlı tanımlayıcı adı olarak kullanamazsınız.  
+ Bir anahtar sözcüğü bir değişken, işlev veya Kullanıcı tanımlı başka tanımlayıcı adı olarak kullanamazsınız.  
   
  Anahtar sözcükler hakkında daha fazla bilgi için bkz. [JavaScript ayrılmış sözcükler](../../javascript/reference/javascript-reserved-words.md) ve [JavaScript gelecek ayrılmış sözcükler](../../javascript/reference/javascript-future-reserved-words.md).

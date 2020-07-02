@@ -1,22 +1,22 @@
 ---
 title: 'İzlenecek Yol: XSLT Hiyerarşisi Kullanma'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 892c166504b9a33fdcbbe0af2605e8268a2b06e7
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 940185687544b22325d3f75751eb92e950deb685
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815050"
 ---
 # <a name="walkthrough-use-xslt-hierarchy"></a>İzlenecek yol: XSLT hiyerarşisini kullanma
 
-XSLT hiyerarşisi aracı birçok XML geliştirme görevini basitleştirir. XSLT stil sayfası genellikle `includes` ve `imports` yönergelerini kullanır. Derleme, asıl stil sayfasından başlar, ancak bir XSLT stil sayfası derlenirken bir hata gördüğünüzde, hata asıl stil sayfasından farklı bir kaynaktan gelebilir. Hata düzeltme veya stil sayfasını düzenlemede, eklenen veya içeri aktarılan stil sayfalarına erişim gerekebilir. Hata ayıklayıcı içindeki stil sayfasında adım adım dahil edilen ve içeri aktarılan stil sayfaları açılabilir ve bir veya daha fazla eklenen stil sayfasından bir veya daha fazla noktaya kesme noktası eklemek isteyebilirsiniz.
+XSLT hiyerarşisi aracı birçok XML geliştirme görevini basitleştirir. XSLT stil sayfası genellikle `includes` ve yönergelerini kullanır `imports` . Derleme, asıl stil sayfasından başlar, ancak bir XSLT stil sayfası derlenirken bir hata gördüğünüzde, hata asıl stil sayfasından farklı bir kaynaktan gelebilir. Hata düzeltme veya stil sayfasını düzenlemede, eklenen veya içeri aktarılan stil sayfalarına erişim gerekebilir. Hata ayıklayıcı içindeki stil sayfasında adım adım dahil edilen ve içeri aktarılan stil sayfaları açılabilir ve bir veya daha fazla eklenen stil sayfasından bir veya daha fazla noktaya kesme noktası eklemek isteyebilirsiniz.
 
-XSLT hiyerarşisi aracının yararlı olabilecek başka bir senaryo, yerleşik şablon kurallarına kesme noktaları koymaktadır. Şablon kuralları, stil sayfasının her bir modu için oluşturulan ve düğüm ile eşleşen başka bir şablon olmadığında `xsl:apply-templates` tarafından çağrılan özel şablonlardır. Yerleşik şablonlar kurallarında hata ayıklamayı uygulamak için, XSLT hata ayıklayıcı dosyayı geçici klasördeki kurallarla oluşturur ve bunları asıl stil sayfasıyla birlikte derler. Bazı `xsl:apply-template`koda adımlamadan, asıl stil sayfasına dahil edilen stil sayfalarını bulmak veya yerleşik şablon kurallarıyla stil sayfasını bulmak ve açmak zor olabilir.
+XSLT hiyerarşisi aracının yararlı olabilecek başka bir senaryo, yerleşik şablon kurallarına kesme noktaları koymaktadır. Şablon kuralları, stil sayfasının her bir modu için oluşturulan ve düğüm ile eşleşen başka bir şablon olmadığında çağrılan özel şablonlardır `xsl:apply-templates` . Yerleşik şablonlar kurallarında hata ayıklamayı uygulamak için, XSLT hata ayıklayıcı dosyayı geçici klasördeki kurallarla oluşturur ve bunları asıl stil sayfasıyla birlikte derler. Koddan kod içine `xsl:apply-template` adımlanmadan, asıl stil sayfasına dahil edilen stil sayfalarını bulmak veya yerleşik şablon kurallarıyla stil sayfasını bulmak ve açmak zor olabilir.
 
 Bu konudaki örnekte, başvurulan bir stil sayfasında hata ayıklama gösterilmektedir.
 
@@ -103,11 +103,11 @@ Bu konudaki örnekte, başvurulan bir stil sayfasında hata ayıklama gösterilm
     </xsl:stylesheet>
     ```
 
-4. Yönerge `<xsl:include href="xslincludefile.xsl" />`bir kesme noktası ekleyin.
+4. Yönergede bir kesme noktası ekleyin `<xsl:include href="xslincludefile.xsl" />` .
 
-5. Hata ayıklama başlatılamıyor.
+5. Hata ayıklamayı başlatın.
 
-6. Hata ayıklayıcı yönerge `<xsl:include href="xslincludefile.xsl" />`durdurulduğunda, **adımla** düğmesine basın. Hata ayıklama, başvurulan stil sayfasında devam edebilir. Hiyerarşi görünür ve tasarımcı doğru yolu görüntüler.
+6. Hata ayıklayıcı yönergede durdurulduğunda, `<xsl:include href="xslincludefile.xsl" />` **adımla** düğmesine basın. Hata ayıklama, başvurulan stil sayfasında devam edebilir. Hiyerarşi görünür ve tasarımcı doğru yolu görüntüler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

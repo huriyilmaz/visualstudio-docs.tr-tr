@@ -1,9 +1,9 @@
 ---
-title: Visual Studio'ya Genel Bakış
+title: Visual Studio 'ya genel bakış
 titleSuffix: ''
 ms.date: 03/19/2019
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: overview
 ms.custom: vs-get-started
 author: TerryGLee
 f1_keywords:
@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3707e06aa41c4f232a5525ca4422f3941fbe2d1a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 5790d652ad98c684786efaa39a1fd23948d3b36e
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75589363"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770877"
 ---
 # <a name="welcome-to-the-visual-studio-ide"></a>Visual Studio IDE'ye hoş geldiniz
 
@@ -26,26 +26,26 @@ ms.locfileid: "75589363"
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu tanıtım makalelerinden biriyle birlikte görsel stüdyodaha fazla aşağıdaki keşfedin:
+Aşağıdaki tanıtım makaleleriyle birlikte Visual Studio 'Yu daha ayrıntılı bir şekilde bulun:
 
-- Kod düzenleyicisini kullanmayı öğrenin'deki kod [düzenleyicisiyle tanışın](../get-started/tutorial-editor.md)
+- Kod [düzenleyicisini kullanma hakkında bilgi edinmek için](../get-started/tutorial-editor.md) kod Düzenleyicisi ile tanışın
 
-- Visual Studio'nun kodları nasıl düzenlediğini öğrenin [Projeler ve çözümler hakkında bilgi edinin](../get-started/tutorial-projects-solutions.md)
+- [Projeler ve çözümler hakkında bilgi edinmek](../get-started/tutorial-projects-solutions.md) Için Visual Studio 'nun kodu nasıl düzenleyeceğinizi öğrenin
 
-Daha fazla kodlamaya dalmaya hazırsanız, aşağıdaki dile özgü hızlı başlatmalar iyi bir sonraki adımdır:
+Daha fazla kodlamaya izin vermek için hazır olduğunuzda, aşağıdaki dile özgü hızlı başlangıçlardan birine bir sonraki adım uygundur:
 
-- [İlk Python web uygulamanızı oluşturmak için Visual Studio'yı kullanın](../ide/quickstart-python.md)
+- [İlk Python web uygulamanızı oluşturmak için Visual Studio 'Yu kullanma](../ide/quickstart-python.md)
 
-- [İlk C# web uygulamanızı oluşturmak için Visual Studio'yı kullanın](../ide/quickstart-aspnet-core.md)
+- [İlk C# Web uygulamanızı oluşturmak için Visual Studio 'Yu kullanma](../ide/quickstart-aspnet-core.md)
 
-- [İlk F# web uygulamanızı oluşturmak için Visual Studio'yı kullanın](../ide/quickstart-fsharp.md)
+- [İlk F # Web uygulamanızı oluşturmak için Visual Studio 'Yu kullanma](../ide/quickstart-fsharp.md)
 
-- [İlk Düğüm.js uygulamanızı oluşturmak için Visual Studio'yı kullanın](../ide/quickstart-nodejs.md)
+- [İlk Node.js uygulamanızı oluşturmak için Visual Studio 'Yu kullanma](../ide/quickstart-nodejs.md)
 
-- [İlk C++ konsol uygulamanızı oluşturmak için Visual Studio'yı kullanın](/cpp/get-started/tutorial-console-cpp)
+- [İlk C++ konsol uygulamanızı oluşturmak için Visual Studio 'Yu kullanma](/cpp/get-started/tutorial-console-cpp)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Diğer Visual Studio özelliklerini](../ide/advanced-feature-overview.md) keşfedin
-- [ziyaret visualstudio.microsoft.com](https://visualstudio.microsoft.com/vs/)
+- [Daha fazla Visual Studio özelliği](../ide/advanced-feature-overview.md) bulun
+- [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/vs/) ziyaret edin
 - [Visual Studio blogunu](https://devblogs.microsoft.com/visualstudio/) okuyun

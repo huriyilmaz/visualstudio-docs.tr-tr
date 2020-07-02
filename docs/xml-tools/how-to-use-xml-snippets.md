@@ -1,19 +1,19 @@
 ---
 title: XML kod parçacıklarını kullanma
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 3a27375b-81cc-48f6-a884-e1cb8c4f78f5
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: decc565eca9b7299761405e06c0cecf82f63319d
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: e72c5ef5d5c33c46a9f09eb604d0a2e40cf9a6e7
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815922"
 ---
 # <a name="how-to-use-xml-snippets"></a>Nasıl yapılır: XML kod parçacıklarını kullanma
 
@@ -26,7 +26,7 @@ XML kod parçacığı düzenleyiciye eklendikten sonra, kod parçacığındaki d
 Aşağıdaki yordamlarda, **kod parçacığı Ekle** komutuna nasıl erişebileceğiniz açıklanır.
 
 > [!NOTE]
-> **Kod parçacığı Ekle** komutu, klavye kısayolu (**CTRL**+**K**ve **CTRL**+**X**) aracılığıyla da kullanılabilir.
+> **Kod parçacığı Ekle** komutu, klavye kısayolu (**CTRL** + **K**ve **CTRL** + **X**) aracılığıyla da kullanılabilir.
 
 ### <a name="to-insert-snippets-from-the-shortcut-menu"></a>Kısayol menüsünden kod parçacıkları eklemek için
 
@@ -52,20 +52,20 @@ Aşağıdaki yordamlarda, **kod parçacığı Ekle** komutuna nasıl erişebilec
 
 1. İmleci XML parçacığı eklemek istediğiniz yere konumlandırın.
 
-2. Dosyanıza eklemek istediğiniz XML kod parçacığını yazmaya başlayın. Otomatik tamamlama açıksa, IntelliSense Tamam sözcük listesi görüntülenir. Görünmezse, etkinleştirmek için **Ctrl**+**alanı** ' na basın.
+2. Dosyanıza eklemek istediğiniz XML kod parçacığını yazmaya başlayın. Otomatik tamamlama açıksa, IntelliSense Tamam sözcük listesi görüntülenir. Görünmezse, etkinleştirmek için **CTRL**+ + **boşluk** tuşlarına basın.
 
 3. Tüm sözcük listesinden XML kod parçacığını seçin.
 
 4. XML kod parçacığını çağırmak için **Tab**ve **Tab** tuşlarına basın.
 
 > [!NOTE]
-> XML parçacığı çağrılmayan durumlar olabilir. Örneğin, bir `xs:element` düğümüne bir `xs:complexType` öğesi eklemeye çalışırsanız, düzenleyici bir XML kod parçacığı oluşturmaz. Bir `xs:element` düğümü içinde `xs:complexType` öğesi kullanıldığında, gerekli öznitelik veya alt öğeler yoktur, bu nedenle düzenleyicide eklenecek veri yoktur.
+> XML parçacığı çağrılmayan durumlar olabilir. Örneğin, `xs:complexType` bir düğümü içine bir öğe eklemeye çalışırsanız `xs:element` , DÜZENLEYICI bir XML kod parçacığı oluşturmaz. Bir `xs:complexType` düğüm içinde bir öğe kullanıldığında `xs:element` , gerekli öznitelik veya alt öğeler yoktur, bu nedenle düzenleyicide eklemek için herhangi bir veri yoktur.
 
 ### <a name="to-insert-snippets-using-the-shortcut-name"></a>Kısayol adını kullanarak kod parçacıkları eklemek için
 
 1. İmleci XML parçacığı eklemek istediğiniz yere konumlandırın.
 
-2. Düzenleyici bölmesine `<` yazın.
+2. `<`Düzenleyici bölmesine yazın.
 
 3. IntelliSense Tamam sözcük listesini kapatmak için **ESC** tuşuna basın.
 
@@ -76,7 +76,7 @@ Aşağıdaki yordamlarda, **kod parçacığı Ekle** komutuna nasıl erişebilec
 Aşağıdaki yordamlarda, komutla **birlikte** nasıl erişebileceğiniz açıklanır.
 
 > [!NOTE]
-> Komut **Ile çevreleme** , klavye kısayolu (**CTRL**+**K**ve **CTRL**+**S**) aracılığıyla da kullanılabilir.
+> Komut **ile çevreleme** , klavye kısayolu (**CTRL** + **K**ve **CTRL** + **S**) aracılığıyla da kullanılabilir.
 
 ### <a name="to-use-surround-with-from-the-context-menu"></a>Bağlam menüsünden Ile çevrelemeyi kullanmak için
 
@@ -102,7 +102,7 @@ Aşağıdaki yordamlarda, komutla **birlikte** nasıl erişebileceğiniz açıkl
 
 Bir XML parçacığı seçtikten sonra, kod parçacığının metni imleç konumuna otomatik olarak eklenir. Kod parçacığındaki düzenlenebilir alanlar vurgulanır ve ilk düzenlenebilir alan otomatik olarak seçilir. Şu anda seçili olan alan kutulanır.
 
-Bir alan seçildiğinde, alan için yeni bir değer yazabilirsiniz. Kod parçacığının düzenlenebilir alanları aracılığıyla **sekme** döngülerine basma **shıft**+**Tab** tuşlarına basmak, bu tuşlara ters sırada geçiş yapar. Bir alana tıklanması imleci alana koyar ve bir alana çift tıklamak onu seçer. Bir alan vurgulandığında, alanın açıklamasını sunan bir araç Ipucu görüntülenebilir.
+Bir alan seçildiğinde, alan için yeni bir değer yazabilirsiniz. Kod parçacığının düzenlenebilir alanları aracılığıyla **sekme** döngülerine basma **SHIFT** + **sekmesine** basıldığında ters sırada geçiş yapın. Bir alana tıklanması imleci alana koyar ve bir alana çift tıklamak onu seçer. Bir alan vurgulandığında, alanın açıklamasını sunan bir araç Ipucu görüntülenebilir.
 
 Belirli bir alanın yalnızca ilk örneği düzenlenebilir. Bu alan vurgulandığında, bu alanın diğer örnekleri ana hatlarıyla gösterilir. Düzenlenebilir bir alanın değerini değiştirdiğinizde, bu alan kod parçacığında kullanıldığı her yerde değişir.
 

@@ -3,19 +3,19 @@ title: Unity için Visual Studio Araçları kullanmaya başlama | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2020
 ms.technology: vs-unity-tools
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 66b5b4eb-13b5-4071-98d2-87fafa4598a8
 author: indiesaudi
 ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 1b39de7437348a79901615e4482544c78f189d04
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 32766fdf69136f3882186bbcad08aaf83d2e573e
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815753"
 ---
 # <a name="get-started-with-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları kullanmaya başlayın
 
@@ -99,7 +99,7 @@ Unity 2018,1 ' den itibaren, Visual Studio 'Nun Unity 'de varsayılan dış beti
    :::moniker-end
 
 
-4. Eğer **gözatamıyorum...** seçilirse, Visual Studio yükleme dizininizin içindeki **Common7/IDE** dizinine gidin ve **devenv. exe**' yi seçin. Ardından **Aç**' a tıklayın.
+4. Eğer **gözatamıyorum...** seçilirse, Visual Studio yükleme dizininizin içindeki **Common7/IDE** dizinine gidin ve **devenv.exe**' yi seçin. Ardından **Aç**' a tıklayın.
 
    :::moniker range="vs-2017"
    ![Açık Seç](media/vs-2017/vstu-browse-for-application.png)

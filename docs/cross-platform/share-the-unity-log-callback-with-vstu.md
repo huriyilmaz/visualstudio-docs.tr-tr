@@ -1,27 +1,27 @@
 ---
-title: Unity Log Callback'i VSTU ile paylaşın | Microsoft Dokümanlar
+title: VSTU ile Unity günlük geri aramasını paylaşma | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2018
 ms.technology: vs-unity-tools
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 5d71f906-6e50-4399-b59b-d38c6dfef7ee
 author: therealjohn
 ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: aa8a4a229102a6a9439ffb36582cd03e322a086b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: dc54c51f078e5b800a9cc9f2de687db7b1fa0387
+ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62815671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85815051"
 ---
-# <a name="share-the-unity-log-callback-with-vstu"></a>Unity günlük geri aramasını VSTU ile paylaşın
-Visual Studio Tools for Unity konsolunu Visual Studio'ya aktarabilmek için Unity ile günlük geri arama kaydeder. Düzenleyici komut dosyalarınız da Unity ile günlük geri arama sıyrıkları kaydederse, VSTU geri araması geri aramanızı etkileyebilir. Bu olasılığı önlemek `VisualStudioIntegration.LogCallback` için, vstu ile işbirliği yapmak için olayı kullanın.
+# <a name="share-the-unity-log-callback-with-vstu"></a>VSTU ile Unity günlük geri aramasını paylaşma
+Unity için Visual Studio Araçları, kendi konsolunu Visual Studio 'ya akıkabilmek için Unity ile bir günlük geri çağırma kaydeder. Düzenleyici betikleriniz Ayrıca Unity ile bir günlük geri çağırma işlemini kaydettiğinin, VSTU geri çağırması geri çağırmanızı etkileyebilir. Bu olasılığa engel olmak için, bir `VisualStudioIntegration.LogCallback` olayı, VSTU ile birlikte çalışmak üzere kullanın.
 
 ## <a name="demonstrates"></a>Gösteriler
- Visual Studio Tools for Unity tarafından oluşturulan Unity Log Callback nasıl paylaşılır?
+ Unity için Visual Studio Araçları tarafından oluşturulan Unity günlük geri aramasını paylaşma.
 
 ## <a name="example"></a>Örnek
 
@@ -49,4 +49,4 @@ public class LogCallbackHook
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Örnek: Proje dosyası oluşturma](../cross-platform/customize-project-files-created-by-vstu.md)
+ [Örnek: proje dosyası oluşturma](../cross-platform/customize-project-files-created-by-vstu.md)

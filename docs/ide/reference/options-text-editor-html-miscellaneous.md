@@ -1,35 +1,35 @@
 ---
-title: Seçenekler, Metin Düzenleyicisi, HTML (Web Formları), Çeşitli
+title: Seçenekler, metin düzenleyici, HTML (Web Forms), çeşitli
 ms.date: 1/15/2019
 ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.HTML.Miscellaneous
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b100defd8f50b4a487e46eef4183457e724a015
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 8aa26144a7c0a2f7edad58ecfb26e3a7d402a994
+ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "72666188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85770909"
 ---
-# <a name="options-text-editor-html-web-forms-miscellaneous"></a>Seçenekler, Metin Düzenleyicisi, HTML (Web Formları), Çeşitli
+# <a name="options-text-editor-html-web-forms-miscellaneous"></a>Seçenekler, metin düzenleyici, HTML (Web Forms), çeşitli
 
-HTML düzenleyicisinin sayfaya yapıştırılan öğeleri nasıl işlediğine yönelik tercihleri ayarlamak için **Çeşitli** Seçenekler sayfasını kullanın. Bu sayfaya erişmek için menü çubuğunda **Araçlar** > **Seçenekleri'ni**seçin ve ardından **Metin Düzenleyicisi** > HTML **(Web Formları)** > **Çeşitli**genişletme yi genişletin.
+HTML düzenleyicisinin sayfaya yapıştırılan öğeleri nasıl işleyeceğini gösteren tercihleri ayarlamak için **çeşitli** Seçenekler sayfasını kullanın. Bu sayfaya erişmek için, menü çubuğunda **Araçlar**  >  **Seçenekler**' i seçin ve ardından **metin düzenleyici**  >  **HTML (Web Forms)**  >  **diğer**öğesini genişletin.
 
 ## <a name="miscellaneous-html-options"></a>Çeşitli HTML seçenekleri
 
-- **Yapıştır'da HTML'yi biçimlendir**
+- **Yapıştırırken HTML 'i Biçimlendir**
 
-   Bu onay kutusu seçildiğinde, düzenleyici, şu anda tanımlanmış biçimlendirme kurallarını kullanarak sayfaya yapıştırılan öğeleri yeniden biçimlendirin. Bu onay kutusu seçili değilse, düzenleyici özgün öğenin tam biçimlendirmesini kullanarak öğeleri yapıştırır.
+   Bu onay kutusu seçildiğinde, düzenleyici, geçerli olarak tanımlanmış biçimlendirme kuralları kullanılarak sayfaya yapıştırılan öğeleri yeniden biçimlendirir. Bu onay kutusu seçili değilse, düzenleyici öğeleri özgün öğenin tam biçimlendirmesini kullanarak yapıştırır.
 
-- **Etiket tamamlama penceresini tetiklemek için '<' gerektirme**
+- **Etiket tamamlama penceresini tetiklemek için ' < ' iste**
 
-   Bu onay kutusu seçildiğinde, karakterden daha az ("<") yazdığınızda etiket tamamlama penceresi görüntülenir.
+   Bu onay kutusu seçildiğinde, daha az karakter ("<") yazdığınızda etiket tamamlama penceresi görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
