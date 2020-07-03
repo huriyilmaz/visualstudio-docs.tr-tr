@@ -6,12 +6,13 @@ ms.author: johmil
 ms.date: 5/13/2020
 ms.technology: vs-ide-debug
 ms.assetid: BB7A084D-9AC2-48B5-8076-6C8518796BBA
-ms.openlocfilehash: a81eb9bbae905599cc5d953f27ac3a8d06441f8b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.topic: overview
+ms.openlocfilehash: 09a761a8269fa40c3fab49a34b3e43a7f0ec63cd
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183995"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939073"
 ---
 # <a name="debugging-with-visual-studio-for-mac"></a>Mac için Visual Studio ile hata ayıklama
 
@@ -89,7 +90,7 @@ Dört düğme aşağıda verilmiştir:
 
 ## <a name="change-which-statement-is-executed-next"></a>Sonraki hangi deyimin yürütüleceğini Değiştir
 
-Hata ayıklayıcı duraklatıldığında, kenar boşluğunda bir ok, sonraki hangi kod satırının çalıştırılacağını gösterir. Hangi deyimin yürütüleceğini değiştirmek için oka tıklayıp farklı bir kod satırına sürükleyebilirsiniz. Ayrıca, bir kod satırına sağ tıklayıp bağlam menüsünden **sonraki Ifadeyi ayarla** ' yı seçerek aynı şeyi elde edebilirsiniz.
+Hata ayıklayıcı duraklatıldığında, kenar boşluğundaki bir ok yürütülecek sonraki kod satırını gösterir. Yürütülecek deyimi değiştirmek için başka bir kod satırına oku tıklayıp sürükleyebilirsiniz. Ayrıca, bir kod satırına sağ tıklayıp bağlam menüsünden **sonraki Ifadeyi ayarla** ' yı seçerek aynı şeyi elde edebilirsiniz.
 
 ![Sonraki ifadeyi ayarlamak için sürükle ve bırak oku](media/debugger-drag-setnextstatement.gif)
 

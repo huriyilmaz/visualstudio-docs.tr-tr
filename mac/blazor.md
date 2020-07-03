@@ -6,12 +6,13 @@ ms.author: jogallow
 ms.date: 12/17/2019
 ms.technology: vs-ide-general
 ms.assetid: D2717D3A-9225-40A8-8155-7D0143B2CA60
-ms.openlocfilehash: 978e3676d587bcd54a8e9d0b8b81f5d6c52a92bc
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.topic: how-to
+ms.openlocfilehash: ac7fcd9044aa6367f140ac4aa96e6aaf4a9f5885
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84180291"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939144"
 ---
 # <a name="create-blazor-web-apps"></a>Blazor Web uygulamaları oluşturma
 
@@ -78,7 +79,7 @@ Bu klasör, *. Razor* uzantısını kullanarak da paylaşılan bileşenleri içe
 
 ### <a name="app-settings"></a>Uygulama ayarları
 
-*AppSettings. JSON* dosyası bağlantı dizeleri gibi yapılandırma verilerini içerir.
+Dosyadaki *appSettings.js* , bağlantı dizeleri gibi yapılandırma verilerini içerir.
 
 Yapılandırma hakkında daha fazla bilgi için [ASP.net Kılavuzu 'Ndaki yapılandırmaya](/aspnet/core/fundamentals/configuration/index)bakın.
 

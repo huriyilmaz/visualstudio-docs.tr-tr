@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 53b29cc0b6af8fed9ee64a92b2d43e29062b498a
-ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
+ms.openlocfilehash: 5189278f8efe42e6e7916562e7ce4f5d6a964061
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85837760"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85938254"
 ---
 # <a name="developer-community-guidelines"></a>Geliştirici Topluluğu yönergeleri
 
@@ -91,7 +91,7 @@ Bu sorulardan herhangi birine "Evet" Yanıt vermiyoruz. Ancak genellikle öneri,
 
 Konuşmayı açık ve şeffaf tutmak için tartışmayı Ingilizce ile sınırlayın ve sorunla ilgili şeyleri koruyun. Considerate ve her zaman korkusuz ve profesyonel olacak şekilde çalışın.
 
-Daha fazla bilgi için bkz. [Microsoft Community kullanım kuralları](https://answers.microsoft.com/page/codeofconduct).
+Daha fazla bilgi için bkz. [Microsoft Community kullanım kuralları](https://answers.microsoft.com/en-us/page/codeofconduct).
 
 Tartışmaya yönelik herhangi bir ihlal, açıklamanın kaldırılmasına ve sonunda kullanıcıyı yönlendirebilir.
 

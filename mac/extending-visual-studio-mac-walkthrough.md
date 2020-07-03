@@ -1,46 +1,47 @@
 ---
-title: Mac Walkthrough için Visual Studio genişletme
+title: Mac için Visual Studio Izlenecek yolu genişletme
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: 7D00512B-9688-4D8D-87A7-F04F207E3D02
-ms.openlocfilehash: c5b3b759b32acfc86b4b584b3f3d52298c138a2c
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: 8b0f1213d500563e9fa6f3574c6b622e3214e03a
+ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74983295"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85939175"
 ---
-# <a name="extending-visual-studio-for-mac-walkthrough"></a>Mac Walkthrough için Visual Studio genişletme
+# <a name="extending-visual-studio-for-mac-walkthrough"></a>Mac için Visual Studio Izlenecek yolu genişletme
 
-Bu [konu, basit bir uzantı paketi](https://github.com/mjh4/AddIns/tree/master/DateInserter)oluşturarak size yol gösteriyor. Uzantı paketi, Mac'in Edit menüsü için Visual Studio'da kullanıcının geçerli tarih ve saati açık bir metin belgesine eklemesine olanak tanıyan yeni bir Komut oluşturur.
+Bu konu, [basit bir uzantı paketi](https://github.com/mjh4/AddIns/tree/master/DateInserter)oluşturma konusunda size rehberlik eder. Uzantı paketi Mac için Visual Studio düzenleme menüsünde, kullanıcının geçerli tarih ve saati açık metin belgesine eklemesini sağlayan yeni bir komut oluşturur.
 
-Bu örnek, Eklenti Oluşturucu'yu kullanır. Eklenti Oluşturucu yeni bir Proje şablonu oluşturur ve özel uzantı paketimiz için gerekli dosyalarla doldurulur.
+Bu örnek, eklenti Oluşturucu 'yu kullanır. Eklenti Oluşturucu yeni bir proje şablonu oluşturur ve bunu özel uzantı paketimiz için gereken dosyalarla doldurur.
 
 1. Zaten açık değilse Mac için Visual Studio başlatarak başlayın:
 
-   ![Mac Ekran Görüntüsü için Visual Studio](media/extending-visual-studio-mac-addin3.png)
+   ![Mac için Visual Studio ekran görüntüsü](media/extending-visual-studio-mac-addin3.png)
 
-2. Eklenti _Yöneticisi'ni kullanarak Eklenti Oluşturucu uzantısı paketini_ yükleyin. Visual Studio menüsünden **Uzantılar'ı seçin...**:
+2. Uzantı Yöneticisi 'Ni kullanarak _eklenti Oluşturucu uzantı paketini_ yükler. Visual Studio menüsünden Uzantılar ' ı seçin **...**:
 
-   ![Addin Yöneticisi Sekmesi](media/extending-visual-studio-mac-addin4.png)
+   ![Eklenti Yöneticisi sekmesi](media/extending-visual-studio-mac-addin4.png)
 
-3. Galeri sekmesine gidin `Addin Maker` ve sağ üstteki arama çubuğuna yazın. Eklenti Geliştirme kategorisinden Addin Maker'ı seçin ve <kbd>Yükle'yi</kbd>tıklatın. Hiçbir şey yoksa, Yenile'ye vurun ve yeniden arayın:
+3. Galeri sekmesine gidin ve `Addin Maker` sağ üst arama çubuğuna yazın. Eklenti geliştirme kategorisinden AddIn Maker <kbd>' ı seçin ve ardından Ekle</kbd>' ye tıklayın. Hiçbir şey gösterilmezse Yenile ' ye basın ve yeniden arayın:
 
-   ![Addin Yöneticisi](media/extending-visual-studio-mac-addin5.png)
+   ![Eklenti Yöneticisi](media/extending-visual-studio-mac-addin5.png)
 
-4. Addin Maker yüklü olduğuna göre, bir uzatma paketi oluşturmaya başlayabilirsiniz. Yeni bir çözüm oluşturarak başlayın.
+4. Artık eklenti Oluşturucu yüklü olduğuna göre, bir uzantı paketi oluşturmaya başlayabilirsiniz. Yeni bir çözüm oluşturarak başlayın.
 
-5. Yeni **Çözüm iletişim kutusundan,** **Diğer > Çeşitli > Genel > Xamarin Studio Addin > C#** şablonu `DateInserter`ve aşağıdaki ekran adı yeni Çözüm seçin:
+5. **Yeni çözüm iletişim kutusunda** **diğer > diğer > genel > Xamarin Studio eklenti > C#** şablonu ' nu seçin ve aşağıdaki ekranda yeni çözümü adlandırın `DateInserter` :
 
-   ![Yeni Bir Çözüm Oluşturma](media/extending-visual-studio-mac-addin7New.png)
+   ![Yeni çözüm oluşturma](media/extending-visual-studio-mac-addin7New.png)
 
-6. Mac için Visual Studio yeni bir Çözüm dolduracak:
+6. Mac için Visual Studio yeni bir çözümü dolduracaktır:
 
-   ![Doldurulan Çözüm](media/extending-visual-studio-mac-addin8.png)
+   ![Doldurulmuş çözüm](media/extending-visual-studio-mac-addin8.png)
 
-7. Şablon kodunu çıkarın `Manifest.addin.xml` ve aşağıdakilerle değiştirin:
+7. İçindeki şablon kodunu kaldırın `Manifest.addin.xml` ve aşağıdaki kodla değiştirin:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -57,11 +58,11 @@ Bu örnek, Eklenti Oluşturucu'yu kullanır. Eklenti Oluşturucu yeni bir Proje 
       </ExtensionModel>
    ```
 
-8. Şimdi, tarih ve saati metin düzenleyicisine eklemeyi işleyecek dosyaları ayarlamanız gerekir. Proje düğümüne sağ tıklayın ve yeni bir dosya ekleyin. **Genel > Boş Sınıf'ı** seçin ve yeni *dosyayı InsertDateHandler'ı*adlandırın:
+8. Şimdi metin düzenleyicisine tarih ve saat eklemeyi işleyecek dosyaları ayarlamanız gerekir. Proje düğümüne sağ tıklayın ve yeni bir dosya ekleyin. **Genel > boş sınıfı** ' nı seçin ve yeni dosya *ınsertdatehandler*olarak adlandırın:
 
-   ![Tarih İdesi Ekle](media/extending-visual-studio-mac-addin9.png)
+   ![Tarih Işleyicisi Ekle](media/extending-visual-studio-mac-addin9.png)
 
-9. Şablon kodunu kaldıralım `InsertDateHandler.cs` ve aşağıdaki kodla değiştirelim:
+9. Bundan sonra şablon kodunu kaldıralım `InsertDateHandler.cs` ve şu kodla değiştirin:
 
    ```cs
    using MonoDevelop.Components.Commands;
@@ -88,11 +89,11 @@ Bu örnek, Eklenti Oluşturucu'yu kullanır. Eklenti Oluşturucu yeni bir Proje 
 
    Bu iki yer tutucu yöntemini daha sonra genişleteceğiz.
 
-10. **DateInserter** Projesi'ne sağ tıklayın ve **Yeni Dosya ekle >** seçin. **Genel > Boş Numaralandırma'yı**seçin ve ardından yeni dosyadateInserterKomutları'nı adlandırın: *DateInserterCommands*
+10. **Dateınserter** projesine sağ tıklayın ve **> yeni dosya Ekle**' yi seçin. **Genel > boş sabit listesi**' ni seçin ve ardından yeni dosya *Dateınsertercommands*olarak adlandırın:
 
-    ![DateInserterKomutları](media/extending-visual-studio-mac-addin10.png)
+    ![Dateınsertercommands](media/extending-visual-studio-mac-addin10.png)
 
-11. `DateInserterCommands.cs` Komutu `InsertDate` dosyaya yeni bir numaralandırma olarak ekleyin:
+11. `InsertDate`Komutu dosyasına yeni bir numaralandırma olarak ekleyin `DateInserterCommands.cs` :
 
     ``` cs
     using System;
@@ -106,13 +107,13 @@ Bu örnek, Eklenti Oluşturucu'yu kullanır. Eklenti Oluşturucu yeni bir Proje 
     }
     ```
 
-12. Bu noktada, bir çalışma uzantısı paketi olmalıdır. Çalışmanızı kaydederek ve uygulamayı çalıştırarak test edebilirsiniz. IDE yeni uzantısı paketi yüklü mac için Visual Studio yeni bir örnek başlatacak. **Edit menüsüne**giderseniz, Mac için Visual Studio'nun aşağıdaki ekran görüntüsünde gösterildiği gibi **Tarihi Ekle**adlı yeni bir seçeneği olduğunu görürsünüz:
+12. Bu noktada, bir çalışma uzantısı paketiniz olmalıdır. İşinizi kaydederek ve uygulamayı çalıştırarak test edebilirsiniz. IDE yeni uzantı paketi yüklüyken Mac için Visual Studio yeni bir örneğini başlatır. **Düzenleme menüsüne**gittiğinizde, Mac için Visual Studio aşağıdaki ekran görüntüsünde gösterildiği gibi **ekleme tarihi**adlı yeni bir seçeneğe sahip olduğunu görürsünüz:
 
-    ![Tarih Komutu Ekle](media/extending-visual-studio-mac-addin11.png)
+    ![Tarih Ekle komutu](media/extending-visual-studio-mac-addin11.png)
 
-    Geçerli uygulamayalnızca yer tutucu yöntemleri olduğundan, menüden Tarihi Ekle'yi seçmenin hiçbir etkisi olmadığını unutmayın.
+    Menüdeki ekleme tarihini seçme, geçerli uygulamanın yalnızca yer tutucu yöntemlerine sahip olduğu için hiçbir etkiye sahip olmadığını unutmayın.
 
-13. Uzantı paketi için çerçeve hazırdır ve tarihi ekleme yetkisi veren kodu yazma nın zamanı geldi. İlk olarak, **Insert Date** Komutu'nun yalnızca kullanıcının bir metin dosyası `Update` açık `InsertDateHandler.cs` olduğunda, yöntemi aşağıdaki kodla değiştirerek etkinleştirildiğinden emin olun:
+13. Altyapı, Uzantı paketi için yerinde ve tarihi eklemenin temelini oluşturan kodun yazılması zaman. İlk olarak, **Tarih Ekle komutunun** yalnızca, `Update` içindeki yöntemi aşağıdaki kodla değiştirerek bir metin dosyası açıkken etkinleştirildiğinden emin olun `InsertDateHandler.cs` :
 
     ```cs
     protected override void Update(CommandInfo info)
@@ -121,7 +122,7 @@ Bu örnek, Eklenti Oluşturucu'yu kullanır. Eklenti Oluşturucu yeni bir Proje 
     }
     ```
 
-14. Tarih ve saati `Run` aşağıdaki kodla eklemek için Komutun yöntemini güncelleştirin:
+14. `Run`Aşağıdaki kodla tarih ve saat eklemek Için komut metodunu güncelleştirin:
 
     ``` cs
     protected override void Run () {
@@ -132,10 +133,10 @@ Bu örnek, Eklenti Oluşturucu'yu kullanır. Eklenti Oluşturucu yeni bir Proje 
     }
     ```
 
-15. Son olarak, bunu test etmek için uzatma paketi çalıştıralım. Mac için Visual Studio'nun yeni örneğinde, **Tarihi > Ekle'yi >'yi**seçin. Geçerli tarih ve saat, aşağıdaki ekran görüntüsünde gösterildiği gibi, bizim caret eklenir:
+15. Son olarak, bu uzantıyı test etmek için uzantı paketimizi çalıştıralım. Yeni Mac için Visual Studio örneğinde **düzenle > Ekle Tarih**' i seçin. Şu anki tarih ve saat, aşağıdaki ekran görüntüsünde gösterildiği gibi giriş işaretimize eklenir:
 
-    ![Tarih Ekran Ekle](media/extending-visual-studio-mac-addin12.png)
+    ![Tarih Ekle ekran görüntüsü](media/extending-visual-studio-mac-addin12.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İlk uzantınızı oluşturun (Windows'ta Visual Studio)](/visualstudio/extensibility/extensibility-hello-world)
+- [İlk uzantınızı oluşturma (Windows üzerinde Visual Studio)](/visualstudio/extensibility/extensibility-hello-world)
