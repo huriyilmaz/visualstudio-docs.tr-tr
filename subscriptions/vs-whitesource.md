@@ -1,65 +1,65 @@
 ---
-title: WhiteSource Cıvata Parası | Microsoft Dokümanlar
+title: Beyaz kaynak sürgüsü avantajı | Microsoft Docs
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 5e5d3f1a-533d-42eb-960e-01bb6bc7ca16
 ms.date: 04/20/2020
-ms.topic: conceptual
-description: Visual Studio aboneliğinize dahil olan WhiteSource Bolt aboneliğini nasıl etkinleştireceklerinizi öğrenin.
-ms.openlocfilehash: d00d210e6bbe859aac5595fcb0d586bccbeea5b3
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.topic: how-to
+description: Visual Studio aboneliğinize dahil edilen beyaz kaynak sürgüsü aboneliğini nasıl etkinleştireceğinizi öğrenin.
+ms.openlocfilehash: 3bdd71615d0dff19cd1d05dfca91041ae531a6f1
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81649742"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85906006"
 ---
-# <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde WhiteSource Bolt
+# <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde beyaz kaynak sürgüsü
 
-Açık kaynak açıklarını bulun ve düzeltin ve yapınızdaki tüm açık kaynak bileşenlerinin kapsamlı envanter ve lisans raporlarını oluşturun. Visual Studio Enterprise abonelikleri altı ay sınırsız tarama alır.
+Açık kaynak güvenlik açıklarını bulup düzeltir ve derinizdeki tüm açık kaynaklı bileşenlerin kapsamlı envanterini ve lisans raporlarını oluşturun. Visual Studio Enterprise abonelikler, sınırsız sayıda tarama alır.
 
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 
-1. WhiteSource Bolt avantajınızı etkinleştirmek [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) için ' de oturum açın.
+1. Beyaz kaynak rulosu avantajınızı etkinleştirmek için oturum açın [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .
 
-2. Araçlar bölümündeki WhiteSource Cıvata döşemesini bulun ve avantaj döşemesinin altındaki **Kodu Al** bağlantısını tıklayın.
+2. Araçlar bölümünde beyaz kaynak sürgüsü kutucuğunu bulun ve avantajın altındaki **kodu al** bağlantısına tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![WhiteSource Benefit Karo](_img/vs-whitesource/vs-whitesource-tile.png)
+   > ![Beyaz kaynak avantajı kutucuğu](_img/vs-whitesource/vs-whitesource-tile.png)
 
-3. Etkinleştirme kodunuzu gösteren bir bildirim alırsınız.  **Kodu panonuza kopyalayın**ve **etkinleştir'i**tıklatın.
+3. Etkinleştirme kodunuzu görüntüleyen bir bildirim alırsınız.  **Kodu panonuza kopyalayın**ve ardından **Etkinleştir**' e tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![WhiteSource Avantaj Kodu](_img/vs-whitesource/vs-whitesource-code.png)
+   > ![Beyaz kaynak avantajı kodu](_img/vs-whitesource/vs-whitesource-code.png)
 
-4. Hesabınızı **Etkinleştir** sayfasında, adım 1'deki **yükle** bağlantısını tıklatın.
-5. Visual Studio Marketplace'ten **ücretsiz alın'a** tıklayın.
-6. Ardından, kullanmak istediğiniz Azure DevOps kuruluşunu seçin ve **Yükle'yi**tıklatın.  (Azure DevOps Hizmetlerini henüz ayarlamadıysanız, [Avantajlar](https://my.visualstudio.com/benefits) sayfasını ziyaret edin ve Azure DevOps Hizmetleri avantajınızı etkinleştirin.)
+4. **Hesabınızı etkinleştirin** sayfasında, 1. adımdaki **Install** bağlantısına tıklayın.
+5. Visual Studio Market **ücretsiz alın** ' a tıklayın.
+6. Ardından, kullanmak istediğiniz Azure DevOps organizasyonunu seçin ve ardından **Install**' a tıklayın.  (Azure DevOps Services henüz ayarlanmamışsa, [avantajlar](https://my.visualstudio.com/benefits) sayfasını ziyaret edin ve Azure DevOps Services avantajınızı etkinleştirin.)
 
-7. **Kuruluşa Devam Et'i**tıklatın.
-8. WhiteSource Bolt'u başarıyla yükledikten sonra [etkinleştirme sayfasına](https://bolt.whitesourcesoftware.com/whitesource-bolt-azure-devops#activate)dönün ve nasıl yapılandırıştırabileceğinizi görmek için videoyu görüntüleyin. 
-9. Daha fazla bilgi için WhiteSource Bolt [SSS sayfasını](https://bolt.whitesourcesoftware.com/azure/faq/)ziyaret edin. 
+7. **Kuruluşa ilerle**' ye tıklayın.
+8. Beyaz kaynak sürgüsü başarıyla yükledikten sonra [etkinleştir sayfasına](https://bolt.whitesourcesoftware.com/whitesource-bolt-azure-devops#activate)dönün ve nasıl yapılandırılacağını görmek için videoyu görüntüleyin. 
+9. Daha fazla bilgi için, beyaz kaynak sürgüsü [SSS sayfasını](https://bolt.whitesourcesoftware.com/azure/faq/)ziyaret edin. 
 
-## <a name="eligibility"></a>Uygunluk
+## <a name="eligibility"></a>Önceliği
 
-| Abonelik Düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilen -ebilir?    |
+| Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, Perakende, seçili NFR<sup>1</sup> | 6 ay       |  Evet       |
-| GitHub Enterprise ile Visual Studio Enterprise | Vl | 6 ay       |  Evet       |
-| Visual Studio Professional (Standart) | VL, Azure, Perakende                                       | Kullanılamaz                                                           |NA         |
-| GitHub Enterprise ile Visual Studio Professional | Vl                                      | Kullanılamaz                                                           |NA         |
-| Visual Studio Test Professional (Standart)                         | VL, Perakende                                              | Kullanılamaz                                                           |NA         |
-| MSDN Platformları (Standart)                                          | VL, Perakende                                              | Kullanılamaz                                                           |NA         |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | 6 ay       |  Yes       |
+| GitHub Enterprise ile Visual Studio Enterprise | VL | 6 ay       |  Yes       |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılamaz                                                           |NA         |
+| GitHub Enterprise ile Visual Studio Professional | VL                                      | Kullanılamaz                                                           |NA         |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                                           |NA         |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                                           |NA         |
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
 ||
 
-<sup>1</sup>  *içerir: Microsoft İş Ortağı Ağı (Enterprise).  Hariç: Satış için değil (NFR), Visual Studio Industry Partner (VSIP), FTE, MCT Yazılım & Hizmetleri Geliştiricisi, BizSpark, Imagine, En Değerli Profesyonel (MVP), Bölge Direktörü (RD).  MCT Yazılım & Hizmetleri.*
+<sup>1</sup>  *şunları içerir: Microsoft iş ortağı ağı (Kurumsal).  Hariç tutar: satılamaz (NFR), Visual Studio Endüstri ortağı (VSıP), FTE, MCT Software & Services geliştiricisi, BizSpark, Imagine, en değerli profesyonel (MVP), bölgesel yönetmen (RD).  MCT Software & Hizmetleri.*
 
 > [!NOTE]
-> Microsoft artık Cloud Subscriptions'da Visual Studio Professional Annual abonelikleri ve Visual Studio Enterprise Annual abonelikleri sunamaz. Mevcut müşterilerin aboneliklerini yenileme, artırma, azaltma veya iptal etme deneyimi ve yeteneğinde herhangi bir değişiklik olmayacaktır. Yeni müşteriler Visual Studio [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) satın almak için farklı seçenekleri keşfetmek için gitmek için teşvik edilir.
+> Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.
 
 ## <a name="support-resources"></a>Destek kaynakları
-- WhiteSource Bolt ile ilgili yardıma mı ihtiyacınız var?  Canlı bir WhiteSource Bolt temsilcisi ile sohbethttps://www.whitesourcesoftware.com/vse_whitesource_bolt/
-- Visual Studio Abonelikleri için satış, abonelik, hesap ve faturalandırma ile ilgili yardım için Visual Studio [Abonelikleri Desteği'ne](https://visualstudio.microsoft.com/subscriptions/support/)başvurun.
-- Visual Studio IDE, Azure DevOps Hizmetleri veya diğer Visual Studio ürünleri veya hizmetleri hakkında bir sorunuz mu var?  [Visual Studio Desteği'ni ziyaret edin.](https://visualstudio.microsoft.com/support/)
+- Beyaz kaynak sürgüsü ile ilgili yardım mı gerekiyor?  Beyaz kaynaklı bir Cıvatiyle sohbet edinhttps://www.whitesourcesoftware.com/vse_whitesource_bolt/
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
+- Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
@@ -68,7 +68,7 @@ Açık kaynak açıklarını bulun ve düzeltin ve yapınızdaki tüm açık kay
 - [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu harika avantajları etkinleştirdiğinden emin olun:
+Visual Studio aboneliğinizden en iyi şekilde yararlanmak için bu harika avantajları etkinleştirdiğinizden emin olun:
 - [Visual Studio](vs-ide-benefit.md)
 - [Azure DevOps](vs-azure-devops.md)
 - [Azure DevTest bireysel kredisi](vs-azure.md)

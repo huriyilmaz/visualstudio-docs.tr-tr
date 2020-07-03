@@ -1,19 +1,19 @@
 ---
 title: Uzantıları gidiş dönüş
 ms.date: 06/25/2017
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
 author: willbrown
 ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: d6de945e7221d2239e1b4f00185a5b16c04b717d
-ms.sourcegitcommit: e3c3d2b185b689c5e32ab4e595abc1ac60b6b9a8
+ms.openlocfilehash: ff2865080b7d36f1a7c3b8a7680d867b92ec9c08
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76269057"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905775"
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>Nasıl yapılır: Visual Studio 2019/2017 ve Visual Studio 2015 ile uyumlu uzantılar yapma
 
@@ -29,16 +29,16 @@ Bu belgede, bir VSıX 'i yuvarlamak için tamamlayacağımız adımların bir an
 1. Doğru NuGet paketlerini içeri aktarın.
 2. Uzantı bildirimini güncelleştir:
     * Yükleme hedefi
-    * Prerequisites
+    * Önkoşullar
 3. CSProj güncelleştir:
-    * Güncelleştirme `<MinimumVisualStudioVersion>`.
-    * `<VsixType>` özelliğini ekleyin.
-    * 3 kez `($DevEnvDir)` hata ayıklama özelliğini ekleyin.
+    * Güncelleştirin `<MinimumVisualStudioVersion>` .
+    * Özelliği ekleyin `<VsixType>` .
+    * Hata ayıklama özelliğini `($DevEnvDir)` 3 kez ekleyin.
     * Derleme araçlarını ve hedefleri içeri aktarmaya yönelik koşullar ekleyin.
 
-4. Derleme ve Test Etem
+4. Derleme ve test
 
-## <a name="environment-setup"></a>Ortam kurulumu
+## <a name="environment-setup"></a>Ortamı ayarlama
 
 Bu belge, makinenizde aşağıdakilerin yüklü olduğunu varsayar:
 
@@ -49,16 +49,16 @@ Bu belge, makinenizde aşağıdakilerin yüklü olduğunu varsayar:
 
 Visual Studio 2019 veya 2017 yerine Visual Studio 2015 ile bu yükseltmeyi başlatmak önemle önerilir. Visual Studio 2015 ' de geliştirmesinin başlıca avantajı, Visual Studio 2015 ' de bulunmayan derlemelere başvurmatığınızdan emin olunması sağlamaktır. Visual Studio 2019 veya 2017 ' de geliştirme yaparsanız, yalnızca Visual Studio 2019 veya 2017 sürümünde bulunan bir derlemeye bağımlılık getirebilmeniz riski vardır.
 
-## <a name="ensure-there-is-no-reference-to-projectjson"></a>Project. JSON öğesine başvuru olmadığından emin olun
+## <a name="ensure-there-is-no-reference-to-projectjson"></a>project.jsiçin bir başvuru olmadığından emin olun
 
-Bu belgede daha sonra, * *. csproj* dosyanıza koşullu içeri aktarma deyimleri ekleyeceğiz. NuGet başvurularınız *Project. JSON*içinde depolanıyorsa bu çalışmaz. Bu nedenle, tüm NuGet başvurularını *Packages. config* dosyasına taşımanız önerilir.
-Projeniz bir *Project. JSON* dosyası içeriyorsa:
+Bu belgede daha sonra, **. csproj* dosyanıza koşullu içeri aktarma deyimleri ekleyeceğiz. NuGet başvurularınız *üzerindeproject.js*depolanıyorsa bu çalışmaz. Bu nedenle, tüm NuGet başvurularını *packages.config* dosyasına taşımanız önerilir.
+Projeniz dosyada bir *project.js* içeriyorsa:
 
-* *Project. JSON*' daki başvuruları bir yere göz atın.
-* **Çözüm Gezgini**, projeden *Project. JSON* dosyasını silin. Bu, *Project. JSON* dosyasını siler ve projeden kaldırır.
+* *project.jsüzerindeki*başvuruları bir yere göz atın.
+* **Çözüm Gezgini**, projedeki *project.js* dosya silin. Bu, dosyadaki *project.js* siler ve projeden kaldırır.
 * NuGet başvurularını projeye geri ekleyin:
   * **Çözüme** sağ tıklayın ve **çözüm Için NuGet Paketlerini Yönet**' i seçin.
-  * Visual Studio, sizin için *Packages. config* dosyasını otomatik olarak oluşturur.
+  * Visual Studio sizin için *packages.config* dosyasını otomatik olarak oluşturur.
 
 > [!NOTE]
 > Projeniz EnvDTE paketleri içeriyorsa, **Başvuru Ekle** **' yi seçerek ve** uygun başvuruyu ekleyerek eklenmeleri gerekebilir. NuGet paketlerinin kullanılması, projenizi oluşturmaya çalışırken hata oluşturabilir.
@@ -127,7 +127,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 
 ### <a name="1-update-the-minimumvisualstudioversion"></a>1. MinimumVisualStudioVersion güncelleştirin
 
-* En düşük Visual Studio sürümünü `$(VisualStudioVersion)` olarak ayarlayın ve bunun için koşullu bir ifade ekleyin. Mevcut değilse bu etiketleri ekleyin. Etiketlerin aşağıdaki gibi ayarlandığından emin olun:
+* En düşük Visual Studio sürümünü olarak ayarlayın `$(VisualStudioVersion)` ve koşullu bir ifade ekleyin. Mevcut değilse bu etiketleri ekleyin. Etiketlerin aşağıdaki gibi ayarlandığından emin olun:
 
 ```xml
 <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
@@ -139,7 +139,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 * Aşağıdaki etiketi `<VsixType>v3</VsixType>` bir özellik grubuna ekleyin.
 
 > [!NOTE]
-> Bunu `<OutputType></OutputType>` etiketinin altına eklemeniz önerilir.
+> Bunu etiketinin altına eklemeniz önerilir `<OutputType></OutputType>` .
 
 ### <a name="3-add-the-debugging-properties"></a>3. hata ayıklama özelliklerini ekleyin
 
@@ -163,7 +163,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 
 ### <a name="4-add-conditions-to-the-build-tools-imports"></a>4. derleme araçları içeri aktarmaları için koşullar ekleyin
 
-* Microsoft. VSSDK. BuildTools başvurusuna sahip `<import>` etiketlere ek koşullu deyimler ekleyin. Koşul ifadesinin önüne `'$(VisualStudioVersion)' != '14.0' And` ekleyin. Bu deyimler, csproj dosyasının üst bilgisinde ve altbilgisinde görünür.
+* `<import>`Microsoft. VSSDK. BuildTools başvurusuna sahip olan etiketlere ek koşullu deyimler ekleyin. `'$(VisualStudioVersion)' != '14.0' And`Koşul ifadesinin önüne ekleyin. Bu deyimler, csproj dosyasının üst bilgisinde ve altbilgisinde görünür.
 
 Örneğin:
 
@@ -171,7 +171,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 <Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
 ```
 
-* Microsoft. VisualStudio. SDK. BuildTasks. 14.0 içeren `<import>` etiketlere ek koşullu deyimler ekleyin. Koşul ifadesinin önüne `'$(VisualStudioVersion)' == '14.0' And` ekleyin. Bu deyimler, csproj dosyasının üst bilgisinde ve altbilgisinde görünür.
+* `<import>`Microsoft. VisualStudio. SDK. BuildTasks. 14.0 içeren etiketlere ek koşullu deyimler ekleyin. `'$(VisualStudioVersion)' == '14.0' And`Koşul ifadesinin önüne ekleyin. Bu deyimler, csproj dosyasının üst bilgisinde ve altbilgisinde görünür.
 
 Örneğin:
 
@@ -179,7 +179,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 <Import Project="packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…" />
 ```
 
-* Microsoft. VSSDK. BuildTools başvurusuna sahip `<Error>` etiketlere ek koşullu deyimler ekleyin. Bunu, koşul ifadesinin önüne `'$(VisualStudioVersion)' != '14.0' And` ekleyerek yapın. Bu deyimler csproj dosyasının altbilgisinde görünür.
+* `<Error>`Microsoft. VSSDK. BuildTools başvurusuna sahip olan etiketlere ek koşullu deyimler ekleyin. Bunu `'$(VisualStudioVersion)' != '14.0' And` koşul ifadesinin önüne ekleyerek yapın. Bu deyimler csproj dosyasının altbilgisinde görünür.
 
 Örneğin:
 
@@ -187,7 +187,7 @@ Bu adım yapılırken değiştirilmiş. csproj açık öğesine bir başvuruya s
 <Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
 ```
 
-* Microsoft. VisualStudio. SDK. BuildTasks. 14.0 içeren `<Error>` etiketlere ek koşullu deyimler ekleyin. Koşul ifadesinin önüne `'$(VisualStudioVersion)' == '14.0' And` ekleyin. Bu deyimler csproj dosyasının altbilgisinde görünür.
+* `<Error>`Microsoft. VisualStudio. SDK. BuildTasks. 14.0 içeren etiketlere ek koşullu deyimler ekleyin. `'$(VisualStudioVersion)' == '14.0' And`Koşul ifadesinin önüne ekleyin. Bu deyimler csproj dosyasının altbilgisinde görünür.
 
 Örneğin:
 
@@ -207,7 +207,7 @@ Bu noktada, projeniz hem Visual Studio 2015 hem de Visual Studio 2017 üzerine y
 * Proje dizininize gidin.
 * *\Bin\debug* klasörünü açın.
 * VSıX dosyasına çift tıklayın ve uzantınızı Visual Studio 2015 ve Visual Studio 2019/2017 ' ye yükler.
-* Uzantıyı, **yüklü** bölümünde yer alan **Araçlar** > **Uzantılar ve güncelleştirmeler** ' de görediğinizden emin olun.
+* Uzantıyı, yüklü bölümünde yer alan **Araçlar**  >  **Uzantılar ve güncelleştirmeler** ' de görediğinizden emin **Installed** olun.
 * Çalıştığını denetlemek için uzantıyı çalıştırmayı/kullanmayı deneyin.
 
 ![VSıX bulma](media/finding-a-VSIX-example.png)

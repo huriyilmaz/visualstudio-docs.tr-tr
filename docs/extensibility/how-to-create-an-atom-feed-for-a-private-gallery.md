@@ -1,7 +1,7 @@
 ---
-title: Nasıl? Microsoft Dokümanlar
+title: 'Nasıl yapılır: özel galeri için Atom akışı oluşturma | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Atom feed, VSIX private galleries
 - VSIX private galleries, Atom feed
@@ -11,30 +11,30 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c72fbf2d3973ffd84de1cf6f33788c43511c3ce4
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 269161e831fdb176dbfea844e951597efb467312
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80711009"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905856"
 ---
-# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Nasıl yapilir: Özel bir galeri için Atom beslemesi oluşturma
-Uzantılar içeren bir intranet konumuna atom (RSS) akışı oluşturabilir ve özet akışını özel galeri olarak **Uzantılar ve Güncelleştirmeler'e** ekleyebilirsiniz. Daha fazla bilgi için [bkz.](../extensibility/private-galleries.md)
+# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Nasıl yapılır: özel galeri için Atom akışı oluşturma
+Uzantıları içeren bir intranet konumuna bir atom (RSS) akışı oluşturabilir ve akışı **uzantılara ve güncelleştirmelere** özel galeri olarak ekleyebilirsiniz. Daha fazla bilgi için bkz. [özel galeriler](../extensibility/private-galleries.md).
 
-## <a name="create-an-atom-feed"></a>Atom beslemesi oluşturma
- Özel galeri olarak atom akışı oluşturmak için önce uzantılarınızı *(.vsix* dosyaları) bir klasörde toplarsınız. İsterseniz alt klasörler halinde düzenleyebilirsiniz. Ayrıca aşağıdaki kaynaklara ihtiyacınız olacaktır:
+## <a name="create-an-atom-feed"></a>Atom akışı oluşturma
+ Özel Galeri olarak bir Atom akışı oluşturmak için, önce uzantılarınızı (*. vsix* Files) bir klasöre toplamanız gerekir. İsterseniz bunları alt klasörler halinde düzenleyebilirsiniz. Ayrıca aşağıdaki kaynaklara ihtiyacınız olacaktır:
 
-- Uzantıları özel galeri olarak kullanılabilir kılan bir *atom.xml* dosyası. *atom.xml* dosyasının **Uzantılar ve Güncellemeler'e**nasıl bağlanılabildiğini öğrenmek için [bkz.](../extensibility/private-galleries.md)
+- Uzantıları özel galeri olarak kullanılabilir hale getiren bir *atom.xml* dosyası. *atom.xml* dosyasını **uzantılara ve güncelleştirmelere**bağlama hakkında daha fazla bilgi için bkz. [özel galeriler](../extensibility/private-galleries.md).
 
-- Uzantılardan çıkarılan görüntü dosyalarını içeren bir klasör (örneğin, ekran görüntüleri). *Atom.xml* dosyası, **uzantılar ve güncellemeler**mevcuttur, böylece bu görüntülere göreli bağlantılar içerir.
+- Uzantılardan ayıklanan görüntü dosyalarını içeren bir klasör (örneğin, ekran görüntüleri). *atom.xml* dosyası, **Uzantılar ve güncelleştirmelerde**kullanılabilmesi için bu görüntülere yönelik göreli bağlantıları içerir.
 
-  Örneğin, aşağıdaki iki uzantıyı bir klasörde topladığınızı varsayalım:
+  Örneğin, aşağıdaki iki uzantıyı bir klasöre topladığınızı varsayalım:
 
-- *Template_Wizard_239.vsix*, boş bir VSIX proje şablonudur.
+- Boş bir VSıX proje şablonu olan *Template_Wizard_239. vsix*.
 
-- Seçili sözcüğün tüm örneklerini vurgulamak için bir araç olan *SelectionHighlight.vsix.*
+- *SelectionHighlight. vsix*, seçilen bir kelimenin tüm örneklerini vurgulamak için bir araçtır.
 
-  *atom.xml* dosyasının içeriği aşağıdaki örneğe benzer:
+  *atom.xml* dosyanın içeriği aşağıdaki örneğe benzer:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -70,7 +70,7 @@ Uzantılar içeren bir intranet konumuna atom (RSS) akışı oluşturabilir ve �
 </feed>
 ```
 
- İki bağlantı etiketinin görüntülerin oluşturulan klasöründeki ekran görüntülerine atıfta bulunduğuna dikkat edin.
+ İki bağlantı etiketlerinin görüntünün oluşturulan klasöründeki ekran görüntülerini ifade ettiğini unutmayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Özel galeriler](../extensibility/private-galleries.md)
+- [Özel Galeriler](../extensibility/private-galleries.md)

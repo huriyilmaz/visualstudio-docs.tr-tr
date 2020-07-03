@@ -1,19 +1,19 @@
 ---
 title: Visual Studio için görüntüler ve simgeler | Microsoft Docs
 ms.date: 04/26/2017
-ms.topic: conceptual
+ms.topic: overview
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
 author: acangialosi
 ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7de4488a8304b21b578b2ad5ac2c29deafcf1b0a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: edbf1542277189f37565e7ff415a52025094e595
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85537546"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85906116"
 ---
 # <a name="images-and-icons-for-visual-studio"></a>Visual Studio İçin Görüntüler ve Simgeler
 ## <a name="image-use-in-visual-studio"></a><a name="BKMK_ImageUseInVisualStudio"></a>Visual Studio 'da görüntü kullanımı
@@ -258,7 +258,7 @@ ms.locfileid: "85537546"
 ### <a name="base-palette"></a>Temel palet
  Tüm standart simgeler üç temel renk içerir. Simgeler, 3B araç simgeleri için bir veya iki özel durum ile degradeler veya bırakma gölgeleri içermez.
 
-|Kullanım|Name|Değer (açık Tema)|Basılı|Örnek|
+|Kullanım|Adı|Değer (açık Tema)|Basılı|Örnek|
 |-----------|----------|---------------------------|------------|-------------|
 |Arka plan/koyu|VS BG|424242/66, 66, 66|![Renk örneği 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![Temel palet örneği](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405-02_BasePaletteExample")|
 |Ön plan/açık|VS FG|F0EFF1/240.239.241|![F0EFF1 örneği](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||
@@ -271,7 +271,7 @@ ms.locfileid: "85537546"
 #### <a name="action-modifiers"></a>Eylem değiştiricileri
  Aşağıdaki dört renk, eylem değiştiricilerine gereken eylem türlerini gösterir:
 
-|Kullanım|Name|Değer (tüm temalar)|Basılı|
+|Kullanım|Adı|Değer (tüm temalar)|Basılı|
 |-----------|----------|--------------------------|------------|
 |Pozitif|VS eylemi yeşil|388A34/56138, 52|![Renk örneği 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|
 |Negatif|VS eylemi Red|A1260D/161, 38, 13|![A1260D örneği](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|
@@ -314,14 +314,14 @@ ms.locfileid: "85537546"
 
 #### <a name="folder"></a>Klasör
 
-|Kullanım|Name|Değer (tüm temalar)|Basılı|Örnek|
+|Kullanım|Adı|Değer (tüm temalar)|Basılı|Örnek|
 |-----------|----------|--------------------------|------------|-------------|
 |Klasörler|Klasör|DCB67A/220.182.122|![DCB67A örneği](../../extensibility/ux-guidelines/media/0405_dcb67a.png "0405_DCB67A")|![Klasör rengi simgesi](../../extensibility/ux-guidelines/media/0405-23_foldercolor.png "0405-23_FolderColor")|
 
 #### <a name="visual-studio-languages"></a>Visual Studio dilleri
  Visual Studio 'da kullanılabilen ortak dillerin veya platformların her biri ilişkili bir renge sahiptir. Bu renkler temel simgenin üzerinde veya bileşik simgelerin sağ üst köşesinde görünen dil değiştiricilerinde kullanılır.
 
-|Kullanım|Name|Değer (tüm temalar)|Basılı|
+|Kullanım|Adı|Değer (tüm temalar)|Basılı|
 |-----------|----------|--------------------------|------------|
 |ASP, HTML, WPF|ASP HTML WPF mavi|0095D7/0149.215|![Renk örneği 0095D7](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|
 |C++|CPP mor|9B4F96/155, 79150|![Renk örneği 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|
@@ -346,7 +346,7 @@ ms.locfileid: "85537546"
 #### <a name="intellisense"></a>IntelliSense
  IntelliSense simgeleri özel bir renk paleti kullanır. Bu renkler, kullanıcıların IntelliSense açılan listesinde farklı öğeler arasında hızlı bir şekilde ayrım yapmanıza yardımcı olmak için kullanılır.
 
-|Kullanım|Name|Değer (tüm temalar)|Basılı|
+|Kullanım|Adı|Değer (tüm temalar)|Basılı|
 |-----------|----------|--------------------------|------------|
 |Sınıf, olay|VS eylemi turuncu|C27D1A/194125, 26|![C27D1A örneği](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|
 |Genişletme yöntemi, yöntemi, modülü, temsilci|VS eylemi mor|652D90/101, 45144|![Renk örneği 652D90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|
@@ -367,7 +367,7 @@ ms.locfileid: "85537546"
 ### <a name="notifications"></a>Bildirimler
  Visual Studio 'daki bildirimler, durumu göstermek için kullanılır. Bildirim paleti aşağıdaki durum düzeylerine sahip bildirimleri tanımlamak için aşağıdaki dört rengi ve siyah ya da beyaz ön plan dolgusu seçeneklerini kullanır.
 
-|Kullanım|Name|Değer (tüm temalar)|Basılı|
+|Kullanım|Adı|Değer (tüm temalar)|Basılı|
 |-----------|----------|--------------------------|------------|
 |Durum: nötr|Uyarı mavi (VS mavi)|1BA1E2/27.161.226|![Renk örneği 1BA1E2](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|
 |Durum: pozitif|Bildirim yeşili (VS yeşil)|339933/51153, 51|![Renk örneği 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|

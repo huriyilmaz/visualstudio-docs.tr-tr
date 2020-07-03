@@ -1,7 +1,7 @@
 ---
-title: Proje Öğesinin Özelliğini Kalıcıyor | Microsoft Dokümanlar
+title: Proje öğesinin özelliğini kalıcı hale getirme | Microsoft Docs
 ms.date: 03/22/2018
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - properties, adding to a project item
 - project items, adding properties
@@ -11,23 +11,23 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 15c280f15436a5e27bcc0dcc4d2fb9e9bdd82933
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 224a1e4f5f5d56022ae7c1e0572ca648b9a5aa6b
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80702206"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85906189"
 ---
-# <a name="persist-the-property-of-a-project-item"></a>Proje öğesinin özelliğini devam etti
-Kaynak dosyanın yazarı gibi proje öğesine eklediğiniz bir özelliği kalıcı olarak sürdürmek isteyebilirsiniz. Bunu, özelliği proje dosyasında depolayarak yapabilirsiniz.
+# <a name="persist-the-property-of-a-project-item"></a>Proje öğesinin özelliğini kalıcı hale getirme
+Bir kaynak dosyanın yazarı gibi bir proje öğesine eklediğiniz bir özelliği kalıcı hale getirmek isteyebilirsiniz. Bunu, özelliği proje dosyasında depolayarak yapabilirsiniz.
 
- Proje dosyasındaki bir özelliği kalıcı olarak sürdürmek için ilk adım, <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> arabirim olarak projenin hiyerarşisini elde etmektir. Bu arabirimi Otomasyon'u kullanarak veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>. Arabirimi elde ettikten sonra, hangi proje öğesinin şu anda seçili olduğunu belirlemek için bu arabirimi kullanabilirsiniz. Proje öğesi kimliğini aldıktan sonra, <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> özelliği eklemek için kullanabilirsiniz.
+ Bir proje dosyasında bir özelliği kalıcı hale getirmek için ilk adım, projenin hiyerarşisini arabirim olarak elde etmek <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> . Bu arabirimi Otomasyon kullanarak veya kullanarak elde edebilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> . Arabirimi edindikten sonra, o anda hangi proje öğesinin seçili olduğunu anlamak için kullanabilirsiniz. Proje öğesi KIMLIĞI ' ne sahip olduktan sonra <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> özelliğini eklemek için kullanabilirsiniz.
 
- Aşağıdaki yordamlarda, proje dosyasındaki `Author` değerle `Tom` *VsPkg.cs* özelliğini devam ettirsiniz.
+ Aşağıdaki yordamlarda, *VsPkg.cs* özelliğini `Author` Proje dosyasındaki değeriyle kalıcı hale getirin `Tom` .
 
-## <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>DTE nesnesi ile proje hiyerarşisini elde etmek için
+## <a name="to-obtain-the-project-hierarchy-with-the-dte-object"></a>DTE nesnesi ile proje hiyerarşisini almak için
 
-1. VSPackage'ınıza aşağıdaki kodu ekleyin:
+1. VSPackage 'a aşağıdaki kodu ekleyin:
 
     ```csharp
     EnvDTE.DTE dte = (EnvDTE.DTE)Package.GetGlobalService(typeof(EnvDTE.DTE));
@@ -39,9 +39,9 @@ Kaynak dosyanın yazarı gibi proje öğesine eklediğiniz bir özelliği kalıc
     solution.GetProjectOfUniqueName(uniqueName, out hierarchy);
     ```
 
-## <a name="to-persist-the-project-item-property-with-the-dte-object"></a>DTE nesnesi ile proje öğesi özelliğini devam etmek için
+## <a name="to-persist-the-project-item-property-with-the-dte-object"></a>Proje öğesi özelliğini DTE nesnesi ile kalıcı hale getirmek için
 
-1. Önceki yordamda yöntemde verilen koda aşağıdaki kodu ekleyin:
+1. Aşağıdaki kodu, önceki yordamdaki yönteminde verilen koda ekleyin:
 
     ```csharp
     IVsBuildPropertyStorage buildPropertyStorage =
@@ -56,9 +56,9 @@ Kaynak dosyanın yazarı gibi proje öğesine eklediğiniz bir özelliği kalıc
     }
     ```
 
-## <a name="to-obtain-the-project-hierarchy-using-ivsmonitorselection"></a>IVsMonitorSelection kullanarak proje hiyerarşisini elde etmek için
+## <a name="to-obtain-the-project-hierarchy-using-ivsmonitorselection"></a>Ismonitorselection kullanarak proje hiyerarşisini elde etmek için
 
-1. VSPackage'ınıza aşağıdaki kodu ekleyin:
+1. VSPackage 'a aşağıdaki kodu ekleyin:
 
     ```csharp
     IVsHierarchy hierarchy = null;
@@ -100,9 +100,9 @@ Kaynak dosyanın yazarı gibi proje öğesine eklediğiniz bir özelliği kalıc
     }
     ```
 
-## <a name="to-persist-the-selected-project-item-property-given-the-project-hierarchy"></a>Proje hiyerarşisi göz önüne alındığında, seçili proje öğesi özelliğini sürdürmek için
+## <a name="to-persist-the-selected-project-item-property-given-the-project-hierarchy"></a>Proje hiyerarşisi belirtilen seçili proje öğesi özelliğini kalıcı hale getirmek için
 
-1. Önceki yordamda yöntemde verilen koda aşağıdaki kodu ekleyin:
+1. Aşağıdaki kodu, önceki yordamdaki yönteminde verilen koda ekleyin:
 
     ```csharp
     IVsBuildPropertyStorage buildPropertyStorage =
@@ -115,16 +115,16 @@ Kaynak dosyanın yazarı gibi proje öğesine eklediğiniz bir özelliği kalıc
 
 ## <a name="to-verify-that-the-property-is-persisted"></a>Özelliğin kalıcı olduğunu doğrulamak için
 
-1. Başlatın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve sonra açın veya bir çözüm oluşturun.
+1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Bir çözüm başlatın ve açın veya oluşturun.
 
-2. **Çözüm Gezgini'nde**proje öğesini VsPkg.cs seçin.
+2. **Çözüm Gezgini**Proje öğesini seçin VsPkg.cs.
 
-3. Bir kesme noktası kullanın veya VSPackage'ınızın yüklendiğini ve SetItemAttribute'in çalıştığını belirleyin.
+3. Bir kesme noktası kullanın veya VSPackage 'un yüklendiğini ve SetItemAttribute 'ın çalıştığını saptayın.
 
    > [!NOTE]
-   > Bir VSPackage'ı UI bağlamında <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid>otomatik olarak yükleyebilirsiniz. Daha fazla bilgi için [Load VSPackages'e](../extensibility/loading-vspackages.md)bakın.
+   > UI bağlamında bir VSPackage 'ı tekrar yükleyebilirsiniz <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_guid> . Daha fazla bilgi için bkz. [VSPackages yükleme](../extensibility/loading-vspackages.md).
 
-4. Proje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] dosyasını Notepad'de kapatın ve açın. \<Yazar> değeri Tom ile etiketini aşağıdaki gibi görmelisiniz:
+4. Kapatın [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve ardından proje dosyasını Not defteri 'nde açın. \<Author>Aşağıdaki gibi, Tom değeri ile etiketini görmeniz gerekir:
 
    ```xml
    <Compile Include="VsPkg.cs">

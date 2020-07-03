@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl Yapilir: Hizmet Sağlayın | Microsoft Dokümanlar'
+title: 'Nasıl yapılır: hizmet sağlama | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - services, providing
 ms.assetid: 12bc1f12-47b1-44f6-b8db-862aa88d50d1
@@ -10,38 +10,38 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60cae5e8048a0234114e1f9e7d97728e26ee40f3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 30bfdd49d871919503be767ea930b3d5f2f0fd95
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80710779"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905764"
 ---
-# <a name="how-to-provide-a-service"></a>Nasıl yapilir: Hizmet sağlama
-VSPackage, diğer VSPackage'ların kullanabileceği hizmetler sunabilir. Bir hizmet sağlamak için, bir VSPackage Visual Studio ile hizmet kayıt ve hizmet eklemek gerekir.
+# <a name="how-to-provide-a-service"></a>Nasıl yapılır: hizmet sağlama
+VSPackage, diğer VSPackages tarafından kullanılabilecek hizmetler sağlayabilir. Bir hizmet sağlamak için, bir VSPackage hizmeti Visual Studio ile kaydetmelidir ve hizmeti ekleyecek.
 
- Sınıf <xref:Microsoft.VisualStudio.Shell.Package> hem <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> uygular <xref:System.ComponentModel.Design.IServiceContainer>ve. <xref:System.ComponentModel.Design.IServiceContainer>isteğe bağlı hizmetler sağlayan geri arama yöntemleri içerir.
+ <xref:Microsoft.VisualStudio.Shell.Package>Sınıfı hem hem de <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> uygular <xref:System.ComponentModel.Design.IServiceContainer> . <xref:System.ComponentModel.Design.IServiceContainer>isteğe bağlı hizmetler sağlayan geri çağırma yöntemleri içerir.
 
- Hizmetler hakkında daha fazla bilgi için [Hizmet temellerine](../extensibility/internals/service-essentials.md) bakın.
+ Hizmetler hakkında daha fazla bilgi için bkz. [Service Essentials](../extensibility/internals/service-essentials.md) .
 
 > [!NOTE]
-> Bir VSPackage kaldırılmak üzereyken, Visual Studio bir VSPackage'ın sağladığı tüm hizmet talepleri teslim edilene kadar bekler. Bu hizmetler için yeni isteklere izin vermez. Boşaltma yaparken bir hizmeti <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A> iptal etme yöntemini açıkça aramamalısınız.
+> VSPackage boşaltılacak şekilde olduğunda Visual Studio, VSPackage 'ın sağladığı tüm hizmetlere yönelik tüm istekler teslim edilene kadar bekler. Bu hizmetler için yeni isteklere izin vermez. <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService.RevokeService%2A>Kaldırma sırasında bir hizmeti iptal etmek için yöntemini açıkça çağırmamalıdır.
 
-## <a name="implement-a-service"></a>Bir hizmet uygulama
+## <a name="implement-a-service"></a>Hizmet uygulama
 
-1. Bir VSIX projesi oluşturun (**Dosya** > **Yeni** > **Proje** > **Görsel C#** > **Genişletilebilirlik** > **VSIX Projesi**).
+1. VSIX projesi oluşturun (**Dosya**  >  **Yeni**  >  **Proje**  >  **Visual C#**  >  **genişletilebilirlik**  >  **VSIX projesi**).
 
-2. Projeye bir VSPackage ekleyin. **Çözüm Gezgini'ndeki** proje düğümünü seçin ve**Yeni öğe** > **Görsel C# Öğeleri** > **Genişletilebilirlik** > **Görsel Stüdyo Paketi'ni** **tıklatın.** > 
+2. Projeye VSPackage ekleyin. **Çözüm Gezgini** proje düğümünü seçin ve **Add**  >  **Yeni öğe**Ekle  >  **Visual C# öğeleri**  >  **genişletilebilirlik**  >  **Visual Studio paketi**' ne tıklayın.
 
 3. Bir hizmeti uygulamak için üç tür oluşturmanız gerekir:
 
-   - Hizmeti açıklayan bir arabirim. Bu arabirimlerin çoğu boş, yani hiçbir yöntemleri var.
+   - Hizmeti tanımlayan bir arabirim. Bu arabirimlerin birçoğu boştur, yani bir yöntemi yoktur.
 
-   - Hizmet arabirimini açıklayan bir arabirim. Bu arabirim, uygulanacak yöntemleri içerir.
+   - Hizmet arabirimini tanımlayan bir arabirim. Bu arabirim uygulanacak yöntemleri içerir.
 
-   - Hem hizmet hem de hizmet arabirimini uygulayan bir sınıf.
+   - Hem hizmeti hem de hizmet arabirimini uygulayan bir sınıf.
 
-     Aşağıdaki örnek, üç tür temel bir uygulama gösterir. Hizmet sınıfının oluşturucusu servis sağlayıcıyı ayarlamalıdır.
+     Aşağıdaki örnek, üç türün temel bir uygulamasını gösterir. Hizmet sınıfının Oluşturucusu, hizmet sağlayıcısını ayarlamış olmalıdır.
 
    ```csharp
    public class MyService : SMyService, IMyService
@@ -74,9 +74,9 @@ VSPackage, diğer VSPackage'ların kullanabileceği hizmetler sunabilir. Bir hiz
 
    ```
 
-### <a name="register-a-service"></a>Bir hizmeti kaydetme
+### <a name="register-a-service"></a>Hizmet kaydetme
 
-1. Bir hizmeti kaydetmek için, hizmeti sağlayan VSPackage'a ekleyin. <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> Örnek aşağıda verilmiştir:
+1. Bir hizmeti kaydetmek için <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> hizmeti sağlayan VSPackage öğesine ekleyin. Örnek aşağıda verilmiştir:
 
     ```csharp
     [ProvideService(typeof(SMyService))]
@@ -86,14 +86,14 @@ VSPackage, diğer VSPackage'ların kullanabileceği hizmetler sunabilir. Bir hiz
     {. . . }
     ```
 
-     Bu öznitelik `SMyService` Visual Studio ile kaydeder.
+     Bu öznitelik `SMyService` , Visual Studio ile kaydedilir.
 
     > [!NOTE]
-    > Başka bir hizmeti aynı ada sahip olarak kaydeden <xref:Microsoft.VisualStudio.Shell.ProvideServiceOverrideAttribute>bir hizmeti kaydetmek için . Bir hizmetin yalnızca bir geçersiz kılınmasına izin verildiğini unutmayın.
+    > Aynı ada sahip başka bir hizmetin yerini alan bir hizmeti kaydetmek için öğesini kullanın <xref:Microsoft.VisualStudio.Shell.ProvideServiceOverrideAttribute> . Yalnızca bir hizmetin geçersiz kılınmasına izin verildiğini unutmayın.
 
 ### <a name="add-a-service"></a>Hizmet ekleme
 
-1. VSPackage baş harflerinde, hizmeti ekleyin ve hizmetleri oluşturmak için bir geri arama yöntemi ekleyin. Yöntemde yapacağınız değişiklik <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> aşağıda veda edinebilirsiniz:
+1. VSPackage başlatıcısında hizmeti ekleyin ve hizmetleri oluşturmak için bir geri arama yöntemi ekleyin. Bu yöntemde yapılacak değişiklik aşağıda verilmiştir <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> :
 
     ```csharp
     protected override void Initialize()
@@ -105,7 +105,7 @@ VSPackage, diğer VSPackage'ların kullanabileceği hizmetler sunabilir. Bir hiz
     }
     ```
 
-2. Hizmeti oluşturması ve döndürmesi gereken geri arama yöntemini uygulayın veya oluşturulamıyorsa geçersiz kılın.
+2. Hizmeti oluşturması ve döndürmesi gereken geri çağırma yöntemini veya oluşturuoluşturuoluşturulmadıysa null değerini uygulayın.
 
     ```csharp
     private object CreateService(IServiceContainer container, Type serviceType)
@@ -117,9 +117,9 @@ VSPackage, diğer VSPackage'ların kullanabileceği hizmetler sunabilir. Bir hiz
     ```
 
     > [!NOTE]
-    > Visual Studio bir hizmet sağlama isteğini reddedebilir. Başka bir VSPackage zaten hizmet sağlarsa bunu yapar.
+    > Visual Studio, hizmet sağlama isteğini reddedebilir. Başka bir VSPackage hizmeti zaten sağlıyorsa bunu yapar.
 
-3. Şimdi hizmeti alabilir ve yöntemlerini kullanabilirsiniz. Aşağıdaki örnekte, hizmeti baş harflerinde kullanmak gösterilmektedir, ancak hizmeti kullanmak istediğiniz her yerde alabilirsiniz.
+3. Artık hizmeti alabilir ve yöntemlerini kullanabilirsiniz. Aşağıdaki örnek, başlatıcıdaki hizmetin kullanımını gösterir, ancak hizmeti, hizmeti kullanmak istediğiniz her yerde alabilir.
 
     ```csharp
     protected override void Initialize()
@@ -136,9 +136,9 @@ VSPackage, diğer VSPackage'ların kullanabileceği hizmetler sunabilir. Bir hiz
     }
     ```
 
-     Değeri "Merhaba" `helloString` olmalıdır.
+     Değeri `helloString` "Merhaba" olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapilir: Hizmet alın](../extensibility/how-to-get-a-service.md)
-- [Kullanım ve hizmet sağlama](../extensibility/using-and-providing-services.md)
-- [Hizmet esasları](../extensibility/internals/service-essentials.md)
+- [Nasıl yapılır: hizmet alma](../extensibility/how-to-get-a-service.md)
+- [Hizmetleri kullanma ve sağlama](../extensibility/using-and-providing-services.md)
+- [Service Essentials](../extensibility/internals/service-essentials.md)

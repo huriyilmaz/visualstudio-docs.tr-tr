@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl Yapilir: Hizmet Alın | Microsoft Dokümanlar'
+title: 'Nasıl yapılır: hizmet alma | Microsoft Docs'
 ms.date: 3/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - services, consuming
 ms.assetid: 1f000020-8fb7-4e39-8e1e-2e38c7fec3d4
@@ -10,28 +10,28 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e8e6f20eaa08d6bb7aaa0cc9e560856daa5959e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: a401103112096a1089b59ba3733d19480f93e891
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80710953"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85905827"
 ---
-# <a name="how-to-get-a-service"></a>Nasıl yapilir: Hizmet alın
+# <a name="how-to-get-a-service"></a>Nasıl yapılır: hizmet alma
 
-Farklı özelliklere erişmek için sık sık Visual Studio hizmetlerine sahip olmanız gerekir. Genel olarak, Visual Studio hizmeti kullanabileceğiniz bir veya daha fazla arabirim sağlar. Çoğu hizmeti bir VSPackage'dan alabilirsiniz.
+Farklı özelliklere erişmek için genellikle Visual Studio Hizmetleri 'ni almanız gerekir. Genel olarak, bir Visual Studio hizmeti kullanabileceğiniz bir veya daha fazla arabirim sağlar. Bir VSPackage 'tan birçok hizmeti alabilirsiniz.
 
-Herhangi bir VSPackage türetilmiştir <xref:Microsoft.VisualStudio.Shell.Package> ve bu doğru sited olmuştur herhangi bir küresel hizmet isteyebilirsiniz. `Package` Sınıf uygular <xref:System.IServiceProvider>çünkü, herhangi bir VSPackage türetilmiştir da bir hizmet `Package` sağlayıcısıdır.
+' Den türetilen ve doğru şekilde oluşturulmuş herhangi bir VSPackage, <xref:Microsoft.VisualStudio.Shell.Package> herhangi bir genel hizmeti isteyebilir. `Package`Sınıfı uyguladığı için <xref:System.IServiceProvider> , öğesinden türetilen herhangi bir VSPackage `Package` da bir hizmet sağlayıcıdır.
 
-Visual Studio a <xref:Microsoft.VisualStudio.Shell.Package>yüklendiğinde, <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> başlatma <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> sırasında yönteme bir nesne geçer. Buna VSPackage'ı *sitme* denir. Sınıf `Package` bu hizmet sağlayıcısını sarar ve hizmet alma yöntemini <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> sağlar.
+Visual Studio bir yüklediğinde <xref:Microsoft.VisualStudio.Shell.Package> , <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> başlatma sırasında yöntemine bir nesnesi geçirir. Bu, VSPackage 'ın *ele alınmasına* denir. `Package`Sınıfı bu hizmet sağlayıcısını sarmalayan ve hizmet <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> alma yöntemi sağlar.
 
-## <a name="getting-a-service-from-an-initialized-vspackage"></a>Parayla alınan BIR VSPackage'dan hizmet alma
+## <a name="getting-a-service-from-an-initialized-vspackage"></a>Başlatılmış bir VSPackage hizmetinden hizmet alma
 
-1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSIX dağıtım projesiyle başlar. Adlı `GetServiceExtension` [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] bir VSIX projesi oluşturun. "vsix" aramasını yaparak **VSIX** proje şablonunu Yeni Proje iletişim kutusunda bulabilirsiniz.
+1. Her Visual Studio uzantısı, uzantı varlıklarını içeren bir VSıX dağıtım projesiyle başlar. Adlı bir [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX projesi oluşturun `GetServiceExtension` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.
 
-2. Şimdi **GetServiceCommand**adlı özel bir komut öğesi şablonu ekleyin. Yeni **Öğe Ekle** iletişim kutusunda Visual **C#** > **Genişletilebilirlik'e** gidin ve **Özel Komut'u**seçin. Pencerenin altındaki **Ad** alanında, komut dosyası adını *GetServiceCommand.cs*olarak değiştirin. Özel komut oluşturma hakkında daha fazla bilgi için [menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)
+2. Şimdi **GetServiceCommand**adlı özel bir komut öğesi şablonu ekleyin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *GetServiceCommand.cs*olarak değiştirin. Özel bir komut oluşturma hakkında daha fazla bilgi için, [bir menü komutuyla bir uzantı oluşturun](../extensibility/creating-an-extension-with-a-menu-command.md)
 
-3. *GetServiceCommand.cs,* yöntemin gövdesini `MenuItemCommand` kaldırın ve aşağıdaki kodu ekleyin:
+3. *GetServiceCommand.cs*içinde, yönteminin gövdesini kaldırın `MenuItemCommand` ve aşağıdaki kodu ekleyin:
 
    ```csharp
    IVsActivityLog activityLog = ServiceProvider.GetService(typeof(SVsActivityLog)) as IVsActivityLog;
@@ -40,34 +40,34 @@ Visual Studio a <xref:Microsoft.VisualStudio.Shell.Package>yüklendiğinde, <xre
 
    ```
 
-    Bu kod bir SVsActivityLog hizmeti alır <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> ve etkinlik günlüğüne yazmak için kullanılabilecek bir arabirime atar. Örneğin, [bkz.](../extensibility/how-to-use-the-activity-log.md)
+    Bu kod, bir SVsActivityLog hizmeti alır ve bunu <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> etkinlik günlüğüne yazmak için kullanılabilecek bir arabirime yayınlar. Bir örnek için bkz. [nasıl yapılır: etkinlik günlüğünü kullanma](../extensibility/how-to-use-the-activity-log.md).
 
-4. Projeyi oluşturun ve hata ayıklamaya başlayın. Deneysel örnek görüntülenir.
+4. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görüntülenir.
 
-5. Deneme örneğinin **Araçlar** menüsünde, **Invoke GetServiceCommand** düğmesini bulun. Bu düğmeyi tıklattığınızda, etkinlik günlüğü hizmetini bulduğunu belirten bir ileti kutusu görmeniz **gerekir.**
+5. Deneysel örneğin **Araçlar** menüsünde **Getservicekomutunu çağır** düğmesini bulun. Bu düğmeye tıkladığınızda, **etkinlik günlüğü hizmetini bulunan** bir ileti kutusu görmeniz gerekir.
 
-## <a name="getting-a-service-from-a-tool-window-or-control-container"></a>Bir araç penceresinden veya kontrol konteynerinden hizmet alma
+## <a name="getting-a-service-from-a-tool-window-or-control-container"></a>Bir araç penceresi veya denetim kapsayıcısından hizmet alma
 
-Bazen bir araç penceresinden veya sited edilmemiş bir denetim kapsayıcısından veya istediğiniz hizmet hakkında bilgi olmayan bir hizmet sağlayıcısıyla sited'den hizmet almanız gerekebilir. Örneğin, bir denetim içinden etkinlik günlüğüne yazmak isteyebilirsiniz.
+Bazen bir araç penceresi veya denetim kapsayıcısından bir hizmet almanız ya da başka bir hizmet sağlayıcı ile istediğiniz hizmet hakkında bilgi sahibi olmaması gerekebilir. Örneğin, bir denetim içinden etkinlik günlüğüne yazmak isteyebilirsiniz.
 
-Statik <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> yöntem, önbelleğe alınmış bir hizmet sağlayıcısına dayanır ve bu <xref:Microsoft.VisualStudio.Shell.Package> hizmet sağlayıcısı ilk kez bir VSPackage'ın türetildiği zaman başlatılan siteye dayanır.
+Statik <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> Yöntem, ' den türetilen herhangi bir VSPackage ilk kez başlatılan önbelleğe alınmış bir hizmet sağlayıcısına bağımlıdır <xref:Microsoft.VisualStudio.Shell.Package> .
 
-VSPackage oluşturucu, VSPackage sited önce denir çünkü, küresel hizmetler genellikle VSPackage oluşturucu içinden kullanılamaz. Bkz. [Nasıl Olunacak:](../extensibility/how-to-troubleshoot-services.md) Geçici çözüm için hizmetleri sorun giderme.
+VSPackage devre dışı bırakmadan VSPackage Oluşturucusu çağrıldığından, genel hizmetler genellikle VSPackage oluşturucusunun içinden kullanılamaz. Bkz. [nasıl yapılır: geçici çözüm hizmetleri sorunlarını giderme](../extensibility/how-to-troubleshoot-services.md) .
 
-Aşağıda, bir araç penceresinde veya VSPackage olmayan diğer bir öğede hizmet almanın bir yolu örneği verilmiştir.
+Bir araç penceresinde veya diğer VSPackage öğesi olmayan bir hizmeti almak için bir yol örneği aşağıda verilmiştir.
 
 ```csharp
 IVsActivityLog log = Package.GetGlobalService(typeof(SVsActivityLog)) as IVsActivityLog;
 if (log == null) return;
 ```
 
-## <a name="getting-a-service-from-the-dte-object"></a>DTE nesnesinden hizmet alma
+## <a name="getting-a-service-from-the-dte-object"></a>DTE nesnesinden bir hizmet alma
 
-Ayrıca nesneden <xref:EnvDTE.DTEClass> hizmet alabilirsiniz. Ancak, Bir VSPackage bir hizmet olarak veya statik <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> yöntemi çağırarak DTE nesnesi almak gerekir.
+Ayrıca, nesnesinden hizmetleri de alabilirsiniz <xref:EnvDTE.DTEClass> . Ancak, DTE nesnesini VSPackage 'dan bir hizmet olarak veya static yöntemi çağırarak almalısınız <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> .
 
-DTE nesnesi <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>uygular , kullanarak bir hizmet için <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A>sorgulamak için kullanabilirsiniz.
+DTE nesnesi <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> , kullanarak bir hizmeti sorgulamak için kullanabileceğiniz öğesini uygular <xref:Microsoft.VisualStudio.Shell.ServiceProvider.GetService%2A> .
 
-DTE nesnesinden hizmet nasıl alabilirsiniz.
+DTE nesnesinden bir hizmeti alma hakkında daha fazla bilgiyi burada bulabilirsiniz.
 
 ```csharp
 // Start with the DTE object, for example: 
@@ -87,6 +87,6 @@ if (sp != null)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapilir: Hizmet sağlama](../extensibility/how-to-provide-a-service.md)
-- [Kullanım ve hizmet sağlama](../extensibility/using-and-providing-services.md)
-- [Hizmet esasları](../extensibility/internals/service-essentials.md)
+- [Nasıl yapılır: hizmet sağlama](../extensibility/how-to-provide-a-service.md)
+- [Hizmetleri kullanma ve sağlama](../extensibility/using-and-providing-services.md)
+- [Service Essentials](../extensibility/internals/service-essentials.md)
