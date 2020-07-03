@@ -1,42 +1,42 @@
 ---
-title: Windows betik arabirimleri | Microsoft Docs
+title: Windows komut dosyası arabirimleri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4c750627-6797-4857-9f5e-e5f54371f83c
 caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0aebd0857ba847d5c5eba5e3a4a8a01da73ec159
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 141f3f0e60e797a4104c3e276775631f6e9196c5
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62840037"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835413"
 ---
 # <a name="windows-script-interfaces"></a>Windows Komut Dosyası Arabirimleri
 
-Microsoft Windows betik arabirimleri, bir komut dosyası eklemek için uygulama ve OLE Otomasyon için bir yol sağlar. Windows komut kullanan ana komut dosyası oluşturma kaynakları ve satıcılarından birden fazla betik altyapısını bileşenleri arasında betik yönetmek için kullanabilirsiniz. Betik yürütmesinin — dil, söz dizimi, kalıcı biçimi, yürütme modeli ve benzeri — betik satıcıya bırakılır.
+Microsoft Windows komut dosyası arabirimleri, bir uygulamanın komut dosyası ve OLE Otomasyonu eklemesi için bir yol sağlar. Windows betiği kullanan komut dosyası Konakları, bileşenler arasında betikleri yönetmek için birden çok kaynak ve satıcının komut dosyası altyapılarını kullanabilir. Komut dosyasının kendisi (dil, sözdizimi, kalıcı biçim, yürütme modeli vb.), betik satıcısına bırakılır.
 
-Windows komut dosyası belgeleri, aşağıdaki bölümlere ayrılmıştır:
+Windows komut dosyası belgeleri aşağıdaki bölümlere ayrılmıştır:
 
 [Windows Betik Konakları](../winscript/windows-script-hosts.md)
 
 [Windows Betik Motorları](../winscript/windows-script-engines.md)
 
-[Etkin Betik Hata Ayıklamaya Genel Bakış](../winscript/active-script-debugging-overview.md)
+[Etkin Komut Dosyası Hata Ayıklamaya Genel Bakış](../winscript/active-script-debugging-overview.md)
 
-[Etkin Betik Profil Oluşturmaya Genel Bakış](../winscript/active-script-profiling-overview.md)
+[Etkin Komut Dosyası Profil Oluşturmaya Genel Bakış](../winscript/active-script-profiling-overview.md)
 
 [Windows Betik Arabirimleri Başvurusu](../winscript/reference/windows-script-interfaces-reference.md)
 
-## <a name="windows-script-background"></a>Windows betik arka plan
+## <a name="windows-script-background"></a>Windows betiği arka planı
 
-Windows betik arabirimleri iki kategoriye ayrılır: Windows betik konakları ve Windows kod altyapısı sayısı. Bir konak, bir komut dosyası motoru oluşturur ve altyapısını temel komut dosyalarını çalıştırmak için çağırır. Windows betik konakları örnekleri şunlardır:
+Windows komut dosyası arabirimleri iki kategoriye ayrılır: Windows komut dosyası konakları ve Windows komut dosyası motorları. Bir ana bilgisayar, betikleri çalıştırmak için altyapıda bir betik altyapısı ve çağrılar oluşturur. Windows komut dosyası ana bilgisayarlarının örnekleri şunlardır:
 
 - Microsoft Internet Explorer
 
@@ -44,7 +44,7 @@ Windows betik arabirimleri iki kategoriye ayrılır: Windows betik konakları ve
 
 - Kabuk
 
-Windows betik motorları geliştirilebilir, herhangi bir dili veya çalışma zamanı ortamı için de dahil olmak üzere:
+Windows komut dosyası motorları, aşağıdakiler de dahil olmak üzere herhangi bir dil veya çalışma zamanı ortamı için geliştirilebilir:
 
 - Microsoft Visual Basic Scripting Edition (VBScript)
 
@@ -52,42 +52,42 @@ Windows betik motorları geliştirilebilir, herhangi bir dili veya çalışma za
 
 - Lisp
 
-Ana bilgisayar uygulaması kadar esnek hale getirmek için Windows komut dosyası için bir OLE Otomasyon sarmalayıcıdır sağlanır. Bununla birlikte, komut dosyası altyapısı oluşturmak için bu sarmalayıcı nesnesini kullanan bir ana çalışma zamanı ad alanı, Kalıcılık modeli ve Windows komut dosyası doğrudan kullandıysanız, olduğu benzeri denetime derecesini yok.
+Konağın uygulanmasını mümkün olduğunca esnek hale getirmek için Windows betiği için bir OLE Otomasyon sarmalayıcısı sağlanır. Ancak, komut dosyası altyapısını oluşturmak için bu sarmalayıcı nesnesini kullanan bir ana bilgisayar, çalışma zamanı ad alanı, Kalıcılık modeli vb. üzerinde denetim derecesine sahip değildir ve bu, Windows betiğini doğrudan kullanacaksa olur.
 
-Windows betik tasarım yalnızca bir geliştirme ortamında (örneğin, tarayıcılar ve Görüntüleyiciler) nonauthoring konakları ve (örneğin, VBScript) komut dosyası motorları basit tutulabilir böylece gerekli arabirim öğeleri yalıtır.
+Windows komut dosyası tasarımı, yazma ortamında gerekli olan arabirim öğelerini (örneğin, tarayıcılar ve görüntüleyiciler) ve komut dosyası altyapılarını (örneğin, VBScript) hafif tutulabilirler.
 
-## <a name="windows-script-basic-architecture"></a>Windows betik temel mimarisi
+## <a name="windows-script-basic-architecture"></a>Windows betiği temel mimarisi
 
-Aşağıdaki resimde, bir Windows Script host ile bir Windows komut dosyası altyapısı arasındaki etkileşim gösterilmektedir.
+Aşağıdaki çizimde bir Windows betik sistemi ve bir Windows betik altyapısı arasındaki etkileşim gösterilmektedir.
 
-Konak ve altyapısı arasındaki etkileşim içinde yer alan adımların aşağıdaki listede verilmiştir.
+Ana bilgisayar ve altyapı arasındaki etkileşime dahil olan adımlar aşağıdaki listede verilmiştir.
 
-1. Bir proje oluşturun. Konak, bir proje veya belgeyi yükler. (Bu adım Windows betiği için belirli değil, ancak bütünlük açısından buraya dahil edilir.)
+1. Bir proje oluşturun. Konak bir proje veya belge yükler. (Bu adım Windows betiğine özgü değildir, ancak bu, tamamlanma açısından burada yer alır.)
 
-2. Windows komut dosyası altyapısı oluşturun. Konak çağrıları `CoCreateInstance` yeni bir Windows komut dosyası altyapısı oluşturmak için kullanılacak belirli komut dosyası altyapısı sınıf tanımlayıcısı (CLSID) belirtme. Örneğin, Internet Explorer'ın HTML tarayıcı komut dosyası altyapısının sınıf tanımlayıcısı CLSID aracılığıyla alır HTML öznitelik = \<Nesne > etiketi.
+2. Windows komut dosyası altyapısını oluşturun. Ana bilgisayar `CoCreateInstance` , kullanılacak özel betik altyapısının sınıf tanımlayıcısını (CLSID) belirterek yeni bir Windows komut dosyası altyapısı oluşturmak için çağırır. Örneğin, Internet Explorer 'ın HTML tarayıcısı, komut dosyası altyapısının sınıf tanımlayıcısını HTML etiketinin CLSID = özniteliği aracılığıyla alır \<OBJECT> .
 
-3. Komut dosyası yükleyin. Betik içeriği kalıcı ise ana komut dosyası altyapısının çağırır `IPersist*::Load` betik depolama, stream veya özellik paketi akışa yöntemi. Aksi takdirde, konak ya da kullandığı `IPersist*::InitNew` veya [IActiveScriptParse::InitNew](../winscript/reference/iactivescriptparse-initnew.md) null betiği oluşturmak için yöntemi. Metin kullanabilirsiniz gibi bir betik tutan bir konak [IActiveScriptParse::ParseScriptText](../winscript/reference/iactivescriptparse-parsescripttext.md) komut dosyası altyapısı çağırdıktan sonra betiğin metnini akışa `IActiveScriptParse::InitNew`.
+3. Betiği yükleyin. Betik içeriği kalıcı hale getirildi, ana bilgisayar komut dosyası `IPersist*::Load` depolama, akış veya özellik çantasına akışa almak için betik altyapısı yöntemini çağırır. Aksi halde, ana bilgisayar `IPersist*::InitNew` bir null betik oluşturmak için veya [IActiveScriptParse:: InitNew](../winscript/reference/iactivescriptparse-initnew.md) yöntemini kullanır. Betiği metin olarak tutan bir ana bilgisayar, [IActiveScriptParse::P arseScriptText](../winscript/reference/iactivescriptparse-parsescripttext.md) kullanarak komut dosyası altyapısını, çağrıldıktan sonra betiğin metnini akışa alabilir `IActiveScriptParse::InitNew` .
 
-4. Adlandırılmış öğeleri ekleyin. Komut dosyası altyapısının ad alanı alınan her üst düzey adlandırılmış öğe için (örneğin, sayfaları ve formları), konak çağırır [IActiveScript::AddNamedItem](../winscript/reference/iactivescript-addnameditem.md) altyapının ad alanında bir giriş oluşturmak için yöntemi. Bu adım, üst düzey adlandırılmış öğeleri kalıcı durumunu 3. adımda yüklenen komut dosyasının bir parçası olduğunda gerekli değildir. Bir konak kullanmaz `IActiveScript::AddNamedItem` öğeleri (örneğin, HTML sayfasındaki denetimleri) adlı alt düzey eklemek için; bunun yerine, altyapı dolaylı olarak alt düzey öğeleri üst düzey öğeleri ana bilgisayarın kullanarak alır `ITypeInfo` ve `IDispatch` arabirimleri.
+4. Adlandırılmış öğeleri ekleyin. Betik altyapısının ad alanına içeri aktarılan her üst düzey adlandırılmış öğe (örneğin, sayfalar ve formlar) için, konak altyapının ad alanında bir giriş oluşturmak için [IActiveScript:: Addnamedidıtem](../winscript/reference/iactivescript-addnameditem.md) yöntemini çağırır. En üst düzey adlandırılmış öğeler zaten 3. adımda yüklenen betiğin kalıcı durumunun parçasıysa bu adım gerekli değildir. Ana bilgisayar `IActiveScript::AddNamedItem` alt düzey adlandırılmış öğeler (örneğin, BIR HTML sayfasına denetimler) eklemek için kullanmaz; bunun yerine, altyapı, ana bilgisayar ve arabirimlerini kullanarak en üst düzey öğelerden alt düzey öğeleri dolaylı olarak alır `ITypeInfo` `IDispatch` .
 
-5. Betiği çalıştırın. Konak SCRIPTSTATE_CONNECTED bayrak ayarlayarak betiği çalıştırmaya başlamak altyapı neden [IActiveScript::SetScriptState](../winscript/reference/iactivescript-setscriptstate.md) yöntemi. Bu çağrı, büyük olasılıkla statik bağlama, takma olayları (aşağıya bakın) ve bir komut dosyası için benzer şekilde bir kod yürütmeden dahil olmak üzere tüm komut dosyası altyapısı oluşturma iş gerçekleştirecek `main()` işlevi.
+5. Betiği çalıştırın. Ana bilgisayar, [IActiveScript:: SetScriptState](../winscript/reference/iactivescript-setscriptstate.md) yönteminde SCRIPTSTATE_CONNECTED bayrağını ayarlayarak altyapının betiği çalıştırmaya başlamasını sağlar. Bu çağrı, statik bağlama dahil olmak üzere herhangi bir betik altyapısı oluşturma işini, olaylara (aşağıya bakın) çağrı yapmayı ve kodu bir komut dosyası oluşturma işlevine benzer bir şekilde yürütmeyi sağlar `main()` .
 
-6. Öğe bilgi alın. Komut dosyası altyapısı bir üst düzey öğesi ile bir simge ilişkilendirmek için her durumda çağrı [IActiveScriptSite::GetItemInfo](../winscript/reference/iactivescriptsite-getiteminfo.md) yöntemi verilen öğe hakkında bilgi verir.
+6. Öğe bilgilerini al. Betik altyapısının bir simgeyi en üst düzey öğeyle ilişkilendirmesi gerektiğinde, verilen öğe hakkında bilgi döndüren [IActiveScriptSite:: GetItemInfo](../winscript/reference/iactivescriptsite-getiteminfo.md) yöntemini çağırır.
 
-7. Olayları bağlayın. Gerçek betiğini başlatmadan önce komut dosyası altyapısı aracılığıyla tüm nesneleri olaylarını bağlandığı `IConnectionPoint` arabirimi.
+7. Olayları bağlama. Asıl betiği başlatmadan önce, komut dosyası altyapısı arabirim aracılığıyla tüm ilgili nesnelerin olaylarına bağlanır `IConnectionPoint` .
 
-8. Özellikleri ve yöntemleri çağırır. Komut dosyası çalıştırılırken, komut dosyası altyapısı yöntemlere ve özelliklere başvuruları adlandırılmış nesneler üzerinde fark etti `IDispatch::Invoke` veya diğer OLE bağlama mekanizmalarını.
+8. Özellikleri ve yöntemleri çağırın. Betik çalışırken, komut dosyası altyapısı, `IDispatch::Invoke` veya diğer standart ole bağlama mekanizmaları aracılığıyla adlandırılmış nesnelerdeki yöntemlere ve özelliklere başvuruları yeniden ayırır.
 
-## <a name="windows-script-terms"></a>Windows betik koşulları
+## <a name="windows-script-terms"></a>Windows komut dosyası terimleri
 
-Bu liste, bu belgede kullanılan betik oluşturma ile ilgili terimlerin tanımları içerir.
+Bu liste, bu belgede kullanılan betiklerle ilgili terimlerin tanımlarını içerir.
 
 |Terim|Tanım|
 |----------|----------------|
-|Kod nesnesi|Visual Basic'te, bir formun arkasındaki modülü gibi adlandırılmış bir öğesi ile ilişkili olan komut dosyası altyapısı tarafından oluşturulan bir örnek veya adlandırılmış bir öğesi ile ilişkilendirilen bir C++ sınıfı. Tercihen, bu kod nesnesi konak veya başka bir betik olmayan varlık işleyebileceğiniz şekilde OLE Otomasyonu destekleyen OLE Bileşen Nesne Modeli (COM) nesnesidir.|
-|Adlandırılmış öğe|Bir OLE COM nesnesi (tercihen destekleyen OLE Otomasyonu) konak betiğe ilginç kabul ettiği. HTML sayfası ve tarayıcıyı bir Web tarayıcısı ve belge ve Microsoft Word iletişim kutuları verilebilir.|
-|Komut Dosyası|Komut dosyası altyapısı çalıştıran programı yapan veriler. Bir betik bloklarını, metin parçalarını dahil olmak üzere tüm bitişik bir yürütülebilir veri olabilir `pcode`, hatta makineye özgü yürütülebilir bayt kodları. Bir betiği bir konak komut dosyası altyapısı biri aracılığıyla yükler `IPersist*` arabirimleri aracılığıyla veya [Iactivescriptparse](../winscript/reference/iactivescriptparse.md) arabirimi.|
-|Komut dosyası altyapısı|Komut dosyaları işler OLE nesne. Bir komut dosyası altyapısı uygulayan [IActiveScript](../winscript/reference/iactivescript.md) ve isteğe bağlı olarak [Iactivescriptparse](../winscript/reference/iactivescriptparse.md) arabirimleri.|
-|Komut dosyası ana bilgisayarı|Uygulama ya da Windows komut dosyası altyapısı sahip program. Konak uygulayan [Iactivescriptsite](../winscript/reference/iactivescriptsite.md) ve isteğe bağlı olarak [Iactivescriptsitewindow](../winscript/reference/iactivescriptsitewindow.md) arabirimleri.|
-|Kod oluşturma|Bir nesne üzerinden iliştirilmiş bir betiğin bir bölümü [Iactivescriptparse](../winscript/reference/iactivescriptparse.md) arabirimi. Kod parçacıklarını toplama koleksiyonu betiğidir.|
-|Komut dosyası dili|Bir betik yazılı (VBScript, örneğin) ve bu dil semantiği olduğu dili.|
+|Kod nesnesi|Betik altyapısı tarafından oluşturulan, Visual Basic bir formun arkasındaki modül veya adlandırılmış bir öğeyle ilişkili C++ sınıfı gibi bir adlandırılmış öğeyle ilişkili bir örnek. Tercihen, ana bilgisayar veya diğer betik olmayan varlığın kod nesnesini işleyebilmesi için OLE Otomasyonu 'Nu destekleyen OLE bileşen nesne modeli (COM) nesnesidir.|
+|Adlandırılmış öğe|Ana bilgisayarın betiğe ilgi çekici olduğunu bir OLE COM nesnesi (tercihen OLE Otomasyonu 'nu destekleyen). Örnek olarak, bir Web tarayıcısında HTML sayfası ve tarayıcı ile Microsoft Word 'deki belge ve Iletişim kutuları bulunur.|
+|Komut Dosyası|Betik altyapısının çalıştırdığı programı oluşturan veriler. Bir betik, metin parçaları, blokları `pcode` veya hatta makineye özgü yürütülebilir bayt kodları dahil herhangi bir bitişik yürütülebilir veri olabilir. Bir ana bilgisayar, `IPersist*` arabirimleri veya [IActiveScriptParse](../winscript/reference/iactivescriptparse.md) arabirimi aracılığıyla komut dosyası motoruna bir betik yükler.|
+|Betik altyapısı|Komut dosyalarını işleyen OLE nesnesi. Bir betik altyapısı, [IActiveScript](../winscript/reference/iactivescript.md) ve isteğe bağlı olarak [IActiveScriptParse](../winscript/reference/iactivescriptparse.md) arabirimlerini uygular.|
+|Betik sistemi|Windows komut dosyası altyapısının sahibi olan uygulama veya program. Ana bilgisayar [IActiveScriptSite](../winscript/reference/iactivescriptsite.md) ve isteğe bağlı olarak [ıactivescriptsitewindow](../winscript/reference/iactivescriptsitewindow.md) arabirimlerini uygular.|
+|Kod oluşturma yöntemi|[IActiveScriptParse](../winscript/reference/iactivescriptparse.md) arabirimi aracılığıyla bir nesneye eklenen betiğin bir bölümü. Betikteki toplam koleksiyonu, betiğizin verir.|
+|Betik dili|Bir betiğin yazıldığı dil (VBScript, örneğin) ve bu dilin semantiği.|

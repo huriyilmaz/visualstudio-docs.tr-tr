@@ -1,7 +1,7 @@
 ---
-title: Dinamik Araç Penceresi Açma | Microsoft Dokümanlar
+title: Dinamik araç penceresi açılıyor | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - tool windows, dynamic
 ms.assetid: 21547ba7-6e81-44df-9277-265bf34f877a
@@ -10,31 +10,31 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff971f980b0a9b2fb0e22f56fb0ace752829c2c3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 9a06cea6d9de4271572457dc9fe6473b5c969b66
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80702256"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903712"
 ---
-# <a name="open-a-dynamic-tool-window"></a>Dinamik bir araç penceresi açma
-Araç pencereleri genellikle menüdeki bir komuttan veya eşdeğer klavye kısayolundan açılır. Ancak bazen, belirli bir Ara Bilgi bağlamı uygulandığında açılan ve UI bağlamı artık geçerli olmadığında kapanan bir araç penceresine ihtiyacınız olabilir. Bu tür araç pencerelerine *dinamik* veya *otomatik görünür*denir.
+# <a name="open-a-dynamic-tool-window"></a>Dinamik araç penceresi aç
+Araç pencereleri genellikle menüdeki bir komuttan veya eşdeğer bir klavye kısayoluna açılır. Ancak, her zaman belirli bir kullanıcı arabirimi bağlamı geçerli olduğunda açılan bir araç penceresine gerek duyabilirsiniz ve Kullanıcı arabirimi bağlamı artık geçerli olmadığında kapanır. Bu tür araç pencereleri *dinamik* veya *Otomatik görünür*olarak adlandırılır.
 
 > [!NOTE]
-> Önceden tanımlanmış UI bağlamlarının listesi <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT>için bkz.
+> Önceden tanımlanmış UI bağlamlarının bir listesi için bkz <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT> ..
 
- Başlangıçta dinamik bir araç penceresi açmak istiyorsanız ve oluşturmanın başarısız olması mümkünse, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx> arabirimi uygulamanız <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx.QueryShowTool%2A> ve yöntemdeki hata koşullarını test etmeniz gerekir. Shell'in başlangıçta açılması gereken dinamik bir araç penceresine sahip olduğunuzu bilmesi `SupportsDynamicToolOwner` için paket kaydınıza değeri (1'e ayarlanmış) eklemeniz gerekir. Bu değer standardın <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>bir parçası değildir, bu nedenle eklemek için özel bir öznitelik oluşturmanız gerekir. Özel öznitelikler hakkında daha fazla bilgi için [bkz.](../extensibility/registering-and-unregistering-vspackages.md#using-a-custom-registration-attribute-to-register-an-extension)
+ Başlangıçta dinamik bir araç penceresi açmak isterseniz ve oluşturma işlemi başarısız olması durumunda, <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx> arabirimini uygulamanız ve hata koşullarını yöntemde test etmeniz gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx.QueryShowTool%2A> . Kabuğun başlangıçta açılması gereken dinamik bir araç penceresi olduğunu bilmesi için, `SupportsDynamicToolOwner` değeri (1 olarak ayarlanmalıdır) paket kaydımız olarak eklemeniz gerekir. Bu değer standart bir parçası değildir, bu <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> nedenle eklemek için özel bir öznitelik oluşturmanız gerekir. Özel öznitelikler hakkında daha fazla bilgi için bkz. bir [uzantıyı kaydetmek için özel bir kayıt özniteliği kullanma](../extensibility/registering-and-unregistering-vspackages.md#using-a-custom-registration-attribute-to-register-an-extension).
 
- Araç <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> penceresini açmak için kullanın. Araç penceresi gerektiği gibi oluşturulur.
+ <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A>Bir araç penceresi açmak için kullanın. Araç penceresi gerektiğinde oluşturulur.
 
 > [!NOTE]
-> Dinamik bir araç penceresi kullanıcı tarafından kapatılabilir. Kullanıcının araç penceresini yeniden açabilmesi için bir menü komutu oluşturmak istiyorsanız, menü komutu araç penceresini açan aynı Kullanıcı Arabirimi bağlamında etkinleştirilmeli ve aksi takdirde devre dışı bırakılır.
+> Dinamik bir araç penceresi Kullanıcı tarafından kapatılabilir. Kullanıcının araç penceresini yeniden açmasını sağlamak üzere bir menü komutu oluşturmak istiyorsanız, menü komutunun araç penceresini açan aynı kullanıcı arabirimi bağlamında etkinleştirilmesi ve aksi takdirde devre dışı bırakılması gerekir.
 
 ## <a name="to-open-a-dynamic-tool-window"></a>Dinamik bir araç penceresi açmak için
 
-1. **DynamicToolWindow** adında bir VSIX projesi oluşturun ve *DynamicWindowPane.cs*adlı bir araç penceresi öğesi şablonu ekleyin. Daha fazla bilgi için [bkz.](../extensibility/creating-an-extension-with-a-tool-window.md)
+1. **DynamicToolWindow** ADLı bir VSIX projesi oluşturun ve *DynamicWindowPane.cs*adlı bir araç penceresi öğe şablonu ekleyin. Daha fazla bilgi için bkz. [bir araç penceresi ile uzantı oluşturma](../extensibility/creating-an-extension-with-a-tool-window.md).
 
-2. *DynamicWindowPanePackage.cs* dosyasında DynamicWindowPanePackage bildirimini bulun. Araç <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> penceresini kaydetmek için öznitelikleri ve <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> öznitelikleri ekleyin.
+2. *DynamicWindowPanePackage.cs* dosyasında, Dynamicwindowbölmesi paket bildirimini bulun. <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> Araç penceresini kaydetmek için ve özniteliklerini ekleyin.
 
     ```vb
     [ProvideToolWindow(typeof(DynamicWindowPane)]
@@ -48,8 +48,8 @@ Araç pencereleri genellikle menüdeki bir komuttan veya eşdeğer klavye kısay
     {. . .}
     ```
 
-     Yukarıdaki öznitelikler, Visual Studio kapatıldığında ve yeniden açıldığında kalıcı olmayan geçici bir pencere olarak DynamicWindowPane adlı araç penceresini kaydeder. DynamicWindowPane uygulandığı nda <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_string> açılır ve aksi takdirde kapatılır.
+     Yukarıdaki öznitelikler, Visual Studio kapatılıp yeniden açıldığı zaman kalıcı olmayan geçici bir pencere olarak DynamicWindowPane adlı araç penceresini kaydeder. DynamicWindowPane, her uygulandığı zaman açılır <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_string> ve aksi takdirde kapatılır.
 
-3. Projeyi oluşturun ve hata ayıklamaya başlayın. Deneysel örnek görünmelidir. Araç penceresini görmemelisiniz.
+3. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görünmelidir. Araç penceresini görmemelisiniz.
 
 4. Deneysel örnekte bir proje açın. Araç penceresi görünmelidir.

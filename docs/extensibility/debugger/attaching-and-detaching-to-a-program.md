@@ -1,7 +1,7 @@
 ---
-title: Bir Programa Ekleme ve Ayırma | Microsoft Dokümanlar
+title: Bir programa ekleme ve ayırma | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - debug engines, attaching to programs
 - debug engines, detaching from programs
@@ -11,43 +11,43 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: d8bd6ea4b51c56a3cc42036b7bd26d34ff3a3eff
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 42a751e6aa70c1aacd5df598e0c0e62da3b9d14b
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739275"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903152"
 ---
 # <a name="attaching-and-detaching-to-a-program"></a>Bir programa ekleme ve ayırma
-Hata ayıklayıcının takılması, doğru yöntem ve olay dizisini doğru özniteliklerle göndermeyi gerektirir.
+Hata ayıklayıcıyı iliştirmek için doğru özniteliklere sahip yöntemlerin ve olayların doğru dizisini göndermesi gerekir.
 
-## <a name="sequence-of-methods-and-events"></a>Yöntem ve olayların sırası
+## <a name="sequence-of-methods-and-events"></a>Yöntemler ve olaylar dizisi
 
-1. Oturum hata ayıklama yöneticisi (SDM) [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) yöntemini çağırır.
+1. Oturum hata ayıklama Yöneticisi (SDM) [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) yöntemini çağırır.
 
-    Hata ayıklama motoru (DE) işlem `IDebugProgramNodeAttach2::OnAttach` modeline göre, yöntem aşağıdaki yöntemlerden birini döndürür ve bu yöntem daha sonra ne olacağını belirler.
+    Hata ayıklama altyapısı (DE) işlem modeline göre, yöntemi, `IDebugProgramNodeAttach2::OnAttach` İleri ' nin ne olacağını belirleyen aşağıdaki yöntemlerden birini döndürür.
 
-    `S_FALSE` Döndürülürse, hata ayıklama altyapısı programa başarıyla iliştirilmiştir. Aksi takdirde, ekleme işlemini tamamlamak için [Ekle](../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemi çağrılır.
+    `S_FALSE`Döndürülürse, hata ayıklama altyapısı programa başarıyla eklendi. Aksi [takdirde, Attach yöntemi iliştirme](../../extensibility/debugger/reference/idebugengine2-attach.md) işlemini tamamlamaya yönelik olarak çağırılır.
 
-    Döndürülürse, `S_OK` DE SDM ile aynı işlemde yüklenecektir. SDM aşağıdaki görevleri gerçekleştirir:
+    `S_OK`Döndürülürse, de SDM ile aynı işleme yüklenir. SDM aşağıdaki görevleri gerçekleştirir:
 
-   1. De motor bilgilerini almak için [GetEngineInfo'yu](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md) arar.
+   1. , Öğesinin altyapı bilgilerini almak için [GetEngineInfo](../../extensibility/debugger/reference/idebugprogramnode2-getengineinfo.md) çağırır.
 
-   2. DE'yi birlikte oluşturur.
+   2. Birlikte bulundurun DE oluşturur.
 
-   3. Aramalar [Ekle](../../extensibility/debugger/reference/idebugengine2-attach.md).
+   3. [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md)çağrısı.
 
-2. DE, SDM'ye bir `EVENT_SYNC` öznitelik ile bir [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) gönderir.
+2. DE, SDM 'ye bir özniteliği ile bir [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) gönderir `EVENT_SYNC` .
 
-3. DE, SDM'ye bir `EVENT_SYNC` öznitelik ile bir [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) gönderir.
+3. DE, SDM 'ye bir özniteliği ile bir [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) gönderir `EVENT_SYNC` .
 
-4. DE, SDM'ye bir `EVENT_SYNC_STOP` öznitelik ile bir [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) gönderir.
+4. DE, SDM 'ye bir özniteliği ile bir [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) gönderir `EVENT_SYNC_STOP` .
 
-   Bir programdan ayırmak aşağıdaki gibi basit, iki adımlı bir işlemdir:
+   Bir programdan ayırmak, aşağıdaki gibi basit ve iki adımlı bir işlemdir:
 
-5. SDM, [Detach'ı](../../extensibility/debugger/reference/idebugprogram2-detach.md)çağırıyor.
+5. SDM çağrısı [Ayır](../../extensibility/debugger/reference/idebugprogram2-detach.md).
 
 6. DE bir [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md)gönderir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklama olaylarını çağırma](../../extensibility/debugger/calling-debugger-events.md)
+- [Hata ayıklayıcı olaylarını çağırma](../../extensibility/debugger/calling-debugger-events.md)

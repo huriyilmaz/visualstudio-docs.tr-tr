@@ -1,45 +1,45 @@
 ---
-title: 'Walkthrough: JavaScript kullanarak Bir SDK oluşturma | Microsoft Dokümanlar'
+title: 'İzlenecek yol: JavaScript kullanarak SDK oluşturma | Microsoft Docs'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a8c89d5d-5b78-4435-817f-c5f25ca6d715
 author: acangialosi
 ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f3a3fa110bd6521443521449898474299dd267d6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 29dac6cca7936dde8be2ebc57366f6370b8bcbc6
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80697501"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85904944"
 ---
-# <a name="walkthrough-create-an-sdk-using-javascript"></a>Walkthrough: JavaScript kullanarak bir SDK oluşturma
-Bu walkthrough visual Studio Extension (VSIX) olarak basit bir matematik SDK oluşturmak için JavaScript nasıl kullanılacağını öğretir.  Walkthrough şu bölümlere ayrılmıştır:
+# <a name="walkthrough-create-an-sdk-using-javascript"></a>İzlenecek yol: JavaScript kullanarak SDK oluşturma
+Bu izlenecek yol, Visual Studio uzantısı (VSıX) olarak basit bir matematik SDK 'Sı oluşturmak için JavaScript 'ı nasıl kullanacağınızı öğretir.  İzlenecek yol aşağıdaki bölümlere ayrılmıştır:
 
-- [SimpleMathVSIX uzantısı SDK projesini oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)
+- [SimpleMathVSIX Extension SDK projesini oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSimpleMathVSIX)
 
-- [SDK kullanan örnek bir uygulama oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSampleApp)
+- [SDK 'Yı kullanan bir örnek uygulama oluşturmak için](../extensibility/walkthrough-creating-an-sdk-using-javascript.md#createSampleApp)
 
-  JavaScript için sınıf kitaplığı proje türü yoktur. Bu gözden geçirme de, örnek *aritmetik.js* dosyası doğrudan VSIX projesinde oluşturulur. Uygulamada, javascript ve CSS dosyalarını bir VSIX projesine koymadan önce **Boş Uygulama** şablonu kullanarak bir Windows Mağazası uygulaması olarak oluşturmanızı ve test etmelerini öneririz.
+  JavaScript için, hiçbir sınıf kitaplığı proje türü yoktur. Bu kılavuzda örnek *arithmetic.js* dosyası doğrudan VSIX projesinde oluşturulur. Uygulamada, önce JavaScript ve CSS dosyalarını bir Windows Mağazası uygulaması olarak derleyip test etmenizi öneririz — Örneğin, **boş uygulama** şablonunu kullanarak, bir VSIX projesine yerleştirmelisiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
- Bu izlenmeyi takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK'ya](../extensibility/visual-studio-sdk.md)bakın.
+## <a name="prerequisites"></a>Önkoşullar
+ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
 
-## <a name="to-create-the-simplemathvsix-extension-sdk-project"></a><a name="createSimpleMathVSIX"></a>SimpleMathVSIX uzantısı SDK projesini oluşturmak için
+## <a name="to-create-the-simplemathvsix-extension-sdk-project"></a><a name="createSimpleMathVSIX"></a>SimpleMathVSIX Extension SDK projesini oluşturmak için
 
-1. Menü çubuğunda**Yeni** > **Proje** **yi seçin.** > 
+1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
-2. Şablon kategorileri listesinde, **Visual C#** altında, **Genişletilebilirliği**seçin ve ardından **VSIX Project şablonunu** seçin.
+2. Şablon kategorileri listesinde, **Visual C#** altında **genişletilebilirlik**' i seçin ve **VSIX proje** şablonu ' nu seçin.
 
-3. **Ad** metin kutusunda Tamam `SimpleMathVSIX` **düğmesini** belirtin ve seçin.
+3. **Ad** metin kutusunda, belirtin `SimpleMathVSIX` ve **Tamam** düğmesini seçin.
 
-4. Visual **Studio Paket Sihirbazı** görünürse, **Hoş Geldiniz** **sayfasındaki Sonraki** düğmesini seçin ve ardından **7'nin Sayfa**1'inde **Finish** düğmesini seçin.
+4. **Visual Studio paket Sihirbazı** görünürse, **hoş geldiniz** sayfasında **Ileri** düğmesini seçin ve ardından **sayfa 1/7**' de **son** düğmesini seçin.
 
-     Manifest **Designer** açılsa da, doğrudan manifesto dosyasını değiştirerek bu gözden geçirme yi basit tutacağız.
+     **Bildirim Tasarımcısı** açılarak, bildirim dosyasını doğrudan değiştirerek bu yönergeyi basit tutacağız.
 
-5. **Solution Explorer'da** **source.extension.vsixmanifest** dosyasının kısayol menüsünü açın ve ardından **Kodu Görüntüle'yi**seçin. Dosyadaki varolan içeriği değiştirmek için bu kodu kullanın.
+5. **Çözüm Gezgini**, **Source. Extension. valtmanifest** dosyası için kısayol menüsünü açın ve **kodu görüntüle**' yi seçin. Dosyadaki mevcut içeriği değiştirmek için bu kodu kullanın.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -61,11 +61,11 @@ Bu walkthrough visual Studio Extension (VSIX) olarak basit bir matematik SDK olu
     </PackageManifest>
     ```
 
-6. **Solution Explorer'da** **SimpleMathVSIX** projesinin kısayol menüsünü açın ve ardından**Yeni Öğe** **Ekle'yi** > seçin.
+6. **Çözüm Gezgini**' de, **SimpleMathVSIX** projesi için kısayol menüsünü açın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin.
 
-7. **Veri** **kategorisinde, XML dosyasını**seçin, `SDKManifest.xml`dosyayı adlandırın ve **Ekle** düğmesini seçin.
+7. **Veri** kategorisinde, **XML dosyası**' nı seçin, dosyayı adlandırın `SDKManifest.xml` ve **Ekle** düğmesini seçin.
 
-8. **Solution**Explorer'da, **SDKManifest.xml** dosyasının kısayol menüsünü açın ve ardından dosyayı **XML Düzenleyicisi'nde**görüntülemek için **Aç'ı** seçin.
+8. **Çözüm Gezgini**' de, **SDKManifest.xml** dosyası için kısayol menüsünü açın ve sonra dosyayı **XML düzenleyicisinde**göstermek için **Aç** ' ı seçin.
 
 9. **SDKManifest.xml** dosyasına aşağıdaki kodu ekleyin.
 
@@ -84,21 +84,21 @@ Bu walkthrough visual Studio Extension (VSIX) olarak basit bir matematik SDK olu
 
     ```
 
-10. **Çözüm Gezgini'nde,** **SDKManifest.xml** dosyasının kısayol menüsünde **Özellikler'i**seçin.
+10. **Çözüm Gezgini** **SDKManifest.xml** dosyanın kısayol menüsünde **Özellikler**' i seçin.
 
-11. **Özellikler** penceresinde, **VSIX özelliğine Ekle'yi** **True**olarak ayarlayın.
+11. **Özellikler** penceresinde **VSIX Içindeki içerme** özelliğini **doğru**olarak ayarlayın.
 
-12. **Solution Explorer'da,** **SimpleMathVSIX** projesinin kısayol menüsünde Yeni**Klasör** **Ekle'yi** > seçin ve ardından klasörü `Redist`adlandırın.
+12. **Çözüm Gezgini**, **SimpleMathVSIX** projesinin kısayol menüsünde **Add**  >  **Yeni klasör**Ekle ' yi seçin ve sonra klasörü adlandırın `Redist` .
 
-13. Bu klasör yapısını oluşturmak için Redist'in altına alt klasörler ekleyin:
+13. Bu klasör yapısını oluşturmak için Redist altında alt klasörler ekleyin:
 
      *\Redist\CommonConfiguration\Neutral\SimpleMath\js\\*
 
-14. **\\ \js** klasörünün kısayol menüsünde**Yeni Öğe** **Ekle'yi** > seçin.
+14. ** \\ \Js** klasörünün kısayol menüsünde **Add**  >  **Yeni öğe**Ekle ' yi seçin.
 
-15. **Visual C# öğelerinin** **altında, Web** kategorisini seçin ve ardından **JavaScript Dosya** öğesini seçin. Dosyayı `arithmetic.js`adlandırın ve sonra **Ekle** düğmesini seçin.
+15. **Visual C# öğeleri**altında **Web** kategorisini seçin ve sonra **JavaScript dosya** öğesini seçin. Dosyayı adlandırın `arithmetic.js` ve ardından **Ekle** düğmesini seçin.
 
-16. Aşağıdaki kodu *aritmetik.js'ye*ekleyin:
+16. Aşağıdaki kodu *arithmetic.js*ekleyin:
 
     ```csharp
     (function (global) {
@@ -124,35 +124,35 @@ Bu walkthrough visual Studio Extension (VSIX) olarak basit bir matematik SDK olu
 
     ```
 
-17. **Çözüm Gezgini'nde,** **aritmetik.js** dosyasının kısayol menüsünde **Özellikler'i**seçin. Bu özellik değişikliklerini yapın:
+17. **Çözüm Gezgini** **arithmetic.js** dosyanın kısayol menüsünde **Özellikler**' i seçin. Bu özellik değişikliklerini yapın:
 
-    - **VSIX özelliğine Ekle'yi** **True**olarak ayarlayın.
+    - **VSIX 'Te Include** özelliğini **true**olarak ayarlayın.
 
-    - **Copy'yi Çıkış Dizini özelliğine** her **zaman kopyalamak**için ayarlayın.
+    - **Çıkış Dizinine Kopyala** özelliğini **her zaman Kopyala**olarak ayarlayın.
 
-18. **Solution Explorer'da** **SimpleMathVSIX** projesinin kısayol menüsünde **Oluştur'u**seçin.
+18. **Çözüm Gezgini**, **SimpleMathVSIX** projesinin kısayol menüsünde, **Oluştur**' u seçin.
 
-19. Yapı başarıyla tamamlandıktan sonra, projenin kısayol menüsünde **Dosya Gezgini'nde Klasörü Aç'ı**seçin. **\bin\debug'a\\**gidin `SimpleMathVSIX.vsix` ve yüklemek için çalıştırın.
+19. Yapı başarıyla tamamlandıktan sonra, proje için kısayol menüsünde **klasörü dosya Gezgini 'Nde aç**' ı seçin. **\Bin\Debug \\ **dizinine gidin ve `SimpleMathVSIX.vsix` uygulamayı yüklemek için çalıştırın.
 
-20. **Yükle** düğmesini seçin ve yüklemenin tamamlanmasına izin verin.
+20. **Yükleme düğmesini seçin** ve yüklemenin tamamlanmasını sağlayın.
 
 21. Visual Studio'yu yeniden başlatın.
 
-## <a name="to-create-a-sample-app-that-uses-the-sdk"></a><a name="createSampleApp"></a>SDK kullanan örnek bir uygulama oluşturmak için
+## <a name="to-create-a-sample-app-that-uses-the-sdk"></a><a name="createSampleApp"></a>SDK 'Yı kullanan bir örnek uygulama oluşturmak için
 
-1. Menü çubuğunda**Yeni** > **Proje** **yi seçin.** > 
+1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
-2. Şablon kategorileri listesinde, **JavaScript** **altında, Windows Mağazası'nı**seçin ve ardından **Boş Uygulama** şablonu'nu seçin.
+2. Şablon kategorileri listesinde, **JavaScript**altında **Windows Mağazası**' nı seçin ve **boş uygulama** şablonunu seçin.
 
-3. **Ad** kutusunda, belirtin. `ArithmeticUI` **Tamam** düğmesini seçin.
+3. **Ad** kutusunda, öğesini belirtin `ArithmeticUI` . **Tamam** düğmesini seçin.
 
-4. **Çözüm Gezgini'nde,** **AritmetikUI** projesinin kısayol menüsünü açın ve ardından**Başvuru** **Ekle'yi** > seçin.
+4. **Çözüm Gezgini**' de, **ArithmeticUI** projesi için kısayol menüsünü açın ve ardından başvuru **Ekle**' yi seçin  >  **Reference**.
 
-5. **Windows'un**altında **Uzantılar'ı**seçin ve **Basit Matematik'in** görüntülendiğini unutmayın.
+5. **Windows**altında, **Uzantılar**' ı seçin ve **basit matematik** ' ın görüntülendiğini unutmayın.
 
-6. Basit **Matematik** onay kutusunu seçin ve ardından **Tamam** düğmesini seçin.
+6. **Basit matematik** onay kutusunu seçin ve ardından **Tamam** düğmesini seçin.
 
-7. **Solution**Explorer'da, **Referanslar**altında, **Basit Matematik** başvurusu görüntülendiğinden dikkat edin. Genişletin ve **aritmetik.js**içeren bir **\js\\ ** klasörü olduğunu unutmayın. Kaynak kodunuzun yüklü olduğunu doğrulamak için **aritmetik.js'yi** açabilirsiniz.
+7. **Çözüm Gezgini**, **Başvurular**altında **basit matematik** başvurusunun görüntülendiğini unutmayın. Genişletin ve **arithmetic.js**içeren bir **\js \\ ** klasörü olduğuna dikkat edin. Kaynak kodunuzun yüklendiğini onaylamak için **arithmetic.js** açabilirsiniz.
 
 8. *default.htm*içeriğini değiştirmek için aşağıdaki kodu kullanın.
 
@@ -250,7 +250,7 @@ Bu walkthrough visual Studio Extension (VSIX) olarak basit bir matematik SDK olu
     })();
     ```
 
-10. *\css\default.css* içeriğini bu kodla değiştirin:
+10. *\Css\default.exe* içeriğini şu kodla değiştirin:
 
     ```xml
     form {
@@ -309,9 +309,9 @@ Bu walkthrough visual Studio Extension (VSIX) olarak basit bir matematik SDK olu
 
     ```
 
-11. Uygulamayı oluşturmak ve çalıştırmak için **F5** tuşunu seçin.
+11. Uygulamayı derlemek ve çalıştırmak için **F5** tuşunu seçin.
 
-12. Uygulama UI'sinde, herhangi iki sayı girin, bir **=** işlem seçin ve ardından düğmeyi seçin. Doğru sonuç görüntülenir.
+12. Uygulama kullanıcı arabiriminde iki sayı girin, bir işlem seçin ve ardından **=** düğmeyi seçin. Doğru sonuç görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yazılık Geliştirme Seti Oluşturma](../extensibility/creating-a-software-development-kit.md)

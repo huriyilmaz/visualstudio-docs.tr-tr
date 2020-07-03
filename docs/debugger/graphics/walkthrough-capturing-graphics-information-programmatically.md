@@ -7,15 +7,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e2036588fe04825b0fe1a1aa2db7ae8f7e0b5ad4
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.openlocfilehash: 7533c205b95b016c43bd2eef614b4c2825596e74
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72734765"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835660"
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>İzlenecek Yol: Grafik Bilgilerini Programla Yakalama
-Direct3D uygulamasındaki grafik bilgilerini programlı bir şekilde yakalamak için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Grafik Tanılama kullanabilirsiniz.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Direct3D uygulamasından grafik bilgilerini programlı bir şekilde yakalamak için grafik tanılama kullanabilirsiniz.
 
 Programlı yakalama, gibi senaryolarda faydalıdır:
 
@@ -23,9 +23,9 @@ Programlı yakalama, gibi senaryolarda faydalıdır:
 
 - Uygulamanız, hesaplamalar gerçekleştirmek için DirectCompute kullandığında olduğu gibi, uygulama hiç işlenmezse, programlı olarak yakalamayı başlatın.
 
-- Arama `CaptureCurrentFrame`when bir işleme sorunu, el ile testi tahmin etmek ve yakalamak zordur, ancak çalışma zamanında uygulamanın durumu hakkında bilgiler kullanılarak programlı bir şekilde tahmin edilebilir.
+- `CaptureCurrentFrame`Bir işleme sorunu, el ile test sırasında tahmin etmek ve yakalamak zor olduğunda, ancak çalışma zamanında uygulamanın durumu hakkında bilgiler kullanılarak programlı bir şekilde tahmin edilebilir.
 
-## <a name="CaptureDX11_2"></a>Windows 10 ' da programlı yakalama
+## <a name="programmatic-capture-in-windows-10"></a><a name="CaptureDX11_2"></a>Windows 10 ' da programlı yakalama
 Bu izlenecek yolda, güçlü yakalama yöntemini kullanan Windows 10 ' da DirectX 11,2 API kullanan uygulamalarda Programlı yakalama gösterilmektedir.
 
 Bu bölümde bu görevlerin nasıl yapılacağı gösterilmektedir:
@@ -37,7 +37,7 @@ Bu bölümde bu görevlerin nasıl yapılacağı gösterilmektedir:
 - Graf bilgilerini yakalama
 
 > [!NOTE]
-> Programlı yakalama 'nın önceki uygulamaları, Yakalama işlevselliği sağlamak için [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Visual Studio için Uzak Araçlar bağlıdır.
+> Programlı yakalama 'nın önceki uygulamaları, Yakalama işlevselliği sağlamak için Visual Studio için Uzak Araçlar güvendi.
 
 ### <a name="preparing-your-app-to-use-programmatic-capture"></a>Uygulamanızı programlı yakalama kullanacak şekilde hazırlama
 Uygulamanızda Programlı yakalama 'yı kullanmak için gereken üst bilgileri içermesi gerekir. Bu üstbilgiler Windows 10 SDK 'sının bir parçasıdır.
@@ -54,16 +54,16 @@ Uygulamanızda Programlı yakalama 'yı kullanmak için gereken üst bilgileri i
     ```
 
     > [!IMPORTANT]
-    > Windows 10 uygulamalarınızda Programlı yakalama gerçekleştirmek için Windows 8,0 ve önceki sürümlerde Programlı yakalamayı destekleyen vsgcapture. h başlık dosyasını eklemeyin. Bu üstbilgi DirectX 11,2 ile uyumsuzdur. Bu dosya d3d11_2. h üst bilgisi eklendikten sonra varsa, derleyici bir uyarı verir. Vsgcapture. h, d3d11_2. h öncesinde varsa, uygulama başlatılmaz.
+    > Windows 10 uygulamalarınızda Programlı yakalama gerçekleştirmek için Windows 8,0 ve önceki sürümlerde Programlı yakalamayı destekleyen vsgcapture. h başlık dosyasını eklemeyin. Bu üstbilgi DirectX 11,2 ile uyumsuzdur. D3d11_2. h üst bilgisi eklendikten sonra bu dosya varsa, derleyici bir uyarı verir. Vsgcapture. h, d3d11_2. h öncesinde varsa, uygulama başlatılmaz.
 
     > [!NOTE]
-    > Makinenizde Haziran 2010 DirectX SDK 'Sı yüklüyse ve projenizin içerme yolu `%DXSDK_DIR%includex86` içeriyorsa, bunu ekleme yolunun sonuna taşıyın. Kitaplık yolunuzda aynısını yapın.
+    > Makinenizde Haziran 2010 DirectX SDK 'Sı yüklüyse ve projenizin içerme yolu içeriyorsa `%DXSDK_DIR%includex86` , bunu ekleme yolunun sonuna taşıyın. Kitaplık yolunuzda aynısını yapın.
 
 ### <a name="getting-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis arabirimini alma
 DirectX 11,2 ' den grafik bilgilerini yakalamadan önce DXGI hata ayıklama arabirimini almanız gerekir.
 
 > [!IMPORTANT]
-> Programlı yakalama kullanırken, yine de Uygulamanızı grafik tanılama altında (alt + F5 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]) veya [komut satırı yakalama aracı](command-line-capture-tool.md)altında çalıştırmanız gerekir.
+> Programlı yakalama kullanırken, uygulamanızı hala grafik tanılama (alt + F5 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ) altında veya [komut satırı yakalama aracı](command-line-capture-tool.md)altında çalıştırmanız gerekir.
 
 ##### <a name="to-get-the-idxgraphicsanalysis-interface"></a>IDXGraphicsAnalysis arabirimini almak için
 
@@ -74,7 +74,7 @@ DirectX 11,2 ' den grafik bilgilerini yakalamadan önce DXGI hata ayıklama arab
   HRESULT getAnalysis = DXGIGetDebugInterface1(0, __uuidof(pGraphicsAnalysis), reinterpret_cast<void**>(&pGraphicsAnalysis));
   ```
 
-  Kullanmadan önce geçerli bir arabirim aldığınızdan emin olmak için [DXGIGetDebugInterface1](/windows/desktop/api/dxgi1_3/nf-dxgi1_3-dxgigetdebuginterface1) tarafından döndürülen `HRESULT` kontrol ettiğinizden emin olun:
+  `HRESULT`Kullanmadan önce geçerli bir arabirim aldığınızdan emin olmak Için [DXGIGetDebugInterface1](/windows/desktop/api/dxgi1_3/nf-dxgi1_3-dxgigetdebuginterface1) tarafından döndürülen ' i kontrol ettiğinizden emin olun:
 
   ```cpp
   if (FAILED(getAnalysis))
@@ -84,14 +84,14 @@ DirectX 11,2 ' den grafik bilgilerini yakalamadan önce DXGI hata ayıklama arab
   ```
 
   > [!NOTE]
-  > @No__t_0 `E_NOINTERFACE` (`error: E_NOINTERFACE No such interface supported`) döndürürse, uygulamanın grafik tanılama altında (alt + F5 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]) çalıştığından emin olun.
+  > `DXGIGetDebugInterface1` `E_NOINTERFACE` () Döndürürse `error: E_NOINTERFACE No such interface supported` , uygulamanın grafik tanılama (alt + F5) altında çalıştığından emin olun [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
 ### <a name="capturing-graphics-information"></a>Graf bilgilerini yakalama
-Artık geçerli bir `IDXGraphicsAnalysis` arabiriminiz olduğuna göre, grafik bilgilerini yakalamak için `BeginCapture` ve `EndCapture` kullanabilirsiniz.
+Artık geçerli bir `IDXGraphicsAnalysis` arabiriminiz olduğuna göre, `BeginCapture` `EndCapture` grafik bilgilerini yakalamak için ve kullanabilirsiniz.
 
 ##### <a name="to-capture-graphics-information"></a>Grafik bilgilerini yakalamak için
 
-- Grafik bilgilerini yakalamaya başlamak için `BeginCapture` kullanın:
+- Grafik bilgilerini yakalamaya başlamak için şunu kullanın `BeginCapture` :
 
     ```cpp
     ...
@@ -99,7 +99,7 @@ Artık geçerli bir `IDXGraphicsAnalysis` arabiriminiz olduğuna göre, grafik b
     ...
     ```
 
-    Yakalama `BeginCapture` çağrıldığında hemen başlar; sonraki çerçevenin başlamasını beklemez. Yakalama, geçerli çerçeve sunulduktan sonra veya `EndCapture` çağırdığınızda duraklar:
+    Yakalama çağrıldığında hemen başlar `BeginCapture` ; sonraki çerçevenin başlamasını beklemez. Yakalama, geçerli çerçeve sunulduktan sonra ya da çağırdığınızda `EndCapture` :
 
     ```cpp
     ...
@@ -107,7 +107,7 @@ Artık geçerli bir `IDXGraphicsAnalysis` arabiriminiz olduğuna göre, grafik b
     ...
     ```
 
-- @No__t_0 çağrısından sonra grafik nesnesini serbest bırakın.
+- Çağrısından sonra `EndCapture` grafik nesnesini serbest bırakın.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 Bu kılavuzda grafik bilgilerinin programlı bir şekilde nasıl yakalanacağı gösterilmiştir. Sonraki adım olarak bu seçeneği göz önünde bulundurun:
@@ -117,4 +117,4 @@ Bu kılavuzda grafik bilgilerinin programlı bir şekilde nasıl yakalanacağı 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İzlenecek Yol: Grafik Bilgilerini Yakalama](walkthrough-capturing-graphics-information.md)
 - [Grafik Bilgilerini Yakalama](capturing-graphics-information.md)
-- [Komut satırı Yakalama Aracı](command-line-capture-tool.md)
+- [Komut Satırı Yakalama Aracı](command-line-capture-tool.md)

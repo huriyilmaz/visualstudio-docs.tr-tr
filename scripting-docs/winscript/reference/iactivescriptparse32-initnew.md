@@ -5,32 +5,32 @@ ms.date: 01/18/2017
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7c77aa16-f391-4c93-9f1a-4e529a9930b2
 caps.latest.revision: 3
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: 8b5304d60aed8145e7a68d89b2c6d4386db0d745
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 887e4ce44662cc591fee64f5e0549edcdcbc14af
+ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72561654"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835712"
 ---
-# <a name="iactivescriptparse32initnew"></a>IActiveScriptParse32:: InitNew
+# <a name="iactivescriptparse32initnew"></a>IActiveScriptParse32::InitNew
 Komut dosyası altyapısını başlatır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp
 HRESULT InitNew(void);  
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa `S_OK` döndürür veya başlatma sırasında bir hata oluştuysa `E_FAIL`.  
+ `S_OK`Başarılı olursa veya `E_FAIL` başlatma sırasında bir hata oluştuysa döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Betik altyapısının kullanılabilmesi için aşağıdaki yöntemlerden biri çağrılmalıdır: `IPersist*::Load`, `IPersist*::InitNew` veya `IActiveScriptParse32::InitNew`. Bu yöntemin semantiği `IPersistStreamInit::InitNew` aynıdır, bu yöntem komut dosyası altyapısından kendisini başlatmasını söyler. @No__t_0 veya `IActiveScriptParse32::InitNew` ve `IPersist*::Load` çağırmak için geçerli değildir, ne de `IPersist*::InitNew`, `IActiveScriptParse32::InitNew` veya `IPersist*::Load` birden çok kez çağırmak için geçerli değildir.  
+ Betik altyapısının kullanılabilmesi için aşağıdaki yöntemlerden biri çağrılmalıdır: `IPersist*::Load` , `IPersist*::InitNew` , veya `IActiveScriptParse32::InitNew` . Bu yöntemin semantiği ile aynıdır `IPersistStreamInit::InitNew` ; Bu yöntem, komut dosyası altyapısının kendisini başlatmasını söyler. Ya da ile çağırmak için geçerli değildir, ya da veya birden `IPersist*::InitNew` `IActiveScriptParse32::InitNew` `IPersist*::Load` çok kez çağırmak için geçerli değildir `IPersist*::InitNew` `IActiveScriptParse32::InitNew` `IPersist*::Load` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.  
  [IActiveScriptParse32](../../winscript/reference/iactivescriptparse32.md)

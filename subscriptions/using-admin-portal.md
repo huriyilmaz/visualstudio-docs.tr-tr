@@ -1,55 +1,55 @@
 ---
-title: Abonelikler Yönetim Portalı ile başlayın | Görsel Stüdyo Pazarı
+title: Abonelikler yönetim portalını kullanmaya başlama | Visual Studio Market
 author: evanwindom
 ms.author: v-evwin
 manager: lank
 ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
 ms.date: 03/03/2020
-ms.topic: conceptual
-description: Abonelikler Yönetim Portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlayacaksınız öğrenin.
-ms.openlocfilehash: 279f1d926bd81bafd8fd79e5cdddbf67b96899f1
-ms.sourcegitcommit: 1f7aed335c48215dff5c151f76f22e3f10e8b564
+ms.topic: overview
+description: Abonelik yönetim portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlaleyeceğinizi öğrenin.
+ms.openlocfilehash: 94ce9e8ceec46403ef816c39115a5418f1ee9e03
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808367"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902947"
 ---
-# <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio Abonelikleri Yönetici Portalına Genel Bakış
+# <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio abonelikleri yönetici portalına genel bakış
 
-Visual Studio Abonelikleri Yönetim Portalı, kuruluşunuzun aboneliklerini tek bir yerde yönetmenize yönelik araçları sağlar. 
+Visual Studio abonelikleri yönetim portalı, kuruluşunuzun aboneliklerini tek bir yerde yönetmeye yönelik araçlar sağlar. 
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4t9aW]
 
 ## <a name="important-considerations"></a>Önemli noktalar
-Visual Studio Abonelikleri Yönetim Portalı'nı kullanırken aşağıdaki noktaları aklınızda bulundurun:
-- **Visual Studio abonelikleri kullanıcı başına lisanslanır.** Her abone, yazılımı geliştirme ve sınama için gerektiği kadar bilgisayarda kullanabilir.
-- Kuruluşunuzun satın aldığı Visual Studio aboneliğine karşılık gelen **her abone için yalnızca bir abonelik düzeyi atayın.** Kendilerine atanmış birden fazla abonelik düzeyine sahip abonelerinvarsa, ayarlarını yalnızca bir tane olacak şekilde değiştirin.
-- **Abonenin abonelik düzeyi,** abonelik yükseltildiğinde ("adım adım" lisansı satın alındıktan sonra) güncelleştirilmelidir veya daha düşük bir düzeyde yenilenir.
-- **Abonelikleri aboneler arasında paylaşmayın.** Abonelikler adlandırılmış kişilere atanmalıdır.  Takımlara abonelik atanmasına izin verilmez.  Abonelik avantajlarının tamamını veya bir kısmını kullanan herkese abonelik atamanız gerekir (geliştirme ve test yazılımı, Microsoft Azure, e-öğrenme, vb.).
+Visual Studio abonelikleri yönetim portalını kullanırken bu noktaları göz önünde bulundurun:
+- **Visual Studio abonelikleri Kullanıcı başına lisanslanır.** Her abone, yazılımı geliştirme ve test için gereken sayıda bilgisayar üzerinde kullanabilir.
+- Her abone için, kuruluşunuzun satın aldığı Visual Studio aboneliğine karşılık gelen **yalnızca bir abonelik düzeyi atayın**. Birden fazla abonelik düzeyi atanmış abonelere sahipseniz, ayarlarını yalnızca bir tane olacak şekilde düzenleyin.
+- Abonelik yükseltildiğinde ("adım yukarı" lisans satın alındıktan sonra) veya daha düşük bir düzeyde yenileniyorsa **, abonenin abonelik düzeyinin güncellenmesi gerekir** .
+- **Abonelikler arasında abonelikleri paylaşmayın.** Abonelikler adlandırılmış bireylere atanmalıdır.  Takımlara abonelikler atamaya izin verilmez.  Abonelik avantajlarının tamamını veya bir kısmını (geliştirme ve test için yazılım, Microsoft Azure, e-öğrenme vb.) kullanan herkese bir abonelik atamanız gerekir.
 
 ## <a name="the-subscribers-page"></a>Aboneler sayfası
-Abonelikleri atadıktan sonra, Aboneleri Yönet sekmesi abonelerinizle ilgili ayrıntılı bilgiler sağlar:
+Abonelikleri atadıktan sonra, aboneleri Yönet sekmesi, aboneler hakkında aşağıdakiler de dahil olmak üzere ayrıntılı bilgiler sağlar:
 - Her abonenin adı ve soyadı.
 - Bu kullanıcının e-posta adresi.
-- Kendilerine atanan abonelik düzeyi.
-- Aboneliklerinin kendilerine atandığı tarih.
-- Aboneliklerinin son kullanma tarihi.
-- İsteğe bağlı metin açıklaması.
-- Abone yüklemelerinin etkin mi yoksa devre dışı mı bırakıldığının göstergesi.
+- Kendisine atanmış olan abonelik düzeyi.
+- Aboneliklerinden kendilerine atandığı tarih.
+- Abonelikleri için sona erme tarihi.
+- İsteğe bağlı bir metin açıklaması.
+- Abone indirmelerinin etkinleştirilip etkinleştirilmediğini veya devre dışı bırakıldığını belirten bir gösterge.
 - Bulundukları ülke.
-- Yönetim portalından atama iletişime e-posta için dil tercihleri.
-- Oturum açmadan iletişim için kullanılan farklı bir e-posta adresi için isteğe bağlı alan.
+- Yönetim portalından atama iletişim e-postası için kendi dil tercihi.
+- Oturum açma dışındaki iletişimler için kullanılan farklı bir e-posta adresi için isteğe bağlı alan.
 
-Sayfanın sol üst tarafında, abonelik atamasına genel bakışı, anlaşma ayrıntılarını ve maksimum kullanım raporunu göstermek için seçebileceğiniz birkaç simge vardır.
+Sayfanın sol üst kısmında, bir abonelik atamasına genel bakış, anlaşma ayrıntıları ve en yüksek kullanım raporu açığa çıkarmak için seçebileceğiniz çeşitli simgeler vardır.
 
-Her sözleşme için kuruluşunuzda satın alınan, atanan ve hala kullanılabilir olan abonelik lisanslarının sayısı hakkında ek bilgi görmek için slayt dışı paneli etkinleştirmek için üst teki simgeyi tıklatın.
+Her anlaşma için kuruluşunuzda satın alınan, atanan ve hala kullanılabilir olan abonelik lisanslarının sayısı hakkında ek bilgileri görmek için, üstteki simgeye tıklayarak slayt panelini etkinleştirin.
 > [!div class="mx-imgBorder"]
-> ![Visual Studio Abonelikleri Yönetici Portalı Aboneleri Sayfası](_img/using-admin-portal/subscribers-page.png)
+> ![Visual Studio abonelikleri Yönetici portalı aboneleri sayfası](_img/using-admin-portal/subscribers-page.png)
 
 ## <a name="the-details-page"></a>Ayrıntılar sayfası
-Görüntülemekte olduğunuz anlaşma hakkında daha fazla bilgi için, Sözleşme Ayrıntıları sekmesini görmek için ikinci simgeyi seçin. Slayt-out paneli anlaşma durumunu, satın alma hesabını, org ayrıntılarını, süper yöneticileri ve diğer ilgili bilgileri gösterir.
+Görüntülemekte olduğunuz anlaşma hakkında daha fazla bilgi için, anlaşma ayrıntıları sekmesini görmek üzere ikinci simgeyi seçin. Bu bölmede, anlaşma Durumu, satın alma hesabı, kuruluş ayrıntıları, süper Yöneticiler ve diğer ilgili bilgiler gösterilir.
 > [!div class="mx-imgBorder"]
-> ![Visual Studio Abonelikleri Yönetici Portal Detayları Sayfası](_img/using-admin-portal/details-page.png)
+> ![Visual Studio abonelikleri yönetim portalı ayrıntıları sayfası](_img/using-admin-portal/details-page.png)
 
 ## <a name="resources"></a>Kaynaklar
 - [Visual Studio lisanslama teknik incelemesi](https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf)
@@ -64,10 +64,10 @@ Görüntülemekte olduğunuz anlaşma hakkında daha fazla bilgi için, Sözleş
 - [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Yöneticilerin sorumlulukları hakkında daha fazla bilgi edinin:
+Yöneticiler için sorumluluklar hakkında daha fazla bilgi edinin:
 - [Yönetici sorumluluklarına genel bakış](admin-responsibilities.md)
-- [Üretim öncesi ortamın envanteri](admin-inventory.md)
+- [Üretim öncesi ortam envanteri](admin-inventory.md)
 - [Büyük takımları ve dışarıdan yüklenicileri yönetme](manage-teams.md)
 - [Kullanıcı atamalarını izleme ve siparişleri işleme](assignments-orders.md)
-- Satın alma taahhütlerini izlemek için [Maksimum Kullanımı](maximum-usage.md) kullanın
+- Satın alma taahhütlerini izlemek için [maksimum kullanımı](maximum-usage.md) kullanın
 

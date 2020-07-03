@@ -1,7 +1,7 @@
 ---
-title: Menü Komutlarına Simge Ekleme | Microsoft Dokümanlar
+title: Menü komutlarına simgeler ekleme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - icons [Visual Studio], adding to toolbars
 - toolbars [Visual Studio], adding icons to commands
@@ -12,39 +12,39 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: f4b71f981472451766f526cf62e975e571cf46da
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: c9f038dc43c1705a7cef47eb09a17607c535e307
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740161"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903436"
 ---
-# <a name="add-icons-to-menu-commands"></a>Menü komutlarına simge ekleme
-Komutlar hem menülerde hem de araç çubuklarında görünebilir. Araç çubuklarında, bir komutun yalnızca bir simgeyle (yer kazanmak için) görüntülenmesi yaygınken, menülerde genellikle hem simge hem de metinle bir komut görünür.
+# <a name="add-icons-to-menu-commands"></a>Menü komutlarına simgeler ekleme
+Komutlar hem menülerde hem de araç çubuklarında görünebilir. Araç çubuklarında, bir komutun yalnızca bir simgeyle görüntülenmesi (boşluk kazanmak için), bir komutun genellikle bir simge ve metinle birlikte görüntülenmesidir.
 
- Simgeler 16 piksel genişliğinde ve 16 piksel yüksekliğindedir ve 8 bit renk derinliği (256 renk) veya 32 bit renk derinliği (gerçek renk) olabilir. 32 bit renk simgeleri tercih edilir. Simgeler genellikle tek bir bit eşlemde tek bir yatay satırda düzenlenir, ancak birden çok bit eşlemesine izin verilir. Bu bit *eşlemi,.vsct* dosyasında bit haritasında bulunan tek tek simgelerle birlikte bildirilir. Daha fazla ayrıntı için [Bitmaps öğesi](../extensibility/bitmaps-element.md) için başvuruya bakın.
+ Simgeler 16 piksel genişliğinde 16 piksel yüksekliğinde ve 8 bit renk derinliği (256 renk) ya da 32 bit renk derinliği (gerçek renk) olabilir. 32 bit renk simgeleri tercih edilir. Simgeler, genellikle çoklu bit eşlemlere izin verildiğinde tek bir bit eşlemdeki tek yatay bir satırda düzenlenir. Bu bit eşlem, *. vsct* dosyasında, bit eşlemde bulunan ayrı simgelerle birlikte bildirilmiştir. Daha fazla ayrıntı için bkz. [bit eşlemler öğesi](../extensibility/bitmaps-element.md) başvurusu.
 
 ## <a name="add-an-icon-to-a-command"></a>Komuta simge ekleme
- Aşağıdaki yordam, menü komutu ile varolan bir VSPackage projeniz olduğunu varsayar. Bunu nasıl yapacağımı öğrenmek için menü [komutu içeren uzantı oluştur'a](../extensibility/creating-an-extension-with-a-menu-command.md)bakın.
+ Aşağıdaki yordamda, bir menü komutuyla mevcut bir VSPackage projeniz olduğunu varsaymaktadır. Bunun nasıl yapılacağını öğrenmek için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-1. Renk derinliği 32 bit olan bir bit eşlemi oluşturun. Bu bitmap 16 piksel yüksekliğinde ve 16 piksel genişliğinde bir kat olmalıdır bu yüzden bir simge her zaman 16 x 16.
+1. 32 bitlik renk derinliğine sahip bir bit eşlem oluşturun. Bir simge her zaman 16 x 16 ve bu bit eşlem 16 piksel yüksekliğinde ve 16 piksellik bir kat olmalıdır.
 
-     Her simge bit eşlebesine tek bir satırda yan yana yerleştirilir. Her simgede saydamlık yerlerini belirtmek için alfa kanalını kullanın.
+     Her simge, tek bir satırda birbirini izleyen bit eşlemde yer alır. Her bir simgenin saydamlık konumlarını göstermek için alfa kanalını kullanın.
 
-     8 bit renk derinliği kullanıyorsanız, saydamlık `RGB(255,0,255)`olarak macenta kullanın. Ancak, 32 bit renk simgeleri tercih edilir.
+     8 bit renk derinliği kullanıyorsanız, saydamlık olarak Macenta ' i kullanın `RGB(255,0,255)` . Ancak, 32 bit renk simgeleri tercih edilir.
 
-2. Simge dosyasını VSPackage projenizdeki *Kaynaklar* dizinine kopyalayın. Çözüm **Gezgini'nde,** simgeyi projeye ekleyin. **(Kaynaklar'ı**seçin ve bağlam menüsünde **Öğe** **Ekle'yi**tıklatın ve simge dosyanızı seçin.)
+2. Simge dosyasını VSPackage projenizdeki *Resources* dizinine kopyalayın. **Çözüm Gezgini**, simgeyi projeye ekleyin. ( **Kaynakları**seçin ve bağlam menüsünde **Ekle**' ye tıklayın, ardından **Varolan öğe**' ye tıklayın ve simge dosyanızı seçin.)
 
-3. Editörde *.vsct* dosyasını açın.
+3. Düzenleyicide *. vsct* dosyasını açın.
 
-4. `GuidSymbol` **testIcon**adında bir öğe ekleyin. GUID **(Araçlar** > **GUID Oluştur,** **Ardından Kayıt Defteri Biçimi'ni** seçin ve `value` **Kopyala'yı**tıklatın) oluşturun ve öznitelik içine yapıştırın. Sonuç şu şekilde görünmelidir:
+4. `GuidSymbol` **Teyapışon**adlı bir öğe ekleyin. Bir GUID oluşturun (**Araçlar**  >  **GUID oluşturun**, ardından **kayıt defteri biçimi** ' ni seçin ve **Kopyala**' ya tıklayın) ve `value` özniteliğe yapıştırın. Sonuç şöyle görünmelidir:
 
     ```xml
     <!-- Create your own GUID -->
     <GuidSymbol name="testIcon" value="{00000000-0000-0000-0000-0000}">
     ```
 
-5. Simge `<IDSymbol>` için bir simge ekleyin. Öznitelik `name` simgenin kimliğidir ve varsa `value` şeritteki konumunu gösterir. Sadece bir simge varsa, 1 ekleyin. Sonuç şu şekilde görünmelidir:
+5. `<IDSymbol>`Simge için bir ekleyin. `name`Özniteliği SIMGENIN kimliğidir ve `value` varsa Şerit üzerindeki konumunu gösterir. Yalnızca bir simge varsa, 1 ekleyin. Sonuç şöyle görünmelidir:
 
     ```xml
     <!-- Create your own GUID -->
@@ -53,21 +53,21 @@ Komutlar hem menülerde hem de araç çubuklarında görünebilir. Araç çubukl
     </GuidSymbol>
     ```
 
-6. Simgeleri `<Bitmap>` içeren `<Bitmaps>` bit eşlemi temsil etmek için *.vsct* dosyasının bölümünde bir oluşturma.
+6. `<Bitmap>` `<Bitmaps>` Simgeleri içeren bit eşlemi temsil etmek için *. vsct* dosyasının bölümünde bir oluşturun.
 
-    - `guid` Değeri önceki adımda oluşturduğunuz öğenin `<GuidSymbol>` adına ayarlayın.
+    - Değeri, `guid` `<GuidSymbol>` önceki adımda oluşturduğunuz öğenin adına ayarlayın.
 
-    - Değeri bitmap dosyasının göreli yoluna ayarlama (bu durumda **\\ Kaynaklar\><simgesi dosya adı.** `href`
+    - `href`Değeri bit eşlem dosyasının göreli yoluna ayarlayın (Bu durumda, ** \\<simge dosya adı \> **.
 
-    - `usedList` Değeri daha önce oluşturduğunuz IDSymbol'a ayarlayın. Bu öznitelik, VSPackage'da kullanılacak simgelerin virgülle sınırlı bir listesini belirtir. Listede olmayan simgeler form derlemesi hariç tutulur.
+    - `usedList`Değerini daha önce oluşturduğunuz IDSymbol olarak ayarlayın. Bu öznitelik, VSPackage içinde kullanılacak simgelerin virgülle ayrılmış bir listesini belirtir. Listede olmayan simgeler, form derlemesini dışlanıyor.
 
-         Bitmap bloğu aşağıdaki gibi görünmelidir:
+         Bit eşlem bloğu şuna benzemelidir:
 
         ```xml
         <Bitmap guid="testIcon" href="Resources\<icon file name>" usedList="testIcon1"/>
         ```
 
-7. Varolan `<Button>` öğede, `Icon` öğeyi daha önce oluşturduğunuz GUIDSymbol ve IDSymbol değerlerine ayarlayın. Aşağıda, bu değerlere sahip bir Düğme öğesi örneği verilmiştir:
+7. Var olan `<Button>` öğesinde, `Icon` öğesini daha önce oluşturduğunuz GuidSymbol ve IDSymbol değerleri olarak ayarlayın. Bu değerleri içeren bir Button öğesi örneği aşağıda verilmiştir:
 
     ```xml
     <Button guid="guidAddIconCmdSet" id="cmdidMyCommand" priority="0x0100" type="Button">
@@ -79,8 +79,8 @@ Komutlar hem menülerde hem de araç çubuklarında görünebilir. Araç çubukl
     </Button>
     ```
 
-8. Simgenizi test edin. Projeyi oluşturun ve hata ayıklamaya başlayın. Deneysel örnekte, komutu bulun. Eklediğiniz simgeyi göstermelidir.
+8. Simgenizi test edin. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnekte komutunu bulun. Eklediğiniz simgeyi göstermelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Menüleri ve komutları genişletme](../extensibility/extending-menus-and-commands.md)
-- [VSCT XML şema referansı](../extensibility/vsct-xml-schema-reference.md)
+- [VSCT XML Şeması Başvurusu](../extensibility/vsct-xml-schema-reference.md)

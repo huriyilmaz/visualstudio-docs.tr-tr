@@ -1,7 +1,7 @@
 ---
-title: Modal İletişim Kutuları Oluşturma ve Yönetme | Microsoft Dokümanlar
+title: Kalıcı Iletişim kutuları oluşturma ve yönetme | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - dialog boxes, managing in Visual Studio
 ms.assetid: 491bc0de-7dba-478c-a76b-923440e090f3
@@ -10,48 +10,48 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 786a2fbe2b75c51420668eb1ab6f596213d3da9b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: f2f4f296bb155bcde82235d962ae63c8fa4d41d7
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80739487"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903775"
 ---
-# <a name="create-and-manage-modal-dialog-boxes"></a>Modal iletişim kutuları oluşturma ve yönetme
-Visual Studio içinde bir modal iletişim kutusu oluşturduğunuzda, iletişim kutusu görüntülenirken iletişim kutusunun üst penceresinin devre dışı bırakıldığından emin olmalısınız ve iletişim kutusu kapatıldıktan sonra üst pencereyi yeniden etkinleştirin. Bunu yapmazsanız, hata alabilirsiniz: *Microsoft Visual Studio bir modal iletişim etkin olduğu için kapatılamaz. Etkin iletişim kutusunu kapatın ve yeniden deneyin.*
+# <a name="create-and-manage-modal-dialog-boxes"></a>Kalıcı iletişim kutuları oluşturma ve yönetme
+Visual Studio içinde kalıcı iletişim kutusu oluşturduğunuzda iletişim kutusu görüntülenirken iletişim kutusunun ana penceresinin devre dışı olduğundan emin olmanız gerekir ve iletişim kutusu kapatıldıktan sonra üst pencereyi yeniden etkinleştirin. Bunu yapmazsanız, şu hatayı alabilirsiniz: *kalıcı bir iletişim kutusu etkin olduğundan Microsoft Visual Studio kapatılamadı. Etkin iletişim kutusunu kapatın ve yeniden deneyin.*
 
-Bunu yapmanın iki yolu vardır. WPF iletişim kutunuz varsa önerilen yol, bu <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>kutuyu ve iletişim <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow.ShowModal%2A> kutusunu görüntülemek için aramaktır. Bunu yaparsanız, üst pencerenin modal durumunu yönetmeniz gerekmez.
+Bunu yapmanın iki yolu vardır. Önerilen yol, bir WPF iletişim kutusu varsa, bunu türetirsiniz <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> ve <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow.ShowModal%2A> iletişim kutusunu göstermek için öğesini çağırın. Bunu yaparsanız, ana pencerenin kalıcı durumunu yönetmeniz gerekmez.
 
-İletişim kutunuz WPF değilse veya başka bir nedenle iletişim kutusu sınıfınızı <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>türetemiyorsanız, iletişim kutusunu kapattıktan sonra <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.GetDialogOwnerHwnd%2A> iletişim kutusunu görüntülemeden önce <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.EnableModeless%2A> yöntemi 0 (yanlış) parametreyle arayarak ve yöntemi tekrar arayarak, iletişim kutusunu arayarak iletişim kutusunun üst öğesini kendiniz aramanız ve yönetmeniz gerekir.
+İletişim kutusu WPF değilse veya başka bir nedenden dolayı iletişim kutusu sınıfınızı türetimiyorsanız, iletişim kutusunu görüntülemeden ve iletişim <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.GetDialogOwnerHwnd%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.EnableModeless%2A> kutusunu kapattıktan sonra yöntemi bir 1 (true) parametresiyle yeniden çağırarak, iletişim kutusunun üst öğesini bir parametresi olarak çağırarak ve bir parametre ile tekrar çağırarak, iletişim kutusunun üst öğesini almanız ve yönetmeniz gerekir.
 
-## <a name="create-a-dialog-box-derived-from-dialogwindow"></a>DialogWindow'dan türetilen bir iletişim kutusu oluşturma
+## <a name="create-a-dialog-box-derived-from-dialogwindow"></a>DialogWindow 'dan türetilmiş bir iletişim kutusu oluştur
 
-1. **OpenDialogTest** adında bir VSIX projesi oluşturun ve **OpenDialog**adlı bir menü komutu ekleyin. Bunun nasıl yapılacılaştırılaçılacılığı hakkında daha fazla bilgi için, [menü komutuyla uzantıcı oluştur'](../extensibility/creating-an-extension-with-a-menu-command.md)a bak
+1. **OpenDialogTest** ADLı bir VSIX projesi oluşturun ve **OpenDialog**adlı bir menü komutu ekleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
-2. <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> Sınıfı kullanmak için aşağıdaki derlemelere **(Başvuru Ekle** iletişim kutusunun Çerçeve sekmesinde) göndermeler eklemeniz gerekir:
+2. Sınıfını kullanmak için <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> , aşağıdaki derlemelere başvurular eklemelisiniz ( **Başvuru Ekle** iletişim kutusunun Framework sekmesinde):
 
-    - *Presentationcore*
+    - *PresentationCore*
 
-    - *Presentationframework*
+    - *PresentationFramework*
 
-    - *Windowsbase*
+    - *WindowsBase*
 
-    - *Sistem.Xaml*
+    - *System. xaml*
 
-3. *OpenDialog.cs*olarak, aşağıdaki `using` ifadeyi ekleyin:
+3. *OpenDialog.cs*içinde aşağıdaki `using` ifadeyi ekleyin:
 
     ```csharp
     using Microsoft.VisualStudio.PlatformUI;
     ```
 
-4. Bu türlerden `TestDialogWindow` türeyen adlı bir sınıf bildirin: <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow>
+4. Şu kaynaktan türetilen adlı bir sınıf bildirin `TestDialogWindow` <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> :
 
     ```csharp
     class TestDialogWindow : DialogWindow
     {. . .}
     ```
 
-5. İletişim kutusunu en aza indirmek ve en <xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMaximizeButton%2A> <xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMinimizeButton%2A> üst düzeye çıkarmak için, ayarlayın ve doğru:
+5. İletişim kutusunu en aza indirebilmek ve en üst düzeye çıkarmak için, <xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMaximizeButton%2A> ve <xref:Microsoft.VisualStudio.PlatformUI.DialogWindowBase.HasMinimizeButton%2A> true olarak ayarlayın:
 
     ```csharp
     internal TestDialogWindow()
@@ -61,40 +61,40 @@ Bunu yapmanın iki yolu vardır. WPF iletişim kutunuz varsa önerilen yol, bu <
     }
     ```
 
-6. `OpenDialog.ShowMessageBox` Yöntemde, varolan kodu aşağıdakilerle değiştirin:
+6. Yönteminde, `OpenDialog.ShowMessageBox` mevcut kodu şu kodla değiştirin:
 
     ```csharp
     TestDialogWindow testDialog = new TestDialogWindow();
     testDialog.ShowModal();
     ```
 
-7. Uygulamayı derleyin ve çalıştırın. Visual Studio'nun deneysel örneği görünmelidir. Deneme örneğinin **Araçlar** menüsünde **Invoke OpenDialog**adlı bir komut görmeniz gerekir. Bu komutu tıklattığınızda, iletişim penceresini görmeniz gerekir. Pencereyi en aza indirip en üst düzeye çıkarabilmelisin.
+7. Uygulamayı derleyin ve çalıştırın. Visual Studio 'nun deneysel örneği görünmelidir. Deneysel örneğin **Araçlar** menüsünde, **OpenDialog Invoke**adlı bir komut görmeniz gerekir. Bu komuta tıkladığınızda, iletişim kutusu penceresini görmeniz gerekir. Pencereyi simge durumuna küçültebilir ve ekranı kaplamasını sağlayabilmelisiniz.
 
-## <a name="create-and-manage-a-dialog-box-not-derived-from-dialogwindow"></a>DialogWindow'dan türetilen bir iletişim kutusu oluşturma ve yönetme
+## <a name="create-and-manage-a-dialog-box-not-derived-from-dialogwindow"></a>DialogWindow 'dan türetilmeyen bir iletişim kutusu oluşturma ve yönetme
 
-1. Bu yordam için, önceki yordamda oluşturduğunuz **OpenDialogTest** çözümünü aynı derleme başvurularıyla kullanabilirsiniz.
+1. Bu yordam için, önceki yordamda oluşturduğunuz **OpenDialogTest** çözümünü aynı derleme başvurularına sahip olacak şekilde kullanabilirsiniz.
 
-2. Aşağıdaki `using` bildirimleri ekleyin:
+2. Aşağıdaki bildirimleri ekleyin `using` :
 
     ```csharp
     using System.Windows;
     using Microsoft.Internal.VisualStudio.PlatformUI;
     ```
 
-3. Şundan türeyen bir sınıf oluşturun: `TestDialogWindow2` <xref:System.Windows.Window>
+3. Öğesinden türetilen adlı bir sınıf oluşturun `TestDialogWindow2` <xref:System.Windows.Window> :
 
     ```csharp
     class TestDialogWindow2 : Window
     {. . .}
     ```
 
-4. Özel bir başvuru <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>ekleyin:
+4. Özel bir başvuru ekleyin <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> :
 
     ```
     private IVsUIShell shell;
     ```
 
-5. Başvuruyu ayarlayan bir oluşturucu <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell>ekleyin:
+5. Başvuruyu ayarlayan bir Oluşturucu ekleyin <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell> :
 
     ```csharp
     public TestDialogWindow2(IVsUIShell uiShell)
@@ -103,7 +103,7 @@ Bunu yapmanın iki yolu vardır. WPF iletişim kutunuz varsa önerilen yol, bu <
     }
     ```
 
-6. `OpenDialog.ShowMessageBox` Yöntemde, varolan kodu aşağıdakilerle değiştirin:
+6. Yönteminde, `OpenDialog.ShowMessageBox` mevcut kodu şu kodla değiştirin:
 
     ```csharp
     IVsUIShell uiShell = (IVsUIShell)ServiceProvider.GetService(typeof(SVsUIShell));
@@ -125,4 +125,4 @@ Bunu yapmanın iki yolu vardır. WPF iletişim kutunuz varsa önerilen yol, bu <
     }
     ```
 
-7. Uygulamayı derleyin ve çalıştırın. **Araçlar** menüsünde **Invoke OpenDialog**adlı bir komut görmeniz gerekir. Bu komutu tıklattığınızda, iletişim penceresini görmeniz gerekir.
+7. Uygulamayı derleyin ve çalıştırın. **Araçlar** menüsünde, **OpenDialog Invoke**adlı bir komut görmeniz gerekir. Bu komuta tıkladığınızda, iletişim kutusu penceresini görmeniz gerekir.

@@ -5,14 +5,14 @@ ms.author: lank
 manager: lank
 ms.assetid: 76654645-08ee-445d-b9ee-123126d1f0fb
 ms.date: 04/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Visual Studio aboneliklerini Microsoft Store nasıl satın alabileceğinizi ve bunları Visual Studio abonelikleri portalında nasıl etkinleştireceğinizi öğrenin.
-ms.openlocfilehash: f8102a10f049c04695ba1d5415febd9cee3d7130
-ms.sourcegitcommit: 960bab34e126c9ca449560a76a839a8f8c3263fb
+ms.openlocfilehash: 217c19ea0f8c4a793fc11a84eaa8f276960af3da
+ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82072520"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85903105"
 ---
 # <a name="visual-studio-subscriptions-are-available-through-the-microsoft-store"></a>Visual Studio abonelikleri Microsoft Store aracılığıyla kullanılabilir
 Visual Studio abonelikleri, [toplu lisanslama](https://www.microsoft.com/licensing/default), bulut çözümü sağlayıcıları, [Visual Studio Market](https://marketplace.visualstudio.com/subscriptions)ve Microsoft Store dahil olmak üzere çeşitli kanallar aracılığıyla kullanılabilir.  Bu makale, [Microsoft Store](https://www.microsoft.com/store/collections/visualstudio)aracılığıyla abonelikleri satın almayı ve etkinleştirmeyi keşfedecektir.  
@@ -34,7 +34,7 @@ Bu aboneliğin her biri, ilk satın alma veya mevcut bir aboneliği yenileme se�
 Microsoft Store aracılığıyla bir Visual Studio aboneliği satın aldıktan sonra, satın alımınızdan sonra aldığınız "onay sayfasından" veya "onay e-postalarından" etkinleştirme işlemini başlatabilirsiniz.
 
 1. Onay e-postasında veya satın alma onayı sayfasında **oturum açmak için buraya tıklayın** seçeneğine tıklayın.
-2. Uygulamasına [https://my.visualstudio.com/subscriptions/activate](https://my.visualstudio.com/subscriptions/activate?wt.mc_id=o~msft~docs)yönlendirilirsiniz.
+2. Uygulamasına yönlendirilirsiniz [https://my.visualstudio.com/subscriptions/activate](https://my.visualstudio.com/subscriptions/activate?wt.mc_id=o~msft~docs) .
 3. Visual Studio aboneliğine erişim gerektiren e-posta adresini girin ve **devam**' a tıklayın.
 4. Kullanmakta olduğunuz hesap türüne bağlı olarak iki farklı oturum açma sayfasının birine yönlendirilebilirsiniz:
     - Kişisel "Microsoft hesabı" (MSA) kullanan aboneler, Microsoft hesabı parolası sayfasını görür.
