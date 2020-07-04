@@ -1,84 +1,85 @@
 ---
-title: Birlik için Mac Araçları için Kurulum Visual Studio
-description: Mac için Visual Studio'da kullanılmak üzere Unity araçları nın kurulumu ve yüklenmesi
+title: Unity için kurulum Mac için Visual Studio Araçları
+description: Mac için Visual Studio kullanım için Unity araçları ayarlama ve yükleme
 author: therealjohn
 ms.author: johmil
 ms.date: 06/18/2019
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: 1981141a01848dc7fac09913548f205a04ce618e
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: cc43dd74fb5427161cb3992394530328129c607c
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79303346"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85949977"
 ---
-# <a name="set-up-visual-studio-for-mac-tools-for-unity"></a>Unity için Mac Araçları için Visual Studio'u ayarlama
+# <a name="set-up-visual-studio-for-mac-tools-for-unity"></a>Unity için Mac için Visual Studio Araçları ayarlama
 
-Bu bölümde, Visual Studio for Mac Tools for Unity'yi kullanmaya nasıl başlarız açıklanmaktadır.
+Bu bölümde, Unity için Mac için Visual Studio araçlarını kullanmaya nasıl başlacağınız açıklanmaktadır.
 
 ## <a name="install-visual-studio-for-mac"></a>Mac için Visual Studio’yu yükleyin
 
-### <a name="unity-bundled-installation"></a>Birlik Paketli Kurulum
+### <a name="unity-bundled-installation"></a>Unity paketlenmiş yükleme
 
-Unity 2018.1 ile başlayan Visual Studio for Mac, Unity için varsayılan C# tümleşik geliştirme ortamıdır (IDE) ve Unity Download Assistant'ın yanı sıra Unity Hub yükleme aracına da dahildir. [store.unity.com'dan](https://store.unity.com/)Unity indirin.
+Unity 2018,1 ' den başlayarak, Unity için varsayılan C# tümleşik geliştirme ortamı (IDE) Mac için Visual Studio ve Unity hub yükleme aracının yanı sıra Unity Indirme Yardımcısı ' na de dahildir. [Store.Unity.com](https://store.unity.com/)adresinden Unity 'yi indirin.
 
-Yükleme sırasında, Mac için Visual Studio'nun Unity ile yüklenmesi gereken bileşenler listesinde işaretlendiğinden emin olun:
+Yükleme sırasında, Unity ile yüklenecek bileşenler listesinde Mac için Visual Studio işaretli olduğundan emin olun:
 
-#### <a name="unity-hub"></a>Birlik Merkezi
+#### <a name="unity-hub"></a>Unity hub 'ı
 
-![unity hub kurulumu](media/setup-vsmac-tools-unity-image7.png)
+![Unity hub yüklemesi](media/setup-vsmac-tools-unity-image7.png)
 
-#### <a name="unity-download-assistant"></a>Birlik İndirme Asistanı
+#### <a name="unity-download-assistant"></a>Unity Indirme Yardımcısı
 
-![unity download asistan yükleme](media/setup-vsmac-tools-unity-image8.png)
+![Unity indirme Yardımcısı yüklemesi](media/setup-vsmac-tools-unity-image8.png)
 
-#### <a name="check-for-updates-to-visual-studio-for-mac"></a>Mac için Visual Studio Güncellemeleri olup yok
+#### <a name="check-for-updates-to-visual-studio-for-mac"></a>Mac için Visual Studio güncelleştirmelerini denetle
 
-Visual Studio for Mac sürümü Unity yüklemesi ile birlikte en son olmayabilir. En son araçlara ve özelliklere erişebildiğinizden emin olmak için güncelleştirmeleri denetlemeniz önerilir.
+Unity yüklemesine eklenen Mac için Visual Studio sürümü en son sürüm olmayabilir. En son araçlara ve özelliklere erişiminizin olduğundan emin olmak için güncelleştirmelerin denetlenmesi önerilir.
 
-* [Mac için Visual Studio'nun güncellenmesi](update.md)
+* [Mac için Visual Studio güncelleştiriliyor](update.md)
 
 ### <a name="manual-installation"></a>El ile yükleme
 
-Unity 5.6.1 veya üzeri zatenniz varsa, ancak Mac için Visual Studio'nuz yoksa, Mac için Visual Studio'yu el ile yükleyebilirsiniz. Mac için Visual Studio'nun tüm sürümleri, ücretsiz Topluluk sürümü de dahil olmak üzere Mac Tools for Unity için Visual Studio ile birlikte verilir:
+Zaten Unity 5.6.1 veya üzeri bir hesabınız varsa ancak Mac için Visual Studio yoksa, Mac için Visual Studio el ile yükleyebilirsiniz. Tüm Mac için Visual Studio sürümleri, ücretsiz topluluk sürümü de dahil olmak üzere Unity için Mac için Visual Studio Araçları ile paketlenmiştir:
 
-* [Visualstudio.microsoft.com'dan](https://visualstudio.microsoft.com/)Mac için Visual Studio'dan indirin.
-* Mac Araçlar için Unity için Visual Studio yükleme işlemi sırasında otomatik olarak yüklenir.
+* [VisualStudio.Microsoft.com](https://visualstudio.microsoft.com/)adresinden indirin Mac için Visual Studio.
+* Unity için Mac için Visual Studio Araçları, yükleme işlemi sırasında otomatik olarak yüklenir.
 * Ek yükleme yardımı için [yükleme kılavuzundaki](/visualstudio/mac/installation) adımları izleyin.
 
 > [!NOTE]
-> Visual Studio for Mac Tools for Unity için Unity sürümü 5.6.1 veya üzeri gerektirir. Unity sürümünüzde Visual Studio Tools for Unity'nin etkinleştirildiğinden doğrulamak için, Unity menüsünden **Birlik Hakkında'yı** seçin ve iletişim kutusunun sol alt kısmındaki "Microsoft Visual Studio Tools for Unity enabled" metnini arayın.
+> Unity için Mac için Visual Studio Araçları, Unity sürüm 5.6.1 veya üstünü gerektirir. Unity sürümünüzde Unity için Visual Studio Araçları etkinleştirildiğini doğrulamak için Unity menüsünde **Unity hakkında** ' yı seçin ve iletişim kutusunun sol alt kısmındaki "unity Için Microsoft Visual Studio Araçları" metnini arayın.
 >
-> ![Birlik Hakkında](media/setup-vsmac-tools-unity-image3.png)
+> ![Unity hakkında](media/setup-vsmac-tools-unity-image3.png)
 
-## <a name="confirm-that-the-visual-studio-for-mac-tools-for-unity-extension-is-enabled"></a>Mac Tools for Unity uzantısı için Visual Studio'nun etkinleştirildiğinden onaylayın
+## <a name="confirm-that-the-visual-studio-for-mac-tools-for-unity-extension-is-enabled"></a>Unity uzantısının Mac için Visual Studio araçlarının etkin olduğunu onaylayın
 
-Mac Tools for Unity uzantısı için Visual Studio varsayılan olarak etkinleştirilirken, bunu onaylayabilir ve yüklü sürüm numarasını kontrol edebilirsiniz:
+Unity uzantısı için Mac için Visual Studio Araçları varsayılan olarak etkinleştirilirken, bunu onaylayıp yüklü sürüm numarasını kontrol edebilirsiniz:
 
-1. Visual Studio menüsünden **Uzantılar'ı seçin...**.
+1. Visual Studio menüsünden Uzantılar ' ı seçin. **..**
 
-   ![Uzantıları Seçin](media/setup-vsmac-tools-unity-image1.png)
+   ![Uzantıları seçin](media/setup-vsmac-tools-unity-image1.png)
 
-2. Oyun Geliştirme bölümünü genişletin ve Unity girişi için Mac Tools için Visual Studio'yu onaylayın.
+2. Oyun geliştirme bölümünü genişletin ve Unity girişi için Mac için Visual Studio Araçları ' nı onaylayın.
 
-   ![Birlik Girişini Görüntüle](media/setup-vsmac-tools-unity-image2.png)
+   ![Unity girişini görüntüle](media/setup-vsmac-tools-unity-image2.png)
 
-## <a name="configure-unity-for-use-with-visual-studio-for-mac"></a>Mac için Visual Studio ile kullanım için Birliği Yapılandır
+## <a name="configure-unity-for-use-with-visual-studio-for-mac"></a>Unity 'yi Mac için Visual Studio ile kullanım için yapılandırma
 
-Unity 2018.1 ile başlayan Visual Studio, Unity'de varsayılan dış komut dosyası düzenleyicisi olmalıdır. Bunu onaylayabilir veya harici komut dosyası düzenleyicisini Visual Studio olarak değiştirebilirsiniz:
+Unity 2018,1 ' den itibaren, Visual Studio 'Nun Unity 'de varsayılan dış betik Düzenleyicisi olması gerekir. Bunu doğrulayabilirsiniz veya dış betik düzenleyicisini Visual Studio 'ya değiştirebilirsiniz:
 
-1. Birlik menüsünden **Tercihler...** seçeneğini belirleyin.
+1. Unity menüsünden **Tercihler...** seçeneğini belirleyin.
 
-   ![Tercihleri Seçin](media/setup-vsmac-tools-unity-image4.png)
+   ![Tercihleri seçin](media/setup-vsmac-tools-unity-image4.png)
 
-2. Tercihler iletişim kutusunda Dış **Araçlar** sekmesini seçin.
+2. Tercihler iletişim kutusunda **dış araçlar** sekmesini seçin.
 
-3. Harici Komut Dosyası Düzenleyicisi açılır listesinden, listelenmişse **Visual Studio'yu** seçin, aksi takdirde **Gözat'ı seçin...**.
+3. Dış betik Düzenleyicisi açılan listesinden, listeleniyorsa **Visual Studio** ' yı seçin, aksi takdirde, **araştır...**' ı seçin.
 
-   ![Visual Studio'yı seçin](media/setup-vsmac-tools-unity-image5.png)
+   ![Visual Studio 'Yu seçin](media/setup-vsmac-tools-unity-image5.png)
 
-4. **Gözat...** seçildiyse, Uygulamalar dizinine gidin ve Visual Studio'yu seçin ve ardından **Aç'ı**tıklatın.
+4. Eğer **gözatılamıyor...** seçilirse, uygulamalar dizinine gidin ve Visual Studio 'Yu seçip **Aç**' a tıklayın.
 
-   ![Aç'ı Seçin](media/setup-vsmac-tools-unity-image6.png)
+   ![Açık Seç](media/setup-vsmac-tools-unity-image6.png)
 
-5. Visual Studio **Dış Komut Dosyası Düzenleyicisi** listesinde seçildikten sonra yapılandırma işlemini tamamlamak için Tercihler iletişim kutusunu kapatın.
+5. **Dış betik Düzenleyicisi** listesinde Visual Studio seçildikten sonra yapılandırma işlemini gerçekleştirmek için Tercihler iletişim kutusunu kapatın.

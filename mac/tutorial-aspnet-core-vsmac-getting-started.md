@@ -1,32 +1,33 @@
 ---
 title: Mac için Visual Studio’da ASP.NET Core kullanmaya başlama
-description: Bu belge, Mac için Visual Studio'da ASP.NET Core ile nasıl başlayacağımı gösteren video eğitimleri içerir.
+description: Bu belge Mac için Visual Studio ASP.NET Core nasıl başlayacağınız hakkında video öğreticileri içerir.
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 10/18/2019
 ms.assetid: 591b21ee-8c3f-446b-9505-7d41bfc86701
-ms.openlocfilehash: e8c603c7a87bc402f8b61e2266aca2868f9464a7
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: tutorial
+ms.openlocfilehash: 3dcd5dc3ae3a3a373d0fed471c4577b859acbf9e
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "72749006"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85949947"
 ---
-# <a name="tutorial-getting-started-with-aspnet-core-in-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio ASP.NET Core ile başlarken
+# <a name="tutorial-getting-started-with-aspnet-core-in-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio ASP.NET Core kullanmaya başlama
 
-Bu öğretici iki adımdan oluşur; Mac için Visual Studio'yu kurmak ve ilk ASP.NET Core web uygulamanızı oluşturmak.
+Bu öğretici iki adımdan oluşur; Mac için Visual Studio yükleme ve ilk ASP.NET Core Web uygulamanızı oluşturma.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-Bu video eğitimi ve adım adım talimatlarla Visual Studio 2019'u Mac için nasıl yükleyebilirsiniz öğrenin.
+Bu video öğreticisiyle Mac için Visual Studio 2019 ' i nasıl yükleyeceğinizi ve adım adım yönergeleri öğrenin.
 
-[Adım adım geçiş](installation.md)
+[Adım adım yönergeler](installation.md)
 
 > [!VIDEO https://www.youtube.com/embed/qBWzzhW-Xys]
 
-## <a name="building-your-first-aspnet-core-web-application"></a>İlk ASP.NET Core Web Uygulamanızı Oluşturma
+## <a name="building-your-first-aspnet-core-web-application"></a>İlk ASP.NET Core Web uygulamanızı oluşturma
 
-Mac için Visual Studio'yu kullanarak ilk ASP.NET Core Web Uygulamanızı nasıl oluşturabilirsiniz öğrenmek için bu videoyu izleyin.
+Mac için Visual Studio kullanarak ilk ASP.NET Core Web uygulamanızı oluşturmayı öğrenmek için bu videoyu izleyin.
 
 > [!VIDEO https://www.youtube.com/embed/2CsZpJdFFnQ]
 

@@ -1,100 +1,101 @@
 ---
-title: Takım Temel Sürüm Kontrolü (TFVC)
-description: TFVC ve macOS hakkında bir sorun giderme kılavuzu.
+title: Team Foundation Sürüm Denetimi (TFVC)
+description: TFVC ve macOS hakkında sorun giderme kılavuzu.
 author: jmatthiesen
 ms.author: jomatthi
 ms.date: 09/02/2019
 ms.technology: vs-ide-general
 ms.assetid: 52D3D26A-4D01-4FD1-AAA1-AE7D7BD39746
-ms.openlocfilehash: e56aec03aabe818731c65acb30eafcc18f170ac3
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: troubleshooting
+ms.openlocfilehash: c51f3cd50598cd0c33b019c09f95554cc5f9058b
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "73714518"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950503"
 ---
 # <a name="does-visual-studio-for-mac-support-team-foundation-version-control"></a>Mac için Visual Studio, Team Foundation Sürüm Denetimi’ni destekler mi?
 
 > [!CAUTION]
-> Mac için Visual Studio için önizleme TFVC uzantısı artık Visual Studio 2019'da Mac için desteklenmez.
+> Mac için Visual Studio için Preview TFVC uzantısı artık Mac için Visual Studio 2019 ' de desteklenmemektedir.
 
 
-## <a name="alternative-version-control-options-in-visual-studio-for-mac"></a>Mac için Visual Studio'da Alternatif Sürüm Kontrolü seçenekleri
+## <a name="alternative-version-control-options-in-visual-studio-for-mac"></a>Mac için Visual Studio alternatif sürüm denetimi seçenekleri
 
-macOS'taki en iyi sürüm kontrol deneyimi için, Team Foundation Version Control (TFVC) yerine **Git'i** kullanmanızı öneririz. 
+MacOS üzerinde en iyi sürüm denetimi deneyimi için Team Foundation Sürüm Denetimi (TFVC) yerine **Git** kullanmanız önerilir. 
 
-Git, Mac için Visual Studio'da desteklenir ve Team Foundation Server (TFS)/Azure DevOps'te barındırılan depolar için varsayılan seçenektir. TFS/Azure DevOps ile Git'i kullanma hakkında daha fazla bilgi edinmek için [Git Deposu Oluşturma](/visualstudio/mac/set-up-git-repository) kılavuzuna bakın.
+Git Mac için Visual Studio desteklenir ve Team Foundation Server (TFS)/Azure DevOps içinde barındırılan depolar için varsayılan seçenektir. Git 'i TFS/Azure DevOps ile kullanma hakkında daha fazla bilgi için bkz. [Git deposu ayarlama](/visualstudio/mac/set-up-git-repository) Kılavuzu.
 
-## <a name="unsupported-workarounds-for-tfvc"></a>TFVC için desteklenmeyen geçici geçici işler
+## <a name="unsupported-workarounds-for-tfvc"></a>TFVC için desteklenmeyen geçici çözümler
 
-Mac için Visual Studio resmi olarak TFVC'yi desteklemese de, bu kılavuzun geri kalanı macOS'ta TFVC ile çalışmak için bazı geçici çözüm sağlar. Bugün sürüm kontrolü için TFVC kullanıyorsanız, TFVC'de barındırılan kaynak kodunuza erişmek için kullanabileceğiniz bazı çözümler şunlardır:
+Mac için Visual Studio resmi olarak TFVC 'yi desteklemediğinden, bu kılavuzun geri kalanı macOS 'ta TFVC ile çalışmak için bazı geçici çözümler sunar. Sürüm denetimi için TFVC 'yi bugün kullanıyorsanız, TFVC 'de barındırılan kaynak kodunuza erişmek için kullanabileceğiniz bazı çözümler aşağıda verilmiştir:
 
-* 1. Seçenek [Grafiksel bir bilgi edinin için Visual Studio Code ve Azure Depoları uzantısını kullanma](#use-visual-studio-code-and-the-azure-repos-extension)
-* 2. Seçenek [Team Explorer Everywhere Komut Satırı İstemcisini (TEE-CLC) kullanarak repo'nuza bağlanın](#connecting-using-the-team-explorer-everywhere-command-line-client)
+* 1. Seçenek [Grafik Kullanıcı arabirimi için Visual Studio Code ve Azure Repos uzantısını kullanın](#use-visual-studio-code-and-the-azure-repos-extension)
+* 2. Seçenek [Team Explorer Everywhere komut satırı Istemcisini (t-CLC) kullanarak depoya bağlanma](#connecting-using-the-team-explorer-everywhere-command-line-client)
 
-### <a name="option-1--use-visual-studio-code-and-the-azure-repos-extension"></a>1. Seçenek <a id="use-visual-studio-code-and-the-azure-repos-extension"></a>Visual Studio Kodu ve Azure Depoları uzantısını kullanma
+### <a name="option-1--use-visual-studio-code-and-the-azure-repos-extension"></a>1. Seçenek <a id="use-visual-studio-code-and-the-azure-repos-extension"></a>Visual Studio Code ve Azure Repos uzantısını kullanın
 
-Dosyalarınızı sürüm denetiminde yönetmek için grafik arabirimiyle çalışmak isterseniz, Visual Studio Code için Azure Repos uzantısı Microsoft tarafından desteklenen bir çözüm sağlar. Başlamak için [Visual Studio Code'u](https://code.visualstudio.com) indirin ve azure depo uzantısını nasıl [yapılandırıştırılacaöğrenin.](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team)
+Sürüm denetimindeki dosyalarınızı yönetmek için bir grafik arabirimle çalışmak isterseniz, Visual Studio Code için Azure Repos uzantısı Microsoft tarafından desteklenen bir çözüm sağlar. Başlamak için [Visual Studio Code](https://code.visualstudio.com) indirin ve [Azure Repos uzantısının nasıl yapılandırılacağını](https://marketplace.visualstudio.com/items?itemName=ms-vsts.team)öğrenin.
 
-### <a name="option-2--connecting-using-the-team-explorer-everywhere-command-line-client"></a>2. Seçenek <a id="connecting-using-the-team-explorer-everywhere-command-line-client"></a>Her Yerde Takım Gezgini Komut Satırı İstemcisini kullanarak bağlanma
+### <a name="option-2--connecting-using-the-team-explorer-everywhere-command-line-client"></a>2. Seçenek <a id="connecting-using-the-team-explorer-everywhere-command-line-client"></a>Team Explorer Everywhere komut satırı Istemcisini kullanarak bağlanma
 
 > [!IMPORTANT]
-> Team Explorer Everywhere README'a göre, bu proje [artık sürdürülmemektedir.](https://github.com/microsoft/team-explorer-everywhere)
+> Team Explorer Everywhere README uyarınca bu proje [artık korunmaz](https://github.com/microsoft/team-explorer-everywhere).
 
-macOS Terminali'ni kullanmaktan memnunsanız, Team Explorer Everywhere Komut Satırı İstemi (TEE-CLC) Kaynağınıza TFVC'de bağlanmak için desteklenen bir yol sağlar.
+MacOS terminalini rahat kullanıyorsanız, Team Explorer Everywhere komut satırı Istemcisi (t-CLC), TFVC 'de kaynağınıza bağlanmak için desteklenen bir yol sağlar.
 
-TFVC bağlantınızı kurmak ve değişiklikler gerçekleştirmek için aşağıdaki adımları izleyebilirsiniz.
+TFVC bağlantısını kurmak ve değişiklikleri kaydetmek için aşağıdaki adımları izleyebilirsiniz.
 
-#### <a name="setting-up-the-tee-clc"></a>TEE-CLC'nin kurulumu
+#### <a name="setting-up-the-tee-clc"></a>T-CLC ayarlanıyor
 
-TEE-CLC ile kurulum almanın iki yolu vardır.
+T-CLC ile kurulum almanın iki yolu vardır.
 
-* İstemciyi yüklemek için Homebrew'i kullanma veya
-* İstemciyi indirin ve el ile kurun
+* İstemcisini yüklemek için homebrew kullanın veya
+* İstemciyi indirip el ile yükleme
 
-En kolay çözüm **HomeBrew kullanıyor**, macOS için bir paket yöneticisi. Bu yöntemi kullanarak yüklemek için:
+En kolay çözüm, macOS için bir paket yöneticisi olan **HomeBrew**' ı kullanmaktır. Bu yöntemi kullanarak yüklemek için:
 
-1. macOS Terminaluygulamasını başlatın.
-1. Homebrew'i Terminal'i ve [Homebrew ana sayfasındaki](https://brew.sh/)talimatları kullanarak yükleyin.
+1. MacOS Terminal uygulamasını başlatın.
+1. Terminal ve [homebrew giriş sayfasındaki](https://brew.sh/)yönergeleri kullanarak Homebrew 'ı yükler.
 1. Homebrew yüklendikten sonra Terminalinizden aşağıdaki komutu çalıştırın:`brew install tee-clc`
 
-**TEE-CLC'yi el ile kurmak**için:
+**T-CLC ' i el ile ayarlamak**için:
 
-1. Team Explorer Everywhere GitHub repo'nun sürümler sayfasından [tee-clc'nin en son sürümünü indirin](https://github.com/Microsoft/team-explorer-everywhere/releases) (örn. bu yazı nın yazıldığı sırada tee-clc-14.134.0.zip).
-1. .zip'in içeriğini diskteki bir klasöre ayıklayın.
-1. macOS Terminali uygulamasını açın `cd` ve önceki adımda kullandığınız klasöre geçmek için komutu kullanın.
-1. Klasörün içinden, komut `./tf` satırı istemcisinin çalıştırabileceğini test etmek için komutu çalıştırın, Java veya diğer bağımlılıkları yüklemeniz istenebilir.
+1. Team Explorer Everywhere GitHub deposunun yayınlar sayfasından [t-CLC ' un en son sürümünü indirin](https://github.com/Microsoft/team-explorer-everywhere/releases) (örneğin, bu yazma sırasında tee-clc-14.134.0.zip).
+1. . Zip içeriğini diskteki bir klasöre ayıklayın.
+1. MacOS Terminal uygulamasını açın ve `cd` önceki adımda kullandığınız klasöre geçmek için komutunu kullanın.
+1. Klasörü içinden `./tf` komut satırı istemcisinin çalıştıracağınızı sınamak için komutunu çalıştırın, Java veya başka bağımlılıklar yüklemek isteyip istemediğiniz sorulur.
 
-TEE-CLC yüklendikten sonra, istemcinin lisans `tf eula` sözleşmesini görüntülemek ve kabul etmek için komutu çalıştırabilirsiniz.
+T-CLC yüklendikten sonra, `tf eula` istemcinin lisans sözleşmesini görüntülemek ve kabul etmek için komutunu çalıştırabilirsiniz.
 
-Son olarak, TFS/Azure DevOps ortamınızla kimlik doğrulaması yapmak için sunucuda kişisel erişim belirteci oluşturmanız gerekir. [Kişisel erişim belirteçleri ile kimlik doğrulama](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops)hakkında daha fazla bilgi edinin. TFVC ile kullanılacak kişisel erişim jetonu oluştururken, belirteci yapılandırırken Tam Erişim sağladığından emin olun.
+Son olarak, TFS/Azure DevOps ortamınızdan kimlik doğrulamak için sunucuda bir kişisel erişim belirteci oluşturmanız gerekir. [Kişisel erişim belirteçleriyle kimlik doğrulama](/azure/devops/integrate/get-started/authentication/pats?view=azure-devops)hakkında daha fazla bilgi edinin. TFVC ile kullanmak için bir kişisel erişim belirteci oluştururken, belirteci yapılandırırken tam erişim sağladığınızdan emin olun.
 
-#### <a name="using-the-tee-clc-to-connect-to-your-repo"></a>Repo'nuza bağlanmak için TEE-CLC'yi kullanma
+#### <a name="using-the-tee-clc-to-connect-to-your-repo"></a>Depoya bağlanmak için t-CLC kullanma
 
-Kaynak kodunuza bağlanmak için öncelikle komutu `tf workspace` kullanarak bir çalışma alanı oluşturmanız gerekir. Örneğin, aşağıdaki komutlar Azure DevOps Hizmetleri'ndeki "MyOrganization" adlı bir Kuruluşa bağlanır: 
+Kaynak kodunuza bağlanmak için, önce komutunu kullanarak bir çalışma alanı oluşturmanız gerekir `tf workspace` . Örneğin, aşağıdaki komutlar "Myorganleştirme" adlı Azure DevOps Services bir kuruluşa bağlanır: 
 
 ```bash
 export TF_AUTO_SAVE_CREDENTIALS=1
 tf workspace -new MyWorkspace -collection:https://dev.azure.com/MyOrganization
 ```
 
-Ortam `TF_AUTO_SAVE_CREDENTIALS` ayarı, kimlik bilgilerinizi kaydetmek için kullanılır, böylece birden çok kez girmeniz istenmez. Bir kullanıcı adı istendiğinde, önceki bölümde oluşturduğunuz kişisel erişim belirteci kullanın ve boş bir parola kullanın.
+`TF_AUTO_SAVE_CREDENTIALS`Ortam ayarı, kimlik bilgilerinizi birden çok kez girmeniz istenmeyecek şekilde kaydetmek için kullanılır. Bir Kullanıcı adı sorulduğunda, önceki bölümde oluşturduğunuz kişisel erişim belirtecini kullanın ve boş bir parola kullanın.
 
-Kaynak dosyalarınızın yerel bir klasöre eşleneği oluşturmak `tf workfold` için komutu kullanırsınız. Aşağıdaki örnek, "MyRepository" TFVC projesinden "WebApp.Services" adlı bir klasörün haritasını çıkarır ve yerel ~/Projects/klasörüne (örneğin geçerli kullanıcıların ev klasöründe bir "Projeler" klasörüne) kopyalanacak şekilde ayarlar.
+Kaynak dosyalarınızın bir yerel klasöre eşlenmesini oluşturmak için `tf workfold` komutunu kullanırsınız. Aşağıdaki örnekte "WebApp. Services" adlı bir klasör "MyRepository" TFVC projesinden eşlenir ve yerel ~/Projects/klasörüne (yani geçerli kullanıcıların giriş klasöründeki "projeler" klasörü) kopyalanmak üzere ayarlanır.
 
 ```bash
 tf workfold -map $/MyRepository/WebApp.Services -workspace:MyWorkspace ~/Projects/
 ```
 
-Son olarak, kaynak dosyaları sunucudan almak ve yerel olarak kopyalamak için aşağıdaki komutu kullanırsınız:
+Son olarak, kaynak dosyaları sunucudan almak ve yerel olarak kopyalamak için aşağıdaki komutu kullanın:
 
 ```bash
 tf get
 ```
 
-#### <a name="committing-changes-using-the-tee-clc"></a>TEE-CLC kullanarak değişiklik yapmak
+#### <a name="committing-changes-using-the-tee-clc"></a>T-CLC kullanarak değişiklikler yürütülüyor
 
-Mac için Visual Studio'da dosyalarınızda değişiklik yaptıktan sonra, denetimlerinizi iade etmek için Terminal'e geri dönebilirsiniz. Komut, `tf add` iade edilecek bekleyen değişiklikler listesine dosya eklemek için kullanılır `tf checkin` ve komut sunucuya gerçek iadeyi gerçekleştirir. Komut, `checkin` yorum eklemek veya ilgili bir iş öğesini ilişkilendirmek için parametreleri içerir. Aşağıdaki kod snippet'inde, `WebApp.Services` bir klasördeki tüm dosyalar iadeye özyinelemeli olarak eklenir. Daha sonra, kod bir açıklama ile iade edilir ve kimliği "42" olan bir iş öğesi ile ilişkili.
+Mac için Visual Studio dosyalarınızda değişiklikler yaptıktan sonra, düzenlemelerinizi denetlemek için terminale geri dönebilirsiniz. `tf add`Komut, iade edilecek bekleyen değişiklikler listesine dosya eklemek için kullanılır ve `tf checkin` komut sunucuda gerçek iade işlemini gerçekleştirir. `checkin`Komut, bir yorum eklemek veya ilgili bir iş öğesini ilişkilendirmek için parametreler içerir. Aşağıdaki kod parçacığında, bir klasördeki tüm dosyalar `WebApp.Services` , iade etme için yinelemeli olarak eklenir. Ardından, kod bir yorum ile iade edilir ve "42" KIMLIĞINE sahip bir iş öğesiyle ilişkilendirilir.
 
 ```bash
 cd WebApp.Services
@@ -102,10 +103,10 @@ tf add * /recursive
 tf checkin -comment:"Replaced 'Northwand' typos with the correct word Northwind" -associate:42
 ```
 
-Burada belirtilen komutlar veya diğerleri hakkında daha fazla bilgi edinmek için Terminal'den aşağıdaki komutu kullanabilirsiniz:
+Burada bahsedilen komutlar veya diğerleri hakkında daha fazla bilgi edinmek için terminalde aşağıdaki komutu kullanabilirsiniz:
 
 `tf help`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'yı kullanarak kodunuzu TFVC'de geliştirin ve paylaşın (Windows'da)](/azure/devops/repos/tfvc/share-your-code-in-tfvc-vs)
+- [Visual Studio kullanarak (Windows 'da) kodunuzu TFVC 'de geliştirme ve paylaşma](/azure/devops/repos/tfvc/share-your-code-in-tfvc-vs)

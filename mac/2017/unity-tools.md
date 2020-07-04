@@ -1,65 +1,66 @@
 ---
-title: Unity için Mac Tools için Visual Studio
-description: Unity uzantısı için Visual Studio Araçları Tanıtımı
+title: Unity için Mac için Visual Studio Araçları
+description: Unity için Visual Studio Araçları uzantısına giriş
 author: therealjohn
 ms.author: johmil
 ms.date: 05/25/2018
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: f275288ea54b4b24996825aeb14c7a55ee3a3018
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: overview
+ms.openlocfilehash: a02733e03b70c4c971efb50770f4c96c25002e55
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "62986801"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950315"
 ---
-# <a name="visual-studio-for-mac-tools-for-unity"></a>Unity için Mac Tools için Visual Studio
+# <a name="visual-studio-for-mac-tools-for-unity"></a>Unity için Mac için Visual Studio Araçları
 
-![Mac için Birlik ve Görsel Stüdyo stilize görüntü](media/vsmac-tools-unity-image1.png)
+![Unity ve Mac için Visual Studio için stilize görüntü](media/vsmac-tools-unity-image1.png)
 
 Mac için Visual Studio Unity Araçları, Maci için Visual Studio’yu Unity platformu ile platformlar arası oyunlar ve uygulamalar geliştirmeye yönelik güçlü bir araca dönüştüren ücretsiz bir Visual Studio uzantısıdır.
 
-Unity entegrasyonu, Visual Studio for Mac'te kutunun dışında dır ve Unity 2018.1'den başlayarak, Visual Studio for Mac, Unity projeleri için varsayılan C# IDE'dir.
+Unity tümleştirmesi Mac için Visual Studio ' deki kutudan çıkar ve Unity 2018,1 ' den itibaren Mac için Visual Studio Unity projeleri için varsayılan C# IDE 'dir.
 
 ## <a name="overview"></a>Genel Bakış
 
-Visual Studio for Mac Tools for Unity'nin temel özelliklerinden bazıları şunlardır:
+Unity için Mac için Visual Studio Araçları 'nın temel özelliklerinden bazıları şunlardır:
 
-### <a name="compatible-with-visual-studio-for-mac-community-edition"></a>Mac Community Edition için Visual Studio ile uyumlu
+### <a name="compatible-with-visual-studio-for-mac-community-edition"></a>Mac için Visual Studio Community Edition ile uyumlu
 
-[Mac Community Edition için Visual Studio](https://visualstudio.microsoft.com/) ücretsiz olarak mevcuttur ve Unity 2018.1 ile başlayan Unity yüklemeleriyle birlikte sunulmaktadır. Daha fazla bilgi için Mac Tools for Unity [kurulum belgeleri](setup-vsmac-tools-unity.md) için Visual Studio'ya bakın.
+[Mac için Visual Studio Community Edition](https://visualstudio.microsoft.com/) ücretsiz olarak kullanılabilir ve Unity 2018,1 ' den başlayarak Unity yüklemeleri ile paketlenmiştir. Daha fazla bilgi için bkz. Unity için Mac için Visual Studio Araçları [kurulumu belgeleri](setup-vsmac-tools-unity.md) .
 
-### <a name="intellisense-for-unity-messages"></a>Birlik mesajları için IntelliSense
+### <a name="intellisense-for-unity-messages"></a>Unity iletileri için IntelliSense
 
-IntelliSense, parametreleri de dahil olmak `OnCollisionEnter`üzere [Unity iletilerinin](using-vsmac-tools-unity.md#intellisense-for-unity-messages) hızlı ve kolay bir şekilde uygulanmasını sağlar.
+IntelliSense, parametreleri de dahil olmak üzere [Unity iletilerinin](using-vsmac-tools-unity.md#intellisense-for-unity-messages) uygulanmasını hızlı ve kolay hale getirir `OnCollisionEnter` .
 
 ### <a name="superior-debugging"></a>Üstün hata ayıklama
 
-Mac Tools for Unity için Visual Studio, Visual Studio'dan beklediğiniz tüm [hata ayıklama](using-vsmac-tools-unity.md#unity-debugging) özelliklerini destekler:
+Unity için Mac için Visual Studio Araçları, Visual Studio 'dan beklediğinizi tüm [hata ayıklama](using-vsmac-tools-unity.md#unity-debugging) özelliklerini destekler:
 
 * Koşullu kesme noktaları da dahil olmak üzere kesme noktaları ayarlayın.
-* İzleme penceresindekarmaşık ifadeleri değerlendirin.
+* İzleme penceresi karmaşık ifadeleri değerlendirin.
 * Değişkenlerin ve bağımsız değişkenlerin değerini inceleyin ve değiştirin.
-* Karmaşık nesnelere ve veri yapılarına ayrıntılı bilgi verin.
+* Karmaşık nesneler ve veri yapıları hakkında detaya gidin.
 
 ### <a name="powerful-refactoring-and-context-actions"></a>Güçlü yeniden düzenleme ve bağlam eylemleri
 
-[Yeniden adlandırma, yeniden düzenleme ve bağlam eylemleri](refactoring.md)için hızlı menüler ve klavye kısayolları ile daha kullanılabilir kod yazın.
+[Yeniden adlandırma, yeniden düzenleme ve bağlam eylemleri](refactoring.md)için hızlı menülere ve klavye kısayollarına sahip daha fazla kullanılabilir kod yazın.
 
-### <a name="browse-and-add-new-files"></a>Göz atın ve yeni dosyalar ekleyin
+### <a name="browse-and-add-new-files"></a>Yeni dosyalara gözatıp ekleme
 
-Mac IDE için Visual Studio'ya Unity projelerine göz atın ve [klasörler, komut dosyaları veya gölgeli ler ekleyin.](using-vsmac-tools-unity.md#adding-new-unity-files-and-folders)
+Mac için Visual Studio IDE içinde Unity projelerine gözatıp [Klasörler, betikler veya gölgelendiriciler ekleyin](using-vsmac-tools-unity.md#adding-new-unity-files-and-folders).
 
-### <a name="use-familiar-key-bindings"></a>Tanıdık anahtar bağlamalarını kullanma
+### <a name="use-familiar-key-bindings"></a>Tanıdık anahtar bağlamalarını kullanın
 
-Bildiğiniz anahtar bağlamaları kullanarak üretkenliği artırın. Mac için Visual Studio, Windows'taki Visual Studio, ReSharper, Visual Studio Code ve Xcode gibi birçok popüler E'ler için tanıdık [anahtar bağlamaları](customizing-the-ide.md) sağlar.
+Bildiğiniz anahtar bağlamalarını kullanarak üretkenliği artırın. Mac için Visual Studio, Windows, ReSharper, Visual Studio Code ve Xcode 'daki Visual Studio gibi birçok popüler IDE için tanıdık [anahtar bağlamaları](customizing-the-ide.md) sağlar.
 
-### <a name="customize-the-visual-theme"></a>Görsel teonu özelleştirin
+### <a name="customize-the-visual-theme"></a>Görsel Temayı özelleştirme
 
-Gözlerinizi dahil [karanlık tema](customizing-the-ide.md)ile bir dinlenme verin.
+Dahil edilen [koyu temadaki](customizing-the-ide.md)gözlerinize geri kalanını verin.
 
-## <a name="tips-for-unity-developers-getting-started-with-visual-studio-for-mac"></a>Mac için Visual Studio ile başlayan Birlik geliştiricileri için ipuçları
+## <a name="tips-for-unity-developers-getting-started-with-visual-studio-for-mac"></a>Mac için Visual Studio ile çalışmaya başlama Unity geliştiricileri için ipuçları
 
 Bu bağlantılar, Mac için Visual Studio ile başlayan Unity geliştiricileri için yararlı özellikleri açıklar:
 
-* [IDE'yi özelleştirme](customizing-the-ide.md) – [Görsel temayı](customizing-the-ide.md#dark-theme) nasıl değiştireceğinizi veya daha tanıdık bir [anahtar bağlama](customizing-the-ide.md#key-bindings) düzenine nasıl geçeceğini öğrenin.
-* [Kaynak Düzenleyici](source-editor.md) – Mac için Visual Studio'nun ortak [klavye kısayolları](keyboard-shortcuts.md)da dahil olmak üzere daha iyi kod yazmayı nasıl daha hızlı ve daha kolay hale getirebileceğini öğrenin.
+* [IDE 'Yi özelleştirme](customizing-the-ide.md) – [görsel temayı değiştirme](customizing-the-ide.md#dark-theme) veya daha tanıdık bir [anahtar bağlama](customizing-the-ide.md#key-bindings) düzenine geçme hakkında bilgi edinin.
+* [Kaynak Düzenleyicisi](source-editor.md) – Mac için Visual Studio, yaygın [klavye kısayolları](keyboard-shortcuts.md)dahil daha hızlı ve daha kolay bir şekilde yazmayı nasıl sağlayabileceğinizi öğrenin.

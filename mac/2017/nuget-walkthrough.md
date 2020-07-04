@@ -1,124 +1,125 @@
 ---
-title: Projenize bir NuGet paketi dahil
-description: Bu belge, bir Xamarin projesine bir NuGet paketinin nasıl dahil edilebildiğini kapsar. Bir paket bulma ve indirmenin yanı sıra IDE tümleştirme özelliklerini de kullanıma sunar.
+title: Projenize bir NuGet paketi dahil etme
+description: Bu belge bir Xamarin projesine bir NuGet paketinin nasıl ekleneceğini kapsar. Bir paketi bulmayı ve indirmeyi, Ayrıca IDE tümleştirme özelliklerini tanıtmayı da açıklar.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 04/14/2017
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: video
-ms.openlocfilehash: 728a225f4a1d14af986039cae7cb2fc8a493ecc9
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.topic: how-to
+ms.openlocfilehash: 58d749a1d014288754dcd9eb7e620730933d742a
+ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "74983310"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85950404"
 ---
 # <a name="include-a-nuget-package-in-your-project"></a>Projenize bir NuGet paketi ekleyin
 
-NuGet .NET geliştirme için en popüler paket yöneticisidir ve Windows'da Mac ve Visual Studio için Visual Studio'da yerleşiktir. IDE'yi kullanarak Xamarin.iOS ve Xamarin.Android projelerinize paket arayabilir ve ekleyebilirsiniz.
+NuGet, .NET geliştirme için en popüler paket yöneticisidir ve Windows üzerinde Mac için Visual Studio ve Visual Studio 'da yerleşiktir. Android kullanarak, Xamarin. iOS ve Xamarin. Android projelerinize paket arayabilir ve bunları ekleyebilirsiniz.
 
-Bu makalede, bir projeye NuGet paketinin nasıl dahil edilebildiğini açıklar ve işlemi sorunsuz hale getiren takım zincirini gösterir.
+Bu makalede, bir projeye NuGet paketinin nasıl dahil edileceğini ve işlemin sorunsuz hale getiren araç zincirini nasıl gösterdiği açıklanmaktadır.
 
-## <a name="nuget-in-visual-studio-for-mac"></a>NuGet in Visual Studio for Mac
+## <a name="nuget-in-visual-studio-for-mac"></a>Mac için Visual Studio 'de NuGet
 
-NuGet paketi işlevselliğini göstermek için, öncelikle yeni bir uygulama oluşturma ve paket ekleme ile yürüyeceğiz. Daha sonra paketleri yönetmenize yardımcı olan IDE özelliklerini tartışırız.
+NuGet paket işlevini göstermek için, ilk olarak yeni bir uygulama oluşturma ve buna paket ekleme adımlarını inceleyeceğiz. Daha sonra paketlerin yönetilmesine yardımcı olan IDE özellikleri ele alınacaktır.
 
 ## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
 
-İlk olarak, aşağıda `HelloNuget` gösterildiği gibi adlı bir proje oluşturun. Bu örnek, iOS Tek Görünüm Uygulaması şablonu gösterir, ancak desteklenen herhangi bir proje türü çalışır:
+İlk olarak, aşağıda gösterildiği gibi adlı bir proje oluşturun `HelloNuget` . Bu örnekte iOS tek görünüm uygulama şablonu gösterilmektedir, ancak desteklenen tüm proje türleri çalışır:
 
-![Yeni iOS Projesi Oluşturma](media/nuget-walkthrough-NewProject.png)
+![Yeni iOS projesi oluştur](media/nuget-walkthrough-NewProject.png)
 
-## <a name="adding-a-package"></a>Paket Ekleme
+## <a name="adding-a-package"></a>Paket ekleme
 
-Mac için Visual Studio'da proje açıkken, **Solution Pad'deki** **Paketler** klasörüne sağ tıklayın ve **Paket Ekle'yi**seçin:
+Mac için Visual Studio proje açıkken, **çözüm bölmesi** **paketler** klasörüne sağ tıklayın ve **Paketleri Ekle**' yi seçin:
 
-![Yeni NuGet paketi bağlam eylemi ekleme](media/nuget-walkthrough-PackagesMenu.png)
+![Yeni NuGet paketi bağlam eylemi Ekle](media/nuget-walkthrough-PackagesMenu.png)
 
-Bu, **Paket Ekle** penceresini başlatıyor. Kaynak açılır, aşağıdakiler için `nuget.org`ayarlandığından emin olun:
+Bu, **paket Ekle** penceresini başlatır. Kaynak açılan, ' ın şu şekilde ayarlandığından emin olun `nuget.org` :
 
-![Kaynak listesi açılır](media/nuget-walkthrough-Source.png)
+![Kaynak listesi açılan listesi](media/nuget-walkthrough-Source.png)
 
-Pencere açıldığında varsayılan paket kaynağından paketlerin listesini yükler: nuget.org. İlk sonuçlar şu na benzer:
+Pencere açıldığında, varsayılan paket kaynağından bir paket listesi yükler: nuget.org. İlk sonuçlar şuna benzer:
 
-![NuGet Paketlerini Listele](media/nuget-walkthrough-AddPackages1.png)
+![NuGet paketlerini listeleme](media/nuget-walkthrough-AddPackages1.png)
 
-Örneğin, `azure`belirli bir paketi bulmak için sağ üst köşedeki arama kutusunu kullanın. Kullanmak istediğiniz bir paket bulduğunuzda, paketi seçin ve yüklemeye başlamak için **Paket Ekle** düğmesini tıklatın.
+Belirli bir paketi bulmak için sağ üst köşedeki arama kutusunu kullanın (örneğin,) `azure` . Kullanmak istediğiniz bir paket buldığınızda, yüklemeyi başlatmak için seçin ve **paket Ekle** düğmesine tıklayın.
 
-[Azure NuGet Paketi Ekle](media/nuget-walkthrough-AddPackages2.png)
+[Azure NuGet paketi ekleme](media/nuget-walkthrough-AddPackages2.png)
 
 Paket indirildikten sonra projenize eklenir. Çözüm aşağıdaki gibi değişecektir:
 
-* **Başvuru** düğümü, NuGet paketinin parçası olan tüm derlemelerin listesini içerir.
-* **Paket** düğümü, indirdiğiniz her NuGet paketini görüntüler. Bir paketi bu listeden güncelleyebilir veya kaldırabilirsiniz.
-* Projeye bir **packages.config** dosyası eklenecektir. Bu XML dosyası, bu projede hangi paket sürümlerinin başvurulmasını izlemek için IDE tarafından kullanılır. Bu dosya elle düzenlenmemeli, ancak sürüm denetiminde tutmalısınız. Bir project.json dosyasının packages.config dosyası yerine kullanılabileceğini unutmayın. Project.json dosyası, geçişli geri yüklemeyi destekleyen NuGet 3 ile tanıtılan yeni bir paket dosyası biçimidir. Project.json hakkında daha ayrıntılı bilgi [NuGet belgelerinde](/NuGet/Schema/Project-Json)bulunabilir. Project.json dosyasının el ile eklenmesi ve project.json dosyası Mac için Visual Studio'da kullanılmadan önce projenin kapatılması ve yeniden açılması gerekir.
+* **Başvurular** düğümü, bir NuGet paketinin parçası olan tüm derlemelerin bir listesini içerir.
+* **Paketler** düğümü, Indirdiğiniz her NuGet paketini görüntüler. Bu listeden bir paketi güncelleştirebilir veya kaldırabilirsiniz.
+* Projeye bir **packages.config** dosyası eklenecektir. Bu XML dosyası IDE tarafından bu projede hangi paket sürümlerinin başvurulduğunu izlemek için kullanılır. Bu dosya el ile düzenlenmemelidir, ancak sürüm denetiminde saklamanız gerekir. Dosya project.jsbir packages.config dosyası yerine kullanılabileceğini unutmayın. project.jsdosya üzerinde, geçişli geri yüklemeyi destekleyen NuGet 3 ile sunulan yeni bir paket dosyası biçimi bulunur. Üzerinde project.jshakkında daha ayrıntılı bilgi [NuGet belgelerinde](/NuGet/Schema/Project-Json)bulunabilir. project.jsdosyadaki project.jsel ile eklenmesi gerekir ve proje, Mac için Visual Studio dosya üzerinde kullanılmadan önce kapatılıp yeniden açılır.
 
-## <a name="using-nuget-packages"></a>NuGet Paketlerini Kullanma
+## <a name="using-nuget-packages"></a>NuGet paketlerini kullanma
 
-NuGet paketi eklendikten ve proje başvuruları güncellendikten sonra, api'ler karşısında herhangi bir proje referansı ile olduğu gibi programlayabilirsiniz.
+NuGet paketi eklendikten ve proje güncelleştirildikten sonra, herhangi bir proje başvurusunda yaptığınız gibi API 'Lerle programlama yapabilirsiniz.
 
-Dosyanızın en üstüne `using` gerekli yönergeleri eklediğinizden emin olun:
+Dosyanızın en üstüne gerekli yönergeleri eklemediğinizden emin olun `using` :
 
 ```csharp
 using Newtonsoft.Json;
 ```
 
-Çoğu NuGet, README veya Proje sayfası bağlantısı gibi ek bilgiler sağlar. Normalde Paket Ekle sayfasındaki paket cümlesinde buna bir bağlantı bulabilirsiniz:
+Çoğu NuGet, NuGet kaynağına yönelik BENIOKU veya proje sayfası bağlantısı gibi ek bilgiler sağlar. Normal olarak, paket Ekle sayfasında Bu pakette bir bağlantı bulabilirsiniz.
 
-[Proje Sayfası bağlantısını görüntüle](media/nuget-walkthrough-project-page.png)
+[Proje sayfası bağlantısını görüntüle](media/nuget-walkthrough-project-page.png)
 
 <a name="Package_Updates" class="injected"></a>
 
-## <a name="package-updates"></a>Paket Güncellemeleri
+## <a name="package-updates"></a>Paket güncelleştirmeleri
 
-Package updates can be done either all at once, by right-clicking on the **Packages** node, or individually on each component.
+Paket güncelleştirmeleri tek seferde, **paketler** düğümüne sağ tıklayarak ya da her bir bileşen üzerinde ayrı ayrı yapılabilir.
 
-Bağlam menüsüne erişmek için **Paketler'e** sağ tıklayın:
+Bağlam menüsüne erişmek için **paketlere** sağ tıklayın:
 
 ![Paketler menüsü](media/nuget-walkthrough-PackagesMenu.png)
 
-* **Paket Ekle** - Projeye daha fazla paket eklemek için pencereyi açar.
-* **Güncelleştirme** - Her paket için kaynak sunucuyu denetler ve daha yeni sürümleri indirir.
-* **Geri Yükleme** - Eksik paketleri indirir (varolan paketleri yeni sürümlere güncelleştirmeden).
+* **Paket Ekle** -projeye daha fazla paket eklemek için pencereyi açar.
+* **Güncelleştir** -kaynak sunucuyu her bir paket için denetler ve daha yeni sürümleri indirir.
+* **Restore** -eksik paketleri indirir (var olan paketleri yeni sürümlere güncelleştirmeden önce).
 
-Güncelleştirme ve Geri Yükleme seçenekleri de Çözüm düzeyinde mevcuttur ve çözümdeki tüm projeleri etkiler.
+Güncelleştirme ve geri yükleme seçenekleri de çözüm düzeyinde bulunur ve Çözümdeki tüm projeleri etkiler.
 
-Ayrıca, bağlam menüsüne erişmek için tek tek paketlere sağ tıklayabilirsiniz:
+Ayrıca, bir bağlam menüsüne erişmek için tek tek paketlere sağ tıklayabilirsiniz:
 
 ![Paketler menüsü](media/nuget-walkthrough-PackageMenu.png)
 
-* **Sürüm Numarası** - Sürüm numarası devre dışı bırakılmış bir menü öğesidir - yalnızca bilgilendirme amaçlı dır.
-* **Güncelleştirme** - Kaynak sunucuyu denetler ve daha yeni bir sürümü karşıdan yükler (varsa).
-* **Kaldır** - Paketi bu projeden kaldırır ve ilgili derlemeleri projenin Başvuruları'ndan kaldırır.
+* **Sürüm numarası** -sürüm numarası devre dışı bir menü öğesi; yalnızca bilgilendirme amacıyla sağlanır.
+* **Güncelleştir** -kaynak sunucuyu denetler ve daha yeni bir sürümü indirir (varsa).
+* **Remove** -paketi bu projeden kaldırır ve ilgili derlemeleri projenin başvurularından kaldırır.
 
-## <a name="adding-package-sources"></a>Paket Kaynakları Ekleme
+## <a name="adding-package-sources"></a>Paket kaynakları ekleniyor
 
-Yükleme için kullanılabilen paketler başlangıçta nuget.org'dan alınır. Ancak, Mac için Visual Studio'ya başka paket konumları ekleyebilirsiniz. Bu, geliştirme aşamasındaki kendi NuGet paketlerinizi test etmek veya şirketiniz veya kuruluşunuz içinde özel bir NuGet sunucusu kullanmak için yararlı olabilir.
+Yükleme için kullanılabilen paketler başlangıçta nuget.org adresinden alınır. Bununla birlikte, Mac için Visual Studio başka paket konumları da ekleyebilirsiniz. Bu, geliştirme aşamasındaki kendi NuGet paketlerinizi test etmek veya şirketinizin veya kuruluşunuzun içinde özel bir NuGet sunucusu kullanmak için yararlı olabilir.
 
-Mac için Visual Studio'da, paket kaynaklarının listesini görüntülemek ve için **Visual Studio > Preferences > NuGet > Kaynakları'na** gidin. Kaynakların uzak bir sunucu (URL tarafından belirtilir) veya yerel bir dizin olabileceğini unutmayın.
+Mac için Visual Studio, paket kaynakları listesini görüntülemek ve düzenlemek için **Visual Studio > tercihler > NuGet > kaynakları** ' na gidin. Kaynakların uzak bir sunucu (bir URL ile belirtilir) veya yerel bir dizin olabileceğini unutmayın.
 
-![Paket Kaynakları](media/nuget-walkthrough-PackageSource.png)
+![Paket kaynakları](media/nuget-walkthrough-PackageSource.png)
 
-Yeni bir kaynak ayarlamak için **Ekle'yi** tıklatın. Paket kaynağına uygun bir ad ve URL (veya dosya yolu) girin. Kaynak güvenli bir web sunucusuysa, kullanıcı adı ve parolayı da girin, aksi takdirde bu girişleri boş bırakın:
+Yeni bir kaynak kurmak için **Ekle** ' ye tıklayın. Paket kaynağına kolay bir ad ve URL (ya da dosya yolu) girin. Kaynak güvenli bir Web sunucusu ise, Kullanıcı adını ve parolayı da girin, aksi takdirde bu girdileri boş bırakın:
 
-![Paket Kaynakları Ekle](media/nuget-walkthrough-PackageSource2.png)
+![Paket kaynakları ekle](media/nuget-walkthrough-PackageSource2.png)
 
-Daha sonra paketler aranırken farklı kaynaklar seçilebilir:
+Paketler aranırken farklı kaynaklar seçilebilir:
 
-![Paket Kaynakları Ekle](media/nuget-walkthrough-PackageSource3.png)
+![Paket kaynakları ekle](media/nuget-walkthrough-PackageSource3.png)
 
 ## <a name="version-control"></a>Sürüm Denetimi
 
-NuGet belgeleri [kaynak denetimine paket işlemeden NuGet'i kullanmayı](/nuget/consume-packages/packages-and-source-control)tartışır. Kaynak denetiminde ikili ve kullanılmayan bilgileri depolamamayı tercih ederseniz, sunucudan paketleri otomatik olarak geri yüklemek için Visual Studio for Mac'i yapılandırabilirsiniz. Bu, bir geliştirici projeyi ilk kez kaynak denetiminden aldığında, Mac için Visual Studio'nun gerekli paketleri otomatik olarak indireceği ve yükleyeceği anlamına gelir.
+NuGet belgeleri, [kaynak denetimine paket Işlemeden NuGet kullanarak](/nuget/consume-packages/packages-and-source-control)açıklanır. İkili dosyaları ve kullanılmayan bilgileri kaynak denetiminde depolamamayı tercih ediyorsanız, paketleri sunucudan otomatik olarak geri yüklemek için Mac için Visual Studio yapılandırabilirsiniz. Bu, bir geliştirici projeyi kaynak denetiminden ilk kez aldığında Mac için Visual Studio gerekli paketleri otomatik olarak indirecek ve yükleymeyeceği anlamına gelir.
 
-![Paketleri otomatik olarak geri yükleme](media/nuget-walkthrough-AutoRestore.png)
+![Paketleri otomatik olarak geri yükle](media/nuget-walkthrough-AutoRestore.png)
 
-Dizinin izlenmesini nasıl dışlayacak `packages` larına ilişkin ayrıntılar için özel kaynak denetim belgelerinize bakın.
+Dizinin izlenmesini nasıl dışlayacak hakkında daha fazla bilgi için, belirli kaynak denetimi belgelerinize bakın `packages` .
 
-## <a name="related-video"></a>İlgili Video
+## <a name="related-video"></a>İlgili video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Using-NuGet/player]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio'da (Windows'da) bir paket yükleme ve kullanma](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+* [Visual Studio 'da bir paketi (Windows 'da) yükleyip kullanma](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
