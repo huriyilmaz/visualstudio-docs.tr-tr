@@ -1,6 +1,6 @@
 - name: JavaScript ve TypeScript
   href: index.yml
-- name: Genel bakış
+- name: Genel Bakış
   items:
     - name: Visual Studio 2019’de JavaScript
       href: javascript-in-vs-2019.md
@@ -38,9 +38,9 @@
       href: nodejs-interactive-repl.md
     - name: JavaScript IntelliSense
       href: /visualstudio/ide/javascript-intellisense?toc=/visualstudio/javascript/toc.json
-    - name: JavaScript uygulamasında hata ayıklama
+    - name: Hata ayıklama
       href: debug-nodejs.md
-    - name: JavaScript’e birim testi uygulama
+    - name: Birim testi
       href: unit-testing-javascript-with-visual-studio.md
 - name: Kaynaklar
   items:
