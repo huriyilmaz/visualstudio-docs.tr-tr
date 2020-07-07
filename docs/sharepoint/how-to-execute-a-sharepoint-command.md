@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Bir SharePoint komutu yürütme | Microsoft Docs'
+title: 'Nasıl yapılır: SharePoint komutu yürütme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,65 +12,64 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6f5c285e71179c5dd59fad0357dbf71ee4b32f9d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 789b77f3161b5fe566ea033060e8cab16cbaecc7
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62813895"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016989"
 ---
-# <a name="how-to-execute-a-sharepoint-command"></a>Nasıl yapılır: Bir SharePoint komutu yürütme
-  Sunucu nesne modeli SharePoint Araçlar uzantısından kullanmak istiyorsanız, özel bir oluşturmalısınız *SharePoint komutu* API'sini çağırmak için. Komut tanımlayıp, SharePoint Araçlar uzantısından ile dağıttıktan sonra uzantınızı komutu SharePoint sunucusu nesne modeline çağrı yürütebilir. Komutu yürütmek için ExecuteCommand yöntemlerinden birini kullanın: bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> nesne.
+# <a name="how-to-execute-a-sharepoint-command"></a>Nasıl yapılır: SharePoint komutu yürütme
+  Sunucu nesne modelini bir SharePoint Araçları uzantısında kullanmak istiyorsanız, API 'yi çağırmak için özel bir *SharePoint komutu* oluşturmanız gerekir. Komutunu tanımladıktan ve SharePoint araçları uzantılarınızla dağıttıktan sonra, uzantınız SharePoint Server nesne modelini çağırmak için komutunu yürütebilir. Komutu yürütmek için, bir nesnenin ExecuteCommand yöntemlerinden birini kullanın <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> .
 
- SharePoint komutları amacı hakkında daha fazla bilgi için bkz. [SharePoint nesne modellerini çağırma](../sharepoint/calling-into-the-sharepoint-object-models.md).
+ SharePoint komutlarının amacı hakkında daha fazla bilgi için bkz. [SharePoint nesne modellerine çağrı](../sharepoint/calling-into-the-sharepoint-object-models.md).
 
-### <a name="to-execute-a-sharepoint-command"></a>Bir SharePoint komutu yürütmek için
+### <a name="to-execute-a-sharepoint-command"></a>SharePoint komutunu yürütmek için
 
-1. SharePoint araçları uzantısını edinin bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> nesne. Size yol bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> nesnesini oluşturmakta olduğunuz uzantı türüne bağlıdır:
+1. SharePoint araçları uzantıda bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> nesne alın. Bir nesne almanın yolu, <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> oluşturmakta olduğunuz uzantının türüne bağlıdır:
 
-    - SharePoint Proje sistemi bir uzantı kullanmak <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SharePointConnection%2A> özelliği.
+    - SharePoint proje sisteminin bir uzantısında <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.SharePointConnection%2A> özelliğini kullanın.
 
-         Proje sistemi uzantıları hakkında daha fazla bilgi için bkz. [SharePoint Proje sistemini genişletmek](../sharepoint/extending-the-sharepoint-project-system.md).
+         Proje sistem uzantıları hakkında daha fazla bilgi için bkz. [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md).
 
-    - ' In bir uzantısı olarak **SharePoint bağlantıları** düğümünde **Sunucu Gezgini**, kullanın <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> özelliği. Alınacak bir <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> nesnesi <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> özelliği.
+    - **Sunucu Gezgini**Içindeki **SharePoint bağlantıları** düğümünün bir uzantısında <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext.SharePointConnection%2A> özelliğini kullanın. Bir nesne almak için <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeContext> <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode.Context%2A> özelliğini kullanın.
 
-         Hakkında daha fazla bilgi için **Sunucu Gezgini** uzantıları, bakın [Sunucu Gezgininde SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
+         **Sunucu Gezgini** uzantıları hakkında daha fazla bilgi için bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
-    - SharePoint araçlarının bir proje şablonu Sihirbazı gibi bir uzantının parçası olmayan kodu kullanmak <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection%2A> özelliği.
+    - Bir proje şablonu Sihirbazı gibi SharePoint Araçları uzantısının parçası olmayan kodda <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.SharePointConnection%2A> özelliğini kullanın.
 
-         Proje hizmetini alma hakkında daha fazla bilgi için bkz. [SharePoint Proje hizmetini kullanın](../sharepoint/using-the-sharepoint-project-service.md).
+         Proje hizmetini alma hakkında daha fazla bilgi için bkz. [SharePoint proje hizmetini kullanma](../sharepoint/using-the-sharepoint-project-service.md).
 
-2. ExecuteCommand yöntemlerinden birini çağırın <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> nesne. ExecuteCommand yöntemin ilk bağımsız değişkeni yürütmek istediğiniz komutun adı geçirin. Komutunuz özel bir parametreye sahipse, bu parametrenin ExecuteCommand yönteminin ikinci bağımsız değişkeni için geçirin.
+2. Nesnenin ExecuteCommand yöntemlerinden birini çağırın <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> . Yürütmek istediğiniz komutun adını ExecuteCommand yönteminin ilk bağımsız değişkenine geçirin. Komutunuz özel bir parametreye sahipse, bu parametreyi ExecuteCommand yönteminin ikinci bağımsız değişkenine geçirin.
 
-     Her desteklenen komut imza için farklı bir ExecuteCommand aşırı yüklemesi vardır. Aşağıdaki tabloda, desteklenen imzalar ve her imzası için kullanılacak olan aşırı yükleme listeler.
+     Desteklenen her komut imzası için farklı bir ExecuteCommand aşırı yüklemesi vardır. Aşağıdaki tabloda, desteklenen imzalar ve her imza için kullanılacak aşırı yükleme listelenmektedir.
 
-    |Komut imzası|Kullanılacak ExecuteCommand aşırı yükleme|
+    |Komut imzası|Kullanılacak ExecuteCommand aşırı yüklemesi|
     |-----------------------|------------------------------------|
-    |Yalnızca varsayılan komut sahip <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parametre ve dönüş değeri yok.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
-    |Yalnızca varsayılan komut sahip <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parametre ve dönüş değeri.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
-    |Komut iki parametreye sahiptir (varsayılan <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parametre ve bir özel parametre) ve dönüş değeri yok.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
-    |Komutu, iki parametre ve dönüş değeri vardır.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
+    |Komutun yalnızca varsayılan <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parametresi ve dönüş değeri yok.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
+    |Komutun yalnızca varsayılan <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parametresi ve bir dönüş değeri vardır.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
+    |Komutun iki parametresi vardır (varsayılan <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parametresi ve özel bir parametre) ve dönüş değeri yoktur.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
+    |Komutun iki parametresi ve bir dönüş değeri vardır.|<xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A>|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> aşırı yüklemesini çağırmak için `Contoso.Commands.UpgradeSolution` açıklanan komutu [nasıl yapılır: Bir SharePoint komutu oluşturma](../sharepoint/how-to-create-a-sharepoint-command.md).
+ Aşağıdaki kod örneği, <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> `Contoso.Commands.UpgradeSolution` [nasıl yapılır: bir SharePoint komutu oluşturma](../sharepoint/how-to-create-a-sharepoint-command.md)bölümünde açıklanan komutu çağırmak için aşırı yüklemenin nasıl kullanılacağını göstermektedir.
 
  [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/upgradestep.cs#6)]
  [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#6](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/upgradestep.vb#6)]
 
- `Execute` Bu örnekte gösterilen uygulaması yöntemdir <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A> yöntemi <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep> özel bir dağıtım adımı arabirimi. Daha büyük bir örneğin bağlamında bu kodu görmek için bkz: [izlenecek yol: SharePoint projeleri için bir özel dağıtım adımı oluşturmak](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
+ `Execute`Bu örnekte gösterilen yöntemi, <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep.Execute%2A> <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentStep> özel bir dağıtım adımında arabirim yönteminin bir uygulamasıdır. Bu kodu daha büyük bir örnek bağlamında görmek için bkz. [Izlenecek yol: SharePoint projeleri için özel bir dağıtım adımı oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
 
- Çağrı ilgili aşağıdaki bilgileri Not <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> yöntemi:
+ Yöntemine yapılan çağrı hakkında aşağıdaki ayrıntıları göz önünde edin <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection.ExecuteCommand%2A> :
 
-- İlk parametre, aramak istediğiniz komut tanımlar. Bu dize geçirdiğiniz değerle <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> komut tanımı.
+- İlk parametre çağırmak istediğiniz komutu tanımlar. Bu dize, komut tanımındaki öğesine geçirdiğiniz değerle eşleşir <xref:Microsoft.VisualStudio.SharePoint.Commands.SharePointCommandAttribute> .
 
-- İkinci parametre özel ikinci parametresi komutun geçirmek istediğiniz değerdir. Bu durumda tam yolu olduğu *.wsp* SharePoint sitesine yükseltilmekte olan dosya.
+- İkinci parametre, komutun özel ikinci parametresine geçmesini istediğiniz değerdir. Bu durumda, SharePoint sitesine yükseltilmekte olan *. wsp* dosyasının tam yoludur.
 
-- Kod örtük geçirmez <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> komut parametresi. SharePoint Proje sistemi bir uzantı veya uzantısı komuta çağrı yaptığınızda bu parametre komutu otomatik olarak geçirilen **SharePoint bağlantıları** düğümünde **Sunucu Gezgini**. Çözümler, uygulayan bir proje şablonu Sihirbazı gibi diğer tür <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> arabirimidir, bu parametre **null**.
+- Kod örtük <xref:Microsoft.VisualStudio.SharePoint.Commands.ISharePointCommandContext> parametreyi komutuna geçirmez. Bu parametre, komutu SharePoint proje sisteminin bir uzantısından veya **Sunucu Gezgini** **SharePoint bağlantıları** düğümünün bir uzantısından çağırdığınızda otomatik olarak komuta geçirilir. Arabirimi uygulayan bir proje şablonu sihirbazında olduğu gibi diğer tür çözümlerde, <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> Bu parametre **null**olur.
 
-## <a name="compile-the-code"></a>Kod derleme
- Bu örnek Microsoft.VisualStudio.SharePoint derlemesine bir başvuru gerektirir.
+## <a name="compile-the-code"></a>Kodu derle
+ Bu örnek, Microsoft. VisualStudio. SharePoint derlemesine bir başvuru gerektirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint nesne modellerini çağırma](../sharepoint/calling-into-the-sharepoint-object-models.md)
-- [Nasıl yapılır: Bir SharePoint komutu oluşturma](../sharepoint/how-to-create-a-sharepoint-command.md)
-- [İzlenecek yol: Sunucu Gezgini, web bölümlerini görüntülemek üzere genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
+- [SharePoint nesne modellerine çağrı](../sharepoint/calling-into-the-sharepoint-object-models.md)
+- [Nasıl yapılır: SharePoint komutu oluşturma](../sharepoint/how-to-create-a-sharepoint-command.md)
+- [İzlenecek yol: Sunucu Gezgini Web bölümlerini görüntüleyecek şekilde genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)

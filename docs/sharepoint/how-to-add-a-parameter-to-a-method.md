@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir yönteme parametre ekleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: eb1a1c1e8f11ac6daa46f9fe1468a1ff3509e135
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 6d0496d0fd6a347683d56630990e50af585520ba
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986232"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016717"
 ---
 # <a name="how-to-add-a-parameter-to-a-method"></a>Nasıl yapılır: bir yönteme parametre ekleme
   Yöntemine bilgi iletmek veya bir yöntemden bilgi döndürmek için bir parametre kullanın. Tüm yöntemler en az bir parametreye sahip olmalıdır. Oluşturmak istediğiniz yöntem türünü desteklemek için bir parametre tasarlamak hakkında daha fazla bilgi için, bkz. [Iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -33,7 +32,7 @@ ms.locfileid: "72986232"
 
 1. Bir varlığa bir yöntem ekleyin.
 
-2. Menü çubuğunda, **diğer Windows** > **ivb yöntemi ayrıntılarını** > **görüntüle** ' yi seçin.
+2. Menü çubuğunda, **View**  >  **diğer Windows**  >  **bdc yöntemi ayrıntılarını**görüntüle ' yi seçin.
 
      **IVB yöntemi ayrıntıları** penceresi açılır. Daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -43,7 +42,7 @@ ms.locfileid: "72986232"
 
      **Parametreler** düğümünün altında yeni bir parametre görüntülenir.
 
-5. Menü çubuğunda > **Özellikler penceresini** **görüntüle** ' yi seçin.
+5. Menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
 
 6. **Özellikler** penceresinde, **ad** özelliğini anlamlı olan herhangi bir ad olarak ayarlayın. Örneğin, yöntem müşterileri döndürecektir, **GetCustomers**yöntemine ad yazabilirsiniz.
 

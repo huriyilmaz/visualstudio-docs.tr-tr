@@ -1,7 +1,7 @@
 ---
 title: 'İzlenecek yol: SharePoint uygulaması profili oluşturma | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 27024f3b28b97a1a5d0befc3d70dbf8144fb9e24
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
-ms.translationtype: MT
+ms.openlocfilehash: c900a1496d3ef864e50d40092379348c05a4706b
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77277656"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017099"
 ---
 # <a name="walkthrough-profile-a-sharepoint-application"></a>İzlenecek yol: SharePoint uygulaması profili oluşturma
   Bu izlenecek yol, bir SharePoint uygulamasının performansını iyileştirmek için Visual Studio 'da profil oluşturma araçlarının nasıl kullanılacağını gösterir. Örnek uygulama, özellik olay alıcısının performansını düşürür bir boşta kalma döngüsü içeren bir SharePoint özellik olay alıcıdır. Visual Studio Profiler, projenin *etkin yol*olarak da bilinen en pahalı (en yavaş performanslı) kısmını bulmanıza ve ortadan kaldırmanıza olanak sağlar.
@@ -49,9 +48,9 @@ ms.locfileid: "77277656"
 
 ### <a name="to-create-a-sharepoint-project"></a>SharePoint projesi oluşturmak için
 
-1. **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda **dosya** > **Yeni** > **Proje** ' yi seçin.
+1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni**Proje** ' yi seçin.
 
-2. **Visual C#**  veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 3. Şablonlar bölmesinde, **SharePoint 2010 proje** şablonunu seçin.
 
@@ -92,7 +91,7 @@ ms.locfileid: "77277656"
     private string webUrl = "/";
     ```
 
-4. `FeatureActivated` yordamını aşağıdaki kodla değiştirin.
+4. `FeatureActivated`Yordamı aşağıdaki kodla değiştirin.
 
     ```vb
     Public Overrides Sub FeatureActivated(properties As SPFeatureReceiverProperties)
@@ -151,7 +150,7 @@ ms.locfileid: "77277656"
     }
     ```
 
-5. Aşağıdaki yordamı `FeatureActivated`yordamının altına ekleyin.
+5. Aşağıdaki yordamı yordamın altına ekleyin `FeatureActivated` .
 
     ```vb
 
@@ -212,7 +211,7 @@ ms.locfileid: "77277656"
      Sihirbaz, sunucuda uygulama profili oluşturmayı, **Performans Gezgini** penceresini görüntüler ve ardından SharePoint uygulamasını oluşturur, dağıtır ve çalıştırır.
 
 ## <a name="run-the-sharepoint-application"></a>SharePoint uygulamasını çalıştırma
- Özelliği SharePoint 'te etkinleştirin ve `FeatureActivation` olay kodunu tetikleyerek çalıştırın.
+ Özelliği, çalıştırılacak olay kodunu tetikleyerek SharePoint 'te etkinleştirin `FeatureActivation` .
 
 ### <a name="to-run-the-sharepoint-application"></a>SharePoint uygulamasını çalıştırmak için
 
@@ -222,7 +221,7 @@ ms.locfileid: "77277656"
 
 3. **Özellikler** listesinde, **ProfileTest özellik1**' nin yanındaki **Etkinleştir** düğmesini seçin.
 
-     `FeatureActivated` işlevinde çağrılan boşta döngüsü nedeniyle bunu yaptığınızda bir duraklama olur.
+     İşlev içinde Çağrılmakta olan boşta döngüsü nedeniyle bunu yaptığınızda bir duraklatma işlemi var `FeatureActivated` .
 
 4. **Hızlı Başlat** çubuğunda **listeler** ' i seçin ve ardından **listeler** listesinden **Duyurular**' ı seçin.
 
@@ -237,17 +236,17 @@ ms.locfileid: "77277656"
 
 ### <a name="to-view-and-interpret-the-profile-results"></a>Profil sonuçlarını görüntülemek ve yorumlamak için
 
-1. Örnek profil oluşturma raporunun **en bireysel Işini yapan işlevlerde** `TimeCounter` listenin en üstüne yaklaşdığına dikkat edin.
+1. Örnek profil oluşturma raporunun **en çok bireysel Işini yapan işlevlerde** , `TimeCounter` listenin en üstüne yakın olduğuna dikkat edin.
 
-     Bu konum, `TimeCounter` en yüksek örnek sayısı olan işlevlerden biri olduğunu gösterir, yani uygulamada en büyük performans sorunları bu kadar olur. Bu durum, özellikle de tanıtım amaçlarıyla bu şekilde tasarlandığı için ortaya çıkarmaz.
+     Bu konum, `TimeCounter` en yüksek örnek sayısı olan işlevlerden biridir, yani uygulamada en büyük performans sorunları olduğunu gösterir. Bu durum, özellikle de tanıtım amaçlarıyla bu şekilde tasarlandığı için ortaya çıkarmaz.
 
-2. **En bireysel Işleri yapan işlevlerde** , `ProcessRequest` işlevine ait maliyet dağılımını göstermek için `ProcessRequest` bağlantısını seçin.
+2. **En bireysel Işleri yapan işlevlerde** , `ProcessRequest` işlevin maliyet dağılımını göstermek için bağlantıyı seçin `ProcessRequest` .
 
-     `ProcessRequest`için **çağrılan işlevler** bölümünde, **FeatureActiviated** işlevinin en pahalı çağrılan işlev olarak listelendiğine dikkat edin.
+     İçin **çağrılan işlevler** bölümünde `ProcessRequest` , **FeatureActiviated** işlevinin en pahalı çağrılan işlev olarak listelendiğine dikkat edin.
 
 3. **Çağrılan işlevler** bölümünde **FeatureActivated** düğmesini seçin.
 
-     **FeatureActivated**için **çağrılan işlevler** bölümünde, `TimeCounter` işlevi en pahalı çağrılan işlev olarak listelenir. **Işlev kodu görünüm** bölmesinde, vurgulanan kod (`TimeCounter`) etkin değildir ve düzeltmenin nerede gerekli olduğunu gösterir.
+     **FeatureActivated**için **çağrılan işlevler** bölümünde `TimeCounter` işlev, en pahalı çağrılan işlev olarak listelenir. **Işlev kodu görünümü** bölmesinde, vurgulanan kod ( `TimeCounter` ) etkin değildir ve düzeltmenin nerede gerekli olduğunu gösterir.
 
 4. Örnek profil oluşturma raporunu kapatın.
 
@@ -258,7 +257,7 @@ ms.locfileid: "77277656"
 
 ### <a name="to-fix-the-code-and-reprofile-the-application"></a>Kodu onarmak ve uygulamayı yeniden profili eklemek için
 
-1. Özellik olay alıcısı kodunda, `FeatureActivated` `TimeCounter` yöntemi çağrısını, çağırılmasını engellemek için not edin.
+1. Özellik olayı alıcı kodunda, `TimeCounter` çağırma yöntemini engellemek için içindeki yöntemi çağırın `FeatureActivated` .
 
 2. Projeyi kaydedin.
 
@@ -273,6 +272,6 @@ ms.locfileid: "77277656"
      Boşta döngüsü çağrısının ortadan kaldırıldığına göre özelliğin çok daha hızlı bir şekilde etkinleştirilmesi gerekir. Örnek profil oluşturma raporu bunu yansıtmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Performans Oturumuna Genel Bakış](../profiling/performance-session-overview.md)
-- [Performans Profili Oluşturma Başlangıç Kılavuzu](../profiling/beginners-guide-to-performance-profiling.md)
+- [Performans oturumuna genel bakış](../profiling/performance-session-overview.md)
+- [Performans profili oluşturma için yeni başlayanlar kılavuzu](../profiling/beginners-guide-to-performance-profiling.md)
 - [Visual Studio Profiler ile uygulama darboğazlarını bulma](https://msdn.microsoft.com/magazine/cc337887.aspx)

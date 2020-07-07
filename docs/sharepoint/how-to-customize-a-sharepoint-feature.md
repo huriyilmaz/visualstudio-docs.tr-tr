@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Bir SharePoint özelliğini özelleştirme | Microsoft Docs'
+title: 'Nasıl yapılır: bir SharePoint özelliğini özelleştirme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.RAD.FeatureDesigner.SwitchView
 - VS.SharePointTools.RAD.featureDesigner.Manifest
@@ -16,78 +16,77 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e7a00f3c58f917e7355a63ebca71c74127826a2e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: a330f3c4cbe1e410ddc6a1612796c92eeda281b8
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63429223"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016901"
 ---
-# <a name="how-to-customize-a-sharepoint-feature"></a>Nasıl yapılır: Bir SharePoint özelliğini özelleştirme
-  Oluşturun ve Visual Studio özellik Tasarımcısı kullanarak SharePoint özelliklerini özelleştirin. Örneğin, özellik kapsamı ayarlayın ve diğer özellikleri bağımlılıkları olarak ekleyin. Çözüm Gezgini veya SharePoint paket Gezgini içinde yeni bir özellik eklediğinizde, varsayılan olarak, özellik Tasarımcısı açılır.
+# <a name="how-to-customize-a-sharepoint-feature"></a>Nasıl yapılır: bir SharePoint özelliğini özelleştirme
+  Visual Studio 'daki Özellik tasarımcısını kullanarak SharePoint özelliklerini oluşturabilir ve özelleştirebilirsiniz. Örneğin, özellik kapsamını ayarlayabilir ve diğer özellikleri bağımlılıklar olarak ekleyebilirsiniz. Varsayılan olarak, Çözüm Gezgini veya SharePoint paket Gezgini ' nde yeni bir özellik eklediğinizde özellik Tasarımcısı açılır.
 
-## <a name="opening-the-feature-designer"></a>Özellik Tasarımcısı açma
- Ekleyebilir veya özellik Tasarımcısı'nı kullanarak bir özelliğin SharePoint Proje öğeleri kaldırın.
+## <a name="opening-the-feature-designer"></a>Özellik tasarımcısını açma
+ Özellik tasarımcısını kullanarak bir özelliğe SharePoint proje öğeleri ekleyebilir veya kaldırabilirsiniz.
 
-#### <a name="to-open-the-feature-designer"></a>Özellik Tasarımcısı'nı açmak için
+#### <a name="to-open-the-feature-designer"></a>Özellik tasarımcısını açmak için
 
-1. İçinde **Çözüm Gezgini**, genişletme **özellikleri**.
+1. **Çözüm Gezgini**, **Özellikler**' i genişletin.
 
-2. Çift *özellik1* öğesini veya kısayol menüsünü açın *özellik1* öğesini ve ardından **Görünüm Tasarımcısı**.
+2. *Özellik1* öğesini çift tıklatın veya *özellik1* öğesi için kısayol menüsünü açın ve ardından **Tasarımcı görüntüle**' yi seçin.
 
-## <a name="view-the-packaged-manifest-file"></a>Paket bildirim dosyasını görüntüleyin
- Özellik Tasarımcısı özellik için paket bildirim dosyası oluşturmak ve değiştirmek için kullanabilirsiniz (*gt;Feature.xml*). Ardından, bu dosya için XML kodu Visual Studio'da görüntüleyebilirsiniz.
+## <a name="view-the-packaged-manifest-file"></a>Paketlenmiş bildirim dosyasını görüntüleme
+ Özelliği için paketlenmiş bildirim dosyasını değiştirmek ve oluşturmak için özellik tasarımcısını kullanabilirsiniz (*feature.xml*). Daha sonra, bu dosyanın XML kodunu Visual Studio 'da görüntüleyebilirsiniz.
 
-#### <a name="to-view-the-packaged-manifest-file"></a>Paket bildirim dosyasını görüntülemek için
+#### <a name="to-view-the-packaged-manifest-file"></a>Paketlenmiş bildirim dosyasını görüntülemek için
 
-1. İçinde **özellik Tasarımcısı**, seçin **bildirim** sekmesi.
+1. **Özellik tasarımcısında**, **bildirim** sekmesini seçin.
 
-#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Paket bildirim dosyası Çözüm Gezgini'ni kullanarak görüntülemek için
+#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Çözüm Gezgini kullanarak paketlenmiş bildirim dosyasını görüntülemek için
 
-1. İçinde **Çözüm Gezgini**, seçin **tüm dosyaları göster** simgesi.
+1. **Çözüm Gezgini**, **tüm dosyaları göster** simgesini seçin.
 
-2. Özellikleri'ni genişletin, FeatureName genişletin, FeatureName.feature genişletin ve ardından açın  *\<FeatureName >. Template.xml* dosya.
+2. Özellikler ' i genişletin, ÖzellikAdı ' nı genişletin, FeatureName. feature öğesini genişletin ve * \<FeatureName>.Template.xml* dosyasını açın.
 
     > [!NOTE]
-    > Özellik şablon bildirimi XML dosyasını açtığınızda, dosyaları otomatik olarak doğrulanır ve Hata Listesi penceresinde görünen uyarıların yoksayılabilir.
+    > Özellik şablonu bildirim XML dosyasını açtığınızda, dosyalar otomatik olarak onaylanır ve Hata Listesi penceresinde görüntülenen uyarılar yoksayılabilir.
 
-## <a name="change-the-manifest-template"></a>Bildirim şablonu değiştirme
- Özellik bildirimi dosyasını Visual Studio XML Düzenleyicisi'ni veya bildirim şablonu bölmesindeki için XML kodu değiştirebilirsiniz. XML kodu herhangi bir değişiklik, paket bildirim dosyası özellik için birleştirilir. Örneğin, bir özellik özelleştirmek için bildirim şablonu değiştirmek isteyebilirsiniz.
+## <a name="change-the-manifest-template"></a>Bildirim şablonunu değiştirme
+ Visual Studio XML düzenleyicisinde veya bildirim şablonu bölmesinde Özellik bildirim dosyasının XML kodunu değiştirebilirsiniz. XML kodunda yapılan tüm değişiklikler, özelliği için paketlenmiş bildirim dosyası ile birleştirilir. Örneğin, bir özellik özelliğini özelleştirmek için bildirim şablonunu değiştirmek isteyebilirsiniz.
 
-#### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>XML Düzenleyicisi'ni kullanarak bildirim şablonu değiştirmek için
+#### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>XML düzenleyicisini kullanarak bildirim şablonunu değiştirme
 
-1. İçinde **özellik Tasarımcısı**, seçin **bildirim** sekmesinde, genişletin **düzenleme seçenekleri** düğümünü seçip **XML Düzenleyicisi'nde açık** bağlantı.
+1. **Özellik tasarımcısında**, **bildirim** sekmesini seçin, **düzenleme SEÇENEKLERI** düğümünü genişletin ve ardından **XML Düzenleyicisi 'nde aç** bağlantısını seçin.
 
-     XML değişiklikleri paket bildirim dosyası birleştirilir.
+     XML üzerinde yapılan değişiklikler paketlenmiş bildirim dosyası ile birleştirilir.
 
-#### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>Bildirim şablonu bölmesini kullanarak bildirim şablonu değiştirmek için
+#### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>Bildirim şablonu bölmesini kullanarak bildirim şablonunu değiştirme
 
-1. İçinde **özellik Tasarımcısı**, seçin **bildirim** sekmesinde, genişletme **düzenleme seçenekleri** düğüm ve bildirim şablonu bölmesinde görüntülenen XML değiştirin.
+1. **Özellik tasarımcısında**, **bildirim** sekmesini seçin, **düzenleme seçenekleri** düğümünü genişletin ve ardından bildirim şablonu bölmesinde görüntülenen xml 'yi değiştirin.
 
-     XML değişiklikleri görünür **paketlenmiş Önizleme, bildirim** bölmesi.
+     XML üzerinde yapılan değişiklikler, **paketlenmiş bildirim bölmesinin önizlemesinde** görüntülenir.
 
-## <a name="overwrite-the-packaged-manifest-file"></a>Paket bildirim dosyasının üzerine yaz
- Özellik Tasarımcısı devre dışı bırakabilir ve oluşturma *gt;Feature.xml* el ile dosya. Bu yordamı gerçekleştirmek ilk kez özellik Tasarımcısı'nda geçerli ayarları özellik şablonu XML dosyasına kaydedilir. Ardından, değiştirebilir veya XML üzerine yazın.
+## <a name="overwrite-the-packaged-manifest-file"></a>Paketlenmiş bildirim dosyasının üzerine yaz
+ Özellik tasarımcısını devre dışı bırakabilir ve *feature.xml* dosyasını el ile oluşturabilirsiniz. Bu yordamı ilk yaptığınızda, özellik tasarımcısında geçerli ayarlar özellik şablonu XML dosyasına kaydedilir. Ardından, XML kodunu değiştirebilir veya üzerine yazabilirsiniz.
 
 > [!NOTE]
-> Bu proje öğeleri ekleyin veya özellik Tasarımcısı devre dışıyken XML dosyasında SharePoint Proje öğeleri kaldırın, paketlenmiş değil.
+> Özellik Tasarımcısı devre dışı bırakıldığında XML dosyasına SharePoint proje öğeleri ekler veya kaldırırsanız, bu proje öğeleri paketlenmez.
 
-#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>Tasarımcı devre dışı bırakarak paket bildirim dosyasının üzerine yazmak için
+#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>Tasarımcıyı devre dışı bırakarak paketlenmiş bildirim dosyasının üzerine yazmak için
 
-1. İçinde **özellik Tasarımcısı**, seçin **bildirim** sekmesi.
+1. **Özellik tasarımcısında**, **bildirim** sekmesini seçin.
 
-2. Genişletin **düzenleme seçenekleri** düğümünü seçin **üzerine yaz XML düzenleyicisinde oluşturulan XML'in ve düzenleme bildiriminin** bağlantısını ve ardından **Evet** düğmesi.
+2. **Düzenleme seçenekleri** düğümünü GENIŞLETIN, **XML DÜZENLEYICISI bağlantısında oluşturulan XML üzerine yaz ve bildirimi Düzenle** ' yi seçin ve ardından **Evet** düğmesini seçin.
 
-     Şablonu geçerli paket bildirim dosyası ile güncelleştirilir.
+     Şablon, geçerli paketlenmiş bildirim dosyası ile güncelleştirilir.
 
-## <a name="enable-the-feature-designer"></a>Özellik Tasarımcısı'nı etkinleştir
- Özelleştirme özellik Tasarımcısı yeniden etkinleştirebilirsiniz *gt;Feature.xml* dosya.
+## <a name="enable-the-feature-designer"></a>Özellik tasarımcısını etkinleştirin
+ *feature.xml* dosyasını özelleştirmek Için özellik tasarımcısını yeniden etkinleştirebilirsiniz.
 
-#### <a name="to-re-enable-the-designer"></a>Tasarımcı yeniden etkinleştirmek için
+#### <a name="to-re-enable-the-designer"></a>Tasarımcıyı yeniden etkinleştirmek için
 
-1. İçinde **özellik Tasarımcısı**, seçin **atma bildirim düzenlemelerini ve yeniden Tasarımcısı'nı etkinleştirmeniz** bağlantısını ve ardından **Evet** düğmesi.
+1. **Özellik tasarımcısında**, **atma bildirimi düzenlemelerini seçin ve tasarımcı bağlantısını yeniden etkinleştirin** ve ardından **Evet** düğmesini seçin.
 
-2. Orijinal metin şablonu yenilenir ve XML için tüm değişiklikler kaybedilir.
+2. Şablon orijinal metinle yenilenir ve XML üzerinde yapılan değişiklikler kaybedilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Paketleme ve SharePoint çözümlerini dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

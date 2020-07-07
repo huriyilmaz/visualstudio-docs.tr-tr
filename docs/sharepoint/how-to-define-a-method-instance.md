@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir yöntem örneği tanımlama | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +15,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0e21900e87278ad500ee8497d1dd0c49350695d1
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 170982a5d4abe33ca8cd705a979acc0737185a9c
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981806"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016827"
 ---
 # <a name="how-to-define-a-method-instance"></a>Nasıl yapılır: Yöntem örneği tanımlama
   Modelinizdeki her yöntem için en az bir yöntem örneği tanımlamanız gerekir.
 
- **IVB yöntemi ayrıntıları** penceresini kullanarak bir yöntem örneği ekleyin. Yöntem örneğini eklediğinizde, Visual Studio projenizdeki model dosyasının XML dosyasına bir `<MethodInstance>` öğesi ekler. Bir `<MethodInstance>` öğesinin öznitelikleri hakkında daha fazla bilgi için bkz. [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
+ **IVB yöntemi ayrıntıları** penceresini kullanarak bir yöntem örneği ekleyin. Yöntem örneğini eklediğinizde, Visual Studio `<MethodInstance>` projenize model dosyasının XML öğesine bir öğesi ekler. Bir öğenin öznitelikleri hakkında daha fazla bilgi için `<MethodInstance>` bkz. [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 
 ### <a name="to-define-a-method-instance"></a>Bir yöntem örneği tanımlamak için
 
@@ -35,7 +34,7 @@ ms.locfileid: "72981806"
 
      **Örnekler** düğümünün altında yeni bir yöntem örneği görüntülenir.
 
-3. Menü çubuğunda > **Özellikler penceresini** **görüntüle** ' yi seçin.
+3. Menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
 
 4. **Özellikler** penceresinde, yöntem örneğinin özelliklerini ayarlayın. Her özellik hakkında daha fazla bilgi için bkz. [MethodInstance](/previous-versions/office/developer/sharepoint-2010/ee556838(v=office.14)).
 

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Proje çıktı başvurusu ekleme | Microsoft Docs'
+title: 'Nasıl yapılır: proje çıktı başvurusu ekleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,33 +14,32 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2ae3965647416d7a8e11cf0ea5e24cef1e54a09b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: bea0f39ae161d8b695f872cb634c35d0cb205c91
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967259"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016748"
 ---
-# <a name="how-to-add-a-project-output-reference"></a>Nasıl yapılır: Proje çıktı başvurusu ekleme
-  SharePoint Proje derlemeleri (veya Silverlight projelerinde .xap dosyaları) için SharePoint dağıtmak için proje çıktı başvurusu ekleyin.
+# <a name="how-to-add-a-project-output-reference"></a>Nasıl yapılır: proje çıktı başvurusu ekleme
+  SharePoint olmayan proje derlemelerini (veya. xap dosyalarını Silverlight projelerinde) SharePoint 'e dağıtmak için, bunları bir proje çıktı başvurusu olarak ekleyin.
 
- Bu işlem, iki proje arasında bir çözüm derleme bağımlılığı oluşturur. SharePoint Proje oluşturulan ve dağıtılan önce proje çıktı başvuruları ile ilişkili projeler oluşturulur.
+ Bu işlem iki proje arasında bir çözüm derleme bağımlılığı oluşturur. Proje çıkış başvurularıyla ilişkili projeler, SharePoint projesi oluşturulup dağıtılmadan önce oluşturulur.
 
-### <a name="to-add-a-project-output-reference"></a>Proje çıktı başvurusu ekleme
+### <a name="to-add-a-project-output-reference"></a>Proje çıkış başvurusu eklemek için
 
-1. En az bir SharePoint projesi ve bir SharePoint olmayan proje içeren bir çözüm yükleyin.
+1. En az bir SharePoint projesi ve SharePoint olmayan bir proje içeren bir çözüm yükleyin.
 
-2. İçinde **Çözüm Gezgini**, SharePoint proje düğümünde bir öğeyi seçin.
+2. **Çözüm Gezgini**, SharePoint proje düğümünde bir öğe seçin.
 
-3. İçinde **özellikleri** penceresinde seçin **proje çıktı başvuruları** özelliği ve ardından üç noktayı seçin (![ASP.NET Mobil Tasarımcısı elips](../sharepoint/media/mwellipsis.gif "ASP. NET Mobil Tasarımcısı elips")) yanında düğmesi.
+3. **Özellikler** penceresinde, **Proje çıktısı başvuruları** özelliğini seçin ve yanındaki üç nokta (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) düğmesini seçin.
 
-4. İçinde **proje çıktı başvuruları** iletişim kutusunda **Ekle** düğmesi.
+4. **Proje çıktısı başvuruları** Iletişim kutusunda **Ekle** düğmesini seçin.
 
-5. Özellikler bölmesinde yanındaki oku seçin **dağıtım türü** özelliği başvuruda, gibi SharePoint öğe için uygun değeri seçin **ElementFile**.
+5. Özellikler bölmesinde, **dağıtım türü** özelliğinin yanındaki oku seçin ve ardından başvuru yaptığınız SharePoint olmayan öğe Için **ElementFile**gibi uygun bir değer seçin.
 
-6. Yanındaki oku seçin **proje adı**olmayan SharePoint proje öğesi adını seçin ve ardından **Tamam** düğmesi.
+6. **Proje adı**' nın yanındaki oku seçin, SharePoint olmayan proje öğesinin adını seçin ve **Tamam** düğmesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Proje öğelerinde paketleme ve dağıtım bilgileri sağlayın](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
-- [Nasıl yapılır: Denetimleri güvenli denetim olarak işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md)
-- [Paketleme ve SharePoint çözümlerini dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [Proje Öğelerinde Paketleme ve dağıtım bilgileri sağlama](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)
+- [Nasıl yapılır: denetimleri güvenli denetim olarak Işaretleme](../sharepoint/how-to-mark-controls-as-safe-controls.md)
+- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

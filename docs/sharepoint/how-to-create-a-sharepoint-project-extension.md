@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Bir SharePoint proje uzantısı oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: SharePoint Proje uzantısı oluşturma | Microsoft Docs'
 ms.date: 04/28/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,34 +14,33 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 37f22e085334bf6a18ef1b5482b6b6c206690148
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 191f5d718064a4e094a2c28e3f584168b20fb3fc
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966880"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017162"
 ---
-# <a name="how-to-create-a-sharepoint-project-extension"></a>Nasıl yapılır: Bir SharePoint proje uzantısı oluşturma
-  Visual Studio'da açık olduğundan herhangi bir SharePoint projesine işlevselliği eklemek istediğinizde bir proje uzantısı oluşturma. Daha fazla bilgi için [SharePoint Proje sistemini genişletmek](../sharepoint/extending-the-sharepoint-project-system.md).
+# <a name="how-to-create-a-sharepoint-project-extension"></a>Nasıl yapılır: SharePoint Proje uzantısı oluşturma
+  Visual Studio 'da açık olan herhangi bir SharePoint projesine işlevsellik eklemek istediğinizde bir proje uzantısı oluşturun. Daha fazla bilgi için bkz. [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md).
 
-### <a name="to-create-a-project-extension"></a>Bir proje uzantısı oluşturma
+### <a name="to-create-a-project-extension"></a>Proje uzantısı oluşturmak için
 
 1. Bir sınıf kitaplığı projesi oluşturun.
 
 2. Aşağıdaki derlemelere başvurular ekleyin:
 
-    - Microsoft.VisualStudio.SharePoint
+    - Microsoft. VisualStudio. SharePoint
 
-    - System.ComponentModel.Composition
+    - System. ComponentModel. Composition
 
-3. Uygulayan bir sınıf oluşturma <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> arabirimi.
+3. Arabirimini uygulayan bir sınıf oluşturun <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> .
 
-4. Ekleme <xref:System.ComponentModel.Composition.ExportAttribute> sınıfa. Bu öznitelik bulmak ve yüklemek Visual Studio sağlar, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> uygulaması. Geçirmek <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> özniteliği Oluşturucu türü.
+4. <xref:System.ComponentModel.Composition.ExportAttribute>Sınıfını sınıfına ekleyin. Bu öznitelik, Visual Studio 'Nun uygulamanızı bulmasını ve yüklemesini sağlar <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension> . <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension>Türü öznitelik oluşturucusuna geçirin.
 
-5. Uygulamanızda <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize%2A> yöntemi, kullanım üyeleri *projectService* uzantınızı davranışını tanımlamak için parametre. Bu parametre bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> tanımlanan olaylara erişim sağlayan nesne <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> arabirimi.
+5. <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectExtension.Initialize%2A>Yöntemi uygulamanızda, uzantınızın davranışını tanımlamak Için *ProjectService* parametresinin üyelerini kullanın. Bu parametre, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> arabirimde tanımlanan olaylara erişim sağlayan bir nesnedir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği tarafından tanımlanan bir SharePoint Proje etkinliklerinin çoğu işleyen bir Basit Proje uzantısı oluşturma gösterilmektedir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> arabirimi. Kodu test etmek için bir SharePoint projesinde oluşturma [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ardından diğer projeleri çözüme ekleyin, proje özellik değerlerini değiştirmek veya silmek veya bir proje hariç. Uzantı, olayların iletileri yazarak bildirir **çıkış** penceresi ve **hata listesi** penceresi.
+ Aşağıdaki kod örneği, arabirimi tarafından tanımlanan SharePoint proje olaylarının çoğunu işleyen basit bir proje uzantısının nasıl oluşturulacağını göstermektedir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents> . Kodu test etmek için ' de bir SharePoint projesi oluşturun [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ardından çözüme daha fazla proje ekleyin, proje özelliği değerlerini değiştirin veya bir projeyi silin veya hariç tutun. Uzantı, **Çıkış** penceresine ve **hata listesi** penceresine iletiler yazarak olayları bilgilendirir.
 
   ```vb
     Imports Microsoft.VisualStudio.SharePoint
@@ -185,22 +184,22 @@ ms.locfileid: "62966880"
   }
   ```
 
-Bu örnekte, ileti yazmak için SharePoint Proje hizmeti kullanır. **çıkış** penceresi ve **hata listesi** penceresi. Daha fazla bilgi için [SharePoint Proje hizmetini kullanın](../sharepoint/using-the-sharepoint-project-service.md).
+Bu örnek, **Çıkış** penceresine ve **hata listesi** penceresine ileti yazmak için SharePoint proje hizmetini kullanır. Daha fazla bilgi için bkz. [SharePoint proje hizmetini kullanma](../sharepoint/using-the-sharepoint-project-service.md).
 
- Nasıl yapılacağını gösteren örnekler için <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested> ve <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested> olayları görmek [nasıl yapılır: Bir kısayol menü öğesini SharePoint projelerine ekleme](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md) ve [nasıl yapılır: SharePoint projelerine özellik ekleme](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md).
+ Ve olaylarının nasıl işleneceğini gösteren örnekler için <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectMenuItemsRequested> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested> , bkz. [nasıl yapılır: SharePoint projelerine kısayol menü öğesi ekleme](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md) ve [nasıl yapılır: SharePoint projelerine özellik ekleme](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md).
 
-## <a name="compile-the-code"></a>Kod derleme
- Bu örnek aşağıdaki derlemelere başvurular gerektirir:
+## <a name="compile-the-code"></a>Kodu derle
+ Bu örnek, aşağıdaki derlemelere başvurular gerektirir:
 
-- Microsoft.VisualStudio.SharePoint
+- Microsoft. VisualStudio. SharePoint
 
-- System.ComponentModel.Composition
+- System. ComponentModel. Composition
 
-## <a name="deploy-the-extension"></a>Uzantıyı dağıtmak
- Uzantıyı dağıtmak için oluşturun bir [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] uzantısı (VSIX) paketini derleme ve uzantısıyla dağıtmak istediğiniz diğer tüm dosyalar için. Daha fazla bilgi için [uzantıları dağıtmak için SharePoint araçları Visual Studio'da](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+## <a name="deploy-the-extension"></a>Uzantıyı dağıtma
+ Uzantıyı dağıtmak için, [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] derleme için bir uzantı (VSIX) paketi ve uzantıyla dağıtmak istediğiniz diğer dosyalar oluşturun. Daha fazla bilgi için bkz. [Visual Studio 'Da SharePoint araçları Için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint Proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md)
-- [Nasıl yapılır: Bir kısayol menü öğesini SharePoint projelerine ekleme](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md)
+- [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md)
+- [Nasıl yapılır: SharePoint projelerine kısayol menü öğesi ekleme](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md)
 - [Nasıl yapılır: SharePoint projelerine özellik ekleme](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)
-- [İzlenecek yol: Bir SharePoint proje uzantısı oluşturma](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)
+- [İzlenecek yol: SharePoint Proje uzantısı oluşturma](../sharepoint/walkthrough-creating-a-sharepoint-project-extension.md)

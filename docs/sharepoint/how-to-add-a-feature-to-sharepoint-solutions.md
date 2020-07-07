@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: SharePoint çözümlerine özellik ekleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,19 +12,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 143ab857af7c48f711e47910df07b6c58d07bc31
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 07d939a12e47f4ba63f51310efb36cc0a59d20e4
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967513"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016996"
 ---
 # <a name="how-to-add-a-feature-to-sharepoint-solutions"></a>Nasıl yapılır: SharePoint çözümlerine özellik ekleme
-  Bir SharePoint çözüm oluşturduğunuzda, bir özellik ve bir paket çözüme eklenir. Farklı türlerde SharePoint dosyaları düzenlemek için daha fazla özellik öğeleri ekleyebilirsiniz.
+  Bir SharePoint çözümü oluşturduğunuzda, çözüme bir özellik ve bir paket eklenir. Farklı türlerde SharePoint dosyalarını düzenlemek için daha fazla özellik öğesi ekleyebilirsiniz.
 
 ### <a name="to-add-a-feature-through-solution-explorer"></a>Çözüm Gezgini aracılığıyla bir özellik eklemek için
 
-1. İçinde **Çözüm Gezgini**, kısayol menüsünü açın **özellikleri**ve ardından **Özellik Ekle**.
+1. **Çözüm Gezgini**, **Özellikler**için kısayol menüsünü açın ve **Özellik Ekle**' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Paketleme ve SharePoint çözümlerini dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

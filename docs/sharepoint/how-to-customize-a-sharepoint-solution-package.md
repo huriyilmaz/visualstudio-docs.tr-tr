@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Bir SharePoint çözüm paketini özelleştirme | Microsoft Docs'
+title: 'Nasıl yapılır: bir SharePoint çözüm paketini özelleştirme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.RAD.PackageDesignerAdvanced
 - VS.SharePointTools.RAD.PackageDesigner.Manifest
@@ -17,75 +17,74 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0aa124d25e279b7e44292645d81d80829f5d3f8f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 77b66160d489f711b5588fdcdd024d13769d734f
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63420194"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016876"
 ---
-# <a name="how-to-customize-a-sharepoint-solution-package"></a>Nasıl yapılır: Bir SharePoint çözüm paketini özelleştirme
-  Paket Tasarımcısı oluşturmak ve bir paket özelleştirmek için kullanabileceğiniz (*.wsp*). Örneğin, SharePoint Proje öğeleri ve Özellik Ekle, Web sunucusu çözümü dağıtıldığında sıfırlama ve dağıtım sunucusu türü,'nı belirtin.
+# <a name="how-to-customize-a-sharepoint-solution-package"></a>Nasıl yapılır: bir SharePoint çözüm paketini özelleştirme
+  Paket Tasarımcısını bir paket (*. wsp*) oluşturmak ve özelleştirmek için kullanabilirsiniz. Örneğin, SharePoint proje öğeleri ve özellikleri ekleyebilir, çözüm dağıtıldığında Web sunucusunun sıfırlanıp sıfırlanmadığını belirtebilir ve dağıtım sunucusu türünü ayarlayabilirsiniz.
 
-## <a name="open-the-package-designer"></a>Paket Tasarımcısı'nı açın
+## <a name="open-the-package-designer"></a>Paket tasarımcısını açın
 
-#### <a name="to-open-the-package-designer"></a>Paket Tasarımcısı'nı açmak için
+#### <a name="to-open-the-package-designer"></a>Paket tasarımcısını açmak için
 
-- İçinde **Çözüm Gezgini**, çift **paket**, ya da seçin **Görünüm Tasarımcısı** kısayol menüsünde **paket**.
+- **Çözüm Gezgini**' de **paket**' e çift tıklayın veya **paket**için kısayol menüsünde **Tasarımcı görünüm** ' ü seçin.
 
-## <a name="view-the-packaged-manifestffile"></a>Paketlenmiş manifestfFile görüntüleyin
- Paket Tasarımcısı, paket bildirim dosyası oluşturmak ve değiştirmek için kullanabilirsiniz. Ardından, bu dosya için XML kodu Visual Studio'da görüntüleyebilirsiniz.
+## <a name="view-the-packaged-manifestffile"></a>Paketlenmiş manifestfFile dosyasını görüntüleme
+ Paketlenmiş bildirim dosyasını değiştirmek ve oluşturmak için paket tasarımcısını kullanabilirsiniz. Daha sonra, bu dosyanın XML kodunu Visual Studio 'da görüntüleyebilirsiniz.
 
-#### <a name="to-view-the-xml-source-file"></a>XML kaynak dosyası görüntülemek için
+#### <a name="to-view-the-xml-source-file"></a>XML kaynak dosyasını görüntülemek için
 
-1. İçinde **paket Tasarımcısı**, seçin **bildirim**.
+1. **Paket tasarımcısında**, **bildirim**' ı seçin.
 
-#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Paket bildirim dosyası Çözüm Gezgini'ni kullanarak görüntülemek için
+#### <a name="to-view-the-packaged-manifest-file-by-using-solution-explorer"></a>Çözüm Gezgini kullanarak paketlenmiş bildirim dosyasını görüntülemek için
 
-1. İçinde **Çözüm Gezgini**, seçin **tüm dosyaları göster**.
+1. **Çözüm Gezgini**, **tüm dosyaları göster**' i seçin.
 
-2. Paket genişletin Package.package genişletin ve ardından açın *Package.Template.xml* dosya.
+2. Paket ' i genişletin, Package. Package ' i genişletin ve *Package.Template.xml* dosyasını açın.
 
     > [!NOTE]
-    > Paket şablon bildirim XML dosyasını açtığınızda, dosyaları otomatik olarak doğrulanır ve Hata Listesi penceresinde görünen uyarıları gözardı edebilirsiniz.
+    > Paket şablonu için bildirim XML dosyasını açtığınızda, dosyalar otomatik olarak onaylanır ve Hata Listesi penceresinde görüntülenen uyarıları yoksayabilirsiniz.
 
-## <a name="change-the-manifest-template"></a>Bildirim şablonu değiştirme
- Visual Studio XML Düzenleyicisi'ni veya şablon bildirim bölmesini paket bildirim dosyasında XML kodunu değiştirebilirsiniz. XML kodu herhangi bir değişiklik, paket için paket bildirim dosyası kullanılarak birleştirilir.
+## <a name="change-the-manifest-template"></a>Bildirim şablonunu değiştirme
+ Paketlenmiş bildirim dosyasının XML kodunu Visual Studio XML düzenleyicisinde veya bildirim şablonu bölmesinde değiştirebilirsiniz. XML kodunda yapılan tüm değişiklikler, paketin paketlenmiş bildirim dosyası ile birleştirilir.
 
-#### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>XML Düzenleyicisi'ni kullanarak bildirim şablonu değiştirmek için
+#### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>XML düzenleyicisini kullanarak bildirim şablonunu değiştirme
 
-1. İçinde **paket Tasarımcısı**, seçin **bildirim** sekmesinde, genişletin **düzenleme seçenekleri** düğümünü seçip **XML Düzenleyicisi'nde açık** bağlantı.
+1. **Paket tasarımcısında**, **bildirim** sekmesini seçin, **düzenleme SEÇENEKLERI** düğümünü genişletin ve ardından **XML Düzenleyicisi 'nde aç** bağlantısını seçin.
 
-     XML değişiklikleri paket bildirim dosyası birleştirilir.
+     XML üzerinde yapılan değişiklikler paketlenmiş bildirim dosyası ile birleştirilir.
 
-#### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>Bildirim şablonu bölmesini kullanarak bildirim şablonu değiştirmek için
+#### <a name="to-change-the-manifest-template-by-using-the-manifest-template-pane"></a>Bildirim şablonu bölmesini kullanarak bildirim şablonunu değiştirme
 
-1. İçinde **paket Tasarımcısı**, seçin **bildirim** sekmesinde, genişletme **düzenleme seçenekleri** düğüm ve bildirim şablonu bölmesinde görüntülenen XML değiştirin.
+1. **Paket tasarımcısında**, **bildirim** sekmesini seçin, **düzenleme seçenekleri** düğümünü genişletin ve ardından bildirim şablonu bölmesinde görüntülenen xml 'yi değiştirin.
 
-     XML değişiklikleri görünür **paketlenmiş Önizleme, bildirim** bölmesi.
+     XML üzerinde yapılan değişiklikler, **paketlenmiş bildirim bölmesinin önizlemesinde** görüntülenir.
 
-## <a name="overwrite-the-packaged-manifest-file"></a>Paket bildirim dosyasının üzerine yaz
- Paket Tasarımcısı devre dışı bırakabilir ve oluşturma *manifest.xml* el ile dosya. Bu yordamı gerçekleştirmek ilk kez geçerli ayarları paket Tasarımcısı içinde paket şablonu XML dosyasına kaydedilir. Ardından, değiştirebilir veya XML üzerine yazın.
+## <a name="overwrite-the-packaged-manifest-file"></a>Paketlenmiş bildirim dosyasının üzerine yaz
+ Paket Tasarımcısını devre dışı bırakabilir ve *manifest.xml* dosyasını el ile oluşturabilirsiniz. Bu yordamı ilk gerçekleştirişinizde, paket Tasarımcısı 'ndaki geçerli ayarlar paket şablonu XML dosyasına kaydedilir. Ardından, XML kodunu değiştirebilir veya üzerine yazabilirsiniz.
 
 > [!NOTE]
-> Bu proje öğeleri ve özellikleri ekleyin veya paket Tasarımcısı devre dışı bırakıldığında, SharePoint Proje öğeleri ve Özellikler XML dosyasında kaldırırsanız, paketlenmiş değildir.
+> Paket Tasarımcısı devre dışı bırakıldığında XML dosyasına SharePoint proje öğeleri ve özellikleri ekler veya kaldırırsanız, bu proje öğeleri ve Özellikler paketlenmez.
 
-#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>Tasarımcı devre dışı bırakarak paket bildirim dosyasının üzerine yazmak için
+#### <a name="to-overwrite-packaged-manifest-file-by-disabling-the-designer"></a>Tasarımcıyı devre dışı bırakarak paketlenmiş bildirim dosyasının üzerine yazmak için
 
-1. İçinde **paket Tasarımcısı**, seçin **bildirim** sekmesi.
+1. **Paket tasarımcısında**, **bildirim** sekmesini seçin.
 
-2. Genişletin **düzenleme seçenekleri** düğümünü seçin **üzerine yaz XML düzenleyicisinde oluşturulan XML'in ve düzenleme bildiriminin** bağlantısını ve ardından **Evet** düğmesi.
+2. **Düzenleme seçenekleri** düğümünü GENIŞLETIN, **XML DÜZENLEYICISI bağlantısında oluşturulan XML üzerine yaz ve bildirimi Düzenle** ' yi seçin ve ardından **Evet** düğmesini seçin.
 
-     Şablonu geçerli paket bildirim dosyası ile güncelleştirilir.
+     Şablon, geçerli paketlenmiş bildirim dosyası ile güncelleştirilir.
 
-## <a name="enable-the-package-designer"></a>Paket Tasarımcısı'nı etkinleştir
- Paket Tasarımcısı özelleştirmek için yeniden etkinleştirebilirsiniz *manifest.xml* dosya.
+## <a name="enable-the-package-designer"></a>Paket Tasarımcısını etkinleştir
+ *manifest.xml* dosyasını özelleştirmek Için paket tasarımcısını yeniden etkinleştirebilirsiniz.
 
-#### <a name="to-re-enable-the-designer"></a>Tasarımcı yeniden etkinleştirmek için
+#### <a name="to-re-enable-the-designer"></a>Tasarımcıyı yeniden etkinleştirmek için
 
-1. İçinde **paket Tasarımcısı**, seçin **atma bildirim düzenlemelerini ve yeniden Tasarımcısı'nı etkinleştirmeniz** bağlantısını ve ardından **Evet** düğmesi.
+1. **Paket tasarımcısında**, **bildirim düzenlemelerini ve tasarımcı bağlantısını yeniden etkinleştirin** ve ardından **Evet** düğmesini seçin.
 
-     Orijinal metin şablonu yenilenir ve XML için tüm değişiklikler kaybedilir.
+     Şablon orijinal metinle yenilenir ve XML üzerinde yapılan değişiklikler kaybedilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Paketleme ve SharePoint çözümlerini dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
+- [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)

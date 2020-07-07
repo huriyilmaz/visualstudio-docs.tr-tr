@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: varlıklar arasında Ilişkilendirme oluşturma | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - AssociationGroupTool
 dev_langs:
@@ -21,12 +21,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cba9d712e2bcfa90ae37d47e3c518697f10b6add
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 75d4fcc9b99c9c5e2960e152eb5dac1da1343109
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72981842"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016941"
 ---
 # <a name="how-to-create-an-association-between-entities"></a>Nasıl yapılır: varlıklar arasında ilişkilendirme oluşturma
   İlişkiler oluşturarak Iş verileri bağlantısı (BDC) modelinizdeki varlıklar arasında ilişkiler tanımlayabilirsiniz. Visual Studio, her ilişki hakkında bilgi içeren modelin tüketicilerini sağlayan yöntemler oluşturur. Bu yöntemler, veri ilişkilerini bir kullanıcı arabiriminde (UI) göstermek için SharePoint Web bölümleri, listeleri veya özel uygulamalar tarafından kullanılabilir.
@@ -45,7 +44,7 @@ ms.locfileid: "72981842"
 
     1. **Tanımlayıcı eşleme** tablosunun **kaynak kimliği** sütununda, **alan** sütununda görüntülenen her eşleşen tür tanımlayıcısının yanındaki tanımlayıcıyı seçin.
 
-         Örneğin, **kaynak kimliği** sütununda `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` tür tanımlayıcısının yanındaki `ContactID` ' ı ve `ReadItem.salesOrder.SalesOrder.ContactID` tür tanımlayıcısını seçin.
+         Örneğin, **kaynak kimliği** sütununda `ContactID` `ReadList.salesOrderList.SalesOrderList.SalesOrder.ContactID` tür tanımlayıcısının ve tür tanımlayıcısının yanındaki ' ı seçin `ReadItem.salesOrder.SalesOrder.ContactID` .
 
 4. Yabancı bir keyıgn Association oluşturmak istiyorsanız, **yabancı anahtar Ilişkilendirmesi olan** onay kutusunu temizleyin.
 

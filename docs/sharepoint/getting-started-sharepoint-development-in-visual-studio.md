@@ -1,7 +1,7 @@
 ---
 title: Başlarken (Visual Studio 'da SharePoint geliştirme) | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -14,31 +14,30 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fc6d6083b9a764acc915e6c0f800cb70569652b7
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
-ms.translationtype: MT
+ms.openlocfilehash: 999a23f8765a72feb22822120a11e1b38b9ac946
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82586677"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017089"
 ---
 # <a name="get-started-sharepoint-development-in-visual-studio"></a>Kullanmaya başlayın (Visual Studio 'da SharePoint geliştirme)
-  Bu bölüm, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] ve ' [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]den faydalanan SharePoint çözümleri geliştirmek için ile çalışmaya başlamanıza yardımcı olur.
+  Bu bölüm, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve ' den faydalanan SharePoint çözümleri geliştirmek için ile çalışmaya başlamanıza yardımcı olur [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] .
 
  SharePoint 2013 ve SharePoint eklentileri hakkında daha fazla bilgi için bkz. [sharepoint 2013](https://www.microsoft.com/microsoft-365/previous-versions/microsoft-sharepoint-2013) ve [derleme SharePoint eklentileri](/sharepoint/dev/sp-add-ins/sharepoint-add-ins).
 
- SharePoint, Web tabanlı bir işbirliği platformu sunar. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], liste tanımları, iş akışları, iş verileri bağlantı modelleri ve site tanımları dahil olmak üzere SharePoint siteleri ve içeriği oluşturmak için birçok proje şablonu sağlar. Ayrıca, ' de [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint projeleri ve araçları için Uzantılar oluşturabilirsiniz.
+ SharePoint, Web tabanlı bir işbirliği platformu sunar. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], liste tanımları, iş akışları, iş verileri bağlantı modelleri ve site tanımları dahil olmak üzere SharePoint siteleri ve içeriği oluşturmak için birçok proje şablonu sağlar. Ayrıca, ' de SharePoint projeleri ve araçları için Uzantılar oluşturabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Konu başlığı|Açıklama|
+|Konu başlığı|Description|
 |-----------|-----------------|
 |[SharePoint hataları için ek bilgiler](../sharepoint/additional-information-for-sharepoint-errors.md)|SharePoint geliştirme ve sorun giderme sırasında yardımın nerede bulunacağını açıklar.|
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-|Konu başlığı|Açıklama|
+|Konu başlığı|Description|
 |-----------|-----------------|
-|[SharePoint Çözümleri Geliştirme](../sharepoint/developing-sharepoint-solutions.md)|' De [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint geliştirmesini açıklar.|
+|[SharePoint Çözümleri Geliştirme](../sharepoint/developing-sharepoint-solutions.md)|' De SharePoint geliştirmesini açıklar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[SharePoint için genel bir geliştirme ortamı ayarlama](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)|SharePoint çözümü oluşturmak için gerekli yüklemeleri açıklar|
 |[SharePoint için site sütunları, içerik türleri ve listeler oluşturma](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md)|SharePoint için Visual Studio Araçları geliştirmesi kullanılarak SharePoint için özel site sütunları, içerik türleri ve listeleri oluşturmayı açıklar.|
 |[SharePoint iş akışı çözümleri oluşturma](../sharepoint/creating-sharepoint-workflow-solutions.md)|İş akışı tasarımını ve geliştirmeyi açıklar.|

@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir Bulucu yöntemine filtre tanımlayıcısı ekleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f9dd853142d970cd14de20f4782accb3ce3e17eb
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 228afb2f49f4d528fa9b806e9bf8d2531f7de901
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986246"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016744"
 ---
 # <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>Nasıl yapılır: bir Bulucu yöntemine filtre tanımlayıcısı ekleme
   Filtre tanımlayıcıları, modelin tüketicilerini yürütmeden önce yöntemlere geçmesini sağlar. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -33,7 +32,7 @@ ms.locfileid: "72986246"
 
 2. **Yöntem ayrıntıları** penceresinde, parametrenin tür tanımlayıcısını seçin.
 
-3. Menü çubuğunda > **Özellikler penceresini** **görüntüle** ' yi seçin.
+3. Menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
 
 4. **Özellikler** penceresinde, **tür adı** özelliğini filtreye uygun bir veri türü olarak ayarlayın.
 
@@ -45,7 +44,7 @@ ms.locfileid: "72986246"
 
      **Filtre tanımlayıcıları** düğümünün altında yeni bir filtre tanımlayıcısı görüntülenir.
 
-7. Menü çubuğunda > **Özellikler penceresini** **görüntüle** ' yi seçin.
+7. Menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
 
 8. **Özellikler** penceresinde **tür** özelliğini seçin.
 
@@ -62,7 +61,7 @@ ms.locfileid: "72986246"
      Aşağıdaki örnek, belirtilen sipariş tarihi olan satış siparişlerini döndürür.
 
     > [!NOTE]
-    > `ServerName` alanının değerini sunucunuzun adıyla değiştirin.
+    > `ServerName`Alanın değerini sunucunuzun adıyla değiştirin.
 
      [!code-csharp[SP_BDC#11](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#11)]
      [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]

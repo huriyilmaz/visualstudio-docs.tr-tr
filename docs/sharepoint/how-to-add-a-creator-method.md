@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Bir yaratıcı metodu ekleme | Microsoft Docs'
+title: 'Nasıl yapılır: bir Oluşturucu yöntemi ekleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,58 +17,57 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 38312384c3e6ce51aa1b5b0b16df378286fc58b0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 962e353b5ae82f6dd3eccc2898385fd4b9ee30ee
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443587"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017063"
 ---
-# <a name="how-to-add-a-creator-method"></a>Nasıl yapılır: Bir yaratıcı metodu ekleme
-  Bir yaratıcı yöntemi, bir varlığın veri kaynağına yeni veri ekler. Kullanıcıların iş verileri bağlantısı (BDC) hizmeti bu yöntemi çağırır **yeni öğe** düğmesini **Şerit** listesini modelini temel alıyor. Daha fazla bilgi için [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
+# <a name="how-to-add-a-creator-method"></a>Nasıl yapılır: bir Oluşturucu yöntemi ekleme
+  Bir Oluşturucu yöntemi, bir varlığın veri kaynağına yeni veri ekler. Iş verileri bağlantısı (BDC) hizmeti, kullanıcılar modeli temel alan bir listenin **şeritinde** **Yeni öğe** düğmesini seçişinizde bu yöntemi çağırır. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
-### <a name="to-add-a-creator-method"></a>Bir yaratıcı metodu ekleme
+### <a name="to-add-a-creator-method"></a>Bir Oluşturucu yöntemi eklemek için
 
-1. Üzerinde **İVB Tasarımcısı**, varlık seçin.
+1. **IVB tasarımcısında**bir varlık seçin.
 
-2. Menü çubuğunda, **görünümü** > **diğer Windows** >**BDC yöntem ayrıntıları**.
+2. Menü çubuğunda, **View**  >  **diğer Windows**  > **bdc yöntemi ayrıntılarını**görüntüle ' yi seçin.
 
-    **BDC yöntem ayrıntıları** penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli Tasarım araçları genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
+    **IVB yöntemi ayrıntıları** penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
-3. İçinde **bir yöntem ekleyin** listesinde **Oluşturucu metodu Oluştur**.
+3. **Yöntem Ekle** listesinde, **Oluşturucu yöntemi oluştur**' u seçin.
 
-    Visual Studio, modele aşağıdaki öğeleri ekler ve bu öğelerin görünür **BDC yöntem ayrıntıları** penceresi.
+    Visual Studio, modele aşağıdaki öğeleri ekler ve bu öğeler **BDC Yöntem ayrıntıları** penceresinde görünür.
 
-   - Adlı bir yöntem **Oluştur**.
+   - **Create**adlı bir yöntem.
 
-   - Yöntemi giriş parametresi.
+   - Yöntemi için bir giriş parametresi.
 
-   - Yöntemin bir dönüş parametresi.
+   - Yöntemi için bir dönüş parametresi.
 
-   - Tür tanımlayıcıları için parametreleri.
+   - Parametrelerin tür tanımlayıcıları.
 
-   - Yöntemi için yöntem örneği.
+   - Yöntemi için bir yöntem örneği.
 
-     Daha fazla bilgi için [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
+     Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
-4. İçinde **Çözüm Gezgini**, oluşturulan hizmet kodu dosyası varlık için kısayol menüsünü açın ve ardından **kodu görüntüle**.
+4. **Çözüm Gezgini**' de, varlık için oluşturulan hizmet kodu dosyasının kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
-    Varlık hizmeti kod dosyasını Kod düzenleyicisinde açılır. Varlık hizmeti kodu dosyası hakkında daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
+    Varlık hizmeti kod dosyası kod düzenleyicisinde açılır. Varlık hizmeti kod dosyası hakkında daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
 
-5. Veri kaynağına veri ekler Oluşturucu yöntemine kod ekleyin. Aşağıdaki örnek, bir kişi SQL Server için AdventureWorks örnek veritabanına ekler.
+5. Veri kaynağına veri ekleyen Oluşturucu metoduna kod ekleyin. Aşağıdaki örnek, SQL Server için AdventureWorks örnek veritabanına bir kişi ekler.
 
    > [!NOTE]
-   > Değiştirin `ServerName` alanını sunucunuzun adıyla.
+   > `ServerName`Alanın değerini sunucunuzun adıyla değiştirin.
 
     [!code-csharp[SP_BDC#4](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#4)]
     [!code-vb[SP_BDC#4](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#4)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md)
-- [Nasıl yapılır: Bir Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
-- [Nasıl yapılır: Belirli bir Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-specific-finder-method.md)
-- [Nasıl yapılır: Silici metodu ekleme](../sharepoint/how-to-add-a-deleter-method.md)
-- [Nasıl yapılır: Bir güncelleyici metodu ekleme](../sharepoint/how-to-add-an-updater-method.md)
-- [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md)
-- [Nasıl yapılır: Bir yönteme bir parametre ekleyin](../sharepoint/how-to-add-a-parameter-to-a-method.md)
-- [Nasıl yapılır: Metot örneği tanımlama](../sharepoint/how-to-define-a-method-instance.md)
+- [Nasıl yapılır: Bulucu yöntemi ekleme](../sharepoint/how-to-add-a-finder-method.md)
+- [Nasıl yapılır: belirli bir bulucu yöntemi ekleme](../sharepoint/how-to-add-a-specific-finder-method.md)
+- [Nasıl yapılır: bir silici yöntemi ekleme](../sharepoint/how-to-add-a-deleter-method.md)
+- [Nasıl yapılır: Güncelleştirici yöntemi ekleme](../sharepoint/how-to-add-an-updater-method.md)
+- [IVB modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md)
+- [Nasıl yapılır: bir yönteme parametre ekleme](../sharepoint/how-to-add-a-parameter-to-a-method.md)
+- [Nasıl yapılır: Yöntem örneği tanımlama](../sharepoint/how-to-define-a-method-instance.md)

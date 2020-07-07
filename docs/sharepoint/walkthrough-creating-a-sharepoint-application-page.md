@@ -1,7 +1,7 @@
 ---
 title: 'İzlenecek yol: SharePoint uygulama sayfası oluşturma | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,12 +13,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0eaf7bda4ac4ed67dae79b8dd83bb59ba6985343
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 76375c15077bf672eaba01c840ba406228046435
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985023"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016499"
 ---
 # <a name="walkthrough-create-a-sharepoint-application-page"></a>İzlenecek yol: SharePoint uygulama sayfası oluşturma
 
@@ -45,7 +44,7 @@ Bu izlenecek yol aşağıdaki görevleri gösterir:
 
 İlk olarak, **boş bir SharePoint projesi**oluşturun. Daha sonra, bu projeye bir **uygulama sayfası** öğesi eklersiniz.
 
-1. Başlangıç [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 2. **Yeni proje** iletişim kutusunu açın, kullanmak istediğiniz dilin altındaki **Office/SharePoint** düğümünü genişletin ve **SharePoint çözümleri** düğümünü seçin.
 
@@ -61,19 +60,19 @@ Bir uygulama sayfası oluşturmak için projeye bir **Uygulama sayfa** öğesi e
 
 1. **Çözüm Gezgini**, **MySharePointProject** projesini seçin.
 
-2. Menü çubuğunda, **proje** > **Yeni Öğe Ekle**.
+2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
 
 3. **Yeni öğe Ekle** iletişim kutusunda, **uygulama sayfasını (yalnızca Grup çözümü** şablonu) seçin.
 
 4. Sayfayı **SearchItems**olarak adlandırın ve ardından **Ekle** düğmesini seçin.
 
-     Visual Web Developer Designer, sayfanın HTML öğelerini görebileceğiniz **kaynak** görünümündeki uygulama sayfasını görüntüler. Tasarımcı, birkaç <xref:System.Web.UI.WebControls.Content> denetimine yönelik biçimlendirmeyi görüntüler. Her denetim, varsayılan uygulama ana sayfasında tanımlanan bir <xref:System.Web.UI.WebControls.ContentPlaceHolder> denetimiyle eşlenir.
+     Visual Web Developer Designer, sayfanın HTML öğelerini görebileceğiniz **kaynak** görünümündeki uygulama sayfasını görüntüler. Tasarımcı, birkaç denetim için biçimlendirmeyi görüntüler <xref:System.Web.UI.WebControls.Content> . Her denetim <xref:System.Web.UI.WebControls.ContentPlaceHolder> , varsayılan uygulama ana sayfasında tanımlanan bir denetimle eşlenir.
 
 ## <a name="design-the-layout-of-the-application-page"></a>Uygulama sayfasının yerleşimini tasarlama
 
 Uygulama sayfası öğesi, uygulama sayfasına ASP.NET denetimleri eklemek için bir tasarımcı kullanmanıza olanak sağlar. Bu tasarımcı, Visual Web Developer 'da kullanılan tasarlayıcıdır. Tasarımcı **kaynak** görünümüne bir etiket, radyo düğmesi listesi ve tablo ekleyin ve ardından, herhangi bir standart ASP.NET sayfası tasarlarken yaptığınız gibi özellikleri ayarlayın.
 
-1. Menü çubuğunda **görünüm** > **araç kutusu**' nu seçin.
+1. Menü çubuğunda **Görünüm**  >  **araç kutusunu**seçin.
 
 2. **Araç kutusunun**standart düğümünde aşağıdaki adımlardan birini gerçekleştirin:
 
@@ -83,9 +82,9 @@ Uygulama sayfası öğesi, uygulama sayfasına ASP.NET denetimleri eklemek için
 
 3. **PlaceHolderMain** içerik denetimine bir **DropDownList** öğesi ve **tablo** öğesi eklemek için önceki adımı tekrarlayın.
 
-4. Tasarımcıda, etiket denetiminin `Text` özniteliğinin değerini **tüm öğeleri gösterecek**şekilde değiştirin.
+4. Tasarımcıda `Text` etiket denetiminin özniteliğinin değerini **tüm öğeleri gösterecek**şekilde değiştirin.
 
-5. Tasarımcıda `<asp:DropDownList>` öğesini aşağıdaki XML ile değiştirin.
+5. Tasarımcıda `<asp:DropDownList>` öğesini AŞAĞıDAKI XML ile değiştirin.
 
     ```xml
     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true"
@@ -97,13 +96,13 @@ Uygulama sayfası öğesi, uygulama sayfasına ASP.NET denetimleri eklemek için
 
 ## <a name="handle-the-events-of-controls-on-the-page"></a>Sayfadaki denetimlerin olaylarını işleyin
 
-Bir uygulama sayfasındaki denetimleri herhangi bir ASP.NET sayfasında olduğu gibi işleyin. Bu yordamda, açılan listenin `SelectedIndexChanged` olayını işleyeceğinizi caksınız.
+Bir uygulama sayfasındaki denetimleri herhangi bir ASP.NET sayfasında olduğu gibi işleyin. Bu yordamda, `SelectedIndexChanged` açılan listenin olayını işleyirsiniz.
 
 1. **Görünüm** menüsünde **kod**' u seçin.
 
      Uygulama sayfası kod dosyası kod düzenleyicisinde açılır.
 
-2. Aşağıdaki yöntemi `SearchItems` sınıfına ekleyin. Bu kod, bu kılavuzda daha sonra oluşturacağınız bir yöntemi çağırarak <xref:System.Web.UI.WebControls.DropDownList> <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> olayını işler.
+2. Sınıfına aşağıdaki yöntemi ekleyin `SearchItems` . Bu kod <xref:System.Web.UI.WebControls.ListControl.SelectedIndexChanged> , <xref:System.Web.UI.WebControls.DropDownList> Bu izlenecek yolda daha sonra oluşturacağınız bir yöntemi çağırarak olayını işler.
 
      [!code-vb[SP_ApplicationPage#5](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#5)]
      [!code-csharp[SP_ApplicationPage#5](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#5)]
@@ -113,12 +112,12 @@ Bir uygulama sayfasındaki denetimleri herhangi bir ASP.NET sayfasında olduğu 
      [!code-vb[SP_ApplicationPage#1](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#1)]
      [!code-csharp[SP_ApplicationPage#1](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#1)]
 
-4. Aşağıdaki yöntemi `SearchItems` sınıfına ekleyin. Bu yöntem, sunucu grubundaki tüm sitelerde yinelenir ve geçerli kullanıcı tarafından oluşturulan veya değiştirilen öğeleri arar.
+4. Sınıfına aşağıdaki yöntemi ekleyin `SearchItems` . Bu yöntem, sunucu grubundaki tüm sitelerde yinelenir ve geçerli kullanıcı tarafından oluşturulan veya değiştirilen öğeleri arar.
 
      [!code-vb[SP_ApplicationPage#2](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#2)]
      [!code-csharp[SP_ApplicationPage#2](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#2)]
 
-5. Aşağıdaki yöntemi `SearchItems` sınıfına ekleyin. Bu yöntem, tablodaki geçerli kullanıcı tarafından oluşturulan veya değiştirilen öğeleri görüntüler.
+5. Sınıfına aşağıdaki yöntemi ekleyin `SearchItems` . Bu yöntem, tablodaki geçerli kullanıcı tarafından oluşturulan veya değiştirilen öğeleri görüntüler.
 
      [!code-vb[SP_ApplicationPage#3](../sharepoint/codesnippet/VisualBasic/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.vb#3)]
      [!code-csharp[SP_ApplicationPage#3](../sharepoint/codesnippet/CSharp/sp_applicationpage/layouts/sp_applicationpage/SearchItems.aspx.cs#3)]
@@ -153,5 +152,5 @@ Aşağıdaki konulardan Visual Web Tasarımcısı 'nı kullanarak SharePoint say
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Nasıl yapılır: uygulama sayfası oluşturma](../sharepoint/how-to-create-an-application-page.md) [_layouts sayfa türü](/previous-versions/office/aa979604(v=office.14))
-
+[Nasıl yapılır: uygulama sayfası oluşturma](../sharepoint/how-to-create-an-application-page.md) 
+ [Uygulama _layouts sayfa türü](/previous-versions/office/aa979604(v=office.14))

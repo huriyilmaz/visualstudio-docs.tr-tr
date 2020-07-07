@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Özel özellik ekleme | Microsoft Docs'
+title: 'Nasıl yapılır: özel özellik ekleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.BDC.Property_Editor
 dev_langs:
@@ -17,31 +17,30 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: caf2d0e63db724c8eb3c1e72c79a109548af8f9c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: e79b18b4d2b388d2ff0387fed24778f8db03fd54
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62556857"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017074"
 ---
-# <a name="how-to-add-a-custom-property"></a>Nasıl yapılır: Özel özellik ekleme
-  Kullanarak modele özel özellikler ekleyebilirsiniz **Özellik Düzenleyici**. Bağlantı dizeleri gibi bilgileri ve diğer verileri çalışma zamanında almak için kod içinde bu özelliklere erişebilirsiniz.
+# <a name="how-to-add-a-custom-property"></a>Nasıl yapılır: özel özellik ekleme
+  **Özellik düzenleyicisini**kullanarak modele özel özellikler ekleyebilirsiniz. Çalışma zamanında bağlantı dizeleri ve diğer veriler gibi bilgileri almak için koddaki bu özelliklere erişebilirsiniz.
 
 ### <a name="to-add-a-custom-property"></a>Özel bir özellik eklemek için
 
-1. İçinde **BDC Gezgini**, özel bir özellik uygulamak istediğiniz model öğesi temsil eden düğümü seçin.
+1. **IVB Gezgini**' nde, özel bir özellik uygulamak istediğiniz model öğesini temsil eden düğümü seçin.
 
-2. Menü çubuğunda, **görünümü** > **Özellikler penceresi**.
+2. Menü çubuğunda **View**  >  **Özellikler penceresini**görüntüle ' yi seçin.
 
-3. İçinde **özellikleri** penceresinde seçin **özel özellikler** özelliği ve ardından üç nokta düğmesini (![ASP.NET Mobil Tasarımcısı elips](../sharepoint/media/mwellipsis.gif "ASP. NET Mobil Tasarımcısı elips")).
+3. **Özellikler** penceresinde **özel özellikler** özelliğini seçin ve ardından üç nokta düğmesini (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) seçin.
 
-     **Özellik Düzenleyici** iletişim kutusu görüntülenir.
+     **Özellik Düzenleyicisi** iletişim kutusu görüntülenir.
 
-4. Metin kutusunda **adı** , sütun özelliğin adını belirtin.
+4. **Ad** sütunundaki metin kutusunda, özelliğin adını belirtin.
 
-5. İçin **türü** özel özellik alanını uygun veri türü seçin.
+5. Özel özelliğin **tür** alanı için uygun veri türünü seçin.
 
-6. İçin **değer** özel özellik alanı bir değer belirtin ve ardından **Tamam** düğmesi.
+6. Özel özelliğinin **değer** alanı için bir değer belirtin ve sonra **Tamam** düğmesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md)

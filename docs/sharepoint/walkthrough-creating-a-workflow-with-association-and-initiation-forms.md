@@ -1,7 +1,7 @@
 ---
 title: İlişkilendirme ve başlatma formları ile iş akışı oluşturma
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7946e48502ea4fd8e9e9382a20de3c8ce25987b3
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 6f257dfed2fe439c5ab22ab9951b6258116c6567
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984689"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017134"
 ---
 # <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>İzlenecek yol: ilişkilendirme ve başlatma formları ile iş akışı oluşturma
   Bu izlenecek yol, ilişkilendirme ve başlatma formlarının kullanımını içeren temel sıralı bir iş akışının nasıl oluşturulacağını gösterir. Bunlar, SharePoint Yöneticisi (ilişkilendirme formu) tarafından ilk kez ilişkilendirildiğinde ve iş akışı Kullanıcı tarafından başlatıldığında (başlatma formu) parametrelerin bir iş akışına eklenmesini sağlayan ASPX formlarıdır.
@@ -37,7 +36,7 @@ ms.locfileid: "72984689"
 
   Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]' de bir SharePoint liste tanımı sıralı iş akışı projesi oluşturuluyor.
+- İçinde bir SharePoint liste tanımı sıralı iş akışı projesi oluşturuluyor [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - İş akışı zamanlaması oluşturuluyor.
 
@@ -52,23 +51,23 @@ ms.locfileid: "72984689"
 > [!NOTE]
 > Bu kılavuzda sıralı bir iş akışı projesi kullanılıyorsa, işlem durum makinesi iş akışlarıyla aynı olur.
 >
-> Ayrıca bilgisayarınız, aşağıdaki yönergelerde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] sürümü ve kullandığınız ayarlar bu öğeleri tespit. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Ayrıca bilgisayarınız, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Aşağıdaki yönergelerde bazı Kullanıcı arabirimi öğeleri için farklı adlar veya konumlar gösterebilir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Sahip olduğunuz sürüm ve kullandığınız ayarlar bu öğeleri tespit. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
-- [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] ve SharePoint 'in desteklenen sürümleri.
+- Ve SharePoint 'in desteklenen sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] .
 
 - Visual Studio.
 
 ## <a name="create-a-sharepoint-sequential-workflow-project"></a>SharePoint sıralı iş akışı projesi oluşturma
- İlk olarak, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]içinde sıralı bir iş akışı projesi oluşturun. Sıralı bir iş akışı, son etkinlik bitene kadar sırayla yürütülen bir dizi adımdan oluşur. Bu yordamda, SharePoint 'te paylaşılan belgeler listesi için geçerli olan sıralı bir iş akışı oluşturacaksınız. İş akışının Sihirbazı, iş akışını siteyle veya liste tanımıyla ilişkilendirmenize olanak tanır ve iş akışının ne zaman başlatılacağını belirlemenizi sağlar.
+ İlk olarak, içinde sıralı bir iş akışı projesi oluşturun [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Sıralı bir iş akışı, son etkinlik bitene kadar sırayla yürütülen bir dizi adımdan oluşur. Bu yordamda, SharePoint 'te paylaşılan belgeler listesi için geçerli olan sıralı bir iş akışı oluşturacaksınız. İş akışının Sihirbazı, iş akışını siteyle veya liste tanımıyla ilişkilendirmenize olanak tanır ve iş akışının ne zaman başlatılacağını belirlemenizi sağlar.
 
 #### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>SharePoint sıralı iş akışı projesi oluşturmak için
 
-1. **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda **dosya**  > **Yeni**  > **Proje** ' yi seçin.
+1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni**Proje** ' yi seçin.
 
-2. **Visual C#**  veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 3. **Şablonlar** bölmesinde, **SharePoint 2010 proje** projesi şablonunu seçin.
 
@@ -82,15 +81,15 @@ ms.locfileid: "72984689"
 
 6. **Çözüm Gezgini**, proje düğümünü seçin.
 
-7. Menü çubuğunda, **proje**  > **Yeni öğe Ekle**' yi seçin.
+7. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
 
-8. **Görsel C#**  veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+8. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 9. **Şablonlar** bölmesinde, **sıralı iş akışı (yalnızca Grup çözümü)** şablonunu seçin ve ardından **Ekle** düğmesini seçin.
 
      **SharePoint Özelleştirme Sihirbazı** görüntülenir.
 
-10. **Hata ayıklama için iş akışı adını belirtin** sayfasında, varsayılan adı (**ExpenseReport-Workflow1**) kabul edin. Varsayılan iş akışı şablonu tür değerini tut (**liste Iş akışı)** . **İleri** düğmesini seçin.
+10. **Hata ayıklama için iş akışı adını belirtin** sayfasında, varsayılan adı (**ExpenseReport-Workflow1**) kabul edin. Varsayılan iş akışı şablonu tür değerini tut (**liste Iş akışı)**. **İleri** düğmesini seçin.
 
 11. **Visual Studio 'nun bir hata ayıklama oturumunda iş akışını otomatik olarak ilişkilendirmesini ister misiniz?** sayfasında, iş akışı şablonunuzu denetlediyseniz otomatik olarak ilişkilendiren kutuyu temizleyin.
 
@@ -105,9 +104,9 @@ ms.locfileid: "72984689"
 
 1. **Çözüm Gezgini**içinde **Workflow1** düğümünü seçin.
 
-2. **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda **Proje** > **Yeni öğe Ekle** ' yi seçin.
+2. **Project**  >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje**Yeni öğe Ekle** ' yi seçin.
 
-3. İletişim kutusu ağacı görünümünde, **görsel C#**  veya **Visual Basic** (Proje dilinize bağlı olarak) öğesini genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+3. İletişim kutusu ağacı görünümünde, **Visual C#** veya **Visual Basic** (Proje dilinize bağlı olarak) öğesini genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 4. Şablon listesinde **Iş akışı Ilişkilendirmesi form** şablonunu seçin.
 
@@ -120,7 +119,7 @@ ms.locfileid: "72984689"
 
 #### <a name="to-design-and-code-the-association-form"></a>İlişkilendirme formunu tasarlamak ve kodlayın
 
-1. İlişkilendirme formunda (ExpenseReportAssocForm. aspx), `ID="Main"`olan `asp:Content` öğesini bulun.
+1. İlişkilendirme formunda (ExpenseReportAssocForm. aspx), `asp:Content` olan öğesini bulun `ID="Main"` .
 
 2. Bu içerik öğesinin ilk satırından hemen sonra, gider onay limiti için istemde bulunan bir etiket ve metin kutusu oluşturmak için aşağıdaki kodu ekleyin (*AutoApproveLimit*):
 
@@ -134,11 +133,11 @@ ms.locfileid: "72984689"
 3. Bağımlı dosyalarını göstermek için **Çözüm Gezgini** içindeki **ExpenseReportAssocForm. aspx** dosyasını genişletin.
 
     > [!NOTE]
-    > Projeniz [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]ise, bu adımı gerçekleştirmek için **tüm dosyaları görüntüle** düğmesini seçmeniz gerekir.
+    > Projeniz ' de ise [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] , bu adımı gerçekleştirmek Için **tüm dosyaları görüntüle** düğmesini seçmeniz gerekir.
 
 4. ExpenseReportAssocForm. aspx dosyasının kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
-5. `GetAssociationData` yöntemini ile değiştirin:
+5. `GetAssociationData`Yöntemini ile değiştirin:
 
     ```vb
     Private Function GetAssociationData() As String
@@ -166,9 +165,9 @@ ms.locfileid: "72984689"
 
 1. **Çözüm Gezgini**içinde **Workflow1** düğümünü seçin.
 
-2. Menü çubuğunda **proje** > **Yeni öğe Ekle** ' yi seçerek **Yeni öğe Ekle** iletişim kutusunu görüntüleyin.
+2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle** ' yi seçerek **Yeni öğe Ekle** iletişim kutusunu görüntüleyin.
 
-3. İletişim kutusu ağacı görünümünde, **görsel C#**  veya **Visual Basic** (Proje dilinize bağlı olarak) öğesini genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+3. İletişim kutusu ağacı görünümünde, **Visual C#** veya **Visual Basic** (Proje dilinize bağlı olarak) öğesini genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 4. Şablon listesinde, **Iş akışı başlatma formu** şablonunu seçin.
 
@@ -181,9 +180,9 @@ ms.locfileid: "72984689"
 
 #### <a name="to-code-the-initiation-form"></a>Başlatma formunu kodlayın
 
-1. Başlatma formunda (ExpenseReportInitForm. aspx), `ID="Main"`içeren `asp:Content` öğesini bulun.
+1. Başlatma formunda (ExpenseReportInitForm. aspx), `asp:Content` içeren öğesini bulun `ID="Main"` .
 
-2. Bu içerik öğesindeki ilk satırdan sonra doğrudan bir etiket ve metin kutusu oluşturmak için aşağıdaki kodu ekleyin. ilişki formuna girilen gider onay limiti (*AutoApproveLimit*) ve Toplam harcama (*ExpenseTotal*):
+2. Bu içerik öğesindeki ilk satırdan sonra doğrudan bir etiket ve metin kutusu oluşturmak için aşağıdaki kodu ekleyin. ilişki formuna girilen gider onay limiti (*AutoApproveLimit*) ve diğer bir deyişle, gider toplamı (*ExpenseTotal*) için istemde bulunan başka bir etiket ve metin kutusu oluşturun:
 
     ```aspx-csharp
     <asp:Label ID="lblAutoApproveLimit" Text="Auto Approval Limit:" runat="server" />
@@ -200,7 +199,7 @@ ms.locfileid: "72984689"
 
 4. ExpenseReportInitForm. aspx dosyasının kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.
 
-5. `Page_Load` yöntemini aşağıdaki örnekle değiştirin:
+5. `Page_Load`Yöntemini aşağıdaki örnekle değiştirin:
 
     ```vb
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As
@@ -222,7 +221,7 @@ ms.locfileid: "72984689"
     }
     ```
 
-6. `GetInitiationData` yöntemini aşağıdaki örnekle değiştirin:
+6. `GetInitiationData`Yöntemini aşağıdaki örnekle değiştirin:
 
     ```vb
     ' This method is called when the user clicks the button to start the workflow.
@@ -287,7 +286,7 @@ ms.locfileid: "72984689"
 
 14. Aşağıdaki adımlardan birini gerçekleştirerek iş akışına bu etkinliği ekleyin:
 
-    - **LogToHistoryListActivity** etkinliğinin kısayol menüsünü açın, **Kopyala**' yı seçin, iş akışı tasarımcısında **IfElseActivity1** içindeki diğer **bırakma etkinlikleri** için kısayol menüsünü açın ve ardından Yapıştır ' ı seçin..
+    - **LogToHistoryListActivity** etkinliğinin kısayol menüsünü açın, **Kopyala**' yı seçin, iş akışı tasarımcısında **IfElseActivity1** içindeki diğer **bırakma etkinlikleri** için kısayol menüsünü açın ve ardından **Yapıştır**' ı seçin.
 
     - **LogToHistoryListActivity** etkinliğini **araç kutusundan**sürükleyin ve **IfElseActivity1**içindeki diğer **bırakma etkinlikleri** alanına bırakın.
 
@@ -325,9 +324,9 @@ ms.locfileid: "72984689"
     ```
 
     > [!NOTE]
-    > Kodda, `somedomain\\someuser`, "`Office\\JoeSch`" gibi bir görevin oluşturulacağı bir etki alanı ve Kullanıcı adıyla değiştirin. Test etmek için, geliştirmekte olduğunuz hesabın kullanımı en kolay yoldur.
+    > Kodda, `somedomain\\someuser` bir görevin oluşturulacağı bir etki alanı ve Kullanıcı adı (örneğin, "") ile değiştirin `Office\\JoeSch` . Test etmek için, geliştirmekte olduğunuz hesabın kullanımı en kolay yoldur.
 
-3. `MethodInvoking` yönteminin altında aşağıdaki örneği ekleyin:
+3. Yönteminin altına `MethodInvoking` aşağıdaki örneği ekleyin:
 
     ```vb
     Private Sub checkApprovalNeeded(ByVal sender As Object, ByVal e As
@@ -361,9 +360,9 @@ ms.locfileid: "72984689"
 
 6. **Koşul** özelliğini genişleterek yanındaki artı Işaretini (![TreeView Plus](../sharepoint/media/plus.gif "TreeView Plus")) seçip değerini *checkApprovalNeeded*olarak ayarlayın.
 
-7. İş akışı tasarımcısında, **logToHistoryListActivity1** etkinliğinin kısayol menüsünü açın ve ardından `MethodInvoking` olayı için boş bir yöntem oluşturmak üzere **işleyicileri oluştur** ' u seçin.
+7. İş akışı tasarımcısında, **logToHistoryListActivity1** etkinliğinin kısayol menüsünü açın ve ardından olay için boş bir yöntem oluşturmak üzere **işleyicileri oluştur** ' u seçin `MethodInvoking` .
 
-8. `MethodInvoking` kodunu aşağıdaki kodla değiştirin:
+8. `MethodInvoking`Kodu aşağıdaki kodla değiştirin:
 
     ```vb
     Private Sub logToHistoryListActivity1_MethodInvoking(ByVal sender As
@@ -438,7 +437,7 @@ ms.locfileid: "72984689"
 
 11. Başlangıç sayfasında, ilişkilendirme sayfasında (**1200**) girilen miktardan daha küçük veya ona eşit bir miktar girin.
 
-     Bu gerçekleştiğinde, bir görev yerine geçmiş listesindeki bir giriş oluşturulur. Giriş, iş akışı durumu sayfasının **Iş akışı geçmişi** bölümünde görüntülenir. Geçmiş olayının **sonuç** sütunundaki iletiyi aklınızda edin. Otomatik olarak onaylanan miktarı içeren `logToHistoryListActivity1.MethodInvoking` olayına girilen metni içerir.
+     Bu gerçekleştiğinde, bir görev yerine geçmiş listesindeki bir giriş oluşturulur. Giriş, iş akışı durumu sayfasının **Iş akışı geçmişi** bölümünde görüntülenir. Geçmiş olayının **sonuç** sütunundaki iletiyi aklınızda edin. Otomatik olarak onaylanan tutarı içeren olayda girilen metni içerir `logToHistoryListActivity1.MethodInvoking` .
 
 ## <a name="next-steps"></a>Sonraki adımlar
  Aşağıdaki konulardan iş akışı şablonlarının nasıl oluşturulacağı hakkında daha fazla bilgi edinebilirsiniz:

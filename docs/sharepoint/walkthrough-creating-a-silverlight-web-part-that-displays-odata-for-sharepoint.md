@@ -1,7 +1,7 @@
 ---
 title: SharePoint için OData görüntüleyen Silverlight Web Bölümü oluşturma
 ms.date: 02/22/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.SPE.SilverlightWebPart
 dev_langs:
@@ -12,19 +12,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bd2e42f48a6881b533a2f098e47ac92511b85aa3
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 75653f0357bcc605e666ee271a527b616985b641
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984833"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86017165"
 ---
 # <a name="walkthrough-create-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>İzlenecek yol: SharePoint için OData görüntüleyen bir Silverlight Web Bölümü oluşturma
   SharePoint 2010, liste verilerini OData aracılığıyla gösterir. SharePoint 'te OData hizmeti, Reststaservıce ListData. svc tarafından uygulanır. Bu izlenecek yol, bir Silverlight uygulaması barındıran SharePoint Web Bölümü oluşturmayı gösterir. Silverlight uygulaması, ListData. svc kullanarak SharePoint duyuru listesi bilgilerini görüntüler. Daha fazla bilgi için bkz. [SharePoint FOUNDATION Rest arabirimi](/previous-versions/office/developer/sharepoint-2010/ff521587(v=office.14)) ve [Açık Veri Protokolü](https://www.odata.org/).
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Desteklenen Microsoft Windows ve SharePoint sürümleri.
@@ -39,9 +38,9 @@ ms.locfileid: "72984833"
 
 #### <a name="to-create-a-silverlight-application-and-silverlight-web-part"></a>Silverlight uygulaması ve Silverlight Web bölümü oluşturmak için
 
-1. **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda **dosya**  > **Yeni**  > **Proje** ' yi seçin.
+1. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni**Proje** ' yi seçin.
 
-2. **Visual C#**  veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 3. Şablonlar bölmesinde, **SharePoint 2010 Silverlight Web Bölümü** şablonunu seçin.
 
@@ -57,7 +56,7 @@ ms.locfileid: "72984833"
 
 7. **Silverlight Yapılandırma bilgilerini belirtin** sayfasının **Silverlight Web bölümünü nasıl ilişkilendirmek** istiyorsunuz sayfasında, **Yeni bir Silverlight projesi oluştur ve bunu Web Bölümü ile ilişkilendir** seçenek düğmesini seçin.
 
-8. **Adı** **SLApplication**olarak değiştirin, **dili** **Visual Basic** veya **görsele C#** ayarlayın ve ardından **Silverlight sürümünü** **Silverlight 4,0**olarak ayarlayın.
+8. **Adı** **SLApplication**olarak değiştirin, **dili** **Visual Basic** veya **Visual C#** olarak ayarlayın ve ardından **Silverlight sürümünü** **Silverlight 4,0**olarak ayarlayın.
 
 9. **Son** düğmesini seçin. Projeler **Çözüm Gezgini**görüntülenir.
 
@@ -75,15 +74,15 @@ ms.locfileid: "72984833"
     > [!NOTE]
     > Visual Basic kullanıyorsanız, **Başvurular** düğümünü görüntülemek için **Çözüm Gezgini** en üstündeki **tüm dosyaları göster** simgesini seçmeniz gerekir.
 
-3. **Hizmet başvurusu Ekle** Iletişim kutusunun Adres kutusuna SharePoint sitenizin **http://MySPSite** gibi URL 'Sini girin ve sonra **Git** düğmesini seçin.
+3. **Hizmet başvurusu Ekle** Iletişim kutusunun Adres kutusuna SHAREPOINT sitenizin URL 'sini girin (gibi) **http://MySPSite** ve sonra **Git** düğmesini seçin.
 
-     Silverlight, SharePoint OData hizmeti ListData. svc ' yi bulduktan sonra adresi tam hizmet URL 'SI ile değiştirir. Bu örnek için http://myserver http://myserver/_vti_bin/ListData.svc olur.
+     Silverlight, SharePoint OData hizmeti ListData. svc ' yi bulduktan sonra adresi tam hizmet URL 'SI ile değiştirir. Bu örnek için http://myserver olur http://myserver/_vti_bin/ListData.svc .
 
 4. Hizmet başvurusunu projeye eklemek için **Tamam** düğmesini seçin ve varsayılan hizmet adı olan ServiceReference1 ' ı kullanın.
 
-5. Menü çubuğunda **derleme**  > **Build Solution**' ı seçin.
+5. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
 
-6. SharePoint hizmetine göre projeye yeni bir veri kaynağı ekleyin. Bunu yapmak için, menü çubuğunda  > **diğer Windows**  > **veri kaynaklarını** **görüntüle** ' yi seçin.
+6. SharePoint hizmetine göre projeye yeni bir veri kaynağı ekleyin. Bunu yapmak için, menü çubuğunda **View**  >  **diğer Windows**  >  **veri kaynaklarını**görüntüle ' yi seçin.
 
      **Veri kaynakları** penceresi, görevler, Duyurular ve takvim gibi tüm kullanılabilir SharePoint listesi verilerini gösterir.
 
@@ -93,7 +92,7 @@ ms.locfileid: "72984833"
 
 8. Kılavuz denetimini Silverlight sayfasına sığacak şekilde yeniden boyutlandırın.
 
-9. MainPage. xaml kod dosyasında (Visual Basic for Visual C# veya *MainPage. xaml. vb* için MainPage.xaml.cs), aşağıdaki ad alanı başvurularını ekleyin.
+9. MainPage. xaml kod dosyasında (*MainPage.xaml.cs* for Visual C# veya *MainPage. xaml. vb* için Visual Basic), aşağıdaki ad alanı başvurularını ekleyin.
 
     ```vb
     ' Add the following three Imports statements.
@@ -123,7 +122,7 @@ ms.locfileid: "72984833"
     DataServiceCollection<AnnouncementsItem> announcements = new DataServiceCollection<AnnouncementsItem>();
     ```
 
-11. `UserControl_Loaded` yordamını aşağıdaki kodla değiştirin.
+11. `UserControl_Loaded`Yordamı aşağıdaki ile değiştirin.
 
     ```vb
     Private Sub UserControl_Loaded_1(sender As Object, e As RoutedEventArgs)
@@ -223,7 +222,7 @@ ms.locfileid: "72984833"
 
 7. **Web bölümleri** listesinde, Silverlight Web bölümünü seçin ve sonra Web bölümünü tasarımcıya eklemek için **Ekle** düğmesini seçin.
 
-8. İstediğiniz Web sayfasına yapılan eklemeleri tamamladıktan sonra, **sayfa** sekmesini seçin ve ardından araç çubuğundaki **& Kapat** düğmesini seçin.
+8. İstediğiniz Web sayfasına yapılan eklemeleri tamamladıktan sonra, **sayfa** sekmesini seçin ve ardından araç çubuğundaki **& kapat** düğmesini seçin.
 
      Silverlight Web Bölümü artık SharePoint sitesinden bildiri verileri görüntülüyor olmalıdır. Varsayılan olarak, sayfa SharePoint 'teki site sayfaları listesinde depolanır.
 

@@ -1,7 +1,7 @@
 ---
 title: JavaScript ve TypeScript birim testi
 description: Visual Studio, Visual Studio için Node.js araçları kullanılarak JavaScript ve TypeScript kodu desteği sağlar
-ms.date: 06/06/2018
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.devlang: javascript
 author: mikejo5000
@@ -11,12 +11,11 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: acac3eb306d12ff6976e19ae5dc1ad772691094c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
-ms.translationtype: MT
+ms.openlocfilehash: cdaff34c7eb2f9eba7c075127647c2eacbb736f9
+ms.sourcegitcommit: bcddb4647815e9ce2e175d9258e8df1b795e3e85
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289007"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86033357"
 ---
 # <a name="unit-testing-javascript-and-typescript-in-visual-studio"></a>Visual Studio 'da JavaScript ve TypeScript ile birim testi
 
@@ -72,25 +71,32 @@ Test Gezgini 'ni açtıktan sonra ( **Test**  >  **Windows**  >  **Test Gezgini*
 ![Test Gezgini](../javascript/media/UnitTestsDiscoveryMocha.png)
 
 > [!NOTE]
-> `outdir` `outfile` Test Gezgini, TypeScript dosyalarında birim testlerinizi bulamayacağından, *tsconfig.jsüzerinde*veya seçeneğini kullanmayın.
+> TypeScript için, `outdir` `outfile` Test Gezgini birim testlerinizi bulamayacağından, *tsconfig.jsüzerinde*veya seçeneğini kullanın.
 
 ## <a name="run-tests"></a>Testleri çalıştırma
 
-Testleri Visual Studio 2017 ' de veya komut satırından çalıştırabilirsiniz.
+Testleri Visual Studio 'da veya komut satırından çalıştırabilirsiniz.
 
-### <a name="run-tests-in-visual-studio-2017"></a>Visual Studio 2017 ' de testleri çalıştırma
+### <a name="run-tests-in-visual-studio"></a>Visual Studio 'da testleri çalıştırma
 
+::: moniker range=">=vs-2019"
+Testleri test Gezgini içindeki **Tümünü Çalıştır** bağlantısına tıklayarak çalıştırabilirsiniz. Ya da bir veya daha fazla test veya grup seçerek, sağ tıklayıp ve kısayol menüsünden **Çalıştır** ' ı seçerek testleri çalıştırabilirsiniz. Testler arka planda çalışır ve test Gezgini sonuçları otomatik olarak güncelleştirir ve gösterir. Ayrıca, sağ tıklayıp **Hata Ayıkla**' yı seçerek seçili testlerde hata ayıklaması de yapabilirsiniz.
+::: moniker-end
+::: moniker range="vs-2017"
 Testleri test Gezgini içindeki **Tümünü Çalıştır** bağlantısına tıklayarak çalıştırabilirsiniz. Ya da, bir veya daha fazla test veya grup seçerek, sağ tıklayıp ve **Seçilen testleri** kısayol menüsünden Çalıştır ' ı seçerek testleri çalıştırabilirsiniz. Testler arka planda çalışır ve test Gezgini sonuçları otomatik olarak güncelleştirir ve gösterir. Ayrıca, seçili testlerde hata **Ayıkla seçili testleri**seçerek de hata ayıklaması yapabilirsiniz.
+::: moniker-end
 
-> [!Warning]
-> Düğüm 8 + kullanan birim testlerinde hata ayıklama Şu anda yalnızca JavaScript test dosyaları için çalışır, TypeScript test dosyaları isabet kesme noktalarına başarısız olur. Geçici bir çözüm olarak, `debugger` anahtar sözcüğünü kullanır.
+TypeScript için, birim testleri oluşturulan JavaScript koduna karşı çalıştırılır.
+
+> [!NOTE]
+> Çoğu TypeScript senaryosunda, TypeScript kodunda bir kesme noktası ayarlayarak, test Gezgini 'nde bir teste sağ tıklayıp **Hata Ayıkla**' yı seçerek bir birim testinde hata ayıklaması yapabilirsiniz. Kaynak haritaları kullanan bazı senaryolar gibi daha karmaşık senaryolarda, TypeScript kodunda kesme noktalarına vurmadan zorluk yaşayabilirsiniz. Geçici bir çözüm olarak, `debugger` anahtar sözcüğünü kullanmayı deneyin.
 
 > [!NOTE]
 > Profil oluşturma testlerini veya kod kapsamını Şu anda desteklemiyoruz.
 
 ### <a name="run-tests-from-the-command-line"></a>Komut satırından test çalıştırma
 
-Aşağıdaki komutu kullanarak, Visual Studio 2017 için [Geliştirici komut istemi](/dotnet/framework/tools/developer-command-prompt-for-vs) testlerini çalıştırabilirsiniz:
+Aşağıdaki komutu kullanarak testleri Visual Studio için [Geliştirici komut istemi](/dotnet/framework/tools/developer-command-prompt-for-vs) çalıştırabilirsiniz:
 
 ```
 vstest.console.exe <path to project file>\NodejsConsoleApp23.njsproj /TestAdapterPath:<VisualStudioFolder>\Common7\IDE\Extensions\Microsoft\NodeJsTools\TestAdapter
