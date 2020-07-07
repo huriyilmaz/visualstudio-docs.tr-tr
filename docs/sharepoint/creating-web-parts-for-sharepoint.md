@@ -1,7 +1,7 @@
 ---
 title: SharePoint için Web Bölümleri oluşturuluyor | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 f1_keywords:
 - Microsoft.SharePoint.WebControls.DateTimeControl
 - Microsoft.SharePoint.WebControls.CssLink
@@ -23,12 +23,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 82e0d860f21f0fe2744c8c05c4ebeb3590be68fc
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 3825ef7d2c1c90f63a90f5028063c74332543841
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984473"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015053"
 ---
 # <a name="create-web-parts-for-sharepoint"></a>SharePoint için Web bölümleri oluşturma
   Web bölümleri 'ni kullanarak bir SharePoint sitesinin sayfalarının içeriğini, görünümünü ve davranışını bir tarayıcı kullanarak değiştirebilirsiniz. Web bölümleri, bir Web Bölümü sayfası içinde çalışan sunucu tarafı denetimleridir: bir SharePoint sitesinde görünen sayfaların yapı taşlarıdır. Bkz. [Yapı bloğu: Web bölümleri](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
@@ -43,9 +42,9 @@ ms.locfileid: "72984473"
 ### <a name="web-part-item"></a>Web Bölümü öğesi
  **Web Bölümü** öğesi, bir SharePoint sitesi için bir Web Bölümü tasarlamak üzere kullanabileceğiniz dosyalar sağlar. Bir **Web Bölümü** öğesi eklediğinizde, Visual Studio projenizde bir klasör oluşturur ve sonra klasöre birkaç dosya ekler. Aşağıdaki tabloda her bir dosya açıklanmaktadır.
 
-|Dosya|Açıklama|
+|Dosya|Description|
 |----------|-----------------|
-|*Elements. xml*|Projenizdeki Özellik tanım dosyasının Web bölümünü dağıtmak için kullandığı bilgileri içerir.|
+|*Elements.xml*|Projenizdeki Özellik tanım dosyasının Web bölümünü dağıtmak için kullandığı bilgileri içerir.|
 |. WebPart dosyası|Web Bölümü galerisinde, SharePoint 'in Web bölümünü görüntülemesi için gereken bilgileri sağlar.|
 |Kod dosyası|Web bölümüne denetimler ekleyen ve Web Bölümü içinde özel içerik üreten yöntemleri içerir.|
 
@@ -57,7 +56,7 @@ ms.locfileid: "72984473"
 ## <a name="sharepoint-controls"></a>SharePoint denetimleri
  Visual Studio, uygulama sayfaları gibi SharePoint sayfaları oluşturmaya yönelik bazı denetimler sağlar. Bu denetimler, **SharePoint denetimleri**altındaki **araç kutusunda** görünür. Bu denetimlerin işlevselliği, SharePoint sitesinde ve liste sayfalarında kullanılan ASP.NET sunucu denetimlerini içeren [Microsoft. SharePoint. WebControls](/previous-versions/office/sharepoint-server/ms413880(v=office.15)) ad alanından türetilir.
 
-|Denetim adı|Açıklama|
+|Denetim adı|Description|
 |------------------|-----------------|
 |[AspMenu](/previous-versions/office/sharepoint-server/ms454108(v=office.15))|Bir ASP menüsü ekler. Daha fazla bilgi için bkz. [menü denetimine genel bakış](/previous-versions/ecs0x9w5(v=vs.140)).|
 |[CssLink](/previous-versions/office/sharepoint-server/ms439048(v=office.15))|*. Aspx* sayfasına bir **bağlantı** öğesi ekler ve **CssRegistration**tarafından tanımlanan bir veya daha fazla dış stil sayfası uygular.|
@@ -91,16 +90,16 @@ ms.locfileid: "72984473"
 
    Bir sunucu tarafı biçimlendirme dosyasına satır içi JavaScript ekleyebilseniz de, İşaretlemede eklenen kesme noktaları için hata ayıklama desteklenmez. JavaScript hata ayıklaması yapmak için, biçimlendirme dosyasında bir dış JavaScript dosyasına başvurun ve sonra JavaScript dosyasındaki kesme noktalarını ayarlayın.
 
-- Satır içi [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] kodunun hata ayıklaması, biçimlendirme dosyası yerine oluşturulan kod dosyasında yapılmalıdır.
+- Satır içi kodun hata ayıklaması, [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] biçimlendirme dosyası yerine oluşturulan kod dosyasında yapılmalıdır.
 
-- Görsel Web bölümleri `<@ Assembly Src=` yönergesinin kullanımını desteklemez.
+- Görsel Web bölümleri, yönergesinin kullanımını desteklemez `<@ Assembly Src=` .
 
-- SharePoint Web denetimleri ve bazı [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] denetimleri, SharePoint korumalı ortamında desteklenmez. Korumalı bir çözümde Visual Web bölümü üzerinde desteklenmeyen denetimler kullanılıyorsa, "' Microsoft. SharePoint. WebControls '" ad alanında "tür veya ad alanı adı ' teması ' yok" hatası görüntülenir.
+- SharePoint Web denetimleri ve bazı [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] denetimler, SharePoint korumalı ortamında desteklenmez. Korumalı bir çözümde Visual Web bölümü üzerinde desteklenmeyen denetimler kullanılıyorsa, "' Microsoft. SharePoint. WebControls '" ad alanında "tür veya ad alanı adı ' teması ' yok" hatası görüntülenir.
 
   Korumalı çözümler hakkında daha fazla bilgi için bkz. [korumalı ve Grup çözümleri arasındaki farklılıklar](../sharepoint/differences-between-sandboxed-and-farm-solutions.md).
 
 ## <a name="create-older-style-sharepoint-based-web-parts"></a>Eski stil SharePoint tabanlı Web bölümleri oluşturma
- SharePoint için özel [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] Web bölümleri oluşturmak üzere Visual Studio 'daki şablonları kullanabilirsiniz. [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] Web bölümleri, [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] Web Bölümü altyapısının üzerine kurulmuştur ve yeni projeler için önerilen türdür.
+ SharePoint için özel Web bölümleri oluşturmak üzere Visual Studio 'daki şablonları kullanabilirsiniz [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] . [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)]Web bölümleri, [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] Web Bölümü altyapısının üzerine kurulmuştur ve yeni projeler için önerilen türdür.
 
  Çok az durumda, daha eski stil SharePoint tabanlı Web bölümünü kullanarak bir Web bölümü oluşturmanız gerekebilir. Bu Web bölümleri türlerini oluşturmak için Visual Studio 'Yu kullanabilirsiniz, ancak Visual Studio, özel olarak bunları oluşturmanıza yardımcı olmak için tasarlanan herhangi bir şablon sağlamaz.
 

@@ -1,7 +1,7 @@
 ---
 title: Iş verilerini SharePoint ile tümleştirme | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -19,15 +19,14 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 06d9e8059db8daa1c27b8c1d5fecc50940b7facb
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: b4bbfb681a0dac0825bf7af4f1f27ab1c1b50053
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986384"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016305"
 ---
 # <a name="integrate-business-data-into-sharepoint"></a>İş verilerini SharePoint ile tümleştirme
-  İş verilerini SharePoint ile tümleştirebilirsiniz. İş verileri [!INCLUDE[TLA#tla_sqlsvr](../sharepoint/includes/tlasharptla-sqlsvr-md.md)], Siebel, SAP veya bir Web hizmeti gibi arka uç sunucu uygulamalarından gelebilir. Kullanıcılar, SharePoint 'te dış listeleri veya Iş verileri Web Bölümleri kullanarak iş verilerini görüntüleyebilir, ekleyebilir, güncelleştirebilir veya silebilir.  Kullanıcılar bu verilere Microsoft Outlook gibi bir Microsoft Office uygulamasına çevrimdışı de erişebilirler. Daha fazla bilgi için bkz. [dış verileri nerede gösterebileceğiniz](/previous-versions/office/developer/sharepoint-2010/ee558737(v=office.14)).
+  İş verilerini SharePoint ile tümleştirebilirsiniz. İş verileri [!INCLUDE[TLA#tla_sqlsvr](../sharepoint/includes/tlasharptla-sqlsvr-md.md)] , Siebel, SAP veya bir Web hizmeti gibi arka uç sunucu uygulamalarından gelebilir. Kullanıcılar, SharePoint 'te dış listeleri veya Iş verileri Web Bölümleri kullanarak iş verilerini görüntüleyebilir, ekleyebilir, güncelleştirebilir veya silebilir.  Kullanıcılar bu verilere Microsoft Outlook gibi bir Microsoft Office uygulamasına çevrimdışı de erişebilirler. Daha fazla bilgi için bkz. [dış verileri nerede gösterebileceğiniz](/previous-versions/office/developer/sharepoint-2010/ee558737(v=office.14)).
 
  Verileri SharePoint ile bütünleştirmek için, Iş verileri bağlantısı (BDC) hizmeti için bir model oluşturun. BDC hizmeti, iş uygulamalarındaki verilerle ilgili bilgileri depolayan SharePoint 'teki bir uygulamadır. Daha fazla bilgi için bkz. [Iş verileri bağlantısı (BDC) hizmeti](/previous-versions/office/developer/sharepoint-2010/ee556407(v=office.14)).
 
@@ -41,11 +40,11 @@ ms.locfileid: "72986384"
 
  Model varlıkları ve yöntemleri içerir.
 
-### <a name="entities"></a>varlıklar
+### <a name="entities"></a>Varlıklar
  Bir varlık bir alan koleksiyonunu açıklar. Örneğin, bir varlık veritabanındaki bir tabloyu temsil edebilir. Bir varlık, SharePoint 'te dış içerik türü olarak görünür. Dış içerik türleri hakkında daha fazla bilgi için bkz. [dış Içerik türleri nelerdir?](/previous-versions/office/developer/sharepoint-2010/ee556391(v=office.14))
 
 ### <a name="methods"></a>Yöntemler
- Bir yöntemi, bir dış içerik türünün tüketicilerinin bir varlık alanları üzerinde bir eylem gerçekleştirmesine olanak sağlar. Örneğin, bir Güncelleştirici yöntemi, kullanıcıların `Address` ve `BirthDate` `Customer` varlığının alanları olduğu bir müşterinin adresini ve Doğum tarihini değiştirmesine olanak sağlayabilir.
+ Bir yöntemi, bir dış içerik türünün tüketicilerinin bir varlık alanları üzerinde bir eylem gerçekleştirmesine olanak sağlar. Örneğin, bir Güncelleştirici yöntemi kullanıcıların, `Address` ve `BirthDate` varlık alanları olan bir müşterinin adresini ve Doğum tarihini değiştirmesine olanak sağlayabilir `Customer` .
 
  Visual Studio, modelinizdeki her varlık için bir hizmet kodu dosyası oluşturur. Modelinize bir yöntem eklediğinizde, Visual Studio hizmet kodu dosyasında karşılık gelen bir yöntem oluşturur. Uygun görevi gerçekleştirmek için her bir yönteme kod ekleyin. Örneğin, modele bir Oluşturucu yöntemi eklerseniz, Visual Studio, hizmet kodu dosyanızda bir Oluşturucu yöntemi oluşturur. Bu yöntem, bir kullanıcı modeli temel alan bir listede **Yeni öğe** DÜĞMESINE tıkladığında BDC hizmeti tarafından çağrılır. Bu nedenle, bir veri kaynağına yeni veri ekleyen Oluşturucu yöntemine kod ekleyin. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 

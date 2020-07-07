@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: denetimleri güvenli denetim olarak Işaretleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +14,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 232fef4908a6168d550d510a0d753fe8e39db02b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: cd7ed13504d3d91f4239a8ea070454e1c31b1114
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982723"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016265"
 ---
 # <a name="how-to-mark-controls-as-safe-controls"></a>Nasıl yapılır: denetimleri güvenli denetim olarak Işaretleme
   Güvenlik için SharePoint, betik ekleme ve Web denetimlerine karşı korunan Web denetimleri arasında ayrım yapar. Korumalı denetimlere veya *güvenli denetimlere*güvenilmeyen kullanıcılar erişebilir. Bir derlemeyi pakete eklediğinizde bir SharePoint proje öğesinin güvenli denetim girişleri özelliğinde veya **paket tasarımcısında** denetimleri güvenli olarak işaretleyebilirsiniz. Daha fazla bilgi için bkz.
 
-- [Web. config dosyası ayarları](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) , [bir Web Bölümü derlemesini güvenli denetim olarak](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11))değiştirir ve kaydediyor.
+- [web.config dosya ayarları](/previous-versions/office/developer/sharepoint-2007/bb802890(v=office.12)) , [bir Web Bölümü derlemesini güvenli denetim olarak](/previous-versions/office/developer/sharepoint2003/dd587360(v=office.11))değiştirin ve kayıt edin.
 
 > [!IMPORTANT]
 > Bu yordamlar tanım amaçlıdır. Denetimleri yalnızca güvenli olduklarından emin olduğunuzda güvenli olarak işaretleyin.
@@ -63,7 +62,7 @@ ms.locfileid: "72982723"
 
      Daha sonra kullanıldığından denetimin ad alanını bir yere göz atın.
 
-3. Menü çubuğunda, projeyi derlemek için **build** > **Build Solution** öğesini seçin.
+3. Menü çubuğunda **Build**  >  Projeyi derlemek için derleme**Build Solution** ' ı seçin.
 
 4. Başka bir SharePoint çözümü oluşturun.
 
@@ -85,7 +84,7 @@ ms.locfileid: "72982723"
 
 12. Aşağıdaki tablodan özellikler için değerleri girin.
 
-    |Özellik adı|Değer|
+    |Özellik Adı|Değer|
     |-------------------|-----------|
     |Ad Alanı|Denetim için **BdcModelProject1. VisualWebPart1**gibi tam nitelikli ad alanı.|
     |Tür adı|Button1|
@@ -102,7 +101,7 @@ ms.locfileid: "72982723"
 
 15. Aşağıdaki tablodan özellikler için değerleri girin.
 
-    |Özellik adı|Değer|
+    |Özellik Adı|Değer|
     |-------------------|-----------|
     |Ad Alanı|Denetim için **BdcModelProject1. VisualWebPart1**gibi tam nitelikli ad alanı.|
     |Tür adı|TextBox1|

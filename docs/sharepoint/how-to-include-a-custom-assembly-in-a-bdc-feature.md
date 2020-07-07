@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: İçinde bir BDC özelliğine özel bir derlemeyi etme | Microsoft Docs'
+title: 'Nasıl yapılır: bir BDC özelliğine özel derleme ekleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.BDC.Add_Assemblies_Dialog
 dev_langs:
@@ -17,39 +17,38 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6de3313dad06c009244a8b784e81bf7d2a768c3b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 772cdbaca67cc82fc6b7eb2c5ef5adb6508df34a
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443109"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015258"
 ---
-# <a name="how-to-include-a-custom-assembly-in-a-bdc-feature"></a>Nasıl yapılır: İçinde bir BDC özelliğine özel bir derlemeyi etme
-  Projenizi derlemeleri aynı çözümdeki diğer projelerden başvuruda bulunabilir. Projenin özellik dosyasına kullanarak bu derlemeleri ancak eklemelisiniz **Ata başvurulan bütünleştirilmiş kodları LobSystem için** iletişim kutusu.
+# <a name="how-to-include-a-custom-assembly-in-a-bdc-feature"></a>Nasıl yapılır: bir BDC özelliğine özel bütünleştirilmiş kod ekleme
+  Projeniz aynı çözümdeki diğer projelerden derlemelere başvurabilir. Ancak, **başvurulan derlemeleri LobSystems 'A ata** iletişim kutusunu kullanarak bu derlemeleri projenin özellik dosyasına eklemeniz gerekir.
 
-### <a name="to-include-a-custom-assembly-in-a-business-data-connectivity-bdc-feature"></a>Bir iş verileri bağlantısı (BDC) özelliği bir özel bütünleştirilmiş kod eklemek için
+### <a name="to-include-a-custom-assembly-in-a-business-data-connectivity-bdc-feature"></a>Bir iş verileri bağlantısı (BDC) özelliğine özel bir derleme eklemek için
 
-1. İçinde **Çözüm Gezgini**, İVB Modeli içeren klasörü seçin.
+1. **Çözüm Gezgini**, İVB modelini içeren klasörü seçin.
 
-2. Üzerinde **görünümü** menüsünde tıklatın **Özellikler penceresi**.
+2. **Görünüm** menüsünde **Özellikler penceresi**' ne tıklayın.
 
-3. İçinde **özellikleri** penceresinde seçin **derlemeleri** özelliği ve üç nokta düğmesini (![ASP.NET Mobil Tasarımcısı elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobil Tasarımcı elips")).
+3. **Özellikler** penceresinde **derlemeler** özelliğini ve ardından üç nokta düğmesini (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) seçin.
 
-     **Ata başvurulan bütünleştirilmiş kodları LobSystem için** iletişim kutusu görüntülenir.
+     **Başvurulan derlemeleri LobSystems 'A ata** iletişim kutusu görüntülenir.
 
-4. İçinde **bir derleme seçin** listesinde, özel bir derlemeyi seçin.
-
-    > [!NOTE]
-    > Derlemeleri yalnızca görünür **Ata başvurulan bütünleştirilmiş kodları LobSystem için** derlemeyi içeren projeye başvuru eklediyseniz iletişim kutusu. Daha fazla bilgi için [nasıl yapılır: Başvurular ekleme veya kaldırma Başvuru Ekle iletişim kutusunu kullanarak](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
-
-5. İçinde **başvurusu özellikleri** için açılan listeyi açın, grup **LobSystem kapsamı** özelliği, özel bir derlemeyi kullanın ve ardından yöntemleri LOB sistemine seçin **Tamam**  düğmesi.
+4. **Bir derleme seçin** listesinde özel derlemeyi seçin.
 
     > [!NOTE]
-    > Özel derleme kodunda hata ayıklamak için derleme çözüm paketine eklemeniz gerekir. Daha fazla bilgi için [nasıl yapılır: Ek derlemeler ekleyip](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
+    > Derlemeler, derlemeyi içeren projeye bir başvuru eklediyseniz, yalnızca **başvurulan derlemeleri LobSystems 'A ata** iletişim kutusunda görünür. Daha fazla bilgi için bkz. [nasıl yapılır: Başvuru Ekle Iletişim kutusunu kullanarak başvuru ekleme veya kaldırma](https://msdn.microsoft.com/3bd75d61-f00c-47c0-86a2-dd1f20e231c9).
+
+5. **Başvuru özellikleri** grubunda, **LobSystem Scope** özelliği için görüntülenen listeyi açın, özel derlemeyi kullanan yöntemlerin lob sistemini seçin ve **Tamam** düğmesini seçin.
+
+    > [!NOTE]
+    > Özel derlemedeki kodun hatalarını ayıklamak için, derlemeyi çözüm paketine eklemeniz gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: ek derlemeler ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-additional-assemblies.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Yerelleştirilmiş adlar, özellikler ve izinleri belirtmek için bir kaynak dosyası kullanma](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)
-- [Nasıl yapılır: Bir SharePoint projesine mevcut bir BDC modeli dosyası ekleme](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
+- [Nasıl yapılır: yerelleştirilmiş adları, özellikleri ve izinleri belirtmek için kaynak dosyası kullanma](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)
+- [Nasıl yapılır: bir SharePoint projesine mevcut bir BDC modeli dosyası ekleme](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
 - [İş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md)
 - [Nasıl yapılır: BDC modeli oluşturma](../sharepoint/how-to-create-a-bdc-model.md)
-- [SharePoint iş verileri Integragte](../sharepoint/integrating-business-data-into-sharepoint.md)
+- [İş verilerini SharePoint 'e tümleştirin](../sharepoint/integrating-business-data-into-sharepoint.md)

@@ -1,7 +1,7 @@
 ---
 title: SharePoint için site sütunu, içerik türü ve liste oluşturma
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.ListDesigner.GeneralMessageHelp
 - Microsoft.VisualStudio.SharePoint.Designers.ListDesigner.ViewModels.ListViewModel.SortingAndGrouping
@@ -19,12 +19,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: cc6782e4a83f259eb17632addec36c7804b27858
-ms.sourcegitcommit: 174c992ecdc868ecbf7d3cee654bbc2855aeb67d
-ms.translationtype: MT
+ms.openlocfilehash: 9ce76c72bad138a5c6c40afe717aadafec02c677
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74879365"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015274"
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>İzlenecek yol: SharePoint için site sütunu, içerik türü ve liste oluşturma
   Aşağıdaki yordamlarda, özel SharePoint site sütunlarının — veya *alanlarının*yanı sıra site sütunlarını kullanan bir içerik türü oluşturma işlemleri gösterilmektedir. Ayrıca, yeni içerik türünü kullanan bir listenin nasıl oluşturulacağını gösterir.
@@ -41,27 +40,27 @@ ms.locfileid: "74879365"
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
-- Windows ve SharePoint için desteklenen sürümler.
+- Desteklenen Windows ve SharePoint sürümleri.
 
 - [!INCLUDE[vsprvs-current](../sharepoint/includes/vsprvs-current-md.md)]
 
 ## <a name="create-custom-site-columns"></a>Özel site sütunları oluşturma
- Bu örnek, bir hastanta hastaları yönetmek için bir liste oluşturur. İlk olarak, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir SharePoint projesi oluşturmanız ve buna aşağıdaki gibi site sütunları eklemeniz gerekir.
+ Bu örnek, bir hastanta hastaları yönetmek için bir liste oluşturur. İlk olarak, içinde bir SharePoint projesi oluşturmanız [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve buna aşağıdaki şekilde site sütunları eklemeniz gerekir.
 
 #### <a name="to-create-the-project"></a>Proje oluşturmak için
 
-1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **Dosya** menüsünde **Yeni** > **Proje**' yi seçin.
+1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 ::: moniker range="=vs-2017"
-2. **Yeni proje** iletişim kutusunda, **Visual C#**  veya **Visual Basic**altında, **Office/SharePoint** düğümünü genişletin ve ardından **SharePoint çözümleri**' ni seçin.
+2. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic**altında, **Office/SharePoint** düğümünü genişletin ve ardından **SharePoint çözümleri**' ni seçin.
 
 3. **Şablonlar** bölmesinde, SharePoint 'in yüklü olduğu belirli bir sürümü Için **SharePoint boş projesini** seçin. Örneğin, SharePoint 2016 yüklemesi varsa **sharepoint 2016-boş proje** şablonu ' nu seçin.  
 
 4. Projenin adını **Clinic**olarak değiştirin ve **Tamam** düğmesini seçin.
 
-5. **Hata ayıklama için site ve güvenlik düzeyini belirtin** iletişim kutusunda, yeni özel alan öğesini eklemek Istediğiniz yerel SharePoint sitesinin URL 'sini girin veya varsayılan konumu (`http://<`*SystemName*`>/)`) kullanın.
+5. **Hata ayıklama için site ve güvenlik düzeyini belirtin** iletişim kutusunda, yeni özel alan öğesini eklemek Istediğiniz yerel SharePoint sitesinin URL 'sini girin veya varsayılan konumu ( `http://<` *SystemName*) kullanın `>/)` .
 
 6. **Bu SharePoint çözümünün güven düzeyi nedir?** bölümünde, varsayılan değer dağıtımı ' nı **Korumalı çözüm olarak**kullanın.
 
@@ -75,7 +74,7 @@ ms.locfileid: "74879365"
 
 3. Projenin adını **Clinic**olarak değiştirin ve **Oluştur** düğmesini seçin.
 
-4. **Hata ayıklama için site ve güvenlik düzeyini belirtin** iletişim kutusunda, yeni özel alan öğesini eklemek Istediğiniz yerel SharePoint sitesinin URL 'sini girin veya varsayılan konumu (`http://<`*SystemName*`>/)`) kullanın.
+4. **Hata ayıklama için site ve güvenlik düzeyini belirtin** iletişim kutusunda, yeni özel alan öğesini eklemek Istediğiniz yerel SharePoint sitesinin URL 'sini girin veya varsayılan konumu ( `http://<` *SystemName*) kullanın `>/)` .
 
 5. **Bu SharePoint çözümünün güven düzeyi nedir?** bölümünde, varsayılan değer dağıtımı ' nı **Korumalı çözüm olarak**kullanın.
 
@@ -86,11 +85,11 @@ ms.locfileid: "74879365"
 
 #### <a name="to-add-site-columns"></a>Site sütunları eklemek için
 
-1. Yeni bir site sütunu ekleyin. Bunu yapmak için, **Çözüm Gezgini**, **Clinic** projesine sağ tıklayın ve ardından > **Yeni öğe** **Ekle** ' yi seçin.
+1. Yeni bir site sütunu ekleyin. Bunu yapmak için, **Çözüm Gezgini**, **Clinic** projesine sağ tıklayın ve ardından **Add**  >  **Yeni öğe**Ekle ' yi seçin.
 
 2. **Yeni öğe Ekle** Iletişim kutusunda **site sütunu**' nı seçin, adı **haentname**olarak değiştirin ve ardından **Ekle** düğmesini seçin.
 
-3. Site sütununun *Elements. xml* dosyasında **tür** ayarını **metin**olarak bırakın, **Grup** ayarını **Clinic site sütunları**olarak değiştirin. Bu tamamlandığında, site sütununun *Elements. xml* dosyası aşağıdaki örnekteki gibi görünmelidir.
+3. Site sütununun *Elements.xml* dosyasında, **tür** ayarını **metin**olarak bırakın, **Grup** ayarını **Clinic site sütunları**olarak değiştirin. Bu tamamlandığında, site sütununun *Elements.xml* dosyası aşağıdaki örnekteki gibi görünmelidir.
 
     ```xml
     <Field
@@ -116,9 +115,9 @@ ms.locfileid: "74879365"
 
 1. Projeye bir içerik türü ekleyin. Bunu yapmak için, **Çözüm Gezgini**' de proje düğümünü seçin
 
-2. Menü çubuğunda, **proje** > **Yeni Öğe Ekle**.
+2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
 
-3. **Görsel C#**  veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+3. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 4. **Şablonlar** bölmesinde, **içerik türü** şablonu ' nu seçin, adı **hasta Info**olarak değiştirin ve ardından **Ekle** düğmesini seçin.
 
@@ -141,20 +140,20 @@ ms.locfileid: "74879365"
 
 10. **Grup adını** **Clinic içerik türleriyle**değiştirin ve diğer ayarları varsayılan değerlerinde bırakın.
 
-11. Menü çubuğunda **dosya** > **Tümünü Kaydet**' i seçin ve ardından içerik türü tasarımcısını kapatın.
+11. Menü çubuğunda **Dosya**  >  **Tümünü Kaydet**' i seçin ve ardından içerik türü tasarımcısını kapatın.
 
-## <a name="create-a-list"></a>Liste oluştur
+## <a name="create-a-list"></a>Liste Oluştur
  Şimdi yeni içerik türünü ve site sütunlarını kullanan bir liste oluşturun.
 
 #### <a name="to-create-a-list"></a>Bir liste oluşturmak için
 
 1. Projeye bir liste ekleyin. Bunu yapmak için, **Çözüm Gezgini**' de proje düğümünü seçin.
 
-2. Menü çubuğunda, **proje** > **Yeni Öğe Ekle**.
+2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
 
-3. **C# Görsel** veya **Visual Basic**altında **SharePoint** düğümünü genişletin.
+3. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin.
 
-4. Şablonlar bölmesinde, **liste** şablonunu seçin, adı **hastalar**olarak değiştirin ve ardından **Ekle** düğmesini seçin.
+4. Şablonlar bölmesinde, **liste** şablonunu seçin, adı **hastalar**olarak değiştirin ve ardından **Templates** **Ekle** düğmesini seçin.
 
 5. **Listeyi** varsayılan olarak ayarla **(özel liste)** seçeneğini belirleyin ve ardından **son** düğmesini seçin.
 
@@ -172,11 +171,11 @@ ms.locfileid: "74879365"
 
     - Ev Telefonu
 
-    - E-Posta
+    - Postadaki
 
     - Doctor Name
 
-    - Açıklamalar
+    - Yorumlar
 
 9. **Sütun görünen adı**altında boş bir satır seçin, özel bir liste sütunu ekleyin ve onu **barındırsıt**olarak adlandırın. Veri türünü **tek satırlık metin**olarak bırakın.
 
@@ -205,24 +204,24 @@ ms.locfileid: "74879365"
 
     - Ev Telefonu
 
-    - E-Posta
+    - Postadaki
 
     - Doctor Name
 
     - Hastane
 
-    - Açıklamalar
+    - Yorumlar
 
 14. **Özellikler** listesinde **sıralama ve gruplama** özelliğini seçin ve ardından **sıralama ve gruplama** iletişim kutusunu göstermek Için üç nokta düğmesi ![üç nokta simgesini](../sharepoint/media/ellipsisicon.gif "Üç nokta simgesi") seçin.
 
 15. **Sütun adı** listesinde, **hasta adı**' nı seçin, **sıralama** sütununun **artan**olarak ayarlandığından emin olun ve **Tamam** düğmesini seçin.
 
-## <a name="test-the-application"></a>Uygulamayı test edin
+## <a name="test-the-application"></a>Uygulamayı test etme
  Artık özel site sütunları, içerik türü ve liste hazır hale gelmiştir, bunları SharePoint 'e dağıtın ve test etmek için uygulamayı çalıştırın.
 
 #### <a name="to-test-the-application"></a>Uygulamayı test etmek için
 
-1. Menü çubuğunda **dosya** > **Tümünü Kaydet**' i seçin.
+1. Menü çubuğunda **Dosya**  >  **Tümünü Kaydet**' i seçin.
 
 2. Uygulamayı çalıştırmak için **F5** tuşunu seçin.
 
@@ -230,7 +229,7 @@ ms.locfileid: "74879365"
 
 3. **Hastalar** listesini göstermek Için hızlı gezinti çubuğunda **hastalar** bağlantısını seçin.
 
-     Listedeki sütun adları, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**Görünümler** sekmesinde girilenlerindekilerle eşleşmelidir.
+     Listedeki sütun adları, içindeki **Görünümler** sekmesinde girilenlerindekilerle eşleşmelidir [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 4. Hasta bilgi kartı oluşturmak için **Yeni öğe Ekle** bağlantısını seçin.
 

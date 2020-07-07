@@ -1,7 +1,7 @@
 ---
 title: SharePoint için sayfalar oluşturuluyor | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 297ebf0e7c2ed1273dd5a8ac973ce497c4c64781
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 942891bc9281c07966160ea9df065408fcbfd5ff
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986348"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015166"
 ---
 # <a name="create-pages-for-sharepoint"></a>SharePoint için sayfa oluşturma
   Bir SharePoint sitesi için uygulama sayfaları, site sayfaları, ana sayfalar ve sayfa düzenleri oluşturabilirsiniz.
@@ -34,12 +33,12 @@ ms.locfileid: "72986348"
 ## <a name="types-of-sharepoint-pages"></a>SharePoint sayfa türleri
  Aşağıdaki tabloda, bir SharePoint sitesinin içerdiği dört ana sayfa türü açıklanmaktadır.
 
-|Sayfa türü|Açıklama|
+|Sayfa türü|Description|
 |---------------|-----------------|
 |Uygulama sayfaları|Sayfanın özel kod içermesini istiyorsanız veya sayfanın birden çok site arasında paylaşılmasını istiyorsanız bir uygulama sayfası oluşturun. Aksi takdirde, bir site sayfası en iyi seçim olabilir.|
 |Site sayfaları|Aşağıdaki görevlerden herhangi birini gerçekleştirmek istiyorsanız site sayfası oluşturun:<br /><br /> -Sayfayı bir SharePoint kitaplığına ekleyin.<br />-Dinamik Web Bölümleri ve Web Bölümü bölgeleri gibi özellikleri barındırmak için sayfayı etkinleştirin.<br />-Kullanıcıların SharePoint Designer kullanarak sayfayı özelleştirmesini sağlar.<br /><br /> Sayfanın özel kod içermesini istiyorsanız site sayfası oluşturmayın. Bir site sayfasına özel kod ekleyebilseniz de, kullanıcı SharePoint Designer 'ı kullanarak sayfayı özelleştiren kod çalışmayı durduruyor.|
 |Ana sayfalar|Site sayfaları ve uygulama sayfaları için ortak bir yapı tanımlamak istiyorsanız bir ana sayfa oluşturun.|
-|Sayfa düzenleri|Sayfa düzenleri [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] özeldir ve site sayfaları ve uygulama sayfaları için daha fazla ortak yapı tanımlamanızı sağlar.|
+|Sayfa düzenleri|Sayfa düzenleri öğesine özeldir [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] ve site sayfaları ve uygulama sayfaları için ortak bir yapıyı daha ayrıntılı olarak tanımlamanızı sağlar.|
 
  Her sayfa türü için genel bir bakış için bkz. [yapı taşı: sayfalar ve Kullanıcı arabirimi](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14))ve [sayfa düzenleri ve ana sayfalar](/previous-versions/office/developer/sharepoint-2010/ms543497(v=office.14)).
 

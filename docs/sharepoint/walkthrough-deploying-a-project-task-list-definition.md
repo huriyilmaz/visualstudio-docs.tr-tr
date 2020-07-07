@@ -1,7 +1,7 @@
 ---
 title: 'İzlenecek yol: Proje Görev Listesi tanımını dağıtma | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,20 +12,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c0b7f1b0668af8218017c5cc96712384ed5f275c
-ms.sourcegitcommit: 77ef1dcc71057cd5fdc4733ff0cb6085bd6113e0
-ms.translationtype: MT
+ms.openlocfilehash: b5639fe7a1b35dea41b14be3730986ad7c7309b7
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661881"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015765"
 ---
 # <a name="walkthrough-deploy-a-project-task-list-definition"></a>İzlenecek yol: proje görev listesi tanımını dağıtma
 
-Bu izlenecek yol, proje görevlerini izlemek için bir SharePoint listesi oluşturmak, özelleştirmek, hatalarını ayıklamak ve dağıtmak üzere [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] nasıl kullanacağınızı gösterir.
+Bu izlenecek yol, [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] Proje görevlerini izlemek için bir SharePoint listesi oluşturmak, özelleştirmek, hatalarını ayıklamak ve dağıtmak için nasıl kullanılacağını gösterir.
 
 [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 - Desteklenen Microsoft Windows ve SharePoint sürümleri.
 
@@ -43,7 +42,7 @@ Bir SharePoint listesi projesi oluşturun ve liste tanımını görevlerle iliş
 
 3. Hata ayıklama için kullandığınız yerel SharePoint sitesini belirtin, **Grup çözümü olarak dağıt** seçenek düğmesini seçin ve ardından **son** düğmesini seçin.
 
-4. Proje için kısayol menüsünü açın ve ardından > **Yeni öğe** **Ekle** ' yi seçin.
+4. Proje için kısayol menüsünü açın ve ardından **Add**  >  **Yeni öğe**Ekle ' yi seçin.
 
 5. **Şablonlar** bölmesinde, **liste** şablonunu seçin ve sonra **Ekle** düğmesini seçin.
 
@@ -73,7 +72,7 @@ Görev listesinde, görevin son tarihini ve açıklamasını otomatik olarak aya
 
      Projeye **Projecttasklisteventalıcısı**adlı bir kod dosyası ile yeni bir olay alıcısı düğümü eklenir.
 
-6. **Projecttasklisteventalıcı** kod dosyasındaki `ItemAdded` yöntemine kod ekleyin. Her yeni görev eklendiğinde, göreve varsayılan bir bitiş tarihi ve açıklama eklenir. Varsayılan son tarih 1 Temmuz 2009 ' dir.
+6. `ItemAdded` **Projecttasklisteventalıcı** kod dosyasındaki yöntemine kod ekleyin. Her yeni görev eklendiğinde, göreve varsayılan bir bitiş tarihi ve açıklama eklenir. Varsayılan son tarih 1 Temmuz 2009 ' dir.
 
      [!code-vb[SPProjectTaskList#1](../sharepoint/codesnippet/VisualBasic/projecttasklist1/projecttasklisteventreceiver/projecttasklisteventreceiver.vb#1)]
      [!code-csharp[SPProjectTaskList#1](../sharepoint/codesnippet/CSharp/projecttasklist/projecttasklisteventreceiver/projecttasklisteventreceiver.cs#1)]
@@ -136,13 +135,13 @@ Proje görev listesini derleyip test ettikten sonra, *yerel sisteme* veya *uzak 
 
 ### <a name="to-deploy-the-project-task-list-to-the-local-system"></a>Proje görev listesini yerel sisteme dağıtmak için
 
-Visual Studio menü çubuğunda **derleme** > **dağıtım çözümü**' ni seçin.
+Visual Studio menü çubuğunda **Yapı**  >  **dağıtım çözümü**' ni seçin.
 
-Visual Studio, IIS uygulama havuzunu geri dönüştürür, çözümün var olan sürümlerini geri çeker, çözüm paketi ( *. wsp*) dosyasını SharePoint 'e kopyalar ve ardından özelliklerini etkinleştirir. Artık SharePoint 'te çözümü kullanabilirsiniz. Dağıtım yapılandırma adımları hakkında daha fazla bilgi için bkz. [nasıl yapılır: SharePoint dağıtım yapılandırmasını düzenleme](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).
+Visual Studio, IIS uygulama havuzunu geri dönüştürür, çözümün var olan sürümlerini geri çeker, çözüm paketi (*. wsp*) dosyasını SharePoint 'e kopyalar ve ardından özelliklerini etkinleştirir. Artık SharePoint 'te çözümü kullanabilirsiniz. Dağıtım yapılandırma adımları hakkında daha fazla bilgi için bkz. [nasıl yapılır: SharePoint dağıtım yapılandırmasını düzenleme](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md).
 
 ### <a name="to-deploy-the-project-task-list-to-a-remote-system"></a>Proje görev listesini uzak bir sisteme dağıtmak için
 
-1. Visual Studio menü çubuğunda **derleme** > **Yayımla**' yı seçin.
+1. Visual Studio menü çubuğunda **derleme**  >  **Yayımla**' yı seçin.
 
 2. **Yayımla** Iletişim kutusunda **dosya sistemine yayınla** seçenek düğmesini seçin.
 
@@ -154,11 +153,11 @@ Visual Studio, IIS uygulama havuzunu geri dönüştürür, çözümün var olan 
 
 4. *. Wsp* dosyasını uzak SharePoint sistemine kopyalayın.
 
-5. Paketi uzak SharePoint yüklemesine yüklemek için PowerShell `Add-SPUserSolution` komutunu kullanın. (Grup çözümleri için `Add-SPSolution` komutunu kullanın.)
+5. `Add-SPUserSolution`Paketi uzak SharePoint yüklemesine yüklemek Için PowerShell komutunu kullanın. (Grup çözümleri için `Add-SPSolution` komutunu kullanın.)
 
      Örneğin, `Add-SPUserSolution C:\MyProjects\ProjectTaskList\ProjectTaskList\bin\Debug\ProjectTaskList.wsp`.
 
-6. Çözümü dağıtmak için PowerShell `Install-SPUserSolution` komutunu kullanın. (Grup çözümleri için `Install-SPSolution` komutunu kullanın.)
+6. `Install-SPUserSolution`Çözümü dağıtmak Için PowerShell komutunu kullanın. (Grup çözümleri için `Install-SPSolution` komutunu kullanın.)
 
      Örneğin, `Install-SPUserSolution -Identity ProjectTaskList.wsp -Site http://NewSiteName`.
 

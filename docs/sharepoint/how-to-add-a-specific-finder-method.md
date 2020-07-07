@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: belirli bir bulucu yöntemi ekleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -17,12 +17,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 732921b021d7887faf31dd3f602f5400c1d06a59
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 403213b6dcd87251df0b24333c759c8de8720afd
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985256"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014820"
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>Nasıl yapılır: belirli bir bulucu yöntemi ekleme
   *Belirli bir bulucu* yöntemi oluşturarak tek bir varlık örneği döndürebilirsiniz. Iş verileri bağlantısı (BDC) hizmeti, bir kullanıcı iş verileri Web bölümünde veya dış listede bir varlık seçtiğinde belirli Bulucu yöntemini yürütür. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
@@ -33,7 +32,7 @@ ms.locfileid: "72985256"
 
     Visual Studio 'da **BDC tasarımcısına** bir varlık ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: modele varlık ekleme](../sharepoint/how-to-add-an-entity-to-a-model.md).
 
-2. Menü çubuğunda, **diğer Windows**, **BDC Yöntem ayrıntıları** > **görüntüle** ' yi seçin.
+2. Menü çubuğunda, **View**  >  **diğer Windows**ve **BDC Yöntem ayrıntılarını**görüntüle ' yi seçin.
 
     **IVB yöntemi ayrıntıları** penceresi açılır. Bu pencere hakkında daha fazla bilgi için bkz. [BDC modeli tasarım araçlarına genel bakış](../sharepoint/bdc-model-design-tools-overview.md).
 
@@ -80,7 +79,7 @@ ms.locfileid: "72985256"
      Aşağıdaki örnek, SQL Server için AdventureWorks örnek veritabanından bir kişi döndürür.
 
      > [!NOTE]
-     > `ServerName` alanının değerini sunucunuzun adıyla değiştirin.
+     > `ServerName`Alanın değerini sunucunuzun adıyla değiştirin.
 
      [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
      [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]

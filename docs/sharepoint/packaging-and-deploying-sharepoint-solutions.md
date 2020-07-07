@@ -1,7 +1,7 @@
 ---
 title: SharePoint çözümlerini paketleme ve dağıtma | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -14,12 +14,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 45815e03d887f4d22f2559acf741f612cab34c49
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 9a4bf3394cf47b4f355fbe6a330ff5374e2da1c9
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72986212"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015600"
 ---
 # <a name="package-and-deploy-sharepoint-solutions"></a>SharePoint çözümlerini paketleme ve dağıtma
   Genellikle, bir SharePoint çözümü bir SharePoint sunucusuna bir çözüm paketi (. wsp) dosyası kullanılarak dağıtılır. SharePoint proje öğelerinizi Özellikler halinde organize etmek ve SharePoint özelliklerinizi dağıtmak üzere bir paket oluşturmak için Visual Studio 'Yu kullanabilirsiniz.
@@ -37,7 +36,7 @@ ms.locfileid: "72986212"
 ## <a name="create-features-and-packages"></a>Özellik ve paket oluşturma
  İlgili SharePoint öğelerini bir *özellik*halinde gruplamak Için Visual Studio 'yu kullanabilirsiniz. Örneğin, bir kişiler liste tanımına yönelik bir özellik liste örneğini ve liste tanımını içerebilir. Bu iki öğeyi, dağıtım amacıyla tek bir özellikte birleştirebilirsiniz. Özellikler hakkında daha fazla bilgi için bkz. [Yapı bloğu: Özellikler](/previous-versions/office/developer/sharepoint-2010/ee537350(v=office.14)).
 
- Daha sonra, birden çok özelliği, site tanımlarını, derlemeleri ve diğer dosyaları tek bir pakete dağıtmak için bir SharePoint çözüm paketi ( *. wsp*) oluşturabilirsiniz. Bu, dosyaları sunucuya dağıtmak üzere SharePoint 'in gerektirdiği bir biçimde depolar. Daha fazla bilgi için bkz. [Yapı bloğu: çözümler](/previous-versions/office/developer/sharepoint-2010/ee537008(v=office.14)).
+ Daha sonra, birden çok özelliği, site tanımlarını, derlemeleri ve diğer dosyaları tek bir pakete dağıtmak için bir SharePoint çözüm paketi (*. wsp*) oluşturabilirsiniz. Bu, dosyaları sunucuya dağıtmak üzere SharePoint 'in gerektirdiği bir biçimde depolar. Daha fazla bilgi için bkz. [Yapı bloğu: çözümler](/previous-versions/office/developer/sharepoint-2010/ee537008(v=office.14)).
 
 ## <a name="feature-and-packaging-tool-support"></a>Özellik ve paketleme aracı desteği
  Daha kolay dağıtım için SharePoint dosyalarınızı Özellikler ve çözüm paketleri halinde hızlıca düzenlemek üzere Visual Studio 'da SharePoint geliştirme araçları 'nı kullanabilirsiniz. Özelliği ve çözüm paketini yapılandırmak için aşağıdaki araçları kullanabilirsiniz.
@@ -95,7 +94,7 @@ ms.locfileid: "72986212"
 
  Örneğin, bir SharePoint projesine bir *. xml* dosyası eklemek için şu eylemlerden birini gerçekleştirin:
 
-- Projenize bir SharePoint "düzenleri" eşlenmiş klasör ekleyin. Bu, proje için alt klasörü olan **düzenler** adlı bir klasör **Çözüm Gezgini** oluşturur. *. Xml* dosyasını yeni alt klasöre ekleyin. Varsayılan olarak, dosya altında SharePoint dosya sistemine dağıtılır *. \TEMPLATE\MIZANPAJLAR\<klasör adı >\\* . Eşlenmiş klasörler ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: eşlenmiş klasör ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md).
+- Projenize bir SharePoint "düzenleri" eşlenmiş klasör ekleyin. Bu, proje için alt klasörü olan **düzenler** adlı bir klasör **Çözüm Gezgini** oluşturur. *. Xml* dosyasını yeni alt klasöre ekleyin. Varsayılan olarak, dosya altında SharePoint dosya sistemine dağıtılır *. \TEMPLATE\DÜZENLERI \\ \<Folder Name> *. Eşlenmiş klasörler ekleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: eşlenmiş klasör ekleme ve kaldırma](../sharepoint/how-to-add-and-remove-mapped-folders.md).
 
 - *. Xml* dosyasını bir SharePoint proje öğesinin klasörüne ekleyin ve ardından *. xml* dosyasının **dağıtım türü** özelliğini **NoDeployment** iken **RootFile** veya **ElementFile**gibi başka bir ayara değiştirin. Uygun **dağıtım türü** ayarı dosya ve projeye bağlıdır. **Dağıtım türü** özelliği ayarları hakkında daha fazla bilgi için bkz. [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md).
 

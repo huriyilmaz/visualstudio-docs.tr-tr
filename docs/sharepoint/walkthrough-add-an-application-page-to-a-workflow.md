@@ -1,7 +1,7 @@
 ---
-title: 'İzlenecek yol: Bir uygulama sayfasını bir iş akışına ekleme | Microsoft Docs'
+title: 'İzlenecek yol: bir uygulama sayfasını bir Iş akışına ekleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,45 +15,44 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 032447051bc03b037abba2920d48473f0d73935f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f54914e6676e0cc2400fa04ebb089fac08f58c3c
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63409555"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015498"
 ---
-# <a name="walkthrough-add-an-application-page-to-a-workflow"></a>İzlenecek yol: Bir uygulama sayfasını bir iş akışına ekleme
-  Bu izlenecek yol, bir iş akışı projesine bir iş akışından türetilen veriyi görüntüleyen bir uygulama sayfasını nasıl ekleneceğini gösterir. Bu konu başlığı altında açıklanan projede derlemeler [izlenecek yol: İlişki ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md).
+# <a name="walkthrough-add-an-application-page-to-a-workflow"></a>İzlenecek yol: bir uygulama sayfasını bir iş akışına ekleme
+  Bu izlenecek yol, bir iş akışından türetilmiş verileri bir iş akışı projesine görüntüleyen bir uygulama sayfasının nasıl ekleneceğini gösterir. BT Kılavuzu [: ilişkilendirme ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)konu başlığı altında açıklanan projede oluşturulur.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- ASPX uygulama sayfası, bir SharePoint iş akışı projesine ekleniyor.
+- Bir ASPX uygulama sayfasını bir SharePoint iş akışı projesine ekleme.
 
-- İş akışı projeden veri edinme ve bu işleme.
+- İş akışı projesinden veri alma ve düzenleme.
 
-- Uygulama sayfasında bir tablodaki verileri görüntüleme.
+- Uygulama sayfasındaki bir tablodaki verileri görüntüleme.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
 ## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
-- Desteklenen sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] ve SharePoint.
+- Ve SharePoint 'in desteklenen sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] .
 
 - Visual Studio.
 
-- Konu başlığı projeyi tamamlamak de [izlenecek yol: İlişki ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md).
+- Ayrıca, [Izlenecek yol: ilişkilendirme ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)başlıklı konudaki projeyi de doldurmanız gerekir.
 
-## <a name="ammend-the-workflow-code"></a>Ammend iş akışı kodu
- İlk olarak, harcama raporlarını miktarını sonucu sütununun değerini ayarlamak için iş akışına bir kod satırı ekleyin. Bu değer daha sonra harcama raporu Özet hesaplamaya kullanılır.
+## <a name="ammend-the-workflow-code"></a>İş akışı kodunu ammend
+ İlk olarak, sonuç sütununun değerini harcama raporu miktarına ayarlamak için iş akışına bir kod satırı ekleyin. Bu değer daha sonra gider raporu Özet hesaplamasında kullanılır.
 
-#### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>İş akışında sonucu sütununun değerini ayarlamak için
+#### <a name="to-set-the-value-of-the-outcome-column-in-the-workflow"></a>İş akışındaki sonuç sütununun değerini ayarlamak için
 
-1. Tamamlanmış projeyi konu başlığından yük [izlenecek yol: İlişkilendirme ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) içine [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. [Ilgili Izlenecek yol: ilişkilendirme ve başlatma formları Ile Iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) başlıklı konudaki tamamlanan projeyi yükleyin [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. Kodu açık *Workflow1.cs* veya *Workflow1.vb* (bağlı olarak, programlama dili).
+2. *Workflow1.cs* veya *Workflow1. vb* için kodu açın (programlama dilinize bağlı olarak).
 
-3. Alt kısmına `createTask1_MethodInvoking` yöntemine aşağıdaki kodu ekleyin:
+3. `createTask1_MethodInvoking`Yönteminin altına aşağıdaki kodu ekleyin:
 
     ```vb
     createTask1_TaskProperties1.ExtendedProperties("Outcome") =
@@ -66,15 +65,15 @@ ms.locfileid: "63409555"
     ```
 
 ## <a name="create-an-application-page"></a>Uygulama sayfası oluşturma
- Ardından, ASPX form projeye ekleyin. Bu formu harcama raporu iş akışı projeden alınan veriler görüntüler. Bunu yapmak için bir uygulama sayfası ekleyeceksiniz. Bir uygulama sayfasını SharePoint sitesindeki diğer sayfalara benzer anlamına gelir, diğer SharePoint sayfaları aynı sayfayı kullanır.
+ Ardından, projeye bir ASPX formu ekleyin. Bu form, gider raporu iş akışı projesinden alınan verileri görüntüler. Bunu yapmak için bir uygulama sayfası eklersiniz. Bir uygulama sayfası, diğer SharePoint sayfalarıyla aynı ana sayfayı kullanır, yani SharePoint sitesindeki diğer sayfalara benzecektir.
 
-#### <a name="to-add-an-application-page-to-the-project"></a>Bir uygulama sayfasını projeye eklemek için
+#### <a name="to-add-an-application-page-to-the-project"></a>Projeye bir uygulama sayfası eklemek için
 
-1. ExpenseReport projeyi seçin ve ardından, menü çubuğunda, **proje** > **Yeni Öğe Ekle**.
+1. ExpenseReport projesini seçin ve ardından menü çubuğunda **Proje**  >  **Ekle yeni öğe**' yi seçin.
 
-2. İçinde **şablonları** bölmesinde seçin **uygulama sayfası** Şablonu proje öğesi için varsayılan adı kullanın (**ApplicationPage1.aspx**) ve **Ekle** düğmesi.
+2. **Şablonlar** bölmesinde, **uygulama sayfası** şablonunu seçin, proje öğesi için varsayılan adı kullanın (**ApplicationPage1. aspx**) ve **Ekle** düğmesini seçin.
 
-3. İçinde [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ApplicationPage1.aspx değiştirin `PlaceHolderMain` aşağıdaki bölümü:
+3. [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]ApplicationPage1. aspx dosyasında, `PlaceHolderMain` bölümünü aşağıdaki kodla değiştirin:
 
     ```aspx-csharp
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
@@ -86,9 +85,9 @@ ms.locfileid: "63409555"
     </asp:Content>
     ```
 
-     Bu kod sayfası başlığı ile birlikte bir tablo ekler.
+     Bu kod, tabloya bir başlıkla birlikte bir tablo ekler.
 
-4. Uygulama sayfası başlık değiştirerek ekleme `PlaceHolderPageTitleInTitleArea` aşağıdaki bölümü:
+4. Bölümü aşağıdaki ile değiştirerek uygulama sayfasına bir başlık ekleyin `PlaceHolderPageTitleInTitleArea` :
 
     ```aspx-csharp
     <asp:Content ID="PageTitleInTitleArea" ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server" >
@@ -96,14 +95,14 @@ ms.locfileid: "63409555"
     </asp:Content>
     ```
 
-## <a name="code-the-application-page"></a>Uygulama sayfası kod
- Ardından, kod harcama raporu Özet uygulama sayfasına ekleyin. Sayfasını açtığınızda, kod ayrılmış harcama limitini aşan expenses SharePoint görev listesinde tarar. Rapor masrafları toplamını birlikte her bir öğe listeler.
+## <a name="code-the-application-page"></a>Uygulama sayfasını kodlayın
+ Ardından, gider raporu Özet uygulama sayfasına kod ekleyin. Sayfayı açtığınızda, kod, ayrılan harcama limitini aşan giderler için SharePoint 'teki görev listesini tarar. Raporda her öğe, masrafların toplamı ile birlikte listelenir.
 
-#### <a name="to-code-the-application-page"></a>Uygulama sayfası kod
+#### <a name="to-code-the-application-page"></a>Uygulama sayfasını kodlayın
 
-1. Seçin **ApplicationPage1.aspx** düğümünü ve ardından, menü çubuğunda, **görünümü** > **kod** uygulama sayfası arka plan kod görüntülenecek.
+1. **ApplicationPage1. aspx** düğümünü seçin ve ardından menü çubuğunda kodu **görüntüle**' yi seçerek  >  **Code** uygulama sayfasının arkasındaki kodu görüntüleyin.
 
-2. Değiştirin **kullanarak** veya **alma** üst sınıf aşağıdaki deyimleri (bağlı olarak, programlama dili):
+2. Sınıfın en üstündeki **using** veya **Import** deyimlerini (programlama diline bağlı olarak) aşağıdaki gibi değiştirin:
 
     ```vb
     Imports System
@@ -131,7 +130,7 @@ ms.locfileid: "63409555"
     using Microsoft.SharePoint.Navigation;
     ```
 
-3. Aşağıdaki kodu ekleyin `Page_Load` yöntemi:
+3. `Page_Load` yöntemine aşağıdaki kodu ekleyin:
 
     ```vb
     Try
@@ -295,61 +294,61 @@ ms.locfileid: "63409555"
     ```
 
     > [!WARNING]
-    > "TestServer" kodda SharePoint çalıştıran geçerli bir sunucu adı ile değiştirdiğinizden emin olun.
+    > Koddaki "TestServer" öğesini, SharePoint çalıştıran geçerli bir sunucunun adıyla değiştirdiğinizden emin olun.
 
-## <a name="test-the-application-page"></a>Uygulama sayfasını sınama
- Ardından, uygulama sayfasına gider verileri doğru şekilde görüntülenip görüntülenmeyeceğini belirler.
+## <a name="test-the-application-page"></a>Uygulama sayfasını test etme
+ Ardından, uygulama sayfasının gider verilerini doğru şekilde görüntüleyip görüntülemediğini saptayın.
 
 #### <a name="to-test-the-application-page"></a>Uygulama sayfasını sınamak için
 
-1. Seçin **F5** çalıştırmak ve SharePoint için projeyi dağıtmak için anahtar.
+1. Çalıştırmak ve projeyi SharePoint 'e dağıtmak için **F5** tuşunu seçin.
 
-2. Seçin **giriş** düğmesine ve ardından **paylaşılan belgeler** SharePoint sitesinde paylaşılan belgelerin listesini görüntülemek için Hızlı Başlat çubuğunda bağlantı.
+2. Giriş düğmesini seçin ve ardından, SharePoint sitesindeki paylaşılan belgeler listesini göstermek için hızlı **Başlangıç** çubuğundaki **paylaşılan belgeler** bağlantısını seçin.
 
-3. Bu örneğin gider raporlarını temsil etmek için bazı yeni belgeler belgelerin listesine seçerek karşıya **belgeleri** bağlantısını **LibraryTools** sayfası ve seçereküstkısmındakisekme **Belgeyi Karşıya Yükle** araç şeridinde düğmesi.
+3. Bu örneğe ilişkin gider raporlarını göstermek için, sayfanın üst kısmındaki **LibraryTools** sekmesinden **Belgeler** bağlantısını seçerek ve ardından araç şeridinde **belgeyi karşıya yükle** düğmesini seçerek belgeler listesine bazı yeni belgeler yükleyin.
 
-4. Bazı belgeler karşıya yüklenmesinin ardından, seçerek iş akışı örneği **Kitaplığı** bağlantısını **LibraryTools** sayfasını seçerek ve ardından üst kısmındaki sekme **kitaplık ayarları**araç şeridinde düğmesi.
+4. Bazı belgeleri karşıya yükledikten sonra, sayfanın en üstündeki **LibraryTools** sekmesinde bulunan **kitaplık** bağlantısını seçip araç şeridinde **kitaplık ayarları** düğmesini seçerek iş akışını oluşturun.
 
-5. İçinde **belge kitaplığı ayarlarını** sayfasında **iş akışı ayarları** bağlantısını **izinler ve Yönetim** bölümü.
+5. **Belge kitaplığı ayarları** sayfasında, **izinler ve yönetim** bölümünde **iş akışı ayarları** bağlantısını seçin.
 
-6. İçinde **iş akışı ayarları** sayfasında **bir iş akışı Ekle** bağlantı.
+6. **Iş akışı ayarları** sayfasında, **iş akışı Ekle** bağlantısını seçin.
 
-7. İçinde **bir iş akışı Ekle** sayfasında **ExpenseReport - Workflow1** iş akışı, iş akışı için bir ad girin **ExpenseTest**, seçin**Sonraki** düğmesi.
+7. **Iş akışı Ekle** sayfasında, **ExpenseReport-Workflow1** iş akışını seçin, Iş akışı için **ExpenseTest**gibi bir ad girin ve ardından **İleri** düğmesini seçin.
 
-    İş akışı ilişkilendirme formu görüntülenir. Harcama sınırı miktarını bildirmek için kullanın.
+    İş akışı Ilişkilendirme formu görüntülenir. Gider limiti miktarını raporlamak için bunu kullanın.
 
-8. İlişkilendirme biçiminde girin **1000** içine **otomatik onay sınırı** kutusuna ve ardından **iş akışı ilişkilendirme** düğmesi.
+8. Ilişkilendirme formunda, **otomatik onay limiti** kutusuna **1000** girin ve sonra **iş akışını ilişkilendir** düğmesini seçin.
 
-9. Seçin **giriş** düğmesini SharePoint giriş sayfasına dönün.
+9. SharePoint giriş sayfasına geri dönmek için **giriş** düğmesini seçin.
 
-10. Seçin **paylaşılan belgeler** Hızlı Başlat çubuğunda bağlantı.
+10. Hızlı Başlat çubuğunda **paylaşılan belgeler** bağlantısını seçin.
 
-11. Aşağı açılan okunu görüntülemek için bunu seçin ve ardından karşıya yüklenen belgelerin birini **iş akışları** öğesi.
+11. Aşağı açılan bir oku göstermek için karşıya yüklenen belgelerden birini seçin, seçin ve sonra **Iş akışları** öğesini seçin.
 
-12. İş akışı başlatma formu görüntülemek için ExpenseTest yanında bir görüntü seçin.
+12. İş akışı başlatma formunu göstermek için ExpenseTest yanındaki görüntüyü seçin.
 
-13. İçinde **gider toplam** metin kutusunda, 1000'den büyük bir değer girin ve ardından **başlangıç iş akışı** düğmesi.
+13. **Harcama toplamı** metin kutusuna 1000 ' den büyük bir değer girin ve sonra **iş akışını başlat** düğmesini seçin.
 
-     Bildirilen gider ayrılmış harcama miktarı aşarsa, bir görev görev listesine eklenir. Adlı bir sütun **ExpenseTest** değerle **tamamlandı** gider rapor öğesinin paylaşılan belgeler listesinde de eklenir.
+     Bildirilen bir masraf, ayrılan gider miktarını aştığında, Görev Listesi bir görev eklenir. **Tamamlanmamış** değeri olan **ExpenseTest** adlı bir sütun, paylaşılan belgeler listesindeki gider raporu öğesine de eklenir.
 
-14. Diğer belgelerle paylaşılan belgeler listesinde 11-13 adımları yineleyin. (Belgelerin tam sayı önemli değildir.)
+14. Paylaşılan belgeler listesindeki diğer belgelerle 11-13 adımlarını yineleyin. (Belgelerin tam sayısı önemli değildir.)
 
-15. Aşağıdaki URL'ye bir Web tarayıcısında açarak harcama raporu Özet uygulama sayfası görüntüleme: **http://**<em>SystemName</em>**/_layouts/ExpenseReport/ApplicationPage1.aspx**.
+15. Aşağıdaki URL 'YI bir Web tarayıcısında açarak gider raporu Özet uygulaması sayfasını görüntüleyin: **http://**<em>systemname</em>**/_layouts/ExpenseReport/ApplicationPage1.aspx**.
 
-     Harcama raporu Özet sayfası, tüm ayrılan miktarı aşan gider raporlarını, tarafından aşıldı miktarını ve toplam tutarı tüm raporların listeler.
+     Gider raporu Özet sayfasında, ayrılan miktarı, bu miktarı aşan miktarı ve tüm raporların toplam tutarını aşan tüm gider raporları listelenir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- SharePoint uygulama sayfaları hakkında daha fazla bilgi için bkz: [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md).
+ SharePoint uygulama sayfaları hakkında daha fazla bilgi için bkz. [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md).
 
- Visual Studio'da Visual Web Designer aşağıdaki konulardan kullanarak SharePoint sayfası içeriği tasarlama hakkında daha fazla bilgi:
+ Visual Studio 'da Visual Web Tasarımcısı 'nı kullanarak SharePoint sayfası içeriğini nasıl tasarlayacağınızı öğrenmek için aşağıdaki konulardan daha fazla bilgi edinebilirsiniz:
 
-- [SharePoint için Web bölümleri oluşturma](../sharepoint/creating-web-parts-for-sharepoint.md).
+- [SharePoint için Web bölümleri oluşturun](../sharepoint/creating-web-parts-for-sharepoint.md).
 
-- [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturma](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md).
+- [Web bölümleri veya uygulama sayfaları için yeniden kullanılabilir denetimler oluşturun](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: İlişki ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)
-- [Nasıl yapılır: Uygulama sayfası oluşturma](../sharepoint/how-to-create-an-application-page.md)
+- [İzlenecek yol: ilişkilendirme ve başlatma formları ile iş akışı oluşturma](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)
+- [Nasıl yapılır: uygulama sayfası oluşturma](../sharepoint/how-to-create-an-application-page.md)
 - [SharePoint için uygulama sayfaları oluşturma](../sharepoint/creating-application-pages-for-sharepoint.md)
 - [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)

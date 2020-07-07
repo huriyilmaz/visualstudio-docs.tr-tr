@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: bir ana sayfa veya temayı Içeri aktarma | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,23 +13,22 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2c5078d31e2dcb7f11e5c19e0f8cb228e2f75d50
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 7abca9e9141fdc8d4540e8a38e9579862fc540f1
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984194"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015302"
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>Nasıl yapılır: bir ana sayfa veya temayı Içeri aktarma
-  SharePoint sitenizde sayfalara, ana sayfalar ve Temalar oluşturup kullanarak tutarlı bir görünüm verebilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], bu öğeler için şablon sağlamıyor, ancak bunları SharePoint Designer 'da oluşturabilir ve sonra [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]içine aktarabilirsiniz. Daha fazla bilgi için bkz. Microsoft Web sitesinde [yapı taşı: sayfalar ve Kullanıcı arabirimi](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) .
+  SharePoint sitenizde sayfalara, ana sayfalar ve Temalar oluşturup kullanarak tutarlı bir görünüm verebilirsiniz. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Bu öğeler için şablon sağlamıyor, ancak bunları SharePoint Designer 'da oluşturabilir ve sonra içine aktarabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. Microsoft Web sitesinde [yapı taşı: sayfalar ve Kullanıcı arabirimi](/previous-versions/office/developer/sharepoint-2010/ee539040(v=office.14)) .
 
 ### <a name="to-import-a-master-page-or-theme"></a>Ana sayfa veya temayı içeri aktarmak için
 
-1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], bir SharePoint projesi oluşturun veya açın.
+1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir SharePoint projesi oluşturun veya açın.
 
      SharePoint projesi oluşturma hakkında daha fazla bilgi için bkz. [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md).
 
-2. Menü çubuğunda, **proje**  > **Yeni öğe Ekle**' yi seçin.
+2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
 
 3. **Yeni öğe Ekle** iletişim kutusunda, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
@@ -37,11 +36,11 @@ ms.locfileid: "72984194"
 
      Modül, SharePoint 'te belirttiğiniz bir konuma dağıtım için dosyaları (örneğin, ana sayfa veya Tema dosyaları) içerir.
 
-5. Modülünde, *Sample. txt*adlı varsayılan dosyayı silin.
+5. Modülünde, *Sample.txt*adlı varsayılan dosyayı silin.
 
 6. Modül düğümünü seçin.
 
-7. Menü çubuğunda, **proje** > **Varolan öğe Ekle**' yi seçin ve ardından Ana sayfa veya tema dosyasını seçin.
+7. Menü çubuğunda, **Proje**  >  **Varolan öğe Ekle**' yi seçin ve ardından ana sayfayı veya tema dosyasını seçin.
 
      Ana sayfa dosyalarının. Master uzantısı vardır ve tema dosyalarında. thmx uzantısı vardır.
 
@@ -50,9 +49,9 @@ ms.locfileid: "72984194"
     > [!NOTE]
     > Ana sayfanın adı, varsayılan ana sayfa veya özel ana sayfa olarak işaretlenen varolan bir ana sayfanın adı ile aynıysa hatalar oluşabilir. Bu sorunu çözme hakkında daha fazla bilgi için bkz. [Izlenecek yol: özel bir ana sayfa ve site sayfasını bir görüntüyle Içeri aktarma](../sharepoint/walkthrough-import-a-custom-master-page-and-site-page-with-an-image.md).
 
-9. Modülünde, *Elements. xml*' i açın.
+9. Modülünde *Elements.xml*' yi açın.
 
-     Eklediğiniz ana sayfaya veya temaya başvuracak şekilde *Elements. xml* dosyasını güncelleştirmeniz gerekir.
+     *Elements.xml* dosyasını, eklediğiniz ana sayfaya veya temaya başvuracak şekilde güncelleştirmeniz gerekir.
 
 10. Ana sayfa için, var olan modül işaretlemesini aşağıdaki biçimlendirme ile değiştirin.
 
@@ -74,7 +73,7 @@ ms.locfileid: "72984194"
 
      Yer tutucu değerlerini modülün gerçek adlarıyla ve ana sayfa ya da temaya değiştirdiğinizden emin olun.
 
-     `Type="GhostableInLibrary"` özniteliği, öğenin içerik veritabanına eklendiğini ve modülün `Url` özniteliğinin dosyanın SharePoint içerik veritabanında nerede depolanacağını belirtir.
+     Özniteliği, `Type="GhostableInLibrary"` öğenin içerik veritabanına eklendiğini ve `Url` modülün özniteliği dosyanın SharePoint içerik veritabanında nerede depolanacağını belirtir.
 
 11. Ana sayfanın dağıtım kapsamını değiştirmek için, **Çözüm Gezgini**, özellik tasarımcısında Özellik dosyasını açın ve ardından **kapsam** listesinden yeni bir dağıtım kapsamı seçin.
 
@@ -83,7 +82,7 @@ ms.locfileid: "72984194"
     > [!NOTE]
     > Temalar yalnızca site koleksiyonu düzeyine uygulanabileceğinden, bir temanın kapsamını **site**dışında bir şeyle ayarlamanıza gerek kalmaz. Bir tema alt sitede kullanılıyorsa hatalar oluşabilir.
 
-12. Menü çubuğunda **yapı** > **dağıtım çözümü**' ni seçin.
+12. Menü çubuğunda **Yapı**  >  **dağıtım çözümü**' ni seçin.
 
 13. Dosyaların doğru şekilde dağıtılıp dağıtılmadığını doğrulamak için SharePoint sitesini açın, **Site eylemleri** menüsünü seçin, **site ayarları** komutunu seçin ve ardından **ana sayfalar** bağlantısını ya da **Temalar** bağlantısını seçin.
 

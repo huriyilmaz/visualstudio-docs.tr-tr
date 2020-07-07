@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Bir SharePoint projesine öğeler ekleme | Microsoft Docs'
+title: 'Nasıl yapılır: bir SharePoint projesine öğe ekleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -12,39 +12,38 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 572b466907fdbe43c5b9f094b74837ca05d1b212
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 1f7a36591d94e846a0024bce8c5d0b618479e647
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966971"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014701"
 ---
-# <a name="how-to-add-items-to-a-sharepoint-project"></a>Nasıl yapılır: Bir SharePoint projesine öğeler ekleme
-  SharePoint çözümleri, her biri birden çok SharePoint Proje öğeleri içeren bir veya daha fazla proje içerir. Bir SharePoint çözümünü oluşturun veya açın sonra bu projeler için yeni veya var olan öğeleri ekleyebilirsiniz. Örneğin, yeni iş akışı projeleri default.aspx adlı varsayılan formu ile gelir ancak oluşturan yeni veya farklı bir form ile değiştirin veya başka bir ASPX formu ekleyin.
+# <a name="how-to-add-items-to-a-sharepoint-project"></a>Nasıl yapılır: bir SharePoint projesine öğe ekleme
+  SharePoint çözümleri, her biri birden çok SharePoint proje öğesi içeren bir veya daha fazla proje içerir. Bir SharePoint çözümünü açtıktan veya oluşturduktan sonra, bu projelere yeni veya varolan öğeleri ekleyebilirsiniz. Örneğin, yeni iş akışı projeleri default. aspx adlı varsayılan bir formla gelir, ancak bu formu yeni veya farklı bir formla değiştirebilir veya başka bir ASPX formu ekleyebilirsiniz.
 
-### <a name="to-add-a-new-project-item-to-a-sharepoint-solution"></a>Bir SharePoint çözüme yeni bir proje öğesi eklemek için
+### <a name="to-add-a-new-project-item-to-a-sharepoint-solution"></a>SharePoint çözümüne yeni bir proje öğesi eklemek için
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]bir SharePoint çözümünü oluşturun veya açın.
+1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir SharePoint çözümü açın veya oluşturun.
 
-2. İçinde **Çözüm Gezgini**, proje düğümünü seçin.
+2. **Çözüm Gezgini**, projenin düğümünü seçin.
 
-3. Menü çubuğunda, **proje** > **Yeni Öğe Ekle** görüntülenecek **Yeni Öğe Ekle** iletişim kutusu.
+3. **Project**  >  **Yeni öğe** Ekle iletişim kutusunu göstermek için menü çubuğunda Proje**Yeni öğe Ekle** ' yi seçin.
 
-4. İçinde **yüklü şablonlar** listesinde, genişletme **SharePoint** düğümünü seçip **2010** düğümü.
+4. **Yüklü şablonlar** listesinde, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
-5. Proje öğesi şablonları listesinde, bir şablon seçin.
+5. Proje öğesi şablonları listesinde bir şablon seçin.
 
-6. İçinde **adı** metin kutusuna bir ad girin ve ardından **Tamam** düğmesi.
+6. **Ad** metin kutusuna bir ad girin ve **Tamam** düğmesini seçin.
 
-### <a name="to-add-an-existing-project-item-to-a-sharepoint-solution"></a>Var olan bir proje öğesi için bir SharePoint çözümünü eklemek için
+### <a name="to-add-an-existing-project-item-to-a-sharepoint-solution"></a>Bir SharePoint çözümüne varolan bir proje öğesi eklemek için
 
-1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]bir SharePoint çözümünü oluşturun veya açın.
+1. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bir SharePoint çözümü açın veya oluşturun.
 
-2. İçinde **Çözüm Gezgini**, proje düğümünü seçin.
+2. **Çözüm Gezgini**, projenin düğümünü seçin.
 
-3. Menü çubuğunda, **proje** > **varolan öğeyi Ekle** görüntülenecek **varolan öğeyi Ekle** iletişim kutusu.
+3. **Project**  >  **Varolan öğeyi Ekle** iletişim kutusunu göstermek için menü çubuğunda Proje**Varolan öğe Ekle** ' yi seçin.
 
-4. Ekleme, onu seçin ve ardından istediğiniz öğeyi içeren klasöre göz atın **Ekle** düğmesi.
+4. Eklemek istediğiniz öğeyi içeren klasöre gidin, seçin ve sonra **Ekle** düğmesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint projesi ve proje öğesi şablonları](../sharepoint/sharepoint-project-and-project-item-templates.md)

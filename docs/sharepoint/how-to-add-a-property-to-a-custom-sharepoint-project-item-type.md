@@ -1,7 +1,7 @@
 ---
-title: Özel SharePoint Proje öğe türüne özellik ekleme
+title: Özel SharePoint proje öğesi türüne Özellik Ekle
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,63 +14,62 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4d44f4d5995be8bacc447ea3f915663a309bee77
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
-ms.translationtype: MT
+ms.openlocfilehash: 54765b9b6b82214a7deccaee4f9ee671a72dd40d
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401646"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016003"
 ---
-# <a name="how-to-add-a-property-to-a-custom-sharepoint-project-item-type"></a>Nasıl yapılır: Özel bir SharePoint Proje öğe türüne özellik ekleme
-  Özel bir SharePoint proje öğesi türü tanımladığınızda, proje öğesi için bir özelliği ekleyebilirsiniz. Özellik görünür **özellikleri** proje öğesi seçildiğinde penceresi **Çözüm Gezgini**.
+# <a name="how-to-add-a-property-to-a-custom-sharepoint-project-item-type"></a>Nasıl yapılır: özel bir SharePoint proje öğe türüne özellik ekleme
+  Özel bir SharePoint proje öğesi türü tanımladığınızda, proje öğesine bir özellik ekleyebilirsiniz. Özelliği, proje öğesi **Çözüm Gezgini**seçildiğinde **Özellikler** penceresinde görünür.
 
- Aşağıdaki adımlarda kendi SharePoint proje öğesi türü zaten tanımlamış olduğunuz varsayılır. Daha fazla bilgi için [nasıl yapılır: Bir SharePoint proje öğesi türü tanımlayacağınızı](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).
+ Aşağıdaki adımlarda, kendi SharePoint proje öğesi türünü zaten tanımlamış olduğunuz varsayılır. Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md).
 
-### <a name="to-add-a-property-to-a-definition-of-a-project-item-type"></a>Bir özellik bir proje öğesi türü tanımına eklemek için
+### <a name="to-add-a-property-to-a-definition-of-a-project-item-type"></a>Proje öğesi türünün tanımına bir özellik eklemek için
 
-1. Özel proje öğe türüne eklemekte olduğunuz özelliğini temsil eden genel özelliğine sahip bir sınıfı tanımlar. Bir özel proje öğesi türü için birden çok özellik eklemek istiyorsanız, tüm özelliklerin aynı sınıftaki veya farklı sınıflardaki tanımlayabilirsiniz.
+1. Özel proje öğesi türüne eklemekte olduğunuz özelliği temsil eden bir public özelliği olan bir sınıf tanımlayın. Özel bir proje öğesi türüne birden çok özellik eklemek istiyorsanız, tüm özellikleri aynı sınıfta veya farklı sınıflarda tanımlayabilirsiniz.
 
-2. İçinde <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> yöntemi, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> uygulama, tanıtıcısını <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested> olayı *projectItemTypeDefinition* parametresi.
+2. <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> Uygulamanızın yönteminde <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested> *projectItemTypeDefinition* parametresinin olayını işleyin.
 
-3. İçin olay işleyicisinde <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested> olay, özel özellikler sınıfı bir örneğini ekleme <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs.PropertySources%2A> olay bağımsız değişkenleri parametre koleksiyonu.
+3. Olaya ilişkin olay işleyicisinde <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested> , özel özellikler sınıfınızın bir örneğini <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs.PropertySources%2A> olay bağımsız değişkenleri parametresi koleksiyonuna ekleyin.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneğinde adlı bir özellik eklemek gösterilmiştir **örnek özellik** özel bir proje öğesi türü.
+ Aşağıdaki kod örneği, özel bir proje öğesi türüne **örnek özelliği** adlı bir özelliğin nasıl ekleneceğini gösterir.
 
  [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#11](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb#11)]
  [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#11](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs#11)]
 
 ### <a name="understand-the-code"></a>Kodu anlama
- ' In aynı örneğine emin olmak için `CustomProperties` sınıfı, her zaman kullanılır <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested> bir olay oluşursa, kod örneği için özellikleri nesnesi kaydeder <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> özelliği proje öğesi ilk zaman bu olayı oluşur. Bu olay tekrar oluştuğunda bu nesne kodu alır. Kullanma hakkında daha fazla bilgi için <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> proje öğeleri ile verileri kaydetmek için özelliğine bakın [SharePoint ile özel verileri ilişkilendirme araçları uzantıları](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md).
+ `CustomProperties`Olayın her gerçekleştiği her seferinde sınıfın aynı örneğinin kullanıldığından emin olmak için <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested> , kod örneği, <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> Bu olay ilk kez gerçekleştiğinde, Properties nesnesini proje öğesinin özelliğine kaydeder. Bu olay yeniden her gerçekleştiğinde kod bu nesneyi alır. <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A>Proje öğeleriyle verileri kaydetmek için özelliğini kullanma hakkında daha fazla bilgi için bkz. [SharePoint Araçları uzantıları ile özel verileri ilişkilendirme](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md).
 
- Özellik değeri değişiklikleri kalıcı hale getirmek için **ayarlamak** için erişimci `ExampleProperty` yeni değere kaydeder <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> özelliği <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> özelliğin ilişkili olduğu nesne. Kullanma hakkında daha fazla bilgi için <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> proje öğeleri ile verileri kalıcı hale getirmek için özelliğine bakın [SharePoint Proje sisteminin uzantılarında veri kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).
+ Özellik değerindeki değişiklikleri kalıcı hale getirmek için, için **ayarlanan** erişimci `ExampleProperty` yeni değeri <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> özelliğin ilişkilendirildiği nesnenin özelliğine kaydeder. <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A>Proje öğeleriyle verileri kalıcı hale getirmek için özelliğini kullanma hakkında daha fazla bilgi için bkz. [SharePoint proje sisteminin uzantılarında verileri kaydetme](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md).
 
-### <a name="specify-the-behavior-of-custom-properties"></a>Özel özellikler davranışını belirtin
- Özel bir özellik görünür ve davranır nasıl tanımlayabileceğiniz **özellikleri** öznitelikleri uygulayarak penceresi <xref:System.ComponentModel> özellik tanımı için ad alanı. Aşağıdaki öznitelikler pek çok senaryoda kullanışlıdır:
+### <a name="specify-the-behavior-of-custom-properties"></a>Özel özelliklerin davranışını belirtin
+ Özel bir özelliğin nasıl göründüğünü tanımlayabilir ve ad alanından Özellik tanımına öznitelikler uygulayarak **Özellikler** penceresinde nasıl davranacağını belirleyebilirsiniz <xref:System.ComponentModel> . Aşağıdaki öznitelikler birçok senaryoda faydalıdır:
 
-- <xref:System.ComponentModel.DisplayNameAttribute>: Görüntülenen özellik adını belirtir **özellikleri** penceresi.
+- <xref:System.ComponentModel.DisplayNameAttribute>: **Özellikler** penceresinde görünen özelliğin adını belirtir.
 
-- <xref:System.ComponentModel.DescriptionAttribute>: Görüntülenen açıklama dizesi tabanında belirtir **özellikleri** özelliği seçildiğinde penceresi.
+- <xref:System.ComponentModel.DescriptionAttribute>: Özellik seçildiğinde **Özellikler** penceresinin alt kısmında görünen açıklama dizesini belirtir.
 
 - <xref:System.ComponentModel.DefaultValueAttribute>: Özelliğin varsayılan değerini belirtir.
 
-- <xref:System.ComponentModel.TypeConverterAttribute>: Görüntülenen dizeyi arasında özel bir dönüştürme belirtir **özellikleri** penceresi ve dize olmayan özellik değeri.
+- <xref:System.ComponentModel.TypeConverterAttribute>: **Özellikler** penceresinde görüntülenen dize ile dize olmayan bir özellik değeri arasında bir özel dönüşüm belirtir.
 
-- <xref:System.ComponentModel.EditorAttribute>: Özelliği değiştirmek için özel bir düzenleyici belirtir.
+- <xref:System.ComponentModel.EditorAttribute>: Özelliği değiştirmek için kullanılacak özel bir düzenleyici belirtir.
 
-## <a name="compile-the-code"></a>Kod derleme
- Bu kod örneği, aşağıdaki derlemelere başvurular içeren bir sınıf kitaplığı projesi gerektirir:
+## <a name="compile-the-code"></a>Kodu derle
+ Bu kod örnekleri, aşağıdaki derlemelere başvurular içeren bir sınıf kitaplığı projesi gerektirir:
 
-- Microsoft.VisualStudio.SharePoint
+- Microsoft. VisualStudio. SharePoint
 
-- System.ComponentModel.Composition
+- System. ComponentModel. Composition
 
-## <a name="deploy-the-project-item"></a>Proje öğesi dağıtma
- Diğer geliştiricilerin, proje öğesini kullanmak için bir proje şablonu veya bir proje öğesi şablon oluşturun. Daha fazla bilgi için [öğe şablonları ve proje şablonları SharePoint Proje öğeleri için oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
+## <a name="deploy-the-project-item"></a>Proje öğesini dağıtma
+ Diğer geliştiricilerin Proje öğesini kullanmasını sağlamak için bir proje şablonu veya proje öğesi şablonu oluşturun. Daha fazla bilgi için bkz. [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
 
- Proje öğesini dağıtmak için oluşturun bir [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] uzantısı (VSIX) paketini derleme, şablon ve proje öğesi ile dağıtmak istediğiniz diğer tüm dosyalar. Daha fazla bilgi için [Visual Studio'da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+ Proje öğesini dağıtmak için [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] derleme, şablon ve proje öğesiyle dağıtmak istediğiniz diğer dosyalar için bir uzantı (VSIX) paketi oluşturun. Daha fazla bilgi için bkz. [Visual Studio 'Da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Bir SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)
-- [Nasıl yapılır: Özel bir SharePoint Proje öğe türüne bir kısayol menü öğesi ekleme](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md)
-- [Özel SharePoint proje öğesi türleri tanımlama](../sharepoint/defining-custom-sharepoint-project-item-types.md)
+- [Nasıl yapılır: bir SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)
+- [Nasıl yapılır: özel bir SharePoint proje öğe türüne kısayol menü öğesi ekleme](../sharepoint/how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md)
+- [Özel SharePoint proje öğesi türlerini tanımlama](../sharepoint/defining-custom-sharepoint-project-item-types.md)

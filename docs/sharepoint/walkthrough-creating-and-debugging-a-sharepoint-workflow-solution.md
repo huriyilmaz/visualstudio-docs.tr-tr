@@ -1,7 +1,7 @@
 ---
-title: SharePoint iş akışı çözümü oluştur & Hata Ayıkla
+title: SharePoint iş akışı çözümü oluştur & hata ayıkla
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.Workflow.WorkflowConditions
 - VS.SharePointTools.Workflow.WorkflowList
@@ -16,19 +16,18 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e51f346501b680b8183f8552aad48ffff84a71dd
-ms.sourcegitcommit: 3a19319e2599bd193fb2ca32020ca53942974bfd
-ms.translationtype: MT
+ms.openlocfilehash: 65af3cbfc799a90d640579f8eed0e051fd5888f0
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983728"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014627"
 ---
 # <a name="walkthrough-create-and-debug-a-sharepoint-workflow-solution"></a>İzlenecek yol: SharePoint iş akışı çözümü oluşturma ve hatalarını ayıklama
   Bu izlenecek yol, temel sıralı bir iş akışı şablonunun nasıl oluşturulacağını göstermektedir. İş akışı, bir belgenin gözden geçirilip geçirilmediğini anlamak için paylaşılan belge kitaplığının bir özelliğini denetler. Belge incelenip iş akışı tamamlanır.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]' de bir SharePoint liste tanımı sıralı iş akışı projesi oluşturuluyor.
+- İçinde bir SharePoint liste tanımı sıralı iş akışı projesi oluşturuluyor [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - İş akışı etkinlikleri oluşturuluyor.
 
@@ -39,7 +38,7 @@ ms.locfileid: "73983728"
 >
 > Ayrıca bilgisayarınız, aşağıdaki yönergelerde yer alarak Visual Studio Kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Desteklenen Microsoft Windows ve SharePoint sürümleri.
@@ -47,17 +46,17 @@ ms.locfileid: "73983728"
 - Visual Studio.
 
 ## <a name="add-properties-to-the-sharepoint-shared-documents-library"></a>SharePoint paylaşılan belgeler kitaplığına özellikler ekleme
- **Paylaşılan belgeler** kitaplığındaki belgelerin gözden geçirme durumunu Izlemek için SharePoint sitemizdeki paylaşılan belgeler için üç yeni özellik oluşturacağız: `Status`, `Assignee`ve `Review Comments`. Bu özellikleri **paylaşılan belgeler** kitaplığında tanımladık.
+ **Paylaşılan belgeler** kitaplığındaki belgelerin gözden geçirme durumunu izlemek Için, SharePoint sitemizdeki paylaşılan belgeler için üç yeni özellik oluşturacağız: `Status` , `Assignee` ve `Review Comments` . Bu özellikleri **paylaşılan belgeler** kitaplığında tanımladık.
 
 #### <a name="to-add-properties-to-the-sharepoint-shared-documents-library"></a>SharePoint paylaşılan belgeler kitaplığına özellikler eklemek için
 
-1. Bir Web tarayıcısında http://\<sistem adı >/SitePages/Home.aspx gibi bir SharePoint sitesi açın.
+1. \<system name>Bir Web tarayıcısında http:///SitePages/Home.aspx gibi bir SharePoint sitesi açın.
 
 2. Hızlı Başlat çubuğunda **Shareddocuments**' i seçin.
 
 3. **Kitaplık araçları** şeridinde **kitaplık** ' ı seçin ve ardından Şeritteki **sütun oluştur** düğmesini seçerek yeni bir sütun oluşturun.
 
-4. Sütun **belgesi durumunu**adlandırın, türünü seçenek olarak ayarlayın **(arasından seçim yapmak için menü)** , aşağıdaki üç seçeneği belirtin ve ardından **Tamam** düğmesini seçin:
+4. Sütun **belgesi durumunu**adlandırın, türünü seçenek olarak ayarlayın **(arasından seçim yapmak için menü)**, aşağıdaki üç seçeneği belirtin ve ardından **Tamam** düğmesini seçin:
 
     - **Gözden geçirme gerekiyor**
 
@@ -87,11 +86,11 @@ ms.locfileid: "73983728"
 
 #### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>SharePoint sıralı iş akışı projesi oluşturmak için
 
-1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]başlatın.
+1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda **dosya**  > **Yeni**  > **Proje** ' yi seçin.
+2. **File**  >  **New**  >  **Yeni proje** iletişim kutusunu göstermek için menü çubuğunda dosya yeni**Proje** ' yi seçin.
 
-3. **Visual C#**  veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+3. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 4. **Şablonlar** bölmesinde, **SharePoint 2010 proje** şablonunu seçin.
 
@@ -103,9 +102,9 @@ ms.locfileid: "73983728"
 
      Bu adım, iş akışı projeleri için kullanılabilir tek seçenek olan çözüm için güven düzeyini Grup çözümü olarak ayarlar. Daha fazla bilgi için bkz. [Korumalı çözüm konuları](../sharepoint/sandboxed-solution-considerations.md).
 
-7. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda **Proje** > **Yeni öğe Ekle**' yi seçin.
+7. **Çözüm Gezgini**, proje düğümünü seçin ve ardından menü çubuğunda **Proje**  >  **Ekle yeni öğe**' yi seçin.
 
-8. **Görsel C#**  veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+8. **Visual C#** veya **Visual Basic**altında **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 9. **Şablonlar** bölmesinde, **sıralı iş akışı (yalnızca Grup çözümü)** şablonunu seçin ve ardından **Ekle** düğmesini seçin.
 
@@ -172,7 +171,7 @@ ms.locfileid: "73983728"
 
 #### <a name="to-handle-activity-events"></a>Etkinlik olaylarını işlemek için
 
-1. *Workflow1.cs* veya *Workflow1. vb*' de, `Workflow1` sınıfının en üstüne aşağıdaki alanı ekleyin. Bu alan, iş akışının tamamlanıp bitmediğini tespit etmek için bir etkinlikte kullanılır.
+1. *Workflow1.cs* veya *Workflow1. vb*' de, sınıfının en üstüne aşağıdaki alanı ekleyin `Workflow1` . Bu alan, iş akışının tamamlanıp bitmediğini tespit etmek için bir etkinlikte kullanılır.
 
     ```vb
     Dim workflowPending As Boolean = True
@@ -182,7 +181,7 @@ ms.locfileid: "73983728"
     Boolean workflowPending = true;
     ```
 
-2. Aşağıdaki yöntemi `Workflow1` sınıfına ekleyin. Bu yöntem, belgenin gözden geçirilip geçirilmediğini anlamak için belgeler listesindeki `Document Status` özelliğinin değerini denetler. `Document Status` özelliği `Review Complete`olarak ayarlanırsa `checkStatus` yöntemi, iş akışının bitmek üzere hazırlandığını göstermek için `workflowPending` alanını **false** olarak ayarlar.
+2. Sınıfına aşağıdaki yöntemi ekleyin `Workflow1` . Bu yöntem, `Document Status` belgenin gözden geçirilip geçirilmediğini anlamak Için belgeler listesi özelliğinin değerini denetler. `Document Status`Özelliği olarak ayarlandıysa `Review Complete` , `checkStatus` yöntemi `workflowPending` iş akışının bitmek üzere hazırlandığını göstermek için alanı **false** olarak ayarlar.
 
     ```vb
     Private Sub checkStatus()
@@ -200,7 +199,7 @@ ms.locfileid: "73983728"
     }
     ```
 
-3. `checkStatus` yöntemini çağırmak için `onWorkflowActivated` ve `onWorkflowItemChanged` yöntemlerine aşağıdaki kodu ekleyin. İş akışı başladığında `onWorkflowActivated` yöntemi, belgenin önceden gözden geçirilip geçirilmediğini anlamak için `checkStatus` yöntemini çağırır. Gözden geçirilmeyen iş akışı devam eder. Belge kaydedildiğinde `onWorkflowItemChanged` yöntemi, belgenin gözden geçirilip geçirilmediğini anlamak için `checkStatus` yöntemini yeniden çağırır. `workflowPending` alanı **true**olarak ayarlandığında iş akışı çalışmaya devam eder.
+3. `onWorkflowActivated` `onWorkflowItemChanged` Yöntemini çağırmak için ve yöntemlerine aşağıdaki kodu ekleyin `checkStatus` . İş akışı başladığında `onWorkflowActivated` yöntemi, `checkStatus` belgenin zaten gözden geçirilip geçirilmediğini anlamak için yöntemini çağırır. Gözden geçirilmeyen iş akışı devam eder. Belge kaydedildiğinde `onWorkflowItemChanged` yöntemi, `checkStatus` belgenin gözden geçirilip geçirilmediğini anlamak için yöntemini yeniden çağırır. `workflowPending`Alan **true**olarak ayarlandığında iş akışı çalışmaya devam eder.
 
     ```vb
     Private Sub onWorkflowActivated(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ExternalDataEventArgs)
@@ -226,7 +225,7 @@ ms.locfileid: "73983728"
     }
     ```
 
-4. `workflowPending` özelliğinin durumunu denetlemek için `isWorkflowPending` yöntemine aşağıdaki kodu ekleyin. Belge her kaydedildiğinde, **whileActivity1** etkinliği `isWorkflowPending` yöntemini çağırır. Bu yöntem, **whileActivity1** etkinliğinin devam edip etmeyeceğini veya bitmeyeceğini anlamak için <xref:System.Workflow.Activities.ConditionalEventArgs> nesnesinin <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> özelliğini inceler. Özelliği **true**olarak ayarlanırsa etkinlik devam eder. Aksi takdirde, etkinlik sonlanır ve iş akışı sonlanır.
+4. `isWorkflowPending`Özelliğin durumunu denetlemek için yöntemine aşağıdaki kodu ekleyin `workflowPending` . Belge her kaydedildiğinde, **whileActivity1** etkinliği `isWorkflowPending` yöntemini çağırır. Bu yöntem, <xref:System.Workflow.Activities.ConditionalEventArgs.Result%2A> <xref:System.Workflow.Activities.ConditionalEventArgs> **whileActivity1** etkinliğinin devam edip etmeyeceğini veya bitmeyeceğini anlamak için nesnesinin özelliğini inceler. Özelliği **true**olarak ayarlanırsa etkinlik devam eder. Aksi takdirde, etkinlik sonlanır ve iş akışı sonlanır.
 
     ```vb
     Private Sub isWorkflowPending(ByVal sender As System.Object, ByVal e As System.Workflow.Activities.ConditionalEventArgs)
@@ -262,7 +261,7 @@ ms.locfileid: "73983728"
 
      Bu, Seçili belgeyi **paylaşılan belgeler** listesine yükler ve iş akışını başlatır.
 
-6. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], hata ayıklayıcının `onWorkflowActivated` yönteminin yanındaki kesme noktasında durduğunu doğrulayın.
+6. İçinde [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , hata ayıklayıcının yöntemin yanındaki kesme noktasında durduğunu doğrulayın `onWorkflowActivated` .
 
 7. Yürütmeye devam etmek için **F5** tuşunu seçin.
 

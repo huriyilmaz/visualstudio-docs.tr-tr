@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: yerelleştirilmiş adları, özellikleri ve Izinleri belirtmek için kaynak dosyası kullanma | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -19,12 +19,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fa2fec260921d66328b2c16075d44b38686c08de
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: a87cc8a3eb8f98ea19a87e93c37aae5303151ecf
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72982563"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015406"
 ---
 # <a name="how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions"></a>Nasıl yapılır: yerelleştirilmiş adları, özellikleri ve izinleri belirtmek için kaynak dosyası kullanma
   Bir kaynak dosyası kullanarak, yerelleştirilmiş Adlar verebilir, özellikleri tanımlayabilir ve bir Iş verileri bağlantısı (BDC) modelinde tanımlanan nesneleri uygulayabilirsiniz. Bu bilgileri belirtmek için, iş verileri bağlantı **modeli** öğesi içeren bir projeye bir **Iş verileri bağlantısı kaynak** öğesi eklersiniz. Ardından, kaynak dosyasının XML 'sini düzenleyerek adları, özellikleri ve izinleri belirtirsiniz.
@@ -33,7 +32,7 @@ ms.locfileid: "72982563"
 
 1. **Çözüm Gezgini**, SharePoint projesinin klasörünü genişletin ve ardından İVB modelini içeren klasörü seçin.
 
-2. Menü çubuğunda, **proje**  > **Yeni öğe Ekle**' yi seçin.
+2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
 
 3. **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 

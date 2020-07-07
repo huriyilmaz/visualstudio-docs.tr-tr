@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: Dağıtım çakışmalarını işleme | Microsoft Docs'
+title: 'Nasıl yapılır: dağıtım çakışmalarını Işleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - SharePoint development in Visual Studio, extending deployment
 author: John-Hart
@@ -9,54 +9,53 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 62e7740915d341eee1bbf5e112c4f09297c98be1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 5df9677fd349825983cc33c5a8ed2648f34b8c9e
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62813805"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015312"
 ---
-# <a name="how-to-handle-deployment-conflicts"></a>Nasıl yapılır: Dağıtım çakışmalarını işleme
-  Bir SharePoint proje öğesi için dağıtım çakışmalarını işleme için kendi kodunuzu sağlayabilir. Örneğin, geçerli proje öğesi klasördeki tüm dosyaları konumunda zaten mevcut ve geçerli proje öğesi dağıtılmadan önce dağıtılan dosyaları silin olup olmadığını belirlemek. Dağıtım çakışmalarını hakkında daha fazla bilgi için bkz: [genişletme SharePoint paketleme ve dağıtım](../sharepoint/extending-sharepoint-packaging-and-deployment.md).
+# <a name="how-to-handle-deployment-conflicts"></a>Nasıl yapılır: dağıtım çakışmalarını Işleme
+  Bir SharePoint proje öğesi için dağıtım çakışmalarını işlemek üzere kendi kodunuzu sağlayabilirsiniz. Örneğin, geçerli proje öğesinde bulunan herhangi bir dosyanın dağıtım konumunda zaten mevcut olup olmadığını belirleyebilir ve ardından geçerli proje öğesi dağıtılmadan önce dağıtılan dosyaları silebilirsiniz. Dağıtım çakışmaları hakkında daha fazla bilgi için bkz. [SharePoint paketleme ve dağıtımını genişletme](../sharepoint/extending-sharepoint-packaging-and-deployment.md).
 
-### <a name="to-handle-a-deployment-conflict"></a>Dağıtım çakışma işlemek için
+### <a name="to-handle-a-deployment-conflict"></a>Dağıtım çakışmasını işlemek için
 
-1. Bir proje öğesi uzantısı, bir proje uzantısı veya yeni bir proje öğesi türü tanımını oluşturun. Daha fazla bilgi için aşağıdaki konulara bakın:
+1. Proje öğesi uzantısı, Proje uzantısı veya yeni proje öğesi türünün tanımını oluşturun. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:
 
-    - [Nasıl yapılır: Bir SharePoint proje öğesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)
+    - [Nasıl yapılır: SharePoint proje öğesi uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-item-extension.md)
 
-    - [Nasıl yapılır: Bir SharePoint proje uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-extension.md)
+    - [Nasıl yapılır: SharePoint Proje uzantısı oluşturma](../sharepoint/how-to-create-a-sharepoint-project-extension.md)
 
-    - [Nasıl yapılır: Bir SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)
+    - [Nasıl yapılır: bir SharePoint proje öğesi türü tanımlama](../sharepoint/how-to-define-a-sharepoint-project-item-type.md)
 
-2. Uzantı, işleme <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> olayı bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType> nesne (bir proje öğesi uzantısını veya proje uzantısı) veya bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition> nesnesinde (yeni bir proje öğesi türü tanımını).
+2. Uzantısında, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemType> nesnenin (bir proje öğesi uzantısında veya proje uzantısında) ya da bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition> nesne (yeni bir proje öğesi türünün tanımında) olayını işleyin.
 
-3. Olay işleyicisi, dağıtılmakta proje öğesi ve kendi senaryonuza uygulamak ölçütlere göre dağıtılan çözümün SharePoint sitesindeki arasında bir çakışma olup olmadığını belirler. Kullanabileceğiniz <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemEventArgs.ProjectItem%2A> dağıtılmakta proje öğesi çözümlemek için olay bağımsız değişkenleri parametresinin özelliğini analiz dağıtım konumundaki dosyaları bu amaç için tanımladığınız bir SharePoint komutu çağırarak.
+3. Olay İşleyicide, senaryonuza uygulanan ölçütlere göre, dağıtılmakta olan proje öğesi ve SharePoint sitesindeki dağıtılan çözüm arasında bir çakışma olup olmadığını saptayın. <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemEventArgs.ProjectItem%2A>Dağıtılan proje öğesini çözümlemek için olay bağımsız değişkenleri parametresinin özelliğini kullanabilir ve bu amaçla tanımladığınız bir SharePoint komutunu çağırarak dağıtım konumundaki dosyaları çözümleyebilirsiniz.
 
-     Çok sayıda çakışma türleri için önce belirlemek hangi dağıtım adımı yürütülürken isteyebilirsiniz. Kullanarak bunu yapabilirsiniz <xref:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.DeploymentStepInfo%2A> olay bağımsız değişkenleri parametresinin özelliği sağlar. Genellikle yerleşik sırasında çakışma algılamasını mantıklıdır rağmen <xref:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.AddSolution> dağıtım adımı sırasında herhangi bir dağıtım adımı için çakışmaları denetleyebilirsiniz.
+     Birçok tür çakışma için, önce hangi Dağıtım adımının çalıştırılacağını anlamak isteyebilirsiniz. Bunu, <xref:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.DeploymentStepInfo%2A> olay bağımsız değişkenleri parametresinin özelliğini kullanarak yapabilirsiniz. Genellikle, yerleşik dağıtım adımı sırasında çakışmaların algılanması anlamlı olsa da <xref:Microsoft.VisualStudio.SharePoint.Deployment.DeploymentStepIds.AddSolution> , herhangi bir dağıtım adımı sırasında çakışmaları kontrol edebilirsiniz.
 
-4. Bir çakışma varsa, kullanmak <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A> yöntemi <xref:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.Conflicts%2A> özelliği yeni bir olay bağımsız değişkenlerinin <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> nesne. Bu nesne, dağıtım çakışması temsil eder. Çağrıda <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A> yöntemi, çakışmayı çözmek için çağrılan yöntem de belirtin.
+4. Bir çakışma varsa, <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A> <xref:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs.Conflicts%2A> Yeni bir nesne oluşturmak için olay bağımsız değişkenlerinin özelliğinin yöntemini kullanın <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> . Bu nesne, dağıtım çakışmasını temsil eder. Yöntemine yapılan çağrıda <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflictCollection.Add%2A> , çakışmayı çözmek için çağrılan yöntemi de belirtin.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, bir dağıtım çakışma liste tanımı proje öğeleri için bir proje öğesi uzantısını işlemek için temel işlemi gösterilmektedir. Farklı türde bir proje öğesi için bir dağıtım çakışması işlemek için farklı bir dizeyi geçirmek <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>. Daha fazla bilgi için [genişletmek SharePoint Proje öğeleri](../sharepoint/extending-sharepoint-project-items.md).
+ Aşağıdaki kod örneği, liste tanımı proje öğeleri için bir proje öğesi uzantısında bir dağıtım çakışmasını işlemeye yönelik temel süreci gösterir. Farklı bir proje öğesi türü için dağıtım çakışmasını işlemek üzere, farklı bir String öğesine geçirin <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> . Daha fazla bilgi için bkz. [SharePoint proje öğelerini genişletme](../sharepoint/extending-sharepoint-project-items.md).
 
- Kolaylık olması için <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> Bu örnekte olay işleyicisi, bir dağıtım çakışması var olduğunu varsayar (başka bir deyişle, her zaman yeni bir ekler <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> nesne) ve `Resolve` yöntemi yalnızca döndürür **true** göstermek için çakışma çözüldü. Gerçek bir senaryoda, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> olay işleyicisi bir dosyada geçerli proje öğesi ve bir dosya dağıtım konumundaki arasında bir çakışma varsa, ilk olarak belirleyin ve ardından ekleyin bir <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> yalnızca bir çakışma varsa nesne. Örneğin, kullanabileceğinize `e.ProjectItem.Files` özellik dosyalarını proje öğesi ve analiz etmek için olay işleyicisinde dağıtım konumundaki dosyalarını analiz etmek için bir SharePoint komutu çağrısı. Benzer şekilde, gerçek bir senaryoda `Resolve` yöntemi SharePoint sitesi üzerindeki çakışmayı çözmek için bir SharePoint komutu çağrısı. SharePoint komutları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir SharePoint komutu oluşturma](../sharepoint/how-to-create-a-sharepoint-command.md).
+ Kolaylık olması için, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> Bu örnekteki olay işleyicisi bir dağıtım çakışması olduğunu varsayar (yani, her zaman yeni bir <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> nesne ekler) ve `Resolve` Yöntem, çakışmanın çözümlendiğini göstermek için yalnızca **true** değerini döndürür. Gerçek bir senaryoda, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> olay işleyiciniz önce geçerli proje öğesinde bir dosya ile dağıtım konumundaki bir dosya arasında bir çakışma olup olmadığını ve <xref:Microsoft.VisualStudio.SharePoint.Deployment.IDeploymentConflict> yalnızca bir çakışma varsa bir nesne ekleyin. Örneğin, `e.ProjectItem.Files` Proje öğesindeki dosyaları çözümlemek için olay işleyicisinde özelliğini kullanabilir ve dağıtım konumundaki dosyaları çözümlemek için bir SharePoint komutu çağırabilirsiniz. Benzer şekilde, gerçek bir senaryoda `Resolve` Yöntem SharePoint sitesindeki çakışmayı çözmek için bir SharePoint komutunu çağırabilir. SharePoint komutları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SharePoint komutu oluşturma](../sharepoint/how-to-create-a-sharepoint-command.md).
 
  [!code-vb[SPExtensibility.ProjectItemExtension.DeploymentConflict#1](../sharepoint/codesnippet/VisualBasic/deploymentconflict/extension/deploymentconflictextension.vb#1)]
  [!code-csharp[SPExtensibility.ProjectItemExtension.DeploymentConflict#1](../sharepoint/codesnippet/CSharp/deploymentconflict/extension/deploymentconflictextension.cs#1)]
 
-## <a name="compile-the-code"></a>Kod derleme
- Bu örnek aşağıdaki derlemelere başvurular gerektirir:
+## <a name="compile-the-code"></a>Kodu derle
+ Bu örnek, aşağıdaki derlemelere başvurular gerektirir:
 
-- Microsoft.VisualStudio.SharePoint
+- Microsoft. VisualStudio. SharePoint
 
-- System.ComponentModel.Composition
+- System. ComponentModel. Composition
 
-## <a name="deploy-the-extension"></a>Uzantıyı dağıtmak
- Uzantıyı dağıtmak için oluşturun bir [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] uzantısı (VSIX) paketini derleme ve uzantısıyla dağıtmak istediğiniz diğer tüm dosyalar için. Daha fazla bilgi için [Visual Studio'da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+## <a name="deploy-the-extension"></a>Uzantıyı dağıtma
+ Uzantıyı dağıtmak için, [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] derleme için bir uzantı (VSIX) paketi ve uzantıyla dağıtmak istediğiniz diğer dosyalar oluşturun. Daha fazla bilgi için bkz. [Visual Studio 'Da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint paketleme ve dağıtımını genişletme](../sharepoint/extending-sharepoint-packaging-and-deployment.md)
 - [SharePoint proje öğelerini genişletme](../sharepoint/extending-sharepoint-project-items.md)
-- [Nasıl yapılır: Dağıtım adımları yürütüldüğünde kodu çalıştırma](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)
-- [Nasıl yapılır: Bir SharePoint komutu oluşturma](../sharepoint/how-to-create-a-sharepoint-command.md)
+- [Nasıl yapılır: dağıtım adımları yürütüldüğünde kodu çalıştırma](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)
+- [Nasıl yapılır: SharePoint komutu oluşturma](../sharepoint/how-to-create-a-sharepoint-command.md)

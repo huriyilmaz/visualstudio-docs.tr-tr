@@ -1,7 +1,7 @@
 ---
-title: SharePoint araçlarını Visual Studio'da genişletme | Microsoft Docs
+title: SharePoint araçlarını Visual Studio 'da genişletme | Microsoft Docs
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: overview
 dev_langs:
 - VB
 - CSharp
@@ -14,46 +14,45 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7d70d9b5bac260dc0731d06ebb11780114f0edf5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: 7dc0cc0d0af73d032d870629877b62c94e6b347b
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967428"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016039"
 ---
-# <a name="extend-the-sharepoint-tools-in-visual-studio"></a>SharePoint araçlarını Visual Studio'da genişletme
-  Visual Studio'da SharePoint araçları birçok uygulama geliştirme senaryosu gereksinimlerini karşılayın. Ancak, bunlar burada, sizin veya diğer geliştiriciler gerektiren işlevleri sağlamaz çalışmaları fark edebilirsiniz. Bu durumlarda, ihtiyacınız olan işlevleri oluşturmak için SharePoint araçları genişletebilirsiniz.
+# <a name="extend-the-sharepoint-tools-in-visual-studio"></a>SharePoint araçlarını Visual Studio 'da genişletme
+  Visual Studio 'daki SharePoint araçları birçok uygulama geliştirme senaryosunun gereksinimlerini karşılar. Ancak, sizin veya diğer geliştiricilerin gerek duyduğu işlevleri sağlamayan durumlar bulabilirsiniz. Bu durumlarda, ihtiyacınız olan işlevleri oluşturmak için SharePoint araçlarını genişletebilirsiniz.
 
-## <a name="how-to-extend-the-sharepoint-tools"></a>SharePoint araçlarını genişletmek nasıl
- SharePoint Proje sistemi genişletebilir ve **SharePoint bağlantıları** düğümünde **Sunucu Gezgini** penceresi.
+## <a name="how-to-extend-the-sharepoint-tools"></a>SharePoint araçlarını genişletme
+ SharePoint proje sistemini ve **SharePoint bağlantıları** düğümünü **Sunucu Gezgini** penceresinde genişletebilirsiniz.
 
-### <a name="extend-the-sharepoint-project-system"></a>SharePoint Proje sistemini genişletme
- Visual Studio Proje şablonları ve öğe şablonları, SharePoint çözümleri oluşturmak için kullanabileceğiniz bir dizi içerir. Örneğin, Olay alıcıları, liste tanımları, iş akışları ve Web bölümleri için şablonlar vardır. Ancak, kendi alanlar veya özel eylemler gibi SharePoint bileşenleri oluşturmak için SharePoint proje öğelerinin türlerini tanımlayabilirsiniz. SharePoint projeleri için uzantıları oluşturabilirsiniz ve ayrıca Visual Studio'da yüklü SharePoint proje öğesi türleri için uzantıları oluşturabilirsiniz.
+### <a name="extend-the-sharepoint-project-system"></a>SharePoint proje sistemini genişletme
+ Visual Studio, SharePoint çözümleri oluşturmak için kullanabileceğiniz bir proje şablonları ve öğe şablonları kümesi içerir. Örneğin, olay alıcıları, liste tanımları, iş akışları ve Web Bölümleri Şablonlar vardır. Ancak, alanlar veya özel eylemler gibi SharePoint bileşenleri oluşturmak için kendi SharePoint proje öğeleri türlerinizi de tanımlayabilirsiniz. Ayrıca, Visual Studio 'da zaten yüklü olan SharePoint proje öğesi türleri için uzantılar oluşturabilir ve SharePoint projeleri için Uzantılar oluşturabilirsiniz.
 
- Daha fazla bilgi için [SharePoint Proje sistemini genişletmek](../sharepoint/extending-the-sharepoint-project-system.md).
+ Daha fazla bilgi için bkz. [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md).
 
-### <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>Sunucu Gezgininde SharePoint bağlantıları düğümünü genişletme
- Visual Studio'da kullanabileceğiniz **SharePoint bağlantıları** düğümünde **Sunucu Gezgini** birçok bileşenlerin bir veya daha fazla yerel SharePoint sitelerine bir hiyerarşik ağaç görünümünde görüntülemek için pencere. Ayrıca genişletebilirsiniz **SharePoint bağlantıları** aşağıdaki yollarla düğüm:
+### <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme
+ Visual Studio 'da, hiyerarşik ağaç görünümünde bir veya daha fazla yerel SharePoint sitesinin bileşenlerinden birçoğunu görüntülemek için **Sunucu Gezgini** penceresindeki **SharePoint bağlantıları** düğümünü kullanabilirsiniz. **SharePoint bağlantıları** düğümünü aşağıdaki yollarla da genişletebilirsiniz:
 
-- Kendi düğüm ekleyerek. Bu, varsayılan olarak görüntülenmez SharePoint siteleri bileşenlerinin görüntülemek istiyorsanız kullanışlıdır.
+- Kendi düğümlerinizi ekleyerek. Bu, varsayılan olarak görüntülenmeyen SharePoint sitelerinin bileşenlerini göstermek istiyorsanız yararlıdır.
 
-- Var olan düğümleri genişleterek. Örneğin, var olan bir düğüme yeni bir alt düğüm ekleyebilirsiniz veya bir düğüm için bir kısayol menü öğesi ekleme ve bir geliştirici menü öğesini tıkladığında görevleri.
+- Mevcut düğümleri genişleterek. Örneğin, varolan bir düğüme yeni bir alt düğüm ekleyebilir veya bir geliştirici menü öğesini tıklattığında bir düğüme kısayol menü öğesi ekleyebilir ve görevleri gerçekleştirebilirsiniz.
 
-  Daha fazla bilgi için [Sunucu Gezgininde SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
+  Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
-## <a name="development-computer-requirements"></a>Geliştirme bilgisayar gereksinimleri
- SharePoint araçları için uzantıları oluşturmak için geliştirme bilgisayarınıza Visual Studio'da SharePoint çözümleri oluşturmak için aynı gereksinimleri karşılamalıdır.
+## <a name="development-computer-requirements"></a>Geliştirme bilgisayarı gereksinimleri
+ SharePoint araçları için uzantı oluşturmak üzere geliştirme bilgisayarınızın, Visual Studio 'da SharePoint çözümleri oluşturmak için aynı gereksinimleri karşılaması gerekir.
 
- Ayrıca, yüklemenizi öneririz [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]. SDK'sı, proje şablonları ve Visual Studio genişletmek için kullanabileceğiniz araçları içerir. Özellikle, SDK, Visual Studio Uzantısı (VSIX) paketini bir kolayca oluşturmak için kullanabileceğiniz bir proje şablonu içerir. VSIX paketlerini, Visual Studio uzantıları Visual Studio'da dağıtmak için tercih edilen yoludur. VSIX paketlerini kullanarak tüm SharePoint araç uzantıları dağıtılması gerekir. İzlenecek bu belgedeki tüm sahip olduğunuzu varsaymaktadır [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] yüklü.
+ Ayrıca, yüklemenizi öneririz [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] . SDK, Visual Studio 'Yu genişletmek için kullanabileceğiniz proje şablonlarını ve araçları içerir. Özellikle, SDK, Visual Studio uzantısı (VSıX) paketini kolayca oluşturmak için kullanabileceğiniz bir proje şablonu içerir. VSıX paketleri Visual Studio 'da Visual Studio uzantıları dağıtmanın tercih edilen yoludur. Tüm SharePoint araçları uzantılarının VSıX paketleri kullanılarak dağıtılması gerekir. Bu belgelerdeki tüm izlenecek yollar, yüklü olduğunu varsayar [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] .
 
- Visual Studio SDK'yı yüklemek için bkz [Visual Studio SDK'sını yükleme](../extensibility/installing-the-visual-studio-sdk.md). Visual Studio uzantıları hakkında daha fazla bilgi için bkz: [Visual Studio uzantıları geliştirme başlangıç](../extensibility/starting-to-develop-visual-studio-extensions.md).
+ Visual Studio SDK 'yı yüklemek için bkz. [Visual STUDIO SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md). Visual Studio uzantıları hakkında daha fazla bilgi için bkz. [Visual Studio uzantıları geliştirmeye başlama](../extensibility/starting-to-develop-visual-studio-extensions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Araç uzantılarının programlama modeline SharePoint genel bakış](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
-- [SharePoint Proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md)
-- [Sunucu Gezgininde SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
-- [SharePoint araç uzantıları için programlama kavramları ve Özellikler](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)
-- [Başvuru &#40;SharePoint araçları genişletilebilirliği&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)
-- [Uzantıları Visual Studio'da SharePoint araçları için hata ayıklama](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)
-- [Visual Studio'da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+- [SharePoint Araç uzantılarının programlama modeline genel bakış](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)
+- [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md)
+- [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [SharePoint Araçları uzantıları için programlama kavramları ve özellikleri](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)
+- [SharePoint Araçları Genişletilebilirliği &#40;başvuru&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)
+- [Visual Studio 'da SharePoint araçları için hata ayıklama uzantıları](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+- [Visual Studio 'da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: ek derlemeler ekleme ve kaldırma | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 f1_keywords:
 - VS.SharePointTools.RAD.CustomAssembly
 dev_langs:
@@ -14,12 +14,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: bdcc1c478bead4df89622a7311b074965cdc0226
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 07b9016a4e246d3ed5a2697d924f556517a8226f
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72985231"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014835"
 ---
 # <a name="how-to-add-and-remove-additional-assemblies"></a>Nasıl yapılır: ek derlemeler ekleme ve kaldırma
   Bir SharePoint paketi işlevselliği veya verileri için diğer derlemelere bağımlıysa, derlemeleri çözüm paketinize (. wsp) ekleyebilirsiniz. Bu şekilde, SharePoint sunucusu özel derlemelerin bir paket ile yüklendiğinden emin olmanızı sağlar.
@@ -41,7 +40,7 @@ ms.locfileid: "72985231"
 
 4. Üç nokta (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) seçin ve ardından eklemek istediğiniz derlemeyi seçin. Taşınabilirlik amacıyla seçili derlemeye göreli bir yol kullanmanızı öneririz.
 
-5. **Dağıtım hedefi**için, derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtmak üzere **GlobalAssemblyCache** seçenek düğmesini seçin ya da derlemeyi, ' deki WebApplication klasörüne dağıtmak için **WebApplication** seçenek düğmesini seçin. SharePoint çalıştıran sunucu.
+5. **Dağıtım hedefi**için, derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtmak üzere **GlobalAssemblyCache** seçenek düğmesini seçin veya derlemeyi SharePoint çalıştıran sunucudaki WebApplication klasörüne dağıtmak için **WebApplication** seçenek düğmesini seçin.
 
 #### <a name="to-add-an-assembly-from-project-output"></a>Proje çıktısından bir derleme eklemek için
 
@@ -57,7 +56,7 @@ ms.locfileid: "72985231"
 
 4. **Kaynak proje** listesinde, eklemek istediğiniz kaynak projeyi seçin.
 
-5. **Dağıtım hedefi**için, derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtmak üzere **GlobalAssemblyCache** seçenek düğmesini seçin ya da derlemeyi, ' deki WebApplication klasörüne dağıtmak için **WebApplication** seçenek düğmesini seçin. SharePoint çalıştıran sunucu.
+5. **Dağıtım hedefi**için, derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtmak üzere **GlobalAssemblyCache** seçenek düğmesini seçin veya derlemeyi SharePoint çalıştıran sunucudaki WebApplication klasörüne dağıtmak için **WebApplication** seçenek düğmesini seçin.
 
 #### <a name="to-add-a-safe-control"></a>Güvenli denetim eklemek için
 

@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: ASPX işaretlemesini yerelleştirme | Microsoft Docs'
+title: 'Nasıl yapılır: ASPX Işaretlemesini yerelleştirme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,46 +13,45 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4cd3c17a9e771ad9a1aee7526f24e3a8282f208d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 63bd8ee614a78752069002820689a2cc6c0be783
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443101"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016281"
 ---
 # <a name="how-to-localize-aspx-markup"></a>Nasıl yapılır: ASPX işaretlemesini yerelleştirme
-  [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] (.aspx) sayfası genellikle sabit kodlanmış dize değerleri kullanır. Bu dizelerini yerelleştirmek için yerelleştirilmiş kaynaklara başvuran deyimleri ile değiştirin.
+  [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)](. aspx) sayfaları genellikle sabit kodlanmış dize değerlerini kullanır. Bu dizeleri yerelleştirmek için, bunları yerelleştirilmiş kaynaklara başvuran ifadelerle değiştirin.
 
-## <a name="localize-aspx-markup"></a>ASPX işaretlemesini yerelleştirme
+## <a name="localize-aspx-markup"></a>ASPX işaretlemesini yerelleştirin
 
-#### <a name="to-localize-aspx-markup"></a>ASPX biçimlendirmesini yerelleştirmek için
+#### <a name="to-localize-aspx-markup"></a>ASPX işaretlemesini yerelleştirmek için
 
-1. Ayrı kaynak dosyaları ekleyin: biri varsayılan dili ve her bir yerelleştirme dili.
+1. Ayrı kaynak dosyaları ekleyin: biri varsayılan dil diğeri, her yerelleştirilmiş dil için bir tane.
 
-     Yalnızca işaretleme ve kod değil yerelleştiriyorsanız, Genel kaynaklar dosyası proje öğesi ekleyin. Kodu ve biçimlendirmeyi yerelleştirme, bir kaynak dosyası proje öğesi ekleyin.
+     Yalnızca biçimlendirmeyi yerelleştirçalışıyorsanız ve kodu değil, bir genel kaynak dosyası proje öğesi ekleyin. Kodu ve biçimlendirmeyi yerelleştirçalışıyorsanız bir kaynak dosyası proje öğesi ekleyin.
 
-    1. Genel bir kaynak dosyası eklemek için **Çözüm Gezgini**, bir SharePoint proje öğesi için kısayol menüsünü açın ve ardından **Ekle** > **yeni öğe**. SharePoint altında **2010** düğümünü seçin **Genel kaynaklar dosyası** şablonu.
+    1. Genel kaynak dosyası eklemek için, **Çözüm Gezgini**' de bir SharePoint proje öğesi için kısayol menüsünü açın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. SharePoint **2010** düğümü altında **Genel kaynaklar dosya** şablonunu seçin.
 
-    2. Bir .resources dosyası eklemek için **Çözüm Gezgini**, bir SharePoint proje öğesi için kısayol menüsünü açın ve ardından **Ekle** > **yeni öğe**. Ya da altında **Visual Basic** veya **Visual C#**  düğümünü seçin **kaynak dosyası** şablonu.
+    2. Bir kaynak dosyası eklemek için, **Çözüm Gezgini**' de bir SharePoint proje öğesi için kısayol menüsünü açın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Visual Basic** veya **Visual C#** düğümü altında **kaynaklar dosya** şablonunu seçin.
 
     > [!NOTE]
-    > Dağıtım türü özelliğini etkinleştirmek için bir SharePoint proje öğesi için kaynak dosyaları eklediğinizden emin olun. Bu yordamda daha sonra bu özellik gereklidir. Çözümünüze bir SharePoint proje öğesi yoksa, boş bir SharePoint projesine ekleyin ve varsayılan kaldırmak *Elements.xml* dosya.
+    > Dağıtım türü özelliğini etkinleştirmek için kaynak dosyalarını bir SharePoint proje öğesine eklediğinizden emin olun. Bu özellik, bu yordamın ilerleyen kısımlarında gereklidir. Çözümünüz bir SharePoint proje öğesi içermiyorsa, boş bir SharePoint projesi ekleyebilir ve varsayılan *Elements.xml* dosyasını kaldırabilirsiniz.
 
-2. Varsayılan kaynak dosyasına protokolün kendi tercih ettiğiniz bir ad verin bir *.resx* MyAppResources.resx gibi bir uzantı. Her bir yerelleştirilmiş kaynak dosyası için aynı temel adı kullanın, ancak kültür ekleme [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]. Örneğin, kaynak adı Almanca yerelleştirilmiş *MyAppResources.de-DE.resx*.
+2. Varsayılan dil kaynak dosyasına, bir *. resx* uzantısıyla eklenen bir adı (örneğin, MyAppResources. resx) sağlayın. Her yerelleştirilmiş kaynak dosyası için aynı temel adı kullanın, ancak kültürü ekleyin [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] . Örneğin, *MyAppResources.de-de. resx*adlı bir Almanya yerelleştirilmiş kaynağını adlandırın.
 
-3. Değiştirin **dağıtım türü** özelliği için her kaynak dosyasının **AppGlobalResource** bunları sunucunun App_GlobalResources klasörüne dağıtılacak neden olacak.
+3. Her kaynak dosyasının **dağıtım türü** özelliğinin değerini, sunucunun App_GlobalResources klasörüne dağıtmalarını sağlamak Için **AppGlobalResource** olarak değiştirin.
 
-4. ASPX biçimlendirmeye ek olarak kodu yerelleştirmek için kaynakları kullanıyorsanız bırakın **derleme eylemi** özelliği her bir dosyanın **gömülü kaynak**. İsteğe bağlı olarak kaynak dosyalarını yalnızca biçimlendirmeyi yerelleştirmek için kullanıyorsanız, özellik değeri dosyaları değiştirebilirsiniz **içerik**. Daha fazla bilgi için [yerelleştirmek SharePoint çözümleri](../sharepoint/localizing-sharepoint-solutions.md).
+4. ASPX biçimlendirmesine ek olarak kodu yerelleştirmek için kaynaklar kullanıyorsanız, her dosyanın **derleme eylemi** özelliğinin değerini **katıştırılmış kaynak**olarak bırakın. Kaynak dosyalarını yalnızca biçimlendirmeyi yerelleştirmek için kullanıyorsanız, isteğe bağlı olarak dosyaların özellik değerini **içeriğe**dönüştürebilirsiniz. Daha fazla bilgi için bkz. [SharePoint çözümlerini yerelleştirin](../sharepoint/localizing-sharepoint-solutions.md).
 
-5. Her kaynak dosyasını açın ve her dosyada aynı dize kimliklerini kullanarak yerelleştirilmiş dizeleri ekleyin.
+5. Her bir dosya için aynı dize kimliklerini kullanarak her bir kaynak dosyasını açın ve yerelleştirilmiş dizeler ekleyin.
 
-6. İçinde [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ASPX sayfa veya denetimi için biçimlendirme sabit kodlanmış dizeleri aşağıdaki biçimi kullanın değerleriyle değiştirin:
+6. [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]Aspx sayfası veya Denetim biçimlendirmesinde, sabit kodlanmış dizeleri aşağıdaki biçimi kullanan değerlerle değiştirin:
 
     ```aspx-csharp
     <%$Resources:Resource File Name, String ID%>
     ```
 
-     Örneğin, bir uygulama sayfası üzerinde bir etiket denetimi için metni yerelleştirmek için değiştirirsiniz:
+     Örneğin, bir uygulama sayfasında bir etiket denetimi için metni yerelleştirmek üzere şunları değiştirirsiniz:
 
     ```aspx-csharp
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
@@ -60,7 +59,7 @@ ms.locfileid: "63443101"
     </asp:Content>
     ```
 
-     to
+     -
 
     ```aspx-csharp
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
@@ -68,14 +67,14 @@ ms.locfileid: "63443101"
     </asp:Content>
     ```
 
-7. Seçin **F5** anahtarı oluşturun ve uygulamayı çalıştırın.
+7. Uygulamayı derlemek ve çalıştırmak için **F5** tuşunu seçin.
 
-8. SharePoint'te, varsayılan görüntüleme dilini değiştirin.
+8. SharePoint 'te varsayılan değer olan görüntüleme dilini değiştirin.
 
-     Yerelleştirilmiş dizeleri uygulamada görüntülenir. Yerelleştirilmiş kaynakları görüntülemek için SharePoint server kaynak dosyanın kültürüyle eşleşen bir dil paketi yüklü olmalıdır.
+     Yerelleştirilmiş dizeler uygulamada görüntülenir. Yerelleştirilmiş kaynakları göstermek için SharePoint sunucusunda, kaynak dosyasının kültürüyle eşleşen bir dil paketi yüklü olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint Çözümlerini Yerelleştirme](../sharepoint/localizing-sharepoint-solutions.md)
-- [Nasıl yapılır: Bir özelliği yerelleştirme](../sharepoint/how-to-localize-a-feature.md)
-- [Nasıl yapılır: Kaynak dosyası ekleme](../sharepoint/how-to-add-a-resource-file.md)
-- [Nasıl yapılır: Kod yerelleştirme](../sharepoint/how-to-localize-code.md)
+- [SharePoint çözümlerini yerelleştirin](../sharepoint/localizing-sharepoint-solutions.md)
+- [Nasıl yapılır: bir özelliği yerelleştirme](../sharepoint/how-to-localize-a-feature.md)
+- [Nasıl yapılır: kaynak dosyası ekleme](../sharepoint/how-to-add-a-resource-file.md)
+- [Nasıl yapılır: kod yerelleştirme](../sharepoint/how-to-localize-code.md)

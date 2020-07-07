@@ -1,7 +1,7 @@
 ---
-title: 'Nasıl yapılır: SharePoint çözümleri oluşturun | Microsoft Docs'
+title: 'Nasıl yapılır: SharePoint çözümleri derleme | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -14,25 +14,24 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 99109376c6c0279bcdd3852bd5bbadd8795c8564
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: MT
+ms.openlocfilehash: d3beb1602a6572ed578208d6dd85951f1ea1c30b
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62966893"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014516"
 ---
 # <a name="how-to-build-sharepoint-solutions"></a>Nasıl yapılır: SharePoint çözümleri derleme
 
-SharePoint yapı çözümü Visual Studio'da diğer uygulamalarda yapılandırmaktan farklı. Uygulamaları yapılandırma hakkında daha fazla bilgi için bkz. [derlemek ve oluşturmak Visual Studio'da](../ide/compiling-and-building-in-visual-studio.md). SharePoint çözümleri için özel bazı durumlar için bkz [nasıl yapılır: Dağıtma ve bir SharePoint çözümünü yerel bir SharePoint sitesi için Yayımlama](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md).
+SharePoint Çözümünüzü oluşturma işlemi, Visual Studio 'da başka uygulamalar oluşturmadan farklı değildir. Uygulama oluşturma hakkında daha fazla bilgi için bkz. [Visual Studio 'Da derleme ve derleme](../ide/compiling-and-building-in-visual-studio.md). SharePoint çözümlerine özgü bazı önemli noktalar hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint çözümünü yerel bir SharePoint sitesine dağıtma ve yayımlama](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md).
 
 ## <a name="to-build-sharepoint-solutions"></a>SharePoint çözümleri oluşturmak için
 
-1. Bir hata ayıklama veya yayın derlemesi yapma olup olmadığını belirleyin. Daha fazla bilgi için [hata ayıklayıcı proje ayarları](../debugger/debugger-project-settings.md).
+1. Hata ayıklama veya yayın derlemesi yapıp yapmayacağınıza karar verin. Daha fazla bilgi için bkz. [hata ayıklayıcı proje ayarları](../debugger/debugger-project-settings.md).
 
-2. Oluşturma veya çözüm veya projeyi yeniden oluşturma için uygun seçeneği belirleyin. Daha fazla bilgi için [derleme ve Visual Studio'da oluşturma](../ide/compiling-and-building-in-visual-studio.md).
+2. Çözümünüzü veya projenizi oluşturmak veya yeniden derlemek için uygun seçeneği belirleyin. Daha fazla bilgi için bkz. [Visual Studio 'Da derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md).
 
-3. Menü çubuğunda, **derleme** > **Çözümü Derle**.
+3. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derleme ve SharePoint çözümlerinde hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)

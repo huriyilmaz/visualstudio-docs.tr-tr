@@ -1,7 +1,7 @@
 ---
 title: IntelliTrace kullanarak SharePoint uygulamasında hata ayıklama
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -16,12 +16,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: fe1130880db42e920e656d5efef1ea6a5af4d2d0
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
-ms.translationtype: MT
+ms.openlocfilehash: 041a110ee39ae7711756b8d689bdf68ae2368caf
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984150"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015747"
 ---
 # <a name="walkthrough-debug-a-sharepoint-application-by-using-intellitrace"></a>İzlenecek yol: IntelliTrace kullanarak bir SharePoint uygulamasında hata ayıklama
 
@@ -45,7 +44,7 @@ IntelliTrace 'i kullanarak SharePoint Çözümlerinde daha kolay hata ayıklama 
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -73,9 +72,9 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 ## <a name="add-code-to-the-feature-receiver"></a>Özellik alıcısına kod ekleme
 
-Sonra, özellik alıcısındaki iki yönteme kod ekleyin: `FeatureActivated` ve `FeatureDeactivating`. Bu yöntemler sırasıyla SharePoint 'te her bir özellik etkinleştirildiğinde veya devre dışı bırakıldığında tetiklenir.
+Sonra, özellik alıcısındaki iki yönteme kod ekleyin: `FeatureActivated` ve `FeatureDeactivating` . Bu yöntemler sırasıyla SharePoint 'te her bir özellik etkinleştirildiğinde veya devre dışı bırakıldığında tetiklenir.
 
-1. `Feature1EventReceiver` sınıfının üst kısmında, SharePoint sitesini ve alt siteyi belirten değişkenleri bildiren aşağıdaki kodu ekleyin:
+1. Sınıfının üst kısmında `Feature1EventReceiver` , SharePoint sitesini ve alt siteyi belirten değişkenleri bildiren aşağıdaki kodu ekleyin:
 
     ```vb
     ' SharePoint site and subsite.
@@ -89,7 +88,7 @@ Sonra, özellik alıcısındaki iki yönteme kod ekleyin: `FeatureActivated` ve 
     private string webUrl = "/";
     ```
 
-2. `FeatureActivated` yöntemini aşağıdaki kodla değiştirin:
+2. `FeatureActivated` yöntemini aşağıdaki kod ile değiştirin:
 
     ```vb
     Public Overrides Sub FeatureActivated(ByVal properties As SPFeatureReceiverProperties)
@@ -155,7 +154,7 @@ Sonra, özellik alıcısındaki iki yönteme kod ekleyin: `FeatureActivated` ve 
     }
     ```
 
-3. `FeatureDeactivating` yöntemini aşağıdaki kodla değiştirin:
+3. `FeatureDeactivating` yöntemini aşağıdaki kod ile değiştirin:
 
     ```vb
     Public Overrides Sub FeatureDeactivating(ByVal properties As SPFeatureReceiverProperties)
@@ -258,7 +257,7 @@ Artık kod, özellik alıcısına eklendiğinden ve veri toplayıcı çalıştı
 
 2. Duyurular ve görevler listelerinin içeriğini görüntüleyin.
 
-     Duyurular listesinde, **etkinleştirilen Özellik: IntelliTraceTest_Feature1**adlı yeni bir duyuru olmalıdır ve görev listesi, **devre dışı bırakma özelliği: IntelliTraceTest_Feature1**adlı yeni bir görevin olması gerekir. Bu öğelerden herhangi biri eksikse, özelliğin etkinleştirilip etkinleştirilmediğini doğrulayın. Etkinleştirilmemişse, etkinleştirin.
+     Duyurular listesinde, **etkinleştirilen Özellik: IntelliTraceTest_Feature1**adlı yeni bir duyuru olmalıdır ve görev listesi, **devre dışı bırakma özelliği**olarak adlandırılan yeni bir görevin olması gerekir: IntelliTraceTest_Feature1. Bu öğelerden herhangi biri eksikse, özelliğin etkinleştirilip etkinleştirilmediğini doğrulayın. Etkinleştirilmemişse, etkinleştirin.
 
 3. Aşağıdaki adımları gerçekleştirerek özelliği devre dışı bırakın:
 
@@ -295,7 +294,7 @@ SharePoint çalıştıran sisteme Microsoft Monitoring Agent yüklerseniz, Intel
 
 3. PowerShell penceresinde, [Stop-WebApplicationMonitoring](/previous-versions/system-center/powershell/system-center-2012-r2/dn472753(v=sc.20)) komutunu çalıştırarak. iTrace dosyasını oluşturun, izlemeyi durdurun ve SharePoint Çözümünüzü yeniden başlatın.
 
-     **Stop-WebApplicationMonitoring**  *"\<sharepointsite >\\< SharePointAppName\>"*
+     **Stop-WebApplicationMonitoring***" \<SharePointSite> \\<sharepointappname \> "*  
 
 ## <a name="debug-and-fix-the-sharepoint-solution"></a>SharePoint çözümünü hata ayıklama ve çözme
 

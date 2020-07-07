@@ -1,7 +1,7 @@
 ---
 title: Öğe şablonu, Bölüm 2 ile özel eylem proje öğesi oluşturma
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating template wizards
 - SharePoint project items, creating template wizards
@@ -11,17 +11,16 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: ae9c686e46bf6a956d58ac22b823dcc36c2aacce
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
-ms.translationtype: MT
+ms.openlocfilehash: c96546f85b21ee0ca8a559059a16158b743cb915
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189157"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86016108"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-2"></a>İzlenecek yol: öğe şablonu, Bölüm 2 ile özel bir eylem proje öğesi oluşturma
   Özel bir SharePoint proje öğesi türü tanımladıktan ve Visual Studio 'daki bir öğe şablonuyla ilişkilendirdikten sonra, şablon için bir sihirbaz sağlamak isteyebilirsiniz. Bir projeye proje öğesinin yeni bir örneğini eklemek için şablonunuzu kullandıklarında kullanıcılardan bilgi toplamak için Sihirbazı kullanabilirsiniz. Topladığınız bilgiler Proje öğesini başlatmak için kullanılabilir.
 
- Bu kılavuzda, özel eylem proje öğesine [Izlenecek yol: bir öğe şablonuyla bir özel eylem proje öğesi oluşturun, 1. Bölüm](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)olarak bir sihirbaz ekleyeceksiniz. Bir Kullanıcı bir SharePoint projesine özel bir eylem proje öğesi eklediğinde, sihirbaz özel eylem (örneğin, konumu ve bir son kullanıcı seçtiğinde gidilecek URL) hakkında bilgi toplar ve bu bilgileri, içindeki *Elements. xml* dosyasına ekler. Yeni proje öğesi.
+ Bu kılavuzda, özel eylem proje öğesine [Izlenecek yol: bir öğe şablonuyla bir özel eylem proje öğesi oluşturun, 1. Bölüm](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)olarak bir sihirbaz ekleyeceksiniz. Bir Kullanıcı bir SharePoint projesine özel bir eylem proje öğesi eklediğinde, sihirbaz özel eylem (örneğin, konumu ve bir son kullanıcı seçtiğinde gidilecek URL) hakkında bilgi toplar ve bu bilgileri yeni proje öğesindeki *Elements.xml* dosyasına ekler.
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
@@ -36,7 +35,7 @@ ms.locfileid: "73189157"
 > [!NOTE]
 > Bir iş akışı için nasıl özel etkinlik oluşturulacağını gösteren [GitHub](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities) 'dan bir örnek indirebilirsiniz.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu yönergeyi gerçekleştirmek için, önce [Izlenecek yol: bir öğe şablonuyla bir özel eylem proje öğesi oluşturun, 1. Bölüm ' i](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)tamamlayarak CustomActionProjectItem çözümünü oluşturmanız gerekir.
 
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere de ihtiyacınız vardır:
@@ -47,12 +46,12 @@ ms.locfileid: "73189157"
 
   İzlenecek yolu tamamlamak için aşağıdaki kavramların bilgisi yararlıdır, ancak gerekli değildir:
 
-- Visual Studio 'da proje ve öğe şablonları için sihirbazlar. Daha fazla bilgi için bkz. [nasıl yapılır: Sihirbazları Proje Şablonlarıyla Kullanma](../extensibility/how-to-use-wizards-with-project-templates.md) ve <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> arabirimi.
+- Visual Studio 'da proje ve öğe şablonları için sihirbazlar. Daha fazla bilgi için bkz. [nasıl yapılır: sihirbazları proje şablonlarıyla](../extensibility/how-to-use-wizards-with-project-templates.md) ve arabirimiyle kullanma <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> .
 
 - SharePoint 'te özel eylemler. Daha fazla bilgi için bkz. [özel eylem](/previous-versions/office/developer/sharepoint-2010/ms458635(v=office.14)).
 
 ## <a name="create-the-wizard-project"></a>Sihirbaz projesi oluşturma
- Bu izlenecek yolu tamamlamak için, [Izlenecek yol: bir öğe şablonuyla bir özel eylem proje öğesi oluşturma, 1. Bölüm](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)olarak bir proje eklemeniz gerekir. <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> arabirimini uygular ve sihirbaz kullanıcı arabirimini bu projede tanımlayacaksınız.
+ Bu izlenecek yolu tamamlamak için, [Izlenecek yol: bir öğe şablonuyla bir özel eylem proje öğesi oluşturma, 1. Bölüm](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)olarak bir proje eklemeniz gerekir. <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>Bu projede arabirimini uygular ve sihirbaz kullanıcı arabirimini tanımlayacaksınız.
 
 #### <a name="to-create-the-wizard-project"></a>Sihirbaz projesi oluşturmak için
 
@@ -60,13 +59,13 @@ ms.locfileid: "73189157"
 
 2. **Çözüm Gezgini**, çözüm düğümü için kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni proje**' yi seçin.
 
-3. **Yeni proje** iletişim kutusunda,  **C# Visual** veya **Visual Basic** düğümlerini genişletin ve sonra **Windows** düğümünü seçin.
+3. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** düğümlerini genişletin ve sonra **Windows** düğümünü seçin.
 
 4. **Yeni proje** iletişim kutusunun üst kısmında, .NET Framework sürümleri listesinde **4,5 .NET Framework** seçildiğinden emin olun.
 
 5. **WPF Kullanıcı denetimi kitaplığı** proje şablonu ' nu seçin, projenin **ItemTemplateWizard**' ı adlandırın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **ItemTemplateWizard** projesini çözüme ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]çözümdeki **ItemTemplateWizard** projesini ekler.
 
 6. Projedeki UserControl1 öğesini silin.
 
@@ -79,7 +78,7 @@ ms.locfileid: "73189157"
 
 2. **Proje tasarımcısında**, hedef framework 'ün .NET Framework 4,5 olarak ayarlandığından emin olun.
 
-     Görsel C# projelerde, bu değeri **uygulama** sekmesinde ayarlayabilirsiniz. Visual Basic projeler için, bu değeri **Derle** sekmesinde ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/visual-studio-multi-targeting-overview.md).
+     Visual C# projeleri için, bu değeri **uygulama** sekmesinde ayarlayabilirsiniz. Visual Basic projeler için, bu değeri **Derle** sekmesinde ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/visual-studio-multi-targeting-overview.md).
 
 3. **ItemTemplateWizard** projesinde, projeye bir **pencere (WPF)** öğesi ekleyin ve ardından Item **WizardWindow**' u adlandırın.
 
@@ -102,7 +101,7 @@ ms.locfileid: "73189157"
 9. **Özellikler** penceresinde, **birlikte çalışma türlerini katıştır** özelliğinin değerini **false**olarak değiştirin.
 
 ## <a name="define-the-default-location-and-id-strings-for-custom-actions"></a>Özel eylemler için varsayılan konumu ve KIMLIK dizelerini tanımlayın
- Her özel eylemin, `GroupID` ve *Elements. xml* dosyasındaki `CustomAction` öğesinin `Location` özniteliklerinde belirtilen bir konum ve kimliği vardır. Bu adımda, ItemTemplateWizard projesinde bu öznitelikler için geçerli dizelerin bazılarını tanımlarsınız. Bu izlenecek yolu tamamladığınızda, kullanıcılar sihirbazda bir konum ve KIMLIK belirtmede bu dizeler özel eylem proje öğesinde *Elements. xml* dosyasına yazılır.
+ Her özel eylemin, `GroupID` `Location` `CustomAction` *Elements.xml* dosyasındaki öğesinin ve ÖZNITELIKLERINDE belirtilen bir konum ve kimliği vardır. Bu adımda, ItemTemplateWizard projesinde bu öznitelikler için geçerli dizelerin bazılarını tanımlarsınız. Bu izlenecek yolu tamamladığınızda, kullanıcılar sihirbazda bir konum ve KIMLIK belirtmede bu dizeler özel eylem proje öğesindeki *Elements.xml* dosyasına yazılır.
 
  Kolaylık olması için, bu örnek yalnızca kullanılabilir varsayılan konumların ve kimliklerin bir alt kümesini destekler. Tam liste için bkz. [varsayılan özel eylem konumları ve kimlikleri](/previous-versions/office/developer/sharepoint-2010/bb802730(v=office.14)).
 
@@ -130,9 +129,9 @@ ms.locfileid: "73189157"
      [!code-xml[SPExtensibility.ProjectItem.CustomAction#9](../sharepoint/codesnippet/Xaml/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml#9)]
 
     > [!NOTE]
-    > Bu XAML 'de oluşturulan pencere <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> temel sınıfından türetilir. Visual Studio 'ya özel bir WPF iletişim kutusu eklediğinizde, bu sınıftan iletişim kutusunu, Visual Studio 'daki diğer iletişim kutularıyla tutarlı bir stil elde etmek ve kalıcı iletişim kutularında oluşabilecek sorunları önlemek için türetmenizi öneririz. Daha fazla bilgi için bkz. [kalıcı Iletişim kutuları oluşturma ve yönetme](../extensibility/creating-and-managing-modal-dialog-boxes.md).
+    > Bu XAML 'de oluşturulan pencere, <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow> temel sınıftan türetilir. Visual Studio 'ya özel bir WPF iletişim kutusu eklediğinizde, bu sınıftan iletişim kutusunu, Visual Studio 'daki diğer iletişim kutularıyla tutarlı bir stil elde etmek ve kalıcı iletişim kutularında oluşabilecek sorunları önlemek için türetmenizi öneririz. Daha fazla bilgi için bkz. [kalıcı Iletişim kutuları oluşturma ve yönetme](../extensibility/creating-and-managing-modal-dialog-boxes.md).
 
-3. Visual Basic bir proje geliştiriyorsanız, `Window` öğesinin `x:Class` özniteliğinde `WizardWindow` sınıf adından `ItemTemplateWizard` ad alanını kaldırın. Bu öğe, XAML 'in ilk satıröğesidir. İşiniz bittiğinde, ilk satır aşağıdaki koda benzemelidir:
+3. Visual Basic bir proje geliştiriyorsanız, `ItemTemplateWizard` ad alanını `WizardWindow` öğenin özniteliğinde sınıf adından kaldırın `x:Class` `Window` . Bu öğe, XAML 'in ilk satıröğesidir. İşiniz bittiğinde, ilk satır aşağıdaki koda benzemelidir:
 
     ```xml
     <Window x:Class="WizardWindow"
@@ -144,7 +143,7 @@ ms.locfileid: "73189157"
      [!code-csharp[SPExtensibility.ProjectItem.CustomAction#7](../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/wizardwindow.xaml.cs#7)]
 
 ## <a name="implement-the-wizard"></a>Sihirbazı uygulama
- <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> arabirimini uygulayarak sihirbazın işlevlerini tanımlayın.
+ Arabirimini uygulayarak sihirbazın işlevselliğini tanımlayın <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> .
 
 #### <a name="to-implement-the-wizard"></a>Sihirbazı uygulamak için
 
@@ -153,12 +152,12 @@ ms.locfileid: "73189157"
      [!code-csharp[SPExtensibility.ProjectItem.CustomAction#8](../sharepoint/codesnippet/CSharp/customactionprojectitem/itemtemplatewizard/customactionwizard.cs#8)]
      [!code-vb[SPExtensibility.ProjectItem.CustomAction#8](../sharepoint/codesnippet/VisualBasic/customactionprojectitem/itemtemplatewizard/customactionwizard.vb#8)]
 
-## <a name="checkpoint"></a>Mak
+## <a name="checkpoint"></a>Checkpoint
  Bu noktada, sihirbazın tüm kodu artık projede bulunur. Hata olmadan derlendiğinden emin olmak için projeyi derleyin.
 
 #### <a name="to-build-your-project"></a>Projenizi derlemek için
 
-1. Menü çubuğunda **derleme**  > **Build Solution**' ı seçin.
+1. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
 
 ## <a name="associate-the-wizard-with-the-item-template"></a>Sihirbazı öğe şablonuyla ilişkilendir
  Sihirbazı uyguladığınıza göre, üç ana adımı tamamlayarak **özel eylem** öğesi şablonuyla ilişkilendirmeniz gerekir:
@@ -175,21 +174,21 @@ ms.locfileid: "73189157"
 
 2. **İmzalama** sekmesinde, **derlemeyi imzala** onay kutusunu seçin.
 
-3. **Tanımlayıcı ad seçin anahtar dosyası** listesinde **Yeni\<... seçeneğini belirleyin. >** .
+3. **Tanımlayıcı ad seçin anahtar dosyası** listesinde, öğesini seçin **\<New...>** .
 
 4. **Tanımlayıcı ad anahtarı oluştur** iletişim kutusunda bir ad girin, **anahtar dosyamı parolayla koru** onay kutusunu temizleyin ve **Tamam** düğmesini seçin.
 
-5. Menü çubuğunda **derleme**  > **Build Solution**' ı seçin.
+5. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin.
 
 #### <a name="to-get-the-public-key-token-for-the-wizard-assembly"></a>Sihirbaz derlemesinin ortak anahtar belirtecini almak için
 
-1. Bir Visual Studio komut Istemi penceresinde, aşağıdaki komutu çalıştırarak, geliştirme bilgisayarınızda ItemTemplateWizard projesi için yerleşik ItemTemplateWizard. dll derlemesinin tam yolu ile *PathToWizardAssembly* öğesini değiştirin.
+1. Bir Visual Studio komut Istemi penceresinde, aşağıdaki komutu çalıştırarak, geliştirme bilgisayarınızda bulunan ItemTemplateWizard projesi için bir yerleşik ItemTemplateWizard.dll derlemesinin tam yolu ile *PathToWizardAssembly* ' ı değiştirin.
 
     ```xml
     sn.exe -T PathToWizardAssembly
     ```
 
-     *ItemTemplateWizard. dll* derlemesinin ortak anahtar belirteci, Visual Studio komut istemi penceresine yazılır.
+     *ItemTemplateWizard.dll* derlemesinin ortak anahtar belirteci, Visual Studio komut istemi penceresine yazılır.
 
 2. Visual Studio komut Istemi penceresini açık tutun. Bir sonraki yordamı tamamlayabilmeniz için ortak anahtar belirtecine ihtiyacınız olacaktır.
 
@@ -197,7 +196,7 @@ ms.locfileid: "73189157"
 
 1. **Çözüm Gezgini**, **ItemTemplate** projesi düğümünü genişletin ve ardından *ItemTemplate. vstemplate* dosyasını açın.
 
-2. Dosyanın sonuna yakın bir şekilde, aşağıdaki `WizardExtension` öğesini `</TemplateContent>` ve `</VSTemplate>` etiketleri arasına ekleyin. `PublicKeyToken` özniteliğin *YourToken* değerini, önceki yordamda elde ettiğiniz ortak anahtar belirteci ile değiştirin.
+2. Dosyanın sonuna yakın bir şekilde, `WizardExtension` ve etiketleri arasına aşağıdaki öğeyi ekleyin `</TemplateContent>` `</VSTemplate>` . Özniteliğin *YourToken* değerini, `PublicKeyToken` önceki yordamda elde ettiğiniz ortak anahtar belirteci ile değiştirin.
 
     ```xml
     <WizardExtension>
@@ -206,18 +205,18 @@ ms.locfileid: "73189157"
     </WizardExtension>
     ```
 
-     `WizardExtension` öğesi hakkında daha fazla bilgi için bkz. [Wizardexgeri &#40;öğesi Visual Studio&#41;şablonları](../extensibility/wizardextension-element-visual-studio-templates.md).
+     Öğesi hakkında daha fazla bilgi için `WizardExtension` bkz. [Wizardexgerme öğesi &#40;Visual Studio şablonları&#41;](../extensibility/wizardextension-element-visual-studio-templates.md).
 
 3. Dosyayı kaydedin ve kapatın.
 
-## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-item-template"></a>Öğe şablonundaki *Elements. xml* dosyasına değiştirilebilir parametreler ekleme
- ItemTemplate projesindeki *Elements. xml* dosyasına çeşitli değiştirilebilir parametreler ekleyin. Bu parametreler, daha önce tanımladığınız `CustomActionWizard` sınıfındaki `PopulateReplacementDictionary` yönteminde başlatılır. Bir Kullanıcı bir projeye özel bir eylem proje öğesi eklediğinde, Visual Studio otomatik olarak bu parametreleri yeni proje öğesi içindeki *Elements. xml* dosyasında, sihirbazda belirttikleri değerlerle değiştirir.
+## <a name="add-replaceable-parameters-to-the-elementsxml-file-in-the-item-template"></a>Öğe şablonundaki *Elements.xml* dosyasına değiştirilebilir parametreler ekleme
+ ItemTemplate projesindeki *Elements.xml* dosyasına çeşitli değiştirilebilir parametreler ekleyin. Bu parametreler, `PopulateReplacementDictionary` `CustomActionWizard` daha önce tanımladığınız sınıftaki yönteminde başlatılır. Bir Kullanıcı bir projeye özel bir eylem proje öğesi eklediğinde, Visual Studio otomatik olarak bu parametreleri yeni proje öğesindeki *Elements.xml* dosyasında, sihirbazda belirttikleri değerlerle değiştirir.
 
  Değiştirilebilir bir parametre, dolar işareti ($) karakteriyle başlayan ve biten bir belirteçtir. Kendi değiştirilebilen parametreleri tanımlamanın yanı sıra, SharePoint proje sisteminin tanımladığı ve Başlatan yerleşik parametreleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [değiştirilebilen parametreler](../sharepoint/replaceable-parameters.md).
 
-#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>*Elements. xml* dosyasına değiştirilebilir parametreler eklemek için
+#### <a name="to-add-replaceable-parameters-to-the-elementsxml-file"></a>*Elements.xml* dosyasına değiştirilebilir parametreler eklemek için
 
-1. ItemTemplate projesinde, *Elements. xml* dosyasının IÇERIĞINI aşağıdaki XML ile değiştirin.
+1. ItemTemplate projesinde, *Elements.xml* dosyanın IÇERIĞINI aşağıdaki XML ile değiştirin.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -233,7 +232,7 @@ ms.locfileid: "73189157"
     </Elements>
     ```
 
-     Yeni XML `Id`, `GroupId`, `Location`, `Description`ve `Url` özniteliklerinin değerlerini değiştirilebilen parametrelere dönüştürür.
+     Yeni XML,,,, `Id` `GroupId` `Location` `Description` ve `Url` özniteliklerinin değerlerini değiştirilebilen parametrelere dönüştürür.
 
 2. Dosyayı kaydedin ve kapatın.
 
@@ -254,7 +253,7 @@ ms.locfileid: "73189157"
 
 5. **Proje** listesinde **ItemTemplateWizard**' ı seçin ve ardından **Tamam** düğmesini seçin.
 
-6. Menü çubuğunda **derleme** > **Oluştur çözüm**' ü seçin ve ardından çözümün hatasız derlendiğinden emin olun.
+6. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin ve ardından çözümün hatasız derlendiğinden emin olun.
 
 ## <a name="test-the-wizard"></a>Sihirbazı test etme
  Artık Sihirbazı test etmeye hazırsınız. İlk olarak, Visual Studio 'nun Deneysel örneğindeki CustomActionProjectItem çözümünde hata ayıklamaya başlayın. Ardından, Visual Studio 'nun Deneysel örneğindeki bir SharePoint projesindeki özel eylem proje öğesi için Sihirbazı test edin. Son olarak, özel eylemin beklendiği gibi çalıştığını doğrulamak için SharePoint projesini derleyin ve çalıştırın.
@@ -263,21 +262,21 @@ ms.locfileid: "73189157"
 
 1. Visual Studio 'Yu yönetici kimlik bilgileriyle yeniden başlatın ve CustomActionProjectItem çözümünü açın.
 
-2. ItemTemplateWizard projesinde, CustomActionWizard kod dosyasını açın ve sonra `RunStarted` yöntemindeki ilk kod satırına bir kesme noktası ekleyin.
+2. ItemTemplateWizard projesinde, CustomActionWizard kod dosyasını açın ve sonra yöntemdeki kodun ilk satırına bir kesme noktası ekleyin `RunStarted` .
 
-3. Menü çubuğunda **hata ayıkla** > **özel durumlar**' ı seçin.
+3. Menü çubuğunda, **hata ayıklama**  >  **özel durumları**' nı seçin.
 
 4. **Özel durumlar** iletişim kutusunda, **ortak dil çalışma zamanı özel durumları** için **oluşturulan** ve **Kullanıcı tarafından işlenmeyen** onay kutularının temizlenmiş olduğundan emin olun ve **Tamam** düğmesini seçin.
 
-5. **F5** tuşunu seçerek veya menü çubuğunda hata **Ayıkla** > hata **ayıklamayı Başlat**' ı seçerek hata ayıklamayı başlatın.
+5. **F5** tuşunu seçerek veya menü **çubuğunda hata ayıklamayı**Başlat ' ı seçerek hata ayıklamayı başlatın  >  **Start Debugging**.
 
      Visual Studio, uzantıyı%UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom Action Project ıtem\1.0 konumuna yükleyerek Visual Studio 'nun deneysel bir örneğini başlatır. Bu Visual Studio örneğinde Proje öğesini test edeceksiniz.
 
 #### <a name="to-test-the-wizard-in-visual-studio"></a>Visual Studio 'da Sihirbazı test etmek için
 
-1. Visual Studio 'nun deneysel örneğinde, menü çubuğunda **dosya** > **Yeni** > **projesi**' ni seçin.
+1. Visual Studio 'nun deneysel örneğinde, menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
-2. **Görsel C#**  veya **Visual Basic** düğümünü genişletin (öğe şablonunuzun desteklediği dile bağlı olarak), **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+2. **Visual C#** veya **Visual Basic** düğümünü (öğe şablonunuzun desteklediği dile bağlı olarak) genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 3. Proje şablonları listesinde **SharePoint 2010 projesi**' ni seçin, projeyi **CustomActionWizardTest**olarak adlandırın ve **Tamam** düğmesini seçin.
 
@@ -289,9 +288,9 @@ ms.locfileid: "73189157"
 
 7. Proje öğeleri listesinde **özel eylem** öğesini seçin ve sonra **Ekle** düğmesini seçin.
 
-8. Visual Studio 'nun diğer örneğindeki kodun, `RunStarted` yönteminde daha önce ayarladığınız kesme noktasında durduğunu doğrulayın.
+8. Visual Studio 'nun diğer örneğindeki kodun, daha önce yönteminde ayarladığınız kesme noktasında durduğunu doğrulayın `RunStarted` .
 
-9. **F5** tuşunu seçerek veya menü çubuğunda **hata** Ayıkla > **devam et**' i seçerek projede hata ayıklamaya devam edin.
+9. **F5** tuşunu seçerek veya menü çubuğunda **Hata Ayıkla**  >  **devam et**' i seçerek projede hata ayıklamaya devam edin.
 
      SharePoint Özelleştirme Sihirbazı görüntülenir.
 
@@ -303,13 +302,13 @@ ms.locfileid: "73189157"
 
 13. **Açıklama** kutusuna **SharePoint Geliştirici Merkezi Web sitesini açar**yazın.
 
-14. **URL** kutusuna **https://docs.microsoft.com/sharepoint/dev/** girin ve ardından **son** düğmesini seçin.
+14. **URL** kutusuna girin **https://docs.microsoft.com/sharepoint/dev/** ve ardından **son** düğmesini seçin.
 
-     Visual Studio, **CustomAction1** adlı bir öğeyi projenize ekler ve *öğeleri. xml* dosyasını düzenleyicide açar. *Elements. xml* ' in sihirbazda belirttiğiniz değerleri içerdiğini doğrulayın.
+     Visual Studio projenize **CustomAction1** adlı bir öğe ekler ve *Elements.xml* dosyasını düzenleyicide açar. *Elements.xml* , sihirbazda belirttiğiniz değerleri içerdiğini doğrulayın.
 
 #### <a name="to-test-the-custom-action-in-sharepoint"></a>SharePoint 'te özel eylemi test etmek için
 
-1. Visual Studio 'nun deneysel örneğinde **F5** tuşunu seçin veya menü çubuğunda **Hata Ayıkla** > hata **ayıklamayı Başlat**' ı seçin.
+1. Visual Studio 'nun deneysel örneğinde **F5** tuşunu seçin veya menü çubuğunda **Hata Ayıkla**  >  **Başlat hata**Ayıkla ' yı seçin.
 
      Özel eylem paketlenir ve projenin **site URL 'si** özelliği tarafından belirtilen SharePoint sitesine dağıtılır ve Web tarayıcısı bu sitenin varsayılan sayfasında açılır.
 
@@ -324,14 +323,14 @@ ms.locfileid: "73189157"
 
      **Liste ayarları** sayfası görüntülenir.
 
-4. Sayfanın üst kısmındaki **iletişim** başlığı altında **SharePoint Geliştirici Merkezi** bağlantısını seçin, tarayıcının Web sitesini https://docs.microsoft.com/sharepoint/dev/ açtığından emin olun ve ardından tarayıcıyı kapatın.
+4. Sayfanın üst kısmındaki **iletişim** başlığı altında **SharePoint Geliştirici Merkezi** bağlantısını seçin, tarayıcının Web sitesini açtığından emin olun https://docs.microsoft.com/sharepoint/dev/ ve ardından tarayıcıyı kapatın.
 
 ## <a name="cleaning-up-the-development-computer"></a>Geliştirme bilgisayarını Temizleme
  Proje öğesini test etmeyi tamamladıktan sonra, Visual Studio 'nun deneysel örneğinden proje öğesi şablonunu kaldırın.
 
 #### <a name="to-clean-up-the-development-computer"></a>Geliştirme bilgisayarını temizlemek için
 
-1. Visual Studio 'nun deneysel örneğinde, menü çubuğunda **araçlar** > **Uzantılar ve güncelleştirmeler**' i seçin.
+1. Visual Studio 'nun deneysel örneğinde, menü çubuğunda **Araçlar**  >  **Uzantılar ve güncelleştirmeler**' i seçin.
 
      **Uzantılar ve güncelleştirmeler** iletişim kutusu açılır.
 

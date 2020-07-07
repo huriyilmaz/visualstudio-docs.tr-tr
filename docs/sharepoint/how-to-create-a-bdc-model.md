@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: BDC modeli oluşturma | Microsoft Docs'
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,53 +13,52 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 9126a0d3bb552f525247cbfb2243504a1effaa92
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 139da31ced1d32def450a1dc176ca241b0c4677f
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435467"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014546"
 ---
 # <a name="how-to-create-a-bdc-model"></a>Nasıl yapılır: BDC modeli oluşturma
-  Bir iş verileri bağlantısı (BDC) modeli, o tür öğeye şablonu kullanarak ve ardından modeli herhangi bir SharePoint projesine ekleme oluşturabilirsiniz. Daha fazla bilgi için [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md). Modelin nasıl tasarlanabileceğiyle ilgili daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
+  Bu öğe türü için şablonu kullanarak bir Iş verileri bağlantısı (BDC) modeli oluşturabilir ve ardından modeli herhangi bir SharePoint projesine ekleyebilirsiniz. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md). Modeli tasarlamak hakkında daha fazla bilgi için bkz. [iş verileri bağlantı modeli tasarlama](../sharepoint/designing-a-business-data-connectivity-model.md).
 
 ### <a name="to-create-a-bdc-project"></a>Bir BDC projesi oluşturmak için
 
-1. Menü çubuğunda, **dosya** > **yeni** > **proje**.
+1. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
     > [!NOTE]
-    > IDE'nizi Visual Basic geliştirme ayarlarını kullanmaya ayarlanmışsa seçin **dosya** > **yeni proje**.
+    > IDE 'niz Visual Basic geliştirme ayarlarını kullanacak şekilde ayarlandıysa **Dosya**  >  **Yeni proje**' yi seçin.
 
      **Yeni proje** iletişim kutusu açılır.
 
-2. Ya da altında **Visual Basic** veya **Visual C#** , seçin **Office/SharePoint**, **SharePoint çözümleri**.
+2. **Visual Basic** ya da **Visual C#** altında **Office/SharePoint**, **SharePoint çözümleri**' ni seçin.
 
-3. İçinde **şablonları** bölmesinde seçin **SharePoint 2013 - boş proje** öğesi ekleyin ve ardından **Tamam** düğmesi.
+3. **Şablonlar** bölmesinde, **SharePoint 2013-boş proje** öğesini seçin ve ardından **Tamam** düğmesini seçin.
 
      **SharePoint Özelleştirme Sihirbazı** açılır.
 
-4. Üzerinde **hata ayıklama için site ve güvenlik düzeyini belirtin** sayfasında yerel bilgisayarda bir SharePoint sitesi URL'sini belirtin, **Grup çözümü olarak Dağıt** seçenek düğmesini ve ardından **Son** düğmesi.
+4. **Hata ayıklama için site ve güvenlik düzeyini belirtin** sayfasında, yerel bilgisayarda bir SharePoint sitesinin URL 'sini belirtin, **Grup olarak dağıt çözüm** seçenek düğmesini seçin ve ardından **son** düğmesini seçin.
 
-     Belirttiğiniz SharePoint sitesindeki modeli test eder.
+     Modeli belirttiğiniz SharePoint sitesinde test edersiniz.
 
     > [!IMPORTANT]
-    > İVB modelleri sadece grup çözümlerini desteklediğinden projeyi bir Grup çözümü olarak dağıtmanız gerekir.
+    > BDC modelleri yalnızca Grup çözümlerini desteklediği için projeyi bir Grup çözümü olarak dağıtmanız gerekir.
 
      Boş bir SharePoint projesi oluşturulur.
 
-5. Menü çubuğunda, **proje** > **Yeni Öğe Ekle**.
+5. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle**' yi seçin.
 
-6. İçinde **Yeni Öğe Ekle** iletişim kutusunda **Office/SharePoint** düğümü.
+6. **Yeni öğe Ekle** Iletişim kutusunda **Office/SharePoint** düğümünü seçin.
 
-7. SharePoint şablonları listesinde seçin **iş verileri bağlantı modeli (yalnızca Grup çözümü)**.
+7. SharePoint şablonları listesinde **Iş verileri bağlantı modeli (yalnızca Grup çözümü)** öğesini seçin.
 
-8. İçinde **adı** kutusuna BDC modeli için bir ad belirtin ve ardından **Ekle** düğmesi.
+8. **Ad** kutusunda, BDC modeli için bir ad belirtin ve ardından **Ekle** düğmesini seçin.
 
-     A **iş verileri bağlantı modeli** öğesi projeye eklenir. Varsayılan olarak, model BDC tasarımcısında görüntülenir. Daha fazla bilgi için [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
+     Projeye bir **Iş verileri bağlantı modeli** öğesi eklenir. Varsayılan olarak, model BDC tasarımcısında görünür. Daha fazla bilgi için bkz. [iş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş verileri bağlantı modeli oluşturma](../sharepoint/creating-a-business-data-connectivity-model.md)
-- [Nasıl yapılır: Bir SharePoint projesine mevcut bir BDC modeli dosyası ekleme](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
-- [Nasıl yapılır: Yerelleştirilmiş adlar, özellikler ve izinleri belirtmek için bir kaynak dosyası kullanma](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)
-- [Nasıl yapılır: İçinde bir BDC özelliğine özel bir derlemeyi etme](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)
+- [Nasıl yapılır: bir SharePoint projesine mevcut bir BDC modeli dosyası ekleme](../sharepoint/how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md)
+- [Nasıl yapılır: yerelleştirilmiş adları, özellikleri ve izinleri belirtmek için kaynak dosyası kullanma](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)
+- [Nasıl yapılır: bir BDC özelliğine özel bütünleştirilmiş kod ekleme](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)
 - [İş verilerini SharePoint ile tümleştirme](../sharepoint/integrating-business-data-into-sharepoint.md)

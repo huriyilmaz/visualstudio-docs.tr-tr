@@ -1,7 +1,7 @@
 ---
-title: Sunucu Gezgininde yerleşik bir SharePoint düğümü için veri alma
+title: Sunucu Gezgini yerleşik SharePoint düğümü için veri al
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -13,42 +13,41 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b90582c9b8d352f95d3d5abb3bbb7fb69283b06b
-ms.sourcegitcommit: 25570fb5fb197318a96d45160eaf7def60d49b2b
-ms.translationtype: MT
+ms.openlocfilehash: 5bb69773bf3f031b75d63ebe8cb1f1b4a00286c9
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66401413"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86014889"
 ---
-# <a name="how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer"></a>Nasıl yapılır: Sunucu Gezgininde yerleşik bir SharePoint düğümü için veri alma
-  Her yerleşik SharePoint düğümü için **Sunucu Gezgini**, veri düğümünü temsil eden bir temel alınan SharePoint bileşenini Al. Daha fazla bilgi için [Sunucu Gezgininde SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
+# <a name="how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer"></a>Nasıl yapılır: Sunucu Gezgini yerleşik bir SharePoint düğümü için veri alma
+  **Sunucu Gezgini**içindeki her bir yerleşik SharePoint düğümü için, düğümün gösterdiği temel SharePoint bileşeni için veri alabilirsiniz. Daha fazla bilgi için, bkz. [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, bir liste düğümünü temsil eder temel alınan bir SharePoint listesi için verileri almak gösterilmiştir **Sunucu Gezgini**. Varsayılan olarak, liste düğüme sahip bir **tarayıcıda görüntüle** listeleri bir Web tarayıcısında açmak için tıklayın ve bağlam menüsü öğesi. Bu örnekte liste düğümleri ekleyerek genişletir bir **Görünümü'nde Visual Studio** listeleri doğrudan Visual Studio'da açılır bağlam menüsü öğesi. Kodu Visual Studio'da açmak için listeden URL'sini almak bir düğüm için liste verilerini erişir.
+ Aşağıdaki kod örneği, bir liste düğümünün **Sunucu Gezgini**içinde temsil ettiği temel alınan SharePoint listesi için verilerin nasıl alınacağını gösterir. Varsayılan olarak, liste düğümlerinde, listeleri bir Web tarayıcısında açmak için tıklayan bir **tarayıcıda görünüm** bağlam menüsü öğesi vardır. Bu örnek liste düğümlerini, listeleri doğrudan Visual Studio 'da açan **Visual Studio** bağlam menü öğesinde bir görünüm ekleyerek genişletir. Kod, Visual Studio 'da açılacak listenin URL 'sini almak için düğüm liste verilerine erişir.
 
  [!code-vb[SPExtensibility.ProjectSystemExtension.General#10](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextensionnodeinfo.vb#10)]
  [!code-csharp[SPExtensibility.ProjectSystemExtension.General#10](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextensionnodeinfo.cs#10)]
 
- Bu örnek, elde etmek için SharePoint Proje hizmeti kullanır. <xref:EnvDTE.DTE> listeler Visual Studio'da açmak için kullanılan nesne. SharePoint Proje hizmeti hakkında daha fazla bilgi için bkz: [SharePoint Proje hizmetini kullanın](../sharepoint/using-the-sharepoint-project-service.md).
+ Bu örnek, <xref:EnvDTE.DTE> Visual Studio 'da listeleri açmak için kullanılan nesneyi almak Için SharePoint proje hizmetini kullanır. SharePoint proje hizmeti hakkında daha fazla bilgi için bkz. [SharePoint proje hizmetini kullanma](../sharepoint/using-the-sharepoint-project-service.md).
 
- Bir SharePoint düğümü için bir uzantı oluşturmak için temel görevleri hakkında daha fazla bilgi için bkz: [nasıl yapılır: Sunucu Gezgininde SharePoint düğümünü genişletme](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).
+ Bir SharePoint düğümü için uzantı oluşturmak üzere temel görevler hakkında daha fazla bilgi için, bkz. [nasıl yapılır: SharePoint düğümünü Sunucu Gezgini genişletme](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).
 
-## <a name="compile-the-code"></a>Kod derleme
- Bu örnek aşağıdaki derlemelere başvurular gerektirir:
+## <a name="compile-the-code"></a>Kodu derle
+ Bu örnek, aşağıdaki derlemelere başvurular gerektirir:
 
 - EnvDTE
 
-- Microsoft.VisualStudio.SharePoint
+- Microsoft. VisualStudio. SharePoint
 
-- Microsoft.VisualStudio.SharePoint.Explorer.Extensions
+- Microsoft. VisualStudio. SharePoint. Explorer. Extensions
 
-- System.ComponentModel.Composition
+- System. ComponentModel. Composition
 
-## <a name="deploy-the-extension"></a>Uzantıyı dağıtmak
- Dağıtılacak **Sunucu Gezgini** uzantısı oluşturma bir [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] uzantısı (VSIX) paketini derleme ve uzantısıyla dağıtmak istediğiniz diğer tüm dosyalar için. Daha fazla bilgi için [Visual Studio'da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
+## <a name="deploy-the-extension"></a>Uzantıyı dağıtma
+ **Sunucu Gezgini** uzantısını dağıtmak için, [!include[vsprvs](../sharepoint/includes/vsprvs-md.md)] derleme için BIR uzantı (VSIX) paketi ve uzantıyla dağıtmak istediğiniz diğer dosyalar oluşturun. Daha fazla bilgi için bkz. [Visual Studio 'Da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Sunucu Gezgininde SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
-- [Nasıl yapılır: Sunucu Gezgininde SharePoint düğümünü genişletme](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)
-- [SharePoint Proje hizmetini kullanın](../sharepoint/using-the-sharepoint-project-service.md)
-- [Visual Studio'da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)
+- [Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)
+- [Nasıl yapılır: Sunucu Gezgini bir SharePoint düğümünü genişletme](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)
+- [SharePoint proje hizmetini kullanma](../sharepoint/using-the-sharepoint-project-service.md)
+- [Visual Studio 'da SharePoint araçları için uzantıları dağıtma](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)

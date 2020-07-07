@@ -1,7 +1,7 @@
 ---
 title: Öğe şablonu, Bölüm 1 ile özel eylem proje öğesi oluşturma
 ms.date: 02/02/2017
-ms.topic: conceptual
+ms.topic: how-to
 dev_langs:
 - VB
 - CSharp
@@ -15,12 +15,11 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 4a114345363deb9c5ddd0f5a4141cd7d99f0ac1c
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
-ms.translationtype: MT
+ms.openlocfilehash: eccb9038b9fd929c713422aa79082c94ade512fa
+ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189184"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86015938"
 ---
 # <a name="walkthrough-create-a-custom-action-project-item-with-an-item-template-part-1"></a>İzlenecek yol: öğe şablonu, Bölüm 1 ile özel bir eylem proje öğesi oluşturma
   Visual Studio 'da SharePoint proje sistemini, kendi proje öğesi türlerinizi oluşturarak genişletebilirsiniz. Bu kılavuzda, bir SharePoint sitesinde özel bir eylem oluşturmak için bir SharePoint projesine eklenebilen bir proje öğesi oluşturacaksınız. Özel eylem, SharePoint sitesinin **Site eylemleri** menüsüne bir menü öğesi ekler.
@@ -46,7 +45,7 @@ ms.locfileid: "73189184"
 > [!NOTE]
 > Bir iş akışı için nasıl özel etkinlik oluşturulacağını gösteren [GitHub](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities) 'dan bir örnek indirebilirsiniz.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
  Bu izlenecek yolu tamamlamak için geliştirme bilgisayarında aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Desteklenen Microsoft Windows, SharePoint ve Visual Studio sürümleri.
@@ -72,13 +71,13 @@ ms.locfileid: "73189184"
 
 #### <a name="to-create-the-vsix-project"></a>VSıX projesi oluşturmak için
 
-1. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]başlatın.
+1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. Menü çubuğunda **dosya**  > **Yeni**  > **Proje**' yi seçin.
+2. Menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
 3. **Yeni proje** iletişim kutusunun üst kısmındaki listede **.NET Framework 4,5** ' nin seçili olduğundan emin olun.
 
-4. **Yeni proje** iletişim kutusunda,  **C# Visual** veya **Visual Basic** düğümlerini genişletin ve ardından **genişletilebilirlik** düğümünü seçin.
+4. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** düğümlerini genişletin ve ardından **genişletilebilirlik** düğümünü seçin.
 
     > [!NOTE]
     > **Genişletilebilirlik** düğümü yalnızca Visual Studio SDK 'sını yüklediğinizde kullanılabilir. Daha fazla bilgi için bu konunun önceki kısımlarında bulunan Önkoşullar bölümüne bakın.
@@ -87,7 +86,7 @@ ms.locfileid: "73189184"
 
 6. **Ad** kutusuna **CustomActionProjectItem**girin ve sonra **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **CustomActionProjectItem** projesini **Çözüm Gezgini**ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**CustomActionProjectItem** projesini **Çözüm Gezgini**ekler.
 
 #### <a name="to-create-the-item-template-project"></a>Öğe şablonu projesi oluşturmak için
 
@@ -95,13 +94,13 @@ ms.locfileid: "73189184"
 
 2. **Yeni proje** iletişim kutusunun üst kısmındaki listede **.NET Framework 4,5** ' nin seçili olduğundan emin olun.
 
-3. **Yeni proje** iletişim kutusunda,  **C# Visual** veya **Visual Basic** düğümlerini genişletin ve ardından **genişletilebilirlik** düğümünü seçin.
+3. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** düğümlerini genişletin ve ardından **genişletilebilirlik** düğümünü seçin.
 
-4. Proje şablonları listesinde,  **C# öğe** şablonunu veya **Visual Basic öğesi** şablonu şablonunu seçin.
+4. Proje şablonları listesinde **C# öğe** şablonunu veya **Visual Basic öğesi** şablonu şablonunu seçin.
 
 5. **Ad** kutusuna **ItemTemplate**yazın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **ItemTemplate** projesini çözüme ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ItemTemplate** projesini çözüme ekler.
 
 #### <a name="to-create-the-extension-project"></a>Uzantı projesini oluşturmak için
 
@@ -109,11 +108,11 @@ ms.locfileid: "73189184"
 
 2. **Yeni proje** iletişim kutusunun üst kısmındaki listede **.NET Framework 4,5** ' nin seçili olduğundan emin olun.
 
-3. **Yeni proje** iletişim kutusunda, **Visual C#**  veya **Visual Basic** düğümlerini genişletin, **Windows** düğümünü seçin ve ardından **sınıf kitaplığı** proje şablonu ' nu seçin.
+3. **Yeni proje** iletişim kutusunda, **Visual C#** veya **Visual Basic** düğümlerini genişletin, **Windows** düğümünü seçin ve ardından **sınıf kitaplığı** proje şablonu ' nu seçin.
 
 4. **Ad** kutusuna **ProjectItemDefinition**yazın ve **Tamam** düğmesini seçin.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **ProjectItemDefinition** projesini çözüme ekler ve varsayılan Class1 kod dosyasını açar.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**ProjectItemDefinition** projesini çözüme ekler ve varsayılan Class1 kod dosyasını açar.
 
 5. Class1 kod dosyasını projeden silin.
 
@@ -141,7 +140,7 @@ ms.locfileid: "73189184"
 7. **Uzantılar** düğümünü seçin, Microsoft. VisualStudio. SharePoint derlemesinin yanındaki onay kutusunu Işaretleyin ve **Tamam** düğmesini seçin.
 
 ## <a name="define-the-new-sharepoint-project-item-type"></a>Yeni SharePoint proje öğesi türünü tanımlayın
- Yeni proje öğesi türünün davranışını tanımlamak için <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider> arabirimini uygulayan bir sınıf oluşturun. Yeni proje öğesi türünü tanımlamak istediğinizde bu arabirimi uygulayın.
+ <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider>Yeni proje öğesi türünün davranışını tanımlamak için arabirimini uygulayan bir sınıf oluşturun. Yeni proje öğesi türünü tanımlamak istediğinizde bu arabirimi uygulayın.
 
 #### <a name="to-define-the-new-sharepoint-project-item-type"></a>Yeni SharePoint proje öğesi türünü tanımlamak için
 
@@ -155,11 +154,11 @@ ms.locfileid: "73189184"
 ## <a name="create-an-icon-for-the-project-item-in-solution-explorer"></a>Çözüm Gezgini içinde proje öğesi için bir simge oluşturun
  Özel bir SharePoint proje öğesi oluşturduğunuzda, bir görüntüyü (simge veya bit eşlem) proje öğesiyle ilişkilendirebilirsiniz. Bu görüntü, **Çözüm Gezgini**içindeki proje öğesinin yanında görünür.
 
- Aşağıdaki yordamda, proje öğesi için bir simge oluşturacak ve simgeyi uzantı derlemesine katıştıraöğreneceksiniz. Bu simgeye, daha önce oluşturduğunuz `CustomActionProjectItemTypeProvider` sınıfının <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute> başvurulur.
+ Aşağıdaki yordamda, proje öğesi için bir simge oluşturacak ve simgeyi uzantı derlemesine katıştıraöğreneceksiniz. Bu simgeye, <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemIconAttribute> `CustomActionProjectItemTypeProvider` daha önce oluşturduğunuz sınıf tarafından başvurulur.
 
 #### <a name="to-create-a-custom-icon-for-the-project-item"></a>Proje öğesi için özel bir simge oluşturmak için
 
-1. **Çözüm Gezgini**' de **ProjectItemDefinition** projesi için kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni öğe...** ' yi seçin.
+1. **Çözüm Gezgini**' de **ProjectItemDefinition** projesi için kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni öğe...**' yi seçin.
 
 2. Proje öğeleri listesinde, **simge dosyası** öğesini seçin.
 
@@ -178,7 +177,7 @@ ms.locfileid: "73189184"
 
 7. Görüntülenen listede, **gömülü kaynak**' ı seçin.
 
-## <a name="checkpoint"></a>Mak
+## <a name="checkpoint"></a>Checkpoint
  Bu noktada, proje öğesi için tüm kod artık projede bulunur. Hata olmadan derlendiğini doğrulamak için projeyi derleyin.
 
 #### <a name="to-build-your-project"></a>Projenizi derlemek için
@@ -197,7 +196,7 @@ ms.locfileid: "73189184"
 3. Dosyanın içeriğini aşağıdaki XML ile değiştirin ve sonra dosyayı kaydedip kapatın.
 
     > [!NOTE]
-    > Aşağıdaki XML bir görsel C# öğe şablonu içindir. Visual Basic bir öğe şablonu oluşturuyorsanız, `ProjectType` öğesinin değerini `VisualBasic`ile değiştirin.
+    > Aşağıdaki XML, bir Visual C# öğe şablonu içindir. Visual Basic bir öğe şablonu oluşturuyorsanız, `ProjectType` öğesinin değerini ile değiştirin `VisualBasic` .
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -238,15 +237,15 @@ ms.locfileid: "73189184"
     </ProjectItem>
     ```
 
-     Bu dosya, proje öğesinin içerdiği dosyalarla ilgili bilgiler içerir. `ProjectItem` öğesinin `Type` özniteliği, proje öğesi tanımında <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> iletilen aynı dizeye ayarlanmalıdır (Bu kılavuzda daha önce oluşturduğunuz `CustomActionProjectItemTypeProvider` sınıfı). *. Spdata* dosyalarının içerikleri hakkında daha fazla bilgi için bkz. [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md).
+     Bu dosya, proje öğesinin içerdiği dosyalarla ilgili bilgiler içerir. `Type`Öğesinin özniteliği, `ProjectItem` <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute> Proje öğesi tanımında ( `CustomActionProjectItemTypeProvider` Bu kılavuzda daha önce oluşturduğunuz sınıf) geçirilen aynı dizeye ayarlanmalıdır. *. Spdata* dosyalarının içerikleri hakkında daha fazla bilgi için bkz. [SharePoint proje öğesi şema başvurusu](../sharepoint/sharepoint-project-item-schema-reference.md).
 
 8. **Çözüm Gezgini**, **ItemTemplate** projesinin kısayol menüsünü açın, **Ekle**' yi ve ardından **Yeni öğe**' yi seçin.
 
 9. **Yeni öğe Ekle** iletişim kutusunda, **XML dosya** şablonunu seçin.
 
-10. **Ad** kutusunda, **Elements. xml**girin ve sonra **Ekle** düğmesini seçin.
+10. **Ad** kutusuna **Elements.xml**girin ve sonra **Ekle** düğmesini seçin.
 
-11. *Elements. xml* dosyasının IÇERIĞINI aşağıdaki XML ile değiştirin ve sonra dosyayı kaydedip kapatın.
+11. *Elements.xml* dosyasının IÇERIĞINI aşağıdaki XML ile değiştirin ve sonra dosyayı kaydedip kapatın.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -262,7 +261,7 @@ ms.locfileid: "73189184"
     </Elements>
     ```
 
-     Bu dosya, SharePoint sitesinin **Site eylemleri** menüsünde bir menü öğesi oluşturan varsayılan bir özel eylem tanımlar. Bir Kullanıcı menü öğesini seçtiğinde, `UrlAction` öğesinde belirtilen URL Web tarayıcısında açılır. Özel bir eylem tanımlamak için kullanabileceğiniz XML öğeleri hakkında daha fazla bilgi için bkz. [özel eylem tanımları](/sharepoint/dev/schema/custom-action-definition-schema).
+     Bu dosya, SharePoint sitesinin **Site eylemleri** menüsünde bir menü öğesi oluşturan varsayılan bir özel eylem tanımlar. Bir Kullanıcı menü öğesini seçtiğinde, öğesinde belirtilen URL `UrlAction` Web tarayıcısında açılır. Özel bir eylem tanımlamak için kullanabileceğiniz XML öğeleri hakkında daha fazla bilgi için bkz. [özel eylem tanımları](/sharepoint/dev/schema/custom-action-definition-schema).
 
 12. İsteğe bağlı olarak, *ItemTemplate. ico* dosyasını açın ve bunu tanıyabileceğiniz bir tasarıma sahip olacak şekilde değiştirin. Bu simge, **Yeni öğe Ekle** iletişim kutusunda proje öğesinin yanında görüntülenir.
 
@@ -270,13 +269,13 @@ ms.locfileid: "73189184"
 
 14. **ItemTemplate** projesinin kısayol menüsünü yeniden açın ve ardından **ItemTemplate. csproj Düzenle** veya **ItemTemplate. vbproj**öğesini Düzenle ' yi seçin.
 
-15. Aşağıdaki `VSTemplate` öğesini proje dosyasında bulun.
+15. `VSTemplate`Proje dosyasında aşağıdaki öğeyi bulun.
 
     ```xml
     <VSTemplate Include="ItemTemplate.vstemplate">
     ```
 
-16. Bu `VSTemplate` öğesini aşağıdaki XML ile değiştirin ve sonra dosyayı kaydedip kapatın.
+16. Bu `VSTemplate` öğeyi AŞAĞıDAKI XML ile değiştirin ve sonra dosyayı kaydedip kapatın.
 
     ```xml
     <VSTemplate Include="ItemTemplate.vstemplate">
@@ -284,7 +283,7 @@ ms.locfileid: "73189184"
     </VSTemplate>
     ```
 
-     `OutputSubPath` öğesi, proje oluşturduğunuzda öğe şablonunun oluşturulduğu yolda ek klasörleri belirtir. Burada belirtilen klasörler, öğe şablonunun yalnızca müşteriler **Yeni öğe Ekle** iletişim kutusunu açtıklarında kullanılabilir olacağını ve **SharePoint** düğümünü genişlettikten sonra **2010** düğümünü seçmesini de sağlamaktır.
+     `OutputSubPath`Öğesi, proje oluşturduğunuzda öğe şablonunun oluşturulduğu yolda ek klasörleri belirler. Burada belirtilen klasörler, öğe şablonunun yalnızca müşteriler **Yeni öğe Ekle** iletişim kutusunu açtıklarında kullanılabilir olacağını ve **SharePoint** düğümünü genişlettikten sonra **2010** düğümünü seçmesini de sağlamaktır.
 
 17. **Çözüm Gezgini**, **ItemTemplate** projesi için kısayol menüsünü açın ve ardından **projeyi yeniden yükle**' yi seçin.
 
@@ -310,7 +309,7 @@ ms.locfileid: "73189184"
 6. **Tür** listesinde, **Microsoft. VisualStudio. ItemTemplate**' i seçin.
 
     > [!NOTE]
-    > Bu değer, Extension. valtmanifest dosyasındaki `ItemTemplate` öğesine karşılık gelir. Bu öğe, proje öğesi şablonunu içeren VSıX paketindeki alt klasörü tanımlar. Daha fazla bilgi için bkz. [ItemTemplate öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393681\(v\=vs.100\)).
+    > Bu değer, `ItemTemplate` extension. valtmanifest dosyasındaki öğesine karşılık gelir. Bu öğe, proje öğesi şablonunu içeren VSıX paketindeki alt klasörü tanımlar. Daha fazla bilgi için bkz. [ItemTemplate öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393681\(v\=vs.100\)).
 
 7. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
 
@@ -323,7 +322,7 @@ ms.locfileid: "73189184"
 10. **Tür** listesinde, **Microsoft. VisualStudio. MefComponent**öğesini seçin.
 
     > [!NOTE]
-    > Bu değer, Extension. valtmanifest dosyasındaki `MefComponent` öğesine karşılık gelir. Bu öğe VSıX paketindeki bir uzantı derlemesinin adını belirtir. Daha fazla bilgi için bkz. [MefComponent öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
+    > Bu değer, `MefComponent` extension. valtmanifest dosyasındaki öğesine karşılık gelir. Bu öğe VSıX paketindeki bir uzantı derlemesinin adını belirtir. Daha fazla bilgi için bkz. [MefComponent öğesi (VSX şeması)](/previous-versions/visualstudio/visual-studio-2010/dd393736\(v\=vs.100\)).
 
 11. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.
 
@@ -331,7 +330,7 @@ ms.locfileid: "73189184"
 
 13. **Tamam** düğmesini seçin.
 
-14. Menü çubuğunda **derleme** > **Oluştur çözüm**' ü seçin ve ardından projenin hatasız derlendiğinden emin olun.
+14. Menü **çubuğunda Build**  >  **Build Solution**öğesini seçin ve ardından projenin hatasız derlendiğinden emin olun.
 
 15. CustomActionProjectItem projesinin derleme çıkış klasörünün CustomActionProjectItem. vsix dosyasını içerdiğinden emin olun.
 
@@ -344,7 +343,7 @@ ms.locfileid: "73189184"
 
 1. Visual Studio 'Yu yönetici kimlik bilgileriyle yeniden başlatın ve CustomActionProjectItem çözümünü açın.
 
-2. CustomAction kod dosyasını açın ve sonra `InitializeType` yöntemindeki ilk kod satırına bir kesme noktası ekleyin.
+2. CustomAction kod dosyasını açın ve sonra yöntemdeki kodun ilk satırına bir kesme noktası ekleyin `InitializeType` .
 
 3. Hata ayıklamayı başlatmak için **F5** tuşunu seçin.
 
@@ -352,9 +351,9 @@ ms.locfileid: "73189184"
 
 #### <a name="to-test-the-project-item-in-visual-studio"></a>Visual Studio 'da Proje öğesini test etmek için
 
-1. Visual Studio 'nun deneysel örneğinde, menü çubuğunda **dosya** > **Yeni** > **projesi**' ni seçin.
+1. Visual Studio 'nun deneysel örneğinde, menü çubuğunda **Dosya**  >  **Yeni**  >  **Proje**' yi seçin.
 
-2. **Görsel C#**  veya **Visual Basic** (öğe şablonunuzun desteklediği dile bağlı olarak) öğesini genişletin, **SharePoint**' i genişletin ve ardından **2010** düğümünü seçin.
+2. **Visual C#** veya **Visual Basic** (öğe şablonunuzun desteklediği dile bağlı olarak) genişletin, **SharePoint**' i genişletin ve ardından **2010** düğümünü seçin.
 
 3. Proje şablonları listesinde **SharePoint 2010 projesi**' ni seçin.
 
@@ -370,9 +369,9 @@ ms.locfileid: "73189184"
 
 8. **Özel eylem** öğesini seçin ve sonra **Ekle** düğmesini seçin.
 
-     Visual Studio, **CustomAction1** adlı bir öğeyi projenize ekler ve *öğeleri. xml* dosyasını düzenleyicide açar.
+     Visual Studio projenize **CustomAction1** adlı bir öğe ekler ve *Elements.xml* dosyasını düzenleyicide açar.
 
-9. Visual Studio 'nun diğer örneğindeki kodun, `InitializeType` yönteminde daha önce ayarladığınız kesme noktasında durduğunu doğrulayın.
+9. Visual Studio 'nun diğer örneğindeki kodun, daha önce yönteminde ayarladığınız kesme noktasında durduğunu doğrulayın `InitializeType` .
 
 10. Projede hata ayıklamaya devam etmek için **F5** tuşunu seçin.
 
@@ -382,39 +381,39 @@ ms.locfileid: "73189184"
 
      Bu kısayol menüsünü, geliştiriciler için özel eylem için bir tasarımcı görüntüleme gibi ek seçenekler veya komutlar sağlamak için kullanabilirsiniz.
 
-13. Menü çubuğunda > **çıktıyı** **görüntüle** ' yi seçin.
+13. Menü çubuğunda çıktıyı **görüntüle**' yi seçin  >  **Output**.
 
      **Çıkış** penceresi açılır.
 
 14. **Çözüm Gezgini**' de, **CustomAction1** öğesi için kısayol menüsünü açın ve adını **MyCustomAction**olarak değiştirin.
 
-     **Çıkış** penceresinde bir onay iletisi görüntülenir. Bu ileti, `CustomActionProjectItemTypeProvider` sınıfında tanımladığınız <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemNameChanged> olay işleyicisi tarafından yazılır. Geliştirici Proje öğesini değiştirdiğinde özel davranışı uygulamak için bu olayı ve diğer proje öğesi olaylarını işleyebilirsiniz.
+     **Çıkış** penceresinde bir onay iletisi görüntülenir. Bu ileti, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemNameChanged> sınıfında tanımladığınız olay işleyicisi tarafından yazılır `CustomActionProjectItemTypeProvider` . Geliştirici Proje öğesini değiştirdiğinde özel davranışı uygulamak için bu olayı ve diğer proje öğesi olaylarını işleyebilirsiniz.
 
 #### <a name="to-test-the-custom-action-in-sharepoint"></a>SharePoint 'te özel eylemi test etmek için
 
-1. Visual Studio 'nun deneysel örneğinde, **MyCustomAction** proje öğesinin bir alt öğesi olan *Elements. xml* dosyasını açın.
+1. Visual Studio 'nun deneysel örneğinde, **MyCustomAction** proje öğesinin bir alt öğesi olan *Elements.xml* dosyasını açın.
 
-2. *Elements. xml* dosyasında aşağıdaki değişiklikleri yapın ve dosyayı kaydedin:
+2. *Elements.xml* dosyasında aşağıdaki değişiklikleri yapın ve dosyayı kaydedin:
 
-    - `CustomAction` öğesinde, aşağıdaki örnekte gösterildiği gibi, `Id` özniteliğini bir GUID veya başka bir benzersiz dize olarak ayarlayın:
+    - `CustomAction`Öğesinde, `Id` Aşağıdaki örnekte gösterildiği gibi ÖZNITELIĞI bir GUID veya başka bir benzersiz dize olarak ayarlayın:
 
         ```xml
         Id="cd85f6a7-af2e-44ab-885a-0c795b52121a"
         ```
 
-    - `CustomAction` öğesinde, aşağıdaki örnekte gösterildiği gibi `Title` özniteliğini ayarlayın:
+    - Öğesinde, `CustomAction` `Title` Aşağıdaki örnekte gösterildiği gibi özniteliğini ayarlayın:
 
         ```xml
         Title="SharePoint Developer Center"
         ```
 
-    - `CustomAction` öğesinde, aşağıdaki örnekte gösterildiği gibi `Description` özniteliğini ayarlayın:
+    - Öğesinde, `CustomAction` `Description` Aşağıdaki örnekte gösterildiği gibi özniteliğini ayarlayın:
 
         ```xml
         Description="Opens the SharePoint Developer Center Web site."
         ```
 
-    - `UrlAction` öğesinde, aşağıdaki örnekte gösterildiği gibi `Url` özniteliğini ayarlayın:
+    - Öğesinde, `UrlAction` `Url` Aşağıdaki örnekte gösterildiği gibi özniteliğini ayarlayın:
 
         ```xml
         Url="https://docs.microsoft.com/sharepoint/dev/"
@@ -427,14 +426,14 @@ ms.locfileid: "73189184"
     > [!NOTE]
     > **Betik hata ayıklaması devre dışı** iletişim kutusu görüntülenirse, projede hata ayıklamaya devam etmek için **Evet** düğmesini seçin.
 
-4. **Site eylemleri** menüsünde **SharePoint Geliştirici Merkezi**' ni seçin, tarayıcının https://docs.microsoft.com/sharepoint/dev/ Web sitesini açtığından emin olun ve ardından Web tarayıcısını kapatın.
+4. **Site eylemleri** menüsünde **SharePoint Geliştirici Merkezi**' ni seçin, tarayıcının Web sitesini açtığından emin olun https://docs.microsoft.com/sharepoint/dev/ ve ardından Web tarayıcısını kapatın.
 
 ## <a name="clean-up-the-development-computer"></a>Geliştirme bilgisayarını Temizleme
  Proje öğesini test etmeyi tamamladıktan sonra, Visual Studio 'nun deneysel örneğinden proje öğesi şablonunu kaldırın.
 
 #### <a name="to-clean-up-the-development-computer"></a>Geliştirme bilgisayarını temizlemek için
 
-1. Visual Studio 'nun deneysel örneğinde, menü çubuğunda **araçlar** > **Uzantılar ve güncelleştirmeler**' i seçin.
+1. Visual Studio 'nun deneysel örneğinde, menü çubuğunda **Araçlar**  >  **Uzantılar ve güncelleştirmeler**' i seçin.
 
      **Uzantılar ve güncelleştirmeler** iletişim kutusu açılır.
 
@@ -447,7 +446,7 @@ ms.locfileid: "73189184"
 5. Visual Studio 'nun Deneysel örneğini ve CustomActionProjectItem çözümünün açık olduğu örneğini kapatın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Bu yönergeyi tamamladıktan sonra, öğe şablonuna bir sihirbaz ekleyebilirsiniz. Bir Kullanıcı bir SharePoint projesine özel bir eylem proje öğesi eklediğinde, sihirbaz eyleme (konum ve eylem seçildiğinde gidilecek URL gibi) ilişkin bilgileri toplar ve bu bilgileri yeni bir dosyadaki *Elements. xml* dosyasına ekler Proje öğesi. Daha fazla bilgi için bkz. [Izlenecek yol: öğe şablonu, Bölüm 2 ile özel bir eylem proje öğesi oluşturma](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md).
+ Bu yönergeyi tamamladıktan sonra, öğe şablonuna bir sihirbaz ekleyebilirsiniz. Bir Kullanıcı bir SharePoint projesine özel bir eylem proje öğesi eklediğinde, sihirbaz eyleme (konum ve eylem seçildiğinde gidilecek URL gibi) ilişkin bilgileri toplar ve bu bilgileri yeni proje öğesindeki *Elements.xml* dosyasına ekler. Daha fazla bilgi için bkz. [Izlenecek yol: öğe şablonu, Bölüm 2 ile özel bir eylem proje öğesi oluşturma](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -456,5 +455,5 @@ ms.locfileid: "73189184"
 - [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
 - [SharePoint proje hizmetini kullanma](../sharepoint/using-the-sharepoint-project-service.md)
 - [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
-- [Simgeler için Görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons)
-- [Simgeler için simge veya diğer görüntü &#40;resmi Düzenleyicisi oluşturma&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)
+- [Simgeler için görüntü Düzenleyicisi](/cpp/windows/image-editor-for-icons)
+- [Simgeler için bir simge veya diğer görüntü &#40;görüntü Düzenleyicisi oluşturma&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)
