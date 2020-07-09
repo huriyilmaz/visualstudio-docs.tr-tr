@@ -7,12 +7,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: daa1148a47919c12fa423bd90f6d63c030cf743c
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 753d26e2c48f6263ccbc9c403f255948b5077924
+ms.sourcegitcommit: a466720759426265b18b0f8d74a970e72493d700
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770517"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86092316"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>Nasıl yapılır: Özet tanımı 'nı kullanarak kodu görüntüleme ve düzenleme (alt + F12)
 
@@ -74,7 +74,7 @@ Bu klavye kısayollarını **göz atma** penceresiyle birlikte kullanabilirsiniz
 |-------------------|:-----------------------:|
 |Tanım penceresini açma|**Alt** + **F12**|
 |Tanım penceresini kapatma|**Esc**|
-|Tanım penceresini bir normal belge sekmesine yükseltme|**SHIFT** + **Alt** + **Giriş sayfası**|
+|Tanım penceresini bir normal belge sekmesine yükseltme|**CTRL** + **Alt** + **Giriş sayfası**|
 |Tanım pencereleri arasında gezinme|**CTRL** + **Alt** + Alt **-** ve **CTRL** + **alt**+**=**|
 |Birden fazla sonuç arasında gezinme|**F8** ve **SHIFT** + **F8**|
 |Kod düzenleyicisi penceresi ile tanım penceresi arasında geçiş yapma|**SHIFT** + **ESC**|
