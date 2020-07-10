@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6de463fbc941273bed9b949958b9463be6ea1fa3
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 35bd6f26b56ea7c3a1d578e5721504a91f60b74c
+ms.sourcegitcommit: 46547f0bf3fc1a81e1a906762106dec5855e6e4a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285640"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86156874"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Test Gezgini ile birim testleri çalıştırma
 
@@ -81,7 +81,7 @@ Testlerinizi çalıştırırken, yazarken ve yeniden çalıştırdığınızda, 
 
 ### <a name="run-tests-after-every-build"></a>Her derlemeden sonra Testleri Çalıştır
 ::: moniker range="vs-2017"
-|Düğme|Description|
+|Düğme|Açıklama|
 |-|-|
 |![Derlemeden sonra Çalıştır](../test/media/ute_runafterbuild_btn.png)|Her yerel derlemeden sonra birim testlerinizi çalıştırmak için standart menüdeki **Test** ' i seçin ve ardından **Test Gezgini** araç çubuğunda **derlemeden sonra Testleri Çalıştır** ' ı seçin.|
 
@@ -149,15 +149,15 @@ Hiyerarşi ve gruplama düzeylerini **tanımlayabilir ve sonra** tercih ettiğin
 ### <a name="test-explorer-groups"></a>Test Gezgini grupları
 
 ::: moniker range="vs-2017"
-|Grup|Description|
+|Grup|Açıklama|
 |-|-----------------|
 |**Süre**|Yürütme zamanına göre test grupları: **hızlı**, **Orta**ve **yavaş**.|
-|**Sonuç**|Testleri yürütme sonuçlarına göre gruplandırır: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
+|**Sonucu**|Testleri yürütme sonuçlarına göre gruplandırır: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 |**Lerdir**|Tanımladığınız kategori/değer çiftlerine göre test grupları. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
 |**Project**|Projeler adına göre test grupları.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-|Grup|Description|
+|Grup|Açıklama|
 |-|-----------------|
 |**Süre**|Testleri yürütme zamanına göre gruplandırır: **hızlı**, **Orta**ve **yavaş**.|
 |**Durum**|Testleri yürütme sonuçlarına göre gruplandırır: **başarısız testler**, **Atlanan testler**, **başarılı testler**, **çalıştırılmadı**|
@@ -175,7 +175,7 @@ Bir nitelik genellikle kategori adı/değer çiftidir, ancak tek bir kategori de
 
 Yönetilen uygulamalar için Microsoft birim testi çerçevesinde, bir öznitelikte nitelik ad/değer çifti tanımlarsınız <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> . Test çerçevesi aşağıdaki önceden tanımlı nitelikleri de içerir:
 
-|Nitelik|Description|
+|Nitelik|Açıklama|
 |-|-----------------|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.OwnerAttribute>|Sahip kategorisi, birim test çerçevesi tarafından tanımlanır ve sahibin dize değerini sağlamanızı gerektirir.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.PriorityAttribute>|Öncelik kategorisi, birim test çerçevesi tarafından tanımlanır ve öncelik için bir tamsayı değeri sağlamanızı gerektirir.|
@@ -211,11 +211,21 @@ Bireysel testlerin herhangi bir sırada çalıştırılmasını önleyen bir ba�
 
 Yeni bir test Gezgini sekmesinde çalma listesi açılır. Bu çalma listesini bir kez kullanarak atabilir veya çalma listesi penceresinin araç çubuğunda **Kaydet** düğmesine tıklayabilir ve sonra da bir ad ve konum seçerek çalma listesini kaydedebilirsiniz.
 
-![Çalma listesi ayrı test Gezgini sekmesinde açılıyor](../test/media/vs-2019/test-explorer-playlist-tab-16-2.png)
+![Çalma listesi ayrı test Gezgini sekmesinde açılıyor](../test/media/vs-2019/test-explorer-playlist-tab-16-7.png)
 
 **Bir çalma listesi oluşturmak için**, test Gezgini 'nde bir veya daha fazla test seçin. Sağ tıklayın ve yeni çalma listesine **Ekle**' yi seçin  >  **New playlist**.
 
 **Bir çalma listesi açmak için**, Visual Studio araç çubuğunda çalma listesi simgesini seçin ve menüden önceden kaydedilmiş bir çalma listesi dosyası seçin.
+
+**Bir çalma listesini düzenlemek için**herhangi bir teste sağ tıklayıp Menü seçeneklerini kullanarak bir çalma listesine ekleyin veya kaldırabilirsiniz.
+
+Visual Studio 2019 sürüm 16,7 ' den başlayarak, araç çubuğunda **Düzenle** düğmesini seçebilirsiniz. Testlerin yanında, çalma listesine nelerin ekleneceğini ve dışlanacağını gösteren onay kutuları görünür. Grupları dilediğiniz şekilde düzenleyin.
+
+![Çalma listesini Düzenle düğmesi](../test/media/vs-2019/test-explorer-playlist-edit-16-7.png)
+
+Ayrıca hiyerarşideki üst grupların kutularını denetleyebilir veya işaretini kaldırabilirsiniz. Bu eylem, o gruptaki testlere göre her zaman çalma listesini güncelleştiren dinamik bir çalma listesi oluşturur. Örneğin, bir sınıfın yanına bir onay işareti koyarsanız, bu sınıftan eklenen herhangi bir test, bu çalma listesinin bir parçası haline gelir. Bu sınıftan bir testi silerseniz, bu, çalma listesinden kaldırılır. Araç çubuğundan Kaydet düğmesini kaydederek ve diskinizde oluşturulan *. Playlist* dosyasını açarak kurallar hakkında daha fazla bilgi edinebilirsiniz. Bu dosya, bir çalma listesi oluşturan tüm kuralları ve bireysel testleri listeler.
+
+![Playlist XML dosyası](../test/media/vs-2019/test-explorer-playlist-xml-file.png)
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
@@ -264,7 +274,7 @@ Farklı ölçütlere göre filtrelemek için:
 > Aramalar büyük/küçük harfe duyarlıdır ve belirtilen dizeyle ölçüt değerinin herhangi bir bölümüyle eşleşir.
 
 ::: moniker range="vs-2017"
-|Leyicisini|Description|
+|Leyicisini|Açıklama|
 |-|-----------------|
 |**Nitelik**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
 |**Project**|Test projesi adlarını eşleşmeler için arar.|
@@ -272,10 +282,10 @@ Farklı ölçütlere göre filtrelemek için:
 |**Dosya yolu**|Test kaynak dosyalarının tam dosya adını eşleşmeler için arar.|
 |**Tam nitelikli ad**|Test ad alanları, sınıflar ve yöntemlerin tam adını eşleşmeler için arar.|
 |**Çıktı**|Standart çıkış (STDOUT) veya standart hata (stderr) ile yazılan Kullanıcı tanımlı hata iletilerini arar. Çıkış mesajlarını belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
-|**Sonuç**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
+|**Sonucu**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-|Leyicisini|Description|
+|Leyicisini|Açıklama|
 |-|-----------------|
 |**Durum**|Test Gezgini kategori adlarını eşleşmeler için arar: **başarısız testler**, **Atlanan testler**, **başarılı testler**.|
 |**Lerdir**|Hem nitelik kategorisini hem de eşleşme değerlerini arar. Nitelik kategorilerini ve değerlerini belirten sözdizimi, birim test çerçevesi tarafından tanımlanır.|
