@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: overview
 description: Uzun vadeli bir sözleşme olmadan bir ayda ayda veya yıllık esasına göre Visual Studio Professional veya Visual Studio Enterprise.
-ms.openlocfilehash: 936216702113fbba2ec7251363418ab6182ade4a
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 8824ff5f233f580d49fe91f79e6f3d348391ab68
+ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906020"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211648"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Visual Studio Professional ve Visual Studio Enterprise bulut abonelikleri satın alın
 [Visual Studio Market](https://marketplace.visualstudio.com) [Visual Studio Professional ve Visual Studio Enterprise abonelikleri](https://visualstudio.microsoft.com/subscriptions/) satın alabilirsiniz. Bunlar **"bulut abonelikleri"** olarak adlandırılır.
@@ -40,7 +40,7 @@ Azure aboneliğine [sahip](https://docs.microsoft.com/azure/role-based-access-co
 
 4. Satın alacağınız aboneliklerin sayısını seçin.
     > [!div class="mx-imgBorder"]
-    > ![Abonelik sayısını seçin](_img/buy-vs-subscriptions/buy-vs-sub-users.png)
+    > ![Abonelik sayısını seçin](_img/buy-vs-subscriptions/buy-vs-sub-users.png "Satın alma yapılacak abonelik sayısını seçin")
 
     Aboneliklerin kendinize atanmasını istemiyorsanız, **bu aboneliğin bana atamasını**Kaldır ' ı temizleyin.
 
@@ -62,12 +62,18 @@ Birden fazla abonelik satın aldıysanız, başkalarına abonelik atamak için [
 
 ## <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a><a name="manage-subscriptions"></a>Satın aldığınız bulut aboneliklerinin yenileme işlemini iptal edin
 
-* Satın alınan aboneliklerin sayısını değiştirmek için:
+Abonelikleri iptal etmek için yalnızca anlaşmanızın abonelik sayısını sıfır (0) olarak ayarlamanız gerekir.  Abonelik sayısını azaltmak için aşağıdaki adımları izleyin:
+1. <https://manage.visualstudio.com> oturumunu açın
+1. Birden fazla anlaşmanız varsa, açılan listeden istediğiniz sözleşmeyi seçin.
+1. Aboneliklerinizle ilgili bilgileri göstermek için sol üstteki **genel bakış** simgesine tıklayın.  
+> [!div class="mx-imgBorder"]
+> ![Abonelik genel bakışını görüntüleme](_img/buy-vs-subscriptions/overview-button.png "Abonelik ayrıntılarını göstermek için genel bakış düğmesine tıklayın")
+
+4. İptal etmek istediğiniz abonelikler için girişi bulun ve **miktarı değiştir**' e tıklayın.
+1. Miktarı sıfır (0) olarak ayarlayın. Abonelikleriniz, zamanlanan faturalandırma tarihine kadar yerinde kalır, ancak faturalandırma tarihine ulaşıldığında yenilemeyecektir.   
 
 > [!div class="mx-imgBorder"]
-> ![Abonelikleri değiştirme](_img/buy-vs-subscriptions/manage-subscriptions.png)
-
-* Bu abonelikleri iptal etmek için, aboneliklerin sayısını sıfıra (0) küçültün. Bir sonraki fatura döneminin başlangıcında (aylık bulut abonelikleri için bir sonraki ayın ilk günü; yıllık bulut aboneliklerinde 12 ay daha sonra) yenilenmez.
+> ![Abonelikleri değiştirme](_img/buy-vs-subscriptions/manage-subscriptions.png "Abonelikleri iptal etmek için ' miktarı değiştir 'e tıklayın")
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 
