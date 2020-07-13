@@ -15,18 +15,20 @@ helpviewer_keywords:
 - debugging [Visual Studio], engine selection
 - debugger, engine selection
 - debugging engine selection dialog box
+no-loc:
+- Blazor WebAssembly
 ms.assetid: 932269fe-94e3-43cb-8931-078f31afd177
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c6831837853f2e8dd5502e57d0976899c5d31a1a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 9ccfe636cd8981c2f9dcc1375fb795d6c026b572
+ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285432"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211584"
 ---
 # <a name="select-code-type-dialog-box"></a>Kod Türünü Seç İletişim Kutusu
 
@@ -37,7 +39,7 @@ Bu iletişim kutusunu açmak için **Işleme İliştir** iletişim kutusunu aç�
 **Bu kod türlerinde hata ayıkla:** Belirtilen listeden, hata ayıklamak istediğiniz kodun türlerini seçin. Bu, [iliştirme hatası giderirken](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md#BKMK_Troubleshoot_attach_errors)yararlı olabilir. Bu seçenek, algılamayı yalnızca hata ayıklamak istediğiniz kod türleri olarak kısıtlar.
 
    ::: moniker range=">=vs-2019"
-   - Blazor WebAssembly-Client-Side Blazor WebAssembly
+   - Blazor WebAssembly-İstemci tarafıBlazor WebAssembly
    - GPU-yazılım öykünücüsü-bir GPU yazılım öykünücüsü üzerinde çalışan C++ kodu
    - JavaScript (Chrome)-Chrome 'da çalışan JavaScript
    - JavaScript (Microsoft Edge-Kmıum)-Windows 10 için Kmıum tabanlı Microsoft Edge 'de çalışan JavaScript

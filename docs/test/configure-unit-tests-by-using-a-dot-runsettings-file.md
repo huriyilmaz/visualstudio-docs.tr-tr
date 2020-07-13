@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: e3ae90ae493fb216d89f0e0ee79fdf7e173a3e72
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: e03400cf916319f963457af5740139bc88fc5105
+ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85288773"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211605"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*. Runsettings* dosyasını kullanarak birim testlerini yapılandırma
 
@@ -67,7 +67,7 @@ Visual Studio 2019 sürüm 16,4 ve sonrasında bir çalıştırma ayarları dosy
     </Project>
     ```
 
-- Çözümünüzün köküne ". runsettings" adlı bir çalıştırma ayarları dosyası yerleştirin.
+- Çözümünüzün köküne *. runsettings* adlı bir çalışma ayarları dosyası yerleştirin.
 
   Çalışma ayarları dosyalarının otomatik algılanması etkinleştirilirse, bu dosyadaki ayarlar tüm testler üzerinde uygulanır. Runsettings dosyalarını iki konumdan otomatik algılamayı açabilirsiniz:
   
@@ -205,6 +205,11 @@ Aşağıdaki XML, tipik bir *. runsettings* dosyasının içeriğini gösterir. 
           </MediaRecorder>
         </Configuration>
       </DataCollector>
+
+      <!-- Configuration for blame data collector -->
+      <DataCollector friendlyName="blame" enabled="True">
+      </DataCollector>
+
     </DataCollectors>
   </DataCollectionRunSettings>
 
@@ -233,6 +238,7 @@ Aşağıdaki XML, tipik bir *. runsettings* dosyasının içeriğini gösterir. 
           <LogFileName>foo.html</LogFileName>
         </Configuration>
       </Logger>
+      <Logger friendlyName="blame" enabled="True" />
     </Loggers>
   </LoggerRunSettings>
 
@@ -271,7 +277,7 @@ Aşağıdaki XML, tipik bir *. runsettings* dosyasının içeriğini gösterir. 
 
 **RunConfiguration** öğesi aşağıdaki öğeleri içerebilir:
 
-|Node|Varsayılan|Değerler|
+|Düğüm|Varsayılan|Değerler|
 |-|-|-|
 |**ResultsDirectory**||Test sonuçlarının yerleştirildiği dizin.|
 |**TargetFrameworkVersion**|Framework40|`FrameworkCore10`.NET Core kaynakları için, `FrameworkUap10` UWP tabanlı kaynaklar için, `Framework45` .NET Framework 4,5 ve üzeri için, `Framework40` .NET Framework 4,0 ve `Framework35` .NET Framework 3,5 için.<br /><br />Bu ayar, testleri keşfetmek ve yürütmek için kullanılan birim test çerçevesinin sürümünü belirtir. Birim test projesinin yapı özelliklerinde belirttiğiniz .NET platformu sürümünden farklı olabilir.<br /><br />`TargetFrameworkVersion` *. Runsettings* dosyasındaki öğeyi atlarsanız, platform otomatik olarak oluşturulan ikili dosyaları temel alan çerçeve sürümünü belirler.|
@@ -310,6 +316,16 @@ Kod kapsamı veri toplayıcısı uygulama kodu bölümlerinin testte uygulandı�
 Video veri toplayıcısı, testler çalıştırıldığında bir ekran kaydını yakalar. Bu kayıt, UI testlerinin sorunlarını gidermek için kullanışlıdır. Video veri toplayıcısı, **Visual Studio 2017 sürüm 15,5** ve sonraki sürümlerinde kullanılabilir.
 
 Diğer herhangi bir tanılama veri bağdaştırıcısı türünü özelleştirmek için, bir [Test ayarları dosyası](../test/collect-diagnostic-information-using-test-settings.md)kullanın.
+
+
+### <a name="blame-data-collector"></a>Blame veri toplayıcısı
+
+```xml
+<DataCollector friendlyName="blame" enabled="True">
+</DataCollector>
+```
+
+Bu seçenek, test ana bilgisayarı kilitlenmesine neden olan sorunlu bir testi yalıtmanıza yardımcı olabilir. Toplayıcıyı *çalıştırmak, test*eden bir çıkış dosyası (*Sequence.xml*) oluşturur ve bu, kilitlenmeden önce testin yürütülme sırasını yakalar. 
 
 ### <a name="testrunparameters"></a>TestRunParameters
 
@@ -356,7 +372,7 @@ Test çalıştırması parametrelerini kullanmak için, <xref:Microsoft.VisualSt
   </LoggerRunSettings>
 ```
 
-`LoggerRunSettings`Bölüm, test çalıştırması için kullanılacak bir veya daha fazla günlüğe kaydetme tanımlar. En yaygın günlüğe kaydetme cihazları konsol, TRX ve HTML 'dir. 
+Bu `LoggerRunSettings` bölüm, test çalıştırması için kullanılacak bir veya daha fazla günlüğe kaydetme tanımlar. En yaygın günlüğe kaydetme cihazları konsol, TRX ve HTML 'dir. 
 
 ### <a name="mstest-run-settings"></a>MSTest çalıştırma ayarları
 
@@ -386,6 +402,33 @@ Bu ayarlar, özniteliğine sahip test yöntemlerini çalıştıran test bağdaş
 |**MapInconclusiveToFailed**|yanlış|Bir test, Sonuçlandırılamayan bir durumla tamamlanırsa **Test Gezgini**'nde atlanan duruma eşlenir. Sonuçlandırılamayan testlerin başarısız olarak görüntülenmesini istiyorsanız değeri **true**olarak ayarlayın.|
 |**InProcMode**|yanlış|Testlerinizin MSTest bağdaştırıcısıyla aynı işlemde çalıştırılmasını istiyorsanız, bu değeri **true**olarak ayarlayın. Bu ayar, küçük bir performans kazancı sağlar. Ancak bir test bir özel durumla çıkıldığında, kalan testler çalıştırılmaz.|
 |**AssemblyResolution**|yanlış|Birim testlerini bulurken ve çalıştırırken ek derlemeler için yollar belirtebilirsiniz. Örneğin, test derlemesi ile aynı dizinde olmayan bağımlılık derlemeleri için bu yolları kullanın. Bir yol belirtmek için bir **Dizin yolu** öğesi kullanın. Yol, ortam değişkenleri içerebilir.<br /><br />`<AssemblyResolution>  <Directory Path="D:\myfolder\bin\" includeSubDirectories="false"/> </AssemblyResolution>`|
+
+## <a name="specify-environment-variables-in-the-runsettings-file"></a>*. Runsettings* dosyasında ortam değişkenlerini belirtme
+
+Ortam değişkenleri, test ana bilgisayarıyla doğrudan etkileşime girebilen *. runsettings* dosyasında ayarlanabilir. *. Runsettings* dosyasında ortam değişkenlerinin belirtilmesi, *DOTNET_ROOT*gibi ortam değişkenlerinin ayarlanmasını gerektiren önemsiz olmayan projeleri desteklemek için gereklidir. Bu değişkenler, test ana bilgisayarı işlemini oluşturma sırasında ayarlanır ve konakta kullanılabilir.
+
+### <a name="example"></a>Örnek
+
+Aşağıdaki kod, ortam değişkenlerini geçiren örnek bir *. runsettings* dosyasıdır:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File name extension must be .runsettings -->
+<RunSettings>
+  <RunConfiguration>
+    <EnvironmentVariables>
+      <!-- List of environment variables we want to set-->
+      <DOTNET_ROOT>C:\ProgramFiles\dotnet</DOTNET_ROOT>
+      <SDK_PATH>C:\Codebase\Sdk</SDK_PATH>
+    </EnvironmentVariables>
+  </RunConfiguration>
+</RunSettings>
+```
+
+**RunConfiguration** düğümü bir **EnvironmentVariables** düğümü içermelidir. Bir ortam değişkeni, öğe adı ve değeri olarak belirtilebilir.
+
+> [!NOTE]
+> Bu ortam değişkenleri, test ana bilgisayarı başlatıldığında her zaman ayarlanması gerektiğinden, testlerin her zaman ayrı bir işlemde çalışması gerekir. Bunun için, test ana bilgisayarının her zaman çağrılması için ortam değişkenleri olduğunda */ınısolation* bayrağı ayarlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

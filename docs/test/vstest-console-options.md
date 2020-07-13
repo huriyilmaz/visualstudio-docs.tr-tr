@@ -10,12 +10,12 @@ author: mikejo5000
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b776599b484bef2b02c50528e838b9be82aa035
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: eaf282ca647310010c2e75e7279f11cbc90aad76
+ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289046"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86211566"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe komut satırı seçenekleri
 
@@ -32,7 +32,7 @@ Komut satırı aracını kullanmak için bir [Geliştirici komut istemi](/dotnet
 
 Aşağıdaki tabloda *VSTest.Console.exe* ve bunların kısa açıklamaları için tüm seçenekler listelenmektedir. Benzer bir özeti, komut satırına yazarak görebilirsiniz `VSTest.Console/?` .
 
-| Seçenek | Description |
+| Seçenek | Açıklama |
 |---|---|
 |**[*test dosyası adları*]**|Belirtilen dosyalardan testleri çalıştırın. Birden çok test dosyası adını boşluklarla ayırın.<br />Örnekler: `mytestproject.dll` ,`mytestproject.dll myothertestproject.exe`|
 |**/Settings: [*dosya adı*]**|Testleri veri toplayıcılar gibi ek ayarlarla çalıştırın.<br />Örnek: `/Settings:Local.RunSettings`|
@@ -52,7 +52,7 @@ Aşağıdaki tabloda *VSTest.Console.exe* ve bunların kısa açıklamaları iç
 |**/ListExecutors**|Yüklü test yürüticileri listeler.|
 |**/Listlogger**|Yüklü test Günlükçüleri listeler.|
 |**/ListSettingsProviders**|Yüklü test ayarları sağlayıcılarını listeler.|
-|**/Blame**|Testleri yürütülmekte olduğu gibi izler ve test ana bilgisayar işlemi kilitlenirse, yürütme sırasında çalışmakta olan belirli bir test dahil olmak üzere, testlerin adlarını yürütme sırasıyla yayar. Bu çıktı, sorunlu testi yalıtmak ve daha fazla tanılama yapmayı kolaylaştırır. [Daha fazla bilgi](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/blame-datacollector.md).|
+|**/Blame**|Testleri sorumluyu modunda çalıştırır. Bu seçenek, test ana bilgisayarının kilitlenmesine neden olan sorunlu testleri yalıtmak için yararlıdır. Kilitlenme algılandığında, `TestResults/<Guid>/<Guid>_Sequence.xml` çökmeden önce çalıştırılan testlerin sırasını yakalayan bir sıra dosyası oluşturur. Daha fazla bilgi için bkz. [Blame veri toplayıcısı](https://github.com/Microsoft/vstest-docs/blob/master/docs/extensions/blame-datacollector.md).|
 |**/Diag: [*dosya adı*]**|Tanılama izleme günlüklerini belirtilen dosyaya yazar.|
 |**/ResultsDirectory: [*yol*]**|Mevcut değilse, belirtilen yolda test sonuçları dizini oluşturulur.<br />Örnek: `/ResultsDirectory:<pathToResultsDirectory>`|
 |**/ParentProcessId: [*ParentProcessId*]**|Geçerli işlemi başlatmaktan sorumlu üst Işlemin işlem KIMLIĞI.|
@@ -64,24 +64,44 @@ Aşağıdaki tabloda *VSTest.Console.exe* ve bunların kısa açıklamaları iç
 
 ## <a name="examples"></a>Örnekler
 
-*VSTest.Console.exe* çalıştırmak için sözdizimi şöyledir:
+*vstest.console.exe* çalıştırmak için sözdizimi şöyledir:
 
-`Vstest.console.exe [TestFileNames] [Options]`
+`vstest.console.exe [TestFileNames] [Options]`
 
-Aşağıdaki komut, test Kitaplığı **myTestProject.dll**için *VSTest.Console.exe* çalıştırır:
+Aşağıdaki komut, test Kitaplığı *myTestProject.dll*için *vstest.console.exe* çalıştırır:
 
 ```cmd
 vstest.console.exe myTestProject.dll
 ```
 
-Aşağıdaki komut birden çok test dosyası ile *VSTest.Console.exe* çalıştırır. Test dosyası adlarını boşluklarla ayır:
+Aşağıdaki komut birden çok test dosyası ile *vstest.console.exe* çalıştırır. Test dosyası adlarını boşluklarla ayır:
 
 ```cmd
-Vstest.console.exe myTestFile.dll myOtherTestFile.dll
+vstest.console.exe myTestFile.dll myOtherTestFile.dll
 ```
 
-Aşağıdaki komut birkaç seçenekten *VSTest.Console.exe* çalışır. *myTestFile.dll* dosyadaki testleri yalıtılmış bir işlemde çalıştırır ve *Local. runsettings* dosyasında belirtilen ayarları kullanır. Ayrıca, yalnızca "Priority = 1" olarak işaretlenmiş testleri çalıştırır ve sonuçları bir *. trx* dosyasına kaydeder.
+Aşağıdaki komut birkaç seçenekten *vstest.console.exe* çalışır. *myTestFile.dll* dosyadaki testleri yalıtılmış bir işlemde çalıştırır ve *Local. runsettings* dosyasında belirtilen ayarları kullanır. Ayrıca, yalnızca "Priority = 1" olarak işaretlenmiş testleri çalıştırır ve sonuçları bir *. trx* dosyasına kaydeder.
 
 ```cmd
-vstest.console.exe  myTestFile.dll /Settings:Local.RunSettings /InIsolation /TestCaseFilter:"Priority=1" /Logger:trx
+vstest.console.exe myTestFile.dll /Settings:Local.RunSettings /InIsolation /TestCaseFilter:"Priority=1" /Logger:trx
+```
+
+Aşağıdaki komut, *vstest.console.exe* `/blame` Test kitaplığı *myTestProject.dll*seçeneğiylevstest.console.exeçalışır:
+
+```cmd
+vstest.console.exe myTestFile.dll /blame
+```
+
+Bir test ana bilgisayarı kilitlentiyse, *sequence.xml* dosyası oluşturulur. Dosya yürütme sırasında yürütülen test sırasındaki testlerin tam adlarını içerir ve kilitlenme sırasında çalışan belirli bir testi dahil eder.
+
+Test ana bilgisayar kilitlenmesi yoksa *sequence.xml* dosyası oluşturulmaz.
+
+Oluşturulan bir *sequence.xml* dosyası örneği: 
+
+```xml
+<?xml version="1.0"?>
+<TestSequence>
+  <Test Name="TestProject.UnitTest1.TestMethodB" Source="D:\repos\TestProject\TestProject\bin\Debug\TestProject.dll" />
+  <Test Name="TestProject.UnitTest1.TestMethodA" Source="D:\repos\TestProject\TestProject\bin\Debug\TestProject.dll" />
+</TestSequence>
 ```
