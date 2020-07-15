@@ -335,6 +335,8 @@
                   href: ide/reference/generate-equals-structs.md
                 - name: Dosya üst bilgisi ekleme
                   href: ide/reference/add-file-header.md
+                - name: Hata ayıklayıcısı görüntüleme özniteliği ekleme
+                  href: ide/reference/add-debugger-display-attribute.md
                 - name: Açık tür dönüştürme ekleme
                   href: ide/reference/add-explicit-cast.md
                 - name: Metoda parametre ekleme
