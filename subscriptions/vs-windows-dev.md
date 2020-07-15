@@ -7,12 +7,12 @@ ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
 ms.date: 04/20/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil olan Windows Geliştirici hesabı hakkında bilgi edinin.
-ms.openlocfilehash: a39b52f98cb476858e02ae34a4a9422e55dee888
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 659c2b1d792eb02d74ac5d52773f81bdda198a7a
+ms.sourcegitcommit: c2b3bf0de44cd379fd1ad5110385021d0ec950ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906000"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301466"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Windows Geliştirici hesabı
 Seçili Visual Studio aboneliğine dahil olan Windows geliştirici hesabınız, Windows Mağazası 'na ücretsiz ve ücretli Windows uygulamaları göndermenize olanak tanır.
@@ -26,7 +26,7 @@ Bu işlem için bir "özel" tarayıcı penceresi oluşturmanızı öneririz.  Ö
 2. Araçlar bölümünde Windows Geliştirici hesabı kutucuğunu bulun ve avantaj kutucuğunun altındaki **kodu al** bağlantısına tıklayın.  Kodu panonuza kopyalayın ve ardından **Etkinleştir**' e tıklayın.
    > [!div class="mx-imgBorder"]
    > ![Windows Geliştirici avantajı kutucuğu](_img/vs-windows-dev/vs-windows-dev-tile.png)
-3. [https://developer.microsoft.com](https://developer.microsoft.com)Sitesinde kayıt işlemini başlatabilirsiniz.  Devam etmek için **Kaydol** ' a tıklayın.
+3. [https://developer.microsoft.com/store/register/](https://developer.microsoft.com/store/register/)Sitesinde kayıt işlemini başlatabilirsiniz.  Devam etmek için **Kaydol** ' a tıklayın.
    > [!div class="mx-imgBorder"]
    > ![Windows Geliştirici avantajı kaydı](_img/vs-windows-dev/vs-windows-dev-register1-cropped.png)
 4. Aboneliğinizde oturum açın.  Birden çok hesabınız varsa, kurumsal aboneliğinizle ilişkili olanı seçin.
