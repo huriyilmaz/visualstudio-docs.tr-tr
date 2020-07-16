@@ -42,6 +42,8 @@
       items:
         - name: Test Gezgini ile birim testleri çalıştırma
           href: run-unit-tests-with-test-explorer.md
+        - name: Test Gezgini ile birim testlerinde hata ayıklama
+          href: debug-unit-tests-with-test-explorer.md
         - name: Test Gezgini Hakkında SSS
           href: test-explorer-faq.md
     - name: Komut satırından test çalıştırma
@@ -103,7 +105,7 @@
       items:
         - name: C++ UWP DLL’ye birim testi uygulama
           href: unit-testing-a-visual-cpp-dll-for-store-apps.md
-        - name: 'UWP uygulamalarında Visual C# koduna birim testi uygulama'
+        - name: UWP uygulamalarında Visual C# koduna birim testi uygulama
           href: unit-testing-visual-csharp-code-in-a-store-app.md
         - name: 'İzlenecek yol: UWP uygulamaları için birim testleri oluşturma ve çalıştırma'
           href: walkthrough-creating-and-running-unit-tests-for-windows-store-apps.md

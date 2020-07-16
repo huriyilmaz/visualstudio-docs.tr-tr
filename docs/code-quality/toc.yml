@@ -730,6 +730,20 @@
                   href: ca2328.md
                 - name: 'CA2329: Güvenli olmayan bir yapılandırma kullanarak JsonSerializer ile seri durumdan çıkarma işlemi yapmayın'
                   href: ca2329.md
+                - name: 'CA2350: DataTable.ReadXml() girişinin güvenilir olduğundan emin olun'
+                  href: ca2350.md
+                - name: 'CA2351: DataSet.ReadXml() girişinin güvenilir olduğundan emin olun'
+                  href: ca2351.md
+                - name: 'CA2352: Seri duruma getirilebilir türdeki güvenli olmayan DataSet veya DataTable, uzaktan yapılan kod yürütme saldırılarına karşı savunmasız olabilir'
+                  href: ca2352.md
+                - name: 'CA2353: Seri duruma getirilebilir türdeki güvenli olmayan DataSet veya DataTable'
+                  href: ca2353.md
+                - name: 'CA2354: Seri durumdan çıkarılmış nesne grafındaki güvenli olmayan DataSet veya DataTable, uzaktan yapılan kod yürütme saldırılarına karşı savunmasız olabilir'
+                  href: ca2354.md
+                - name: 'CA2355: Seri durumdan çıkarılmış nesne grafındaki güvenli olmayan DataSet veya DataTable'
+                  href: ca2355.md
+                - name: 'CA2356: Seri durumdan çıkarılmış web nesne grafındaki güvenli olmayan DataSet veya DataTable türü'
+                  href: ca2356.md
                 - name: 'CA2330: Seri durumdan çıkarılırken JsonSerializer’ın güvenli bir yapılandırmaya sahip olmasını sağlayın'
                   href: ca2330.md
                 - name: 'CA3001: SQL ekleme güvenlik açıkları için inceleme kodu'
