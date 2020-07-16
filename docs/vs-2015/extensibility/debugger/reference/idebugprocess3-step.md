@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::Step | Microsoft Docs
+title: 'IDebugProcess3:: Step | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,22 +12,22 @@ ms.assetid: 6ad9094c-27cc-4927-8a7c-1b4d97b2e436
 caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 45f60aaac3b89b7273a5f548b4716b6aee392256
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 5069a40f4e3ea4b1fba74c8133a18b46f2b3f2d2
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63405597"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386231"
 ---
 # <a name="idebugprocess3step"></a>IDebugProcess3::Step
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir yönerge veya deyimi adım işlemin neden olur.  
+İşlemin bir yönerge veya ifadeye adımla çalışmasına neden olur.  
   
 > [!NOTE]
-> Bu yöntem yerine kullanılması gereken [adım](../../../extensibility/debugger/reference/idebugprogram2-step.md).  
+> Bu yöntem, [adım](../../../extensibility/debugger/reference/idebugprogram2-step.md)yerine kullanılmalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Step(  
@@ -47,25 +47,25 @@ int Step(
   
 #### <a name="parameters"></a>Parametreler  
  `pThread`  
- [in] Bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) basamaklı iş parçacığını temsil eden nesne.  
+ 'ndaki Bulanan iş parçacığını temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.  
   
  `sk`  
- [in] Aşağıdakilerden birini [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) değerleri.  
+ 'ndaki [Stepkind](../../../extensibility/debugger/reference/stepkind.md) değerlerinden biri.  
   
  `step`  
- [in] Aşağıdakilerden birini [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) değerleri.  
+ 'ndaki [Stepunit](../../../extensibility/debugger/reference/stepunit.md) değerlerinden biri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirli bir iş parçacığının adımlanırken durumunda herhangi bir iş parçacığı eşitleme veya iş parçacıkları arasındaki iletişim, işlemdeki diğer iş parçacıkları çalıştırmanız gerekir.  
+ İş parçacıkları arasında herhangi bir iş parçacığı eşitlemesi veya iletişim olması durumunda, belirli bir iş parçacığı adımlarken işlemdeki diğer iş parçacıklarının çalışması gerekir.  
   
- **Uyarı** durdurma olay veya hemen (zaman uyumlu) olaya göndermeyin [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) işlenirken bu çağrı; Aksi takdirde hata ayıklayıcı kilitlenebilir.  
+ **Uyarı** Bu çağrıyı gerçekleştirirken [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) için bir durdurma olayı veya anında (zaman uyumlu) olay göndermeyin; Aksi takdirde hata ayıklayıcı yanıt vermeyi durdurabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [STEPKIND](../../../extensibility/debugger/reference/stepkind.md)   
  [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md)   
- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: bir deneme sürümünden yükseltme | Microsoft Docs'
+title: 'Nasıl yapılır: deneme sürümünden yükseltme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-install
@@ -9,28 +9,28 @@ caps.latest.revision: 28
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: ecef4536ec11d2319007602b195c96a9df7d3719
-ms.sourcegitcommit: bad28e99214cf62cfbd1222e8cb5ded1997d7ff0
+ms.openlocfilehash: a9af78dc373734905c703a3b9ee5c9462af3e116
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74298068"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386686"
 ---
 # <a name="how-to-upgrade-from-a-trial-edition-of-visual-studio"></a>Nasıl Yapılır. Visual Studio Deneme Sürümünden Yükseltme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ürün kayıt olmadan 14 gün boyunca Visual Studio'nun yayın öncesi sürümü değerlendirebilirsiniz. Bir Microsoft hesabıyla oturum açarak kaydettikten sonra ön sürüm lisansının süresi bombasını tarihine kadar geçerlidir.
+Ürün kaydolmadan, Visual Studio 'nun yayın öncesi sürümünü 14 gün boyunca değerlendirebilirsiniz. Bir Microsoft hesabı oturum açarak kaydolduktan sonra, ön sürüm lisansı sona erme tarihine kadar geçerli olur.
 
- Ürünü yüklediğiniz andan başlayarak 30 gün için Visual Studio Professional ve Enterprise sürümleri sürümü değerlendirebilirsiniz. [Visual Studio 'Da oturum açmak](../ide/signing-in-to-visual-studio.md) , toplam 90 gün boyunca değerlendirme süresine 60 gün ekler. Visual Studio'nun deneme sürümünü 30 gün içinde kayıt ettirmezseniz, yüklemenizden 30 gün sonra deneme süresi sona erer.
+ Visual Studio 'nun Professional ve Enterprise sürümlerinin yayın sürümünü 30 gün boyunca değerlendirebilirsiniz. Bu, ürünü yüklediğinizde başlar. [Visual Studio 'Da oturum açmak](../ide/signing-in-to-visual-studio.md) , toplam 90 gün boyunca değerlendirme süresine 60 gün ekler. Visual Studio'nun deneme sürümünü 30 gün içinde kayıt ettirmezseniz, yüklemenizden 30 gün sonra deneme süresi sona erer.
 
- Örneğin, 10 gün boyunca [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] indirip kullanacaksanız ve sonra kaydettiğinizde, ek 80 gün boyunca kullanabilirsiniz. 90 gün dolduktan sonra ürünü kullanmaya devam etmek için geçerli bir ürün anahtarı girin, veya Visual Studio'ya bir Microsoft hesabı veya bir MSDN aboneliği veya Visual Studio Online aboneliği ile ilişkili olan bir kuruluş hesabı ile oturum açın. Ürün anahtarını bulma veya alma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio ürün anahtarını bulma](../install/how-to-locate-the-visual-studio-product-key.md) ve [Visual Studio 'yu satın alma](https://visualstudio.microsoft.com/vs/pricing/).
+ Örneğin, [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)] 10 gün boyunca indirip kullanırsanız ve sonra kaydettiğinizde, ek 80 gün boyunca kullanabilirsiniz. 90 gün sonra ürünü kullanmaya devam etmek için geçerli bir ürün anahtarı sağlamalısınız veya bir MSDN aboneliği ya da Visual Studio Online aboneliğiyle ilişkili bir Microsoft hesabı ya da bir kurumsal hesapla Visual Studio 'da oturum açmanız gerekir. Ürün anahtarını bulma veya alma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio ürün anahtarını bulma](../install/how-to-locate-the-visual-studio-product-key.md) ve [Visual Studio 'yu satın alma](https://visualstudio.microsoft.com/vs/pricing/).
 
 > [!IMPORTANT]
-> Visual Studio'nun Express sürümleri için yayın sürümleri için deneme süresi de 30 gündür. Visual Studio'nun Express sürümleri için deneme dönemini süresiz olarak uzatmak isterseniz, Visual Studio'da oturum açın veya ürünü kayıt ettirin.
+> Visual Studio 'nun Express sürümlerinin sürüm sürümleri için deneme süresi de 30 gündür. Visual Studio'nun Express sürümleri için deneme dönemini süresiz olarak uzatmak isterseniz, Visual Studio'da oturum açın veya ürünü kayıt ettirin.
 
  Yükseltmeden önce, Microsoft Web sitesinden [Visual Studio ve MSDN Lisanslama teknik incelemesini](https://www.microsoft.com/download/details.aspx?id=13350) indirip gözden geçirmeniz önerilir. Ek Yardım için bkz. [Visual Studio Için destek](https://support.microsoft.com/ph/1117/en-us).
 
-### <a name="to-upgrade-from-a-trial-edition-of-visual-studio-professional-or-enterprise"></a>Visual Studio Professional veya Enterprise deneme sürümünden yükseltmek için
+### <a name="to-upgrade-from-a-trial-edition-of-visual-studio-professional-or-enterprise"></a>Visual Studio Professional veya Enterprise 'ın deneme sürümünden yükseltmek için
 
 1. Visual Studio 'Yu **yönetici olarak çalıştır** modunda başlatın.
 

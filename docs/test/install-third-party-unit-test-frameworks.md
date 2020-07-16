@@ -1,18 +1,18 @@
 ---
 title: 'Nasıl yapılır: Üçüncü taraf birim test çerçevelerini yükleme'
-ms.date: 04/01/2019
+ms.date: 07/09/2020
 ms.topic: how-to
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: fb9a08d0d3119724e8db631841aca35c6c6e9fe5
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: c274f203b9bf2746716c0625c61141aaa332977a
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85286979"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387193"
 ---
 # <a name="install-unit-test-frameworks"></a>Birim testi çerçeveleri 'ni yükler
 
@@ -20,7 +20,12 @@ Visual Studio Test Gezgini, bir bağdaştırıcı arabirimi geliştirmiş olan h
 
 Visual Studio çözümü, farklı çerçeveleri kullanan ve farklı dillerde hedeflenen birim testi projeleri içerebilir.
 
+::: moniker range=">=vs-2019"
+.NET, [MSTest, NUnit ve xUnit](getting-started-with-unit-testing.md) için varsayılan olarak yüklenen Visual Studio tarafından sunulan test çerçeveleri vardır.
+::: moniker-end
+::: moniker range="vs-2017"
 [MSTest](getting-started-with-unit-testing.md) , Visual Studio tarafından sunulan ve varsayılan olarak yüklenen test çerçevesidir.
+::: moniker-end
 
 ## <a name="acquire-frameworks"></a>Çerçeveleri al
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::Continue | Microsoft Docs
+title: 'IDebugProcess3:: Continue | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,22 +12,22 @@ ms.assetid: 57506242-5763-4c08-adb9-8a78ce02cebb
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 8e7167a5425566936c196960d5014fcf5d7c8709
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 92a36bb7e89d8afaa6d76f7d7b3772bd1714ffa7
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63405833"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386244"
 ---
 # <a name="idebugprocess3continue"></a>IDebugProcess3::Continue
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu işlem durdurulmuş bir duruma çalışmaya devam eder. Herhangi bir önceki yürütme durumu (örneğin, bir adım) korunur, ve işlemi yeniden yürütmeden başlatır.  
+Bu işlemi durdurulmuş bir durumdan çalıştırmaya devam eder. Önceki yürütme durumu (bir adım gibi) korunur ve işlem yeniden yürütülmeye başlar.  
   
 > [!NOTE]
-> Bu yöntem yerine kullanılması gereken [devam](../../../extensibility/debugger/reference/idebugprogram2-continue.md).  
+> Bu yöntem [devam etmek](../../../extensibility/debugger/reference/idebugprogram2-continue.md)yerine kullanılmalıdır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT Continue(  
@@ -43,17 +43,17 @@ int Continue(
   
 #### <a name="parameters"></a>Parametreler  
  `pThread`  
- [in] Bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) devam etmesi gereken iş parçacığını temsil eden nesne.  
+ 'ndaki Devam etmek için iş parçacığını temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, kaç işlemleri ayıklanan veya hangi işlem durdurma olay oluşturulan bağımsız olarak bu işlem çağrılır. Uygulama, önceki yürütme durumu (örneğin, bir adım) korumak ve hiçbir zaman önceki yürütme tamamlamadan önce durmuş gibi sorgulamanıza yürütmeye devam et. Diğer bir deyişle, bir iş parçacığında bu işlem bir üzerinden Adımlama ile işlemi yapmakta olduğu ve başka bir işlem durdurulduğundan durduruldu ve ardından `Continue` çağrıldı, belirtilen iş parçacığı özgün üzerinden Adımlama ile işlemi tamamlamanız gerekir.  
+ Bu yöntem, kaç işlem hata ayıklandığına veya durdurma olayını hangi işlemin üretdiğine bakılmaksızın bu işlemde çağrılır. Uygulamanın önceki yürütme durumunu (bir adım gibi) yürütmesi ve yürütülmeye devam etmeden önce hiçbir daha durdurulmamış olsa da yürütmeye devam etmesi gerekir. Diğer bir deyişle, bu işlemdeki bir iş parçacığı adım adım bir işlem yapıyor ve başka bir işlem durdurulduğu için durdurulduysa ve daha sonra `Continue` çağrıldıysa, belirtilen iş parçacığının orijinal adım aşımı işlemini tamamlaması gerekir.  
   
- **Uyarı** durdurma olay veya hemen (zaman uyumlu) olaya göndermeyin [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) işlenirken bu çağrı; Aksi takdirde hata ayıklayıcı kilitlenebilir.  
+ **Uyarı** Bu çağrıyı gerçekleştirirken [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) için bir durdurma olayı veya anında (zaman uyumlu) olay göndermeyin; Aksi takdirde hata ayıklayıcı yanıt vermeyi durdurabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

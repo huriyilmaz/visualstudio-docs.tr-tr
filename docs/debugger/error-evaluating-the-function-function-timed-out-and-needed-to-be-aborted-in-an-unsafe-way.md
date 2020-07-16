@@ -9,18 +9,18 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f687672de4bc3511fa0c9198f7ad4145b26dcd11
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 76a655e2994e1eaa1c5ac65e7b8782ec5b9d6f72
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460804"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386725"
 ---
 # <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Hata: işlev &#39;işlevi değerlendiriliyor&#39; zaman aşımına uğradı ve güvenli olmayan bir şekilde durdurulmak için gerekiyor
 
 Tam ileti metni: ' function ' işlevinin değerlendirilmesi zaman aşımına uğradı ve güvenli olmayan bir şekilde durdurulmak için gereklidir. Bu, hedef işlemi bozmuş olabilir.
 
-.NET nesnelerinin durumunu incelemeyi kolaylaştırmak için, hata ayıklama işlemini ek kod (genellikle özellik alıcı yöntemleri ve ToString işlevleri) çalıştırmaya otomatik olarak zorlar. Çoğu senaryoda, bu işlevler hızla tamamlanır ve hata ayıklamayı çok daha kolay hale getirir. Ancak, hata ayıklayıcı uygulamayı bir korumalı alana çalıştırmaz. Sonuç olarak, askıda olmayan bir yerel işleve çağıran bir özellik alıcısı veya ToString yöntemi, kurtarılabilir sürelere neden olabilecek uzun zaman aşımlarını yönlendirebilir. Bu hata iletisiyle karşılaşırsanız, bu oluştu.
+.NET nesnelerinin durumunu incelemeyi kolaylaştırmak için, hata ayıklama işlemini ek kod (genellikle özellik alıcı yöntemleri ve ToString işlevleri) çalıştırmaya otomatik olarak zorlar. Çoğu senaryoda, bu işlevler hızla tamamlanır ve hata ayıklamayı çok daha kolay hale getirir. Ancak, hata ayıklayıcı uygulamayı bir korumalı alana çalıştırmaz. Sonuç olarak, yanıt vermeyi durduran bir yerel işleve çağıran bir özellik alıcı veya ToString yöntemi, kurtarılamaz sürelere neden olabilir. Bu hata iletisiyle karşılaşırsanız, bu oluştu.
 
 Bu sorunun yaygın bir nedeni, hata ayıklayıcı bir özelliği değerlendirirken yalnızca incelenen iş parçacığının çalışmasına izin verir. Bu nedenle, özellik diğer iş parçacıklarını hata ayıklanan uygulamanın içinde çalışacak şekilde bekleiyorsa ve .NET çalışma zamanının kesintiye uğramaması için bir yöntem bekliyorsa, bu sorun gerçekleşir.
 

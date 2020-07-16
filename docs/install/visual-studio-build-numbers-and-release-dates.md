@@ -5,19 +5,19 @@ description: Visual Studio için yayınlanmış sürümlerin ve derleme numarala
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.date: 06/30/2020
+ms.date: 07/14/2020
 ms.topic: reference
 ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 08190b7c2109f8a5344264786b5c1e3906c4c7b5
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 63a9929ea4e70a085f41e0f3dd2f8a71c1eb487e
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770915"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386192"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio derleme numaraları ve yayın tarihleri
 
@@ -29,11 +29,16 @@ Aşağıdaki tabloda, Visual Studio 2019 için derleme numaraları ve sürüm ta
 
 | **Sürüm**| **Kanal** | **Yayın tarihi** | **Derleme sürümü** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 16.7.0 | Preview 4 | 14 Temmuz 2020 | 16.7.30310.162 |
+| 16.6.4 | Sürüm | 14 Temmuz 2020 | 16.6.30309.148 |
+| 16.4.11 | Sürüm | 14 Temmuz 2020 | 16.4.30308.118 |
+| 16.0.16 | Sürüm | 14 Temmuz 2020 | 16.0.28803.791 |
 | 16.6.3 | Sürüm | 30 Haziran 2020 | 16.6.30225.117 |
 | 16.7.0 | Önizleme 3,1 | 25 Haziran 2020 | 16.7.30223.230 |
 | 16.7.0 | Preview 3 | 23 Haziran 2020 | 16.7.30218.91 |
 | 16.0.15 | Sürüm | 9 Haziran 2020 | 16.0.28803.753 |
 | 16.6.2 | Sürüm | 9 Haziran 2020 | 16.6.30204.135 |
+| 16.4.10 | Sürüm | 9 Haziran 2020 | 16.4.30204.51 |
 | 16.7.0 | Önizleme 2 | 2 Haziran 2020 | 16.7.30128.36 |
 | 16.6.1 | Sürüm | 1 Haziran 2020 | 16.6.30128.74 |
 | 16.4.9 | Sürüm | 27 Mayıs 2020 | 16.4.30120.98 |
@@ -156,6 +161,7 @@ Aşağıdaki tabloda, Visual Studio 2017 için derleme numaraları ve sürüm ta
 
 | **Sürüm**| **Kanal** | **Yayın tarihi** | **Derleme sürümü** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.9.25 | Sürüm | 14 Temmuz 2020 | 15.9.28307.1216 |
 | 15.9.24 | Sürüm | 9 Haziran 2020 | 15.9.28307.1177 |
 | 15.9.23 | Sürüm | 12 Mayıs 2020 | 15.9.28307.1146 |
 | 15.9.22 | Sürüm | 14 Nisan 2020 | 15.9.28307.1093 |

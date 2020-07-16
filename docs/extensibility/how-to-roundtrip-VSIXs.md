@@ -8,12 +8,12 @@ ms.author: madsk
 manager: justinclareburt
 ms.workload:
 - willbrown
-ms.openlocfilehash: ff2865080b7d36f1a7c3b8a7680d867b92ec9c08
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: ca1f367510aa9730c1b3b212438579a8eaeb0e8f
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85905775"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387284"
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-20192017-and-visual-studio-2015"></a>Nasıl yapılır: Visual Studio 2019/2017 ve Visual Studio 2015 ile uyumlu uzantılar yapma
 
@@ -74,7 +74,7 @@ Sürüm | Oluşturulan Araçlar
 Visual Studio 2015 | Microsoft. VisualStudio. SDK. BuildTasks. 14.0
 Visual Studio 2019 veya 2017 | Microsoft. VSSDK. BuildTool
 
-Bunu yapmak için:
+Bunun için:
 
 * Projenize Microsoft. VisualStudio. SDK. BuildTasks. 14.0 NuGet paketini ekleyin.
 * Projeniz Microsoft. VSSDK. BuildTools içermiyorsa, ekleyin.
@@ -213,5 +213,4 @@ Bu noktada, projeniz hem Visual Studio 2015 hem de Visual Studio 2017 üzerine y
 ![VSıX bulma](media/finding-a-VSIX-example.png)
 
 > [!NOTE]
-> Projeniz **dosyayı açan**iletiyle askıda kalırsa, Visual Studio 'yu kapatmayı zorla, proje dizininiz ' ne gidin, gizli klasörleri gösterin ve *. vs* klasörünü silin.
- 
+> Projeniz **dosyayı açan**iletiyle yanıt vermezse, Visual Studio 'yu kapatmayı zorla, proje dizininiz ' ne gidin, gizli klasörleri gösterin ve *. vs* klasörünü silin.

@@ -9,12 +9,12 @@ caps.latest.revision: 15
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: e75215d2693b5fe2bf879c4b293ae853b42905e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: db9267fe9f06569dadea240e5d78c8b35c84b8c4
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72651779"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386556"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2015"></a>Visual Studio 2015 ile İlgili Sorun Bildirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -53,7 +53,7 @@ Geçerli ekranınızı Microsoft 'a göndermek için **bir ekran görüntüsü E
 
 1. İzleme ve yığın dökümü dosyaları, sorunları tanılamamıza yardımcı olmak için çok yararlıdır.   Yeniden oluşturma adımlarınızı kaydetmek ve verileri Microsoft 'a göndermek için sorun bildir aracını kullandığınızda çok fazla teşekkür ederiz.
 
-2. **Sorunu yeniden oluşturmak için eylemlerinizi kaydetmek**için yanındaki köşeli çift ayraca tıklayın. Sorununuz Visual Studio 'nun askıda kalmasına veya kilitlenmesine neden oluyorsa, Visual Studio 'nun başka bir örneğini açın ve liste görünümünden seçin.
+2. **Sorunu yeniden oluşturmak için eylemlerinizi kaydetmek**için yanındaki köşeli çift ayraca tıklayın. Sorununuz, Visual Studio 'nun yanıt vermeyi veya kilitlenmeyi durdurmasına neden oluyorsa, Visual Studio 'nun başka bir örneğini açın ve liste görünümünden seçin.
 
 3. **Kaydı Başlat** ' a tıklayın ve sorunu yeniden oluşturmak için adımları gerçekleştirin. İşiniz bittiğinde, kayan penceredeki **Kaydı Durdur** düğmesine tıklayın.
 
@@ -71,4 +71,4 @@ Raporunuzu, herhangi bir görüntü ve izleme ya da döküm dosyası ile birlikt
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-- [Bizimle İletişime Geçin](../ide/talk-to-us.md)
+- [Bizimle iletişime geçin](../ide/talk-to-us.md)

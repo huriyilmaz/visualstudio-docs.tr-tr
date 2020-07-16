@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Execute | Microsoft Docs
+title: 'IDebugProgram2:: Execute | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,22 +12,22 @@ ms.assetid: f7205ce8-0ac6-4fcd-b6ec-b720b4fcaccf
 caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: f6134c10f30d66011dca5e40c28b6cbe6a7c94ed
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 676a3a7d184c1f34cafcfc2b2a4dd7a1c3f81a95
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63430561"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387336"
 ---
 # <a name="idebugprogram2execute"></a>IDebugProgram2::Execute
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu program bir durdurulmuş çalışmaya devam eder. Herhangi bir önceki yürütme durumu (örneğin, bir adım) seçili, ve programı yeniden yürütme.  
+Bu programı durdurulmuş bir durumdan çalıştırmaya devam eder. Önceki yürütme durumu (bir adım gibi) temizlenir ve program yeniden yürütülmeye başlar.  
   
 > [!NOTE]
-> Bu metot kullanımdan kaldırılmıştır. Kullanım [yürütme](../../../extensibility/debugger/reference/idebugprocess3-execute.md) yöntemi yerine.  
+> Bu yöntem kullanım dışıdır. Bunun yerine [Execute](../../../extensibility/debugger/reference/idebugprocess3-execute.md) metodunu kullanın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Execute(  
@@ -40,15 +40,15 @@ int Execute();
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yürütme kullanıcı bazı diğer programın iş parçacığının durdurulmuş bir duruma başlatılır, bu programın üzerinde bu yöntem çağrılır. Bu yöntem aynı zamanda Kullanıcı seçtiğinde çağrılır **Başlat** komutunu **hata ayıklama** IDE'de menü. Bu yöntemin uygulanmasını çağırmak kadar basit [sürdürme](../../../extensibility/debugger/reference/idebugthread2-resume.md) programı geçerli işlem parçacığında yöntemi.  
+ Kullanıcı başka bir programın iş parçacığında durdurulmuş bir durumdan yürütmeyi başlattığında, bu yöntem bu programda çağırılır. Bu yöntem, Kullanıcı IDE 'deki **hata ayıklama** menüsünden **Başlat** komutunu seçtiğinde de çağrılır. Bu yöntemin uygulanması, programdaki geçerli iş parçacığında [sürdürülür](../../../extensibility/debugger/reference/idebugthread2-resume.md) yöntemini çağırmak kadar basit olabilir.  
   
 > [!WARNING]
-> Durdurma olay veya hemen (zaman uyumlu) olaya göndermeyin [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) işlenirken bu çağrı; Aksi takdirde hata ayıklayıcı kilitlenebilir.  
+> Bu çağrıyı gerçekleştirirken [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) için bir durdurma olayı veya anında (zaman uyumlu) olay göndermeyin; Aksi takdirde hata ayıklayıcı yanıt vermeyi durdurabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   
  [Olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)   
- [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md)
+ [Sürdür](../../../extensibility/debugger/reference/idebugthread2-resume.md)

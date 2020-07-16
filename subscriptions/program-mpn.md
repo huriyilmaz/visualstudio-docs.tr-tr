@@ -7,12 +7,12 @@ ms.assetid: 7f4399d8-41da-41e5-a666-acc34958b8c0
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Hangi aboneliklerin sunulmakta olduğuna, hangi kuralların uygulanacağını ve MPN ' de kaç abonelik sunulacağı hakkında ayrıntılar.
-ms.openlocfilehash: fb19f84c480fb1291d225dcce8c0e140a953826b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: da7f4cccab1354d0ab563868f3a874539f63c7c6
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183060"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387154"
 ---
 # <a name="visual-studio-subscriptions-offered-to-partners-in-the-microsoft-partner-network-mpn"></a>Microsoft İş Ortağı Ağı (MPN) iş ortaklarına sunulan Visual Studio abonelikleri
 
@@ -44,7 +44,7 @@ Bir iş ortağının kaç uzmanlık kazandığına bakılmaksızın, Visual Stud
 
 | Yalnızca Gümüş uzmanlık becerilerine sahip iş ortakları için maksimum avantaj                   | En az bir altın uzmanlığa sahip iş ortakları için maksimum avantaj               |
 |------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| ülke başına 25 Visual Studio Enterprise abonelik; 75 dünya çapında          | ülke başına 50 Visual Studio Enterprise abonelik; 150 Dünya çapında         |
+| ülke/bölge başına 25 Visual Studio Enterprise abonelik; 75 dünya çapında          | ülke/bölge başına 50 Visual Studio Enterprise abonelik; 150 Dünya çapında         |
 
 ## <a name="subscriptions-for-partners-purchasing-the-action-pack"></a>Eylem Paketi satın alan iş ortakları için abonelikler
 

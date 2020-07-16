@@ -7,12 +7,12 @@ ms.assetid: 5bba2205-d32f-413d-9b58-724a24993842
 ms.date: 04/17/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil olan LinkedIn Premium aboneliğinin bir parçası olarak dahil olan LinkedIn öğrenme avantajı hakkında bilgi edinin.
-ms.openlocfilehash: f3ce676232742f712a926dbeb70e8fd2505ff18a
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 580b565ad2eeecc0c5923963243ee63c1069b86f
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85904409"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387141"
 ---
 # <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde LinkedIn öğrenme avantajı
 
@@ -36,7 +36,7 @@ LinkedIn Premium aboneliğinizi ve LinkedIn öğrenme avantajını etkinleştirm
 
 5. Kişisel bilgilerinizi girin, bir Kullanıcı adı ve parola seçin ve **Şimdi Birleştir**' e tıklayın.
 
-6. Ülke ve posta kodunuzu belirtip **İleri**' ye tıklayın.
+6. Ülkenizi/bölgenizi ve ZIP kodunuzu belirtip **İleri**' ye tıklayın.
 
 7. Bundan sonra, profiliniz için kendinize ilişkin bazı bilgiler sağlarsınız.  Öğrenci olup olmadığını ve en son iş unvanlarınızı, şirketinizi ve sektörünü sağlayıp sağlamadığınızı belirtin.
 

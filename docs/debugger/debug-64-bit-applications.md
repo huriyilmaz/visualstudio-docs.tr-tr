@@ -16,12 +16,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ca7feade173db9ccf8c86daaeb1399ef3e10a08b
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.openlocfilehash: 6cc84f690962cd83f45245758f88f7fd8261e500
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85350777"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386257"
 ---
 # <a name="debug-64-bit-applications"></a>64 Bit Uygulamalarda Hata Ayıklama
 Yerel bilgisayarda veya uzak bir bilgisayarda çalışan 64 bitlik bir uygulamada hata ayıklaması yapabilirsiniz.
@@ -50,7 +50,7 @@ Yerel bilgisayarda veya uzak bir bilgisayarda çalışan 64 bitlik bir uygulamad
 
 - Bilgisayarınızda, ağ yığınının güvenilmez hale gelmesinin ve localhost üzerinden gelen paketleri bıraktığı ağ güvenlik yazılımı yüklü. Tüm ağ güvenlik yazılımlarını devre dışı bırakıp çözmediğine bakın. Bu durumda, yazılımın localhost trafiğiyle çakışmasını engelleyen ağ güvenliği yazılım satıcınıza rapor edin.
 
-- Visual Studio ile bir askıda kalma veya performans sorunuyla karşılaşçalıştırıyorsunuz. Sorun düzenli olarak gerçekleşmişse, Visual Studio (devenv.exe) ve çalışan işlemi (msvsmon.exe) dökümünü toplayabilir ve bunları Microsoft 'a gönderebilirsiniz. Sorun bildirme hakkında daha fazla bilgi için bkz. [Visual Studio Ile sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md).
+- Visual Studio 'Nun yanıt vermediği bir sorun veya diğer performans sorunları üzerinde çalışıyorsunuz. Sorun düzenli olarak gerçekleşmişse, Visual Studio (devenv.exe) ve çalışan işlemi (msvsmon.exe) dökümünü toplayabilir ve bunları Microsoft 'a gönderebilirsiniz. Sorun bildirme hakkında daha fazla bilgi için bkz. [Visual Studio Ile sorun bildirme](../ide/how-to-report-a-problem-with-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Devam | Microsoft Dokümanlar
+title: 'IDebugProgram2:: Continue | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,20 +15,20 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 6d04445a7a1c444f30a0ef5c156dcd7ad744c6f1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: ee73ea3a9b65635cf14d4d345bf22de4e9593989
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80723068"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387089"
 ---
 # <a name="idebugprogram2continue"></a>IDebugProgram2::Continue
-Bu programı durmuş durumdaki bir durumdan çalıştırmaya devam ediyor. Önceki yürütme durumu (adım gibi) korunur ve program yeniden yürütmeye başlar.
+Bu programı durdurulmuş bir durumdan çalıştırmaya devam eder. Önceki yürütme durumu (bir adım gibi) korunur ve program yeniden yürütülmeye başlar.
 
 > [!NOTE]
-> Bu yöntem amortismana hazırdır. Bunun yerine [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md) yöntemini kullanın.
+> Bu yöntem kullanım dışıdır. Bunun yerine [Continue](../../../extensibility/debugger/reference/idebugprocess3-continue.md) metodunu kullanın.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Continue( 
@@ -43,16 +43,16 @@ int Continue( 
 ```
 
 ## <a name="parameters"></a>Parametreler
-`pThread`[içinde] İş parçacığı temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
+`pThread`'ndaki İş parçacığını temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, kaç programın debugged olduğuna veya hangi programın durdurma olayı nın oluşturulduğuna bakılmaksızın bu programda çağrılır. Uygulama önceki yürütme durumunu (adım gibi) tutmalı ve önceki yürütmeyi tamamlamadan önce hiç durmamış gibi yürütmeye devam etmelidir. Diğer bir deyişle, bu programdaki bir iş parçacığı bir adım-over işlemi yapıyorsa ve başka bir program durdurulduğu için durdurulduysa ve sonra bu yöntem çağrıldıysa, programın özgün adım tamamlama işlemini tamamlaması gerekir.
+ Bu yöntem, kaç tane program ayıklandığına veya durdurma olayını hangi programın üretdiğine bakılmaksızın bu programda çağrılır. Uygulamanın önceki yürütme durumunu (bir adım gibi) yürütmesi ve yürütülmeye devam etmeden önce hiçbir daha durdurulmamış olsa da yürütmeye devam etmesi gerekir. Diğer bir deyişle, bu programdaki bir iş parçacığı adım adım bir işlem yapıyor ve başka bir program durdurulduğu için durdurulduysa ve bu yöntem çağrıldıysa, program özgün adım adım işlemi tamamlamalıdır.
 
 > [!WARNING]
-> Bu aramayı işlerken Bir durdurma olayını veya [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) anına anında (eşzamanlı) bir olay göndermeyin; aksi takdirde hata ayıklama asılabilir.
+> Bu çağrıyı gerçekleştirirken [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) için bir durdurma olayı veya anında (zaman uyumlu) olay göndermeyin; Aksi takdirde hata ayıklayıcı yanıt vermeyi durdurabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)

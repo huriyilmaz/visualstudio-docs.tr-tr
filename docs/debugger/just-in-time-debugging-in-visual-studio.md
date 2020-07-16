@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb66615abbd7124fd6b781598bd8eb28ea34756d
-ms.sourcegitcommit: 0b90e1197173749c4efee15c2a75a3b206c85538
+ms.openlocfilehash: 3155c2cdc9ea3dc5208a52e5fe37f697a4ad5ef6
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903871"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386127"
 ---
 # <a name="disable-the-just-in-time-debugger"></a>Anında Hata Ayıklayıcı’yı devre dışı bırakma
 
@@ -32,15 +32,15 @@ Visual Studio yüklü değilse, betik hata ayıklamayı veya sunucu tarafı hata
 
 - Bir Web uygulamasını çalıştırmaya çalışıyorsanız, betik hata ayıklamayı devre dışı bırakın:
 
-  Windows **Denetim Masası** 'nda **ağ ve Internet** > **Internet seçenekleri** > , **betik hata ayıklamayı devre dışı bırak (Internet Explorer)** ve **betik hata ayıklamayı devre dışı bırak (diğer)** seçeneğini Tam adımlar ve ayarlar, Windows sürümünüze ve tarayıcınıza bağlıdır.
+  Windows **Denetim Masası**  >  **Ağ ve Internet**  >  **Internet seçenekleri**'nde, **betik hata ayıklamayı devre dışı bırak (Internet Explorer)** ve **betik hata ayıklamayı devre dışı bırak (diğer)** seçeneğini Tam adımlar ve ayarlar, Windows sürümünüze ve tarayıcınıza bağlıdır.
 
   ![JıT Internet seçenekleri](../debugger/media/jitinternetoptions.png "JıT Internet seçenekleri")
 
 - IIS 'de bir ASP.NET Web uygulaması barındırıyorsanız, sunucu tarafı hata ayıklamayı devre dışı bırakın:
 
   1. IIS Yöneticisi **Özellikler görünümünde**, **ASP.net** bölümü altında, **.NET derlemesi**' ne çift tıklayın veya seçin ve ardından **Eylemler** bölmesinde **özelliği aç** ' ı seçin.
-  1. **Hata ayıklama** > **davranışı** altında **false**' ı seçin. Adımlar, IIS 'nin eski sürümlerinde farklıdır.
+  1. **Davranış**  >  **hata ayıklaması**altında **yanlış**' ı seçin. Adımlar, IIS 'nin eski sürümlerinde farklıdır.
 
 Tam zamanında hata ayıklamayı devre dışı bıraktıktan sonra, uygulama hatayı işleyebilir ve normal şekilde çalıştırabilir.
 
-Uygulamada hala işlenmeyen bir hata varsa, bir hata iletisi görebilirsiniz veya uygulama kilitlenebilir veya askıda kalabilir. Uygulama, hata düzeltilene kadar normal şekilde çalışmaz. Uygulamanın sahibine başvurarak bu uygulamayı çözmesini deneyebilirsiniz.
+Uygulamada hala işlenmeyen bir hata varsa, bir hata iletisi görebilirsiniz veya uygulama kilitlenebilir veya yanıt vermeyi durdurabilir. Uygulama, hata düzeltilene kadar normal şekilde çalışmaz. Uygulamanın sahibine başvurarak bu uygulamayı çözmesini deneyebilirsiniz.

@@ -1,7 +1,7 @@
 ---
-title: Test Gezgini ile birim testlerini çalıştırma ve hata ayıklama
-description: Visual Studio 'da test Gezgini ile testlerin nasıl çalıştırılacağını öğrenin. Bu konu, derleme sonrasında otomatik test çalıştırmalarını etkinleştirme, test sonuçlarını görüntüleme, test listesini gruplandırma ve filtreleme, çalma listeleri oluşturma, testleri hata ayıklama ve test kısayollarını kullanma konularını ele alır.
-ms.date: 07/29/2019
+title: Test Gezgini ile birim testleri çalıştırma
+description: Visual Studio 'da test Gezgini ile testlerin nasıl çalıştırılacağını öğrenin. Bu konu, derleme sonrasında otomatik test çalıştırmalarını etkinleştirme, test sonuçlarını görüntüleme, test listesini gruplandırma ve filtreleme, çalma listeleri oluşturma ve test kısayollarını kullanma konularını ele alır.
+ms.date: 07/14/2020
 ms.topic: how-to
 f1_keywords:
 - vs.unittesting.testexplorer.overview
@@ -10,24 +10,31 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 35bd6f26b56ea7c3a1d578e5721504a91f60b74c
-ms.sourcegitcommit: 46547f0bf3fc1a81e1a906762106dec5855e6e4a
+ms.openlocfilehash: c2d7dc38f1a25826ba275738cd8e758a2ad5d90e
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86156874"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386647"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Test Gezgini ile birim testleri çalıştırma
 
-Visual Studio 'dan veya üçüncü taraf birim testi projelerinden birim testlerini çalıştırmak için test Gezgini 'ni kullanın. Testleri kategoriler halinde gruplamak, test listesini filtrelemek ve testlerin çalma listelerini oluşturmak, kaydetmek ve çalıştırmak için test Gezgini ' ni de kullanabilirsiniz. Testlerde hata ayıklama yapabilir ve test performansını ve kod kapsamını çözümleyebilirsiniz.
+Visual Studio 'dan veya üçüncü taraf birim testi projelerinden birim testlerini çalıştırmak için test Gezgini 'ni kullanın. Testleri kategoriler halinde gruplamak, test listesini filtrelemek ve testlerin çalma listelerini oluşturmak, kaydetmek ve çalıştırmak için test Gezgini ' ni de kullanabilirsiniz. Ayrıca kod kapsamını ve [hata ayıklama birim testlerini](../test/debug-unit-tests-with-test-explorer.md)analiz edebilirsiniz.
+
+**Test Gezgini** , bir çözümde ve üretim kodu projelerinin parçası olan test sınıflarından birden çok test projesinin testlerini çalıştırabilir. Test projeleri, farklı birim testi çerçeveleri kullanabilir. Test altındaki kod .NET için yazıldığında, hedef kodun dilinden bağımsız olarak, test projesi de .NET ' i hedefleyen herhangi bir dilde yazılabilir. Yerel C/C++ kod projeleri bir C++ birim testi çerçevesi kullanılarak test edilmiş olmalıdır.
+
+## <a name="build-your-test-project"></a>Test projenizi derleme
+
+Visual Studio çözümünüzde ayarlanmış bir test projeniz yoksa, önce bir test projesi oluşturmanız ve derlemeniz gerekir.
+
+- [Birim testini kullanmaya başlama (.NET)](../test/getting-started-with-unit-testing.md)
+- [C/C++ için birim testleri yazma](writing-unit-tests-for-c-cpp.md)
 
 Visual Studio hem yönetilen hem de yerel kod için Microsoft birim testi çerçeveleri içerir. Ancak, test Gezgini, test Gezgini bağdaştırıcısı uygulayan herhangi bir birim test çerçevesini de çalıştırabilir. Üçüncü taraf birim testi çerçevelerini yükleme hakkında daha fazla bilgi için bkz. [üçüncü taraf birim testi çerçeveleri yükleme](../test/install-third-party-unit-test-frameworks.md)
 
-**Test Gezgini** , bir çözümde ve üretim kodu projelerinin parçası olan test sınıflarından birden çok test projesinin testlerini çalıştırabilir. Test projeleri, farklı birim testi çerçeveleri kullanabilir. Test altındaki kod .NET için yazıldığında, hedef kodun dilinden bağımsız olarak, test projesi de .NET ' i hedefleyen herhangi bir dilde yazılabilir. Yerel C/C++ kod projeleri bir C++ birim testi çerçevesi kullanılarak test edilmiş olmalıdır. Daha fazla bilgi için bkz. [C/C++ için birim testleri yazma](writing-unit-tests-for-c-cpp.md).
-
 ## <a name="run-tests-in-test-explorer"></a>Testleri test Gezgini 'nde Çalıştır
 
-[Test projesi](../test/getting-started-with-unit-testing.md)oluşturduğunuzda, testler test Gezgini 'nde görünür. Test Gezgini görünür değilse, Visual Studio menüsünden **Test** ' i seçin, **Windows**' u ve ardından **Test Gezgini**' ni seçin.
+Test projesi oluşturduğunuzda, testler test Gezgini 'nde görünür. Test Gezgini görünür değilse, Visual Studio menüsünden **Test** ' i seçin, **Windows**' u ve ardından **Test Gezgini**' ni seçin.
 
 ::: moniker range="vs-2017"
 ![Birim test Gezgini](../test/media/ute_failedpassednotrunsummary.png)
@@ -304,23 +311,6 @@ FilterName:"Criteria" -FilterName:"SubsetCriteria"
 
 Örneğin, adında " `FullName:"MyClass" - FullName:"PerfTest"` PerfTest" da dahil olan testler hariç, adında "MyClass" içeren tüm testleri döndürür.
 
-## <a name="debug-and-analyze-unit-tests"></a>Hata ayıklama ve birim testlerini analiz etme
-
-Testleriniz için bir hata ayıklama oturumu başlatmak üzere test Gezgini ' ni kullanabilirsiniz. Visual Studio hata ayıklayıcı ile kodunuzda adım adım geçiş, birim testleri ve test edilen proje arasında sorunsuz bir şekilde geri ve ileri doğru bir şekilde gerçekleşir. Hata ayıklamayı başlatmak için:
-
-1. Visual Studio düzenleyicisinde, hata ayıklamak istediğiniz bir veya daha fazla test yöntemlerinde bir kesme noktası ayarlayın.
-
-    > [!NOTE]
-    > Test yöntemleri herhangi bir sırada çalıştırılabildiğinden, hata ayıklamak istediğiniz tüm test yöntemlerinde kesme noktaları ayarlayın.
-
-2. Test Gezgini 'nde test yöntemlerini seçin ve sağ tıklama menüsünde **Seçili testlerin hatalarını ayıkla** ' yı seçin.
-
-   Hata ayıklayıcı hakkında daha fazla bilgi için bkz. [Visual Studio 'Da hata ayıklama](../debugger/debugger-feature-tour.md).
-
-### <a name="diagnose-test-method-performance-issues"></a>Test yöntemi performans sorunlarını tanılama
-
-Bir test yönteminin neden çok fazla zaman aldığını tanılamak için test Gezgini 'nde yöntemi seçin ve sağ tıklama menüsünde **profil seçili test** ' i seçin. Bkz. [izleme profili oluşturma raporu](../profiling/understanding-instrumentation-data-values.md?view=vs-2017).
-
 ### <a name="analyze-unit-test-code-coverage"></a>Birim testi kod kapsamını analiz etme
 
 Visual Studio Enterprise sürümünde kullanılabilir olan Visual Studio kod kapsamı aracını kullanarak birim testleriniz tarafından test edilen ürün kodu miktarını belirleyebilirsiniz. Seçili testlerde veya bir Çözümdeki tüm testlerde kod kapsamını çalıştırabilirsiniz.
@@ -351,7 +341,7 @@ Daha fazla bilgi için bkz. kod [kapsamını kullanarak ne kadar kodun test edil
 
 ## <a name="test-shortcuts"></a>Test kısayolları
 
-Testler test Gezgini 'nden, test üzerindeki kod düzenleyicisine sağ tıklayıp **Test Çalıştır** ' ı seçerek veya Visual Studio 'Daki varsayılan [Test Gezgini kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL) kullanılarak çalıştırılabilir. Bazı kısayollar bağlam tabanlıdır. Bu, imlecinizin kod düzenleyicisinde olduğu yere göre testleri çalıştırdıkları veya hata ayıkladıkları anlamına gelir. İmlecinizin bir test yöntemi içindeyse, bu test yöntemi çalışır. İmlecinizin sınıf düzeyi ise, o sınıftaki tüm testler çalıştırılır. Bu, ad alanı düzeyi için de aynıdır.
+Testler test Gezgini 'nden, test üzerindeki kod düzenleyicisine sağ tıklayıp **Test Çalıştır** ' ı seçerek veya Visual Studio 'Daki varsayılan [Test Gezgini kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL) kullanılarak çalıştırılabilir. Bazı kısayollar bağlam tabanlıdır. Bu, imlecinizin kod düzenleyicisinde olduğu yere göre testleri çalıştırdıkları veya [hata ayıkladıkları](../test/debug-unit-tests-with-test-explorer.md) anlamına gelir. İmlecinizin bir test yöntemi içindeyse, bu test yöntemi çalışır. İmlecinizin sınıf düzeyi ise, o sınıftaki tüm testler çalıştırılır. Bu, ad alanı düzeyi için de aynıdır.
 
 |Sık kullanılan komutlar| Klavye Kısayolları|
 |-|------------------------|
@@ -366,5 +356,6 @@ Testler test Gezgini 'nden, test üzerindeki kod düzenleyicisine sağ tıklayı
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kodunuzun birim testi](../test/unit-test-your-code.md)
+- [Test Gezgini ile birim testlerinde hata ayıklama](../test/debug-unit-tests-with-test-explorer.md)
 - [64 bitlik bir işlem olarak birim testi çalıştırma](../test/run-a-unit-test-as-a-64-bit-process.md)
 - [Test Gezgini Hakkında SSS](test-explorer-faq.md)

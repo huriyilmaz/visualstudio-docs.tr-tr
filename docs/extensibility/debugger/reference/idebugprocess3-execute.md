@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::Yürüt | Microsoft Dokümanlar
+title: 'IDebugProcess3:: Execute | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,20 +15,20 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 444eadcce38adbd8ecd8655e8e0dc3f36f446848
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: baa607e62732cdf0e04413e07966658bb6a0b8f4
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80723685"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386517"
 ---
 # <a name="idebugprocess3execute"></a>IDebugProcess3::Execute
-Bu işlemi durdurulan bir durumdan çalıştırmaya devam ediyor. Önceki yürütme durumu (adım gibi) temizlenir ve işlem yeniden yürütmeye başlar.
+Bu işlemi durdurulmuş bir durumdan çalıştırmaya devam eder. Önceki yürütme durumu (bir adım gibi) temizlenir ve işlem yeniden yürütülmeye başlar.
 
 > [!NOTE]
-> Bu yöntem [Yürüt yerine](../../../extensibility/debugger/reference/idebugprogram2-execute.md)kullanılmalıdır.
+> Bu yöntem, [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md)yerine kullanılmalıdır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Execute(
@@ -44,16 +44,16 @@ int Execute(
 
 ## <a name="parameters"></a>Parametreler
 `pThread`\
-[içinde] İş parçacığı yürütmek için temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
+'ndaki Yürütülecek iş parçacığını temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Kullanıcı, başka bir işlemin iş parçacığında durdurulmuş bir durumdan yürütmeye başladığında, bu yöntem bu işleme çağrılır. Kullanıcı IDE'deki **Hata Ayıklama** menüsünden **Başlat** komutunu seçtiğinde bu yöntem de çağrılır. Bu yöntemin uygulanması, işlemdeki geçerli iş parçacığıüzerinde [Devam](../../../extensibility/debugger/reference/idebugthread2-resume.md) yöntemini çağırmak kadar basit olabilir.
+ Kullanıcı başka bir işlemin iş parçacığında durdurulmuş bir durumdan yürütülmeye başladığında, bu yöntem bu işlem üzerinde çağrılır. Bu yöntem, Kullanıcı IDE 'deki **hata ayıklama** menüsünden **Başlat** komutunu seçtiğinde de çağrılır. Bu yöntemin uygulanması, işlemdeki geçerli iş parçacığında [sürdürülmesi](../../../extensibility/debugger/reference/idebugthread2-resume.md) yöntemini çağırmak kadar basit olabilir.
 
 > [!WARNING]
-> Bu aramayı işlerken Bir durdurma olayını veya [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) anına anında (eşzamanlı) bir olay göndermeyin; aksi takdirde hata ayıklama asılabilir.
+> Bu çağrıyı gerçekleştirirken [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) için bir durdurma olayı veya anında (zaman uyumlu) olay göndermeyin; Aksi takdirde hata ayıklayıcı yanıt vermeyi durdurabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)

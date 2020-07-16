@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Adım | Microsoft Dokümanlar
+title: 'IDebugProgram2:: Step | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -15,20 +15,20 @@ ms.workload:
 dev_langs:
 - CPP
 - CSharp
-ms.openlocfilehash: 194e72eba5a3f137e4650752a090d91ad7c402fa
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: c6a70a96014ebf18984c75df60cfeb75ba0d0577
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80722765"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387245"
 ---
 # <a name="idebugprogram2step"></a>IDebugProgram2::Step
 Bir adım gerçekleştirir.
 
 > [!NOTE]
-> Bu yöntem amortismana hazırdır. Bunun yerine [Adım](../../../extensibility/debugger/reference/idebugprocess3-step.md) yöntemini kullanın.
+> Bu yöntem kullanım dışıdır. Bunun yerine [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md) metodunu kullanın.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Step( 
@@ -48,22 +48,22 @@ int Step( 
 
 ## <a name="parameters"></a>Parametreler
 `pThread`\
-[içinde] Adımlanan iş parçacığı temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
+'ndaki Bulanan iş parçacığını temsil eden bir [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.
 
 `sk`\
-[içinde] Adım türünü belirten [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) numaralandırmasından bir değer.
+'ndaki Adım türünü belirten [stepkind](../../../extensibility/debugger/reference/stepkind.md) numaralandırmasındaki bir değer.
 
 `step`\
-[içinde] [Stepbirimi](../../../extensibility/debugger/reference/stepunit.md) numaralandırmasından bir değer (örneğin, deyim veya yönergeile) adım birimini belirtir.
+'ndaki Adım birimini belirten [stepunit](../../../extensibility/debugger/reference/stepunit.md) numaralandırmasındaki bir değer (örneğin, ifadeye veya yönergeye göre).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- İş parçacıkları arasında iş parçacığı eşitleme veya iletişim olması durumunda, belirli bir iş parçacığı adımlanırken programdaki diğer iş parçacıkları çalıştırılmalıdır.
+ İş parçacıkları arasında herhangi bir iş parçacığı eşitlemesi veya iletişim varsa, belirli bir iş parçacığı adımlarken programdaki diğer iş parçacıklarının çalışması gerekir.
 
 > [!WARNING]
-> Bu aramayı işlerken Bir durdurma olayını veya [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) anına anında (eşzamanlı) bir olay göndermeyin; aksi takdirde hata ayıklama asılabilir.
+> Bu çağrıyı gerçekleştirirken [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) için bir durdurma olayı veya anında (zaman uyumlu) olay göndermeyin; Aksi takdirde hata ayıklayıcı yanıt vermeyi durdurabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

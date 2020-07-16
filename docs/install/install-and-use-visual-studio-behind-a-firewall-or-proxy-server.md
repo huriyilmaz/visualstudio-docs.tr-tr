@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 09340940796e20f679c3c9bbad3d55880b25ab7a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: ce11689cc8cba45473a918668a07ddcc6cdc2ee3
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283482"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387167"
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>Visual Studio ve Azure hizmetlerini bir güvenlik duvarı veya proxy sunucusunun arkasında yükleyip kullanma
 
@@ -43,7 +43,7 @@ Visual Studio Yükleyicisi, çeşitli etki alanlarından ve bunların karşıdan
 
 #### <a name="microsoft-domains"></a>Microsoft etki alanları
 
-| Domain | Amaç |
+| Etki alanı | Amaç |
 | - | - |
 | go.microsoft.com | Kurulum URL 'SI çözümlemesi |
 | aka.ms | Kurulum URL 'SI çözümlemesi |
@@ -65,7 +65,7 @@ Visual Studio Yükleyicisi, çeşitli etki alanlarından ve bunların karşıdan
 
 #### <a name="non-microsoft-domains"></a>Microsoft dışı etki alanları
 
-| Domain | Bu iş yüklerini yükleme |
+| Etki alanı | Bu iş yüklerini yükleme |
 | - | - |
 | archive.apache.org | JavaScript ile mobil geliştirme (Cordova) |
 | cocos2d-x.org | C++ ile oyun geliştirme (Cocos) |
@@ -89,19 +89,19 @@ Visual Studio Yükleyicisi, çeşitli etki alanlarından ve bunların karşıdan
 
 Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hizmetlerini kullanırken istediğiniz her şeye erişiminizin olduğundan emin olmak için, bir izin verilenler listesine eklemeniz gereken URL 'Ler ve açmak isteyebileceğiniz bağlantı noktaları ve protokoller aşağıda verilmiştir.
 
-| Hizmet veya senaryo | DNS uç noktası | Protokol<br/>/Port | Description |
+| Hizmet veya senaryo | DNS uç noktası | Protokol<br/>/Port | Açıklama |
 | - | - | -: | - | - |
 | URL<br>çözüm | go.microsoft.com<br><br>aka.ms | | URL 'Leri kısaltmak için kullanılır ve daha uzun URL 'Ler olarak çözümlenir |
 | Başlangıç Sayfası | vsstartpage.blob.core.windows.net | 443 | Başlangıç sayfasında gösterilen geliştirici haberlerini göstermek için kullanılır (yalnızca Visual Studio 2017) |
 | Hedeflenen<br> Bildirim <br>Hizmet | targetednotifications-tm.trafficmanager.net <br><br>www.research.net | 443<br><br>443 | Yalnızca belirli makine/kullanım senaryosu türleri için geçerli olan bir listeye yönelik genel bildirim listesini filtrelemek için kullanılır |
-| Dahili numara <br>Güncelleştirme denetimi | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Yüklü bir uzantının kullanılabilir bir güncelleştirmesi olduğunda bildirim sağlamak için kullanılır <br><br> Oturum açma konumu olarak kullanılır |
+| Uzantı <br>Güncelleştirme denetimi | marketplace.visualstudio.com<br><br>&#42;. windows.net <br>&#42;. microsoftonline.com <br>&#42;. live.com | 443 | Yüklü bir uzantının kullanılabilir bir güncelleştirmesi olduğunda bildirim sağlamak için kullanılır <br><br> Oturum açma konumu olarak kullanılır |
 | AI projesi <br>Tümleştirme | az861674.vo.msecnd.net | 443<br> | Yeni projeleri kayıtlı Application Insights hesabınıza kullanım verilerini gönderecek şekilde yapılandırmak için kullanılır |
 | Kod lens | codelensprodscus1su0. app.<br>codelens.visualstudio.com | 443 | Bir dosyanın en son ne zaman güncelleştirildiği, değişiklikler zaman çizelgesi, değişen iş öğeleri, yazarlar ve daha fazlası ile ilgili düzenleyicide bilgi sağlamak için kullanılır |
 | Deneysel <br>özellik etkinleştirme | visualstudio-devdiv-c2s.msedge.net | 80 | Deneysel yeni özellikleri veya özellik değişikliklerini etkinleştirmek için kullanılır |
 | "Rozet" kimliği <br>(Kullanıcı adı ve avatar)<br>ve <br>Dolaşım ayarları | app.vssps.visualstudio.com <br><br>app.vsspsext.visualstudio.com<br><br>app.vssps.visualstudio.com<br><br> ns-sb2-prod-ch1-002.cloudapp.net <br><br>az700632.vo.msecnd.net<br><br>api.vstsusers.visualstudio.com/profiles/* | 443 | IDE 'de kullanıcının adını ve avatarını göstermek için kullanılır <br><br> Ayar değişikliklerinin bir makineden diğerine dolaşımını sağlamak için kullanılır |
 | Uzak ayarlar | az700632.vo.msecnd.net | 443 | Visual Studio 'da sorunlara neden olan bilinen uzantıları kapatmak için kullanılır |
 | Windows araçları | developer.microsoft.com <br><br>dev.windows.com  <br><br>appdev.microsoft.com | https/443 | Windows uygulama mağazası senaryoları için kullanılır |
-| JSON şeması <br>Bulma <br><br>JSON şeması <br>Tanım<br><br>JSON şeması <br>İçin destek <br>Azure Kaynakları | json.schemastore.org <br>schemastoreorg.azurewebsites.net<br><br>json-schema.org<br><br>schema.management.azure.com | http/80<br>https/443<br><br>http/80<br><br>https/443 | Kullanıcının JSON belgelerini düzenlenirken kullanabileceği JSON şemalarını bulma ve indirme için kullanılır <br><br>JSON için meta doğrulama şemasını almak için kullanılır<br><br>Azure Resource Manager dağıtım şablonlarının geçerli şemasını almak için kullanılır |
+| JSON şeması <br>Keşfetme <br><br>JSON şeması <br>Tanım<br><br>JSON şeması <br>İçin destek <br>Azure Kaynakları | json.schemastore.org <br>schemastoreorg.azurewebsites.net<br><br>json-schema.org<br><br>schema.management.azure.com | http/80<br>https/443<br><br>http/80<br><br>https/443 | Kullanıcının JSON belgelerini düzenlenirken kullanabileceği JSON şemalarını bulma ve indirme için kullanılır <br><br>JSON için meta doğrulama şemasını almak için kullanılır<br><br>Azure Resource Manager dağıtım şablonlarının geçerli şemasını almak için kullanılır |
 | NPM paketi <br>bulma | Skimdb.npmjs.com <br><br>Registry.npmjs.org <br><br>Api.npms.io | https/443<br><br>http/80 &<br> https/443<br>https/443 | NPM paketlerini aramak için gereklidir ve web projelerinde istemci tarafı betik paketi yüklemesi için kullanılır |
 | Bower paketi<br> simgeler<br><br>Bower paketi <br>search | Bower.io <br><br>bowercache.azurewebsites.net <br>go.microsoft.com <br>Registry.bower.io | http/80<br><br>https/443<br>http/80<br>https/443 | Varsayılan Bower paket simgesini sağlar  <br><br>Bower paketlerini arama olanağı sağlar |
 | NuGet<br><br>NuGet paketi<br> bulma | api.nuget.org <br>www.nuget.org <br>nuget.org <br>azuresearch-usnc.nuget.org <br>azuresearch-ussc.nuget.org <br>licenses.nuget.org <br>nuget.cdn.azure.cn <br>azuresearch-ea.nuget.org <br>azuresearch-sea.nuget.org <br><br>crl3.digicert.com <br>crl4.digicert.com <br>ocsp.digicert.com <br>cacerts.digicert.com | https/443<br><br>http/80 &<br>https/443<br> | İmzalanmış NuGet paketlerini doğrulamak için kullanılır.<br><br>NuGet paketlerini ve sürümlerini aramak için gereklidir |
@@ -111,8 +111,8 @@ Bir güvenlik duvarı veya proxy sunucusu arkasında Visual Studio veya Azure hi
 | Python paketi <br>bulma<br><br>Python paketi <br>yönetim<br><br>Yeni <br>Python <br> proje <br>templates | pypi.org<br> <br>pypi.python.org <br>bootstrap.pypa.io<br><br>go.microsoft.com | https/443 | PIP paketleri arama olanağı sağlar<br><br>Eksik ise PIP 'yi otomatik olarak yüklemek için kullanılır <br><br>Aşağıdaki yeni Python proje şablonlarını cookiecutter şablon URL 'Lerine çözümlemek için kullanılır:<br> -Sınıflandırıcı projesi<br>-Kümeleme projesi <br> -Gerileme projesi <br> -PyKinect kullanan PyGame <br> -Pyvot projesi |
 | Office Web <br>eklenti <br> Bildirim <br>Doğrulama <br>Hizmet | verificationservice.osi.office.net | https/443 | Office Web eklentileri için bildirimleri doğrulamak için kullanılır |
 | SharePoint ve <br>Office Eklentileri | sharepoint.com<br> office365.com<br> microsoftonline.com <br> outlook.com | https/443 | SharePoint Online ve Office 365 ' e SharePoint ve Office eklentilerini yayımlamak ve test etmek için kullanılır |
-| İş akışı Yöneticisi <br>Test hizmeti<br> Host | | http/12292 | SharePoint eklentilerini iş akışlarıyla test etmek için otomatik olarak oluşturulan bir güvenlik duvarı kuralı |
-| Otomatik olarak toplanan <br>güvenilirlik istatistikleri <br>ve diğer <br>Müşteri deneyimi <br>Geliştirme programları (CEIP)<br> Azure SDK ve <br>SQL araçları için <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https/443 | Kullanıcıdan Microsoft 'a güvenilirlik istatistikleri (kilitlenme/askıda kalma verileri) göndermek için kullanılır. Windows Hata Bildirimi etkinse gerçek kilitlenme/askıda kalma dökümleri yine de karşıya yüklenir. Yalnızca istatistiksel bilgiler bastırılır; <br>Visual Studio 'ya yönelik Azure Araçları SDK uzantısı için anonim kullanım düzenlerini açığa çıkarmak için ve Visual Studio 'ya SQL araçları için kullanım desenleri için kullanılır |
+| İş akışı Yöneticisi <br>Test hizmeti<br> Konak | | http/12292 | SharePoint eklentilerini iş akışlarıyla test etmek için otomatik olarak oluşturulan bir güvenlik duvarı kuralı |
+| Otomatik olarak toplanan <br>güvenilirlik istatistikleri <br>ve diğer <br>Müşteri deneyimi <br>Geliştirme programları (CEIP)<br> Azure SDK ve <br>SQL araçları için <br><br> | vortex.data.microsoft.com<br> <br>dc.services.visualstudio.com | https/443 | Kullanıcıdan Microsoft 'a güvenilirlik istatistikleri (kilitlenme/yanıt vermeyen veriler) göndermek için kullanılır. Windows Hata Bildirimi etkinse gerçek kilitlenme/yanıt vermeyen dökümler yine de karşıya yüklenir. Yalnızca istatistiksel bilgiler bastırılır; <br>Visual Studio 'ya yönelik Azure Araçları SDK uzantısı için anonim kullanım düzenlerini açığa çıkarmak için ve Visual Studio 'ya SQL araçları için kullanım desenleri için kullanılır |
 | Visual Studio <br> Müşteri deneyimi <br>Geliştirme programı (CEIP) <br><br>PerfWatson.exe | vortex.data.microsoft.com<br>dc.services.visualstudio.com<br>visualstudio-devdiv-c2s.msedge.net<br>az667904.vo.msecnd.net <br>scus-breeziest-in.cloudapp.net<br> | https/443 | Anonim kullanım desenlerini ve hata günlüklerini toplamak için kullanılır <br><br>UI dondurma sorunlarını izlemek için kullanılır |
 | Oluşturma ve<br>Yönetim <br>Azure kaynakları | management.azure.com <br>management.core.windows.net | https/443 | Web uygulamalarının, Azure Işlevlerinin veya Webişlerin yayımlanmasını desteklemek üzere Azure Web siteleri veya diğer kaynaklar oluşturmak için kullanılır |
 | Web yayımlama araçları güncelleştirildi <br>denetimler ve uzantılar <br>Öneriler | marketplace.visualstudio.com | https/443 | Güncelleştirilmiş yayımlama araçları 'nın kullanılabilirliğini denetlemek için kullanılır. Devre dışı bırakılırsa, Web yayımlaması için olası bir önerilen uzantı gösterilmeyebilir |

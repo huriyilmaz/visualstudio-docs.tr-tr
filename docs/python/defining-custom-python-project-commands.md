@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f0e56b7db76d308a55f7d6bd24930e258385b0f9
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 6e9e7fe418528bb888672b1b73d421d811b9e69e
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85540874"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386991"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>Python projeleri için özel komutlar tanımlama
 
@@ -133,7 +133,7 @@ Bu bölümde, özel komutlar hakkında bilgi edinmek için, bir projenin başlan
 
 | Öznitelik | Gerekli | Açıklama |
 | --- | --- | --- |
-| Name | Yes | Visual Studio projesi içindeki komut için tanımlayıcı. Bu ad, `<PythonCommands>` komutun Python alt menüsünde görünmesi için özellik grubuna eklenmelidir. |
+| Ad | Yes | Visual Studio projesi içindeki komut için tanımlayıcı. Bu ad, `<PythonCommands>` komutun Python alt menüsünde görünmesi için özellik grubuna eklenmelidir. |
 | Etiketle | Yes | Python alt menüsünde görünen kullanıcı arabirimi görünen adı. |
 | Döndürülenler | Yes | `@(Commands)`, Hedefi bir komut olarak tanıtan içermelidir. |
 
@@ -384,7 +384,7 @@ Veya öğelerinin içeriğinin yanlış olduğunu gösterir `<Target>` `<CreateP
 
 Tanımlı olmayan bir özelliğe başvurursanız, öznitelik değerleri boş olabilir. Örneğin, belirtecini kullanırsanız `$(StartupFile)` ancak projede hiç başlangıç dosyası tanımlanmamışsa, belirteç boş bir dizeye dönüşür. Böyle durumlarda, varsayılan bir değer tanımlamak isteyebilirsiniz. Örneğin, proje özelliklerinde bir sunucu başlangıç dosyası belirtmediyse, **Sunucu Çalıştır** ve **hata ayıklama sunucusu Çalıştır** , *Manage.py* , Flask ve docgo proje şablonlarında varsayılan olarak
 
-### <a name="visual-studio-hangs-and-crashes-when-running-the-command"></a>Komutu çalıştırırken Visual Studio askıda kalıyor ve kilitleniyor
+### <a name="visual-studio-stops-responding-and-crashes-when-running-the-command"></a>Komutu çalıştırırken Visual Studio yanıt vermeyi ve kilitlenmeleri durduruyor
 
 Büyük olasılıkla, ile bir konsol komutu çalıştırmaya çalışıyoruz `ExecuteIn="output"` , bu durumda Visual Studio çıktıyı ayrıştırmaya çalışırken kilitlenme olabilir. Bunun yerine `ExecuteIn="console"` kullanın. (Bkz. [sorun 3682](https://github.com/Microsoft/PTVS/issues/3681).)
 

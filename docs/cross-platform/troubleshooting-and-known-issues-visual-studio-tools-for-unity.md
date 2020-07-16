@@ -10,12 +10,12 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 0173c076a04c4c725565e63c41396b7c4d235952
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: 7858846585467de3b5b820902938d6019b0d09ff
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85815064"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86386270"
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>Sorun giderme ve bilinen sorunlar (Unity için Visual Studio Araçları)
 
@@ -50,9 +50,9 @@ Bu, sorununuzu çözmelidir. Sorunu yaşamaya devam etmeniz durumunda, Visual St
  devenv /setup
 ```
 
-## <a name="visual-studio-hangs"></a>Visual Studio askıda kalıyor
+## <a name="visual-studio-stops-responding"></a>Visual Studio yanıt vermeyi durduruyor
 
-Parse, FMOD, UMP (Evrensel Media Player), ZFBrowser veya katıştırılmış tarayıcı gibi çeşitli Unity eklentileri yerel iş parçacıklarını kullanıyor. Bir eklenti çalışma zamanına yerel bir iş parçacığı iliştirirken, daha sonra işletim sistemine çağrıları engelleyen bir sorundur. Bu, Unity 'nin hata ayıklayıcı (veya etki alanı yeniden yükleme) için iş parçacığını kesintiye uğramayacağı ve askıda kalması
+Parse, FMOD, UMP (Evrensel Media Player), ZFBrowser veya katıştırılmış tarayıcı gibi çeşitli Unity eklentileri yerel iş parçacıklarını kullanıyor. Bir eklenti çalışma zamanına yerel bir iş parçacığı iliştirirken, daha sonra işletim sistemine çağrıları engelleyen bir sorundur. Bu, Unity 'nin hata ayıklayıcı (veya etki alanı yeniden yükleme) için bu iş parçacığını kesintiye uğramayacağı ve yanıt vermemesine
 
 FMOD için, bir geçici çözüm vardır, `FMOD_STUDIO_INIT_SYNCHRONOUS_UPDATE` zaman uyumsuz işlemeyi devre dışı bırakmak ve ana iş parçacığında tüm işlemleri gerçekleştirmek için başlatma [bayrağını](https://www.fmod.com/resources/documentation-studio?version=2.0&page=https://fmod.com/resources/documentation-api?version=2.0&page=studio-api-system.html#fmod_studio_initflags) geçirebilirsiniz.
 

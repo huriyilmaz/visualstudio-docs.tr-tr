@@ -7,12 +7,12 @@ ms.assetid: e5768153-2758-46d3-a323-3272def213ee
 ms.date: 03/25/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen kod Magazine avantajı hakkında bilgi edinin.
-ms.openlocfilehash: 30b97c42c3ead60859aed593a3ffbad6ed721227
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: c7b56074ea9a48f4d94af5c7d79cd93dc2c4a3b8
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906075"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387180"
 ---
 # <a name="code-magazine-included-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerine kod Dergisi dahildir
 
@@ -28,7 +28,7 @@ CODE Magazine aboneliğinizi ayarlama işlemi basittir.  Şu adımları izlemeni
 3. Kodunuzun alındığını belirten bir ileti görürsünüz.  Devam etmek için **Etkinleştir** 'e tıklayın.  (Etkinleştirmeye hazırsanız, bu sorun devam etmez.  Etkinleştirmek için her zaman kutucuğa geri dönebilirsiniz.  Kodunuzu aldıktan sonra "kodu al" bağlantısı "etkinleştir" bağlantısını okur.)
    > [!div class="mx-imgBorder"]
    > ![KOD Magazine kodu alındı](_img/vs-code-magazine/vs-code-magazine-success.png "Kod başarıyla alındı")
-4. CODE Magazine giriş sayfasına yönlendirilirsiniz. Ülkenizi seçin ve Magazine 'i nasıl almak istediğinizi seçin. 
+4. CODE Magazine giriş sayfasına yönlendirilirsiniz. Ülkenizi/bölgenizi seçin ve Magazine 'i nasıl almak istediğinizi seçin. 
    > [!NOTE]
    > Visual Studio Dev Essentials üyelerin yalnızca dijital aboneliğe erişimi vardır. 
 5. Seçimlerinize bağlı olarak, aboneliğinizin fiyatını ve uygulanan kupon miktarını gösteren bir notu görürsünüz.

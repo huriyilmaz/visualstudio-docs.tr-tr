@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c985d6699c75a78900366204c8bd5275f4c051d
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 15a1d497b5b4217cd7a404cb591c20bb1196b04b
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85769928"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387323"
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-or-visual-studio-installer"></a>Visual Studio veya Visual Studio Yükleyicisi ilgili bir sorunu bildirme
 
@@ -69,7 +69,7 @@ Bir sorunu Visual Studio 'dan veya yükleyicisinden dahil edilen geri bildirim a
 
 1. **Kayıt** sekmesini seçin.
 
-1. **Eylemlerinizi kaydetme**altında, sorunu yeniden oluşturmak Için Visual Studio 'nun geçerli örneğini seçin. Bu durumda, örneğin Visual Studio askıda ise, **\<Create a new instance>** eylemleri Visual Studio 'nun yeni bir örneğine kaydetmek için öğesini seçin.
+1. **Eylemlerinizi kaydetme**altında, sorunu yeniden oluşturmak Için Visual Studio 'nun geçerli örneğini seçin. Bu durumda, örneğin, Visual Studio yanıt vermeyi durdurursa, **\<Create a new instance>** eylemleri Visual Studio 'nun yeni bir örneğine kaydetmek için öğesini seçin.
 
 1. **Kaydı Başlat**' ı seçin. Aracı çalıştırmak için izin verin.
 

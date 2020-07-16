@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2fdbd2e7f47e75b4d80d07f6af3a6f998dfd72d6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 094305e901624e13df147030899981f8fedb80d1
+ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85541160"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86387037"
 ---
 # <a name="debug-your-python-code"></a>Python kodunuzda hata ayıklama
 
@@ -106,7 +106,7 @@ Bir dize değeri incelenirken (, `str` , `unicode` `bytes` ve `bytearray` tüm d
 
 HTML, XML ve JSON görselleştirmeleri, sözdizimi vurgulaması ve ağaç görünümleri olan ayrı açılan pencereler halinde görünür.
 
-### <a name="exceptions"></a>Özel Durumlar
+### <a name="exceptions"></a>Özel durumlar
 
 Programınızda hata ayıklama sırasında bir hata oluşursa, ancak bunun için bir özel durum işleyiciniz yoksa, hata ayıklayıcı özel durum noktasında kesilir:
 
@@ -253,7 +253,7 @@ Aşağıdaki adımlar, geçerli Visual Studio oturumunda hata ayıklamayı etkin
 
     ![Çıkış penceresinde hata ayıklayıcı günlüğü çıkışı](media/debugger-logging-output.png)
 
-1. Visual Studio askıda kalırsa veya **Çıkış** penceresine erişemeyebilirsiniz, Visual Studio 'yu yeniden başlatın, bir komut penceresi açın ve aşağıdaki komutu girin:
+1. Visual Studio yanıt vermeyi durdurursa veya **Çıkış** penceresine erişemeyebilirsiniz, Visual Studio 'yu yeniden başlatın, bir komut penceresi açın ve aşağıdaki komutu girin:
 
     ```ps
     DebugAdapterHost.Logging /On
