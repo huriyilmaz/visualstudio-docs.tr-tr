@@ -1,6 +1,6 @@
 - name: Visual Basic Öğreticileri
   href: index.yml
-- name: Genel bakış
+- name: Genel Bakış
   items:
     - name: Visual Studio Hakkında
       href: visual-studio-ide.md

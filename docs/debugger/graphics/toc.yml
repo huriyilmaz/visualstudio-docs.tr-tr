@@ -50,21 +50,21 @@
   items:
     - name: Grafik Tanılama Örnekleri
       href: graphics-diagnostics-examples.md
-    - name: 'İzlenecek Yol: Grafik Bilgilerini Yakalama'
+    - name: 'İzlenecek yol: Grafik Bilgilerini Yakalama'
       href: walkthrough-capturing-graphics-information.md
-    - name: 'İzlenecek Yol: Grafik Bilgilerini Programla Yakalama'
+    - name: 'İzlenecek yol: Grafik Bilgilerini Program Aracılığıyla Yakalama'
       href: walkthrough-capturing-graphics-information-programmatically.md
-    - name: 'İzlenecek Yol: Cihaz Durumu Nedeniyle Nesnelerin Eksikliği'
+    - name: 'İzlenecek yol: Cihaz Durumu Nedeniyle Eksik Nesneler'
       href: walkthrough-missing-objects-due-to-device-state.md
-    - name: 'İzlenecek Yol: Köşe Gölgeleme Nedeniyle Nesnelerin Eksikliği'
+    - name: 'İzlenecek yol: Köşe Gölgeleme Nedeniyle Eksik Nesneler'
       href: walkthrough-missing-objects-due-to-vertex-shading.md
-    - name: 'İzlenecek Yol: Yanlış Yapılandırılmış Ardışık Düzen Nedeniyle Eksik Nesneler'
+    - name: 'İzlenecek yol: Yanlış Yapılandırılmış Ardışık Düzen Nedeniyle Eksik Nesneler'
       href: walkthrough-missing-objects-due-to-misconfigured-pipeline.md
-    - name: 'İzlenecek Yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama'
+    - name: 'İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama'
       href: walkthrough-debugging-rendering-errors-due-to-shading.md
-    - name: 'İzlenecek Yol: Hesaplayıcı Gölgelendiricisinde Hata Ayıklamak İçin Grafik Tanılamayı Kullanma'
+    - name: 'İzlenecek yol: Hesaplayıcı Gölgelendiricisinde Hata Ayıklamak için Grafik Tanılamayı Kullanma'
       href: walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md
-    - name: 'Nasıl Yapılır: Grafik Tanılama Kayıttan Yürütme Makinesini Değiştirme'
+    - name: 'Nasıl yapılır: Grafik Tanılama Kayıttan Yürütme Makinesini Değiştirme'
       href: how-to-change-the-graphics-diagnostics-playback-machine.md
 - name: Başvuru (Programlı Yakalama)
   items:
