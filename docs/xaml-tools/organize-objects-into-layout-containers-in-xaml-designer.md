@@ -1,23 +1,23 @@
 ---
 title: XAML Tasarımcısı’nda nesneleri düzen kapsayıcılarına yerleştirme
-ms.date: 11/04/2016
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.assetid: 29c80c38-0fa3-48d6-b3a8-3b864f482e44
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.openlocfilehash: 3f05874459553b0b83c5e43f326a5deb6b0d4798
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: ebe96ec84d957c5ac8dcb6bad0a388ba3318c0fb
+ms.sourcegitcommit: 1fcdb5dae881a1c3a93413bb940d63c232bf96f3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75592940"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86459300"
 ---
 # <a name="organize-objects-into-layout-containers-in-xaml-designer"></a>XAML Tasarımcısı’nda nesneleri düzen kapsayıcılarına yerleştirme
 
 Bu makalede XAML Tasarımcısı yönelik düzen bölmeleri ve denetimleri açıklanmaktadır.
 
-Nesnelerin görüntü, düğme ve video gibi nesneleri&mdash;sayfada görünmesini istediğinizi düşünün. Belki de satırlarda ve sütunlarda, tek bir satırda, dikey veya yatay olarak veya sabit konumlarda görünmesini isteyebilirsiniz.
+Nesnelerin &mdash; görüntüler, düğmeler ve videolar gibi sayfa nesnelerinde görünmesini istediğiniz yeri düşünün. Belki de satırlarda ve sütunlarda, tek bir satırda, dikey veya yatay olarak veya sabit konumlarda görünmesini isteyebilirsiniz.
 
 Sayfanın nasıl görünebileceğini düşünmek için bir şans olduktan sonra bir Düzen paneli seçin. Nesnelerinizi eklediğiniz bir şeye ihtiyacınız olduğundan tüm sayfalar bir ile başlar. Varsayılan olarak bir **kılavuz**olur ancak bunu değiştirebilirsiniz.
 
@@ -71,7 +71,7 @@ Nesneleri, panelin bir kenarına kalacak veya *sabitler*olacak şekilde düzenle
 
 ![DockPanel düzen bölmesi](../designers/media/72d46b58-9a49-4dd5-8af7-6843c0440226.png)
 
-**Kısa bir video izleyin:** ![Play Button](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF-DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)
+**Kısa bir video izleyin:** ![ Play Button ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF-DockPanel](https://www.youtube.com/watch?v=EBH_OIM-zPo)
 
 ## <a name="layout-controls"></a>Düzen denetimleri
 
@@ -98,8 +98,6 @@ Kullanıcıların bir sayfanın sayfa veya alanını aşağı kaydırıp kaydır
 ### <a name="viewbox"></a>Viewbox
 
 Nesneleri yakınlaştırma denetimiyle yaptığınız gibi ölçeklendirin. **Viewbox**'a yalnızca bir nesne ekleyebilirsiniz. Bu etkiyi birden fazla nesneye uygulamak istiyorsanız, **Viewbox**'a bir Düzen paneli ekleyin ve ardından denetimlerinizi bu düzen paneline ekleyin.
-
-(Yalnızca WPF projeleri için kullanılabilir.)
 
 ![ViewBox düzen denetimi](../designers/media/f5b13c66-d918-4141-8a16-bd8f8628687a.png)
 
