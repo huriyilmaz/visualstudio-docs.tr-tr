@@ -563,6 +563,8 @@
                   href: ca1833.md
                 - name: 'CA1835: Akış ReadAsync/WriteAsync metotlarının bellek aşırı yüklemelerini tercih edin'
                   href: ca1835.md
+                - name: 'CA1836: Kullanılabilir olduğunda Count yerine IsEmpty tercih edin'
+                  href: ca1836.md
             - name: Taşınabilirlik uyarıları
               items:
                 - name: Genel Bakış

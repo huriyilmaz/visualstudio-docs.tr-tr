@@ -2,7 +2,7 @@
   href: index.yml
   expanded: true
   items:
-    - name: Genel bakış
+    - name: Genel Bakış
       href: overview.md
     - name: Hızlı başlangıç
       expanded: true
@@ -11,15 +11,13 @@
           href: container-tools.md
         - name: Kapsayıcı içinde React.js Tek Sayfalı Uygulama
           href: container-tools-react.md
-        - name: Azure Dev Spaces ile Kubernetes geliştirmesi >>
-          href: /azure/dev-spaces/quickstart-netcore-visualstudio
+        - name: Kubernetes geliştirme
+          href: local-process-kubernetes.md
     - name: Öğreticiler
       expanded: true
       items:
         - name: Docker Compose ile çok kapsayıcılı uygulama
           href: tutorial-multicontainer.md
-        - name: Visual Studio’da Kubernetes
-          href: tutorial-kubernetes-tools.md
     - name: Nasıl Yapılır?
       items:
         - name: Yerel Docker kapsayıcısındaki uygulamada hata ayıklama
@@ -48,3 +46,11 @@
           href: docker-compose-properties.md
         - name: Başlatma ayarları
           href: container-launch-settings.md
+- name: Kubernetes ile geliştirme
+  items:
+    - name: Visual Studio’da Kubernetes
+      href: tutorial-kubernetes-tools.md
+    - name: Kubernetes ile Yerel İşlem (Önizleme)
+      href: local-process-kubernetes.md
+    - name: Kubernetes ile Yerel İşlem nasıl çalışır? (Önizleme)
+      href: overview-local-process-kubernetes.md

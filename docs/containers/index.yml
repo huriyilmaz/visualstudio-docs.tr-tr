@@ -10,12 +10,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 11/25/2019
   ms.author: ghogen
-  ms.openlocfilehash: 611e723edbf1abf46d6b4466e3f8f163058ada47
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.openlocfilehash: 43583c3e147c7c036e28670c153c9520e02ef232
+  ms.sourcegitcommit: 510a928153470e2f96ef28b808f1d038506cce0c
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "75400724"
+  ms.lasthandoff: 07/17/2020
+  ms.locfileid: "86454208"
 landingContent:
 - title: Kapsayıcı Araçları
   linkLists:
@@ -75,3 +75,17 @@ landingContent:
       url: docker-compose-properties.md
     - text: Kapsayıcı araçlarını yapılandırma
       url: container-tools-configure.md
+- title: Kubernetes geliştirme
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Kubernetes için Visual Studio Araçları
+      url: tutorial-kubernetes-tools.md
+  - linkListType: quickstart
+    links:
+    - text: Visual Studio aracılığıyla Kubernetes ile Yerel İşlem Kullanma
+      url: local-process-kubernetes.md
+  - linkListType: overview
+    links:
+    - text: Kubernetes ile Yerel İşlem nasıl çalışır?
+      url: overview-local-process-kubernetes.md
