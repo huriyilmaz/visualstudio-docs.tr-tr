@@ -12,12 +12,12 @@ ms.workload:
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 open_to_public_contributors: false
-ms.openlocfilehash: 63a9929ea4e70a085f41e0f3dd2f8a71c1eb487e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 641119c278f5bd489eb45b4e97ad2c89c4529c59
+ms.sourcegitcommit: 8217b2ff48028f43c05c5590a293d358897c8651
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86386192"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86476036"
 ---
 # <a name="visual-studio-build-numbers-and-release-dates"></a>Visual Studio derleme numaraları ve yayın tarihleri
 
@@ -339,7 +339,8 @@ Aşağıdaki tabloda, Visual Studio 2017 için derleme numaraları ve sürüm ta
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio yayınlama sıklığı](/visualstudio/productinfo/release-rhythm/)
+* [Visual Studio Yol Haritası](/visualstudio/productinfo/vs-roadmap)
+* [Visual Studio yayınlama sıklığı](/visualstudio/productinfo/release-rhythm)
 * [Visual Studio yönetici kılavuzu](visual-studio-administrator-guide.md)
 * [Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme](use-command-line-parameters-to-install-visual-studio.md)
 * [Visual Studio örneklerini algılamaya ve yönetmeye yönelik araçlar](tools-for-managing-visual-studio-instances.md)
