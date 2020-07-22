@@ -1,7 +1,7 @@
 ---
 title: Metot imzasını değiştirme
 description: Metodun parametrelerini ekleyin, kaldırın veya sırasını değiştirin. Yöntemine sağ tıklayın, hızlı eylemler ve yeniden düzenlemeler ' ı seçin ve Imzayı Değiştir ' i seçin.
-ms.date: 06/08/2020
+ms.date: 07/20/2020
 ms.topic: reference
 author: mikadumont
 ms.author: midumont
@@ -14,12 +14,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 947f44700ef43815eb29bc3e90563afe1be68f2b
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 2d91406b65950515afb3659c0d5918841465b2fc
+ms.sourcegitcommit: 363f3e6e30dd54366ade0d08920755da5951535c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283896"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869574"
 ---
 # <a name="change-a-method-signature-refactoring"></a>Yöntem imzasını yeniden düzenlemeyi değiştirme
 
@@ -61,12 +61,12 @@ Bu yeniden düzenleme için geçerlidir:
 
    ![Imza değiştirme iletişim kutusu](media/change-signature.png)
 
-   | Düğme | Description
+   | Düğme | Açıklama
    | ------ | ---
    | **Yukarı/aşağı** | Seçili parametreyi listede yukarı ve aşağı taşı
    | **Ekle** | Listeye yeni bir parametre Ekle
    | **Kaldır** | Seçili parametreyi listeden kaldır
-   | **Geri Yükleme** | Seçilen, çapraz çıkış parametresini listeye geri yükleme
+   | **Geri yükleme** | Seçilen, çapraz çıkış parametresini listeye geri yükleme
 
    > [!TIP]
    > Sonucun kendisine işlemeden önce [ne olacağını görmek](../../ide/preview-changes.md) için **başvuru değişikliklerini Önizle** onay kutusunu kullanın.
@@ -75,18 +75,9 @@ Bu yeniden düzenleme için geçerlidir:
 
     ![Parametre Ekle iletişim kutusu-C #](media/add-parameter-dialog.png)
 
-5. Bir parametre ekleme işiniz bittiğinde, değişiklikleri önizlemek için **Tamam** düğmesine basın.
+5. Bir parametre ekleme işiniz bittiğinde değişiklikleri önizlemek için **Tamam** ' a basın.
 
     ![Imza değiştirme iletişim kutusu](media/change-signature.png)
-
-6. Değişiklikleri görüntülemek için **Tamam** ' a basın.
-   - C#:
-
-      ![Imza sonucunu Değiştir-C #](media/changesignature-result-cs.png)
-
-   - Visual Basic:
-
-      ![Imza sonucunu değiştirme-Visual Basic](media/changesignature-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

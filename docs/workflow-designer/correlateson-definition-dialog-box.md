@@ -5,34 +5,34 @@ ms.topic: reference
 f1_keywords:
 - CorrelatesOnDefinition.UI
 ms.assetid: 8b2b627a-f236-4479-aa09-525df65e3413
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 401f72f55f23779f7c6257437034a4ebc294d219
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.openlocfilehash: 8d2db5bbfa4f34d86d3bf20cfe6bcc42b3dc00d0
+ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72650595"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86876131"
 ---
 # <a name="correlateson-definition-dialog-box"></a>CorrelatesOn Tanımı İletişim Kutusu
 
-**CorrelatesOn** iletişim kutusu, bir <xref:System.ServiceModel.Activities.Receive> etkinliğinin <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> özelliğini düzenlemek için iş akışı Tasarımcısı kullanılır. Daha fazla bilgi için bkz. [etkinlik tasarımcısını alma](../workflow-designer/receive-activity-designer.md).
+**CorrelatesOn** iletişim kutusu, <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> bir etkinliğin özelliğini düzenlemek için iş akışı Tasarımcısı kullanılır <xref:System.ServiceModel.Activities.Receive> . Daha fazla bilgi için bkz. [etkinlik tasarımcısını alma](../workflow-designer/receive-activity-designer.md).
 
-@No__t_0 etkinlikleri arasındaki bağıntı, farklı hizmet işlemlerinin bir iş akışındaki birbirleriyle nasıl bağlanacağını belirtir.
+Etkinlikler arasındaki bağıntı, <xref:System.ServiceModel.Activities.Receive> farklı hizmet işlemlerinin bir iş akışındaki birbirleriyle nasıl bağlanacağını belirtir.
 
 Aşağıdaki tabloda **CorrelatesOn** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
 
 |Arabirim Öğesi|Açıklama|
 |-|-----------------|
-|**CorrelatesWith**|İletiyi uygun iş akışı örneğine yönlendirmek için kullanılan <xref:System.ServiceModel.Activities.CorrelationHandle>.|
-|**XPath sorguları**|Gelen iletilerden bağıntı verilerini ayıklamak için kullanılan sorguları içeren bir anahtar/değer çifti. Bu değer <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> özelliğine karşılık gelir. XPath sorguları bir <xref:System.ServiceModel.MessageQuerySet> nesnesi içinde bulunur.|
+|**CorrelatesWith**|<xref:System.ServiceModel.Activities.CorrelationHandle>İletiyi uygun iş akışı örneğine yönlendirmek için kullanılır.|
+|**XPath sorguları**|Gelen iletilerden bağıntı verilerini ayıklamak için kullanılan sorguları içeren bir anahtar/değer çifti. Bu değer özelliğine karşılık gelir <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> . XPath sorguları bir nesnesi içinde bulunur <xref:System.ServiceModel.MessageQuerySet> .|
 
 ## <a name="to-launch-the-correlateson-dialog-box"></a>CorrelatesOn iletişim kutusunu başlatmak için
 
-**Alma** etkinliği Tasarımcısı **araç kutusu** 'ndan sürüklenebilir ve etkinliklerin genellikle yerleştirildiği her yerde iş akışı Tasarımcısı yüzeyine bırakılabilir. Etkinlik Tasarımcısı ' nın atılması, varsayılan alma <xref:System.Activities.Activity.DisplayName%2A> bir <xref:System.ServiceModel.Activities.Receive> etkinlik oluşturur. **CorrelatesOn tanımı** iletişim kutusunu açmak için **alma** etkinliği tasarımcısını seçin ve sonra özellik kılavuzunda, **CorrelatesOn** özelliği için koleksiyon metninin yanındaki üç nokta düğmesini seçin.
+**Alma** etkinliği Tasarımcısı **araç kutusu** 'ndan sürüklenebilir ve etkinliklerin genellikle yerleştirildiği her yerde iş akışı Tasarımcısı yüzeyine bırakılabilir. Etkinlik Tasarımcısı ' nın atılması, <xref:System.ServiceModel.Activities.Receive> Varsayılan alma için bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . **CorrelatesOn tanımı** iletişim kutusunu açmak için **alma** etkinliği tasarımcısını seçin ve sonra özellik kılavuzunda, **CorrelatesOn** özelliği için koleksiyon metninin yanındaki üç nokta düğmesini seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

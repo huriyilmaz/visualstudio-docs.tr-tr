@@ -7,12 +7,12 @@ ms.assetid: 588480a3-8806-4ea5-9915-c25974770069
 ms.date: 04/20/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil olan Windows Geliştirici hesabı hakkında bilgi edinin.
-ms.openlocfilehash: 659c2b1d792eb02d74ac5d52773f81bdda198a7a
-ms.sourcegitcommit: c2b3bf0de44cd379fd1ad5110385021d0ec950ed
+ms.openlocfilehash: 02d968875bec5d23fe25daaea5d2829f29a67111
+ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301466"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86875481"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Windows Geliştirici hesabı
 Seçili Visual Studio aboneliğine dahil olan Windows geliştirici hesabınız, Windows Mağazası 'na ücretsiz ve ücretli Windows uygulamaları göndermenize olanak tanır.
@@ -43,16 +43,16 @@ Bu işlem için bir "özel" tarayıcı penceresi oluşturmanızı öneririz.  Ö
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Dahil       |  Yes|
-| GitHub Enterprise ile Visual Studio Enterprise   | VL  | Dahil       |  Yes|
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Dahil                                                            |Yes|
-| GitHub Enterprise ile Visual Studio Professional | VL                                        | Dahil                                                            |Yes|
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Dahil       |  Evet|
+| GitHub Enterprise ile Visual Studio Enterprise   | VL  | Dahil       |  Evet|
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Dahil                                                            |Evet|
+| GitHub Enterprise ile Visual Studio Professional | VL                                        | Dahil                                                            |Evet|
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                            |  NA|
 | MSDN Platformları (Standart)                                          | VL, perakende                                              |  Kullanılamaz                                            |  NA|
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|
 ||
 
-<sup>1</sup>  *şunları Içerir: for SATıM (NFR), FTE, Visual Studio Endüstri ortağı (VSIP), BIZSPARK, mct Software & Services geliştiricisi. Dışlar: Microsoft İş Ortağı Ağı (MPN), Imagine, en değerli profesyonel (MVP), bölgesel yönetmen (RD), MCT yazılım & Hizmetleri.*
+<sup>1</sup>  *şunları Içerir: for SATıM (NFR), FTE, Visual Studio Endüstri ortağı (VSIP), BIZSPARK, mct Software & Services geliştiricisi, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD). Dışlar: Microsoft İş Ortağı Ağı (MPN), Imagine, MCT Software & Services.*
 
 > [!NOTE]
 > Microsoft artık Visual Studio Professional yıllık abonelikler ve Visual Studio Enterprise yıllık abonelikleri bulut aboneliklerinde sunmayacaktır. Mevcut müşteriler deneyiminde değişiklik yapılmaz ve aboneliklerini yenileyebilme, artırma, azaltma veya iptal etme imkanına sahip olmayacaktır. Yeni müşterilerin, [https://visualstudio.microsoft.com/vs/pricing/](https://visualstudio.microsoft.com/vs/pricing/) Visual Studio 'yu satın almaya yönelik farklı seçeneklere göz atın.

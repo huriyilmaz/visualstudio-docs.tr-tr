@@ -3,17 +3,17 @@ title: İş Akışı Tasarımcısı-mesajlaşma etkinlik tasarımcıları
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 897e63cf-a42f-4edd-876f-c4ccfffaf6d6
-author: jillre
-ms.author: jillfra
+author: TerryGLee
+ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b58a4c6f369f9a5338365e215805c2379db8d2ba
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.openlocfilehash: f1b821b4e63f82233b3c2e92fa3f5c3481cda982
+ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73189742"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86876196"
 ---
 # <a name="messaging-activity-designers"></a>Messaging etkinlik tasarımcıları
 
@@ -39,13 +39,13 @@ Bu bölümde yer alan ve aşağıdaki tabloda listelenen konular İş Akışı T
 
 Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
-- [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)
+- [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
 
 - [Etkinlik Tasarımcılarını kullanma](control-flow-activity-designers.md)
 
 - [Akış Çizelgesi](../workflow-designer/flowchart-activity-designers.md)
 
-- [Çalışma Zamanı](../workflow-designer/runtime-activity-designers.md)
+- [Çalışma zamanı](../workflow-designer/runtime-activity-designers.md)
 
 - [Temel Türler](../workflow-designer/primitives-activity-designers.md)
 
@@ -53,7 +53,7 @@ Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
 - [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
-- [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
+- [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)
 
 ## <a name="external-resources"></a>Dış kaynaklar
 
