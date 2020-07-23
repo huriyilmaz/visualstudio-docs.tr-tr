@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 39dee051991efe05b9a661ce1d213e71b456590b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 61321555a6896fad926d2ee38c5d73d50801d6b9
+ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85904263"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972354"
 ---
 # <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Visual Studio menü çubuğuna bir menü ekleyin
 
@@ -26,7 +26,7 @@ Visual Studio menü çubuğuna yeni bir menü eklemeden önce, komutlarınızın
 
 Menüler, projenin *. vsct* dosyasında bildirilmiştir. Menüler ve *. vsct* dosyaları hakkında daha fazla bilgi için bkz. [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).
 
-Bu yönergeyi tamamlayarak, bir komut içeren **TestMenu** adlı bir menü oluşturabilirsiniz.
+Bu yönergeyi tamamlayarak, bir komut içeren **Test menüsü** adlı bir menü oluşturabilirsiniz.
 
 :::moniker range=">=vs-2019"
 > [!NOTE]
@@ -41,7 +41,17 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 1. Adlı bir VSıX projesi oluşturun `TopLevelMenu` . "VSIX" araması yaparak VSıX proje şablonunu **Yeni proje** iletişim kutusunda bulabilirsiniz.  Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).
 
+::: moniker range="vs-2017"
+
 2. Proje açıldığında, **TestCommand**adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >   **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#/genişletilebilirlik** ' e gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *TestCommand.cs*olarak değiştirin.
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+2. Proje açıldığında, **TestCommand**adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >   **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#/genişletilebilirlik** ' e gidin ve **komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *TestCommand.cs*olarak değiştirin.
+
+::: moniker-end
 
 ## <a name="create-a-menu-on-the-ide-menu-bar"></a>IDE menü çubuğunda bir menü oluşturun
 
@@ -49,13 +59,13 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 1. **Çözüm Gezgini**' de *TestCommandPackage. vsct*öğesini açın.
 
-    Dosyanın sonunda, \<Symbols> birkaç düğüm içeren bir düğüm vardır \<GuidSymbol> . GuidTestCommandPackageCmdSet adlı düğümde aşağıdaki şekilde yeni bir sembol ekleyin:
+    Dosyanın sonunda, `<Symbols>` birkaç düğüm içeren bir düğüm vardır `<GuidSymbol>` . Adlı düğümde, `guidTestCommandPackageCmdSet` aşağıdaki gibi yeni bir sembol ekleyin:
 
    ```xml
    <IDSymbol name="TopLevelMenu" value="0x1021"/>
    ```
 
-2. \<Menus> \<Commands> Düğümde yalnızca daha önce boş bir düğüm oluşturun \<Groups> . Düğümünde, \<Menus> \<Menu> aşağıdaki gibi bir düğüm ekleyin:
+2. `<Menus>` `<Commands>` Düğümde yalnızca daha önce boş bir düğüm oluşturun `<Groups>` . Düğümünde, `<Menus>` `<Menu>` aşağıdaki gibi bir düğüm ekleyin:
 
    ```xml
    <Menus>
@@ -63,8 +73,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
            <Parent guid="guidSHLMainMenu"
                    id="IDG_VS_MM_TOOLSADDINS" />
            <Strings>
-             <ButtonText>TestMenu</ButtonText>
-             <CommandName>TestMenu</CommandName>
+             <ButtonText>Test Menu</ButtonText>
            </Strings>
        </Menu>
    </Menus>
@@ -74,9 +83,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
     `guid` `id` Üst öğesi ve değerleri, Visual Studio menü çubuğunun araç ve eklenti menülerini içeren bölümündeki menüyü konumlandırır.
 
-    Dizenin değeri, `CommandName` metnin menü öğesinde görünmesi gerektiğini belirtir.
+    `<ButtonText>`Öğesi, metnin menü öğesinde görünmesi gerektiğini belirtir.
 
-3. \<Groups>Bölümünde \<Group> öğesini bulun ve \<Parent> öğesini yeni eklediğimiz menüye işaret etmek üzere değiştirin:
+3. `<Groups>`Bölümünde `<Group>` öğesini bulun ve `<Parent>` öğesini yeni eklediğimiz menüye işaret etmek üzere değiştirin:
 
    ```xml
    <Groups>
@@ -94,13 +103,13 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 1. **Çözüm Gezgini**içinde *TopLevelMenuPackage. vsct*öğesini açın.
 
-    Dosyanın sonunda, \<Symbols> birkaç düğüm içeren bir düğüm vardır \<GuidSymbol> . GuidTopLevelMenuPackageCmdSet adlı düğümde, aşağıdaki gibi yeni bir sembol ekleyin:
+    Dosyanın sonunda, `<Symbols>` birkaç düğüm içeren bir düğüm vardır `<GuidSymbol>` . Adlı düğümde, `guidTopLevelMenuPackageCmdSet` aşağıdaki gibi yeni bir sembol ekleyin:
 
    ```xml
    <IDSymbol name="TopLevelMenu" value="0x1021"/>
    ```
 
-2. \<Menus> \<Commands> Düğümde yalnızca daha önce boş bir düğüm oluşturun \<Groups> . Düğümünde, \<Menus> \<Menu> aşağıdaki gibi bir düğüm ekleyin:
+2. `<Menus>` `<Commands>` Düğümde yalnızca daha önce boş bir düğüm oluşturun `<Groups>` . Düğümünde, `<Menus>` `<Menu>` aşağıdaki gibi bir düğüm ekleyin:
 
    ```xml
    <Menus>
@@ -108,8 +117,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
            <Parent guid="guidSHLMainMenu"
                    id="IDG_VS_MM_TOOLSADDINS" />
            <Strings>
-             <ButtonText>TestMenu</ButtonText>
-             <CommandName>TestMenu</CommandName>
+             <ButtonText>Test Menu</ButtonText>
            </Strings>
        </Menu>
    </Menus>
@@ -119,9 +127,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
     `guid` `id` Üst öğesi ve değerleri, Visual Studio menü çubuğunun araç ve eklenti menülerini içeren bölümündeki menüyü konumlandırır.
 
-    Dizenin değeri, `CommandName` metnin menü öğesinde görünmesi gerektiğini belirtir.
+    `<ButtonText>`Öğesi, metnin menü öğesinde görünmesi gerektiğini belirtir.
 
-3. \<Groups>Bölümünde \<Group> öğesini bulun ve \<Parent> öğesini yeni eklediğimiz menüye işaret etmek üzere değiştirin:
+3. `<Groups>`Bölümünde `<Group>` öğesini bulun ve `<Parent>` öğesini yeni eklediğimiz menüye işaret etmek üzere değiştirin:
 
    ```xml
    <Groups>
@@ -135,7 +143,9 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ::: moniker-end
 
-4. Bölümünü bulun `Buttons` . [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Paket şablonunun üst öğesi olarak ayarlanmış bir öğe ürettiğine dikkat edin `Button` `MyMenuGroup` . Sonuç olarak, bu komut menüde görünür.
+4. `<Buttons>`Bölümünde `<Button>` düğümünü bulun. Ardından, `<Strings>` düğümünde `<ButtonText>` öğesini olarak değiştirin `Test Command` .
+
+    [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]Paket şablonunun üst öğesi olarak ayarlanmış bir öğe ürettiğine dikkat edin `Button` `MyMenuGroup` . Sonuç olarak, bu komut menüde görünür.
 
 ## <a name="build-and-test-the-extension"></a>Uzantıyı derleme ve test etme
 
@@ -143,19 +153,19 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ::: moniker range="vs-2017"
 
-2. Deneysel örnekteki menü çubuğu bir **TestMenu** menüsü içermelidir.
+2. Deneysel örnekteki menü çubuğu bir **Test menü** menüsü içermelidir.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Deneysel örnekteki **Uzantılar** menüsü bir **TestMenu** menüsü içermelidir.
+2. Deneysel örnekteki **Uzantılar** menüsü bir **Test menü** menüsü içermelidir.
 
 ::: moniker-end
 
-3. **TestMenu** menüsünde **test komutunu çağır**' a tıklayın.
+3. **Test menüsü** menüsünde, **test komutu**' na tıklayın.
 
-     İleti kutusu görünmelidir ve "TestCommand paketini TopLevelMenu. TestCommand. Menuıitemcallback ()" Içinde görüntüler.
+    İleti kutusu görünmelidir ve "TestCommand. TestCommand. Menuıitemcallback ()" iletisinin "Testkomutu" iletisini görüntülemesi gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
