@@ -82,6 +82,8 @@
               href: install/update-a-network-installation-of-visual-studio.md
             - name: Bakım temeli sırasında Visual Studio’yu güncelleştirme
               href: install/update-servicing-baseline.md
+            - name: En düşük düzeyde çevrimdışı düzen kullanarak Visual Studio'yu güncelleştirme
+              href: install/update-minimal-layout.md
             - name: Visual Studio dağıtımlarına yönelik güncelleştirmeleri denetleme
               href: install/controlling-updates-to-visual-studio-deployments.md
             - name: Paket yükü değişikliklerini yönetme
