@@ -10,12 +10,12 @@ metadata:
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: 6ec31d2881abbfe2ae55174ea3f3fb15fd34651f
-  ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+  ms.openlocfilehash: 85929f803733026dfbf7ced8cf8553c3e96ed1c3
+  ms.sourcegitcommit: 239a8ed2c4474769297b42b5ce1f7c8694d62856
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/21/2020
-  ms.locfileid: "77904067"
+  ms.lasthandoff: 07/22/2020
+  ms.locfileid: "86944600"
 highlightedContent:
   items:
   - title: Kurulum ve yükleme
@@ -31,7 +31,7 @@ highlightedContent:
     itemType: learn
     url: /learn/
 conceptualContent:
-  title: Başlangıç
+  title: Kullanmaya başlayın
   items:
   - title: Visual Studio’yu kullanmayı öğrenin
     links:
@@ -207,4 +207,4 @@ additionalContent:
         url: /cpp/linux/
       - text: .NET Core platformlar arası geliştirme
         url: /dotnet/core/
-  footer: '[Bloglar](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [Sorun Bildirme](../ide/talk-to-us.md) - [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html)'
+  footer: '[Web Günlükleri](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [Sorun Raporlama](../ide/talk-to-us.md) - [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html) - [Sorun Giderme](/troubleshoot/visualstudio/welcome-visual-studio)'
