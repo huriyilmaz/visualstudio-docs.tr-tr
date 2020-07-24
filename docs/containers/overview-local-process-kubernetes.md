@@ -6,12 +6,12 @@ ms.topic: conceptual
 description: Geliştirme bilgisayarınızı Kubernetes kümenize bağlamak için Kubernetes ile yerel Işlem kullanma işlemlerini açıklar
 keywords: Kubernetes, Docker, Kubernetes, Azure, kapsayıcılar ile yerel Işlem
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: adde9d8ecab93bdb6f0aebbd74730ef60bd80cf6
-ms.sourcegitcommit: 510a928153470e2f96ef28b808f1d038506cce0c
+ms.openlocfilehash: 93bfc509eb21545cde812b8d6d71bb9a93a109e8
+ms.sourcegitcommit: debf31a8fb044f0429409bd0587cdb7d5ca6f836
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86454346"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87133988"
 ---
 # <a name="how-local-process-with-kubernetes-works"></a>Kubernetes ile Yerel İşlem nasıl çalışır?
 
@@ -40,6 +40,44 @@ Kubernetes ile yerel Işlem, kümenize bir bağlantı kurduğunda:
 
 Kümenize bir bağlantı kurduktan sonra, kodu kapsayıcı olmadan yerel olarak bilgisayarınızda çalıştırabilir ve hata ayıklama yapabilir ve kod, kümenizin geri kalanıyla doğrudan etkileşime geçebilir. Uzak aracının aldığı tüm ağ trafiği, bağlantı sırasında belirtilen yerel bağlantı noktasına yönlendirilir, böylece yerel olarak çalışan kodunuz bu trafiği kabul edebilir ve işleyebilir. Kümenizin ortam değişkenleri, birimleri ve gizli dizileri, geliştirme bilgisayarınızda çalışan kod için kullanılabilir hale getirilir. Ayrıca, Kubernetes ile yerel Işlem tarafından geliştirici bilgisayarınıza eklenen ana bilgisayar dosya girişleri ve bağlantı noktası iletimi nedeniyle, kodunuz kümenizdeki hizmet adlarını kullanarak kümenizde çalışan hizmetlere ağ trafiği gönderebilir ve bu trafik kümenizde çalışan hizmetlere iletilir. Geliştirme bilgisayarınız ile kümeniz arasında, bağlandığınız zaman trafik yönlendirilir.
 
+## <a name="using-routing-capabilities-for-developing-in-isolation"></a>Yalıtımda geliştirmeye yönelik yönlendirme özelliklerini kullanma
+
+Varsayılan olarak, Kubernetes ile yerel Işlem, bir hizmet için tüm trafiği geliştirme bilgisayarınıza yönlendirir. Ayrıca, istekleri yalnızca bir alt etki alanından geliştirme bilgisayarınıza gelen bir hizmete yönlendirmek için yönlendirme özelliklerini kullanma seçeneğiniz de vardır. Bu yönlendirme özellikleri, yalıtımında geliştirme yapmak ve kümenizdeki diğer trafiği kesintiye uğramaktan kaçınmak için Kubernetes ile yerel Işlem kullanmanıza imkan sağlar.
+
+Aşağıdaki animasyon, yalıtımda aynı kümede çalışan iki geliştirici göstermektedir:
+
+![Animasyonlu GIF, yalıtımı gösteren](media/local-process-kubernetes/lpk-graphic-isolated.gif)
+
+Yalıtımda çalışmayı etkinleştirdiğinizde, Kubernetes ile yerel Işlem, Kubernetes kümenize bağlanılmasına ek olarak aşağıdakileri yapar:
+
+* Kubernetes kümesinin Azure Dev Spaces etkin olmadığını doğrular.
+* Seçtiğiniz hizmetinizi aynı ad alanındaki kümede çoğaltır ve bir *Routing.VisualStudio.io/Route-from=SERVICE_NAME* etiketi ve *Routing.VisualStudio.io/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* ek açıklaması ekler.
+* , Kubernetes kümesindeki aynı ad alanında bulunan yönlendirme yöneticisini yapılandırır ve başlatır. Yönlendirme Yöneticisi, ad alanınız içinde yönlendirmeyi yapılandırırken *Routing.VisualStudio.io/Route-from=SERVICE_NAME* label ve *Routing.VisualStudio.io/Route-on-Header=Kubernetes-Route-as: GENERATED_NAME* ek açıklamalarını aramak için bir etiket seçici kullanır.
+
+Kubernetes ile yerel Işlem, Kubernetes kümenizde Azure Dev Spaces etkinleştirildiğini algılarsa, Kubernetes ile yerel Işlem kullanabilmeniz için önce Azure Dev Spaces devre dışı bırakmanız istenir.
+
+Yönlendirme Yöneticisi başlatıldığında şunları yapar:
+* Ad alanında bulunan tüm gelen verileri alt etki alanı için *GENERATED_NAME* kullanarak çoğaltır. 
+* *GENERATED_NAME* alt etki alanı ile yinelenen giriş ile ilişkili her hizmet için bir haberci Pod oluşturur.
+* Yalıtım aşamasında çalıştığınız hizmet için ek bir haberci Pod oluşturur. Bu, alt etki alanı olan isteklerin geliştirme bilgisayarınıza yönlendirilmesine izin verir.
+* Her haberci pod için yönlendirme kurallarını, alt etki alanı ile hizmetlerin yönlendirilmesini işleyecek şekilde yapılandırır.
+
+Kümede *GENERATED_NAME* alt etki alanı ile bir istek alındığında, öğesine bir *Kubernetes-Route-as = GENERATED_NAME* üst bilgisi eklenir. Haberci Pod, kümede uygun hizmete istek yapan yönlendirmeyi işler. İstek yalıtımda üzerinde çalışılan hizmete yönlendiriliyorsa, bu istek uzak aracı tarafından geliştirme bilgisayarınıza yönlendirilir.
+
+Kümede *GENERATED_NAME* alt etki alanı olmayan bir istek alındığında, isteğe hiçbir üst bilgi eklenmez. Haberci Pod, kümede uygun hizmete istek yapan yönlendirmeyi işler. İstek değiştirilmekte olan hizmete yönlendiriliyorsa, bu istek bunun yerine uzak aracı yerine özgün hizmete yönlendirilir.
+
+> [!IMPORTANT]
+> Kümenizdeki her hizmet ek istekler yaparken *Kubernetes-Route-as = GENERATED_NAME* üst bilgisini iletmelidir. Örneğin, *Servicea* bir istek aldığında, yanıt döndürmeden önce *serviceb* 'ye bir istek yapar. Bu örnekte, *Servicea* 'nın isteğinde *Kubernetes-Route-as = GENERATED_NAME* üst bilgisini iletmesi *gerekir.* [ASP.net][asp-net-header]gibi bazı dillerin, üst bilgi yaymayı işleme yöntemlerine sahip olabilir.
+
+Kümenizin bağlantısını kestiğinizde, varsayılan olarak, Kubernetes ile yerel işlem tüm haberci Pod ve yinelenen hizmeti kaldırır. 
+
+> NOTUN Yönlendirme Yöneticisi dağıtımı ve hizmeti, ad alanınız içinde çalışmaya devam edecektir. Dağıtımı ve hizmeti kaldırmak için, ad alanınız için aşağıdaki komutları çalıştırın.
+>
+> ```azurecli
+> kubectl delete deployment routingmanager-deployment -n NAMESPACE
+> kubectl delete service routingmanager-service -n NAMESPACE
+> ```
+
 ## <a name="diagnostics-and-logging"></a>Tanılama ve günlüğe kaydetme
 
 Kümenize bağlanmak için Kubernetes ile yerel Işlem kullanılırken, kümenizdeki tanılama günlükleri geliştirme bilgisayarınızın [geçici dizinine][azds-tmp-dir]kaydedilir.
@@ -52,11 +90,17 @@ Kubernetes ile yerel Işlem aşağıdaki sınırlamalara sahiptir:
 * Bu hizmete bağlanabilmek için bir hizmetin tek bir pod tarafından desteklenen olması gerekir. Çoğaltmaları olan bir hizmet gibi birden fazla pods içeren bir hizmete bağlanamazsınız.
 * Pod, başarıyla bağlanmak için Kubernetes ile yerel Işlem için bu Pod 'da çalışan tek bir kapsayıcıya sahip olabilir. Kubernetes ile yerel işlem, hizmet kafesleri tarafından eklenen sepet kapsayıcıları gibi ek kapsayıcıları olan Pod ile hizmetlere bağlanamaz.
 * Kubernetes ile yerel Işlemin, ana bilgisayar Dosyanızı düzenlemek için geliştirme bilgisayarınızda çalışması için yükseltilmiş izinlere ihtiyacı vardır.
+* Kubernetes ile yerel Işlem Azure Dev Spaces etkinleştirilmiş kümeler üzerinde kullanılamaz.
+
+### <a name="local-process-with-kubernetes-and-clusters-with-azure-dev-spaces-enabled"></a>Azure Dev Spaces etkinleştirilmiş Kubernetes ve kümeler ile yerel Işlem
+
+Azure Dev Spaces etkinleştirilmiş bir kümede Kubernetes ile yerel Işlem kullanamazsınız. Azure Dev Spaces etkinleştirilmiş bir kümede Kubernetes ile yerel Işlem kullanmak istiyorsanız, kümenize bağlanmadan önce Azure Dev Spaces devre dışı bırakmanız gerekir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Yerel geliştirme bilgisayarınıza kümenize bağlanmak için Kubernetes ile yerel Işlem kullanmaya başlamak için bkz. [Kubernetes Ile yerel Işlem kullanma](local-process-kubernetes.md).
 
+[asp-net-header]: https://www.nuget.org/packages/Microsoft.AspNetCore.HeaderPropagation/
 [azds-cli]: /azure/dev-spaces/how-to/install-dev-spaces#install-the-client-side-tools
 [azds-tmp-dir]: /azure/dev-spaces/troubleshooting#before-you-begin
 [azure-cli]: /cli/azure/install-azure-cli?view=azure-cli-latest

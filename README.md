@@ -1,27 +1,27 @@
 ---
-ms.openlocfilehash: 09d58e682424e09f0e8d5c37c1c6e0b8839495d4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: cf93d619ddeb385960eae74de8b64a7f11b7be4d
+ms.sourcegitcommit: 8c4dc60b665e7065a5231d6b61380731221d9fc5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62422091"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87115299"
 ---
 # <a name="visual-studio-documentation"></a>Visual Studio belgeleri
 
-Hoş geldiniz! Bu repo Visual Studio teknik belgeleri için kaynak dosyaları içerir. Konular [docs.microsoft.com'da](https://docs.microsoft.com/visualstudio)yayınlanır.
+Hoş geldiniz! Bu depo, Visual Studio Technical belgelerinin kaynak dosyalarını içerir. Konular [docs.Microsoft.com](https://docs.microsoft.com/visualstudio)sitesinde yayımlanır.
 
-Bu repo 23 Haziran 2017 https://github.com/Microsoft/vsdocstarihinde . Eski URL'lere trafik buraya yönlendirilir.
+Bu depo, 23 Haziran 2017 tarihinde üzerinden taşınmıştır https://github.com/Microsoft/vsdocs . Eski URL 'Lere giden trafik buradan yeniden yönlendirilir.
 
-Visual Basic ve Visual C# için dokümanlar [dotnet dokümanlar repo'da,](https://github.com/dotnet/docs/tree/master/docs)Visual C++ dokümanları ise [C++ dokümanlarının repo'sunda](http://github.com/MicrosoftDocs/cpp-docs)yer alır.
+Visual Basic ve Visual C# belgeleri [DotNet docs](https://github.com/dotnet/docs/tree/master/docs)deposunda bulunur ve Visual C++ belgeleri [C++ belgeleri](https://github.com/MicrosoftDocs/cpp-docs)deposunda bulunur.
 
-## <a name="contribute-to-the-documentation"></a>Belgelere katkıda bulunmak
+## <a name="contribute-to-the-documentation"></a>Belgelere katkıda bulunun
 
-Visual Studio dokümanlarını geliştirmemize yardımcı olmak için katkılarınızı memnuniyetle karşılıyoruz. Bu depodaki tüm makaleler GitHub aromalı işaretleme yi kullanır.
+Visual Studio docs 'ı geliştirmemize yardımcı olmak için katkılarınız için hoş geldiniz. Bu depodaki tüm makaleler GitHub-flavored Marku kullanır.
 
-Visual Studio'nun çeşitli özellik alanlarının bu repo'da hata ayıklama, Visual Studio etkileşimli geliştirme ortamı (IDE) ile ilgili konular için **ide** vb. gibi kendi klasörleri vardır. **debugger** Her klasördeki **/media** alt klasörü konular için resim dosyaları içerir.
+Visual Studio 'nun birçok özellik alanı, hata ayıklama hakkında konular için **hata ayıklayıcı** , Visual Studio etkileşimli geliştirme ORTAMı (IDE) ve benzeri konular için **IDE** gibi bu depoda kendi klasörlerine sahiptir. Her klasördeki **/Media** alt klasörü, konuların resim dosyalarını içerir.
 
-Katkıda bulunmak hakkında daha fazla bilgi için [Katkıda Bulunan kılavuzuna](CONTRIBUTING.md)bakın.
+Katkıda bulunma hakkında daha fazla bilgi için bkz. [katkıda bulunan Kılavuzu](CONTRIBUTING.md).
 
 ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Açık Kaynak Kullanım Kuralları
 
-Bu proje [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) (Microsoft Açık Kaynak Kullanım Kuralları) belgesinde listelenen kurallara uygundur. Daha fazla bilgi için, Davranış Kuralları [opencode@microsoft.com](mailto:opencode@microsoft.com) [SSS'ye](https://opensource.microsoft.com/codeofconduct/faq/) bakın veya soru veya yorumlarla iletişim kurun.
+Bu proje [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) (Microsoft Açık Kaynak Kullanım Kuralları) belgesinde listelenen kurallara uygundur. Daha fazla bilgi için bkz. [kullanım KURALLARı SSS](https://opensource.microsoft.com/codeofconduct/faq/) veya [opencode@microsoft.com](mailto:opencode@microsoft.com) soru veya açıklamalarla iletişim kurma.
