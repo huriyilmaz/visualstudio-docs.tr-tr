@@ -1,6 +1,6 @@
 ---
 title: Visual Studio sürümlerini yan yana yükleme
-ms.date: 03/05/2019
+ms.date: 07/24/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: conceptual
@@ -11,24 +11,24 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.openlocfilehash: 428c41a96de90494167d04ded8722d49c76afc71
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: a2b77315363c404cd0647555e5a6ad21d36ac86b
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "76114652"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234997"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Visual Studio sürümlerini yan yana yükleme
 
-Visual Studio'nun daha önceki veya sonraki bir sürümü zaten yüklenmiş olan bir bilgisayara Visual Studio'u yükleyebilirsiniz.
+Visual Studio 'Yu daha önceki veya sonraki bir Visual Studio sürümü yüklü olan bir bilgisayara yükleyebilirsiniz.
 
 ::: moniker range="vs-2017"
 
 Sürümleri yan yana yüklemeden önce aşağıdaki koşulları gözden geçirin:
 
-* Visual Studio 2015'te oluşturulmuş bir çözümü açmak için Visual Studio 2017'yi kullanırsanız, Visual Studio 2017'ye özgü herhangi bir özelliği uygulamadığınız sürece çözümü önceki sürümde yeniden açabilir ve değiştirebilirsiniz.
+* Visual Studio 2015 ' de oluşturulmuş bir çözümü açmak için Visual Studio 2017 kullanıyorsanız, Visual Studio 2017 'e özgü herhangi bir özelliği uygulamadığınız sürece çözümü daha sonra eski sürümde açabilir ve değiştirebilirsiniz.
 
-* Visual Studio 2015'te veya daha önceki bir sürümde oluşturulmuş bir çözümü açmak için Visual Studio 2017'yi kullanmaya çalışırsanız, projelerinizi ve dosyalarınızı Visual Studio 2017 ile uyumlu olacak şekilde değiştirmeniz gerekebilir. Daha fazla bilgi için [Port'a bakın, geçiş yap ve Visual Studio Projects sayfasını yükseltin.](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017)
+* Visual Studio 2015 veya önceki bir sürümde oluşturulmuş bir çözümü açmak için Visual Studio 2017 ' i kullanmaya çalışırsanız, projelerinizi ve dosyalarınızı Visual Studio 2017 ile uyumlu olacak şekilde değiştirmeniz gerekebilir. Daha fazla bilgi için bkz. [Visual Studio projelerini bağlantı noktası, geçirme ve yükseltme](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017) sayfası.
 
 ::: moniker-end
 
@@ -36,58 +36,74 @@ Sürümleri yan yana yüklemeden önce aşağıdaki koşulları gözden geçirin
 
 Sürümleri yan yana yüklemeden önce aşağıdaki koşulları gözden geçirin:
 
-* Visual Studio 2017'de oluşturulmuş bir çözümü açmak için Visual Studio 2019'u kullanırsanız, Visual Studio 2019'a özgü herhangi bir özelliği uygulamadığınız sürece çözümü önceki sürümde yeniden açabilir ve değiştirebilirsiniz.
+* Visual Studio 2017 ' de oluşturulmuş bir çözümü açmak için Visual Studio 2019 kullanıyorsanız, Visual Studio 2019 'e özgü herhangi bir özelliği uygulamadığınız sürece çözümü daha sonra eski sürümde açabilir ve değiştirebilirsiniz.
 
-* Visual Studio 2017'de veya daha önceki bir sürümde oluşturulmuş bir çözümü açmak için Visual Studio 2019'u kullanmaya çalışırsanız, projelerinizi ve dosyalarınızı Visual Studio 2019 ile uyumlu olacak şekilde değiştirmeniz gerekebilir. Daha fazla bilgi için [Port'a bakın, geçiş yap ve Visual Studio Projects sayfasını yükseltin.](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
+* Visual Studio 2017 veya önceki bir sürümde oluşturulmuş bir çözümü açmak için Visual Studio 2019 ' i kullanmaya çalışırsanız, projelerinizi ve dosyalarınızı Visual Studio 2019 ile uyumlu olacak şekilde değiştirmeniz gerekebilir. Daha fazla bilgi için bkz. [Visual Studio projelerini bağlantı noktası, geçirme ve yükseltme](../porting/port-migrate-and-upgrade-visual-studio-projects.md) sayfası.
 
 ::: moniker-end
 
-* Birden fazla sürümü yüklü olan bir bilgisayarda Visual Studio'nun bir sürümünü yüklerseniz, Visual Studio için dosya ilişkilendirmeleri tüm sürümler için kaldırılır.
+* Birden fazla sürümünün yüklü olduğu bir bilgisayarda Visual Studio 'nun bir sürümünü kaldırırsanız, Visual Studio için dosya ilişkilendirmeleri tüm sürümler için kaldırılır.
 
-* Tüm uzantılar uyumlu olmadığından Visual Studio uzantıları otomatik olarak yükseltmez. [Visual Studio Marketplace](https://marketplace.visualstudio.com/) veya yazılım yayıncısı uzantılarıyeniden yüklemeniz gerekir.
+* Tüm uzantılar uyumlu olmadığından, Visual Studio uzantıları otomatik olarak yükseltmez. Uzantıları [Visual Studio Market](https://marketplace.visualstudio.com/) veya yazılım yayımcısından yeniden yüklemeniz gerekir.
 
-## <a name="net-framework-versions-and-side-by-side-installations"></a>.NET Framework sürümleri ve yan yana kurulumlar
+## <a name="install-minor-visual-studio-versions-side-by-side"></a>İkincil Visual Studio sürümlerini yan yana yükler
 
-Visual Basic, Visual C#ve Visual F# projeleri, bir projenin hangi .NET Framework sürümünü kullandığını belirtmek için **Proje Tasarımcısı'ndaki** **Hedef Çerçeve** seçeneğini kullanır. Bir C++ projesi için .vcxproj dosyasını değiştirerek hedef çerçeveyi el ile değiştirebilirsiniz. Daha fazla bilgi için .NET Framework sayfasındaki [Sürüm uyumluluğuna](/dotnet/framework/migration-guide/version-compatibility) bakın.
+Visual Studio 'nun bir alt sürümünden bir sonrakine yükseltirken, Visual Studio yükleyicisi geçerli yüklemenizi varsayılan olarak o kanaldaki bir sonraki sürüme güncelleştirir. Örneğin, 16.6.4 önizlemesi yüklenirken, her iki sürüm 16,6 Önizleme kanalında olduğundan, yükleyici geçerli 16.6.3 Preview yüklemenizi değiştirmeye çalışacaktır. Bu, Visual Studio 'nun eski sürümlerinin makinenizde yer kaplamadığından emin olmanıza yardımcı olur. Bazı belirli durumlarda, ikincil yayınları yan yana yüklemek faydalı olabilir. Örneğimizde bu, hem 16.6.3 hem de 16.6.4 aynı makinede yer alır.
 
-Bir proje oluşturduğunuzda, **.NET** Framework'ün hangi sürümünü, proje hedeflerini yeni proje iletişim kutusunda **.NET Framework** listesinde belirtebilirsiniz.
+1. Visual Studio 'nun mevcut sürümleriyle yan yana yüklemek istediğiniz ikincil sürüm için [Visual Studio önyükleyici dosyasını](https://docs.microsoft.com/visualstudio/releases/2019/history#installing-an-earlier-release) indirin.
+2. Komut istemi 'ni yönetici modunda açın. Bunu yapmak için, Windows Başlat menüsünü açın, "cmd" yazın, komut Istemi arama sonuçlarına sağ tıklayın ve **yönetici olarak çalıştır**' ı seçin. Komut isteminde dizinini, Visual Studio önyükleyici dosyanızın bulunduğu klasör olarak değiştirin.
+3. Yükleme konumu için yeni bir klasör yolu belirterek ve. exe dosya adını yüklemekte olduğunuz Visual Studio sürümü için uygun önyükleyici adıyla değiştirerek aşağıdaki komutu çalıştırın. . Exe dosya adı eşleşmelidir veya aşağıdaki dosyalardan birine benzer olmalıdır:
+   * Visual Studio Community için vs_community.exe
+   * Visual Studio Professional için vs_professional.exe
+   * Visual Studio Enterprise için vs_enterprise.exe
 
-Dile özgü bilgiler için aşağıdaki tabloda uygun konuya bakın.
+```
+vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<2019 AddNewPath>"
+```
+4. Yüklemeniz için gereken bileşenleri seçmek üzere Yükleyici iletişim kutularını izleyin. Daha fazla bilgi için bkz. [Visual Studio 'Yu yükler](install-visual-studio.md#step-4---choose-workloads).
+
+## <a name="net-framework-versions-and-side-by-side-installations"></a>.NET Framework sürümleri ve yan yana Yüklemeler
+
+Visual Basic, Visual C# ve Visual F# projeleri, projenin hangi .NET Framework sürümünü kullandığını belirtmek için **Proje tasarımcısında** **Target Framework** seçeneğini kullanır. Bir C++ projesi için. vcxproj dosyasını değiştirerek hedef çerçeveyi el ile değiştirebilirsiniz. Daha fazla bilgi için .NET Framework sayfasındaki [sürüm uyumluluğu](/dotnet/framework/migration-guide/version-compatibility) ' na bakın.
+
+Bir proje oluşturduğunuzda, **Yeni proje** iletişim kutusundaki **.NET Framework** listesinde projenin hangi .NET Framework sürümünü hedeflediğini belirtebilirsiniz.
+
+Dile özgü bilgiler için aşağıdaki tablodaki ilgili konuya bakın.
 
 ::: moniker range="vs-2017"
 
-| Dil | Konu başlığı |
+| Dil | Konu |
 |--------------|-----------|
 | Visual Basic | [Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md?view=vs-2017) |
 | Visual C# | [Uygulama Sayfası, Proje Tasarımcısı (C#)](../ide/reference/application-page-project-designer-csharp.md?view=vs-2017) |
-| Visual F# | [Visual Studio'da Visual F# ile geliştirin](../ide/fsharp-visual-studio.md?view=vs-2017) |
-|C++ | [Nasıl yapilir: Hedef çerçeveyi ve platform araç kümesini değiştirme](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset/) |
+| Visual F# | [Visual Studio 'da Visual F# ile geliştirme](../ide/fsharp-visual-studio.md?view=vs-2017) |
+|C++ | [Nasıl yapılır: Hedef çerçeve ve platform araç kümesini değiştirme](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset/) |
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio yükleme](install-visual-studio.md?view=vs-2017)
-* [Visual Studio projelerini port, geçiş ve yükseltme](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017)
-* [C/C++ yalıtılmış uygulamalar ve yan yana derlemeler oluşturma](/cpp/build/building-c-cpp-isolated-applications-and-side-by-side-assemblies/)
+* [Visual Studio'yu yükleme](install-visual-studio.md?view=vs-2017)
+* [Visual Studio projelerini bağlantı noktası, geçirme ve yükseltme](../porting/port-migrate-and-upgrade-visual-studio-projects.md?view=vs-2017)
+* [C/C++ yalıtılmış uygulamaları ve yan yana derlemeleri oluşturma](/cpp/build/building-c-cpp-isolated-applications-and-side-by-side-assemblies/)
 
 ::: moniker-end
 
 ::: moniker range=">= vs-2019"
 
-| Dil | Konu başlığı |
+| Dil | Konu |
 |--------------|-----------|
 | Visual Basic | [Uygulama Sayfası, Proje Tasarımcısı (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md) |
 | Visual C# | [Uygulama Sayfası, Proje Tasarımcısı (C#)](../ide/reference/application-page-project-designer-csharp.md) |
-| Visual F# | [Visual Studio'da Visual F# ile geliştirin](../ide/fsharp-visual-studio.md) |
-| C++ | [Nasıl yapilir: Hedef çerçeveyi ve platform araç kümesini değiştirme](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset/) |
+| Visual F# | [Visual Studio 'da Visual F# ile geliştirme](../ide/fsharp-visual-studio.md) |
+| C++ | [Nasıl yapılır: Hedef çerçeve ve platform araç kümesini değiştirme](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset/) |
 
 [!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Visual Studio yükleme](install-visual-studio.md)
-* [Visual Studio projelerini port, geçiş ve yükseltme](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
-* [C/C++ yalıtılmış uygulamalar ve yan yana derlemeler oluşturma](/cpp/build/building-c-cpp-isolated-applications-and-side-by-side-assemblies/)
+* [Visual Studio'yu yükleme](install-visual-studio.md)
+* [Visual Studio projelerini bağlantı noktası, geçirme ve yükseltme](../porting/port-migrate-and-upgrade-visual-studio-projects.md)
+* [C/C++ yalıtılmış uygulamaları ve yan yana derlemeleri oluşturma](/cpp/build/building-c-cpp-isolated-applications-and-side-by-side-assemblies/)
 
 ::: moniker-end

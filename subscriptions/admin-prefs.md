@@ -7,12 +7,12 @@ ms.assetid: 0fe9eaa4-f589-429e-a443-13bf86637d5a
 ms.date: 03/17/2020
 ms.topic: conceptual
 description: Yönetim portalında dil, kişiler, abonelik düzeyi ve diğer kullanıcılara yönelik tercihleri ayarlama hakkında bilgi edinin
-ms.openlocfilehash: b719e60771ef8cca9b956626ca6e9e3dd91edce5
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: e34b9cf1ed32abc81b9c2ebb3ef7c370818c9089
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183502"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234620"
 ---
 # <a name="set-preferences-for-your-agreements-in-the-administration-portal"></a>Yönetim portalında anlaşmalarda tercihleri ayarlama
 Süper Yöneticiler yönetim portalında (Yönetim Portalı) her anlaşma için global olarak uygulanacak belirli tercihleri ayarlayabilir.  Bu tercihler, aboneler eklendiğinde yönetici için abonelik ayrıntılarını otomatik olarak dolduracaktır ve yalnızca süper yöneticiler tarafından genel olarak değiştirilebilir.  
@@ -24,18 +24,18 @@ Tercihlerinizi ayarlamak için:
 1. Yönetim portalında süper yönetici ayrıcalıklarına sahip bir KIMLIKLE oturum açın.
 2. **Yöneticileri Yönet** sekmesine tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Yönetici tercihleri düğmesi](_img/admin-prefs/admin-prefs-button.png)
+   > ![Yönetici tercihleri düğmesi](_img/admin-prefs/admin-prefs-button.png "Tercihleri Yönet ' e tıklayarak yöneticileri görüntüleyin")
 
 3. **Anlaşma tercihleri**' ne tıklayın.
 Sağ tarafta bir panel açılır ve kullanılabilir tercihleriniz görüntülenir. 
 
    > [!div class="mx-imgBorder"]
-   > ![Yönetici tercihleri açılır kutusu](_img/admin-prefs/admin-prefs-flyout.png)
+   > ![Yönetici tercihleri açılır kutusu](_img/admin-prefs/admin-prefs-flyout.png "Tercihlerinizi ayarlayın ve Kaydet ' e tıklayın.")
 
 ## <a name="set-your-preferences"></a>Tercihlerinizi ayarlama
 Kullanılabilir tercihlerin her birini ve etkilerini keşfedelim. 
 
-### <a name="agreement"></a>Öz
+### <a name="agreement"></a>Sözleşme
 Süper yönetici olduğunuz birden çok anlaşmanız varsa, açılan kutuda istediğiniz sözleşmeyi seçebilirsiniz.  Ayarladığınız Tercihler yalnızca bu sözleşme için geçerlidir.  Bireysel Yöneticiler, abonelikleri atarken bu tercihlerden bazılarını büyük/küçük harfe göre geçersiz kılabilir. 
 
 Oturum açmak için kullandığınız e-posta adresiyle ilişkili yalnızca bir anlaşma varsa, görüntülenir ve açılır liste devre dışı bırakılır. 
@@ -86,6 +86,3 @@ Visual Studio aboneliklerini yönetme hakkında daha fazla bilgi edinin.
 - [Birden çok abonelik atama](assign-license-bulk.md)
 - [Abonelikleri düzenleme](edit-license.md)
 - [En fazla kullanımı belirleme](maximum-usage.md)
-
-
-

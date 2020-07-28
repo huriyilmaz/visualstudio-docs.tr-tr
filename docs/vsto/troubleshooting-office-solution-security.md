@@ -12,12 +12,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 76cd454cd66e31db8c521d71183aa479da1fe2a5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 8825f1f4393d93df6a621fd71b6782c6652a9c0c
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85537416"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234815"
 ---
 # <a name="troubleshoot-office-solution-security"></a>Office çözüm güvenliği sorunlarını giderme
   Bu konu, Office çözümlerini güvenli hale getirirken karşılaşabileceğiniz yaygın sorunları çözmeye yönelik ipuçları içerir.
@@ -31,7 +31,7 @@ ms.locfileid: "85537416"
 
 - Bilgisayarım
 
-- Internet
+- İnternet
 
 - Yerel intranet
 
@@ -50,3 +50,4 @@ ms.locfileid: "85537416"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)
+- [Visual Studio sorunlarını giderme](/troubleshoot/visualstudio/welcome-visual-studio/)

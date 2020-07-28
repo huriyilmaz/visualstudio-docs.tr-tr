@@ -7,12 +7,12 @@ ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: a90d6f3fec1f619cda397788c130f7514307effd
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: e8eba6ad97d0f5e7e1da0e75093c33658f26a56a
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183476"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235023"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda lisans atama
 Visual Studio abonelikleri Yöneticisi olarak, bireysel kullanıcılara ve Kullanıcı gruplarına abonelik atamak için yönetim portalını kullanabilirsiniz.
@@ -34,10 +34,10 @@ Abonelik avantajlarına erişebilmeleri için bir Visual Studio aboneliğini yen
 1. [Yönetim portalında](https://manage.visualstudio.com)oturum açın.
 2. Tek bir Visual Studio abonesi 'na bir lisans atamak için, tablonun en üstünde bulunan **Ekle**' yi seçin ve **bireysel abone**' i seçin.
    > [!div class="mx-imgBorder"]
-   > ![Tek bir abone ekleme](_img/assign-license-add/add-subscriber-individual.png)
+   > ![Tek bir abone ekleme](_img/assign-license-add/add-subscriber-individual.png "Ekle ' ye tıklayın ve tek bir abonelik atamak için bireysel abone ' i seçin.")
 3. Yeni abone için form alanlarına bilgi girin. Kuruluşunuz Azure Active Directory kullanıyorsa, **ad** alanı geçerli dizininizde kişileri bulmak için arama işlevi olarak davranır, böylece arama sonuçlarından doğru kullanıcıyı seçebilirsiniz. Bu kişiyi seçtikten sonra, oturum açma e-postası ve bildirim e-postası otomatik olarak doldurulur.
    > [!div class="mx-imgBorder"]
-   > ![Abone ayrıntıları](_img/assign-license-add/subscriber-details.png)
+   > ![Abone ayrıntıları](_img/assign-license-add/subscriber-details.png "Abone adı ve diğer ayrıntıları girin veya kiracı üyelerinden birini seçin.")
 
     > [!NOTE]
     > Bir abone adı girdiğinizde Azure Active Directory kiracının üyelerinin görünür olması için, yöneticinin kiracının bir üyesi olması gerekir. 
@@ -45,15 +45,15 @@ Abonelik avantajlarına erişebilmeleri için bir Visual Studio aboneliğini yen
 
     Bu abonenin, [Visual Studio abonelikleri portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs)oturum açtıklarında yazılım indirmelerine erişimi olmasını Istiyorsanız **indirme ayarları** bölümünde indirmelerin etkin ' i açıp bırakmadığınızdan emin olun. İndirmeleri devre dışı bırakmayı seçerseniz, kullanıcının yazılım indirmelerine erişimi olmayacaktır.  Ürün anahtarlarına erişim de devre dışı bırakılır.  Abonenin abonelik kapsamındaki diğer tüm avantajlara erişimi olmaya devam edecektir.
    > [!div class="mx-imgBorder"]
-   > ![İndirmelere erişim](media/access-to-downloads.png)
+   > ! [İndirmelere erişim] (medya/access-to-downloads.png "" Izin ver "i, abone için yazılım indirmelerine erişim sağlamak için seçin.")
 
     Kendi başvuru notlarınızı aboneliğe eklemek istiyorsanız, **Başvuru Ekle** bölümünde bunu yapabilirsiniz.
    > [!div class="mx-imgBorder"]
-   > ![Her aboneliğe kendi başvuru notlarınızı ekleyin](media/add-subscriber-reference-notes.png)
+   > ![Her aboneliğe kendi başvuru notlarınızı ekleyin](media/add-subscriber-reference-notes.png "Bu abonelikle ilgili notları kaydetmek için başvuru alanını kullanın.")
 
     Seçenekleri seçip abone için veri girmeyi tamamladığınızda, **abone Ekle** ' nin altında **Ekle** ' yi seçin.
    > [!div class="mx-imgBorder"]
-   > ![Ekle düğmesini seçin](media/add-button.png)
+   > ![Ekle düğmesini seçin](media/add-button.png "Bilgileri kaydetmek ve aboneliği aboneye atamak için Ekle ' ye tıklayın.")
 
 ## <a name="resend-assignment-emails"></a>Atama e-postalarını yeniden gönder
 Bir abone ekledikten sonra, bir atama e-postası, daha fazla yönerge ile otomatik olarak yeni aboneye gönderilir. Abone ' i seçip üst menüdeki yeniden **Gönder** düğmesine tıklayarak atama e-postasını dilediğiniz zaman gönderebilirsiniz.  E-postaları birden çok kullanıcıya yeniden göndermek için, aboneleri seçerken **CTRL** tuşunu basılı tutun.  Yeniden **Gönder** düğmesine tıkladığınızda, bu abonelere yeniden göndermek istediğinizi onaylamanızı isteyen bir iletişim kutusu görürsünüz.  

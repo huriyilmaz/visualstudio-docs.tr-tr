@@ -1,6 +1,6 @@
 ---
 title: Sorun giderme için kaynaklar
-ms.date: 07/17/2020
+ms.date: 07/23/2020
 ms.topic: troubleshooting
 f1_keywords:
 - VS.Message.0x00005A89
@@ -93,12 +93,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a7b4dea467c0ed233b2db917e231a5a4d787f09
-ms.sourcegitcommit: 1fcdb5dae881a1c3a93413bb940d63c232bf96f3
+ms.openlocfilehash: f18ef8a0bf8ffc6b7478f307b6c2a37247bef034
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86459287"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234737"
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Tümleşik geliştirme ortamı hatalarında sorun giderme kaynakları
 
@@ -109,7 +109,7 @@ Tüm hata iletilerinde ilişkili belirli bir yardım konusu yoktur. Hata iletisi
 
 ## <a name="knowledge-base-articles"></a>Bilgi Bankası makaleleri
 
-Ürün sorunları hakkında makaleler için Bilgi Bankası'nda (BB) çevrimiçi arama yapabilirsiniz. Tüm sorunlarla ilgili bir BB makalesi yoktur; ancak çok sayıda müşterinin karşılaştığı hatalar genellikle belgelenmiştir. [Microsoft desteği](https://support.microsoft.com) Web sitesinde KB makalelerine erişebilirsiniz. Visual Studio için bir KB makaleleri koleksiyonunu [Visual Studio sorun giderme](/troubleshoot/visualstudio/welcome-visual-studio/) sayfasında da görüntüleyebilirsiniz.
+Ürün sorunları hakkında makaleler için Bilgi Bankası'nda (BB) çevrimiçi arama yapabilirsiniz. Tüm sorunlarla ilgili bir BB makalesi yoktur; ancak çok sayıda müşterinin karşılaştığı hatalar genellikle belgelenmiştir. Visual Studio için KB makalelerini [Visual Studio sorun giderme](/troubleshoot/visualstudio/welcome-visual-studio/) sayfasında görüntüleyebilirsiniz.
 
 ## <a name="developer-forums"></a>Geliştirici forumları
 
@@ -124,4 +124,5 @@ Diğer kaynakları denedikten sonra hala sorularınız varsa, [Microsoft desteğ
 ## <a name="see-also"></a>Ayrıca bkz.
 
 * [Ağla ilgili veya ara sunucu hatalarıyla ilgili sorunları giderme](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
+* [Sorun giderme (Windows için Visual Studio)](/troubleshoot/visualstudio/welcome-visual-studio/)
 * [Sorun giderme (Mac için Visual Studio)](/visualstudio/mac/troubleshooting)

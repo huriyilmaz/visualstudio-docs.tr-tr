@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 679a6e753e61ecb1af9097692a741c35e531c7cc
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: fc8f336c3d43fb1f896d9e5e6b4d4d12c13d4064
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85545749"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87234984"
 ---
 # <a name="troubleshoot-office-solution-deployment"></a>Office çözüm dağıtımı sorunlarını giderme
   Bu konu, Office çözümlerini dağıtırken karşılaşabileceğiniz yaygın sorunları çözme hakkında bilgi içerir.
@@ -129,3 +129,4 @@ ms.locfileid: "85545749"
 
 - [ClickOnce dağıtım sorunlarını giderme](../deployment/troubleshooting-clickonce-deployments.md)
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
+- [Visual Studio sorunlarını giderme](/troubleshoot/visualstudio/welcome-visual-studio/)

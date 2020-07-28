@@ -1,64 +1,64 @@
 ---
-title: Visual Studio abonelerine belirli GUID'ler atama | Microsoft Dokümanlar
+title: Visual Studio abonelerine belirli GUID 'Ler atama | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 04/20/2020
 ms.topic: conceptual
-description: Yöneticilerin abonelere özel abonelik GUID'i nasıl kullanabileceğini öğrenin
-ms.openlocfilehash: e2e8cd4f5d07f218fc23c0b7b6f28ababc25263f
-ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
+description: Yöneticilerin abonelere nasıl özel abonelik GUID 'SI olabileceğini öğrenin
+ms.openlocfilehash: e6c50239721d810964f2b95e0ec3509999d2f4d5
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82072599"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235192"
 ---
-# <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio Abonelikleri Yönetim Portalı'na belirli abonelikler atama
+# <a name="assign-specific-subscriptions-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda belirli abonelikleri atama
 
-Yöneticiler artık bireysel abonelere belirli abonelikler atamak için Visual Studio Abonelikleri Yönetim Portalı'nı kullanabilirler.  Bu, kuruluşun kısa bir süre için aboneliğe erişilmesi gereken geçici personeli veya satıcıları olduğu durumlarda yararlı olabilir.  Yöneticiler, yeni aboneliklerini uzun süreli kullanım için bırakarak kısmen kullanılmış bir abonelik atayabilir.  
+Yöneticiler artık bireysel abonelere belirli abonelikler atamak için Visual Studio abonelikleri yönetim portalını kullanabilir.  Bu, kuruluşun kısa bir süre için aboneliğe erişmesi gereken geçici personeli veya satıcıları olduğu durumlarda yararlı olabilir.  Yöneticiler, daha önce kısmen kullanılan bir abonelik atayabilir ve daha uzun süreli kullanım için yeni aboneliklerini bırakır.  
 
 <br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4t4cl]
 
 
-## <a name="assign-specific-subscription-guids-to-users"></a>Kullanıcılara belirli abonelik GUID'leri atama
+## <a name="assign-specific-subscription-guids-to-users"></a>Kullanıcılara belirli abonelik GUID 'Leri atama
 
-Bireylere belirli abonelikler atama işlemi, bireysel kullanıcılara belirli abonelik Globally Benzersiz Tanımlayıcılar (GUIDs) atamak için iki mevcut yönetim sürecinden yararlanmayı içerir.  Üç adımlı işlem, geçerli aboneliklerinizin ve atamalarınızın bir listesini dışa aktarmayı, bu listeyi atamak istediğiniz belirli GUID'leri tanımlamak için kullanmayı ve ardından yeni atamaları yüklemek için toplu ekleme işlemini kullanmayı içerir.
+Kişilere belirli abonelikler atama süreci, bireysel kullanıcılara genel olarak benzersiz tanımlayıcılar (GUID 'Ler) atamak için mevcut iki yönetim işleminin kullanılmasını içerir.  Üç adımlı işlem, geçerli aboneliklerinizin ve atamalarınızın listesini, atamak istediğiniz belirli GUID 'Leri tanımlamak için kullanarak ve ardından yeni atamaları karşıya yüklemek için toplu ekleme işlemini kullanarak, bu listeyi kullanarak dışarı aktarmayı içerir.
 
-### <a name="export-your-subscriptions-information"></a>Abonelik bilgilerinizi dışa aktarma
+### <a name="export-your-subscriptions-information"></a>Abonelik bilgilerinizi dışarı aktarın
 
-Dışa aktarmayı gerçekleştirmek için:
-1. [İdare Portalı'nda](https://manage.visualstudio.com)oturum açın.
-2. **Dışa Aktar** sekmesini seçin ve dosya yerel makinenize indirilir. Dosya, kullanıcı aboneliklerinizi içeren sözleşmenin adını ve dışa aktarma tarihini içerir.
+Dışarı aktarma işlemini gerçekleştirmek için:
+1. [Yönetim portalında](https://manage.visualstudio.com)oturum açın.
+2. **Dışarı aktar** sekmesini seçin. bu dosya yerel makinenize indirilir. Dosya, Kullanıcı aboneliklerinizi içeren sözleşmenin adının yanı sıra dışarı aktarma tarihini de içerecektir.
 > [!div class="mx-imgBorder"]
-> ![İhracat aboneleri](_img/exporting-subscriptions/exporting-subscriptions.png)
+> ![Aboneleri dışarı aktar](_img/exporting-subscriptions/exporting-subscriptions.png "Abone bilgileriyle atanan aboneliklerinizin listesini kaydetmek için dışarı aktar ' a tıklayın.")
 
-### <a name="identify-the-guids-you-want-to-assign"></a>Atamak istediğiniz GUID'leri tanımlama
+### <a name="identify-the-guids-you-want-to-assign"></a>Atamak istediğiniz GUID 'Leri belirler
 
-Dışa Aktarma aracını daha önce kullandıysanız, üretilen elektronik tabloya yeni alanların eklendiğini fark edeceksiniz.  Bunlar, her aboneliğin durumunu ve kullanıcılara hangilerini atamak istediğinizi belirlemenize yardımcı olur.  
+Önceden verme aracını kullandıysanız, oluşturulan elektronik tabloya yeni alanların eklendiğini fark edeceksiniz.  Bunlar, her aboneliğin durumunu ve kullanıcılara atamak istediğinizi belirlemenize yardımcı olur.  
 
-- **Abonelik Durumu**: Bu alan "atanmış" veya "atanmamış" olarak belirtilir.  Bir aboneliğin "atanmış" statüsü varsa, ad, e-posta vb. gibi kullanıcı bilgileriyle ilişkili dir. 
-- **Kullanım Durumu**: Kullanım durumu, bir kullanıcıya hiç atanmamış olduğu anlamına gelen "yeni"yi veya bir noktada kullanıcıya atandığını gösteren "kullanılmış" anlamına gelir.  
+- **Abonelik durumu**: Bu alan "atanmış" veya "atanmamış" olduğunu gösterir.  Bir abonelikte "atanmış" durumu varsa, bu, ad, e-posta vb. gibi kullanıcı bilgilerine de sahip olur. 
+- **Kullanım durumu**: kullanım durumu "yeni" olarak, bir kullanıcıya hiçbir zaman atanmamış olduğunu veya bir kullanıcıya bir noktada atanmış olduğunu gösteren "kullanılan" anlamına gelir.  
 
-Tek tek kullanıcılara hangi abonelikleri atamak istediğinizi belirlemek için bu alanlardaki değerleri elektronik tablodaki diğer bilgilerle birlikte kullanabilirsiniz. Listeyi duruma, abonelik düzeyine, son kullanma tarihine vb. göre daraltmaya yardımcı olmak için Excel'de bir filtre uygulayabilirsiniz. 
+Bireysel kullanıcılara hangi aboneliklerde atamak istediğinizi öğrenmek için bu alanlardaki değerleri, elektronik tablodaki diğer bilgilerle birlikte kullanabilirsiniz. Listeyi durum, abonelik düzeyi, sona erme tarihi vb. ile daraltmaya yardımcı olmak için Excel 'de bir filtre uygulayabilirsiniz. 
 
-### <a name="upload-your-new-assignments"></a>Yeni atamalarınızı yükleyin
+### <a name="upload-your-new-assignments"></a>Yeni atamalarınızı karşıya yükleyin
 
-Son **adım, Toplu ekleme** şablonuna indirgin, atamak istediğiniz abonelikler için gerekli bilgileri doldurmak ve şablonu yüklemektir.  Bu işlemin tam bir açıklaması için lütfen [birden çok kullanıcı ekle](assign-license-bulk.md) makalemize bakın.  
+Son adım, **toplu ekleme** şablonunu indirmenin yanı sıra atamak istediğiniz abonelikler için gerekli bilgileri doldurmanızı ve şablonu karşıya yüklemenizi sağlar.  Bu işlemin tamamen açıklaması için lütfen bkz. [birden çok kullanıcı ekleme](assign-license-bulk.md) makalesi.  
 
 > [!IMPORTANT]
-> Başarılı bir yükleme sağlamak için lütfen aşağıdakileri yapın:
-> - **Toplu ekle'yi**seçtiğinizde iletişim kutusunda bağlı şablonu kullanıyorsunuz.  Gerekli tüm alanları içermeyebileceğinden şablonun yerel olarak depolanmış bir kopyasını kullanmayın.  Eski bir şablon kullanmak yüklemenin başarısız olmasını neden olur. 
-> - Şablonda **Gerekli** olarak gösterilen tüm alanlar tamamlandı.
-> - **Hata iletisi** sütununda listelenen hata yok.
-> - Her GUID şablonda yalnızca bir kez kullanılır. 
-> - Şablondaki abonelik düzeyi, dışa aktarılan lar listesindeki GUID aboneliğiyle eşleşir. 
-> - GUID, dışa aktarılan lar listesindeki başka bir kullanıcıya zaten atanmamış. 
+> Başarılı bir karşıya yükleme sağlamak için lütfen şunları yaptığınızdan emin olun:
+> - **Toplu Ekle**' yi seçtiğinizde iletişim kutusunda bağlantılı şablonu kullanıyorsunuz.  Tüm gerekli alanları içeremeyeceği için şablonun yerel olarak depolanmış bir kopyasını kullanmayın.  Eski bir şablon kullanmak, karşıya yüklemenin başarısız olmasına neden olur. 
+> - Şablonda **gerekli** olarak gösterilen tüm alanlar tamamlanmıştır.
+> - **Hata iletisi** sütununda listelenen bir hata yok.
+> - Her GUID, şablonda yalnızca bir kez kullanılır. 
+> - Şablondaki abonelik düzeyi, dışarıya aktarılmış listedeki GUID 'in aboneliğiyle eşleşir. 
+> - GUID, zaten dışarıya alınmış listedeki başka bir kullanıcıya atanmamış. 
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
-### <a name="qhow-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>S: Şu anda tek bir kullanıcıya atanan aboneliği nasıl değiştiririm?
-C: Bir kullanıcıya hangi GUID'nin atandığını değiştirmek istiyorsanız, öncelikle o kullanıcının aboneliğini silmeniz gerekir.  Daha fazla bilgi için lütfen [abonelikleri sil](delete-license.md) makalemize bakın.  Söz kullanıcının aboneliğini siledikten sonra, listeyi dışa aktarmak ve yeni abonelik bilgilerini yüklemek için yukarıda özetlenen işlemi kullanın.  
+### <a name="qhow-do-i-change-which-subscription-is-currently-assigned-to-an-individual-user"></a>Soru-cevap kullanıcısına şu anda hangi aboneliğin atandığını nasıl değiştirebilirim?
+Y: bir kullanıcıya hangi GUID 'nin atandığını değiştirmek istiyorsanız, önce bu kullanıcı için aboneliği silmeniz gerekir.  Daha fazla bilgi için lütfen [abonelik silme](delete-license.md) makalemizi inceleyin.  Bu Kullanıcı için aboneliği sildikten sonra, listeyi dışarı aktarmak ve yeni abonelik bilgilerini karşıya yüklemek için yukarıda özetlenen işlemi kullanın.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](/visualstudio/)
@@ -67,11 +67,11 @@ C: Bir kullanıcıya hangi GUID'nin atandığını değiştirmek istiyorsanız, 
 - [Microsoft 365 belgeleri](/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-Artık kullanıcılara abonelikler atadığınıza göre, diğer yönetim görevlerini nasıl gerçekleştireceklerini öğrenin.
-- [Tek tek abonelikler atama](assign-license.md)
+Artık kullanıcılara abonelikler atadıktan sonra, diğer yönetim görevlerinin nasıl gerçekleştirileceğini öğrenin.
+- [Ayrı abonelikler atama](assign-license.md)
 - [Birden çok abonelik atama](assign-license-bulk.md)
 - [Abonelikleri düzenleme](edit-license.md)
 - [Abonelikleri silme](delete-license.md)
-- [Maksimum kullanımı belirleme](maximum-usage.md)
+- [En fazla kullanımı belirleme](maximum-usage.md)
 
 

@@ -2,7 +2,7 @@
 title: Visual Studio’da oturum açma
 titleSuffix: ''
 ms.custom: seodec18
-ms.date: 03/10/2020
+ms.date: 07/24/2020
 ms.topic: conceptual
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 author: ornellaalt
@@ -10,12 +10,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 85d4be9ffd8d1f5ccc6c6d1a1ba5f83e7f0fccf6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 4d6bf69050348cbe078cfdf7ae2d419f1dd13745
+ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285302"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87235205"
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio’da oturum açma
 
@@ -38,7 +38,7 @@ Oturum açtığınızda, Visual Studio deneyiminizi zenginleştirin. Örneğin, 
 İşte, oturum açtıktan sonra neleri beklediklerinize ilişkin tam bir liste aşağıda verilmiştir:
 - **Visual Studio deneme süresini genişletin** -30 günlük deneme süresi boyunca sınırlı olmak yerine Visual Studio Professional veya Visual Studio Enterprise ek 90 gün boyunca kullanabilirsiniz. Daha fazla bilgi için bkz. [deneme sürümünü genişletme veya lisans güncelleştirme](../ide/how-to-unlock-visual-studio.md).
 
-- **Visual Studio Community sürümünün kilidini açın** -topluluk sürümü yüklemeniz sizden bir lisans isterse, kendinizi KALDıRMAK için IDE 'de oturum açın.
+- **Visual Studio Community Edition 'ı kullanmaya devam et** -topluluk sürümü yüklemeniz bir lisans ısterse, Visual Studio Community 'yi **ücretsiz**kullanmaya devam etmek için IDE 'de oturum açın. 
 
 - **Visual Studio aboneliği veya bir Azure DevOps organizasyonu ile ilişkili bir hesap kullanıyorsanız, Visual Studio 'Nun kilidini açın**. Ayrıntılı yönergeler için bkz. [deneme sürümünü genişletme veya lisans güncelleştirme](../ide/how-to-unlock-visual-studio.md).
 
