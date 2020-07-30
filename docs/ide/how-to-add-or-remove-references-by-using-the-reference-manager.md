@@ -21,12 +21,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f67c41f860417a27a6003a19672d4cd617d37a6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f02dcc5f38bf8eb4acc702c5d8a1ee466a6a4a71
+ms.sourcegitcommit: 9179c33a78c2ac690ce908d7c73eef50b6e367f0
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85284732"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390268"
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>Nasıl yapılır: başvuru Yöneticisi 'ni kullanarak başvuru ekleme veya kaldırma
 
@@ -47,6 +47,9 @@ Başvuru Yöneticisi iletişim kutusu, proje türüne bağlı olarak sol tarafta
 - **Windows**, **çekirdek** ve **Uzantılar** alt grupları ile. **Nesne tarayıcısı**kullanarak Windows SDK veya uzantı SDK 'lerinde başvuruları inceleyebilirsiniz.
 
 - **En son** alt grup ile **tarama**
+ 
+    > [!NOTE]
+    > C++ projeleri geliştiriyorsanız başvuru Yöneticisi iletişim kutusunda **gözatamıyorum** ' a bakabilirsiniz.
 
 ## <a name="add-a-reference"></a>Başvuru ekleme
 

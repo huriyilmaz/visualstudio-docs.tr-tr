@@ -7,12 +7,12 @@ ms.assetid: bc8b526c-2fed-4ac8-aaa2-73d2495256fd
 ms.date: 04/20/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil edilen Pluralsel eğitim aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: e3b8c75249a9246ae15384457957ddea34ea5f2e
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: f06b2bb8d2151255cb606fd3dcb8344b1fb37411
+ms.sourcegitcommit: c620d59578db1b89f80e64ae04b4898bc4ab292d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902810"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87375904"
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde pluralalsel eğitim avantajları
 
@@ -82,13 +82,7 @@ Hangi aboneliğin kullanmakta olduğunuzdan emin değil misiniz?  [https://my.vi
 Y: tüm Visual Studio Enterprise abonelikler, pluralalalalalalalalalal  Aboneliğinizin uygun olup olmadığını görmek için [uygunluk tablosuna](#eligibility) bakın.
 
 ### <a name="q-do-i-have-access-to-any-customized-learning--playlists-or-channels"></a>S: özelleştirilmiş bir öğrenme çalma listelerine veya kanala erişimim var mı?
-Y: Evet, Visual Studio abonesi olarak, uzman eğitim avantajınız kapsamında uzman kanallara erişim elde edersiniz. Bu kanallar, Microsoft uzmanları tarafından özel olarak kaldırılmıştır ve .net, Azure, DevOps ve Mobility alanlarında öğrenmeye yöneliktir. Pluralalsel [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) giriş sayfanızda bu kanallara erişim elde etmek Için Visual Studio abonelik portalınız aracılığıyla Pluralsel avantajınızı etkinleştirin.
-
-• Scott HANSELMANN (.net, Azure)-[https://go.pluralsight.com/scott-hanselman](https://go.pluralsight.com/scott-hanselman)
-
-• Donovan kahverengi (DevOps)-[https://go.pluralsight.com/donovan-brown](https://go.pluralsight.com/donovan-brown)
-
-• James Montemagno (Mobility)-[https://go.pluralsight.com/james-montemagno](https://go.pluralsight.com/james-montemagno)
+C: Evet. Visual Studio abonesi olarak, Pluralsel eğitim avantajın bir parçası olarak öne çıkan roller, öğrenme yolları ve özel kanallar (çalma listeleri) için erişim elde edersiniz. Öne çıkan içerikler Microsoft ve Plurali tarafından özel olarak kaldırılmıştır ve ilgilendiğiniz önemli alanlarda öğrenmeye yöneliktir. Pluralalsel <https://my.visualstudio.com/benefits> giriş sayfanızdaki bu ve diğer içeriklere erişebilmek Için Visual Studio abonelik portalınız aracılığıyla Pluralalsel avantajınızı etkinleştirin.
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>S: Pluralm aboneliğim çalıştırıldığında ne olur?
 Y: ücretsiz çoğul aboneliğin sonunda, doğrudan Pluraldan bir abonelik satın almayı tercih edebilirsiniz.  Tam Ayrıntılar için lütfen [Pluralali](https://www.pluralsight.com) ile iletişime geçin.
