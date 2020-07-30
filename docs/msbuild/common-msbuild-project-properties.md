@@ -18,12 +18,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 62f372be9ffa6ae76503550616c6b3612aad6146
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 08c790af5504c902bf5fe37d2cddba9b9f63aa40
+ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770865"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87425374"
 ---
 # <a name="common-msbuild-project-properties"></a>Yaygın MSBuild proje özellikleri
 
@@ -33,7 +33,7 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 
 ## <a name="list-of-common-properties-and-parameters"></a>Ortak özellikler ve parametrelerin listesi
 
-| Özellik veya parametre adı | Proje türleri | Açıklama |
+| Özellik veya parametre adı | Proje türleri | Description |
 |------------------------------------| - | - |
 | Adtiontalbpaths | .NET | Derleyicilerin başvuru derlemelerini arayacağı ek klasörleri belirtir. |
 | AddModules | .NET | Derleyicinin, belirtilen dosyalardaki tüm tür bilgilerini derlediğiniz proje için kullanılabilir hale getirmesine neden olur. Bu özellik, `/addModules` derleyici anahtarıyla eşdeğerdir. |
@@ -137,3 +137,5 @@ Aşağıdaki tabloda, Visual Studio proje dosyalarında tanımlanan veya MSBuild
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yaygın MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
+- [Ortak MSBuild öğe meta verileri](common-msbuild-item-metadata.md)
+- [MSBuild ayrılmış ve Iyi bilinen Özellikler](msbuild-reserved-and-well-known-properties.md)

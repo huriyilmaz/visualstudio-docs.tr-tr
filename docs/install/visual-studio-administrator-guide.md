@@ -2,7 +2,7 @@
 title: Visual Studio yönetici kılavuzu
 titleSuffix: ''
 description: Visual Studio 'Yu kurumsal bir ortamda dağıtma hakkında daha fazla bilgi edinin.
-ms.date: 03/09/2020
+ms.date: 07/29/2020
 ms.custom: seodec18
 ms.topic: overview
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 70eb53c2e2a1625f167844d1e774915fdb1304ac
-ms.sourcegitcommit: 9e15138a34532b222e80f6b42b1a9de7b2fe0175
+ms.openlocfilehash: db1e57097b492a8847be6d96719054a6b917e4bd
+ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85419269"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87425413"
 ---
 # <a name="visual-studio-administrator-guide"></a>Visual Studio yönetici kılavuzu
 
@@ -40,13 +40,17 @@ Kuruluşunuz genelinde Visual Studio 'Yu dağıtmadan önce, yapmanız gereken b
 
 * Bakım gereksinimlerinize karar verin.
 
-  Şirketinizin bir özellik kümesi daha uzun bir süre içinde kalması, ancak hala düzenli bakım güncelleştirmelerini almak istiyorsa, bir hizmet temeli kullanmayı planlayın. Daha fazla bilgi için bkz. [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) sayfasının ***Enterprise ve Professional müşterilerine yönelik destek seçenekleri*** ve [hizmet ana hat sırasında Visual Studio 'yu güncelleştirme](update-servicing-baseline.md) sayfası.
+  Şirketinizin bir özellik kümesi daha uzun bir süre içinde kalması, ancak hala düzenli bakım güncelleştirmelerini almak istiyorsa, bir hizmet temeli kullanmayı planlayın. Daha fazla bilgi için, [Visual Studio ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing#support-options-for-enterprise-and-professional-customers) sayfasının ***Enterprise ve Professional müşterilerinin destek seçeneklerine*** ve [hizmet ana hat üzerinde Visual Studio 'yu güncelleştirme](update-servicing-baseline.md) bölümüne bakın.
 
   Toplu özellik güncelleştirmeleriyle birlikte bakım güncelleştirmelerini uygulamayı planlıyorsanız en son bitleri seçebilirsiniz.
 
 * Güncelleştirme modeline karar verin.
 
   Tek tek istemci makinelerinin güncelleştirmeleri nereden almasını istiyorsunuz? Özellikle, güncelleştirmeleri Internet 'ten mi yoksa şirket genelindeki bir yerel paylaşımdan mı almak istediğinize karar verin. Ardından, yerel bir paylaşma kullanmayı seçerseniz, bireysel kullanıcıların kendi istemcilerini güncelleştirip güncelleştiremeyeceğine karar verin ya da bir yöneticinin istemcileri program aracılığıyla güncelleştirmesini ister misiniz?
+
+  Visual Studio 'nun bir ağ yükleme düzeninin en son ürün güncelleştirmeleriyle güncelleştirilmesi olasıdır. böylece, Visual Studio 'nun en son güncelleştirmesi için bir yükleme noktası olarak ve ayrıca istemci iş istasyonlarına zaten dağıtılan yüklemelerin bakımını yapabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'nun ağ tabanlı yüklemesini güncelleştirme](../install/update-a-network-installation-of-visual-studio.md).
+
+  İnternet 'e bağlı olmayan bilgisayarlar için, en az bir düzen oluşturmak, çevrimdışı Visual Studio örneklerinizi güncelleştirmenin en kolay ve en hızlı yoludur. Daha fazla bilgi için bkz. [Visual Studio 'yu en düşük düzeyde çevrimdışı düzen kullanarak güncelleştirme](update-minimal-layout.md).
 
 * Şirketinizin ihtiyaç duyacağı [iş yüklerini ve bileşenleri](workload-and-component-ids.md?view=vs-2019) belirleyin.
 
@@ -62,13 +66,17 @@ Kuruluşunuz genelinde Visual Studio 'Yu dağıtmadan önce, yapmanız gereken b
 
 * Bakım gereksinimlerinize karar verin.
 
-  Şirketinizin bir özellik kümesi daha uzun bir süre içinde kalması, ancak hala düzenli bakım güncelleştirmelerini almak istiyorsa, bir hizmet temeli kullanmayı planlayın. Daha fazla bilgi için bkz. Visual Studio [ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) sayfasının ***eski sürümleri için destek*** ve [hizmet temeli sırasında Visual Studio 'yu güncelleştirme](update-servicing-baseline.md) .
+  Şirketinizin bir özellik kümesi daha uzun bir süre içinde kalması, ancak hala düzenli bakım güncelleştirmelerini almak istiyorsa, bir hizmet temeli kullanmayı planlayın. Daha fazla bilgi için, Visual Studio [ürün yaşam döngüsü ve bakım](/visualstudio/releases/2019/servicing#support-for-older-versions-of-visual-studio) sayfası 'nın yanı sıra [bir hizmet ana hat üzerinde Visual Studio 'yu güncelleştirme](update-servicing-baseline.md) bölümünde yer alan Visual ***Studio 'nun eski sürümleri için destek*** bölümüne bakın.
 
   Toplu özellik güncelleştirmeleriyle birlikte bakım güncelleştirmelerini uygulamayı planlıyorsanız en son bitleri seçebilirsiniz.
 
 * Güncelleştirme modeline karar verin.
 
   Tek tek istemci makinelerinin güncelleştirmeleri nereden almasını istiyorsunuz? Özellikle, güncelleştirmeleri Internet 'ten mi yoksa şirket genelindeki bir yerel paylaşımdan mı almak istediğinize karar verin. Ardından, yerel bir paylaşma kullanmayı seçerseniz, bireysel kullanıcıların kendi istemcilerini güncelleştirip güncelleştiremeyeceğine karar verin ya da bir yöneticinin istemcileri program aracılığıyla güncelleştirmesini ister misiniz?
+
+  Visual Studio 'nun bir ağ yükleme düzeninin en son ürün güncelleştirmeleriyle güncelleştirilmesi olasıdır. böylece, Visual Studio 'nun en son güncelleştirmesi için bir yükleme noktası olarak ve ayrıca istemci iş istasyonlarına zaten dağıtılan yüklemelerin bakımını yapabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'nun ağ tabanlı yüklemesini güncelleştirme](../install/update-a-network-installation-of-visual-studio.md).
+
+  İnternet 'e bağlı olmayan bilgisayarlar için, en az bir düzen oluşturmak, çevrimdışı Visual Studio örneklerinizi güncelleştirmenin en kolay ve en hızlı yoludur. Daha fazla bilgi için bkz. [Visual Studio 'yu en düşük düzeyde çevrimdışı düzen kullanarak güncelleştirme](update-minimal-layout.md).
 
 * Şirketinizin ihtiyaç duyacağı [iş yüklerini ve bileşenleri](workload-and-component-ids.md?view=vs-2017) belirleyin.
 

@@ -1,5 +1,5 @@
 ---
-title: MSBuild İyi Bilinen Öğe Metadata | Microsoft Dokümanlar
+title: MSBuild Iyi bilinen öğe meta verileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -16,16 +16,18 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e9320525d770344f131d9e3f04b357de43b5e73
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: c810e166ef6f04befdbf7a5d18fe20bb65b8a299
+ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "77633102"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87425387"
 ---
-# <a name="msbuild-well-known-item-metadata"></a>MSBuild iyi bilinen öğe meta verileri
+# <a name="msbuild-well-known-item-metadata"></a>MSBuild tanınmış öğe meta verileri
 
-Aşağıdaki tabloda, oluşturulduktan sonra her öğeye atanan meta veriler açıklanmaktadır. Her örnekte, projeye *C:\MyProject\Source\Program.cs* dosyasını eklemek için aşağıdaki madde bildirimi kullanılmıştır.
+Öğe meta verileri öğelere eklenmiş değerlerdir. Bazıları öğeler oluşturulduğunda öğelere MSBuild tarafından atanır, ancak ihtiyacınız olan meta verileri de tanımlayabilirsiniz. Kullanıcı tanımlı bazı meta veri değerlerinin MSBuild, belirli görev görevleri veya .NET SDK gibi SDK 'lar için anlamı vardır.
+
+Bu makaledeki ilk tablo, oluşturma sırasında her öğeye atanan meta verileri tanımlar. Sonraki tabloda, yapı davranışını denetlemek için tanımlayabileceğiniz MSBuild için anlamı olan bazı isteğe bağlı meta veriler gösterilmektedir. Her örnekte, projede *C:\myproject\source\program.cs* dosyasını eklemek için aşağıdaki öğe bildirimi kullanılmıştır.
 
 ```xml
 <ItemGroup>
@@ -33,22 +35,23 @@ Aşağıdaki tabloda, oluşturulduktan sonra her öğeye atanan meta veriler aç
 </ItemGroup>
 ```
 
-|Madde meta verileri|Açıklama|
+|Öğe meta verileri|Description|
 |-------------------|-----------------|
-|%(FullPath)|Öğenin tam yolunu içerir. Örnek:<br /><br /> *C:\MyProject\Kaynak\Program.cs*|
-|%(RootDir)|Öğenin kök dizini içerir. Örnek:<br /><br /> *C:\\*|
-|%(Dosya adı)|Uzantı olmadan öğenin dosya adını içerir. Örnek:<br /><br /> *Program*|
-|%(Uzantı)|Öğenin dosya adı uzantısını içerir. Örnek:<br /><br /> *Cs*|
-|%(RelativeDir)|Öznitelikte `Include` belirtilen yolu, son ters eğik\\çizgiye kadar ( ) içerir. Örnek:<br /><br /> *Kaynak\\*<br /><br /> `Include` Öznitelik tam bir yol `%(RelativeDir)` ise, kök dizini `%(RootDir)`ile başlar.  Örnek: <br /><br /> *C:\MyProject\Kaynak\\*|
-|%(Dizin)|Kök dizini olmadan öğenin dizinini içerir. Örnek:<br /><br /> *MyProject\\Kaynak\\*|
-|%(RecursiveDir)|`Include` Öznitelik joker karakter \* \*içeriyorsa, bu meta veri joker kartın yerine giden yolun bölümünü belirtir. Joker karakterler hakkında daha fazla bilgi için [bkz.](../msbuild/how-to-select-the-files-to-build.md)<br /><br /> *C:\MySolution\MyProject\Source\\ * klasörü *Program.cs*dosyayı içeriyorsa ve proje dosyasında bu öğe varsa:<br /><br /> `<ItemGroup>`<br /><br /> `<MyItem Include="C:\**\Program.cs" />`<br /><br /> `</ItemGroup>`<br /><br /> sonra değeri `%(MyItem.RecursiveDir)` *MySolution\MyProject\Source\\*olacaktır.|
-|%(Kimlik)|Öznitelikte `Include` belirtilen öğe. Örnek:<br /><br /> *Kaynak\Program.cs*|
-|%(Modifiye Süresi)|Öğenin en son değiştirildiğindeki zaman damgasını içerir. Örnek:<br /><br /> `2004-07-01 00:21:31.5073316`|
-|%(CreatedTime)|Öğenin oluşturulduğu zamana ait zaman damgasını içerir. Örnek:<br /><br /> `2004-06-25 09:26:45.8237425`|
-|%(AccessedTime)|Öğeye en son erişilen zamana ait zaman damgasını içerir.<br /><br /> `2004-08-14 16:52:36.3168743`|
+|% (FullPath)|Öğenin tam yolunu içerir. Örneğin:<br /><br /> *C:\MyProject\Source\Program.cs*|
+|% (RootDir)|Öğenin kök dizinini içerir. Örneğin:<br /><br /> *,\\*|
+|% (Dosya adı)|Uzantı olmadan öğenin dosya adını içerir. Örneğin:<br /><br /> *Program*|
+|% (Uzantı)|Öğenin dosya adı uzantısını içerir. Örneğin:<br /><br /> *.cs*|
+|% (RelativeDir)|`Include`En son ters eğik çizgi () kadar özniteliğinde belirtilen yolu içerir \\ . Örneğin:<br /><br /> *Kaynak\\*<br /><br /> `Include`Öznitelik bir tam yol ise `%(RelativeDir)` kök diziniyle başlar `%(RootDir)` .  Örneğin: <br /><br /> *C:\MyProject\Source\\*|
+|% (Dizin)|Kök dizin olmadan öğenin dizinini içerir. Örneğin:<br /><br /> *MyProject \\ kaynağı\\*|
+|%(RecursiveDir)|`Include`Öznitelik joker karakterini içeriyorsa \* \* , bu meta veri, yolun joker karakter yerine geçen kısmını belirtir. Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluşturulacak dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md).<br /><br /> * \\ C:\solution\myproject\source* klasörü *program.cs*dosyasını içeriyorsa ve proje dosyası bu öğeyi içeriyorsa:<br /><br /> `<ItemGroup>`<br /><br /> `<MyItem Include="C:\**\Program.cs" />`<br /><br /> `</ItemGroup>`<br /><br /> Bundan sonra değeri `%(MyItem.RecursiveDir)` * \\ Mysolution\myproject\source*olacaktır.|
+|% (Kimlik)|Öznitelikte belirtilen öğe `Include` . Örneğin:<br /><br /> *Source\Program.cs*|
+|% (ModifiedTime)|Öğenin son değiştirildiği zamandan gelen zaman damgasını içerir. Örneğin:<br /><br /> `2004-07-01 00:21:31.5073316`|
+|% (CreatedTime)|Öğenin oluşturulduğu zaman damgasını içerir. Örneğin:<br /><br /> `2004-06-25 09:26:45.8237425`|
+|% (AccessedTime)|Öğenin en son erişildiği zaman damgasını içerir.<br /><br /> `2004-08-14 16:52:36.3168743`|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Ortak MSBuild öğe meta verileri](common-msbuild-item-metadata.md)
 - [Öğeler](../msbuild/msbuild-items.md)
-- [İşlem grubu oluşturma](../msbuild/msbuild-batching.md)
+- [Toplu İşleme](../msbuild/msbuild-batching.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)

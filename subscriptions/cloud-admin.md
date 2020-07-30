@@ -7,12 +7,12 @@ ms.assetid: 8b30e2bc-2ac3-4fcc-b296-128731471032
 ms.date: 03/03/2020
 ms.topic: how-to
 description: Aylık abonelikler için yöneticileri ayarlama
-ms.openlocfilehash: ef1536eb27beb501fc278d1a95521905c9d9485a
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 7a0d28e4cd75749db430353234060f72a8f86485
+ms.sourcegitcommit: b8ce85a6d9c7fcceaad0fba625202f5ecf8f368c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85903119"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87434304"
 ---
 # <a name="set-up-administrators-for-visual-studio-monthly-subscriptions"></a>Visual Studio aylık abonelikleri için yöneticileri ayarlama
 
@@ -36,19 +36,19 @@ Yöneticiler eklemek için:
 2. Visual Studio aylık aboneliklerini satın almak için kullandığınız hesapla oturum açın.
 3. **Azure hizmetleri**altında **maliyet yönetimi + faturalandırma**' i seçin.
    > [!div class="mx-imgBorder"]
-   > ![Maliyet yönetimi ve Azure Hizmetleri altında Faturalandırma ' i seçin](_img/cloud-admin/azure-cost-billing.png)
+   > ![Maliyet yönetimi ve Azure Hizmetleri altında Faturalandırma ' i seçin](_img/cloud-admin/azure-cost-billing.png "Azure Hizmetleri grubundan maliyet yönetimi 'ni seçin")
 4. **Aboneliklerim** listesinde, satın almayı yapmak Için kullandığınız Azure aboneliğini seçin.
    > [!div class="mx-imgBorder"]
-   > ![Abonelik seçin](_img/cloud-admin/subscription-list.png)
+   > ![Abonelik seçin](_img/cloud-admin/subscription-list.png "Satın alımınızın olmasını sağlamak için kullanmak istediğiniz Azure aboneliğini seçin.")
 5. Sol gezinti bölmesindeki listenin üst kısmında yer alan **erişim denetimi (IAM)** seçeneğine tıklayın.
 6. Sayfanın üst kısmındaki **Ekle** sekmesine tıklayın.
 7. **Rol ataması Ekle**' ye tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Erişim denetimi, Ekle, rol ataması Ekle seçeneklerini belirleyin](_img/cloud-admin/access-control-add.png)
+   > ![Erişim denetimi, Ekle, rol ataması Ekle seçeneklerini belirleyin](_img/cloud-admin/access-control-add.png "Sol taraftaki listeden erişim denetimi ' ni seçin ve ardından Ekle ' yi seçin.")
 8. Sağdaki giriş bölmesinde, bölmenin üst kısmındaki **rol** açılır listesine tıklayın, aşağı kaydırın ve **Kullanıcı erişimi Yöneticisi**' ni seçin.
 9. Kullanıcı listesinde, yönetici yapmak istediğiniz kullanıcıya gidin ve bunları seçin. 
    > [!div class="mx-imgBorder"]
-   > ![Rol, Kullanıcı erişimi Yöneticisi seçin](_img/cloud-admin/add-role-user-access-admin.png)
+   > ![Rol, Kullanıcı erişimi Yöneticisi seçin](_img/cloud-admin/add-role-user-access-admin.png "Rol ' i seçin, Kullanıcı erişimi Yöneticisi ' ni seçin ve ardından yönetici yapmak için kullanıcının adını seçin.")
 10. **Kaydet**’e tıklayın.
 11. Seçtiğiniz kullanıcının bir Kullanıcı Erişim Yöneticisi olarak göründüğünü doğrulamak için **rol atamaları** sekmesine tıklayın.
 

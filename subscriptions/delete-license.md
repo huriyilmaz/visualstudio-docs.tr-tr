@@ -7,12 +7,12 @@ ms.assetid: e49242bc-e9f2-49e8-8caa-f574d508aba6
 ms.date: 06/16/2020
 ms.topic: how-to
 description: Yöneticilerin abonelik atamalarını nasıl silebileceğinizi öğrenin
-ms.openlocfilehash: e6ce84aa84e25bcdeb44b93954289a65a3454010
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 4f952f574132afbd405c82c75fcddfc952bffb48
+ms.sourcegitcommit: b8ce85a6d9c7fcceaad0fba625202f5ecf8f368c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902904"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87434262"
 ---
 # <a name="delete-assignments-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde atamaları silme
 Bir abone artık şirketten ayrıldıklarında, bir projeyi tamamlamada veya yeni bir iş rolüne geçiş yaparken olduğu gibi bir Visual Studio aboneliği gerektirdiğinde, aboneliğini kaldırabilir ve başka birine atayabilirsiniz. Aboneliği yeniden atadığınızda, tüm abone avantajlarının sıfırlanmadığını lütfen unutmayın.  Yeni Kullanıcı, talep edilmemiş anahtarları talep edebilir ve daha önce **talep edilen anahtarları görüntüleyebilir, ancak** talep limitleri sıfırlanmaz.  Kurumsal anlaşmalar (EA) olan kuruluşlar için, özgün kullanıcı tarafından kullanılan Pluralaltim eğitimi gibi tüm avantajlar sıfırlanır. 
@@ -24,7 +24,7 @@ Bir abone artık şirketten ayrıldıklarında, bir projeyi tamamlamada veya yen
 2. Seçili aboneyi silmek için **Sil**' e tıklayın.
 3. İletiyi silme işlemini onaylamanızı isteyen göründüğünde **Tamam**' a tıklayın.
    > [!div class="mx-imgBorder"]
-   > ![Aboneleri Sil](_img/delete-license/delete-subscribers.png)
+   > ![Aboneleri Sil](_img/delete-license/delete-subscribers.png "Silmek istediğiniz kullanıcıları seçin ve Sil ' e tıklayın. Birden çok aboneyi seçmek için CTRL ve Shift tuşlarını kullanabilirsiniz.")
 
    > [!NOTE]
    > Şablon kullanılarak toplu silme kullanılamıyor. Azure Active Directory güvenlik grupları aracılığıyla abonelik atamalarını yöneten kuruluşlar için, silme işlemlerinin nasıl gerçekleştiği hakkında daha fazla bilgi için [makalemize](assign-license-bulk.md#use-azure-active-directory-groups-to-assign-subscriptions) bakın.  

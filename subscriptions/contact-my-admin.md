@@ -7,12 +7,12 @@ ms.assetid: 64455e79-229a-42f0-9d65-c2cca8ab8513
 ms.date: 03/07/2020
 ms.topic: how-to
 description: Sorular veya sorunlarla ilgili yardım almak için abonelik yöneticinize nasıl başvurabileceğiniz hakkında bilgi edinin.
-ms.openlocfilehash: 2bf4857ebb794baef8098194d90cff7fee1ecc8f
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 1ee5b5091c9321a76117f7d7e1c232973f3c2dd5
+ms.sourcegitcommit: b8ce85a6d9c7fcceaad0fba625202f5ecf8f368c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85904571"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87434261"
 ---
 # <a name="get-assistance-from-your-subscriptions-administrator"></a>Abonelik yöneticinizden yardım alın
 Visual Studio aboneliğiniz sizin veya okulunuz tarafından size sağlanmışsa, size bir abonelik Yöneticisi veya "Yönetici" tarafından atanmıştı.  Yöneticiler abonelikleri atayabilir veya kaldırabilir, oturum açma e-posta adreslerini değiştirebilir, yazılım indirebilme ve aboneliğiniz ile ilgili başka işlevler gerçekleştirmenize izin verebilir.
@@ -24,7 +24,7 @@ Birçok kuruluşun boyut ve karmaşıklığı göz önüne alındığında, yön
 2. **Abonelikler** sekmesine tıklayın. 
 3. Sağ üst köşedeki **yöneticime başvur** düğmesine tıklayın. 
    > [!div class="mx-imgBorder"]
-   > ![Yöneticime başvur](_img/contact-my-admin/contact-my-admin-button.png)
+   > ![Yöneticime başvur](_img/contact-my-admin/contact-my-admin-button.png "Yöneticime başvur düğmesine tıklayın, iletinizi girin ve Gönder ' e tıklayın.")
 4. Yöneticinizin iletisini girin.
 5. Yöneticinize gönderilen iletinin bir kopyasını almak isterseniz, **bir kopya gönder** onay kutusuna tıklayın. 
 6. Son olarak, **Gönder**' e tıklayın.
