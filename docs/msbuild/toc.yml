@@ -449,6 +449,8 @@
           href: msbuild-well-known-item-metadata.md
         - name: MSBuild yanıt dosyaları
           href: msbuild-response-files.md
+        - name: MSBuild’da çözüm filtreleri
+          href: solution-filters.md
         - name: WPF başvurusu
           items:
             - name: Genel Bakış

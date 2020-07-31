@@ -415,6 +415,8 @@
                   href: ca1414.md
                 - name: 'CA1415: P-Invoke''ları doğru bildirin'
                   href: ca1415.md
+                - name: 'CA1417: P/Invokes için dize parametrelerinde OutAttribute kullanmayın'
+                  href: ca1417.md
             - name: Bakım uyarıları
               items:
                 - name: Genel Bakış

@@ -42,6 +42,8 @@
       items:
         - name: Genel Bakış
           href: install/visual-studio-administrator-guide.md
+        - name: Visual Studio Enterprise kılavuzu
+          href: install/visual-studio-enterprise-guide.md
         - name: Komut satırını kullanma
           items:
             - name: Komut satırı parametrelerini kullanarak Visual Studio'yu yükleme
@@ -402,8 +404,8 @@
                   href: ide/reference/extract-local-function.md
                 - name: Satır içi geçici değişken
                   href: ide/reference/inline-temporary-variable.md
-                - name: İçeri aktarılmamış türler için IntelliSense tamamlama
-                  href: ide/reference/intellisense-completion-unimported-types.md
+                - name: İçeri aktarılmamış türler ve genişletme yöntemleri için IntelliSense tamamlama
+                  href: ide/reference/intellisense-completion-unimported-types-extension-methods.md
                 - name: Koşullu ifadeleri ve mantıksal işlemleri tersine çevirme
                   href: ide/reference/invert-conditional-logical.md
                 - name: if deyimini tersine çevirme
