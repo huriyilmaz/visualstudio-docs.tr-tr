@@ -1,45 +1,45 @@
 ---
-title: Fazla tahsis edilmiş lisansları işleme | Microsoft Dokümanlar
+title: Fazla yüklenmiş lisansları işleme | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: a747100c-6f08-41a4-aaad-05099741742b
 ms.date: 03/03/2020
 ms.topic: conceptual
-description: Yöneticilerin aşırı ayrılan abonelikleri nasıl çözebileceğini öğrenin
-ms.openlocfilehash: a4cdab7d4e6e5925bab3d4dc7c800dc33ef6d713
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+description: Yöneticilerin aşırı yüklenmiş abonelikleri nasıl çözebileceğinizi öğrenin
+ms.openlocfilehash: b518dc9300862e7c39af0489734734668097ef9f
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232445"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453720"
 ---
-# <a name="overallocated-subscriptions"></a>Fazla tahsis edilmiş abonelikler
-Bazen siparişler, aboneler eklendikten sonra değiştirilir ve bu da şirketinize ait lisanslardan daha fazla atanmış aboneye sahip olmasına neden olabilir. Buna "fazla yükleme" denir.  
+# <a name="over-allocated-subscriptions"></a>Fazla ayrılmış abonelikler
+Bazen abonelik eklendikten sonra siparişler değişir, bu da şirketiniz tarafından sahip olunan lisanslardan daha fazla abonelik olmasına neden olabilir. Bu, "aşırı ayırma" olarak adlandırılır.  
 
-Alt yazı ayırmalarınızı görmek için, ayırma bölmesini açmak için soldaki üst simgeye tıklayın.  
+Alt ağ ayırmalarını görmek için, sol taraftaki üst simgeye tıklayarak ayırmalar bölmesini açın.  
 
 > [!NOTE]
-> Açık Lisans programlarında fazla yüklemelere izin verilmez.  Ayrıca, diğer programlar bu bilgileri portalda farklı şekilde görüntüleyebilir.
+> Açık lisans programlarında daha fazla ayırmaya izin verilmez.  Ayrıca, diğer programlar portalda bu bilgileri farklı şekilde gösterebilir.
 >
 > [!div class="mx-imgBorder"]
-> ![Aşırı Talep Edilen Abonelikler Bildirimi](_img/over-claimed/over-claimed-alert.png)
+> ![Aşırı talep edilen aboneliklerin bildirimi](_img/over-claimed/over-claimed-alert.png "Fazla ayırma sayısı genel bakışta listelenir ve her abonelik türü için grafikteki karma çubukla temsil edilir.")
 
-Ekranın, aşırı ayrılan abonelikleri belirtmek için bir haşdi hasret çubuğu kullandığına dikkat edin.  Tüm abonelik türlerindeki fazla ayırma sayısı üstteki Genel Bakış bölümüne dahil edilir ve her abonelik düzeyi de kendi tahsisat durumunu görüntüler.  
+Ekranda, daha fazla ayrılmış abonelikleri göstermek için karma bir çubuk kullandığından emin olun.  Tüm abonelik türlerinde fazla ayırma sayısı üst kısımdaki genel bakış bölümüne dahil edilir ve her abonelik düzeyi de kendi ayırma durumunu görüntüler.  
 
-## <a name="resolve-overallocated-subscriptions"></a>Fazla ayrılan abonelikleri çözümle
-Fazla yüklemeleri çözmenin birkaç yolu vardır:
+## <a name="resolve-over-allocated-subscriptions"></a>Aşırı ayrılmış abonelikleri çözme
+Fazla yüklemeleri çözümlemek için çeşitli yollar vardır:
 - Ek abonelikler satın almak için satıcınıza başvurun.
-- Yıllık doğru-up döneminize kadar bekleyin ve bu noktada fazla ayrılan abonelikler için ödeme. 
-- Bazı abonelik atamalarını silin.  (Bu, yıl boyunca herhangi bir zamanda atanan maksimum abonelik sayısına dayandığı ndan, yıllık ödeme ihtiyacını engellemez.)
+- Yıllık gerçek dönem için bekleyin ve bu noktada fazla yüklenmiş abonelikler için ödeme yapın. 
+- Bazı abonelik atamalarını silin.  (Bu işlem, yıl içinde herhangi bir zamanda atanan maksimum abonelik sayısına bağlı olduğundan, yıllık doğru ödeme gereksinimini ortadan engellemez.)
 
-## <a name="billing-and-true-up"></a>Faturalama ve doğru-up
-Kuruluşunuzun bir Kurumsal Sözleşmesi (EA) varsa, yöneticiler abonelikleri satın almadan atayabilir ve daha sonra "true-up" olarak bilinen bir uzlaşma süreci yle ödeme yapabilir.  Fazla tahsis yaptığınızda, kuruluşunuz "true-up" sırasında kullanıcılara atanan maksimum abonelik sayısı için faturalandırılır.  Bu, gerçek-up gerçekleştiği sırada atanan en fazla abonelik sayısına sahip olmasa bile geçerlidir.  Maksimum kullanımınızı izleme hakkında daha fazla bilgi edinmek için [Maksimum Kullanım](maximum-usage.md) konusunu ziyaret edin.
+## <a name="billing-and-true-up"></a>Faturalandırma ve doğru
+Kuruluşunuzda bir Kurumsal Anlaşma (EA) varsa, Yöneticiler bu abonelikleri satın almadan atayabilir ve daha sonra "doğru-yukarı" olarak bilinen bir mutabakat süreci aracılığıyla ödeme yapabilir.  Fazla ayrıldığınızda, kuruluşunuz "true-up" sırasında kullanıcılara atanan maksimum abonelik sayısı için faturalandırılır.  Bu, doğru bir zamanda atanmış en fazla abonelik sayısına sahip olmasanız da geçerlidir.  En fazla kullanımı izleme hakkında daha fazla bilgi edinmek için [en yüksek kullanım](maximum-usage.md) konusunu ziyaret edin.
 
 > [!Important]
-> GitHub Enterprise ile Visual Studio Abonelikleri Visual Studio abonelik yöneticileri tarafından atanmışsa ve bu aboneliklerin hiçbir zaman satın alınmaması durumunda, bunlar kuruluş içindeki GitHub Enterprise yöneticileri tarafından görülemez. GitHub Enterprise aboneliklerinin görünür olmasını sağlamak için, GitHub Enterprise aboneliğine sahip **en az bir** Visual Studio Professional veya GitHub Enterprise aboneliğine sahip Visual Studio Enterprise dahil olmak üzere bir satın alma işlemi ilk kez yapılmalıdır.
+> GitHub Enterprise ile Visual Studio abonelikleri, Visual Studio abonelik yöneticileri tarafından atanmışsa ve bu aboneliklerin hiç satın alınmadıysa, bu abonelikler kuruluş içindeki GitHub Enterprise Admins 'e görünür olmayacaktır. GitHub Enterprise aboneliklerinin görünür olmasını sağlamak için, aboneliklerin ilk kez atandığı GitHub Enterprise veya Visual Studio Enterprise ile **en az bir** Visual Studio Professional içeren bir satın alma yapılmalıdır.
 >
-> Atanan her GitHub aboneliği için, bu hizmetiçin lisans gerekliliklerine uygun olarak kalmak üzere Yönet portalında atanan GitHub aboneliğine sahip ilgili bir Visual Studio olmasını sağlamak müşterinin sorumluluğundadır. Abonelik.
+> Bu aboneliğin lisans gereksinimleriyle uyumlu kalmasını sağlamak için, atanan her GitHub aboneliğine ait bir GitHub aboneliğinin atandığı ilgili bir Visual Studio olduğundan emin olunması müşterinin sorumluluğudur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
@@ -48,5 +48,5 @@ Kuruluşunuzun bir Kurumsal Sözleşmesi (EA) varsa, yöneticiler abonelikleri s
 - [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- [GitHub Enterprise ile Visual Studio Aboneliklerini](assign-github.md)yönetme hakkında daha fazla bilgi edinin.
-- Visual Studio Abonelikleri için satış, abonelik, hesap ve faturalandırma ile ilgili yardım için Visual Studio [Abonelikleri Desteği'ne](https://visualstudio.microsoft.com/subscriptions/support/)başvurun.
+- [GitHub Enterprise Ile Visual Studio aboneliklerini](assign-github.md)yönetme hakkında daha fazla bilgi edinin.
+- Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.

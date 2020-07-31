@@ -1,36 +1,36 @@
 ---
-title: Abonelik bilgilerini dışa aktarma | Microsoft Dokümanlar
+title: Abonelik bilgilerini dışarı aktar | Microsoft Docs
 author: evanwindom
 ms.author: lank
-manager: lank
+manager: cabuschl
 ms.assetid: 14e4cffb-a695-436c-b269-7820f7411f4e
 ms.date: 03/03/2020
 ms.topic: conceptual
-description: Abonelerin listesini ve abonelik atamalarının ayrıntılarını nasıl dışa aktarın.
-ms.openlocfilehash: dd24e9deb6225b3a8b88a461904fefb42ba4a912
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+description: Aboneler listesini ve abonelik atamalarının ayrıntılarını nasıl dışarı aktarılacağını öğrenin.
+ms.openlocfilehash: ff0941dc25d16ad520b20613c2d4136c3c63c937
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80232506"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453563"
 ---
 # <a name="export-subscription-information"></a>Abonelik bilgilerini dışarı aktarma
-Visual Studio Abonelikleri [Yönetim Portalı'nda,](https://manage.visualstudio.com)abonelerinizin bir listesini ve atamaları yla ilgili ayrıntıları dışa aktarabilirsiniz. Bu bilgiler, adlarını, e-posta adreslerini, alternatif e-posta adresini, abonelik düzeyini, atanan tarihi, aktivasyon durumunu, son kullanma tarihini, referans alanını, indirmelerin etkin olup olmadığını, ülke, dil, abonelik durumunu ve aboneliği içerir Guıd.  Liste, grafiklerin, pivotların ve diğer yapıların oluşturulması için Microsoft Excel'de kolayca açılabilen bir CSV dosyası olarak dışa aktarılır.
+Visual Studio abonelikleri [yönetim portalında](https://manage.visualstudio.com), abonelerinizin bir listesini ve atamalarınızın ayrıntılarını dışa aktarabilirsiniz. Bu bilgiler, ad, e-posta adresi, alternatif e-posta adresi, abonelik düzeyi, atanma tarihi, etkinleştirme durumu, sona erme tarihi, başvuru alanı, indirmelerin etkin olup olmadığı, ülke, dil, abonelik durumu ve abonelik GUID 'SI içerir.  Liste, grafikler, Özet ve diğer yapıtlar oluşturmak için Microsoft Excel 'de kolayca açılabilen bir CSV dosyası olarak verilir.
 
-Tüm abone bilgilerinizin tek bir yerde olması:
-- Kuruluşunuz genelinde hangi aboneliklerin ekip ve/veya konum tarafından kullanıldığına genel bir görünüm alın.
+Tüm abone bilgilerinizin tek bir yerde olması, şunun gibi şeyler yapmanıza yardımcı olabilir:
+- Kuruluş genelinde hangi aboneliklerin kullanımda olduğunu ve/veya konumunu öğrenin.
 - Gelecekteki abonelik satın alımları için planlar ve bütçeler geliştirin. 
-- Etkinleştirmek için atanmış abonelikleri olan kullanıcıları teşvik edin.
-- Aboneliklerin süresi dolmadan önce proaktif eylemde olun.  
-- Aboneliklerin nerede fazla tahsis edilebileceğini belirleyin. 
-- Abonelerinizin aboneliklerinde hangi son kullanma tarihine sahip olduğunu kontrol etmek için abonelik kimliğini kullanarak abonelik ler atayın. 
+- Aboneliklerin atandığı kullanıcıları teşvik edin.
+- Aboneliklerin süre dolmadan önce proaktif işlem yapın.  
+- Aboneliklerin nereden erişilebilir olabileceğini belirler. 
+- Aboneliklerinizin aboneliklerinde sahip olduğu sona erme tarihini denetlemek için abonelik KIMLIĞINI kullanarak abonelikler atayın. 
 
 ## <a name="export-your-subscriptions"></a>Aboneliklerinizi dışa aktarma
-Dışa aktarmayı gerçekleştirmek için:
-1. [İdare Portalı'nda](https://manage.visualstudio.com)oturum açın.
-2. **Dışa Aktar** sekmesini seçin ve dosya yerel makinenize indirilir. Dosya, kullanıcı aboneliklerinizi içeren sözleşmenin adını ve dışa aktarma tarihini içerir.
+Dışarı aktarma işlemini gerçekleştirmek için:
+1. [Yönetim portalında](https://manage.visualstudio.com)oturum açın.
+2. **Dışarı aktar** sekmesini seçin. bu dosya yerel makinenize indirilir. Dosya, Kullanıcı aboneliklerinizi içeren sözleşmenin adının yanı sıra dışarı aktarma tarihini de içerecektir.
 > [!div class="mx-imgBorder"]
-> ![İhracat aboneleri](_img/exporting-subscriptions/exporting-subscriptions.png)
+> ![Aboneleri dışarı aktar](_img/exporting-subscriptions/exporting-subscriptions.png "Atanan aboneliklerinizin tamamını bir listesini indirmek için dışarı aktar ' a tıklayın.")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
@@ -39,10 +39,10 @@ Dışa aktarmayı gerçekleştirmek için:
 - [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- Abonelikleri yönetme hakkında daha fazla bilgi için şu yararlı konulara bakın:
+- Abonelikleri yönetme hakkında daha fazla bilgi için şu faydalı konulara bakın:
     - [Süresi dolan abonelikler](handle-expired-license.md)
     - [Fazla Yüklemeler](handle-overclaimed-license.md)
     - [En fazla kullanım](maximum-usage.md)
-- Abonelikleri yönetme konusunda yardıma mı ihtiyacınız var?  İletişim [Görsel Stüdyo İdaresi ve Abonelikler Destek](https://visualstudio.microsoft.com/support/support-overview-vs).
+- Abonelikleri yönetmenin her yönüyle ilgili yardım mı gerekiyor?  [Visual Studio yönetim ve abonelikler desteğiyle](https://visualstudio.microsoft.com/support/support-overview-vs)iletişim kurun.
 
 

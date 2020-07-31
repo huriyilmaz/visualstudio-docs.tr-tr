@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 01c3ad83cea8dc1a28a817677be102c87ebc8f87
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: e1a50374a2603153cc7f4770a9aaf5ba72fbe007
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371878"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453649"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>Nasıl yapılır: Kod Çözümleme Dizinini Özelleştirme
 
@@ -266,12 +266,12 @@ Sözlük/Kısaltmalar/CasingExceptions düğümündeki terimler aşağıdaki kod
 
 1. **Çözüm Gezgini**, aşağıdaki yordamlardan birini kullanın:
 
-2. Tek bir projeye sözlük eklemek için, proje adına sağ tıklayın ve ardından **varolan öğeyi Ekle**' ye tıklayın. **Varolan öğe Ekle** iletişim kutusunda dosyayı belirtin.
+    - Tek bir projeye sözlük eklemek için, proje adına sağ tıklayın ve ardından **varolan öğeyi Ekle**' ye tıklayın. **Varolan öğe Ekle** iletişim kutusunda dosyayı belirtin.
+  
+    - İki veya daha fazla proje arasında paylaşılan bir sözlük eklemek için, **Varolan öğe Ekle** iletişim kutusunda paylaşılacak dosyayı bulun, **Ekle** düğmesinin üzerindeki aşağı oka tıklayın ve ardından **bağlantı olarak ekle**' ye tıklayın.
 
-3. İki veya daha fazla proje arasında paylaşılan bir sözlük eklemek için, **Varolan öğe Ekle** iletişim kutusunda paylaşılacak dosyayı bulun, **Ekle** düğmesinin üzerindeki aşağı oka tıklayın ve ardından **bağlantı olarak ekle**' ye tıklayın.
+2. **Çözüm Gezgini**, **CustomDictionary.xml** dosya adına sağ tıklayın ve **Özellikler**' e tıklayın.
 
-4. **Çözüm Gezgini**, **CustomDictionary.xml** dosya adına sağ tıklayın ve **Özellikler**' e tıklayın.
+3. **Yapı eylemi** listesinden **codeanalysisdictionary**' yi seçin.
 
-5. **Yapı eylemi** listesinden **codeanalysisdictionary**' yi seçin.
-
-6. **Çıkış Dizinine Kopyala** listesinden **kopyalama**' yı seçin.
+4. **Çıkış Dizinine Kopyala** listesinden **kopyalama**' yı seçin.

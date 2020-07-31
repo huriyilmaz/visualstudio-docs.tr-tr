@@ -11,12 +11,12 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: cb1d5196874956d54c01504288a4d948b12abea8
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: e8a12c16c4c53ab2d0850bf5b768488160fa729a
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283573"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453692"
 ---
 # <a name="tutorial-create-an-aspnet-core-app-with-typescript-in-visual-studio"></a>Öğretici: Visual Studio 'da TypeScript ile ASP.NET Core uygulaması oluşturma
 
@@ -34,7 +34,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ::: moniker-end
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 > * ASP.NET Core projesi oluşturma
 > * TypeScript desteği için NuGet paketini ekleyin
@@ -42,7 +42,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > * Uygulamayı çalıştırma
 > * NPM kullanarak bir üçüncü taraf kitaplığı ekleme
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * Visual Studio 'Nun yüklü olması ve ASP.NET Web geliştirme iş yüküne sahip olmanız gerekir.
 
@@ -91,9 +91,6 @@ Bu öğreticide, ASP.NET Core MVC uygulaması için kod içeren basit bir proje 
    ![NuGet paketi Ekle](../javascript/media/aspnet-core-ts-nuget.png)
 
    Visual Studio, NuGet paketini Çözüm Gezgini içindeki **Bağımlılıklar** düğümüne ekler.
-
-   > [!NOTE]
-   > Bu öğretici NuGet paketini gerektirir. Alternatif olarak, kendi uygulamalarınızda [TypeScript NPM paketini](https://www.npmjs.com/package/typescript)kullanmak isteyebilirsiniz.
 
 1. Proje düğümüne sağ tıklayın ve **> yeni öğe Ekle**' yi seçin. **TYPESCRIPT JSON yapılandırma dosyasını**seçin ve ardından **Ekle**' ye tıklayın.
 

@@ -10,19 +10,19 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 0f4fff1b13f8e3827d685ee16ccea55e78f733a6
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f48e7a8be8d902a487ae4f7fdac9e6d85f7b5517
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289098"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453756"
 ---
 # <a name="learn-to-use-the-code-editor"></a>Kod düzenleyicisini kullanmayı öğrenin
 
 Visual Studio 'daki kod düzenleyicisine bu kısa giriş bölümünde, Visual Studio 'Nun kodu yazma, gezinme ve daha kolay hale getirmeye yönelik bazı yöntemlere bakacağız.
 
 > [!TIP]
-> Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın. Yaptığınız uygulama geliştirme türüne bağlı olarak, Visual Studio ile **Node.js geliştirme iş yükünü** yüklemeniz gerekebilir.
+> Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/) sayfasına giderek ücretsiz olarak yükleme yapın. Yaptığınız uygulama geliştirme türüne bağlı olarak, Visual Studio ile **Node.js geliştirme iş yükünü** yüklemeniz gerekebilir. TypeScript için dil hizmetini alma hakkında daha fazla bilgi için bkz. [TypeScript desteği](../javascript/javascript-in-vs-2019.md#typescript-support).
 
 Bu makalede, JavaScript geliştirme konusunda zaten bilgi sahibi olduğunuz varsayılır. Değilseniz, önce [Node.js ve hızlı uygulama oluşturma](../javascript/tutorial-nodejs.md) gibi bir öğreticiye bakmanız önerilir.
 
@@ -65,6 +65,8 @@ Alt bölmede, dosya adı ve satır numarası ile birlikte uyarı ve açıklama '
 ![Hata listesini görüntüle](../javascript/media/write-code-error-list.png)
 
 Daha önce virgül () ekleyerek bu kodu giderebilirsiniz `,` `"data"` .
+
+Daha fazla bilgi için [bkz. nasıl](https://github.com/microsoft/JSTSdocs/blob/master/articles/editor/linting.md)yapılır.
 
 ## <a name="comment-out-code"></a>Kodu dışarı açıklama
 

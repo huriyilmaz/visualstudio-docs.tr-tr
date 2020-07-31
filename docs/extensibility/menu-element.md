@@ -1,5 +1,5 @@
 ---
-title: Menü Elemanı | Microsoft Dokümanlar
+title: Menü öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +11,17 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8dc4731f95e31781f6b10704d7cb14dc83e96d7a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 020098a3026f600629b8ab186431a1d2d5d7795a
+ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80702592"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87453660"
 ---
 # <a name="menu-element"></a>Menü öğesi
-Bir menü öğesini tanımlar. Bunlar altı tür menü: Bağlam, Menü, MenuController, MenuControllerLatched, Araç Çubuğu ve ToolWindowToolbar.
+Bir menü öğesini tanımlar. Bunlar arasında altı menü türü bulunur: bağlam, menü, MenuController, Menucontrollerlalenmiş, Toolbar ve ToolWindowToolbar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Menu guid="guidMyCommandSet" id="MyCommand" priority="0x100" type="button">
@@ -38,41 +38,40 @@ Bir menü öğesini tanımlar. Bunlar altı tür menü: Bağlam, Menü, MenuCont
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Guıd|Gereklidir. GUID/ID komut tanımlayıcısının GUID'i.|
-|id|Gereklidir. GUID/ID komut tanımlayıcısının kimliği.|
-|Öncelik|İsteğe bağlı. Bir menü grubunda bir menünün göreli konumunu belirten sayısal bir değer.|
-|Araç ÇubuğuÖncelikli Bant|İsteğe bağlı. Pencere kenetlendiğinde bir banttaki araç çubuğunun göreli konumunu belirten sayısal bir değer.|
-|type|İsteğe bağlı. Öğetürünü belirten numaralandırılmış bir değer.<br /><br /> Yoksa, varsayılan tür Menü'dür.<br /><br /> Bağlam<br /> Bir kullanıcı pencereyi sağ tıklattığında gösterilen kısayol menüsü. Kısayol menüsü aşağıdaki özelliklere sahiptir:<br /><br /> - Menü kısayol menüsü olarak görüntülenecekken **Veli** ve **Öncelik** alanlarını kullanmaz.<br />- Alt menü ve kısayol menüsü olarak da kullanılabilir. Bu durumda, hem **Grup Kimliği** hem de **Öncelik** alanlarına saygı duyulur.<br />- Her zaman mevcut değildir.<br /><br /> Kısayol menüsü yalnızca aşağıdaki koşullar doğru olduğunda görüntülenir:<br /><br /> - Ana bilgisayar penceresi görüntülenir.<br />- VSPackage'daki bir fare işleyicisi pencereye sağ tıklama algılar ve ardından komutu işleyen bir yöntem çağırır.<br />- Kısayol <xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager.ShowContextMenu%2A> menüsü, yöntem (önerilen yaklaşım) veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A> yöntem çağırılarak görüntülenir.<br /><br /> Menü<br /> Açılır menü sağlar. Açılır menü aşağıdaki özelliklere sahiptir:<br /><br /> - Tanımında Veliye Saygı Duyar.<br />- Bir Üst grup veya bir gruba bir Komut Yerleştirme olmalıdır.<br />- Menü başka bir tür bir alt menü olabilir.<br />- Üst menüsü görüntülendiğinde otomatik olarak görüntülenir.<br />- Görüntülenmesi için herhangi bir VSPackage kodunun uygulanmasını gerektirmez.<br /><br /> MenüDenetleyici<br /> Genellikle araç çubuklarında kullanılan bölünmüş düğme açılır menü sağlar. MenuController menüsü aşağıdaki özelliklere sahiptir:<br /><br /> - Veli veya CommandPlacement aracılığıyla başka bir menüde yer almalıdır.<br />- Tanımında Veliye Saygı Duyar.<br />- Ebeveyni olarak her türlü menüye sahip olabilir.<br />- Üst menüsü görüntülendiğinde otomatik olarak kullanılabilir hale getirilir.<br />- Menüyü görüntülemek için programlı destek gerektirmez.<br /><br /> Menü düğmesinde bölme düğmesinden bir komut görüntülenir. Görüntülenen komut aşağıdaki özelliklerden birine sahiptir:<br /><br /> - Komut hala görüntüleniyor ve etkinse kullanılan son komutdur.<br />- Görüntülenen ilk komutdur.<br /><br /> MenüDenetleyiciLatched<br /> Komutu mandallı olarak işaretleyerek varsayılan seçim olarak bir komutun belirtilebileceği bölünmüş düğme açılır menü sağlar.<br /><br /> Mandallı komut, genellikle bir onay işareti görüntüleyerek menüde seçili olarak işaretlenmiş bir komutdur. Bir komut, `QueryStatus` <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimin yönteminin uygulanmasında üzerinde OLECMDF_LATCHED bayrağı ayarlanmışsa mandallı olarak işaretlenebilir. MenuControllerLatched menüsü aşağıdaki özelliklere sahiptir:<br /><br /> - Bir Veli grubu veya CommandPlacement aracılığıyla başka bir menüde yer almalıdır.<br />- Tanımında Veliye Saygı Duyar.<br />- Ebeveyni olarak her türlü menüye sahip olabilir.<br />- Üst menüsü görüntülendiğinde kullanılabilir hale getirilir.<br />- Menüyü görüntülemek için programlı destek gerektirmez.<br /><br /> Menü düğmesinde bölme düğmesinden bir komut görüntülenir. Görüntülenen komut aşağıdaki özelliklerden birine sahiptir:<br /><br /> - Bu mandallı ilk görüntülenen komutudur.<br />- Görüntülenen ilk komutdur.<br /><br /> Araç Çubuğu<br /> Araç çubuğu sağlar. Araç çubuğu aşağıdaki özelliklere sahiptir:<br /><br /> - Üst öğeyi tanımında yok sayar.<br />- CommandPlacement kullanılarak bile hiçbir grubun alt menüsü yapılamaz.<br />- **Görünüm** menüsündeki **Araç Çubukları'na** tıklayarak her zaman görüntülenebilir.<br />- [Görünürlük Öğesi](../extensibility/visibilityitem-element.md)kullanılarak görüntülenebilir.<br />- Oluşturmak için herhangi bir kod gerektirmez. Araç çubuğu oluşturma hakkında bir örnek [için](../extensibility/adding-a-toolbar.md)bkz.<br /><br /> ToolWindowToolToolbar<br /> Geliştirme ortamına bir araç çubuğu bağlı olduğu gibi, belirli bir araç penceresine bağlı bir araç çubuğu sağlar.<br /><br /> - Üst öğeyi tanımında yok sayar.<br />- CommandPlacement kullanılarak bile hiçbir grubun alt menüsü yapılamaz.<br />- Yalnızca araç çubuğunu barındıran araç penceresi görüntülendiğinde ve VSPackage araç çubuğunu araç penceresine açıkça eklediğinde görüntülenir. Bu genellikle araç penceresi araç penceresi özelliği <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost> (arabirim tarafından temsil edildiği gibi) elde edilerek ve sonra <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost.AddToolbar%2A> yöntem çağırarak araç penceresi oluşturulduğunda yapılır.|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu öznitelikler.](../extensibility/vsct-xml-schema-conditional-attributes.md)|
+|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID 'SI.|
+|kimlik|Gereklidir. GUID/ID komut tanımlayıcısının KIMLIĞI.|
+|Priority|İsteğe bağlı. Bir menü grubundaki bir menünün göreli konumunu belirten sayısal bir değer.|
+|Toolbarpriorityınband|İsteğe bağlı. Pencere yerleştirildiğinde bir bantta bir araç çubuğunun göreli konumunu belirten sayısal bir değer.|
+|tür|İsteğe bağlı. Öğe türünü belirten numaralandırılmış bir değer.<br /><br /> Yoksa, varsayılan tür menü olur.<br /><br /> Bağlam<br /> Bir Kullanıcı bir pencereye sağ tıkladığında gösterilen kısayol menüsü. Bir kısayol menüsü aşağıdaki özelliklere sahiptir:<br /><br /> -Menü, kısayol menüsü olarak görüntülenmek için **üst** ve **Öncelik** alanlarını kullanmaz.<br />-Bir alt menü ve ayrıca bir kısayol menüsü olarak kullanılabilir. Bu durumda, hem **Grup Kimliği** hem de **Öncelik** alanları dikkate alınır.<br />-Her zaman kullanılabilir değildir.<br /><br /> Kısayol menüsü yalnızca aşağıdaki koşullar doğru olduğunda görüntülenir:<br /><br /> -Onu barındıran pencere görüntülenir.<br />-VSPackage içindeki bir fare işleyicisi, pencerenin sağ tıklamasını algılar ve ardından komutu işleyen bir yöntemi çağırır.<br />-Kısayol menüsü <xref:Microsoft.VisualStudio.Shell.Interop.IOleComponentUIManager.ShowContextMenu%2A> Yöntemi (önerilen yaklaşım) veya yöntemi çağırarak görüntülenir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A> .<br /><br /> Menü<br /> Bir açılır menü sağlar. Açılan menü aşağıdaki özelliklere sahiptir:<br /><br /> -Üst öğeyi tanımında uyar.<br />-Bir üst gruba veya bir gruba bir Commandyerleştirmesini içermelidir.<br />-Diğer bir menü türü içinde bir alt menü olabilir.<br />-, Ana menüsü her görüntülendiğinde otomatik olarak görüntülenir.<br />-Görüntülenmesini sağlamak için herhangi bir VSPackage kodu uygulamasının uygulanmasını gerektirmez.<br /><br /> MenuController<br /> Genellikle araç çubuklarında kullanılan bir bölünmüş düğme açılan menüsü sağlar. Bir MenuController menüsü aşağıdaki özelliklere sahiptir:<br /><br /> -Üst veya Commandyerleştirmesi aracılığıyla başka bir menüde bulunmalıdır.<br />-Üst öğeyi tanımında uyar.<br />-Üst öğesi olarak herhangi bir menü türü olabilir.<br />-Otomatik olarak, üst menü görüntülenişinde kullanılabilir hale getirilir.<br />-Menüyü görüntülenmesini sağlamak için programlı destek gerektirmez.<br /><br /> Menü düğmesinde bölünmüş düğme menüsünden bir komut görüntülenir. Görünen komut aşağıdaki özelliklerden birine sahiptir:<br /><br /> -Komut hala görüntüleniyorsa ve etkinse kullanılan son komuttur.<br />-İlk görüntülenmiş komuttur.<br /><br /> Menucontrollerlalenmiş<br /> Komutun varsayılan seçim olarak işaretlenmesi için bir komutun varsayılan seçim olarak belirtibileceği bir bölünmüş düğme açılır menü sağlar.<br /><br /> Bir lalelenmiş komut, genellikle bir onay işareti görüntüleyerek, menüde seçili olarak işaretlenen bir komuttur. Bir komut, arabirim yönteminin bir uygulamasında üzerinde ayarlanmış OLECMDF_LATCHED bayrağını içeriyorsa, bir komut, lalenmiş olarak işaretlenebilir `QueryStatus` <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> . Bir Menucontrollerlalenmiş menü aşağıdaki özelliklere sahiptir:<br /><br /> -Bir üst grup veya Commandyerleştirmesi aracılığıyla başka bir menüde bulunmalıdır.<br />-Üst öğeyi tanımında uyar.<br />-Üst öğesi olarak herhangi bir menü türü olabilir.<br />-Her üst menü görüntülendiğinde kullanılabilir hale getirilir.<br />-Menüyü görüntülenmesini sağlamak için programlı destek gerektirmez.<br /><br /> Menü düğmesinde bölünmüş düğme menüsünden bir komut görüntülenir. Görünen komut aşağıdaki özelliklerden birine sahiptir:<br /><br /> -Bu, açılan ilk görüntülenen komuttur.<br />-İlk görüntülenmiş komuttur.<br /><br /> Araç Çubuğu<br /> Bir araç çubuğu sağlar. Bir araç çubuğu aşağıdaki özelliklere sahiptir:<br /><br /> -Tanımındaki üst öğeyi yoksayar.<br />-Commandyerleştirmesi kullanılarak bile değil, herhangi bir grubun alt menüsü yapılamaz.<br />- **Görünüm** menüsünde **araç çubukları** öğesine tıklanarak her zaman görüntülenebilir.<br />-Bir [VisibilityItem](../extensibility/visibilityitem-element.md)kullanılarak görüntülenebilir.<br />-Oluşturmak için herhangi bir kod gerekmez. Bir araç çubuğu oluşturma hakkında bir örnek için bkz. [araç çubuğu ekleme](../extensibility/adding-a-toolbar.md).<br /><br /> ToolWindowToolbar<br /> Yalnızca bir araç çubuğunun geliştirme ortamına eklendiği gibi, belirli bir araç penceresine eklenmiş bir araç çubuğu sağlar.<br /><br /> -Tanımındaki üst öğeyi yoksayar.<br />-Commandyerleştirmesi kullanılarak bile değil, herhangi bir grubun alt menüsü yapılamaz.<br />-Yalnızca araç çubuğunu barındıran araç penceresi görüntülenirken ve VSPackage araç çubuğunu araç penceresine açıkça eklediğinde görüntülenir. Bu genellikle araç penceresi araç penceresi <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost> çerçevesisinden ve sonra yöntemini çağırarak araç çubuğu ana bilgisayar özelliği (arabirim tarafından temsil edildiğinde) ile oluşturulduğunda yapılır <xref:Microsoft.VisualStudio.Shell.Interop.IVsToolWindowToolbarHost.AddToolbar%2A> .|
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |Öğe|Açıklama|
 |-------------|-----------------|
 |Üst|İsteğe bağlı. Menü öğesinin üst öğesi.|
-|Komut Bayrağı|Gereklidir. Bkz. [Komut bayrak öğesi.](../extensibility/command-flag-element.md) Menü için geçerli CommandFlag değerleri aşağıdaki gibidir:<br /><br /> -   **Her Zaman Oluştur**<br />-   **Varsayılan Docked**<br />-   **DefaultInvisible** - Bu bayrak araç çubuklarının görüntülenmesini etkilemez.<br />-   **DontÖnbellek**<br />-   **DynamicGörünürlik** - Bu bayrak araç çubuklarının ekranını etkilemez.<br />-   **Simgeve Metin**<br />-   **NoCustomizE**<br />-   **Notintblist**<br />-   **NoToolbarClose**<br />-   **Metin Değişiklikleri**<br />-   **TextisAnchorCommand**|
-|Dizeler|Gereklidir. Bkz. [Dizeleri öğesi.](../extensibility/strings-element.md) Alt `ButtonText` öğe tanımlanmalıdır.|
-|Ek Açıklama|İsteğe bağlı yorum.|
+|CommandFlag|Gereklidir. Bkz. [komut bayrağı öğesi](../extensibility/command-flag-element.md). Bir menü için geçerli CommandFlag değerleri aşağıdaki gibidir:<br /><br /> -   **AlwaysCreate**<br />-   **Defaultsabitlenmiş**<br />-   **Defaulınvisible** -bu bayrak, araç çubuklarının görüntülenmesini etkilemez.<br />-   **DontCache**<br />-   **DynamicVisibility** -bu bayrak araç çubuklarının görüntülenmesini etkilemez.<br />-   **IconAndText**<br />-   **NoCustomize**<br />-   **NotInTBList**<br />-   **NoToolbarClose**<br />-   **TextChanges**<br />-   **TextIsAnchorCommand**|
+|Dizeler|Gereklidir. Bkz. [dizeler öğesi](../extensibility/strings-element.md). Alt `ButtonText` öğe tanımlanmalıdır.|
+|Ek Açıklama|İsteğe bağlı açıklama.|
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Menüler öğesi](../extensibility/menus-element.md)|VSPackage'ın uyguladığı tüm menüleri tanımlar.|
+|[Menüler öğesi](../extensibility/menus-element.md)|VSPackage 'ın uyguladığı tüm menüleri tanımlar.|
 
 ## <a name="example"></a>Örnek
 
 ```
 <Menu guid="cmdGuidWidgetCommands" id="menuIDEditWidget"
   priority="0x0002" type="Menu">
-  <Parent guid="cmdSetGuidWidgetCommands" id="groupIDFileEdit">
-    <CommandFlag>AlwaysCreate</CommandFlag>
-    <Strings>
-      <ButtonText>Edit Widget</ButtonText>
-    </Strings>
-    </Parent>
+  <Parent guid="cmdSetGuidWidgetCommands" id="groupIDFileEdit"/>
+  <CommandFlag>AlwaysCreate</CommandFlag>
+  <Strings>
+    <ButtonText>Edit Widget</ButtonText>
+  </Strings>
 </Menu>
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (.vsct) Dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
