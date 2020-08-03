@@ -1,38 +1,41 @@
 ---
 title: Yeniden Düzenle
-description: Açıklamaları ve örnekleri ile Visual Studio en popüler refactorings.
+description: Açıklamalar ve örneklerle, Visual Studio 'da en popüler yeniden düzenlemeler.
 ms.date: 01/10/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - refactoring [Visual Studio]
+f1_keywords:
+- vs.csharp.refactoring.preview
+ms.devlang: CSharp
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b6a050a07d8f7ef440aa66c3dfd7385b182e4df
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 02c4b00ce4ebdfc253735783d20fb90c62bae49b
+ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585723"
+ms.lasthandoff: 08/01/2020
+ms.locfileid: "87507930"
 ---
 # <a name="refactor-code"></a>Kodu yeniden düzenleme
 
-Yeniden düzenleme, kodun korunmasını, anlaşılmasını ve genişletmesini kolaylaştırmak için, ancak davranışını değiştirmeden değiştirme işlemidir.
+Yeniden düzenleme, korumayı kolaylaştırmak, anlamak ve genişletmek, ancak davranışını değiştirmeden daha kolay hale getirmek için kodu değiştirme işlemidir.
 
 ## <a name="programming-languages"></a>Programlama dilleri
 
-Visual Studio'da farklı programlama dilleri için farklı yeniden düzenleme işlemleri mevcuttur:
+Visual Studio 'da farklı programlama dilleri için farklı yeniden düzenleme işlemleri mevcuttur:
 
-- İçindekiler tablosunun bu bölümündeki sayfalar C# ve Visual Basic için kullanılabilir refactoringleri kapsamaktadır. Bazı [örnekler, bir yöntem refactoring ayıklama](reference/extract-method.md) ve [eşleşen bir dosya refactoring türü taşıyın.](reference/move-type-to-matching-file.md)
-- C++ kodunu yeniden düzenleme hakkında bilgi [için](/cpp/ide/writing-and-refactoring-code-cpp)bkz.
-- F# için yeniden düzenleme desteği, üçüncü taraf Visual Studio uzantısı olan [Visual F# Power Tools](https://marketplace.visualstudio.com/items?itemName=FSharpSoftwareFoundation.VisualFPowerTools)tarafından sağlanır.
+- İçindekiler tablosunun bu bölümündeki sayfalar C# ve Visual Basic için kullanılabilen yeniden düzenlemeler kapsar. Bazı örnekler, [bir yöntem yeniden düzenlemesi ayıklar](reference/extract-method.md) ve [türü eşleşen bir dosya yeniden düzenleme öğesine taşınır](reference/move-type-to-matching-file.md).
+- C++ kodunu yeniden düzenleme hakkında daha fazla bilgi için bkz. [yazma ve yeniden düzenleme kodu (C++)](/cpp/ide/writing-and-refactoring-code-cpp).
+- F # için yeniden düzenleme desteği, üçüncü taraf bir Visual Studio uzantısı olan [Visual F# güç araçları](https://marketplace.visualstudio.com/items?itemName=FSharpSoftwareFoundation.VisualFPowerTools)tarafından sağlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hızlı Eylemler](../ide/quick-actions.md)
-- [Görsel Stüdyo IDE](../get-started/visual-studio-ide.md)
+- [Visual Studio IDE](../get-started/visual-studio-ide.md)
 - [Kod düzenleyicisinin özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
-- [Değişiklikleri önizleme](../ide/preview-changes.md)
-- [Refactoring (Mac için Visual Studio)](/visualstudio/mac/refactoring)
+- [Değişiklikleri Önizle](../ide/preview-changes.md)
+- [Yeniden düzenleme (Mac için Visual Studio)](/visualstudio/mac/refactoring)
