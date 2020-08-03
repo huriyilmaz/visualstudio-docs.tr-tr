@@ -6,12 +6,15 @@ ms.topic: conceptual
 description: Geliştirme bilgisayarınızı Kubernetes kümenize bağlamak için Kubernetes ile yerel Işlem kullanma işlemlerini açıklar
 keywords: Kubernetes, Docker, Kubernetes, Azure, kapsayıcılar ile yerel Işlem
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: 93bfc509eb21545cde812b8d6d71bb9a93a109e8
-ms.sourcegitcommit: debf31a8fb044f0429409bd0587cdb7d5ca6f836
+manager: jillfra
+author: ghogen
+ms.author: ghogen
+ms.openlocfilehash: f8808da9a2bfd49fb0ee7d661b7e57c776036c1c
+ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87133988"
+ms.lasthandoff: 08/01/2020
+ms.locfileid: "87507891"
 ---
 # <a name="how-local-process-with-kubernetes-works"></a>Kubernetes ile Yerel İşlem nasıl çalışır?
 
@@ -20,6 +23,9 @@ Kubernetes ile yerel Işlem, geliştirme bilgisayarınızda kod çalıştırman�
 Kubernetes ile yerel Işlem, doğrudan geliştirme bilgisayarınız ve kümeniz arasında bir bağlantı oluşturmak için kodunuzu kümenize derleyip dağıtmak zorunda kalmaktan kaçınır. Hata ayıklama sırasında geliştirme bilgisayarınızı kümenize bağlamak, herhangi bir Docker veya Kubernetes yapılandırması oluşturmadan hizmetinizi tam uygulama bağlamında hızlıca test etmenize ve geliştirmenize olanak sağlar.
 
 Kubernetes ile yerel Işlem, bağlı Kubernetes kümeniz ile geliştirme bilgisayarınız arasında trafiği yeniden yönlendirir. Bu trafik yeniden yönlendirmesi, Kubernetes kümenizde çalışan geliştirme ve hizmetinizdeki kodların aynı Kubernetes kümesinde olduklarından farklı iletişim kurmasına olanak tanır. Kubernetes ile yerel Işlem, geliştirme bilgisayarınızda Kubernetes kümenizde bulunan ortam değişkenlerini ve takılı birimleri de çoğaltmak için bir yol sağlar. Geliştirme bilgisayarınızda ortam değişkenlerine ve bağlı birimlere erişim sağlamak, bu bağımlılıkları el ile çoğaltmadan kodunuzda hızla çalışmanıza olanak sağlar.
+
+> [!WARNING]
+> Kubernetes için yerel Işlem yalnızca geliştirme ve test senaryolarında kullanılmak üzere tasarlanmıştır. Üretim kümeleri veya etkin kullanımda olan canlı hizmetlerle kullanılmak üzere tasarlanmamıştır veya desteklenmez.
 
 ## <a name="using-local-process-with-kubernetes"></a>Kubernetes ile yerel Işlem kullanma
 
@@ -39,6 +45,12 @@ Kubernetes ile yerel Işlem, kümenize bir bağlantı kurduğunda:
 * Geliştirme bilgisayarınızda kodu çalıştırmaya ve hata ayıklamaya başlar. Gerekirse, Kubernetes ile yerel Işlem, bu bağlantı noktalarını kullanmakta olan hizmetleri veya işlemleri durdurarak geliştirme bilgisayarınızda gerekli bağlantı noktalarını boşaltır.
 
 Kümenize bir bağlantı kurduktan sonra, kodu kapsayıcı olmadan yerel olarak bilgisayarınızda çalıştırabilir ve hata ayıklama yapabilir ve kod, kümenizin geri kalanıyla doğrudan etkileşime geçebilir. Uzak aracının aldığı tüm ağ trafiği, bağlantı sırasında belirtilen yerel bağlantı noktasına yönlendirilir, böylece yerel olarak çalışan kodunuz bu trafiği kabul edebilir ve işleyebilir. Kümenizin ortam değişkenleri, birimleri ve gizli dizileri, geliştirme bilgisayarınızda çalışan kod için kullanılabilir hale getirilir. Ayrıca, Kubernetes ile yerel Işlem tarafından geliştirici bilgisayarınıza eklenen ana bilgisayar dosya girişleri ve bağlantı noktası iletimi nedeniyle, kodunuz kümenizdeki hizmet adlarını kullanarak kümenizde çalışan hizmetlere ağ trafiği gönderebilir ve bu trafik kümenizde çalışan hizmetlere iletilir. Geliştirme bilgisayarınız ile kümeniz arasında, bağlandığınız zaman trafik yönlendirilir.
+
+Ayrıca, Kubernetes ile yerel Işlem, geliştirme bilgisayarınızda bulunan küme içindeki kümelerde bulunan ortam değişkenlerini ve bağlı dosyaları dosya aracılığıyla çoğaltmak için bir yol sağlar `KubernetesLocalProcessConfig.yaml` . Bu dosyayı Ayrıca yeni ortam değişkenleri ve birim bağlama oluşturmak için de kullanabilirsiniz.
+
+## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>KubernetesLocalProcessConfig. YAML ile ek yapılandırma
+
+`KubernetesLocalProcessConfig.yaml`Dosya, kümedeki yığınlarınızın kullanabildiği ortam değişkenlerini ve bağlı dosyaları çoğaltmanıza olanak sağlar. Ek yapılandırma seçenekleri hakkında daha fazla bilgi için bkz. [Kubernetes Ile yerel Işlemi yapılandırma][using-config-yaml].
 
 ## <a name="using-routing-capabilities-for-developing-in-isolation"></a>Yalıtımda geliştirmeye yönelik yönlendirme özelliklerini kullanma
 
@@ -108,3 +120,4 @@ Yerel geliştirme bilgisayarınıza kümenize bağlanmak için Kubernetes ile ye
 [kubectl-port-forward]: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#port-forward
 [visual-studio]: https://visualstudio.microsoft.com/downloads/
 [lpk-extension]: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.mindaro
+[using-config-yaml]: configure-local-process-with-kubernetes.md
