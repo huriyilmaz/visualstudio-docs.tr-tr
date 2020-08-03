@@ -2,16 +2,19 @@
 title: Visual Studio ile Kubernetes ile yerel Işlem kullanma (Önizleme)
 ms.technology: vs-azure
 ms.date: 06/02/2020
-ms.topic: conceptual
+ms.topic: how-to
 description: Geliştirme bilgisayarınızı bir Kubernetes kümesine bağlamak için Visual Studio ile Kubernetes ile yerel Işlem kullanmayı öğrenin
 keywords: Kubernetes, Azure Dev Spaces, dev Spaces, Docker, Kubernetes, Azure, kapsayıcılar ile yerel Işlem
 monikerRange: '>=vs-2019'
-ms.openlocfilehash: fd2e456f1ffdaaea90c0594b73d5367e51c8f655
-ms.sourcegitcommit: debf31a8fb044f0429409bd0587cdb7d5ca6f836
+ms.author: ghogen
+author: ghogen
+manager: jillfra
+ms.openlocfilehash: 29a3c8563660507a2378a58595ba5ea64788b417
+ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87134002"
+ms.lasthandoff: 08/01/2020
+ms.locfileid: "87507904"
 ---
 # <a name="use-local-process-with-kubernetes-preview"></a>Kubernetes ile yerel Işlem kullanma (Önizleme)
 
@@ -137,6 +140,10 @@ Ortak URL 'YI açarak örnek uygulamaya gidin. Kullanıcı olarak *Aurelia Brigg
 >
 > Visual Studio, kümeyle olan bağlantıyı aniden sonlandırıyorsa veya sonlandırıyorsa, Kubernetes ile yerel Işleme bağlanmadan önce yeniden yönlendiriyorsunuz hizmeti özgün durumuna geri yüklenemez. Bu sorunu gidermek için [sorun giderme kılavuzu][troubleshooting]'na bakın.
 
+## <a name="additional-configuration"></a>Ek yapılandırma
+
+Kubernetes ile yerel Işlem, herhangi bir ek yapılandırma olmadan yönlendirme trafiğini işleyebilir ve ortam değişkenlerini çoğaltebilirler. Kubernetes kümenizdeki kapsayıcıya bağlanmış herhangi bir dosyayı ConfigMap dosyası gibi indirmeniz gerekiyorsa, `KubernetesLocalProcessConfig.yaml` Bu dosyaları geliştirme bilgisayarınıza indirmek için bir oluşturabilirsiniz. Daha fazla bilgi için, [Kubernetes Ile yerel işlem için ile ek yapılandırma Için KubernetesLocalProcessConfig. YAML kullanma][kubernetesLocalProcessConfig-yaml]konusuna bakın.
+
 ## <a name="using-logging-and-diagnostics"></a>Günlüğe kaydetme ve tanılama kullanma
 
 Tanılama günlüklerini, `Azure Dev Spaces` [geliştirme bilgisayarınızın *geçici* dizininde][azds-tmp-dir]bulunan dizinde bulabilirsiniz.
@@ -170,3 +177,4 @@ Yerel Işlemin Kubernetes 'in nasıl çalıştığını öğrenin.
 [troubleshooting]: /azure/dev-spaces/troubleshooting#fail-to-restore-original-configuration-of-deployment-on-cluster
 [visual-studio]: https://www.visualstudio.com/vs/
 [lpk-extension]: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.mindaro
+[kubernetesLocalProcessConfig-yaml]: configure-local-process-with-kubernetes.md
