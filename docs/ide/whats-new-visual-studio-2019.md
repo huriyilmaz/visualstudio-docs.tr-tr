@@ -2,7 +2,7 @@
 title: Visual Studio 2019’daki yenilikler
 titleSuffix: ''
 description: Visual Studio 2019 ' deki yeni özellikler hakkında bilgi edinin.
-ms.date: 05/20/2020
+ms.date: 08/05/2020
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 28c8e647943b6e99946c2a9123ee17e2be8cc5c2
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 333bb9ca24579758112199c13d5a4af3f60d6058
+ms.sourcegitcommit: d21f1a028628d0221b567ba496690b3b68cfded7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86387050"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87818592"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019’daki yenilikler
 
-**[16,6 sürümü](/visualstudio/releases/2019/release-notes/) için güncelleştirildi**
+**[16,7 sürümü](/visualstudio/releases/2019/release-notes/) için güncelleştirildi**
 
 >[!div class="button"]
 >[Visual Studio 2019’u İndirin](https://visualstudio.microsoft.com/downloads)
@@ -86,7 +86,7 @@ Intellicode hakkında daha fazla bilgi için bkz. [ıntellicode 'un genel kullan
 
 ### <a name="code-cleanup"></a>Kod temizleme
 
-Yeni bir belge durumu göstergesi ile eşleştirilmiş yeni bir kod temizleme komutu. Bu yeni komutu kullanarak, bir düğmeye tıklayarak hem uyarıları hem de önerileri tanımlayabilir ve daha sonra giderebilirsiniz.
+Yeni bir belge durumu göstergesi ile eşleştirilmiş yeni bir kod temizleme komutu. Bu yeni komutu, hem uyarıları hem de önerileri tek bir eylemle (veya bir düğmeye tıklayarak) tanımlayıp onarmak için kullanabilirsiniz.
 
 Temizleme kodu biçimlendirir ve [geçerli ayarlar](code-styles-and-code-cleanup.md) ve [. editorconfig dosyaları](create-portable-custom-editor-options.md)tarafından önerildiği şekilde kod düzeltmelerini uygular.
 
@@ -118,7 +118,7 @@ Daha fazla bilgi için bkz. [Visual Studio 2019 blog gönderisi Ile daha iyi ço
 
 Daha fazla bilgi için bkz. [.NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/) blog gönderisi duyurusu.
 
-## <a name="collaborate"></a>İşbirliği yapma
+## <a name="collaborate"></a>İşbirliği
 
 Sorunları çözmek için nasıl ekip sağlayabileceğiniz hakkında daha fazla bilgi edinmek için aşağıdaki videoyu görüntüleyin. <br><br>*Video uzunluğu: 4,22 dakika*
 
@@ -178,7 +178,7 @@ Büyük olasılıkla bir değer kümesi arasında bir dize izleme penceresi aray
 
    ![Visual Studio 2019 'de hata ayıklama arama penceresini gösteren bir animasyon](media/vs-2019/debug-window-search.gif)
 
-Ayrıca, bir değerin Izleme, Yereller ve oto pencereleri içinde nasıl görüntüleneceğini de biçimlendirebilirsiniz.  Herhangi bir Windows 'daki öğelerden birine çift tıklayın ve her biri amaçlanan efektinin açıklamasını içeren olası biçim Belirticilerinin açılan listesine erişmek için virgül (",") ekleyin.
+Ayrıca, bir değerin Izleme, Yereller ve oto pencereleri içinde nasıl görüntüleneceğini de biçimlendirebilirsiniz. Herhangi bir Windows 'daki öğelerden birini (çift tıklayarak) seçin ve olası biçim Belirticilerinin açılan listesine erişmek için bir virgül (",") ekleyin (her biri amaçlanan efektinin açıklamasını içerir).
 
    ![Visual Studio 2019 ' de yeni izleme penceresi ve biçim değerleri özelliği](media/search-watch-window.png)
 
@@ -212,7 +212,21 @@ Daha fazla bilgi için bkz. [Pintuma özellikleri: Debug & yönetilen nesneleri 
 
 Visual Studio 2019 ' i genellikle geliştirme deneyiminizi daha da iyi hale getirebileceğiniz yeni özelliklerle güncelleştiririz. En son yeniliklerimiz hakkında daha fazla bilgi edinmek için [Visual Studio bloguna](https://devblogs.microsoft.com/visualstudio/)göz atın. Önizleme tarihine kadar yayımladığımız bir kayıt için [Önizleme sürüm notlarına](/visualstudio/releases/2019/release-notes-preview/)göz atın. Ve daha sonra yayınlanmasını planladığımızı bir liste için bkz. [Visual Studio yol haritası](/visualstudio/productinfo/vs-roadmap).
 
-Visual Studio 2019 için çalışmadaki diğer özellikler hakkında daha fazla bilgi edinmek istiyor musunuz? Bkz. [Visual Studio yol haritası](/visualstudio/productinfo/vs-roadmap/).
+Bu sırada, şu anda çalışmadaki yeni özelliklerden bazıları aşağıda verilmiştir.
+
+- **Visual Studio Code Spaces için Visual Studio 2019 desteği (Önizleme)**
+
+  Artık her zamankinden daha fazla, geliştiriciler iş üzerinde ve evde birden fazla projeyi daha da kolaylaştırıyor. Yeni özellikler, hata düzeltmeleri, çekme isteği incelemeleri, &amp; prototipler, zaman için rekabet ve sabit bağlam geçişi gerektirir. [Visual Studio Codespaces](https://visualstudio.microsoft.com/services/visual-studio-codespaces/) yardımcı olabilir. Tamamen bulutta geliştirebilir ve birkaç dakika içinde projelerinizden her biri için ayrılmış özel ortamlar oluşturabilirsiniz. Visual Studio 2019 ile codespace 'e bağlanabilir ve yerel olarak olduğu gibi çalışabilirsiniz.
+
+  Daha fazla bilgi için bkz. [Visual Studio Codespaces nedir](/visualstudio/codespaces/overview/what-is-vsonline/) sayfası.
+
+- **Visual Studio 2019 'de gelişmiş git deneyimi (Önizleme)**
+
+   GitHub, Azure Repos ve diğer uzak barındırma hizmetlerinde kod ile çalışırken üretkenliğinizi iyileştirmeye yönelik bir revaed git deneyiminde yineleme yapmaya devam ediyoruz. Visual Studio 2019 içinden tek bir eylemle başlatabilir ve gönderebilirsiniz (veya ' a tıklayabilirsiniz). Ayrıca yeni dallar oluşturabilir, geçerli dalları yönetebilir ve birleştirme çakışmalarını çözebilirsiniz.
+
+   Daha fazla bilgi için bkz. [Visual Studio 'Da git deneyimine yönelik heyecan verici yeni güncelleştirmeler](https://devblogs.microsoft.com/visualstudio/exciting-new-updates-to-the-git-experience-in-visual-studio/) blog gönderisi.
+
+Önizleme sürümü ve bir indirme bağlantısı hakkında daha fazla bilgi için &mdash; &mdash; bkz. **[Visual Studio önizleme](https://visualstudio.microsoft.com/vs/preview/)** sayfası.
 
 ## <a name="give-us-feedback"></a>Geri bildirimde bulunun
 
