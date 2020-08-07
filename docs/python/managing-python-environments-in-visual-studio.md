@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e8deed53d2789afb964989e4e995e3120e9842bd
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 1b6782a95793f222ba15fe8f928ecd9d7337c90f
+ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85543851"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87913320"
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio 'da Python ortamları oluşturma ve yönetme
 
@@ -157,10 +157,10 @@ Conda ortamı, `conda` Aracı kullanılarak veya Visual Studio 2017 sürüm 15,7
 
 1. Aşağıdaki alanları yapılandırın:
 
-    | Alan | Description |
+    | Alan | Açıklama |
     | --- | --- |
     | Project | Ortamın oluşturulacağı proje (aynı Visual Studio çözümünde birden çok projeniz varsa). |
-    | Name | Conda ortamının adı. |
+    | Ad | Conda ortamının adı. |
     | Paket ekle | Bağımlılıklarınızı tanımlayan bir *Environment. yıml* dosyanız varsa **ortam dosyası** ' nı seçin veya **bir veya daha fazla Anaconda paketi adı** seçin ve en az bir Python paketi veya aşağıdaki alanda bir Python sürümü listeleyin. Paket listesi, Conda 'ın Python ortamı oluşturmasını söyler. Python 'un en son sürümünü yüklemek için; kullanın `python` ; belirli bir sürümü yüklemek için `python=,major>.<minor>` içinde olarak kullanın `python=3.7` . Ayrıca, bir dizi menüden Python sürümlerini ve ortak paketleri seçmek için paket düğmesini de kullanabilirsiniz. |
     | Geçerli ortam olarak ayarla | Ortam oluşturulduktan sonra seçili projede yeni ortamı etkinleştirir. |
     | Yeni projeler için varsayılan ortam olarak ayarla | , Conda ortamını Visual Studio 'da oluşturulan tüm yeni projelerde otomatik olarak ayarlar ve etkinleştirir. Bu seçenek, **Python ortamları** penceresinde **yeni projeler için bu varsayılan ortamı yap** ' ın kullanılmasıyla aynıdır. |
@@ -262,7 +262,7 @@ Tutmak istediğiniz bir ortamı düzeltmek için öncelikle yükleyicinin **onar
 Onarma seçeneği olmayan bir ortamı düzeltmek veya geçersiz bir ortamı kaldırmak için, kayıt defterini doğrudan değiştirmek için aşağıdaki adımları kullanın. Kayıt defterinde değişiklik yaptığınızda Visual Studio, **Python ortamları** penceresini otomatik olarak güncelleştirir.
 
 1. *regedit.exe*çalıştırın.
-1. **HKEY_LOCAL_MACHINE \SOFTWARE\Python dizinine**gidin. IronPython için, bunun yerine **IronPython** öğesini arayın.
+1. **HKEY_LOCAL_MACHINE \software\python** veya **HKEY_CURRENT_USER \software\python**' a gidin. IronPython için, bunun yerine **IronPython** öğesini arayın.
 1. Anaconda için, Cpyıthon veya **Continuumanalytics** Için **Python Core** gibi dağıtımla eşleşen düğümü genişletin. IronPython için sürüm numarası düğümünü genişletin.
 1. **InstallPath** düğümünün altındaki değerleri inceleyin:
 
@@ -270,7 +270,8 @@ Onarma seçeneği olmayan bir ortamı düzeltmek veya geçersiz bir ortamı kald
 
     - Ortam bilgisayarınızda hala mevcutsa, **ExecutablePath** değerini doğru konum olarak değiştirin. Ayrıca, **(varsayılan)** ve **WindowedExecutablePath** değerlerini gereken şekilde düzeltin.
     - Ortam bilgisayarınızda artık yoksa ve **Python ortamları** penceresinden kaldırmak istiyorsanız, yukarıdaki görüntüde **3,6** gibi **InstallPath**'in üst düğümünü silin.
-
+    - **HKEY_CURRENT_USER \SOFTWARE\Python** 'da geçersiz ayarlar **HKEY_LOCAL_MACHINE \software\python** 'daki ayarları geçersiz kılar
+    
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Python yorumlayıcılarını yükleme](installing-python-interpreters.md)

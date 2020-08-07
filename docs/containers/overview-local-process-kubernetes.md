@@ -9,12 +9,12 @@ monikerRange: '>=vs-2019'
 manager: jillfra
 author: ghogen
 ms.author: ghogen
-ms.openlocfilehash: f8808da9a2bfd49fb0ee7d661b7e57c776036c1c
-ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
+ms.openlocfilehash: 5b6c07d5987c52d818a35babd16681652ddf5830
+ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2020
-ms.locfileid: "87507891"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87913269"
 ---
 # <a name="how-local-process-with-kubernetes-works"></a>Kubernetes ile Yerel İşlem nasıl çalışır?
 
@@ -47,6 +47,9 @@ Kubernetes ile yerel Işlem, kümenize bir bağlantı kurduğunda:
 Kümenize bir bağlantı kurduktan sonra, kodu kapsayıcı olmadan yerel olarak bilgisayarınızda çalıştırabilir ve hata ayıklama yapabilir ve kod, kümenizin geri kalanıyla doğrudan etkileşime geçebilir. Uzak aracının aldığı tüm ağ trafiği, bağlantı sırasında belirtilen yerel bağlantı noktasına yönlendirilir, böylece yerel olarak çalışan kodunuz bu trafiği kabul edebilir ve işleyebilir. Kümenizin ortam değişkenleri, birimleri ve gizli dizileri, geliştirme bilgisayarınızda çalışan kod için kullanılabilir hale getirilir. Ayrıca, Kubernetes ile yerel Işlem tarafından geliştirici bilgisayarınıza eklenen ana bilgisayar dosya girişleri ve bağlantı noktası iletimi nedeniyle, kodunuz kümenizdeki hizmet adlarını kullanarak kümenizde çalışan hizmetlere ağ trafiği gönderebilir ve bu trafik kümenizde çalışan hizmetlere iletilir. Geliştirme bilgisayarınız ile kümeniz arasında, bağlandığınız zaman trafik yönlendirilir.
 
 Ayrıca, Kubernetes ile yerel Işlem, geliştirme bilgisayarınızda bulunan küme içindeki kümelerde bulunan ortam değişkenlerini ve bağlı dosyaları dosya aracılığıyla çoğaltmak için bir yol sağlar `KubernetesLocalProcessConfig.yaml` . Bu dosyayı Ayrıca yeni ortam değişkenleri ve birim bağlama oluşturmak için de kullanabilirsiniz.
+
+> [!NOTE]
+> Küme bağlantısı süresi (artı 15 dakika) için, Kubernetes ile yerel Işlem, yerel bilgisayarınızda yönetici izinleriyle *Endpointmanager* adlı bir işlem çalıştırır.
 
 ## <a name="additional-configuration-with-kuberneteslocalprocessconfigyaml"></a>KubernetesLocalProcessConfig. YAML ile ek yapılandırma
 
@@ -92,7 +95,7 @@ Kümenizin bağlantısını kestiğinizde, varsayılan olarak, Kubernetes ile ye
 
 ## <a name="diagnostics-and-logging"></a>Tanılama ve günlüğe kaydetme
 
-Kümenize bağlanmak için Kubernetes ile yerel Işlem kullanılırken, kümenizdeki tanılama günlükleri geliştirme bilgisayarınızın [geçici dizinine][azds-tmp-dir]kaydedilir.
+Kümenize bağlanmak için Kubernetes ile yerel Işlem kullanılırken, kümenizdeki tanılama günlükleri, *Kubernetes klasörüyle yerel işlemdeki* geliştirme bilgisayarınızın *geçici* dizinine kaydedilir.
 
 ## <a name="limitations"></a>Sınırlamalar
 

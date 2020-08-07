@@ -8,12 +8,12 @@ manager: jillfra
 ms.technology: vs-azure
 ms.workload:
 - azure
-ms.openlocfilehash: 02a672321a11889d88a8af3305e64a66fe779080
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 7778019e73119a4b8b1a5842bb7a8c04ef017143
+ms.sourcegitcommit: 50bbb62525c91c5a31bab57e1caf37c5638872c8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85283196"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87913306"
 ---
 # <a name="get-started-with-visual-studio-kubernetes-tools"></a>Visual Studio Kubernetes araçlarını kullanmaya başlama
 
@@ -21,7 +21,7 @@ Visual Studio Kubernetes araçları, Kubernetes 'i hedefleyen Kapsayıcılı uyg
 
 Bu öğreticide, bir projeye Kubernetes desteği eklemek ve AKS 'de yayımlamak için Visual Studio kullanımı ele alınmaktadır. Birincil olarak [Azure dev Spaces](/azure/dev-spaces/) kullanarak projenizi hata ayıklamakta ve test etmek için kullanmak istiyorsanız, bunun yerine [Azure dev Spaces öğreticiye](/azure/dev-spaces/get-started-netcore-visualstudio) atlayabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu yeni işlevsellikten yararlanmak için şunlar gerekir:
 
@@ -123,7 +123,7 @@ Eklenen dosyalar şunlardır:
 
 - *AZD. YAML*. Bu, Azure Kubernetes hizmetinde hızlı ve yinelemeli bir hata ayıklama deneyimi sağlayan Azure Dev Spaces için ayarları içerir. Daha fazla bilgi için [Azure dev Spaces belgelerine](/azure/dev-spaces/azure-dev-spaces)bakın.
 
-::: moniker range="vs-2017"
+:::moniker range="vs-2017"
 
 ## <a name="publish-to-azure-kubernetes-service-aks"></a>Azure Kubernetes hizmeti 'ne (AKS) yayımlama
 
@@ -145,7 +145,7 @@ Bunu yapmak için ilk olarak, AKS 'de yayımlama için öğenin altındaki [Önk
 
    ![Azure AKS 'de Yayımla menü öğesinde yayımlama ekran görüntüsü](media/tutorial-kubernetes-tools/k8s-tools-publish-solution.png)
 
-4. Aboneliğinizi ve AKS kümenizi, yeni oluşturduğunuz ACR yayımlama profiliyle birlikte seçin. Ardından **Tamam**'a tıklayın.
+4. Aboneliğinizi ve AKS kümenizi, yeni oluşturduğunuz ACR yayımlama profiliyle birlikte seçin. Daha sonra, **Tamam**'a tıklayın.
 
    ![AKS 'de Yayımla ekranında ekran görüntüsü](media/tutorial-kubernetes-tools/k8s-tools-publish-to-aks.png)
 
@@ -166,6 +166,16 @@ Bunu yapmak için ilk olarak, AKS 'de yayımlama için öğenin altındaki [Önk
 ::: moniker-end
 
 Tebrikler! Artık tüm Kubernetes uygulama geliştirme için Visual Studio 'nun tam gücünden yararlanabilirsiniz.
+
+## <a name="remove-kubernetes-support"></a>Kubernetes desteğini kaldır
+
+1. **Çözüm Gezgini**, **Özellikler**altında *launchSettings.jsüzerinde*açın.
+
+1. **Kubernetes içindeki bölüm kapsayıcısını**silin.
+
+1. Docker Compose 'a geri geçiş yapıyorsanız bu projeyi **Çözüm Gezgini**seçin, sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
+
+1. Seçim Ayrıca, makalenin önceki bölümlerinde bahsedildiği gibi listelenen diğer yapıtları de (örneğin, **grafikler** klasörü ve *AZD. YAML*) silebilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
