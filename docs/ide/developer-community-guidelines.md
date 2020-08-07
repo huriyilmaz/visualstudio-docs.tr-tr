@@ -8,12 +8,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fb7f821a7b815b29c9f85b6ab0686edb0292866d
-ms.sourcegitcommit: 4d5cd0b9de7a87efb69f17b02c2331b749e6ec8d
+ms.openlocfilehash: b39b62ade75687a61981712c47e9876a0ef082fd
+ms.sourcegitcommit: 615c8f39216ee2500161fa3aa1b3fe2f3e4386fa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137560"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87972479"
 ---
 # <a name="developer-community-guidelines"></a>Geliştirici Topluluğu yönergeleri
 
@@ -89,12 +89,15 @@ Bir özellik önermeniz durumunda isteğinizi ele almak için planlamadığımı
 
 Karar verme sürecimizde, özellik önerisi hakkında aşağıdaki özelliklere göz atalım:
 
+- Genel ürün yönümüzle eşleşiyor mu?
 - Derleyip bakımını yapabilir mi?
 - Genel [yol haritası](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) stratejimize göre hizalansın mı?
 - Oylarda ve açıklamalarda gösterildiği gibi topluluk desteği mi var?
 - Düşük topluluk desteğiyle bile bu dosyayı sevtik mı?
 
 Bu sorulardan herhangi birine "Evet" Yanıt vermiyoruz. Ancak genellikle öneri, daha fazla topluluk geri bildirimi toplamak için _Gözden geçirme bölümünde_ açık kalır.
+
+Bir öneri genel ürün yönümüzle eşleşmezse, bunu *kapsam dışı*olarak kapalarız. Örneğin, Visual Studio ürün ailesinin diğer üyelerinde benzer yatırımları olabilir. Ya da önerilen özellik yalnızca birkaç kişiyle ilgili olabilir, bu da uzantının sağlanması daha uygun hale gelir.
 
 [Öneri durumlarına ve SSS](https://docs.microsoft.com/visualstudio/ide/report-a-problem)'ye başvurarak Özellik önerinizin ilerlemesini izleyin.
 
