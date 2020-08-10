@@ -441,6 +441,8 @@
           href: common-msbuild-project-properties.md
         - name: Yaygın MSBuild proje öğeleri
           href: common-msbuild-project-items.md
+        - name: Yaygın MSBuild öğesi meta verileri
+          href: common-msbuild-item-metadata.md
         - name: MSBuild komut satırı başvurusu
           href: msbuild-command-line-reference.md
         - name: MSBuild .targets dosyaları
