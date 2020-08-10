@@ -16,6 +16,7 @@
 ### [Microsoft Hesaplarıyla oturum açma](sign-in-msa.md)
 ### [İş veya okul hesaplarıyla oturum açma](sign-in-work.md)
 ### [GitHub ile oturum açma](sign-in-github.md)
+### [Bağlı kimlikler](use-connected-identities.md)
 ### [Alternatif kimlikler](vs-alternate-identity.md)
 ### [Oturum açma sorunları](sign-in-issues.md)
 ### [Abone verilerinin anonimleştirilmesi](anonymization.md)
