@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e7a21a010cf98da3d7adb9627105c2847b7571e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 9b5a03c9cb7ae7c5a5c81bd452dbb04d8db4c09d
+ms.sourcegitcommit: ed17ca9ae5f92c229c4e46233bcfe0a49d29ec43
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86386361"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88052628"
 ---
 # <a name="security-warnings"></a>Güvenlik uyarıları
 
@@ -28,7 +28,7 @@ Güvenlik uyarıları, daha güvenli kütüphaneleri ve uygulamaları destekler.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA2100: SQL sorgularını güvenlik açıkları için inceleyin](../code-quality/ca2100.md)|Bir yöntem, yönteme dize değişkeninden oluşturulmuş dize kullanarak System.Data.IDbCommand.CommandText özelliğini ayarlar. Bu kural, dize değişkeninin kullanıcı girişi içerdiğini varsayar. Kullanıcı girişi ile oluşan SQL komut dizesi, SQL enjeksiyon saldırılarına karşı savunmasız durumdadır.|
 |[CA2102: CLSCompliant olmayan özel durumları genel işleyiciler içinde yakalayın](../code-quality/ca2102.md)|RuntimeCompabilityAttribute ile işaretlenmemiş veya RuntimeCompability (WrapNonExceptionThrows = yanlış) ile işaretlenmiş derlemedeki bir üye, System.Exception işleyen yakalama bloğu içerir ve hemen arkasından gelen genel bir yakalama bloğu içermez.|
@@ -89,13 +89,15 @@ Güvenlik uyarıları, daha güvenli kütüphaneleri ve uygulamaları destekler.
 |[CA2328: JsonSerializerSettings’in güvenli olduğundan emin olun](../code-quality/ca2328.md)|Güvenilmeyen verilerin serisi kaldırılırken güvenli olmayan seri hale getiriciler savunmasızdır. Saldırgan, kötü amaçlı yan etkileri olan nesneleri eklemek için seri hale getirilmiş verileri beklenmedik türleri içerecek şekilde değiştirebilir.|
 |[CA2329: Güvenli olmayan bir yapılandırma kullanarak JsonSerializer ile seri durumdan çıkarma işlemi yapmayın](../code-quality/ca2329.md)|Güvenilmeyen verilerin serisi kaldırılırken güvenli olmayan seri hale getiriciler savunmasızdır. Saldırgan, kötü amaçlı yan etkileri olan nesneleri eklemek için seri hale getirilmiş verileri beklenmedik türleri içerecek şekilde değiştirebilir.|
 |[CA2330: Seri durumdan çıkarılırken JsonSerializer’ın güvenli bir yapılandırmaya sahip olmasını sağlayın](../code-quality/ca2330.md)|Güvenilmeyen verilerin serisi kaldırılırken güvenli olmayan seri hale getiriciler savunmasızdır. Saldırgan, kötü amaçlı yan etkileri olan nesneleri eklemek için seri hale getirilmiş verileri beklenmedik türleri içerecek şekilde değiştirebilir.|
-|[CA2350: DataTable. ReadXml () girişinin güvenilir olduğundan emin olun](ca2350.md)|Bir saldırgan güvenilmeyen bir girişle seri durumdan çıkarılırken <xref:System.Data.DataTable> , bir hizmet reddi saldırısı gerçekleştirmek için kötü amaçlı giriş oluşturabilir. Bilinmeyen uzaktan kod yürütme güvenlik açıkları olabilir.|
-|[CA2351: DataSet. ReadXml () girişinin güvenilir olduğundan emin olun](ca2351.md)|Bir saldırgan güvenilmeyen bir girişle seri durumdan çıkarılırken <xref:System.Data.DataSet> , bir hizmet reddi saldırısı gerçekleştirmek için kötü amaçlı giriş oluşturabilir. Bilinmeyen uzaktan kod yürütme güvenlik açıkları olabilir.|
-|[CA2352: serileştirilebilir türdeki güvenli olmayan veri kümesi veya DataTable, uzak kod yürütme saldırılarına karşı savunmasız olabilir](ca2352.md)|İle işaretlenmiş bir sınıf veya yapı <xref:System.SerializableAttribute> <xref:System.Data.DataSet> , ya da <xref:System.Data.DataTable> alan ya da özellik içerir ve içermez <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> .|
-|[CA2353: Serializable türde güvenli olmayan veri kümesi veya DataTable](ca2353.md)|XML serileştirme özniteliğiyle veya bir veri sözleşmesi özniteliğiyle işaretlenmiş bir sınıf veya yapı, bir <xref:System.Data.DataSet> veya <xref:System.Data.DataTable> alanı veya özelliği içerir.|
-|[CA2354: Serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable, uzak kod yürütme saldırısında savunmasız olabilir](ca2354.md)|Serileştirilmiş ile seri durumdan çıkarma ve, bulunan <xref:System.Runtime.Serialization.IFormatter?displayProperty=nameWithType> türün nesne grafiği bir <xref:System.Data.DataSet> veya içerebilir <xref:System.Data.DataTable> .|
-|[CA2355: Serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable](ca2355.md)|Bulunan veya belirtilen türün nesne grafiğinde veya dahil edildiğinde seri durumdan çıkarma <xref:System.Data.DataSet> <xref:System.Data.DataTable> .|
+|[CA2350: DataTable.ReadXml() girişinin güvenilir olduğundan emin olun](ca2350.md)|Bir saldırgan güvenilmeyen bir girişle seri durumdan çıkarılırken <xref:System.Data.DataTable> , bir hizmet reddi saldırısı gerçekleştirmek için kötü amaçlı giriş oluşturabilir. Bilinmeyen uzaktan kod yürütme güvenlik açıkları olabilir.|
+|[CA2351: DataSet.ReadXml() girişinin güvenilir olduğundan emin olun](ca2351.md)|Bir saldırgan güvenilmeyen bir girişle seri durumdan çıkarılırken <xref:System.Data.DataSet> , bir hizmet reddi saldırısı gerçekleştirmek için kötü amaçlı giriş oluşturabilir. Bilinmeyen uzaktan kod yürütme güvenlik açıkları olabilir.|
+|[CA2352: Seri duruma getirilebilir türdeki güvenli olmayan DataSet veya DataTable, uzaktan yapılan kod yürütme saldırılarına karşı savunmasız olabilir](ca2352.md)|İle işaretlenmiş bir sınıf veya yapı <xref:System.SerializableAttribute> <xref:System.Data.DataSet> , ya da <xref:System.Data.DataTable> alan ya da özellik içerir ve içermez <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> .|
+|[CA2353: Seri duruma getirilebilir türdeki güvenli olmayan DataSet veya DataTable](ca2353.md)|XML serileştirme özniteliğiyle veya bir veri sözleşmesi özniteliğiyle işaretlenmiş bir sınıf veya yapı, bir <xref:System.Data.DataSet> veya <xref:System.Data.DataTable> alanı veya özelliği içerir.|
+|[CA2354: Seri durumdan çıkarılmış nesne grafındaki güvenli olmayan DataSet veya DataTable, uzaktan yapılan kod yürütme saldırılarına karşı savunmasız olabilir](ca2354.md)|Serileştirilmiş ile seri durumdan çıkarma ve, bulunan <xref:System.Runtime.Serialization.IFormatter?displayProperty=nameWithType> türün nesne grafiği bir <xref:System.Data.DataSet> veya içerebilir <xref:System.Data.DataTable> .|
+|[CA2355: Seri durumdan çıkarılmış nesne grafındaki güvenli olmayan DataSet veya DataTable](ca2355.md)|Bulunan veya belirtilen türün nesne grafiğinde veya dahil edildiğinde seri durumdan çıkarma <xref:System.Data.DataSet> <xref:System.Data.DataTable> .|
 |[CA2356: web serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable](ca2356.md)|Veya içeren bir yöntemi <xref:System.Web.Services.WebMethodAttribute?displayProperty=nameWithType> <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> , veya başvurusu olabilecek bir parametresine sahiptir <xref:System.Data.DataSet> <xref:System.Data.DataTable> .|
+|[CA2361: DataSet. ReadXml () içeren bir otomatik olarak oluşturulan sınıfın güvenilmeyen verilerle kullanılmadığından emin olun](ca2361.md)|Bir saldırgan güvenilmeyen bir girişle seri durumdan çıkarılırken <xref:System.Data.DataSet> , bir hizmet reddi saldırısı gerçekleştirmek için kötü amaçlı giriş oluşturabilir. Bilinmeyen uzaktan kod yürütme güvenlik açıkları olabilir.|
+|[CA2362: otomatik olarak seri hale getirilebilir türde veri kümesi veya DataTable, uzaktan kod yürütme saldırılarına karşı savunmasız olabilir](ca2362.md)|Güvenilmeyen girdinin ile serisi kaldırılırken <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve serisi kaldırılan nesne grafı bir <xref:System.Data.DataSet> veya içerdiğinde <xref:System.Data.DataTable> , bir saldırgan uzaktan kod yürütme saldırısı gerçekleştirmek için kötü amaçlı bir yük oluşturabilir.|
 |[CA3001: SQL ekleme güvenlik açıkları için inceleme kodu](../code-quality/ca3001.md)|Güvenilmeyen giriş ve SQL komutlarıyla çalışırken, SQL ekleme saldırılarına karşı en az bir yer vardır. SQL ekleme saldırısı, kötü amaçlı SQL komutları yürütebilir ve uygulamanızın güvenliğini ve bütünlüğünü tehlikeye atabilirler.|
 |[CA3002: XSS güvenlik açıkları için inceleme kodu](../code-quality/ca3002.md)|Web isteklerinden güvenilmeyen giriş ile çalışırken, siteler arası komut dosyası (XSS) saldırıları olması gerekir. Bir XSS saldırısı, güvenilmeyen bir girişi ham HTML çıktısına çıkarır ve saldırganın kötü amaçlı betikler yürütmesine veya Web sayfanızda içeriği kötü amaçlı olarak değiştirmesine olanak tanır.|
 |[CA3003: Dosya yolu ekleme güvenlik açıkları için inceleme kodu](../code-quality/ca3003.md)|Web isteklerinden güvenilmeyen giriş ile çalışırken, dosyalara yollar belirtirken Kullanıcı denetimli girişi kullanmanın en az olması gerekir.|
