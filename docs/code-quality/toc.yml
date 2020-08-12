@@ -748,6 +748,10 @@
                   href: ca2355.md
                 - name: 'CA2356: Seri durumdan çıkarılmış web nesne grafındaki güvenli olmayan DataSet veya DataTable türü'
                   href: ca2356.md
+                - name: 'CA2361: DataSet.ReadXml() içeren bir otomatik oluşturulmuş sınıfın güvenilmeyen verilerle kullanılmadığından emin olun'
+                  href: ca2361.md
+                - name: 'CA2362: Otomatik oluşturulmuş, seri hale getirilebilir türdeki güvenli olmayan DataSet veya DataTable, uzaktan kod yürütme saldırılarına karşı savunmasız olabilir'
+                  href: ca2362.md
                 - name: 'CA2330: Seri durumdan çıkarılırken JsonSerializer’ın güvenli bir yapılandırmaya sahip olmasını sağlayın'
                   href: ca2330.md
                 - name: 'CA3001: SQL ekleme güvenlik açıkları için inceleme kodu'
