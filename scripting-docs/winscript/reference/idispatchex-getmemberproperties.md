@@ -17,17 +17,17 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8016eef7b6e0da9b9fc88695db845cba7f608ff3
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 488f8790ec25532fb611f18e8b24e7e7dba2e2f4
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72574094"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144561"
 ---
 # <a name="idispatchexgetmemberproperties"></a>IDispatchEx::GetMemberProperties
 Üyenin özelliklerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT GetMemberProperties(  
@@ -39,10 +39,10 @@ HRESULT GetMemberProperties(
   
 #### <a name="parameters"></a>Parametreler  
  `id`  
- Üyeyi tanımlar. Dağıtım tanımlayıcısını almak için `GetDispID` veya `GetNextDispID` kullanır.  
+ Üyeyi tanımlar. `GetDispID` `GetNextDispID` Dağıtım tanımlayıcısını almak için veya kullanır.  
   
  `grfdexFetch`  
- Alınacak özellikleri belirler. Bu, `pgrfdex` ve/veya aşağıdaki değerlerin bir birleşimi olarak listelenen değerlerin bir birleşimi olabilir:  
+ Alınacak özellikleri belirler. Bu, `pgrfdex` ve/veya aşağıdaki değerlerin bir birleşimi altında listelenen değerlerin bir birleşimi olabilir:  
   
 |Değer|Anlamı|  
 |-----------|-------------|  
@@ -52,7 +52,7 @@ HRESULT GetMemberProperties(
 |grfdexPropAll|GrfdexPropCanAll, grfdexPropCannotAll ve grfdexPropExtraAll birleştirir.|  
   
  `pgrfdex`  
- İstenen özellikleri alan `DWORD` adresi. Bu, aşağıdaki değerlerin bir birleşimi olabilir:  
+ `DWORD`İstenen özellikleri alan a 'nın adresi. Bu, aşağıdaki değerlerin bir birleşimi olabilir:  
   
 |Değer|Anlamı|  
 |-----------|-------------|  
@@ -74,7 +74,7 @@ HRESULT GetMemberProperties(
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
   
-|||  
+|Değer|Anlamı|
 |-|-|  
 |`S_OK`|Başarılı.|  
 |`DISP_E_UNKNOWNNAME`|Ad bilinmiyor.|  

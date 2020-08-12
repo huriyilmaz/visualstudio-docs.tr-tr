@@ -17,17 +17,17 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f68b0157e8e352b34885ae94d14026a51c4a6e97
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 8dbfb82e986ed6d1738bcc0cffeec35e5ba4515c
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72574104"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144616"
 ---
 # <a name="idispatchexgetmembername"></a>IDispatchEx::GetMemberName
 Üyenin adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT GetMemberName(  
@@ -38,15 +38,15 @@ HRESULT GetMemberName(
   
 #### <a name="parameters"></a>Parametreler  
  `id`  
- Üyeyi tanımlar. Dağıtım tanımlayıcısını almak için `GetDispID` veya `GetNextDispID` kullanır.  
+ Üyeyi tanımlar. `GetDispID` `GetNextDispID` Dağıtım tanımlayıcısını almak için veya kullanır.  
   
  `pbstrName`  
- Üyenin adını alan `BSTR` adresi. Çağıran uygulama, bu değeri boşaltmaktan sorumludur.  
+ `BSTR`Üyenin adını alan bir adresi. Çağıran uygulama, bu değeri boşaltmaktan sorumludur.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
   
-|||  
+|Değer|Anlamı|
 |-|-|  
 |`S_OK`|Başarılı.|  
 |`DISP_E_UNKNOWNNAME`|Ad bilinmiyor.|  

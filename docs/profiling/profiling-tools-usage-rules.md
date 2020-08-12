@@ -1,5 +1,5 @@
 ---
-title: Profil Oluşturma Araçları Kullanım Kuralları | Microsoft Dokümanlar
+title: Kullanım kuralları Profil Oluşturma Araçları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: afa7db3b-8c1d-473a-81ac-24ede112a17f
@@ -9,22 +9,22 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 51c4f1384a58b19ad9a6a4f46ad0131158cc967c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 1aeeb7e0a9061d72a07b718acde70b00dfcbba89
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "74778355"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144681"
 ---
 # <a name="profiling-tools-usage-rules"></a>Profil Araçları Kullanım Kuralları
-Profil Oluşturma Araçları Kullanımı kategorisindeki performans kuralları, verileri en etkili şekilde toplamak için profil oluşturucuyu kullanmak için kılavuz sağlar.
+Profil Oluşturma Araçları Kullanım kategorisindeki performans kuralları, verileri en etkili şekilde toplamak için profil oluşturucunun kullanılmasına yönelik rehberlik sağlar.
 
-| | |
+| Kural | Açıklama |
 | - | - |
-| [DA0002: VSPerfCorProf.dll eksik](../profiling/da0002-vsperfcorprof-dll-is-missing.md) | Komut satırı profil oluşturma .NET Framework ikilileri için eksik veri içerebilir. Bunun nedeni doğru ortam değişkenlerinin ayarlanmaması olabilir. |
-| [DA0003: Pek çok çekirdek örneği](../profiling/da0003-many-kernel-samples.md) | Hedef ikiliyürütme dışında meydana gelen birçok profil örnekleri kaydedildi. Daha doğru veri toplamak için enstrümantasyon yöntemini kullanmayı düşünün. |
-| [DA0004: Yüksek işlemci kullanımı](../profiling/da0004-high-processor-usage.md) | Profil oluşturma verileri, işlemcilerinizin profil oluşturma sırasında sürekli olarak meşgul olduğunu gösterir. Daha doğru veri toplamak için örnekleme yöntemini kullanmayı düşünün. |
-| [DA0008: Toplanan örnek az](../profiling/da0008-few-samples-collected.md) | Profil oluşturma çalışmasında toplanan örnek sayısı istatistiksel olarak anlamlı olacak kadar yüksek değildi. Yeniden profil oluşturmayı ve uygulamayı daha uzun süre çalıştırmayı düşünün. Ayrıca veri toplamak için enstrümantasyon yöntemini kullanmayı da düşünebilirsiniz. |
-| [DA0026: Aşırı çekirdek CPU süresi işleme](../profiling/da0026-excessive-kernel-cpu-time-processing.md) | Profil oluşturma çalışmasında önemli miktarda zaman işlemci çekirdeği modunda oluştu. Zamanı metrik olarak kullanmak yerine sistem çağrılarını metrik olarak kullanarak örneklemeyi göz önünde bulundurun. |
-| [DA0029: Desteklenmeyen CLR Sürümü](../profiling/da0029-unsupported-clr-version.md) | Profilli ikili, .NET Framework'ün profil oluşturucu tarafından desteklenmeyen bir sürümünü kullanıyor. Profil oluşturucu raporları sembol adlarını çözemez. |
-| [DA0030: Veritabanı projeleri için Katman Etkileşim ölçümlerini topla](../profiling/da0030-gather-tier-interaction-measurements-for-database-projects.md) | <xref:System.Data?displayProperty=fullName> Ad alanındaki yöntemlere yapılan önemli sayıda çağrı toplandı. Veritabanı çağrılarıyla ilgili verileri eklemek için, profil çalışırnızda katman etkileşim verileri toplamayı düşünün. |
+| [DA0002: VSPerfCorProf.dll eksik](../profiling/da0002-vsperfcorprof-dll-is-missing.md) | Komut satırı profili oluşturma, .NET Framework ikililer için tamamlanmamış veriler içerebilir. Bu durum doğru ortam değişkenlerini ayarlamamasından kaynaklanıyor olabilir. |
+| [DA0003: Pek çok çekirdek örneği](../profiling/da0003-many-kernel-samples.md) | Hedef ikilinin yürütülmesi dışında oluşan birçok profil oluşturma örneği kaydedildi. Daha doğru veri toplamak için, izleme yöntemini kullanmayı düşünün. |
+| [DA0004: Yüksek işlemci kullanımı](../profiling/da0004-high-processor-usage.md) | Profil oluşturma verileri, işlemclerinizin profil oluşturma çalışması sırasında sürekli olarak meşgul olmasını önerir. Daha doğru veri toplamak için örnekleme yöntemini kullanmayı düşünün. |
+| [DA0008: Az sayıda örnek toplandı](../profiling/da0008-few-samples-collected.md) | Profil oluşturma çalıştırmasında toplanan örneklerin sayısı, istatistiksel olarak önemli ölçüde yeterince yüksek değildi. Profil oluşturmayı yeniden deneyin ve uygulamayı daha uzun bir süre boyunca çalıştırın. Ayrıca veri toplamak için izleme yöntemini kullanmayı da düşünebilirsiniz. |
+| [DA0026: Aşırı çekirdek CPU süresi işlemesi](../profiling/da0026-excessive-kernel-cpu-time-processing.md) | Profil oluşturma çalıştırmasında, işlemci çekirdeği modunda önemli bir süre oluştu. Ölçüm olarak zaman kullanmak yerine, sistem çağrılarını ölçüm olarak kullanarak örneklemeyi düşünün. |
+| [DA0029: Desteklenmeyen CLR Sürümü](../profiling/da0029-unsupported-clr-version.md) | Profili oluşturulmuş ikili dosya, profil oluşturucu tarafından desteklenmeyen bir .NET Framework sürümünü kullanıyor. Profil Oluşturucu raporları sembol adlarını çözümleyemiyor. |
+| [DA0030: Veritabanı projeleri için Katman Etkileşimi ölçüleri toplayın](../profiling/da0030-gather-tier-interaction-measurements-for-database-projects.md) | Ad alanındaki yöntemlere yapılan önemli sayıda çağrı <xref:System.Data?displayProperty=fullName> toplandı. Veritabanı çağrıları hakkında veri eklemek için, profil çalışmalarınızın katman etkileşimi verilerini toplamayı göz önünde bulundurun. |

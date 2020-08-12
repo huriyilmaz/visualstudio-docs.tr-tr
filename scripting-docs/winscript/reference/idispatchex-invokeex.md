@@ -17,17 +17,17 @@ caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8a15acb3211c0d3dd19c0d262efb6cbd3327ab9a
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 673b3f1e64caa79dc2b21641209423d93fe0f834
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72575314"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144421"
 ---
 # <a name="idispatchexinvokeex"></a>IDispatchEx::InvokeEx
-`IDispatchEx` nesnesi tarafından kullanıma sunulan özelliklere ve yöntemlere erişim sağlar.  
+Bir nesne tarafından kullanıma sunulan özelliklere ve yöntemlere erişim sağlar `IDispatchEx` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT InvokeEx(  
@@ -43,51 +43,51 @@ HRESULT InvokeEx(
   
 #### <a name="parameters"></a>Parametreler  
  `id`  
- Üyeyi tanımlar. Dağıtım tanımlayıcısını almak için `GetDispID` veya `GetNextDispID` kullanır.  
+ Üyeyi tanımlar. `GetDispID` `GetNextDispID` Dağıtım tanımlayıcısını almak için veya kullanır.  
   
  `lcid`  
- Bağımsız değişkenlerin yorumlanacağı yerel ayar bağlamı. `lcid`, nesnenin bir yerel ayara özgü bağımsız değişkenlerini yorumlamasını sağlamak için `InvokeEx` geçirilir.  
+ Bağımsız değişkenlerin yorumlanacağı yerel ayar bağlamı. , `lcid` `InvokeEx` Nesnenin bir yerel ayara özgü bağımsız değişkenlerini yorumlamasını sağlamak için öğesine geçirilir.  
   
  `wFlags`  
- `wFlags` için geçerli değerler şunlardır:  
+ İçin geçerli değerler `wFlags` şunlardır:  
   
  DISPATCH_PROPERTYGET &#124; DISPATCH_METHOD &#124; DISPATCH_PROPERTYPUT &#124; DISPATCH_PROPERTYPUTREF &#124; DISPATCH_CONSTRUCT  
   
- `InvokeEx` çağrısının bağlamını açıklayan bayraklar:  
+ Çağrının bağlamını açıklayan bayraklar `InvokeEx` :  
   
 |Değer|Anlamı|  
 |-----------|-------------|  
-|DISPATCH_METHOD|Üye bir yöntem olarak çağrılır. Bir özellik aynı ada sahipse, hem bu hem de DISPATCH_PROPERTYGET bayrağı ayarlanabilir (`IDispatch`tarafından tanımlanır).|  
-|DISPATCH_PROPERTYGET|Üye bir özellik veya veri üyesi olarak alınır (`IDispatch`tarafından tanımlanır).|  
-|DISPATCH_PROPERTYPUT|Üye bir özellik veya veri üyesi olarak değiştirildi (`IDispatch`tarafından tanımlanır).|  
-|DISPATCH_PROPERTYPUTREF|Üye, bir değer ataması yerine bir başvuru ataması tarafından değiştirilir. Bu bayrak yalnızca özellik bir nesnenin başvurusunu kabul ettiğinde geçerlidir (`IDispatch`tarafından tanımlanır).|  
-|DISPATCH_CONSTRUCT|Üye bir Oluşturucu olarak kullanılıyor. (Bu, `IDispatchEx`tarafından tanımlanan yeni bir değerdir). `wFlags` için geçerli değerler şunlardır:<br /><br /> DISPATCH_PROPERTYGET DISPATCH_METHOD DISPATCH_PROPERTYPUT DISPATCH_PROPERTYPUTREF DISPATCH_CONSTRUCT|  
+|DISPATCH_METHOD|Üye bir yöntem olarak çağrılır. Bir özellik aynı ada sahipse, hem bu hem de DISPATCH_PROPERTYGET bayrağı ayarlanabilir (tarafından tanımlanır `IDispatch` ).|  
+|DISPATCH_PROPERTYGET|Üye bir özellik veya veri üyesi (tarafından tanımlanır) olarak alınır `IDispatch` .|  
+|DISPATCH_PROPERTYPUT|Üye bir özellik veya veri üyesi olarak değiştirildi (tarafından tanımlanır `IDispatch` ).|  
+|DISPATCH_PROPERTYPUTREF|Üye, bir değer ataması yerine bir başvuru ataması tarafından değiştirilir. Bu bayrak yalnızca özellik bir nesnenin başvurusunu kabul ettiğinde geçerlidir (tarafından tanımlanır `IDispatch` ).|  
+|DISPATCH_CONSTRUCT|Üye bir Oluşturucu olarak kullanılıyor. (Bu, tarafından tanımlanan yeni bir değerdir `IDispatchEx` ). İçin geçerli değerler `wFlags` şunlardır:<br /><br /> DISPATCH_PROPERTYGET DISPATCH_METHOD DISPATCH_PROPERTYPUT DISPATCH_PROPERTYPUTREF DISPATCH_CONSTRUCT|  
   
  `pdp`  
- Bir dizi bağımsız değişkeni içeren bir yapıya yönelik işaretçi, adlandırılmış bağımsız değişkenler için bir dizi bağımsız değişken DISPID değeri ve dizilerdeki öğelerin sayısına ilişkin sayımlar. DISPPARAMS yapısının tam açıklaması için `IDispatch` belgelerine bakın.  
+ Bir dizi bağımsız değişkeni içeren bir yapıya yönelik işaretçi, adlandırılmış bağımsız değişkenler için bir dizi bağımsız değişken DISPID değeri ve dizilerdeki öğelerin sayısına ilişkin sayımlar. `IDispatch`DISPPARAMS yapısının tam açıklaması için belgelere bakın.  
   
  `pVarRes`  
  Çağıran hiçbir sonuç beklemdiğinde sonucun depolanacağı konuma veya null değere işaretçi. DISPATCH_PROPERTYPUT veya DISPATCH_PROPERTYPUTREF belirtilmişse bu bağımsız değişken yoksayılır.  
   
  `pei`  
- Özel durum bilgisi içeren bir yapıya yönelik işaretçi. `DISP_E_EXCEPTION` döndürülürse bu yapı doldurulmalıdır. Null olabilir. `EXCEPINFO` yapısının tam açıklaması için `IDispatch` belgelerine bakın.  
+ Özel durum bilgisi içeren bir yapıya yönelik işaretçi. Döndürülürse, bu yapı doldurulmalıdır `DISP_E_EXCEPTION` . Null olabilir. `IDispatch`Yapının tam açıklaması için belgelere bakın `EXCEPINFO` .  
   
  `pspCaller`  
  Çağıran tarafından sağlanan ve nesnenin çağırandan hizmet almasına izin veren bir hizmet sağlayıcı nesnesine yönelik işaretçi. Null olabilir.  
   
- `IDispatchEx::InvokeEx`, `IDispatch::Invoke` aynı özelliklerin tümünü sağlar ve birkaç uzantı ekler:  
+ `IDispatchEx::InvokeEx` , ile aynı özelliklerin tümünü sağlar `IDispatch::Invoke` ve birkaç uzantı ekler:  
   
-|||  
+|Değer|Anlamı|
 |-|-|  
 |DISPATCH_CONSTRUCT|Öğenin bir Oluşturucu olarak kullanıldığını belirtir.|  
-|`pspCaller`|`pspCaller`, çağıran tarafından sunulan hizmetlere nesne erişimine izin verir. Belirli hizmetler, arayanın kendisi tarafından işlenebilir veya çağrı zincirinin daha fazla arayanlara daha fazla çağrı yapılabilir. Örneğin, bir tarayıcı içindeki bir betik altyapısı bir dış nesneye `InvokeEx` çağrısı yapıyorsa, nesne, betik altyapısı veya tarayıcıdan hizmet almak için `pspCaller` zincirini izleyebilir. (Çağrı zincirinin, kapsayıcı zinciri veya site zinciri olarak da bilinen oluşturma zinciri ile aynı olmadığı unutulmamalıdır. Oluşturma zinciri, `IObjectWithSite`gibi başka bir mekanizmaya uygun olabilir.)|  
-|`this` işaretçisi|DISPATCH_METHOD `wFlags`ayarlandığında, "This" değeri için "adlandırılmış parametre" olabilir. DISPID DISPID_THIS olur ve ilk adlandırılmış parametre olmalıdır.|  
+|`pspCaller`|, `pspCaller` Çağıran tarafından sunulan hizmetlere nesne erişimine izin verir. Belirli hizmetler, arayanın kendisi tarafından işlenebilir veya çağrı zincirinin daha fazla arayanlara daha fazla çağrı yapılabilir. Örneğin, bir tarayıcı içindeki bir betik altyapısı bir `InvokeEx` dış nesneye çağrı yapıyorsa, nesne, `pspCaller` betik altyapısı veya tarayıcıdan hizmet almak için zinciri izleyebilir. (Çağrı zincirinin, kapsayıcı zinciri veya site zinciri olarak da bilinen oluşturma zinciri ile aynı olmadığı unutulmamalıdır. Oluşturma zinciri, gibi başka bir mekanizmaya uygun olabilir `IObjectWithSite` .)|  
+|`this` çağrısı|İçinde DISPATCH_METHOD ayarlandığında `wFlags` , "This" değeri için "adlandırılmış parametre" olabilir. DISPID DISPID_THIS olur ve ilk adlandırılmış parametre olmalıdır.|  
   
- `IDispatch::Invoke` kullanılmayan `riid` parametresi kaldırıldı.  
+ `riid`' De kullanılmayan parametre `IDispatch::Invoke` kaldırıldı.  
   
- `IDispatch::Invoke` `puArgArr` parametresi kaldırıldı.  
+ `puArgArr`İçindeki parametresi `IDispatch::Invoke` kaldırıldı.  
   
- Aşağıdaki örnekler için `IDispatch::Invoke` belgelerine bakın:  
+ `IDispatch::Invoke`Aşağıdaki örnekler için belgelere bakın:  
   
  "Bağımsız değişken olmadan Yöntem çağırma"  
   
@@ -104,15 +104,15 @@ HRESULT InvokeEx(
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
   
-|||  
+|Değer|Anlamı|  
 |-|-|  
 |`S_OK`|Başarılı.|  
 |DISP_E_BADPARAMCOUNT|DISPPARAMS 'e sunulan öğelerin sayısı, yöntem veya özellik tarafından kabul edilen bağımsız değişken sayısından farklı.|  
-|DISP_E_BADVARTYPE|`rgvarg` bağımsız değişkenlerden biri geçerli bir değişken türü değil.|  
-|DISP_E_EXCEPTION|Uygulamanın bir özel durum oluşturması gerekir. Bu durumda, `pei` geçirilen yapı doldurulmalıdır.|  
-|DISP_E_MEMBERNOTFOUND|İstenen üye yok veya `InvokeEx` çağrısı salt okunurdur bir özelliğin değerini ayarlamaya çalıştı.|  
-|DISP_E_NONAMEDARGS|Bu `IDispatch` uygulanması adlandırılmış bağımsız değişkenleri desteklemez.|  
-|DISP_E_OVERFLOW|`rgvarg` bağımsız değişkenlerden biri, belirtilen türe zorlanamadı.|  
+|DISP_E_BADVARTYPE|İçindeki bağımsız değişkenlerden biri `rgvarg` geçerli bir değişken türü değil.|  
+|DISP_E_EXCEPTION|Uygulamanın bir özel durum oluşturması gerekir. Bu durumda, geçirilen yapı `pei` doldurulmalıdır.|  
+|DISP_E_MEMBERNOTFOUND|İstenen üye yok veya `InvokeEx` salt okunurdur bir özelliğin değerini ayarlamaya çalıştı.|  
+|DISP_E_NONAMEDARGS|Bu uygulamasının `IDispatch` adlandırılmış bağımsız değişkenlerini desteklemez.|  
+|DISP_E_OVERFLOW|İçindeki bağımsız değişkenlerden biri `rgvarg` , belirtilen türe zorlanamadı.|  
 |DISP_E_PARAMNOTFOUND|DISPID 'ler parametresinden biri yöntemdeki bir parametreye karşılık gelmiyor.|  
 |DISP_E_TYPEMISMATCH|Bağımsız değişkenlerden biri veya birkaçı zorlanamadı.|  
 |DISP_E_UNKNOWNLCID|Çağrılan üye, LCıD değişkenine göre dize bağımsız değişkenlerini Yorumlar ve LCıD tanınmıyor. Bağımsız değişkenleri yorumlamak için LCıD gerekli değilse, bu hata döndürülmemelidir.|  

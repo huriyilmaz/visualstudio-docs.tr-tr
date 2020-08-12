@@ -10,12 +10,12 @@ ms.assetid: f33e454c-69d8-4cab-9150-d1e7fd04786d
 caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
-ms.openlocfilehash: e26b5cb1790cab38a6544a04307b7e336a952519
-ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
+ms.openlocfilehash: 9fd497dcda7e40cf0dbe6409193019ddae84c80b
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85835374"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144408"
 ---
 # <a name="iactivescriptparse32parsescripttext"></a>IActiveScriptParse32::ParseScriptText
 Verilen kod kod oluşturma yöntemi ayrıştırır, ad alanına bildirimler ekliyor ve kodu uygun şekilde değerlendiriyor.  
@@ -38,7 +38,7 @@ HRESULT ParseScriptText(
   
 #### <a name="parameters"></a>Parametreler  
   
-|||  
+| Parametre | Açıklama |  
 |-|-|  
 |`pstrCode`|'ndaki Değerlendirilecek kod oluşturma yöntemi metninin adresi. Bu dizenin yorumu, komut dosyası diline bağlıdır.|  
 |`pstrItemName`|'ndaki Kod oluşturma yöntemi değerlendirileceği bağlamı sağlayan öğe adının adresi. Bu parametre NULL ise, kod betik altyapısının genel bağlamında değerlendirilir.|  
@@ -54,7 +54,7 @@ HRESULT ParseScriptText(
 |SCRIPTTEXT_ISPERSISTENT|Betik altyapısı kaydedilirse (örneğin, çağrısı yoluyla `IPersist*::Save` ) veya komut dosyası altyapısı başlatılmış duruma geri geçiş yöntemiyle sıfırlandığında, bu çağrı sırasında eklenen kodun kaydedilmesi gerektiğini belirtir.|  
 |SCRIPTTEXT_ISVISIBLE|Betik metninin, betiğin ad alanında genel bir yöntem olarak görünür (ve bu nedenle Ada göre çağrılabilir) olacağını gösterir.|  
   
-|||  
+| Parametre | Açıklama |  
 |-|-|  
 |`pvarResult`|dışı Kod oluşturma yöntemi işlemenin sonuçlarını alan bir arabelleğin adresi veya `NULL` arayan hiçbir sonuç beklemdiğinde (yani, SCRIPTTEXT_ISEXPRESSION değeri ayarlı değildir).|  
 |`pexcepinfo`|dışı Özel durum bilgilerini alan yapının adresi. DISP_E_EXCEPTION döndürürse bu yapı doldurulur `IActiveScriptParse::ParseScriptText` .|  

@@ -13,21 +13,20 @@ caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c20947a125766547565d99c5762c20e23652da1a
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 3567a22eac2ad270739e62e0f0fb9914bdf4a9ec
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72561676"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144577"
 ---
 # <a name="iactivescriptparseprocedure"></a>IActiveScriptParseProcedure
-Windows komut dosyası altyapısı, yordamlara yönelik kaynak kodu metninin komut dosyasına eklenmesine izin veriyorsa, `IActiveScriptParseProcedure` arabirimini uygular. VBScript gibi bağımsız yazma ortamına sahip olmayan yorumlanan betik dilleri için, bu ad alanına betik yordamları eklemek için alternatif bir mekanizma (`IActiveScriptParse` veya `IPersist` * dışında) sağlar.  
+Windows komut dosyası altyapısı, yordamlara yönelik kaynak kodu metninin komut dosyasına eklenmesine izin veriyorsa, `IActiveScriptParseProcedure` arabirimini uygular. VBScript gibi bağımsız yazma ortamına sahip olmayan yorumlanan betik dilleri için, bu `IActiveScriptParse` `IPersist` ad alanına betik yordamları eklemek için alternatif bir mekanizma (veya * dışında) sağlar.  
   
 ## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
   
-|||  
-|-|-|  
-|Yöntem|Açıklama|  
+|Yöntem|Açıklama|
+|-|-|
 |[IActiveScriptParseProcedure::ParseProcedureText](../../winscript/reference/iactivescriptparseprocedure-parseproceduretext.md)|Verilen kod yordamını ayrıştırır ve yordamı ad alanına ekler.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.  

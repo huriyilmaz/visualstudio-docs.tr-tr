@@ -17,17 +17,17 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2abb562f65885ee1d12f2ec9b2300fcddd3be37b
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: cf62972b192d73bd130d15066d79ea70fe24beb8
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576620"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144603"
 ---
 # <a name="idispatchexdeletememberbyname"></a>IDispatchEx::DeleteMemberByName
 Üyeyi ada göre siler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT DeleteMemberByName(  
@@ -41,9 +41,9 @@ HRESULT DeleteMemberByName(
  Silinecek üyenin adı.  
   
  `grfdex`  
- Üye adının büyük/küçük harfe duyarlı olup olmadığını belirler. Bu, aşağıdaki değerlerden biri olabilir:  
+ Üye adının büyük/küçük harfe duyarlı olup olmadığını belirler. Bu değer aşağıdakilerden biri olabilir:  
   
-|Değer|Açıklama|  
+|Değer|Anlamı|  
 |-----------|-------------|  
 |fdexNameCaseSensitive|Ad aramasının, büyük/küçük harfe duyarlı bir şekilde yapılmasını ister. , Büyük/küçük harfe duyarlı aramayı desteklemeyen nesne tarafından yoksayılabilir.|  
 |Fdexnamecaseduyarsız|Ad aramasının, büyük/küçük harfe duyarsız bir şekilde yapılmasını ister. , Büyük/küçük harfe duyarsız aramayı desteklemeyen nesne tarafından yoksayılabilir.|  
@@ -51,13 +51,13 @@ HRESULT DeleteMemberByName(
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
   
-|||  
+|Değer|Anlamı|
 |-|-|  
 |`S_OK`|Başarılı.|  
 |`S_FALSE`|Üye var, ancak silinemez.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üye silinirse, DISPID 'nin `GetNextDispID` için geçerli kalması gerekir.  
+ Üye silinirse, DISPID 'nin için geçerli kalması gerekir `GetNextDispID` .  
   
  Verilen ada sahip bir üye silinirse ve daha sonra aynı ada sahip bir üye yeniden oluşturulduğunda, DISPID aynı olmalıdır. (Yalnızca büyük/küçük harfe göre farklılık gösteren Üyeler nesneye bağımlıdır.)  
   

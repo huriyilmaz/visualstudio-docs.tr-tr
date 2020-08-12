@@ -9,12 +9,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 2f4733bd52e44409ec9c2cc9a1e8828864712ceb
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 7ec0e4eed9036a0548c4f8f162331e92a416c0cb
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85286836"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144694"
 ---
 # <a name="use-a-lab-environment-for-your-devops"></a>DevOps 'niz için laboratuvar ortamı kullanma
 
@@ -28,15 +28,20 @@ Laboratuvar ortamı, uygulama geliştirmek ve test etmek için kullanabileceğin
 
 Yaygın laboratuvar ortamı Topolojilerine örnekler aşağıda verilmiştir:
 
-| Topoloji | Description |
+| Topoloji | Açıklama |
 |---|---|
 |![Yalnızca sunucu topolojisi](../media/topology_backend.png)| Bu laboratuvar ortamında, genellikle sunucu uygulamalarında el ile testleri çalıştırmak için kullanılan ve Test edicilerin ortamdaki hataları doğrulamak için kendi istemci makinelerini kullanmasına izin veren bir *sunucu topolojisi*vardır. Bir arka uç topolojisinde, Laboratuvar ortamınız yalnızca sunucular içerir. Bu tür bir topoloji kullandığınızda, genellikle ortamı parçası olmayan bir istemci makinesini kullanarak Laboratuvar ortamındaki sunuculara bağlanırsınız.|
 |![Bulut Laboratuvarı ortamı](../media/topology_cloud.png)| Bu laboratuvar ortamı _sunucu topolojisi_olarak benzer özellikler ve özellikler sağlar, ancak yerel bir ortamda çalışan fiziksel veya sanal makinelerin gereksinimini ortadan kaldırır; Bu, kurulum süresini azaltabilir, bakımın basitleşebilir ve maliyeti en aza indirir. Özel ağlarla birlikte birden çok Web sitesi ve sanal makine ayarlamak, Microsoft Azure gibi bir bulut ortamında hızlı ve kolaydır.|
 |![İstemci-sunucu Laboratuvarı ortamı](../media/topology_clientserver.png)| Bu laboratuvar ortamında, genellikle sunucu ve istemci bileşenlerine sahip bir uygulamayı test etmek için kullanılan bir *istemci-sunucu topolojisi*vardır. Bir istemci/sunucu topolojisinde, uygulamanızı test etmek için kullanılan tüm istemci ve sunucu makineleri Laboratuvar ortamınızda bulunur. Bu topolojiyi kullandığınızda, testlerinizi etkileyen her makineden test verileri toplayabilirsiniz.|
 
-| | |
-|---|---|
-| ![video için film kamerası simgesi](../../install/media/video-icon.png) | Test için laboratuvar ortamlarını yönetme hakkında [bir video izleyin](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Managing-lab-environments-for-testing) . |
+:::row:::
+    :::column:::
+        ![video için film kamerası simgesi](../../install/media/video-icon.png)
+    :::column-end:::
+    :::column:::
+        Test için laboratuvar ortamlarını yönetme hakkında [bir video izleyin](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Managing-lab-environments-for-testing) .
+    :::column-end:::
+:::row-end:::
 
 ## <a name="use-the-cloud-with-azure-pipelines-or-team-foundation-server-build-and-release"></a>Azure Pipelines veya Team Foundation Server derleme ve yayınlama ile bulutu kullanın
 
@@ -96,26 +101,26 @@ Standart ortamlar ve SCVMM ortamları, aynı özelliklerin birçoğunu destekler
 |Özellik|SCVMM ortamları|Standart ortamlar|
 |-|------------------------|-|
 |**Test etme**|||
-|El ile testleri çalıştırma|Destekleniyor|Destekleniyor|
-|Kodlanmış UI ve diğer otomatikleştirilmiş testleri çalıştırma|Destekleniyor|Destekleniyor|
-|Tanılama bağdaştırıcılarını kullanarak dosya zengin hatalar|Destekleniyor|Destekleniyor|
+|El ile testleri çalıştırma|Desteklenir|Desteklenir|
+|Kodlanmış UI ve diğer otomatikleştirilmiş testleri çalıştırma|Desteklenir|Desteklenir|
+|Tanılama bağdaştırıcılarını kullanarak dosya zengin hatalar|Desteklenir|Desteklenir|
 |**Derleme dağıtımı**|||
-|Otomatik derleme-dağıtma-test iş akışları|Destekleniyor|Destekleniyor|
+|Otomatik derleme-dağıtma-test iş akışları|Desteklenir|Desteklenir|
 |**Ortam oluşturma ve yönetme**|||
-|Sanal makinelere ek olarak fiziksel makineleri kullanma|Desteklenmiyor|Destekleniyor|
-|Üçüncü taraf sanal makineleri kullanma|Desteklenmiyor|Destekleniyor|
-|Laboratuvar ortamındaki makinelere test aracılarını otomatik olarak yükler|Destekleniyor|Destekleniyor|
-|Ortam anlık görüntülerini kullanarak laboratuvar ortamının durumunu kaydetme ve dağıtma|Destekleniyor|Desteklenmiyor|
-|VM şablonlarından laboratuvar ortamları oluşturma|Destekleniyor|Desteklenmiyor|
-|Başlat/Durdur/anlık görüntü ortamı|Destekleniyor|Desteklenmiyor|
-|Ortam Görüntüleyicisi 'ni kullanarak ortama bağlanma|Destekleniyor|Destekleniyor|
-|Ağ yalıtımı kullanarak bir ortamın birden çok kopyasını aynı anda çalıştırma|Destekleniyor|Desteklenmiyor|
+|Sanal makinelere ek olarak fiziksel makineleri kullanma|Desteklenmez|Desteklenir|
+|Üçüncü taraf sanal makineleri kullanma|Desteklenmez|Desteklenir|
+|Laboratuvar ortamındaki makinelere test aracılarını otomatik olarak yükler|Desteklenir|Desteklenir|
+|Ortam anlık görüntülerini kullanarak laboratuvar ortamının durumunu kaydetme ve dağıtma|Desteklenir|Desteklenmez|
+|VM şablonlarından laboratuvar ortamları oluşturma|Desteklenir|Desteklenmez|
+|Başlat/Durdur/anlık görüntü ortamı|Desteklenir|Desteklenmez|
+|Ortam Görüntüleyicisi 'ni kullanarak ortama bağlanma|Desteklenir|Desteklenir|
+|Ağ yalıtımı kullanarak bir ortamın birden çok kopyasını aynı anda çalıştırma|Desteklenir|Desteklenmez|
 
 ### <a name="lab-management-concepts"></a>Laboratuvar yönetimi kavramları
 
 Devam etmeden önce bilmeniz gereken bazı ek kavramlar aşağıda verilmiştir:
 
-|Terim|Description|
+|Terim|Açıklama|
 |-|-----------------|
 |Laboratuvar Merkezi|Laboratuvar ortamlarını oluşturduğunuz ve yönettiğiniz Microsoft Test Yöneticisi alanı.|
 |Azure DevOps proje Laboratuvarı|Kendilerine bağlanıp sanal makinelerini çalıştırabilmeniz için ayarlanmış laboratuvar ortamları koleksiyonu.|
@@ -127,7 +132,7 @@ Laboratuvar Yönetimi hakkında daha fazla bilgi için bkz.
 * [Laboratuvarınızı planlayın](https://msdn.microsoft.com/library/ff756575%28v=vs.140%29.aspx)
 * [Laboratuvarınızı yönetin](https://msdn.microsoft.com/library/dd936084%28v=vs.140%29.aspx)
 * [SCVMM ortamları için ayarlama](https://msdn.microsoft.com/library/dd380687%28v=vs.140%29.aspx)
-* [İzinleri yönet](https://msdn.microsoft.com/library/dd380760%28v=vs.140%29.aspx)
+* [İzinleri yönetme](https://msdn.microsoft.com/library/dd380760%28v=vs.140%29.aspx)
 * [Değişiklik kurulumu](https://msdn.microsoft.com/library/ee704508%28v=vs.140%29.aspx)
 * [Sorun giderme](https://msdn.microsoft.com/library/ee853230%28v=vs.140%29.aspx)
 

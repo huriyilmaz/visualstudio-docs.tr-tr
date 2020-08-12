@@ -17,17 +17,17 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 57f0faf6004e2219600f0dbd63749a7e65ca438c
-ms.sourcegitcommit: 184e2ff0ff514fb980724fa4b51e0cda753d4c6e
+ms.openlocfilehash: 81bb33a1e793f38e15dc51b37c4fa062eb54e7fa
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72576599"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144539"
 ---
 # <a name="idispatchexgetdispid"></a>IDispatchEx::GetDispID
-Tek bir üye adını karşılık gelen bir DISPID ile eşleştirir, bu daha sonra `IDispatchEx::InvokeEx` sonraki çağrılarında kullanılabilir.  
+Tek bir üye adını karşılık gelen bir DISPID ile eşleştirir, daha sonra öğesine sonraki çağrılarında kullanılabilir `IDispatchEx::InvokeEx` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT GetDispID(  
@@ -44,10 +44,10 @@ HRESULT GetDispID(
  `grfdex`  
  Üye tanımlayıcısını alma seçeneklerini belirler. Bu, aşağıdaki değerlerin bir birleşimi olabilir:  
   
-|Değer|Açıklama|  
+|Değer|Anlamı|  
 |-----------|-------------|  
 |fdexNameCaseSensitive|Ad aramasının, büyük/küçük harfe duyarlı bir şekilde yapılmasını ister. , Büyük/küçük harfe duyarlı aramayı desteklemeyen nesne tarafından yoksayılabilir.|  
-|Fdexnamegarantilemek|Zaten mevcut değilse, üyenin oluşturulmasını ister. Yeni üyenin `VT_EMPTY` değer ile oluşturulması gerekir.|  
+|Fdexnamegarantilemek|Zaten mevcut değilse, üyenin oluşturulmasını ister. Yeni üyenin değeriyle oluşturulması gerekir `VT_EMPTY` .|  
 |Fdexnameörtük|Temel nesne açıkça belirtilmediği zaman çağıranın belirli bir ada üye için nesne (ler) aradığını gösterir.|  
 |Fdexnamecaseduyarsız|Ad aramasının, büyük/küçük harfe duyarsız bir şekilde yapılmasını ister. , Büyük/küçük harfe duyarsız aramayı desteklemeyen nesne tarafından yoksayılabilir.|  
   
@@ -57,18 +57,18 @@ HRESULT GetDispID(
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki değerlerden birini döndürür:  
   
-|||  
+|Değer|Anlamı|
 |-|-|  
 |`S_OK`|Başarılı.|  
 |`E_OUTOFMEMORY`|Bellek yetersiz.|  
 |`DISP_E_UNKNOWNNAME`|Ad bilinmiyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetDispID`, belirli bir üyenin DISPID 'sini almak için `GetIDsOfNames` yerine kullanılabilir.  
+ `GetDispID`, `GetIDsOfNames` belirli bir üyeye AIT DISPID 'yi almak için yerine kullanılabilir.  
   
- @No__t_0 üyelerin eklenmesi ve silinmesine izin verdiğinden, dispIDs kümesi bir nesnenin ömrü boyunca sabit kalmaz.  
+ `IDispatchEx`Üyelerin eklenmesi ve silinmesine izin verdiğinden, dispIDs kümesi bir nesnenin ömrü boyunca sabit kalmaz.  
   
- @No__t_1 kullanılmayan `riid` parametresi kaldırıldı.  
+ `riid`' De kullanılmayan parametre `IDispatch::GetIDsOfNames` kaldırıldı.  
   
 ## <a name="example"></a>Örnek  
   

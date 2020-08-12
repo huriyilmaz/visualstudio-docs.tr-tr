@@ -1,5 +1,5 @@
 ---
-title: IDispatchEx::GetNextDispID | Microsoft Docs
+title: 'IDispatchEx:: Getnextdıspıd | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/18/2017
 ms.reviewer: ''
@@ -17,18 +17,18 @@ caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4d964a8744f1f0a28704dd0a1d5e0fd2e67aab1c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8811e828a6701769badf45ca7c37f9c53529150f
+ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62997345"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144435"
 ---
 # <a name="idispatchexgetnextdispid"></a>IDispatchEx::GetNextDispID
 
-Bir nesnenin üyelerine numaralandırır.
+Nesnesinin üyelerini numaralandırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetNextDispID(
@@ -41,26 +41,26 @@ HRESULT GetNextDispID(
 ## <a name="parameters"></a>Parametreler
 
 `grfdex`\
-Numaralandırılacak hangi öğeleri kümesi olduğunu belirler. Bu, aşağıdaki değerleri birleşimi olabilir:
+Hangi öğe kümesinin numaralandırılacağını belirler. Bu, aşağıdaki değerlerin bir birleşimi olabilir:
 
-|Değer|Açıklama|
+|Değer|Anlamı|
 |-----------|-------------|
-|fdexEnumDefault|İstekler, nesnenin varsayılan öğeleri sıralar. Nesne, herhangi bir öğe kümesini listeleme izin verilmez.|
-|fdexEnumAll|İstekleri nesne tüm öğeleri sıralar. Nesne, herhangi bir öğe kümesini listeleme izin verilmez.|
+|fdexEnumDefault|Nesnenin varsayılan öğeleri numaralandırır. Nesnenin herhangi bir öğe kümesini numaralandırması için izin verilir.|
+|fdexEnumAll|Nesnenin tüm öğeleri numaralandırır. Nesnenin herhangi bir öğe kümesini numaralandırması için izin verilir.|
 
 `id`\
-Geçerli üye tanımlar. Getnextdispıd numaralandırma sonra bu öğeyi alır. Getdispıd veya önceki bir çağrı Getnextdispıd bu tanımlayıcıyı almak için kullanır. İlk öğenin ilk tanımlayıcısı DISPID_STARTENUM değerini kullanır.
+Geçerli üyeyi tanımlar. Getnextdıspıd bundan sonra Numaralandırmadaki öğeyi alır. Bu tanımlayıcıyı almak için Getdıspıd veya bir önceki Getnextdıspıd çağrısını kullanır. İlk öğenin ilk tanımlayıcısını almak için DISPID_STARTENUM değerini kullanır.
 
 `pid`\
-Adresi bir DISPID değişkenin numaralandırmada sonraki öğeye tanımlayıcısını alır.
+Numaralandırmadaki bir sonraki öğenin tanımlayıcısını alan bir DISPID değişkeninin adresi.
 
-Bir üye tarafından silinirse `DeleteMemberByName` veya `DeleteMemberByDispID`, `DISPID` için geçerli kalır gerekiyor `GetNextDispID`.
+Bir üye veya tarafından silinirse `DeleteMemberByName` `DeleteMemberByDispID` , `DISPID` için geçerli kalması gerekir `GetNextDispID` .
 
 ## <a name="return-value"></a>Dönüş Değeri
 
 Aşağıdaki değerlerden birini döndürür:
 
-|||
+|Değer|Anlamı|
 |-|-|
 |`S_OK`|Başarılı.|
 |`S_FALSE`|Sabit listesi bitti.|
