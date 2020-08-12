@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f79ead04e1c8a77ba605d4463bf8b2009f7ce71
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 6eff6ef8f5415ecd4dc1c6dcce5046c976ce0e7c
+ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85536194"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88114264"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Yardım Görüntüleyicisi SDK’sı
 
@@ -445,16 +445,16 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 
 **Branding.xml**
 
-| | |
+| Özellik | Açıklama |
 | - | - |
 | Özellik | **CollapsibleArea** |
 | Kullanırsınız | Genişlet içerik denetimi metnini Genişlet |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | ExpandText | Genişlet |
 | CollapseText | Daralt |
 | Özellik | **CodeSnippet** |
 | Kullanırsınız | Kod parçacığı denetim metni.  Note: "bölünmez" boşluk ile kod parçacığı içeriği, boşluk olarak değiştirilecek. |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | CopyToClipboard | Panoya kopyala |
 | ViewColorizedText | Renklendirilmiş görüntüleme |
 | CombinedVBTabDisplayLanguage | Visual Basic (örnek) |
@@ -462,8 +462,8 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | VBUsage | Kullanım |
 | Özellik | **Geri bildirim, altbilgi ve logo** |
 | Kullanırsınız | Müşterinin, e-posta ile geçerli konu hakkında geri bildirim sağlaması için bir geri bildirim denetimi sağlayın.  İçerik için telif hakkı metni.  Logo tanımı. |
-| **Dosyalarında** | **Değer (Bu dizeler, içerik benimseme gereksinimini karşılayacak şekilde değiştirilebilir.)** |
-| Yaptırımlar | © 2013 Microsoft Corporation. Tüm hakları saklıdır. |
+| **Öğe** | **Değer (Bu dizeler, içerik benimseme gereksinimini karşılayacak şekilde değiştirilebilir.)** |
+| Yaptırımlar | © 2013 Microsoft Corporation. All rights reserved. |
 | SendFeedback | \<a href="{0}" {1}>\</a>Bu konuda Microsoft 'A geri bildirim gönderin. |
 | FeedbackLink | |
 | Logo başlığı | [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] |
@@ -471,7 +471,7 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | LogoFileNameHC | vs_logo_wh.gif |
 | Özellik | **Disclaimer** |
 | Kullanırsınız | Makine çevirisi içeriği için büyük/küçük harfe özgü bildirimler kümesi. |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | MT_Editable | Bu makale makine çevirisi yapıldı. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
 | MT_NonEditable | Bu makale makine çevirisi yapıldı. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
 | MT_QualityEditable | Bu makale el ile çevrilmiştir. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
@@ -480,14 +480,14 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | MT_BetaRecycledContents | Bu makale, ön sürüm için el ile çevrilmiştir. Bir Internet bağlantınız varsa, bu sayfayı orijinal Ingilizce içeriğiyle aynı anda düzenlenebilir modda görüntülemek için "Bu konuyu çevrimiçi görüntüle" seçeneğini belirleyin. |
 | Özellik | **LinkTable** |
 | Kullanırsınız | Çevrimiçi konu bağlantıları desteği |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | LinkTableTitle | Tablo bağla |
 | Topicenulınktext | \</a>Bilgisayarınızda mevcut olan bu konunun İngilizce sürümünü görüntüleyin. |
 | Topiconlinelink metni | Bu konuyu \<a href="{0}" {1}> çevrimiçi görüntüleyin\</a> |
 | OnlineText | Çevrimiçi |
 | Özellik | **Video ses denetimi** |
 | Kullanırsınız | Video içeriği için öğeleri ve metni görüntüleme |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | MultiMediaNotSupported | İçeriği desteklemek için Internet Explorer 9 veya üzeri yüklü olmalıdır {0} . |
 | VideoText | videoyu görüntüleme |
 | AudioText | ses akışı |
@@ -495,25 +495,25 @@ Not: "{n}" tarafından belirtilen değişkenlerin kod bağımlılıkları vardı
 | Onlinesesolınktext | \<p>Bu konuyla ilişkili sesi dinlemek için {0} \<a href="{1}"> {2} buraya tıklayın \</a> .\</p> |
 | Özellik | **İçerik yüklü değil denetimi** |
 | Kullanırsınız | contentnotinstalled.htm işleme için kullanılan metin öğeleri (dizeler) |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | Contentnotınstalınstalınstalde başlığı | Bilgisayarınızda içerik bulunamadı. |
 | Contentnotınstalınstaldownloadcontenttext | \<p>İçeriği bilgisayarınıza indirmek için \<a href="{0}" {1}> Yönet sekmesine tıklayın \</a> .\</p> |
 | Contentnotınstalınstalınstalde metni | \<p>Bilgisayarınızda yüklü içerik yok. Yerel Yardım içeriği yüklemesi için yöneticinize başvurun.\</p> |
 | Özellik | **Konu bulunamadı denetimi** |
 | Kullanırsınız | topicnotfound.htm işleme için kullanılan metin öğeleri (dizeler) |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | Topınotfoundtitle | İstenen konu bilgisayarınızda bulunamıyor. |
 | Topınotfoundviewonlinetext | \<p>İstediğiniz konu bilgisayarınızda bulunamadı, ancak \<a href="{0}" {1}> konuyu çevrimiçi olarak görebilirsiniz \</a> .\</p> |
 | TopicNotFoundDownloadContentText | \<p>Benzer konuların bağlantıları için gezinti bölmesine bakın veya \<a href="{0}" {1}> \</a> içeriği bilgisayarınıza Indirmek için Yönet sekmesine tıklayın.\</p> |
 | Topınotfoundmetni | \<p>İstediğiniz konu bilgisayarınızda bulunamadı.\</p> |
 | Özellik | **Konu başlığı bozuk denetimi** |
 | Kullanırsınız | topiccorrupted.htm işleme için kullanılan metin öğeleri (dizeler) |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | Topıbozuk Tedtitle | İstenen konu gösterilemiyor. |
 | Topıboztedviewonlinetext | \<p>Yardım Görüntüleyicisi istenen konuyu görüntüleyemiyor. Konunun içeriğinde veya temeldeki sistem bağımlılığında bir hata olabilir.\</p> |
 | Özellik | **Giriş sayfası denetimi** |
 | Kullanırsınız | Yardım Görüntüleyicisi üst düzey düğüm içeriğinin görüntülenmesini destekleyen metin. |
-| **Dosyalarında** | **Değer** |
+| **Öğe** | **Değer** |
 | HomePageTitle | Yardım Görüntüleyicisi giriş sayfası |
 | Homepagetanıtımı | \<p>Microsoft araçları, ürünleri, teknolojileri ve hizmetleri kullanan herkese yönelik önemli bir bilgi kaynağı olan Microsoft Yardım Görüntüleyicisi hoş geldiniz. Yardım Görüntüleyicisi, nasıl yapılır ve başvuru bilgilerine, örnek koda, teknik makalelere ve daha fazlasına erişmenizi sağlar. İhtiyacınız olan içeriği bulmak için içindekiler tablosuna göz atarak tam metin aramasını kullanın veya anahtar sözcük dizinini kullanarak içerik üzerinde gezinin.\</p> |
 | Homepagecontentınstalltext | \<p>\<br />\<a href="{0}" {1}>İçeriği Yönet sekmesini kullanarak \</a> şunları yapın: \<ul> \<li> bilgisayarınıza içerik ekleyin. \</li> \<li> Yerel içeriklerinizin güncelleştirmelerini denetleyin. \</li> \<li> İçeriği bilgisayarınızdan kaldırın.\</li>\</ul>\</p> |
@@ -563,7 +563,7 @@ branding.js dosyası, Visual Studio Yardım Görüntüleyicisi markalama öğele
 
 Marka paketi, içerik kullanıcılarına yardımcı olmak üzere anahtar bilgilerini iletişim için senaryoları destekleyen bir dizi HTM dosyası içerir. Örneğin, hangi içerik kümelerinin yükleneceğini açıklayan bir bölüm ve yerel konu başlıklarında konular bulunamadığında kullanıcıya söyleyen sayfalar. Bu HTM dosyaları her ürün için değiştirilebilir.  ISO kabuğu satıcıları, varsayılan marka paketini alabilir ve bu sayfaların davranışını ve içeriğini, ihtiyacını pakete göre değiştirebilir.  Bu dosyalar, marka etiketlerinin branding.xml dosyasından ilgili içeriği alması için kendi marka paketine başvurur.
 
-|**Dosya**|**Kullanma**|**Görünen Içerik kaynağı**|
+|**Dosya**|**Kullanırsınız**|**Görünen Içerik kaynağı**|
 |-|-|-|
 |homepage.htm|Bu, şu anda yüklü olan içeriği görüntüleyen ve kullanıcıya içerik hakkında sunmanız gereken diğer tüm iletileri gösteren bir sayfasıdır.  Bu dosya, "Microsoft.Help.Id" content = "-1" ek meta veri özniteliğine sahiptir ve bu içeriği TOC yerel içeriğinin üst kısmına koyar.||
 ||<META_HOME_PAGE_TITLE_ADD/>|Branding.xml, etiket\<HomePageTitle>|
@@ -597,7 +597,7 @@ Marka. css dosyaları Visual Studio konu sunumu için tanımları içerir (deste
 
 Visual Studio içeriği, Visual Studio logosunun yanı sıra diğer grafikleri de görüntüler.  Visual Studio Yardım Görüntüleyicisi markalama paketindeki grafik dosyalarının tüm listesi aşağıda gösterilmiştir.
 
-|**Dosya**|**Kullanma**|**Örnekler**|
+|**Dosya**|**Kullanırsınız**|**Örnekler**|
 |-|-|-|
 |clear.gif|Daraltılabilir alanı işlemek için kullanılır||
 |footer_slice.gif|Alt bilgi sunumu||

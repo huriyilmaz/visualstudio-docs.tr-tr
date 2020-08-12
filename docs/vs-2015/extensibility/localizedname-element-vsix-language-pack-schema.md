@@ -8,19 +8,19 @@ ms.assetid: 57b7f502-3b04-42d9-90d5-f57772a7c757
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 58e491290122a9d525ff8129333ac0f52ac5f778
-ms.sourcegitcommit: 374f5ec9a5fa18a6d4533fa2b797aa211f186755
+ms.openlocfilehash: 64d8430dbcf563ca232d1b8d850678925770219f
+ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77477033"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88114196"
 ---
 # <a name="localizedname-element-vsix-language-pack-schema"></a>LocalizedName öğesi (VSıX dil paketi şeması)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Gereklidir. Yüklenecek uzantının yerelleştirilmiş adı.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Name>Localized name of the extension</Name>  
@@ -51,15 +51,41 @@ Gereklidir. Yüklenecek uzantının yerelleştirilmiş adı.
  Gereklidir. Hedef dildeki dil paketinin adı.  
   
 ## <a name="element-information"></a>Öğe Bilgisi  
-  
-|                 |                                                           |
-|-----------------|-----------------------------------------------------------|
-|    Ad Alanı    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
-|   Şema adı   |                 VSıX dil paketi şeması                 |
-| Doğrulama dosyası |                Valtlanguagepackschema. xsd                 |
-|  Boş olabilir   |                      Uygulanamaz                       |
+
+:::row:::
+    :::column:::
+        Ad Alanı
+    :::column-end:::
+    :::column:::
+        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Şema adı
+    :::column-end:::
+    :::column:::
+        VSıX dil paketi şeması
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Doğrulama dosyası
+    :::column-end:::
+    :::column:::
+        Valtlanguagepackschema. xsd
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Boş olabilir
+    :::column-end:::
+    :::column:::
+        Uygulanamaz
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [VSX dil paketi şema başvurusu](../extensibility/vsx-language-pack-schema-reference.md)   
- [VSIX paketlerini yerelleştirme](../extensibility/localizing-vsix-packages.md)   
+ [VSıX paketlerini yerelleştirme](../extensibility/localizing-vsix-packages.md)   
  [VSıX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110))

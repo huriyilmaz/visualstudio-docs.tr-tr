@@ -286,18 +286,19 @@ f1_keywords:
 - CA2247
 - CA5122
 - CA5374
+- IL3000
 ms.assetid: 5cb221f6-dc59-4abf-9bfa-adbd6f907f96
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: b216252ca33495a065c1dbcc6e091a2e5244de78
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: aca6889b46b58828db59be634275e99d6721ee49
+ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87235101"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88114155"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>CheckId tarafından yönetilen kod için kod analizi uyarıları
 
@@ -603,3 +604,4 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA5400 | [CA5400 HttpClient sertifika iptal listesi denetiminin devre dışı olmadığından emin olun](../code-quality/ca5400.md) | İptal edilen bir sertifika artık güvenilir değil. Saldırganlar, bazı kötü amaçlı verileri geçirerek veya HTTPS iletişiminden hassas verileri çalmaya yönelik olarak kullanılabilir. |
 | CA5401 | [CA5401 varsayılan olmayan IV ile CreateEncryptor kullanma](../code-quality/ca5401.md) | Simetrik şifrelemenin sözlük saldırılarını engellemek için her zaman yinelenebilir olmayan bir başlatma vektörü kullanması gerekir. |
 | CA5402 | [CA5402 varsayılan IV ile CreateEncryptor kullanın](../code-quality/ca5402.md) | Simetrik şifrelemenin sözlük saldırılarını engellemek için her zaman yinelenebilir olmayan bir başlatma vektörü kullanması gerekir. |
+| IL3000 | [IL3000 tek dosya olarak yayımlarken derleme dosya yoluna erişim kullanmaktan kaçının](../code-quality/il3000.md) | Tek dosya olarak yayımlarken derleme dosya yoluna erişim kullanmaktan kaçının |
