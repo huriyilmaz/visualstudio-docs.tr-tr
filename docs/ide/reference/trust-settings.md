@@ -1,7 +1,7 @@
 ---
-title: Dosya ve Klasörler için Güven Ayarları
-description: Visual Studio'nun güvenliğini sağlamak için dosya ve klasörlerin güven ayarlarını nasıl değiştireceğinizi öğrenin.
-author: abuchholtzau
+title: Dosyalar ve klasörler için güven ayarları
+description: Visual Studio 'Nun güvenliğini sağlamak için dosyalar ve klasörler için güven ayarlarını değiştirme hakkında bilgi edinin.
+author: 2percentsilk
 ms.author: allisb
 ms.date: 09/05/2018
 ms.topic: reference
@@ -13,33 +13,33 @@ helpviewer_keywords:
 - mark of the web
 - trusted files
 - trusted folders
-ms.openlocfilehash: 011673bca7be569b5b350dc264148d5a7890d39c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 492a94962d255a9d18dcabdababf7fa6a540ada1
+ms.sourcegitcommit: 935e1388281df0f04147802606b5cb7f513d45ed
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62789650"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88197393"
 ---
-# <a name="configure-trust-settings-for-files-and-folders"></a>Dosya ve klasörler için güven ayarlarını yapılandırma
+# <a name="configure-trust-settings-for-files-and-folders"></a>Dosyalar ve klasörler için güven ayarlarını yapılandırma
 
-Visual Studio [web işareti](/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537628(v=vs.85))ne var projeleri açmadan önce kullanıcı onayı ister. Daha fazla güvenlik için, web özniteliğinin işaretine sahip veya *güvenilir*olarak atanmadı herhangi bir dosya veya klasörü açmadan önce Kullanıcı onayı istenecek şekilde Visual Studio'yu da yapılandırabilirsiniz. Dosya ve klasör denetimleri varsayılan olarak devre dışı bırakılır.
+Visual Studio, [Web 'e işaret](/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537628(v=vs.85))eden projeleri açmadan önce Kullanıcı onayını ister. Ek güvenlik için, Visual Studio 'Yu, Web özniteliği işaretine sahip herhangi bir dosya veya klasörü açmadan önce Kullanıcı onayını isteyecek şekilde yapılandırabilir veya *güvenilir*olarak belirlenmemiştir. Dosya ve klasör denetimleri varsayılan olarak devre dışıdır.
 
 > [!WARNING]
-> Dosyayı, klasörün veya çözümün onaylanmadan önce güvenilir bir kişiden veya güvenilir bir konumdan geldiğinden emin olmalısınız.
+> Dosyayı, klasörü veya çözümü onaylamadan önce güvenilen bir kişiden veya güvenilir bir konumdan geldiğinden emin olmalısınız.
 
 ## <a name="configure-trust-settings"></a>Güven ayarlarını yapılandırma
 
-Güven ayarlarını değiştirmek için aşağıdaki adımları izleyin:
+Güven ayarlarını değiştirmek için şu adımları izleyin:
 
-1. **Araçlar** > **Seçenekleri** > **Güven Ayarları'nı** açın ve sağ bölmedeki **Güven Ayarlarını Yapılandır** bağlantısını seçin.
+1. **Araçlar**  >  **Seçenekler**  >  **güven ayarları** ' nı açın ve sağ bölmedeki **güven ayarlarını yapılandır** bağlantısını seçin.
 
-2. Dosya ve klasörler için istediğiniz denetim düzeyini seçin. Her biri için farklı çekler olabilir. Seçenekler şunlardır:
+2. Dosya ve klasörler için istediğiniz denetimlerin düzeyini seçin. Her biri için farklı denetimlerine sahip olabilirsiniz. Seçenekler şunlardır:
 
-   * **Doğrulama yok**: Visual Studio herhangi bir denetim gerçekleştirmez.
+   * **Doğrulama yok**: Visual Studio hiçbir denetim gerçekleştirmez.
 
-   * **Web özniteliğinin işaretini doğrulayın**: Dosya veya klasörweb özniteliğinin işaretine sahipse, Visual Studio bloklar ve açmak için izin ister.
+   * **Web özniteliğinin Işaretini doğrulayın**: dosya veya klasörün web özniteliğinin işareti varsa, Visual Studio bunları engeller ve açmak için izin ister.
 
-   * **Doğrula yolu güvenilirdir**: Dosya veya klasör yolu **Güvenilen Yollar** listesinin bir parçası değilse, Visual Studio engeller ve açmak için izin ister.
+   * **Yolun güvenilir olduğunu doğrulama**: dosya veya klasör yolu **Güvenilen yollar** listesinin bir parçası değilse, Visual Studio blok ve açma izni ister.
 
    ![Güven doğrulama seçenekleri](media/trust-settings.png)
 
@@ -47,25 +47,25 @@ Güven ayarlarını değiştirmek için aşağıdaki adımları izleyin:
 
 Güvenilen yollar eklemek için aşağıdaki adımları izleyin:
 
-1. **Araçlar** > **Seçenekleri** > **Güven Ayarları'nı** açın ve sağ bölmedeki **Güven Ayarlarını Yapılandır** bağlantısını seçin.
+1. **Araçlar**  >  **Seçenekler**  >  **güven ayarları** ' nı açın ve sağ bölmedeki **güven ayarlarını yapılandır** bağlantısını seçin.
 
-2. **Güven Ayarları** iletişim kutusunda **Ekle'yi** tıklatın ve ardından **Dosya** veya **Klasör'ü**seçin.
+2. **Güven ayarları** Iletişim kutusunda **Ekle** ' ye tıklayın ve ardından **Dosya** veya **klasör**' i seçin.
 
-3. Güvenilen ler listesine eklemek istediğiniz dosya veya klasöre gidin ve seçin.
+3. ' A gidin ve güvenilen listeye eklemek istediğiniz dosya veya klasörü seçin.
 
-   Dosya veya klasör yolu **Güvenilen Yollar** listesinde görünür.
+   Dosya veya klasör yolu, **Güvenilen yollar** listesinde görünür.
 
    ![Güvenilen yollar eklendi](media/trusted-paths.png)
 
-## <a name="remove-trusted-paths"></a>Güvenilen yolları kaldırma
+## <a name="remove-trusted-paths"></a>Güvenilen yolları kaldır
 
-Güvenilen yolları kaldırmak için aşağıdaki adımları izleyin:
+Güvenilen yolları kaldırmak için şu adımları izleyin:
 
-1. **Araçlar** > **Seçenekleri** > **Güven Ayarları'nı** açın ve sağ bölmedeki **Güven Ayarlarını Yapılandır** bağlantısını seçin.
+1. **Araçlar**  >  **Seçenekler**  >  **güven ayarları** ' nı açın ve sağ bölmedeki **güven ayarlarını yapılandır** bağlantısını seçin.
 
-2. **Güvenilen Yollar** listesinde kaldırmak istediğiniz yolu seçin ve ardından **Kaldır'ı**tıklatın.
+2. **Güvenilen yollar** listesinde kaldırmak istediğiniz yolu seçin ve ardından **Kaldır**' a tıklayın.
 
    > [!TIP]
-   > Birden çok giriş seçmek için, yolları seçerken **Shift'i** basılı tutun.
+   > Birden çok giriş seçmek için, yolları seçerken **Shift** tuşunu basılı tutun.
 
-   Seçili yollar **Güvenilen Yollar** listesinden kaldırılır.
+   Seçilen yollar, **Güvenilen yollar** listesinden kaldırılır.
