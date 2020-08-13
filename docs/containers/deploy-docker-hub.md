@@ -8,12 +8,13 @@ ms.devlang: dotnet
 ms.topic: how-to
 ms.date: 07/23/2019
 ms.author: ghogen
-ms.openlocfilehash: f1c02e1fdc0c72ac23cb65605f324608a7fc33d7
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+monikerRange: '>=vs-2019'
+ms.openlocfilehash: cd17726d5ba09dcb901fd529e6bdfd97dee52f31
+ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85536896"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88168666"
 ---
 # <a name="deploy-to-docker-hub"></a>Docker Hub’a dağıtma
 
@@ -29,9 +30,13 @@ Docker Hub deponuz yoksa, [Docker Hub](https://hub.docker.com/)'da bir tane olu�
 
 1. Proje düğümüne sağ tıklayın ve **Yayımla...** seçeneğini belirleyin. Dağıtım seçeneklerini gösteren bir ekran görüntülenir.
 
-   ![Dağıtım seçeneklerinin ekran görüntüsü](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
+   ![Dağıtım seçeneklerinin ekran görüntüsü](media/container-tools/vs-2019/docker-container-registry.png)
 
-1. **Bir yayımlama hedefi seçin**altında **Container Registry**' yi seçin ve ardından **Docker Hub**' ı seçin. **Docker Hub** iletişim kutusu görüntülenir.
+1. **Docker Container Registry**seçin ve **Docker Hub**' ı seçin.
+
+   ![Yayımla iletişim kutusunun ekran görüntüsü-Docker Hub 'ı seçme](media/deploy-docker-hub/container-tools-docker-hub-deploy.png)
+
+1. Docker kimlik bilgilerinizi girin.
 
    ![Docker Hub iletişim kutusunun ekran görüntüsü](media/deploy-docker-hub/container-tools-docker-hub-credentials.png)
 

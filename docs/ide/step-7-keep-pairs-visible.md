@@ -1,5 +1,5 @@
 ---
-title: 'Adım 7: Çiftleri görünür tutun'
+title: '7. Adım: Çiftleri görünür durumda tutma'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,31 +13,31 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eeca594849625b548857a23b9d5c8e278dcdf07c
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: e854425bab10174220188b23fb7e292371e9cb48
+ms.sourcegitcommit: 2c26d6e6f2a5c56ae5102cdded7b02f2d0fd686c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "77579298"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88168729"
 ---
-# <a name="step-7-keep-pairs-visible"></a>Adım 7: Çiftleri görünür tutun
-Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün çalışır. Ancak oyuncu eşleşen bir çift seçtiğinde ne olması gerektiğini bir düşünün. Oyun, zamanlayıcıyı açarak simgeleri yok etmek <xref:System.Windows.Forms.Timer.Start> yerine (yöntemi kullanarak), seçilen iki etiketin renklerini sıfırlamadan, `firstClicked` `secondClicked` referans değişkenlerini kullanarak etiketleri artık izlememesi için kendisini sıfırlamalıdır.
+# <a name="step-7-keep-pairs-visible"></a>7. Adım: Çiftleri görünür durumda tutma
+Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün çalışır. Ancak oyuncu eşleşen bir çift seçtiğinde ne olması gerektiğini bir düşünün. Zamanlayıcıyı etkinleştirerek (yöntemi kullanarak) simgeleri ortadan <xref:System.Windows.Forms.Timer.Start> kaldırmamak yerine, oyunun kendisini sıfırlaması gerekir; böylece, `firstClicked` `secondClicked` Seçilen iki etiket için renkleri sıfırlamadan, ve başvuru değişkenlerini kullanarak hiçbir etiketi izlememek üzere.
 
 ## <a name="to-keep-pairs-visible"></a>Çiftleri görünür durumda tutmak için
 
-1. Zamanlayıcıyı `if` `label_Click()` çalıştırdığınız ifadenin hemen üstündeki kodun sonuna yakın olay işleyicisi yöntemine aşağıdaki deyimi ekleyin. Kodu programa eklerken yakından inceleyin. Kodun nasıl çalıştığını bir düşünün.
+1. Aşağıdaki ifadeyi, `if` `label_Click()` süreölçer 'i başlattığınız deyimin hemen üstündeki kodun sonuna yakın şekilde olay işleyicisi yöntemine ekleyin. Kodu programa eklerken yakından inceleyin. Kodun nasıl çalıştığını bir düşünün.
 
      [!code-csharp[VbExpressTutorial4Step7#9](../ide/codesnippet/CSharp/step-7-keep-pairs-visible_1.cs)]
      [!code-vb[VbExpressTutorial4Step7#9](../ide/codesnippet/VisualBasic/step-7-keep-pairs-visible_1.vb)]
 
-       > [!IMPORTANT]
-       > Use the programming language control at the top right of this page to view either the C# code snippet or the Visual Basic code snippet.<br><br>![Programming language control for Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
+     > [!IMPORTANT]
+     > C# kod parçacığını veya Visual Basic kod parçacığını görüntülemek için bu sayfanın sağ üst kısmındaki programlama dili denetimini kullanın.<br><br>![Docs.Microsoft.com için programlama dili denetimi](../ide/media/docs-programming-language-control.png)
 
-     Ekladığınız ifadenin `if` ilk satırı, oyuncunun seçtiği ilk etiketteki simgenin ikinci etiketteki simgeyle aynı olup olmadığını denetler. Simgeler aynıysa, program C#'daki kıvırcık ayraçlar veya Visual Basic'teki `if` deyimiçindeki üç deyim arasındaki üç ifadeyi yürütür. İlk iki deyim, `firstClicked` etiketlerin hiçbirini artık izlememelerini sağlayacak şekilde ve `secondClicked` başvuru değişkenlerini sıfırlar. (Bu iki ifadeyi zamanlayıcının <xref:System.Windows.Forms.Timer.Tick> olay işleyicisinden tanıyabilirsiniz.) Üçüncü deyim, `return` programa yöntemdeki diğer ifadeleri yürütmeden atlamasını söyleyen bir ifadedir.
+     Az önce eklediğiniz deyimin ilk satırı, `if` Player 'ın seçtiği ilk etiketteki simgenin ikinci etiketteki simgeyle aynı olup olmadığını denetler. Simgeler aynıysa, program C# içindeki küme ayraçları veya Visual Basic içindeki deyimde yer alan üç deyim arasında üç deyimi yürütür `if` . İlk iki deyim, `firstClicked` ve `secondClicked` başvuru değişkenlerini sıfırlar, böylece artık etiketlerden herhangi birini takip etmezsiniz. (Bu iki deyimi zamanlayıcının <xref:System.Windows.Forms.Timer.Tick> olay işleyicisinden ayırt edebilirsiniz.) Üçüncü deyim, `return` programa onları yürütmeden, yöntemi içindeki deyimlerin geri kalanını atlamasını söyleyen bir deyimidir.
 
-     C#'da programlama yapıyorsanız, kodun bazılarının tek bir eşit`=`işaret (), diğer ifadeler`==`ise iki eşit işaret kullandığını fark etmiş olabilirsiniz. Neden `=` bazı yerlerde kullanılan `==` ancak diğer yerlerde kullanılan düşünün.
+     C# dilinde programlama yaparsanız, bazı kodların tek bir eşittir işareti () kullandığını fark etmiş olabilirsiniz `=` , ancak diğer deyimler iki eşittir işareti ( `==` ) kullanır. Neden `=` bazı yerlerde kullanıldığına, ancak `==` diğer yerlerde kullanıldığına göz önünde bulundurun.
 
-     Bu örnek, aradaki farkı gösteren güzel bir örnektir. İfadedeki parantezler arasındaki koda dikkatlice `if` bakın.
+     Bu örnek, aradaki farkı gösteren güzel bir örnektir. Deyimdeki parantez arasındaki koda dikkatli bir göz atın `if` .
 
     ```vb
     firstClicked.Text = secondClicked.Text
@@ -47,7 +47,7 @@ Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün 
     firstClicked.Text == secondClicked.Text
     ```
 
-     Daha sonra ifadeden sonra kod bloğundaki ilk `if` ifadeye yakından bakın.
+     Ardından, deyimden sonra kod bloğundaki ilk ifadeye yakından bakın `if` .
 
     ```vb
     firstClicked = Nothing
@@ -57,15 +57,15 @@ Oyuncu yalnızca eşleşmeyen simge çiftlerini seçtiği sürece oyun düzgün 
     firstClicked = null;
     ```
 
-     Bu deyimlerden birincisi iki simgenin aynı olup olmadığını denetler. İki değer karşılaştırıldığı için, C# `==` programı eşitlik işleci kullanır. İkinci deyim aslında değeri değiştirir *(atama* `firstClicked` olarak adlandırılır), `null` başvuru değişkenini sıfırlamak için eşit ayarlar. Bu yüzden atama işleci `=` yerine kullanır. C# `=` değerleri ayarlamak ve `==` karşılaştırmak için kullanır. Visual Basic `=` hem değişken atama hem de karşılaştırma için kullanır.
+     Bu deyimlerden birincisi iki simgenin aynı olup olmadığını denetler. İki değer karşılaştırıldığından, C# programı `==` eşitlik işlecini kullanır. İkinci ifade gerçekten değeri değiştirir ( *atama*olarak adlandırılır), `firstClicked` başvuru değişkenini sıfırlamak için değerine eşit olarak ayarlar `null` . `=`Bunun yerine atama işlecini kullanmasının nedeni budur. C# `=` , değerleri ayarlamak ve `==` karşılaştırmak için kullanır. Visual Basic `=` , hem değişken atama hem de karşılaştırma için kullanır.
 
-2. Programı kaydedip çalıştırın ve sonra formdaki simgeleri seçmeye başlayın. Eşleşmeyen bir çift seçerseniz, zamanlayıcının Tick olayı tetiklenir ve iki simge de kaybolur. Eşleşen bir çift seçerseniz, `if` yeni deyim yürütür ve iade deyimi yöntemin zamanlayıcıyı başlatan kodu atlatır, böylece simgeler aşağıdaki resimde gösterildiği gibi görünür kalır.
+2. Programı kaydedip çalıştırın ve sonra formdaki simgeleri seçmeye başlayın. Eşleşmeyen bir çift seçerseniz, zamanlayıcının Tick olayı tetiklenir ve iki simge de kaybolur. Eşleşen bir çift seçerseniz, yeni `if` ifade yürütülür ve Return deyimleri, aşağıdaki görüntüde gösterildiği gibi, simgenin görünür kalması için, bu yöntemin zamanlayıcıyı başlatan kodu atlamasına neden olur.
 
      ![Bu öğreticide oluşturduğunuz oyun](../ide/media/express_finishedgame.png)<br/>
-***Görünür*** *simge çiftleri ile* eşleştirme oyunu
+*Görünür simge çiftleri Ile* ***eşleşen oyun***
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Bir sonraki öğretici adıma gitmek için bkz: **[Adım 8: Oyuncunun kazanıp kazanmadığını doğrulamak için bir yöntem ekleyin.](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)**
+- Sonraki öğretici adımına gitmek için bkz. 8. **[Adım: oyuncunun kazandığını doğrulamak için yöntem ekleme](../ide/step-8-add-a-method-to-verify-whether-the-player-won.md)**.
 
-- Önceki öğretici adıma dönmek için [bkz.](../ide/step-6-add-a-timer.md)
+- Önceki öğretici adımına dönmek için bkz. 6. [Adım: Zamanlayıcı ekleme](../ide/step-6-add-a-timer.md).
