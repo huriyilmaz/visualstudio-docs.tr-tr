@@ -983,3 +983,9 @@
                   href: ca2248.md
             - name: Otomatik özelliği askıya alma
               href: automatic-feature-suspension.md
+            - name: Uyarıları yayımlama
+              items:
+                - name: Genel Bakış
+                  displayName: publish warnings
+                - name: 'IL3000: Tek dosyalı olarak yayımlarken bütünleştirilmiş kod dosyası yoluna erişimi kullanmaktan kaçının'
+                  href: il3000.md
