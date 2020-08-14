@@ -1,21 +1,21 @@
 ---
 title: Seçenekler, Metin Düzenleyici, C#, Gelişmiş
-ms.date: 01/16/2019
+ms.date: 08/12/2020
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
-author: TerryGLee
-ms.author: tglee
+author: akhera99
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ff42473c6f56d69a56cfbd811f2687ba544c7c5e
-ms.sourcegitcommit: 4d932000a0f7e79c9475fe66c02fe9addcd7e47a
+ms.openlocfilehash: b8e515058b17205a65bab401c7b31c7205aa55bc
+ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86181072"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88214672"
 ---
 # <a name="options-text-editor-c-advanced"></a>Seçenekler, Metin Düzenleyici, C#, Gelişmiş
 
@@ -128,7 +128,13 @@ C# için düzenleyici biçimlendirme, kod yeniden düzenleme ve XML belge yoruml
 Kodunuzda süslü ayraçlar () arasında noktalı dikey çizgiler göstermek için bu onay kutularını seçin **{}** . Daha sonra, bildirim düzeyinize ve kod düzeyi yapılarına yönelik ayrı kod bloklarını kolayca görebilirsiniz.
 
 ## <a name="editor-help"></a>Düzenleyici yardımı
-
+::: moniker range=">=vs-2019"
+- Satır içi parametre adı Ipuçları 
+    
+    Seçildiğinde, işlev çağrılarında her bağımsız değişkenden önce sabit değerler, yayımlanmış sabit değerler ve nesne örneklemeleri için parametre adı ipuçları ekler.  
+    
+    ![CSharp için satır içi parametre adı Ipuçları](media/inline-parameter-name-hints-csharp.png)
+::: moniker-end
 - ///İçin XML belgesi açıklamaları oluştur
 
    Seçildiğinde, açıklama giriş yazdıktan sonra XML belge açıklamaları için XML öğelerini ekler `///` . XML belgeleri hakkında daha fazla bilgi için bkz. [XML belgeleri Yorumları (C# Programlama Kılavuzu)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).

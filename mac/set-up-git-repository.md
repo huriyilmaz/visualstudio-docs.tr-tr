@@ -6,12 +6,12 @@ ms.author: johmil
 ms.date: 05/13/2020
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
 ms.topic: how-to
-ms.openlocfilehash: 9d6fd5ffefcd6696fa67302a8d59fd46e498a472
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.openlocfilehash: bc981530f5493ce1899de1c888e20129c7ae0f8c
+ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85950599"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88214690"
 ---
 # <a name="set-up-a-git-repository"></a>Git deposu ayarlama
 
@@ -55,7 +55,7 @@ Zaten sürüm denetiminde _olmayan_ mevcut bir projeniz varsa, git 'te ayarlamak
 
 3. **Kaydolun Seç** sekmesini seçin ve **Ekle** düğmesine basın:
 
-    ![](media/version-control-git5.png)
+    ![Kayıtlı depo iletişim kutusu ekleyin.](media/version-control-git5.png)
 
 4. Yerel olarak görüntülenmesini istediğiniz deponun adını girin ve adım #3 ' den URL 'YI yapıştırın. Depo yapılandırma iletişim kutusu, aşağıdakine benzer olmalıdır. Tamam 'a basın:
 
