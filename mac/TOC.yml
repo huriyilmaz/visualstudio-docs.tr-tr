@@ -92,6 +92,10 @@
       href: data-visualizations.md
     - name: Kaynak Bağlantısı ile NuGet paketlerinde hata ayıklama
       href: source-link.md
+- name: Sınama
+  items:
+    - name: Genel Bakış
+      href: testing.md
 - name: Derleme ve Oluşturma
   items:
     - name: Genel Bakış
