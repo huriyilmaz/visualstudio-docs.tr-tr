@@ -28,12 +28,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5970e7e4408c826058cb27590254b278d4cdb9b7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f4b4a90cc06396f9fb6afb8a356385e966ed1b3d
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85281012"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249213"
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısı ile çalıştırma işlemleri iliştirme
 
@@ -44,7 +44,7 @@ Yerel veya uzak bilgisayarlarda çalışan uygulamalarda hata ayıklamak, aynı 
 > [!TIP]
 > Hata ayıklama senaryonuz için **iliştirme** 'yi kullanıp kullanmayacağınızı bilmiyorsanız emin değil misiniz? Bkz. [yaygın hata ayıklama senaryoları](#BKMK_Scenarios).
 
-## <a name="attach-to-a-running-process-on-your-local-machine"></a><a name="BKMK_Attach_to_a_running_process"></a>Yerel makinenizde çalışan bir işleme iliştirme
+## <a name="attach-to-a-running-process-on-your-local-machine"></a><a name="BKMK_Attach_to_a_running_process"></a> Yerel makinenizde çalışan bir işleme iliştirme
 
 Daha önce eklediğiniz bir işleme hızlıca yeniden iliştirmek için bkz. [bir işleme yeniden bağlama](#BKMK_reattach).
 
@@ -74,7 +74,7 @@ Daha önce eklediğiniz bir işleme hızlıca yeniden iliştirmek için bkz. [bi
    **Varsayılan** bağlantı türünü kullanıyorsanız, eklemek istediğiniz kod türünü el ile seçebilirsiniz. Aksi takdirde, **Select** seçeneği devre dışı bırakılabilir.
 
    Kod türlerini el ile seçmek için:
-   1. **Seç**' e tıklayın.
+   1. **Seç**’e tıklayın.
    1. **Kod türünü seç** iletişim kutusunda, **Bu kod türlerinde hata ayıkla**' yı seçin.
       Listedeki bir işleme iliştirmeye çalıştığınızda bir hata yaşarsanız, sorunu [gidermeye](#BKMK_Troubleshoot_attach_errors) yardımcı olması Için [kod türünü seç](../debugger/select-code-type-dialog-box.md) iletişim kutusunu kullanabilirsiniz.
    1. Hata ayıklamak istediğiniz kod türlerini seçin.
@@ -85,7 +85,7 @@ Daha önce eklediğiniz bir işleme hızlıca yeniden iliştirmek için bkz. [bi
 >[!NOTE]
 >Hata ayıklama için birden çok uygulamaya iliştirilebilecek, ancak aynı anda hata ayıklayıcıda yalnızca bir uygulama etkin olur. Etkin uygulamayı Visual Studio **hata ayıklama konumu** araç çubuğunda veya **süreçler** penceresinde ayarlayabilirsiniz.
 
-## <a name="attach-to-a-process-on-a-remote-computer"></a><a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a>Uzak bilgisayardaki bir işleme iliştirme
+## <a name="attach-to-a-process-on-a-remote-computer"></a><a name="BKMK_Attach_to_a_process_on_a_remote_computer"></a> Uzak bilgisayardaki bir işleme iliştirme
 
 Ayrıca, **Işleme İliştir** iletişim kutusunda bir uzak bilgisayar seçebilir, bu bilgisayarda çalışan kullanılabilir işlemlerin listesini görüntüleyebilir ve hata ayıklama için bir veya daha fazla işleme ekleyebilirsiniz. Uzak bilgisayarda uzaktan hata ayıklayıcı (*msvsmon.exe*) çalışıyor olmalıdır. Daha fazla bilgi için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
 
@@ -145,7 +145,7 @@ IIS 'ye dağıtılan ASP.NET uygulamalarında hata ayıklama hakkında daha fazl
    **Varsayılan** bağlantı türünü kullanıyorsanız, eklemek istediğiniz kod türünü el ile seçebilirsiniz. Aksi takdirde, **Select** seçeneği devre dışı bırakılabilir.
 
    Kod türlerini el ile seçmek için:
-   1. **Seç**' e tıklayın.
+   1. **Seç**’e tıklayın.
    1. **Kod türünü seç** iletişim kutusunda, **Bu kod türlerinde hata ayıkla**' yı seçin.
       Listedeki bir işleme iliştirmeye çalıştığınızda bir hata yaşarsanız, sorunu [gidermeye](#BKMK_Troubleshoot_attach_errors) yardımcı olması Için [kod türünü seç](../debugger/select-code-type-dialog-box.md) iletişim kutusunu kullanabilirsiniz.
    1. **Tamam**’ı seçin.
@@ -165,7 +165,7 @@ Bu geçici çözümlerin hiçbiri mümkün değilse, üçüncü bir seçenek `vs
 
 Daha fazla bilgi için bkz. [SSH kullanarak Linux üzerinde çalışan uzaktan hata ayıklama .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md).
 
-## <a name="attach-to-a-process-running-on-a-linux-docker-container"></a><a name="BKMK_Linux_Docker_Attach"></a>Linux Docker kapsayıcısında çalışan bir işleme iliştirme
+## <a name="attach-to-a-process-running-on-a-linux-docker-container"></a><a name="BKMK_Linux_Docker_Attach"></a> Linux Docker kapsayıcısında çalışan bir işleme iliştirme
 
 Visual Studio hata ayıklayıcısını, **Işleme Ekle** iletişim kutusunu kullanarak yerel veya uzak makinenizde Linux .NET Core Docker kapsayıcısında çalışan bir işleme ekleyebilirsiniz.
 
@@ -199,17 +199,15 @@ Visual Studio hata ayıklayıcısını, **Işleme Ekle** iletişim kutusunu kull
         ![Uzak bir sisteme bağlanma](../debugger/media/connect-remote-system.png "Uzak bir sisteme bağlanma")
         1. SSH veya Daemon 'e başarıyla bağlandıktan sonra eklemek için çalışan bir kapsayıcı seçin ve **Tamam 'a**basın.
 
-    
     1. ***Hedefi bir [Docker Daemon](https://docs.docker.com/engine/reference/commandline/dockerd/) aracılığıyla bir işlem çalıştıran uzak kapsayıcıya ayarlamak için***
         1. **Docker Konağı (Isteğe bağlı)** altında, Daemon ADRESINI (TCP, IP vb.) belirtin ve Yenile bağlantısına tıklayın.
         1. Daemon 'a başarıyla bağlandıktan sonra eklemek için çalışan bir kapsayıcı seçin ve **Tamam 'a**basın.
 
 4. **Kullanılabilir işlemler** listesinden karşılık gelen kapsayıcı işlemini seçin ve Visual Studio 'Da C# kapsayıcı işleminizi hata ayıklamaya başlamak için **İliştir** ' i seçin!
 
-    ![Docker Iliştirme menüsü tamamlandı](../debugger/media/docker-attach-complete.png "Tamamlanmış Linux Docker Iliştirme menüsü")
-    
+    ![Docker Iliştirme menüsü tamamlandı](../debugger/media/docker-attach-complete.png "Tamamlanmış Linux Docker Iliştirme menüsü")    
 
-## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a><a name="BKMK_Windows_Docker_Attach"></a>Windows Docker kapsayıcısında çalışan bir işleme iliştirme
+## <a name="attach-to-a-process-running-on-a-windows-docker-container"></a><a name="BKMK_Windows_Docker_Attach"></a> Windows Docker kapsayıcısında çalışan bir işleme iliştirme
 
 Visual Studio hata ayıklayıcısını, **Işleme Ekle** iletişim kutusunu kullanarak yerel makinenizde bir Windows Docker kapsayıcısında çalışan bir işleme ekleyebilirsiniz.
 
@@ -238,21 +236,19 @@ Visual Studio hata ayıklayıcısını, **Işleme Ekle** iletişim kutusunu kull
 4. **Kullanılabilir işlemler** listesinden karşılık gelen kapsayıcı işlemini seçin ve C# kapsayıcı işleminizi hata ayıklamaya başlamak için **İliştir** ' i seçin.
 
     ![Docker Iliştirme menüsü tamamlandı](../debugger/media/docker-attach-complete-windows.png "Windows Docker Iliştirme menüsü tamamlandı")
-    
 
 5.  Kullanılabilir işlemler listesinden karşılık gelen kapsayıcı işlemini seçin ve C# kapsayıcı işleminizi hata ayıklamaya başlamak için **İliştir** ' i seçin.
 
-
 ::: moniker-end
 
-## <a name="reattach-to-a-process"></a><a name="BKMK_reattach"></a>Bir işleme yeniden iliştir
+## <a name="reattach-to-a-process"></a><a name="BKMK_reattach"></a> Bir işleme yeniden iliştir
 
 Daha önce iliştirmiş olduğunuz işlemlere hızlı bir şekilde **yeniden iliştirebilirsiniz**  >  **Reattach to Process** **Shift** + **Alt** + **P**. Bu komutu seçtiğinizde, hata ayıklayıcı, ilk olarak önceki işlem KIMLIĞIYLE eşleştirmeye çalışırken ve başarısız olursa, önceki işlem adıyla eşleşen son işlemler için iliştirmeye çalışacaktır. Eşleşme bulunmazsa veya birkaç işlem aynı ada sahip ise, doğru işlemi seçebilmeniz **Için Işleme İliştir** iletişim kutusu açılır.
 
 > [!NOTE]
 > **İşleme yeniden iliştir** komutu, Visual Studio 2017 ' den başlayarak kullanılabilir.
 
-## <a name="common-debugging-scenarios"></a><a name="BKMK_Scenarios"></a>Ortak hata ayıklama senaryoları
+## <a name="common-debugging-scenarios"></a><a name="BKMK_Scenarios"></a> Ortak hata ayıklama senaryoları
 
 **Işleme eklemeyi** ve hangi işlemin iliştirileyeceğini belirlemenize yardımcı olmak için, aşağıdaki tabloda, mevcut yerlerde daha fazla yönergelerin bağlantılarıyla birlikte birkaç ortak hata ayıklama senaryosu gösterilmektedir. (Liste kapsamlı değildir.)
 
@@ -270,7 +266,7 @@ Eklemek üzere bir çalışan işlemi hızlı bir şekilde seçmek için, Visual
 |IIS sunucusunda uzaktan hata ayıklama ASP.NET Core|Uzak araçları kullanma ve **Işleme iliştirme**|*w3wp.exe* veya *dotnet.exe*|.NET Core 3 ' te başlayarak, *w3wp.exe* işlemi varsayılan [uygulama içi barındırma modelinde](/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1#hosting-models)kullanılır. Uygulama dağıtımı için bkz. [IIS 'de yayımlama](/aspnet/core/host-and-deploy/iis/). Daha ayrıntılı bilgi için bkz. uzaktan [hata ayıklama ASP.NET Core uzak bır IIS bilgisayarında](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md#BKMK_attach) .|
 |Desteklenen uygulama türleri için yerel bir IIS sunucusunda istemci tarafı komut dosyasında hata ayıkla |**İşlemek Için İliştir** kullanın|*chrome.exe*, *MicrosoftEdgeCP.exe*veya *iexplore.exe*|Betik hata ayıklaması etkinleştirilmelidir. Chrome için Ayrıca, hata ayıklama modunda ( `chrome.exe --remote-debugging-port=9222` bir komut satırından tür) Chrome 'u çalıştırmanız ve **Iliştirme** alanında **JavaScript (Chrome)** öğesini seçmeniz gerekir.|
 |Yerel makinede bir C#, Visual Basic veya C++ uygulamasında hata ayıklama|Standart hata ayıklama (**F5**) veya **İşleme İliştir**|*\<appname>]*|Çoğu senaryoda standart hata ayıklama kullanın ve **Işleme iliştirilemiyor**.|
-|Windows masaüstü uygulamasında uzaktan hata ayıklama|Uzak Araçlar|Yok| Bkz. [bir C# veya Visual Basic uygulamasında uzaktan hata ayıklama](../debugger/remote-debugging-csharp.md) veya [C++ uygulamasında uzaktan hata ayıklama](../debugger/remote-debugging-cpp.md)|
+|Windows masaüstü uygulamasında uzaktan hata ayıklama|Uzak araçlar|Yok| Bkz. [bir C# veya Visual Basic uygulamasında uzaktan hata ayıklama](../debugger/remote-debugging-csharp.md) veya [C++ uygulamasında uzaktan hata ayıklama](../debugger/remote-debugging-cpp.md)|
 |Linux 'ta .NET Core hatalarını ayıklama|**İşlemek Için İliştir** kullanın|*dotnet.exe*|SSH kullanmak için bkz. [SSH kullanarak Linux üzerinde çalışan uzaktan hata ayıklama .NET Core](../debugger/remote-debugging-dotnet-core-linux-with-ssh.md). Kapsayıcılı uygulamalar için, bu makaledeki önceki bölümlere bakın.|
 |Linux üzerinde uzaktan hata ayıklama Python|**İşlemek Için İliştir** kullanın|*hata ayıklama GPY*|Bkz. [Python araçlarından uzaktan iliştirme](../python/debugging-python-code-on-remote-linux-machines.md#attach-remotely-from-python-tools)|
 |Uygulamayı hata ayıklayıcı olmadan başlattıktan sonra yerel makinede bir ASP.NET uygulamasında hata ayıklayın|**İşlemek Için İliştir** kullanın|*iiexpress.exe*|Bu, uygulamanızın profil oluşturma sırasında (örneğin) daha hızlı yüklenmesini sağlamak için yararlı olabilir. |
@@ -286,7 +282,7 @@ Uzaktan hata ayıklama senaryolarında, Visual Studio 'da zaten açık olan kayn
 
 Bazı yerel hata ayıklama senaryolarında, uygulamayla ilgili doğru sembol dosyaları varsa, Visual Studio 'da kaynağa erişim olmadan hata ayıklaması yapabilirsiniz. Varsayılan olarak, bu bir hata ayıklama derlemesi gerektirir. Daha fazla bilgi için bkz. [sembol ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
 
-## <a name="troubleshoot-attach-errors"></a><a name="BKMK_Troubleshoot_attach_errors"></a>İliştirme hatalarını giderme
+## <a name="troubleshoot-attach-errors"></a><a name="BKMK_Troubleshoot_attach_errors"></a> İliştirme hatalarını giderme
 
 Bazı senaryolarda hata ayıklayıcı, hata ayıklamanın kod türünü doğru şekilde belirlemek için yardıma ihtiyaç duyuyor olabilir. Bağlantı değerleri doğru ayarlandıysa ( **kullanılabilir işlemler** listesinde doğru işlemi görüntüleyebilirsiniz), ancak hata ayıklayıcı Iliştirilemezse **bağlantı türü** listesinde en uygun bağlantı türünü seçmeyi deneyin, örneğin bir Linux veya Python uygulamasında hata ayıklaması yapıyorsanız, bu gerekli olabilir. Varsayılan bağlantı türünü kullanıyorsanız, bu bölümün ilerleyen kısımlarında açıklandığı gibi, bağlanmak üzere belirli bir kod türünü seçebilirsiniz.
 

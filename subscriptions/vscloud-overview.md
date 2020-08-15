@@ -7,12 +7,12 @@ ms.assetid: af1f7888-6942-4515-9475-0928ecf49dab
 ms.date: 03/24/2020
 ms.topic: overview
 description: Uzun vadeli bir sözleşme olmadan bir ayda ayda veya yıllık esasına göre Visual Studio Professional veya Visual Studio Enterprise.
-ms.openlocfilehash: 8824ff5f233f580d49fe91f79e6f3d348391ab68
-ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
+ms.openlocfilehash: 5f289c5eb51ccaf95c88bc7e2d66a4be5e904e03
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86211648"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248347"
 ---
 # <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Visual Studio Professional ve Visual Studio Enterprise bulut abonelikleri satın alın
 [Visual Studio Market](https://marketplace.visualstudio.com) [Visual Studio Professional ve Visual Studio Enterprise abonelikleri](https://visualstudio.microsoft.com/subscriptions/) satın alabilirsiniz. Bunlar **"bulut abonelikleri"** olarak adlandırılır.
@@ -65,15 +65,15 @@ Birden fazla abonelik satın aldıysanız, başkalarına abonelik atamak için [
 Abonelikleri iptal etmek için yalnızca anlaşmanızın abonelik sayısını sıfır (0) olarak ayarlamanız gerekir.  Abonelik sayısını azaltmak için aşağıdaki adımları izleyin:
 1. <https://manage.visualstudio.com> oturumunu açın
 1. Birden fazla anlaşmanız varsa, açılan listeden istediğiniz sözleşmeyi seçin.
-1. Aboneliklerinizle ilgili bilgileri göstermek için sol üstteki **genel bakış** simgesine tıklayın.  
+1. Aboneliklerinizle ilgili bilgileri göstermek için sol üstteki **genel bakış** simgesini seçin.  
 > [!div class="mx-imgBorder"]
-> ![Abonelik genel bakışını görüntüleme](_img/buy-vs-subscriptions/overview-button.png "Abonelik ayrıntılarını göstermek için genel bakış düğmesine tıklayın")
+> ![Abonelik genel bakışını görüntüleme](_img/buy-vs-subscriptions/overview-button.png "Abonelik ayrıntılarını göstermek için genel bakış düğmesini seçin")
 
-4. İptal etmek istediğiniz abonelikler için girişi bulun ve **miktarı değiştir**' e tıklayın.
+4. İptal etmek istediğiniz abonelikler için girişi bulun ve **miktarı değiştir**' i seçin.
 1. Miktarı sıfır (0) olarak ayarlayın. Abonelikleriniz, zamanlanan faturalandırma tarihine kadar yerinde kalır, ancak faturalandırma tarihine ulaşıldığında yenilemeyecektir.   
 
 > [!div class="mx-imgBorder"]
-> ![Abonelikleri değiştirme](_img/buy-vs-subscriptions/manage-subscriptions.png "Abonelikleri iptal etmek için ' miktarı değiştir 'e tıklayın")
+> ![Abonelikleri değiştirme](_img/buy-vs-subscriptions/manage-subscriptions.png "Abonelikleri iptal etmek için ' miktarı değiştir 'i seçin")
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 

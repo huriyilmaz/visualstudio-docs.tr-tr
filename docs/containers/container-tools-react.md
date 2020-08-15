@@ -1,23 +1,23 @@
 ---
-title: ASP.NET Core ve tepki verme. js ile Visual Studio kapsayıcı araçları
+title: ASP.NET Core ve React.js sahip Visual Studio kapsayıcı araçları
 author: ghogen
 description: Visual Studio kapsayıcı araçları 'nı ve Docker for Windows kullanmayı öğrenin
 ms.author: ghogen
 ms.date: 05/14/2020
 ms.technology: vs-azure
 ms.topic: quickstart
-ms.openlocfilehash: f7dfc0aa1346c4e888f64f7cd8f23add3056c070
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 321d85537f210d17414be115b8f6b3f8b8d5b3c9
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84182800"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249200"
 ---
 # <a name="quickstart-use-docker-with-a-react-single-page-app-in-visual-studio"></a>Hızlı başlangıç: Visual Studio 'da bir tepki verme tek sayfalı uygulamayla Docker kullanma
 
-Visual Studio ile, yanıt verme. js tek sayfalı uygulama gibi istemci tarafı JavaScript ve bunları Azure Container Registry (ACR), Docker Hub 'ı Azure App Service ya da kendi kapsayıcı kayıt defterinizde yayımlamak gibi Kapsayıcılı ASP.NET Core uygulamalarını kolayca oluşturabilir, ayıklayabilir ve çalıştırabilirsiniz. Bu makalede ACR 'ye yayımlanacak.
+Visual Studio ile, React.js tek sayfalı uygulama gibi istemci tarafı JavaScript ve bunları Azure Container Registry (ACR), Docker Hub, Azure App Service veya kendi kapsayıcı kayıt defterinizde yayımlamak gibi Kapsayıcılı ASP.NET Core uygulamaları da kolayca oluşturabilir, hata ayıklayın ve çalıştırabilirsiniz. Bu makalede ACR 'ye yayımlanacak.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range="vs-2017"
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
@@ -43,9 +43,9 @@ Docker yüklemesi için ilk olarak [Windows Için Docker Desktop](https://docs.d
 
 ::: moniker range="vs-2017"
 1. **ASP.NET Core Web uygulaması** şablonunu kullanarak yeni bir proje oluşturun.
-1. **Tepki verme. js**' yi seçin. **Docker desteğini etkinleştir**' i seçemezsiniz ancak endişelenmeyin, projeyi oluşturduktan sonra bu desteği ekleyebilirsiniz.
+1. **React.js**seçin. **Docker desteğini etkinleştir**' i seçemezsiniz ancak endişelenmeyin, projeyi oluşturduktan sonra bu desteği ekleyebilirsiniz.
 
-   ![Yeni tepki verme. js projesinin ekran görüntüsü](media/container-tools-react/vs2017/new-react-project.png)
+   ![Yeni React.js projesinin ekran görüntüsü](media/container-tools-react/vs2017/new-react-project.png)
 
 1. Proje düğümüne sağ tıklayın ve **Add** > projenize bir dockerfile eklemek için **Docker desteği** Ekle ' yi seçin.
 
@@ -55,9 +55,9 @@ Docker yüklemesi için ilk olarak [Windows Için Docker Desktop](https://docs.d
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 1. **ASP.NET Core Web uygulaması** şablonunu kullanarak yeni bir proje oluşturun.
-1. **Tepki verme. js**' yi seçin ve **Oluştur**' a tıklayın. **Docker desteğini etkinleştir**' i seçemezsiniz ancak endişelenmeyin, daha sonra bu desteği ekleyebilirsiniz.
+1. **React.js**' yi seçin ve **Oluştur**' a tıklayın. **Docker desteğini etkinleştir**' i seçemezsiniz ancak endişelenmeyin, daha sonra bu desteği ekleyebilirsiniz.
 
-   ![Yeni tepki verme. js projesinin ekran görüntüsü](media/container-tools-react/vs2019/new-react-project.png)
+   ![Yeni React.js projesinin ekran görüntüsü](media/container-tools-react/vs2019/new-react-project.png)
 
 1. Proje düğümüne sağ tıklayın ve **Add** > projenize bir dockerfile eklemek için **Docker desteği** Ekle ' yi seçin.
 
@@ -72,7 +72,7 @@ Bir sonraki adım, Linux kapsayıcıları veya Windows kapsayıcıları kullanı
 
 Bir *Dockerfile*, son bir Docker görüntüsü oluşturmaya yönelik tarif, projede oluşturulur. İçindeki komutları anlamak için [Dockerfile başvurusuna](https://docs.docker.com/engine/reference/builder/) bakın.
 
-Projede *Dockerfile dosyasını* açın ve kapsayıcıda Node. js 10. x yüklemek için aşağıdaki satırları ekleyin. Bu satırları her ikisi de, düğüm paketi Yöneticisi *NPM. exe* ' nin yüklemesini temel görüntüye ve bölümüne eklemek için de eklediğinizden emin olun `build` .
+Projede *Dockerfile dosyasını* açın ve kapsayıcıya Node.js 10. x yüklemek için aşağıdaki satırları ekleyin. Düğüm paketi Yöneticisi *npm.exe* yüklemesini temel görüntüye ve bölümüne eklemek için, bu satırları her ikisi de ilk bölüme eklediğinizden emin olun `build` .
 
 ```Dockerfile
 RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
@@ -123,7 +123,7 @@ Proje düğümüne çift tıklayarak proje dosyasını açın ve aşağıdaki ö
 Dockerfile dosyasını aşağıdaki satırları ekleyerek güncelleştirin. Bu, düğümü ve NPM 'yi kapsayıcıya kopyalayacak.
 
    1. ``# escape=` ``Dockerfile 'ın ilk satırına Ekle
-   1. Önce aşağıdaki satırları ekleyin`FROM … base`
+   1. Önce aşağıdaki satırları ekleyin `FROM … base`
 
       ```Dockerfile
       FROM mcr.microsoft.com/powershell:nanoserver-1903 AS downloadnodejs
@@ -133,7 +133,7 @@ Dockerfile dosyasını aşağıdaki satırları ekleyerek güncelleştirin. Bu, 
       Rename-Item "C:\node-v10.16.3-win-x64" c:\nodejs
       ```
 
-   1. Aşağıdaki satırı önce ve sonra ekleyin`FROM … build`
+   1. Aşağıdaki satırı önce ve sonra ekleyin `FROM … build`
 
       ```Dockerfile
       COPY --from=downloadnodejs C:\nodejs\ C:\Windows\system32\
@@ -177,13 +177,13 @@ Dockerfile dosyasını aşağıdaki satırları ekleyerek güncelleştirin. Bu, 
       ENTRYPOINT ["dotnet", "WebApplication37.dll"]
       ```
 
-1. Öğesini kaldırarak. dockerıgnore dosyasını güncelleştirin `**/bin` .
+   1. Öğesini kaldırarak. dockerıgnore dosyasını güncelleştirin `**/bin` .
 
 ## <a name="debug"></a>Hata ayıklama
 
 Araç çubuğundaki hata ayıklama açılır listesinden **Docker** ' ı seçin ve uygulamada hata ayıklamayı başlatın. Bir sertifikaya güvenmek üzere bir istem içeren bir ileti görebilirsiniz. devam etmek için sertifikaya güvenmeyi seçin.  İlk kez oluşturduğunuzda Docker temel görüntüleri indirir, bu nedenle biraz daha uzun sürebilir.
 
-**Çıkış** penceresinde **kapsayıcı araçları** seçeneği hangi eylemlerin gerçekleştireceğinizi gösterir. *NPM. exe*ile ilişkili yükleme adımlarını görmeniz gerekir.
+**Çıkış** penceresinde **kapsayıcı araçları** seçeneği hangi eylemlerin gerçekleştireceğinizi gösterir. *npm.exe*ilişkili yükleme adımlarını görmeniz gerekir.
 
 Tarayıcı, uygulamanın giriş sayfasını gösterir.
 
@@ -236,7 +236,7 @@ Uygulamanın geliştirme ve hata ayıklama döngüsünü tamamladıktan sonra uy
 
     ![Visual Studio 'nun Azure Container Registry oluştur iletişim kutusu][0]
 
-1. **Oluştur**' a tıklayın.
+1. **Oluştur**’a tıklayın.
 
    ![Başarılı yayımlamayı gösteren ekran görüntüsü](media/container-tools/publish-succeeded.png)
 

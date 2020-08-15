@@ -12,12 +12,12 @@ manager: jillfra
 monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a37d58d1bd18ef19f610602ec8f2238816405e4
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: ecbabae86b762c9143dba6be5aa0e4683a92b0dd
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285757"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250779"
 ---
 # <a name="understand-performance-collection-methods"></a>Performans toplama yöntemlerini anlama
 
@@ -26,7 +26,7 @@ Visual Studio profil oluşturma araçları, performans verilerini toplamak için
 > [!NOTE]
 > Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. UWP uygulamaları için de yeni koleksiyon teknikleri gerekir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).
 
-|Yöntem|Description|
+|Yöntem|Açıklama|
 |------------|-----------------|
 |[Örnekleme](#sampling)|Bir uygulama tarafından gerçekleştirilen iş hakkında istatistiksel verileri toplar.|
 |[Yapısı](#instrumentation)|Her işlev çağrısıyla ilgili ayrıntılı zamanlama bilgilerini toplar.|
@@ -86,21 +86,21 @@ Ayrıca, izleme yöntemini kullanarak hem CPU hem de yazılım performans sayaç
 
 Eşzamanlılık profili oluşturma çok iş parçacıklı uygulamalar hakkında bilgi toplar. Kaynak çakışması profil oluşturma, rekabet iş parçacıklarının paylaşılan bir kaynağa erişimi beklediğinde ayrıntılı çağrı yığını bilgilerini toplar. Eşzamanlılık görselleştirmesi Ayrıca, çok iş parçacıklı uygulamanızın nasıl etkileşime girdiği hakkında daha genel bilgiler de toplar:
 
-  - İlişkilendirilemez.
-  - Donanım.
-  - İşletim sistemidir.
-  - Ana bilgisayardaki diğer süreçler.
+- İlişkilendirilemez.
+- Donanım.
+- İşletim sistemidir.
+- Ana bilgisayardaki diğer süreçler.
 
 Kaynak çekişme raporları toplam çekişmeler sayısını görüntüler. Ayrıca, modüller, işlevler, kaynak kodu satırları ve yönergelerin bir kaynak için bekledikleri toplam süreyi bildirir. Zaman çizelgesi grafikleri, oluştuklar sırasında çekişmeleri gösterir.
 
 Eşzamanlılık görselleştiricisi şunları bulmanıza yardımcı olacak grafik bilgileri görüntüler:
 
-  - Performans sorunları.
-  - CPU az kullanımı.
-  - İş parçacığı çakışması.
-  - İş parçacığı geçişi.
-  - Eşitleme gecikmeleri.
-  - Çakışan g/ç 'nin alanı.
+- Performans sorunları.
+- CPU az kullanımı.
+- İş parçacığı çakışması.
+- İş parçacığı geçişi.
+- Eşitleme gecikmeleri.
+- Çakışan g/ç 'nin alanı.
 
   Mümkün olduğunda, grafik çıkışı çağrı yığınından ve kaynak kodundaki verilere bağlantı sağlar. Eşzamanlılık görselleştirme verileri, yalnızca komut satırı uygulamaları ve Windows uygulamaları için toplanabilir.
 

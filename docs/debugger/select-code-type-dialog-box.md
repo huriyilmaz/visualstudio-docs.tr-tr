@@ -23,12 +23,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ccfe636cd8981c2f9dcc1375fb795d6c026b572
-ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
+ms.openlocfilehash: a6fefcea57b97ad3b31e4d10330756565c005184
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86211584"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248773"
 ---
 # <a name="select-code-type-dialog-box"></a>Kod Türünü Seç İletişim Kutusu
 
@@ -38,26 +38,26 @@ Bu iletişim kutusunu açmak için **Işleme İliştir** iletişim kutusunu aç�
 
 **Bu kod türlerinde hata ayıkla:** Belirtilen listeden, hata ayıklamak istediğiniz kodun türlerini seçin. Bu, [iliştirme hatası giderirken](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md#BKMK_Troubleshoot_attach_errors)yararlı olabilir. Bu seçenek, algılamayı yalnızca hata ayıklamak istediğiniz kod türleri olarak kısıtlar.
 
-   ::: moniker range=">=vs-2019"
-   - Blazor WebAssembly-İstemci tarafıBlazor WebAssembly
-   - GPU-yazılım öykünücüsü-bir GPU yazılım öykünücüsü üzerinde çalışan C++ kodu
-   - JavaScript (Chrome)-Chrome 'da çalışan JavaScript
-   - JavaScript (Microsoft Edge-Kmıum)-Windows 10 için Kmıum tabanlı Microsoft Edge 'de çalışan JavaScript
-   - JavaScript CDP (v3) hata ayıklayıcı-bir CDP istemcisinde hata ayıklama için kullanılan Chrome DevTools protokol sürüm 3
-   - Yönetilen (CoreCLR)-.NET Core
-   - Yönetilen (yerel derleme)-C++/CLR kodu
-   - Yönetilen (v 3.5, v 3.0, v 2.0)-.NET Framework 2,0 ve üzeri için .NET Framework kodu (3,5 ' e kadar)
-   - Yönetilen (v. 4.6, v 4.5, v 4.0)-.NET Framework 4,0 ve üzeri için .NET Framework kodu
-   - Yerel-C/C++
-   - Node.js hata ayıklama-Node.js çalışma zamanı tarafından barındırılan kod
-   - Python-python 
-   - Betik-JavaScript için genel betik hata ayıklayıcısını belirtir. Senaryolarınız için JavaScript (Chrome) gibi daha kısıtlayıcı seçenekleri kullanın.
-   - T-SQL-Transact-SQL
-   - Unity-Unity
-   - Yönetilen Uyumluluk modu-yönetilen kod için eski hata ayıklayıcıyı, genellikle C++/CLR kodu ile karışık modda hata ayıklamada kullanılmak üzere (karışık mod için Düzenle ve devam et ' i sağlar) veya eski hata ayıklayıcıyı hedefleyen uzantıları desteklemek için belirtir. Çoğu karma mod hata ayıklama senaryosunda, **Yerel** ve yönetilen uyumluluk modu yerine uygun **yönetilen** kod türlerini seçin.
-   ::: moniker-end
+::: moniker range=">=vs-2019"
+- Blazor WebAssembly -İstemci tarafı Blazor WebAssembly
+- GPU-yazılım öykünücüsü-bir GPU yazılım öykünücüsü üzerinde çalışan C++ kodu
+- JavaScript (Chrome)-Chrome 'da çalışan JavaScript
+- JavaScript (Microsoft Edge-Kmıum)-Windows 10 için Kmıum tabanlı Microsoft Edge 'de çalışan JavaScript
+- JavaScript CDP (v3) hata ayıklayıcı-bir CDP istemcisinde hata ayıklama için kullanılan Chrome DevTools protokol sürüm 3
+- Yönetilen (CoreCLR)-.NET Core
+- Yönetilen (yerel derleme)-C++/CLR kodu
+- Yönetilen (v 3.5, v 3.0, v 2.0)-.NET Framework 2,0 ve üzeri için .NET Framework kodu (3,5 ' e kadar)
+- Yönetilen (v. 4.6, v 4.5, v 4.0)-.NET Framework 4,0 ve üzeri için .NET Framework kodu
+- Yerel-C/C++
+- Node.js hata ayıklama-Node.js çalışma zamanı tarafından barındırılan kod
+- Python-python 
+- Betik-JavaScript için genel betik hata ayıklayıcısını belirtir. Senaryolarınız için JavaScript (Chrome) gibi daha kısıtlayıcı seçenekleri kullanın.
+- T-SQL-Transact-SQL
+- Unity-Unity
+- Yönetilen Uyumluluk modu-yönetilen kod için eski hata ayıklayıcıyı, genellikle C++/CLR kodu ile karışık modda hata ayıklamada kullanılmak üzere (karışık mod için Düzenle ve devam et ' i sağlar) veya eski hata ayıklayıcıyı hedefleyen uzantıları desteklemek için belirtir. Çoğu karma mod hata ayıklama senaryosunda, **Yerel** ve yönetilen uyumluluk modu yerine uygun **yönetilen** kod türlerini seçin.
+::: moniker-end
 
-   Çoğu senaryoda, aynı hata ayıklama oturumunda birden çok hata ayıklayıcıları eklemek desteklenmez. Bunu, Visual Studio 'nun ikinci bir örneğini kullanarak yapabilirsiniz.
+Çoğu senaryoda, aynı hata ayıklama oturumunda birden çok hata ayıklayıcıları eklemek desteklenmez. Bunu, Visual Studio 'nun ikinci bir örneğini kullanarak yapabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)

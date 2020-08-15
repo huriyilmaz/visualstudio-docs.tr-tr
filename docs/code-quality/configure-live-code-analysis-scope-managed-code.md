@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5b1e4362755bbbfa9ea220fcbdf92abf92723521
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 6df882d50d0c1d052191246605af856743ffdf3d
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85462129"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249189"
 ---
 # <a name="how-to-configure-live-code-analysis-scope-for-managed-code"></a>Nasıl yapılır: yönetilen kod için canlı kod analizi kapsamını yapılandırma
 
@@ -25,17 +25,17 @@ ms.locfileid: "85462129"
 Visual Studio, düzenleyicide kaynak dosyaları düzenlediğinizde *arka plan Analizi*olarak da adlandırılan, bir dizi Canlı Kod analizini yürütür. Bir kısmı, kabul edilebilir bir Visual Studio IDE düzenlemesi deneyimi için en az analiz gerektirir. Bazıları IDE özellikleri için iyileştirilmiş yanıt verme içindir. Bu bir nedenle, Roslyn çözümleyicilerinin tanılama ve kod düzeltmeleri gibi ek IDE işlevlerini etkinleştirmektir. İşlevlere bağlı olarak, bu çözümlemeler aşağıdaki gibi gruplandırılabilir:
 
 - **Tanılama arka plan hesaplama**: kaynak dosyalardaki hataları, uyarıları ve önerileri hesaplamak için analiz. Bu Tanılamalar, hata listesinde ve düzenleyicide dalgalı çizgiler olarak giriş gösterir. Bunlar iki kategoride sınıflandırılabilirler:
-    - C# ve Visual Basic derleyici tanılaması
-    - Şunları içeren Roslyn Çözümleyicisi tanılaması:
+  - C# ve Visual Basic derleyici tanılaması
+  - Şunları içeren Roslyn Çözümleyicisi tanılaması:
 
-        - Yerleşik IDE, kod stili önerilerini ve
-        - Geçerli çözümdeki projeler için [yüklenen](./install-roslyn-analyzers.md) üçüncü taraf çözümleyici paketleri.
+    - Yerleşik IDE, kod stili önerilerini ve
+    - Geçerli çözümdeki projeler için [yüklenen](./install-roslyn-analyzers.md) üçüncü taraf çözümleyici paketleri.
 
 - **Diğer arka plan analizleri**: IDE özelliklerine yönelik yanıt verme ve Visual Studio etkileşimini artırmaya yönelik analiz. Bu analizler için bazı örnekler şunlardır:
-    - Açık dosyaları arka planda ayrıştırma.
-    - Belirli IDE özelliklerinde iyileştirilmiş yanıt verme için sembolleri gerçekleştirmek üzere açık dosyaları olan projelerin arka plan derlenmesi.
-    - Sözdizimi ve sembol önbellekleri oluşturma.
-    - Formlar, denetimler vb. kaynak dosyaları için tasarımcı ilişkilendirmesi algılanıyor.
+  - Açık dosyaları arka planda ayrıştırma.
+  - Belirli IDE özelliklerinde iyileştirilmiş yanıt verme için sembolleri gerçekleştirmek üzere açık dosyaları olan projelerin arka plan derlenmesi.
+  - Sözdizimi ve sembol önbellekleri oluşturma.
+  - Formlar, denetimler vb. kaynak dosyaları için tasarımcı ilişkilendirmesi algılanıyor.
 
 ## <a name="default-analysis-scope"></a>Varsayılan analiz kapsamı
 
@@ -43,7 +43,7 @@ Varsayılan olarak, Visual Studio 'da _açılan_ tüm dosyalar için tanılama '
 
 ## <a name="custom-analysis-scope"></a>Özel analiz kapsamı
 
-Her bir arka plan analizinin varsayılan kapsamı, çoğu müşteri senaryosu ve çözümü için en iyi kullanıcı deneyimi, işlevselliği ve performansı için ayarlanmıştır. Ancak, müşterilerin arka plan analizini azaltmak veya artırmak üzere bu kapsamı özelleştirmek isteyebileceğiniz durumlar vardır. Örneğin:
+Her bir arka plan analizinin varsayılan kapsamı, çoğu müşteri senaryosu ve çözümü için en iyi kullanıcı deneyimi, işlevselliği ve performansı için ayarlanmıştır. Ancak, müşterilerin arka plan analizini azaltmak veya artırmak üzere bu kapsamı özelleştirmek isteyebileceğiniz durumlar vardır. Örnek:
 
 - Güç tasarrufu modu: kullanıcılar dizüstü pille çalışıyorsa, daha uzun pil ömrü için güç tüketimini en aza indirmek isteyebilir. Bu senaryoda, arka plan analizini en aza indirmek istiyoruz.
 - İsteğe bağlı kod analizi: kullanıcılar gerçek zamanlı çözümleyici yürütmeyi kapatmayı ve isteğe bağlı kod analizini el ile çalıştırmayı tercih ediyorsanız, arka plan analizini en aza indirmek istedikleri olur. Bkz. [nasıl yapılır: isteğe bağlı kod analizini el ile çalıştırma](./how-to-run-code-analysis-manually-for-managed-code.md).

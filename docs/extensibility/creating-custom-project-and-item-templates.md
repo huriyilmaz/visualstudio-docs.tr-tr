@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5c702aaaa51d86e2b8aac18a6b55201be03a635f
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 2d520c92e84286ab05f13ad140a9e2e5a3454e09
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85903316"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248580"
 ---
 # <a name="create-custom-project-and-item-templates"></a>Özel proje ve öğe şablonları oluşturma
 
@@ -72,9 +72,9 @@ Temel şablon oluşturma senaryolarında, sıkıştırılmış bir dosyaya çık
 
 1. VSıX projesi oluşturun. Daha fazla bilgi için bkz. [VSIX proje şablonu](../extensibility/vsix-project-template.md).
 
-2. VSıX projesini başlangıç projesi olarak ayarlayın. **Çözüm GEZGINI**VSIX projesi düğümünü seçin, sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
+2. VSıX projesini başlangıç projesi olarak ayarlayın. **Çözüm GEZGINI**VSIX projesi düğümünü seçin, öğesini seçin ve tutun (veya sağ tıklayın) ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
-3. Proje şablonu projesini VSıX projesinin bir varlığı olarak ayarlayın. *. Valtmanifest* dosyasını açın. **Varlıklar** sekmesine gidin ve **Yeni**' ye tıklayın.
+3. Proje şablonu projesini VSıX projesinin bir varlığı olarak ayarlayın. *. Valtmanifest* dosyasını açın. **Varlıklar** sekmesine gidin ve **Yeni**' yi seçin.
 
     1. **Tür** alanını **Microsoft. VisualStudio. ProjectTemplate** veya **Microsoft. VisualStudio. ItemTemplate**olarak ayarlayın.
 
@@ -82,7 +82,7 @@ Temel şablon oluşturma senaryolarında, sıkıştırılmış bir dosyaya çık
 
 4. Çözümü oluşturun ve **F5**tuşuna basın. Deneysel örnek görüntülenir.
 
-5. Proje şablonu projesi için, proje şablonunuzu,**File**Visual C# veya Visual Basic düğümündeki **Yeni proje** iletişim kutusunda (dosya  >  **Yeni**  >  **Proje**) listelendiğini görmeniz gerekir. Bir öğe şablonu projesi için, öğe şablonunuzun **Yeni öğe Ekle** iletişim kutusunda listelendiğini görmeniz gerekir. **Yeni öğe Ekle** iletişim kutusunu görüntülemek için, **Çözüm Gezgini**, proje düğümünü seçin ve **Add**  >  **Yeni öğe**Ekle ' ye tıklayın.
+5. Proje şablonu projesi için, proje şablonunuzu,**File**Visual C# veya Visual Basic düğümündeki **Yeni proje** iletişim kutusunda (dosya  >  **Yeni**  >  **Proje**) listelendiğini görmeniz gerekir. Bir öğe şablonu projesi için, öğe şablonunuzun **Yeni öğe Ekle** iletişim kutusunda listelendiğini görmeniz gerekir. **Yeni öğe Ekle** iletişim kutusunu görüntülemek için, **Çözüm Gezgini**, proje düğümünü seçin ve **Add**  >  **Yeni öğe**Ekle ' yi seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

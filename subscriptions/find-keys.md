@@ -7,12 +7,12 @@ ms.assetid: da8df006-4896-4ff9-b487-698d78deabc3
 ms.date: 07/30/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde ürün anahtarlarını bulma, talep etme ve dışa aktarma hakkında bilgi edinin
-ms.openlocfilehash: 8ee21c544a44bfd5eca831cdc9fd1c8e00adb35b
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.openlocfilehash: e9be61db1f72684dcff12d015ec5180607b41977
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87453745"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250731"
 ---
 # <a name="finding-and-claiming-product-keys-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde ürün anahtarlarını bulma ve oluşturma
 Bu makalede ürün anahtarlarının ' den nasıl bulunduğu, talep verilmesi ve dışarı aktarılacağı açıklanmaktadır https://my.visualstudio.com/productkeys .  Bir ürünü anahtar, perakende ve toplu lisans sürümleriyle ve günlük ürün anahtarı talep limitlerine göre etkinleştirme hakkında daha fazla bilgi için lütfen [ürün anahtarlarına genel bakış](product-keys.md)' ı ziyaret edin.
@@ -20,7 +20,7 @@ Bu makalede ürün anahtarlarının ' den nasıl bulunduğu, talep verilmesi ve 
 ## <a name="locating-and-claiming-product-keys"></a>Ürün anahtarlarını bulma ve oluşturma
 Ürün anahtarlarınızı görüntülemek için Visual Studio aboneliğinizde oturum açmış olmanız gerekir. [Karşıdan yüklemeler](https://my.visualstudio.com/downloads) sayfasında aşağıda gösterildiği gibi, belirli bir ürün Için mavi **get anahtar** bağlantısı seçilerek tek tek ürün anahtarları bulunur.  Tüm anahtarlar, [ürün anahtarları](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) sayfasında toplu olarak da kullanılabilir. Tek bir ürün için birden çok anahtar varsa, bu yükleme için notlar sütununda notlar görüntülenir ve bu da hangi anahtarın kullanılması gerektiğini belirlemenize yardımcı olur.
 > [!div class="mx-imgBorder"]
-> ![Indirmeler sayfasından anahtar al](_img/product-keys/download-get-key.png "Bu ürün için bir anahtar almak üzere herhangi bir indirmenin bilgi sayfasında anahtar al ' a tıklayın.")
+> ![Indirmeler sayfasından anahtar al](_img/product-keys/download-get-key.png "Bu ürün için bir anahtar almak üzere herhangi bir indirmenin bilgi sayfasında anahtar al ' ı seçin.")
 
 Bazı ürünler ürünün birden çok sürümünü tek bir indirme halinde paketler. Bu durumlarda, girilen ürün anahtarı ürünün hangi sürümünün yüklü olduğunu belirler.
 Etkinleştirme gerekli olmadığından, bazı anahtarlar, "static" anahtarları gibi otomatik olarak sağlanır. Diğer anahtarların, ürün için **anahtar al** bağlantısı seçilerek talep alınmalıdır.
@@ -50,7 +50,7 @@ Yalnızca etkin abonelikleri olan aboneler ürünleri indirebilir ve ürün anah
 
 Bir ürün anahtarı talep etmek için:
 1. Visual Studio aboneliğinizde oturum açın.  Ürünleri indirmek veya ürün anahtarlarını talep etmek için oturum açmış olmanız gerekir.
-2. [Ürün anahtarları](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) sekmesine tıklayın.
+2. [Ürün anahtarları](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) sekmesini seçin.
 3. Ürün anahtarları ürün adına göre alfabetik olarak listelenir.  İstediğiniz ürünün adına aşağı doğru kaydırabilir ya da sayfanın en üstündeki arama çubuğunu kullanarak arama yapabilirsiniz.
 > [!div class="mx-imgBorder"]
 > ![Ürün anahtarı ara](_img/product-keys/search-keys.png "İstediğiniz ürüne kaydırın veya herhangi bir ürünü hızlı bir şekilde bulmak için arama kutusunu kullanın.")
@@ -64,7 +64,7 @@ Gördüğünüz gibi, çeşitli sürümler listelenir.  Tek bir anahtar, 16,0 ve
 > [!IMPORTANT]
 > Aboneliğinizin süresi dolarsa, artık yeni anahtarları talep edemeyeceksiniz veya talep ettiğiniz anahtarları dışarı aktarabilirsiniz.
 
-Anahtarlarınızı dışarı aktarmak için, ürün anahtarları sayfasının en sağındaki **tüm anahtarları dışarı aktar** bağlantısına tıklamanız yeterlidir.  KeysExport.xml adlı bir. xml dosyası oluşturulur ve dosyayı açma veya kaydetme seçeneğiniz olacaktır.  Bu dosyayı .xml dosyalarını işleyebilen bir uygulamayla açmanız gerekir.  Örneğin dosyayı Excel’de salt okunur bir çalışma kitabı olarak açabilirsiniz.
+Anahtarlarınızı dışarı aktarmak için, ürün anahtarları sayfasının en sağındaki **tüm anahtarları dışarı aktar** bağlantısını seçmeniz yeterlidir.  KeysExport.xml adlı bir. xml dosyası oluşturulur ve dosyayı açma veya kaydetme seçeneğiniz olacaktır.  Bu dosyayı .xml dosyalarını işleyebilen bir uygulamayla açmanız gerekir.  Örneğin dosyayı Excel’de salt okunur bir çalışma kitabı olarak açabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)

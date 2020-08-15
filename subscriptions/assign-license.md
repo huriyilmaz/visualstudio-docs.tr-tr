@@ -7,12 +7,12 @@ ms.assetid: 4e529a43-7aed-4eee-895d-862a631952df
 ms.date: 03/02/2020
 ms.topic: conceptual
 description: Yöneticilerin abonelere nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: e8eba6ad97d0f5e7e1da0e75093c33658f26a56a
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: aa3c219a605b552ea1c4b785ff8fb1f92edf04ac
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87235023"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249472"
 ---
 # <a name="assign-licenses-in-the-visual-studio-subscriptions-administration-portal"></a>Visual Studio abonelikleri yönetim portalı 'nda lisans atama
 Visual Studio abonelikleri Yöneticisi olarak, bireysel kullanıcılara ve Kullanıcı gruplarına abonelik atamak için yönetim portalını kullanabilirsiniz.
@@ -34,7 +34,7 @@ Abonelik avantajlarına erişebilmeleri için bir Visual Studio aboneliğini yen
 1. [Yönetim portalında](https://manage.visualstudio.com)oturum açın.
 2. Tek bir Visual Studio abonesi 'na bir lisans atamak için, tablonun en üstünde bulunan **Ekle**' yi seçin ve **bireysel abone**' i seçin.
    > [!div class="mx-imgBorder"]
-   > ![Tek bir abone ekleme](_img/assign-license-add/add-subscriber-individual.png "Ekle ' ye tıklayın ve tek bir abonelik atamak için bireysel abone ' i seçin.")
+   > ![Tek bir abone ekleme](_img/assign-license-add/add-subscriber-individual.png "Ekle ' yi seçin ve tek bir abonelik atamak için bireysel abone ' i seçin.")
 3. Yeni abone için form alanlarına bilgi girin. Kuruluşunuz Azure Active Directory kullanıyorsa, **ad** alanı geçerli dizininizde kişileri bulmak için arama işlevi olarak davranır, böylece arama sonuçlarından doğru kullanıcıyı seçebilirsiniz. Bu kişiyi seçtikten sonra, oturum açma e-postası ve bildirim e-postası otomatik olarak doldurulur.
    > [!div class="mx-imgBorder"]
    > ![Abone ayrıntıları](_img/assign-license-add/subscriber-details.png "Abone adı ve diğer ayrıntıları girin veya kiracı üyelerinden birini seçin.")
@@ -53,10 +53,10 @@ Abonelik avantajlarına erişebilmeleri için bir Visual Studio aboneliğini yen
 
     Seçenekleri seçip abone için veri girmeyi tamamladığınızda, **abone Ekle** ' nin altında **Ekle** ' yi seçin.
    > [!div class="mx-imgBorder"]
-   > ![Ekle düğmesini seçin](media/add-button.png "Bilgileri kaydetmek ve aboneliği aboneye atamak için Ekle ' ye tıklayın.")
+   > ![Ekle düğmesini seçin](media/add-button.png "Bilgileri kaydetmek ve aboneliği aboneye atamak için Ekle ' yi seçin.")
 
 ## <a name="resend-assignment-emails"></a>Atama e-postalarını yeniden gönder
-Bir abone ekledikten sonra, bir atama e-postası, daha fazla yönerge ile otomatik olarak yeni aboneye gönderilir. Abone ' i seçip üst menüdeki yeniden **Gönder** düğmesine tıklayarak atama e-postasını dilediğiniz zaman gönderebilirsiniz.  E-postaları birden çok kullanıcıya yeniden göndermek için, aboneleri seçerken **CTRL** tuşunu basılı tutun.  Yeniden **Gönder** düğmesine tıkladığınızda, bu abonelere yeniden göndermek istediğinizi onaylamanızı isteyen bir iletişim kutusu görürsünüz.  
+Bir abone ekledikten sonra, bir atama e-postası, daha fazla yönerge ile otomatik olarak yeni aboneye gönderilir. Atama e-postasını istediğiniz zaman, abone ' i seçip üst menüdeki yeniden **Gönder** düğmesini seçerek gönderebilirsiniz.  E-postaları birden çok kullanıcıya yeniden göndermek için, aboneleri seçerken **CTRL** tuşunu basılı tutun.  Yeniden **Gönder** düğmesini seçtiğinizde, bu abonelere yeniden göndermek istediğinizi onaylamanızı isteyen bir iletişim kutusu görürsünüz.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)

@@ -13,26 +13,27 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ac8b07e5e788a258e39cce5209b33c0190b08bf
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 643da538626395434c1269e2294d90b332c564e2
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75569198"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249881"
 ---
 # <a name="go-to-line-dialog-box"></a>Satıra Git iletişim kutusu
 
-**Satıra Git** iletişim kutusu, etkin belgede belirli bir satıra geçmenizi sağlar. Bu iletişim kutusuna erişmek için, düzenleme için bir belge açın ve ardından**Satıra** **Git'i** >  **Düzenle'yi** > seçin veya **Ctrl**+**G**tuşuna basın.
+**Satıra git** iletişim kutusu etkin belgedeki belirli bir satıra gitmenizi sağlar. Bu iletişim kutusuna erişmek için, düzenleme için bir belge açın ve ardından **Düzenle**git ' i seçerek  >  **Go To**  >  **satıra gidin** veya **CTRL** + **G**tuşuna basın.
 
-![Visual Studio'da Satıra Git iletişim kutusu](media/go-to-line-dialog-box.png)
+![Visual Studio 'da satıra Git iletişim kutusu](media/go-to-line-dialog-box.png)
 
-## <a name="line-number-1---n"></a>Satır numarası (1 - \<n>)
+## <a name="line-number-1---n"></a>Satır numarası (1- \<n> )
 
-Satır **numarası (1 \<- n>)** kutusuna, taşımak istediğiniz etkin belgedeki satır numarasını girin. Girilen sayı, geçerli belgedeki son satır numarası ile 1 arasında olmalıdır.
+**Satır numarası (1- \<n> )** kutusuna, etkin belgedeki, taşımak istediğiniz satırın numarasını girin. Girilen sayı 1 ile geçerli belgedeki son satır numarası arasında olmalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Git komutlarını kullanarak kod bulma](../../ide/go-to.md)
-- [Yer imlerini kodda ayarlama](../../ide/setting-bookmarks-in-code.md)
+- [Kodda yer işaretleri ayarlama](../../ide/setting-bookmarks-in-code.md)
 - [Metin bulma ve değiştirme](../../ide/finding-and-replacing-text.md)
 - [Kod düzenleyicisinin özellikleri](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [Git komutu](go-to-command.md)

@@ -11,12 +11,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d4689985d159bd832bc3cadfb54eb17fae2ae71a
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 020983182706bd6d9382f4d0bd4885ffa0f86f52
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183671"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247594"
 ---
 # <a name="msbuild-items"></a>MSBuild öğeleri
 
@@ -124,7 +124,7 @@ Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluş
 
  Bir öğe sıfır veya daha fazla meta veri değerine sahip olabilir. Meta veri değerlerini dilediğiniz zaman değiştirebilirsiniz. Meta verileri boş bir değere ayarlarsanız derlemeden etkin bir şekilde kaldırırsınız.
 
-### <a name="reference-item-metadata-in-a-project-file"></a><a name="BKMK_ReferencingItemMetadata"></a>Proje dosyasındaki başvuru öğesi meta verileri
+### <a name="reference-item-metadata-in-a-project-file"></a><a name="BKMK_ReferencingItemMetadata"></a> Proje dosyasındaki başvuru öğesi meta verileri
 
  Proje dosyasının tamamında,%() sözdizimini kullanarak öğe meta verilerine başvurabilirsiniz \<ItemMetadataName> . Belirsizlik varsa, öğe türü adını kullanarak bir başvuruyu niteleyebilirsiniz. Örneğin,%( \<ItemType.ItemMetaDataName> ) belirtebilirsiniz. Aşağıdaki örnek, Ileti görevinin toplu işi için görüntüleme meta verilerini kullanır. Toplu işleme için öğe meta verilerini kullanma hakkında daha fazla bilgi için, bkz. [görev toplu işleme Içindeki öğe meta verileri](../msbuild/item-metadata-in-task-batching.md).
 
@@ -144,11 +144,11 @@ Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluş
 </Project>
 ```
 
-### <a name="well-known-item-metadata"></a><a name="BKMK_WellKnownItemMetadata"></a>İyi bilinen öğe meta verileri
+### <a name="well-known-item-metadata"></a><a name="BKMK_WellKnownItemMetadata"></a> İyi bilinen öğe meta verileri
 
  Öğe türüne bir öğe eklendiğinde, bu öğeye bazı iyi bilinen meta veriler atanır. Örneğin, tüm öğeler, \<Filename> değeri öğenin dosya adı (uzantısı olmadan) olan%() iyi bilinen meta verilere sahiptir. Daha fazla bilgi için bkz. [tanınmış öğe meta verileri](../msbuild/msbuild-well-known-item-metadata.md).
 
-### <a name="transform-item-types-by-using-metadata"></a><a name="BKMK_Transforming"></a>Meta verileri kullanarak öğe türlerini dönüştürme
+### <a name="transform-item-types-by-using-metadata"></a><a name="BKMK_Transforming"></a> Meta verileri kullanarak öğe türlerini dönüştürme
 
  Meta verileri kullanarak öğe listelerini yeni öğe listelerine dönüştürebilirsiniz. Örneğin, `CppFiles` *. cpp* dosyalarını temsil eden öğeler içeren bir öğe türünü, ifadesini kullanarak. cpp dosyalarını karşılık gelen bir *. obj* dosyası listesine dönüştürebilirsiniz `@(CppFiles -> '%(Filename).obj')` .
 
@@ -191,7 +191,7 @@ Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluş
 
  .NET Framework 3,5 ' den başlayarak `Target` öğeler, öğe öğeleri Içerebilen [ItemGroup](../msbuild/itemgroup-element-msbuild.md) öğeleri içerebilir. Bu bölümdeki öznitelikler, içindeki bir öğesi için belirtildiğinde geçerlidir `ItemGroup` `Target` .
 
-### <a name="remove-attribute"></a><a name="BKMK_RemoveAttribute"></a>Özniteliği kaldır
+### <a name="remove-attribute"></a><a name="BKMK_RemoveAttribute"></a> Özniteliği kaldır
 
  `Remove`Öznitelik, öğe türünden belirli öğeleri (dosyaları) kaldırır. Bu öznitelik .NET Framework 3,5 ' de tanıtılmıştı (yalnızca hedefler içinde). Hem iç hem de dış hedefler, MSBuild 15,0 ' den itibaren desteklenmektedir.
 
@@ -205,7 +205,7 @@ Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluş
 </Target>
 ```
 
-### <a name="keepmetadata-attribute"></a><a name="BKMK_KeepMetadata"></a>KeepMetadata özniteliği
+### <a name="keepmetadata-attribute"></a><a name="BKMK_KeepMetadata"></a> KeepMetadata özniteliği
 
  Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `KeepMetadata` özniteliğini içerebilir. Bu öznitelik belirtilmişse, yalnızca noktalı virgülle ayrılmış ad listesinde belirtilen meta veriler, kaynak öğeden hedef öğeye aktarılır. Bu öznitelik için boş bir değer, Belirtmemeye eşdeğerdir. `KeepMetadata`Öznitelik .NET Framework 4,5 ' de tanıtılmıştı.
 
@@ -248,7 +248,7 @@ Output:
 -->
 ```
 
-### <a name="removemetadata-attribute"></a><a name="BKMK_RemoveMetadata"></a>RemoveMetadata özniteliği
+### <a name="removemetadata-attribute"></a><a name="BKMK_RemoveMetadata"></a> RemoveMetadata özniteliği
 
  Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `RemoveMetadata` özniteliğini içerebilir. Bu öznitelik belirtilmişse, tüm meta veriler kaynak öğeden, adları noktalı virgülle ayrılmış ad listesinde yer alan meta veriler hariç hedef öğeye aktarılır. Bu öznitelik için boş bir değer, Belirtmemeye eşdeğerdir. `RemoveMetadata`Öznitelik .NET Framework 4,5 ' de tanıtılmıştı.
 
@@ -298,9 +298,9 @@ Output:
 -->
 ```
 
-### <a name="keepduplicates-attribute"></a><a name="BKMK_KeepDuplicates"></a>Mi Pduplilıları özniteliği
+### <a name="keepduplicates-attribute"></a><a name="BKMK_KeepDuplicates"></a> Mi Pduplilıları özniteliği
 
- Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `KeepDuplicates` özniteliğini içerebilir. `KeepDuplicates`öğe, `Boolean` varolan bir öğenin tam yinelemesi ise, bir öğenin hedef gruba eklenip eklenmeyeceğini belirten bir özniteliktir.
+ Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `KeepDuplicates` özniteliğini içerebilir. `KeepDuplicates` öğe, `Boolean` varolan bir öğenin tam yinelemesi ise, bir öğenin hedef gruba eklenip eklenmeyeceğini belirten bir özniteliktir.
 
  Kaynak ve hedef öğe aynı ekleme değerine ancak farklı meta verilere sahip ise, olarak ayarlanmış olsa bile öğe eklenir `KeepDuplicates` `false` . Bu öznitelik için boş bir değer, Belirtmemeye eşdeğerdir. `KeepDuplicates`Öznitelik .NET Framework 4,5 ' de tanıtılmıştı.
 
@@ -338,7 +338,7 @@ Output:
 -->
 ```
 
-##  <a name="updating-metadata-on-items-in-an-itemgroup-outside-of-a-target"></a>Bir hedef dışındaki bir ItemGroup öğelerinde bulunan öğelerde meta verileri güncelleştirme
+## <a name="updating-metadata-on-items-in-an-itemgroup-outside-of-a-target"></a>Bir hedef dışındaki bir ItemGroup öğelerinde bulunan öğelerde meta verileri güncelleştirme
 
 Hedeflerin dışındaki öğeler, var olan meta verilerinin öznitelik aracılığıyla güncelleştirilmesini sağlayabilir `Update` . Bu öznitelik, hedefler altındaki öğeler **için kullanılamaz.**
 
@@ -502,7 +502,7 @@ Açıklamalarının
   - Başvurulan her öğe türünden son oluşum yakalanır (Bu nedenle, öğe türü başına yakalanan bir öğe).
   - Bu, hedefler altında görev öğesi toplu işleme davranışını eşleştirir.
 - Her biri%() başvuruyu koyabileceği yer:
-  - Meta Veriler
+  - Meta veri
   - Meta veri koşulları
 - Meta veri adı eşleştirmesi büyük/küçük harfe duyarlıdır.
 :::moniker-end
@@ -596,9 +596,9 @@ Item1: notebook
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Item öğesi (MSBuild)](../msbuild/item-element-msbuild.md)
-- [Ortak MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
+- [Yaygın MSBuild proje öğeleri](../msbuild/common-msbuild-project-items.md)
 - [MSBuild kavramları](../msbuild/msbuild-concepts.md)
-- [MSBuild](../msbuild/msbuild.md)
+- [MSBUILD](../msbuild/msbuild.md)
 - [Nasıl yapılır: derlenecek dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md)
 - [Nasıl yapılır: derlemeden Dosya dışlama](../msbuild/how-to-exclude-files-from-the-build.md)
 - [Nasıl yapılır: virgülle ayrılmış bir öğe listesini görüntüleme](../msbuild/how-to-display-an-item-list-separated-with-commas.md)

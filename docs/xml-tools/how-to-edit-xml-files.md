@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ce3e41b2fe9dfdb080e23fb4270454bbd57f7ef
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: 02f078d9293fa8b02267c5003a92d1d60134e1a4
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85817209"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249515"
 ---
 # <a name="how-to-edit-xml-files"></a>Nasıl yapılır: XML dosyalarını düzenleme
 
@@ -22,7 +22,7 @@ XML Düzenleyicisi, XML dosyaları için yeni düzenleyicidir. Tek başına bir 
 > [!NOTE]
 > XHTML belgeleri HTML Düzenleyicisi tarafından işlenir.
 
-Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyaya çift tıklayın.
+Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyayı açın.
 
 ## <a name="add-a-new-xml-file-to-a-project"></a>Projeye yeni bir XML dosyası ekleyin
 
@@ -50,7 +50,7 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyaya çift t�
 
 2. Yeni bir XML dosyası oluşturmak için **XML dosyasını** seçin; veya yeni bir XSLT stil sayfası oluşturmak için **XSLT dosyası** ' nı seçin.
 
-3. **Aç**'a tıklayın.
+3. **Aç**’ı seçin.
 
 ## <a name="create-an-empty-project-for-xml-files"></a>XML dosyaları için boş bir proje oluştur
 
@@ -62,7 +62,7 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyaya çift t�
 
 2. Seçtiğiniz kod dilini seçin ve **boş proje (.NET Framework)** şablonunu seçin.
 
-3. **Tamam**'a tıklayın.
+3. **Tamam**’ı seçin.
 
 ::: moniker-end
 
@@ -70,9 +70,9 @@ Bir XML dosyasını düzenlemek için, düzenlemek istediğiniz dosyaya çift t�
 
 1. **Dosya** menüsünden **Yeni** > **Proje**' yi seçin.
 
-2. Şablon arama kutusuna **boş proje** girin, **boş proje (.NET Framework)** şablonunu seçin ve ardından **İleri**' ye tıklayın.
+2. Şablon arama kutusuna **boş proje** girin, **boş proje (.NET Framework)** şablonunu seçin ve ardından **İleri**' yi seçin.
 
-3. **Oluştur**'a tıklayın.
+3. **Oluştur**’u seçin.
 
 ::: moniker-end
 

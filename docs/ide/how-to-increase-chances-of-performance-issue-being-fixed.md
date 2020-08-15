@@ -5,12 +5,12 @@ author: madskristensen
 ms.author: madsk
 ms.date: 11/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: 2e5718740b9219ee988859e530591305394fb239
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 50d1ed4edd2e1fa52661995f4d72466646dfd879
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85284314"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250511"
 ---
 # <a name="how-to-increase-the-chances-of-a-performance-issue-being-fixed"></a>Bir performans sorununun düzeltilme olasılığını artırma
 
@@ -32,15 +32,15 @@ Birçok sorun için herhangi bir farklı imza veya yeniden oluşturma adımı bu
 
 Aşağıda açıklanan sorunlar iyi tanılama dosyaları olmadan tanılanması zor olan sorunlardır. Sorununuzu en iyi açıklayan durumu tanımladıktan sonra, bu servis talebine özgü geri bildirim adımlarını izleyin.
 
--   [Kilitlenmeler:](#crashes) İşlem (Visual Studio) beklenmedik bir şekilde sonlandırıldığında kilitlenme oluşur.
+- [Kilitlenmeler:](#crashes) İşlem (Visual Studio) beklenmedik bir şekilde sonlandırıldığında kilitlenme oluşur.
 
--   [Yanıt verme süresi:](#unresponsiveness) , Uzun bir süre boyunca yanıt vermemeye başladı.
+- [Yanıt verme süresi:](#unresponsiveness) , Uzun bir süre boyunca yanıt vermemeye başladı.
 
--   [Yavaşlık sorunları:](#slowness-and-high-cpu-issues) VS 'deki belirli bir eylem, istenenden daha yavaş
+- [Yavaşlık sorunları:](#slowness-and-high-cpu-issues) VS 'deki belirli bir eylem, istenenden daha yavaş
 
--   [Yüksek CPU:](#slowness-and-high-cpu-issues) Beklenmedik bir şekilde yüksek CPU kullanımı uzatılmış dönemleri
+- [Yüksek CPU:](#slowness-and-high-cpu-issues) Beklenmedik bir şekilde yüksek CPU kullanımı uzatılmış dönemleri
 
--   [Işlem dışı sorunlar:](#out-of-process-issues) Visual Studio uydu sürecinin neden olduğu bir sorun
+- [Işlem dışı sorunlar:](#out-of-process-issues) Visual Studio uydu sürecinin neden olduğu bir sorun
 
 ## <a name="crashes"></a>Çökme
 İşlem (Visual Studio) beklenmedik bir şekilde sonlandırıldığında kilitlenme oluşur.
@@ -57,14 +57,13 @@ Doğrudan tekrarlanabilir kilitlenmeler, aşağıdaki özelliklerin tümüne sah
 
 Bu sorunlar için "[sorunu bildirme](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)" bölümündeki adımları izleyin ve şunları eklediğinizden emin olun:
 
--   Sorunu yeniden oluşturma adımları
+- Sorunu yeniden oluşturma adımları
 
--   Yukarıda açıklanan şekilde tek başına yeniden üretme projesi. Tek başına yeniden oluşturma mümkün değilse lütfen şunları ekleyin:
+- Yukarıda açıklanan şekilde tek başına yeniden üretme projesi. Tek başına yeniden oluşturma mümkün değilse lütfen şunları ekleyin:
 
-    -   Açık projelerin dili (C \# , C++, vb.)
+  - Açık projelerin dili (C \# , C++, vb.)
 
-    -   Proje türü (konsol uygulaması, ASP.NET, vb.)
-
+  - Proje türü (konsol uygulaması, ASP.NET, vb.)
 
 > [!NOTE]
 > **En değerli geri bildirim:** Bu durumda, en değerli geri bildirim, sorunu örnek kaynak kodla birlikte yeniden oluşturma adımları kümesidir.
@@ -95,15 +94,15 @@ Döküm sayısını ve döküm klasörünü uygun şekilde özelleştirin. Bu ay
 > [!NOTE] 
 > Bu yöntem tarafından üretilen her döküm dosyası boyutu 4 GB 'a kadar olacaktır. DumpFolder 'ı yeterli sürücü alanına sahip bir konuma ayarladığınızdan emin olun veya DumpCount sayısını uygun şekilde ayarlayın.
 
-Visual Studio her kilitlendiğinde,devenv.exe bir döküm dosyası oluşturacaktır **. [ Number]. dmp** dosyası yapılandırılmış konumda.
+Visual Studio her kilitlendiğinde,devenv.exe bir döküm dosyası oluşturacaktır ** . [ Number]. dmp** dosyası yapılandırılmış konumda.
 
 Ardından, Visual Studio 'nun "sorun bildir..." seçeneğini kullanın. Özellik. Uygun dökümü eklemenize olanak sağlayacak.
 
-1.  Rapor ettiğiniz kilitlenme için döküm dosyasını bulun (doğru oluşturulma zamanına sahip bir dosya arayın)
+1. Rapor ettiğiniz kilitlenme için döküm dosyasını bulun (doğru oluşturulma zamanına sahip bir dosya arayın)
 
-2.  Mümkünse, \* geri bildirim göndermeden önce dosyanın boyutunu azaltmak için dosyayı (. zip) ZIP
+2. Mümkünse, \* geri bildirim göndermeden önce dosyanın boyutunu azaltmak için dosyayı (. zip) ZIP
 
-3.  "[Sorunu bildirme](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)" bölümündeki adımları izleyin ve yığın dökümünü yeni bir geri bildirim öğesine ekleyin.
+3. "[Sorunu bildirme](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)" bölümündeki adımları izleyin ve yığın dökümünü yeni bir geri bildirim öğesine ekleyin.
 
 > [!NOTE] 
 > **En değerli geri bildirim:** Bu durumda, en değerli geri bildirim kilitlenme sırasında yakalanan yığın dökümünden oluşur.
@@ -135,33 +134,33 @@ Yavaşlan veya yüksek CPU kullanımı sorunu, yavaş işlem veya yüksek CPU ol
 
 Performansı yakalamaya en iyi sonuçları elde etmek için şu adımları izleyin:
 
-1.  Zaten çalışmıyorsa, Visual Studio 'nun bir kopyasını açarak sorunu yeniden oluşturacaksınız.
+1. Zaten çalışmıyorsa, Visual Studio 'nun bir kopyasını açarak sorunu yeniden oluşturacaksınız.
 
-    -   Sorunu yeniden oluşturmak için her şeyin ayarlanmış olmasını sağlar. Örneğin, belirli bir dosya açıldığında belirli bir projenin yüklenmesi gerekiyorsa, devam etmeden önce bu adımların her ikisinin de tamamlanmış olduğundan emin olun.
+    - Sorunu yeniden oluşturmak için her şeyin ayarlanmış olmasını sağlar. Örneğin, belirli bir dosya açıldığında belirli bir projenin yüklenmesi gerekiyorsa, devam etmeden önce bu adımların her ikisinin de tamamlanmış olduğundan emin olun.
 
-    -   Bir çözümü yüklemeye özgü bir sorun *bildirmeyen* performans izlemesini kaydetmeden önce çözümü açtıktan sonra, çözüm boyutuna bağlı olarak 5-10 dakika (veya daha fazla) beklemeyi deneyin. Çözüm yükleme işlemi büyük miktarda veri üretir, bu nedenle birkaç dakika beklemek, raporlamadaki belirli bir sorunu odaklanmamıza yardımcı olur.
+    - Bir çözümü yüklemeye özgü bir sorun *bildirmeyen* performans izlemesini kaydetmeden önce çözümü açtıktan sonra, çözüm boyutuna bağlı olarak 5-10 dakika (veya daha fazla) beklemeyi deneyin. Çözüm yükleme işlemi büyük miktarda veri üretir, bu nedenle birkaç dakika beklemek, raporlamadaki belirli bir sorunu odaklanmamıza yardımcı olur.
 
-2.  *Hiçbir çözüm açık olmadan* Visual Studio 'nun ikinci bir kopyasını Başlat
+2. *Hiçbir çözüm açık olmadan* Visual Studio 'nun ikinci bir kopyasını Başlat
 
-3.  Visual Studio 'nun yeni kopyasında **sorun bildir** aracını açın
+3. Visual Studio 'nun yeni kopyasında **sorun bildir** aracını açın
 
-4.  "İzleme ve yığın dökümü sağlayın (isteğe bağlı)" adımına ulaşana kadar [sorun bildirme](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) bölümündeki adımları izleyin.
+4. "İzleme ve yığın dökümü sağlayın (isteğe bağlı)" adımına ulaşana kadar [sorun bildirme](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) bölümündeki adımları izleyin.
 
-5.  Visual Studio 'nun ilk kopyasını (performans sorunundan bir sorunla karşılaşmadan) kaydetmeyi ve kaydı başlatmayı seçin.
+5. Visual Studio 'nun ilk kopyasını (performans sorunundan bir sorunla karşılaşmadan) kaydetmeyi ve kaydı başlatmayı seçin.
 
-    -   Adım Kaydedicisi uygulaması görüntülenir ve kayıt başlatılır.
+    - Adım Kaydedicisi uygulaması görüntülenir ve kayıt başlatılır.
 
-    -   **Kayıt sırasında,** Visual Studio 'nun ilk kopyasında sorunlu eylemi gerçekleştirin. Kaydedilen süre içinde görünmedikleri takdirde belirli performans sorunlarını düzeltmemizi zorlaştırıyor.
+    - **Kayıt sırasında,** Visual Studio 'nun ilk kopyasında sorunlu eylemi gerçekleştirin. Kaydedilen süre içinde görünmedikleri takdirde belirli performans sorunlarını düzeltmemizi zorlaştırıyor.
 
-    -   Eylem 30 saniyeden kısaysa ve kolayca tekrarlanabilir, sorunu daha fazla göstermek için eylemi tekrarlayın.
+    - Eylem 30 saniyeden kısaysa ve kolayca tekrarlanabilir, sorunu daha fazla göstermek için eylemi tekrarlayın.
 
-    -   Çoğu durumda, özellikle de sorunlu bir işlem 30 saniyeden uzun süre boyunca sorunları göstermek için 60 saniyelik bir izleme yeterlidir. Süre, düzeltilmesi gereken davranışı yakalamak için gerektiği şekilde ayarlanabilir.
+    - Çoğu durumda, özellikle de sorunlu bir işlem 30 saniyeden uzun süre boyunca sorunları göstermek için 60 saniyelik bir izleme yeterlidir. Süre, düzeltilmesi gereken davranışı yakalamak için gerektiği şekilde ayarlanabilir.
 
-6.  Raporlamak istediğiniz yavaş işlem veya yüksek CPU olayı tamamlandıktan hemen sonra Adım Kaydedicisi içindeki "Kaydı Durdur" seçeneğine tıklayın. Performans izlemenin işlenmesi birkaç dakika sürebilir.
+6. Raporlamak istediğiniz yavaş işlem veya yüksek CPU olayı tamamlandıktan hemen sonra Adım Kaydedicisi içindeki "Kaydı Durdur" seçeneğine tıklayın. Performans izlemenin işlenmesi birkaç dakika sürebilir.
 
-7.  İşlem tamamlandıktan sonra geri bildiriminiz için birkaç ek olacaktır. Sorunu yeniden oluşturmaya yardımcı olabilecek ek dosyalar ekleyin (örnek bir proje, ekran görüntüleri, videolar vb.).
+7. İşlem tamamlandıktan sonra geri bildiriminiz için birkaç ek olacaktır. Sorunu yeniden oluşturmaya yardımcı olabilecek ek dosyalar ekleyin (örnek bir proje, ekran görüntüleri, videolar vb.).
 
-8.  Geri bildirimi gönderin.
+8. Geri bildirimi gönderin.
 
 Bir performans izlemesini kaydederken, raporlama yaptığınız yavaş işlem veya yüksek CPU bir uçtan geliyorsa kaydı hemen durdurun. Çok fazla bilgi toplanırsa, en eski bilgilerin üzerine yazılır. İzleme yakında durdurulmamışsa (birkaç saniye içinde), ilginç bir işlemden sonra, yararlı izleme verilerinin üzerine yazılır.
 
@@ -183,13 +182,13 @@ Visual Studio 'ya paralel olarak çalışan ve ana Visual Studio işleminin dı�
 
 Bu tür sorunların en çok eyleme neden olduğu, aşağıdaki adımları izleyerek toplanabilecek ek Günlükler sağlamaktır:
 
-1.  Bu doğrudan tekrarlanabilir bir sorun ise, **% Temp%/servicehub/logs** klasörünü silerek başlayın. Bu sorunu yeniden oluşturamıyorsanız lütfen bu klasörü bozulmadan koruyun ve aşağıdaki madde işaretlerini yoksayın:
+1. Bu doğrudan tekrarlanabilir bir sorun ise, **% Temp%/servicehub/logs** klasörünü silerek başlayın. Bu sorunu yeniden oluşturamıyorsanız lütfen bu klasörü bozulmadan koruyun ve aşağıdaki madde işaretlerini yoksayın:
 
-    -   **Servicehubtracelevel** genel ortam değişkenini **All** olarak ayarlayın
-    -   Sorunu yeniden üretin.
+    - **Servicehubtracelevel** genel ortam değişkenini **All** olarak ayarlayın
+    - Sorunu yeniden üretin.
 
-2.  Microsoft Visual Studio ve .NET Framework günlük toplama aracını [buraya](https://www.microsoft.com/download/details.aspx?id=12493)indirin.
-3.  Aracı çalıştırın. Bu, **% Temp%/vslogs.zip**dosyasına bir ZIP dosyası verir. Lütfen bu dosyayı geri bildiriminiz için bağlayın.
+2. Microsoft Visual Studio ve .NET Framework günlük toplama aracını [buraya](https://www.microsoft.com/download/details.aspx?id=12493)indirin.
+3. Aracı çalıştırın. Bu, **% Temp%/vslogs.zip**dosyasına bir ZIP dosyası verir. Lütfen bu dosyayı geri bildiriminiz için bağlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

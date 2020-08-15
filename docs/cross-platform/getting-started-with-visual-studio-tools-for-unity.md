@@ -10,12 +10,12 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 32766fdf69136f3882186bbcad08aaf83d2e573e
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.openlocfilehash: a8f3e183bd72e9894eae55a5ed7c4f9322d44953
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85815753"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250103"
 ---
 # <a name="get-started-with-visual-studio-tools-for-unity"></a>Unity için Visual Studio Araçları kullanmaya başlayın
 
@@ -66,13 +66,11 @@ Zaten Visual Studio yüklüyse veya el ile yüklemeyi tercih ediyorsanız, Visua
 
 1. Yükleyici penceresinin sağ alt köşesinde bulunan **Değiştir** (zaten yüklüyse) veya **yükleme** (yeni yüklemeler için) seçeneğine tıklayın.
 
-
 #### <a name="check-for-updates-to-visual-studio"></a>Visual Studio güncelleştirmelerini denetle
 
 En son araçlara ve özelliklere erişiminizin olduğundan emin olmak için Visual Studio içindeki güncelleştirmelerin denetlenmesi önerilir. Bu, Unity projenizi bozmaz.
 
 - [Visual Studio’yu güncelleştirme](../install/update-visual-studio.md)
-
 
 ## <a name="configure-unity-for-use-with-visual-studio"></a>Unity 'yi Visual Studio ile kullanım için yapılandırma
 
@@ -98,7 +96,6 @@ Unity 2018,1 ' den itibaren, Visual Studio 'Nun Unity 'de varsayılan dış beti
    ![Visual Studio 'Yu seçin](media/vs-2019/vstu-unity-external-tools.png)
    :::moniker-end
 
-
 4. Eğer **gözatamıyorum...** seçilirse, Visual Studio yükleme dizininizin içindeki **Common7/IDE** dizinine gidin ve **devenv.exe**' yi seçin. Ardından **Aç**' a tıklayın.
 
    :::moniker range="vs-2017"
@@ -123,7 +120,6 @@ Visual Studio Market Unity için Visual Studio Araçları indirin ve yükleyin. 
 > [!NOTE]
 > Unity için Visual Studio Araçları Unity 5,2 ve üzeri ve Visual Studio Community, Professional, Premium veya Enterprise gibi uzantıları destekleyen bir Visual Studio sürümü gerektirir. Unity 'nin yüklemesinde Unity için Visual Studio Araçları etkinleştirildiğini doğrulamak için, **Yardım** menüsünde **Unity hakkında** ' yı seçin ve iletişim kutusunun sol alt kısmındaki "Unity için Microsoft Visual Studio Araçları" metnini arayın.
 > ![Unity hakkında](media/vs-2019/vstu-about-unity.png)
-
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

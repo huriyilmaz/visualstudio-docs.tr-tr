@@ -7,12 +7,12 @@ ms.assetid: 196c6d04-9a33-47d5-b0f1-038e7c3a7ac9
 ms.date: 03/09/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinizden en iyi şekilde nasıl yararlanalabileceğinizi öğrenin
-ms.openlocfilehash: 19b4bd7c6fce88aa99b336d98d6bf471509af556
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.openlocfilehash: da78c4f9212341636d85453ad19dde549ddb0e20
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87453680"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248433"
 ---
 # <a name="managing-subscriptions"></a>Abonelikleri yönetme
 
@@ -30,10 +30,10 @@ Avantajlar sayfasında, kullanımdaki abonelik mavi başlık başlığında gör
 
 ### <a name="to-switch-between-subscriptions-you-can"></a>Abonelikler arasında geçiş yapmak için şunları yapabilirsiniz:
 
-- Sağ üst taraftaki aşağı açılan listeye tıklayın ve listeden aboneliği seçin
-- Abonelikler sekmesine tıklayın ve ardından istediğiniz aboneliğe tıklayın
+- Sağ üst köşedeki açılan listeyi seçin ve listeden aboneliği seçin
+- Abonelikler sekmesini seçin ve ardından istediğiniz aboneliği seçin
   > [!div class="mx-imgBorder"]
-  > ![Abonelikleri değiştirme](_img/manage-vs-subscriptions/change-subscription-resized.png "Aboneliklerinizin tümü hakkındaki ayrıntılı bilgileri görmek ve bunlar arasında geçiş yapmak için Abonelikler sekmesine tıklayın.")
+  > ![Abonelikleri değiştirme](_img/manage-vs-subscriptions/change-subscription-resized.png "Aboneliklerinizin tümü hakkındaki ayrıntılı bilgileri görmek ve bunlar arasında geçiş yapmak için abonelikler sekmesini seçin.")
 
 ### <a name="if-your-subscription-is-not-visible"></a>Aboneliğiniz görünür değilse...
 
@@ -68,17 +68,17 @@ Abonelikler portalı, bir profil oluşturmanıza ve yönetmenize olanak tanıyar
 
 Profilinizdeki iletişim bilgilerini ve tercihlerini kolayca değiştirebilirsiniz.
 
-1. Abone portalının sağ üst köşesindeki ad ' a tıklayın.
-2. **Profili Düzenle** düğmesine tıklayın.
+1. Abone portalının sağ üst köşesinde adınızı seçin.
+2. **Profili Düzenle** düğmesini seçin.
 3. **Hakkında** sekmesinde ad, e-posta, ülke/bölge, profil resminiz ve iletişim tercihlerinizi değiştirebilirsiniz. **Tercihler** sekmesinde tercih ettiğiniz dili, tarih ve saat desenlerini, saat dilimini ve Kullanıcı arabirimi temasını seçebilirsiniz.
-4. Değişikliklerinizi sonuçlandırdığınızda **Kaydet**' e tıklayın.
-5. Avantajlar sayfasına geri dönmek için tarayıcınızın **geri** düğmesine tıklayın.
+4. Değişikliklerinizi sonuçlandırdığınızda **Kaydet**' i seçin.
+5. Avantajlar sayfasına geri dönmek için tarayıcınızın **geri** düğmesini seçin.
 
 ### <a name="setting-communications-preferences"></a>İletişim tercihlerini ayarlama
 Aylık Visual Studio abonelikleri Bülteni dahil olmak üzere aboneliğiniz ve avantajlarınız hakkında düzenli güncelleştirmeler almak isterseniz, Visual Studio profilinizde Visual Studio abonelikleri kutusunu işaretleyerek [tercihlerinizi güncelleştirin](https://app.vsaex.visualstudio.com/me?workflowID=devprogram&tab=edit) . Bu tercihleri değiştirebilir ve istediğiniz zaman aboneliğinizi kaldırabilirsiniz. 
 
    > [!div class="mx-imgBorder"]
-   > ![Tercihleri ayarlama](_img/manage-vs-subscriptions/change-prefs.png "Güncelleştirmeleri almak için Visual Studio abonelikleri program e-postaları onay kutusuna tıklayın.")
+   > ![Tercihleri ayarlama](_img/manage-vs-subscriptions/change-prefs.png "Güncelleştirmeleri almak için Visual Studio abonelikleri program e-postaları onay kutusunu seçin.")
    
 ### <a name="linking-my-subscription-to-existing-azure-devops-services-or-azure-subscriptions"></a>Aboneliğimi mevcut Azure DevOps Services veya Azure aboneliklerine bağlama
 Aboneliğinizde kişisel Microsoft hesabı (MSA) kullanarak oturum açarsanız ve Azure tarafından yönetilen iş veya okul hesabını kullanarak Azure DevOps Services veya Microsoft Azure içeren bir aboneliğe sahipseniz, iki aboneliği bağlayabilirsiniz. Bu, "Alternatif hesap" olarak adlandırılır ve mevcut Azure, Azure DevOps Services veya okulunuzla veya iş hesaplarınızla ilişkili olan IDE kaynaklarına erişim sağlarken, kendi aboneliğinizde oturum açmak için MSA 'u kullanmaya devam etmenizi sağlar.
@@ -88,11 +88,11 @@ Her iki hesap de aynı e-posta adresini kullanıyorsa bile, her iki hesapta de a
 Alternatif bir hesap eklemek için:
 
 1. [Abone portalında](https://my.visualstudio.com?wt.mc_id=o~msft~docs) Microsoft HESABıNıZLA (MSA) oturum açın.
-2. **Abonelikler** sekmesine tıklayın.
+2. **Abonelikler** sekmesini seçin.
 3. **Ilgili bağlantılar**altında **Alternatif hesap ekle**' yi seçin.
-4. İş/okul hesabınızın e-posta adresini girin ve **Ekle**' ye tıklayın.
+4. İş/okul hesabınızın e-posta adresini girin ve **Ekle**' yi seçin.
 
-Alternatif bir hesap ekledikten sonra, **abonelik** sekmesine tıklayarak ve **ilgili bağlantılar** bölümünde uygun seçeneği belirleyerek istediğiniz zaman onu güncelleştirebilir veya kaldırabilirsiniz.
+Alternatif bir hesap ekledikten sonra, **abonelikler** sekmesini seçerek ve **ilgili bağlantılar** bölümünde uygun seçeneği belirleyerek istediğiniz zaman onu güncelleştirebilir veya kaldırabilirsiniz.
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 

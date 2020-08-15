@@ -7,12 +7,12 @@ ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
 ms.topic: how-to
-ms.openlocfilehash: ee30af4ed578bbc59924fcd8968b97dcf9306619
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.openlocfilehash: 518dd80d230e3d2518ae69520781818826363ecc
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85950029"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247453"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Mac için Visual Studio kaldırılıyor
 
@@ -198,10 +198,10 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 
 Eski sürümler için aşağıdaki yapıtları el ile kaldırmanız gerekir:
 
-* Çalışma kitapları uygulamasını şurada silin:`"/Applications/Xamarin Workbooks.app"`
-* Inspector uygulamasını şurada Sil:`"Applications/Xamarin Inspector.app"`
-* Eklentileri silin: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` ve`"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-* Inspector ve destekleyici dosyaları şurada silin: `/Library/Frameworks/Xamarin.Interactive.framework` ve`/Library/Frameworks/Xamarin.Inspector.framework`
+* Çalışma kitapları uygulamasını şurada silin: `"/Applications/Xamarin Workbooks.app"`
+* Inspector uygulamasını şurada Sil: `"Applications/Xamarin Inspector.app"`
+* Eklentileri silin: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` ve `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+* Inspector ve destekleyici dosyaları şurada silin: `/Library/Frameworks/Xamarin.Interactive.framework` ve `/Library/Frameworks/Xamarin.Inspector.framework`
 
 ## <a name="uninstall-the-xamarin-profiler"></a>Xamarin Profiler kaldırın
 
@@ -222,11 +222,7 @@ rm -rf ~/Library/Preferences/Xamarin/
 rm -rf "~/Library/Preferences/Visual Studio/"
 ```
 
-* * * 
-
-
-
-
+* * *
 
 ## <a name="uninstall-visual-studio-2019-for-mac-preview"></a>Mac için Visual Studio 2019 Preview sürümünü kaldırın
 

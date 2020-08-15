@@ -8,12 +8,12 @@ author: mikejo5000
 ms.author: mikejo
 ms.workload:
 - dotnet
-ms.openlocfilehash: 185d722f65dce0062dc58a06a05590aacb68138b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 1084b79fceda34cceed51ae8d4a5a84d7ebfb016
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906225"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249903"
 ---
 # <a name="how-to-configure-and-use-live-unit-testing"></a>Live Unit Testing yapılandırma ve kullanma
 
@@ -142,7 +142,7 @@ Başarısız testten, ürün kodunda kolayca hata ayıklayın, düzenleme yapabi
 
 ![Test Gezgininde başarısız test](media/lut-test-explorer.png)
 
-**Test Gezgini** menüsünden **Tümünü Çalıştır** veya **Çalıştır** seçeneklerini belirleyerek, beliden görüntülenen tüm testleri yeniden çalıştırabilirsiniz. Ya da **Test Gezgini** menüsünde bir veya daha fazla test seçin, sağ tıklayın ve ardından **Seçilen Testleri Çalıştır** veya açılan menüden **Seçili testlerin hatalarını ayıkla** ' yı seçin. Testler çalıştırıldığında, en üstteki kabarcılar.
+**Test Gezgini** menüsünden **Tümünü Çalıştır** veya **Çalıştır** seçeneklerini belirleyerek, beliden görüntülenen tüm testleri yeniden çalıştırabilirsiniz. Ya da  **Test Gezgini** menüsünde bir veya daha fazla test seçin, sağ tıklayın ve ardından **Seçilen Testleri Çalıştır** veya açılan menüden **Seçili testlerin hatalarını ayıkla** ' yı seçin. Testler çalıştırıldığında, en üstteki kabarcılar.
 
 Live Unit Testing otomatik olarak çalıştırma ve güncelleştirme, **Test Gezgini**'nden testleri açıkça çalıştırma arasında bazı farklılıklar vardır. Bu farklar şunlardır:
 
@@ -191,16 +191,16 @@ Birçok test projesi içeren çözümler için, bir projedeki hangi projelerin v
 
 Birim testlerinde ayrı projeleri seçmek için Live Unit Testing başlatıldıktan sonra aşağıdakileri yapın:
 
-1. **Çözüm Gezgini** çözüme sağ tıklayın ve tüm çözümün hariç tutulması için **canlı testler**  >  **hariç tut** ' u seçin.
-1. Testlere eklemek istediğiniz her bir test projesine sağ tıklayın ve **canlı testler**  >  **dahil et**' i seçin.
+1. **Çözüm Gezgini** çözüme sağ tıklayın ve **Live Unit Testing**  >  Tüm çözümün hariç tutulması için Live Unit Testing**hariç tut** ' u seçin.
+1. Testlere eklemek istediğiniz her bir test projesine sağ tıklayın ve **Live Unit Testing**  >  **dahil et**' i seçin.
 
 ### <a name="exclude-individual-tests-from-the-code-editor-window"></a>Kod Düzenleyicisi penceresinden bireysel testleri hariç tut
 
 Bireysel test yöntemlerini dahil etmek veya hariç tutmak için kod Düzenleyicisi penceresini kullanabilirsiniz. Kod Düzenleyicisi penceresindeki test yönteminin imzasına sağ tıklayın ve sonra aşağıdaki seçeneklerden birini seçin:
 
-- **Canlı testler**  >  **Dahil \<selected method> et**
-- **Canlı testler**  >  **Hariç \<selected method> tut**
-- **Canlı testler**  >  **Tümünü \<selected method> hariç tut** ,
+- **Live Unit Testing**  >  **Dahil \<selected method> et**
+- **Live Unit Testing**  >  **Hariç \<selected method> tut**
+- **Live Unit Testing**  >  **Tümünü \<selected method> hariç tut** ,
 
 ### <a name="exclude-tests-programmatically"></a>Testleri programlı olarak hariç tut
 
@@ -208,15 +208,15 @@ Bireysel test yöntemlerini dahil etmek veya hariç tutmak için kod Düzenleyic
 
 Live Unit Testing bireysel yöntemleri dışlamak için aşağıdaki öznitelikleri kullanın:
 
-- XUnit için:`[Trait("Category", "SkipWhenLiveUnitTesting")]`
-- NUnit için:`[Category("SkipWhenLiveUnitTesting")]`
-- MSTest için:`[TestCategory("SkipWhenLiveUnitTesting")]`
+- XUnit için: `[Trait("Category", "SkipWhenLiveUnitTesting")]`
+- NUnit için: `[Category("SkipWhenLiveUnitTesting")]`
+- MSTest için: `[TestCategory("SkipWhenLiveUnitTesting")]`
 
 Live Unit Testing tüm testlerin bir derlemesini dışlamak için aşağıdaki öznitelikleri kullanın:
 
-- XUnit için:`[assembly: AssemblyTrait("Category", "SkipWhenLiveUnitTesting")]`
-- NUnit için:`[assembly: Category("SkipWhenLiveUnitTesting")]`
-- MSTest için:`[assembly: TestCategory("SkipWhenLiveUnitTesting")]`
+- XUnit için: `[assembly: AssemblyTrait("Category", "SkipWhenLiveUnitTesting")]`
+- NUnit için: `[assembly: Category("SkipWhenLiveUnitTesting")]`
+- MSTest için: `[assembly: TestCategory("SkipWhenLiveUnitTesting")]`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

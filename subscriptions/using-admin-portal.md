@@ -7,12 +7,12 @@ ms.assetid: 4c099fe8-883e-4789-9468-387ce5697dfe
 ms.date: 03/03/2020
 ms.topic: overview
 description: Abonelik yönetim portalı ile kuruluşunuzun Visual Studio aboneliklerini yönetmeye nasıl başlaleyeceğinizi öğrenin.
-ms.openlocfilehash: 94ce9e8ceec46403ef816c39115a5418f1ee9e03
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 7687a899b1c10e95ce161973c0d84701ce91fde6
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902947"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249858"
 ---
 # <a name="overview-of-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio abonelikleri yönetici portalına genel bakış
 
@@ -42,7 +42,7 @@ Abonelikleri atadıktan sonra, aboneleri Yönet sekmesi, aboneler hakkında aşa
 
 Sayfanın sol üst kısmında, bir abonelik atamasına genel bakış, anlaşma ayrıntıları ve en yüksek kullanım raporu açığa çıkarmak için seçebileceğiniz çeşitli simgeler vardır.
 
-Her anlaşma için kuruluşunuzda satın alınan, atanan ve hala kullanılabilir olan abonelik lisanslarının sayısı hakkında ek bilgileri görmek için, üstteki simgeye tıklayarak slayt panelini etkinleştirin.
+Her anlaşma için kuruluşunuzda satın alınan, atanan ve hala kullanılabilir olan abonelik lisanslarının sayısı hakkında ek bilgileri görmek için, slayt panelini etkinleştirmek üzere üstteki simgeyi seçin.
 > [!div class="mx-imgBorder"]
 > ![Visual Studio abonelikleri Yönetici portalı aboneleri sayfası](_img/using-admin-portal/subscribers-page.png)
 

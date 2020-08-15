@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: ornellaalt
 ms.author: ornella
 manager: jillfra
-ms.openlocfilehash: a2b77315363c404cd0647555e5a6ad21d36ac86b
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: 717a9cd3f4157c276ce7d0dd5c41cac625581ba6
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234997"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250250"
 ---
 # <a name="install-visual-studio-versions-side-by-side"></a>Visual Studio sürümlerini yan yana yükleme
 
@@ -57,9 +57,10 @@ Visual Studio 'nun bir alt sürümünden bir sonrakine yükseltirken, Visual Stu
    * Visual Studio Professional için vs_professional.exe
    * Visual Studio Enterprise için vs_enterprise.exe
 
-```
-vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<2019 AddNewPath>"
-```
+   ```
+   vs_Enterprise.exe --installPath "C:\Program Files (x86)\Microsoft Visual Studio\<2019 AddNewPath>"
+   ```
+
 4. Yüklemeniz için gereken bileşenleri seçmek üzere Yükleyici iletişim kutularını izleyin. Daha fazla bilgi için bkz. [Visual Studio 'Yu yükler](install-visual-studio.md#step-4---choose-workloads).
 
 ## <a name="net-framework-versions-and-side-by-side-installations"></a>.NET Framework sürümleri ve yan yana Yüklemeler

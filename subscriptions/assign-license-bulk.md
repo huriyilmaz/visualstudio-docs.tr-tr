@@ -7,12 +7,12 @@ ms.assetid: c2853359-18fd-4be4-97a6-02230c862f92
 ms.date: 05/10/2020
 ms.topic: how-to
 description: Yöneticilerin toplu ekleme özelliğini veya Microsoft Azure Active Directory gruplarını kullanarak birden çok aboneye nasıl lisans atayabileceği hakkında bilgi edinin
-ms.openlocfilehash: 8bda423ccd5362fba6389195814a44cca286b5a7
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.openlocfilehash: da7ce369e1d9aaa13b0c346005914b7f64ceb780
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87235140"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249614"
 ---
 # <a name="assign-subscriptions-to-multiple-users"></a>Birden çok kullanıcıya abonelik atama
 Abonelikler yönetim portalı, kullanıcıları tek seferde veya büyük gruplar halinde eklemenize olanak tanır.  Bireysel kullanıcı eklemek için bkz. [tek kullanıcı ekleme](assign-license.md).
@@ -28,7 +28,7 @@ Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullana
 
 1. Aynı anda birden çok abone eklemek için, **aboneleri Yönet** sekmesine gidin. **Ekle** sekmesini ve ardından açılan kutuda **toplu Ekle** ' yi seçin.  
 
-1. Toplu ekleme, abone bilgilerini karşıya yüklemek için bir Microsoft Excel şablonu kullanır. Birden çok aboneyi karşıya yükle iletişim kutusunda şablonu indirmek için **İndir** ' e tıklayın.
+1. Toplu ekleme, abone bilgilerini karşıya yüklemek için bir Microsoft Excel şablonu kullanır. Birden çok aboneyi karşıya yükle iletişim kutusunda şablonu indirmek için **İndir** ' i seçin.
    > [!div class="mx-imgBorder"]
    > ![Birden çok aboneyi karşıya yüklemek için Excel şablonunu indirin](media/download-template-upload-subscribers.png "Toplu atama işlemine başlamak için boş Excel şablonunu indirin.")
    >
@@ -48,13 +48,13 @@ Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullana
     - Tüm gerekli alanların tamamlandığından emin olun. 
     - **Hata iletisi** sütununu kontrol edin.  Herhangi bir hata listeleniyorsa, dosyayı karşıya yüklemeyi denemeden önce bunları çözün. 
 
-1. Visual Studio abonelikleri yönetim portalına dönün. **Birden çok aboneyi karşıya yükle** iletişim kutusunda, **görüntüle**' ye tıklayın.
+1. Visual Studio abonelikleri yönetim portalına dönün. **Birden çok aboneyi karşıya yükle** iletişim kutusunda, **Araştır**' ı seçin.
    > [!div class="mx-imgBorder"]
    > ![Birden çok aboneyi karşıya yüklemek için kaydedilmiş şablonunuz 'na gidin](media/bulk-add-browse-saved-template.png "Dosya konumuna gidebilir veya bu iletişim kutusuna sürükleyip bırakabilirsiniz.")
 
-1. Kaydettiğiniz Excel dosyasına gidin ve ardından **Tamam**' a tıklayın.
+1. Kaydettiğiniz Excel dosyasına gidin ve ardından **Tamam**' ı seçin.
    > [!div class="mx-imgBorder"]
-   > ![Birden çok aboneyi karşıya yüklemek için Excel şablonunu karşıya yükleyin](media/bulk-upload-subscribers.png "Verilerinize sahip şablon burada görünür.  Karşıya yüklemeyi başlatmak için Tamam ' ı tıklatın.")
+   > ![Birden çok aboneyi karşıya yüklemek için Excel şablonunu karşıya yükleyin](media/bulk-upload-subscribers.png "Verilerinize sahip şablon burada görünür.  Karşıya yüklemeyi başlatmak için Tamam ' ı seçin.")
 
     Karşıya yükleme ilerleme durumu iletişim kutusu görüntülenir.
 
@@ -66,8 +66,8 @@ Büyük Kullanıcı gruplarını eklemek için toplu ekleme özelliğini kullana
    1. Oluşturduğunuz Excel dosyasını açın, sorunları düzeltin ve dosyayı kaydedin.
    0. Yönetim portalına dönün ve **Ekle**' yi seçin.
    0. **Toplu Ekle**' yi seçin.
-   0. Excel dosyası zaten kaydedildiğinden, şablonu indirmeniz gerekmez.  **Araştır**' a tıklayın, az önce kaydettiğiniz dosyayı bulun ve **Aç**' a tıklayın.
-   0. **Tamam** düğmesine tıklayın.
+   0. Excel dosyası zaten kaydedildiğinden, şablonu indirmeniz gerekmez.  **Araştır**' ı seçin, yeni kaydettiğiniz dosyayı bulun ve **Aç**' ı seçin.
+   0. **Tamam**’ı seçin.
 
 
     Karşıya yükleme başarılı olduğunda, aboneler listesini ve bir onay iletisi görürsünüz.
@@ -109,7 +109,7 @@ Bu özelliğin kullanılması, abonelik atamalarınızın üstünde kalmasını 
    > [!div class="mx-imgBorder"]
    > ![Azure AD grubunuzu seçin](_img/assign-license-bulk/bulk-add-aad-details.png "Bu gruptan aboneler eklemek için Azure AD grubunuzun adını seçin.")
 
-6. **Ekle** ' ye ve ardından **Onayla**' ya tıklayın. 
+6. **Ekle** ' yi ve ardından **Onayla**' yı seçin. 
 
 7. Eklenen grubu görmek için, Kullanıcı listenizin en altına gidin.  
 

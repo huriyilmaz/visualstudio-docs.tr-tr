@@ -7,12 +7,12 @@ ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
 ms.date: 07/29/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde Microsoft yazılım başlıklarını bulmayı ve indirmeyi öğrenin
-ms.openlocfilehash: bf2afafc99993b2b3717f0264fee89b747eab58a
-ms.sourcegitcommit: b8ce85a6d9c7fcceaad0fba625202f5ecf8f368c
+ms.openlocfilehash: aa0784694b3407c621e8efb1916ed5fe41aee0c7
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87434294"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248221"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde yazılım başlıkları indiriliyor
 Sahip olduğunuz Visual Studio aboneliğine bağlı olarak, kullanabileceğiniz çok çeşitli Microsoft yazılım başlıkları bulunabilir.  Bu makalede, aboneliğinizden en iyi şekilde yararlanmak için ihtiyacınız olan yazılımın nasıl konumlandırılmaları ve indirileceği açıklanır. 
@@ -27,30 +27,30 @@ Aboneliğiniz, iş veya okul 'niz tarafından sağlanmışsa, abonelikler yönet
 ## <a name="how-do-i-find-downloads-in-the-subscriber-portal"></a>Nasıl yaparım? abone portalında İndirmeleri bulamıyor musunuz?
 [İndirmeler](https://my.visualstudio.com/downloads/featured?wt.mc_id=o~msft~docs) sayfasını ziyaret ettiğinizde, gruplar halinde ürün türüne göre düzenlenmiş popüler indirmeleri görürsünüz.  Gösterilen popüler indirmelerden birini seçebilir veya sayfanın en üstündeki arama çubuğunu kullanarak herhangi bir ürünü arayabilirsiniz.
 > [!div class="mx-imgBorder"]
-> ![Abone İndirmeleri sayfası](_img/subscriber-downloads/subscriber-downloads-resized.png "Indirmeler dikey penceresine tıkladığınızda en popüler indirmeler görüntülenir.")
+> ![Abone İndirmeleri sayfası](_img/subscriber-downloads/subscriber-downloads-resized.png "Indirmeler dikey penceresini seçtiğinizde en popüler indirmeler görüntülenir.")
 
 Örneğin, Geliştirici Araçları listesinden **Visual studio 2019** ' i seçerseniz, kullanılabilir visual Studio 2019 indirmelerinin bir listesini görürsünüz.
 > [!div class="mx-imgBorder"]
 > ![Visual Studio 2019 İndirmeleri](_img/subscriber-downloads/vs2019-product-list.png "Bir ürün seçtiğinizde, kullanılabilir sürümlerin bir listesi görüntülenir.")
 
-Kullanılabilir açılır menüleri kullanarak mimarinizi, dili ve dosya türünü kolayca seçersiniz. Tercih ettiğiniz seçenekleri belirleyin ve ürünü indirmeye başlamak için **İndir** ' e tıklayın.
+Kullanılabilir açılır menüleri kullanarak mimarinizi, dili ve dosya türünü kolayca seçersiniz. Tercih ettiğiniz seçenekleri belirleyip, ürünü indirmeye başlamak için **İndir** ' i seçin.
 
 > [!NOTE]
 > Tüm mimariler, diller veya dosya biçimlerinde tüm başlıklar kullanılamaz.  
 
 ### <a name="displaying-download-details"></a>İndirme ayrıntılarını görüntüleme
-Ürün adına veya **bilgi** bağlantısı ' na tıkladığınızda, bu indirmenin ayrıntıları görüntülenir ve ürünün sürüm notlarına erişim sağlanır.
+Ürün adı veya **bilgi** bağlantısında seçilirse, bu indirmenin ayrıntıları görüntülenir ve ürünün sürüm notlarına erişim sağlanır.
 > [!div class="mx-imgBorder"]
 > ![Visual Studio 2019 indirme ayrıntıları](_img/subscriber-downloads/vs2019-info.png "Bilgi sekmesi, karşıdan yükleme ile ilgili bilgileri görüntüler ve sürüm notlarına erişim sağlar.")
 
-Ayrıntılar bölmesinde, ürün anahtarlarınızın durumunu denetlemek için **anahtarlar** sekmesine de tıklayabilirsiniz.
+Ayrıntılar bölmesinde, ürün anahtarlarınızın durumunu denetlemek için **anahtarlar** sekmesini de seçebilirsiniz.
 > [!div class="mx-imgBorder"]
 > ![Visual Studio 2019 ürün anahtarları](_img/subscriber-downloads/vs2019-keys.png "Anahtarlar sekmesi, kaç tane anahtar kaldığını gösterir ve kullanılabilir anahtarları talep etmenizi sağlar.")
 
 ### <a name="obtaining-product-keys"></a>Ürün anahtarları alma
-İndirilmek üzere bir ürün anahtarı almak için, **Get Key** etiketli mavi anahtara tıklayabilir veya Ayrıntılar bölmesini zaten görüntülüyorsanız, **anahtarlar** sekmesinde **talep anahtarı** ' na tıklayın.
+İndirilmek üzere bir ürün anahtarı almak için, **Get Key** etiketli mavi anahtarı seçebilir veya Ayrıntılar bölmesini zaten görüntülüyorsanız, **anahtarlar** sekmesinde **talep anahtarı** ' nı seçin.
 > [!div class="mx-imgBorder"]
-> ![Visual Studio 2019 talep ürün anahtarları](_img/subscriber-downloads/vs2019-claim-keys.png "Kalan anahtarları talep etmek için talep anahtarı ' na tıklayın.")
+> ![Visual Studio 2019 talep ürün anahtarları](_img/subscriber-downloads/vs2019-claim-keys.png "Kalan anahtarları talep etmek için talep anahtarı ' nı seçin.")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)

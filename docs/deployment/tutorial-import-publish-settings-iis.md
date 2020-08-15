@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b18d1b123e32807575ac2c6601166891d6c25be
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: fff3ded8607f7faf534e6e61a27bd4d3e38d9e38
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183307"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247560"
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>Visual Studio 'da yayımlama ayarlarını içeri aktararak IIS 'de uygulama yayımlama
 
@@ -36,7 +36,7 @@ Yayımlama ayarları dosyası (* \* . publishsettings*), Visual Studio 'da oluş
 > [!NOTE]
 > Visual Studio yayımlama profilini ( \* . pubxml dosyası) bir Visual Studio yüklemesinden diğerine kopyalamanız gerekiyorsa, yönetilen proje türleri için * \\<ProjectName \> \Properties\PublishProfiles* klasöründe yayımlama profilini * \<profilename\> . pubxml*bulabilirsiniz. Web siteleri için *\ App_Data* klasörü altına bakın. Yayımlama profilleri MSBuild XML dosyalarıdır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range=">=vs-2019"
 
@@ -58,15 +58,15 @@ Yayımlama ayarları dosyası (* \* . publishsettings*), Visual Studio 'da oluş
 
 1. Visual Studio çalıştıran bilgisayarda yeni bir proje oluşturun.
 
-    Doğru şablonu seçin. Bu örnekte, **ASP.NET Web uygulaması (.NET Framework)** veya (yalnızca C# için **ASP.NET Core) Web uygulaması**' nı seçin ve ardından **Tamam**' a tıklayın.
+    Doğru şablonu seçin. Bu örnekte, **ASP.NET Web uygulaması (.NET Framework)** veya (yalnızca C# için **ASP.NET Core) Web uygulaması**' nı seçin ve ardından **Tamam**' ı seçin.
 
-    Belirtilen proje şablonlarını görmüyorsanız, **Yeni proje** iletişim kutusunun sol bölmesindeki **Visual Studio yükleyicisi aç** bağlantısına tıklayın. Visual Studio Yükleyicisi başlatılır. **ASP.net ve Web geliştirme** iş yükünü yükler.
+    Belirtilen proje şablonlarını görmüyorsanız, **Yeni proje** iletişim kutusunun sol bölmesindeki **Aç Visual Studio yükleyicisi** bağlantısına gidin. Visual Studio Yükleyicisi başlatılır. **ASP.net ve Web geliştirme** iş yükünü yükler.
 
     Seçtiğiniz proje şablonu (ASP.NET veya ASP.NET Core), Web sunucusunda yüklü ASP.NET sürümüne karşılık gelmelidir.
 
-1. **MVC** (.NET Framework) veya **Web uygulaması (Model-View-Controller)** seçeneğini belirleyin (.NET Core Için) ve **kimlik doğrulama** olmadığından emin olun ve ardından **Tamam**' a tıklayın.
+1. **MVC** (.NET Framework) veya **Web uygulaması (Model-View-Controller)** ' ı (.NET Core Için) seçin ve **kimlik doğrulamasının** seçili olmadığından emin olun ve ardından **Tamam**' ı seçin.
 
-1. **MyWebApp** gibi bir ad yazın ve **Tamam**' a tıklayın.
+1. **MyWebApp** gibi bir ad yazın ve **Tamam**' ı seçin.
 
     Visual Studio projeyi oluşturur.
 

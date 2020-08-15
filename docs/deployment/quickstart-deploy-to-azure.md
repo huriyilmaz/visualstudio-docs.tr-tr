@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 19eca9747fa4e9ef80f7de05799a2cee685ce821
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 461b99261eb88d5267b062cb5d471f1b6ed4ee60
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285530"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248036"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Visual Studio’yu kullanarak Azure App Service'e Web uygulaması yayımlama
 
@@ -39,7 +39,7 @@ Bu makalede, tek seferlik dağıtım için **Yayımla** aracının nasıl kullan
 
     ![Yayımlama hedefini seçin](../deployment/media/quickstart-publish-azure-new.png)
 
-1. * * Azure App Service (Windows) * * ve **İleri ' yi**seçin.
+1. **Azure App Service (Windows)** ve **İleri ' yi**seçin.
 
     ![Linux üzerinde Azure App Service seçin](../deployment/media/quickstart-publish-windows-select-azure-service.png)
 
@@ -55,7 +55,7 @@ Bu makalede, tek seferlik dağıtım için **Yayımla** aracının nasıl kullan
 
     ![Azure App Service seçin](../deployment/media/quickstart-publish-windows-select-instance.png)
 
-1. **Yayımla** seçeneğini belirleyin. Visual Studio uygulamayı Azure App Service dağıtır ve Web uygulaması tarayıcınıza yüklenir. Proje özellikleri **Yayımlama** bölmesi, site URL 'sini ve diğer ayrıntıları gösterir.
+1. **Yayımla**’yı seçin. Visual Studio uygulamayı Azure App Service dağıtır ve Web uygulaması tarayıcınıza yüklenir. Proje özellikleri **Yayımlama** bölmesi, site URL 'sini ve diğer ayrıntıları gösterir.
 
     ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-publish-windows-summary-page.png)
 

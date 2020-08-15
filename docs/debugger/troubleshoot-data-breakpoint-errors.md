@@ -15,12 +15,12 @@ ms.author: waan
 manager: caslan
 ms.workload:
 - multiple
-ms.openlocfilehash: dab5e146d510601c6e93582b6b128abcd964b4a7
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 20e3ea1cb0124e6bdfb93e023021673ca2e34602
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85459941"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248748"
 ---
 # <a name="troubleshooting-data-breakpoint-errors"></a>Veri kesme noktası hatalarında sorun giderme
 Bu sayfa, "değer değiştiğinde kes" kullanırken görülen yaygın hataları çözme konusunda size kılavuzluk eder
@@ -33,40 +33,40 @@ Yönetilen veri kesme noktaları kullanılırken oluşabilecek hataların bir li
 
 - *"Hedef işlem tarafından kullanılan .NET sürümü veri kesme noktalarını desteklemiyor. Veri kesme noktaları x86 veya x64 üzerinde çalışan .NET Core 3.0 + gerektirir. "*
 
-    - Yönetilen veri kesme noktaları desteği .NET Core 3,0 ' de başlamıştır. Şu anda 3,0 altında .NET Core .NET Framework veya sürümünde desteklenmemektedir. 
+  - Yönetilen veri kesme noktaları desteği .NET Core 3,0 ' de başlamıştır. Şu anda 3,0 altında .NET Core .NET Framework veya sürümünde desteklenmemektedir. 
     
-    - **Çözüm**: Bu çözüm, projenizi .net Core 3,0 sürümüne yükseltmek olacaktır.
+  - **Çözüm**: Bu çözüm, projenizi .net Core 3,0 sürümüne yükseltmek olacaktır.
 
 - *"Yönetilen yığında değer bulunamıyor ve izlenemez."*
-    - Yığında belirtilen değişken.
-        - Bu değişken, işlev çıktıktan sonra geçersiz olacağı için yığında oluşturulan değişkenler için veri kesme noktaları ayarlamayı desteklemiyoruz.
-        - **Geçici çözüm**: değişkenin kullanıldığı satırlarda kesme noktaları ayarlayın.
+  - Yığında belirtilen değişken.
+    - Bu değişken, işlev çıktıktan sonra geçersiz olacağı için yığında oluşturulan değişkenler için veri kesme noktaları ayarlamayı desteklemiyoruz.
+    - **Geçici çözüm**: değişkenin kullanıldığı satırlarda kesme noktaları ayarlayın.
 
-    - Bir açılan menüden genişletilmeyen bir değişkende "değer değiştiğinde kes".
-        - Hata ayıklayıcının, izlemek istediğiniz alanı içeren nesneyi bilmesi gerekir. Çöp toplayıcı, hata ayıklayıcının izlemek istediğiniz değişkeni tutan nesneyi bilmesi için nesneyi yığında etrafında taşıyabilir. 
-        - **Geçici çözüm**: bir veri kesme noktası ayarlamak istediğiniz nesne içindeki bir yöntem içindeyse, bir çerçeve yukarı gidin ve `locals/autos/watch` nesneyi genişletmek ve istediğiniz alana bir veri kesme noktası ayarlamak için pencereyi kullanın.
+  - Bir açılan menüden genişletilmeyen bir değişkende "değer değiştiğinde kes".
+    - Hata ayıklayıcının, izlemek istediğiniz alanı içeren nesneyi bilmesi gerekir. Çöp toplayıcı, hata ayıklayıcının izlemek istediğiniz değişkeni tutan nesneyi bilmesi için nesneyi yığında etrafında taşıyabilir. 
+    - **Geçici çözüm**: bir veri kesme noktası ayarlamak istediğiniz nesne içindeki bir yöntem içindeyse, bir çerçeve yukarı gidin ve `locals/autos/watch` nesneyi genişletmek ve istediğiniz alana bir veri kesme noktası ayarlamak için pencereyi kullanın.
 
 - *"Statik alanlar veya statik özellikler için veri kesme noktaları desteklenmiyor."*
     
-    - Statik alanlar ve Özellikler Şu anda desteklenmiyor. Bu özellikle ilgileniyorsanız lütfen [geri bildirim](#provide-feedback)sağlayın.
+  - Statik alanlar ve Özellikler Şu anda desteklenmiyor. Bu özellikle ilgileniyorsanız lütfen [geri bildirim](#provide-feedback)sağlayın.
 
 - *"Yapıların alanları ve özellikleri izlenemez."*
 
-    - Yapıların alanları ve özellikleri şu anda desteklenmiyor. Bu özellikle ilgileniyorsanız lütfen [geri bildirim](#provide-feedback)sağlayın.
+  - Yapıların alanları ve özellikleri şu anda desteklenmiyor. Bu özellikle ilgileniyorsanız lütfen [geri bildirim](#provide-feedback)sağlayın.
 
 - *"Özellik değeri değişti ve artık izlenemez."*
 
-    - Bir özellik, çalışma zamanı sırasında nasıl hesaplanacağını değiştirebilir ve bu durumda, özelliğin arttığı ve donanım sınırlamasını aşabilecek değişkenlerin sayısı artar. `"The property is dependent on more memory than can be tracked by the hardware."`Aşağıya bakın.
+  - Bir özellik, çalışma zamanı sırasında nasıl hesaplanacağını değiştirebilir ve bu durumda, özelliğin arttığı ve donanım sınırlamasını aşabilecek değişkenlerin sayısı artar. `"The property is dependent on more memory than can be tracked by the hardware."`Aşağıya bakın.
 
 - *"Özelliği, donanım tarafından izlenebileceğinden daha fazla belleğe bağımlıdır."*
     
-    - Her mimaride, destekleyebileceği bir dizi bayt ve donanım veri kesme noktası ve üzerinde veri kesme noktası ayarlamak istediğiniz özellik bu sınırı aştı. Kullanmakta olduğunuz mimaride kaç tane donanım tarafından desteklenen veri kesme noktası ve bayt kullanılabildiğini öğrenmek için lütfen [veri kesme noktası donanım sınırlamaları](#data-breakpoint-hardware-limitations) tablosuna bakın. 
-    - **Geçici çözüm**: özellik içinde değişebilir bir değer üzerinde bir veri kesme noktası ayarlayın.
+  - Her mimaride, destekleyebileceği bir dizi bayt ve donanım veri kesme noktası ve üzerinde veri kesme noktası ayarlamak istediğiniz özellik bu sınırı aştı. Kullanmakta olduğunuz mimaride kaç tane donanım tarafından desteklenen veri kesme noktası ve bayt kullanılabildiğini öğrenmek için lütfen [veri kesme noktası donanım sınırlamaları](#data-breakpoint-hardware-limitations) tablosuna bakın. 
+  - **Geçici çözüm**: özellik içinde değişebilir bir değer üzerinde bir veri kesme noktası ayarlayın.
 
 - *"Eski C# ifade değerlendiricisi kullanılırken veri kesme noktaları desteklenmez."*
 
-    - Veri kesme noktaları yalnızca eski C# ifade değerlendiricisi üzerinde desteklenir. 
-    - **Çözüm**: eski C# ifade değerlendiricisi, `Debug -> Options` işaretini kaldır ' ın altında olacak şekilde devre dışı bırakır `Debugging -> General` `"Use the legacy C# and VB expression evaluators"` .
+  - Veri kesme noktaları yalnızca eski C# ifade değerlendiricisi üzerinde desteklenir. 
+  - **Çözüm**: eski C# ifade değerlendiricisi, `Debug -> Options` işaretini kaldır ' ın altında olacak şekilde devre dışı bırakır `Debugging -> General` `"Use the legacy C# and VB expression evaluators"` .
 
 ## <a name="data-breakpoint-hardware-limitations"></a>Veri kesme noktası donanım sınırlamaları
 
@@ -80,8 +80,10 @@ Programınızın üzerinde çalıştığı mimari (Platform yapılandırması), 
 | ARM64 | 2 | 8 |
 
 ## <a name="provide-feedback"></a>Geribildirim gönderme
+
 Bu özellikle ilgili herhangi bir sorun veya öneri için, lütfen yardım > bir sorun bildirmek > IDE 'de veya [Geliştirici topluluğu](https://developercommunity.visualstudio.com/)'Nda [bir sorun bildirmek](../ide/how-to-report-a-problem-with-visual-studio.md) için lütfen bize bilgi verin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
+
 - [.NET Core 3,0 ' de "değer değiştiğinde kes" kullanımı](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus).
 - [DevBlog: değer değiştiğinde kes: Visual Studio 2019 ' de .NET Core için veri kesme noktaları](https://devblogs.microsoft.com/visualstudio/break-when-value-changes-data-breakpoints-for-net-core-in-visual-studio-2019/)

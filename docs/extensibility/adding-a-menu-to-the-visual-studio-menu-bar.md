@@ -11,12 +11,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61321555a6896fad926d2ee38c5d73d50801d6b9
-ms.sourcegitcommit: cb0c6e55ae560960a493df9ab56e3e9d9bc50100
+ms.openlocfilehash: aa3ab53bbda2582d1a9b3c60ac07fd3617d51ddf
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86972354"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88248788"
 ---
 # <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Visual Studio menü çubuğuna bir menü ekleyin
 
@@ -43,13 +43,13 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ::: moniker range="vs-2017"
 
-2. Proje açıldığında, **TestCommand**adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >   **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#/genişletilebilirlik** ' e gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *TestCommand.cs*olarak değiştirin.
+2. Proje açıldığında, **TestCommand**adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümünü seçin ve tutun (ya da sağ tıklayın) ve **Add**  >   **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#/genişletilebilirlik** ' e gidin ve **özel komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *TestCommand.cs*olarak değiştirin.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-2. Proje açıldığında, **TestCommand**adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >   **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#/genişletilebilirlik** ' e gidin ve **komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *TestCommand.cs*olarak değiştirin.
+2. Proje açıldığında, **TestCommand**adlı özel bir komut öğesi şablonu ekleyin. **Çözüm Gezgini**, proje düğümünü seçin ve tutun (ya da sağ tıklayın) ve **Add**  >   **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#/genişletilebilirlik** ' e gidin ve **komut**' yi seçin. Pencerenin alt kısmındaki **ad** alanında, komut dosyası adını *TestCommand.cs*olarak değiştirin.
 
 ::: moniker-end
 
@@ -163,7 +163,7 @@ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezin
 
 ::: moniker-end
 
-3. **Test menüsü** menüsünde, **test komutu**' na tıklayın.
+3. **Test menüsü** menüsünde, **test komutu**' nı seçin.
 
     İleti kutusu görünmelidir ve "TestCommand. TestCommand. Menuıitemcallback ()" iletisinin "Testkomutu" iletisini görüntülemesi gerekir.
 

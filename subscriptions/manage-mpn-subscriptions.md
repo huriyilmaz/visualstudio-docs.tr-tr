@@ -7,12 +7,12 @@ ms.assetid: 83efe4ee-9a9d-4776-b27c-852d89dadafd
 ms.date: 03/09/2020
 ms.topic: how-to
 description: MPN iş ortakları için son kullanıcılarınıza Visual Studio abonelikleri atama.
-ms.openlocfilehash: fc35178a0d66a048a41ee04d27ae2993949972c8
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: e6e15ed5893ce15d162d69b3bff4471c01633065
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902866"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250720"
 ---
 # <a name="manage-visual-studio-subscriptions-offered-through-the-microsoft-partner-network-mpn"></a>Microsoft İş Ortağı Ağı (MPN) ile sunulan Visual Studio aboneliklerini yönetme
 Bir uzmanlığa sahip olan veya MPN 'de Eylem Paketi satın alan iş ortakları, Visual Studio aboneliklerini kullanmaya uygundur. Bu abonelikler Kullanıcı başına lisanslanır ve yalnızca iş ortağı şirketi için çalışan belirli bir adlandırılmış kullanıcıya atandığında geçerlidir.
@@ -29,7 +29,7 @@ Microsoft Eylem Paketi abonesi ve Visual Studio abonelikleri
 6. **Ayrıcalıkları** seçin
 7. **Visual Studio aboneliklerini** seçin (Note: Visual Studio abonelik güncelleştirmesi bekleniyor)
 8. İstediğiniz **kişiyi** seçin
-9. **Gönder** 'e tıklayın
+9. **Gönder** ' i seçin
 10. Kişiye bir e-posta gönderilir
 11. Atanan kişi, [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) oturum açmak için erişir
 12. Aşağıdakiler dahil olmak üzere bir Visual Studio profil sayfası görüntülenebilir:
@@ -43,7 +43,7 @@ Microsoft Eylem Paketi abonesi ve Visual Studio abonelikleri
 2. **Ayrıcalıkları** seçin
 3. **MSDN abonelikleri** ' ni seçin (Note: Bu, "Visual Studio abonelikleri" yakında)
 4. İstediğiniz **kişiyi** bulun
-5. **Gönder** 'e tıklayın
+5. **Gönder** ' i seçin
 6. Kişiye bir e-posta gönderilir
 7. Atanan kişi, [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) oturum açmak için erişir
 8. Bir Visual Studio profili sayfası görüntülenebilir

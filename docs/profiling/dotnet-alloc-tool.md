@@ -9,12 +9,12 @@ ms.author: sashe
 manager: AndSter
 ms.workload:
 - multiple
-ms.openlocfilehash: f7ec98f8d17465e95369eb6e2ecd88051f8daa59
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.openlocfilehash: 81c15753b083256b97c9f67219b64565a8db8736
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85330450"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247793"
 ---
 # <a name="analyze-memory-usage-by-using-the-net-object-allocation-tool"></a>.NET nesne ayırma aracı 'nı kullanarak bellek kullanımını analiz etme
 
@@ -118,11 +118,11 @@ Bu sütunların hepsi sıralanabilir.  **Tür** ve **Modül adı** sütunları 
 - **Ad** sütunu, en üst düzey düğümler olarak işlemi gösterir. İşlemlerin altında modüller, modüller altında ise işlevlerdir.
 - Bu sütunlar, **ayırma** ve **çağrı ağacı** görünümlerinde olduğu gibi aynı bilgileri gösterir:
 
-   - **Toplam (ayırmalar)**
-   - **Kendi kendine (ayırmalar)**
-   - **Toplam Boyut (bayt)**
-   - **Kendinden boyut (bayt)**
-   - **Ortalama Boyut (bayt)**
+  - **Toplam (ayırmalar)**
+  - **Kendi kendine (ayırmalar)**
+  - **Toplam Boyut (bayt)**
+  - **Kendinden boyut (bayt)**
+  - **Ortalama Boyut (bayt)**
 
 ### <a name="collection"></a>Koleksiyon
 
