@@ -13,12 +13,12 @@ ms.workload:
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: c782b84f39419272c271f41d217442cc9e001b3f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 8dfca47159192c1f6fe25f703b54745b55d8e384
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85535869"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238003"
 ---
 # <a name="walkthrough-connect-a-host-to-a-generated-directive-processor"></a>İzlenecek yol: Konağı Oluşturulan bir Yönerge İşlemcisine Bağlama
 
@@ -37,11 +37,11 @@ Bu izlenecek yol aşağıdaki görevleri içerir:
 
 - Özel ana bilgisayarı oluşturulan yönerge işlemcisi ile test etme.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
 
-| | |
+| Bileşen | Bağlantı |
 |-|-|
 | Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
 | [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index) |
@@ -228,7 +228,7 @@ Yönerge işlemcisini oluşturduktan sonra yönerge işlemcisini ve [Izlenecek y
             }
     ```
 
-7. **Dosya** menüsünde **Tümünü Kaydet**' e tıklayın.
+7. **Dosya** menüsünde **Tümünü Kaydet**’e tıklayın.
 
 8. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 

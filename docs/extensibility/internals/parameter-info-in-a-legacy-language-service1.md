@@ -1,5 +1,5 @@
 ---
-title: Eski Dil Hizmetinde Parametre Bilgisi1 | Microsoft Dokümanlar
+title: Eski dilde parametre bilgisi Service1 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,62 +14,62 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: c26073252aae5434ba5a8197955948d0d9ec883d
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 8f8e5664634d189e8463376761d8fb59543740df
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80706797"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238081"
 ---
-# <a name="parameter-info-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Parametre Bilgileri
-IntelliSense Parametre Bilgi araç ipucu, kullanıcılara bir dil yapısında nerede oldukları hakkında ipuçları sağlar.
+# <a name="parameter-info-in-a-legacy-language-service-1"></a>Eski dil hizmeti 1 ' de parametre bilgisi
+IntelliSense parametre bilgisi araç ipucu kullanıcılara bir dil yapısında oldukları yerleri hakkında ipuçları sağlar.
 
- Eski dil hizmetleri BIR VSPackage'ın bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamanın en yeni yolu MEF uzantılarını kullanmaktır. Daha fazla bilgi için [Editör ve Dil Hizmetlerini Genişletme'ye](../../extensibility/extending-the-editor-and-language-services.md)bakın.
+ Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Daha fazla bilgi edinmek için bkz. [düzenleyiciyi ve dil hizmetlerini genişletme](../../extensibility/extending-the-editor-and-language-services.md).
 
 > [!NOTE]
-> Yeni düzenleyici API'yi mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
+> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
 
-## <a name="how-parameter-info-tooltips-work"></a>Parametre Bilgi Araç İpuçları Nasıl Çalışır?
- Düzenleyiciye bir deyim yazdığınızda, VSPackage yazılan deyimin tanımını içeren küçük bir araç ucu penceresi görüntüler. Örneğin, bir Microsoft Hazırlık Sınıfları (MFC) deyimi `pMainFrame ->UpdateWindow`(örneğin) yazarsanız ve liste parametrelerini başlatmak için açılış parantez anahtarına `UpdateWindow` basarsanız, yöntemin tanımını gösteren bir yöntem ipucu görüntülenir.
+## <a name="how-parameter-info-tooltips-work"></a>Parametre bilgileri araç Ipuçları nasıl çalışır?
+ Düzenleyicide bir ifade yazdığınızda, VSPackage, yazılan deyimin tanımını içeren küçük bir araç ipucu penceresi görüntüler. Örneğin, (gibi) bir Microsoft Foundation Sınıfları (MFC) ifadesi yazarsanız `pMainFrame ->UpdateWindow` ve parametreleri listelemeyi başlatmak için açma ayracı tuşuna basarsanız, yöntemin tanımını görüntüleyen bir yöntem ipucu görünür `UpdateWindow` .
 
- Parametre Bilgi araç ipuçları genellikle deyimi tamamlama ile birlikte kullanılır. Bunlar en çok yöntem adı veya anahtar kelimeden sonra parametreleri veya diğer biçimlendirilmiş bilgilere sahip diller için yararlıdır.
+ Parametre bilgisi araç ipuçları genellikle deyimin tamamlanmasına birlikte kullanılır. Bunlar, yöntem adı veya anahtar sözcüğünden sonra parametreleri veya diğer biçimlendirilen bilgileri içeren diller için en yararlıdır.
 
- Parametre Bilgisi araç ipuçları, dil hizmeti tarafından komut engelleme yoluyla başlatılır. Kullanıcı karakterlerini engellemek için, dil hizmeti <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> nesneniz arabirimi uygulamalı ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> arabirimdeki <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> yöntemi çağırarak uygulamanız için bir işaretçi metin görünümü geçirmelidir. Komut filtresi, kod penceresine yazdığınız komutları keser. Parametre bilgilerini kullanıcıya ne zaman gösterin gerektiğini bilmek için komut bilgilerini izleyin. Ekstre tamamlama, hata işaretçileri vb. için aynı komut filtresini kullanabilirsiniz.
+ Bilgi araç ipuçları, komut yakalamasının üzerinden dil hizmeti tarafından başlatılır. Kullanıcı karakterleri için, dil hizmeti nesneniz <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi uygulamalıdır ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimde yöntemi çağırarak metin görünümünü uygulamanıza bir işaretçi olarak iletmelidir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> . Komut filtresi, kod penceresine yazdığınız komutları karşılar. Kullanıcıya parametre bilgilerinin ne zaman görüntüleneceğini bildirmek için komut bilgilerini izleyin. Deyimde tamamlama, hata işaretçileri vb. için aynı komut filtresini kullanabilirsiniz.
 
- Dil hizmetinin ipuçları sağlayabileceği bir anahtar kelime yazdığınızda, dil hizmeti <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> bir nesne <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> oluşturur <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> ve bir ipucu görüntülemek için IDE'yi bildirmek için arabirimdeki yöntemi çağırır. Nesneyi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> kullanarak `VSLocalCreateInstance` ve birlikte sınıfı `CLSID_VsMethodTipWindow`belirterek oluşturun. `VsLocalCreateInstance`üstbilgi vdoc.h'de tanımlanan ve yerel `QueryService` kayıt defterini çağıran `CreateInstance` ve bu `CLSID_VsMethodTipWindow`nesneyi .
+ Dil hizmetinin ipuçları sağlayabileceği bir anahtar sözcük yazdığınızda, dil hizmeti bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> nesne oluşturur ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> IDE 'yi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> bir ipucu göstermesini bildirmek için arabirimindeki yöntemi çağırır. Öğesini <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> kullanarak `VSLocalCreateInstance` ve coclass 'ı belirterek nesnesi oluşturun `CLSID_VsMethodTipWindow` . `VsLocalCreateInstance``QueryService`, yerel kayıt defteri ve `CreateInstance` için bu nesnedeki çağrıları çağıran vsdoc. h üstbilgi dosyasında tanımlanan bir işlevdir `CLSID_VsMethodTipWindow` .
 
-## <a name="providing-a-method-tip"></a>Yöntem İpucu Sağlama
- Bir yöntem ipucu sağlamak <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> için, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> arabirimdeki yöntemi çağırın ve arabirimin uygulanmasını geçirin.
+## <a name="providing-a-method-tip"></a>Yöntem Ipucu sağlama
+ Bir yöntem ipucu sağlamak için, arabirimindeki <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> yöntemi, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> arabirimi uygulamanıza geçirerek arayüzde çağırın <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> .
 
- Sınıfınız <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> çağrıldığında, yöntemleri aşağıdaki sırada çağrılır:
+ <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>Sınıfınız çağrıldığında, yöntemleri aşağıdaki sırada çağrılır:
 
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetContextStream%2A>
 
-     Geçerli metin arabelleğindeki ilgili verilerin konumunu ve uzunluğunu verir. Bu, IDE'ye araç ucu penceresiyle bu verileri gizlememesi talimatını verir.
+     Geçerli metin arabelleğindeki ilgili verilerin konumunu ve uzunluğunu döndürür. Bu, IDE 'ye araç ipucu penceresiyle verileri gizlememesini sağlar.
 
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetCurMethod%2A>
 
-     Başlangıçta görüntülenmesini istediğiniz yöntem numarasını (sıfır tabanlı dizin) döndürür. Örneğin, sıfır döndürerseniz, ilk aşırı yüklenen yöntem başlangıçta sunulur.
+     Başlangıçta görüntülenmesini istediğiniz yöntem numarasını (sıfır tabanlı dizin) döndürür. Örneğin, sıfır döndürtakdirde ilk aşırı yüklenmiş yöntem başlangıçta sunulur.
 
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetOverloadCount%2A>
 
-     Geçerli bağlamda geçerli olan aşırı yüklenen yöntem sayısını verir. Bu yöntem için 1'den büyük bir değer döndürerseniz, metin görünümü sizin için yukarı ve aşağı okları görüntüler. Aşağı ok'u tıklattığınızda, IDE <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.NextMethod%2A> yöntemi çağırır. Yukarı ok'u tıklattığınızda, IDE <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.PrevMethod%2A> yöntemi çağırır.
+     Geçerli bağlamda geçerli olan aşırı yüklenmiş yöntemlerin sayısını döndürür. Bu yöntem için 1 ' den büyük bir değer döndürürler, metin görünümü sizin için yukarı ve aşağı okları görüntüler. Aşağı oka tıklarsanız IDE <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.NextMethod%2A> yöntemini çağırır. Yukarı oka tıklarsanız IDE <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.PrevMethod%2A> yöntemini çağırır.
 
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetMethodText%2A>
 
-     Parametre Bilgi araç ucunun metni, çeşitli aramalar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetMethodText%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetParameterText%2A> sırasında ve yöntemlerde oluşturulur.
+     Parametre bilgisi araç ipucunun metni, ve yöntemlerine yapılan birkaç çağrı sırasında oluşturulur <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetMethodText%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetParameterText%2A> .
 
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetParameterCount%2A>
 
-     Yöntemde görüntülenecek parametre sayısını döndürür.
+     Yönteminde görüntülenecek parametre sayısını döndürür.
 
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetParameterText%2A>
 
-     Görüntülenmesini istediğiniz aşırı yüklemeyle karşılık gelen bir yöntem numarası döndürerseniz, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.UpdateView%2A> bu yöntem çağrılır ve ardından yönteme çağrı yapılır.
+     Görüntülenmesini istediğiniz aşırı yüklemeye karşılık gelen bir yöntem numarası döndürürler, bu yöntem çağrılır ve ardından yöntemine bir çağrı gelir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.UpdateView%2A> .
 
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.UpdateView%2A>
 
-     Bir yöntem ipucu görüntülendiğinde düzenleyiciyi güncelleştirmesi için dil hizmetinizi bilgilendirir. Yöntemde, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.UpdateView%2A> aşağıdakileri arayın:
+     Dil hizmetinize, bir yöntem İpucu görüntülendiğinde düzenleyiciyi güncelleştirme hakkında bilgi verir. Yönteminde, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.UpdateView%2A> aşağıdakileri çağırın:
 
     ```
     <pTxWin> ->UpdateTipWindow(<pTip>, UTW_CONTENTCHANGED | UTW_CONTEXTCHANGED).
@@ -77,4 +77,4 @@ IntelliSense Parametre Bilgi araç ipucu, kullanıcılara bir dil yapısında ne
 
 - <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A>
 
-     Yöntem ipucu penceresini <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> kapattığınızda yönteme bir çağrı alırsınız.
+     Yöntem <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.OnDismiss%2A> İpucu penceresini kapattığınızda yöntemine bir çağrı alırsınız.

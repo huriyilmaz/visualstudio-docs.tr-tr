@@ -7,12 +7,12 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 57507775a03bcfd0649f4efbf8a7771fefc8e20b
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: c52b3bd352c2ecb2272ad8e229a0fe52a9ee5b41
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85547322"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238367"
 ---
 # <a name="create-a-windows-forms-based-domain-specific-language"></a>Windows Forms tabanlı bir etki alanına özgü dil oluşturma
 
@@ -30,10 +30,8 @@ Aşağıdaki görüntüde bir DSL örneği için Windows form kullanıcı arabir
 
     Bu kılavuzda, aşağıdaki adlar varsayılır:
 
-   | | |
-   |-|-|
-   | Çözüm ve DSL adı | FarmApp |
-   | Ad Alanı | Şirket. FarmApp |
+    - Çözüm ve DSL adı: `FarmApp`
+    - Uzayına `Company.FarmApp`
 
 2. Şablonun sağladığı ilk örnekle denemeler yapın:
 
@@ -51,9 +49,9 @@ Aşağıdaki görüntüde bir DSL örneği için Windows form kullanıcı arabir
 
    Visual Studio 'nun ana örneğinde DSL çözümü hakkında aşağıdaki noktalara dikkat edin:
 
-- `DslDefinition.dsl`diyagram öğesi içermiyor. Bunun nedeni, DSL diyagramlarını bu DSL 'nin örnek modellerini görüntülemek için kullanmayacak. Bunun yerine, bir Windows formunu modele bağlayacaksınız ve formdaki öğeler modeli görüntüleyecektir.
+- `DslDefinition.dsl` diyagram öğesi içermiyor. Bunun nedeni, DSL diyagramlarını bu DSL 'nin örnek modellerini görüntülemek için kullanmayacak. Bunun yerine, bir Windows formunu modele bağlayacaksınız ve formdaki öğeler modeli görüntüleyecektir.
 
-- Ve projelerine ek olarak `Dsl` `DslPackage` çözüm, Kullanıcı Arabirimi projesi adlı üçüncü bir proje içerir `UI.` **UI** Windows Forms denetimin tanımını içerir. `DslPackage`öğesine bağlıdır `UI` ve bağımlıdır `UI` `Dsl` .
+- Ve projelerine ek olarak `Dsl` `DslPackage` çözüm, Kullanıcı Arabirimi projesi adlı üçüncü bir proje içerir `UI.` **UI** Windows Forms denetimin tanımını içerir. `DslPackage` öğesine bağlıdır `UI` ve bağımlıdır `UI` `Dsl` .
 
 - `DslPackage`Projesinde, `UI\DocView.cs` projede tanımlanan Windows Forms denetimini görüntüleyen kodu içerir `UI` .
 
@@ -86,9 +84,9 @@ Bu kılavuzda aşağıdaki DSL tanımı kullanılır.
 
 4. Aşağıdaki etki alanı sınıflarını oluşturmak için **adlandırılmış etki alanı sınıfı** aracını kullanın:
 
-    - `Field`-Buna adlı ek bir etki alanı özelliği verin `Size` .
+    - `Field` -Buna adlı ek bir etki alanı özelliği verin `Size` .
 
-    - `Animal`-Özellikler penceresi, **Devralma değiştiricisini** **soyut**olarak ayarlayın.
+    - `Animal` -Özellikler penceresi, **Devralma değiştiricisini** **soyut**olarak ayarlayın.
 
 5. Aşağıdaki sınıfları oluşturmak için **etki alanı sınıfı** aracını kullanın:
 
@@ -162,7 +160,7 @@ Artık DSL modelinde depolanan bilgileri görüntüleyecek yeni bir kullanıcı 
 
      **DataMember** özelliğini **hayvanlar** veya **alanlar**olarak ayarlayın.
 
-10. ' A ve ' nin **veri kaynağı** özelliklerini olarak ayarlayın `AnimalGridView` `AnimalBinding` `FieldGridView` `FieldBinding` .
+10. ' A ve ' nin **veri kaynağı** özelliklerini olarak ayarlayın `AnimalGridView` `AnimalBinding`  `FieldGridView` `FieldBinding` .
 
 11. Grup denetiminin yerleşimini sizin için ayarlayın.
 

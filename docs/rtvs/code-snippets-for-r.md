@@ -1,6 +1,6 @@
 ---
 title: R için kod parçacıkları
-description: Visual Studio'da R için kod parçacıkları, rasgele uzunluktaki kod bloklarını hızla eklemek için kısayollar sağlar ve benzer kodu tekrar tekrar yeniden yazmaktan kaçınmanıza yardımcı olur.
+description: Visual Studio 'da R için kod parçacıkları, rastgele uzunluktaki kod bloklarını hızlı bir şekilde eklemeye yönelik kısayollar sağlar. bu şekilde, benzer kodların üzerine ve sonuna tekrar yazılanı önlemenize yardımcı olur
 ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
@@ -8,35 +8,35 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 05a21da94dd643b04cea94b7840ca26d9379cb5a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: 31dfa975cea519d4d064856090a265b844f265f6
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "62969468"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238731"
 ---
-# <a name="code-snippets"></a>Kod parçacıkları
+# <a name="code-snippets-for-r"></a>R için kod parçacıkları
 
-Visual Studio'daki kod parçacıkları, rasgele uzunluktaki kod bloklarını hızla eklemek için kısayollar sağlar ve benzer kodu tekrar tekrar yeniden yazmaktan kaçınmanıza yardımcı olur. R Tools for Visual Studio (RTVS), Visual Studio'nun koleksiyonuna düzinelerce kullanışlı R snippet snippet ekler.
+Visual Studio 'daki kod parçacıkları, rastgele uzunluktaki kod bloklarını hızlıca eklemek için kısayollar sağlar ve bunlara benzer kodları yeniden yazmadan ve bunların üzerine yazmayı önlemenize yardımcı olur. Visual Studio için R Araçları (RTVS), Visual Studio 'nun koleksiyonuna onlarca yararlı R kod parçacıkları ekler.
 
-Bir parçacık eklemek için, snippet (IntelliSense sağlanır) kısaltılmış adını yazın, sonra eklemek için **Sekme** tuşuna basın.
+Bir kod parçacığı eklemek için, kod parçacığının kısaltılmış adını (IntelliSense sağlanır) yazın ve sonra eklemek için **Tab** tuşuna basın.
 
 Bazı basit örnekler:
 
-- sonra `=` tab ve RTVS atama `<-` işleci ne genişletir yazın.
-- türü `>` sonra Tab ve RTVS `%>%` boru işleci genişletir.
+- `=`ardından Tab yazın ve RTVS bunu `<-` atama işlecine genişletir.
+- `>`ardından Tab yazın ve RTVS, `%>%` Kanal işleci genişletir.
 
-Parçacıklar karakterlerin karakter tamamlamadan çok daha fazlası olabilir. Örneğin, işlevli bir CSV dosyasını `read.csv` okumak için bir parçacık, adları veya parametreleri hatırlamak zorunda kalmanızı engelleyebilir:
+Kod parçacıkları yalnızca karakterlerin karakter tamamından çok daha fazla olabilir. Bir CSV dosyasını işlevle okumak için bir kod parçacığı `read.csv` , örneğin, adları veya parametreleri anımsamak zorunda kalmadan sizi hatırlayabiliyor:
 
-![Read.csv için arama eklemek için kod snippet kullanmaanimasyonu](media/code-snippet-expansion.gif)
+![read.csv çağrısı eklemek için kod parçacığı kullanmanın animasyonu](media/code-snippet-expansion.gif)
 
-Bu durumda, yazarken, `readc`IntelliSense bir tamamlama listesi görüntüler. Açılan ve **basıldığında** bu tamamlanma yı seçer `readc`ve **Sekme'ye** yeniden basmak parçacığı genişletir. (Bu nedenle, parçacık genişletme genellikle "snippet yazın ve TAB iki kez basın" olarak düşünülmektedir). Çoğu durumda, ilk Sekme IntelliSense seçimini tamamlar ve ikinci Sekme genişlemeyi tetikler.
+Bu durumda, siz yazarken `readc` , IntelliSense bir tamamlanma listesi görüntüler. Açılır listeden ve **Tab** tuşuna basarak bu tamamlamayı seçip `readc` , **sekme** tuşuna bir kez daha basıldığında kod parçacığı genişletilir. (Bu nedenle, kod parçacığı genişletmesi genellikle "parçacığı yazın ve TAB tuşuna iki kez bas" olarak düşünülebilir). Çoğu durumda, ilk sekme IntelliSense seçimini tamamlar ve ikinci sekme genişletmeyi tetikler.
 
-Kullanılabilir tüm parçacıkları görmek için **Araçlar** > **Kodu Parçacıkları Yöneticisi** iletişim kutusunu **(Ctrl**+**K**,**B**) açın ve **Dil**için **R'yi** seçin. Bir açıklama ve kısayol metnini görmek için grupları genişletin ve tek tek parçacıkları seçin:
+Kullanılabilir tüm parçacıkları görmek için **Araçlar**  >  **kod parçacıkları Yöneticisi** iletişim kutusunu (**CTRL** + **K**,**B**) açın ve **dil**için **R** ' yi seçin. Bir açıklamayı ve kısayol metnini görmek için grupları genişletin ve bağımsız parçacıkları seçin:
 
 ![R için kod parçacıkları iletişim kutusu](media/code-snippet-dialog.png)
 
-Özel kod parçacıkları oluşturmak için, Walkthrough'daki yönergeleri [izleyerek: Bir kod parçacığı oluşturun.](../ide/walkthrough-creating-a-code-snippet.md) Sonuçta, bir kod parçacığı sadece bir XML dosyasıdır. Örneğin, aşağıdaki kod boru işlemi (kısayol) `>`için parçacıktır:
+Özel kod parçacıkları oluşturmak için [Izlenecek yol: kod parçacığı oluşturma](../ide/walkthrough-creating-a-code-snippet.md)' ya yönelik yönergeleri izleyin. Sonuç olarak, bir kod parçacığı yalnızca bir XML dosyasıdır. Örneğin, aşağıdaki kod kanal işlemi (kısayol) için kod parçacıdır `>` :
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -60,4 +60,4 @@ Kullanılabilir tüm parçacıkları görmek için **Araçlar** > **Kodu Parçac
 </CodeSnippets>
 ```
 
-Tüm kod parçacıkları için XML dosyaları RTVS ile yüklenir; **Kod Parçacıkları Yöneticisi'ndeki** **Konum** alanı yolu sağlar. Ayrıca [src/Package/Impl/Snippets](https://github.com/Microsoft/RTVS/tree/master/src/Package/Impl/Snippets)altında GitHub'daki RTVS kaynak kodunda bulabilirsiniz.
+Tüm kod parçacıkları için XML dosyaları RTVS; ile yüklenir **kod parçacıkları yöneticisindeki** **konum** alanı yolunu sağlar. Ayrıca, [src/Package/Impl/parçacıklar](https://github.com/Microsoft/RTVS/tree/master/src/Package/Impl/Snippets)altında GitHub 'daki rtvs kaynak kodunda de bulabilirsiniz.

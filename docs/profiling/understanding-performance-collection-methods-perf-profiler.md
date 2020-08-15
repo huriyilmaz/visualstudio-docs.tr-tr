@@ -1,5 +1,5 @@
 ---
-title: Performans toplama yöntemlerini anlama | Microsoft Docs
+title: Profil Oluşturucu performans toplama yöntemlerini anlama
 ms.date: 4/30/2020
 ms.topic: conceptual
 f1_keywords: ''
@@ -11,14 +11,14 @@ manager: jillfra
 monikerRange: '>= vs-2017'
 ms.workload:
 - multiple
-ms.openlocfilehash: 03a49763a682f6b98b02fe40ba957efa8f5483c8
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: f0e24f3fc33ea456ad02bf9797b934a1a56d4492
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85290637"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238588"
 ---
-# <a name="understand-performance-collection-methods"></a>Performans toplama yöntemlerini anlama
+# <a name="understand-profiler-performance-collection-methods"></a>Profil Oluşturucu performans toplama yöntemlerini anlama
 
 Bu belgede, Visual Studio performans Profilcisi içindeki araçların kullandığı veri toplama yöntemleri özetlenmektedir. 
 

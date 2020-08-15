@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 953ff26a6094a9de9dcf974d5e4cb5a02aaa503f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 0b55a0bbeee7c5a8c38a0df61db0a1b17ae5e033
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85533568"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238666"
 ---
 # <a name="debug-python-and-c-together"></a>Python ve C++ ile birlikte hata ayıklama
 
@@ -36,9 +36,8 @@ Karma mod hata ayıklama özellikleri, bu makalede açıklandığı gibi aşağ�
 
 ![Visual Studio 'da Python için karışık modda hata ayıklama](media/mixed-mode-debugging.png)
 
-|   |   |
-|---|---|
-| ![video için film kamerası simgesi](../install/media/video-icon.png "Nasıl yapılacağını görmek için") | Visual Studio ile yerel C modülleri oluşturmaya, test etmeye ve hata ayıklamaya giriş için bkz. [derinlemesine bakış: yerel modüller oluşturma](https://youtu.be/D9RlT06a1EI) (YouTube.com, 9 dk 09s). Video hem Visual Studio 2015 hem de 2017 için geçerlidir. |
+![video için film kamerası simgesi](../install/media/video-icon.png "Nasıl yapılacağını görmek için") Visual Studio ile yerel C modülleri oluşturmaya, test etmeye ve hata ayıklamaya giriş için bkz. [derinlemesine bakış: yerel modüller oluşturma](https://youtu.be/D9RlT06a1EI) (YouTube.com, 9 dk 09s). Video hem Visual Studio 2015 hem de 2017 için geçerlidir.
+
 
 ## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Python projesinde karışık modda hata ayıklamayı etkinleştir
 

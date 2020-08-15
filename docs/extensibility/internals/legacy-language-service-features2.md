@@ -1,5 +1,5 @@
 ---
-title: Eski Dil Hizmeti Özellikleri2 | Microsoft Dokümanlar
+title: Eski dil hizmeti Features2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,25 +10,25 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 33f12e816476aa54f334988b99b9e86e820784f6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 04e7df7fc5c7532d2db45bc2b643a249d1e566c7
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80707366"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88237912"
 ---
-# <a name="legacy-language-service-features"></a>Eski Dil Hizmeti Özellikleri
-Aşağıdaki konular, sağlayabileceğiniz bazı eski dil hizmeti özelliklerini listelediğinizi listelediğiniz konulardır.
+# <a name="legacy-language-service-features-2"></a>Eski dil hizmeti özellikleri 2
+Aşağıdaki konularda, sağlayabilmeniz için bazı eski dil hizmeti özellikleri listelenmektedir.
 
- Eski dil hizmetleri BIR VSPackage'ın bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamanın en yeni yolu MEF uzantılarını kullanmaktır. Bir dil hizmetini uygulamanın yeni yolu hakkında daha fazla bilgi edinmek için [Editör ve Dil Hizmeti Uzantıları'na](../../extensibility/editor-and-language-service-extensions.md)bakın.
+ Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Dil hizmeti uygulama hakkında daha fazla bilgi edinmek için bkz. [Düzenleyici ve dil hizmeti uzantıları](../../extensibility/editor-and-language-service-extensions.md).
 
 > [!NOTE]
-> Yeni düzenleyici API'yi mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
+> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Eski Dil Hizmetinde Söz Dizimi Renklendirmesi](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)
 
- Sözdizimi boyamanın nasıl uygulanacağını açıklar.
+ Sözdizimi renklendirmesinin nasıl uygulanacağını açıklar.
 
 - [Eski Dil Hizmetinde Otomatik Biçimlendirme](../../extensibility/internals/automatic-formatting-in-a-legacy-language-service.md)
 
@@ -36,18 +36,18 @@ Aşağıdaki konular, sağlayabileceğiniz bazı eski dil hizmeti özelliklerini
 
 - [Eski Dil Hizmetinde Parametre Bilgileri](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)
 
- IntelliSense Parametre Bilgi Araç Ucunun nasıl uygulanacağını açıklar.
+ IntelliSense parametre bilgisi araç Ipucunun nasıl uygulanacağını açıklar.
 
 - [Eski Dil Hizmetinde Deyim Tamamlama](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md)
 
- IntelliSense ekstre listesinin ve üye tamamlama listesinin nasıl uygulanacağını açıklar.
+ IntelliSense bildirim listesi ve üye Tamamlama listesinin nasıl uygulanacağını açıklar.
 
 - [Eski Dil Hizmetinde Ana Hat Oluşturma ve Gizli Metin](../../extensibility/internals/outlining-and-hidden-text-in-a-legacy-language-service.md)
 
- Anahat veya gizli metnin nasıl uygulanacağını açıklar.
+ Ana hat veya gizli metnin nasıl uygulanacağını açıklar.
 
 - [Nasıl yapılır: Eski Dil Hizmetinde Genişletilmiş Ana Hat Oluşturma Desteği Sağlama](../../extensibility/internals/how-to-provide-expanded-outlining-support-in-a-legacy-language-service.md)
 
- Hata ayıklama desteğinin uygulanmasındaki bazı adımları açıklar...
+ Hata ayıklayıcı desteğini uygulama içindeki adımlardan bazılarını açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler

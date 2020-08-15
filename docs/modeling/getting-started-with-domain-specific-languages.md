@@ -7,19 +7,19 @@ ms.author: joshuapa
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 226111f7bd2c064fa2aec3cbd4f94a0adeb0e5b8
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 6a4761703610a87818cd1512f96530a0f865faf0
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75596573"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238549"
 ---
 # <a name="get-started-with-domain-specific-languages"></a>Alana Özgü Dilleri Kullanmaya Başlama
 
 Bu konu başlığı altında, Visual Studio için modelleme SDK 'Sı ile oluşturulmuş bir etki alanına özgü dili (DSL) tanımlama ve kullanma konusundaki temel kavramlar açıklanmaktadır.
 
 > [!NOTE]
-> Metin şablonu dönüştürme SDK 'Sı ve Visual Studio modelleme SDK 'Sı, Visual Studio 'nun belirli özelliklerini yüklediğinizde otomatik olarak yüklenir. Daha fazla ayrıntı için [bu blog gönderisini](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/).
+> Metin şablonu dönüştürme SDK 'Sı ve Visual Studio modelleme SDK 'Sı, Visual Studio 'nun belirli özelliklerini yüklediğinizde otomatik olarak yüklenir. Daha ayrıntılı bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)bakın.
 
 DSLs 'yi yeni Deneyiyorsanız, bu sitede bulabileceğiniz **dsl araçları Laboratuvarı**aracılığıyla çalışmanızı öneririz: [görselleştirme ve modelleme SDK 'sı](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db)
 
@@ -37,13 +37,13 @@ DSLs 'nin asıl uygulamalarından biri program kodu, yapılandırma dosyaları v
 
 Bu genel bakışın geri kalanında, Visual Studio 'da alana özgü dil oluşturma ve kullanma ile ilgili temel işlemleri tanıtan bir anlatım sunulmaktadır.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
-Bir DSL tanımlamak için aşağıdaki bileşenler yüklemiş olmanız gerekir:
+Bir DSL tanımlamak için aşağıdaki bileşenleri yüklemiş olmanız gerekir:
 
-| | |
+| Bileşen | Bağlantı |
 |-|-|
-| {1&gt;Visual Studio&lt;1} | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
+| Visual Studio | [http://go.microsoft.com/fwlink/?LinkId=185579](https://visualstudio.microsoft.com/) |
 | [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)] | [http://go.microsoft.com/fwlink/?LinkId=185580](/azure/devops/integrate/index) |
 | Visual Studio için modelleme SDK 'Sı | |
 
@@ -61,7 +61,7 @@ Yeni bir etki alanına özgü dil oluşturmak için, etki alanına özgü dil pr
 
      ![DSL oluştur iletişim kutusu](../modeling/media/create_dsldialog.png)
 
-4. **Ad** kutusuna **FamilyTree**yazın. **Tamam**'ı tıklatın.
+4. **Ad** kutusuna **FamilyTree**yazın. **Tamam**’a tıklayın.
 
      **Etki alanına özgü dil Sihirbazı** açılır ve şablon DSL çözümlerinin listesini görüntüler.
 
@@ -100,7 +100,7 @@ Yeni çözümün aşağıdaki yönlerini görürsünüz:
 
 - **DslPackage projesi** Bu proje, Visual Studio 'da DSL örneklerinin açılmasına ve düzenlenmesine izin veren kodu içerir.
 
-## <a name="Debugging"></a>DSL 'yi çalıştırma
+## <a name="running-the-dsl"></a><a name="Debugging"></a> DSL 'yi çalıştırma
 
 DSL çözümünü, oluşturduktan hemen sonra çalıştırabilirsiniz. Daha sonra, her değişiklikten sonra çözümü yeniden çalıştırarak DSL tanımını kademeli olarak değiştirebilirsiniz.
 
@@ -119,7 +119,7 @@ DSL çözümünü, oluşturduktan hemen sonra çalıştırabilirsiniz. Daha sonr
 
 3. Visual Studio 'nun deneysel örneğinde, **Çözüm Gezgini** **Test** adlı model dosyasını açın.
 
-     \- veya -
+     \- veya
 
      Hata ayıklama projesine sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **öğe**' ye tıklayın. **Öğe Ekle** iletişim kutusunda, DSL 'nizin dosya türünü seçin.
 
@@ -147,13 +147,13 @@ DSL tanımı, modelin diyagram üzerinde nasıl göründüğünü belirtebilir. 
 
 Bir modeli düzenlediğinizde, bir modeli **Gezgin** görünümünde ağaç olarak görüntüleyebilirsiniz. Diyagrama şekil eklerken, model öğeleri de gezgin 'de görüntülenir. Diyagram olmasa bile gezgin kullanılabilir.
 
-Visual Studio 'nun hata ayıklama örneğinde gezgin 'i göremiyorsanız, **Görünüm** menüsünde **diğer pencereler**' in üzerine gelin ve ardından *Dil >* **Gezgini**\<' ne tıklayın.
+Visual Studio 'nun hata ayıklama örneğinde gezgin 'i göremiyorsanız, **Görünüm** menüsünde **diğer pencereler**' in üzerine gelin ve ardından gezgin ' e tıklayın *\<Your Language>* **Explorer**.
 
 ### <a name="the-api-of-your-dsl"></a>DSL API 'SI
 
 DSL 'niz, DSL örnekleri olan modelleri okumanızı ve güncelleştirmenizi sağlayan bir API oluşturur. API 'nin bir uygulaması, bir modelden metin dosyaları üretmesidir. Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
-Hata ayıklama çözümünde ". tt" uzantılı şablon dosyalarını açın. Bu örneklerde modellerden nasıl metin oluşturabileceğiniz ve DSL 'nizin API 'sini test etmeniz için nasıl izin oluşturabileceğiniz gösterilmektedir. Örneklerden biri, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]diğer [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]yazılır.
+Hata ayıklama çözümünde ". tt" uzantılı şablon dosyalarını açın. Bu örneklerde modellerden nasıl metin oluşturabileceğiniz ve DSL 'nizin API 'sini test etmeniz için nasıl izin oluşturabileceğiniz gösterilmektedir. Örneklerden biri, içinde diğeri içinde yazılmıştır [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 Her şablon dosyası altında oluşturduğu dosyadır. Çözüm Gezgini şablon dosyasını genişletin ve oluşturulan dosyayı açın.
 
@@ -171,7 +171,7 @@ Bir model dosyasını değiştirdiğinizde, dosyaları yeniden oluşturduktan so
 
 3. **Çözüm Gezgini**araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın.
 
-     \- veya -
+     \- veya
 
      Yeniden oluşturmak istediğiniz şablonlara sağ tıklayın ve ardından **özel araç Çalıştır**' a tıklayın.
 
@@ -209,7 +209,7 @@ Var olan etki alanı sınıflarını ve ilişkileri yeniden adlandırın. Örne�
 
     2. Özellikler penceresi açın ve aynı anda DSL Gezginini ve özelliklerini görebilmek için konumlandırın.
 
-    3. DSL Gezgini ' nde **Düzenleyici**, **araç kutusu sekmeleri**, *DSL >\<* ve ardından **Araçlar**' ı genişletin.
+    3. DSL Gezgini ' nde **Düzenleyici**, **araç kutusu sekmeleri**, *\<your DSL>* ve ardından **Araçlar**' ı genişletin.
 
     4. **ExampleElement öğesine**tıklayın. Bu, öğeleri oluşturmak için kullanılan araç kutusu öğesidir.
 
@@ -333,7 +333,7 @@ Var olan etki alanı sınıflarını ve ilişkileri yeniden adlandırın. Örne�
 
     1. **DSL Gezgini**' nde **Düzenleyici** ve **araç kutusu sekmeleri**' ni genişletin.
 
-    2. *DSL >\<* sağ tıklayın ve sonra **Yeni öğe Ekle aracı**' na tıklayın.
+    2. Sağ tıklayın *\<your DSL>* ve ardından **Yeni öğe Ekle aracı**' na tıklayın.
 
     3. Yeni aracının **Name** özelliğini ayarlayın ve **sınıf** özelliğini Town olarak ayarlayın.
 
@@ -341,7 +341,7 @@ Var olan etki alanı sınıflarını ve ilişkileri yeniden adlandırın. Örne�
 
 7. Kasabalarında şubeleri ve kişiler arasında bağlantı oluşturmak için bir bağlayıcı aracı oluşturun.
 
-    1. *DSL >\<* sağ tıklayın ve sonra **yeni bağlayıcı aracı ekle**' ye tıklayın.
+    1. Sağ tıklayın *\<your DSL>* ve ardından **yeni bağlayıcı aracı ekle**' ye tıklayın.
 
     2. Yeni aracın ad özelliğini ayarlayın.
 
@@ -392,9 +392,9 @@ Var olan etki alanı sınıflarını ve ilişkileri yeniden adlandırın. Örne�
 
  Aynı yordamı kullanarak DSL 'yi kendi bilgisayarınıza yükleyebilirsiniz. böylece, Visual Studio 'nun Deneysel örneğini kullanmanız gerekmez.
 
- Daha fazla bilgi için [etki alanına özgü dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
+ Daha fazla bilgi için bkz. [etki alanına özgü dil çözümlerini dağıtma](msi-and-vsix-deployment-of-a-dsl.md).
 
-## <a name="Reset"></a>Eski deneysel DSLs 'ler kaldırılıyor
+## <a name="removing-old-experimental-dsls"></a><a name="Reset"></a> Eski deneysel DSLs 'ler kaldırılıyor
  Artık istemediğiniz deneysel DSLs 'Leri oluşturduysanız, Visual Studio Deneysel örneğini sıfırlayarak bunları bilgisayarınızdan kaldırabilirsiniz.
 
  Bu, bilgisayarınızdan tüm deneysel DSLs ve diğer deneysel Visual Studio uzantılarını kaldırır. Bunlar hata ayıklama modunda yürütülen uzantılardır.
