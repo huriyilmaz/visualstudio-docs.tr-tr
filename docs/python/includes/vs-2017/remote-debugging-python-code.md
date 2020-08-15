@@ -10,20 +10,18 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 82c22143f70bc53a358cd25e6ff2ad91eff1e2e9
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: a1f8c145d7c9c072adcc902cae9f2b6ae36937cd
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85541094"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88246143"
 ---
 Visual Studio, Windows bilgisayarında Python uygulamalarını yerel olarak ve uzaktan başlatabilir ve hata ayıklayabilir (bkz. [Uzaktan hata ayıklama](../../../debugger/remote-debugging.md)). Ayrıca, [ptvsd kitaplığını](https://pypi.python.org/pypi/ptvsd)kullanarak, Cpıthon dışında farklı bir işletim sisteminde, cihazda veya Python uygulamasında uzaktan hata ayıklaması yapabilir.
 
 Ptvsd kullanırken, hata ayıklamakta olan Python kodu, Visual Studio 'Nun iliştirebileceği hata ayıklama sunucusunu barındırır. Bu barındırma, kodunuzun içeri aktarılması ve etkinleştirilmesi için kodunuzda küçük bir değişiklik yapılmasını gerektirir ve TCP bağlantılarına izin vermek için uzak bilgisayar üzerinde ağ veya güvenlik duvarı yapılandırmalarının gerekli kılabilir.
 
-|   |   |
-|---|---|
-| ![video için film kamerası simgesi](../../../install/media/video-icon.png "Nasıl yapılacağını görmek için") | Uzaktan hata ayıklamaya giriş için bkz. [derinlemesine bakış: platformlar arası uzaktan hata ayıklama](https://youtu.be/y1Qq7BrV6Cc) (YouTube.com, 6m22s), hem Visual Studio 2015 hem de 2017 için geçerlidir. |
+![video için film kamerası simgesi](../../../install/media/video-icon.png "Nasıl yapılacağını görmek için") Uzaktan hata ayıklamaya giriş için bkz. [derinlemesine bakış: platformlar arası uzaktan hata ayıklama](https://youtu.be/y1Qq7BrV6Cc) (YouTube.com, 6m22s), hem Visual Studio 2015 hem de 2017 için geçerlidir.
 
 ## <a name="set-up-a-linux-computer"></a>Linux bilgisayarı ayarlama
 

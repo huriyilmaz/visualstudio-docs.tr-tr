@@ -1,6 +1,6 @@
 ---
 title: AutoRecover, Ortam, Seçenekler İletişim Kutusu
-ms.date: 11/04/2016
+ms.date: 08/14/2020
 ms.topic: reference
 f1_keywords:
 - VS.DialogAutoRestore
@@ -17,26 +17,41 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 81493379cf847251124d2ab4fd0a978abd96af8f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.openlocfilehash: f35424089b293b858c609d19f59459693373eb4d
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "75585671"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250276"
 ---
-# <a name="autorecover-environment-options-dialog-box"></a>Otomatik Kurtarma, Ortam, Seçenekler iletişim kutusu
+# <a name="autorecover-environment-options-dialog-box"></a>Otomatik kurtarma, ortam, Seçenekler iletişim kutusu
 
-Dosyaları otomatik olarak yedekleyip yedeklemeyeceklerini belirtmek için **Seçenekler** iletişim kutusundaki bu sayfayı kullanın. Visual Studio beklenmedik bir şekilde kapanırsa değiştirilen dosyaları geri yüklemek isteyip istemediğinide de belirtebilirsiniz.
+Dosyaların otomatik olarak yedeklenip yedeklenmeyeceğini belirtmek için **Seçenekler** iletişim kutusunda bu sayfayı kullanın. Ayrıca, Visual Studio beklenmedik şekilde kapatılırsa değiştirilen dosyaları geri yüklemek istediğinizi de belirtebilirsiniz.
 
-**Araçlar** menüsünü seçerek, **Seçenekler'i**seçerek ve ardından **Çevre** > **Otomatik Kurtar'ı**seçerek bu iletişim kutusuna erişin. Bu sayfa listede görünmüyorsa, **Seçenekler** iletişim kutusundaki **tüm ayarı göster'i** seçin.
+Bu iletişim kutusuna erişmek için **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **Otomatik Kurtarma**' ya gidin.
 
-**Her [n] dakikada otomatik kurtarma bilgilerini kaydetme**
+:::image type="content" source="media/autorecover-options.png" alt-text="Seçenekler iletişim kutusundaki otomatik kurtarma bölümünün ekran görüntüsü":::
 
-Bir dosyanın düzenleyiciye otomatik olarak ne sıklıkta kaydolduğunu özelleştirmek için bu seçeneği kullanın. Daha önce kaydedilmiş dosyalar için, dosyanın bir kopyası *%USERPROFILE%\Documents\Visual Studio\\\\[version]\Backup Files [projeadı]* olarak kaydedilir. Dosya yeniyse ve henüz kaydetmediyseniz, dosya rasgele oluşturulan bir dosya adı kullanılarak otomatik olarak kaydedilir.
+**Otomatik Kurtarma bilgilerini her [n] dakikada bir Kaydet**
 
-**[n] gün için Otomatik Kurtarma bilgilerini tutun**
+::: moniker range="vs-2019"
 
-Visual Studio'nun otomatik kurtarma için oluşturulan dosyaları ne kadar süreyle saklar olduğunu belirtmek için bu seçeneği kullanın.
+Bir dosyanın düzenleyicide ne sıklıkta otomatik olarak kaydedileceğini özelleştirmek için bu seçeneği kullanın. Daha önce kaydedilen dosyalar için, Visual Studio 2019 sürüm 16,2 ve üzeri, dosyanın bir kopyasını ***%LocalAppData%\microsoft\visualstudio\backupfiles \\ [ProjectName]*** dizinine kaydeder. Dosya yeni ise ve henüz kaydetmediyseniz, Visual Studio otomatik olarak rastgele oluşturulmuş bir dosya adı kullanarak kaydeder.
+
+> [!NOTE]
+> Visual Studio 2019 sürüm 16,1 veya önceki bir sürümü kullanıyorsanız, dosya konumu *%userprofile%\, \Backup Files \\ [ProjectName]* olur. Daha fazla bilgi için [Visual Studio 2019 sürüm notları geçmişi](/visualstudio/releases/2019/release-notes-history/) sayfasına bakın.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Bir dosyanın düzenleyicide ne sıklıkta otomatik olarak kaydedileceğini özelleştirmek için bu seçeneği kullanın. Daha önce kaydedilen dosyalar için, Visual Studio 2017 dosyanın bir kopyasını *%userprofile%\, Studio [Version] \Backup Files \\ [ProjectName]* içinde kaydeder. Dosya yeni ise ve henüz kaydetmediyseniz, Visual Studio otomatik olarak rastgele oluşturulmuş bir dosya adı kullanarak kaydeder.
+
+::: moniker-end
+
+**[N] gün için otomatik kurtarma bilgilerini tut**
+
+Visual Studio 'Nun otomatik kurtarma için oluşturulan dosyaları ne kadar süre tutacağını belirtmek için bu seçeneği kullanın.
 
 ### <a name="see-also"></a>Ayrıca bkz.
 
