@@ -1,7 +1,0 @@
-# [Windows Betik Arabirimleri](windows-script-interfaces.md)
-# [Windows Betik Konakları](windows-script-hosts.md)
-# [Windows Betik Motorları](windows-script-engines.md)
-# [Etkin Betik Hata Ayıklamaya Genel Bakış](active-script-debugging-overview.md)
-## [Akıllı Konak Yardımcı Arabirimleri Uygulama](implementing-smart-host-helper-interfaces.md)
-# [Etkin Betik Profil Oluşturmaya Genel Bakış](active-script-profiling-overview.md)
-# [Windows Betik Arabirimleri Başvurusu](reference/TOC.md)
