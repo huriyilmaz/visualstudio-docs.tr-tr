@@ -7,12 +7,12 @@ ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: F898CB6E-05ED-44CD-8DB6-427B2592CCC6
 ms.topic: how-to
-ms.openlocfilehash: 008052c9b78f93b84e650329cd7ebaf6200d21f1
-ms.sourcegitcommit: 5335a9864d5747bc917ed28d4ebeade3076b10e7
+ms.openlocfilehash: 26575367d7aff2b92c64dc5d07068b4900b24e7f
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85950520"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88249534"
 ---
 # <a name="create-razor-web-apps"></a>Razor Web uygulamaları oluşturma
 
@@ -41,17 +41,17 @@ Mac için Visual Studio, IntelliSense ve *. cshtml* dosyalarında sözdizimi vur
 
    ![Safari 'de Razor Web uygulaması](media/razor-webapp.png)
 
-## <a name="project-anatomy"></a>Proje anatomumu
+## <a name="project-anatomy"></a>Proje anatomisi
 
 Razor Web uygulamaları aşağıdaki bileşenleri içerir.
 
 ### <a name="pages-folder"></a>Sayfalar klasörü
 
 Bu klasör bir projenin Web sayfalarını, her biri için arka plan kodu içerir:
-   - HTML biçimlendirme ve Razor söz dizimi için bir * \* . cshtml* dosyası.
-   - Sayfa olaylarını işlemek için C# arka plan kodu için bir * \* . cshtml.cs* dosyası.
+- HTML biçimlendirme ve Razor söz dizimi için bir * \* . cshtml* dosyası.
+- Sayfa olaylarını işlemek için C# arka plan kodu için bir * \* . cshtml.cs* dosyası.
 
-Destekleyici dosyalar bir alt çizgiyle başlayan adlara sahiptir. Örneğin, _Layout. cshtml dosyası tüm sayfalarda ortak kullanıcı arabirimi öğelerini yapılandırır. Bu dosya, sayfanın üst kısmındaki gezinti menüsünü ve en alttaki telif hakkı bildirimini ayarlar. Daha fazla bilgi için [ASP.NET Core düzen](/aspnet/core/mvc/views/layout)bölümüne bakın.
+Destekleyici dosyalar bir alt çizgiyle başlayan adlara sahiptir. Örneğin, * \_ Layout. cshtml* dosyası tüm sayfalarda ortak kullanıcı arabirimi öğelerini yapılandırır. Bu dosya, sayfanın üst kısmındaki gezinti menüsünü ve en alttaki telif hakkı bildirimini ayarlar. Daha fazla bilgi için [ASP.NET Core düzen](/aspnet/core/mvc/views/layout)bölümüne bakın.
 
 ### <a name="launch-settings"></a>Başlatma ayarları
 

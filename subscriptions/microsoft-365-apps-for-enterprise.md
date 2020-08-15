@@ -7,12 +7,12 @@ ms.assetid: d1257931-392a-4a65-bf26-177737505122
 ms.date: 06/24/2020
 ms.topic: how-to
 description: Enterprise için Microsoft 365 uygulamalar hakkında bilgi edinin ve bunları yükler
-ms.openlocfilehash: 341598e323b004463d9af2f1b18d5096dea9f3b2
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 8ece49244d5bdecadc5992cda4e56d0785666e2a
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902989"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88250746"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Enterprise için Microsoft 365 uygulamalar
 Enterprise (eskiden Office 365 Pro Plus) için Microsoft 365 uygulamalar, seçilen Visual Studio aboneliklerinde kullanılabilir. 
@@ -25,38 +25,38 @@ En iyi çalışmanızı oluşturun. Her zaman güncelleştirilmiş uygulamalarla
 ## <a name="activation-steps"></a>Etkinleştirme adımları
 Kurumsal abonelik için Microsoft 365 uygulamalarınızı etkinleştirme işlemi basittir.  Aboneliğinizi etkinleştirmek ve uygulamalarınızı yüklemek için şu adımları izleyin:
 
-1. Üzerinde Visual Studio aboneliğinizde oturum açın[https://my.visualstudio.com](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
-1. Kurumsal kutucuk için Microsoft 365 uygulamalarını bulun ve **Etkinleştir**' e tıklayın.
+1. Üzerinde Visual Studio aboneliğinizde oturum açın [https://my.visualstudio.com](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)
+1. Kurumsal kutucuk için Microsoft 365 uygulamalarını bulun ve **Etkinleştir**' i seçin.
    > [!div class="mx-imgBorder"]
-   > ![Kurumsal kutucuk için Microsoft 365 uygulamalar](_img/microsoft-365-apps-for-enterprise/tile-activate.png "Aboneliğinizi kullanmaya başlamak için ' etkinleştir 'e tıklayın.")
+   > ![Kurumsal kutucuk için Microsoft 365 uygulamalar](_img/microsoft-365-apps-for-enterprise/tile-activate.png "Aboneliğinizi kullanmaya başlamak için ' etkinleştir ' seçeneğini belirleyin.")
 
-1. "Hoş geldiniz, size bize bakalım" iletişim kutusuna istenen kişisel iletişim bilgilerini girip **İleri**' ye tıklayın.
+1. "Hoş geldiniz, size bize bakalım" iletişim kutusuna istenen kişisel iletişim bilgilerini girip **İleri**' yi seçin.
    > [!div class="mx-imgBorder"]
    > ![Kurumsal müşteri bilgileri için Microsoft 365 uygulamalar](_img/microsoft-365-apps-for-enterprise/get-to-know-you.png "İletişim bilgilerinizi girin")
 
-1. "Kullanıcı Kimliğinizi oluşturma" iletişim kutusunda kiracınız için Kullanıcı adınızı ve parolanızı oluşturun ve ardından **hesabı oluştur**' a tıklayın.
+1. "Kullanıcı Kimliğinizi oluşturma" iletişim kutusunda kiracınız için Kullanıcı adınızı ve parolanızı oluşturun ve ardından **hesabı oluştur**' u seçin.
    > [!div class="mx-imgBorder"]
    > ![Kurumsal Kullanıcı KIMLIĞI oluşturma için Microsoft 365 uygulamalar](_img/microsoft-365-apps-for-enterprise/create-your-user-id.png "Kullanıcı KIMLIĞINIZI ve parolanızı oluşturma")
 
-1. Daha sonra, bir robot olmadığınızı kanıtlamak için bir kod sağlamanız istenecektir.  Kodunuzun size bir kısa mesaj olarak gönderilmesini sağlayabilirsiniz.  Kodu girin ve **İleri**' ye tıklayın. 
+1. Daha sonra, bir robot olmadığınızı kanıtlamak için bir kod sağlamanız istenecektir.  Kodunuzun size bir kısa mesaj olarak gönderilmesini sağlayabilirsiniz.  Kodu girin ve Ileri ' **yi**seçin. 
    > [!div class="mx-imgBorder"]
    > ![Kurumsal bir robot olmadığınız için uygulamalar Microsoft 365](_img/microsoft-365-apps-for-enterprise/prove-youre-not-a-robot.png "Bir kod isteyin ve devam etmek için girin")
 
-1. Hesabınız başarıyla oluşturulduktan sonra, Office portalı için oturum açma sayfasını ve Yeni Kullanıcı KIMLIĞINIZI görüntüleyen bir iletişim kutusu görürsünüz.  Daha sonra kullanmak üzere bu bilgileri unutmayın ve Microsoft 365 uygulamalarınızı yüklemeye başlamak için **Kurulumu Başlat** ' a tıklayın.
+1. Hesabınız başarıyla oluşturulduktan sonra, Office portalı için oturum açma sayfasını ve Yeni Kullanıcı KIMLIĞINIZI görüntüleyen bir iletişim kutusu görürsünüz.  Daha sonra kullanmak üzere bu bilgileri unutmayın ve Microsoft 365 uygulamalarınızı yüklemeye başlamak için **Kurulumu Başlat** ' ı seçin.
    > [!div class="mx-imgBorder"]
    > ![Enterprise için Microsoft 365 uygulamalar bu bilgileri Kaydet](_img/microsoft-365-apps-for-enterprise/save-this-info.png "Yeni Kullanıcı KIMLIĞINIZI ve Office portalı bağlantısını kaydedin.")
 
-1. Otomatik olarak Office portalında oturum açarsınız ve artık uygulamalarınızı yüklemeye hazırsınız demektir.  Başlamak için **Al düğmesine tıklayın** .
+1. Otomatik olarak Office portalında oturum açarsınız ve artık uygulamalarınızı yüklemeye hazırsınız demektir.  Başlamak için **Al düğmesini seçin** .
    > [!div class="mx-imgBorder"]
-   > ![Kurumsal yüklemeye yönelik Microsoft 365 uygulamalar](_img/microsoft-365-apps-for-enterprise/install-your-office-apps.png "Uygulamalarınızı yüklemek için ' Install ' düğmesine tıklayın.")
+   > ![Kurumsal yüklemeye yönelik Microsoft 365 uygulamalar](_img/microsoft-365-apps-for-enterprise/install-your-office-apps.png "Uygulamalarınızı yüklemek için ' Install ' düğmesini seçin.")
 1. Seçtiğiniz uygulamaları yüklemek için istemleri izleyin.  
 
 ## <a name="eligibility"></a>Önceliği
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Yes          |
-| GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir       |  Yes          |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Evet          |
+| GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir       |  Evet          |
 | Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Kullanılamaz       |  Yok          |
 | Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılamaz                                                            |  Yok          |
 | GitHub Enterprise ile Visual Studio Professional | VL | Kullanılamaz         |  Yok          |

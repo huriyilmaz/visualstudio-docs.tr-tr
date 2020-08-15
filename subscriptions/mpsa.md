@@ -7,12 +7,12 @@ ms.assetid: b331c837-3524-42b7-820e-b4fdd5e12793
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Microsoft ürün ve hizmet anlaşmasındaki (MPSA) Visual Studio abonelikleri
-ms.openlocfilehash: d38da1784eb543519f1a36ba7342f0b13ab2b1ac
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 6ce2208e6d1028e1e697b216d41cdd825dfc0d33
+ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289358"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88247312"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Microsoft ürün ve hizmet anlaşmasındaki (MPSA) Visual Studio abonelikleri
 MPSA programı aracılığıyla Visual Studio abonelikleri satın aldıysanız, Visual Studio abonelikleri Yöneticisi olmaya ve kullanıcılarınıza abonelik atamadan önce bilmeniz gereken birkaç nokta vardır. Zaten yönetici olarak ayarladıysanız, doğrudan Visual Studio abonelikleri [Yönetim portalına](https://manage.visualstudio.com/)gidebilirsiniz.
@@ -39,14 +39,14 @@ Kiracı ilişkilendirmesini tamamlamadan önce Visual Studio abonelikleri yönet
 
 Yukarıdaki kriterleri karşıladıktan sonra, aşağıdaki adımları izleyerek satın alma hesabınızı kiracınızla ilişkilendirmeye devam edebilirsiniz.
 1. [Iş merkezinde](https://businessaccount.microsoft.com/Customer)oturum açın.
-2. **Hesap** sekmesine tıklayın ve **etki alanlarını ilişkilendir**' i seçin.
+2. **Hesap** sekmesini seçin ve **etki alanlarını ilişkilendir**' i seçin.
 3. **Satın alma hesabınızı** seçin (birden fazla varsa).
 4. **Kiracınızı** (ör. contoso.onmicrosoft.com) seçin.
-5. **Etki alanını ilişkilendir**' e tıklayın.
+5. **Etki alanını ilişkilendir**' i seçin.
 
 İlişkilendirmede, ölçütlere uyan tüm kullanıcılar genellikle dakikalar içinde Visual Studio abonelikleri Yöneticisi olarak temin eder. Ancak, 24 saate kadar zaman alabilir. Kiracınız sağlandıktan sonra Visual Studio abonelikleri yönetim portalına erişebileceksiniz. Bu, 24 saatten uzun sürerse lütfen şu adımları kullanarak MPSA desteğine başvurun:
-1. Bağlan<https://www.microsoft.com/licensing/mpsa/default>
-2. Sayfanın üst kısmındaki **daha fazla** menüye tıklayın. 
+1. Bağlan <https://www.microsoft.com/licensing/mpsa/default>
+2. Sayfanın üst kısmındaki **daha fazla** menüyü seçin. 
 3. **Destek** seçin
 4. **Lisans desteğini** seçin
 5. Gereksinimlerinize en uygun destek seçeneğini belirleyin. 
