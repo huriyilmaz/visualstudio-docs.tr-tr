@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: 1132a7a0363e2d508d6eff1026192aad3407fca4
-ms.sourcegitcommit: f8e3715c64255b476520bfa9267ceaf766bde3b0
+ms.openlocfilehash: 89aa8b9d1b1f288e19252b8a111666f5b4e3e087
+ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "73189246"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88238718"
 ---
 # <a name="work-with-r-in-visual-studio"></a>Visual Studio’da R ile çalışma
 
@@ -41,13 +41,11 @@ Daha sonra R ile ilgili özellikler ve Visual Studio’nun genel özellikleri ha
 | [Etkileşimli Pencere](interactive-repl-for-r-in-visual-studio.md) | Etkileşimli penceredeki bir kaynak dosyada kolayca kod çalıştırılabilmesini sağlayarak R ile tam REPL deneyimi sunar. | yok |
 | [Verileri görselleştirme](visualizing-data-with-r-in-visual-studio.md) | Çizim, R deneyiminin ayrılmaz bir parçasıdır ve RTVS, her biri kendi geçmişine ve pencereler arasında çizimleri taşıyabilme yeteneğine sahip olan birden çok bağımsız çizim penceresini destekler. Çizimler bit eşlem ve PDF dosyalarına kaydedilebilir veya panoya bit eşlem ya da meta dosyası olarak kopyalanabilir.  | yok |
 | [Değişken Gezgini](variable-explorer.md) | Sıralanabilir tabloları görüntüleme ve CSV’ye dışarı aktarma özelliği sayesinde, genel veya pakete özgü kapsamlarda değişkenleri inceleyin. | yok |
-| [Tam özellikli hata ayıklama](debugging-r-in-visual-studio.md) | Etkileşimli pencereyle tümleştirmeyi içerir. | [Visual Studio’da hata ayıklama](../debugger/debugger-feature-tour.md) |
+| [Tam özellikli hata ayıklama](debugging-r-in-visual-studio.md) | Etkileşimli pencereyle tümleştirmeyi içerir. | [Visual Studio'da Hata Ayıklama](../debugger/debugger-feature-tour.md) |
 
 Ayrıca bkz. [Sık sorulan sorular](faq.md).
 
-|   |   |
-|---|---|
-| ![video için kamera simgesi](../install/media/video-icon.png "Video izleyin") | Visual Studio için R Araçları’na genel bakış için [bir video (youtube.com) izleyin](https://www.youtube.com/watch?v=dll3IS1bfWQ) (12 dk 36 sn). Ayrıca bkz. [diğer R Araçları videoları](https://www.youtube.com/results?search_query=R+Tools+for+visual+studio). |
+![video için kamera simgesi](../install/media/video-icon.png "Nasıl yapılacağını görmek için") Visual Studio için R Araçlarına genel bakış sunan [bir video (youtube.com) izleyin](https://www.youtube.com/watch?v=dll3IS1bfWQ) (12m 36s). Ayrıca bkz. [diğer R Araçları videoları](https://www.youtube.com/results?search_query=R+Tools+for+visual+studio).
 
 ## <a name="send-us-your-feedback"></a>Bize geri bildirimlerinizi gönderin!
 
