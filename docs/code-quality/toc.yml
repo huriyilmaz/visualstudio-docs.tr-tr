@@ -567,6 +567,8 @@
                   href: ca1835.md
                 - name: 'CA1836: Kullanılabilir olduğunda Count yerine IsEmpty tercih edin'
                   href: ca1836.md
+                - name: 'CA1838: P/Invoke’lar için StringBuilder parametreleri kullanmaktan kaçının'
+                  href: ca1838.md
             - name: Taşınabilirlik uyarıları
               items:
                 - name: Genel Bakış
