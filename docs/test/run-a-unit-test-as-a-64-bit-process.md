@@ -10,12 +10,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: mikejo5000
-ms.openlocfilehash: 04895e3dd72a7cb4f0373c970db0f12582506ef9
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 3c5cb51232457a43200c8a71ace51cc4b8a63e02
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285562"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88507992"
 ---
 # <a name="run-a-unit-test-as-a-64-bit-process"></a>64 bitlik bir işlem olarak birim testi çalıştırma
 
@@ -30,7 +30,7 @@ ms.locfileid: "85285562"
    ::: moniker-end
 
     > [!TIP]
-    > En yüksek esneklik için, test projelerinizi **herhangi BIR CPU** yapılandırmasıyla derleyin. Ardından, 32-bit ve 64 bit aracılarında çalıştırabilirsiniz. **64 bitlik** yapılandırma ile test projelerini derleme avantajına sahip değildir.
+    > En yüksek esneklik için, test projelerinizi **herhangi BIR CPU** yapılandırmasıyla derleyin. Ardından, 32-bit ve 64 bit aracılarında çalıştırabilirsiniz. Yalnızca 64 bit üzerinde desteklenen kodu çağırırken **64 bitlik** yapılandırma ile test projelerini derlemek avantajına sahip değildir.
 
 2. Birim testlerini 64 bitlik bir işlem olarak çalışacak şekilde ayarlayın.
 
@@ -41,7 +41,7 @@ ms.locfileid: "85285562"
    Visual Studio menüsünden **Test**' i seçin, ardından **Test ayarları**' nı seçin ve ardından **işlemci mimarisi**' ni seçin. Testleri 64 bitlik bir işlem olarak çalıştırmak için **x64** seçeneğini belirleyin.
    ::: moniker-end
 
-   \-veya
+   \- veya
 
    `<TargetPlatform>x64</TargetPlatform>`Bir *. runsettings* dosyasında belirtin. Bu yöntemin avantajı, farklı dosyalardaki ayar gruplarını belirtebileceğiniz ve farklı ayarlar arasında hızlı bir şekilde geçiş yapmak için kullanabileceğiniz bir avantajdır. Ayrıca, ayarları çözümler arasında kopyalayabilirsiniz. Daha fazla bilgi için bkz [.. runsettings dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
 

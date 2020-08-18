@@ -1,5 +1,5 @@
 ---
-title: Komut satırından performansı ölçme
+title: Komut satırından performans ölçme
 description: Komut satırından uygulamanızdaki CPU performansını ve yönetilen bellek kullanımını ölçün.
 ms.custom: ''
 ms.date: 02/21/2020
@@ -14,12 +14,12 @@ manager: jillfra
 monikerRange: '>= vs-2019'
 ms.workload:
 - multiple
-ms.openlocfilehash: ba5915e687bd4e1f6afb200f4ca3e7a866c6151c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 56007fcb3b951f9b313a25092e89c234d52eb15e
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85285850"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88508005"
 ---
 # <a name="measure-application-performance-from-the-command-line"></a>Komut satırından uygulama performansını ölçme
 
@@ -41,9 +41,9 @@ Visual Studio tanılama CLı araçları kullanılarak profil oluşturma işlemi,
 
 1. Not defteri 'ni başlatın ve sonra işlem KIMLIĞINI (PID) almak için Görev Yöneticisi 'Ni açın. Görev Yöneticisi 'nde, **Ayrıntılar** sekmesinde PID 'yi bulun.
 
-1. Bir komut istemi açın ve koleksiyon Aracısı yürütülebiliri ile dizinde geçiş yapın, genellikle burada.
+1. Bir komut istemi açın ve genellikle burada (Visual Studio Enterprise için) koleksiyon Aracısı yürütülebiliri ile dizinde geçiş yapın.
 
-   ```<Visual Studio installation folder>\2019\Preview\Team Tools\DiagnosticsHub\Collector\```
+   ```<Visual Studio installation folder>\2019\Enterprise\Team Tools\DiagnosticsHub\Collector\```
 
 1. Aşağıdaki komutu yazarak *VSDiagnostics.exe* başlatın.
 
@@ -53,9 +53,15 @@ Visual Studio tanılama CLı araçları kullanılarak profil oluşturma işlemi,
 
    Dahil olması gereken bağımsız değişkenler şunlardır:
 
-   * \<*id*>Koleksiyon oturumunu tanımlar. KIMLIK 1-255 arasında bir sayı olmalıdır.
-   * \<*pid*>, Bu durumda, profil atamak istediğiniz işlemin PID 'si, 1. adımda bulduğunuz PID
+   * \<*id*> Koleksiyon oturumunu tanımlar. KIMLIK 1-255 arasında bir sayı olmalıdır.
+   * \<*pid*>, Bu durumda, profil atamak istediğiniz işlemin PID 'si, 1. adımda bulduğunuz PID.
    * \<*configFile*>, başlatmak istediğiniz koleksiyon aracısının yapılandırma dosyası. Daha fazla bilgi için bkz. [aracılar Için yapılandırma dosyaları](#config_file).
+
+   Örneğin, daha önce açıklandığı gibi, *PID* 'Yi değiştirerek CPUUsageBase Aracısı için aşağıdaki komutu kullanabilirsiniz.
+
+   ```cmd
+   VSDiagnostics.exe start 1 /attach:<pid> /loadConfig:AgentConfigs\CPUUsageLow.json
+   ```
 
 1. Not defteri 'ni yeniden boyutlandırın veya bazı ilgi çekici profil bilgilerinin toplandığından emin olmak için buna bir şey yazın.
 
@@ -65,9 +71,11 @@ Visual Studio tanılama CLı araçları kullanılarak profil oluşturma işlemi,
    VSDiagnostics.exe stop <id> /output:<path to file>
    ```
 
-1. Önceki komuttan dosya çıktısına gidin ve toplanan bilgileri incelemek için Visual Studio 'da açın.
+1. Önceki komuttan *. diagsession* dosyası çıkışını bulun ve toplanan bilgileri incelemek için Visual Studio (**Dosya**  >  **Aç**) içinde açın.
 
-## <a name="agent-configuration-files"></a><a name="config_file"></a>Aracı yapılandırma dosyaları
+   Sonuçları çözümlemek için, ilgili performans aracına yönelik belgelere bakın. Örneğin, bu [CPU kullanımı](../profiling/cpu-usage.md), [.NET nesne ayırma aracı](../profiling/dotnet-alloc-tool.md)veya [veritabanı](../profiling/analyze-database.md) aracı olabilir.
+
+## <a name="agent-configuration-files"></a><a name="config_file"></a> Aracı yapılandırma dosyaları
 
 Koleksiyon aracıları, ölçmeye çalıştığınız seçeneğe bağlı olarak farklı veri türlerini toplamanızı sağlayan, değiştirilebilir bileşenlerdir.
 

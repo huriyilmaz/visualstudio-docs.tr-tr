@@ -15,16 +15,16 @@ dev_langs:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aae83c43a106fd68b03a83124ad2ddcea4652c8d
-ms.sourcegitcommit: c620d59578db1b89f80e64ae04b4898bc4ab292d
+ms.openlocfilehash: 981f18857beb83ef2a4902f50985ca8e9f7ed901
+ms.sourcegitcommit: 8e5b0106061bb43247373df33d0850ae68457f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87377195"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88507962"
 ---
 # <a name="tutorial-extend-a-simple-c-console-app"></a>Öğretici: basit bir C# konsol uygulamasını genişletme
 
-Bu öğreticide, Visual Studio 'Yu kullanarak ilk bölümde oluşturduğunuz konsol uygulamasını nasıl genişletebileceğinizi öğreneceksiniz. Visual Studio 'da Gelişmiş Düzenleyici özellikleri ve hata ayıklama gibi bir geliştirici olarak daha üretken olmanıza yardımcı olan özelliklerden bazılarını öğreneceksiniz.
+Bu öğreticide, Visual Studio 'Yu kullanarak ilk bölümde oluşturduğunuz konsol uygulamasını nasıl genişletebileceğinizi öğreneceksiniz. Visual Studio 'da birden fazla projeyi yönetme ve üçüncü taraf paketlerine başvurma gibi günlük geliştirme için ihtiyacınız olan özelliklerden bazılarını öğreneceksiniz.
 
 Bu serinin [ilk bölümünü](tutorial-console.md) henüz tamamladıysanız, hesap makinesi konsol uygulamasına zaten sahipsiniz demektir.  1. bölüm atlamak için, projeyi bir GitHub deposundan açarak başlayabilirsiniz. C# Hesaplayıcı uygulaması [vs-öğreticisi-Samples](https://github.com/MicrosoftDocs/vs-tutorial-samples)deposunda bulunur, bu nedenle yalnızca [öğreticideki bir projeyi açmak Için bir depoyu açın:](../tutorial-open-project-from-repo.md)
 
