@@ -288,18 +288,19 @@ f1_keywords:
 - CA5122
 - CA5374
 - IL3000
+- IL3001
 ms.assetid: 5cb221f6-dc59-4abf-9bfa-adbd6f907f96
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 040df1edf85f2879cd2666e79768e76969464522
-ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
+ms.openlocfilehash: daaf6854b56b31419408691c27af245c4001ea42
+ms.sourcegitcommit: 328ab0d8e5770f1067e37dcc266c2b50ea07783c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88214610"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88612883"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>CheckId tarafından yönetilen kod için kod analizi uyarıları
 
@@ -375,7 +376,7 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA1070 | [CA1070: Olay alanlarını sanal olarak bildirme](../code-quality/ca1070.md) | [Alan benzeri bir olay](/dotnet/csharp/language-reference/language-specification/classes#field-like-events) sanal olarak bildirildi. |
 | CA1200 | [CA1200: cref etiketlerini ön ek ile kullanmaktan kaçının](../code-quality/ca1200.md) | XML belgesi etiketindeki [cref](/dotnet/csharp/programming-guide/xmldoc/cref-attribute) özniteliği "kod başvurusu" anlamına gelir. Etiketin iç metninin tür, yöntem veya özellik gibi bir kod öğesi olduğunu belirtir. `cref`Derleyicinin başvuruları doğrulamasını önlediği için ön ekleri olan etiketleri kullanmaktan kaçının. Ayrıca, Visual Studio tümleşik geliştirme ortamının (IDE) yeniden düzenlemeler sırasında bu sembol başvurularını bulmasını ve güncelleştirmesini de önler. |
 | CA1300 | [CA1300: MessageBoxOptions belirt](../code-quality/ca1300.md) | Doğru olarak sağdan sola okuma düzeni kullanan kültürler için bir ileti kutusu görüntülemek için Show yöntemi MessageBoxOptions numaralandırma RightAlign ve RtlReading üyeleri geçirilmelidir. |
-| CA1301 | [CA1301: Yinelenen hızlandırıcılardan kaçının](../code-quality/ca1301.md) | Giriş anahtarı, bir hızlandırıcı olarak da bilinir, ALT anahtarını kullanarak klavye giriş denetimini sağlar. Birden çok denetim yinelenen erişim anahtarlarına sahip olduğunda, erişim anahtarının davranışı iyi tanımlı değildir. |
+| CA1301 | [CA1301: Yinelenen hızlandırıcılardan kaçının](../code-quality/ca1301.md) | Giriş anahtarı, bir hızlandırıcı olarak da bilinir, ALT anahtarını kullanarak klavye giriş denetimini sağlar. Birden çok denetimin yinelenen erişim tuşları varsa, erişim tuşunun davranışı iyi tanımlı değildir. |
 | CA1302 | [CA1302: Yerel özel dizeleri doğrudan programın içine gömmeyin](../code-quality/ca1302.md) | System.Environment.SpecialFolder numaralandırma özel sistem klasörlerine başvuran üyeleri içerir. Bu klasörlerin konumları farklı işletim sistemleri üzerinde farklı değerlere sahip olabilir; kullanıcı konumları değiştirebilir ve konumlar yerelleştirilmiştir. Environment.GetFolderPath yöntemi yerelleştirilmiş ve o anda çalışan bilgisayara uygun Environment.SpecialFolder numaralandırma ile ilişkili olan konumları döndürür. |
 | CA1303 | [CA1303: Harfleri yerelleştirilmiş parametreler olarak göndermeyin](../code-quality/ca1303.md) | Dışarıdan görülebilen bir yöntem, bir dize sabit değerini bir .NET oluşturucusuna veya yöntemine parametre olarak geçirir ve bu dize yerelleştirilebilir olmalıdır. |
 | CA1304 | [CA1304: CultureInfo belirt](../code-quality/ca1304.md) | Yöntem veya Oluşturucu System.Globalization.CultureInfo parametre kabul eden aşırı yüklenmiş üye arar ve yöntem veya oluşturucu CultureInfo parametresi aşırı yükleme çağıramaz. Bir CultureInfo veya System.IFormatProvider nesnesi sağlanamadığında, aşırı yüklü üye tarafından sağlanan varsayılan değer, tüm yerel ayarlarda istediğiniz etkiyi vermeyebilir. |
@@ -606,4 +607,5 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA5400 | [CA5400 HttpClient sertifika iptal listesi denetiminin devre dışı olmadığından emin olun](../code-quality/ca5400.md) | İptal edilen bir sertifika artık güvenilir değil. Saldırganlar, bazı kötü amaçlı verileri geçirerek veya HTTPS iletişiminden hassas verileri çalmaya yönelik olarak kullanılabilir. |
 | CA5401 | [CA5401 varsayılan olmayan IV ile CreateEncryptor kullanma](../code-quality/ca5401.md) | Simetrik şifrelemenin sözlük saldırılarını engellemek için her zaman yinelenebilir olmayan bir başlatma vektörü kullanması gerekir. |
 | CA5402 | [CA5402 varsayılan IV ile CreateEncryptor kullanın](../code-quality/ca5402.md) | Simetrik şifrelemenin sözlük saldırılarını engellemek için her zaman yinelenebilir olmayan bir başlatma vektörü kullanması gerekir. |
-| IL3000 | [IL3000 tek dosya olarak yayımlarken derleme dosya yoluna erişim kullanmaktan kaçının](../code-quality/il3000.md) | Tek dosya olarak yayımlarken derleme dosya yoluna erişim kullanmaktan kaçının |
+| IL3000 | [IL3000 tek bir dosya olarak yayımlarken derleme dosya yoluna erişmeyi önleyin](../code-quality/il3000.md) | Tek bir dosya olarak yayımlarken derleme dosya yoluna erişim kullanmaktan kaçının |
+| IL3001 | [IL3001 tek dosya olarak yayımlarken derleme dosya yoluna erişmeyi önleyin](../code-quality/il3001.md) | Tek dosya olarak yayımlarken derleme dosya yoluna erişmemeye özen gösterin |
