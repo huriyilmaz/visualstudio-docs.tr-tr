@@ -9,12 +9,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 95623d72e70e572ca7605c34e2e25e7186c284e1
-ms.sourcegitcommit: 4a77403b6bd33c5a6e66a3eefd42c81c39fb67ca
+ms.openlocfilehash: ca095bf424420fb73ba8f369f7e41daea92fe33d
+ms.sourcegitcommit: 98af63c1a53a732558f8207338dc2722abbbe49e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87330966"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88584508"
 ---
 # <a name="report-a-problem-states-and-faq"></a>Sorun bildirin: durumlar ve SSS
 
@@ -52,7 +52,7 @@ Bu konu **başlığı altında** , Microsoft 'un topluluk üzerindeki sorunu gö
 
 ![Geliştirici topluluğu 'nda sorun raporlama için daha fazla bilgi gerekiyor](../ide/media/ProblemStates/NeedMoreInfo.jpg)
 
-**Daha fazla bilgi gerekiyor** , araştırmaya gidebilmemiz için daha fazla tanılama bilgisine ihtiyacımız olduğunu gösterir.  [Daha fazla bilgi isteği Ihtiyacını nasıl yanıtlayacağınızı öğrenin.](./how-to-report-a-problem-with-visual-studio.md#when-further-information-is-needed-need-more-info)
+**Daha fazla bilgi gerekiyor** , araştırmaya gidebilmemiz için daha fazla tanılama bilgisine ihtiyacımız olduğunu gösterir.  [Daha fazla bilgi isteği Ihtiyacını nasıl yanıtlayacağınızı öğrenin.](./how-to-report-a-problem-with-visual-studio.md#when-further-information-is-needed)
 
 - - -
 
@@ -82,7 +82,7 @@ Bu konu **başlığı altında** , Microsoft 'un topluluk üzerindeki sorunu gö
 
 ![Closed-geliştirici topluluğundaki sorun raporlaması için hata durumu değil](../ide/media/ProblemStates/ClosedNotABug.jpg)
 
-**Kapalı-hata değil** , bildirilen işlevin geçerli tasarıma göre olduğunu belirlediğimize işaret etti.
+**Kapalı-hata değil**  , bildirilen işlevin geçerli tasarıma göre olduğunu belirlediğimize işaret etti.
 
 - - -
 
