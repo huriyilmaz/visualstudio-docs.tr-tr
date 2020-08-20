@@ -1,45 +1,53 @@
 ---
 title: Bağlı hizmetler 'i kullanarak Azure depolama ekleme | Microsoft Docs
-description: Visual Studio bağlı hizmetler Ekle iletişim kutusunu kullanarak uygulamanıza Azure Storage ekleme
+description: Visual Studio bağlı hizmetlerini kullanarak uygulamanıza bir Azure depolama hizmeti bağımlılığı ekleyin
 author: ghogen
 manager: jillfra
 assetId: 521ec044-ad4b-4828-8864-01decde2e758
 ms.custom: vs-azure
 ms.workload: azure-vs
 ms.topic: how-to
-ms.date: 03/26/2017
+ms.date: 08/13/2020
 ms.author: ghogen
-ms.openlocfilehash: ddb0f2610473841a69ec69600cf9ef83cb898340
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 4a1b7bcc8b95b30ea3737dc2561c5abb280e2b5c
+ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85280690"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88639460"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetler 'i kullanarak Azure depolama ekleme
 
-Visual Studio ile, **bağlı hizmetler Ekle** iletişim kutusunu kullanarak aşağıdakilerden herhangi birini Azure depolama 'ya bağlayabilirsiniz:
+Visual Studio ile, **bağlı hizmetler** özelliğini kullanarak aşağıdakilerden herhangi birini Azure depolama 'ya bağlayabilirsiniz:
 
-- C# bulut hizmeti
-- .NET arka uç mobil hizmeti
-- ASP.NET Web sitesi veya hizmeti
-- ASP.NET Core hizmeti
-- Azure WebJob hizmeti
+- .NET Framework konsol uygulaması
+- ASP.NET MVC (.NET Framework) 
+- ASP.NET Çekirdeği
+- .NET Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
+- .NET Core çalışan rolü
+- Azure İşlevleri
+- Evrensel Windows Platformu uygulaması
+- Xamarin
+- Cordova
 
 Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodlarını projenize ekler ve yapılandırma dosyalarınızı uygun şekilde değiştirir.
 
-Tamamlandıktan sonra, **bağlı hizmetler Ekle** iletişim kutusu, BLOB depolama, kuyruklar ve tablolarla çalışmaya başlamak için gereken adımlarla ilgili belgelerde otomatik olarak görüntülenir.
-
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
+## <a name="prerequisites"></a>Ön koşullar
 
-## <a name="connect-to-azure-storage-using-the-connected-services-dialog"></a>Bağlı hizmetler iletişim kutusunu kullanarak Azure depolama 'ya bağlanma
+- Azure iş yükü yüklü olan Visual Studio.
+- Desteklenen türlerden birinin projesi
 
-1. Projenizi Visual Studio 'da açın
+## <a name="connect-to-azure-storage-using-connected-services"></a>Bağlı hizmetleri kullanarak Azure depolama 'ya bağlanma
 
-1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne ve bağlam menüsünden sağ tıklayın ve **bağlı hizmet ekle**' yi seçin.
+::: moniker range="vs-2017"
 
-    ![Azure bağlı hizmeti Ekle](./media/vs-azure-tools-connected-services-storage/IC796702.png)
+1. Projenizi Visual Studio’da açın.
+
+1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne sağ tıklayın ve bağlam menüsünden **bağlı hizmet ekle**' yi seçin.
+
+    ![Azure bağlı hizmeti Ekle](./media/vs-azure-tools-connected-services-storage/add-connected-service.png)
 
 1. **Bağlı hizmetler** sayfasında, **Azure depolama ile bulut depolama**' yı seçin.
 
@@ -62,19 +70,55 @@ Tamamlandıktan sonra, **bağlı hizmetler Ekle** iletişim kutusu, BLOB depolam
    1. **Azure depolama** iletişim kutusu görüntülendiğinde, yeni depolama hesabı listede görüntülenir. Listeden yeni depolama hesabı ' nı seçin ve **Ekle**' yi seçin.
 
 1. Depolama bağlı hizmeti, projenizin **hizmet başvuruları** düğümünün altında görüntülenir.
+:::moniker-end
 
-## <a name="how-your-project-is-modified"></a>Projenizin nasıl değiştirildiği
+:::moniker range=">=vs-2019"
 
-İletişim kutusunu tamamladığınızda, Visual Studio başvuruları ekler ve belirli yapılandırma dosyalarını değiştirir. Belirli değişiklikler proje türüne bağlıdır:
+1. Projenizi Visual Studio’da açın.
 
-- ASP.NET projesi- [ne oldu – ASP.NET projeleri](/azure/visual-studio/vs-storage-aspnet-getting-started-blobs)
-- ASP.NET Core projesi- [ne oldu – ASP.NET 5 proje](/azure/visual-studio/vs-storage-aspnet5-getting-started-blobs)
-- Bulut hizmeti projesi (Web rolleri ve çalışan rolleri)- [ne oldu – bulut hizmeti projeleri](/azure/visual-studio/vs-storage-cloud-services-getting-started-blobs)
-- WebJob projesi- [ne oldu-WebJob projeleri](/azure/visual-studio/vs-storage-webjobs-what-happened)
+1. **Çözüm Gezgini**, **bağlı hizmetler** düğümüne sağ tıklayın ve bağlam menüsünden **bağlı hizmet ekle**' yi seçin.
+
+    ![Azure bağlı hizmeti Ekle](./media/vs-azure-tools-connected-services-storage/vs-2019/add-connected-service.png)
+
+1. **Bağlı hizmetler** sekmesinde, **hizmet bağımlılıkları**için + simgesini seçin.
+
+    ![Hizmet bağımlılığı Ekle](./media/vs-azure-tools-connected-services-storage/vs-2019/connected-services-tab.png)
+
+1. **Bağımlılık Ekle** sayfasında **Azure Storage**' ı seçin.
+
+    ![Azure depolama ekleme](./media/vs-azure-tools-connected-services-storage/vs-2019/add-azure-storage.png)
+
+    Henüz oturum açmadıysanız Azure hesabınızda oturum açın. Bir Azure hesabınız yoksa, [ücretsiz deneme](https://azure.microsoft.com/account/free)için kaydolabilirsiniz.
+
+1. **Azure depolama 'Yı Yapılandır** ekranında, var olan bir depolama hesabını seçin ve **İleri**' yi seçin.
+
+    Bir depolama hesabı oluşturmanız gerekiyorsa, bir sonraki adıma gidin. Aksi takdirde, adım 6 ' ya atlayın.
+
+    ![Var olan depolama hesabını projeye Ekle](./media/vs-azure-tools-connected-services-storage/vs-2019/select-azure-storage-account.png)
+
+1. Depolama hesabı oluşturmak için:
+
+   1. İletişim kutusunun alt kısmındaki **depolama hesabı oluştur** ' u seçin.
+
+   1. **Azure depolama: Yeni oluştur** iletişim kutusunu doldurun ve **Oluştur**' u seçin.
+
+       ![Yeni Azure depolama hesabı](./media/vs-azure-tools-connected-services-storage/vs-2019/create-storage-account.png)
+
+   1. **Azure depolama** iletişim kutusu görüntülendiğinde, yeni depolama hesabı listede görüntülenir. Listeden yeni depolama hesabı ' nı seçin ve **İleri**' yi seçin.
+
+1. Bir bağlantı dizesi adı girin ve bağlantı dizesinin yerel bir gizli dizi dosyasında mi yoksa [Azure Key Vault](/azure/key-vault)mi depolanmasını istediğinizi seçin.
+
+   ![Bağlantı dizesini belirtin](./media/vs-azure-tools-connected-services-storage/vs-2019/connection-string.png)
+
+1. **Değişiklikler ekranının Özeti** , işlemi tamamlamadıysanız projenizde yapılacak tüm değişiklikleri gösterir. Değişiklikler tamam ise **son**' u seçin.
+
+   ![Değişikliklerin özeti](./media/vs-azure-tools-connected-services-storage/vs-2019/summary-of-changes.png)
+
+1. Depolama bağlı hizmeti, projenizin **hizmet başvuruları** düğümünün altında görüntülenir.
+:::moniker-end
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [MSDN Forumu: Azure depolama](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
-- [Ekip Blogu Microsoft Azure Depolama](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Azure Depolama forumu](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuredata)
 - [Azure Depolama belgeleri](/azure/storage/)
 - [Bağlı hizmetler (Mac için Visual Studio)](/visualstudio/mac/connected-services)
