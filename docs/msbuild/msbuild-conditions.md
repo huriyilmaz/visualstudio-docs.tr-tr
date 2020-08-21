@@ -18,24 +18,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fea7763bf1cbce5fac36ce2cd5e54c40e1da989a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 5994e3f5b17f50d707c4c5a00666d60c2efd3184
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85289241"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88711709"
 ---
-# <a name="msbuild-conditions"></a>MSBuild Koşulları
+# <a name="msbuild-conditions"></a>MSBuild koşulları
 
 MSBuild `Condition` , bir özniteliğe izin verildiğinde uygulanabilen belirli bir koşul kümesini destekler. Aşağıdaki tabloda bu koşullar açıklanmaktadır.
 
-|Koşul|Description|
+|Koşul|Açıklama|
 |---------------|-----------------|
-|'`stringA`' == '`stringB`'|Eşitse olarak `true` değerlendirilir `stringA` `stringB` .<br /><br /> Örneğin:<br /><br /> `Condition="'$(Configuration)'=='DEBUG'"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir. Bu denetim büyük/küçük harfe duyarlıdır.|
-|'`stringA`' != '`stringB`'|`true` `stringA` Eşit değilse olarak değerlendirilir `stringB` .<br /><br /> Örneğin:<br /><br /> `Condition="'$(Configuration)'!='DEBUG'"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir. Bu denetim büyük/küçük harfe duyarlıdır.|
+|'`stringA`' == '`stringB`'|Eşitse olarak `true` değerlendirilir `stringA` `stringB` .<br /><br /> Örnek:<br /><br /> `Condition="'$(Configuration)'=='DEBUG'"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir. Bu denetim büyük/küçük harfe duyarlıdır.|
+|'`stringA`' != '`stringB`'|`true` `stringA` Eşit değilse olarak değerlendirilir `stringB` .<br /><br /> Örnek:<br /><br /> `Condition="'$(Configuration)'!='DEBUG'"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir. Bu denetim büyük/küçük harfe duyarlıdır.|
 |\<, >, \<=, >=|İşlenenlerinin sayısal değerlerini değerlendirir. `true`İlişkisel değerlendirmenin doğru olup olmadığını döndürür. İşlenenler bir Decimal veya on altılı sayı olarak değerlendirilmelidir. Onaltılık sayıların "0x" ile başlaması gerekir. **Note:**  XML 'de karakterler `<` ve `>` kaçışlı olmalıdır. Sembol `<` olarak temsil edilir `&lt;` . Sembol `>` olarak temsil edilir `&gt;` .|
-|Var (' `stringA` ')|`true`Ada sahip bir dosya veya klasör varsa olarak değerlendirilir `stringA` .<br /><br /> Örneğin:<br /><br /> `Condition="!Exists('$(Folder)')"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir.|
-|Hastrailingeðik çizgi (' `stringA` ')|`true`Belirtilen dize bir ters eğik çizgi ( \\ ) veya eğik çizgi (/) karakteri içeriyorsa olarak değerlendirilir.<br /><br /> Örneğin:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir.|
+|Var (' `stringA` ')|`true`Ada sahip bir dosya veya klasör varsa olarak değerlendirilir `stringA` .<br /><br /> Örnek:<br /><br /> `Condition="!Exists('$(Folder)')"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir.|
+|Hastrailingeðik çizgi (' `stringA` ')|`true`Belirtilen dize bir ters eğik çizgi ( \\ ) veya eğik çizgi (/) karakteri içeriyorsa olarak değerlendirilir.<br /><br /> Örnek:<br /><br /> `Condition="!HasTrailingSlash('$(OutputPath)')"`<br /><br /> Basit alfasayısal dizeler veya Boole değerleri için tek tırnak gerekli değildir. Ancak, boş değerler için tek tırnak gerekir.|
 |!|İşlenen olarak değerlendirilir `true` `false` .|
 |`And`|`true`Her iki işlenen de olarak değerlendirilir `true` .|
 |`Or`|`true`İşlenenlerin en az biri olarak değerlendiriliyorsa, olarak değerlendirilir `true` .|
@@ -57,6 +57,12 @@ Aşağıdaki örnekte gösterildiği gibi, koşullarda dize yöntemlerini, .NET 
 
 </Project>
 ```
+
+MSBuild proje dosyalarında, doğru Boole türü yoktur. Boole verileri boş olabilecek veya herhangi bir değere ayarlanmış özelliklerde temsil edilir. Bu nedenle, `'$(Prop)' == 'true'` "Eğer Prop ise" anlamına gelir `true` , ancak `'$(Prop)' != 'false'` "Eğer Prop ise `true` veya ayarlandıysa ya da başka bir şekilde ayarlanırsa" anlamına gelir.
+
+Boolean Logic yalnızca koşulların bağlamında değerlendirilir, bu nedenle gibi özellik ayarları `<Prop2>'$(Prop1)' == 'true'</Prop>` , Boole değerleri olarak değerlendirilmez bir dize (değişken genişletmeden sonra) olarak gösterilir.  
+
+MSBuild, Boolean değer olarak kullanılan dize özellikleriyle çalışmayı kolaylaştırmak için birkaç özel işlem kuralı uygular. Boole sabit değerleri kabul edilir `Condition="true"` ve `Condition="false"` beklendiği gibi çalışır. MSBuild Ayrıca Boolean olumsuzlama işlecini desteklemek için özel kurallar içerir. Bu nedenle, `$(Prop)` ' true ' ise,, `!$(Prop)` `!true` bekledikçe, ve şuna eşit olarak karşılaştırılmaktadır `false` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

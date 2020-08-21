@@ -1,5 +1,5 @@
 ---
-title: Kaynak Kontrol Eklentisi API Sürüm 1.2'de&#39;Yeni | Microsoft Dokümanlar
+title: "&apos;Kaynak denetimi EKLENTISI API sürümü 1,2 ' deki yenilikler | Microsoft Docs"
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,26 +11,26 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9db77144b0ecdbd07b62a4e7801550237bb9c476
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.openlocfilehash: 913fec8b820b5f32f564c84aba52a78df82efac1
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80703374"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88711761"
 ---
-# <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>Kaynak Kontrol Eklentisi API Sürüm 1.2'de&#39;Yeni
-Bu bölümde, Kaynak Denetimi Eklentisi API sürüm 1.2'deki gelişmiş kaynak kodu denetimi işlevi vurgulanır. Aşağıdaki sürüm 1.2'deki yeni özellikleri listeler:
+# <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>Kaynak denetimi eklentisi API sürüm 1,2 ' deki yenilikler&#39;
+Bu bölüm, kaynak denetimi eklentisi API 'SI sürüm 1,2 ' daki gelişmiş kaynak kodu denetim işlevlerini vurgular. Aşağıda sürüm 1,2 ' deki yeni özellikler listelenmektedir:
 
 ## <a name="changes"></a>Değişiklikler
-- [~SAK Dosyalarının Ortadan Kaldırılması](../../extensibility/internals/elimination-of-tilde-sak-files.md) Kaynak Denetimi Eklentisi API 1.2'nin geçici dosyalarla nasıl etkileşimde olduğunu açıklar.
+- [~ Sak dosyaları Için eleme](../../extensibility/internals/elimination-of-tilde-sak-files.md) Kaynak denetimi eklentisi API 1,2 ' nin geçici dosyalarla nasıl etkileşime gireceğini açıklar.
 
-- [Birden Çok Proje Bağlantısı Arasında Ayarların Uygulanması](../../extensibility/internals/application-of-settings-across-multiple-project-connections.md) Kaynak denetim eklentisinin aynı kaynak denetimi işlemini birden çok proje veya birden çok bağlantı bağlamında yürütmek için toplu işleyişi nasıl kullanabileceğini gösterir.
+- [Birden çok proje bağlantısı üzerindeki ayarların uygulaması](../../extensibility/internals/application-of-settings-across-multiple-project-connections.md) Bir kaynak denetimi eklentisinin birden fazla proje veya birden çok bağlantı bağlamı arasında aynı kaynak denetimi işlemini yürütmek için bir toplu işlem nasıl kullandığını gösterir.
 
-- [Çözümler için Üst Kapsayıcı Klasörleri Oluşturma](../../extensibility/internals/creating-parent-container-folders-for-solutions.md) Kaynak Denetimi Eklentisi API Sürüm 1.2'nin, kullanıcının çözüm içindeki tüm Web projeleri için tek bir kök kaynak denetim hedefi belirlemesine nasıl olanak sağladığını açıklar.
+- [Çözümler Için üst kapsayıcı klasörleri oluşturma](../../extensibility/internals/creating-parent-container-folders-for-solutions.md) Kaynak denetimi eklentisi API sürümü 1,2, bir kullanıcının Çözümdeki tüm Web projeleri için tek bir kök kaynak denetimi hedefi belirtmesini nasıl sağladığını açıklar.
 
-- [Yerel Proje Klasörünün Kaynak Denetim Deposu ile İsteğe Bağlı Karşılaştırılması](../../extensibility/internals/optional-comparison-of-local-project-folder-to-source-control-store.md) Kaynak Denetimi Eklentisi API 1.2'nin dosyaların sürümlerini nasıl karşılaştırdığını açıklar.
+- [Yerel proje klasörünün kaynak denetimi deposuna Isteğe bağlı karşılaştırması](../../extensibility/internals/optional-comparison-of-local-project-folder-to-source-control-store.md) Kaynak denetimi eklentisi API 1,2 ' nin dosya sürümlerini nasıl karşılaştırdığını açıklar.
 
-- [Kaynak Kontrol Bilgilerinin kaldırılması. Proj ve . Sln Files,](../../extensibility/internals/removal-of-source-control-information-from-dot-proj-and-dot-sln-files.md) Kaynak Denetimi Eklentisi API Sürüm 1.2'nin projeler ve çözümler hakkında nasıl bilgi depoladığını açıklar.
+- [Kaynak denetim bilgilerinin konumundan kaldırılması. PROJ ve. Sln dosyaları](../../extensibility/internals/removal-of-source-control-information-from-dot-proj-and-dot-sln-files.md) , kaynak denetimi EKLENTISI API sürümü 1,2 ' nin projeler ve çözümler hakkında bilgi depoladığı açıklanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Başlarken](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

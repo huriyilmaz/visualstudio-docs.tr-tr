@@ -1,5 +1,5 @@
 ---
-title: Hata-hedef işlemden &#39;işlev &#39;işlevi değerlendirilirken&#39; kodla çıkış yaptı&#39; | Microsoft Docs
+title: Hata-hedef işlemden &apos; &apos; işlev işlevi değerlendirilirken kod koduyla çıkıldı &apos; &apos; | Microsoft Docs
 ms.date: 4/06/2018
 ms.topic: error-reference
 f1_keywords:
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1721196becf1f746d81fa7e3d4ff5f0371e3f57
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 94effc8a5f75e7b38fb7275d175eb324c479a7a9
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460784"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88711644"
 ---
 # <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>Hata: işlev &#39;işlevi değerlendirilirken hedef işleme kod &#39;kodla çıkıldı&#39;&#39;
 
@@ -38,7 +38,7 @@ Bu işlevi değiştirebiliyorsanız, hata ayıklayıcının özellik alıcı vey
     -veya-
 * (İçin `ToString` ) Türünde bir `DebuggerDisplay` öznitelik tanımlayın ve hata ayıklayıcının dışında bir şeyi değerlendirebilmeniz gerekir `ToString` .
     -veya-
-* (Bir özellik alıcısı için) `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]`Özniteliği özelliğine yerleştirin. Bu, API uyumluluğu nedenleriyle bir özelliğin kalması gereken bir yönteminiz varsa, ancak gerçekten bir yöntem olması halinde yararlı olabilir.
+* (Bir özellik alıcısı için) `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` Özniteliği özelliğine yerleştirin. Bu, API uyumluluğu nedenleriyle bir özelliğin kalması gereken bir yönteminiz varsa, ancak gerçekten bir yöntem olması halinde yararlı olabilir.
 
 Bu yöntemi değiştiremeyeceğiniz takdirde, bir alternatif yönergede hedef işlemi bölebilir ve değerlendirmeyi yeniden deneyebilirsiniz.
 

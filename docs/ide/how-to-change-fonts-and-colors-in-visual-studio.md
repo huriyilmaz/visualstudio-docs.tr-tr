@@ -1,7 +1,9 @@
 ---
-title: Yazı tiplerini ve renkleri değiştirme
-ms.date: 06/01/2020
+title: Yazı tipi renklerini, metin boyutunu ve yüksek karşıtlık seçeneklerini değiştirme
+description: Visual Studio 'da yazı tipi rengini ve metin boyutunu değiştirmeyi ve erişilebilirlik sorunları için kontrast seçeneklerini nasıl seçeceğinizi öğrenin.
+ms.date: 08/20/2020
 ms.topic: how-to
+ms.custom: contperfq1
 helpviewer_keywords:
 - Visual Studio, color themes
 - color themes, Visual Studio
@@ -11,16 +13,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0eb2373117b382cb19f374581ada45a5732b9c4c
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 280873a2f855aa4c0d7e9951e141ca5492357b5a
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85284702"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88711696"
 ---
-# <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da yazı tiplerini ve renkleri değiştirme
+# <a name="how-to-change-fonts-colors-and-high-contrast-options-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da yazı tiplerini, renkleri ve yüksek karşıtlık seçeneklerini değiştirme
 
-Visual Studio 'daki yazı tiplerini ve renkleri birçok şekilde değiştirebilirsiniz. Örneğin, varsayılan mavi renk temasını koyu Tema ("koyu mod" olarak da adlandırılır) olarak değiştirebilirsiniz. Ve varsayılan yazı tipini ve metin boyutunu farklı bir yazı tipi ve boyut olarak değiştirebilirsiniz.
+Visual Studio 'daki yazı tiplerini ve renkleri birçok şekilde değiştirebilirsiniz. Örneğin, varsayılan mavi renk temasını koyu Tema ("koyu mod" olarak da adlandırılır) olarak değiştirebilirsiniz. Ve varsayılan yazı tipini ve metin boyutunu farklı bir yazı tipi ve boyut olarak değiştirebilirsiniz. Gereksinimlerinize en uygun olması halinde yüksek karşıtlıklı bir tema da seçebilirsiniz.
 
 ## <a name="change-the-color-theme"></a>Renk temasını değiştirme
 
