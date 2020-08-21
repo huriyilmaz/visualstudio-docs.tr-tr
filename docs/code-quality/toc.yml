@@ -989,5 +989,7 @@
               items:
                 - name: Genel Bakış
                   displayName: publish warnings
-                - name: 'IL3000: Tek dosyalı olarak yayımlarken bütünleştirilmiş kod dosyası yoluna erişimi kullanmaktan kaçının'
+                - name: 'IL3000: Tek dosya olarak yayımlarken Derleme dosyası yoluna erişmekten kaçının'
                   href: il3000.md
+                - name: 'IL3001: Tek dosya olarak yayımlarken Derleme dosyası yoluna erişmekten kaçının'
+                  href: il3001.md

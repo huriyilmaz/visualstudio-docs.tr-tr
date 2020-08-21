@@ -17,12 +17,22 @@
 - name: Azure hizmetlerine bağlanma
   expanded: false
   items:
-    - name: Azure depolama ekleme
-      href: vs-azure-tools-connected-services-storage.md
-    - name: Azure Key Vault ekleme
-      href: /azure/key-vault/vs-key-vault-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
     - name: Azure Active Directory (AD) ekleme
       href: /azure/active-directory/develop/vs-active-directory-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: Azure Uygulaması İçgörüleri ekleme
+      href: azure-app-insights-add-connected-service.md
+    - name: Redis için Azure Cache ekleme
+      href: azure-cache-for-redis-add-connected-service.md
+    - name: Azure Cosmos DB ekleme
+      href: azure-cosmosdb-add-connected-service.md
+    - name: Azure Key Vault ekleme
+      href: /azure/key-vault/vs-key-vault-add-connected-service?toc=/visualstudio/azure/toc.json&bc=/visualstudio/azure/breadcrumb/toc.json
+    - name: Azure SignalR ekleme
+      href: azure-signalr-add-connected-service.md
+    - name: Azure SQL Veritabanı ekleme
+      href: azure-sql-database-add-connected-service.md
+    - name: Azure Depolama ekleme
+      href: vs-azure-tools-connected-services-storage.md
 - name: Azure Cloud Services geliştirme
   expanded: false
   items:
