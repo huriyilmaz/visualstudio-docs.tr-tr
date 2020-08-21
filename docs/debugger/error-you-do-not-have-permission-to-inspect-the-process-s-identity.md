@@ -1,5 +1,5 @@
 ---
-title: Hata-işlemi&#39;s kimliğini İnceleme izniniz yok | Microsoft Docs
+title: Hata-işlem kimliğini İnceleme izniniz yok &apos; | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f8bd1bc11d42d8aed0b816a667fe5adcc139a42c
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: e91745b8910a9e87ccd4a22fe09c6764a2ab4c6a
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85459928"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706535"
 ---
 # <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>Hata: işlemi&#39;s kimliğini İnceleme izniniz yok
 İşlemin kimliğini İnceleme izniniz yok. Bunun nedeni sisteminizin yapılandırması olabilir.
@@ -42,7 +42,7 @@ ms.locfileid: "85459928"
 
 7. **Terminal Hizmetleri Özellikler** penceresinde **genel** sekmesine gidin ve **Başlangıç türünü** **el ile**olarak ayarlayın.
 
-8. **Tamam**'a tıklayın.
+8. **Tamam** düğmesine tıklayın.
 
 9. Bilgisayarı yeniden başlatın.
 
@@ -60,7 +60,7 @@ ms.locfileid: "85459928"
 
 4. **Uzak Masaüstü**altında, **kullanıcıların bu bilgisayara uzaktan bağlanmasına izin ver**' i seçin.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam** düğmesine tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)

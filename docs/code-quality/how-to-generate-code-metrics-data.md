@@ -11,26 +11,26 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 51c125942f82b43cf786591bc0e364764dc1965e
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: f85c17321defe08dc96ccc04bc9dea717e3b4183
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88250541"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706522"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Nasıl yapılır: kod ölçümleri verileri oluşturma
 
 Kod ölçümleri verilerini üç şekilde oluşturabilirsiniz:
 
-- [FxCop çözümleyicileri](#fxcop-analyzers-code-metrics-rules) yükleyerek ve içerdiği dört kod ölçümü (bakım) kurallarını etkinleştirerek.
+- [.NET kod kalitesi Çözümleyicileri](#net-code-quality-analyzers-code-metrics-rules) etkinleştirerek ve içerdiği dört kod ölçümü (bakım) kurallarını etkinleştirerek.
 
 - Visual Studio içindeki [ **Analyze**  >  **kod ölçümlerini hesapla** ](#calculate-code-metrics-menu-command) menü komutunu seçerek.
 
 - C# ve Visual Basic projeleri için [komut satırından](#command-line-code-metrics) .
 
-## <a name="fxcop-analyzers-code-metrics-rules"></a>FxCop çözümleyicileri kod ölçümleri kuralları
+## <a name="net-code-quality-analyzers-code-metrics-rules"></a>.NET kod kalitesi Çözümleyicileri kod ölçümleri kuralları
 
-[Fxcopçözümleyiciler NuGet paketi](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) çeşitli kod ölçümleri [Çözümleyicisi](roslyn-analyzers-overview.md) kuralları içerir:
+.NET kod kalitesi Çözümleyicileri, çeşitli kod ölçümleri [Çözümleyicisi](roslyn-analyzers-overview.md) kuralları içerir:
 
 - [CA1501](ca1501-avoid-excessive-inheritance.md)
 - [CA1502](ca1502.md)
@@ -50,7 +50,7 @@ Bu kurallar varsayılan olarak devre dışıdır, ancak bunları [**Çözüm Gez
 
 ### <a name="configuration"></a>Yapılandırma
 
-FxCop çözümleyicileri paketindeki kod ölçümü kurallarının tetikleneceği eşikleri yapılandırabilirsiniz.
+Kod ölçümü kurallarının tetikleneceği eşikleri yapılandırabilirsiniz.
 
 1. Bir metin dosyası oluşturun. Örnek olarak, *CodeMetricsConfig.txt*adını verebilirsiniz.
 

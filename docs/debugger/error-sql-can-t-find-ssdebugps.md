@@ -1,5 +1,5 @@
 ---
-title: Hata-SQL&#39;SSDEBUGPS bulamıyor | Microsoft Docs
+title: Hata-SQL, &apos; SDEBUGPS 'Yi bulabilir | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: edebb932e11554b24296314817eea514743525b1
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.openlocfilehash: 59a1a603aa44ceed46c160443508080072046e35
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85460513"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706483"
 ---
 # <a name="error-sql-can39t-find-ssdebugps"></a>Hata: SQL&#39;SSDEBUGPS bulamıyor
 

@@ -1,24 +1,26 @@
 ---
-title: Editorconfig kullanarak FxCop çözümleyicileri yapılandırma
+title: Editorconfig kullanarak .NET kod kalitesi Çözümleyicileri yapılandırma
 ms.date: 09/23/2019
 ms.topic: conceptual
 helpviewer_keywords:
+- .NET analyzers
 - FxCop analyzers, configuring
+- code quality
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 182042db9a744d037e295a8448f8c49a9c7b3a97
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: fbd30859c5ee3dbbea80c6d88d68c0211da62c88
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184802"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706587"
 ---
-# <a name="configure-fxcop-analyzers"></a>FxCop çözümleyicilerini yapılandırma
+# <a name="configure-net-code-quality-analyzers"></a>.NET kod kalitesi Çözümleyicileri yapılandırma
 
-[FxCop çözümleyicileri paketi](install-fxcop-analyzers.md) , eski analizler tarafından .net Compiler platform tabanlı kod Çözümleyicileri ' ne dönüştürülmüş en önemli "FxCop" kurallarından oluşur. Belirli FxCop kuralları için, kod tabanınızın hangi bölümlerinin [yapılandırılabilir seçenekler](fxcop-analyzer-options.md)aracılığıyla uygulanmasını iyileştirebilirsiniz. Her seçenek, bir [Editorconfig](https://editorconfig.org) dosyasına anahtar-değer çifti eklenerek belirtilir. Bir yapılandırma dosyası [bir projeye özgü](#per-project-configuration) olabilir veya iki ya da daha fazla proje arasında [paylaşılabilir](#shared-configuration) .
+Belirli .NET kod kalitesi Çözümleyicileri (kural kimlikleri ile başlayan `CA` ) için, kod tabanınızın hangi bölümlerinin [yapılandırılabilir seçenekler](fxcop-analyzer-options.md)aracılığıyla uygulanması gerektiğini iyileştirebilirsiniz. Her seçenek, bir [Editorconfig](https://editorconfig.org) dosyasına anahtar-değer çifti eklenerek belirtilir. Bir yapılandırma dosyası bir dosya, proje, çözüm veya tüm depoya özgü olabilir.
 
 > [!TIP]
 > **Çözüm Gezgini** ' de projeye sağ tıklayıp **Add**  >  **Yeni öğe**Ekle ' yi seçerek projenize bir. editorconfig dosyası ekleyin. **Yeni öğe Ekle** penceresinde, arama kutusuna **editorconfig** yazın. **Editorconfig dosyası (varsayılan)** şablonunu seçin ve **Ekle**' yi seçin.
@@ -31,10 +33,7 @@ Bir kuralın önem derecesini yapılandırma hakkında bilgi için (örneğin, b
 
 ::: moniker-end
 
-Bu makalenin geri kalanında, FxCop kurallarının nereye uygulandığını [İncelt seçenekler](fxcop-analyzer-options.md) için genel sözdizimi ele alınmaktadır.
-
-> [!NOTE]
-> Bir EditorConfig dosyası kullanarak eski FxCop kurallarını yapılandıramazsınız. Eski analiz ve FxCop çözümleyicileri arasındaki farklar hakkında daha fazla bilgi için bkz. [FxCop ÇÖZÜMLEYICILERI SSS](fxcop-analyzers-faq.md).
+Bu makalenin geri kalanında, .NET kod kalitesi Çözümleyicileri 'nin uygulanmasını [iyileştirmek](fxcop-analyzer-options.md) için genel sözdizimi ele alınmaktadır.
 
 ## <a name="option-scopes"></a>Seçenek kapsamları
 
@@ -44,7 +43,7 @@ Her bir iyileştirme seçeneği, kural kategorisi (örneğin, adlandırma veya t
 
 *Tüm* kurallar için bir seçeneği yapılandırmak için sözdizimi aşağıdaki gibidir:
 
-|Sözdizimi|Örnek|
+|Syntax|Örnek|
 |-|-|
 | dotnet_code_quality. OptionName = OptionValue | `dotnet_code_quality.api_surface = public` |
 
@@ -52,7 +51,7 @@ Her bir iyileştirme seçeneği, kural kategorisi (örneğin, adlandırma veya t
 
 Bir kural *kategorisi* (adlandırma, tasarım veya performans gibi) için bir seçenek yapılandırmanın sözdizimi aşağıdaki gibidir:
 
-|Sözdizimi|Örnek|
+|Syntax|Örnek|
 |-|-|
 | dotnet_code_quality. RuleCategory. OptionName = OptionValue | `dotnet_code_quality.Naming.api_surface = public` |
 
@@ -60,13 +59,11 @@ Bir kural *kategorisi* (adlandırma, tasarım veya performans gibi) için bir se
 
 *Belirli* bir kural için bir seçeneği yapılandırmanın sözdizimi aşağıdaki gibidir:
 
-|Sözdizimi|Örnek|
+|Syntax|Örnek|
 |-|-|
 | dotnet_code_quality. RuleId. OptionName = OptionValue | `dotnet_code_quality.CA1040.api_surface = public` |
 
 ## <a name="enabling-editorconfig-based-configuration"></a>Editorconfig tabanlı yapılandırmayı etkinleştirme
-
-### <a name="vs2019-163-and-later--fxcopanalyzers-package-version-33x-and-later"></a>VS2019 16,3 ve üzeri + Fxcopçözümleyiciler paket sürümü 3.3. x ve üzeri
 
 Aşağıdaki kapsamlar için EditorConfig tabanlı çözümleyici yapılandırması etkinleştirilebilir:
 
@@ -78,48 +75,8 @@ Aşağıdaki kapsamlar için EditorConfig tabanlı çözümleyici yapılandırma
 
 Yapılandırmayı etkinleştirmek için, karşılık gelen dizindeki seçeneklerle bir *. editorconfig* dosyası ekleyin. Bu dosya, EditorConfig tabanlı tanılama önem derecesi yapılandırma girdilerini de içerebilir. Daha ayrıntılı bilgi için [buraya](use-roslyn-analyzers.md#rule-severity) bakın.
 
-### <a name="prior-to-vs2019-163-or-using-an-fxcopanalyzers-package-version-prior-to-33x"></a>VS2019 16,3 öncesi veya 3.3. x öncesinde bir Fxcopçözümleyiciler paket sürümü kullanma
-
-#### <a name="per-project-configuration"></a>Proje başına yapılandırma
-
-Belirli bir proje için EditorConfig tabanlı çözümleyici yapılandırmasını etkinleştirmek üzere, projenin kök dizinine bir *. editorconfig* dosyası ekleyin.
-
-#### <a name="shared-configuration"></a>Paylaşılan yapılandırma
-
-FxCop Çözümleyicisi yapılandırması için bir. editorconfig dosyasını iki veya daha fazla proje arasında paylaşabilirsiniz, ancak bazı ek adımlar gerektirir.
-
-1. *. Editorconfig* dosyasını ortak bir konuma kaydedin.
-
-2. Aşağıdaki içeriğe sahip bir *. props* dosyası oluşturun:
-
-   ```xml
-   <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-     <PropertyGroup>
-       <SkipDefaultEditorConfigAsAdditionalFile>true</SkipDefaultEditorConfigAsAdditionalFile>
-     </PropertyGroup>
-     <ItemGroup Condition="Exists('<your path>\.editorconfig')" >
-       <AdditionalFiles Include="<your path>\.editorconfig" />
-     </ItemGroup>
-   </Project>
-   ```
-
-3. Önceki adımda oluşturduğunuz *. props* dosyasını içeri aktarmak için *. csproj* veya *. vbproj* dosyanıza bir satır ekleyin. Bu satır, FxCop Çözümleyicisi *. props* dosyalarını içeri aktararak herhangi bir satırdan önce yerleştirilmelidir. Örneğin,. props dosyanız *editorconfig. props*olarak adlandırılmışsa:
-
-   ```xml
-   ...
-   <Import Project="..\..\editorconfig.props" Condition="Exists('..\..\editorconfig.props')" />
-   <Import Project="..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.3\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.6.3\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
-   ...
-   ```
-
-4. Projeyi yeniden yükleyin.
-
-> [!NOTE]
-> Burada açıklanan EditorConfig dosyasının rastgele paylaşılan konumu yalnızca belirli FxCop Çözümleyicisi kurallarının kapsamını yapılandırmak için geçerlidir. Kural önem derecesi, genel düzenleyici ayarları ve kod stili gibi diğer ayarlar için, EditorConfig dosyasının her zaman proje klasörüne veya bir üst klasöre yerleştirilmesi gerekir.
-
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [FxCop çözümleyicileri için kural kapsamı seçenekleri](fxcop-analyzer-options.md)
+- [.NET kod kalitesi Çözümleyicileri için kural kapsamı seçenekleri](fxcop-analyzer-options.md)
 - [Çözümleyici yapılandırması](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md)
-- [FxCop çözümleyicileri](install-fxcop-analyzers.md)
 - [EditorConfig için .NET kodlama kuralları](../ide/editorconfig-code-style-settings-reference.md)

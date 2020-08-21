@@ -1,5 +1,5 @@
 ---
-title: FxCop Çözümleyicisi yapılandırma seçenekleri
+title: .NET Code Quality Analyzer yapılandırma seçenekleri
 ms.date: 09/23/2019
 ms.topic: reference
 author: mikejo5000
@@ -7,21 +7,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d6b56bec2174ca71cc66f5424b7bdc309330d95
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 0370688b53e87cf6ea1f5079d2e5c706777dd0c7
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248794"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706574"
 ---
-# <a name="rule-scope-options-for-fxcop-analyzers"></a>FxCop çözümleyicileri için kural kapsamı seçenekleri
+# <a name="rule-scope-options-for-net-code-quality-analyzers"></a>.NET kod kalitesi Çözümleyicileri için kural kapsamı seçenekleri
 
-Bazı FxCop çözümleyici kuralları, kod tabanınızın hangi bölümlerinin uygulanacağını iyileştirmenize olanak tanır. Bu sayfada kullanılabilir kapsam yapılandırma seçenekleri, izin verilen değerler ve uygulandıkları kurallar listelenir. Bu seçenekleri kullanmak için bunları bir [Editorconfig dosyasında](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project)belirtin.
-
-Bu yapılandırma seçenekleri [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet paketinin 2.6.3 sürümünden başlayarak kullanılabilir.
+Bazı .NET kod kalitesi çözümleyici kuralları, kod tabanınızın hangi bölümlerinin uygulanacağını iyileştirmenize olanak tanır. Bu sayfada kullanılabilir kapsam yapılandırma seçenekleri, izin verilen değerler ve uygulandıkları kurallar listelenir. Bu seçenekleri kullanmak için bunları bir [Editorconfig dosyasında](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project)belirtin.
 
 > [!TIP]
-> Fxcopçözümleyiciler paketinin belirli bir sürümü için kullanılabilen seçeneklerin tam listesini görmek için, paketin *Belgeler* klasöründeki *Analyzer Configuration.MD* dosyasına bakın. Dosya *% USERPROFILE% \\ . Nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers \\ \<version\> \Belgetation\analyzer Configuration.MD*konumunda bulunur. Bu yapılandırma belge dosyası, sürüm 2.6.5 'den başlayarak paketin her bir sürümüne dahildir. Bir seçeneğin *çözümleyici Configuration.MD* dosyasında nasıl belgelendiği hakkında bir örnek aşağıda verilmiştir:
+> Kullanılabilir seçeneklerin tam listesini görmek için, bu [çözümleyici Configuration.MD dosyasına](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md)bakın. Bir seçeneğin *çözümleyici Configuration.MD* dosyasında nasıl belgelendiği hakkında bir örnek aşağıda verilmiştir:
 >
 > Seçenek adı: `sufficient_IterationCount_for_weak_KDF_algorithm`\
 > Seçenek değerleri: tam sayı değerleri \
@@ -87,28 +85,28 @@ Bu yapılandırma seçenekleri [Microsoft. CodeAnalysis. Fxcopçözümleyiciler]
 
 | Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
-| Yönteme geçirilen bağımsız değişkenleri doğrulayan null denetim doğrulama yöntemlerinin adları null değil | İzin verilen yöntem adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca Yöntem adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm yöntemler dahil)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `M:` | Yok | [CA1062](ca1062.md) |
+| Yönteme geçirilen bağımsız değişkenleri doğrulayan null denetim doğrulama yöntemlerinin adları null değil | İzin verilen yöntem adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca Yöntem adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm yöntemler dahil)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `M:` | Hiçbiri | [CA1062](ca1062.md) |
 
 ## <a name="additional_string_formatting_methods"></a>additional_string_formatting_methods
 
 | Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
-| Ek dize biçimlendirme yöntemlerinin adları | İzin verilen yöntem adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca Yöntem adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm yöntemler dahil)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `M:` | Yok | [CA2241](ca2241.md) |
+| Ek dize biçimlendirme yöntemlerinin adları | İzin verilen yöntem adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca Yöntem adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm yöntemler dahil)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `M:` | Hiçbiri | [CA2241](ca2241.md) |
 
 ## <a name="excluded_type_names_with_derived_types"></a>excluded_type_names_with_derived_types
 
 | Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
-| Tür ve türetilmiş tüm türleri analiz için hariç tutulan türlerin adları | İzin verilen sembol adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca tür adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm türleri içerir)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `T:` | Yok | [CA1303](ca1303.md) |
+| Tür ve türetilmiş tüm türleri analiz için hariç tutulan türlerin adları | İzin verilen sembol adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca tür adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm türleri içerir)<br/> -Simgenin [belge kimliği biçimindeki](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format), isteğe bağlı bir ön ek olarak nitelenmiş adlar `T:` | Hiçbiri | [CA1303](ca1303.md) |
 
 ## <a name="excluded_symbol_names"></a>excluded_symbol_names
 
 | Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
-| Analiz için dışlanan simgelerin adları | İzin verilen sembol adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca sembol adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm semboller dahil)<br/> -Simgenin [belge kimliği biçiminde](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format)tam nitelikli adlar. Her sembol adı, "d:" metotları için önek, "T:" türler için önek, "N:" ad alanları için önek vb. gibi bir sembol türü öneki gerektirir.<br/> - `.ctor` oluşturucular ve `.cctor` statik oluşturucular için | Yok | [CA1062](ca1062.md) [CA1303](ca1303.md) [CA2000](ca2000.md) [CA2100](ca2100.md) [CA2301](ca2301.md) [CA2302](ca2302.md)<br/>[CA2311](ca2311.md) [CA2312](ca2312.md) [CA2321](ca2321.md) [CA2322](ca2322.md) [CA2327](ca2327.md) [CA2328](ca2328.md)<br/>[CA2329](ca2329.md) [CA2330](ca2330.md) [CA3001](ca3001.md) [CA3002](ca3002.md) [CA3003](ca3003.md) [CA3004](ca3004.md)<br/>[CA3005](ca3005.md) [CA3006](ca3006.md) [CA3007](ca3007.md) [CA3008](ca3008.md) [CA3009](ca3009.md) [CA3010](ca3010.md)<br/>[CA3011](ca3011.md) [CA3012](ca3012.md) [CA5361](ca5361.md) CA5376 CA5377 [CA5378](ca5378.md)<br/>[CA5380](ca5380.md) [CA5381](ca5381.md) CA5382 CA5383 CA5384 CA5387<br/>CA5388 [CA5389](ca5389.md) CA5390 |
+| Analiz için dışlanan simgelerin adları | İzin verilen sembol adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca sembol adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm semboller dahil)<br/> -Simgenin [belge kimliği biçiminde](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format)tam nitelikli adlar. Her sembol adı, "d:" metotları için önek, "T:" türler için önek, "N:" ad alanları için önek vb. gibi bir sembol türü öneki gerektirir.<br/> - `.ctor` oluşturucular ve `.cctor` statik oluşturucular için | Hiçbiri | [CA1062](ca1062.md) [CA1303](ca1303.md) [CA2000](ca2000.md) [CA2100](ca2100.md) [CA2301](ca2301.md) [CA2302](ca2302.md)<br/>[CA2311](ca2311.md) [CA2312](ca2312.md) [CA2321](ca2321.md) [CA2322](ca2322.md) [CA2327](ca2327.md) [CA2328](ca2328.md)<br/>[CA2329](ca2329.md) [CA2330](ca2330.md) [CA3001](ca3001.md) [CA3002](ca3002.md) [CA3003](ca3003.md) [CA3004](ca3004.md)<br/>[CA3005](ca3005.md) [CA3006](ca3006.md) [CA3007](ca3007.md) [CA3008](ca3008.md) [CA3009](ca3009.md) [CA3010](ca3010.md)<br/>[CA3011](ca3011.md) [CA3012](ca3012.md) [CA5361](ca5361.md) CA5376 CA5377 [CA5378](ca5378.md)<br/>[CA5380](ca5380.md) [CA5381](ca5381.md) CA5382 CA5383 CA5384 CA5387<br/>CA5388 [CA5389](ca5389.md) CA5390 |
 
 ## <a name="disallowed_symbol_names"></a>disallowed_symbol_names
 
 | Açıklama | İzin verilen değerler | Varsayılan değer | Yapılandırılabilir kurallar |
 | - | - | - | - |
-| Analiz bağlamında izin verilmeyen simgelerin adları | İzin verilen sembol adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca sembol adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm semboller dahil)<br/> -Simgenin [belge kimliği biçiminde](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format)tam nitelikli adlar. Her sembol adı, "d:" metotları için önek, "T:" türler için önek, "N:" ad alanları için önek vb. gibi bir sembol türü öneki gerektirir.<br/> - `.ctor` oluşturucular ve `.cctor` statik oluşturucular için | Yok | [CA1031](ca1031.md) |
+| Analiz bağlamında izin verilmeyen simgelerin adları | İzin verilen sembol adı biçimleri (ile ayrılmış `|` ):<br/> -Yalnızca sembol adı (kapsayan tür veya ad alanından bağımsız olarak ada sahip tüm semboller dahil)<br/> -Simgenin [belge kimliği biçiminde](https://github.com/dotnet/csharplang/blob/master/spec/documentation-comments.md#id-string-format)tam nitelikli adlar. Her sembol adı, "d:" metotları için önek, "T:" türler için önek, "N:" ad alanları için önek vb. gibi bir sembol türü öneki gerektirir.<br/> - `.ctor` oluşturucular ve `.cctor` statik oluşturucular için | Hiçbiri | [CA1031](ca1031.md) |

@@ -1,5 +1,5 @@
 ---
-title: Hata-işlev &#39;işlevi değerlendiriliyor&#39; zaman aşımına uğradı ve güvenli olmayan bir şekilde durdurulmak için gerekir | Microsoft Docs
+title: Hata-işlev işlevinin değerlendirilmesi &apos; &apos; zaman aşımına uğradı ve güvenli olmayan bir şekilde durdurulmak için gereklidir | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: error-reference
 f1_keywords:
@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 76a655e2994e1eaa1c5ac65e7b8782ec5b9d6f72
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.openlocfilehash: 3d1b5860729b55f1c4ede253cd0f881e0ab56fcc
+ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86386725"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88706561"
 ---
 # <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>Hata: işlev &#39;işlevi değerlendiriliyor&#39; zaman aşımına uğradı ve güvenli olmayan bir şekilde durdurulmak için gerekiyor
 
@@ -36,7 +36,7 @@ Hata mesajı, hata ayıklayıcının çağrı gerçekleştirmeye çalıştığı
     -veya-
 * (ToString için) Türde bir DebuggerDisplay özniteliği tanımlayın ve hata ayıklayıcının, ToString dışında bir şeyi değerlendirebilmeniz gerekir.
     -veya-
-* (Bir özellik alıcısı için) `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]`Özniteliği özelliğine yerleştirin. Bu, API uyumluluğu nedenleriyle bir özelliği kalması gereken bir yönteminiz varsa, ancak gerçekten bir yöntem olması gereken durumlarda yararlı olabilir.
+* (Bir özellik alıcısı için) `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` Özniteliği özelliğine yerleştirin. Bu, API uyumluluğu nedenleriyle bir özelliği kalması gereken bir yönteminiz varsa, ancak gerçekten bir yöntem olması gereken durumlarda yararlı olabilir.
 
 ### <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>Çözüm #2: hedef kodun hata ayıklayıcıya değerlendirmeyi iptal etmesini isteyin
 
