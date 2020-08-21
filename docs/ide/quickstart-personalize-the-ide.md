@@ -1,5 +1,5 @@
 ---
-title: Koyu temayı kullanma ve Visual Studio 'da metin rengini değiştirme
+title: Koyu temayı kullanma ve düzenleyicideki metin rengini değiştirme
 description: Varsayılan Visual Studio renk temasını koyu moda ayarlamayı ve metin düzenleyicisinde yazı tipi renklerini değiştirmeyi öğrenin.
 ms.date: 08/20/2020
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ec0015f6abd434884d039407209d741febd41121
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: 3b0e7b11fae63b9a2233b7391805760d3fdd7d27
+ms.sourcegitcommit: cf5b5437f0b43c6d52c479e1a2c443338bd27cda
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 08/21/2020
-ms.locfileid: "88711722"
+ms.locfileid: "88724932"
 ---
 # <a name="how-to-personalize-the-visual-studio-ide-and-text-editor"></a>Nasıl yapılır: Visual Studio IDE ve metin düzenleyiciyi kişiselleştirme
 
@@ -68,7 +68,7 @@ Visual Studio 'nun Kullanıcı arabirimine yönelik varsayılan renk teması **m
 
 ::: moniker-end
 
-## <a name="change-text-color"></a>Metin rengini değiştir
+## <a name="change-text-colors-in-the-editor"></a>Düzenleyicideki metin renklerini değiştirme
 
 Artık düzenleyicinin bazı metin renklerini özelleştireceğiz. İlk olarak, varsayılan renkleri görmek için yeni bir XML dosyası oluşturalım.
 
