@@ -902,7 +902,7 @@
     - name: IDE’yi Özelleştirme
       displayName: Personalize
       href: ide/personalizing-the-visual-studio-ide.md
-    - name: 'Hızlı Başlangıç: Tema ve metin renklerini kişiselleştirme'
+    - name: Renk temasını ve metinleri kişiselleştirme
       href: ide/quickstart-personalize-the-ide.md
     - name: Ortam ayarları
       displayName: profiles
@@ -1409,6 +1409,8 @@
       href: ide/whats-new-visual-studio-2017.md
     - name: Visual Studio 2019’daki yenilikler
       href: ide/whats-new-visual-studio-2019.md
+    - name: Visual Studio belgelerindeki yenilikler
+      href: ide/whats-new-visual-studio-docs.md
     - name: Sürüm notları ve sistem gereksinimleri
       items:
         - name: Yayınlama sıklığı
