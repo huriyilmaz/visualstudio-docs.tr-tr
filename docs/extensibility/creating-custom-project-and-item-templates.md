@@ -8,12 +8,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d520c92e84286ab05f13ad140a9e2e5a3454e09
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: eb6bcd63896a11f9ca1eabddddc17b3e52865e5b
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248580"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801262"
 ---
 # <a name="create-custom-project-and-item-templates"></a>Özel proje ve öğe şablonları oluşturma
 
@@ -72,7 +72,7 @@ Temel şablon oluşturma senaryolarında, sıkıştırılmış bir dosyaya çık
 
 1. VSıX projesi oluşturun. Daha fazla bilgi için bkz. [VSIX proje şablonu](../extensibility/vsix-project-template.md).
 
-2. VSıX projesini başlangıç projesi olarak ayarlayın. **Çözüm GEZGINI**VSIX projesi düğümünü seçin, öğesini seçin ve tutun (veya sağ tıklayın) ve **Başlangıç projesi olarak ayarla**' yı seçin.
+2. VSıX projesini başlangıç projesi olarak ayarlayın. **Çözüm GEZGINI**VSIX projesi düğümünü seçin, sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.
 
 3. Proje şablonu projesini VSıX projesinin bir varlığı olarak ayarlayın. *. Valtmanifest* dosyasını açın. **Varlıklar** sekmesine gidin ve **Yeni**' yi seçin.
 

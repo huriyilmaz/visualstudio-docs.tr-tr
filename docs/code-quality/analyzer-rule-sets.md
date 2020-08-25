@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b3ed77a309448a854d733453c932fc007f7f591
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 11b99bb08c82725f19f7985a97656edf65f112d5
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75573293"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800222"
 ---
 # <a name="enable-a-category-of-rules"></a>Kural kategorisini etkinleştirme
 
@@ -28,10 +28,10 @@ FxCop Çözümleyicisi NuGet paketi aşağıdaki kural kategorileri için önced
 
 - Tüm kurallar
 - Veri akışı
-- Tasarlama
+- Tasarım
 - Belgeler
 - Genelleştirme
-- Birlikte Çalışabilirlik
+- Birlikte çalışabilirlik
 - Bakım
 - Adlandırma
 - Performans
@@ -53,13 +53,13 @@ Bu kural kategorilerinin her biri bir EditorConfig veya kural kümesi dosyasına
 
 ## <a name="predefined-editorconfig-files"></a>Önceden tanımlanmış EditorConfig dosyaları
 
-Microsoft. CodeAnalysis. Fxcopçözümleyiciler çözümleyici paketinin önceden tanımlanmış EditorConfig dosyaları, *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<sürüm\>\editorconfig* dizininde bulunur. Örneğin, tüm güvenlik kurallarını etkinleştirmek için EditorConfig dosyası *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<version\>\editorconfig\SecurityRulesEnabled\\. editorconfig*konumunda bulunur.
+Microsoft. CodeAnalysis. Fxcopçözümleyiciler çözümleyici paketi için önceden tanımlanmış EditorConfig dosyaları *% USERPROFILE% \\ . nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers \\ \<version\> \editorconfig* dizininde bulunur. Örneğin, tüm güvenlik kurallarını etkinleştirmek için EditorConfig dosyası *% USERPROFILE% \\ . Nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers \\ \<version\> \Editorconfig\securityrulesenabled \\ . editorconfig*konumunda bulunur.
 
 Seçilen. editorconfig dosyasını projenizin kök dizinine kopyalayın.
 
 ## <a name="predefined-rule-sets"></a>Önceden tanımlanmış kural kümeleri
 
-Microsoft. CodeAnalysis. Fxcopçözümleyiciler çözümleyici paketi için önceden tanımlanmış kural kümesi dosyaları, *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<sürüm\>\rulesets* dizininde bulunur. Örneğin, tüm güvenlik kurallarını etkinleştirmek için kural kümesi dosyası *% USERPROFILE%\\. nuget\packages\microsoft.codeanalysis.fxcopanalyzers\\\<sürümü\>\Rulesets\securityrulesenabled.exe*' konumunda bulunur.
+Microsoft. CodeAnalysis. Fxcopçözümleyiciler çözümleyici paketi için önceden tanımlanmış kural kümesi dosyaları *% USERPROFILE% \\ . nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers \\ \<version\> \rulesets* dizininde bulunur. Örneğin, tüm güvenlik kurallarını etkinleştirmek için kural kümesi dosyası *% USERPROFILE% \\ . Nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers \\ \<version\> \Rulesets\securityrulesenabled.exe*konumunda bulunur.
 
 Bir veya daha fazla kural kümesini kopyalayın ve Visual Studio projenizi içeren dizine veya doğrudan **Çözüm Gezgini**yapıştırın.
 
@@ -71,7 +71,7 @@ Etkin kural kümesini ayarlama işlemi, .NET Core/. NET Standard projeniz veya .
 
 #### <a name="net-core"></a>.NET Core
 
-Bir kuralı, .NET Core veya .NET Standard projelerinde analiz için etkin kural kümesini ayarlamak için, **CodeAnalysisRuleSet** özelliğini proje dosyanıza el ile ekleyin. Örneğin, aşağıdaki kod parçacığı etkin kural kümesi olarak `HelloWorld.ruleset` ayarlar.
+Bir kuralı, .NET Core veya .NET Standard projelerinde analiz için etkin kural kümesini ayarlamak için, **CodeAnalysisRuleSet** özelliğini proje dosyanıza el ile ekleyin. Örneğin, aşağıdaki kod parçacığı `HelloWorld.ruleset` etkin kural kümesi olarak ayarlanır.
 
 ```xml
 <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -104,7 +104,7 @@ Bir kuralı .NET Framework projelerinde analiz için etkin kural kümesini ayarl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çözümleyiciler SSS](analyzers-faq.md)
+- [Çözümleyiciler hakkında SSS](analyzers-faq.md)
 - [.NET Compiler Platform çözümleyicilerine genel bakış](roslyn-analyzers-overview.md)
 - [Çözümleyicileri yükleiciler](install-roslyn-analyzers.md)
 - [Çözümleyicileri yapılandırma](use-roslyn-analyzers.md)

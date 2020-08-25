@@ -1,7 +1,7 @@
 ---
-title: Python Visual Studio öğretici adım 5, paketleri yüklemek
+title: Visual Studio 'da Python eğitim 5. adım, paket yüklemesi
 titleSuffix: ''
-description: Visual Studio'daki Python yeteneklerinin temel bir walkthrough'unun 5 adımını, Visual Studio'nun Python ortamında paketleri yönetmeye yönelik özelliklerini gösteren.
+description: Visual Studio 'da, Visual Studio 'nun bir Python ortamında paketleri yönetme özelliklerini gösteren, Python özelliklerine yönelik temel bir izlenecek yol 5. adımı.
 ms.date: 03/09/2020
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -11,31 +11,31 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5e2644ccfff0e7c653f4ce2680299aea95a55ef9
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: 32e85f39c4acf9466def24bcfea59bbfd6807a1b
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79372951"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801665"
 ---
-# <a name="step-5-install-packages-in-your-python-environment"></a>Adım 5: Python ortamınıza paketleri yükleyin
+# <a name="step-5-install-packages-in-your-python-environment"></a>5. Adım: Python ortamınıza paket yüklemeyi
 
-**Önceki adım: [Hata ayıklayıcıda kodu çalıştır](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)**
+**Önceki adım: [hata ayıklayıcıda kodu çalıştırma](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)**
 
-Python geliştirici topluluğu, kendi projelerinize dahil edebilirsiniz yararlı paketler binlerce üretti. Visual Studio, Python ortamlarınızdaki paketleri yönetmek için bir kullanıcı altı bir kullanıcı yontması sağlar.
+Python geliştirici topluluğu, kendi projeleriniz ile birleştirebilmeniz için binlerce yararlı paket üretti. Visual Studio, Python ortamlarınızdaki paketleri yönetmek için bir kullanıcı arabirimi sağlar.
 
 ## <a name="view-environments"></a>Ortamları görüntüleme
 
-1. **Diğer Windows** > **Python Ortamlarını** **Görüntüle** > menüsü komutunu seçin. **Python Ortamları** penceresi Çözüm **Gezgini'ne** eş olarak açılır ve kullanabileceğiniz farklı ortamları gösterir. Liste, Visual Studio yükleyicisini kullanarak yüklediğiniz ortamları ve ayrı olarak yüklediğiniz ortamları gösterir. Bu, küresel, sanal ve conda ortamlarını içerir. Kalın ortam, yeni projeler için kullanılan varsayılan ortamdır. Ortamlarla çalışma hakkında daha fazla bilgi için [Visual Studio ortamlarında Python ortamlarını nasıl oluşturup yönetebilirsiniz'e](managing-python-environments-in-visual-studio.md)bakın.
+1. **View**  >  **Diğer Windows**  >  **Python ortamlarını** görüntüle menü komutunu seçin. **Python ortamları** penceresi **Çözüm Gezgini** için bir eş olarak açılır ve size sunulan farklı ortamları gösterir. Listede, Visual Studio yükleyicisi kullanılarak yüklediğiniz ortamlar ve ayrı olarak yüklediğiniz ortamlar gösterilmektedir. Bu, genel, sanal ve Conda ortamlarını içerir. Kalın olan ortam, yeni projeler için kullanılan varsayılan ortamdır. Ortamlarla çalışma hakkında daha fazla bilgi için bkz. [Visual Studio ortamlarında Python ortamları oluşturma ve yönetme](managing-python-environments-in-visual-studio.md).
 
-   ![Python Ortamları penceresi](media/environments/environments-default-view-2019.png)
+   ![Python ortamları penceresi](media/environments/environments-default-view-2019.png)
 
    > [!NOTE]
-   > Ayrıca Çözüm Gezgini penceresine tıklayarak ve Ctrl+K, Ctrl+' klavye kısayolu kullanarak Python Ortamları penceresini açabilirsiniz. Kısayol çalışmıyorsa ve menüde Python Ortamları penceresini bulamıyorsanız, Python iş yükünü yüklememiş olabilirsiniz. Python'un nasıl yüklenirhakkında rehberlik etmek için [Visual Studio'da Python desteğini nasıl yükleyebilirsiniz'](installing-python-support-in-visual-studio.md) e bakın.
+   > Ayrıca, Çözüm Gezgini penceresini seçerek ve **CTRL + K, CTRL + '** klavye kısayolunu kullanarak Python ortamları penceresini açabilirsiniz. Kısayol işe yaramazsa ve menüde Python ortamları penceresini bulamıyorsanız, Python iş yükünü yüklemiş olmanız mümkün değildir. Python 'un nasıl yükleneceğine ilişkin yönergeler için bkz. [Visual Studio 'Da Python desteği nasıl yüklenir](installing-python-support-in-visual-studio.md) .
 
-2. Çevrenin **Genel Bakış** sekmesi, ortamın yükleme klasörü ve yorumlayıcılarıyla birlikte o ortam için **Etkileşimli** pencereye hızlı erişim sağlar. Örneğin, **Etkileşimli Aç pencereyi** seçin ve visual studio'da belirli bir ortam için **Etkileşimli** pencere görünür.
+2. Ortamın **genel bakış** sekmesi, ortamın yükleme klasörü ve yorumlayıcıları ile birlikte bu ortam için **etkileşimli** bir pencereye hızlı erişim sağlar. Örneğin **etkileşimli pencere aç** ' ı seçin ve Visual Studio 'da belirli bir ortam için **etkileşimli** bir pencere görüntülenir.
 
-3. Şimdi, **Python Uygulama** şablonunu seçerek **Dosya** > **Yeni** > **Projesi**ile yeni bir proje oluşturun. Görünen kod dosyasında, önceki öğretici adımlar gibi bir kosinüs dalgası oluşturan aşağıdaki kodu yapıştırın, yalnızca bu kez grafik olarak çizilmiştir. Alternatif olarak, daha önce oluşturduğunuz projeyi kullanabilir ve kodu değiştirebilirsiniz. 
+3. Şimdi, yeni **Dosya**projesi olan yeni bir proje oluşturun  >  **New**  >  **Project**, **Python uygulama** şablonunu seçin. Görüntülenen kod dosyasında, önceki öğretici adımları gibi bir kosinüs dalgası oluşturan aşağıdaki kodu yapıştırın, yalnızca bu kez grafik çizilir. Alternatif olarak, önceden oluşturduğunuz projeyi kullanabilir ve kodu değiştirebilirsiniz.
 
     ```python
     from math import radians
@@ -50,47 +50,47 @@ Python geliştirici topluluğu, kendi projelerinize dahil edebilirsiniz yararlı
     main()
     ```
 
-4. Python projesi açıkken, Python Ortamları'na sağ tıklayarak ve **Tüm Python Ortamlarını Görüntüle'yi** seçerek Solution Explorer'dan Python Ortamları penceresini de açabilirsiniz
+4. Bir Python projesi açıkken, **Python** ortamları penceresini sağ tıklayıp Çözüm Gezgini **Tüm Python ortamlarını görüntüle** ' yi seçerek de açabilirsiniz.
 
    ![Ortam](media/environments/environments-view-all-2019.png)
 
-5. Düzenleyici penceresine baktığınızda, ifadelerin üzerinde `numpy` gezinirseniz ve `matplotlib` bunların çözülmediğini fark edeyim. Bunun nedeni, paketlerin varsayılan genel ortama yüklenmemiş olmasıdır.
+5. Düzenleyici penceresine baktığınızda, `numpy` ve `matplotlib` Not alma deyimlerinin üzerine geldiğinizde çözümlenmediğini fark edersiniz. Bunun nedeni, paketlerin varsayılan genel ortama yüklenmediği bir ortamdır.
 
-   ![Çözülmemiş paket alma](media/packages-unresolved-import.png)
+   ![Çözümlenmemiş paket içeri aktarma](media/packages-unresolved-import.png)
 
-## <a name="install-packages-using-the-python-environments-window"></a>Python Ortamları penceresini kullanarak paketleri yükleme
+## <a name="install-packages-using-the-python-environments-window"></a>Python ortamları penceresini kullanarak paket yükler
 
-1. Python Ortamları penceresinden, yeni Python projeleri için varsayılan ortamı tıklatın ve **Paketler** sekmesini seçin. Daha sonra, şu anda ortamda yüklü olan paketlerin bir listesini görürsünüz.
+1. Python ortamları penceresinde, yeni Python projeleri için varsayılan ortamı seçin ve **paketler** sekmesini seçin. Ardından, ortamda yüklü olan paketlerin bir listesini görürsünüz.
 
    ![Bir ortama yüklenen paketler](media/environments/environments-installed-packages-2019.png)
 
-2. Adını `matplotlib` arama alanına girerek ve sonra Çalıştır komutunu seçerek yükleyin: **pip install matplotlib** seçeneği. Bu, `matplotlib`(bu durumda içerir) `numpy`bağlı olduğu herhangi bir paket yanı sıra, yüklenir.
+2. `matplotlib`Öğesini arama alanına girerek ve sonra **komutu Çalıştır: PIP install Matplotlib** seçeneğini belirleyerek yüklemeyi seçin. Bunun `matplotlib` yanı sıra bağımlı olduğu paketleri (Bu durumda `numpy` ) yükler.
 
-   ![Çevreye matplotlib kurulumu](media/environments/environments-add-matplotlib-2019.png)
+   ![Ortama Matplotlib yükleme](media/environments/environments-add-matplotlib-2019.png)
 
-5. İstenirse yükselmeyi onaylar.
+5. İstenirse yükseltme onayı.
 
-6. Paket yüklendikten sonra **Python Ortamları** penceresinde görünür. Paketin sağındaki **X** onu yükler.
+6. Paket yüklendikten sonra, **Python ortamları** penceresinde görünür. Paketin sağ tarafındaki **X** onu kaldırır.
 
-   ![Çevreye matplotlib kurulumunun tamamlanması](media/environments/environments-add-matplotlib2-2019.png)
+   ![Ortamda Matplotlib yükleme işleminin tamamlanması](media/environments/environments-add-matplotlib2-2019.png)
 
    > [!NOTE]
-   > Visual Studio'nun yeni yüklenen paket için IntelliSense veritabanını oluşturmakta olduğunu belirtmek için ortamın altında küçük bir ilerleme çubuğu görünebilir. **IntelliSense** sekmesi de daha ayrıntılı bilgi gösterir. Bu veritabanı tamamlanana kadar, intelliSense özelliklerinin otomatik tamamlama ve sözdizimi denetimi gibi özelliklerin bu paketin düzenleyicisinde etkin olmayacağını unutmayın.
-   > 
-   > Visual Studio 2017 sürüm 15.6 ve daha sonra IntelliSense ile çalışmak için farklı ve daha hızlı bir yöntem kullanır ve **IntelliSense** sekmesinde bu etkiye yönelik bir ileti görüntüler.
+   > Visual Studio 'nun yeni yüklenmiş paket için IntelliSense veritabanını oluşturmakta olduğunu göstermek için, ortamın altında küçük bir ilerleme çubuğu görünür. **IntelliSense** sekmesinde daha ayrıntılı bilgiler de gösterilmektedir. Bu veritabanı tamamlanana kadar, otomatik tamamlama ve söz dizimi denetimi gibi IntelliSense özelliklerinin bu pakete yönelik düzenleyicide etkin olmayacak olduğunu unutmayın.
+   >
+   > Visual Studio 2017 sürüm 15,6 ve üzeri, IntelliSense ile çalışmaya yönelik farklı ve daha hızlı bir yöntem kullanır ve **IntelliSense** sekmesinden bu etkiye bir ileti görüntüler.
 
 ## <a name="run-the-program"></a>Programı çalıştırma
 
-1. Şimdi [matplotlib](https://matplotlib.org/) yüklü,**(F5**) veya hata ayıklayıcı olmadan programı çalıştırın (**Ctrl**+**F5**) çıkışı görmek için:
+1. Artık [Matplotlib](https://matplotlib.org/) yüklendiğinden, çıktıyı görmek için programı (**F5**) veya hata ayıklayıcı olmadan (**CTRL** + **F5**) çalıştırın:
 
-   ![Matplotlib örneğinin çıktısı](media/environments/environments-add-matplotlib3.png)
+   ![Matplotlib örneği çıkışı](media/environments/environments-add-matplotlib3.png)
 
 ## <a name="next-step"></a>Sonraki adım
 
 > [!div class="nextstepaction"]
 > [Git ile çalışma](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
 
-## <a name="go-deeper"></a>Daha derine inin
+## <a name="go-deeper"></a>Daha derin git
 
 - [Python ortamları](managing-python-environments-in-visual-studio.md)
 - [Visual Studio’da Django Öğrenme](learn-django-in-visual-studio-step-01-project-and-solution.md)

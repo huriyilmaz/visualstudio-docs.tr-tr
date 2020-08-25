@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f46dc6a1871b6d44c37c1931bf65f1b4a11c9ae
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 46744decddcc2d50fd05ea86cc6ebfad9d210031
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85770792"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800508"
 ---
 # <a name="walkthrough-create-a-code-snippet"></a>İzlenecek yol: Kod parçacığı oluşturma
 
@@ -96,15 +96,15 @@ Aşağıdaki XML, temel kod parçacığı şablonudur:
 
    ::: moniker range="vs-2017"
 
-   *%Userprofile%\Snippets\Visual Studio 2017 \ Code C# \Code parçacıkları* 
-    *%Userprofile%\, Studio 2017 \ Code Snippets\Visual Basic\code parçacıkları*
+   *%Userprofile%\Snippets\Visual Studio 2017 \ Code C# \Code parçacıkları*  
+   *%Userprofile%\, Studio 2017 \ Code Snippets\Visual Basic\code parçacıkları*
 
    ::: moniker-end
 
    ::: moniker range=">=vs-2019"
 
-   *%Userprofile%\, Studio 2019 \ Code Snippets\Visual C# \Code parçacıkları* 
-    *%Userprofile%\, Studio 2019 \ Code Snippets\Visual Basic\code parçacıkları*
+   *%Userprofile%\, Studio 2019 \ Code Snippets\Visual C# \Code parçacıkları*  
+   *%Userprofile%\, Studio 2019 \ Code Snippets\Visual Basic\code parçacıkları*
 
    ::: moniker-end
 

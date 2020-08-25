@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: df9d345e8557f10d764dce6e56c7491d2c026747
-ms.sourcegitcommit: 0d3d157949b539c78bc101a3c3b456bbcb5af7de
+ms.openlocfilehash: 22f6f80a7e4c8c8c3f91fa436361ff37405893bd
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88286659"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800976"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>Visual Studio 'da FxCop çözümleyicileri 'ni yükler
 
@@ -28,7 +28,7 @@ Bu FxCop çözümleyicileri 'ni, Visual Studio 'ya bir NuGet paketi veya VSıX u
 
 Visual Studio 2019 sürüm 16,3 ve sonraki sürümlerde, [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet paketini doğrudan projenin kod analizi özellikleri sayfasından yükleyebilirsiniz:
 
-1. **Çözüm Gezgini**' de proje düğümüne sağ tıklayın, **Özellikler**' i seçin ve ardından **Kod Analizi** sekmesini seçin.
+1. **Çözüm Gezgini**' de proje düğümünde sağ tıklayın (veya Select ve Hold), **Özellikler**' i seçin ve ardından **Kod Analizi** sekmesine gidin.
 
    ![Visual Studio 'da Özellikler sayfasından FxCop çözümleyicileri paketini yükler](media/install-fxcop-properties-page.png)
 
@@ -59,7 +59,7 @@ Visual Studio 2019 ' nin eski bir sürümünü kullanıyorsanız, paketi [Paket 
 
 ### <a name="custom-installation"></a>Özel yükleme
 
-Özel yükleme için örneğin, paketin farklı bir sürümünü belirtmek üzere, projenin kod analizi özellikleri sayfasında üç nokta (...) düğmesini seçin. Bu düğme, arama dizesi olarak "Microsoft. CodeAnalysis. Fxcopçözümleyiciler" ile NuGet Paket Yöneticisi 'ni açar.
+Örneğin, paketin farklı bir sürümünü belirtmek için özel yüklemede, projenin kod analizi özellikleri sayfasında üç nokta (...) düğmesini seçin. Bu düğme, arama dizesi olarak "Microsoft. CodeAnalysis. Fxcopçözümleyiciler" ile NuGet Paket Yöneticisi 'ni açar.
 
 ![Visual Studio 'daki Özellikler sayfasından özel FxCop çözümleyicileri paketini yükler](media/install-fxcop-properties-page-ellipsis.png)
 

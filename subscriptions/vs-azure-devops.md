@@ -7,23 +7,23 @@ ms.assetid: fe826200-9600-4b29-a64e-0d66ba3caf3d
 ms.date: 07/22/2020
 ms.topic: conceptual
 description: Azure DevOps 'u bir Visual Studio abonesi olarak nasıl kullanabileceğinizi anlayın.
-ms.openlocfilehash: 591e6a3d781a17a292664847d6173aa371ff1a17
-ms.sourcegitcommit: 8c4dc60b665e7065a5231d6b61380731221d9fc5
+ms.openlocfilehash: 9f715cf5b9bd0278073b4a5f19a0f0a4f6a7a423
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87115315"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801080"
 ---
 # <a name="azure-devops-benefits-for-visual-studio-subscribers"></a>Visual Studio aboneleri için Azure DevOps avantajları
 Etkin bir Visual Studio abonesi olarak, Azure DevOps 'da, aboneliğinize bir avantaj olarak dahil olan bir dizi özelliği kullanabilirsiniz. Bu aynı özellikleri, bir üye olduğunuz her bir Azure DevOps kuruluşunda, organizasyonu oluşturduğunuz veya başka bir kişi tarafından eklenmeksizin kullanabilirsiniz.
 
-## <a name="sign-in"></a>Oturum aç
+## <a name="sign-in"></a>Oturum açın
 
    > [!div class="mx-imgBorder"]
    > ![Azure DevOps kutucuğu](_img/vs-azure-devops/vs-azure-devops-tile.png)
 
    
-Azure DevOps 'da, Visual Studio aboneliğinizi veya [Alternatif kimliğinizi](vs-alternate-identity.md)etkinleştirmek için kullandığınız kimliği kullanarak oturum açtığınızda, bunu otomatik olarak tanıyacağız.  Bu şekilde, hem kişisel hesabınızı hem de iş ya da okul hesabınızı kullanarak Azure DevOps 'a erişmenize olanak tanıyan bir iş veya okul hesabı (Visual Studio, Office 365 veya şirket veya okul ağınız için oturum açarken kullandığınız) da ekleyebilirsiniz.
+Azure DevOps 'da, Visual Studio aboneliğinizi veya [Alternatif kimliğinizi](vs-alternate-identity.md)etkinleştirmek için kullandığınız kimliği kullanarak oturum açtığınızda, bunu otomatik olarak tanıyacağız.  Bu şekilde, hem kişisel hesabınızı hem de iş veya okul hesabınızı kullanarak Azure DevOps 'a erişmenizi sağlayan bir iş veya okul hesabı (Visual Studio 'da, Microsoft 365 veya şirket veya okul ağınız için oturum açarken kullanabilirsiniz) ekleyebilirsiniz.
 
 [Ücretsiz bir Azure DevOps organizasyonu için kaydolun](https://visualstudio.microsoft.com/team-services/)
 
@@ -33,7 +33,7 @@ Azure DevOps 'da, Visual Studio aboneliğinizi veya [Alternatif kimliğinizi](vs
 | Visual Studio Enterprise (Standart, aylık bulut)   | VL, Azure, perakende, seçili NFR<sup>1</sup>  | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans, kendinden barındırılan paralel işler [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)     |  Yes          |
 | GitHub Enterprise ile Visual Studio Enterprise   | VL| Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans, kendinden barındırılan paralel işler [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops) |  Yes          |
 | Visual Studio Professional (Standart, aylık bulut) | VL, Azure, perakende                                        | Azure Boards & depoları (temel<sup>2</sup>) [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Yes          |
-| GitHub Enterprise ile Visual Studio Professional | VL| Azure Boards & depoları (temel<sup>2</sup>) [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Yes          |
+| GitHub Enterprise ile Visual Studio Professional | VL| Azure Boards & depoları (temel<sup>2</sup>)  [daha fazla bilgi](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                                            |  Yes          |
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans [daha fazla bilgi edinin](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Yes          |
 | MSDN Platformları (Standart)                                          | VL, perakende                                              | Azure Boards & depoları (temel<sup>2</sup>), Azure test Plans [daha fazla bilgi edinin](https://docs.microsoft.com/azure/devops/organizations/security/access-levels?view=azure-devops)                                             |  Yes          |
 ||

@@ -1,5 +1,5 @@
 ---
-title: Kod analizi kural kümesi düzenleyicisini kullanma
+title: Kod Analizi Kural Kümesi Düzenleyicisini Kullanma
 ms.date: 04/04/2018
 ms.topic: conceptual
 f1_keywords:
@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ea828cd0cba0bdab60a1f7cf4f74dbf20bd01d2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.openlocfilehash: 796818d376df477df84f845b5b0a17ace60bd1f2
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75587140"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801548"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Kod analizi kural kümesi düzenleyicisini kullanma
 
@@ -28,8 +28,8 @@ Aşağıdaki tabloda önem derecesi seçenekleri gösterilmektedir:
 |Uyarı|**Hata listesi** ve derleme zamanında bir uyarı oluşturur.|
 |Hata|**Hata listesi** ve derleme zamanında bir hata oluşturur.|
 |Bilgi|**Hata listesi**bir ileti oluşturur.|
-|Hidden|İhlalin kullanıcıya görünür değil. Ancak, bu, ihlalin ihlal olduğu konusunda bilgilendirilir.|
-|Yok.|Kural bastırılır. Kural, kuralın kural kümesinden kaldırılmış olduğu durumla aynıdır.|
+|Gizli|İhlalin kullanıcıya görünür değil. Ancak, bu, ihlalin ihlal olduğu konusunda bilgilendirilir.|
+|Yok|Kural bastırılır. Kural, kuralın kural kümesinden kaldırılmış olduğu durumla aynıdır.|
 
 Düzenleyici, kuralları belirttiğiniz bir kural kümesi alanına göre gruplandıran bir ağaç yapısında görüntüler. Kural kümesine kural eklemek veya kuralı kaldırmak için aşağıdaki adımlardan birini veya birkaçını yapın:
 
@@ -38,9 +38,9 @@ Düzenleyici, kuralları belirttiğiniz bir kural kümesi alanına göre gruplan
    > [!TIP]
    > Kuralların **grupta gruplandırma ölçütü** açılır.
 
-- Bir grubun **eylem** alanına tıklayın ve sonra gruptaki tüm kurallara uygulanacak eylemi belirtin.
+- Bir grubun **eylem** alanında, gruptaki tüm kurallara uygulanacak eylemi belirtin.
 
-- Tek bir kuralın onay kutusunu seçin veya temizleyin. Bir kuralın onay kutusunu seçtiğinizde, kural uyarı eylemine ayarlanır.
+- Tek bir kuralın onay kutusunu seçin veya temizleyin. Bir kuralın onay kutusunu seçtiğinizde, kural **Uyarı** eylemine ayarlanır.
 
 ## <a name="toolbar"></a>Araç Çubuğu
 
@@ -52,7 +52,7 @@ Aşağıdaki tabloda, kural kümesi düzenleyicisinin araç çubuğundaki deneti
 |---------------------|-----------------|
 |**Tümünü Genişlet**|Tüm gruplardaki kuralları gösterir.|
 |**Tümünü Daralt**|Tüm gruplardaki kuralları gizler.|
-|**Gruplandırma ölçütü**|Kuralların gruplandırılacağı alanı belirtir. Kuralları gruplar olmadan göstermek için **\<yok >** ' a tıklayın.|
+|**Gruplandırma ölçütü**|Kuralların gruplandırılacağı alanı belirtir. **\<None>** Kuralları gruplar olmadan göstermek için tıklayın.|
 |**Sütun Seçenekleri**|Görüntülenecek kural alanlarını belirtir.|
 |**Geçerli çözüm için geçerli olmayan kuralları gizle**|Çözümle aynı hedef türünde olmayan kuralları gösterir veya gizler.|
 |**Kod Analizi hataları oluşturabilen kuralları göster**|Hata eyleminin atandığı kuralları gösterir veya gizler.|
@@ -63,16 +63,16 @@ Aşağıdaki tabloda, kural kümesi düzenleyicisinin araç çubuğundaki deneti
 
 ## <a name="rule-set-fields"></a>Kural kümesi alanları
 
-Kural kümesi alanları bir kural kümesi hakkındaki bilgileri görüntüler ve kural listesini sıralamak ve gruplandırmak için kullanılabilir. Alanları görüntülemek veya gizlemek için, kural kümesi Düzenleyicisi araç çubuğunda **sütun seçenekleri** ' yi seçin ve ardından göstermek veya gizlemek istediğiniz alanların onay kutularını işaretleyin veya temizleyin.
+Kural kümesi alanları bir kural kümesi hakkındaki bilgileri görüntüler ve kural listesini sıralamak ve gruplandırmak için kullanılabilir. Alanları görüntülemek veya gizlemek için, kural kümesi Düzenleyicisi araç çubuğunda **sütun seçenekleri** ' yi seçin ve ardından göstermek veya gizlemek istediğiniz alanların onay kutularını seçin veya temizleyin.
 
 Aşağıdaki tabloda bir kural kümesi alanları açıklanmaktadır:
 
 |Alan|Açıklama|
 |-----------|-----------------|
-|**ID**|Kuralın tanımlayıcısı.|
+|**NUMARASıNı**|Kuralın tanımlayıcısı.|
 |**Kategori**|Kural kümelerinde üyeliklerine ek olarak, kod analizi kuralları da kategoriye göre gruplandırılır. Daha fazla bilgi için bkz. [Kod Analizi uyarıları](../code-quality/code-analysis-for-managed-code-warnings.md).|
 |**Ad**|Kuralın başlığı.|
-|**Namespace**|Kuralın ad alanı.|
+|**Ad Alanı**|Kuralın ad alanı.|
 |**Hedef türü**|Kuralın yerel, yönetilen veya veritabanı kodu için olup olmadığını gösterir.|
 |**Eylem**|Kod Analizi çalıştırmasında kural ihlal edildiğinde gerçekleştirilecek eylem. **Eylem** alanını düzenleyebilirsiniz.|
 |**Kaynak kural kümeleri**|Kuralı içeren kural kümesi.|
@@ -81,9 +81,9 @@ Aşağıdaki tabloda bir kural kümesi alanları açıklanmaktadır:
 
 Kural kümesi kılavuzunun sütun başlıklarından, kuralları alanın değerlerine göre sıralayabilir ve filtreleyebilirsiniz.
 
-- Kural kümesi listelerini sıralamak için, sıralamak istediğiniz alanın sütun başlığına tıklayın. Kural kümeleri gruplandırılmışsa, her grup ayrı ayrı sıralanır.
+- Kural kümesi listelerini sıralamak için, sıralamak istediğiniz alanın sütun başlığını seçin. Kural kümeleri gruplandırılmışsa, her grup ayrı ayrı sıralanır.
 
-- Kural kümelerini bir alanın değerine göre filtrelemek için, filtre uygulamak istediğiniz alanın sütun üstbilgisindeki filtre düğmesine tıklayın. Göstermek istediğiniz değerlerin onay kutularını seçin ve gizlemek istediğiniz değerlerin onay kutularını temizleyin.
+- Kural kümelerini bir alanın değerine göre filtrelemek için, filtre uygulamak istediğiniz alanın sütun üstbilgisindeki filtre düğmesini seçin. Göstermek istediğiniz değerlerin onay kutularını seçin ve gizlemek istediğiniz değerlerin onay kutularını temizleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

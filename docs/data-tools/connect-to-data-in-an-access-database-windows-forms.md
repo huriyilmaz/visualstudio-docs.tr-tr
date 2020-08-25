@@ -12,24 +12,24 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 03c92476e8083106a0d301655be3a1779709c1c1
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 3a94467dbfa0c11fdb7bb6ba7aa4d304fef3979f
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85282741"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800638"
 ---
 # <a name="connect-to-data-in-an-access-database"></a>Bir Access veritabanındaki verilere bağlanma
 
 Visual Studio 'Yu kullanarak bir Access veritabanına (bir *. mdb* dosyası ya da *. accdb* dosyası) bağlanabilirsiniz. Bağlantıyı tanımladıktan sonra veriler **veri kaynakları** penceresinde görünür. Buradan, tasarım yüzeyiniz üzerine tabloları veya görünümleri sürükleyebilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu yordamları kullanmak için bir Windows Forms veya WPF projesine ve bir erişim veritabanı (*. accdb* dosyası) ya da erişim 2000-2003 veritabanı (*. mdb* dosyası) gerekir. Dosya türünüze karşılık gelen yordamı izleyin.
 
 ## <a name="create-a-dataset-for-an-accdb-file"></a>. Accdb dosyası için veri kümesi oluşturma
 
-Aşağıdaki yordamı kullanarak Office 365, Access 2013, Access 2010 veya 2007 Access ile oluşturulan veritabanlarına bağlanın.
+Aşağıdaki yordamı kullanarak Microsoft 365, Access 2013, Access 2010 veya Access 2007 ile oluşturulan veritabanlarına bağlanın.
 
 1. Visual Studio 'da bir Windows Forms veya WPF uygulama projesi açın.
 

@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3a23afff970405bf7ae1bbd1c8aad326eb133780
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 10430c6eba57c97dd46a706d0ec2f532cd08d4f3
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520386"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801171"
 ---
 # <a name="how-visual-studio-uses-python-search-paths"></a>Visual Studio, Python arama yollarını nasıl kullanır?
 
@@ -29,7 +29,7 @@ Ancak, tüm sistem için değişken ayarlanmış olsa bile, Visual Studio arama 
 
 Böylece Visual Studio, arama yollarını doğrudan hem ortamlarda hem de projelerde belirtmek için bir yol sağlar. Visual Studio 'da çalıştırdığınız veya hata ayıklamanın bir kodu, `PYTHONPATH` (ve diğer eşdeğer değişkenler) değerinde arama yolları alır. Arama yolları ekleyerek, Visual Studio bu konumlardaki kitaplıkları inceler ve gerektiğinde IntelliSense veritabanları oluşturur (Visual Studio 2017 sürüm 15,5 ve daha önceki bir sürümü), veritabanını oluşturmak, kitaplıkların sayısına bağlı olarak biraz zaman alabilir.
 
-Bir arama yolu eklemek için **Çözüm Gezgini**adresine gidin, proje düğümünüz ' ı genişletin, **arama yolları**' na sağ tıklayın ve **arama yolunda klasör ekle**' yi seçin:
+Bir arama yolu eklemek için **Çözüm Gezgini**gidin, proje düğümünüz ' ı genişletin, **arama yolları**' na sağ tıklayın ve **arama yolunda klasör ekle**' yi seçin:
 
 ::: moniker range="vs-2017"
 ![Çözüm Gezgini arama yollarında arama yolu komutuna klasör ekle](media/search-paths-command.png)

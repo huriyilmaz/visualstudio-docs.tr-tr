@@ -7,12 +7,12 @@ ms.assetid: 383fc910-3f4c-474a-a3f8-0f13525f05e9
 ms.date: 03/26/2020
 ms.topic: how-to
 description: Seçili Visual Studio aboneliklerine dahil Power BI Pro aboneliği hakkında bilgi edinin.
-ms.openlocfilehash: dd16d8f28f78a7496ad3c93ab1db8eb51ebcf43b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.openlocfilehash: 9a16e827c45e600ff3b5edc8579b5941aa80ca90
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85903001"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801691"
 ---
 # <a name="power-bi-pro-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Power BI Pro
 
@@ -29,7 +29,7 @@ Power BI Pro kullanmak için, bir hesap ayarlamanız veya mevcut bir hesabı kul
    > [!div class="mx-imgBorder"]
    > ![Power BI Pro avantajı kutucuğu](_img/vs-pbi/vs-pbi-tile.png)
 
-3. Office 365 Geliştirici aboneliği veya Enterprise Mobility + Security gibi bazı abonelik avantajlarını etkinleştirdiyseniz zaten bir hesabınız olabilir.  Mevcut bir hesap bulunursa, mevcut hesabınıza Power BI Pro aboneliğinizi ekleme veya yeni bir hesap için kaydolma seçeneğiniz vardır.  Farklı avantajlarınıza tek bir Kullanıcı KIMLIĞIYLE erişebilmek için, bunu mevcut hesabınıza eklemeniz önemle tavsiye ederiz.
+3. Microsoft 365 Geliştirici aboneliği veya Enterprise Mobility + Security gibi bazı abonelik avantajlarını etkinleştirdiyseniz zaten bir hesabınız olabilir.  Mevcut bir hesap bulunursa, mevcut hesabınıza Power BI Pro aboneliğinizi ekleme veya yeni bir hesap için kaydolma seçeneğiniz vardır.  Farklı avantajlarınıza tek bir Kullanıcı KIMLIĞIYLE erişebilmek için, bunu mevcut hesabınıza eklemeniz önemle tavsiye ederiz.
    > [!div class="mx-imgBorder"]
    > ![Power BI Pro mevcut hesap avantajı](_img/vs-pbi/vs-pbi-existing-account.png)
 
@@ -55,9 +55,9 @@ Power BI Pro kullanmak için, bir hesap ayarlamanız veya mevcut bir hesabı kul
     > [!div class="mx-imgBorder"]
     > ![Power BI Pro avantajı Iletişim bilgileri](_img/vs-pbi/vs-pbi-payment-blurred-cropped.png)
 
-11. Sonraki sayfa, Power BI Pro kullanmaya başlamak için ayarlandığınızı onaylar.  Bu sayfa, oturum açma sayfasına bir bağlantı sağlar.  Bağlantı, oturum açma sayfasının yanı sıra Kullanıcı KIMLIĞINIZ için de kaydedilmesini öneririz.  (Ayrıca, hesabı ayarlarken verdiğiniz adreste bir hoş geldiniz e-postası da alacaksınız.)  Sorularınız varsa kullanabileceğiniz otomatik bir Office 365 yardımcı penceresi de görebilirsiniz.  Devam etmeye **başlayın ' a** tıklayın.
+11. Sonraki sayfa, Power BI Pro kullanmaya başlamak için ayarlandığınızı onaylar.  Bu sayfa, oturum açma sayfasına bir bağlantı sağlar.  Bağlantı, oturum açma sayfasının yanı sıra Kullanıcı KIMLIĞINIZ için de kaydedilmesini öneririz.  (Ayrıca, hesabı ayarlarken verdiğiniz adreste bir hoş geldiniz e-postası da alacaksınız.)  Sorularınız varsa kullanabileceğiniz otomatik bir Microsoft 365 Yardımcısı penceresi de görebilirsiniz.  Devam etmeye **başlayın ' a** tıklayın.
 
-12. Power BI Pro hesabınız ayarlandığına göre, Office 365 Yönetim Merkezi ' ni görürsünüz; burada kullanıcıları ve etki alanlarını yönetebilir, Office yazılımını yükleyebilir ve Office 365 hakkında bilgi edinebilirsiniz.  Bu kadar!  Başlamaya hazırsınız.
+12. Power BI Pro hesabınız ayarlandığına göre, Kullanıcı ve etki alanlarını yönetebileceğiniz, Office yazılımını yükleyebileceğiniz ve Microsoft 365 hakkında bilgi edinmek için Microsoft 365 Yönetim merkezini görürsünüz.  Bu kadar!  Başlamaya hazırsınız.
 
 ## <a name="eligibility"></a>Önceliği
 
@@ -91,7 +91,7 @@ Y: Evet, iki önemli uyarılarla onu bir üretimde kullanabilirsiniz:
 - Bu Power BI Pro avantajı kamu kiracılarında kullanılamaz.
 
 ### <a name="q--when-i-try-to-activate-power-bi-pro-i-get-a-message-you-already-have-an-account-through-work--can-i-still-use-the-benefit"></a>S: Power BI Pro etkinleştirmeyi denediğimde "iş üzerinden bir hesabınız zaten var" iletisini alıyorum.  Avantajı kullanmaya devam edebilir miyim?
-Y: Evet.  İleti, üzerinde yönetici olmadığınız etkin Office 365 kiracılarının zaten bulunduğu bir etki alanında oturum açtığınızı gösterir.  Bir kiracıya Power BI Pro eklemek için bu kiracıda yönetici olmanız gerekir.  Bu sorunu çözmek için, kendi kiracınızı oluşturmak için aşağıdaki adımları izleyin.
+Y: Evet.  İleti, zaten yönetici olmadığınız etkin Microsoft 365 kiracılarına sahip bir etki alanında oturum açtığınızı gösterir.  Bir kiracıya Power BI Pro eklemek için bu kiracıda yönetici olmanız gerekir.  Bu sorunu çözmek için, kendi kiracınızı oluşturmak için aşağıdaki adımları izleyin.
 1. Çalışır durumda bir hesabınız olduğunu gördüğünüzde **Yeni hesap oluştur ' a**tıklayın.
 
 2. Sonraki ekranda, iletişim bilgilerinizi girip **İleri**' ye tıklayın.

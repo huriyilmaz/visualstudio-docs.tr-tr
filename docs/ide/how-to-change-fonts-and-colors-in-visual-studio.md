@@ -1,6 +1,6 @@
 ---
-title: Yazı tipi renklerini, metin boyutunu ve yüksek karşıtlık seçeneklerini değiştirme
-description: Visual Studio 'da yazı tipi rengini ve metin boyutunu değiştirmeyi ve erişilebilirlik sorunları için kontrast seçeneklerini nasıl seçeceğinizi öğrenin.
+title: Erişilebilirlik için temaları, yazı tiplerini, metni ve karşıtlığı değiştirme
+description: Visual Studio renk temalarını, yazı tipi renklerini, metin boyutlarını ve çok karşıtlıklı renkleri kullanarak kullanım kolaylığı ve erişilebilirlik sorunları için nasıl değiştirileceğini öğrenin.
 ms.date: 08/20/2020
 ms.topic: how-to
 ms.custom: contperfq1
@@ -13,16 +13,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 280873a2f855aa4c0d7e9951e141ca5492357b5a
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: b2410974ed95b1aa8dca3dc3e31a39c39df2d4a0
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88711696"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801444"
 ---
-# <a name="how-to-change-fonts-colors-and-high-contrast-options-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da yazı tiplerini, renkleri ve yüksek karşıtlık seçeneklerini değiştirme
+# <a name="how-to-change-fonts-colors-and-themes-in-visual-studio"></a>Nasıl yapılır: Visual Studio 'da yazı tiplerini, renkleri ve temaları değiştirme
 
-Visual Studio 'daki yazı tiplerini ve renkleri birçok şekilde değiştirebilirsiniz. Örneğin, varsayılan mavi renk temasını koyu Tema ("koyu mod" olarak da adlandırılır) olarak değiştirebilirsiniz. Ve varsayılan yazı tipini ve metin boyutunu farklı bir yazı tipi ve boyut olarak değiştirebilirsiniz. Gereksinimlerinize en uygun olması halinde yüksek karşıtlıklı bir tema da seçebilirsiniz.
+Visual Studio 'daki yazı tiplerini ve renkleri birçok şekilde değiştirebilirsiniz. Örneğin, varsayılan mavi renk temasını koyu Tema ("koyu mod" olarak da adlandırılır) olarak değiştirebilirsiniz. Gereksinimlerinize en uygun olan bir ek kontrast teması da seçebilirsiniz. Hem IDE hem de kod düzenleyicisinde varsayılan yazı tipini ve metin boyutunu değiştirebilirsiniz.
 
 ## <a name="change-the-color-theme"></a>Renk temasını değiştirme
 
@@ -124,5 +124,6 @@ Yazı tipi ve renk düzenlerini değiştirebileceğiniz tüm Kullanıcı arabiri
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Düzenleyicisi için yazı tiplerini ve renkleri değiştirme](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+- [Nasıl yapılır: Visual Studio 'da düzenleyici için yazı tiplerini ve renkleri değiştirme](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
 - [Visual Studio kod Düzenleyicisi özellikleri](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Visual Studio IDE ve düzenleyiciyi kişiselleştirme](../ide/quickstart-personalize-the-ide.md)

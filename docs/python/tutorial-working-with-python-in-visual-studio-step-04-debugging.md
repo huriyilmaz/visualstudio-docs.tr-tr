@@ -1,7 +1,7 @@
 ---
-title: Python Visual Studio öğretici adım 4, hata ayıklama
+title: Visual Studio 'da Python adım 4, hata ayıklama
 titleSuffix: ''
-description: Visual Studio'daki Python özelliklerinin temel walkthrough'unun 4.
+description: Visual Studio 'da Python özellikleri 'nin hata ayıklayıcıda nasıl çalıştırılacağını kapsayan temel bir anlatım 4. adımı.
 ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -11,20 +11,20 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3f6464986cb94ffa3ab3cc9264ab818112046ea9
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.openlocfilehash: d7fe5a8b2275248c0fc68f9237e9e259973c567b
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "63002839"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801730"
 ---
-# <a name="step-4-run-code-in-the-debugger"></a>Adım 4: Hata ayıklayıcıda kodu çalıştırma
+# <a name="step-4-run-code-in-the-debugger"></a>4. Adım: hata ayıklayıcıda kodu çalıştırma
 
-**Önceki adım: [İnteraktif REPL penceresini kullanma](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)**
+**Önceki adım: [ETKILEŞIMLI REPL penceresini kullanma](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)**
 
-Visual Studio, projeleri yönetme, zengin bir düzenleme deneyimi ve **Etkileşimli** pencere sağlamanın yanı sıra Python kodu için tam özellikli hata ayıklama sağlar. Hata ayıklayıcıda, bir döngünün her yinelemesi de dahil olmak üzere kodunuzu adım adım çalıştırabilirsiniz. Belirli koşullar doğru olduğunda da programı duraklatabilirsiniz. Program hata ayıklama da duraklatılmış herhangi bir noktada, tüm program durumunu inceleyebilir ve değişkenlerin değerini değiştirebilirsiniz. Bu tür eylemler program hataları nın izlenmesi için gereklidir ve aynı zamanda tam program akışını dikkatle izlemek için çok yararlı yardımcılar sağlar.
+Visual Studio, bir zengin düzenleme deneyimi ve **etkileşimli** pencere sunan proje yönetiminin yanı sıra Python kodu için tam özellikli hata ayıklama sağlar. Hata ayıklayıcıda, bir döngünün her yinelemesi dahil olmak üzere adım adım adımları gerçekleştirebilirsiniz. Ayrıca, belirli koşullar doğru olduğunda programı da duraklatabilirsiniz. Herhangi bir noktada, program hata ayıklayıcıda duraklatıldığında, tüm program durumunu inceleyebilir ve değişkenlerin değerini değiştirebilirsiniz. Bu eylemler, program hatalarının izlenmesi için gereklidir ve ayrıca tam program akışını dikkatle izleyerek çok faydalı yardımlıklar sağlar.
 
-1. *PythonApplication1.py* dosyasındaki kodu aşağıdakilerle değiştirin. Kodun bu varyasyonu, hata ayıklayıcıdaki ayrık adımlarını inceleyebilmeniz için genişletir. `make_dot_string` Ayrıca döngüyü `for` bir `main` işleve yerleştirir ve bu işlevi çağırarak açıkça çalıştırAbilir:
+1. *PythonApplication1.py* dosyasındaki kodu aşağıdaki kodla değiştirin. Kodun bu çeşitlemesi, `make_dot_string` hata ayıklayıcıda kendi ayrık adımlarını incelemenize olanak sağlayacak şekilde genişler. Ayrıca, `for` döngüyü bir `main` işleve koyar ve bu işlevi çağırarak açıkça çalıştırır:
 
     ```python
     from math import cos, radians
@@ -44,66 +44,66 @@ Visual Studio, projeleri yönetme, zengin bir düzenleme deneyimi ve **Etkileşi
     main()
     ```
 
-1. **F5** tuşuna basarak veya **Hata** > **Ayıklama Hata Ayıklama** menüsü komutunu seçerek kodun düzgün çalışıp çalışmadığını denetleyin. Bu komut hata ayıklayıcıda kodu çalıştırır, ancak çalışırken programı duraklatmak için hiçbir şey yapmadığınız için, birkaç yineleme için bir dalga deseni yazdırır. Çıkış penceresini kapatmak için herhangi bir tuşa basın.
+1. **F5** tuşuna basarak veya **hata**  >  **ayıklamayı Başlat** menü komutunu seçerek kodun düzgün çalışıp çalışmadığını denetleyin. Bu komut, hata ayıklayıcıdaki kodu çalıştırır, ancak programı çalışırken duraklatmayı tamamlamadığınız için, yalnızca birkaç yineleme için bir dalga deseninin yazdırılmasını sağlar. Çıkış penceresini kapatmak için herhangi bir tuşa basın.
 
     > [!Tip]
-    > Program tamamlandığında çıkış penceresini otomatik olarak kapatmak için **Araçlar** > **Seçenekleri** menü komutunu seçin, **Python** düğümünü genişletin, **Hata Ayıklama'yı**seçin ve işlem normal **çıktığınızda giriş için Bekle**seçeneğini temizleyin:
+    > Program tamamlandığında çıkış penceresini otomatik olarak kapatmak için, **Araçlar**  >  **Seçenekler** menü komutunu seçin, **Python** düğümünü genişletin, **hata ayıklama**' yi seçin ve ardından **işlem normal bir şekilde çıktığında giriş için bekle**seçeneğini temizleyin:
     >
-    > ![Normal program çıkışında çıktı penceresini kapatmak için python hata ayıklama seçeneği](media/vs-getting-started-python-22-debugging5.png)
+    > ![Normal programda çıkış penceresini kapatmak için Python hata ayıklama seçeneği](media/vs-getting-started-python-22-debugging5.png)
 
-1. `for` Gri kenar boşluğuna bu satırla bir kez tıklayarak veya bu satıra ayırarak ve **Hata Ayıklama** > **Kesme Noktası** komutunu **(F9)** kullanarak deyimüzerinde bir kesme noktası ayarlayın. Kesme noktasını belirtmek için gri kenar boşluğunda kırmızı bir nokta belirir (aşağıdaki okunda belirtildiği gibi):
+1. `for`Bu satıra göre gri kenar boşluğunda bir kez tıklayarak veya giriş işaretini bu satıra yerleştirip **hata ayıklama**  >  **kesme noktasını aç** komutunu (**F9**) kullanarak deyimde bir kesme noktası ayarlayın. Bir kırmızı nokta, kesme noktasını göstermek için gri kenar boşluğunda görünür (aşağıdaki okla belirtilen şekilde):
 
     ![Kesme noktası ayarlama](media/vs-getting-started-python-18-debugging1.png)
 
-1. Hata ayıklayıcıyı **(F5)** yeniden başlatın ve kodu çalıştırmanın bu kesme noktasıyla satırda durduğunu görün. Burada çağrı yığınını inceleyebilir ve değişkenleri inceleyebilirsiniz. Kapsam içi değişkenler tanımlandıklarında **Otomatik ler** penceresinde görünür; Visual Studio'nun geçerli kapsamda bulduğu tüm değişkenleri (işlevler dahil) tanımlanmadan önce göstermek için bu pencerenin altındaki **Yerel görünüme** de geçebilirsiniz:
+1. Hata ayıklayıcıyı yeniden başlatın (**F5**) ve kodu çalıştırmanın bu kesme noktasına sahip satırda durduğunu görün. Burada çağrı yığınını inceleyebilir ve değişkenleri inceleyebilirsiniz. Kapsam içinde olan değişkenler, tanımlandıklarında, **oto** penceresinde görünür; Ayrıca, tanımlanmadan önce, Visual Studio 'nun geçerli kapsamda bulduğu tüm değişkenleri (işlevler dahil olmak üzere) göstermek için söz konusu pencerenin en altındaki **Yereller** görünümüne geçiş yapabilirsiniz:
 
-    ![Python için Breakpoint UI deneyimi](media/vs-getting-started-python-19-debugging2b.png)
+    ![Python için kesme noktası Kullanıcı arabirimi deneyimi](media/vs-getting-started-python-19-debugging2b.png)
 
-1. Visual Studio penceresinin üst kısmındaki hata ayıklama araç çubuğunu (aşağıda gösterilmiştir) gözlemleyin. Bu araç çubuğu en yaygın hata ayıklama komutlarına **(Hata Ayıklama** menüsünde de bulunabilir) hızlı erişim sağlar:
+1. Visual Studio penceresinin üst kısmında hata ayıklama araç çubuğunu (aşağıda gösterilen) gözlemleyin. Bu araç çubuğu, en yaygın hata ayıklama komutlarına ( **hata ayıklama** menüsünde de bulunabilir) hızlı erişim sağlar:
 
-    ![Temel hata ayıklama araç çubuğu düğmeleri](media/vs-getting-started-python-20-debugging3.png)
+    ![Önemli hata ayıklama araç çubuğu düğmeleri](media/vs-getting-started-python-20-debugging3.png)
 
-    Soldan sağa düğmeler aşağıdaki gibi:
-    - **Continue** (**F5**) programı bir sonraki kesme noktasına veya program tamamlanına kadar çalıştırAr.
-    - **Break All** **(Ctrl**+**Alt**+**Break)** uzun süren bir programı duraklatır.
-    - **Hata Ayıklamayı Durdurun** **(Shift**+**F5)** programı olduğu her yerde durdurur ve hata ayıklamadan çıkar.
-    - **Yeniden Başlatma** (**Ctrl**+**Shift**+**F5**) programı olduğu her yerde durdurur ve hata ayıklamada baştan başlatır.
-    - **Sonraki Bildirimi Göster** (**Alt**+**Num** **&#42;**) çalıştırmak için bir sonraki kod satırına geçer. Bu, hata ayıklama oturumu sırasında kodunuzda gezinirken ve hata ayıklayıcının duraklatılmış olduğu noktaya hızla dönmek istediğinizde yararlıdır.
-    - **Step Into** (**F11**) çağrılan işlevlere girerek bir sonraki kod satırını çalıştırıyor.
-    - **Step Over** **(F10)** çağrılan işlevlere girmeden bir sonraki kod satırını çalıştırın.
-    - **Step Out** (**Shift**+**F11**) geçerli işlevin geri kalanını çalıştırın ve arama kodunda duraklar.
+    Soldan sağa doğru düğmeler şunlardır:
+    - **Devam et** (**F5**) programı bir sonraki kesme noktasına veya program tamamlanana kadar çalıştırır.
+    - **Tümünü kes** (**CTRL** + **alt** + **kesme**) uzun süre çalışan bir programı duraklatır.
+    - **Hata ayıklamayı Durdur** (**SHIFT** + **F5**) programı nerede olursa olsun durdurur ve hata ayıklayıcıdan çıkar.
+    - **Yeniden Başlat** (**CTRL** + **SHIFT** + **F5**) programı olduğu her yerde sonlandırır ve hata ayıklayıcının başından itibaren yeniden başlatır.
+    - **Sonraki ifadeyi göster** (**alt** + **num** **&#42;**), çalıştırılacak sonraki kod satırına geçer. Bu, hata ayıklama oturumu sırasında kodunuzun içinde gezindiğinizde ve hata ayıklayıcının duraklatıldığı noktaya hızlıca geri dönmek istediğinizde yararlı olur.
+    - **Adımla** (**F11**), çağrılan işlevlere girerek sonraki kod satırını çalıştırır.
+    - **Adımlama** (**F10**), çağrılan işlevlere girmeden sonraki kod satırını çalıştırır.
+    - **Dışarı adımla** (**SHIFT** + **F11**) geçerli işlevin geri kalanını çalıştırır ve çağıran kodda duraklatılır.
 
-1. Adım `for` **Adım'ı**kullanarak deyimin üzerine geçin. *Hata* ayıklayıcı, herhangi bir işlev çağrıları da dahil olmak üzere geçerli kod satırını çalıştırır ve ardından hemen yeniden duraklar anlamına gelir. Değişkenin `i` artık Yerel ler ve **Otomatikler** pencerelerinde nasıl tanımlandığına dikkat edin. **Autos**
+1. `for` **Adım adım**kullanarak deyimin üzerine adımlayın. *Adımlama* , hata ayıklayıcının herhangi bir işlev çağrısı dahil olmak üzere geçerli kod satırını çalıştırdığı ve ardından hemen durakladığında oluşur. Değişkenin `i` artık **Yereller** ve **oto** pencerelerinde nasıl tanımlandığına dikkat edin.
 
-1. Çağıran `make_dot_string` ve duraklatan bir sonraki kod satırına geçin. **Buraya adım** özellikle hata ayıklama nın tümünü çalıştırdığı `make_dot_string` ve döndüğünde duraklattığı anlamına gelir. Hata ayıklama, ayrı bir kesme noktası yoksa bu işlevin içinde durmaz.
+1. Çağıran ve duraklayıp izleyen kod satırının üzerinde ilerleyin `make_dot_string` . **Burada,** hata ayıklayıcının bütün olarak çalıştırıldığı `make_dot_string` ve döndürdüğü süre durakladıkları anlamına gelir. Hata ayıklayıcı, burada ayrı bir kesme noktası bulunmadığı takdirde bu işlevin içinde durmaz.
 
-1. Kodu birkaç kez daha aşmaya devam edin ve **Yerel veya** Otomatik **ler** penceresindeki değerlerin nasıl değiştiğini gözlemleyin.
+1. Kodu birkaç kez daha çalıştırmaya devam edin ve **Locals** veya **oto** penceresindeki değerlerin nasıl değiştiğini gözlemleyin.
 
-1. Yerel **veya** **Otomatikler** penceresinde, değeri veya `s` değişkenleri için `i` **Değer** sütununa çift tıklayın. Değişiklikleri uygulamak için **Enter** tuşuna basın veya bu değerin dışına tıklayın.
+1. **Yereller** veya **oto** penceresinde, **Value** `i` `s` değeri düzenlemek için ya da değişkenleri için değer sütununa çift tıklayın. Değişiklikleri uygulamak için **ENTER** tuşuna basın veya bu değerin dışındaki herhangi bir alana tıklayın.
 
-1. **Adım Adım'ı**kullanarak kodda adım atmaya devam edin. **Adım Adım,** hata ayıklamanın hata ayıklama bilgisi olan herhangi bir işlev `make_dot_string`çağrısının içine girdiği anlamına gelir, örneğin . İçeri `make_dot_string` girdikten sonra yerel değişkenlerini inceleyebilir ve kodundan özel olarak geçebilirsiniz.
+1. **Adımlamayı**kullanarak koddan çalışmaya devam edin. **Içine adımla** , hata ayıklayıcının, gibi hata ayıklama bilgileri olan herhangi bir işlev çağrısının içine girdiği anlamına gelir `make_dot_string` . İçinde bir kez, `make_dot_string` yerel değişkenlerini inceleyebilir ve özel olarak kendi kodunda ilerleyebileceğiniz.
 
-1. **Step Into** ile adım atmaya devam edin `make_dot_string`ve bir sonraki adımın `for` `s` değişkendeki yeni dönüş değeriyle döngüye döndüğünü fark edin. İfadeye `print` tekrar adım attığınızda, Adım `print` **Adım'ın** bu işleve girmediğini unutmayın. Bunun nedeni `print` Python'da yazılmaması, Python çalışma zamanı içinde yerel kod olmasıdır.
+1. **Adımla** çalışmaya devam edin ve öğesinin sonuna ulaştığınızda, bir `make_dot_string` sonraki adımın, `for` değişkende yeni dönüş değeri ile döngüye geri döndüğünü unutmayın `s` . Deyimde bir kez daha adım adım `print` , **Step Into** `print` Bu işleve girmediğine dikkat edin. Bunun nedeni, `print` Python 'da yazılmamakta ancak Python çalışma zamanı içinde yerel koddur.
 
-1. `make_dot_string`Adım **Adım'ı** kullanmaya devam edin. Sonra **Step Out'u** kullanın ve `for` döngüye geri döndüğünüzde dikkat edin. **Adım Dışarı**ile hata ayıklayıcı işlevin geri kalanını çalıştırır ve ardından arama kodunda otomatik olarak duraklar. Bu, hata ayıklamak istediğiniz, ancak geri kalanı için adım gerekmez ve arama kodunda açık bir kesme noktası ayarlamak istemiyorum uzun bir işlevin bir bölümünü adım attığınızda çok yararlıdır.
+1. Bir kez daha yeniden gelinceye kadar **adım** kullanmaya devam edin `make_dot_string` . Ardından, **Step Out** kullanın ve döngüye döntiğine dikkat edin `for` . **Adımla**, hata ayıklayıcı işlevin geri kalanını çalıştırır ve ardından çağıran kodda otomatik olarak duraklatılır. Bu, hata ayıklamak istediğiniz uzun bir işlevin bir bölümünü işlediyseniz, ancak geri dönmek ve çağıran kodda açık bir kesme noktası ayarlamak istememeniz durumunda çok yararlı olur.
 
-1. Bir sonraki kesme noktasına ulaşılana kadar programı çalıştırmaya devam etmek için **Continue** **(F5)** kullanın. Döngüde `for` bir kırılma noktası olduğu için, bir sonraki yinelemede kırılırsınız.
+1. Sonraki kesme noktasına ulaşılana kadar programı çalıştırmaya devam etmek için **devam** ' ı (**F5**) kullanın. Döngüde bir kesme noktasına sahip olduğunuzdan `for` , bir sonraki yineleme üzerinde durgulayorsunuz.
 
-1. Bir döngünün yüzlerce yinelemesini aşmak sıkıcı olabilir, bu nedenle Visual Studio bir kesme noktasına bir *koşul* eklemenizi sağlar. Hata ayıklama, yalnızca durum karşılandığında, programı kesme noktasında duraklatır. Örneğin, ekstredeki `for` kesme noktası olan bir koşulu, yalnızca değeri 1600'ü `i` aştığında duraklatacak şekilde kullanabilirsiniz. Bu koşulu ayarlamak için kırmızı kesme noktası noktasını sağ tıklatın ve **Koşullar** **(Alt**+**F9** > **C)** seçin. Görünen **Kesme Noktası Ayarları** açılır penceresinde `i > 1600` ifade olarak girin ve **Kapat'ı**seçin. Devam etmek ve programın bir sonraki moladan önce birçok yineleme çalıştırdığını gözlemlemek için **F5** tuşuna basın.
+1. Bir döngünün yüzlerce tekrarlaması sıkıcı olabilir. bu nedenle, Visual Studio bir kesme noktasına *koşul* eklemenize olanak tanır. Hata ayıklayıcı daha sonra yalnızca koşul karşılandığında programı kesme noktasında duraklatır. Örneğin, `for` yalnızca değeri 1600 ' i aştığında duraklamasını sağlamak için ifadede kesme noktasıyla bir koşul kullanabilirsiniz `i` . Bu durumu ayarlamak için kırmızı kesme noktası noktasına sağ tıklayıp **koşullar** ' ı (**alt** + **F9**  >  **C**) seçin. Görüntülenen **kesme noktası ayarları** açılır penceresinde, `i > 1600` ifade olarak girin ve **Kapat**' ı seçin. Devam etmek için **F5** tuşuna basın ve programın bir sonraki kesmenin önüne çok sayıda yineleme çalıştığını gözlemleyin.
 
     ![Kesme noktası koşulu ayarlama](media/vs-getting-started-python-21-debugging4.png)
 
-1. Programı tamamlamaya çalıştırmak için, kesme noktasını sağ tıklatarak ve **devre dışı atmayı** seçerek kesme noktasını devre dışı bıraktı **(Ctrl**+**F9).** Ardından programı çalıştırmak için **Continue** (veya **F5**tuşuna basın) seçeneğini belirleyin. Program sona erdiğinde, Visual Studio hata ayıklama oturumunu durdurur ve düzenleme moduna geri döner. Noktasını tıklatarak kesme noktasını da silebileceğinizi, ancak bu durumun ayarladığınız tüm koşulları da silebilirsiniz.
+1. Programı tamamlamak üzere çalıştırmak için kenar boşluğunda noktaya sağ tıklayıp **kesme noktasını devre dışı bırak** (**CTRL** + **F9**) seçeneğini belirleyerek kesme noktasını devre dışı bırakın. Sonra **devam** ' ı seçin (veya **F5**tuşuna basarak) programı çalıştırın. Program sona erdiğinde, Visual Studio hata ayıklama oturumunu keser ve kendi düzen moduna geri döner. Ayrıca, noktasını seçerek veya noktaya sağ tıklayıp **kesme noktasını sil**' i seçerek kesme noktasını da silebileceğinizi unutmayın, ancak bu, ayarlamış olduğunuz koşulu da siler.
 
 > [!Tip]
-> Python yorumlayıcısının başlatılamaması gibi bazı durumlarda, çıkış penceresi yalnızca kısa bir süre görüntülenebilir ve herhangi bir hata iletisini görme şansı vermeden otomatik olarak kapanabilir. Bu durumda, **Çözüm Gezgini'ndeki**projeyi sağ tıklatın, **Özellikler'i** `-i` seçin, Hata **Ayıklama** sekmesini seçin ve ardından **Yorumlayıcı Bağımsız Değişkenler** alanına ekleyin. Bu bağımsız değişken, bir program tamamlandıktan sonra yorumlayıcının etkileşimli moda geçmesine neden olur ve böylece çıkmak için **Ctrl**+**Z** > **Girin'i** girene kadar pencereyi açık tutar.
+> Python yorumlayıcı 'nın kendisini başlatma hatası gibi bazı durumlarda, çıkış penceresi yalnızca kısa bir süre içinde görünebilir ve sonra herhangi bir hata iletisi görmeniz için bir şans vermeden otomatik olarak kapatılabilir. Bu durumda **Çözüm Gezgini**' de projeye sağ tıklayın, **Özellikler**' i seçin, **Hata Ayıkla** sekmesini seçin ve ardından `-i` **yorumlayıcı bağımsız değişkenleri** alanına ekleyin. Bu bağımsız değişken, bir program tamamlandıktan sonra yorumlayıcı 'nın etkileşimli moda geçmesine neden olur, böylece **Ctrl** + çıkmak için CTRL**Z**  >  **ENTER** tuşuna girene kadar pencereyi açık tutun.
 
 ## <a name="next-step"></a>Sonraki adım
 
 > [!div class="nextstepaction"]
-> [Python ortamınıza paketleri yükleme](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
+> [Python ortamınıza paket yükler](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
 
-## <a name="go-deeper"></a>Daha derine inin
+## <a name="go-deeper"></a>Daha derin git
 
-- [Hata ayıklama](debugging-python-in-visual-studio.md)
-- [Visual Studio'da hata ayıklama,](../debugger/debugger-feature-tour.md) Visual Studio'nun hata ayıklama özelliklerinin tam dokümantasyonuna sahiptir.
+- [Hata Ayıklama](debugging-python-in-visual-studio.md)
+- [Visual Studio 'Da hata ayıklama](../debugger/debugger-feature-tour.md) , Visual Studio 'nun hata ayıklama özelliklerinin tam belgelerini sağlar.

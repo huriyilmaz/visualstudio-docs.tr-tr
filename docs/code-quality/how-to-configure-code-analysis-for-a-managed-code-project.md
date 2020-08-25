@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 985f14446f17d1a4df3cfd14e156f21b7a7ce0de
-ms.sourcegitcommit: e359b93c93c6ca316c0d8b86c2b6e566171fd1ea
+ms.openlocfilehash: c94742b452bfd665dc35c59ef831bca2cdacf1f5
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2020
-ms.locfileid: "87507865"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801054"
 ---
 # <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Nasıl yapılır: yönetilen kod için eski Analizi yapılandırma
 
@@ -91,9 +91,9 @@ Varsayılan olarak, bir çözümün tüm yönetilen projelerine, *Microsoft 'un 
 
     - Tek bir proje için bir kural kümesi belirtmek üzere proje adını seçin.
 
-    - Birden çok proje için bir kural kümesi belirtmek için **CTRL** tuşunu basılı tutun ve proje adlarını seçin.
+    - Birden çok proje için bir kural kümesi belirtmek üzere **CTRL** ve proje adlarını seçin.
 
-    - Çözümdeki tüm projeleri belirtmek için **SHIFT** tuşunu basılı tutun ve proje listesine tıklayın.
+    - Çözümdeki tüm projeleri belirtmek için, **Shift** ve proje listesi ' ni seçin.
 
 5. Bir projenin **kural kümesi** alanını seçin ve ardından uygulamak istediğiniz kural kümesinin adını seçin.
 

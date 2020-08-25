@@ -11,12 +11,12 @@ dev_langs:
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b97655efac3fc42f5e5790e32c97de169e61a6b5
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 943c0567e3726d014f7dae01915916864e09ed9b
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520594"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801652"
 ---
 # <a name="welcome-to-the-visual-studio-ide--python"></a>Visual Studio IDE 'ye hoş geldiniz | Python
 
@@ -95,8 +95,8 @@ Visual Studio 'da, yazılım geliştirirken daha üretken olmanıza yardımcı o
 ::: moniker-end
 
 - [Visual Studio’yu kullanarak işbirliği yapma](/visualstudio/liveshare/)
-  
-    Visual Studio Live Share, kullandığınız programlama diline veya oluşturmakta olduğunuz uygulama türlerine bakılmaksızın diğer kişilerle gerçek zamanlı olarak birlikte düzenleme ve hata ayıklama yapmanızı sağlar. 
+
+    Visual Studio Live Share, kullandığınız programlama diline veya oluşturmakta olduğunuz uygulama türlerine bakılmaksızın diğer kişilerle gerçek zamanlı olarak birlikte düzenleme ve hata ayıklama yapmanızı sağlar.
 
 - [Python etkileşimli REPL](python-interactive-repl-in-visual-studio.md)
 

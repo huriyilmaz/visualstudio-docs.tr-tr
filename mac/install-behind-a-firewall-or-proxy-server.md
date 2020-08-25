@@ -1,16 +1,17 @@
 ---
-title: Bir güvenlik duvarı veya proxy sunucusu arkasında Mac için Visual Studio yükleyip kullanma
+title: Mac için Visual Studio bir güvenlik duvarı veya ara sunucu ile yükleyip kullanma
+titleSuffix: ''
 description: Bu belge, güvenlik duvarınızda bir kurumsal ortamda çalışmak üzere Mac için Visual Studio (ve Xamarin dahil iş yükleri) izin vermek için izin verilmesi gereken ana bilgisayarların bir listesini sağlar.
 ms.assetid: 79C0F1A3-0C13-4E55-A820-1138A4082B77
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/18/2019
-ms.openlocfilehash: 817fce7958ce2b3e4bc3684e639197da8f69e40d
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.openlocfilehash: 25a4597c8d523b63e7ceb0cf8b5eff71af58071a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85938981"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800417"
 ---
 # <a name="install-and-use-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>Bir güvenlik duvarı veya proxy sunucusu arkasında Mac için Visual Studio yükleyip kullanma
 
@@ -26,7 +27,7 @@ Mac için Visual Studio yükleyicisi çeşitli etki alanlarından indirir ve sun
 
 ### <a name="microsoft-domains"></a>Microsoft etki alanları
 
-| Domain| Amaç |
+| Etki alanı| Amaç |
 | ----------------------------------- |---------------------------|
 | *.live.com| Kimlik bilgisi yönetimi |
 | app.vssps.visualstudio.com| Yükleyici meta verileri|
@@ -43,7 +44,7 @@ Mac için Visual Studio yükleyicisi çeşitli etki alanlarından indirir ve sun
 
 ### <a name="third-party-domains"></a>Üçüncü taraf etki alanları
 
-| Domain| Amaç |
+| Etki alanı| Amaç |
 | --------------------------|-------------------------|
 | dl.google.com | Android SDK |
 | download.oracle.com | Java SDK|
@@ -55,7 +56,7 @@ Proxy veya güvenlik duvarının arkasında Mac için Visual Studio ihtiyacını
 
 ### <a name="general"></a>Genel
 
-| Domain | Bağlantı noktaları|Amaç|
+| Etki alanı | Bağlantı noktaları|Amaç|
 | ----------------------|------------------|------------------|
 | go.microsoft.com | 80/443|Microsoft URL çözümlemesi |
 | vsstartpage.blob.core.windows.net| 80/443| Başlangıç sayfası verileri|
@@ -66,7 +67,7 @@ Proxy veya güvenlik duvarının arkasında Mac için Visual Studio ihtiyacını
 
 ### <a name="identity"></a>Kimlik
 
-| Domain | Bağlantı noktaları|Amaç|
+| Etki alanı | Bağlantı noktaları|Amaç|
 | ----------------------|------------------|------------------|
 | login.microsoftonline.com | 80/443| Kimlik Sağlayıcı|
 | secure.aadcdn.microsoftonline-p.com | 80/443|Kimlik Sağlayıcı|
@@ -75,14 +76,14 @@ Proxy veya güvenlik duvarının arkasında Mac için Visual Studio ihtiyacını
 
 ### <a name="nuget"></a>NuGet
 
-| Domain | Bağlantı noktaları|Amaç|
+| Etki alanı | Bağlantı noktaları|Amaç|
 | ----------------------|------------------|------------------|
 | api.nuget.org | 80/443|NuGet API|
 | secure.aadcdn.microsoftonline-p.com |80/443| Kimlik Sağlayıcı|
 
 ### <a name="android-projects"></a>Android projeleri
 
-| Domain| Amaç|
+| Etki alanı| Amaç|
 | ------------------------------------|------------------------------------|
 | time.android.com| Android Emulator için saat sunucusu |
 | connectivitycheck.gstatic.com | Android Emulator için bağlantı|

@@ -1,6 +1,6 @@
 ---
-title: Koyu temayı kullanma ve düzenleyicideki metin rengini değiştirme
-description: Varsayılan Visual Studio renk temasını koyu moda ayarlamayı ve metin düzenleyicisinde yazı tipi renklerini değiştirmeyi öğrenin.
+title: Visual Studio koyu temasını ayarlama ve metin renklerini değiştirme
+description: Varsayılan Visual Studio renk temasını koyu moda değiştirme ve kod düzenleyicisinde yazı tipi renklerini değiştirme hakkında bilgi edinin.
 ms.date: 08/20/2020
 ms.topic: how-to
 ms.custom: contperfq1
@@ -9,16 +9,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b0e7b11fae63b9a2233b7391805760d3fdd7d27
-ms.sourcegitcommit: cf5b5437f0b43c6d52c479e1a2c443338bd27cda
+ms.openlocfilehash: d58bf3a00d3db208abfad23a67bd115914f14a15
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88724932"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801405"
 ---
-# <a name="how-to-personalize-the-visual-studio-ide-and-text-editor"></a>Nasıl yapılır: Visual Studio IDE ve metin düzenleyiciyi kişiselleştirme
+# <a name="how-to-personalize-the-visual-studio-ide-and-the-editor"></a>Nasıl yapılır: Visual Studio IDE ve düzenleyiciyi kişiselleştirme
 
-Bu nasıl yapılır makalesinde, koyu temayı seçerek Visual Studio Color temasını özelleştireceğiz. Ayrıca, metin düzenleyicisinde iki farklı metin türünün renklerini de özelleştireceğiz.
+Bu nasıl yapılır makalesinde, Visual Studio Color temasını varsayılan mavi temadan koyu temaya özelleştireceğiz. Daha sonra, kod düzenleyicisinde iki farklı metin türünün renklerini özelleştireceğiz.
 
 ::: moniker range="vs-2017"
 
@@ -126,10 +126,10 @@ Artık düzenleyicinin bazı metin renklerini özelleştireceğiz. İlk olarak, 
 
    ![Yeni yazı tipi renkleriyle XML dosyası](media/quickstart-personalize-xml-file-new-colors.png)
 
-Visual Studio 'da renkleri özelleştirmenin yalnızca birkaç yolunu araştırtık. Visual Studio 'Yu gerçek anlamda yapmak için **Seçenekler** iletişim kutusundaki diğer özelleştirme seçeneklerini araştırmanızı umuyoruz.
+Visual Studio 'da renkleri özelleştirmenin yalnızca birkaç yolunu araştırtık. Visual Studio 'Yu gerçek anlamda yapmak için [**Seçenekler**](../ide/reference/fonts-and-colors-environment-options-dialog-box.md) iletişim kutusundaki diğer özelleştirme seçeneklerini araştırmanızı umuyoruz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio 'da yazı tiplerini, renkleri ve yüksek karşıtlık seçeneklerini değiştirme](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
-- [Düzenleyiciyi özelleştirme](../ide/how-to-change-text-case-in-the-editor.md)
-- [Visual Studio IDE’ye Genel Bakış](../get-started/visual-studio-ide.md)
+- [Nasıl yapılır: Visual Studio 'da yazı tiplerini, renkleri ve temaları değiştirme](../ide/how-to-change-fonts-and-colors-in-visual-studio.md)
+- [Nasıl yapılır: düzenleyicide metin durumunu değiştirme](../ide/how-to-change-text-case-in-the-editor.md)
+- [Visual Studio IDE 'ye Genel Bakış](../get-started/visual-studio-ide.md)

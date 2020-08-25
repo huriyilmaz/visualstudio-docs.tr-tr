@@ -11,12 +11,12 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 649d40a3b95f9e3d4df51cc4ab22a3fb79ac1498
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 9a3aee5dc1c2d1272c3814fa6cfb2561f6cb4564
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85531852"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801314"
 ---
 # <a name="publishing-to-azure-app-service-on-windows"></a>Windows üzerinde Azure App Service yayımlama
 
@@ -34,7 +34,7 @@ Yayımlama işlemi, Visual Studio 2017 ve üzeri ve Visual Studio 2015 arasında
 
 Bu izlenecek yol için, şişe, Flask veya Docgo çerçevelerini temel alan bir Web uygulaması projesine ihtiyacınız vardır. Henüz bir projeniz yoksa ve yayımlama işlemini denemek istiyorsanız, aşağıdaki gibi basit bir test projesi oluşturun:
 
-1. Visual Studio 'da **dosya > yeni > proje**' yi seçin, "şişe" araması yapın, **şişe Web projesi**' ni seçin, proje için bir yol belirtin ve bir yol belirtin, **Tamam**' a tıklayın. (Şişe şablonu Python geliştirme iş yüküne dahildir; [yükleme](installing-python-support-in-visual-studio.md)bölümüne bakın.)
+1. Visual Studio 'da **dosya > yeni > proje**' yi seçin, "şişe" araması yapın, **şişe Web projesi**' ni seçin, proje için bir yol belirtin ve bir yol belirtin, **Tamam**' ı seçin. (Şişe şablonu Python geliştirme iş yüküne dahildir; [yükleme](installing-python-support-in-visual-studio.md)bölümüne bakın.)
 
 1. Sanal ortam için **bir sanal ortama** ve tercih ettiğiniz taban yorumlayıcı ' yı seçerek dış paketleri yüklemek için istemleri izleyin. Bu seçeneği genellikle App Service üzerinde yüklü olan Python sürümü ile eşleştirin.
 
@@ -185,7 +185,7 @@ Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca p
 > [!Note]
 > Bu işlemin kısa bir videosunu [Visual Studio Python öğreticisi: Web sitesi oluşturma](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6) (YouTube.com, 3m10s) üzerinde bulabilirsiniz.
 
-1. **Çözüm Gezgini**, projeye sağ tıklayıp **Yayımla**' yı seçin.
+1. **Çözüm Gezgini**'nde projeye sağ tıklayın ve **Yayımla**'yı seçin.
 
 1. **Yayımla** iletişim kutusunda **Microsoft Azure App Service**seçin:
 
@@ -200,9 +200,9 @@ Visual Studio 2017 ' den Azure App Service yayımlama ve sonrasında yalnızca p
 
   ![Azure 'da Yayımla adım 2](media/tutorials-common-publish-2.png)
 
-1. Ek ayarları gözden geçirmek için gerektiğinde **ileri >' yi** seçin.
+1. Ek ayarları gözden geçirmek için gerektiğinde **ileri >' yi ** seçin.
 
-1. **Yayımla** seçeneğini belirleyin. Uygulamanız Azure 'a dağıtıldığında, varsayılan tarayıcınız bu sitede açılır.
+1. **Yayımla**’yı seçin. Uygulamanız Azure 'a dağıtıldığında, varsayılan tarayıcınız bu sitede açılır.
 
 Bu işlemin bir parçası olarak, Visual Studio aşağıdaki adımları da yapar:
 

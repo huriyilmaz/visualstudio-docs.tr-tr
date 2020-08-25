@@ -7,19 +7,19 @@ ms.assetid: 872c5746-5357-4764-949b-aa525a0adf1a
 ms.date: 04/20/2020
 ms.topic: conceptual
 description: Visual Studio aboneliğiniz aracılığıyla Microsoft Windows sanal masaüstü 'nden nasıl yararlanabileceğinizi öğrenin
-ms.openlocfilehash: b84527f7bdaf3e9218585bd52af0743ef23a5637
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 865e18d7b8672520fcb771a1db56141fb6fd9f0a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183593"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800612"
 ---
 # <a name="access-windows-virtual-desktop-in-subscriptions"></a>Aboneliklerde Windows sanal masaüstüne erişme 
 Visual Studio aboneleri artık Microsoft Windows Sanal Masaüstü Hizmetleri için Azure geliştirme ve test kredilerini kullanabiliyor.  
-Windows sanal masaüstü, bulutta çalışan kapsamlı bir masaüstü ve uygulama sanallaştırma hizmetidir. Basitleştirilmiş Yönetim, çoklu oturum Windows 10, Office 365 ProPlus için iyileştirmeler ve Uzak Masaüstü Hizmetleri (RDS) ortamları için destek sunan tek sanal masaüstü altyapısı (VDı). Windows Masaüstü ve uygulamalarınızı Azure 'da dakikalar içinde dağıtın ve ölçeklendirin, yerleşik güvenlik ve uyumluluk özellikleri alın.
+Windows sanal masaüstü, bulutta çalışan kapsamlı bir masaüstü ve uygulama sanallaştırma hizmetidir. Basitleştirilmiş Yönetim, çoklu oturum Windows 10, kurumsal Microsoft 365 uygulamalar için iyileştirmeler ve Uzak Masaüstü Hizmetleri (RDS) ortamları için destek sunan tek sanal masaüstü altyapısı (VDı). Windows Masaüstü ve uygulamalarınızı Azure 'da dakikalar içinde dağıtın ve ölçeklendirin, yerleşik güvenlik ve uyumluluk özellikleri alın.
 Azure 'da Windows sanal masaüstü 'Nü çalıştırdığınızda şunları yapabilirsiniz:
 - Ölçeklenebilirlik ile tam bir Windows 10 sunan çoklu oturum Windows 10 dağıtımı ayarlama
-- Office 365 ProPlus 'ı sanallaştırın ve çoklu Kullanıcı sanal senaryolarında çalıştırmak için iyileştirin
+- Microsoft 365 uygulamalarını kuruluşa sanallaştırın ve bunu çok kullanıcılı sanal senaryolarda çalışacak şekilde iyileştirin
 - Ücretsiz genişletilmiş güvenlik güncelleştirmeleri ile Windows 7 sanal masaüstlerini sağlama
 - Mevcut Uzak Masaüstü Hizmetleri (RDS) ve Windows Server Masaüstlerinizi ve uygulamalarınızı herhangi bir bilgisayara getirme
 - Masaüstlerini ve uygulamaları sanallaştırın
@@ -46,14 +46,14 @@ Tüm ön koşullar gerçekleşirken, uygulamanızı yerine getirmek için birka�
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | Kullanılabilir|  Evet          |
-| GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir|  Evet          |
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılabilir                                                             |  Evet             |
-| GitHub Enterprise ile Visual Studio Professional | VL                                       | Kullanılabilir                                        |  Evet           |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir|  Evet          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                         |  Evet          |
-| Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | Yok |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, | Kullanılabilir|  Yes          |
+| GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir|  Yes          |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılabilir                                                             |  Yes             |
+| GitHub Enterprise ile Visual Studio Professional | VL                                       | Kullanılabilir                                        |  Yes           |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılabilir|  Yes          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılabilir                                         |  Yes          |
+| Visual Studio Enterprise (Standart)  | NFR<sup>1</sup> |Kullanılamaz  | YOK |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | YOK |
 
 <sup>1</sup>  *şunları içerir: iş için değil (NFR), FTE, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Microsoft iş ortağı ağı (MPN), Visual Studio Endüstri ortağı (VSIP), Microsoft Sertifikalı Trainer, BizSpark, Imagine*
 

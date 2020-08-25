@@ -11,12 +11,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 716345cd2df3e941ea3d50cfc1519dc86dcd7077
-ms.sourcegitcommit: 939407118f978162a590379997cb33076c57a707
+ms.openlocfilehash: d5dd8864484e2b41a1146f1da495251663afdb6a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75918636"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801509"
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Office 'te COM, VSTO ve VBA eklentileri için geliştirme için en iyi yöntemler
   Office için COM, VSTO veya VBA eklentileri geliştiriyorsanız, bu makalede açıklanan en iyi geliştirme uygulamalarını izleyin.   Bu, şunları sağlamanıza yardımcı olur:
@@ -57,7 +57,7 @@ VBA kodu yazarken, 64 bitlik güvenli bildirme deyimlerini kullanın ve değişk
 Çözümünüzde ikililerin sürüm numarasını ayarlayın ve her bir güncelleştirmeyle artırın. Bu, kullanıcıların sürümler ve uyumluluk değerlendirmesi arasındaki değişiklikleri belirlemesine daha kolay hale getirir.
 
 ## <a name="provide-support-statements-for-the-latest-versions-of-office"></a>Office 'in en son sürümleri için destek deyimleri sağlama
-Müşteriler, ISV 'Lerin Office 'te çalışan COM, VSTO ve VBA eklentileri için destek bildirimleri sağlamasını istiyor. Açık destek deyimlerinizi listelemek, Office 365 ProPlus hazırlık araçları 'nı kullanan müşterilerin desteğiniz olduğunu anlamalarına yardımcı olur.
+Müşteriler, ISV 'Lerin Office 'te çalışan COM, VSTO ve VBA eklentileri için destek bildirimleri sağlamasını istiyor. Açık destek deyimlerinizi listelemek, kurumsal hazırlık araçları için Microsoft 365 uygulamalar kullanan müşterilerin desteklerinizi anlamasına yardımcı olur.
 
 Office istemci uygulamalarına yönelik destek deyimleri sağlamak için (örneğin, Word veya Excel), önce eklentilerinizin geçerli Office sürümünde çalıştırıldığını doğrulayın ve sonra eklenti sonraki bir sürümde kesintiye kesildiğinde güncelleştirmeler sağlamak için yürütün. Microsoft yeni bir yapı veya Office güncelleştirmesi yayımlandığında eklentilerinizi test etmeniz gerekmez. Microsoft, Office 'teki COM, VSTO ve VBA genişletilebilirlik platformunu nadiren değiştirir ve bu değişiklikler iyi şekilde belgelenmiştir.
 

@@ -7,23 +7,23 @@ ms.assetid: b331c837-3524-42b7-820e-b4fdd5e12793
 ms.date: 03/03/2020
 ms.topic: conceptual
 description: Microsoft ürün ve hizmet anlaşmasındaki (MPSA) Visual Studio abonelikleri
-ms.openlocfilehash: 6ce2208e6d1028e1e697b216d41cdd825dfc0d33
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 90bfb27fcb80910f6add41c30d4c03ece1520ef4
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88247312"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801470"
 ---
 # <a name="visual-studio-subscriptions-in-a-microsoft-products-and-services-agreement-mpsa"></a>Microsoft ürün ve hizmet anlaşmasındaki (MPSA) Visual Studio abonelikleri
 MPSA programı aracılığıyla Visual Studio abonelikleri satın aldıysanız, Visual Studio abonelikleri Yöneticisi olmaya ve kullanıcılarınıza abonelik atamadan önce bilmeniz gereken birkaç nokta vardır. Zaten yönetici olarak ayarladıysanız, doğrudan Visual Studio abonelikleri [Yönetim portalına](https://manage.visualstudio.com/)gidebilirsiniz.
 
-MPSA müşterileri artık, Toplu Lisanslama hizmeti Merkezi 'ne (VLSC) benzer işlevleri destekleyen [Iş Merkezi](https://businessaccount.microsoft.com/Customer)adlı yeni bir portalda MPSA aracılığıyla satın alınan varlıkları yönetebilir. Bunlar, lisans özetinizi, siparişlerinizi, yüklemelerinizi, anahtarlarınızı, kullanıcılarınızı vb. görüntülemeyi içerir. Ancak, MPSA 'daki Visual Studio abonelikleri Cloud Services benzer şekilde davranır. Iş Merkezi aynı zamanda Microsoft hesapları (MSA) yerine oturum açmak için iş hesapları kullanır. Kuruluşunuz Office 365 veya Azure Active Directory gibi bulut Hizmetleri kullanıyorsa ve e-postanız bu iki hizmetin bir parçasıysa, zaten bir iş hesabıdır. Bu, mevcut parolanızla Iş Merkezi 'ne kaydetmenizi sağlar. Kuruluşunuz bulut hizmetlerini kullanmıyor ve e-postanız bir iş hesabı değilse, Iş merkezine kaydolmak için kullanabilirsiniz.
+MPSA müşterileri artık, Toplu Lisanslama hizmeti Merkezi 'ne (VLSC) benzer işlevleri destekleyen [Iş Merkezi](https://businessaccount.microsoft.com/Customer)adlı yeni bir portalda MPSA aracılığıyla satın alınan varlıkları yönetebilir. Bunlar, lisans özetinizi, siparişlerinizi, yüklemelerinizi, anahtarlarınızı, kullanıcılarınızı vb. görüntülemeyi içerir. Ancak, MPSA 'daki Visual Studio abonelikleri Cloud Services benzer şekilde davranır. Iş Merkezi aynı zamanda Microsoft hesapları (MSA) yerine oturum açmak için iş hesapları kullanır. Kuruluşunuz Microsoft 365 veya Azure Active Directory gibi bulut Hizmetleri kullanıyorsa ve e-postanız bu iki hizmetin bir parçasıysa, zaten bir iş hesabıdır. Bu, mevcut parolanızla Iş Merkezi 'ne kaydetmenizi sağlar. Kuruluşunuz bulut hizmetlerini kullanmıyor ve e-postanız bir iş hesabı değilse, Iş merkezine kaydolmak için kullanabilirsiniz.
 
 Ayrıca, Visual Studio abonelikleri [Yönetim Portalı](https://manage.visualstudio.com/) , bir Visual Studio abonelikleri Yöneticisi olduktan sonra aboneliklerin abonelere atanacağı yerdir. MPSA 'da, Visual Studio aboneliklerinin Visual Studio abonelikleri yönetim portalı olan ilgili yönetim portalına sağlanması gerekir. Bunu yapmak için satın alma hesabınızı bir kiracıyla (örn. contoso.onmicrosoft.com) ilişkilendirmeniz gerekir.
 
 Kiracıların yönettiği iki tür kiracılar ve yönetilmeyen kiracılar olduğunu lütfen unutmayın. Yönetilen kiracı, kuruluş içindeki Yöneticiler tarafından zaten yönetilen bir kiracıya başvurur.
 
-Yönetilmeyen kiracı, hiçbir yönetici atanmamış ve Office 365 gibi çevrimiçi hizmetler için kullanılabilir olmayan bir kiracıya sahip değildir. Yönetilmeyen kiracılar iş merkezine iş hesabı olmayan bir e-posta ile kaydedilirken de oluşturulur. Iş merkezine kaydolurken bir parola oluşturmanız istenirse, e-postanız iş hesabı olmadığı ve yönetilmeyen bir kiracı oluşturduğu anlamına gelir.
+Yönetilmeyen bir kiracı, hiçbir yönetici atanmamış ve Microsoft 365 gibi çevrimiçi hizmetler için kullanılamaz. Yönetilmeyen kiracılar iş merkezine iş hesabı olmayan bir e-posta ile kaydedilirken de oluşturulur. Iş merkezine kaydolurken bir parola oluşturmanız istenirse, e-postanız iş hesabı olmadığı ve yönetilmeyen bir kiracı oluşturduğu anlamına gelir.
 
 Kiracı ilişkilendirmesini tamamlamadan önce Visual Studio abonelikleri yöneticisi olmak için gereken birkaç gereksinim/adım aşağıda verilmiştir.
 

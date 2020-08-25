@@ -2,7 +2,7 @@
 title: Visual Studio 2019’daki yenilikler
 titleSuffix: ''
 description: Visual Studio 2019 ' deki yeni özellikler hakkında bilgi edinin.
-ms.date: 08/05/2020
+ms.date: 08/21/2020
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 333bb9ca24579758112199c13d5a4af3f60d6058
-ms.sourcegitcommit: d21f1a028628d0221b567ba496690b3b68cfded7
+ms.openlocfilehash: 389315d7ec48c85fbab96b5270cbcef54faf7e8e
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87818592"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801067"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Visual Studio 2019’daki yenilikler
 
@@ -152,7 +152,7 @@ Daha fazla bilgi için, bkz. [gerçek zamanlı kod İncelemeleri ve etkileşimli
 
 Visual Studio 2019 ile kullanmak üzere indirebileceğiniz yeni bir uzantı sunuyoruz. Bu yeni uzantıyla, Visual Studio 'dan çıkmadan takımınızın çekme isteklerini gözden geçirebilir, çalıştırabilir ve hatta hata ayıklayabilirsiniz. Hem GitHub hem de Azure DevOps depolarındaki kodu destekliyoruz.
 
-   ![Visual Studio 2019 ' de yeni başlangıç penceresinin ekran görüntüsü](media/vs-2019/pr-experience.png)
+   ![Visual Studio 2019 ' de yeni çekme Istekleri uzantısının ekran görüntüsü](media/vs-2019/pr-experience.png)
 
 Daha fazla bilgi için [Visual Studio çekme istekleri uzantısı blog gönderisini kullanarak kod incelemelerine](https://devblogs.microsoft.com/visualstudio/code-reviews-using-the-visual-studio-pull-requests-extension/) bakın.
 
@@ -241,9 +241,9 @@ Visual Studio ekibine neden geri bildirim gönderilsin? Müşteri geri bildiriml
 * [Visual Studio 2019 sürüm notları](/visualstudio/releases/2019/release-notes/)
 * [Mac için Visual Studio 2019 sürüm notları](/visualstudio/releasenotes/vs2019-mac-relnotes/)
 * [Visual Studio 2019 SDK 'daki yenilikler](../extensibility/whats-new-visual-studio-2019-sdk.md)
-* [Visual Studio 2017’deki C++ yenilikleri](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio.md)
-* [C# 8,0 yenilikleri](/dotnet/csharp/whats-new/csharp-8.md)
-* [​.NET Core 3.1’deki yenilikler](/dotnet/core/whats-new/dotnet-core-3-1.md)
-* [.NET Framework yenilikleri](/dotnet/framework/whats-new.md)
+* [Visual Studio 2017’deki C++ yenilikleri](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio/)
+* [C# 8,0 yenilikleri](/dotnet/csharp/whats-new/csharp-8/)
+* [​.NET Core 3.1’deki yenilikler](/dotnet/core/whats-new/dotnet-core-3-1/)
+* [.NET Framework yenilikleri](/dotnet/framework/whats-new/)
 * [Microsoft derleme Konferansı](https://www.microsoft.com/build)
 * [Microsoft Ignite konferansı](https://www.microsoft.com/ignite)

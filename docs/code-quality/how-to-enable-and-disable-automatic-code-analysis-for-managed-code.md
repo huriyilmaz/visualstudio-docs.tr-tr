@@ -5,12 +5,12 @@ ms.topic: how-to
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
-ms.openlocfilehash: 532fe62ceee3ab32fc203976af58dd867b97b453
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: eb4422a12620d7650b4fe150313b10fe59835064
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371891"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801028"
 ---
 # <a name="how-to-enable-and-disable-binary-code-analysis-for-managed-code"></a>Nasıl yapılır: yönetilen kod için ikili kod analizini etkinleştirme ve devre dışı bırakma
 
@@ -21,9 +21,9 @@ Bilinen kod analizini (ikili analiz), her bir yönetilen kod projesi derlemeden 
 
 Eski Kod analizini etkinleştirmek veya devre dışı bırakmak için:
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' i seçin.
+1. **Çözüm Gezgini**' de, projeyi seçin ve tutun (veya sağ tıklayın) ve ardından **Özellikler**' i seçin.
 
-2. Projenin Özellikler iletişim kutusunda **Kod Analizi** sekmesini seçin.
+2. Projenin Özellikler iletişim kutusunda **Kod Analizi** sekmesine gidin.
 
 3. **Yapılandırmada** derleme türünü ve hedef platformu **Platform**' da belirtin. (Yalnızca Non-.NET Core/. NET standart projeler.)
 

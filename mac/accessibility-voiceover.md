@@ -1,17 +1,18 @@
 ---
 title: Mac için Visual Studio ile VoiceOver kullanma
+titleSuffix: ''
 description: Mac için Visual Studio ile macOS VoiceOver gezintisini kullanma
-author: alanjclark
+author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 09/23/2019
 ms.assetid: 590C325D-AAD0-4889-B1DB-A1090BBFBE89
 ms.topic: how-to
-ms.openlocfilehash: 6b72209ea72d9fb6c875bf7aaad5c3a9d38b9c30
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.openlocfilehash: 8d4a70d17fd6798cb95a2b94939aec793d280174
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85938452"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801756"
 ---
 # <a name="using-voiceover-with-visual-studio-for-mac"></a>Mac için Visual Studio ile VoiceOver kullanma
 
@@ -27,7 +28,7 @@ VoiceOver komutları, bu kılavuzda, **VO** 'Nin **VoiceOver yardımcı** uygula
 
 Mac için Visual Studio için bazı yaygın VoiceOver komutlarının listesi aşağıda verilmiştir:
 
-|Özellik|Description|Kısayol|
+|Özellik|Açıklama|Kısayol|
 |-------|-----------|--------|
 |Gidin|Kullanıcı arabiriminin tüm öğelerine git|**VO →**, **VO ←**|
 |Gidin|UI öğelerinin içine veya dışına adımla|**VO ⇧ ↓**, **VO ⇧ ↑**|

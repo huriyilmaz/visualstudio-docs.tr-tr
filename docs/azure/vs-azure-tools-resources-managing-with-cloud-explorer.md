@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/25/2017
 ms.author: ghogen
-ms.openlocfilehash: 5a69fb83f28f4446a91e4125e75706400401ea1f
-ms.sourcegitcommit: 257fc60eb01fefafa9185fca28727ded81b8bca9
+ms.openlocfilehash: 175aa7111d77e92fb29a3983db7365e068abba2f
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72911725"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800391"
 ---
 # <a name="manage-the-resources-associated-with-your-azure-accounts-in-visual-studio-cloud-explorer"></a>Visual Studio Cloud Explorer'da Azure hizmetlerinizle ilişkilendirilmiş kaynakları yönetme
 
@@ -22,13 +22,13 @@ Cloud Explorer, Azure kaynaklarınızı ve Kaynak gruplarınızı görüntüleme
 
 [Azure Portal](https://portal.azure.com)gibi, bulut Gezgini Azure Resource Manager yığınında oluşturulmuştur. Bu nedenle, Cloud Explorer, Azure Kaynak grupları ve Logic Apps ve API uygulamaları gibi Azure hizmetleri gibi kaynakları anlamıştır ve [rol tabanlı erişim denetimini](/azure/role-based-access-control/role-assignments-portal) (RBAC) destekler.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 * Visual Studio 2017 veya üzeri (bkz. [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads)) seçili **Azure iş yükü** . Visual Studio 'nun önceki bir sürümünü [.NET için Microsoft Azure SDK 2,9](https://www.microsoft.com/download/details.aspx?id=51657)ile de kullanabilirsiniz.
 * Microsoft Azure hesabı-hesabınız yoksa, [ücretsiz deneme için kaydolabilir](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/) veya [Visual Studio abone avantajlarınızı etkinleştirebilirsiniz](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/).
 
 > [!NOTE]
-> Bulut Gezginini görüntülemek için **Ctrl**+**Q** tuşlarına basarak arama kutusunu etkinleştirin ve ardından **bulut Gezgini**' ni girin.
+> Cloud Explorer 'ı görüntülemek için, **Ctrl** + arama kutusunu etkinleştirmek üzere CTRL**Q** tuşlarına basın ve ardından **bulut Gezgini**' ni girin.
 
 ## <a name="add-an-azure-account-to-cloud-explorer"></a>Bulut Gezgini 'ne bir Azure hesabı ekleme
 
@@ -48,7 +48,7 @@ Bir Azure hesabıyla ilişkili kaynakları görüntülemek için öncelikle hesa
 
    ![Bulut Gezgini: görüntülenecek Azure aboneliklerini seçin](./media/vs-azure-tools-resources-managing-with-cloud-explorer/select-subscriptions.png)
 
-1. Kaynakları taramak istediğiniz abonelikler seçildikten sonra, bu abonelikler ve kaynaklar bulut Gezgini 'nde görüntülenir.
+1. Kaynakları taramak istediğiniz abonelikler seçildikten sonra, bu abonelikler ve kaynaklar **bulut Gezgini**'nde görüntülenir.
 
    ![Azure hesabı için bulut Gezgini kaynak listesi](./media/vs-azure-tools-resources-managing-with-cloud-explorer/resources-listed.png)
 
@@ -101,7 +101,7 @@ Ek eylemler ve özellik değerleri, Azure kaynağına göre de görünebilir. Ö
 
 ## <a name="find-resources-in-cloud-explorer"></a>Bulut Gezgininde kaynakları bulma
 
-Azure hesap aboneliklerinizde belirli bir ada sahip kaynakları bulmak için, Cloud Explorer 'daki **arama** kutusuna adı girin.
+Azure hesap aboneliklerinizde belirli bir ada sahip kaynakları bulmak için, **Cloud Explorer**'daki **arama** kutusuna adı girin.
 
   ![Bulut Gezgininde kaynakları bulma](./media/vs-azure-tools-resources-managing-with-cloud-explorer/search-for-resources.png)
 

@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - azure
-ms.openlocfilehash: 461b99261eb88d5267b062cb5d471f1b6ed4ee60
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: deef5aeaa802d5f5b46ba81f711173dc81a32357
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248036"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800313"
 ---
 # <a name="publish-a-web-app-to-azure-app-service-using-visual-studio"></a>Visual Studio’yu kullanarak Azure App Service'e Web uygulaması yayımlama
 
@@ -31,7 +31,7 @@ Bu makalede, tek seferlik dağıtım için **Yayımla** aracının nasıl kullan
 
 ## <a name="publish-to-azure-app-service-on-windows"></a>Windows üzerinde Azure App Service yayımlayın
 
-1. Çözüm Gezgini, projeye sağ tıklayın ve **Yayımla** ' yı seçin (veya **Yapı**  >  **Yayımla** menü öğesini kullanın).
+1. Çözüm Gezgini, proje düğümüne sağ tıklayın ve **Yayımla** ' yı seçin (veya **Yapı**  >  **Yayımla** menü öğesini kullanın).
 
     ![Çözüm Gezgini içindeki proje bağlam menüsündeki Yayımla komutu](../deployment/media/quickstart-publish.png "Yayımla ' yı seçin")
 
@@ -51,7 +51,7 @@ Bu makalede, tek seferlik dağıtım için **Yayımla** aracının nasıl kullan
 
     ![Azure App Service seçin](../deployment/media/quickstart-publish-windows-create-new-dialog.png)
 
-1. **Yayımla** iletişim kutusunda yeni oluşturulan örnek otomatik olarak seçilmiştir. Hazırlık sırasında **son**' a tıklayın.
+1. **Yayımla** iletişim kutusunda yeni oluşturulan örnek otomatik olarak seçilmiştir. Hazırlanıyor, **son**' u seçin.
 
     ![Azure App Service seçin](../deployment/media/quickstart-publish-windows-select-instance.png)
 

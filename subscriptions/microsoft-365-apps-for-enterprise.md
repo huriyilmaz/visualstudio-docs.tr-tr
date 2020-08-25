@@ -7,17 +7,17 @@ ms.assetid: d1257931-392a-4a65-bf26-177737505122
 ms.date: 06/24/2020
 ms.topic: how-to
 description: Enterprise için Microsoft 365 uygulamalar hakkında bilgi edinin ve bunları yükler
-ms.openlocfilehash: 8ece49244d5bdecadc5992cda4e56d0785666e2a
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: eb9f87273cbd8439f5053f60411e41fac41e4161
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88250746"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800820"
 ---
 # <a name="microsoft-365-apps-for-enterprise-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Enterprise için Microsoft 365 uygulamalar
 Enterprise (eskiden Office 365 Pro Plus) için Microsoft 365 uygulamalar, seçilen Visual Studio aboneliklerinde kullanılabilir. 
 
-En iyi çalışmanızı oluşturun. Her zaman güncelleştirilmiş uygulamalarla her yerde çalışın. Office 365 Pro Plus, Word, Excel, PowerPoint, OneNote, Outlook, Publisher ve Access (yalnızca bılgısayarda bulunan yayımcı ve erişim) gibi Premium uygulamalarla birlikte gelen bir abonelikdir. Uygulamalar, bilgisayarlar, Mac 'Ler, Ipilanları, IPhone, Android tabletler ve Android telefonlar dahil olmak üzere birden çok cihaza yüklenebilir. Bir abonelikle, uygulamaların en son sürümlerini alır ve bunlar gerçekleştiğinde otomatik olarak güncelleştirmeleri alırsınız.
+En iyi çalışmanızı oluşturun. Her zaman güncelleştirilmiş uygulamalarla her yerde çalışın. Microsoft 365 uygulamalar, Word, Excel, PowerPoint, OneNote, Outlook, Publisher ve Access (yalnızca bılgısayarda bulunan yayımcı ve erişim) gibi Premium uygulamalarla birlikte gelen bir aboneliğiniz. Uygulamalar, bilgisayarlar, Mac 'Ler, Ipilanları, IPhone, Android tabletler ve Android telefonlar dahil olmak üzere birden çok cihaza yüklenebilir. Bir abonelikle, uygulamaların en son sürümlerini alır ve bunlar gerçekleştiğinde otomatik olarak güncelleştirmeleri alırsınız.
 
 > [!NOTE]
 > Visual Studio aboneliğinize dahil edildiğinde, üretim için Enterprise kullanımı için Microsoft 365 uygulamalar kullanmak üzere lisanslanır.  
@@ -55,14 +55,14 @@ Kurumsal abonelik için Microsoft 365 uygulamalarınızı etkinleştirme işlemi
 
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Evet          |
-| GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir       |  Evet          |
-| Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Kullanılamaz       |  Yok          |
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılamaz                                                            |  Yok          |
-| GitHub Enterprise ile Visual Studio Professional | VL | Kullanılamaz         |  Yok          |
-| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                             |  Yok          |
-| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  Yok          |
-| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | Yok |
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende| Kullanılabilir       |  Yes          |
+| GitHub Enterprise ile Visual Studio Enterprise  | VL | Kullanılabilir       |  Yes          |
+| Visual Studio Enterprise (Standart)   | NFR<sup>1</sup> | Kullanılamaz       |  YOK          |
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Kullanılamaz                                                            |  YOK          |
+| GitHub Enterprise ile Visual Studio Professional | VL | Kullanılamaz         |  YOK          |
+| Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                             |  YOK          |
+| MSDN Platformları (Standart)                                          | VL, perakende                                              | Kullanılamaz                                              |  YOK          |
+| Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure | Kullanılamaz | YOK |
 |  |
 
 <sup>1</sup>  *şunları Içerir: for SATıL (NFR), Visual Studio Endüstri ortağı (vsıp), Microsoft iş ortağı ağı (MPN), FTE, mct Software & Services Geliştirici, BizSpark, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), mct Software & Services, ımagine, Microsoft iş ortağı ağı.*

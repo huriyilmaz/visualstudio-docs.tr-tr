@@ -14,12 +14,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f7ff64d43714fa69c2543a9bb12bb3cd12826c8
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: f1cc2fd460a2087eaaac40abbb1ba04c8126a9aa
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88706496"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800859"
 ---
 # <a name="suppress-code-analysis-warnings"></a>Kod Analizi uyarılarını gösterme
 
@@ -50,7 +50,7 @@ C++/CLı ' da \_ \_ \_ \_ özniteliği eklemek için, üst bilgi dosyasındaki m
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage özniteliği
 
-**Hata listesi**bir kod analizi uyarısında bağlam veya sağ tıklama menüsünden **Gizle** ' yi seçtiğinizde, <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> kodunuzda veya projenin Global gizleme dosyasına bir öznitelik eklenir.
+**Hata listesi**bir kod analizi uyarısında bağlam veya sağ tıklama (veya seçim ve bekletme) **menüsünü seçtiğinizde,** <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> kodunuzda veya projenin Global gizleme dosyasına bir öznitelik eklenir.
 
 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute>Özniteliği aşağıdaki biçimdedir:
 

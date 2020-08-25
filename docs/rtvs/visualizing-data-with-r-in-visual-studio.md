@@ -8,12 +8,12 @@ ms.author: kraigb
 manager: jillfra
 ms.workload:
 - data-science
-ms.openlocfilehash: fb16f4a573a7b905484982871dc838143b125591
-ms.sourcegitcommit: d281d2a04a5bc302650eebf369946d8f101e59dd
+ms.openlocfilehash: dbb3984385e0042c669f8aad1d5bb4a2f64de917
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88144707"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801626"
 ---
 # <a name="create-visual-data-plots-with-r"></a>R ile görsel veri çizimleri oluşturma
 
@@ -71,7 +71,7 @@ Araç çubuğu düğmesini veya **R araçları**  >  **Çizim**  >  **penceresi 
 
 Çizim, çok bağımsız nesnelerdir, fare ile sürükle ve bırak ile veya sağ tıklama bağlam ve **düzenleme** menülerinde **Kopyala**, **Kes**ve **Yapıştır** komutlarını kullanarak bunları kopyalayabilir veya taşıyabilirsiniz.
 
-Sürükle ve bırak için varsayılan davranış kopyalama ' dır; **kaydırma** tuşunu basılı tutarken taşımak için sürükle ve bırak.
+Sürükle ve bırak için varsayılan davranış kopyalama ' dır; **kaydırma** tuşuna basarak taşımak için sürükle ve bırak.
 
 ## <a name="plot-history"></a>Geçmişi çiz
 
@@ -82,7 +82,7 @@ Bu geçmiş, bu pencerede görüntülenen, farklı çizim pencereleri (veya ciha
 
 ![Çizim geçmişi penceresi](media/plotting-plot-history-window.png)
 
-İlişkili penceresinde bir çizim açmak için, bu çizimi çift tıklatın, seçin ve ardından Çizim araç çubuğunu **göster** düğmesini seçin veya sağ tıklayıp **çizimi göster**' i seçin. Ayrıca, sağ tıklama bağlam veya **düzenleme** menülerinden tek bir çizim ve kopyalama, kesme veya silme yapabilirsiniz.
+İlişkili penceresinde bir çizim açmak için, bu çizimi çift tıklatın, seçin ve ardından Çizim araç çubuğunu **göster** düğmesini seçin. Alternatif olarak, çizimi sağ tıklayıp **çizimi göster**' i seçin. Ayrıca, tek bir çizim seçebilir ve bağlam ya da **düzenleme** menülerinden kopyalayabilir, kesebilir veya silebilirsiniz.
 
 Çizim geçmişinizin tüm pencereler genelinde ömrü, etkileşimli R oturumunuzun ömrüne bağlanır. R oturumunuzu sıfırlayabilir veya çıkıp Visual Studio 'Yu yeniden başlatırsanız, çizim geçmişiniz sıfırlanır.
 

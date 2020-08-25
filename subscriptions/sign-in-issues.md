@@ -1,67 +1,67 @@
 ---
-title: Visual Studio Aboneliklerine İmza Lama Sorunları | Microsoft Dokümanlar
+title: Visual Studio aboneliklerinde oturum açma sorunları | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.assetid: 176c7f11-b19d-49e9-a6dd-b2e5da5e8480
 ms.date: 03/11/2020
 ms.topic: conceptual
-description: Visual Studio aboneliklerine oturum açarken ortaya çıkabilecek sorunlar hakkında bilgi edinin
-ms.openlocfilehash: de27f64f1d5c83ed01a1e561f4921dbed53c479c
-ms.sourcegitcommit: eeff6f675e7850e718911647343c5df642063d5e
+description: Visual Studio aboneliklerinde oturum açarken meydana çıkabilecek sorunlar hakkında bilgi edinin
+ms.openlocfilehash: 5d8a71115cd1a1aa7d850945806c22a64e7721cc
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233239"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801886"
 ---
 # <a name="issues-signing-in-to-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde oturum açma sorunları
-Visual Studio aboneliğinizi kullanmak için öncelikle oturum açmanız gerekir.  Aboneliğinize bağlı olarak, bu hesabı bir Microsoft hesabı (MSA) veya Azure Etkin Dizin (AAD) kimliğiyle ayarlamış olabilirsiniz.  Bu makalede, aboneliğinizde oturum açmak sırasında karşılaşabileceğiniz bazı sorunlar tartışılmaktadır.
+Visual Studio aboneliğinizi kullanmak için önce oturum açmalısınız.  Aboneliğinize bağlı olarak, bunu bir Microsoft hesabı (MSA) veya bir Azure Active Directory (AAD) kimliğiyle ayarlamış olabilirsiniz.  Bu makalede, aboneliğinizde oturum açarken karşılaşabileceğiniz bazı sorunlar ele alınmaktadır.
 
-## <a name="microsoft-accounts-msa-cannot-be-created-using-workschool-email-addresses"></a>Microsoft Hesapları (MSA) iş/okul e-posta adresleri kullanılarak oluşturulamaz
-E-posta etki alanı Azure AD'de yapılandırıldığında, iş/okul e-posta adresini kullanarak yeni bir kişisel Microsoft Hesabı (MSA) oluşturma özelliğine artık izin verilmez. Bu ne anlama geliyor? Kuruluşunuz Azure AD'ye dayanan Office 365 veya Microsoft'un diğer iş hizmetlerini kullanıyorsa ve Azure AD kiracınıza bir etki alanı adı eklediyseniz, kullanıcılar artık etki alanınızda bir e-posta adresi kullanarak yeni bir kişisel Microsoft hesabı oluşturamaz.
+## <a name="microsoft-accounts-msa-cannot-be-created-using-workschool-email-addresses"></a>Microsoft hesapları (MSA) iş/okul e-posta adresleri kullanılarak oluşturulamıyor
+E-posta etki alanı Azure AD 'de yapılandırıldığında, iş/okul e-posta adresi kullanarak yeni bir kişisel Microsoft hesabı (MSA) oluşturma olanağına artık izin verilmez. Bu ne anlama geliyor? Kuruluşunuz Microsoft 'un Azure AD 'ye bağlı Microsoft 365 veya diğer iş hizmetlerini kullanıyorsa ve Azure AD kiracınıza bir etki alanı adı eklediyseniz, kullanıcılar artık etki alanındaki bir e-posta adresini kullanarak yeni bir kişisel Microsoft hesabı oluşturamayacak.
 
 ### <a name="why-was-this-change-made"></a>Bu değişiklik neden yapıldı?
-Kullanıcı adı olarak iş adresi ne olan kişisel bir Microsoft Hesabı'na sahip olmak, son kullanıcılar ve BT departmanları için sorunlarla doludur. Örnek:
-- Kullanıcılar kişisel Microsoft hesaplarının iş uyumlu olduğunu ve iş belgesini OneDrive'larına kaydettiklerinde uyumlu olduklarını düşünebilirler
-- Kuruluştan ayrılan kullanıcılar genellikle iş e-posta adreslerine erişimlerini kaybederler. Bunu yaptıklarında, parolalarını unuturlarsa kişisel Microsoft hesabına geri dönemeyebilirler. Diğer taraftan, BT departmanları parolalarını sıfırlayabilir ve eski çalışanların kişisel hesabına girebiliyordu.
-- BT departmanları yanlış bir hesap sahipliği ve güvenlik duygusuna sahiptir. Ancak kullanıcıların iş e-posta adreslerine bir kod göndere bakmaları gerekir ve gelecekte herhangi bir zamanda hesaplarını yeniden adlandırabilirler.
+Kullanıcı adı olarak iş adresi olan bir kişisel Microsoft hesabına sahip olmak, son kullanıcılar ve BT departmanlarına benzer sorunlarla karşılaşır. Örnek:
+- Kullanıcılar kendi kişisel Microsoft hesabı, iş belgelerini OneDrive 'a kaydederken uyumlu olduğunu düşünebilir.
+- Bir kuruluştan ayrılan kullanıcılar genellikle iş e-posta adreslerine erişimi kaybeder. Kullanıcılar, parolalarını unutduklarında kendi kişisel Microsoft hesabı geri yükleyemeyebilir. Çevirme tarafı, BT departmanının parolalarını sıfırlamasına ve eski çalışanların kişisel hesabına alabilirler.
+- BT departmanlarının hesap sahipliğine ve güvenliğine ilişkin yanlış bir anlamı vardır. Ancak kullanıcıların, iş e-posta adreslerine yalnızca bir kez bir kod gidiş dönüş yapması ve bu hesabın hesabını gelecekte dilediğiniz zaman yeniden adlandırabilmeleri gerekir.
 
-Durum özellikle aynı e-posta adresine sahip iki hesabı olan kullanıcılar için kafa karıştırıcıdır (biri Azure AD & bir Microsoft hesabı).
+Bu durum özellikle aynı e-posta adresine sahip iki hesabı olan kullanıcılar için kafa karıştırıcı ' dır (Azure AD & bir Microsoft hesabı).
 
-### <a name="what-does-this-experience-look-like"></a>Bu deneyim neye benziyor?
-Bir iş veya okul e-posta adresine sahip bir Microsoft tüketici uygulamasına kaydolmaya çalışırsanız, aşağıdaki iletiyi görürsünüz.
+### <a name="what-does-this-experience-look-like"></a>Bu deneyim nasıl görünür?
+İş veya okul e-posta adresiyle bir Microsoft tüketici uygulamasına kaydolmayı denerseniz, aşağıdaki iletiyi görürsünüz.
 
    > [!div class="mx-imgBorder"]
-   > ![İş e-postasıyla hesap oluşturamıyorum](_img/sign-in-issues/cannot-use-work-email.png)
+   > ![İş e-postası ile hesap oluşturulamıyor](_img/sign-in-issues/cannot-use-work-email.png)
 
-Ancak, kişisel ve iş/okul hesaplarını destekleyen bir Microsoft uygulamasına kaydolmaya çalışırsanız, şu iletiyi görmeniz gerekir:
+Ancak, kişisel ve iş/okul hesaplarını destekleyen bir Microsoft uygulamasına kaydolmayı denerseniz şu iletiyi görmeniz gerekir:
 
    > [!div class="mx-imgBorder"]
    > ![Desteklenen iş/okul hesapları](_img/sign-in-issues/existing-account.png)
 
-### <a name="are-existing-accounts-affected"></a>Varolan hesaplar etkileniyor mu?
-Burada açıklanan kayıt bloğu yalnızca yeni hesapların oluşturulmasını engeller. İş/okul e-posta adresi olan bir Microsoft Hesabı olan kullanıcılar üzerinde hiçbir etkisi yoktur. Zaten bu durumdaysanız, kişisel bir Microsoft hesabının adını yeniden adlandırmayı kolaylaştırdık. Bu [destek makalesi](https://windows.microsoft.com/en-US/Windows/rename-personal-microsoft-account) basit adım adım kılavuzluk sağlar. Kişisel Microsoft hesabınızı yeniden adlandırmak, kullanıcı adını değiştirmek anlamına gelir ve iş e-postanızı veya Office 365 gibi iş hizmetlerinde nasıl oturum açabileceğinizi etkilemez. Ayrıca kişisel eşyalarınızı etkilemez, sadece oturum açma şeklinizi değiştirir. Başka (kişisel) bir e-posta adresi @outlook.com kullanabilir, Microsoft'tan yeni bir e-posta adresi alabilir veya telefon numaranızı yeni bir kullanıcı adı olarak kullanabilirsiniz.
+### <a name="are-existing-accounts-affected"></a>Mevcut hesaplar etkileniyor mu?
+Burada açıklanan kaydolma bloğu yalnızca yeni hesapların oluşturulmasını engeller. Zaten bir iş/okul e-posta adresi olan bir Microsoft hesabına sahip olan kullanıcılar üzerinde hiçbir etkisi yoktur. Bu durumda zaten bir kişisel Microsoft hesabı yeniden adlandırmayı daha kolay hale getirdik. Bu [Destek makalesinde](https://windows.microsoft.com/en-US/Windows/rename-personal-microsoft-account) basit adım adım yönergeler sunulmaktadır. Kişisel Microsoft hesabı yeniden adlandırılması, Kullanıcı adının değiştirilmesi anlamına gelir ve iş e-postanızı veya Microsoft 365 gibi iş hizmetlerinde oturum açma şeklini etkilemez. Ayrıca, kişisel öğelerinizi etkilemez; yalnızca oturum açma şeklini değiştirir. Başka bir (kişisel) e-posta adresi kullanabilir, @outlook.com Microsoft 'tan yeni bir e-posta adresi alabilir veya telefon numaranızı yeni bir Kullanıcı adı olarak kullanabilirsiniz.
 
 > [!NOTE]
-> BT departmanınız, örneğin Premier Destek gibi Microsoft iş hizmetlerine erişmek için iş/okul e-postanızla birlikte kişisel bir Microsoft hesabı oluşturmanızı istediyse, hesabınızı yeniden adlandırmadan önce yönetici ekibinizle konuşun.
+> BT departmanınız, iş/okul e-postanız ile kişisel bir Microsoft hesabı oluşturmanız isteniyorsa (örneğin, Premier Destek gibi Microsoft iş hizmetlerine erişmek için), hesabınızı yeniden adlandırmadan önce yönetici ekibiniz ile konuşun.
 
-## <a name="deleting-a-sign-in-address-may-prevent-access-to-a-subscription"></a>Oturum açma adresinin silmesi, aboneye erişimi engelleyebilir
-Aboneliğinizle ilişkili bir veya daha fazla kimliği (MSA veya AAD) silerseniz, kullanıcı adınız ve oturum açma kimliğiniz de dahil olmak üzere abone bilgileriniz anonim hale getirilebilir ve bu da aboneliğinize erişimin kaybolmasına neden olabilir.
+## <a name="deleting-a-sign-in-address-may-prevent-access-to-a-subscription"></a>Bir oturum açma adresinin silinmesi, bir aboneliğe erişimi engelleyebilir
+Aboneliğinizle ilişkili bir veya daha fazla kimliği (MSA veya AAD) silerseniz, Kullanıcı adınız ve oturum açma KIMLIĞINIZ dahil olmak üzere abone bilgileriniz anonim olarak oluşturulabilir ve aboneliğinize erişim kaybı ile sonuçlanır.
 
-Abonelik erişiminizi etkilememek için bu tekniklerden birini kullanın.
-- MSA veya AAD gibi tek bir kimlik yönetim sistemi konuşlandırın, ancak her ikisini birden devreye sayılmayın.
+Abonelik erişiminizdeki etkileri önlemek için, aşağıdaki tekniklerden birini kullanın.
+- Tek bir kimlik yönetimi sistemi (MSA veya AAD) dağıtın, ancak her ikisini birden kullanmayın.
 - AAD ve MSA kimliklerini kiracı aracılığıyla ilişkilendirin.
 
-## <a name="signing-in-may-fail-when-using-aliases"></a>Diğer adlar kullanırken oturum açma başarısız olabilir
-Oturum açmak için kullanılan hesap türüne bağlı olarak, 'de oturum açmak [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)için kullanılabilir abonelikler doğru şekilde görüntülenmeyebilir. Olası nedenlerden biri, aboneliğin atandığı oturum açma kimliğinin yerine "takma adlar" veya "dost adlar" kullanılmasıdır. Buna "takma ad" denir.
+## <a name="signing-in-may-fail-when-using-aliases"></a>Takma adlar kullanılırken oturum açma başarısız olabilir
+Oturum açmak için kullanılan hesap türüne bağlı olarak, kullanılabilir abonelikler ' de oturum açarken doğru görüntülenmeyebilir [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs) . Olası bir neden, aboneliğin atandığı oturum açma kimliği yerine "diğer adlar" veya "kolay adlar" in kullanılması olabilir. Bu "diğer ad" olarak adlandırılır.
 
-### <a name="what-is-aliasing"></a>Takma ad nedir?
-"Takma ad" terimi, Windows'da (veya Etkin Dizininizde) oturum açabilmek ve e-postaya erişmek için farklı kimliklere sahip olan kullanıcıları ifade eder.
+### <a name="what-is-aliasing"></a>Diğer ad nedir?
+"Diğer ad" terimi, Windows 'da (veya Active Directory) oturum açmak ve e-postaya erişmek için farklı kimliklere sahip kullanıcılar anlamına gelir.
 
-Diğer adlarla, bir şirket kendi dizin oturum açma için bir Microsoft JohnD@contoso.comÇevrimiçi Hizmeti olduğunda karşılaşılabılabilir, ancak kullanıcılar e-posta hesaplarına takma adlar veya '. John.Doe@contoso.com Toplu Lisans Lama Hizmet Merkezi (VLSC) aracılığıyla aboneliklerini yöneten birçok müşteri için, sağlanan e-postaJohn.Doe@contoso.comadresi ()JohnD@contoso.com"İş veya Okul Hesabı" seçeneği aracılığıyla başarılı kimlik doğrulaması için gereken dizin adresiyle eşleşmediği için başarısız bir oturum açma deneyimine neden olabilir.
+Bir şirketin Dizin oturum açması için bir Microsoft Online hizmetine sahip olması gibi diğer JohnD@contoso.com adlara ve kullanıcılara gibi diğer adlar veya kolay adlar kullanarak e-posta hesaplarına erişim varsa, bu yana de erişilebilir John.Doe@contoso.com . Toplu Lisanslama Hizmet Merkezi (VLSC) üzerinden aboneliklerini yöneten birçok müşteri için, sunulan () e-posta adresi John.Doe@contoso.com JohnD@contoso.com "Iş veya okul hesabı" seçeneği aracılığıyla başarılı kimlik doğrulaması için gereken dizin adresiyle () eşleşmediğinden, bu işlem başarısız oturum açma deneyimine yol açabilir.
 
-### <a name="what-options-do-i-have"></a>Ne gibi seçeneklerim var?
-Abone açısından bakıldığında, şirketinizin kimlik yapılandırmasını anlamak için öncelikle yöneticinizle çalışmak önemlidir. Gerekirse, yöneticinizin hesap ayarlarınızı yönetim portalından güncellemesi gerekebilir veya kurumsal e-posta adresinizi kullanarak bir Microsoft Hesabı (MSA) oluşturmanız gerekebilir. Bir MSA oluşturmak için adımları atmadan önce, bu eylemi gerçekle ilgili herhangi bir ilke veya sorun la ilgili olarak yöneticinizle konuşun. 
+### <a name="what-options-do-i-have"></a>Hangi seçeneklere sahip mıyım?
+Bir abone perspektifinden, şirketinizin kimlik yapılandırmasını anlamak için öncelikle yöneticinizle birlikte çalışmanız önemlidir. Gerekirse, yöneticinizin hesap ayarlarınızı yönetim portalından güncelleştirmesi veya şirket e-posta adresinizi kullanarak bir Microsoft hesabı (MSA) oluşturmanız gerekebilir. MSA oluşturma adımlarını uygulamadan önce, bu eylemi gerçekleştirmek için herhangi bir ilke veya sorunla ilgili olarak yöneticinizle görüşün. 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Visual Studio belgeleri](https://docs.microsoft.com/visualstudio/)
@@ -70,5 +70,5 @@ Abone açısından bakıldığında, şirketinizin kimlik yapılandırmasını a
 - [Microsoft 365 belgeleri](https://docs.microsoft.com/microsoft-365/)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- [MsA ve AAD hesaplarını](/azure/active-directory/b2b/add-users-administrator) AAD içinde nasıl bağlayacaklarınız öğrenin.
-- [Anonymization](anonymization.md)hakkında daha fazla bilgi edinin.
+- AAD içindeki [MSA ve AAD hesaplarını bağlamayı](/azure/active-directory/b2b/add-users-administrator) öğrenin.
+- [Anonimleştirme](anonymization.md)hakkında daha fazla bilgi edinin.

@@ -10,18 +10,18 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 026953ff52f4aa5c34dd4656432fed8ef2a48580
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 2d58462b90039e14ae98fe450812ca4cfdb6cbbd
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85535154"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801587"
 ---
 # <a name="use-the-cookiecutter-extension"></a>Cookiecutter uzantısını kullanma
 
 [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) şablonları, giriş şablonu seçeneklerini bulmaya ve proje ve dosya oluşturmaya yönelik grafik kullanıcı arabirimi sağlar. Visual Studio 2017 ve üzeri sürümlerde bulunur ve Visual Studio 'nun önceki sürümlerinde ayrı olarak yüklenebilir.
 
-Cookiecutter, Python 3,3 veya üzeri (32-bit veya 64-bit) veya Anaconda 3 4,2 veya üzeri (32-bit veya 64-bit) gerektirir. Uygun bir Python yorumlayıcı yoksa, Visual Studio bir uyarı görüntüler. Visual Studio çalışırken bir Python yorumlayıcı yüklerseniz, yeni yüklenen yorumlayıcı algılamak için Cookiecutter araç çubuğundaki **giriş** düğmesine tıklayın. (Genel olarak ortamlar hakkında daha fazla bilgi için bkz. [Python ortamları](managing-python-environments-in-visual-studio.md) .)
+Cookiecutter, Python 3,3 veya üzeri (32-bit veya 64-bit) veya Anaconda 3 4,2 veya üzeri (32-bit veya 64-bit) gerektirir. Uygun bir Python yorumlayıcı yoksa, Visual Studio bir uyarı görüntüler. Visual Studio çalışırken bir Python yorumlayıcı yüklerseniz, yeni yüklenen yorumlayıcı algılamak için Cookiecutter araç çubuğundaki **giriş** düğmesini seçin. (Genel olarak ortamlar hakkında daha fazla bilgi için bkz. [Python ortamları](managing-python-environments-in-visual-studio.md) .)
 
 Yüklendikten sonra, **View**  >  **Cookiecutter Gezginini** görüntüle ' yi seçerek penceresini açın:
 
@@ -99,7 +99,7 @@ Bu işleme üzerinde, Visual Studio 'ya özgü (ve Cookiecutter CLı tarafından
 | --- | --- |
 | Etiketle | Değişken için, değişkenin adı yerine düzenleyicinin üzerinde ne göründüğünü belirtir. |
 | Açıklama | Bu değişken için varsayılan değer yerine, düzenleme denetiminde görünen araç ipucunu belirtir. |
-| URL | Etiketi, URL 'YI gösteren bir araç ipucuyla birlikte köprü haline geçirir. Köprüye tıkladığınızda kullanıcının bu URL 'de varsayılan tarayıcısı açılır. |
+| URL | Etiketi, URL 'YI gösteren bir araç ipucuyla birlikte köprü haline geçirir. Köprü seçildiğinde kullanıcının varsayılan tarayıcısı Bu URL 'ye açılır. |
 | Seçici | Bir değişken için düzenleyicinin özelleştirilmesine izin verir. Şu seçiciler Şu anda desteklenmektedir:<ul><li>`string`: Standart metin kutusu, dizeler için varsayılan.</li><li>`list`: Standart Birleşik giriş kutusu, listeler için varsayılan.</li><li>`yesno`: `y` Dizeler için ve arasında seçim yapabileceğiniz Birleşik giriş kutusu `n` .</li><li>`odbcConnection`: Bir veritabanı bağlantısı iletişim kutusu getiren **...** düğmesini içeren metin kutusu.</li></ul> |
 
 Örnek:
@@ -170,7 +170,7 @@ Bir bağımsız değişken iletmeniz gerekmiyorsa, boş bir dize bırakın veya 
 ]
 ```
 
-Birden çok bağımsız değişken için bir dizi kullanın. Anahtarlar için anahtarı ve değerini ayrı bağımsız değişkenlere böler ve uygun tırnak içine kullanın. Örneğin:
+Birden çok bağımsız değişken için bir dizi kullanın. Anahtarlar için anahtarı ve değerini ayrı bağımsız değişkenlere böler ve uygun tırnak içine kullanın. Örnek:
 
 ```json
 "_visual_studio_post_cmds": [
@@ -193,7 +193,7 @@ Bağımsız değişkenler, diğer Cookiecutter değişkenlerine başvurabilir. Y
 
 ### <a name="error-loading-template"></a>Şablon yüklenirken hata oluştu
 
-Bazı şablonlar, *üzerindecookiecutter.js*, Boolean gibi geçersiz veri türlerini kullanıyor olabilir. Şablon bilgileri bölmesindeki **sorunlar** bağlantısını seçerek şablon yazarına bu tür örnekler bildirin.
+Bazı şablonlar, * üzerindecookiecutter.js*, Boolean gibi geçersiz veri türlerini kullanıyor olabilir. Şablon bilgileri bölmesindeki **sorunlar** bağlantısını seçerek şablon yazarına bu tür örnekler bildirin.
 
 ### <a name="hook-script-failed"></a>Kanca betiği başarısız oldu
 

@@ -7,12 +7,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 779092e277ac5b6eed3afcaceaf55b26ee2759dd
-ms.sourcegitcommit: 025816f8e388b29e58761d304b0fda755ac5a613
+ms.openlocfilehash: 2c69f73989e898c44bdef6cf008d48f6c918652a
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374175"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801327"
 ---
 # <a name="add-file-header"></a>Dosya üst bilgisi ekleme
 
@@ -34,12 +34,12 @@ Bu kod üretimi için geçerlidir:
 
 2. Aşağıdaki kuralı EditorConfig dosyanıza ekleyin: *file_header_template*.
 
-3. Kuralın değerini, uygulamak istediğiniz üst bilgi metnine eşit olacak şekilde ayarlayın.
+3. Kuralın değerini, uygulamak istediğiniz üst bilgi metnine eşit olacak şekilde ayarlayın. `{fileName}`Dosya adı için bir yer tutucu olarak kullanabilirsiniz.
 
     ![EditorConfig dosyası üst bilgi kuralı](media/add-file-header-rule.png)
 
-> [!NOTE]
-> Bir EditorConfig içinde açık multilines olamaz ve yeni satırlar eklemek için UNIX yeni satır karakterini kullanmanız gerekir.
+    > [!NOTE]
+    > Bir EditorConfig içinde açık multilines olamaz ve yeni satırlar eklemek için UNIX yeni satır karakterini kullanmanız gerekir.
 
 4. Giriş işaretini herhangi bir C# veya Visual Basic dosyasının ilk satırına yerleştirin.
 

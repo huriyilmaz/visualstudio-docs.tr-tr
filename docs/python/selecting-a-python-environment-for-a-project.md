@@ -10,12 +10,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8bcb349f8ff99d1567bf94b83a96be6b2824c208
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.openlocfilehash: 11808eeabee4d45d1d3d3b1b5cd5d6636249e7cb
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85520477"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801210"
 ---
 # <a name="how-to-select-a-python-environment-for-a-project"></a>Bir proje için Python ortamı seçme
 
@@ -46,7 +46,7 @@ Farklı bir ortamı hızlıca etkinleştirmek için, bu ortam adına sağ tıkla
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
-Bir projenin ortamını değiştirmek için, **Python ortamları** düğümüne sağ tıklayın ve **ortam ekle**' yi seçin veya Python araç çubuğunda ortam açılır listesinden **ortam ekle** ' yi seçin.
+Bir projenin ortamını değiştirmek için, **Python ortamları** düğümüne sağ tıklayın ve **ortam ekle**' yi seçin. Ayrıca, Python araç çubuğunda ortam açılır listesinden **ortam Ekle ' yi** de seçebilirsiniz.
 
 **Ortam ekle** iletişim kutusunda, **var olan ortam** sekmesini seçin ve ardından **ortam** açılan listesinden yeni bir ortam seçin:
 
@@ -86,7 +86,7 @@ Visual Studio 'da doğrudan aşağıdaki gibi yeni bir sanal ortam oluşturabili
 
 1. Temel yorumlayıcı olarak bir ortam seçin ve **Oluştur**' u seçin. Visual Studio, ortamı yapılandırırken bir ilerleme çubuğu görüntüler ve gerekli paketleri indirir. Tamamlandıktan sonra, sanal ortam, kapsayan proje için **Python ortamları** penceresinde görünür.
 
-1. Sanal ortam varsayılan olarak etkinleştirilmez. Projeyi etkinleştirmek için, sağ tıklayın ve **ortamı etkinleştir**' i seçin.
+1. Sanal ortam varsayılan olarak etkinleştirilmez. Projenin sanal ortamını etkinleştirmek için, sağ tıklayın ve **ortamı etkinleştir**' i seçin.
 
 > [!Note]
 > Konum yolu var olan bir sanal ortamı tanımlarsa, Visual Studio temel yorumlayıcı 'yı otomatik olarak algılar (ortamın *lib* dizinindeki *orig-prefix.txt* dosyasını kullanarak) ve **Oluştur** düğmesini **Ekle**olarak değiştirir.
@@ -169,7 +169,7 @@ Görüntülenen girdilerin her zaman doğru olmayabilir ve yükleme ve kaldırma
 Ayrıca, Visual Studio 'Nun `conda` paketleri bir Conda ortamına yüklemek için kullanmayı desteklemediğini unutmayın. `conda`Bunun yerine komut satırından kullanın.
 
 > [!Tip]
-> Bir paketin yüklenemediği yaygın bir durum, paketin * \* . PYD* dosyalarındaki yerel bileşenlere yönelik kaynak kodu içeruğradığında oluşur. Visual Studio 'nun gerekli sürümü yüklü olmadığında, PIP bu bileşenleri derleyemiyor. Bu durumda görünen hata iletisi **hata: vcvarsall.batbulunamıyor **. `easy_install`, önceden derlenmiş ikili dosyaları indirebilir ve ' den daha eski Python sürümleri için uygun bir derleyici indirebilirsiniz [https://www.microsoft.com/download/details.aspx?id=44266](https://www.microsoft.com/download/details.aspx?id=44266) . Daha fazla ayrıntı için bkz. Python araçları ekibi blogu üzerinde ["vcvarsallbat bulunamıyor" sorunuyla ilgili sorun giderme](https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/) .
+> Bir paketin yüklenemediği yaygın bir durum, paketin * \* . PYD* dosyalarındaki yerel bileşenlere yönelik kaynak kodu içeruğradığında oluşur. Visual Studio 'nun gerekli sürümü yüklü olmadığında, PIP bu bileşenleri derleyemiyor. Bu durumda görünen hata iletisi **hata: vcvarsall.batbulunamıyor **. `easy_install` , önceden derlenmiş ikili dosyaları indirebilir ve ' den daha eski Python sürümleri için uygun bir derleyici indirebilirsiniz [https://www.microsoft.com/download/details.aspx?id=44266](https://www.microsoft.com/download/details.aspx?id=44266) . Daha fazla ayrıntı için bkz. Python araçları ekibi blogu üzerinde ["vcvarsallbat bulunamıyor" sorunuyla ilgili sorun giderme](https://devblogs.microsoft.com/python/unable-to-find-vcvarsall-bat/) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

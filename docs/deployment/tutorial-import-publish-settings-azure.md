@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cd316956f8e6c385cd59c017af50452b07537dc6
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 6d2c52d6db6ca3001712a692a1de059834c975ae
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84183320"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801717"
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>Visual Studio 'da yayımlama ayarlarını içeri aktararak uygulama Azure App Service yayımlayın
 
@@ -35,7 +35,7 @@ Yayımlama ayarları dosyası (* \* . publishsettings*), Visual Studio 'da oluş
 > [!NOTE]
 > Visual Studio yayımlama profilini (* \* . pubxml* dosyası) bir Visual Studio yüklemesinden diğerine kopyalamanız gerekiyorsa, yönetilen proje türleri için * \\<ProjectName \> \Properties\PublishProfiles* klasöründe yayımlama profilini * \<profilename\> . pubxml*bulabilirsiniz. Web siteleri için *\ App_Data* klasörü altına bakın. Yayımlama profilleri MSBuild XML dosyalarıdır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range=">=vs-2019"
 
@@ -57,15 +57,15 @@ Yayımlama ayarları dosyası (* \* . publishsettings*), Visual Studio 'da oluş
 
 1. Visual Studio çalıştıran bilgisayarda yeni bir proje oluşturun.
 
-    Doğru şablonu seçin. Bu örnekte, **ASP.NET Web uygulaması (.NET Framework)** veya (yalnızca C# için **ASP.NET Core) Web uygulaması**' nı seçin ve ardından **Tamam**' a tıklayın.
+    Doğru şablonu seçin. Bu örnekte, **ASP.NET Web uygulaması (.NET Framework)** veya (yalnızca C# için **ASP.NET Core) Web uygulaması**' nı seçin ve ardından **Tamam**' ı seçin.
 
-    Belirtilen proje şablonlarını görmüyorsanız, **Yeni proje** iletişim kutusunun sol bölmesindeki **Visual Studio yükleyicisi aç** bağlantısına tıklayın. Visual Studio Yükleyicisi başlatılır. **ASP.net ve Web geliştirme** iş yükünü yükler.
+    Belirtilen proje şablonlarını görmüyorsanız, **Yeni proje** iletişim kutusunun sol bölmesindeki **Aç Visual Studio yükleyicisi** bağlantısına gidin. Visual Studio Yükleyicisi başlatılır. **ASP.net ve Web geliştirme** iş yükünü yükler.
 
     Seçtiğiniz proje şablonu (ASP.NET veya ASP.NET Core), Web sunucusunda yüklü ASP.NET sürümüne karşılık gelmelidir.
 
-1. **MVC** (.NET Framework) veya **Web uygulaması (Model-View-Controller)** seçeneğini belirleyin (.NET Core Için) ve **kimlik doğrulama** olmadığından emin olun ve ardından **Tamam**' a tıklayın.
+1. **MVC** (.NET Framework) veya **Web uygulaması (Model-View-Controller)** ' ı (.NET Core Için) seçin ve **kimlik doğrulamasının** seçili olmadığından emin olun ve ardından **Tamam**' ı seçin.
 
-1. **MyWebApp** gibi bir ad yazın ve **Tamam**' a tıklayın.
+1. **MyWebApp** gibi bir ad yazın ve **Tamam**' ı seçin.
 
     Visual Studio projeyi oluşturur.
 
@@ -75,7 +75,7 @@ Yayımlama ayarları dosyası (* \* . publishsettings*), Visual Studio 'da oluş
 
 1. Azure portal, Azure App Service açın.
 
-1. **Yayımlama profilini al** ' a tıklayın ve profili yerel olarak kaydedin.
+1. **Yayımlama profilini al** ' a gidin ve profili yerel olarak kaydedin.
 
     ![Yayımlama profilini al](../deployment/media/tutorial-azure-app-service-get-publish-profile.png)
 

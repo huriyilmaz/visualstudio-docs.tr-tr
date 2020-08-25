@@ -1,22 +1,22 @@
 ---
-title: Öğretici-Docker Compose ile çok kapsayıcılı bir uygulama oluşturma
+title: Docker Compose ile çok Kapsayıcılı uygulama
 description: Birden fazla kapsayıcıyı yönetmeyi ve Mac için Visual Studio aralarında iletişim kurmayı öğrenin
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 07/03/2020
 ms.topic: tutorial
-ms.openlocfilehash: b15ba0200520d8a04abc30b606b5b10215e3c22e
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.openlocfilehash: 4dd8695ccf8f1fcf13b9b52387d28c68f8812aec
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87425438"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800729"
 ---
 # <a name="create-a-multi-container-app-with-docker-compose"></a>Docker Compose ile Çok Kapsayıcılı Uygulama Oluşturma
 
 Bu öğreticide, birden fazla kapsayıcıyı yönetmeyi ve Mac için Visual Studio Docker Compose kullanırken aralarında iletişim kurmayı öğreneceksiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Docker Masaüstü](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 * [Mac için Visual Studio 2019](https://visualstudio.microsoft.com/vs/mac)

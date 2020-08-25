@@ -1,7 +1,8 @@
 ---
-title: Dağıtıma genel bakış | Microsoft Docs
-ms.custom: seodec18
-ms.date: 06/22/2018
+title: Visual Studio uygulamanızı bir klasör, IIS, Azure veya başka bir hedefe dağıtın
+description: Yayımlama Sihirbazı 'nı kullanarak uygulamanız için yayımlama seçenekleri hakkında daha fazla bilgi edinin
+ms.custom: contperfq1
+ms.date: 08/21/2020
 ms.topic: overview
 dev_langs:
 - FSharp
@@ -13,14 +14,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff5091a7ca7136cd8b62f75ee7f317b1e5b1f3be
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: 7125be46a894072f034bf1fce3060d2bda564aff
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84173739"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800845"
 ---
-# <a name="overview-of-deployment-in-visual-studio"></a>Visual Studio 'da dağıtıma genel bakış
+# <a name="deploy-your-app-to-a-folder-iis-azure-or-another-destination"></a>Uygulamanızı bir klasöre, IIS 'ye, Azure 'a veya başka bir hedefe dağıtın
 
 Bir uygulamayı, hizmeti ya da bileşeni dağıtarak bunu diğer bilgisayarlardaki, cihazlardaki, sunuculardaki ya da buluttaki yükleme için dağıtmış olursunuz. İhtiyacınız olan dağıtım türü için uygun yöntemi Visual Studio'da seçebilirsiniz.
 
@@ -35,19 +36,27 @@ Visual Studio içinden uygulamalar doğrudan aşağıdaki hedeflere yayımlanabi
 - [Azure](#azure)
 - [Docker Container Registry](#docker-container-registry)
 - [Klasör](#folder)
-- [Özel hedefler (IIS, FTP)](#Custom targets (ııS, FTP))
-
-**Yayımla** sekmesinde, var olan bir yayımlama profilini seçebilir, var olan bir profili içeri aktarabilir veya burada açıklanan seçenekleri kullanarak yeni bir tane oluşturabilirsiniz. Farklı uygulama türleri için IDE 'deki yayımlama seçeneklerinin bir turu için bkz. [dağıtıma ilk bakış](../deployment/deploying-applications-services-and-components.md).
+- [FTP/FTPS sunucusu](#ftpftps-server)
+- [Web sunucusu (IIS)](#web-server-iis)
+- [Profili içeri aktar](#import-profile)
 
 ## <a name="azure"></a>Azure 
 
+Azure 'u seçtiğinizde şunları seçebilirsiniz:
+
+- Windows, Linux veya Docker görüntüsü olarak çalışan Azure App Service
+- Azure Container Registry dağıtılan bir Docker görüntüsü
+- Azure Sanal Makinesi
+
+![Bir Azure hizmeti seçin](../deployment/media/quickstart-choose-azure-service.png)
+
 ### <a name="azure-app-service"></a>Azure App Service
 
-Geliştiricilerin altyapıyı sürdürmeden ölçeklenebilir Web uygulamaları ve Hizmetleri hızla oluşturmalarına yardımcı [Azure App Service](/azure/app-service/app-service-web-overview) . App Service, Azure 'daki bulutta barındırılan sanal makinelerde çalışır, ancak bu sanal makineler sizin için yönetilir. Bir App Service her uygulamaya benzersiz bir \* . azurewebsites.net URL 'si atanır; ücretsiz dışındaki tüm fiyatlandırma katmanları siteye özel etki alanı adları atamaya izin verir.
+[Azure App Service](/azure/app-service/app-service-web-overview) , geliştiricilerin altyapıyı korumadan kolayca ölçeklenebilir Web uygulamaları ve Hizmetleri oluşturmalarına yardımcı olur. App Service, Azure 'daki bulutta barındırılan sanal makinelerde çalışır, ancak bu sanal makineler sizin için yönetilir. Bir App Service her uygulamaya benzersiz bir \* . azurewebsites.net URL 'si atanır; ücretsiz dışındaki tüm fiyatlandırma katmanları siteye özel etki alanı adları atamaya izin verir.
 
 Bir App Service bir [fiyatlandırma katmanı veya](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview) içeren App Service planı seçerek ne kadar bilgi işlem gücü olduğunu belirlersiniz. Birden çok Web uygulaması (ve diğer uygulama türleri), fiyatlandırma katmanını değiştirmeden aynı App Service paylaşabilir. Örneğin, geliştirme, hazırlama ve üretim Web uygulamalarını aynı App Service birlikte barındırabilirsiniz.
 
-### <a name="when-to-choose-azure-app-service"></a>Ne zaman Azure App Service seçin
+#### <a name="when-to-choose-azure-app-service"></a>Ne zaman Azure App Service seçin
 
 - Internet üzerinden erişilebilen bir Web uygulaması dağıtmak istiyorsunuz.
 - Yeniden dağıtmaya gerek kalmadan Web uygulamanızı talebe göre otomatik olarak ölçeklendirmek istiyorsunuz.
@@ -56,7 +65,18 @@ Bir App Service bir [fiyatlandırma katmanı veya](/azure/app-service/azure-web-
 
 > Kendi veri merkezinizde veya diğer şirket içi bilgisayarlarınızda Azure App Service kullanmak istiyorsanız, [Azure Stack](https://azure.microsoft.com/overview/azure-stack/)kullanarak bunu yapabilirsiniz.
 
-App Service yayımlama hakkında daha fazla bilgi için bkz. [hızlı başlangıç-yayımlama-Azure App Service](quickstart-deploy-to-azure.md) ve [hızlı başlangıç-ASP.NET Core Linux 'a yayımlama](quickstart-deploy-to-linux.md).
+App Service yayımlama hakkında daha fazla bilgi için bkz.:
+- [Hızlı başlangıç-Azure App Service](quickstart-deploy-to-azure.md) ve [hızlı başlangıç-ASP.NET Core Linux](quickstart-deploy-to-linux.md)'ta yayımlayın.
+- [Azure App Service ve IIS 'de ASP.NET Core sorunlarını giderin](/aspnet/core/test/troubleshoot-azure-iis).
+
+### <a name="azure-container-registry"></a>Azure Container Registry
+
+[Azure Container Registry](/azure/container-registry/) , tüm kapsayıcı dağıtımı türleri için özel bir kayıt defterinde Docker kapsayıcı görüntülerini ve yapıtları oluşturmanıza, depolamanıza ve yönetmenize olanak sağlar.
+
+#### <a name="when-to-choose-azure-container-registry"></a>Ne zaman Azure Container Registry seçin
+
+- Mevcut bir Docker kapsayıcısı geliştirme ve dağıtım işlem hattınızı kullandığınızda.
+- Azure 'da Docker kapsayıcı görüntüleri oluşturmak istediğinizde.
 
 ### <a name="azure-virtual-machines"></a>Azure Sanal Makineler
 
@@ -66,7 +86,7 @@ Sanal makinelerde barındırılan bir uygulamanın ölçeklendirilmesi, ek VM 'L
 
 Daha fazla bilgi için, Visual Studio 'daki özel seçeneğini kullanarak dağıtım hedefi olarak kullanabileceğiniz Azure App Service, Azure sanal makineleri ve diğer Azure hizmetleri arasındaki [ayrıntılı karşılaştırmaya](https://azure.microsoft.com/documentation/articles/choose-web-site-cloud-service-vm/) bakın.
 
-### <a name="when-to-choose-azure-app-virtual-machines"></a>Azure Uygulama sanal makinelerini seçme
+#### <a name="when-to-choose-azure-virtual-machines"></a>Azure sanal makinelerini seçme
 
 - Atanan IP adreslerinin kullanım ömrü boyunca tam denetim ile Internet üzerinden erişilebilen bir Web uygulaması dağıtmak istiyorsunuz.
 - Sunucularınızda özelleştirilmiş bir veritabanı sistemi, belirli ağ yapılandırması, disk bölümleri vb. gibi ek yazılımlar içeren makine düzeyinde özelleştirmeler yapmanız gerekir.
@@ -99,26 +119,61 @@ Herhangi bir nedenle (örneğin, makine erişimi gibi) Azure App Service veya Az
 
 Daha fazla bilgi için bkz. [hızlı başlangıç-yerel bir klasöre dağıtma](quickstart-deploy-to-local-folder.md)
 
-## <a name="custom-targets-iis-ftp"></a>Özel hedefler (IIS, FTP)
+## <a name="ftpftps-server"></a>FTP/FTPS sunucusu
 
-Özel hedef, uygulamanızı Azure App Service, Azure sanal makineleri veya yerel dosya sistemi dışındaki bir hedefe dağıtmanıza olanak tanır. Diğer bulut hizmetleri de dahil olmak üzere, erişiminiz olan bir dosya sistemine veya başka bir sunucuya (Internet veya Intranete) dağıtılabilir. Web dağıtımı (dosyalar veya) ile çalışabilir. ZIP) ve FTP.
+Bir FTP/FTPS sunucusu, uygulamanızı Azure dışında bir sunucuya dağıtmanıza olanak tanır. Diğer bulut hizmetleri de dahil olmak üzere, erişiminiz olan bir dosya sistemine veya başka bir sunucuya (Internet veya Intranete) dağıtılabilir. Web dağıtımı (dosyalar veya) ile çalışabilir. ZIP) ve FTP.
 
-Özel bir hedef seçerken, Visual Studio sizden bir profil adı ister ve hedef sunucu ya da konum, bir site adı ve kimlik bilgileri dahil olmak üzere ek **bağlantı** bilgileri toplar. **Ayarlar** sekmesinde aşağıdaki davranışları kontrol edebilirsiniz:
+Bir FTP/FTPS sunucusu seçerken, Visual Studio sizden bir profil adı ister ve hedef sunucu ya da konum, bir site adı ve kimlik bilgileri dahil olmak üzere ek **bağlantı** bilgileri toplamanızı ister. **Ayarlar** sekmesinde aşağıdaki davranışları kontrol edebilirsiniz:
 
 - Dağıtmak istediğiniz yapılandırma.
 - Mevcut dosyaların hedefteki kaldırılması gerekip gerekmediğini belirtir.
 - Yayımlama sırasında ön derleme yapılıp yapılmayacağını belirtir.
 - App_Data klasördeki dosyaların dağıtımdan dışlanıp dışlanmayacağı.
 
-Visual Studio 'da istediğiniz sayıda özel dağıtım profili oluşturabilir ve bu da profillerin farklı ayarlarla yönetilmesini mümkün hale getirebilirsiniz.
+Visual Studio 'da istediğiniz sayıda FTP/FTPS dağıtım profili oluşturabilir ve bu da profillerin farklı ayarlarla yönetilmesini mümkün hale getirebilirsiniz.
 
-### <a name="when-to-choose-custom-deployment"></a>Özel dağıtım ne zaman seçme
+### <a name="when-to-choose-ftpftps-server-deployment"></a>FTP/FTPS sunucu dağıtımının ne zaman seç,
 
 - Azure dışında, URL 'Ler aracılığıyla erişilebilen bir sağlayıcıda bulut hizmetleri kullanıyorsunuz.
 - Visual Studio 'da kullandığınız veya doğrudan Azure hesaplarınıza bağlanmış olan kimlik bilgilerini kullanarak dağıtım yapmak isteyebilirsiniz.
 - Her dağıtım sırasında hedeften dosya silmek istiyorsunuz.
 
-Daha fazla bilgi için bkz. [hızlı başlangıç-bir Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md)
+## <a name="web-server-iis"></a>Web Sunucusu (IIS)
+
+IIS Web sunucusu, uygulamanızı Azure dışında bir Web sunucusuna dağıtmanıza olanak tanır. Diğer bulut hizmetleri de dahil olmak üzere, erişiminiz olan bir IIS sunucusuna (Internet veya Intranet) dağıtılabilir. Web Dağıtımı veya bir Web Dağıtımı paketiyle çalışabilir.
+
+Bir IIS Web sunucusu seçerken, Visual Studio sizden bir profil adı ister ve hedef sunucu ya da konum, bir site adı ve kimlik bilgileri dahil olmak üzere ek **bağlantı** bilgileri toplar. **Ayarlar** sekmesinde aşağıdaki davranışları kontrol edebilirsiniz:
+
+- Dağıtmak istediğiniz yapılandırma.
+- Mevcut dosyaların hedefteki kaldırılması gerekip gerekmediğini belirtir.
+- Yayımlama sırasında ön derleme yapılıp yapılmayacağını belirtir.
+- App_Data klasördeki dosyaların dağıtımdan dışlanıp dışlanmayacağı.
+
+Visual Studio 'da istediğiniz sayıda IIS Web sunucusu dağıtım profili oluşturabilir ve bu da profillerin farklı ayarlarla yönetilmesini mümkün hale getirebilirsiniz.
+
+### <a name="when-to-choose-web-server-iis-deployment"></a>Web sunucusu (IIS) dağıtımı ne zaman seçme
+
+- URL 'Ler aracılığıyla erişilebilen bir site veya hizmeti yayımlamak için IIS kullanıyorsunuz.
+- Visual Studio 'da kullandığınız veya doğrudan Azure hesaplarınıza bağlanmış olan kimlik bilgilerini kullanarak dağıtım yapmak isteyebilirsiniz.
+- Her dağıtım sırasında hedeften dosya silmek istiyorsunuz.
+
+Daha fazla bilgi için bkz. [hızlı başlangıç-bir Web sitesine dağıtma](quickstart-deploy-to-a-web-site.md). IIS 'de ASP.NET Core sorun giderme konusunda yardım için bkz. [Azure App Service ve IIS 'de ASP.NET Core sorun giderme](/aspnet/core/test/troubleshoot-azure-iis).
+
+## <a name="import-profile"></a>Profili içeri aktar
+
+IIS 'de veya Azure App Service yayımlarken bir profili içeri aktarabilirsiniz. Dağıtımı, bir *Yayımlama ayarları dosyası* (* \* . publishsettings*) kullanarak yapılandırabilirsiniz. Bir yayımlama ayarları dosyası IIS veya Azure App Service tarafından oluşturulur veya el ile oluşturulabilir ve sonra Visual Studio 'ya aktarılabilir.
+
+Bir yayımlama ayarları dosyası kullanımı, dağıtım yapılandırmasını basitleştirecek ve her dağıtım profilini el ile yapılandırarak bir ekip ortamında daha iyi çalışabilir.
+
+### <a name="when-to-choose-import-profile"></a>Profili içeri aktar ' ı seçme
+
+- IIS 'de yayımlıyorsunuz ve dağıtım yapılandırmasını basitleştirmek istiyorsunuz.
+- IIS 'ye veya Azure App Service yayımladınız ve dağıtım yapılandırmasını yeniden kullanmak veya aynı hizmete yayımlayan takım üyeleri için hızlandırmak istiyorsunuz.
+
+Daha fazla bilgi için, aşağıdakilere bakın:
+
+- [Yayımlama ayarlarını içeri aktarma ve IIS’ye dağıtma](tutorial-import-publish-settings-iis.md)
+- [Yayımlama ayarlarını içeri aktarma ve Azure’a dağıtma](tutorial-import-publish-settings-azure.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -128,5 +183,5 @@ Daha fazla bilgi için bkz. [hızlı başlangıç-bir Web sitesine dağıtma](qu
 - [Azure 'da ASP.NET Core uygulaması yayımlama](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - [Visual C++ üzerinde Dağıtım](/cpp/windows/deployment-in-visual-cpp)
 - [UWP uygulamalarını dağıtma](/windows/uwp/packaging/packaging-uwp-apps?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- [Web Dağıtımı kullanarak bir Node. js uygulamasını Azure 'da yayımlama](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+- [Web Dağıtımı kullanarak Azure 'da Node.js uygulaması yayımlama](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - [Azure App Service için bir Python uygulaması yayımlama](../python/publishing-python-web-applications-to-azure-from-visual-studio.md?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)

@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f85c17321defe08dc96ccc04bc9dea717e3b4183
-ms.sourcegitcommit: de98ed7edc81383e47b87ae6e61143fbbbe7bc56
+ms.openlocfilehash: ab0bbed64f9f85b8b508c3fe14fda4ec59d45f10
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88706522"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800963"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Nasıl yapılır: kod ölçümleri verileri oluşturma
 
@@ -72,7 +72,7 @@ Kod ölçümü kurallarının tetikleneceği eşikleri yapılandırabilirsiniz.
 
 ## <a name="calculate-code-metrics-menu-command"></a>Kod ölçümlerini hesapla menü komutu
 
-**Analyze**  >  **Kod ölçümlerini hesapla** menüsünü analiz ederek IDE 'deki açık projelerinizden biri veya tümü için kod ölçümleri oluşturun.
+**Analyze**  >  **Kod ölçümlerini hesapla** menüsünde bulunan açık projelerinizden biri veya tümü için kod ölçümleri oluşturun.
 
 ### <a name="generate-code-metrics-results-for-an-entire-solution"></a>Tüm çözüm için kod ölçümleri sonuçları oluşturma
 
@@ -80,7 +80,7 @@ Tüm çözüm için aşağıdaki yollarla kod ölçümleri sonuçları oluştura
 
 - Menü çubuğundan **Analyze**  >  çözüm için**kod ölçümlerini hesapla**Çözümle ' yi seçin  >  **For Solution**.
 
-- **Çözüm Gezgini**, çözüme sağ tıklayın ve ardından **kod ölçümlerini hesapla**' yı seçin.
+- **Çözüm Gezgini**' de, çözümü seçin ve tutun (veya sağ tıklayın) ve ardından **kod ölçümlerini hesapla**' yı seçin.
 
 - **Kod ölçümleri sonuçları** penceresinde, **çözüm Için kod ölçümlerini hesapla** düğmesini seçin.
 

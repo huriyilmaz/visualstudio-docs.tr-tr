@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 874d95b65b99af4b5a6b00d45101236f62db3df1
-ms.sourcegitcommit: f27084e64c79e6428746a20dda92795df996fb31
+ms.openlocfilehash: 1077e2cdae790fe8a7b7309b1e6427cd3ef81b48
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85769372"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800170"
 ---
 # <a name="how-to-run-code-analysis-manually-for-managed-code-requires-visual-studio-2019-version-165-or-later"></a>Nasıl yapılır: yönetilen kod için kod analizini el ile çalıştırma (Visual Studio 2019 sürüm 16,5 veya üzeri gerekir)
 Varsayılan olarak, .NET Compiler Platform ("Roslyn") kod Çözümleyicileri, canlı analizler ve derleme sırasında yazı yazarken C# veya Visual Basic kodunuzu analiz eder. Bu nedenle normalde Kod analizini el ile tetiklemeniz gerekmez. Ancak, Kod analizini el ile tetiklemek isteyebileceğiniz bazı senaryolar vardır:
@@ -26,8 +26,8 @@ Varsayılan olarak, .NET Compiler Platform ("Roslyn") kod Çözümleyicileri, ca
 
 ### <a name="run-code-analysis-manually"></a>Kod analizini el ile çalıştırma
 
-1. **Çözüm Gezgini**, projeye tıklayın.
+1. **Çözüm Gezgini**, projeyi seçin.
 
-2. **Çözümle** menüsünde, *Proje adı* **üzerinde Kod analizini Çalıştır** ' a tıklayın.
+2. **Çözümle** menüsünde, *Proje adı* **üzerinde Kod analizini Çalıştır** ' ı seçin.
 
 Kod Analizi, arka planda yürütülmeye başlayacak. Visual Studio durum çubuğunda ** \<project> ... için kod analizini çalıştıran** iletiyi sol alt köşeye doğru görmeniz gerekir. Kod Analizi tamamlandığında, durum iletisi **Için \<project> kod analizi tamamlandı **olarak değişecektir. Hata listesi, kısa bir süre önce tüm kod analizi Tanılama ile yenilenir.

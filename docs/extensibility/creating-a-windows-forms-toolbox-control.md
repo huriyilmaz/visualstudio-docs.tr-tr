@@ -1,5 +1,6 @@
 ---
 title: Windows Forms araç kutusu denetimi oluşturma | Microsoft Docs
+description: Bu izlenecek yol, Visual Studio SDK kullanarak basit bir sayaç denetimi oluşturmak için Windows Forms araç kutusu denetim şablonunun nasıl kullanılacağını gösterir.
 ms.date: 3/16/2019
 ms.topic: how-to
 helpviewer_keywords:
@@ -12,12 +13,12 @@ ms.author: anthc
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb0f0e66d623f53c641126f1e07edaa476d831ae
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: b8dd62c01bad3ac50a57062729fe96588a7ef5be
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248604"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801873"
 ---
 # <a name="create-a-windows-forms-toolbox-control"></a>Windows Forms araç kutusu denetimi oluşturma
 
@@ -35,7 +36,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
 1. Adlı bir VSıX projesi oluşturun `MyWinFormsControl` . VSıX proje şablonunu **Yeni proje** iletişim kutusunda, "VSIX" araması yaparak bulabilirsiniz.
 
-2. Proje açıldığında adlı bir **Windows Forms araç kutusu denetim** öğesi şablonu ekleyin `Counter` . **Çözüm Gezgini**, proje düğümünü seçin ve tutun (ya da sağ tıklayın) ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **Windows Forms araç kutusu denetimi** ' ni seçin.
+2. Proje açıldığında adlı bir **Windows Forms araç kutusu denetim** öğesi şablonu ekleyin `Counter` . **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** iletişim kutusunda, **Visual C#**  >  **genişletilebilirliği** ' ne gidin ve **Windows Forms araç kutusu denetimi** ' ni seçin.
 
 3. Bu, `ProvideToolboxControlAttribute` <xref:Microsoft.VisualStudio.Shell.RegistrationAttribute> denetimin **araç kutusuna**yerleştirileceği bir Kullanıcı denetımı ve dağıtım Için VSIX bildiriminde bir **Microsoft. VisualStudio. ToolboxControl** varlık girişi ekler.
 
@@ -45,7 +46,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
 #### <a name="to-build-the-user-interface"></a>Kullanıcı arabirimini oluşturmak için
 
-1. **Çözüm Gezgini**, tasarımcıda açmak için çift dokunduktan veya çift *tıklaCounter.cs* .
+1. **Çözüm Gezgini**, tasarımcıda açmak için *Counter.cs* öğesine çift tıklayın.
 
 2. **Buraya tıklayın!** Windows Forms araç kutusu denetim öğesi şablonunu eklediğinizde varsayılan olarak eklenen düğme.
 
@@ -67,7 +68,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
 #### <a name="to-code-the-user-control"></a>Kullanıcı denetimini kodlayın
 
-1. Kod penceresinde yük olay işleyicisini açmak için forma çift dokunun veya çift tıklayın.
+1. Kod penceresinde yük olay işleyicisini açmak için forma çift tıklayın.
 
 2. Olay işleyicisi yönteminin üzerinde, denetim sınıfındaki sayaç değerini depolamak için bir tamsayı ve aşağıdaki örnekte gösterildiği gibi görüntüleme metnini depolamak için bir dize oluşturun.
 
@@ -130,7 +131,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
     Çağıranlar, sayaç değerindeki değişikliklere yanıt vermek için bu olaya işleyiciler ekleyebilir.
 
-7. Tasarım görünümüne dönün ve olay işleyicisini oluşturmak için **Sıfırla** düğmesine çift dokunun veya çift tıklayın `btnReset_Click` . Ardından, aşağıdaki örnekte gösterildiği gibi doldurmanız gerekir.
+7. Tasarım görünümüne dönüp olay işleyicisini oluşturmak için **Sıfırla** düğmesine çift tıklayın `btnReset_Click` . Ardından, aşağıdaki örnekte gösterildiği gibi doldurmanız gerekir.
 
     ```csharp
     private void btnReset_Click(object sender, EventArgs e)
@@ -162,7 +163,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
 2. Visual Studio 'nun deneysel örneğinde bir **Windows Forms uygulama** projesi oluşturun.
 
-3. **Çözüm Gezgini**, zaten açık değilse tasarımcı 'da açmak için *Form1.cs* öğesine çift dokunun veya çift tıklayın.
+3. **Çözüm Gezgini**, zaten açık değilse Tasarımcıda açmak için *Form1.cs* öğesine çift tıklayın.
 
 4. **Araç kutusunda**, `Counter` denetimin **genel** bölümünde görüntülenmesi gerekir.
 
@@ -172,7 +173,7 @@ Windows Forms araç kutusu denetim şablonu tanımsız bir kullanıcı denetimi 
 
 7. Forma bir <xref:System.Windows.Forms.Button> Denetim sürükleyin ve sonra düğmenin adını ve metin özelliklerini olarak ayarlayın `Test` .
 
-8. Kod görünümünde *Form1.cs* açmak ve bir tıklama işleyicisi oluşturmak için düğmeye çift dokunun veya çift tıklayın.
+8. Kod görünümünde *Form1.cs* açmak ve bir tıklama işleyicisi oluşturmak için düğmeye çift tıklayın.
 
 9. Tıklama işleyicisinde öğesini çağırın `counter1.Increment()` .
 

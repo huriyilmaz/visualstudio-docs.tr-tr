@@ -7,12 +7,12 @@ ms.assetid: e2f2619c-7736-47e5-a066-5940d5994db9
 ms.date: 07/29/2020
 ms.topic: conceptual
 description: Visual Studio aboneliklerinde Microsoft yazılım başlıklarını bulmayı ve indirmeyi öğrenin
-ms.openlocfilehash: aa0784694b3407c621e8efb1916ed5fe41aee0c7
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: d1d885bbe9322f6d15cecff7e44d879aceb63d4c
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88248221"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801834"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde yazılım başlıkları indiriliyor
 Sahip olduğunuz Visual Studio aboneliğine bağlı olarak, kullanabileceğiniz çok çeşitli Microsoft yazılım başlıkları bulunabilir.  Bu makalede, aboneliğinizden en iyi şekilde yararlanmak için ihtiyacınız olan yazılımın nasıl konumlandırılmaları ve indirileceği açıklanır. 
@@ -22,7 +22,7 @@ Sahip olduğunuz Visual Studio aboneliğine bağlı olarak, kullanabileceğiniz 
 Aboneliğiniz, iş veya okul 'niz tarafından sağlanmışsa, abonelikler yöneticiniz, indirmelere erişip erişemeyeceğini denetler. İndirmelere erişimin devre dışı bırakılması, ürün anahtarlarına erişimi de devre dışı bırakır. İndirmelere ve ürün anahtarlarına erişiminiz yoksa ve bunları gerekmiyorsa [yöneticinize başvurun](contact-my-admin.md).
 
 > [!NOTE]
-> Office 365 ürün anahtarlarının kullanılabilirliğiyle ilgili bir sorun olduğunu biliyoruz.  Nedeni araştırıyoruz ve sorun çözüldüğünde bu makaleyi güncelleştireceğiz. 
+> Microsoft 365 ürün anahtarlarının kullanılabilirliğiyle ilgili bir sorun olduğunu biliyoruz.  Nedeni araştırıyoruz ve sorun çözüldüğünde bu makaleyi güncelleştireceğiz. 
 
 ## <a name="how-do-i-find-downloads-in-the-subscriber-portal"></a>Nasıl yaparım? abone portalında İndirmeleri bulamıyor musunuz?
 [İndirmeler](https://my.visualstudio.com/downloads/featured?wt.mc_id=o~msft~docs) sayfasını ziyaret ettiğinizde, gruplar halinde ürün türüne göre düzenlenmiş popüler indirmeleri görürsünüz.  Gösterilen popüler indirmelerden birini seçebilir veya sayfanın en üstündeki arama çubuğunu kullanarak herhangi bir ürünü arayabilirsiniz.

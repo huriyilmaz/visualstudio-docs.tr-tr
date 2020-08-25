@@ -1,5 +1,5 @@
 ---
-title: Office çözümleri geliştirmek için bilgisayarı yapılandırma
+title: Office çözümleri geliştirmek için bir bilgisayarı yapılandırma
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,44 +12,44 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e559ddfec8570077a78fe980632366b4a57605de
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7a0304c217599e790b8cfa9e738245927336470e
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62930958"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88801847"
 ---
-# <a name="configure-a-computer-to-develop-office-solutions"></a>Office çözümleri geliştirmek için bilgisayarı yapılandırma
+# <a name="configure-a-computer-to-develop-office-solutions"></a>Office çözümleri geliştirmek için bir bilgisayarı yapılandırma
 
-VSTO eklentileri ve Microsoft Office özelleştirmelerini oluşturmak için Visual Studio, .NET Framework ve Microsoft Office desteklenen bir sürümünü yükleyin.
+Microsoft Office için VSTO eklentileri ve özelleştirmeleri oluşturmak için, Visual Studio 'nun desteklenen bir sürümünü, .NET Framework ve Microsoft Office yüklemeyi yapın.
 
 |Yazılım|Desteklenen sürümler|
 |--------------|------------------------|
-|Visual Studio 2017| Herhangi bir sürümü ile **Office/SharePoint geliştirme** iş yükü.|
+|Visual Studio 2017| **Office/SharePoint geliştirme** iş yüküyle herhangi bir sürüm.|
 |.NET Framework|-.NET Framework 4 veya üzeri.|
-|Microsoft Office|<ul><li>Office Professional Plus için Office 365 dahil olmak üzere Office Paket sürümü.</li><li>Herhangi biri aşağıdaki tek başına uygulamalar:<br /><br /> <ul><li>Excel</li><li>InfoPath (Office 2013 ve Office 2010)</li><li>Outlook</li><li>PowerPoint</li><li>Project</li><li>Visio</li><li>Word</li></ul></li></ul><br /> Visual Basic for Applications (VBA) Office'in bir parçası yüklü olmalıdır. **Önemli:** Tıkla-Çalıştır Office 2010 uygulamalarının sürümleri desteklenmez.|
+|Microsoft Office|<ul><li>Office 'in kuruluş için Microsoft 365 uygulamalar dahil tüm paket sürümleri.</li><li>Aşağıdaki tek başına uygulamalardan herhangi biri:<br /><br /> <ul><li>Excel</li><li>InfoPath (yalnızca Office 2013 ve Office 2010)</li><li>Outlook</li><li>PowerPoint</li><li>Project</li><li>Visio</li><li>Word</li></ul></li></ul><br /> Visual Basic for Applications (VBA), Office 'in bir parçası olarak yüklenmelidir. **Önemli:** Office 2010 uygulamaları 'nın Tıkla-Çalıştır sürümleri desteklenmez.|
 
-Ayrıntılı yükleme adımları için bkz [nasıl yapılır: Office çözümleri geliştirmek için bilgisayarı yapılandırma](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md).
+Ayrıntılı yükleme adımları için bkz. [nasıl yapılır: bilgisayarı Office çözümleri geliştirmek üzere yapılandırma](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md).
 
-## <a name="if-project-templates-dont-appear-or-they-dont-work-in-visual-studio"></a>Proje şablonları görünmez ya da Visual Studio'da iş yok
+## <a name="if-project-templates-dont-appear-or-they-dont-work-in-visual-studio"></a>Proje şablonları görünmezse veya Visual Studio 'da çalışmadıklarında
 
-Visual Studio, .NET Framework ve Microsoft Office desteklenen bir sürümü yükleyin, ancak Office proje şablonları ya da Visual Studio'da görünür olmayan **yeni proje** iletişim kutusu veya bir kullanmaya çalıştığınızda bir hata alıyorsunuz aşağıdakileri denetleyin:
+Visual Studio 'nun desteklenen bir sürümünü, .NET Framework ve Microsoft Office yüklerseniz, ancak Office proje şablonları Visual Studio **Yeni proje** iletişim kutusunda görünmez veya bir hata alırsanız, aşağıdakileri kontrol edin:
 
-- Microsoft Office geliştirici araçları yüklü olduğundan emin olun.
+- Bilgisayarınızda Microsoft Office Geliştirici araçlarının yüklü olduğundan emin olun.
 
-     Office geliştirici araçları, Visual Studio'nun isteğe bağlı bir bileşenidir, ancak Visual Studio ile birlikte otomatik olarak yüklenir. Hangi özelliğin yükleneceğini belirterek Visual Studio yüklemesini özelleştirirseniz, seçtiğiniz emin **Microsoft Office geliştirici araçları** araçlarını yüklemek için Kurulum sırasında.
+     Office geliştirici araçları, Visual Studio 'nun isteğe bağlı bir bileşenidir, ancak Visual Studio ile birlikte otomatik olarak yüklenir. Yüklenecek özellikleri belirterek Visual Studio yüklemesini özelleştirirseniz, araçları yüklemek için kurulum sırasında **Microsoft Office geliştirici araçları** seçtiğinizden emin olun.
 
-     Bu araçların yüklendiğinden emin olmak için Visual Studio Kurulum programını başlatın ve seçin **Değiştir** düğmesi. Seçin **Microsoft Office geliştirici araçları** onay kutusunu işaretleyin ve ardından **güncelleştirme** düğmesi.
+     Bu araçların yüklendiğinden emin olmak için Visual Studio Kurulum programını başlatın ve **Değiştir** düğmesini seçin. **Microsoft Office geliştirici araçları** onay kutusunu seçin ve ardından **Güncelleştir** düğmesini seçin.
 
-- Tıkla-Çalıştır tarafından dağıtılan Office sürümü çalıştırmadığınızı emin olun. Bkz: [nasıl yapılır: Outlook bir bilgisayardaki bir Tıkla-Çalıştır uygulaması olup olmadığını](/previous-versions/office/developer/office-2010/ff864733(v=office.14)).
+- Office 'in Tıkla-Çalıştır ile sunulan bir sürümünü çalıştırdığınızdan emin olun. Bkz. [nasıl yapılır: Outlook 'un bir bilgisayarda bir Tıkla-Çalıştır uygulaması olup olmadığını doğrulama](/previous-versions/office/developer/office-2010/ff864733(v=office.14)).
 
-- Microsoft Office yalnızca bir sürümü çalıştırdığınızdan emin olun.
+- Microsoft Office yalnızca bir sürümünü çalıştırıyor olduğunuzdan emin olun.
 
-Sorun yaşamaya devam ederseniz bkz [Office çözümlerindeki hatalar için ek destek](../vsto/additional-support-for-errors-in-office-solutions.md).
+Sorun yaşamaya devam ederseniz, bkz. [Office çözümlerinde hatalar Için ek destek](../vsto/additional-support-for-errors-in-office-solutions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Başlama &#40;Visual Studio'da Office geliştirme&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
-- [Nasıl yapılır: Office çözümleri geliştirmek için bilgisayarı yapılandırma](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)
-- [Nasıl yapılır: Office çalışma zamanı yeniden dağıtılabilir için Visual Studio Araçları yükleme](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)
-- [Nasıl yapılır: Office birincil birlikte çalışma derlemelerini yükleme](../vsto/how-to-install-office-primary-interop-assemblies.md)
-- [Office uygulaması ve proje türüne göre kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md)
+- [Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Nasıl yapılır: Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)
+- [Nasıl yapılır: Office çalışma zamanı yeniden dağıtılabilir için Visual Studio Araçları yüklemesi](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)
+- [Nasıl yapılır: Office birincil birlikte çalışma derlemelerini yüklemek](../vsto/how-to-install-office-primary-interop-assemblies.md)
+- [Office uygulaması ve proje türü tarafından kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md)

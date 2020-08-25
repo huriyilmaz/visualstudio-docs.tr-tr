@@ -9,20 +9,20 @@ ms.workload: azure-vs
 ms.topic: how-to
 ms.date: 08/13/2020
 ms.author: ghogen
-ms.openlocfilehash: 4a1b7bcc8b95b30ea3737dc2561c5abb280e2b5c
-ms.sourcegitcommit: 3ef987e99616c3eecf4731bf5ac89e16238e68aa
+ms.openlocfilehash: f2f55a149420205435d9f64ea1f66c8c6854ec38
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88639460"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800521"
 ---
 # <a name="adding-azure-storage-by-using-visual-studio-connected-services"></a>Visual Studio bağlı hizmetler 'i kullanarak Azure depolama ekleme
 
 Visual Studio ile, **bağlı hizmetler** özelliğini kullanarak aşağıdakilerden herhangi birini Azure depolama 'ya bağlayabilirsiniz:
 
 - .NET Framework konsol uygulaması
-- ASP.NET MVC (.NET Framework) 
-- ASP.NET Çekirdeği
+- ASP.NET MVC (.NET Framework)
+- ASP.NET Core
 - .NET Core (konsol uygulaması, WPF, Windows Forms, sınıf kitaplığı dahil)
 - .NET Core çalışan rolü
 - Azure İşlevleri
@@ -34,7 +34,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
 > [!NOTE]
 > Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio bağlı hizmetler](/visualstudio/mac/connected-services)' i inceleyin.
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Azure iş yükü yüklü olan Visual Studio.
 - Desteklenen türlerden birinin projesi
@@ -51,7 +51,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
 1. **Bağlı hizmetler** sayfasında, **Azure depolama ile bulut depolama**' yı seçin.
 
-    ![Azure depolama ekleme](./media/vs-azure-tools-connected-services-storage/add-azure-storage.png)
+    ![Azure Depolama ekleme](./media/vs-azure-tools-connected-services-storage/add-azure-storage.png)
 
 1. **Azure depolama** iletişim kutusunda, var olan bir depolama hesabını seçin ve **Ekle**' yi seçin.
 
@@ -86,7 +86,7 @@ Bağlı hizmet işlevselliği, gerekli tüm başvuruları ve bağlantı kodları
 
 1. **Bağımlılık Ekle** sayfasında **Azure Storage**' ı seçin.
 
-    ![Azure depolama ekleme](./media/vs-azure-tools-connected-services-storage/vs-2019/add-azure-storage.png)
+    ![Azure Depolama ekleme](./media/vs-azure-tools-connected-services-storage/vs-2019/add-azure-storage.png)
 
     Henüz oturum açmadıysanız Azure hesabınızda oturum açın. Bir Azure hesabınız yoksa, [ücretsiz deneme](https://azure.microsoft.com/account/free)için kaydolabilirsiniz.
 

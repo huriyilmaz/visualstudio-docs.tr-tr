@@ -8,12 +8,12 @@ ms.topic: how-to
 ms.workload: azure-vs
 ms.date: 03/06/2017
 ms.author: mikejo
-ms.openlocfilehash: d70f2038881cd422b9c5a1015c4f88a49f2a3c9a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.openlocfilehash: 0a6bbf5c846007cb1fa8d8cad91aa252f3d06a72
+ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85280589"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88800378"
 ---
 # <a name="using-emulator-express-to-run-and-debug-an-azure-cloud-service-on-a-local-machine"></a>Emulator Express kullanarak Azure bulut hizmetini yerel makinede çalıştırma ve hatalarını ayıklama
 Öykünücü Express 'i kullanarak, Visual Studio 'Yu yönetici olarak çalıştırmadan bir bulut hizmetini test edebilir ve hatalarını ayıklayabilirsiniz. Bulut hizmetinizin gereksinimlerine bağlı olarak, proje ayarlarınızı öykünücü Express ya da tam öykünücü kullanacak şekilde ayarlayabilirsiniz. Tam öykünücü hakkında daha fazla bilgi için bkz. [Işlem öykünücüsünde Azure uygulaması çalıştırma](/azure/storage/common/storage-use-emulator).
@@ -23,7 +23,7 @@ Azure SDK 2,3 veya sonraki sürümlerde bir Azure projesi oluşturduğunuzda, ö
 
 1. Visual Studio 'da bir Azure bulut hizmeti projesi oluşturun veya açın.
 
-1. **Çözüm Gezgini**, projeye sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
+1. Çözüm Gezgini, projeye sağ tıklayın ve bağlam menüsünden **Özellikler**' i seçin.
 
 1. Projeler Özellikler sayfasında, **Web** sekmesini seçin.
 
