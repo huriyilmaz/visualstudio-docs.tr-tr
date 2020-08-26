@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab0bbed64f9f85b8b508c3fe14fda4ec59d45f10
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 145525dc12070d98dae83d592ae86a675bb605d2
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800963"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893417"
 ---
 # <a name="how-to-generate-code-metrics-data"></a>Nasıl yapılır: kod ölçümleri verileri oluşturma
 
@@ -62,7 +62,7 @@ Kod ölçümü kurallarının tetikleneceği eşikleri yapılandırabilirsiniz.
 
    Bu örnekte, [CA1502](ca1502.md) kuralı, yöntemin döngüsel karmaşıklığı 10 ' dan büyük olduğunda tetikleneceği şekilde yapılandırılmıştır.
 
-3. Visual Studio 'nun **Özellikler** penceresinde veya proje dosyasında, yapılandırma dosyasının yapı eylemini [**AdditionalFiles**](../ide/build-actions.md#build-action-values)olarak işaretleyin. Örnek:
+3. Visual Studio 'nun **Özellikler** penceresinde veya proje dosyasında, yapılandırma dosyasının yapı eylemini [**AdditionalFiles**](../ide/build-actions.md#build-action-values)olarak işaretleyin. Örneğin:
 
    ```xml
    <ItemGroup>
@@ -72,7 +72,7 @@ Kod ölçümü kurallarının tetikleneceği eşikleri yapılandırabilirsiniz.
 
 ## <a name="calculate-code-metrics-menu-command"></a>Kod ölçümlerini hesapla menü komutu
 
-**Analyze**  >  **Kod ölçümlerini hesapla** menüsünde bulunan açık projelerinizden biri veya tümü için kod ölçümleri oluşturun.
+**Analyze**  >  **Kod ölçümlerini hesapla** menüsünü analiz ederek IDE 'deki açık projelerinizden biri veya tümü için kod ölçümleri oluşturun.
 
 ### <a name="generate-code-metrics-results-for-an-entire-solution"></a>Tüm çözüm için kod ölçümleri sonuçları oluşturma
 
@@ -80,7 +80,7 @@ Tüm çözüm için aşağıdaki yollarla kod ölçümleri sonuçları oluştura
 
 - Menü çubuğundan **Analyze**  >  çözüm için**kod ölçümlerini hesapla**Çözümle ' yi seçin  >  **For Solution**.
 
-- **Çözüm Gezgini**' de, çözümü seçin ve tutun (veya sağ tıklayın) ve ardından **kod ölçümlerini hesapla**' yı seçin.
+- **Çözüm Gezgini**, çözüme sağ tıklayın ve ardından **kod ölçümlerini hesapla**' yı seçin.
 
 - **Kod ölçümleri sonuçları** penceresinde, **çözüm Için kod ölçümlerini hesapla** düğmesini seçin.
 
@@ -111,7 +111,7 @@ C# ve .NET Framework, .NET Core ve .NET Standard uygulamaları için Visual Basi
 
 ### <a name="microsoftcodeanalysismetrics-nuget-package"></a>Microsoft. CodeAnalysis. ölçümler NuGet paketi
 
-Komut satırından kod ölçüm verileri oluşturmanın en kolay yolu, [Microsoft. CodeAnalysis. ölçümler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) NuGet paketini yüklemesidir. Paketini yükledikten sonra, `msbuild /t:Metrics` proje dosyanızı içeren dizininden çalıştırın. Örnek:
+Komut satırından kod ölçüm verileri oluşturmanın en kolay yolu, [Microsoft. CodeAnalysis. ölçümler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.Metrics/) NuGet paketini yüklemesidir. Paketini yükledikten sonra, `msbuild /t:Metrics` proje dosyanızı içeren dizininden çalıştırın. Örneğin:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics
@@ -134,7 +134,7 @@ Build succeeded.
     0 Error(s)
 ```
 
-Öğesini belirterek çıkış dosyası adını geçersiz kılabilirsiniz `/p:MetricsOutputFile=<filename>` . Ayrıca, ' i belirterek [eski stil](#previous-versions) kod ölçümleri verilerini de alabilirsiniz `/p:LEGACY_CODE_METRICS_MODE=true` . Örnek:
+Öğesini belirterek çıkış dosyası adını geçersiz kılabilirsiniz `/p:MetricsOutputFile=<filename>` . Ayrıca, ' i belirterek [eski stil](#previous-versions) kod ölçümleri verilerini de alabilirsiniz `/p:LEGACY_CODE_METRICS_MODE=true` . Örneğin:
 
 ```shell
 C:\source\repos\ClassLibrary3\ClassLibrary3>msbuild /t:Metrics /p:LEGACY_CODE_METRICS_MODE=true /p:MetricsOutputFile="Legacy.xml"
@@ -293,7 +293,7 @@ NuGet paketini yüklemek istemiyorsanız, çalıştırılabilir *Metrics.exe* do
 
 #### <a name="metricsexe-usage"></a>Metrics.exe kullanımı
 
-*Metrics.exe*çalıştırmak için, bağımsız değişken olarak bir proje veya çözüm ve bır çıkış XML dosyası sağlayın. Örnek:
+*Metrics.exe*çalıştırmak için, bağımsız değişken olarak bir proje veya çözüm ve bır çıkış XML dosyası sağlayın. Örneğin:
 
 ```shell
 C:\>Metrics.exe /project:ConsoleApp20.csproj /out:report.xml

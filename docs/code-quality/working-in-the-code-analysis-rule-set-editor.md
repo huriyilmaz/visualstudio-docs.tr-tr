@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 796818d376df477df84f845b5b0a17ace60bd1f2
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: d1e53df97c0535f59d0b96e9608ad55f2cb5ab21
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801548"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893313"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Kod analizi kural kümesi düzenleyicisini kullanma
 
@@ -29,7 +29,7 @@ Aşağıdaki tabloda önem derecesi seçenekleri gösterilmektedir:
 |Hata|**Hata listesi** ve derleme zamanında bir hata oluşturur.|
 |Bilgi|**Hata listesi**bir ileti oluşturur.|
 |Gizli|İhlalin kullanıcıya görünür değil. Ancak, bu, ihlalin ihlal olduğu konusunda bilgilendirilir.|
-|Yok|Kural bastırılır. Kural, kuralın kural kümesinden kaldırılmış olduğu durumla aynıdır.|
+|Hiçbiri|Kural bastırılır. Kural, kuralın kural kümesinden kaldırılmış olduğu durumla aynıdır.|
 
 Düzenleyici, kuralları belirttiğiniz bir kural kümesi alanına göre gruplandıran bir ağaç yapısında görüntüler. Kural kümesine kural eklemek veya kuralı kaldırmak için aşağıdaki adımlardan birini veya birkaçını yapın:
 
@@ -38,7 +38,7 @@ Düzenleyici, kuralları belirttiğiniz bir kural kümesi alanına göre gruplan
    > [!TIP]
    > Kuralların **grupta gruplandırma ölçütü** açılır.
 
-- Bir grubun **eylem** alanında, gruptaki tüm kurallara uygulanacak eylemi belirtin.
+- Bir grubun **eylem** alanına tıklayın, gruptaki tüm kurallara uygulanacak eylemi belirtin.
 
 - Tek bir kuralın onay kutusunu seçin veya temizleyin. Bir kuralın onay kutusunu seçtiğinizde, kural **Uyarı** eylemine ayarlanır.
 

@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 22f6f80a7e4c8c8c3f91fa436361ff37405893bd
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: d789299212ec7420f40135dd655056f16b6e4f35
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800976"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893352"
 ---
 # <a name="install-fxcop-analyzers-in-visual-studio"></a>Visual Studio 'da FxCop çözümleyicileri 'ni yükler
 
@@ -28,7 +28,7 @@ Bu FxCop çözümleyicileri 'ni, Visual Studio 'ya bir NuGet paketi veya VSıX u
 
 Visual Studio 2019 sürüm 16,3 ve sonraki sürümlerde, [Microsoft. CodeAnalysis. Fxcopçözümleyiciler](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet paketini doğrudan projenin kod analizi özellikleri sayfasından yükleyebilirsiniz:
 
-1. **Çözüm Gezgini**' de proje düğümünde sağ tıklayın (veya Select ve Hold), **Özellikler**' i seçin ve ardından **Kod Analizi** sekmesine gidin.
+1. **Çözüm Gezgini**' de proje düğümüne sağ tıklayın, **Özellikler**' i seçin ve ardından **Kod Analizi** sekmesini seçin.
 
    ![Visual Studio 'da Özellikler sayfasından FxCop çözümleyicileri paketini yükler](media/install-fxcop-properties-page.png)
 
@@ -72,7 +72,7 @@ Visual Studio sürümünüz için FxCop çözümleyicileri paketinin hangi sür�
 
 | Visual Studio sürüm | FxCop Çözümleyicisi paket sürümü |
 | - | - |
-| Visual Studio 2019 (tüm sürümler) | [sürümü](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) | 
+| Visual Studio 2019 (tüm sürümler) | [sürümü](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) |
 | Visual Studio 2017 sürüm 15,9 | [2.9.10](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.10) |
 | Visual Studio 2017 sürüm 15,5-15,8 | [2.6.4](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.4) |
 | Visual Studio 2017 sürüm 15,3-15,4 | [2.3.0-Beta1](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.3.0-beta1) |

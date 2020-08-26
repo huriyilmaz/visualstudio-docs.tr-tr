@@ -8,12 +8,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a190790b915ac8dd011bc9843fe8abdf2d7381ae
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.openlocfilehash: 799d27716e7ab2dd621dce04375093f4aff375d7
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88249580"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893365"
 ---
 # <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>Nasıl yapılır: XSD şemasını temel alan XML belgesi oluşturma
 
@@ -43,7 +43,7 @@ Ayrıca, `xs:base64Binary` içeriğin yalnızca bu tür için şemada numaraland
 
 1. [Nasıl yapılır: xsd şema dosyası oluşturma ve düzenleme](../xml-tools/how-to-create-and-edit-an-xsd-schema-file.md)bölümündeki adımları izleyin.
 
-2. [XML şeması Gezgini](../xml-tools/xml-schema-explorer.md)' nde, Genel öğesini seçin ve tutun (veya sağ tıklayın) `PurchaseOrder` ve **örnek XML oluştur**' u seçin.
+2. [XML şema Gezgini](../xml-tools/xml-schema-explorer.md)' nde, Genel öğesine sağ tıklayın `PurchaseOrder` ve **örnek XML oluştur**' u seçin.
 
      Bu seçeneği belirlediğinizde, PurchaseOrder. Aşağıdaki örnek XML içeriğine sahip *XML* dosyası oluşturulacak ve XML düzenleyicisinde açılacak:
 

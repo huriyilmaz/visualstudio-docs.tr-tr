@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: edb9cb30be9d62a533e6d011cbb8d0436ef898b1
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: 2b6dd5269868f02582472bee86f19d23719c9a5b
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801613"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893430"
 ---
 # <a name="use-code-analyzers"></a>Kod Çözümleyicileri kullanma
 
@@ -28,11 +28,11 @@ ms.locfileid: "88801613"
 
 ![Çözüm Gezgini içinde düğüm Çözümleyicileri](media/analyzers-expanded-in-solution-explorer.png)
 
-**Özellikler** penceresinde, açıklaması ve varsayılan önem derecesi dahil olmak üzere bir tanı özelliklerini görüntüleyebilirsiniz. Özellikleri görüntülemek için, kural üzerinde sağ tıklayın (veya seçip tut), **Özellikler**' i seçin veya kuralı seçin ve ardından **alt** + **ENTER**' u seçin.
+**Özellikler** penceresinde, açıklaması ve varsayılan önem derecesi dahil olmak üzere bir tanı özelliklerini görüntüleyebilirsiniz. Özellikleri görüntülemek için kurala sağ tıklayın ve **Özellikler**' i seçin veya kuralı seçin ve ardından **alt** + **ENTER**tuşuna basın.
 
 ![Özellikler penceresi tanılama özellikleri](media/analyzer-diagnostic-properties.png)
 
-Bir Tanılamanın çevrimiçi belgelerini görmek için, tanılama üzerinde sağ tıklayın (veya seçin ve basılı tutun) ve **Yardımı görüntüle**' yi seçin.
+Bir Tanılamanın çevrimiçi belgelerini görmek için, tanılamayı sağ tıklatın ve **Yardımı görüntüle**' yi seçin.
 
 **Çözüm Gezgini** içindeki her bir Tanılamanın yanındaki simgeler, düzenleyicide açtığınızda kural kümesinde gördüğünüz simgelere karşılık gelir:
 
@@ -66,7 +66,7 @@ Aşağıdaki tabloda farklı önem derecesi seçenekleri gösterilmektedir:
 | Uyarı | `warning` | İhlaller Hata Listesi ve komut satırı derleme çıkışında *Uyarı* olarak görünür, ancak derlemelerin başarısız olmasına neden olmaz. | Sorunlu kodun yeşil bir dalgalı çizgi ile altı çizilir ve kaydırma çubuğunda küçük bir yeşil kutu ile işaretlenir. |
 | Bilgi | `suggestion` | İhlaller, komut satırı derleme çıktısında değil, Hata Listesi *iletiler* olarak görünür. | Sorunlu kodun gri dalgalı çizgi ile altı çizilir ve kaydırma çubuğundaki küçük bir gri kutusuyla işaretlenir. |
 | Gizli | `silent` | Kullanıcıya görünür değil. | Kullanıcıya görünür değil. Ancak tanılama, IDE tanılama altyapısına bildirilir. |
-| Yok | `none` | Tamamen gizlendi. | Tamamen gizlendi. |
+| Hiçbiri | `none` | Tamamen gizlendi. | Tamamen gizlendi. |
 | Varsayılan | `default` | Kuralın varsayılan önem derecesine karşılık gelir. Bir kural için varsayılan değerin ne olduğunu belirlemek için Özellikler penceresi bakın. | Kuralın varsayılan önem derecesine karşılık gelir. |
 
 Kod düzenleyicisinin aşağıdaki ekran görüntüsünde, farklı önem derecelerine sahip üç farklı ihlal gösterilmektedir. Sağ taraftaki kaydırma çubuğundaki dalgalı çizgi ve küçük, renkli bir karenin rengine dikkat edin.
@@ -225,7 +225,7 @@ Visual Studio, bir kuralın önem derecesini [hızlı eylemler](../ide/quick-act
 
 Visual Studio aynı zamanda bir kuralın önem derecesini hata listesi bağlam menüsünden yapılandırmak için kullanışlı bir yol sağlar.
 
-1. Bir ihlal oluştuktan sonra, hata listesindeki tanılama girdisini sağ tıklatın (veya seçin ve tutun).
+1. Bir ihlal oluştuktan sonra, hata listesindeki tanılama girdisini sağ tıklatın.
 
 2. Bağlam menüsünde **önem derecesi ayarla**' yı seçin.
 
@@ -242,12 +242,12 @@ Visual Studio aynı zamanda bir kuralın önem derecesini hata listesi bağlam m
 
 ### <a name="set-rule-severity-from-solution-explorer"></a>Kural önem derecesini Çözüm Gezgini ayarla
 
-1. Çözüm Gezgini, **başvuru**  >  **Çözümleyicileri** (veya **Dependencies**  >  .NET Core projeleri için bağımlılıklar**Çözümleyicileri** ) öğesini seçin.
+1. Çözüm Gezgini, **başvuru**  >  **Çözümleyicileri** (veya **Dependencies**  >  .NET Core projeleri için bağımlılıklar**Çözümleyicileri** ) öğesini genişletin.
 
 2. Önem derecesini ayarlamak istediğiniz kuralı içeren derlemeyi genişletin.
 
 ::: moniker range=">=vs-2019"
-3. Kuralı sağ tıklatın (veya seçip tutun) ve **önem derecesi ayarla**' yı seçin. Bağlam menüsünde önem derecesi seçeneklerinden birini seçin.
+3. Kurala sağ tıklayın ve **önem derecesi ayarla**' yı seçin. Bağlam menüsünde önem derecesi seçeneklerinden birini seçin.
 
    Visual Studio, kuralı istenen düzeye yapılandırmak için EditorConfig dosyasına bir giriş ekler. Projeniz bir EditorConfig dosyası yerine bir RuleSet dosyası kullanıyorsa, ' önem derecesi girişi RuleSet dosyasına eklenir.
 
@@ -256,7 +256,7 @@ Visual Studio aynı zamanda bir kuralın önem derecesini hata listesi bağlam m
 ::: moniker-end
 
 ::: moniker range="vs-2017"
-3. Kuralı sağ tıklatın (veya seçin ve tutun) ve **kural kümesi önem derecesi ayarla**' yı seçin. Bağlam menüsünde önem derecesi seçeneklerinden birini seçin.
+3. Kurala sağ tıklayın ve **kural kümesi önem derecesi ayarla**' yı seçin. Bağlam menüsünde önem derecesi seçeneklerinden birini seçin.
 
    Kuralın önem derecesi, etkin kural kümesi dosyasına kaydedilir.
 ::: moniker-end
@@ -267,7 +267,7 @@ Visual Studio aynı zamanda bir kuralın önem derecesini hata listesi bağlam m
 
 1. Etkin kural kümesi dosyasını aşağıdaki yollarla açın:
 
-- **Çözüm Gezgini**, dosyayı çift tıklatın, çözümleyiciler düğümüne sağ tıklayıp (veya Select ve **Hold)**  >  **Analyzers** , **etkin kural kümesini aç**' ı seçin.
+- **Çözüm Gezgini**' de, dosyaya **çift tıklayın,** çözümleyiciler öğesine sağ tıklayın  >  **Analyzers** ve **etkin kural kümesini aç**' ı seçin.
 - Projenin **Kod Analizi** Özellik sayfasında **Aç** ' ı seçin.
 
   Kural kümesini ilk kez düzenliyorsanız, Visual Studio varsayılan kural kümesi dosyasının bir kopyasını oluşturur, * \<projectname> . RuleSet*olarak adlandırır ve bunu projenize ekler. Bu özel kural kümesi, projeniz için etkin kural kümesi de olur.
@@ -336,13 +336,13 @@ Kural ihlallerini bastırmak için birden çok yol vardır:
 
 - **Kod düzenleyicisinden**
 
-  İmleci bir kod satırına yerleştirin ve **Ctrl** + **hızlı eylemler** menüsünü açmak için CTRL**dönemi (.)** seçeneğini belirleyin. **Suppress CAXXXX**  >  **Kaynak/gizleme dosyasında**caxxxx 'i Gizle ' yi seçin.
+  İmleci kod satırına yerleştirin ve **Ctrl** + **hızlı eylemler** menüsünü açmak için CTRL**dönemi (.)** tuşuna basın. **Suppress CAXXXX**  >  **Kaynak/gizleme dosyasında**caxxxx 'i Gizle ' yi seçin.
 
   ![Hızlı Eylemler menüsünden tanılamayı gösterme](media/suppress-diagnostic-from-editor.png)
 
 - **Hata listesi**
 
-  Bastırmak istediğiniz kuralları seçin, ardından sağ tıklayıp (veya seçip tut) **Suppress**  >  **kaynak/gizleme dosyasında**Gizle ' yi seçin.
+  Gizlemek istediğiniz kuralları seçin ve ardından sağ tıklayıp **Suppress**  >  **kaynak/gizleme dosyasında**Gizle ' yi seçin.
 
   - **Kaynakta**bastırdığınızda, **Değişiklikleri Önizle** iletişim kutusu açılır ve C# [#pragma warning](/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning) veya kaynak koda eklenen Visual Basic [#Disable uyarı](/dotnet/visual-basic/language-reference/directives/directives) yönergesinin önizlemesini gösterir.
 

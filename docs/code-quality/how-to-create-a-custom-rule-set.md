@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 643ee48f798c90851d5ff323685070f9d7268f04
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: a4659efef9b233284a593fecd5c8404cb2650b0c
+ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88801041"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88893274"
 ---
 # <a name="customize-a-rule-set"></a>Bir kural kümesini özelleştirme
 
@@ -26,9 +26,9 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 Özel bir kural kümesi oluşturmak için, **kural kümesi düzenleyicisinde**yerleşik bir kural kümesi açabilirsiniz. Buradan, belirli kuralları ekleyebilir veya kaldırabilir ve bir kural ihlal edildiğinde oluşan eylemi değiştirebilirsiniz &mdash; , örneğin bir uyarı veya hata gösterir.
 
-1. **Çözüm Gezgini**' de, projeyi seçin ve tutun (veya sağ tıklayın) ve ardından **Özellikler**' i seçin.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-2. **Özellikler** sayfalarında **Kod Analizi** sekmesine gidin.
+2. **Özellikler** sayfalarında **Kod Analizi** sekmesini seçin.
 
 ::: moniker range="vs-2017"
 
@@ -57,7 +57,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 **Yeni dosya** iletişim kutusundan yeni bir kural kümesi dosyası oluşturabilirsiniz:
 
-1. **Dosya**  >  **Yeni**  >  **Dosya**' yı seçin veya **CTRL** + **N**' yi seçin.
+1. **Dosya**  >  **Yeni**  >  **Dosya**' yı seçin veya **CTRL** + **N**tuşuna basın.
 
 2. **Yeni dosya** iletişim kutusunda, sol taraftaki **genel** kategorisini seçin ve ardından **kod analizi kural kümesi**' ni seçin.
 
@@ -70,9 +70,9 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 > [!NOTE]
 > Aşağıdaki yordam, **Kod Analizi** özelliği sekmesi olmayan .NET Core projeleri için geçerlidir.
 
-1. **Çözüm Gezgini**' de, projeyi seçin ve tutun (veya sağ tıklayın) ve ardından **Özellikler**' i seçin.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-2. **Özellikler** sayfalarında **Kod Analizi** sekmesine gidin.
+2. **Özellikler** sayfalarında **Kod Analizi** sekmesini seçin.
 
 ::: moniker range="vs-2017"
 
@@ -98,7 +98,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
 ## <a name="rule-precedence"></a>Kural önceliği
 
-- Aynı kural, farklı önem derecelerine sahip bir kural kümesinde iki veya daha fazla kez listeleniyorsa, derleyici bir hata oluşturur. Örnek:
+- Aynı kural, farklı önem derecelerine sahip bir kural kümesinde iki veya daha fazla kez listeleniyorsa, derleyici bir hata oluşturur. Örneğin:
 
    ```xml
    <RuleSet Name="Rules for ClassLibrary21" Description="Code analysis rules for ClassLibrary21.csproj." ToolsVersion="15.0">
@@ -113,7 +113,7 @@ Kod analizi için belirli proje ihtiyaçlarını karşılamak üzere özel bir k
 
    **CA0063: ' \[ sizin]. RuleSet ' kural kümesi dosyası veya bağımlı kural kümesi dosyalarından biri yüklenemedi. Dosya, kural kümesi şemasıyla uyumlu değil.**
 
-- Kural kümesi bir **içerme** etiketi kullanarak ayarlanmış bir alt kural içeriyorsa ve alt ve üst kural her ikisi de aynı kuralı, ancak farklı önem derecelerine sahip olarak ayarlarsa, üst kural kümesindeki önem derecesi önceliklidir. Örnek:
+- Kural kümesi bir **içerme** etiketi kullanarak ayarlanmış bir alt kural içeriyorsa ve alt ve üst kural her ikisi de aynı kuralı, ancak farklı önem derecelerine sahip olarak ayarlarsa, üst kural kümesindeki önem derecesi önceliklidir. Örneğin:
 
    ```xml
    <!-- Parent rule set -->
