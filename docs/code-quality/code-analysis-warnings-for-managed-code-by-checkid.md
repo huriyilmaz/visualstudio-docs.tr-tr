@@ -295,18 +295,18 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 485d3a066ec7d6044082367c36136db8bea03362
-ms.sourcegitcommit: 016bcdc7cd3e3619457beb321800e98544efb6c9
+ms.openlocfilehash: 61c15689e92132d4e3e089823bc94fc90852d4ed
+ms.sourcegitcommit: c4212f40df1a16baca1247cac2580ae699f97e4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89091492"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89176071"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>CheckId tarafından yönetilen kod için kod analizi uyarıları
 
 Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen kodu için Kod Çözümleyicisi uyarılarını listeler.
 
-| CheckId | Uyarı | Açıklama |
+| CheckId | Uyarı | Description |
 |---------| - | - |
 | CA1000 | [CA1000: Genel türlerde statik üyeler belirtme](../code-quality/ca1000.md) | Genel türün statik üyesi çağrıldığında tür bağımsız değişkeni tür için belirlenmelidir. Destek çıkarımı desteklenmeyen genel örnek üyesi çağrıldığında tür bağımsız değişkeni üye için belirlenmelidir. Bu iki durumda tür bağımsız değişkenini belirleyen sözdizimi farklıdır ve kolaylıkla karıştırılır. |
 | CA1001 | [CA1001: Atılabilen alanlara sahip türler atılabilir olmalıdır](../code-quality/ca1001.md) | Bir sınıf System.IDisposable tipi örnek alanını derler ve uygular ve sınıf IDisposable'ı uygulamaz. IDisposable alanını derleyen sınıf, yönetilmeyen kaynağı dolaylı yoldan sahiplenir ve IDisposable arayüzünü uygulamalıdır. |
@@ -577,6 +577,7 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA2245 | [CA2245: Bir özelliği kendisine atama](../code-quality/ca2245.md) | Bir özellik yanlışlıkla kendisine atandı. |
 | CA2246 | [CA2246: Sembol ve üyesini aynı deyime atama](../code-quality/ca2246.md) | Bir sembol ve üyesini atama, diğer bir deyişle, bir alan veya özellik, aynı deyimde önerilmez. Üye erişiminin, bu deyimdeki atamadan önce simgenin eski değerini veya atamasından yeni değeri kullanması amaçlandıysa, bu, net değildir. |
 | CA2247 | [CA2247: TaskCompletionSource oluşturucusuna geçirilen bağımsız değişken TaskContinuationOptions numaralandırması yerine TaskCreationOptions sabit listesi olmalıdır.](../code-quality/ca2247.md) | TaskCompletionSource, temel alınan görevi denetleyen TaskCreationOptions ve görevde saklanan nesne durumunu alan oluşturucuların bulunduğu oluşturuculara sahiptir.  TaskCreationOptions yerine bir TaskContinuationOptions 'ı yanlışlıkla geçirmek, çağrının durum olarak kabul edilmesine neden olur. |
+| CA2249 | [CA2249: CA2249: String. IndexOf yerine String. Contains kullanmayı düşünün](../code-quality/ca2249.md) | Bir alt `string.IndexOf` dizenin varlığını/yokluğunu denetlemek için sonucun kullanıldığı yere yapılan çağrılar ile değiştirilebilir `string.Contains` . |
 | CA5122 | [CA5122 P/Invoke bildirimleri güvenli kritik olmamalıdır](../code-quality/ca5122.md) | Güvenlik duyarlı işlem gerçekleştirildiğinde yöntemler SecuritySafeCritical olarak işaretlenir ancak saydam mod kullanılarak da güvenli olur. Saydam kod, P/Invoke aracılığıyla yerel kodu hiçbir zaman doğrudan çağırmayabilir. Bu nedenle, P/Invoke güvenlik güvenli kritik olarak işaretleme çağırmak için saydam kodu etkinleştirmez ve güvenlik çözümlemesi için yanıltıcıdır. |
 | CA5359 | [CA5359 sertifika doğrulamayı devre dışı bırakma](../code-quality/ca5359.md) | Bir sertifika, sunucunun kimliğini doğrulamaya yardımcı olabilir. İsteklerin hedeflenen sunucuya gönderilmesini sağlamak için istemciler sunucu sertifikasını doğrulamalıdır. ServerCertificateValidationCallback her zaman döndürüyorsa `true` , tüm sertifikalar doğrulamayı geçer. |
 | CA5360 | [CA5360, seri durumdan çıkarma sırasında tehlikeli yöntemleri çağırmayın](../code-quality/ca5360.md) | Güvenli olmayan seri kaldırma, güvenilir olmayan veriler bir uygulamanın mantığını kötüye kullanma, bir hizmet reddi (DoS) saldırısı veya hatta seri hale getirilmesi sırasında rastgele kod yürütme için kullanıldığında oluşan bir güvenlik açığıdır. Kötü amaçlı kullanıcıların, denetimi altında olan güvenilmeyen verileri seri durumdan çıkarılırken, bu, bu kaldırma özelliklerini kötüye kullanma olasılığı vardır. Özel olarak, seri durumdan çıkarma sürecinde tehlikeli Yöntemler çağırın. Güvenli olmayan güvenli seri kaldırma saldırıları, bir saldırganın DoS saldırıları, kimlik doğrulaması atlanır ve uzaktan kod yürütme gibi saldırıları çalıştırmasına izin verebilir. |
