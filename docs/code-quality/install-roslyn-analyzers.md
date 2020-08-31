@@ -1,24 +1,24 @@
 ---
-title: Roslyn çözümleyicilerini yükleme
-ms.date: 08/03/2018
-ms.topic: how-to
+title: Üçüncü taraf Çözümleyicileri yüklensin
+ms.date: 08/27/2020
+ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
 - analyzers
 - Roslyn analyzers
-author: mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: ce30dd25c43f1ac8254dbdb6b04b747a976f3557
-ms.sourcegitcommit: 48e93538f1e352fc1f972b642bb5fcce2f6834a2
+ms.openlocfilehash: 9da78f4c8e76f4e5b79f4cbdb0739d34fc465330
+ms.sourcegitcommit: 016bcdc7cd3e3619457beb321800e98544efb6c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85371761"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89091457"
 ---
-# <a name="install-net-compiler-platform-code-analyzers"></a>.NET Compiler Platform kodu Çözümleyicileri yüklemesi
+# <a name="install-third-party-analyzers"></a>Üçüncü taraf Çözümleyicileri yükler
 
 Visual Studio temel bir .NET Compiler Platform (*Roslyn*) Çözümleyicileri kümesi içerir. Bu çözümleyiciler her zaman açıktır. NuGet paketleri olarak ya da *VSIX* dosyalarında Visual Studio uzantıları olarak ek çözümleyiciler yükleyebilirsiniz.
 
@@ -26,7 +26,7 @@ Visual Studio temel bir .NET Compiler Platform (*Roslyn*) Çözümleyicileri kü
 
 1. Www.nuget.org üzerine yüklemek istediğiniz çözümleyici paketini bulun.
 
-   Örneğin, kodunuzu güvenlik ve performans sorunlarıyla ilgili olarak denetlemek için [Microsoft FxCop çözümleyicileri 'ni yüklemek](install-fxcop-analyzers.md#nuget-package) isteyebilirsiniz. Ya da, kod tabanınızdaki stil sorunlarını aramak için [StyleCop. çözümleyiciler](https://www.nuget.org/packages/stylecop.analyzers/) ' i de yüklemelisiniz.
+   Örneğin, kod tabanınızdaki stil sorunlarını aramak için [StyleCop. çözümleyiciler](https://www.nuget.org/packages/stylecop.analyzers/) yüklemek isteyebilirsiniz.
 
 2. Paketi, paket [Yöneticisi konsolunu](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) veya [Paket Yöneticisi Kullanıcı arabirimini](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console)kullanarak Visual Studio 'ya yükler.
 
@@ -63,7 +63,7 @@ Visual Studio temel bir .NET Compiler Platform (*Roslyn*) Çözümleyicileri kü
 
 3. Arama kutusuna, yüklemek istediğiniz çözümleyici uzantısının adını yazın. Örneğin, kodunuzu güvenlik ve performans sorunlarıyla ilgili olarak denetlemek için [Microsoft FxCop çözümleyicileri 'ni yüklemek](install-fxcop-analyzers.md#vsix) isteyebilirsiniz.
 
-4. **Download** (İndir) seçeneğini belirleyin.
+4. **İndir**'i seçin.
 
    Uzantı indirilir.
 
@@ -75,7 +75,7 @@ Visual Studio temel bir .NET Compiler Platform (*Roslyn*) Çözümleyicileri kü
 
 6. Yüklemeyi başlatmak için **Değiştir** ' i seçin.
 
-7. Bir dakikadan veya ikinin ardından yükleme tamamlanır. **Kapat**'ı seçin.
+7. Bir dakikadan veya ikinin ardından yükleme tamamlanır. **Kapat**’ı seçin.
 
 8. Visual Studio 'Yu yeniden açın.
 

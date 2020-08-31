@@ -1,6 +1,6 @@
 - name: Kod analizi belgeleri
   href: index.yml
-- name: Yönetilen kodu analiz etme
+- name: .NET kod analizi
   items:
     - name: Genel Bakış
       href: code-analysis-for-managed-code-overview.md
@@ -10,38 +10,28 @@
         - name: Genel Bakış
           displayName: 'roslyn analyzers, source analysis'
           href: roslyn-analyzers-overview.md
-        - name: Kaynak kodu çözümleyicilerini yükleme
+        - name: Üçüncü taraf çözümleyici yükleme
           href: install-roslyn-analyzers.md
-        - name: Kaynak kodu çözümleyicilerini yapılandırma
-          href: use-roslyn-analyzers.md
-        - name: Canlı kod analizi kapsamı
-          href: configure-live-code-analysis-scope-managed-code.md
-        - name: Kod analizini el ile çalıştırma
-          href: how-to-run-code-analysis-manually-for-managed-code.md
-        - name: Kod analizini devre dışı bırakma
-          href: disable-code-analysis.md
+        - name: Yapılandırma
+          items:
+            - name: Kaynak kodu analizini yapılandırma
+              href: use-roslyn-analyzers.md
+            - name: Kod kalitesi analizini yapılandırma
+              href: configure-fxcop-analyzers.md
+            - name: Kod kalitesi analizini kategorilerini yapılandırma
+              href: analyzer-rule-sets.md
+            - name: Kod kalitesi analizi seçenekleri
+              href: fxcop-analyzer-options.md
+            - name: Canlı kod analizi kapsamı
+              href: configure-live-code-analysis-scope-managed-code.md
+            - name: Kod analizini el ile çalıştırma
+              href: how-to-run-code-analysis-manually-for-managed-code.md
+            - name: Kod analizini devre dışı bırakma
+              href: disable-code-analysis.md
+            - name: Kod analizini gizleme
+              href: in-source-suppression-overview.md
         - name: SSS
           href: analyzers-faq.md
-        - name: FxCop çözümleyicileri
-          items:
-            - name: FxCop çözümleyicilerini yükleme
-              href: install-fxcop-analyzers.md
-            - name: FxCop çözümleyicilerine geçiş yapma
-              items:
-                - name: Eski analizden FxCop çözümleyicilerine geçiş
-                  href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
-                - name: SSS
-                  href: fxcop-analyzers-faq.md
-                - name: Taşınan kurallar
-                  href: fxcop-rule-port-status.md
-            - name: FxCop çözümleyicilerini yapılandırma
-              items:
-                - name: Kuralları ve projeleri yapılandırma
-                  href: configure-fxcop-analyzers.md
-                - name: Kapsam seçenekleri
-                  href: fxcop-analyzer-options.md
-                - name: Kural kategorisini etkinleştirme
-                  href: analyzer-rule-sets.md
     - name: Eski analiz
       items:
         - name: Genel Bakış
@@ -137,16 +127,60 @@
               href: how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy.md
             - name: Sürüm uyumluluğu
               href: version-compatibility-for-code-analysis-check-in-policies.md
-    - name: Kural kümeleri
-      items:
-        - name: Genel Bakış
-          href: using-rule-sets-to-group-code-analysis-rules.md
-        - name: Kural kümelerini yapılandırma
-          href: how-to-configure-code-analysis-for-a-managed-code-project.md
-        - name: Özel kural kümesi oluşturma
-          href: how-to-create-a-custom-rule-set.md
-        - name: Kural kümesi düzenleyicisini kullanma
-          href: working-in-the-code-analysis-rule-set-editor.md
+        - name: FxCop çözümleyicileri
+          items:
+            - name: FxCop çözümleyicilerini yükleme
+              href: install-fxcop-analyzers.md
+            - name: FxCop çözümleyicilerine geçiş yapma
+              items:
+                - name: Eski analizden FxCop çözümleyicilerine geçiş
+                  href: migrate-from-legacy-analysis-to-fxcop-analyzers.md
+                - name: SSS
+                  href: fxcop-analyzers-faq.md
+                - name: Taşınan kurallar
+                  href: fxcop-rule-port-status.md
+            - name: FxCop çözümleyicilerini yapılandırma
+              items:
+                - name: Kural kümeleri
+                  items:
+                    - name: Genel Bakış
+                      href: rule-set-reference.md
+                    - name: Tüm Kurallar
+                      href: all-rules-rule-set.md
+                    - name: Temel Doğruluk Kuralları
+                      href: basic-correctness-rules-rule-set-for-managed-code.md
+                    - name: Temel Tasarım Kılavuzu Kuralları
+                      href: basic-design-guideline-rules-rule-set-for-managed-code.md
+                    - name: Genişletilmiş Doğruluk Kuralları
+                      href: extended-correctness-rules-rule-set-for-managed-code.md
+                    - name: Genişletilmiş Tasarım Kılavuzu Kuralları
+                      href: extended-design-guidelines-rules-rule-set-for-managed-code.md
+                    - name: Genelleştirme Kuralları
+                      href: globalization-rules-rule-set-for-managed-code.md
+                    - name: Yönetilen Minimum Kurallar
+                      href: managed-minimum-rules-rule-set-for-managed-code.md
+                    - name: Yönetilen Önerilen Kurallar
+                      href: managed-recommended-rules-rule-set-for-managed-code.md
+                    - name: Karışık Minimum Kurallar
+                      href: mixed-minimum-rules-rule-set.md
+                    - name: Karışık Önerilen Kurallar
+                      href: mixed-recommended-rules-rule-set.md
+                    - name: Yerel Minimum Kurallar
+                      href: native-minimum-rules-rule-set.md
+                    - name: Yerel Önerilen Kurallar
+                      href: native-recommended-rules-rule-set.md
+                    - name: Güvenlik Kuralları
+                      href: security-rules-rule-set-for-managed-code.md
+        - name: Kural kümeleri
+          items:
+            - name: Genel Bakış
+              href: using-rule-sets-to-group-code-analysis-rules.md
+            - name: Kural kümelerini yapılandırma
+              href: how-to-configure-code-analysis-for-a-managed-code-project.md
+            - name: Özel kural kümesi oluşturma
+              href: how-to-create-a-custom-rule-set.md
+            - name: Kural kümesi düzenleyicisini kullanma
+              href: working-in-the-code-analysis-rule-set-editor.md
     - name: Kod ölçümleri
       items:
         - name: Genel Bakış
@@ -158,43 +192,11 @@
           href: working-with-code-metrics-data.md
     - name: Başvuru
       items:
-        - name: Kural kümeleri
-          items:
-            - name: Genel Bakış
-              href: rule-set-reference.md
-            - name: Tüm Kurallar
-              href: all-rules-rule-set.md
-            - name: Temel Doğruluk Kuralları
-              href: basic-correctness-rules-rule-set-for-managed-code.md
-            - name: Temel Tasarım Kılavuzu Kuralları
-              href: basic-design-guideline-rules-rule-set-for-managed-code.md
-            - name: Genişletilmiş Doğruluk Kuralları
-              href: extended-correctness-rules-rule-set-for-managed-code.md
-            - name: Genişletilmiş Tasarım Kılavuzu Kuralları
-              href: extended-design-guidelines-rules-rule-set-for-managed-code.md
-            - name: Genelleştirme Kuralları
-              href: globalization-rules-rule-set-for-managed-code.md
-            - name: Yönetilen Minimum Kurallar
-              href: managed-minimum-rules-rule-set-for-managed-code.md
-            - name: Yönetilen Önerilen Kurallar
-              href: managed-recommended-rules-rule-set-for-managed-code.md
-            - name: Karışık Minimum Kurallar
-              href: mixed-minimum-rules-rule-set.md
-            - name: Karışık Önerilen Kurallar
-              href: mixed-recommended-rules-rule-set.md
-            - name: Yerel Minimum Kurallar
-              href: native-minimum-rules-rule-set.md
-            - name: Yerel Önerilen Kurallar
-              href: native-recommended-rules-rule-set.md
-            - name: Güvenlik Kuralları
-              href: security-rules-rule-set-for-managed-code.md
-        - name: Uyarıları gizleme
-          href: in-source-suppression-overview.md
-        - name: Yönetilen kod uyarıları
+        - name: .NET kod analizi kuralları
           items:
             - name: Genel Bakış
               href: code-analysis-for-managed-code-warnings.md
-            - name: CheckId uyarıları
+            - name: Kod kalitesi kurallarına genel bakış
               href: code-analysis-warnings-for-managed-code-by-checkid.md
             - name: Şifreleme uyarıları
               items:

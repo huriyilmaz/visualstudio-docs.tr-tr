@@ -1,24 +1,22 @@
 ---
 title: Yönetilen kod için kod analizi
-ms.date: 06/12/2019
+ms.date: 08/27/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, managed code
 - managed code, code analysis
-author: mikejo5000
-ms.author: mikejo
+author: mikadumont
+ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6515c0df7a9c3389e754d5238788d716be49e2e
-ms.sourcegitcommit: a801ca3269274ce1de4f6b2c3f40b58bbaa3f460
+ms.openlocfilehash: d13a8afdfcbeb6ae9f91e39779af8b82b2461000
+ms.sourcegitcommit: 016bcdc7cd3e3619457beb321800e98544efb6c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88800092"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89091414"
 ---
-# <a name="overview-of-code-analysis-for-managed-code-in-visual-studio"></a>Visual Studio 'da yönetilen kod için kod çözümlemesine genel bakış
+# <a name="overview-of-code-analysis-for-net-in-visual-studio"></a>Visual Studio 'da .NET için kod çözümlemesine genel bakış
 
-Visual Studio, yönetilen kodun Kod analizini iki şekilde gerçekleştirebilir:
-- [Eski analizler](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)ile yönetilen derlemelerin FxCop statik analizi olarak da bilinir.
-- Daha modern [.net Compiler platform tabanlı kod Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md)ile. Kodunuzu yazarken canlı olarak çözümleyen .NET Compiler Platform tabanlı kod Çözümleyicileri, yalnızca derlenen kodu çözümleyen eski FxCop statik Kod analizini değiştirir.
+Visual Studio yönetilen kodun Kod analizini iki şekilde gerçekleştirebilir: yönetilen derlemelerin FxCop statik analizini ve daha modern [.net Compiler platform tabanlı kod Çözümleyicileri](../code-quality/roslyn-analyzers-overview.md)olarak da bilinen [eski analizler](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md). Kodunuzu yazarken canlı olarak çözümleyen .NET Compiler Platform tabanlı kod Çözümleyicileri, yalnızca derlenen kodu çözümleyen eski FxCop statik Kod analizini değiştirir.
