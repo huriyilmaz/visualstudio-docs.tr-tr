@@ -8,12 +8,12 @@ ms.assetid: 767f5c22-8b87-49ca-92aa-a7a3f026469f
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: cd3ed1477d1c4d345e5fc6f6496d12044d4af244
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: e2e1df362fddeab5be98ff90460a8a1a7d4b7876
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114238"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284361"
 ---
 # <a name="vsixlanguagepack-element-vsix-language-pack-schema"></a>Valtlanguagepack öğesi (VSıX dil paketi şeması)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -59,42 +59,16 @@ Gereklidir. VSıX dil paketi için kök öğesi sağlar. VSıX dil paketi bir VS
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|Yok||  
+|Hiçbiri||  
   
 ## <a name="element-information"></a>Öğe Bilgisi  
-
-:::row:::
-    :::column:::
-        Ad Alanı
-    :::column-end:::
-    :::column:::
-        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Şema adı
-    :::column-end:::
-    :::column:::
-        VSıX dil paketi şeması
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Doğrulama dosyası
-    :::column-end:::
-    :::column:::
-        Valtlanguagepackschema. xsd
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Boş olabilir
-    :::column-end:::
-    :::column:::
-        No
-    :::column-end:::
-:::row-end:::
+  
+|                 |                                                           |
+|-----------------|-----------------------------------------------------------|
+|    Ad Alanı    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   Şema adı   |                 VSıX dil paketi şeması                 |
+| Doğrulama dosyası |                Valtlanguagepackschema. xsd                 |
+|  Boş olabilir   |                            Hayır                             |
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [VSX dil paketi şema başvurusu](../extensibility/vsx-language-pack-schema-reference.md) [Yerelleştirme VSIX paketleri](../extensibility/localizing-vsix-packages.md) [VSIX uzantı şeması 1,0 başvurusu](/previous-versions/dd393700(v=vs.110))

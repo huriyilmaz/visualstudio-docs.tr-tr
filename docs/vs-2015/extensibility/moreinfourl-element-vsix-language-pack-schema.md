@@ -8,12 +8,12 @@ ms.assetid: 3f07b67b-95c5-4ae8-8b7e-d643cbbb0348
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: e8012eb02d143a741cb7eea70c45cabc4ee92002
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: c583d67e1920080f11158a4001e191e93e234006
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114303"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284414"
 ---
 # <a name="moreinfourl-element-vsix-language-pack-schema"></a>Iınfourl öğesi (VSıX dil paketi şeması)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "88114303"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Yok||  
+|Hiçbiri||  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|Yok||  
+|Hiçbiri||  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -51,40 +51,14 @@ ms.locfileid: "88114303"
  İsteğe bağlı. Bir Web sitesi bağlantısı. Bağlantı, bir metin dizesidir.  
   
 ## <a name="element-information"></a>Öğe Bilgisi  
-
-:::row:::
-    :::column:::
-        Ad Alanı
-    :::column-end:::
-    :::column:::
-        `http://schemas.microsoft.com/developer/vsx-schema-lp/2010`
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Şema adı
-    :::column-end:::
-    :::column:::
-        VSıX dil paketi şeması
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Doğrulama dosyası
-    :::column-end:::
-    :::column:::
-        Valtlanguagepackschema. xsd
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-        Boş olabilir
-    :::column-end:::
-    :::column:::
-        Uygulanamaz
-    :::column-end:::
-:::row-end:::
-
+  
+|                 |                                                           |
+|-----------------|-----------------------------------------------------------|
+|    Ad Alanı    | `http://schemas.microsoft.com/developer/vsx-schema-lp/2010` |
+|   Şema adı   |                 VSıX dil paketi şeması                 |
+| Doğrulama dosyası |                Valtlanguagepackschema. xsd                 |
+|  Boş olabilir   |                      Geçerli değil                       |
+  
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [VSX dil paketi şema başvurusu](../extensibility/vsx-language-pack-schema-reference.md)   
  [VSıX paketlerini yerelleştirme](../extensibility/localizing-vsix-packages.md)   

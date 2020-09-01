@@ -8,12 +8,12 @@ ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
 caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: 983a5d91fee40245f6a7d6877ccf38e666fa586e
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: 2cd3c16437829e9701a2354b4f40c557a654f466
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114160"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284427"
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Visual Studio İçin Bileşik Desenler
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
@@ -30,9 +30,9 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 - [Dokunma girişi](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_TouchInput)
 
-## <a name="data-visualization"></a><a name="BKMK_DataVisualization"></a>Veri görselleştirme
+## <a name="data-visualization"></a><a name="BKMK_DataVisualization"></a> Veri görselleştirme
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
  Grafikler, karar almanın geliştirilmesine yönelik verileri toplamanın ve görselleştirmenin görsel bir yoludur. Kullanıcıların çok fazla veri ile karşılaştığı, ne kadar önemli olduğunu ve ne tür bir eyleme ihtiyaç duydularını görbilecekleri çok büyük bir anlamı olan kullanıcılar.
 
  Aşağıdaki koşullardan herhangi biri doğru olduğunda Kullanıcı bir grafikten faydalanır:
@@ -70,7 +70,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 ### <a name="other-charting-considerations"></a>Diğer grafik konuları
 
-#### <a name="color"></a>Color (Renk)
+#### <a name="color"></a>Color
  Visual Studio 'da kullanılmak üzere tanımlanan belirli bir grafik renkleri paleti vardır. Palet, renk değişimlerinin ana türleri için erişilebilir ve renklerin çok dar dilimleri olarak kullanılması durumunda bile renk yapılabilir. Bu renkleri, Kullanıcı arabiriminizdeki herhangi bir grafik veya grafik türü için herhangi bir bileşimde kullanabilirsiniz. Birçok farklı renge ihtiyacınız yoksa yedi rengin hepsini kullanmanız gerekmez. Bu renkler herhangi bir ön plan öğeleriyle kullanılmak üzere tasarlanmamıştır, bu nedenle metin veya glifleri bu renklerin üzerine yerleştirmeyin. Bu kuleler, **araçlar > seçenekleri** altında (bkz. [son kullanıcılar için renkleri gösterme](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_ExposingColorsForEndUsers)) sabit kodlanmış ve Kullanıcı özelleştirmesine açık olmalıdır.
 
 |Basılı|Onaltılık|RGB|
@@ -83,10 +83,10 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 |![Renk örneği 79D7F2](../../extensibility/ux-guidelines/media/0711-79d7f2.png "0711_79D7F2")|#79D7F2|121.215.242|
 |![B5B5B5 örneği](../../extensibility/ux-guidelines/media/0711-b5b5b5.png "0711_B5B5B5")|#B5B5B5|181.181.181|
 
-## <a name="on-object-ui-and-peeking"></a><a name="BKMK_OnObjectUI"></a>Nesne üzerinde kullanıcı arabirimi ve göz atma
+## <a name="on-object-ui-and-peeking"></a><a name="BKMK_OnObjectUI"></a> Nesne üzerinde kullanıcı arabirimi ve göz atma
  Bu bölüm, kod Özeti Görünümü olarak da bilinen, Visual Studio 'ya özgü bir nesne Kullanıcı arabirimi türü olarak göz atma bağlamı sağlar.
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
 
 - Nesne üzerinde kullanıcı ARABIRIMI, kullanıcıya ana görevden ayıracaktır olmadan daha fazla bilgi veya etkileşim vermelidir.
 
@@ -249,9 +249,9 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 - Düzenleme veya davet eden kullanıcı etkileşimi gibi görünen bir içeriği **hiçbir** şekilde gösterme. Bu davranış, imleci ayrıntı içeriğinin üzerine taşımaya çalışırlarsa, bir araç ipucu için standart davranış, imleç onu üreten ana içerik üzerinde olmadığında hemen yok etmek üzere, kullanıcıların bu davranışı ortaya çıkar.
 
-## <a name="selection-models"></a><a name="BKMK_SelectionModels"></a>Seçim modelleri
+## <a name="selection-models"></a><a name="BKMK_SelectionModels"></a> Seçim modelleri
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
  Seçim modeli, Kullanıcı arabirimi içinde ilgilendiğiniz bir veya daha fazla nesnede işlemleri göstermek ve onaylamak için kullanılan mekanizmadır. Bu konu başlığı altında, Visual Studio belge düzenleyicilerinde seçim etkileşimi desenleri ele alınmaktadır: metin düzenleyicileri, tasarım yüzeyleri ve modelleme yüzeyleri.
 
  Kullanıcılar, Visual Studio 'Nun üzerinde çalıştıkları şeyi gösteren bir yola sahip olmalıdır ve Visual Studio 'nun, ne işe çalıştıkları hakkında kullanıcılara geri bildirimde bulunarak tahmine dayalı olarak yanıt vermesi gerekir. Kullanıcı ve Kullanıcı arabirimi arasındaki farklar veya bir iletişim, kullanıcının istenmeyen sonuçlara neden olabilecek bir eylem yaşıyorsanız. Genellikle, hata, Kullanıcı bir şeyin eksik olduğunu veya değiştiğini görene kadar fark edilmemiş olur. Bu nedenle, Kullanıcı arabirimi tasarımının en kritik parçalarından biri seçim modelleri. Visual Studio 'daki seçim modelleri Windows ile tutarlı olsa da, hafif çeşitlemeler vardır.
@@ -392,7 +392,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
  **İki ikincil seçim içeren birincil seçim**
 
-#### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a>Grafik nesnesi seçim görünümü
+#### <a name="graphical-object-selection-appearance"></a><a name="BKMK_GraphicalObjectSelectionAppearance"></a> Grafik nesnesi seçim görünümü
  Seçim tutamaçları, nesnenin sınırlayıcı kutusunun etrafında dikdörtgen bir düzende çizilmiş kareler. Aşağıdaki grafik, bir grafik nesnesinin tanıtıcı, boyutlandırma ve yerinde düzenlenme görünümü ile sahip olduğu çeşitli durumların örneklerini gösterir. Tanıtıcıların boyutu, **getsystemölçümlerini** API kullanılarak pencere kenarlığına ve Edge ölçümlerine bağlı olmalıdır.
 
 |          Durum          |  Görünüm   |                                                                  Görsel Ayrıntılar                                                                  |
@@ -473,9 +473,9 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 - F2 tuşu, şu anda seçili olan hücre için yerinde düzenlemeleri etkinleştirir.
 
-## <a name="persistence-and-saving-settings"></a><a name="BKMK_PersistenceAndSavingSettings"></a>Kalıcılık ve kaydetme ayarları
+## <a name="persistence-and-saving-settings"></a><a name="BKMK_PersistenceAndSavingSettings"></a> Kalıcılık ve kaydetme ayarları
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
  Visual Studio 'daki her yazılım bileşeni genellikle kendi durumu ve kalıcılığına karşı sorumludur, ancak Visual Studio, ayarları pencere boyutları ve pozisyonları gibi bazı durumlarda otomatik olarak kaydeder. Aşağıdaki tabloda, otomatik olarak kaydedilen ayarların bir birleşimi ve açık bir Kullanıcı ya da programlanmış eylem yapılması gereken ayarlar verilmiştir.
 
 |Nesne|Ne kaydedilecek|Ne zaman kaydedileceği|Kaydedileceği yer|
@@ -508,7 +508,7 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 #### <a name="profile-specific-layouts"></a>Profile özgü düzenler
  Her profil, belirli bir geliştirici personbuna tanıdık bir şekilde düzenlenmiş (Visual C++ geliştiricilerin IDE 'nin sol tarafında **Çözüm Gezgini** görmeyi beklediği, ancak C# geliştiricileri sağ tarafta **Çözüm Gezgini** görmeyi beklediği) araç penceresi düzenlerini içerir. Profile özgü pencere düzenleri, Kullanıcı başlangıçta bir profil seçtikten sonra yüklenir. Bir paket yazarı, kullanıcının pencere yapılandırmasına yaptığı değişikliklerin kalıcı hale gelmesini sağlamak için müşterinin deneyimine en uygun pencere yerleşimini belirlemelidir.
 
-## <a name="touch-input"></a><a name="BKMK_TouchInput"></a>Dokunma girişi
+## <a name="touch-input"></a><a name="BKMK_TouchInput"></a> Dokunma girişi
  Kullanıcılar, dokunmatik cihazlarda Microsoft geliştirme ürünlerini giderek daha fazla kullanmaktadır. Ancak, dokunmatik cihazlarda geliştirme araçlarını kullanmayı zorlaştırmaya yönelik engelleri vardır. Kullanıcılar, ürünlerimizi güvenilir ve kesin bir dokunmatik deneyim sağlayacak şekilde beklecektir. Bu yönergelerin amacı, Visual Studio ve ilgili ürünler arasında tutarlı bir dokunmatik deneyim dahil etmek ve bunlara yönelik dokunma özellikleri hakkında kararlara bilgi almaktır.
 
 ### <a name="levels-of-experience"></a>Deneyim düzeyleri
@@ -522,13 +522,13 @@ Bileşik desenler, etkileşim ve tasarım öğelerini ayrı yapılandırmalarda 
 
 ||Temel deneyim|İyileştirilmiş deneyim|Yükseltilmiş deneyim|
 |-|----------------------|--------------------------|-------------------------|
-|**Kullanıcıların şunları yapmasına olanak sağlar...**|Kod ve çözüm/proje düzeyinde okumayı, ölü uçlar olmadan çözme|Bakım, şunların ve gezinti görevlerini gerçekleştirme|Güvenle tutarlı, sezgisel ve akıcı bir deneyimde çalışır|
-|**Düzenleyici**|Dokunma kaydırma ve seçim<br /><br /> Kaydırma çubuğu dokunarak zıplamaya dokunun ve + sürükle tuşlarına basın|Pinç zoom<br /><br /> Hızlı kaydırma<br /><br /> Seçim<br /><br /> Bağlam menüsünün kolay kullanımı||
-|**Popüler araç pencereleri**|Liste kaydırma<br /><br /> Öğe seçimi<br /><br /> Kaydırma çubuğu dokunarak zıplamaya dokunun ve + sürükle tuşlarına basın|Kolay öğe kaydırma ve seçim||
-|**Protokolüdür**||Pencereyi yeniden boyutlandır<br /><br /> Hızlı erişim||
-|**Belge kutusu**||Açık dosyalar arasında kolay gezinti||
-|**Hareketler**||IDE genelinde ortak hareketlerin çalıştığından emin olun|Hareket tabanlı eylemler<br /><br /> Sürükleme ve bırakma ve tasarımcıları destekleme|
-|**Diğer önemli noktalar**|||Özel ekran klavyesi|
+|Kullanıcıların şunları yapmasına olanak sağlar...|Kod ve çözüm/proje düzeyinde okumayı, ölü uçlar olmadan çözme|Bakım, şunların ve gezinti görevlerini gerçekleştirme|Güvenle tutarlı, sezgisel ve akıcı bir deneyimde çalışır|
+|Düzenleyici|Dokunma kaydırma ve seçim<br /><br /> Kaydırma çubuğu dokunarak zıplamaya dokunun ve + sürükle tuşlarına basın|Pinç zoom<br /><br /> Hızlı kaydırma<br /><br /> Seçim<br /><br /> Bağlam menüsünün kolay kullanımı||
+|Popüler araç pencereleri|Liste kaydırma<br /><br /> Öğe seçimi<br /><br /> Kaydırma çubuğu dokunarak zıplamaya dokunun ve + sürükle tuşlarına basın|Kolay öğe kaydırma ve seçim||
+|Protokolüdür||Pencereyi yeniden boyutlandır<br /><br /> Hızlı erişim||
+|Belge kutusu||Açık dosyalar arasında kolay gezinti||
+|Hareketler||IDE genelinde ortak hareketlerin çalıştığından emin olun|Hareket tabanlı eylemler<br /><br /> Sürükleme ve bırakma ve tasarımcıları destekleme|
+|Diğer önemli noktalar|||Özel ekran klavyesi|
 
 #### <a name="gestures"></a>Hareketler
  Hareketler kullanıcılara, aksi takdirde daha karmaşık bir etkileşim gerektiren komutlara yönelik bir kısayol sağlar. [Masaüstü uygulamaları için genel dokunma hareketlerinde](https://msdn.microsoft.com/library/windows/desktop/dd940543\(v=vs.85\).aspx)Windows yönergelerine bakın ve kaydırma ve yakınlaştırma gibi basit hareketler de dahil olmak üzere çoğu hareket için bu yönergeleri izleyin.

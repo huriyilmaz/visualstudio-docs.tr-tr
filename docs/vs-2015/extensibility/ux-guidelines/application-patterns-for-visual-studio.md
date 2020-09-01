@@ -8,19 +8,19 @@ ms.assetid: 8ed68602-4e28-46fe-b39f-f41979b308a2
 caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
-ms.openlocfilehash: af70b191e4b9061d08acdc7f76ade843dee41709
-ms.sourcegitcommit: d9254e54079ae01cdf2d07b11f988faf688f80fc
+ms.openlocfilehash: cc14aadfafb16fcae571ab66e5811ea465cb55a9
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88114134"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89284424"
 ---
 # <a name="application-patterns-for-visual-studio"></a>Visual Studio İçin Uygulama Desenleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-## <a name="window-interactions"></a><a name="BKMK_WindowInteractions"></a>Pencere etkileşimleri
+## <a name="window-interactions"></a><a name="BKMK_WindowInteractions"></a> Pencere etkileşimleri
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
  Visual Studio 'da kullanılan iki ana pencere türü belge düzenleyicilerdir ve araç pencereleri. Nadir, ancak mümkün olan büyük, geçici olmayan iletişim kutulardır. Bunlar kabukta kalıcı olsalar da, desenleri temelde farklıdır. Bu konu belge pencereleri, araç pencereleri ve kalıcı iletişim kutuları arasındaki farkı ele alır. İletişim [kutularında](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Dialogs)kalıcı iletişim kutusu desenleri ele alınmıştır.
 
 ### <a name="comparing-window-usage-patterns"></a>Pencere kullanım düzenlerini karşılaştırma
@@ -40,9 +40,9 @@ ms.locfileid: "88114134"
 |**Örnekler**|*Çoklu örnek*<br /><br /> Birkaç düzenleyici aynı anda açılabilir ve farklı dosyalar düzenlenebilir, ancak bazı düzenleyiciler aynı dosyanın birden fazla düzenleyicide açılmasını da sağlar ( **pencere > yeni pencere** komutu kullanılarak).<br /><br /> Tek bir düzenleyici bir veya birden çok dosyayı aynı anda (Proje Tasarımcısı) düzenlenebilir olabilir.|*Tek veya çok örnekli*<br /><br /> İçerik, bağlamı yansıtacak şekilde değişir (özellik tarayıcısında olduğu gibi) veya odağı/bağlamı diğer pencereler (Görev Listesi, Çözüm Gezgini) ile gönderin.<br /><br /> Tek örnekli ve çok örnekli araç pencereleri, önemli bir neden olmadıkça, etkin belge penceresiyle ilişkilendirilmelidir.|*Tek örnekli*|
 |**Örnekler**|Kod Düzenleyicisi gibi **metin düzenleyicileri**<br /><br /> Form Tasarımcısı veya modelleme yüzeyi gibi **tasarım yüzeyleri**<br /><br /> Bildirim Tasarımcısı gibi **iletişim kutularına benzer Denetim düzenleri**|**Çözüm Gezgini** , çözüm içinde yer alan bir çözüm ve proje sağlar<br /><br /> **Sunucu Gezgini** , kullanıcının pencerede açılmasını seçtiği sunucuların ve veri bağlantılarının hiyerarşik bir görünümünü sağlar. Sorgu gibi veritabanı hiyerarşisinden bir nesne açmak, bir belge penceresi açar ve kullanıcının sorguyu düzenlemesine izin verir.<br /><br /> **Özellik tarayıcısı** , bir belge penceresinde veya başka bir araç penceresinde seçilen nesne için özellikleri görüntüler. Özellikler, hiyerarşik kılavuz görünümünde veya karmaşık iletişim kutusu benzeri denetimlerde sunulur ve kullanıcının bu özellikler için değerleri ayarlamaya izin verir.||
 
-## <a name="tool-windows"></a><a name="BKMK_ToolWindows"></a>Araç pencereleri
+## <a name="tool-windows"></a><a name="BKMK_ToolWindows"></a> Araç pencereleri
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
  Araç pencereleri, kullanıcının belge penceresinde gerçekleşen işini destekler. Bunlar, Visual Studio 'Nun sağladığı ve işleyebileceği temel bir kök nesneyi temsil eden bir hiyerarşiyi göstermek için kullanılabilirler.
 
  IDE 'de yeni bir araç penceresi düşünürken yazarların şunları yapmanız gerekir:
@@ -131,7 +131,7 @@ ms.locfileid: "88114134"
 |**Hata ayıklayıcı:** görevleri ve izleme etkinliklerini hata ayıklamaya özgü bir Windows grubu|Kayıtların||
 |**Hata ayıklayıcı:** görevleri ve izleme etkinliklerini hata ayıklamaya özgü bir Windows grubu|İş Parçacıkları||
 
-## <a name="document-editor-conventions"></a><a name="BKMK_DocumentEditorConventions"></a>Belge Düzenleyicisi kuralları
+## <a name="document-editor-conventions"></a><a name="BKMK_DocumentEditorConventions"></a> Belge Düzenleyicisi kuralları
 
 ### <a name="document-interactions"></a>Belge etkileşimleri
  "Belge iyi", IDE içindeki en büyük alandır ve kullanıcının, ek araç pencereleri yardımıyla görevlerini tamamlaması için genellikle ilgilenmesini odaklı yerdir. Belge düzenleyicileri, kullanıcının Visual Studio içinde açtığı ve kaydettiği temel iş birimlerini temsil eder. Çözüm Gezgini veya diğer etkin hiyerarşi pencereleri ile bağlı bir seçim kesin bir şekilde korunur. Kullanıcı bu hiyerarşi pencerelerinin birine işaret edebilir ve belgenin nerede olduğunu ve çözüm, proje ya da Visual Studio paketi tarafından sunulan başka bir kök nesneyle ilişkisini biliyor olmalıdır.
@@ -239,7 +239,7 @@ ms.locfileid: "88114134"
 
 - Kullanıcılar, yalnızca klavyeyi kullanarak, düzenleyici ve sekme aracılığıyla veya standart anımsatıcıları kullanarak denetimlerle etkileşime girebilmelidir.
 
-## <a name="dialogs"></a><a name="BKMK_Dialogs"></a>İletişimlerinin
+## <a name="dialogs"></a><a name="BKMK_Dialogs"></a> İletişimlerinin
 
 ### <a name="introduction"></a>Giriş
  Visual Studio 'daki iletişim kutuları, genellikle kullanıcının işinin tek bir ayrı birimini desteklemelidir ve sonra da kapatılır.
@@ -295,14 +295,14 @@ ms.locfileid: "88114134"
 
 - [Sihirbazlar](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Wizards) , bir görevin tamamlanmasına yönelik bir dizi adım aracılığıyla kullanıcıyı yönlendirmek için faydalıdır. Sıralı panellerde bir dizi seçenek sunulur, bazen önceki panelde yapılan seçime bağlı olarak farklı iş akışları ("dallar") ile tanışın.
 
-#### <a name="simple-dialogs"></a><a name="BKMK_SimpleDialogs"></a>Basit iletişim kutuları
+#### <a name="simple-dialogs"></a><a name="BKMK_SimpleDialogs"></a> Basit iletişim kutuları
  Basit bir iletişim kutusu, tek bir kalıcı pencerede denetimlerin sunumudur. Bu sunu, alan seçici gibi karmaşık denetim desenlerinin çeşitlemelerini içerebilir. Basit iletişim kutuları için standart genel düzeni ve karmaşık denetim gruplandırmaları için gereken belirli düzenleri izleyin.
 
  ![Visual Studio 'da basit iletişim kutusu](../../extensibility/ux-guidelines/media/0704-01-createstrongnamekey.png "0704-01_CreateStrongNameKey")
 
  **Tanımlayıcı ad anahtarı oluşturma, Visual Studio 'da basit bir iletişim kutusu örneğidir.**
 
-#### <a name="layered-dialogs"></a><a name="BKMK_LayeredDialogs"></a>Katmanlı iletişim kutuları
+#### <a name="layered-dialogs"></a><a name="BKMK_LayeredDialogs"></a> Katmanlı iletişim kutuları
  Katmanlı iletişim kutuları sekmeleri, panoları ve katıştırılmış ağaçları içerir. Tek bir kullanıcı arabiriminde sunulan birden fazla denetim grubu olduğunda, gerçek Emlak için kullanılır. Gruplandırmalar, kullanıcının herhangi bir anda hangi gruplandırmanın görüzi seçebilmesini sağlayacak şekilde katmanlıdır.
 
  En kolay durumda, gruplandırmalar arasında geçiş mekanizması bir sekme denetimidir. Kullanılabilecek birkaç alternatif vardır. En uygun stili seçme hakkında bilgi için bkz. önceliklendirme ve katmanlama.
@@ -313,7 +313,7 @@ ms.locfileid: "88114134"
 
  **Araçlar > seçenekler, Visual Studio 'daki katmanlı bir iletişim örneğidir.**
 
-#### <a name="wizards"></a><a name="BKMK_Wizards"></a>'Nı
+#### <a name="wizards"></a><a name="BKMK_Wizards"></a> 'Nı
  Sihirbazlar, bir görevin tamamlanması için bir mantıksal adım dizisi aracılığıyla kullanıcıyı yönlendirmesinde faydalıdır. Sıralı panellerde bir dizi seçenek sunulur ve bir sonraki adıma geçmeden önce Kullanıcı her bir adımla devam etmelidir. Yeterli varsayılan değer varsa, **son** düğmesi etkinleştirilir.
 
  Kalıcı sihirbazlar şu görevler için kullanılır:
@@ -394,7 +394,7 @@ ms.locfileid: "88114134"
 #### <a name="imagery"></a>Canlandırın
  İletişim kutularında görüntüleri gelişigüzel kullanın. Yalnızca alanı kullanmak için iletişim kutularında büyük simgeler kullanmayın. Yalnızca ileti, uyarı simgeleri veya durum animasyonları gibi kullanıcıya iletiyi almak için önemli bir parçasıysa görüntüleri kullanın.
 
-### <a name="prioritizing-and-layering"></a><a name="BKMK_PrioritizingAndLayering"></a>Öncelik verme ve katmanlama
+### <a name="prioritizing-and-layering"></a><a name="BKMK_PrioritizingAndLayering"></a> Öncelik verme ve katmanlama
 
 #### <a name="prioritizing-your-ui"></a>Kullanıcı arabiriminize öncelik verme
  Belirli kullanıcı arabirimi öğelerini Forefront 'e getirmek ve iletişim kutularına daha gelişmiş davranış ve Seçenekler (belirsiz komutlar dahil) yerleştirmek gerekebilir. Yaygın olarak kullanılan işlevselliği, bu BT için yer açarak Forefront 'e taşıyın ve iletişim kutusu gösterildiğinde bir metin etiketiyle Kullanıcı arabiriminde varsayılan olarak görünür hale getirin.
@@ -425,7 +425,7 @@ ms.locfileid: "88114134"
 ##### <a name="adaptive-ui"></a>Uyarlamalı Kullanıcı arabirimi
  Kullanım veya kullanıcının kendi kendine bildirilen deneyimi temel alınarak Kullanıcı ARABIRIMINI göstermek veya gizlemek, diğer bölümleri gizlerken gerekli Kullanıcı arabirimini sunmaya yönelik başka bir yoldur. UI 'nin ne zaman gösterileceğini veya gizleyeceğine karar vermek için algoritmalar karmaşık olabilir ve bazı durumlarda kurallar her zaman yanlış olur.
 
-## <a name="projects"></a><a name="BKMK_Projects"></a>Projeyle
+## <a name="projects"></a><a name="BKMK_Projects"></a> Projeyle
 
 ### <a name="projects-in-the-solution-explorer"></a>Çözüm Gezgini projeler
  Çoğu proje başvuru tabanlı, dizin tabanlı veya karma olarak sınıflandırılır. Her üç tür proje Çözüm Gezgini eşzamanlı olarak desteklenir. Bu pencerenin içinde, projelerle çalışan kullanıcı deneyiminin kökü yer alır. Farklı proje düğümleri başvuru, dizin veya karma mod türü projeler olsa da, projeye özgü Kullanıcı düzenlerine ayrılan bir başlangıç noktası olarak uygulanması gereken ortak bir etkileşim deseni vardır.
@@ -491,7 +491,7 @@ ms.locfileid: "88114134"
 #### <a name="reference-based-projects"></a>Başvuru tabanlı projeler
  Aşağıdaki tabloda, kaynak öğenin niteliği ve başvurulan temel hedef projeler için basılan değiştirici tuşları temelinde gerçekleştirilmesi gereken sürükle ve bırak (Ayrıca kesme/kopyalama/yapıştırma) işlemleri özetlenmektedir:
 
-|Değiştirici|İşlem|Kaynak öğe: başvuru/bağlantı|Kaynak öğe: fiziksel öğe veya dosya sistemi (CF_HDROP)|
+|||Kaynak öğe: başvuru/bağlantı|Kaynak öğe: fiziksel öğe veya dosya sistemi (CF_HDROP)|
 |-|-|----------------------------------|-------------------------------------------------------------|
 |Değiştirici yok|Eylem|Taşı|Bağlantı|
 |Değiştirici yok|Hedef|Özgün öğeye başvuru ekler|Özgün öğeye başvuru ekler|
@@ -522,7 +522,7 @@ ms.locfileid: "88114134"
 #### <a name="directory-based-projects"></a>Dizin tabanlı projeler
  Aşağıdaki tabloda, kaynak öğenin doğası ve dizin tabanlı hedef projeler için basılan değiştirici tuşları temelinde gerçekleştirilmesi gereken sürükle ve bırak (Ayrıca kesme/kopyalama/yapıştırma) işlemleri özetlenmektedir:
 
-|Değiştirici|İşlem|Kaynak öğe: başvuru/bağlantı|Kaynak öğe: fiziksel öğe veya dosya sistemi (CF_HDROP)|
+|||Kaynak öğe: başvuru/bağlantı|Kaynak öğe: fiziksel öğe veya dosya sistemi (CF_HDROP)|
 |-|-|----------------------------------|-------------------------------------------------------------|
 |Değiştirici yok|Eylem|Taşı|Taşı|
 |Değiştirici yok|Hedef|Öğeyi hedef konuma kopyalar|Öğeyi hedef konuma kopyalar|
@@ -549,7 +549,7 @@ ms.locfileid: "88114134"
 #### <a name="mixed-target-projects"></a>Karma hedef projeler
  Aşağıdaki tabloda, kaynak öğenin doğası ve karma hedef projeler için basılan değiştirici tuşları temelinde gerçekleştirilmesi gereken sürükle ve bırak (Ayrıca kesme/kopyalama/yapıştırma) işlemleri özetlenmektedir:
 
-|Değiştirici|İşlem|Kaynak öğe: başvuru/bağlantı|Kaynak öğe: fiziksel öğe veya dosya sistemi (CF_HDROP)|
+|||Kaynak öğe: başvuru/bağlantı|Kaynak öğe: fiziksel öğe veya dosya sistemi (CF_HDROP)|
 |-|-|----------------------------------|-------------------------------------------------------------|
 |Değiştirici yok|Eylem|Taşı|Taşı|
 |Değiştirici yok|Hedef|Özgün öğeye başvuru ekler|Öğeyi hedef konuma kopyalar|
