@@ -15,19 +15,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 98aa80618f5dd9f7d74d79a5d0dcce0c478cc606
-ms.sourcegitcommit: 2946d802aec1418e87bfa779d81834eeb7be5c9d
+ms.openlocfilehash: 974b98408d7c88bd437439d10c2cf3b1711a339c
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88214579"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219646"
 ---
 # <a name="performance-warnings"></a>Performans Uyarıları
 Performans uyarıları yüksek performanslı kitaplıkları ve uygulamaları destekler.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-| Kural | Açıklama |
+| Kural | Description |
 | - | - |
 | [CA1800: Gereksiz tür dönüştürmeler yapmayın](../code-quality/ca1800.md) | Özellikle yayınlar sıkıştırılmış yineleme deyiminde gerçekleştirildiğinde yinelenen yayınların performansını azaltır. |
 | [CA1801: Kullanılmayan parametreleri gözden geçirin](../code-quality/ca1801.md) | Yöntem imzası, yöntemin gövdesinde kullanılmayan bir parametre içerir. |
@@ -48,7 +48,7 @@ Performans uyarıları yüksek performanslı kitaplıkları ve uygulamaları des
 | [CA1821: Boş sonlandırıcıları kaldırın](../code-quality/ca1821.md) | Güncelleştirirken, nesne kullanım süresini izleme söz konusu olduğunda ek performans yükü nedeniyle sonlandırıcılardan kaçının. Boş bir Sonlandırıcı, hiçbir avantaj olmadan ek yüke neden olur. |
 | [CA1822: Üyeleri static olarak işaretleyin](../code-quality/ca1822.md) | Örnek verilerine erişmeyen Üyeler veya çağrı örnekleri metotları statik (içinde paylaşılan) olarak işaretlenebilir [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] . Yöntemleri statik olarak işaretledikten sonra, derleyici sanal olmayan arama sitelerini bu üyelere yayar. Bu, ölçülebilir kazanç performansını performans duyarlı kodunuz için verebilir. |
 | [CA1823: Kullanılmayan özel alanlardan kaçının](../code-quality/ca1823.md) | Derlemede erişimi görülmeyen özel alanlar algılandı. |
-| [CA1824: Derlemeleri NeutralResourcesLanguageAttribute ile işaretleyin](../code-quality/ca1824.md) | NeutralResourcesLanguage özniteliği bir derlemenin bağımsız kültürünün kaynağını görüntüleyen dilin Kaynak Yöneticisi'ni bilgilendirir. Bu ilk yüklediğiniz kaynak için arama performansını artırır ve çalışma kümenizi azaltabilir. |
+| [CA1824: Derlemeleri NeutralResourcesLanguageAttribute ile işaretleyin](../code-quality/ca1824.md) | NeutralResourcesLanguage özniteliği, bir derleme için nötr kültürün kaynaklarını göstermek için kullanılan dilin Kaynak Yöneticisi bildirir. Bu ilk yüklediğiniz kaynak için arama performansını artırır ve çalışma kümenizi azaltabilir. |
 | [CA1825: Sıfır uzunluklu dizi ayırmalarından kaçının](../code-quality/ca1825.md) | Sıfır uzunluklu bir diziyi başlatmak gereksiz bellek ayırmaya yol açar. Bunun yerine, çağırarak statik olarak ayrılan boş dizi örneğini kullanın <xref:System.Array.Empty%2A?displayProperty=nameWithType> . Bellek ayırma, bu yöntemin tüm etkinleştirmeleri genelinde paylaşılır. |
 | [CA1826: Linq Numaralandırma metodu yerine property kullan](../code-quality/ca1826.md) | <xref:System.Linq.Enumerable> LINQ yöntemi eşdeğer, daha verimli bir özelliği destekleyen bir tür üzerinde kullanıldı. |
 | [CA1827: Any kullanılabiliyorsa Count/LongCount kullanma](../code-quality/ca1827.md) | <xref:System.Linq.Enumerable.Count%2A> ya da yöntemi <xref:System.Linq.Enumerable.LongCount%2A> , <xref:System.Linq.Enumerable.Any%2A> yöntemin daha verimli olacağı yerde kullanılmıştır. |
@@ -60,4 +60,5 @@ Performans uyarıları yüksek performanslı kitaplıkları ve uygulamaları des
 | [CA1833: Bir dizinin Span veya Memory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın](../code-quality/ca1833.md) | Bir dizide Aralık Dizin Oluşturucu kullanırken ve değeri örtük olarak bir <xref:System.Span%601> veya <xref:System.Memory%601> türüne atandığında, yöntemi <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , dizinin istenen bölümünün bir kopyasını üreten yerine kullanılır. |
 | [CA1835: ' ReadAsync ' ve ' WriteAsync ' için ' Memory' tabanlı aşırı yüklemeleri tercih et](../code-quality/ca1835.md) | ' Stream ', &lt; &gt; ilk bağımsız değişken olarak ' bellek baytı ' ve &lt; &gt; ilk bağımsız değişken olarak ' readonlymemory byte ' olan bir ' WriteAsync ' aşırı yüklemesi olan ' ReadAsync ' aşırı yüklemesine sahip. Daha verimli olan bellek tabanlı aşırı yüklemeleri çağırmayı tercih edin. |
 | [CA1836: `IsEmpty` `Count` kullanılabilir olduğunda tercih et](../code-quality/ca1836.md) | `IsEmpty` `Count` `Length` <xref:System.Linq.Enumerable.Count%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> <xref:System.Linq.Enumerable.LongCount%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> Nesnenin bir öğe içerip içermediğini ya da olmadığını anlamak için, veya ' den daha verimli bir özellik tercih edin. |
-| [CA1838: `StringBuilder` P/Invoke için parametrelerden kaçının](../code-quality/ca1838.md) | ' StringBuilder ' öğesinin sıralaması her zaman bir sıralama işlemi için birden çok ayırmaya neden olan bir yerel arabellek kopyası oluşturur. |
+| [CA1837: `Environment.ProcessId` yerine kullanın `Process.GetCurrentProcess().Id`](../code-quality/ca1837.md) | `Environment.ProcessId` daha basit ve daha hızlıdır `Process.GetCurrentProcess().Id` . |
+| [CA1838: `StringBuilder` P/Invoke için parametrelerden kaçının](../code-quality/ca1838.md) | ' Nin sıralaması `StringBuilder` her zaman bir sıralama işlemi için birden çok ayırmaya neden olan yerel bir arabellek kopyası oluşturur. |
