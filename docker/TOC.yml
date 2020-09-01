@@ -1,2 +1,34 @@
-- name: Dizin oluşturma
-  href: index.md
+- name: Docker
+  expanded: true
+  items:
+    - name: VS Code kullanıcıları için Docker’a giriş
+      expanded: true
+      items:
+        - name: Başlarken
+          href: tutorials/docker-tutorial.md
+        - name: 'Bölüm 1: Uygulama'
+          href: tutorials/your-application.md
+        - name: 'Bölüm 2: Uygulamanızı güncelleştirme'
+          href: tutorials/update-your-app.md
+        - name: 'Bölüm 3: Uygulamanızı paylaşma'
+          href: tutorials/share-your-app.md
+        - name: 'Bölüm 4: Veritabanınızı sürdürme'
+          href: tutorials/persist-your-data.md
+        - name: 'Bölüm 5: Bağlamaları kullanma'
+          href: tutorials/use-bind-mounts.md
+        - name: 'Bölüm 6: Birden çok kapsayıcılı uygulamalar'
+          href: tutorials/multi-container-apps.md
+        - name: 'Bölüm 7: Docker Compose kullanma'
+          href: tutorials/use-docker-compose.md
+        - name: 'Bölüm 8: Görüntü oluşturmanın en iyi yöntemleri'
+          href: tutorials/image-building-best-practices.md
+        - name: 'Bölüm 9: Buluta dağıtma'
+          href: tutorials/deploy-to-cloud.md
+        - name: Sırada ne var?
+          href: tutorials/whats-next.md
+        - name: Kaynaklar
+          items:
+            - name: Örnekler
+              href: 'https://github.com/docker/awesome-compose'
+            - name: Docker ACI tümleştirmesi
+              href: 'https://github.com/docker/aci-integration-beta/'
