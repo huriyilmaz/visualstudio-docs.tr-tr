@@ -84,6 +84,7 @@ f1_keywords:
 - CA1307
 - CA1308
 - CA1309
+- CA1310
 - CA1400
 - CA1401
 - CA1402
@@ -173,6 +174,7 @@ f1_keywords:
 - CA1833
 - CA1835
 - CA1836
+- CA1837
 - CA1838
 - CA1900
 - CA1901
@@ -184,6 +186,7 @@ f1_keywords:
 - CA2004
 - CA2006
 - CA2007
+- CA2008
 - CA2009
 - CA2011
 - CA2012
@@ -295,12 +298,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61c15689e92132d4e3e089823bc94fc90852d4ed
-ms.sourcegitcommit: c4212f40df1a16baca1247cac2580ae699f97e4c
+ms.openlocfilehash: 05937cef7187726134a7116edae4d74ee004de1d
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 08/31/2020
-ms.locfileid: "89176071"
+ms.locfileid: "89219757"
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>CheckId tarafından yönetilen kod için kod analizi uyarıları
 
@@ -382,9 +385,10 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA1304 | [CA1304: CultureInfo belirt](../code-quality/ca1304.md) | Yöntem veya Oluşturucu System.Globalization.CultureInfo parametre kabul eden aşırı yüklenmiş üye arar ve yöntem veya oluşturucu CultureInfo parametresi aşırı yükleme çağıramaz. Bir CultureInfo veya System.IFormatProvider nesnesi sağlanamadığında, aşırı yüklü üye tarafından sağlanan varsayılan değer, tüm yerel ayarlarda istediğiniz etkiyi vermeyebilir. |
 | CA1305 | [CA1305: IFormatProvider belirt](../code-quality/ca1305.md) | Yöntem veya oluşturucu System.IFormatProvider parametresini kabul eden aşırı yüklü bir veya daha fazla üye arar ve yöntem veya oluşturucu IFormatProvider parametre yüklemesini çağırmaz. Bir System.Globalization.CultureInfo veya IFormatProvider nesnesi sağlanamadığında, aşırı yüklü üye tarafından sağlanan varsayılan değer, tüm yerel ayarlarda istediğiniz etkiyi vermeyebilir. |
 | CA1306 | [CA1306: Veri türleri için yereli ayarlayın](../code-quality/ca1306.md) | Yerel ayarlar, veri için kültür-özel sunum öğelerini, örneğin para birimi sembolleri, sayısal değerler için biçimleri ve sıralama düzeni için kullanılan biçimlendirme gibi değerleri belirler. Bir DataTable veya DataSet oluşturduğunuzda, yerel ayarı açık olarak ayarlamanız gerekir. |
-| CA1307 | [CA1307: StringComparison belirt](../code-quality/ca1307.md) | StringComparison parametresi ayarlanmamış bir yöntemi aşırı bir dize karşılaştırma işleminde kullanır. |
+| CA1307 | [CA1307: açıklık için StringComparison belirtin](../code-quality/ca1307.md) | StringComparison parametresi ayarlanmamış bir yöntemi aşırı bir dize karşılaştırma işleminde kullanır. |
 | CA1308 |[CA1308: Dizeleri büyük harfe normalleştirin](../code-quality/ca1308.md) | Dizeler büyük harfe normalleştirilmeli. Küçük bir karakter grubu küçük harfe dönüştürüldüğünde gidiş dönüş yapamaz. |
 | CA1309 | [CA1309: Sıralı StringComparison kullanın](../code-quality/ca1309.md) | StringComparison parametresini Ordinal ya da OrdinalIgnoreCase'a ayarlayamayan dilbilimsel olmayan dize karşılaştırma işlemi. Açıkça StringComparison.Ordinal veya StringComparison.OrdinalIgnoreCase için parametre ayarıyla kodunuz genellikle hızlanır, daha doğru olur ve daha güvenilir hale gelir. |
+| CA1310 | [CA1310: dize karşılaştırmayı doğruluk için belirtin](../code-quality/ca1310.md) | Dize karşılaştırma işlemi, StringComparison parametresi ayarlanmamış ve varsayılan olarak kültüre özgü dize karşılaştırmayı kullanan bir yöntem aşırı yüklemesi kullanır. |
 | CA1400 | [CA1400: P/Invoke giriş noktaları bulunmalıdır](../code-quality/ca1400.md) |Ortak veya korumalı yöntem System.Runtime.InteropServices.DllImportAttribute özniteliği kullanılarak işaretlenir. Yönetilmeyen kitaplık bulunamadı ya da yöntem için bir işlev kitaplığında eşleştirilemedi. |
 | CA1401 | [CA1401: P/Invoke görünür olmamalıdır](../code-quality/ca1401.md) | Ortak bir türdeki ortak veya korumalı yöntemin System.Runtime.InteropServices.DllImportAttribute özniteliği vardır (Ayrıca içindeki Declare anahtar sözcüğü tarafından uygulanır [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ). Bu tür yöntemler açıkta kalmamalıdır. |
 | CA1402 |[CA1402: COM görünebilir arabirimler içinde aşırı yüklemelerden kaçının](../code-quality/ca1402.md) | Aşırı yüklenmiş yöntemler COM istemcilerine maruz kaldığında, sadece ilk yöntem aşırı yüklemesi adını korur. Sonraki aşırı yüklemeler adının sonuna alt çizgi karakteri (_) eklenerek ve aşırı yüklemenin tanımını karşılayacak şekilde bir tam sayı eklenerek benzersiz olarak yeniden adlandırılır. |
@@ -467,6 +471,7 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA1833 |[CA1833: Bir dizinin Span veya Memory kısmını almak için Aralık tabanlı dizin oluşturucular yerine AsSpan ya da AsMemory kullanın](../code-quality/ca1833.md) | Bir dizide Aralık Dizin Oluşturucu kullanırken ve değeri örtük olarak bir <xref:System.Span%601> veya <xref:System.Memory%601> türüne atandığında, yöntemi <xref:System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray%2A> <xref:System.Span%601.Slice%2A?#System_Span_1_Slice_System_Int32_System_Int32_> , dizinin istenen bölümünün bir kopyasını üreten yerine kullanılır. |
 | CA1835 |[CA1835: ' ReadAsync ' ve ' WriteAsync ' için ' Memory' tabanlı aşırı yüklemeleri tercih et](../code-quality/ca1835.md) | ' Stream ', &lt; &gt; ilk bağımsız değişken olarak ' bellek baytı ' ve &lt; &gt; ilk bağımsız değişken olarak ' readonlymemory byte ' olan bir ' WriteAsync ' aşırı yüklemesi olan ' ReadAsync ' aşırı yüklemesine sahip. Daha verimli olan bellek tabanlı aşırı yüklemeleri çağırmayı tercih edin. |
 | CA1836 |[CA1836: `IsEmpty` `Count` kullanılabilir olduğunda tercih et](../code-quality/ca1836.md) | `IsEmpty` `Count` `Length` <xref:System.Linq.Enumerable.Count%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> <xref:System.Linq.Enumerable.LongCount%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> Nesnenin bir öğe içerip içermediğini ya da olmadığını anlamak için, veya ' den daha verimli bir özellik tercih edin. |
+| CA1837 | [CA1837: `Environment.ProcessId` yerine kullanın `Process.GetCurrentProcess().Id`](../code-quality/ca1837.md) | `Environment.ProcessId` daha basit ve daha hızlıdır `Process.GetCurrentProcess().Id` . |
 | CA1838 | [CA1838: `StringBuilder` P/Invoke için parametrelerden kaçının](../code-quality/ca1838.md) | ' StringBuilder ' öğesinin sıralaması her zaman bir sıralama işlemi için birden çok ayırmaya neden olan bir yerel arabellek kopyası oluşturur. |
 | CA1900 | [CA1900: Değer tür alanları taşınabilir olmalıdır](../code-quality/ca1900.md) | Bu kural açık düzene bildirilen yapıları kullanarak 64-bit işletim sistemlerinde yönetilmeyen kod sıralandığı zaman doğru olarak hizalamayı denetler. |
 | CA1901 | [CA1901: P/Invoke bildirimleri taşınabilir olmalıdır](../code-quality/ca1901.md) | Bu kural her parametresinin boyutu ve P/Invoke dönüş değeri olarak değerlendirilir ve parametrenin boyutu 32-bit ve 64-bit işletim sistemlerinde yönetilmeyen kodun başvuruya doğru olduğunu doğrular. |
@@ -478,6 +483,7 @@ Aşağıdaki tablo uyarının CheckId tanımlayıcısı tarafından yönetilen k
 | CA2004 | [CA2004: GC.KeepAlive'a çağrıları kaldırın](../code-quality/ca2004.md) | SafeHandle kullanımını dönüştürüyorsanız, tüm GC.KeepAlive (nesne) çağrılarını kaldırın. Bu durumda, sınıflar GC.KeepAlive'a çağrı yapmamalıdır. Bu, onların bir sonlandırıcısı olmadığını kabul eder, ancak SafeHandle'ı işletim sistemini sonlandırmasına güvenin. |
 | CA2006 | [CA2006: Yerel kaynakları kapsamak için SafeHandle kullanın](../code-quality/ca2006.md) | Yönetilen kod içinde IntPtr kullanmak olası bir güvenlik ve güvenilirlik sorunu belirtebilir. IntPtr'nin tüm kullanımları onun yerine bir SafeHandle ya da benzer bir teknolojinin kullanımının gerekip gerekmediğini belirlemek için gözden geçirilmelidir. |
 | CA2007 | [CA2007: Doğrudan bir Görevi beklemeyin](ca2007.md) | Zaman uyumsuz bir [awaits](/dotnet/csharp/language-reference/keywords/await) yöntem doğrudan bekler <xref:System.Threading.Tasks.Task> . Zaman uyumsuz bir yöntem <xref:System.Threading.Tasks.Task> doğrudan bekler, görevi oluşturan aynı iş parçacığında devamlılık oluşur. Bu davranış, performans açısından maliyetli olabilir ve Kullanıcı arabirimi iş parçacığında kilitlenmeye neden olabilir. <xref:System.Threading.Tasks.Task.ConfigureAwait(System.Boolean)?displayProperty=nameWithType>Devamlılığını sağlamak için çağırmayı düşünün. |
+| CA2008 | [CA2008: TaskScheduler geçirmeden görev oluşturmayın](ca2008.md) | Bir görev oluşturma veya devamlılık işlemi, bir parametre belirtmeyen bir yöntem aşırı yüklemesi kullanır <xref:System.Threading.Tasks.TaskScheduler> . |
 | CA2009 | [CA2009: Bir ImmutableCollection değeri üzerinde ToImmutableCollection çağırma](ca2009.md) | `ToImmutable` Yöntem, ad alanından sabit bir koleksiyonda gereksiz şekilde çağrıldı <xref:System.Collections.Immutable> . |
 | CA2011 | [CA2011: Özelliği, ayarlayıcısı içinde atama](ca2011.md) | Bir özelliğe yanlışlıkla kendi [set erişimcisi](/dotnet/csharp/programming-guide/classes-and-structs/using-properties#the-set-accessor)içinde bir değer atandı. |
 | CA2012 | [CA2012: ValueTask’leri doğru kullanın](ca2012.md) | Üye etkinleştirmeleri tarafından döndürülen ValueTasks, doğrudan beklenmek üzere tasarlanmıştır.  Bir ValueTask 'ı birden çok kez kullanmaya çalışır veya tamamlanması bilinmadan önce bir sonuca doğrudan erişmek için bir özel durumla veya bozulmaya neden olabilir.  Bu tür bir ValueTask, büyük olasılıkla işlevsel bir hatanın göstergesidir ve performansın düşmesine neden olabilir. |

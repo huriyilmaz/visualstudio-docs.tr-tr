@@ -7,12 +7,12 @@ ms.author: ornella
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 33eb146ce36bfa36dbe28fdcec0f7dfb85daa59b
-ms.sourcegitcommit: d20ce855461c240ac5eee0fcfe373f166b4a04a9
+ms.openlocfilehash: aa4a768f8ebd8b39918fa3ba51d4eb9b3f773151
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84184087"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219770"
 ---
 # <a name="productivity-guide-for-visual-studio"></a>Visual Studio için üretkenlik Kılavuzu
 
@@ -20,11 +20,11 @@ Kodu yazarken zaman kazanmak istiyorsanız, doğru yerde olursunuz. Bu üretkenl
 
 Faydalı klavye kısayolları hakkında daha fazla bilgi için bkz. [üretkenlik kısayolları](../ide/productivity-shortcuts.md). Komut kısayollarının tüm listesi için bkz. [varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
 
-## <a name="get-started"></a>başlarken
+## <a name="get-started"></a>Kullanmaya başlayın
 
 Komutlar, ayarlar, belgeler ve Install seçenekleri de dahil olmak üzere ihtiyacınız olan her şeyi hızlıca arayarak menüler aracılığıyla zaman ayırarak tasarruf edin. Visual Studio 'da arama sonuçlarınızda bulunan komutlara yönelik klavye kısayollarına bakın. böylece bunları daha kolay bir şekilde yeniden deneyebilirsiniz. 
 
-- **Görev listesini kullanan sahte kod**. Kod parçasını tamamlamaya yetecek kadar gereksinimleriniz yoksa, ve gibi belirteçleri kullanan kod açıklamalarını izlemek için Görev Listesi kullanın `TODO` `HACK` ve sizi doğrudan kodda önceden tanımlanmış bir konuma götürür kısayolları yönetin. Daha fazla bilgi için bkz. [görev listesi kullanma](../ide/using-the-task-list.md.).
+- **Görev listesini kullanan sahte kod**. Kod parçasını tamamlamaya yetecek kadar gereksinimleriniz yoksa, ve gibi belirteçleri kullanan kod açıklamalarını izlemek için Görev Listesi kullanın `TODO` `HACK` ve sizi doğrudan kodda önceden tanımlanmış bir konuma götürür kısayolları yönetin. Daha fazla bilgi için bkz. [görev listesi kullanma](../ide/using-the-task-list.md).
 
 - **Çözüm Gezgini kısayollarını kullanın**. Visual Studio 'ya yeni başladıysanız, bu kısayollar yararlı olur ve yeni bir kod tabanında hızlanırken size zaman kazandırır. Kısayolların tam listesi için bkz. [Visual Studio 'Da varsayılan klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_solutionexplorerGLOBAL).
 
@@ -60,7 +60,7 @@ Aşağıdaki özellikleri kullanarak daha hızlı bir şekilde kod yazın.
 
 - **Örnek uygulamaları kullanın**. [Microsoft Developer Network](https://code.msdn.microsoft.com/)'ten örnek uygulamalar indirerek ve yükleyerek uygulama geliştirmeyi hızlandırabilirsiniz. Ayrıca, bu alana yönelik bir örnek paketi indirerek ve inceleyerek belirli bir teknoloji veya programlama kavramı de öğrenebilirsiniz.
 
-- **Biçimlendirme/yeni satırlarla küme ayracı biçimlendirmesini değiştirin**. Yeni satırlar dahil olmak üzere kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **biçimlendirme** seçenekleri sayfasını kullanın. Bu ayarın C# ' de nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: metin düzenleyici > C# > kod stili > biçimlendirme](../ide/reference/options-text-editor-csharp-formatting.md). C++ için bkz. [Visual Studio 'Da c++ kodlama tercihlerinizi ayarlama](https://docs.microsoft.com/cpp/ide/how-to-set-preferences). Python için bkz. [Python kodunu biçimlendirme](../python/formatting-python-code.md).
+- **Biçimlendirme/yeni satırlarla küme ayracı biçimlendirmesini değiştirin**. Yeni satırlar dahil olmak üzere kod düzenleyicisinde biçimlendirme kodu seçeneklerini ayarlamak için **biçimlendirme**  seçenekleri sayfasını kullanın. Bu ayarın C# ' de nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [Seçenekler iletişim kutusu: metin düzenleyici > C# > kod stili > biçimlendirme](../ide/reference/options-text-editor-csharp-formatting.md). C++ için bkz. [Visual Studio 'Da c++ kodlama tercihlerinizi ayarlama](https://docs.microsoft.com/cpp/ide/how-to-set-preferences). Python için bkz. [Python kodunu biçimlendirme](../python/formatting-python-code.md).
 
 - **Girintilerinizi sekmelerle değiştirin**. Farklı düzenleyicilerde ve sdes 'lerde aynı projede çalışan birden çok geliştirici için tutarlı kodlama stillerini zorlamak üzere her kod tabanına uyarlanmış özel düzenleyici ayarlarını kullanın. Tüm takımınızın aynı dil kurallarına, adlandırma kurallarına ve biçimlendirme kurallarına uyduğundan emin olun. Bu özel ayarlar taşınabilir olduğundan ve kodunuzla birlikte gezindiğinden, Visual Studio dışında bile kodlama stillerini zorunlu kılabilirsiniz. Daha fazla bilgi için bkz. [Seçenekler, metin düzenleyici, tüm diller, sekmeler](../ide/reference/options-text-editor-all-languages-tabs.md#tabs).
 
@@ -112,7 +112,7 @@ Araç pencerelerinin içeriğini yalnızca geçerli göreviniz için ilgili bilg
 
    **Ctrl** + Doğrudan arama kutusuna gitmek için CTRL**Q** tuşlarına basın.
 
-## <a name="debug-code"></a>Hata ayıklama kodu
+## <a name="debug-code"></a>Kod hatalarını ayıklama
 
 Hata ayıklama çok fazla zaman alabilir, ancak aşağıdaki ipuçları süreci hızlandırabilmeniz için size yardımcı olabilir.
 

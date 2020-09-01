@@ -10,12 +10,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 84b37bce062ec5f1f406bc6ef9f6507399820af9
-ms.sourcegitcommit: 596f92fcc84e6f4494178863a66aed85afe0bb08
+ms.openlocfilehash: c3d9c1dfa45251d0f64a93bb9a5142dcec76b7c7
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82189482"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219731"
 ---
 # <a name="fxcop-rule-port-status"></a>FxCop kural bağlantı noktası durumu
 
@@ -68,14 +68,14 @@ Kural Kimliği | Başlık
 [CA1063](ca1063.md) | IDisposable 'ı doğru uygulayın
 [CA1064](ca1064.md) | Özel durumlar genel olmalıdır
 [CA1065](ca1065.md) | Beklenmeyen konumlarda özel durum harekete geçirmeyin
-[CA1066](ca1066.md) | Tür {0} , eşit olarak\<geçersiz kılındığından IEquatable T> uygulamalıdır
-[CA1067](ca1067.md) | IEquatable\<T> uygularken Object. Equals (nesne) öğesini geçersiz kıl
+[CA1066](ca1066.md) | Tür, {0} eşit olarak \<T> geçersiz kılındığından IEquatable uygulamalıdır
+[CA1067](ca1067.md) | IEquatable uygularken Object. Equals (nesne) öğesini geçersiz kıl\<T>
 [CA1068](ca1068.md) | CancellationToken parametreleri en sonda olmalıdır
 CA1200 | cref etiketlerini ön ek ile kullanmaktan kaçının
 [CA1303](ca1303.md) | Harfleri yerelleştirilmiş parametreler olarak göndermeyin
 [CA1304](ca1304.md) | CultureInfo belirt
 [CA1305](ca1305.md) | IFormatProvider belirt
-[CA1307](ca1307.md) | StringComparison belirt
+[CA1307](ca1307.md) | Açıklık için StringComparison belirtin
 [CA1308](ca1308.md) | Dizeleri büyük harfe normalleştirin
 [CA1309](ca1309.md) | Sıralı dize karşılaştırmayı kullan
 [CA1401](ca1401.md) | P/Invoke'lar görünür olmamalıdır
@@ -119,7 +119,7 @@ CA1826 | Dizine eklenebilir koleksiyonlar üzerinde sıralanabilir Yöntemler ku
 [CA2000](ca2000.md) | Kapsamı kaybetmeden önce nesneleri bırakın
 [CA2002](ca2002.md) | Zayıf kimliği olan nesneleri kilitlemeyin
 [CA2007](ca2007.md) | Beklenen görevde ConfigureAwait yöntemini çağırmayı düşünün
-CA2008 | TaskScheduler geçirmeden görev oluşturmayın
+[CA2008](ca2008.md) | TaskScheduler geçirmeden görev oluşturmayın
 CA2009 | IBir ımmutablecollection değerinde ToImmutableCollection çağırmayın
 CA2010 | PreserveSigAttribute ile işaretlenmiş yöntemlerin döndürdüğü değeri her zaman kullanın
 [CA2100](ca2100.md) | SQL sorgularını güvenlik açıkları için inceleyin

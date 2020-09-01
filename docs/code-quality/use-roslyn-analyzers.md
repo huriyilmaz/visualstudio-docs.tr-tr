@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2b6dd5269868f02582472bee86f19d23719c9a5b
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.openlocfilehash: e20427ae3d64a485bb25da2f4482bbbec51e3dda
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88893430"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219783"
 ---
 # <a name="use-code-analyzers"></a>Kod Çözümleyicileri kullanma
 
@@ -66,7 +66,7 @@ Aşağıdaki tabloda farklı önem derecesi seçenekleri gösterilmektedir:
 | Uyarı | `warning` | İhlaller Hata Listesi ve komut satırı derleme çıkışında *Uyarı* olarak görünür, ancak derlemelerin başarısız olmasına neden olmaz. | Sorunlu kodun yeşil bir dalgalı çizgi ile altı çizilir ve kaydırma çubuğunda küçük bir yeşil kutu ile işaretlenir. |
 | Bilgi | `suggestion` | İhlaller, komut satırı derleme çıktısında değil, Hata Listesi *iletiler* olarak görünür. | Sorunlu kodun gri dalgalı çizgi ile altı çizilir ve kaydırma çubuğundaki küçük bir gri kutusuyla işaretlenir. |
 | Gizli | `silent` | Kullanıcıya görünür değil. | Kullanıcıya görünür değil. Ancak tanılama, IDE tanılama altyapısına bildirilir. |
-| Hiçbiri | `none` | Tamamen gizlendi. | Tamamen gizlendi. |
+| Yok | `none` | Tamamen gizlendi. | Tamamen gizlendi. |
 | Varsayılan | `default` | Kuralın varsayılan önem derecesine karşılık gelir. Bir kural için varsayılan değerin ne olduğunu belirlemek için Özellikler penceresi bakın. | Kuralın varsayılan önem derecesine karşılık gelir. |
 
 Kod düzenleyicisinin aşağıdaki ekran görüntüsünde, farklı önem derecelerine sahip üç farklı ihlal gösterilmektedir. Sağ taraftaki kaydırma çubuğundaki dalgalı çizgi ve küçük, renkli bir karenin rengine dikkat edin.
@@ -102,6 +102,9 @@ Belirli bir çözümleyici kuralları kategorisi veya bir EditorConfig dosyasın
 - Tüm çözümleyici kuralları için kural önem derecesini ayarla:
 
 `dotnet_analyzer_diagnostic.severity = <severity>`
+
+> [!NOTE]
+> Birden çok çözümleyici kuralını tek seferde yapılandırma girişleri yalnızca *Varsayılan olarak etkinleştirilen*kurallar için geçerlidir. Çözümleyici paketinde varsayılan olarak devre dışı olarak işaretlenen çözümleyici kuralları açık girişler aracılığıyla etkinleştirilmelidir `dotnet_diagnostic.<rule ID>.severity = <severity>` .
 
 Belirli bir kural KIMLIĞI için geçerli olan birden çok girdiniz varsa, uygulanabilir girişi seçmek için öncelik sırası aşağıda verilmiştir:
 

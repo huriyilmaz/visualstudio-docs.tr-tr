@@ -14,12 +14,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 095631abc5678a27a4e79611433ff446337b956c
-ms.sourcegitcommit: 9a9c61ca115c22d33bb902153eb0853789c7be4c
+ms.openlocfilehash: db99a9628992c40ef65699fee72d65b891ed1e24
+ms.sourcegitcommit: 26178b116cbf7353fee6ca989b8d872114f7b405
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85835621"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219614"
 ---
 # <a name="reliability-warnings"></a>Güvenilirlik uyarıları
 
@@ -34,7 +34,8 @@ Güvenilirlik uyarıları, doğru bellek ve iş parçacığı kullanımı gibi k
 |[CA2004: GC.KeepAlive'a çağrıları kaldırın](../code-quality/ca2004.md)|SafeHandle kullanımına dönüştürüyorsanız, GC 'ye yapılan tüm çağrıları kaldırın. KeepAlive (nesne). Bu durumda, sınıfların GC çağrısı olması gerekmez. Canlı tutma, sonlandırıcılardan olmadığı varsayılarak ancak işletim sistemi tanıtıcısını sonuçlandırmak için SafeHandle 'ı kullanır.|
 |[CA2006: Yerel kaynakları kapsamak için SafeHandle kullanın](../code-quality/ca2006.md)|Yönetilen kod içinde IntPtr kullanmak olası bir güvenlik ve güvenilirlik sorunu belirtebilir. IntPtr'nin tüm kullanımları onun yerine bir SafeHandle ya da benzer bir teknolojinin kullanımının gerekip gerekmediğini belirlemek için gözden geçirilmelidir.|
 |[CA2007: Doğrudan bir Görevi beklemeyin](../code-quality/ca2007.md)|Zaman uyumsuz bir [awaits](/dotnet/csharp/language-reference/keywords/await) yöntem doğrudan bekler <xref:System.Threading.Tasks.Task> .|
-|[CA2009: Bir ImmutableCollection değeri üzerinde ToImmutableCollection çağırma](../code-quality/ca2009.md)|`ToImmutable`Yöntem, ad alanından sabit bir koleksiyonda gereksiz şekilde çağrıldı <xref:System.Collections.Immutable> .|
+|[CA2008: TaskScheduler geçirmeden görev oluşturmayın](../code-quality/ca2008.md)|Bir görev oluşturma veya devamlılık işlemi, bir parametre belirtmeyen bir yöntem aşırı yüklemesi kullanır <xref:System.Threading.Tasks.TaskScheduler> .|
+|[CA2009: Bir ImmutableCollection değeri üzerinde ToImmutableCollection çağırma](../code-quality/ca2009.md)|`ToImmutable` Yöntem, ad alanından sabit bir koleksiyonda gereksiz şekilde çağrıldı <xref:System.Collections.Immutable> .|
 |[CA2011: Özelliği, ayarlayıcısı içinde atama](../code-quality/ca2011.md) | Bir özelliğe yanlışlıkla kendi [set erişimcisi](/dotnet/csharp/programming-guide/classes-and-structs/using-properties#the-set-accessor)içinde bir değer atandı. |
 |[CA2012: ValueTask’leri doğru kullanın](../code-quality/ca2012.md) | Üye etkinleştirmeleri tarafından döndürülen ValueTasks, doğrudan beklenmek üzere tasarlanmıştır.  Bir ValueTask 'ı birden çok kez kullanmaya çalışır veya tamamlanması bilinmadan önce bir sonuca doğrudan erişmek için bir özel durumla veya bozulmaya neden olabilir.  Bu tür bir ValueTask, büyük olasılıkla işlevsel bir hatanın göstergesidir ve performansın düşmesine neden olabilir. |
 |[CA2013: ReferenceEquals metodunu değer türleriyle birlikte kullanmayın](../code-quality/ca2013.md) | Kullanılarak değerler karşılaştırılırken <xref:System.Object.ReferenceEquals%2A?displayProperty=fullName> , objA ve objB değer türlerseler, yönteme geçirilmeden önce bunlar paketlenirler <xref:System.Object.ReferenceEquals%2A> . Bu, hem objA hem de objB bir değer türünün aynı örneğini temsil ediyorsa bile, <xref:System.Object.ReferenceEquals%2A> Yöntem false değerini döndürür. |
