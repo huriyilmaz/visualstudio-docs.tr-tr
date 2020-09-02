@@ -12,20 +12,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 870e317cb8cea1acc3b4b4f51102283e5f1b28c7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657564"
 ---
 # <a name="visual-studio-workflow-windows-legacy"></a>Visual Studio İş Akışı Pencereleri (Eski)
-@No__t_1 tarafından sunulan eski [!INCLUDE[wfd2](../includes/wfd2-md.md)], [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek için kullanılabilir. Eski tasarımcı, bir iş akışı oluşturmak için kullanabileceğiniz görsel bir tasarımcıdır. **Araç kutusu** 'ndan tasarım yüzeyine etkinlik sürükleyebilir ve bunları orada yapılandırabilirsiniz. @No__t_0 Düzenleyicisi penceresi olarak, diğer [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Düzenleyicisi pencereleri tarafından kullanılan ana pencere alanını kaplar. İş akışının adı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pencere başlık çubuğunda görüntülenir.
+Veya ' i [!INCLUDE[wfd2](../includes/wfd2-md.md)] hedeflemek için tarafından sunulan eski [!INCLUDE[vs2010](../includes/vs2010-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] . Eski tasarımcı, bir iş akışı oluşturmak için kullanabileceğiniz görsel bir tasarımcıdır. **Araç kutusu** 'ndan tasarım yüzeyine etkinlik sürükleyebilir ve bunları orada yapılandırabilirsiniz. Bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Düzenleyici penceresi olarak, diğer düzenleyici pencereleri tarafından kullanılan ana pencere alanını kaplar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . İş akışının adı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pencere başlık çubuğunda görüntülenir.
 
- Eski tasarımcı pencerelerinin çoğu deneyimli [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kullanıcısına tanıdık gelmelidir. Aşağıdaki tabloda, birincil pencereler açıklanmaktadır.
+ Eski tasarımcı pencerelerinin çoğu deneyimli kullanıcıya tanıdık gelmelidir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Aşağıdaki tabloda, birincil pencereler açıklanmaktadır.
 
-|Pencere|Açıklama|
+|Pencere|Description|
 |------------|-----------------|
-|Eski Iş akışı Tasarım Yüzeyi|@No__t_0 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedefleyen bir iş akışı oluşturmak için kullanılan görsel tasarımcı yüzeyi. **Araç** çubuğundan etkinlik tasarımcılarını tasarım yüzeyine sürükleyerek etkinlikleri görsel olarak oluşturma yeteneği sağlar.|
+|Eski Iş akışı Tasarım Yüzeyi|Veya ' i hedefleyen bir iş akışı oluşturmak için kullanılan görsel tasarımcı yüzeyi [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] . **Araç** çubuğundan etkinlik tasarımcılarını tasarım yüzeyine sürükleyerek etkinlikleri görsel olarak oluşturma yeteneği sağlar.|
 |Araç Kutusu|Tasarım yüzeyine sürükleyebileceğiniz etkinlikleri grafik halinde açıklar.|
 |Özellikler|İş akışı etkinlik özelliklerini yapılandırmak için kullanılır.|
 |Çözüm Gezgini|Bir hiyerarşik ağaç görünümünde iş akışı projelerini görüntüler ve projelerin yönetilmesine yardımcı olan özelliklere erişim sağlar.|

@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ee4fea9e3fb1d5b4d27b1d520ac2ab036747f73d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657624"
 ---
 # <a name="link-model-elements-and-work-items"></a>Model öğelerini ve iş öğelerini bağlama
@@ -77,7 +77,7 @@ Visual Studio 'da model öğelerini ve Team Foundation Server veya Visual Studio
 
 - [Sorun giderme](#Troubleshooting)
 
-## <a name="ConnectTFS"></a>Takım Projesine Bağlan
+## <a name="connect-to-a-team-project"></a><a name="ConnectTFS"></a> Takım Projesine Bağlan
  Bağlantı oluşturmak, görüntülemek veya kaldırmak için öncelikle takım projenize bağlanmanız gerekir.
 
 1. **Takım** menüsünde, Takım Gezgini penceresini göstermek Için **Bağlantıları Yönet** ' i seçin.
@@ -86,7 +86,7 @@ Visual Studio 'da model öğelerini ve Team Foundation Server veya Visual Studio
 
 3. **Takım Gezgini**, iş öğelerini oluşturmak, bağlamak veya görüntülemek istediğiniz projeyi seçin.
 
-## <a name="LinkNew"></a>Model öğesini yeni bir iş öğesine bağlama
+## <a name="link-a-model-element-to-a-new-work-item"></a><a name="LinkNew"></a> Model öğesini yeni bir iş öğesine bağlama
 
 1. Kullanmak istediğiniz TFS örneğine bağlandığınızdan emin olun.
 
@@ -101,7 +101,7 @@ Visual Studio 'da model öğelerini ve Team Foundation Server veya Visual Studio
 > [!WARNING]
 > Bir iş öğesi oluşturmak veya bu öğeye bağlanmak için TFS kaynak kodu denetimine (SCC) zaten bağlanmış olmanız gerekir. Farklı bir TFS SCC bağlantısını açmaya çalışırsanız, Visual Studio geçerli çözümü otomatik olarak kapatır. Bir iş öğesini oluşturmayı veya bir iş öğesini bağlamayı denemeden önce uygun SCC 'e zaten bağlı olduğunuzdan emin olun. Visual Studio 'nun sonraki sürümlerinde, bir SCC 'e bağlı değilseniz menü komutları kullanılamaz.
 
-## <a name="LinkExisting"></a>Model öğesini var olan bir iş öğesine bağlama
+## <a name="link-a-model-element-to-an-existing-work-item"></a><a name="LinkExisting"></a> Model öğesini var olan bir iş öğesine bağlama
  Model öğelerini iş öğelerine bağladığınızda, iş öğesinden değil, model öğesinden başlayın.
 
 1. Kullanmak istediğiniz TFS örneğine bağlandığınızdan emin olun.
@@ -125,7 +125,7 @@ Visual Studio 'da model öğelerini ve Team Foundation Server veya Visual Studio
 > [!WARNING]
 > Bir iş öğesi oluşturmak veya bu öğeye bağlanmak için TFS kaynak kodu denetimine (SCC) zaten bağlanmış olmanız gerekir. Farklı bir TFS SCC bağlantısını açmaya çalışırsanız, Visual Studio geçerli çözümü otomatik olarak kapatır. Bir iş öğesini oluşturmayı veya bir iş öğesini bağlamayı denemeden önce uygun SCC 'e zaten bağlı olduğunuzdan emin olun. Visual Studio 'nun sonraki sürümlerinde, bir SCC 'e bağlı değilseniz menü komutları kullanılamaz.
 
-## <a name="OpenWorkItem"></a>Model öğesine bağlı iş öğelerini görüntüle
+## <a name="view-work-items-linked-to-a-model-element"></a><a name="OpenWorkItem"></a> Model öğesine bağlı iş öğelerini görüntüle
 
 1. **Takım Gezgini**, iş öğelerinin model öğesiyle bağlantılı olduğu takım projesine bağlı olduğunuzdan emin olun.
 
@@ -134,7 +134,7 @@ Visual Studio 'da model öğelerini ve Team Foundation Server veya Visual Studio
     > [!NOTE]
     > Yalnızca bağlı olan sunucudaki iş öğeleri görünür. Herhangi bir iş öğesi görmüyorsanız, **Takım Gezgini**doğru sunucuya bağlı olduğunuzdan emin olun.
 
-## <a name="ViewLinkedModels"></a>İş öğesine bağlı model öğelerini görüntüle
+## <a name="view-model-elements-linked-to-a-work-item"></a><a name="ViewLinkedModels"></a> İş öğesine bağlı model öğelerini görüntüle
  Visual Studio Team Services ve Team Foundation Server 2012 veya sonraki bir sürümde bir iş öğesiyle bağlantılı olan modelleme diyagramlarını ve öğelerini görüntüleyebilirsiniz. Örneğin, bir iş öğesi uygulanacak yeni sınıfların tasarımını gösteren sınıf modellerine bağlı olabilir.
 
 1. **Takım Gezgini**, model öğelerinin iş öğesiyle bağlantılı olduğu takım projesine bağlı olduğunuzdan emin olun.
@@ -146,31 +146,31 @@ Visual Studio 'da model öğelerini ve Team Foundation Server veya Visual Studio
 
      ![Bağlı model öğesini bir iş öğesinden aç](../modeling/media/workitem-openlinkedmodelelement.png "WorkItem_OpenLinkedModelElement")
 
-## <a name="RemoveLinks"></a>Model öğeleri ve iş öğeleri arasındaki bağlantıları sil
+## <a name="delete-links-between-model-elements-and-work-items"></a><a name="RemoveLinks"></a> Model öğeleri ve iş öğeleri arasındaki bağlantıları sil
  Model öğesinden başlayarak bağlantılı bir iş öğesini kaldırın. Bu, model öğesinin ters bağlantısını iş öğesinden kaldırır. Aksi takdirde, iş öğesiyle başlarsanız, model öğesinden iş öğesine giden ters bağlantı silinmez.
 
 1. Modelleme diyagramında veya **UML Model Gezgini**' nde, model öğesinin kısayol menüsünü açın.
 
 2. **Iş öğelerini kaldır**' ı seçin.
 
-     \- veya-
+     \- veya
 
     1. **Özellikler**' i ve ardından bağlantılı iş öğesi sayısının göründüğü **iş öğelerini** seçin.
 
-    2. **Iş öğeleri** özelliğinde, üç nokta düğmesini ( **[...]** ) seçin.
+    2. **Iş öğeleri** özelliğinde, üç nokta düğmesini ( **[...]**) seçin.
 
         > [!NOTE]
         > Yalnızca geçerli sunucudaki iş öğeleri görünür. Liste boşsa, ancak iş öğelerinin sayısı sıfır değilse, **Takım Gezgini**doğru sunucuya bağlandığınızdan emin olun.
 
 3. **Iş öğelerinin bağlantılarını kaldır**' ın altında, bağlantısını kaldırmak istediğiniz seçili öğeleri temizleyin. **Tamam ' ı**seçin.
 
-## <a name="Troubleshooting"></a>Sorunu
+## <a name="troubleshooting"></a><a name="Troubleshooting"></a> Sorunu
 
-|**Konuda**|**Olası neden**|**Çözünürlüğüne**|
+|**Sorun**|**Olası nedeni**|**Çözünürlük**|
 |---------------|------------------------|--------------------|
-|Bağlamak istediğiniz model öğesi bulunamıyor.|Öğesi, [!INCLUDE[esprscc](../includes/esprscc-md.md)] bir modelleme projesindeki diyagramda olabilir. Diyagramla eşleşen bir çalışma alanınız olmayabilir.|Çalışma alanınızı modelleme projesiyle ve diyagramla eşleştirin. Çalışma alanınız yoksa, oluşturmanız gerekir.<br /><br /> Bu sorun için görünen hata iletisi, çalışma alanınızı eşleştirmek için kullanabileceğiniz yolu içerir.<br /><br /> Bkz. [çalışma alanları oluşturma ve bunlarla çalışma](https://msdn.microsoft.com/library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a).|
+|Bağlamak istediğiniz model öğesi bulunamıyor.|Öğesi, içindeki bir modelleme projesindeki diyagramda olabilir [!INCLUDE[esprscc](../includes/esprscc-md.md)] . Diyagramla eşleşen bir çalışma alanınız olmayabilir.|Çalışma alanınızı modelleme projesiyle ve diyagramla eşleştirin. Çalışma alanınız yoksa, oluşturmanız gerekir.<br /><br /> Bu sorun için görünen hata iletisi, çalışma alanınızı eşleştirmek için kullanabileceğiniz yolu içerir.<br /><br /> Bkz. [çalışma alanları oluşturma ve bunlarla çalışma](https://msdn.microsoft.com/library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a).|
 |Bağlantılı model öğesi bulunamıyor.|Bağlantılı öğe taşınmış, yeniden adlandırılmış veya silinmiş bir diyagram üzerinde olabilir.|1. iş öğesinde model öğesinin bağlantısını silin.<br />2. iş öğesinden model öğesine yeni bir bağlantı oluşturun.|
-|İş öğesinde beklediğiniz bağlantılı model öğeleri yoktur.|Bir iş öğesi, yalnızca bağlantılı iş öğesinden oluşturulmuşsa bağlantılı katmanı öğesini gösterir. Takımınız [!INCLUDE[esprscc](../includes/esprscc-md.md)] kullanmıyorsa, diyagramların yerel yolu bağlantıları oluşturmak için kullanılır. Modelleme projesi ve diyagramları [!INCLUDE[esprscc](../includes/esprscc-md.md)] ise, projeye erişebilen tüm ekip üyeleri iş öğelerinde bağlantılı öğeleri görüntüleyebilir.|İş öğesini yenilemeyi deneyin.|
+|İş öğesinde beklediğiniz bağlantılı model öğeleri yoktur.|Bir iş öğesi, yalnızca bağlantılı iş öğesinden oluşturulmuşsa bağlantılı katmanı öğesini gösterir. Takımınız kullanmıyorsa [!INCLUDE[esprscc](../includes/esprscc-md.md)] , diyagramların yerel yolu bağlantıları oluşturmak için kullanılır. Modelleme projesi ve diyagramları ' de ise [!INCLUDE[esprscc](../includes/esprscc-md.md)] , projeye erişebilen tüm ekip üyeleri, çalışma öğelerinde bağlantılı öğeleri görüntüleyebilir.|İş öğesini yenilemeyi deneyin.|
 |Bir iş öğesinden model öğesine giden bağlantının silinmesi, model öğesinden iş öğesine giden bağlantıyı silmez.||Model öğesinden başlayarak iş öğesine giden bağlantıyı silin.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.

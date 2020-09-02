@@ -20,25 +20,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 027e713ccb966528d0468050df30e4265b574198
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151423"
 ---
 # <a name="edit-and-continue-visual-c"></a>Düzenle ve Devam Et (Visual C#)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Düzenle ve devam et için C# ile hata ayıklama sırasında kodunuzda kesme modunda değişiklik yapabilirsiniz. Değişiklikleri durdurmak ve hata ayıklama oturumunu yeniden başlatmak zorunda kalmadan uygulanabilir. Çalışma modunda Kaynak Düzenleyici salt okunur.  
+C# için Düzenle ve devam et ile, hata ayıklama sırasında kodunuzda kesme modunda değişiklikler yapabilirsiniz. Değişiklikler hata ayıklama oturumunu durdurup yeniden başlatmaya gerek kalmadan uygulanabilir. Çalışma modunda, kaynak Düzenleyici salt okunurdur.  
   
- Düzenle ve devam et hata ayıklama oturumu sırasında yapmak isteyebilirsiniz değişikliklerin çoğu destekler, ancak bazı özel durumlar vardır. Daha fazla bilgi için [desteklenen kod değişiklikleri (C#)](../debugger/supported-code-changes-csharp.md).  
+ Düzenle ve devam et, hata ayıklama oturumu sırasında yapmak isteyebileceğiniz birçok değişikliği destekler, ancak bazı özel durumlar vardır. Daha fazla bilgi için bkz. [desteklenen kod değişiklikleri (C#)](../debugger/supported-code-changes-csharp.md).  
   
- Düzenle ve devam .NET Framework 4.5.1'i hedefleyen 64-bit projeler için desteklenir.  
+ Düzenle ve devam et, .NET Framework 4.5.1 ' i hedefleyen 64-bit projeler için desteklenir.  
   
- Düzenle ve devam et etkinken, desteklenen değişiklikleri gibi bir hata ayıklayıcı yürütme komutu kullandığınızda otomatik olarak uygulanır **devam**, **adım**, **sonraki deyimi Ayarla**, veya bir işlev değerlendirmesi hata ayıklayıcı penceresinde gerçekleştirir.  
+ Düzenle ve devam et etkinleştirildiğinde, bir hata ayıklayıcı yürütme komutunu kullandığınızda, **devam et**, **adımla**, **sonraki ifadeyi ayarla**veya bir hata ayıklayıcı penceresinde işlev değerlendirmesi gerçekleştirme gibi desteklenen değişiklikler otomatik olarak uygulanır.  
   
- Daha fazla bilgi için [nasıl yapılır: Kullanım Düzenle ve devam et (C#)](../debugger/how-to-use-edit-and-continue-csharp.md).  
+ Daha fazla bilgi için bkz. [nasıl yapılır: Düzenle ve devam et 'ı kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Kullanım Düzenle ve devam et (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)   
+ [Nasıl yapılır: Düzenle ve devam et kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)   
  [Desteklenen Kod Değişiklikleri (C#)](../debugger/supported-code-changes-csharp.md)

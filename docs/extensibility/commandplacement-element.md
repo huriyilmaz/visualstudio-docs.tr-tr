@@ -1,5 +1,5 @@
 ---
-title: Komut Yerleştirme Öğesi | Microsoft Dokümanlar
+title: Commandyerleştirmesini öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,18 +12,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: dcf9f23b5e860b895baa4c2a7a783f2ee15fcc77
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739735"
 ---
-# <a name="commandplacement-element"></a>Komut Yerleştirme öğesi
-CommandPlacement öğesi düğmelerin, grupların ve menülerin birden fazla gruba veya menüye eklenmesini sağlar. Komut Yerleştirme öğesini kullanarak, kullanıcı arabiriminin görünümünü değiştirmek için bu öğeleri tamamen yeniden tanımlamanız gerekmez.
+# <a name="commandplacement-element"></a>Commandyerleştirme öğesi
+Commandyerleştirme öğesi düğmelerin, grupların ve menülerin birden fazla gruba veya menüye dahil edilmesini sağlar. Commandyerleştirme öğesini kullanarak, Kullanıcı arabiriminin görünümünü değiştirmek için bu öğeleri tamamen yeniden tanımlamanız gerekmez.
 
- Daha fazla bilgi için [bkz.](../extensibility/creating-reusable-groups-of-buttons.md)
+ Daha fazla bilgi için bkz. yeniden [kullanılabilir düğme grupları oluşturma](../extensibility/creating-reusable-groups-of-buttons.md).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <CommandPlacement guid="guidMyCommandSet" id="MyCommand" priority="0x001" >
@@ -38,10 +38,10 @@ CommandPlacement öğesi düğmelerin, grupların ve menülerin birden fazla gru
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Guıd|Gereklidir. [Semboller öğesinde](../extensibility/symbols-element.md)tanımlandığı gibi komut kümesinin guid.|
-|id|Gereklidir. Menüde tanımlandığı gibi, yerleştirilecek menü, grup veya `Symbols Element`komutun kimliği.|
-|Öncelik|Gereklidir. Öğenin üst öğesindeki görsel konumunu belirler.|
-|Koşul|İsteğe bağlı. Bkz. [Koşullu Aözler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
+|guid|Gereklidir. [Sembol öğesinde](../extensibility/symbols-element.md)tanımlandığı şekilde, komut kümesinin GUID 'si.|
+|kimlik|Gereklidir. İçinde tanımlandığı şekilde, yerleştirilecek menü, Grup veya komutun kimliği `Symbols Element` .|
+|Priority|Gereklidir. Öğenin üst öğesinde görsel konumunu belirler.|
+|Koşul|İsteğe bağlı. Bkz. [koşullu Aöznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|
 
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -53,7 +53,7 @@ CommandPlacement öğesi düğmelerin, grupların ve menülerin birden fazla gru
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Komut Yerleşimleri öğesi](../extensibility/commandplacements-element.md)|Komuta Yerve Komuta Yerlemi öğelerini belirtir.|
+|[CommandPlacements öğesi](../extensibility/commandplacements-element.md)|CommandPlacements ve Commandyerleştirme öğelerinin gruplarını belirtir.|
 
 ## <a name="example"></a>Örnek
 
@@ -67,5 +67,5 @@ CommandPlacement öğesi düğmelerin, grupların ve menülerin birden fazla gru
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Komut Yerleşimleri öğesi](../extensibility/commandplacements-element.md)
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [CommandPlacements öğesi](../extensibility/commandplacements-element.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

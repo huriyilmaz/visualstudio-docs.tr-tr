@@ -1,5 +1,5 @@
 ---
-title: Bir bağlantı noktası sağlayıcısı uygulama | Microsoft Docs
+title: Bağlantı noktası sağlayıcısı uygulama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,29 +12,29 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ffa6daa20c08bd236657c88e762b2f453554cb74
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152683"
 ---
 # <a name="implementing-a-port-supplier"></a>Bağlantı Noktası Sağlayıcısı Uygulama
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bağlantı noktası sağlayıcısı oturum hata ayıklama Yöneticisi (SDM) istek bağlantı noktaları sağlar. Bağlantı noktası sağlayıcısı, DCOM olmayan bir makineye hata ayıklama sırasında veya yeni bir cihaz desteklenmesi gerektiğinde uygulanması gerekir. Örneğin, bir cep telefonu için hata ayıklama sağlamak için cep telefonunuza (belki de IR veya bir hücre bağlantı yoluyla) bağlanan ve bir telefonda çalışan programlar ve işlemleri numaralandırır bağlantı noktaları sağlayan bir bağlantı noktası sağlayıcısı uygulayabilir.  
+Bir bağlantı noktası sağlayıcısı, oturum hata ayıklama Yöneticisi 'ne (SDM) istek üzerine bağlantı noktaları sağlar. DCOM olmayan bir makinede hata ayıklanırken veya yeni bir cihazın desteklenmesi gerektiğinde bir bağlantı noktası tedarikçinin uygulanması gerekir. Örneğin, bir hücre telefonunda hata ayıklama sağlamak için, hücre telefonuna (Belki IR veya bir hücre bağlantısı aracılığıyla) bağlanan bağlantı noktaları sağlayan bir bağlantı noktası sağlayıcısı uygulayabilir ve telefonda çalışan işlem ve programları numaralandırır.  
   
- Bu gibi durumlarda kendi bağlantı noktası sağlayıcısı uygulama gerekmez. Bu nedenle Windows tabanlı makineler (uzaktan hata ayıklama dahil) üzerinde hata ayıklama programları için bağlantı noktası sağlayıcıları için yerel ve ortak dil çalışma zamanı (CLR) işlemleri, Visual Studio sağlar.  
+ Windows tabanlı makinelerde (uzaktan hata ayıklama dahil) programlarda hata ayıklama için, Visual Studio yerel ve ortak dil çalışma zamanı (CLR) işlemlerine yönelik bağlantı noktası sağlayıcıları sağlar. bu nedenle, bu durumlarda kendi bağlantı noktası tedarikçinizi uygulamanız gerekmez.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Bağlantı Noktası Sağlayıcısı Uygulama ve Kaydetme](../../extensibility/debugger/implementing-and-registering-a-port-supplier.md)  
- SDM bağlantı noktalarını ve bağlantı noktası sağlayıcısı ile nasıl etkileşim kurduğu açıklanır.  
+ SDM 'nin bağlantı noktası tedarikçisiyle ve bağlantı noktalarıyla nasıl etkileşime gireceğini açıklar.  
   
  [Gerekli Bağlantı Noktası Sağlayıcısı Arabirimleri](../../extensibility/debugger/required-port-supplier-interfaces.md)  
- Bağlantı noktası sağlayıcısı edinmek için uygulanması gereken arabirimleri belgeler.  
+ Bir bağlantı noktası sağlayıcısı edinmek için uygulanması gereken arabirimleri belgeler.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Hata Ayıklayıcı Kavramları](../../extensibility/debugger/debugger-concepts.md)  
- Hata ayıklama ana mimari kavramlarını açıklar.  
+ Ana hata ayıklama mimarisi kavramlarını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Hata Ayıklayıcı Genişletilebilirliği](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

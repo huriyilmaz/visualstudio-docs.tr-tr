@@ -1,5 +1,5 @@
 ---
-title: IDE tarafından uygulanan geri arama fonksiyonları | Microsoft Dokümanlar
+title: IDE tarafından uygulanan geri çağırma Işlevleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,37 +12,37 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 666486f5b800707a4467a129abeed7a13306f10a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739898"
 ---
-# <a name="callback-functions-implemented-by-the-ide"></a>IDE tarafından uygulanan geri arama işlevleri
-Tümleşik geliştirme ortamıyla (IDE) mümkün olduğunca sorunsuz bir tümleştirme yapmak ve birleşik bir son kullanıcı deneyimi sağlamak için kaynak denetim eklentisi IDE tarafından uygulanan geri arama işlevlerini kullanabilir. Eklenti, bilgi nin IDE'ye iletilmesi için kaynak kontrol işlemi sırasında bu işlevleri uygun zamanlarda arayabilir; IDE daha sonra bu bilgileri yerel Kullanıcı Bira'sında gömülü öğeler olarak görüntüleyebilir. Kullanıcı, eklentinin kendi kullanıcı arasını çalıştırdığı ndan daha az parçalanmış bir deneyime sahiptir.
+# <a name="callback-functions-implemented-by-the-ide"></a>IDE tarafından uygulanan geri çağırma işlevleri
+Tümleşik geliştirme ortamı (IDE) ile tümleştirmeyi mümkün olduğunca sorunsuz hale getirmek ve birleştirilmiş bir son kullanıcı deneyimi sağlamak için, kaynak denetimi eklentisi IDE tarafından uygulanan geri çağırma işlevlerini kullanabilir. Eklenti, IDE 'ye bilgi geçirmek için kaynak denetim işlemi sırasında bu işlevleri uygun zamanlarda çağırabilir; IDE daha sonra bu bilgileri yerel kullanıcı arabiriminde katıştırılmış öğeler olarak görüntüleyebilir. Bu senaryoda, eklenti kendi Kullanıcı arabirimini işe alıyorsa, kullanıcının bu senaryoda daha az parçalanmış bir deneyimi vardır.
 
- Gerekli üstbilgi dosyası *scc.h.* Varsayılan konum *\Program Dosyaları\VSIP 8.0\EnvSDK\common\inc.\\* Ayrıca *\Program Files\VSIP 8.0\MSSCCI\\*adresinde kaynak denetimi eklentisi örneğine sahip VSIP klasöründedir.
+ Gerekli üst bilgi dosyası *SCC. h*' dir. Varsayılan konum *\Program Files\vsıp 8.0 \ EnvSDK\common\inc \\ *' dir. Ayrıca, *\Program Files\vsıp 8.0 \ MSSCCı \\ *konumundaki kaynak denetimi eklentisi örneğine sahip VSIP klasöründedir.
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) IDE aracılığıyla kaynak denetim eklentisinden gelen iletileri görüntülemek için [SccOpenProject](../extensibility/sccopenproject-function.md) tarafından kullanılan geri arama işlevini açıklar.
+- [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) IDE aracılığıyla kaynak denetimi eklentisindeki iletileri göstermek için [SccOpenProject](../extensibility/sccopenproject-function.md) tarafından kullanılan geri çağırma işlevini açıklar.
 
-- [POPLISTFUNC](../extensibility/poplistfunc.md) IDE, sürüm denetimi altındaki dosyaların tam listesi gibi yalnızca kaynak denetim eklentisi tarafından kullanılabilen bilgilere tam erişime sahip olmadığında [SccPopulateList](../extensibility/sccpopulatelist-function.md) tarafından kullanılan geri arama işlevini açıklar.
+- [Poplistfunc](../extensibility/poplistfunc.md) IDE 'nin yalnızca kaynak denetimi eklentisi için kullanılabilir olan bilgilere (sürüm denetimi altındaki tam bir liste gibi) tam erişimi olmadığında, [SccPopulateList](../extensibility/sccpopulatelist-function.md) tarafından kullanılan geri çağırma işlevini açıklar.
 
-- [QUERYCHANGESFUNC](../extensibility/querychangesfunc.md) [SccQueryChanges](../extensibility/sccquerychanges-function.md) işlemi tarafından kullanılan geri arama işlevini açıklar.
+- [QUERYCHANGESFUNC işlevi](../extensibility/querychangesfunc.md) [SccQueryChanges](../extensibility/sccquerychanges-function.md) işlemi tarafından kullanılan geri çağırma işlevini açıklar.
 
-- [POPDIRLISTFUNC](../extensibility/popdirlistfunc.md) [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) işlemi tarafından kullanılan geri arama işlevini açıklar.
+- [Popdirlistfunc](../extensibility/popdirlistfunc.md) [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) işlemi tarafından kullanılan geri çağırma işlevini açıklar.
 
-- [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md) [SccSetOption'a](../extensibility/sccsetoption-function.md) yapılan bir çağrıyla ayarlanan geri arama işlevini açıklar ve kaynak denetim eklentisinin ad değişikliklerini IDE'ye geri iletmesini sağlar.
+- [SeçenekAdı Changepfn](../extensibility/optnamechangepfn.md) Kaynak denetimi eklentisinin IDE 'ye yeniden iletişim kurmasını sağlayan [SccSetOption](../extensibility/sccsetoption-function.md) çağrısı tarafından ayarlanan geri çağırma işlevini açıklar.
 
 ## <a name="related-sections"></a>İlgili bölümler
 - [SccOpenProject](../extensibility/sccopenproject-function.md) Bir proje açar.
 
-- [SccPopulateListesi](../extensibility/sccpopulatelist-function.md) Geçerli durumları için dosyaların listesini inceler. Buna ek olarak, bir dosya için ölçütleri eşleşmiyor zaman arayan bildirmek için `pfnPopulate` işlevi `nCommand`kullanır.
+- [SccPopulateList](../extensibility/sccpopulatelist-function.md) Geçerli durumları için dosya listesini inceler. Ayrıca, `pfnPopulate` bir dosya ile ilgili ölçütlerle eşleşmediği zaman, çağrıyı yapana bildirmek için işlevini kullanır `nCommand` .
 
-- [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) Kaynak denetimi altında olan proje veya projelerdeki dizin ve dosyaların listesini inceler. Bulunan her dizin ve dosya adı bir geri arama işlevine geçirilir.
+- [SccPopulateDirList](../extensibility/sccpopulatedirlist-function.md) Kaynak denetimi altındaki bir projedeki veya projelerdeki dizinlerin ve dosyaların listesini inceler. Bulunan her dizin ve dosya adı bir geri çağırma işlevine geçirilir.
 
-- [SccQueryDeğişiklikler](../extensibility/sccquerychanges-function.md) Dosya listesinde yapılan ad değişikliklerini inceler. Her dosya adı, değiştirme durumuyla birlikte bir geri arama işlevine aktarılır.
+- [SccQueryChanges](../extensibility/sccquerychanges-function.md) Dosya listesinde yapılan ad değişikliklerini inceler. Her dosya adı, değişiklik durumuyla birlikte bir geri çağırma işlevine geçirilir.
 
-- [SccSetOption](../extensibility/sccsetoption-function.md) Çok çeşitli seçenekler belirler. Her seçenek `SCC_OPT_xxx` ile başlar ve kendi tanımlanmış değerler kümesi vardır.
+- [SccSetOption](../extensibility/sccsetoption-function.md) Çok çeşitli seçenekler ayarlar. Her seçenek ile başlar `SCC_OPT_xxx` ve kendi tanımlı değer kümesine sahiptir.
 
-- [Kaynak Kontrol Eklentileri](../extensibility/source-control-plug-ins.md) Kaynak Denetim Eklentisi SDK'nın referans bölümünün içeriğini açıklar.
+- [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md) Kaynak denetimi eklentisi SDK 'sının başvuru bölümünün içeriğini açıklar.

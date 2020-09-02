@@ -1,5 +1,5 @@
 ---
-title: Idialoadcallback::notifyopendbg | Microsoft Docs
+title: 'Ialoadcallback:: NotifyOpenDBG | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 12dd028cac885978589524aaf02f110a5a6994c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151975"
 ---
 # <a name="idialoadcallbacknotifyopendbg"></a>IDiaLoadCallback::NotifyOpenDBG
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir aday .dbg Dosya açıldığında çağrılır.  
+Bir aday. dbg dosyası açıldığında çağırılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT NotifyOpenDBG (   
@@ -36,13 +36,13 @@ HRESULT NotifyOpenDBG ( 
   
 #### <a name="parameters"></a>Parametreler  
  `dbgPath`  
- [in] .Dbg dosyasının tam yolu.  
+ 'ndaki . Dbg dosyasının tam yolu.  
   
  `resultCode`  
- [in] Başarıyı gösteren kod (`S_OK`) veya bu dosyaya uygulanan yük hatası.  
+ 'ndaki `S_OK`Bu dosyaya uygulanan yükün başarısını () veya başarısızlığını belirten kod.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Dönüş kodu genellikle göz ardı edilir.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. Dönüş kodu genellikle yok sayılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

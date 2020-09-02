@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 680d304a8e4d21365d82f654265ae2f34582b636
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330257"
 ---
 # <a name="diagnostic-namespace"></a>Tanılama ad alanı
@@ -32,14 +32,14 @@ namespace diagnostic;
 
 ### <a name="classes"></a>Sınıflar
 
-|Name|Description|
+|Ad|Açıklama|
 |----------|-----------------|
 |[marker_series Sınıfı](../profiling/marker-series-class.md)|Tek bir sağlayıcı tarafından oluşturulan olayların seri kanalını temsil eder.|
 |[Span sınıfı](../profiling/span-class.md)|Uygulamanın aşamasını tanımlar.|
 
 ### <a name="enumerations"></a>Listelemeler
 
-|Name|Description|
+|Ad|Açıklama|
 |----------|-----------------|
 |[marker_importance Numaralandırması](../profiling/marker-importance-enumeration.md)|Bir eşzamanlılık görselleştiricisi işaretçisinin önem derecesini temsil eder.|
 

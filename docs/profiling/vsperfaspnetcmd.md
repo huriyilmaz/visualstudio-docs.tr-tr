@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: b6ddadc15a5e0d53535b82d87aadd31fec65adaf
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330477"
 ---
 # <a name="vsperfaspnetcmd"></a>VSPerfASPNetCmd
@@ -27,16 +27,16 @@ ms.locfileid: "85330477"
 
 ## <a name="options"></a>Seçenekler
 
-|Seçenek|Description|
+|Seçenek|Açıklama|
 |------------|-----------------|
-|**/Sample** veya **/s**|Örnekleme yöntemini kullanarak Profiles Web sitesi. **/Sample** varsayılan yöntemdir. /Sample, **/Trace**ile birlikte kullanılamaz.|
-|**/Trace** veya **/t**|İzleme yöntemini kullanarak profiller Web sitesi. /Trace, **/Sample**ile kullanılamaz.|
+|**/Sample** veya   **/s**|Örnekleme yöntemini kullanarak Profiles Web sitesi. **/Sample** varsayılan yöntemdir. /Sample, **/Trace**ile birlikte kullanılamaz.|
+|**/Trace** veya   **/t**|İzleme yöntemini kullanarak profiller Web sitesi. /Trace, **/Sample**ile kullanılamaz.|
 |**/Memory**[**:** `Type` ] veya **/m**[**:**{**a**&#124;**l**}]|Profiller bellek ayırma ve isteğe bağlı olarak profiller nesne yaşam süreleri (çöp toplama). **/Memory** , örnekleme veya izleme yöntemiyle birlikte kullanılabilir.<br /><br /> *Tür* aşağıdakilerden biri olabilir:<br /><br /> -   **ayırma** (veya **a**) yalnızca bellek ayırma verilerini toplar.<br />-   **yaşam süresi** (veya **l**), bellek ayırma ve nesne yaşam süresi verilerini toplar.<br /><br /> Varsayılan değer `Type` **ayırma**' dır.|
-|**/Ipucu** veya **/i**|Profil oluşturma verilerine ayrıntılı ASP.NET isteği ve ADO.NET çağrı bilgisi ekler. **/Tıp** , örnekleme veya izleme yöntemiyle birlikte kullanılabilir ve **/Memory** seçeneğiyle birlikte kullanılabilir.|
-|**/Output:** `File` veya **/o:**`File`|Profil oluşturma verilerinin yolunu ve dosya adını belirtir (.* VSP*) dosyası.|
-|**/Nowait** veya **/n**|Komut istemi penceresinde ek komutların kullanılabilmesi için, komut istemi ' ni hemen döndürür. Profil oluşturmayı devre dışı bırakmak için ayrı bir komut satırına **VSPerfASPNETCmd/Shutdown** yazmanız gerekir.|
-|**/Packsymbols**[: {**on**&#124;**off**} veya **/p**[: {**on**&#124;**off**}|Profil oluşturma verilerinde sembolleri (işlev ve parametre adları, vb.) katıştırır (.* VSP*) dosyası.|
-|**/Shutdown:** `Website` or **/d:**`Website`|Profil oluşturmayı devre dışı bırakır. Profil oluşturmayı başlatmak için **ya da profil** Oluşturucu beklenmedik bir şekilde sona erdiğinde, bir komut satırında tek seçenek olarak kullanın. Özgün **VSPerfASPNETCmd** komutunda kullandığınız URL 'yi belirtin.|
+|**/Ipucu** veya   **/i**|Profil oluşturma verilerine ayrıntılı ASP.NET isteği ve ADO.NET çağrı bilgisi ekler. **/Tıp** , örnekleme veya izleme yöntemiyle birlikte kullanılabilir ve **/Memory** seçeneğiyle birlikte kullanılabilir.|
+|**/Output:** `File` veya   **/o:**`File`|Profil oluşturma verilerinin yolunu ve dosya adını belirtir (.* VSP*) dosyası.|
+|**/Nowait** veya   **/n**|Komut istemi penceresinde ek komutların kullanılabilmesi için, komut istemi ' ni hemen döndürür. Profil oluşturmayı devre dışı bırakmak için ayrı bir komut satırına **VSPerfASPNETCmd/Shutdown** yazmanız gerekir.|
+|**/Packsymbols**[: {**on**&#124;**off**} veya   **/p**[: {**on**&#124;**off**}|Profil oluşturma verilerinde sembolleri (işlev ve parametre adları, vb.) katıştırır (.* VSP*) dosyası.|
+|**/Shutdown:** `Website` or   **/d:**`Website`|Profil oluşturmayı devre dışı bırakır. Profil oluşturmayı başlatmak için **ya da profil** Oluşturucu beklenmedik bir şekilde sona erdiğinde, bir komut satırında tek seçenek olarak kullanın. Özgün **VSPerfASPNETCmd** komutunda kullandığınız URL 'yi belirtin.|
 |`Website`|Profili oluşturulacak Web sitesinin URL 'si.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

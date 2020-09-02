@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 35be5ddeedf0b081fa94e399f294151e73a157ed
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657740"
 ---
 # <a name="error-list-window"></a>Hata Listesi Penceresi
@@ -70,14 +70,14 @@ NOTUN
 
    Araç çubuğunun sağ tarafındaki liste, derlemeden hataların (bir derleme işleminden kaynaklanan hatalar) veya IntelliSense 'den (bir derleme çalıştırılmadan önce algılanan hatalar) veya her ikisiyle ait hataların gösterilip gösterilmeyeceğini belirtir.
 
-## <a name="search"></a>Ara
+## <a name="search"></a>Arayın
  Hata listesindeki belirli hataları bulmak için **hata listesi** araç çubuğunun sağ tarafındaki **arama hata listesi** metin kutusunu kullanın. Hata listesindeki görünür bir sütunda arama yapabilirsiniz ve arama sonuçları her zaman sorgu yerine sıralama önceliği olan sütuna göre sıralanır veya filtre uygulanmış olur. Odak **hata listesi**, **ESC** tuşunu seçerseniz arama terimini ve filtrelenmiş arama sonuçlarını temizleyebilirsiniz. Ayrıca, metin kutusunun sağ tarafındaki **X** simgesini tıklatarak temizleyebilirsiniz.
 
 ## <a name="save"></a>Kaydet
  Hata listesini kopyalayabilir ve bir dosyaya kaydedebilirsiniz. Kopyalamak istediğiniz hataları seçin ve seçimi sağ tıklatın, ardından bağlam menüsünde **Kopyala**' yı seçin. Sonra hataları bir dosyaya yapıştırabilirsiniz. Hataları bir Excel elektronik tablosuna yapıştırırsanız, alanlar farklı sütunlar halinde görünür.
 
-## <a name="ui-element-list"></a>UI öğe listesi
- Önem derecesi farklı **hata listesi** girişi türlerini (**hata**, **ileti**, **Uyarı**, **uyarı (etkin)** , **uyarı (etkin değil)** görüntüler.
+## <a name="ui-element-list"></a>UI Öğe Listesi
+ Önem derecesi farklı **hata listesi** girişi türlerini (**hata**, **ileti**, **Uyarı**, **uyarı (etkin)**, **uyarı (etkin değil)** görüntüler.
 
  Kod, hata kodunu görüntüler.
 

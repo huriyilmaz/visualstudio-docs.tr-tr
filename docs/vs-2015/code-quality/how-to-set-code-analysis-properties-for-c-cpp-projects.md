@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: CC++ projeleri Için kod analizi özelliklerini ayarlama | Microsoft Docs'
+title: 'Nasıl yapılır: C-C + + projeleri için kod analizi özelliklerini ayarlama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -20,10 +20,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: b2fb3cb81b49fd4b8cc83e0548110d2025c7488d
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77277992"
 ---
 # <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>Nasıl yapılır: C/C++ Projeleri için Kod Analizi Özelliklerini Ayarlama
@@ -38,7 +38,7 @@ Kod Analizi aracının, projenizin her yapılandırmasındaki kodu çözümlemek
  **Yapılandırma** listesi ve **Platform** listesi farklı proje yapılandırmasına ve platform birleşimlerine farklı kod çözümleme ayarları uygulamanıza olanak tanır. Örneğin, hata ayıklama derlemeleri ve yayın yapıları için farklı bir küme için projenize bir kural kümesi uygulamak üzere Kod analizini yönlendirebilirsiniz.  
   
 ## <a name="enabling-code-analysis"></a>Kod analizini etkinleştirme  
- **Derleme Için kod analizini EtkinleştirC++ '** i seçerek projeniz için kod analizini etkinleştirmek isteyip istemediğinize karar verebilirsiniz. **Yapılandırma** listesiyle birlikte, örneğin hata ayıklama derlemeleri Için kod analizini devre dışı bırakmaya karar verebilir ve bunu yayın yapıları için etkinleştirebilirsiniz.  
+ **Derlemede C/C++ Için kod analizini etkinleştir '** i seçerek projeniz için kod analizini etkinleştirip etkinleştirmeyeceğine karar verebilirsiniz. **Yapılandırma** listesiyle birlikte, örneğin hata ayıklama derlemeleri Için kod analizini devre dışı bırakmaya karar verebilir ve bunu yayın yapıları için etkinleştirebilirsiniz.  
   
  Projeniz yönetilen kod içeriyorsa, **derlemede Kod analizini etkinleştir**' i seçerek Kod analizini etkinleştirip etkinleştirmemeye veya devre dışı bırakılacağını belirleyebilirsiniz.  
   
@@ -53,5 +53,5 @@ Kod Analizi aracının, projenizin her yapılandırmasındaki kodu çözümlemek
  Projeniz yönetilen kod içeriyorsa, **Bu kural kümesini Çalıştır** listesinden bir kural kümesi seçerek kod analizinde uygulanacak kuralları seçebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yönetilen kod kalitesi  çözümleniyor](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)  
+ [Yönetilen kod kalitesini analiz etme](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md)   
  [C/C++ İçin Kod Analizi Uyarıları](../code-quality/code-analysis-for-c-cpp-warnings.md)

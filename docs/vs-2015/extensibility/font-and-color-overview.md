@@ -1,5 +1,5 @@
 ---
-title: Yazı tipi ve renk genel bakış | Microsoft Docs
+title: Yazı tipi ve renge genel bakış | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,73 +12,73 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0a20cfa2372b1e55652ffcebe6d173cff86140a6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204352"
 ---
 # <a name="font-and-color-overview"></a>Yazı Tipi ve Renklere Genel Bakış
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konuda ele alınmıştır metin yazı tipi ve renk ayarlarını [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Kategorileri ve öğeleri görüntüleme kavramlarını da tanıtılmaktadır ve VSPackages ve çekirdek düzenleyici metin özniteliklerini kullanma açıklanmaktadır.  
+Bu konuda, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tümleşik geliştirme ortamındaki (IDE) metin yazı tipi ve renk ayarları ele alınmaktadır. Ayrıca, kategorilerin ve görüntüleme öğelerinin kavramlarını tanıtır ve VSPackages ve çekirdek düzenleyicisinin metin özniteliklerini nasıl kullandığını açıklar.  
   
-## <a name="the-fonts-and-colors-property-page"></a>Yazı tipleri ve renkler özellik sayfası  
- Görüntülenen metin özniteliklerini yönetebilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE) üzerinden **yazı tipleri ve renkler** özellik sayfası. Bulunacak **yazı tipleri ve renkler** özellik sayfasında **Araçları** menüsünde tıklayın **seçenekleri**. Genişletin **ortam**ve ardından **yazı tipleri ve renkler**.  
+## <a name="the-fonts-and-colors-property-page"></a>Yazı tipleri ve renkler Özellik sayfası  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **Yazı tipleri ve renkler** Özellik sayfasında, tümleşik GELIŞTIRME ortamında (IDE), görünen metnin özniteliklerini yönetebilirsiniz. **Yazı tipleri ve renkler** özellik sayfasını bulmak Için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Ortam**' ı genişletin ve ardından **yazı tipleri ve renkler**' e tıklayın.  
   
-## <a name="categories-and-display-items"></a>Kategorileri ve öğeleri görüntüleme  
- Yazı tipleri ve renkler halinde düzenlenir **kategorileri** ve **görünen öğeler**.  
+## <a name="categories-and-display-items"></a>Kategoriler ve görüntüleme öğeleri  
+ Yazı tipleri ve renkler **Kategoriler** halinde düzenlenir ve **öğeleri görüntüler**.  
   
-- A **kategori** bir dizi için mantıksal ya da işlevsel bir kapsayıcı **görünen öğeler**.  
+- **Kategori** , bir dizi **görüntü öğesi**için mantıksal veya işlevsel bir kapsayıcıdır.  
   
-   Listesini **kategorileri** bulunduğu **ayarlarını göster** açılan kutusunda **yazı tipleri ve renkler** özellik sayfası.  
+   **Kategorilerin** listesi, **yazı tipleri ve renkler** Özellik sayfasının açılan **ayarlarını göster** kutusunda bulunur.  
   
-- A **görüntü öğesi** yorum, bir dize veya görüntülendiğinde renklendirilmiş için bir denetim yapısı gibi iyi tanımlanmış metin varlıktır.  
+- Bir **görüntüleme öğesi** , bir yorum, bir dize veya görüntülenirken renklendirilmek üzere bir denetim yapısı gibi iyi tanımlanmış bir metin varlıktır.  
   
-  Her **görüntü öğesi** içinde benzersiz şekilde tanımlanan **kategori** , içerir. Sonuç olarak, birden fazla **kategori** olabilir bir **görüntü öğesi** aynı ada sahip.  
+  Her bir **görüntüleme öğesi** , kendisini içeren **Kategori** içinde benzersiz bir şekilde tanımlanır. Sonuç olarak, birden fazla **Kategori** aynı ada sahip bir **görüntüleme öğesine** sahip olabilir.  
   
-## <a name="vspackage-control-of-fonts-and-colors"></a>VSPackage'ı denetimin yazı tipleri ve renkler  
- [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] Vspackages'a sağlar:  
+## <a name="vspackage-control-of-fonts-and-colors"></a>Yazı tiplerinin ve renklerin VSPackage denetimi  
+ , [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] VSPackages 'ın şunları yapmasına izin verir:  
   
-- Yazı tipi ve renk tanımla **kategorileri**.  
+- Yazı tipi ve renk **kategorilerini**tanımlayın.  
   
-- Yazı tipleri ve renkler sunmak için kullanılan belirtin **görünen öğeler**.  
+- **Görüntü öğelerini**sunmak için kullanılan yazı tiplerini ve renkleri belirtin.  
   
-- Etkileşim **yazı tipleri ve renkler** özellik sayfası.  
+- **Yazı tipleri ve renkler** Özellik sayfasıyla etkileşime geçin.  
   
-- Toplama birden çok **kategorileri** gruplar.  
+- Birden çok **kategoriyi** gruplar halinde toplar.  
   
-- Varsayılan ayarlarında değişiklikler kalıcı hale getirin.  
+- Değişiklikleri varsayılan ayarlarda kalıcı hale getirin.  
   
-  İçindeki yazı tipini ve rengini seçimleri ile etkileşim kurmak için iki yolla [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)].  
+  İçindeki yazı tipi ve renk seçimleriyle etkileşimde bulunmak için iki yol vardır [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] .  
   
-- Tek yönlü olarak adlandırılır *söz dizimi renklerini*. Varolan özelleştiren VSPackage tarafından kullanılan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dil hizmeti uygulamak ve bir kaynak düzenleyici oluşturmak için düzenleyici.  
+- Bir yol *Sözdizimi renklendirmesi*olarak adlandırılır. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Bir dil hizmetini uygulamak ve bir kaynak Düzenleyicisi oluşturmak için var olan düzenleyiciyi özelleştiren VSPackage tarafından kullanılır.  
   
-   Yalnızca bir **kategori** Bu mekanizma, yani destekler, **metin düzenleyici**.  
+   Bu mekanizmayı yalnızca bir **Kategori** destekler, yani **metin düzenleyici**.  
   
-- Diğer tüm daha genel bir alternatif destekler **kategorileri** ve kullanıcı arabirimi bileşenleri metin görüntülenirken Kaynak Düzenleyicisi dışında. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider>.  
+- Daha genel bir alternatif, metin görüntülenirken kaynak Düzenleyicisi dışındaki diğer tüm **kategorileri** ve Kullanıcı Arabirimi bileşenlerini destekler. Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider>.  
   
-## <a name="core-editor-text-settings"></a>Çekirdek Düzenleyici metni ayarları  
- Dil hizmeti nesnesinin çekirdek Düzenleyici yazı tipi ve renk ayarlarını tabidir **metin EditorCategory** bulunan **ayarlarını göster** açılan kutusunda **yazı tipleri ve renkler** özellik sayfası.  
+## <a name="core-editor-text-settings"></a>Çekirdek Düzenleyicisi metin ayarları  
+ Bir dil hizmeti nesnesinin temel düzenleyicisinin yazı tipi ve renk ayarları, **yazı tipleri ve renkler** Özellik sayfasının açılan **ayarlarını göster** kutusunda bulunan **metin editorcategory** öğesine tabidir.  
   
- Düzenleyicilerle çalışırken, özel yazı tipi ve denetlemek ve genişletmek için dil hizmeti sunan renkli denetimi mekanizmasını kullanmalısınız **metin düzenleyici** ayarları. Mekanizması olarak adlandırılır *söz dizimi renklendirmesi* sağlar:  
+ Düzenleyicilerle çalışırken, dil hizmetinin **metin Düzenleyicisi** ayarlarını denetlemek ve genişletmek için sağladığı özel yazı tipi ve renk denetim mekanizmasını kullanmanız gerekir. Mekanizmaya *sözdizimi renklendirme* adı verilir ve şunları sağlar:  
   
-- Yazı tipleri ve renkler görüntü öğeleri yönetmek için basitleştirilmiş bir tekniktir.  
+- Görüntüleme öğelerinin yazı tiplerini ve renklerini yönetmek için basitleştirilmiş bir tekniktir.  
   
-   Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem>.  
+   Daha fazla bilgi için <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems> ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorableItem> bölümlerine bakın.  
   
-- İyi tanımlanmış ve en iyi duruma getirilmiş renklendirme mekanizması.  
+- İyi tanımlanmış ve iyileştirilmiş bir renklendirme mekanizması.  
   
    Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>.  
   
-- Her iki özelliği kullanmak yerleşik görüntü öğeleri **metin EditorCategory** ve bunları genişletmek için.  
+- Her ikisinin de **metin düzenleyici kategorisinden** yerleşik görüntü öğelerini kullanma ve bunları genişletme özelliği.  
   
-   Daha fazla bilgi için [nasıl yapılır: Yerleşik renklendirilebilir öğeleri kullanma](../extensibility/internals/how-to-use-built-in-colorable-items.md) ve [özel renklendirilebilir öğeler](../extensibility/internals/custom-colorable-items.md).  
+   Daha fazla bilgi için bkz. [nasıl yapılır: yerleşik Renklenebilir öğeler](../extensibility/internals/how-to-use-built-in-colorable-items.md) ve [özel Renklenebilir öğeler](../extensibility/internals/custom-colorable-items.md)kullanma.  
   
-- Otomatik Kalıcılık geçerli durumu hem yerleşik ve özel görüntü öğeleri ile **metin düzenleyici** kategorisi.  
+- **Metin düzenleyici** kategorisiyle hem yerleşik hem de özel görüntüleme öğelerinin geçerli durumunun otomatik kalıcılığı.  
   
-  Bkz: renklendirme söz dizimi hakkında daha fazla bilgi için [eski dil hizmetinde söz dizimi renklendirme](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md).  
+  Sözdizimi renklendirme hakkında daha fazla bilgi için bkz. [eski dil hizmetinde söz dizimi renklendirmesi](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Eski arabirimleri Düzenleyicisi](../extensibility/legacy-interfaces-in-the-editor.md)   
+ [Düzenleyicideki eski arabirimler](../extensibility/legacy-interfaces-in-the-editor.md)   
  [Eski Dil Hizmetinde Söz Dizimi Renklendirmesi](../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)

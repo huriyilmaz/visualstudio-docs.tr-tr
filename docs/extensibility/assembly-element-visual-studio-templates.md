@@ -1,5 +1,5 @@
 ---
-title: Montaj Elemanı (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: Assembly öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,21 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c80044657b16448ba4567fff839274226985fa14
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80740039"
 ---
-# <a name="assembly-element-visual-studio-templates"></a>Montaj öğesi (Visual Studio şablonları)
-Şablonun bu derlemenin bir başvuruyu projelere eklemek için kullandığı bir derleme hakkındaki bilgileri belirtir.
+# <a name="assembly-element-visual-studio-templates"></a>Assembly öğesi (Visual Studio şablonları)
+Şablonun projelere Bu derlemenin bir başvurusunu eklemek için kullandığı bir derleme hakkındaki bilgileri belirtir.
 
- \<VSTemplate \<> Şablonİçerik \< \<> \<Referanslar> Başvuru> Montaj>
+ \<VSTemplate> \<TemplateContent>
+ \<References>
+ \<Reference>
+ \<Assembly>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <Assembly> AssemblyName </Assembly>
@@ -45,14 +48,14 @@ ms.locfileid: "80740039"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Öğe projeye eklendiğinde eklemek için derleme başvuru belirtir.|
+|[Başvuru](../extensibility/reference-element-visual-studio-templates.md)|Öğe projeye eklendiğinde Eklenecek derleme başvurusunu belirtir.|
 
 ## <a name="text-value"></a>Metin değeri
  Bir metin değeri gereklidir.
 
- Bu metin, öğe şablonu anında olduğunda projeye eklemek için derlemeyi belirtir. Bu derleme adı aşağıdaki yollardan biriyle belirtilmelidir:
+ Bu metin, öğe şablonu örneği oluşturulduğunda bir projeye eklenecek derlemeyi belirtir. Bu derleme adı aşağıdaki yollarla belirtilmelidir:
 
-- Tam montaj adı olarak. Örnek:
+- Tam derleme adı olarak. Örneğin:
 
     ```
     <Assembly>
@@ -60,19 +63,19 @@ ms.locfileid: "80740039"
     </Assembly>
     ```
 
-- Basit metin referansı olarak. Örnek:
+- Basit metin başvurusu olarak. Örneğin:
 
     ```
     <Assembly> System </Assembly>
     ```
 
 ## <a name="remarks"></a>Açıklamalar
- `Assembly`gerekli bir alt `Reference`öğedir.
+ `Assembly` , öğesinin gerekli bir alt öğesidir `Reference` .
 
- `Reference`, `References,` ve `Assembly` öğeler yalnızca *.vstemplate* dosyalarında `Type` `Item`kullanılabilir.
+ `Reference`, `References,` Ve `Assembly` öğeleri yalnızca özniteliği değeri olan *. vstemplate* dosyalarında kullanılabilir `Type` `Item` .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, `TemplateContent` bir öğe şablonunun öğesi gösterin. Bu XML *System.dll* ve *System.Data.dll* derlemelerine göndermeler ekler.
+ Aşağıdaki örnek `TemplateContent` bir öğe şablonunun öğesini gösterir. Bu XML *System.dll* ve *System.Data.dll* derlemelerine başvurular ekler.
 
 ```
 <TemplateContent>
@@ -93,5 +96,5 @@ ms.locfileid: "80740039"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)
 - [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)

@@ -8,70 +8,70 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 4faa2ecae7f53d29e6aad92723ca6d12e50e2812
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150945"
 ---
 # <a name="import-an-xcode-project"></a>Bir XCode Projesini İçeri Aktarma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft Visual C++ platformlar arası Mobil Geliştirme için Visual Studio'yla, platformlar arası kitaplıklar oluşturun ve diğer projeleri ile kod paylaşın, XCode projelerinizi taşımak için destek içerir. İçeri Aktar Sihirbazı XCode projeleri içeri aktarma işlemini basitleştirir ve C++ kodunu, XCode hedefler için bölme bir statik kitaplık kullanmak ya da paylaşılan kod projesi. İOS özel kodunuzu Visual Studio yönetin ve XCode film şeritleri ve yapıları yapmak için kullanmaya devam edebilirsiniz. Kodu sürekli Visual Studio ve XCode arasında kolaylıkla geçiş hakkında daha fazla bilgi için XCode arasında taşıma değişiklikleri ve Visual Studio bakın.  
+Platformlar arası mobil geliştirme için Microsoft Visual C++, XCode projelerinizi Visual Studio 'ya taşımaya yönelik destek içerir. burada, platformlar arası kitaplıklar oluşturabilir ve kodu diğer projelerle paylaşabilirsiniz. XCode 'dan Içeri aktarma Sihirbazı, projeleri içeri aktarma ve statik bir kitaplık veya paylaşılan kod projesi olarak kullanılmak üzere XCode Hedefinizdeki C++ kodunu bölme sürecini basitleştirir. Visual Studio 'da iOS 'a özgü kodunuzu yönetebilir ve film şeritleri ve yapılar yapmak için XCode kullanmaya devam edebilirsiniz. Visual Studio ile XCode arasında kolayca kod ve geri taşıma hakkında daha fazla bilgi için bkz. XCode ve Visual Studio arasında değişiklikleri taşıma.  
   
-## <a name="using-the-import-from-xcode-wizard"></a>Xcode'dan İçeri Aktar Sihirbazı'nı kullanma  
- Bu konuda, kod paylaşımı ve platformlar arası çözümler yararlanmak için Visual Studio'ya bir XCode projesini taşıma gösterilmektedir. Bir önkoşul olarak içeri aktarma, dışarı aktarma ve derleme için Visual Studio Mac eşleştirin gerekir. Eşleştirme konusunda yönergeler için bkz: [yükleme ve yapılandırma araçları iOS kullanarak derlemeye](../cross-platform/install-and-configure-tools-to-build-using-ios.md). Ayrıca XCode projenizin ağ üzerinden paylaşın veya taşımak için XCode Sihirbazı'nı İçeri Aktar'ı kullanmak için Visual Studio bilgisayarınızı gerekir.  
+## <a name="using-the-import-from-xcode-wizard"></a>XCode 'Dan Içeri aktarma Sihirbazı 'nı kullanma  
+ Bu konuda, kod paylaşımı ve platformlar arası çözümlerin avantajlarından yararlanmak için bir XCode projesini Visual Studio 'ya nasıl taşıyacağınız gösterilmektedir. Bir önkoşul olarak, projenizi içeri aktarabilmek, dışarı aktarmak ve derlemek için Mac 'i Visual Studio ile eşleştirmelidir. Eşleştirmeyi ayarlama hakkında yönergeler için bkz. [iOS kullanarak derlemek Için araçları yükleyip yapılandırma](../cross-platform/install-and-configure-tools-to-build-using-ios.md). Ayrıca Xcode projenizi ağ üzerinden paylaşmanız veya XCode 'dan Içeri aktarma Sihirbazı 'nı kullanmak için Visual Studio bilgisayarınıza taşımanız gerekir.  
   
-#### <a name="import-from-xcode"></a>Xcode'dan İçeri Aktar  
+#### <a name="import-from-xcode"></a>XCode 'dan içeri aktar  
   
-1. Üzerinde **dosya** menüsünde seçin **yeni**, **alma**, **xcode'dan içeri aktar**. Bu başlatır **xcode'dan içeri aktar** Sihirbazı iletişim kutusu.  
+1. **Dosya** menüsünde, **Yeni**, **içeri aktar**, **Xcode 'dan içeri aktar**' ı seçin. Bu, **XCode 'Dan Içeri aktarma** Sihirbazı 'nı başlatır.  
   
-    ![İçeri aktarmak için XCode hedef proje seçin](../cross-platform/media/cppmdd-u2-importxcode-choose.PNG "CPPMDD_U2_ImportXCode_Choose")  
+    ![İçeri aktarılacak XCode hedef projesini seçin](../cross-platform/media/cppmdd-u2-importxcode-choose.PNG "CPPMDD_U2_ImportXCode_Choose")  
   
-2. İçinde **bir proje seçin** bölmesinde bir XCode .pbxproj dosyasını seçmek için Gözat düğmesini seçin. Proje dosyasında gidin **seçin XCode proje dosyası** iletişim kutusunda ve ardından **açık**.  
+2. **Bir proje seçin** bölmesinde, bir Xcode. PBXPROJ dosyası seçmek Için göz at düğmesini seçin. **XCode proje dosyası seç** iletişim kutusunda proje dosyasına gidin ve **Aç**' ı seçin.  
   
-    ![Bir proje dosyası seçin Xcode proje dosyası iletişim kutusuna seçin](../cross-platform/media/cppmdd-u2-importxcode-browse.PNG "CPPMDD_U2_ImportXCode_Browse")  
+    ![Xcode proje dosyası seç iletişim kutusunda bir proje dosyası seçin](../cross-platform/media/cppmdd-u2-importxcode-browse.PNG "CPPMDD_U2_ImportXCode_Browse")  
   
-    XCode sihirbazından alma seçin **sonraki**.  
+    XCode 'dan Içeri aktar sihirbazında **İleri**' yi seçin.  
   
-3. İçinde **varış hedefleri** bölmesinde XCode projesi, Visual Studio projelerine aktarılacak hedefleri seçin. XCode hedefleri, Visual Studio projelerine benzerdir; çoğu, kod ve üreten bir ikili kaynaklar koleksiyonudur. XCode Sihirbazı yalnızca bir ikili, ancak statik bir kitaplık değil, hedef hedefler olarak üretmek hedefler içe izin verir. Sonraki adım konusunu XCode statik kitaplık hedeflerdir.  
+3. **Hedef hedefler** bölmesinde, Xcode projesinden, Visual Studio projelerine aktarılacak hedefleri seçin. XCode hedefleri, Visual Studio projelerine benzerdir; çoğu, bir ikili üreten kod ve kaynak koleksiyonudur. XCode 'dan Içeri aktarma Sihirbazı, hedef hedefleri olarak yalnızca ikili bir dosya üreten ve statik bir kitaplık olmayan hedeflerin içeri aktarmaya izin verir. XCode statik kitaplık hedefleri, bir sonraki adımın konusudur.  
   
-    ![İçeri Aktarma Sihirbazı Hedef hedefleri bölmesinden XCode](../cross-platform/media/cppmdd-u2-importxcode-destination.jpg "CPPMDD_U2_ImportXCode_Destination")  
+    ![XCode sihirbazından içeri aktarma hedef hedefleri bölmesi](../cross-platform/media/cppmdd-u2-importxcode-destination.jpg "CPPMDD_U2_ImportXCode_Destination")  
   
-    Seçilen her hedef için **içeri aktarılacak hedefler**, sihirbaz otomatik olarak ayrı bir statik kitaplık projesine bölünebilir C++ kod dosyaları algılar ve bunları koyar **C++ proje öğeleri** bölümü. Diğer kod ve kaynaklar içinde bırakılır **XCode proje öğeleri** bölümü. Sihirbaz, içeri aktarma işlemi tamamlandığında bu ayrı bir statik kitaplık ve uygulama projeleri Visual Studio'da haline gelir. Varsayılan olarak, birim testi ve framework hedefleri ayrı projelere sihirbaz tarafından bölünür değil.  
+    **Hedeflerin içeri aktarılacağı**her bir hedef için, sihirbaz ayrı bir statik kitaplık projesine bölünecek c++ kod dosyalarını otomatik olarak algılar ve bunları **c++ proje öğeleri** bölümüne koyar. Diğer kod ve kaynaklar **Xcode proje öğeleri** bölümünde bırakılır. Bunlar, sihirbaz içeri aktarma işlemini tamamladığında Visual Studio 'da ayrı statik kitaplık ve uygulama projeleri haline gelir. Varsayılan olarak, birim testi ve çerçeve hedefleri, sihirbaz tarafından ayrı projelere bölünmez.  
   
-    Her projede dosyalarıdır değiştirmek için yukarı ve aşağı düğmeleri. Her proje dosyalarında memnun olduğunuzda seçin **sonraki** devam etmek için.  
+    Her projede hangi dosyaların olduğunu değiştirmek için yukarı ve aşağı düğmelerini kullanın. Her projedeki dosyalarla memnun kaldığınızda, devam etmek için **İleri** ' yi seçin.  
   
-4. İçinde **kitaplık hedefleri** bölmesinde, hangi statik kitaplık hedefler, Visual Studio projelerine aktarılacak bir XCode projesi seçin. Bu bölmede hangi dosyaların bir paylaşılan kod projesinde yerleştirilir ve statik kitaplığı projesinde yerleştirilen sanal seçebilirsiniz. Her hedef **içeri aktarılacak hedefler** listesinde denetleyebilir, dosyaları yerleştirildiğinde **paylaşılan kod proje öğeleri** ve **statik kitaplık proje öğeleri** kullanarak Yukarı ve aşağı düğmeleri.  
+4. **Kitaplık hedefleri** bölmesinde, Xcode projesinden hangi statik kitaplığın hedeflediği, Visual Studio projelerine içeri aktarılacağını seçin. Bu bölmede, paylaşılan bir kod projesine hangi dosyaların yerleştirileceğini ve bir statik kitaplık projesine yerleştirilebilecek dosyaları seçebilirsiniz. **İçeri aktarılacak hedefler** listesindeki her bir hedef Içinde, **paylaşılan kod proje öğelerinde** ve **statik kitaplık proje öğelerinde** yukarı ve aşağı düğmelerini kullanarak hangi dosyaların yerleştirileceğini kontrol edebilirsiniz.  
   
-    ![İçeri aktarma XCode kitaplık hedefleri bölmesinden](../cross-platform/media/cppmdd-u2-importxcode-library.jpg "CPPMDD_U2_ImportXCode_Library")  
+    ![XCode kitaplığı hedefleri bölmesinden içeri aktar](../cross-platform/media/cppmdd-u2-importxcode-library.jpg "CPPMDD_U2_ImportXCode_Library")  
   
-    Paylaşılan kod proje, kaynak kodu dosyaları Visual Studio'da projeler arasında bir dizi paylaşım bir yoludur. Kod, kendine ait bir proje olarak değil, içeren projenin bir parçası olarak oluşturulmuştur. Paylaşılan kodu içeren projeler farklı mimarileri ve yapılandırmaları olabileceğinden, pek çok platform için oluşturulan kodu içeren tek bir projeye sağlamak için en iyi yolu budur.  
+    Paylaşılan kod projesi, Visual Studio 'daki projeler arasında bir kaynak kod dosyaları kümesini paylaşmanın bir yoludur. Kod, kendisini içeren projenin bir parçası olarak oluşturulur. Paylaşılan kodu içeren projeler farklı mimarilere ve yapılandırmalara sahip olabileceğinden, bu, çok sayıda platformda oluşturulmuş olabilecek kodu içeren tek bir proje sağlamanın en iyi yoludur.  
   
-    Her proje dosyalarında memnun olduğunuzda seçin **sonraki** devam etmek için.  
+    Her projedeki dosyalarla memnun kaldığınızda, devam etmek için **İleri** ' yi seçin.  
   
-5. **Genel özellikleri** bölmesi, bir çerçeve arama yolu ve bir üst bilgi arama yoluna tüm iOS projeleri için Visual Studio'da ayarlamak için kullanılabilir. Visual Studio IntelliSense ve kaynak kod gözatma için bu yolları kullanır. Üst bilgiler ve çerçeveleri ortak bir dizi kullanan iOS projeleri oluşturduğunuzda bu genel yolları yararlı olur.  
+5. **Genel Özellikler** bölmesi, Visual Studio 'Daki tüm iOS projeleri için bir çerçeve arama yolu ve bir Ekle üst bilgi arama yolu ayarlamak üzere kullanılabilir. Visual Studio, kaynak kodu taraması ve IntelliSense için bu yolları kullanır. Bu genel yollar, ortak bir üstbilgiler ve çerçeveler kümesi kullanan iOS projeleri oluşturduğunuzda faydalıdır.  
   
-    ![İçeri aktarma XCode genel özellikleri bölmesinden](../cross-platform/media/cppmdd-u2-importxcode-global.jpg "CPPMDD_U2_ImportXCode_Global")  
+    ![XCode Genel Özellikler bölmesinden içeri aktar](../cross-platform/media/cppmdd-u2-importxcode-global.jpg "CPPMDD_U2_ImportXCode_Global")  
   
-    Bu genel yolları da Visual Studio'da ayarlanabilir **seçenekleri** iletişim. Bunları bulmak için **Araçları** menüsünde **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda Genişlet **Çoklu Platform**, **C++** , **iOS**, **genel özellikleri**.  
+    Bu genel yollar, **Seçenekler** Iletişim kutusunda Visual Studio 'da da ayarlanabilir. Bunları bulmak için, **Araçlar** menüsünde **Seçenekler**' i seçin. **Seçenekler** iletişim kutusunda **platformlar arası**, **C++**, **iOS**, **Genel Özellikler**' i genişletin.  
   
-    Seçin **sonraki** devam etmek için.  
+    Devam etmek için **İleri**’yi seçin.  
   
-6. **Çerçeveleri** bölmesinde göz atmak için Visual Studio tarafından kullanılan yolları yapılandırmak için kullanılır ve projeniz için IntelliSense. Yolları XCode projenizin başvurduğu her bir çerçeve için Visual Studio için erişilebilir olmalıdır. Framework XCode projeleri atıfta bulunan ve Visual Studio framework bulup bulamayacağını görüntüler Sihirbazı'nı denetler. Genel Özellikler ayarladığınız herhangi bir yolu, Visual Studio tarafından bulunması gerekir. Özel durumları çerçeveleri listede listelenir. Bir X ile listelenen her framework framework bulmak Visual Studio için PC tarafından erişilebilen bir yol sağlar. [...] Gözat düğmesini kullanmak için kullanabileceğiniz bir **Klasör Seç** yolunu bulmak için iletişim. Çerçeve yolu için yerel bir kopya veya ağ üzerinden erişilebilen bir paylaşıma mac'inizde olabilir.  
+6. **Çerçeveler** bölmesi, Visual Studio tarafından, projeniz için göz atma ve IntelliSense için kullanılan yolları yapılandırmak için kullanılır. Yollar, XCode projeniz tarafından başvurulan her bir çerçeve için Visual Studio 'nun erişimine açık olmalıdır. Sihirbaz XCode projelerindeki çerçeve başvurularını denetler ve Visual Studio 'Nun Framework 'ü bulup bulamamadığını gösterir. Genel özelliklerde önceden ayarlamış olduğunuz herhangi bir yol Visual Studio tarafından keşfedilmelidir. Özel durumlar, çerçeveler listesinde listelenir. X ile listelenen her bir çerçeve için, Framework 'ü bulmak üzere Visual Studio için BILGISAYAR tarafından erişilebilir bir yol sağlayın. Yolu bulmak için **Klasör Seç** iletişim kutusunu kullanmak için [...] tarayıcı düğmesini kullanabilirsiniz. Çerçeve yolu, yerel bir kopyaya ya da Mac 'inizde ağa erişilebilen bir paylaşıma ait olabilir.  
   
-    ![İçeri aktarma XCode çerçeveleri bölmesinden](../cross-platform/media/cppmdd-u2-importxcode-frameworks.jpg "CPPMDD_U2_ImportXCode_Frameworks")  
+    ![XCode çerçeveleri bölmesinden içeri aktar](../cross-platform/media/cppmdd-u2-importxcode-frameworks.jpg "CPPMDD_U2_ImportXCode_Frameworks")  
   
-    Seçin **sonraki** devam etmek için.  
+    Devam etmek için **İleri**’yi seçin.  
   
-7. **Proje ayarları** bölmesinde Framework'ü değiştirmek ve Sihirbazın oluşturduğu her proje için üst bilgi arama yolu ayarları dahil olanak tanır. Bu bölme, genel ayarlardan farklı bir projeye özgü yolları ayarlamak için kullanın.  
+7. **Proje ayarları** bölmesi, sihirbazın oluşturduğu her proje için çerçeveyi değiştirmenize ve üst bilgi arama yolu ayarlarına dahil etmenize olanak tanır. Genel ayarlardan farklı projeye özgü yollar ayarlamak için bu bölmeyi kullanın.  
   
-    Belirli bir proje için bir yol ayarlamak için **hedef proje** açılan, proje dosyasını seçin ve ardından öğesinde değerleri ayarlamasına **çerçeve arama Yolu'nu** ve **üst bilgi arama yoluEkle** kontrol eder. Her denetim yanındaki Gözat düğmesini […] kullanmak için kullanabileceğiniz bir **Klasör Seç** yolunu bulmak için iletişim.  
+    Belirli bir proje için bir yol ayarlamak için, **hedef proje** açılır penceresinde, proje dosyasını seçin, ardından **Framework arama yolundaki** değerleri ayarlayın ve **başlık arama yolu denetimlerini ekleyin** . Yolu bulmak için bir **Klasör Seç** iletişim kutusunu kullanmak üzere her denetimin yanındaki [...] tarayıcı düğmesini kullanabilirsiniz.  
   
-    ![XCode projeleri bölmesinden alma](../cross-platform/media/cppmdd-u2-importxcode-projects.jpg "CPPMDD_U2_ImportXCode_Projects")  
+    ![XCode projeleri bölmesinden içeri aktar](../cross-platform/media/cppmdd-u2-importxcode-projects.jpg "CPPMDD_U2_ImportXCode_Projects")  
   
-    Uzak hiçbir Mac Visual Studio'da bu bilgisayar ile eşleştirilmiş yapılandırma bir uzak makine bağlantı gösterilir. Eşleştirme konusunda yönergeler için bkz: [yükleme ve yapılandırma araçları iOS kullanarak derlemeye](../cross-platform/install-and-configure-tools-to-build-using-ios.md).  
+    Visual Studio 'da bu bılgısayarla eşlenmiş uzak Mac yoksa, uzak makine yapılandırma bağlantısı gösterilir. Eşleştirmeyi ayarlama hakkında yönergeler için bkz. [iOS kullanarak derlemek Için araçları yükleyip yapılandırma](../cross-platform/install-and-configure-tools-to-build-using-ios.md).  
   
-    Sihirbazın ayarlarını kullanarak XCode projesini içeri aktarmayı tercih **alma**.  
+    Sihirbaz ayarlarını kullanarak XCode projesini içeri aktarmak için **Içeri aktar**' ı seçin.  
   
-   İçeri Aktar Sihirbazı XCode projeleri seçili XCode Proje hedefleri için karşılık gelen Visual Studio'da oluşturur. Diğer C++ projeleriyle paylaşılan kodu ayrı bir paylaşılan kod ve statik kitaplık projeleri içinde bölünür. Geri kalan kod iOS uzaktan Visual Studio tarafından oluşturulan kitaplık ve uygulama projeleri yerleştirilir. XCode ve Visual Studio arasında kod taşıma hakkında daha fazla bilgi için bkz. [arasındaki eşitleme değişiklikleri XCode ve Visual Studio](../cross-platform/sync-changes-between-xcode-and-visual-studio.md).
+   XCode 'dan Içeri aktarma Sihirbazı, Visual Studio 'da seçili XCode proje hedeflerine karşılık gelen projeler oluşturur. Diğer C++ projeleriyle paylaşılabilecek kod, ayrı paylaşılan koda ve statik kitaplık projelerine bölünür. Geri kalan kod, Visual Studio tarafından uzaktan yerleştirilebilecek iOS kitaplığı ve uygulama projelerine yerleştirilir. Kodu Visual Studio ve XCode arasında taşıma hakkında daha fazla bilgi için bkz. [XCode ve Visual Studio arasında eşitleme değişiklikleri](../cross-platform/sync-changes-between-xcode-and-visual-studio.md).

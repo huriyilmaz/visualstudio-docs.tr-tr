@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b30b13610cc59b8a0225e52abf47f9a4f2cc97d1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657574"
 ---
 # <a name="manage-models-and-diagrams-under-version-control"></a>Sürüm denetimi altındaki modelleri ve diyagramları yönetme
@@ -28,7 +28,7 @@ ms.locfileid: "72657574"
 > [!IMPORTANT]
 > Birkaç kullanıcı aynı modelleme projesi üzerinde çalışırken dikkatli olun. [Orta veya büyük projelerde modelleri nasıl düzenleyebileceğinizi](../modeling/structure-your-modeling-solution.md)öğrenin.
 
-## <a name="ModelingProjects"></a>Modelleme projesindeki dosyalar
+## <a name="files-in-a-modeling-project"></a><a name="ModelingProjects"></a> Modelleme projesindeki dosyalar
  Birden fazla kullanıcı aynı anda bir modelleme projesi üzerinde çalışabilir ve farklı dosyalar üzerinde çalışır.
 
  Farklı kullanıcılar tarafından yapılan değişiklikler arasındaki çakışmaları önlemek veya çözmek için, modelin dosyalarda nasıl depolandığını anlamak önemlidir.
@@ -42,9 +42,9 @@ ms.locfileid: "72657574"
   - **DiagramName. classdiagram. Layout** -bu dosya silinirse, şekiller diyagramda görünmeye devam eder, ancak boyutlarını ve konumlarını kaybeder. Her düzen dosyası bir diyagram dosyasına bağlı olur. Bunu görmek için Çözüm Gezgini Diyagram dosyasının yanındaki [+] düğmesine tıklayın.
 
 > [!NOTE]
-> Dosyalar arasında tutarlılık sağlamak önemlidir. Örneğin, bir. uml dosyasında değişiklikleri geri almak için kaynak denetimini kullanırsanız,. * Diagram ve. Layout dosyalarındaki ilgili değişiklikleri aynı anda geri almanız gerekir. İçinde temsil edilen öğeler. \*diagram dosya, bir. uml dosyasında da temsil ediliyorlarsa kaybedilir.
+> Dosyalar arasında tutarlılık sağlamak önemlidir. Örneğin, bir. uml dosyasında değişiklikleri geri almak için kaynak denetimini kullanırsanız,. * Diagram ve. Layout dosyalarındaki ilgili değişiklikleri aynı anda geri almanız gerekir. İçinde temsil edilen öğeler. \* Diyagram dosyası bir. uml dosyasında da temsil ediliyorlarsa kaybolacaktır.
 
-## <a name="Shared"></a>Paylaşılan modelleme projeleri üzerinde çalışma
+## <a name="working-on-shared-modeling-projects"></a><a name="Shared"></a> Paylaşılan modelleme projeleri üzerinde çalışma
  Projenin farklı bölümlerinde eşzamanlı çalışma arasındaki çakışmaları en aza indirmek için:
 
 - Modelleme projenizi farklı iş bölgelerini temsil eden paketlere bölün. Tüm modeli, kök modelde bırakmak yerine paketlere taşıyın. Daha fazla bilgi için bkz. [paketleri ve ad alanlarını tanımlama](../modeling/define-packages-and-namespaces.md).
@@ -61,7 +61,7 @@ ms.locfileid: "72657574"
 
 - Paketleri izlemenize yardımcı olması için paket dosyalarını gerçek paket adlarını yansıtacak şekilde yeniden adlandırın.
 
-- @No__t_0 ' de, her zaman tek tek dosyalarda **Iade etme** ve **en son sürüm** işlemlerini tüm modelleme projesi üzerinde gerçekleştirin.
+- ' De [!INCLUDE[esprscc](../includes/esprscc-md.md)] , her zaman tek tek dosyalarda **iade etme** ve **en son sürüm** işlemlerini tüm modelleme projesi üzerinde gerçekleştirin.
 
 - Modelleme projesini iade etmeden hemen önce her zaman bir **Get** işlemi gerçekleştirin.
 
@@ -70,7 +70,7 @@ ms.locfileid: "72657574"
     > [!NOTE]
     > Bir dosya **Al**işlemi gerçekleştirdiğinizde açıksa ve işlem yerel değişikliklerle sonuçlanırsa, dosyayı yeniden yüklemeniz istenir. Bu durumda **Hayır**' a tıklayın ve ardından tüm projeyi yeniden yükleyin. **Çözüm Gezgini**, modelleme projesi düğümüne sağ tıklayın, **Projeyi Kaldır**' a ve ardından **projeyi yeniden yükle**' ye tıklayın.
 
-### <a name="Exclusive"></a>Modele özel erişim gerektiren değişiklikler
+### <a name="changes-requiring-exclusive-access-to-the-model"></a><a name="Exclusive"></a> Modele özel erişim gerektiren değişiklikler
  Aşağıdaki değişiklik türlerini yapmadan önce tüm proje üzerinde bir kullanıma alma kilidine sahip olduğunuzdan emin olun.
 
 - Diğer paketlerden başvurulan öğeleri yeniden adlandırma veya silme.
@@ -96,8 +96,8 @@ ms.locfileid: "72657574"
     > [!NOTE]
     > Dosyayı farklı bir projeye taşıyamazsınız.
 
-## <a name="Merging"></a>Model dosyalarında ve diyagramlarda değişiklikleri birleştirme
- Bir modelde birden fazla kullanıcı aynı anda çalıştıktan sonra, [!INCLUDE[esprscc](../includes/esprscc-md.md)] model dosyalarındaki değişiklikleri birleştirmenizi ister. Yukarıdaki önceki bölümlerde açıklandığı gibi ayrı projeler üzerinde çalışmak, birleştirmelerinin çoğunun önüne engel olur. Normalde, kalan çakışmalar güvenli bir şekilde otomatik olarak birleştirilebilir. Aşağıdaki tür değişiklikler hiçbir zorluk oluşmasına neden olmaz:
+## <a name="merging-changes-in-model-files-and-diagrams"></a><a name="Merging"></a> Model dosyalarında ve diyagramlarda değişiklikleri birleştirme
+ Bir modelde birden fazla kullanıcı aynı anda çalıştıktan sonra, [!INCLUDE[esprscc](../includes/esprscc-md.md)] değişiklikleri model dosyalarında birleştirmenizi ister. Yukarıdaki önceki bölümlerde açıklandığı gibi ayrı projeler üzerinde çalışmak, birleştirmelerinin çoğunun önüne engel olur. Normalde, kalan çakışmalar güvenli bir şekilde otomatik olarak birleştirilebilir. Aşağıdaki tür değişiklikler hiçbir zorluk oluşmasına neden olmaz:
 
 - Yaşam çizgisi türleri. Bir etkileşime (sıralı diyagram) yaşam çizgisi eklediğinizde, yaşam çizgisini mevcut bir türden oluşturmadığınız müddetçe, türü kök modelde depolanır.
 

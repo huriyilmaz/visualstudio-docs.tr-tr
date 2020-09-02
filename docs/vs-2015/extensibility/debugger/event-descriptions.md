@@ -11,40 +11,40 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5aff88047d6b1f79544af927751d7a053eeda218
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152818"
 ---
 # <a name="event-descriptions"></a>Olay Açıklamaları
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Her olay türüne belirli bir amacı vardır.  
+Her olay türü için belirli bir amaç vardır.  
   
-## <a name="events-and-the-reasons-for-their-use"></a>Olayları ve bunların kullanılması için nedenler  
+## <a name="events-and-the-reasons-for-their-use"></a>Olaylar ve kullanımları için nedenler  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
-|Belge olayları etkinleştirme|Hata ayıklama altyapısı (DE) veya belge öne getirmek IDE istediğinde gerçekleşir.|  
-|Bağlı kesme noktası veya kesme noktası hata olayları|Gönderilen bir kesme noktası bağlı olduğunu veya ne zaman bir kesme noktası bağlanamıyor ve bir hata döndürdü.|  
-|İlişkisiz bir kesme noktası olayları|İlişkili bir kesme noktası koddan keser ortaya çıkar.|  
-|Olayları durdurabilirsiniz|Kullanıcı kodunda belirtilen bir noktada durdurmak isteyip istemediğinizi belirlemek için IDE gönderdi.|  
+|Belge olaylarını etkinleştir|Hata ayıklama altyapısı (DE) IDE 'nin bir belgeyi açmasını veya ön plana getirmeyi istediğinde oluşur.|  
+|Kesme noktası bağlantılı veya kesme noktası hata olayları|Bir kesme noktası bağlandığında veya bir kesme noktası bağlanıdığı zaman ve bir hata döndürüldüğünde gönderilir.|  
+|Kesme noktası ilişkisiz olaylar|Bağlı bir kesme noktası koddan bağlantısını kaldırmazsa oluşur.|  
+|Olayları durdurabilir|Kullanıcının kodda belirtilen bir noktada durdurulmasını isteyip istemediğinizi öğrenmek için IDE 'ye gönderilir.|  
 |Kesme noktası olayları|Bir kod veya veri kesme noktası isabet edildiğinde gerçekleşir.|  
-|Belge metin olayları|Bir belgenin metni değiştiğinde oluşur. Bu olayları aracılığıyla gönderilmez `IDebugEventCallBack2::Event` yöntemi.|  
-|Altyapı olayları oluşturma|Altyapının oluşturulduğunda gönderilir.|  
-|Giriş noktası olayları|Hata ayıklanan programa başlatma kodunu çalıştırın ya da kendi ilk kullanıcı giriş noktası sınırına gönderilir.|  
-|Özel durum olayları|Çalışan bir program ulaştığında bir özel durum gönderilir.|  
-|İfade değerlendirme tam olayları|Zaman uyumsuz bir ifade değerlendirme işlemi tamamlandıktan sonra gönderilir.|  
-|Sembol etkinlik bulun|Bir modül için sembolleri Bul kullanıcıdan DE gerektiğinde gönderilir.|  
-|Tam olay yükle|Yalnızca ilk program yükleme tamamlandıktan ve programı çalıştırmak üzere ilk kodudur gönderilir.|  
-|İleti olayları|Kullanıcılara gönderilen iletileri gönderilir.|  
-|Modül yükleme olayları|Yeni bir modül yüklendiğinde veya kaldırılmış gönderilir.|  
-|Çıkış dizesi olayları|Programın hata ayıklama çıkışını yazdığında gönderilir.|  
-|Oluşturma ve yok etme olayları|Visual Studio IDE hataları ayıklanmakta olan program durumunu izlemek için oluşturma veya yok etme işlemleri, programlar, özellikleri, oturumları ve iş parçacıkları duyurmaktan gönderdi.|  
-|Adım Tamamlandı olayları|Bir adım tamamlandıktan sonra gönderilir.|  
-|İş parçacığı adı değişikliği olayları|Kullanıcı bir iş parçacığı adı değiştiğinde gönderilir.|  
-|Program adı değişikliği olayları|Kullanıcı bir program adı değiştiğinde gönderilir.|  
+|Belge metin olayları|Belgedeki metin değiştirildiğinde gerçekleşir. Bu olaylar yöntemi aracılığıyla gönderilmez `IDebugEventCallBack2::Event` .|  
+|Altyapı oluşturma olayları|Bir altyapı ilk oluşturulduğunda gönderilir.|  
+|Giriş noktası olayları|Hata ayıklamakta olan programın başlatma kodunu çalıştırması ve ilk kullanıcı giriş noktasına ulaştığı zaman gönderilir.|  
+|Özel durum olayları|Çalışan bir program bir özel durumu ziyaret edildiğinde gönderilir.|  
+|İfade değerlendirmesi tamamlanma olayları|Zaman uyumsuz ifade değerlendirmesi tamamlandığında gönderilir.|  
+|Sembol olaylarını bul|Kullanıcının bir modül için sembolleri bulmasını istemesi her seferinde gönderilir.|  
+|Yük Tamam olayları|Yalnızca ilk program yükü tamamlandığında ve ilk kod programda çalışmak üzere olduğunda gönderilir.|  
+|İleti olayları|İletiler kullanıcılara gönderildiğinde gönderilir.|  
+|Modül yükleme olayları|Yeni bir modül yüklendiğinde veya kaldırıldığında gönderilir.|  
+|Çıkış dizesi olayları|Program hata ayıklama çıkışı yazdığında gönderilir.|  
+|Olayları oluşturma ve yok etme|Visual Studio IDE 'nin hata ayıklamakta olan programların durumunu izleyebilmesi için işlemlerin, programların, özelliklerin, oturumların ve iş parçacıklarının oluşturulmasını veya yok etmesini duyurmak için gönderilir.|  
+|Adım Tamam olayları|Bir adım tamamlandığında gönderilir.|  
+|İş parçacığı adı değişiklik olayları|Kullanıcı bir iş parçacığının adını değiştirdiğinde gönderilir.|  
+|Program adı değişiklik olayları|Kullanıcı bir programın adını değiştirdiğinde gönderilir.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Olayları Gönderme](../../extensibility/debugger/sending-events.md)

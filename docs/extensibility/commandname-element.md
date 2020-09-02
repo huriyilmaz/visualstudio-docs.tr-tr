@@ -1,5 +1,5 @@
 ---
-title: Komut Adı Öğesi | Microsoft Dokümanlar
+title: CommandName öğesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8152942d015e21b1b80f735fd921a5ddde3674d5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739755"
 ---
 # <a name="commandname-element"></a>CommandName öğesi
-Öğe, `CommandName` **Seçenekler** iletişim kutusunda klavye kategorisinde ve **Özelleştir** iletişim kutusundaki **Komutlar** listesinde görünen metni belirtir.
+`CommandName`Öğesi, **Seçenekler** iletişim kutusundaki klavye kategorisinde ve **Özelleştir** iletişim kutusundaki **Komutlar** listesinde görüntülenen metni belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <CommandName>MyCommand</CommandName>
@@ -40,7 +40,7 @@ ms.locfileid: "80739755"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[Dizeleri öğesi](../extensibility/strings-element.md)|Metin öğelerini grupla, örneğin. `ButtonText` `CommandName`|
+|[Dizeler öğesi](../extensibility/strings-element.md)|Ve gibi metin öğelerini gruplandırır `ButtonText` `CommandName` .|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio komut tablosu (.vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+- [Visual Studio komut tablosu (. vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

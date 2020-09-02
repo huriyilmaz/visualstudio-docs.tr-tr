@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 210435231f98c19c16715817e2403f95da3d1f43
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204830"
 ---
-# <a name="textposition"></a>TEXT_POSITION
+# <a name="text_position"></a>TEXT_POSITION
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Verilen metni satır ve sütun konumu açıklar.  
+Verilen metindeki satır ve sütun konumunu açıklar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _tagTEXT_POSITION {   
@@ -45,12 +45,12 @@ public struct TEXT_POSITION { 
  Kaynak dosyadaki satır dizini.  
   
  dwColumn  
- Çizgi karakteri uzaklık.  
+ Satıra karakter boşluğu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı kullanılır [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) ve [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapıları.  
+ Bu yapı [CONTEXT_INFO](../../../extensibility/debugger/reference/context-info.md) ve [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) yapılarında kullanılır.  
   
- Aşağıdaki yöntemlerden bir çağrı tarafından bu yapı doldurulur:  
+ Bu yapı aşağıdaki yöntemlere bir çağrı ile doldurulur:  
   
 - [GetStatementRange](../../../extensibility/debugger/reference/idebugdocumentcontext2-getstatementrange.md)  
   
@@ -60,7 +60,7 @@ public struct TEXT_POSITION { 
   
 - [GetOffset](../../../extensibility/debugger/reference/idebugfunctionposition2-getoffset.md)  
   
-  Bu yapı, aşağıdaki yöntemleri için parametre olarak geçirilir:  
+  Bu yapı aşağıdaki yöntemlere bir parametre olarak geçirilir:  
   
 - [GetText](../../../extensibility/debugger/reference/idebugdocumenttext2-gettext.md)  
   
@@ -73,11 +73,11 @@ public struct TEXT_POSITION { 
 - [onUpdateTextAttributes](../../../extensibility/debugger/reference/idebugdocumenttextevents2-onupdatetextattributes.md)  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

@@ -9,20 +9,20 @@ caps.latest.revision: 3
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d9a5425f5acc9ec62b5def24279aac208516ff0e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204468"
 ---
 # <a name="extending-solutions"></a>Çözümleri Genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir çözümü, bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla proje gruplandırmasıdır.  
+Bir çözüm, bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla projenin gruplandırmasıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- Aşağıdaki izlenecek yollar, çözümleri genişletebileceğiniz bazı yollarını gösterir.  
+ Aşağıdaki izlenecek yollarda, çözümlerini genişletebilmeniz için bazı yollar gösterilmektedir.  
   
-1. [Çözüm Gezgini filtresini genişletme](../extensibility/extending-the-solution-explorer-filter.md) ne Çözüm Gezgini'nde görüntüler nasıl filtreleme yapılacağını açıklar.  
+1. [Çözüm Gezgini filtresini genişletmek](../extensibility/extending-the-solution-explorer-filter.md) , Çözüm Gezgini neyin nasıl filtreleneceğini açıklar.  
   
-2. [Proje yüklenirken bir çözümde yönetmek](../extensibility/managing-project-loading-in-a-solution.md) bir kullanıcı bir çözüm yüklediğinde, performansı artırmak için proje yüklemeyi yönetme konusunda açıklanmaktadır.
+2. [Bir çözümde proje yüklemeyi yönetmek](../extensibility/managing-project-loading-in-a-solution.md) , bir Kullanıcı bir çözüm yüklediğinde performansı artırmak için proje yükleme 'nin nasıl yönetileceğini açıklar.

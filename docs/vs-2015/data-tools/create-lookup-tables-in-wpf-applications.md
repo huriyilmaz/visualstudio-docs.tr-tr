@@ -23,10 +23,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6816b7465b8a3271ec6ebc0db5046d76e60ec5b3
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657418"
 ---
 # <a name="create-lookup-tables-in-wpf-applications"></a>WPF uygulamalarında arama tabloları oluşturma
@@ -34,7 +34,7 @@ ms.locfileid: "72657418"
 
 Terim *arama tablosu* (bazen *arama bağlaması*denir), bir veri tablosundan, başka bir tablodaki yabancı anahtar alanının değerine göre bilgi görüntüleyen bir denetimi açıklar. Bir üst tablonun veya nesnenin ana **düğümünü, ilgili** alt tablodaki bir sütuna veya özelliğe zaten bağımlı olan bir denetimin üzerine sürükleyerek bir arama tablosu oluşturabilirsiniz.
 
- Örneğin, bir satış veritabanındaki `Orders` tablosunu düşünün. @No__t_0 tablodaki her kayıt, siparişi hangi müşterinin yaptığını gösteren bir `CustomerID` içerir. @No__t_0, `Customers` tablosundaki müşteri kaydına işaret eden bir yabancı anahtardır. @No__t_0 tablosundan siparişlerin listesini görüntülediğinizde, `CustomerID` yerine gerçek müşteri adını göstermek isteyebilirsiniz. Müşteri adı `Customers` tabloda olduğundan, müşteri adını göstermek için bir arama tablosu oluşturmanız gerekir. Arama tablosu, ilişkide gezinmek için `Orders` kaydındaki `CustomerID` değerini kullanır ve müşteri adını döndürür.
+ Örneğin, `Orders` bir satış veritabanındaki tablosunu düşünün. Tablodaki her kayıt `Orders` `CustomerID` , siparişi hangi müşterinin yaptığını belirten bir içerir. , `CustomerID` Tablodaki bir müşteri kaydına işaret eden bir yabancı anahtardır `Customers` . Tablodan siparişlerin bir listesini görüntülediğinizde, `Orders` yerine gerçek müşteri adını göstermek isteyebilirsiniz `CustomerID` . Müşteri adı `Customers` tabloda olduğundan, müşteri adını göstermek için bir arama tablosu oluşturmanız gerekir. Arama tablosu, `CustomerID` `Orders` ilişkide gezinmek için kayıttaki değeri kullanır ve müşteri adını döndürür.
 
 ## <a name="to-create-a-lookup-table"></a>Arama tablosu oluşturmak için
 
@@ -75,14 +75,14 @@ Terim *arama tablosu* (bazen *arama bağlaması*denir), bir veri tablosundan, ba
         > [!NOTE]
         > **ListBox** veya **ListView** denetimi listede görünmezse, bu denetimleri listeye ekleyebilirsiniz. Bilgi için bkz. [veri kaynakları penceresinden sürüklerken oluşturulacak denetimi ayarlama](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md).
 
-    - @No__t_0 türetilen herhangi bir özel denetim.
+    - Öğesinden türetilen herhangi bir özel denetim <xref:System.Windows.Controls.Primitives.Selector> .
 
         > [!NOTE]
         > **Veri kaynakları** penceresinde öğeler için seçebileceğiniz denetim listesine özel denetimler ekleme hakkında bilgi için, bkz. [veri kaynakları penceresine özel denetimler ekleme](../data-tools/add-custom-controls-to-the-data-sources-window.md).
 
 8. Alt düğümü **veri kaynakları** penceresinden WPF Tasarımcısı 'ndaki bir kapsayıcıya sürükleyin. (Önceki örnekte, alt düğüm **Orders** düğümüdür.)
 
-     Visual Studio, sürüklediğiniz öğelerin her biri için yeni veri bağlantılı denetimler oluşturan XAML oluşturur. XAML ayrıca bırakma hedefinin kaynaklarına alt tablo veya nesne için yeni bir <xref:System.Windows.Data.CollectionViewSource> ekler. Visual Studio, bazı veri kaynaklarında verileri tabloya veya nesneye yüklemek için de kod üretir. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
+     Visual Studio, sürüklediğiniz öğelerin her biri için yeni veri bağlantılı denetimler oluşturan XAML oluşturur. XAML ayrıca <xref:System.Windows.Data.CollectionViewSource> bırakma hedefinin kaynaklarına alt tablo veya nesne için yeni bir ekler. Visual Studio, bazı veri kaynaklarında verileri tabloya veya nesneye yüklemek için de kod üretir. Daha fazla bilgi için bkz. [Visual Studio 'DA WPF denetimlerini verilere bağlama](../data-tools/bind-wpf-controls-to-data-in-visual-studio1.md).
 
 9. **Veri kaynakları** penceresinden üst düğümü daha önce oluşturduğunuz arama bağlama denetiminin üzerine sürükleyin. (Önceki örnekte, ana düğüm **müşteriler** düğümüdür).
 
@@ -90,7 +90,7 @@ Terim *arama tablosu* (bazen *arama bağlaması*denir), bir veri tablosundan, ba
 
     |Özellik|Ayarın açıklaması|
     |--------------|----------------------------|
-    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|Bu özellik, denetimde görüntülenen verileri almak için kullanılan koleksiyonu veya bağlamayı belirtir. Visual Studio, denetime sürüklediğiniz üst veriler için bu özelliği <xref:System.Windows.Data.CollectionViewSource> ayarlar.|
+    |<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>|Bu özellik, denetimde görüntülenen verileri almak için kullanılan koleksiyonu veya bağlamayı belirtir. Visual Studio, bu özelliği <xref:System.Windows.Data.CollectionViewSource> denetime sürüklediğiniz ana veriler için olarak ayarlar.|
     |<xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>|Bu özellik, denetimde görüntülenen veri öğesinin yolunu belirtir. Visual Studio bu özelliği, bir dize veri türüne sahip olan birincil anahtardan sonra ana verilerdeki ilk sütuna veya özelliğe ayarlar.<br /><br /> Üst verilerde farklı bir sütun veya özellik göstermek istiyorsanız, bu özelliği farklı bir özelliğin yolu olarak değiştirin.|
     |<xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A>|Visual Studio bu özelliği, tasarımcıya sürüklediğiniz alt verilerin sütununa veya özelliğine bağlar. Bu, üst verilerin yabancı anahtarıdır.|
     |<xref:System.Windows.Controls.Primitives.Selector.SelectedValuePath%2A>|Visual Studio bu özelliği, ana verilere yabancı anahtar olan alt verilerin sütununun veya özelliğinin yoluna ayarlar.|

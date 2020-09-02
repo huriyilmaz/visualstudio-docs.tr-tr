@@ -1,5 +1,5 @@
 ---
-title: Idiasegment::get_read | Microsoft Docs
+title: 'IDiaSegment:: get_read | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a1ef1a39666d1901abf879e7878866b5cfc1fa8b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151761"
 ---
-# <a name="idiasegmentgetread"></a>IDiaSegment::get_read
+# <a name="idiasegmentget_read"></a>IDiaSegment::get_read
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Segment okunup okunamayacağını gösteren bir bayrak alır.  
+Segmentin okunup okunamayacağını gösteren bir bayrak alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_read (   
@@ -35,10 +35,10 @@ HRESULT get_read ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Döndürür `TRUE` kesim okunabiliyorsa; Aksi halde döndürür `FALSE`.  
+ dışı `TRUE` Segmentin okunup okunabilecek olursa döndürür; Aksi takdirde, döndürür `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

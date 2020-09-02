@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::GetService | Microsoft Dokümanlar
+title: 'IDebugExpressionEvaluator2:: GetService | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c5428606ad54c7938037c3ffecf04f1cfe41787c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729353"
 ---
 # <a name="idebugexpressionevaluator2getservice"></a>IDebugExpressionEvaluator2::GetService
 Benzersiz tanımlayıcısı verilen bir hizmet nesnesini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetService (
@@ -42,16 +42,16 @@ int GetService (
 
 ## <a name="parameters"></a>Parametreler
 `uid`\
-[içinde] Alınacak hizmetin benzersiz tanımlayıcısı.
+'ndaki Alınacak hizmetin benzersiz tanıtıcısı.
 
 `ppService`\
-[çıkış] Hizmeti temsil eden bir nesne döndürür.
+dışı Hizmeti temsil eden bir nesne döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu, başka bir ifade değerlendiricisinden hizmet almak için üçüncü taraf ifade değerlendiricisi tarafından tüketilebilir. Örneğin, bu yöntem varsayılan ifade değerlendiricisi nden visualizer hizmeti için arabirim elde etmek için kullanılabilir. Üçüncü taraf ifade değerlendiriciler bu arabirimi uygulamak için gereken olası değildir.
+ Bu, başka bir ifade değerlendiricisinde hizmet elde etmek için üçüncü taraf bir ifade değerlendirici tarafından tüketilebilir. Örneğin, bu yöntem varsayılan ifade değerlendiricisi ' nden Görselleştirici hizmeti arabirimini almak için kullanılabilir. Üçüncü taraf ifadesi değerlendiricileri bu arabirimin uygulanması için gerekli değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 820f4ac8b154579664e01b12aa8146e4668cc17b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670675"
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>Nasıl Yapılır: Yapı Olaylarını Belirtme (Visual Basic)
@@ -45,13 +45,13 @@ Visual Basic derleme olayları, derleme sürecinin bir parçası olarak betikler
 4. Oluşturma öncesi veya oluşturma sonrası eyleminiz için komut satırı bağımsız değişkenlerini girin ve ardından **Tamam**' a tıklayın.
 
     > [!NOTE]
-    > . Bat dosyalarını çalıştıran tüm derleme sonrası komutları önüne bir `call` ekstresi ekleyin. Örneğin, `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat`.
+    > `call`. Bat dosyalarını çalıştıran tüm derleme sonrası komutlarının önüne bir ifade ekleyin. Örneğin `call C:\MyFile.bat` veya `call C:\MyFile.bat call C:\MyFile2.bat` olabilir.
 
     > [!NOTE]
     > Oluşturma öncesi veya oluşturma sonrası olaylarınız başarıyla tamamlanmazsa, olay eyleminizi, sıfırdan farklı bir eylem belirten (0) dışında bir kodla çıkış yaparak derlemeyi sonlandırabilirsiniz.
 
 ## <a name="example-how-to-change-manifest-information-using-a-post-build-event"></a>Örnek: derleme sonrası bir olay kullanarak bildirim bilgilerini değiştirme
- Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki. exe. manifest dosyası) çağrılan bir. exe komutu kullanılarak uygulama bildiriminde en düşük işletim sistemi sürümünün nasıl ayarlanacağı gösterilmektedir. En düşük işletim sistemi sürümü, 4.10.0.0 gibi dört bölümden oluşan bir sayıdır. Bunu yapmak için, komut bildirimin `<dependentOS>` bölümünü değiştirir:
+ Aşağıdaki yordamda, derleme sonrası olayından (proje dizinindeki. exe. manifest dosyası) çağrılan bir. exe komutu kullanılarak uygulama bildiriminde en düşük işletim sistemi sürümünün nasıl ayarlanacağı gösterilmektedir. En düşük işletim sistemi sürümü, 4.10.0.0 gibi dört bölümden oluşan bir sayıdır. Bunu yapmak için, komut `<dependentOS>` bildirimin bölümünü değiştirir:
 
 ```
 <dependentOS>
@@ -65,15 +65,15 @@ Visual Basic derleme olayları, derleme sürecinin bir parçası olarak betikler
 
 1. Komut için bir konsol uygulaması oluşturun. **Dosya** menüsünde **Yeni**' ye ve ardından **Proje**' ye tıklayın.
 
-2. **Yeni proje** iletişim kutusunda, **Visual Basic** düğümünde **Windows** ' u ve ardından **konsol uygulama** şablonu ' nu seçin. Projeyi `ChangeOSVersionVB` olarak adlandırın.
+2. **Yeni proje** iletişim kutusunda, **Visual Basic** düğümünde **Windows** ' u ve ardından **konsol uygulama** şablonu ' nu seçin. Projeyi adlandırın `ChangeOSVersionVB` .
 
-3. Module1. vb dosyasında, aşağıdaki satırı dosyanın en üstündeki diğer `Imports` deyimlerine ekleyin:
+3. Module1. vb dosyasında, aşağıdaki satırı `Imports` dosyanın en üstündeki diğer deyimlere ekleyin:
 
    ```
    Imports System.Xml
    ```
 
-4. Aşağıdaki kodu `Sub Main` ekleyin:
+4. Aşağıdaki kodu içine ekleyin `Sub Main` :
 
    ```
    Sub Main()
@@ -118,9 +118,9 @@ Visual Basic derleme olayları, derleme sürecinin bir parçası olarak betikler
 
     Komut iki bağımsız değişken alır. İlk bağımsız değişken, uygulama bildiriminin yoludur (yani, yapı işleminin bildirimi oluşturduğu klasör, genellikle ProjectName. Publish). İkinci bağımsız değişken yeni işletim sistemi sürümüdür.
 
-5. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+5. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
-6. . Exe dosyasını `C:\TEMP\ChangeOSVersionVB.exe` gibi bir dizine kopyalayın.
+6. . Exe dosyasını gibi bir dizine kopyalayın `C:\TEMP\ChangeOSVersionVB.exe` .
 
    Sonra, uygulama bildirimini değiştirmek için bu komutu derleme sonrası bir olayda çağırın.
 
@@ -128,17 +128,17 @@ Visual Basic derleme olayları, derleme sürecinin bir parçası olarak betikler
 
 1. Yayımlanacak proje için bir Windows uygulaması oluşturun. **Dosya** menüsünde **Yeni**' ye ve ardından **Proje**' ye tıklayın.
 
-2. **Yeni proje** iletişim kutusundaki **Visual Basic** düğümünde **Windows** ' u ve ardından **Windows uygulama** şablonu ' nu seçin. Projeyi `VBWinApp` olarak adlandırın.
+2. **Yeni proje** iletişim kutusundaki **Visual Basic** düğümünde **Windows** ' u ve ardından **Windows uygulama** şablonu ' nu seçin. Projeyi adlandırın `VBWinApp` .
 
 3. **Çözüm Gezgini**' de proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
 
-4. Proje tasarımcısında **Yayımla** sayfasına gidin ve **Yayımlama konumunu** `C:\TEMP\` olarak ayarlayın.
+4. Proje tasarımcısında **Yayımla** sayfasına gidin ve **Yayımlama konumunu** olarak ayarlayın `C:\TEMP\` .
 
 5. **Şimdi Yayımla**' ya tıklayarak projeyi yayımlayın.
 
-     Bildirim dosyası oluşturulacak ve `C:\TEMP\VBWinApp_1_0_0_0\VBWinApp.exe.manifest` yerleştirilecek. Bildirimi görüntülemek için, dosyaya sağ tıklayın ve **birlikte Aç**' a tıklayın ve ardından **Listeden programı seç**' e tıklayın ve ardından **Notepad**' e tıklayın.
+     Bildirim dosyası oluşturulacak ve yerleştirilecek `C:\TEMP\VBWinApp_1_0_0_0\VBWinApp.exe.manifest` . Bildirimi görüntülemek için, dosyaya sağ tıklayın ve **birlikte Aç**' a tıklayın ve ardından **Listeden programı seç**' e tıklayın ve ardından **Notepad**' e tıklayın.
 
-     @No__t_0 öğesi için dosyada arama yapın. Örneğin, sürüm şu olabilir:
+     Dosyasında öğesi için arama yapın `<osVersionInfo>` . Örneğin, sürüm şu olabilir:
 
     ```
     <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
@@ -152,7 +152,7 @@ Visual Basic derleme olayları, derleme sürecinin bir parçası olarak betikler
 
      Projeyi derlediğinizde, bu komut uygulama bildirimindeki en düşük işletim sistemi sürümünü 5.1.2600.0 olarak değiştirir.
 
-     @No__t_0 makro, oluşturulmakta olan yürütülebilir dosyanın tam yolunu ifade eder. Bu nedenle, $ (TargetPath). manifest, bin dizininde oluşturulan uygulama bildirimini belirtir. Yayımlama, bu bildirimi daha önce ayarladığınız yayımlama konumuna kopyalar.
+     `$(TargetPath)`Makro, oluşturulmakta olan yürütülebilir dosyanın tam yolunu ifade eder. Bu nedenle, $ (TargetPath). manifest, bin dizininde oluşturulan uygulama bildirimini belirtir. Yayımlama, bu bildirimi daha önce ayarladığınız yayımlama konumuna kopyalar.
 
 8. Projeyi yeniden yayımlayın. **Yayımla** sayfasına gidin ve **Şimdi Yayımla**' ya tıklayın.
 
@@ -165,4 +165,4 @@ Visual Basic derleme olayları, derleme sürecinin bir parçası olarak betikler
     ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Derleme özelliklerini yönetme](https://msdn.microsoft.com/94308881-f10f-4caf-a729-f1028e596a2c) derleme [sayfası, proje Tasarımcısı (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md) [Yayımlama sayfası, proje Tasarımcısı](../ide/reference/publish-page-project-designer.md) [derleme öncesi olay/oluşturma sonrası olay komut satırı iletişim kutusu](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md) [C# ](../ide/how-to-specify-build-events-csharp.md)
+ [Derleme özelliklerini yönetme](https://msdn.microsoft.com/94308881-f10f-4caf-a729-f1028e596a2c) derleme [sayfası, proje Tasarımcısı (Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md) [Yayımlama sayfası, proje Tasarımcısı](../ide/reference/publish-page-project-designer.md) [derleme öncesi olay/oluşturma sonrası olay komut satırı iletişim kutusu](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md) [How to: Specify Build Events (C#)](../ide/how-to-specify-build-events-csharp.md)

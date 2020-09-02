@@ -16,10 +16,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 2920d2d7f6a77fe8fdbd62a0788f570818390eea
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330799"
 ---
 # <a name="how-to-configure-noise-reduction-in-report-views"></a>Nasıl yapılır: rapor görünümlerinde gürültü azaltılması yapılandırma
@@ -52,7 +52,7 @@ Performans raporları, çağrı ağacı görünümünde ve ayırma görünümün
 
 3. Kırpmayı devre dışı bırakmak için **Kırpmayı etkinleştir**' i temizleyin.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
 ### <a name="to-configure-folding-for-a-performance-report"></a>Performans raporu için katlamayı yapılandırmak için
 
@@ -75,7 +75,7 @@ Performans raporları, çağrı ağacı görünümünde ve ayırma görünümün
 
 3. Katlamayı devre dışı bırakmak için **katlama özelliğini**temizleyin.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Performans araçları rapor görünümlerini özelleştirme](../profiling/customizing-performance-tools-report-views.md)

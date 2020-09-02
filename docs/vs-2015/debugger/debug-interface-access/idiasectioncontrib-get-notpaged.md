@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_notpaged | Microsoft Docs
+title: 'IDiaSectionContrib:: get_notPaged | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1899e59e6eb11b53757d28f9babc09739b1fdad3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151876"
 ---
-# <a name="idiasectioncontribgetnotpaged"></a>IDiaSectionContrib::get_notPaged
+# <a name="idiasectioncontribget_notpaged"></a>IDiaSectionContrib::get_notPaged
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bölüm bellek yetersiz disk belleğine alınacak olamaz olup olmadığını gösteren bir bayrak alır.  
+Bölümün disk belleğine alınmış olup olmadığını gösteren bir bayrak alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_notPaged (   
@@ -35,10 +35,10 @@ HRESULT get_notPaged ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out, retval] Döndürür `TRUE` bölümü havuzda aşımına uğramazsa döndürür `FALSE`.  
+ [Out, retval] `TRUE` Bölümün disk belleğine alınamayan bir değer döndürür; Aksi takdirde, döndürür `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

@@ -20,30 +20,30 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: da32f0bfce9edf652e19df6b68bc51ed92624d80
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65698999"
 ---
 # <a name="getwinfxpath-task"></a>GetWinFXPath Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> Görev geçerli dizinin döndürür [!INCLUDE[TLA#tla_winfx](../includes/tlasharptla-winfx-md.md)] çalışma zamanı.  
+<xref:Microsoft.Build.Tasks.Windows.GetWinFXPath>Görev, geçerli [!INCLUDE[TLA#tla_winfx](../includes/tlasharptla-winfx-md.md)] çalışma zamanının dizinini döndürür.  
   
 ## <a name="task-parameters"></a>Görev parametreleri  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`WinFXPath`|İsteğe bağlı **dize** çıkış parametresi.<br /><br /> Gerçek yolunu belirtir [!INCLUDE[TLA2#tla_winfx](../includes/tla2sharptla-winfx-md.md)] çalışma zamanı.|  
-|`WinFXNativePath`|Gerekli **dize** parametresi.<br /><br /> Yerel yolu belirtir [!INCLUDE[TLA2#tla_titlewinfx](../includes/tla2sharptla-titlewinfx-md.md)] çalışma zamanı.|  
-|`WinFXWowPath`|Gerekli **dize** parametresi.<br /><br /> Yolunu belirtir [!INCLUDE[TLA#tla_winfx](../includes/tlasharptla-winfx-md.md)] 32-bit derlemelerde **Windows üzerinde Windows** 64-bit sistemlerde modülü.|  
+|`WinFXPath`|İsteğe bağlı **dize** çıkış parametresi.<br /><br /> Çalışma zamanının gerçek yolunu belirtir [!INCLUDE[TLA2#tla_winfx](../includes/tla2sharptla-winfx-md.md)] .|  
+|`WinFXNativePath`|Gerekli **dize** parametresi.<br /><br /> Yerel [!INCLUDE[TLA2#tla_titlewinfx](../includes/tla2sharptla-titlewinfx-md.md)] çalışma zamanının yolunu belirtir.|  
+|`WinFXWowPath`|Gerekli **dize** parametresi.<br /><br /> [!INCLUDE[TLA#tla_winfx](../includes/tlasharptla-winfx-md.md)]64 bit sistemlerde 32 bitlik **Windows** modülündeki derlemelerin yolunu belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> görev bir 64-bit işlemci üzerinde yürütme yaptığı **WinFXPath** parametrenin depolanan yoluna ayarlanmış **WinFXWowPath** parametre; Aksi takdirde **WinFXPath**  parametrenin depolanan yoluna ayarlanmış **WinFXNativePath** parametresi.  
+ Görev, <xref:Microsoft.Build.Tasks.Windows.GetWinFXPath> 64 bitlik bir işlemci üzerinde yürütülecede, **WinFXPath** parametresi **WinFXWowPath** parametresinde depolanan yola ayarlanır; Aksi takdirde **WinFXPath** parametresi **WinFXNativePath** parametresinde depolanan yola ayarlanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir **GetWinFXPath** yerel yolu algılamak için görev [!INCLUDE[TLA2#tla_titlewinfx](../includes/tla2sharptla-titlewinfx-md.md)] çalışma zamanı.  
+ Aşağıdaki örnek, çalışma zamanının yerel yolunu algılamak için **GetWinFXPath** görevinin nasıl kullanılacağını gösterir [!INCLUDE[TLA2#tla_titlewinfx](../includes/tla2sharptla-titlewinfx-md.md)] .  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -64,4 +64,4 @@ ms.locfileid: "65698999"
  [Görev başvurusu](../msbuild/wpf-msbuild-task-reference.md)   
  [MSBuild başvurusu](../msbuild/msbuild-reference.md)   
  [Görev başvurusu](../msbuild/msbuild-task-reference.md)   
- [WPF uygulaması (WPF) oluşturma](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c)
+ [WPF Uygulaması Oluşturma (WPF)](https://msdn.microsoft.com/library/a58696fd-bdad-4b55-9759-136dfdf8b91c)

@@ -11,22 +11,22 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6823b462f884e06e1729c9bb4777cc166b34ea7a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204614"
 ---
 # <a name="enableeditoflocationfield-element-visual-studio-templates"></a>EnableEditOfLocationField Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanıcı konum alanı düzenleyip düzenleyemeyeceğini belirtir.  
+Kullanıcının konum alanını düzenleyip düzenleyebiliyorsanız belirtir.  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<EnableEditOfLocationField >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<EnableEditOfLocationField>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <EnableEditOfLocationField> true/false </EnableEditOfLocationField>  
@@ -36,29 +36,29 @@ Kullanıcı konum alanı düzenleyip düzenleyemeyeceğini belirtir.
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Metin olmalıdır `true` veya `false`gösteren bir kullanıcı olup olmadığını düzenleyebilir **konumu** metin kutusunu **yeni proje** iletişim kutusu.  
+ Metin ya da `true` `false` kullanıcının **Yeni proje** iletişim kutusunda **konum** metin kutusunu düzenleyip düzenleyemeyeceğini belirten bir veya daha fazla olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `EnableEditOfLocationField` İsteğe bağlı bir öğedir. Varsayılan değer `true`, değerini düzenlemek kullanıcı sağlayan **konumu** metin kutusu **yeni proje** iletişim kutusu.  
+ `EnableEditOfLocationField` isteğe bağlı bir öğedir. Varsayılan değer `true` , kullanıcının **Yeni proje** iletişim kutusundaki **konum** metin kutusunda bulunan değeri düzenlemesine izin verir.  
   
- İçinde **yeni proje** iletişim kutusu, **konumu** metin kutusuna yeni proje kaydedildiği dizini belirtir.  
+ **Yeni proje** Iletişim kutusunda **konum** metin kutusu yeni projenin kaydedildiği dizini belirtir.  
   
 ## <a name="example"></a>Örnek  
- Meta veriler için aşağıdaki örnekte bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] Windows uygulaması.  
+ Aşağıdaki örnek, bir Windows uygulaması için meta verileri gösterir [!INCLUDE[csprcs](../includes/csprcs-md.md)] .  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

@@ -11,19 +11,19 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7a01216f8580e5c366cc6072448a0cf7ef4e6d69
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152810"
 ---
 # <a name="event-sources-visual-studio-sdk"></a>Olay Kaynakları (Visual Studio SDK)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Olayların iki kaynağı vardır: hata ayıklama altyapısı (DE) ve oturum Yöneticisi (SDM) hata ayıklama. SDM gönderilen olaylar NULL altyapısı bir DE gönderilen olayların bir NULL olmayan altyapısı bulunur.  
+İki olay kaynağı vardır: hata ayıklama altyapısı (DE) ve oturum hata ayıklama Yöneticisi (SDM). Sürümünden gönderilen olaylar NULL olmayan bir altyapıya sahip olsa da, SDM 'den gönderilen olayların NULL bir altyapısı vardır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl gönderileceğini gösterir **IDebugProgramCreateEvent2** DE SDM olarak öğesinden.  
+ Aşağıdaki örnek, **IDebugProgramCreateEvent2** öğesinden SDM 'ye nasıl gönderileceğini gösterir.  
   
 ```  
 CDebugProgramCreateEvent* pProgramCreateEvent = new CDebugProgramCreateEvent();  

@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6e2db8596c1c16f5c9fb54a8c7c867b06e997b7b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657702"
 ---
 # <a name="evaluate-statement-command"></a>Deyimi Değerlendir Komutu
@@ -26,25 +26,25 @@ ms.locfileid: "72657702"
 
 Verilen ifadeyi değerlendirir ve görüntüler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Debug.EvaluateStatement text
 ```
 
-## <a name="arguments"></a>Arguments
- `text` gerekiyor. Değerlendirilecek olan ifade.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `text` Gerekli. Değerlendirilecek olan ifade.
 
 ## <a name="remarks"></a>Açıklamalar
  **EvaluateStatement** komutunu girmek için kullanılan pencere, bir eşittir işareti (=) karşılaştırma işleci olarak mı yoksa atama işleci olarak mı yorumlanacağını belirler.
 
- **Komut** penceresinde, bir eşittir işareti (=) karşılaştırma işleci olarak yorumlanır. Bu nedenle, örneğin, `a` ve `b` değişkenlerinin değerleri farklıysa, komut
+ **Komut** penceresinde, bir eşittir işareti (=) karşılaştırma işleci olarak yorumlanır. Bu nedenle, örneğin, değişkenlerin değerleri `a` ve `b` farklıysa, komut
 
 ```
 >Debug.EvaluateStatement(a=b)
 ```
 
- `false` bir değer döndürür.
+ , bir değeri döndürür `false` .
 
  **Hemen** penceresinde, aksine, bir eşittir işareti (=) bir atama işleci olarak yorumlanır. Bu nedenle, örneğin, komut
 
@@ -52,7 +52,7 @@ Debug.EvaluateStatement text
 >Debug.EvaluateStatement(a=b)
 ```
 
- , değişken `b` `a` değişkenine atanır.
+ değişkenin değeri değişkene atanır `a` `b` .
 
 ## <a name="example"></a>Örnek
 

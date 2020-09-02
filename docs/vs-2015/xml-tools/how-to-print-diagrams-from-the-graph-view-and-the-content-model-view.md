@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: de59aac6bc40e58b6da9b71fd0cc81d432fe41bd
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670835"
 ---
-# <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>Nasıl yapılır: Grafik görünümünden ve Içerik modeli görünümünden diyagram yazdırma
+# <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>Nasıl Yapılır: Graf Görünümünden ve İçerik Modeli Görünümünden Diyagram Yazdırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bu konu başlığı altında, grafik görünümünden veya Içerik modeli görünümünden bir diyagramın nasıl yazdırılacağı açıklanmaktadır.
