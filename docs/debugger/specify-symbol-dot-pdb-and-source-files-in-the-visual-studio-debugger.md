@@ -30,10 +30,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 19eed30074215b64301d7227e93ba6bf5b438d78
-ms.sourcegitcommit: 2f64b3b231900018fceafb72b5a1c65140213a18
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "84183838"
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında simge (. pdb) ve kaynak dosyaları belirtme (C#, C++, Visual Basic, F #)
@@ -81,7 +81,7 @@ Hata ayıklayıcı Ayrıca sembol dosyalarını aşağıdaki konumlarda arar:
 
    - Herhangi bir yerel sembol önbellek klasörü.
 
-   - Belirtilen ağ, internet veya yerel sembol sunucuları ve konumları (seçilmişse, Microsoft sembol sunucuları gibi). [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], protokolü uygulayan sembol sunucularından hata ayıklama sembol dosyalarını indirebilir `symsrv` . [Visual Studio Team Foundation Server](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols) ve [Windows Için hata ayıklama araçları](/windows-hardware/drivers/debugger/index) , sembol sunucularını kullanan iki araç.
+   - Belirtilen ağ, internet veya yerel sembol sunucuları ve konumları (seçilmişse, Microsoft sembol sunucuları gibi). [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , protokolü uygulayan sembol sunucularından hata ayıklama sembol dosyalarını indirebilir `symsrv` . [Visual Studio Team Foundation Server](/azure/devops/pipelines/tasks/build/index-sources-publish-symbols) ve [Windows Için hata ayıklama araçları](/windows-hardware/drivers/debugger/index) , sembol sunucularını kullanan iki araç.
 
      Kullanabileceğiniz sembol sunucuları şunlardır:
 
@@ -159,14 +159,14 @@ Hata ayıklayıcı Ayrıca sembol dosyalarını aşağıdaki konumlarda arar:
   <a name="BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine"></a>
 - **Kaynak sunucu desteğini etkinleştir**
 
-  Yerel makinede kaynak kodu olmadığında veya *. pdb* dosyası kaynak kodla eşleşmezse, bir uygulamada hata ayıklamaya yardımcı olması Için kaynak sunucuyu kullanır. Kaynak sunucu, dosya isteklerini alır ve kaynak denetiminden gerçek dosyaları döndürür. Kaynak sunucu, uygulamanın *. pdb* dosyasını okumak için *srcsrv. DLL* adlı bir dll kullanarak çalışır. *. Pdb* dosyası kaynak kodu deposuna yönelik işaretçiler ve kaynak kodu depodan almak için kullanılan komutları içerir.
+  Yerel makinede kaynak kodu olmadığında veya *. pdb* dosyası kaynak kodla eşleşmezse, bir uygulamada hata ayıklamaya yardımcı olması Için kaynak sunucuyu kullanır. Kaynak sunucu, dosya isteklerini alır ve kaynak denetiminden gerçek dosyaları döndürür. Kaynak sunucu, uygulamanın *. pdb* dosyasını okumak için *srcsrv.dll* adlı bir dll kullanarak çalışır. *. Pdb* dosyası kaynak kodu deposuna yönelik işaretçiler ve kaynak kodu depodan almak için kullanılan komutları içerir.
 
-  Srcsrv. *DLL* ' nin, *srcsrv. ini*adlı bir dosyada izin verilen komutları listeleyerek uygulamanın *. pdb* dosyasından yürütebilmesi için komutları sınırlayabilirsiniz. *Srcsrv. ini* dosyasını *srcsrv. dll* ve *devenv. exe*ile aynı klasöre yerleştirin.
+  *srcsrv.dll* *srcsrv.ini*adlı bir dosyada izin verilen komutları listeleyerek, uygulamanın *. pdb* dosyasından yürütebilmesi gereken komutları sınırlayabilirsiniz. *srcsrv.ini* dosyasını *srcsrv.dll* ve *devenv.exe*aynı klasöre yerleştirin.
 
   >[!IMPORTANT]
-  >Rastgele komutlar uygulamanın *. pdb* dosyasına katıştırılabildiğinden, yalnızca yürütmek istediğiniz komutları *srcsrv. ini* dosyasına koyduğunuzdan emin olun. *Srcsvr. ini* dosyasında olmayan bir komutu yürütme girişimi, bir onay iletişim kutusunun görüntülenmesine neden olur. Daha fazla bilgi için bkz. [güvenlik uyarısı: hata ayıklayıcı güvenilmeyen komut yürütmelidir](../debugger/security-warning-debugger-must-execute-untrusted-command.md).
+  >Rastgele komutlar uygulamanın *. pdb* dosyasına katıştırılabildiğinden, yalnızca yürütmek istediğiniz komutları bir *srcsrv.ini* dosyasına yerleştirdiğinizden emin olun. *srcsvr.ini* dosyasında olmayan bir komutu yürütme girişimi, bir onay iletişim kutusunun görüntülenmesine neden olur. Daha fazla bilgi için bkz. [güvenlik uyarısı: hata ayıklayıcı güvenilmeyen komut yürütmelidir](../debugger/security-warning-debugger-must-execute-untrusted-command.md).
   >
-  >Komut parametrelerinde bir doğrulama yapılmadı, bu nedenle güvenilir komutlara dikkat edin. Örneğin, *srcsrv. ini*dosyanızdaki *cmd. exe* ' yi listeleniyorsa, kötü niyetli bir Kullanıcı *cmd. exe* ' de tehlikeli hale gelen parametreleri belirtebilir.
+  >Komut parametrelerinde bir doğrulama yapılmadı, bu nedenle güvenilir komutlara dikkat edin. Örneğin, *srcsrv.ini* *cmd.exe* listeleniyorsa, kötü niyetli bir Kullanıcı *cmd.exe* , tehlikeli hale getirmek için parametreler belirtebilir.
 
   Bu öğeyi ve istediğiniz alt öğeleri seçin. **Kısmi güven derlemeleri (yalnızca yönetilen) için kaynak sunucuya Izin ver** ve **hiçbir zaman güvenilmeyen kaynak sunucu komutlarını sormadan Çalıştır** güvenlik risklerini artırabilir.
 
@@ -182,21 +182,21 @@ Bir *. pdb* dosyası oluşturmak için **/Debug** ile derleyin. **/Debug: Full**
 
 ### <a name="cc-options"></a>C/C++ seçenekleri
 
-- *VC \< x>. pdb* ve * \< Proje>. pdb* dosyaları
+- *VC \<x> . pdb* ve * \<project> . pdb* dosyaları
 
-  C/C++ için bir *. pdb* dosyası [/Zi veya/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format)ile derleme yaptığınızda oluşturulur. [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]' De, [/FD](/cpp/build/reference/fd-program-database-file-name) seçeneği derleyicinin oluşturduğu *. pdb* dosyasını adlandırır. IDE 'yi kullanarak ' de bir proje oluşturduğunuzda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , **/FD** seçeneği * \< Project>. pdb*adlı bir *. pdb* dosyası oluşturmak üzere ayarlanır.
+  C/C++ için bir *. pdb* dosyası [/Zi veya/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format)ile derleme yaptığınızda oluşturulur. [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)]' De, [/FD](/cpp/build/reference/fd-program-database-file-name) seçeneği derleyicinin oluşturduğu *. pdb* dosyasını adlandırır. IDE 'yi kullanarak ' de bir proje oluşturduğunuzda [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , **/FD** seçeneği * \<project> . pdb*adlı bir *. pdb* dosyası oluşturmak üzere ayarlanır.
 
   C/C++ uygulamanızı bir Makefile kullanarak derleyebilir ve **/zı** ya da **/Zi** 'yi **/FD**kullanmadan belirtirseniz, derleyici iki *. pdb* dosyası oluşturur:
 
-  - *VC \< x>. pdb*, burada * \< x>* Microsoft C++ derleyicisinin sürümünü temsil eder, örneğin *VC11. pdb*
+  - *VC \<x> . pdb*, *\<x>* Microsoft C++ derleyicisinin sürümünü temsil eder, örneğin *VC11. pdb*
 
-    *VC \< x>. pdb* dosyası, bireysel nesne dosyaları için tüm hata ayıklama bilgilerini depolar ve proje derleme görevleri dosyası ile aynı dizinde bulunur. Bir nesne dosyası her oluşturduğunda, C/C++ derleyicisi hata ayıklama bilgilerini *VC \< x>. pdb*ile birleştirir. Bu nedenle, her kaynak dosya * \< Windows. h>* gibi ortak üst bilgi dosyalarını içerse de, bu başlıklardan tür tanımları her nesne dosyası yerine yalnızca bir kez depolanır. Ekli bilgiler tür bilgilerini içerir, ancak işlev tanımları gibi sembol bilgilerini içermez.
+    *VC \<x> . pdb* dosyası, bireysel nesne dosyaları için tüm hata ayıklama bilgilerini depolar ve proje derleme görevleri dosyası ile aynı dizinde bulunur. Bir nesne dosyası her oluşturduğunda, C/C++ derleyicisi hata ayıklama bilgilerini *VC \<x> . pdb*ile birleştirir. Her kaynak dosya gibi ortak üst bilgi dosyalarını içerse de *\<windows.h>* , bu başlıklardan tür tanımları her nesne dosyası yerine yalnızca bir kez depolanır. Ekli bilgiler tür bilgilerini içerir, ancak işlev tanımları gibi sembol bilgilerini içermez.
 
-  - *\<Proje>. pdb*
+  - *\<project>. pdb*
 
-    * \< Project>. pdb* dosyası, projenin *. exe* dosyası için tüm hata ayıklama bilgilerini depolar ve *ta \debug* alt dizininde bulunur. * \< Proje>. pdb* dosyası, yalnızca *VC \< x>. pdb*'de bulunan tür bilgilerini değil, işlev prototipleri dahil olmak üzere tam hata ayıklama bilgileri içeriyor.
+    * \<project> . Pdb* dosyası, projenin *. exe* dosyası için tüm hata ayıklama bilgilerini depolar ve *ta \debug* alt dizininde bulunur. * \<project> . Pdb* dosyası, yalnızca *VC \<x> . pdb*'de bulunan tür bilgilerini değil, işlev prototipleri dahil olmak üzere tam hata ayıklama bilgileri içerir.
 
-  Hem *VC \< x>. pdb* hem de * \< Project>. pdb* dosyaları artımlı güncelleştirmelere izin verir. Bağlayıcı Ayrıca *. pdb* dosyalarının yolunu, oluşturduğu *. exe* veya *. dll* dosyasına katıştırır.
+  Hem *VC \<x> . pdb* hem de * \<project> . pdb* dosyaları artımlı güncelleştirmelere izin verir. Bağlayıcı Ayrıca *. pdb* dosyalarının yolunu, oluşturduğu *. exe* veya *. dll* dosyasına katıştırır.
 
 - <a name="use-dumpbin-exports"></a>DLL dışarı aktarma tabloları
 
@@ -206,7 +206,7 @@ Bir *. pdb* dosyası oluşturmak için **/Debug** ile derleyin. **/Debug: Full**
 
 ### <a name="web-applications"></a>Web uygulamaları
 
-ASP.NET uygulamanızın *Web. config* dosyasını hata ayıklama moduna ayarlayın. Hata ayıklama modu ASP.NET'in dinamik olarak oluşturulan dosyalar için sembol oluşturmasına neden olur ve hata ayıklayıcının ASP.NET uygulamasına eklemesine olanak tanır. Projenizi web projeleri şablonundan oluşturduysanız, Visual Studio bunu hata ayıklamaya başladığınızda otomatik olarak ayarlar.
+ASP.NET uygulamanızın *web.config* dosyasını hata ayıklama moduna ayarlayın. Hata ayıklama modu ASP.NET'in dinamik olarak oluşturulan dosyalar için sembol oluşturmasına neden olur ve hata ayıklayıcının ASP.NET uygulamasına eklemesine olanak tanır. Projenizi web projeleri şablonundan oluşturduysanız, Visual Studio bunu hata ayıklamaya başladığınızda otomatik olarak ayarlar.
 
 ## <a name="manage-symbols-while-debugging"></a>Hata ayıklama sırasında sembolleri yönetme
 
@@ -245,7 +245,7 @@ Bu durumda, hata ayıklayıcı **yüklü sembol yok** veya gerekli sembolleri ve
 **Eksik sembolleri bulmaya ve yüklemeye yardımcı olması için simge yüklenmemiş belge sayfasını kullanmak için:**
 
 - Arama yolunu değiştirmek için, seçilmemiş bir yolu seçin veya **yeni yol** veya **Yeni VSTS yolu** ' nu seçin ve yeni bir yol girin veya seçin. Yolları tekrar aramak ve bulunursa sembol dosyasını yüklemek için **Yükle** ' yi seçin.
-- Herhangi bir sembol seçeneklerini geçersiz kılmak ve arama yollarını yeniden denemek için, Araştır ' ı seçin **ve \< çalıştırılabilir-adı>bulun **. Sembol dosyası bulunursa yüklenir veya sembol dosyasını el ile seçebilmeniz için **Dosya Gezgini** açılır.
+- Herhangi bir sembol seçeneklerini geçersiz kılmak ve arama yollarını yeniden denemek için, **Araştır ve \<executable-name> bul **' u seçin. Sembol dosyası bulunursa yüklenir veya sembol dosyasını el ile seçebilmeniz için **Dosya Gezgini** açılır.
 - **Seçenekleri**  >  **hata ayıklama**  >  **sembolleri** sayfasında, **sembol ayarlarını değiştir**' i seçin.
 - Ayrıştırılmış derlemeyi bir kez yeni bir pencerede göstermek için, ayrıştırılmış **derlemeyi görüntüle**' yi seçin veya kaynak veya sembol dosyaları bulunamadığında her zaman ayrıştırılmış derlemeyi göster seçeneğini ayarlamak için **Seçenekler iletişim kutusunu** seçin.
 - Aranan konumları ve sonucu göstermek için **sembol yükleme bilgileri**' ni genişletin.

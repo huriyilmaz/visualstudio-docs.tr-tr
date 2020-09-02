@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_symtag | Microsoft Docs
+title: 'IDiaSymbol:: get_symTag | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 88800887a9bcc6a8108220097db41365f356b9b3
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64812361"
 ---
-# <a name="idiasymbolgetsymtag"></a>IDiaSymbol::get_symTag
+# <a name="idiasymbolget_symtag"></a>IDiaSymbol::get_symTag
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Sembol türü sınıflandırıcı alır.  
+Sembol türü sınıflandırıcısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_symTag (   
@@ -35,13 +35,13 @@ HRESULT get_symTag ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir değer döndürür [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) sembol türü sınıflandırıcı belirten sabit listesi.  
+ dışı [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) numaralandırmasından sembol türü sınıflandırıcısını belirten bir değer döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -52,5 +52,5 @@ pType->get_symTag( &tag );
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md)   
+ [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [SymTagEnum Numaralandırması](../../debugger/debug-interface-access/symtagenum.md)

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Dil Arabirim Paketleri (LIP'ler) | Microsoft Docs
+title: Microsoft Dil Arabirimi Paketleri (LIP) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-install
@@ -19,88 +19,88 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 503f97d1530f8d22184f42a2452046782a997c18
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433004"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64814330"
 ---
 # <a name="microsoft-language-interface-packs-lips-and-visual-studio"></a>Microsoft Dil Arabirim Paketleri (LIP'ler) ve Visual Studio
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir Windows Dil Arabirim Paketi (LIP) kullanarak Windows dil sürümünü yükleyin ve ardından çeşitli kullanıcı arabirimi dil paketlerini yükleyin. Kullanıcı Arabirimi Dil paketleri, işletim sistemi için yerelleştirilmiş kullanıcı arabirimi (UI) sağlayın. Örneğin, Japonca Dil Arabirimi Paketi İngilizce sürümünü Windows üzerine yükleyin ve ardından Windows arabiriminde Japonca ve İngilizce arasında geçiş yapabilirsiniz. LIP'ler kullanarak tek bir bilgisayarda Windows birden çok dil sürümlerini olabilir.
+Bir Windows dil arabirimi paketi (LıP) kullanarak Windows 'un bir dil sürümünü yükleyebilir ve sonra çeşitli kullanıcı arabirimi dil paketlerini yükleyebilirsiniz. Kullanıcı Arabirimi dil paketleri, işletim sistemi için yerelleştirilmiş bir kullanıcı arabirimi (UI) sağlar. Örneğin, Windows 'un Ingilizce bir sürümünün üzerine bir Japonca dil arabirimi paketi yükleyebilir ve sonra Windows Kullanıcı arabirimi dilini Japonca ve Ingilizce arasında geçirebilirsiniz. LIP 'Leri kullanarak, tek bir bilgisayarda Windows 'un birden çok dil sürümüne sahip olabilirsiniz.
 
- LIP'ler ve birden çok dil sürümleri Visual Studio'nun yüklü olan bilgisayarlarda Windows değiştirme görüntü dil ayarları ayarlar hem Windows hem de Visual Studio eşleşen dil paketleri yüklendiğinde.
+ Visual Studio 'nun LIP 'Leri ve birden çok dil sürümüne sahip bilgisayarlarda, Windows görüntüleme dili ayarlarını değiştirmek, eşleşen dil paketleri yüklenirken hem Windows hem de Visual Studio 'Yu ayarlar.
 
-## <a name="limitations-of-multi-language-installations"></a>Çok dilli yüklemeleri sınırlamaları
- Aynı bilgisayarda Visual Studio'nun farklı dil sürümlerini yükleme sırasında yalnızca diller eşleşen sürümler arasında geçiş yapabilirsiniz. Örneğin, İngilizce Express yüklü sürüm varsa, yüklü bir Almanca Express Edition ve Professional sürümü yüklü, diller yalnızca geçiş yapabilirsiniz Professional Edition için değil, Express sürümleri için.
+## <a name="limitations-of-multi-language-installations"></a>Çoklu dil yüklemelerinin sınırlamaları
+ Visual Studio 'nun farklı dil sürümlerini aynı bilgisayara yüklediğinizde, yalnızca eşleşen sürümler arasında diller arasında geçiş yapabilirsiniz. Örneğin, yüklü bir Ingilizce Express Edition yüklüyse, Almanca Express sürümü yüklüyse ve Professional sürümü yüklüyse, profesyonel sürüm için değil yalnızca Express sürümleri için diller geçirebilirsiniz.
 
- Visual Studio birleşik dil paketi kullanır. Bu ürünler birden fazla dil sürümünü yüklemek için tam dil ürününü yükleyin ve ardından bir veya daha fazla dil paketlerini yükleyin.
+ Visual Studio Birleşik bir dil paketi kullanır. Bu ürünlerin birden fazla dil sürümünü yüklemek için, önce tam dil ürünü yüklemeniz ve sonra bir veya daha fazla dil paketi yüklemeniz gerekir.
 
 > [!NOTE]
-> Visual Studio tam dil ürün birden çok dil sürümünü aynı bilgisayara yükleme desteklemiyor. Bir tam dil ürünü yükledikten sonra dil paketlerini kullanarak dil sürümleri eklemeniz gerekir. Bu gibi durumlarda, Express sürümleri birden çok ürünlerin tam dil yine de aynı bilgisayara yükleyebilirsiniz.
+> Visual Studio, tam dil ürününün aynı bilgisayara birden çok dil sürümünün yüklenmesini desteklemez. Bir tam dil ürünü yükledikten sonra dil paketleri kullanarak dil sürümlerini eklemeniz gerekir. Aynı bilgisayara Express sürümlerinin birden çok tam dil ürününü yüklemeye devam edebilirsiniz.
 
 ### <a name="support-for-code-pages"></a>Kod sayfaları için destek
- Bazı Visual Studio Araçları metin geçerli kod sayfasında karakter içerdiğinde metin düzgün görüntülemez. Bunun yerine, soru işareti görünür veya metin bozuk olabilir. Aşağıdaki araçlar veya alanlar etkilenir:
+ Bazı Visual Studio Araçları, metin geçerli kod sayfasında olmayan karakterler içerdiğinde metni doğru görüntülemez. Bunun yerine, soru işaretleri görünür veya metin bozuk olur. Aşağıdaki araçlar veya bölgeler etkilenir:
 
-- FTP kullanarak dağıtılmış siteler.
+- FTP kullanılarak dağıtılan siteler.
 
-- ASCII olmayan bilgisayar adlarında bazı denetimler.
+- Bazı denetimlerde ASCII olmayan bilgisayar adları.
 
 - Visual Studio dışında çalışan komut satırı araçları.
 
 - Visual Basic Geçiş Sihirbazı.
 
-- ActiveX denetimi Test kapsayıcısı.
+- ActiveX denetimi test kapsayıcısı.
 
-- OLE/COM Nesne Görüntüleyici.
+- OLE/COM nesne Görüntüleyici.
 
 - ISAPI Web hata ayıklama aracı.
 
-- HTML Yardımı içeriğe sahip MFC uygulaması projeleri.
+- HTML Yardımı içeriğine sahip MFC uygulama projeleri.
 
-- Visual SourceSafe / SCCI UI gördükleri İngilizce'ye zaman uyumsuz kod sayfası.
+- Uyumsuz bir kod sayfası olduğunda Visual SourceSafe/SCCı UI, Ingilizce 'ye geri döner.
 
 - Visual SourceSafe Unicode dosya adlarını desteklemez.
 
-- Son kullanıcı tarafından tanımlanan karakter (özel kullanım bölge), belirteç/tanımlayıcı olarak kullanılamaz.
+- Son Kullanıcı tanımlı karakterler (özel kullanım bölgesi) belirteç/tanımlayıcı olarak kullanılamaz.
 
-- Bazı Visual Studio araç pencerelerinin Windows kod sayfası, Doğu Asya dilleri için ayarlandığında Latin Genişletilmiş-B karakterleri görüntülenemiyor.
+- Windows kod sayfası Doğu Asya diline ayarlandığında Latin genişletilmiş-B karakterleri bazı Visual Studio araç pencereleri içinde görüntülenemez.
 
-- Birden çok dili betikleri karakterlerinden oluşan metin çalışır, bazı karakterler için varsayılan karakter görüntüleyebilir.
+- Birden çok dil betiğinin karakterlerinden oluşan metin çalıştırmaları, bazı karakterler için varsayılan glifi gösterebilir.
 
-- Kopyalama ve karmaşık kod dizeleri ortak denetimlere yapıştırma kaybolacak şekillendirme karakter neden olabilir. Bunun yerine, metin girişi için karşılık gelen dil klavyeyi kullanın.
+- Karmaşık betik dizelerini genel denetimlere kopyalamak ve yapıştırmak, karakter şekillendirmeye neden olabilir. Bunun yerine, metin girmek için ilgili dil klavyesini kullanın.
 
-##### <a name="to-correctly-display-characters-that-are-not-included-in-the-current-code-page"></a>Geçerli kod sayfasında bulunmayan karakterler düzgün görüntülemek için
+##### <a name="to-correctly-display-characters-that-are-not-included-in-the-current-code-page"></a>Geçerli kod sayfasına dahil olmayan karakterleri doğru şekilde göstermek için
 
-1. Tıklayın **Başlat**, tıklayın **Denetim Masası**ve ardından açın **bölge ve Dil Seçenekleri** (veya **bölge** içinde [!INCLUDE[win8](../includes/win8-md.md)]).
+1. **Başlat**' a tıklayın, **Denetim Masası**' na tıklayın, sonra **bölge ve dil seçeneklerini** (veya içinde **bölgesi** [!INCLUDE[win8](../includes/win8-md.md)] ) açın.
 
     > [!NOTE]
-    > Bu adımları izlemek için bilgisayarda yönetici olması gerekir.
+    > Bu adımları izlemek için bilgisayarda bir yönetici olmanız gerekir.
 
-2. Tıklayın **Gelişmiş** sekmesi.
+2. **Gelişmiş** sekmesine tıklayın.
 
-3. İçinde **Unicode olmayan program kullanmak istediğiniz dil sürümüyle eşleşen bir dil seçin** listesinde, şu anda dil seçin.
+3. Kullanmak istediğiniz **Unicode olmayan programların dil sürümüyle eşleşecek bir dil seçin** listesinde, kullanmakta olduğunuz dili seçin.
 
-4. **Tamam**'ı tıklatın.
+4. **Tamam**’a tıklayın.
 
-## <a name="changing-the-language-used-for-the-ui-text-in-visual-studio"></a>Visual Studio UI metinde kullanılan dili değiştirme
- Birden çok dil sürümünü yüklediğinizde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] aynı bilgisayarda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] UI varsayılanları **Microsoft Windows ile aynı**. Bu ayar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] UI metni, işletim sistemi için görüntüleme dili olarak belirttiğiniz dilde görüntülenir.
+## <a name="changing-the-language-used-for-the-ui-text-in-visual-studio"></a>Visual Studio 'da Kullanıcı arabirimi metni için kullanılan dili değiştirme
+ Aynı bilgisayara birden çok dil sürümü yüklediğinizde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Kullanıcı arabirimi varsayılan **olarak Microsoft Windows ile aynı**olur. Bu ayar, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Kullanıcı arabirimi metnini işletim sisteminin görüntüleme dili olarak belirtilen dilde gösterecek şekilde gösterir.
 
 > [!NOTE]
-> Visual Studio kullanmak üzere ayarlanmışsa **Microsoft Windows ile aynı**ve eşleşen Visual Studio dil paketi yüklü değil, Visual Studio, ilk Visual Studio yüklemesinin kullanacaktır.
+> Visual Studio, **Microsoft Windows Ile aynı**kullanmak üzere ayarlandıysa ve eşleşen Visual Studio dil paketi yüklü değilse, Visual Studio Ilk Visual Studio yüklemesinin dilini kullanır.
 
-#### <a name="to-set-the-language-that-is-used-for-the-ui-text-in-visual-studio"></a>Visual Studio UI metinde kullanılan dili ayarlamak için
+#### <a name="to-set-the-language-that-is-used-for-the-ui-text-in-visual-studio"></a>Visual Studio 'da Kullanıcı arabirimi metni için kullanılan dili ayarlamak için
 
-1. Üzerinde **Araçları** menüsünü tıklatın **seçenekleri**.
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
-2. İçinde **seçenekleri** iletişim kutusunda **ortam** ve ardından **uluslararası ayarlar**.
+2. **Seçenekler** Iletişim kutusunda **ortam** ' ı genişletin ve ardından **Uluslararası ayarlar**' a tıklayın.
 
-3. İçinde **dil** listesinde, geliştirme ortamında UI metni görüntüleneceği dili seçin.
+3. **Dil** listesinde, Kullanıcı arabirimi metninin geliştirme ortamında görüntüleneceği dili seçin.
 
-    UI metni IDE içinde ayarlama işletim sistemi görüntüleme dilini eşleşmesi için seçin **Microsoft Windows ile aynı**.
+    IDE 'deki Kullanıcı arabirimi metninin işletim sistemi görüntüleme dili ayarıyla eşleşmesini sağlamak için **Microsoft Windows Ile aynı**' ı seçin.
 
-   Devenv komut, kullanıcı Arabiriminde kullanılan dilini ayarlamak amacıyla da kullanabilirsiniz. Daha fazla bilgi için [/LCID (devenv.exe)](../ide/reference/lcid-devenv-exe.md).
+   UI için kullanılan dili ayarlamak için devenv komutunu da kullanabilirsiniz. Daha fazla bilgi için bkz. [/LCID (devenv.exe)](../ide/reference/lcid-devenv-exe.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Uluslararası Ayarlar, Ortam, Seçenekler İletişim Kutusu](../ide/reference/international-settings-environment-options-dialog-box.md)

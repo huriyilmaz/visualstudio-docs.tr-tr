@@ -16,13 +16,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 850e9314e4cccfa09903638dab91eaca7334cee5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663429"
 ---
-# <a name="how-to-configure-workflow-project-properties-legacy"></a>Nasıl yapılır: Iş akışı proje özelliklerini yapılandırma (eski)
+# <a name="how-to-configure-workflow-project-properties-legacy"></a>Nasıl Yapılır: İş Akışı Proje Özelliklerini Yapılandırma (Eski)
 İş akışı projeleriyle ilişkili özellikleri görüntülemek veya değiştirmek için bu adımları izleyin.
 
 ### <a name="to-view-or-modify-workflow-project-properties"></a>İş akışı proje özelliklerini görüntülemek veya değiştirmek için

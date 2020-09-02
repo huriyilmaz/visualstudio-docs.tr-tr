@@ -10,26 +10,26 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e0ddfda1e46dc1c5918a4ee1095f39db027bd3fe
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63431592"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64812191"
 ---
 # <a name="using-performance-rules-to-analyze-data"></a>Verileri Analiz Etmek için Performans Kurallarını Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Performans uyarılarını [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] profil oluşturma araçları, program yürütme yavaşlatabilir profili oluşturulmuş bir uygulamada sorunları gösterir. Uyarı toplama metotlarını daha kullanışlı verileri toplamak için değiştirmeniz gerekebilir de belirtebilir. Performans uyarıları, bir profil oluşturma oturumu otomatik olarak oluşturulur. Uyarı görünür **hata listesi** bir profil oluşturma veri dosyasını Visual Studio'da açıldığında penceresi. Gelen **hata listesi** penceresi, sorunun kaynak kodunu bulabilirsiniz ve sorunun nasıl giderileceği hakkındaki bilgiler gibi hata hakkında ayrıntılı bilgileri görüntüleyebilirsiniz. Ayrıca, ilgilendiğiniz değil uyarıları devre dışı bırakabilirsiniz.  
+Profil Oluşturma Araçları performans uyarıları, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] programın yürütülmesini yavaşlatabilecek, profili oluşturulmuş bir uygulamadaki sorunları gösterir. Uyarılar Ayrıca, daha yararlı veriler toplamak için koleksiyon yöntemlerini değiştirmeniz gerekebilecek anlamına da gelebilir. Performans uyarıları, profil oluşturma oturumunda otomatik olarak oluşturulur. Visual Studio 'da bir profil oluşturma veri dosyası açıldığında uyarılar **hata listesi** penceresinde görüntülenir. **Hata listesi** penceresinden, sorunun kaynak kodunu bulabilir ve hata hakkında ayrıntılı bilgileri (örneğin, sorunun nasıl çözüleceği hakkında bilgi) görüntüleyebilirsiniz. İlgilendiğiniz uyarıları da devre dışı bırakabilirsiniz.  
   
 > [!NOTE]
-> Profiler performans uyarıları programın yürütülmesi dinamik analiz tarafından oluşturulur ve Kod Analizi uyarılarını bağımsızdır. Kod Analizi statik kaynak kodu Analizine göre yönetilen kod için performans uyarıları da oluşturabilirsiniz. Daha fazla bilgi için [yönetilen kod kalitesini analiz etme](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md) ve [performans uyarıları](../code-quality/performance-warnings.md).  
+> Profil Oluşturucu performans uyarıları, program yürütmenin dinamik analizi tarafından oluşturulur ve kod analizi uyarılarından bağımsızdır. Kod Analizi, kaynak kodun statik analizine dayalı olarak yönetilen kod için de performans uyarıları oluşturabilir. Daha fazla bilgi için bkz. [yönetilen kod kalitesi](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md) ve [performans uyarılarını](../code-quality/performance-warnings.md)çözümleme.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Performans Uyarılarını Görüntüleme](../profiling/how-to-view-performance-warnings.md)  
- Nasıl açılacağı hakkında bilgi sağlar **hata listesi** penceresi profil oluşturucu performans uyarıları görüntülemek için.  
+ [Nasıl yapılır: performans uyarılarını görüntüleme](../profiling/how-to-view-performance-warnings.md)  
+ Profil Oluşturucu performans uyarılarını görüntülemek için **hata listesi** penceresinin nasıl açılacağı hakkında bilgi sağlar.  
   
- [Nasıl yapılır: Performans Kurallarını Yapılandırma](../profiling/how-to-configure-performance-rules.md)  
- Tek Performans uyarılarını açma veya kapatma hakkında bilgi sağlar.  
+ [Nasıl yapılır: performans kurallarını yapılandırma](../profiling/how-to-configure-performance-rules.md)  
+ Ayrı performans uyarılarını açma veya kapatma hakkında bilgi sağlar.  
   
- [Performans Kuralları Başvurusu](../profiling/performance-rules-reference.md)  
- Performans uyarıları profiler hakkında ayrıntılı bilgiler sağlar
+ [Performans kuralları başvurusu](../profiling/performance-rules-reference.md)  
+ Profil Oluşturucu performans uyarıları hakkında ayrıntılı bilgi sağlar

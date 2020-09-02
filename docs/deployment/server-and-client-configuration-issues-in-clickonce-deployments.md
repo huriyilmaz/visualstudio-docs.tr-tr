@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4ec07e71e57c0b3875d690773b7ff2618269b8f4
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88250011"
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce dağıtımlarında sunucu ve istemci yapılandırma sorunları
@@ -94,7 +94,7 @@ Windows Server 'da Internet Information Services (IIS) kullanıyorsanız ve dağ
 ## <a name="ftp-protocol-not-supported-for-installing-applications"></a>FTP protokolü, uygulamaları yüklemek için desteklenmez
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] herhangi bir HTTP 1,1 Web sunucusundan veya dosya sunucusundan uygulama yüklemeyi destekler. FTP, Dosya Aktarım Protokolü, uygulamaları yüklemek için desteklenmez. FTP 'yi yalnızca uygulamaları yayımlamak için kullanabilirsiniz. Aşağıdaki tabloda bu farklılıklar özetlenmektedir:
 
-| URL türü | Açıklama |
+| URL türü | Description |
 |----------| - |
 | ftp:// | [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Bu protokolü kullanarak bir uygulamayı yayımlayabilirsiniz. |
 | http:// | [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Bu protokolü kullanarak bir uygulamayı yükleyebilirsiniz. |

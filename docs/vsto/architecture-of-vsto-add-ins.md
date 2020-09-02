@@ -17,98 +17,98 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 401ce9b8421cd636fc72c59dcd6641ff4e05d968
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440342"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64814524"
 ---
 # <a name="architecture-of-vsto-add-ins"></a>VSTO Eklentileri Mimarisi
-  Visual Studio'da Office geliştirme araçları kullanılarak oluşturulan VSTO eklentileri kararlılık ve güvenlik sağlayan mimari özelliklere sahiptir ve bunları Microsoft Office ile yakından çalışmaya etkinleştirin. Bu konu, VSTO eklentileri şu yönlerini açıklar:
+  Visual Studio 'da Office geliştirici araçları kullanılarak oluşturulan VSTO eklentileri, kararlılığı ve güvenliği vurgulayarak ve Microsoft Office yakından çalışmasını sağlayan mimari özelliklere sahiptir. Bu konuda, VSTO eklentilerinin aşağıdaki yönleri açıklanmaktadır:
 
-- [VSTO eklentileri anlama](#UnderstandingAddIns)
+- [VSTO Eklentilerini anlama](#UnderstandingAddIns)
 
-- [VSTO eklentileri bileşenleri](#AddinComponents)
+- [VSTO eklentilerinin bileşenleri](#AddinComponents)
 
-- [VSTO eklentileri Microsoft Office uygulamaları ile nasıl çalışır?](#HowAddinsWork)
+- [VSTO eklentileri Microsoft Office uygulamalarla nasıl çalışır?](#HowAddinsWork)
 
   [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]
 
-  VSTO eklentileri oluşturma hakkında genel bilgi için bkz: [Office çözümleri geliştirmesine genel bakış &#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md) ve [VSTO eklentileri programlama başlama](../vsto/getting-started-programming-vsto-add-ins.md).
+  VSTO eklentileri oluşturma hakkında genel bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;vsto&#41;](../vsto/office-solutions-development-overview-vsto.md) ve [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md).
 
-## <a name="UnderstandingAddIns"></a> VSTO eklentileri anlama
- Bir VSTO eklenti oluşturmak için Visual Studio Office geliştirici araçları kullandığınızda, Microsoft Office uygulama tarafından yüklenen bir yönetilen kod derlemesi oluşturun. Derleme yüklendikten sonra VSTO Eklentisi (örneğin, bir kullanıcı bir menü öğesini tıkladığında) uygulamasında başlatılan olaylara yanıt verebilirsiniz. VSTO eklentisi ayrıca uygulamasını otomatikleştirmek ve genişletmek için nesne modeli çağırabilir ve sınıflarda birini kullanabilirsiniz [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)].
+## <a name="understand-vsto-add-ins"></a><a name="UnderstandingAddIns"></a> VSTO Eklentilerini anlama
+ VSTO eklentisi oluşturmak için Visual Studio 'da Office geliştirici araçları 'nı kullandığınızda, bir Microsoft Office uygulaması tarafından yüklenen bir yönetilen kod derlemesi oluşturursunuz. Bütünleştirilmiş kod yüklendikten sonra, VSTO eklentisi uygulamada oluşturulan olaylara yanıt verebilir (örneğin, bir Kullanıcı bir menü öğesini tıkladığında). VSTO eklentisi Ayrıca, uygulamayı otomatikleştirebilmek ve genişletmek için nesne modelini çağırabilir ve içindeki sınıflardan herhangi birini kullanabilir [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] .
 
- Derleme uygulamasının birincil birlikte çalışma derlemesi uygulamanın COM bileşenleriyle iletişim kurar. Daha fazla bilgi için [Office birincil birlikte çalışma derlemelerini](../vsto/office-primary-interop-assemblies.md) ve [Office çözümleri geliştirmesine genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
+ Derleme, uygulamanın COM bileşenleriyle uygulamanın birincil birlikte çalışma derlemesi aracılığıyla iletişim kurar. Daha fazla bilgi için bkz. [Office birincil birlikte çalışma derlemeleri](../vsto/office-primary-interop-assemblies.md) ve [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
 
- Her VSTO eklentisi birden çok VSTO eklentileri için bir uygulama yüklediyseniz, farklı uygulama etki alanında yüklenir. Başka bir deyişle, bir VSTO hatalı davranan eklentisi diğer VSTO başarısız olmasına eklentileri sebep olamaz. Ayrıca uygulama kapatıldığında tüm VSTO eklentisi derlemeleri bellekten olduğundan emin olun yardımcı olur. Uygulama etki alanları hakkında daha fazla bilgi için bkz. [uygulama etki alanları](/dotnet/framework/app-domains/application-domains).
+ Bir uygulama için birden çok VSTO eklentisi yüklüyse, her VSTO eklentisi farklı bir uygulama etki alanına yüklenir. Bu, yanlış şekilde davranan bir VSTO eklentisinin diğer VSTO eklentilerinin başarısız olmasına neden olamayacağı anlamına gelir. Ayrıca, uygulama kapatıldığında tüm VSTO eklenti derlemelerinin bellekten bellekten kaldırıldığından emin olmaya de yardımcı olur. Uygulama etki alanları hakkında daha fazla bilgi için bkz. [uygulama etki alanları](/dotnet/framework/app-domains/application-domains).
 
 > [!NOTE]
-> Visual Studio Office geliştirici araçları kullanarak oluşturduğunuz VSTO Add-Ins yalnızca bir son kullanıcı tarafından konak Microsoft Office uygulaması başlatıldığında kullanılmak üzere tasarlanmıştır. Uygulama, program aracılığıyla (örneğin, Otomasyon kullanılarak) başlatılır, VSTO eklentisi beklendiği gibi çalışmayabilir.
+> Visual Studio 'da Office geliştirici araçlarını kullanarak oluşturduğunuz VSTO eklentileri yalnızca, ana bilgisayar Microsoft Office uygulaması son kullanıcı tarafından başlatıldığında kullanılmak üzere tasarlanmıştır. Uygulama programlı olarak başlatılırsa (örneğin, Otomasyon kullanılarak), VSTO eklentisi beklendiği gibi çalışmayabilir.
 
-## <a name="AddinComponents"></a> VSTO eklentileri bileşenleri
- VSTO eklenti derlemesinin ana bileşeni olmakla birlikte, Microsoft Office uygulamaları nasıl keşfetmek ve VSTO eklentileri yük önemli bir rol oynar çeşitli bileşenler vardır.
+## <a name="components-of-vsto-add-ins"></a><a name="AddinComponents"></a> VSTO eklentilerinin bileşenleri
+ VSTO eklenti derlemesi ana bileşen olsa da, Microsoft Office uygulamalarının VSTO Eklentilerini bulmasına ve yüklemesine ilişkin önemli bir rol oynayan birçok farklı bileşen vardır.
 
 ### <a name="registry-entries"></a>Kayıt defteri girdileri
- Microsoft Office uygulamaları, VSTO eklentileri için kayıt defteri girdileri kümesini bakarak keşfedin. VSTO eklentileri tarafından kullanılan kayıt defteri girdileri tam bir listesi için bkz. [VSTO eklentileri için kayıt defteri girdileri](../vsto/registry-entries-for-vsto-add-ins.md).
+ Microsoft Office uygulamalar, bir kayıt defteri girişi kümesini arayarak VSTO Eklentilerini bulur. VSTO eklentileri tarafından kullanılan kayıt defteri girdilerinin tam listesi için bkz. [VSTO eklentileri Için kayıt defteri girişleri](../vsto/registry-entries-for-vsto-add-ins.md).
 
- Çözümünüzü oluşturduğunuzda, Visual Studio hata ayıklama ve VSTO eklenti çalıştırmak için tüm gerekli kayıt defteri girdilerini geliştirme bilgisayarında oluşturur. Daha fazla bilgi için [yapı Office çözümleri](../vsto/building-office-solutions.md).
+ Çözümünüzü oluştururken, Visual Studio, VSTO eklentilerinizi hata ayıklamanıza ve çalıştırabilmeniz için geliştirme bilgisayarında gerekli tüm kayıt defteri girişlerini oluşturur. Daha fazla bilgi için bkz. [Office çözümleri oluşturma](../vsto/building-office-solutions.md).
 
- Çözümünüzü dağıtmak için ClickOnce kullanırsanız, Kurulum programı yayımlama işlemi tarafından otomatik olarak oluşturulan son kullanıcı bilgisayarda kayıt defteri anahtarlarını oluşturur. Daha fazla bilgi için [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md).
+ Çözümünüzü dağıtmak için ClickOnce kullanırsanız, yayımlama işlemi tarafından oluşturulan Kurulum programı, son kullanıcı bilgisayarında kayıt defteri anahtarlarını otomatik olarak oluşturur. Daha fazla bilgi için bkz. [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md).
 
-### <a name="deployment-manifest-and-application-manifest"></a>Dağıtım bildirimini ve uygulama bildirimi
- VSTO eklentileri, VSTO eklenti derlemesi en güncel sürümünü yüklemek üzere dağıtım bildirimleri ve uygulama bildirimleri kullanın. Dağıtım noktaları için geçerli bir uygulama bildirimi bildirimi. Uygulama bildirimi, VSTO eklentisi derlemeye işaret eden ve derlemede yürütmek için giriş noktası sınıfını belirtir. Daha fazla bilgi için [uygulama ve dağıtım bildirimlerini Office çözümlerinde](../vsto/application-and-deployment-manifests-in-office-solutions.md).
+### <a name="deployment-manifest-and-application-manifest"></a>Dağıtım bildirimi ve uygulama bildirimi
+ VSTO eklentileri, VSTO eklenti derlemesinin en güncel sürümünü tanımlamak ve yüklemek için dağıtım bildirimlerini ve uygulama bildirimlerini kullanır. Dağıtım bildirimi geçerli uygulama bildirimini işaret eder. Uygulama bildirimi, VSTO eklenti derlemesini işaret eder ve derlemede yürütülecek giriş noktası sınıfını belirtir. Daha fazla bilgi için bkz. [Office çözümlerinde uygulama ve dağıtım bildirimleri](../vsto/application-and-deployment-manifests-in-office-solutions.md).
 
 ### <a name="visual-studio-tools-for-office-runtime"></a>Office çalışma zamanı için Visual Studio Araçları
- Visual Studio'da Office geliştirme araçları kullanılarak oluşturulan VSTO Add-Ins çalıştırmak için son kullanıcı bilgisayarlarında yüklü olmalıdır [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] yüklü. Çalışma zamanı yönetilmeyen bileşenler ve yönetilen bir derleme kümesi içerir. Yönetilmeyen bileşenler, VSTO eklenti derlemesi yüklenemiyor. Yönetilen derlemeler, ana bilgisayar uygulamasını otomatikleştirmek ve genişletmek için VSTO eklentisi kodunuzun kullandığı nesne modeli sağlar.
+ Visual Studio 'da Office geliştirici araçları kullanılarak oluşturulan VSTO Eklentilerini çalıştırmak için son kullanıcı bilgisayarlarının yüklü olması gerekir [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] . Çalışma zamanı, yönetilmeyen bileşenleri ve yönetilen derlemelerin bir kümesini içerir. Yönetilmeyen bileşenler VSTO eklenti derlemesini yükler. Yönetilen derlemeler, VSTO eklenti kodunuzun konak uygulamayı otomatikleştirmek ve genişletmek için kullandığı nesne modelini sağlar.
 
- Daha fazla bilgi için [Office çalışma zamanına genel bakış için Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
+ Daha fazla bilgi için bkz. [Office çalışma zamanına genel bakış Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
 
-## <a name="HowAddinsWork"></a> VSTO eklentileri Microsoft Office uygulamaları ile nasıl çalışır?
- Bir kullanıcı bir Microsoft Office uygulaması başlatıldığında uygulama bulmak ve VSTO eklentisi derleme en güncel sürümünü yüklemek için dağıtım bildirimini ve uygulama bildirimini kullanır. Aşağıdaki çizimde bu VSTO eklentileri temel mimarisini gösterir.
+## <a name="how-vsto-add-ins-work-with-microsoft-office-applications"></a><a name="HowAddinsWork"></a> VSTO eklentileri Microsoft Office uygulamalarla nasıl çalışır?
+ Bir Kullanıcı bir Microsoft Office uygulaması başlattığında, uygulama, VSTO eklenti derlemesinin en güncel sürümünü bulup yüklemek için dağıtım bildirimini ve uygulama bildirimini kullanır. Aşağıdaki çizimde, bu VSTO eklentilerinin temel mimarisi gösterilmektedir.
 
- ![2007 office eklenti mimarisi](../vsto/media/office07addin.png "2007 Office eklenti mimarisi")
+ ![2007 Office eklentisi mimarisi](../vsto/media/office07addin.png "2007 Office eklentisi mimarisi")
 
 > [!NOTE]
-> Office çözümlerinde hedef [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], konak uygulama tarafından nesne modeline çağrı PIA içine doğrudan çağırmak yerine çözüm derlemesindeki gömülü PIA tür bilgileri kullanılarak çözümler. Daha fazla bilgi için [tasarım ve Office çözümleri oluşturma](../vsto/designing-and-creating-office-solutions.md).
+> Ya da ' i hedefleyen Office çözümlerinde çözüm [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] DERLEMESINE eklenen PIA tür bilgilerini kullanarak doğrudan PIA ' a çağırmak yerine, çözümler ana bilgisayar uygulamasının nesne modeline çağrı yapılır. Daha fazla bilgi için bkz. [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md).
 
 ### <a name="loading-process"></a>Yükleme işlemi
- Bir kullanıcı bir uygulama başlattığında aşağıdaki adımlar oluşur:
+ Bir Kullanıcı uygulamayı başlattığında aşağıdaki adımlar oluşur:
 
-1. Uygulama, Visual Studio'da Office geliştirme araçları kullanılarak oluşturulmuş VSTO Add-Ins tanımlayan girişleri için kayıt defterini denetler.
+1. Uygulama, Visual Studio 'da Office geliştirici araçları kullanılarak oluşturulan VSTO Eklentilerini tanımlayan girişler için kayıt defterini denetler.
 
-2. Uygulama bu kayıt defteri girdileri bulursa, VSTOLoader.dll yükleyen VSTOEE.dll, uygulamayı yükler. Yönetilmeyen bunlar yükleyici bileşenleri Office çalışma zamanı için Visual Studio 2010 Araçları DLL'ler. Daha fazla bilgi için [Office çalışma zamanına genel bakış için Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
+2. Uygulama bu kayıt defteri girdilerini bulursa, uygulama VSTOLoader.dll yükleyen VSTOEE.dll yükler. Bunlar, Office çalışma zamanı için Visual Studio 2010 araçları için yükleyici bileşenleri olan yönetilmeyen DLL 'Lerdir. Daha fazla bilgi için bkz. [Office çalışma zamanına genel bakış Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
 
-3. *VSTOLoader.dll* yükler [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] ve yönetilen kısmına başlar [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)].
+3. *VSTOLoader.dll* , [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] ' nin Yönetilen bölümünü yükler ve başlatır [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] .
 
-4. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Bildirim güncelleştirmeleri denetler ve en son uygulama ve dağıtım bildirimlerini indirir.
+4. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Bildirim güncelleştirmelerini denetler ve en son uygulama ve dağıtım bildirimlerini indirir.
 
-5. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Bir dizi güvenlik denetimi gerçekleştirir. Daha fazla bilgi için [güvenli Office çözümleri](../vsto/securing-office-solutions.md).
+5. , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Bir dizi güvenlik denetimi gerçekleştirir. Daha fazla bilgi için bkz. [güvenli Office çözümleri](../vsto/securing-office-solutions.md).
 
-6. VSTO eklenti çalıştırmak için güvenilir olup olmadığını [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] derleme güncelleştirmeleri denetlemek için dağıtım bildirimini ve uygulama bildirimini kullanır. Derlemenin yeni bir sürüm varsa, çalışma zamanı derlemesi için yeni sürümü indirmeleri [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] istemci bilgisayarda önbelleği. Daha fazla bilgi için [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md).
+6. VSTO eklentisinin çalışması için güveniliyorsa, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] derleme güncelleştirmelerini denetlemek için dağıtım bildirimini ve uygulama bildirimini kullanır. Derlemenin yeni bir sürümü kullanılabiliyorsa, çalışma zamanı derlemenin yeni sürümünü [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] istemci bilgisayardaki önbelleğe indirir. Daha fazla bilgi için bkz. [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md).
 
-7. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] VSTO eklentisi derlemesini yüklemek yeni bir uygulama etki alanı oluşturur.
+7. , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] VSTO eklenti derlemesinin yükleneceği yeni bir uygulama etki alanı oluşturur.
 
-8. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] VSTO eklentisi derlemeyi uygulama etki alanına yükler.
+8. , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] VSTO eklenti derlemesini uygulama etki alanına yükler.
 
-9. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Çağrıları <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> VSTO siz kıldıysanız eklenti, yöntemi.
+9. , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> Öğesini geçersiz KıLDıYSANıZ VSTO eklentiinizdeki yöntemi çağırır.
 
-     İsteğe bağlı olarak, diğer Microsoft Office çözümleri için VSTO eklenti, bir nesneyi göstermek için bu yöntemi geçersiz kılabilirsiniz. Daha fazla bilgi için [çağrı kod VSTO eklentileri diğer Office Çözümlerinden](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md).
+     Bu yöntemi, VSTO eklentiinizdeki bir nesneyi diğer Microsoft Office çözümlerine göstermek için isteğe bağlı olarak geçersiz kılabilirsiniz. Daha fazla bilgi için bkz. [VSTO eklentilerindeki kodu diğer Office Çözümlerinden çağırma](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md).
 
-10. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Çağrıları <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> VSTO siz kıldıysanız eklenti, yöntemi.
+10. , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> Öğesini geçersiz KıLDıYSANıZ VSTO eklentiinizdeki yöntemi çağırır.
 
-     İsteğe bağlı olarak bir Microsoft Office özellik genişletilebilirlik arabirimi uygulayan bir nesne döndürerek genişletmek için bu yöntemi geçersiz kılabilirsiniz. Daha fazla bilgi için [genişletilebilirlik arabirimlerini kullanarak kullanıcı Arabirimi özelleştirme özellikleri](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md).
+     İsteğe bağlı olarak, bir genişletilebilirlik arabirimi uygulayan bir nesne döndürerek bir Microsoft Office özelliğini genişletmek için bu yöntemi geçersiz kılabilirsiniz. Daha fazla bilgi için bkz. [genişletilebilirlik arabirimlerini kullanarak Kullanıcı arabirimi özelliklerini özelleştirme](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md).
 
     > [!NOTE]
-    > [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Ayrı için çağrılar yapar <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> konak uygulama tarafından desteklenen her bir genişletilebilirlik arabirimi için yöntemi. Yapılan ilk çağrı rağmen <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> yöntemi genellikle gerçekleşir çağırmadan önce `ThisAddIn_Startup` yöntemi, VSTO eklenti yapmamalıdır ne zaman hakkında varsayımlar <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> yöntemin çağrılacağı ya da kaç kez çağrılır.
+    > , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> Ana bilgisayar uygulaması tarafından desteklenen her bir genişletilebilirlik arabirimi için yöntemine ayrı çağrılar yapar. Yönteme yapılan ilk çağrı <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> genellikle yönteme çağrıdan önce gerçekleşse de `ThisAddIn_Startup` , VSTO eklentisi metodun ne zaman <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> çağrılacağını veya kaç kez çağrılacağını hiçbir varsayımda içermemelidir.
 
-11. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Çağrıları `ThisAddIn_Startup` VSTO eklenti yöntemi. Bu yöntem için varsayılan olay işleyicisini olan <xref:Microsoft.Office.Tools.AddInBase.Startup> olay. Daha fazla bilgi için [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
+11. , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] `ThisAddIn_Startup` VSTO eklentiinizdeki yöntemini çağırır. Bu yöntem, olay için varsayılan olay işleyicisidir <xref:Microsoft.Office.Tools.AddInBase.Startup> . Daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio'da Office çözümleri mimarisi](../vsto/architecture-of-office-solutions-in-visual-studio.md)
-- [Belge düzeyi özelleştirmeler mimarisi](../vsto/architecture-of-document-level-customizations.md)
+- [Visual Studio 'da Office çözümlerinin mimarisi](../vsto/architecture-of-office-solutions-in-visual-studio.md)
+- [Belge düzeyi özelleştirmelerinin mimarisi](../vsto/architecture-of-document-level-customizations.md)
 - [Office çalışma zamanına genel bakış için Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md)
-- [VSTO eklentilerini programlama](../vsto/programming-vsto-add-ins.md)
+- [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)
 - [Office çözümleri geliştirme](../vsto/developing-office-solutions.md)
-- [Office çözümleri güvenliğini sağlama](../vsto/securing-office-solutions.md)
+- [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_compilername | Microsoft Docs
+title: 'IDiaSymbol:: get_compilerName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e6276247bb93e7482dda713c95b40a68809c0237
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64815008"
 ---
-# <a name="idiasymbolgetcompilername"></a>IDiaSymbol::get_compilerName
+# <a name="idiasymbolget_compilername"></a>IDiaSymbol::get_compilerName
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Derleyicinin oluşturmak için kullanılan adı döndürür [derlenecek](../../debugger/debug-interface-access/compiland.md).  
+[Compiland](../../debugger/debug-interface-access/compiland.md)oluşturmak için kullanılan derleyicinin adını döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_compilerName (  
@@ -35,22 +35,22 @@ HRESULT get_compilerName (
   
 #### <a name="parameters"></a>Parametreler  
  `pName`  
- Derleyici Unicode adını içeren bir BSTR işaretçisi.  
+ Derleyicinin Unicode adını içerecek bir BSTR 'ye yönelik işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|Gereksinim|Açıklama|  
+|Gereksinim|Description|  
 |-----------------|-----------------|  
-|Üst bilgi:|dia2.h|  
-|Sürüm:|DIA SDK v8.0|  
+|Üst bilgi|dia2. h|  
+|Sürüm:|DIA SDK v 8.0|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

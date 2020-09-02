@@ -13,14 +13,14 @@ author: steved0x
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d775c79cc7abdf6a66b1174ae625ca468f0764fc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663458"
 ---
-# <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısı bir iş akışına açıklama ekleme
-Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak için [!INCLUDE[net_v45](../includes/net-v45-md.md)] geliştiricinin tasarımcı içindeki aşağıdaki öğe türlerine ek açıklamalar eklemesine izin verir:
+# <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>Nasıl yapılır: İş Akışı Tasarımcısında bir iş akışına açıklama ekleme
+Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak için, [!INCLUDE[net_v45](../includes/net-v45-md.md)] geliştiricinin tasarımcıda aşağıdaki öğe türlerine ek açıklamalar eklemesine izin verir:
 
 - <xref:System.Activities.Activity>
 
@@ -28,7 +28,7 @@ Daha büyük, daha karmaşık iş akışları oluşturmayı kolaylaştırmak iç
 
 - <xref:System.Activities.Statements.Transition>
 
-- @No__t_0 türetilen sınıflar
+- Türetilmiş sınıflar <xref:System.Activities.Statements.FlowNode>
 
 - <xref:System.Activities.Variable>
 

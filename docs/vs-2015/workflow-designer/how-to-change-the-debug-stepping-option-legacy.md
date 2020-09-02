@@ -16,14 +16,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5126b3dc45d33471080ae154e06f4a327e21fef7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663444"
 ---
-# <a name="how-to-change-the-debug-stepping-option-legacy"></a>Nasıl yapılır: hata ayıklama adımlamayı değiştirme seçeneği (eski)
-Bu konuda, eşzamanlı eylemleri olan eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[wf](../includes/wf-md.md)] uygulamalar için hata ayıklama adım seçeneğinin nasıl değiştirileceği açıklanmaktadır. @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
+# <a name="how-to-change-the-debug-stepping-option-legacy"></a>Nasıl Yapılır: Hata Ayıklama Adımlama Seçeneğini Değiştirme (Eski)
+Bu konuda [!INCLUDE[wf](../includes/wf-md.md)] , eski ' de bulunan ve eşzamanlı eylemleri olan uygulamalar için hata ayıklama adımlaması seçeneğinin nasıl değiştirileceği açıklanmaktadır [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Ya da ' i hedefliyorsanız, eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  **ParallelActivity** veya **ConditionedActivityGroup**gibi eşzamanlı yürütmeye sahip eski etkinliklerden hata ayıklaması yaparken, kodunuzda ilerlemek için iki seçenekten birini kullanabilirsiniz.
 
@@ -33,11 +33,11 @@ Bu konuda, eşzamanlı eylemleri olan eski [!INCLUDE[wfd1](../includes/wfd1-md.m
 
 #### <a name="to-change-the-debug-stepping-option"></a>Hata ayıklama adımlaması seçeneğini değiştirmek için
 
-1. Visual Studio 'Yu başlatın.
+1. Visual Studio’yu çalıştırın.
 
-2. Mevcut bir eski iş akışı projesini açın veya eşzamanlı etkinlikleri kullanan ve [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] ya da [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedefleyen yeni bir proje oluşturun.
+2. Mevcut bir eski iş akışı projesini açın veya eşzamanlı etkinlikleri kullanan ve ya da ' i hedefleyen yeni bir proje oluşturun [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
-3. Eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] **Iş akışı** menüsünde, **Hata Ayıkla**' nın üzerine gelin ve ardından **atlama seçenekleri**' ne gelin.
+3. Eski içindeki **Iş akışı** menüsünde [!INCLUDE[wfd2](../includes/wfd2-md.md)] **Hata Ayıkla**' nın üzerine gelin ve ardından **atlama seçenekleri**' ne gelin.
 
 4. **Örnek** ya da **dal**seçin.
 
