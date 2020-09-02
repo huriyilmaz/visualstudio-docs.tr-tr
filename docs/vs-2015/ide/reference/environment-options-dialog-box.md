@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 5271388a5b1ce4508db7aea0a28e2b5a70b51348
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646241"
 ---
 # <a name="environment-options-dialog-box"></a>Ortam Seçenekleri İletişim Kutusu
@@ -47,4 +47,4 @@ Tümleşik geliştirme ortamının (IDE) belirli öğelerinin nasıl görüntül
 |Sistem kaynak düzenleyicisini değiştirerek ve Internet Explorer seçeneklerini yapılandırarak varsayılan Giriş ve Arama sayfalarınızı değiştirin.|[Web Tarayıcısı, Ortam, Seçenekler İletişim Kutusu](../../ide/reference/web-browser-environment-options-dialog-box.md)|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Seçenekler İletişim Kutusu](../../ide/reference/options-dialog-box-visual-studio.md)
+ [Seçenekler Iletişim kutusu](../../ide/reference/options-dialog-box-visual-studio.md)

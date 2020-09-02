@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f1a0d10dabdace7ef7ab3805a59b892548cf6556
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645528"
 ---
 # <a name="how-to-add-class-diagrams-to-projects-class-designer"></a>Nasıl Yapılır: Projelere Sınıf Diyagramları Ekleme (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sınıfları ve diğer türleri tasarlamak, düzenlemek ve yeniden düzenlemek için Visual C# .net 'e, Visual Basic .net 'e veya C++ projenize bir sınıf diyagramı ekleyin. Projedeki kodun farklı kısımlarını görselleştirmek için projeye birden çok sınıf diyagramı ekleyin.
+Sınıfları ve diğer türleri tasarlamak, düzenlemek ve yeniden düzenlemek için Visual C# .NET, Visual Basic .NET veya C++ projenize bir sınıf diyagramı ekleyin. Projedeki kodun farklı kısımlarını görselleştirmek için projeye birden çok sınıf diyagramı ekleyin.
 
  Birden çok uygulama arasında kod paylaşan projelerden sınıf diyagramları oluşturamazsınız. UML sınıf diyagramları oluşturmak için bkz. [UML modelleme projeleri ve diyagramları oluşturma](../modeling/create-uml-modeling-projects-and-diagrams.md).
 
@@ -30,7 +30,7 @@ Sınıfları ve diğer türleri tasarlamak, düzenlemek ve yeniden düzenlemek i
 
 1. Çözüm Gezgini'nde proje adına sağ tıklayın. Sonra **Yeni öğe Ekle** veya **Ekle**, **Yeni öğe**seçeneğini belirleyin.
 
-2. Şablon listesinden **sınıf diyagramını**seçin. Görsel C++ projeler için **Şablonlar**' ın altında, sonra bu şablonu bulmak için **yardımcı program** ' ın altında ' ya bakın
+2. Şablon listesinden **sınıf diyagramını**seçin. Visual C++ projeler için **Şablonlar**' ın altında, sonra bu şablonu bulmak Için **yardımcı program** ' ın altında.
 
      Sınıf diyagramı Sınıf Tasarımcısı'nda açılır ve proje hiyerarşisindeki Çözüm Gezgini'nde .cd uzantılı bir dosya olarak görünür. Şekilleri ve çizgileri diyagrama sürüklemek için Sınıf Tasarımcısı araç kutusunu kullanın.
 
@@ -40,7 +40,7 @@ Sınıfları ve diğer türleri tasarlamak, düzenlemek ve yeniden düzenlemek i
 
 1. Çözüm Gezgini ' de sınıf dosyası bağlam menüsünü açın, sonra **sınıf diyagramını görüntüle**' yi seçin.
 
-     veya
+     -veya-
 
      **Sınıf görünümü**, ad alanı veya tür bağlam menüsünü açın, sonra **sınıf diyagramını görüntüle**' yi seçin.
 
@@ -51,4 +51,4 @@ Sınıfları ve diğer türleri tasarlamak, düzenlemek ve yeniden düzenlemek i
      Otomatik olarak doldurulan bir Sınıf Diyagramı oluşturulur.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Nasıl yapılır: Sınıf Tasarımcısı nasıl yapılır: kullanarak tür oluşturma](../ide/how-to-create-types-by-using-class-designer.md) [(sınıf Tasarımcısı)](../ide/how-to-view-existing-types-class-designer.md) [sınıfları ve türleri (sınıf Tasarımcısı) tasarlama](../ide/designing-classes-and-types-class-designer.md) [türleri ve ilişkiler (sınıf Tasarımcısı)](../ide/viewing-types-and-relationships-class-designer.md) , [sınıf diyagramları ile çalışma ( Sınıf Tasarımcısı)](../ide/working-with-class-diagrams-class-designer.md)
+ [Nasıl yapılır: Sınıf Tasarımcısı nasıl yapılır: kullanarak tür oluşturma](../ide/how-to-create-types-by-using-class-designer.md) [(sınıf Tasarımcısı)](../ide/how-to-view-existing-types-class-designer.md) [sınıfları ve türleri tasarlama (sınıf Tasarımcısı)](../ide/designing-classes-and-types-class-designer.md) [sınıf diyagramları ile çalışma](../ide/working-with-class-diagrams-class-designer.md) ( [Sınıf Tasarımcısı)](../ide/viewing-types-and-relationships-class-designer.md) (sınıf Tasarımcısı)

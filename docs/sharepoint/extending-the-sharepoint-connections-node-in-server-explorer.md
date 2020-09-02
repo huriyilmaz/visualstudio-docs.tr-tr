@@ -1,5 +1,5 @@
 ---
-title: Sunucu Gezgininde SharePoint bağlantıları düğümünü genişletme | Microsoft Docs
+title: Sunucu Gezgini 'de SharePoint bağlantıları düğümünü genişletme | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,62 +15,62 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6b1d461419497a0a45f50f12589cf3ac978a7666
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62967363"
 ---
-# <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>Sunucu Gezgininde SharePoint bağlantıları düğümünü genişletme
-  Visual Studio'da geliştirme bilgisayarında yerel SharePoint sitelerine kullanarak bağlanabilirsiniz **SharePoint bağlantıları** düğümünde **Sunucu Gezgini** penceresi. Bu düğüm, birçok yerel SharePoint sitelerine bileşenlerinin bir hiyerarşik ağaç görünümünde görüntüler. Örneğin, yerel sitelerinde listeler, belge kitaplıkları ve içerik türlerini görüntüleyebilirsiniz. Kullanma hakkında daha fazla bilgi için **Sunucu Gezgini** yerel SharePoint sitelerine bağlanmak için bkz: [Sunucu Gezgini kullanarak SharePoint Gözat bağlantıları](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md).
+# <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>Sunucu Gezgini SharePoint bağlantıları düğümünü genişletme
+  Visual Studio 'da, **Sunucu Gezgini** penceresindeki **SharePoint bağlantıları** düğümünü kullanarak geliştirme bilgisayarındaki yerel SharePoint sitelerine bağlanabilirsiniz. Bu düğüm, hiyerarşik ağaç görünümünde yerel SharePoint sitelerinin birçok bileşenini görüntüler. Örneğin, listeleri, belge kitaplıklarını ve içerik türlerini yerel sitelerde görüntüleyebilirsiniz. Yerel SharePoint sitelerine bağlanmak için **Sunucu Gezgini** kullanma hakkında daha fazla bilgi için bkz. [Sunucu Gezgini kullanarak SharePoint bağlantılarına gözatamıyorum](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md).
 
- Genişletebileceğiniz **SharePoint bağlantıları** düğümü var olan düğümleri için uzantıları oluşturarak veya özel düğüm türü oluşturma ve düğüm hiyerarşisine ekleme.
+ Mevcut düğümler için Uzantılar oluşturarak veya özel bir düğüm türü oluşturarak ve bunları düğümlerin hiyerarşisine ekleyerek **SharePoint bağlantıları** düğümünü genişletebilirsiniz.
 
-## <a name="tasks-for-extending-the-sharepoint-connections-node"></a>SharePoint bağlantıları düğümünü genişletme ile ilgili görevler
- Varolan bir düğümü genişletmek için uygulayan bir Visual Studio uzantısı oluşturma <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> arabirimi. Bir düğümünü genişlettiğinizde, düğümü kendi kısayol menüsü öğelerini veya özel özellikler gibi işlevler ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Sunucu Gezgininde SharePoint düğümünü genişletme](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).
+## <a name="tasks-for-extending-the-sharepoint-connections-node"></a>SharePoint bağlantıları düğümünü genişletme görevleri
+ Var olan bir düğümü genişletmek için, arabirimini uygulayan bir Visual Studio uzantısı oluşturun <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> . Bir düğümü genişlettiğinizde, düğüme kendi kısayol menü öğeleriniz veya özel özellikler gibi işlevler ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint düğümünü Sunucu Gezgini genişletme](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).
 
- Bir özel düğüm türü oluşturmak için uygulayan bir Visual Studio uzantısı oluşturma <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> arabirimi. Gösterilmez SharePoint siteleri bileşenlerinin görüntülemek istiyorsanız özel bir düğüm oluşturmak **Sunucu Gezgini** varsayılan olarak. Örneğin, **Sunucu Gezgini** bir SharePoint sitesinin varsayılan, ancak Web Bölümü Galerisi'ne ekleyebilirsiniz görüntülemez bunu özel bir düğüm yok. Daha fazla bilgi için [nasıl yapılır: Sunucu Gezginine özel bir SharePoint düğümü ekleme](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md) ve [izlenecek yol: Sunucu gezginini Web bölümlerini görüntülemek üzere genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md).
+ Özel bir düğüm türü oluşturmak için, arabirimini uygulayan bir Visual Studio uzantısı oluşturun <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> . **Sunucu Gezgini** ' de görüntülenmeyen SharePoint sitelerinin bileşenlerini varsayılan olarak göstermek istiyorsanız özel bir düğüm oluşturun. Örneğin **Sunucu Gezgini** , varsayılan olarak SharePoint sitesinin Web Bölümü galerisini görüntülemez, ancak bunu yapan özel bir düğüm ekleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: özel bir SharePoint düğümü ekleme Sunucu Gezgini](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md) ve [izlenecek yol: Sunucu Gezgini Web bölümleri görüntülemek için genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md).
 
-## <a name="add-custom-properties-to-nodes"></a>Düğüm özel özellikler ekleme
- Bir düğümü genişletmek veya bir özel düğüm türü oluşturma, düğüme özel özellikler ekleyebilirsiniz. Özellikleri görünür **özellikleri** düğümü seçildiğinde penceresi.
+## <a name="add-custom-properties-to-nodes"></a>Düğümlere özel özellikler ekleme
+ Bir düğümü genişletmenize veya özel bir düğüm türü oluşturduğunuzda, düğüme özel özellikler ekleyebilirsiniz. Özellikler, düğüm seçildiğinde Özellikler **penceresinde görünür** .
 
- Özel özellikler için bir düğüm eklemek iki tür vardır:
+ Bir düğüme ekleyebileceğiniz iki tür özel özellik vardır:
 
-- Bir SharePoint sitesinden salt okunur veri kümesini görüntüle özellikleri. Veri düğümünü temsil eder SharePoint bileşeni açıklanmaktadır. Bunun nasıl yapılacağını gösteren bir kılavuz için bkz. [izlenecek yol: Sunucu Gezgini, web bölümlerini görüntülemek üzere genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md).
+- SharePoint sitesinden salt bir salt okunurdur veri kümesi görüntüleyen Özellikler. Veriler, düğümün temsil ettiği SharePoint bileşenini açıklar. Bunun nasıl yapılacağını gösteren bir anlatım için bkz. [Izlenecek yol: Sunucu Gezgini Web bölümlerini görüntülemek Için genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md).
 
-- Özel okuma/yazma veri görüntüleme özellikleri. Bunun nasıl yapılacağını gösteren bir kod örneği için bkz. [nasıl yapılır: Sunucu Gezgininde SharePoint düğümünü genişletme](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).
+- Özel okuma/yazma verilerini görüntüleyen Özellikler. Bunun nasıl yapılacağını gösteren bir kod örneği için, bkz. [nasıl yapılır: bir SharePoint düğümünü genişletme Sunucu Gezgini](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).
 
-## <a name="get-data-for-built-in-nodes"></a>Yerleşik düğümleri için veri alma
- Tüm Visual Studio tarafından sağlanan yerleşik düğümleri temsil ettikleri SharePoint bileşeni ile ilgili bazı bilgiler içerir. Örneğin, SharePoint sitesindeki bir listesini temsil eden bir düğüm listesinde, başlık ve URL listesi için varsayılan görünümünün gibi ilgili bazı bilgiler sağlar.
+## <a name="get-data-for-built-in-nodes"></a>Yerleşik düğümler için veri al
+ Visual Studio tarafından sunulan yerleşik düğümlerin hepsi, temsil ettikleri SharePoint bileşeni hakkında bazı verileri içerir. Örneğin, SharePoint sitesindeki bir listeyi temsil eden bir düğüm, liste ve liste için varsayılan görünümün URL 'SI gibi bazı verileri sağlar.
 
- Bu verilere erişmek için veri nesnesinden almak <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> özelliği <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode> ilgilendiğiniz düğümünü temsil eden nesne. Veri nesnesi türü düğüm türüne bağlıdır.
+ Bu verilere erişmek için <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode> ilgilendiğiniz düğümü temsil eden nesnenin özelliğinden bir veri nesnesi alın. Veri nesnesinin türü, düğümün türüne bağlıdır.
 
- Aşağıdaki kod örneği için bir liste düğümünü veri nesnesini almak nasıl gösterir. Daha büyük bir örneğin bağlamında bu örnek için bkz [nasıl yapılır: Sunucu Gezgininde yerleşik bir SharePoint düğümü için veri alma](../sharepoint/how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer.md).
+ Aşağıdaki kod örneği, bir liste düğümü için veri nesnesinin nasıl alınacağını gösterir. Daha büyük bir örnek bağlamında bu örneği görmek için bkz. [nasıl yapılır: yerleşik bir SharePoint düğümü için veri alma Sunucu Gezgini](../sharepoint/how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer.md).
 
  [!code-vb[SPExtensibility.ProjectSystemExtension.General#11](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorerextensionnodeinfo.vb#11)]
  [!code-csharp[SPExtensibility.ProjectSystemExtension.General#11](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorerextensionnodeinfo.cs#11)]
 
- Aşağıdaki tabloda her yerleşik düğüm türü için veri nesnesi türlerini listeler.
+ Aşağıdaki tabloda, her bir yerleşik düğüm türü için veri nesne türleri listelenmektedir.
 
 |Düğüm türü|Veri nesnesi türü|
 |---------------|----------------------|
 |SharePoint sitesi düğümü|<xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerSiteNodeInfo>|
 |İçerik türü|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IContentTypeNodeInfo>|
-|Özellik|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo>|
+|Öne çıkan özelliği|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFeatureNodeInfo>|
 |Alan|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IFieldNodeInfo>|
-|List|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo>|
+|Liste|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListNodeInfo>|
 |Liste şablonu|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListTemplateNodeInfo>|
-|Liste Görünümü (Microsoft.SharePoint.SPView)|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo>|
+|Liste görünümü (Microsoft. SharePoint. SPView)|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IListViewNodeInfo>|
 |İş akışı ilişkilendirmesi|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo>|
 |İş akışı şablonu|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowTemplateNodeInfo>|
 
- Kullanma hakkında daha fazla bilgi için <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> özelliğine bakın [SharePoint ile özel verileri ilişkilendirme araçları uzantıları](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md).
+ Özelliğini kullanma hakkında daha fazla bilgi için <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> bkz. [SharePoint Araçları uzantıları ile özel verileri ilişkilendirme](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzlenecek yol: Sunucu Gezgini, web bölümlerini görüntülemek üzere genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
-- [Nasıl yapılır: Sunucu Gezgininde SharePoint düğümünü genişletme](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)
-- [Nasıl yapılır: Sunucu Gezginine özel bir SharePoint düğümü ekleme](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md)
-- [Nasıl yapılır: Sunucu Gezgininde yerleşik bir SharePoint düğümü için veri alma](../sharepoint/how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer.md)
-- [SharePoint araç uzantıları ile özel verileri ilişkilendirme](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)
-- [Sunucu Gezgini kullanarak SharePoint bağlantılarına göz atın](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)
-- [SharePoint araçlarını Visual Studio'da genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)
+- [İzlenecek yol: Sunucu Gezgini Web bölümlerini görüntüleyecek şekilde genişletme](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)
+- [Nasıl yapılır: Sunucu Gezgini bir SharePoint düğümünü genişletme](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)
+- [Nasıl yapılır: Sunucu Gezgini için özel bir SharePoint düğümü ekleme](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md)
+- [Nasıl yapılır: Sunucu Gezgini yerleşik bir SharePoint düğümü için veri alma](../sharepoint/how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer.md)
+- [SharePoint Araç Uzantıları ile özel verileri ilişkilendirme](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)
+- [Sunucu Gezgini kullanarak SharePoint bağlantılarına gözatın](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)
+- [SharePoint araçlarını Visual Studio 'da genişletme](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)

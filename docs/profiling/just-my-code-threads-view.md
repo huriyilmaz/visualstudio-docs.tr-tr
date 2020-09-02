@@ -1,5 +1,5 @@
 ---
-title: Sadece Benim Kodum (İş Parçacığı Görünümü) | Microsoft Dokümanlar
+title: Yalnızca kendi kodum (Iş parçacıkları görünümü) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,18 +13,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 607247c6853c59036d1ab386f7371964265a32b8
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62995348"
 ---
 # <a name="just-my-code-threads-view"></a>Yalnızca Kendi Kodum (İş Parçacıkları Görünümü)
-Bu seçeneği belirlerseniz, yalnızca kodunuzu artı bir çağrı işlevi düzeyini göstermek için arama yığınını filtrelersiniz.
+Bu seçeneği belirlerseniz, çağrı yığınını yalnızca kodunuzun yanı sıra çağrılan işlevlerin bir düzeyini gösterecek şekilde filtreleyecek.
 
- Bu seçeneği etkinleştirerek, arama yığınının karmaşıklığını önemli ölçüde azaltabilir ve belki de belirli bir sorunu tanılamayı kolaylaştırabilirsiniz.
+ Bu seçeneği etkinleştirerek, çağrı yığınının karmaşıklığını önemli ölçüde azaltabilir, belki de belirli bir sorunu tanılamayı daha kolay hale getirebilirsiniz.
 
- Bazı durumlarda, bu seçeneğin seçilmesi engelleme çağrısını filtreleyebilir. Bu belirlemeyi yapmak için tam arama yığını ayrıntılarına ihtiyaç duyuyorsanız, tam arama yığınını ortaya çıkarmak için bu seçeneği temizleyin.
+ Bazı durumlarda, bu seçeneğin belirlenmesi engelleme çağrısını filtreleyebiliriz. Bu belirlenmesi için tam çağrı yığını ayrıntılarına ihtiyacınız varsa, tam çağrı yığınını ortaya çıkarmak için bu seçeneği temizleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

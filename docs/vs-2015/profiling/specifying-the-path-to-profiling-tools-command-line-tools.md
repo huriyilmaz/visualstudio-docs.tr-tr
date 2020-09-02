@@ -1,5 +1,5 @@
 ---
-title: Profil oluşturma yolunu belirterek Araçları komut satırı araçları | Microsoft Docs
+title: Komut satırı araçlarının Profil Oluşturma Araçları yolunu belirtme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,27 +10,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7fadcff84c4b927a7718d7d4ad1311918ae0f18a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199786"
 ---
 # <a name="specifying-the-path-to-profiling-tools-command-line-tools"></a>Profil Oluşturma Araçları Komut Satırı Araçları Yolunu Belirtme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yolu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Profil Araçları komut satırı araçları, PATH ortam değişkenine eklenmez. 32-bit bilgisayarlarda, tek bir dizinde araçlardır. Profil oluşturma araçlarından 64-bit bilgisayarlarda 32 bit ve 64-bit sürümleri vardır.  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Profil oluşturma araçları komut satırı araçlarının yolu, PATH ortam değişkenine eklenmez. 32 bit bilgisayarlarda, Araçlar tek bir dizindir. 64 bit bilgisayarlarda profil oluşturma araçlarının 32-bit ve 64 bit sürümleri vardır.  
   
-## <a name="32-bit-computers"></a>32-bit bilgisayarlar  
- Varsayılan profil oluşturucu Araçlar Dizin 32-bit bilgisayarlarda, *sürücü*\Program Visual Studio 11.0\Team Araçlar\Performans araçları.  
+## <a name="32-bit-computers"></a>32 bit bilgisayarlar  
+ 32 bit bilgisayarlarda, varsayılan profil oluşturucu araçları dizini *, \Program Files\Microsoft*Visual Studio 11.0 \ Team Tools\performance Tools dizinidir.  
   
 ## <a name="64-bit-computers"></a>64 bit bilgisayarlar  
- 64-bit bilgisayarlarda, profili oluşturulan uygulamanın hedef platformu göre yolu belirtin.  
+ 64 bit bilgisayarlarda, profili oluşturulmuş uygulamanın hedef platformuna göre yolunu belirtin.  
   
-- 32-bit uygulamalar için varsayılan profil oluşturucu Araçlar dizindir:  
+- 32 bitlik uygulamalar için varsayılan profil oluşturucu araçları dizini:  
   
-     *Sürücü*\Program dosyaları (x86) \Microsoft Visual Studio 11.0\Team Araçlar\Performans araçları  
+     *Sürücü*\Program Files (x86) \Microsoft Visual Studio 11.0 \ Team Tools\performans araçları  
   
-- 64-bit uygulamalar için varsayılan profil oluşturucu Araçlar dizindir:  
+- 64 bitlik uygulamalar için varsayılan profil oluşturucu araçları dizini:  
   
-     *Sürücü*\Program dosyaları (x86) \Microsoft Visual Studio 11.0\Team Araçlar\Performans Tools\x64
+     *Sürücü*\Program Files (x86) \Microsoft Visual Studio 11.0 \ Team Tools\performance Tools\x64

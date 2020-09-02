@@ -11,18 +11,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0465188cd44ad14ef3f7df9f5eda619a5ecb6d0e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160104"
 ---
-# <a name="guidarray"></a>GUID_ARRAY
+# <a name="guid_array"></a>GUID_ARRAY
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir dizi benzersiz tanımlayıcıları kullanılabilir hata ayıklama altyapıları için açıklar.  
+Kullanılabilir hata ayıklama motorları için benzersiz tanımlayıcıların dizisini açıklar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagGUID_ARRAY  
@@ -40,22 +40,22 @@ public struct GUID_ARRAY
 }  
 ```  
   
-## <a name="terms"></a>Koşulları  
+## <a name="terms"></a>Terimler  
  dwCount  
- Dizide benzersiz tanımlayıcıları sayısı.  
+ Dizideki benzersiz tanımlayıcıların sayısı.  
   
  Üyeler  
- Benzersiz tanımlayıcıları içeren bir dizi.  
+ Benzersiz tanımlayıcılar içeren dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı tarafından döndürülen [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md) yöntemi.  
+ Bu yapı [GetEngineFilter](../../../extensibility/debugger/reference/idebugprocess3-getenginefilter.md) yöntemi tarafından döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üst bilgi: Msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

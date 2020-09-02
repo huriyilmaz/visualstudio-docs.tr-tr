@@ -1,5 +1,5 @@
 ---
-title: Genel sekmesi, iş parçacığı Özellikleri iletişim kutusu | Microsoft Docs
+title: Genel sekmesi, Iş parçacığı özellikleri Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,32 +13,32 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b1a8e6fd583f6035fc84f0c86adcee059562235d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159950"
 ---
 # <a name="general-tab-thread-properties-dialog-box"></a>Genel Sekmesi, İş Parçacığı Özellikleri İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belirli bir iş parçacığı hakkında daha fazla bilgi için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı taşıyın. bir [iş parçacıkları görünümü](../debugger/threads-view.md) penceresi veya açık [iletiler görünümünü](../debugger/messages-view.md) ve bir ileti genişletin. Herhangi bir iş parçacığı düğüm ağaçta seçin ve ardından **özellikleri** gelen **görünümü** menüsü.  
+Belirli bir iş parçacığı hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir [Iş parçacığı görünümü](../debugger/threads-view.md) penceresine taşıyın veya [iletiler görünümü](../debugger/messages-view.md) ' ni açın ve bir ileti genişletin. Ağaçta herhangi bir iş parçacığı düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.  
   
- **İş parçacığı özellikleri** iletişim kutusu içeren bir bölme **genel** sekmesi. Aşağıdaki ayarlar kullanılabilir:  
+ **Iş parçacığı özellikleri** iletişim kutusu, **genel** sekmesi olan bir bölme içerir. Aşağıdaki ayarlar kullanılabilir:  
   
 |Giriş|Açıklama|  
 |-----------|-----------------|  
-|**Modül adı**|Modülün adı.|  
-|**İş parçacığı kimliği**|Bu iş parçacığının benzersiz kimliği. Not; iş parçacığı kimliği numaraları yeniden kullanılır Bunlar, bu iş parçacığının ömrü boyunca yalnızca bir iş parçacığı belirleyin.|  
-|**İşlem kimliği**|Bu işlem benzersiz kimliği. Bunlar işlem ömrü boyunca yalnızca bir işlemi tanımlamak için işlem kimliği numaraları yeniden kullanılır. İşlem nesnesi türü, bir program çalıştırıldığında oluşturulur. Bir işlemdeki tüm iş parçacıkları, aynı adres alanı paylaşabilir ve aynı verilere erişebilir. İşlem kimliği özelliklerini görüntülemek için bu değeri seçin|  
-|**İş parçacığı durumu**|İş parçacığının geçerli durumu. Bir çalışan iş parçacığı bir işlemci kullanıyor; bir bekleme kullanmak için iş parçacığıdır. Bir boş olmadığı için bir işlemci kullanacak şekilde bir hazır iş parçacığı bekleniyor. Bir iş parçacığı geçişi, yürütme, içinde diskten disk belleğine alınacak yürütme yığınını beklediğiniz gibi bir kaynak için bekliyor. Bekleyen iş parçacığı, çevre bir işlemin tamamlanması ya da boş olacak bir kaynak için beklediği işlemci gerekmez.|  
-|**Bekleme nedeni**|Bu, yalnızca iş parçacığı bekleme durumunda olduğunda geçerlidir. Olay çifti, korumalı alt sistemleri ile iletişim kurmak için kullanılır.|  
-|**CPU süresi**|Bu işlem ve kendi iş parçacığı üzerinde harcanan toplam CPU süresi. Kullanıcı zaman + ayrıcalıklı zaman eşit.|  
-|**Kullanıcı Zamanı**|Bu iş parçacığı kullanıcı modunda kod çalıştırırken harcadığı geçen toplam geçen süre. Alt pencere yöneticisi ve grafik altyapısı gibi gibi uygulamalar kullanıcı modunda yürütün.|  
-|**Ayrıcalıklı Zaman**|Bu iş parçacığı ayrıcalıklı modda kod çalıştırırken harcadığı geçen toplam geçen süre. Bir Windows sistem hizmeti çağrıldığında, hizmet genellikle sisteme özel verilere erişim elde etmek için ayrıcalıklı modda çalışır. Bu tür veriler kullanıcı modunda çalışan iş parçacıklarının erişimden korunur. Sistem çağrıları açık veya örtük bir sayfa hatasını veya bir kesme oluştuğunda gibi olabilir.|  
-|**Geçen süre**|İş parçacığının çalıştığı toplam geçen süre (saniye cinsinden).|  
-|**Geçerli öncelik**|Bu iş parçacığı geçerli dinamik önceliği. Bir işlemdeki iş parçacıkları, yükseltmek ve kendi temel öncelik işleminin temel öncelik göre daha düşük.|  
-|**Temel öncelik**|Bu iş parçacığının geçerli temel öncelik.|  
-|**Başlangıç adresi**|Bu iş parçacığı için sanal adres başlatılıyor.|  
-|**Kullanıcı PC'si**|İş parçacığı için kullanıcı program sayacının.|  
-|**Bağlam geçişleri**|Bir iş parçacığından anahtarlara sayısı. İş parçacığı anahtarlar, tek bir işlem içinde veya işlemler arasında ortaya çıkabilir. Bir iş parçacığı anahtarı bilgilerini soran başka bir iş parçacığı tarafından ya da daha yüksek öncelikli iş parçacığı çalışmaya hazır hale geldiğinde boşaltılması bir iş parçacığı tarafından kaynaklanabilir.|
+|**Modül Adı**|Modülün adı.|  
+|**İş parçacığı KIMLIĞI**|Bu iş parçacığının benzersiz KIMLIĞI. İş parçacığı KIMLIĞI numaralarının yeniden kullanılabilir olduğunu unutmayın. bir iş parçacığını yalnızca o iş parçacığının ömrü için tanımlarlar.|  
+|**İşlem Kimliği**|Bu işlemin benzersiz KIMLIĞI. İşlem KIMLIĞI numaraları yeniden kullanılır, bu nedenle bir işlemi yalnızca bu işlemin kullanım ömrü için tanımlarlar. Işlem nesnesi türü, bir program çalıştırıldığında oluşturulur. Bir işlemdeki tüm iş parçacıkları aynı adres alanını paylaşır ve aynı verilere erişebilir. İşlem KIMLIĞININ özelliklerini görüntülemek için bu değeri seçin.|  
+|**İş parçacığı durumu**|İş parçacığının geçerli durumu. Çalışan bir iş parçacığı işlemciyi kullanıyor; bir bekleme iş parçacığı kullanmak için. Ücretsiz bir Iş parçacığı, bir işlemcinin kullanılmasını bekliyor çünkü bir işlem ücretsizdir. Geçiş içindeki bir iş parçacığı, yürütme yığınının diskten disk belleğine alınması beklendiğinden bir kaynağın yürütülmesini bekliyor. Bir çevre birimi işleminin tamamlanmasını veya bir kaynağın ücretsiz olmasını beklediği için bekleyen bir iş parçacığı işlemciyi gerektirmez.|  
+|**Bekleme nedeni**|Bu, yalnızca iş parçacığı bekleme durumundayken geçerlidir. Olay çiftleri, korumalı alt sistemler ile iletişim kurmak için kullanılır.|  
+|**CPU süresi**|Bu işlem ve iş parçacıkları üzerinde harcanan toplam CPU süresi. Kullanıcı zamanına ve ayrıcalıklı zamana eşit.|  
+|**Kullanıcı saati**|Bu iş parçacığının kullanıcı modunda kod çalıştırırken harcadığı toplam geçen süre. Uygulamalar, pencere yöneticisi ve grafik altyapısı gibi alt sistemler gibi kullanıcı modunda yürütülür.|  
+|**Ayrıcalıklı zaman**|Bu iş parçacığının ayrıcalıklı modda kod çalıştırırken harcadığı toplam geçen süre. Bir Windows sistem hizmeti çağrıldığında hizmet genellikle ayrıcalıklı modda çalışır ve sistem özel verilerine erişim elde edilir. Bu tür veriler, kullanıcı modunda çalışan iş parçacıklarının erişimine karşı korunur. Sisteme yapılan çağrılar açık olabilir veya bir sayfa hatası ya da kesme gerçekleştiğinde örtük olabilir.|  
+|**Geçen süre**|Bu iş parçacığının çalıştığı toplam geçen süre (saniye cinsinden).|  
+|**Geçerli öncelik**|Bu iş parçacığının geçerli dinamik önceliği. Bir işlem içindeki iş parçacıkları, işlemin temel önceliğine göre kendi temel önceliklerini artırıp düşürebilirler.|  
+|**Temel öncelik**|Bu iş parçacığının geçerli temel önceliği.|  
+|**Başlangıç adresi**|Bu iş parçacığının sanal adresi başlatılıyor.|  
+|**Kullanıcı bılgısayar**|İş parçacığı için Kullanıcı programı sayacı.|  
+|**Bağlam geçişleri**|Bir iş parçacığından diğerine anahtar sayısı. İş parçacığı anahtarları, tek bir işlem içinde veya işlemler arasında gerçekleşebilir. İş parçacığı anahtarı, daha fazla bilgi isteyen bir iş parçacığından veya daha yüksek öncelikli bir iş parçacığı çalıştırılmaya hazır olduğunda bir iş parçacığı tarafından neden olmuş olabilir.|

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFields::Reset | Microsoft Docs
+title: 'IEnumDebugFields:: Reset | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 62a9039a1fa9b53c57f9eb61047f0b870835d5ac
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199613"
 ---
 # <a name="ienumdebugfieldsreset"></a>IEnumDebugFields::Reset
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem, ilk öğe için sabit sıfırlar.  
+Bu yöntem, numaralandırmayı ilk öğe olarak sıfırlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Reset(void);  
@@ -35,14 +35,14 @@ int Reset();
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- None  
+ Hiçbiri  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem çağrıldığında sonra yapılan sonraki çağrıda [sonraki](../../../extensibility/debugger/reference/ienumdebugfields-next.md) numaralandırma ilk öğeyi döndürür.  
+ Bu yöntem çağrıldıktan sonra [Next 'e sonraki](../../../extensibility/debugger/reference/ienumdebugfields-next.md) çağrı, numaralandırmanın ilk öğesini döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md)   
- [Next](../../../extensibility/debugger/reference/ienumdebugfields-next.md)
+ [Sonraki](../../../extensibility/debugger/reference/ienumdebugfields-next.md)

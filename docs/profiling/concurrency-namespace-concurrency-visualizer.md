@@ -1,5 +1,5 @@
 ---
-title: Eşzamanlılık Namespace (Eşzamanlı Lık Görselleştiricisi) | Microsoft Dokümanlar
+title: Eşzamanlılık ad alanı (eşzamanlılık görselleştiricisi) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 258cb5964946d5dbf136463538905d970346b8df
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63001074"
 ---
-# <a name="concurrency-namespace-concurrency-visualizer"></a>Eşzamanlı ad alanı (Eşzamanlılık Görselleştiricisi)
-Ad `Concurrency` alanı, C++'ın eşzamanlı programlama çerçevesi olan Eşzamanlı Çalışma Süresi'ne erişmenizi sağlayan sınıflar ve işlevler sağlar. Daha fazla bilgi için [Eşzamanlılık Çalışma Zamanı'na](/cpp/parallel/concrt/concurrency-runtime)bakın.
+# <a name="concurrency-namespace-concurrency-visualizer"></a>Eşzamanlılık ad alanı (eşzamanlılık görselleştiricisi)
+`Concurrency`Ad alanı, C++ için eşzamanlı bir programlama çerçevesi olan eşzamanlılık çalışma zamanı erişim sağlayan sınıfları ve işlevleri sağlar. Daha fazla bilgi için bkz. [Eşzamanlılık çalışma zamanı](/cpp/parallel/concrt/concurrency-runtime).
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 namespace Concurrency;
@@ -30,14 +30,14 @@ namespace Concurrency;
 
 ## <a name="members"></a>Üyeler
 
-### <a name="namespaces"></a>Ad Alanları
+### <a name="namespaces"></a>Ad alanları
 
-|Adı|Açıklama|
+|Ad|Açıklama|
 |----------|-----------------|
-|[Tanılama Ad Alanı](../profiling/diagnostic-namespace.md)|Ad `diagnostics` alanı, EşzamanlıLık Görselleştirici işaretçileri yayan işlevsellik sağlar.|
+|[Tanılama ad alanı](../profiling/diagnostic-namespace.md)|`diagnostics`Ad alanı eşzamanlılık görselleştiricisi işaretçilerini yayma işlevlerini sağlar.|
 
 ## <a name="requirements"></a>Gereksinimler
- **Başlık:** cvmarkersobj.h
+ **Üst bilgi:** cvmarkersobj. h
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [C kitaplık başvurusu](../profiling/c-library-reference.md)
+- [C Kitaplığı başvurusu](../profiling/c-library-reference.md)

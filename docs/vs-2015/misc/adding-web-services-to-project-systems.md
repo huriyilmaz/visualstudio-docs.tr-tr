@@ -1,5 +1,5 @@
 ---
-title: Proje sistemleri için Web Hizmetleri ekleme | Microsoft Docs
+title: Proje sistemlerine Web Hizmetleri ekleme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -11,22 +11,22 @@ ms.assetid: 8efa078b-68b2-45a2-9be2-44f807bc0d7f
 caps.latest.revision: 8
 manager: jillfra
 ms.openlocfilehash: f5b192be8e5f68ad9314fe08fff963c032013cb0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63002657"
 ---
-# <a name="adding-web-services-to-project-systems"></a>Proje sistemleri için Web Hizmetleri ekleme
-XML Web Hizmetleri, genel olarak, SOAP (Basit Nesne Erişim Protokolü) protokolünü kullanarak proje sistemi programlı bilgi döndüren URL'yi adreslenebilir kaynaklardır. VSPackage proje sisteminizi kullanarak Web Hizmetleri tümleştirebilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddProjectItemDlg2> arabirimi.  
+# <a name="adding-web-services-to-project-systems"></a>Proje sistemlerine Web Hizmetleri ekleme
+XML Web Hizmetleri, genel olarak, SOAP (basit nesne erişim Protokolü) protokolü kullanılarak proje sistemine programlı bilgiler döndüren, URL adreslenebilir kaynaklardır. Arabirimini kullanarak, Web hizmetlerini VSPackage proje sisteminizle tümleştirebilirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddProjectItemDlg2> .  
   
-### <a name="to-add-a-web-service-to-your-project-system"></a>Bir Web hizmeti projesi sisteminize eklemek için  
+### <a name="to-add-a-web-service-to-your-project-system"></a>Proje sisteminize bir Web hizmeti eklemek için  
   
-1. Çağrı `QueryService` için <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddProjectItemDlg2> aracılığıyla arabirim <xref:Microsoft.VisualStudio.Shell.Interop.SVsAddWebReferenceDlg> hizmeti.  
+1. `QueryService`Arabirim için <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddProjectItemDlg2> hizmet aracılığıyla çağrı <xref:Microsoft.VisualStudio.Shell.Interop.SVsAddWebReferenceDlg> .  
   
-2. Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2.AddWebReferenceDlg%2A> yöntemi. İçinde geçirirseniz `pDiscoverySession` parametre olarak `NULL`bulma oturumunda sizin için oluşturulur ve böylece tarafından kullanmak için kullanılabilir oturum önbelleğe alınmış <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2> arabirimi. <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2.AddWebReferenceDlg%2A> yöntemi, bir işaretçi döndürür <xref:Microsoft.VisualStudio.Shell.Interop.IDiscoveryResult2>.  
+2. Yöntemini çağırın <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2.AddWebReferenceDlg%2A> . `pDiscoverySession`Parametresi olarak geçirirseniz `NULL` , sizin için bir bulma oturumu oluşturulur ve oturum önbelleğe alınır ve bu sayede arabirim tarafından daha sonra kullanılmak üzere kullanılabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2.AddWebReferenceDlg%2A> Yöntem için bir işaretçi döndürür <xref:Microsoft.VisualStudio.Shell.Interop.IDiscoveryResult2> .  
   
-3. Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IDiscoveryResult.AddWebReference%2A> yöntemi. Web hizmeti başvuruları klasörü Otomasyon nesnesi içinde geçirin `pUnkWebReferenceFolder` parametresi. Visual Studio ortamını, ardından Web hizmeti zaten mevcut olup olmadığını denetler. Web hizmeti mevcut değilse, ortam indirir ve Web hizmeti bir klasörü ve klasörün alt düğümleri (.wsdl dosyaları gibi) ek tüm dosyaları ekler.  
+3. Yöntemini çağırın <xref:Microsoft.VisualStudio.Shell.Interop.IDiscoveryResult.AddWebReference%2A> . Web hizmeti başvuruları klasörü için Otomasyon nesnesini parametresi olarak geçirin `pUnkWebReferenceFolder` . Daha sonra Visual Studio ortamı, Web hizmetinin zaten mevcut olup olmadığını denetler. Web hizmeti yoksa, ortam indirir ve Web hizmetini bir klasöre ve ek dosyalara (. wsdl dosyaları gibi) klasörün alt düğümlerine ekler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsAddWebReferenceDlg2>   

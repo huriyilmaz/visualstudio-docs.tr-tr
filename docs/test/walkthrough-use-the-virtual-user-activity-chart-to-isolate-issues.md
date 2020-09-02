@@ -1,5 +1,5 @@
 ---
-title: Yük testleri için Sanal Kullanıcı Etkinlik Grafiği'ni kullanma
+title: Yük testleri için Sanal Kullanıcı etkinliği grafiğini kullanma
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +10,17 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c58dd4f6e6a0c8fe1bd468053bf18c3635b1ee9d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78169384"
 ---
-# <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>Walkthrough: Sorunları yalıtmak için Sanal Kullanıcı Etkinlik Grafiği'ni kullanma
+# <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>İzlenecek yol: sorunları yalıtmak için Sanal Kullanıcı etkinliği grafiğini kullanma
 
-Bu iznizde, yükleme testinizi çalıştıran tek tek sanal kullanıcılar için oluşan hataları yalıtmak için Sanal Kullanıcı Etkinlik Grafiği'ni nasıl kullanacağınızı öğreneceksiniz.
+Bu kılavuzda, yük testinizi çalıştıran tekil sanal kullanıcılar için oluşan hataları yalıtmak üzere sanal kullanıcı etkinliği grafiğini nasıl kullanacağınızı öğreneceksiniz.
 
-Sanal Kullanıcı Etkinlik Grafiği, yük testinizle ilişkili sanal kullanıcı etkinliğini görselleştirmenize olanak tanır. Grafikteki her satır tek bir sanal kullanıcıyı temsil eder. Sanal Kullanıcı Etkinlik Grafiği, her sanal kullanıcının test sırasında tam olarak ne yaptığını gösterir. Bu, kullanıcı etkinliği, yükleme desenleri, başarısız veya yavaş testleri ilişkilendirme ve diğer sanal kullanıcı etkinliği ile isteklerini görerek performans sorunlarını yalıtmak sağlar. Sanal Kullanıcı Etkinlik Grafiği, yalnızca yükleme çalışmaya bittikten sonra kullanılabilir.
+Sanal Kullanıcı etkinliği grafiği, yük testinizdeki ilişkili sanal kullanıcı etkinliğini görselleştirmenize olanak tanır. Grafikteki her satır, tek bir sanal kullanıcıyı temsil eder. Sanal Kullanıcı etkinliği grafiği, her bir sanal kullanıcının test sırasında hangi şekilde yürüttüğünü gösterir. Bu, Kullanıcı etkinliği desenlerini, yük düzenlerini ve başarısız veya yavaş testleri ilişkilendirmek ve diğer Sanal Kullanıcı etkinliğiyle istekleri görmek için performans sorunlarını yalıtmanızı sağlar. Sanal Kullanıcı etkinliği grafiği, yalnızca sonrasında yük çalıştırıldıktan sonra kullanılabilir.
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
@@ -28,56 +28,56 @@ Sanal Kullanıcı Etkinlik Grafiği, yük testinizle ilişkili sanal kullanıcı
 
 - Visual Studio Enterprise
 
-- Bu yordamları tamamlayın:
+- Aşağıdaki yordamları uygulayın:
 
-  - [Bir web performans testi kaydedin ve çalıştırın.](/azure/devops/test/load-test/run-performance-tests-app-before-release#recordtests)
+  - [Bir Web performans testini kaydedin ve çalıştırın](/azure/devops/test/load-test/run-performance-tests-app-before-release#recordtests).
 
   - [Yük testi oluşturma ve çalıştırma](/azure/devops/test/load-test/run-performance-tests-app-before-release#create-a-load-test)
 
-## <a name="open-the-colorwebapp-solution-created-in-the-previous-walkthroughs"></a>Önceki walkthroughs oluşturulan ColorWebApp çözümünü açın
+## <a name="open-the-colorwebapp-solution-created-in-the-previous-walkthroughs"></a>Önceki izlenecek yollarda oluşturulan ColorWebApp çözümünü açın
 
 1. Visual Studio'yu açın.
 
-2. *LoadTest1.loadtest*içeren **ColorWebApp** çözümlerini açın. Bu yük testi, önkoşullar bölümünde bu konunun başında listelenen üç gözden geçirme adımının yürütülmesinden kaynaklanır.
+2. *LoadTest1. LoadTest*içeren **ColorWebApp** çözümünü açın. Bu yük testi, Önkoşullar bölümünde konunun başlangıcında listelenen üç izlenecek yoldaki adımları yürütmektedir.
 
-     Bu izlenecek yoldaki kalan adımlar ColorWebApp adlı bir web uygulaması, *ColorWebAppTest.webtest* adlı bir web performans testi ve *LoadTest1.loadtest*adlı bir yük testi varsayalım.
+     Bu yönergedeki geri kalan adımlarda, *ColorWebAppTest. webtest* adlı bir Web performans testi ve *LoadTest1. LoadTest*adlı bir yük testi olan ColorWebApp adlı bir Web uygulaması varsayılır.
 
-## <a name="run-the-load-test"></a>Yük testini çalıştırın
+## <a name="run-the-load-test"></a>Yük testini çalıştırma
 
-Sanal kullanıcı etkinliği verilerini toplamak için yük testinizi çalıştırın.
+Sanal Kullanıcı etkinliği verilerini toplamak için yük testinizi çalıştırın.
 
-- Yük **Testi Düzenleyicisi'nde**araç çubuğundaki **Çalıştır** düğmesini seçin. LoadTest1 çalıştırmaya başlar.
+- **Yük Testi Düzenleyicisi**, araç çubuğundaki **Çalıştır** düğmesini seçin. LoadTest1 çalışmaya başlar.
 
-## <a name="isolate-issues-in-the-virtual-user-activity-chart"></a>Sanal Kullanıcı Etkinlik Grafiği'ndeki sorunları yalıtma
+## <a name="isolate-issues-in-the-virtual-user-activity-chart"></a>Sanal Kullanıcı etkinliği grafiğindeki sorunları yalıtma
 
-Yük testinizi çalıştırdıktan ve sanal kullanıcı etkinlik verilerini topladıktan sonra, **Sanal Kullanıcı Etkinlik Grafiği'ndeki**Yük **Testi Çözümleyici** Ayrıntıları görünümünü kullanarak yük testi sonuçlarındaki verileri görüntüleyebilirsiniz. Ayrıca, yük testinizdeki performans sorunlarını yalıtmaya yardımcı olmak için **Sanal Kullanıcı Etkinlik Grafiği'ni** kullanabilirsiniz.
+Yük testinizi çalıştırdıktan ve Sanal Kullanıcı etkinliği verilerini topladıktan sonra, **Sanal Kullanıcı etkinliği grafiğindeki** **Yük Testi Çözümleyicisi** ayrıntıları görünümünü kullanarak yük testi sonuçlarındaki verileri görüntüleyebilirsiniz. Ayrıca, **Sanal Kullanıcı etkinliği grafiğini** , yük testinizdeki performans sorunlarını yalıtmaya yardımcı olmak için kullanabilirsiniz.
 
-### <a name="to-use-the-virtual-user-activity-chart-in-your-load-test-results"></a>Yük testi sonuçlarınızda Sanal Kullanıcı Etkinlik Grafiği'ni kullanmak için
+### <a name="to-use-the-virtual-user-activity-chart-in-your-load-test-results"></a>Yük testi sonuçlarınızda Sanal Kullanıcı etkinliği grafiğini kullanmak için
 
-1. Yük testi nin çalışması tamamlandıktan sonra, yük testi sonuçlarının **Özeti** sayfası **Yük Testi Çözümleyicisi'nde**görüntülenir. Araç çubuğundaki **Grafikler** düğmesini seçin.
+1. Yük testinin çalışmasını tamamladıktan sonra, yük testi sonuçlarına ilişkin **Özet** sayfası, **Yük Testi Çözümleyicisi**'nde görüntülenir. Araç çubuğundaki **grafikler** düğmesini seçin.
 
      Grafikler görünümü görüntülenir.
 
-2. Sayfa **Yanıt Süresi** grafiğinde, eşik ihlali simgelerinden birinin yakınına sağ tıklayın ve **kullanıcı ayrıntısına git'i**seçin.
+2. **Sayfa yanıt süresi** grafiğinde eşik ihlali simgelerinden birine sağ tıklayın ve **Kullanıcı ayrıntısına git**' i seçin.
 
     > [!NOTE]
-    > Kullanıcı Etkinliği grafiğini de açmak için **Yükle Test Düzenleyicisi** araç çubuğundaki **Ayrıntılar** düğmesini kullanabilirsiniz. Ancak, **Kullanıcı ayrıntısına Git** seçeneğini kullanırsanız, **Sanal Kullanıcı Etkinlik Grafiği,** testin grafikte sağ tıkladığınız kısmını otomatik olarak yakınlaştırır.
+    > Kullanıcı etkinliği grafiğini de açmak için **Yük Testi Düzenleyicisi** araç çubuğundaki **Ayrıntılar** düğmesini kullanabilirsiniz. Bununla birlikte, **Kullanıcı ayrıntısına git** seçeneğini kullanırsanız, **Sanal Kullanıcı etkinliği grafiği** , grafikte sağ tıklattığınız testin kısmına otomatik olarak yakınlaştıracaktır.
 
-     Ayrıntılar görünümü, eşik ihlallerinin gerçekleştiği döneme odaklanan **Sanal Kullanıcı Etkinlik Grafiği** ile görüntülenir.
+     Ayrıntılar görünümü, eşik ihlallerinin gerçekleştiği zaman dilimine odaklanan **Sanal Kullanıcı etkinliği grafiği** ile birlikte görüntülenir.
 
-     y ekseninde, yatay çizimler tek tek sanal kullanıcıları temsil eder. X ekseni yük testi çalışması için zaman çizgisini görüntüler.
+     Y ekseninde yatay çizimler tek tek sanal kullanıcıları temsil eder. X ekseni, yük testi çalıştırmasının zaman satırını görüntüler.
 
-3. **Sanal Kullanıcı Etkinlik Grafiği'nin**altındaki **zaman dilimini yakınlaştırma** aracında, her ikisi de eşik ihlali simgesine yakın olana kadar sol ve sağ kaydırıcıları ayarlayın. Bu, Sanal Kullanıcı **Etkinlik Grafiği'ndeki** zaman ölçeğini değiştirir
+3. **Sanal Kullanıcı Etkinlik grafiğinin**altındaki **zaman dilimini Yakınlaştır** aracında, her ikisi de eşik ihlali simgesine kapatılana kadar sol ve sağ kaydırıcıları ayarlayın. Bu, **Sanal Kullanıcı Etkinlik grafiğinde** zaman ölçeğini değiştirir
 
-4. Ayrıntılar **Gösterge'sinde** **,(Hataları vurgulayın)** için onay kutusunu seçin. Eşik ihlaline neden olan sanal kullanıcının vurgulandığına dikkat edin.
+4. **Ayrıntılar göstergesinde**, **(hataları vurgula)** onay kutusunu seçin. Eşik ihlaline neden olan sanal kullanıcı vurgulandığını unutmayın.
 
-5. Filtre **sonuçları** panelinde, **başarılı sonuçları ve** **HttpError** için onay kutularını temizleyin, ancak **Doğrulama Kuralı Hatası** onay kutusunu seçili bırakın.
+5. **Filtre sonuçları** panelinde, **başarılı sonuçları göster** ve **HttpError** onay kutularını temizleyin, ancak **ValidationRuleError** onay kutusunu seçili bırakın.
 
-     **Sanal Kullanıcı Etkinlik Grafiği,** önceki gözden geçirmede yapılandırılan eşik ihlalinde belirtildiği gibi yalnızca *Red.aspx* sayfasında 3 saniyeden fazla zaman geçiren sanal kullanıcıları görüntüler.
+     **Sanal Kullanıcı etkinliği grafiği** , yalnızca *kırmızı. aspx* sayfasında 3 saniyeden daha fazla geçen sanal kullanıcıları görüntüler ve bu, önceki kılavuzda yapılandırılan eşik ihlaline göre belirlenir.
 
-6. Fare işaretçisini, eşik ihlali için doğrulama kuralı hatası yla sanal kullanıcıyı temsil eden yatay çizginin üzerinde dinlendirin.
+6. Fare işaretçisini, eşik ihlali için doğrulama kuralı hatası ile sanal kullanıcıyı temsil eden yatay çizginin üzerinde bekletin.
 
-7. Bir araç ipucu aşağıdaki bilgilerle görüntülenir:
+7. Aşağıdaki bilgilerle bir araç ipucu görüntülenir:
 
     - **Kullanıcı Kimliği**
 
@@ -85,11 +85,11 @@ Yük testinizi çalıştırdıktan ve sanal kullanıcı etkinlik verilerini topl
 
     - **Test**
 
-    - **Sonuç**
+    - **Sonucu**
 
     - **Ağ**
 
-    - **Başlangıç Saati**
+    - **Başlangıç Zamanı**
 
     - **Süre**
 
@@ -97,16 +97,16 @@ Yük testinizi çalıştırdıktan ve sanal kullanıcı etkinlik verilerini topl
 
     - **Test günlüğü**
 
-8. Test **günlüğünün** bir bağlantı olduğuna dikkat edin. Test **günlüğü** bağlantısını seçin.
+8. **Test günlüğünün** bir bağlantı olduğunu unutmayın. **Test günlüğü** bağlantısını seçin.
 
-9. Günlükle ilişkili ColorWebTest web performans testi **Web Performans Testi Sonuçları Görüntüleyici'de**açılır. Bu, eşik ihlallerinin oluştuğu yeri yalıtmanızı sağlar.
+9. Günlük ile ilişkili ColorWebTest Web performans testi **Web performans test sonuçları görüntüleyicisinde**açılır. Bu, eşik ihlallerinin nerede oluştuğunu yalıtmanızı sağlar.
 
-     Performans sorunlarını ve yük testlerinizdeki hataları yalıtmaya yardımcı olmak için **hem Ayrıntı Göstergesi** hem de Filtre **sonuçları** panellerinde çeşitli ayarları kullanabilirsiniz. Sanal kullanıcı verilerinin **Sanal Kullanıcı Etkinlik Grafiği'nde**nasıl sunulduğunu görmek için bu ayarları ve **zaman dilimini yakınlaştırma** aracıyla denemeler yapın.
+     Performans sorunlarını yalıtmaya yardımcı olmak için **Ayrıntılar göstergesinde** ve **filtre sonuçları** panellerinde çeşitli ayarları kullanabilir ve yük testlerinizdeki hataları izleyebilirsiniz. Sanal Kullanıcı verilerinin **Sanal Kullanıcı Etkinlik grafiğinde**nasıl sunulduğunu görmek için bu ayarları ve **zaman dilimi yakınlaştırma** aracını deneyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ayrıntılar görünümünde sanal kullanıcı etkinliğini analiz edin](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
+- [Ayrıntılar görünümündeki sanal kullanıcı etkinliğini çözümleme](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)
 - [Test denetleyicileri ve test aracıları](configure-test-agents-and-controllers-for-load-tests.md)
-- [Nasıl? Dağıtılmış yük testi için test ayarı oluşturma](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)
+- [Nasıl yapılır: dağıtılmış yük testi için test ayarı oluşturma](../test/how-to-create-a-test-setting-for-a-distributed-load-test.md)
 - [Test aracılarını yükleme ve yapılandırma](../test/lab-management/install-configure-test-agents.md)
-- [Test ayarlarını kullanarak tanılama bilgilerini toplama](../test/collect-diagnostic-information-using-test-settings.md)
+- [Test ayarlarını kullanarak tanılama bilgilerini topla](../test/collect-diagnostic-information-using-test-settings.md)

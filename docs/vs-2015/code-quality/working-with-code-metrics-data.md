@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3c2460b4e8b9e0b9043178989fcf8825815471be
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645701"
 ---
 # <a name="working-with-code-metrics-data"></a>Kod Ölçüm Verileri ile çalışma
@@ -41,22 +41,22 @@ ms.locfileid: "72645701"
 
 - [Kod ölçümü sonuçlarına göre Iş öğesi oluşturma](../code-quality/working-with-code-metrics-data.md#BKMK_Creating_a_Work_Item_Based_on_Code_Metric_Results)
 
-## <a name="BKMK_CodeMetricsResultsWindow"></a>Kod ölçümleri sonuçları penceresi
+## <a name="code-metrics-results-window"></a><a name="BKMK_CodeMetricsResultsWindow"></a> Kod ölçümleri sonuçları penceresi
  **Kod ölçümleri sonuçları** penceresinde, hesaplanmış sonuçları görüntüleyen en üstteki ve sütunlardaki bir araç çubuğu bulunur.
 
-|Sütunuyla|Açıklama|
+|Sütun|Açıklama|
 |------------|-----------------|
 |**Hiyerarşi**|**Hiyerarşi** sütunu, istediğiniz ayrıntı düzeyini görmek için genişletebileceğiniz veya daraltabileceğiniz kod hiyerarşisinin ağaç görünümünü içerir. Kalan sütunlar, hesaplanan sonuçları gösterir. Sonuç sütunlarını istediğiniz gibi gizleyebilir veya düzenleyebilirsiniz.|
 |**Bakım**|**Bakımsıma** sütunu, sayısal sonuca ek olarak bir simge içerir. Yeşil bir simge görece yüksek oranda bakım derecesini gösterir. Sarı bir simge, ileri düzey bakım derecesini belirtir. Kırmızı bir simge, düşük bakım ve olası bir sorun noktası olduğunu gösterir. Bu renk göstergeleri, FxCop kuralı AvoidUnmaintainableCode tarafından kullanılan önem kategorilerine karşılık gelir. Bu kural, bakım dizini 10 ' dan düşükse bir hata tetikler, dizin 10 ile 20 arasındaysa bir uyarı ve Dizin 20 ' den fazlaysa bir hata ya da uyarı değildir. Bakımı dizini üç ölçüden oluşur: döngüsel karmaşıklık, kod satırı ve hesaplama karmaşıklığı. Değerleri birimlerde ifade edilmez.|
 
-## <a name="BKMK_DisplayingCodeMetricsResults"></a>Kod ölçümleri sonuçlarını görüntüleme
+## <a name="displaying-code-metrics-results"></a><a name="BKMK_DisplayingCodeMetricsResults"></a> Kod ölçümleri sonuçlarını görüntüleme
  Kod ölçümleri sonuçları penceresi, kod ölçümleri sonuçları oluştururken otomatik olarak görüntülenir. Ayrıca, pencereyi istediğiniz zaman da görüntüleyebilirsiniz.
 
 #### <a name="to-display-the-code-metrics-results-window"></a>Kod ölçümleri sonuçları penceresini göstermek için
 
 - **Çözümle** menüsünde **Windows** ' a ve ardından **Kod ölçümleri sonuçları**' na tıklayın.
 
-     \- veya-
+     \- veya
 
 - **Görünüm** menüsünde **diğer pencereler** ' in üzerine gelin ve ardından **Kod ölçümleri sonuçları**' na tıklayın.
 
@@ -66,7 +66,7 @@ ms.locfileid: "72645701"
 
 - Kod ölçümleri sonuçları oluşturulduysa, **hiyerarşi** sütunundaki ağacı genişletin.
 
-## <a name="BKMK_FilteringCodeMetricsResults"></a>Kod ölçümleri sonuçlarını filtreleme
+## <a name="filtering-code-metrics-results"></a><a name="BKMK_FilteringCodeMetricsResults"></a> Kod ölçümleri sonuçlarını filtreleme
  Üstteki araç çubuğunu kullanarak, **Kod ölçümleri sonuçları** penceresinde görüntülenen sonuçlara filtre uygulayabilirsiniz. Örneğin, yalnızca 65 altındaki bakım dizinine sahip sonuçları görmek isteyebilirsiniz.
 
  **Filtre** açılan kutusu, sonuçlar sütunlarının adlarını içerir. Bir filtre tanımlandığında, listenin sonuna girintileme ile birlikte eklenir. Liste, tanımlanan son on filtreyi içerebilir.
@@ -83,14 +83,14 @@ ms.locfileid: "72645701"
 
 5. Sonuç ayrıntılarını görmek için hiyerarşi ağacını genişletin.
 
-## <a name="BKMK_AddingRemovingandRearrangingDataColumns"></a>Veri sütunları ekleme, kaldırma ve yeniden düzenleme
+## <a name="adding-removing-and-rearranging-data-columns"></a><a name="BKMK_AddingRemovingandRearrangingDataColumns"></a> Veri sütunları ekleme, kaldırma ve yeniden düzenleme
  **Kod ölçümleri sonuçları** penceresinden sonuç sütunları ekleyebilir veya kaldırabilirsiniz. Ayrıca, sonuçlar sütunlarını istediğiniz sırada görünecek şekilde yeniden düzenleyebilirsiniz.
 
 #### <a name="to-remove-a-column"></a>Bir sütunu kaldırmak için
 
 1. **Sütun Ekle/Kaldır** düğmesine tıklayın.
 
-     \- veya-
+     \- veya
 
      Herhangi bir sütun başlığına sağ tıklayın ve ardından **sütun Ekle/Kaldır**' a tıklayın.
 
@@ -100,7 +100,7 @@ ms.locfileid: "72645701"
 
 1. **Sütun Ekle/Kaldır** düğmesine tıklayın.
 
-     \- veya-
+     \- veya
 
      Herhangi bir sütun başlığına sağ tıklayın ve ardından **sütun Ekle/Kaldır**' a tıklayın.
 
@@ -110,7 +110,7 @@ ms.locfileid: "72645701"
 
 1. **Sütun Ekle/Kaldır** düğmesine tıklayın.
 
-     \- veya-
+     \- veya
 
      Herhangi bir sütun başlığına sağ tıklayın ve ardından **sütun Ekle/Kaldır**' a tıklayın.
 
@@ -118,13 +118,13 @@ ms.locfileid: "72645701"
 
 3. Sütun istediğiniz yere konumlandırıldığında, **Tamam**' a tıklayın.
 
-## <a name="BKMK_Copying_Data_to_the_Clipboard_or_Excel"></a>Verileri panoya veya Excel 'e kopyalama
+## <a name="copying-data-to-the-clipboard-or-excel"></a><a name="BKMK_Copying_Data_to_the_Clipboard_or_Excel"></a> Verileri panoya veya Excel 'e kopyalama
  Seçilen bir kod Ölçüm verisi satırını, her bir veri sütununun adı ve değeri için bir satır içeren bir metin dizesi olarak Pano 'ya seçip kopyalayabilirsiniz. Ayrıca, tüm kod ölçümleri sonuçlarının bir Excel elektronik tablosuna aktarılması için **Microsoft Excel 'de listeyi aç** ' a tıklayabilirsiniz.
 
-## <a name="BKMK_Creating_a_Work_Item_Based_on_Code_Metric_Results"></a>Kod ölçümü sonuçlarına göre Iş öğesi oluşturma
- **Kod ölçümü sonuçları** penceresindeki sonuçlara dayalı bir [!INCLUDE[esprfound](../includes/esprfound-md.md)] iş öğesi oluşturabilirsiniz. İş öğesi oluşturulduğunda, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **başlık** alanına otomatik olarak bir başlık girer ve **geçmiş** sekmesinin altındaki kod ölçümleri verilerini otomatik olarak girer.
+## <a name="creating-a-work-item-based-on-code-metric-results"></a><a name="BKMK_Creating_a_Work_Item_Based_on_Code_Metric_Results"></a> Kod ölçümü sonuçlarına göre Iş öğesi oluşturma
+ [!INCLUDE[esprfound](../includes/esprfound-md.md)] **Kod ölçümü sonuçları** penceresindeki sonuçlara dayalı bir iş öğesi oluşturabilirsiniz. İş öğesi oluşturulduğunda, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **başlık** alanına otomatik olarak bir başlık girer ve **Geçmiş** sekmesinin altındaki kod ölçümleri verilerini otomatik olarak girer.
 
- İş öğeleri oluşturma hakkında daha fazla bilgi için bkz. [iş öğesi &#91;yeniden yönlendirilen&#93;oluşturma](https://msdn.microsoft.com/24b2e064-16ac-4bf0-8de4-98a1f48b8c4b).
+ İş öğeleri oluşturma hakkında daha fazla bilgi için bkz. [&#91;iş öğesi oluşturma&#93;yeniden yönlendirme ](https://msdn.microsoft.com/24b2e064-16ac-4bf0-8de4-98a1f48b8c4b).
 
 #### <a name="to-create-a-work-item-based-on-a-result"></a>Bir sonuca göre iş öğesi oluşturmak için
 

@@ -1,5 +1,5 @@
 ---
-title: Office çözümleri güvenliğini sağlama
+title: Güvenli Office çözümleri
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,99 +15,99 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 31a17fdf51e838405c93efca79d7994cd40ece5c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62978619"
 ---
-# <a name="secure-office-solutions"></a>Office çözümleri güvenliğini sağlama
-  Office çözümleri için güvenlik modeli birçok teknoloji içerir: [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)], [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)], Microsoft Office ve Internet Explorer Yasak siteler bölgesi Güven Merkezi'nde. Aşağıdaki bölümlerde, farklı güvenlik özelliklerinin nasıl çalıştığı açıklanmaktadır:
+# <a name="secure-office-solutions"></a>Güvenli Office çözümleri
+  Office çözümleri için güvenlik modeli çeşitli teknolojiler içerir:,, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] Microsoft Office Güven Merkezi ve Internet Explorer kısıtlı siteler bölgesi. Aşağıdaki bölümlerde farklı güvenlik özelliklerinin nasıl çalıştığı açıklanır:
 
 - [Office çözümlerine güven verme](#GrantingTrustToSolutions)
 
 - [Belgelere güven verme](#GrantingTrustToDocuments)
 
-- [Windows Installer'ı kullanırken, güven verme](#GrantingTrustWindowsInstaller)
+- [Windows Installer kullanırken güven verme](#GrantingTrustWindowsInstaller)
 
-- [Office çözümleriyle ilgili belirli güvenlik konuları](#Security)
+- [Office çözümleri için belirli güvenlik konuları](#Security)
 
-- [Güvenlik geliştirme sırasında](#SecurityDuringDeployment)
+- [Geliştirme sırasında güvenlik](#SecurityDuringDeployment)
 
 - [Office çalışma zamanı için Visual Studio Araçları](#VisualStudioToolsForOfficeRuntime)
 
   [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="GrantingTrustToSolutions"></a> Office çözümlerine güven verme
- Office çözümlerine güven her son kullanıcıya aşağıdaki kanıta göre Office çözümünün güven güvenlik ilkesini değiştirmek anlamına gelir:
+## <a name="grant-trust-to-office-solutions"></a><a name="GrantingTrustToSolutions"></a> Office çözümlerine güven verme
+ Office çözümlerine güven verilmesi, her son kullanıcının güvenlik ilkesini aşağıdaki kanıta göre Office çözümüne güvenmek üzere değiştirme anlamına gelir:
 
-- Dağıtım bildirimi imzalamak için kullanılan sertifika.
+- Dağıtım bildirimini imzalamak için kullanılan sertifika.
 
-- Dağıtım bildirimi URL'si.
+- Dağıtım bildiriminin URL 'SI.
 
-  Daha fazla bilgi için [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md).
+  Daha fazla bilgi için bkz. [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md).
 
-## <a name="GrantingTrustToDocuments"></a> Belgelere güven verme
- Belge düzeyi özelleştirmesi belge güvenli bir konuma atanan bir dizinde olması gerekir. Daha fazla bilgi için [belgelere güven verme](../vsto/granting-trust-to-documents.md).
+## <a name="grant-trust-to-documents"></a><a name="GrantingTrustToDocuments"></a> Belgelere güven verme
+ Belge düzeyi özelleştirmesi, belgenin güvenilir bir konum olarak belirlenmiş bir dizinde olmasını gerektirir. Daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
 
-## <a name="GrantingTrustWindowsInstaller"></a> Windows Installer'ı kullanırken, güven verme
- Yönetici hakları gerektirir Program Files dizini Office çözümlerini yüklemek için MSI dosyasını oluşturmak için Windows Installer'ı kullanabilirsiniz. Office çözümlerinde Program Files dizini, Office çalışma zamanı için Visual Studio 2010 Araçları güvenilmesi için bu Office çözümleri göz önünde bulundurur ve ClickOnce güven istemi göstermez.
+## <a name="grant-trust-when-using-windows-installer"></a><a name="GrantingTrustWindowsInstaller"></a> Windows Installer kullanırken güven verme
+ Office çözümlerini, yönetici hakları gerektiren program dosyaları dizinine yüklemek üzere bir MSI dosyası oluşturmak için Windows Installer kullanabilirsiniz. Program dosyaları dizinindeki Office çözümleri için, Office çalışma zamanı için Visual Studio 2010 araçları, bu Office çözümlerini güvenilir kabul eder ve ClickOnce güven istemi 'ni göstermez.
 
-## <a name="Security"></a> Office çözümleriyle ilgili belirli güvenlik konuları
- Tarafından sağlanan güvenlik özelliklerine [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)], [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], ve Microsoft Office çeşitli Office çözümlerinde olası güvenlik tehditlerine karşı korumaya yardımcı olabilir. Daha fazla bilgi için [Office çözümleriyle ilgili belirli güvenlik konuları](../vsto/specific-security-considerations-for-office-solutions.md).
+## <a name="specific-security-considerations-for-office-solutions"></a><a name="Security"></a> Office çözümleri için belirli güvenlik konuları
+ , Ve Microsoft Office tarafından sağlanan güvenlik özellikleri, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] Office çözümlerinde çeşitli olası güvenlik tehditlerine karşı korumaya yardımcı olabilir. Daha fazla bilgi için bkz. [Office çözümleri Için belirli güvenlik konuları](../vsto/specific-security-considerations-for-office-solutions.md).
 
-## <a name="SecurityDuringDeployment"></a> Güvenlik geliştirme sırasında
- Geliştirme sürecinizi kolaylaştırmak için Visual Studio çalıştırmak ve çözümünüzü bilgisayarınızdaki bir projeyi her seferinde hata ayıklamak için gerekli olan güvenlik ilkesini ayarlar. Bazı senaryolarda projeyi geliştirmek için ek güvenlik adımlar gerekebilir.
+## <a name="security-during-development"></a><a name="SecurityDuringDeployment"></a> Geliştirme sırasında güvenlik
+ Geliştirme sürecinizi daha kolay hale getirmek için, Visual Studio, bir projeyi her oluşturduğunuzda çözümünüzde çalıştırmak ve çözümünüzde hata ayıklamak için gereken güvenlik ilkesini ayarlar. Bazı senaryolarda, projeyi geliştirmek için ek güvenlik adımları uygulamanız gerekebilir.
 
-### <a name="document-level-solutions"></a>Belge düzeyi çözümleri
- Aşağıdaki türlerde projeler geliştiriyorsanız bir belgenin tam yolu, Microsoft Office uygulamasının güvenilen konumlar listesine eklenmesi gerekir:
+### <a name="document-level-solutions"></a>Belge düzeyi çözümler
+ Aşağıdaki proje türlerini geliştiriyorsanız, bir belgenin tam yolu Microsoft Office uygulamasındaki güvenilir konumlar listesine eklenmelidir:
 
-- Belge düzeyi gibi bir ağ dosya paylaşımında olan çözümler  *\\\servername\sharename*.
+- * \\ \ Sunucuadı \ PaylaşımAdı*gibi bir ağ dosya paylaşımında bulunan belge düzeyi çözümler.
 
-- Belge düzeyi çözümleri kullanmak için Word *.doc* veya *.docm* dosyaları.
+- *. Doc* veya *. docm* dosyalarını kullanan Word için belge düzeyi çözümleri.
 
-  Sizin için belge konumunu güvenilir konumlar listesine ekleyin veya özellikle hata ayıklama ve klasörleri yapı alt dizinleri içerir. Daha fazla bilgi için Microsoft Office Çevrimiçi Yardım makalesine bakın [oluşturma, kaldırma veya değişiklik dosyalarınız için güvenilen bir konum](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62).
+  Belge konumunu Güvenilen konumlar listesine eklediğinizde veya özel olarak hata ayıklama ve yapı klasörlerini dahil ettiğinizde alt dizinleri ekleyin. Daha fazla bilgi için, [dosyalarınız için güvenilir bir konum oluşturma, kaldırma veya değiştirme](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62)Microsoft Office çevrimiçi yardım makalesini inceleyin.
 
 ### <a name="temporary-certificates"></a>Geçici sertifikalar
- İmzalama sertifikası zaten mevcut değilse visual Studio geçici bir sertifika oluşturur. Bu geçici bir sertifika yalnızca geliştirme sırasında kullanmak ve dağıtım için resmi bir sertifika satın alın.
+ İmzalama sertifikası zaten yoksa, Visual Studio geçici bir sertifika oluşturur. Bu geçici sertifikayı yalnızca geliştirme sırasında kullanmanız ve dağıtım için resmi bir sertifika satın almanız gerekir.
 
- Bir Office projesi ilk oluşturulduktan sonra geçici bir sertifika oluşturulur. Bir sonraki basışınızda **F5**, proje sertifika eklendiğinde değiştirilmiş olarak işaretlendiği için projeyi yeniden oluşturulur.
+ Geçici sertifika, bir Office projesi ilk kez derlendikten sonra oluşturulur. **F5**tuşuna bastığınızda proje yeniden oluşturulur çünkü proje, sertifika eklendiğinde değişiklik olarak işaretlenir.
 
- Olabilir birçok geçici sertifikalar bir süre sonra için geçici sertifikalar bazen temizlemeniz gerekir.
+ Bir süre sonra çok sayıda geçici sertifika olabilir, bu nedenle geçici sertifikaları bazen temizlemeniz gerekir.
 
-## <a name="VisualStudioToolsForOfficeRuntime"></a> Office çalışma zamanı için Visual Studio Araçları
- [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Yayımcı ve özelleştirme verilen izinleri kimliğini doğrulamak için özelliklere sahiptir. Bu izinleri bir dizi güvenlik denetimleri doğrular.
+## <a name="visual-studio-tools-for-office-runtime"></a><a name="VisualStudioToolsForOfficeRuntime"></a> Office çalışma zamanı için Visual Studio Araçları
+ , [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Yayımcının kimliğini ve bir özelleştirmeye verilen izinleri doğrulamak için özelliklere sahiptir. Bu izinleri bir dizi güvenlik denetimi aracılığıyla doğrular.
 
-### <a name="security-during-customization-loading"></a>Yüklemeyi özelleştirme sırasında güvenlik
- Belge düzeyi özelleştirmesi yüklendiğinde [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] her zaman belge güvenilen konumlar listesine olup olmadığını denetler. Ayrıca, çalışma zamanı çözümü uygulama bildiriminde FullTrust istekleri olup olmadığını denetler. Özelleştirme yüklenirken herhangi bir ek güvenlik denetimi gerçekleştirir.
+### <a name="security-during-customization-loading"></a>Özelleştirme yükleme sırasında güvenlik
+ Belge düzeyi özelleştirmesi yüklendiğinde, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] her zaman belgenin güvenilir konumlar listesinde olup olmadığını denetler. Ayrıca, çalışma zamanı çözümün uygulama bildiriminde FullTrust isteyip istemediğini denetler. Özelleştirme yüklenirken ek bir güvenlik denetimi yapılmaz.
 
-### <a name="sequence-of-security-checks-during-installation"></a>Güvenlik denetimleri yükleme sırasında bir dizi
- Office çözümünü yüklendiğinde veya güncellendiğinde, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] güven karar vermek için belirli bir sırayla bir dizi güvenlik denetimleri gerçekleştirir. Bir çözüm yüklendiğinde veya yalnızca çalışma zamanı çözümü güvenilir olduğunu belirlerse güncelleştirildi.
+### <a name="sequence-of-security-checks-during-installation"></a>Yükleme sırasında güvenlik denetimlerinin sırası
+ Bir Office çözümü yüklendiğinde veya güncelleştirilirken, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] güven kararı vermek için belirli bir sırada bir dizi güvenlik denetimi gerçekleştirir. Bir çözüm, yalnızca çalışma zamanı çözümün güvenilir olduğunu belirlerse yüklenir veya güncelleştirilir.
 
- Yükleme işlemi dört yoldan biriyle başlayabilirsiniz: Kurulum programını çalıştırarak, dağıtım bildirimini açarak, Microsoft Office uygulama konağı açarak veya çalıştırarak *VSTOInstaller.exe*.
+ Yükleme işlemini dört şekilde başlatabilirsiniz: Kurulum programını çalıştırarak, Microsoft Office uygulama konağını açarak veya *VSTOInstaller.exe*çalıştırarak dağıtım bildirimini açarak.
 
- İlk güvenlik denetimi yalnızca belge düzeyi çözümleri için geçerlidir. Belge düzeyi bir çözümün belgesini güvenilir bir konumda olması gerekir. Belge bir uzak ağ dosya paylaşımında ise veya varsa bir *.doc* veya *.docm* dosya adı uzantısı, belgenin konumu güvenilir konumlar listesine eklenmesi gerekir. Daha fazla bilgi için [belgelere güven verme](../vsto/granting-trust-to-documents.md).
+ İlk güvenlik denetimi yalnızca belge düzeyi çözümler için geçerlidir. Belge düzeyi çözümünün belgesi, güvenilir bir konumda olmalıdır. Belge, uzak bir ağ dosya paylaşımındaysa veya *. doc* veya *. docm* dosya adı uzantısına sahipse, belgenin konumu güvenilir konumlar listesine eklenmelidir. Daha fazla bilgi için bkz. [belgelere güven verme](../vsto/granting-trust-to-documents.md).
 
- ![VSTO güvenlik - Microsoft Office'ten yükleme](../vsto/media/host-install.png "VSTO güvenlik - Microsoft Office'ten yükleme")
+ ![VSTO güvenliği-Microsoft Office 'den yükleme](../vsto/media/host-install.png "VSTO güvenliği-Microsoft Office 'den yükleme")
 
- Sonraki güvenlik denetimleri kümesini Bilgisi'nden [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ve ClickOnce. Bu denetimler geçirmek için Office çözümleri FullTrust izin istemesi gerekir, güvenilmeyen yayımcı listede olmayan bir sertifika ile imzalanmış ve Internet Explorer Yasak bölgede değil bir konumda olması. Sertifika güvenilir yayımcı listede yer alıyorsa, çözüm hemen yüklenir. Aksi takdirde, biri de, başarısız olmadı, çözüm denetimleri son kümesine devam eder.
+ Sonraki güvenlik denetimleri kümesi [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ve ClickOnce ' dır. Bu denetimleri geçirmek için Office çözümlerinin FullTrust izinleri istemesi, güvenilmeyen yayımcı listesinde listelenmeyen bir sertifikayla imzalanması ve Internet Explorer kısıtlı bölgesinde olmayan bir konumda olması gerekir. Sertifika güvenilen yayımcı listesinde ise, çözüm hemen yüklenir. Aksi takdirde, denetimlerden biri başarısız olduysa, çözüm son denetim kümesine devam eder.
 
- ![VSTO güvenlik çözümlerini yükleme için](../vsto/media/installing.png "VSTO güvenlik çözümleri yüklemek için")
+ ![Çözümleri yüklemeye yönelik VSTO güvenliği](../vsto/media/installing.png "Çözümleri yüklemeye yönelik VSTO güvenliği")
 
- Varsa [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] güven istemi izin verilir ve çözümün güven henüz verilmedi, çalışma zamanı güven kararının, son kullanıcı tarafından yapılmasına izin verir. Bir giriş, kullanıcı çözüme güven verirse, kullanıcı listesine eklenir. Kullanıcı ekleme listesindeki tüm çözümleri tam güven ve yüklenebilir ve çalıştırın.
+ [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]Güven istemi 'ne izin veriliyorsa ve çözüme henüz güven verilmemişse, çalışma zamanı Son Kullanıcı tarafından güven kararının yapılmasına izin verir. Kullanıcı çözüme güven veriyorsa, Kullanıcı ekleme listesine bir giriş eklenir. Kullanıcı ekleme listesindeki tüm çözümler tam güvene sahiptir ve yüklenebilir ve çalıştırılabilir.
 
- Office çözümünün Program Files dizinine Windows Installer (MSI) kullanarak yüklediyseniz, Visual Studio 2010'da başlıyor, ekleme listesi atlanır. Daha fazla bilgi için [ekleme listelerini kullanarak Office güven çözümleri](../vsto/trusting-office-solutions-by-using-inclusion-lists.md).
+ Visual Studio 2010 ' den başlayarak, Office çözümü program dosyaları dizinine Windows Installer (MSI) kullanılarak yüklenirse ekleme listesi atlanır. Daha fazla bilgi için bkz. [ekleme listelerini kullanarak Office çözümlerine güvenme](../vsto/trusting-office-solutions-by-using-inclusion-lists.md).
 
- ![VSTO güvenlik - yüklemek için Kurulum programını kullanarak](../vsto/media/setup-vstoinstaller.png "VSTO güvenlik - yüklemek için Kurulum programını kullanma")
+ ![VSTO güvenliği-yüklemek için Kurulum programını kullanma](../vsto/media/setup-vstoinstaller.png "VSTO güvenliği-yüklemek için Kurulum programını kullanma")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md)
 - [Belgelere güven verme](../vsto/granting-trust-to-documents.md)
-- [Ekleme listelerini kullanarak Office çözümlerine güven](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)
-- [Nasıl yapılır: Ekleme listesi güvenliğini yapılandırma](../vsto/how-to-configure-inclusion-list-security.md)
-- [Nasıl yapılır: Office çözümlerini imzalama](../vsto/how-to-sign-office-solutions.md)
-- [Office çözüm güvenliğinde sorunlarını giderme](../vsto/troubleshooting-office-solution-security.md)
+- [Ekleme listelerini kullanarak Office çözümlerine güvenme](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)
+- [Nasıl yapılır: ekleme listesi güvenliğini yapılandırma](../vsto/how-to-configure-inclusion-list-security.md)
+- [Nasıl yapılır: Office çözümlerini Imzalama](../vsto/how-to-sign-office-solutions.md)
+- [Office çözüm güvenliği sorunlarını giderme](../vsto/troubleshooting-office-solution-security.md)
 - [Office çözümleri için uygulama bildirimleri](../vsto/application-manifests-for-office-solutions.md)
 - [Office çözümleri için dağıtım bildirimleri](../vsto/deployment-manifests-for-office-solutions.md)
 - [ClickOnce Başvurusu](../deployment/clickonce-reference.md)

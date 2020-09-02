@@ -12,10 +12,10 @@ ms.author: zorio
 author: zoeyr
 manager: jillfra
 ms.openlocfilehash: f97fd5aee27cdc97cf6eb5731da9fad9cb999e18
-ms.sourcegitcommit: 1efb6b219ade7c35068b79fbdc573a8771ac608d
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78169345"
 ---
 # <a name="vsix-language-pack-schema-20-reference"></a>VSıX dil paketi şeması 2,0 başvurusu
@@ -24,11 +24,11 @@ VSıX dil paketi şeması, VSıX paketleri için yerelleştirilmiş yükleme bil
 
 ## <a name="language-pack-schema"></a>Dil paketi şeması
 
-Dil paketi dosyasının kök öğesi, dil paketi biçiminin sürümü olan bir `Version`özniteliğiyle `<PackageLanguagePackManifest>`. Bu makalede, `Version` özniteliği `Version="2.0.0"`değer olarak ayarlanarak bildirimde belirtilen dil paketi biçiminin 2,0 sürümü açıklanır. Kök öğesi tam olarak bir alt `<Metadata>` öğesi içeriyor.
+Dil paketi dosyasının kök öğesi, `<PackageLanguagePackManifest>` `Version` dil paketi biçiminin sürümü olan öğesinin bir özniteliğiyle birlikte bulunur. Bu makalede, özniteliği değere ayarlanarak bildirimde belirtilen dil paketi biçiminin 2,0 sürümü açıklanır `Version` `Version="2.0.0"` . Kök öğesi tam olarak bir alt `<Metadata>` öğe içeriyor.
 
 ### <a name="packagelanguagepackmanifest-element"></a>PackageLanguagePackManifest öğesi
 
-`<PackageLanguagePackManifest>` öğesi içinde aşağıdaki öğe var olmalıdır:
+Öğesi içinde `<PackageLanguagePackManifest>` Aşağıdaki öğe var olmalıdır:
 
 |Başlık|Açıklama|
 |-----------|-----------------|
@@ -36,7 +36,7 @@ Dil paketi dosyasının kök öğesi, dil paketi biçiminin sürümü olan bir `
 
 ### <a name="metadata-element"></a>Metadata öğesi
 
-`<Metadata>` öğesi içinde aşağıdaki öğelere sahip olabilirsiniz:
+Öğesi içinde `<Metadata>` aşağıdaki öğelere sahip olabilirsiniz:
 
 |Başlık|Açıklama|
 |-----------|-----------------|

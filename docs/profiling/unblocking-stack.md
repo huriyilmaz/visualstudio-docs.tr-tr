@@ -1,5 +1,5 @@
 ---
-title: Yığın Engellemeyi Kaldırma | Microsoft Dokümanlar
+title: Yığının engellemesini kaldırma | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 23e790f37ba88498d5ac0ae03dd9ce7ae074f451
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63004410"
 ---
-# <a name="unblock-stack"></a>Engellemeyi kaldırma yığını
-Şu anda seçili iş parçacığı öğesi, geçerli işlemdeki başka bir iş parçacığı tarafından engellendikten sonra yürütmeye başlayan engellenmiş bir kesimi temsil ediyorsa, engellemeyi kaldıran iş parçacığıiçin çağrı yığını bu sekmede gösterilir.
+# <a name="unblock-stack"></a>Yığının engellemesini kaldır
+Şu anda seçili olan iş parçacığı öğesi, daha sonra geçerli işlem içindeki başka bir iş parçacığı tarafından engellendikten sonra yürütülmeye başladığı engellenen bir segmenti temsil ediyorsa, engellemeyi kaldırma işlemini yapan iş parçacığının çağrı yığını bu sekmede gösterilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

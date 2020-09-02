@@ -1,5 +1,5 @@
 ---
-title: Zaman Çizelgesi Caret | Microsoft Dokümanlar
+title: Zaman çizelgesi giriş karakteri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 370e19757890d6d9f56fad4e7b89b2197e515d9c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62999664"
 ---
-# <a name="timeline-caret"></a>Zaman çizelgesi caret
-Çalıştıran iş parçacığı kesiminin zaman çizelgesinde bir nokta seçtiğinizde, bunun üzerinde bir Zaman Çizelgesi deksitü çerçevesi gÜ Geçerli yığın sekmesinde görüntülenen arama yığını, segmenti tıklattığınız yere zaman içinde en yakın olan dır. Caret, **Geçerli** sekmesi altında görüntülenen arama yığınını örneklendiği anda ilişkilendirmek için kullanılır. Caret, kullanıcının seçtiği konuma en yakın çağrı yığını olan arama yığınının tam konumunu gösterir.
+# <a name="timeline-caret"></a>Zaman çizelgesi giriş işareti
+Yürütülen bir iş parçacığı segmentinin zaman çizelgesinde bir noktayı seçtiğinizde, üzerinde bir zaman çizelgesi giriş işareti belirir. Geçerli yığın sekmesinde görüntülenen çağrı yığını, segmenti tıklattığınız yere en yakın olan bir yerdir. Giriş işareti, **geçerli** sekme altında, örneklendiği zaman anlık ile birlikte görüntülenecek olan çağrı yığınını ilişkilendirmek için kullanılır. Giriş işareti, kullanıcının seçtiği konuma en yakın çağrı yığını olan çağrı yığınının tam konumunu gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

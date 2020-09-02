@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 2865bd89da3b59a24208e07739e8c56254959c88
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986101"
 ---
 # <a name="customize-a-ribbon-for-outlook"></a>Outlook için şerit özelleştirme
@@ -36,14 +36,14 @@ ms.locfileid: "72986101"
 
  **Şerit (görsel Tasarımcı)** öğesini kullanıyorsanız, **Özellikler** penceresinde şeridin **RibbonType** özelliğine tıklayın ve ardından değerler listesinden bir veya daha fazla şerit kimliği seçin.
 
- Projeye birden fazla şerit ekleyebilirsiniz. Birden fazla şerit bir şerit KIMLIĞINI paylaşıyorsa, çalışma zamanında hangi Şeritin görüntüleneceğini belirtmek için projenizin `ThisAddin` sınıfındaki `CreateRibbonExtensibilityObject` yöntemini geçersiz kılın. Daha fazla bilgi için bkz. [Şerit 'e genel bakış](../vsto/ribbon-overview.md). Her şerit türü hakkında daha fazla bilgi için bkz. [Outlook 2007 'Deki şeridi özelleştirme](/previous-versions/office/developer/office-2007/bb226712(v=office.12))teknik makalesi.
+ Projeye birden fazla şerit ekleyebilirsiniz. Birden fazla şerit bir şerit KIMLIĞINI paylaşıyorsa, `CreateRibbonExtensibilityObject` `ThisAddin` çalışma zamanında hangi Şeritin görüntüleneceğini belirtmek için projenizin sınıfındaki yöntemi geçersiz kılın. Daha fazla bilgi için bkz. [Şerit 'e genel bakış](../vsto/ribbon-overview.md). Her şerit türü hakkında daha fazla bilgi için bkz. [Outlook 2007 'Deki şeridi özelleştirme](/previous-versions/office/developer/office-2007/bb226712(v=office.12))teknik makalesi.
 
 ## <a name="specify-the-ribbon-type-by-using-ribbon-xml"></a>Şerit XML kullanarak Şerit türünü belirtme
- **Şerit (XML)** öğesini kullanıyorsanız, <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> yönteminde *ribbonID* parametresinin değerini kontrol edin ve uygun Şeriti döndürün.
+ **Şerit (XML)** öğesini kullanıyorsanız, yöntemindeki *ribbonID* parametresinin değerini kontrol edin <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> ve uygun Şeriti döndürün.
 
- <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> yöntemi, Visual Studio tarafından Şerit kod dosyasında otomatik olarak oluşturulur. *RibbonID* parametresi, Gezgin 'i veya belirli bir Inspector türünü tanımlayan bir dizedir. *RibbonID* parametresinin olası değerlerinin tüm listesi için bkz. [Outlook 2007 'deki şeridi özelleştirme](/previous-versions/office/developer/office-2007/bb226712(v=office.12))teknik makalesi.
+ <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A>Yöntemi, Visual Studio tarafından Şerit kod dosyasında otomatik olarak oluşturulur. *RibbonID* parametresi, Gezgin 'i veya belirli bir Inspector türünü tanımlayan bir dizedir. *RibbonID* parametresinin olası değerlerinin tüm listesi için bkz. [Outlook 2007 'deki şeridi özelleştirme](/previous-versions/office/developer/office-2007/bb226712(v=office.12))teknik makalesi.
 
- Aşağıdaki kod örneği, yalnızca `Microsoft.Outlook.Mail.Compose` denetçisinde özel bir şeridin nasıl görüntüleneceğini gösterir. Bu, Kullanıcı yeni bir e-posta iletisi oluşturduğunda açılan Inspector ' dır. Görüntülenecek Şerit, **Şerit** sınıfında oluşturulan `GetResourceText()` yönteminde belirtilir. **Şerit** sınıfı hakkında daha fazla bilgi için bkz. [Ribbon XML](../vsto/ribbon-xml.md).
+ Aşağıdaki kod örneği, özel bir şeridin yalnızca Inspector 'da nasıl görüntüleneceğini gösterir `Microsoft.Outlook.Mail.Compose` . Bu, Kullanıcı yeni bir e-posta iletisi oluşturduğunda açılan Inspector ' dır. Görüntülenecek Şerit, `GetResourceText()` **Şerit** sınıfında oluşturulan yönteminde belirtilir. **Şerit** sınıfı hakkında daha fazla bilgi için bkz. [Ribbon XML](../vsto/ribbon-xml.md).
 
  [!code-csharp[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#1)]
  [!code-vb[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#1)]

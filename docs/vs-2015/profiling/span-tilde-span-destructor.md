@@ -1,5 +1,5 @@
 ---
-title: 'span:: ~ span yok Edicisi | Microsoft Docs'
+title: 'span:: ~ span yıkıcı | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,19 +14,19 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 978270653e3c872be522551a6a515b42d0fb1282
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199791"
 ---
 # <a name="spanspan-destructor"></a>span::~span Yok Edicisi
 
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yok eder `span` nesne ve kaynaklarını serbest bırakır.
+Nesneyi yok eder `span` ve kaynaklarını serbest bırakır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 ~span();
@@ -34,10 +34,10 @@ Yok eder `span` nesne ve kaynaklarını serbest bırakır.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Başlık:** cvmarkersobj.h
+**Üst bilgi:** cvmarkersobj. h
 
-**Namespace:** CONCURRENCY::Diagnostic
+**Ad alanı:** Eşzamanlılık::d ıagstik
 
 ## <a name="see-also"></a>Ayrıca Bkz.
 
-[span Sınıfı](../profiling/span-class.md)
+[Span sınıfı](../profiling/span-class.md)

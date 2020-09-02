@@ -1,5 +1,5 @@
 ---
-title: Disk İşlemleri Raporu (İş Parçacığı Görünümü) | Microsoft Dokümanlar
+title: Disk Işlemleri raporu (Iş parçacıkları görünümü) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,20 +13,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 69cbef53bcca74cceba4f9409b578fca45a58806
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62970076"
 ---
 # <a name="disk-operations-report-threads-view"></a>Disk İşlemleri Raporu (İş Parçacıkları Görünümü)
-Disk İşlemleri Raporu, disk kanallarındaki disk G/Ç işlemlerini gösterir.
+Disk Işlemleri raporu disk kanallarındaki disk g/ç işlemlerini gösterir.
 
- Şu anda görünür zaman penceresinde profili olan işlem adına gerçekleşen her disk erişimi için bu bilgiler bildirilir:
+ Şu anda görünür zaman penceresinde profili oluşturulan işlem adına gerçekleşen her disk erişimi için, bu bilgiler raporlanır:
 
-- Disk erişimini gerçekleştiren işlemin adı ve PID'si
+- Disk erişimini gerçekleştiren işlemin adı ve PID 'SI
 
-- Diske erişen iş parçacığının kimliği
+- Diske erişen iş parçacığının KIMLIĞI
 
 - Erişilen dosyanın adı
 
@@ -34,13 +34,13 @@ Disk İşlemleri Raporu, disk kanallarındaki disk G/Ç işlemlerini gösterir.
 
 - Okunan bayt sayısı
 
-- Okuma gecikmesi, milisaniye cinsinden
+- Milisaniye cinsinden okuma gecikmesi
 
 - Yazma sayısı
 
 - Yazılan bayt sayısı
 
-- Yazma gecikmesi, milisaniye cinsinden
+- Milisaniye cinsinden yazma gecikmesi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

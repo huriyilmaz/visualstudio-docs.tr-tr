@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 9d245ddf00e4005b763bcd4437d3f8c18d05291e
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986035"
 ---
 # <a name="grant-trust-to-documents"></a>Belgelere güven verme
@@ -28,7 +28,7 @@ ms.locfileid: "72986035"
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
 ## <a name="trusted-locations"></a>Güvenilen konumlar
- [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] ve Office 2010 ' deki uygulamalar, kullanıcıların güvenilen konumlar gibi güvenlik ve gizlilik ayarlarını yapılandırabilecekleri güven merkezlerine sahiptir. Office çözümleri için yerel bilgisayar güvenilen bir konum olarak kabul edilir. Ancak, daha yüksek risk nedeniyle, sistem için geçici klasörler, her bir Kullanıcı ve Internet Explorer için güvenli olmayan bazı dizinler vardır.
+ [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]Ve Office 2010 ' deki uygulamalar, kullanıcıların güvenilen konumlar gibi güvenlik ve gizlilik ayarlarını yapılandırabileceği güven merkezlerine sahiptir. Office çözümleri için yerel bilgisayar güvenilen bir konum olarak kabul edilir. Ancak, daha yüksek risk nedeniyle, sistem için geçici klasörler, her bir Kullanıcı ve Internet Explorer için güvenli olmayan bazı dizinler vardır.
 
  Güven Merkezi hakkında daha fazla bilgi için bkz. [Office 2010 'de güvenlik ve ilkeler ve ayarlar](/previous-versions/office/office-2010/cc178946(v=office.14)). Güvenilen klasörleri oluşturma, yönetme, kaldırma ve yapılandırma hakkında daha fazla bilgi için, bkz. [2007 Office sisteminde güvenilen konumları ve güvenilir yayımcıları yapılandırma ayarlarını yapılandırma](/previous-versions/office/office-2007-resource-kit/cc178948(v=office.12)) ve [dosyalarınız için güvenilir bir konum oluşturma, kaldırma veya değiştirme](https://support.office.com/article/Create-remove-or-change-a-trusted-location-for-your-files-f5151879-25ea-4998-80a5-4208b3540a62).
 

@@ -1,5 +1,5 @@
 ---
-title: Dosya adı uzantıları için fiil kaydetme | Microsoft Docs
+title: Dosya adı uzantıları için fiiller kaydetme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,38 +11,38 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dbd97310163a4eb3ae5502c6341dc73322ca653d
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65685277"
 ---
 # <a name="registering-verbs-for-file-name-extensions"></a>Dosya Adı Uzantıları için Fiil Kaydetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir uygulama bir dosya adı uzantısı ilişkilendirme genellikle bir kullanıcı bir dosyayı çift tıkladığında gerçekleşen tercih edilen bir eylem vardır. Bu eyleme karşılık gelen bir fiil, örneğin açık eylem bağlandığı tercih edilir.  
+Bir dosya adı uzantısının uygulamayla ilişkilendirilmesi genellikle Kullanıcı bir dosyayı çift tıkladığında oluşan tercih edilen bir eyleme sahiptir. Bu tercih edilen eylem, eyleme karşılık gelen, örneğin açık olan bir fiil ile bağlantılıdır.  
   
- HKEY_CLASSES_ROOT bulunan Kabuk anahtarı kullanarak bir uzantı için bir programlı tanımlayıcısı (ProgID) ile ilişkili olan fiiller kaydedebilirsiniz\\*ProgID*\shell. Daha fazla bilgi için [dosya türleri](https://msdn.microsoft.com/library/windows/desktop/cc144148\(v=vs.85\).aspx).  
+ Bir uzantı için programlı tanımlayıcı (ProgID) ile ilişkili fiilleri, HKEY_CLASSES_ROOT \\ *ProgID*\ Shellkonumunda bulunan kabuk anahtarını kullanarak kaydedebilirsiniz. Daha fazla bilgi için bkz. [dosya türleri](https://msdn.microsoft.com/library/windows/desktop/cc144148\(v=vs.85\).aspx).  
   
-## <a name="registering-standard-verbs"></a>Standart fiiller kaydediliyor  
- İşletim sistemi, aşağıdaki standart fiiller tanır:  
+## <a name="registering-standard-verbs"></a>Standart fiilleri kaydetme  
+ İşletim sistemi aşağıdaki standart fiilleri tanır:  
   
-- Open  
+- Açık  
   
 - Düzenle  
   
-- Yürütme  
+- Oynama  
   
 - Yazdırma  
   
 - Önizleme  
   
-  Mümkün olduğunda, standart bir fiil kaydedin. Açık bir fiil en yaygın seçenektir. Dosyayı açıp dosyayı düzenlemeye arasında NET bir fark varsa düzenleme fiili kullanın. Bir .htm dosyasının düzenleme bir HTML Düzenleyicisi başlatılır ancak örneğin, bir .htm dosyasının açma tarayıcı içinde görüntüler. Standart fiiller ile işletim sistemi yerel yerelleştirilmiştir.  
+  Mümkün olduğunda, standart bir fiil kaydedin. En yaygın seçim açık fiildir. Dosyayı açma ve dosyayı düzenleme arasında net bir fark varsa, düzenleme fiilini kullanın. Örneğin, bir. htm dosyasını açmak tarayıcıda görüntüler, ancak bir. htm dosyasını düzenlediğinizde bir HTML Düzenleyicisi başlatılır. Standart fiiller, işletim sistemi yerel ayarıyla yereldir.  
   
 > [!NOTE]
-> Standart fiiller kaydederken açık anahtar için varsayılan değer ayarlı değil. Varsayılan değer menüsünde görüntü dizesini içerir. Bu dize standart fiiller için işletim sistemi sağlar.  
+> Standart fiilleri kaydederken, Open anahtarı için varsayılan değeri ayarlamayın. Varsayılan değer, menüdeki Görüntüleme dizesini içerir. İşletim sistemi bu dizeyi standart fiiller için sağlar.  
   
- Proje dosyaları, yeni bir örneğini başlatmak için kaydedilmelidir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dosya açıldığında bir kullanıcı. Standart fiili kayıt için aşağıdaki örnekte bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] proje.  
+ Proje dosyaları [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , bir Kullanıcı dosyayı açtığında yeni bir örneğini başlatmak için kaydedilmelidir. Aşağıdaki örnekte, bir proje için standart bir fiil kaydı gösterilmektedir [!INCLUDE[csprcs](../includes/csprcs-md.md)] .  
   
 ```  
 [HKEY_CLASSES_ROOT\.csproj]  
@@ -73,7 +73,7 @@ Bir uygulama bir dosya adı uzantısı ilişkilendirme genellikle bir kullanıc�
 @="\"C:\\Program Files\\Common Files\\Microsoft Shared\\MSEnv\\VSLauncher.exe\" \"%1\""  
 ```  
   
- Mevcut bir örneğini içinde bir dosyayı açmaya [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], DDEEXEC anahtarını kaydedin. Standart fiili kayıt için aşağıdaki örnekte bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] .cs dosyası.  
+ Var olan bir örneğinde bir dosyayı açmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , BIR DDEEXEC anahtarı kaydedin. Aşağıdaki örnekte. cs dosyası için standart bir fiil kaydı gösterilmektedir [!INCLUDE[csprcs](../includes/csprcs-md.md)] .  
   
 ```  
 [HKEY_CLASSES_ROOT\.cs]  
@@ -107,11 +107,11 @@ Bir uygulama bir dosya adı uzantısı ilişkilendirme genellikle bir kullanıc�
 @="system"  
 ```  
   
-## <a name="setting-the-default-verb"></a>Varsayılan fiili ayarlama  
- Varsayılan fiili bir kullanıcı bir dosyayı Windows Gezgini'nde çift tıkladığında çalıştırılan bir eylemdir. Varsayılan fiili HKEY_CLASSES_ROOT için varsayılan değer olarak belirtilen eylem olan\\*ProgID*\Shell anahtarı. Hiçbir değer belirtilmemişse, varsayılan fiili HKEY_CLASSES_ROOT içinde belirtilen ilk fiil olan\\*ProgID*\Shell anahtar listesi.  
+## <a name="setting-the-default-verb"></a>Varsayılan fiil ayarlanıyor  
+ Varsayılan fiil, bir Kullanıcı Windows Gezgini 'nde bir dosyayı çift tıkladığında yürütülen eylemdir. Varsayılan fiil, HKEY_CLASSES_ROOT \\ *ProgID*\ Shell anahtarı için varsayılan değer olarak belirtilen fiildir. Hiçbir değer belirtilmemişse, varsayılan fiil HKEY_CLASSES_ROOT \\ *ProgID*\ Shell anahtar listesinde belirtilen ilk fiildir.  
   
 > [!NOTE]
-> Varsayılan fiil için uzantı yan yana dağıtım olarak değiştirmeyi planlıyorsanız, yükleme ve kaldırma üzerindeki etkisini göz önünde bulundurun. Yükleme sırasında özgün varsayılan değerin üzerine yazılır.  
+> Yan yana dağıtımda bir uzantının varsayılan fiilini değiştirmeyi planlıyorsanız, yükleme ve kaldırma üzerindeki etkiyi göz önünde bulundurun. Yükleme sırasında özgün varsayılan değerin üzerine yazılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yan Yana Dosya İlişkilendirmelerini Yönetme](../extensibility/managing-side-by-side-file-associations.md)

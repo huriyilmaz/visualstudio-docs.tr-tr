@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4acf8ca4e116bfb0ab990f1b0aed66bef95820ad
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283911"
 ---
 # <a name="how-to-view-save-and-configure-build-log-files"></a>Nasıl yapılır: derleme günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma
@@ -58,7 +58,7 @@ Ayrıca, `-fileLogger` ( `-fl` ) komut satırı seçeneğini kullanarak doğruda
     |**En az**|Derleme ve hataların, uyarıların ve son derece önemli olarak sınıflandırılan mesajların özetini görüntüler.|
     |**Olağan**|Derleme özetini görüntüler; yüksek oranda önemli olarak sınıflandırılan hatalar, uyarılar ve iletiler ve yapı ana adımları. En sık bu ayrıntı düzeyini kullanacaksınız.|
     |**Ayrıntılı**|Derleme özetini görüntüler; yüksek oranda önemli olarak sınıflandırılan hatalar, uyarılar ve iletiler Tüm Yapı adımları; ve normal önem derecesine göre sınıflandırılan mesajlar.|
-    |**Tanı**|Yapı için kullanılabilen tüm verileri görüntüler. Özel derleme betiklerine ve diğer yapı sorunlarıyla ilgili sorunları ayıklamanıza yardımcı olması için bu ayrıntı düzeyini kullanabilirsiniz.|
+    |**Tanılama**|Yapı için kullanılabilen tüm verileri görüntüler. Özel derleme betiklerine ve diğer yapı sorunlarıyla ilgili sorunları ayıklamanıza yardımcı olması için bu ayrıntı düzeyini kullanabilirsiniz.|
 
      Daha fazla bilgi için bkz. [Seçenekler iletişim kutusu, projeler ve çözümler, oluşturma ve çalıştırma](../ide/reference/options-dialog-box-projects-and-solutions-build-and-run.md) <xref:Microsoft.Build.Framework.LoggerVerbosity> .
 
@@ -72,4 +72,4 @@ Ayrıca, `-fileLogger` ( `-fl` ) komut satırı seçeneğini kullanarak doğruda
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio 'da projeler ve çözümler oluşturma ve Temizleme](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
-- [Derle ve derle](../ide/compiling-and-building-in-visual-studio.md)
+- [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)

@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 79d865a426af2c089bfcc6bd1e733b4ecc185077
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592288"
 ---
 # <a name="the-xslt-profiler"></a>XSLT Profiler
@@ -30,7 +30,7 @@ XSLT Profiler, Visual Studio 'nun bir parçasıdır ve **XML** menüsünde kulla
 
 1. Visual Studio 'da bir XSLT belgesi açın.
 
-2. Menü çubuğunda, **XML** > **profili XSLT**' yi seçin.
+2. Menü çubuğunda, **XML**  >  **profili XSLT**' yi seçin.
 
 3. Bir giriş XML belgesi sağlayın. Bir XML belgesi zaten açık değilse sizden dosya istenir.
 
@@ -64,7 +64,7 @@ XSLT Profiler, Visual Studio 'nun bir parçasıdır ve **XML** menüsünde kulla
 
     - **Dışlamalı uygulama süresi**
 
-    - **Çağrı sayısı**
+    - **Çağrı Sayısı**
 
    Tüm zaman sütunları mutlak değerlerde ve yüzdede görüntülenir. **Dışlamalı** terim, bu işlevin yürütülmesi sırasında çağrılan diğer işlevler tarafından harcanan sürenin dışlayarak yürütülmesi için harcanan toplam süreyi ifade eder.
 
@@ -80,7 +80,7 @@ XSLT Profiler, Visual Studio 'nun bir parçasıdır ve **XML** menüsünde kulla
 
 - **Tarafından çağrılan işlevler**: belirli bir işlev tarafından çağrılan tüm işlevler, görünümün alt bölümünde listelenir.
 
-`SyncToNavigator` adlı bir işlev görünümün orta kısmında görünürse, `SyncToNavigator` işlevi çağıran tüm işlevler, görünümün en üst kısmında görünür ve `SyncToNavigator` tarafından çağrılan tüm işlevler görünümün alt bölümünde görünür.
+Adında bir işlev, `SyncToNavigator` görünümün orta kısmında görünürse, işlevi çağıran tüm işlevler `SyncToNavigator` görünümün en üst kısmında görünür ve tarafından çağrılan tüm işlevler `SyncToNavigator` görünümün alt bölümünde görünür.
 
 - Görünümün orta bölümündeki işlevini, görünümün diğer iki bölümünde listelenen işlevlerden herhangi birine çift tıklayarak değiştirebilirsiniz. Daha sonra Görünüm, değişiklikleri otomatik olarak yansıtacak şekilde güncelleştirilir.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ASP.NET işleminin adını bulma | Microsoft Docs'
+title: 'Nasıl yapılır: ASP.NET Işleminin adını bulma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,52 +18,52 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 53072013c1665687262d30f4a0c2720641c920be
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65685958"
 ---
-# <a name="how-to-find-the-name-of-the-aspnet-process"></a>Nasıl yapılır: ASP.NET işleminin adını bulma
+# <a name="how-to-find-the-name-of-the-aspnet-process"></a>Nasıl Yapılır: ASP.NET İşleminin Adını Bulma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Çalışan bir eklemek için [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulama sahip adını bilmek [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] işlemi:  
+Çalışan bir uygulamaya iliştirmek için [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] işlemin adını bilmeniz gerekir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] :  
   
-- IIS 6.0 veya IIS 7.0 çalıştırıyorsanız, w3wp.exe addır.  
+- IIS 6,0 veya IIS 7,0 çalıştırıyorsanız, ad w3wp.exe.  
   
-- IIS önceki bir sürümünü çalıştırıyorsanız, aspnet_wp.exe addır.  
+- IIS 'nin daha önceki bir sürümünü çalıştırıyorsanız, ad aspnet_wp.exe.  
   
-  Kullanılarak oluşturulan uygulamalar için [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] veya sonraki sürümler [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] kod dosya sisteminde bulunan ve test sunucu WebDev.WebServer.exe altında çalıştırın. Bu durumda, yerine WebDev.WebServer.exe iliştirmeniz gerekir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] işlem. Bu senaryo, yalnızca yerel hata ayıklama için geçerlidir.  
+  Veya sonraki sürümleri kullanılarak oluşturulan uygulamalar için [!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)] , [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] kod dosya sisteminde bulunabilir ve test sunucusu WebDev.WebServer.exe altında çalıştırılabilir. Bu durumda, işlem yerine WebDev.WebServer.exe eklemeniz gerekir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] . Bu senaryo yalnızca yerel hata ayıklama için geçerlidir.  
   
-  İşlem içi çalıştırırken eski ASP uygulamalarını IIS işlemi inetinfo.exe içinde çalıştırın.  
+  Daha eski ASP uygulamaları, işlem içinde çalışırken inetinfo.exe IIS işlemi içinde çalışır.  
   
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-determine-whether-project-code-resides-on-the-file-system-or-iis"></a>Proje kodu dosya sisteminde veya IIS bulunduğunu belirlemek için  
+### <a name="to-determine-whether-project-code-resides-on-the-file-system-or-iis"></a>Proje kodunun dosya sisteminde mi yoksa IIS 'de mi bulunduğunu belirleme  
   
-1. Visual Studio'da açın **Çözüm Gezgini** zaten açık değilse.  
+1. Visual Studio 'da zaten açık değilse **Çözüm Gezgini** açın.  
   
-2. Uygulamanın adını içeren üst düğümü seçin.  
+2. Uygulamanın adını içeren en üst düğümü seçin.  
   
-3. Varsa **özellikleri** pencere başlığını içeren bir dosya yolu, dosya sisteminde uygulama kodu bulunur.  
+3. **Özellikler** penceresi başlığı bir dosya yolu içeriyorsa, uygulama kodu dosya sisteminde bulunur.  
   
-     Aksi takdirde, **özellikleri** pencere başlığı Web sitesi adını içerir.  
+     Aksi halde, **Özellikler** penceresi başlığı web sitesinin adını içerir.  
   
-### <a name="to-determine-the-iis-version-under-which-the-application-is-running"></a>Uygulamanın çalıştırıldığı IIS sürümü belirlemek için  
+### <a name="to-determine-the-iis-version-under-which-the-application-is-running"></a>Uygulamanın altında çalıştığı IIS sürümünü belirleme  
   
-1. Bulma **Yönetimsel Araçlar** ve çalıştırın. İşletim sistemine bağlı olarak bu simge içinde olabilir **Denetim Masası**, ya da'a tıkladığınızda görüntülenen menü girdisi **Başlat**.  
+1. **Yönetimsel Araçları** bulun ve çalıştırın. İşletim sisteminize bağlı olarak, bu, **Denetim Masası 'nda**bir simge veya **Başlat**' a tıkladığınızda görüntülenen bir menü girdisi olabilir.  
   
-     Windows XP'de **Denetim Masası** kategori görünümünde veya Klasik olabilir. Kategori görünümünde, tıklamanız gerekmiyor. **Klasik görünümüne geç** veya **performans ve Bakım** görmek için **Yönetimsel Araçlar** simgesi.  
+     Windows XP 'de, **Denetim Masası** Kategori görünümünde veya Klasik görünümde olabilir. Kategori görünümünde, **Yönetimsel Araçlar** simgesini görmek Için **Klasik Görünüm** veya **performans ve bakım** ' a geçmeniz gerekir.  
   
-2. Gelen **Yönetimsel Araçlar**, Internet Information Services'ı çalıştırın. Bir MMC iletişim kutusu görüntülenir.  
+2. **Yönetim araçlarından**Internet Information Services çalıştırın. Bir MMC iletişim kutusu görüntülenir.  
   
-3. Sol bölmede listelenen birden fazla bilgisayar varsa, uygulama kodu yer aldığı bir tane seçin.  
+3. Sol bölmede listelenen birden fazla bilgisayar varsa, uygulama kodunun yer aldığı bir tane seçin.  
   
-4. IIS sürümü bulunduğu **sürüm** sağ bölmenin sütun.  
+4. IIS sürümü Sağ bölmenin **Sürüm** sütunnda bulunur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Uzaktan hata ayıklama Web uygulamaları önkoşulları](../debugger/prerequistes-for-remote-debugging-web-applications.md)   
+ [Uzaktan hata ayıklama Web uygulamalarında önkoşuls](../debugger/prerequistes-for-remote-debugging-web-applications.md)   
  [Sistem gereksinimleri](../debugger/aspnet-debugging-system-requirements.md)   
- [ASP.NET'de hata ayıklamaya hazırlanıyor](../debugger/preparing-to-debug-aspnet.md)   
+ [ASP.NET hata ayıklama hazırlığı yapılıyor](../debugger/preparing-to-debug-aspnet.md)   
  [Web Uygulamalarında ve Betikte Hata Ayıklama](../debugger/debugging-web-applications-and-script.md)

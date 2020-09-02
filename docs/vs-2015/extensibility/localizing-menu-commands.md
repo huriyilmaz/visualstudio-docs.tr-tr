@@ -16,39 +16,39 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c879072b55729e249b1aecd665d6f470f4138a75
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65686130"
 ---
 # <a name="localizing-menu-commands"></a>Menü Komutlarını Yerelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Menüsü yerelleştirilmiş metin sağlayabilir ve araç çubuğu yerelleştirilmiş .vsct dosyaları oluşturarak komutları ve .resx dosyaları, VSPackage'ı ve ardından Proje dosyalarını güncelleştirmek için değişiklikleri birleştirmek yerelleştirilmiş.  
+VSPackage için yerelleştirilmiş. vsct dosyaları ve yerelleştirilmiş. resx dosyaları oluşturarak ve sonra değişiklikleri içerecek proje dosyalarını güncelleştirerek menü ve araç çubuğu komutları için yerelleştirilmiş metin sağlayabilirsiniz.  
   
- Bir yükleme deneyimi yerelleştirmek hakkında daha fazla bilgi için bkz. [VSIX paketlerini yerelleştirme](../extensibility/localizing-vsix-packages.md).  
+ Yükleme deneyiminin yerelleştirilmesi hakkında daha fazla bilgi için bkz. [VSIX paketlerini yerelleştirme](../extensibility/localizing-vsix-packages.md).  
   
 ## <a name="localizing-command-names"></a>Komut adlarını yerelleştirme  
- Vspackage'larda, menü komutlarını ve araç çubuğu düğmeleri .vsct dosyası içinde tanımlanır.  
+ VSPackages 'de, menü komutları ve araç çubuğu düğmeleri. vsct dosyasında tanımlanmıştır.  
   
-1. İçinde **Çözüm Gezgini**, .vsct dosyanın adını değiştirmek *filename*için .vsct *filename*.en-US.vsct.  
+1. **Çözüm Gezgini**,. vsct dosyasının adını *filename*. vsct konumundan *filename*. en-US. vsct olarak değiştirin.  
   
-2. Bir kopyasını *filename*.en-US.vsct her bir yerelleştirme dili.  
+2. Her yerelleştirilmiş dil için *filename*. en-US. vsct kopyasını oluşturun.  
   
-    Her kopya adı *filename*. *Yerel ayar*.vsct, burada *yerel ayar* belirli bir kültür adı. Kültür adı değerleri listesi için bkz. [Microsoft tarafından atanan yerel kimlikler](https://msdn.microsoft.com/library/windows/apps/jj657969.aspx).  
+    Her kopya *Dosya*adını adlandırın. *Locale*. vsct, burada *yerel ayar* belirli bir kültür adıdır. Kültür adı değerlerinin listesi için bkz. [Microsoft tarafından atanan yerel ayar kimlikleri](https://msdn.microsoft.com/library/windows/apps/jj657969.aspx).  
   
-    Bunlar *filename*. *Yerel ayar*.vsct dosyaları paketiniz için yerelleştirilmiş menü metni içerir.  
+    Bu *dosya adı*. *Locale*. vsct dosyaları, paketiniz için yerelleştirilmiş menü metnini içerir.  
   
-3. Her açın *filename*. *Yerel ayar*metin yerelleştirmek için .vsct dosyası.  
+3. Her *dosya adını*açın. Metni yerelleştirmek için *locale*. vsct dosyası.  
   
-   1. Değiştirme [ButtonText](../extensibility/buttontext-element.md) öğe belirli bir dili için uygun değerleri.  
+   1. [ButtonText](../extensibility/buttontext-element.md) öğe değerlerini belirli bir dile uygun şekilde değiştirin.  
   
-   2. Yerelleştirilmiş simgeler sağlayacaksa değiştirme [bit eşlem](../extensibility/bitmap-element.md) hedef dosyalarının olduğu noktaya değerleri.  
+   2. Yerelleştirilmiş simgeler sağlayabiliyorsanız, [bit eşlem](../extensibility/bitmap-element.md) değerlerini hedef dosyalara işaret edecek şekilde değiştirin.  
   
-      Aşağıdaki örnek, bir Aile ağacı Gezgini araç penceresi açmak bir komut için İngilizce ve İspanyolca düğme metni gösterir.  
+      Aşağıdaki örnekte, bir komut için bir aile ağacı Gezgin araç penceresi açmak üzere Ingilizce ve Ispanyolca düğme metni gösterilmektedir.  
   
-      [FamilyTree.en-US.vsct]  
+      [FamilyTree. en-US. vsct]  
   
    ```xml  
    <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">  
@@ -61,7 +61,7 @@ Menüsü yerelleştirilmiş metin sağlayabilir ve araç çubuğu yerelleştiril
    </Button>  
    ```  
   
-    [FamilyTree.es-ES.vsct]  
+    [FamilyTree.es-ES. vsct]  
   
    ```xml  
    <Button guid="guidLocalizedPackageCmdSet" id="cmdidFamilyTree" priority="0x0100" type="Button">  
@@ -75,24 +75,24 @@ Menüsü yerelleştirilmiş metin sağlayabilir ve araç çubuğu yerelleştiril
   
    ```  
   
-## <a name="localizing-other-text-resources"></a>Diğer metin kaynakları yerelleştirme  
- Komut adlarını dışında metin kaynaklar kaynak (.resx) dosyalarını tanımlanır.  
+## <a name="localizing-other-text-resources"></a>Diğer metin kaynaklarını yerelleştirme  
+ Komut adlarından farklı metin kaynakları kaynak (. resx) dosyalarında tanımlanır.  
   
-1. VSPackage.resx VSPackage.en-US.resx yeniden adlandırın.  
+1. VSPackage. resx ' i VSPackage. en-US. resx olarak yeniden adlandırın.  
   
-2. Yerelleştirilmiş her dille VSPackage.en-US.resx dosyanın bir kopyasını oluşturun.  
+2. Her yerelleştirilmiş dil için VSPackage. en-US. resx dosyasının bir kopyasını oluşturun.  
   
-     VSPackage'ı her kopya adı. *Yerel*.resx, burada *yerel ayar* belirli bir kültür adı.  
+     Her kopya VSPackage olarak adlandırın. *Locale*. resx, *yerel ayar* belirli bir kültür adıdır.  
   
-3. Resources.resx Resources.en-US.resx yeniden adlandırın.  
+3. Resources. resx ' i resources. en-US. resx olarak yeniden adlandırın.  
   
-4. Yerelleştirilmiş her dille Resources.en-US.resx dosyanın bir kopyasını oluşturun.  
+4. Her yerelleştirilmiş dil için resources. en-US. resx dosyasını bir kopyasını oluşturun.  
   
-     Her kopya kaynak adı. *Yerel*.resx, burada *yerel ayar* belirli bir kültür adı.  
+     Her kopyalama kaynağını adlandırın. *Locale*. resx, *yerel ayar* belirli bir kültür adıdır.  
   
-5. Dize değerleri belirli dil ve kültür için uygun şekilde değiştirmek için her bir .resx dosyasını açın. Aşağıdaki örnek, bir araç penceresinin başlık çubuğu için yerelleştirilmiş kaynak tanımı gösterilmektedir.  
+5. Dize değerlerini belirli dile ve kültüre uygun şekilde değiştirmek için her. resx dosyasını açın. Aşağıdaki örnekte bir araç penceresinin başlık çubuğu için yerelleştirilmiş kaynak tanımı gösterilmektedir.  
   
-     [Resources.en-US.resx]  
+     [Resources. en-US. resx]  
   
     ```xml  
     <data name="ToolWindowTitle" xml:space="preserve">  
@@ -100,7 +100,7 @@ Menüsü yerelleştirilmiş metin sağlayabilir ve araç çubuğu yerelleştiril
     </data>  
     ```  
   
-     [ES.resx Resources.es]  
+     [Resources.es-ES. resx]  
   
     ```xml  
     <data name="ToolWindowTitle" xml:space="preserve">  
@@ -109,26 +109,26 @@ Menüsü yerelleştirilmiş metin sağlayabilir ve araç çubuğu yerelleştiril
   
     ```  
   
-## <a name="incorporating-localized-resources-into-the-project"></a>Yerelleştirilmiş kaynaklar projeye ekleme  
- AssemblyInfo.cs dosyası ve yerelleştirilmiş kaynakları eklemek için proje dosyasını değiştirmeniz gerekir.  
+## <a name="incorporating-localized-resources-into-the-project"></a>Yerelleştirilmiş kaynakları projeye ekleme  
+ Yerelleştirilmiş kaynakları birleştirmek için assemblyinfo.cs dosyasını ve proje dosyasını değiştirmeniz gerekir.  
   
-1. Gelen **özellikleri** düğümünde **Çözüm Gezgini**, AssemblyInfo.cs veya AssemblyInfo.vb Düzenleyicisi'nde açın.  
+1. **Çözüm Gezgini** **Özellikler** düğümünden, düzenleyicide Assemblyinfo.cs veya AssemblyInfo. vb dosyasını açın.  
   
-2. Şu girişi ekleyin.  
+2. Aşağıdaki girişi ekleyin.  
   
     ```csharp  
     [assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]  
     ```  
   
-     Bu ABD İngilizcesi varsayılan dili ayarlar.  
+     Bu, varsayılan dil olarak ABD Ingilizcesi 'ni ayarlar.  
   
-3. Projeyi kaldırmak.  
+3. Projeyi kaldırın.  
   
-4. Proje Dosyası Düzenleyicisi'nde açın.  
+4. Proje dosyasını düzenleyicide açın.  
   
-5. Bulun `ItemGroup` öğesini içeren `EmbeddedResource` öğeleri.  
+5. `ItemGroup`Öğeleri içeren öğeyi bulun `EmbeddedResource` .  
   
-6. İçinde `EmbeddedResource` VSPackage.en-US.resx çağıran öğeyi değiştirin `ManifestResourceName` öğesi ile bir `LogicalName` kümesine öğesini `VSPackage.en-US.Resources`aşağıdaki gibi.  
+6. `EmbeddedResource`VSPackage. en-US. resx ' i çağıran öğede, öğesini `ManifestResourceName` aşağıdaki gibi olarak ayarlayın öğesi ile değiştirin `LogicalName` `VSPackage.en-US.Resources` .  
   
     ```xml  
     <EmbeddedResource Include="VSPackage.en-US.resx">  
@@ -137,9 +137,9 @@ Menüsü yerelleştirilmiş metin sağlayabilir ve araç çubuğu yerelleştiril
     </EmbeddedResource>  
     ```  
   
-7. Yerelleştirilen her dil için kopyalama `EmbeddedResource` öğesi VsPackage.en ABD ve küme için **INCLUDE** özniteliği ve **LogicalName** aşağıda gösterildiği gibi hedef yerel kopyasının öğesi örnek.  
+7. Her yerelleştirilmiş dil için,  `EmbeddedResource` VsPackage. en-US için öğesini kopyalayın ve aşağıdaki örnekte gösterildiği gibi, kopyanın **Include** özniteliğini ve **LogicalName** öğesini hedef yerel ayara ayarlayın.  
   
-8. Her yerelleştirilmiş `VSCTCompile` öğe, Ekle bir `ResourceName` işaret öğesi `Menus.ctmenu`, aşağıdaki örnekte gösterildiği gibi.  
+8. Her yerelleştirilmiş `VSCTCompile` öğeye, `ResourceName` `Menus.ctmenu` Aşağıdaki örnekte gösterildiği gibi öğesine işaret eden bir öğesi ekleyin.  
   
     ```xml  
     <ItemGroup>  
@@ -151,11 +151,11 @@ Menüsü yerelleştirilmiş metin sağlayabilir ve araç çubuğu yerelleştiril
   
 9. Proje dosyasını kaydedin ve projeyi yeniden yükleyin.  
   
-10. Projeyi oluşturun.  
+10. Projeyi derleyin.  
   
-     Bu, bir ana derlemeye yanı sıra, her dil için kaynak grupları oluşturur. Dağıtım işlemi yerelleştirme hakkında daha fazla bilgi için bkz: [VSIX paketlerini yerelleştirme](../extensibility/localizing-vsix-packages.md)  
+     Bu, her dil için bir ana derleme ve kaynak derlemeleri oluşturur. Dağıtım işlemini yerelleştirme hakkında daha fazla bilgi için bkz. [VSIX paketlerini yerelleştirme](../extensibility/localizing-vsix-packages.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Menüleri ve komutlari genişletme komutları](../extensibility/extending-menus-and-commands.md)   
- [MenuCommands Vs. OleMenuCommands](../misc/menucommands-vs-olemenucommands.md)   
- [Genelleştirme ve Yerelleştirme](https://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02)
+ [Menüleri ve komutları genişletme](../extensibility/extending-menus-and-commands.md)   
+ [MenuCommands ve OleMenuCommands karşılaştırması](../misc/menucommands-vs-olemenucommands.md)   
+ [Genelleştirme ve yerelleştirme](https://msdn.microsoft.com/library/9a59696b-d89b-45bd-946d-c75da4732d02)

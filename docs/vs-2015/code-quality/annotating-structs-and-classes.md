@@ -25,10 +25,10 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: 6db2202971facb0419db68c04835c8d5c848f528
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77271575"
 ---
 # <a name="annotating-structs-and-classes"></a>Yapıları ve Sınıfları Yorumlama
@@ -40,25 +40,25 @@ Struct ve Class üyelerine, ınvarıant gibi davranan ek açıklamaları kullana
   
 - `_Field_range_(low, high)`  
   
-     Alan, `high``low` aralığında (kapsamlı).  İlgili ön koşul veya gönderi koşulları kullanılarak açıklamalı nesneye uygulanan `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` eşdeğerdir.  
+     Alan, ile arasında (dahil) aralığıdır `low` `high` .  `_Satisfies_(_Curr_ >= low && _Curr_ <= high)`İlgili ön koşul veya gönderi koşulları kullanılarak açıklamalı nesneye uygulanan eşdeğerdir.  
   
 - `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`  
   
-     `size`tarafından belirtilen öğeler (veya bayt) içinde yazılabilir boyutu olan bir alan.  
+     Öğesinde belirtilen öğeler (veya bayt) içinde yazılabilir boyutu olan bir alan `size` .  
   
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`, `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`  
+- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`  
   
-     `size`tarafından belirtilen öğeler (veya bayt) ve okunabilir olan öğelerin (bayt) `count`.  
+     Tarafından belirtilen öğeler (veya bayt) `size` ve `count` okunabilir olan öğelerin (bayt) içinde yazılabilir boyutu olan bir alan.  
   
 - `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`  
   
-     `size`tarafından belirtilen öğeler (veya bayt) içinde hem okunabilir hem de yazılabilir boyuta sahip bir alan.  
+     Öğesinde belirtilen öğeler (veya bayt) içinde hem okunabilir hem de yazılabilir boyuta sahip bir alan `size` .  
   
 - `_Struct_size_bytes_(size)`  
   
-     `size`tarafından belirtilen öğeler (veya bayt) içinde hem okunabilir hem de yazılabilir boyuta sahip bir alan.  
+     Öğesinde belirtilen öğeler (veya bayt) içinde hem okunabilir hem de yazılabilir boyuta sahip bir alan `size` .  
   
-     Struct veya Class bildirimi için geçerlidir.  Bu türdeki geçerli bir nesnenin, `size`tarafından belirtilen bayt sayısıyla, tanımlanan türden daha büyük olabileceğini gösterir.  Örnek:  
+     Struct veya Class bildirimi için geçerlidir.  Bu türdeki geçerli bir nesnenin, tarafından belirtilen bayt sayısıyla, belirtilen tür ile daha büyük olabileceğini gösterir `size` .  Örneğin:  
   
     ```cpp  
   
@@ -70,18 +70,18 @@ Struct ve Class üyelerine, ınvarıant gibi davranan ek açıklamaları kullana
   
     ```  
   
-     `MyStruct *` türündeki bir parametre `pM` arabellek boyutu daha sonra şu şekilde alınır:  
+     Daha sonra, türündeki bir parametrenin bayt cinsinden arabellek boyutu `pM` `MyStruct *` Şu şekilde alınır:  
   
     ```cpp  
     min(pM->nSize, sizeof(MyStruct))  
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [CC++ /kod HATALARıNı azaltmak Için sal ek açıklamalarını kullanma](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
- [SAL  anlama](../code-quality/understanding-sal.md)  
+ [C/C++ kod hatalarını azaltmak için SAL ek açıklamalarını kullanma](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)   
+ [SAL 'ı anlama](../code-quality/understanding-sal.md)   
  [Işlev parametrelerine ve dönüş değerlerine açıklama ekleme](../code-quality/annotating-function-parameters-and-return-values.md)   
  [Işlev davranışına açıklama ekleme](../code-quality/annotating-function-behavior.md)   
  [Kilitleme davranışına açıklama ekleme](../code-quality/annotating-locking-behavior.md)   
  [Ek açıklamanın ne zaman ve nereye uygulanacağını belirtme](../code-quality/specifying-when-and-where-an-annotation-applies.md)   
- [Iç işlevler](../code-quality/intrinsic-functions.md)   
+ [İç Işlevler](../code-quality/intrinsic-functions.md)   
  [En İyi Yöntemler ve Örnekler](../code-quality/best-practices-and-examples-sal.md)

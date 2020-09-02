@@ -13,28 +13,28 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b6d9c3f8b45affd192d4109db08454345dcd0814
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188228"
 ---
 # <a name="idebugportsupplier2"></a>IDebugPortSupplier2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu arabirim bağlantı noktalarına oturum hata ayıklama Yöneticisi (SDM) sağlar.  
+Bu arabirim, oturum hata ayıklama Yöneticisi 'ne (SDM) bağlantı noktaları sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugPortSupplier2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Özel bağlantı noktası sağlayıcısı bağlantı noktası sağlayıcısı temsil etmek için bu arabirimi uygular.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Özel bir bağlantı noktası sağlayıcısı, bir bağlantı noktası tedarikçiyi göstermek için bu arabirimi uygular.  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Bir çağrı `CoCreateInstance` ile bir bağlantı noktası tedarikçi `GUID` (Bu, bu arabirimi sağlamak için normal şekilde) Bu arabirim döndürür. Örneğin:  
+ `CoCreateInstance`Bir bağlantı noktası tedarikçisine yapılan bir çağrı `GUID` Bu arabirimi döndürür (Bu, bu arabirimi elde etmenin tipik yoludur). Örneğin:  
   
 ```cpp#  
 IDebugPortSupplier2 *GetPortSupplier(GUID *pPortSupplierGuid)  
@@ -51,39 +51,39 @@ IDebugPortSupplier2 *GetPortSupplier(GUID *pPortSupplierGuid)
 }  
 ```  
   
- Bir çağrı [GetPortSupplier](../../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md) tarafından kullanılan geçerli bağlantı noktası sağlayıcısı gösteren bu bir arabirim döndürür [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ [Getporttedarikçinin](../../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md) çağrısı, tarafından kullanılan geçerli bağlantı noktası tedarikçiyi temsil eden bu arabirimi döndürür [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .  
   
- [GetPortSupplier](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md) bağlantı noktası oluşturulan bağlantı noktası sağlayıcısı temsil eden bu arabirimi döndürür.  
+ [Getporttedarikçinin](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md) , bağlantı noktasını oluşturan bağlantı noktası tedarikçiyi temsil eden bu arabirimi döndürür.  
   
- [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md) listesini temsil `IDebugPortSupplier` arabirimleri ( `IEnumDebugPortSuppliers` arabirimi öğesinden alınan [EnumPortSuppliers](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md), tüm bağlantı noktası sağlayıcıları temsil eden ilekayıtlı[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]).  
+ [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md) bir arabirim listesini temsil eder `IDebugPortSupplier` ( `IEnumDebugPortSuppliers` arabirim, [tralınttedarikçilerinizden](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md)elde edilir ve ile kayıtlı olan tüm bağlantı noktası tedarikçilerini temsil eder [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ).  
   
- Hata ayıklama altyapısı genellikle bağlantı noktası sağlayıcısı ile etkileşime girmez.  
+ Bir hata ayıklama altyapısı genellikle bir bağlantı noktası sağlayıcısıyla etkileşime girmez.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugPortSupplier2`.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugPortSupplier2` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetPortSupplierName](../../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md)|Bağlantı sağlayıcı adını alır.|  
-|[GetPortSupplierId](../../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md)|Bağlantı noktası tedarikçi tanımlayıcısını alır.|  
-|[GetPort](../../../extensibility/debugger/reference/idebugportsupplier2-getport.md)|Bir bağlantı noktasına bağlantı noktası sağlayıcısı alır.|  
-|[EnumPorts](../../../extensibility/debugger/reference/idebugportsupplier2-enumports.md)|Mevcut bağlantı noktalarını listeler.|  
-|[CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md)|Bağlantı noktası sağlayıcısı yeni bağlantı noktaları ekleme desteklediğini doğrular.|  
+|[GetPortSupplierName](../../../extensibility/debugger/reference/idebugportsupplier2-getportsuppliername.md)|Bağlantı noktası tedarikçinin adını alır.|  
+|[GetPortSupplierId](../../../extensibility/debugger/reference/idebugportsupplier2-getportsupplierid.md)|Bağlantı noktası sağlayıcısı tanımlayıcısını alır.|  
+|[GetPort](../../../extensibility/debugger/reference/idebugportsupplier2-getport.md)|Bir bağlantı noktası tedarikçiden bir bağlantı noktası alır.|  
+|[EnumPorts](../../../extensibility/debugger/reference/idebugportsupplier2-enumports.md)|Zaten var olan bağlantı noktalarını numaralandırır.|  
+|[CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md)|Bir bağlantı noktası üreticisinin yeni bağlantı noktası eklemeyi desteklediğini doğrular.|  
 |[AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md)|Bir bağlantı noktası ekler.|  
-|[RemovePort](../../../extensibility/debugger/reference/idebugportsupplier2-removeport.md)|Bir bağlantı noktası kaldırır.|  
+|[RemovePort](../../../extensibility/debugger/reference/idebugportsupplier2-removeport.md)|Bir bağlantı noktasını kaldırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bağlantı noktası sağlayıcısı adı ve kimliği ile kendisini tanımlamak, ekleyin ve bağlantı noktalarını kaldırın ve bağlantı noktası sağlayıcısı sağlayan tüm bağlantı noktalarını listele.  
+ Bir bağlantı noktası sağlayıcısı kendisini ad ve KIMLIĞE göre tanımlayabilir, bağlantı noktaları ekleyebilir ve kaldırabilir ve bağlantı noktası tedarikçinin sağladığı tüm bağlantı noktalarını numaralandırabilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)   
- [GetPortSupplier](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md)   
- [GetPortSupplier](../../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)   
+ [Çekirdek arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)   
+ [Getporttedarikçi](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md)   
+ [Getporttedarikçi](../../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)   
  [IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)

@@ -16,10 +16,10 @@ author: ghogen
 ms.author: ghogen
 manager: jillfra
 ms.openlocfilehash: 39ff272581793be9b456bbc404119a488850b3c4
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283079"
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>Veri kaynakları penceresine özel denetimler ekleme
@@ -60,7 +60,7 @@ Veri kaynakları penceresinde belirli bir veri türüne sahip öğeler için kul
     > [!NOTE]
     > Seçmek istediğiniz denetim **ilişkili denetimler** kutusunda görünmezse, denetimi listeye eklemeniz gerekir. Daha fazla bilgi için bkz. [ilişkili denetimler ekleme](#add-associated-controls).
 
-6. **Tamam**'a tıklayın.
+6. **Tamam**’a tıklayın.
 
 7. **Veri kaynakları** penceresinde, yalnızca bir veya daha fazla denetimi ilişkilendirdiğiniz veri türünün bir öğesine tıklayın ve sonra öğenin açılan menüsüne tıklayın.
 

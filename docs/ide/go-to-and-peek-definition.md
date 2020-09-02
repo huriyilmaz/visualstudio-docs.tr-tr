@@ -14,69 +14,69 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3ef13b959d4e106b451ea0cfb336835059667ce4
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592080"
 ---
 # <a name="view-type-and-member-definitions"></a>Görünüm türü ve üye tanımları
 
-Geliştiricilerin genellikle kodlarında kullandıkları türler veya sınıf üyeleri için kaynak kodu tanımlarını görüntülemeleri gerekir. Visual Studio'da, **Tanıma Git** ve **Peek Tanımı** özellikleri, bir türün veya üyenin tanımını kolayca görüntülemenizi sağlar. Kaynak kodu kullanılamıyorsa, bunun yerine meta veriler görüntülenir.
+Geliştiricilerin genellikle kendi kodlarında kullandıkları türler veya sınıf üyeleri için kaynak kodu tanımlarını görüntülemesi gerekir. Visual Studio 'da, tanım ve Özet **tanım** özelliklerine **Git** özelliği, bir tür veya üyenin tanımını kolayca görüntülemenizi sağlar. Kaynak kodu yoksa, bunun yerine meta veriler görüntülenir.
 
 ## <a name="go-to-definition"></a>Tanıma Git
 
-**Tanıma Git** özelliği bir türün veya üyenin kaynağına gider ve sonucu yeni bir sekmeyle açar. Klavye kullanıcısıysanız, metin imlecinizi sembol adının içinde bir yere yerleştirin ve **F12 tuşuna**basın. Fare kullanıcısıysanız, sağ tıklama menüsünden **Tanıma Git'i** seçin veya aşağıdaki bölümde açıklanan **Ctrl tıklama** işlevini kullanın.
+**Tanıma Git** özelliği bir tür veya üyenin kaynağına gider ve sonucu yeni bir sekmede açar. Bir klavye kullanıcısı kullanıyorsanız, metin imlecinizi bir yere sembol adının içine yerleştirin ve **F12**tuşuna basın. Fare kullanıcısı kullanıyorsanız, sağ tıklama menüsünden **Tanıma Git** ' i seçin veya aşağıdaki bölümde açıklanan **CTRL-tıklama** işlevini kullanın.
 
-### <a name="ctrl-click-go-to-definition"></a>Ctrl-click Tanımına Git
+### <a name="ctrl-click-go-to-definition"></a>CTRL-tanıma git ' e tıklayın
 
-**Ctrl**+**tıklaması,** fare kullanıcılarının **Tanıma Git'e**hızla erişmeleri için bir kısayol. **Ctrl** tuşuna bastığınızda ve türünün veya üyenin üzerine geldiğinizde semboller tıklanabilir hale gelir. Bir sembolün tanımına hızla gitmek için **Ctrl** tuşuna basın ve üzerine tıklayın. Bu kadar kolay!
+**CTRL** + hızlı **erişim için fare kullanıcıları için bir**kısayoldur **seçeneğine tıklayın** . **CTRL** tuşuna bastığınızda ve türün ya da üyenin üzerine geldiğinizde semboller tıklatılabilir hale gelir. Bir simgenin tanımına hızlıca gitmek için **CTRL** tuşuna basın ve ardından üzerine tıklayın. Bu kadar kolay!
 
-![Fare tıklaması tanım animasyongit](../ide/media/click_gotodef.gif)
+![Fare tıklaması tanım animasyonuna git](../ide/media/click_gotodef.gif)
 
- >  **Araçlar** > **Seçenekleri** > Metin**Düzenleyicisi Genel'e**giderek ve **Kullan değiştirici anahtarı** açılır bırak'dan **Alt** veya **Ctrl**+**Alt'ı** seçerek fareyi tıklatın Tanıma **Git** tuşunu değiştirebilirsiniz.**Text Editor** Ayrıca, Tanıma Git onay kutusunu gerçekleştirmek için **Fareyi Etkinleştir düğmesini** işaretleyerek **Fareyi** Tanıma Git'e tıklayın' seçeneğini devre dışı bırakabilirsiniz.
+Fare tıklaması için değiştirici anahtarını değiştirebilirsiniz. **Araçlar** **Go To Definition**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **genel**'e giderek ve **Alt** **Ctrl** + **değiştirici tuşu kullan** açılır listesinden alt ya da CTRL**alt** ' i seçerek tanıma git ' i seçin. Fare **tıklamasını** devre dışı bırakmak için fare tıklamasını **Etkinleştir** onay kutusunun işaretini kaldırın.
 
-![Fare tıklatma tanıma gitme etkinleştirme](../ide/media/editor_options_mouse_click_gotodef.png)
+![Fare tıklamasını etkinleştirme tanıma git](../ide/media/editor_options_mouse_click_gotodef.png)
 
 ## <a name="peek-definition"></a>Tanıma Göz At
 
-**Peek Tanımı** özelliği, geçerli konumunuzu düzenleyicide bırakmadan bir türün tanımını önizlemenize olanak tanır. Klavye kullanıcısıysanız, metin imlecinizi yazının veya üye adının içinde bir yere yerleştirin ve **Alt + F12**tuşuna basın. Fare kullanıcısıysanız, sağ tıklama menüsünden **Peek Tanımı'nı** seçebilirsiniz.
+Özet **tanım** özelliği, bir türün tanımını düzenleyicide geçerli konumundan çıkmadan önizlemenizi sağlar. Bir klavye kullanıcısı kullanıyorsanız, metin imlecinizi bir yere tür veya üye adının içine yerleştirin ve **alt + F12**tuşlarına basın. Fare kullanıcısı kullanıyorsanız, sağ tıklama menüsünden **Açıklama tanımı** ' nı seçebilirsiniz.
 
-**Ctrl**+**tıklatma** işlevini etkinleştirmek için **Araçlar** > **Seçenekleri** > Metin Genel**Yayın** > **Yönetmeni'ne**gidin. **Peek görünümünde tanımı aç** seçeneğini seçin ve **Seçenekler** iletişim kutusunu kapatmak için **Tamam'ı** tıklatın.
+**CTRL** + **tıklama** işlevselliğini etkinleştirmek için **Araçlar**  >  **Seçenekler**  >  **metin düzenleyici**  >  **genel**' e gidin. **Göz atma görünümü ' nde tanımı aç** seçeneğini belirleyin ve **Seçenekler** Iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 
-![Fare tıklaması peek tanımı seçeneğini ayarlama](../ide/media/editor_options_peek_view.png)
+![Fare tıklaması tanım seçeneğini ayarlama](../ide/media/editor_options_peek_view.png)
 
-Ardından **Ctrl'ye** (veya **Seçenekler'de**hangi değiştirici tuşu seçilirse seçiliyse) tuşuna basın ve türe veya üyeye tıklayın.
+Ardından, **CTRL** tuşuna basın (veya **Seçenekler**'de herhangi bir değiştirici tuşu seçilidir) ve türe veya üyeye tıklayın.
 
-![Peek tanımı animasyonu](../ide/media/peek_definition.gif)
+![Tanım animasyonuna göz atma](../ide/media/peek_definition.gif)
 
-Açılır pencereden başka bir tanıma bakarsanız, açılır pencerenin üzerinde görünen daireleri ve okları kullanarak gezinebileceğiniz bir kırıntı yolu başlatın.
+Açılan pencereden başka bir tanıma göz alıyorsa, açılan pencerede görüntülenen daireleri ve okları kullanarak gezinebileceğiniz bir içerik haritası yolu başlatabilirsiniz.
 
-Daha fazla bilgi için [bkz: Peek Definition (Alt+F12) kullanarak kodu görüntüleme ve düzenleme.](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
+Daha fazla bilgi için bkz. [nasıl yapılır: Açıklama tanımı kullanarak kodu görüntüleme ve düzenleme (alt + F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md).
 
-## <a name="view-metadata-as-source-code-c"></a>Meta verileri kaynak kodu olarak görüntüleme (C#)
+## <a name="view-metadata-as-source-code-c"></a>Meta verileri kaynak kodu olarak görüntüle (C#)
 
-C# türlerinin veya kaynak kodu kullanılamayan üyelerin tanımını görüntülediğinizde, bunun yerine meta verileri görüntülenir. Türlerin ve üyelerin bildirimlerini görebilirsiniz, ancak uygulamalarını göremezsiniz.
+C# türlerinin veya kaynak kodu kullanılamayan üyelerin tanımını görüntülediğinizde bunun yerine meta verileri görüntülenir. Türlerin ve üyelerin bildirimlerini görebilirsiniz, ancak uygulamalarını görüntüleyebilirsiniz.
 
-Kaynak kodu kullanılamayan bir öğe için **Tanım alete git** veya **Peek Tanımı** komutunu çalıştırdığınızda, kod düzenleyicisinde kaynak kodu olarak görüntülenen öğenin meta verilerinin görünümünü içeren sekmeli bir belge görüntülenir. [meta **verilerden]** ardından türün adı, belgenin sekmesinde görünür.
+Kaynak kodu kullanılamayan bir öğe için **Tanıma Git** veya **Açıklama Özeti** komutunu çalıştırdığınızda, kod Düzenleyicisi 'nde, kaynak kodu olarak gösterilen öğenin meta verilerinin bir görünümünü içeren sekmeli bir belge görüntülenir. Türün adı, ardından **gelen [meta verilerden]** belge sekmesinde görünür.
 
-Örneğin, için **Tanıma Git** komutunu <xref:System.Console>çalıştırırsanız, kod düzenleyicisinde C# kaynak kodu olarak <xref:System.Console> görünür. Kod bildirimine benzer, ancak bir uygulama göstermez.
+Örneğin, için **tanımına git** komutunu çalıştırırsanız <xref:System.Console> , meta veriler <xref:System.Console> kod düzenleyicisinde C# kaynak kodu olarak görünür. Kod bildirimine benzer, ancak bir uygulama göstermez.
 
 ![Kaynak olarak Meta Veriler](../ide/media/metadatasource.png)
 
 > [!NOTE]
-> Dahili olarak işaretlenmiş türler veya üyeler için **Tanıma Git** veya **Peek Tanımı** komutunu çalıştırmaya çalıştığınızda, Visual Studio başvuru derlemesinin arkadaş olup olmadığına bakılmaksızın meta verilerini kaynak kodu olarak görüntülemez.
+> İç olarak işaretlenmiş türler veya Üyeler için **Tanıma Git** veya **Açıklama Özeti** komutunu çalıştırmayı denediğinizde, başvuran derlemenin arkadaş olup olmamasına bakılmaksızın Visual Studio meta verilerini kaynak kodu olarak görüntülemez.
 
-### <a name="view-decompiled-source-definitions-instead-of-metadata-c"></a>Meta veri yerine derlenmiş kaynak tanımlarını görüntüleme (C#)
+### <a name="view-decompiled-source-definitions-instead-of-metadata-c"></a>Meta veriler yerine ayrıştırılmış kaynak tanımlarını görüntüleme (C#)
 
-C# türü veya kaynak kodu kullanılamayan üyenin tanımını görüntülediğinizde derlenmiş kaynak kodunu görmek için bir seçenek ayarlayabilirsiniz. Bu özelliği açmak için menü çubuğundan **Araçlar** > **Seçenekleri'ni** seçin. Ardından, **Metin Düzenleyicisi** > **C#** > **Advanced'i**genişletin ve **derlenmiş kaynaklara gezinmeyi etkinleştir'i**seçin.
+Kaynak kodu kullanılamayan bir C# türünün veya üyenin tanımını görüntülediğinizde, ayrıştırılmış kaynak kodunu görmek için bir seçenek belirleyebilirsiniz. Bu özelliği etkinleştirmek için menü çubuğundan **Araçlar**  >  **Seçenekler** ' i seçin. Ardından, **metin düzenleyici**  >  **C#**  >  **Gelişmiş**' i genişletin ve **derlenen kaynaklar için gezintiyi etkinleştir**' i seçin.
 
-![Derlenmiş bir tanımı görüntüleme](media/go-to-definition-decompiled-sources.png)
+![Ayrıştırılmış bir tanımı görüntüleme](media/go-to-definition-decompiled-sources.png)
 
 > [!NOTE]
-> Visual Studio, ILSpy decompilation kullanarak yöntem gövdelerini yeniden yapılandırmaya devam eder. Bu özelliğe ilk kez eriştiğınızda, yazılım lisanslama, telif hakkı ve ticari marka yasalarıyla ilgili yasal bir feragatnameyi kabul etmelisiniz.
+> Visual Studio ılspy dederlemesini kullanarak Yöntem gövdelerini yeniden oluşturur. Bu özelliğe ilk kez eriştiğinizde, yazılım lisanslama ve telif hakkı ve ticari marka yasaları ile ilgili yasal bir vazgeçme belgesi kabul etmeniz gerekir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kodda gezinme](../ide/navigating-code.md)
-- [Nasıl yapılır: Peek Definition (Alt+F12) kullanarak kodu görüntüleme ve düzenleme](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)
+- [Koda git](../ide/navigating-code.md)
+- [Nasıl yapılır: Özet tanımı 'nı kullanarak kodu görüntüleme ve düzenleme (alt + F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)

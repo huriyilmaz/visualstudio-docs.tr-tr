@@ -10,10 +10,10 @@ ms.workload:
 - vssdk
 monikerRange: vs-2017
 ms.openlocfilehash: 8dd20513defd1db8848cf6a80a29e04c127c9dd4
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85903164"
 ---
 # <a name="walkthrough-save-user-settings-on-a-start-page"></a>İzlenecek yol: bir başlangıç sayfasına kullanıcı ayarlarını kaydetme
@@ -26,7 +26,7 @@ Visual Studio 'nun deneysel örneğinde çalışırken, ayarlar deposu **Hkcu\so
 
 Ayarları kalıcı hale getirme hakkında daha fazla bilgi için bkz. [Kullanıcı ayarlarını ve seçeneklerini genişletme](../extensibility/extending-user-settings-and-options.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 > [!NOTE]
 > Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).
@@ -168,7 +168,7 @@ Ayarları kalıcı hale getirme hakkında daha fazla bilgi için bkz. [Kullanıc
 
 3. **Ortam** düğümünde, **Başlangıç**' a tıklayın ve ardından **Başlangıç sayfası Özelleştir** listesinde **[yüklü uzantı] Ayarlarımı Kaydet başlangıç sayfası**' nı seçin.
 
-     **Tamam**'a tıklayın.
+     **Tamam**’a tıklayın.
 
 4. Açık ise başlangıç sayfasını kapatın ve ardından **Görünüm** menüsünde, **Başlangıç sayfası**' nı tıklatın.
 

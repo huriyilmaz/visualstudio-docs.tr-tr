@@ -16,18 +16,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 75299dae66a07b2bc1671dbfcda935fc4af2b284
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645494"
 ---
 # <a name="how-to-add-or-remove-imported-namespaces-visual-basic"></a>Nasıl Yapılır: İçeri Aktarılan Ad Uzaylarını Ekleme veya Kaldırma (Visual Basic)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad alanındaki öğeleri kullanmanıza olanak sağlar. Örneğin, `System.Messaging.MessageQueue` sınıfındaki `Create` yöntemine erişmek istiyorsanız, `System.Messaging` ad alanını içeri aktarabilir ve yalnızca `MessageQueue.Create` olarak kodunuzda ihtiyacınız olan öğeye başvurabilirsiniz.
+Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad alanındaki öğeleri kullanmanıza olanak sağlar. Örneğin, `Create` sınıfındaki yöntemine erişmek istiyorsanız `System.Messaging.MessageQueue` , `System.Messaging` ad alanını içeri aktarabilir ve yalnızca kodunuzda gereken öğeye başvurabilirsiniz `MessageQueue.Create` .
 
- İçeri aktarılan ad alanları, **Proje Tasarımcısı**'nın **Başvurular** sayfasında yönetilir. Bu iletişim kutusunda belirttiğiniz içeri aktarmalar doğrudan derleyiciye geçirilir (`/imports`) ve projenizdeki tüm dosyalar için geçerlidir. Tek kaynak kod dosyasında bir ad alanı kullanmak için `Imports` ifadesini kullanın.
+ İçeri aktarılan ad alanları, **Proje Tasarımcısı**'nın **Başvurular** sayfasında yönetilir. Bu iletişim kutusunda belirttiğiniz içeri aktarmalar doğrudan derleyiciye geçirilir ( `/imports` ) ve projenizdeki tüm dosyalar için geçerlidir. Tek bir `Imports` kaynak kod dosyasında bir ad alanı kullanmak için ifadesini kullanın.
 
 ### <a name="to-add-an-imported-namespace"></a>İçeri aktarılan bir ad alanı eklemek için
 
@@ -49,9 +49,9 @@ Bir ad alanını içeri aktarmak, öğesini tamamen nitelemeden kodunuzda bu ad 
 3. **Içeri aktarılan ad alanları** listesinde, kaldırmak istediğiniz ad alanı için onay kutusunu temizleyin.
 
 ## <a name="user-imports"></a>Kullanıcı Içeri aktarmaları
- Kullanıcı içeri aktarmaları, tüm ad alanı yerine bir ad alanı içinde belirli bir sınıfı içeri aktarmanızı sağlar. Örneğin, uygulamanızda `Systems.Diagnostics` ad alanı için bir içeri aktarma olabilir, ancak ilgilendiğiniz bu ad alanı içindeki tek sınıf `Debug` sınıfıdır. @No__t_0 Kullanıcı içeri aktarma olarak tanımlayabilir ve sonra `System.Diagnostics` için içeri aktarmayı kaldırabilirsiniz.
+ Kullanıcı içeri aktarmaları, tüm ad alanı yerine bir ad alanı içinde belirli bir sınıfı içeri aktarmanızı sağlar. Örneğin, uygulamanız ad alanı için bir içeri aktarmaya sahip olabilir `Systems.Diagnostics` , ancak ilgilendiğiniz ad alanı içindeki tek sınıf `Debug` sınıfı olur. `System.Diagnostics.Debug`Kullanıcı içeri aktarma olarak tanımlayabilir ve ardından için içeri aktarmayı kaldırabilirsiniz `System.Diagnostics` .
 
- Daha sonra fikrinizi değiştirirseniz ve bunun gerçekten gereken `EventLog` sınıfı olduğuna karar verirseniz, Kullanıcı içeri aktarma olarak `System.Diagnostics.EventLog` girebilir ve güncelleştirme işlevini kullanarak `System.Diagnostics.Debug` üzerine yazabilirsiniz.
+ Daha sonra fikrinizi değiştirirseniz ve gerçekten gereken sınıf olduğuna karar verirseniz `EventLog` , `System.Diagnostics.EventLog` Kullanıcı içeri aktarma olarak girebilir ve `System.Diagnostics.Debug` güncelleştirme işlevini kullanarak üzerine yazabilirsiniz.
 
 #### <a name="to-add-a-user-import"></a>Kullanıcı içeri aktarma eklemek için
 

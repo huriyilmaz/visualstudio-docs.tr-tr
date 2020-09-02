@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1439bef59c621523b74f0e0634cd809deea1f3ee
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986071"
 ---
 # <a name="get-started-office-development-in-visual-studio"></a>Kullanmaya başlayın (Visual Studio 'da Office geliştirme)
@@ -27,13 +27,13 @@ ms.locfileid: "72986071"
 [!include[Add-ins note](includes/addinsnote.md)]
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Office çözümleri geliştirmesine genel &#40;bakış VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
 
  Visual Studio 'da Office çözümleri geliştirmeye yönelik arka plan bilgileri sağlar.
 
 - [.NET Framework 4 ' ü veya .NET Framework 4,5 ' i hedefleyen Office projelerinin tasarımında yapılan değişiklikler](../vsto/changes-to-the-design-of-office-projects-that-target-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)
 
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya sonraki sürümlerini hedefleyen Office projelerinin yeni tasarımını açıklar ve [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya sonraki sürümlere geçirebileceğiniz Office projelerindeki koda yapılan son değişiklikleri listeler.
+ Veya sonraki sürümlerini hedefleyen Office projelerinin yeni tasarımını açıklar [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ve Office projelerinde veya daha sonraki bir sürümüne geçiş yaptığınız koda yapılan değişiklikleri listeler [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] .
 
 - [Office uygulaması ve proje türü tarafından kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md)
 
@@ -74,7 +74,7 @@ ms.locfileid: "72986071"
 
 - [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
 
- Office projesi oluşturma ve [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]içinde projenizi yapılandırma hakkında bilgi sağlar.
+ Office projesi oluşturma ve projenizi yapılandırma hakkında bilgi sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - [Office çözümleri geliştirme](../vsto/developing-office-solutions.md)
 

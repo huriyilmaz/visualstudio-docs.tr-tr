@@ -13,34 +13,34 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0c30e6f1be9daf07f3685c06b21ed9d507b86a07
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664384"
 ---
 # <a name="image-editor"></a>Görüntü Düzenleyici
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu belge, doku ve resim kaynaklarını görüntülemek ve değiştirmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] görüntü Düzenleyicisi ile nasıl çalışabileceğinizi açıklar.
+Bu belge, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] doku ve resim kaynaklarını görüntülemek ve değiştirmek için görüntü Düzenleyicisi ile nasıl çalışabileceğinizi açıklar.
 
- DirectX uygulama geliştirmede kullanılan zengin doku ve görüntü biçimleri türleriyle çalışmak için görüntü düzenleyicisini kullanabilirsiniz. buna popüler görüntü dosyası biçimleri ve renk kodlamaları, alfa kanalları ve MıP eşleme gibi özellikler ve birçok DirectX 'in desteklediği, yüksek oranda sıkıştırılmış, donanım hızlandırmalı doku biçimleri.
+ DirectX uygulama geliştirmede kullanılan zengin doku ve görüntü biçimleri türleriyle çalışmak için görüntü düzenleyicisini kullanabilirsiniz. Bu, popüler görüntü dosyası biçimleri ve renk kodlamaları, alfa kanalları ve MıP eşleme gibi özellikler ve DirectX 'in desteklediği yüksek oranda sıkıştırılmış, donanım hızlandırmalı doku biçimlerinin birçoğu için destek içerir.
 
 ## <a name="supported-formats"></a>Desteklenen biçimler
  Görüntü Düzenleyicisi şu görüntü biçimlerini destekler:
 
 |Biçim adı|Dosya Adı Uzantısı|
 |-----------------|-------------------------|
-|Taşınabilir Ağ Grafikleri|. png|
+|Taşınabilir Ağ Grafikleri|.png|
 |JPEG|. jpg,. jpeg,. jpe,. JI|
 |Doğrudan çizim yüzeyi|. DDS|
-|Grafik Değişim Biçimi|Resimler|
+|Grafik Değişim Biçimi|.gif|
 |Biteş|. bmp,. dib|
 |Etiketli resim dosyası biçimi|. tif,. tiff|
 |TGA (Targa)|. tga|
 
 ## <a name="getting-started"></a>Başlarken
- Bu bölümde, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projenize bir görüntü ekleme ve gereksinimlerinize göre yapılandırma açıklanmaktadır.
+ Bu bölümde, projenize bir görüntü ekleme [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve gereksinimlerinize göre yapılandırma açıklanmaktadır.
 
 #### <a name="to-add-an-image-to-your-project"></a>Projenize bir görüntü eklemek için
 
@@ -91,13 +91,13 @@ Bu belge, doku ve resim kaynaklarını görüntülemek ve değiştirmek için [!
 
  Bu tabloda, **Görüntü Düzenleyicisi Modu** araç çubuğunda, soldan sağa göründükleri sırada listelenen öğeler açıklanmaktadır.
 
-|Araç Çubuğu Öğesi|Açıklama|
+|Araç Çubuğu Öğesi|Description|
 |------------------|-----------------|
-|**Seçin**|Bir görüntünün dikdörtgen bölgesini seçmeye izin vermez. Bir bölge seçtikten sonra, onu kesebilir, kopyalayabilir, taşıyabilir, ölçeklendirebilir, döndürebilir, çevirebilir veya silebilirsiniz. Etkin bir seçim olduğunda, çizim araçları yalnızca seçili bölgeyi etkiler.|
+|**Seç**|Bir görüntünün dikdörtgen bölgesini seçmeye izin vermez. Bir bölge seçtikten sonra, onu kesebilir, kopyalayabilir, taşıyabilir, ölçeklendirebilir, döndürebilir, çevirebilir veya silebilirsiniz. Etkin bir seçim olduğunda, çizim araçları yalnızca seçili bölgeyi etkiler.|
 |**Düzensiz seçim**|Görüntüde düzensiz bir bölgenin seçilmesine izin vermez. Bir bölge seçtikten sonra, onu kesebilir, kopyalayabilir, taşıyabilir, ölçeklendirebilir, döndürebilir, çevirebilir veya silebilirsiniz. Etkin bir seçim olduğunda, çizim araçları yalnızca seçili bölgeyi etkiler.|
 |**Değnek seçimi**|Bir görüntünün benzer renkli bir bölgesini seçmeye izin vermez. *Tolerans*— diğer bir deyişle, benzer olarak kabul ettikleri bitişik renkler arasındaki en büyük fark — daha küçük veya daha geniş bir benzer renk aralığı içerecek şekilde yapılandırılabilir. Bir bölge seçtikten sonra, onu kesebilir, kopyalayabilir, taşıyabilir, ölçeklendirebilir, döndürebilir, çevirebilir veya silebilirsiniz. Etkin bir seçim olduğunda, çizim araçları yalnızca seçili bölgeyi etkiler.|
-|**Pan**|Görüntünün pencere çerçevesine göre taşınmasını sağlar. **Kaydırma** modu ' nda görüntüde bir nokta seçin ve sonra taşıyın.<br /><br /> CTRL tuşuna basarak ve basılı tutarak, **kaydırma** modunu geçici olarak etkinleştirebilirsiniz.|
-|**Yakınlaştırma**|Pencere çerçevesine göre daha fazla veya daha az görüntü ayrıntısı görüntülenmesini sağlar. **Yakınlaştırma** modu ' nda görüntüde bir nokta seçin ve yakınlaştırmak için sağa veya aşağı taşıyın ya da uzaklaştırmak için sola ya da yukarı kaydırın.<br /><br /> Fare tekerleğini kullanırken veya artı işaretine (+) ya da eksi Işaretine (-) basarak CTRL tuşunu basılı tutarak yakınlaştırıp uzaklaştırabilirsiniz.|
+|**Kaydır**|Görüntünün pencere çerçevesine göre taşınmasını sağlar. **Kaydırma** modu ' nda görüntüde bir nokta seçin ve sonra taşıyın.<br /><br /> CTRL tuşuna basarak ve basılı tutarak, **kaydırma** modunu geçici olarak etkinleştirebilirsiniz.|
+|**Zoom**|Pencere çerçevesine göre daha fazla veya daha az görüntü ayrıntısı görüntülenmesini sağlar. **Yakınlaştırma** modu ' nda görüntüde bir nokta seçin ve yakınlaştırmak için sağa veya aşağı taşıyın ya da uzaklaştırmak için sola ya da yukarı kaydırın.<br /><br /> Fare tekerleğini kullanırken veya artı işaretine (+) ya da eksi Işaretine (-) basarak CTRL tuşunu basılı tutarak yakınlaştırıp uzaklaştırabilirsiniz.|
 |**Gerçek boyuta Yakınlaştır**|Görüntünün pikselleri ve ekranın pikselleri arasında bir 1:1 ilişkisi kullanarak görüntüyü görüntüler.|
 |**Sığacak kadar Yakınlaştır**|Pencere çerçevesindeki tam görüntüyü görüntüler.|
 |**Genişliği Yakınlaştır**|Pencere çerçevesindeki görüntünün tam genişliğini görüntüler.|
@@ -106,8 +106,8 @@ Bu belge, doku ve resim kaynaklarını görüntülemek ve değiştirmek için [!
 |**Önceki MıP düzeyini görüntüle**|Bir MIP eşleme zincirindeki bir sonraki küçük MıP düzeyini etkinleştirir. Etkin MıP düzeyi tasarım yüzeyinde görüntülenir. Bu öğe yalnızca MıP düzeylerine sahip dokularla kullanılabilir.|
 |**Kırmızı kanal**<br /><br /> **Yeşil kanal**<br /><br /> **Mavi kanal**<br /><br /> **Alfa kanalı**|Belirli renk kanalını etkinleştirilir veya devre dışı bırakır. **Note:**  Renk kanallarını sistematik olarak etkinleştirerek veya devre dışı bırakarak, bir veya daha fazla sorunla ilgili sorunları yalıtabilirsiniz. Örneğin, yanlış alfa saydamlığı belirleyebilirsiniz.|
 |**Arka plan**|Görüntünün saydam kısımları aracılığıyla arka planın görüntülenmesini mümkün veya devre dışı bırakır. Aşağıdaki seçeneklerden birini belirleyerek arka planın nasıl görüntüleneceğini yapılandırabilirsiniz:<br /><br /> **Tahtası**<br /> Arka planı bir dama tahtası stili olarak göstermek için belirtilen arka plan rengiyle birlikte yeşil bir renk kullanır. Bu seçeneği, görüntünün saydam parçalarını daha belirgin hale getirmenize yardımcı olması için kullanabilirsiniz.<br /><br /> Beyaz arka plan<br /> Arka planı göstermek için beyaz rengi kullanır.<br /><br /> Siyah arka plan<br /> Arka planı göstermek için siyahın rengini kullanır.<br /><br /> Arka plana animasyon ekle<br /> Dama tahtası deseninin yavaş olması. Bu seçeneği, görüntünün saydam parçalarını daha belirgin hale getirmenize yardımcı olması için kullanabilirsiniz.|
-|**Veri Erişimi**|Alternatif olarak **Özellikler** penceresini açar veya kapatır.|
-|**Gelişmiş**|Ek komutlar ve seçenekler içerir.<br /><br /> **Filtreler**<br /><br /> Birkaç ortak görüntü filtresi sağlar: **siyah ve beyaz**, **bulanıklaştırma**, **parlak on**, **koyulaştırma**, **kenar algılama**, **kabarık**, **renkleri ters çevir**, **Ripple**, **sepıa tonu**ve **keskinleştirme**.<br /><br /> **Grafik altyapıları**<br /><br /> **D3D11 ile işleme**<br /> Görüntü Düzenleyicisi tasarım yüzeyini işlemek için Direct3D 11 ' i kullanır.<br /><br /> **D3D11WARP ile işleme**<br /> , Resim Düzenleyicisi tasarım yüzeyini işlemek için Direct3D 11 Windows Gelişmiş Tarama Platformu (WARP) kullanır.<br /><br /> **Araçlar**<br /><br /> **Yatay Çevir**<br /> Görüntüyü yatay veya x, eksenin etrafında yerleştir.<br /><br /> **Dikey Çevir**<br /> Görüntüyü dikey veya y ekseni etrafında dönüştürün.<br /><br /> **MIPS oluştur**<br /> Bir görüntü için MıP düzeyleri oluşturur. MıP düzeyleri zaten mevcutsa, en büyük MıP düzeyinden yeniden oluşturulur. Daha küçük MıP düzeylerinde yapılan tüm değişiklikler kaybolur. Oluşturmuş olduğunuz MıP düzeylerini kaydetmek için, görüntüyü kaydetmek üzere. DDS biçimini kullanmanız gerekir.<br /><br /> **Görünümü**<br /><br /> **Kare hızı**<br /> Etkinleştirildiğinde, tasarım yüzeyinin sağ üst köşesindeki kare hızını görüntüler. Kare hızı, saniye başına çizilen çerçeve sayısıdır. **İpucu:**  Son komutu yeniden çalıştırmak için **Gelişmiş** düğmesini seçebilirsiniz.|
+|**Özellikler**|Alternatif olarak **Özellikler** penceresini açar veya kapatır.|
+|**Gelişmiş**|Ek komutlar ve seçenekler içerir.<br /><br /> **Filtreler**<br /><br /> Birkaç ortak görüntü filtresi sağlar: **siyah ve beyaz**, **bulanıklaştırma**, **parlak on**, **koyulaştırma**, **kenar algılama**, **kabarık**, **renkleri ters çevir**, **Ripple**, **sepıa tonu**ve **keskinleştirme**.<br /><br /> **Grafik altyapıları**<br /><br /> **D3D11 ile işleme**<br /> Görüntü Düzenleyicisi tasarım yüzeyini işlemek için Direct3D 11 ' i kullanır.<br /><br /> **D3D11WARP ile işleme**<br /> , Resim Düzenleyicisi tasarım yüzeyini işlemek için Direct3D 11 Windows Gelişmiş Tarama Platformu (WARP) kullanır.<br /><br /> **Araçlar**<br /><br /> **Yatay Çevir**<br /> Görüntüyü yatay veya x, eksenin etrafında yerleştir.<br /><br /> **Dikey Çevir**<br /> Görüntüyü dikey veya y ekseni etrafında dönüştürün.<br /><br /> **MIPS oluştur**<br /> Bir görüntü için MıP düzeyleri oluşturur. MıP düzeyleri zaten mevcutsa, en büyük MıP düzeyinden yeniden oluşturulur. Daha küçük MıP düzeylerinde yapılan tüm değişiklikler kaybolur. Oluşturmuş olduğunuz MıP düzeylerini kaydetmek için, görüntüyü kaydetmek üzere. DDS biçimini kullanmanız gerekir.<br /><br /> **Görünüm**<br /><br /> **Kare hızı**<br /> Etkinleştirildiğinde, tasarım yüzeyinin sağ üst köşesindeki kare hızını görüntüler. Kare hızı, saniye başına çizilen çerçeve sayısıdır. **İpucu:**  Son komutu yeniden çalıştırmak için **Gelişmiş** düğmesini seçebilirsiniz.|
 
  **Görüntü Düzenleyicisi** araç çubuğu aşağıda verilmiştir.
 
@@ -115,17 +115,17 @@ Bu belge, doku ve resim kaynaklarını görüntülemek ve değiştirmek için [!
 
  Aşağıdaki tabloda, en üstten alta göründükleri sırada listelenen **Görüntü Düzenleyicisi** araç çubuğundaki öğeler açıklanmaktadır.
 
-|Araç Çubuğu Öğesi|Açıklama|
+|Araç Çubuğu Öğesi|Description|
 |------------------|-----------------|
 |**Düğmede**|Diğer adı olan bir vuruş çizmek için etkin renk seçimini kullanır. **Özellikler** penceresinde konturun rengini ve kalınlığını ayarlayabilirsiniz.|
 |**Fırçanın**|, İzin verilen bir kenar yumuşatma çizmek için etkin renk seçimini kullanır. **Özellikler** penceresinde konturun rengini ve kalınlığını ayarlayabilirsiniz.|
 |**Boya tabancası**|, Görüntüyle birlikte karışan ve zaman içerisinde daha fazla doygun bir kenar yumuşatma içeren bir vuruş çizmek için etkin renk seçimini kullanır. **Özellikler** penceresinde konturun rengini ve kalınlığını ayarlayabilirsiniz.|
 |**Damlalığı**|Etkin renk seçimini seçili pikselin rengine ayarlar.|
-|**Doldurması**|Görüntünün bir bölgesini dolduracak etkin renk seçimini kullanır. Etkilenen bölge, her pikselde aynı renkteki ve aynı rengin kendisi olan piksellerle bağlantılı olan her pikselle birlikte, dolgunun uygulandığı piksel olarak tanımlanır. Dolguyu etkin bir seçim içinde uygulanırsa, etkilenen bölge seçim tarafından sınırlandırılır.<br /><br /> Varsayılan olarak, etkin renk seçimi, Alfa bileşenine göre görüntünün etkilenen bölgesiyle birlikte karıştırılırdı. Etkilenen bölgenin üzerine yazmak üzere etkin renk seçimini kullanmak için, Fill aracını kullanırken SHIFT tuşuna basın ve basılı tutun.|
+|**Doldur**|Görüntünün bir bölgesini dolduracak etkin renk seçimini kullanır. Etkilenen bölge, her pikselde aynı renkteki ve aynı rengin kendisi olan piksellerle bağlantılı olan her pikselle birlikte, dolgunun uygulandığı piksel olarak tanımlanır. Dolguyu etkin bir seçim içinde uygulanırsa, etkilenen bölge seçim tarafından sınırlandırılır.<br /><br /> Varsayılan olarak, etkin renk seçimi, Alfa bileşenine göre görüntünün etkilenen bölgesiyle birlikte karıştırılırdı. Etkilenen bölgenin üzerine yazmak üzere etkin renk seçimini kullanmak için, Fill aracını kullanırken SHIFT tuşuna basın ve basılı tutun.|
 |**Silgi**|Resim bir alfa kanalını destekliyorsa, pikselleri tamamen saydam renge ayarlar. Aksi takdirde, pikselleri etkin arka plan rengine ayarlar.|
 |**Çizgi**, **dikdörtgen**, **yuvarlatılmış dikdörtgen**, **elips**|Görüntüde bir şekil çizer. Ana hattın rengini ve kalınlığını **Özellikler** penceresinde ayarlayabilirsiniz.<br /><br /> Eşit genişliğe ve yüksekliğe sahip bir temel öğe çizmek için, çizerken SHIFT tuşuna basın ve basılı tutun.|
-|**Metin**|Metin çizmek için ön plan rengi seçimini kullanır. Arka plan rengi, arka plan rengi seçimine göre belirlenir. Saydam bir arka plan için, arka plan rengi seçiminin alfa değeri 0 olmalıdır. Metin bölgesi etkin olsa da, metnin bir kenar yumuşatma uygulanmış vuruş ile çizilip çizilmeyeceğini ayarlayabilir ve metin **değeri**, **yazı tipi**, **Boyut**ve stil —**kalın**, **italik**veya **altı çizili**— Özellikler ' de ayarlanabilirpencere. Metin bölgesi artık etkin olmadığında metnin içeriği ve görünümü sonlandırılır.|
-|**Boyut**|Görüntüyü saat yönünde 90 derece döndürür.|
+|**Metin**|Metin çizmek için ön plan rengi seçimini kullanır. Arka plan rengi, arka plan rengi seçimine göre belirlenir. Saydam bir arka plan için, arka plan rengi seçiminin alfa değeri 0 olmalıdır. Metin bölgesi etkin olsa da, metnin bir kenar yumuşatma ile çizilip çizilmeyeceğini ayarlayabilir ve **Özellikler** penceresinde metin **değeri**, **yazı tipi**, **Boyut**ve stil —**kalın**, **italik**veya **altı çizili**) ayarlayabilirsiniz. Metin bölgesi artık etkin olmadığında metnin içeriği ve görünümü sonlandırılır.|
+|**Döndür**|Görüntüyü saat yönünde 90 derece döndürür.|
 |**Kırpma**|Görüntüyü etkin seçime kırpar.|
 
 ### <a name="working-with-mip-levels"></a>MıP düzeyleriyle çalışma
@@ -134,23 +134,23 @@ Bu belge, doku ve resim kaynaklarını görüntülemek ve değiştirmek için [!
 ### <a name="working-with-transparency"></a>Saydamlıkla çalışma
  Bazı görüntü biçimleri — Örneğin, DirectDraw yüzeyi (. DDS) — saydamlığı destekler. Kullandığınız araca bağlı olarak, saydamlığın kullanılabileceği birçok yol vardır. Bir renk seçimine ait saydamlık düzeyini belirtmek için, **Özellikler** penceresinde, renk seçiminin **a** (Alpha) bileşenini ayarlayın. Saydamlığın nasıl uygulandığını kontrol eden farklı araç türleri aşağıda verilmiştir:
 
-|Aracı|Açıklama|
+|Araç|Açıklama|
 |----------|-----------------|
 |**Kurşun kalem**, **fırça**, **püskürtme**, **çizgi**, **dikdörtgen**, **yuvarlatılmış dikdörtgen**, **elips**, **metin**|Etkin renk seçimini görüntüyle birlikte Blend için, **Özellikler** penceresinde **Kanallar** özellik grubu ' nu genişletin ve **Alfa** kanalında **Çiz** onay kutusunu ayarlayın ve normal şekilde çizin.<br /><br /> Etkin renk seçimini kullanarak çizim yapmak ve görüntünün Alfa değerini yerinde bırakmak için, **Alfa** kanalının **Çizim** onay kutusunu temizleyin ve normal şekilde çizin.|
-|**Doldurması**|Etkin renk seçimini görüntüyle birlikte karıştırmak için, doldurmanız gereken alanı seçmeniz yeterlidir.<br /><br /> Alfa kanalının değeri de dahil olmak üzere etkin renk seçimini kullanmak için, resmin üzerine yazmak için SHIFT tuşuna basın ve basılı tutun ve ardından doldurulacak alanı seçin.|
+|**Doldur**|Etkin renk seçimini görüntüyle birlikte karıştırmak için, doldurmanız gereken alanı seçmeniz yeterlidir.<br /><br /> Alfa kanalının değeri de dahil olmak üzere etkin renk seçimini kullanmak için, resmin üzerine yazmak için SHIFT tuşuna basın ve basılı tutun ve ardından doldurulacak alanı seçin.|
 
-### <a name="ImageProperties"></a>Görüntü özellikleri
+### <a name="image-properties"></a><a name="ImageProperties"></a> Görüntü özellikleri
  Görüntünün çeşitli özelliklerini belirtmek için **Özellikler** penceresini kullanabilirsiniz. Örneğin, genişliği ve yüksekliği özelliklerini görüntüyü yeniden boyutlandırmak için ayarlayabilirsiniz.
 
  Aşağıdaki tabloda görüntü özellikleri açıklanmaktadır.
 
 |Özellik|Açıklama|
 |--------------|-----------------|
-|Genişlik|Resmin genişliği.|
-|Yükseklik|Resmin yüksekliği.|
+|Width|Resmin genişliği.|
+|Height|Resmin yüksekliği.|
 |Bit/piksel|Her pikseli temsil eden bit sayısı. Bu özelliğin değeri görüntünün **renk biçimine** bağlıdır.|
 |Saydam seçim|Seçim katmanının Alfa değerine bağlı olarak, seçim katmanını ana görüntüyle birlikte karıştırmak için **true** ; Aksi takdirde, **false**. Bu öğe yalnızca Alpha destekleyen görüntülerde kullanılabilir.|
-|Biçimi|Görüntünün renk biçimi. Görüntü biçimine bağlı olarak çeşitli renk biçimleri belirtilebilir. Renk biçimi, görüntüde yer alan renk kanalların sayısını ve türünü ve ayrıca çeşitli kanalların boyut ve kodlamasını tanımlar.|
+|Biçimlendir|Görüntünün renk biçimi. Görüntü biçimine bağlı olarak çeşitli renk biçimleri belirtilebilir. Renk biçimi, görüntüde yer alan renk kanalların sayısını ve türünü ve ayrıca çeşitli kanalların boyut ve kodlamasını tanımlar.|
 |MIP düzeyi|Etkin MıP düzeyi. Bu öğe yalnızca MıP düzeylerine sahip dokularla kullanılabilir.|
 |MİP düzeyi sayısı|Görüntüdeki MıP düzeylerinin toplam sayısı. Bu öğe yalnızca MıP düzeylerine sahip dokularla kullanılabilir.|
 |Çerçeve sayısı|Görüntüdeki çerçevelerin toplam sayısı. Bu öğe yalnızca doku dizilerini destekleyen görüntülerde kullanılabilir.|
@@ -173,7 +173,7 @@ Bu belge, doku ve resim kaynaklarını görüntülemek ve değiştirmek için [!
 #### <a name="selected-regions"></a>Seçili bölgeler
  Görüntü düzenleyicisinde seçimler etkin olan görüntünün bölgelerini tanımlar; diğer bir deyişle, bölge araçlar ve dönüşümlerden etkilenir. Etkin bir seçim olduğunda, seçilen bölgenin dışındaki bölgeler çoğu araç ve dönüşümden etkilenmez. Etkin bir seçim yoksa görüntünün tamamı etkin olur.
 
- Çoğu araç —**kurşun kalem**, **fırça**, **püskürtme**, **Fill**, **silgi**ve 2-b temel elemanlar — ve dönüşümler —**döndürme**, **kırpma**, **renkleri ters**çevirme, **Yatay Çevir**ve **Dikey Çevir** — kısıtlı veya etkin seçim tarafından tanımlanır. Ancak, bazı araçlar (**damlalık** ve **metin**ve dönüşümler —**MIPS oluştur**), herhangi bir etkin seçimden etkilenmez; Bu araçlar her zaman tüm görüntünün etkin seçim olduğu gibi davranır.
+ Çoğu araç —**kurşun kalem**, **fırça**, **püskürtme**, **Fill**, **silgi**ve 2-b temel elemanlar — ve dönüşümler —**döndürme**, **kesme**, **renkleri ters**çevirme, **Yatay Çevir**ve **Dikey Çevir**—, etkin seçim tarafından sınırlandırılır veya tanımlanır. Ancak, bazı araçlar (**damlalık** ve **metin**ve dönüşümler —**MIPS oluştur**), herhangi bir etkin seçimden etkilenmez; Bu araçlar her zaman tüm görüntünün etkin seçim olduğu gibi davranır.
 
  Bir bölge seçerken, orantılı (kare) seçim yapmak için SHIFT tuşuna basabilir ve basılı tutabilirsiniz. Aksi takdirde, seçim kısıtlı değildir.
 
@@ -188,29 +188,29 @@ Bu belge, doku ve resim kaynaklarını görüntülemek ve değiştirmek için [!
 
  Geçerli değiştirici tuş bileşimleri şunlardır:
 
-|T|Karakter|Alternatif|Açıklama|
+|Ctrl|Shift|Alt|Description|
 |----------|-----------|---------|-----------------|
 ||||Seçili bölgenin içeriğini yeniden boyutlandırır.|
-||Karakter||Seçili bölgenin içeriğini orantılı olarak yeniden boyutlandırır.|
-|||Alternatif|Seçili bölgeyi yeniden boyutlandırır. Bu, yeni bir seçim bölgesi tanımlar.|
-||Karakter|Alternatif|Seçili bölgeyi orantılı olarak yeniden boyutlandırır. Bu, yeni bir seçim bölgesi tanımlar.|
-|T|||Seçili bölgenin içeriğini kopyalar ve sonra yeniden boyutlandırır.|
-|T|Karakter||Seçili bölgenin içeriğini kopyalar ve daha sonra orantılı olarak yeniden boyutlandırır.|
+||Shift||Seçili bölgenin içeriğini orantılı olarak yeniden boyutlandırır.|
+|||Alt|Seçili bölgeyi yeniden boyutlandırır. Bu, yeni bir seçim bölgesi tanımlar.|
+||Shift|Alt|Seçili bölgeyi orantılı olarak yeniden boyutlandırır. Bu, yeni bir seçim bölgesi tanımlar.|
+|Ctrl|||Seçili bölgenin içeriğini kopyalar ve sonra yeniden boyutlandırır.|
+|Ctrl|Shift||Seçili bölgenin içeriğini kopyalar ve daha sonra orantılı olarak yeniden boyutlandırır.|
 
-#### <a name="ToolProperties"></a>Araç özellikleri
+#### <a name="tool-properties"></a><a name="ToolProperties"></a> Araç özellikleri
  Bir araç seçiliyken, görüntü nasıl etkilediği hakkındaki ayrıntıları belirtmek için **Özellikler** penceresini kullanabilirsiniz. Örneğin, **kurşun kalem** aracının kalınlığını veya **fırça** aracının rengini ayarlayabilirsiniz.
 
  Hem ön plan rengi hem de arka plan rengi ayarlayabilirsiniz. Her ikisi de Kullanıcı tanımlı opaklık sağlamak için bir alfa kanalını destekler. Ayarlar tüm araçlara uygulanır. Fare kullanıyorsanız sol fare düğmesi ön plan rengine karşılık gelir ve sağ fare düğmesi arka plan rengine karşılık gelir.
 
  Aşağıdaki tabloda araç özellikleri açıklanmaktadır.
 
-|Aracı|Özellikler|
+|Araç|Özellikler|
 |----------|----------------|
 |Tüm araçlar ve seçimler|**Döndürme ölçütü**<br /> Seçim ya da araç efektinin saatin saat yönünde döndürüldüğü miktarı derece cinsinden tanımlar.|
-|**Kurşun kalem**, **fırça**, **püskürtme**, **silgi**|**Kalınlığı**<br /> Araçtan etkilenen alanın boyutunu tanımlar.|
-|**Metin**|**Kenar yumuşatma**<br /> Daha fazla kenar yumuşatma uygulanmış kenarları olan metni çizer. Bu metin daha yumuşak bir görünüm sağlar.<br /><br /> **Değer**<br /> Çizilecek metin.<br /><br /> **Yazý**<br /> Metni çizmek için kullanılan yazı tipi.<br /><br /> **Boyutla**<br /> Metnin boyutu.<br /><br /> **Kalın**<br /> Yazı tipini kalın yapar.<br /><br /> **İtalik**<br /> Yazı tipini italik yapar.<br /><br /> **Çiz**<br /> Yazı tipi altı çizili hale gelir.|
-|**2-b temel**|**Kenar yumuşatma**<br /> Kenar yumuşatma uygulanmış kenarları olan temel türleri çizer. Böylece daha yumuşak bir görünüm elde edin.<br /><br /> **Kalınlığı**<br /> Temel öğesinin sınırını oluşturan çizginin kalınlığını tanımlar.<br /><br /> **Yarıçap X**<br /> (Yalnızca yuvarlatılmış dikdörtgen) Temel öğesinin üst ve alt kenarları için yuvarlama yarıçapını tanımlar.<br /><br /> **Yarıçap Y**<br /> (Yalnızca yuvarlatılmış dikdörtgen) Temel öğesinin sol ve sağ kenarları için yuvarlama yarıçapını tanımlar.|
-|**Kurşun kalem**, **fırça**, **püskürtme**, **2-b temel**|**Lardan**<br /> Görüntüleme ve çizim için belirli renk kanallarını etkinleştirip devre dışı bırakır. Belirli bir renk kanalı için **Görünüm** ayarlandıysa, bu kanal görüntüde görünür; Aksi takdirde, görünür değildir. Belirli bir renk kanalı için **Çizim** ayarlandıysa, bu kanal çizim işlemleri tarafından etkilenir; Aksi takdirde, değildir.|
+|**Kurşun kalem**, **fırça**, **püskürtme**, **silgi**|**Kalınlık**<br /> Araçtan etkilenen alanın boyutunu tanımlar.|
+|**Metin**|**Kenar yumuşatma**<br /> Daha fazla kenar yumuşatma uygulanmış kenarları olan metni çizer. Bu metin daha yumuşak bir görünüm sağlar.<br /><br /> **Değer**<br /> Çizilecek metin.<br /><br /> **Yazı tipi**<br /> Metni çizmek için kullanılan yazı tipi.<br /><br /> **Boyut**<br /> Metnin boyutu.<br /><br /> **Kalın**<br /> Yazı tipini kalın yapar.<br /><br /> **İtalik**<br /> Yazı tipini italik yapar.<br /><br /> **Çiz**<br /> Yazı tipi altı çizili hale gelir.|
+|**2-b temel**|**Kenar yumuşatma**<br /> Kenar yumuşatma uygulanmış kenarları olan temel türleri çizer. Böylece daha yumuşak bir görünüm elde edin.<br /><br /> **Kalınlık**<br /> Temel öğesinin sınırını oluşturan çizginin kalınlığını tanımlar.<br /><br /> **Yarıçap X**<br /> (Yalnızca yuvarlatılmış dikdörtgen) Temel öğesinin üst ve alt kenarları için yuvarlama yarıçapını tanımlar.<br /><br /> **Yarıçap Y**<br /> (Yalnızca yuvarlatılmış dikdörtgen) Temel öğesinin sol ve sağ kenarları için yuvarlama yarıçapını tanımlar.|
+|**Kurşun kalem**, **fırça**, **püskürtme**, **2-b temel**|**Kanallar**<br /> Görüntüleme ve çizim için belirli renk kanallarını etkinleştirip devre dışı bırakır. Belirli bir renk kanalı için **Görünüm** ayarlandıysa, bu kanal görüntüde görünür; Aksi takdirde, görünür değildir. Belirli bir renk kanalı için **Çizim** ayarlandıysa, bu kanal çizim işlemleri tarafından etkilenir; Aksi takdirde, değildir.|
 |**Değnek seçimi**, **dolgusu**|**Payı**<br /> Etkilenen veya seçilen bölgenin bir parçası olarak daha az veya daha fazla benzer renge sahip olduğu için, benzer olarak kabul edildiği bitişik renkler arasındaki en büyük farkı tanımlar. Varsayılan olarak, değer 32 ' dir. Bu, orijinal rengin 32 gölgeler (daha açık veya daha koyu) içindeki bitişik piksellerin bölgenin parçası olarak kabul edildiği anlamına gelir.|
 
 ## <a name="keyboard-shortcuts"></a>Klavye kısayolları
@@ -253,7 +253,7 @@ Bu belge, doku ve resim kaynaklarını görüntülemek ve değiştirmek için [!
 |Etkin seçimi ve içeriğini yeniden boyutlandırın.|CTRL + ok tuşları|
 |Etkin seçimi taşıyın, ancak içeriğini değil.|SHIFT + ok tuşları|
 |Etkin seçimi yeniden boyutlandırın, ancak içeriğini değil.|SHIFT + CTRL + ok tuşları|
-|Geçerli katmanı Yürüt|döndürülmesini|
+|Geçerli katmanı Yürüt|Döndürülmesini|
 |Araç kalınlığını azalt|[|
 |Araç kalınlığını artır|]|
 
@@ -261,6 +261,6 @@ Bu belge, doku ve resim kaynaklarını görüntülemek ve değiştirmek için [!
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Oyunlar ve Uygulamalar için 3B Varlıklarla Çalışma](../designers/working-with-3-d-assets-for-games-and-apps.md)|Dokular ve görüntüler, 3-b modeller ve gölgelendirici efektleri gibi grafik varlıklarıyla çalışmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kullanabileceğiniz araçlara genel bir bakış sağlar.|
-|[Model Düzenleyicisi](../designers/model-editor.md)|3B modellerle çalışmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Model Düzenleyicisi ' nin nasıl kullanılacağını açıklar.|
-|[Gölgelendirici Tasarımcısı](../designers/shader-designer.md)|Gölgelendiricilerle çalışmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Gölgelendirici Tasarımcısının nasıl kullanılacağını açıklar.|
+|[Oyunlar ve Uygulamalar için 3B Varlıklarla Çalışma](../designers/working-with-3-d-assets-for-games-and-apps.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Dokular ve görüntüler, 3-b modeller ve gölgelendirici efektleri gibi grafik varlıklarıyla çalışmak için kullanabileceğiniz araçlara genel bir bakış sağlar.|
+|[Model Düzenleyicisi](../designers/model-editor.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]3B modellerle çalışmak için model düzenleyicisinin nasıl kullanılacağını açıklar.|
+|[Gölgelendirici Tasarımcısı](../designers/shader-designer.md)|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Gölgelendiricilerle çalışmak için Gölgelendirici Tasarımcısının nasıl kullanılacağını açıklar.|

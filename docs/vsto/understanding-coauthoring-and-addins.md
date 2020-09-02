@@ -1,5 +1,5 @@
 ---
-title: Birlikte yazmayı ve eklentileri anlama
+title: Birlikte yazmayı ve eklentileri anlayın
 ms.date: 07/20/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,17 +13,17 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 96d83bbe34e0510ccf14204eb83fa1ed2da2d173
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62978191"
 ---
-# <a name="understand-coauthoring-and-add-ins"></a>Birlikte yazmayı ve eklentileri anlama
+# <a name="understand-coauthoring-and-add-ins"></a>Birlikte yazmayı ve eklentileri anlayın
 
-Birlikte yazmayı Excel için Windows masaüstünün diğer kullanıcılarla aynı anda (diğer bir deyişle, OneDrive, OneDrive iş veya SharePoint Online için) bulutta barındırılan bir çalışma kitabı düzenlemenize olanak sağlayan bir özelliktir. Bu özellik'ın eklenmesiyle, olsa bile kullanıcılar birlikte yazmayı sorunsuz çalıştığından emin olmak için Excel çözümünüze ayarlamalar yapmanız gerekebilir. Bkz: [Excel'de birlikte yazmayı hakkında](/office/vba/excel/concepts/about-coauthoring-in-excel).
+Coauthoring, bulutta (yani OneDrive, OneDrive Iş veya SharePoint Online) barındırılan bir çalışma kitabını diğer kullanıcılarla eşzamanlı olarak düzenlemenizi sağlayan Windows Masaüstü için Excel 'in bir özelliğidir. Bu özelliğin eklenmesiyle, kullanıcılar birlikte yazarken bile sorunsuz çalıştığından emin olmak için Excel çözümünüzdeki ayarlamaları yapmanız gerekebilir. Bkz. [Excel 'de birlikte yazma hakkında](/office/vba/excel/concepts/about-coauthoring-in-excel).
 
-Not: Windows Masaüstü Excel için birlikte yazmayı, 2017'de kullanıma sunulmuştur ve Office365 şu anda abonelerine yöneliktir. Office 2016 veya önceki kalıcı bir lisans satın almış kullanıcılar şu anda coauthoring özelliğe sahip. (Excel Online Excel Android, iOS için Excel ve Windows Store Excel Mobile'da da destek birlikte yazmayı).
+Note: Windows Masaüstü için birlikte yazma, 2017 sürümünde sunulmuştur ve şu anda Office365 aboneleri için sunulmaktadır. Office 2016 veya önceki bir sürümü için kalıcı lisans satın alan kullanıcıların şu anda birlikte yazma özelliğine erişimi yoktur. (Excel Online, Android için Excel, iOS için Excel ve Windows Mağazası 'nda Excel Mobile, birlikte yazmayı da destekler).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Excel çözümleri](./excel-solutions.md)

@@ -1,5 +1,5 @@
 ---
-title: Satırlar görünümü | Microsoft Docs
+title: Satırlar Görünümü | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,36 +16,36 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ccdb211312a6f53e7f519b7fac0e3ac28aab2429
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145631"
 ---
 # <a name="lines-view"></a>Satırlar Görünümü
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Satırlar görünümü, toplanan örnekleme yöntemini kullanarak profil oluşturucu verileri için kullanılabilir. Görünüm araçları kullanılarak toplanan veriler için kullanılabilir değil.  
+Satırlar görünümü yalnızca örnekleme yöntemi kullanılarak toplanan profil oluşturucu verileri için kullanılabilir. Görünüm, izleme kullanılarak toplanan veriler için kullanılamaz.  
   
- Satırlar görünümü, profil verileri örnekleme için örnek toplanan doğrudan yürütülmekte olan bir işlev bildiriminde tanımlar. .NET bellek verileri için bellek tahsis deyimleri satırlar görünümü tanımlar.  
+ Örnekleme profili verileri için satırlar görünümü, örnek toplandığında doğrudan yürütülen bir işlevde ifadeyi tanımlar. .NET bellek verileri için satırlar görünümü bellek ayıran deyimleri tanımlar.  
   
- Bir kaynak dosyasında bir deyimi kaynak dosyasında bir satırdan daha kapsayabilir ve tek bir satır birden fazla deyim içerebilir.  
+ Bir kaynak dosyasında, bir ifade kaynak dosyada bir satırı daha fazla yayılabilir ve tek bir satır birden fazla deyime dahil olabilir.  
   
- Bir deyimi aşağıdaki tarafından tanımlanır:  
+ Bir ifade aşağıdaki şekilde tanımlanır:  
   
-- Function deyimi içeren kaynak dosyası.  
+- Function ifadesini içeren kaynak dosya.  
   
-- Deyimi içeren işlev.  
+- İfadesini içeren işlev.  
   
-- Deyim başladığı kaynak satırı.  
+- Deyimin başladığı kaynak satır.  
   
-- Deyim başladığı kaynak satırı karakter.  
+- Deyimin başladığı kaynak satırdaki karakter.  
   
-- Kaynak satırı başlangıçtan deyimini sonlandırır.  
+- Deyimin bittiği kaynak satır.  
   
-- Deyim erdiği kaynak satırı karakter.  
+- Deyimin bittiği kaynak satırdaki karakter.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Satırlar görünümü](../profiling/lines-view-sampling-data.md)   
- [Satırlar görünümü - örnekleme](../profiling/lines-view-dotnet-memory-sampling-data.md)   
+ [Satırlar Görünümü](../profiling/lines-view-sampling-data.md)   
+ [Satırlar Görünümü-Örnekleme](../profiling/lines-view-dotnet-memory-sampling-data.md)   
  [Satırlar Görünümü](../profiling/lines-view-contention-data.md)

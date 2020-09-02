@@ -1,5 +1,5 @@
 ---
-title: Çekirdekler görünümü mantıksal çekirdekler | Microsoft Docs
+title: Çekirdek görünüm Mantıksal çekirdekler | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f4de6750b7497e971af1096a0970495f3d4363a5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160029"
 ---
 # <a name="cores-view-logical-cores"></a>Çekirdekler Görünümü Mantıksal Çekirdekler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kanal adları profili oluşturulmuş bir sistemde mevcut mantıksal çekirdek birini temsil eder. Adlandırma sayıları yukarı 0 mantıksal çekirdek toplam sayısı. Örneğin, dört çekirdek sistem mantıksal çekirdek 3 mantıksal çekirdekten 0 sayılır.  
+Her kanal adı, profili oluşturulan sistemde bulunan mantıksal çekirdekleri temsil eder. Adlandırma, 0 ' dan toplam mantıksal çekirdek sayısı kadar sayılır. Örneğin, dört çekirdekli bir sistem mantıksal Core 0 ' dan mantıksal çekirdek 3 ' e kadar sayılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Çekirdekler Görünümü](../profiling/cores-view.md)

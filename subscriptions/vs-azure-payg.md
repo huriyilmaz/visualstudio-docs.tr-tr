@@ -8,10 +8,10 @@ ms.date: 04/15/2020
 ms.topic: how-to
 description: Azure Kullandıkça Öde hesabınızı ayarlamayı öğrenin.
 ms.openlocfilehash: 057230d4b3b54e1d514a06f6db2de7412eb2c995
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85902888"
 ---
 # <a name="azure-devtest-pay-as-you-go-subscriptions"></a>Azure DevTest Kullandıkça Öde abonelikleri
@@ -39,7 +39,7 @@ Bulutta ekibinizle işbirliği yapın.  Birden çok geliştirme ve Test Kulland�
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 ### <a name="q--what-if-i-want-to-make-changes-to-this-subscription"></a>S: Bu abonelikte değişiklik yapmak istersem ne yapmalıyım?
 Y: Azure aboneliklerinizden herhangi birinde değişiklik yapmak Için:
-1. [Azure Portal](https://portal.azure.com) oturum açın.
+1. [Azure portalında](https://portal.azure.com) oturum açın.
 2. Sol bölmedeki listede **maliyet yönetimi + faturalandırma**' i seçin.
 3. **Aboneliklerim** kutusunda aboneliklerinizin bir listesini görürsünüz. İstediğiniz aboneliğe tıklayın.
 4. Artık aboneliği yönetme veya iptal etme, yeniden adlandırma, dizini değiştirme veya faturalandırma sahipliğini aktarma seçeneklerine sahip olacaksınız.

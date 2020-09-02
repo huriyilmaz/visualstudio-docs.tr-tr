@@ -1,6 +1,6 @@
 ---
-title: Azure özel bulutlara erişme
-description: Visual Studio kullanarak özel bulut kaynakları erişmeyi öğrenin.
+title: Özel Azure bulutlarına erişme
+description: Visual Studio kullanarak özel bulut kaynaklarına nasıl erişebileceğinizi öğrenin.
 author: ghogen
 manager: jillfra
 assetId: 9d733c8d-703b-44e7-a210-bb75874c45c8
@@ -12,36 +12,36 @@ ms.topic: conceptual
 ms.date: 11/13/2017
 ms.author: ghogen
 ms.openlocfilehash: ab0b6167a91f6cf6f5aecdcbcfb03bab62b96b6b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62964189"
 ---
-# <a name="accessing-private-azure-clouds-with-visual-studio"></a>Visual Studio ile Azure özel bulutlara erişme
+# <a name="accessing-private-azure-clouds-with-visual-studio"></a>Visual Studio ile özel Azure bulutlarına erişme
 
-Varsayılan olarak, Visual Studio, Azure bulut REST uç noktalarını destekler. Bu makalede, özel bulutunuzun sertifika erişmek ve Visual Studio'dan bir özel bulutla etkileşim kurmak için nasıl kullanılacağını öğrenin.
+Varsayılan olarak, Visual Studio Azure bulut REST uç noktalarını destekler. Bu makalede, Visual Studio 'dan özel buluta erişmek ve bunlarla etkileşim kurmak için özel bulutunuzun sertifikasını nasıl kullanacağınızı öğreneceksiniz.
 
-1. Özel bulut için Azure portalında, yayımlama ayarları dosyasını indirin veya bir yayımlama ayarları dosyası için yöneticinize başvurun. (Dosya uzantısına sahip `.publishsettings`.)
+1. Özel bulutun Azure portal, yayımlama ayarları dosyanızı indirin veya bir yayımlama ayarları dosyası için yöneticinize başvurun. (Dosyanın uzantısı vardır `.publishsettings` .)
 
-1. Visual Studio'da **Sunucu Gezgini**, sağ **Azure** düğümünü seçip alt **yönetin ve filtre abonelikleri**.
+1. Visual Studio **Sunucu Gezgini**' de **Azure** düğümüne sağ tıklayın ve **abonelikleri Yönet ve filtrele**' yi seçin.
 
-    ![Komut Abonelikleri Yönetme](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790778.png)
+    ![Abonelikleri Yönet komutu](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790778.png)
 
-1. İçinde **Microsoft Azure abonelikleri yönetme** iletişim kutusunda **sertifikaları** sekmesine ve ardından seçin **alma**.
+1. **Microsoft Azure Aboneliklerini Yönet** iletişim kutusunda, **Sertifikalar** sekmesini seçin ve ardından **içeri aktar**' ı seçin.
 
-    ![Azure sertifikaları içeri aktarma](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790779.png)
+    ![Azure sertifikalarını içeri aktarma](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790779.png)
 
-1. İçinde **alma Microsoft Azure abonelikleri** iletişim kutusunda **Gözat**.
+1. **Microsoft Azure abonelikleri Içeri aktar** iletişim kutusunda, **Araştır**' ı seçin.
 
-    ![Gözat düğmesi alma Microsoft Azure abonelikleri iletişim](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/browse-button.png)
+    ![Microsoft Azure abonelikleri Içeri aktarma iletişim kutusunda tarama düğmesi](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/browse-button.png)
 
-1. İçinde **açık** Seç dosyasını ve ardından seçin iletişim kutusu, yayımlama ayarları dosyasını kaydettiğiniz dizine gidin **açık**.
+1. **Aç** iletişim kutusunda, yayınlama ayarları dosyasını kaydettiğiniz dizine gidin, dosyayı seçin ve **Aç**' ı seçin.
 
-    ![Yayımlama ayarları dosyası seçin](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/select-publish-settings-file.png)
+    ![Yayımla-ayarlar dosyasını seçin](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/select-publish-settings-file.png)
 
-1. İçin döndürülen **alma Microsoft Azure abonelikleri** iletişim kutusunda **alma**.
+1. **Microsoft Azure abonelikleri Içeri aktar** iletişim kutusuna döndürüldüğünde **içeri aktar**' ı seçin.
 
-    ![Yayımlama ayarları dosyasını içeri aktar](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790780.png)
+    ![Yayımlama ayarları dosyasını içeri aktarma](./media/vs-azure-tools-access-private-azure-clouds-with-visual-studio/IC790780.png)
 
-    Sertifikaları yayımlama ayarlarını dosyasından Visual Studio'ya içeri aktarılır ve artık, özel bulut kaynakları ile etkileşim kurabilir.
+    Sertifikalar, yayımlama ayarları dosyasından Visual Studio 'ya alınır ve artık özel bulut kaynaklarınızla etkileşime geçebilirsiniz.

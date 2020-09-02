@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8bfbe4b11c22d6cfd147783f9fb662843cf57fe9
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87234958"
 ---
 # <a name="how-to-troubleshoot-services"></a>Nasıl yapılır: hizmetler sorunlarını giderme
@@ -56,7 +56,7 @@ if (log == null) return;
 
    2. Arabirime açıkça bir GUID atanmaz. Bu nedenle, sistem gerektiğinde bir nesne için varsayılan bir GUID oluşturur.
 
-3. Hizmeti isteyen VSPackage 'ın kaldırılmış olduğundan emin olun. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]siteleri oluşturduktan sonra ve çağrılmadan önce bir VSPackage <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> .
+3. Hizmeti isteyen VSPackage 'ın kaldırılmış olduğundan emin olun. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] siteleri oluşturduktan sonra ve çağrılmadan önce bir VSPackage <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> .
 
     Bir hizmet gerektiren VSPackage oluşturucusunda kodunuz varsa, bunu `Initialize` metoduna taşıyın.
 

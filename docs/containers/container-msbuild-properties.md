@@ -7,10 +7,10 @@ ms.date: 06/06/2019
 ms.technology: vs-azure
 ms.topic: reference
 ms.openlocfilehash: 427a70d9bc4f6ef326ffb16e7d26df9d8fae2365
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283209"
 ---
 # <a name="container-tools-build-properties"></a>Kapsayıcı araçları derleme özellikleri
@@ -86,4 +86,4 @@ MSBuild özellikleri hakkında genel bilgi için bkz. [MSBuild özellikleri](../
 
 [Kapsayıcı araçları başlatma ayarları](container-launch-settings.md)
 
-[MSBuild ayrılmış ve iyi bilinen Özellikler](../msbuild/msbuild-reserved-and-well-known-properties.md)
+[MSBuild ayrılmış ve tanınmış özellikleri](../msbuild/msbuild-reserved-and-well-known-properties.md)
