@@ -10,10 +10,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 672d472d4e592782f7ae06920c518b154fba6cba
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329880"
 ---
 # <a name="wincounter"></a>WinCounter
@@ -32,7 +32,7 @@ VSPerfCmd.exe /Start:Method /Wincounter:Path [/WinCounter:Path] [AutoMark:Millis
 ```
 
 #### <a name="parameters"></a>Parametreler
- `Path`PDH sayaç yolu biçimindeki Windows performans sayacı.
+ `Path` PDH sayaç yolu biçimindeki Windows performans sayacı.
 
 ## <a name="required-options"></a>Gerekli seçenekler
  **WinCounter** seçeneği yalnızca **Start** seçeneğiyle birlikte kullanılabilir.

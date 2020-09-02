@@ -8,10 +8,10 @@ ms.date: 04/28/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen Azure DevTest bireysel kredi avantajını nasıl etkinleştireceğinizi öğrenin.
 ms.openlocfilehash: 276475393de374970685202079831bb06bedea6f
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88247332"
 ---
 # <a name="use-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Microsoft Azure kullanma
@@ -72,23 +72,23 @@ Kaynakları aktarma, harcama limitlerini kaldırma veya diğer Azure konuların�
 ## <a name="eligibility"></a>Önceliği
 |                 Abonelik düzeyi/program                 |           Avantaj           |                         Yenilenebilir?                          |
 |--------------------------------------------------------------|-----------------------------|-------------------------------------------------------------|
-|              Visual Studio Enterprise standart               |     $150 aylık kredi     |                             Evet                             |
-|              GitHub Enterprise ile Visual Studio Enterprise               |     $150 aylık kredi     |                             Evet                             |
+|              Visual Studio Enterprise standart               |     $150 aylık kredi     |                             Yes                             |
+|              GitHub Enterprise ile Visual Studio Enterprise               |     $150 aylık kredi     |                             Yes                             |
 |               Visual Studio Enterprise aylık               |        Kullanılamaz        |                                                             |
-|             Visual Studio Professional Standart              |     $50 aylık kredi      |                             Evet
-|              GitHub Enterprise ile Visual Studio Professional              |     $150 aylık kredi     |                             Evet                             |
+|             Visual Studio Professional Standart              |     $50 aylık kredi      |                             Yes
+|              GitHub Enterprise ile Visual Studio Professional              |     $150 aylık kredi     |                             Yes                             |
 |              Visual Studio Professional aylık              |        Kullanılamaz        |                                                             |
-|                    Visual Studio test Pro                    |     $50 aylık kredi      |                             Evet                             |
-|                        MSDN Platformları                        |     $100 aylık kredi     |                             Evet                             |
-|               Visual Studio Enterprise-NFR\*               |     $150 aylık kredi     |                             Evet                             |
-|                Visual Studio Enterprise-FTE                |     $150 aylık kredi     |                             Evet                             |
-|     Visual Studio Enterprise Microsoft İş Ortağı Ağı     |     $150 aylık kredi     |                             Evet                             |
+|                    Visual Studio test Pro                    |     $50 aylık kredi      |                             Yes                             |
+|                        MSDN Platformları                        |     $100 aylık kredi     |                             Yes                             |
+|               Visual Studio Enterprise-NFR\*               |     $150 aylık kredi     |                             Yes                             |
+|                Visual Studio Enterprise-FTE                |     $150 aylık kredi     |                             Yes                             |
+|     Visual Studio Enterprise Microsoft İş Ortağı Ağı     |     $150 aylık kredi     |                             Yes                             |
 |    Visual Studio Professional Microsoft İş Ortağı Ağı    |        Kullanılamaz        |                                                             |
 |        Visual Studio Enterprise – Imagine (Standart)         |        Kullanılamaz        |                                                             |
 |         Visual Studio Enterprise – Imagine (Premium)         |        Kullanılamaz        |                                                             |
-|             Visual Studio Enterprise – BizSpark              |     $150 aylık kredi     |                             Evet                             |
-|      Visual Studio Enterprise – MCT Software & Hizmetleri      |     $100 aylık kredi     |                             Evet                             |
-| Visual Studio Enterprise – MCT Software & Services geliştiricisi |     $150 aylık kredi     |                             Evet                             |
+|             Visual Studio Enterprise – BizSpark              |     $150 aylık kredi     |                             Yes                             |
+|      Visual Studio Enterprise – MCT Software & Hizmetleri      |     $100 aylık kredi     |                             Yes                             |
+| Visual Studio Enterprise – MCT Software & Services geliştiricisi |     $150 aylık kredi     |                             Yes                             |
 
 * Bir for Studio (NFR), en değerli profesyonel (MVP), bölgesel yönetmen (RD), Visual Studio sektör ortağı (VSıP) dahil değildir.
 

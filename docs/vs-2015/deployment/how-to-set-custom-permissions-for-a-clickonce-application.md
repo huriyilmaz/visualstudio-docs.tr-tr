@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ClickOnce uygulaması için özel izinleri ayarlama | Microsoft Docs'
+title: 'Nasıl yapılır: ClickOnce uygulaması için özel Izinleri ayarlama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -17,39 +17,39 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6739f38e91ce998441c4cfa62453d485a5d370e3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697543"
 ---
 # <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce Uygulaması için Özel İzinleri Ayarlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Dağıtabileceğiniz bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Internet veya yerel Intranet bölgeleri için varsayılan izinler kullanan bir uygulama. Alternatif olarak, uygulamanız için gereken belirli izinleri için özel bir bölge oluşturabilirsiniz. Bunu şirket güvenlik izinlerini özelleştirerek yapmak **güvenlik** sayfasının **Proje Tasarımcısı**.  
+[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]Internet veya yerel Intranet bölgeleri için varsayılan izinleri kullanan bir uygulamayı dağıtabilirsiniz. Alternatif olarak, uygulamanın ihtiyacı olan özel izinler için özel bir bölge oluşturabilirsiniz. Bunu, **Proje Tasarımcısı**'nın **güvenlik** sayfasında güvenlik izinlerini özelleştirerek yapabilirsiniz.  
   
 ### <a name="to-customize-a-permission"></a>Bir izni özelleştirmek için  
   
-1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünde tıklatın **özellikleri**.  
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.  
   
-2. Tıklayın **güvenlik** sekmesi.  
+2. **Güvenlik** sekmesine tıklayın.  
   
-3. Seçin **ClickOnce güvenlik ayarlarını etkinleştirme** onay kutusu.  
+3. **ClickOnce güvenlik ayarlarını etkinleştir** onay kutusunu seçin.  
   
-4. Seçin **kısmi güven uygulamasıdır** seçenek düğmesini.  
+4. **Bu bir kısmi güven uygulaması** seçenek düğmesini seçin.  
   
-     Denetimlerde **ClickOnce güvenlik izinleri** bölüm etkinleştirilir.  
+     **ClickOnce güvenlik izinleri** bölümündeki denetimler etkindir.  
   
-5. Gelen **uygulamanızı yükleneceği kaynak bölge** aşağı açılan listesinde, tıklayın **(özel)**.  
+5. Uygulamanızın açılan listeden **yüklenecek bölge** listesinden **(özel)** seçeneğine tıklayın.  
   
-6. Tıklayın **düzenleme izinleri XML**.  
+6. **Izinleri Düzenle XML**' ye tıklayın.  
   
-     App.manifest dosyası XML düzenleyicisinde açılır.  
+     App. manifest dosyası XML düzenleyicisinde açılır.  
   
-7. Önce `</applicationRequestMinimum>` öğesi, uygulamanızın gerektirdiği izinler için XML kodunu ekleyin.  
+7. Öğesinden önce `</applicationRequestMinimum>` , uygulamanız için gereken izinler IÇIN XML kodu ekleyin.  
   
     > [!NOTE]
-    > Kullanabileceğiniz `ToXml` yöntemi bir izin kümesi XML kodunu uygulama bildirimini oluşturmak için. Örneğin, için XML oluşturmak için <xref:System.Security.Permissions.EnvironmentPermission> izin kümesi, çağrı <xref:System.Security.Permissions.EnvironmentPermission.ToXml%2A> yöntemi. XML yapısı hakkında daha fazla bilgi için bkz [NIB: Nasıl yapılır: Bir izin kümesinin bir XML dosyası kullanarak içeri aktarma](https://msdn.microsoft.com/dea16b54-c108-408a-ac36-cdc05f746236).  
+    > `ToXml`Uygulama bildirimi IÇIN XML kodu oluşturmak üzere bir izin kümesi yöntemini kullanabilirsiniz. Örneğin, izin kümesi için XML oluşturmak üzere <xref:System.Security.Permissions.EnvironmentPermission> <xref:System.Security.Permissions.EnvironmentPermission.ToXml%2A> yöntemini çağırın. İzin kümesi XML yapısı hakkında daha fazla bilgi için, bkz. [nib: nasıl yapılır: BIR XML dosyası kullanarak Izin kümesi Içeri aktarma](https://msdn.microsoft.com/dea16b54-c108-408a-ac36-cdc05f746236).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md)   

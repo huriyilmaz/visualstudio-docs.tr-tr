@@ -11,10 +11,10 @@ no-loc:
 - Blazor WebAssembly
 ms.topic: how-to
 ms.openlocfilehash: ed92205388202c457f4d6c8e3fbba567a0d5944e
-ms.sourcegitcommit: 5e82a428795749c594f71300ab03a935dc1d523b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86211656"
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core Kullanmaya Başlama
@@ -114,7 +114,7 @@ Projenizdeki **Startup.cs** dosyasını açın ve inceleyin:
 Bu başlangıç sınıfının her zaman aşağıdaki kurallara uyması gerekir:
 
 - Her zaman ortak olmalıdır
-- İki ortak yöntemi içermelidir: `ConfigureServices` ve`Configure`
+- İki ortak yöntemi içermelidir: `ConfigureServices` ve `Configure`
 
 `ConfigureServices`Yöntemi, uygulamanız tarafından kullanılacak hizmetleri tanımlar.
 

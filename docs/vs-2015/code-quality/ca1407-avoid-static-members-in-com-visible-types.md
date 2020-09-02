@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 436a8614c18c296c072d91116143306d898f0436
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538859"
 ---
 # <a name="ca1407-avoid-static-members-in-com-visible-types"></a>CA1407: COM görünebilir türler içinde statik üyelerden kaçının
@@ -69,7 +69,7 @@ namespace Samples
 
 ## <a name="example-violation"></a>Örnek Ihlali
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, `static` Bu kuralı ihlal eden bir yöntemi gösterir.
 
 ### <a name="code"></a>Kod
@@ -80,7 +80,7 @@ namespace Samples
 
 ## <a name="example-fix"></a>Örnek onarma
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Önceki örnekteki ihlalin giderilmesi için, yöntemini bir örnek yöntemi olarak değiştirebilirsiniz, ancak bu örnekte bu anlamlı değildir. Daha iyi bir çözüm, yöntemin `ComVisible(false)` com 'dan görülemeyeceğini diğer geliştiricilere açık hale getirmek üzere yöntemine açıkça uygulanmasıdır.
 
  Aşağıdaki örnek <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> yöntemi için geçerlidir.

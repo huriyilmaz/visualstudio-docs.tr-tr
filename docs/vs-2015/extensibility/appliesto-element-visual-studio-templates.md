@@ -9,26 +9,26 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f6622c4774be5188aced606ce4b73dffe544aea1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65698934"
 ---
 # <a name="appliesto-element-visual-studio-templates"></a>AppliesTo Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir veya daha fazla yeteneği karşılamak için isteğe bağlı bir ifade belirtir. (bkz <xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher>). Özellikleri bir özellik olarak hiyerarşi aracılığıyla proje türlerine göre sunulur <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5>. Bu sayede, şablon ortak uygulanabilir yeteneklere sahip birden fazla proje türü tarafından paylaşılabilir.  
+Bir veya daha fazla yeteneği karşılamak için isteğe bağlı bir ifade belirtir. (bkz <xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher> .). Özellikler, bir özellik olarak hiyerarşi aracılığıyla proje türleri tarafından gösterilir <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5> . Bu sayede, şablon ortak uygulanabilir yeteneklere sahip birden fazla proje türü tarafından paylaşılabilir.  
   
- Bu öğe isteğe bağlıdır. Bir şablon dosyasında en fazla bir örnek olabilir. Bu öğe yalnızca, o anda seçili etkin projenin yeteneklerine göre bir öğe şablonunun uygulanabilir olarak tercih edilmesini sağlar. Bir öğe şablonunu uygulanamaz yapmak için kullanılamaz. Varsa `AppliesTo` yok veya ifade başarılı bir şekilde, ardından iyileştirilmiş değil `TemplateID` veya `TemplateGroupID` şablonu varsa, ürünün önceki sürümlerinde yapmak için kullanılır.  
+ Bu öğe isteğe bağlıdır. Bir şablon dosyasında en fazla bir örnek olabilir. Bu öğe yalnızca, o anda seçili etkin projenin yeteneklerine göre bir öğe şablonunun uygulanabilir olarak tercih edilmesini sağlar. Bir öğe şablonunu uygulanamaz yapmak için kullanılamaz. Yoksa `AppliesTo` veya ifade başarılı bir şekilde kabul etmediğinde, `TemplateID` `TemplateGroupID` ürünün önceki sürümlerinde olduğu gibi, şablonu uygulanabilir hale getirmek için veya kullanılır.  
   
- Visual Studio 2013 güncelleştirme 2 kullanıma sunmuştur. Doğru sürümü başvuru için bkz: [Visual Studio 2013 SDK'sı güncelleştirme 2 teslim başvuran derlemeleri](https://msdn.microsoft.com/42b65c3e-e42b-4c39-98c8-bea285f25ffb).  
+ Visual Studio 2013 güncelleştirme 2 ' de kullanıma sunulmuştur. Doğru sürüme başvurmak için, bkz. [VISUAL STUDIO 2013 SDK güncelleştirme 2 ' de sunulan derlemelere başvuru](https://msdn.microsoft.com/42b65c3e-e42b-4c39-98c8-bea285f25ffb).  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<AppliesTo >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<AppliesTo>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <AppliesTo>Capability1</AppliesTo>   
@@ -54,11 +54,11 @@ Bir veya daha fazla yeteneği karşılamak için isteğe bağlı bir ifade belir
   
  Geçerli ifade sözdizimi şu şekilde tanımlanır:  
   
-- Yetenek ifadesi gibi "(VisualC &#124; CSharp) + (MSTest &#124; NUnit)".  
+- "(VisualC &#124; CSharp) + (MSTest &#124; NUnit)" gibi yetenek ifadesi.  
   
-- "&#124;" OR işlecidir.  
+- "&#124;", OR işleçtir.  
   
-- "&" Ve "+" karakterlerinin ikisi de AND işleçleridir.  
+- "&" ve "+" karakterleri hem hem de işleçleridir.  
   
 - "!" karakteri NOT işlecidir.  
   
@@ -66,10 +66,10 @@ Bir veya daha fazla yeteneği karşılamak için isteğe bağlı bir ifade belir
   
 - Null veya boş ifade bir eşleşme olarak değerlendirilir.  
   
-- Proje özellikleri, bu ayrılmış karakterler dışında herhangi bir karakter olabilir: "'' :;,+-*/\\! ~&#124;& %$@^() ={}[] <>? \t\b\n\r  
+- Proje özellikleri şu ayrılmış karakterler dışında herhangi bir karakter olabilir: "' ':;, +-*/ \\ ! ~&#124;&% $ @ ^ () = {} [] <>? \t\b\n\r  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, üç farklı şablonu göstermektedir. `Template1` tüm C# projesi türleri veya destekleyen herhangi bir proje türü geçerli `WindowsAppContainer` yeteneği. `Template2` tüm C# projeleri için geçerlidir. `Template3` olmayan C# projeleri için geçerlidir `WindowsAppContainer` projeleri.  
+ Aşağıdaki örnek, üç farklı şablonu göstermektedir. `Template1` Tüm C# proje türlerine veya özelliğini destekleyen diğer proje türlerine uygulanır `WindowsAppContainer` . `Template2` her türlü C# projesi için geçerlidir. `Template3` Proje olmayan C# projelerine uygulanır `WindowsAppContainer` .  
   
 ```xml  
 <!--  Template 1 -->  

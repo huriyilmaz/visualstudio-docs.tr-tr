@@ -1,5 +1,5 @@
 ---
-title: Atama kancaları ve C çalışma zamanı bellek ayırmaları | Microsoft Docs
+title: Ayırma kancaları ve C çalışma zamanı bellek ayırmaları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,26 +23,26 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8487972c237b9c2ba6bf2594ffc1df43fa0c63cd
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702431"
 ---
 # <a name="allocation-hooks-and-c-run-time-memory-allocations"></a>Atama Kancaları ve C Çalışma Zamanı Bellek Ayırmaları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Atama kanca işlevleri çok önemli bir kısıtlama bunlar açıkça yoksayması gereken olduğu `_CRT_BLOCK` bloklar (C çalışma zamanı kitaplığı işlevleri tarafından dahili olarak yapılan bellek ayırmaları) tahsis C çalışma zamanı kitaplık işlevleri çağrıları'na yaparsanız iç bellek. `_CRT_BLOCK` Blokları, ayrılan başında aşağıdaki kanca işlevi gibi kod ekleyerek göz ardı:  
+Ayırma kanca işlevleriyle ilgili çok önemli bir kısıtlama, `_CRT_BLOCK` iç bellek ayıran c çalışma zamanı kitaplığı işlevlerine çağrılar yaparsanız blokları (c çalışma zamanı kitaplığı işlevleri tarafından dahili olarak yapılan bellek ayırmaları) açıkça yoksaymalıdır. `_CRT_BLOCK`Bloklar, ayırma kanca işlevinizin başlangıcında aşağıdakiler gibi kod ekleyerek yoksayılabilir:  
   
 ```  
 if ( nBlockUse == _CRT_BLOCK )  
     return( TRUE );  
 ```  
   
- Atama kanca değil yoksayarsanız `_CRT_BLOCK` , içindeki kanca adlı tüm C çalışma zamanı kitaplığı işlevi sonsuz bir döngünün program yakalayabilir sonra engeller. Örneğin, `printf` iç ayırma sağlar. Kanca kodunuzu çağırırsa `printf`, ortaya çıkan ayırma, kanca yeniden çağrılacak olan çağıracak neden olmaz **printf** yeniden vb. kadar yığın taşıyor. Rapora ihtiyacınız varsa `_CRT_BLOCK` ayırma işlemleri, bu kısıtlama aşmak için bir yol olan biçimlendirmek için C çalışma zamanı işlevleri yerine Windows API işlevlerini kullanın ve çıkacağını. Windows API'ları C çalışma zamanı kitaplığı yığın kullanmayın çünkü bunlar, atama kanca sonsuz bir döngüde tuzak değil.  
+ Ayırma kanca blokları yok saymaz `_CRT_BLOCK` , kanca içinde çağrılan tüm C çalışma zamanı kitaplığı işlevleri programı sonsuz bir döngüde yakalayabilir. Örneğin, `printf` bir iç ayırma yapar. Kanca kodunuz `printf` çağrılırsa, elde edilen ayırma, kancalarınızın yeniden çağrılmasına neden olur, bu da **printf** 'i yeniden çağırır ve yığın taşana kadar bu şekilde devam eder. Ayırma işlemlerini rapor etmeniz gerekiyorsa `_CRT_BLOCK` , bu kısıtlamayı aşmak için bir yol, biçimlendirme ve çıkış Için C çalışma zamanı işlevleri yerine WINDOWS API işlevlerini kullanmaktır. Windows API 'Leri C çalışma zamanı kitaplık yığınını kullanmadığından, ayırma Kancalarınızı sonsuz bir döngüde yakalamaz.  
   
- Çalışma zamanı kitaplığı kaynak dosyaları incelerseniz göreceğiniz işlevi, varsayılan ayırma kanca olduğunu **CrtDefaultAllocHook** (yalnızca döndüren **TRUE**), kendine ait, ayrı bir dosyada bulunan DBGHOOK. C. Bile, uygulamanızın önce yürütülen çalışma zamanı başlatma kodu tarafından yapılan ayırmaları çağrılmasına, atama kanca isteyip istemediğinizi **ana** işlevi, bir kendi yerine bu varsayılan işlev değiştirebilirsiniz kullanarak [_CrtSetAllocHook](https://msdn.microsoft.com/library/405df37b-2fd1-42c8-83bc-90887f17f29d).  
+ Çalışma zamanı kitaplık kaynak dosyalarını incelerseniz, varsayılan ayırma kanca işlevinin **CrtDefaultAllocHook** (basitçe **doğru**döndüren), kendi kendine ait ayrı bir dosyada bulunduğunu görürsünüz. Uygulamanızın **ana** işlevinden önce yürütülen çalışma zamanı başlangıç kodu tarafından yapılan ayırmalar için bile ayırma kancasını çağırmasını istiyorsanız, [_CrtSetAllocHook](https://msdn.microsoft.com/library/405df37b-2fd1-42c8-83bc-90887f17f29d)kullanmak yerine, bu varsayılan işlevi kendi sahip olduğunuz bir biriyle değiştirebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama kanca işlevi yazma](../debugger/debug-hook-function-writing.md)   
- [crt_dbg2 örnek](https://msdn.microsoft.com/21e1346a-6a17-4f57-b275-c76813089167)
+ [Hata ayıklama kanca Işlevi yazma](../debugger/debug-hook-function-writing.md)   
+ [crt_dbg2 örneği](https://msdn.microsoft.com/21e1346a-6a17-4f57-b275-c76813089167)

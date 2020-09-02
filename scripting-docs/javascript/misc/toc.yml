@@ -1,0 +1,142 @@
+- name: '''{'' bekleniyor'
+  href: expected-left-curly-brace.md
+- name: 'Tanımlayıcı, dize veya sayı bekleniyor'
+  href: expected-identifier-string-or-number.md
+- name: İşlev bekleniyor
+  href: function-expected.md
+- name: VBArray bekleniyor
+  href: vbarray-expected.md
+- name: '''catch'' bekleniyor.'
+  href: expected-catch.md
+- name: İşlev sonucuna atanamaz
+  href: cannot-assign-to-a-function-result.md
+- name: Sözdizimi hatası (JavaScript)
+  href: syntax-error-javascript.md
+- name: Normal ifade nesnesi bekleniyor
+  href: regular-expression-object-expected.md
+- name: False (Windows Betik Teknolojileri)
+  href: false-windows-script-technologies.md
+- name: '''}'' bekleniyor'
+  href: expected-right-curly-brace.md
+- name: Numaralandırıcı nesne bekleniyor
+  href: enumerator-object-expected.md
+- name: Kesir basamakları sayısı aralık dışı
+  href: the-number-of-fractional-digits-is-out-of-range.md
+- name: Tarih nesnesi bekleniyor
+  href: date-object-expected.md
+- name: Sonlandırılmayan açıklama
+  href: unterminated-comment.md
+- name: Döngü dışında 'continue' olamaz
+  href: can-t-have-continue-outside-of-loop.md
+- name: JavaScript nesne bekleniyor
+  href: javascript-object-expected.md
+- name: ''':'' bekleniyor'
+  href: expected-colon.md
+- name: Dizi uzunluğuna sonsuz olmayan pozitif bir sayı atanmalıdır
+  href: array-length-must-be-assigned-a-finite-positive-number.md
+- name: 'Beklenen: ''@end'''
+  href: expected-at-end.md
+- name: Geçersiz sayı
+  href: invalid-number.md
+- name: Duyarlılık aralık dışı
+  href: the-precision-is-out-of-range.md
+- name: Beklenmeyen niceleyici (JavaScript)
+  href: unexpected-quantifier-javascript.md
+- name: '''this'' nesnesine atanamaz'
+  href: cannot-assign-to-this.md
+- name: İşlevin geçerli bir prototip nesnesi yok
+  href: function-does-not-have-a-valid-prototype-object.md
+- name: Setter işlevlerinde bir bağımsız değişken olmalıdır
+  href: setter-functions-must-have-one-argument.md
+- name: Geçersiz karakter (JavaScript)
+  href: invalid-character-javascript.md
+- name: Oluşan özel durum yakalanmadı
+  href: exception-thrown-and-not-caught.md
+- name: Sayı bekleniyor
+  href: number-expected.md
+- name: Tanımlayıcı için gelecekte kullanım için ayrılmış bir sözcük kullanımı geçersiz
+  href: the-use-of-a-future-reserved-word-for-an-identifier-is-invalid.md
+- name: Throw ardından aynı kaynak satırdaki bir ifade gelmelidir
+  href: throw-must-be-followed-by-an-expression-on-the-same-source-line.md
+- name: Geçersiz atama (JavaScript)
+  href: illegal-assignment-javascript.md
+- name: '''default'', ''switch'' deyimi içinde yalnızca bir kere kullanılabilir.'
+  href: default-can-only-appear-once-in-a-switch-statement.md
+- name: Beklenen '=' (JavaScript)
+  href: expected-equal-javascript.md
+- name: Kodlanacak URI geçersiz karakter içeriyor
+  href: the-uri-to-be-encoded-contains-an-invalid-character.md
+- name: 'Beklenen: ''-'''
+  href: expected-minus.md
+- name: Geçersiz karakter kümesi aralığı (JavaScript)
+  href: invalid-range-in-character-set-javascript.md
+- name: Tanımlayıcı bekleniyor (JavaScript)
+  href: expected-identifier-javascript.md
+- name: Sabit bekleniyor
+  href: expected-constant.md
+- name: Tanımlanmamış tanımlayıcı
+  href: undefined-identifier.md
+- name: Erişim reddedildi
+  href: access-is-denied.md
+- name: 'Beklenen: ''\]'''
+  href: expected-right-square-bracket.md
+- name: Beklenen 'while'
+  href: expected-while.md
+- name: '''@'' bekleniyor'
+  href: expected-at.md
+- name: Etiket yeniden tanımlandı
+  href: label-redefined.md
+- name: Etiket bulunamadı
+  href: label-not-found.md
+- name: Normal ifadede sözdizimi hatası (JavaScript)
+  href: syntax-error-in-regular-expression-javascript.md
+- name: Beklenen '(' (JavaScript)
+  href: expected-left-parenthesis-javascript.md
+- name: Beklenen onaltılık basamak
+  href: expected-hexadecimal-digit.md
+- name: Nesne bekleniyor
+  href: object-expected.md
+- name: Değer bağımsız değişkeninde döngüsel başvuru desteklenmez
+  href: circular-reference-in-value-argument-not-supported.md
+- name: Koşullu derleme kapalı
+  href: conditional-compilation-is-turned-off.md
+- name: Beklenen 'var'
+  href: expected-var.md
+- name: Sonlandırılmamış dize sabiti (JavaScript)
+  href: unterminated-string-constant-javascript.md
+- name: Dize bekleniyor
+  href: string-expected.md
+- name: Geçersiz değiştirici bağımsız değişken
+  href: invalid-replacer-argument.md
+- name: ECMA 327 Compact Profilinde 'with' kullanılamaz
+  href: with-not-available-in-the-ecma-327-compact-profile.md
+- name: İşleç Özeti (JavaScript)
+  href: operator-subtractsummary-javascript.md
+- name: Nesne üyesi bekleniyor
+  href: object-member-expected.md
+- name: True Anahtar Sözcüğü
+  href: true-keyword.md
+- name: Nesne bu özelliği veya yöntemi desteklemiyor
+  href: object-doesn-t-support-this-property-or-method.md
+- name: Boolean bekleniyor
+  href: boolean-expected.md
+- name: ''';'' bekleniyor'
+  href: expected-semicolon.md
+- name: Beklenen ')' (JavaScript)
+  href: expected-right-parenthesis-javascript.md
+- name: Dizi ya da bağımsız değişkenler nesnesi bekleniyor
+  href: array-or-arguments-object-expected.md
+- name: Normal ifadede ')' bekleniyor (JavaScript)
+  href: expected-right-parenthesis-in-regular-expression-javascript.md
+- name: 'Normal ifadede ''\]'' bekleniyor (JavaScript)'
+  href: expected-right-square-bracket-in-regular-expression-javascript.md
+- name: Dizi uzunluğu sonlu pozitif bir tamsayı olmalıdır
+  href: array-length-must-be-a-finite-positive-integer.md
+- name: Döngü dışında 'break' olamaz
+  href: can-t-have-break-outside-of-loop.md
+- name: Tanımlayıcı için bir anahtar sözcük kullanımı geçersiz
+  href: the-use-of-a-keyword-for-an-identifier-is-invalid.md
+- name: '''return'' deyimi işlev dışı'
+  href: return-statement-outside-of-function.md
+- name: Kodu çözülecek URI geçerli bir kodlamada değil
+  href: the-uri-to-be-decoded-is-not-a-valid-encoding.md

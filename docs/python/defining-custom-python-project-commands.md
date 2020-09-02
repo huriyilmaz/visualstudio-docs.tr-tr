@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 6e9e7fe418528bb888672b1b73d421d811b9e69e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86386991"
 ---
 # <a name="define-custom-commands-for-python-projects"></a>Python projeleri için özel komutlar tanımlama
@@ -379,7 +379,7 @@ Veya öğelerinin içeriğinin yanlış olduğunu gösterir `<Target>` `<CreateP
 - Gerekli `Target` öznitelik boş.
 - Gerekli `TargetType` öznitelik boş veya tanınmayan bir değer içeriyor.
 - Gerekli `ExecuteIn` öznitelik boş veya tanınmayan bir değer içeriyor.
-- `ErrorRegex`veya `WarningRegex` ayarı olmadan belirtilir `ExecuteIn="output"` .
+- `ErrorRegex` veya `WarningRegex` ayarı olmadan belirtilir `ExecuteIn="output"` .
 - Öğesinde tanınmayan öznitelikler var. Örneğin, `Argumnets` yerine (yanlış yazılmış) kullanmış olabilirsiniz `Arguments` .
 
 Tanımlı olmayan bir özelliğe başvurursanız, öznitelik değerleri boş olabilir. Örneğin, belirtecini kullanırsanız `$(StartupFile)` ancak projede hiç başlangıç dosyası tanımlanmamışsa, belirteç boş bir dizeye dönüşür. Böyle durumlarda, varsayılan bir değer tanımlamak isteyebilirsiniz. Örneğin, proje özelliklerinde bir sunucu başlangıç dosyası belirtmediyse, **Sunucu Çalıştır** ve **hata ayıklama sunucusu Çalıştır** , *Manage.py* , Flask ve docgo proje şablonlarında varsayılan olarak

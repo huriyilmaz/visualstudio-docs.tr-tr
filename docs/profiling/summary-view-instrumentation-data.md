@@ -1,5 +1,5 @@
 ---
-title: Özet Görünüm - Enstrümantasyon Verileri | Microsoft Dokümanlar
+title: Özet görünümü-Izleme verileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,39 +12,39 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 2f52f80cad4ce7678a832a7b76a75d8f2fd4460e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74778225"
 ---
-# <a name="summary-view---instrumentation-data"></a>Özet görünüm - enstrümantasyon verileri
-Özet görünümü, profil oluşturma çalışmasındaki en yüksek performans pahalı işlevler hakkındaki bilgileri görüntüler. Bildirim Bağlantıları ve Rapor listelerinin açıklaması da dahil olmak üzere daha fazla bilgi için [Özet görünümüne](../profiling/summary-view.md)bakın.
+# <a name="summary-view---instrumentation-data"></a>Özet görünümü-izleme verileri
+Özet görünümü, bir profil oluşturma çalıştırmasında en fazla performans maliyeti olan işlevlerle ilgili bilgileri görüntüler. Bildirim bağlantılarının ve rapor listelerinin açıklaması dahil daha fazla bilgi için bkz. [Özet görünümü](../profiling/summary-view.md).
 
-## <a name="timeline-graph"></a>Zaman Çizelgesi Grafiği
- Özet görünümündeki zaman çizelgesi grafiği, profil oluşturmanın gerçekleştiği süre içinde profillenen uygulama tarafından işlemci (CPU) kullanımını gösterir. Görünümü seçili bir zaman aralığına filtrelemek için zaman çizelgesi grafiğini kullanabilirsiniz. Daha fazla bilgi için [bkz: Özet Zaman Çizelgesi'nden rapor görünümlerini filtreleyin.](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)
+## <a name="timeline-graph"></a>Zaman çizelgesi grafiği
+ Özet görünümündeki zaman çizelgesi grafiği, profil oluşturma sırasında profili oluşturulan uygulamanın işlemci (CPU) kullanımını gösterir. Görünümü seçili bir zaman aralığına filtrelemek için zaman çizelgesi grafiğini kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: rapor görünümlerini Özet zaman çizelgesinden filtreleme](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).
 
-## <a name="hot-path"></a>Sıcak Yol
- **Sıcak Yol,** en çok tüketilen yürütme yolunu görüntüler. İşlevin İşlev Ayrıntıları görünümünü görüntülemek için bir işlevi tıklatabilirsiniz. İşlev için diğer görünümleri görüntülemek için işlevi sağ tıklatın ve ardından listeden bir görünüm e tıklayın.
+## <a name="hot-path"></a>Etkin yol
+ **Etkin yol** , en çok kullanılan yürütme yolunu görüntüler. İşlevin Işlev ayrıntıları görünümünü görüntülemek için bir işleve tıklayabilirsiniz. İşlevin diğer görünümlerini görüntülemek için, işlevine sağ tıklayın ve sonra listeden bir görünüme tıklayın.
 
- **Sıcak Yol** her işlev için aşağıdaki verileri içerir:
-
-|Sütun|Açıklama|
-|------------|-----------------|
-|**Adı**|İşlevin adı.|
-|**Geçen Kapsayıcı Süre %**|Profil oluşturma verilerinde, işlevin işlev gövdesinde ve çağırdığı işlevlerde kodu yürütmek için harcadığı tüm zamanların yüzdesi.|
-|**Geçen Özel Zaman %**|Profil oluşturma verilerindeki tüm zamanların yüzdesi, işlevin işlev gövdesinde kodu yürütmeye harcadığı dır. Çağrılan işlevin dahil olmadığı işlevlerde harcanan süre.|
-
-## <a name="functions-with-most-individual-work"></a>Çoğu Bireysel Çalışmayla Fonksiyonlar
- Çağrılan işlevlerde değil, işlevin gövdesinde en çok zaman kod yürütmeyi tüketen işlevlerin listesi.
-
- **En Bireysel Çalışma ile işlevler** her işlev için aşağıdaki verileri içerir:
+ **Etkin yol** her bir işlev için aşağıdaki verileri içerir:
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Adı**|İşlevin adı.|
-|**Özel Zaman %**|Profil oluşturma verilerindeki tüm zamanların yüzdesi, işlevin işlev gövdesinde kodu yürütmeye harcadığı dır. Çağrılan işlevin dahil olmadığı işlevlerde harcanan süre.|
+|**Ad**|İşlevin adı.|
+|**Geçen kapsamlı süre yüzdesi**|İşlevin işlev gövdesinde ve çağrılan işlevlerde kod çalıştırırken harcadığı, profil oluşturma verilerinde tüm zamanın yüzdesi.|
+|**Geçen dışlamalı süre yüzdesi**|İşlevin işlev gövdesinde kod yürütmeyi harcadığı, profil oluşturma verilerinde tüm zamanın yüzdesi. İşlevin çağrıldığı işlevlerde harcanan süre dahil değildir.|
+
+## <a name="functions-with-most-individual-work"></a>En bireysel Işleri olan işlevler
+ Çağrılan işlevlerde değil, işlevin gövdesinde kod yürütürken en çok kullanılan işlevlerin listesi.
+
+ **En bireysel işleri olan işlevler** her bir işlev için aşağıdaki verileri içerir:
+
+|Sütun|Açıklama|
+|------------|-----------------|
+|**Ad**|İşlevin adı.|
+|**Dışlamalı zaman yüzdesi**|İşlevin işlev gövdesinde kod yürütmeyi harcadığı, profil oluşturma verilerinde tüm zamanın yüzdesi. İşlevin çağrıldığı işlevlerde harcanan süre dahil değildir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Özet görünüm - örnekleme verileri](../profiling/summary-view-sampling-data.md)
-- [Özet görünüm - .NET bellek verileri](../profiling/summary-view-dotnet-memory-data.md)
+- [Özet görünümü-örnekleme verileri](../profiling/summary-view-sampling-data.md)
+- [Özet görünümü-.NET bellek verileri](../profiling/summary-view-dotnet-memory-data.md)

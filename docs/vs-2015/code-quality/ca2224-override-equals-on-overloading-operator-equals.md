@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 39272790b6ef366c64d45e0aea238606d0b62bf4
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538642"
 ---
 # <a name="ca2224-override-equals-on-overloading-operator-equals"></a>CA2224: Eşittir işlecini aşırı yüklerken Equals'ı geçersiz kılın
@@ -50,7 +50,7 @@ ms.locfileid: "85538642"
 ## <a name="examples-of-inconsistent-equality-definitions"></a>Tutarsız eşitlik tanımlarının örnekleri
 
 ### <a name="description"></a>Description
- Aşağıdaki örnekte, tutarsız bir eşitlik tanımları içeren bir tür gösterilmektedir. `BadPoint`eşitlik işlecinin özel bir uygulamasını sağlayarak eşitlik anlamını değiştirir, ancak <xref:System.Object.Equals%2A> aynı şekilde davranması için geçersiz kılmaz.
+ Aşağıdaki örnekte, tutarsız bir eşitlik tanımları içeren bir tür gösterilmektedir. `BadPoint` eşitlik işlecinin özel bir uygulamasını sağlayarak eşitlik anlamını değiştirir, ancak <xref:System.Object.Equals%2A> aynı şekilde davranması için geçersiz kılmaz.
 
 ### <a name="code"></a>Kod
  [!code-csharp[FxCop.Usage.OperatorEqualsRequiresEquals#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Usage.OperatorEqualsRequiresEquals/cs/FxCop.Usage.OperatorEqualsRequiresEquals.cs#1)]

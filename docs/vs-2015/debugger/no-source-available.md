@@ -19,29 +19,29 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 69ea9c3a41f83b9c06dc18d6da1f859017f12ca5
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697806"
 ---
 # <a name="no-source-available"></a>Kullanılabilir Kaynak Yok
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Projenizin kaynak kodunu görüntülemeye çalıştığınız kod içermiyor. Olağan sebep, kaynak kodu olmayan bir modül çift **çağrı yığını penceresinde** veya **iş parçacıkları penceresi**. Hata ayıklamak, devam edebilirsiniz, ancak kaynak penceresinde kesme noktaları ayarlamak ve bu konumdaki diğer eylemleri gerçekleştirmek için kullanamazsınız. Bir kesme noktası ayarlamak ihtiyacınız varsa, **ayrıştırma penceresi** yerine.  
+Projeniz, görüntülemeye çalıştığınız kodun kaynak kodunu içermiyor. Bunun nedeni, **çağrı yığını penceresinde** veya **iş parçacıkları penceresinde**kaynak kodu olmayan bir modüle çift tıklanıdır. Hata ayıklamaya devam edebilir, ancak kesme noktaları ayarlamak ve bu konumda diğer eylemleri gerçekleştirmek için kaynak pencereyi kullanamazsınız. Bir kesme noktası ayarlamanız gerekiyorsa, bunun yerine **ayrıştırma penceresini** kullanın.  
   
- Çözüm özellik sayfaları'nda hata ayıklayıcı kaynakları dosyalarını nerede arar dizinleri değiştirin ve seçili kaynak dosyaları yoksaymak için hata ayıklayıcının işlemi durdurmasını. Bkz: [kaynak dosyaları, ortak özellikler, çözüm özellik sayfaları iletişim kutusu için hata ayıklama](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md).  
+ Çözüm özelliği sayfalarında, hata ayıklayıcının kaynak dosyalarını aradığı dizinleri değiştirebilir ve hata ayıklayıcıya seçili kaynak dosyaları yoksaymasını söyleyebilirsiniz. Bkz. [hata ayıklama kaynak dosyaları, ortak özellikler, çözüm Özellik sayfaları Iletişim kutusu](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md).  
   
- **Kaynak kodu bulmak için Gözat**  
- Burada kaynak kodunu bulmak için gözatabilirsiniz bir iletişim kutusunu açmak için bu bağlantıya tıklayın.  
+ **Kaynak kodunu bulmak için gidin**  
+ Kaynak kodunu bulmak için gözatabileceğiniz bir iletişim kutusu açmak için bu bağlantıya tıklayın.  
   
- **Ayrıştırılmış Kodu Göster**  
- Başlatan **ayrıştırma penceresi**.  
+ **Ayrıştırılmış kodu göster**  
+ **Ayrıştırma penceresini**başlatır.  
   
- **Eksik kaynak dosyaların ayrıştırmasını her zaman göster**  
- Görüntülemek için bu seçeneği belirleyin **ayrıştırma penceresi** otomatik olarak kaynak olduğunda kullanılabilir. Bu ayar, ayrıca değiştirilebilir **seçenekleri** iletişim kutusu, **hata ayıklama** kategori **genel** seçerek veya temizleyerek sayfasında, **ayrıştırılmış Kodu Göster, Kaynak kullanılamıyor**.  
+ **Eksik kaynak dosyaları için her zaman ayrıştırılmış kodu göster**  
+ Kaynak kullanılabilir olmadığında **ayrıştırma penceresini** otomatik olarak göstermek için bu seçeneği belirleyin. Bu ayar ayrıca **Seçenekler** iletişim kutusunda, **hata ayıklama** kategorisinde, **genel** sayfasında, **Kaynak kullanılamıyorsa ayrıştırılmış derlemeyi göster**' i seçerek veya temizleyerek da değiştirilebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kaynak dosyaları, ortak özellikler, çözüm özellik sayfaları iletişim kutusu hata ayıklama](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)   
- [Sembol (.pdb) belirtin ve kaynak dosyaları](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
- [SOS.dll (SOS Hata Ayıklama Uzantısı)](https://msdn.microsoft.com/library/9ac1b522-77ab-4cdc-852a-20fcdc9ae498)
+ [Kaynak dosyalarında hata ayıkla, ortak özellikler, çözüm Özellik sayfaları Iletişim kutusu](../debugger/debug-source-files-common-properties-solution-property-pages-dialog-box.md)   
+ [Sembol (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+ [SOS.dll (SOS hata ayıklama uzantısı)](https://msdn.microsoft.com/library/9ac1b522-77ab-4cdc-852a-20fcdc9ae498)

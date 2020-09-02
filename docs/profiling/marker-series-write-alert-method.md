@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d5e79bab25885c8759ea5726b037771a4943c563
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329634"
 ---
 # <a name="marker_serieswrite_alert-method"></a>marker_series:: write_alert yöntemi
@@ -32,7 +32,7 @@ void write_alert(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `_Format`Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğesiyle metin içeren bir bileşik biçim dizesi.
+ `_Format` Bağımsız değişken listesindeki nesnelere karşılık gelen sıfır veya daha fazla biçim öğesiyle metin içeren bir bileşik biçim dizesi.
 
 ## <a name="requirements"></a>Gereksinimler
  **Üst bilgi:** *cvmarkersobj. h*

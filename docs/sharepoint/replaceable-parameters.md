@@ -1,5 +1,5 @@
 ---
-title: Değiştirilebilir parametreler | Microsoft Docs
+title: Değiştirilebilen parametreler | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,61 +15,61 @@ ms.author: johnhart
 manager: jillfra
 ms.workload: office
 ms.openlocfilehash: 165ef1256a0150e0942d85c4f876c8b3f5e15c72
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63422909"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64825313"
 ---
-# <a name="replaceable-parameters"></a>Değiştirilebilir parametreler
-  Değiştirilebilir parametreler veya *belirteçleri*, gerçek değerleri, tasarım zamanında bilinen olmayan SharePoint çözüm öğeleri için değerler sağlamak için proje dosyaları içinde kullanılabilir. Bunlar standart işlevinde benzer [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] şablon belirteçleri. Daha fazla bilgi için [şablon parametreleri](../ide/template-parameters.md).
+# <a name="replaceable-parameters"></a>Değiştirilebilen parametreler
+  Değiştirilebilir parametreler veya *belirteçler*, gerçek değerleri tasarım zamanında bilinen SharePoint çözüm öğeleri için değerler sağlamak üzere proje dosyaları içinde kullanılabilir. Bunlar işlev olarak standart [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] şablon belirteçlerine benzerdir. Daha fazla bilgi için bkz. [şablon parametreleri](../ide/template-parameters.md).
 
-## <a name="token-format"></a>Belirteci biçimi
- Belirteçleri başlayıp dolar işareti ($) karakterini ile bitmelidir. Bir projeyi bir SharePoint çözüm paketini paketlendiğinde, dağıtımda kullanılan herhangi bir belirtece gerçek değerlerle değiştirilir (*.wsp* dosyası). Örneğin, belirteç **$SharePoint.Package.Name$** "Test SharePoint paketi" dizeye çözebilir.
+## <a name="token-format"></a>Belirteç biçimi
+ Belirteçler bir dolar işareti ($) karakteriyle başlar ve biter. Dağıtım sırasında, bir proje bir SharePoint çözüm paketine (*. wsp* dosyası) paketlenirken kullanılan tüm belirteçler gerçek değerlerle değiştirilmiştir. Örneğin, **$SharePoint. Package.Name $** belirteci "test SharePoint paketini" dizesine çözümleyebilir.
 
 ## <a name="token-rules"></a>Belirteç kuralları
- Belirteçleri aşağıdaki kurallar geçerlidir:
+ Aşağıdaki kurallar belirteçler için geçerlidir:
 
-- Belirteçleri, bir satırda herhangi bir yere belirtilebilir.
+- Belirteçler, bir satırda herhangi bir yerde belirtilebilir.
 
-- Belirteçleri, çok satırlı yayılamaz.
+- Belirteçler birden çok satıra yayılamaz.
 
-- Aynı belirteci ile aynı satırda ve aynı dosyanın birden çok kez belirtilebilir.
+- Aynı satırda ve aynı dosyada aynı belirteç birden çok kez belirtilebilir.
 
-- Aynı satırda farklı belirteçleri belirtilebilir.
+- Aynı satırda farklı belirteçler belirtilebilir.
 
-  Bu kurallar izlemeyin belirteçleri göz ardı edilir ve bir uyarı veya hata neden değil.
+  Bu kurallara uymalıdır belirteçleri yok sayılır ve uyarı ya da hata ile sonuçlanmaz.
 
-  Dize değerleri tarafından belirteçlerin değiştirme hemen sonra bildirim dönüştürme yapılır. Bu değişiklik, kullanıcının belirteçleriyle bildirim şablonları düzenlemenize olanak sağlar.
+  Belirteçleri dize değerlerine göre değiştirme, bildirim dönüşümünde hemen sonra yapılır. Bu değişiklik, kullanıcının bildirim şablonlarını belirteçlerle düzenlemesine izin verir.
 
-### <a name="token-name-resolution"></a>Belirteç ad çözümlemesi
- Çoğu durumda, belirli bir değerin bulunduğu bağımsız olarak bir belirteç çözümler. Ancak, belirtecin bir paket veya özellik ile ilişkili ise, belirtecin değeri, bulunduğu üzerinde bağlıdır. Bir özellik ise bir, ardından belirteci Örneğin, paket `$SharePoint.Package.Name$` "Paket A." değerine çözümler Aynı özellik paketi B ardından olup olmadığını `$SharePoint.Package.Name$` "Paket b" çözümler
+### <a name="token-name-resolution"></a>Belirteç adı çözümleme
+ Çoğu durumda, bir belirteç bulunduğu yere bakılmaksızın belirli bir değere çözümlenir. Ancak, belirteç bir paket veya özellik ile ilişkiliyse, belirtecin değeri bulunduğu yere bağlıdır. Örneğin, bir özellik A paketinde ise, belirteç `$SharePoint.Package.Name$` "a Package" değerine dönüşür. Aynı özellik B paketinde ise, `$SharePoint.Package.Name$` "Paket B" olarak çözümlenir.
 
-## <a name="tokens-list"></a>Belirteçlerin listesi
- Aşağıdaki tabloda, kullanılabilir belirteçler listeler.
+## <a name="tokens-list"></a>Belirteç listesi
+ Aşağıdaki tabloda kullanılabilir belirteçler listelenmektedir.
 
 |Ad|Açıklama|
 |----------|-----------------|
-|$SharePoint.Project.FileName$|Adı içeren proje dosyası, gibi *NewProj.csproj*.|
-|$SharePoint.Project.FileNameWithoutExtension$|Dosya adı uzantısı olmadan içeren proje dosyasının adı. Örneğin, "NewProj".|
-|$SharePoint.Project.AssemblyFullName$|Derleme çıkışını içeren proje (tanımlayıcı ad) görünen adı.|
-|$SharePoint.Project.AssemblyFileName$|Derleme çıkışını içeren projenin adı.|
-|$SharePoint.Project.AssemblyFileNameWithoutExtension$|Dosya adı uzantısı olmadan, derleme çıkışını içeren projenin adı.|
-|$SharePoint.Project.AssemblyPublicKeyToken$|Ortak anahtar belirteci içeren proje çıkış bütünleştirilmiş koduna bir dizeye dönüştürülür. ("x2" 16 karakter on altılık biçimde.)|
-|$SharePoint.Package.Name$|İçeren paketin adı.|
-|$SharePoint.Package.FileName$|İçeren paket tanım dosyası adı.|
-|$SharePoint.Package.FileNameWithoutExtension$|İçeren paket tanım dosyası adı (uzantısı olmadan).|
-|$SharePoint.Package.Id$|İçeren paketin SharePoint kimliği. Bir özelliği birden fazla pakette kullandıysanız, bu değeri değiştirin.|
-|$SharePoint.Feature.FileName$|Tanım dosyasının içeren özellik adı, gibi *Feature1.feature*.|
-|$SharePoint.Feature.FileNameWithoutExtension$|Dosya adı uzantısı olmadan Özellik tanım dosyasının adı.|
-|$SharePoint.Feature.DeploymentPath$|Paket özelliği içeren klasörün adı. Bu belirteç, özellik Tasarımcısı'nda "Dağıtım yolu" özelliğine karşılık gelir. Örnek değer olduğundan, "Project1_Feature1".|
-|$SharePoint.Feature.Id$|İçeren özelliğin SharePoint kimliği. Bu belirteç tüm özellik düzeyinde belirteçleri ile yalnızca bir özelliği aracılığıyla bir pakette bulunan dosyalar tarafından kullanılan bir özellik dışında bir paket için doğrudan eklenmedi.|
-|$SharePoint.ProjectItem.Name$|Öğesinden alınan olarak (kendi dosya adı değil), proje öğesinin adını **ISharePointProjectItem.Name**.|
-|$SharePoint.Type.\<GUID>.AssemblyQualifiedName$|Türü eşleşen derleme nitelenmiş adı [!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)] belirtecin. Biçimi [!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)] küçük harf ve Guid.ToString("D") biçimine karşılık gelir (yani xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).|
-|$SharePoint.Type.\<GUID>.FullName$|Belirteçteki GUID eşleşen türü tam adı. GUID biçimi küçük harf ve Guid.ToString("D") biçimine karşılık gelir (yani xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).|
+|$SharePoint. Project. FileName $|İçeren proje dosyasının adı, örneğin, *NewProj. csproj*.|
+|$SharePoint. Project. FileNameWithoutExtension $|Dosya adı uzantısı olmayan kapsayan proje dosyasının adı. Örneğin, "NewProj".|
+|$SharePoint. Project. AssemblyFullName $|İçerilen projenin çıkış derlemesinin görünen adı (tanımlayıcı ad).|
+|$SharePoint. Project. AssemblyFileName $|İçerilen projenin çıkış derlemesinin adı.|
+|$SharePoint. Project. AssemblyFileNameWithoutExtension $|Dosya adı uzantısı olmadan, kapsayan projenin çıkış derlemesinin adı.|
+|$SharePoint. Project. AssemblyPublicKeyToken $|İçerilen projenin çıkış derlemesinin ortak anahtar belirteci bir dizeye dönüştürüldü. ("X2" onaltılık biçiminde 16 karakter.)|
+|$SharePoint. Package.Name $|Kapsayan paketin adı.|
+|$SharePoint. Package. FileName $|Kapsayan paketin tanım dosyasının adı.|
+|$SharePoint. Package. FileNameWithoutExtension $|Kapsayan paketin tanım dosyasının adı (uzantısı olmadan).|
+|$SharePoint. Package.Id $|Kapsayan paket için SharePoint KIMLIĞI. Bir özellik birden fazla pakette kullanılıyorsa, bu değer değişecektir.|
+|$SharePoint. Feature. FileName $|*Özellik1. feature*gibi kapsayan özelliğin tanım dosyasının adı.|
+|$SharePoint. Feature. FileNameWithoutExtension $|Dosya adı uzantısı olmadan Özellik tanım dosyasının adı.|
+|$SharePoint. Feature. DeploymentPath $|Paketteki özelliği içeren klasörün adı. Bu belirteç, özellik tasarımcısında "dağıtım yolu" özelliğine sahiptir. Örnek bir değer, "Project1_Feature1".|
+|$SharePoint. Feature.Id $|Kapsayan özelliğin SharePoint KIMLIĞI. Tüm özellik düzeyinde belirteçlerde olduğu gibi, bu belirteç yalnızca bir özellik aracılığıyla bir pakette bulunan dosyalar tarafından, bir özellik dışında doğrudan bir pakete eklenmemiş olan dosyalar tarafından kullanılabilir.|
+|$SharePoint. ProjectItem.Name $|**ISharePointProjectItem.Name**öğesinden alınan proje öğesinin adı (dosya adı değil).|
+|$SharePoint. Type. \<GUID> . AssemblyQualifiedName $|Belirtecin türüyle eşleşen türün derleme nitelikli adı [!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)] . Biçimi [!INCLUDE[TLA2#tla_guid](../sharepoint/includes/tla2sharptla-guid-md.md)] küçük harfli ve Guid. ToString ("D") biçimine (yani, xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) karşılık gelir.|
+|$SharePoint. Type. \<GUID> . FullName $|Belirteçteki GUID ile eşleşen türün tam adı. GUID 'nin biçimi küçük harfli ve Guid. ToString ("D") biçimine (yani, xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx) karşılık gelir.|
 
-## <a name="add-extensions-to-the-token-replacement-file-extensions-list"></a>Belirteç değiştirme dosya uzantıları listesi için uzantılar ekleme
- Belirteçleri teorik olarak bir SharePoint proje öğesi, varsayılan olarak, pakete ait olduğu herhangi bir dosyayı tarafından kullanılabilmesine rağmen [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] belirteçleri yalnızca şu uzantılara sahip dosyalar paket dosyalarını ve bildirim dosyaları arar:
+## <a name="add-extensions-to-the-token-replacement-file-extensions-list"></a>Belirteç değiştirme dosyası uzantıları listesine uzantı ekleme
+ Belirteçlerin teorik olarak pakete dahil edilen bir SharePoint proje öğesine ait olan herhangi bir dosya tarafından kullanılmasına karşın, varsayılan olarak [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] yalnızca paket dosyalarında, bildirim dosyalarında ve aşağıdaki uzantılara sahip dosyalarda belirteçleri arar:
 
 - [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)]
 
@@ -77,18 +77,18 @@ ms.locfileid: "63422909"
 
 - ASPX
 
-- Web Bölümü
+- U
 
 - DWP
 
-  Bu uzantılar tarafından tanımlanan `<TokenReplacementFileExtensions>` Microsoft.VisualStudio.SharePoint.targets dosyasında bulunan öğe... \\< program dosyaları\>\MSBuild\Microsoft\VisualStudio\v11.0\SharePointTools klasör.
+  Bu uzantılar, `<TokenReplacementFileExtensions>` ... \\<Program Files \> \Msbuild\microsoft\visualstudio\v11.0\SharePointTools klasöründe bulunan Microsoft. VisualStudio. SharePoint. targets dosyasındaki öğesi tarafından tanımlanır.
 
-  Ancak, ek dosya uzantıları listesine ekleyebilirsiniz. Ekleme bir `<TokenReplacementFileExtensions>` önce tanımlanan tüm PropertyGroup SharePoint proje dosyasında öğesine \<alma > SharePoint hedefler dosyasının.
+  Ancak, listeye ek dosya uzantıları ekleyebilirsiniz. SharePoint `<TokenReplacementFileExtensions>` hedefleri dosyasından önce tanımlanan SharePoint proje dosyasındaki herhangi bir PropertyGroup 'a bir öğe ekleyin \<Import> .
 
 > [!NOTE]
-> Proje derlendikten sonra belirteç değiştirme oluştuğu için aşağıdaki gibi derlenen dosya türleri için dosya uzantıları eklememelisiniz *.cs*, *.vb* veya *.resx*. Belirteçleri değil derlenen dosyalarında değiştirilir.
+> Bir proje derlendikten sonra belirteç değişikliği gerçekleştiğinden, *. cs*, *. vb* veya *. resx*gibi derlenmiş dosya türleri için dosya uzantıları eklememelisiniz. Belirteçler yalnızca derlenmemiş dosyalarda yer alır.
 
- Örneğin, dosya adı uzantısı eklemek için (*.myextension* ve *.yourextension*) belirteç değiştirme dosya adı uzantıları listesine bir projeye aşağıdaki eklersiniz (*.csproj* ) dosyası:
+ Örneğin, dosya adı uzantılarını (*. MyExtension* ve *. yourexgeri*) belirteç değiştirme dosya adı uzantıları listesine eklemek için aşağıdakileri bir proje (*. csproj*) dosyasına ekleyin:
 
 ```xml
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -103,7 +103,7 @@ ms.locfileid: "63422909"
 </PropertyGroup>
 ```
 
- Uzantı hedeflerini ekleyebilirsiniz (*.targets*) dosyası. Ancak, uzantı değiştiren yerel sistemde paketlenen tüm SharePoint projeleri için Uzantılar listesi ekleme, yalnızca değil, kendi. Bu uzantı, sistemdeki tek Geliştirici olduğunuzda ya da projelerinizi çoğunu gerekiyorsa uygun olabilir. Ancak, sisteme özgü olduğundan, bu yaklaşım taşınabilir değildir ve bu nedenle önerilir, herhangi bir uzantısı proje dosyasına bunun yerine ekleyin.
+ Uzantıyı doğrudan hedefler (*. targets*) dosyasına ekleyebilirsiniz. Ancak, uzantıyı eklemek yalnızca kendi kendinize değil yerel sisteme paketlenmiş tüm SharePoint projeleri için Uzantılar listesini değiştirir. Bu uzantı, sistemde tek geliştirici olduğunda veya projelerinizin büyük bir kısmını gerektiriyorsa kullanışlı olabilir. Ancak, sisteme özgü olduğundan bu yaklaşım taşınabilir değildir ve bu nedenle, bunun yerine proje dosyasına herhangi bir uzantı eklemeniz önerilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [SharePoint çözümleri geliştirme](../sharepoint/developing-sharepoint-solutions.md)

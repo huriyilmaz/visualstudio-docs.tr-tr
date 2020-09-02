@@ -1,5 +1,5 @@
 ---
-title: Kod stili seçenekleri ve kod temizleme
+title: Kod stili seçenekleri ve kod Temizleme
 ms.date: 04/25/2019
 ms.topic: conceptual
 author: TerryGLee
@@ -11,36 +11,36 @@ f1_keywords:
 ms.workload:
 - multiple
 ms.openlocfilehash: 9d540339ca25fc42fc05df4818a6d05204ccae0e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79301862"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89312593"
 ---
 # <a name="code-style-preferences"></a>Kod stili tercihleri
 
-[EditorConfig dosyasını](#code-styles-in-editorconfig-files)kullanarak veya Visual Studio'da metin düzenleyicisi [ **Seçenekleri** sayfasında](#code-styles-in-the-options-dialog-box)düzenlediğiniz tüm kodlar için proje başına kod stili ayarlarını tanımlayabilirsiniz. C# kodu için Visual Studio'yu kod **temizleme** (Visual Studio 2019) ve Format **Belgesi** (Visual Studio 2017) komutlarını kullanarak bu kod stili tercihlerini uygulayacak şekilde yapılandırabilirsiniz.
+Bir [Editorconfig dosyası](#code-styles-in-editorconfig-files)kullanarak proje başına kod stili ayarları tanımlayabilir veya metin düzenleyici [ **seçenekleri** sayfasında](#code-styles-in-the-options-dialog-box)Visual Studio 'da düzenlediğiniz tüm kodlar için. C# kodu için, Visual Studio 'Yu **Code Cleanup** (visual Studio 2019) ve **Format Document** (Visual Studio 2017) komutlarını kullanarak bu kod stili tercihlerini uygulamak üzere de yapılandırabilirsiniz.
 
 > [!NOTE]
-> Bu konu Windows'daki Visual Studio için geçerlidir. Mac için Visual Studio [için, Mac için Visual Studio'daki Düzenleyici davranışına](/visualstudio/mac/editor-behavior)bakın.
+> Bu konu, Windows üzerinde Visual Studio için geçerlidir. Mac için Visual Studio için [Mac için Visual Studio Içindeki düzenleyici davranışı](/visualstudio/mac/editor-behavior)bölümüne bakın.
 
-## <a name="code-styles-in-editorconfig-files"></a>EditorConfig dosyalarında kod stilleri
+## <a name="code-styles-in-editorconfig-files"></a>EditorConfig dosyalarındaki kod stilleri
 
-.NET için [kod stili ayarları,](../ide/editorconfig-code-style-settings-reference.md) projenize bir [EditorConfig](create-portable-custom-editor-options.md) dosyası eklenerek belirtilebilir. EditorConfig dosyaları Visual Studio kişiselleştirme hesabı yerine bir kod tabanı ile ilişkilidir. EditorConfig dosyasındaki ayarlar, **Seçenekler** iletişim kutusunda belirtilen kod stillerine göre önceliklidir. Repo'nuza veya projenize tüm katkıda bulunanlar için kodlama stilleri zorlamak istediğinizde bir EditorConfig dosyası kullanın.
+.NET için [kod stili ayarları](../ide/editorconfig-code-style-settings-reference.md) , projenize bir [editorconfig](create-portable-custom-editor-options.md) dosyası eklenerek belirtilebilir. EditorConfig dosyaları, Visual Studio kişiselleştirme hesabı yerine bir kod temeli ile ilişkilendirilir. Bir EditorConfig dosyasındaki ayarlar, **Seçenekler** iletişim kutusunda belirtilen kod stillerinden önceliklidir. Deponuzda veya projenizde tüm katkıda bulunanlar için kodlama stillerini zorlamak istediğinizde bir EditorConfig dosyası kullanın.
 
 ::: moniker range=">=vs-2019"
 
-EditorConfig dosyanızı el ile doldurabilir veya Visual Studio **Options** iletişim kutusunda seçtiğiniz kod stili ayarlarını temel alınca dosyayı otomatik olarak oluşturabilirsiniz. Bu seçenekler sayfası **Tools** > **Options** > **Metin Düzenleyicisi** > [**C#** veya **Temel**] > **Code Style** > **General'da**mevcuttur. Bu **Seçenekler** sayfasındaki ayarlara göre otomatik olarak bir kodlama stili *.editorconfig* dosyası oluşturmak için **ayarlardan .editorconfig dosyasını oluştur'u** tıklatın.
+EditorConfig dosyanızı el ile doldurabilir veya Visual Studio **seçenekleri** iletişim kutusunda seçtiğiniz kod stili ayarlarına bağlı olarak dosyayı otomatik olarak oluşturabilirsiniz. Bu seçenekler sayfası **Araçlar**  >  **Seçenekler**  >  **metin Düzenleyicisi** > [**C#** veya **Basic**] > **kod stili**  >  **genel**' de bulunur. Bu **Seçenekler** sayfasındaki ayarlara göre otomatik olarak bir kodlama stili *. editorconfig* dosyası oluşturmak için, **ayarlardan. editorconfig dosyası oluştur** ' a tıklayın.
 
-![Visual Studio 2019'daki ayarlardan editorconfig dosyası oluşturma](media/vs-2019/generate-editorconfig-file-small.png)
+![Visual Studio 2019 ayarlarından editorconfig dosyası oluşturma](media/vs-2019/generate-editorconfig-file-small.png)
 
 ::: moniker-end
 
 ## <a name="code-styles-in-the-options-dialog-box"></a>Seçenekler iletişim kutusundaki kod stilleri
 
-Kod stili **tercihleri, Araçlar** menüsünden **Seçenekler** iletişim kutusunu açarak tüm C# ve Visual Basic projeleriniz için ayarlanabilir. **Seçenekler** iletişim kutusunda, **Metin Düzenleyicisi** > [**C#** veya **Temel**] > Kod Stili**Genel'i** **Code Style** > seçin.
+Kod stili tercihleri, **Araçlar** menüsünden **Seçenekler** Iletişim kutusunu açarak tüm C# ve Visual Basic projeleriniz için ayarlanabilir. **Seçenekler** iletişim kutusunda, **metin Düzenleyicisi** > [**C#** veya **temel**] > **kod stili**  >  **genel**' i seçin.
 
-Listedeki her öğe, seçildiğinde tercihin önizlemesini gösterir:
+Listedeki her bir öğe, seçildiğinde tercih listesinin bir önizlemesini gösterir:
 
 ::: moniker range="vs-2017"
 
@@ -54,50 +54,50 @@ Listedeki her öğe, seçildiğinde tercihin önizlemesini gösterir:
 
 ::: moniker-end
 
-Bu pencerede ayarlanan seçenekler Visual Studio kişiselleştirme hesabınız için geçerlidir ve belirli bir proje veya kod tabanıyla ilişkili değildir. Buna ek olarak, sürekli tümleştirme (CI) oluşturur dahil olmak üzere, yapı zamanında zorlanmaz. Kod stili tercihlerini projenizle ilişkilendirmek ve yapı sırasında stillerin uygulanmasını istiyorsanız, projeyle ilişkili [bir .editorconfig dosyasında](#code-styles-in-editorconfig-files) tercihleri belirtin.
+Bu pencerede ayarlanan seçenekler, Visual Studio kişiselleştirme hesabınız için geçerlidir ve belirli bir proje ya da kod temeli ile ilişkili değildir. Ayrıca, sürekli tümleştirme (CI) yapıları dahil olmak üzere derleme zamanında zorlanmaz. Kod stili tercihlerini projenizle ilişkilendirmek ve derleme sırasında uygulanan stilleri sağlamak istiyorsanız, tercihleri projeyle ilişkili bir [. editorconfig dosyasında](#code-styles-in-editorconfig-files) belirtin.
 
-### <a name="preference-and-severity"></a>Tercih ve önem
+### <a name="preference-and-severity"></a>Tercih ve önem derecesi
 
-Bu sayfadaki her kod stili ayarı için, her satırdaki açılır düşüşleri kullanarak **Tercih** ve **Önem Değerlerini** ayarlayabilirsiniz. Önem derecesi Yalnızca **ReFactoring**, **Öneri**, **Uyarı**veya **Hata**olarak ayarlanabilir. Bir kod stili için [Hızlı Eylemler'i](../ide/quick-actions.md) etkinleştirmek istiyorsanız, **Önem Derecesi** ayarını Yalnızca **Yeniden Düzenleme**dışında bir şey olarak ayarlandığından emin olun. **Hızlı Eylemler** ampul ![ampul](media/light-bulb-dropdown.png), hata ![ampul](media/error-bulb.png)hata ampul ![ampul](media/screwdriver.png) , veya tornavida tornavida simgesi tercih edilmeyen bir stil kullanıldığında görünür, ve otomatik olarak tercih edilen stil kod yeniden yazmak için **Hızlı Eylemler** listesinde bir seçenek seçebilirsiniz.
+Bu sayfadaki her kod stili ayarı için, her satırdaki açılan listeleri kullanarak **tercih** ve **önem derecesi** değerlerini ayarlayabilirsiniz. Önem derecesi **yalnızca yeniden düzenleme**, **öneri**, **Uyarı**veya **hata**olarak ayarlanabilir. Bir kod stili için [hızlı eylemleri](../ide/quick-actions.md) etkinleştirmek Istiyorsanız, **önem derecesi** ayarının **yalnızca yeniden düzenleme**dışında bir değere ayarlandığından emin olun. **Quick Actions** ![ ](media/light-bulb-dropdown.png) Tercih edilen stile otomatik olarak yeniden yazmak için hızlı eylemler ampul ışığı ampulü, hata ampulü ![ hatası ampul ](media/error-bulb.png) veya screwsürücü ![ screwdriver ](media/screwdriver.png) simgesi görüntülenir ve **hızlı eylemler** listesinde bir seçeneği belirleyebilirsiniz.
 
-## <a name="apply-code-styles"></a>Kod stilleri uygulama
+## <a name="apply-code-styles"></a>Kod stillerini Uygula
 
 ::: moniker range="vs-2017"
 
-**Biçimbelge** komutunu **(Gelişmiş** > **Biçim Belgesini****Düzenle)** > kod stili ayarlarınızı (EditorConfig dosyasıveya **Kod Stili** seçeneklerinden) ve yaptığı normal biçimlendirmeyi (girintinasyon gibi) uygulamak üzere yapılandırabilirsiniz. Proje için bir *.editorconfig* dosyası varsa, bu ayarlar önceliklidir.
+**Format Document** **Edit**  >  **Advanced**  >  Kod stili ayarlarınızı (bir editorconfig dosyası veya **kod stili** seçenekleri), yaptığı normal biçimlendirme (girintileme gibi) ile birlikte uygulamak için, biçim belgesi komutunu (Gelişmiş**Biçim belgesini**Düzenle) yapılandırabilirsiniz. Proje için bir *. editorconfig* dosyası varsa, bu ayarlar öncelik kazanır.
 
 > [!NOTE]
-> **Belge biçimlerini** kullanarak kod stilleri uygulamak yalnızca C# kod dosyaları için kullanılabilir. Bu deneysel bir özelliktir.
+> **Belgeyi Biçimlendir** komutunu kullanarak kod stillerini uygulamak yalnızca C# kod dosyaları için kullanılabilir. Bu bir deneysel özelliktir.
 
-[Biçimlendirme seçenekleri sayfasında](reference/options-text-editor-csharp-formatting.md#format-document-settings) **Biçimlendirme Belgesi'nin** hangi ayarların uygulanmasını istediğinizi yapılandırın.
+[Biçimlendirme seçenekleri sayfasında](reference/options-text-editor-csharp-formatting.md#format-document-settings) **Belge biçimini biçimlendirmek** istediğiniz ayarları yapılandırın.
 
-![Visual Studio 2017'de biçim belgesi için kod stili ayarları](media/format-document-settings-experiment.png)
+![Visual Studio 2017 'de biçim belgesi için kod stili ayarları](media/format-document-settings-experiment.png)
 
 > [!TIP]
-> **Hiçbiri** şiddetiyle yapılandırılan kurallar kod temizlemeye katılmaz, ancak Hızlı Eylemler **ve Yeniden Faktörler** menüsü üzerinden tek tek uygulanabilir.
+> **Hiçbiri** önem derecesine sahip bir şekilde yapılandırılan kurallar kod temizlemesine katılmaz, ancak **Hızlı Eylemler ve yeniden düzenlemeler** menüsüyle tek tek uygulanabilir.
 
-**Belgebiçimlendirme** komutunu ilk kez tetiklediğiniz de, sarı bir bilgi çubuğu kod temizleme ayarlarınızı yapılandırmanızı ister.
+**Biçim belgesi** komutunu ilk kez tetikleyişinizde, sarı bir bilgi çubuğu kod temizleme ayarlarınızı yapılandırmanızı ister.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-C# kod dosyaları için Visual Studio 2019'da editörün alt kısmında bir **Code Cleanup** düğmesi bulunur (klavye: **Ctrl**+**K**, **Ctrl**+**E**) bir EditorConfig dosyasından veya **Kod Stili** seçenekleri sayfasından kod stilleri uygulamak için. Proje için bir *.editorconfig* dosyası varsa, bunlar öncelikli ayarlardır.
+C# kod dosyaları için, Visual Studio 2019, düzenleyicinin alt kısmındaki bir **kod temizleme** düğmesine (klavye: **CTRL** + **K**, **CTRL** + **E**) sahiptir ve kod stillerini bir editorconfig dosyasından veya **kod stili** seçenekleri sayfasından uygular. Proje için bir *. editorconfig* dosyası varsa, bu ayarlar öncelik kazanır.
 
-![Visual Studio 2019'da kod temizleme yi gerçekleştirin](media/execute-code-cleanup.png)
+![Visual Studio 2019 ' de kod temizlemeyi yürütme](media/execute-code-cleanup.png)
 
 > [!TIP]
-> **Hiçbiri** şiddetiyle yapılandırılan kurallar kod temizlemeye katılmaz, ancak Hızlı Eylemler **ve Yeniden Faktörler** menüsü üzerinden tek tek uygulanabilir.
+> **Hiçbiri** önem derecesine sahip bir şekilde yapılandırılan kurallar kod temizlemesine katılmaz, ancak **Hızlı Eylemler ve yeniden düzenlemeler** menüsüyle tek tek uygulanabilir.
 
-İlk olarak, Yapılandırma Kodu Temizleme iletişim kutusunda hangi kod stillerini (iki profilden birinde) uygulamak istediğinizi **yapılandırın.** Bu iletişim kutusunu açmak için, kod temizleme süpürge simgesinin yanındaki genişletici okunu tıklatın ve ardından **Kod Temizlemeyi Yapıla'yı**seçin.
+İlk olarak, **kod temizlemeyi Yapılandır** iletişim kutusunda hangi kod stillerini uygulamak istediğinizi (iki profilden birinde) yapılandırın. Bu iletişim kutusunu açmak için, kod temizleme Brob simgesinin yanındaki genişletici okuna ve ardından **kod temizlemeyi Yapılandır**' ı seçin.
 
-![Visual Studio 2019'da Kod Temizlemeyi Yapılandırma](media/configure-code-cleanup.png)
+![Visual Studio 2019 ' de kod temizlemeyi yapılandırma](media/configure-code-cleanup.png)
 
-Kod temizlemeyi yapılandırıldıktan sonra, kod temizlemeyi çalıştırmak için süpürge simgesine tıklayabilir veya **Ctrl**+**K**, **Ctrl**+**E** tuşuna basabilirsiniz. Ayrıca tüm projeveya çözüm genelinde kod temizleme çalıştırabilirsiniz. **Çözüm Gezgini'nde**proje veya çözüm adına sağ tıklayın, **Analiz ve Kod Temizleme'yi**seçin ve ardından Kodu **Temizlemeyi Çalıştır'ı**seçin.
+Kod temizlemeyi yapılandırdıktan sonra, **Ctrl** + kod temizlemeyi çalıştırmak için Broom simgesine tıklayabilir veya CTRL**K**, **CTRL** + **E** tuşlarına basabilirsiniz. Ayrıca, tüm proje veya çözümünüz genelinde kod temizleme işlemini de çalıştırabilirsiniz. **Çözüm Gezgini**' de proje veya çözüm adına sağ tıklayın, **Çözümle ve kod temizleme**' yi seçin ve ardından **kod temizlemeyi Çalıştır**' ı seçin.
 
-![Tüm proje veya çözümde Kod Temizleme'yi çalıştırma](media/run-code-cleanup-project-solution.png)
+![Kod temizlemeyi tüm proje veya çözüm genelinde Çalıştır](media/run-code-cleanup-project-solution.png)
 
-Bir dosyayı her kaydedişinizde kod stili ayarlarınızın uygulanmasını istiyorsanız, [Kaydet uzantısındaki Kod Temizleme'yi](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.CodeCleanupOnSave) beğenebilirsiniz.
+Kod stili ayarlarınızın bir dosyayı her kaydedişinizde uygulanmasını istiyorsanız, [kayıt uzantısında kod temizlemeyi](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.CodeCleanupOnSave) beğenmeyebilirsiniz.
 
 ::: moniker-end
 
@@ -105,4 +105,4 @@ Bir dosyayı her kaydedişinizde kod stili ayarlarınızın uygulanmasını isti
 
 - [Hızlı Eylemler](../ide/quick-actions.md)
 - [EditorConfig için .NET kodlama kuralı ayarları](../ide/editorconfig-code-style-settings-reference.md)
-- [Editör davranışı (Mac için Visual Studio)](/visualstudio/mac/editor-behavior)
+- [Düzenleyici davranışı (Mac için Visual Studio)](/visualstudio/mac/editor-behavior)

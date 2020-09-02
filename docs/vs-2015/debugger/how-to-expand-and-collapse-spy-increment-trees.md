@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Genişletme ve daraltma Spy ++ ağaçlarını | Microsoft Docs'
+title: 'Nasıl yapılır: Spy + + ağaçlarını genişletme ve daraltma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,36 +12,36 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f028370c5790b6e22339f39eacaac5e2b552e213
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438276"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64819508"
 ---
-# <a name="how-to-expand-and-collapse-spy-trees"></a>Nasıl yapılır: Spy ++ ağaçlarını daraltma ve genişletme
+# <a name="how-to-expand-and-collapse-spy-trees"></a>Nasıl yapılır: Spy++ Ağaçlarını Genişletme ve Daraltma.
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Genişletin ve iki yöntemi kullanarak Windows, işlemleri ve iş parçacığı görünümleri Daralt: penceresinde veya kullanarak simgeleri tıklayarak **ağaç** menüsü. + Ve -simgeler ağacında Visual C++ proje penceresinde yaptıkları gibi davranacak.  
+İki yöntem kullanarak Windows, süreçler ve Iş parçacıkları görünümlerini genişletebilir ve daraltabilirsiniz: penceredeki simgelere tıklayarak veya **ağaç** menüsünü kullanarak. Ağaçtaki + ve – simgeleri Visual C++ proje penceresinde yaptıkları gibi davranır.  
   
- **Ağaç** menüsü dört komuttan içerir:  
+ **Ağaç** menüsü dört komut içerir:  
   
-|Menü komutu|Açıklama|  
+|Menü komutu|Description|  
 |------------------|-----------------|  
-|**Bir düzey Genişlet**|Geçerli seçilmiş öğe bir sonraki düzeye genişletir.|  
-|**Dalı genişlet**|Seçili öğenin tam olarak genişletir.|  
-|**Tümünü Genişlet**|Tam olarak pencerede tüm öğeleri genişletir.|  
-|**Daralt**|Seçili öğenin tam olarak daraltır.|  
+|**Bir düzey Genişlet**|Şu anda seçili öğeyi bir sonraki düzeye genişletir.|  
+|**Dalı Genişlet**|Şu anda seçili olan öğeyi tam olarak genişletir.|  
+|**Tümünü Genişlet**|Penceredeki tüm öğeleri tamamen genişletir.|  
+|**Daralt**|Şu anda seçili öğeyi tamamen daraltır.|  
   
 > [!TIP]
-> Bir işlem genişletirseniz, işleme sahip tüm iş parçacıkları bakın. Bir iş parçacığı genişletirseniz, sahip olduğu tüm windows listesini görürsünüz.  
+> Bir işlemi genişletirseniz, işlemin sahip olduğu tüm iş parçacıklarını görürsünüz. Bir iş parçacığını genişletirseniz, sahip olduğu tüm pencerelerin bir listesini görürsünüz.  
   
-### <a name="to-expand-or-collapse-spy-trees"></a>Genişlet veya daralt Spy ++ ağaçlarını için  
+### <a name="to-expand-or-collapse-spy-trees"></a>Spy + + ağaçlarını genişletmek veya daraltmak için  
   
-1. Windows, işlemleri veya iş parçacıkları görünümünde öğelerden birini seçin.  
+1. Windows, süreçler veya Iş parçacıkları görünümündeki öğelerden birini vurgulayın.  
   
-2. Gelen **ağaç** menüsünde genişletme birini seçin veya komutları daraltın.  
+2. **Ağaç** menüsünde Genişlet veya Daralt komutlarından birini seçin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Spy ++ kullanma](../debugger/using-spy-increment.md)   
- [Spy ++ görünümleri](../debugger/spy-increment-views.md)   
+ [Spy + + kullanma](../debugger/using-spy-increment.md)   
+ [Spy + + görünümleri](../debugger/spy-increment-views.md)   
  [Spy++ Başvurusu](../debugger/spy-increment-reference.md)

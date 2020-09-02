@@ -1,5 +1,5 @@
 ---
-title: CustomParameter Element (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: CustomParameter öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,16 +14,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9063a354f03b896e189566e8d84a18caf7509db8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739421"
 ---
 # <a name="customparameter-element-visual-studio-templates"></a>CustomParameter öğesi (Visual Studio şablonları)
-Şablondan bir proje veya öğe oluşturulduğunda kullanılacak özel bir parametre adı ve değer içerir.
+Şablondan bir proje veya öğe oluşturulduğunda kullanılacak özel bir parametre adı ve değeri içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <CustomParameter Name="name" Value="value">
@@ -36,7 +36,7 @@ ms.locfileid: "80739421"
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Name`|Gereklidir. Parametrenin adı. Parametrelerin biçimi $*adı*$'dır.|
+|`Name`|Gereklidir. Parametrenin adı. Parametrelerin biçimi $*Name*$ olur.|
 |`Value`|Gereklidir. Parametrenin değiştirme değeri.|
 
 ### <a name="child-elements"></a>Alt öğeleri
@@ -46,13 +46,13 @@ ms.locfileid: "80739421"
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|Sihirbaz parametre değiştirmeleri yaptığında şablon sihirbazına geçirilecek özel parametreleri gruplandırın.|
+|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|Sihirbaz parametre değişiklikleri yaptığında şablon sihirbazına geçirilecek özel parametreleri gruplandırır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Şablon öğeleri `CustomParameter` içeriyorsa, `Name` her örnekte öznitelik `Value` oluşturulan proje veya madde dosyalarındaki öznitelikile değiştirilir.
+ Şablon `CustomParameter` öğeleri içerdiğinde, her örnek `Name` özniteliği `Value` oluşturulan proje veya öğe dosyalarındaki özniteliğiyle değiştirilmiştir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, şablonda birkaç özel parametrenin nasıl kullanılacağını gösterir. Bir proje veya öğe aşağıdaki özel parametrelere sahip bir şablondan `$color2$` oluşturulduğunda, şablon dosyalarının `Red` `$color1$` `Blue`tüm örnekleri sırasıyla ve şablon dosyalarıyla değiştirilir.
+ Aşağıdaki örnek, bir şablonda birkaç özel parametrenin nasıl kullanılacağını gösterir. Bir şablon veya öğe, aşağıdaki özel parametrelerle bir şablondan oluşturulduğunda, `$color1$` `$color2$` şablon dosyalarındaki ve içindeki tüm örnekleri sırasıyla ve ile yerine geçer `Red` `Blue` .
 
 ```
 <CustomParameters>
@@ -62,6 +62,6 @@ ms.locfileid: "80739421"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [CustomParametreler öğesi (Visual Studio şablonları)](../extensibility/customparameters-element-visual-studio-templates.md)
+- [CustomParameters öğesi (Visual Studio şablonları)](../extensibility/customparameters-element-visual-studio-templates.md)
 - [Şablon parametreleri](../ide/template-parameters.md)
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)

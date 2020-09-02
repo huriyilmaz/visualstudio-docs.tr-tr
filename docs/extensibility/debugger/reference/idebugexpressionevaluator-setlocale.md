@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::SetLocale | Microsoft Dokümanlar
+title: 'Idebugexpressiondeğerlendirici:: SetLocale | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 57ddee6e1796159c505b67982f25d1ba09684561
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729465"
 ---
 # <a name="idebugexpressionevaluatorsetlocale"></a>IDebugExpressionEvaluator::SetLocale
-Bu yöntem yazdırılabilir sonuçlar oluşturmak için kullanılacak dili ayarlar.
+Bu yöntem, yazdırılabilir sonuçlar oluşturmak için kullanılacak dili ayarlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetLocale( 
@@ -41,13 +41,13 @@ int SetLocale(
 
 ## <a name="parameters"></a>Parametreler
 `wLangID`\
-[içinde] Dil tanımlayıcısı.
+'ndaki Dil tanımlayıcısı.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- İfade değerlendiricisi (EE) yüklenirken bu yöntem birçok kez çağrılabilir, bu nedenle EE anında dilleri değiştirebilmeli. EE, hata iletilerini ve dizeleri uygun dilde döndürmek için bu yerel alanı kullanır.
+ Bu yöntem, ifade değerlendiricisi (EE) yüklenirken birçok kez çağrılabilir, bu nedenle EE 'ın anında diller arasında geçiş yapabilmesi gerekir. EE, uygun dilde hata iletileri ve dizeler döndürmek için bu yerel ayarı kullanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExpressionEvaluator](../../../extensibility/debugger/reference/idebugexpressionevaluator.md)
