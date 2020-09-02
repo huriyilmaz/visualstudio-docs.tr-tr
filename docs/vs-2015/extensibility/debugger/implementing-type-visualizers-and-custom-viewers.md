@@ -1,5 +1,5 @@
 ---
-title: Tür Görselleştiricileri ve özel görüntüleyiciler uygulama | Microsoft Docs
+title: Tür Görselleştiriciler ve özel görüntüleyiciler uygulama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,30 +12,30 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b780f2115400fd43e8915a5109c960cab99bf131
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63430216"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64835569"
 ---
 # <a name="implementing-type-visualizers-and-custom-viewers"></a>Tür Görselleştiricileri ve Özel Görüntüleyiciler Uygulama
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için lütfen bkz [CLR ifade Değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Tür görselleştiricileri ve özel görüntüleyiciler onaltılık sayı döküm basit daha anlamlı bir şekilde belirli bir türdeki verileri görüntülemek bir kullanıcı izin verir. İfade değerlendiricisi (EE) özel görüntüleyiciler belirli veri türlerine veya değişkenleri ile ilişkilendirebilirsiniz. Bu özel görüntüleyiciler EE tarafından uygulanır. Başka bir üçüncü taraf satıcı veya bile son kullanıcının gelebilir dış tür görselleştiriciler, EE de destekler.  
+ Tür Görselleştiriciler ve özel görüntüleyiciler, bir kullanıcının belirli bir türdeki verileri, sayıların basit bir onaltılı dökümünden daha anlamlı bir şekilde görüntülemesine olanak tanır. Bir ifade değerlendirici (EE) özel görüntüleyicilerin belirli veri türleri veya değişkenleri ile ilişkilendirebileceği. Bu özel görüntüleyiciler EE tarafından uygulanır. EE, başka bir üçüncü taraf satıcıdan veya hatta son kullanıcıdan gelmiş olabilecek harici tür görselleştiricileri de destekleyebilir.  
   
 ## <a name="discussion"></a>Tartışma  
   
-### <a name="type-visualizers"></a>Tür Görselleştiricileri  
- Tür görselleştiricileri ve özel görüntüleyiciler Her nesne için izleme penceresinde görüntülenecek bir listesi için Visual Studio ister. İfade değerlendiricisi (EE) kendisi için tür görselleştiricileri ve özel görüntüleyiciler desteklemek istediği her türü için böyle bir liste sağlar. Çağrılar [GetCustomViewerCount](../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) ve [GetCustomViewerList](../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) tür görselleştiricileri ve özel görüntüleyiciler erişen tüm işlemini başlatmak (bkz [Visualizing ve verileri görüntüleme](../../extensibility/debugger/visualizing-and-viewing-data.md)çağrı sırası hakkında ayrıntılı bilgi için).  
+### <a name="type-visualizers"></a>Tür Görselleştiriciler  
+ Visual Studio, bir izleme penceresinde görüntülenmek üzere her nesnenin tür görselleştiricileri ve özel görüntüleyicilerinin bir listesini ister. Bir ifade değerlendirici (EE), tür Görselleştiriciler ve özel görüntüleyiciler desteklemek istediği her tür için böyle bir liste sağlar. [GetCustomViewerCount](../../extensibility/debugger/reference/idebugproperty3-getcustomviewercount.md) ve [GetCustomViewerList](../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) çağrıları, tür Görselleştiriciler ve özel görüntüleyicilere erişme sürecini başlatır (çağrı dizisi hakkındaki ayrıntılar Için bkz. [verileri görselleştirme ve görüntüleme](../../extensibility/debugger/visualizing-and-viewing-data.md) ).  
   
 ### <a name="custom-viewers"></a>Özel görüntüleyiciler  
- Özel görüntüleyiciler EE belirli bir tür için uygulanır ve tarafından temsil edilen [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md) arabirimi. Özel Görüntüleyici yalnızca bu belirli özel Görüntüleyici uygulayan EE çalıştırılırken kullanılabilir bir tür görselleştiricisi kadar esnek değildir. Özel Görüntüleyici uygulama tür görselleştiricileri desteği uygulamak daha kolaydır. Ancak tür görselleştiricileri destekleyen maksimum esneklik için son kullanıcı kendi verilerini görselleştirmek için sağlar. Bu tartışma geri kalanında, yalnızca tür görselleştiricileri ilgilidir.  
+ Özel görüntüleyiciler, belirli bir veri türü için EE 'de uygulanır ve [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md) arabirimi tarafından temsil edilir. Özel bir görüntüleyici, yalnızca söz konusu özel görüntüleyiciyi uygulayan EE 'ın yürütüldüğü için bir tür görselleştiricisi olarak esnek değildir. Özel bir Görüntüleyici uygulamak, tür Görselleştiriciler için destek uygulamaktan daha basittir. Ancak, destekleyici tür Görselleştiriciler, son kullanıcıya verilerini görselleştirmede en yüksek esnekliği sağlar. Bu tartışmanın geri kalanı yalnızca tür Görselleştiriciler ile ilgilidir.  
   
 ## <a name="interfaces"></a>Arabirimler  
- Tür görselleştiricileri, Visual Studio tarafından tüketilmesi desteklemek için aşağıdaki arabirimlerinden EE uygular:  
+ EE, Visual Studio tarafından tüketilen tür görselleştiricilerini desteklemek için aşağıdaki arayüzleri uygular:  
   
 - [IEEVisualizerDataProvider](../../extensibility/debugger/reference/ieevisualizerdataprovider.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63430216"
   
 - [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)  
   
-  Tür görselleştiricileri desteklemek için aşağıdaki arabirimlerinden EE kullanır:  
+  EE, tür görselleştiricilerini desteklemek için aşağıdaki arabirimleri kullanır:  
   
 - [IEEVisualizerService](../../extensibility/debugger/reference/ieevisualizerservice.md)  
   
@@ -58,6 +58,6 @@ ms.locfileid: "63430216"
 - [IDebugBinder3](../../extensibility/debugger/reference/idebugbinder3.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir CLR ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
- [Verileri Görselleştirme ve görüntüleme](../../extensibility/debugger/visualizing-and-viewing-data.md)   
+ [CLR Ifade Değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
+ [Verileri görselleştirme ve görüntüleme](../../extensibility/debugger/visualizing-and-viewing-data.md)   
  [IDebugCustomViewer](../../extensibility/debugger/reference/idebugcustomviewer.md)

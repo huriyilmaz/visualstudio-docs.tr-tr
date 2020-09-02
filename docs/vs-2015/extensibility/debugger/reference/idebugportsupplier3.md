@@ -13,49 +13,49 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e4ece720cf6880bba528dee99cdbdeb25c10087a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65674128"
 ---
 # <a name="idebugportsupplier3"></a>IDebugPortSupplier3
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu arabirim, çağıran bir bağlantı noktası sağlayıcısı ve bağlantı noktaları (bunları diske yazarak) hata ayıklayıcı çağrıları arasında korumak daha sonra korunan Bu bağlantı noktalarının bir listesini alın belirlemek sağlar.  
+Bu arabirim, bir arayanın bir bağlantı noktası üreticisinin, hata ayıklayıcının etkinleştirmeleri arasında bağlantı noktalarını (diske yazarak) koruyup koruyamayacağını belirlemesine izin verir ve ardından bu korunan bağlantı noktalarının bir listesini alın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugPortSupplier3 : IDebugPortSupplier2  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Özel bağlantı noktası sağlayıcısı kalıcı veya bağlantı noktası bilgilerini diske kaydedilirken desteklemek için bu arabirimi uygular. Bu arabirim aynı nesne üzerinde uygulanması gereken [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) arabirimi.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Özel bir bağlantı noktası sağlayıcısı, bu arabirimi kalıcı veya bağlantı noktası bilgilerinin diske kaydedilmesini desteklemek için uygular. Bu arabirimin [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) arabirimiyle aynı nesne üzerinde uygulanması gerekir.  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Çağrı [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) üzerinde `IDebugPortSupplier2` arabirimi bu arabirim elde edilir.  
+ [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) `IDebugPortSupplier2` Bu arabirimi edinmek için arabirimdeki QueryInterface 'i çağırın.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Devralınan yöntemleri yanı sıra [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) arabirimi bu arabirim, aşağıdakileri destekler:  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md) arabiriminden devralınan yöntemlere ek olarak, bu arabirim aşağıdakileri destekler:  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CanPersistPorts](../../../extensibility/debugger/reference/idebugportsupplier3-canpersistports.md)|Bağlantı noktası sağlayıcısı bağlantı noktası (bunları diske yazarak) hata ayıklayıcı çağrıları arasında kalıcı olup olmadığını döndürür.|  
-|[EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md)|Numaralandırılacak Bu bağlantı noktası sağlayıcısı tarafından diske yazılan tüm bağlantı noktaları üzerinden kullanılabilir bir nesne döndürür.|  
+|[CanPersistPorts](../../../extensibility/debugger/reference/idebugportsupplier3-canpersistports.md)|Bağlantı noktası üreticisinin, hata ayıklayıcının etkinleştirmeleri arasında bağlantı noktalarını (diske yazarak) kalıcı yapıp yapamayacağını döndürür.|  
+|[EnumPersistedPorts](../../../extensibility/debugger/reference/idebugportsupplier3-enumpersistedports.md)|Bu bağlantı noktası sağlayıcısı tarafından diske yazılan tüm bağlantı noktalarını numaralandırmak için kullanılabilecek bir nesne döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bağlantı noktası sağlayıcısı çağrıları arasında küçük bağlantı noktalarına devam ediyorsa, bu arabirimi uygulamalıdır. Bağlantı noktası, bağlantı noktası sağlayıcısı örneği ve bağlantı noktası sağlayıcısı kaldırıldığında diske yazılan yüklenmelidir.  
+ Bir bağlantı noktası tedarikçide bağlantı noktalarını etkinleştirmeleri arasında kalıcı hale getirebiliyorsanız, bu arabirimi uygulamalıdır. Bağlantı noktası sağlayıcısı örneği oluşturulduğunda bağlantı noktaları yüklenmelidir ve bağlantı noktası sağlayıcısı yok edildiğinde diske yazılır.  
   
- Hata ayıklama altyapısı genellikle bağlantı noktası sağlayıcısı ile etkileşime girmez ve bu arabirim için herhangi bir kullanıma sahip olur.  
+ Bir hata ayıklama altyapısı genellikle bir bağlantı noktası sağlayıcısıyla etkileşime girmiyor ve bu arabirim için hiçbir kullanımı olmayacaktır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)   
+ [Çekirdek arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)

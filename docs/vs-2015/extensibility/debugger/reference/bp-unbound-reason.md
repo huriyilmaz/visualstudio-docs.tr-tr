@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ddff6130e2243d10c00cefec160d057516d60932
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153275"
 ---
-# <a name="bpunboundreason"></a>BP_UNBOUND_REASON
+# <a name="bp_unbound_reason"></a>BP_UNBOUND_REASON
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir kesme noktası ilişkisiz nedeni sağlar.  
+Kesme noktasının bağlantısı kesildi sebebini sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_UNBOUND_REASON {   
@@ -47,27 +47,27 @@ public enum enum_BP_UNBOUND_REASON { 
   
 ## <a name="members"></a>Üyeler  
  BPUR_UNKNOWN  
- Bunun nedeni bilinmiyor.  
+ Nedeni bilinmiyor.  
   
  BPUR_CODE_UNLOADED  
  Kesme noktasını içeren kod kaldırıldı.  
   
  BPUR_BREAKPOINT_REBIND  
- Farklı bir konuma kesme noktası yansıdı. Bu düzenlemeden sonra gerçekleşir ve kesme noktası hareket ettiğinde veya artık geçerli olmayan bir yola sahip bir dosya kesme noktasına bağlandığında işlemler devam edebilirsiniz.  
+ Kesme noktası farklı bir konuma yeniden bağlıydı. Bu durum, kesme noktası taşırken veya kesme noktası artık geçerli olmayan bir dosyaya bağlandığında, düzenleme ve devam etme işlemlerinden sonra gerçekleşebilir.  
   
  BPUR_ BREAKPOINT_ERROR  
- Kesme noktasına bağlı sonra hata olarak değerlendirilir. Bu, koşullar artık geçerli olmayan yönetilen kesme noktaları için gerçekleşir.  
+ Kesme noktasının bağlandıktan sonra hatalı olduğu belirlendi. Bu durum, koşulları artık geçerli olmayan yönetilen kesme noktaları olur.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tarafından döndürülen [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) yöntemi.  
+ [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) yöntemi tarafından döndürüldü.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)

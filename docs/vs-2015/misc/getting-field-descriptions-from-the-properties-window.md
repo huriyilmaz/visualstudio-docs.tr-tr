@@ -1,5 +1,5 @@
 ---
-title: Alan tanımları Özellikler penceresinden alma | Microsoft Docs
+title: Özellikler penceresinden alan açıklamalarını alma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -10,31 +10,31 @@ ms.assetid: 7d92bb6a-b9b9-4cd8-99e9-b5ee129b52a3
 caps.latest.revision: 9
 manager: jillfra
 ms.openlocfilehash: 1d2b152fd7ed517a238f9893320bd0c36035627c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703977"
 ---
-# <a name="getting-field-descriptions-from-the-properties-window"></a>Özellikler penceresinden alan tanımlarını alma
-Sayfanın alt kısmında **özellikleri** penceresinde bir açıklama alanını seçili özellik alanıyla ilgili bilgileri görüntüler. Bu özellik varsayılan olarak etkinleştirilir. Açıklama alanı gizlemek istiyorsanız, sağ **özellikleri** penceresini açın ve **açıklama**. Bunun yapılması ayrıca kaldırır onay işaretinin yanındaki **açıklama** menü penceresinin başlık. Geçiş yapmak için aynı adımları izleyerek alanı yeniden görüntüleyebilirsiniz **açıklama** yeniden açın.  
+# <a name="getting-field-descriptions-from-the-properties-window"></a>Özellikler penceresinden alan açıklamalarını alma
+**Özellikler** penceresinin alt kısmında, bir açıklama alanı seçili özellik alanı ile ilgili bilgileri görüntüler. Bu özellik varsayılan olarak açıktır. Açıklama alanını gizlemek istiyorsanız, **Özellikler** penceresine sağ tıklayın ve **Açıklama**' ya tıklayın. Bunun yapılması, Menü penceresindeki **Açıklama** başlığının yanındaki onay işaretini de kaldırır. **Açıklamayı** tekrar açmak için aynı adımları izleyerek alanı yeniden görüntüleyebilirsiniz.  
   
- Açıklama alanı bilgileri geldiği <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>. Her yöntem, arabirim, coclass'ı ve benzeri bir yerelleştirilmemiş olabilir `helpstring` tür kitaplığında özniteliği. **Özellikleri** penceresi alır dizeden <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo.GetDocumentation%2A>.  
+ Açıklama alanındaki bilgiler öğesinden gelir <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo> . Her yöntem, arabirim, coclass, ve benzeri, tür kitaplığında yerelleştirilmemiş bir `helpstring` özniteliğe sahip olabilir. **Özellikler** penceresi öğesinden dize alır <xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo.GetDocumentation%2A> .  
   
-### <a name="to-specify-localized-help-strings"></a>Yerelleştirilmiş Yardım dizeleri belirtmek için  
+### <a name="to-specify-localized-help-strings"></a>Yerelleştirilmiş Yardım dizelerini belirtmek için  
   
-1. Ekleme `helpstringdll` özniteliği tür kitaplığının Kitaplık ifadeye (`typelib`).  
+1. `helpstringdll`Özniteliği tür kitaplığı () içindeki kitaplık ifadesine ekleyin `typelib` .  
   
    > [!NOTE]
-   > Bu adım, bir nesne kitaplığı (.olb) dosyasında tür kitaplığı ise isteğe bağlıdır.  
+   > Tür kitaplığı bir nesne kitaplığı (. olb) dosyasında ise bu adım isteğe bağlıdır.  
   
-2. Belirtin `helpstringcontext` dizeleri için öznitelikler. Ayrıca belirtebileceğiniz `helpstring` öznitelikleri.  
+2. `helpstringcontext`Dizelerin özniteliklerini belirtin. Öznitelikleri de belirtebilirsiniz `helpstring` .  
   
-    Bu öznitelikler kodundan `helpfile` ve `helpcontext` gerçek .chm dosya Yardım konularında bulunan öznitelikler.  
+    Bu öznitelikler, `helpfile` `helpcontext` gerçek. chm dosyası yardım konularında yer alan ve özniteliklerinden farklıdır.  
   
-   Vurgulanan özellik adı, görüntülenecek açıklama bilgileri almak için **özellikleri** penceresi çağrıları <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation2%2A> seçili özellik için istenen belirtme `lcid` için öznitelik Çıkış dizesi. Dahili olarak <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2> .dll dosyası içinde belirtilen bulur `helpstringdll` özniteliği ve çağrıları `DLLGetDocumentation` , .dll dosyasında belirtilen bağlamla ve `lcid` özniteliği.  
+   Vurgulanan Özellik adı için görüntülenecek açıklama bilgilerini almak için, **Özellikler** penceresi <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetDocumentation2%2A> Seçili olan özelliği çağırır ve `lcid` çıktı dizesi için istenen özniteliği belirterek. Dahili olarak, <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2> özniteliğinde belirtilen. dll dosyasını bulur `helpstringdll` ve `DLLGetDocumentation` belirtilen bağlam ve özniteliğe sahip bu. dll dosyasında çağırır `lcid` .  
   
-   Uygulamasını ve imza `DLLGetDocumentation` şunlardır:  
+   İmzası ve uygulanması `DLLGetDocumentation` şunlardır:  
   
 ```  
 STDAPI DLLGetDocumentation  
@@ -47,17 +47,17 @@ STDAPI DLLGetDocumentation
 );  
 ```  
   
- `DLLGetDocumentation` DLL için .def dosyasında tanımlanmış bir dışarı aktarma işlevi olmalıdır.  
+ `DLLGetDocumentation`İşlev, DLL için. def dosyasında tanımlanmış bir dışarı aktarma olmalıdır.  
   
- Dahili olarak, aslında DLL olduğu bir .olb dosyası oluşturulur. Bir kaynak, tür kitaplığı (.tlb) dosyasını ve dışarı aktarılan bir işlevin bu DLL içeren `DLLGetDocumentation`.  
+ Dahili olarak, aslında DLL olan bir. olb dosyası oluşturulur. Bu DLL, bir kaynak, tür kitaplığı (. tlb) dosyası ve bir tane aktarılmış işlevi içerir `DLLGetDocumentation` .  
   
- .Olb dosyalar, söz konusu olduğunda `helpstringdll` .tlb dosyasının kendisini içeren aynı dosya olduğu için özniteliği isteğe bağlıdır.  
+ . Olb dosyalarında, `helpstringdll` . tlb dosyasının kendisini içeren dosya olduğu için özniteliği isteğe bağlıdır.  
   
- Dizeleri görünmesini almak için **açıklamaları** bölmesinde, bu nedenle, yapmanız gereken en düşük belirtin `helpstring` tür kitaplığında özniteliği. Bu dizelerin yerelleştirilmesi istiyorsanız belirtmek zorunda `helpstringdll` (isteğe bağlı) özniteliği ve `helpstringcontext` (gerekli) özniteliği ve uygulamanıza `DLLGetDocumentation`.  
+ **Açıklamalar** bölmesinde gösterilecek dizeleri almak için, bu nedenle yapmanız gereken en düşük değer `helpstring` tür kitaplığında özniteliği belirtmektir. Bu dizelerin yerelleştirilmesi istiyorsanız, `helpstringdll` (isteğe bağlı) özniteliğini ve `helpstringcontext` (gerekli) özniteliğini belirtmeniz ve uygulamanız gerekir `DLLGetDocumentation` .  
   
- IDL'ın aracılığıyla bilgi başlama yerelleştirilmiş uygulanması gereken ek arabirimi yok `helpstringcontext` özniteliği ve `DLLGetDocumentation`.  
+ IDL 'nin özniteliği ve ile yerelleştirilmiş bilgileri alınırken uygulanması gereken ek arabirimler yoktur `helpstringcontext` `DLLGetDocumentation` .  
   
- Uygulayarak bir özelliğin açıklamasını ve yerelleştirilmiş adı alma başka bir yolu ise <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.GetLocalizedPropertyInfo%2A>. Bu yöntemin uygulanması için ilgili daha fazla bilgi için bkz. [Özellikler penceresi alanları ve arabirimleri](../extensibility/internals/properties-window-fields-and-interfaces.md).  
+ Yerelleştirilmiş adı ve bir özelliğin açıklamasını elde etmenin bir başka yolu da uygulamadır <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.GetLocalizedPropertyInfo%2A> . Bu yöntemin uygulanmasıyla ilgili daha fazla bilgi için bkz. [Özellikler penceresi alanları ve arabirimleri](../extensibility/internals/properties-window-fields-and-interfaces.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>   

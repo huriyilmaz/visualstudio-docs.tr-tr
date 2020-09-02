@@ -1,5 +1,5 @@
 ---
-title: VSIX proje şablonu | Microsoft Docs
+title: VSıX proje şablonu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,76 +12,76 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2386f1be805f6347fc32fba4ee8bfe57c8602329
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436898"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64825469"
 ---
 # <a name="vsix-project-template"></a>VSIX Proje Şablonu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir veya daha fazla Visual Studio uzantıları içinde VSIX projesi sarmalamak için VSIX proje şablonu kullanın ve ardından üzerinde paket yayımlama [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesi.  
+VSIX projesinde bir veya daha fazla Visual Studio uzantısını kaydırmak için VSıX proje şablonunu kullanabilir ve sonra paketi [Visual Studio Market](https://marketplace.visualstudio.com/) Web sitesinde yayımlayabilirsiniz.  
   
- VSPackage'ları, derlemeleri, MEF Bileşenleri, proje şablonları, öğe şablonları, araç kutusu denetimleri ve özel uzantı türleri VSIX dağıtımı destekler.  
+ VSıX dağıtımı VSPackages, derlemeler, MEF Bileşenleri, proje şablonları, öğe şablonları, araç kutusu denetimleri ve özel uzantı türlerini destekler.  
   
 > [!NOTE]
-> VSIX projeleri kullanmak için Visual Studio SDK'yı yüklemeniz gerekir. Visual Studio SDK'sı hakkında daha fazla bilgi için bkz. [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
+> VSıX projelerini kullanmak için Visual Studio SDK 'sını yüklemelisiniz. Visual Studio SDK hakkında daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).  
   
-## <a name="where-to-find-the-vsix-project-template"></a>VSIX proje şablonunu nerede bulacağını  
- VSIX proje şablonu kullanılabilir **yeni proje** iletişim kutusu. Ya da genişletin **Visual Basic** düğümü veya **Visual C#** düğümünü seçip **genişletilebilirlik**.  
+## <a name="where-to-find-the-vsix-project-template"></a>VSıX proje şablonunun nerede bulunacağı  
+ VSıX proje şablonu **Yeni proje** iletişim kutusunda kullanılabilir. **Visual Basic** düğümünü ya da **Visual C#** düğümünü genişletin ve ardından **genişletilebilirlik**' i seçin.  
   
 > [!TIP]
-> Bu .NET Framework 4.5 emin olmanız gerekir veya en üstündeki açılan yüksek belirtilen **yeni proje** iletişim kutusu.  
+> **Yeni proje** iletişim kutusunun en üstündeki açılan listede .NET Framework 4,5 veya üzeri bir sürümü belirtildiğinden emin olmanız gerekir.  
   
-## <a name="uses-of-the-vsix-project-template"></a>VSIX proje şablonunu kullanır  
- VSIX proje şablonu, iki temel kullanım sahiptir:  
+## <a name="uses-of-the-vsix-project-template"></a>VSıX proje şablonunun kullanımları  
+ VSıX proje şablonunun iki ana kullanımı vardır:  
   
-- Proje şablonları, öğe şablonları ve VSIX desteği olmayan diğer uzantılar dağıtmak için.  
+- Proje şablonları, öğe şablonları ve henüz VSıX desteği olmayan diğer uzantıları dağıtmak için.  
   
-- Birden fazla uzantı çıkışları bir dağıtım paketi sarmalamak için.  
+- Birden çok uzantı çıkışını tek bir dağıtım paketine kaydırmak için.  
   
-  VSPackage veya başka tür bir VSIX desteği olan uzantıları dağıtmak için VSIX proje şablonu kullanmak zorunda değil.  
+  VSPackages 'leri veya VSıX desteği olan diğer tür uzantıları dağıtmak için VSıX proje şablonunu kullanmanız gerekmez.  
   
-## <a name="packaging-an-extension-in-an-empty-vsix-project"></a>Uzantı boş bir VSIX projesinde paketleme  
- Mevcut bir uzantı veya VSIX desteği, boş bir VSIX projesinde sarmalama tarafından zaten sahip olmayan bir uzantı paketleyebilirsiniz. Sarmalamak için uzantı tarafından desteklenen bir türde olmalıdır [VSIX şema](../extensibility/vsix-extension-schema-2-0-reference.md).  
+## <a name="packaging-an-extension-in-an-empty-vsix-project"></a>Boş bir VSıX projesinde uzantı paketleme  
+ Mevcut bir uzantıyı veya VSıX desteği olmayan bir uzantıyı boş bir VSıX projesinde sarmalayarak paketleyebilir. Sarmalanacak uzantı [VSIX şeması](../extensibility/vsix-extension-schema-2-0-reference.md)tarafından desteklenen bir türde olmalıdır.  
   
-#### <a name="to-package-an-extension-by-using-a-vsix-project"></a>Bir VSIX projesi kullanarak uzantı paketlemek için  
+#### <a name="to-package-an-extension-by-using-a-vsix-project"></a>VSıX projesi kullanarak bir uzantıyı paketlemek için  
   
-1. Uzantınızı yapmak projeleri oluşturun.  
+1. Uzantınızı oluşturan projeleri oluşturun.  
   
-2. Kullanarak bir VSIX projesi oluşturun **VSIX projesi** şablonu.  
+2. **VSIX proje** şablonunu kullanarak bir VSIX projesi oluşturun.  
   
-     Source.extension.vsixmanifest açılır **bildirim Tasarımcısı**.  
+     Source. Extension. valtmanifest, **bildirim tasarımcısında**açılır.  
   
-3. Üzerinde **varlıklar** sekmesini, **yeni** düğmesi.  
+3. **Varlıklar** sekmesinde **Yeni** düğmesini seçin.  
   
      **Yeni varlık Ekle** iletişim kutusu görüntülenir.  
   
-4. İçinde **türü** listesinde, eklemek için uzantı türü seçin.  
+4. **Tür** listesinde, eklenecek uzantı türünü seçin.  
   
-5. Geçerli çözümde (örneğin, bir öğe şablonunun veya derlenmiş bir bütünleştirilmiş kod) yer alan bir uzantı veya içerik öğe eklemek için aşağıdaki adımları gerçekleştirin:  
+5. Geçerli çözüme (örneğin, bir öğe şablonu veya derlenmiş derleme) dahil olan bir uzantı veya içerik öğesi eklemek için aşağıdaki adımları uygulayın:  
   
-    1. İçinde **kaynak** listesinde **mevcut çözümde bir proje**.  
+    1. **Kaynak** listesinde, **Geçerli çözümde bir proje**seçin.  
   
-    2. İçinde **proje** listesinde, uzantı adını seçin.  
+    2. **Proje** listesinde, uzantının adını seçin.  
   
-    3. İçinde **bu klasördeki ekleme** kutusuna, varlığı ekleyin ve ardından bir klasör adı girin **Tamam** düğmesi.  
+    3. **Bu klasöre Ekle** kutusuna varlığın ekleneceği bir klasörün adını girin ve **Tamam** düğmesini seçin.  
   
-6. Bir uzantı veya geçerli çözümde bulunup bulunmadığına içerik öğesi eklemek için aşağıdaki adımları gerçekleştirin:  
+6. Geçerli çözüme dahil olmayan bir uzantı veya içerik öğesi eklemek için aşağıdaki adımları uygulayın:  
   
-    1. İçinde **kaynak** liste kutusu öğesini **FileSystem'daki**.  
+    1. **Kaynak** liste kutusunda **dosya sistemi üzerinde dosya**' yı seçin.  
   
-    2. İçinde **yolu** alan, derlenmiş veya sıkıştırılmış uzantısı dosyanın tam yolunu girin veya bunları kullanmanızı **Gözat** dosyasına gözatmak için düğmeyi.  
+    2. **Yol** alanına, derlenen veya sıkıştırılan uzantı dosyasının tam yolunu girin veya dosyaya gitmek için **Araştır** düğmesini kullanın.  
   
-    3. İçinde **bu klasördeki ekleme** kutusuna, varlığı ekleyin ve ardından bir klasör adı girin **Tamam** düğmesi.  
+    3. **Bu klasöre Ekle** kutusuna varlığın ekleneceği bir klasörün adını girin ve **Tamam** düğmesini seçin.  
   
-7. Paketiniz ek uzantıları dahil etmek istiyorsanız, bunları aynı şekilde ekleyin.  
+7. Paketinizin ek uzantılar içermesini istiyorsanız, bunları aynı şekilde ekleyin.  
   
-8. Çözümü oluşturun.  
+8. Çözümü derleyin.  
   
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSIX bildirim dosyası, [Content_Types] .xml dosyasını ve tüm projeye eklenen uzantı varlıkları içeren bir .vsix dosyası oluşturur.  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSıX bildirim dosyası, bir [Content_Types]. xml dosyası ve projeye eklediğiniz tüm uzantı varlıklarını içeren bir. vsix dosyası oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [VSIX Uzantı Şeması 2.0 başvurusu](../extensibility/vsix-extension-schema-2-0-reference.md)   
+ [VSıX uzantı Şeması 2,0 başvurusu](../extensibility/vsix-extension-schema-2-0-reference.md)   
  [Visual Studio Uzantıları’nı bulma ve kullanma](../ide/finding-and-using-visual-studio-extensions.md)

@@ -1,5 +1,5 @@
 ---
-title: Birden çok işlemciye duyarlı Günlükçüler yazılıyor | Microsoft Docs
+title: Çok Işlemcili oturum defterleri yazma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -14,35 +14,35 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0d2eaf41ac66cd1bdf680145bef43b17cc29a505
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63425877"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64802075"
 ---
 # <a name="writing-multi-processor-aware-loggers"></a>Birden Çok İşlemciye Duyarlı Günlükçüler Yazılıyor
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yeteneğini [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] birden çok işlemci yararlanmak için süre oluşturmanın proje azaltabilir, ancak ayrıca olay günlüğü oluşturmak için karmaşıklık ekler. Bir tek işlemcili ortamda olaylar, iletiler, uyarıları ve hataları sırasında Günlükçü sıralı tahmin edilebilir bir şekilde ulaşır. Ancak, bir çok işlemcili ortamda farklı kaynaklardan gelen olaylar aynı anda veya sıra dışı ulaşır. Bunun için sağlamak [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] birden çok işlemciye duyarlı bir Günlükçü ve yeni bir günlük modeli sağlar ve özel "iletme günlükçüleri." oluşturmanıza olanak sağlar  
+[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]Birden çok işlemciyi kullanmanın yeteneği, proje derleme süresini azaltabilir, ancak olay günlüğü oluşturmak için karmaşıklık de ekler. Tek işlemcili bir ortamda, olaylar, iletiler, uyarılar ve hatalar günlükçü 'e öngörülebilir ve sıralı bir biçimde ulaşır. Ancak, çok işlemcili bir ortamda, farklı kaynaklardan gelen olaylar aynı anda veya sıra dışında gelebilir. Bunu sağlamak için, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] çok işlemcili bir günlükçü ve yeni bir günlük modeli sağlar ve özel "iletme Günlükçüleri" oluşturmanızı sağlar.  
   
-## <a name="multi-processor-logging-challenges"></a>Çok işlemcili günlük kaydetme sorunları  
- Birden çok işlemcili veya çok çekirdekli bir sistemde bir veya daha fazla proje oluşturduğunuzda [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] tüm projeleri aynı anda oluşturulan olaylar derleme. Bir olay iletileri avalanche Günlükçü aynı anda veya sıra dışı gelebilir. Çünkü bir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 2.0 Günlükçü bu durumu yönetmek için tasarlanmamıştır, bu Günlükçü sık zora ve artan derleme zamanlarını, yanlış Günlükçü çıkış veya bozuk bir yapının neden. Bu adres sorunlarını için Günlükçü (başlatmadaki [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] 3.5) sıra dışı olayları işleyebilir ve olaylar ve kaynakları ilişkilendirin.  
+## <a name="multi-processor-logging-challenges"></a>Çok Işlemcili günlüğe kaydetme sorunları  
+ Çok işlemcili veya çok çekirdekli bir sistemde bir veya daha fazla proje oluşturduğunuzda, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] tüm projelere yönelik derleme olayları aynı anda oluşturulur. Olay iletilerinin bir Avalanche, günlükçü üzerinde aynı anda veya sıra dışında gelebilir. [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]2,0 günlükçüsü bu durumu işleyecek şekilde tasarlanmadığından, günlükçü 'yi açabilir ve derleme sürelerinin artmasına, yanlış günlükçü çıktısına veya hatta bozuk bir yapıya neden olabilir. Bu sorunları gidermek için, günlükçü (3,5 ' den başlayarak [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ), dizi dışı olayları işleyebilir ve olayları ve bunların kaynaklarını ilişkilendirebilir.  
   
- Bir özel iletme Günlükçü oluşturarak daha fazla günlük verimliliği artırabilir. Bir özel iletme Günlükçü vererek bir filtre işlevi görür seçin, derlemeden önce izlemek istediğiniz olayları. Bir özel iletme Günlükçü kullandığınızda, istenmeyen olayları, Günlükçü sık zora, günlüklerinizi dağıtmayı veya yavaş kez derleme olamaz.  
+ Özel bir iletme günlükçüsü oluşturarak günlüğe kaydetme verimliliğini daha da artırabilirsiniz. Özel bir iletme günlükçüsü, oluşturmadan önce, yalnızca izlemek istediğiniz olayları seçmenizi sağlayarak bir filtre işlevi görür. Özel bir iletme günlükçüsü kullandığınızda, istenmeyen olaylar günlükçü sayısını düşürebilir, günlüklerinizi kalabalıklığını veya yavaş derleme süreleriyle başa çıkıp.  
   
-## <a name="multi-processor-logging-models"></a>Çok işlemcili günlük kaydetme modelleri  
- Derleme çok-işlemciye ilgili sorunlarda, sağlamak [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] , merkezi ve dağıtılmış iki günlük kaydı modelleri destekler.  
+## <a name="multi-processor-logging-models"></a>Çok Işlemcili günlük modelleri  
+ Multi-Processor ile ilgili oluşturma sorunlarını sağlamak için, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Merkezi ve dağıtılmış iki günlük modelini destekler.  
   
-### <a name="central-logging-model"></a>Merkezi günlük kaydı modeli  
- Merkezi günlük kaydı modelinde, MSBuild.exe tek bir örneğini "merkezi düğümü" olarak görev yapar ve alt örneklerini merkezi düğümü ("ikincil düğüm"), derleme görevleri gerçekleştirmenize yardımcı olmak için merkezi düğümü ekleyin.  
+### <a name="central-logging-model"></a>Merkezi günlük modeli  
+ Merkezi günlük modelinde, tek bir MSBuild.exe örneği "Merkezi düğüm" olarak hareket eder ve merkezi düğümün ("ikincil düğümler") alt örnekleri, derleme görevlerini gerçekleştirmeye yardımcı olmak üzere merkezi düğüme iliştirilemiyor.  
   
- ![Merkezi Günlükçü modeli](../msbuild/media/centralnode.png "CentralNode")  
+ ![Merkezi günlükçü modeli](../msbuild/media/centralnode.png "Merkezileştirme düğümü")  
   
- Günlükçüleri merkezi düğümüne ekleme çeşitli türlerde "merkezi günlükçüler." denir. Her bir Günlükçü türü yalnızca bir örneği aynı anda merkezi düğüme eklenebilir.  
+ Merkezi düğüme eklenen çeşitli türlerin Günlükçüleri "Merkezi Günlükçüler" olarak bilinir. Her Günlükçü türünün yalnızca bir örneği merkezi düğüme aynı anda iliştirilebilir.  
   
- Bir derleme gerçekleştiğinde, ikincil bir düğümü merkezi düğüme kendi derleme olaylarını yönlendirme. Merkezi düğümü, bir veya daha fazla ekli merkezi günlükçüler için tüm olayları ve ayrıca bu ikincil bir düğümü yönlendirir. Günlükçüler ardından gelen verileri temel alan bir günlük dosyalarını oluşturun.  
+ Bir derleme gerçekleştiğinde, ikincil düğümler derleme olaylarını merkezi düğüme yönlendirir. Merkezi düğüm tüm olaylarını ve ayrıca ikincil düğümleri bir veya daha fazla bağlı merkezi Günlükçüler için yönlendirir. Günlükçüler daha sonra gelen verileri temel alan günlük dosyaları oluşturur.  
   
- Yalnızca <xref:Microsoft.Build.Framework.ILogger> olduğu merkezi Günlükçü tarafından uygulanması gereken, ayrıca uygulama öneririz <xref:Microsoft.Build.Framework.INodeLogger> böylece yapı katılan düğüm sayısı ile merkezi Günlükçü başlatır. Aşağıdaki aşırı yükleme <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> Günlükçü altyapısı başlattığında yöntemini çağırır.  
+ Yalnızca <xref:Microsoft.Build.Framework.ILogger> merkezi günlükçü tarafından uygulanması gerekse de, <xref:Microsoft.Build.Framework.INodeLogger> merkezi günlükçü 'nin yapıya katılan düğüm sayısıyla başlatılması için de uygulamanızı öneririz. Aşağıdaki yöntem aşırı yüklemesi, <xref:Microsoft.Build.Framework.ILogger.Initialize%2A> motor günlükçü başlattığında çağırır.  
   
 ```  
 public interface INodeLogger: ILogger  
@@ -51,68 +51,68 @@ public interface INodeLogger: ILogger
 }  
 ```  
   
- Tüm önceden varolan <xref:Microsoft.Build.Framework.ILogger>-tabanlı günlükçüleri merkezi günlükçüleri görev yapabilir ve yapıya ekleyebilirsiniz. Ancak birden çok işlemcili günlük kaydı senaryoları ve sıra dışı olayları açık desteği olmadan yazılan merkezi günlükçüleri bir yapı sonu veya anlamsız çıktı üretir.  
+ Önceden var olan tüm <xref:Microsoft.Build.Framework.ILogger> oturum defterleri, merkezi Günlükçüler olarak davranabilir ve yapıya eklenebilir. Ancak, çok işlemcili günlük senaryolar ve sıra dışı olaylar için açık destek olmadan yazılan merkezi Günlükçüler bir derlemeyi bozabilir veya anlamsız bir çıkış üretebilir.  
   
-### <a name="distributed-logging-model"></a>Dağıtılmış model günlük  
- Aynı anda çok sayıda proje oluşturma sırasında Merkezi günlük kaydı modelinde çok fazla gelen ileti trafiği merkezi düğümü, örneğin, sık zora sokar. Bu, sistem kaynakları stres ve derleme performansı düşürür. Bu sorunu kolaylaştırmak için [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] dağıtılmış günlük modelini destekler.  
+### <a name="distributed-logging-model"></a>Dağıtılmış günlük modeli  
+ Merkezi günlük modelinde, çok fazla gelen ileti trafiği merkezi düğümü, örneğin birçok projenin aynı anda ne zaman derlenebileceğini de açabilir. Bu, sistem kaynaklarını stres ve derleme performansını düşürebilir. Bu sorunu kolaylaştırmak için [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Dağıtılmış bir günlük modelini destekler.  
   
- ![Dağıtılmış günlüğü modeli](../msbuild/media/distnode.png "DistNode")  
+ ![Dağıtılmış günlük modeli](../msbuild/media/distnode.png "DistNode")  
   
- Dağıtılmış günlüğü modeli, bir iletme Günlükçü oluşturmanıza izin vererek Merkezi günlük kaydı modelini genişletir.  
+ Dağıtılmış günlük kaydı modeli, bir iletme günlükçüsü oluşturmanıza izin vererek Merkezi günlük modelini genişletir.  
   
-#### <a name="forwarding-loggers"></a>İletme Günlükçüleri  
- Bir iletme Günlükçü ikincil düğüme ekler ve bu düğümden gelen derleme olayları alan bir olay filtresi olan ikincil ve basit bir Günlükçü ' dir. Bu, gelen olayları filtreler ve merkezi düğümü için belirttiğiniz ayarlara iletir. Bu merkezi düğüme gönderilir ve genel derleme performansı artıran ileti trafiğini azaltır.  
+#### <a name="forwarding-loggers"></a>Günlükçüleri iletme  
+ Bir iletme günlükçüsü, ikincil bir düğüme bağlanan ve gelen derleme olaylarını bu düğümden alan bir olay filtresi olan ikincil, hafif bir günlükçüdür. Gelen olayları filtreler ve yalnızca belirttiğiniz olanları merkezi düğüme iletir. Bu, merkezi düğüme gönderilen ileti trafiğini azaltır ve genel derleme performansını geliştirir.  
   
- Dağıtılmış, aşağıdaki gibi oturum kullanmanın iki yolu vardır:  
+ Dağıtılmış günlük kullanmanın iki yolu şunlardır:  
   
-- Adlı önceden oluşturulmuş iletme Günlükçü özelleştirme <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger>.  
+- Adlı önceden fabriciletme günlükçüsü ' ni özelleştirin <xref:Microsoft.Build.BuildEngine.ConfigurableForwardingLogger> .  
   
-- Kendi özel iletme Günlükçü yazın.  
+- Kendi özel iletme günlüklerinizi yazın.  
   
-  ConfigurableForwardingLogger gereksinimlerinize uyacak şekilde değiştirebilirsiniz. Bunu yapmak için Günlükçü komut satırında MSBuild.exe kullanarak çağırın ve Günlükçü merkezi düğüme iletmek istediğiniz derleme olayları listeler.  
+  Configurableforwardinggünlükçü ' i gereksinimlerinize uyacak şekilde değiştirebilirsiniz. Bunu yapmak için, komut satırında MSBuild.exe kullanarak günlükçü çağırın ve günlükçü 'nin merkezi düğüme iletilmesini istediğiniz derleme olaylarını listeleyin.  
   
-  Alternatif olarak, bir özel iletme Günlükçü oluşturabilirsiniz. Bir özel iletme Günlükçü oluşturarak Günlükçü davranışını hassas ayarlamalar yapabilirsiniz. Ancak, bir özel iletme Günlükçü oluşturuluyor yalnızca ConfigurableForwardingLogger özelleştirme daha çok daha karmaşıktır. Daha fazla bilgi için [iletme Günlükçüleri oluşturma](../msbuild/creating-forwarding-loggers.md).  
+  Alternatif olarak, özel bir iletme günlükçüsü oluşturabilirsiniz. Özel bir iletme günlükçüsü oluşturarak, günlükçü davranışını hassas şekilde ayarlayabilirsiniz. Ancak, özel bir iletme günlükçü oluşturmak yalnızca Configurableforwardinggünlükçü özelleştirilerek daha karmaşıktır. Daha fazla bilgi için bkz. [Iletme Günlükçüleri oluşturma](../msbuild/creating-forwarding-loggers.md).  
   
-## <a name="using-the-configurableforwardinglogger-for-simple-distributed-logging"></a>Günlüğe kaydetme için basit ConfigurableForwardingLogger kullanarak dağıtılmış  
- Bir ConfigurableForwardingLogger ya da bir özel iletme Günlükçü eklemek için kullanın `/distributedlogger` geçiş (`/dl` kısaca) MSBuild.exe komut satırı derleme. Günlükçü türlerin ve sınıfların adlarını belirtmek için aynı biçimdir `/logger` geçiş dışında dağıtılmış bir Günlükçü her zaman bir, iletme Günlükçü ve merkezi Günlükçü yerine iki günlük kaydı sınıfları içerir. XMLForwardingLogger adlı bir özel iletme Günlükçü ekleme konusunda bir örnek verilmiştir.  
+## <a name="using-the-configurableforwardinglogger-for-simple-distributed-logging"></a>Basit Dağıtılmış günlük için Configurableforwardinggünlükçü kullanma  
+ Bir Configurableforwardinggünlükçü veya özel bir iletme günlükçüsü eklemek için `/distributedlogger` `/dl` MSBuild.exe komut satırı derlemesinde anahtarı (Short için) kullanın. Bir `/logger` Dağıtılmış günlükçü her zaman bir yerine iki günlük sınıfı, iletme günlükçüsü ve merkezi günlükçüsü olmak üzere, günlükçü türleri ve sınıflarının adlarını belirtme biçimi, anahtar ile aynıdır. Aşağıda, Xmlforwardinggünlükçü adlı özel bir iletme günlükçüsü eklemenin bir örneği verilmiştir.  
   
 ```  
 msbuild.exe myproj.proj/distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,Culture=neutral*XMLForwardingLogger,MyLogger,Version=1.0.2,Culture=neutral  
 ```  
   
 > [!NOTE]
-> Bir yıldız işareti (*) iki Günlükçü adlarında ayırmalısınız `/dl` geçin.  
+> Bir yıldız işareti (*), anahtardaki iki günlükçü adını ayırmalıdır `/dl` .  
   
- ConfigurableForwardingLogger kullanmaktır başka bir Günlükçü kullanma gibi (açıklandığı şekilde [derleme günlükleri alma](../msbuild/obtaining-build-logs-with-msbuild.md)) tipik yerine ConfigurableForwardingLogger Günlükçü ekleme dışında [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Günlükçü ve Merkezi düğüme geçmesine ConfigurableForwardingLogger istediğiniz olayları parametre olarak belirtin.  
+ Configurableforwardinggünlükçü kullanılması, tipik günlükçü yerine Configurableforwardinggünlükçü günlükçüsü 'yi iliştirmeniz ve bir parametre olarak, Configurableforwardinggünlükçü 'nin merkezi düğüme geçmesini istediğiniz olayları belirtmeniz dışında, başka bir günlükçü ( [derleme günlükleri alma](../msbuild/obtaining-build-logs-with-msbuild.md)bölümünde açıklandığı gibi) kullanma gibidir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
- Örneğin, bir derleme başladığında ve sona erer ve bir hata oluştuğunda size bildirilmesini istiyorsanız, geçip geçmeyeceğini `BUILDSTARTEDEVENT`, `BUILDFINISHEDEVENT`, ve `ERROREVENT` parametre olarak. Noktalı virgülle ayrılarak birden çok parametre geçirilebilir. Yalnızca iletmek için ConfigurableForwardingLogger kullanmaya ilişkin bir örnek verilmiştir `BUILDSTARTEDEVENT`, `BUILDFINISHEDEVENT`, ve `ERROREVENT` olayları.  
+ Örneğin, yalnızca bir derleme başladığında ve sona erdiğinde bildirim almak istiyorsanız ve bir hata oluştuğunda,, `BUILDSTARTEDEVENT` `BUILDFINISHEDEVENT` ve parametreleri olarak ' i geçitirsiniz `ERROREVENT` . Çoklu parametreler, noktalı virgülle ayırarak geçirilebilir. Aşağıda `BUILDSTARTEDEVENT` ,, `BUILDFINISHEDEVENT` , ve olaylarını Iletmek Için Configurableforwardinggünlükçü kullanmanın bir örneği verilmiştir `ERROREVENT` .  
   
 ```  
 msbuild.exe myproj.proj /distributedlogger:XMLCentralLogger,MyLogger,Version=1.0.2,Culture=neutral*ConfigureableForwardingLogger,C:\My.dll;BUILDSTARTEDEVENT; BUILDFINISHEDEVENT;ERROREVENT  
 ```  
   
- Kullanılabilir ConfigurableForwardingLogger parametrelerin bir listesi verilmiştir.  
+ Aşağıda, kullanılabilir Configurableforwardinggünlükçü parametrelerinin bir listesi verilmiştir.  
   
-|ConfigurableForwardingLogger parametreleri|  
+|Configurableforwardinggünlükçü parametreleri|  
 |---------------------------------------------|  
 |BUILDSTARTEDEVENT|  
-|BUILDFINISHEDEVENT|  
+|BUILDSONLANDıRHEDEVENT|  
 |PROJECTSTARTEDEVENT|  
-|PROJECTFINISHEDEVENT|  
+|PROJECTSONLANDıRHEDEVENT|  
 |TARGETSTARTEDEVENT|  
-|TARGETFINISHEDEVENT|  
+|TARGETSONLANDıRHEDEVENT|  
 |TASKSTARTEDEVENT|  
-|TASKFINISHEDEVENT|  
+|TASKSONLANDıRHEDEVENT|  
 |ERROREVENT|  
 |WARNINGEVENT|  
 |HIGHMESSAGEEVENT|  
 |NORMALMESSAGEEVENT|  
 |LOWMESSAGEEVENT|  
 |CUSTOMEVENT|  
-|KOMUT SATIRI|  
-|PERFORMANCESUMMARY|  
+|KOMUT SATıRı|  
+|PERFORMANSLı gün|  
 |NOSUMMARY|  
 |SHOWCOMMANDLINE|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İletme Günlükçüleri Oluşturma](../msbuild/creating-forwarding-loggers.md)
+ [Iletme Günlükçüleri oluşturma](../msbuild/creating-forwarding-loggers.md)

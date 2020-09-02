@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8264aebcbced16f95c177d255e226cfffdbee0ce
-ms.sourcegitcommit: 363f3e6e30dd54366ade0d08920755da5951535c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86869600"
 ---
 # <a name="vstestconsoleexe-command-line-options"></a>VSTest.Console.exe komut satırı seçenekleri
@@ -34,7 +34,7 @@ Aşağıdaki tabloda *VSTest.Console.exe* ve bunların kısa açıklamaları iç
 
 | Seçenek | Açıklama |
 |---|---|
-|**[*test dosyası adları*]**|Belirtilen dosyalardan testleri çalıştırın. Birden çok test dosyası adını boşluklarla ayırın.<br />Örnekler: `mytestproject.dll` ,`mytestproject.dll myothertestproject.exe`|
+|**[*test dosyası adları*]**|Belirtilen dosyalardan testleri çalıştırın. Birden çok test dosyası adını boşluklarla ayırın.<br />Örnekler: `mytestproject.dll` , `mytestproject.dll myothertestproject.exe`|
 |**/Settings: [*dosya adı*]**|Testleri veri toplayıcılar gibi ek ayarlarla çalıştırın. Daha fazla bilgi için bkz [.. runsettings dosyasını kullanarak birim testlerini yapılandırma](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)<br />Örnek: `/Settings:local.runsettings`|
 |**/TESTS: [*Test adı*]**|Testleri, belirtilen değerleri içeren adlarla çalıştırın. Birden çok değer sağlamak için bunları virgülle ayırın.<br />Örnek: `/Tests:TestMethod1,testMethod2`<br />**/Tests** komut satırı seçeneği, **/TestCaseFilter** komut satırı seçeneğiyle birlikte kullanılamaz.|
 |**/Parallel**|Testlerin paralel olarak yürütüleceğini belirtir. Varsayılan olarak, makinedeki tüm kullanılabilir çekirdekler kullanılabilir. Bir ayar dosyasında kullanılacak çekirdek sayısını yapılandırabilirsiniz.|

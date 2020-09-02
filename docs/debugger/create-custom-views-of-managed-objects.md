@@ -24,18 +24,18 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: f5247a56667f5715d9f155c662eb333967878d71
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188640"
 ---
-# <a name="create-custom-views-of-managed-objects-c-visual-basic-f-ccli"></a>Yönetilen nesnelerin özel görünümlerini oluşturma (C#, Visual Basic, F#, C++/CLI)
+# <a name="create-custom-views-of-managed-objects-c-visual-basic-f-ccli"></a>Yönetilen nesnelerin özel görünümlerini oluşturma (C#, Visual Basic, F #, C++/CLı)
 Visual Studio 'Nun veri türlerini hata ayıklayıcı değişken pencerelerinin gösterdiği şekilde özelleştirebilirsiniz.
 
 ## <a name="attributes"></a>Öznitelikler
 
-İçinde C#, Visual Basic, F#ve C++ (C++yalnızca/CLI kodu), <xref:System.Diagnostics.DebuggerTypeProxyAttribute>, <xref:System.Diagnostics.DebuggerDisplayAttribute> ve <xref:System.Diagnostics.DebuggerBrowsableAttribute> kullanarak özel verilere yönelik genişletmeleri ekleyebilirsiniz.
+C#, Visual Basic, F # ve c++ (yalnızca c++/CLI) içinde,, ve kullanarak özel verilere yönelik genişletmeleri ekleyebilirsiniz <xref:System.Diagnostics.DebuggerTypeProxyAttribute> <xref:System.Diagnostics.DebuggerDisplayAttribute> <xref:System.Diagnostics.DebuggerBrowsableAttribute> .
 
 .NET Framework 2,0 kodunda, Visual Basic Debuggergözatılabilir özniteliğini desteklemez. Bu sınırlama, .NET 'in daha yeni sürümlerinde kaldırılmıştır.
 
@@ -44,7 +44,7 @@ Visual Studio 'Nun veri türlerini hata ayıklayıcı değişken pencerelerinin 
 Yönetilen herhangi bir veri türünü göstermek için bir Görselleştirici yazabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Görselleştirici Yazma](create-custom-visualizers-of-data.md).
 
 > [!NOTE]
-> Kod C++ için, [hata ayıklayıcıdaki C++ nesnelerin özel görünümlerini oluşturma](create-custom-views-of-native-objects.md)bölümünde açıklandığı gibi Natvis çerçevesini kullanarak özel veri türü genişletmeleri ekleyebilirsiniz.
+> C++ kodu için, [hata ayıklayıcıda c++ nesnelerinin özel görünümlerini oluşturma](create-custom-views-of-native-objects.md)bölümünde açıklandığı gibi Natvis çerçevesini kullanarak özel veri türü genişletmeleri ekleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

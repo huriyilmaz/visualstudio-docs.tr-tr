@@ -14,22 +14,22 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d722aebef0cbcf589185c36cb481a676280d59ff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184245"
 ---
 # <a name="createinplace-visual-studio-templates"></a>CreateInPlace (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Projeyi oluşturmak ve belirtilen konumda parametre değiştirme işlemini gerçekleştirmek veya parametre değiştirme geçici bir konumda gerçekleştirin ve sonra belirtilen konuma kaydedin belirtir.  
+Projenin oluşturulup oluşturulmayacağını ve belirtilen konumda parametre değişimini gerçekleştirip gerçekleştirmeyeceğinizi belirtir ya da geçici bir konumda parametre değişimini gerçekleştirin ve ardından projeyi belirtilen konuma kaydedin.  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<Createınplace >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<CreateInPlace>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <CreateInPlace> true/false </CreateInPlace>  
@@ -48,18 +48,18 @@ Projeyi oluşturmak ve belirtilen konumda parametre değiştirme işlemini gerç
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Metin olmalıdır `true` veya `false`. Varsa `true`projesi oluşturulur ve parametre değiştirme, belirtilen konumda gerçekleştirilir **yeni proje** iletişim kutusu. Varsa `false`, parametre değiştirme geçici bir konumda gerçekleştirilen ve projeyi daha sonra belirtilen konuma kopyalanır.  
+ Metin ya da olmalıdır `true` `false` . Eğer `true` , proje oluşturulur ve **Yeni proje** iletişim kutusunda belirtilen konumda parametre değişimi gerçekleştirilir. `false`Parametre değiştirme geçici bir konumda gerçekleştirilir ve proje belirtilen konuma kopyalanır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CreateInPlace` İsteğe bağlı bir öğedir. Varsayılan değer `true` şeklindedir.  
+ `CreateInPlace` isteğe bağlı bir öğedir. Varsayılan değer: `true`.  
   
 ## <a name="example"></a>Örnek  
- Meta veriler için aşağıdaki örnekte bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] şablonu.  
+ Aşağıdaki örnek, bir şablon için meta verileri gösterir [!INCLUDE[csprcs](../includes/csprcs-md.md)] .  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

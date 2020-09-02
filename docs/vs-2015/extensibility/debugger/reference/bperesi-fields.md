@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b1b5cba13e439c69b3502b00c6ae159b6af28178
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153243"
 ---
-# <a name="bperesifields"></a>BPERESI_FIELDS
+# <a name="bperesi_fields"></a>BPERESI_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Başarısız bir kesme noktası çözünürlüğü hakkında alınacak bilgileri belirtir.  
+Bir kesme noktasının hatalı çözümlenmesi hakkında alınacak bilgileri belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BPERESI_FIELDS {   
@@ -51,38 +51,38 @@ public enum enum_BPERESI_FIELDS { 
   
 ## <a name="members"></a>Üyeler  
  PERESI_BPRESLOCATION  
- Başlat/kullanım `bpResLocation` (kesme noktası çözünürlüğü konumu) alanının [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) yapısı.  
+ `bpResLocation` [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) yapısının (kesme noktası çözümleme konumu) alanını başlatın/kullanın.  
   
  BPERESI_PROGRAM  
- Başlat/kullanım `pProgram` alanını `BP_ERROR_RESOLUTION_INFO` yapısı.  
+ Yapının alanını başlatın/kullanın `pProgram` `BP_ERROR_RESOLUTION_INFO` .  
   
  BPERESI_THREAD  
- Başlat/kullanım `pThread` alanını `BP_ERROR_RESOLUTION_INFO` yapısı.  
+ Yapının alanını başlatın/kullanın `pThread` `BP_ERROR_RESOLUTION_INFO` .  
   
  BPERESI_MESSAGE  
- Başlat/kullanım `bstrMessage` alanını `BP_ERROR_RESOLUTION_INFO` yapısı.  
+ Yapının alanını başlatın/kullanın `bstrMessage` `BP_ERROR_RESOLUTION_INFO` .  
   
  BPERESI_TYPE  
- Başlat/kullanım `dwType` (kesme noktası türü) alanına `BP_ERROR_RESOLUTION_INFO` yapısı.  
+ `dwType`Yapının (kesme noktası türü) alanını başlatın/kullanın `BP_ERROR_RESOLUTION_INFO` .  
   
  BPERESI_ALLFIELDS  
- Başlat/tüm alanları kullanmak `BP_ERROR_RESOLUTION_INFO` yapısı.  
+ Yapının tüm alanlarını başlatın/kullanın `BP_ERROR_RESOLUTION_INFO` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir parametre olarak geçirilen [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) hangi alanları göstermek için yöntemi [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) yapısı olan başlatılacak.  
+ [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) yapısının hangi alanlarının başlatıldığını göstermek Için [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) yöntemine bir parametre olarak geçirilir.  
   
- Bu değerler, alanlarını belirtmek için de kullanılır `BP_ERROR_RESOLUTION_INFO` yapısı, kullanılan ve geçerli, yapı döndürülür.  
+ Bu değerler aynı zamanda yapıdaki hangi alanların `BP_ERROR_RESOLUTION_INFO` kullanıldığını ve bu yapı döndürüldüğünde geçerli olduğunu göstermek için kullanılır.  
   
- Bu değerler, bit düzeyinde ile birleştirilebilir `OR`.  
+ Bu değerler, bit düzeyinde birleştirilebilir `OR` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md)   
  [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md)

@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6907ba5f0b48721646c57964012bf0aaa0838b60
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188320"
 ---
 # <a name="debugging-web-applications-troubleshooting"></a>Web Uygulamalarında Hata Ayıklama: Sorun Giderme
@@ -34,4 +34,4 @@ Bu bölüm, hataları çözmek için kullanılabilen yaygın yordamları içerir
 ## <a name="related-sections"></a>İlgili Bölümler
  [Web uygulamalarında hata ayıklama: hatalar ve sorun giderme](../debugger/debugging-web-applications-errors-and-troubleshooting.md) Sorun giderme ve hata çözümleme açıklanmaktadır.
 
- [Web uygulamalarında ve betikte hata ayıklama](how-to-enable-debugging-for-aspnet-applications.md) [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], XML Web Hizmetleri ve ATL sunucu projeleri gibi Web uygulamalarında hata ayıklama konusuna genel bakış.
+ [Web uygulamalarında ve betikte hata ayıklama](how-to-enable-debugging-for-aspnet-applications.md) [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]XML Web Hizmetleri ve ATL sunucu projeleri gibi Web uygulamalarında hata ayıklama konusuna genel bakış.

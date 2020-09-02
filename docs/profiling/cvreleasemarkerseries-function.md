@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 84db5dac77fbbc51c9f1c0e24173dcc8ca1d68c1
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85332199"
 ---
 # <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries işlevi
@@ -31,7 +31,7 @@ HRESULT CvReleaseMarkerSeries(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pMarkerSeries`Sağlayıcı nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
+ `pMarkerSeries` Sağlayıcı nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.
 
 ## <a name="return-value"></a>Dönüş Değeri
  İşaretleyici serisi ne zaman yayınlanmışsa S_OK veya herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.

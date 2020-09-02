@@ -13,22 +13,22 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7401ed7ed097c6e20bf4cd0bbf30820bcb33b514
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184251"
 ---
 # <a name="createnewfolder-element-visual-studio-templates"></a>CreateNewFolder Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Projenin oluşturulacak olduğu hedef dizini yok denetlenip denetlenmeyeceğini belirler. Dizini mevcut değilse, proje için yeni bir dizin oluşturulabilir. Bu ayar genellikle tarafından geçersiz kılınır `NewProjectRequiresNewFolder(VsTemplate)` kayıt bayrağı (`HKEY_LOCAL_MACHINE/SOFTWARE(/Wow6432Node)/Microsoft/VisualStudio/<version number>/Projects/<project GUID>`) tüm ortak proje türleri, yeni bir dizinde yeni bir proje oluşturmak karar vermek için kullanın.  
+Projenin oluşturulacağı hedef dizinin mevcut olmadığını denetleyip denetmeyeceğini belirler. Dizin varsa, proje için yeni bir dizin oluşturulabilir. Bu ayar genellikle, `NewProjectRequiresNewFolder(VsTemplate)` `HKEY_LOCAL_MACHINE/SOFTWARE(/Wow6432Node)/Microsoft/VisualStudio/<version number>/Projects/<project GUID>` tüm ortak proje türlerinin yeni bir dizinde yeni bir proje oluşturulup oluşturulmayacağını belirlemede kullanılan kayıt defteri bayrağı () tarafından geçersiz kılınır.  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<CreateNewFolder >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<CreateNewFolder>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <CreateNewFolder>  
@@ -52,20 +52,20 @@ Projenin oluşturulacak olduğu hedef dizini yok denetlenip denetlenmeyeceğini 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Metin olmalıdır `true` veya `false`gösteren bir proje şablondan oluşturulduğunda yeni bir kapsayıcı klasör olup olmadığını oluşturulmalıdır.  
+ Metin `true` veya `false` şablondan bir proje oluşturulduğunda yeni bir kapsayıcı klasörünün oluşturulup oluşturulmayacağını belirten bir değer olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CreateNewFolder` İsteğe bağlı bir öğedir. Varsayılan değer `true` şeklindedir.  
+ `CreateNewFolder` isteğe bağlı bir öğedir. Varsayılan değer: `true`.  
   
- İçinde belirtilen değerle `CreateNewFolder` öğesi tarafından kabul yalnızca [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] temel proje sistemi destekliyorsa.  
+ Öğesinde belirtilen değer `CreateNewFolder` yalnızca [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] temel alınan proje sistemi tarafından destekliyorsa kabul edilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir proje şablondan oluşturulduğunda yeni bir klasör oluşturmasını belirtir.  
+ Aşağıdaki kod örneği, şablondan bir proje oluşturulduğunda yeni bir klasör oluşturmamalıdır.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

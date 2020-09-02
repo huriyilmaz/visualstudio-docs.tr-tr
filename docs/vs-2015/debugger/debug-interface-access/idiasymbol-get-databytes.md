@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_databytes | Microsoft Docs
+title: 'IDiaSymbol:: get_dataBytes | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bb0946c586c7b9ac3bb8907a9b5eb907d8f3ae70
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64858503"
 ---
-# <a name="idiasymbolgetdatabytes"></a>IDiaSymbol::get_dataBytes
+# <a name="idiasymbolget_databytes"></a>IDiaSymbol::get_dataBytes
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-OEM sembol verileri baytını alır.  
+Bir OEM sembolünün veri baytlarını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_dataBytes (   
@@ -37,26 +37,26 @@ HRESULT get_dataBytes ( 
   
 #### <a name="parameters"></a>Parametreler  
  `cbData`  
- [in] Verileri tutmak için arabellek boyutu.  
+ 'ndaki Verilerin tutulacağı arabelleğin boyutu.  
   
  `pcbData`  
- [out] Yazılan bayt sayısını döndürür veya `data` parametresi `NULL`, kullanılabilir bayt sayısını döndürür.  
+ dışı Yazılan bayt sayısını döndürür veya `data` parametresi ise, `NULL` kullanılabilir bayt sayısını döndürür.  
   
  `data[]`  
- [out] Oturum veri baytı doldurulmuş bir arabellek.  
+ [Out,] Veri baytları ile doldurulmuş bir arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|Gereksinim|Açıklama|  
+|Gereksinim|Description|  
 |-----------------|-----------------|  
-|Üst bilgi:|dia2.h|  
-|Sürüm:|DIA SDK v7.0|  
+|Üst bilgi|dia2. h|  
+|Sürüm:|DIA SDK v 7.0|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

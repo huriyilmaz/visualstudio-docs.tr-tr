@@ -11,40 +11,40 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fb3bb85ab172404262c147cce285cebaf756afc9
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432077"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64831847"
 ---
 # <a name="solutions-overview"></a>Çözümlere Genel Bakış
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir çözümü, bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla proje gruplandırmasıdır. Çözüme ilişkin proje ve durum bilgilerini iki farklı çözümü dosyalarında depolanır. Çözüm (.sln) dosyasını metin tabanlı kaynak kodu denetimi altında yerleştirilmiş ve kullanıcılar arasında paylaşılan. Çözüm kullanıcı seçeneği (.suo) ikili dosyadır. Sonuç olarak, .suo dosya kaynak kodu denetimi altında yerleştirilmiş ve kullanıcıya özgü bilgileri içerir.  
+Bir çözüm, bir uygulama oluşturmak için birlikte çalışan bir veya daha fazla projenin gruplandırmasıdır. Çözümle ilgili proje ve durum bilgileri iki farklı çözüm dosyasında depolanır. Çözüm (. sln) dosyası metin tabanlıdır ve kaynak kodu denetimi altına yerleştirilebilecek ve kullanıcılar arasında paylaşılabilir. Çözüm Kullanıcı seçeneği (. suo) dosyası ikili. Sonuç olarak,. suo dosyası kaynak kodu denetimi altına yerleştirilemez ve kullanıcıya özgü bilgiler içerir.  
   
- Her iki çözüm dosya türünün herhangi bir VSPackage yazabilirsiniz. Dosya yapısı nedeniyle, kendisine yazmak için uygulanan iki farklı arabirimi vardır. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps> Arabirimi .sln dosyasına metin bilgi yazar ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> arabirimi ikili akışlar .suo dosyasına yazar.  
+ Herhangi bir VSPackage, her iki çözüm dosyası türüne yazabilir. Dosyaların doğası nedeniyle, bunlara yazmak için uygulanan iki farklı arabirim vardır. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps>Arabirim, metin bilgilerini. sln dosyasına yazar ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionOpts> arabirim ikili akışları. suo dosyasına yazar.  
   
 > [!NOTE]
-> Bir proje açıkça bir giriş kendisi için çözüm dosyasına yazmak zorunda değildir; ortam, proje için işler. Bu nedenle, ek içeriği özellikle çözüm dosyasına eklemek istediğiniz sürece, bu şekilde, VSPackage kaydetme gerekmez.  
+> Projenin kendi kendine bir girdiyi çözüm dosyasına açıkça yazması gerekmez; ortam, proje için bunu işler. Bu nedenle, özellikle çözüm dosyasına ek içerik eklemek istemediğiniz müddetçe, VSPackage 'nizi bu şekilde kaydetmeniz gerekmez.  
   
- Çözüm Kalıcılık destekleyen her bir VSPackage üç arabirimi kullanan <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> ortamı tarafından uygulanan ve VSPackage'ı tarafından çağrılır, arabirimi ve `IVsPersistSolutionProps` ve `IVsPersistSolutionOpts`, uygulanan hem de bir işlem olan VSPackage'ı. `IVsPersistSolutionOpts` Arabirimi yalnızca gereken gizli bilgileri tarafından VSPackage .suo dosyasına yazılması ise uygulanacak.  
+ Çözüm kalıcılığını destekleyen her VSPackage, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> ortam tarafından uygulanan ve VSPackage ve ile çağrılan ve `IVsPersistSolutionProps` `IVsPersistSolutionOpts` her Ikisi de VSPackage tarafından uygulanan üç arabirim kullanır. `IVsPersistSolutionOpts`Arabirimin yalnızca özel bilgilerin, VSPackage tarafından. suo dosyasına yazılması durumunda uygulanması gerekir.  
   
- Bir çözümü açtığınızda, aşağıdaki süreç gerçekleşir.  
+ Bir çözüm açıldığında aşağıdaki işlem gerçekleşir.  
   
 1. Ortam çözümü okur.  
   
-2. Ortam bulursa bir `CLSID`, karşılık gelen VSPackage'ı yükler.  
+2. Ortam bir bulursa `CLSID` , karşılık gelen VSPackage 'ı yükler.  
   
-3. VSPackage yüklendiği varsa, ortam çağrıları `QueryInterface` için <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> VSPackage gerektiren arabirimi için bir arabirim.  
+3. VSPackage yüklüyse, `QueryInterface` <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> VSPackage için gereken arabirim için ortam, arabirimini çağırır.  
   
-   1. Bir .sln dosyasından okurken, ortam çağırır `QueryInterface` için `IVsPersistSolutionProps`.  
+   1. Bir. sln dosyasından okurken, ortam `QueryInterface` için çağırır `IVsPersistSolutionProps` .  
   
-   2. Bir .suo dosyasından okurken, ortam çağırır `QueryInterface` için `IVsPersistSolutionOpts`.  
+   2. Bir. suo dosyasından okurken, ortam `QueryInterface` için çağırır `IVsPersistSolutionOpts` .  
   
-   Bu dosyaların kullanımıyla ilgili belirli bilgileri bulunabilir [çözüm (. Sln) dosya](../../extensibility/internals/solution-dot-sln-file.md) ve [çözüm kullanıcı seçenekleri (. Suo) dosyası](../../extensibility/internals/solution-user-options-dot-suo-file.md).  
+   Bu dosyaların kullanımıyla ilgili belirli bilgiler [çözümde bulunabilir (. Sln) dosya](../../extensibility/internals/solution-dot-sln-file.md) ve [çözüm Kullanıcı seçenekleri (. Suo) dosyası](../../extensibility/internals/solution-user-options-dot-suo-file.md).  
   
 > [!NOTE]
-> İki proje yapılandırmalarını oluşan ve üçüncü bir derlemeden hariç olmak üzere yeni bir çözüm yapılandırması oluşturmak istiyorsanız, otomasyon ve özellik sayfaları kullanıcı arabirimini kullanmanız gerekir. Çözüm yapı yöneticisi yapılandırmaları ve özellikleri doğrudan değiştiremezsiniz, ancak çözüm derleme Yöneticisi kullanarak işleyebileceğiniz `SolutionBuild` DTE sınıfında otomasyon modeli. Çözümleri yapılandırma hakkında daha fazla bilgi için bkz. [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md).  
+> İki proje yapılandırmasından oluşan ve derlemeden üçüncü birini hariç tutarak yeni bir çözüm yapılandırması oluşturmak isterseniz, Kullanıcı arabirimi veya Otomasyonu özellik sayfaları ' nı kullanmanız gerekir. Çözüm yapı Yöneticisi yapılandırmalarının ve bunların özelliklerini doğrudan değiştiremezsiniz, ancak `SolutionBuild` Otomasyon MODELINDEKI DTE 'den sınıfını kullanarak çözüm yapı yöneticisini değiştirebilirsiniz. Çözümleri yapılandırma hakkında daha fazla bilgi için bkz. [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>   

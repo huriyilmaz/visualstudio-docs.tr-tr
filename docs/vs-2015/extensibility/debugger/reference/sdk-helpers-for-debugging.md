@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama için SDK Yardımcıları | Microsoft Docs
+title: Hata ayıklama için SDK yardımcıları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -15,28 +15,28 @@ caps.latest.revision: 29
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3296613ffbe3148caa04989dfc9d609334b4c200
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435988"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64838111"
 ---
 # <a name="sdk-helpers-for-debugging"></a>Hata Ayıklama için SDK Yardımcıları
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu işlevler ve bildirimleri C++'da uygulama, hata ayıklama altyapısı, ifade değerlendiricilerini ve sembol sağlayıcıları için genel yardımcı işlevlerdir.  
+Bu işlevler ve bildirimler, C++ ' da hata ayıklama altyapılarını, Expression değerlendiricileri ve sembol sağlayıcılarını uygulamak için genel yardımcı işlevlerdir.  
   
 > [!NOTE]
-> Şu anda bu işlevler ve bildirimleri'hiçbir yönetilen sürümü vardır.  
+> Bu işlevlerin ve bildirimlerin yönetilen bir sürümü şu anda yok.  
   
 ## <a name="overview"></a>Genel Bakış  
- Visual Studio tarafından kullanılacak sırayla hata ayıklama altyapısı, ifade değerlendiricilerini ve sembol sağlayıcıları için kayıtlı olmaları gerekir. Bu kayıt defteri alt anahtarları ve girişleri, aksi takdirde "ölçümleri ayarlama". bilinen ayarlayarak yapılır Aşağıdaki genel işlevleri, bu ölçümleri güncelleştirme işlemini kolaylaştırmak için tasarlanmıştır. Bu işlevler tarafından güncelleştirilir her bir kayıt defteri alt anahtarı düzenini öğrenmek için kayıt defteri konumlarının bölümüne bakın.  
+ Hata ayıklama motorları, ifade değerlendiricileri ve sembol sağlayıcılarının Visual Studio tarafından kullanılabilmesi için, bunların kayıtlı olmaları gerekir. Bu, kayıt defteri alt anahtarları ve girişleri ayarlanarak yapılır, aksi takdirde "ölçüm ayarı" olarak bilinir. Aşağıdaki genel işlevler, bu ölçümleri güncelleştirme sürecini kolaylaştırmak için tasarlanmıştır. Bu işlevler tarafından güncellenen her bir kayıt defteri alt anahtarının yerleşimini öğrenmek için kayıt defteri konumlarının bölümüne bakın.  
   
-## <a name="general-metric-functions"></a>Genel ölçüm işlevleri  
- Hata ayıklama motoru tarafından kullanılan genel işlevleri şunlardır. İşlevler için ifade değerlendiricilerini özel olarak tasarlanan ve sembol sağlayıcıları daha sonra ayrıntıları verilecek.  
+## <a name="general-metric-functions"></a>Genel ölçüm Işlevleri  
+ Bunlar, hata ayıklama motorları tarafından kullanılan genel işlevlerdir. Expression değerlendiricileri ve symbol sağlayıcıları için özelleştirilmiş işlevler daha sonra ayrıntılı olarak açıklanmıştır.  
   
 ### <a name="getmetric-method"></a>GetMetric yöntemi  
- Ölçüm değeri kayıt defterinden alır.  
+ Kayıt defterinden bir ölçüm değeri alır.  
   
 ```cpp#  
 HRESULT GetMetric(  
@@ -51,15 +51,15 @@ HRESULT GetMetric(
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|pszMachine|[in] Bir kayıt yazılır büyük olasılıkla uzak makine adını (`NULL` yerel makine anlamına gelir).|  
-|pszType|[in] Ölçüm türlerinden biri.|  
-|guidSection|[in] Belirli altyapısını, değerlendirici, özel durum, vb. GUİD'si. Bu, belirli bir öğe için bir ölçüm türü altında bir alt belirtir.|  
-|pszMetric|[in] Alınacağı ölçümü. Bu, belirli bir değerin adına karşılık gelir.|  
-|pdwValue|[in] Ölçüm değeri depolama konumu. DWORD (Bu örnekteki), bir BSTR, bir GUID veya GUID'leri dizisini döndürebilen GetMetric birkaç türü vardır.|  
-|pszAltRoot|[in] Kullanmak için bir alternatif kayıt defteri kökü. Kümesine `NULL` varsayılan kullanmak için.|  
+|pszMachine|'ndaki Kaydı yazılacak olan, büyük olasılıkla uzak makinenin adı ( `NULL` yerel makine anlamına gelir).|  
+|pszType|'ndaki Ölçüm türlerinden biri.|  
+|guidSection|'ndaki Belirli bir altyapının GUID 'SI, değerlendirici, özel durum, vb. Bu, belirli bir öğe için ölçüm türü altında bir alt bölüm belirtir.|  
+|pszMetric|'ndaki Elde edilecek ölçüm. Bu, belirli bir değer adına karşılık gelir.|  
+|pdwValue|'ndaki Ölçümdeki değerin depolama konumu. GetMetric 'in bir DWORD (Bu örnekte olduğu gibi), bir BSTR, GUID veya GUID dizisi döndüresağlayan çeşitli türleri vardır.|  
+|pszAltRoot|'ndaki Kullanılacak alternatif bir kayıt defteri kökü. Varsayılan öğesini `NULL` kullanmak için olarak ayarlayın.|  
   
 ### <a name="setmetric-method"></a>SetMetric yöntemi  
- Kayıt defterinde belirtilen ölçüm değeri ayarlar.  
+ Kayıt defterindeki belirtilen ölçüm değerini ayarlar.  
   
 ```cpp#  
 HRESULT SetMetric(  
@@ -74,15 +74,15 @@ HRESULT SetMetric(
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|pszType|[in] Ölçüm türlerinden biri.|  
-|guidSection|[in] Belirli altyapısını, değerlendirici, özel durum, vb. GUİD'si. Bu, belirli bir öğe için bir ölçüm türü altında bir alt belirtir.|  
-|pszMetric|[in] Alınacağı ölçümü. Bu, belirli bir değerin adına karşılık gelir.|  
-|dwValue|[in] Ölçüm değeri depolama konumu. DWORD (Bu örnekte), bir BSTR, bir GUID veya bir dizi GUID'leri depolayabilirsiniz SetMetric birkaç türü vardır.|  
-|fUserSpecific|[in] Ölçüm kullanıcıya özgü ise ve yerel makine hive yerine kullanıcının hive yazılmalıdır TRUE.|  
-|pszAltRoot|[in] Kullanmak için bir alternatif kayıt defteri kökü. Kümesine `NULL` varsayılan kullanmak için.|  
+|pszType|'ndaki Ölçüm türlerinden biri.|  
+|guidSection|'ndaki Belirli bir altyapının GUID 'SI, değerlendirici, özel durum, vb. Bu, belirli bir öğe için ölçüm türü altında bir alt bölüm belirtir.|  
+|pszMetric|'ndaki Elde edilecek ölçüm. Bu, belirli bir değer adına karşılık gelir.|  
+|dwValue|'ndaki Ölçümdeki değerin depolama konumu. SetMetric 'in bir DWORD (Bu örnekte), bir BSTR, GUID veya GUID dizisi depolayabilen çeşitli türleri vardır.|  
+|fUserSpecific|'ndaki Ölçüm kullanıcıya özgü ise ve yerel makine Hive yerine kullanıcının yığınına yazılması gerekiyorsa doğru.|  
+|pszAltRoot|'ndaki Kullanılacak alternatif bir kayıt defteri kökü. Varsayılan öğesini `NULL` kullanmak için olarak ayarlayın.|  
   
 ### <a name="removemetric-method"></a>RemoveMetric yöntemi  
- Belirtilen Ölçüm kayıt defterinden kaldırır.  
+ Belirtilen ölçümü kayıt defterinden kaldırır.  
   
 ```cpp#  
 HRESULT RemoveMetric(  
@@ -95,13 +95,13 @@ HRESULT RemoveMetric(
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|pszType|[in] Ölçüm türlerinden biri.|  
-|guidSection|[in] Belirli altyapısını, değerlendirici, özel durum, vb. GUİD'si. Bu, belirli bir öğe için bir ölçüm türü altında bir alt belirtir.|  
-|pszMetric|[in] Kaldırılacak ölçümü. Bu, belirli bir değerin adına karşılık gelir.|  
-|pszAltRoot|[in] Kullanmak için bir alternatif kayıt defteri kökü. Kümesine `NULL` varsayılan kullanmak için.|  
+|pszType|'ndaki Ölçüm türlerinden biri.|  
+|guidSection|'ndaki Belirli bir altyapının GUID 'SI, değerlendirici, özel durum, vb. Bu, belirli bir öğe için ölçüm türü altında bir alt bölüm belirtir.|  
+|pszMetric|'ndaki Kaldırılacak ölçüm. Bu, belirli bir değer adına karşılık gelir.|  
+|pszAltRoot|'ndaki Kullanılacak alternatif bir kayıt defteri kökü. Varsayılan öğesini `NULL` kullanmak için olarak ayarlayın.|  
   
 ### <a name="enummetricsections-method"></a>EnumMetricSections yöntemi  
- Kayıt defteri çeşitli ölçüm bölümlerde numaralandırır.  
+ Kayıt defterindeki çeşitli ölçüm bölümlerini numaralandırır.  
   
 ```cpp#  
 HRESULT EnumMetricSections(  
@@ -115,131 +115,131 @@ HRESULT EnumMetricSections(
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|pszMachine|[in] Bir kayıt yazılır büyük olasılıkla uzak makine adını (`NULL` yerel makine anlamına gelir).|  
-|pszType|[in] Ölçüm türlerinden biri.|  
-|rgguidSections|[out içinde] Doldurulacak GUID'leri ön tahsis dizisi.|  
-|pdwSize|[in] Depolanabilir GUID'leri sayısı `rgguidSections` dizisi.|  
-|pszAltRoot|[in] Kullanmak için bir alternatif kayıt defteri kökü. Kümesine `NULL` varsayılan kullanmak için.|  
+|pszMachine|'ndaki Kaydı yazılacak olan, büyük olasılıkla uzak makinenin adı ( `NULL` yerel makine anlamına gelir).|  
+|pszType|'ndaki Ölçüm türlerinden biri.|  
+|rgguidSections|[in, out] Doldurulacak GUID 'lerin önceden ayrılmış dizisi.|  
+|pdwSize|'ndaki Dizide depolanabilecek en fazla GUID sayısı `rgguidSections` .|  
+|pszAltRoot|'ndaki Kullanılacak alternatif bir kayıt defteri kökü. Varsayılan öğesini `NULL` kullanmak için olarak ayarlayın.|  
   
-## <a name="expression-evaluator-functions"></a>İfade değerlendirici işlevleri  
-  
-|İşlev|Açıklama|  
-|--------------|-----------------|  
-|GetEEMetric|Ölçüm değeri kayıt defterinden alır.|  
-|SetEEMetric|Kayıt defterinde belirtilen ölçüm değeri ayarlar.|  
-|RemoveEEMetric|Belirtilen Ölçüm kayıt defterinden kaldırır.|  
-|GetEEMetricFile|Bir dosya adı belirtilen ölçüm alır ve bir dize olarak dosyanın içeriği döndüren yükler.|  
-  
-## <a name="exception-functions"></a>Özel durum işlevleri  
+## <a name="expression-evaluator-functions"></a>İfade değerlendirici Işlevleri  
   
 |İşlev|Açıklama|  
 |--------------|-----------------|  
-|GetExceptionMetric|Ölçüm değeri kayıt defterinden alır.|  
-|SetExceptionMetric|Kayıt defterinde belirtilen ölçüm değeri ayarlar.|  
-|RemoveExceptionMetric|Belirtilen Ölçüm kayıt defterinden kaldırır.|  
-|RemoveAllExceptionMetrics|Tüm özel durum ölçümleri kayıt defterinden kaldırır.|  
+|GetEEMetric|Kayıt defterinden bir ölçüm değeri alır.|  
+|SetEEMetric|Kayıt defterindeki belirtilen ölçüm değerini ayarlar.|  
+|RemoveEEMetric|Belirtilen ölçümü kayıt defterinden kaldırır.|  
+|GetEEMetricFile|Belirtilen ölçüden bir dosya adı alır ve dosya içeriğini bir dize olarak döndürerek yükler.|  
   
-## <a name="symbol-provider-functions"></a>Sembol sağlayıcısı işlevleri  
-  
-|İşlev|Açıklama|  
-|--------------|-----------------|  
-|GetSPMetric|Ölçüm değeri kayıt defterinden alır.|  
-|SetSPMetric|Kayıt defterinde belirtilen ölçüm değeri ayarlar.|  
-|RemoveSPMetric|Belirtilen Ölçüm kayıt defterinden kaldırır.|  
-  
-## <a name="enumeration-functions"></a>Numaralandırma işlevleri  
+## <a name="exception-functions"></a>Özel durum Işlevleri  
   
 |İşlev|Açıklama|  
 |--------------|-----------------|  
-|EnumMetricSections|Belirtilen bir ölçüm türü için tüm ölçümleri numaralandırır.|  
-|EnumDebugEngine|Kaydedilen hata ayıklama motorlarını numaralandırır.|  
-|EnumEEs|Kayıtlı ifade değerlendiricilerini numaralandırır.|  
-|EnumExceptionMetrics|Tüm özel durum ölçümleri numaralandırır.|  
+|GetExceptionMetric|Kayıt defterinden bir ölçüm değeri alır.|  
+|SetExceptionMetric|Kayıt defterindeki belirtilen ölçüm değerini ayarlar.|  
+|RemoveExceptionMetric|Belirtilen ölçümü kayıt defterinden kaldırır.|  
+|Removeallexceptionölçümlerini|Tüm özel durum ölçümlerini kayıt defterinden kaldırır.|  
   
-## <a name="metric-definitions"></a>Ölçüm tanımları  
- Bu tanımları için önceden tanımlanmış ölçüm adları kullanılabilir. Çeşitli kayıt defteri anahtarları ve değer adlarını ve geniş karakter dizesi olarak tanımlanmış olan tüm adlar karşılık gelir: Örneğin, `extern LPCWSTR metrictypeEngine`.  
+## <a name="symbol-provider-functions"></a>Sembol sağlayıcısı Işlevleri  
   
-|Önceden tanımlanmış bir metrik türleri|Açıklama: Ana anahtarı için...|  
+|İşlev|Açıklama|  
+|--------------|-----------------|  
+|GetSPMetric|Kayıt defterinden bir ölçüm değeri alır.|  
+|SetSPMetric|Kayıt defterindeki belirtilen ölçüm değerini ayarlar.|  
+|RemoveSPMetric|Belirtilen ölçümü kayıt defterinden kaldırır.|  
+  
+## <a name="enumeration-functions"></a>Sabit Listesi Işlevleri  
+  
+|İşlev|Açıklama|  
+|--------------|-----------------|  
+|EnumMetricSections|Belirtilen Ölçüm türü için tüm ölçümleri numaralandırır.|  
+|EnumDebugEngine|Kayıtlı hata ayıklama altyapılarını numaralandırır.|  
+|EnumEEs|Kayıtlı değerlendiricileri deyimini numaralandırır.|  
+|Trımexceptionölçümlerini|Tüm özel durum ölçümlerini numaralandırır.|  
+  
+## <a name="metric-definitions"></a>Ölçüm Tanımları  
+ Bu tanımlar, önceden tanımlanmış ölçüm adları için kullanılabilir. Adlar çeşitli kayıt defteri anahtarlarına ve değer adlarına karşılık gelir ve hepsi geniş karakter dizeleri olarak tanımlanır: Örneğin, `extern LPCWSTR metrictypeEngine` .  
+  
+|Önceden tanımlanmış ölçüm türleri|Açıklama: için temel anahtar....|  
 |-----------------------------|---------------------------------------|  
-|metrictypeEngine|Tüm altyapısı ölçümleri hata ayıklayın.|  
-|metrictypePortSupplier|Tüm bağlantı noktası tedarikçi ölçümleri.|  
+|metrictypeEngine|Tüm hata ayıklama altyapısı ölçümleri.|  
+|Metrictypeporttedarikçi|Tüm bağlantı noktası sağlayıcısı ölçümleri.|  
 |metrictypeException|Tüm özel durum ölçümleri.|  
 |metricttypeEEExtension|Tüm ifade değerlendirici uzantıları.|  
   
-|Hata ayıklama altyapısı özellikleri|Açıklama|  
+|Hata ayıklama altyapısı özellikleri|Description|  
 |-----------------------------|-----------------|  
-|metricAddressBP|Adres kesme noktaları için destek belirtmek için sıfır olarak ayarlayın.|  
-|metricAlwaysLoadLocal|Her zaman yerel olarak hata ayıklama altyapısı yüklemek için sıfır olarak ayarlayın.|  
-|metricLoadInDebuggeeSession|KULLANILMIYOR|  
-|metricLoadedByDebuggee|Hata ayıklama altyapısı her zaman hata ayıklanan programa veya ile yükleneceğini belirten belirtmek için sıfır olarak ayarlayın.|  
-|metricAttach|Mevcut programlara ek için destek belirtmek için sıfır olarak ayarlayın.|  
-|metricCallStackBP|Çağrı yığını kesme noktalarını desteği belirtmek için sıfır olarak ayarlayın.|  
-|metricConditionalBP|Koşullu kesme noktaları ayarı için destek belirtmek için sıfır olarak ayarlayın.|  
-|metricDataBP|Verilerde yapılan değişiklikler üzerinde kesme noktaları ayarı için destek belirtmek için sıfır olarak ayarlayın.|  
-|metricDisassembly|Ayrıştırılmış kodu listesini üretimi için destek belirtmek için sıfır olarak ayarlayın.|  
-|metricDumpWriting|Döküm (bir çıktı cihazına bellek dökümü alma) yazma desteği belirtmek için sıfır olarak ayarlayın.|  
-|metricENC|Düzenle ve devam et desteğini belirtmek için sıfır olarak ayarlayın. **Not:**  Bir özel hata ayıklama altyapısı, hiçbir zaman ayarlamalıdır veya her zaman 0 olarak ayarlamanız gerekir.|  
-|metricExceptions|Özel durumlar için destek belirtmek için sıfır olarak ayarlayın.|  
-|metricFunctionBP|Adlı kesme (belirli bir işlev adı çağrıldığında kesebileceğiniz kesme noktaları) için destek belirtmek için sıfır olarak ayarlayın.|  
-|metricHitCountBP|Kesme noktaları (yalnızca belirli sayıda bir kez isabet olan sonra tetiklenen kesme noktaları) "nokta isabet" ayarı için destek belirtmek için sıfır olarak ayarlayın.|  
-|metricJITDebug|(Çalışan bir işlem olarak bir özel durum oluştuğunda hata ayıklayıcının başlatılır) just-ın-time hata ayıklama desteği belirtmek için sıfır olarak ayarlayın.|  
-|metricMemory|KULLANILMIYOR|  
-|metricPortSupplier|Biri uygulanmışsa, bağlantı noktası sağlayıcısı CLSID değeri için bunu ayarlayın.|  
-|metricRegisters|KULLANILMIYOR|  
-|metricSetNextStatement|(Hangi Ara deyimler yürütme atlar) sonraki deyimi ayarlamak için destek belirtmek için sıfır olarak ayarlayın.|  
-|metricSuspendThread|İş parçacığı yürütmesi askıya almak için destek belirtmek için sıfır olarak ayarlayın.|  
-|metricWarnIfNoSymbols|Sembol varsa kullanıcı bilgilendirilmemeli belirtmek için sıfır olarak ayarlayın.|  
-|metricProgramProvider|Bu program sağlayıcısı CLSID'sini ayarlayın.|  
-|metricAlwaysLoadProgramProviderLocal|Bu program sağlayıcı her zaman yerel olarak yüklenmiş olması gerektiğini belirtmek için sıfır olmayan bir ayarlayın.|  
-|metricEngineCanWatchProcess|Bu program sağlayıcı yerine olayları işlemek için hata ayıklama altyapısı izleyecek belirtmek için sıfır olarak ayarlayın.|  
-|metricRemoteDebugging|Bu uzaktan hata ayıklama desteği belirtmek için sıfır olarak ayarlayın.|  
-|metricEncUseNativeBuilder|Düzenle ve devam Yöneticisi hata ayıklama altyapısının encbuild.dll Düzenle ve devam et için oluşturulacak kullanması gerektiğini belirtmek için için sıfır olmayan bir ayarlayın. **Not:**  Bir özel hata ayıklama altyapısı, hiçbir zaman ayarlamalıdır veya her zaman 0 olarak ayarlamanız gerekir.|  
-|metricLoadUnderWOW64|Sıfır dışında hata ayıklama altyapısı WOW altında hata ayıklanan işlem içindeki bir 64-bit işlem hata ayıklama sırasında yükleneceğini göstermek için bunu; Aksi takdirde, Visual Studio işlemindeki (Bu WOW64 altında çalışan) hata ayıklama altyapısı yüklenir.|  
-|metricLoadProgramProviderUnderWOW64|Bu program sağlayıcısı WOW altında 64 bitlik bir işlem hata ayıklama sırasında hata ayıklanan işlemin yüklenmesi gerektiğini belirtmek için sıfır olmayan ayarlayın; Aksi takdirde Visual Studio işleminde yüklenir.|  
-|metricStopOnExceptionCrossingManagedBoundary|Bu işlem, yönetilen ve yönetilmeyen kod sınırları arasında işlenmeyen bir özel durum oluşturulursa durması gerektiğini belirtmek için sıfır olarak ayarlayın.|  
-|metricAutoSelectPriority|Otomatik Seçim hata ayıklama altyapısı (yüksek değerler eşittir daha yüksek öncelik) için bir öncelik için bunu ayarlayın.|  
-|metricAutoSelectIncompatibleList|Yok sayılacak hata ayıklama motorlarını GUID'leri otomatik seçiminde belirtin girişlerini içeren kayıt defteri anahtarı. Bu girişler bir sayı (0, 1, 2 vb.) içeren bir dize olarak ifade edilen bir GUID.|  
-|metricIncompatibleList|Bu hata ayıklama altyapısı ile uyumsuz hata ayıklama motorlarını GUID'leri belirtme girişlerini içeren kayıt defteri anahtarı.|  
-|metricDisableJITOptimization|Bu tam zamanında iyileştirmeler (için yönetilen kod) hata ayıklama sırasında devre dışı bırakılmalıdır olduğunu belirtmek için sıfır olarak ayarlayın.|  
+|metricAddressBP|Adres kesme noktaları desteğini göstermek için sıfır dışında olarak ayarlayın.|  
+|metricAlwaysLoadLocal|Hata ayıklama altyapısını her zaman yerel olarak yüklemek için sıfır dışında olarak ayarlayın.|  
+|Metricloadındebuggeesession|KULLANıLMıYOR|  
+|Metricloadedbydebugayıklanan|Hata ayıklama altyapısının hata ayıklamakta olan program tarafından her zaman yüklenemeyeceğini belirtmek için sıfır dışında olarak ayarlayın.|  
+|metricAttach|Mevcut programlara ek desteğini göstermek için sıfır dışında bir değere ayarlayın.|  
+|metricCallStackBP|Çağrı yığını kesme noktaları desteğini göstermek için sıfır dışında olarak ayarlayın.|  
+|Metricconditionalbümp|Koşullu kesme noktaları ayarı desteğini göstermek için sıfır dışında olarak ayarlayın.|  
+|metricDataBP|Verilerdeki değişikliklerle ilgili kesme noktası ayarı desteğini göstermek için sıfır dışında olarak ayarlayın.|  
+|metricDisassembly|Ayrıştırılmış bir listenin üretiminin desteğini göstermek için sıfır dışında olarak ayarlayın.|  
+|metricDumpWriting|Döküm yazma desteğini (belleğin bir çıkış cihazına dökümünü alma) belirtmek için sıfır dışında olarak ayarlayın.|  
+|metricENC|Düzenle ve devam et desteğini göstermek için sıfır dışında bir değere ayarlayın. **Note:**  Özel bir hata ayıklama altyapısı hiçbir zaman bunu ayarlanmamış veya her zaman 0 olarak ayarlanmalıdır.|  
+|metricExceptions|Özel durumların desteğini göstermek için sıfır dışında bir değere ayarlayın.|  
+|metricFunctionBP|Adlandırılmış kesme noktaları desteğini (belirli bir işlev adı çağrıldığında kesen kesme noktaları) belirtmek için sıfır dışında olarak ayarlayın.|  
+|metricHitCountBP|"İsabet noktası" kesme noktaları (yalnızca belirli sayıda vurduktan sonra tetiklenen kesme noktaları) için destek belirtmek üzere sıfır dışında olarak ayarlayın.|  
+|Metricjjdebug|Tam zamanında hata ayıklama desteğini göstermek için sıfır dışında bir değer ayarlayın (çalışan bir işlemde bir özel durum oluştuğunda hata ayıklayıcı başlatılır).|  
+|metricMemory|KULLANıLMıYOR|  
+|Metricporttedarikçi|Uygulanmışsa, bağlantı noktası tedarikçinin CLSID değerine ayarlayın.|  
+|Metricyazmaçları|KULLANıLMıYOR|  
+|Metricsetnextdeyimsi|Sonraki deyimi ayarlama desteğini (ara deyimlerin yürütülmesini atlar) belirtmek için sıfır dışında olarak ayarlayın.|  
+|metricSuspendThread|İş parçacığı yürütmeyi askıya alma desteğini göstermek için sıfır dışında olarak ayarlayın.|  
+|metricWarnIfNoSymbols|Sembol yoksa kullanıcının bildirilmesi gerektiğini belirtmek için sıfır dışında olarak ayarlayın.|  
+|metricProgramProvider|Bunu program sağlayıcısının CLSID 'sine ayarlayın.|  
+|metricAlwaysLoadProgramProviderLocal|Program sağlayıcısının her zaman yerel olarak yüklenmesi gerektiğini belirtmek için bunu sıfır dışında olarak ayarlayın.|  
+|metricEngineCanWatchProcess|Hata ayıklama altyapısının program sağlayıcısı yerine işlem olaylarını izleyemeyeceğini belirtmek için bunu sıfır dışında olarak ayarlayın.|  
+|metricRemoteDebugging|Uzaktan hata ayıklama desteğini göstermek için bunu sıfır dışında olarak ayarlayın.|  
+|metricEncUseNativeBuilder|Düzenle ve devam et yöneticisinin Düzenle ve devam et için derlemek üzere hata ayıklama altyapısının encbuild.dll kullanması gerektiğini belirtmek için bunu sıfır dışında olarak ayarlayın. **Note:**  Özel bir hata ayıklama altyapısı hiçbir zaman bunu ayarlanmamış veya her zaman 0 olarak ayarlanmalıdır.|  
+|metricLoadUnderWOW64|Hata ayıklama altyapısının 64 bitlik bir işlemde hata ayıklarken WOW altındaki hata ayıklanan işlemde yüklenmesi gerektiğini belirtmek için bunu sıfır dışında olarak ayarlayın; Aksi halde, hata ayıklama altyapısı Visual Studio işleminde yüklenir (WOW64 altında çalışır).|  
+|metricLoadProgramProviderUnderWOW64|Program sağlayıcısının, WOW altında 64 bitlik bir işlemin hatalarını ayıklarken hata ayıklanan işlemde yüklenmesi gerektiğini belirtmek için bunu sıfır dışında olarak ayarlayın; Aksi takdirde, Visual Studio işleminde yüklenir.|  
+|Metricstoponexceptioncrossınmanagedsınır|Yönetilen/yönetilmeyen kod sınırları genelinde işlenmeyen bir özel durum oluşursa işlemin durması gerektiğini belirtmek için bunu sıfır dışında olarak ayarlayın.|  
+|Metricoto Selectpriority|Bunu hata ayıklama altyapısının otomatik seçimi için öncelik olarak ayarlayın (daha yüksek değerler daha yüksek önceliğe eşittir).|  
+|Metricoto Selectıncompatiblelist|Otomatik seçimde yok sayılacak hata ayıklama altyapısının GUID 'Lerini belirten girişleri içeren kayıt defteri anahtarı. Bu girişler, bir dize olarak ifade edilen bir GUID ile (0, 1, 2, vb.) bir sayıdır.|  
+|Metricıncompatiblelist|Bu hata ayıklama altyapısıyla uyumsuz olan hata ayıklama motorları için GUID 'Leri belirten girişleri içeren kayıt defteri anahtarı.|  
+|Metricdisablejitoptılama|Tam zamanında iyileştirmelerin (yönetilen kod için) hata ayıklama sırasında devre dışı bırakılacağını belirtmek için bunu sıfır dışında olarak ayarlayın.|  
   
-|İfade değerlendirici özellikleri|Açıklama|  
+|İfade değerlendirici özellikleri|Description|  
 |-------------------------------------|-----------------|  
-|metricEngine|Bu, belirtilen ifade değerlendiricisi destekleyen hata ayıklama altyapısı sayısını tutar.|  
-|metricPreloadModules|Bu ifade değerlendiricisi karşı bir programı başlatıldığında modülleri yüklenmiş olduğunu belirtmek için sıfır olarak ayarlayın.|  
-|metricThisObjectName|Bu, "Bu" nesnesinin adına ayarlayın.|  
+|metricEngine|Bu, belirtilen ifade değerlendiricisi 'ni destekleyen hata ayıklama altyapısının sayısını tutar.|  
+|metricPreloadModules|Bir programa karşı bir ifade değerlendirici başlatıldığında modüllerin önceden yüklenmesi gerektiğini belirtmek için bunu sıfır dışında olarak ayarlayın.|  
+|metricThisObjectName|Bunu "This" nesne adı olarak ayarlayın.|  
   
-|İfade değerlendirici uzantı özellikleri|Açıklama|  
+|İfade değerlendirici uzantı özellikleri|Description|  
 |-----------------------------------------------|-----------------|  
-|metricExtensionDll|Bu uzantının desteklediği DLL'in adı.|  
-|metricExtensionRegistersSupported|Desteklenen kayıtları listesi.|  
-|metricExtensionRegistersEntryPoint|Yazmaçları erişmek için giriş noktası'nı tıklatın.|  
-|metricExtensionTypesSupported|Desteklenen türleri listesi.|  
-|metricExtensionTypesEntryPoint|Türleri erişmek için giriş noktası'nı tıklatın.|  
+|metricExtensionDll|Bu uzantıyı destekleyen dll 'nin adı.|  
+|metricExtensionRegistersSupported|Desteklenen kayıt listesi.|  
+|metricExtensionRegistersEntryPoint|Yazmaçlara erişmek için giriş noktası.|  
+|Metricextensiontypesdestekleniyor|Desteklenen türlerin listesi.|  
+|metricExtensionTypesEntryPoint|Türlere erişmek için giriş noktası.|  
   
-|Bağlantı noktası sağlayıcısı özellikleri|Açıklama|  
+|Bağlantı noktası sağlayıcı özellikleri|Description|  
 |------------------------------|-----------------|  
-|metricPortPickerCLSID|(Bir iletişim kutusu kullanıcının bağlantı noktalarını seçin ve hata ayıklama için kullanılacak bağlantı noktası eklemek için kullanabilirsiniz) bağlantı noktası Seçici CLSID değeri.|  
-|metricDisallowUserEnteredPorts|Kullanıcı tarafından girilen bağlantı noktaları için bağlantı noktası sağlayıcısı eklediyseniz sıfır olmayan (Bu bağlantı noktası Seçici iletişim kutusu temelde salt okunur yapar).|  
-|metricPidBase|İşlem kimliklerini tahsis ederken bağlantı sağlayıcı tarafından kullanılan temel işlem kimliği.|  
+|Metricportpickerclsıd|Bağlantı noktası seçicisinin CLSID 'SI (kullanıcının bağlantı noktalarını seçmek ve hata ayıklama için kullanılacak bağlantı noktaları eklemek için kullanabileceği bir iletişim kutusu).|  
+|metricDisallowUserEnteredPorts|Kullanıcı tarafından girilen bağlantı noktaları bağlantı noktası sağlayıcısına eklenemediğinde sıfır dışında (Bu, bağlantı noktası Seçici iletişim kutusunu temelde salt okunurdur).|  
+|metricPidBase|İşlem kimlikleri ayrılırken bağlantı noktası sağlayıcısı tarafından kullanılan temel işlem KIMLIĞI.|  
   
-|Önceden tanımlanmış SP Store türleri|Açıklama|  
+|Önceden tanımlanmış SP deposu türleri|Description|  
 |-------------------------------|-----------------|  
-|storetypeFile|Sembolleri ayrı bir dosyada depolanır.|  
-|storetypeMetadata|Simgeleri bir derlemede meta veri olarak depolanır.|  
+|storetypeFile|Semboller ayrı bir dosyada depolanır.|  
+|storetypeMetadata|Semboller bir derlemede meta veri olarak depolanır.|  
   
-|Çeşitli özellikler|Açıklama|  
+|Çeşitli özellikler|Description|  
 |------------------------------|-----------------|  
-|metricShowNonUserCode|Bu nonuser kod göstermek için sıfır olarak ayarlayın.|  
-|metricJustMyCodeStepping|Bu atlama yalnızca kullanıcı kodunda oluşabilir belirtmek için sıfır olarak ayarlayın.|  
-|metricCLSID|Bir nesne belirli bir ölçüm türün CLSID değeri.|  
-|MetricName|Ölçüm belirli bir türdeki bir nesne için kolay ad.|  
+|metricShowNonUserCode|Kullanıcı olmayan kodu göstermek için bunu sıfır dışında olarak ayarlayın.|  
+|metricJustMyCodeStepping|Adımlamayı Yalnızca Kullanıcı kodunda gerçekleşebileceğini belirtmek için sıfır dışında olarak ayarlayın.|  
+|metricCLSID|Belirli bir ölçüm türündeki nesne için CLSID.|  
+|metricName|Belirli bir ölçüm türündeki bir nesnenin Kullanıcı dostu adı.|  
 |metricLanguage|Dil adı.|  
   
 ## <a name="registry-locations"></a>Kayıt defteri konumları  
- Ölçümleri okuma ve kayıt defterinde, özellikle de yazılmış `VisualStudio` alt.  
+ Ölçümler, özellikle alt anahtarda bulunan ve kayıt defterine yazılır `VisualStudio` .  
   
 > [!NOTE]
-> Çoğu zaman, HKEY_LOCAL_MACHINE anahtarı ölçümleri yazılır. Ancak, bazen HKEY_CURRENT_USER hedef anahtar olacaktır. Her iki anahtarı Dbgmetric.lib işler. Bir ölçüm alırken HKEY_CURRENT_USER arar. ilk ve HKEY_LOCAL_MACHINE. Bunu bir ölçüm ayarlanırken, bir parametre kullanmak için hangi üst düzey anahtar belirtir.  
+> Çoğu zaman ölçümler HKEY_LOCAL_MACHINE anahtara yazılır. Ancak, bazen HKEY_CURRENT_USER hedef anahtar olur. Dbgmetric. lib her iki anahtarı da işler. Ölçüm alırken öncelikle HKEY_CURRENT_USER arar ve ardından HKEY_LOCAL_MACHINE. Bir ölçüm ayarlarken, bir parametre hangi üst düzey anahtarın kullanılacağını belirtir.  
   
  *[kayıt defteri anahtarı]*\  
   
@@ -249,77 +249,77 @@ HRESULT EnumMetricSections(
   
  `VisualStudio`\  
   
- *[sürüm kök]*\  
+ *[sürüm kökü]*\  
   
- *[ölçüm kök]*\  
+ *[ölçüm kökü]*\  
   
  *[ölçüm türü]*\  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
-|Yer tutucu|Açıklama|  
+|Yer tutucu|Description|  
 |-----------------|-----------------|  
 |*[kayıt defteri anahtarı]*|`HKEY_CURRENT_USER` veya `HKEY_LOCAL_MACHINE`.|  
-|*[sürüm kök]*|Visual Studio sürümü (örneğin, `7.0`, `7.1`, veya `8.0`). Ancak, bu kök ayrıca kullanılarak değiştirilebilir **/rootsuffix** geçin **devenv.exe**. VSIP için bu genellikle bir değiştiricidir **Exp**, sürüm kök, örneğin, 8.0Exp olacaktır.|  
-|*[ölçüm kök]*|Bu `AD7Metrics` veya `AD7Metrics(Debug)`dbgmetric.lib hata ayıklama sürümünü kullanılıp kullanılmadığını bağlı olarak. **Not:**  Dbgmetric.lib kullanılır olup olmadığına, hata ayıklama ve yayın arasındaki farklar varsa bu adlandırma kuralı için bağlı kayıt defterinde yansıtılan sürümleri.|  
-|*[ölçüm türü]*|Yazılacak ölçüm türü: `Engine`, `ExpressionEvaluator`, `SymbolProvider`vb. Bunlar tüm dbgmetric.h olduğu gibi tanımlanır `metricTypeXXXX`burada `XXXX` belirli tür adıdır.|  
-|*[ölçü]*|Ölçüm ayarlamak için bir değer atanması için bir giriş adı. Ölçüm gerçek kuruluş Ölçüm türüne bağlıdır.|  
-|*[ölçüm değeri]*|Ölçüm için atanan değer. Değeri (dize, sayı, vb.) olmamalıdır türüne ölçüme göre değişir.|  
+|*[sürüm kökü]*|Visual Studio sürümü (örneğin,, `7.0` `7.1` veya `8.0` ). Ancak, bu kök, **devenv.exe**için **/rootsuffix** anahtarı kullanılarak da değiştirilebilir. VSıP için bu değiştirici genellikle **Exp**olur, bu nedenle sürüm kökü, örneğin, 8.0 exp olur.|  
+|*[ölçüm kökü]*|Bu ya da `AD7Metrics` `AD7Metrics(Debug)` , dbgmetric. lib hata ayıklama sürümünün kullanılıp kullanılmadığını bağlı olarak. **Note:**  Dbgmetric. lib kullanılıp kullanılmayacağı, kayıt defterine yansıtılması gereken hata ayıklama ve sürüm sürümleri arasında farklılıklar varsa, bu adlandırma kuralının ' a bağlı olması gerekir.|  
+|*[ölçüm türü]*|Yazılacak ölçüm türü: `Engine` , `ExpressionEvaluator` , `SymbolProvider` vb. Bunlar `metricTypeXXXX` , özel tür adı olduğu gibi dbgmetric. h olarak tanımlanmıştır `XXXX` .|  
+|*Ölçüt*|Ölçümü ayarlamak için bir değere atanacak bir girdinin adı. Ölçümlerin gerçek organizasyonu, ölçüm türüne bağlıdır.|  
+|*[ölçüm değeri]*|Ölçüme atanan değer. Değerin (dize, sayı, vb.) olması, ölçüme bağlıdır.|  
   
 > [!NOTE]
-> Tüm GUID biçiminde depolanır `{GUID}`. Örneğin: `{123D150B-FA18-461C-B218-45B3E4589F9B}`  
+> Tüm GUID 'Ler biçiminde depolanır `{GUID}` . Örneğin, `{123D150B-FA18-461C-B218-45B3E4589F9B}`.  
   
-### <a name="debug-engines"></a>Hata ayıklama altyapıları  
- Aşağıdaki kayıt defteri hata ayıklama altyapıları ölçümlerinin kuruluştur. `Engine` hata ayıklama altyapısı için ölçüm türü adıdır ve karşılık gelen *[ölçüm türü]* yukarıdaki kayıt defteri alt ağacı içinde.  
+### <a name="debug-engines"></a>Hata ayıklama motorları  
+ Kayıt defterindeki hata ayıklama altyapısının ölçümlerinin organizasyonu aşağıda verilmiştir. `Engine` , hata ayıklama altyapısının ölçüm türü adıdır ve yukarıdaki kayıt defteri alt ağacındaki *[ölçüm türü]* öğesine karşılık gelir.  
   
  `Engine`\  
   
- *[altyapısı GUID]*\  
+ *[motor GUID 'si]*\  
   
- `CLSID` = *[sınıf GUID]*  
+ `CLSID` = *[sınıf GUID 'si]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
  `PortSupplier`\  
   
- `0` = *[bağlantı noktası sağlayıcısı GUID]*  
+ `0` = *[bağlantı noktası sağlayıcı GUID]*  
   
- `1` = *[bağlantı noktası sağlayıcısı GUID]*  
+ `1` = *[bağlantı noktası sağlayıcı GUID]*  
   
-|Yer tutucu|Açıklama|  
+|Yer tutucu|Description|  
 |-----------------|-----------------|  
-|*[altyapısı GUID]*|Hata ayıklama altyapısı GUİD'si.|  
-|*[sınıf GUID]*|Bu hata ayıklama altyapısı uygulayan sınıf GUID.|  
-|*[bağlantı noktası sağlayıcısı GUID]*|Varsa, bağlantı noktası sağlayıcısı GUID. Birçok hata ayıklama altyapısı, varsayılan bağlantı noktası sağlayıcısı kullanın ve kendi tedarikçi belirtmeyin. Bu durumda, alt `PortSupplier` eksik olacaktır.|  
+|*[motor GUID 'si]*|Hata ayıklama altyapısının GUID 'SI.|  
+|*[sınıf GUID 'si]*|Bu hata ayıklama altyapısını uygulayan sınıfın GUID 'ı.|  
+|*[bağlantı noktası sağlayıcı GUID]*|Varsa, bağlantı noktası tedarikçinin GUID 'SI. Birçok hata ayıklama altyapısı varsayılan bağlantı noktası tedarikçiyi kullanır ve bu nedenle kendi tedarikçiyi belirtmez. Bu durumda, alt anahtar `PortSupplier` yok olur.|  
   
 ### <a name="port-suppliers"></a>Bağlantı Noktası Sağlayıcıları  
- Aşağıdaki kayıt defteri bağlantı noktası tedarikçi ölçümlerinin kuruluştur. `PortSupplier` Ölçüm türü için bağlantı noktası sağlayıcısı adıdır ve karşılık gelen *[ölçüm türü]*.  
+ Kayıt defterindeki bağlantı noktası sağlayıcısı ölçümlerinin organizasyonu aşağıda verilmiştir. `PortSupplier` , bir bağlantı noktası sağlayıcısı için ölçüm türü adıdır ve *[ölçüm türü]* öğesine karşılık gelir.  
   
  `PortSupplier`\  
   
- *[bağlantı noktası sağlayıcısı GUID]*\  
+ *[bağlantı noktası sağlayıcı GUID]*\  
   
- `CLSID` = *[sınıf GUID]*  
+ `CLSID` = *[sınıf GUID 'si]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
-|Yer tutucu|Açıklama|  
+|Yer tutucu|Description|  
 |-----------------|-----------------|  
-|*[bağlantı noktası sağlayıcısı GUID]*|Bağlantı noktası sağlayıcısı GUID|  
-|*[sınıf GUID]*|Bu bağlantı noktası sağlayıcısı uygulayan sınıf GUID|  
+|*[bağlantı noktası sağlayıcı GUID]*|Bağlantı noktası tedarikçinin GUID 'SI|  
+|*[sınıf GUID 'si]*|Bu bağlantı noktası tedarikçiyi uygulayan sınıfın GUID 'ı|  
   
 ### <a name="symbol-providers"></a>Sembol sağlayıcıları  
- Aşağıdaki kayıt defteri sembol tedarikçi ölçümlerinin kuruluştur. `SymbolProvider` Sembol sağlayıcısı için ölçüm türü adıdır ve karşılık gelen *[ölçüm türü]*.  
+ Kayıt defterindeki sembol sağlayıcısı ölçümlerinin organizasyonu aşağıda verilmiştir. `SymbolProvider` , sembol sağlayıcısının ölçüm türü adıdır ve *[ölçüm türü]* öğesine karşılık gelir.  
   
  `SymbolProvider`\  
   
@@ -327,42 +327,42 @@ HRESULT EnumMetricSections(
   
  `file`\  
   
- `CLSID` = *[sınıf GUID]*  
+ `CLSID` = *[sınıf GUID 'si]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
  `metadata`\  
   
- `CLSID` = *[sınıf GUID]*  
+ `CLSID` = *[sınıf GUID 'si]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
-|Yer tutucu|Açıklama|  
+|Yer tutucu|Description|  
 |-----------------|-----------------|  
-|*[sembol sağlayıcısı GUID]*|Sembol sağlayıcısı GUID|  
-|*[sınıf GUID]*|Bu sembol sağlayıcısı uygulayan sınıf GUID|  
+|*[sembol sağlayıcısı GUID]*|Sembol sağlayıcısının GUID 'SI|  
+|*[sınıf GUID 'si]*|Bu sembol sağlayıcısını uygulayan sınıfın GUID 'ı|  
   
-### <a name="expression-evaluators"></a>İfade değerlendiricisi  
- İfade değerlendirici ölçümleri kayıt defterinde organizasyonu verilmiştir. `ExpressionEvaluator` ifade değerlendirici ölçüm türü adı ve karşılık gelen *[ölçüm türü]*.  
+### <a name="expression-evaluators"></a>İfade değerlendiricileri  
+ Kayıt defterindeki ifade değerlendirici ölçümlerinin organizasyonu aşağıda verilmiştir. `ExpressionEvaluator` , ifade değerlendirici için ölçüm türü adıdır ve *[ölçüm türü]* öğesine karşılık gelir.  
   
 > [!NOTE]
-> Ölçüm türü için `ExpressionEvaluator` tüm ölçüm değişiklikler ifade değerlendiricilerini için uygun bir ifade değerlendirici ölçüm işlevleri aracılığıyla geçer varsayılır gibi dbgmetric.h içinde tanımlı değil (düzenini `ExpressionEvaluator` alt biraz anahtarıdır Ayrıntılar içinde dbgmetric.lib gizlenir şekilde, karmaşık).  
+> İçin ölçüm türü `ExpressionEvaluator` dbgmetric. h içinde tanımlı değildir, çünkü Expression değerlendiricileri için tüm ölçüm değişikliklerinin uygun ifade değerlendirici ölçüm işlevleri üzerinden gitmesini varsayacaktır ( `ExpressionEvaluator` alt anahtarın düzeni biraz karmaşıktır, bu nedenle Ayrıntılar dbgmetric. lib içinde gizlenir).  
   
  `ExpressionEvaluator`\  
   
- *[dil guid]*\  
+ *[dil GUID 'si]*\  
   
  *[satıcı GUID]*\  
   
- `CLSID` = *[sınıf GUID]*  
+ `CLSID` = *[sınıf GUID 'si]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
  `Engine`\  
   
@@ -370,30 +370,30 @@ HRESULT EnumMetricSections(
   
  `1` = *[hata ayıklama altyapısı GUID]*  
   
-|Yer tutucu|Açıklama|  
+|Yer tutucu|Description|  
 |-----------------|-----------------|  
-|*[dil guid]*|Bir dil GUİD'si|  
-|*[satıcı GUID]*|Bir satıcı GUİD'si|  
-|*[sınıf GUID]*|Bu ifade değerlendiricisi uygulayan sınıf GUID|  
-|*[hata ayıklama altyapısı GUID]*|Bu ifade değerlendiricisi çalışır bir hata ayıklama altyapısı GUİD'si|  
+|*[dil GUID 'si]*|Bir dilin GUID 'SI|  
+|*[satıcı GUID]*|Satıcının GUID 'SI|  
+|*[sınıf GUID 'si]*|Bu ifade değerlendirici uygulayan sınıfın GUID 'ı|  
+|*[hata ayıklama altyapısı GUID]*|Bu ifade değerlendiricisi ile birlikte çalışarak hata ayıklama altyapısının GUID 'SI|  
   
 ### <a name="expression-evaluator-extensions"></a>İfade değerlendirici uzantıları  
- İfade değerlendirici uzantısı ölçümleri kayıt defterinde organizasyonu verilmiştir. `EEExtensions` Ölçüm türü için ifade değerlendirici uzantıları adıdır ve karşılık gelen *[ölçüm türü]*.  
+ Aşağıda, kayıt defterindeki ifade değerlendirici uzantı ölçümlerinin organizasyonu verilmiştir. `EEExtensions` , ifade değerlendirici uzantılarının ölçüm türü adıdır ve *[ölçüm türü]* öğesine karşılık gelir.  
   
  `EEExtensions`\  
   
- *[uzantısı GUID]*\  
+ *[uzantı GUID]*\  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
-|Yer tutucu|Açıklama|  
+|Yer tutucu|Description|  
 |-----------------|-----------------|  
-|*[uzantısı GUID]*|İfade değerlendirici uzantı GUİD'si|  
+|*[uzantı GUID]*|Bir ifade değerlendirici uzantısının GUID 'SI|  
   
-### <a name="exceptions"></a>Özel Durumlar  
- Kayıt defterinde özel durumları ölçümleri organizasyonu verilmiştir. `Exception` özel durumlar için ölçüm türü adıdır ve karşılık gelen *[ölçüm türü]*.  
+### <a name="exceptions"></a>Özel durumlar  
+ Aşağıda, kayıt defterindeki özel durum ölçümlerinin organizasyonu verilmiştir. `Exception` , özel durumların ölçüm türü adıdır ve *[ölçüm türü]* öğesine karşılık gelir.  
   
  `Exception`\  
   
@@ -401,30 +401,30 @@ HRESULT EnumMetricSections(
   
  *[özel durum türleri]*\  
   
- *[özel]*\  
+ *duruma*\  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[özel]*\  
+ *duruma*\  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
- *[ölçü] = [ölçüm değeri]*  
+ *[ölçüm] = [ölçüm değeri]*  
   
-|Yer tutucu|Açıklama|  
+|Yer tutucu|Description|  
 |-----------------|-----------------|  
-|*[hata ayıklama altyapısı GUID]*|Özel durumlar destekleyen bir hata ayıklama altyapısı GUİD'si.|  
-|*[özel durum türleri]*|Genel bir başlık alt işlenebilir özel durum sınıfı tanımlayan. Tipik adları **C++ özel durumlarını**, **Win32 özel durumları**, **ortak dil çalışma zamanı özel durumları**, ve **yerel çalışma zamanı denetimleri**. Bu adlar, ayrıca özel durumu kullanıcıya, belirli bir sınıf tanımlamak için kullanılır.|  
-|*[özel]*|Bir özel durum için bir ad: Örneğin, **_com_error** veya **Control-Break**. Bu adlar da kullanıcıya belirli bir özel durumu tanımlamak için kullanılır.|  
+|*[hata ayıklama altyapısı GUID]*|Özel durumları destekleyen bir hata ayıklama altyapısının GUID 'ı.|  
+|*[özel durum türleri]*|Ele alınan özel durumların sınıfını tanımlayan alt anahtar için genel bir başlık. Genellikle **C++ özel durumları**, **Win32 özel durumları**, **ortak dil çalışma zamanı özel durumları**ve **yerel çalışma zamanı denetimleri**bulunur. Bu adlar, kullanıcıya belirli bir özel durum sınıfını tanımlamak için de kullanılır.|  
+|*duruma*|Özel durum için bir ad: Örneğin, **_com_error** veya **Denetim kesme**. Bu adlar, kullanıcıya özel bir özel durumu tanımlamak için de kullanılır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- Bu dosyalar bulunur [!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] SDK yükleme dizini (varsayılan olarak, *[sürücü]* \Program Visual Studio 2010 SDK\\).  
+ Bu dosyalar [!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] SDK yükleme dizininde bulunur (varsayılan olarak, *[sürücü]* \Program Files\Microsoft VISUAL Studio 2010 SDK \\ ).  
   
- Header: includes\dbgmetric.h  
+ Üstbilgi: includes\dbgmetric.h  
   
- Library: libs\ad2de.lib, libs\dbgmetric.lib  
+ Kitaplık: libs\ad2de.exe, libs\dbgmetric.exe  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

@@ -1,5 +1,5 @@
 ---
-title: SccPopulateDirList Fonksiyonu | Microsoft Dokümanlar
+title: SccPopulateDirList Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4ac1c51ac694acadd2efb0cd7d1c5a3f1d66ebc1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700562"
 ---
 # <a name="sccpopulatedirlist-function"></a>SccPopulateDirList İşlevi
-Bu işlev, inceleyecek dizinlerin listesi göz önüne alındığında, hangi dizinlerin ve (isteğe bağlı) dosyaların kaynak denetiminde depolanabilenleri belirler.
+Bu işlev, incelenecek dizinlerin listesi verildiğinde, kaynak denetiminde hangi dizinlerin ve (isteğe bağlı) dosyaların depolandığını belirler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 SCCRTN SccPopulateDirList(
@@ -36,40 +36,40 @@ SCCRTN SccPopulateDirList(
 ```
 
 #### <a name="parameters"></a>Parametreler
- Pcontext
+ pContext
 
-[içinde] Kaynak denetimi eklentibağlam işaretçisi.
+'ndaki Kaynak denetimi eklentisi bağlam işaretçisi.
 
  nDirs
 
-[içinde] Dizideki dizin yollarının `lpDirPaths` sayısı.
+'ndaki Dizideki Dizin yollarının sayısı `lpDirPaths` .
 
  lpDirPaths
 
-[içinde] İncelecek dizin yolları dizisi.
+'ndaki İncelenecek dizin yolları dizisi.
 
  pfnPopulate
 
-[içinde] Her dizin yolu ve (isteğe bağlı olarak) `lpDirPaths` dosya adı için aramak için geri arama işlevi (ayrıntılar için [POPDIRLISTFUNC'a](../extensibility/popdirlistfunc.md) bakın).
+'ndaki İçindeki her dizin yolunu ve (isteğe bağlı) dosya adını çağırmak için geri çağırma işlevi `lpDirPaths` (Ayrıntılar için bkz. [Popdirlistfunc](../extensibility/popdirlistfunc.md) ).
 
  pvCallerData
 
-[içinde] Geri arama işlevine değişmeden geçirilecek değer.
+'ndaki Geri çağırma işlevine değiştirilmeden geçirilecek değer.
 
- fSeçenekler
+ fOptions
 
-[içinde] Dizinlerin nasıl işlenirdenetlenen değerlerin birleşimi (olası değerler için [Belirli Komutlar tarafından kullanılan Bit bayraklarının](../extensibility/bitflags-used-by-specific-commands.md) "PopulateDirList bayrakları" bölümüne bakın).
+'ndaki Dizinlerin nasıl işlendiğini denetleyen değerlerin bir birleşimi (olası değerler için [belirli komutlar tarafından kullanılan Bitflags](../extensibility/bitflags-used-by-specific-commands.md) 'ın "PopulateDirList Flags" bölümüne bakın).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|İşlemi başarıyla tamamladı.|
+|SCC_OK|İşlem başarıyla tamamlandı.|
 |SCC_E_UNKNOWNERROR|Bir hata oluşmuştur.|
 
 ## <a name="remarks"></a>Açıklamalar
- Yalnızca kaynak denetim deposunda bulunan dizinler ve (isteğe bağlı) dosya adları geri arama işlevine aktarılır.
+ Yalnızca kaynak denetim deposundaki dizinler ve (isteğe bağlı) dosya adları geri çağırma işlevine geçirilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

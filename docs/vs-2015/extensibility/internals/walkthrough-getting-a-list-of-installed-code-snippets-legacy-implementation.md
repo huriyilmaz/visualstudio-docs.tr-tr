@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Kod parçacıkları (eski uygulama) yüklü bir listesini alma | Microsoft Docs'
+title: 'İzlenecek yol: yüklü kod parçacıklarının listesini alma (eski uygulama) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,24 +13,24 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 256430c0e41bfc0452282c89407335d997cc715c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440765"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64822423"
 ---
 # <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>İzlenecek yol: Yüklü Kod Parçacıklarının Listesini Alma (Eski Uygulama)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kod parçacığı bir kaynak arabelleği (yüklü kod parçacıklarının listesini arasında seçmeye olanak tanır) bir menü komutu ile veya bunun eklenen kod parçasıdır. bir IntelliSense tamamlanma listeden bir kod parçacığı kısayol.  
+Kod parçacığı, bir menü komutuyla (yüklü kod parçacıkları listesi arasında seçim yapılmasına izin veren) veya bir IntelliSense tamamlanma listesinden bir kod parçacığı kısayolu seçerek kaynak arabelleğine eklenebilen bir kod parçasıdır.  
   
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A> Tüm kod parçacıkları GUID belirli bir dil için yöntemi alır. Bu kod parçacıkları kısayolları bir IntelliSense tamamlanma listesine eklenebilir.  
+ <xref:Microsoft.VisualStudio.TextManager.Interop.IVsExpansionManager.EnumerateExpansions%2A>Yöntemi, belirli bir DIL GUID 'si için tüm kod parçacıklarını alır. Bu kod parçacıklarının kısayolları bir IntelliSense tamamlanma listesine eklenebilir.  
   
- Bkz: [eski dil hizmetinde kod parçacıkları için destek](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md) yönetilen paket framework (MPF) dil hizmetinde kod parçacıkları uygulama hakkında ayrıntılar için.  
+ Yönetilen bir paket çerçevesi (MPF) dil hizmetinde kod parçacıkları uygulama hakkında daha fazla bilgi için bkz. [eski dil hizmetindeki kod parçacıkları Için destek](../../extensibility/internals/support-for-code-snippets-in-a-legacy-language-service.md) .  
   
-### <a name="to-retrieve-a-list-of-code-snippets"></a>Kod parçacıkları listesini almak için  
+### <a name="to-retrieve-a-list-of-code-snippets"></a>Kod parçacıklarının listesini almak için  
   
-1. Aşağıdaki kod, belirli bir dil için kod parçacıkları listesini almak nasıl gösterir. Sonuçları bir dizide depolanan <xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion> yapıları. Bu yöntemde statik <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> almak için yöntemi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> alanından arabirim <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> hizmeti. Ancak VSPackage ve arama hizmeti sağlayıcısı ayrıca kullanabileceğiniz <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> yöntemi.  
+1. Aşağıdaki kod, belirli bir dil için kod parçacıkları listesinin nasıl alınacağını gösterir. Sonuçlar bir yapı dizisinde depolanır <xref:Microsoft.VisualStudio.TextManager.Interop.VsExpansion> . Bu yöntem, <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> hizmeti arabirimden almak için statik yöntemi kullanır <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> . Ancak, VSPackage 'a verilen hizmet sağlayıcısını da kullanabilir ve <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> yöntemini çağırabilirsiniz.  
   
     ```csharp  
     using System;  
@@ -103,12 +103,12 @@ Kod parçacığı bir kaynak arabelleği (yüklü kod parçacıklarının listes
     }  
     ```  
   
-### <a name="to-call-the-getsnippets-method"></a>GetSnippets yöntemini çağırmak için  
+### <a name="to-call-the-getsnippets-method"></a>Getparçacıklar yöntemini çağırmak için  
   
-1. Aşağıdaki yöntemin nasıl çağrılacağı gösterilmektedir `GetSnippets` ayrıştırma işleminin tamamlanma yöntemi. <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A> Nedeni ile başlatılan bir ayrıştırma işlemi sonrasında yöntemi çağrıldığında <xref:Microsoft.VisualStudio.Package.ParseReason>.  
+1. Aşağıdaki yöntem, `GetSnippets` bir ayrıştırma işleminin tamamlandığında yönteminin nasıl çağrılacağını gösterir. <xref:Microsoft.VisualStudio.Package.LanguageService.OnParseComplete%2A>Yöntemi, neden ile başlatılan bir ayrıştırma işleminden sonra çağrılır <xref:Microsoft.VisualStudio.Package.ParseReason> .  
   
 > [!NOTE]
-> `expansionsList` Listis Performans nedeniyle önbelleğe alınan dizi. Kod değişiklikleri değil yansıtılır listesinde dil hizmeti durduruldu yeniden yüklenene kadar (örneğin, durdurup tarafından [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]).  
+> `expansionsList`Dizi listis performans nedeniyle önbelleğe alındı. Dil hizmeti durdurulup yeniden yükleninceye kadar kod parçacıklarında yapılan değişiklikler listede yansıtılmaz (örneğin, durduruluyor ve yeniden başlatılır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ).  
   
 ```csharp  
 class TestLanguageService : LanguageService  
@@ -127,13 +127,13 @@ class TestLanguageService : LanguageService
 }  
 ```  
   
-### <a name="to-use-the-snippet-information"></a>Kod parçacığı bilgileri kullanmak için  
+### <a name="to-use-the-snippet-information"></a>Kod parçacığı bilgilerini kullanmak için  
   
-1. Aşağıdaki kod parçacığı tarafından döndürülen bilgileri işlemi gösterilir `GetSnippets` yöntemi. `AddSnippets` Ayrıştırıcı yanıt olarak kod parçacıkları listesini doldurmak için kullanılan herhangi bir ayrıştırma nedenle yöntemi çağrılır. İlk kez tam ayrıştırma üzere tamamladıktan sonra bu yer almalıdır.  
+1. Aşağıdaki kod, yöntemi tarafından döndürülen kod parçacığı bilgilerinin nasıl kullanılacağını gösterir `GetSnippets` . `AddSnippets`Yöntemi, kod parçacıklarının listesini doldurmak için kullanılan herhangi bir ayrıştırma nedenine yanıt olarak Ayrıştırıcıdan çağrılır. Bu işlem, tam ayrıştırma ilk kez gerçekleştirildikten sonra gerçekleşmelidir.  
   
-     `AddDeclaration` Yöntemi daha sonra tamamlama listesinde görüntülenen bildirimleri listesini oluşturur.  
+     `AddDeclaration`Yöntemi, daha sonra tamamlama listesinde görüntülenen bildirimlerin bir listesini oluşturur.  
   
-     `TestDeclaration` Sınıf türü bildiriminin yanı sıra tamamlanma listesi içinde görüntülenen tüm bilgileri içerir.  
+     `TestDeclaration`Sınıfı, tamamlama listesinde görüntülenebilen tüm bilgileri ve bildirimin türünü içerir.  
   
     ```csharp  
     class TestAuthoringScope : AuthoringScope  

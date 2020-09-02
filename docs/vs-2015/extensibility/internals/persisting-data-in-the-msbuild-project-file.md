@@ -1,5 +1,5 @@
 ---
-title: MSBuild proje dosyasında kalıcı veri | Microsoft Docs
+title: MSBuild proje dosyasındaki verileri kalıcı hale getirme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,62 +11,62 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 39d2ab449c3623a90dd76729b46a9f353900fc88
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704126"
 ---
 # <a name="persisting-data-in-the-msbuild-project-file"></a>MSBuild Proje Dosyasında Verileri Kalıcı Hale Getirme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Daha sonra kullanmak için proje dosyası içine alt özgü verileri kalıcı hale getirmek bir proje alt gerekebilir. Proje alt türü, aşağıdaki gereksinimleri karşılaması için proje dosya kalıcılığına kullanır:  
+Bir proje alt türünün, daha sonra kullanmak üzere, alt türe özgü verileri proje dosyasında kalıcı hale getirmeniz gerekebilir. Proje alt türü, aşağıdaki gereksinimleri karşılamak için proje dosyası kalıcılığını kullanır:  
   
-1. Proje oluşturmanın bir parçası olarak kullanılan verileri kalıcı hale getirin. (Microsoft Build Engine hakkında daha fazla bilgi için bkz. [MSBuild](https://msdn.microsoft.com/7c49aba1-ee6c-47d8-9de1-6f29a906e20b).) Derlemeyle ilgili bilgileri şunlardan birini yapabilirsiniz:  
+1. Projeyi oluşturmanın bir parçası olarak kullanılan verileri kalıcı hale getirin. (Microsoft Build Engine hakkında daha fazla bilgi için bkz. [MSBuild](https://msdn.microsoft.com/7c49aba1-ee6c-47d8-9de1-6f29a906e20b).) Derlemeden ilgili bilgiler şunlardan biri olabilir:  
   
-    1. Bağımsız yapılandırma verileri. Diğer bir deyişle, MSBuild öğeleri boş veya eksik koşullarla depolanan veriler.  
+    1. Yapılandırmaya bağımsız veriler. Diğer bir deyişle, boş veya eksik koşullara sahip MSBuild öğelerinde depolanan veriler.  
   
-    2. Bağımlı yapılandırma verileri. Diğer bir deyişle, belirli bir proje yapılandırması için koşuluna MSBuild öğeleri depolanan veriler. Örneğin:  
+    2. Yapılandırmaya bağlı veriler. Diğer bir deyişle, belirli bir proje yapılandırması için koşullu olan MSBuild öğelerinde depolanan veriler. Örneğin:  
   
         ```  
         <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">  
         ```  
   
-2. Derlemek ilgili olmayan verileri kalıcı hale getirin. Bu veriler, bir XML şemasına göre doğrulanmadı serbest biçimli XML olarak ifade edilebilir.  
+2. Derleme için uygun olmayan verileri kalıcı hale getirin. Bu veriler, bir XML şemasına göre doğrulanmamış serbest biçimli XML 'de ifade edilebilir.  
   
-    1. Bağımsız yapılandırma verileri.  
+    1. Yapılandırmaya bağımsız veriler.  
   
-    2. Bağımlı yapılandırma verileri.  
+    2. Yapılandırmaya bağlı veriler.  
   
-## <a name="persisting-build-related-information"></a>Derlemeyle ilgili bilgileri kalıcı hale getirme  
- Bir proje oluşturmak için faydalı veri kalıcılığı MSBuild işlenir. MSBuild sistemi bir ana tablo derlemeyle ilgili bilgileri tutar. Proje alt türleri almak ve özellik değerlerini ayarlamak için bu verilere erişmek için sorumlu olursunuz. Proje alt türleri kalıcı için ek özellikler ekleyerek ve kalıcı olmayan şekilde özellikleri kaldırarak ayrıca derlemeyle ilgili veri tablosu genişletebilirsiniz.  
+## <a name="persisting-build-related-information"></a>Derleme ile Ilgili kalıcı bilgiler  
+ Bir proje oluşturmak için faydalı verilerin kalıcılığı MSBuild aracılığıyla işlenir. MSBuild sistemi, derleme ile ilgili bilgilerin ana tablosunu tutar. Proje alt türleri, özellik değerlerini almak ve ayarlamak için bu verilere erişmenin sorumluluğundadır. Proje alt türleri ayrıca, kalıcı olacak ek özellikler ekleyerek ve kalıcı olmadıkları için özellikleri kaldırarak derleme ile ilgili veri tablosunu da artırabilir.  
   
- MSBuild verileri değiştirmek için bir proje alt türü temel proje sistemi MSBuild property nesnesini almak için sorumlu <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>. <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> Temel Proje sistemi ve toplama proje alt sorgular için çalıştırarak uygulanan bir arabirim `QueryInterface`.  
+ MSBuild verilerini değiştirmek için bir proje alt türü, ile temel proje sisteminden MSBuild özellik nesnesini almaktan sorumludur <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> , temel proje sisteminde uygulanan bir arabirimdir ve, toplanan proje alt türü tarafından çalıştırılarak sorgular `QueryInterface` .  
   
- Aşağıdaki yordamı kullanarak bir özelliği kaldırmak için gereken adımları özetler <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>.  
+ Aşağıdaki yordamda, kullanarak bir özelliği kaldırma adımları özetlenmektedir <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> .  
   
-#### <a name="to-remove-a-property-from-an-msbuild-project-file"></a>Bir MSBuild proje dosyasından bir özelliği kaldırmak için  
+#### <a name="to-remove-a-property-from-an-msbuild-project-file"></a>MSBuild proje dosyasından bir özelliği kaldırmak için  
   
-1. Çağrı `QueryInterface` üzerinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> , proje alt türü.  
+1. `QueryInterface` <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> Proje alt türü üzerinde çağrı.  
   
-2. Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.RemoveProperty%2A> ile `pszPropName` kaldırmak istediğiniz özelliğini ayarlayın.  
+2. Öğesini <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.RemoveProperty%2A> `pszPropName` kaldırmak istediğiniz özelliğe ayarlayın.  
   
-### <a name="persisting-non-build-related-information"></a>Derleme olmayan ilgili bilgileri kalıcı hale getirme  
- Proje dosyaları oluşturmak için önemli değildir veri kalıcılığı aracılığıyla işlenir <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>.  
+### <a name="persisting-non-build-related-information"></a>Derleme dışı Ilgili bilgileri kalıcı hale getirme  
+ Derleme önemi olmayan proje dosyalarındaki verilerin kalıcılığını aracılığıyla ele alınır <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> .  
   
- Uygulayabileceğiniz <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> ana `project subtype aggregator` nesnesi `project subtype project configuration` nesne veya her ikisini de.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>Ana `project subtype aggregator` nesne, `project subtype project configuration` nesne veya her ikisine de uygulayabilirsiniz.  
   
- Aşağıdaki noktaları kavramlarla ilgili derleme dışı ilgili bilgilerin Kalıcılık özetler.  
+ Aşağıdaki noktalara, derleme olmayan ilgili bilgilerin sürekliliği ile ilgili başlıca kavramlar ana hatlarıyla verilmiştir.  
   
-- Yükleme ve yapılandırma bağımsız veri kaydetmek için ana proje alt türü (diğer bir deyişle, en dıştaki proje alt) toplayıcısı nesne üzerinde temel projenin çağırır ve yüklemek veya bağımlı yapılandırmasını kaydetmek için proje alt proje yapılandırma nesneler üzerinde çağrılır veriler.  
+- Temel proje, yapılandırmaya bağlı verileri yüklemek veya kaydetmek için ana proje alt türü (yani, en dıştaki proje alt türü) toplayıcı nesnesi ve proje alt türü proje yapılandırma nesneleri üzerinde çağrılır.  
   
-- Temel projenin yöntemlerini çağıran <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> birden çok kez her proje alt toplama düzeyi için ve her düzeyi bir GUID geçirir.  
+- Temel proje <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> her bir proje alt tür toplaması için birden çok kez yöntemini çağırır ve her düzey IÇIN GUID 'yi geçirir.  
   
-- Temel projenin geçer veya belirli proje alt türü için ayrılmış ve kalıcı hale getirme durumu toplama düzeyleri arasındaki bir yol olarak bu mekanizma kullanan bir XML parçası alır.  
+- Temel proje, belirli bir proje alt türüne ayrılmış bir XML parçasını geçirir veya alır ve bu mekanizmayı toplama düzeyleri arasındaki kalıcı durum olarak kullanır.  
   
-- Temel projenin en dıştaki proje alt'ın çağıran <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment>GUID geçirme uygulaması. GUID için en dıştaki proje alt aitse, çağrı işler; Aksi takdirde GUID karşılık gelen proje alt bulunana kadar çağrısı bir iç proje alt türü ve benzeri atar.  
+- Temel proje, bir GUID içinde geçen en dıştaki proje alt türünün <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> uygulamasını çağırır. GUID en dıştaki proje alt türüne aitse, çağrıyı işler. Aksi halde, bir iç proje alt türüne çağrı atar ve bu, GUID 'ye karşılık gelen proje alt türü bulunana kadar bu şekilde devam eder.  
   
-- Önce veya sonra çağrısı bir iç proje alt temsilcilerin bir proje alt XML parçası de değiştirebilirsiniz. Aşağıdaki örnek, burada bir proje alt türü için belirli özellikleri içeren dosyanın adını geçirilir, proje alt türü için bir proje dosyası kitabından gösterir.  
+- Bir proje alt türü Ayrıca, bir iç proje alt türüne çağrı temsilcince veya sonrasında XML parçasını değiştirebilir. Aşağıdaki örnek, proje alt türüne özgü özellikleri içeren bir dosyanın adının bu proje alt türüne geçirildiği bir proje dosyasındaki bir alıntıyı gösterir.  
   
     ```  
     <ProjectExtensions>  

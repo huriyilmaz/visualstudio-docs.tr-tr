@@ -12,52 +12,52 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b54250a54960f346f60c5d668755fb5d28ab376e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63430206"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64833011"
 ---
 # <a name="launching-a-program"></a>Program Başlatma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir programda hata ayıklamak istediğiniz kullanıcıları, IDE'den hata ayıklayıcıyı çalıştırmak için F5 tuşuna basabilirsiniz. Bu, bir dizi nihai olarak hangi sırayla bağlı veya bağlı, programa şu şekilde bir hata ayıklama altyapısı (DE), IDE'nin bağlanırken neden olayı başlar:  
+Bir programda hata ayıklamak isteyen kullanıcılar, hata ayıklayıcıyı IDE 'den çalıştırmak için F5 'e basabilir. Bu, son olarak IDE 'nin bir hata ayıklama altyapısına (DE) bağlanmasına neden olan bir dizi olayı başlatır, bu da aşağıdaki gibi programa bağlı veya bağlı  
   
-1. IDE, çözümün etkin proje hata ayıklama ayarları almak için proje paketi ilk çağırır. Ayarlar başlangıç dizinini, ortam değişkenleri, programın çalıştırılacağı bağlantı noktası ve program oluşturma işleminin belirtilmişse kullanmak için DE içerir. Bu ayarlar, hata ayıklama paketi geçirilir.  
+1. IDE, çözümün etkin proje hata ayıklama ayarlarını almak için ilk olarak proje paketini çağırır. Ayarlar başlangıç dizini, ortam değişkenleri, programın çalıştırılacağı bağlantı noktası ve belirtilmişse programı oluşturmak için kullanılacak olan ' u içerir. Bu ayarlar hata ayıklama paketine geçirilir.  
   
-2. Bir DE belirtilirse, program başlatmak için işletim sistemi DE çağırır. Program başlatma söz konusu kümelerdeki programın çalışma zamanı ortamının yüklü. Örneğin, bir program MSIL yazılmışsa, ortak dil çalışma zamanı programı çalıştırmak için çağrılır.  
+2. Bir DE belirtilmişse, programı başlatmak için işletim sistemini çağırır. Programın başlatılması sonucunda programın çalışma zamanı ortamı yüklenir. Örneğin, bir program MSIL 'de yazılmışsa, programı çalıştırmak için ortak dil çalışma zamanı çağrılır.  
   
     -veya-  
   
-    Bir DE belirtilmezse, bağlantı noktası programın çalışma zamanı ortamı yüklenmesine neden programını başlatmak için işletim sistemi çağırır.  
+    Bir DE belirtilmemişse, bağlantı noktası programı başlatmak için işletim sistemini çağırır, bu da programın çalışma zamanı ortamının yüklenmesine neden olur.  
   
    > [!NOTE]
-   > Bir programı başlatmak için kullanılan bir DE, aynı DE programa bağlı olasıdır.  
+   > Bir programı başlatmak için bir DE kullanılıyorsa, büyük olasılıkla programa DE aynı şekilde eklenecektir.  
   
-3. Olup DE veya bağlantı noktası program başlatıldı, bağlı olarak DE veya çalışma zamanı ortamı daha sonra bir program açıklaması veya düğümü oluşturur ve program çalışırken bağlantı noktasını bildirir.  
+3. Ya da bağlantı noktasının programı başlatdığına bağlı olarak, DE veya çalışma zamanı ortamı bir program açıklaması veya düğüm oluşturur ve programın çalıştırdığı bağlantı noktasına bildirir.  
   
    > [!NOTE]
-   > Basit bir gösterimiyse hata ayıklaması yapılabilir bir program, program düğümü olduğu için çalışma zamanı ortamı program düğümü oluşturmanız önerilir. Yalnızca oluşturup bir program düğümünü kaydetmek için tüm DE yüklemek için gerek yoktur. DE tasarlanmışsa IDE, ancak hiçbir IDE sürecinde çalıştırmak için gerçekten çalıştıran, var. bağlantı noktasına bir program düğümü ekleyebilirsiniz bir bileşeni olması gerekir.  
+   > Program düğümü, hata ayıklamakta olabilecek bir programın hafif bir gösterimi olduğundan, çalışma zamanı ortamının program düğümünü oluşturması önerilir. Yalnızca bir program düğümü oluşturmak ve kaydetmek için bir DE tamamen yüklenmesi gerekmez. Aynı IDE işleminde çalışmak üzere tasarlanmışsa, ancak aslında hiç IDE çalışmıyorsa, bir program düğümünü bağlantı noktasına ekleyebileceğinden bir bileşen olması gerekir.  
   
-   Diğer programları yanı sıra yeni oluşturulan programı ilişkili ilgisi olmayan, başlatılan veya aynı IDE'den hata ayıklama oturumu oluşturmak için ekli.  
+   Yeni oluşturulan program, ile ilgili veya ilgisiz, aynı IDE 'den başlatılan veya bağlı olan diğer programlarla birlikte bir hata ayıklama oturumu oluşturabilir.  
   
-   Programlı olarak kullanıcı ilk bastığında **F5**, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]'s paketinin Hatalarını Ayıkla çağırır (Bu başlatılmayı program türü ile ilişkili olan) proje paketi aracılığıyla <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> sırayla doldurduğu yöntemi, bir <xref:Microsoft.VisualStudio.Shell.Interop.VsDebugTargetInfo2> çözümün etkin proje hata ayıklama ayarlarıyla yapısı. Bu yapı hata ayıklama pakete yapılan bir çağrıyla geçirilen <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebugger2.LaunchDebugTargets2%2A> yöntemi. Hata ayıklama paketi sonra hata ayıklaması ve herhangi ilişkili hata ayıklama motorlarını programı başlatan oturum hata ayıklama Yöneticisi (SDM) başlatır.  
+   Programlı olarak, Kullanıcı **F5**tuşuna bastığında [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] hata ayıklama paketi, yöntemi aracılığıyla proje paketini (başlatılan programın türüyle ilişkili) çağırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg.DebugLaunch%2A> , bu da <xref:Microsoft.VisualStudio.Shell.Interop.VsDebugTargetInfo2> çözümün etkin proje hata ayıklama ayarlarıyla bir yapıyı doldurur. Bu yapı, yöntemi çağrısıyla hata ayıklama paketine geri geçirilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebugger2.LaunchDebugTargets2%2A> . Hata ayıklama paketi daha sonra oturum hata ayıklama Yöneticisi 'ni (SDM) başlatır ve bu, hata ayıklanan programı ve ilişkili hata ayıklama altyapılarını başlatır.  
   
-   SDM için geçirilen bağımsız değişkenlerden biri DE programını başlatmak için kullanılacak GUID'dir.  
+   SDM 'ye geçirilen bağımsız değişkenlerden biri, programı başlatmak için kullanılan DE GUID 'nin GUID 'sidir.  
   
-   DE GUID değilse `GUID_NULL`, SDM DE birlikte oluşturur ve ardından çağırır, [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) programını başlatmak için yöntemi. Örneğin, bir program sonra yerel kod halinde yazılmış `IDebugEngineLaunch2::LaunchSuspended` büyük olasılıkla çağıracak `CreateProcess` ve `ResumeThread` (programı çalıştırmak için Win32 işlevlerini).  
+   Aynı GUID değilse `GUID_NULL` , SDM ortak oluşturur ve sonra programı başlatmak Için [launchaskıya alındı](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemini çağırır. Örneğin, bir program yerel kodda yazılmışsa, `IDebugEngineLaunch2::LaunchSuspended` `CreateProcess` programı çalıştırmak için muhtemelen çağrı yapılır ve `ResumeThread` (Win32 işlevleri).  
   
-   Program başlatma söz konusu kümelerdeki programın çalışma zamanı ortamının yüklü. DE ya da çalışma zamanı ortamı oluşturur, ardından bir [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) bu arabirime geçirir ve program tanımlamak için arabirim [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) program bağlantı noktasını bildirmek için çalışıyor.  
+   Programın başlatılması sonucunda programın çalışma zamanı ortamı yüklenir. Daha sonra, veya çalışma zamanı ortamı, programı anlatmak için bir [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) arabirimi oluşturur ve bu arabirimi programın çalıştırdığı bağlantı noktasına bildirmek Için [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) 'a geçirir.  
   
-   Varsa `GUID_NULL` gönderilir, ardından bağlantı noktası program başlatılır. Program çalışmaya başladığında, çalışma zamanı ortamı oluşturur bir `IDebugProgramNode2` geçirir ve program tanımlamak için arabirim `IDebugPortNotify2::AddProgramNode`. Bu, program çalışırken bağlantı noktası durumu bildirir. Ardından SDM çalışan programa hata ayıklama altyapısı ekler.  
+   `GUID_NULL`Geçirilirse, bağlantı noktası programı başlatır. Program çalışmaya başladıktan sonra çalışma zamanı ortamı, `IDebugProgramNode2` programı tanımlayacak bir arabirim oluşturur ve bunu öğesine geçirir `IDebugPortNotify2::AddProgramNode` . Bu, programın çalıştırdığı bağlantı noktasına bildirir. Sonra, SDM hata ayıklama altyapısını çalışan programa iliştirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Bağlantı Noktasına Bildirme](../../extensibility/debugger/notifying-the-port.md)  
- Bir program çalışıyor ve bağlantı noktası bildirim sonra ne olacağını açıklar.  
+ Bir program başlatıldıktan ve bağlantı noktasına bildirimde bulunulduktan sonra ne olacağını açıklar.  
   
  [Başlatmadan Sonra Ekleme](../../extensibility/debugger/attaching-after-a-launch.md)  
- Hata ayıklama oturumunu DE program eklemek hazır olduğunda belgeler.  
+ Hata ayıklama oturumu programa eklemek için hazırsa belgeler.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Hata Ayıklama Görevleri](../../extensibility/debugger/debugging-tasks.md)  
- Program başlatma ve ifadeleri değerlendirme gibi çeşitli hata ayıklama görevlerini bağlantılar içerir.
+ Bir program başlatma ve ifadeleri değerlendirme gibi çeşitli hata ayıklama görevlerinin bağlantılarını içerir.

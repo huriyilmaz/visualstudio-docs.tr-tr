@@ -1,5 +1,5 @@
 ---
-title: Değerlendirme Bildirimi
+title: EvaluateStatement
 ms.date: 02/25/2019
 ms.topic: reference
 f1_keywords:
@@ -14,27 +14,27 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d2b6333b6b57891065b42c2d56e3acfe68b315de
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595663"
 ---
 # <a name="evaluate-statement-command"></a>Deyimi Değerlendir komutu
 
 Verilen ifadeyi değerlendirir ve görüntüler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 >Debug.EvaluateStatement text
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
 `text`
 
-Gereklidir. İfadeyi değerlendirmek için.
+Gereklidir. Değerlendirilecek olan ifade.
 
 ## <a name="example"></a>Örnek
 
@@ -44,8 +44,8 @@ Gereklidir. İfadeyi değerlendirmek için.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yazdır Komutu](../../ide/reference/print-command.md)
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Yazdır komutu](../../ide/reference/print-command.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

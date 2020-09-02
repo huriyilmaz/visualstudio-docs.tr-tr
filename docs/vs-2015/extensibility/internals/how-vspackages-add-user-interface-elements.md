@@ -1,5 +1,5 @@
 ---
-title: Nasıl VSPackages kullanıcı arabirimi öğeleri eklemesi | Microsoft Docs
+title: VSPackages Kullanıcı arabirimi öğeleri ekleme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,32 +13,32 @@ caps.latest.revision: 61
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 553c502c100cbb6ed4ae249096af408af14423b4
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436118"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64833466"
 ---
 # <a name="how-vspackages-add-user-interface-elements"></a>VSPackage’ların Kullanıcı Arabirimi Öğeleri Eklemesi
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-VSPackage kullanıcı arabirimi (UI) öğeleri, örneğin, menüler, araç çubuklarını, ekleyebilir ve Visual Studio .vsct dosyası kullanarak bir windows aracı.  
+VSPackage,. vsct dosyası aracılığıyla, menüler, araç çubukları ve araç pencereleri gibi kullanıcı arabirimi (UI) öğelerini Visual Studio 'ya ekleyebilir.  
   
- Kullanıcı Arabirimi öğeleri için tasarım yönergeleri bulabilirsiniz [Visual Studio kullanıcı deneyimi yönergeleri](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  
+ [Visual Studio Kullanıcı deneyimi yönergelerinden](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md)Kullanıcı arabirimi öğeleri için tasarım yönergeleri bulabilirsiniz.  
   
 ## <a name="the-visual-studio-command-table-architecture"></a>Visual Studio komut tablosu mimarisi  
- Belirtildiği gibi komut tablosu mimarisi hükümlerde mimari ilkeleri destekler. Soyutlamalar, veri yapılarını ve araçlar komut tablosu mimarisinin arkasında sacayakları aşağıdaki gibidir:  
+ Belirtildiği gibi, komut tablosu mimarisi, mimari ilkelerini destekler. Soyutlamalar, veri yapıları ve komut tablosu mimarisinin araçlarının ardındaki olanaklar şunlardır:  
   
-- Üç temel türlerde öğeler vardır: menü komutları ve gruplar. Menüleri kullanıcı Arabiriminde, menüleri, alt menüler, araç çubukları ve araç pencereleri sunulabilir. Kullanıcı IDE içinde yürütülebilir, ve menü öğeleri, düğmeler, liste kutuları veya diğer denetimleri sunulabilir yordamları komutlardır. Grupları, menüler ve komutlar kapsayıcılardır.  
+- Üç temel öğe türü vardır: menüler, komutlar ve gruplar. Menüler, Kullanıcı arabiriminde menüler, alt menüler, araç çubukları veya araç pencereleri olarak gösterilebilir. Komutlar, kullanıcının IDE 'de yürütebilecekleri yordamlardır ve menü öğeleri, düğmeler, liste kutuları veya diğer denetimler olarak ortaya çıkabilir. Gruplar hem menüler hem de komutlar için kapsayıcılardır.  
   
-- Her öğe, öğe diğer öğeleri ve davranışını değiştirmek bayrakları göreli önceliğini açıklayan tanımı tarafından belirtilir.  
+- Her öğe, öğeyi tanımlayan bir tanım ile belirtilir ve diğer öğelere göre önceliğini ve davranışını değiştiren bayrakları belirtir.  
   
-- Her öğenin üst öğesinin açıklayan bir yerleştirme vardır. Böylece kullanıcı arabiriminde birden fazla konumda görünebilir bir öğe birden çok üst öğeye sahip olabilir.  
+- Her öğenin, öğenin üst öğesini açıklayan bir yerleştirmesi vardır. Bir öğe birden çok üst öğeye sahip olabilir, böylece kullanıcı arabiriminde birden çok konumda görünebilirler.  
   
-     Bu gruptaki yalnızca alt olsa bile, her komut kendi üst öğesi olarak bir grup olmalıdır. Her standart menü, ayrıca bir üst grubu olmalıdır. Araç çubukları ve araç pencerelerini, kendi üst davranır. Bir grup ana Visual Studio menü çubuğunda, üst veya tüm menü, araç çubuğunda veya araç penceresi olabilir.  
+     Her komutun, o gruptaki tek alt öğe olsa bile, üst öğesi olarak bir grubu olması gerekir. Her standart menünün de bir üst grubu olmalıdır. Araç çubukları ve araç pencereleri kendi üst öğeleri gibi davranır. Bir grup, ana Visual Studio menü çubuğunun veya herhangi bir menü, araç çubuğu ya da araç penceresinin üst öğesi olabilir.  
   
-### <a name="how-items-are-defined"></a>Öğeleri nasıl tanımlanır  
- . Vsct dosyaları XML biçimlendirilir. .Vsct dosyası bir paket için kullanıcı Arabirimi öğelerini tanımlar ve bu öğeleri IDE'de nerede görüneceğini belirler. Her menü, Grup veya paketteki komutu bir GUID ve ID, ilk atanan `Symbols` bölümü. .vsct geri kalan aşamalarında, dosya, her menüsü, komut ve grup, GUID ve ID bileşimiyle tanımlanır. Aşağıdaki örnekte gösterilmektedir `Symbols` bölümünde Visual Studio Paket şablon tarafından oluşturulan olduğunda bir **menü komutu** şablonu seçilir.  
+### <a name="how-items-are-defined"></a>Öğeler nasıl tanımlanır  
+ . Vsct dosyaları XML olarak biçimlendirilir. . Vsct dosyası bir paket için Kullanıcı arabirimi öğelerini tanımlar ve bu öğelerin IDE 'de nerede göründüğünü belirler. Paketteki her menü, Grup veya komuta ilk olarak bölümünde bir GUID ve KIMLIK atanır `Symbols` . . Vsct dosyasının geri kalanı boyunca, her menü, komut ve Grup, GUID ve ID birleşimiyle tanımlanır. Aşağıdaki örnekte, `Symbols` şablonda bir **menü komutu** seçildiğinde Visual Studio paket şablonu tarafından oluşturulan tipik bir bölüm gösterilmektedir.  
   
 ```xml  
 <Symbols>  
@@ -62,42 +62,42 @@ VSPackage kullanıcı arabirimi (UI) öğeleri, örneğin, menüler, araç çubu
 </Symbols>  
 ```  
   
- Üst düzey öğesi `Symbols` bölüm [GuidSymbol öğesi](../../extensibility/guidsymbol-element.md). `GuidSymbol` öğe adları IDE tarafından paketleri ve bunların bileşen parçalarına tanımlamak için kullanılan GUID'lere eşleyin.  
+ Bölümünün en üst düzey öğesi `Symbols` [GuidSymbol öğesidir](../../extensibility/guidsymbol-element.md). `GuidSymbol` öğeler, paketleri ve bileşen parçalarını tanımlamak için IDE tarafından kullanılan GUID 'Lerle eşlenir.  
   
 > [!NOTE]
-> GUID'ler, Visual Studio Paket şablon tarafından otomatik olarak oluşturulur. Tıklayarak benzersiz bir GUID oluşturabilirsiniz **GUID Oluştur** üzerinde **Araçları** menüsü.  
+> GUID 'Ler, Visual Studio paket şablonu tarafından otomatik olarak oluşturulur. **Araçlar** menüsünde **GUID oluştur** ' a TıKLAYARAK da benzersiz bir GUID oluşturabilirsiniz.  
   
- İlk `GuidSymbol` öğesi, "GUID [PackageName] Pkg", paket GUID'idir. Paketi yüklemek için Visual Studio tarafından kullanılan GUID budur. Genellikle, alt öğe yok.  
+ İlk `GuidSymbol` öğe olan "Guid [PackageName] pkg", paketin GUID 'sidir. Bu, paketi yüklemek için Visual Studio tarafından kullanılan GUID 'dir. Genellikle alt öğeleri yoktur.  
   
- Kural gereği, menüler ve komutlar saniyenin altında gruplandırılır `GuidSymbol` öğesi, "GUID [PackageName] CmdSet", ve bit eşlemler altında üçüncü `GuidSymbol` öğesi, "guidImages". Bu kurala uymayan gerekmez, ancak her bir menü, Grup, komut ve bit eşlem alt öğesi olmalıdır bir `GuidSymbol` öğesi.  
+ Kurala göre, menüler ve komutlar ikinci bir `GuidSymbol` öğe olan "Guid [PackageName] CmdSet" ve bit eşlemler üçüncü bir `GuidSymbol` öğe, "Guıges" altında gruplandırılır. Bu kuralı izlemeniz gerekmez, ancak her menü, Grup, komut ve bit eşlem bir `GuidSymbol` öğenin alt öğesi olmalıdır.  
   
- İkinci `GuidSymbol` paket komut kümesini temsil eden öğe çok sayıda `IDSymbol` öğeleri. Her [Idsymbol öğesi](../../extensibility/idsymbol-element.md) sayısal bir değer için bir ad eşler ve menü, Grup veya komut kümesinin bir parçası olan komutu temsil edebilir. `IDSymbol` Üçüncü öğeleri `GuidSymbol` simgelerle komutları için kullanılabilir öğe temsil bit eşlemler. GUID/ID çiftleri uygulamada iki alt aynı benzersiz olması gerektiğinden `GuidSymbol` öğesi aynı değere sahip olabilir.  
+ İkinci `GuidSymbol` öğesinde, paket komut kümesini temsil eden birkaç öğesidir `IDSymbol` . Her [IDSymbol öğesi](../../extensibility/idsymbol-element.md) bir adı sayısal değerle eşleştirir ve komut kümesinin parçası olan bir menü, Grup veya komutu temsil edebilir. `IDSymbol`Üçüncü öğedeki öğeler, `GuidSymbol` Komutlar için simge olarak kullanılabilecek bit eşlemleri temsil eder. GUID/ID çiftlerinin bir uygulamada benzersiz olması gerektiğinden, aynı öğenin iki alt öğesi `GuidSymbol` aynı değere sahip olamaz.  
   
-### <a name="menus-groups-and-commands"></a>Menüleri, gruplar ve komutlar  
- Bir menü, Grup veya komut bir GUID ve ID olduğunda, IDE eklenebilir. Her kullanıcı Arabirimi öğesi şunları içermelidir:  
+### <a name="menus-groups-and-commands"></a>Menüler, gruplar ve komutlar  
+ Bir menü, Grup veya komut bir GUID ve ID 'ye sahip olduğunda, IDE 'ye eklenebilir. Her UI öğesi aşağıdaki şeylere sahip olmalıdır:  
   
-- A `guid` adıyla eşleşen öznitelik `GuidSymbol` UI öğesi altında tanımlanmış bir öğe.  
+- `guid` `GuidSymbol` UI öğesinin altında tanımlandığı öğenin adıyla eşleşen bir özniteliği.  
   
-- Bir `id` ilişkili adıyla eşleşen öznitelik `IDSymbol` öğesi.  
+- `id`İlişkili öğenin adıyla eşleşen bir öznitelik `IDSymbol` .  
   
-     Birlikte `guid` ve `id` öznitelikleri compose *imza* UI öğesi.  
+     Birlikte, `guid` ve `id` öznitelikleri, Kullanıcı arabirimi öğesinin *imzasını* oluşturan.  
   
-- A `priority` UI öğesi kendi üst menü ya da Grup yerleşimini belirler özniteliği.  
+- `priority`Kullanıcı arabirimi öğesinin üst menü veya grubunda yerleşimini belirleyen bir özniteliği.  
   
-- A [üst öğe](../../extensibility/parent-element.md) olan `guid` ve `id` imza üst menü veya grubun belirten öznitelikleri.  
+- [Parent Element](../../extensibility/parent-element.md) `guid` `id` Üst menünün veya grubun imzasını belirten ve öznitelikleri olan bir üst öğe.  
   
 #### <a name="menus"></a>Menüler  
- Her menüye olarak tanımlanan bir [menü öğesi](../../extensibility/menu-element.md) içinde `Menus` bölümü. Menüler olmalıdır `guid`, `id`, ve `priority` öznitelikleri ve `Parent` öğesini ve ayrıca aşağıdaki ek öznitelikleri ve alt öğeleri:  
+ Her menü, bölümünde bir [menü öğesi](../../extensibility/menu-element.md) olarak tanımlanır `Menus` . Menüler `guid` , `id` , ve `priority` öznitelikleri ve bir `Parent` öğesi ve ayrıca aşağıdaki ek öznitelikleri ve alt öğeleri içermelidir:  
   
-- A `type` menü IDE'deki bir menü veya araç çubuğu olarak görüntülenip görüntülenmeyeceğini belirten özniteliği.  
+- `type`Menünün IDE 'de bir menü türü veya bir araç çubuğu olarak görünüp görünmeyeceğini belirten bir özniteliği.  
   
-- A [Strings öğesi](../../extensibility/strings-element.md) içeren bir [ButtonText öğesi](../../extensibility/buttontext-element.md), IDE'de menünün başlığını belirtir ve bir [CommandName öğesi](../../extensibility/commandname-element.md), adını belirtir kullanılan **komut** menüye erişmek için penceresi.  
+- IDE 'deki menünün başlığını belirten bir bir [ButtonText öğesi](../../extensibility/buttontext-element.md)ve menüye erişmek için **komut** penceresinde kullanılan adı belirten bir [CommandName öğesi](../../extensibility/commandname-element.md)içeren [dizeler öğesi](../../extensibility/strings-element.md) .  
   
-- İsteğe bağlı bayraklar. A [Command Flag öğesi](../../extensibility/command-flag-element.md) görünüşünü veya IDE'de davranışını değiştirmek için bir menü tanımı görünebilir.  
+- İsteğe bağlı bayraklar. Bir [komut bayrağı öğesi](../../extensibility/command-flag-element.md) , IDE 'deki görünümünü veya davranışını değiştirmek için bir menü tanımında görünebilir.  
   
-  Her `Menu` öğesi içermelidir bir grubu kendi üst öğesi olarak gibi bir araç çubuğunun yerleştirilebilir bir öğesi olmadığı sürece. Yerleştirilebilir bir menü kendi üst öğesidir. Menüler ve değerleri hakkında daha fazla bilgi için `type` özniteliği için bkz: [menü öğesi](../../extensibility/menu-element.md) belgeleri.  
+  `Menu`Bir araç çubuğu gibi yerleştirilebilir bir öğe olmadığı sürece her öğe kendi üst öğesi olarak bir gruba sahip olmalıdır. Yerleştirilebilir bir menü kendi üst öğesidir. Özniteliği için menüler ve değerler hakkında daha fazla bilgi için `type` , bkz. [menü öğesi](../../extensibility/menu-element.md) belgeleri.  
   
-  Aşağıdaki örnek, Visual Studio menü çubuğunda, yanındaki açılan menü gösterir **Araçları** menüsü.  
+  Aşağıdaki örnekte, **Araçlar** menüsünün yanındaki Visual Studio menü çubuğunda görüntülenen bir menü gösterilmektedir.  
   
 ```xml  
 <Menu guid="guidTopLevelMenuCmdSet"  
@@ -112,9 +112,9 @@ id="TopLevelMenu" priority="0x700" type="Menu">
 ```  
   
 #### <a name="groups"></a>Gruplar  
- Bir grubu içinde tanımlanan bir öğedir `Groups` .vsct dosyası bölümünü. Gruplar yalnızca kapsayıcılardır. IDE dışında bir menüdeki bir çizgi olarak görünmezler. Bu nedenle, bir [Group öğesi](../../extensibility/group-element.md) yalnızca kendi imzası, öncelik ve üst tarafından tanımlanır.  
+ Grup, `Groups` . vsct dosyasının bölümünde tanımlanan bir öğedir. Gruplar yalnızca kapsayıcılardır. Bu kişiler, bir menüdeki bölme çizgisi haricinde IDE 'de görünmez. Bu nedenle, bir [Grup öğesi](../../extensibility/group-element.md) yalnızca imzası, önceliği ve üst tarafından tanımlanır.  
   
- Bir grupta, üst öğe olarak menü, başka bir grup veya kendisi olabilir. Ancak, üst genellikle bir menü veya araç olur. Önceki örnekte menüde bir alt öğesidir `IDG_VS_MM_TOOLSADDINS` grubu ve bu grubu Visual Studio menü çubuğunda alt öğesi olan. Aşağıdaki örnekte önceki örnekte menünün alt grubudur.  
+ Bir grup, üst öğe olarak bir menü, başka bir grup veya kendisi olabilir. Ancak, üst öğe genellikle bir menü veya araç çubuğudur. Önceki örnekteki menü, grubun bir alt öğesidir `IDG_VS_MM_TOOLSADDINS` ve bu grup, Visual Studio menü çubuğunun bir alt öğesidir. Aşağıdaki örnekteki Grup, önceki örnekteki menünün bir alt öğesidir.  
   
 ```  
  <Group guid="guidTopLevelMenuCmdSet" id="MyMenuGroup"  
@@ -123,7 +123,7 @@ priority="0x0600">
  </Group>  
 ```  
   
- Bir menü bir parçası olduğundan, bu Grup genellikle komutları içerir. Ancak, diğer menülere de içerebilir. Alt menüler nasıl tanımlanır, aşağıdaki örnekte gösterildiği gibi budur.  
+ Bir menünün parçası olduğundan, bu grup genellikle komutları içerir. Ancak, diğer menüleri de içerebilir. Bu, aşağıdaki örnekte gösterildiği gibi alt menülerin tanımlanandır.  
   
 ```xml  
 <Menu guid="guidTopLevelMenuCmdSet" id="SubMenu"  
@@ -137,12 +137,12 @@ priority="0x0100" type="Menu">
 ```  
   
 #### <a name="commands"></a>Komutlar  
- IDE için sağlanan bir komut olarak tanımlanan bir [Button öğesi](../../extensibility/button-element.md) veya [Combos öğesi](../../extensibility/combo-element.md). Bir menü veya araç çubuğu üzerinde görünmesi için komut kendi üst öğesi olarak bir grup olmalıdır.  
+ IDE 'ye sunulan bir komut, bir [Button öğesi](../../extensibility/button-element.md) ya da bir [kombo öğesi](../../extensibility/combo-element.md)olarak tanımlanır. Bir menü veya araç çubuğunda görünmesi için, komutun üst öğesi olarak bir grubu olmalıdır.  
   
 ##### <a name="buttons"></a>Düğmeler  
- Düğmeler tanımlanmış `Buttons` bölümü. Tüm menü öğesi, düğme veya tek bir komut çalıştırmak için bir kullanıcı tıkladığında başka bir öğenin bir düğme olarak kabul edilir. Bazı düğme türleri listesi işlevselliği de içerebilir. Düğmeleri aynı gerekli ve menüler olan isteğe bağlı öznitelikleri vardır ve ayrıca olabilir bir [Icon öğesi](../../extensibility/icon-element.md) GUID ve IDE'de düğmesi nesnesini temsil eden bir bit eşlem Kimliğini belirtir. Düğmeler ve onların öznitelikleri hakkında daha fazla bilgi için bkz: [Buttons öğesi](../../extensibility/buttons-element.md) belgeleri.  
+ Düğmeler `Buttons` bölümünde tanımlanmıştır. Herhangi bir menü öğesi, düğme veya kullanıcının tek bir komutu yürütmek için tıkladığı diğer öğe bir düğme olarak kabul edilir. Bazı düğme türlerinde ayrıca liste işlevselliği de bulunabilir. Düğmelerin aynı gerekli ve isteğe bağlı öznitelikleri vardır ve IDE 'deki düğmeyi temsil eden bit eşlemin GUID ve KIMLIĞINI belirten bir [simge öğesi](../../extensibility/icon-element.md) de olabilir. Düğmeler ve öznitelikleri hakkında daha fazla bilgi için, [düğmeler öğesi](../../extensibility/buttons-element.md) belgelerine bakın.  
   
- Düğme aşağıdaki örnekte önceki örnekte grubunun bir alt öğesidir ve IDE'de menü öğesi o grubun üst menüsünde görünür.  
+ Aşağıdaki örnekte yer alan düğme, önceki örnekteki grubun bir alt öğesidir ve IDE 'de bu grubun ana menüsünde bir menü öğesi olarak görünür.  
   
 ```  
 <Button guid="guidTopLevelMenuCmdSet" id="cmdidTestCommand" priority="0x0100" type="Button">  
@@ -156,13 +156,13 @@ priority="0x0100" type="Menu">
 ```  
   
 ##### <a name="combos"></a>Combos  
- Combos tanımlanmış `Combos` bölümü. Her `Combo` öğesi, IDE'yi bir açılan liste kutusunda temsil eder. Liste kutusu olabilir veya değerine bağlı olarak, kullanıcılar tarafından yazılabilir olmayabilir `type` birleşik giriş özniteliği. Combos aynı öğeleri varsa ve düğme davranışı sahip ve aşağıdaki ek öznitelikleri de sahip olabilir:  
+ Combos, `Combos` bölümünde tanımlanmıştır. Her `Combo` öğe, IDE 'deki bir açılan liste kutusunu temsil eder. Birleşik giriş özniteliğinin değerine bağlı olarak, liste kutusu kullanıcılar tarafından yazılabilir veya olmayabilir `type` . Combos, düğmelerin sahip olduğu öğelere ve davranışa sahiptir ve aşağıdaki ek özniteliklere de sahip olabilir:  
   
-- A `defaultWidth` piksel genişliği belirten özniteliği.  
+- `defaultWidth`Piksel genişliğini belirten bir özniteliği.  
   
-- Bir `idCommandList` liste kutusunda görüntülenen öğeler içeren bir liste belirten özniteliği. Komut listesi aynı şekilde bildirilmelidir `GuidSymbol` birleşik giriş içeren düğümü.  
+- `idCommandList`Liste kutusunda görüntülenen öğeleri içeren bir listeyi belirten bir özniteliği. Komut listesi, `GuidSymbol` Birleşik giriş içeren aynı düğümde bildirilmelidir.  
   
-  Aşağıdaki örnek, bir combos öğesi tanımlar.  
+  Aşağıdaki örnek bir Birleşik öğe öğesi tanımlar.  
   
 ```xml  
 <Combos>  
@@ -185,34 +185,34 @@ priority="0x0100" type="Menu">
 ```  
   
 ##### <a name="bitmaps"></a>Bit Eşlemler  
- Bir simge ile birlikte görüntülenir komutları içermelidir bir `Icon` kendi GUID ve Kimliği'ni kullanarak bir bit eşleme başvurduğu öğesi Her bir bit eşlem olarak tanımlanan bir [Bitmap öğesi](../../extensibility/bitmap-element.md) içinde `Bitmaps` bölümü. Öznitelikler için yalnızca gerekli bir `Bitmap` definition `guid` ve `href`, kaynak dosyaya işaret eder. Bir kaynak Şerit kaynak dosyası ise, bir **usedList** özniteliktir Ayrıca Şerit kullanılabilir görüntüleri listelemek için gerekli. Daha fazla bilgi için [Bitmap öğesi](../../extensibility/bitmap-element.md) belgeleri.  
+ Bir simge ile birlikte görüntülenecek komutlar `Icon` , GUID ve ID kullanarak bir bit eşlem 'e başvuran bir öğe içermelidir. Her bit eşlem, bölümünde bir [bit eşlem öğesi](../../extensibility/bitmap-element.md) olarak tanımlanır `Bitmaps` . Bir tanım için yalnızca gerekli öznitelikler `Bitmap` `guid` ve `href` kaynak dosyayı işaret eder. Kaynak dosya bir kaynak şeridinde ise, şerit 'teki kullanılabilir görüntüleri listelemek için bir **usedList** özniteliği de gereklidir. Daha fazla bilgi için, bkz. [bit eşlem öğesi](../../extensibility/bitmap-element.md) belgeleri.  
   
-### <a name="parenting"></a>Üst öğe oluşturma  
- Aşağıdaki kurallar, bir öğe başka bir öğe üst öğe olarak nasıl çağırabilirsiniz kapsar.  
+### <a name="parenting"></a>Olma  
+ Aşağıdaki kurallar bir öğenin üst öğesi olarak başka bir öğeyi nasıl çağırabilme şeklini yönetir.  
   
-|Öğe|Bu komut tablosu bölümünde tanımlanan|Bulunabilecek (üst öğe olarak veya yerleşimden `CommandPlacements` bölüm veya her ikisi)|İçerebilir (üst öğe olarak adlandırılır)|  
+|Öğe|Komut tablosunun bu bölümünde tanımlanmıştır|Bulunabilir (üst öğe veya `CommandPlacements` bölüme yerleştirme veya her ikisi de)|Bulunabilir (üst öğe olarak adlandırılır)|  
 |-------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------|  
-|Grup|[Groups öğesi](../../extensibility/groups-element.md), IDE, diğer VSPackage'ları|Bir menü, bir Grup öğesi|Menüleri, gruplar ve komutlar|  
-|Menü|[Menus öğesi](../../extensibility/menus-element.md), IDE, diğer VSPackage'ları|1 *n* grupları|0 olarak *n* grupları|  
-|Araç Çubuğu|[Menus öğesi](../../extensibility/menus-element.md), IDE, diğer VSPackage'ları|Öğesi|0 olarak *n* grupları|  
-|Menü Öğesi|[Buttons öğesi](../../extensibility/buttons-element.md), IDE, diğer VSPackage'ları|1 *n* öğe gruplandırır|-0 olarak *n* grupları|  
-|Düğme|[Buttons öğesi](../../extensibility/buttons-element.md), IDE, diğer VSPackage'ları|1 *n* öğe gruplandırır||  
-|Birleşik giriş|[Combos öğesi](../../extensibility/combos-element.md), IDE, diğer VSPackage'ları|1 *n* öğe gruplandırır||  
+|Gruplama|[Groups öğesi](../../extensibility/groups-element.md), IDE, diğer VSPackages|Bir menü, Grup, öğenin kendisi|Menüler, gruplar ve komutlar|  
+|Menü|[Menüler öğesi](../../extensibility/menus-element.md), IDE, diğer VSPackages|1- *n* Grup|0- *n* Grup|  
+|Araç Çubuğu|[Menüler öğesi](../../extensibility/menus-element.md), IDE, diğer VSPackages|Öğenin kendisi|0- *n* Grup|  
+|Menü Öğesi|[Düğmeler öğesi](../../extensibility/buttons-element.md), IDE, diğer VSPackages|1- *n* Grup, öğenin kendisi|-0- *n* Grup|  
+|Düğme|[Düğmeler öğesi](../../extensibility/buttons-element.md), IDE, diğer VSPackages|1- *n* Grup, öğenin kendisi||  
+|Birleşik|[Combos öğesi](../../extensibility/combos-element.md), IDE, diğer VSPackages|1- *n* Grup, öğenin kendisi||  
   
-### <a name="menu-command-and-group-placement"></a>Menü ve komut grubunu yerleştirme  
- Bir menü, Grup veya komut IDE içindeki birden fazla yerde görünebilir. Bir öğenin birden fazla konumda görünmesini eklenmesi gerekir `CommandPlacements` bölümü bir [CommandPlacement öğesi](../../extensibility/commandplacement-element.md). Herhangi bir menü, Grup veya komutu bir komut yerleşimi eklenebilir. Ancak, bağlama duyarlı birden fazla konumda yer alamaz çünkü araç çubukları bu şekilde yerleştirilmiş olamaz.  
+### <a name="menu-command-and-group-placement"></a>Menü, komut ve grup yerleştirme  
+ Bir menü, Grup veya komut IDE 'de birden fazla konumda görünebilir. Bir öğenin birden çok konumda görünmesi için, `CommandPlacements` bir [Commandyerleştirme öğesi](../../extensibility/commandplacement-element.md)olarak bölümüne eklenmelidir. Herhangi bir menü, Grup veya komut, komut yerleşimi olarak eklenebilir. Ancak, birden çok bağlama duyarlı konumlarda görünemediği için araç çubukları bu şekilde konumlandırılamıyor.  
   
- Komut yerleştirme özgürlüğünü sahip `guid`, `id`, ve `priority` öznitelikleri. GUID ve ID konumlandırılmış öğesinin eşleşmelidir. `priority` Öznitelik öğe diğer öğeleri onaylamaz yerleşimini yönetir. IDE aynı önceliğe sahip iki veya daha fazla öğeyi birleştirir, IDE paket oluşturulan her zaman aynı sırada paket kaynakları okuma garantisi vermez çünkü bunların yerleşimi tanımsızdır.  
+ Komut yerleştirmelerinin `guid` , `id` , ve `priority` öznitelikleri vardır. GUID ve ID, konumlandırılmış olan öğe ile aynı olmalıdır. `priority`Özniteliği, öğenin diğer öğelerle ilgili yerleşimini yönetir. IDE, aynı önceliğe sahip iki veya daha fazla öğeyi birleşdiğinde, IDE paket kaynaklarının paket her oluşturulduğunda aynı sırada okunduğundan emin olmadığından, bunların yerleşimi tanımsızdır.  
   
- Bir menü veya grup birden fazla konumda görünürse, her örneğinde tüm alt öğeleri bu menü veya grup görünür.  
+ Bir menü veya Grup birden çok konumda görünürse, bu menünün veya grubun tüm alt öğeleri her örnekte görünür.  
   
-## <a name="command-visibility-and-context"></a>Komut görünürlük ve bağlam  
- Birden çok VSPackages yüklendiğinde bir bolluk menüleri ve menü öğeleri araç çubukları, IDE dağıtmayı. Bu sorunu önlemek için tek tek kullanıcı Arabirimi öğeleri görünürlüğünü kullanarak denetleyebilirsiniz *görünürlük kısıtlamaları* ve komut bayrakları.  
+## <a name="command-visibility-and-context"></a>Komut görünürlüğü ve bağlamı  
+ Birden çok VSPackages yüklendiğinde, menülerin, menü öğelerinin ve araç çubuklarının bir yeteretsi IDE 'nin dağınıklığını etkileyebilir. Bu sorundan kaçınmak için, tek tek kullanıcı arabirimi öğelerinin görünürlüğünü *görünürlük kısıtlamalarını* ve komut bayraklarını kullanarak kontrol edebilirsiniz.  
   
 ##### <a name="visibility-constraints"></a>Görünürlük kısıtlamaları  
- Görünürlüğü kısıtlama olarak ayarlanmış bir [Visibilityıtem öğesi](../../extensibility/visibilityitem-element.md) içinde `VisibilityConstraints` bölümü. Görünürlüğü kısıtlama hedef öğe görülebilir belirli UI bağlamı tanımlar. Yalnızca tanımlanmış bağlamları birini etkinken bir menü veya bu bölümünde yer alan komut görülebilir. Bu bölümde bir menü veya komut başvurulmuyorsa her zaman varsayılan olarak görünürdür. Bu bölüm grupları için geçerli değildir.  
+ Görünürlük kısıtlaması, bölümünde bir [VisibilityItem öğesi](../../extensibility/visibilityitem-element.md) olarak ayarlanır `VisibilityConstraints` . Görünürlük kısıtlaması, hedef öğenin görünür olduğu belirli kullanıcı arabirimi bağlamlarını tanımlar. Bu bölümde yer alan bir menü veya komut yalnızca tanımlı bağlamlarından biri etkin olduğunda görülebilir. Bu bölümde bir menü veya komuta başvurulmuyorsa, her zaman varsayılan olarak görünür. Bu bölüm, gruplar için geçerlidir.  
   
- `VisibilityItem` öğeleri olmalıdır üç öznitelikleri gibi: `guid` ve `id` hedef UI öğesinin ve `context`. `context` Zaman hedef öğe görünür ve değeri olarak geçerli bir kullanıcı Arabirimi bağlamı alan özniteliğini belirtir. Visual Studio UI bağlamı sabitleri üyeleri <xref:Microsoft.VisualStudio.VSConstants> sınıfı. Her `VisibilityItem` öğesi yalnızca bir bağlam değeri alabilir. İkinci bağlam uygulamak için ikinci bir oluşturma `VisibilityItem` aşağıdaki örnekte gösterildiği gibi aynı öğeye işaret eden bir öğe.  
+ `VisibilityItem` öğeler, aşağıdaki gibi üç özniteliğe sahip olmalıdır: `guid` ve `id` hedef UI öğesi ve `context` . `context`Öznitelik, hedef öğenin görünür olacağını belirtir ve değeri olarak geçerli herhangi bir kullanıcı arabirimi bağlamını alır. Visual Studio için Kullanıcı arabirimi bağlamı sabitleri, <xref:Microsoft.VisualStudio.VSConstants> sınıfının üyeleridir. Her `VisibilityItem` öğe yalnızca bir bağlam değeri alabilir. İkinci bir bağlam uygulamak için, `VisibilityItem` Aşağıdaki örnekte gösterildiği gibi, aynı öğeye işaret eden ikinci bir öğe oluşturun.  
   
 ```xml  
 <VisibilityConstraints>  
@@ -226,80 +226,80 @@ priority="0x0100" type="Menu">
 ```  
   
 ##### <a name="command-flags"></a>Komut bayrakları  
- Aşağıdaki komut bayrakları, uygulandıkları komutlar ve menüler görünürlüğünü etkileyebilir.  
+ Aşağıdaki komut bayrakları, uygulanan menülerin ve komutların görünürlüğünü etkileyebilir.  
   
  AlwaysCreate  
- Herhangi bir düğme veya grupları sahip olsa bile menü oluşturulur.  
+ Menü, Grup veya düğme içermediğinden bile oluşturulur.  
   
- Geçerlilik süresi: `Menu`  
+ Geçerli: `Menu`  
   
- CommandWellOnly  
- Bu bayrak komutu üst düzey menüsünde görünmez ve ek Kabuğu özelleştirme için kullanılabilir hale getirmek istiyorsanız, bir anahtara bağlama uygulayın. VSPackage'ı yükledikten sonra bir kullanıcı bu komutları açarak özelleştirebilirsiniz **seçenekleri** iletişim kutusunu ve ardından komut yerleştirme altında düzenleme **klavye ortam** kategorisi. Kısayol menüleri, araç çubukları, menü denetleyicisi veya alt menüler yerleştirme etkilemez.  
+ Yalnızca commandwell  
+ Bu bayrağı, komut üst düzey menüde görünmezse ve ek kabuk özelleştirmesi için kullanılabilir hale getirmek istiyorsanız, örneğin bir anahtara bağlama yaparsanız uygulayın. VSPackage yüklendikten sonra, Kullanıcı bu komutları özelleştirerek **Seçenekler** iletişim kutusunu açıp **klavye ortamı** kategorisi altındaki komut yerleşimini düzenleyerek özelleştirebilirsiniz. , Kısayol menülerinde, araç çubuklarında, menü denetleyicilerinde veya alt menülerde yerleşimi etkilemez.  
   
- İçin geçerli: `Button`, `Combo`  
+ Geçerli: `Button` , `Combo`  
   
  DefaultDisabled  
- Varsayılan olarak, komut, komut uygulayan VSPackage yüklenmedi veya QueryStatus yöntemi çağrılmadı devre dışıdır.  
+ Varsayılan olarak, komutu uygulayan VSPackage yüklü değilse veya QueryStatus yöntemi çağrılmışsa, komut devre dışıdır.  
   
- İçin geçerli: `Button`, `Combo`  
+ Geçerli: `Button` , `Combo`  
   
- DefaultInvisible  
- Varsayılan olarak, komut uygulayan VSPackage yüklenmedi veya QueryStatus yöntemi çağrılmadı komutu görünmez durumdadır.  
+ Defaulınvisible  
+ Varsayılan olarak, komutu uygulayan VSPackage yüklü değilse veya QueryStatus yöntemi çağrılmışsa, komut görünmez.  
   
- İle birleştirilmelidir `DynamicVisibility` bayrağı.  
+ Bayrağıyla birleştirilmelidir `DynamicVisibility` .  
   
- İçin geçerli: `Button`, `Combo`, `Menu`  
+ Geçerli: `Button` , `Combo` , `Menu`  
   
  DynamicVisibility  
- Komut görünürlüğünü QueryStatus yöntemi veya bir bağlam eklenmiştir GUID kullanarak değiştirilebilir `VisibilityConstraints` bölümü.  
+ Komutun görünürlüğü, QueryStatus yöntemi veya bölümüne dahil olan bir bağlam GUID 'SI kullanılarak değiştirilebilir `VisibilityConstraints` .  
   
- Menüleri, araç çubukları üzerinde görünmesini komutları için geçerlidir. Üst düzey araç çubuğu öğelerini devre dışı ancak OLECMDF_INVISIBLE bayrağı QueryStatus yöntemden döndürüldüğünde, gizli değil.  
+ Araç çubuklarında değil menülerde görüntülenen komutlar için geçerlidir. QueryStatus yönteminden OLECMDF_INVISIBLE bayrağı döndürüldüğünde, üst düzey araç çubuğu öğeleri devre dışı bırakılabilir, ancak gizlenemez.  
   
- Menüde üyelerini gizli olduğunda bunu otomatik olarak gizlenmelidir bu bayrağı da gösterir. Üst düzey menüler bu davranışı olduğundan bu bayrağı için alt menüler genellikle atanır.  
+ Bir menüde, bu bayrak, üyeleri gizli olduğunda otomatik olarak gizlenmesi gerektiğini de belirtir. Üst düzey menülerde bu davranış zaten olduğu için bu bayrak genellikle alt menülere atanır.  
   
- İle birleştirilmelidir `DefaultInvisible` bayrağı.  
+ Bayrağıyla birleştirilmelidir `DefaultInvisible` .  
   
- İçin geçerli: `Button`, `Combo`, `Menu`  
+ Geçerli: `Button` , `Combo` , `Menu`  
   
  NoShowOnMenuController  
- Bu bayrak sahip bir komut menü denetleyicisi üzerinde konumlandırılmış, komutu aşağı açılan listede görünmez.  
+ Bu bayrağa sahip bir komut bir menü denetleyicisine yerleştirilmezse, komut açılan listede görünmez.  
   
- Geçerlilik süresi: `Button`  
+ Geçerli: `Button`  
   
- Komut bayrakları hakkında daha fazla bilgi için bkz: [Command Flag öğesi](../../extensibility/command-flag-element.md) belgeleri.  
+ Komut bayrakları hakkında daha fazla bilgi için bkz. [komut bayrağı öğe](../../extensibility/command-flag-element.md) belgeleri.  
   
 ##### <a name="general-requirements"></a>Genel gereksinimler  
- Önce görüntülenen ve etkin, komut aşağıdaki dizi test geçirilmelidir:  
+ Komutunuz görüntülenmeden ve etkinleştirilmeden önce aşağıdaki test serisini iletmelidir:  
   
-- Komutu, doğru yerleştirilir.  
+- Komut doğru şekilde konumlandırıldı.  
   
-- `DefaultInvisible` Bayrağı ayarlı değil.  
+- `DefaultInvisible`Bayrak ayarlanmadı.  
   
-- Üst menü veya araç çubuğu görünür olur.  
+- Üst menü ya da araç çubuğu görünür.  
   
-- Komut bir bağlam giriş nedeniyle görünmez değil [VisibilityConstraints öğesi](../../extensibility/visibilityconstraints-element.md) bölümü.  
+- Bu komut, [Visibilitykısıtlamalar öğesi](../../extensibility/visibilityconstraints-element.md) bölümündeki bir bağlam girişi nedeniyle görünmez değildir.  
   
-- VSPackage'ı uygulayan kodu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi görüntüler ve komutunuzu sağlar. Hiçbir arabirimi kodu, bunu engelledik ve üzerinde işlem.  
+- Arabirimi uygulayan VSPackage kodu, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> komutunuz görüntüleyip sağlar. Hiçbir arabirim kodu yakalandığından ve üzerinde işlem yaptığı için bu yok.  
   
-- Kullanıcı komutu tıkladığında, ana hatlarıyla açıklanan yordamı tabi olur [yönlendirme algoritması](../../extensibility/internals/command-routing-algorithm.md).  
+- Bir Kullanıcı komutunuzu tıkladığında, [yönlendirme algoritmasında](../../extensibility/internals/command-routing-algorithm.md)özetlenen yordama tabi olur.  
   
-## <a name="calling-pre-defined-commands"></a>Arama önceden tanımlı komutları  
- [UsedCommands öğesi](../../extensibility/usedcommands-element.md) VSPackages IDE veya diğer VSPackage'ları tarafından sağlanan erişim komutlarını sağlar. Bunu yapmak için oluşturun bir [UsedCommand öğesi](../../extensibility/usedcommand-element.md) GUID ve kullanmak için komutu kimliği vardır. Geçerli Visual Studio yapılandırmasının bir parçası olmasa bile bu komutu Visual Studio tarafından yüklenen sağlar. Daha fazla bilgi için [UsedCommand öğesi](../../extensibility/usedcommand-element.md).  
+## <a name="calling-pre-defined-commands"></a>Önceden tanımlanmış komutlar çağrılıyor  
+ [UsedCommands öğesi](../../extensibility/usedcommands-element.md) , VSPackages 'ın diğer VSPackages tarafından veya IDE tarafından sağlanmış komutlara erişmesini sağlar. Bunu yapmak için, kullanılacak komutun GUID ve KIMLIĞINE sahip bir [UsedCommand öğesi](../../extensibility/usedcommand-element.md) oluşturun. Bu, geçerli Visual Studio yapılandırmasının bir parçası olmasa bile, komutun Visual Studio tarafından yüklenmesini sağlar. Daha fazla bilgi için bkz. [UsedCommand öğesi](../../extensibility/usedcommand-element.md).  
   
 ## <a name="interface-element-appearance"></a>Arabirim öğesi görünümü  
- Seçme ve komut öğeleri konumlandırma konuları aşağıdaki gibidir:  
+ Komut öğelerini seçme ve konumlandırma konuları aşağıdaki gibidir:  
   
-- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] farklı yerleştirme bağlı olarak görünen birçok kullanıcı Arabirimi öğeleri sunar.  
+- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , yerleştirmeye göre farklı şekilde görüntülenen birçok UI öğesi sağlar.  
   
-- Tarafından tanımlanan bir kullanıcı Arabirimi öğesi `DefaultInvisible` bayrağı görüntülenmeyecek IDE'de ya da kendi VSPackage uygulaması tarafından görüntülenen olmadığı sürece <xref:EnvDTE.IDTCommandTarget.QueryStatus%2A> yöntemi veya belirli bir kullanıcı Arabirimi bağlamda ilişkili `VisibilityConstraints` bölümü.  
+- Bayrak kullanılarak tanımlanan bir UI öğesi, `DefaultInvisible` yönteminin VSPackage uygulamasıyla görüntülenmediği <xref:EnvDTE.IDTCommandTarget.QueryStatus%2A> ya da bölümde belırlı bir UI bağlamı ile ilişkili OLMADıĞı müddetçe IDE 'de görüntülenmez `VisibilityConstraints` .  
   
-- Başarıyla konumlandırılmış bir komut görüntülenmeyebilir. Bu IDE otomatik olarak gizler veya VSPackage'ı (veya değil) arabirimler bağlı olarak bazı komutlar görüntüler için uygulanır. Örneğin, bazı VSPackage'nın uygulama yapı arabirimleri nedenleri derlemeyle ilgili menü öğeleri otomatik olarak gösterilecek.  
+- Başarılı bir şekilde konumlandırılmış komut görünmeyebilir. Bunun nedeni, IDE 'nin, VSPackage 'ın uygulamadığı arayüzlere bağlı olarak bazı komutları otomatik olarak gizlediğini veya görüntülediğini gösterir. Örneğin, bir VSPackage 'ın bazı derleme arabirimlerinin uygulanması, derleme ile ilgili menü öğelerinin otomatik olarak gösterilmesine neden olur.  
   
-- Uygulama `CommandWellOnly` UI öğesinin tanımını bayrağı anlamına gelir komutu yalnızca özelleştirme tarafından eklenebilir.  
+- Bayrak, `CommandWellOnly` UI öğesinin tanımına uygulandığında, komutun yalnızca özelleştirmeye göre eklenebileceği anlamına gelir.  
   
-- IDE Tasarım görünümünde olduğunda yalnızca bir iletişim kutusu görüntülendiğinde, komutları yalnızca belirli kullanıcı Arabirimi bağlamlarda Bu, örneğin, kullanılabilir olabilir.  
+- Komutlar yalnızca belirli kullanıcı arabirimi bağlamlarında kullanılabilir (örneğin, IDE Tasarım görünümünde olduğunda bir iletişim kutusu görüntülendiğinde).  
   
-- IDE içinde görüntülenecek belirli UI öğeleri neden olmak için bir veya daha fazla arabirimi uygulayan veya biraz kod yazalım.  
+- IDE 'de belirli kullanıcı arabirimi öğelerinin görüntülenmesine neden olmak için bir veya daha fazla arabirim uygulamanız veya kod yazmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Menüleri ve Komutlari Genişletme](../../extensibility/extending-menus-and-commands.md)

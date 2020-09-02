@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 06f9de6927d616d6cf08995c076246c8a45ec014
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85815974"
 ---
 # <a name="how-to-select-the-xml-schemas-to-use"></a>Nasıl yapılır: kullanılacak XML şemalarını seçme
@@ -58,7 +58,7 @@ Belirttiğiniz şemalar bir (gizli) çözüm Kullanıcı seçenekleri dosyasına
 
 3. Şema önbelleğine eklenecek şemaya gözatıp seçin.
 
-4. **Aç**'a tıklayın.
+4. **Aç**’a tıklayın.
 
    Şemalar şema önbelleğine eklenir ve **Use** sütun değeri **Bu şemayı kullanacak**şekilde ayarlanır.
 

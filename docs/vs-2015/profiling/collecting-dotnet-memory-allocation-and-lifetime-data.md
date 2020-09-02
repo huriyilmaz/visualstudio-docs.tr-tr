@@ -13,76 +13,76 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 68decc73e14f8748d8434e05e50d6d3b48612d40
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436776"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64816121"
 ---
 # <a name="collecting-net-memory-allocation-and-lifetime-data"></a>.NET Bellek Ayırma ve Yaşam Süresi Verilerini Toplama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .NET bellek ayırma koleksiyonunu destek profil oluşturma araçları ve yardımcı olan nesne yaşam verisi uygulamanızda bellekle ilgili performans sorunlarını algılama.  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Profil Oluşturma Araçları, uygulamanızda bellekle ilgili performans sorunlarını algılamanıza yardımcı olan .NET bellek ayırma ve nesne yaşam süresi verilerinin toplanmasını destekler.  
   
-- Ayrılan .NET Framework bellek nesnelerinin sayısı ve boyutu .NET bellek ayırma hakkındaki verileri içerir.  
+- .NET bellek ayırma hakkındaki veriler, ayrılan .NET Framework bellek nesnelerinin boyutunu ve sayısını içerir.  
   
-- Nesne yaşam verisi üç çöp toplama kuşakları geri kazanılan .NET Framework bellek nesnelerinin sayısı ve boyutu içerir.  
+- Nesne yaşam süresi verileri, üç çöp toplama nesekte geri kazanılan .NET Framework bellek nesnelerinin boyutunu ve sayısını içerir.  
   
   **Gereksinimler**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 > [!NOTE]
-> Windows 8 ve Windows Server 2012'deki Gelişmiş güvenlik özellikleri Visual Studio profil oluşturucu bu platformlarda veri toplayan bir şekilde önemli değişiklikler gerekmiştir. Windows Store apps ayrıca yeni toplama teknikleri gerektirir. Bkz: [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+> Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. Windows Mağazası uygulamaları da yeni koleksiyon teknikleri gerektirir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
- Örnekleme veya yöntemi profil oluşturma Araçları'nı kullanarak veri toplayabilir.  
+ Örnekleme veya izleme profili oluşturma yöntemini kullanarak verileri toplayabilirsiniz.  
   
-- Örnekleme yöntemini kullandığınızda, profil oluşturucu tüm .NET bellek ayırma ve kullanmaya veya bağlı işlem tarafından oluşturulan nesneleri izler.  
+- Örnekleme yöntemini kullandığınızda, Profil Oluşturucu tüm .NET bellek ayırmalarını ve başlatılan veya öğesine bağlı işlem tarafından oluşturulan nesneleri izler.  
   
-- Araçlar yöntemini kullandığınızda, profil oluşturucu yalnızca .NET bellek ayırma ve izleme eklenmiş modülleri tarafından oluşturulan nesneleri izler.  
+- İzleme yöntemini kullandığınızda, Profil Oluşturucu yalnızca bu .NET bellek ayırmalarını ve belgelenmiş modüller tarafından oluşturulan nesneleri izler.  
   
 > [!IMPORTANT]
-> .NET bellek verileri (ayırma, nesne kullanım ömrü veya her ikisi de) örnekleme yöntemini kullanarak topladığınız, tüm kullanıcı tarafından belirtilen örnekleme olayları göz ardı edilir ve uygun bir bellek ayırma olayları toplamak için kullanılır.  
+> Örnekleme yöntemini kullanarak .NET bellek verileri (ayırmalar, nesne ömürleri veya her ikisi de) toplarken, Kullanıcı tarafından belirtilen tüm örnekleme olayları yok sayılır ve uygun bellek ayırma olayları veri toplamak için kullanılır.  
   
- Profil oluşturma of.NET bellek ayırma etkinleştirirseniz, ayrıca ayırma görünümü sağlar. Profil oluşturma .NET yaşam süresi verilerini etkinleştirirseniz, ayrıca nesne ömrü görünümü sağlar. Daha fazla bilgi için [ayırma görünümü](../profiling/dotnet-memory-allocations-view.md) ve [nesne ömrü görünümü](../profiling/object-lifetime-view.md).  
+ Profil oluşturma of.NET bellek ayırmayı etkinleştirirseniz, ayırma görünümünü de etkinleştirirsiniz. .NET ömür verilerinin profilini oluşturmayı etkinleştirirseniz, nesne ömrü görünümünü de etkinleştirirsiniz. Daha fazla bilgi için bkz. [ayırma görünümü](../profiling/dotnet-memory-allocations-view.md) ve [nesne ömrü görünümü](../profiling/object-lifetime-view.md).  
   
- Profil Araçları komut satırı araçları kullanarak .NET bellek verileri toplamak nasıl hakkında daha fazla bilgi için bkz: kullanarak .NET bellek yöntemleri toplamak bellek ayırma ve nesne yaşam verisi [profil oluşturma yöntemleri gelen komut satırını kullanarak](../profiling/using-profiling-methods-to-collect-performance-data-from-the-command-line.md).  
+ Profil Oluşturma Araçları komut satırı araçlarını kullanarak .NET bellek verilerinin nasıl toplanacağı hakkında daha fazla bilgi için, bkz. [komut satırından profil oluşturma yöntemlerini kullanarak](../profiling/using-profiling-methods-to-collect-performance-data-from-the-command-line.md)bellek ayırmayı ve nesne yaşam süresi verilerini toplamak Için .net bellek yöntemlerini kullanma.  
   
 ### <a name="to-collect-net-memory-data"></a>.NET bellek verileri toplamak için  
   
-1. İçinde **performans Gezgini**performans oturumu sağ tıklayın ve ardından **özellikleri**.  
+1. **Performans Gezgini**, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
-2. Üzerinde _performans oturumu_**özellik sayfaları** iletişim kutusu, tıklayın **genel** sekmesine tıklayın ve **toplamak .NET nesnesi ayırma bilgilerini** onay kutusu.  
+2. _Performans oturumu_**Özellik sayfaları** iletişim kutusunda, **genel** sekmesine tıklayın ve **.NET nesne ayırma bilgilerini topla** onay kutusunu seçin.  
   
-3. .NET nesnesi ömür verilerini toplamak için seçin **ayrıca .NET nesnesi ömür bilgilerini toplayın** onay kutusu.  
+3. .NET nesne yaşam süresi verilerini toplamak için **.NET nesne yaşam süresi bilgilerini de topla** onay kutusunu seçin.  
   
 ## <a name="common-tasks"></a>Ortak Görevler  
- Ek seçenekler belirtebilirsiniz _performans oturumu_**özellik sayfaları** performans oturumunun iletişim kutusu. Bu iletişim kutusunu açmak için:  
+ Performans oturumunun _performans oturumu_**Özellik sayfaları** iletişim kutusunda ek seçenekleri belirtebilirsiniz. Bu iletişim kutusunu açmak için:  
   
-- İçinde **performans Gezgini**performans oturumu adına sağ tıklayın ve ardından **özellikleri**.  
+- **Performans Gezgini**, performans oturumu adına sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
-  Aşağıdaki tabloda görevler belirleyebilirsiniz seçenekleri açıklanmıştır _performans oturumu_**özellik sayfaları** .NET bellek verileri toplamak için iletişim kutusuna.  
+  Aşağıdaki tabloda yer alan görevler, .NET bellek verilerini toplarken _performans oturumu_**Özellik sayfaları** iletişim kutusunda belirtebileceğiniz seçenekleri anlatmaktadır.  
   
-|Görev|İlgili içerik|  
+|Görev|İlgili İçerik|  
 |----------|---------------------|  
-|Üzerinde **genel** sayfasında, oluşturulan profil oluşturma veri (.vsp) dosyasının adlandırma ayrıntıları belirtin.|-   [.NET bellek ayırma ve yaşam süresi verilerini toplama](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />-   [Nasıl Yapılır: Performans Veri Dosyası Adlandırma Seçeneklerini Ayarlama](../profiling/how-to-set-performance-data-file-name-options.md)|  
-|Üzerinde **başlatma** kod çözümünüz içinde birden çok .exe projeniz varsa başlatılacak uygulamayı seçin.|-   [Katman etkileşim verileri toplama](../profiling/collecting-tier-interaction-data.md)|  
-|Üzerinde **katman etkileşim** sayfasında, profil oluşturma çalışması için ADO.NET çağrı veri ekleyin.|-   [Katman etkileşim verileri toplama](../profiling/collecting-tier-interaction-data.md)|  
-|Üzerinde **Windows olayları** sayfasında, bir veya daha fazla olay izleme için Windows (ETW) olayları, örnekleme verileri toplama belirtin.|-   [Nasıl Yapılır: Windows İçin Olay İzleme (ETW) Verileri Toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|  
-|Üzerinde **Windows sayaçları** sayfasında işaretleri olarak profil oluşturma verilerini eklemek için bir veya daha fazla işletim sistemi performans sayaçları belirtin.|-   [Nasıl Yapılır: Windows Sayaç Verileri Toplama](../profiling/how-to-collect-windows-counter-data.md)|  
-|Üzerinde **Gelişmiş** sayfasında, uygulama modüllerinizi birden çok sürümü kullanırsanız profili .NET Framework çalışma zamanının sürümünü belirtin. Varsayılan olarak yüklenen ilk sürüm profil oluşturulan.|-   [Nasıl Yapılır: .NET Framework Çalışma Zamanını Belirtme](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|  
+|**Genel** sayfasında, oluşturulan profil oluşturma verileri (. vsp) dosyasının adlandırma ayrıntılarını belirtin.|-   [.NET bellek ayırma ve yaşam süresi verilerini toplama](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />-   [Nasıl yapılır: performans veri dosyası adı seçeneklerini ayarlama](../profiling/how-to-set-performance-data-file-name-options.md)|  
+|Kod çözümünüzde birden çok. exe projeniz varsa, **Başlat sayfasında başlatılacak** uygulamayı seçin.|-   [Katman etkileşimi verilerini toplama](../profiling/collecting-tier-interaction-data.md)|  
+|**Katman etkileşimi** sayfasında, profil oluşturma çalıştırmasına ADO.NET çağrı verileri ekleyin.|-   [Katman etkileşimi verilerini toplama](../profiling/collecting-tier-interaction-data.md)|  
+|**Windows olayları** sayfasında, örnekleme verileriyle toplanacak bir veya daha fazla Windows Için olay Izleme (ETW) olayları belirtin.|-   [Nasıl yapılır: Windows için olay Izleme (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)|  
+|**Windows sayaçları** sayfasında, profil oluşturma verilerine işaret eklemek için bir veya daha fazla işletim sistemi performans sayacı belirtin.|-   [Nasıl yapılır: Windows sayaç verileri toplama](../profiling/how-to-collect-windows-counter-data.md)|  
+|**Gelişmiş** sayfasında, uygulama modülleriniz birden çok sürüm kullanıyorsa, profil için .NET Framework çalışma zamanının sürümünü belirtin. Varsayılan olarak, yüklenen ilk sürüm profili oluşturulur.|-   [Nasıl yapılır: .NET Framework çalışma zamanını belirtme](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|  
   
-## <a name="instrumentation-tasks"></a>Görevleri izleme  
- Seçenekler aşağıdaki tabloda görevlerdir **özellik sayfaları** cihaz atama yöntemi ile profil oluşturma için belirli bir iletişim kutusu.  
+## <a name="instrumentation-tasks"></a>İzleme görevleri  
+ Aşağıdaki tabloda yer alan görevler, izleme yöntemiyle profil oluşturmaya özgü **Özellik sayfaları** iletişim kutusunda bulunan seçeneklerdir.  
   
-|Görev|İlgili içerik|  
+|Görev|İlgili İçerik|  
 |----------|---------------------|  
-|Üzerinde **ikili dosyaları** sayfasında, modüller için izleme eklenmiş kopyalar konumunu belirtin. Varsayılan olarak, orijinal ikililerin bir yedekleme klasörüne taşınır.|-   [Nasıl Yapılır: İşaretlenmiş İkili Dosyaları Yeniden Yerleştirme](../profiling/how-to-relocate-instrumented-binaries.md)|  
-|Üzerinde **izleme** öncesinde ve sonrasında bir komut isteminde çalıştırmak için komutları belirtin sayfasında ve ek yükü, profil oluşturma profili ASP.NET Web sayfalarında JavaScript kodu azaltmak için profil küçük işlevleri Dışla izleme işlemi.|-   [Nasıl Yapılır: Kısa İşlevleri İzlemeden Hariç Tutma veya İzlemeye Dahil Etme](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)<br />-   [Nasıl Yapılır: Web Sayfalarında JavaScript Kodunun Profilini Oluşturma](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />-   [Nasıl Yapılır: Ön ve Son İzleme Komutlarını Belirtme](../profiling/how-to-specify-pre-and-post-instrument-commands.md)|  
-|Üzerinde **CPU sayaçları** sayfasında, profil oluşturma verileri eklemek için bir veya daha fazla işlemci performans sayaçları belirtin.|-   [Nasıl Yapılır: CPU Sayaç Verileri Toplama](../profiling/how-to-collect-cpu-counter-data.md)|  
-|Üzerinde **Gelişmiş** sayfasında, herhangi bir ek VSInstr.exe, dahil etmek veya belirli işlevleri hariç tutmak için seçenekleri gibi istediğiniz seçenekleri belirtin. Vsınstr seçenekleri hakkında daha fazla bilgi için bkz. [Vsınstr](../profiling/vsinstr.md)|-   [Nasıl Yapılır: Ek İzleme Seçeneklerini Belirtme](../profiling/how-to-specify-additional-instrumentation-options.md)<br />-   [Nasıl Yapılır: İzlemeyi Belirli Araçlarla Sınırlama](../profiling/how-to-limit-instrumentation-to-specific-functions.md)|  
+|**Ikili dosyalar** sayfasında, modüllerin belgelenmiş kopyaları için bir konum belirtin. Varsayılan olarak, özgün ikililer bir yedekleme klasörüne taşınır.|-   [Nasıl yapılır: Işaretlenmiş Ikililerin konumunu değiştirme](../profiling/how-to-relocate-instrumented-binaries.md)|  
+|**İzleme** sayfasında, profil oluşturma ek yükünü azaltmak, ASP.NET Web sayfalarındaki JavaScript kodu profilini oluşturmak ve izleme işleminden önce ve sonra bir komut isteminde çalışacak komutları belirtmek için, yönetim sayfası ' ndan küçük işlevleri hariç tutun.|-   [Nasıl yapılır: Izleme 'den kısa Işlevler hariç tutma veya dahil etme](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)<br />-   [Nasıl yapılır: Web sayfalarında JavaScript kodu profili oluşturma](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />-   [Nasıl yapılır: ön ve araç sonrası komutları belirtme](../profiling/how-to-specify-pre-and-post-instrument-commands.md)|  
+|**CPU sayaçları** sayfasında, profil oluşturma verilerine eklemek için bir veya daha fazla işlemci performans sayacı belirtin.|-   [Nasıl yapılır: CPU sayacı verilerini toplama](../profiling/how-to-collect-cpu-counter-data.md)|  
+|**Gelişmiş** sayfasında, belirli işlevleri ekleme veya hariç tutma seçenekleri gibi istediğiniz ek VSInstr.exe seçeneklerini belirtin. VSInstr seçenekleri hakkında daha fazla bilgi için bkz. [vsinstr](../profiling/vsinstr.md)|-   [Nasıl yapılır: ek Izleme seçeneklerini belirtme](../profiling/how-to-specify-additional-instrumentation-options.md)<br />-   [Nasıl yapılır: belirli Işlevlerle Izleme sınırlandırma](../profiling/how-to-limit-instrumentation-to-specific-functions.md)|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)   
- [Nasıl yapılır: Koleksiyon metotları seçme](../profiling/how-to-choose-collection-methods.md)   
- [Performans Oturumu Özellikleri](../profiling/performance-session-properties.md)
+ [Nasıl yapılır: koleksiyon yöntemleri seçme](../profiling/how-to-choose-collection-methods.md)   
+ [Performans oturumu özellikleri](../profiling/performance-session-properties.md)

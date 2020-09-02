@@ -1,5 +1,5 @@
 ---
-title: Eski dil hizmetinde üye tamamlama | Microsoft Docs
+title: Eski dil hizmetinde üye Tamamlama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,53 +13,53 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 93182d61b6ecf5bf22ea7117bf8ccfd17e2acd1a
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437921"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64806714"
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Üye Tamamlama
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-IntelliSense üye tamamlama sınıf, yapı, sabit listesi veya ad alanı gibi belirli bir kapsam olası üyelerinin bir listesini görüntüleyen bir araç ipucu ' dir. Kullanıcı "this" bir nokta türleri, örneğin, C# ' ta sınıfın veya yapının geçerli kapsamda tüm üyelerin listesi kullanıcının seçim yapabileceği bir listede sunulur.  
+IntelliSense üye tamamlama, belirli bir kapsamın bir sınıf, yapı, numaralandırma veya ad alanı gibi olası üyelerinin listesini görüntüleyen bir araç ipucudur. Örneğin, C# ' de, Kullanıcı "This" öğesini ve ardından bir nokta sonra yazdığında, geçerli kapsamdaki sınıfın veya yapının tüm üyelerinin bir listesi kullanıcının seçim yaptığı bir listede sunulur.  
   
- Yönetilen paket çerçevesini (MPF), araç ipucu ve araç ipucu listesinde yönetmek için destek sağlar; gereken şey işbirliği gelen listesinde görüntülenen veri sağlamak için.  
+ Yönetilen paket çerçevesi (MPF) araç ipucu için destek sağlar ve araç ipucunda listeyi yönetebilir; gerekli olan her şey, listede görüntülenen verileri sağlamak için Ayrıştırıcıdan bir işlem olur.  
   
- Eski dil Hizmetleri bir VSPackage'ı bir parçası olarak uygulanır, ancak dil hizmeti özellikleri uygulamak için daha yeni MEF uzantıları kullanmaktır. Daha fazla bilgi için bkz. [düzenleyiciyi ve dil hizmetlerini genişletme](../../extensibility/extending-the-editor-and-language-services.md).  
+ Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Daha fazla bilgi edinmek için bkz. [düzenleyiciyi ve dil hizmetlerini genişletme](../../extensibility/extending-the-editor-and-language-services.md).  
   
 > [!NOTE]
-> Yeni bir düzenleyici API hemen kullanmaya başlamak öneririz. Bu dil hizmetinizin performansını ve yeni düzenleyici özellikleri yararlanmanıza olanak tanır.  
+> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.  
   
-## <a name="how-it-works"></a>Nasıl çalışır?  
- MPF sınıflarını kullanarak bir üye listesi gösterilen iki yollar şunlardır:  
+## <a name="how-it-works"></a>Nasıl çalıştığı  
+ Aşağıda, MPF sınıfları kullanılarak üye listesinin gösterildiği iki yol verilmiştir:  
   
-- Giriş işaretini bir tanımlayıcı veya bir üye tamamlama karakterinden sonraki konumlandırma ve seçerek **üyeleri Listele** gelen **IntelliSense** menüsü.  
+- Giriş işaretini bir tanımlayıcıya veya bir üye Tamamlama karakterinden sonra, **IntelliSense** menüsünde **Liste üyelerini** seçerek konumlandırın.  
   
-- <xref:Microsoft.VisualStudio.Package.IScanner> Tarayıcı üye tamamlama karakter algılar ve bir belirteç tetikleyicisi ayarlar <xref:Microsoft.VisualStudio.Package.TokenTriggers> bu karakteri.  
+- <xref:Microsoft.VisualStudio.Package.IScanner>Tarayıcı bir üye tamamlanma karakteri algılar ve bu karakter için bir belirteç tetikleyicisi belirler <xref:Microsoft.VisualStudio.Package.TokenTriggers> .  
   
-  Bir üye tamamlama karakter, bir sınıf, yapı ya da numaralandırma üyesi izlemek için olduğunu gösterir. Örneğin, C# veya Visual Basic'te üye tamamlama karakter olan bir `.`, c++'ta karakter ya da olsa bir `.` veya `->`. Üye seçme karakter tarandığında tetikleyici değeri ayarlanır.  
+  Bir üye tamamlama karakteri, bir sınıf, yapı veya numaralandırma üyesinin takip edilmesinin gerektiğini gösterir. Örneğin, C# veya Visual Basic üye tamamlama karakteri bir, `.` C++ ' da karakter a `.` veya a olur `->` . Tetikleyici değeri, üye seçme karakteri tarandığında ayarlanır.  
   
-### <a name="the-intellisense-member-list-command"></a>IntelliSense üye Listele komutu  
- <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> Komut başlatan bir çağrı <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> metodunda <xref:Microsoft.VisualStudio.Package.Source> sınıfı ve <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> sırayla yöntemini çağırır <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> yöntemi ayrıştırıcı ayrıştırma nedeni ile <xref:Microsoft.VisualStudio.Package.ParseReason>.  
+### <a name="the-intellisense-member-list-command"></a>IntelliSense üye listesi komutu  
+ <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID>Komut, sınıfında yöntemine bir çağrı başlatır <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> <xref:Microsoft.VisualStudio.Package.Source> ve yöntemi, <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ayrıştırma nedeni ile Yöntem ayrıştırıcısını çağırır <xref:Microsoft.VisualStudio.Package.ParseReason> .  
   
- Ayrıştırıcının bağlam belirteci altında ya da geçerli konum hemen önce yanı sıra geçerli konumunu belirler. Bu belirteci temel alınarak, bildirimleri listesi sunulur. Örneğin, C# ' de giriş işaretini bir sınıf üyesi ve seçim konum değilse, **üyeleri Listele**, sınıfın tüm üyeleri bir listesini alın. Giriş işaretini bir nesne değişkeninin izleyen bir süre sonra getirin, sınıf nesnesini temsil tüm üyelerinin listesini alın. Üye listesi gösterildiğinde giriş işaretini bir üyede konumlandırılmış, listeden bir üye seçme giriş işaretini bir listedeki açıktır üye değiştirir.  
+ Ayrıştırıcı, geçerli konumun bağlamını ve geçerli konumdan hemen önceki belirteci belirler. Bu belirtece bağlı olarak, bildirimlerin bir listesi sunulur. Örneğin, C# ' de, giriş işaretini bir sınıf üyesine konumlandırdıysanız ve **üyeleri Listele**' yi seçerseniz, sınıfının tüm üyelerinin bir listesini alırsınız. Giriş işaretini bir nesne değişkenini izleyen bir dönemden sonra konumlandırdıysanız, nesnenin temsil ettiği sınıfın tüm üyelerinin bir listesini alırsınız. Üye listesi gösterildiğinde bir üyenin giriş işaretine yerleştirilirse, listeden bir üyenin seçilmesi, giriş işaretinin üzerinde bulunduğu üyenin listedeki bir üyesinin yerini almıştır.  
   
-### <a name="the-token-trigger"></a>Tetikleyici belirteç  
- <xref:Microsoft.VisualStudio.Package.TokenTriggers> Tetikleyici başlatan bir çağrı <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> metodunda <xref:Microsoft.VisualStudio.Package.Source> sınıfı ve <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> yöntemini çağırır, ayrıştırıcının ayrıştırma nedeni ile <xref:Microsoft.VisualStudio.Package.ParseReason> (belirteç tetikleyici da içeriyorsa <xref:Microsoft.VisualStudio.Package.TokenTriggers> bayrak Ayrıştırma nedeni <xref:Microsoft.VisualStudio.Package.ParseReason> üye seçimi ve küme ayracı vurgulayarak birleştirir).  
+### <a name="the-token-trigger"></a>Belirteç tetikleyicisi  
+ <xref:Microsoft.VisualStudio.Package.TokenTriggers>Tetikleyici, sınıfında yöntemine bir çağrı başlatır <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> <xref:Microsoft.VisualStudio.Package.Source> ve yöntemi, <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> ayrıştırıcının ayrıştırma nedenine çağırır <xref:Microsoft.VisualStudio.Package.ParseReason> (belirteç tetikleyicisi bayrağı de içeriyorsa <xref:Microsoft.VisualStudio.Package.TokenTriggers> , ayrıştırma nedeni, <xref:Microsoft.VisualStudio.Package.ParseReason> üye seçimini ve küme ayracı vurgulamasını içerir).  
   
- Ayrıştırıcının geçerli bağlam belirler konumlandırma üyeyi seçin önce karakter neler yazıldığını yanı sıra. Bu bilgilerden, ayrıştırıcının istenen kapsam tüm üyelerinin bir listesini oluşturur. Bu bildirimler listesi depolanan <xref:Microsoft.VisualStudio.Package.AuthoringScope> öğesinden döndürülen nesne <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> yöntemi. Tüm bildirimleri döndürülürse, üye tamamlama araç ipucu görüntülenir. Araç İpucu örneği tarafından yönetilen <xref:Microsoft.VisualStudio.Package.CompletionSet> sınıfı.  
+ Ayrıştırıcı, geçerli konumun bağlamını ve üyenin karakter seçimini yapmadan önce yazılmış olanları belirler. Bu bilgilerden ayrıştırıcı, istenen kapsamın tüm üyelerinin bir listesini oluşturur. Bu bildirim listesi <xref:Microsoft.VisualStudio.Package.AuthoringScope> , yönteminden döndürülen nesnesinde depolanır <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> . Herhangi bir bildirim döndürülürse, üye Tamamlama aracı ipucu görüntülenir. Araç ipucu, sınıfının bir örneği tarafından yönetilir <xref:Microsoft.VisualStudio.Package.CompletionSet> .  
   
 ## <a name="enabling-support-for-member-completion"></a>Üye tamamlama desteğini etkinleştirme  
- Olmalıdır `CodeSense` kayıt defteri girişi, herhangi bir IntelliSense işlemi desteklemek için 1 olarak ayarlayın. Bu kayıt defteri girişi, geçirilen bir adlandırılmış parametre kullanılarak ayarlanabilir. <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> dil paket ile ilişkili kullanıcı özniteliği. Dil hizmeti sınıfları bu kayıt defteri girdisinden değerini okumak <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> özelliği <xref:Microsoft.VisualStudio.Package.LanguagePreferences> sınıfı.  
+ `CodeSense`Herhangi bir IntelliSense işlemini desteklemek için kayıt defteri girdisinin 1 olarak ayarlanmış olması gerekir. Bu kayıt defteri girişi, <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> dil paketiyle ilişkili Kullanıcı özniteliğine geçirilmiş bir adlandırılmış parametreyle ayarlanabilir. Dil hizmeti sınıfları, bu kayıt defteri girdisinin değerini <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> sınıfındaki özelliğinden okur <xref:Microsoft.VisualStudio.Package.LanguagePreferences> .  
   
- Tarayıcınız belirteci tetikleyicisi döndürürse <xref:Microsoft.VisualStudio.Package.TokenTriggers>ve, ayrıştırıcı bildirimleri listesini döndürür ve ardından üye tamamlanma listesi görüntülenir.  
+ Tarayıcınız belirtecinin belirteç tetikleyicisini döndürürse <xref:Microsoft.VisualStudio.Package.TokenTriggers> ve ayrıştırıcılarınız bildirimlerin listesini döndürürse, üye Tamamlama listesi görüntülenir.  
   
-## <a name="supporting-member-completion-in-the-scanner"></a>Tarayıcı destekleyen üye tamamlama  
- Tarayıcı bir üye tamamlama karakter algılamak ve belirteç tetikleyicisi ayarlayın <xref:Microsoft.VisualStudio.Package.TokenTriggers> bu karakteri zaman ayrıştırılır.  
+## <a name="supporting-member-completion-in-the-scanner"></a>Tarayıcıda üye tamamlamayı destekleme  
+ Tarayıcının bir üye tamamlanma karakterini algılayabilmesi ve <xref:Microsoft.VisualStudio.Package.TokenTriggers> Bu karakterin ayrıştırıldığında belirteç tetikleyicisi ayarlaması gerekir.  
   
 ### <a name="example"></a>Örnek  
- Üye tamamlama karakter algılama ve uygun ayar basitleştirilmiş bir örnek aşağıda verilmiştir <xref:Microsoft.VisualStudio.Package.TokenTriggers> bayrağı. Bu örnek yalnızca tanım amaçlıdır. Tarayıcınız bir yöntem içerdiğini varsayar `GetNextToken` tanımlar ve bir metin satırından belirteçleri döndürür. Karakter doğru tür gördüğünde her kod örneği yalnızca tetikleyici ayarlar.  
+ İşte, üye tamamlama karakterini algılamaya ve uygun bayrağı ayarlamaya yönelik basitleştirilmiş bir örnek <xref:Microsoft.VisualStudio.Package.TokenTriggers> . Bu örnek yalnızca tanım amaçlıdır. Tarayıcınızın bir `GetNextToken` metin satırından belirteçleri tanımlayan ve döndüren bir yöntem içerdiğini varsayar. Örnek kod, her bir doğru karakter türünü gördüğünde tetikleyiciyi yalnızca ayarlar.  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -92,15 +92,15 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="supporting-member-completion-in-the-parser"></a>Ayrıştırıcının destekleyen üye tamamlama  
- Üye tamamlama için <xref:Microsoft.VisualStudio.Package.Source> sınıf çağrıları <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> yöntemi. Türetilen bir sınıfta listenin uygulamalıdır <xref:Microsoft.VisualStudio.Package.Declarations> sınıfı. Bkz: <xref:Microsoft.VisualStudio.Package.Declarations> uygulanmalı yöntemleri hakkında daha fazla ayrıntı için sınıf.  
+## <a name="supporting-member-completion-in-the-parser"></a>Ayrıştırıcıda üye tamamlamayı destekleme  
+ Üye tamamlama için <xref:Microsoft.VisualStudio.Package.Source> sınıfı <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> yöntemini çağırır. Listeyi sınıfından türetilmiş bir sınıfta uygulamanız gerekir <xref:Microsoft.VisualStudio.Package.Declarations> . <xref:Microsoft.VisualStudio.Package.Declarations>Uygulamanız gereken yöntemler hakkındaki ayrıntılar için sınıfına bakın.  
   
- Ayrıştırıcının çağrılır <xref:Microsoft.VisualStudio.Package.ParseReason> veya <xref:Microsoft.VisualStudio.Package.ParseReason> ne zaman bir üye seçin karakter türü. Verilen konuma <xref:Microsoft.VisualStudio.Package.ParseRequest> nesnedir hemen üyeyi seçin sonra karakter. Ayrıştırıcının, kaynak kodunda, belirli bir noktada bir üye listesinde görünen tüm üyelerinin adları toplamanız gerekir. Ardından ayrıştırıcı, kullanıcının üye seçme karakteri ile ilişkili istediği kapsamını belirlemek için geçerli satırı ayrıştırma gerekir.  
+ Ayrıştırıcı, <xref:Microsoft.VisualStudio.Package.ParseReason> <xref:Microsoft.VisualStudio.Package.ParseReason> bir üye seçme karakteri yazıldığında veya ile çağrılır. Nesnede verilen konum, <xref:Microsoft.VisualStudio.Package.ParseRequest> üyenin karakter seçmesini hemen sonra. Ayrıştırıcı, kaynak kodda söz konusu noktada yer alan bir üye listesinde görünebilen tüm üyelerin adlarını toplamalıdır. Ardından ayrıştırıcı, kullanıcının üye seçme karakteri ile ilişkilendirilmesini istediğini kapsamını belirlemek için geçerli satırı ayrıştırmalıdır.  
   
- Üye karakter seçebilmeniz bu kapsam tanıtıcı türüne bağlıdır. Örneğin, verilen C# ' ta bir üye değişkeni `languageService` türü olan `LanguageService`yazarak **languageService.** tüm üyelerinin bir listesini oluşturur `LanguageService` sınıfı. Ayrıca, C# ' ta, yazmaya **bu.** Geçerli kapsam içinde bir sınıfın tüm üyeleri listesi oluşturur.  
+ Bu kapsam, üyenin karakter seçimini yapmadan önce tanımlayıcı türünü temel alır. Örneğin, C# ' de, bir türü olan üye değişkeni verildiğinde `languageService` `LanguageService` **LanguageService yazarak.** sınıfın tüm üyelerinin bir listesini oluşturur `LanguageService` . Ayrıca C# ' de şunu yazarak yazın **.** Geçerli kapsamdaki sınıfın tüm üyelerinin bir listesini oluşturur.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek doldurmak için bir yol gösterir. bir <xref:Microsoft.VisualStudio.Package.Declarations> listesi. Bu kod ayrıştırıcı bir bildirim oluşturur ve çağırarak listeye ekler varsayar bir `AddDeclaration` metodunda `TestAuthoringScope` sınıfı.  
+ Aşağıdaki örnek, bir listeyi doldurmanız için bir yol gösterir <xref:Microsoft.VisualStudio.Package.Declarations> . Bu kod, ayrıştırıcısının bir bildirim oluşturduğu ve sınıf üzerinde bir yöntemi çağırarak onu listeye eklediği varsayılmaktadır `AddDeclaration` `TestAuthoringScope` .  
   
 ```csharp  
 using System.Collections;  

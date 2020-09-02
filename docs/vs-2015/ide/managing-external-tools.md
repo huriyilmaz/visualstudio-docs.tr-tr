@@ -58,10 +58,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7a9ebda81f013f42aeac23c9c0a8cc5a0a41f5f0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651346"
 ---
 # <a name="managing-external-tools"></a>Dış Araçları Yönetme
@@ -70,7 +70,7 @@ ms.locfileid: "72651346"
 Visual Studio 'Nun içinden dış araçlar çağırabilirsiniz. **Araçlar** menüsünde birkaç varsayılan araç mevcuttur, ancak kendi diğer yürütülebilir dosyalarını ekleyebilirsiniz.
 
 ## <a name="tools-available-on-the-visual-studio-tools-menu"></a>Visual Studio Araçları menüsünde bulunan araçlar
- @No__t_1 **Araçlar** menüsünden aşağıdaki araçları çağırabilirsiniz. Ayrıca, bunları **Hızlı başlatma** penceresinden adına göre de çağırabilirsiniz. Örneğin, GUIDgen. exe ' yi çağırmak için **GUID oluştur**yazın.
+ İçindeki **Araçlar** menüsünden aşağıdaki araçları çağırabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Ayrıca, bunları **Hızlı başlatma** penceresinden adına göre de çağırabilirsiniz. Örneğin, GuidGen.exe çağırmak için **GUID oluştur**yazın.
 
 1. GUID oluştur: bir GUID oluşturur.
 
@@ -92,7 +92,7 @@ Visual Studio 'Nun içinden dış araçlar çağırabilirsiniz. **Araçlar** men
 
 1. Başlık: dosya konumunu aç
 
-2. Komut: Explorer. exe
+2. Komut: explorer.exe
 
 3. Bağımsız değişkenler:/root, "$ (ıtemdır)"
 
@@ -115,7 +115,7 @@ Visual Studio 'Nun içinden dış araçlar çağırabilirsiniz. **Araçlar** men
 |Hedef Dizin|$ (TARGETDIR)|Oluşturulacak öğenin dizini.|
 |Hedef Adı|$ (TargetName)|Oluşturulacak öğenin dosya adı.|
 |Hedef uzantısı|$ (TargetExt)|Oluşturulacak öğenin dosya adı uzantısı.|
-|İkili dizin|$ (BinDir)|Oluşturulmakta olan ikilinin son konumu (sürücü + yol olarak tanımlanır). Örneğin: **\\. ..\Bir Studio \<Version > \\ < ProjectName \> \bin\Debug**|
+|İkili dizin|$ (BinDir)|Oluşturulmakta olan ikilinin son konumu (sürücü + yol olarak tanımlanır). Örneğin:** \\ . ..\Bir Studio \<Version> \\<ProjectName \> \Bin\Debug**|
 |Proje dizini|$ (ProjDir)|Geçerli projenin dizini (sürücü + yol).|
 |Proje dosyası adı|$ (ProjFileName)|Geçerli projenin dosya adı (sürücü + yol + dosya adı).|
 |Çözüm dizini|$ (SolutionDir)|Geçerli çözümün dizini (sürücü + yol).|
