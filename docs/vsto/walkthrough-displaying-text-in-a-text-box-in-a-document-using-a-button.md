@@ -1,5 +1,5 @@
 ---
-title: Düğmesini kullanarak belgedeki metin kutusunda metin görüntüleme
+title: Düğmeye metin kutusunda metin kutusu kullanarak metni görüntüleme
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,105 +13,105 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8f3c467abcee8fb4faafd2da06ba261e7f3039fe
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67328747"
 ---
-# <a name="walkthrough-display-text-in-a-text-box-in-a-document-using-a-button"></a>İzlenecek yol: Metin kutusunda düğme kullanarak bir belgede metin görüntüleme
-  Bu yönerge, düğmeler ve belge düzeyi özelleştirmesinde metin kutuları için Microsoft Office Word nasıl kullanılacağını gösterir.
+# <a name="walkthrough-display-text-in-a-text-box-in-a-document-using-a-button"></a>İzlenecek yol: düğme kullanarak bir belgedeki metin kutusunda metin görüntüleme
+  Bu izlenecek yol, Microsoft Office Word için belge düzeyi özelleştirmesinde düğmelerin ve metin kutularının nasıl kullanılacağını gösterir.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Tasarım zamanında bir belge düzeyi projede Word belgesi için denetimler ekleme.
+- Belge düzeyindeki bir projede Word belgesine tasarım zamanında denetimler ekleme.
 
-- Bir düğmeye tıklandığında, metin kutusu dolduruluyor.
+- Düğmeye tıklandığında metin kutusunu doldurma.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
 - Microsoft Word
 
-## <a name="create-the-project"></a>Projeyi oluşturma
- İlk adım, bir Word belgesi projesi oluşturmaktır.
+## <a name="create-the-project"></a>Proje oluşturma
+ İlk adım bir Word belgesi projesi oluşturmaktır.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Adıyla bir Word belgesi projesi oluşturma **Word Düğmem**. Sihirbazda **yeni belge oluşturma**.
+1. **My Word düğmesini**kullanarak bir Word belgesi projesi oluşturun. Sihirbazda **Yeni belge oluştur**' u seçin.
 
-     Daha fazla bilgi için [nasıl yapılır: Visual Studio'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+     Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Word belgesi açar ve ekler **Word Düğmem** için proje **Çözüm Gezgini**.
+     Visual Studio tasarımcıda yeni Word belgesini açar ve **Çözüm Gezgini**Için **My Word düğme** projesini ekler.
 
-## <a name="add-controls-to-the-word-document"></a>Word belgesi için denetimler ekleme
- Kullanıcı arabirimi denetimleri, bir düğme ve metin kutusu Word belgesinde oluşur.
+## <a name="add-controls-to-the-word-document"></a>Word belgesine denetim ekleme
+ Kullanıcı arabirimi denetimleri, Word belgesindeki bir düğmeden ve metin kutusundan oluşur.
 
-### <a name="to-add-a-button-and-a-text-box"></a>Bir düğme ve metin kutusu ekleme
+### <a name="to-add-a-button-and-a-text-box"></a>Bir düğme ve metin kutusu eklemek için
 
-1. Belge Visual Studio tasarımcıda açık olduğundan emin olun.
+1. Belgenin Visual Studio tasarımcısında açık olduğunu doğrulayın.
 
-2. Gelen **ortak denetimleri** sekmesinde **araç kutusu**, sürükleyin bir <xref:Microsoft.Office.Tools.Word.Controls.TextBox> belgeye denetim.
+2. **Araç kutusunun** **ortak denetimler** sekmesinden <xref:Microsoft.Office.Tools.Word.Controls.TextBox> belgeye bir denetim sürükleyin.
 
    > [!NOTE]
-   > Word'de denetimleri bırakılan satır içi varsayılan metin. Yol denetimlerini değiştirebilirsiniz ve şekil nesneleri üzerinde varsayılan değiştirerek eklenir **Düzenle** sekmesinde **seçenekleri** iletişim kutusundaki Word.
+   > Word 'de denetimler varsayılan olarak metin ile satır içinde bırakılır. Word 'deki Seçenekler iletişim kutusunun **düzenleme** sekmesinde varsayılan **seçeneği** değiştirilerek denetimlerin ve şekil nesnelerinin eklenme şeklini değiştirebilirsiniz.
 
-3. Üzerinde **görünümü** menüsünde tıklatın **Özellikler penceresi**.
+3. **Görünüm** menüsünde **Özellikler penceresi**' ne tıklayın.
 
-4. Bulma **TextBox1** içinde **özellikleri** pencere açılan kutusu ve değişiklik **adı** özelliği için metin kutusunun **görüntü metni**.
+4. **Özellikler** penceresi açılan kutusunda **textBox1** ' i bulun ve metin kutusunun Name özelliğini **metinadı** olarak değiştirin. **displayText**
 
-5. Sürükleme bir **düğmesi** denetim belgeye ve aşağıdaki özellikleri değiştirin.
+5. Bir **düğme** denetimini belgeye sürükleyin ve aşağıdaki özellikleri değiştirin.
 
    |Özellik|Değer|
    |--------------|-----------|
-   |**Ad**|**insertText**|
-   |**Metin**|**Metin Ekle**|
+   |**Ad**|**InsertText**|
+   |**Metin**|**Metin ekle**|
 
-   Artık düğmesine tıklandığında çalıştırılacak olan kodu yazabilirsiniz.
+   Artık düğme tıklandığında çalıştırılacak kodu yazabilirsiniz.
 
-## <a name="populate-the-text-box-when-the-button-is-clicked"></a>Düğme tıklandığında, metin kutusunu doldurmak
- Kullanıcının düğmesini her tıklayışında **Merhaba Dünya!** metin kutusuna eklenir.
+## <a name="populate-the-text-box-when-the-button-is-clicked"></a>Düğmeye tıklandığında metin kutusunu doldur
+ Kullanıcı düğmeye her tıkladığında **Merhaba Dünya!** metin kutusuna eklenir.
 
-### <a name="to-write-to-the-text-box-when-the-button-is-clicked"></a>Düğme tıklandığında metin kutusuna yazmak için
+### <a name="to-write-to-the-text-box-when-the-button-is-clicked"></a>Düğmeye tıklandığında metin kutusuna yazmak için
 
-1. İçinde **Çözüm Gezgini**, sağ **ThisDocument**ve ardından **kodu görüntüle** kısayol menüsünde.
+1. **Çözüm Gezgini**' de, **ThisDocument**' e sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
 
-2. Aşağıdaki kodu ekleyin <xref:System.Windows.Forms.Control.Click> düğmesi olay işleyicisi.
+2. Aşağıdaki kodu <xref:System.Windows.Forms.Control.Click> düğmenin olay işleyicisine ekleyin.
 
      [!code-vb[Trin_VstcoreProgrammingControlsWord#7](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#7)]
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#7)]
 
-3. İçinde C#, düğme için bir olay işleyicisi eklemelisiniz <xref:Microsoft.Office.Tools.Word.Document.Startup> olay. Olay işleyicileri oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
+3. C# ' de, olaya düğme için bir olay işleyicisi eklemeniz gerekir <xref:Microsoft.Office.Tools.Word.Document.Startup> . Olay işleyicileri oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#8](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#8)]
 
 ## <a name="test-the-application"></a>Uygulamayı test etme
- Artık belgenizi emin olmak için test iletisi **Merhaba Dünya!** Düğmeye tıkladığınızda, metin kutusunda görüntülenir.
+ Artık Merhaba Dünya iletinin olduğundan emin olmak için belgenizi test edebilirsiniz **!** düğmeye tıkladığınızda metin kutusunda görünür.
 
 ### <a name="to-test-your-document"></a>Belgenizi test etmek için
 
-1. Tuşuna **F5** projeyi çalıştırın.
+1. Projenizi çalıştırmak için **F5** tuşuna basın.
 
 2. Düğmesine tıklayın.
 
-3. Onaylayın **Merhaba Dünya!** metin kutusunda görüntülenir.
+3. Merhaba Dünya doğrulayın **!** metin kutusunda görünür.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Bu izlenecek yol, düğme ve metin kutusu Word belgelerinde kullanmanın temellerini gösterir. Sonraki gelebilir bazı görevler aşağıda verilmiştir:
+ Bu izlenecek yol, Word belgelerindeki düğmeleri ve metin kutularını kullanmanın temellerini gösterir. Daha sonra gelebilecek bazı görevler şunlardır:
 
-- Birleşik giriş kutusu biçimini değiştirmek için kullanma. Daha fazla bilgi için [izlenecek yol: Değişiklik CheckBox denetimlerini kullanarak belge biçimlendirmesini](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md).
+- Biçimlendirmeyi değiştirmek için Birleşik giriş kutusu kullanma. Daha fazla bilgi için bkz. [Izlenecek yol: CheckBox denetimlerini kullanarak belge biçimlendirmesini değiştirme](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md).
 
-- Grafik stilleri seçilecek radyo düğmelerini kullanarak. Daha fazla bilgi için [izlenecek yol: Radyo düğmelerini kullanarak belgede grafik güncelleştirme](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md).
+- Grafik stillerini seçmek için radyo düğmelerini kullanma. Daha fazla bilgi için bkz. [Izlenecek yol: radyo düğmelerini kullanarak bir belgedeki grafiği güncelleştirme](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Windows Forms denetimlerine Office belgeleri genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md)
-- [Word'ü kullanarak izlenecek yollar](../vsto/walkthroughs-using-word.md)
+- [Office belgelerindeki Windows Forms denetimlerine genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md)
+- [Word kullanarak izlenecek yollar](../vsto/walkthroughs-using-word.md)
 - [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md)
 - [Nasıl yapılır: Office belgelerine Windows Forms denetimleri ekleme](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
-- [Konak öğelerine ve denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)
+- [Konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md)

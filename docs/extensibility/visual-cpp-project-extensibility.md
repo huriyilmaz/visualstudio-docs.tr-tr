@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 10869ad290b0b8df614d25d792d0b3ed1e88eb17
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825563"
 ---
-# <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio C++ proje sistemi genişletilebilirlik ve araç takımı tümleştirmesi
+# <a name="visual-studio-c-project-system-extensibility-and-toolset-integration"></a>Visual Studio C++ proje sistemi genişletilebilirliği ve araç takımı tümleştirmesi
 
-Visual C++ proje sistemi .vcxproj dosyaları için kullanılır. Dayanır [Visual Studio ortak proje System (CPS)](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md) ve ek, yeni araç takımları, derleme mimarileri ve Hedef platformlar kolay tümleştirme için C++ özgü genişletilebilirlik noktaları sağlar.
+Visual C++ proje sistemi. vcxproj dosyaları için kullanılır. [Visual Studio ortak proje sistemine (CPS)](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md) dayalıdır ve yeni araç kümelerinin, yapı mimarlarının ve hedef platformların kolay tümleştirilmesi için ek, C++ özel genişletilebilirlik noktaları sağlar.
 
 ## <a name="c-msbuild-targets-structure"></a>C++ MSBuild hedefleri yapısı
 
-Tüm .vcxproj dosyaları bu dosyalarını içeri aktarın:
+Tüm. vcxproj dosyaları şu dosyaları içeri aktarır:
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -31,149 +31,149 @@ Tüm .vcxproj dosyaları bu dosyalarını içeri aktarın:
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 ```
 
-Bu dosyaların çok az tanımlama başlarına. Bunun yerine, bu özellik değerlerine göre diğer dosyaları Al:
+Bu dosyalar, kendilerini kendileri belirler. Bunun yerine, bu özellik değerlerine bağlı olarak diğer dosyaları içeri aktarırlar:
 
 - `$(ApplicationType)`
 
-   Örnekler: Windows Store, Android, Linux
+   Örnekler: Windows Mağazası, Android, Linux
 
 - `$(ApplicationTypeRevision)`
 
-   Bu, formu major.minor[.build[.revision bir geçerli sürüm dizesi olmalıdır]].
+   Bu, ana. Minor [. Build [. Revision]] biçiminde geçerli bir sürüm dizesi olmalıdır.
 
-   Örnekler: 1.0, 10.0.0.0
+   Örnekler: 1,0, 10.0.0.0
 
 - `$(Platform)`
 
-   Yapı mimarisi, geçmiş nedenlerle "Platformu" adlı.
+   Geçmiş nedenlerle "Platform" adlı derleme mimarisi.
 
-   Örnekler: Win32 x86, x64, ARM
+   Örnekler: Win32, x86, x64, ARM
 
 - `$(PlatformToolset)`
 
-   Örnekler: v140, v141, v141_xp, llvm
+   Örnekler: v140, v141, v141_xp, LLVM
 
-Bu özellik değerleri, altında klasör adları belirtin `$(VCTargetsPath)` kök klasörü:
+Bu özellik değerleri kök klasörü altındaki klasör adlarını belirtir `$(VCTargetsPath)` :
 
 > `$(VCTargetsPath)`\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;*Uygulama türü*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(ApplicationType)`\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(ApplicationTypeRevision)`\\ \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Platformları*\\ \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Platform*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(Platform)`\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PlatformToolsets*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(PlatformToolset)` \
-&nbsp;&nbsp;&nbsp;&nbsp;*Platformları*\\ \
+&nbsp;&nbsp;&nbsp;&nbsp;*Platform*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(Platform)`\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*PlatformToolsets*\\ \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(PlatformToolset)`
 
-`$(VCTargetsPath)` \\ *Platformları* \\ klasörü kullanılır, `$(ApplicationType)` Windows Masaüstü projeleri için boş.
+`$(VCTargetsPath)` \\ *Platformlar* \\ klasörü `$(ApplicationType)` , boş olduğunda, Windows Masaüstü projeleri için kullanılır.
 
-### <a name="add-a-new-platform-toolset"></a>Yeni bir platform araç kümesi Ekle
+### <a name="add-a-new-platform-toolset"></a>Yeni platform araç takımı Ekle
 
-Örneğin, "MyToolset" var olan Win32 platformu için yeni bir araç eklemek için oluşturun bir *MyToolset* klasörü altında `$(VCTargetsPath)`  *\\platformları\\Win32\\ PlatformToolsets\\* , oluşturup *Toolset.props* ve *Toolset.targets* dosyaları.
+Yeni bir araç takımı eklemek için (örneğin, var olan Win32 platformu için "myaraç takımı *MyToolset* ") Win32 platformlu `$(VCTargetsPath)` * \\ \\ \\ \\ platformları*altında bir myaraç kutusu klasörü oluşturun ve içinde *araç kümesi. props* ve araç kümesi *. targets* dosyaları oluşturun.
 
-Her bir klasör adı altında *PlatformToolsets* görünür **proje özellikleri** iletişim kutusu kullanılabilir olarak **Platform araç takımını** belirtilen platform için burada gösterildiği gibi:
+*Platformtoolsets* altındaki her klasör adı, burada gösterildiği gibi, belirtilen platform için kullanılabilir bir **platform araç takımı** olarak **Proje özellikleri** iletişim kutusunda görünür:
 
-![Proje özellik sayfaları iletişim kutusu Platform araç takımı özelliğinde](media/vc-project-extensibility-platform-toolset-property.png "Platform araç takımı özelliği proje özellik sayfaları iletişim kutusu")
+![Proje özellik sayfaları iletişim kutusunda platform araç takımı özelliği](media/vc-project-extensibility-platform-toolset-property.png "Proje özellik sayfaları iletişim kutusunda platform araç takımı özelliği")
 
-Benzer oluşturma *MyToolset* klasörleri ve *Toolset.props* ve *Toolset.targets* mevcut her platform klasöründe bulunan dosyaları bu araç takımı destekler.
+Bu araç takımının desteklediği her bir mevcut platform klasöründe benzer *Myaraç kümesi* klasörleri ve *araç* takımı. *targets* dosyaları oluşturun.
 
-### <a name="add-a-new-platform"></a>Yeni platform Ekle
+### <a name="add-a-new-platform"></a>Yeni bir platform ekleyin
 
-Örneğin, "MyPlatform", yeni bir platformda eklemek için oluşturun bir *MyPlatform* klasörü altında `$(VCTargetsPath)`  *\\platformları\\* , oluşturup  *Platform.default.props*, *Platform.props*, ve *Platform.targets* dosyaları. Ayrıca bir `$(VCTargetsPath)`  *\\platformları\\* <strong><em>MyPlatform</em></strong> *\\PlatformToolsets\\*  klasöründe ve en az bir araç takımı oluşturun.
+Yeni bir platform eklemek için, örneğin, "myplatform", *MyPlatform* platformlar `$(VCTargetsPath)` * \\ \\ *altında bir myplatform klasörü oluşturun ve içinde *Platform. default. props*, *Platform. props*ve *Platform. targets* dosyaları oluşturun. Ayrıca `$(VCTargetsPath)` ,<strong><em>Platform</em></strong>* \\ platformtoolsets \\ * klasörü için * \\ \\ bir platform*oluşturun ve içinde en az bir araç takımı oluşturun.
 
-Tüm klasör adları altında *platformları* her klasör `$(ApplicationType)` ve `$(ApplicationTypeRevision)` IDE kullanılabilir olarak görünen **Platform** seçimleri için bir proje.
+Her biri için *platformlar* klasörü altındaki tüm klasör adları `$(ApplicationType)` , `$(ApplicationTypeRevision)` bir proje için KULLANILABILIR **Platform** seçenekleri olarak IDE 'de görüntülenir.
 
-![Yeni Proje platformu iletişim kutusunda yeni platform seçimi](media/vc-project-extensibility-new-project-platform.png "yeni proje platformu iletişim kutusunda yeni platform seçimi")
+![Yeni proje platformu iletişim kutusunda yeni platform seçeneği](media/vc-project-extensibility-new-project-platform.png "Yeni proje platformu iletişim kutusunda yeni platform seçeneği")
 
-### <a name="add-a-new-application-type"></a>Yeni bir uygulama türü Ekle
+### <a name="add-a-new-application-type"></a>Yeni bir uygulama türü ekleyin
 
-Yeni bir uygulama türünü eklemek için oluşturun bir *MyApplicationType* klasörü altında `$(VCTargetsPath)` *\\uygulama türü\\* oluşturup bir *Defaults.props* içindeki dosya. Bir uygulama türü için en az bir gözden geçirme gerekiyor, bu nedenle de oluşturma bir `$(VCTargetsPath)`  *\\uygulama türü\\MyApplicationType\\1.0* klasör oluşturup bir  *Defaults.props* içindeki dosya. Ayrıca oluşturmalısınız bir `$(VCTargetsPath)`  *\\ApplicationType\\MyApplicationType\\1.0\\platformları* klasörü ve en az bir platform oluşturun.
+Yeni bir uygulama türü eklemek için, *MyApplicationType* uygulama türü `$(VCTargetsPath)` * \\ \\ * altında bir MyApplicationType klasörü oluşturun ve içinde bir *Varsayılanlar. props* dosyası oluşturun. Uygulama türü için en az bir düzeltme gereklidir, bu nedenle bir `$(VCTargetsPath)` * \\ uygulama türü \\ MyApplicationType \\ 1,0* klasörü oluşturun ve içinde bir *varsayılan. props* dosyası oluşturun. Ayrıca, bir `$(VCTargetsPath)` * \\ ApplicationType \\ MyApplicationType \\ 1,0 \\ platformları* klasörü oluşturmanız ve içinde en az bir platform oluşturmanız gerekir.
 
-`$(ApplicationType)` ve `$(ApplicationTypeRevision)` özellikleri olmayan görünür kullanıcı arabiriminin. Bunlar, proje şablonları içinde tanımlanan ve Proje oluşturulduktan sonra değiştirilemez.
+`$(ApplicationType)` ve `$(ApplicationTypeRevision)` özellikleri Kullanıcı arabiriminde görünmez. Proje şablonlarında tanımlanırlar ve Proje oluşturulduktan sonra değiştirilemez.
 
-## <a name="the-vcxproj-import-tree"></a>.Vcxproj alma ağacı
+## <a name="the-vcxproj-import-tree"></a>. Vcxproj içeri aktarma ağacı
 
-Microsoft C++ özellikler ve hedefler dosyaları için içeri aktarmalar Basitleştirilmiş ağacının şuna benzer:
+Microsoft C++ props ve targets dosyaları için basitleştirilmiş bir içeri aktarmalar ağacı şöyle görünür:
 
-> `$(VCTargetsPath)`\\*Microsoft.Cpp.Default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft.Common.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore*\\*varsayılan*\\\*. *Özellikler* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Uygulama türü*\\`$(ApplicationType)`\\*Default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Uygulama türü*\\`$(ApplicationType)`\\`$(ApplicationTypeRevision)`\\*Default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Uygulama türü*\\`$(ApplicationType)`\\`$(ApplicationTypeRevision)`\\*platformları* \\ `$(Platform)` \\  *Platform.default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter*\\*varsayılan*\\\*. *Özellikler*
+> `$(VCTargetsPath)`\\*Microsoft. cpp. default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft. Common. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Importbefore* \\ *Varsayılan* \\ \* . *props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Uygulama* \\ `$(ApplicationType)` türü \\ *Default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Uygulama* \\ `$(ApplicationType)` türü \\ `$(ApplicationTypeRevision)` \\ *Default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Uygulama* \\ `$(ApplicationType)` türü \\ `$(ApplicationTypeRevision)` \\ *Platforms* \\ `$(Platform)` Platformlar \\ *Platform. default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Importafter* \\ *Varsayılan* \\ \* . *props*
 
-Windows Masaüstü projeleri olmayan tanımlama `$(ApplicationType)`, yalnızca Al
+Windows Masaüstü projeleri tanımlamaz `$(ApplicationType)` , bu nedenle yalnızca içeri aktarırlar
 
-> `$(VCTargetsPath)`\\*Microsoft.Cpp.Default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft.Common.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportBefore*\\*varsayılan*\\\*. *Özellikler* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Platformları*\\`$(Platform)`\\*Platform.default.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*ImportAfter*\\*varsayılan*\\\*. *Özellikler*
+> `$(VCTargetsPath)`\\*Microsoft. cpp. default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(MSBuildExtensionsPath)`\\`$(MSBuildToolsVersion)`\\*Microsoft. Common. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Importbefore* \\ *Varsayılan* \\ \* . *props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Platforms* \\ `$(Platform)` Platformlar \\ *Platform. default. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Importafter* \\ *Varsayılan* \\ \* . *props*
 
-Kullanacağız `$(_PlatformFolder)` tutacak özelliği `$(Platform)` platform klasörü konumları. Bu özellik.
+`$(_PlatformFolder)`Platform klasörü konumlarını tutmak için özelliğini kullanacağız `$(Platform)` . Bu özellik
 
-> `$(VCTargetsPath)`\\*Platformları*\\`$(Platform)`
+> `$(VCTargetsPath)`\\*Platform*\\`$(Platform)`
 
 Windows Masaüstü uygulamaları için ve
 
-> `$(VCTargetsPath)`\\*Uygulama türü*\\`$(ApplicationType)`\\`$(ApplicationTypeRevision)`\\*platformları*\\`$(Platform)`
+> `$(VCTargetsPath)`\\*Uygulama* \\ `$(ApplicationType)` türü \\ `$(ApplicationTypeRevision)` \\ *Platformlar*\\`$(Platform)`
 
-her şey için.
+diğer her şey için.
 
-Özellik dosyaları şu sırayla alınır:
+Props dosyaları şu sırayla içeri aktarılır:
 
-> `$(VCTargetsPath)`\\*Microsoft.Cpp.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft.Cpp.Platform.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore*\\\*. *Özellikler* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets*\\`$(PlatformToolset)`\\*Toolset.props* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter*\\\*. *Özellikler*
+> `$(VCTargetsPath)`\\*Microsoft. cpp. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft. cpp. platform. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Importbefore* \\ \* . *props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platformtoolsets* \\ `$(PlatformToolset)` \\ *Araç takımı. props* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Importafter* \\ \* . *props*
 
-MSBuild şu sırayla alınır:
+Hedef dosyalar şu sırada içeri aktarılır:
 
-> `$(VCTargetsPath)`\\*Microsoft.Cpp.targets* \
-&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft.Cpp.Current.targets* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform.targets* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft.Cpp.Platform.targets* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportBefore*\\\*. *hedefleri* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*PlatformToolsets*\\`$(PlatformToolset)`\\*Toolset.target* \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*ImportAfter*\\\*. *hedefleri*
+> `$(VCTargetsPath)`\\*Microsoft. cpp. targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft. cpp. Current. targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platform. targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(VCTargetsPath)`\\*Microsoft. cpp. platform. targets* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Importbefore* \\ \* . *hedefler* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Platformtoolsets* \\ `$(PlatformToolset)` \\ *Araç takımı. Target* \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`$(_PlatformFolder)`\\*Importafter* \\ \* . *hedefler*
 
-Araç takımı, bazı varsayılan özelliklerini tanımlamak gerekiyorsa, uygun ImportBefore ve ImportAfter klasörlere dosyaları ekleyebilirsiniz.
+Araç takımı için bazı varsayılan özellikler tanımlamanız gerekiyorsa, uygun ımportbefore ve ımportafter klasörlerine dosya ekleyebilirsiniz.
 
-## <a name="author-toolsetprops-and-toolsettargets-files"></a>Yazar Toolset.props ve Toolset.targets dosyaları
+## <a name="author-toolsetprops-and-toolsettargets-files"></a>Araç kümesi. props ve araç takımı. targets dosyalarını yazar
 
-*Toolset.props* ve *Toolset.targets* dosyaları bu araç takımı kullanıldığında, bir yapı sırasında ne üzerinde tam denetime sahiptir. Kullanılabilir hata ayıklayıcılar, bazı içeriği gibi IDE kullanıcı arabirimi de denetleyebilirsiniz **özellik sayfaları** iletişim ve diğer yönlerini bir proje davranışı.
+*Araç kümesi. props* ve *araç takımı. targets* dosyaları, bu araç takımı kullanıldığında bir derleme sırasında ne olacağı hakkında tam denetime sahiptir. Ayrıca, **Özellik sayfaları** iletişim kutusundaki içerik ve proje davranışının diğer bazı yönleri gıbı bazı IDE kullanıcı arabiriminden kullanılabilir hata ayıklayıcıları da denetleyebilir.
 
-Bir araç takımı, tüm derleme işlemi geçersiz kılabilirsiniz olsa da, genellikle yalnızca değiştirme veya bazı derleme adımları ekleme veya farklı bir derleme araçları, mevcut bir yapı işleminin bir parçası kullanmak için araç takımını kullanmanız gerekir. Bu hedefe ulaşmak için bir dizi ortak özellikler ve hedefler dosyaları, araç takımı aktarabilirsiniz vardır. Yapmak için araç takımı istediğinize bağlı olarak, bu dosyaları içeri aktarmaları veya örnekleri olarak kullanmak yararlı olabilir:
+Bir araç kümesi tüm derleme işlemini geçersiz kılabilir, ancak genellikle araç takımının bazı yapı adımlarını değiştirmesini veya eklemesini ya da mevcut yapı araçlarının bir parçası olarak farklı yapı araçlarını kullanmasını istersiniz. Bu hedefi başarmak için, araç takımının içeri aktarabileceği birçok ortak özellik ve hedef dosya vardır. Araç takımının ne olmasını istediğinize bağlı olarak, bu dosyalar içeri aktarma veya örnek olarak kullanılması yararlı olabilir:
 
-- `$(VCTargetsPath)`\\*Microsoft.CppCommon.targets*
+- `$(VCTargetsPath)`\\*Microsoft. CppCommon. targets*
 
-  Bu dosya yerel yapı işleminin ana bölümleri tanımlar ve aynı zamanda içeri aktarır:
+  Bu dosya, yerel yapı sürecinin ana parçalarını tanımlar ve ayrıca şunları içeri aktarır:
 
-  - `$(VCTargetsPath)`\\*Microsoft.CppBuild.targets*
+  - `$(VCTargetsPath)`\\*Microsoft. CppBuild. targets*
 
-  - `$(VCTargetsPath)`\\*Microsoft.BuildSteps.targets*
+  - `$(VCTargetsPath)`\\*Microsoft. BuildSteps. targets*
 
-  - `$(MSBuildToolsPath)`\\*Microsoft.Common.Targets*
+  - `$(MSBuildToolsPath)`\\*Microsoft. Common. targets*
 
-- `$(VCTargetsPath)`\\*Microsoft.Cpp.Common.props*
+- `$(VCTargetsPath)`\\*Microsoft. cpp. Common. props*
 
-   Microsoft derleyicileri kullanın ve Windows hedef araç takımları için varsayılan değerleri ayarlar.
+   Microsoft derleyicileri ve hedef pencereleri kullanan araç takımları varsayılanlarını ayarlar.
 
-- `$(VCTargetsPath)`\\*Microsoft.Cpp.WindowsSDK.props*
+- `$(VCTargetsPath)`\\*Microsoft. cpp. WindowsSDK. props*
 
-   Bu dosya, Windows SDK konumunu belirler ve Windows hedefleyen uygulamalar için bazı önemli özellikleri tanımlar.
+   Bu dosya Windows SDK konumunu belirler ve Windows 'u hedefleyen uygulamalar için bazı önemli özellikleri tanımlar.
 
-### <a name="integrate-toolset-specific-targets-with-the-default-c-build-process"></a>Özel araç takımı hedefleri varsayılan C++ yapı işlemi ile tümleştirin
+### <a name="integrate-toolset-specific-targets-with-the-default-c-build-process"></a>Araç takımını özel hedefleri varsayılan C++ derleme işlemiyle tümleştirin
 
-C++ yapı işlemi varsayılan tanımlanan *Microsoft.CppCommon.targets*. Hedefleri var. herhangi bir özel derleme aracı çağırmaz; Bunlar, ana derleme adımları, sırası ve bağımlılıkları belirtin.
+Varsayılan C++ derleme işlemi, *Microsoft. CppCommon. targets*içinde tanımlanmıştır. Hedefleri belirli bir yapı aracını çağırmayın; ana derleme adımlarını, sıralarını ve bağımlılıklarını belirler.
 
-C++ yapı aşağıdaki hedefler tarafından temsil edilen üç ana adım vardır:
+C++ derlemesi, aşağıdaki hedeflere göre temsil edilen üç ana adıma sahiptir:
 
 - `BuildGenerateSources`
 
@@ -181,9 +181,9 @@ C++ yapı aşağıdaki hedefler tarafından temsil edilen üç ana adım vardır
 
 - `BuildLink`
 
-Her derleme adımı birbirinden bağımsız olarak çalıştırılabilir olduğundan, tek bir adımda çalıştıran hedef öğesi grupları ve farklı bir adım, bir parçası olarak çalıştırmak hedefleri içinde tanımlanan özellikler güvenemezsiniz. Bu bölme, belirli yapı performans iyileştirmelerini sağlar. Varsayılan olarak kullanılmıyor olsa da, bu ayrımı uymanız yine de önerilir.
+Her derleme adımı bağımsız olarak yürütülebildiğinden, bir adımda çalışan hedefler, farklı bir adımın parçası olarak çalışan hedeflerde tanımlanan öğe gruplarına ve özelliklere güvenmemelidir. Bu bölüm belirli derleme performansı iyileştirmelerine izin verir. Varsayılan olarak kullanılmasa da bu ayrımı dikkate almanız önerilir.
 
-Her bir adımın Çalıştır hedefleri, bu özellikleri tarafından denetlenir:
+Her adımın içinde çalıştırılan hedefler şu özellikler tarafından denetlenir:
 
 - `$(BuildGenerateSourcesTargets)`
 
@@ -191,7 +191,7 @@ Her bir adımın Çalıştır hedefleri, bu özellikleri tarafından denetlenir:
 
 - `$(BeforeBuildLinkTargets)`
 
-Her adım, önce ve sonra özellikleri de vardır.
+Her adımın önceki ve sonraki özellikleri de vardır.
 
 ```xml
 <Target
@@ -207,7 +207,7 @@ Her adım, önce ve sonra özellikleri de vardır.
   DependsOnTargets="$(CommonBuildOnlyTargets);$(BeforeBuildLinkTargets);$(BuildLinkTargets);$(AfterBuildLinkTargets)" />
 ```
 
-Bkz: *Microsoft.CppBuild.targets* her adımda dahil edilen hedefleri örnekleri için dosya:
+Her adımda bulunan hedeflerin örnekleri için bkz *. Microsoft. CppBuild. targets* dosyası:
 
 ```xml
 <BuildCompileTargets Condition="'$(ConfigurationType)'\!='Utility'">
@@ -219,7 +219,7 @@ Bkz: *Microsoft.CppBuild.targets* her adımda dahil edilen hedefleri örnekleri 
 </BuildCompileTargets>
 ```
 
-Hedef gibi görünüyorsa `_ClCompile`, doğrudan başlarına hiçbir şey yapma ancak bunun yerine dahil olmak üzere diğer hedeflerde bağımlı göreceğiniz `ClCompile`:
+Hedefleri gibi hedeflere bakarsanız, `_ClCompile` bunlara doğrudan kendileri tarafından hiçbir şey yapmayamaz, bunun yerine diğer hedeflere bağlı olarak şunlar vardır `ClCompile` :
 
 ```xml
 <Target Name="_ClCompile"
@@ -227,13 +227,13 @@ Hedef gibi görünüyorsa `_ClCompile`, doğrudan başlarına hiçbir şey yapma
 </Target>
 ```
 
-`ClCompile` ve diğer yapı araç-özel hedefleri boş hedef olarak tanımlanan *Microsoft.CppBuild.targets*:
+`ClCompile` ve diğer derleme aracına özgü hedefler, *Microsoft. CppBuild. targets*içinde boş hedefler olarak tanımlanmıştır:
 
 ```xml
 <Target Name="ClCompile"/>
 ```
 
-Çünkü `ClCompile` hedef boşsa, araç takımı tarafından geçersiz kılınmadığı sürece, herhangi bir gerçek derleme eylemi gerçekleştirilir. Araç takımı hedefleri geçersiz kılabilirsiniz `ClCompile` hedef, diğer bir deyişle, başka bir içerebilir `ClCompile` tanımı içeri aktardıktan sonra *Microsoft.CppBuild.targets*:
+`ClCompile`Hedef boş olduğu için, bir araç kümesi tarafından geçersiz kılınmadığı müddetçe gerçek bir yapı eylemi gerçekleştirilmez. Araç takımı hedefleri hedefi geçersiz kılabilir `ClCompile` , diğer bir deyişle, `ClCompile` *Microsoft. cppbuild. targets*alındıktan sonra başka bir tanım içerebilir:
 
 ```xml
 <Target Name="ClCompile"
@@ -243,21 +243,21 @@ Hedef gibi görünüyorsa `_ClCompile`, doğrudan başlarına hiçbir şey yapma
 </Target>
 ```
 
-Visual Studio'nun platformlar arası destek uygulanmadı önce oluşturulduğu, adına rağmen `ClCompile` hedef CL.exe çağırmak yok. Bu ayrıca Clang, gcc ve diğer derleyiciler uygun MSBuild görevleri kullanarak çağırabilirsiniz.
+Visual Studio, platformlar arası destek uygulanmadan önce oluşturulmuş ada karşın, `ClCompile` hedefin CL.exe çağrısı gerekmez. Ayrıca uygun MSBuild görevlerini kullanarak Clang, GCC veya diğer derleyiciler çağırabilir.
 
-`ClCompile` Hedef dışında herhangi bir bağımlılık olmamalıdır `SelectClCompile` IDE içinde çalışma için tek dosyalı derleme komutu için gerekli olan hedef.
+`ClCompile`Hedef, `SelectClCompile` tek dosya derleme komutunun IDE 'de çalışması için gerekli olan, hedef dışında hiçbir bağımlılığı içermemelidir.
 
-## <a name="msbuild-tasks-to-use-in-toolset-targets"></a>Araç takımı hedeflerin kullanılacak MSBuild görevleri
+## <a name="msbuild-tasks-to-use-in-toolset-targets"></a>Araç kümesi hedeflerinde kullanılacak MSBuild görevleri
 
-Bir gerçek derleme aracı çağırmak için hedef bir MSBuild görevi çağırması gerekir. Temel bir yoktur [Exec görevi](../msbuild/exec-task.md) çalıştırılacak bir komut satırı belirtmenize olanak verir. Ancak, derleme araçları, genellikle girişleri birçok seçeneğiniz vardır. Giriş ve çıkışları artımlı derlemeler için bunlar için özel görevler sağlamak için daha anlamlı olur böylece izlemek için. Örneğin, `CL` görev MSBuild özellikleri CL.exe anahtarları çevirir, bunları bir yanıt dosyasına yazar ve CL.exe çağırır. Ayrıca, daha sonra artımlı derlemeleri için tüm giriş ve çıkış dosyaları izler. Daha fazla bilgi için [artımlı derlemeleri ve güncel denetimleri](#incremental-builds-and-up-to-date-checks).
+Gerçek bir yapı aracını çağırmak için hedefin bir MSBuild görevi çağırması gerekir. Çalıştırmak için bir komut satırı belirtmenize izin veren temel bir [Exec görevi](../msbuild/exec-task.md) vardır. Ancak, derleme araçlarının genellikle birçok seçeneği, girişi vardır. ve artımlı derlemeler izlemek için çıkış yapar, bu nedenle bunlar için özel görevlere sahip olmak daha mantıklı olur. Örneğin, `CL` görev MSBuild özelliklerini CL.exe anahtarlara çevirir, bunları bir yanıt dosyasına yazar ve CL.exe çağırır. Ayrıca, daha sonra Artımlı derlemeler için tüm giriş ve çıkış dosyalarını izler. Daha fazla bilgi için bkz. [Artımlı derlemeler ve güncel denetimler](#incremental-builds-and-up-to-date-checks).
 
-Bu görevleri Microsoft.Cpp.Common.Tasks.dll uygular:
+Microsoft.Cpp.Common.Tasks.dll şu görevleri uygular:
 
 - `BSCMake`
 
 - `CL`
 
-- `ClangCompile` (clang gcc anahtarlar)
+- `ClangCompile` (Clang-GCC anahtarları)
 
 - `LIB`
 
@@ -271,71 +271,71 @@ Bu görevleri Microsoft.Cpp.Common.Tasks.dll uygular:
 
 - `XDCMake`
 
-- `CustomBuild` (Exec gibi ancak giriş ve çıkış izleme ile)
+- `CustomBuild` (yürütme gibi, giriş ve çıkış izleme ile)
 
 - `SetEnv`
 
 - `GetOutOfDateItems`
 
-Bir aracı varsa, var olan bir aracı aynı eylemi gerçekleştirir ve (clang-cl ve CL olduğu gibi) benzer bir komut satırı anahtarları olan, aynı görevi ikisinin için kullanabilirsiniz.
+Var olan bir araçla aynı eylemi gerçekleştiren ve benzer komut satırı anahtarlarına (Clang-CL ve CL do olarak) sahip olan bir aracınız varsa, her ikisi için de aynı görevi kullanabilirsiniz.
 
-Bir derleme aracı için yeni bir görev oluşturmanız gerekiyorsa, aşağıdaki seçeneklerden birini seçebilirsiniz:
+Bir yapı aracı için yeni bir görev oluşturmanız gerekiyorsa, aşağıdaki seçeneklerden birini seçebilirsiniz:
 
-1. Bu görevi nadiren kullanın veya yapılandırmanız için birkaç saniye önemli değildir, MSBuild 'inline' görevleri kullanabilirsiniz:
+1. Bu görevi nadiren kullanırsanız veya birkaç saniyelik derleme için önemi yoksa, MSBuild ' inline ' görevlerini kullanabilirsiniz:
 
-   - XAML görevi (özel derleme kuralı)
+   - Xaml görevi (özel bir yapı kuralı)
 
-     Xaml görevi bildirimi bir örnek için bkz: `$(VCTargetsPath)` \\ *BuildCustomizations*\\*masm.xml*ve kullanımı için bkz: `$(VCTargetsPath)` \\ *BuildCustomizations*\\*masm.targets*.
+     Xaml görev bildiriminin bir örneği için bkz `$(VCTargetsPath)` \\ . *buildcustomizations* \\ *masm.xml*ve kullanımı için bkz `$(VCTargetsPath)` \\ . *buildcustomizations* \\ *Masd. targets*.
 
    - [Kod görevi](../msbuild/msbuild-inline-tasks.md)
 
-1. Daha iyi görev performans istediğiniz veya daha karmaşık işlevselliği yeterlidir, normal Msbuild'i kullanma [görev yazma](../msbuild/task-writing.md) işlem.
+1. Daha iyi görev performansı istiyorsanız veya yalnızca daha karmaşık işlevlere ihtiyaç duyuyorsanız, normal MSBuild [görev yazma](../msbuild/task-writing.md) işlemini kullanın.
 
-   Tüm girişler ve çıkışlar aracının aracı komut satırında olarak listeleniyorsa `CL`, `MIDL`, ve `RC` durumlarda ve otomatik girdi ve çıktı dosya izleme ve .tlog dosya oluşturma istiyorsanız, görev türetilen`Microsoft.Build.CPPTasks.TrackedVCToolTask`sınıfı. Şu an için temel belgelere varken [ToolTask](/dotnet/api/microsoft.build.utilities.tooltask) örnekler veya ayrıntılar için sınıf `TrackedVCToolTask` sınıfı. İlginizi çeken olacaksa, kendi sesinizi üzerinde ekleyin [developercommunity.visualstudio.com](https://developercommunity.visualstudio.com/spaces/62/index.html).
+   Aracın tüm giriş ve çıkışları,,, ve durumlarında olduğu gibi araç komut satırında listelenmiyorsa `CL` `MIDL` `RC` ve otomatik giriş ve çıkış dosyası izlemeyi ve. TLog dosyası oluşturmayı istiyorsanız, görevi sınıftan türetirsiniz `Microsoft.Build.CPPTasks.TrackedVCToolTask` . Mevcut olduğunda, temel [araç görev](/dotnet/api/microsoft.build.utilities.tooltask) sınıfı için belgeler olsa da, sınıfının ayrıntıları için örnek veya belge yoktur `TrackedVCToolTask` . Bu belirli bir ilgi çekici olacaksa, [developercommunity.VisualStudio.com](https://developercommunity.visualstudio.com/spaces/62/index.html)üzerindeki bir isteğe sesinizi ekleyin.
 
-## <a name="incremental-builds-and-up-to-date-checks"></a>Artımlı derlemeleri ve güncel denetimleri
+## <a name="incremental-builds-and-up-to-date-checks"></a>Artımlı derlemeler ve güncel denetimler
 
-Varsayılan MSBuild Artımlı derleme hedefi kullanım `Inputs` ve `Outputs` öznitelikleri. Bunları belirtirseniz, yalnızca herhangi biri varsa, tüm çıktılar daha yeni bir zaman damgası MSBuild hedefi çağırır. Kaynak dosyaları genellikle eklemek veya diğer dosyalarını içeri aktarın ve yapı araçları üretim aracı seçeneklere bağlı olarak farklı çıkışları olduğundan, tüm olası girişleri belirtin zordur ve MSBuild hedeflerini çıkarır.
+Varsayılan MSBuild Artımlı derleme hedefleri `Inputs` ve özniteliklerini kullanır `Outputs` . Bunları belirtirseniz, MSBuild yalnızca girdilerden herhangi birinin tüm çıkışlardan daha yeni bir zaman damgasına sahip olması durumunda hedefi çağırır. Kaynak dosyalar genellikle diğer dosyaları içerdiğinden veya içeri aktarırken ve derleme araçları araç seçeneklerine bağlı olarak farklı çıktılar ürettiğinden, MSBuild hedeflerindeki tüm olası giriş ve çıkışları belirtmek zordur.
 
-Bu sorunu yönetmek için C++ derleme artımlı derlemeleri desteklemek için farklı bir teknik kullanır. Çoğu hedefleri olmayan girişler ve çıkışlar belirtin ve sonuç olarak, derleme sırasında her zaman çalıştır. Giriş ve çıkışları içine tüm hakkında bilgi hedeflerini adlı görevler yazma *tlog* .tlog uzantısına sahip dosyalar. Güncel nedir ve .tlog dosyaları daha sonra derleme tarafından ne değişti ve yeniden oluşturulması gerekiyor denetlemek için kullanılır. .tlog ayrıca IDE içindeki varsayılan derleme güncellik denetimi için yalnızca kaynak dosyalarıdır.
+Bu sorunu yönetmek için C++ derlemesi artımlı derlemeleri desteklemek için farklı bir teknik kullanır. Çoğu hedef giriş ve çıkışları belirtmez ve sonuç olarak her zaman derleme sırasında çalıştırılır. Hedefler tarafından çağrılan görevler,. TLog uzantısına sahip olan *TLog* dosyaları için tüm girişler ve çıktılar hakkındaki bilgileri yazar. . TLog dosyaları, daha sonra nelerin değiştirildiğini ve yeniden oluşturulması gerektiğini ve güncel olduğunu denetlemek için derlemeler tarafından kullanılır. . TLog dosyaları aynı zamanda IDE 'de varsayılan derleme güncel denetimi için tek kaynaktır.
 
-Tüm girişler ve çıkışlar belirlemek için yerel aracı görevleri tracker.exe kullanın ve [FileTracker](/dotnet/api/microsoft.build.utilities.filetracker) MSBuild tarafından sağlanan sınıfı.
+Tüm giriş ve çıkışları öğrenmek için, yerel araç görevleri tracker.exe ve MSBuild tarafından sağlanmış olan [FileTracker](/dotnet/api/microsoft.build.utilities.filetracker) sınıfını kullanır.
 
-Microsoft.Build.CPPTasks.Common.dll tanımlar `TrackedVCToolTask` genel soyut temel sınıf. Yerel aracı görevlerin çoğunu sınıfından türetilir.
+Microsoft.Build.CPPTasks.Common.dll `TrackedVCToolTask` ortak soyut temel sınıfı tanımlar. Yerel araç görevlerinin çoğu bu sınıftan türetilir.
 
-Kullanabileceğiniz 15,8 Visual Studio 2017 güncelleştirmesi itibarıyla `GetOutOfDateItems` Microsoft.Cpp.Common.Tasks.dll özel hedefleriyle bilinen giriş ve çıkışları için .tlog dosyaları üretmek için uygulanan görev.
-Alternatif olarak, bunları kullanarak oluşturabileceğiniz `WriteLinesToFile` görev. Bkz: `_WriteMasmTlogs` hedeflemek `$(VCTargetsPath)` \\ *BuildCustomizations*\\*masm.targets* örnek olarak.
+Visual Studio 2017 güncelleştirme 15,8 ' den başlayarak, `GetOutOfDateItems` bilinen giriş ve çıkışlarla özel hedefler için. TLog dosyaları üretmek üzere Microsoft.Cpp.Common.Tasks.dll ' de uygulanan görevi kullanabilirsiniz.
+Alternatif olarak, görevi kullanarak da oluşturabilirsiniz `WriteLinesToFile` . `_WriteMasmTlogs` `$(VCTargetsPath)` \\ Örnek olarak *buildcustomizations* \\ *Masd. targets* içindeki hedefe bakın.
 
-## <a name="tlog-files"></a>.TLOG dosyaları
+## <a name="tlog-files"></a>. TLog dosyaları
 
-Üç tür .tlog dosyası vardır: *okuma*, *yazma*, ve *komut satırı*. Okuma ve yazma .tlog dosyaları, artımlı derlemeleri ve IDE'de güncellik denetimi tarafından kullanılır. Komut satırı .tlog dosyaları yalnızca artımlı yapılarında kullanılır.
+Üç tür. TLog dosyası vardır: *okuma*, *yazma*ve *komut satırı*. Okuma ve yazma. TLog dosyaları Artımlı derlemeler ve IDE 'deki güncel denetim tarafından kullanılır. Komut satırı. TLog dosyaları yalnızca artımlı derlemelerde kullanılır.
 
-MSBuild .tlog dosyalarını okuma ve yazma için bu yardımcı sınıflar sağlar:
+MSBuild,. tlog dosyalarını okumak ve yazmak için bu yardımcı sınıfları sağlar:
 
 - [CanonicalTrackedInputFiles](/dotnet/api/microsoft.build.utilities.canonicaltrackedinputfiles)
 
 - [CanonicalTrackedOutputFiles](/dotnet/api/microsoft.build.utilities.canonicaltrackedoutputfiles)
 
-[FlatTrackingData](/dotnet/api/microsoft.build.utilities.flattrackingdata) sınıfı, hem okuma hem de erişim .tlog dosyalarını yazmak ve çıkışları ya da bir çıktı eksik yeni girişler tanımlamak için kullanılabilir. Bu güncellik denetimi içinde kullanılır.
+[Düz TrackingData](/dotnet/api/microsoft.build.utilities.flattrackingdata) sınıfı hem okuma hem de yazma. TLog dosyalarına erişmek ve çıktılardan daha yeni olan girişleri belirlemek için kullanılabilir veya bir çıktı eksikse. Bu, güncel denetiminde kullanılır.
 
-Komut satırı .tlog dosyaları, komut satırları yapıda kullanılan hakkında bilgi içerir. İç biçimi bunları üreten MSBuild görevi tarafından belirlenir. Bu nedenle bunlar yalnızca artımlı derlemeleri, güncel değil denetimleri için kullanılır.
+Komut satırı. TLog dosyaları, derlemede kullanılan komut satırlarıyla ilgili bilgiler içerir. Bunlar yalnızca artımlı derlemeler için, güncel denetimler için kullanılır, bu nedenle iç biçim bunları üreten MSBuild göreviyle belirlenir.
 
-### <a name="read-tlog-format"></a>Okuma .tlog biçimi
+### <a name="read-tlog-format"></a>Oku. TLog biçimi
 
-*Okuma* .tlog dosyaları (\*.read.\*. TLOG) kaynak dosyaları ve bunların bağımlılıklarını hakkındaki bilgileri içerir.
+. Tlog dosyalarını *Oku* ( \* . Read. \* . tlog), kaynak dosyalarla ve bağımlılıklarıyla ilgili bilgiler içerir.
 
-Şapka işareti ( **^** ) bir satırın başında bir veya daha fazla kaynağı belirtir. Aynı bağımlılıklara kaynakları bir çubukla ayrılan ( **\|** ).
+Satırın başındaki bir şapka ( **^** ) bir veya daha fazla kaynağı gösterir. Aynı bağımlılıkları paylaşan kaynaklar dikey çubukla ( **\|** ) ayrılır.
 
-Kaynakların her biri kendi satırında sonra bağımlılık dosyalar listelenir. Tüm adlar tam yollardır.
+Bağımlılık dosyaları, her biri kendi satırı üzerinde kaynaklardan sonra listelenir. Tüm dosya adları tam yollardır.
 
-Örneğin, proje kaynaklarınızı bulunur varsayın *F:\\test\\ConsoleApplication1\\ConsoleApplication1*. Varsa, kaynak dosyanızın *Class1.cpp*, bunlar sahip içeren
+Örneğin, proje kaynaklarınızın *F: \\ Test \\ ConsoleApplication1 \\ ConsoleApplication1*içinde bulunduğunu varsayın. Kaynak dosyanızda, *Class1. cpp*, bu şunları içeriyorsa,
 
 ```cpp
 #include "stdafx.h" //precompiled header
 #include "Class1.h"
 ```
 
-ardından *CL.read.1.tlog* dosya iki bağımlılıklarını tarafından izlenen bir kaynak dosya içerir:
+sonra *CL. Read. 1. TLog* dosyası, kaynak dosyayı ve ardından iki bağımlılığı içerir:
 
 ```tlog
 ^F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\CLASS1.CPP
@@ -343,17 +343,17 @@ F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.PCH
 F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\CLASS1.H
 ```
 
-Dosya adları büyük harfle yazmak için gerekli değildir, ancak bazı araçları bir kolaylık sağlamaya yöneliktir.
+Dosya adlarının büyük harfle yazılması gerekmez, ancak bazı araçlar için kolaylık vardır.
 
-### <a name="write-tlog-format"></a>.TLOG biçimi yazma
+### <a name="write-tlog-format"></a>Write. TLog biçimi
 
-*Yazma* .tlog (\*.write.\*. TLOG) dosyaları, kaynaklar ve çıkış bağlanın.
+*Write* . TLog ( \* . Write. \* . tlog) dosyaları kaynakları ve çıkışları birbirine bağlanır.
 
-Şapka işareti ( **^** ) bir satırın başında bir veya daha fazla kaynağı belirtir. Birden çok kaynaktan bir çubukla ayrılan ( **\|** ).
+Satırın başındaki bir şapka ( **^** ) bir veya daha fazla kaynağı gösterir. Birden çok kaynak dikey çubukla ( **\|** ) ayrılır.
 
-Kaynakların her biri kendi satırında sonra kaynaklarından oluşturulan çıkış dosyaları listelenmelidir. Tüm dosya adları, tam yolu olmalıdır.
+Kaynaklardan oluşturulan çıkış dosyalarının, her biri kendi satırı üzerinde kaynaklardan sonra listelenmesi gerekir. Tüm dosya adları tam yol olmalıdır.
 
-Bir ek kaynak dosyasının Örneğin, bir basit ConsoleApplication projesi *Class1.cpp*, *link.write.1.tlog* dosyası içerebilir:
+Örneğin, ek bir kaynak dosyası *Class1. cpp*olan bir basit ConsoleApplication projesi için *LINK. Write. 1. TLog* dosyası şunları içerebilir:
 
 ```tlog
 ^F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\CLASS1.OBJ|F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.OBJ|F:\TEST\CONSOLEAPPLICATION1\CONSOLEAPPLICATION1\DEBUG\STDAFX.OBJ
@@ -362,19 +362,19 @@ F:\TEST\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.EXE
 F:\TEST\CONSOLEAPPLICATION1\DEBUG\CONSOLEAPPLICATION1.PDB
 ```
 
-## <a name="design-time-build"></a>Tasarım zamanı derleme
+## <a name="design-time-build"></a>Tasarım zamanı oluşturma
 
-IDE'de, .vcxproj proje MSBuild hedefleri birtakım projeden ek bilgi almak için çıkış dosyalarının yeniden oluşturmak için kullanır. Bu hedefler bazıları yalnızca tasarım zamanı yapılarında kullanılır, ancak bunların çoğu, düzenli yapılar hem tasarım zamanı derlemeleri de kullanılır.
+IDE 'de. vcxproj projeleri, projeden ek bilgi almak ve çıkış dosyalarını yeniden oluşturmak için bir MSBuild hedefleri kümesi kullanır. Bu hedeflerin bazıları yalnızca tasarım zamanı yapılarında kullanılır, ancak çoğu düzenli derlemelerde ve tasarım zamanı yapılarında kullanılır.
 
-CPS belgeleri için tasarım zamanı derlemeleri hakkında genel bilgi için bkz. [tasarım zamanı derlemeleri](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md). Bu belgeleri yalnızca kısmen Visual C++ projeleri için geçerlidir.
+Tasarım zamanı yapıları hakkında genel bilgi için bkz. [Tasarım zamanı derlemeler](https://github.com/dotnet/project-system/blob/master/docs/design-time-builds.md)için CPS belgeleri. Bu belge yalnızca Visual C++ projelerine kısmen uygulanabilir.
 
-`CompileDesignTime` Ve `Compile` tasarım zamanında belirtilen hedefleri için .vcxproj proje çalıştırılmadı belgeleri oluşturur. Visual C++ .vcxproj projeleri farklı tasarım zamanı hedef IntelliSense bilgilerini almak için kullanın.
+`CompileDesignTime` `Compile` Tasarım zamanı derlemeler belgelerinde bahsedilen ve hedefleri hiçbir zaman. vcxproj projeleri için çalıştırılmaz. Visual C++. vcxproj projeleri, IntelliSense bilgilerini almak için farklı tasarım zamanı hedefleri kullanır.
 
-### <a name="design-time-targets-for-intellisense-information"></a>IntelliSense bilgisi için tasarım zamanı hedefleri
+### <a name="design-time-targets-for-intellisense-information"></a>IntelliSense bilgileri için tasarım zamanı hedefleri
 
-.Vcxproj projelerinde kullanılan tasarım zamanı hedef tanımlanan `$(VCTargetsPath)` \\ *Microsoft.Cpp.DesignTime.targets*.
+. Vcxproj projelerinde kullanılan tasarım zamanı hedefleri, `$(VCTargetsPath)` \\ *Microsoft. cpp. DesignTime. targets*içinde tanımlanmıştır.
 
-`GetClCommandLines` Target derleyici seçenekleri IntelliSense toplar:
+`GetClCommandLines`Hedef, IntelliSense için derleyici seçeneklerini toplar:
 
 ```xml
 <Target
@@ -383,39 +383,39 @@ CPS belgeleri için tasarım zamanı derlemeleri hakkında genel bilgi için bkz
   DependsOnTargets="$(DesignTimeBuildInitTargets);$(ComputeCompileInputsTargets)">
 ```
 
-- `DesignTimeBuildInitTargets` – Tasarım zamanı başlatma için tasarım zamanı gereken hedefleri, yapı yalnızca. Diğerlerinin yanı sıra bu hedefler performansını artırmak için normal yapı işlevselliğinde bazı devre dışı bırakın.
+- `DesignTimeBuildInitTargets` – Tasarım zamanı oluşturma başlatması için yalnızca tasarım zamanı hedefleri gereklidir. Diğer şeyler arasında bu hedefler, performansı artırmak için bazı normal derleme işlevlerini devre dışı bırakır.
 
-- `ComputeCompileInputsTargets` – derleyici seçenekleri ve öğeleri değiştiren bir dizi hedefler. Tasarım zamanı hem normal yapılarda bu hedefleri çalıştırın.
+- `ComputeCompileInputsTargets` – derleyici seçeneklerini ve öğelerini değiştiren bir hedef kümesi. Bu hedefler hem tasarım zamanında hem de normal derlemelerde çalışır.
 
-Hedef çağrıları `CLCommandLine` IntelliSense için kullanılacak komut satırını oluşturmak için görev. Yeniden adını rağmen CL seçenekleri ancak yalnızca Clang ve gcc seçeneği de başa çıkabilir. Derleyici anahtarları türü tarafından denetlenir `ClangMode` özelliği.
+Hedef, `CLCommandLine` IntelliSense için kullanılacak komut satırını oluşturmak üzere görevi çağırır. Yine de, adına rağmen yalnızca CL seçeneklerini değil, Clang ve GCC seçeneklerini de işleyebilir. Derleyici anahtarlarının türü, özelliği tarafından denetlenir `ClangMode` .
 
-Şu anda, komut satırı tarafından üretilen `CLCommandLine` görev her zaman kullanan CL anahtarları (hatta Clang modunda) ayrıştırmak IntelliSense altyapısı için daha kolay olduğundan.
+Şu anda, görev tarafından oluşturulan komut satırı, `CLCommandLine` IntelliSense altyapısının ayrıştırılmasında daha kolay olduklarından, her zaman (Clang modunda bile) CL anahtarları kullanır.
 
-Normal veya tasarım zamanı çalışmadan önce derleme sonu gelmez emin olun bir hedef ekliyorsanız tasarım zamanı derlemeleri veya performansını etkiler. Bir geliştirici komut istemi açın ve bu komutu çalıştırmak için en basit yolu, hedef test verilmiştir:
+Derlemeden önce çalışan bir hedef ekliyorsanız, normal veya tasarım zamanı, tasarım zamanı yapılarını bozmadığından veya performansı etkilemediğinden emin olun. Hedefini sınamanın en kolay yolu bir geliştirici komut istemi açmak ve şu komutu çalıştırmalıdır:
 
 ```
 msbuild /p:SolutionDir=*solution-directory-with-trailing-backslash*;Configuration=Debug;Platform=Win32;BuildingInsideVisualStudio=true;DesignTimebuild=true /t:\_PerfIntellisenseInfo /v:d /fl /fileloggerparameters:PerformanceSummary \*.vcxproj
 ```
 
-Bu komutu bir ayrıntılı yapı günlüğüne üretir *msbuild.log*, sonunda bir performans hedefleri ve görevleri için Özet sahip.
+Bu komut, sonunda hedefler ve görevler için performans özetine sahip, ayrıntılı bir yapı günlüğü olan *MSBuild. log*dosyası oluşturur.
 
-Kullandığınızdan emin olun `Condition ="'$(DesignTimeBuild)' != 'true'"` yalnızca normal yapılarda ve tasarım zamanı derlemeleri için anlamlı tüm işlemlerde.
+`Condition ="'$(DesignTimeBuild)' != 'true'"`Tasarım zamanı yapıları için değil, yalnızca normal derlemeler için anlamlı olan tüm işlemlerde kullandığınızdan emin olun.
 
-### <a name="design-time-targets-that-generate-sources"></a>Kaynakları oluşturan tasarım zamanı hedefleri
+### <a name="design-time-targets-that-generate-sources"></a>Kaynak üreten tasarım zamanı hedefleri
 
-*Bu özellik, yerel Masaüstü projeleri için varsayılan olarak devre dışıdır ve önbelleğe alınan projeler üzerinde şu anda desteklenmeyen*.
+*Bu özellik, masaüstü yerel projeleri için varsayılan olarak devre dışıdır ve önbelleğe alınmış projelerde Şu anda desteklenmemektedir*.
 
-Varsa `GeneratorTarget` meta verileri bir proje öğesi için tanımlanan, hedef hem de otomatik olarak çalıştırılan projeyi ne zaman yüklendiği ve kaynak dosya değiştirildiğinde.
+`GeneratorTarget`Bir proje öğesi için meta veriler tanımlanmışsa, proje yüklendiğinde ve kaynak dosya değiştirildiğinde hedef otomatik olarak çalıştırılır.
 
 ::: moniker range="vs-2017"
 
-Örneğin, .cpp veya .h otomatik olarak oluşturacak şekilde dosyaları .xaml dosyalarını, `$(VSInstallDir)` \\ *MSBuild*\\*Microsoft* \\  *WindowsXaml*\\*v15.0*\\\*\\*Microsoft.Windows.UI.Xaml.CPP.Targets* dosyaları bu tanımlama Varlıklar:
+Örneğin,. xaml dosyalarından. cpp veya. h dosyalarını otomatik olarak oluşturmak için, `$(VSInstallDir)` \\ *MSBuild* \\ *Microsoft* \\ *WindowsXAML* \\ *v 15.0* \\ \* \\ *Microsoft. Windows. UI. xaml. cpp. targets* dosyaları bu varlıkları tanımlar:
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Örneğin, .cpp veya .h otomatik olarak oluşturacak şekilde dosyaları .xaml dosyalarını, `$(VSInstallDir)` \\ *MSBuild*\\*Microsoft* \\  *WindowsXaml*\\*v16.0*\\\*\\*Microsoft.Windows.UI.Xaml.CPP.Targets* dosyaları bu tanımlama Varlıklar:
+Örneğin,. xaml dosyalarından. cpp veya. h dosyalarını otomatik olarak oluşturmak için, `$(VSInstallDir)` \\ *MSBuild* \\ *Microsoft* \\ *WindowsXAML* \\ *v 16.0* \\ \* \\ *Microsoft. Windows. UI. xaml. cpp. targets* dosyaları bu varlıkları tanımlar:
 
 ::: moniker-end
 
@@ -435,7 +435,7 @@ Varsa `GeneratorTarget` meta verileri bir proje öğesi için tanımlanan, hedef
 </Target>
 ```
 
-Kullanılacak `Task.HostObject` kaydedilmemiş kaynak dosyaların içeriğini almak için hedef ve görev olarak kaydedilmelidir [MsbuildHostObjects](/dotnet/api/microsoft.visualstudio.shell.interop.ivsmsbuildhostobject?view=visualstudiosdk-2017) belirli bir pkgdef projeleri için:
+`Task.HostObject`Kaynak dosyalarının kaydedilmemiş içeriğini almak için kullanmak üzere, pkgdef içindeki verilen projeler için hedefler ve görevin [Msbuildhostobjects](/dotnet/api/microsoft.visualstudio.shell.interop.ivsmsbuildhostobject?view=visualstudiosdk-2017) olarak kaydedilmesi gerekir:
 
 ```reg
 \[$RootKey$\\Projects\\{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}\\MSBuildHostObjects\]
@@ -443,17 +443,17 @@ Kullanılacak `Task.HostObject` kaydedilmemiş kaynak dosyaların içeriğini al
 @="{83046B3F-8984-444B-A5D2-8029DEE2DB70}"
 ```
 
-## <a name="visual-c-project-extensibility-in-the-visual-studio-ide"></a>Visual Studio IDE, Visual C++ proje genişletilebilirliği
+## <a name="visual-c-project-extensibility-in-the-visual-studio-ide"></a>Visual Studio IDE 'de Proje genişletilebilirliği Visual C++
 
-Visual C++ proje sistemi dayanır [VS proje sistemi](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md)ve onun genişletilebilirlik noktaları kullanır. Ancak, proje hiyerarşisi uygulama Visual C++'a özgüdür ve CPS alarak değil, bu nedenle hiyerarşi genişletilebilirlik proje öğeleri için sınırlıdır.
+Visual C++ proje sistemi [vs proje sistemine](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/Index.md)dayalıdır ve kendi genişletilebilirlik noktalarını kullanır. Ancak, proje hiyerarşisi uygulamasının CPS 'e göre değil, Visual C++ 'a özgüdür ve hiyerarşi genişletilebilirliği proje öğeleriyle sınırlıdır.
 
 ### <a name="project-property-pages"></a>Proje özellik sayfaları
 
-Genel tasarım için bilgi [VC ++ projeleri için Framework çoklu sürüm desteğinin](https://devblogs.microsoft.com/visualstudio/framework-multi-targeting-for-vc-projects/).
+Genel tasarım bilgileri için bkz. [VC + + projeleri Için çerçeve Çoklu hedefleme](https://devblogs.microsoft.com/visualstudio/framework-multi-targeting-for-vc-projects/).
 
-Basit bir deyişle, özellik sayfaları gördüğünüz **proje özellikleri** iletişim kutusu için bir C++ projesi tarafından tanımlanan *kural* dosyaları. Bir kural dosyası bir özellik sayfasında göster ve nasıl ve bunlar projede kaydedileceği dosya için özellikler kümesini belirtir. Kural, Xaml biçimini kullanan .xml dosyaları dosyalarıdır. Bunları serileştirmek için kullanılan türleri açıklanan [Microsoft.Build.Framework.XamlTypes](/dotnet/api/microsoft.build.framework.xamltypes). Kural proje dosyalarında kullanımı hakkında daha fazla bilgi için bkz. [özellik sayfası XML kural dosyaları](/cpp/build/reference/property-page-xml-files).
+Basit koşullarda, bir C++ projesi için **Proje özellikleri** iletişim kutusunda gördüğünüz Özellik sayfaları *kural* dosyaları tarafından tanımlanır. Bir kural dosyası bir özellik sayfasında gösterilecek özellikler kümesini ve bunların proje dosyasında nasıl ve nerede kaydedileceğini belirtir. Kural dosyaları, XAML biçimi kullanan. xml dosyalarıdır. Bunları seri hale getirmek için kullanılan türler [Microsoft. Build. Framework. XamlTypes](/dotnet/api/microsoft.build.framework.xamltypes)içinde açıklanmıştır. Projelerdeki kural dosyalarının kullanımı hakkında daha fazla bilgi için bkz. [özellik sayfası XML kural dosyaları](/cpp/build/reference/property-page-xml-files).
 
-Kural dosyaları eklenmeli `PropertyPageSchema` öğesi grubu:
+Kural dosyaları `PropertyPageSchema` öğe grubuna eklenmelidir:
 
 ```xml
 <ItemGroup>
@@ -464,13 +464,13 @@ Kural dosyaları eklenmeli `PropertyPageSchema` öğesi grubu:
 </ItemGroup>
 ```
 
-`Context` meta verileri de kural türü tarafından denetlenir ve şu değerlerden biri olabilir kuralı görünürlük sınırları:
+`Context` meta veri, kural türü tarafından da denetlenen kural görünürlüğünü sınırlar ve şu değerlerden birine sahip olabilir:
 
 `Project` | `File` | `PropertySheet`
 
-CPS, içerik türü için diğer değerleri destekler, ancak bunlar Visual C++ projelerinde kullanılmaz.
+CPS, bağlam türü için diğer değerleri destekler, ancak Visual C++ projelerinde kullanılmaz.
 
-Kural birden fazla bağlamda görünür olmalıdır, noktalı virgül kullanın. ( **;** ) burada gösterildiği gibi bağlam değerlerini ayırmak için:
+Kuralın birden fazla bağlamda görünebilmelidir, burada gösterildiği gibi, bağlam değerlerini ayırmak için noktalı virgül (**;**) kullanın:
 
 ```xml
 <PropertyPageSchema Include="$(MyFolder)\MyRule.xml">
@@ -478,9 +478,9 @@ Kural birden fazla bağlamda görünür olmalıdır, noktalı virgül kullanın.
 </PropertyPageSchema>
 ```
 
-#### <a name="rule-format-and-main-types"></a>Kural biçimi ve ana türleri
+#### <a name="rule-format-and-main-types"></a>Kural biçimi ve ana türler
 
-Kural biçimi doğrudan olduğundan bu bölüm, yalnızca kural kullanıcı arabiriminin nasıl göründüğünü etkiler öznitelikleri açıklar.
+Kural biçimi basittir, bu nedenle bu bölüm yalnızca kuralın Kullanıcı arabiriminde nasıl göründüğünü etkileyen öznitelikleri açıklar.
 
 ```xml
 <Rule
@@ -491,34 +491,34 @@ Kural biçimi doğrudan olduğundan bu bölüm, yalnızca kural kullanıcı arab
   xmlns="http://schemas.microsoft.com/build/2009/properties">
 ```
 
-`PageTemplate` Özniteliği, kural nasıl görüntüleneceğini tanımlar **özellik sayfaları** iletişim. Özniteliği şu değerlerden biri olabilir:
+`PageTemplate`Özniteliği, kuralın **Özellik sayfaları** iletişim kutusunda nasıl görüntüleneceğini tanımlar. Öznitelik şu değerlerden birine sahip olabilir:
 
 | Öznitelik | Açıklama |
 |------------| - |
-| `generic` | Tüm özelliklerini kategoriye başlıklar altında tek bir sayfada gösterilir<br/>Kural için görünür `Project` ve `PropertySheet` bağlamı, ama `File`.<br/><br/> Örnek: `$(VCTargetsPath)`\\*1033*\\*general.xml* |
-| `tool` | Kategoriler, alt gösterilir.<br/>Kural tüm bağlamlarda görüntülenebilir: `Project`, `PropertySheet` ve `File`.<br/>Yalnızca proje öğeleriyle varsa kural proje özelliklerinde görülebilir `ItemType` tanımlanan `Rule.DataSource`kural adı dahil sürece `ProjectTools` öğesi grubu.<br/><br/>Örnek: `$(VCTargetsPath)`\\*1033*\\*clang.xml* |
-| `debugger` | Sayfanın hata ayıklama sayfası bir parçası olarak gösterilir.<br/>Kategorileri şu anda göz ardı edilir.<br/>Kural adı hata ayıklama başlatıcısı MEF nesnenin eşleşmelidir `ExportDebugger` özniteliği.<br/><br/>Örnek: `$(VCTargetsPath)`\\*1033*\\*hata ayıklayıcı\_yerel\_windows.xml* |
-| *custom* | Özel bir şablon. Şablon adı eşleşmelidir `ExportPropertyPageUIFactoryProvider` özniteliği `PropertyPageUIFactoryProvider` MEF nesne. Bkz: **Microsoft.VisualStudio.ProjectSystem.Designers.Properties.IPropertyPageUIFactoryProvider**.<br/><br/> Örnek: `$(VCTargetsPath)`\\*1033*\\*userMacros.xml* |
+| `generic` | Tüm özellikler kategori başlıkları altındaki bir sayfada gösterilir<br/>Kural `Project` , ve bağlamlarına ait olabilir `PropertySheet` , ancak `File` .<br/><br/> Örnek: `$(VCTargetsPath)` \\ *1033* \\ *general.xml* |
+| `tool` | Kategoriler alt sayfalar olarak gösterilir.<br/>Kural tüm bağlamlarda görünebilir: `Project` , `PropertySheet` ve `File` .<br/>Kural, `ItemType` `Rule.DataSource` öğe grubuna dahil edilmedikleri takdirde, proje özellikleri ' nde yalnızca projede tanımlı öğe varsa görünür `ProjectTools` .<br/><br/>Örnek: `$(VCTargetsPath)` \\ *1033* \\ *clang.xml* |
+| `debugger` | Sayfa, hata ayıklama sayfasının bir parçası olarak gösterilir.<br/>Kategoriler Şu anda yok sayıldı.<br/>Kural adı, hata ayıklama başlatıcısı MEF nesnesinin `ExportDebugger` özniteliğiyle eşleşmelidir.<br/><br/>Örnek: `$(VCTargetsPath)` \\ *1033* \\ *hata ayıklayıcı \_ yerel \_windows.xml* |
+| *Özel* | Özel şablon. Şablonun adı `ExportPropertyPageUIFactoryProvider` `PropertyPageUIFactoryProvider` MEF nesnesinin özniteliğiyle eşleşmelidir. Bkz. **Microsoft. VisualStudio. ProjectSystem. tasarımcılar. Properties. ıpropertypageuifactoryprovider**.<br/><br/> Örnek: `$(VCTargetsPath)` \\ *1033* \\ *userMacros.xml* |
 
-Kural özellik kılavuzunda tabanlı şablonlardan birini kullanıyorsa, bu genişletilebilirlik noktaları için özelliklerini kullanabilirsiniz:
+Kural, özellik kılavuz tabanlı şablonlardan birini kullanıyorsa, özellikleri için bu genişletilebilirlik noktalarını kullanabilir:
 
 - [Özellik değeri düzenleyicileri](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/property_value_editors.md)
 
-- [Dinamik sabit listesi değerleri sağlayıcısı](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDynamicEnumValuesProvider.md)
+- [Dinamik Enum değerleri sağlayıcısı](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDynamicEnumValuesProvider.md)
 
-#### <a name="extend-a-rule"></a>Bir kural genişletme
+#### <a name="extend-a-rule"></a>Bir kuralı genişletme
 
-Mevcut bir kuralı kullanabilirsiniz, ancak eklemek veya kaldırmak gerekir (yani Gizle) istiyorsanız birkaç özelliği, oluşturduğunuz bir [uzantısı kuralı](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/extending_rules.md).
+Mevcut bir kuralı kullanmak istiyorsanız, ancak yalnızca birkaç özelliği ekleme veya kaldırma (yani gizleme) ihtiyacı varsa, bir [uzantı kuralı](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/extending_rules.md)oluşturabilirsiniz.
 
 #### <a name="override-a-rule"></a>Bir kuralı geçersiz kıl
 
-Belki de, araç takımı proje varsayılan kuralları çoğunu kullanmak için ancak yalnızca bir veya birkaç tanesi değiştirmek için istediğiniz. Örneğin, yalnızca farklı derleyici anahtarları göstermek için C/C++ kuralını değiştirmek istediğinizi varsayalım. Aynı ada sahip yeni bir kural sağlayın ve var olan bir kural olarak görünen adı ve olmasını `PropertyPageSchema` varsayılan cpp hedefler içe sonra öğesi grubu. Projede kullanılan belirli bir ada sahip yalnızca bir kural ve sonuncu içine dahil `PropertyPageSchema` grubu WINS öğesi.
+Araç takımının çoğu proje varsayılan kuralını kullanmasını, ancak bunlardan yalnızca birini veya birkaçını değiştirmesini isteyebilirsiniz. Örneğin, yalnızca C/C++ kuralını farklı derleyici anahtarlarını gösterecek şekilde değiştirmek istediğinizi varsayalım. Var olan kuralla aynı ada ve görünen ada sahip yeni bir kural sağlayabilir ve `PropertyPageSchema` varsayılan cpp hedefleri içeri aktardıktan sonra öğeyi öğe grubuna dahil edebilirsiniz. Projede, belirtilen ada sahip tek bir kural kullanılır ve en son `PropertyPageSchema` öğe grubu WINS 'e eklenir.
 
 #### <a name="project-items"></a>Proje öğeleri
 
-*ProjectItemsSchema.xml* dosyası tanımlar `ContentType` ve `ItemType` proje öğeleri kabul edilir öğeleri için değerler ve tanımlar `FileExtension` yeni bir dosya eklendiğinde hangi öğe grubunu belirlemek için öğeleri.
+*ProjectItemsSchema.xml* dosyası, `ContentType` `ItemType` Proje öğesi olarak kabul edilen öğeler için ve değerlerini tanımlar ve `FileExtension` Yeni bir dosyanın hangi öğe grubuna ekleneceğini belirleyen öğeleri tanımlar.
 
-Varsayılan ProjectItemsSchema dosya bulunan `$(VCTargetsPath)` \\ *1033*\\*ProjectItemsSchema.xml*. Genişletmek için bir şema dosyası yeni bir adla gibi oluşturmalısınız *MyProjectItemsSchema.xml*:
+Varsayılan projectıtemsschema dosyası `$(VCTargetsPath)` \\ *1033* \\ *ProjectItemsSchema.xml*içinde bulunur. Genişletmek için, *MyProjectItemsSchema.xml*gibi yeni bir adla bir şema dosyası oluşturmanız gerekir:
 
 ```xml
 <ProjectSchemaDefinitions xmlns="http://schemas.microsoft.com/build/2009/properties">
@@ -536,7 +536,7 @@ Varsayılan ProjectItemsSchema dosya bulunan `$(VCTargetsPath)` \\ *1033*\\*Proj
 </ProjectSchemaDefinitions>
 ```
 
-Ardından hedefleri dosyasına ekleyin:
+Ardından hedefler dosyasına şunu ekleyin:
 
 ```xml
 <ItemGroup>
@@ -544,29 +544,29 @@ Ardından hedefleri dosyasına ekleyin:
 </ItemGroup>
 ```
 
-Örnek: `$(VCTargetsPath)`\\*BuildCustomizations*\\*masm.xml*
+Örnek: `$(VCTargetsPath)` \\ *buildcustomizations* \\ *masm.xml*
 
-### <a name="debuggers"></a>Hata ayıklayıcılar
+### <a name="debuggers"></a>Hata ayıklayıcıları
 
-Visual Studio'da hata ayıklama hizmeti için hata ayıklama altyapısı genişletilebilirliği destekler. Daha fazla bilgi için bu örnekler bakın:
+Visual Studio 'daki hata ayıklama hizmeti, hata ayıklama altyapısı için genişletilebilirliği destekler. Daha fazla bilgi için şu örneklere bakın:
 
-- [MIEngine, hata ayıklama lldb destekleyen açık kaynaklı proje](https://github.com/Microsoft/MIEngine)
+- [Mıengine, lldb hata ayıklamayı destekleyen açık kaynak proje](https://github.com/Microsoft/MIEngine)
 
 - [Visual Studio hata ayıklama altyapısı örneği](https://code.msdn.microsoft.com/windowsdesktop/Visual-Studio-Debug-Engine-c2e21c0e)
 
-Hata ayıklama oturumu için hata ayıklama altyapıları ve diğer özellikleri belirtmek için uygulamanız gereken bir [hata ayıklama başlatıcısı](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDebugLaunchProvider.md) MEF Bileşeni ve bir `debugger` kuralı. Bir örnek için bkz. `$(VCTargetsPath)` \\1033\\hata ayıklayıcı\_yerel\_windows.xml dosya.
+Hata ayıklama motoru ve hata ayıklama oturumunun diğer özelliklerini belirtmek için bir [hata ayıklama başlatıcısı](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDebugLaunchProvider.md) MEF bileşeni uygulamanız ve bir kural eklemeniz gerekir `debugger` . Bir örnek için bkz `$(VCTargetsPath)` \\ \\ . 1033 hata ayıklayıcı \_ yerel \_windows.xml dosyası.
 
-### <a name="deploy"></a>Dağıt
+### <a name="deploy"></a>Dağıtma
 
-.vcxproj proje kullanmak için Visual Studio Proje sistemi genişletilebilirlik [dağıtma sağlayıcıları](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDeployProvider.md).
+. vcxproj projeleri, [dağıtım sağlayıcıları](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IDeployProvider.md)Için Visual Studio proje sistemi genişletilebilirliği kullanır.
 
-### <a name="build-up-to-date-check"></a>Güncellik denetimi oluşturma
+### <a name="build-up-to-date-check"></a>Güncel denetim oluşturma
 
-Varsayılan olarak oluşturulması için okuma .tlog ve yazma .tlog dosyaları derleme güncellik denetimi gerektirir `$(TlogLocation)` tüm yapı girişleri ve çıkışları için derleme sırasında klasör.
+Varsayılan olarak, derleme güncellik denetimi, `$(TlogLocation)` tüm derleme girişleri ve çıkışları için derleme sırasında klasörde oluşturulacak Read. TLog ve Write. tlog dosyalarını gerektirir.
 
-Özel bir güncellik denetimi kullanmak için:
+Özel bir güncel denetim kullanmak için:
 
-1. Ekleyerek varsayılan güncellik denetimi devre dışı `NoVCDefaultBuildUpToDateCheckProvider` özelliği *Toolset.targets* dosyası:
+1. `NoVCDefaultBuildUpToDateCheckProvider` *Araç kümesi. targets* dosyasına özelliği ekleyerek varsayılan güncel denetimi devre dışı bırakın:
 
    ```xml
    <ItemGroup>
@@ -574,31 +574,31 @@ Varsayılan olarak oluşturulması için okuma .tlog ve yazma .tlog dosyaları d
    </ItemGroup>
    ```
 
-1. Kendi uygulama [IBuildUpToDateCheckProvider](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IBuildUpToDateCheckProvider.md).
+1. Kendi [ıbuilduptodatecheckprovider 'ı](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/extensibility/IBuildUpToDateCheckProvider.md)uygulayın.
 
 ## <a name="project-upgrade"></a>Proje yükseltme
 
-### <a name="default-vcxproj-project-upgrader"></a>Varsayılan .vcxproj proje Yükseltici
+### <a name="default-vcxproj-project-upgrader"></a>Default. vcxproj projesi yükselder
 
-Varsayılan .vcxproj proje Yükseltici değişiklikleri `PlatformToolset`, `ApplicationTypeRevision`, MSBuild araç takımı sürümü ve .net framework. Son iki Visual Studio sürümü varsayılan olarak her zaman değişir ancak `PlatformToolset` ve `ApplicationTypeRevision` özel MSBuild özellikleri tarafından denetlenebilir.
+Varsayılan. vcxproj projesi yükseltilebilir der,, `PlatformToolset` `ApplicationTypeRevision` MSBuild Araç Takımı sürümünü ve .NET Framework 'ü değiştirir. Son ikisi her zaman Visual Studio sürümü varsayılanlarına değiştirilir, ancak `PlatformToolset` `ApplicationTypeRevision` özel MSBuild özellikleri tarafından denetlenebilir.
 
-Yükseltici, bir proje veya yükseltilebilir olup olmadığını karar vermek için aşağıdaki ölçütleri kullanır:
+Yükselticide, projenin yükseltilip yükseltimeyeceğine karar vermek için bu ölçütler kullanılır:
 
-1. Tanımlama projeleri için `ApplicationType` ve `ApplicationTypeRevision`, mevcut olandan daha yüksek bir düzeltme numarası ile bir klasör bulunur.
+1. Ve tanımlayan projeler için `ApplicationType` `ApplicationTypeRevision` , geçerli olandan daha yüksek bir düzeltme numarası olan bir klasör vardır.
 
-1. Özellik `_UpgradePlatformToolsetFor_<safe_toolset_name>` geçerli araç takımı için tanımlanır ve değeri geçerli bir araç takımı için eşit değil.
+1. Özelliği `_UpgradePlatformToolsetFor_<safe_toolset_name>` geçerli araç kümesi için tanımlanır ve değeri geçerli araç kümesiyle eşit değildir.
 
-   Bu özellik adlarının  *\<safe_toolset_name >* bir alt çizgi yerine tüm alfasayısal olmayan karakterleri içeren bir araç takımı adı temsil eder ( **\_** ).
+   Bu özellik adlarında, *\<safe_toolset_name>* bir alt çizgi () ile tüm alfasayısal olmayan karakterlerin değiştirildiği araç kümesi adını temsil eder **\_** .
 
-Bir proje yükseltilebilir, katıldığı *çözümü yeniden hedefleme*. Daha fazla bilgi için [IVsTrackProjectRetargeting2](/dotnet/api/microsoft.visualstudio.shell.interop.ivstrackprojectretargeting2).
+Bir proje yükseltilecekse *çözüm yeniden hedefleme*öğesine katılıyorsa. Daha fazla bilgi için bkz. [IVsTrackProjectRetargeting2](/dotnet/api/microsoft.visualstudio.shell.interop.ivstrackprojectretargeting2).
 
-Proje adlarında adorn istiyorsanız **Çözüm Gezgini** projeleri, belirli bir araç kümesi kullandığınızda, tanımlamak bir `_PlatformToolsetShortNameFor_<safe_toolset_name>` özelliği.
+Projeler belirli bir araç takımını kullanırken **Çözüm Gezgini** proje adları eklemek istiyorsanız, bir `_PlatformToolsetShortNameFor_<safe_toolset_name>` özellik tanımlayın.
 
-Örnekler için `_UpgradePlatformToolsetFor_<safe_toolset_name>` ve `_PlatformToolsetShortNameFor_<safe_toolset_name>` özellik tanımları bkz *Microsoft.Cpp.Default.props* dosya. Kullanım örnekleri için bkz: `$(VCTargetPath)` \\ *Microsoft.Cpp.Platform.targets* dosya.
+`_UpgradePlatformToolsetFor_<safe_toolset_name>`Ve `_PlatformToolsetShortNameFor_<safe_toolset_name>` özellik tanımlarının örnekleri için bkz. *Microsoft. cpp. default. props* dosyası. Kullanım örnekleri için bkz `$(VCTargetPath)` \\ . *Microsoft. cpp. platform. targets* dosyası.
 
-### <a name="custom-project-upgrader"></a>Özel proje Yükseltici
+### <a name="custom-project-upgrader"></a>Özel proje yükselder
 
-Özel proje Yükseltici nesnesini kullanmak için bir MEF Bileşeni burada gösterildiği şekilde uygulayın:
+Özel bir proje yükseltilmiş der nesnesi kullanmak için, aşağıda gösterildiği gibi bir MEF bileşeni uygulayın:
 
 ```csharp
 /// </summary>
@@ -614,7 +614,7 @@ internal class MyProjectUpgrader: IProjectRetargetHandler
 }
 ```
 
-Kodunuzu alabilir ve varsayılan .vcxproj Yükseltici nesne arayın:
+Kodunuz, default. vcxproj yükseltilebilir der nesnesini içeri aktarıp çağırabilir:
 
 ```csharp
 // ...
@@ -625,9 +625,9 @@ Kodunuzu alabilir ve varsayılan .vcxproj Yükseltici nesne arayın:
 // ...
 ```
 
-`IProjectRetargetHandler` tanımlanan *Microsoft.VisualStudio.ProjectSystem.VS.dll* ve benzer `IVsRetargetProjectAsync`.
+`IProjectRetargetHandler`*Microsoft.VisualStudio.ProjectSystem.VS.dll* tanımlanmıştır ve şuna benzerdir `IVsRetargetProjectAsync` .
 
-Tanımlama `VCProjectUpgraderObjectName` özelliği, özel Yükseltici nesnesini kullanmak için proje sistemi bildirmek için:
+`VCProjectUpgraderObjectName`Proje sistemine özel bir yükseltilebilir der nesneniz kullanmasını söyleyen özelliği tanımlayın:
 
 ```xml
 <PropertyGroup>
@@ -635,9 +635,9 @@ Tanımlama `VCProjectUpgraderObjectName` özelliği, özel Yükseltici nesnesini
 </PropertyGroup>
 ```
 
-#### <a name="disable-project-upgrade"></a>Proje yükseltme devre dışı bırak
+#### <a name="disable-project-upgrade"></a>Proje yükseltmesini devre dışı bırak
 
-Proje yükseltme devre dışı bırakmak için bir `NoUpgrade` değeri:
+Proje yükseltmelerini devre dışı bırakmak için bir `NoUpgrade` değer kullanın:
 
 ```xml
 <PropertyGroup>
@@ -647,30 +647,30 @@ Proje yükseltme devre dışı bırakmak için bir `NoUpgrade` değeri:
 
 ## <a name="project-cache-and-extensibility"></a>Proje önbelleği ve genişletilebilirlik
 
-Visual Studio 2017, büyük C++ çözümlerle çalışırken performansı artırmak için [proje önbellek](https://devblogs.microsoft.com/cppblog/faster-c-solution-load-with-vs-15/) kullanıma sunulmuştur. Proje doldurulmuş ve ardından belleğe CPS ya da MSBuild projeleri yüklemeden projeleri yüklemek için kullanılan bir SQLite veritabanı olarak uygulanır.
+Visual Studio 2017 ' de büyük C++ çözümleriyle çalışırken performansı artırmak için [Proje önbelleği](https://devblogs.microsoft.com/cppblog/faster-c-solution-load-with-vs-15/) tanıtılmıştır. Proje verileriyle doldurulmuş bir SQLite veritabanı olarak uygulanır ve ardından MSBuild veya CPS projelerini belleğe yüklemeden projeler yüklemek için kullanılır.
 
-CPS nesne önbellekten yüklendi .vcxproj projeler için mevcut olduğundan, bu uzantının MEF Bileşenleri alma `UnconfiguredProject` veya `ConfiguredProject` oluşturulamaz. Bir proje kullanır (kullanma olasılıkları olan ister) MEF uzantıları Visual Studio algıladığında genişletilebilirlik desteklemek için proje önbelleği kullanılmaz.
+Önbellekten yüklenen. vcxproj projeleri için mevcut bir CPS nesnesi olmadığından, uzantının içeri veya oluşturulamaz olan MEF Bileşenleri `UnconfiguredProject` `ConfiguredProject` . Genişletilebilirlik 'i desteklemek için, Visual Studio bir projenin MEF uzantılarını kullanıp kullanmadığını (veya kullanmasından bağımsız olarak) algıladığında proje önbelleği kullanılmaz.
 
-Bu proje türleri her zaman tam olarak yüklenir ve tüm MEF uzantıları için oluşturulacak şekilde CPS nesneler bellekte sahiptir:
+Bu proje türleri her zaman tam olarak yüklenir ve bellek içinde CPS nesnelerine sahiptir, bu nedenle bunlar için tüm MEF uzantıları oluşturulur:
 
 - Başlangıç projeleri
 
-- Diğer bir deyişle bir özel Proje Yükseltici olan projelerin tanımlarlar bir `VCProjectUpgraderObjectName` özelliği
+- Özel bir proje yükselticisini olan projeler, yani bir `VCProjectUpgraderObjectName` özelliği tanımlar
 
-- Windows Masaüstü, yani hedefleyen olmayan projeleri tanımlarlar bir `ApplicationType` özelliği
+- Masaüstü pencerelerini hedeflemiyor, yani bir özelliği tanımladıkları projeler `ApplicationType`
 
-- Öğe projeleri (.vcxitems) ve tüm projelerin paylaşılan bu başvurusu .vcxitems projeleri tarafından aktarın.
+- Paylaşılan öğe projeleri (. vcxıtems) ve. vcxıtems projelerini içeri aktararak bunlara başvuran tüm projeler.
 
-Bu koşulların hiçbiri algılanırsa, bir proje önbelleği oluşturulur. Önbellek MSBuild Projesi yanıtlamak için gereken tüm verileri içeren `get` üzerinde sorgular `VCProjectEngine` arabirimleri. Bu MSBuild özellikler, tüm değişiklikleri anlamına gelir ve hedef dosya düzeyinde bir uzantısı tarafından yapılan önbellekten yüklendi projelerinde çalışmaya devam etmelidir.
+Bu koşullardan hiçbiri algılanmazsa, bir proje önbelleği oluşturulur. Önbellek, arabirimlerde sorguları yanıtlamak için gereken MSBuild projesinden tüm verileri içerir `get` `VCProjectEngine` . Bu, bir uzantı tarafından gerçekleştirilen MSBuild props ve hedefler dosya düzeyindeki tüm değişikliklerin yalnızca önbellekten yüklenen projelerde çalışması gerektiği anlamına gelir.
 
-## <a name="shipping-your-extension"></a>Uzantınızı aktarma
+## <a name="shipping-your-extension"></a>Uzantınızı gönderme
 
-VSIX dosyaları oluşturma hakkında daha fazla bilgi için bkz: [sevkiyat Visual Studio uzantıları](../extensibility/shipping-visual-studio-extensions.md). Özel yükleme konumları için dosyaları ekleme, örneğin, altında dosyaları ekleme hakkında bilgi için `$(VCTargetsPath)`, bkz: [uzantılar klasörünün dışına yükleme](../extensibility/set-install-root.md).
+VSıX dosyaları oluşturma hakkında daha fazla bilgi için bkz. [Visual Studio uzantılarını gönderme](../extensibility/shipping-visual-studio-extensions.md). Özel yükleme konumlarına dosya ekleme hakkında daha fazla bilgi için örneğin, altına dosya eklemek için, `$(VCTargetsPath)` bkz. [Extensions klasörünün dışına yükleme](../extensibility/set-install-root.md).
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-Microsoft Build System ([MSBuild](../msbuild/msbuild.md)) proje dosyaları için derleme altyapısı ve XML tabanlı Genişletilebilir biçimi sağlar. Tanımanız gerekir basic ile [MSBuild kavramları](../msbuild/msbuild-concepts.md) ile nasıl [Visual C++ için MSBuild](/cpp/build/reference/msbuild-visual-cpp-overview) proje sistemi Visual C++ genişletebilmek için çalışır.
+Microsoft derleme sistemi ([MSBuild](../msbuild/msbuild.md)), proje dosyaları için yapı altyapısını ve genişletilebilir XML tabanlı biçimi sağlar. Temel [MSBuild kavramları](../msbuild/msbuild-concepts.md) ve Visual C++ proje sistemini genişletmek Için [Visual C++ MSBuild](/cpp/build/reference/msbuild-visual-cpp-overview) 'in nasıl çalıştığı hakkında bilgi sahibi olmanız gerekir.
 
-Yönetilen Genişletilebilirlik Çerçevesi ([MEF](/dotnet/framework/mef/)) uzantı CPS ve Visual C++ proje sistemi tarafından kullanılan API'ler sağlar. MEF CPS tarafından nasıl kullanıldığını genel bakış için bkz: [CPS ve MEF](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md#cps-and-mef) içinde [MEF VSProjectSystem bakış](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md).
+Managed Extensibility Framework ([MEF](/dotnet/framework/mef/)), CPS ve Visual C++ proje sistemi tarafından kullanılan uzantı API 'lerini sağlar. MEF 'in CPS tarafından nasıl kullanılacağına ilişkin genel bakış için, bkz. [CPS ve MEF](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md#cps-and-mef) , [MEF 'e genel bakış](https://github.com/Microsoft/VSProjectSystem/blob/master/doc/overview/mef.md).
 
-Derleme adımları veya yeni bir dosya türleri eklemek için var olan yapı sistemi özelleştirebilirsiniz. Daha fazla bilgi için [MSBuild (Visual C++) genel bakış](/cpp/build/reference/msbuild-visual-cpp-overview) ve [Working with project properties](/cpp/build/working-with-project-properties).
+Yapı adımlarını veya yeni dosya türlerini eklemek için mevcut derleme sistemini özelleştirebilirsiniz. Daha fazla bilgi için bkz. [MSBuild (Visual C++) genel bakış](/cpp/build/reference/msbuild-visual-cpp-overview) ve [Proje özellikleriyle çalışma](/cpp/build/working-with-project-properties).

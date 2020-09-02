@@ -9,130 +9,130 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 037ee411c156d21145160dc95b40078fd841493c
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67825119"
 ---
 # <a name="help-viewer-administrator-guide"></a>Yardım Görüntüleyicisi Yönetici Kılavuzu
 
-Yardım Görüntüleyici ile veya internet erişimi olmayan ağ ortamları için yerel Yardım yüklemelerini yönetmenize olanak sağlar. Yerel Yardım içeriği makine başına temelinde yapılandırılır. Varsayılan olarak, kullanıcılar, kendi yerel Yardım yüklemesini güncelleştirmek için yönetici haklarına sahip olmalıdır.
+Yardım Görüntüleyicisi, internet erişimi olan veya olmayan ağ ortamları için yerel yardım yüklemelerini yönetmenizi sağlar. Yerel Yardım içeriği makineye göre yapılandırılır. Varsayılan olarak, kullanıcılar kendi yerel yardım yüklemelerini güncelleştirmek için yönetici haklarına sahip olmalıdır.
 
-Ağ ortamınız istemcilerin Internet'e erişmesine izin veriyorsa kullanabilirsiniz **Yardım içeriği Yöneticisi** yerel Yardım içeriğini Internet üzerinden dağıtmak için çalıştırılabilir. Hakkında daha fazla bilgi için *HlpCtntMgr.exe* komut satırı sözdizimi, bkz: [için Yardım içeriği Yöneticisi komut satırı bağımsız değişkenleri](../help-viewer/command-line-arguments.md).
+Ağ ortamınız istemcilerin internet 'e erişmesine izin veriyorsa, internet 'ten yerel yardım içeriği dağıtmak için **Yardım Içeriği Yöneticisi** yürütülebilirini kullanabilirsiniz. Komut satırı söz dizimi *HlpCtntMgr.exe* hakkında daha fazla bilgi için bkz. [Yardım Içerik Yöneticisi için komut satırı bağımsız değişkenleri](../help-viewer/command-line-arguments.md).
 
-İçerik oluşturma hakkında daha fazla bilgi için bkz. bir intranet Hizmeti uç noktası ve benzeri etkinlik, türleri oluşturma [Yardım Görüntüleyicisi SDK](../extensibility/internals/microsoft-help-viewer-sdk.md).
+İçerik oluşturma, bir intranet hizmeti uç noktası ve benzer etkinlik türleri oluşturma hakkında bilgi için bkz. [Yardım GÖRÜNTÜLEYICISI SDK](../extensibility/internals/microsoft-help-viewer-sdk.md).
 
-Ağ ortamınızda internet erişimi yoksa, Yardım Görüntüleyici yerel Yardım içeriğini intranet ve bir ağ paylaşımına dağıtabilirsiniz. Kullanarak ayrıca Visual Studio IDE Yardım seçeneklerini devre dışı bırakabilirsiniz [kayıt defteri anahtarını geçersiz](../help-viewer/behavior-overrides.md) gibi işlevler için:
+Ağ ortamınızda İnternet erişiminiz yoksa, Yardım Görüntüleyicisi intranet veya ağ paylaşımından yerel yardım içeriği dağıtabilir. Ayrıca, şu gibi işlevler için [kayıt defteri anahtarı geçersiz kılmalarını](../help-viewer/behavior-overrides.md) kullanarak VISUAL Studio IDE yardım seçeneklerini devre dışı bırakabilirsiniz:
 
-- çevrimiçi ve çevrimdışı Yardım
+- çevrimiçi ve çevrimdışı yardım
 
-- IDE'nin IDE'nin ilk başlatılmasında içerik yükleme
+- IDE 'nin ilk başlatıldığında içerik yükleme
 
 - intranet içerik hizmeti belirtme
 
-- İçeriği yönetme
+- içeriği yönetme
 
-## <a name="deploy-local-help-content-from-the-internet"></a>Yerel Yardım içeriğini Internet üzerinden dağıtma
+## <a name="deploy-local-help-content-from-the-internet"></a>İnternet 'ten yerel yardım içeriği dağıtma
 
-Kullanabileceğiniz **Yardım içeriği Yöneticisi** (*HlpCtntMgr.exe*) yerel Yardım içeriğini Internet'ten istemci bilgisayarlara dağıtmak için. Aşağıdaki sözdizimini kullanın:
+Internet 'ten istemci bilgisayarlara yerel yardım içeriği dağıtmak için **Yardım Içerik Yöneticisi** (*HlpCtntMgr.exe*) kullanabilirsiniz. Aşağıdaki sözdizimini kullanın:
 
 ```cmd
 \\%ProgramFiles(x86)%\Microsoft Help Viewer\v2.3\HlpCtntmgr.exe /operation \<*name*> /catalogname \<*catalog name*> /locale \<*locale*>
 ```
 
-Hakkında daha fazla bilgi için *HlpCtntMgr.exe* komut satırı sözdizimi, bkz: [için Yardım içeriği Yöneticisi komut satırı bağımsız değişkenleri](../help-viewer/command-line-arguments.md).
+Komut satırı söz dizimi *HlpCtntMgr.exe* hakkında daha fazla bilgi için bkz. [Yardım Içerik Yöneticisi için komut satırı bağımsız değişkenleri](../help-viewer/command-line-arguments.md).
 
 Gereksinimler:
 
-- İstemci bilgisayarların Internet'e erişimi olmalıdır.
+- İstemci bilgisayarların internet erişimi olmalıdır.
 
-- Kullanıcılar, güncelleştirme, ekleme veya yüklendikten sonra yerel Yardım içeriğini kaldırmak için yönetici haklarına sahip olmalıdır.
+- Kullanıcılar yüklendikten sonra yerel yardım içeriğini güncelleştirmek, eklemek veya kaldırmak için yönetici haklarına sahip olmalıdır.
 
-Uyarılar:
+Uyarılar
 
-- Yardım için varsayılan kaynak çevrimiçi olmaya devam edecektir.
+- Yardım için varsayılan kaynak hala çevrimiçi olmaya devam edecektir.
 
 ### <a name="example"></a>Örnek
 
-Aşağıdaki örnek, Visual Studio için İngilizce içeriği bir istemci bilgisayara yükler.
+Aşağıdaki örnekte, Visual Studio için Ingilizce içerik bir istemci bilgisayara yüklenir.
 
-#### <a name="to-install-english-content-from-the-internet"></a>Internet'ten İngilizce içeriği yüklemek için
+#### <a name="to-install-english-content-from-the-internet"></a>Internet 'ten Ingilizce içerik yüklemek için
 
-1. Seçin **Başlat** seçip **çalıştırma**.
+1. **Başlat** ' ı ve ardından **Çalıştır**' ı seçin.
 
 2. Aşağıdakileri yazın:
 
      `C:\Program Files (x86)\Microsoft Help Viewer\v2.3\hlpctntmgr.exe /operation install /catalogname VisualStudio15 /locale en-us`
 
-3. Tuşuna **girin**.
+3.  **Enter** tuşuna basın.
 
-## <a name="deploy-pre-installed-local-help-content-on-client-computers"></a>İstemci bilgisayarlarda önceden yüklenmiş yerel Yardım içeriğini dağıtma
+## <a name="deploy-pre-installed-local-help-content-on-client-computers"></a>İstemci bilgisayarlarda önceden yüklenmiş yerel yardım içeriğini dağıtma
 
-İçerik kümesi Online'dan tek bir bilgisayara yükleyin ve ardından, yüklenen içerik kümesini başka bilgisayarlara kopyalayabilirsiniz.
+Çevrimiçi olarak bir bilgisayara bir içerik kümesi yükleyebilir ve sonra bu içerik kümesini diğer bilgisayarlara kopyalayabilirsiniz.
 
 Gereksinimler:
 
-- İçerik kümesini yüklediğiniz bilgisayarın internet erişimi olmalıdır.
+- İçerik kümesini yüklediğiniz bilgisayar internet erişimine sahip olmalıdır.
 
-- Kullanıcılar, güncelleştirme, ekleme veya yüklendikten sonra yerel Yardım içeriğini kaldırmak için yönetici haklarına sahip olmalıdır.
+- Kullanıcılar yüklendikten sonra yerel yardım içeriğini güncelleştirmek, eklemek veya kaldırmak için yönetici haklarına sahip olmalıdır.
 
     > [!TIP]
-    > Kullanıcıların yönetici hakları yoksa, devre dışı bırakmayı önerilir **içeriği Yönet** Yardım Görüntüleyicisi'nde sekmesi. Daha fazla bilgi için [Yardım İçerik Yöneticisi geçersiz kılmaları](../help-viewer/behavior-overrides.md).
+    > Kullanıcılar yönetici haklarına sahip değilse, yardım görüntüleyicisinde **Içeriği Yönet** sekmesini devre dışı bırakmanız önerilir. Daha fazla bilgi için bkz. [Yardım Içerik Yöneticisi geçersiz kılmaları](../help-viewer/behavior-overrides.md).
 
-Uyarılar:
+Uyarılar
 
-- Yardım için varsayılan kaynak çevrimiçi olmaya devam edecektir.
+- Yardım için varsayılan kaynak hala çevrimiçi olmaya devam edecektir.
 
 ### <a name="create-the-content-set"></a>İçerik kümesi oluşturma
 
 Temel içerik kümesini oluşturabilmeniz için önce hedef bilgisayardaki tüm yerel Visual Studio içeriğini kaldırmanız gerekir.
 
-#### <a name="to-uninstall-local-help"></a>Yerel Yardımı kaldırmak için
+#### <a name="to-uninstall-local-help"></a>Yerel yardım 'ı kaldırmak için
 
-1. Yardım Görüntüleyici'de seçin **içeriği Yönet** sekmesi.
+1. Yardım Görüntüleyicisi 'nde **Içeriği Yönet** sekmesini seçin.
 
 2. Visual Studio belge kümesine gidin.
 
-3. Seçin **Kaldır** her bir alt öğenin yanında.
+3. Her alt öğenin yanındaki **Kaldır** ' ı seçin.
 
-4. Seçin **güncelleştirme** kaldırmak için.
+4. Kaldırmak için **Güncelleştir** ' i seçin.
 
-5. Gözat *%ProgramData%\Microsoft\HelpLibrary2\Catalogs\VisualStudio15* ve klasörün yalnızca dosya içerdiğini doğrulayın *catalogType.xml*.
+5. *%ProgramData%\Microsoft\HelpLibrary2\Catalogs\VisualStudio15* ' e gidin ve klasörün yalnızca dosya *catalogType.xml*içerdiğini doğrulayın.
 
-   Tüm önceden yüklenmiş yerel Visual Studio Yardım içeriğini kaldırdıktan sonra temel içerik kümesini yüklemeye hazırsınız demektir.
+   Daha önce yüklenmiş olan tüm yerel Visual Studio yardım içeriğini kaldırdıktan sonra, temel içerik kümesini indirmeye hazırlanın.
 
-#### <a name="to-download-the-content"></a>İçerik indirmek için
+#### <a name="to-download-the-content"></a>İçeriği indirmek için
 
-1. Yardım Görüntüleyici'de seçin **içeriği Yönet** sekmesi.
+1. Yardım Görüntüleyicisi 'nde **Içeriği Yönet** sekmesini seçin.
 
-2. Altında **önerilen belgeleri** veya **kullanılabilir belgeler**, indirin ve ardından istediğiniz belge kümelerine gidin **Ekle**.
+2. **Önerilen belgeler** veya **kullanılabilir belgeler**altında, indirmek istediğiniz belge kümelerine gidin ve **Ekle**' yi seçin.
 
-3. Seçin **güncelleştirme**.
+3. **Güncelleştir**' i seçin.
 
-Ardından, istemci bilgisayarlara dağıtılacak şekilde içeriği paketlemek gerekir.
+Daha sonra, içeriği istemci bilgisayarlara dağıtılabilmesi için paketlemeyi yapmanız gerekir.
 
 #### <a name="to-package-the-content"></a>İçeriği paketlemek için
 
-1. Daha sonra dağıtım için içeriğin kopyalanacağı bir klasör oluşturun. Örneğin: *C:\VSHelp*.
+1. Daha sonra dağıtım için içeriği kopyalamak üzere bir klasör oluşturun. Örneğin: *C:\VSHelp*.
 
-2. Açık *cmd.exe* yönetici izinlerine sahip.
+2. Yönetici izinleriyle *cmd.exe* açın.
 
-3. 1\. adımda oluşturduğunuz klasöre gidin.
+3. Adım 1 ' de oluşturduğunuz klasöre gidin.
 
 4. Aşağıdakileri yazın:
 
      `Xcopy %ProgramData%\Microsoft\HelpLibrary2 \<*foldername*>\ /y /e /k /o`
 
-     Örneğin: `Xcopy %ProgramData%\Microsoft\HelpLibrary2 c:\VSHelp\ /y /e /k /o`.
+     Örnek: `Xcopy %ProgramData%\Microsoft\HelpLibrary2 c:\VSHelp\ /y /e /k /o`
 
-### <a name="deploy-the-content"></a>İçerik dağıtma
+### <a name="deploy-the-content"></a>İçeriği dağıtma
 
-1. Bir ağ paylaşımı oluşturmanız ve Yardım içeriğini bu konuma kopyalayın.
+1. Bir ağ paylaşma oluşturun ve yardım içeriğini bu konuma kopyalayın.
 
-     Örneğin, içeriği kopyalayın *C:\VSHelp* için  *\\\myserver\VSHelp*.
+     Örneğin, *C:\VSHelp* içindeki içeriği * \\ \myserver\VSHelp*'e kopyalayın.
 
-2. Oluşturma bir *.bat* Yardım içeriği için dağıtım betiği içeren dosya. İstemci büyük olasılıkla bir okuma kilidi itmenin parçası silinen dosyaların hiçbirinde olabileceğinden, güncelleştirmeleri göndermeden önce kapatma istemci olmalıdır. Örneğin:
+2. Yardım içeriği için dağıtım betiğini içeren bir *. bat* dosyası oluşturun. İstemci, gönderim kapsamında silinmekte olan dosyaların hiçbirinde okuma kilidine sahip olduğundan, güncelleştirmeleri dağıtmadan önce istemcinin kapatılmasını sağlayabilirsiniz. Örneğin:
 
     ```cmd
     REM - copy pre-ripped content to ProgramData
@@ -140,11 +140,11 @@ Ardından, istemci bilgisayarlara dağıtılacak şekilde içeriği paketlemek g
     if ERRORLEVEL 1 ECHO *** ERROR COPYING Help Library files to ProgramData (%ERRORLEVEL%)
     ```
 
-3. Çalıştırma *.bat* Yardım içeriğini yüklemek istediğiniz makinelerde yerel dosya.
+3. Yardım içeriğini yüklemek istediğiniz yerel makinelerde *. bat* dosyasını çalıştırın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Komut satırı bağımsız değişkenleri için Yardım içeriği Yöneticisi](../help-viewer/command-line-arguments.md)
-- [Yardım İçerik Yöneticisi geçersiz kılmaları](../help-viewer/behavior-overrides.md)
+- [Yardım Içeriği Yöneticisi için komut satırı bağımsız değişkenleri](../help-viewer/command-line-arguments.md)
+- [Yardım Içerik Yöneticisi geçersiz kılmaları](../help-viewer/behavior-overrides.md)
 - [Microsoft Yardım Görüntüleyicisi](../help-viewer/overview.md)
-- [Yardım Görüntüleyicisi SDK'sı](../extensibility/internals/microsoft-help-viewer-sdk.md)
+- [Yardım Görüntüleyicisi SDK 'Sı](../extensibility/internals/microsoft-help-viewer-sdk.md)

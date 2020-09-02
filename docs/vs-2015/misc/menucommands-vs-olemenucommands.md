@@ -1,5 +1,5 @@
 ---
-title: MenuCommands Vs. OleMenuCommands | Microsoft Docs
+title: MenuCommands ve OleMenuCommands | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -12,35 +12,35 @@ ms.assetid: 553d5e07-3e19-4aba-b490-6c7dd05fd82e
 caps.latest.revision: 46
 manager: jillfra
 ms.openlocfilehash: 42c471ca924bfded62db32a956a26c07240459eb
-ms.sourcegitcommit: 3cc73e74921a9ceb622542e0e263abeebc455c00
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67624446"
 ---
-# <a name="menucommands-vs-olemenucommands"></a>MenuCommands Vs. OleMenuCommands
-Öğesinden türetme, menü komutlarını oluşturabilirsiniz <xref:System.ComponentModel.Design.MenuCommand> veya <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> nesne ve ilgili olay işleyicileri uygulama. Çoğu durumda, kullanabileceğiniz <xref:System.ComponentModel.Design.MenuCommand>VSPackage proje şablonu yapar, ancak bazen kullanmanız gerekebilir gibi <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>.  
+# <a name="menucommands-vs-olemenucommands"></a>MenuCommands ve OleMenuCommands karşılaştırması
+Nesnesinden ya da nesneden türeterek <xref:System.ComponentModel.Design.MenuCommand> <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> ve uygun olay işleyicilerini uygulayarak menü komutları oluşturabilirsiniz. <xref:System.ComponentModel.Design.MenuCommand>VSPackage proje şablonu, ancak bazen kullanmanız gerekebilmeniz halinde kullanabileceğiniz çoğu durumda <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> .  
   
- IDE için kullanılabilir bir VSPackage yapar görünür ve etkin bir kullanıcı önce olması gerektiğini komutları bunları kullanabilirsiniz. Komutlar, Visual Studio Paketi proje şablonunu kullanarak .vsct dosyası içinde oluşturulduğunda, görünür ve varsayılan olarak etkindir. Bazı komut bayrakları gibi ayarlama `DynamicItemStart`, varsayılan davranışı değiştirebilirsiniz. Görünürlük, etkin durumunu ve diğer özellikleri komut da kod çalışma zamanında erişerek değiştirilebilir <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> komut ile ilişkili olan nesne.  
+ Bir VSPackage 'ın IDE için kullanılabilir hale getiren komutlar, bir kullanıcının kullanabilmesi için görünür ve etkin olmalıdır. Komutlar, Visual Studio Package proje şablonu kullanılarak bir. vsct dosyasında oluşturulduğunda, görünür ve varsayılan olarak etkindir. Gibi bazı komut bayraklarını ayarlama `DynamicItemStart` , varsayılan davranışı değiştirebilir. Bir komutun görünürlük, etkin durumu ve diğer özellikleri, komutla ilişkili nesneye erişerek çalışma zamanında kodda da değiştirilebilir <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> .  
   
-## <a name="prerequisites"></a>Önkoşullar  
- Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Ön koşullar  
+ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).  
   
-## <a name="template-locations-for-the-visual-studio-package-template"></a>Visual Studio Paketi şablonu için şablon konumları  
- Visual Studio Paket şablon bulabilirsiniz **yeni proje** iletişim altında **Visual Basic / genişletilebilirlik**, **C# / genişletilebilirlik**, veya **diğer Proje türleri / genişletilebilirlik**.  
+## <a name="template-locations-for-the-visual-studio-package-template"></a>Visual Studio paket şablonu için şablon konumları  
+ Visual Studio Package şablonunu **Visual Basic/genişletilebilirlik**, **C#/genişletilebilirlik**veya **diğer proje türleri/genişletilebilirlik**altındaki **Yeni proje** iletişim kutusunda bulabilirsiniz.  
   
-## <a name="creating-a-command"></a>Bir komut oluşturma  
- Tüm komutlar, komut gruplarını, menüler, araç çubukları ve araç pencerelerini .vsct dosyası içinde tanımlanır. Daha fazla bilgi için [Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).  
+## <a name="creating-a-command"></a>Komut oluşturma  
+ Tüm komutlar, komut grupları, menüler, araç çubukları ve araç pencereleri. vsct dosyasında tanımlanmıştır. Daha fazla bilgi için bkz [. Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).  
   
- Paket şablonu kullanarak bir VSPackage oluşturuyorsanız seçin **menü komutu** .vsct dosyası oluşturma ve varsayılan menü komutu tanımlama. Daha fazla bilgi için [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).  
+ Paket şablonunu kullanarak bir VSPackage oluşturuyorsanız, bir. vsct dosyası oluşturmak ve varsayılan bir menü komutu tanımlamak için **menü komutunu** seçin. Daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
-#### <a name="to-add-a-command-to-the-ide"></a>IDE komut ekleme  
+#### <a name="to-add-a-command-to-the-ide"></a>IDE 'ye bir komut eklemek için  
   
-1. .Vsct dosyası açın.  
+1. . Vsct dosyasını açın.  
   
-2. İçinde `Symbols` bölümünde, bulma [GuidSymbol](../extensibility/guidsymbol-element.md) grupları ve komutları içeren öğe.  
+2. `Symbols`Bölümünde grupları ve komutları Içeren [GuidSymbol](../extensibility/guidsymbol-element.md) öğesini bulun.  
   
-3. Oluşturma bir [Idsymbol](../extensibility/idsymbol-element.md) her menü, Grup veya komutu eklemek için aşağıdaki örnekte gösterildiği gibi istediğiniz için öğesi.  
+3. Aşağıdaki örnekte gösterildiği gibi, eklemek istediğiniz her menü, Grup veya komut için bir [IDSymbol](../extensibility/idsymbol-element.md) öğesi oluşturun.  
   
    ```xml
    <GuidSymbol name="guidButtonGroupCmdSet" value="{f69209e9-975a-4543-821d-1f4a2c52d737}">
@@ -49,9 +49,9 @@ ms.locfileid: "67624446"
    </GuidSymbol>
    ```
       
-    `name` Özniteliklerini `GuidSymbol` ve `IDSymbol` öğeleri her yeni menü, Grup veya komut GUID:ID çifti belirtin. `guid` , VSPackage için tanımlanmış bir komut kümesini temsil eder. Birden çok komut kümesi tanımlayabilirsiniz. Her GUID:ID çifti benzersiz olması gerekir.  
+    `name`Ve öğelerinin öznitelikleri, `GuidSymbol` `IDSymbol` her yeni menü, Grup veya komut IÇIN GUID: ID çiftini sağlar. , `guid` VSPackage için tanımlanan bir komut kümesini temsil eder. Birden çok komut kümesi tanımlayabilirsiniz. Her GUID: ID çiftinin benzersiz olması gerekir.  
   
-4. İçinde [düğmeleri](../extensibility/buttons-element.md) bölümünde, oluşturun bir [düğmesi](../extensibility/button-element.md) komutu aşağıdaki örnekte gösterildiği şekilde tanımlamak için.  
+4. [Düğmeler](../extensibility/buttons-element.md) bölümünde, aşağıdaki örnekte gösterildiği gibi komutu tanımlamak Için bir [düğme](../extensibility/button-element.md) öğesi oluşturun.  
   
    ```xml
    <Button guid="guidButtonGroupCmdSet" id="cmdidMyCommand" priority="0x0100" type="Button">
@@ -64,35 +64,35 @@ ms.locfileid: "67624446"
    </Button>
    ``` 
      
-   1. Ayarlama `guid` ve `id` yeni komut GUID:ID eşleşecek alanları.  
+   1. `guid`Ve alanlarını, `id` yenı komutun GUID: kimliğiyle eşleşecek şekilde ayarlayın.  
   
-   2. Ayarlama `priority` özniteliği.  
+   2. Özniteliğini ayarlayın `priority` .  
   
-        `priority` Özniteliği tarafından .vsct kendi üst grubundaki diğer nesneler arasında düğmenin konumu belirlemek için kullanılır.  
+        `priority`Özniteliği, üst grubundaki diğer nesneler arasındaki düğmenin konumunu öğrenmek için. vsct tarafından kullanılır.  
   
-        Düşük öncelikli değerlere sahip komutları üstüne ya da sol tarafında, daha yüksek öncelik değerine sahip komutlar görüntülenir. Yinelenen öncelik değerlere izin verilir, ancak eşit önceliğe sahip komutları göreli konumunu VSPackages çalışma zamanında işlenme sırasını tarafından belirlenir ve bu sıraya göre belirlenmiş olamaz.  
+        Daha düşük öncelik değerleri olan komutlar yukarıda veya solunda, daha yüksek öncelik değerlerine sahip komutlarda görüntülenir. Yinelenen öncelik değerlerine izin verilir, ancak eşit önceliğe sahip komutların göreli konumu, VSPackages 'ın çalışma zamanında işlendiği sıraya göre belirlenir ve bu sıra önceden belirlenemez.  
   
-        Atlama `priority` öznitelik değerini 0 olarak ayarlar.  
+        Özniteliği atlanırsa `priority` değeri 0 olarak ayarlanır.  
   
-   3. Ayarlama `type` özniteliği. Çoğu durumda, değeri olacak `"Button"`. Diğer geçerli düğmesi türlerinin açıklamaları için bkz. [Button öğesi](../extensibility/button-element.md).  
+   3. Özniteliğini ayarlayın `type` . Çoğu durumda, değeri olacaktır `"Button"` . Diğer geçerli düğme türlerinin açıklamaları için bkz. [Button öğesi](../extensibility/button-element.md).  
   
-5. Düğme tanımındaki oluşturmak bir [dizeleri](../extensibility/strings-element.md) öğesini içeren bir [ButtonText](../extensibility/buttontext-element.md) IDE içinde göründüğü gibi menünün adını içerecek şekilde öğesi ve bir [CommandName](../extensibility/commandname-element.md) menüde erişmek için kullanılan komut adını içerecek şekilde öğesi **komut** penceresi.  
+5. Düğme tanımında, IDE 'de göründüğü gibi menünün adını içeren bir [ButtonText](../extensibility/buttontext-element.md) öğesi Içeren bir [dizeler](../extensibility/strings-element.md) öğesi ve **komut** penceresinde menüye erişmek Için kullanılan komutun adını içeren bir [CommandName](../extensibility/commandname-element.md) öğesi oluşturun.  
   
-    Düğme metin dizesi, '&' karakteri içerir, kullanıcı Alt tuşunu basılı tutarak menüsünü açabilir ve karakteri, hemen izleyen, '&'.  
+    Düğme metin dizesi ' & ' karakterini içeriyorsa, Kullanıcı ALT ve ' & ' karakterini hemen izleyen karaktere basarak menüyü açabilir.  
   
-    Ekleme bir `Tooltip` öğesi, bir kullanıcı düğmenin üzerine işaretçiyi geldiğinde görünmesini kapsanan metin neden olur.  
+    Bir `Tooltip` öğe eklendiğinde, bir kullanıcı işaretçiyi düğmenin üzerine geldiğinde içerilen metnin görünmesine neden olur.  
   
-6. Ekleme bir [simgesi](../extensibility/icon-element.md) varsa komutuyla görüntülenecek simge belirtmek için öğesi. Simgeler araç çubuğu düğmeleri için menü öğeleri ancak gerekli değildir. `guid` Ve `id` , `Icon` öğe içeriğiyle eşleşmesi gereken bir [bit eşlem](../extensibility/bitmap-element.md) tanımlanan öğe `Bitmaps` bölümü.  
+6. Eğer varsa, komutuyla görüntülenecek olan simgeyi belirtmek için bir [simge](../extensibility/icon-element.md) öğesi ekleyin. Araç çubuklarındaki düğmeler için simgeler gereklidir ancak menü öğeleri için görüntülenmez. `guid`Öğesi ve, `id` `Icon` bölümünde tanımlanan bir [bit eşlem](../extensibility/bitmap-element.md) öğesiyle aynı olmalıdır `Bitmaps` .  
   
-7. Uygun bir şekilde düğmesinin davranışını ve görünümünü değiştirmek, komut bayrakları ekleyin. Bunu yapmak için bir [CommandFlag](../extensibility/command-flag-element.md) menü tanımındaki öğesi.  
+7. Düğmenin görünümünü ve davranışını değiştirmek için uygun şekilde komut bayrakları ekleyin. Bunu yapmak için, menü tanımına bir [CommandFlag](../extensibility/command-flag-element.md) öğesi ekleyin.  
   
-8. Komutu, üst grup olarak ayarlayın. Üst grup, oluşturduğunuz bir grubu, bir grubu başka bir paketten veya IDE grubundan olabilir. Örneğin, komutunuz Visual Studio düzenleme araç çubuğuna yanındaki eklemek için **yorum** ve **Yorumu Kaldır** düğmeleri, üst guidStdEditor:IDG_VS_EDITTOOLBAR_COMMENT için ayarlayın. Kullanıcı tanımlı bir grup üst ise alt menü, araç veya IDE içinde görünen araç penceresi olması gerekir.  
+8. Komutun üst grubunu ayarlayın. Üst grup, oluşturduğunuz bir grup, başka bir paketten bir grup veya IDE 'den bir grup olabilir. Örneğin, komutunu Visual Studio Düzen araç çubuğuna eklemek için **yorum** ve **kaldırma açıklaması** düğmelerini yanındaki üst öğeyi guidStdEditor: IDG_VS_EDITTOOLBAR_COMMENT olarak ayarlayın. Üst öğe Kullanıcı tanımlı bir gruptur, IDE 'de görünen bir menü, araç çubuğu veya araç penceresinin alt öğesi olmalıdır.  
   
-    Tasarımınızı bağlı olarak bu iki yoldan biriyle yapabilirsiniz:  
+    Bu bunu, tasarımınıza bağlı olarak iki şekilde yapabilirsiniz:  
   
-   - İçinde `Button` öğesi oluşturmak bir [üst](../extensibility/parent-element.md) öğesi ve set kendi `guid` ve `id` GUID ve ID komutu olarak da bilinen barındıracak grubunun alanlarına *birincilüstgrup*.  
+   - `Button`Öğesinde, bir [üst](../extensibility/parent-element.md) öğe oluşturun ve `guid` ve `id` alanlarını, *birincil üst grup*olarak da bilinen komutu barındıracak olan grubun GUID 'si ve kimliği olarak ayarlayın.  
   
-        Aşağıdaki örnek, kullanıcı tanımlı bir menüsünde görünür bir komut tanımlar.  
+        Aşağıdaki örnek, Kullanıcı tanımlı bir menüde görünecek bir komutu tanımlar.  
   
        ```xml
        <Button guid="guidTopLevelMenuCmdSet" id="cmdidTestCommand" priority="0x0100" type="Button">
@@ -105,7 +105,7 @@ ms.locfileid: "67624446"
        </Button>
        ```
       
-   - Atlasa `Parent` komutu komut yerleştirme kullanarak konumlandırılan ise öğe. Oluşturma bir [CommandPlacements](../extensibility/commandplacements-element.md) öğeden önce `Symbols` bölümünde ve ekleme bir [CommandPlacement](../extensibility/commandplacement-element.md) sahip öğe `guid` ve `id` komutunun, bir `priority`ve aşağıdaki örnekte gösterildiği gibi bir üst.  
+   - Komut, komut `Parent` yerleşimi kullanılarak konumlandırılsa öğeyi atlayabilirsiniz. Bölümünden önce bir [CommandPlacements](../extensibility/commandplacements-element.md) öğesi oluşturun `Symbols` ve [CommandPlacement](../extensibility/commandplacement-element.md) `guid` `id` `priority` Aşağıdaki örnekte gösterildiği gibi komuta, a ve üst öğesine sahip bir commandyerleştirme öğesi ekleyin.  
   
    ```xml
    <CommandPlacements>
@@ -115,40 +115,40 @@ ms.locfileid: "67624446"
    </CommandPlacements>
    ```
       
-      Aynı GUID:ID ve farklı bir üst öğeye sahip birden çok komut yerleşimi oluşturma, birden fazla konumda görüntülenecek menü neden olur. Daha fazla bilgi için [CommandPlacements](../extensibility/commandplacements-element.md) öğesi.  
+      Aynı GUID: ID 'ye sahip ve farklı ebeveynler olan birden çok komut yerleşimi oluşturma, bir menünün birden çok konumda görünmesine neden olur. Daha fazla bilgi için bkz. [CommandPlacements](../extensibility/commandplacements-element.md) öğesi.  
   
-    Komut grupları ve ana öğe hakkında daha fazla bilgi için bkz. [, yeniden kullanılabilir grupları düğmeler oluşturma](../extensibility/creating-reusable-groups-of-buttons.md).  
+    Komut grupları ve üst öğe hakkında daha fazla bilgi için bkz. yeniden [kullanılabilir düğme grupları oluşturma](../extensibility/creating-reusable-groups-of-buttons.md).  
   
-   Bu noktada, komutu IDE içerisinde görünür, ancak hiçbir işlevselliğine sahip olurlar. Varsayılan olarak komut paket şablon tarafından oluşturulmuş olsa bile, bir ileti görüntüler bir tıklama işleyicisi bulunur.  
+   Bu noktada, komut IDE 'de görünür olur, ancak hiçbir işlevi olmayacaktır. Komut, paket şablonu tarafından oluşturulduysa, varsayılan olarak bir ileti görüntüleyen bir tıklama işleyicisine sahip olur.  
   
-## <a name="handling-the-new-command"></a>Yeni bir komut işleme  
- Yönetilen kodda çoğu komutu komutu ile ilişkilendirerek yönetilen paket Framework'tarafından (MPF) işlenebilen bir <xref:System.ComponentModel.Design.MenuCommand> nesne veya <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> nesne ve onun olay işleyicileri uygulama.  
+## <a name="handling-the-new-command"></a>Yeni komutu işleme  
+ Yönetilen koddaki komutların çoğu, komutu bir <xref:System.ComponentModel.Design.MenuCommand> nesne veya <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> nesneyle ilişkilendirerek ve olay Işleyicilerini uygulayarak yönetilen paket çerçevesi (mpf) tarafından işlenebilir.  
   
- Kullanan kod için <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirim doğrudan komut işlemesi için uygulanmalı <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi ve yöntemleri. İki en önemli yöntemlerdir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A>.  
+ <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>Arabirimi doğrudan komut işleme için kullanan kod için, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimini ve yöntemlerini uygulamanız gerekir. En önemli iki yöntem <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> ve ' dir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> .  
   
-1. Alma <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> , aşağıdaki örnekte gösterildiği gibi örnek.  
+1. <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService>Aşağıdaki örnekte gösterildiği gibi örneği alın.  
   
      [!code-csharp[ButtonGroup#21](../snippets/csharp/VS_Snippets_VSSDK/buttongroup/cs/buttongrouppackage.cs#21)]  
   
-2. Oluşturma bir <xref:System.ComponentModel.Design.CommandID> GUID ve ID işlemek için komut olan aşağıdaki örnekte gösterildiği gibi parametre olarak nesne.  
+2. <xref:System.ComponentModel.Design.CommandID>Aşağıdaki örnekte gösterildiği gibi, parametreleri parametresi olan bir nesne oluşturun ve işlenecek komutun kimliği.  
   
      [!code-csharp[ButtonGroup#22](../snippets/csharp/VS_Snippets_VSSDK/buttongroup/cs/buttongrouppackage.cs#22)]  
   
-     Visual Studio Paket şablon iki koleksiyon sağlar `GuidList` ve `PkgCmdIDList`, GUID'leri ve kimlikleri komutları tutacak. Bu şablon tarafından eklenen komutları için otomatik olarak doldurulur ancak el ile eklemeniz komutları da kimliği girişe eklemelisiniz `PkgCmdIdList` sınıfı.  
+     Visual Studio paket şablonu iki koleksiyon sağlar `GuidList` ve `PkgCmdIDList` komut GUID 'Lerini ve kimliklerini tutmak için. Bunlar, şablon tarafından eklenen komutlar için otomatik olarak doldurulur, ancak el ile eklediğiniz komutlar için de ID girişini sınıfa eklemeniz gerekir `PkgCmdIdList` .  
   
-     Alternatif olarak, doldurabilirsiniz <xref:System.ComponentModel.Design.CommandID> GUID'yi ham dize değeri ve kimliği tamsayı değerini kullanarak nesne  
+     Alternatif olarak, <xref:System.ComponentModel.Design.CommandID> GUID 'nin ham dize değerini ve kimliğin tamsayı değerini kullanarak nesneyi doldurabilirsiniz.  
   
-3. Ya da örneği bir <xref:System.ComponentModel.Design.MenuCommand> veya <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> ile birlikte komutu işleyen yöntem belirten nesne <xref:System.ComponentModel.Design.CommandID>aşağıdaki örnekte gösterildiği gibi.  
+3. <xref:System.ComponentModel.Design.MenuCommand> <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> Aşağıdaki örnekte gösterildiği gibi, komutunu ile birlikte işleyen yöntemini belirten bir veya nesnesi oluşturun <xref:System.ComponentModel.Design.CommandID> .  
   
      [!code-csharp[ButtonGroup#23](../snippets/csharp/VS_Snippets_VSSDK/buttongroup/cs/buttongrouppackage.cs#23)]  
   
-     <xref:System.ComponentModel.Design.MenuCommand> Statik komutları için uygundur. Dinamik menü öğesi görüntüler QueryStatus olay işleyicileri gerektirir. <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> Ekler <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> ana menü komut açılmış ve başka bazı özellikleri gibi olduğunda oluşan olay <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A>.  
+     , <xref:System.ComponentModel.Design.MenuCommand> Statik komutlara uygundur. Dinamik menü öğesi, sorgu durumu olay işleyicilerini gerektirir. , <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> Komutun ana bilgisayar menüsü açıldığında ve gibi bazı diğer özelliklerden oluşan olayı ekler <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A> .  
   
-     Paket şablon tarafından oluşturulan komutlar için varsayılan olarak geçirilir bir <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> nesnesine `Initialize()` paket sınıfının yöntemi.  
+     Paket şablonu tarafından oluşturulan komutlar, <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> paket sınıfının yöntemindeki bir nesneye varsayılan olarak geçirilir `Initialize()` .  
   
-4. <xref:System.ComponentModel.Design.MenuCommand> Statik komutları için uygundur. Dinamik menü öğesi görüntüler QueryStatus olay işleyicileri gerektirir. <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> Ekler <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> ana menü komut açılmış ve başka bazı özellikleri gibi olduğunda oluşan olay <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A>.  
+4. , <xref:System.ComponentModel.Design.MenuCommand> Statik komutlara uygundur. Dinamik menü öğesi, sorgu durumu olay işleyicilerini gerektirir. , <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> Komutun ana bilgisayar menüsü açıldığında ve gibi bazı diğer özelliklerden oluşan olayı ekler <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A> .  
   
-     Paket şablon tarafından oluşturulan komutlar için varsayılan olarak geçirilir bir <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> nesnesine `Initialize()` paket sınıfının yöntemi. Visual Studio Sihirbazı'nı uygulayan `Initialize` yöntemi kullanarak `MenuCommand`. Dinamik menü öğesi görüntüler için bu değiştirmelisiniz `OleMenuCommand`sonraki adımda gösterildiği gibi. Ayrıca, menü öğesi metni değiştirmek için bir TextChanges komut bayrak .vsct dosyası menü komut düğmesine aşağıdaki örnekte gösterildiği gibi eklemeniz gerekir  
+     Paket şablonu tarafından oluşturulan komutlar, <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> paket sınıfının yöntemindeki bir nesneye varsayılan olarak geçirilir `Initialize()` . Visual Studio Sihirbazı `Initialize` kullanarak yöntemini uygular `MenuCommand` . Dinamik menü öğesi ekranları için, bir `OleMenuCommand` sonraki adımda gösterildiği gibi bunu olarak değiştirmeniz gerekir. Ayrıca, menü öğesi metnini değiştirmek için, aşağıdaki örnekte gösterildiği gibi,. vsct dosyasındaki menü komut düğmesine bir TextChanges komut bayrağı eklemeniz gerekir  
   
     ```xml
     <Button guid="guidMenuTextCmdSet" id="cmdidMyCommand" priority="0x0100" type="Button">
@@ -162,24 +162,24 @@ ms.locfileid: "67624446"
     </Button>
     ```
       
-5. Yeni menü Command'e <xref:System.ComponentModel.Design.IMenuCommandService.AddCommand%2A> yönteminde <xref:System.ComponentModel.Design.IMenuCommandService> arabirimi. Bu paket şablon tarafından oluşturulan komutlar için varsayılan olarak aşağıdaki örnekte gösterildiği gibi gerçekleştirilir  
+5. Yeni menü komutunu <xref:System.ComponentModel.Design.IMenuCommandService.AddCommand%2A> arabirimindeki yönteme geçirin <xref:System.ComponentModel.Design.IMenuCommandService> . Bu, aşağıdaki örnekte gösterildiği gibi paket şablonu tarafından oluşturulan komutlar için varsayılan olarak gerçekleştirilir  
   
      [!code-csharp[ButtonGroup#24](../snippets/csharp/VS_Snippets_VSSDK/buttongroup/cs/buttongrouppackage.cs#24)]  
   
-6. Komutu işleyen yöntem uygulayın.  
+6. Komutu işleyen yöntemini uygulayın.  
   
 #### <a name="to-implement-querystatus"></a>QueryStatus uygulamak için  
   
-1. QueryStatus olay, bir komut görüntülenmeden önce oluşur. Bu kullanıcı ulaşmadan önce olay işleyicisi ayarlamak için bu komutu özelliklerini sağlar. Olarak eklenen komutları <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> nesneleri, bu yöntem erişebilir.  
+1. QueryStatus olayı, bir komut görüntülenmeden önce oluşur. Bu, kullanıcıya ulaşmadan önce olay işleyicisinde bu komutun özelliklerinin ayarlanmasını sağlar. Yalnızca nesne olarak eklenen komutlar <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> Bu metoda erişebilir.  
   
-    Ekleme bir `EventHandler` nesnesini <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> olayında <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> komutunu işlemek için aşağıdaki örnekte gösterildiği gibi oluşturulan nesne (`menuItem` olduğu <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> örnek).  
+    `EventHandler` <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> Aşağıdaki örnekte gösterildiği gibi, komutu işlemek için oluşturulan nesnedeki olaya bir nesne ekleyin ( `menuItem` <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> örnek).  
   
     [!code-csharp[MenuText#14](../snippets/csharp/VS_Snippets_VSSDK/menutext/cs/menutextpackage.cs#14)]
     [!code-vb[MenuText#14](../snippets/visualbasic/VS_Snippets_VSSDK/menutext/vb/menutextpackage.vb#14)]  
   
-    `EventHandler` Nesne, menü komutunu durumunu sorgulandığında çağrılan yöntemin adı verilir.  
+    `EventHandler`Nesnesine, menü komutunun durumu sorgulanırken çağrılan bir yöntemin adı verilir.  
   
-2. Sorgu durumu işleyicisi yöntemi'komutu için uygulayın. `object` `sender` Parametre değerine bir <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> menü komutu metni dahil olmak üzere çeşitli özniteliklerini ayarlamak için kullanılan nesne. Aşağıdaki tabloda temel özelliklerini gösterir. <xref:System.ComponentModel.Design.MenuCommand> sınıfı (hangi MPF sınıfı <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> türetildiği) karşılık gelen için <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> bayrakları.  
+2. Komut için sorgu durum işleyicisi yöntemini uygulayın. `object` `sender` Parametresi, <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> metin dahil olmak üzere, menü komutunun çeşitli özniteliklerini ayarlamak için kullanılan bir nesnesine dönüşebilir. Aşağıdaki tabloda, <xref:System.ComponentModel.Design.MenuCommand> bayrağa karşılık gelen sınıftaki Özellikler (MPF sınıfının <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> türetildiği) gösterilmektedir <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> .  
   
    |MenuCommand özelliği|OLECMDF bayrağı|  
    |--------------------------|------------------|  
@@ -187,69 +187,69 @@ ms.locfileid: "67624446"
    |<xref:System.ComponentModel.Design.MenuCommand.Visible%2A> = `false`|<xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF>|  
    |<xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> = `true`|<xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF>|  
   
-    Bir menü komutunun metnini değiştirmek için kullanın <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A> özelliği <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> aşağıdaki örnekte gösterildiği gibi nesne.  
+    Bir menü komutunun metnini değiştirmek için, <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A> <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> Aşağıdaki örnekte gösterildiği gibi nesnesi üzerinde özelliğini kullanın.  
   
     [!code-csharp[MenuText#11](../snippets/csharp/VS_Snippets_VSSDK/menutext/cs/menutextpackage.cs#11)]
     [!code-vb[MenuText#11](../snippets/visualbasic/VS_Snippets_VSSDK/menutext/vb/menutextpackage.vb#11)]  
   
-   MPF desteklenmeyen veya bilinmeyen gruplarının durum otomatik olarak işler. Komutu eklendi sürece <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> kullanarak <xref:System.ComponentModel.Design.IMenuCommandService.AddCommand%2A> yöntemi, komutu desteklenmiyor.  
+   MPF, desteklenmeyen veya bilinmeyen grupların durumunu otomatik olarak işler. Yöntemi kullanılarak öğesine bir komut eklenmediyse <xref:Microsoft.VisualStudio.Shell.OleMenuCommandService> <xref:System.ComponentModel.Design.IMenuCommandService.AddCommand%2A> , komut desteklenmez.  
   
-### <a name="handling-commands-by-using-the-iolecommandtarget-interface"></a>IOleCommandTarget arabirimi kullanarak komutları işleme  
- Kullanan kod için <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> doğrudan arabirim, her ikisi de VSPackage'ı uygulamalıdır <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemlerinin <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirimi. VSPackage'ı bir proje hiyerarşisi uyguluyorsa <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> yöntemlerinin <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> arabirimi uygulanmasını yerine.  
+### <a name="handling-commands-by-using-the-iolecommandtarget-interface"></a>IOleCommandTarget arabirimini kullanarak komutları işleme  
+ Arabirimi doğrudan kullanan kod için <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> , VSPackage, arabirimin hem hem de yöntemlerinin uygulanması <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> gerekir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> . VSPackage bir proje hiyerarşisi uygularsa, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.QueryStatusCommand%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.ExecCommand%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> bunun yerine arabirimin ve yöntemlerinin uygulanması gerekir.  
   
- Hem <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemleri, tek bir komut kümesi almak için tasarlanmıştır `GUID` ve komut kimlikleri bir dizi girişi olarak. Öneririz VSPackages tek çağrıda tam olarak bu kavramı birden çok kimliği destekler. VSPackage diğer VSPackages çağrılmaz sürece, ancak, komut dizisi için tek bir komut kimliği içerdiğini varsayabilirsiniz <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemleri, iyi tanımlanmış bir sırayla yürütülür. Yönlendirme hakkında daha fazla bilgi için bkz. [vspackage'larda komut yönlendirme](../extensibility/internals/command-routing-in-vspackages.md).  
+ Ve yöntemlerinin her ikisi de <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> giriş olarak tek bir komut kümesi `GUID` ve komut kimlikleri dizisi alacak şekilde tasarlanmıştır. VSPackages 'in, tek bir çağrıda birden çok kimlik kavramını tamamen desteklemesi önerilir. Ancak, VSPackage diğer VSPackages 'lerden çağrılmadığı sürece, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> ve <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemleri iyi tanımlanmış bir sırada yürütüldüğü için, komut dizisinin yalnızca BIR komut kimliği içerdiğini varsayabilirsiniz. Yönlendirme hakkında daha fazla bilgi için bkz. [VSPackages 'de komut yönlendirme](../extensibility/internals/command-routing-in-vspackages.md).  
   
- Kullanan kod için <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> arabirim doğrudan komut işlemesi için uygulanmalı <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> VSPackage'ı aşağıdaki gibi komutları işlemek için yöntemi.  
+ <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>Doğrudan komut işleme için arabirimi kullanan kod için, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> komutları işlemek üzere aşağıdaki gibi yöntemi VSPackage içinde uygulamanız gerekir.  
   
-##### <a name="to-implement-the-querystatus-method"></a>QueryStatus yöntemi uygulamak için  
+##### <a name="to-implement-the-querystatus-method"></a>QueryStatus yöntemini uygulamak için  
   
-1. Dönüş <xref:Microsoft.VisualStudio.VSConstants.S_OK> geçerli komutları için.  
+1. <xref:Microsoft.VisualStudio.VSConstants.S_OK>Geçerli komutlar için geri dönün.  
   
-2. Ayarlama `cmdf` öğesinin `prgCmds` parametresi.  
+2. `cmdf`Parametresinin öğesini ayarlayın `prgCmds` .  
   
-    Değerini `cmdf` öğedir mantıksal değerleri birleşimi <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> numaralandırma, mantıksal OR kullanarak (`|`) işleci.  
+    Öğesinin değeri, `cmdf` <xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF> mantıksal OR () işleci kullanılarak birleştirilerek Numaralandırmadaki değerlerin mantıksal birleşimidir `|` .  
   
-    Komutun durumu temelinde uygun numaralandırma kullanın:  
+    Komutun durumuna göre uygun numaralandırmayı kullanın:  
   
    - Komut destekleniyorsa:  
   
       `prgCmds[0].cmdf = OLECMDF_SUPPORTED;`  
   
-   - Komut şu anda görünmez olması gerekiyorsa:  
+   - Komut şu anda görünmez olmalıdır:  
   
       `prgCmds[0].cmdf |= OLECMDF_INVISIBLE;`  
   
-   - Komut çubuğunda açılıp ve tıklanan görünür değilse:  
+   - Komut açık olursa ve tıklandığı gibi görünüyorsa:  
   
       `prgCmds[0].cmdf |= OLECMDF_LATCHED;`  
   
-      Tür menüde barındırılan komutlarının işlenmesi durumunda `MenuControllerLatched`, tarafından işaretlenen ilk komut `OLECMDF_LATCHED` bayrağı tarafından başlangıç menüsünde görüntülenen varsayılan komutu verilmiştir. Hakkında daha fazla bilgi için `MenuController` menü türlerini görmek [menü öğesi](../extensibility/menu-element.md).  
+      Türünde bir menüde barındırılan komutları işleme durumunda `MenuControllerLatched` , bayrak tarafından işaretlenen ilk komut, `OLECMDF_LATCHED` Başlangıç sırasında menü tarafından görüntülenen varsayılan komuttur. Menü türleri hakkında daha fazla bilgi için `MenuController` , bkz. [menü öğesi](../extensibility/menu-element.md).  
   
-   - Komut şu anda etkin olduğunda:  
+   - Komut şu anda etkinse:  
   
       `prgCmds[0].cmdf |= OLECMDF_ENABLED;`  
   
-   - Komutu bir kısayol menüsüne bir parçasıdır ve varsayılan olarak gizlidir:  
+   - Komut bir kısayol menüsünün parçasıysa ve varsayılan olarak gizliyse:  
   
       `prgCmds[0] cmdf |= OLECMDF_DEFHIDEONCTXMENU`  
   
-   - Komut kullanıyorsa `TEXTCHANGES` bayrak olarak ayarlayın `rgwz` öğesinin `pCmdText` parametre kümesi ve komut yeni metin `cwActual` öğesinin `pCmdText` komut dize boyutu parametresi.  
+   - Komut `TEXTCHANGES` bayrağını kullanıyorsa, `rgwz` `pCmdText` parametresinin öğesini komutun yeni metin olarak ayarlayın ve `cwActual` `pCmdText` parametresinin öğesini komut dizesinin boyutuna ayarlayın.  
   
-     Hata koşulları için <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi, aşağıdaki durumlarda hata işleme gerekir:  
+     Hata koşulları için, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> yöntemi aşağıdaki hata durumlarını işlemelidir:  
   
-   - Bilinmeyen veya desteklenmeyen GUID ise, dönüş `OLECMDERR_E_UNKNOWNGROUP`.  
+   - GUID bilinmiyorsa veya desteklenmiyorsa, döndürün `OLECMDERR_E_UNKNOWNGROUP` .  
   
-   - GUID verilir, ancak komut kimliği bilinmiyor veya desteklenmiyor. dönüş `OLECMDERR_E_NOTSUPPORTED`.  
+   - GUID biliniyorsa, ancak komut KIMLIĞI bilinmiyorsa veya desteklenmiyorsa, döndürün `OLECMDERR_E_NOTSUPPORTED` .  
   
-   VSPackage uygulamasını <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> yöntemi komutu desteklenip ve komut başarıyla işlenen bağlı olarak belirli hata kodlarıyla aynı zamanda döndürmesi gerekir.  
+   Metodun VSPackage uygulamasının, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.Exec%2A> komutun desteklenip desteklenmediğini ve komutun başarıyla işlendiğine bağlı olarak belirli hata kodları döndürmesi gerekir.  
   
-##### <a name="to-implement-the-exec-method"></a>Exec yöntemi uygulamak için  
+##### <a name="to-implement-the-exec-method"></a>Exec yöntemini uygulamak için  
   
-- Komut `GUID` bilinmiyor, iade `OLECMDERR_E_UNKNOWNGROUP`.  
+- Komut `GUID` bilinmiyorsa, döndürün `OLECMDERR_E_UNKNOWNGROUP` .  
   
-- Varsa `GUID` bilinen ancak komut kimliği bilinmiyor, iade `OLECMDERR_E_NOTSUPPORTED`.  
+- Biliniyorsa, `GUID` ancak komut kimliği bilinmiyorsa, döndürün `OLECMDERR_E_NOTSUPPORTED` .  
   
-- Varsa `GUID` ve kimliği ile aynı komutta .vsct dosyası tarafından kullanılan GUID:ID çifti komut, komut ve iade ile ilişkili kod yürütmesine <xref:Microsoft.VisualStudio.VSConstants.S_OK>.  
+- `GUID`Ve komut kimliği,. vsct dosyasında komutu tarafından kullanılan GUID: ID çiftiyle eşleşiyorsa, komutla ilişkili kodu yürütün ve döndürün <xref:Microsoft.VisualStudio.VSConstants.S_OK> .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [VSCT XML Şeması Başvurusu](../extensibility/vsct-xml-schema-reference.md)   

@@ -12,53 +12,53 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 19f22fc56881287cfb501143aaa4397f9a035d78
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67821642"
 ---
 # <a name="msbuild-items"></a>MSBuild Öğeleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-MSBuild öğeleri derleme sistemine girişleri ve genelde dosyaları temsil ederler. Öğeleri öğesi adlarına dayalı öğe türlerine gruplanır. Öğe türleri parametre olarak görevleri için kullanılabilir öğe listeleri içeren adlandırılır. Görevler, derleme işleminin adımları gerçekleştirmek için öğe değerlerini kullanın.  
+MSBuild öğeleri, derleme sistemine giriş gösterir ve genellikle dosyaları temsil eder. Öğeler öğe adlarına göre öğe türlerine gruplanır. Öğe türleri, görevler için parametre olarak kullanılabilecek öğelerin adlandırılmış listeleridir. Görevler, yapı işleminin adımlarını gerçekleştirmek için öğe değerlerini kullanır.  
   
- Koşulları "Item" ve "öğesi value" öğelerini ait oldukları öğe türü adlandırılır çünkü birbirlerinin yerine kullanılabilir.  
+ Öğeler ait oldukları öğe türüne göre adlandırıldıklarından, "öğe" ve "öğe değeri" terimleri birbirlerinin yerine kullanılabilir.  
   
- **Bu konudaki**  
+ **Bu konuda**  
   
-- [Bir proje dosyasında öğeleri oluşturma](#BKMK_Creating1)  
+- [Proje dosyasında öğe oluşturma](#BKMK_Creating1)  
   
-- [Yürütme sırasında öğeleri oluşturma](#BKMK_Creating2)  
+- [Yürütme sırasında öğe oluşturma](#BKMK_Creating2)  
   
-- [Bir proje dosyasında başvurulan öğeleri](#BKMK_ReferencingItems)  
+- [Proje dosyasındaki öğelere başvurma](#BKMK_ReferencingItems)  
   
-- [Öğeleri belirtmek için joker karakter kullanılması](#BKMK_Wildcards)  
+- [Öğeleri belirtmek için joker karakterler kullanma](#BKMK_Wildcards)  
   
-- [Hariç tutma özniteliği kullanma](#BKMK_ExcludeAttribute)  
+- [Exclude özniteliğini kullanma](#BKMK_ExcludeAttribute)  
   
 - [Öğe meta verileri](#BKMK_ItemMetadata)  
   
-  - [Bir proje dosyasında başvurulan öğe meta verileri](#BKMK_ReferencingItemMetadata)  
+  - [Proje dosyasındaki öğe meta verilerine başvurma](#BKMK_ReferencingItemMetadata)  
 
   - [Tanınmış Öğe Meta Verisi](#BKMK_WellKnownItemMetadata)  
 
-  - [Meta verileri kullanarak öğesi türlerini dönüştürme](#BKMK_Transforming)  
+  - [Meta verileri kullanarak öğe türlerini dönüştürme](#BKMK_Transforming)  
   
-- [Öğe Tanımları](#BKMK_ItemDefinitions)  
+- [Öğe tanımları](#BKMK_ItemDefinitions)  
   
-- [Öznitelik bir ItemGroup öğelerinin hedefi](#BKMK_AttributesWithinTargets)  
+- [Bir hedefin ItemGroup 'lerindeki öğelerin öznitelikleri](#BKMK_AttributesWithinTargets)  
   
-  - [Öznitelik Kaldır](#BKMK_RemoveAttribute)  
+  - [Özniteliği kaldır](#BKMK_RemoveAttribute)  
 
   - [KeepMetadata özniteliği](#BKMK_KeepMetadata)  
 
   - [RemoveMetadata özniteliği](#BKMK_RemoveMetadata)  
 
-  - [KeepDuplicates özniteliği](#BKMK_KeepDuplicates)  
+  - [Mi Pduplilıları özniteliği](#BKMK_KeepDuplicates)  
   
-## <a name="BKMK_Creating1"></a> Bir proje dosyasında öğeleri oluşturma  
- Öğeleri alt öğesi olarak proje dosyasındaki öğeleri bildirmek bir [ItemGroup](../msbuild/itemgroup-element-msbuild.md) öğesi. Öğe türü alt öğenin adıdır. `Include` Öğesinin özniteliği, bu öğe türünü içeren eklenecek öğeler (dosyalar) belirtir. Örneğin, aşağıdaki XML adında bir öğe türü oluşturur `Compile`, iki dosya içerir.  
+## <a name="creating-items-in-a-project-file"></a><a name="BKMK_Creating1"></a> Proje dosyasında öğe oluşturma  
+ Öğeleri proje dosyasında bir [ItemGroup](../msbuild/itemgroup-element-msbuild.md) öğesinin alt öğeleri olarak bildirirsiniz. Alt öğenin adı öğenin türüdür. `Include`Öğesinin özniteliği, bu öğe türüne dahil edilecek öğeleri (dosyaları) belirtir. Örneğin, aşağıdaki XML iki dosya içeren adlı bir öğe türü oluşturur `Compile` .  
   
 ```  
 <ItemGroup>  
@@ -67,9 +67,9 @@ MSBuild öğeleri derleme sistemine girişleri ve genelde dosyaları temsil eder
 </ItemGroup>  
 ```  
   
- ' % S'öğesi "file1.cs"; "file2.cs" öğesi yerini almaz Bunun yerine, dosya adı için değer listesi eklenecek `Compile` öğe türü. Bir yapının değerlendirme aşamasında bir öğe türünden bir öğe kaldırılamıyor.  
+ "File2.cs" öğesi "file1.cs" öğesinin yerini almaz; Bunun yerine, dosya adı öğe türü için değerler listesine eklenir `Compile` . Bir derlemeyi değerlendirme aşamasında bir öğe türünden kaldıramazsınız.  
   
- Aşağıdaki XML bir her iki dosyada bildirerek aynı öğe türü oluşturur. `Include` özniteliği. Dosya adları noktalı virgülle ayrılır dikkat edin.  
+ Aşağıdaki XML, her iki dosyayı tek bir öznitelikte bildirerek aynı öğe türünü oluşturur `Include` . Dosya adlarının noktalı virgülle ayrıldığına dikkat edin.  
   
 ```  
 <ItemGroup>  
@@ -77,45 +77,45 @@ MSBuild öğeleri derleme sistemine girişleri ve genelde dosyaları temsil eder
 </ItemGroup>  
 ```  
   
-## <a name="BKMK_Creating2"></a> Yürütme sırasında öğeleri oluşturma  
- Dışında olan öğeleri [hedef](../msbuild/target-element-msbuild.md) öğeleri, bir yapının değerlendirme aşamasında değerler atanır. Sonraki yürütme aşamasında öğe oluşturulduğunda veya değiştirildiğinde aşağıdaki yollarla:  
+## <a name="creating-items-during-execution"></a><a name="BKMK_Creating2"></a> Yürütme sırasında öğe oluşturma  
+ [Hedef](../msbuild/target-element-msbuild.md) öğelerin dışında kalan öğelere, bir yapı değerlendirme aşamasında değerler atanır. Sonraki yürütme aşamasında, öğeler aşağıdaki yollarla oluşturulabilir veya değiştirilebilir:  
   
-- Herhangi bir görev, bir öğe gönderebilir. Bir öğe yaymak için [görev](../msbuild/task-element-msbuild.md) bir alt öğesi olmalıdır [çıkış](../msbuild/output-element-msbuild.md) sahip öğe bir `ItemName` özniteliği.  
+- Herhangi bir görev bir öğeyi yayabilir. Bir öğeyi oluşturmak için, [görev](../msbuild/task-element-msbuild.md) öğesinin bir özniteliği olan bir alt [Çıkış](../msbuild/output-element-msbuild.md) öğesi olması gerekir `ItemName` .  
   
-- [CreateItem](../msbuild/createitem-task.md) görev, bir öğe yayabilir. Bu kullanım önerilmiyor.  
+- [CreateItem](../msbuild/createitem-task.md) görevi bir öğeyi yayabilir. Bu kullanım önerilmiyor.  
   
-- .NET Framework 3.5, başlangıç `Target` öğeleri [ItemGroup](../msbuild/itemgroup-element-msbuild.md) öğeler içerebilir öğeler öğesi.  
+- .NET Framework 3,5 ' den başlayarak `Target` öğeler, öğe öğeleri Içerebilen [ItemGroup](../msbuild/itemgroup-element-msbuild.md) öğeleri içerebilir.  
   
-## <a name="BKMK_ReferencingItems"></a> Bir proje dosyasında başvurulan öğeleri  
- Öğe türlerine proje dosyası boyunca başvurulacak söz dizimini kullanın. @(`ItemType`). Örneğin, kullanarak önceki örnekte öğesi türü başvuru `@(Compile)`. Bu söz dizimini kullanarak bu görevi parametre olarak öğe türü belirterek görevlere öğeleri geçirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Derlenecek dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md).  
+## <a name="referencing-items-in-a-project-file"></a><a name="BKMK_ReferencingItems"></a> Proje dosyasındaki öğelere başvurma  
+ Proje dosyası boyunca öğe türlerine başvurmak için @ () söz dizimini kullanın `ItemType` . Örneğin, kullanarak önceki örnekteki öğe türüne başvurarak `@(Compile)` . Bu söz dizimini kullanarak, öğe türünü bu görevin parametresi olarak belirterek öğeleri görevlere geçirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: derlenecek dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md).  
   
- Genişletildiğinde, varsayılan olarak, bir öğe türünün öğeleri noktalı virgülle (;) ayrılır. Kullanabileceğiniz sözdizimi @(*Itemtype*, '*ayırıcı*') varsayılan dışındaki bir ayırıcı belirtmek için. Daha fazla bilgi için [nasıl yapılır: Virgülle ayrılmış bir öğe listesini görüntüleme](../msbuild/how-to-display-an-item-list-separated-with-commas.md).  
+ Varsayılan olarak, bir öğe türünün öğeleri noktalı virgülle ayrılır (;) genişletilmişse. Varsayılan dışında bir ayırıcı belirtmek için @ (*ItemType*, '*separator*') sözdizimini kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: virgülle ayrılmış bir öğe listesini görüntüleme](../msbuild/how-to-display-an-item-list-separated-with-commas.md).  
   
-## <a name="BKMK_Wildcards"></a> Öğeleri belirtmek için joker karakter kullanılması  
- Kullanabileceğiniz **, \*, ve? her dosyayı ayrı ayrı listelemek yerine bir yapı için girdi olarak bir dosya grubu belirtmek için joker karakterler.  
+## <a name="using-wildcards-to-specify-items"></a><a name="BKMK_Wildcards"></a> Öğeleri belirtmek için joker karakterler kullanma  
+ * *,, Ve kullanın. \* bir dosya grubunu, her dosyayı ayrı olarak listelemek yerine bir derleme için giriş olarak belirtmek için joker karakterler.  
   
-- ? joker karakter, bir tek karakterle eşleşir.  
+- ? işareti joker karakter tek bir karakterle eşleşiyor.  
   
-- \* Joker karakter, sıfır veya daha fazla karakter ile eşleşir.  
+- * Joker karakteri sıfır veya daha fazla karakterle eşleşiyor.  
   
-- ** Joker karakter dizisi ile eşleşen bir kısmi yol.  
+- * * Joker karakter dizisi kısmi bir yolla eşleşir.  
   
-  Örneğin, proje dosyanızda aşağıdaki öğeyi kullanarak proje dosyasını içeren dizine .cs dosyaları belirtebilirsiniz.  
+  Örneğin, proje dosyanızda aşağıdaki öğesini kullanarak proje dosyasını içeren dizindeki tüm. cs dosyalarını belirtebilirsiniz.  
   
 ```  
 <CSFile Include="*.cs"/>  
 ```  
   
- Şu öğe D: sürücüsü üzerindeki tüm .vb dosyaları seçer:  
+ Aşağıdaki öğe D: sürücüsündeki tüm. vb dosyalarını seçer:  
   
 ```  
 <VBFile Include="D:/**/*.vb"/>  
 ```  
   
- Joker karakterler hakkında daha fazla bilgi için bkz: [nasıl yapılır: Derlenecek dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md).  
+ Joker karakterler hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluşturulacak dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md).  
   
-## <a name="BKMK_ExcludeAttribute"></a> Hariç tutma özniteliği kullanma  
- Öğeler içerebilir `Exclude` belirli öğeler (dosyalar) öğesi türünden dışlar özniteliği. `Exclude` Öznitelik genellikle joker karakterler ile birlikte kullanılır. Örneğin, aşağıdaki XML dışında CSFile öğesi türü için her .cs dosyası dizinde ekler `DoNotBuild.cs` dosya.  
+## <a name="using-the-exclude-attribute"></a><a name="BKMK_ExcludeAttribute"></a> Exclude özniteliğini kullanma  
+ Öğe öğeleri `Exclude` , belirli öğeleri (dosyaları) öğe türünden dışlayan özniteliği içerebilir. `Exclude`Özniteliği genellikle joker karakterlerle birlikte kullanılır. Örneğin, aşağıdaki XML, dizin içindeki her. cs dosyasını dosya dışında CSFile öğe türüne ekler `DoNotBuild.cs` .  
   
 ```  
 <ItemGroup>  
@@ -123,21 +123,21 @@ MSBuild öğeleri derleme sistemine girişleri ve genelde dosyaları temsil eder
 </ItemGroup>  
 ```  
   
- `Exclude` Özniteliği tarafından eklenen öğeleri etkiler `Include` her ikisinin de içeren item öğesine özniteliği. Aşağıdaki örnek, önceki item öğesine eklenen Form1.cs dosyasını dışarıda mıydı.  
+ `Exclude`Özniteliği yalnızca, `Include` her ikisini de içeren öğe öğesindeki özniteliği tarafından eklenen öğeleri etkiler. Aşağıdaki örnek, önceki item öğesine eklenen Form1.cs dosyasını dışlayamazsınız.  
   
 ```  
 <Compile Include="*.cs" />  
 <Compile Include="*.res" Exclude="Form1.cs">  
 ```  
   
- Daha fazla bilgi için [nasıl yapılır: Dosyaları derlemeden dışlama](../msbuild/how-to-exclude-files-from-the-build.md).  
+ Daha fazla bilgi için bkz. [nasıl yapılır: derlemeden dosya çıkarma](../msbuild/how-to-exclude-files-from-the-build.md).  
   
-## <a name="BKMK_ItemMetadata"></a> Öğe meta verileri  
- Öğe meta veri bilgilerine ek olarak içerebilir `Include` ve `Exclude` öznitelikleri. Bu meta veriler, toplu iş görevleri ve hedefleri için veya öğeler hakkında daha fazla bilgi gerektiren görevler tarafından kullanılabilir. Daha fazla bilgi için [toplu işleme](../msbuild/msbuild-batching.md).  
+## <a name="item-metadata"></a><a name="BKMK_ItemMetadata"></a> Öğe meta verileri  
+ Öğeler `Include` ve özniteliklerindeki bilgilere ek olarak meta veriler içerebilir `Exclude` . Bu meta veriler, öğeler veya toplu görevler ve hedefler hakkında daha fazla bilgi gerektiren görevler tarafından kullanılabilir. Daha fazla bilgi için bkz. [toplu](../msbuild/msbuild-batching.md)işlem.  
   
- Proje dosyasında bir öğe alt öğeleri olarak bildirilen bir anahtar-değer çiftleri koleksiyonu meta verilerdir. Meta veri adı alt öğenin adıdır ve meta veri değeri alt öğenin değeridir.  
+ Meta veri, proje dosyasında bir öğe öğesinin alt öğeleri olarak belirtilen anahtar-değer çiftleri koleksiyonudur. Alt öğenin adı, meta verilerin adıdır ve alt öğenin değeri meta verilerin değeridir.  
   
- Meta veriler içeren item öğesine ile ilişkilidir. Örneğin, aşağıdaki XML ekler `Culture` değerine sahip meta veriler `Fr` "one.cs" ve "two.cs" öğelerini CSFile öğesi türü.  
+ Meta veriler, kendisini içeren öğe öğesiyle ilişkilendirilir. Örneğin, aşağıdaki XML, değeri olan `Culture` meta verileri `Fr` hem "One.cs" hem de CSFile öğe türünün "Two.cs" öğelerine ekler.  
   
 ```  
 <ItemGroup>  
@@ -147,10 +147,10 @@ MSBuild öğeleri derleme sistemine girişleri ve genelde dosyaları temsil eder
 </ItemGroup>  
 ```  
   
- Bir öğe sıfır veya daha fazla meta veri değerine sahip olabilir. Meta veri değerlerini dilediğiniz zaman değiştirebilirsiniz. Meta verileri boş bir değere ayarlarsanız, etkili bir şekilde derlemeden kaldırın.  
+ Bir öğe sıfır veya daha fazla meta veri değerine sahip olabilir. Meta veri değerlerini dilediğiniz zaman değiştirebilirsiniz. Meta verileri boş bir değere ayarlarsanız derlemeden etkin bir şekilde kaldırırsınız.  
   
-### <a name="BKMK_ReferencingItemMetadata"></a> Bir proje dosyasında başvurulan öğe meta verileri  
- Öğe meta verileri proje dosyası boyunca sözdizimi kullanılarak %(başvurabilirsiniz`ItemMetadataName`). Belirsizlik varsa, öğe türü adını kullanarak bir başvuru kazanabilir. For example, belirtebileceğiniz %(*ItemType.ItemMetaDataName*). Aşağıdaki örnek, ileti görevini toplu görüntü meta verileri kullanır. Toplu işleme için öğe meta verileri kullanma hakkında daha fazla bilgi için bkz. [toplu görev işlemede öğe meta verileri](../msbuild/item-metadata-in-task-batching.md).  
+### <a name="referencing-item-metadata-in-a-project-file"></a><a name="BKMK_ReferencingItemMetadata"></a> Proje dosyasındaki öğe meta verilerine başvurma  
+ Proje dosyasının tamamında,%() sözdizimini kullanarak öğe meta verilerine başvurabilirsiniz `ItemMetadataName` . Belirsizlik varsa, öğe türü adını kullanarak bir başvuruyu niteleyebilirsiniz. Örneğin,%(*ItemType. ItemMetaDataName*) belirtebilirsiniz. Aşağıdaki örnek, Ileti görevinin toplu işi için görüntüleme meta verilerini kullanır. Toplu işleme için öğe meta verilerini kullanma hakkında daha fazla bilgi için, bkz. [görev toplu işleme Içindeki öğe meta verileri](../msbuild/item-metadata-in-task-batching.md).  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -168,13 +168,13 @@ MSBuild öğeleri derleme sistemine girişleri ve genelde dosyaları temsil eder
 </Project>  
 ```  
   
-### <a name="BKMK_WellKnownItemMetadata"></a> Tanınmış öğe meta verisi  
- Bir öğe türüne bir öğe eklendiğinde, bu öğe bazı iyi bilinen meta verilere atanır. Örneğin, tüm öğelerin iyi bilinen meta verilerine de sahip `%(Filename)`, değeri öğenin dosya adıdır. Daha fazla bilgi için [tanınmış öğe meta verileri](../msbuild/msbuild-well-known-item-metadata.md).  
+### <a name="well-known-item-metadata"></a><a name="BKMK_WellKnownItemMetadata"></a> İyi bilinen öğe meta verileri  
+ Öğe türüne bir öğe eklendiğinde, bu öğeye bazı iyi bilinen meta veriler atanır. Örneğin, tüm öğeler, `%(Filename)` değeri öğenin dosya adı olan iyi bilinen meta verilere sahiptir. Daha fazla bilgi için bkz. [tanınmış öğe meta verileri](../msbuild/msbuild-well-known-item-metadata.md).  
   
-### <a name="BKMK_Transforming"></a> Meta verileri kullanarak öğesi türlerini dönüştürme  
- Meta verileri kullanarak öğe listeleri yeni öğe listelerine dönüştürebilirsiniz. Örneğin, bir öğe türüne dönüştürebilirsiniz `CppFiles` ifade kullanarak karşılık gelen bir .obj dosyaları listesine .cpp dosyaları temsil edecek öğeleri olan `@(CppFiles -> '%(Filename).obj')`.  
+### <a name="transforming-item-types-by-using-metadata"></a><a name="BKMK_Transforming"></a> Meta verileri kullanarak öğe türlerini dönüştürme  
+ Meta verileri kullanarak öğe listelerini yeni öğe listelerine dönüştürebilirsiniz. Örneğin, `CppFiles` . cpp dosyalarını temsil eden öğeler içeren bir öğe türünü, ifadesini kullanarak. cpp dosyalarını karşılık gelen bir. obj dosyası listesine dönüştürebilirsiniz `@(CppFiles -> '%(Filename).obj')` .  
   
- Aşağıdaki kod oluşturur bir `CultureResource` öğe tüm kopyalarını içeren tür `EmbeddedResource` öğeler `Culture` meta verileri. `Culture` Yeni meta veri değeri meta veri değeri olur `CultureResource.TargetDirectory`.  
+ Aşağıdaki kod, `CultureResource` `EmbeddedResource` meta verileri olan tüm öğelerin kopyalarını içeren bir öğe türü oluşturur `Culture` . `Culture`Meta veri değeri, yeni meta verilerin değeri olur `CultureResource.TargetDirectory` .  
   
 ```  
 <Target Name="ProcessCultureResources">  
@@ -187,10 +187,10 @@ MSBuild öğeleri derleme sistemine girişleri ve genelde dosyaları temsil eder
 </Target>  
 ```  
   
- Daha fazla bilgi için [dönüştüren](../msbuild/msbuild-transforms.md).  
+ Daha fazla bilgi için bkz. [dönüşümler](../msbuild/msbuild-transforms.md).  
   
-## <a name="BKMK_ItemDefinitions"></a> Öğe tanımları  
- .NET Framework 3. 5'dan başlayarak, varsayılan meta veri herhangi bir öğe türüne ekleyebilirsiniz [Itemdefinitiongroup öğesi](../msbuild/itemdefinitiongroup-element-msbuild.md). İyi bilinen meta verileri gibi varsayılan meta veri öğesi türünün, belirttiğiniz tüm öğeleri ile ilişkilidir. Açıkça varsayılan meta veri öğesi tanımı geçersiz kılabilirsiniz. Örneğin, aşağıdaki XML verir `Compile` "one.cs" ve "three.cs" meta veri öğeleri `BuildDay` "Pazartesi" değerine sahip. Kod öğesi "two.cs" meta veri sağlar. `BuildDay` "Salı" değerine sahip.  
+## <a name="item-definitions"></a><a name="BKMK_ItemDefinitions"></a> Öğe tanımları  
+ 3,5 .NET Framework başlayarak, [ItemDefinitionGroup öğesini](../msbuild/itemdefinitiongroup-element-msbuild.md)kullanarak herhangi bir öğe türüne varsayılan meta veri ekleyebilirsiniz. İyi bilinen meta veriler gibi, varsayılan meta veriler belirttiğiniz öğe türünün tüm öğeleriyle ilişkilendirilir. Bir öğe tanımında varsayılan meta verileri açıkça geçersiz kılabilirsiniz. Örneğin, aşağıdaki XML " `Compile` One.cs" ve "Three.cs" öğelerini `BuildDay` "Pazartesi" değerine sahip meta verileri sağlar. Kod, "two.cs" öğesini `BuildDay` "Salı" değerine sahip meta veriler olarak verir.  
   
 ```  
 <ItemDefinitionGroup>  
@@ -206,15 +206,15 @@ MSBuild öğeleri derleme sistemine girişleri ve genelde dosyaları temsil eder
 </ItemGroup>  
 ```  
   
- Daha fazla bilgi için [öğesi tanımları](../msbuild/item-definitions.md).  
+ Daha fazla bilgi için bkz. [öğe tanımları](../msbuild/item-definitions.md).  
   
-## <a name="BKMK_AttributesWithinTargets"></a> Öznitelik bir ItemGroup öğelerinin hedefi  
- .NET Framework 3.5, başlangıç `Target` öğeleri [ItemGroup](../msbuild/itemgroup-element-msbuild.md) öğeler içerebilir öğeler öğesi. Bu bölümdeki öznitelikleri bir öğe için belirtilen geçerli bir `ItemGroup` olan bir `Target`.  
+## <a name="attributes-for-items-in-an-itemgroup-of-a-target"></a><a name="BKMK_AttributesWithinTargets"></a> Bir hedefin ItemGroup 'lerindeki öğelerin öznitelikleri  
+ .NET Framework 3,5 ' den başlayarak `Target` öğeler, öğe öğeleri Içerebilen [ItemGroup](../msbuild/itemgroup-element-msbuild.md) öğeleri içerebilir. Bu bölümdeki öznitelikler, içindeki bir öğesi için belirtildiğinde geçerlidir `ItemGroup` `Target` .  
   
-### <a name="BKMK_RemoveAttribute"></a> Öznitelik Kaldır  
- Öğeler bir `ItemGroup` hedefi içerebilir `Remove` özniteliği öğesi türünden belirli öğeler (dosyalar) kaldırır. Bu öznitelik, .NET Framework 3. 5 ' sunulmuştur.  
+### <a name="remove-attribute"></a><a name="BKMK_RemoveAttribute"></a> Özniteliği kaldır  
+ `ItemGroup`Bir hedefin içindeki öğeler `Remove` , öğe türünden belirli öğeleri (dosyaları) kaldıran özniteliğini içerebilir. Bu öznitelik .NET Framework 3,5 ' de tanıtılmıştı.  
   
- Aşağıdaki örnek, derleme öğesi türünden her .config dosyasını kaldırır.  
+ Aşağıdaki örnek, derleme öğesi türünden her. config dosyasını kaldırır.  
   
 ```  
 <Target>  
@@ -224,10 +224,10 @@ MSBuild öğeleri derleme sistemine girişleri ve genelde dosyaları temsil eder
 </Target>  
 ```  
   
-### <a name="BKMK_KeepMetadata"></a> KeepMetadata özniteliği  
- Bir öğe içindeki hedef oluşturulursa öğesi öğe içerebilir `KeepMetadata` özniteliği. Bu öznitelik belirtilmezse, adları noktalı virgülle ayrılmış liste belirtilen meta veri kaynak öğeden hedef öğeye aktarılır. Bu öznitelik için boş değer bu belirlemek değil ile aynıdır. `KeepMetadata` Özniteliği, .NET Framework 4. 5 ' tanıtılmıştır.  
+### <a name="keepmetadata-attribute"></a><a name="BKMK_KeepMetadata"></a> KeepMetadata özniteliği  
+ Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `KeepMetadata` özniteliğini içerebilir. Bu öznitelik belirtilmişse, yalnızca noktalı virgülle ayrılmış ad listesinde belirtilen meta veriler, kaynak öğeden hedef öğeye aktarılır. Bu öznitelik için boş bir değer, Belirtmemeye eşdeğerdir. `KeepMetadata`Öznitelik .NET Framework 4,5 ' de tanıtılmıştı.  
   
- Aşağıdaki örnekte nasıl kullanılacağı gösterilmektedir `KeepMetadata` özniteliği.  
+ Aşağıdaki örnek, özniteliğini nasıl kullanacağınızı gösterir `KeepMetadata` .  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"  
@@ -266,10 +266,10 @@ Output:
 -->  
 ```  
   
-### <a name="BKMK_RemoveMetadata"></a> RemoveMetadata özniteliği  
- Bir öğe içindeki hedef oluşturulursa öğesi öğe içerebilir `RemoveMetadata` özniteliği. Bu öznitelik belirtilmezse, tüm meta veri kaynak öğeden hedef öğeye meta veriler hariç, adları adları noktalı virgülle ayrılmış listesi yer alır aktarılır. Bu öznitelik için boş değer bu belirlemek değil ile aynıdır. `RemoveMetadata` Özniteliği, .NET Framework 4. 5 ' tanıtılmıştır.  
+### <a name="removemetadata-attribute"></a><a name="BKMK_RemoveMetadata"></a> RemoveMetadata özniteliği  
+ Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `RemoveMetadata` özniteliğini içerebilir. Bu öznitelik belirtilmişse, tüm meta veriler kaynak öğeden, adları noktalı virgülle ayrılmış ad listesinde yer alan meta veriler hariç hedef öğeye aktarılır. Bu öznitelik için boş bir değer, Belirtmemeye eşdeğerdir. `RemoveMetadata`Öznitelik .NET Framework 4,5 ' de tanıtılmıştı.  
   
- Aşağıdaki örnekte nasıl kullanılacağı gösterilmektedir `RemoveMetadata` özniteliği.  
+ Aşağıdaki örnek, özniteliğini nasıl kullanacağınızı gösterir `RemoveMetadata` .  
   
 ```  
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -315,12 +315,12 @@ Output:
 -->  
 ```  
   
-### <a name="BKMK_KeepDuplicates"></a> KeepDuplicates özniteliği  
- Bir öğe içindeki hedef oluşturulursa öğesi öğe içerebilir `KeepDuplicates` özniteliği. `KeepDuplicates` olan bir `Boolean` öğe var olan bir öğeye tam bir kopyasını ise bir öğe için hedef grubu eklenip eklenmeyeceğini belirten özniteliği.  
+### <a name="keepduplicates-attribute"></a><a name="BKMK_KeepDuplicates"></a> Mi Pduplilıları özniteliği  
+ Bir hedef içinde bir öğe oluşturulduysa, öğe öğesi `KeepDuplicates` özniteliğini içerebilir. `KeepDuplicates` öğe, `Boolean` varolan bir öğenin tam yinelemesi ise, bir öğenin hedef gruba eklenip eklenmeyeceğini belirten bir özniteliktir.  
   
- Kaynak ve hedef öğesi farklı meta veriler ancak aynı dahil etme değeri varsa, bir öğe eklendiğinde bile `KeepDuplicates` ayarlanır `false`. Bu öznitelik için boş değer bu belirlemek değil ile aynıdır. `KeepDuplicates` Özniteliği, .NET Framework 4. 5 ' tanıtılmıştır.  
+ Kaynak ve hedef öğe aynı ekleme değerine ancak farklı meta verilere sahip ise, olarak ayarlanmış olsa bile öğe eklenir `KeepDuplicates` `false` . Bu öznitelik için boş bir değer, Belirtmemeye eşdeğerdir. `KeepDuplicates`Öznitelik .NET Framework 4,5 ' de tanıtılmıştı.  
   
- Aşağıdaki örnekte nasıl kullanılacağı gösterilmektedir `KeepDuplicates` özniteliği.  
+ Aşağıdaki örnek, özniteliğini nasıl kullanacağınızı gösterir `KeepDuplicates` .  
   
 ```  
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -355,11 +355,11 @@ Output:
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [MSBuild Kavramları](../msbuild/msbuild-concepts.md)  
- [MSBuild](msbuild.md)   
- [Nasıl yapılır: Derlenecek dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md)   
- [Nasıl yapılır: Dosyaları derlemeden dışlama](../msbuild/how-to-exclude-files-from-the-build.md)   
- [Nasıl yapılır: Virgülle ayrılmış bir öğe listesini görüntüleme](../msbuild/how-to-display-an-item-list-separated-with-commas.md)   
+ [MSBuild kavramları](../msbuild/msbuild-concepts.md)  
+ [MSBUILD](msbuild.md)   
+ [Nasıl yapılır: derlenecek dosyaları seçme](../msbuild/how-to-select-the-files-to-build.md)   
+ [Nasıl yapılır: derlemeden Dosya dışlama](../msbuild/how-to-exclude-files-from-the-build.md)   
+ [Nasıl yapılır: virgülle ayrılmış bir öğe listesini görüntüleme](../msbuild/how-to-display-an-item-list-separated-with-commas.md)   
  [Öğe tanımları](../msbuild/item-definitions.md)   
- [Toplu işleme](../msbuild/msbuild-batching.md)   
+ [İşlem](../msbuild/msbuild-batching.md)   
  [Öğe Unsuru (MSBuild)](../msbuild/item-element-msbuild.md)
