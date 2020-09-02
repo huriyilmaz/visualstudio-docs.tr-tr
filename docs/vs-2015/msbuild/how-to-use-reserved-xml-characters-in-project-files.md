@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Proje dosyalarında ayrılmış XML karakterlerini kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: proje dosyalarında ayrılmış XML karakterlerini kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -13,19 +13,19 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: aba17e94486ca04e12055c7bf9959f927440c53d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178306"
 ---
-# <a name="how-to-use-reserved-xml-characters-in-project-files"></a>Nasıl yapılır: Proje Dosyalarında Ayrılmış XML Karakterlerini Kullanma
+# <a name="how-to-use-reserved-xml-characters-in-project-files"></a>Nasıl Yapılır: Proje Dosyalarında Ayrılmış XML Karakterlerini Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Proje dosyaları yazdığınızda, ayrılmış XML karakterleri, örneğin özellik değerlerini veya görev parametresi değerleri kullanmak gerekebilir. Ancak, proje dosyası ayrıştırıldığında, bazı ayrılmış karakterleri adlandırılmış varlık tarafından değiştirilmelidir.  
+Proje dosyalarını yazdığınızda, örneğin özellik değerlerinde veya görev parametresi değerlerinde ayrılmış XML karakterleri kullanmanız gerekebilir. Ancak, bazı ayrılmış karakterlerin, proje dosyasının ayrıştırılabilmesi için adlandırılmış bir varlıkla değiştirilmeleri gerekir.  
   
-## <a name="using-reserved-characters"></a>Ayrılmış karakterleri kullanma  
- Aşağıdaki tabloda, ayrılmış XML karakterlerini karşılık gelen adlandırılmış varlık tarafından değiştirilmelidir ve böylece proje dosyası ayrıştırıldığında açıklanmaktadır.  
+## <a name="using-reserved-characters"></a>Ayrılmış karakterler kullanma  
+ Aşağıdaki tabloda, proje dosyasının ayrıştırılabilmesi için ilgili adlandırılmış varlıkla değiştirilmeleri gereken ayrılmış XML karakterleri açıklanmaktadır.  
   
 |Ayrılmış karakter|Adlandırılmış varlık|  
 |------------------------|------------------|  
@@ -35,16 +35,16 @@ Proje dosyaları yazdığınızda, ayrılmış XML karakterleri, örneğin özel
 |"|&quot;|  
 |'|&apos;|  
   
-#### <a name="to-use-double-quotes-in-a-project-file"></a>Çift tırnak işareti bir proje dosyasında kullanmak için  
+#### <a name="to-use-double-quotes-in-a-project-file"></a>Bir proje dosyasında çift tırnakları kullanmak için  
   
-- Adlandırılmış varlık, ilgili ile çift tırnak işaretleri yerine &quot;. Örneğin, çift tırnak işaretlerini yerleştirmek için `EXEFile` öğe listesi, türü:  
+- Çift tırnak işaretlerini karşılık gelen adlandırılmış varlıkla değiştirin, &quot; . Örneğin, öğe listesinin çevresine çift tırnak koymak için `EXEFile` şunu yazın:  
   
     ```  
     <Message Text="The output file is "@(EXEFile)"."/>  
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde proje dosyası tarafından çıkış iletisini dosya adında vurgulamak için çift tırnak işareti kullanılır.  
+ Aşağıdaki kod örneğinde, çift tırnak işareti, proje dosyası tarafından çıktı olan iletideki dosya adını vurgulamak için kullanılır.  
   
 ```  
 <Project DefaultTargets="Compile"  

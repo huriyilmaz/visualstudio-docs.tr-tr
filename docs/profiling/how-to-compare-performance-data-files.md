@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 5fdb8057823732503a215fb4f2c12ebee33b34c4
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330817"
 ---
 # <a name="how-to-compare-performance-data-files"></a>Nasıl yapılır: Performans veri dosyalarını karşılaştırma
@@ -48,7 +48,7 @@ ms.locfileid: "85330817"
 
 4. seçim **Eşik**için bir değer yazın.
 
-5. **Uygula**'ya tıklayın.
+5. **Uygula**’ya tıklayın.
 
 ### <a name="to-compare-report-files"></a>Rapor dosyalarını karşılaştırmak için
 
@@ -56,4 +56,4 @@ ms.locfileid: "85330817"
 
 2. **Karşılaştırma için analiz dosyalarını Seç** penceresinde, **taban çizgisi dosya** Analizi dosyasını (.* VSP* veya. *vsps*) ve **karşılaştırma dosyası** (.* VSP* veya. *vsps*).
 
-3. **Tamam**'a tıklayın.
+3. **Tamam**’a tıklayın.

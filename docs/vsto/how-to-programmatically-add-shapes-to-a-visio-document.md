@@ -14,16 +14,16 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: adde20bff07b54a7fb5777bd9e03a995b4fbd7df
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538066"
 ---
 # <a name="how-to-programmatically-add-shapes-to-a-visio-document"></a>Nasıl yapılır: Visio belgesine program aracılığıyla şekiller ekleme
   Kalıptan ana öğe alarak ve şekilleri etkin sayfada bırakarak bir Microsoft Office Visio belgesine şekil ekleyebilirsiniz.
 
- Daha fazla bilgi için,Microsoft.Office.Interop.Visio.Documtları için VBA başvuru belgelerine bakın [. Add](/office/vba/api/Visio.Documents.Add) yöntemi, [Microsoft. Office. Interop. Visio. Application. ActivePage](/office/vba/api/Visio.Application.ActivePage) özelliği ve [Microsoft. Office. Interop. Visio. Page. Drop](/office/vba/api/Visio.Page.Drop) yöntemi.
+ Daha fazla bilgi için,Microsoft.Office.Interop.Visio.Documtları için VBA başvuru belgelerine bakın [ . Add](/office/vba/api/Visio.Documents.Add) yöntemi, [Microsoft. Office. Interop. Visio. Application. ActivePage](/office/vba/api/Visio.Application.ActivePage) özelliği ve [Microsoft. Office. Interop. Visio. Page. Drop](/office/vba/api/Visio.Page.Drop) yöntemi.
 
 ## <a name="add-shapes-to-a-visio-document"></a>Visio belgesine şekil ekleme
 

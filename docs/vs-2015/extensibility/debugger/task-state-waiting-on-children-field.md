@@ -1,5 +1,5 @@
 ---
-title: Task_state_waıtıng_on_chıldren alanı | Microsoft Docs
+title: TASK_STATE_WAITING_ON_CHILDREN alanı | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,31 +11,31 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e2dfb7ca683b7a05151539feda92a2575197b189
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68176706"
 ---
-# <a name="taskstatewaitingonchildren-field"></a>TASK_STATE_WAITING_ON_CHILDREN Alanı
+# <a name="task_state_waiting_on_children-field"></a>TASK_STATE_WAITING_ON_CHILDREN Alanı
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Görev, temsilci yürütülmesi tamamlandı ve örtük olarak eklenen alt görevlerin tamamlanmasını bekliyor.  
+Görev, temsilcisini yürütmeyi bitirdi ve ekli alt görevlerin tamamlanmasını örtük olarak bekliyor.  
   
- **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll içinde)  
+ **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)  
   
- .NET Framework'den bu iç üye erişemediği için aşağıdaki söz dizimini ortak Ara dil (CIL) sağlanır.  
+ Bu iç üyeye .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 .field static assembly literal int32 TASK_STATE_WAITING_ON_CHILDREN = int32(0x01000000)  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa [m_stateFlags](../../extensibility/debugger/m-stateflags-field.md) alan içerir, bu değer <xref:System.Threading.Tasks.Task.Status%2A> özelliği döndürür <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName>.  
+ [M_stateFlags](../../extensibility/debugger/m-stateflags-field.md) alan bu değeri içeriyorsa, <xref:System.Threading.Tasks.Task.Status%2A> özelliği döndürür <xref:System.Threading.Tasks.TaskStatus?displayProperty=fullName> .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Task Sınıfı](../../extensibility/debugger/task-class-internal-members.md)

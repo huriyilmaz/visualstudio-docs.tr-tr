@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 12102c297c34649c753cf1c811994f9e750b9605
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435688"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64837091"
 ---
-# <a name="typeinfo"></a>TYPE_INFO
+# <a name="type_info"></a>TYPE_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yapı, çeşitli türlerdeki bir alan türü hakkında bilgi belirtir.  
+Bu yapı, bir alanın türü hakkında çeşitli bilgi türlerini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 struct _tagTYPE_INFO_UNION {  
@@ -47,33 +47,33 @@ public struct TYPE_INFO {
   
 #### <a name="parameters"></a>Parametreler  
  dwKind  
- Bir değer [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) birleşim yorumlama belirleyen sabit listesi.  
+ [DwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) numaralandırmasından, birleşimin nasıl yorumlanacağını belirleyen bir değer.  
   
- type.typeMeta  
- [C++ yalnızca] İçeren bir [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) , yapı `dwKind` olduğu `TYPE_KIND_METADATA`.  
+ Type. typeMeta  
+ [Yalnızca C++] İse [METADATA_TYPE](../../../extensibility/debugger/reference/metadata-type.md) yapısını içerir `dwKind` `TYPE_KIND_METADATA` .  
   
- type.typePdb  
- [C++ yalnızca] İçeren bir [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) , yapı `dwKind` olduğu `TYPE_KIND_PDB`.  
+ Type. typePdb  
+ [Yalnızca C++] İse [PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md) yapısını içerir `dwKind` `TYPE_KIND_PDB` .  
   
- type.typeBuilt  
- [C++ yalnızca] İçeren bir [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) , yapı `dwKind` olduğu `TYPE_KIND_BUILT`.  
+ Type. Typeüretildi  
+ [Yalnızca C++] İse [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) yapısını içerir `dwKind` `TYPE_KIND_BUILT` .  
   
- Type.Unused  
+ tür. kullanılmıyor  
  Kullanılmayan doldurma.  
   
- türü  
- Union adıdır.  
+ tür  
+ Birleşimin adı.  
   
  unionmember  
- [C# yalnızca] Bu uygun yapı türüne göre sıralama `dwKind`.  
+ [Yalnızca C#] Bunu temel alarak uygun yapı türüne göre sıralama `dwKind` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı geçirilir [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) yöntemi burada da doldurulur. Yapı içeriğini yorumlanma şeklini dayanır `dwKind` alan.  
+ Bu yapı, doldurulduğu [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) yöntemine geçirilir. Yapının içeriğinin yorumlanması alanı temel alır `dwKind` .  
   
 > [!NOTE]
-> [C++ yalnızca] Varsa `dwKind` eşittir `TYPE_KIND_BUILT`, arka plandaki serbest bırakmak gerekli ise [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesne yok etme `TYPE_INFO` yapısı. Bu çağrılarak gerçekleştirilir `typeInfo.type.typeBuilt.pUnderlyingField->Release()`.  
+> [Yalnızca C++] `dwKind` Eşitse `TYPE_KIND_BUILT` , yapıyı yok edilirken temeldeki [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) nesnesini serbest bırakmak gereklidir `TYPE_INFO` . Bu, çağırarak yapılır `typeInfo.type.typeBuilt.pUnderlyingField->Release()` .  
   
- [C# yalnızca] Aşağıdaki tablo nasıl yorumlanacağını gösterir `unionmember` türü her tür için üye. Bu örnek, türü bir tür için nasıl yapıldığını gösterir.  
+ [Yalnızca C#] Aşağıdaki tabloda `unionmember` her tür türü için üyenin nasıl yorumlanacağı gösterilmektedir. Örnek, bir tür türü için bunun nasıl yapıldığını gösterir.  
   
 |`dwKind`|`unionmember` yorumlanan|  
 |--------------|----------------------------------|  
@@ -82,7 +82,7 @@ public struct TYPE_INFO {
 |`TYPE_KIND_BUILT`|[BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)|  
   
 ## <a name="example"></a>Örnek  
- Bu örnek nasıl yorumlanacağını gösterir `unionmember` üyesi `TYPE_INFO` C# yapısı. Bu örnek, yalnızca bir tür yorumlama gösterir (`TYPE_KIND_METADATA`), ancak diğerleri tam olarak aynı şekilde yorumlanır.  
+ Bu örnek, `unionmember` `TYPE_INFO` C# ' deki yapının üyesini nasıl yorumlayacağını gösterir. Bu örnek yalnızca bir türün () yorumlandığını gösterir `TYPE_KIND_METADATA` , ancak diğerleri tamamen aynı şekilde yorumlanır.  
   
 ```csharp  
 using System;  
@@ -106,11 +106,11 @@ namespace MyPackage
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: sh.h  
+ Üstbilgi: SH. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

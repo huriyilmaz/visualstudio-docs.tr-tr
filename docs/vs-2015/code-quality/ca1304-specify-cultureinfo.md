@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: d874d69f36fc8520a7cfbe3e946116c2d85ed88f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85539067"
 ---
 # <a name="ca1304-specify-cultureinfo"></a>CA1304: CultureInfo belirt
@@ -61,7 +61,7 @@ ms.locfileid: "85539067"
  Varsayılan kültür/biçim sağlayıcısının doğru seçim olması ve kodun bakımınızın önemli bir geliştirme önceliği olmaması durumunda bu kuraldan bir uyarının gösterilmemesi güvenlidir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnekte, `BadMethod` Bu kuralın iki ihlaline neden olur. `GoodMethod`Sabit kültürü System. String. Compare 'e geçirerek ilk ihlayi düzeltir ve geçerli kültürü kullanıcıya geçirilerek ikinci ihlalin düzeltmesini düzeltir <xref:System.String.ToLower%2A> `string3` .
+ Aşağıdaki örnekte, `BadMethod` Bu kuralın iki ihlaline neden olur. `GoodMethod` Sabit kültürü System. String. Compare 'e geçirerek ilk ihlayi düzeltir ve geçerli kültürü kullanıcıya geçirilerek ikinci ihlalin düzeltmesini düzeltir <xref:System.String.ToLower%2A> `string3` .
 
  [!code-csharp[FxCop.Globalization.CultureInfo#1](../snippets/csharp/VS_Snippets_CodeAnalysis/FxCop.Globalization.CultureInfo/cs/FxCop.Globalization.CultureInfo.cs#1)]
 

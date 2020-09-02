@@ -13,18 +13,18 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8f8eccadbb2ae29f684c8c760ab34dae59c79ac7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204770"
 ---
-# <a name="unmanagedaddressphysical"></a>UNMANAGED_ADDRESS_PHYSICAL
+# <a name="unmanaged_address_physical"></a>UNMANAGED_ADDRESS_PHYSICAL
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yapı, fiziksel bir adresi temsil eder.  
+Bu yapı bir fiziksel adresi temsil eder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef struct _tagUNMANAGED_ADDRESS_PHYSICAL {  
@@ -38,19 +38,19 @@ public struct UNMANAGED_ADDRESS_PHYSICAL {
 }  
 ```  
   
-## <a name="terms"></a>Koşulları  
+## <a name="terms"></a>Terimler  
  uzaklık  
- Fiziksel adres alanı bir 64-bit uzaklık.  
+ Bir fiziksel adres alanına 64 bitlik bir konum.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı, birleşim içinde parçasıdır [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) ne zaman yapısı `dwKind` alanını `DEBUG_ADDRESS_UNION` yapısı ayarlandığında `ADDRESS_KIND_UNMANAGED_PHYSICAL` (arasında bir değer [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) sabit listesi).  
+ Bu yapı, [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_UNMANAGED_PHYSICAL` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: sh.h  
+ Üstbilgi: SH. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

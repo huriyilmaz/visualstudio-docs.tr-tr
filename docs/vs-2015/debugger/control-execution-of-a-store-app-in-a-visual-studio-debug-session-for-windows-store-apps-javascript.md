@@ -1,5 +1,5 @@
 ---
-title: Denetleme (JavaScript) Windows Store uygulamaları için hata ayıklama oturumunda bir Store uygulamasının yürütülmesine | Microsoft Docs
+title: Windows Mağazası uygulamaları için hata ayıklama oturumunda bir mağaza uygulamasının yürütülmesini denetleme (JavaScript) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,292 +15,292 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9238bd4f42291af23a1279c9caa83f1039c8f249
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437753"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64828609"
 ---
-# <a name="control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript"></a>Bir Store uygulamasının yürütülmesini denetleme (JavaScript) Windows Store uygulamaları için Visual Studio hata ayıklama oturumunda
+# <a name="control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript"></a>Microsoft Store uygulamaları için Visual Studio hata ayıklama oturumunda bir Store uygulamasının yürütülmesini denetleme (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu hızlı başlangıçta, Visual Studio hata ayıklayıcıda gitme ve bir oturumda program durumunu görüntülemek nasıl gösterir.
+Bu hızlı başlangıç, Visual Studio hata ayıklayıcısında nasıl gezineceğinizi ve bir oturumdaki program durumunun nasıl görüntüleneceğini gösterir.
 
- Bu hızlı başlangıçta, Visual Studio ile hata ayıklama için yenidir ve hata ayıklama oturumu Visual Studio'da gezinme hakkında daha fazla bilgi için isteyen geliştiriciler için geliştiriciler içindir. Kendi hata ayıklama resim öğretmek değildir. Örnek kodda işlevleri, yalnızca bu konuda açıklanan hata ayıklama yordamları göstermek için tasarlanmıştır. Uygulama veya işlev tasarımının en iyi işlevleri dağıtıyorsunuz değil. Aslında, İşlevler ve uygulama içinden her şeyin daha fazlasını yapmanız değil, hızlı bir şekilde keşfeder.
+ Bu hızlı başlangıç, Visual Studio ve Visual Studio hata ayıklama oturumunda gezinme hakkında daha fazla bilgi edinmek isteyen geliştiriciler için Visual Studio ile hata ayıklamaya yeni olan geliştiricilere yöneliktir. Hata ayıklamanın bir resmini kendi kendine öğretmez. Örnek koddaki işlevler yalnızca bu konuda açıklanan hata ayıklama yordamlarını göstermek için tasarlanmıştır. İşlevler, uygulama veya işlev tasarımının en iyi yöntemlerini kullanmaz. Aslında, işlevleri ve uygulamanın kendisini, her şeyin hiç bir şey yapmadığınızı hızlı bir şekilde keşfedeceksiniz.
 
- Bu hızlı başlangıçta bölümlerini, zaten alışık olduğunuz bilgiler içeren herhangi bir bölümü atlayabilirsiniz olabildiğince bağımsız olarak tasarlanmıştır. Örnek bir uygulama oluşturmak için gerekli değildir. Ancak biz bunu tavsiye ve işlem mümkün olduğu kadar kolay yaptığınız.
+ Bu hızlı başlangıç 'nin bölümleri mümkün olduğunca bağımsız olacak şekilde tasarlandı, bu sayede zaten bildiğiniz bilgileri içeren herhangi bir bölümü atlayabilirsiniz. Örnek bir uygulama oluşturmanız da gerekmez. Ancak, bunu öneriyoruz ve işlemi mümkün olduğunca kolay hale sunuyoruz.
 
- **Hata ayıklayıcı, klavye kısayolları.** Visual Studio hata ayıklayıcı gezintisi, hem fare ve klavye için optimize edilmiştir. Bu konu başlığı altındaki adımların birçok klavye kısayol tuşu veya kısayol tuşu parantez içinde bir açıklama içerir. Örneğin, (klavye: F5) yazarak F5 başlatır veya hata ayıklayıcı yürütme devam eder, anahtar gösterir.
+ **Hata ayıklayıcı klavye kısayolları.** Visual Studio hata ayıklayıcısında gezinti, hem fare hem de klavye için iyileştirilmiştir. Bu konudaki adımların birçoğu, parantez içinde klavye hızlandırıcıyı veya kısayol tuşunu içerir. Örneğin, (klavye: F5) F5 tuşunu yazmanın başladığı veya hata ayıklayıcının yürütülmesine devam ettiğini gösterir.
 
 > [!NOTE]
-> **Modül deseni**
+> **Modül deseninin**
 >
-> Sık kullandığınız JavaScript Windows Store apps *modülü deseni* verileri ve işlevleri sayfasında yalıtılacak. Modül düzeni tek, kendi kendine çalışan ve anonim bir kapanış sayfa işlevselliği genel ad alanından ayrı tutmak için kullanır. Bu konuda, bu işlev diyoruz *Modülü*.
+> Windows Mağazası uygulamaları, verileri ve işlevleri bir sayfada kapsüllemek için genellikle JavaScript *Modül modelini* kullanır. Modül stili, sayfa işlevselliğinin genel ad alanından ayrı tutulması için tek, kendi kendine yürütülen ve anonim bir kapanış kullanır. Bu konu *başlığında, bu*işlevi işlevini çağıracağız.
 
 ## <a name="in-this-topic"></a>Bu konuda
- Bilgi edinmek nasıl yapılır:
+ Şunları yapmayı öğrenebilirsiniz:
 
  [Örnek uygulamayı oluşturma](#BKMK_Create_the_sample_app)
 
- [Ayarlayın ve program verileri incelemek için bir kesme noktası, bir işlevin içine Adımlama çalıştırın](#BKMK_Set_and_run_to_a_breakpoint__step_into_a_function__and_examine_program_data)
+ [Ayarlama ve bir kesme noktasına çalıştırma, bir işleve adımla ve program verilerini İnceleme](#BKMK_Set_and_run_to_a_breakpoint__step_into_a_function__and_examine_program_data)
 
- [İçine, üzerine ve dışına işlevleri adım](#BKMK_Step_into__over__and_out_of_functions)
+ [İşlevlere Step, over ve out işlevleri](#BKMK_Step_into__over__and_out_of_functions)
 
- [Koşullu kesme noktası ayarlayın, imleci çalıştırmak ve bir değişken görselleştirin](#BKMK_Set_a_conditional_breakpoint__run_to_the_cursor__and_visualize_a_variable)
+ [Koşullu kesme noktası ayarlayın, imlece çalıştırın ve bir değişkeni görselleştirin](#BKMK_Set_a_conditional_breakpoint__run_to_the_cursor__and_visualize_a_variable)
 
- [Yerel öğeler penceresinde değişken veri görünümü](#BKMK_View_variable_data_in_the_Locals_window)
+ [Yerel öğeler penceresinde değişken verileri görüntüleme](#BKMK_View_variable_data_in_the_Locals_window)
 
-- [Değişken veri ve bir nesnenin prototip zincirini görüntüleyin](#BKMK_View_variable_data_and_the_prototype_chain_of_an_object)
+- [Bir nesnenin değişken verilerini ve prototip zincirini görüntüleme](#BKMK_View_variable_data_and_the_prototype_chain_of_an_object)
 
 - [Kapsam zinciri verilerini İnceleme](#BKMK_Examine_scope_chain_data)
 
-  [Çağrı yığını penceresini kullanarak koda gidin](#BKMK_Navigate_to_code_by_using_the_Call_Stack_window)
+  [Çağrı yığını penceresini kullanarak koda gitme](#BKMK_Navigate_to_code_by_using_the_Call_Stack_window)
 
-## <a name="BKMK_Create_the_sample_app"></a> Örnek uygulamayı oluşturma
- Örnek uygulama, yalnızca hata ayıklama oturumu gezinme nasıl çalıştığını ve programınızın durumunu incelemek nasıl görebilirsiniz bir kaynak dosyası oluşturmak için Windows Store uygulaması çerçevesini kullanır. Bu nedenle, hata ayıklama, kodla ilgilidir. Tüm harekete geçirecek kodun çağrılır `module` default.js dosyasını işlevi. Hiçbir denetim eklenir ve hiçbir olay işlenir.
+## <a name="create-the-sample-app"></a><a name="BKMK_Create_the_sample_app"></a> Örnek uygulamayı oluşturma
+ Hata ayıklama kod ile ilgilidir, bu nedenle örnek uygulama yalnızca bir hata ayıklama oturumunun nasıl çalıştığını ve program durumunun nasıl incelendiğine görebileceğiniz bir kaynak dosyası oluşturmak için Windows Mağazası uygulamasının çerçevesini kullanır. Çağırabileceğiniz tüm kodlar `module` default.js dosyasının işlevinden çağırılır. Hiçbir denetim eklenmez ve hiçbir olay işlenmiyor.
 
-1. **Boş bir JavaScript Windows Store uygulaması oluşturursunuz.** Visual Studio'yu açın. Giriş sayfasından Yeni'yi seçin **yeni proje** bağlantı. Üzerinde **yeni proje** iletişim kutusunda **JavaScript** içinde **yüklü** listeleyin ve ardından **Windows Store**. Proje şablonları listesinde seçin **boş uygulama**. Visual Studio yeni çözüm ve proje oluşturup default.htm dosyasını Kod düzenleyicisinde görüntüler.
+1. **Boş bir JavaScript Windows Mağazası uygulaması oluşturun.** Visual Studio'yu açın. Giriş sayfasında, **Yeni proje** bağlantısı ' nı seçin. **Yeni proje** iletişim kutusunda, **yüklü** listede **JavaScript** ' i seçin ve ardından **Windows Mağazası**' nı seçin. Proje şablonları listesinde **boş uygulama**' yı seçin. Visual Studio yeni bir çözüm ve proje oluşturur ve default.htm dosyasını kod düzenleyicisinde görüntüler.
 
     Sayfasına yüklenen komut dosyalarını unutmayın.
 
-   - `base.js` Ve `ui.js` dosyaları oluşturmak **JavaScript için Windows Kitaplığı**. JavaScript için Windows kitaplığı JavaScript kümesidir ve JavaScript kullanarak Windows Store uygulamaları daha kolay hale getirmek CSS dosyaları oluşturun. Size, HTML, CSS ve Windows çalışma zamanı ile birlikte uygulamanızı oluşturmak için kullanın.
+   - `base.js`Ve `ui.js` dosyaları, **JavaScript için Windows kitaplığı**oluşturur. JavaScript için Windows kitaplığı, JavaScript kullanarak Windows Mağazası uygulamaları oluşturmayı kolaylaştıran bir JavaScript ve CSS dosyaları kümesidir. Uygulamanızı oluşturmak için bunu HTML, CSS ve Windows Çalışma Zamanı birlikte kullanırsınız.
 
-   - Kodunuzu başlar `default.js` dosya.
+   - Kodunuz `default.js`  dosyada başlar.
 
-2. **Default.js kaynak dosyasını açın.** Çözüm Gezgini'nde açın **js** düğümünü seçip `default.js`.
+2. **default.js kaynak dosyasını açın.** Çözüm Gezgini ' de, **js** düğümünü açın ve öğesini seçin `default.js` .
 
-3. **Sayfa içeriğini örnek kod ile değiştirin.** Tüm içeriğini silmek `default.js` dosya. Bu bağlantıyı izleyin: [Hata ayıklayıcı gezintisi örnek kodu (JavaScript)](../debugger/debugger-navigation-sample-code-javascript.md)ve ardından panoya JavaScript bölümünde listelenen kodu kopyalayın. (Seçin **geri** tarayıcı veya Yardım Görüntüleyicisi bu hızlı başlangıç sayfasına geri dönün.) Visual Studio Düzenleyicisi'nde kod şimdi boş yapıştırın `default.js`. Seçin **Ctrl + S** dosyayı kaydetmek için.
+3. **Sayfa içeriğini örnek kodla değiştirin.** Dosyadaki tüm içeriği silin `default.js` . Şu bağlantıyı izleyin: [hata ayıklayıcı gezinti örnek kodu (JavaScript)](../debugger/debugger-navigation-sample-code-javascript.md)ve sonra JavaScript bölümünde listelenen kodu panoya kopyalayın. (Bu hızlı başlangıç sayfasına dönmek için tarayıcıda veya yardım görüntüleyicisinde **geri** 'yi seçin.) Visual Studio düzenleyicisinde, kodu şimdi boş öğesine yapıştırın `default.js` . Dosyayı kaydetmek için **CTRL + S** 'yi seçin.
 
-   Şimdi, bu konudaki örnekleri birlikte izleyebilirsiniz.
+   Artık bu konudaki örneklerle birlikte takip edebilirsiniz.
 
-## <a name="BKMK_Set_and_run_to_a_breakpoint__step_into_a_function__and_examine_program_data"></a> Ayarlayın ve program verileri incelemek için bir kesme noktası, bir işlevin içine Adımlama çalıştırın
- Hata ayıklama oturumu başlatmak için en yaygın yolu seçmektir **hata ayıklamayı Başlat** gelen **hata ayıklama** menü (klavye: F5). Uygulama başladığında ve bir kesme noktasına ulaşıldığında, el ile özel bir durum oluştuğunda, yürütme askıya veya uygulama sona kadar yürütmeye devam eder.
+## <a name="set-and-run-to-a-breakpoint-step-into-a-function-and-examine-program-data"></a><a name="BKMK_Set_and_run_to_a_breakpoint__step_into_a_function__and_examine_program_data"></a> Ayarlama ve bir kesme noktasına çalıştırma, bir işleve adımla ve program verilerini İnceleme
+ Bir hata ayıklama oturumu başlatmak için en yaygın yol **, hata ayıklama menüsünden** **hata ayıklamayı Başlat** ' ı seçin (klavye: F5). Uygulama başlar ve kesme noktasına ulaşılana kadar yürütmeyi sürdürür, yürütmeyi el ile askıya alın, bir özel durum oluşur veya uygulama sonlanır.
 
- Yürütme hata ayıklayıcıda askıya alındığında, bir değişken üzerinde fare duraklatarak bir veri ipucunda etkin bir değişkenin değerini görüntüleyebilirsiniz.
+ Hata ayıklayıcıda yürütme askıya alındığında, değişkende fare 'yi duraklatarak bir veri ipucunda etkin bir değişkenin değerini görüntüleyebilirsiniz.
 
- (Hata ayıklayıcıya bozucu da adlandırılır) uygulamanın yürütülmesini askıya sonra program kodun geri kalanını yürütür şeklini denetlemek. Satır bir işlev çağrısında işlevin kendisi taşıma devam edebilir veya tek bir adımda çağrılan işlevi yürütebilir. Bu yordamlar uygulama üzerinden Adımlama çağrılır. Ayrıca, imlecinizi konumlandırılmış burada ayarladığınız sonraki kesme noktasına veya satırına çalıştıran uygulama standart yürütülmesi devam edebilir. Hata ayıklama oturumu istediğiniz zaman durdurabilirsiniz. Hata ayıklayıcı gerekli temizleme işlemlerini gerçekleştirmek ve yürütme çıkmak için tasarlanmıştır.
+ Uygulamanın yürütülmesini askıya aldıktan sonra (hata ayıklayıcıya bölünmesi olarak da bilinir), program kodunun geri kalanının ne şekilde yürütüldüğünü kontrol edersiniz. Satır satır hattına devam edebilir, bir işlev çağrısından işlevin kendisini taşıyabilirsiniz veya çağrılan bir işlevi tek bir adımda yürütebilirsiniz. Bu yordamlara uygulama aracılığıyla atlama adı verilir. Ayrıca, uygulamanın standart yürütmesini, ayarlamış olduğunuz bir sonraki kesme noktasına veya imlecinizi yerleştirdiğiniz çizgiye da sürdürebilirsiniz. Hata ayıklama oturumunu dilediğiniz zaman durdurabilirsiniz. Hata ayıklayıcı, gerekli temizleme işlemlerini gerçekleştirmek ve yürütmeden çıkmak için tasarlanmıştır.
 
-### <a name="BKMK_Example_1"></a> Örnek 1
- Bu örnekte, gövdesinde bir kesme noktası ayarlamak `module` işlevi `default.js` kullanıcı bildirimlerimiz ilk çağrısı. Ardından işlevdeki adım, hata ayıklayıcı veri ipuçlarında değişken değerleri görüntülemek ve ardından hata ayıklamayı durdurun.
+### <a name="example-1"></a><a name="BKMK_Example_1"></a> Örnek 1
+ Bu örnekte, ' deki bir kesme noktasını, `module` `default.js` Kullanıcı deyimlerimizin Birincini çağırdığı gibi olarak ayarlarsınız. Sonra işlevin içine adımlayın, hata ayıklayıcı veri ipuçlarında değişken değerlerini görüntüleyin ve ardından hata ayıklamayı durdurun.
 
-1. **Bir kesme noktası ayarlayın.** İfadede bir kesme noktası ayarlamak `callTrack = "module function";` çağrısının hemen sonra oluşan `app.start()`. Kaynak Kod Düzenleyicisi gölgeli kanalda satır seçin (klavye: İmleç satıra getirin ve seçin **F9** anahtar).
+1. **Bir kesme noktası ayarlayın.** Çağrısından hemen sonra gelen bildirimde bir kesme noktası ayarlayın `callTrack = "module function";` `app.start()` . Kaynak kodu düzenleyicisinin gölgeli Cilt payının (klavye: imleci satıra konumlandırın ve **F9** tuşuna basın) satırını seçin.
 
-    ![Örnek1 bir kesme noktası ayarlamak](../debugger/media/dbg-jsnav-example1-breakpoint.png "DBG_JSNAV_example1_breakpoint")
+    ![Example1 'de bir kesme noktası ayarlayın](../debugger/media/dbg-jsnav-example1-breakpoint.png "DBG_JSNAV_example1_breakpoint")
 
-    Kesme noktası simgesi kanalda görünür.
+    Kesme noktası simgesi cilt payı içinde görünür.
 
-2. **Kesme noktasına kadar çalıştırın.** Hata ayıklama oturumu başlatın **hata ayıklamayı Başlat** üzerinde **hata ayıklama** menü (klavye: F5).
+2. **Kesme noktasına çalıştırın.** **Hata Ayıkla menüsündeki hata** **ayıklamayı Başlat** seçeneğini belirleyerek hata ayıklama oturumunu başlatın (klavye: F5).
 
-    Uygulama yürütülürken başlar ve kesme noktasını ayarlamanız deyiminden hemen önce yürütmeyi askıya alır. Geçerli satır simgesi cilt payını konumunuz tanımlar ve geçerli deyim vurgulanır.
+    Uygulama yürütülmeye başlar ve kesme noktasını ayarladığınız deyimden hemen önce yürütmeyi askıya alır. Cilt Paydaki geçerli çizgi simgesi konumunuzu tanımlar ve geçerli ifade vurgulanır.
 
-    ![Kesme noktasına Git](../debugger/media/dbg-jsnav-example1-run-to-breakpoint.png "DBG_JSNAV_example1_run_to_breakpoint")
+    ![Kesme noktasında Çalıştır](../debugger/media/dbg-jsnav-example1-run-to-breakpoint.png "DBG_JSNAV_example1_run_to_breakpoint")
 
-    Artık uygulamanın yürütülmesini denetimi sizdedir ve program ifadeleri ilerleyerek program durumunu inceleyebilir.
+    Artık uygulamanın yürütülmesini denetlemektir ve program deyimlerine adım adım ilerleyecek şekilde program durumunu inceleyebilirsiniz.
 
-3. **İşleve adım.** Üzerinde **hata ayıklama** menüsünde seçin **içine adımla** (klavye: **F11**).
+3. **İşlevine adımla.** **Hata Ayıkla** menüsünde, **Step** (klavye: **F11**) öğesini seçin.
 
-    ![Bir kod satırının içine Adımlama](../debugger/media/dbg-jsnav-example1-step-into.png "DBG_JSNAV_example1_step_into")
+    ![Kod satırına adımla](../debugger/media/dbg-jsnav-example1-step-into.png "DBG_JSNAV_example1_step_into")
 
-    Hata ayıklayıcı sonraki satıra taşır not için bir çağrı olduğu `example1` işlevi. Seçin **içine adımla** yeniden. Hata ayıklayıcıyı ilk kod satırına taşır `example1` işlevi. Vurgulanan satırın yürütülmedi, ancak işlev çağrı yığınındaki yüklendi ve yerel değişkenler için belleği ayrıldı.
+    Hata ayıklayıcının, işleve yapılan bir çağrı olan sonraki satıra taşındığını unutmayın `example1` . Yeniden **adımla** öğesini seçin. Hata ayıklayıcı işlevin ilk kod satırına gider `example1` . Vurgulanan satır yürütülmedi, ancak işlev çağrı yığınına yüklendi ve yerel değişkenler için bellek ayrıldı.
 
-4. Bir kod satırının içine adımladığınızda hata ayıklayıcısı aşağıdaki işlemlerden birini gerçekleştirir:
+4. Bir kod satırına adım adım hata ayıklayıcı aşağıdaki eylemlerden birini gerçekleştirir:
 
-   - Sonraki deyim, çözümünüzün bir işlev çağrısı değilse, hata ayıklayıcısı deyimi yürütür, sonraki deyime geçer ve ardından yürütmeyi askıya alır.
+   - Sonraki ifade çözümünüzdeki bir işleve bir çağrı değilse, hata ayıklayıcı deyimyi yürütür, sonraki ifadeye gider ve sonra yürütmeyi askıya alır.
 
-   - Çözümünüzde bir işlev çağrısı ifadesi ise hata ayıklayıcısı çağrılan işlevin ilk satıra taşır ve ardından yürütmeyi askıya alır.
+   - İfade, çözümünüzde bir işleve yapılan çağrıdır, hata ayıklayıcı çağrılan işlevin ilk satırına gider ve sonra yürütmeyi askıya alır.
 
-     Devam deyimleri adımlamak `example1` çıkış noktası ulaşıncaya kadar. Hata ayıklayıcı işlevin kapanış küme ayracı vurgulanır.
+     Çıkış noktasına ulaşıncaya kadar deyimlerinin içine ilermeye devam edin `example1` . Hata ayıklayıcı işlevin kapanış küme ayracını vurgular.
 
-5. **Veri İpuçları'ndaki değişken değerlerini görüntüleme.** Devam deyimleri adımlamak `example1` çıkış noktası ulaşıncaya kadar. Hata ayıklayıcı işlevin kapanış küme ayracı vurgulanır. Bir değişken adı üzerinde fareyle geldiğinizde, bir veri ipucunda adını ve değişkeninin değeri görüntülenir.
+5. **Veri ipuçlarında değişken değerlerini görüntüleyin.** Çıkış noktasına ulaşıncaya kadar deyimlerinin içine ilermeye devam edin `example1` . Hata ayıklayıcı işlevin kapanış küme ayracını vurgular. Bir değişken adı üzerinde fareyi duraklattığınızda, değişkenin adı ve değeri bir veri ipucunda görüntülenir.
 
-    ![Değişken değerleri veri ipucunda görüntülemek](../debugger/media/dbg-jsnav-data-tip.png "DBG_JSNAV_data_tip")
+    ![Veri ipucunda değişken değerlerini görüntüleme](../debugger/media/dbg-jsnav-data-tip.png "DBG_JSNAV_data_tip")
 
-6. **CallTrack değişken için bir izleme ekleyin.** `callTrack` Değişkeni bu hızlı başlangıç boyunca örneklerde çağrılan işlevler göstermek için kullanılır. Değişkenin değerini görüntülemek kolaylaştırmak için bir Watch pencere ekleyin. Düzenleyicide değişken adı seçin ve sonra **Gözcü Ekle** kısayol menüsünden.
+6. **CallTrack değişkeni için bir izleme ekleyin.** `callTrack`Bu hızlı başlangıç boyunca bu değişken, örneklerde çağrılan işlevleri göstermek için kullanılır. Değişkenin değerini görüntülemeyi kolaylaştırmak için, izleme penceresi ekleyin. Düzenleyicide değişken adını seçin ve sonra kısayol menüsünden **Gözcü Ekle** ' yi seçin.
 
     ![Bir değişken izleyin](../debugger/media/dbg-jsnav-watch-window.png "DBG_JSNAV_watch_window")
 
-    Birden çok izleme penceresi değişkenleri izleyebilirsiniz. Veri ipucu pencerelerinde değerleri gibi izlenen değişkenlerin değerleri, her yürütme askıya alındığında güncelleştirilir. İzlenen değişkenlerinizi hata ayıklama oturumları arasında kaydedilir.
+    Bir izleme penceresinde birden çok değişkeni izleyebilirsiniz. Veri ipucu pencerelerinin değerleri gibi izlenen değişkenlerin değerleri, her yürütme askıya alındığında güncelleştirilir. İzlenen değişkenleriniz hata ayıklama oturumları arasında kaydedilir.
 
-7. **Hata ayıklamayı durdurun.** Üzerinde **hata ayıklama** menüsünde seçin **hata ayıklamayı Durdur** (klavye: **Shift + F5**). Bu, hata ayıklama oturumunuzu sonlandırır.
+7. **Hata ayıklamayı durdurun.** **Hata Ayıkla** menüsünde, **hata ayıklamayı Durdur** ' u seçin (klavye: **SHIFT + F5**). Bu, hata ayıklama oturumunuzu sonlandırır.
 
-## <a name="BKMK_Step_into__over__and_out_of_functions"></a> İçine, üzerine ve dışına işlevleri adım
- Bir üst işlev tarafından çağrılan bir işlevin içine Adımlama, aksine bir işlevin Adımlama alt işlevi yürütür ve üst sürdürür olarak çağıran işlev yürütme bekletir. İşlevi çalışır ve yürütme göreceğiniz Araştırdığınız sorunun etkilemez eminseniz işlemleriyle ilgili bilgi sahibi olduğunda bir işlevin üzerine adım.
+## <a name="step-into-over-and-out-of-functions"></a><a name="BKMK_Step_into__over__and_out_of_functions"></a> İşlevlere Step, over ve out işlevleri
+ Bir üst işlev tarafından çağrılan bir işleve adımlamayı sağlamak için, bir işlev üzerinde adımlamayı alt işlevi yürütür ve ardından çağırma işlevindeki yürütme, üst devam eden işlev olarak askıya alınır. İşlevin çalışma biçimini bildiğiniz ve yürütmenin Araştırdığınız sorunu etkilemediğinden emin olan bir işlev üzerinde ilersiniz.
 
- Bir işlev çağrısı içermeyen bir kod satırı Adımlama, satır satır Adımlama gibi yürütür.
+ Bir işlev çağrısı içermeyen bir kod satırının üzerine adımlamak, satırı tıpkı satıra adımla benzer şekilde yürütür.
 
- Bir alt işlevi dışında işlev yürütmeye devam eder ve kendi çağıran işleve işlev döndürdükten sonra yürütmeyi askıya alır. İşlev diğer önemli değil belirlediğinizde uzun bir işlevden adım.
+ Bir alt işlevin dışına atlama işlevi çalışmaya devam eder ve işlev çağıran işlevine döndüğünde yürütmeyi askıya alır. İşlevin geri kalanının önemli olmadığını belirlediğinizde uzun bir işlevin dışına ilerlemeyebilirsiniz.
 
- Hem üzerinden Adımlama hem de bir işlev dışına Adımlama işlevi yürütme.
+ İşlev üzerinde hem atlama hem de atlama işlevi yürütün.
 
- ![Adım içine, üzerine ve dışına yöntemleri](../debugger/media/dbg-basics-stepintooverout.png "DBG_Basics_StepIntoOverOut")
+ ![Yönteme adımla, aşırı ve dışı Yöntemler](../debugger/media/dbg-basics-stepintooverout.png "DBG_Basics_StepIntoOverOut")
 
-### <a name="BKMK_Example_2"></a> Örnek 2
- Bu örnekte, içine, üzerine ve dışına işlevleri adım.
+### <a name="example-2"></a><a name="BKMK_Example_2"></a> Örnek 2
+ Bu örnekte, işlevleri içine, üzerine ve dışına adımlayın.
 
-1. **Örnek2 işlev modülü işlev çağrısında.** Düzen `module` satırı aşağıdaki değiştirin ve işlev `var callTrack = "module function"` ile `example2();`.
+1. **Modül işlevindeki Example2 işlevini çağırın.** İşlevini düzenleyin `module` ve aşağıdaki satırı `var callTrack = "module function"` ile değiştirin `example2();` .
 
-     ![Örnek2 işlev çağrısı](../debugger/media/dbg-jsnav-example2.png "DBG_JSNAV_example2")
+     ![Example2 işlevini çağırma](../debugger/media/dbg-jsnav-example2.png "DBG_JSNAV_example2")
 
-2. **Kesme noktasına kadar çalıştırın.** Hata ayıklama oturumu başlatın **hata ayıklamayı Başlat** üzerinde **hata ayıklama** menü (klavye: F5). Hata ayıklayıcı yürütme kesme noktasında askıya alır.
+2. **Kesme noktasına çalıştırın.** **Hata Ayıkla menüsündeki hata** **ayıklamayı Başlat** seçeneğini belirleyerek hata ayıklama oturumunu başlatın (klavye: F5). Hata ayıklayıcı, kesme noktasında yürütmeyi askıya alır.
 
-3. **Kod satırı adım.** Üzerinde **hata ayıklama** menüsünde seçin **Step Over** (klavye: F10). Hata ayıklayıcı yürütür `var callTrack = "module function"` deyimi deyim Adımlama olarak aynı şekilde.
+3. **Kod satırının üzerinde adımla.** **Hata Ayıkla** menüsünde, **Atla** ' yı (klavye: F10) seçin. Hata ayıklayıcı, ifadeyi `var callTrack = "module function"` ifadeye adımla aynı şekilde yürütür.
 
-4. **Örnek2 ve example2_a adım.** Seçin **F11** içine Adımlama için anahtar `example2` işlevi. Adımla devam `example2` satır ulaşana kadar deyimleri `var x = example2_a();`. Yine, adım için giriş noktasını taşımak için bu satır içine `example2_a`. Her ifadesine adım devam `example2_a` dönene kadar `example2`.
+4. **Example2 ve example2_a içine adımlayın.** İşleve adım eklemek için **F11** tuşuna basın `example2` . `example2`Çizgiye ulaşana kadar deyimlere adımla devam edin `var x = example2_a();` . Bir kez daha, giriş noktasına geçmek için bu satıra adımlayın `example2_a` . Öğesine dönene kadar her bir ifadeye adımla devam edin `example2_a` `example2` .
 
-     ![Bir işlevin üzerinden adımla](../debugger/media/dbg-jsnav-example2-a.png "DBG_JSNAV_example2_a")
+     ![İşlev üzerinde adımla](../debugger/media/dbg-jsnav-example2-a.png "DBG_JSNAV_example2_a")
 
-5. **Bir işlevin üzerine adım.** Sonraki satır içinde Not `example2`, `var y = example2_a();` önceki satıra temelde aynıdır. Bu satırı güvenli bir şekilde geçebilirsiniz. Seçin **F10** işlemin sürdürülmesini taşımak için anahtar `example2` bu ikinci çağrı için `example2_a`. Unutmayın `callTrack` dize gösterir `example2_a` işlevi iki kez yürütüldü.
+5. **Bir işlevin üzerinde adımla.** İçindeki sonraki satırın `example2` `var y = example2_a();` temelde önceki satırla aynı olduğunu unutmayın. Bu satırın üzerinde güvenle ileredebilirsiniz. Sürdürme ' dan bu ikinci çağrıya geçmek için **F10** tuşunu seçin `example2` `example2_a` . `callTrack`Dizesinin `example2_a` işlevin iki kez yürütüldüğünü belirtir.
 
-6. **Bir işlevden adım.** Seçin **F11** içine Adımlama için anahtar `example2_b` işlevi. Unutmayın `example2_b` çok farklı değildir `example2_a`. İşlev dışında adım tercih **Step Out** üzerinde **hata ayıklama** menü (klavye: **Shift + F11**). Unutmayın `callTrack` değişkeni gösterir `example2_b` yürütülmesi ve hata ayıklayıcı noktadan döndürülen olduğu `example2` sürdürür.
+6. **İşlevin dışına adımla.** İşleve adım eklemek için **F11** tuşuna basın `example2_b` . Bunun `example2_b` çok farklı olduğunu unutmayın `example2_a` . İşlevin dışına geçmek için **hata ayıklama** menüsünde **Step Out** (klavye: **Shift + F11**) seçeneğini belirleyin. `callTrack`Değişkenin `example2_b` yürütüldüğünü ve hata ayıklayıcının devam eden noktaya döndürüldüğünü unutmayın `example2` .
 
-7. **Hata ayıklamayı durdurun.** Üzerinde **hata ayıklama** menüsünde seçin **hata ayıklamayı Durdur** (klavye: **Shift + F5**). Bu, hata ayıklama oturumunuzu sonlandırır.
+7. **Hata ayıklamayı durdurun.** **Hata Ayıkla** menüsünde, **hata ayıklamayı Durdur** ' u seçin (klavye: **SHIFT + F5**). Bu, hata ayıklama oturumunuzu sonlandırır.
 
-## <a name="BKMK_Set_a_conditional_breakpoint__run_to_the_cursor__and_visualize_a_variable"></a> Koşullu kesme noktası ayarlayın, imleci çalıştırmak ve bir değişken görselleştirin
- Koşullu kesme noktası yürütmeyi askıya almak hata ayıklayıcı neden olan bir koşulu belirtir. Koşul true veya false sonucu verebilen herhangi bir kod ifade belirtilir. Örneğin, yalnızca bir değişken belirli bir değere ulaştığında sıkça çağrılan bir işlevde programınızın durumunu incelemek için bir koşullu kesme noktası kullanabilirsiniz.
+## <a name="set-a-conditional-breakpoint-run-to-the-cursor-and-visualize-a-variable"></a><a name="BKMK_Set_a_conditional_breakpoint__run_to_the_cursor__and_visualize_a_variable"></a> Koşullu kesme noktası ayarlayın, imlece çalıştırın ve bir değişkeni görselleştirin
+ Koşullu kesme noktası, hata ayıklayıcının yürütmeyi askıya almasına neden olan bir koşulu belirtir. Koşul, doğru veya yanlış olarak değerlendirilebilen herhangi bir kod ifadesiyle belirtilir. Örneğin, bir değişken belirli bir değere ulaştığında sık çağrılan bir işlevde program durumunu incelemek için koşullu bir kesme noktası kullanabilirsiniz.
 
- İmlece gitme, tek seferlik bir kesme noktası ayarlama gibi ' dir. Yürütme askıya alındığında, kaynak olarak bir satır seçin ve seçilen satırın ulaşılana kadar yürütmeyi devam. Örneğin, olabileceğiniz olması bir işlev bir döngüde üzerinden adımlama ve döngü içinde kod doğru şekilde çalıştığını belirlemek. Döngünün her yinelemesinden Adımlama yerine, döngü yürütüldükten sonra konumlandırılmış bir imleç çalıştırabilirsiniz.
+ İmlece çalıştırmak, tek seferlik kesme noktası ayarlamaya benzer. Yürütme askıya alındığında, kaynakta bir satırı seçebilir ve seçilen satıra ulaşılana kadar yürütmeyi sürdürebilirsiniz. Örneğin, bir işlev içindeki bir döngüyle adımlamayı ve döngüdeki kodun doğru şekilde işlem gösterdiğini belirlemenizi sağlayabilirsiniz. Döngünün her tekrarında atlama yerine, döngü yürütüldükten sonra konumlandırılmış olan imlece çalıştırabilirsiniz.
 
- Bazı durumlarda, bir veri ipucunda veya diğer veri penceresi satır içinde bir değişken değerini görüntülemek zordur. Hata ayıklayıcı, kaydırılabilir bir pencerede değeri biçimlendirilmiş bir görünümünü sunan metin Görselleştirici, dizeler, HTML ve Xml görüntüleyebilirsiniz.
+ Bazen bir veri ipucunun veya diğer veri penceresinin satırında bir değişken değeri görüntülemek zordur. Hata ayıklayıcı, kaydırılabilir bir penceredeki değerin biçimli bir görünümünü sunan bir metin görselleştiricisi içinde dizeler, HTML ve XML görüntüleyebilir.
 
-### <a name="BKMK_Example_3"></a> Örnek 3
- Bu örnekte, belirli bir döngü yinelemeyi kesme, ardından döngüsünden sonra konumlandırılmış imlece kadar Çalıştır koşullu kesme noktası ayarlayın. Ayrıca bir değişkenin değerini bir metin görselleştiricisi içinde görüntüleyin.
+### <a name="example-3"></a><a name="BKMK_Example_3"></a> Örnek 3
+ Bu örnekte, bir döngünün belirli bir yinelemesine bölmek için koşullu bir kesme noktası ayarlayın ve ardından döngüden sonra konumlandırılmış olan imlece çalıştırın. Ayrıca bir değişkenin değerini bir metin Görselleştirici içinde görüntüleyebilirsiniz.
 
-1. **Örnek3 işlev modülü işlev çağrısında.** Düzen `module` satırı aşağıdaki değiştirin ve işlev `var callTrack = "module function";` satırı ile `example3();`.
+1. **Modül işlevindeki Example3 işlevini çağırın.** İşlevi düzenleyin `module` ve satır ile takip eden çizgiyi değiştirin `var callTrack = "module function";` `example3();` .
 
-     ![Örnek3 çağrı](../debugger/media/dbg-jsnav-example3.png "DBG_JSNAV_example3")
+     ![Example3 çağır](../debugger/media/dbg-jsnav-example3.png "DBG_JSNAV_example3")
 
-2. **Kesme noktasına kadar çalıştırın.** Hata ayıklama oturumu başlatın **hata ayıklamayı Başlat** üzerinde **hata ayıklama** menü (klavye: **F5**). Hata ayıklayıcı kesme noktasında yürütmeyi askıya alır `module` işlevi.
+2. **Kesme noktasına çalıştırın.** **Hata Ayıkla menüsündeki hata** **ayıklamayı Başlat** seçeneğini belirleyerek hata ayıklama oturumunu başlatın (klavye: **F5**). Hata ayıklayıcı, işlev içindeki kesme noktasında yürütmeyi askıya alır `module` .
 
-3. **Örnek3 işleve adım.** Seçin **içine adımla** üzerinde **hata ayıklama** menü (klavye: **F11**) için giriş noktasını taşımak `example3` işlevi. Bir veya iki döngüleri yinelendiğinde kadar işlevin Adımlama devam `for` blok. Bu, tüm 1000 yineleme boyunca adım uzun süreceğini unutmayın.
+3. **Example3 işlevine adımla.** İşlevin giriş noktasına gitmek için **hata ayıklama** menüsünde (klavye: **F11**) **içine adımla** öğesini seçin `example3` . Bloğun bir veya iki döngüsü tekrarlanana kadar işlevine adımla devam edin `for` . Tüm 1000 yinelemeleriyle ilgili olarak size uzun bir süre geçtiğine göz atın.
 
-4. **Koşullu kesme noktası ayarlayın.** Kod penceresinin sol kanalda satırın sağ `s += i.toString() + "\n";` seçip **koşul** kısayol menüsünde.
+4. **Koşullu kesme noktası ayarlayın.** Kod penceresinin sol cilt payından satıra sağ tıklayın `s += i.toString() + "\n";` ve sonra kısayol menüsünde **koşul** ' ı seçin.
 
-     Seçin **koşul** onay kutusunu işaretleyin ve ardından yazın `i == 500;` metin kutusuna. Seçin **true** seçenek ve **Tamam**. Kesme noktası 500th yinelemesini değerinde kontrol etmenize olanak `for` döngü. Koşullu kesme noktası simgesi, beyaz arası tarafından tespit edebilirsiniz.
+     **Koşul** onay kutusunu seçin ve `i == 500;` metin kutusuna yazın. **True** seçeneğini belirleyin ve **Tamam**' ı seçin. Kesme noktası, döngünün 500. yinelemesinde değeri denetlemenizi sağlar `for` . Koşullu kesme noktası simgesini beyaz çarpı ile tanımlayabilirsiniz.
 
      ![Koşullu kesme noktası simgesi](../debugger/media/dbg-jsnav-breakpoint-condition-icon.png "DBG_JSNAV_Breakpoint_Condition_icon")
 
-5. **Kesme noktasına kadar çalıştırın.** Üzerinde **hata ayıklama** menüsünde seçin **devam** (klavye: **F5**). Duraklatma `i` onaylamak için geçerli değerini `i` 500'dür. Ayrıca değişkeni `s` tek satır olarak ifade edilir ve veri ipucu penceresi daha çok uzun.
+5. **Kesme noktasına çalıştırın.** **Hata Ayıkla** menüsünde **devam** ' ı (klavye: **F5**) seçin. `i`Geçerli değerinin 500 olduğunu doğrulamak için üzerinde ' i duraklatın `i` . Ayrıca, değişkenin `s` tek satır olarak temsil edildiği ve veri ipucu penceresinden çok daha uzun olduğunu unutmayın.
 
-6. **Bir dize değişkeni görselleştirin.** Veri ipucu Büyüteç simgesini `s`.
+6. **Bir dize değişkenini görselleştirin.** Veri ipucunda büyüteç simgesine tıklayın `s` .
 
-     Metin Görselleştirici penceresi görünür ve dize değeri çok satırlı dize olarak sunulur.
+     Metin görselleştiricisi penceresi görünür ve dizenin değeri çok satırlı bir dize olarak sunulur.
 
-     ![Metin Görselleştirici hata ayıklama](../debugger/media/dbg-jsnav-text-visualizer.png "DBG_JSNAV_Text_Visualizer")
+     ![Hata ayıklama metin görselleştiricisi](../debugger/media/dbg-jsnav-text-visualizer.png "DBG_JSNAV_Text_Visualizer")
 
-7. **İmlece kadar çalıştırma.** Satırı seçin `callTrack += "->example3";` seçip **imlece kadar Çalıştır** kısayol menüsünde (klavye: **CTRL + F10**). Hata ayıklayıcı, döngü yinelemesi tamamlar ve ardından satırında yürütmeyi askıya alır.
+7. **İmleci imlece çalıştırın.** Satırı `callTrack += "->example3";` ve ardından kısayol menüsünde **Imlece Çalıştır** ' ı seçin (klavye: **CTRL + F10**). Hata ayıklayıcı döngü yinelemelerini tamamlar ve sonra işlemi satırdaki yürütmeyi askıya alır.
 
-8. **Hata ayıklamayı durdurun.** Üzerinde **hata ayıklama** menüsünde seçin **hata ayıklamayı Durdur** (klavye: **Shift + F5**). Bu, hata ayıklama oturumunuzu sonlandırır.
+8. **Hata ayıklamayı durdurun.** **Hata Ayıkla** menüsünde, **hata ayıklamayı Durdur** ' u seçin (klavye: **SHIFT + F5**). Bu, hata ayıklama oturumunuzu sonlandırır.
 
-### <a name="BKMK_Use_Run_to_Cursor_to_return_to_your_code_and_delete_a_breakpoint"></a> İmlece kadar Çalıştır kodunuza geri dönün ve bir kesme noktası silmek için kullanın
- Kitaplık kodu Microsoft'tan basamaklı veya bir üçüncü taraf imlece gitme çok kullanışlı olabilir. Kitaplık kod içerisinde ilerlemeye bilgilendirici olabilir, ancak genellikle uzun zaman alabilir. Ve genellikle kendi kodunuzda daha ilgilendiğiniz. Bu alıştırmada, nasıl yapılacağını gösterir.
+### <a name="use-run-to-cursor-to-return-to-your-code-and-delete-a-breakpoint"></a><a name="BKMK_Use_Run_to_Cursor_to_return_to_your_code_and_delete_a_breakpoint"></a> Koda geri dönmek ve bir kesme noktasını silmek için, Imlece için Çalıştır 'ı kullanma
+ Microsoft 'tan veya üçüncü bir tarafa ait kitaplık koduna ihtiyacınız olduğunda imlecin imlece çalıştırılması çok yararlı olabilir. Kitaplık kodu üzerinden atlama bilgilendirici olabilir, ancak bu durum genellikle uzun zaman alabilir. Genellikle kendi kodunuzda daha fazla ilgileniyorsunuz. Bu alıştırmada nasıl yapılacağı gösterilmektedir.
 
-1. **App.start çağrıda bir kesme noktası ayarlayın.** İçinde `module` işlev, satırında bir kesme noktası ayarlayın `app.start()`
+1. **Uygulamada bir kesme noktası ayarlayın. çağrı başlatın.** `module`İşlevinde, satırda bir kesme noktası ayarlayın`app.start()`
 
-2. **Kesme noktasına kadar çalıştırın ve kitaplık işleve.**
+2. **Kesme noktasında çalıştırın ve kitaplık işlevinde adımlayın.**
 
-     İçine geçtiğinizde `app.start()`, Kod Düzenleyicisi'ni görüntüler `base.js`. Birden fazla satıra birkaç adım.
+     ' De adım adım `app.start()` , düzenleyici içinde kodu görüntüler `base.js` . Birkaç satıra adımla.
 
-3. **İçinde ve dışında işlevleri adım.** Üzerinden ilerleyerek (**F10**) ve / adım (**SHIFT + F11**) kod `base.js`, bu karmaşıklığı İnceleme için sonuç gelebilir ve uzunluğunda başlangıç işlevin ne yaptığını istediğiniz değil.
+3. **İşlevin üzerinde ve dışına adımla.** ' De (**F10**) ve Step of (SHIFT + F11) kodundan bir adım daha (F10) ve Step Out (**SHIFT + F11**) kodu üzerinde bir `base.js` değer ortaya çıkabilir ve başlangıç işlevinin uzunluğu, yapmak istediğiniz şeydir.
 
-4. **İmleç kodunuzda ayarlayın ve kendisine çalıştırın.** Dönmek `default.js` dosyasını Kod düzenleyicisinde. Koddan sonra ilk satırını seçin `app.start()` (açıklama ya da boş bir satır çalıştıramazsınız). Seçin **imlece kadar Çalıştır** kısayol menüsünden. Hata ayıklayıcı app.start işlev yürütmeye devam eder ve kesme noktasında yürütmeyi askıya alır.
+4. **İmleci kodunuza ayarlayın ve üzerinde çalıştırın.** `default.js`Kod düzenleyicisinde dosyasına dönün. Sonra ilk kod satırını seçin `app.start()` (bir yoruma veya boş bir satıra çalıştıramazsınız). Kısayol menüsünden **Imlece Çalıştır** ' ı seçin. Hata ayıklayıcı App. Start işlevini yürütmeye devam eder ve yürütme kesme noktasında askıya alınır.
 
-## <a name="BKMK_View_variable_data_in_the_Locals_window"></a> Yerel öğeler penceresinde değişken veri görünümü
- Yerel windows parametreler ve değişkenler yürütülmekte olan işlevin kapsamı zincirindeki ağaç görünümünü olur.
+## <a name="view-variable-data-in-the-locals-window"></a><a name="BKMK_View_variable_data_in_the_Locals_window"></a> Yerel öğeler penceresinde değişken verileri görüntüleme
+ Yereller Windows, şu anda yürütülmekte olan işlevin kapsam zincirindeki parametrelerin ve değişkenlerin ağaç görünümüdür.
 
-### <a name="BKMK_View_variable_data_and_the_prototype_chain_of_an_object"></a> Değişken veri ve bir nesnenin prototip zincirini görüntüleyin
+### <a name="view-variable-data-and-the-prototype-chain-of-an-object"></a><a name="BKMK_View_variable_data_and_the_prototype_chain_of_an_object"></a> Bir nesnenin değişken verilerini ve prototip zincirini görüntüleme
 
-1. **Bir dizi nesnesi modülü işlevi ekleyin.** Düzen `module` satırı aşağıdaki değiştirin ve işlev `var callTrack = "module function"` ile `var myArray = new Array(1, 2, 3);`
+1. **Bir dizi nesnesini modül işlevine ekleyin.** İşlevi düzenleyin `module` ve aşağıdaki satırı `var callTrack = "module function"` ile değiştirin `var myArray = new Array(1, 2, 3);`
 
      ![myArray tanımı](../debugger/media/dbg-jsnav-myarray.png "DBG_JSNAV_myArray")
 
-2. **Kesme noktasına kadar çalıştırın.** Hata ayıklama oturumu başlatın **hata ayıklamayı Başlat** üzerinde **hata ayıklama** menü (klavye: **F5**). Hata ayıklayıcı yürütme kesme noktasında askıya alır. Çizginin Adımlama.
+2. **Kesme noktasına çalıştırın.** **Hata Ayıkla menüsündeki hata** **ayıklamayı Başlat** seçeneğini belirleyerek hata ayıklama oturumunu başlatın (klavye: **F5**). Hata ayıklayıcı, kesme noktasında yürütmeyi askıya alır. Satıra adımla.
 
-3. **Yereller penceresini açın.** Üzerinde **hata ayıklama** menüsünde **Windows**ve ardından **Yereller**. (Klavye: Alt+ 4).
+3. **Yereller penceresini açın.** **Hata Ayıkla** menüsünde **Windows**' un üzerine gelin ve ardından **Yereller**' i seçin. (Klavye: alt + 4).
 
-4. **Modül işlevinde yerel değişkenlerini inceleyin** Yereller windows yürütülmekte olan işlevin değişkenleri görüntüler ( `module` işlevi) ağacı üst düzey düğüm. JavaScript bir işleve girdiğiniz zaman, tüm değişkenler oluşturur ve bunları değerini verir `undefined`. İşlev içinde tanımlanan işlevleri kendi metin bir değere sahip.
+4. **Modül işlevindeki yerel değişkenleri inceleyin** Yereller Windows, şu anda yürütülmekte olan işlevin ( `module` işlev) değişkenlerini ağacın en üst düzey düğümleri olarak görüntüler. Bir işlev girdiğinizde, JavaScript tüm değişkenleri oluşturur ve bu değere bir değer verir `undefined` . İşlevinde tanımlanan işlevlerin metinleri bir değer olarak bulunur.
 
-     ![Yerel öğeler penceresinde](../debugger/media/dbg-jsnav-locals-window.png "DBG_JSNAV_Locals_window")
+     ![Yerel öğeler penceresi](../debugger/media/dbg-jsnav-locals-window.png "DBG_JSNAV_Locals_window")
 
-5. **CallTrack ve myArray tanımları adım.** CallTrack ve myArray değişkenleri Yereller penceresinde bulabilirsiniz. Üzerinden adımla (**F10**) iki tanımları ve dikkat **değeri** ve **türü** alanları değiştirilir. Son kesme beri değiştirilen değişkenlerin değerleri Yereller penceresinde vurgular.
+5. **CallTrack ve myArray tanımlarında adım adım.** Yereller penceresinde callTrack ve myArray değişkenlerini bulun. İki tanım üzerinde (**F10**) adımlayın ve **değer** ve **tür** alanlarının değiştirildiğini görürsünüz. Yereller penceresi, son kesmeyi bu yana değiştirilen değişkenlerin değerlerini vurgular.
 
-6. **MyArray nesnesini inceler** genişletme `myArray` değişkeni. Dizinin her öğesi listelenen **[prototip]** içeren devralma hiyerarşisinde düğümü `Array` nesne. Bu düğümü genişletin.
+6. **MyArray nesnesini inceleyin** Değişkeni genişletin `myArray` . Dizinin her öğesi, nesnesinin devralma hiyerarşisini içeren **[Prototype]** düğümü listelenir `Array` . Bu düğümü genişletin.
 
-     ![Prototip zinciri Yereller penceresinde](../debugger/media/dbg-jsnav-locals-proto-chain.png "DBG_JSNAV_Locals_proto_chain")
+     ![Yereller penceresinde prototip zinciri](../debugger/media/dbg-jsnav-locals-proto-chain.png "DBG_JSNAV_Locals_proto_chain")
 
-    - **Yöntemleri** düğümü tüm yöntemleri listeler `Array` nesne.
+    - **Yöntemler** düğümü, nesnenin tüm yöntemlerini listeler `Array` .
 
-    - **[Prototip]** düğüm içeriyor prototipi `Object` nesnesi `Array` türetilir. **[prototip]**  düğümleri özyinelemeli olabilir. Her üst nesne bir nesne sıradüzeni içinde açıklanan **[prototip]** alt düğümü.
+    - **[Prototype]** düğümü, `Object` öğesinden türetilen nesnenin prototipini içerir `Array` . **[prototip]** düğümleri özyinelemeli olabilir. Bir nesne hiyerarşisindeki her üst nesne, alt öğesinin **[prototip]** düğümünde açıklanmıştır.
 
-7. **Hata ayıklamayı durdurun.** Üzerinde **hata ayıklama** menüsünde seçin **hata ayıklamayı Durdur** (klavye: Shift + F5). Bu, hata ayıklama oturumunuzu sonlandırır.
+7. **Hata ayıklamayı durdurun.** **Hata Ayıkla** menüsünde, **hata ayıklamayı Durdur** ' u seçin (klavye: SHIFT + F5). Bu, hata ayıklama oturumunuzu sonlandırır.
 
-## <a name="BKMK_Examine_scope_chain_data"></a> Kapsam zinciri verilerini İnceleme
- *Kapsam zinciri* etkin ve işlev tarafından erişilebilir olan tüm değişkenlere işlevi içerir. Yürütülmekte olan işlevin tanımlayan işlev tanımlanan tüm nesneleri (işlevler dahil olmak üzere) gibi genel değişkenler kapsam zincirinde bir parçasıdır. Örneğin, `callTrack` tanımlanan değişkeni `module` işlevi `default.js` tanımlanan herhangi bir işlev tarafından ulaşılabildiğinden `module` işlevi. Her kapsam ayrı olarak Yereller penceresinde listelenir.
+## <a name="examine-scope-chain-data"></a><a name="BKMK_Examine_scope_chain_data"></a> Kapsam zinciri verilerini İnceleme
+ Bir işlevin *kapsam zinciri* , etkin olan ve işlev tarafından erişilebilen tüm değişkenleri içerir. Genel değişkenler, şu anda yürütülmekte olan işlevi tanımlayan işlevde tanımlanmış nesneler (işlevler dahil) gibi, kapsam zincirinin bir parçasıdır. Örneğin, `callTrack` işlevinde tanımlanan değişkene, `module` `default.js` işlevinde tanımlı herhangi bir işlev tarafından ulaşılabilir `module` . Her kapsam Yereller penceresinde ayrı olarak listelenir.
 
-- Yürütülmekte olan işlevin değişkenleri penceresinin en üstünde yer alır.
+- Şu anda yürütülmekte olan işlevin değişkenleri pencerenin üst kısmında listelenir.
 
-- Kapsam zincirindeki her işlev kapsamı değişkenleri altında listelenen bir **[kapsam]** düğümü için işlev. Kapsam işlevleri zincirindeki zincir en dıştaki işlev için geçerli işlevini tanımlayan işlevden sıralarına göre listelenir.
+- Kapsam zincirindeki her bir işlev kapsamının değişkenleri, işlev için bir **[Scope]** düğümünün altında listelenir. Kapsam işlevleri, geçerli işlevi, zincirinin en dıştaki işlevine tanımlayan işlevden zincirde sırasıyla sıralamayla listelenir.
 
-- **[Genel]** düğümü dışındaki herhangi bir işlev tanımlanan genel nesneleri listeler.
+- **[Globals]** düğümü, herhangi bir işlevin dışında tanımlanan genel nesneleri listeler.
 
-  Kapsam zincirleri kafa karıştırıcı olabilir ve en iyi örnekle gösterilmiştir. Aşağıdaki örnekte, gördüğünüz nasıl `module` işlevi oluşturur, kendi kapsamı ve diğerine nasıl oluşturabileceğinizi kapsamı düzeyi kapanım oluşturarak.
+  Kapsam zincirleri kafa karıştırıcı olabilir ve örnek olarak en iyi şekilde gösterilmiştir. Aşağıdaki örnekte, `module` işlevin kendi kapsamını nasıl oluşturduğunu ve bir kapanış oluşturarak başka bir kapsam düzeyi nasıl oluşturabileceğiniz hakkında bilgi alabilirsiniz.
 
-### <a name="BKMK_Example_4"></a> Örnek 4
+### <a name="example-4"></a><a name="BKMK_Example_4"></a> Örnek 4
 
-1. **Örnek4 işlevi modül işlevini çağırın.** Düzen `module` satırı aşağıdaki değiştirin ve işlev `var callTrack = "module function"` ile `example4()`:
+1. **Modül işlevindeki example4 işlevini çağırın.** İşlevini düzenleyin `module` ve aşağıdaki satırı `var callTrack = "module function"` ile değiştirin `example4()` :
 
-     ![Örnek4 çağrı](../debugger/media/dbg-jsnav-example4.png "DBG_JSNAV_example4")
+     ![Example4 çağır](../debugger/media/dbg-jsnav-example4.png "DBG_JSNAV_example4")
 
-2. **Kesme noktasına kadar çalıştırın.** Hata ayıklama oturumu başlatın **hata ayıklamayı Başlat** üzerinde **hata ayıklama** menü (klavye: **F5**). Hata ayıklayıcı yürütme kesme noktasında askıya alır.
+2. **Kesme noktasına çalıştırın.** **Hata Ayıkla menüsündeki hata** **ayıklamayı Başlat** seçeneğini belirleyerek hata ayıklama oturumunu başlatın (klavye: **F5**). Hata ayıklayıcı, kesme noktasında yürütmeyi askıya alır.
 
-3. **Yereller penceresini açın.** Üzerinde gerekirse **hata ayıklama** menüsünde **Windows**ve ardından **Yereller**. (Klavye: **Alt+ 4**). Pencerenin tüm değişkenleri listeler ve içindeki işlevler unutmayın `module` işlev ve de içeren bir **[genel]** düğümü.
+3. **Yereller penceresini açın.** Gerekirse, **Hata Ayıkla** menüsünde **Windows**' a gelin ve ardından **Yereller**' i seçin. (Klavye: **alt + 4**). Pencerenin, işlevindeki tüm değişkenleri ve işlevleri listelediğinden `module` ve ayrıca bir **[Globals]** düğümü içerdiğini unutmayın.
 
-4. **Genel değişkenler inceleyin.** Genişletin **[genel]** düğümü. Global değişkenler ve nesneler JavaScript için Windows kitaplığı tarafından ayarlandı. Kendi değişkenleri için genel kapsam ekleyebilirsiniz.
+4. **Genel değişkenleri inceleyin.** **[Globals]** düğümünü genişletin. Genel içindeki nesneler ve değişkenler, JavaScript için Windows kitaplığı tarafından ayarlanmıştır. Kendi değişkenlerinizi genel kapsama ekleyebilirsiniz.
 
-5. **Adım örnek4 ve kendi yerel inceleyin ve kapsam değişkenleri** adımla (klavye: **F11**) `example4` işlevi. Çünkü `example4` tanımlanan `module` işlevi `module` işlevi üst kapsam haline gelir. `example4` işlevlerde birini çağırabilirsiniz `module` işlev ve değişkenlerini erişin. Genişletin **[kapsam]** düğüm Yereller penceresinde ve aynı ve değişkenler içeren Not `module` işlevi.
+5. **Example4 Içine adımla ve yerel ve kapsam değişkenlerini İnceleme** İçine adımla (klavye: **F11**) `example4` işlevi. , `example4` `module` İşlevinde tanımlandığından, `module` işlev üst kapsam haline gelir. `example4` , işlevindeki işlevlerden herhangi birini çağırabilir `module` ve değişkenlerine erişebilir. Locals penceresinde **[Scope]** düğümünü genişletin ve işlevin aynı ve değişkenlerini içerdiğini unutmayın `module` .
 
-     ![Örnek4 yönteminin kapsam](../debugger/media/dbg-jsnav-locals-example4-scope.png "DBG_JSNAV_Locals_example4_scope")
+     ![Example4 yönteminin kapsamları](../debugger/media/dbg-jsnav-locals-example4-scope.png "DBG_JSNAV_Locals_example4_scope")
 
-6. **Adım example4_a ve kendi yerel inceleyin ve kapsam değişkenleri** adımla devam `example4` ve çağrıya dönüştürür `example4_a`. Yerel değişkenler artık arasındadır Not `example4_a`ve **[kapsam]** düğüm devam değişkenleri tutacak `module` işlevi. Olsa da değişkenleri `example4` olan etkin, bunlar ulaşılamıyor tarafından `example4_a` ve kapsam zinciri artık parçasıdır.
+6. **Example4_a Içine adımla ve yerel ve kapsam değişkenlerini İnceleme** Çağrısına devam edin `example4` `example4_a` . Yerel değişkenlerin artık kimden olduğunu `example4_a` ve **[Scope]** düğümünün işlevin değişkenlerini tutmaya devam ettiğini unutmayın `module` . Değişkenleri etkin olsa bile `example4` , tarafından erişilemez `example4_a` ve artık kapsam zincirinin bir parçası değildir.
 
-7. **Adım multiplyByA ve kendi yerel inceleyin ve kapsam değişkenleri** adım kalanında `example4_a` ve satırına `var x = multiplyByA(b);`.
+7. **MultiplyByA 'Ya adımla ve yerel ve kapsam değişkenlerini inceleyin** Geri kalan `example4_a` ve satıra adım adım `var x = multiplyByA(b);` .
 
-     İşlev değişkeni `multiplyByA` ayarlanmış `multiplyClosure` olan işlevi bir *kapanış*. `multiplyClosure` tanımlar ve bir iç işlevi döndürür `multiplyXby`ve yakalar (üzerinden kapatır), parametre ve değişken. Bir kapanış döndürülen iç işlev dış işlevin veri erişimi ve bu nedenle kapsam düzeyini oluşturur.
+     İşlev değişkeni, `multiplyByA` `multiplyClosure` bir *Kapanış*olan işleve ayarlanmış. `multiplyClosure` bir iç işlevi tanımlar ve döndürür, `multiplyXby` ve kendi parametresini ve değişkenini yakalar (kapatır). Bir kapanışda döndürülen iç işlevin dış işlevin verilerine erişimi vardır ve bu nedenle kendi kapsam düzeyini oluşturur.
 
-     İçine geçtiğinizde `var x = multiplyByA(b);`, geçmeden `return a * b;` satırına `multiplyXby` iç işlevi.
+     İçine adımlayın `var x = multiplyByA(b);` , `return a * b;` iç işlevdeki satıra geçiş yapabilirsiniz `multiplyXby` .
 
-8. Yerel öğeler penceresinde, yalnızca parametresini `b` yerel bir değişken olarak listelenen `multiplyXby`, ancak yeni bir **[kapsam]** düzeyi eklendi. Bu düğümü genişletmek, parametreleri, İşlevler ve değişkenler içerdiğini görürsünüz `multiplyClosure`de dahil olmak üzere `a` değişken adı ilk satırı `multiplyXby`. Hızlı bir ikinci denetimini **[kapsam]** düğüm modülü işlevi değişkenleri ortaya çıkarır, `multiplyXby` sonraki satıra erişir.
+8. Yereller penceresinde, yalnızca parametresi ' `b` de yerel değişken olarak listelenir `multiplyXby` , ancak yeni bir **[Scope]** düzeyi eklenmiştir. Bu düğüm genişletiliyor, öğesinin `multiplyClosure` `a` ilk satırında çağrılan değişken dahil olmak üzere parametre, işlev ve değişkenlerini içerdiğini görürsünüz `multiplyXby` . İkinci **[Scope]** düğümüne hızlı bir denetim, bir sonraki satırda erişilen modül işlevi değişkenlerini ortaya koyar `multiplyXby` .
 
-9. **Hata ayıklamayı durdurun.** Üzerinde **hata ayıklama** menüsünde seçin **hata ayıklamayı Durdur** (klavye: **Shift + F5**). Bu, hata ayıklama oturumunuzu sonlandırır.
+9. **Hata ayıklamayı durdurun.** **Hata Ayıkla** menüsünde, **hata ayıklamayı Durdur** ' u seçin (klavye: **SHIFT + F5**). Bu, hata ayıklama oturumunuzu sonlandırır.
 
-## <a name="BKMK_Navigate_to_code_by_using_the_Call_Stack_window"></a> Çağrı yığını penceresini kullanarak koda gidin
- Çağrı yığınını uygulamanın geçerli iş parçacığında yürütülen işlevler hakkında bilgi içeren bir veri yapısıdır. Bir kesme noktasına ulaştığınızda, çağrı yığını penceresini yığın üzerinde etkin olan işlevlerin tümünün listesini görüntüler. Çağrı yığını penceresinde listenin en üstünde şu anda yürütülen işlevdir. İş parçacığı başlatan listesinin en altında işlevdir. İşlevleri arasındaki geçerli işlevin başlatma işlevi çağrısı yolunu gösterir.
+## <a name="navigate-to-code-by-using-the-call-stack-window"></a><a name="BKMK_Navigate_to_code_by_using_the_Call_Stack_window"></a> Çağrı yığını penceresini kullanarak koda gitme
+ Çağrı yığını, uygulamanın geçerli iş parçacığında yürütülen işlevlerle ilgili bilgileri içeren bir veri yapısıdır. Bir kesme noktasına ulaştığınızda, çağrı yığını penceresi yığında etkin olan tüm işlevlerin bir listesini görüntüler. Şu anda yürütülmekte olan işlev çağrı yığını pencere listesinin en üstünde bulunur. İş parçacığını Başlatan işlev listenin en altında bulunur. Between içindeki işlevler, başlatma işlevinden gelen çağrı yolunu geçerli işleve gösterir.
 
- Şu anda yürütülen işleve çağrı yol göstermeye ek olarak, çağrı yığını penceresinde Kod düzenleyicisinde kod gitmek için kullanılabilir. Bu işlevselliği birden fazla dosyalarıyla çalışıyorsanız ve belirli bir işleve hızlıca taşımak istediğinizde yararlı olabilir.
+ Şu anda yürütülmekte olan işlevin çağrı yolunu göstermeye ek olarak, çağrı yığını penceresi kod düzenleyicisinde koda gitmek için kullanılabilir. Bu işlevsellik, birden çok dosya ile çalışırken ve belirli bir işleve hızlıca gitmek istediğinizde değerli olabilir.
 
-### <a name="BKMK_Example_5"></a> Örnek 5
- Bu örnekte, beş kullanıcı tarafından tanımlanan işlevler içeren bir çağrı yola adım.
+### <a name="example-5"></a><a name="BKMK_Example_5"></a> Örnek 5
+ Bu örnekte, Kullanıcı tanımlı beş işlevi içeren bir çağrı yolu içine adımlayın.
 
-1. **Örneği5 işlev modülü işlev çağrısında.** Düzen `module` satırı aşağıdaki değiştirin ve işlev `var callTrack = "module function";` satırı ile `example5();`.
+1. **Modül işlevindeki example5 işlevini çağırın.** İşlevi düzenleyin `module` ve satır ile takip eden çizgiyi değiştirin `var callTrack = "module function";` `example5();` .
 
-     ![Örneği5 çağrı](../debugger/media/dbg-jsnav-example5.png "DBG_JSNAV_example5")
+     ![Example5 çağır](../debugger/media/dbg-jsnav-example5.png "DBG_JSNAV_example5")
 
-2. **Kesme noktasına kadar çalıştırın.** Hata ayıklama oturumu başlatın **hata ayıklamayı Başlat** üzerinde **hata ayıklama** menü (klavye: **F5**). Hata ayıklayıcı modül işlevdeki bir kesme noktasında yürütmeyi askıya alır.
+2. **Kesme noktasına çalıştırın.** **Hata Ayıkla menüsündeki hata** **ayıklamayı Başlat** seçeneğini belirleyerek hata ayıklama oturumunu başlatın (klavye: **F5**). Hata ayıklayıcı, modül işlevindeki kesme noktasında yürütmeyi askıya alır.
 
-3. **Çağrı yığını penceresini açın.** Üzerinde **hata ayıklama** menüsünde seçin **Windows**ve ardından **çağrı yığını** (klavye: Alt+ 7). Çağrı yığını penceresinde iki işlev gösterdiğine dikkat edin:
+3. **Çağrı yığını penceresini açın.** **Hata Ayıkla** menüsünde **Windows**' u ve ardından **çağrı yığını** ' nı (klavye: alt + 7) seçin. Çağrı yığını penceresinde iki işlev gösterildiğine unutmayın:
 
-    - **Genel kod** giriş noktası `module` çağrı yığınını alt kısmındaki işlevi.
+    - **Genel kod** , `module` çağrı yığınının alt kısmındaki işlevin giriş noktasıdır.
 
-    - **Anonim işlev** satırda gösterir `module` yürütmesi askıya alındı burada işlevi. Çağrı yığınının başı budur.
+    - **Anonim işlev** , `module` işlevin yürütmenin askıya alındığı satırı gösterir. Bu, çağrı yığınının en üstü.
 
-4. **İşlevlere example5_d işlevi ulaşmak için adım adım.** Seçin **içine adımla** üzerinde **hata ayıklama** menü (klavye: **F11**) example5_d işlev giriş noktası ulaşana kadar arama yolunda çağrılarını yürütmek için. Bir işlev bir işlevi çağırır, çağıran işlevin satır numarası kaydedilir ve çağrılan işlev, yığın üstüne yerleştirilen her zaman unutmayın. Çağıran işlevin satır numarası, çağıran işlevin yürütmesi askıya aldı noktasıdır. Sarı bir ok, o anda yürütülen işleve işaret eder.
+4. **Example5_d işlevine ulaşmak için işlevlere adımlayın.** Example5_d işlevin giriş noktasına ulaşana kadar çağrı yolundaki çağrıları yürütmek için **hata ayıklama** menüsündeki (klavye: **F11**) **içine adımla** öğesini seçin. Bir işlev bir işlevi çağırdığı her seferinde, çağıran işlevin satır numarası kaydedilir ve çağrılan işlev yığının en üstüne yerleştirilir. Çağıran işlevin satır numarası, çağırma işlevinin yürütmeyi askıya aldığı noktasıdır. Sarı bir ok Şu anda yürütülmekte olan işleve işaret eder.
 
      ![Çağrı yığını penceresi](../debugger/media/dbg-jsnav-callstack-windows.png "DBG_JSNAV_CallStack_windows")
 
-5. **Bir kesme noktası ayarlayın ve example5_a koduna gitmek için çağrı yığını penceresini kullanın.** Çağrı yığını penceresinde `example5_a` liste öğesi ve ardından **kaynağa Git** kısayol menüsünde. Kod Düzenleyicisi, imleç işlevin dönüş satırında ayarlar. Bu satıra bir kesme noktası ayarlayın. Geçerli yürütme satırını değiştirilmez unutmayın. Yalnızca Düzenleyici imleci taşınmıştır.
+5. **Example5_a koduna gitmek ve bir kesme noktası ayarlamak için çağrı yığını penceresini kullanın.** Çağrı yığını penceresinde, `example5_a` liste öğesini seçin ve ardından kısayol menüsünde **Kaynağa Git** ' i seçin. Kod Düzenleyicisi, imlecini işlevin dönüş satırında ayarlar. Bu satırda bir kesme noktası ayarlayın. Geçerli yürütme satırının değiştirilmediğini unutmayın. Yalnızca Düzenleyici imleci taşınır.
 
-6. **İşlevlere adım ve kesme noktasına kadar çalıştırın.** İçine Adımlama devam `example5_d`. İşlevden döndüğünüzde, çağrı yığını alınır unutmayın. Tuşuna **F5** programın yürütülmesi devam etmek için. Önceki adımda oluşturulan kesme noktasındaki durdur.
+6. **İşlevlere adımlayın ve sonra kesme noktasına çalıştırın.** Adımla devam edin `example5_d` . İşlevinden geri döndüğünüzde, çağrı yığınının dışına alındığını unutmayın. Program yürütmeye devam etmek için **F5** tuşuna basın. Önceki adımda oluşturulan kesme noktasında durursunuz.
 
-7. **Hata ayıklamayı durdurun.** Üzerinde **hata ayıklama** menüsünde seçin **hata ayıklamayı Durdur** (klavye: **Shift + F5**). Bu, hata ayıklama oturumunuzu sonlandırır.
+7. **Hata ayıklamayı durdurun.** **Hata Ayıkla** menüsünde, **hata ayıklamayı Durdur** ' u seçin (klavye: **SHIFT + F5**). Bu, hata ayıklama oturumunuzu sonlandırır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Bir (JavaScript) hata ayıklama oturumunu başlatmada](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md) [hızlı başlangıç: Gezinti (JavaScript) hata ayıklayıcı](../debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md) [hızlı başlangıç: Hata ayıklama HTML ve CSS](../debugger/quickstart-debug-html-and-css.md) [tetikleyici askıya alma, sürdürme ve arka plan olaylarını Windows Store)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md) [uygulamaları Visual Studio'da hata ayıklama](../debugger/debug-store-apps-in-visual-studio.md)
+ [Bir hata ayıklama oturumu başlatın (JavaScript)](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md) [hızlı başlangıç: hata ayıklayıcı Gezintisi (JavaScript)](../debugger/control-execution-of-a-store-app-in-a-visual-studio-debug-session-for-windows-store-apps-javascript.md) [hızlı başlangıç: hata ayıklama HTML ve CSS](../debugger/quickstart-debug-html-and-css.md) [tetikleyici Windows Mağazası için geri alma, geri alma ve arka plan olayları)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md) [Visual Studio 'da hata](../debugger/debug-store-apps-in-visual-studio.md)

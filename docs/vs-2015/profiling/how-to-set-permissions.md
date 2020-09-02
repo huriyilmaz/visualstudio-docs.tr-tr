@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İzinleri ayarlama | Microsoft Docs'
+title: 'Nasıl yapılır: Izinleri ayarlama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,77 +16,77 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 03991f3d5900377ceca5464bf41cfb90fcae650e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63440588"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64838047"
 ---
-# <a name="how-to-set-permissions"></a>Nasıl yapılır: İzinleri ayarlama
+# <a name="how-to-set-permissions"></a>Nasıl Yapılır: İzinleri Ayarlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konu nasıl bir bilgisayarın yönetici bir kullanıcı veya bu bilgisayar üzerinde yönetici izinlerine sahip olmayan bir grup için profil oluşturma için gereken güvenlik izinleri veren açıklar.  
+Bu konu, bir bilgisayarın yöneticisinin, bu bilgisayarda yönetici izinlerine sahip olmayan bir kullanıcı veya gruba profil oluşturma için gerekli güvenlik izinlerini nasıl verdiğini açıklar.  
   
- Temel güvenlik ilkesine ihtiyaç duydukları izinleri en fazla uygulamaların çalışması gerektiğini belirtir. Bu ilke, kullanıcılar için de geçerlidir. Bunlar Yöneticiler grubu yerine Users grubunun üyesi olarak oturum açtığınızda kullanıcıların tam olarak etkili olması, bunlar yönetici izinleri verilmemelidir. "Kullanıcı izinlerine sahip bir kullanıcı hesabı oluşturmak için" İlk yordam, kullanıcılar grubunun bir üyesi için bir kullanıcı hesabı oluşturma işlemini açıklar.  
+ Temel güvenlik prensibi, uygulamaların ihtiyaç duydukları izinlerle daha fazla olmadan çalışması gerektiğini belirtir. Bu ilke, kullanıcılar için de geçerlidir. Kullanıcılar, Yöneticiler grubu yerine kullanıcılar grubunun üyeleri olarak oturum açtıklarında tamamen etkili olabilecekleri takdirde, yönetici izinleri verilmemelidir. İlk yordam olan "Kullanıcı izinleri olan bir kullanıcı hesabı oluşturmak Için", kullanıcılar grubunun bir üyesi için bir kullanıcı hesabının nasıl oluşturulacağını açıklar.  
   
  **Gereksinimler**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
-  Users grubunun üyeleri, diskteki diğer takım üyeleri ile paylaşılan dosyaları ve klasörleri erişimi gerekir. "Paylaşılan proje dosyalarına erişim vermek için" ikinci yordam o erişim açıklar.  
+  Kullanıcılar grubunun üyeleri, ekibin diğer üyeleriyle paylaşılan disk üzerindeki klasörlere ve dosyalara erişmesi gerekir. "Paylaşılan proje dosyalarına erişim izni vermek Için" ikinci yordam, bu erişimin nasıl verildiğini açıklar.  
   
-  Bir yöneticinin bunları profil oluşturma araçları için yazılım sürücü erişim verirse Users grubunun üyeleri profil oluşturma araçları çalıştırabilirsiniz. "Profil oluşturma sürücüsü, erişim vermek için" son yordamı Bu sürücü erişim açıklar.  
+  Yönetici, profil oluşturma araçlarının yazılım sürücüsüne erişim izni veriyorsa, kullanıcılar grubunun üyeleri profil oluşturma araçlarını çalıştırabilir. Son yordam olan "profil oluşturma sürücüsüne erişim izni vermek Için", bu sürücüye erişim verme işlemini açıklar.  
   
 > [!NOTE]
-> Bu yordamlardaki adımları için yönetici izinlerine ihtiyacınız var.  
+> Bu yordamlardaki adımları izlemek için yönetici izinlerine sahip olmanız gerekir.  
   
-### <a name="to-create-a-user-account-that-has-user-permissions"></a>Kullanıcı izinleri olan bir kullanıcı hesabı oluşturmak için  
+### <a name="to-create-a-user-account-that-has-user-permissions"></a>Kullanıcı izinlerine sahip bir kullanıcı hesabı oluşturmak için  
   
-1. Sağ **Bilgisayarım** ve ardından **Yönet**.  
+1. Bilgisayarım ' a sağ **tıklayın ve ardından** **Yönet**' e tıklayın.  
   
      **Bilgisayar Yönetimi** penceresi açılır.  
   
-2. Genişletin **yerel kullanıcılar ve gruplar**.  
+2. **Yerel kullanıcılar ve gruplar '** ı genişletin.  
   
-3. Sağ **kullanıcılar** klasörünü ve ardından **yeni kullanıcı**.  
+3. **Kullanıcılar** klasörüne sağ tıklayın ve ardından **Yeni Kullanıcı**' ya tıklayın.  
   
-     **Yeni kullanıcı** iletişim kutusu görüntülenir.  
+     **Yeni Kullanıcı** iletişim kutusu görüntülenir.  
   
-4. Bu iletişim kutusunda, oluşturduğunuz kullanıcı hesabı bilgilerle alanları doldurun. Bir parola belirtin. İsteğe bağlı olarak, sonraki oturum açışında parolasını kullanıcı değişikliği gerektiren bir onay kutusunu seçin.  
+4. Bu iletişim kutusundaki alanları oluşturmakta olduğunuz Kullanıcı hesabının bilgileriyle doldurun. Bir parola belirtin. İsteğe bağlı olarak, kullanıcının bir sonraki oturum açışında parolayı değiştirmesini gerektiren onay kutusunu seçin.  
   
-5. Tıklayın **Oluştur** ve ardından **Kapat**.  
+5. **Oluştur** ' a tıklayın ve ardından **Kapat**' a tıklayın.  
   
-     Yeni kullanıcı, bir Grup yönetici izinleri olmayan kullanıcılar kullanıcılar grubunda görünür.  
+     Yeni Kullanıcı, yönetici izinlerine sahip olmayan bir Kullanıcı grubu olan kullanıcılar grubunda görüntülenir.  
   
-### <a name="to-grant-access-to-shared-project-files"></a>Paylaşılan proje dosyalarına erişim vermek için  
+### <a name="to-grant-access-to-shared-project-files"></a>Paylaşılan proje dosyalarına erişim izni vermek için  
   
-1. Windows Explorer (veya dosya Gezgini) içinde bu kullanıcı tarafından kullanılan ve proje ekibi tarafından paylaşılan proje dosyaları için klasör ağacının kökü bulun.  
+1. Windows Gezgini 'nde (veya dosya Gezgini), bu kullanıcı tarafından kullanılan ve proje ekibi tarafından paylaşılan proje dosyaları için klasör ağacının kökünü bulun.  
   
-     Bu klasör yolu aşağıdaki gibi olabilir:  
+     Bu klasörün yolu aşağıdakine benzeyebilir:  
   
     ```  
     D:\ourProject  
     ```  
   
-2. Klasörü sağ tıklatın ve ardından **özellikleri**.  
+2. Klasöre sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
-     **\<Klasör adı > Özellikleri** iletişim kutusu görüntülenir.  
+     ** \<folder name> Özellikler** iletişim kutusu görüntülenir.  
   
-3. Tıklayın **güvenlik** sekmesi.  
+3. **Güvenlik** sekmesine tıklayın.  
   
-4. Kullanıcı hesabı adına **grup veya kullanıcı adları** kutusu.  
+4. **Grup veya Kullanıcı adları** kutusunda Kullanıcı hesabının adına tıklayın.  
   
-5. İçinde **izinlerini \<kullanıcı adı >** kutusunda, onay kutusunu seçin **tam denetim**.  
+5. ** \<user name> İzinler** kutusunda, **tam denetim**onay kutusunu seçin.  
   
-6. **Tamam**'ı tıklatın.  
+6. **Tamam**’a tıklayın.  
   
-     5. adımda seçtiğiniz klasör ile başlayan paylaşılan klasör ağacının kullanıcıya bu izinleri verir.  
+     Bu, kullanıcıya, 5. adımda seçilen klasörle başlayan paylaşılan klasör ağacı için izin verir.  
   
-### <a name="to-grant-access-to-the-profiling-driver"></a>Profil oluşturma sürücü erişim vermek için  
+### <a name="to-grant-access-to-the-profiling-driver"></a>Profil oluşturma sürücüsüne erişim izni vermek için  
   
 1. Yönetici olarak bir komut istemi açın.  
   
-2. Dizine değiştirin:  
+2. Dizini şu şekilde değiştirin:  
   
    ```  
    <drive>:\Program Files\Microsoft Visual Studio 10\Team Tools\Performance Tools  
@@ -98,35 +98,35 @@ Bu konu nasıl bir bilgisayarın yönetici bir kullanıcı veya bu bilgisayar ü
    vsperfcmd /admin:driver,start /admin:service,start  
    ```  
   
-    Bu komut, yükler ve profil oluşturma araçlarından sürücüsünü başlatır.  
+    Bu komut, profil oluşturma araçları için sürücüyü yükleyip başlatır.  
   
-    Bu komut, yönetici olmayan kullanıcılar, kendi kullanıcı işlem alanında kullanılabilir olan profil oluşturma özelliklerini kullanabilir, böylece profil oluşturma sürücü ve hizmeti başlatır. Yalnızca bir yönetici komut çalıştırabilirsiniz; ve yönetici olmayan kullanıcılar için başarısız olur.  
+    Bu komut, yönetici olmayan kullanıcıların kullanıcı işlem alanında kullanılabilen profil oluşturma özelliklerini kullanabilmesi için profil oluşturma sürücüsünü ve hizmetini başlatır. Yalnızca bir yönetici komutu çalıştırabilir; Yönetici olmayan kullanıcılar için başarısız olur.  
   
-    Bu adım etkilerini sonra geri bildirimi bilgisayarı yeniden başlatır, bu yordamda ayrıca son adım gerçekleştirmediğiniz sürece.  
+    Bu yordamın son adımını da gerçekleştirmediğiniz müddetçe, bu adımın etkilerinin bilgisayar yeniden başlatıldıktan sonra geri alındığına dikkat edin.  
   
-4. Sürücü işlevleri bir kullanıcı veya bilgisayarda yönetici erişimi yok grubu tarafından profil oluşturma için erişime izin vermek için komutu çalıştırın:  
+4. Bilgisayara yönetici erişimi olmayan bir kullanıcı veya grup tarafından profil oluşturma sürücüsü işlevine erişime izin vermek için komutunu çalıştırın:  
   
    ```  
    vsperfcmd /admin:security,allow,<right[,right],<user name|group name>  
    ```  
   
-    Bu komut verir \<kullanıcı adı > veya \<grubu adı > Hesap profil oluşturma araçları için erişim. \<Doğru > seçeneğini belirler profil oluşturma işlevselliğini kullanıcı erişebilir. \<Doğru > seçeneği, bir veya daha fazla aşağıdaki değerlerden biri olabilir:  
+    Bu komut, \<user name> veya \<group name> hesabına profil oluşturma araçlarına erişim izni verir. \<right>Seçeneği, kullanıcının erişebileceği profil oluşturma işlevini belirler. \<right>Bu seçenek, aşağıdaki değerlerden biri veya daha fazlası olabilir:  
   
-   - FullAccess - hizmetlerinden, performans verileri toplama dahil olmak üzere tüm profil oluşturma yöntemleri erişim örnekleme sağlar ve profil oluşturma oturumunu arası.  
+   - FullAccess-hizmetler, örnekleme ve çapraz oturum profillendirme dahil olmak üzere tüm profil oluşturma yöntemlerine erişim sağlar.  
   
-   - SampleProfiling - örnek profil oluşturma yöntemlerini erişim sağlar  
+   - Sampleprofil oluşturma-örnek profil oluşturma yöntemlerine erişime izin verir  
   
-   - CrossSession - çapraz oturum profil oluşturma hizmetleri için gerekli olan profil oluşturma erişim sağlar.  
+   - CrossSession-profil oluşturma hizmetleri için gerekli olan çapraz oturum profili oluşturma erişimine izin verir.  
   
-5. (İsteğe bağlı) Bilgisayar yeniden başlatıldıktan sonra önceki adımlardan herhangi birini sonuçlarını korumak için aşağıdaki komutu çalıştırın:  
+5. Seçim Bilgisayar yeniden başlatıldıktan sonra önceki adımlardan herhangi birinin sonuçlarını korumak için aşağıdaki komutu çalıştırın:  
   
    ```  
    vsperfcmd /admin:driver,autostart,on  
    ```  
   
-   Belirtilen kullanıcıların oturum açma sonra artık yönetici izinleri olmayan profil oluşturma araçlarını kullanmanız mümkün olacaktır.  
+   Belirtilen kullanıcılar, oturum açtıktan sonra, artık profil oluşturma araçlarını yönetici izinleri olmadan kullanabiliyor.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Profil Oluşturma ve Windows Vista Güvenliği](../profiling/profiling-and-windows-vista-security.md)
+ [Profil oluşturma ve Windows Vista güvenliği](../profiling/profiling-and-windows-vista-security.md)

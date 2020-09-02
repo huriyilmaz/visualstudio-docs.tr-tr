@@ -27,25 +27,25 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 58500e59a624dac55824033b8b9667754a9040c5
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657370"
 ---
 # <a name="directly-access-the-database-with-a-tableadapter"></a>Bir TableAdapter ile veritabanına doğrudan erişme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0, `UpdateCommand` ve `DeleteCommand` ek olarak, TableAdapters doğrudan veritabanına karşı çalıştırılabilen yöntemlerle oluşturulur. Bu Yöntemler (`TableAdapter.Insert`, `TableAdapter.Update` ve `TableAdapter.Delete`) doğrudan veritabanındaki verileri işlemek için çağrılabilir.
+, Ve ' a ek olarak, `InsertCommand` `UpdateCommand` `DeleteCommand` TableAdapters doğrudan veritabanına karşı çalıştırılabilen yöntemlerle oluşturulur. Bu Yöntemler ( `TableAdapter.Insert` , `TableAdapter.Update` ve `TableAdapter.Delete` ), verileri doğrudan veritabanında işlemek için çağrılabilir.
 
- Bu doğrudan yöntemleri oluşturmak istemiyorsanız, TableAdapter 'ın `GenerateDbDirectMethods` özelliğini **Özellikler** penceresinde `false` olarak ayarlayın. TableAdapter 'ın ana sorgusuna ek olarak bir TableAdapter 'a herhangi bir sorgu eklenirse, bu DbDirect yöntemlerini üretmeyin tek başına sorgulardır.
+ Bu doğrudan yöntemleri oluşturmak istemiyorsanız, TableAdapter `GenerateDbDirectMethods` özelliğini `false` **Özellikler** penceresinde olarak ayarlayın. TableAdapter 'ın ana sorgusuna ek olarak bir TableAdapter 'a herhangi bir sorgu eklenirse, bu DbDirect yöntemlerini üretmeyin tek başına sorgulardır.
 
 ## <a name="sendcommandsdirectly-to-a-database"></a>Sendcommandsdoğrudan bir veritabanına
  Gerçekleştirmeyi denediğiniz görevi gerçekleştiren TableAdapter DbDirect yöntemini çağırın.
 
 #### <a name="to-insert-new-records-directly-into-a-database"></a>Yeni kayıtları doğrudan bir veritabanına eklemek için
 
-- Her bir sütunun değerlerini parametre olarak geçirerek TableAdapter 'ın `Insert` yöntemini çağırın. Aşağıdaki yordam bir örnek olarak Northwind database'teki `Region` tablosunu kullanır.
+- TableAdapter `Insert` metodunu, her bir sütunun değerlerini parametre olarak geçirerek çağırın. Aşağıdaki yordam `Region` bir örnek olarak Northwind databasetable içindeki tabloyu kullanır.
 
     > [!NOTE]
     > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini oluşturun.
@@ -55,7 +55,7 @@ ms.locfileid: "72657370"
 
 #### <a name="to-update-records-directly-in-a-database"></a>Kayıtları doğrudan bir veritabanında güncelleştirmek için
 
-- TableAdapter 'ın `Update` yöntemini çağırın, her sütun için yeni ve orijinal değerlerini parametre olarak geçirerek.
+- `Update`Her sütun için yeni ve orijinal değerlerini parametre olarak geçirerek TableAdapter metodunu çağırın.
 
     > [!NOTE]
     > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini oluşturun.
@@ -65,7 +65,7 @@ ms.locfileid: "72657370"
 
 #### <a name="to-delete-records-directly-from-a-database"></a>Kayıtları doğrudan veritabanından silmek için
 
-- Her bir sütunun değerlerini `Delete` yönteminin parametreleri olarak geçirerek TableAdapter 'ın `Delete` yöntemini çağırın. Aşağıdaki yordam bir örnek olarak Northwind database'teki `Region` tablosunu kullanır.
+- `Delete`Her bir sütunun değerlerini metodun parametreleri olarak geçirerek TableAdapter metodunu çağırın `Delete` . Aşağıdaki yordam `Region` bir örnek olarak Northwind databasetable içindeki tabloyu kullanır.
 
     > [!NOTE]
     > Kullanılabilir bir örneğiniz yoksa, kullanmak istediğiniz TableAdapter örneğini oluşturun.

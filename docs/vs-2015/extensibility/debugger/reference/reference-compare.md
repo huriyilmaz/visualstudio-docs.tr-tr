@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d617d428c9551bc821e1c72fa517497769e6f047
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204916"
 ---
-# <a name="referencecompare"></a>REFERENCE_COMPARE
+# <a name="reference_compare"></a>REFERENCE_COMPARE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 Başvurular için karşılaştırma türünü belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_REFERENCE_COMPARE {   
@@ -45,24 +45,24 @@ public enum enum_REFERENCE_COMPARE { 
   
 ## <a name="members"></a>Üyeler  
  REF_COMPARE_EQUAL  
- Bir eşittir karşılaştırma belirtir.  
+ Eşit karşılaştırmayı belirtir.  
   
  REF_COMPARE_LESS_THAN  
- Daha az belirtir-karşılaştırması.  
+ Daha küçüktür bir karşılaştırmayı belirtir.  
   
  REF_COMPARE_GREATER_THAN  
- Büyüktür belirtir-karşılaştırması.  
+ Daha büyük bir karşılaştırmayı belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bağımsız değişken olarak geçirilen [karşılaştırma](../../../extensibility/debugger/reference/idebugreference2-compare.md) yöntemi.  
+ [Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md) metoduna bir bağımsız değişken olarak geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Compare](../../../extensibility/debugger/reference/idebugreference2-compare.md)
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Karşılaştır](../../../extensibility/debugger/reference/idebugreference2-compare.md)

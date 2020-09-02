@@ -17,23 +17,23 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 296aec3b2b5cd307400b230375a7171f158fee60
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75847690"
 ---
 # <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>Nasıl yapılır: ClickOnce Uygulamaları için Sunucu Bilgisayara Güvenilir Yayımcı Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalarınızın kullanıcıya sormadan daha yüksek bir güven düzeyiyle çalışması için yapılandırabilirsiniz. Aşağıdaki yordamlarda, bir istemci bilgisayarındaki Güvenilen Yayımcılar deposuna bir yayımcının sertifikasını eklemek için CertMgr. exe komut satırı aracının nasıl kullanılacağı gösterilmektedir.  
+Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalarınızın kullanıcıya sormadan daha yüksek bir güven düzeyiyle çalışmasını sağlayacak şekilde yapılandırabilirsiniz. Aşağıdaki yordamlarda, bir yayımcının sertifikasını bir istemci bilgisayarındaki Güvenilen Yayımcılar deposuna eklemek için CertMgr.exe komut satırı aracının nasıl kullanılacağı gösterilmektedir.  
   
  Kullandığınız komutlar, sertifikanızı veren sertifika yetkilisinin (CA) bir istemcinin güvenilen kökünün parçası olmasına bağlı olarak biraz farklılık gösterir. Bir Windows istemci bilgisayarı bir etki alanının parçasıysa, bir listede, Güvenilen kökler olarak kabul edilen CA 'Lar bulunur. Bu liste genellikle sistem yöneticisi tarafından yapılandırılır. Sertifikanız bu güvenilir köklerin biri tarafından veya bu güvenilen köklerin birine zincirde olan bir CA tarafından verildiyse, sertifikayı istemcinin güvenilen kök deposuna ekleyebilirsiniz. Diğer taraftan, sertifikanız bu güvenilir köklerin biri tarafından verilmiyorsa, sertifikayı hem istemcinin güvenilen kök deposuna hem de güvenilen yayımcı deposuna eklemeniz gerekir.  
   
 > [!NOTE]
-> Bu şekilde, yükseltilmiş izinler gerektiren bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulaması dağıtmayı planladığınız her istemci bilgisayara sertifika eklemeniz gerekir. Sertifikaları el ile veya istemcilerinize dağıttığınız bir uygulama aracılığıyla eklersiniz. Bu bilgisayarları yalnızca bir kez yapılandırmanız gerekir, bundan sonra aynı sertifikayla imzalanmış istediğiniz sayıda [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamayı dağıtabilirsiniz.  
+> Bu şekilde, yükseltilmiş izinler gerektiren bir uygulamayı dağıtmayı planladığınız her istemci bilgisayara sertifika eklemeniz gerekir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Sertifikaları el ile veya istemcilerinize dağıttığınız bir uygulama aracılığıyla eklersiniz. Bu bilgisayarları yalnızca bir kez yapılandırmanız gerekir, bu, sonrasında aynı sertifikayla imzalanmış herhangi bir sayıda uygulamayı dağıtabilmeniz gerekir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] .  
   
- Ayrıca, <xref:System.Security.Cryptography.X509Certificates.X509Store> sınıfını kullanarak programlı bir sertifikayı bir depoya ekleyebilirsiniz.  
+ Ayrıca, sınıfını kullanarak bir mağazaya bir sertifikayı programlı olarak ekleyebilirsiniz <xref:System.Security.Cryptography.X509Certificates.X509Store> .  
   
  Güvenilen uygulama dağıtımına genel bakış için bkz. [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md).  
   
@@ -45,7 +45,7 @@ Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndpt
   
 3. İstemci bilgisayarlardaki komut isteminden aşağıdaki komutu çalıştırın:  
   
-     **certmgr. exe-sertifika ekleme. cer-c-s-r localMachine TrustedPublisher**  
+     **certmgr.exe-Certificate. cer-c-s-r localMachine TrustedPublisher ekleme**  
   
 ### <a name="to-add-a-certificate-to-the-trusted-publishers-store-under-a-different-root"></a>Farklı bir kök altında Güvenilen Yayımcılar deposuna bir sertifika eklemek için  
   
@@ -55,19 +55,19 @@ Güvenilen uygulama dağıtımı ile, istemci bilgisayarlarını, [!INCLUDE[ndpt
   
 3. İstemci bilgisayarlardaki komut isteminden aşağıdaki komutu çalıştırın:  
   
-     **certmgr. exe-iyi. cer-c-s-r localMachine kökünü ekleyin**  
+     **certmgr.exe-iyi. cer-c-s-r localMachine kökünü ekleyin**  
   
-     **certmgr. exe-iyi. cer-c-s-r localMachine TrustedPublisher ekleyin**  
+     **certmgr.exe-iyi. cer-c-s-r localMachine TrustedPublisher ekleyin**  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Izlenecek yol: ClickOnce uygulamasını El Ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   
+ [İzlenecek yol: ClickOnce uygulamasını El Ile dağıtma](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)   
  [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md)   
- [ClickOnce uygulamaları Için kod erişimi güvenliği](../deployment/code-access-security-for-clickonce-applications.md)   
+ [ClickOnce uygulamaları için kod erişimi güvenliği](../deployment/code-access-security-for-clickonce-applications.md)   
  [ClickOnce ve Authenticode](../deployment/clickonce-and-authenticode.md)   
  [Güvenilen uygulama dağıtımına genel bakış](../deployment/trusted-application-deployment-overview.md)   
  [Nasıl yapılır: ClickOnce güvenlik ayarlarını etkinleştirme](../deployment/how-to-enable-clickonce-security-settings.md)   
- [Nasıl yapılır: ClickOnce uygulaması Için güvenlik bölgesi ayarlama](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
- [Nasıl yapılır: ClickOnce uygulaması Için özel Izinleri ayarlama](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
+ [Nasıl yapılır: ClickOnce uygulaması için güvenlik bölgesi ayarlama](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)   
+ [Nasıl yapılır: ClickOnce uygulaması için özel Izinleri ayarlama](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)   
  [Nasıl yapılır: kısıtlanmış Izinlerle ClickOnce uygulamasında hata ayıklama](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
  [Nasıl yapılır: ClickOnce uygulamaları için bir Istemci bilgisayara güvenilir yayımcı ekleme](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)   
  [Nasıl yapılır: uygulama ve dağıtım bildirimlerini yeniden imzalama](../deployment/how-to-re-sign-application-and-deployment-manifests.md)   

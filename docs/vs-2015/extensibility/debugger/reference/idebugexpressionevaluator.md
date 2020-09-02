@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator | Microsoft Docs
+title: Idebugexpressiondeğerlendirici | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,57 +13,57 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ceffebf10838fe147475dcda54b385b844676de4
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426459"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64858349"
 ---
 # <a name="idebugexpressionevaluator"></a>IDebugExpressionEvaluator
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için lütfen bkz [CLR ifade Değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
  Bu arabirim, ifade değerlendiricisi temsil eder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugExpressionEvaluator : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- İfade değerlendirici bu arabirimini uygulaması gerekir.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ İfade değerlendirici bu arabirimi uygulamalıdır.  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Bu arabirim elde etmek için ifade değerlendirici aracılığıyla örneği `CoCreateInstance` değerlendirici sınıfı kimliği (CLSID) kullanarak yöntemi. Örneğe bakın.  
+ Bu arabirimi edinmek için, `CoCreateInstance` değerlendirici 'in sınıf kimliğini (CLSID) kullanarak yöntemi aracılığıyla ifade değerlendirici örneğini oluşturun. Örneğe bakın.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugExpressionEvaluator`.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugExpressionEvaluator` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)|Bir ifade dizesini ayrıştırılmış bir ifadeyi dönüştürür.|  
-|[GetMethodProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)|Yerel değişkenleri, bağımsız değişkenleri ve diğer bir yöntem özelliklerini alır.|  
-|[GetMethodLocationProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodlocationproperty.md)|Bir yöntem konum ve uzaklığı bir bellek adresine dönüştürür.|  
-|[SetLocale](../../../extensibility/debugger/reference/idebugexpressionevaluator-setlocale.md)|Yazdırılabilir sonuçları oluşturmak için kullanılacak dili belirler.|  
-|[SetRegistryRoot](../../../extensibility/debugger/reference/idebugexpressionevaluator-setregistryroot.md)|Kayıt defteri kökü ayarlar. Yan yana hata ayıklamak için kullanılır.|  
+|[Parse](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md)|Bir ifade dizesini ayrıştırılmış ifadeye dönüştürür.|  
+|[GetMethodProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)|Bir yöntemin yerel değişkenlerini, bağımsız değişkenlerini ve diğer özelliklerini alır.|  
+|[GetMethodLocationProperty](../../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodlocationproperty.md)|Bir yöntem konumunu ve sapmayı bir bellek adresine dönüştürür.|  
+|[SetLocale](../../../extensibility/debugger/reference/idebugexpressionevaluator-setlocale.md)|Yazdırılabilir sonuçlar oluşturmak için hangi dilin kullanılacağını belirler.|  
+|[SetRegistryRoot](../../../extensibility/debugger/reference/idebugexpressionevaluator-setregistryroot.md)|Kayıt defteri kökünü ayarlar. Yan yana hata ayıklama için kullanılır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tipik bir durumda, hata ayıklama altyapısı (DE) çağrı sonucunda ifade değerlendiricisi (EE) başlatır [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md). Dil ve istediği kullanılacak EE satıcı DE bildiği için DE EE'ın CLSID kayıt defterinden alır. ( [hata ayıklama için SDK Yardımcıları](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) işlevi `GetEEMetric`, bu alma ile yardımcı olur).  
+ Tipik bir durumda, hata ayıklama altyapısı (DE), bir [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)çağrısının sonucu olarak ifade DEĞERLENDIRICI (ee) oluşturur. Ayrıca, kullanmak istediği EE 'ın dilini ve satıcısını bildiği için, kayıt defterinden EE 'ın CLSID değerini alır ( [hata ayıklama işlevi Için SDK yardımcıları](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) , `GetEEMetric` Bu almaya yardımcı olur).  
   
- EE örneği sonra DE çağırır [ayrıştırma](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) ifade ayrıştırma ve depolamak için bir [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) nesne. Daha sonra bir çağrı [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) ifadeyi değerlendirir.  
+ EE örneği oluşturulduktan sonra, ifadeyi ayrıştırmak ve bir [IDebugParsedExpression](../../../extensibility/debugger/reference/idebugparsedexpression.md) nesnesinde saklamak Için [ayrıştırılacak](../../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) de çağrılır. Daha sonra, bir [EvaluateSync](../../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) çağrısı ifadeyi değerlendirir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: ee.h  
+ Üstbilgi: ee. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, kaynak kodunda bir sembol sağlayıcısı ve adresi verilen ifade değerlendiricisi örneği gösterilmektedir. Bu örnekte, bir işlev `GetEEMetric`, gelen [hata ayıklama için SDK Yardımcıları](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) kitaplığı, dbgmetric.lib.  
+ Bu örnek, bir sembol sağlayıcısı ve kaynak kodundaki bir adres için verilen ifade değerlendiricisi örneğini oluşturmayı gösterir. Bu örnek, `GetEEMetric` hata ayıklama kitaplığı, dbgmetric. lib [Için SDK yardımcılarından](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) bir işlevi kullanır.  
   
 ```cpp#  
 IDebugExpressionEvaluator GetExpressionEvaluator(IDebugSymbolProvider pSymbolProvider,  

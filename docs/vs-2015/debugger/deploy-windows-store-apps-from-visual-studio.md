@@ -1,5 +1,5 @@
 ---
-title: Windows Store uygulamaları dağıtma
+title: Windows Mağazası uygulamalarını dağıtma
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,108 +15,108 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 73b4350a2e7f277a11f4d6650d8089df0f87fe4d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68177463"
 ---
-# <a name="deploy-windows-store-apps-from-visual-studio"></a>Visual Studio'dan Windows Store uygulamaları dağıtma
+# <a name="deploy-windows-store-apps-from-visual-studio"></a>Visual Studio’dan Microsoft Store uygulamaları dağıtma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Yalnızca Windows için geçerlidir] (.. /Image/windows_only_content.png "windows_only_content")
 
- Visual Studio dağıtım işlevlerini oluşturur ve bir hedef cihazda oluşturulan Visual Studio ile Windows Store apps kaydeder. Uygulamanın tam olarak nasıl kaydedilir, hedef cihazın yerel veya uzak olup bağlıdır:
+ Visual Studio dağıtım işlevselliği, Visual Studio ile oluşturulan Windows Mağazası uygulamalarını bir hedef cihazda oluşturur ve kaydeder. Uygulamanın nasıl kaydedildiği, hedef cihazın yerel mi yoksa uzak mı olduğuna bağlıdır:
 
-- Visual Studio LocalMachine hedeflendiğinde Visual Studio, derleme klasöründen uygulamayı kaydeder.
+- Hedef, yerel Visual Studio makinesi olduğunda, Visual Studio uygulamayı Build klasöründen kaydeder.
 
-- Uzak aygıtı hedeflendiğinde Visual Studio gerekli dosyaları uzak makineye kopyalar ve o cihazdaki uygulama kaydeder.
+- Hedef uzak bir cihaz olduğunda, Visual Studio gerekli dosyaları uzak makineye kopyalar ve uygulamayı bu cihaza kaydeder.
 
-  Dağıtım, kullanarak uygulamanızı Visual Studio'dan hata ayıklaması yaparken otomatiktir **hata ayıklamayı Başlat** seçeneği (klavye: F5) veya **hata ayıklama olmadan Başlat** seçeneği (klavye: CTRL + F5). Ayrıca, uygulamanızı el ile dağıtabilirsiniz. El ile dağıtımı, aşağıdaki senaryolarda kullanışlıdır:
+  Uygulamanızı Visual Studio 'dan hata **ayıklamayı Başlat** seçeneğini (klavye: F5) veya **hata ayıklama olmadan Başlat** SEÇENEĞINI (klavye: CTRL + F5) kullanarak yaptığınızda dağıtım otomatik olarak yapılır. Uygulamanızı el ile de dağıtabilirsiniz. Aşağıdaki senaryolarda el ile dağıtım yararlı olur:
 
-- Yerel veya uzak bir makinede test geçici.
+- Yerel veya uzak bir makinede geçici test.
 
-- Hata ayıklamak istediğiniz başka bir uygulamayı başlatacak bir uygulamayı dağıtma.
+- Hata ayıklamak istediğiniz başka bir uygulamayı başlatacak bir uygulama dağıtma.
 
-- Başlatıldığında ayıklanacak bir uygulamayı başka bir uygulama veya metodu tarafından dağıtılıyor.
+- Başka bir uygulama veya yöntem tarafından başlatıldığında Ayıklanacak bir uygulama dağıtma.
 
-## <a name="BKMK_In_this_topic"></a> Bu konudaki
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> Bu konuda
  Bu konu başlığında şunları öğrenebilirsiniz:
 
- [Windows Store uygulaması dağıtma](#BKMK_How_to_deploy_a_Windows_Store_app)
+ [Windows Mağazası uygulaması dağıtma](#BKMK_How_to_deploy_a_Windows_Store_app)
 
  [Uzak cihaz belirtme](#BKMK_How_to_specify_a_remote_device)
 
  [Dağıtım seçenekleri](#BKMK_Deployment_options)
 
-## <a name="BKMK_How_to_deploy_a_Windows_Store_app"></a> Windows Store uygulaması dağıtma
- El ile uygulama dağıtma basit bir işlemdir:
+## <a name="how-to-deploy-a-windows-store-app"></a><a name="BKMK_How_to_deploy_a_Windows_Store_app"></a> Windows Mağazası uygulaması dağıtma
+ Uygulamayı el ile dağıtmak basit bir işlemdir:
 
-1. Uzak cihaza dağıtıyorsanız, uygulamanın başlangıç projesi özellik Proje sayfasının adını veya cihazın IP adresini belirtin. (Bu olan yapmak için bu konudaki aşağıya listelenen adımları.).
+1. Uzak bir cihaza dağıtıyorsanız, uygulamanın başlangıç projesinin Özellik projesi sayfasında cihazın adını veya IP adresini belirtin. (Bunu yapmak için adımlar bu konuda daha sonra listelenmiştir.).
 
-2. Yanındaki aşağı açılan listeden hata ayıklayıcı Visual Studio araç çubuğunda dağıtım hedefini seçin **hata ayıklamayı Başlat** düğmesi.
+2. Hata ayıklayıcı Visual Studio araç çubuğunda, **hata ayıklamayı Başlat** düğmesinin yanındaki açılan listeden dağıtım hedefini seçin.
 
-     ![Yerel makinede çalıştırma](../debugger/media/vsrun-f5-local.png "VSRUN_F5_Local")
+     ![Yerel makinede Çalıştır](../debugger/media/vsrun-f5-local.png "VSRUN_F5_Local")
 
-3. Üzerinde **derleme** menüsünde seçin **Dağıt**
+3. **Yapı** menüsünde **Dağıt** ' ı seçin.
 
-## <a name="BKMK_How_to_specify_a_remote_device"></a> Uzak cihaz belirtme
+## <a name="how-to-specify-a-remote-device"></a><a name="BKMK_How_to_specify_a_remote_device"></a> Uzak cihaz belirtme
  **Önkoşullar**
 
- Uzak cihaza bir uygulama dağıtmak için:
+ Bir uygulamayı uzak bir cihaza dağıtmak için:
 
-- Bir geliştirici lisansı uzak cihaz üzerinde yüklü olmalıdır.
+- Bir geliştiricinin lisansının uzak cihaza yüklenmesi gerekir.
 
-- Visual Studio uzak araçları, uzak cihazda yüklü olmalıdır ve uzaktan hata ayıklama İzleyicisi çalışıyor olması gerekir.
+- Visual Studio uzak araçları uzak cihaza yüklenmeli ve Uzaktan Hata Ayıklama İzleyicisi çalışıyor olmalıdır.
 
-     Dağıtım, uygulama dosyaları uzak cihaza göndermek için uzaktan hata ayıklayıcı ağ kanalının kullanır.
+     Dağıtım, uzak cihaza uygulama dosyalarını göndermek için uzaktan hata ayıklayıcı ağ kanalını kullanır.
 
-#### <a name="to-specify-a-remote-device"></a>Uzak cihaz belirtmek için
+#### <a name="to-specify-a-remote-device"></a>Uzak bir cihaz belirtmek için
 
-1. Başlangıç projesinin hata ayıklama özelliği sayfasında adını veya IP adresini bir uzak dağıtım hedefini belirtin.
+1. Başlangıç projesinin hata ayıklama özelliği sayfasında, uzak dağıtım hedefinin adını veya IP adresini belirtin.
 
-2. Hata ayıklama özellik sayfasını açmak için Çözüm Gezgini'nde projeyi seçin ve ardından **özellikleri** kısayol menüsünden.
+2. Hata ayıklama özelliği sayfasını açmak için Çözüm Gezgini ' de projeyi seçin ve sonra kısayol menüsünden **Özellikler** ' i seçin.
 
-3. Ardından **hata ayıklama** özellik sayfaları penceresinin düğümde.
+3. Sonra özellik sayfaları penceresinde **hata ayıklama** düğümünü seçin.
 
-4. Adını veya uzak cihazın IP adresini yazın veya CİHAZDAN seçebilirsiniz **uzaktan hata ayıklayıcı bağlantısı Seç** iletişim kutusu.
+4. Uzak cihazın adını veya IP adresini yazabilir veya cihazı **Uzaktan hata ayıklayıcı bağlantısı Seç** iletişim kutusundan seçebilirsiniz.
 
-    ![Select uzaktan hata ayıklayıcı bağlantısı iletişim kutusu](../debugger/media/vsrun-selectremotedebuggerdlg.png "VSRUN_SelectRemoteDebuggerDlg")
+    ![Uzaktan hata ayıklayıcı bağlantısı Seç iletişim kutusu](../debugger/media/vsrun-selectremotedebuggerdlg.png "VSRUN_SelectRemoteDebuggerDlg")
 
-    **Uzaktan hata ayıklayıcı bağlantısı Seç** iletişim kutusu, yerel ağ alt ağı ve bir Ethernet kablosuyla doğrudan Visual Studio makinesine bağlı herhangi bir CİHAZDAN şirket cihazları görüntüler.
+    **Uzaktan hata ayıklayıcı bağlantısı Seç** iletişim kutusu, yerel ağ alt ağındaki ve bir Ethernet kablosu tarafından doğrudan Visual Studio makinesine bağlı olan tüm cihazlardan cihazları görüntüler.
 
-   **Uzak cihazın bir JavaScript ya da Visual C++ proje sayfada belirtme**
+   **Uzak aygıtı bir JavaScript veya Visual C++ projesi sayfasında belirtme**
 
-   ![C&#43; &#43; proje uzaktan hata ayıklama özellikleri](../debugger/media/vsrun-cpp-projprop-remote.png "VSRUN_CPP_ProjProp_Remote")
+   ![Uzaktan hata ayıklama için C&#43;&#43; proje özellikleri](../debugger/media/vsrun-cpp-projprop-remote.png "VSRUN_CPP_ProjProp_Remote")
 
-5. Seçin **uzaktan hata ayıklayıcı** gelen **başlatmak için hata ayıklayıcı** listesi.
+5. **Başlatma** listesinden **Uzaktan hata ayıklayıcı** ' yı seçin.
 
-6. Uzak cihaz ağ adını **makine adı** kutusu. Veya uzaktan hata ayıklayıcı bağlantısı Seç iletişim kutusundan cihazı seçin için kutusunda aşağı oku seçin.
+6. **Makine adı** kutusuna uzak cihazın ağ adını girin. İsterseniz, uzaktan hata ayıklayıcı bağlantısı Seç iletişim kutusundan cihazı seçmek için kutudaki aşağı oku seçebilirsiniz.
 
-   **Uzak cihazın bir Visual C# ve Visual Basic proje sayfada belirtme**
+   **Visual C# ve Visual Basic proje sayfasında uzak aygıtı belirtme**
 
-   ![Uzaktan hata ayıklama için proje özellikleri yönetilen](../debugger/media/vsrun-managed-projprop-remote.png "VSRUN_Managed_ProjProp_Remote")
+   ![Uzaktan hata ayıklama için yönetilen proje özellikleri](../debugger/media/vsrun-managed-projprop-remote.png "VSRUN_Managed_ProjProp_Remote")
 
-7. Seçin **uzak makine** gelen **hedef cihaz** listesi.
+7. **Hedef cihaz** listesinden **uzak makine** ' yi seçin.
 
-8. Uzak cihaz ağ adını **uzak makine** kutusuna veya tıklayın **bulmak** cihazı seçin **uzaktan hata ayıklayıcı bağlantısı Seç** iletişim kutusu.
+8. Uzak cihazın ağ adını **uzak makine** kutusuna girin veya **bul** ' a tıklayarak **Uzaktan hata ayıklayıcı bağlantısı Seç** iletişim kutusundan cihazı seçin.
 
-## <a name="BKMK_Deployment_options"></a> Dağıtım seçenekleri
- Aşağıdaki dağıtım seçeneklerinden başlangıç projesinin hata ayıklama özellik sayfasından ayarlayabilirsiniz.
+## <a name="deployment-options"></a><a name="BKMK_Deployment_options"></a> Dağıtım seçenekleri
+ Başlangıç projesinin hata ayıklama özelliği sayfasında aşağıdaki dağıtım seçeneklerini belirleyebilirsiniz.
 
- **Ağ geri döngüsüne izin ver** güvenlik nedenleriyle bir [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] yüklü cihaz ağ çağrı yapmak için standart bir biçimde yüklü uygulama verilmez. Varsayılan olarak, Visual Studio dağıtımı bu kuraldan dağıtılmış uygulama için bir istisna oluşturur. Bu muafiyet iletişim yordamları tek bir makinede test etmenizi sağlar. Uygulamanıza göndermeden önce [!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)], uygulamanızı muafiyet olmadan test etmeniz gerekir.
+ **Ağ geri döngüsüne Izin ver** Güvenlik nedenleriyle, [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] Standart biçimde yüklenen bir uygulamanın, üzerinde yüklü olduğu cihaza ağ çağrıları yapmasına izin verilmez. Varsayılan olarak, Visual Studio dağıtımı, dağıtılan uygulama için bu kuraldan bir istisna oluşturur. Bu istisna, iletişim yordamlarını tek bir makinede test etmenizi sağlar. Uygulamanızı ' a göndermeden önce [!INCLUDE[win8_appstore_long](../includes/win8-appstore-long-md.md)] , uygulamanızı muafiyet olmadan test etmelisiniz.
 
- Uygulama ağ geri döngüsü muafiyet kaldırmak için:
+ Uygulamadan ağ geri döngü muafiyetini kaldırmak için:
 
-- C# ve VB hata ayıklama özellik sayfası Temizle **ağ geri döngüsüne izin ver** onay kutusu.
+- C# ve VB hata ayıklama özelliği sayfasında, **ağ geri döngüsüne Izin ver** onay kutusunu temizleyin.
 
-- JavaScript ve hata ayıklama özellik sayfası **ağ geri döngüsüne izin** değerini **Hayır**.
+- JavaScript ve hata ayıklama özelliği sayfasında, **ağ geri döngü değerini Izin ver** ' i **Hayır**olarak ayarlayın.
 
-  **Başlatma, ancak başlatıldığında kodumda Hata Ayıkla (C# ve VB'de) / uygulama başlatma (JavaScript ve C++)** dağıtımını, uygulama başlatıldığında hata ayıklama oturumu otomatik olarak başlayacak şekilde yapılandırmak için:
+  **Başlatma, ancak başlatıldığında kodumdaki hata ayıkla (C# ve vb)/uygulamayı Başlat (JavaScript ve C++)** Dağıtımı, uygulama başlatıldığında otomatik olarak bir hata ayıklama oturumu başlatacak şekilde yapılandırmak için:
 
-- C# ve VB hata ayıklama özellik sayfasını kontrol **başlatma, ancak başlatıldığında kodumda Hata Ayıkla** onay kutusu.
+- C# ve VB hata ayıklama özellik sayfasında, **başlatılmayın ' i işaretleyin, ancak başladığında kodumdaki hata ayıkla** onay kutusunu işaretleyin.
 
-- JavaScript ve hata ayıklama özellik sayfası **uygulama Başlat** değerini **Evet**.
+- JavaScript ve hata ayıklama özelliği sayfasında, **Uygulamayı Başlat** değerini **Evet**olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio’dan uygulamaları çalıştırma](../debugger/run-store-apps-from-visual-studio.md)

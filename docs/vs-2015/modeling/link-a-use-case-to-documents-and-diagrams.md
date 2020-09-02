@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c713759a8ea75eed3048469327f962668efa4f70
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657648"
 ---
 # <a name="link-a-use-case-to-documents-and-diagrams"></a>Kullanım örneğini belgelere ve diyagramlara bağlama
@@ -74,14 +74,14 @@ Kullanım örneği diyagramında kullanım örneğini başka bir diyagrama veya 
 
 ### <a name="to-link-to-a-shared-document-onenote-element-or-web-page"></a>Paylaşılan bir belgeye, OneNote öğesine veya Web sayfasına bağlamak için
 
-1. Paylaşılan öğenin URL 'sini alın. Bu, örneğin, ' \\ \\ ' veya bir Web sayfası veya SharePoint URL 'SI ' http://' ile başlayan bir ağ dosyası yolu ya da ' OneNote: ' başlangıcında bir OneNote bölümü, sayfası veya paragrafı bağlantısı olabilir.
+1. Paylaşılan öğenin URL 'sini alın. Bu, örneğin, ' ' başlangıcı olan bir ağ dosyası yolu \\ \\ veya bir Web sayfası veya SharePoint URL 'si ' http://' veya bir OneNote bölümüne, sayfaya ya da paragrafa bir bağlantı olan ' OneNote: ' başlangıcı olabilir.
 
 2. Araç kutusunda **yapıt** ' ye ve ardından kullanım durumu diyagramında ' a tıklayın.
 
 3. Seçilen yeni yapıt ile URL 'YI yazın veya **köprü** özelliğine yapıştırın.
 
     > [!NOTE]
-    > Bir dosya yolu sağlamak istiyorsanız, ortak bir çalışma alanında (' \\ \\ ' ile başlayarak) veya Visual Studio çözümünüzün içindeki bir dosyayı seçmek en iyisidir. Bu, dosya yolunun başka bir takım üyesinin bilgisayarında geçerli kalmasını veya çözümün taşınabilmesini sağlar. Çözümünüze Word belgesi gibi bir belge eklemek için Çözüm Gezgini ' de çözüme sağ tıklayın, **Ekle** ' nin üzerine gelin ve **var olan öğe**' ye tıklayın.
+    > Bir dosya yolu sağlamak istiyorsanız, ortak bir çalışma alanında (' ' ile başlayarak \\ \\ ) veya Visual Studio çözümünüzün içindeki bir dosyayı seçmek en iyisidir. Bu, dosya yolunun başka bir takım üyesinin bilgisayarında geçerli kalmasını veya çözümün taşınabilmesini sağlar. Çözümünüze Word belgesi gibi bir belge eklemek için Çözüm Gezgini ' de çözüme sağ tıklayın, **Ekle** ' nin üzerine gelin ve **var olan öğe**' ye tıklayın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [UML Kullanım örneği diyagramları: başvuru](../modeling/uml-use-case-diagrams-reference.md) [UML Kullanım örneği DIYAGRAMLARı: yönergeler](../modeling/uml-use-case-diagrams-guidelines.md) [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [uygulamanız için modeller oluşturma](../modeling/create-models-for-your-app.md)

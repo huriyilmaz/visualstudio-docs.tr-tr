@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::SetValueAsStringWithError | Microsoft Docs
+title: 'IDebugProperty3:: SetValueAsStringWithError | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 58b2c487e0259ec2381638c77608f8773af3e159
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193387"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu özelliğin değerini ayarlar ve gerekirse, bir hata iletisi döndürür.  
+Bu özelliğin değerini ayarlar ve gerekirse bir hata mesajı döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetValueAsStringWithError(  
@@ -46,25 +46,25 @@ int SetValueAsStringWithError(
   
 #### <a name="parameters"></a>Parametreler  
  `pszValue`  
- [in] Ayarlanacak değer.  
+ 'ndaki Ayarlanacak değer.  
   
  `dwRadix`  
- [in] Ayarlanan değer sayı tabanı.  
+ 'ndaki Ayarlanmış değerin taban tabanı.  
   
  `dwTimeout`  
- [in] Değeri ayarlamak beklenecek süre (`INFINITE` süresiz bekleme anlamına gelir).  
+ 'ndaki Değer için beklenecek sürenin uzunluğu ( `INFINITE` süresiz olarak bekleme anlamına gelir).  
   
  `errorString`  
- [out] Değeri ayarlanırken bir hata varsa, bu başarısızlığın nedenini tutar.  
+ dışı Değer ayarlanırken bir hata oluşursa, bu durum hatanın nedenini taşır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Gelen değer, değerlendirilecek bir ifade olabilir.  
+ Gelen değer değerlendirilecek bir ifade olabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CProperty** gösteren nesne [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimi.  
+ Aşağıdaki örnek, [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) arabirimini kullanıma sunan bir **cproperty** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 HRESULT CProperty::SetValueAsStringWithError(   

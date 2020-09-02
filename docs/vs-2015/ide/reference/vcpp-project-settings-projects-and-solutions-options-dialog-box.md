@@ -20,20 +20,20 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ef861d13387c013659e5e4c1714680b71896858c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657858"
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>VC++ Proje Ayarları, Projeler ve Çözümler, Seçenekler İletişim Kutusu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu iletişim kutusu, derleme günlüğü ve destekleyici dosya türleriyle ilgili [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] proje ayarlarını tanımlamanıza olanak sağlar.
+Bu iletişim kutusu, [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] derleme günlüğü ve destekleyici dosya türleriyle ilgili proje ayarlarını tanımlamanıza olanak sağlar.
 
 ### <a name="to-access-this-dialog-box"></a>Bu iletişim kutusuna erişmek için
 
-1. **Araçlar** menüsünde **Seçenekler**' e tıklayın.
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.
 
 2. **Projeler ve çözümler**' i seçin ve ardından **VC + + proje ayarları**' nı seçin.
 
@@ -41,7 +41,7 @@ Bu iletişim kutusu, derleme günlüğü ve destekleyici dosya türleriyle ilgil
  Projeleriniz için yapı kuralları tanımlamanıza yardımcı olan. Rules dosyalarını içeren dizinlerin listesini belirtir.
 
 ## <a name="build-logging"></a>Derleme günlüğü
- **Evet** Derleme günlüğü dosyasının oluşturulmasını etkinleştirir. Bu seçenek, projenin ara dosyalar dizininde bulunan BuildLog. htm dosyasını oluşturur. Her yeni derleme önceki BuildLog. htm dosyasının üzerine yazar.
+ **Evet** Derleme günlüğü dosyasının oluşturulmasını etkinleştirir. Bu seçenek, projenin ara dosyalar dizininde bulunan BuildLog.htm oluşturur. Her yeni derleme önceki BuildLog.htm dosyanın üzerine yazar.
 
  **Hayır** Derleme günlüğü dosyasının oluşturulmasını devre dışı bırakır.
 
@@ -56,11 +56,11 @@ Bu iletişim kutusu, derleme günlüğü ve destekleyici dosya türleriyle ilgil
 ## <a name="extensions-to-include"></a>Dahil edilecek uzantılar
  Projenizde yer alan dosyaların dosya adı uzantılarını belirtir.
 
-## <a name="maximum-concurrent-c-compilations"></a>Maksimum eşzamanlı C++ derlemeler
- Paralel C++ derleme için kullanılacak en fazla CPU çekirdeği sayısını belirtir.
+## <a name="maximum-concurrent-c-compilations"></a>Maksimum eşzamanlı C++ derlemeleri
+ Paralel C++ derlemesi için kullanılacak en fazla CPU çekirdeği sayısını belirtir.
 
 ## <a name="show-environment-in-log"></a>Ortamı günlükte göster
- **Evet** Yapı günlük dosyasındaki ortam değişkenlerini listeler. Bu seçenek, [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] projelerinin derlemeleri sırasında tüm ortam değişkenlerini derleme günlüğü dosyasına yankılanması gerektiğini belirtir.
+ **Evet** Yapı günlük dosyasındaki ortam değişkenlerini listeler. Bu seçenek, proje derlemeleri sırasında tüm ortam değişkenlerini derleme günlüğü dosyasına yankılanması gerektiğini belirtir [!INCLUDE[vcprvc](../../includes/vcprvc-md.md)] .
 
  **Hayır** Ortam değişkenlerini derleme günlük dosyasından hariç tutun.
 
@@ -70,4 +70,4 @@ Bu iletişim kutusu, derleme günlüğü ve destekleyici dosya türleriyle ilgil
  **Tüm dosyaları göster** Proje klasöründeki dosyaları projede ve diskte göstermek için **Çözüm Gezgini** yapılandırır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [C/C++ programlar derleme](https://msdn.microsoft.com/library/fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008) [C++ /oluşturma başvurusu](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d)
+ [C/C++ programları oluşturma](https://msdn.microsoft.com/library/fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008) [c/c++ oluşturma başvurusu](https://msdn.microsoft.com/library/100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d)

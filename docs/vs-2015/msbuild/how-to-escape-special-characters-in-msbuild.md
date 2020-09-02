@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: MSBuild özel karakterleri kaçış | Microsoft Docs'
+title: "Nasıl yapılır: MSBuild 'de özel karakterleri kaçış | Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -15,35 +15,35 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 94fc8d858e2db9bd1e00bb8770cf52672a900ab0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178351"
 ---
-# <a name="how-to-escape-special-characters-in-msbuild"></a>Nasıl yapılır: MSBuild'de Kaçış Özel Karakterleri
+# <a name="how-to-escape-special-characters-in-msbuild"></a>Nasıl Yapılır: MSBuild'de Kaçış Özel Karakterleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belirli karakterler özel bir anlamı olmayan [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] proje dosyaları. Karakterler örnekleri noktalı virgül (;) ve yıldız işareti (*) içerir. Bu özel karakterlerin tam bir listesi için bkz. [MSBuild özel karakterleri](../msbuild/msbuild-special-characters.md).  
+Belirli karakterlerin proje dosyalarında özel anlamı vardır [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] . Karakter örnekleri arasında noktalı virgül (;) ve yıldız işaretleri (*). Bu özel karakterlerin tüm listesi için bkz. [MSBuild özel karakterler](../msbuild/msbuild-special-characters.md).  
   
- Bu özel karakterlerin bir proje dosyasında sabit değer olarak kullanmak için söz dizimi % kullanarak belirtilmelidir*xx*burada *xx* karakter ASCII onaltılık değerini temsil eder.  
+ Bu özel karakterleri bir proje dosyasında değişmez değer olarak kullanmak için, *xx* , karakterin ASCII onaltılık değerini temsil eden%*xx*sözdizimi kullanılarak belirtilmelidir.  
   
 ## <a name="msbuild-special-characters"></a>MSBuild Özel Karakterleri  
- Bir özel karakter kullanıldığı örnek konusu `Include` öğesi listeleri özniteliği. Örneğin, aşağıdaki madde listesini iki öğe bildirir: `MyFile.cs` ve `MyClass.cs`.  
+ Özel karakterlerin kullanıldığı bir örnek, `Include` öğe listelerinin özniteliğidir. Örneğin, aşağıdaki öğe listesi iki öğe bildirir: `MyFile.cs` ve `MyClass.cs` .  
   
 ```  
 <Compile Include="MyFile.cs;MyClass.cs"/>  
 ```  
   
- Adında bir noktalı virgül içeren bir öğe bildirmek istiyorsanız, % kullanmalısınız*xx* noktalı virgül kaçış ve önlemek için söz dizimi [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] gelen iki ayrı öğeleri bildirme. Örneğin, aşağıdaki öğe noktalı virgül çıkışları ve bir öğe adlı bildirir `MyFile.cs;MyClass.cs`.  
+ Adında noktalı virgül içeren bir öğe bildirmek istiyorsanız, noktalı virgülden çıkmak ve*xx* [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] iki ayrı öğe bildirmenizi engellemek için% xx söz dizimini kullanmanız gerekir. Örneğin, aşağıdaki öğe noktalı virgülden çıkar ve adlı bir öğe bildirir `MyFile.cs;MyClass.cs` .  
   
 ```  
 <Compile Include="MyFile.cs%3BMyClass.cs"/>  
 ```  
   
-#### <a name="to-use-an-msbuild-special-character-as-a-literal-character"></a>MSBuild özel karakter değişmez değer olarak kullanmak için  
+#### <a name="to-use-an-msbuild-special-character-as-a-literal-character"></a>Bir MSBuild özel karakterini sabit karakter olarak kullanmak için  
   
-- Gösterim % kullanmak*xx* özel karakter yerine burada *xx* ASCII karakter onaltılık değerini temsil eder. Örneğin, sabit karakter olarak yıldız işareti (*) kullanmak için değerini kullanın. `%2A`.  
+- Özel karakterin yerine%*xx* gösterimini kullanın; burada *xx* , ASCII karakterinin onaltılı değerini temsil eder. Örneğin, bir yıldız işareti (*) sabit karakter olarak kullanmak için değerini kullanın `%2A` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [MSBuild kavramları](../msbuild/msbuild-concepts.md)   

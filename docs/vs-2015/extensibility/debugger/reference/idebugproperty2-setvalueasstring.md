@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::SetValueAsString | Microsoft Docs
+title: 'IDebugProperty2:: SetValueAsString | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d50057570b5b067447321f975d4d33da8aa3de43
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193433"
 ---
 # <a name="idebugproperty2setvalueasstring"></a>IDebugProperty2::SetValueAsString
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Belirli bir dizedeki bir özelliğin değerini ayarlar.  
+Belirli bir dizeden bir özelliğin değerini ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT SetValueAsString (   
@@ -44,20 +44,20 @@ int SetValueAsString ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pszValue`  
- [in] Ayarlanacak değer içeren bir dize.  
+ 'ndaki Ayarlanacak değeri içeren bir dize.  
   
  `nRadix`  
- [in] Sayısal yedeklenmesine yorumlama olarak kullanılacak bir sayı tabanı. Bu sayı tabanı otomatik olarak belirlemek girişiminde 0 olabilir.  
+ 'ndaki Herhangi bir sayısal bilgiyi yorumlamak için kullanılan bir taban. Bu, taban x 'i otomatik olarak belirlemeyi denemek için 0 olabilir.  
   
  `dwTimeout`  
- [in] Bu yöntemden geri dönmeden önce beklenecek milisaniye cinsinden en uzun süreyi belirtir. Kullanım `INFINITE` süresiz bekleme.  
+ 'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süreyi milisaniye olarak belirtir. `INFINITE`Sonsuza kadar beklemek için kullanın.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür. Diğer olası değerler aşağıdaki tabloda gösterilmektedir.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür. Aşağıdaki tabloda olası diğer değerler gösterilmektedir.  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|`E_SETVALUE_VALUE_CANNOT_BE_SET`|Dize bir özellik değeri dönüştürülemedi veya özellik değeri ayarlanamadı.|  
+|`E_SETVALUE_VALUE_CANNOT_BE_SET`|Dize bir özellik değerine dönüştürülemedi veya özellik değeri ayarlanamadı.|  
 |`E_SETVALUE_VALUE_IS_READONLY`|Özellik salt okunurdur.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  

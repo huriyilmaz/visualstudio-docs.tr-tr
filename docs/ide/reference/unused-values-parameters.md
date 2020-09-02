@@ -11,36 +11,36 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: ce2b0f1e0c0db45c478c3917306683b314da0564
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65531872"
 ---
 # <a name="unused-value-assignments-variables-and-parameters"></a>Kullanılmayan değer atamaları, değişkenler ve parametreler
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 - Visual Basic
 
-**Ne:** Kullanılmayan parametreleri solur ve kullanılmayan ifade değerleri için bir uyarı oluşturur. Derleyici, kullanılmayan değer atamalarını bulmak için bir akış çözümlemesi de gerçekleştirir. Kullanılmayan değer atamaları solmaya ve bir ampul gereksiz atama kaldırmak için [hızlı eylem](../quick-actions.md) ile görünür. Bilinmeyen değerlere sahip kullanılmayan değişkenler, bunun yerine [atları](/dotnet/csharp/discards) kullanmak için [hızlı eylem](../quick-actions.md) önerisi gösterir. (Atar, uygulama kodunda kasıtlı olarak kullanılmayan geçici, sahte değişkenlerdir. Bellek ayırmayı azaltabilir ve kodunuzu okumayı kolaylaştırabilir.)
+**Ne:** Kullanılmayan parametreleri soluklaştırır ve kullanılmayan ifade değerleri için bir uyarı oluşturur. Derleyici Ayrıca kullanılmayan değer atamalarını bulmak için bir Akış Analizi gerçekleştirir. Kullanılmayan değer atamaları soluklaşır ve yedekli atamayı kaldırmak için hızlı bir [eylem](../quick-actions.md) içeren bir ampul belirir. Bilinmeyen değerleri olan kullanılmayan değişkenler, yerine [atma](/dotnet/csharp/discards) işlemini kullanmak için [hızlı bir eylem](../quick-actions.md) önerisi gösterir. (Atma, uygulama kodunda kasıtlı olarak kullanılmayan geçici ve kukla değişkenlerdir. Bellek ayırmayı azaltabilir ve kodunuzu daha kolay okunabilir hale getirebilirsiniz.)
 
-**Ne zaman:** Hiç kullanılmayan değer atamalarınız, parametrelerinuz veya ifade değerleriniz vardır.
+**Ne zaman:** Hiç kullanılmamış değer atamaları, parametreleri veya ifade değerleri vardır.
 
-**Neden:** Bazen bir değer ataması, değişken veya parametre artık kullanılıp kullanılmamadığını anlamak zor olabilir. Bu değerleri salarak veya bir uyarı oluşturarak, hangi kodu silebileceğinize işaret edebilirsiniz.
+**Neden:** Bazen bir değer atama, değişken veya parametrenin artık kullanılmadığını söylemek zordur. Bu değerleri kaldırarak veya bir uyarı oluşturarak, hangi kodun silineceğini öğrenmek için görsel bir ipucu alırsınız.
 
-## <a name="unused-expression-values-and-parameters-diagnostic"></a>Kullanılmayan ifade değerleri ve parametreleri tanılama
+## <a name="unused-expression-values-and-parameters-diagnostic"></a>Kullanılmayan ifade değerleri ve parametreleri tanılaması
 
-1. Kullanılmayan herhangi bir değer ataması, değişken veya parametreye sahip.
-2. Kullanılmayan değer ataması veya parametresi soluk görünüyor. Kullanılmayan ifade değeri bir uyarı oluşturur.
+1. Kullanılmayan herhangi bir değer atama, değişken veya parametre içermelidir.
+2. Kullanılmayan değer atama veya parametresi, kullanıma hazır olarak görünür. Kullanılmayan ifade değeri bir uyarı oluşturur.
 
-  ![Kullanılmayan parametre](media/unused-parameter.png)
-  ![Kullanılmayan](media/unused-value.png)
-  ![değer atama](media/unused-value-assignment.png)
-  ![Kullanılmayan değer atma](media/unused-value-discard.png)
+  ![Kullanılmayan parametre kullanılmamış değer ](media/unused-parameter.png)
+   ![ ](media/unused-value.png)
+   ![ atama kullanılmamış değer ](media/unused-value-assignment.png)
+   ![ atma kullanılmıyor](media/unused-value-discard.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yeniden Düzenle](../refactoring-in-visual-studio.md)
-- [.NET Geliştiricileri için ipuçları](../csharp-developer-productivity.md)
+- [.NET geliştiricileri için ipuçları](../csharp-developer-productivity.md)

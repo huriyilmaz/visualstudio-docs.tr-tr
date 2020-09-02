@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a988e8f5409a3a9e1f9fd8a4b5bd863a3309acc3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63429041"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64831131"
 ---
-# <a name="symbolsearchinfofields"></a>SYMBOL_SEARCH_INFO_FIELDS
+# <a name="symbol_search_info_fields"></a>SYMBOL_SEARCH_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Sembol bilgilerini almak için türünü belirtir.  
+Alınacak sembol bilgisinin türünü belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_SYMBOL_SEARCH_INFO_FIELDS  
@@ -46,24 +46,24 @@ public enum enum_SYMBOL_SEARCH_INFO_FIELDS
   
 ## <a name="members"></a>Üyeler  
  SSIF_NONE  
- Bayrak gösterir  
+ Bayrak olmadığını gösterir  
   
  SSIF_VERBOSE_SEARCH_INFO  
- Tüm simgeleri bulmak için kullanılan yolların arama döndürür  
+ Sembolleri bulmak için kullanılan tüm arama yollarını döndürür  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu bayraklar parametresi olarak geçirilir [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) döndürülen bilgi miktarını belirlemek için yöntemi.  
+ Bu bayraklar döndürülen bilgi miktarını öğrenmek için [Getsymbolınfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) yöntemine bir parametre olarak geçirilir.  
   
 > [!NOTE]
-> Şu anda yalnızca `SSIF_VERBOSE_SEARCH_INFO` desteklenir, ve olarak belirtilmelidir `dwFlags` parametresi `IDebugModule3::GetSymbolInfo`. Diğer tüm değerler, bir hata döndürülür.  
+> Şu anda yalnızca `SSIF_VERBOSE_SEARCH_INFO` destekleniyor ve parametresi olarak belirtilmelidir `dwFlags` `IDebugModule3::GetSymbolInfo` . Diğer tüm değerler bir hata döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md)

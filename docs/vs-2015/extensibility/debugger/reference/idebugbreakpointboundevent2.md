@@ -13,46 +13,46 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0b2543dbb94e666cd02e55f0ddd84e1d0a5f4da4
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65675526"
 ---
 # <a name="idebugbreakpointboundevent2"></a>IDebugBreakpointBoundEvent2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu arabirim, bekleyen bir kesme noktası için yüklenen bir programı başarıyla bağlandı oturum hata ayıklama Yöneticisi (SDM) bildirir.  
+Bu arabirim, oturum hata ayıklama Yöneticisi 'ne (SDM), bekleyen bir kesme noktasının yüklenmiş bir programa başarıyla bağlandığını söyler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugBreakpointBoundEvent2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Bu arabirim, kesme noktaları desteğini bir parçası olarak DE uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirim uygulandığında, bu arabirimle aynı nesne üzerinde (SDM kullanan [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) erişimi `IDebugEvent2` arabirimi).  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ DE bu arabirimi, kesme noktaları desteğinin bir parçası olarak uygular. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde UYGULANMALıDıR (SDM, arabirime erişmek için [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) kullanır `IDebugEvent2` ).  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- KODU oluşturur ve bir bekleyen kesme noktasının başarıyla ayıklanan programa bağlandığında bu olay nesneyi gönderir. Olay kullanılarak gönderilen [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) ayıklanan programa eklendiğinde SDM tarafından sağlanan geri çağırma işlevi.  
+ DE, bekleyen bir kesme noktası hata ayıklanan programa başarıyla bağlandığında bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklamakta olan programa eklendiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugBreakpointBoundEvent2`.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugBreakpointBoundEvent2` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md)|Bekleyen kesme noktasının bağlı olduğu alır.|  
-|[EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md)|Bir numaralandırıcı üzerinde bu olaya bağlı olan kesme noktaları oluşturur.|  
+|[GetPendingBreakpoint](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-getpendingbreakpoint.md)|Bağlanan bekleyen kesme noktasını alır.|  
+|[EnumBoundBreakpoints](../../../extensibility/debugger/reference/idebugbreakpointboundevent2-enumboundbreakpoints.md)|Bu olaya bağlı kesme noktalarının bir Numaralandırıcı oluşturur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir kesme noktasının bağlı her bir olay için SDM gönderilir. Kesme noktasının bağlı, bir [IDebugBreakpointErrorEvent2](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) gönderilir; Aksi takdirde, bir `IDebugBreakpointBoundEvent2` gönderilir.  
+ Kesme noktası her bağlandığında, SDM 'ye bir olay gönderilir. Kesme noktası bağlanamaz, bir [IDebugBreakpointErrorEvent2](../../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) gönderilir; Aksi takdirde, bir `IDebugBreakpointBoundEvent2` gönderilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)   

@@ -1,5 +1,5 @@
 ---
-title: BuildOnLoad öznitelik ve öğe (Visual Studio Şablonları)
+title: BuildOnLoad özniteliği ve öğesi (Visual Studio şablonları)
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,15 +15,15 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 3be4016822ccaaae2f1352f91ecc10f09273a889
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739962"
 ---
 # <a name="buildonload-attribute-and-element"></a>BuildOnLoad özniteliği ve öğesi
 
-Proje oluşturulduktan hemen sonra oluşturulup oluşturulmayacağını belirtir. **BuildOnLoad** hem bir öznitelik hem de bir öğedir.
+Oluşturulduktan sonra projenin hemen oluşturulup derlenmeyeceğini belirtir. **Buildonload** özniteliği ve bir öğesidir.
 
 Öğe hiyerarşisi:
 
@@ -43,19 +43,19 @@ Proje oluşturulduktan hemen sonra oluşturulup oluşturulmayacağını belirtir
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin değeri
 
-**BuildOnLoad** öğesi için bir metin değeri gereklidir. Metin, proje `true` oluşturulduktan hemen sonra oluşturulup oluşturulmayacağını belirten bir metin olmalıdır. `false`
+**Buildonload** öğesi için bir metin değeri gereklidir. Metin `true` veya oluşturulduktan `false` sonra projenin hemen oluşturulup derlenmeyeceğini belirten olmalıdır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-**BuildOnLoad** isteğe bağlı bir özelliktir. Varsayılan değer: `false`.
+**Buildonload** , isteğe bağlı bir özniteliktir. Varsayılan değer: `false`.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, **BuildOnLoad** öğesi olarak kullanıldığında C# şablonu için meta verileri göstermektedir:
+Aşağıdaki örnek, **Buildonload** bir öğe olarak kullanıldığında bir C# şablonu meta verilerini gösterir:
 
 ```xml
 <VSTemplate Type="Project" Version="3.0.0"
@@ -86,5 +86,5 @@ Aşağıdaki örnek, **BuildOnLoad** öğesi olarak kullanıldığında C# şabl
 
 - [BuildProjectOnload öğesi](buildprojectonload-element-visual-studio-templates.md)
 - [TemplateContent öğesi](../extensibility/templatecontent-element-visual-studio-templates.md)
-- [Proje ve madde şablonları oluşturma](../ide/creating-project-and-item-templates.md)
-- [Visual Studio şablon şema başvurusu](../extensibility/visual-studio-template-schema-reference.md)
+- [Proje ve öğe şablonları oluşturma](../ide/creating-project-and-item-templates.md)
+- [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)

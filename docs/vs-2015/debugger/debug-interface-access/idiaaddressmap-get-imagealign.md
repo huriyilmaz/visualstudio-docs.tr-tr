@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::get_imagealign | Microsoft Docs
+title: 'IDiaAddressMap:: get_imageAlign | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3f3e7a326c78207976fb8493905b412df65e0c63
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68178234"
 ---
-# <a name="idiaaddressmapgetimagealign"></a>IDiaAddressMap::get_imageAlign
+# <a name="idiaaddressmapget_imagealign"></a>IDiaAddressMap::get_imageAlign
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Geçerli resim hizalamasını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_imageAlign (   
@@ -35,14 +35,14 @@ HRESULT get_imageAlign ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Çalıştırılabilir dosyadan görüntü hizalama değeri döndürür.  
+ dışı Yürütülebilir dosyadan resim hizalama değeri döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Görüntüleri görüntünün nasıl yüklenir ve oluşturulan bağlı olarak belirli bellek sınırları hizalanır. Hizalama, genellikle 1, 2, 4, 8, 16, 32 veya 64 baytlık sınırlardaki oluşur. Resmi hizalaması çağrısıyla ayarlanabilir [Idiaaddressmap::put_imagealign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md) yöntemi.  
+ Görüntüler, görüntünün yüklenme ve oluşturulma şekline bağlı olarak belirli bellek sınırlarına hizalanır. Hizalama genellikle 1, 2, 4, 8, 16, 32 veya 64 baytlık sınırlardır. Görüntü hizalaması [IDiaAddressMap::p ut_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md) yöntemi çağrısıyla ayarlanabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaaddressmap](../../debugger/debug-interface-access/idiaaddressmap.md)   
+ [IDiaAddressMap](../../debugger/debug-interface-access/idiaaddressmap.md)   
  [IDiaAddressMap::put_imageAlign](../../debugger/debug-interface-access/idiaaddressmap-put-imagealign.md)

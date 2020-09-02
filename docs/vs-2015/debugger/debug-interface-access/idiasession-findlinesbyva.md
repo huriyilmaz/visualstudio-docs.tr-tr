@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findlinesbyva | Microsoft Docs
+title: 'IDiaSession:: findLinesByVA | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ca69acebc9710bc18cba39ea9998bf90d2bf5767
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151654"
 ---
 # <a name="idiasessionfindlinesbyva"></a>IDiaSession::findLinesByVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Belirtilen sanal adres (VA) aralığında bulunan satırlar için satır numarası bilgisi alır.  
+Belirtilen sanal adres (VA) aralığında yer alan satırlar için satır numarası bilgilerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT findLinesByVA (   
@@ -37,16 +37,16 @@ HRESULT findLinesByVA ( 
   
 #### <a name="parameters"></a>Parametreler  
  `va`  
- [in] Bir VA. adresini belirtir  
+ 'ndaki Adresi bir VA olarak belirtir.  
   
  `length`  
- [in] Bu sorguyu kapsayacak şekilde adres aralığını bayt sayısını belirtir.  
+ 'ndaki Bu sorguyla birlikte kapsamak üzere adres aralığının bayt sayısını belirtir.  
   
  `ppResult`  
- [out] Döndürür bir [Idiaenumlinenumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) tüm satır listesini içeren nesne belirtilen adres aralığını kapsayan numaralandırır.  
+ dışı Belirtilen adres aralığını kapsayan tüm satır numaralarının listesini içeren bir [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) nesnesi döndürür.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, sanal işlevin adresi ve uzunluğu kullanarak bir işlev içinde yer alan tüm satır numaralarını alır bir işlev gösterir.  
+ Bu örnek, işlevin sanal adresini ve uzunluğunu kullanarak bir işlevde bulunan tüm satır numaralarını elde eden bir işlevi gösterir.  
   
 ```cpp#  
 IDiaEnumLineNumbers *GetLineNumbersByVA(IDiaSymbol *pFunc, IDiaSession *pSession)  
@@ -65,5 +65,5 @@ IDiaEnumLineNumbers *GetLineNumbersByVA(IDiaSymbol *pFunc, IDiaSession *pSession
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaenumlinenumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
+ [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
  [IDiaSession](../../debugger/debug-interface-access/idiasession.md)
