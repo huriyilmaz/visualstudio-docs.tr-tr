@@ -1,5 +1,5 @@
 ---
-title: İplik Hazır Konektörü | Microsoft Dokümanlar
+title: İş parçacığı için Ready Bağlayıcısı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,11 +13,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 20842cc277246bba6c9e05c6c59a937a89b5f6bc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62943495"
 ---
-# <a name="thread-ready-connector"></a>İplik hazır konektör
-Arama yığınını ve engellemeyi kaldırma yığınını görmek için engelleme segmentini tıklattığınızda, iş parçacığı hazır bağlayıcısı da görünebilir. Engeli kaldırma olayı geçerli işlemdeki başka bir iş parçacığında oluştuysa, iş parçacığı hazır bağlayıcısı, engellenen iş parçacığının yürütmeyi sürdürmesini sağlayan iş parçacığı ve yürütme kesimini görsel olarak tanımlar.
+# <a name="thread-ready-connector"></a>İş parçacığına Ready Bağlayıcısı
+Bir çağrı yığınını ve onun engellemesini kaldırma yığınını görmek için bir engelleme segmentine tıkladığınızda, iş parçacığı için kullanılabilir bağlayıcı da görünebilir. Geçerli işlemdeki başka bir iş parçacığında engellemeyi kaldırma olayı oluştuysa, iş parçacığı için izin veren bağlayıcı, yürütmeyi sürdürmeye yönelik olarak engellenen iş parçacığını destekleyen iş parçacığını ve yürütme kesimini görsel olarak tanımlar.

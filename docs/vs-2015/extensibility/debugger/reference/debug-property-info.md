@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4c4200cb5a44e185d50158829fe44152707ee459
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68143040"
 ---
-# <a name="debugpropertyinfo"></a>DEBUG_PROPERTY_INFO
+# <a name="debug_property_info"></a>DEBUG_PROPERTY_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklama özelliği hakkında bilgiler içerir.  
+Bir hata ayıklama özelliği hakkında bilgi içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagDEBUG_PROPERTY_INFO {   
@@ -52,37 +52,37 @@ public struct DEBUG_PROPERTY_INFO { 
   
 ## <a name="members"></a>Üyeler  
  dwValidFields  
- Bayraklarının bir birleşimi [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) hangi alanların doldurulur belirten sabit listesi.  
+ [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi.  
   
  bstrFullName  
  Özelliğin tam adı.  
   
  bstrName  
- Bir bağlam içinde özellik adı.  
+ Bağlam içindeki Özellik adı.  
   
  bstrType  
- Özellik türü olarak biçimlendirilmiş bir dize.  
+ Özellik türü, biçimli bir dize olarak.  
   
  bstrValue  
- Özellik değeri olarak biçimlendirilmiş bir dize.  
+ Biçimli bir dize olarak özellik değeri.  
   
  pProperty  
- [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) bu yapı tarafından açıklanan bir nesne.  
+ Bu yapı tarafından tanımlanan [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesi.  
   
  dwAttrib  
- Bayraklarının bir birleşimi [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) bu özelliğin özniteliklerini açıklayan sabit listesi.  
+ Bu özelliğin özniteliklerini açıklayan [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) numaralandırmasındaki bayrakların birleşimi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir özellik adı, türü ve değeri içeren hiyerarşik bir yapısı nesnesidir. Örneğin, bir özellik, yerel değişkenler, parametreleri, izleme değişkenleri ve ifadeleri ve kayıtları açıklayabilirsiniz.  
+ Bir özellik, bir ad, tür ve değer içeren hiyerarşik yapıdaki bir nesnedir. Örneğin, bir özellik yerel değişkenleri, parametreleri, izleme değişkenlerini ve ifadeleri ve kayıtları tanımlayabilir.  
   
- Bu yapı geçirilir [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) yöntemi burada da doldurulur. Bu yapı ayrıca bir liste bu yapının bir parçası olarak döndürülen [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) hangi sırayla çağrısından döndürülen arabirimi [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) ve [ EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) yöntemleri.  
+ Bu yapı, doldurulduğu [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) yöntemine geçirilir. Bu yapı Ayrıca, [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) arabiriminden bu yapının listesinin bir parçası olarak da döndürülür, bu da [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) ve [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) yöntemlerine yapılan çağrıdan döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

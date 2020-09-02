@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumNestedEnums | Microsoft Dokümanlar
+title: 'IDebugClassField:: EnumNestedEnums | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 38ee3ccd1ffd3130bc918da18c631cf08683f064
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734412"
 ---
 # <a name="idebugclassfieldenumnestedenums"></a>IDebugClassField::EnumNestedEnums
-Bu sınıfın iç içe geçen sayısalatörleri için bir sayısallaştırıcı oluşturur.
+Bu sınıfın iç içe geçmiş numaralandırıcıları için bir Numaralandırıcı oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumNestedEnums(
@@ -41,15 +41,15 @@ int EnumNestedEnums(
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-[çıkış] İç içe geçmelistesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. İç içe geçme ler yoksa null değeri verir.
+dışı İç içe geçmiş Numaralandırmaların listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. İç içe geçmiş numaralandırmalar yoksa null değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, iç içe geçme sayısı yoksa S_OK veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, iç içe Numaralandırıcı yoksa S_OK döndürür veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Numaralandırmanın her öğesi iç içe geçen numaralandırmayı açıklayan bir [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md) nesnesidir.
+Sabit listesinin her öğesi, iç içe bir numaralandırmayı açıklayan bir [ıdebuggenumfield](../../../extensibility/debugger/reference/idebugenumfield.md) nesnesidir.
 
-Bir sınıf içinde bildirilen numaralandırma iç içe numaralandırma olarak kabul edilir. Örneğin, verilen:
+Bir sınıf içinde bildirilenler, iç içe geçmiş bir numaralandırma olarak kabul edilir. Örneğin, verilen:
 
 ```
 class RootClass {
@@ -57,7 +57,7 @@ class RootClass {
 };
 ```
 
-Yöntem, `EnumNestedEnums` numaralandırmayı temsil eden bir [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md) nesnesi içeren `NestedEnum` bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür.
+`EnumNestedEnums`Yöntemi, numaralandırmayı temsil eden bir [ıdebugger Genumfield](../../../extensibility/debugger/reference/idebugenumfield.md) nesnesi Içeren bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürüyor `NestedEnum` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

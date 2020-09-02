@@ -1,5 +1,5 @@
 ---
-title: Idiareadexeatrvacallback::readexecutableatrva | Microsoft Docs
+title: 'Idiareadexeatrboş Allback:: ReadExecutableAtRVA | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8d74543b7b57d188712c04bc43429357a5140c9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187272"
 ---
 # <a name="idiareadexeatrvacallbackreadexecutableatrva"></a>IDiaReadExeAtRVACallback::ReadExecutableAtRVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bayt belirtilen göreli sanal adres (RVA) yürütülebilir dosyasından başlayarak belirtilen sayıda okur.  
+Yürütülebilir dosyadan belirtilen göreli sanal adresten (RVA) başlayarak belirtilen bayt sayısını okur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT ReadExecutableAtRVA (   
@@ -38,20 +38,20 @@ HRESULT ReadExecutableAtRVA ( 
   
 #### <a name="parameters"></a>Parametreler  
  `relativeVirtualAddress`  
- [in] Okumanın başlatılacağı RVA yürütülebilir dosya.  
+ 'ndaki Okumaya başlamak için çalıştırılabilir dosyadaki RVA.  
   
  `cbData`  
- [in] Okunacak bayt sayısı.  
+ 'ndaki Okunacak bayt sayısı.  
   
  `pcbData`  
- [out] Okunan bayt sayısını döndürür.  
+ dışı Okunan bayt sayısını döndürür.  
   
  `data[]`  
- [out içinde] Dosyadan okunan bayt ile doldurulmuş bir dizi.  
+ [in, out] Dosyadan okunan bayt ile doldurulmuş bir dizi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, bir göreli sanal adres kullanarak bir çalıştırılabilir dosyadan veri baytı yüklenecek DIA destek kod tarafından çağrılır. Support, bu yöntem çağrılır [Idiadatasource::loaddataforexe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) yöntemi.  
+ Bu yöntem, bir sanal adresi kullanarak bir yürütülebilir dosyadan veri baytları yüklemek için ÇYA destek kodu tarafından çağırılır. Bu yöntem, [IDiaDataSource:: loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metodunu desteklemek için çağrılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiareadexeatrvacallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)   
+ [IDiaReadExeAtRVACallback](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)   
  [IDiaDataSource::loadDataForExe](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md)

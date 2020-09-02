@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 95a537c703d4afd68bb291205e0c7da8d9b8fc59
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68143020"
 ---
-# <a name="debugreason"></a>DEBUG_REASON
+# <a name="debug_reason"></a>DEBUG_REASON
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklama için işlem neden başlatıldı belirtir.  
+İşlemin neden hata ayıklama için başlatıldığına ilişkin belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 enum enum_DEBUG_REASON {  
@@ -49,30 +49,30 @@ public enum enum_DEBUG_REASON {
   
 #### <a name="parameters"></a>Parametreler  
  DEBUG_REASON_ERROR  
- Belirli olmayan bir hata oluştu (yok, diğer uygun neden olduğunda bu bir varsayılan koşul olarak kullanılır).  
+ Belirli olmayan bir hata oluştu (diğer nedenlerden hiçbiri uygun olmadığında bu varsayılan koşul olarak kullanılır).  
   
  DEBUG_REASON_USER_LAUNCHED  
- İşlem, kullanıcının isteğiyle başlatıldı.  
+ İşlem kullanıcının isteğiyle başlatılmıştı.  
   
  DEBUG_REASON_USER_ATTACHED  
- Zaten çalışan işlemi kullanıcı tarafından eklendi.  
+ Zaten çalışan işlem, Kullanıcı tarafından öğesine eklendi.  
   
  DEBUG_REASON_AUTO_ATTACHED  
- Başlatıldığında işlemi otomatik olarak depolamaya bağlanmıştır.  
+ İşlem başlatıldığı zaman otomatik olarak eklendi.  
   
  DEBUG_REASON_CAUSALITY  
- İşlem şu nedenle başlatıldı bir *Just-ın-Time* (JIT) hata ayıklama olay.  
+ *Tam zamanında* (JIT) hata ayıklama olayı nedeniyle işlem başlatıldı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Öğesinden döndürülen [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) yöntemi.  
+ [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) yönteminden döndürüldü.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md)

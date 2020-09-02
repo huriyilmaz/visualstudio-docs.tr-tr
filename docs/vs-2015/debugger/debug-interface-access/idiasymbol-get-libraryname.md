@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_libraryname | Microsoft Docs
+title: 'IDiaSymbol:: get_libraryName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cdab8fdff421da751f3813789a6dee8b5b640771
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64810799"
 ---
-# <a name="idiasymbolgetlibraryname"></a>IDiaSymbol::get_libraryName
+# <a name="idiasymbolget_libraryname"></a>IDiaSymbol::get_libraryName
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Nesne yüklenmesinden kitaplığı veya nesne dosyasının dosya adını alır.  
+Nesnenin yüklendiği kitaplığın veya nesne dosyasının dosya adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_libraryName (   
@@ -35,13 +35,13 @@ HRESULT get_libraryName ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Nesne yüklenmesinden kitaplığı veya nesne dosyasının dosya adını döndürür.  
+ dışı Nesnenin yüklendiği kitaplığın veya nesne dosyasının dosya adını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

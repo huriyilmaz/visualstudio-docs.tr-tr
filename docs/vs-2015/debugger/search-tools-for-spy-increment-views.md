@@ -1,5 +1,5 @@
 ---
-title: Spy ++ görünümleri için arama araçları | Microsoft Docs
+title: Spy + + görünümleri için arama araçları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,39 +13,39 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5d520f8b3b4ec67dc9166acf97a313e52d0eb655
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157328"
 ---
 # <a name="search-tools-for-spy-views"></a>Spy++ Görünümleri için Arama Araçları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Spy ++ görünümleri pencere görüntüler hangi verileri belirtmek için bu iletişim kutularını kullanın:  
+Spy + + görünümleri penceresinin görüntüleyeceği verileri belirtmek için bu iletişim kutularını kullanın:  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Pencere Bul İletişim Kutusu](../debugger/find-window-dialog-box.md)  
- Özellikleri veya belirli bir pencere iletileri görüntülemek için kullanılır.  
+ Belirli bir penceredeki özellikleri veya iletileri görüntülemek için kullanılır.  
   
  [Pencere Arama İletişim Kutusu](../debugger/window-search-dialog-box.md)  
- Windows görünümünde belirli bir pencere için düğüm bulmak için kullanılır.  
+ Windows görünümünde belirli bir pencerenin düğümünü bulmak için kullanılır.  
   
  [İleti Arama İletişim Kutusu](../debugger/message-search-dialog-box.md)  
- İleti görünümünde belirli bir ileti düğüm bulmak için kullanılır.  
+ Ileti görünümünde belirli bir iletinin düğümünü bulmak için kullanılır.  
   
  [İşlem Arama İletişim Kutusu](../debugger/process-search-dialog-box.md)  
- İşlem görünümü içinde belirli bir işlem düğümü bulmak için kullanılır.  
+ Işlem görünümündeki belirli bir işlemin düğümünü bulmak için kullanılır.  
   
  [İş Parçacığı Arama İletişim Kutusu](../debugger/thread-search-dialog-box.md)  
- İş parçacıkları görünümünde iş parçacığı belirli düğüm bulmak için kullanılır.  
+ Iş parçacıkları görünümünde belirli bir iş parçacığının düğümünü bulmak için kullanılır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Spy++ Görünümleri](../debugger/spy-increment-views.md)  
- Spy ++ ağaç görünümlerini windows, iletileri, süreçleri ve iş parçacıkları açıklar.  
+ Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.  
   
- [Spy++ kullanma](../debugger/using-spy-increment.md)  
- Spy ++ araç tanıtır ve nasıl kullanılacağını açıklar.  
+ [Spy++ Kullanma](../debugger/using-spy-increment.md)  
+ Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.  
   
  [Spy++ Başvurusu](../debugger/spy-increment-reference.md)  
- Her Spy ++ menü ve iletişim kutusunu tanımlayan bölümler içerir.
+ Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.

@@ -1,5 +1,5 @@
 ---
-title: Düzenle ve devam et ( C#görsel) | Microsoft Docs
+title: Düzenle ve devam et (Visual C#) | Microsoft Docs
 ms.date: 10/11/2017
 ms.topic: conceptual
 dev_langs:
@@ -18,16 +18,16 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 5d54673ee46c594bd1a4bea2990d3b9bbe90ce1f
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188195"
 ---
 # <a name="edit-and-continue-visual-c"></a>Düzenle ve Devam Et (Visual C#)
- Düzenle ve devam et ile C#, hata ayıklama sırasında kodunuzda kesme modunda değişiklikler yapabilirsiniz. Değişiklikler hata ayıklama oturumunu durdurup yeniden başlatmaya gerek kalmadan uygulanabilir. Çalışma modunda, kaynak Düzenleyici salt okunurdur.
+ C# için Düzenle ve devam et ile, hata ayıklama sırasında kodunuzda kesme modunda değişiklikler yapabilirsiniz. Değişiklikler hata ayıklama oturumunu durdurup yeniden başlatmaya gerek kalmadan uygulanabilir. Çalışma modunda, kaynak Düzenleyici salt okunurdur.
 
- Düzenle ve devam et, hata ayıklama oturumu sırasında yapmak isteyebileceğiniz birçok değişikliği destekler, ancak bazı özel durumlar vardır. Daha fazla bilgi için bkz. [desteklenen kod değişiklikleriC# (ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
+ Düzenle ve devam et, hata ayıklama oturumu sırasında yapmak isteyebileceğiniz birçok değişikliği destekler, ancak bazı özel durumlar vardır. Daha fazla bilgi için bkz. [desteklenen kod değişiklikleri (C# ve Visual Basic)](../debugger/supported-code-changes-csharp.md).
 
  Düzenle ve devam et, Windows 10 ' da UWP 'de, .NET Framework 4,6 masaüstü veya sonraki sürümlerini hedefleyen x86 ve x64 uygulamalarında desteklenir (.NET Framework yalnızca bir masaüstü sürümüdür).
 
@@ -36,7 +36,7 @@ ms.locfileid: "73188195"
 
  Düzenle ve devam et etkinleştirildiğinde, bir hata ayıklayıcı yürütme komutunu kullandığınızda, **devam et**, **adımla**, **sonraki ifadeyi ayarla**veya bir hata ayıklayıcı penceresinde işlev değerlendirmesi gerçekleştirme gibi desteklenen değişiklikler otomatik olarak uygulanır.
 
- Daha fazla bilgi için bkz. [nasıl yapılır: Düzenle ve devam etC#() kullanma](../debugger/how-to-use-edit-and-continue-csharp.md).
+ Daha fazla bilgi için bkz. [nasıl yapılır: Düzenle ve devam et 'ı kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl Yapılır: Düzenle ve Devam Et'i Kullanma (C#)](../debugger/how-to-use-edit-and-continue-csharp.md)

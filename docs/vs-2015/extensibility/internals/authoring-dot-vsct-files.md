@@ -1,5 +1,5 @@
 ---
-title: Yazma. Vsct dosyaları | Microsoft Docs
+title: Özgün. Vsct dosyaları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,30 +11,30 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 85e466e7ebb6294a77e89040260c16fe0043e372
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437664"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64808309"
 ---
-# <a name="authoring-vsct-files"></a>Authoring .Vsct Files
+# <a name="authoring-vsct-files"></a>.Vsct Dosyaları Yazma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu belge, menü öğeleri, araç çubukları ve diğer kullanıcı arabirimi (UI) öğeleri Visual Studio tümleşik geliştirme ortamı (IDE) eklemek için .vsct dosyası yazma işlemi gösterilmektedir. Visual Studio .vsct dosyası zaten sahip olmayan pakete (VSPackage'ı) kullanıcı Arabirimi öğeleri eklediğinizde, bu adımları kullanın.  
+Bu belgede, Visual Studio tümleşik geliştirme ortamına (IDE) menü öğeleri, araç çubukları ve diğer kullanıcı arabirimi (UI) öğeleri eklemek için bir. vsct dosyasının nasıl yazılacağı gösterilmektedir. Zaten bir. vsct dosyası olmayan bir Visual Studio paketine (VSPackage) Kullanıcı arabirimi öğeleri eklediğinizde bu adımları kullanın.  
   
- Yeni projeler için seçimlerinizi bağlı olarak, bir menü komutu, bir araç penceresi ya da özel bir düzenleyici için gerekli öğeler zaten sahip olan bir .vsct dosyası oluşturur çünkü Visual Studio Paket şablon kullanmanızı öneririz. Bu .vsct dosyası, VSPackage gereksinimlerini karşılayacak şekilde değiştirebilirsiniz. Örneklerde .vsct dosyası değiştirme hakkında daha fazla bilgi için bkz. [genişletme menüler ve komutlar](../../extensibility/extending-menus-and-commands.md).  
+ Yeni projelerde, seçimlerinize bağlı olarak bir menü komutu, bir araç penceresi veya özel bir düzenleyici için gereken öğelere zaten sahip olan bir. vsct dosyası oluşturduğundan, Visual Studio paket şablonunu kullanmanızı öneririz. VSPackage 'ın gereksinimlerini karşılamak için bu. vsct dosyasını değiştirebilirsiniz. . Vsct dosyasını değiştirme hakkında daha fazla bilgi için bkz. [genişletme menüleri ve komutları](../../extensibility/extending-menus-and-commands.md).  
   
-## <a name="authoring-the-file"></a>Dosya yazma  
- Bu aşamada .vsct dosyası oluşturacaksınız: Dosyalara ve kaynaklara yapısını oluşturmak, kullanıcı Arabirimi öğeleri bildirmek, IDE içinde kullanıcı Arabirimi öğeleri yerleştirmek ve özel davranışları ekleyin.  
+## <a name="authoring-the-file"></a>Dosyayı yazma  
+ Bu aşamalardan bir. vsct dosyası Yazar: dosyalar ve kaynaklar için yapıyı oluşturun, UI öğelerini bildirin, IDE 'ye Kullanıcı arabirimi öğelerini koyun ve tüm özel davranışları ekleyin.  
   
-### <a name="file-structure"></a>Dosya yapısı  
- .Vsct dosyasının temel yapısı bir [CommandTable](../../extensibility/commandtable-element.md) içeren kök öğesi bir [komutları](../../extensibility/commands-element.md) öğesi ve bir [sembolleri](../../extensibility/symbols-element.md) öğesi.  
+### <a name="file-structure"></a>Dosya Yapısı  
+ Bir. vsct dosyasının temel yapısı, bir [Commands](../../extensibility/commands-element.md) öğesi ve bir [Symbols](../../extensibility/symbols-element.md) öğesi içeren bir [CommandTable](../../extensibility/commandtable-element.md) kök öğesidir.  
   
-##### <a name="to-create-the-file-structure"></a>Dosya yapısı oluşturmak için  
+##### <a name="to-create-the-file-structure"></a>Dosya yapısını oluşturmak için  
   
-1. İçindeki adımları izleyerek .vsct dosyası projenize ekleyin [nasıl yapılır: Oluşturma bir. Vsct dosya](../../extensibility/internals/how-to-create-a-dot-vsct-file.md).  
+1. Nasıl yapılır: oluşturma bölümündeki adımları izleyerek projenize bir. vsct dosyası ekleyin [. Vsct dosyası](../../extensibility/internals/how-to-create-a-dot-vsct-file.md).  
   
-2. Gerekli ad alanları için ekleme `CommandTable` öğesi, aşağıdaki örnekte gösterildiği gibi.  
+2. `CommandTable`Aşağıdaki örnekte gösterildiği gibi, gerekli ad alanlarını öğesine ekleyin.  
   
     ```xml  
     <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable"   
@@ -42,120 +42,120 @@ Bu belge, menü öğeleri, araç çubukları ve diğer kullanıcı arabirimi (UI
   
     ```  
   
-3. İçinde `CommandTable` öğe, Ekle bir `Commands` tüm özel menüler, araç çubukları, komut gruplarını ve komutlarını barındırmak için öğesi. Böylece, özel kullanıcı Arabirimi öğeleri yükleyebilir `Commands` öğesi olmalı, `Package` özniteliği için paket adını ayarlayın.  
+3. Öğesinde, `CommandTable` `Commands` tüm özel menülerinizi, araç çubuklarınızı, komut gruplarınızı ve komutları barındırmak için bir öğe ekleyin. Özel UI öğelerinizin yüklenmesine `Commands` `Package` izin vermek için, öğesinin özniteliği paketin adına ayarlanmış olmalıdır.  
   
-     Sonra `Commands` öğe, Ekle bir `Symbols` GUID'leri paketi ve adlarını tanımlamak ve komut kimlikleri için kullanıcı Arabirimi öğeleri için öğe.  
+     Öğesinden sonra `Commands` , `Symbols` paket Için GUID 'leri ve Kullanıcı arabirimi öğelerinizin adlarını ve komut kimliklerini tanımlayacak bir öğe ekleyin.  
   
-### <a name="including-visual-studio-resources"></a>Visual Studio kaynakları dahil olmak üzere  
- Kullanım [Extern](../../extensibility/extern-element.md) Visual Studio komutları ve IDE içinde kullanıcı Arabirimi öğeleri yerleştirmek için gereken menüleri tanımlayan dosyalara erişmek için öğesi. Paketiniz dışında tanımlanan komutlarının kullanacağı kullanırsanız [UsedCommands](../../extensibility/usedcommands-element.md) Visual Studio bildirmek için öğesi.  
+### <a name="including-visual-studio-resources"></a>Visual Studio kaynaklarını dahil etme  
+ Visual Studio komutlarını ve Kullanıcı arabirimi öğelerinizi IDE 'ye koymak için gereken menüleri tanımlayan dosyalara erişmek için [extern](../../extensibility/extern-element.md) öğesini kullanın. Paketinizin dışında tanımlanan komutları kullanacaksanız, Visual Studio 'Yu bilgilendirmek için [UsedCommands](../../extensibility/usedcommands-element.md) öğesini kullanın.  
   
-##### <a name="to-include-visual-studio-resources"></a>Visual Studio kaynakları eklemek için  
+##### <a name="to-include-visual-studio-resources"></a>Visual Studio kaynaklarını dahil etmek için  
   
-1. En üstündeki `CommandTable` öğesi ekleyin `Extern` başvurulan ayarlayın ve her bir dış dosya için öğe `href` dosyasının adı için öznitelik. Visual Studio kaynaklara erişmek için aşağıdaki üst bilgi dosyaları başvurabilirsiniz:  
+1. Öğesinin üst kısmında `CommandTable` , `Extern` başvurulacak her harici dosya için bir öğe ekleyin ve `href` özniteliği dosyanın adı olarak ayarlayın. Visual Studio kaynaklarına erişmek için aşağıdaki üst bilgi dosyalarına başvurabilirsiniz:  
   
-    - Stdidcmd.h, Visual Studio tarafından kullanıma sunulan tüm komutlar için kimlikleri tanımlar.  
+    - Stdidcmd. h, Visual Studio tarafından kullanıma sunulan tüm komutların kimliklerini tanımlar.  
   
-    - Vsshlids.h, komut kimlikleri için Visual Studio menü içerir.  
+    - Vsshlids. h, Visual Studio menülerinin komut kimliklerini içerir.  
   
-2. Paketiniz diğer paketleri veya Visual Studio tarafından tanımlanan herhangi bir komut çağırırsa, ekleme bir `UsedCommands` öğeden sonra `Commands` öğesi. Bu öğe ile doldurmak bir [UsedCommand](../../extensibility/usedcommand-element.md) çağırmanızı diğer bir deyişle, paketin parçası olarak her komut için öğesi. Ayarlama `guid` ve `id` özniteliklerini `UsedCommand` öğelerine GUID ve ID değerleri çağrılacak komut. GUID'leri ve kimlikleri, Visual Studio komutları bulma hakkında daha fazla bilgi için bkz. [GUID'leri ve kimlikleri, Visual Studio komutları](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md). Diğer paketlerden komutları çağırmak için GUID ve bu paketleri için .vsct dosyası sınıfında tanımlandığı gibi komut Kimliği'ni kullanın.  
+2. Paketiniz Visual Studio veya diğer paketler tarafından tanımlanan komutları çağırırsa, `UsedCommands` öğesinden sonra bir öğe ekleyin `Commands` . Bu öğeyi, paketinizin bir parçası olmayan çağırdığınız her komut için bir [UsedCommand](../../extensibility/usedcommand-element.md) öğesiyle doldurun. `guid` `id` Öğelerinin ve özniteliklerini, `UsedCommand` çağrılacak KOMUTLARıN GUID ve ID değerleriyle ayarlayın. Visual Studio komutlarının GUID 'Leri ve kimliklerini bulma hakkında daha fazla bilgi için bkz. [Visual Studio komutlarının GUID 'leri ve kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md). Diğer paketlerdeki komutları çağırmak için, bu paketler için. vsct dosyasında tanımlanan GUID ve komut KIMLIĞINI kullanın.  
   
-### <a name="declaring-ui-elements"></a>Kullanıcı Arabirimi öğeleri bildirme  
- Tüm yeni kullanıcı Arabirimi öğeleri bildirmek `Symbols` .vsct dosyası bölümünü.  
+### <a name="declaring-ui-elements"></a>UI öğelerini bildirme  
+ . Vsct dosyasının bölümündeki tüm yeni kullanıcı arabirimi öğelerini bildirin `Symbols` .  
   
-##### <a name="to-declare-ui-elements"></a>Kullanıcı Arabirimi öğeleri bildirmek için  
+##### <a name="to-declare-ui-elements"></a>UI öğelerini bildirmek için  
   
-1. İçinde `Symbols` öğesi üç ekleme [GuidSymbol](../../extensibility/guidsymbol-element.md) öğeleri. Her `GuidSymbol` öğeye sahip bir `name` özniteliği ve `value` özniteliği. Ayarlama `name` öğe amacı yansıtması adına, öznitelik. `value` Özniteliği bir GUID alır. (Bir GUID oluşturulacak **Araçları** menüsünde tıklayın **GUID Oluştur**ve ardından **biçimi kayıt defteri**.)  
+1. `Symbols`Öğesinde, üç [GuidSymbol](../../extensibility/guidsymbol-element.md) öğesi ekleyin. Her `GuidSymbol` öğenin bir `name` özniteliği ve özniteliği vardır `value` . `name`Özniteliğini öğenin amacını yansıtacak şekilde ayarlayın. `value`Öznitelik BIR GUID alır. (Bir GUID oluşturmak için, **Araçlar** menüsünde **GUID oluştur**' u ve ardından **kayıt defteri biçimi**' ni seçin.)  
   
-     İlk `GuidSymbol` öğesi paketinizi temsil eder ve genellikle alt öğesi yok. İkinci `GuidSymbol` komut ayarlayın ve tüm, menüler, grupları ve komutları tanımlayan simgelerini içeren öğesi temsil eder. Üçüncü `GuidSymbol` öğesi, görüntü deposu temsil eder ve tüm simgeleri komutlarınız için simgeler içeriyor. Simgeleri kullanan herhangi bir komut varsa, üçüncü atlayabilirsiniz `GuidSymbol` öğesi.  
+     İlk `GuidSymbol` öğe paketinizi temsil eder ve genellikle alt öğeye sahip olmaz. İkinci `GuidSymbol` öğe, komut kümesini temsil eder ve menülerinizi, gruplarınızı ve komutlarınızı tanımlayan bütün sembolleri içerir. Üçüncü `GuidSymbol` öğe, görüntü deponuzi temsil eder ve komutlarınız için tüm simgelere yönelik semboller içerir. Simgeler kullanan komutlarınız yoksa, üçüncü `GuidSymbol` öğeyi atlayabilirsiniz.  
   
-2. İçinde `GuidSymbol` , komut kümesini temsil eden bir veya daha fazla Ekle [Idsymbol](../../extensibility/idsymbol-element.md) öğeleri. Bunların her biri bir menü, araç, Grup veya kullanıcı Arabirimine eklemekte olduğunuz komut gösterir.  
+2. `GuidSymbol`Komut kümesini temsil eden öğede bir veya daha fazla [IDSymbol](../../extensibility/idsymbol-element.md) öğesi ekleyin. Her biri, Kullanıcı arabirimine eklemekte olduğunuz bir menü, araç çubuğu, Grup veya komutu temsil eder.  
   
-     Her `IDSymbol` öğe, ayarladığınız `name` öznitelik adına karşılık gelen menü, Grup veya komutu belirtmek için kullanın ve ardından `value` öğesi komut kimliğini temsil edecek bir onaltılık sayı. Hiçbir iki `IDSymbol` aynı üst öğeye sahip öğeleri aynı değere sahip olabilir.  
+     Her `IDSymbol` öğe için, `name` özniteliğini ilgili menü, Grup veya komuta başvurmak için kullanacağınız ada ayarlayın ve ardından `value` öğesini, komut kimliğini temsil edecek bir onaltılı sayı olarak ayarlayın. `IDSymbol` Aynı üst öğeye sahip iki öğe aynı değere sahip olamaz.  
   
-3. Herhangi bir UI öğelerinizi simgeler gerektiriyorsa, ekleme bir `IDSymbol` öğe için her bir simgenin `GuidSymbol` , görüntü deposu temsil eden öğe.  
+3. Kullanıcı arabirimi öğelerinden herhangi biri simge gerektiriyorsa, `IDSymbol` `GuidSymbol` görüntü deponuzu temsil eden öğeye her bir simge için bir öğe ekleyin.  
   
-### <a name="putting-ui-elements-in-the-ide"></a>Kullanıcı Arabirimi öğeleri IDE'de koyma  
- [Menüleri](../../extensibility/menus-element.md) öğesi [grupları](../../extensibility/groups-element.md) öğesi ve [düğmeleri](../../extensibility/buttons-element.md) öğe tüm menüleri, grupları ve paketinizdeki tanımlanan komutları için tanımları içerir. Bu menü, gruplar ve komutlar kullanarak ya da IDE'de put bir [üst](../../extensibility/parent-element.md) kullanarak veya UI öğesi tanımının bir parçası olan öğenin bir [CommandPlacement](../../extensibility/commandplacement-element.md) öğesi başka bir yerde tanımlanmış.  
+### <a name="putting-ui-elements-in-the-ide"></a>IDE 'de UI öğeleri yerleştirme  
+ [Menüler](../../extensibility/menus-element.md) öğesi, [gruplar](../../extensibility/groups-element.md) öğesi ve [düğmeler](../../extensibility/buttons-element.md) öğesi, paketinizdeki tanımlı tüm menülere, gruplara ve komutlara ilişkin tanımları içerir. Bu menüleri, grupları ve komutları, UI öğesi tanımının bir parçası olan bir [üst](../../extensibility/parent-element.md) öğe kullanarak ya da başka bir yerde tanımlanmış bir [commandyerleştirme](../../extensibility/commandplacement-element.md) öğesi kullanarak, IDE 'ye yerleştirin.  
   
- Her `Menu`, `Group`, ve `Button` öğeye sahip bir `guid` özniteliğini ve bir `id` özniteliği. Her zaman `guid` adını eşleştirmek için öznitelik `GuidSymbol` komutu temsil eden öğe yapmak ve `id` öznitelik adına `IDSymbol` , menü, Grup veya komututemsiledenöğe`Symbols`bölümü.  
+ Her `Menu` , `Group` ve `Button` öğesi bir `guid` özniteliğe ve bir özniteliğe sahiptir `id` . Özniteliğini her zaman, `guid` `GuidSymbol` komut grubunuzu temsil eden öğenin adıyla eşleşecek şekilde ayarlayın ve `id` özniteliği, `IDSymbol` bölümünde menü, Grup veya komutu temsil eden öğenin adına ayarlayın `Symbols` .  
   
-##### <a name="to-define-ui-elements"></a>Kullanıcı Arabirimi öğeleri tanımlamak için  
+##### <a name="to-define-ui-elements"></a>UI öğelerini tanımlamak için  
   
-1. Yeni menü, alt menüler, kısayol menüleri veya araç çubukları tanımlıyorsanız, ekleme bir `Menus` öğesine `Commands` öğesi. Ardından, her menüye oluşturulacak ekleyin bir [menü](../../extensibility/menu-element.md) öğesine `Menus` öğesi.  
+1. Yeni menüler, alt menüler, kısayol menüleri veya araç çubukları tanımlıyorsanız, `Menus` öğeye bir öğe ekleyin `Commands` . Ardından, her bir menünün oluşturulması için öğesine bir [menü](../../extensibility/menu-element.md) öğesi ekleyin `Menus` .  
   
-    Ayarlama `guid` ve `id` özniteliklerini `Menu` öğesini ve ardından `type` istediğiniz menü türü için öznitelik. Ayrıca ayarlayabilir `priority` menünün göreli konum üst grubu oluşturmak için öznitelik.  
+    `guid` `id` Öğesinin ve özniteliklerini ayarlayın `Menu` ve ardından `type` özniteliği istediğiniz menü türü olarak ayarlayın. Ayrıca, `priority` üst gruptaki menünün göreli konumunu oluşturmak için özniteliğini de ayarlayabilirsiniz.  
   
    > [!NOTE]
-   > `priority` Özniteliği araç çubukları ve bağlam menüleri için geçerli değildir.  
+   > `priority`Öznitelik, araç çubuklarına ve bağlam menülerine uygulanmaz.  
   
-2. Visual Studio IDE'deki tüm komutları menüleri ve araç çubuklarını doğrudan alt komut gruplarınca barındırılması gerekir. Yeni menü veya araç çubukları IDE ekliyorsanız, bu yeni komut grubu içermesi gerekir. Görsel olarak komutlarınızı gruplayabilirsiniz, böylece var olan menüleri ve araç çubuklarını komut gruplarıyla da ekleyebilirsiniz.  
+2. Visual Studio IDE 'deki tüm komutlar, menülerin ve araç çubuklarının doğrudan alt öğeleri olan komut grupları tarafından barındırılmalıdır. IDE 'ye yeni menüler veya araç çubukları ekliyorsanız, bu yeni komut grupları içermelidir. Ayrıca komutlarınızı görsel olarak gruplandırabilmeniz için mevcut menülere ve araç çubuklarına komut grupları ekleyebilirsiniz.  
   
-    Yeni komut gruplarını eklediğinizde, önce oluşturmanız gerekir bir `Groups` öğesini ve ardından eklemek bir [grubu](../../extensibility/group-element.md) her komut grubu için öğesi.  
+    Yeni komut grupları eklediğinizde, önce bir `Groups` öğesi oluşturmanız ve ardından her bir komut grubu için bir [Grup](../../extensibility/group-element.md) öğesine eklemeniz gerekir.  
   
-    Ayarlama `guid` ve `id` öznitelikleri her `Group` öğesini ve ardından `priority` göreli konumunu üst menüde grubu oluşturmak için öznitelik. Daha fazla bilgi için [, yeniden kullanılabilir grupları düğmeler oluşturma](../../extensibility/creating-reusable-groups-of-buttons.md).  
+    `guid` `id` Her öğenin ve özniteliklerini ayarlayın `Group` ve sonra `priority` üst menüdeki grubun göreli konumunu oluşturmak için özniteliğini ayarlayın. Daha fazla bilgi için bkz. yeniden [kullanılabilir düğme grupları oluşturma](../../extensibility/creating-reusable-groups-of-buttons.md).  
   
-3. IDE için yeni komutlar ekliyorsanız, ekleme bir `Buttons` öğesine `Commands` öğesi. Ardından, her komut için ekleme bir [düğmesi](../../extensibility/button-element.md) öğesine `Buttons` öğesi.  
+3. IDE 'ye yeni komutlar ekliyorsanız, öğesine bir `Buttons` öğesi ekleyin `Commands` . Ardından, her komut için öğesine bir [Button](../../extensibility/button-element.md) öğesi ekleyin `Buttons` .  
   
-   1. Ayarlama `guid` ve `id` öznitelikleri her `Button` öğesini ve ardından `type` istediğiniz düğme türü için öznitelik. Ayrıca ayarlayabilir `priority` komutu göreli konumunu üst grubu oluşturmak için öznitelik.  
-  
-      > [!NOTE]
-      > Kullanım `type="button"` standart menü komutları ve araç çubuğu düğmeleri için.  
-  
-   2. İçinde `Button` öğe, Ekle bir [dizeleri](../../extensibility/strings-element.md) öğesini içeren bir [ButtonText](../../extensibility/buttontext-element.md) öğesi ve bir [CommandName](../../extensibility/commandname-element.md) öğesi. `ButtonText` Öğesi için menü öğesi ya da araç çubuğu düğmesi için araç ipucu metin etiketi sağlar. `CommandName` Öğesi de komut içinde kullanmak için komutu adını sağlar.  
-  
-   3. Komutunuz bir simge varsa, oluşturun bir [simgesi](../../extensibility/icon-element.md) öğesinde `Button` öğesi ve kümesi kendi `guid` ve `id` özniteliklerini `Bitmap` öğesi simgesi.  
+   1. `guid` `id` Her öğenin ve özniteliklerini ayarlayın `Button` ve ardından `type` özniteliği istediğiniz düğme türüne ayarlayın. Ayrıca, `priority` üst grupta komutun göreli konumunu oluşturmak için özniteliğini de ayarlayabilirsiniz.  
   
       > [!NOTE]
-      > Araç çubuğu düğmeleri simgeler olması gerekir.  
+      > `type="button"`Araç çubuklarındaki standart menü komutları ve düğmeleri için kullanın.  
   
-      Daha fazla bilgi için [MenuCommands Vs. OleMenuCommands](../../misc/menucommands-vs-olemenucommands.md).  
+   2. `Button`Öğesinde, bir [ButtonText](../../extensibility/buttontext-element.md) öğesi ve [CommandName](../../extensibility/commandname-element.md) öğesi içeren bir [dizeler](../../extensibility/strings-element.md) öğesi ekleyin. `ButtonText`Öğesi, bir menü öğesi için metin etiketi veya bir araç çubuğu düğmesi için araç ipucu sağlar. `CommandName`Öğesi komut kutusu içinde kullanılacak komutun adını sağlar.  
   
-4. Simgeler, komutlardan herhangi birine ihtiyacınız varsa ekleme bir [bit eşlemler](../../extensibility/bitmaps-element.md) öğesine `Commands` öğesi. Ardından, her bir simgeyi ekleyin bir [bit eşlem](../../extensibility/bitmap-element.md) öğesine `Bitmaps` öğesi. Bit eşlem kaynağının konumunu belirttiğiniz budur. Daha fazla bilgi için [menü komutları ekleme simgeleri](../../extensibility/adding-icons-to-menu-commands.md).  
+   3. Komutunuz bir simgeye sahip olur, öğesinde bir [simge](../../extensibility/icon-element.md) öğesi oluşturun `Button` ve `guid` ve `id` özniteliklerini `Bitmap` simgenin öğesi olarak ayarlayın.  
   
-   Çoğu menüler, gruplar ve komutlar doğru yerleştirmek için ana öğe yapıdaki güvenebilirsiniz. Çok büyük komut kümesi veya bir menü, Grup veya komut birden fazla yerde görünmelidir, belirttiğiniz komut yerleştirme öneririz.  
+      > [!NOTE]
+      > Araç çubuğu düğmelerinde simgeler olmalıdır.  
   
-##### <a name="to-rely-on-parenting-to-place-ui-elements-in-the-ide"></a>IDE içinde kullanıcı Arabirimi öğeleri yerleştirmek için ana öğe etmenin  
+      Daha fazla bilgi için bkz. [MenuCommands vs. OleMenuCommands](../../misc/menucommands-vs-olemenucommands.md).  
   
-1. Tipik ana öğe için oluşturma bir `Parent` her öğe `Menu`, `Group`, ve `Command` paketinizdeki tanımlanan öğe.  
+4. Komutlarınızın herhangi biri simge gerektiriyorsa, öğeye bir [bit eşlem](../../extensibility/bitmaps-element.md) öğesi ekleyin `Commands` . Ardından, her simge için öğesine bir [bit eşlem](../../extensibility/bitmap-element.md) öğesi ekleyin `Bitmaps` . Bu, bit eşlem kaynağının konumunu belirlediğiniz yerdir. Daha fazla bilgi için bkz. [menü komutlarına simgeler ekleme](../../extensibility/adding-icons-to-menu-commands.md).  
   
-    Hedefi `Parent` öğedir menü veya menü içerecek grup, Grup veya komutu.  
+   En fazla menü, Grup ve komutları doğru şekilde yerleştirmek için üst yapıya sahip olabilirsiniz. Çok büyük komut kümelerinde veya bir menü, Grup veya komutun birden çok yerde görünmesi gerektiğinde, komut yerleşimini belirtmenizi öneririz.  
   
-   1. Ayarlama `guid` öznitelik adına `GuidSymbol` komut kümesini tanımlayan öğe. Hedef öğe paketinizin bir parçası değilse, GUID karşılık gelen .vsct dosyasında tanımlanan söz konusu komut kümesi için kullanın.  
+##### <a name="to-rely-on-parenting-to-place-ui-elements-in-the-ide"></a>IDE 'ye UI öğeleri yerleştirmek için üst öğeye güvenme  
   
-   2. Ayarlama `id` eşleşecek şekilde öznitelik `id` hedef menüsü veya grubun özniteliği. Menüler ve Visual Studio tarafından sunulan grupları listesi için bkz. [GUID'leri ve kimlikleri, Visual Studio menülerinin](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md) veya [GUID'leri ve kimlikleri, Visual Studio araç çubuklarının](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md).  
+1. Tipik bir üst öğe için, `Parent` her, `Menu` `Group` , ve içinde bir öğesi oluşturun `Command` .  
   
-   Çok sayıda IDE'de yerleştirmek için kullanıcı Arabirimi öğeleri varsa veya birden fazla yerde görünmesi gereken öğeler varsa, bunların yerleşimi tanımlayın [CommandPlacements](../../extensibility/commandplacements-element.md) öğesi, aşağıdaki adımlarda gösterildiği gibi.  
+    Öğesinin hedefi, `Parent` menü, Grup veya komutu içerecek olan menü ya da gruptur.  
   
-##### <a name="to-use-command-placement-to-place-ui-elements-in-the-ide"></a>IDE içinde kullanıcı Arabirimi öğeleri yerleştirmek için komut yerleştirmeyi kullanmak için  
+   1. Özniteliği, `guid` `GuidSymbol` komut kümesini tanımlayan öğenin adına ayarlayın. Hedef öğe paketinizin bir parçası değilse, ilgili. vsct dosyasında tanımlandığı şekilde, bu komut kümesi için GUID kullanın.  
   
-1. Sonra `Commands` öğe, Ekle bir `CommandPlacements` öğesi.  
+   2. `id`Özniteliği `id` hedef menünün veya grubun özniteliğiyle eşleşecek şekilde ayarlayın. Visual Studio tarafından sunulan menülerin ve grupların listesi için bkz. Visual [Studio menülerinin GUID 'leri ve kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md) , [Visual Studio araç çubuklarının GUID 'leri ve kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md).  
   
-2. İçinde `CommandPlacements` öğesi ekleme bir `CommandPlacement` öğesi her menü, Grup veya yerleştirmek için komutu.  
+   IDE 'ye yerleştirilecek çok sayıda UI öğesi varsa veya birden fazla yerde görünmesi gereken öğeleriniz varsa, aşağıdaki adımlarda gösterildiği gibi, bu öğelerin konumlarını [CommandPlacements](../../extensibility/commandplacements-element.md) öğesinde tanımlayın.  
   
-    Her `CommandPlacement` öğesi veya `Parent` öğesi, tek bir IDE konumda bir menü, Grup veya komut yerleştirir. Bir kullanıcı Arabirimi öğesi yalnızca bir üste sahip olabilir, ancak birden çok komut yerleşimi sahip olabilir. Bir kullanıcı Arabirimi öğesi birden fazla konumda yerleştirmek için eklemek bir `CommandPlacement` her konum için öğesi.  
+##### <a name="to-use-command-placement-to-place-ui-elements-in-the-ide"></a>IDE 'ye UI öğeleri yerleştirmek için komut yerleşimini kullanmak için  
   
-3. Ayarlama `guid` ve `id` öznitelikleri her `CommandPlacement` barındırma menü veya grubu, olduğu gibi öğe olduğu için bir `Parent` öğesi. Ayrıca `priority` göreli konumunu UI öğesi oluşturmak için öznitelik.  
+1. `Commands` öğesinden sonra `CommandPlacements` öğesini ekleyin.  
   
-   Ana öğe tarafından yerleştirme ve komut yerleştirme karıştırabilirsiniz. Ancak, çok büyük komut kümeleri için yalnızca komut yerleştirme kullanmanızı öneririz.  
+2. Öğesinde, `CommandPlacements` `CommandPlacement` yerleştirilecek her menü, Grup veya komut için bir öğe ekleyin.  
+  
+    Her `CommandPlacement` öğe veya `Parent` öğe bir IDE konumunda bir menü, Grup veya komut koyar. UI öğesi yalnızca bir üst öğeye sahip olabilir, ancak birden fazla komut yerleşimi olabilir. Birden çok konuma bir UI öğesi yerleştirmek için, `CommandPlacement` her konum için bir öğe ekleyin.  
+  
+3. `guid` `id` Her öğenin ve özniteliklerini `CommandPlacement` bir öğesi için yaptığınız gibi barındırma menüsüne veya gruba ayarlayın `Parent` . Ayrıca, `priority` Kullanıcı arabirimi öğesinin göreli konumunu oluşturmak için özniteliğini de ayarlayabilirsiniz.  
+  
+   Yerleşimi, olma ve komut yerleşimi ile karıştırabilirsiniz. Ancak, çok büyük komut kümeleri için yalnızca komut yerleşimini kullanmanızı öneririz.  
   
 ### <a name="adding-specialized-behaviors"></a>Özel davranışlar ekleme  
- Kullanabileceğiniz [CommandFlag](../../extensibility/command-flag-element.md) öğeler örneğin menüler ve komutlar davranışını değiştirmek için görünümlerini ve Görünürlüğü değiştirmek için. Kullanarak bir komut görüntülendiğinde de etkileyebilirsiniz [VisibilityConstraints](../../extensibility/visibilityconstraints-element.md), veya klavye kısayollarını kullanarak [KeyBindings](../../extensibility/keybindings-element.md). Menüler ve komutlar zaten belirli bir türdeki yerleşik davranışları özelleştirilmiş.  
+ Menü ve komutların davranışını değiştirmek, örneğin görünüşünü ve görünürlüğünü değiştirmek için [CommandFlag](../../extensibility/command-flag-element.md) öğelerini kullanabilirsiniz. Ayrıca, bir komutun [Visibilitykısıtlamalarını](../../extensibility/visibilityconstraints-element.md)kullanarak görünür olduğunu veya [keybindings](../../extensibility/keybindings-element.md)kullanarak klavye kısayolları ekleneceğini de etkileyebilirsiniz. Bazı menü ve komut türleri, içinde yerleşik olan özel davranışları zaten vardır.  
   
 ##### <a name="to-add-specialized-behaviors"></a>Özel davranışlar eklemek için  
   
-1. Bir çözüm yüklendiğinde bir kullanıcı Arabirimi öğesi gibi belirli kullanıcı Arabirimi bağlamları içinde yalnızca görünür yapmak için görünürlük kısıtlamaları kullanın.  
+1. Bir UI öğesini yalnızca belirli kullanıcı arabirimi bağlamlarında görünür hale getirmek için örneğin, bir çözüm yüklendiğinde görünürlük kısıtlamalarını kullanın.  
   
-   1. Sonra `Commands` öğe, Ekle bir `VisibilityConstraints` öğesi.  
+   1. `Commands` öğesinden sonra `VisibilityConstraints` öğesini ekleyin.  
   
-   2. Her kullanıcı Arabirimi öğesi sınırlamak ekleme bir [Visibilityıtem](../../extensibility/visibilityitem-element.md) öğesi.  
+   2. Kısıtlamak için her kullanıcı arabirimi öğesi için bir [VisibilityItem](../../extensibility/visibilityitem-element.md) öğesi ekleyin.  
   
-   3. Her `VisibilityItem` öğe, ayarladığınız `guid` ve `id` öznitelikleri menü, grubu veya komut ve ardından `context` tanımlandığı gibi istediğiniz kullanıcı Arabirimi bağlamına özniteliği <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> sınıfı. Daha fazla bilgi için [Visibilityıtem öğesi](../../extensibility/visibilityitem-element.md).  
+   3. Her öğe için, `VisibilityItem` `guid` ve `id` özniteliklerini menü, Grup veya komuta ayarlayın ve ardından `context` özniteliği, sınıfında tanımlandığı şekilde istediğiniz kullanıcı arabirimi bağlamına ayarlayın <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> . Daha fazla bilgi için bkz. [VisibilityItem öğesi](../../extensibility/visibilityitem-element.md).  
   
-2. Kod görünürlüğünü ya da bir kullanıcı Arabirimi öğesi kullanılabilirliğini ayarlamak için bir veya daha fazla aşağıdaki komut bayrakları kullanın:  
+2. Koddaki bir kullanıcı arabirimi öğesinin görünürlüğünü veya kullanılabilirliğini ayarlamak için aşağıdaki komut bayraklarını bir veya daha fazla kullanın:  
   
    - DefaultDisabled  
   
-   - DefaultInvisible  
+   - Defaulınvisible  
   
    - DynamicItemStart  
   
@@ -165,15 +165,15 @@ Bu belge, menü öğeleri, araç çubukları ve diğer kullanıcı arabirimi (UI
   
    - NotInTBList  
   
-     Daha fazla bilgi için [Command Flag öğesi](../../extensibility/command-flag-element.md).  
+     Daha fazla bilgi için bkz. [komut bayrağı öğesi](../../extensibility/command-flag-element.md).  
   
-3. Nasıl bir öğe görünür veya görünümünü dinamik olarak değiştirmenize değiştirmek için bir veya daha fazla aşağıdaki komut bayrakları kullanın:  
+3. Bir öğenin nasıl göründüğünü değiştirmek veya görünümünü dinamik olarak değiştirmek için aşağıdaki komut bayraklarını bir veya daha fazlasını kullanın:  
   
    - AlwaysCreate  
   
-   - CommandWellOnly  
+   - Yalnızca commandwell  
   
-   - DefaultDocked  
+   - Defaultsabitlenmiş  
   
    - DontCache  
   
@@ -183,9 +183,9 @@ Bu belge, menü öğeleri, araç çubukları ve diğer kullanıcı arabirimi (UI
   
    - IconAndText  
   
-   - PICT  
+   - Resim  
   
-   - StretchHorizontally  
+   - Yatay olarak  
   
    - TextMenuUseButton  
   
@@ -193,17 +193,17 @@ Bu belge, menü öğeleri, araç çubukları ve diğer kullanıcı arabirimi (UI
   
    - TextOnly  
   
-     Daha fazla bilgi için [Command Flag öğesi](../../extensibility/command-flag-element.md).  
+     Daha fazla bilgi için bkz. [komut bayrağı öğesi](../../extensibility/command-flag-element.md).  
   
-4. Komutları aldığında, bir öğenin nasıl tepki verdiğini değiştirmek için bir veya daha fazla aşağıdaki komut bayrakları kullanın:  
+4. Bir öğenin komutları aldığında nasıl yeniden çalıştığını değiştirmek için, aşağıdaki komut bayraklarını bir veya daha fazlasını kullanın:  
   
    - AllowParams  
   
    - CaseSensitive  
   
-   - CommandWellOnly  
+   - Yalnızca commandwell  
   
-   - Süzme  
+   - 'Nı  
   
    - NoAutoComplete  
   
@@ -219,23 +219,23 @@ Bu belge, menü öğeleri, araç çubukları ve diğer kullanıcı arabirimi (UI
   
    - TextIsAnchorCommand  
   
-     Daha fazla bilgi için [Command Flag öğesi](../../extensibility/command-flag-element.md).  
+     Daha fazla bilgi için bkz. [komut bayrağı öğesi](../../extensibility/command-flag-element.md).  
   
-5. Menü bağımlı klavye kısayolu bir menü veya menü bir öğe eklemek için bir ve işareti karakter ekleyin ('& ') içinde `ButtonText` menü veya menü öğesi için öğesi. Üst menü açık olduğunda ve işareti izleyen karakterin etkin klavye kısayolu'dir.  
+5. Menüye veya menüdeki bir öğeye menü bağımlı klavye kısayolu eklemek için, `ButtonText` menü veya menü öğesi için öğesine bir ampersan karakteri (' & ') ekleyin. Ve işaretini izleyen karakter, üst menü açık olduğunda etkin klavye kısayoludur.  
   
-6. Bir menü bağımsız klavye kısayol için bir komut eklemek için kullanın [KeyBindings](../../extensibility/keybindings-element.md). Daha fazla bilgi için [KeyBinding öğesi](../../extensibility/keybinding-element.md).  
+6. Bir komuta menü bağımsız klavye kısayolu eklemek için [keybindings](../../extensibility/keybindings-element.md)kullanın. Daha fazla bilgi için bkz. [KeyBinding öğesi](../../extensibility/keybinding-element.md).  
   
-7. Menü metni yerelleştirmek için kullanmak `LocCanonicalName` öğesi. Daha fazla bilgi için [Strings öğesi](../../extensibility/strings-element.md).  
+7. Menü metnini yerelleştirmek için öğesini kullanın `LocCanonicalName` . Daha fazla bilgi için bkz. [dizeler öğesi](../../extensibility/strings-element.md).  
   
-   Bazı menü ve düğme türlerine özel davranışları içerir. Aşağıdaki tabloda, bazı özel menü ve düğme türleri açıklanmaktadır. Diğer türleri için bkz: `types` özniteliği açıklamasında [menü öğesi](../../extensibility/menu-element.md), [Button öğesi](../../extensibility/button-element.md), ve [Combos öğesi](../../extensibility/combo-element.md).  
+   Bazı menü ve düğme türleri özel davranışları içerir. Aşağıdaki tabloda bazı özel menü ve düğme türleri açıklanmaktadır. Diğer türler için, `types` [menü öğesi](../../extensibility/menu-element.md), [düğme öğesi](../../extensibility/button-element.md)ve [Birleşik öğe öğesi](../../extensibility/combo-element.md)içindeki öznitelik açıklamalarını inceleyin.  
   
-   Birleşik giriş kutusu  
-   Birleşik giriş kutusu araç çubuğunda kullanılabilir açılır bir listesidir. Birleşik giriş kutuları için kullanıcı Arabirimi eklemek için oluşturun bir [Combos](../../extensibility/combos-element.md) öğesinde `Commands` öğesi. Daha sonra ekleyin `Combos` öğesi bir `Combo` eklemek her bir birleşik giriş kutusu için öğesi. `Combo` öğelere sahip aynı öznitelikleri ve alt öğeleri olarak `Button` öğeleri ve ayrıca `DefaultWidth` ve `idCommandList` öznitelikleri. `DefaultWidth` Özniteliği genişliğini piksel cinsinden ayarlar ve `idCommandList` özniteliği işaret birleşik giriş kutusunu doldurmak için kullanılan bir komut kimliği. Daha fazla bilgi için `Combo` öğesi belgeleri.  
+   Açılır kutu  
+   Birleşik giriş kutusu, bir araç çubuğunda kullanılabilen bir açılan liste listesidir. Kullanıcı arabirimine Birleşik giriş kutuları eklemek için, öğesinde bir [combos](../../extensibility/combos-element.md) öğesi oluşturun `Commands` . Sonra `Combos` `Combo` eklenecek her Birleşik giriş kutusu için öğesi öğesine ekleyin. `Combo` öğeler, öğelerle aynı özniteliklere ve alt öğelere sahiptir `Button` ve ayrıca `DefaultWidth` ve özniteliklerini de vardır `idCommandList` . `DefaultWidth`Özniteliği piksel cinsinden genişliği ayarlar ve `idCommandList` öznitelik, Birleşik giriş kutusunu doldurmak için kullanılan BIR komut kimliğini gösterir. Daha fazla bilgi için, bkz `Combo` . öğe belgeleri.  
   
    MenuController  
-   Bir menü denetleyicisi yanındaki ok bulunan bir düğme değil. Oka tıklayarak bir listesi açılır. Menü denetleyicisi için kullanıcı Arabirimi eklemek için oluşturun bir `Menu` öğesi ve kümesi kendi `type` özniteliğini **MenuController** veya **MenuControllerLatched**istediğiniz davranışı bağlı olarak. Menü denetleyicisi doldurmak için üst öğesi olarak ayarlanmış bir `Group` öğesi. Menü denetleyicisi bu grubun tüm alt öğeleri, aşağı açılan listede görüntülenir.  
+   Bir menü denetleyicisi, yanında bir ok olan bir düğmedir. Oka tıkladığınızda bir liste açılır. Kullanıcı arabirimine bir menü denetleyicisi eklemek için, bir öğe oluşturun `Menu` ve `type` özniteliğini istediğiniz davranışa bağlı olarak **MenuController** veya **menuıcontrollerlalenmiş**olarak ayarlayın. Bir menü denetleyicisini doldurmak için, onu bir öğesinin üst öğesi olarak ayarlayın `Group` . Menü denetleyicisi açılan listesinde bu grubun tüm alt öğelerini görüntüler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Menüleri ve komutlari genişletme komutları](../../extensibility/extending-menus-and-commands.md)   
+ [Menüleri ve komutları genişletme](../../extensibility/extending-menus-and-commands.md)   
  [Visual Studio komut tablosu (. Vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
  [VSCT XML Şeması Başvurusu](../../extensibility/vsct-xml-schema-reference.md)

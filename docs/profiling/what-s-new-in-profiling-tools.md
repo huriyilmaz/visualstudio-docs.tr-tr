@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 2017'de Profil Oluşturmada Yenilikler | Microsoft Dokümanlar
+title: Visual Studio 2017 ' de profil oluşturma yenilikleri | Microsoft Docs
 titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -14,27 +14,27 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: 0512c6e95f0a26184593f7af5ba08c31c33a3299
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71128334"
 ---
-# <a name="whats-new-in-profiling-tools-in-includevs_dev15"></a>Profil oluşturma araçlarındaki yenilikler[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
+# <a name="whats-new-in-profiling-tools-in-includevs_dev15"></a>İçindeki profil oluşturma araçlarındaki yenilikler [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 
-Tanılama Araçları, uygulamanızda düzeltilmesi gereken sorunları belirlemenize yardımcı olacak yeni görselleştirmeler içerir. Tanılama Araçları artık ASP.NET uygulamaları için destek içerir.
+Tanılama araçları, uygulamanızda düzeltilmesi gereken sorunları belirlemenize yardımcı olacak yeni görselleştirmeler içerir. Tanılama araçları artık ASP.NET uygulamaları için destek içerir.
 
-Daha fazla bilgi için [Yayın [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]notları'na ](/visualstudio/releasenotes/vs2017-relnotes)bakın.
+Daha fazla bilgi için [sürüm notlarına [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] ](/visualstudio/releasenotes/vs2017-relnotes)bakın.
 
-Performans çözümlemesiniz için önemli alanlara odaklanmanıza yardımcı olan araçlara bir **Özet** sekmesi eklendi. Bu sekme, kaç olayın oluştuğunu gösterir, yığının anlık görüntülerini almanızı sağlar ve CPU kullanım veri toplamayı hızla etkinleştirmenizi sağlar. Bu görünüm, uygulama [öngörülerini](/azure/azure-monitor/app/visual-studio) veya [Kullanıcı Gçözümlemesi](/visualstudio/releasenotes/vs2017-relnotes) olaylarını gösterir. Buna ek olarak, Visual Studio Enterprise için, bu görünüm de IntelliTrace olayları gösterir.
+Performans analiziniz için önemli alanlara odaklanmanıza yardımcı olan araçlara bir **Özet** sekmesi eklenmiştir. Bu sekme, kaç olay oluştuğunu gösterir, yığının anlık görüntülerini almanızı sağlar ve CPU kullanımı veri toplamayı hızlıca etkinleştirmenizi sağlar. Bu görünümde tüm [Application Insights](/azure/azure-monitor/app/visual-studio) veya [UI çözümleme](/visualstudio/releasenotes/vs2017-relnotes) olayları gösterilir. Ayrıca, Visual Studio Enterprise için de bu görünüm IntelliTrace olaylarını gösterir.
 
-![Tanılama Araçları Özet sekmesi](../profiling/media/diag-tools-summary-tab-2.png "DiagToolsSummaryTab")
+![Tanılama araçları Özet sekmesi](../profiling/media/diag-tools-summary-tab-2.png "DiagToolsSummaryTab")
 
-CPU kullanım aracı, performans sorunlarına neden olma olasılığı en yüksek işlevleri belirlemenize yardımcı olacak [yeni görselleştirmelere](../profiling/Beginners-Guide-to-Performance-Profiling.md) sahiptir. Yeni **Arayan/Callee** görünümü, seçili bir işleve yapılan işlev çağrılarının maliyetlerini araştırmanıza olanak tanır.
+CPU kullanım aracında, performans sorunlarına neden olabilecek işlevleri belirlemenize yardımcı olacak [Yeni görselleştirmeler](../profiling/Beginners-Guide-to-Performance-Profiling.md) vardır. Yeni **arayan/çağrılan** görünümü seçili bir işleve ve bu işlevden yapılan işlev çağrılarının maliyetlerini araştırmanıza olanak sağlar.
 
-![Tanılama Araçları arayan callee görünümü](../profiling/media/diag-tools-caller-callee-2.png "DiagToolsCallerCallee")
+![Tanılama araçları çağıran çağrılan görünümü](../profiling/media/diag-tools-caller-callee-2.png "Diagtoolscallerçağrılan")
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio'daki Profil](../profiling/index.yml)
+- [Visual Studio 'da profil](../profiling/index.yml)
 - [Profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md)

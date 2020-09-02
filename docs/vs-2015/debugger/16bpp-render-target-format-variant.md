@@ -1,5 +1,5 @@
 ---
-title: 16bpp işleme hedef biçim çeşidi | Microsoft Docs
+title: 16bpp Işleme hedefi biçim değişkeni | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,44 +10,44 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7b315c7ab9bb10d039e81ba26b1beb9c4447a205
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157566"
 ---
 # <a name="16bpp-render-target-format-variant"></a>16bpp İşleme Hedef Biçim Çeşidi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Piksel biçimlendirmek için DXGI_FORMAT_B5G6R5_UNORM tüm ayarlar, işleme hedefleri ve arabellek yedekleyin.  
+Tüm işleme hedefleri ve geri arabellekler için piksel biçimini DXGI_FORMAT_B5G6R5_UNORM olarak ayarlar.  
   
-## <a name="interpretation"></a>Yorumu  
- İşleme hedefi veya geri arabelleği genellikle B8G8R8A8_UNORM gibi bir 32bpp (32 bit / piksel) biçimi kullanır. 32bpp biçimleri, çok miktarda bellek bant genişliği tüketebilir. B5G6R5_UNORM biçimi 32bpp biçimlerinin boyutunda bir 16bpp biçimde olduğundan, bunu kullanan baskısı bellek bant genişliği, ancak daha az renk uygunluk, hafifletmek.  
+## <a name="interpretation"></a>Yorumlama  
+ Bir işleme hedefi veya arka arabellek genellikle B8G8R8A8_UNORM gibi bir 32bpp (piksel başına 32 bit) biçimi kullanır. 32bpp biçimleri çok fazla bellek bant genişliği kullanabilir. B5G6R5_UNORM biçimi, 32bpp biçimlerinin yarısı olan bir 16bpp biçim olduğundan, bunu kullanmak bellek bant genişliğine göre azalmayı, ancak azaltılmış renk uygunluğuna karşı düşürebilir.  
   
- Bu değişken, bir büyük bir performans kazancı gösteriyorsa, bu büyük olasılıkla uygulamanızı çok fazla bellek bant genişliği tüketir gösterir. Profili oluşturulan çerçeve overdraw önemli ölçüde düşebilir veya çok sayıda alfa karıştırma içeren performans artışı özellikle bildirilebilir.  
+ Bu çeşit büyük bir performans kazancı gösteriyorsa, büyük olasılıkla uygulamanızın çok fazla bellek bant genişliği tükettiğini gösterir. Profil oluşturma çerçevesi, çok fazla sayıda fazla çizmeden veya çok sayıda Alfa karışımı içerdiğinde, özellikle de kullanılabilir.  
   
- Uygulamanız tarafından işlenen sahneler türlerini yüksek kaliteli renk üretimi gerektirmeyen, alfa kanalı için işleme hedefi gerektirmeyen ve kesintisiz gradyanlar genellikle içermeyen — daha az renk altında yapıtları bant oluşturma için açık olan uygunluk — bellek bant genişliği kullanımını azaltmak için 16bpp işleme hedef biçim kullanmayı düşünün.  
+ Uygulamanız tarafından işlenen sahne türleri için yüksek uygunlukta renk üretilmesi gerekmiyorsa, işleme hedefinin bir alfa kanalına sahip olmasını gerektirmez ve genellikle düşük renk uygunluğu altında bant yapıtlarına açıktır olan kesintisiz degradeler kullanmayın; bellek bant genişliği kullanımını azaltmak için bir 16bpp işleme hedefi biçimi kullanmayı düşünün.  
   
- Yüksek kaliteli renk çoğaltılması ya da bir alfa kanalı uygulamanızda işlenen Sahne gerektirir ya da kesintisiz gradyanlar ortak, bellek bant genişliği kullanımını azaltmak için diğer stratejiler göz önünde — Örneğin, overdraw veya alfa karıştırma miktarını azaltmayı framebuffer boyutunu azaltma veya sıkıştırmayı etkinleştirme veya kendi boyutlarını azaltmak daha az bellek bant genişliği tüketmeye doku kaynakları değiştirme. Her zamanki şekilde resmi kalite herhangi birini bu iyileştirmeler ile gelen dengelemeler düşünmek zorunda.  
+ Uygulamanızda işlenen sahneler, Yüksek uygunluğa sahip bir renk üretilmesi veya bir alfa kanalı gerektiriyorsa ya da düzgün degradeler ortak ise, bellek bant genişliği kullanımını azaltmaya yönelik diğer stratejileri göz önünde bulundurun — Örneğin, fazla çizim veya alfa karıştırma miktarını azaltma, framebuffer boyutlarını azaltma veya doku kaynaklarını daha az bellek bant genişliği tüketerek boyutları azaltma veya boyutlarını azaltma. Her zamanki gibi, bu iyileştirmelerin herhangi biriyle birlikte gelen görüntü kalitesi dengelerini göz önünde bulundurmanız gerekir.  
   
- Uygulamanızı bir 16bpp arka arabellek geçiş yapmasını avantaj elde edecektir, ancak bir parçası, takas zinciri DXGI_FORMAT_B5G6R5_UNORM desteklenen arka arabellek biçimi kullanılarak oluşturulan takas zincirleri için olmadığı için ek adımlar uygulamanız sahip `D3D11CreateDeviceAndSwapChain` veya `IDXGIFactory::CreateSwapChain`. Bunun yerine, kullanarak B5G6R5_UNORM biçimi işleme hedefi oluşturmak kullandığınız `CreateTexture2D` ve bunun yerine işlemek için. Ardından, takas zinciri üzerinde mevcut çağırmadan önce takas zinciri arka arabelleği üzerine işleme hedefi bir tam ekran dört işleme hedefi olarak, kaynak doku ile çizerek kopyalayın. Bu bazı bellek bant genişliği tüketir fazladan bir adım olsa da, bunlar 16bpp işleme hedef etkilediğinden çoğu oluşturma işlemi daha az bant genişliği tüketir; ardından bu işleme hedefi için takas zinciri arka arabelleği kopyalayarak tüketilen daha fazla bant genişliği kaydederse, işleme performansı geliştirildi.  
+ Uygulamanızın bir 16bpp geri arabelleğine geçiş yapma avantajı olsa da, takas zincirinizin bir parçası olduğu için DXGI_FORMAT_B5G6R5_UNORM, veya kullanılarak oluşturulan takas zincirlerinin desteklenen bir geri arabellek biçimi olmadığından ek adımlar gerçekleştirmeniz gerekir `D3D11CreateDeviceAndSwapChain` `IDXGIFactory::CreateSwapChain` . Bunun yerine, kullanarak B5G6R5_UNORM bir biçim oluşturma hedefi oluşturmanız `CreateTexture2D` ve bunu bunun yerine işlemek zorunda olmanız gerekir. Daha sonra, takas zincirinizde çağırmadan önce, kaynak dokunuz olarak işleme hedefi ile bir tam ekran dörtlü çizerek işleme hedefini takas zinciri biriktirme arabelleği üzerine kopyalayın. Bu, bazı bellek bant genişliğine sahip olacak ek bir adım olmakla birlikte, en fazla işleme işlemi 16bpp işleme hedefini etkilediği için daha az bant genişliği tüketir; Bu işlem, işleme hedefini takas zinciri biriktirme arabelleğine kopyalayarak tüketildiğinden daha fazla bant genişliği kaydederse, işleme performansı geliştirildi.  
   
- Döşenmiş işleme tekniklerini GPU mimarileri framebuffer daha büyük bir kısmını her kutucuğun yerel framebuffer önbellekte sığabilen 16bpp framebuffer biçimi kullanarak önemli performans avantajlarını görebiliyorum. Döşenmiş işleme mimarisi, bazen ahizeleri mobil ve tablet bilgisayarlar Gpu'lar bulunur; Bu özel dışında nadiren görünürler.  
+ Çerçeve arabelleğinin daha büyük bir bölümü her bir kutucuğun yerel framebuffer önbelleğine sığabileceğinden, döşenmiş işleme tekniklerini kullanan GPU mimarileri, bir 16bpp framebuffer biçimi kullanarak önemli performans avantajlarını görebilirler. Döşenmiş işleme mimarileri, bazen mobil eller ve tablet bilgisayarlardaki GPU 'Larda bulunur; Bu Niche dışında nadiren görünürler.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşleme hedef biçim üzerinde yapılan her çağrı için DXGI_FORMAT_B5G6R5_UNORM sıfırlanır `ID3D11Device::CreateTexture2D` işleme hedefi oluşturur. Özellikle, pDesc içinde geçirilen D3D11_TEXTURE2D_DESC nesnesi bir işleme hedefi açıkladığında biçimi geçersiz; Yani:  
+ İşleme hedefi biçimi, işleme hedefi oluşturan her çağrıda DXGI_FORMAT_B5G6R5_UNORM sıfırlanır `ID3D11Device::CreateTexture2D` . Özellikle, pDesc içinde geçirilen D3D11_TEXTURE2D_DESC nesne bir işleme hedefini açıkladığı zaman biçim geçersiz kılınır; Yani:  
   
-- BindFlags üyesi, ayarlayın D3D11_BIND_REDNER_TARGET bayrağı vardır.  
+- BindFlags üyesinin D3D11_BIND_REDNER_TARGET bayrak kümesi vardır.  
   
-- BindFlags üye temizlenmiş D3D11_BIND_DEPTH_STENCIL bayrağı vardır.  
+- BindFlags üyesi D3D11_BIND_DEPTH_STENCIL bayrağını temizledi.  
   
-- Kullanım üye D3D11_USAGE_DEFAULT için ayarlanır.  
+- Kullanım üyesi D3D11_USAGE_DEFAULT olarak ayarlanır.  
   
 ## <a name="restrictions-and-limitations"></a>Kısıtlamalar ve sınırlamalar  
- Alfa kanalını B5G6R5 biçim olmadığından, alfa içerik bu değişken tarafından korunmaz. Uygulamanızın işleme, işleme hedefi bir alfa kanalına gerektiriyorsa, yalnızca B5G6R5 biçimine geçiş yapamazsınız.  
+ B5G6R5 biçiminde bir alfa kanalı olmadığından, Alfa içeriği bu değişken tarafından korunmaz. Uygulamanızın işleme, oluşturma hedefinde bir alfa kanalı gerektiriyorsa, yalnızca B5G6R5 biçimine geçiş yapamazsınız.  
   
 ## <a name="example"></a>Örnek  
- **16bpp işleme hedef biçim** değişken çoğaltılamaz kullanılarak oluşturulan işleme hedefleri için `CreateTexture2D` aşağıdakine benzer bir kod kullanarak:  
+ Aşağıdaki gibi kodla kullanılarak oluşturulan işleme hedefleri için **16bpp Işleme hedefi biçim** değişkeni yeniden oluşturulabilir `CreateTexture2D` :  
   
 ```  
 D3D11_TEXTURE2D_DESC target_description;  

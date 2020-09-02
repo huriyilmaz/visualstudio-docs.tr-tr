@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c8a0437b940953e89e24969314f63df34d223496
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538144"
 ---
 # <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>Nasıl yapılır: şemaları Visual Studio içindeki çalışma sayfalarına eşleme
@@ -55,7 +55,7 @@ ms.locfileid: "85538144"
 
 7. Şema dosyanıza gidin, dosyayı seçin ve ardından **Aç**' a tıklayın.
 
-8. **Tamam**'a tıklayın.
+8. **Tamam**’a tıklayın.
 
      Şema, **XML kaynak** penceresinde temsil edilir. Projenizde, <xref:System.Data.DataSet> bir türü şema temel alınarak oluşturulur ve <xref:System.Windows.Forms.BindingSource> oluşturulur.
 

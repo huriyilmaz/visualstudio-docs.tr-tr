@@ -1,5 +1,5 @@
 ---
-title: '&lt;Paket&gt; öğesi (Önyükleyici) | Microsoft Docs'
+title: '&lt;Paket &gt; öğesi (önyükleyici) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -17,18 +17,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 62c19953d1c4d82c0040e728fc2c2645c68589c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157688"
 ---
-# <a name="ltpackagegt-element-bootstrapper"></a>&lt;Paket&gt; öğesi (Önyükleyici)
+# <a name="ltpackagegt-element-bootstrapper"></a>&lt;Package &gt; öğesi (önyükleyici)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`Package` En üst düzey XML öğesi bir paket dosyası içinde bir öğedir.  
+`Package`Öğesi, bir paket dosyasının içindeki en üst düzey xml öğesidir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Package  
@@ -144,16 +144,16 @@ ms.locfileid: "68157688"
 ```  
   
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler  
- `Package` Öğesi gereklidir. Bunu, aşağıdaki özniteliklere sahiptir.  
+ `Package`Öğe gereklidir. Aşağıdaki özniteliklere sahiptir.  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`Culture`|Gerekli. Kullanılacak dili belirler. Bu paket için kültür tanımlar. Bu öznitelik içine bir anahtardır `Strings` öğesi, yükleme sırasında ürün adları ve hata iletileri için kültüre özgü dizeleri listeler.|  
-|`Name`|Gerekli. Gibi bir araç geliştiriciye görüntülenen paketten adını [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Bu öznitelik içine bir anahtardır `Strings` içermesi gereken öğesi bir `String` öğeyle `Name` ve `Culture` özelliklerini ayarlama eşleştirilecek `Name` ve `Culture` özelliklerini `Package`.|  
-|`LicenseAgreement`|İsteğe bağlı. Son Kullanıcı Lisans Sözleşmesi (EULA) içeren dağıtım paketi dosyasının adını belirtir.  Bu dosya, düz metin (.txt) veya zengin metin biçimi olabilir. (.rtf)|  
+|`Culture`|Gereklidir. Bu paket için kullanılacak dili belirleyen kültürü tanımlar. Bu öznitelik, `Strings` yükleme sırasında ürün adları ve hata iletileri için kültüre özgü dizeleri listeleyen öğesi için bir anahtardır.|  
+|`Name`|Gereklidir. Gibi bir araç içinde geliştiriciye görüntülenecek paketin adı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Bu öznitelik, ve `Strings` `String` `Name` `Culture` özellikleriyle eşleşecek şekilde ayarlanmış bir öğesi içermesi gereken öğesi `Name` `Culture` için bir anahtardır `Package` .|  
+|`LicenseAgreement`|İsteğe bağlı. Dağıtım paketindeki, Son Kullanıcı Lisans Sözleşmesi 'Ni (EULA) içeren dosyanın adını belirtir.  Bu dosya düz metin (. txt) ya da zengin metin biçimi olabilir. (. rtf)|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği dağıtma için tam bir paket dosyası gösterir [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)].  
+ Aşağıdaki kod örneği, yeniden dağıtımı için tüm paket dosyalarını gösterir [!INCLUDE[dnprdnlong](../includes/dnprdnlong-md.md)] .  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

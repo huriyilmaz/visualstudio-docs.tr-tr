@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8e29643f530667560d4979906152a174c6eddd1b
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85463381"
 ---
 # <a name="idiasymbolget_ishotpatchable"></a>IDiaSymbol::get_isHotpatchable
@@ -33,7 +33,7 @@ HRESULT get_isHotpatchable(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE`Modülün Hot-patchable olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` Modülün Hot-patchable olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
@@ -46,7 +46,7 @@ dışı `TRUE`Modülün Hot-patchable olup olmadığını döndürür; Aksi takd
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Açıklama|
+|Gereksinim|Description|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

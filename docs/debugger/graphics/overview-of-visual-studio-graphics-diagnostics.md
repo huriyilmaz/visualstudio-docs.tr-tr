@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0bf8cbcc699f015cae954400744d9bd724d70c57
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73187920"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama’ya Genel Bakış
@@ -21,7 +21,7 @@ Visual Studio *Grafik tanılama* , Direct3D uygulamalarında işleme ve performa
 ## <a name="using-graphics-diagnostics-to-debug-rendering-problems"></a>İşleme sorunlarında hata ayıklamak için Grafik Tanılama'yı kullanma
  Grafik açısından zengin bir uygulamada işleme sorunları hatalarının ayıklanması, hata ayıklayıcıyı başlatıp herhangi bir kodda adım adım ilerlemek kadar basit işlem değildir. Her kare içinde, her biri karmaşık bir durum, veri, parametre ve kod kümesine göre olmak üzere yüz binlerce benzersiz piksel üretilirken, tanılamaya çalıştığınız sorunu bunlar arasında belki de yalnızca birkaç piksel sergileyecektir. He bir pikseli üreten kodun, yüzlerce pikseli paralel olarak işlemden geçiren özel amaçlı donanımlarda yürütülmesi meseleyi daha da karmaşık bir hale getirir. Çok fazla veriyle karşı karşıya kalındığında, iş parçacıklarının yoğun olmadığı kodlarda bile yarar sağlanması zor olan geleneksel hata ayıklama araçları ve teknikleri etkisiz kalmaktadır.
 
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Grafik Tanılama araçları, sorunu belirten görsel yapıtlarla başlayıp yalnızca ilgili gölgelendirici kodu, işlem hattı aşamaları üzerine odaklanarak sorunun kaynağına geri dönerek işleme sorunlarını bulmanıza yardımcı olmak üzere tasarlanmıştır. , uygulamanın kendi kaynak kodunda çağrılar, kaynaklar ve cihaz durumu çizin.
+ İçindeki Grafik Tanılama araçları, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] uygulamanın kendi kaynak kodunda yalnızca ilgili gölgelendirici kodu, ardışık düzen aşamaları, çizim çağrıları, kaynaklar ve cihaz durumu üzerine odaklanarak sorunun kaynağına geri dönerek işleme sorunlarını bulmanıza yardımcı olmak üzere tasarlanmıştır.
 
 ## <a name="directx-version-compatibility"></a>DirectX sürümü uyumluluğu
  Grafik Tanılama, Direct3D 10 veya üzerini kullanan uygulamaları destekler ve Direct2D kullanan uygulamalar için sınırlı destek sağlar. Direct3D, DirectDraw veya diğer grafik API'lerinin önceki sürümlerini kullanan uygulamaları desteklemez.
@@ -45,7 +45,7 @@ Visual Studio *Grafik tanılama* , Direct3D uygulamalarında işleme ve performa
 ### <a name="diagnostics-capture-interface"></a>Tanılama yakalama arabirimi
  Uygulamanızı Grafik Tanılama altında çalıştırdığınızda, Visual Studio çerçeveleri yakalamak için kullanabileceğiniz ve aynı zamanda geçerli CPU ve GPU yükünü görüntüleyen bir Tanılama oturumu arabirimini görüntüler. CPU ve GPU yükü, hataları işlemek yerine, performans özellikleri nedeniyle yakalamak isteyebileceğiniz çerçeveleri belirlemenize yardımcı olacak şekilde görüntülenir.
 
- Bu, ancak çerçeveleri yakalamaya yönelik tek yoldur. Ayrıca, Programlı yakalama arabirimini kullanarak veya komut satırı yakalama programını, DXCap. exe ' yi kullanarak da çerçeveleri yakalayabilirsiniz.
+ Bu, ancak çerçeveleri yakalamaya yönelik tek yoldur. Ayrıca, Programlı yakalama arabirimini kullanarak veya dxcap.exe komut satırı yakalama programını kullanarak çerçeveler yakalayabilirsiniz.
 
  Daha fazla bilgi için bkz. [grafik bilgilerini yakalama](capturing-graphics-information.md) .
 
@@ -108,7 +108,7 @@ Visual Studio *Grafik tanılama* , Direct3D uygulamalarında işleme ve performa
 ### <a name="object-table"></a>Nesne tablosu
  Uygulamanızın oluşturduğu her çerçeve muhtemelen yüzlerce veya hatta binlerce kaynak nesnesi tarafından desteklenir. Bunlar, geri arabellekleri ve işleme hedeflerini, dokuları, köşe arabellekleri, dizin arabellekleri, genel arabellekleri içerebilir. neredeyse her şey Direct3D anımsar bir nesnedir.
 
- [Nesne tablosu](graphics-object-table.md) , olay listesinde seçilen grafik olayı sırasında var olan tüm nesneleri görüntüler. Tipik bir uygulamadaki çoğu nesne dokularından olduğundan, bir bakışta görüntülerle ilgili ayrıntıları göstermek için olay listesi en iyi duruma getirilir. Tür sütunu, her satırda ne tür bir nesne olduğunu söyler ve biçim sütunu nesnenin alt türünü veya sürümünü gösterir. Diğer ayrıntılar da gösterilir. Bazı nesneler Ayrıca, doku gibi daha özelleştirilmiş bir görüntüleyiciyle (dokuyu bir resim olarak görüntüleyebilir) veya arabelleklerle görüntülemek için kullanabileceğiniz köprülere sahiptir (tampon görüntüleyicisinin arabelleği tanımlayarak ham arabellek baytları nasıl ayrıştırıp görüntülediğini seçebilirsiniz biçim).
+ [Nesne tablosu](graphics-object-table.md) , olay listesinde seçilen grafik olayı sırasında var olan tüm nesneleri görüntüler. Tipik bir uygulamadaki çoğu nesne dokularından olduğundan, bir bakışta görüntülerle ilgili ayrıntıları göstermek için olay listesi en iyi duruma getirilir. Tür sütunu, her satırda ne tür bir nesne olduğunu söyler ve biçim sütunu nesnenin alt türünü veya sürümünü gösterir. Diğer ayrıntılar da gösterilir. Bazı nesneler aynı zamanda, nesneyi daha özelleştirilmiş bir Görüntüleyici (örneğin, dokuyu bir resim olarak görüntüleyebilirsiniz) veya arabellekler gibi daha özel bir görüntüleyiciyle görüntülemek için kullanabileceğiniz köprülere sahiptir (arabellek biçimini tanımlayarak, arabellek görüntüleyicisinin ham arabellek baytlarını nasıl ayrıştırıp görüntüleyeceğini seçebilirsiniz).
 
 ### <a name="frame-analysis"></a>Çerçeve Analizi
  Uygulamanızın grafiklerin doğru olması gerekmez; bunlar da hızlı olmalıdır. Tümleşik grafik veya cep telefonlarına sahip dizüstü bilgisayarlar gibi daha güçlü cihazlarda bile. Ayrıca, hala harika bir bakmaları gerekir.
@@ -118,5 +118,5 @@ Visual Studio *Grafik tanılama* , Direct3D uygulamalarında işleme ve performa
  Ancak Çerçeve Analizi yalnızca hızlı bir şekilde değil, en az sayıda görsel kalite elde edilirken en iyi performansı elde eteceğiz. Bazen büyük bir ekran üzerinde harika görünen pahalı bir efekt, daha basit bir etkinin pili boşaltmadan daha iyi görünebileceği bir telefonun küçük ekranında görüntülendiklerinde aynı etkiyi yapmaz. Grafik analizinin sağladığı otomatik değişiklikler ve değerlendirmeler, uygulamanız için bir dizi cihaz genelinde doğru olan dengeyi bulmanıza yardımcı olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Komut satırı Yakalama Aracı](command-line-capture-tool.md)
+- [Komut Satırı Yakalama Aracı](command-line-capture-tool.md)
 - [HLSL Hata Ayıklayıcısı](hlsl-shader-debugger.md)

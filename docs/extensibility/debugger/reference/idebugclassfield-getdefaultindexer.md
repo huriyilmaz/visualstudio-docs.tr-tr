@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::GetDefaultIndexer | Microsoft Dokümanlar
+title: 'IDebugClassField:: Getdefaultındexer | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 57e00107374485043af370967794bdade1c213d1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734427"
 ---
 # <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
-Varsayılan dizinleyicinin adını alır.
+Varsayılan dizin oluşturucunun adını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetDefaultIndexer( 
@@ -40,13 +40,13 @@ int GetDefaultIndexer(
 ```
 
 ## <a name="parameters"></a>Parametreler
-`pbstrIndexer`[çıkış] Varsayılan dizinleyicinin adını içeren bir dize döndürür.
+`pbstrIndexer` dışı Varsayılan dizin oluşturucunun adını içeren bir dize döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, varsayılan dizinleyici yoksa S_OK döndürür veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, varsayılan dizin oluşturucu yoksa S_OK döndürür veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir sınıfın varsayılan dizinleyicisi, dizi `Default` erişimleri için özellik olarak işaretlenen özelliktir. Bu [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]özeldir. Burada, bildirilen varsayılan [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] dizinleyicive nasıl kullanıldığına bir örnek verilmiştir.
+ Bir sınıfın varsayılan dizin oluşturucusu, `Default` dizi erişimleri için özelliği olarak işaretlenen özelliktir. Bu öğesine özeldir [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] . Aşağıda, içinde belirtilen varsayılan dizin oluşturucunun [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] ve nasıl kullanıldığı hakkında bir örnek verilmiştir.
 
 ```vb
 Imports System.Collections;

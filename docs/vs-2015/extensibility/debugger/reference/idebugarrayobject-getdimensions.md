@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 09902c60f87cfb92d0f0778fcbd106ade4d8dac4
-ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197784"
 ---
 # <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
@@ -24,7 +24,7 @@ ms.locfileid: "68197784"
 
 Dizinin boyutlarını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetDimensions(   
@@ -45,13 +45,13 @@ int GetDimensions(
  'ndaki Alınacak boyut sayısı.  
   
  `dwDimensions`  
- [in, out] Her boyutun boyutlarıyla doldurulmuş bir dizi. `dwCount``dwDimensions` dizinin en büyük boyutunu belirtir.  
+ [in, out] Her boyutun boyutlarıyla doldurulmuş bir dizi. `dwCount` dizinin en büyük boyutunu belirtir `dwDimensions` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa, S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çok boyutlu bir dizi, her boyut için farklı boyutlarda olabilir. Örneğin, üç boyutlu dizi `myarray[3][2][6]`verildiğinde, bu yöntem bu sırada `dwDimensions` parametreye 3, 2 ve 6 döndürür.  
+ Çok boyutlu bir dizi, her boyut için farklı boyutlarda olabilir. Örneğin, üç boyutlu dizi verildiğinde `myarray[3][2][6]` , bu yöntem bu sırada parametreye 3, 2 ve 6 döndürür `dwDimensions` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

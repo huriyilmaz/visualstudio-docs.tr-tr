@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 66d78988ef70e4f991dd02cb16a164cbf48e55f1
-ms.sourcegitcommit: c4212f40df1a16baca1247cac2580ae699f97e4c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "89176084"
 ---
 # <a name="usage-warnings"></a>Kullanım Uyarıları

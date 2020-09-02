@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: GetGlobalService kullanın | Microsoft Docs'
+title: "Nasıl yapılır: GetGlobalService 'i kullanma | Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -10,37 +10,37 @@ ms.assetid: 4cdf5ab5-9f09-4caf-9011-2dcb2c62f1b7
 caps.latest.revision: 14
 manager: jillfra
 ms.openlocfilehash: 1c1fb48e4bb354ef403b39b0f1320ead92f43967
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62948188"
 ---
-# <a name="how-to-use-getglobalservice"></a>Nasıl yapılır: GetGlobalService kullanın
-Bazen bir araç penceresinden bir hizmet almaya veya değil tarihli, aksi takdirde, istediğiniz hizmeti hakkında bilgi sahibi değildir bir hizmet sağlayıcısı ile tarihli kapsayıcı denetimi gerekebilir. Örneğin, etkinlik günlüğünde denetimdeki yazmak isteyebilirsiniz. Bu ve diğer senaryolar hakkında daha fazla bilgi için bkz. [nasıl yapılır: Sorun Giderme Hizmetleri](../extensibility/how-to-troubleshoot-services.md).  
+# <a name="how-to-use-getglobalservice"></a>Nasıl yapılır: GetGlobalService kullanma
+Bazen bir araç penceresi veya denetim kapsayıcısından bir hizmet almanız ya da başka bir hizmet sağlayıcı ile istediğiniz hizmet hakkında bilgi sahibi olmaması gerekebilir. Örneğin, bir denetim içinden etkinlik günlüğüne yazmak isteyebilirsiniz. Bu ve diğer senaryolar hakkında daha fazla bilgi için bkz. [nasıl yapılır: Hizmetleri sorun giderme](../extensibility/how-to-troubleshoot-services.md).  
   
- Çoğu alabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] statik çağırarak Hizmetleri <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> yöntemi.  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Statik yöntemi çağırarak çoğu hizmeti edinebilirsiniz <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> .  
   
- <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> herhangi bir VSPackage türetilen ilk kez başlatılan bir önbelleğe alınan hizmet sağlayıcısı dayanan <xref:Microsoft.VisualStudio.Shell.Package> tarihli. Bu koşul karşılandığında, aksi takdirde null bir hizmet için hazırlıklı olmalıdır garanti etmeniz gerekir.  
+ <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> , ' den türetilen herhangi bir VSPackage ilk kez başlatılan önbelleğe alınmış bir hizmet sağlayıcısına dayanır <xref:Microsoft.VisualStudio.Shell.Package> . Bu koşulun karşılandığından emin olmanız gerekir, aksi takdirde boş bir hizmet için hazır olun.  
   
- Neyse ki, <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> çoğu zaman düzgün şekilde çalışır.  
+ Neyse ki, <xref:Microsoft.VisualStudio.Shell.Package.GetGlobalService%2A> çoğu zaman doğru bir şekilde çalışmaktadır.  
   
-- VSPackage yalnızca başka bir Vspackage'e bilinen hizmet sağlıyorsa, hizmet talep eden VSPackage'ı hizmet yüklü sağlama VSPackage'ı önce tarihli.  
+- Bir VSPackage yalnızca başka bir VSPackage için bilinen bir hizmet sağlıyorsa, hizmeti sağlayan VSPackage, hizmeti sağlayan VSPackage yüklenmeden önce oluşur.  
   
-- Araç penceresi tarafından VSPackage oluşturduysanız, araç penceresi oluşturulmadan önce VSPackage tarihli.  
+- Bir VSPackage tarafından bir araç penceresi oluşturulduysa, aracı penceresi oluşturulmadan önce VSPackage oluşur.  
   
-- Bir denetim kapsayıcısı VSPackage tarafından oluşturulan bir araç penceresi tarafından barındırılıyorsa, Denetim kapsayıcısı oluşturulmadan önce VSPackage tarihli.  
+- Bir denetim kapsayıcısı VSPackage tarafından oluşturulan bir araç penceresi tarafından barındırılıyorsa, Denetim kapsayıcısı oluşturulmadan önce VSPackage kullanılır.  
   
-### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>Araç penceresi ya da Denetim kapsayıcısı içinden bir hizmetten alınamıyor  
+### <a name="to-get-a-service-from-within-a-tool-window-or-control-container"></a>Bir araç penceresi veya Denetim kapsayıcısı içinden bir hizmet almak için  
   
-- Bu kod Oluşturucu, araç penceresi veya denetim kapsayıcısı ekleyin:  
+- Oluşturucuya, araç penceresine veya denetim kapsayıcısına bu kodu ekleyin:  
   
      [!code-csharp[UseGetGlobalService#1](../snippets/csharp/VS_Snippets_VSSDK/usegetglobalservice/cs/getglobalservicepackage.cs#1)]
      [!code-vb[UseGetGlobalService#1](../snippets/visualbasic/VS_Snippets_VSSDK/usegetglobalservice/vb/getglobalservicepackage.vb#1)]  
   
-     Bu kod bir SVsActivityLog hizmeti alır ve kendisine bıraktığı bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> etkinlik günlüğüne yazmak için kullanılan arabirim. Bir örnek için bkz [nasıl yapılır: Etkinlik günlüğü'nün](../extensibility/how-to-use-the-activity-log.md).  
+     Bu kod, bir SVsActivityLog hizmeti alır ve bunu <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> etkinlik günlüğüne yazmak için kullanılabilecek bir arabirime yayınlar. Bir örnek için bkz. [nasıl yapılır: etkinlik günlüğünü kullanma](../extensibility/how-to-use-the-activity-log.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Hizmetleri sorunlarını giderme](../extensibility/how-to-troubleshoot-services.md)   
+ [Nasıl yapılır: hizmetler sorunlarını giderme](../extensibility/how-to-troubleshoot-services.md)   
  [Hizmetleri kullanma ve sağlama](../extensibility/using-and-providing-services.md)   
  [Hizmet Temel Bileşenleri](../extensibility/internals/service-essentials.md)

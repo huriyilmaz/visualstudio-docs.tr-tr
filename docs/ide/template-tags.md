@@ -14,10 +14,10 @@ helpviewer_keywords:
 - template tagging, updating
 - template tags, updating
 ms.openlocfilehash: 37a1965712920420bdc4d784a003dbfbd2f2167a
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285224"
 ---
 # <a name="add-tags-to-project-templates"></a>Proje şablonlarına etiketler ekleme
@@ -77,7 +77,7 @@ Yok.
 
 ### <a name="parent-elements"></a>Üst öğeler
 
-|Öğe|Description|
+|Öğe|Açıklama|
 |-------------|-----------------|
 |[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Istenir Şablonu kategorilere ayırır ve **Yeni proje** iletişim kutusunda ya da **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 

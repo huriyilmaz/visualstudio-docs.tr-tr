@@ -1,5 +1,5 @@
 ---
-title: XML şemaları ve belge düzeyi özelleştirmelerdeki veriler
+title: Belge düzeyi özelleştirmelerde XML şemaları ve verileri
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,69 +17,69 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: eb8bc9b9d3149112517d893cd3a704826b6d92d1
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63421688"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64808388"
 ---
-# <a name="xml-schemas-and-data-in-document-level-customizations"></a>XML şemaları ve belge düzeyi özelleştirmelerdeki veriler
-  **Önemli** Microsoft Word ile ilgili bu konu kümesindeki bilgileri avantajı ve kişiler ve kimin bulunur Amerika Birleşik Devletleri ve kendi bölgeler dışında veya servis kullanan kuruluşlar için özel olarak sunulan veya geliştirme üzerinde çalışan programlar Ocak Microsoft uygulaması belirli işlevlerin ne zaman kaldırıldı 2010'dan önce Microsoft lisanslı Microsoft Word ürünler, Microsoft Word için özel XML ilgili. Bu bilgileri Microsoft Word ile ilgili değil okuma veya kişi ve kuruluşların Amerika Birleşik Devletleri ya da kullanarak veya Microsoft tarafından 10 Ocak 2010'dan sonra lisansına sahip Microsoft Word ürünleri üzerinde çalışan programlar geliştirme alt bölgeleri tarafından kullanılan ; Bu ürünlerin bu tarihten önce lisanslı veya satın alınan ve Amerika Birleşik Devletleri dışında kullanım için lisanslı ürünleri aynı davranmaz.
+# <a name="xml-schemas-and-data-in-document-level-customizations"></a>Belge düzeyi özelleştirmelerde XML şemaları ve verileri
+  **Önemli** Microsoft Word ile ilgili bu konu başlığı altında verilen bilgiler, Microsoft Word 'deki özel XML ile ilgili belirli bir işlevselliğin uygulanmasını kaldırdıkları zaman, Birleşik Devletler ve bölgeleri dışında bulunan veya Microsoft tarafından Microsoft tarafından lisanslanan Microsoft Word ürünleri, Microsoft 'un Microsoft Word ile ilgili belirli işlevlerin bir uygulamasını kaldırdığınızda Microsoft 'un 2010 Ocak 'tan önce lisanslı olduğu kişiler ve kuruluşların avantajı ve kullanımı için özel olarak sunulur. Microsoft Word ile ilgili bu bilgiler, Birleşik Devletler veya şirket içinde çalışan ya da Microsoft tarafından, 10 Ocak 2010 ' den sonra Microsoft tarafından lisanslanan Microsoft Word ürünlerini kullanan bireyler veya kuruluşlar tarafından okunamaz veya kullanılmıyor olabilir. Bu ürünler, bu tarihten önce lisanslanan ürünlerle aynı veya satın alınmadan ve Birleşik Devletler dışında kullanılmak üzere lisanslanmaz.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Microsoft Office Excel ve Microsoft Office Word belgelerinize şemaları eşleme olanağı sağlar. Bu özellik, belgenin içine ve dışına XML veri alma ve verme basitleştirebilir.
+ Excel ve Microsoft Office Word 'Ü Microsoft Office şemaları belgelerinize eşleme yeteneği sağlar. Bu özellik, XML verilerinin belgeye içeri ve dışarı aktarılmasını kolaylaştırabilir.
 
- Visual Studio kullanıma sunan bir programlama modeli denetimlerinde olarak belge düzeyi özelleştirmeleri şeması öğeleri eşlendi. Excel için Visual Studio, veritabanları, Web Hizmetleri ve nesneleri verilere denetimler bağlama için destek ekler. Word ve Excel için Visual Studio şema eşlenmiş bir belgeyle çözümleriniz için bir Gelişmiş son kullanıcı deneyimi oluşturmak için kullanılabilen eylemler bölmesi için destek ekler. Daha fazla bilgi için [Eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md).
+ Visual Studio, belge düzeyi özelleştirmelerde eşlenen şema öğelerini programlama modelinde denetim olarak kullanıma sunar. Excel için, Visual Studio, denetimleri veritabanlarındaki, Web hizmetlerindeki ve nesnelerdeki verilere bağlama desteği ekler. Word ve Excel için, Visual Studio, çözümleriniz için gelişmiş bir son kullanıcı deneyimi oluşturmak üzere şema eşlemeli bir belgeyle birlikte kullanılabilecek eylemler bölmesi için destek ekler. Daha fazla bilgi için bkz. [eylemler bölmesine genel bakış](../vsto/actions-pane-overview.md).
 
 > [!NOTE]
-> Excel çözümleri, çok bölümlü XML şemaları kullanamazsınız.
+> Excel çözümlerinde çok parçalı XML şemaları kullanamazsınız.
 
-## <a name="objects-created-when-schemas-are-attached-to-excel-workbooks"></a>Excel çalışma kitaplarına şemaları eklendiğinde oluşturulan nesneleri
- Bir çalışma kitabına bir şema eklediğinizde, Visual Studio otomatik olarak birkaç nesnesi oluşturur ve bunları projenize ekler. Excel tarafından yönetildiği bu nesneler, Visual Studio araçları kullanarak silinmemelidir. Silmek için çalışma sayfasından eşlenmiş öğeleri kaldırma veya Excel araçlarını kullanarak şema ayırma.
+## <a name="objects-created-when-schemas-are-attached-to-excel-workbooks"></a>Şemalar Excel çalışma kitaplarına eklendiğinde oluşturulan nesneler
+ Bir çalışma kitabına şema iliştirmeye çalıştığınızda, Visual Studio otomatik olarak birkaç nesne oluşturur ve bunları projenize ekler. Bu nesneler, Excel tarafından yönetildiklerinden, Visual Studio araçları kullanılarak silinmemelidir. Bunları silmek için, eşlenen öğeleri çalışma sayfasından kaldırın veya Excel araçlarını kullanarak şemayı ayırın.
 
- İki ana nesnesi vardır:
+ İki ana nesne vardır:
 
-- XML Şeması (XSD dosyası). Çalışma kitabındaki tüm şema için Visual Studio şema projeye ekler. Bu proje öğesiyle XSD uzantı olarak görünür **Çözüm Gezgini**.
+- XML şeması (XSD dosyası). Visual Studio, çalışma kitabındaki her şema için projeye bir şema ekler. Bu, **Çözüm Gezgini**içinde xsd uzantılı bir proje öğesi olarak görünür.
 
-- Bir türü belirtilmiş <xref:System.Data.DataSet> sınıfı. Bu sınıf şemaya göre oluşturulur. Bu veri kümesi sınıfı görülebilir **sınıf görünümü**.
+- Türü belirtilmiş bir <xref:System.Data.DataSet> sınıf. Bu sınıf, şemaya göre oluşturulur. Bu veri kümesi sınıfı **sınıf görünümü**görünür.
 
-## <a name="objects-created-when-schema-elements-are-mapped-to-excel-worksheets"></a>Excel çalışma sayfalarına şema öğeleri eşleştirildiğinde oluşturulan nesneleri
- Bir şema öğesinden eşlediğinizde **XML kaynağı** görev bölmesinde Visual Studio çalışma sayfasına otomatik olarak birkaç nesnesi oluşturur ve bunları projenize ekler:
+## <a name="objects-created-when-schema-elements-are-mapped-to-excel-worksheets"></a>Şema öğeleri Excel çalışma sayfalarına eşlendiğinde oluşturulan nesneler
+ **XML kaynağı** görev bölmesinden bir şema öğesini bir çalışma sayfasına eşlediğinizde, Visual Studio otomatik olarak birkaç nesne oluşturur ve bunları projenize ekler:
 
-- Denetimler. Çalışma kitabında, eşlenen her nesneye ilişkin bir <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> denetimi (yinelenmeyen şema öğeleri) veya bir <xref:Microsoft.Office.Tools.Excel.ListObject> denetimi (şema öğeleri yinelenen için) programlama modeli içinde oluşturulur. <xref:Microsoft.Office.Tools.Excel.ListObject> Denetimi yalnızca eşlemeleri ve eşlenen nesneler çalışma kitabından silindiğinde silinebilir. Denetimleri hakkında daha fazla bilgi için bkz. [konak öğelerini ve denetimlerine genel bakış için ana bilgisayar](../vsto/host-items-and-host-controls-overview.md).
+- Kontrollerini. Çalışma kitabındaki her eşlenmiş nesne için, <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> programlama modelinde bir denetim (tekrarlamayan şema öğeleri için) veya bir <xref:Microsoft.Office.Tools.Excel.ListObject> Denetim (yinelenen şema öğeleri için) oluşturulur. <xref:Microsoft.Office.Tools.Excel.ListObject>Denetim yalnızca eşlemeler ve eşlenmiş nesneler çalışma kitabından silinerek silinebilir. Denetimler hakkında daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md).
 
-- BindingSource. Oluştururken bir <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> çalışma için yinelenmeyen bir şema öğesine eşleyerek bir <xref:System.Windows.Forms.BindingSource> oluşturulur ve <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> denetimin bağlı <xref:System.Windows.Forms.BindingSource>. Bağlamalısınız <xref:System.Windows.Forms.BindingSource> belirlenmiş örneği gibi bir belge için eşlenen şemaya uyan veri kaynağının bir örneği için <xref:System.Data.DataSet> oluşturulan sınıf. Bağlama ayarlayarak oluşturma <xref:System.Windows.Forms.BindingSource.DataSource%2A> ve <xref:System.Windows.Forms.BindingSource.DataMember%2A> sunulan özellikler **özellikleri** penceresi.
+- Listeye. <xref:Microsoft.Office.Tools.Excel.XmlMappedRange>Çalışma sayfasına tekrarsız bir şema öğesi eşleyerek bir oluşturduğunuzda, bir <xref:System.Windows.Forms.BindingSource> oluşturulur ve <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> Denetim öğesine bağlanır <xref:System.Windows.Forms.BindingSource> . <xref:System.Windows.Forms.BindingSource>Oluşturulan bir sınıfın örneği gibi, öğesini belgeyle eşleştirilmiş şemayla eşleşen bir veri kaynağı örneğine bağlamanız gerekir <xref:System.Data.DataSet> . <xref:System.Windows.Forms.BindingSource.DataSource%2A> <xref:System.Windows.Forms.BindingSource.DataMember%2A> **Özellikler** penceresinde gösterilen ve özelliklerini ayarlayarak bağlamayı oluşturun.
 
     > [!NOTE]
-    > <xref:System.Windows.Forms.BindingSource> İçin oluşturulmamış <xref:Microsoft.Office.Tools.Excel.ListObject> nesneleri. El ile bağlamanız gerekir <xref:Microsoft.Office.Tools.Excel.ListObject> ayarlayarak veri kaynağına <xref:System.Windows.Forms.BindingSource.DataSource%2A> ve <xref:System.Windows.Forms.BindingSource.DataMember%2A> özelliklerinde **özellikleri** penceresi.
+    > <xref:System.Windows.Forms.BindingSource>Nesneler için oluşturulmaz <xref:Microsoft.Office.Tools.Excel.ListObject> . <xref:Microsoft.Office.Tools.Excel.ListObject> <xref:System.Windows.Forms.BindingSource.DataSource%2A> <xref:System.Windows.Forms.BindingSource.DataMember%2A> **Özellikler** penceresinde ve özelliklerini ayarlayarak veri kaynağına el ile bağlamanız gerekir.
 
-### <a name="office-mapped-schemas-and-the-visual-studio-data-sources-window"></a>Office şemaları ve Visual Studio veri kaynakları penceresi eşlenmiş.
- Her iki eşlenen şema işlevselliğini Office ve Visual Studio **veri kaynakları** penceresi, raporlama veya düzenlemek için Excel çalışma sayfasındaki veri sunmanıza yardımcı olabilir. Her iki durumda da Excel çalışma sayfasına veri öğelerini sürükleyebilirsiniz. Her iki yöntem üzerinden veriye olan denetimler oluşturma bir <xref:System.Windows.Forms.BindingSource> gibi bir veri kaynağına bir <xref:System.Data.DataSet> veya bir web hizmeti.
+### <a name="office-mapped-schemas-and-the-visual-studio-data-sources-window"></a>Office eşlenmiş şemalar ve Visual Studio veri kaynakları penceresi
+ Office ve Visual Studio **veri kaynakları** penceresinin eşlenmiş şema işlevselliği, raporlama veya düzenlemeyle Ilgili bir Excel çalışma sayfasındaki verileri sunmanıza yardımcı olabilir. Her iki durumda da, Excel çalışma sayfasına veri öğelerini sürükleyebilirsiniz. Her iki yöntem de bir veya bir Web hizmeti gibi bir veri kaynağı ile veri bağlantılı denetimler oluşturur <xref:System.Windows.Forms.BindingSource> <xref:System.Data.DataSet> .
 
 > [!NOTE]
-> Bir çalışma sayfasına yinelenen bir şema öğesine eşlediğinizde, Visual Studio oluşturur bir <xref:Microsoft.Office.Tools.Excel.ListObject>. <xref:Microsoft.Office.Tools.Excel.ListObject> Otomatik olarak verilerine bağlı <xref:System.Windows.Forms.BindingSource>. El ile bağlamanız gerekir <xref:Microsoft.Office.Tools.Excel.ListObject> ayarlayarak veri kaynağına <xref:System.Windows.Forms.BindingSource.DataSource%2A> ve <xref:System.Windows.Forms.BindingSource.DataMember%2A> özelliklerinde **özellikleri** penceresi.
+> Bir yinelenen şema öğesini bir çalışma sayfasına eşlediğinizde, Visual Studio bir oluşturur <xref:Microsoft.Office.Tools.Excel.ListObject> . , <xref:Microsoft.Office.Tools.Excel.ListObject> Üzerinden verilere otomatik olarak bağlanmadı <xref:System.Windows.Forms.BindingSource> . <xref:Microsoft.Office.Tools.Excel.ListObject> <xref:System.Windows.Forms.BindingSource.DataSource%2A> <xref:System.Windows.Forms.BindingSource.DataMember%2A> **Özellikler** penceresinde ve özelliklerini ayarlayarak veri kaynağına el ile bağlamanız gerekir.
 
- Aşağıdaki tabloda bazı iki yöntem arasındaki farklar gösterilmektedir.
+ Aşağıdaki tabloda, iki yöntem arasındaki bazı farklılıklar gösterilmektedir.
 
-|XML Şeması|Veri Kaynakları penceresi|
+|XML şeması|Veri Kaynakları penceresi|
 |----------------|-------------------------|
-|Office arabirimini kullanır.|Kullanan **veri kaynakları** Visual Studio'daki.|
-|XML dosyalarından verileri dışarı aktarma ve içeri aktarma için yerleşik Office özelliklerini etkinleştirir.|İçeri aktarma sağlayın ve işlevsellik programlı olarak dışarı aktarma gerekir.|
-|Oluşturulan denetimleri verilerle doldurmak için kod yazmanız gerekir.|Gelen eklenen denetimler **veri kaynakları** sahip veritabanı sunucuları kullandığınızda gerekli bağlantı dizeleri yanı sıra bunları doldurmak için otomatik olarak üretilen kod.|
+|Office arabirimini kullanır.|Visual Studio 'da **veri kaynakları** penceresini kullanır.|
+|XML dosyalarından verileri içeri ve dışarı aktarmaya yönelik yerleşik Office özelliklerini sunar.|Program aracılığıyla içeri ve dışarı aktarma işlevselliği sağlamanız gerekir.|
+|Oluşturulan denetimleri verilerle doldurmanız için kod yazmanız gerekir.|**Veri kaynakları** penceresinden eklenen denetimlerin, veritabanı sunucularını kullanırken gerekli bağlantı dizeleriyle birlikte onları dolduracak şekilde otomatik olarak oluşturulduğu kod vardır.|
 
-## <a name="behavior-when-schemas-are-attached-to-word-documents"></a>Word belgelerine şemaları eklendiğinde davranışı
- Veri nesneleri, bir belge düzeyinde Office projesinde kullanılan bir Word belgesi için bir şema iliştirdiğinizde oluşturulmaz. Ancak, bir şema öğesine belgenize eşlediğinizde, denetimleri oluşturulur. Denetim türü, harita öğesinin hangi türüne göre değişir; Yinelenen öğeler oluşturmak <xref:Microsoft.Office.Tools.Word.XMLNodes> denetimleri ve yinelenmeyen öğe oluştur <xref:Microsoft.Office.Tools.Word.XMLNode> kontrol eder. Daha fazla bilgi için [XMLNodes denetimi](../vsto/xmlnodes-control.md) ve [XMLNode denetimi](../vsto/xmlnode-control.md).
+## <a name="behavior-when-schemas-are-attached-to-word-documents"></a>Şemaları Word belgelerine İliştirme durumu
+ Belge düzeyi Office projesinde kullanılan Word belgesine bir şema iliştirçalıştığınızda veri nesneleri oluşturulmaz. Ancak, belgenize bir şema öğesi eşlediğinizde denetimler oluşturulur. Denetimin türü, eşlemenizi yaptığınız öğe türüne bağlıdır; Yinelenen öğeler <xref:Microsoft.Office.Tools.Word.XMLNodes> denetimleri ve yinelenmeyen öğeleri <xref:Microsoft.Office.Tools.Word.XMLNode> denetimleri oluşturur. Daha fazla bilgi için bkz. [XMLNodes denetimi](../vsto/xmlnodes-control.md) ve [XMLNode denetimi](../vsto/xmlnode-control.md).
 
-## <a name="deployment-of-solutions-that-include-xml-schemas"></a>XML şemaları içeren çözüm dağıtımı
- Belgeye eşlenen bir XML Şeması kullanan bir çözümü dağıtmak için bir yükleyici oluşturmanız gerekir. Yükleyici, kullanıcının bilgisayarında şema kitaplığındaki şema kaydolmalıdır. Şema kaydetmezseniz, Word belgesinde kullanıcı açıldığında olan öğeler üzerinde geçici bir şema oluşturur çünkü çözüm çalışmaya devam eder. Ancak, kullanıcı gerçekleştiremez veya projeyi oluşturmak için kullanılan şema doğrulama gerçekleştirmek mümkün olmayacaktır. Yükleyiciler hakkında daha fazla bilgi için bkz. [uygulamaları, hizmetleri ve bileşenleri dağıtma](../deployment/deploying-applications-services-and-components.md).
+## <a name="deployment-of-solutions-that-include-xml-schemas"></a>XML şemaları içeren çözümlerin dağıtımı
+ Bir belgeye eşlenmiş bir XML şeması kullanan bir çözümü dağıtmak için bir yükleyici oluşturmanız gerekir. Yükleyici, şemayı kullanıcının bilgisayarındaki şema kitaplığına kaydetmelidir. Şemayı kaydetmeyin, Word Kullanıcı tarafından açıldığında belgedeki öğeleri temel alan geçici bir şema oluşturduğundan çözüm çalışmaya devam edecektir. Ancak Kullanıcı, projeyi oluşturmak için kullanılan şemaya karşı doğrulama gerçekleştiremez veya kaydedebilir. Yükleyiciler hakkında daha fazla bilgi için bkz. [uygulamaları, hizmetleri ve bileşenleri dağıtma](../deployment/deploying-applications-services-and-components.md).
 
- Ayrıca projenize şema kitaplıkta bulunuyor ve kayıtlı olup olmadığını denetlemek için kod ekleyebilirsiniz. Yüklü değilse, kullanıcıyı uyarır.
+ Ayrıca, şemanın kitaplıkta olup olmadığını denetlemek için projenize kod ekleyebilir ve kaydolmasını sağlayabilirsiniz. Değilse, kullanıcıyı uyarabilirsiniz.
 
  [!code-vb[Trin_VstcoreDataWord#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataWordVB/ThisDocument.vb#1)]
  [!code-csharp[Trin_VstcoreDataWord#1](../vsto/codesnippet/CSharp/Trin_VstcoreDataWordCS/ThisDocument.cs#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Şemaları Visual Studio içindeki Word belgeleriyle eşleştirme](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)
-- [Nasıl yapılır: Şemaları Visual Studio içindeki çalışma sayfalarıyla eşleştirme](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)
+- [Nasıl yapılır: şemaları Visual Studio içindeki Word belgeleriyle eşleme](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)
+- [Nasıl yapılır: şemaları Visual Studio içindeki çalışma sayfalarına eşleme](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)

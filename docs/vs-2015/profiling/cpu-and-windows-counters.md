@@ -15,122 +15,122 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eceadf1b1bf82876a20027a9d29c8336e381d18d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434295"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64808659"
 ---
 # <a name="cpu-and-windows-counters"></a>CPU ve Windows Sayaçları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio Profiler, işletim sistemi tarafından (Windows sayaçları) oluşturulan performans verilerini ve işlemci birimi (CPU sayaçları) tarafından oluşturulan performans verilerini toplamanıza olanak sağlar.  
+Visual Studio Profiler, işletim sistemi (Windows sayaçları) tarafından oluşturulan performans verilerini ve işlemci birimi (CPU sayaçları) tarafından oluşturulan performans verilerini toplamanıza olanak sağlar.  
   
  **Gereksinimler**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 > [!NOTE]
-> Windows 8 ve Windows Server 2012'deki Gelişmiş güvenlik özellikleri Visual Studio profil oluşturucu bu platformlarda veri toplayan bir şekilde önemli değişiklikler gerekmiştir. Windows Store apps ayrıca yeni toplama teknikleri gerektirir. Bkz: [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+> Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. Windows Mağazası uygulamaları da yeni koleksiyon teknikleri gerektirir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
 ## <a name="windows-counters"></a>Windows sayaçları  
- Windows sayaçları performansı işletim sistemi veya uygulamanın, bir hizmet veya sürücü ile ilgili bilgi sağlayan Windows Tanılama Altyapısı bir parçasıdır. Windows sayaçları geçerli bilgisayar yapılandırmasına bağlıdır ve diğer bilgisayarlarda kullanılamayabilir. Windows performans sayaçları, profil oluşturma veri dosyaları görünümleri ve raporları filtrelemek için kullanılabilir işaretleri, profil oluşturma olarak toplanır.  
+ Windows sayaçları, işletim sisteminin veya bir uygulamanın, bir hizmetin veya bir sürücünün performansı hakkında bilgi sağlayan Windows Tanılama altyapısının bir parçasıdır. Windows sayaçları, geçerli bilgisayarın yapılandırmasına bağlıdır ve diğer bilgisayarlarda kullanılamayabilir. Windows performans sayaçları, profil oluşturma işaretleri olarak veri dosyalarında toplanır ve bu sayede görünümleri ve raporları filtrelemek için kullanılabilir.  
   
 ## <a name="cpu-counters"></a>CPU sayaçları  
- CPU sayaçları, donanım ile ilgili olayların sayısını depolayan bilgisayarın CPU özelliğidir.  Yöntemi profil oluşturma Araçları'nı kullanarak CPU sayaç verileri toplama, İşlevler ve modüller için veri veri eklenir. Araçlar yöntemini kullanarak birden çok CPU sayaçları toplayabilirsiniz. Örnekleme yöntemini kullandığınızda, örneklenen için olay olarak kullanılacak bir sayaç seçin.  
+ CPU sayaçları, donanım ile ilgili olayların sayısını depolayan bilgisayarın CPU özelliğidir.  İzleme profili oluşturma yöntemini kullanarak CPU sayacı verileri topladığınızda, veriler işlevler ve modüller için verilere eklenir. İzleme yöntemini kullanarak birden çok CPU sayacı toplayabilirsiniz. Örnekleme yöntemini kullandığınızda, örneklendiği olay olarak kullanılacak bir sayaç seçersiniz.  
   
- Performans sayaçları, CPU özgü olur. Farklı modelleri ve bir CPU sürümleri aynı performans sayacını etkinleştirmek için önemli ölçüde farklı yapılandırma ayarları olabilir. [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] Profiler taşınabilir olayları, belirli bir işlemci bazı ortak performans sayaçlarını ayırmanıza ve toplamak veya genel performans olaylarını örnek olanak sağlar.  
+ Performans sayaçları, CPU 'ya özeldir. Bir CPU 'nun farklı modelleri ve sürümleri, aynı performans sayacını etkinleştirmek için önemli ölçüde farklı yapılandırma ayarlarına sahip olabilir. [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] Profil Oluşturucu taşınabilir olayları belirli işlemcilerin bazı yaygın performans sayaçlarını ayırır ve genel performans olaylarını toplamanıza veya örneklemenizi sağlar.  
   
- Örneğin, L2 önbellek isabetsizliği, profil oluşturucuyu kullandığınızda belirli bir olay saymak istiyorsanız, bu olay gönderen etrafında bir performans oturumu oluşturabilirsiniz. L2 önbellek ile herhangi bir CPU üzerinde bunu yapabilirsiniz. Performans oturumu platformdan platforma değiştirilmeden taşınabilir.  
+ Profil oluşturucuyu kullandığınızda belirli bir olayı saymak istiyorsanız, örneğin L2 önbellek isabetsizliği, bu olay göndericisinin çevresinde bir performans oturumu oluşturabilirsiniz. Bunu L2 önbelleğiyle herhangi bir CPU 'da yapabilirsiniz. Performans oturumu, değişiklik yapılmadan platformdan platforma taşınabilir.  
   
- Visual Studio profil oluşturucu, belirli olaylar için belirli bir platforma desteklemeye devam eder. Örneğin, bir geliştirici Pentium 4 platformunda birlikte NetBurst mimariye özgü olaylar saymak isteyebilirsiniz. Bu olay belirli bir platformda belirli bir performans oturumu için taşınabilir, ancak geliştirici için hala kullanılabilir değil.  
+ Visual Studio Profiler, belirli bir platform için belirli olayları desteklemeye devam eder. Örneğin, bir Pentium 4 platformunda bir geliştirici Netpatlaması mimarisine özgü olan olayları saymak isteyebilir. Bu olay taşınabilir değildir, ancak belirli bir platformda belirli bir performans oturumu için geliştirici tarafından kullanılabilir.  
   
-## <a name="portable-and-platform-events"></a>Taşınabilir ve Platform olaylarını  
- Taşınabilir olayları, özel bir işlemciye özgü olmayan CPU sayaçları grubudur. Diğer tüm CPU sayaçları platform olayı olarak adlandırılır ve çeşitli platformlarda desteklenmiyor olabilir.  
+## <a name="portable-and-platform-events"></a>Taşınabilir ve platform olayları  
+ Taşınabilir olaylar, belirli bir işlemciye özgü olmayan bir CPU sayaçları grubudur. Diğer tüm CPU sayaçlarına platform olayları denir ve çeşitli platformlarda desteklenmeyebilir.  
   
- Hem taşınabilir ve platform olaylarını sayaçları tanımlanır. XML dosyaları, burada sayaçlarıyla ilgili belirli değerler sağlanır. Intel ve AMD işlemciler, verileri gibi farklı olduğundan farklı CPU'lar, birden çok dosya vardır. [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] Profiler taşınabilir hem platform uygun sayaçları için performans ölçümlerini kullanıcıya sunmak için bu bilgileri kullanır.  
+ Hem taşınabilir hem de platform olaylarının sayaçları ' de tanımlanmıştır. Sayaçlarıyla ilgili belirli değerlerin sağlandığı XML dosyaları. Farklı CPU 'lar için birden çok dosya vardır, çünkü Örneğin, Intel ve AMD CPU 'Lar için veriler farklıdır. [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)]Profiler bu bilgileri, hem taşınabilir hem de platform için uygun sayaçları, performans ölçümü için kullanıcıya sunmak üzere kullanır.  
   
-### <a name="portable-events"></a>Taşınabilir olayları  
- Taşınabilir olayları aşağıdaki olaylar içerir:  
+### <a name="portable-events"></a>Taşınabilir olaylar  
+ Taşınabilir olaylar aşağıdaki olayları içerir:  
   
- **Genel olaylar**  
+ **Genel Olaylar**  
   
-|Olay adı|Olay açıklaması|  
+|Olay Adı|Olay Açıklaması|  
 |----------------|-----------------------|  
-|Yönergeleri Çekildi|Olay tamamlanana kadar yürütülen yönergeleri sayısını gösterir.|  
-|Durdurulmayan döngüler|Hangi işlemci, örneğin, g/ç için bekleyen durdurulmaz döngüleri belirtir.|  
+|Yönergeler kullanımdan kaldırıldı|Olay tamamlanana kadar yürütülen yönergelerin sayısını belirtir.|  
+|Durdurulmayan döngüler|Yalnızca işlemcinin durdurulmadığını belirtir (örneğin, g/ç bekleniyor).|  
   
- **Ön uç etkinlikleri**  
+ **Ön uç olayları**  
   
-|Olay adı|Olay açıklaması|  
+|Olay Adı|Olay Açıklaması|  
 |----------------|-----------------------|  
-|ITLB isabetsiz|İçinde bir isabetsizliği sonuçlanan yönerge çeviri görünüm edilgen arabellek aramaları sayısını gösterir.|  
+|ILB Isabetsizliği|Bir isabetsizlik ile sonuçlanan yönerge çevirisi arama arabelleği aramalarının sayısını belirtir.|  
   
- **Dal etkinlikleri**  
+ **Dal olayları**  
   
-|Olay adı|Olay açıklaması|  
+|Olay Adı|Olay Açıklaması|  
 |----------------|-----------------------|  
-|Dallar Çekildi|Olay tamamlanana kadar yürütülen dal yönergeleri sayısını gösterir.|  
-|Yanlış tahmin edilen dallar|Yanlış bir yol işlemci tahmin nedeniyle oluşabilecek yanlış tahmin edilen dallar gösterir. İşlemci tüm çalışmanın iptal ve doğru yola yeniden başlatmak için yanlış tahmin edilen dallar performansını etkiler.|  
+|Dallar kullanımdan kaldırıldı|Olay tamamlanana kadar yürütülen dal yönergelerinin sayısını belirtir.|  
+|Yanlış tahmin edilen dallar|İşlemcinin hatalı bir yolu tahmin ettiğinden oluşan, yanlış tahmin edilen dalları gösterir. Yanlış tahmin edilen dallar, işlemcinin tüm işleri atıp doğru bir yolda yeniden başlaması gerektiğinden performansı etkiler.|  
   
  **Bellek olayları:**  
   
-|Olay adı|Olay açıklaması|  
+|Olay Adı|Olay Açıklaması|  
 |----------------|-----------------------|  
-|L2 Önbellek Okuma isabetsiz|İkinci düzey önbellek sayısını okuma isabetsiz gösterir.|  
-|L2 Önbellek Okuma referansları|İkinci düzey önbellek sayısını başvuruları okuma gösterir. Bu yükleme isabetsiz içerir ve sahiplik (RFO) isabetsiz ve isabet sayısı için okuyun.|  
+|L2 önbellek okuma Isabetsizliği|İkinci düzey önbellek okuma isabetsizlik sayısını belirtir.|  
+|L2 önbellek okuma başvuruları|İkinci düzey önbellek okuma başvurularının sayısını belirtir. Yükleme isabetsizliği ve sahiplik (RFO) isabetsizliği ve isabetler için okuma içerir.|  
   
 ## <a name="viewing-available-counters"></a>Kullanılabilir sayaçları görüntüleme  
- Bir komut istemi penceresinde üzerinde Visual Studio IDE'de kullanılabilir CPU sayaçları listeleyebilirsiniz.  
+ Visual Studio IDE 'deki kullanılabilir CPU sayaçlarını bir komut Istemi penceresinde listeleyebilirsiniz.  
   
-### <a name="visual-studio-ui"></a>Visual Studio UI  
- Visual Studio IDE'de bir bilgisayarda kullanılabilir sayaçları listelemek için performans Gezgini profil oluşturucu performans oturumu olması gerekir.  
+### <a name="visual-studio-ui"></a>Visual Studio Kullanıcı arabirimi  
+ Visual Studio IDE 'deki bir bilgisayardaki kullanılabilir sayaçları listelemek için Performans Gezgini bir profiler performans oturumunun açık olması gerekir.  
   
-##### <a name="to-view-a-list-of-a-list-of-all-cpu-counters-that-are-supported-on-the-current-platform"></a>Geçerli platformda desteklenen tüm CPU sayaçları listesini bir listesini görüntülemek için  
+##### <a name="to-view-a-list-of-a-list-of-all-cpu-counters-that-are-supported-on-the-current-platform"></a>Geçerli platformda desteklenen tüm CPU sayaçlarının listesini görüntülemek için  
   
-1. Performans Gezgini performans oturumu sağ tıklayın ve ardından **özellikleri**.  
+1. Performans Gezgini, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
-2. Aşağıdakilerden birini yapın:  
+2. Şunlardan birini yapın:  
   
-   - Tıklayın **örnekleme**ve ardından **performans sayacı** gelen **örnek** olay listesi. CPU sayaçları listelenen **ulaşılabilir performans sayaçları**.  
+   - **Örnekleme**' ye tıklayın ve ardından **örnek** olay listesinden **performans sayacı** ' nı seçin. CPU sayaçları **kullanılabilir performans sayaçlarında**listelenir.  
   
-      **Not** tıklayın **iptal** önceki örnekleme yapılandırmaya dönmek için.  
+      **Göz önünde** Önceki örnekleme yapılandırmasına geri dönmek için **iptal** 'e tıklayın.  
   
      -veya-  
   
-   - Seçin **CPU sayaçları**ve ardından **CPU sayaçlarını Topla**. CPU sayaçları listelenen **kullanılabilir sayaçları**.  
+   - **CPU sayaçlarını**seçin ve ardından **CPU sayaçlarını topla**' yı seçin. CPU sayaçları **kullanılabilir sayaçlara**göre listelenmiştir.  
   
-      **Not** tıklayın **iptal** önceki sayaç koleksiyonu yapılandırmaya dönmek için.  
+      **Göz önünde** Önceki sayaç koleksiyonu yapılandırmasına dönmek için **iptal** 'e tıklayın.  
   
-##### <a name="to-view-a-list-of-a-list-of-window-counters-that-are-supported-on-the-current-platform"></a>Geçerli platformda desteklenen penceresi sayaçları listesini bir listesini görüntülemek için  
+##### <a name="to-view-a-list-of-a-list-of-window-counters-that-are-supported-on-the-current-platform"></a>Geçerli platformda desteklenen pencere sayaçlarının listesinin bir listesini görüntülemek için  
   
-1. Performans Gezgini performans oturumu sağ tıklayın ve ardından **özellikleri**.  
+1. Performans Gezgini, performans oturumuna sağ tıklayın ve ardından **Özellikler**' e tıklayın.  
   
-2. Tıklayın **Windows sayaçları**.  
+2. **Windows sayaçları**' na tıklayın.  
   
-3. Seçin **Windows sayaçları toplamak**.  
+3. **Windows sayaçlarını topla**' yı seçin.  
   
-4. Gelen **sayaç kategorisi** listesinde, bir sayaç grubunu seçin. Liste kutusunda grup için Windows sayaç görüntülenir.  
+4. **Sayaç kategorisi** listesinden bir sayaç grubu seçin. Grubun Windows sayacı liste kutusunda görüntülenir.  
   
-     **Not:** Tıklayın **iptal** önceki sayaç koleksiyonu yapılandırmaya dönmek için.  
+     **Note:** Önceki sayaç koleksiyonu yapılandırmasına dönmek için **iptal** 'e tıklayın.  
   
-### <a name="command-line"></a>Komut satırı  
- Kullanarak [VSPerfCmd](../profiling/vsperfcmd.md) komut satırı aracını komut satırından bir bilgisayarda kullanılabilir CPU sayaçları yeniden sıralayabilir.  
+### <a name="command-line"></a>Komut Satırı  
+ [VSPerfCmd](../profiling/vsperfcmd.md) komut satırı aracını kullanarak bir BILGISAYARDAKI kullanılabilir CPU sayaçlarını komut satırından listeleyebilirsiniz.  
   
-##### <a name="to-list-of-cpu-counters-that-are-supported-on-the-current-platform"></a>Geçerli platformda desteklenen CPU sayaçları bir listesi için  
+##### <a name="to-list-of-cpu-counters-that-are-supported-on-the-current-platform"></a>Geçerli platformda desteklenen CPU sayaçlarının listesi  
   
 1. Bir komut istemi penceresi açın.  
   
 2. Tür  
   
-     **\<Visual Studio performans araçları dizinine > \VSPerfCmd/querycounters**  
+     **\<Visual Studio Performance Tools Directory>\VSPerfCmd/QueryCounters**  
   
-     Burada  **\<Visual Studio performans araçları dizinine >** Visual Studio yüklemenizin performans araçları dizinini genellikle yoludur  
+     burada, **\<Visual Studio Performance Tools Directory>** Visual Studio yüklemenizin performans araçları dizininin yoludur, genellikle  
   
-     C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Performance Tools  
+     C:\Program Files\Microsoft Visual Studio 10.0 \ Team Tools\performans araçları  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel bakış](../profiling/overviews-performance-tools.md)   
- [Nasıl yapılır: Örnekleme olayları seçme](../profiling/how-to-choose-sampling-events.md)   
- [Nasıl yapılır: CPU sayaç verileri toplama](../profiling/how-to-collect-cpu-counter-data.md)   
- [Nasıl yapılır: Windows Sayaç Verileri Toplama](../profiling/how-to-collect-windows-counter-data.md)
+ [Tahmin](../profiling/overviews-performance-tools.md)   
+ [Nasıl yapılır: örnekleme olaylarını seçme](../profiling/how-to-choose-sampling-events.md)   
+ [Nasıl yapılır: CPU sayacı verilerini toplama](../profiling/how-to-collect-cpu-counter-data.md)   
+ [Nasıl yapılır: Windows sayaç verileri toplama](../profiling/how-to-collect-windows-counter-data.md)

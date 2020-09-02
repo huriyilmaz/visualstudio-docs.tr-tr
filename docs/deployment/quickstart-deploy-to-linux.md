@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - azure
 ms.openlocfilehash: 5b0b45d586fb6eb89eb458329f611d980d9415e0
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285486"
 ---
 # <a name="publish-an-aspnet-core-app-to-app-service-on-linux-using-visual-studio"></a>Visual Studio kullanarak Linux 'ta App Service için ASP.NET Core uygulaması yayımlama
@@ -54,7 +54,7 @@ Bu makalede, tek seferlik dağıtım için **Yayımla** aracının nasıl kullan
 
     ![Azure App Service seçin](../deployment/media/quickstart-publish-linux-select-instance.png)
 
-1. **Yayımla** seçeneğini belirleyin. Visual Studio uygulamayı Azure App Service dağıtır ve Web uygulaması tarayıcınıza yüklenir. Proje özellikleri **Yayımlama** bölmesi, site URL 'sini ve diğer ayrıntıları gösterir.
+1. **Yayımla**’yı seçin. Visual Studio uygulamayı Azure App Service dağıtır ve Web uygulaması tarayıcınıza yüklenir. Proje özellikleri **Yayımlama** bölmesi, site URL 'sini ve diğer ayrıntıları gösterir.
 
     ![Profil özetini gösteren özellik bölmesini Yayımla](../deployment/media/quickstart-publish-linux-summary-page.png)
 

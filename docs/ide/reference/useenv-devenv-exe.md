@@ -20,47 +20,47 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 35808b27964b3ca8fa0488f1be2ce6dc5530b3dd
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596402"
 ---
 # <a name="useenv-devenvexe"></a>/UseEnv (devenv.exe)
 
-Visual Studio'u başlatır ve derleme için belirli ortam değişkenlerini yükler.
+Visual Studio 'Yu başlatır ve derleme için belirli ortam değişkenlerini yükler.
 
 > [!NOTE]
-> Bu anahtar, **C++** iş yüküne sahip Masaüstü geliştirme ile yüklenir.
+> Bu anahtar, C++ iş yüküne **sahip masaüstü geliştirmeyle** birlikte yüklenir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```shell
 devenv /UseEnv {SolutionName|ProjectName}
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - *SolutionName*
 
-  Çözüm dosyasının tam yolu ve adı.
+  Bir çözüm dosyasının tam yolu ve adı.
 
-- *Projeadı*
+- *ProjectName*
 
-  Proje dosyasının tam yolu ve adı.
+  Bir proje dosyasının tam yolu ve adı.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu **anahtar, VC++ Dizinleri**için proje özelliklerinde Visual Studio IDE'yi etkiler. `/UseEnv` Anahtarı belirtirseniz, **VC++ Dizindüğümü** PATH, INCLUDE, LIBPATH ve LIB ortam değişkenleri değerlerini gösterir. (Ayrıca **Kaynak Dizinleri** ve **Dışlama Dizinleri**için değerleri gösterir.) Aksi takdirde, düğüm beş dizin değerleri ile ortam değişkenleri değiştirir: **Çalıştırılabilir Dizinler**, **Dahil Dizinler**, **Başvuru Dizinleri**, **Kütüphane Dizinleri**ve **Kitaplık WinRT Dizinleri**.
+Bu anahtar, **VC + + dizinleri**için proje özellikleri Içindeki VISUAL Studio IDE 'yi etkiler. `/UseEnv`Anahtarı belirtirseniz, **VC + + DIZINLERI** düğümü Path, INCLUDE, LıBPATH ve LIB ortam değişkenlerinin değerlerini gösterir. (Ayrıca, **kaynak dizinlerin** ve **Dışlanan dizinlerin**değerlerini gösterir.) Aksi halde düğüm, ortam değişkenlerini beş dizin değeriyle değiştirir: **yürütülebilir dizinler**, **dizinleri**, **başvuru dizinleri**, **kitaplık dizinleri**ve **kitaplık WinRT dizinleri**.
 
 > [!TIP]
-> Bir C++ projesine sağ tıklayarak ve **Özellikler'i**seçerek proje özelliklerine erişebilirsiniz. Özellik **Sayfaları** iletişim kutusunda **Yapılandırma Özellikleri'ni** ve ardından **VC++ Dizinlerini**seçin.
+> C++ projesine sağ tıklayıp **Özellikler**' i seçerek Proje özelliklerine erişirsiniz. **Özellik sayfaları** Iletişim kutusunda **yapılandırma özellikleri** ' ni ve ardından **VC + + dizinleri**' ni seçin.
 
-Bu anahtarla bir proje adı belirtildiğinde, araç projenin ana çözümündeki tüm projeler için ortam değişkenlerini görüntüler.
+Bu anahtarla bir proje adı belirtildiğinde araç, projenin üst çözümündeki tüm projeler için ortam değişkenlerini görüntüler.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek Visual Studio'yu başlatır ve ortam `MySolution` değişkenlerini çözümün özellik sayfalarına yükler.
+Aşağıdaki örnek Visual Studio 'Yu başlatır ve ortam değişkenlerini çözümün özellik sayfalarına yükler `MySolution` .
 
 ```shell
 devenv.exe /useenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
@@ -69,4 +69,4 @@ devenv.exe /useenv "%USERPROFILE%\source\repos\MySolution\MySolution.sln"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)
-- [VC++ Dizinler Özellik Sayfası (Windows)](/cpp/build/reference/vcpp-directories-property-page)
+- [VC + + dizinleri Özellik sayfası (Windows)](/cpp/build/reference/vcpp-directories-property-page)

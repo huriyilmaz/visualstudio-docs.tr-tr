@@ -1,5 +1,5 @@
 ---
-title: Idiaenumtables::Next | Microsoft Docs
+title: 'IDiaEnumTables:: Next | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 69e96ad3c19a488546ad8f2a95c94c9c521fa914
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197573"
 ---
 # <a name="idiaenumtablesnext"></a>IDiaEnumTables::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Belirtilen bir sabit listesi sırası tablolarında sayısını alır.  
+Sabit Listesi dizisinde belirtilen sayıda tabloyu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Next (   
@@ -37,17 +37,17 @@ HRESULT Next ( 
   
 #### <a name="parameters"></a>Parametreler  
  `celt`  
- [in] Alınacak Numaralandırıcı tablo sayısı.  
+ 'ndaki Numaralandırıcıda alınacak olan tablo sayısı.  
   
  `rgelt`  
- [out] İle doldurulacak bir dizi [Idiatable](../../debugger/debug-interface-access/idiatable.md) istediğiniz tabloları temsil eden nesneleri.  
+ dışı İstenen tabloları temsil eden [IDiaTable](../../debugger/debug-interface-access/idiatable.md) nesneleriyle doldurulacak bir dizi.  
   
  `pceltFetched`  
- [out] Tablo sayısı getirilen bir numaralandırıcı döndürür.  
+ dışı Getirilen Numaralandırıcı içindeki tablo sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` daha fazla tablo varsa. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla tablo yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaenumtables](../../debugger/debug-interface-access/idiaenumtables.md)   
+ [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)   
  [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

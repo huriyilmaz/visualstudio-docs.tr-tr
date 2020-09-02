@@ -12,10 +12,10 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: d6112bc3894424b9dfd3d060ed390960243b0f98
-ms.sourcegitcommit: 4a77403b6bd33c5a6e66a3eefd42c81c39fb67ca
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87330989"
 ---
 # <a name="intellisense-completion-for-unimported-types-and-extension-methods"></a>İçeri aktarılmamış türler ve genişletme yöntemleri için IntelliSense tamamlama

@@ -8,10 +8,10 @@ ms.workload:
 - cplusplus
 author: corob-msft
 ms.openlocfilehash: 16020c0928229c80a9eb33b3bc4804b004d9f432
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816013"
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>Nasıl yapılır: C++ dll 'Leri için birim testleri yazma
@@ -34,7 +34,7 @@ Bu izlenecek yol, test-First yöntemini kullanarak yerel C++ DLL 'nin nasıl gel
 
 8. [Birimleri dış kaynaklardan yalıtın](using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md). Genellikle, bir DLL, diğer dll 'Ler, veritabanları veya uzak alt sistemler gibi geliştirmekte olduğunuz sistem bileşenlerine bağımlıdır. Her birimi bağımlılıklarından yalıtılmış olarak test etmek yararlı olur. Dış bileşenler, testlerin yavaş çalışmasını sağlayabilir. Geliştirme sırasında diğer bileşenler tamamlanmamış olabilir.
 
-## <a name="create-a-native-unit-test-project"></a><a name="create_test_project"></a>Yerel birim testi projesi oluştur
+## <a name="create-a-native-unit-test-project"></a><a name="create_test_project"></a> Yerel birim testi projesi oluştur
 
 1. **Dosya** menüsünde **Yeni**  >  **Proje**' yi seçin.
 
@@ -82,7 +82,7 @@ Bu izlenecek yol, test-First yöntemini kullanarak yerel C++ DLL 'nin nasıl gel
 
          ![Başarılı bir test ile birim test Gezgini](../test/media/utecpp04.png)
 
-## <a name="create-a-dll-project"></a><a name="create_dll_project"></a>DLL projesi oluşturma
+## <a name="create-a-dll-project"></a><a name="create_dll_project"></a> DLL projesi oluşturma
 
 ::: moniker range="vs-2019"
 
@@ -148,7 +148,7 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
 
 ::: moniker-end
 
-## <a name="couple-the-test-project-to-the-dll-project"></a><a name="make_functions_visible"></a>DLL projesine test projesi için birkaç
+## <a name="couple-the-test-project-to-the-dll-project"></a><a name="make_functions_visible"></a> DLL projesine test projesi için birkaç
 
 1. DLL projesini test projesinin proje başvurularına ekleyin:
 
@@ -194,7 +194,7 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
 
    Test ve kod projelerini ayarlamış ve kod projesindeki işlevleri çalıştıran testleri çalıştıracağınızı doğruladınız. Artık gerçek testleri ve kodu yazmaya başlayabilirsiniz.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a>Testleri tekrarlayarak ve geçiş yapın
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="iterate"></a> Testleri tekrarlayarak ve geçiş yapın
 
 1. Yeni bir test ekleyin:
 
@@ -252,7 +252,7 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
     > [!TIP]
     > Her seferinde bir test ekleyerek kod geliştirin. Her yinelemeden sonra tüm testlerin başarılı olduğundan emin olun.
 
-## <a name="debug-a-failing-test"></a><a name="debug"></a>Başarısız bir testte hata ayıkla
+## <a name="debug-a-failing-test"></a><a name="debug"></a> Başarısız bir testte hata ayıkla
 
 1. Başka bir test ekleyin:
 
@@ -337,7 +337,7 @@ Aşağıdaki adımlarda, Visual Studio 2017 ' de bir DLL projesi oluşturma gös
 
 ::: moniker-end
 
-## <a name="refactor-the-code-without-changing-tests"></a><a name="refactor"></a>Testleri değiştirmeden kodu yeniden düzenleme
+## <a name="refactor-the-code-without-changing-tests"></a><a name="refactor"></a> Testleri değiştirmeden kodu yeniden düzenleme
 
 1. SquareRoot işlevinde merkezi hesaplamayı kolaylaştırın:
 

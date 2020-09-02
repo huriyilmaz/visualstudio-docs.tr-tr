@@ -1,5 +1,5 @@
 ---
-title: MSBuild. Hedefler dosyaları | Microsoft Docs
+title: MSBUILD. Hedef dosyalar | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -18,33 +18,33 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bab229a3246ac91eaa652be67e98a68aab40e820
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439380"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64811144"
 ---
 # <a name="msbuild-targets-files"></a>MSBuild .Targets Dosyaları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] öğeleri, özellikleri, hedefleri ve görevleri sık karşılaşılan senaryolara yönelik içeren birkaç .targets dosyaları içerir. Bu dosyaları en otomatik olarak içeri aktarılan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje dosyaları, Bakım ve okunabilirliği kolaylaştırmak.  
+[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] ortak senaryolar için öğeleri, özellikleri, hedefleri ve görevleri içeren birkaç. targets dosyası içerir. Bu dosyalar, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bakım ve okunabilirlik işlemlerini basitleştirmek üzere çoğu proje dosyasına otomatik olarak aktarılır.  
   
- Projeleri genellikle yapı işlemlerini tanımlamak için bir veya daha fazla .targets dosyalarını içeri aktarın. Örneğin bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] proje tarafından oluşturulan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , Microsoft.common.targets'ı aktarır Microsoft.CSharp.targets içeri aktaracak. [!INCLUDE[csprcs](../includes/csprcs-md.md)] Projenin kendisinin tanımlama öğeleri ve belirli özellikleri bu projeye, ancak standart derleme kuralları için bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] proje içeri aktarılan .targets dosyalarında tanımlanır.  
+ Projeler genellikle derleme işlemlerini tanımlamak için bir veya daha fazla. targets dosyasını içeri aktarır. Örneğin [!INCLUDE[csprcs](../includes/csprcs-md.md)] , tarafından oluşturulan bir proje [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Microsoft. Common. targets 'ı Içeri aktaran Microsoft. CSharp. targets içeri aktarır. [!INCLUDE[csprcs](../includes/csprcs-md.md)]Projenin kendisi bu projeye özgü öğeleri ve özellikleri tanımlar, ancak projenin standart yapı kuralları [!INCLUDE[csprcs](../includes/csprcs-md.md)] içeri aktarılan. targets dosyalarında tanımlanır.  
   
- `$(MSBuildToolsPath)` Değeri bu ortak .targets dosyaları yolunu belirtir. Varsa `ToolsVersion` 4.0, dosyaları şu konumda: `WindowsInstallationPath\Microsoft.NET\Framework\v4.0.30319\`  
+ `$(MSBuildToolsPath)`Değer, bu ortak. targets dosyalarının yolunu belirtir. `ToolsVersion`4,0 ise, dosyalar aşağıdaki konumdadır:`WindowsInstallationPath\Microsoft.NET\Framework\v4.0.30319\`  
   
 > [!NOTE]
-> Kendi hedefleri oluşturma hakkında daha fazla bilgi için bkz: [hedefleri](../msbuild/msbuild-targets.md). Nasıl kullanılacağı hakkında daha fazla bilgi için `Import` öğesinin başka bir proje dosyasına bir proje dosyası eklemek için [içeri aktarma öğesi (MSBuild)](../msbuild/import-element-msbuild.md) ve [nasıl yapılır: Birden çok proje dosyasında aynı hedefi kullanma](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md).  
+> Kendi hedeflerinizi oluşturma hakkında daha fazla bilgi için bkz. [targets](../msbuild/msbuild-targets.md). Bir `Import` Proje dosyasını başka bir proje dosyasına eklemek için öğesinin nasıl kullanılacağı hakkında bilgi için, bkz. [Import element (MSBuild)](../msbuild/import-element-msbuild.md) ve [nasıl yapılır: birden çok proje dosyasında aynı hedefi kullanma](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md).  
   
-## <a name="common-targets-files"></a>Ortak. MSBuild  
+## <a name="common-targets-files"></a>Birçok. Hedef dosyalar  
   
-|. Hedef dosya|Açıklama|  
+|. Hedef dosya|Description|  
 |-------------------|-----------------|  
-|Microsoft.Common.targets|İçin standart derleme işlemindeki adımları tanımlar [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ve [!INCLUDE[csprcs](../includes/csprcs-md.md)] projeleri.<br /><br /> Aşağıdaki deyim içeren Microsoft.CSharp.targets ve Microsoft.VisualBasic.targets'daki dosyaları tarafından içe aktarılan: `<Import Project="Microsoft.Common.targets" />`|  
-|Microsoft.CSharp.targets|Visual C# projeleri için standart derleme işlemindeki adımları tanımlar.<br /><br /> Aşağıdaki deyim içeren Visual C# proje dosyaları tarafından (.csproj) içeri aktarıldı: `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`|  
-|Microsoft.VisualBasic.targets|Visual Basic projeleri için standart derleme işlemindeki adımları tanımlar.<br /><br /> Aşağıdaki deyim içeren Visual Basic proje dosyaları (.vbproj) içeri aktarıldı: `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`|  
+|Microsoft. Common. targets|Ve projeleri için standart derleme işlemindeki adımları tanımlar [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)] .<br /><br /> Aşağıdaki ifadeyi içeren Microsoft. CSharp. targets ve Microsoft. VisualBasic. targets dosyaları tarafından içeri aktarılır: `<Import Project="Microsoft.Common.targets" />`|  
+|Microsoft. CSharp. targets|Visual C# projeleri için standart derleme işlemindeki adımları tanımlar.<br /><br /> Aşağıdaki ifadeyi içeren Visual C# proje dosyaları (. csproj) tarafından içeri aktarıldı: `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`|  
+|Microsoft. VisualBasic. targets|Visual Basic projeleri için standart derleme işlemindeki adımları tanımlar.<br /><br /> Aşağıdaki ifadeyi içeren Visual Basic proje dosyaları (. vbproj) tarafından içeri aktarıldı: `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İçeri aktarma öğesi (MSBuild)](../msbuild/import-element-msbuild.md)   
- [MSBuild Başvurusu](../msbuild/msbuild-reference.md)  
- [MSBuild](msbuild.md)
+ [MSBuild başvurusu](../msbuild/msbuild-reference.md)  
+ [MSBUILD](msbuild.md)

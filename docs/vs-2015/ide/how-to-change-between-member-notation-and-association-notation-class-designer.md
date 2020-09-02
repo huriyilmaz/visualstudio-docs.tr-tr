@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6a9a15b7284c647cb115c34b5655bdcaa7402ce0
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72663574"
 ---
 # <a name="how-to-change-between-member-notation-and-association-notation-class-designer"></a>Nasıl Yapılır: Üye Gösterimi ile İlişkilendirme Gösterimi Arasında Geçiş (Sınıf Tasarımcısı)
@@ -47,4 +47,4 @@ Sınıf Tasarımcısı, sınıf diyagramının üye gösterimden ilişki göster
      İlişkilendirme satırı kaybolur ve özelliği, diyagramda tür şeklinin içindeki uygun bölme içinde görüntülenir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Nasıl yapılır: türler arasında devralma oluşturma (sınıf Tasarımcısı)](../ide/how-to-create-inheritance-between-types-class-designer.md) nasıl yapılır: türleri [ve ilişkileri görüntüleme](../ide/viewing-types-and-relationships-class-designer.md) ( [Sınıf Tasarımcısı) türler arasında devralmayı görüntüleme](../ide/how-to-view-inheritance-between-types-class-designer.md) (sınıf Tasarımcısı) [nasıl yapılır: koleksiyon ilişkilendirmesini görselleştirme (sınıf Tasarımcısı) ](../ide/how-to-visualize-a-collection-association-class-designer.md)
+ [Nasıl yapılır: türler arasında devralma oluşturma (sınıf Tasarımcısı)](../ide/how-to-create-inheritance-between-types-class-designer.md) nasıl yapılır: türleri [ve ilişkileri görüntüleme](../ide/viewing-types-and-relationships-class-designer.md) ( [Sınıf Tasarımcısı) türler arasında devralmayı görüntüleme](../ide/how-to-view-inheritance-between-types-class-designer.md) (sınıf Tasarımcısı) [nasıl yapılır: koleksiyon ilişkilendirmesini görselleştirme (sınıf Tasarımcısı)](../ide/how-to-visualize-a-collection-association-class-designer.md)

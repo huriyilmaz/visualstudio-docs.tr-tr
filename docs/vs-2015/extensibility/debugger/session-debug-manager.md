@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama oturumu Manager | Microsoft Docs
+title: Oturum hata ayıklama Yöneticisi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -16,27 +16,27 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9fd7c7555c19f850a15161f6fba00b1184621a9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157831"
 ---
 # <a name="session-debug-manager"></a>Oturum Hata Ayıklama Yöneticisi
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Oturum hata ayıklama Yöneticisi (SDM) herhangi bir sayıda herhangi bir sayıda makine üzerinde birden çok işlem programlarında hata ayıklama hata ayıklama altyapısı (DE) herhangi bir sayıda yönetir. SDM çoğaltıcı bir hata ayıklama altyapısı olmaya ek olarak, IDE için hata ayıklama oturumu birleşik bir görünümünü sağlar.  
+Oturum hata ayıklama Yöneticisi (SDM), herhangi bir sayıda makinede birden çok işlemde bulunan her türlü programda hata ayıklama altyapısını (DE) yönetir. Bir hata ayıklama altyapısı Çoğullayıcı olmanın yanı sıra, SDM, IDE 'ye hata ayıklama oturumunun Birleşik bir görünümünü sağlar.  
   
-## <a name="session-debug-manager-operation"></a>Oturum hata ayıklama Yöneticisi işlemi  
- Oturum hata ayıklama Yöneticisi (SDM) DE yönetir. Çalıştıran bir makinede aynı anda birden fazla hata ayıklama altyapısı olabilir. DEs çoğullamalısınız için SDM DEs arabirimlerden sayısı sarmalar ve bunları tek bir arabirim olarak IDE sunar.  
+## <a name="session-debug-manager-operation"></a>Oturum hata ayıklama Yöneticisi Işlemi  
+ Oturum hata ayıklama Yöneticisi (SDM), DE yönetir. Aynı anda bir makinede çalışan birden fazla hata ayıklama altyapısı olabilir. DEs çoğullanır olması için, SDM DEs 'ten bir dizi arabirimi sarmalamalı ve bunları tek bir arabirim olarak IDE 'ye gösterir.  
   
- Performansı artırmak için bazı arabirimler çoğullanır değil. Bunun yerine, doğrudan DE kullanılan ve bu arabirimler çağrıları SDM geçmemektedir. Özel yönerge, bellek veya belirli bir program tarafından belirli bir DE hata ayıklaması belgede başvurduğundan Örneğin, bellek, kod ve belge bağlamı ile kullanılan arabirimleri, çoğullanır değil. Diğer bir DE iletişim, düzeyinde yer alması gerekir.  
+ Performansı artırmak için bazı arabirimler çoğullanmış değildir. Bunun yerine, doğrudan DE ile kullanılır ve bu arayüzlere yapılan çağrılar SDM 'ye gitmez. Örneğin, bellek, kod ve belge bağlamlarına göre kullanılan arabirimler, belirli bir şekilde hata ayıkladığı belirli bir programdaki belirli bir yönerge, bellek veya belgeye başvurduğundan çoğullanabilir değildir. Bu iletişim düzeyine dahil olması gereken başka bir DE yok.  
   
- Bu tüm içeriklerde geçerli değildir. İfade değerlendirme bağlamı arabirimi çağrılar SDM gidin. SDM ifadesi değerlendirmesi sırasında sarmalar [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) ifade değerlendirildiğinde, programlar olabilir aynı işlemde hata ayıklama birden çok DEs gerektirebilir bulunduğundan IDE verir arabirimi aynı iş parçacığında çalışır.  
+ Bu, tüm bağlamlarda doğru değildir. İfade değerlendirme bağlamı arabirimine yapılan çağrılar SDM aracılığıyla gider. İfade değerlendirmesi sırasında, SDM, bu ifade değerlendirildiği zaman, aynı iş parçacığında çalışmakta olabilecek programlarda hata ayıklama [yapan, aynı](../../extensibility/debugger/reference/idebugexpression2.md) işlemde çalışan birden fazla des içerebilir.  
   
- SDM genellikle bir temsilci mekanizması olarak görev yapar, ancak bir yayın mekanizması davranan. Örneğin, ifade değerlendirmesi sırasında SDM tüm DEs, belirtilen bir iş parçacığında kod çalıştırabilir bildirmek için bir yayın mekanizması görevi görür. Benzer şekilde, SDM durdurma olayı aldığında, bunların çalışmasını durdurmanız tüm programlar için yayınlar. Bir adım çağrıldığında SDM tüm programlar çalışmaya devam ettiğini yayınlar. Kesme noktaları ayrıca her DE olarak yayınlanır.  
+ SDM genellikle bir yetkilendirme mekanizması işlevi görür, ancak bir yayın mekanizması işlevi görebilir. Örneğin, ifade değerlendirmesi sırasında, SDM, belirli bir iş parçacığında kod çalıştırabilecekleri tüm DEs 'e bildirimde bulunan bir yayın mekanizması olarak görev yapar. Benzer şekilde, SDM bir durdurma olayı aldığında, çalışmayı durdurması gereken tüm programları yayınlar. Bir adım çağrıldığında, SDM çalışmaya devam edebilecekleri tüm programlara yayınlar. Kesme noktaları aynı zamanda her da ' a yayınlanır.  
   
- SDM geçerli programı, iş parçacığı veya yığın çerçevesi izlemez. İşlem, program ve iş parçacığı bilgileri SDM belirli hata ayıklama olayları ile birlikte gönderilir.  
+ SDM geçerli program, iş parçacığı veya yığın çerçevesini izlemez. İşlem, program ve iş parçacığı bilgileri, belirli hata ayıklama olaylarıyla birlikte SDM 'ye gönderilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata ayıklama altyapısı](../../extensibility/debugger/debug-engine.md)   

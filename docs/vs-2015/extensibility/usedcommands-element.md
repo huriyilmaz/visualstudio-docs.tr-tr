@@ -14,20 +14,20 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ba37458e0f8abca27047574170ab8aa3cc7a44ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186287"
 ---
 # <a name="usedcommands-element"></a>UsedCommands Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-UsedCommands öğesi UsedCommand öğeleri ve diğer UsedCommands gruplandırmaları gruplandırır.  
+UsedCommands öğesi, UsedCommand öğelerini ve diğer UsedCommands gruplandırmaları gruplandırır.  
   
- UsedCommands öğesi isteğe bağlıdır. Paketiniz dışında tanımlanan komutları çağırmayın, bu bölümde .vsct dosyanıza dahil gerekmez.  
+ UsedCommands öğesi isteğe bağlıdır. Paketinizin dışında tanımlanan komutları çağırmazsa, bu bölümü. vsct dosyanıza eklemeniz gerekmez.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <UsedCommands condition="Defined(DEBUG)">  
@@ -42,19 +42,19 @@ UsedCommands öğesi UsedCommand öğeleri ve diğer UsedCommands gruplandırmal
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[UsedCommand Öğesi](../extensibility/usedcommand-element.md)|Başka kod tarafından uygulanan komutu.|  
+|[UsedCommand Öğesi](../extensibility/usedcommand-element.md)|Diğer kod tarafından uygulanan komut.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[CommandTable Öğesi](../extensibility/commandtable-element.md)|VSPackage sağlayan komutlar (örneğin, menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları) tümleşik geliştirme ortamı (IDE) temsil eden tüm öğeleri tanımlar.|  
+|[CommandTable Öğesi](../extensibility/commandtable-element.md)|Bir VSPackage 'ın tümleşik geliştirme ortamına (IDE) sağladığı komutları (örneğin, menü öğeleri, menüler, araç çubukları ve Birleşik giriş kutuları) temsil eden tüm öğeleri tanımlar.|  
   
 ## <a name="example"></a>Örnek  
   

@@ -29,23 +29,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: dc8b2c013a3e685a6071f4a12d63e3ca475051a0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596521"
 ---
 # <a name="class-designer-errors"></a>Sınıf Tasarımcısı hataları
 
-**Sınıf Tasarımcısı** kaynak dosyalarınızın konumunu izlemez, bu nedenle proje yapınızı değiştirmek veya projedeki kaynak dosyalarınızı taşımak **Sınıf Tasarımcısı'nın** türü nden izini kaybetmesine neden olabilir, örneğin, bir tür defnin, taban sınıfların ve ilişkilendirme türlerinin kaynak türünü değiştirmek yaygındır. **Sınıf Tasarımcısı bu tür görüntüleyemiyor**gibi bir hata alabilirsiniz. Hatayı gidermek için, değiştirilen veya değiştirilen kaynak kodu görüntülemek için sınıf diyagramına sürükleyin.
+**Sınıf Tasarımcısı** , kaynak dosyalarınızın konumunu izlemediğinden, proje yapınızı değiştirmek veya projede kaynak dosyaları taşımak **Sınıf Tasarımcısı** , örneğin, bir typedef, temel sınıflar ve ilişki türlerinin kaynak türünü değiştirmek için yaygındır. **Sınıf Tasarımcısı bu tür görüntülenemiyor**gibi bir hata alabilirsiniz. Hatayı gidermek için değiştirilen veya yeniden konumlandırılan kaynak kodu yeniden sınıf diyagramına sürükleyerek görüntüleyin.
 
 ## <a name="resources"></a>Kaynaklar
 
-Aşağıdaki kaynaklarda diğer hatalar ve uyarılar la ilgili yardım bulabilirsiniz:
+Aşağıdaki kaynaklarda diğer hatalar ve uyarılarla ilgili yardım bulabilirsiniz:
 
-- [Visual C++ koduyla çalışma,](working-with-visual-cpp-code.md) c++'ı sınıf diyagramında görüntüleme yle ilgili sorun giderme bilgilerini içerir.
-- [Visual Studio Sınıf Tasarımcısı forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsclassdesigner) Sınıf **Tasarımcısı**hakkında sorular için bir forum sağlar.
+- [Visual C++ kodla çalışma,](working-with-visual-cpp-code.md) bir sınıf diyagramında C++ görüntüleme hakkında sorun giderme bilgilerini içerir.
+- [Visual Studio Sınıf Tasarımcısı Forumu](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vsclassdesigner) , **Sınıf Tasarımcısı**hakkında sorularınız için bir forum sağlar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tasarım ve görünüm sınıfları ve türleri](designing-and-viewing-classes-and-types.md)
+- [Sınıfları ve türleri tasarlama ve görüntüleme](designing-and-viewing-classes-and-types.md)

@@ -8,10 +8,10 @@ ms.workload:
 - uwp
 author: corob-msft
 ms.openlocfilehash: 7b556f085ae4e4a9c610aefa87b3f9125fb27042
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85285615"
 ---
 # <a name="how-to-test-a-c-dll"></a>C++ DLL 'yi test etme
@@ -22,7 +22,7 @@ Bu konu, geliştirme aşamasında ilk adım olarak birim testi kullanmayı göst
 
 Bu konu ayrıca, tek bir Visual Studio çözümü ve test etmek istediğiniz birim testleri ve DLL için ayrı projeler oluşturur. Birim testlerini doğrudan DLL projesine da dahil edebilir veya birim testleri ve için ayrı çözümler oluşturabilirsiniz. Dosyasını. Hangi yapının kullanılacağı hakkında ipuçları için bkz. [var olan C++ uygulamalarına birim testleri ekleme](../test/how-to-use-microsoft-test-framework-for-cpp.md) .
 
-## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a>Çözüm ve birim testi projesi oluşturma
+## <a name="create-the-solution-and-the-unit-test-project"></a><a name="Create_the_solution_and_the_unit_test_project"></a> Çözüm ve birim testi projesi oluşturma
 
 ::: moniker range="vs-2019"
 
@@ -58,7 +58,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
          Testler çalıştırıldığında, her bir test sınıfının bir örneği oluşturulur. Test yöntemleri belirtilmemiş bir sırada çağırılır. Her modül, sınıf veya yöntemden önce ve sonra çağrılan özel yöntemler tanımlayabilirsiniz. Daha fazla bilgi için bkz. [Microsoft. VisualStudio. TestTools. CppUnitTestFramework kullanma](how-to-use-microsoft-test-framework-for-cpp.md).
 
-## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="Verify_that_the_tests_run_in_Test_Explorer"></a>Test Gezgini 'nde testlerin çalıştırıldığını doğrulama
+## <a name="verify-that-the-tests-run-in-test-explorer"></a><a name="Verify_that_the_tests_run_in_Test_Explorer"></a> Test Gezgini 'nde testlerin çalıştırıldığını doğrulama
 
 1. Bir test kodu ekleyin:
 
@@ -77,7 +77,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
      ![Test Gezgini](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
-## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a>Çözüme DLL projesi ekleme
+## <a name="add-the-dll-project-to-the-solution"></a><a name="Add_the_DLL_project_to_the_solution"></a> Çözüme DLL projesi ekleme
 
 ::: moniker range="vs-2019"
 
@@ -148,7 +148,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
     ```
 
-## <a name="make-the-dll-functions-visible-to-the-test-code"></a><a name="make_the_dll_functions_visible_to_the_test_code"></a>DLL işlevlerini test kodu için görünür hale getirme
+## <a name="make-the-dll-functions-visible-to-the-test-code"></a><a name="make_the_dll_functions_visible_to_the_test_code"></a> DLL işlevlerini test kodu için görünür hale getirme
 
 1. RooterLib öğesini RooterLibTests projesine ekleyin.
 
@@ -196,7 +196,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
    Test ve kod projelerini ayarlamış ve kod projesindeki işlevleri çalıştıran testleri çalıştıracağınızı doğruladınız. Artık gerçek testleri ve kodu yazmaya başlayabilirsiniz.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="Iteratively_augment_the_tests_and_make_them_pass"></a>Testleri tekrarlayarak ve geçiş yapın
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a><a name="Iteratively_augment_the_tests_and_make_them_pass"></a> Testleri tekrarlayarak ve geçiş yapın
 
 1. Yeni bir test ekleyin:
 
@@ -256,7 +256,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 > [!TIP]
 > Her seferinde bir test ekleyerek kod geliştirin. Her yinelemeden sonra tüm testlerin başarılı olduğundan emin olun.
 
-## <a name="debug-a-failing-test"></a><a name="Debug_a_failing_test"></a>Başarısız bir testte hata ayıkla
+## <a name="debug-a-failing-test"></a><a name="Debug_a_failing_test"></a> Başarısız bir testte hata ayıkla
 
 1. *UnitTest1. cpp*öğesine başka bir test ekleyin:
 
@@ -325,7 +325,7 @@ Yeni bir test projesi oluşturarak başlayın. **Dosya** menüsünde **Yeni**  >
 
    ![Tüm testler geçer](../test/media/ute_ult_alltestspass.png)
 
-## <a name="refactor-the-code-without-changing-tests"></a><a name="Refactor_the_code_without_changing_tests"></a>Testleri değiştirmeden kodu yeniden düzenleme
+## <a name="refactor-the-code-without-changing-tests"></a><a name="Refactor_the_code_without_changing_tests"></a> Testleri değiştirmeden kodu yeniden düzenleme
 
 1. İşlevde merkezi hesaplamayı basitleştirme `SquareRoot` :
 
