@@ -12,21 +12,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: dae99166b8b811df75f2e2777d176e6778b60c7d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670158"
 ---
 # <a name="type-collection-editor-dialog-box"></a>Tür Koleksiyonu Düzenleyicisi İletişim Kutusu
 **Tür koleksiyonu Düzenleyicisi** iletişim kutusu, bilinen türleri **gönderme** ve **alma** etkinliklerine eklemek için kullanılır. Bu iletişim kutusu, **InvokeMethod** etkinliğine genel tür bağımsız değişkenleri eklemek için de kullanılır. Bilinen türleri eklemek için **gönderme** ve **alma** etkinliği Için kullanıldığında, **tür koleksiyonu Düzenleyicisi** iletişim kutusu tür eklemeleri benzersiz olmasını gerektirir. Yinelenen bir tür eklenirse ve değişiklik **Tamam**' a tıklandıktan sonra, bir hata iletisi döndürülür. Genel tür bağımsız değişkenleri eklemek için **InvokeMethod** etkinliği kullanıldığında, **tür koleksiyonu Düzenleyicisi** iletişim kutusu yinelenen türlerin eklenmesine izin verir.
 
 > [!NOTE]
-> bilinen türler [!INCLUDE[crabout](../includes/crabout-md.md)], bkz. [veri sözleşmesi bilinen türler](https://msdn.microsoft.com/library/1a0baea1-27b7-470d-9136-5bbad86c4337).
+> [!INCLUDE[crabout](../includes/crabout-md.md)] bilinen türler, bkz. [veri sözleşmesi bilinen türleri](https://msdn.microsoft.com/library/1a0baea1-27b7-470d-9136-5bbad86c4337).
 
  Aşağıdaki tabloda, **tür koleksiyonu** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
 
-|Arabirim Öğesi|Açıklama|
+|Arabirim Öğesi|Description|
 |----------------|-----------------|
 |**Tür Listesi**|Eklenmiş veya kaldırılmış türlerin listesi.|
 

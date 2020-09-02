@@ -13,49 +13,49 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8e838cb02aa1a620356f96d9e77f1752797ac409
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441249"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64787218"
 ---
 # <a name="upgrading-projects"></a>Projeleri Yükseltme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Proje modeli için bir sürümünden değişiklikleri [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sonraki sürüme üzerinde çalıştırabilmeniz için projeler ve çözümler yükseltilmesi özellikle gerektirebilir. [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] Yükseltme desteği kendi projelerinde uygulamak için kullanılan arabirimleri sağlar.  
+Bir sürümünden diğerine proje modelinde yapılan değişiklikler, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] daha yeni sürümde çalıştırılabilmesi için projelerin ve çözümlerin yükseltilmesini gerektirebilir. , [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] Kendi projelerinizde yükseltme desteğini uygulamak için kullanılabilen arabirimler sağlar.  
   
 ## <a name="upgrade-strategies"></a>Yükseltme stratejileri  
- Yükseltme desteklemek için proje sistemi uygulamanızı tanımlamak ve yükseltme bir strateji yürütmelidir. Stratejinizi belirlemede yan yana (SxS) yedekleme, kopya yedekleme veya her ikisini de desteklemek seçebilirsiniz.  
+ Bir yükseltmeyi desteklemek için, proje sistemi uygulamanızın bir yükseltme stratejisi tanımlayıp uygulaması gerekir. Stratejinizi belirlemek için yan yana (SxS) yedeklemeyi, kopya yedeklemesini veya her ikisini de desteklemeyi seçebilirsiniz.  
   
-- SxS yedekleme, bir proje bir yerde, uygun dosya adı sonek, örneğin, ekleme "eski" Yükseltme gereken dosyaları kopyalar anlamına gelir.  
+- SxS yedekleme, bir projenin yalnızca yükseltilmesi gereken dosyaları, örneğin ". old" gibi uygun bir dosya adı sonekini ekleyerek kopyaladığını gösterir.  
   
-- Kopya yedekleme, bir projenin tüm proje öğeleri kullanıcı tarafından sağlanan bir yedek konumuna kopyalar anlamına gelir. Ardından, özgün proje konumda sürücülerinizdeki ilgili dosyaların yükseltilir.  
+- Kopya yedekleme, bir projenin tüm proje öğelerini Kullanıcı tarafından belirtilen bir yedekleme konumuna kopyaladığı anlamına gelir. Özgün proje konumundaki ilgili dosyalar yükseltilir.  
   
-## <a name="how-upgrade-works"></a>Yükseltme nasıl çalışır?  
- Bir önceki sürümünde oluşturulmuş bir çözümü, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , çözüm dosya yükseltilmesi gerekip gerekmediğini belirlemek için IDE denetimleri gibi daha yeni bir sürümü açılır. Yükseltme gerekli ise **Yükseltme Sihirbazı** kullanıcı yükseltme sürecinde size yol için otomatik olarak başlatılır.  
+## <a name="how-upgrade-works"></a>Yükseltme nasıl Işe yarar?  
+ Önceki bir sürümünde oluşturulan bir çözüm [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] daha yeni bir sürümde AÇıLDıĞıNDA IDE, yükseltilmesi gerekip gerekmediğini öğrenmek için çözüm dosyasını denetler. Yükseltme gerekliyse, yükseltme **Sihirbazı** , kullanıcıya yükseltme işlemi boyunca yol gösterecek şekilde otomatik olarak başlatılır.  
   
- Bir çözüm yükseltme gerektiğinde, her proje fabrikası yükseltme stratejisinin için sorgular. Strateji, proje fabrikası kopya yedekleme veya SxS yedekleme destekleyip desteklemediğini belirler. Bilgiler gönderilir **Yükseltme Sihirbazı**, yedekleme için gerekli bilgileri toplar ve kullanıcıya uygun bir seçenek sunar.  
+ Bir çözümün yükseltilmesi gerektiğinde, her proje fabrikasını yükseltme stratejisi için sorgular. Strateji, proje fabrikasının kopya yedeklemesini mi yoksa SxS yedeklemesini mi desteklediğini belirler. Bilgiler, yedekleme için gereken bilgileri toplayan ve Kullanıcı için geçerli seçenekleri sunan **Yükseltme Sihirbazına**gönderilir.  
   
-### <a name="multi-project-solutions"></a>Birden çok proje çözümü  
- Varsa bir çözüm birden fazla proje içeren ve yükseltme stratejiler farklı gibi yalnızca SxS yedekleme destekleyen bir C++ projesi ve yalnızca kopya yedeği destekleyen bir Web projesi, proje fabrikalarını yükseltme stratejisini anlaşmaları gerekir.  
+### <a name="multi-project-solutions"></a>Çoklu proje çözümleri  
+ Bir çözüm birden çok proje içeriyorsa ve yükseltme stratejileri farklıysa (örneğin, yalnızca SxS yedeklemesini destekleyen bir C++ projesi ve yalnızca kopya yedeklemesini destekleyen bir Web projesi gibi), proje fabrikaları yükseltme stratejisi üzerinde anlaşmalıdır.  
   
- Her proje fabrikası için çözüm sorgular <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>. Ardından <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject_CheckOnly%2A> genel proje dosyalarını yükseltme gerekip gerekmediğini ve desteklenen yükseltme stratejiler belirlemek için. **Yükseltme Sihirbazı** sonra çağrılır.  
+ Çözüm her proje fabrikasını sorgular <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> . Daha sonra <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject_CheckOnly%2A> , genel proje dosyalarının yükseltilmesi gerekip gerekmediğini ve desteklenen yükseltme stratejilerini belirlemesini sağlamak için çağırır. **Yükseltme Sihirbazı** daha sonra çağrılır.  
   
- Kullanıcı, sihirbaz tamamlandıktan sonra <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> gerçek yükseltmeyi gerçekleştirmek için her proje fabrikası çağrılır. Yedekleme kolaylaştırmak için IVsProjectUpgradeViaFactory yöntemleri sağlayan <xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger> yükseltme işleminin ayrıntılarını oturum hizmeti. Bu hizmet önbelleğe alınamaz.  
+ Kullanıcı Sihirbazı tamamladıktan sonra, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> gerçek yükseltmeyi gerçekleştirmek için her proje fabrikası üzerinde çağırılır. Backup 'ı kolaylaştırmak için IVsProjectUpgradeViaFactory yöntemleri, <xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger> yükseltme işleminin ayrıntılarını günlüğe kaydetmek için hizmeti sağlar. Bu hizmet önbelleğe alınamaz.  
   
- Tüm ilgili genel dosyaları güncelleştirdikten sonra her proje fabrikası, bir proje oluşturmak seçebilirsiniz. Proje uygulama desteklemelidir <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade>. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A> Yöntemi tüm ilgili proje öğeleri yükseltmek sonra çağrılır.  
+ Tüm ilgili genel dosyalar güncelleştirildikten sonra her proje fabrikası bir proje örneğini oluşturmayı seçebilirler. Proje uygulamasının desteklemesi gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade.UpgradeProject%2A>Daha sonra tüm ilgili proje öğelerini yükseltmek için yöntemi çağırılır.  
   
 > [!NOTE]
-> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> Yöntemi SVsUpgradeLogger hizmet sağlamaz. Bu hizmet, çağrılarak alınabilir <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A>.  
+> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A>Yöntemi, Svsupgradegünlükçü hizmetini sağlamaz. Bu hizmet çağırarak elde edilebilir <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> .  
   
-## <a name="best-practices"></a>En İyi Yöntemler  
- Kullanım <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> hizmetinin, bir dosya düzenlemeden önce düzenleyebilir ve kaydetmeden önce kaydedebilirsiniz olmadığını denetleyin. Bu yedekleme yardımcı olur ve yükseltme uygulamaları işlemek için kaynak denetimi altında proje dosyaları, dosyaları yetersiz izinler ve benzeri.  
+## <a name="best-practices"></a>En İyi Uygulamalar  
+ <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave>Düzenlemeden önce bir dosyayı düzenleyip düzenleyebiliyorsanız ve kaydetmeden önce bu hizmeti kaydedebilir. Bu, yedekleme ve yükseltme uygulamalarınızın, kaynak denetimi altındaki proje dosyalarını, yetersiz izinlere sahip dosyaları ve benzerlerini işlemesini yardımcı olur.  
   
- Kullanım <xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger> hizmet yedekleme tüm aşamalarında ve başarı veya başarısızlık yükseltme işleminin bilgi sağlamak için yükseltin.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.SVsUpgradeLogger>Yükseltme işleminin başarısı veya başarısızlığı hakkında bilgi sağlamak için yedekleme ve yükseltme aşamaları sırasında hizmeti kullanın.  
   
- Yedekleme ve projelerini yükseltme hakkında daha fazla bilgi için içinde vsshell2.idl IVsProjectUpgrade için yorumlara bakın.  
+ Projeleri yedekleme ve yükseltme hakkında daha fazla bilgi için, vsshell2. IDL içindeki IVsProjectUpgrade için açıklamalara bakın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Projeleri](../../extensibility/internals/projects.md)   
- [Özel projelerini yükseltme](../../misc/upgrading-custom-projects.md)   
- [Proje öğeleri yükseltme](../../misc/upgrading-project-items.md)
+ [Projeyle](../../extensibility/internals/projects.md)   
+ [Özel projeleri yükseltme](../../misc/upgrading-custom-projects.md)   
+ [Proje öğeleri yükseltiliyor](../../misc/upgrading-project-items.md)

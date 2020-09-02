@@ -14,14 +14,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 40ae0a08e1623e1b90046d164d8bfe04eaf67229
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656863"
 ---
 # <a name="debugging-legacy-workflows"></a>Eski İş Akışlarında Hata Ayıklama
-Target.NET Framework 3,0 veya 3,5 ' nin [!INCLUDE[wf](../includes/wf-md.md)] uygulamalar oluşturmak için [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] kullanıyorsanız, kesme noktaları ayarlayarak, işlemlere ekleyerek ve iş parçacıklarını ve çağrı yığınını inceleyerek diğer programlar gibi iş akışlarınızda hata ayıklaması yapabilirsiniz. Uzaktan hata ayıklama seçeneğiniz de vardır.
+[!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] [!INCLUDE[wf](../includes/wf-md.md)] Target.NET Framework 3,0 veya 3,5 çalıştıran uygulamalar oluşturmak için eski sürümü kullanıyorsanız, kesme noktaları ayarlayarak, işlemlere ekleyerek ve iş parçacıklarını ve çağrı yığınını inceleyerek diğer programlar gibi iş akışlarınızda hata ayıklaması yapabilirsiniz. Uzaktan hata ayıklama seçeneğiniz de vardır.
 
 > [!NOTE]
 > Makinenizde birden fazla Visual Studio sürümü yüklenip kaldırılırsa, WF3 hata ayıklaması aşağıdaki iki olasılıktan biriyle başarısız olabilir:
@@ -33,7 +33,7 @@ Target.NET Framework 3,0 veya 3,5 ' nin [!INCLUDE[wf](../includes/wf-md.md)] uyg
 >
 >   3,0 veya 3,5 iş akışlarının hata .NET Framework ayıklaması sırasında bu senaryolardan herhangi biri oluşursa, Visual Studio yüklemesinde bir onarım gerçekleştirin.
 
- [!INCLUDE[wf2](../includes/wf2-md.md)], aşağıdaki standart [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hata ayıklama pencereleri ile tümleşir:
+ [!INCLUDE[wf2](../includes/wf2-md.md)] Aşağıdaki standart [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hata ayıklama pencereleri ile tümleşir:
 
 - **Kesme noktası**: beklendiği gibi çalışır, ancak işlev adı için bir etkinlik belirtirsiniz.
 

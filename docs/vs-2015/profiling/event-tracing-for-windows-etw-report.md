@@ -1,5 +1,5 @@
 ---
-title: Windows (ETW) raporu için olay izleme | Microsoft Docs
+title: Windows için olay Izleme (ETW) raporu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,31 +13,31 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bc0e139644a0b3df29109c1543140e57c5378f31
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444018"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64795405"
 ---
 # <a name="event-tracing-for-windows-etw-report"></a>Windows için Olay İzleme (ETW) Raporu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir performans oturumu içinde kaydedilen ETW olayları için olay izleme Windows (ETW) raporu listeler [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] profil oluşturma araçları. ETW verilerini bir ikili (.etl) dosyasında toplanır.  
+Windows için olay Izleme (ETW) raporu, Profil Oluşturma Araçları Performans oturumunda kaydedilmiş olan ETW olaylarını listeler [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . ETW verileri bir ikili (. etl) dosyasında toplanır.  
   
 > [!NOTE]
-> ETW raporları görüntüleyemez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] arabirimi.  
+> Arabiriminde ETW raporlarını görüntüleyemezsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
-- ETW profil oluşturma araçları kullanarak toplama hakkında bilgi için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] arabirim için bkz: [nasıl yapılır: Olay izleme için Windows (ETW) verilerini toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md).  
+- Arabiriminden Profil Oluşturma Araçları kullanarak ETW 'nin nasıl toplanacağı hakkında daha fazla bilgi için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bkz. [nasıl yapılır: Windows Için olay Izleme (ETW) verileri toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md).  
   
-- Kullanarak ETW veri toplama hakkında bilgi için [VSPerfCmd](../profiling/vsperfcmd.md) komut satırı araçları görmek [olayları](../profiling/events-vsperfcmd.md).  
+- [VSPerfCmd](../profiling/vsperfcmd.md) komut satırı araçlarını kullanarak ETW verilerinin nasıl toplanacağı hakkında daha fazla bilgi için bkz. [Olaylar](../profiling/events-vsperfcmd.md).  
   
-- Kullanarak ETW raporu oluşturma **VSReport / Summary: ETW** komutu. Daha fazla bilgi için [VSPerfReport](../profiling/vsperfreport.md).  
+- **VSReport/Summary: ETW** komutunu kullanarak ETW raporunu oluşturabilirsiniz. Daha fazla bilgi için bkz. [VSPerfReport](../profiling/vsperfreport.md).  
   
 |Sütun|Açıklama|  
 |------------|-----------------|  
-|**Zaman damgası**|Olay gerçekleştiğinde tanımlar.|  
-|**İşlem kimliği**|Olayı oluşturan bir işlemi tanımlar.|  
-|**İş parçacığı kimliği**|Olayı oluşturan iş parçacığını tanımlar.|  
-|**Açıklama**|Olay sağlayıcısı tanımlar.|  
-|**Tür**|Olay türü tanımlar.|  
-|**Özellikler**|Olay Özellikleri. Her olay, parantez içine alınmış bir virgülle ayrılmış, ad-değer çiftidir.|
+|**Zaman damgası**|Olayın ne zaman oluştuğunu tanımlar.|  
+|**İşlem Kimliği**|Olayı oluşturan işlemi tanımlar.|  
+|**İş parçacığı KIMLIĞI**|Olayı oluşturan iş parçacığını tanımlar.|  
+|**Açıklama**|Olay sağlayıcısını tanımlar.|  
+|**Tür**|Olay türünü tanımlar.|  
+|**Özellikler**|Etkinliğin özellikleri. Her olay, köşeli ayraçlar içine alınmış, virgülle ayrılmış bir ad-değer çiftidir.|

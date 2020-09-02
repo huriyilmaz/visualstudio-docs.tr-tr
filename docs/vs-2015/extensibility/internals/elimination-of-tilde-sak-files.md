@@ -1,5 +1,5 @@
 ---
-title: Saydamlığından ~ SAK dosyalarının | Microsoft Docs
+title: Eleme ~ SAK Files | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,44 +13,44 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 751acf4e5f56b7b477f05ab71571e0becd566649
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436335"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64789593"
 ---
 # <a name="elimination-of-sak-files"></a>~SAK Dosyalarının Ortadan Kaldırılması
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kaynak Denetimi Eklentisi API 1.2, ~ SAK dosyalarının, özellik bayrakları ve kaynak denetimi eklentisi MSSCCPRJ dosyasını ve paylaşımlı kullanıma Almalarla destekleyip desteklemediğini algılamak yeni işlevleri tarafından değiştirildi.  
+Kaynak denetimi eklentisi API 1,2 ' de, ~ SAK dosyaları yetenek bayraklarıyla ve kaynak denetimi eklentisinin MSSCCPRJ dosyasını ve paylaşılan kullanıma alma işlemleri destekleyip desteklemediğini algılayan yeni işlevlerle değiştirilmiştir.  
   
-## <a name="sak-files"></a>~ SAK dosyalarının  
- Visual Studio .NET 2003 oluşturulan geçici dosyalar ön ekine sahip ~ SAK. Bu dosyalar kaynak denetimi eklentisi destekleyip desteklemediğini belirlemek için kullanılır:  
+## <a name="sak-files"></a>~ SAK dosyaları  
+ Visual Studio .NET 2003 ön eki olan geçici dosyalar oluşturuldu ~ SAK. Bu dosyalar, bir kaynak denetimi eklentisinin destekleyip desteklemediğini tespit etmek için kullanılır:  
   
 - MSSCCPRJ. SCC dosyası.  
   
-- Birden çok (paylaşılan) kullanıma alma.  
+- Çoklu (paylaşılan) kullanıma alma işlemleri.  
   
-  Kaynak Denetimi Eklentisi API 1.2 ile sağlanan gelişmiş işlevleri destekleyen eklentileri için yeni özellikler, bayraklar ve İşlevler, aşağıdaki bölümlerde ayrıntılı kullanımı geçici dosyalar oluşturmadan bu özellikler IDE algılayabilir.  
+  Kaynak denetimi eklentisi API 1,2 ' de sunulan gelişmiş işlevleri destekleyen eklentiler için, IDE, aşağıdaki bölümlerde ayrıntılı olarak açıklanan yeni özellikleri, bayrakları ve işlevleri kullanarak geçici dosyaları oluşturmadan bu özellikleri algılayabilir.  
   
-## <a name="new-capability-flags"></a>Yeni özellik bayrakları  
+## <a name="new-capability-flags"></a>Yeni yetenek bayrakları  
  `SCC_CAP_SCCFILE`  
   
  `SCC_CAP_MULTICHECKOUT`  
   
-## <a name="new-functions"></a>Yeni işlevleri  
+## <a name="new-functions"></a>Yeni Işlevler  
  [SccWillCreateSccFile](../../extensibility/sccwillcreatesccfile-function.md)  
   
  [SccIsMultiCheckoutEnabled](../../extensibility/sccismulticheckoutenabled-function.md)  
   
- Kaynak Denetimi Eklentisi birden çok (paylaşılan) kullanıma destekler ve ardından bunu bildirir, `SCC_CAP_MULTICHECKOUT` yetenek ve uygular `SccIsMultiCheckOutEnabled` işlevi. Kaynak denetimli projelerin herhangi bir kullanıma alma işlemi oluştuğunda, bu işlev çağrılır.  
+ Bir kaynak denetimi eklentisi çoklu (paylaşılan) kullanıma alma işlemleri destekliyorsa, `SCC_CAP_MULTICHECKOUT` özelliği bildirir ve `SccIsMultiCheckOutEnabled` işlevi uygular. Bu işlev, kaynak denetimli projelerin herhangi birinde bir kullanıma alma işlemi gerçekleştiğinde çağrılır.  
   
- Kaynak Denetimi Eklentisi oluşturma ve bir MSSCCPRJ kullanımını destekliyorsa. SCC dosyasını ve ardından bildirir `SCC_CAP_SCCFILE` yetenek ve uygular [SccWillCreateSccFile](../../extensibility/sccwillcreatesccfile-function.md). Bu işlev, dosyaların bir listesini çağrılır. İşlev döndürür `TRUE/FALSE` Visual Studio bir MSSCCPRJ kullanması gerekip gerekmediğini belirtmek her bir dosya için. SCC dosyasının. Kaynak denetimi eklentisi şu yeni özellikleri ve işlevleri desteklemiyor seçerse bu dosyalarının oluşturulmasını devre dışı bırakmak için aşağıdaki kayıt defteri anahtarını kullanabilirsiniz:  
+ Bir kaynak denetimi eklentisi bir MSSCCPRJ oluşturmayı ve kullanımını destekliyorsa. Bu durumda, `SCC_CAP_SCCFILE` özelliği bildirir ve [Sccwillcreatesccdosyasını](../../extensibility/sccwillcreatesccfile-function.md)uygular. Bu işlev, bir dosya listesi ile çağırılır. İşlevi, `TRUE/FALSE` Visual Studio 'nun BIR Mssccprj kullanması gerekip gerekmediğini belirtmek için her bir dosya için döndürür. Bu dosya için SCC dosyası. Kaynak denetimi eklentisi bu yeni özellikleri ve işlevleri desteklememe seçerse, bu dosyaların oluşturulmasını devre dışı bırakmak için aşağıdaki kayıt defteri anahtarını kullanabilir:  
   
- [HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateTemporaryFilesInSourceControl" = dword: 00000001  
+ [HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateTemporaryFilesInSourceControl" = DWORD: 00000001  
   
 > [!NOTE]
-> Bu kayıt defteri anahtarı DWORD: 00000000 ayarlarsanız, varolmayan olan anahtarına eşdeğerdir ve geçici dosyalar oluşturmak Visual Studio hala çalışır. Ancak, kayıt defteri anahtarı DWORD: 00000001 ayarlarsanız, geçici dosyalar oluşturmak Visual Studio denemez. Bunun yerine kaynak denetimi eklentisi MSSCCPRJ desteklemediğini varsayar. SCC dosya ve paylaşımlı kullanıma Almalarla desteklemez.  
+> Bu kayıt defteri anahtarı DWORD: 00000000 olarak ayarlandıysa, varolmayan anahtarla eşdeğerdir ve Visual Studio yine de geçici dosyaları oluşturmaya çalışır. Ancak, kayıt defteri anahtarı DWORD: 00000001 olarak ayarlandıysa, Visual Studio geçici dosyaları oluşturmayı denemez. Bunun yerine, kaynak denetimi eklentisinin MSSCCPRJ desteklemediği varsayılmaktadır. SCC dosyası ve paylaşılan kullanıma alma işlemleri desteklenmez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kaynak Denetimi Eklentisi API Sürümü 1.2’deki Yenilikler](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

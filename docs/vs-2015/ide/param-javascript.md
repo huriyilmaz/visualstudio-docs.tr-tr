@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ca6207d22d82e607fa589f944230b36b46e633c2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670354"
 ---
 # <a name="ltparamgt-javascript"></a>&lt;param &gt; (JavaScript)
@@ -24,7 +24,7 @@ ms.locfileid: "72670354"
 
 Bir işlev veya yöntemdeki bir parametre için belge bilgilerini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 <param name="parameterName" type="ParameterType"
@@ -38,49 +38,49 @@ Bir işlev veya yöntemdeki bir parametre için belge bilgilerini belirtir.
 ```
 
 #### <a name="parameters"></a>Parametreler
- `name` gerekiyor. Parametrenin adı.
+ `name` Gerekli. Parametrenin adı.
 
- Isteğe bağlı `type`. Parametrenin veri türü. Tür aşağıdakilerden biri olabilir:
+ `type` Seçim. Parametrenin veri türü. Tür aşağıdakilerden biri olabilir:
 
-- ECMAScript 5 belirtiminde `Number` ve `Object` gibi bir ECMAScript dil türü.
+- ECMAScript 5 belirtiminde, ve gibi bir ECMAScript dil türü `Number` `Object` .
 
-- @No__t_0, `Window` ve `Document` gibi bir DOM nesnesi.
+- , Ve gibi bir DOM nesnesi `HTMLElement` `Window` `Document` .
 
 - JavaScript Oluşturucu işlevi.
 
-  Isteğe bağlı `integer`. @No__t_0 `Number`, parametrenin bir tamsayı olup olmadığını belirtir. Parametrenin bir tamsayı olduğunu göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+  `integer` Seçim. İse `type` , `Number` parametrenin bir tamsayı olup olmadığını belirtir. `true`Parametresinin bir tamsayı olduğunu belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
 
-  Isteğe bağlı `domElement`. Bu öznitelik kullanım dışıdır; `type` özniteliği bu özniteliğin üzerine gelir. Bu öznitelik, belgelenen parametrenin bir DOM öğesi olup olmadığını belirtir. Parametrenin bir DOM öğesi olduğunu belirtmek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. @No__t_0 özniteliği ayarlanmamışsa ve `domElement` `true` olarak ayarlandıysa, IntelliSense, deyimin tamamlanmasını gerçekleştirirken belgelenen parametreyi bir `HTMLElement` olarak değerlendirir.
+  `domElement` Seçim. Bu öznitelik kullanım dışıdır; `type` öznitelik bu özniteliğin üzerine gelir. Bu öznitelik, belgelenen parametrenin bir DOM öğesi olup olmadığını belirtir. `true`Parametresinin BIR DOM öğesi olduğunu belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . `type`Özniteliği ayarlanmamışsa ve `domElement` olarak ayarlanırsa `true` , IntelliSense, ifade tamamlama gerçekleştirirken belgelenen parametreyi bir olarak değerlendirir `HTMLElement` .
 
-  Isteğe bağlı `mayBeNull`. Belgelenmiş parametrenin null olarak ayarlanamayacağını belirtir. Parametrenin null olarak ayarlanabileceği göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Varsayılan değer `false` şeklindedir. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+  `mayBeNull` Seçim. Belgelenmiş parametrenin null olarak ayarlanamayacağını belirtir. `true`Parametresinin null olarak ayarlanabileceği belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . Varsayılan değer: `false`. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
 
-  Isteğe bağlı `elementType`. @No__t_0 `Array` ise, bu öznitelik dizideki öğelerin türünü belirtir.
+  `elementType` Seçim. `type`İse `Array` , bu öznitelik dizideki öğelerin türünü belirtir.
 
-  Isteğe bağlı `elementInteger`. @No__t_0 `Array` ve `elementType` `Number` ise, bu öznitelik dizideki öğelerin tamsayı olup olmadığını belirtir. Dizideki öğelerin tamsayılar olduğunu göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+  `elementInteger` Seçim. , `type` Ve ise, `Array` `elementType` `Number` Bu öznitelik dizideki öğelerin tamsayı olup olmadığını belirtir. `true`Dizideki öğelerin tamsayılar olduğunu belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
 
-  Isteğe bağlı `elementDomElement`. Bu öznitelik kullanım dışıdır; `elementType` özniteliği bu özniteliğin üzerine gelir. @No__t_0 `Array` ise, bu öznitelik dizideki öğelerin DOM öğeleri olup olmadığını belirtir. Öğelerin DOM öğeleri olduğunu belirtmek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. @No__t_0 özniteliği ayarlanmamışsa ve `elementDomElement` `true` olarak ayarlandıysa, IntelliSense deyimin tamamlanma sırasında dizideki her öğeyi bir `HTMLElement` olarak değerlendirir.
+  `elementDomElement` Seçim. Bu öznitelik kullanım dışıdır; `elementType` öznitelik bu özniteliğin üzerine gelir. `type`İse `Array` , bu öznitelik DIZIDEKI öğelerin DOM öğeleri olup olmadığını belirtir. `true`ÖĞELERIN DOM öğesi olduğunu belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . `elementType`Özniteliği ayarlanmamışsa ve `elementDomElement` olarak ayarlandıysa `true` , IntelliSense deyimin tamamlanma sırasında dizideki her öğeyi bir olarak değerlendirir `HTMLElement` .
 
-  Isteğe bağlı `elementMayBeNull`. @No__t_0 `Array`, dizideki öğelerin null olarak ayarlanamayacağını belirtir. Dizideki öğelerin null olarak ayarlanabileceği göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Varsayılan değer `false` şeklindedir. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+  `elementMayBeNull` Seçim. `type`İse, `Array` dizideki öğelerin null olarak ayarlanamayacağını belirtir. `true`Dizideki öğelerin null olarak ayarlanabileceği belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` . Varsayılan değer: `false`. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
 
-  Isteğe bağlı `locid`. Parametresiyle ilgili yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki `name` öznitelik değerine karşılık gelir. Tanımlayıcı türü [\<loc >](../ide/loc-javascript.md) öğesinde belirtilen biçime bağlıdır.
+  `locid` Seçim. Parametresiyle ilgili yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da `name` OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki öznitelik değerine karşılık gelir. Tanımlayıcı türü, öğesinde belirtilen biçime bağlıdır [\<loc>](../ide/loc-javascript.md) .
 
-  Isteğe bağlı `parameterArray`. @No__t_0 işlevinde desteklenen yinelenen parametrelere benzer şekilde, belgelenen parametrenin işlev çağrısında tekrarlanıp tekrarlanamayacağını belirtir. Parametrenin tekrarlanabilir olduğunu göstermek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın. Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
+  `parameterArray` Seçim. İşlev çağrısında belgelenmiş parametrenin yinelenemeyeceğini, işlevde desteklenen yinelenen parametrelere benzer şekilde belirtir `String.format` . `true`Parametresinin tekrarlanabilir olduğunu belirtmek için olarak ayarlayın; Aksi takdirde, olarak ayarlayın `false` . Bu öznitelik, Visual Studio tarafından IntelliSense bilgilerini sağlamak için kullanılmaz.
 
-  Isteğe bağlı `optional`. Çağıran işlevde belgelenen parametrenin isteğe bağlı olup olmadığını belirtir. Parametrenin isteğe bağlı olduğunu belirtmek için `true` olarak ayarlayın; Aksi takdirde, `false` olarak ayarlayın.
+  `optional` Seçim. Çağıran işlevde belgelenen parametrenin isteğe bağlı olup olmadığını belirtir. `true`Parametresinin isteğe bağlı olduğunu belirtmek için olarak ayarlanır; Aksi takdirde, olarak ayarlayın `false` .
 
-  Isteğe bağlı `value`. İşlev kodunun kendisi yerine IntelliSense tarafından kullanılmak üzere değerlendirilmesi gereken kodu belirtir. Parametre türü tanımsız olduğunda tür bilgilerini sağlamak için bu özniteliği kullanabilirsiniz. Örneğin, parametre türünü sayı olarak değerlendirmek için `value=’1’` kullanabilirsiniz.
+  `value` Seçim. İşlev kodunun kendisi yerine IntelliSense tarafından kullanılmak üzere değerlendirilmesi gereken kodu belirtir. Parametre türü tanımsız olduğunda tür bilgilerini sağlamak için bu özniteliği kullanabilirsiniz. Örneğin, `value=’1’` parametre türünü sayı olarak değerlendirmek için kullanabilirsiniz.
 
-  Isteğe bağlı `description`. Parametrenin açıklaması.
+  `description` Seçim. Parametrenin açıklaması.
 
 ## <a name="remarks"></a>Açıklamalar
- Tek gerekli öznitelik `name`. Diğer tüm öznitelikler isteğe bağlıdır.
+ Yalnızca gerekli olan öznitelik `name` . Diğer tüm öznitelikler isteğe bağlıdır.
 
- [@No__t_1summary >](../ide/summary-javascript.md), [\<param >](../ide/param-javascript.md)ve [\<returns >](../ide/returns-javascript.md)gibi işlevlere açıklama eklemek için kullanılan öğeler, herhangi bir deyimden önce işlev gövdesine yerleştirilmelidir.
+ , Ve gibi işlevleri Not eklemek için kullanılan öğelerin, [\<summary>](../ide/summary-javascript.md) [\<param>](../ide/param-javascript.md) [\<returns>](../ide/returns-javascript.md) herhangi bir deyimden önce işlev gövdesine yerleştirilmesi gerekir.
 
- Aynı ada sahip birden çok `<param>` öğesi varsa, `<param>` öğelerinden biri kullanılır ve gereksiz öğeler yok sayılır. Hangi öğenin kullanıldığını belirleyen davranış tanımlı değildir. @No__t_0 varolmayan bir parametreye başvuruyorsa, öğe yok sayılır.
+ `<param>`Aynı ada sahip birden fazla öğe varsa, `<param>` öğelerinden biri kullanılır ve gereksiz öğeler yok sayılır. Hangi öğenin kullanıldığını belirleyen davranış tanımlı değildir. `name`Varolmayan bir parametreye başvuruyorsa, öğe yok sayılır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, `<param>` öğesinin nasıl kullanılacağını gösterir.
+ Aşağıdaki kod örneği, öğesinin nasıl kullanılacağını gösterir `<param>` .
 
 ```javascript
 function areaFunction(radiusParam)
@@ -108,4 +108,4 @@ function calculate(a) {
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [XML Belge Açıklamaları](../ide/xml-documentation-comments-javascript.md)
+ [XML belge açıklamaları](../ide/xml-documentation-comments-javascript.md)

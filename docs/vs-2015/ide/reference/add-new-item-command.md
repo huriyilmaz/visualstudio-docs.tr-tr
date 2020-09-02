@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e6237ace96799961683b0b0431f5dad3ab679e24
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670204"
 ---
 # <a name="add-new-item-command"></a>Yeni Öğe Ekle Komutu
@@ -26,31 +26,31 @@ ms.locfileid: "72670204"
 
 Geçerli çözüme. htm,. css,. txt veya FRAMESET gibi yeni bir çözüm öğesi ekler ve onu açar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 File.AddNewItem [filename] [/t:templatename] [/e:editorname]
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `filename`. Çözüme eklenecek öğenin yolu ve dosya adı.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `filename` Seçim. Çözüme eklenecek öğenin yolu ve dosya adı.
 
 ## <a name="switches"></a>Anahtarlar
- /t: `templatename` Isteğe bağlı. Oluşturulacak dosyanın türünü belirtir. Şablon adı verilmezse, varsayılan olarak bir metin dosyası oluşturulur.
+ /t: `templatename` isteğe bağlı. Oluşturulacak dosyanın türünü belirtir. Şablon adı verilmezse, varsayılan olarak bir metin dosyası oluşturulur.
 
- /T: `templatename` bağımsız değişkeni sözdizimi, **yeni çözüm öğesi Ekle** iletişim kutusunda bulunan bilgileri yansıtır. Kategori adını dosya türünden bir ters eğik çizgiyle (`\`) ayırarak ve tüm dizeyi tırnak işareti içine alarak, tam kategoriyi ve ardından dosya türünü girmeniz gerekir.
+ /T: `templatename` Argument sözdizimi, **yeni çözüm öğesi Ekle** iletişim kutusunda bulunan bilgileri yansıtır. Kategori adını dosya türünden bir ters eğik çizgi () ile ayırarak `\` ve tüm dizeyi tırnak işaretleri içine alarak, tam kategoriyi ve ardından dosya türünü girmeniz gerekir.
 
- Örneğin, yeni bir metin dosyası oluşturmak için/t: `templatename` bağımsız değişkeni için şunu girersiniz.
+ Örneğin, yeni bir metin dosyası oluşturmak için/t: Argument için aşağıdakini girersiniz `templatename` .
 
 ```
 /t:"General\Style Sheet"
 ```
 
- /e: Isteğe bağlı `editorname`. Dosyanın açıldığı düzenleyicinin adı. Bağımsız değişken belirtilmişse ancak düzenleyici adı sağlanmadığında, **birlikte Aç** iletişim kutusu görüntülenir.
+ /e: `editorname` isteğe bağlı. Dosyanın açıldığı düzenleyicinin adı. Bağımsız değişken belirtilmişse ancak düzenleyici adı sağlanmadığında, **birlikte Aç** iletişim kutusu görüntülenir.
 
- /E: `editorname` bağımsız değişkeni sözdizimi, **birlikte Aç Iletişim kutusunda**göründükleri gibi, tırnak işaretleri içine alınan düzenleyici adlarını kullanır.
+ /E: `editorname` Argument sözdizimi, **birlikte Aç iletişim kutusunda**göründükleri gibi, tırnak işaretleri içine alınan düzenleyici adlarını kullanır.
 
- Örneğin, kaynak kodu düzenleyicisinde bir stil sayfası açmak için/e: `editorname` bağımsız değişkeni olarak aşağıdakileri girersiniz.
+ Örneğin, kaynak kodu düzenleyicisinde bir stil sayfası açmak için/e: Argument için aşağıdakini girersiniz `editorname` .
 
 ```
 /e:"Source Code (text) Editor"

@@ -11,45 +11,45 @@ caps.latest.revision: 12
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3e0770654f564c57cf576666dcd9575f47d9ce1c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432285"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64787280"
 ---
 # <a name="fxcopcmd-errors"></a>FxCopCmd Hataları
-FxCopCmd önemli olması için tüm hataları dikkate almaz. FxCopCmd kısmi analiz gerçekleştirmek için yeterli bilgi varsa, oluşan analiz ve raporları hatalar gerçekleştirir. Bir 32 bitlik tamsayıdır, hata kodu karşılaştırmaya hataları karşılık gelen sayısal değerleri içerir.  
+FxCopCmd tüm hataları önemli olarak kabul etmez. FxCopCmd ' nin kısmi analiz gerçekleştirmek için yeterli bilgileri varsa, Analizi gerçekleştirir ve oluşan hataları raporlar. 32 bitlik bir tamsayı olan hata kodu, hatalara karşılık gelen sayısal değerlerin bit düzeyinde birleşimini içerir.  
   
- Aşağıdaki tabloda FxCopCmd tarafından döndürülen hata kodları açıklanmaktadır:  
+ Aşağıdaki tabloda, FxCopCmd tarafından döndürülen hata kodları açıklanmaktadır:  
   
 |Hata|Sayısal değer|  
 |-----------|-------------------|  
-|Hata yok|0x0|  
+|Hata yok|'dır|  
 |Analiz hatası|0x1|  
-|Kuralın özel durumları|0x2|  
-|Proje yükleme hatası|0x4|  
+|Kural özel durumları|0x2|  
+|Proje yükleme hatası|4,|  
 |Derleme yükleme hatası|0x8|  
-|Kural kitaplık yükleme hatası|0x10|  
-|İçeri aktarma rapor yükleme hatası|0x20|  
+|Kural kitaplığı yükleme hatası|0x10|  
+|Rapor yükleme hatasını içeri aktar|0x20|  
 |Çıkış hatası|0x40|  
-|Komut satırı geçiş hatası|0x80|  
+|Komut satırı anahtar hatası|0x80|  
 |Başlatma hatası|0x100|  
 |Derleme başvuruları hatası|0x200|  
 |BuildBreakingMessage|0x400|  
 |Bilinmeyen hata|0x1000000|  
   
- Çözümleme hatası için önemli hatalar döndürülür. Analiz tamamlanamadı gösterir. Uygun olduğunda hata kodu önemli hata temel nedenini de içerir. Aşağıdaki koşullar önemli hatalar oluşturur:  
+ Çözümleme hatası, önemli hatalar için döndürülür. Çözümlemenin tamamlanamayacağını gösterir. Uygun olduğunda, hata kodu önemli hatanın temel nedenini de içerir. Aşağıdaki koşullar önemli hatalar üretir:  
   
-- Analiz tarafından yetersiz girişi nedeniyle gerçekleştirilemedi.  
+- Analiz, yetersiz giriş nedeniyle gerçekleştirilemedi.  
   
-- Analiz FxCopCmd tarafından işlenmemiş özel durum oluşturdu.  
+- Analiz, FxCopCmd tarafından işlenmeyen bir özel durum oluşturdu.  
   
-- Belirtilen proje dosyası bulunamadı veya bozuk olabilir.  
+- Belirtilen proje dosyası bulunamadı veya bozuk.  
   
-- Output seçeneği belirtilmedi veya dosya yazılmadı.  
+- Çıkış seçeneği belirtilmemiş veya dosya yazılamadı.  
   
     > [!NOTE]
-    > FxCopCmd dönüş kodu "Derleme hatası başvuruları" 0x200 tek başına bir hata yerine bir uyarı olduğunu. Bu dönüş kodu eksik dolaylı başvuru bulundu, ancak FxCopCmd bunları işleyebilmesi olduğunu gösterir. Bu, bazı analiz sonuçları gizliliği bozulmuş olabilecek, olasılığı olan bir uyarıdır. Diğer dönüş kodu ile birleştirildiğinde, "Derleme hatası başvuruları" dönüş kodu hata olarak göz önünde bulundurun.  
+    > FxCopCmd dönüş kodu "derleme başvuruları hatası" 0x200 tek başına bir hata değil uyarısı. Bu dönüş kodu eksik dolaylı başvuruların bulunduğunu, ancak FxCopCmd 'nin bunları işleyebileceğini gösterir. Bazı analiz sonuçlarının riskli olabileceğini bildiren bir uyarıdır. "Derleme başvuruları hatası" nı, başka bir dönüş koduyla birleştirildiğinde hata olarak döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kod Çözümleme Uygulama Hataları](../code-quality/code-analysis-application-errors.md)
+ [Kod Analizi uygulama hataları](../code-quality/code-analysis-application-errors.md)

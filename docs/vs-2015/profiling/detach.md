@@ -1,5 +1,5 @@
 ---
-title: Ayırma | Microsoft Docs
+title: Ayır | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,25 +10,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1b35765614f57350cdace560aa61c721cc831581
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444027"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64794173"
 ---
 # <a name="detach"></a>Ayır
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPerfCmd.exe **ayırma** seçeneği keser profil oluşturucu belirtilen işlemleri veya tüm işlemlerden hiçbiri belirtilmezse. Profil oluşturma için örnekleme yöntemini kullanarak başlatılmış olması gerekir.  
+VSPerfCmd.exe **ayırma** seçeneği, profil oluşturucunun belirtilen işlemlerden veya hiçbiri belirtilmemişse tüm işlemlerden bağlantısını keser. Profil oluşturma, örnekleme yöntemi kullanılarak başlatılmış olmalıdır.  
   
- Profil oluşturma başlatıldı ile **başlatma** veya **iliştirme** seçenekleri bağlantısı ile **ayırma**. Profil Oluşturucu sonraki kullanarak reattched olabilir **iliştirme** komutları.  
+ **Başlatma** ya da **iliştirme** seçenekleriyle başlatılan profil oluşturma, **ayırma**ile kesilebilir. Profil Oluşturucu, sonraki **iliştirme** komutları kullanılarak yeniden dağıtılabilir.  
   
- **Ayırma** profil oluşturma veri dosyasını kapatmak değil. Kullanım **kapatma** son profil oluşturma ve veri dosyasını kapatırsınız.  
+ **Ayırma** , profil oluşturma veri dosyasını kapatmaz. Profil oluşturmayı sonlandırmak ve veri dosyasını kapatmak için **Kapat** seçeneğini kullanın.  
   
 > [!NOTE]
-> Varsa **Başlat** seçeneği ile belirtilen **Crosssession** seçeneğini çağrıları **VSPerfCmd /Attach** veya **VSPerfCmd/detach** gerekir Ayrıca belirtin **Crosssession**.  
+> **Başlangıç** seçeneği **CrossSession** seçeneğiyle belirtilmişse, **VSPerfCmd/Attach** veya **VSPerfCmd/detach** öğesine yapılan çağrılar de **CrossSession**belirtmelidir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 VSPerfCmd.exe /Detach[:PIDs|ProcessNames]  
@@ -36,22 +36,22 @@ VSPerfCmd.exe /Detach[:PIDs|ProcessNames]
   
 #### <a name="parameters"></a>Parametreler  
  `PIDs|ProcessNames`  
- `PID` -Bir veya daha fazla işlem sayısal sistem tanımlayıcısını.  
+ `PID` -Bir veya daha fazla işlemin sayısal sistem tanımlayıcısı.  
   
- `ProcessNames` -işlem adı. Adlandırılmış işlemi birden çok örneğini çalıştırıyorsanız, sonuçlar tahmin edilemez.  
+ `ProcessNames` -işlemin adı. Adlandırılmış işlemin birden fazla örneği çalışıyorsa, sonuçlar tahmin edilemez.  
   
- Birden çok işlem virgülle ayırın.  
+ Birden çok işlemi virgülle ayırın.  
   
- Hiçbir işlem belirtilmezse, profil oluşturucu tüm profili oluşturulan işlemden ayrılır.  
+ Hiçbir işlem belirtilmemişse profil oluşturucu, profili oluşturulmuş tüm işlemden ayrılır.  
   
-## <a name="valid-options"></a>Geçerli seçenekler şunlardır:  
- Aşağıdaki **VSPerfCmd** seçenekleri ile birleştirilebilir **iliştirme** tek bir komut satırı seçeneği.  
+## <a name="valid-options"></a>Geçerli seçenekler  
+ Aşağıdaki **VSPerfCmd** seçenekleri tek bir komut satırında **Attach** seçeneğiyle birleştirilebilir.  
   
- **Crosssession**  
- Oturumlarında oturum dışındaki uygulamaların profilini oluşturma etkinleştirir. Gerekli if **Başlat** seçeneği ile belirtilen **Crosssession** seçeneği.  
+ **CrossSession**  
+ , Oturum açma oturumu dışındaki oturumlarda profil oluşturma uygulamalarına izin vermez. **CrossSession** seçeneğiyle **Start** seçeneği belirtilmişse gereklidir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, **ayırma** komutu, profil oluşturma askıya alır ve **kapatma** komutu, Profil Oluşturucu veri dosyasına kapatır.  
+ Bu örnekte, **Detach** komutu profil oluşturmayı askıya alır ve **kapatma** komutu profil oluşturucu veri dosyasını kapatır.  
   
 ```  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
@@ -63,6 +63,6 @@ VSPerfCmd.exe /Shutdown
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Bağımsız uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [ASP.NET Web uygulamalarında profil oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Tek başına uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [ASP.NET Web uygulamalarının profilini oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [Profil Oluşturma Hizmetleri](../profiling/command-line-profiling-of-services.md)

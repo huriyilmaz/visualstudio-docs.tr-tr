@@ -1,5 +1,5 @@
 ---
-title: Programa ekleme | Microsoft Docs
+title: Programa iliştirme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,31 +11,31 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ab9301f31976b084c3c8565329dca248503e40ae
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437423"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64795916"
 ---
 # <a name="attaching-to-the-program"></a>Programa Ekleme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Programlarınızın uygun bağlantı noktası ile kaydettikten sonra hata ayıklayıcı, hata ayıklamak istediğiniz program eklemeniz gerekir.  
+Programlarınızı uygun bağlantı noktasıyla kaydettikten sonra, hata ayıklayıcıyı hata ayıklamak istediğiniz programa bağlamanız gerekir.  
   
-## <a name="choosing-how-to-attach"></a>Nasıl ekleneceği seçme  
- Oturum hata ayıklama Yöneticisi (SDM) hata ayıklaması yapılan programa ekleme çalışır üç yolu vardır.  
+## <a name="choosing-how-to-attach"></a>Nasıl Iliştiricağınızı seçme  
+ Oturum hata ayıklama Yöneticisi 'nin (SDM) hata ayıklamakta olan programa iliştirmeye çalıştığı üç yol vardır.  
   
-1. Hata ayıklama altyapısı tarafından başlatılan program için [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) SDM yöntem (örneğin, yorumlanan dil tipik) edinir [IDebugProgramNodeAttach2](../../extensibility/debugger/reference/idebugprogramnodeattach2.md) gelen arabirimi [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) için iliştirilmekte programı ilişkili nesne. SDM elde `IDebugProgramNodeAttach2` SDM arabirimini, çağırır ve ardından [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) yöntemi. `IDebugProgramNodeAttach2::OnAttach` Yöntemi döndürür `S_OK` programa eklemediniz ve denemeleri programa eklemek için yapılabilir.  
+1. Hata ayıklama altyapısı tarafından [Launchaskıya alındı](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemiyle başlatılan programlar (örneğin, yorumlanan dillerin tipik olarak), SDM, eklendiği programla ilişkili [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesinden [IDebugProgramNodeAttach2](../../extensibility/debugger/reference/idebugprogramnodeattach2.md) arabirimini alır. SDM arabirimi alabiliyorsanız `IDebugProgramNodeAttach2` , SDM daha sonra [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) yöntemini çağırır. `IDebugProgramNodeAttach2::OnAttach`Yöntemi, `S_OK` programa iliştirilmediğini ve programa eklemek için başka denemeler yapıldığını belirtmek için öğesini döndürür.  
   
-2. SDM elde [IDebugProgramEx2](../../extensibility/debugger/reference/idebugprogramex2.md) arabirim SDM çağrıları iliştirilmekte programdan [iliştirme](../../extensibility/debugger/reference/idebugprogramex2-attach.md) yöntemi. Bu yaklaşım, uzaktan bağlantı noktası sağlayıcısı tarafından başlatılan programlar tipik bir durumdur.  
+2. SDM, eklenen programdan [IDebugProgramEx2](../../extensibility/debugger/reference/idebugprogramex2.md) arabirimini elde edebılır, SDM [iliştirme](../../extensibility/debugger/reference/idebugprogramex2-attach.md) yöntemini çağırır. Bu yaklaşım, bağlantı noktası sağlayıcısı tarafından uzaktan başlatılan programlar için tipik bir noktadır.  
   
-3. Program aracılığıyla eklenemez, `IDebugProgramNodeAttach2::OnAttach` veya `IDebugProgramEx2::Attach` yöntemleri SDM yükler (henüz yüklü değilse) hata ayıklama altyapısı çağırarak `CoCreateInstance` işlevi ve ardından aramaları [iliştirme](../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemi. Bu yaklaşım, yerel olarak bağlantı noktası sağlayıcısı tarafından başlatılan programlar tipik bir durumdur.  
+3. Program veya yöntemleri aracılığıyla iliştirilemez `IDebugProgramNodeAttach2::OnAttach` `IDebugProgramEx2::Attach` , SDM, işlevi çağırarak (henüz yüklenmediyse) hata ayıklama altyapısını yükler `CoCreateInstance` ve ardından [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemini çağırır. Bu yaklaşım, bir bağlantı noktası sağlayıcısı tarafından yerel olarak başlatılan programlar için tipik bir noktadır.  
   
-    Ayrıca çağırmak özel bağlantı noktası sağlayıcısı için olası `IDebugEngine2::Attach` yöntemi özel bir bağlantı noktası tedarikçi uygulamasında `IDebugProgramEx2::Attach` yöntemi. Genellikle bu durumda, özel bağlantı noktası sağlayıcısı uzak makinede hata ayıklama altyapısı başlatır.  
+    Özel bir bağlantı noktası sağlayıcısının `IDebugEngine2::Attach` yöntemi için özel bağlantı noktası tedarikçinin uygulamasındaki yöntemini çağırması de mümkündür `IDebugProgramEx2::Attach` . Genellikle bu durumda, özel bağlantı noktası sağlayıcısı uzak makinede hata ayıklama altyapısını başlatır.  
   
-   Oturum hata ayıklama Yöneticisi (SDM) çağırdığında eki elde [iliştirme](../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemi.  
+   Oturum hata ayıklama Yöneticisi (SDM) [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md) metodunu çağırdığında ek elde edilir.  
   
-   Sizin DE ayıklanacak uygulamayla aynı işlemde çalıştırmak sonra aşağıdaki yöntemleri uygulamalıdır [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md):  
+   Aynı işlem içinde DE ayıklanabilecek uygulamayla çalıştırırsanız, aşağıdaki [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)yöntemlerini uygulamanız gerekir:  
   
 - [GetHostName](../../extensibility/debugger/reference/idebugprogramnode2-gethostname.md),  
   
@@ -43,26 +43,26 @@ Programlarınızın uygun bağlantı noktası ile kaydettikten sonra hata ayıkl
   
 - [GetProgramName](../../extensibility/debugger/reference/idebugprogramnode2-getprogramname.md)  
   
-  Sonra `IDebugEngine2::Attach` yöntemi çağrıldığında, uygulamanızda adımları `IDebugEngine2::Attach` yöntemi:  
+  `IDebugEngine2::Attach`Yöntemi çağrıldıktan sonra, yöntemi uygulamanızda şu adımları uygulayın `IDebugEngine2::Attach` :  
   
-1. Gönderme bir [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) SDM olay nesnesiyle. Daha fazla bilgi için [olayları gönderme](../../extensibility/debugger/sending-events.md).  
+1. SDM 'ye bir [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) Event nesnesi gönderin. Daha fazla bilgi için bkz. [olayları gönderme](../../extensibility/debugger/sending-events.md).  
   
-2. Çağrı [GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) metodunda [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) geçildi nesne `IDebugEngine2::Attach` yöntemi.  
+2. Yöntemine geçirilen [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) nesnesinde [GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) yöntemini çağırın `IDebugEngine2::Attach` .  
   
-     Bu döndürür bir `GUID` program tanımlamak için kullanılır. `GUID` Temsil yerel için DE program ve bunu ne zaman döndürülmelidir nesnede depolanan `IDebugProgram2::GetProgramId` yöntemi çağrıldığında `IDebugProgram2` arabirimi.  
-  
-    > [!NOTE]
-    > Uygularsanız `IDebugProgramNodeAttach2` arabirim, programın `GUID` geçirilir `IDebugProgramNodeAttach2::OnAttach` yöntemi. Bu `GUID` programın için kullanılan `GUID` tarafından döndürülen `IDebugProgram2::GetProgramId` yöntemi.  
-  
-3. Gönder bir [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) SDM bildirmek üzere olay nesnesi, yerel `IDebugProgram2` nesne program için DE göstermek için oluşturuldu. Ayrıntılar için bkz [olayları gönderme](../../extensibility/debugger/sending-events.md).  
+     Bu `GUID` , programı tanımlamak için kullanılan bir döndürür. , `GUID` ' A yerel programı temsil eden nesnesinde depolanmalıdır ve `IDebugProgram2::GetProgramId` yöntemi arabirimde çağrıldığında döndürülmelidir `IDebugProgram2` .  
   
     > [!NOTE]
-    > Bu aynı değil `IDebugProgram2` yöntemlere geçirilen nesne `IDebugEngine2::Attach` yöntemi. Daha önce geçirilen `IDebugProgram2` nesne yalnızca bağlantı noktası tarafından kabul edilir ve ayrı bir nesnedir.  
+    > `IDebugProgramNodeAttach2`Arabirimini uygularsanız program `GUID` `IDebugProgramNodeAttach2::OnAttach` yöntemine geçirilir. Bu `GUID` Yöntem tarafından döndürülen program için kullanılır `GUID` `IDebugProgram2::GetProgramId` .  
+  
+3. Yerel nesnenin [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) , `IDebugProgram2` programı göstermek IÇIN oluşturulduğunu, SDM 'ye bildirmek için bir IDebugProgramCreateEvent2 olay nesnesi gönderin. Ayrıntılar için bkz. [olayları gönderme](../../extensibility/debugger/sending-events.md).  
+  
+    > [!NOTE]
+    > Bu, `IDebugProgram2` metoduna geçirilen nesne değildir `IDebugEngine2::Attach` . Daha önce geçirilen `IDebugProgram2` nesne yalnızca bağlantı noktası tarafından tanınır ve ayrı bir nesnedir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlatma tabanlı ek](../../extensibility/debugger/launch-based-attachment.md)   
  [Olayları gönderme](../../extensibility/debugger/sending-events.md)   
- [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)   
+ [Launchaskıya alındı](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)   
  [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)   
  [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md)   
  [IDebugProgramNodeAttach2](../../extensibility/debugger/reference/idebugprogramnodeattach2.md)   
@@ -71,4 +71,4 @@ Programlarınızın uygun bağlantı noktası ile kaydettikten sonra hata ayıkl
  [GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md)   
  [IDebugProgramEx2](../../extensibility/debugger/reference/idebugprogramex2.md)   
  [Ekleme](../../extensibility/debugger/reference/idebugprogramex2-attach.md)   
- [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md)
+ [İliştir](../../extensibility/debugger/reference/idebugengine2-attach.md)

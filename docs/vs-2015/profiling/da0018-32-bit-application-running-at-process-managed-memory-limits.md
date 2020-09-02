@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2d3247fb421800f87740a911563880b70abf3eed
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844728"
 ---
-# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: 32 bitlik Uygulama işlem tarafından yönetilen bellek sınırlarında çalışıyor
+# <a name="da0018-32-bit-application-running-at-process-managed-memory-limits"></a>DA0018: Yönetilen bellek limitlerinde çalışan 32 bit Uygulama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Kural kimliği | DA0018 |  
@@ -31,7 +31,7 @@ Kural kimliği | DA0018 |
   
  Örnekleme, .NET belleği veya kaynak çekişme yöntemlerini kullanarak profil oluşturduğunuzda, bu kuralı tetiklemek için en az 10 örnek toplamanız gerekir.  
   
-## <a name="cause"></a>Sebep  
+## <a name="cause"></a>Nedeni  
  Profil oluşturma işlemi sırasında toplanan sistem verileri, .NET Framework bellek yığınlarının, yönetilen yığınlardaki 32 bitlik bir işlemde ulaşabileceği en büyük boyutu approached gösterir. Bu en büyük boyut, varsayılan değerdir. Özel baytlar için ayrılabilecek işlem adres alanının Toplam miktarına bağlıdır. Bildirilen değer, profili oluşturulmuş işlem etkinken Heap 'ler için gözlenen en yüksek değerdir. .NET bellek profili oluşturma yöntemini kullanarak profil oluşturmayı yeniden düşünün ve yönetilen kaynakların uygulama tarafından kullanımını en iyi duruma getirme işlemini yapın.  
   
  Yönetilen yığınlardaki boyut varsayılan sınıra yaklaşımında, otomatik atık toplama işleminin daha sık çağrılması gerekebilir. Bu, bellek yönetiminin ek yükünü artırır.  
@@ -46,7 +46,7 @@ Kural kimliği | DA0018 |
  Yönetilen yığınların toplam boyutu varsayılan sınıra yaklaşıyorsa, bellek yönetiminin ek yükü genellikle uygulamanın yanıt hızını ve ölçeklenebilirliğini etkilemek için başlayabileceği noktaya kadar artar.  
   
 ## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma  
- [İşaretler](../profiling/marks-view.md) görünümüne gitmek için hata Listesi penceresindeki iletiye çift tıklayın. Tüm Heap 'ler ve **Toplam kaydedilmiş bayt** SÜTUNLARıNDA **.net clr belleği\\# bayt** bulun. Yönetilen bellek ayırmanın diğer aşamalara göre daha ağır olduğu program yürütmesinin belirli aşamaları olup olmadığını belirleme. **Tüm Heap sütunlarındaki # bytes** değerlerini, **.NET CLR\\bellekte**bildirilen çöp toplama hızına ve bu durumda, yönetilen bellek ayırmaları deseninin çöp toplama oranını etkileyip etkilemediğini tespit etmek için .NET CLR belleği\\# of gen **1**koleksiyonlarının, .NET CLR hafıza **\\ve net 2 koleksiyon** sütunlarının sayısını karşılaştırın.  
+ [İşaretler](../profiling/marks-view.md) görünümüne gitmek için hata Listesi penceresindeki iletiye çift tıklayın. ** \\ Tüm yığınlardaki .NET CLR bellek** sayısı ' nı ve **Toplam kaydedilmiş bayt** sütunlarını bulun. Yönetilen bellek ayırmanın diğer aşamalara göre daha ağır olduğu program yürütmesinin belirli aşamaları olup olmadığını belirleme. **Tüm Heap sütunlarındaki # bytes** değerlerini, ** \\ Gen 0 koleksiyonlarının .NET CLR**belleği #, **.NET CLR Memory # for gen \\ 1 Collections**ve .net **clr Memory of gen \\ 2 koleksiyonlar** sütunlarının, yönetilen bellek ayırmaları deseninin çöp toplama oranını etkileyip etkilemediğini tespit etmek üzere karşılaştırın.  
   
  .NET Framework bir uygulamada, ortak dil çalışma zamanı, yönetilen yığınların toplam boyutunu, bir işlem adres alanının özel alan boyutunun en büyük boyutundan biraz daha az bir olacak şekilde sınırlandırır. 32 bit makinede çalışan 32 bitlik işlemler için 2 GB, işlem adres alanının özel bölümünün üst sınırını temsil eder. Yönetilen yığınların toplam boyutu varsayılan sınırına yaklaşımak üzere başladığında, bellek yönetiminin ek yükü artabilir ve uygulama performansı azalabilir.  
   
@@ -54,7 +54,7 @@ Kural kimliği | DA0018 |
   
 - Uygulamanın yönetilen bellek kaynakları kullanımını iyileştirme  
   
-   veya  
+   -veya-  
   
 - 32 bitlik bir işlem için maksimum sanal bellek boyutundaki mimari kısıtlamalarını hafifetmek için gereken adımları alma  
   

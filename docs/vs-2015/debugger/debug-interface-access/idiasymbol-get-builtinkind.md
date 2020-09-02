@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_builtInKind | Microsoft Docs
+title: 'IDiaSymbol:: get_builtInKind | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,18 +12,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: a18567472edc15c39505acda9e5c4896d56c0f12
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149785"
 ---
-# <a name="idiasymbolgetbuiltinkind"></a>IDiaSymbol::get_builtInKind
+# <a name="idiasymbolget_builtinkind"></a>IDiaSymbol::get_builtInKind
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-HLSL türü yerleşik bir tür alır.  
+HLSL türünün yerleşik türünü alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT get_buildInKind(   
@@ -32,10 +32,10 @@ HRESULT get_buildInKind(
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir işaretçi bir `DWORD` , yerleşik bir tür HLSL türü tutar.  
+ dışı `DWORD` HLSL türünde yerleşik bir türü tutan bir işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

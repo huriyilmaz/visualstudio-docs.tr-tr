@@ -28,16 +28,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 336a02927374e856a2d6f5a55eb03c5ae1ac7037
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845186"
 ---
 # <a name="midl-task"></a>MIDL Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi kaydırır. Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesinde "MIDL komut satırı başvurusu" başlığına bakın.  
+Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını midl.exe sarmalanmış olarak kaydırır. Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesinde "MIDL komut satırı başvurusu" başlığına bakın.  
   
 ## <a name="parameters"></a>Parametreler  
  Aşağıdaki tabloda, **MIDL** görevinin parametreleri açıklanmaktadır. Çoğu görev parametresi ve birkaç parametre kümesi, bir komut satırı seçeneğine karşılık gelir.  
@@ -54,7 +54,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **dize** parametresi.  
   
-     Komut satırı seçeneklerinin listesi. Örneğin, **"** _/option1/option2/option #_ ". Diğer bir MıDL görev parametresi tarafından temsil edilmeyen komut satırı seçeneklerini belirtmek için bu parametreyi kullanın.  
+     Komut satırı seçeneklerinin listesi. Örneğin, **"**_/option1/option2/option #_". Diğer bir MıDL görev parametresi tarafından temsil edilmeyen komut satırı seçeneklerini belirtmek için bu parametreyi kullanın.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesinde "MIDL komut satırı başvurusu" başlığına bakın.  
   
@@ -62,7 +62,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **Boolean** parametresi.  
   
-     `true`, IDL dosyasında bazı ACF anahtar sözcüklerini kullanmanıza izin verir.  
+     İse `true` , IDL dosyasında bazı ACF anahtar sözcüklerini kullanmanıza izin verir.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/app_config** seçeneğine bakın.  
   
@@ -78,7 +78,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **dize** parametresi.  
   
-     C/C++ Önişlemci 'ye geçirilecek seçenekleri belirtir. Önişlemci seçeneklerinin boşlukla ayrılmış bir listesini belirtin.  
+     C/C++ ön işlemcisi 'ne geçirilecek seçenekleri belirtir. Önişlemci seçeneklerinin boşlukla ayrılmış bir listesini belirtin.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/cpp_opt** seçeneğine bakın.  
   
@@ -90,11 +90,11 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Değer|Komut satırı araçları|  
     |-----------|--------------------------|  
     |**İmza**|**/Char imzalandı**|  
     |**İşaretlenmemiş**|**/Char işaretsiz**|  
-    |**Ascii**|**/Char ascii7**|  
+    |**ASCII**|**/Char ascii7**|  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/char** seçeneğine bakın.  
   
@@ -114,9 +114,9 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Değer|Komut satırı araçları|  
     |-----------|--------------------------|  
-    |**Yok**|**/hata yok**|  
+    |**Hiçbiri**|**/hata yok**|  
     |**EnableCustom**|**/Error**|  
     |**Tümü**|**/Error tümü**|  
   
@@ -126,7 +126,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **Boolean** parametresi.  
   
-     `true`, yetersiz bellek hatalarını kontrol edin.  
+     İse `true` bellek yetersiz hatalarını kontrol edin.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Error Allocation** seçeneğine bakın.  
   
@@ -134,7 +134,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **Boolean** parametresi.  
   
-     `true`, uyumlu ve değişen dizilerin boyutunu iletim uzunluğu belirtimine göre denetler.  
+     `true`, Uyumlu ve değişen dizilerin boyutunu iletim uzunluğu belirtimine göre denetler.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Error bounds_check** seçeneğine bakın.  
   
@@ -142,15 +142,15 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **Boolean** parametresi.  
   
-     `true`, numaralandırma değerlerinin izin verilen aralıkta olup olmadığını denetler.  
+     İse `true` , sabit listesi değerlerinin izin verilen aralıkta olup olmadığını denetler.  
   
-     Daha fazla bilgi için, MIDL. exe için komut satırı yardımı 'nda ( **/?** ) **/Error numaralandırma** seçeneğine bakın.  
+     Daha fazla bilgi için, midl.exe için komut satırı yardımı 'nda (**/?**) **/Error sabit listesi** seçeneğine bakın.  
   
-- **ErrorCheckRefPointers**  
+- **Errorcheckrefişaretçiler**  
   
      İsteğe bağlı **Boolean** parametresi.  
   
-     `true`, istemci saplamasına hiçbir null başvuru işaretçisi geçirildiğinden emin olun.  
+     İse `true` , istemci saplamasına hiçbir null başvuru işaretçisi iletildiğini kontrol edin.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Error ref** seçeneğine bakın.  
   
@@ -158,7 +158,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **Boolean** parametresi.  
   
-     `true`, sunucu tarafında özel durumları hazırlamayı ve istemciye geri yayan bir saplama oluşturur.  
+     `true`, Sunucu tarafında özel durumları hazırlamayı ve istemciye geri yayan bir saplama oluşturur.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Error stub_data** seçeneğine bakın.  
   
@@ -170,10 +170,10 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Değer|Komut satırı araçları|  
     |-----------|--------------------------|  
-    |**Yok**|**/Client yok**|  
-    |**Stub**|**/Client saplama**|  
+    |**Hiçbiri**|**/Client yok**|  
+    |**Saplama**|**/Client saplama**|  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/Client** seçeneğine bakın.  
   
@@ -185,10 +185,10 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Değer|Komut satırı araçları|  
     |-----------|--------------------------|  
-    |**Yok**|**/Server hiçbiri**|  
-    |**Stub**|**/Server saplama**|  
+    |**Hiçbiri**|**/Server hiçbiri**|  
+    |**Saplama**|**/Server saplama**|  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesinde "MIDL komut satırı başvurusu" içindeki **/Server** seçeneğine bakın.  
   
@@ -196,7 +196,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **Boolean** parametresi.  
   
-     `true`, nesne arabirimleri için saplamasız proxy 'leriyle birlikte tamamen yorumlanan saplamalar üretir.  
+     İse `true` , nesne arabirimleri için saplamasız proxy 'leriyle birlikte tam olarak yorumlanan saplamalar üretir.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/oıcf** seçeneğine bakın.  
   
@@ -204,7 +204,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **Boolean** parametresi.  
   
-     `true`, bir tür kitaplığı (. tlb) dosyası oluşturulmaz.  
+     İse `true` , bir tür kitaplığı (. tlb) dosyası oluşturulmaz.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/notlb** seçeneğine bakın.  
   
@@ -216,15 +216,15 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesinde "MIDL komut satırı başvurusu" içindeki **/h** veya **/Header** seçeneğine bakın.  
   
-- **IgnoreStandardIncludePath**  
+- **Ignorestandardincludepath**  
   
      İsteğe bağlı **Boolean** parametresi.  
   
-     `true`, MıDL görevi yalnızca **Additionalıncludedizinler** anahtarını kullanarak belirtilen dizinleri arar ve geçerli DIZINI ve INCLUDE ortam değişkeni tarafından belirtilen dizinleri yoksayar.  
+     `true`MIDL görevi yalnızca **Additionalıncludedizinler** anahtarını kullanarak belirtilen dizinleri arar ve geçerlI dizini ve INCLUDE ortam değişkeni tarafından belirtilen dizinleri yoksayar.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/no_def_idir** seçeneğine bakın.  
   
-- **InterfaceIdentifierFileName**  
+- **Interfaceıdentifierfilename**  
   
      İsteğe bağlı **dize** parametresi.  
   
@@ -244,7 +244,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **Boolean** parametresi.  
   
-     `true`, giriş dosyasının biçiminin MkTypLib. exe sürüm 2,03 ile uyumlu olmasını gerektirir.  
+     İse `true` , mktyplib.exe sürüm 2,03 ile uyumlu olacak şekilde giriş dosyasının biçimini gerektirir.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/mktyplib203** seçeneğine bakın. Ayrıca MSDN Web sitesinde "ODL dosya sözdizimi" başlığına bakın.  
   
@@ -260,7 +260,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **dize []** parametresi.  
   
-     Bir veya daha fazla *tanımlar*belirtir; diğer bir deyişle, bir ad ve isteğe bağlı bir değer bir `#define` yönergesi tarafından olduğu gibi C Önişlemci 'ye geçirilir. Her tanımlamanın formu, *adı [= değer]* .  
+     Bir veya daha fazla *tanımlar*belirtir; diğer bir deyişle, bir ad ve isteğe bağlı bir değer, bir yönergesi tarafından olduğu gibi C Önişlemci 'ye geçirilir `#define` . Her tanımlamanın formu, *adı [= değer]*.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/d** seçeneğine bakın. Ayrıca bkz. bu tablodaki **UndefinePreprocessorDefinitions** parametresi.  
   
@@ -290,7 +290,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
 - **Kaynak**  
   
-     Gerekli `ITaskItem[]` parametresi.  
+     Gerekli `ITaskItem[]` parametre.  
   
      Boşluklarla ayrılmış kaynak dosyalarının bir listesini belirtir.  
   
@@ -302,13 +302,13 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Değer|Komut satırı araçları|  
     |-----------|--------------------------|  
-    |**NotSet**|*\<yok >*|  
-    |**1**|**/Zp1**|  
-    |**2**|**/Zp2**|  
-    |**4**|**/Zp4**|  
-    |**8**|**/Zp8**|  
+    |**NotSet**|*\<none>*|  
+    |**1**|**/ZP1**|  
+    |**2**|**/ZP2**|  
+    |**4**|**/ZP4**|  
+    |**8**|**/ZP8**|  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/ZP** seçeneğine bakın. **/ZP** seçeneği, **/Pack** seçeneğine ve eski **/ALIGN** seçeneğine eşdeğerdir.  
   
@@ -316,15 +316,15 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **Boolean** parametresi.  
   
-     `true`, MıDL görevinin uyarı iletilerini bastırır.  
+     İse `true` , MıDL görevinin uyarı iletilerini bastırır.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/no_warn** seçeneğine bakın.  
   
 - **SuppressStartupBanner**  
   
-     İsteğe bağlı `Boolean` parametresi.  
+     İsteğe bağlı `Boolean` parametre.  
   
-     `true`, görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.  
+     İse `true` , görev başladığında telif hakkı ve sürüm numarası iletisinin görüntülenmesini önler.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/nologo** seçeneğine bakın.  
   
@@ -336,9 +336,9 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Değer|Komut satırı araçları|  
     |-----------|--------------------------|  
-    |**NotSet**|*\<yok >*|  
+    |**NotSet**|*\<none>*|  
     |**Win32**|**/env Win32**|  
     |**Itanium**|**/env IA64**|  
     |**X64**|**/env x64**|  
@@ -347,7 +347,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
 - **TrackerLogDirectory**  
   
-     İsteğe bağlı `String` parametresi.  
+     İsteğe bağlı `String` parametre.  
   
      Bu görev için İzleme günlüklerinin depolandığı ara dizini belirtir.  
   
@@ -359,10 +359,10 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Değer|Komut satırı araçları|  
     |-----------|--------------------------|  
     |**NewFormat**|**/newtlb**|  
-    |**OldFormat**|**/oldtlb**|  
+    |**Eskibiçim**|**/oldtlb**|  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesinde "MIDL komut satırı başvurusu" içindeki **/newtlb** ve **/oldtlb** seçeneklerine bakın.  
   
@@ -378,23 +378,23 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      İsteğe bağlı **dize []** parametresi.  
   
-     Adı bir `#undefine` yönergesi olarak C Önişlemci 'ya geçirerek bir adın önceki tanımını kaldırır. Önceden tanımlanmış bir veya daha fazla ad belirtin.  
+     Adı bir yönergesi ile C Önişlemci 'ya geçirerek bir adın önceki tanımını kaldırır `#undefine` . Önceden tanımlanmış bir veya daha fazla ad belirtin.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/u** seçeneğine bakın. Ayrıca bkz. bu tablodaki **PreprocessorDefinitions** parametresi.  
   
 - **ValidateAllParameters**  
   
-     İsteğe bağlı `Boolean` parametresi.  
+     İsteğe bağlı `Boolean` parametre.  
   
-     `true`, çalışma zamanında bütünlük denetimleri gerçekleştirmek için kullanılan ek hata denetleme bilgileri oluşturur. `false`, hata denetimi bilgileri oluşturulmaz.  
+     İse `true` , çalışma zamanında bütünlük denetimleri gerçekleştirmek için kullanılan ek hata denetleme bilgileri üretir. Varsa `false` , hata denetimi bilgileri oluşturulmaz.  
   
      Daha fazla bilgi için [MSDN](https://msdn.microsoft.com/) Web sitesindeki "MIDL komut satırı başvurusu" içindeki **/dayanıklı** ve **/no_robust** seçeneklerine bakın.  
   
 - **WarnAsError**  
   
-     İsteğe bağlı `Boolean` parametresi.  
+     İsteğe bağlı `Boolean` parametre.  
   
-     `true`, tüm uyarıları hata olarak değerlendirir.  
+     Varsa `true` , tüm uyarıları hata olarak değerlendirir.  
   
      **WarningLevel** MIDL görev parametresi belirtilmemişse, varsayılan düzey 1 olan uyarılar hata olarak kabul edilir.  
   
@@ -408,7 +408,7 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
   
      Her biri bir komut satırı seçeneğine karşılık gelen aşağıdaki değerlerden birini belirtin.  
   
-    |Değer|Komut satırı seçeneği|  
+    |Değer|Komut satırı araçları|  
     |-----------|--------------------------|  
     |**0**|**/W0**|  
     |**1**|**/W1**|  
@@ -421,4 +421,4 @@ Microsoft Arabirim Tanımlama Dili (MıDL) derleyici aracını, MIDL. exe ' yi k
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görev Başvurusu](../msbuild/msbuild-task-reference.md)
+ [Görev başvurusu](../msbuild/msbuild-task-reference.md)

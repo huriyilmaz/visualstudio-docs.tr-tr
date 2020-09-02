@@ -1,5 +1,5 @@
 ---
-title: Yönerge İşaretçileri (IP) Görünümü - Çekişme Verileri | Microsoft Dokümanlar
+title: Yönerge Işaretçileri (IP) görünümü-çekişme verileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,39 +12,39 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: f37fb451238ec7ce6f48d8a4d3b91efa9ce04db7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74774318"
 ---
-# <a name="instruction-pointers-ips-view---contention-data"></a>Yönerge İşaretçileri (IP) Görünümü - çekişme verileri
-Çekişme verilerinin IP'ler görünümü, profil oluşturma çalışmasında yürütülmesi engellenen derleme yönergeleriiçin verileri listeler.
+# <a name="instruction-pointers-ips-view---contention-data"></a>Yönerge Işaretçileri (IP) görünümü-çekişme verileri
+Çekişme verilerinin IP görünümü, profil oluşturma çalıştırmasında yürütülmesi engellenen derleme yönergelerinin verilerini listeler.
 
- Aşağıdaki tabloda, Yönerge İşaretçileri görünümündeki sütunların değerleri açıklanmaktadır.
+ Aşağıdaki tabloda, yönerge Işaretçileri görünümündeki sütunların değerleri açıklanmaktadır.
 
 |Sütun|Açıklama|
 |------------|-----------------|
-|**Özel Engellenen Süre**|Bu işlevde engellenen süre.|
-|**Özel Engellenen Süre %**|Yönerge yürütülürken engellenen zaman yüzdesi.|
-|**Özel Çekişmeler**|Yönerge yürütülürken oluşan çekişmelerin sayısı.|
-|**Özel Çekişmeler %**|Yönerge yürütülürken oluşan profil oluşturma çalışmasındaki tüm çekişmelerin yüzdesi.|
-|**Fonksiyon Adresi**|Yüklenen ikili işlevin başlangıç bellek adresi.|
-|**Fonksiyon Adı**|Yönergeyi içeren işlevin adı.|
-|**Talimat Adresi**|Yüklenen ikili deki talimatın bellek adresi.|
-|**Fonksiyon Satır Numarası**|Kaynak dosyadaki bu işlevin başlangıcının satır numarası.|
-|**Modül Adı**|Talimatı içeren modülün adı.|
-|**Modül Yolu**|Talimatı içeren modülün yolu.|
-|**İşlem Kimliği**|Profilli işlemin işlem kimliği (PID).|
-|**İşlem Adı**|Sürecin adı.|
-|**Kaynak Karakter Başlangıç**|Bu talimatın başladığı kaynak dosya satırındaki karakterin mahsup.|
-|**Kaynak Karakter Sonu**|Bu talimatın sona erdiği kaynak dosya satırındaki karakterin mahsup noktası.|
-|**Kaynak Dosya**|Yönergeyi içeren kaynak dosya.|
-|**Kaynak Satırı Başlangıç**|Bu talimatın başladığı kaynak dosyadaki satır numarası.|
-|**Kaynak Satır Sonu**|Bu talimatın sona erdiği kaynak dosyadaki satır numarası.|
+|**Dışlamalı engellenme süresi**|Bu işlevdeki engellenme süresi.|
+|**Dışlamalı engellenme süresi yüzdesi**|Yönerge yürütülürken engellenme süresi yüzdesi.|
+|**Dışlamalı çekişmeler**|Yönerge yürütülürken gerçekleşen çekişmelerin sayısı.|
+|**Dışlamalı çekişmeler yüzdesi**|Yönerge yürütülürken oluşan profil oluşturma çalıştırmasında tüm çekişmelerin yüzdesi.|
+|**İşlev adresi**|Yüklenen ikilide işlevin başlangıç belleği adresi.|
+|**İşlev adı**|Yönergeyi içeren işlevin adı.|
+|**Yönerge adresi**|Yüklenen ikilide yönergenin bellek adresi.|
+|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|
+|**Modül Adı**|Yönergeyi içeren modülün adı.|
+|**Modül yolu**|Yönergeyi içeren modülün yolu.|
+|**İşlem Kimliği**|Profili oluşturulan işlemin işlem KIMLIĞI (PID).|
+|**İşlem adı**|Sürecin adı.|
+|**Kaynak karakter başlangıcı**|Bu yönergenin başladığı kaynak dosya satırındaki karakterin boşluğu.|
+|**Kaynak karakter sonu**|Bu yönergenin bittiği kaynak dosya satırındaki karakterin boşluğu.|
+|**Kaynak Dosya**|Yönergesini içeren kaynak dosya.|
+|**Kaynak satırı başlangıç**|Bu yönergenin başladığı kaynak dosyadaki satır numarası.|
+|**Kaynak satır sonu**|Bu yönergenin bittiği kaynak dosyadaki satır numarası.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl kullanılır: Rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
+- [Nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)
 - [Yönerge İşaretçileri (IP) Görünümü](../profiling/instruction-pointers-ips-view.md)
-- [Yönerge İşaretçileri (IP) Görünümü - örnekleme](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)
+- [Yönerge Işaretçileri (IP) görünümü-örnekleme](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)
 - [Yönerge İşaretçileri (IP) Görünümü](../profiling/instruction-pointers-ips-view-sampling-data.md)

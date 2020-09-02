@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldDefinition::ConstructInstantiation | Microsoft Dokümanlar
+title: 'Idebuggenericfielddefinition:: Constructörneklemesi | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 352018e50b955ed414af974bc21b62775fd55f53
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728256"
 ---
 # <a name="idebuggenericfielddefinitionconstructinstantiation"></a>IDebugGenericFieldDefinition::ConstructInstantiation
-Bir dizi tür bağımsız değişkeni verilen bir alan örneği oluşturuyor.
+Bağımsız değişken türünde dizi verilen bir alan örneği oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT ConstructInstantiation(
@@ -44,16 +44,16 @@ int ConstructInstantiation(
 
 ## <a name="parameters"></a>Parametreler
 `cArgs`\
-[içinde] `ppArgs` Dizideki bağımsız değişken sayısı.
+'ndaki Dizideki bağımsız değişken sayısı `ppArgs` .
 
 `ppArgs`\
-[içinde] Tür bağımsız değişkenlerini içeren dizi. Tür bağımsız değişkenleri kapalı türleri (genel olmayan veya tamamen anında genel leştirilmiş genel).
+'ndaki Tür bağımsız değişkenlerini içeren dizi. Tür bağımsız değişkenleri kapalı olmalıdır (genel olmayan veya tam olarak örneklenmiş genel türler).
 
 `ppConstructedField`\
-[çıkış] Yeni alanı temsil eden [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimini döndürür.
+dışı Yeni alanı temsil eden [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Kısıtlamalar denetlenmez.

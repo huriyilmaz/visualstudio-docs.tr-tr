@@ -1,5 +1,5 @@
 ---
-title: MSBuild dönüşümleri | Microsoft Docs
+title: MSBuild Dönüşümleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -13,48 +13,48 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3f9a6f7985e3ebb3e77dcc605157f75e00a0842b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63426033"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64793892"
 ---
 # <a name="msbuild-transforms"></a>MSBuild Dönüşümleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Dönüşüm bir bire bir öğe listesinin başka bir dönüştürmedir. Bir proje öğesi listeleri dönüştürmek etkinleştirmeye ek olarak, bir dönüştürme giriş ve çıkışlarını arasında doğrudan bir eşleme tanımlamak bir hedef sağlar. Bu konu, dönüşümler açıklar ve nasıl [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projeleri daha verimli bir şekilde oluşturmak için bunları kullanır.  
+Dönüşüm, bir öğe listesinin diğerine bire bir dönüştürmedir. Bir dönüşüm, öğe listelerini dönüştürmek üzere etkinleştirmenin yanı sıra, bir hedefin giriş ve çıkışları arasında doğrudan eşlemeyi belirlemesine olanak sağlar. Bu konu, dönüşümleri açıklar ve [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] projeleri daha verimli bir şekilde derlemek için bunları nasıl kullanır.  
   
-## <a name="transform-modifiers"></a>Değiştiriciler dönüştürme  
- Dönüşümler rastgele değildir, ancak özel sözdizimi tüm dönüştürme değiştiricilere olması gereken biçimde %(tarafından sınırlandırılmıştır*ItemMetaDataName*). Öğe meta verileri, dönüştürme değiştirici olarak kullanılabilir. Bu, oluşturulduğunda, her öğeye atanan tanınmış öğe meta verileri içerir. İyi bilinen öğe meta verileri bir listesi için bkz. [tanınmış öğe meta verileri](../msbuild/msbuild-well-known-item-metadata.md).  
+## <a name="transform-modifiers"></a>Dönüştürme değiştiricileri  
+ Dönüşümler rastgele değildir, ancak tüm dönüştürme değiştiricilerin%(*ItemMetaDataName*) biçiminde olması gereken özel sözdizimi ile sınırlıdır. Herhangi bir öğe meta verisi, dönüştürme değiştiricisi olarak kullanılabilir. Bu, oluşturulduğunda her öğeye atanan iyi bilinen öğe meta verilerini içerir. İyi bilinen öğe meta verileri listesi için bkz. [tanınmış öğe meta verileri](../msbuild/msbuild-well-known-item-metadata.md).  
   
- Aşağıdaki örnekte, .resx dosyaları listesini bir .resources dosyaları listesine dönüştürülür. %(Filename) dönüştürme değiştiricisi, her bir .resources dosyası karşılık gelen bir .resx dosyası olarak aynı dosya adına sahip olduğunu belirtir.  
+ Aşağıdaki örnekte,. resx dosyalarının bir listesi. resources dosyaları listesine dönüştürülür. % (Filename) dönüştürme değiştiricisi her bir. resources dosyasının karşılık gelen. resx dosyasıyla aynı dosya adına sahip olduğunu belirtir.  
   
 ```  
 @(RESXFile->'%(filename).resources')  
 ```  
   
 > [!NOTE]
-> Ayırıcı standart öğesi listesi için belirttiğiniz aynı şekilde dönüştürülmüş öğesi listesi için özel bir ayırıcı belirtebilirsiniz. Örneğin, varsayılan noktalı virgül (;) yerine bir virgül (,) kullanarak dönüştürülmüş öğesi listesini ayırmak için aşağıdaki XML kullanın.  
+> Dönüştürülmüş öğe listesi için bir özel ayırıcı, bir standart öğe listesi için ayırıcı belirttiğiniz şekilde belirtebilirsiniz. Örneğin, varsayılan noktalı virgül (;) yerine virgül (,) kullanarak dönüştürülmüş bir öğe listesini ayırmak için aşağıdaki XML 'yi kullanın.  
   
 ```  
 @(RESXFile->'Toolset\%(filename)%(extension)', ',')  
 ```  
   
- Örneğin, @(RESXFile) öğesi listedeki öğeler varsa `Form1.resx`, `Form2.resx`, ve `Form3.resx`, dönüştürülen listesinde çıktılar olacağını `Form1.resources`, `Form2.resources`, ve `Form3.resources`.  
+ Örneğin, @ (RESXFile) öğe listesindeki öğeler `Form1.resx` , ve ise, `Form2.resx` `Form3.resx` dönüştürülmüş listedeki çıktılar `Form1.resources` , `Form2.resources` ve olur `Form3.resources` .  
   
-## <a name="using-multiple-modifiers"></a>Birden çok değiştiricileri kullanma  
- Bir dönüştürme ifadesi herhangi bir sırada birleştirilebilen ve yinelenebilen birden çok değiştiriciler içerebilir. Aşağıdaki örnekte, dosyaları içeren dizine adı değiştirildi, ancak dosya özgün adı ve dosya adı uzantısı korunur.  
+## <a name="using-multiple-modifiers"></a>Çoklu değiştiriciler kullanma  
+ Bir Transform ifadesi, herhangi bir sırada birleştirilebilen ve yinelenebilir olabilen birden çok değiştirici içerebilir. Aşağıdaki örnekte, dosyaları içeren dizinin adı değiştirilir, ancak dosyalar özgün adı ve dosya adı uzantısını korurlar.  
   
 ```  
 @(RESXFile->'Toolset\%(filename)%(extension)')  
 ```  
   
- Örneğin, öğeleri olan yer alan `RESXFile` öğe listesi `Project1\Form1.resx`, `Project1\Form2.resx`, ve `Project1\Form3.text`, dönüştürülen listesinde çıktılar olacağını `Toolset\Form1.resx`, `Toolset\Form2.resx`, ve `Toolset\Form3.text`.  
+ Örneğin, `RESXFile` öğe listesinde bulunan öğeler `Project1\Form1.resx` , ve ise, `Project1\Form2.resx` `Project1\Form3.text` dönüştürülmüş listedeki çıktılar `Toolset\Form1.resx` , ve olur `Toolset\Form2.resx` `Toolset\Form3.text` .  
   
-## <a name="dependency-analysis"></a>Bağımlılık çözümlemesi  
- Dönüşümler dönüştürülmüş öğe listesi ve özgün öğe listesi arasında bire bir eşleme garanti. Bu nedenle, bir hedef oluşturur girişlere dönüştürmeler çıkışları [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] zaman damgaları girişler ve çıkışlar, analiz ve atlayın, yapı veya kısmen hedef yeniden karar.  
+## <a name="dependency-analysis"></a>Bağımlılık Analizi  
+ Dönüşümler, dönüştürülmüş öğe listesi ve özgün öğe listesi arasında bire bir eşleme garantisi. Bu nedenle, bir hedef, girişlerin dönüştürmeleri olan çıktılar oluşturursa, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] girişlerin ve çıktıların zaman damgalarını çözümleyebilir ve bir hedefi atlamaya, oluşturmaya veya kısmen yeniden oluşturmaya karar verebilirsiniz.  
   
- İçinde [kopyalama görevi](../msbuild/copy-task.md) aşağıdaki örnekte, her bir dosyanın `BuiltAssemblies` öğe listesi eşleyen bir dönüştürme kullanılarak belirtilen görev, hedef klasörde bir dosyaya `Outputs` özniteliği. Bir dosya varsa `BuiltAssemblies` öğe listesi değişikliklerinin `Copy` yalnızca değiştirilen dosya için görev çalıştırılır ve diğer tüm dosyalar atlanacak. Bağımlılık analizi ve dönüşümler kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Artımlı olarak derleme](../msbuild/how-to-build-incrementally.md).  
+ [Kopyalama görevinde](../msbuild/copy-task.md) aşağıdaki örnekte, öğe listesindeki her dosya, `BuiltAssemblies` özniteliğinde bir dönüşüm kullanılarak belirtilen, görevin hedef klasöründeki bir dosyayla eşlenir `Outputs` . `BuiltAssemblies`Öğe listesindeki bir dosya değişirse, `Copy` görev yalnızca değiştirilen dosya için çalıştırılır ve diğer tüm dosyalar atlanır. Bağımlılık Analizi ve dönüştürmeleri kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Artımlı derleme](../msbuild/how-to-build-incrementally.md).  
   
 ```  
 <Target Name="CopyOutputs"  
@@ -70,8 +70,8 @@ Dönüşüm bir bire bir öğe listesinin başka bir dönüştürmedir. Bir proj
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
- Aşağıdaki örnekte gösterildiği bir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] dönüşümler kullanan bir proje dosyası. Bu örnek c:\sub0\sub1\sub2\sub3 dizinde tek .xsd dosyasını olduğunu ve çalışma dizinini c:\sub0 olduğunu varsayar.  
+### <a name="description"></a>Description  
+ Aşağıdaki örnek, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] dönüşümler kullanan bir proje dosyası gösterir. Bu örnekte, c:\sub0\sub1\alt 2\sub3 dizininde yalnızca bir. xsd dosyasının olduğunu ve çalışma dizininin c:\sub0olduğunu varsaymaktadır.  
   
 ### <a name="code"></a>Kod  
   
@@ -94,7 +94,7 @@ Dönüşüm bir bire bir öğe listesinin başka bir dönüştürmedir. Bir proj
 </Project>  
 ```  
   
-### <a name="comments"></a>Açıklamalar  
+### <a name="comments"></a>Yorumlar  
  Bu örnek aşağıdaki çıktıyı üretir.  
   
 ```  
@@ -111,4 +111,4 @@ extension: .xsd
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [MSBuild kavramları](../msbuild/msbuild-concepts.md)   
  [MSBuild başvurusu](../msbuild/msbuild-reference.md)   
- [Nasıl yapılır: Artımlı Olarak Derleme](../msbuild/how-to-build-incrementally.md)
+ [Nasıl Yapılır: Artımlı Olarak Derleme](../msbuild/how-to-build-incrementally.md)

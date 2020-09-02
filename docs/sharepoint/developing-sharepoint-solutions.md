@@ -16,9 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 36823637c530d65776c149ff576bf5e7e0ca545f
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86016787"
 ---
 # <a name="develop-sharepoint-solutions"></a>SharePoint çözümleri geliştirme
@@ -100,7 +101,7 @@ ms.locfileid: "86016787"
 |Dağıtım Konumu|SharePoint sunucusundaki dosyanın tam yolu. Bu yol, dağıtım kökü ve dağıtım yolu alt özelliklerinden oluşur.|
 |Dağıtım yolu|SharePoint Server dosyasındaki dosyanın Workflow1 gibi göreli yolu \\ . Dosyanın tam yolu, dağıtım *yolu* değeri *dağıtım kök* değerinin sonuna bitişerek oluşturulur.<br /><br /> *Dağıtım türü* özelliği Için bir *RootFile* değeri seçildiğinde, *dağıtım kök* özelliği, \<SharePointRoot> \\ tam olarak \<SharePointRoot> \workflow1 yoluna neden olacak şekilde değişir \\ . Daha fazla bilgi için bkz. [SharePoint çözümlerini paketleme ve dağıtma](../sharepoint/packaging-and-deploying-sharepoint-solutions.md).|
 |Dağıtım kökü|Dize. SharePoint sunucusunda dosyanın dağıtıldığı kök klasör. Örneğin, \<SharePointRoot> \Template\features \\ \<FeatureName> \\ .<br /><br /> *Dağıtım kök* özelliğinin değeri, *dağıtım türü* ayarı tarafından belirlenir.|
-|Dağıtım türü|Dosyanın dağıtım türü, *dağıtım kök* değerini belirler. Aşağıdaki değerlerden biri olabilir:<br /><br /> NoDeployment:*\<no value>*<br /><br /> ElementManifest: * \<SharePointRoot> \Template\features \\ \<FeatureName> *\\<br /><br /> ElementFile: * \<SharePointRoot> \Template\özellikler \\ \<FeatureName> \\ *<br /><br /> TemplateFile: * \<SharePointRoot> \ şablon \\ *<br /><br /> RootFile:*\<SharePointRoot>\\*<br /><br /> GlobalResource: * \<SharePointRoot> \Resources \\ *<br /><br /> ClassResource:*\<ClassResourcePath>\\*<br /><br /> Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.SharePoint.DeploymentType>.|
+|Dağıtım türü|Dosyanın dağıtım türü, *dağıtım kök* değerini belirler. Aşağıdaki değerlerden biri olabilir:<br /><br /> NoDeployment: *\<no value>*<br /><br /> ElementManifest: * \<SharePointRoot> \Template\features \\ \<FeatureName> *\\<br /><br /> ElementFile: * \<SharePointRoot> \Template\özellikler \\ \<FeatureName> \\ *<br /><br /> TemplateFile: * \<SharePointRoot> \ şablon \\ *<br /><br /> RootFile: *\<SharePointRoot>\\*<br /><br /> GlobalResource: * \<SharePointRoot> \Resources \\ *<br /><br /> ClassResource: *\<ClassResourcePath>\\*<br /><br /> Daha fazla bilgi için bkz. <xref:Microsoft.VisualStudio.SharePoint.DeploymentType>.|
 |Dosya Adı|Öğe dosyası için dosya veya klasörün adı.|
 |Tam Yol|Öğe için dosyanın konumu. (Salt okunur.)|
 

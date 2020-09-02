@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Oluşturma bir. Vsct mevcut bir dosya. Ctc dosya | Microsoft Docs'
+title: 'Nasıl yapılır: oluşturma. Varolan bir dosyadan vsct dosyası. CTC dosyası | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -10,26 +10,26 @@ ms.assetid: 700e80a4-c1e1-4178-af53-45e86dd2c08b
 caps.latest.revision: 9
 manager: jillfra
 ms.openlocfilehash: 7b963436e9d968dd5ba3829e97d0fd0c52e49641
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443014"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64796915"
 ---
-# <a name="how-to-create-a-vsct-file-from-an-existing-ctc-file"></a>Nasıl yapılır: Oluşturma bir. Vsct mevcut bir dosya. Ctc dosyası
-Varolan komut tablosu .ctc kaynak dosyasından bir XML tabanlı .vsct dosyası oluşturabilirsiniz. Bunu yaptığınızda yeni avantajlarından yararlanabilirsiniz XML tabanlı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komut tablosu (VSCT) derleyici biçimi.  
+# <a name="how-to-create-a-vsct-file-from-an-existing-ctc-file"></a>Nasıl yapılır: oluşturma. Varolan bir dosyadan vsct dosyası. CTC dosyası
+Varolan bir komut tablosu. ctc kaynak dosyasından XML tabanlı. vsct dosyası oluşturabilirsiniz. Bunu yaparak, yeni XML tabanlı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komut tablosu (VSCT) derleyici biçiminden yararlanabilirsiniz.  
   
-### <a name="to-create-a-vsct-file-from-a-ctc-file"></a>Bir .ctc dosyasından .vsct dosyası oluşturmak için  
+### <a name="to-create-a-vsct-file-from-a-ctc-file"></a>. CTC dosyasından bir. vsct dosyası oluşturmak için  
   
-1. Perl dil bir kopyasını edinin.  
+1. Perl dilinin bir kopyasını alın.  
   
-2. Perl betik ConvertCTCToVSCT.pl, tipik olarak bulunan bir kopyasını elde  *\<Visual Studio SDK'sını yükleme yolu >* \VisualStudioIntegration\Tools\bin klasör.  
+2. Genellikle \VisualStudioIntegration\Tools\bin klasöründe bulunan Perl betiğinin ConvertCTCToVSCT.pl bir kopyasını alın *\<Visual Studio SDK installation path>* .  
   
-3. Dönüştürmek istediğiniz .ctc kaynak dosyasının bir kopyasını edinin.  
+3. Dönüştürmek istediğiniz. ctc kaynak dosyasının bir kopyasını alın.  
   
-4. Dosyaları aynı dizine koyun.  
+4. Dosyaları aynı dizine yerleştirin.  
   
-5. İçinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komut istemi penceresinin, dizine gidin.  
+5. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Komut istemi penceresinde, dizinine gidin.  
   
 6. Tür  
   
@@ -37,13 +37,13 @@ Varolan komut tablosu .ctc kaynak dosyasından bir XML tabanlı .vsct dosyası o
     perl.exe ConvertCTCtoVSCT.pl PkgCmd.ctc PkgCmd.vsct  
     ```  
   
-     Burada PkgCmd.ctc .ctc dosyasının adını ve PkgCmd.vsct oluşturmak istediğiniz .vsct dosyası adıdır.  
+     Burada PkgCmd. CTC,. CTC dosyasının adı ve PkgCmd. vsct, oluşturmak istediğiniz. vsct dosyasının adıdır.  
   
-     Bu yeni .vsct XML komut tablosu kaynak dosyası oluşturur. Diğer .vsct dosyası gibi dosya Vsct.exe, VSCT derleyici kullanarak derleyebilirsiniz.  
+     Bu, yeni bir. vsct XML komut tablosu kaynak dosyası oluşturur. Dosyayı, başka bir. vsct dosyası gibi Vsct.exe, VSCT derleyicisini kullanarak derleyebilirsiniz.  
   
     > [!NOTE]
-    > XML açıklamaları'yeniden biçimlendirme .vsct dosyası okunabilirliğini artırabilir.  
+    > XML açıklamalarını yeniden düzenleyerek. vsct dosyasının okunabilirliğini geliştirebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Oluşturma bir. Vsct dosyası](../extensibility/internals/how-to-create-a-dot-vsct-file.md)   
+ [Nasıl yapılır: oluşturma. Vsct dosyası](../extensibility/internals/how-to-create-a-dot-vsct-file.md)   
  [Visual Studio Komut Tablosu (.Vsct) Dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

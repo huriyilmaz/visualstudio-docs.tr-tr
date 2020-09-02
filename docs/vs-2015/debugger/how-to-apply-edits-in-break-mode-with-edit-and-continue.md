@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Düzen ile kesme modunda düzenlemeleri uygulayın ve devam et | Microsoft Docs'
+title: 'Nasıl yapılır: Düzenle ve devam et ile kesme modunda düzenleme uygulama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -25,62 +25,62 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5c04dc0ae6e5272d2544ad7436fa7ca516c9a022
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437353"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64795661"
 ---
-# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue"></a>Nasıl yapılır: Düzen ile kesme modunda düzenlemeleri uygulayın ve devam et
+# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue"></a>Nasıl Yapılır: Düzenle ve Devam Et ile Kesme Modunda Düzenlemeleri Uygulama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Düzenle ve devam et, kesme modunda kodunuzu düzenleyin ve ardından durdurup yeniden başlatmadan yürütme devam etmek için kullanabilirsiniz.  
+Kodunuzu kesme modunda düzenlemek için Düzenle ve devam et ' i kullanabilir ve sonra yürütmeyi durdurup yeniden başlatmadan devam edebilirsiniz.  
   
- Düzenle ve devam et hata ayıklama aşağıdaki senaryolarda kullanılabilir değil:  
+ Düzenle ve devam et aşağıdaki hata ayıklama senaryolarında kullanılamaz:  
   
-- Karma mod (yerel/yönetilen) hata ayıklama.  
+- Karışık mod (Yerel/yönetilen) hata ayıklama.  
   
-- SQL hata ayıklama.  
+- SQL hata ayıklaması.  
   
-- Bir Dr hata ayıklama. Watson dökümü.  
+- Dr. Watson dökümünü hata ayıklama.  
   
-- İşlenmeyen bir özel durumdan sonra kod düzenleme, **işlenmemiş özel durumlarda çağrı yığınını geriye doğru izleme** seçeneği belirlenmez.  
+- İşlenmeyen özel **durumlar üzerinde çağrı yığınını geri bırakma** seçeneği seçili değilse, işlenmemiş bir özel durumdan sonra kodu düzenleyebilirsiniz.  
   
-- Katıştırılmış çalışma zamanı uygulama hata ayıklama.  
+- Gömülü çalışma zamanı uygulamasında hata ayıklama.  
   
-- Bir uygulama ile hata ayıklama **ekleme** uygulamasıyla çalışan yerine **Başlat** gelen **hata ayıklama** menüsü.  
+- **Hata ayıklama** menüsünden **Başlangıç** ile uygulamayı çalıştırmak yerine, **Attach** ile bir uygulamada hata ayıklama.  
   
-- En iyi duruma getirilmiş kodda hata ayıklama.  
+- İyileştirilmiş kodda hata ayıklama.  
   
-- 64 bitlik bir uygulama hedeflendiğinde, yönetilen kodda hata ayıklama. İsterseniz kullanım Düzenle ve devam et, hedef x86 için ayarlamanız gerekir. (_Proje_**özellikleri**, **derleme** sekmesinde **Gelişmiş derleyici** ayarı.).  
+- Hedef 64 bitlik bir uygulama olduğunda yönetilen kodda hata ayıklama. Düzenle ve devam et ' i kullanmak istiyorsanız, hedefi x86 olarak ayarlamanız gerekir. (_Proje_**özellikleri**, **derleme** sekmesi, **Gelişmiş derleyici** ayarı.).  
   
-- Derleme hataları nedeniyle oluşturmak yeni bir sürüm başarısız olduktan sonra kodunuzu eski bir sürümü hata ayıklama.  
+- Derleme hataları nedeniyle yeni bir sürümden sonra kodunuzun eski bir sürümünde hata ayıklama başarısız oldu.  
   
-### <a name="to-edit-code-in-break-mode"></a>Kesme modunda kod düzenlemek için  
+### <a name="to-edit-code-in-break-mode"></a>Kodu kesme modunda düzenlemek için  
   
-1. Aşağıdakilerden birini yaparak Kesme moduna girin:  
+1. Aşağıdakilerden birini yaparak kesme moduna girin:  
   
-    - Kodunuzda bir kesme noktası ayarlayın ve ardından **hata ayıklamayı Başlat** gelen **hata ayıklama** menü ve kesme noktasına isabet uygulamaya tamamlanmasını bekleyin.  
+    - Kodunuzda bir kesme noktası ayarlayın, ardından **Hata Ayıkla** menüsünden **hata ayıklamayı Başlat** ' ı seçin ve uygulamanın kesme noktasına gelmesini bekleyin.  
   
-         – veya –  
+         veya  
   
-    - Hata ayıklamayı başlatın ve ardından **tümünü Kes** gelen **hata ayıklama** menüsü.  
+    - Hata ayıklamayı başlatın ve **Hata Ayıkla** menüsünden **Tümünü kes** ' i seçin.  
   
-         – veya –  
+         veya  
   
-    - Bir özel durum oluştuğunda seçin **düzenlemeyi etkinleştir** üzerinde**özel durum Yardımcısı'nı**.  
+    - Bir özel durum oluştuğunda,**özel durum Yardımcısı**üzerinde **düzenlemesi etkinleştir** ' i seçin.  
   
-2. İstenen ve yasal kod değişikliklerini yapın.  
+2. İstediğiniz ve geçerli kod değişikliklerini yapın.  
   
-     Daha fazla bilgi için [desteklenmeyen düzenlemeler Visual Basic Düzenle ve devam et](../debugger/unsupported-edits-in-visual-basic-edit-and-continue.md).  
+     Daha fazla bilgi için [Visual Basic Düzenle ve devam et ' de desteklenmeyen düzenlemeler](../debugger/unsupported-edits-in-visual-basic-edit-and-continue.md)bölümüne bakın.  
   
     > [!NOTE]
-    > Bir kod bu değişikliği yapmak için Düzenle ve devam et tarafından izin verilmiyor dener düzenlemeniz tarafından mor dalgalı çizgi altı çizili olacaktır ve bir görev görev listesinde görünür. Geçersiz kod değişikliği geri sürece kod yürütülmesine devam etmek mümkün olmayacaktır.  
+    > Düzenle ve devam et tarafından izin verilmeyen bir kod değişikliği yapmaya çalışırsanız, düzenlemeniz mor dalgalı bir çizgiyle altı çizili olur ve Görev Listesi bir görev görüntülenir. Geçersiz kod değişikliğini geri yüklemediğiniz takdirde kod yürütmeye devam edemeyeceksiniz.  
   
-3. Üzerinde **hata ayıklama** menüsünde tıklatın **devam** yürütme devam etmek için.  
+3. **Hata Ayıkla** menüsünde, yürütmeyi sürdürmek için **devam** ' a tıklayın.  
   
-     Kodunuz artık projeye dahil uygulanan düzenlemeleriniz ile yürütür.  
+     Kodunuz artık projeye eklenen ve uygulanan düzenlemelerinizle yürütülür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Basic'de desteklenmeyen düzenlemeler Düzenle ve devam et](../debugger/unsupported-edits-in-visual-basic-edit-and-continue.md)   
+ [Visual Basic Düzenle ve devam et 'de desteklenmeyen düzenlemeler](../debugger/unsupported-edits-in-visual-basic-edit-and-continue.md)   
  [Düzenle ve Devam Et (Visual Basic)](../debugger/edit-and-continue-visual-basic.md)

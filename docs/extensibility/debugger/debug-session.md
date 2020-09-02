@@ -1,5 +1,5 @@
 ---
-title: Hata Ayıklama Oturumu | Microsoft Dokümanlar
+title: Hata ayıklama oturumu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 664bcc4790d642ec5ea006cc42b3cf29885e9018
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80738999"
 ---
 # <a name="debug-session"></a>Hata ayıklama oturumu
-Hata ayıklama mimarisi açısından, bir *oturum:*
+Hata ayıklayıcı mimarisi açısından bir *oturum*:
 
-- IDE'nin tek bir örneğinden başlatılan veya iliştirilen tüm işlemler kümesidir.
+- , Bir IDE 'nin tek bir örneğinden başlatılmış veya bağlı olan, ilişkili veya ilgisiz tüm işlemlerin kümesidir.
 
-- Bir oturum hata ayıklama yöneticisi (SDM) tarafından uygulanır. Daha fazla bilgi için Bkz. [Oturum Hata Ayıklama Yöneticisi.](../../extensibility/debugger/session-debug-manager.md)
+- , Bir oturum hata ayıklama Yöneticisi (SDM) tarafından uygulanır. Daha fazla bilgi için bkz. [oturum hata ayıklama Yöneticisi](../../extensibility/debugger/session-debug-manager.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Oturum hata ayıklama yöneticisi](../../extensibility/debugger/session-debug-manager.md)
-- [Hata ayıklama kavramları](../../extensibility/debugger/debugger-concepts.md)
+- [Oturum hata ayıklama Yöneticisi](../../extensibility/debugger/session-debug-manager.md)
+- [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)

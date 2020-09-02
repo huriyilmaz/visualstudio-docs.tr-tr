@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 867477fd3e490f91e81fb91c8be267ede83c8d2c
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536571"
 ---
 # <a name="debug-only-user-code-with-just-my-code"></a>Yalnızca Yalnızca kendi kodum ile Kullanıcı kodunda hata ayıkla
@@ -21,7 +21,7 @@ ms.locfileid: "85536571"
 
 Yalnızca kendi kodum .NET, C++ ve JavaScript projelerinde farklı şekilde çalışır.
 
-## <a name="enable-or-disable-just-my-code"></a><a name="BKMK_Enable_or_disable_Just_My_Code"></a>Yalnızca kendi kodum etkinleştir veya devre dışı bırak
+## <a name="enable-or-disable-just-my-code"></a><a name="BKMK_Enable_or_disable_Just_My_Code"></a> Yalnızca kendi kodum etkinleştir veya devre dışı bırak
 
 Çoğu programlama dili için Yalnızca kendi kodum varsayılan olarak etkindir.
 
@@ -45,7 +45,7 @@ Bir hata ayıklama oturumu sırasında **modüller** penceresi, hata ayıklayıc
 >[!TIP]
 >**Modülleri**, **çağrı yığınını**, **görevleri**veya diğer birçok hata ayıklama pencerelerini açmak için bir hata ayıklama oturumunda olmanız gerekir. Hata ayıklama sırasında, **hata ayıklama**  >  **Windows**altında, açmak istediğiniz pencereleri seçin.
 
-<a name="BKMK_Override_call_stack_filtering"></a>Kodu daraltılmış **[harici kod]** çerçevesinde görüntülemek Için, **çağrı yığını** veya **görev** penceresinde sağ tıklayın ve bağlam menüsünden **dış kodu göster** ' i seçin. Genişletilmiş dış kod satırları **[Dış kod**] çerçevesinin yerini alır.
+<a name="BKMK_Override_call_stack_filtering"></a> Kodu daraltılmış **[harici kod]** çerçevesinde görüntülemek Için, **çağrı yığını** veya **görev** penceresinde sağ tıklayın ve bağlam menüsünden **dış kodu göster** ' i seçin. Genişletilmiş dış kod satırları **[Dış kod**] çerçevesinin yerini alır.
 
 ![Çağrı yığını penceresinde dış kodu göster](../debugger/media/dbg_justmycode_showexternalcode.png "Dış kodu göster")
 
@@ -60,9 +60,9 @@ Bir hata ayıklama oturumu sırasında **modüller** penceresi, hata ayıklayıc
 
 Üç derleyici özniteliği de .NET hata ayıklayıcının Kullanıcı kodu olarak dikkate düşündüğünü etkiler:
 
-- <xref:System.Diagnostics.DebuggerNonUserCodeAttribute>hata ayıklayıcıya uyguladığı kodun kullanıcı kodu olmadığını söyler.
-- <xref:System.Diagnostics.DebuggerHiddenAttribute>Yalnızca kendi kodum kapalı olsa bile kodu hata ayıklayıcıdan gizler.
-- <xref:System.Diagnostics.DebuggerStepThroughAttribute>hata ayıklayıcının, koda adım adım değil, uygulandığı kodda ilermasını söyler.
+- <xref:System.Diagnostics.DebuggerNonUserCodeAttribute> hata ayıklayıcıya uyguladığı kodun kullanıcı kodu olmadığını söyler.
+- <xref:System.Diagnostics.DebuggerHiddenAttribute> Yalnızca kendi kodum kapalı olsa bile kodu hata ayıklayıcıdan gizler.
+- <xref:System.Diagnostics.DebuggerStepThroughAttribute> hata ayıklayıcının, koda adım adım değil, uygulandığı kodda ilermasını söyler.
 
 .NET hata ayıklayıcı diğer tüm kodları Kullanıcı kodu olacak şekilde değerlendirir.
 
@@ -79,11 +79,11 @@ Kullanıcı olmayan kodda işlenmeyen bir özel durum oluşursa, hata ayıklayı
 
 Özel durum için ilk şans özel durumları etkinleştirilirse, çağıran kullanıcı kodu satırı, kaynak kodunda yeşil renkle vurgulanır. **Çağrı yığını** penceresi **[Dış kod]** etiketli açıklamalı çerçeveyi görüntüler.
 
-## <a name="c-just-my-code"></a><a name="BKMK_C___Just_My_Code"></a>C++ Yalnızca kendi kodum
+## <a name="c-just-my-code"></a><a name="BKMK_C___Just_My_Code"></a> C++ Yalnızca kendi kodum
 
 Visual Studio 2017 sürüm 15,8 ' den başlayarak, kod adımlaması için Yalnızca kendi kodum de desteklenir. Bu özellik ayrıca [/JMC (yalnızca kodumun hata ayıklama)](/cpp/build/reference/jmc) derleyici anahtarından kullanılmasını gerektirir. Anahtar, C++ projelerinde varsayılan olarak etkindir. **Çağrı yığını** penceresi ve yalnızca kendi kodum çağrı yığını desteği için/JMC anahtarı gerekli değildir.
 
-<a name="BKMK_CPP_User_and_non_user_code"></a>Kullanıcı kodu olarak sınıflandırılacak şekilde, Kullanıcı kodunu içeren ikilinin PDB hata ayıklayıcı tarafından yüklenmelidir (Bunu denetlemek için **modüller** penceresini kullanın).
+<a name="BKMK_CPP_User_and_non_user_code"></a> Kullanıcı kodu olarak sınıflandırılacak şekilde, Kullanıcı kodunu içeren ikilinin PDB hata ayıklayıcı tarafından yüklenmelidir (Bunu denetlemek için **modüller** penceresini kullanın).
 
 Çağrı **yığını** penceresinde olduğu gibi çağrı yığını davranışı Için, C++ içindeki yalnızca kendi kodum yalnızca bu işlevleri *Kullanıcı dışı kod*olarak değerlendirir:
 
@@ -99,7 +99,7 @@ Kod atlama davranışı için C++ içindeki Yalnızca kendi kodum yalnızca bu i
 > [!NOTE]
 > Yalnızca kendi kodum ' de kod Adımlama desteği için, C++ kodu Visual Studio 15,8 Preview 3 veya sonraki sürümlerde MSVC derleyicileri kullanılarak derlenmesi gerekir ve/JMC derleyici anahtarı etkinleştirilmelidir (varsayılan olarak etkindir). Daha fazla bilgi için bkz. [C++ çağrı yığınını ve kod atlama davranışını özelleştirme](#BKMK_CPP_Customize_call_stack_behavior)ve bu [blog gönderisi](https://devblogs.microsoft.com/cppblog/announcing-jmc-stepping-in-visual-studio/). Eski bir derleyici kullanılarak derlenen kod için *. natstepfilter* dosyaları, yalnızca kendi kodum bağımsız olan kod adımlamayı özelleştirmenin tek yoludur. Bkz. [C++ atlama davranışını özelleştirme](#BKMK_CPP_Customize_stepping_behavior).
 
-<a name="BKMK_CPP_Stepping_behavior"></a>C++ hata ayıklaması sırasında:
+<a name="BKMK_CPP_Stepping_behavior"></a> C++ hata ayıklaması sırasında:
 
 - **Hata Ayıkla**  >  Kullanıcı kodunun sonraki satırına kod üzerinde Kullanıcı dışı kod adımlarında **adımla** (veya **F11**).
 - **Hata Ayıkla**  >  Kullanıcı dışı kod üzerinde **Step Out** (veya **Shift** + **F11**), Kullanıcı kodu için bir sonraki satırda çalışır.
@@ -110,7 +110,7 @@ Hata ayıklayıcı Kullanıcı dışı kod (örneğin, **hata ayıklama**  >  **
 
 Hata ayıklayıcı bir özel durum ile karşılaşırsanız, Kullanıcı veya Kullanıcı olmayan kodda olup olmayana özel durum üzerinde duraklar. **Özel durum ayarları** Iletişim kutusundaki **Kullanıcı tarafından işlenmeyen** seçenekler yok sayılır.
 
-### <a name="customize-c-call-stack-and-code-stepping-behavior"></a><a name="BKMK_CPP_Customize_call_stack_behavior"></a>C++ çağrı yığınını ve kod Adımlama davranışını özelleştirme
+### <a name="customize-c-call-stack-and-code-stepping-behavior"></a><a name="BKMK_CPP_Customize_call_stack_behavior"></a> C++ çağrı yığınını ve kod Adımlama davranışını özelleştirme
 
 C++ projeleri için, **çağrı yığını** penceresinin * \* . natjmc* dosyalarında belirterek Kullanıcı dışı kod olarak davrandığı modülleri, kaynak dosyalarını ve işlevleri belirtebilirsiniz. Bu özelleştirme, en son derleyicisini kullanıyorsanız kod adımlaması için de geçerlidir (bkz. [C++ yalnızca kendi kodum](#BKMK_CPP_User_and_non_user_code)).
 
@@ -160,7 +160,7 @@ Bir *. natjmc* dosyası, bu söz dizimi Ile bir XML dosyasıdır:
 |`Module`|İsteğe bağlı. İşlevi içeren modülün adı veya tam yolu. Aynı ada sahip işlevleri ayırt etmek için bu özniteliği kullanabilirsiniz.|
 |`ExceptionImplementation`|Olarak ayarlandığında `true` , çağrı yığını bu işlev yerine özel durumu oluşturan işlevi görüntüler.|
 
-### <a name="customize-c-stepping-behavior-independent-of-just-my-code-settings"></a><a name="BKMK_CPP_Customize_stepping_behavior"></a>C++ Adımlama davranışını Yalnızca kendi kodum ayarlarından bağımsız olarak özelleştirme
+### <a name="customize-c-stepping-behavior-independent-of-just-my-code-settings"></a><a name="BKMK_CPP_Customize_stepping_behavior"></a> C++ Adımlama davranışını Yalnızca kendi kodum ayarlarından bağımsız olarak özelleştirme
 
 C++ projeleri ' nde, * \* . natstepfilter* dosyalarında Kullanıcı olmayan kod olarak listeleyerek adım adım işlemler yapabilirsiniz. * \* . Natstepfilter* dosyalarında listelenen işlevler yalnızca kendi kodum ayarlarına bağımlı değildir.
 
@@ -190,11 +190,11 @@ Bir *. natstepfilter* dosyası, bu söz dizimi Ile bir XML dosyasıdır:
 |`Function`|Gereklidir. Kullanıcı dışı işlevler olarak bir veya daha fazla işlevi belirtir.|
 |`Name`|Gereklidir. Eşleştirilecek tam işlev adını belirten bir ECMA-262 biçimli normal ifade. Örneğin:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> içindeki tüm yöntemlerin `MyNS::MyClass` Kullanıcı dışı kod olarak kabul edileceğini hata ayıklayıcıya söyler. Eşleşme büyük/küçük harfe duyarlıdır.|
 |`Module`|İsteğe bağlı. İşlevi içeren modülün tam yolunu belirten bir ECMA-262 biçimli normal ifade. Eşleşme büyük/küçük harfe duyarsızdır.|
-|`Action`|Gereklidir. Şu büyük/küçük harfe duyarlı değerlerden biri:<br /><br /> `NoStepInto`-hata ayıklayıcıya işlevin üzerinde ilermasını söyler.<br /> `StepInto`-hata ayıklayıcıya eşleşen işlev için diğerini geçersiz kılarak işlevin içine gitmesini söyler `NoStepInto` .|
+|`Action`|Gereklidir. Şu büyük/küçük harfe duyarlı değerlerden biri:<br /><br /> `NoStepInto`  -hata ayıklayıcıya işlevin üzerinde ilermasını söyler.<br /> `StepInto`  -hata ayıklayıcıya eşleşen işlev için diğerini geçersiz kılarak işlevin içine gitmesini söyler `NoStepInto` .|
 
-## <a name="javascript-just-my-code"></a><a name="BKMK_JavaScript_Just_My_Code"></a>JavaScript Yalnızca kendi kodum
+## <a name="javascript-just-my-code"></a><a name="BKMK_JavaScript_Just_My_Code"></a> JavaScript Yalnızca kendi kodum
 
-<a name="BKMK_JS_User_and_non_user_code"></a>JavaScript Yalnızca kendi kodum, kodu aşağıdaki sınıflandırmalardaki kategorilere ayırarak, yığın görüntüsünü Adımlama ve çağır ' a denetler:
+<a name="BKMK_JS_User_and_non_user_code"></a> JavaScript Yalnızca kendi kodum, kodu aşağıdaki sınıflandırmalardaki kategorilere ayırarak, yığın görüntüsünü Adımlama ve çağır ' a denetler:
 
 |Sınıflandırma|Açıklama|
 |-|-|
@@ -220,7 +220,7 @@ Diğer tüm kodlar **MyCode**olarak sınıflandırılır.
 
 Bir JavaScript projesinin kök klasörüne *mycode.js* adlı bir *. JSON* dosyası ekleyerek varsayılan sınıflandırmaları değiştirebilir ve belirli dosyaları ve URL 'leri Kullanıcı veya Kullanıcı dışı kod olarak sınıflandırabilirsiniz. Bkz. [JavaScript yalnızca kendi kodum özelleştirme](#BKMK_JS_Customize_Just_My_Code).
 
-<a name="BKMK_JS_Stepping_behavior"></a>JavaScript hata ayıklaması sırasında:
+<a name="BKMK_JS_Stepping_behavior"></a> JavaScript hata ayıklaması sırasında:
 
 - Bir işlev kullanıcı olmayan bir kod ise, **hata ayıklama**  >  **adımı** (veya **F11**) **hata ayıklama**  >  **adımıyla** (veya **F10**) aynı şekilde davranır.
 - Bir adım kullanıcı olmayan (**librarycode** veya **UnrelatedCode**) kodda başlıyorsa, yalnızca kendi kodum etkin olmadığında geçici olarak adımlayın. Kullanıcı koduna döndüğünüzde Yalnızca kendi kodum Adımlama yeniden etkinleştirilir.
@@ -243,7 +243,7 @@ Kodda ayarlanan kesme noktaları her zaman isabet ediyor, ancak kod sınıfland�
 - Özel durum işlenirse, hata ayıklayıcı kesme yapmaz.
 - Özel durum işlenmezse, hata ayıklayıcı kesilir.
 
-### <a name="customize-javascript-just-my-code"></a><a name="BKMK_JS_Customize_Just_My_Code"></a>JavaScript Yalnızca kendi kodum özelleştirme
+### <a name="customize-javascript-just-my-code"></a><a name="BKMK_JS_Customize_Just_My_Code"></a> JavaScript Yalnızca kendi kodum özelleştirme
 
 Tek bir JavaScript projesinde kullanıcı ve Kullanıcı olmayan kodu kategorilere ayırmak için, *mycode.js* adlı bir *. JSON* dosyasını projenin kök klasörüne ekleyebilirsiniz.
 
@@ -279,7 +279,7 @@ Dosyalar *üzerindeMycode.js* bu söz dizimini kullanır:
 
 **Eval**, **Function**ve **ScriptBlock** anahtar değer çiftleri, dinamik olarak üretilen kodun sınıflandırıldığını belirleme:
 
-|Name|Açıklama|
+|Ad|Açıklama|
 |-|-|
 |**Dğer**|Ana bilgisayar tarafından sunulan işleve bir dize geçirerek yürütülen komut dosyası `eval` . Varsayılan olarak, eval betiği **MyCode**olarak sınıflandırılır.|
 |**İşlev**|Oluşturucuya bir dize geçirerek yürütülen komut dosyası `Function` . Varsayılan olarak, Işlev betiği **Librarycode**olarak sınıflandırılır.|
@@ -287,18 +287,18 @@ Dosyalar *üzerindeMycode.js* bu söz dizimini kullanır:
 
 Değeri şu anahtar sözcüklerden birine değiştirebilirsiniz:
 
-- `MyCode`betiği **MyCode**olarak sınıflandırır.
-- `Library`betiği **Librarycode**olarak sınıflandırır.
-- `Unrelated`betiği **UnrelatedCode**olarak sınıflandırır.
+- `MyCode` betiği **MyCode**olarak sınıflandırır.
+- `Library` betiği **Librarycode**olarak sınıflandırır.
+- `Unrelated` betiği **UnrelatedCode**olarak sınıflandırır.
 
 **MyCode, kitaplıklar ve Ilgisiz**
 
 **MyCode**, **Kitaplıklar**ve **ilişkisiz** anahtar değer çiftleri bir sınıflandırmayla dahil etmek istediğiniz URL 'leri veya dosyaları belirtir:
 
-|Name|Açıklama|
+|Ad|Açıklama|
 |-|-|
 |**MyCode**|**MyCode**olarak sınıflandırılan bir URL veya dosya dizisi.|
 |**Kitaplıklar**|**Librarycode**olarak sınıflandırılan bir URL veya dosya dizisi.|
 |**İlgisiz**|**UnrelatedCode**olarak sınıflandırılan bir URL veya dosya dizisi.|
 
-URL veya dosya dizesinde `*` sıfır veya daha fazla karakterle eşleşen bir veya daha fazla karakter olabilir. `*`, normal ifadeyle aynıdır `.*` .
+URL veya dosya dizesinde `*` sıfır veya daha fazla karakterle eşleşen bir veya daha fazla karakter olabilir. `*` , normal ifadeyle aynıdır `.*` .

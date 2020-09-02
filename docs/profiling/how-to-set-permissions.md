@@ -15,10 +15,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 03f508bd2ff904898d77cd5ac07c30992da63b46
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85328943"
 ---
 # <a name="how-to-set-permissions"></a>Nasıl yapılır: izinleri ayarlama
@@ -72,7 +72,7 @@ Yönetici, profil oluşturma araçlarının yazılım sürücüsüne erişim izn
 
 5. ** \<user name> İzinler** kutusunda, **tam denetim**onay kutusunu seçin.
 
-6. **Tamam**'a tıklayın.
+6. **Tamam**’a tıklayın.
 
      Bu, kullanıcıya, 5. adımda seçilen klasörle başlayan paylaşılan klasör ağacı için izin verir.
 

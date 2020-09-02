@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Dosya değişiklik bildirimlerini gösterme | Microsoft Docs'
+title: 'Nasıl yapılır: dosya değişikliği bildirimlerini gizleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,39 +11,39 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3f045175eae165b75a887ada2716b19f34fc228b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204074"
 ---
-# <a name="how-to-suppress-file-change-notifications"></a>Nasıl yapılır: Dosya Değişiklik Bildirimlerini Gizleme
+# <a name="how-to-suppress-file-change-notifications"></a>Nasıl Yapılır: Dosya Değişiklik Bildirimlerini Gizleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Metin arabelleğini temsil eden bir fiziksel dosya değiştirildiğinde, iletinin bir iletişim kutusu görüntüler **aşağıdaki öğelerdeki değişiklikleri kaydetmek istiyor musunuz?** Bu dosya değişikliği bildirimi bilinir. Birçok değişiklik dosyaya kullanacaksanız, ancak bu iletişim kutusunu tekrar tekrar görüntüleme hızlı bir şekilde rahatsız edici hale gelebilir.  
+Metin arabelleğini temsil eden fiziksel dosya değiştirildiğinde, **aşağıdaki öğelerde yapılan değişiklikleri kaydetmek istiyor musunuz?** iletisini içeren bir iletişim kutusu görüntülenir. Bu dosya değişiklik bildirimi olarak bilinir. Ancak, çok sayıda değişiklik dosyaya ulaşıyorsa, bu iletişim kutusu tekrar tekrar  
   
- Programlı olarak aşağıdaki yordamı kullanarak bu iletişim kutusunu gizleyebilirsiniz. Bunu yaparak, bir dosya hemen her zaman değişiklikleri kaydetmek için kullanıcıdan gerek kalmadan yeniden yükleyebilirsiniz.  
+ Aşağıdaki yordamı kullanarak bu iletişim kutusunu program aracılığıyla gizleyebilirsiniz. Bunu yaparak bir dosyayı hemen yeniden yükleyebilirsiniz. böylece, kullanıcıdan her seferinde değişiklikleri kaydetmesini istemek zorunda kalmadan.  
   
-### <a name="to-suppress-file-change-notification"></a>Dosya değişikliği bildirimi gizlemek için  
+### <a name="to-suppress-file-change-notification"></a>Dosya değişikliği bildirimini gizlemek için  
   
-1. Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A> hangi metin arabelleği nesnesi, açık dosya ile ilişkili olduğunu belirlemek için yöntemi.  
+1. <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.FindAndLockDocument%2A>Hangi metin arabelleği nesnesinin açık dosyanız ile ilişkilendirildiğini belirleyen yöntemi çağırın.  
   
-2. Doğrudan <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> elde ederek dosya değişiklikleri yoksaymak için bellekte izlediği nesne <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl> alanından arabirim <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> (belge veri) nesnesi ve ardından uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl.IgnoreFileChanges%2A> yöntemiyle `fIgnore` parametresi kümesine `true`.  
+2. <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl> <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> (Belge verileri) nesnesinden arayüzü elde ederek ve sonra <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl.IgnoreFileChanges%2A> metodunu `fIgnore` olarak ayarlanmış şekilde uygulayarak, dosya değişikliklerinin izlenmesini yoksaymak için bellekteki nesneyi doğrudan yönlendirin `true` .  
   
-3. Yöntemleri çağırma <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> arabirimler, bellek içinde güncelleştirilecek <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> (örneğin, bir alan bileşeninize eklendiğinde) dosya değişiklikleri nesne.  
+3. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> Bellek içi <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> nesneyi dosya değişiklikleriyle (örneğin, bileşeninizdeki bir alan eklendiğinde) güncelleştirmek için ve arabirimlerinde Yöntemleri çağırın.  
   
-4. Dosyanın disk üzerinde bekleyen kullanıcı sürüyor olabilir düzenlemeleri göz önüne almadan değişikliklerle güncelleştirin.  
+4. Kullanıcının sürmekte olan bekleyen düzenlemeleri dikkate almadan diskteki dosyayı değişikliklerle güncelleştirin.  
   
-     Bu şekilde, doğrudan olduğunda <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> nesne dosyası için izlemeyi sürdürmek için değişiklik bildirimleri, bellekte metin arabelleğini diğer bekleyen düzenlemeler yanı sıra oluşturulan değişiklikleri yansıtır. Diskteki dosya sizin tarafınızdan oluşturulan en son kodu yansıtır ve herhangi daha önce kullanıcı tarafından değişiklikler kullanıcı tarafından düzenlenen kodda kaydedilir.  
+     Bu şekilde, <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> nesneyi dosya değişikliği bildirimleri için izlemeyi sürdürecek şekilde yönlendirdiğinde, bellekteki metin arabelleği, oluşturduğunuz değişiklikleri ve diğer tüm bekleyen düzenlemeleri yansıtır. Diskteki dosya, sizin tarafınızdan oluşturulan en son kodu ve Kullanıcı tarafından düzenlenen kodda Kullanıcı tarafından daha önce kaydedilen değişiklikleri yansıtır.  
   
-5. Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl.IgnoreFileChanges%2A> yöntemi bildirmek için <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> ayarlayarak dosya değişikliği bildirimleri için izlemeyi sürdürmek için nesne `fIgnore` parametresi `false`.  
+5. Parametresini ' a <xref:Microsoft.VisualStudio.Shell.Interop.IVsDocDataFileChangeControl.IgnoreFileChanges%2A> <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> ayarlayarak, nesne, dosya değişikliği bildirimleri için izlemeyi sürdürmesini bildirmek için yöntemini çağırın `fIgnore` `false` .  
   
-6. Kaynak kodu denetimi (SCC) olduğu gibi dosyanın birkaç değişiklik planlıyorsanız dosya değişiklik bildirimlerini geçici olarak askıya almak için genel dosya değiştirme hizmeti söylemeniz gerekir.  
+6. Kaynak kodu denetimi (SCC) durumunda olduğu gibi dosyada birkaç değişiklik yapmayı planlıyorsanız, genel dosya değiştirme hizmetine dosya değişiklik bildirimlerini geçici olarak askıya almak için bildirmeniz gerekir.  
   
-     Örneğin, dosyayı yeniden zaman damgası daha sonra değiştirirseniz, ayrı bir dosya olay değiştikçe yeniden yazma ve timestample işlemlerini her sayısı gibi dosya değişiklik bildirimlerini askıya gerekir. Bunun yerine çağırmalıdır genel dosya değişikliği bildirimini etkinleştirmek için <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEx.IgnoreFile%2A> yöntemi.  
+     Örneğin, dosyayı yeniden yazıp zaman damgasını değiştirirseniz, her birinin yeniden yazma ve timestample işlemleri ayrı bir dosya değişikliği olayı olarak sayımında dosya değişiklik bildirimlerini askıya almalısınız. Genel dosya değişikliği bildirimini etkinleştirmek için yöntemini çağırmanız gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEx.IgnoreFile%2A> .  
   
 ## <a name="example"></a>Örnek  
- Dosya değişikliği bildirimi Önle nasıl gösterir.  
+ Aşağıda, dosya değişikliği bildiriminin nasıl bastırılacağını gösterilmektedir.  
   
 ```cpp#  
 //Misc. helper classes  
@@ -115,4 +115,4 @@ void CSuspendFileChanges::Resume()
 ```  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Ardından durumunuz SCC, olduğu gibi dosyanın çok sayıda değişiklik içeriyorsa dosya değişiklikleri için izlemeyi sürdürmek için belge verileri uyarmadan önce genel dosya değişiklik bildirimlerini sürdürmek önemlidir.
+ Büyük/küçük harf, SCC durumunda olduğu gibi dosyada birden fazla değişiklik içeriyorsa, dosya değişikliklerine yönelik izlemeye geri dönmek için belge verilerini uyarmadan önce genel dosya değişiklik bildirimlerini sürdürmeniz önemlidir.

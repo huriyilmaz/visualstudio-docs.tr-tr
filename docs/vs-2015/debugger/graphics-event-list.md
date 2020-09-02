@@ -12,10 +12,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9e56f2d8ef72121e8b34117436019251449fbb75
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845044"
 ---
 # <a name="graphics-event-list"></a>Grafik Olay Listesi
@@ -35,11 +35,11 @@ Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D 
 ### <a name="color-coded-events-in-direct3d-12"></a>Direct3D 12 ' de renk kodlu olaylar  
  Direct3D 12, farklı donanım işlevlerine karşılık gelen birden çok sırayı gösterir. Direct3D 12 ' deki belirli bir grafik olayı ile ilişkili sırayı belirlemek için, bir Direct3D 12 uygulaması yakalamayla çalışırken, olaylar, kuyruğuna göre olay listesinde renk kodludur.  
   
-|Direct3D 12 kuyruğu|Renk|  
+|Direct3D 12 kuyruğu|Color|  
 |-----------------------|-----------|  
 |İşleme kuyruğu|Yeşil|  
-|İşlem kuyruğu|Sarı|  
-|Kopyalama kuyruğu|Turuncu|  
+|İşlem kuyruğu|Yellow|  
+|Kopyalama kuyruğu|Orange|  
   
  Direct3D 11 birden çok kuyruğu kullanıma sunmadığından, bir Direct3D 11 uygulaması yakalamayla çalışırken olay listesinde olaylar renk kodlanmamış.  
   
@@ -57,10 +57,10 @@ Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D 
 - **Grafik olay listesi** penceresinde, olay listesinin üstünde, **Görünüm** açılır menüsünü bulun ve **zaman çizelgesi** görünümünü ya da **çizim çağrıları** görünümünü seçin.  
   
 ### <a name="filtering-events"></a>Olayları filtreleme  
- Olaylar listesini yalnızca adları belirli anahtar sözcükleri içeren olayları içerecek şekilde filtrelemek için, **grafik olay listesi** penceresinin sağ üst köşesinde bulunan arama kutusunu kullanabilirsiniz. Önceki çizimde gösterildiği gibi `Vertex`gibi tek bir anahtar sözcük veya `Draw;Primitive`gibi noktalı virgülle ayrılmış bir liste kullanarak birden çok anahtar sözcük belirtebilirsiniz. Bu, adlarında `Draw` ya da `Primitive` olan olaylarla eşleşir. Aramalar, boşluk ile duyarlıdır — Örneğin, `VSSet` ve `VS Set` farklı aramalardır; bu nedenle, aramaları dikkatle ayarladığınızdan emin olun.  
+ Olaylar listesini yalnızca adları belirli anahtar sözcükleri içeren olayları içerecek şekilde filtrelemek için, **grafik olay listesi** penceresinin sağ üst köşesinde bulunan arama kutusunu kullanabilirsiniz. `Vertex`Önceki çizimde gösterildiği gibi tek bir anahtar sözcük veya adında noktalı virgülle ayrılmış bir liste kullanarak birden çok anahtar sözcük belirtebilirsiniz `Draw;Primitive` (örneğin `Draw` , adlarına veya adlarını içeren olaylarla eşleşir) `Primitive` . Aramalar, boşluk ile duyarlıdır — Örneğin, `VSSet` ve `VS Set` farklı aramalardır; bu nedenle, aramaları dikkatle ayarladığınızdan emin olun.  
   
 ### <a name="moving-between-draw-calls"></a>Çizim çağrıları arasında dolaşma  
- `Draw` çağrılarının incelenmesi özellikle önemli olduğundan, **sonraki çizim aramasına git** ' i kullanarak, çizim çağrılarını hızla bulmak ve aralarında gezinmek Için **grafik olay listesi** penceresinin sol üst köşesinde bulunan **önceki çizim çağrı düğmelerine gidebilirsiniz** .  
+ Çağrıları İnceleme `Draw` özellikle önemli olduğundan, **sonraki çizim çağrısına git** ' i kullanabilir ve çizim çağrılarını hızla bulmak ve arasında gezinmek Için **grafik olay listesi** penceresinin sol üst köşesinde bulunan **önceki çizim çağrı düğmelerine gidebilirsiniz** .  
   
 ### <a name="links-to-graphics-objects"></a>Grafik nesnelerine bağlantılar  
  Belirli grafik olaylarını anlamak için, Direct3D 'nin geçerli durumu veya olay tarafından başvurulan Direct3D nesneleri hakkında ek bilgilere ihtiyaç duyabilirsiniz. Birçok olay, daha fazla ayrıntı için izleyebileceğiniz bu bilgilere bağlantılar sağlar.  
@@ -72,11 +72,11 @@ Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D 
 |----------|-----------------------|  
 |(simge yok)|Genel olay<br /> Kullanıcı tanımlı olay, Kullanıcı tanımlı olay grubu veya çizim olayı olmayan herhangi bir olay.|  
 |![Çizim olayı simgesi](../debugger/media/vsg-eventlist-icon-draw.png "vsg_eventlist_icon_draw")|Çizim olayı<br /> Yakalanan çerçeve sırasında oluşan bir çizim olayını işaretler.|  
-|![Kullanıcı&#45;tanımlı olay işaret simgesi](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay grubu<br /> Uygulama tarafından tanımlanan şekilde ilgili olayları gruplandırır.|  
-|![Kullanıcı&#45;tanımlı olay işaret simgesi](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay işaretleyicisi<br /> Uygulama tarafından tanımlanan belirli bir konumu işaretler.|  
+|![Kullanıcı&#45;tanımlı olay işaretleyici simgesi](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay grubu<br /> Uygulama tarafından tanımlanan şekilde ilgili olayları gruplandırır.|  
+|![Kullanıcı&#45;tanımlı olay işaretleyici simgesi](../debugger/media/vsg-eventlist-icon-user.png "vsg_eventlist_icon_user")|Kullanıcı tanımlı olay işaretleyicisi<br /> Uygulama tarafından tanımlanan belirli bir konumu işaretler.|  
   
 ## <a name="marking-user-defined-events-in-your-app"></a>Uygulamanızda Kullanıcı tanımlı olayları işaretleme  
- Kullanıcı tanımlı olaylar uygulamanıza özeldir. Bunları, uygulamanızda, grafik olay listesindeki olaylarla oluşan önemli olayları ilişkilendirmek için kullanabilirsiniz. Örneğin, olay listesine daha kolay gözatabilmeniz için, Kullanıcı tanımlı olay gruplarını gruplar veya hiyerarşiler halinde düzenlemek üzere Kullanıcı tanımlı olay grupları oluşturabilirsiniz veya belirli nesne türleri olduğunda işaretçiler oluşturabilirsiniz. grafik olaylarını olay listesinde kolayca bulabilmeniz için çizilir.  
+ Kullanıcı tanımlı olaylar uygulamanıza özeldir. Bunları, uygulamanızda, grafik olay listesindeki olaylarla oluşan önemli olayları ilişkilendirmek için kullanabilirsiniz. Örneğin, olay listesine daha kolay gözatabilmeniz için, Kullanıcı tanımlı olay gruplarını gruplar veya hiyerarşiler halinde düzenlemek için Kullanıcı tanımlı olay grupları oluşturabilirsiniz veya belirli nesne türleri çizildiğinde, bu sayede grafik olaylarını olay listesinde kolayca bulabilmeniz için işaretçiler oluşturabilirsiniz.  
   
  Uygulamanızda gruplar ve işaretçiler oluşturmak için, Direct3D 'nin diğer Direct3D hata ayıklama araçları tarafından kullanılması için sağladığı API 'Leri kullanın. Bu API 'Ler bazen Direct3D sürümleri arasında değişir ancak temel işlevler aynıdır.  
   
@@ -99,7 +99,7 @@ Oyununuzun veya uygulamanızın bir çerçevesini işlerken kaydedilen Direct3D 
 |Bir olay grubunu Sonlandır|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|  
 |Olay işaretleyicisi oluşturma|`SetMarkerInt`|`SetMarker`|`D3DPerf_SetMarker`|  
   
- Direct3D sürümünüzün desteklediği bu API 'lerden herhangi birini kullanabilirsiniz. Örneğin, Direct3D 11,1 API 'sini hedefliyorsanız, bir olay işaretleyicisi oluşturmak için `SetMarker` ya da `D3DPerf_SetMarker` kullanabilirsiniz, `SetMarkerInt` ancak yalnızca Direct3D 11.2 'de kullanılabilir olduğundan, farklı Direct3D sürümlerini destekleenler de aynı uygulamada de karıştırabilirsiniz.  
+ Direct3D sürümünüzün desteklediği bu API 'lerden herhangi birini kullanabilirsiniz. Örneğin, Direct3D 11,1 API 'sini hedefliyorsanız, `SetMarker` `D3DPerf_SetMarker` bir olay işaretleyicisi oluşturmak için ya da `SetMarkerInt` yalnızca Direct3D 11.2 'de kullanılabilir olduğundan, ancak farklı Direct3D sürümlerini aynı uygulamada bir araya getiden de karıştırabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek Yol: Cihaz Durumu Nedeniyle Nesnelerin Eksikliği](../debugger/walkthrough-missing-objects-due-to-device-state.md)
+ [İzlenecek yol: Cihaz Durumu Nedeniyle Eksik Nesneler](../debugger/walkthrough-missing-objects-due-to-device-state.md)

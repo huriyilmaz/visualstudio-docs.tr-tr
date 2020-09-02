@@ -22,10 +22,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: daf72a4466cd0f02eb6ef3a357276ed690fd26bf
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845529"
 ---
 # <a name="creating-bootstrapper-packages"></a>Önyükleyici Paketleri Oluşturma
@@ -40,9 +40,9 @@ Kurulum programı, Windows Installer (. msi) dosyaları ve yürütülebilir prog
   
  Önyükleyici paketi oluşturmak için, önyükleyici bildirim oluşturucusunun bir EXE veya MSI file.to biçiminde yeniden dağıtılabilir sağlamalısınız. Ardından, Önyükleyici Bildirim Oluşturucusu aşağıdaki dosyaları oluşturur:  
   
-- Paket için dilden bağımsız meta veriler içeren ürün bildirimi, Product. xml. Bu, yeniden dağıtılabilir bileşenin tüm yerelleştirilmiş sürümlerinde ortak olan meta verileri içerir.  
+- Paket için dilden bağımsız meta verileri içeren product.xml ürün bildirimi. Bu, yeniden dağıtılabilir bileşenin tüm yerelleştirilmiş sürümlerinde ortak olan meta verileri içerir.  
   
-- Dile özgü meta veriler içeren Package. xml; paket bildirimi. genellikle yerelleştirilmiş hata iletileri içerir. Bir bileşen, bu bileşenin yerelleştirilmiş her sürümü için en az bir paket bildirimine sahip olmalıdır.  
+- Dile özgü meta verileri içeren package.xml paket bildirimi; genellikle yerelleştirilmiş hata iletileri içerir. Bir bileşen, bu bileşenin yerelleştirilmiş her sürümü için en az bir paket bildirimine sahip olmalıdır.  
   
   Bu dosyalar oluşturulduktan sonra, ürün bildirim dosyasını özel önyükleyici için adlı bir klasöre koyun. Paket bildirim dosyası, yerel ayar için adlı bir klasöre gider. Örneğin, Paket bildirim dosyası Ingilizce yeniden dağıtım için ise, dosyayı en-adlı bir klasöre koyun. Bu işlemi her yerel ayar için (Japonca için ja ve Almanca için de) yineleyin. Son özel önyükleyici paketi aşağıdaki klasör yapısına sahip olabilir.  
   
@@ -106,7 +106,7 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
 |ProcessorArchitecture|Bir yürütülebilir dosya tarafından hedeflenen platformun işlemci ve sözcük başına bit sayısı. Değerler şunlardır:<br /><br /> -Intel<br />-IA64<br />-AMD64|  
 |[Version9x](https://msdn.microsoft.com/library/aa372490\(v=vs.140\).aspx)|Microsoft Windows 95, Windows 98 veya Windows ME işletim sistemleri için sürüm numarası. Sürümün sözdizimi, birincil. Minor. hizmetpaketi.|  
 |[VersionNT](/windows/desktop/Msi/versionnt)|Windows NT, Windows 2000, Windows XP, Windows Vista, Windows Server 2008 ya da Windows 7 işletim sistemleri için sürüm numarası. Sürümün sözdizimi, birincil. Minor. hizmetpaketi.|  
-|[VersionMSI](https://msdn.microsoft.com/library/aa372493\(v=vs.140\).aspx)|Windows Installer derlemesinin (msi. dll) sürümü yükleme sırasında çalışır.|  
+|[VersionMSI](https://msdn.microsoft.com/library/aa372493\(v=vs.140\).aspx)|Windows Installer derlemesinin sürümü (msi.dll) yükleme sırasında çalıştırılır.|  
 |[AdminUser](https://msdn.microsoft.com/library/aa367545\(v=vs.140\).aspx)|Kullanıcının yönetici ayrıcalıkları varsa, bu özellik ayarlanır. Değerler true veya false şeklindedir.|  
 |InstallMode|Yükleme modu, bileşenin nereden yüklenmesi gerektiğini gösterir. Değerler şunlardır:<br /><br /> -HomeSite-Önkoşullar, satıcının Web sitesinden yüklenir.<br />-SpecificSite-Önkoşullar seçtiğiniz konumdan yüklenir.<br />-SameSite-Önkoşullar uygulamayla aynı konumdan yüklenir.|  
   
@@ -115,7 +115,7 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
   
  `%ProgramFiles%\Microsoft.NET\RedistList`  
   
- Yeniden dağıtılabilir liste, şu biçimi kullanarak ad almanız gereken bir XML dosyasıdır: *Şirket adı*. *Bileşen adı*. RedistList. xml. Bu nedenle, örneğin, bileşen Acme tarafından yapılan veri öğeleri olarak çağrılırsa, Acme. Datapencere öğeleri. RedistList. xml kullanın. Yeniden dağıtılabilir listenin içeriğine bir örnek şuna benzeyebilir:  
+ Yeniden dağıtılabilir liste, şu biçimi kullanarak ad almanız gereken bir XML dosyasıdır: *Şirket adı*. *Bileşen adı*.RedistList.xml. Bu nedenle, örneğin, bileşen Acme tarafından yapılan veri öğeleri olarak çağrılırsa, Acme.DataWidgets.RedistList.xml kullanın. Yeniden dağıtılabilir listenin içeriğine bir örnek şuna benzeyebilir:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  

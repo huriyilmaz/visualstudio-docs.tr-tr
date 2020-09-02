@@ -8,10 +8,10 @@ ms.date: 07/29/2019
 ms.topic: conceptual
 description: Seçili Visual Studio aboneliklerine dahil edilen Azure Community destek avantajı hakkında bilgi edinin.
 ms.openlocfilehash: 0a4f04051c7bd42fc3a2da3bd0c3c374600f1be9
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238627"
 ---
 # <a name="azure-community-support-forum-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Azure Community destek forumu
@@ -30,7 +30,7 @@ Azure Community aracılığıyla destek forumları seçme içindeki Azure ekibin
         - [Azure Yönetim Portalı](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuremanagement&filter=alltypes&sort=lastpostdesc)  
     :::column-end:::
     :::column:::
-        - [Azure Marketi](https://social.msdn.microsoft.com/forums/home?forum=DataMarket&filter=alltypes&sort=lastpostdesc)  
+        - [Azure Market](https://social.msdn.microsoft.com/forums/home?forum=DataMarket&filter=alltypes&sort=lastpostdesc)  
         - [Azure Mobile Apps](https://social.msdn.microsoft.com/forums/home?forum=azuremobile&filter=alltypes&sort=lastpostdesc)  
         - [Azure Multi-Factor Authentication](https://social.msdn.microsoft.com/Forums/azure/home?forum=windowsazureactiveauthentication&filter=alltypes&sort=lastpostdesc)  
         - [Azure ağı (DNS, Traffic Manager, VPN, VNET)](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesVirtualNetwork&filter=alltypes&sort=lastpostdesc)  
@@ -42,7 +42,7 @@ Azure Community aracılığıyla destek forumları seçme içindeki Azure ekibin
         - [Azure SQL Veritabanı](https://social.msdn.microsoft.com/Forums/home?forum=ssdsgetstarted&filter=alltypes&sort=lastpostdesc)  
         - [Azure Stack](https://social.msdn.microsoft.com/forums/home?forum=AzureStack&filter=alltypes&sort=lastpostdesc)  
         - [Azure Storage](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredata&filter=alltypes&sort=lastpostdesc)  
-        - [Azure Sanal Makineler](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesforWindows&filter=alltypes&sort=lastpostdesc)  
+        - [Azure sanal makineleri](https://social.msdn.microsoft.com/Forums/home?forum=WAVirtualMachinesforWindows&filter=alltypes&sort=lastpostdesc)  
         - [Azure Web siteleri](https://social.msdn.microsoft.com/Forums/home?forum=windowsazurewebsitespreview&filter=alltypes&sort=lastpostdesc)  
         - [Cloud Services (Web ve çalışan rolleri)](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuredevelopment&filter=alltypes&sort=lastpostdesc)  
         - [Fiyatlandırma ve Faturalama](https://social.msdn.microsoft.com/Forums/azure/home?forum=windowsazurepurchasing&filter=alltypes&sort=lastpostdesc)  
@@ -70,13 +70,13 @@ Azure Community avantajının kullanılabilirliği, aşağıda gösterildiği gi
 
 |                                          Abonelik düzeyi                                           |     Kanallar      |    Avantaj    | Yenilenebilir? |
 |-------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
-|                           Visual Studio Enterprise (Standart)                           | VL, Azure, perakende |   Bir yıl    |    Evet     |
-|                           GitHub Enterprise ile Visual Studio Enterprise                           | VL, Azure, perakende |   Bir yıl    |    Evet     |
-|                          Visual Studio Professional (Standart)                          | VL, Azure, perakende |   Bir yıl    |    Evet     |
-|                          GitHub Enterprise ile Visual Studio Professional                          | VL, Azure, perakende |   Bir yıl    |    Evet     |
-|                              Visual Studio Test Professional (Standart)                               |    VL, perakende     |   Bir yıl    |    Evet     |
-|                                       MSDN Platformları (Standart)                                       |    VL, perakende     |   Bir yıl    |    Evet     |
-| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut), NFR<sup>1</sup> |        Tümü        | Kullanılamaz |     Hayır     |
+|                           Visual Studio Enterprise (Standart)                           | VL, Azure, perakende |   Bir yıl    |    Yes     |
+|                           GitHub Enterprise ile Visual Studio Enterprise                           | VL, Azure, perakende |   Bir yıl    |    Yes     |
+|                          Visual Studio Professional (Standart)                          | VL, Azure, perakende |   Bir yıl    |    Yes     |
+|                          GitHub Enterprise ile Visual Studio Professional                          | VL, Azure, perakende |   Bir yıl    |    Yes     |
+|                              Visual Studio Test Professional (Standart)                               |    VL, perakende     |   Bir yıl    |    Yes     |
+|                                       MSDN Platformları (Standart)                                       |    VL, perakende     |   Bir yıl    |    Yes     |
+| Visual Studio Enterprise (aylık bulut), Visual Studio Professional (aylık bulut), NFR<sup>1</sup> |        Tümü        | Kullanılamaz |     No     |
 
 <sup>1</sup>  *şunları Içerir: SATıLAMAZ (NFR), Microsoft FTE, en DEĞERLI profesyonel (MVP), bölgesel Müdürü (RD), Visual Studio sektör ortağı (VSIP), BizSpark, Imagine, Microsoft Sertifikalı TRAINER (MCT)*
 

@@ -1,5 +1,5 @@
 ---
-title: Günlükleri MSBuild ile derleme alma | Microsoft Docs
+title: MSBuild ile derleme günlükleri alma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -13,72 +13,72 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c88288a7bed453ca14e9c14fd43706b97be04044
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63430839"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64789479"
 ---
 # <a name="obtaining-build-logs-with-msbuild"></a>MSBuild ile Yapı Günlükleri Alma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-MSBuild ile anahtarlarını kullanarak, gözden geçirme ve yapı verileri bir veya daha fazla dosyaları kaydetmek isteyip istemediğinizi istediğiniz derleme veri miktarını belirtebilirsiniz. Yapılandırma verilerini toplamak için özel bir Günlükçü de belirtebilirsiniz. Bu konuda ele alınmamıştır MSBuild komut satırı anahtarları hakkında daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).  
+MSBuild ile anahtarları kullanarak, ne kadar yapı verisi gözden geçirmek istediğinizi ve derleme verilerini bir veya daha fazla dosyaya kaydetmek isteyip istemediğinizi belirtebilirsiniz. Ayrıca, derleme verilerini toplamak için özel bir günlükçü belirtebilirsiniz. Bu konunun kapsamayan MSBuild komut satırı anahtarları hakkında daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).  
   
 > [!NOTE]
-> Visual Studio IDE kullanarak projeleri derlemek, o yapılar Derleme günlüklerini gözden geçirerek giderebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Görüntüleme, kaydetme ve yapılandırma derleme günlüğü dosyalarını](../ide/how-to-view-save-and-configure-build-log-files.md).  
+> Visual Studio IDE kullanarak projeler oluşturuyorsanız, Derleme günlüklerini inceleyerek bu derlemeler için sorun giderebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: yapı günlüğü dosyalarını görüntüleme, kaydetme ve yapılandırma](../ide/how-to-view-save-and-configure-build-log-files.md).  
   
 ## <a name="setting-the-level-of-detail"></a>Ayrıntı düzeyini ayarlama  
- MSBuild ayrıntı düzeyini belirtmeden kullanarak bir proje oluşturduğunuzda çıkış günlüğünde aşağıdaki bilgiler görüntülenir:  
+ Bir ayrıntı düzeyi belirtmeden MSBuild kullanarak bir proje oluşturduğunuzda, çıkış günlüğünde aşağıdaki bilgiler görüntülenir:  
   
-- Hataları, uyarıları ve iletileri son derece önemli olarak sınıflandırılmış.  
+- Yüksek oranda önemli olarak sınıflandırılan hatalar, uyarılar ve mesajlar.  
   
-- Bazı durumu olayları.  
+- Bazı durum olayları.  
   
-- Derleme özeti.  
+- Yapı Özeti.  
   
-  Kullanarak **/verbosity** (**/v**) geçiş, ne kadar veri çıkış günlüğünde görünür denetleyebilirsiniz. Sorun giderme için bir ayrıntı düzeyini ya da kullanmak `detailed` (`d`) veya `diagnostic` (`diag`), en çok bilgi sağlar.  
+  **/Ayrıntı düzeyi** (**/v**) anahtarını kullanarak, çıktı günlüğünde ne kadar veri göründüğünü denetleyebilirsiniz. Sorun giderme için, `detailed` `d` `diagnostic` `diag` en fazla bilgiyi sağlayan () veya () ayrıntı düzeyini kullanın.  
   
-  Ayarladığınızda yapı işleminin daha yavaş olabilir **/verbosity** için `detailed` ve ayarladığınızda bile yavaş **/verbosity** için `diagnostic`.  
+  /Ayrıntı **düzeyini olarak** ayarladığınızda, oluşturma işlemi daha yavaş olabilir `detailed` **/verbosity** `diagnostic` .  
   
 ```  
 msbuild MyProject.proj /t:go /v:diag  
 ```  
   
 ## <a name="saving-the-build-log-to-a-file"></a>Derleme günlüğünü bir dosyaya kaydetme  
- Kullanabileceğiniz **/fileLogger** (**fl**) yapılandırma verilerini bir dosyaya kaydetmek için anahtar. Aşağıdaki örnekte, yapılandırma verilerini adlı bir dosyaya kaydeder. `msbuild.log`.  
+ Derleme verilerini bir dosyaya kaydetmek için **/Filegünlükçü** (**fl**) anahtarını kullanabilirsiniz. Aşağıdaki örnek, derleme verilerini adlı bir dosyaya kaydeder `msbuild.log` .  
   
 ```  
 msbuild MyProject.proj /t:go /fileLogger  
 ```  
   
- Aşağıdaki örnekte adlı günlük dosyası `MyProjectOutput.log`, ve ayrıntı düzeyini günlük çıktısını kümesine `diagnostic`. Bu iki ayar kullanarak belirttiğiniz **/filelogparameters** (`flp`) geçin.  
+ Aşağıdaki örnekte, günlük dosyasının adı `MyProjectOutput.log` ve günlük çıkışının ayrıntı düzeyi olarak ayarlanır `diagnostic` . Bu iki ayarı **/filelogparameters** ( `flp` ) anahtarını kullanarak belirtirsiniz.  
   
 ```  
 msbuild MyProject.proj /t:go /fl /flp:logfile=MyProjectOutput.log;verbosity=diagnostic  
 ```  
   
- Daha fazla bilgi için [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).  
+ Daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).  
   
 ## <a name="saving-the-log-output-to-multiple-files"></a>Günlük çıktısını birden çok dosyaya kaydetme  
- Aşağıdaki örnek tüm günlüğüne kaydeder `msbuild1.log`, hataları için `JustErrors.log`ve Uyarılar için yalnızca `JustWarnings.log`. Örnek dosya numaraları üç dosyaların her biri için kullanır. Dosya numaraları hemen sonrasına belirtilen **/fl** ve **/flp** anahtarları (örneğin, `/fl1` ve `/flp1`).  
+ Aşağıdaki örnek, tüm günlüğü `msbuild1.log` , yalnızca hataları `JustErrors.log` ve yalnızca uyarılarını kaydeder `JustWarnings.log` . Örnek, her üç dosyanın dosya numarasını kullanır. Dosya numaraları yalnızca **/fl** ve **/FLP** anahtarlarından sonra belirtilir (örneğin, `/fl1` ve `/flp1` ).  
   
- **/Filelogparameters** (`flp`) için her dosya adı gerekenler ve hangi her dosyasına eklenecek dosyaları 2 ve 3 belirtin geçer. Adsız şekilde 1 ' dosyası için belirtilen varsayılan adını `msbuild1.log` kullanılır.  
+ Dosyalar 2 ve 3 için **/filelogparameters** ( `flp` ) anahtarları her bir dosyanın ne şekilde ekleneceğini ve her dosyaya nelerin ekleneceğini belirtir. Dosya 1 için ad belirtilmedi, bu nedenle varsayılan adı `msbuild1.log` kullanılır.  
   
 ```  
 msbuild MyProject.proj /t:go /fl1 /fl2 /fl3 /flp2:logfile=JustErrors.log;errorsonly /flp3:logfile=JustWarnings.log;warningsonly  
   
 ```  
   
- Daha fazla bilgi için [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).  
+ Daha fazla bilgi için bkz. [komut satırı başvurusu](../msbuild/msbuild-command-line-reference.md).  
   
 ## <a name="using-a-custom-logger"></a>Özel bir günlükçü kullanma  
- Uygulayan yönetilen bir tür geliştirerek kendi Günlükçü yazabilirsiniz <xref:Microsoft.Build.Framework.ILogger> arabirimi. Derleme hataları e-posta ile gönderin, bunları bir veritabanında oturum veya bir XML dosyasına günlüğüne için özel bir Günlükçü örneği için kullanabilirsiniz. Daha fazla bilgi için [Günlükçüleri derleme](../msbuild/build-loggers.md).  
+ Arabirimini uygulayan bir yönetilen tür yazarak kendi günlüklerinizi yazabilirsiniz <xref:Microsoft.Build.Framework.ILogger> . Özel bir günlükçü, örneğin, e-postada derleme hataları göndermek, bunları bir veritabanına kaydetmek veya bir XML dosyasına kaydetmek için kullanabilirsiniz. Daha fazla bilgi için bkz. [oluşturma Günlükçüler](../msbuild/build-loggers.md).  
   
- MSBuild komut satırında, özel bir Günlükçü kullanarak belirttiğiniz **/logger** geçin. Ayrıca **/noconsolelogger** varsayılan konsol günlüğe devre dışı bırakma.  
+ MSBuild komut satırında, **/günlükçü** anahtarını kullanarak özel günlükçü belirtirsiniz. Varsayılan konsol günlükçüsü 'yi devre dışı bırakmak için **/noconsolegünlükçü** anahtarını da kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.Build.Framework.LoggerVerbosity>   
- [Günlükçüleri derleme](../msbuild/build-loggers.md)   
- [Birden çok işlemcili ortamda oturum açma](../msbuild/logging-in-a-multi-processor-environment.md)   
- [İletme Günlükçüleri oluşturma](../msbuild/creating-forwarding-loggers.md)   
- [MSBuild Kavramları](../msbuild/msbuild-concepts.md)
+ [Günlükçüler oluşturun](../msbuild/build-loggers.md)   
+ [Çok Işlemcili bir ortamda oturum açma](../msbuild/logging-in-a-multi-processor-environment.md)   
+ [Iletme Günlükçüleri oluşturma](../msbuild/creating-forwarding-loggers.md)   
+ [MSBuild kavramları](../msbuild/msbuild-concepts.md)

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b372b1f6fcdab357e87ff91fa4df257e8da7d68d
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536675"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Hata: Hedef bilgisayardaki Visual Studio Uzaktan Hata Ayıklayıcı hizmeti geriye bu bilgisayara bağlanamıyor
@@ -31,9 +31,9 @@ Bu hata, uzaktan hata ayıklayıcı hizmetinin hata ayıklaması yaptığınız 
 |Senaryo|LocalSystem hesabı|Etki alanı hesabı|Her iki bilgisayarda da aynı Kullanıcı adı ve parolaya sahip yerel hesaplar|
 |-|-|-|-|
 |Aynı etki alanındaki her iki bilgisayar|Yes|Yes|Yes|
-|İki yönlü güvene sahip etki alanlarındaki her iki bilgisayar|Hayır|Hayır|Evet|
-|Bir çalışma grubundaki bilgisayarlardan biri veya her ikisi|Hayır|Hayır|Evet|
-|Farklı etki alanlarındaki bilgisayarlar|Hayır|Hayır|Evet|
+|İki yönlü güvene sahip etki alanlarındaki her iki bilgisayar|Hayır|Hayır|Yes|
+|Bir çalışma grubundaki bilgisayarlardan biri veya her ikisi|Hayır|Hayır|Yes|
+|Farklı etki alanlarındaki bilgisayarlar|Hayır|Hayır|Yes|
 
  Bunlara ek olarak:
 

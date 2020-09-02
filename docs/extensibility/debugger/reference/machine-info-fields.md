@@ -1,5 +1,5 @@
 ---
-title: MACHINE_INFO_FIELDS | Microsoft Dokümanlar
+title: MACHINE_INFO_FIELDS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 89a2552bb6a8bea88f54a897b829ab89b30ff413
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714518"
 ---
 # <a name="machine_info_fields"></a>MACHINE_INFO_FIELDS
-Belirli bir makine için ne tür bilgiler alıncaya kadar bilgi alınmasını belirtir.
+Belirli bir makine için alınacak bilgi türünü belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_MACHINE_INFO_FIELDS { 
@@ -46,29 +46,29 @@ public enum enum_MACHINE_INFO_FIELDS { 
 
 ## <a name="fields"></a>Alanlar
  `MCIF_NAME`\
- Yapıdaki `bstrName` alanı başlatma/kullanma.
+ Yapıda alanı başlatın/kullanın `bstrName` .
 
  `MCIF_FLAGS`\
- Yapıdaki `Flags` alanı başlatma/kullanma.
+ Yapıda alanı başlatın/kullanın `Flags` .
 
  `MIF_ALL`\
- Yapıdaki tüm alanların başlatılması/kullanılması.
+ Yapıdaki tüm alanları başlatın/kullanın.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu değerler, [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) yapının hangi üyelerinin baş harfe alınmasını göstermek için [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) yöntemine aktarılır.
+ Bu değerler, [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) yapısının hangi üyelerinin başlatıldığını göstermek Için [getmachineınfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) yöntemine geçirilir.
 
- Ayrıca `MACHINE_INFO` yapının `Fields` üyesi hangi alanların kullanıldığını ve geçerli olduğunu belirtmek için kullanılır.
+ Ayrıca, `Fields` `MACHINE_INFO` hangi alanların kullanıldığını ve geçerli olduğunu göstermek için yapının üyesinde de kullanılır.
 
- Bu bayraklar biraz ile `OR`birleştirilebilir.
+ Bu bayraklar bit düzeyinde birleştirilebilir `OR` .
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md)
 - [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md)

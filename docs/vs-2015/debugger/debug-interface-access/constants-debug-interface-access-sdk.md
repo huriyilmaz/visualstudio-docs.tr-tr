@@ -1,5 +1,5 @@
 ---
-title: Sabitler (arabirim erişimi SDK'SINDA hata ayıklama) | Microsoft Docs
+title: Sabitler (hata ayıklama arabirimi erişim SDK 'Sı) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,33 +15,33 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 931e1ab46793a5ff7e0434949330eaf4dbc820e8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68164432"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>Sabitler (Arabirim Erişimi SDK'sında Hata Ayıklama)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu dize sabitleri, program hata ayıklama veritabanı (PDB) dosyası DIA SDK'sı aracılığıyla çeşitli bölümlerini belirlemek için kullanılabilir.  
+Bu dize sabitleri, bir program hata ayıklama veritabanı (PDB) dosyasının DIA SDK aracılığıyla çeşitli bölümlerini belirlemek için kullanılabilir.  
   
 ## <a name="constants"></a>Sabitler  
- Aşağıdaki C/C++ makroları olarak bildirilir.  
+ Aşağıdakiler C/C++ makroları olarak bildirilmiştir.  
   
-|Makrosu|Değer|  
+|Makroya|Değer|  
 |-----------|-----------|  
-|`DiaTable_Symbols`|L "Simge"|  
-|`DiaTable_Sections`|L "Bölümler"|  
-|`DiaTable_SrcFiles`|L "Kaynakdosyalar"|  
-|`DiaTable_LineNums`|L "Lınenumbers"|  
+|`DiaTable_Symbols`|L "semboller"|  
+|`DiaTable_Sections`|L "bölümler"|  
+|`DiaTable_SrcFiles`|L "SourceFiles"|  
+|`DiaTable_LineNums`|L "LineNumbers"|  
 |`DiaTable_SegMap`|L "SegmentMap"|  
-|`DiaTable_Dbg`|L "Dbg"|  
-|`DiaTable_InjSrc`|L "InjectedSource"|  
+|`DiaTable_Dbg`|L "DBG"|  
+|`DiaTable_InjSrc`|L "ınjectedsource"|  
 |`DiaTable_FrameData`|L "FrameData"|  
   
 ## <a name="example"></a>Örnek  
- Şu simgelerden birini kullanarak bir örnek aşağıda verilmiştir:  
+ Bu simgelerden birini kullanarak bir örnek aşağıda verilmiştir:  
   
 ```cpp#  
 HRESULT GetSymbolTable(IDiaEnumTables *pEnumTables, IDiaTable **pTable)  
@@ -56,10 +56,10 @@ HRESULT GetSymbolTable(IDiaEnumTables *pEnumTables, IDiaTable **pTable)
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: dia2.h  
+ Üstbilgi: dia2. h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Başvuru](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)   
- [Sabit listeleri ve yapıları](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [Arabirimler (arabirim erişimi SDK'SINDA hata ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+ [Başvurunun](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)   
+ [Numaralandırmalar ve yapılar](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+ [Arabirimler (hata ayıklama arabirimi erişim SDK 'Sı)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumTables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Görselleştiriciyi yükleme | Microsoft Docs'
+title: 'Nasıl yapılır: Görselleştirici yüklemesi | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,34 +22,34 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5726cea8b2e81c53b5f3fff963357946f26b199f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438222"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64796965"
 ---
-# <a name="how-to-install-a-visualizer"></a>Nasıl yapılır: Görselleştiriciyi yükleme
+# <a name="how-to-install-a-visualizer"></a>Nasıl Yapılır: Görselleştiriciyi Yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Görselleştirici oluşturduktan sonra kullanıma sunulacak böylece görselleştiricisi yüklemelisiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Görselleştirici yükleme basit bir işlemdir.  
+Görselleştirici oluşturduktan sonra, ' de kullanılabilir olacak şekilde Görselleştirici 'yı yüklemelisiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Görselleştirici yüklenmesi basit bir işlemdir.  
   
 > [!NOTE]
-> İçinde **Store** uygulamalar, yalnızca standart metin, HTML, XML ve JSON görselleştiriciler desteklenir. Özel (kullanıcı tarafından oluşturulmuş) görselleştiriciler desteklenmez.  
+> **Mağaza** uygulamalarında yalnızca standart metın, HTML, XML ve JSON Görselleştiriciler desteklenir. Özel (Kullanıcı tarafından oluşturulan) Görselleştiriciler desteklenmez.  
   
 ### <a name="to-install-a-visualizer"></a>Görselleştirici yüklemek için  
   
-1. Derlediğiniz görselleştiricisi içeren DLL bulun.  
+1. Derleyecek Görselleştiriciyi içeren DLL 'i bulun.  
   
-2. DLL aşağıdaki konumlardan birini kopyalayın:  
+2. DLL 'yi aşağıdaki konumlardan birine kopyalayın:  
   
-    - *VisualStudioInstallPath* `\Common7\Packages\Debugger\Visualizers`  
+    - *VisualStudioInstallPath*`\Common7\Packages\Debugger\Visualizers`  
   
-    - `My Documents\` *VisualStudioVersion* `\Visualizers`  
+    - `My Documents\`*VisualStudioVersion*`\Visualizers`  
   
-3. Uzaktan hata ayıklama için yönetilen Görselleştirici kullanmak istiyorsanız, DLL uzak bilgisayarda aynı yoluna kopyalayın.  
+3. Uzaktan hata ayıklama için yönetilen bir Görselleştirici kullanmak istiyorsanız, uzak bilgisayardaki aynı yola DLL 'yi kopyalayın.  
   
 4. Hata ayıklama oturumunu yeniden başlatın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Özel Görselleştiriciler oluşturma](../debugger/create-custom-visualizers-of-data.md)   
- [Nasıl yapılır: Görselleştirici Yazma](../debugger/how-to-write-a-visualizer.md)
+ [Nasıl Yapılır: Görselleştirici Yazma](../debugger/how-to-write-a-visualizer.md)

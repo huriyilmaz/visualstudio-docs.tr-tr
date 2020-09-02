@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e63395838d7d91170d54edbb07c0b38db548ccdf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670485"
 ---
 # <a name="identifying-and-customizing-keyboard-shortcuts-in-visual-studio"></a>Visual Studio'daki Klavye Kısayollarını Tanımlama ve Özelleştirme
@@ -37,7 +37,7 @@ Visual Studio komutları için kısayollar tanımlayabilir, bu kısayolları öz
 
 - Kısayolu seçtiğiniz anda içinde bulunduğunuz bağlam. Örneğin F2 kısayolu, Ayarlar Tasarımcısı'nı kullanıyorsanız Edit.EditCell komutunu, Ekip Gezgini'ni kullanıyorsanız File.Rename komutunu çağırır.
 
-  Ayarlar, özelleştirme ve bağlamlarından bağımsız olarak, **Seçenekler** iletişim kutusunda her zaman bir klavye kısayolunu bulabilir ve değiştirebilirsiniz. Ayrıca, [sık kullanılan komutlar için varsayılan klavye kısayollarında](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)birkaç düzine komut için varsayılan klavye kısayollarını arayabilir ve varsayılan olarak tüm varsayılan kısayolların (genel geliştirme ayarlarına bağlı olarak) tümüyle bir listesini bulabilirsiniz [ Klavye kısayolları](../ide/default-keyboard-shortcuts-in-visual-studio.md).
+  Ayarlar, özelleştirme ve bağlamlarından bağımsız olarak, **Seçenekler** iletişim kutusunda her zaman bir klavye kısayolunu bulabilir ve değiştirebilirsiniz. Ayrıca, [sık kullanılan komutlar için varsayılan klavye kısayollarında](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)birkaç düzine komut için varsayılan klavye kısayollarına bakabilir ve varsayılan [klavye kısayollarında](../ide/default-keyboard-shortcuts-in-visual-studio.md)tüm varsayılan kısayolların (genel geliştirme ayarlarına bağlı olarak) tümüyle bir listesini bulabilirsiniz.
 
   **Bu konuda**
 
@@ -52,7 +52,7 @@ Visual Studio komutları için kısayollar tanımlayabilir, bu kısayolları öz
 > [!NOTE]
 > Ayarlarınıza ve Visual Studio sürümünüze göre, menü komutlarının adları ve konumları ve iletişim kutularında görünen seçenekler değişik olabilir. Bu konu, **genel geliştirme ayarlarına**dayalıdır.
 
-## <a name="bkmk_identify"></a>Klavye kısayolunu tanımlama
+## <a name="identifying-a-keyboard-shortcut"></a><a name="bkmk_identify"></a> Klavye kısayolunu tanımlama
 
 1. Menü çubuğunda **Araçlar**, **Seçenekler**' i seçin.
 
@@ -72,7 +72,7 @@ Visual Studio komutları için kısayollar tanımlayabilir, bu kısayolları öz
 
      ![Belirtilen komut için bir kısayol görüntüle](../ide/media/viewshortcut.png "ViewShortcut")
 
-## <a name="bkmk_assign"></a>Klavye kısayolunu özelleştirme
+## <a name="customizing-a-keyboard-shortcut"></a><a name="bkmk_assign"></a> Klavye kısayolunu özelleştirme
 
 1. Menü çubuğunda **Araçlar**, **Seçenekler**' i seçin.
 
@@ -107,7 +107,7 @@ Visual Studio komutları için kısayollar tanımlayabilir, bu kısayolları öz
     > [!NOTE]
     > Bir komut için farklı bir kısayol belirtirseniz, **ata** düğmesini seçin ve ardından **iptal** düğmesini seçin, iletişim kutusu kapanır, ancak değişiklik geri döndürülemez.
 
-## <a name="bkmk_transfer"></a>Özel klavye kısayollarını paylaşma
+## <a name="sharing-custom-keyboard-shortcuts"></a><a name="bkmk_transfer"></a> Özel klavye kısayollarını paylaşma
  Özel klavye kısayollarınızı bir dosyaya dışarı aktararak ve verileri içeri aktarabilmeleri için bu dosyayı başkalarına vererek, klavye kısayollarınızı paylaşabilirsiniz.
 
 #### <a name="to-export-only-keyboard-shortcuts"></a>Yalnızca klavye kısayollarını dışarı aktarmak için
@@ -138,7 +138,7 @@ Visual Studio komutları için kısayollar tanımlayabilir, bu kısayolları öz
 
 5. **İleri** düğmesini seçin.
 
-6. **Hangi ayarları içeri aktarmak istiyorsunuz?** , **Tüm ayarlar** onay kutusunun işaretini kaldırın, **Seçenekler**' i genişletin ve ardından **ortam**' ı genişletin.
+6. **Hangi ayarları içeri aktarmak istiyorsunuz?**, **Tüm ayarlar** onay kutusunun işaretini kaldırın, **Seçenekler**' i genişletin ve ardından **ortam**' ı genişletin.
 
 7. **Klavye** onay kutusunu seçin ve ardından **son** düğmesini seçin.
 

@@ -1,5 +1,5 @@
 ---
-title: ClickOnce yönetilmeyen API Başvurusu | Microsoft Docs
+title: ClickOnce yönetilmeyen API başvurusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -20,67 +20,67 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 714d7b18995bf1ad51b07e02227e440879f73c9e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192313"
 ---
 # <a name="clickonce-unmanaged-api-reference"></a>ClickOnce Yönetilmeyen API Başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Yönetilmeyen genel API'ler dfshim.DLL'den.  
+[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dfshim.dll 'ten yönetilmeyen ortak API 'Ler.  
   
 ## <a name="cleanonlineappcache"></a>CleanOnlineAppCache  
- Temizler ve çevrimiçi tüm uygulamaları kaldırır [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama önbelleği.  
+ Tüm çevrimiçi uygulamaları uygulama önbelleğinden temizler veya kaldırır [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] .  
   
 ### <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde hata temsil eden HRESULT döndürür. Yönetilen bir özel durum oluşursa 0x80020009 (DISP_E_EXCEPTION) döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, hatayı temsil eden bir HRESULT döndürür. Yönetilen bir özel durum oluşursa, 0x80020009 (DISP_E_EXCEPTION) döndürür.  
   
 ### <a name="remarks"></a>Açıklamalar  
- CleanOnlineAppCache çağırma başlayacak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] zaten çalışmıyorsa hizmet.  
+ CleanOnlineAppCache çağrısı, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] zaten çalışmıyorsa hizmeti başlatacak.  
   
 ## <a name="getdeploymentdatafrommanifest"></a>GetDeploymentDataFromManifest  
- Dağıtım bilgileri, bildirim ve etkinleştirme URL'den alır.  
+ Bildirim ve etkinleştirme URL 'sinden dağıtım bilgilerini alır.  
   
 ### <a name="parameters"></a>Parametreler  
   
 |Parametre|Açıklama|Tür|  
 |---------------|-----------------|----------|  
-|`pcwzActivationUrl`|Bir işaretçi `ActivationURL`.|LPCWSTR|  
-|`pcwzPathToDeploymentManifest`|Bir işaretçi `PathToDeploymentManifest`.|LPCWSTR|  
-|`pwzApplicationIdentity`|Tam uygulama kimliğini belirten bir NULL ile sonlandırılmış dize almak için arabellek için işaretçi.|LPWSTR|  
-|`pdwIdentityBufferLength`|Bir işaretçi uzunluğu bir DWORD `pwzApplicationIdentity` arabelleğinde WCHAR'lar. Bu alanı boş sonlandırma karakter içerir.|LPDWORD|  
-|`pwzProcessorArchitecture`|Uygulama dağıtımı, bildirimden işlemci mimarisinden belirten bir NULL ile sonlandırılmış dize almak için arabellek için işaretçi.|LPWSTR|  
-|`pdwArchitectureBufferLength`|Bir işaretçi uzunluğu bir DWORD `pwzProcessorArchitecture` arabelleğinde WCHAR'lar.|LPDWORD|  
-|`pwzApplicationManifestCodebase`|Uygulama bildiriminin bildirimindeki bir kod temelinde belirten bir NULL ile sonlandırılmış dize almak için arabellek için işaretçi.|LPWSTR|  
-|`pdwCodebaseBufferLength`|Bir işaretçi uzunluğu bir DWORD `pwzApplicationManifestCodebase` arabelleğinde WCHAR'lar.|LPDWORD|  
-|`pwzDeploymentProvider`|Arabellek için NULL ile sonlandırılmış bir dize almak için bir işaretçi bildirimi dağıtım sağlayıcısından varsa belirtir. Aksi takdirde, boş bir dize döndürülür.|LPWSTR|  
-|`pdwProviderBufferLength`|Bir işaretçi uzunluğu bir DWORD `pwzProviderBufferLength`.|LPDWORD|  
+|`pcwzActivationUrl`|İçin bir işaretçi `ActivationURL` .|LPCWSTR|  
+|`pcwzPathToDeploymentManifest`|İçin bir işaretçi `PathToDeploymentManifest` .|LPCWSTR|  
+|`pwzApplicationIdentity`|Döndürülen tam uygulama kimliğini belirten NULL ile sonlandırılmış bir dize almak için arabelleğin bir işaretçisi.|LPWSTR|  
+|`pdwIdentityBufferLength`|Arabelleğin uzunluğu olan `pwzApplicationIdentity` , wchar cinsinden BIR DWORD işaretçisi. Buna NULL sonlandırma karakteri için boşluk dahildir.|LPDWORD|  
+|`pwzProcessorArchitecture`|Bildirimden uygulama dağıtımının işlemci mimarisini belirten, NULL ile sonlandırılmış bir dize almak için arabellek işaretçisi.|LPWSTR|  
+|`pdwArchitectureBufferLength`|Arabelleğin uzunluğu olan `pwzProcessorArchitecture` , wchar cinsinden BIR DWORD işaretçisi.|LPDWORD|  
+|`pwzApplicationManifestCodebase`|Bildirimden uygulama bildiriminin kod temelini belirten NULL ile sonlandırılmış bir dize almak için arabellek işaretçisi.|LPWSTR|  
+|`pdwCodebaseBufferLength`|Arabelleğin uzunluğu olan `pwzApplicationManifestCodebase` , wchar cinsinden BIR DWORD işaretçisi.|LPDWORD|  
+|`pwzDeploymentProvider`|Varsa, bildirimden dağıtım sağlayıcısını belirten NULL ile sonlandırılmış bir dize almak için arabelleğin bir işaretçisi. Aksi takdirde, boş bir dize döndürülür.|LPWSTR|  
+|`pdwProviderBufferLength`|Uzunluğu olan DWORD için bir işaretçi `pwzProviderBufferLength` .|LPDWORD|  
   
 ### <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde hata temsil eden HRESULT döndürür. Arabellek çok küçük olduğunda HRESULTFROMWIN32(ERROR_INSUFFICIENT_BUFFER) döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, hatayı temsil eden bir HRESULT döndürür. Arabellek çok küçükse HRESULTFROMWIN32 (ERROR_INSUFFICIENT_BUFFER) döndürür.  
   
 ### <a name="remarks"></a>Açıklamalar  
- İşaretçileri null olmamalıdır. `pcwzActivationUrl` ve `pcwzPathToDeploymentManifest` boş olmamalıdır.  
+ İşaretçiler null olmamalıdır. `pcwzActivationUrl` ve `pcwzPathToDeploymentManifest` boş olmamalıdır.  
   
- Etkinleştirme URL'sini temizlemek çağrı sahibinin sorumluluğundadır. Örneğin, kaçış ekleme gereken yerlere veya sorgu dizesi kaldırma karakter.  
+ Etkinleştirme URL 'sini temizlemek çağıranın sorumluluğundadır. Örneğin, gerektiğinde kaçış karakterleri ekleme veya sorgu dizesini kaldırma.  
   
- Giriş uzunluğunu sınırla çağrı sahibinin sorumluluğundadır. Örneğin, URL uzunluğu üst sınırı 2 KB'tır.  
+ Bu, giriş uzunluğunu sınırlamak için çağıranın sorumluluğundadır. Örneğin, URL uzunluğu en fazla 2 KB 'tır.  
   
 ## <a name="launchapplication"></a>LaunchApplication  
- Başlatır ve dağıtım URL'yi kullanarak bir uygulamayı yükler.  
+ Dağıtım URL 'SI kullanarak bir uygulamayı başlatır veya kurar.  
   
 ### <a name="parameters"></a>Parametreler  
   
 |Parametre|Açıklama|Tür|  
 |---------------|-----------------|----------|  
-|`deploymentUrl`|Dağıtım bildirimi URL'sini içeren bir NULL ile sonlandırılmış dizeye bir işaretçi.|LPCWSTR|  
-|`data`|Daha sonraki kullanımlar için ayrılmıştır. NULL olmalıdır.|LPVOID|  
+|`deploymentUrl`|Dağıtım bildiriminin URL 'sini içeren, NULL ile sonlandırılmış bir dize işaretçisi.|LPCWSTR|  
+|`data`|Daha sonraki kullanımlar için ayrılmıştır. NULL olmalıdır.|LPVOıD|  
 |`flags`|Daha sonraki kullanımlar için ayrılmıştır. 0 olmalıdır.|DWORD|  
   
 ### <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde hata temsil eden HRESULT döndürür. Yönetilen bir özel durum oluşursa 0x80020009 (DISP_E_EXCEPTION) döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, hatayı temsil eden bir HRESULT döndürür. Yönetilen bir özel durum oluşursa, 0x80020009 (DISP_E_EXCEPTION) döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:System.Deployment.Application.DeploymentServiceCom.CleanOnlineAppCache%2A>

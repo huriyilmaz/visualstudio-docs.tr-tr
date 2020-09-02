@@ -1,5 +1,5 @@
 ---
-title: Hata Ayıklama Paketi | Microsoft Dokümanlar
+title: Hata ayıklama paketi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,23 +11,23 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: de6240ea5d938d02f8415009203962e124ff049e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739026"
 ---
 # <a name="debug-package"></a>Hata ayıklama paketi
-Hata ayıklama paketi Visual Studio kabuğunda çalışır ve tüm UI'yi işler. Visual Studio hata ayıklama arabirimlerini tüketir ve oturum hata ayıklama yöneticisi (SDM) ile iletişim kurar.
+Hata ayıklama paketi Visual Studio Kabuğu 'nda çalışır ve tüm Kullanıcı arabirimini işler. Visual Studio hata ayıklama arabirimlerini kullanır ve oturum hata ayıklama Yöneticisi (SDM) ile iletişim kurar.
 
- SDM üzerinden gönderilen olayları kesme, hata ayıklama yıkıp modu nu bozun ve odağı kesmenin gerçekleştiği programa değiştirin. Hata ayıklama paketi, olaylar tarafından gönderilen bilgilerden yığın çerçevesini ve iş parçacığını izler.
+ SDM aracılığıyla gönderilen olayları kes hata ayıklayıcıyı çalıştırma modundan kesme moduna geçirin ve odağı, kesmenin gerçekleştiği programa değiştirin. Hata ayıklama paketi, olaylar tarafından kendisine gönderilen bilgilerden yığın çerçevesini ve iş parçacığını izler.
 
- Hata ayıklama paketinin dil veya çalışma zamanı ortamı bağımlılıkları yoktur. Hata ayıklama paketini uygulamak veya değiştirmek gerekli değildir.
+ Hata ayıklama paketinde dil veya çalışma zamanı ortamı bağımlılıkları yok. Hata ayıklama paketini uygulamak veya değiştirmek gerekli değildir.
 
  Hata ayıklama paketi *vsdebug.dll*tarafından uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Oturum hata ayıklama yöneticisi](../../extensibility/debugger/session-debug-manager.md)
+- [Oturum hata ayıklama Yöneticisi](../../extensibility/debugger/session-debug-manager.md)
 - [Yığın çerçeveleri](../../extensibility/debugger/stack-frames.md)
 - [İş Parçacıkları](../../extensibility/debugger/threads.md)
-- [Hata ayıklama bileşenleri](../../extensibility/debugger/debugger-components.md)
+- [Hata ayıklayıcı bileşenleri](../../extensibility/debugger/debugger-components.md)
