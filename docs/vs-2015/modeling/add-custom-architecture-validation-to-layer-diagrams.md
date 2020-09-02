@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0b5ebe4e38878df209ab6065b1dbca88cd8404b2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655298"
 ---
 # <a name="add-custom-architecture-validation-to-layer-diagrams"></a>Katman diyagramlarına özel mimari doğrulaması ekleme
@@ -50,7 +50,7 @@ Visual Studio 'da, kullanıcılar bir projedeki kaynak kodu bir katman modeline 
    > [!WARNING]
    > Şablon doğru şekilde çalışması için:
    >
-   > - @No__t_1 ve `errorTargetNodes` isteğe bağlı bağımsız değişkenleri kaldırmak için `LogValidationError` çağrılarını düzenleyin.
+   > - `LogValidationError`İsteğe bağlı bağımsız değişkenleri kaldırmak için çağrılarını düzenleyin `errorSourceNodes` `errorTargetNodes` .
    >   - Özel özellikler kullanıyorsanız, [Katman diyagramlarına özel özellikler ekle](../modeling/add-custom-properties-to-layer-diagrams.md)bölümünde bahsedilen güncelleştirmeyi uygulayın.
 
 3. Doğrulamayı tanımlamak için kodu düzenleyin. Daha fazla bilgi için bkz. [programlama doğrulaması](#programming).
@@ -60,52 +60,52 @@ Visual Studio 'da, kullanıcılar bir projedeki kaynak kodu bir katman modeline 
    > [!NOTE]
    > Yönteminiz yalnızca belirli koşullarda çağrılacaktır ve kesme noktaları otomatik olarak çalışmayacaktır. Daha fazla bilgi için bkz. [Katman doğrulamasında hata ayıklama](#debugging).
 
-5. Uzantıyı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ana örneğine veya başka bir bilgisayara yüklemek için, *bin \\* **. vsix** dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın ve çift tıklayın. Kaldırmak için, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler** ' i kullanın.
+5. Uzantıyı ana örneğine [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] veya başka bir bilgisayara yüklemek için, *bin \\ *içinde **. vsix** dosyasını bulun. Onu yüklemek istediğiniz bilgisayara kopyalayın ve çift tıklayın. Kaldırmak için, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler** ' i kullanın.
 
 ## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>Ayrı bir VSıX 'e katman doğrulayıcısı ekleme
  Katman Doğrulayıcıları, komutlar ve diğer uzantıları içeren bir VSıX oluşturmak istiyorsanız, VSıX tanımlamak için bir proje oluşturmanızı ve işleyiciler için ayrı projeler oluşturmanızı öneririz. Diğer modelleme uzantısı türleri hakkında daha fazla bilgi için bkz. [UML modellerini ve Diyagramları Genişletme](../modeling/extend-uml-models-and-diagrams.md).
 
 #### <a name="to-add-layer-validation-to-a-separate-vsix"></a>Ayrı bir VSıX 'e katman doğrulaması eklemek için
 
-1. Yeni veya mevcut bir Visual Studio çözümünde bir sınıf kitaplığı projesi oluşturun. **Yeni proje** iletişim kutusunda,  **C# görsel** ' e ve ardından **sınıf kitaplığı**' na tıklayın. Bu proje, katman doğrulama sınıfını içerecektir.
+1. Yeni veya mevcut bir Visual Studio çözümünde bir sınıf kitaplığı projesi oluşturun. **Yeni proje** iletişim kutusunda, **Visual C#** ' ye ve ardından **sınıf kitaplığı**' na tıklayın. Bu proje, katman doğrulama sınıfını içerecektir.
 
 2. Çözümünüzde bir VSıX projesi oluşturun veya oluşturun. VSıX projesi, **kaynak. Extension. valtmanifest**adlı bir dosya içerir. Bir VSıX projesi eklemeniz gerekiyorsa, şu adımları izleyin:
 
-    1. **Yeni proje** iletişim kutusunda, **görsel C#** , **genişletilebilirlik**, **VSIX projesi**' ni seçin.
+    1. **Yeni proje** iletişim kutusunda, **Visual C#**, **genişletilebilirlik**, **VSIX projesi**' ni seçin.
 
     2. **Çözüm Gezgini**, VSIX projesinin kısayol menüsünde **Başlangıç projesi olarak ayarlayın**.
 
 3. **Source. Extension. valtmanifest**Içinde, **varlıklar**altında, katman doğrulama projesini MEF bileşeni olarak ekleyin:
 
-    1. **Yeni**' yi seçin.
+    1. **Yeni**'yi seçin.
 
     2. **Yeni varlık Ekle** iletişim kutusunda, şunu ayarlayın:
 
-         **Microsoft. VisualStudio. MefComponent**  =  **yazın**
+         **Tür**  =  **Microsoft. VisualStudio. MefComponent**
 
-         **Kaynak**  = **geçerli çözümdeki bir proje**
+         **Kaynak**  =  **Geçerli çözümdeki bir proje**
 
-         *Doğrulayıcı projenize* **Proje**  = 
+         **Proje**  =  *Doğrulayıcı projeniz*
 
 4. Ayrıca, katman doğrulaması olarak da eklemeniz gerekir:
 
-    1. **Yeni**' yi seçin.
+    1. **Yeni**'yi seçin.
 
     2. **Yeni varlık Ekle** iletişim kutusunda, şunu ayarlayın:
 
-         **Microsoft. VisualStudio. mimari Turetools. Layer. Validator** =  **yazın** . Bu, açılan listedeki seçeneklerden biri değildir. Bunu klavyeden girmeniz gerekir.
+         **Tür**  =  **Microsoft. VisualStudio. mimari Turetools. Layer. Validator**. Bu, açılan listedeki seçeneklerden biri değildir. Bunu klavyeden girmeniz gerekir.
 
-         **Kaynak**  = **geçerli çözümdeki bir proje**
+         **Kaynak**  =  **Geçerli çözümdeki bir proje**
 
-         *Doğrulayıcı projenize* **Proje**  = 
+         **Proje**  =  *Doğrulayıcı projeniz*
 
 5. Katman doğrulama projesine dönün ve aşağıdaki proje başvurularını ekleyin:
 
     |**Başvuru**|**Bunu yapmanıza izin verir**|
     |-------------------|------------------------------------|
-    |Microsoft. VisualStudio. GraphModel. dll|Mimari grafiğini okuyun|
-    |Microsoft. VisualStudio. mimari Turetools. Extensibility. CodeSchema. dll|Katmanlarla ilişkili kod DOM 'ı okuyun|
-    |Microsoft. VisualStudio. mimari Turetools. Extensibility. Layer. dll|Katman modelini okuyun|
+    |Microsoft.VisualStudio.GraphModel.dll|Mimari grafiğini okuyun|
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Katmanlarla ilişkili kod DOM 'ı okuyun|
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Katman modelini okuyun|
     |Microsoft. VisualStudio. mimari Turetools. Extensibility|Şekilleri ve diyagramları okuyun ve güncelleştirin.|
     |System. ComponentModel. Composition|Managed Extensibility Framework (MEF) kullanarak doğrulama bileşenini tanımlama|
     |Microsoft. VisualStudio. model. SDK. sürümünüze|Modelleme uzantıları tanımlama|
@@ -117,11 +117,11 @@ Visual Studio 'da, kullanıcılar bir projedeki kaynak kodu bir katman modeline 
     > [!NOTE]
     > Yönteminiz yalnızca belirli koşullarda çağrılacaktır ve kesme noktaları otomatik olarak çalışmayacaktır. Daha fazla bilgi için bkz. [Katman doğrulamasında hata ayıklama](#debugging).
 
-8. VSıX 'i [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ana örneğine veya başka bir bilgisayara yüklemek için VSıX projesinin **bin** dizininde **. vsix** dosyasını bulun. VSıX 'i yüklemek istediğiniz bilgisayara kopyalayın. Windows Gezgini 'nde VSıX dosyasına çift tıklayın. (Windows 8 ' de dosya Gezgini.)
+8. VSıX [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ' i ana örneğine veya başka bir bilgisayara yüklemek IÇIN VSIX projesinin **bin** dizininde **. vsix** dosyasını bulun. VSıX 'i yüklemek istediğiniz bilgisayara kopyalayın. Windows Gezgini 'nde VSıX dosyasına çift tıklayın. (Windows 8 ' de dosya Gezgini.)
 
      Kaldırmak için, **Araçlar** menüsünde **Uzantılar ve güncelleştirmeler** ' i kullanın.
 
-## <a name="programming"></a>Programlama doğrulaması
+## <a name="programming-validation"></a><a name="programming"></a> Programlama doğrulaması
  Katman doğrulama uzantısı tanımlamak için aşağıdaki özelliklere sahip bir sınıf tanımlarsınız:
 
 - Bildirimin Genel formu aşağıdaki gibidir:
@@ -144,14 +144,14 @@ Visual Studio 'da, kullanıcılar bir projedeki kaynak kodu bir katman modeline 
     } }
   ```
 
-- Bir hata keşfettiğiniz zaman, `LogValidationError()` kullanarak rapor edebilirsiniz.
+- Bir hata keşfettiğiniz zaman, kullanarak rapor edebilirsiniz `LogValidationError()` .
 
   > [!WARNING]
-  > İsteğe bağlı `LogValidationError` parametrelerini kullanmayın.
+  > İsteğe bağlı parametrelerini kullanmayın `LogValidationError` .
 
   Kullanıcı **Mimariyi Doğrula** menü komutunu çağırdığında, katman çalışma zamanı sistemi katmanları ve bunların yapılarını analiz etmek için bir grafik oluşturur. Grafik dört bölümden oluşur:
 
-- Grafikte düğüm ve bağlantı olarak temsil edilen [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümünün katman modelleri.
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Grafikteki düğüm ve bağlantı olarak temsil edilen çözüm katman modelleri.
 
 - Kod, proje öğeleri ve çözümde tanımlanan ve düğüm olarak temsil edilen diğer yapıtlar ve analiz işlemi tarafından bulunan bağımlılıkları temsil eden bağlantılar.
 
@@ -159,14 +159,14 @@ Visual Studio 'da, kullanıcılar bir projedeki kaynak kodu bir katman modeline 
 
 - Doğrulayıcı tarafından bulunan hataları temsil eden düğümler.
 
-  Grafik oluşturulduğunda, standart doğrulama yöntemi çağrılır. Bu tamamlandığında, yüklenmiş tüm uzantı doğrulama yöntemleri belirtilmemiş sırada çağırılır. Grafik, grafiği tarayabileceğiniz ve bulduğu hataları rapor eden her bir `ValidateArchitecture` yöntemine geçirilir.
+  Grafik oluşturulduğunda, standart doğrulama yöntemi çağrılır. Bu tamamlandığında, yüklenmiş tüm uzantı doğrulama yöntemleri belirtilmemiş sırada çağırılır. Grafik her metoda geçirilir ve bu, `ValidateArchitecture` grafiği tarayabilmesi ve bulduğu hataları bildirebilir.
 
 > [!NOTE]
 > Bu, UML diyagramlarına uygulanan doğrulama işlemi ile aynı değildir ve etki alanına özgü dillerde kullanılabilecek doğrulama işlemiyle aynı değildir.
 
  Doğrulama yöntemleri, bir katman modelini veya Doğrulanmakta olan kodu değiştirmemelidir.
 
- Grafik modeli <xref:Microsoft.VisualStudio.GraphModel> tanımlanmıştır. Asıl sınıfları <xref:Microsoft.VisualStudio.GraphModel.GraphNode> ve <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.
+ Grafik modeli içinde tanımlanmıştır <xref:Microsoft.VisualStudio.GraphModel> . Asıl sınıfları <xref:Microsoft.VisualStudio.GraphModel.GraphNode> ve ' dir <xref:Microsoft.VisualStudio.GraphModel.GraphLink> .
 
  Her bir düğüm ve her bağlantı, temsil ettiği öğe veya ilişki türünü belirten bir veya daha fazla kategoriye sahiptir. Tipik bir grafiğin düğümleri aşağıdaki kategorilere sahiptir:
 
@@ -190,8 +190,8 @@ Visual Studio 'da, kullanıcılar bir projedeki kaynak kodu bir katman modeline 
 
   Katmanların koddaki öğelere olan bağlantıları "temsil" kategorisine sahiptir.
 
-## <a name="debugging"></a>Hata ayıklama doğrulaması
- Katman doğrulama uzantınızdaki hataları ayıklamak için CTRL + F5 tuşlarına basın. Deneysel bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] örneği açılır. Bu örnekte, bir katman modeli açın veya oluşturun. Bu modelin, kodla ilişkilendirilmesi ve en az bir bağımlılığı olması gerekir.
+## <a name="debugging-validation"></a><a name="debugging"></a> Hata ayıklama doğrulaması
+ Katman doğrulama uzantınızdaki hataları ayıklamak için CTRL + F5 tuşlarına basın. Deneysel bir örneği [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] açılır. Bu örnekte, bir katman modeli açın veya oluşturun. Bu modelin, kodla ilişkilendirilmesi ve en az bir bağımlılığı olması gerekir.
 
 ### <a name="test-with-a-solution-that-contains-dependencies"></a>Bağımlılıklar içeren bir çözümle test etme
  Aşağıdaki özellikler mevcut olmadığı takdirde doğrulama yürütülmez:
@@ -200,7 +200,7 @@ Visual Studio 'da, kullanıcılar bir projedeki kaynak kodu bir katman modeline 
 
 - Modelde kod öğeleriyle ilişkili katmanlar vardır.
 
-  Doğrulama uzantınızı test etmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Deneysel örneğini ilk kez başlattığınızda, bu özelliklere sahip bir çözüm açın veya oluşturun.
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Doğrulama uzantınızı test etmek için ilk kez Deneysel örneğini başlattığınızda, bu özelliklere sahip bir çözüm açın veya oluşturun.
 
 ### <a name="run-clean-solution-before-validate-architecture"></a>Mimariyi doğrulamadan önce temiz çözümü Çalıştır
  Doğrulama kodunuzu güncelleştirdiğinizde, Validate komutunu test etmeden önce deneysel çözümdeki **Build menüsündeki Build** ( **Çözümü Temizle** ) komutunu kullanın. Doğrulama sonuçları önbelleğe alındığından bu gereklidir. Test katmanı diyagramını veya kodunu güncelleştirmediyseniz, doğrulama yöntemleri yürütülmez.
@@ -208,16 +208,16 @@ Visual Studio 'da, kullanıcılar bir projedeki kaynak kodu bir katman modeline 
 ### <a name="launch-the-debugger-explicitly"></a>Hata ayıklayıcıyı açık olarak Başlat
  Doğrulama ayrı bir işlemde çalışır. Bu nedenle, doğrulama yönteminizin kesme noktaları tetiklenmeyecektir. Doğrulama başladığında işlem ayıklayıcıyı işleme açıkça iliştirmelidir.
 
- Hata ayıklayıcıyı doğrulama işlemine iliştirmek için, doğrulama yönteminizin başlangıcında `System.Diagnostics.Debugger.Launch()` bir çağrı ekleyin. Hata ayıklama iletişim kutusu göründüğünde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ana örneğini seçin.
+ Hata ayıklayıcıyı doğrulama işlemine iliştirmek için, doğrulama yönteminizin başlangıcında öğesine bir çağrı ekleyin `System.Diagnostics.Debugger.Launch()` . Hata ayıklama iletişim kutusu göründüğünde, ana örneğini seçin [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
- Alternatif olarak, `System.Windows.Forms.MessageBox.Show()` bir çağrı ekleyebilirsiniz. İleti kutusu göründüğünde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ana örneğine gidin ve **Hata Ayıkla** menüsünde **İşleme İliştir**' e tıklayın. **GraphCmd. exe**adlı işlemi seçin.
+ Alternatif olarak, öğesine bir çağrı ekleyebilirsiniz `System.Windows.Forms.MessageBox.Show()` . İleti kutusu göründüğünde, ana örneğine gidin [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve **Hata Ayıkla** menüsünde **işleme Ekle**' ye tıklayın. **Graphcmd.exe**adlı işlemi seçin.
 
  CTRL + F5 tuşuna basarak (**hata ayıklama olmadan Başlat**) deneysel örneği her zaman başlatın.
 
 ### <a name="deploying-a-validation-extension"></a>Doğrulama uzantısı dağıtma
- Doğrulama uzantınızı, uygun bir Visual Studio sürümünün yüklü olduğu bir bilgisayara yüklemek için hedef bilgisayarda VSıX dosyasını açın. @No__t_0 yüklü olan bir bilgisayara yüklemek için VSıX içeriğini bir Uzantılar klasörüne el ile ayıklamanız gerekir. Daha fazla bilgi için bkz. [Katman modeli uzantısı dağıtma](../modeling/deploy-a-layer-model-extension.md).
+ Doğrulama uzantınızı, uygun bir Visual Studio sürümünün yüklü olduğu bir bilgisayara yüklemek için hedef bilgisayarda VSıX dosyasını açın. Yüklü bir bilgisayara yüklemek için [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] VSIX içeriğini bir Uzantılar klasörüne el ile ayıklamanız gerekir. Daha fazla bilgi için bkz. [Katman modeli uzantısı dağıtma](../modeling/deploy-a-layer-model-extension.md).
 
-## <a name="example"></a>Örnek kod
+## <a name="example-code"></a><a name="example"></a> Örnek kod
 
 ```csharp
 using System;

@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 77d7aa0859ee383258f80dfd74f36d584790e464
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85281615"
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect metotlarıyla veri kaydetme
@@ -39,7 +39,7 @@ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
 - Veritabanına doğrudan erişmek ve ekleme, güncelleştirme ve silme işlemleri gerçekleştirmek için yöntemler ekleyin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yol, SQL Server Express LocalDB ve Northwind örnek veritabanını kullanır.
 
@@ -120,8 +120,8 @@ Windows formunda veri bağlantılı denetimler oluşturmak için, **veri kaynakl
     |Name|Metin|
     |----------|----------|
     |`InsertButton`|**Ekle**|
-    |`UpdateButton`|**Güncelleştir**|
-    |`DeleteButton`|**Sil**|
+    |`UpdateButton`|**Güncelleştirme**|
+    |`DeleteButton`|**Silme**|
 
 ### <a name="to-add-code-to-insert-new-records-into-the-database"></a>Veritabanına yeni kayıtlar eklemek üzere kod eklemek için
 

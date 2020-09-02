@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 694f10fb0af440513331aa6e76dbf9a59a16d340
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668502"
 ---
 # <a name="open-a-uml-model-by-using-the-visual-studio-api"></a>Visual Studio API kullanarak UML modeli açma
@@ -29,12 +29,12 @@ Ayrıca, API 'YI kullanarak Visual Studio Kullanıcı arabirimindeki modelleri v
 
 - Bir modeli salt okuma modunda açabilirsiniz. Daha fazla bilgi için bkz. [program kodunda BIR UML modeli okuma](../modeling/read-a-uml-model-in-program-code.md).
 
-## <a name="Showing"></a>Visual Studio 'da modelleri ve diyagramları açma
- Kullanıcı arabirimindeki bir modeli açmak için standart Visual Studio API `EnvDTE.DTE` kullanın. Modelleme Proje öğelerinde gerçekleştirebileceğiniz iki kullanışlı oluşturma vardır:
+## <a name="opening-models-and-diagrams-in-visual-studio"></a><a name="Showing"></a> Visual Studio 'da modelleri ve diyagramları açma
+ Kullanıcı arabirimindeki bir modeli açmak için standart Visual Studio API 'sini kullanın `EnvDTE.DTE` . Modelleme Proje öğelerinde gerçekleştirebileceğiniz iki kullanışlı oluşturma vardır:
 
-- `EnvDTE.Project`, proje bir modelleme projesi ise ve proje geçerli AppDomain 'e yüklenmişse, `IModelingProject`, ve ' a dönüşebilir.
+- `EnvDTE.Project``IModelingProject`Proje bir modelleme projesi ise ve proje geçerli AppDomain 'de yüklüyse, ve öğesinden öğesine dönüşebilir.
 
-- `EnvDTE.ProjectItem`, öğe bir UML diyagramı ise `IDiagramContext` türüne veya bu kaynaktan alınabilir.
+- `EnvDTE.ProjectItem``IDiagramContext`öğe BIR UML diyagram ise, ' a ve ' a dönüşebilir.
 
   Aşağıdaki örnekte, projenizin bu başvuruları içeri aktarması gerekir:
 

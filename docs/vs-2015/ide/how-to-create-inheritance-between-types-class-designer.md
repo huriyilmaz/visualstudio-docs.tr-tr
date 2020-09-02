@@ -15,13 +15,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ba27b32cc322da2e14cec86b878a7dd42dae0039
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668102"
 ---
-# <a name="how-to-create-inheritance-between-types-class-designer"></a>Nasıl yapılır: türler arasında devralma oluşturma (Sınıf Tasarımcısı)
+# <a name="how-to-create-inheritance-between-types-class-designer"></a>Nasıl Yapılır: Türler Arasında Devralma Oluşturma (Sınıf Tasarımcısı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Sınıf Tasarımcısı kullanarak bir sınıf diyagramında iki tür arasında bir devralma ilişkisi oluşturmak için, temel türü türetilen tür veya türleriyle bağlayın. İki sınıf arasında, bir sınıf ile arabirim arasında veya iki arabirim arasında bir devralma ilişkisine sahip olabilirsiniz.
@@ -50,4 +50,4 @@ Sınıf Tasarımcısı kullanarak bir sınıf diyagramında iki tür arasında b
     >  Mevcut genel türleri görselleştirebilseniz de, yeni genel türler oluşturamazsınız. Ayrıca, varolan genel türler için tür parametrelerini değiştiremezsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Devralma](https://msdn.microsoft.com/library/81d64ee4-50f9-4d6c-a8dc-257c348d2eea) [Devralma hakkında temel bilgiler](https://msdn.microsoft.com/library/dfc8deba-f5b3-4d1d-a937-7cb826446fc5) : [Sınıf Tasarımcısı içindeki C++ ](../ide/visual-cpp-classes-in-class-designer.md) [türler (sınıf Tasarımcısı) görsel sınıfları arasında devralmayı görüntüleme](../ide/how-to-view-inheritance-between-types-class-designer.md)
+ [Devralma](https://msdn.microsoft.com/library/81d64ee4-50f9-4d6c-a8dc-257c348d2eea) [Devralma temel kavramları](https://msdn.microsoft.com/library/dfc8deba-f5b3-4d1d-a937-7cb826446fc5) : [Sınıf Tasarımcısı içindeki](../ide/visual-cpp-classes-in-class-designer.md) [türler (sınıf Tasarımcısı) Visual C++ sınıfları arasında devralmayı görüntüleme](../ide/how-to-view-inheritance-between-types-class-designer.md)

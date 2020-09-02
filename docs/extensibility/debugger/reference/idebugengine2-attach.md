@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::Ekle | Microsoft Dokümanlar
+title: 'IDebugEngine2:: Attach | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 93890885dbbdfd3cc26984590955681487977200
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731212"
 ---
 # <a name="idebugengine2attach"></a>IDebugEngine2::Attach
-Bir programa veya programlara hata ayıklama altyapısı (DE) bağlar. DE, SDM'de işlem sırasında çalışırken oturum hata ayıklama yöneticisi (SDM) tarafından çağrılır.
+Bir program veya programa hata ayıklama altyapısı (DE) iliştirir. Aynı işlem sırasında SDM 'nin üzerinde çalıştığı zaman, oturum hata ayıklama Yöneticisi (SDM) tarafından çağırılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Attach( 
@@ -49,45 +49,45 @@ int Attach( 
 
 ## <a name="parameters"></a>Parametreler
 `pProgram`\
-[içinde] Eklenecek programları temsil eden bir dizi [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi. Bunlar bağlantı noktası programları.
+'ndaki İliştirilebilecek programları temsil eden bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesneleri dizisi. Bunlar bağlantı noktası programlarıdır.
 
 `rgpProgramNodes`\
-[içinde] Program düğümlerini temsil eden, her program için bir tane olan [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesneleri dizisi. Bu dizideki program düğümleri , 'deki `pProgram`gibi aynı programları temsil eder. Program düğümleri, DE'nin eklenecek programları tanımlayabilmesi için verilir.
+'ndaki Her program için bir tane olmak üzere program düğümlerini temsil eden bir [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesneleri dizisi. Bu dizideki program düğümleri ile aynı programları temsil eder `pProgram` . Program düğümleri, ' nin iliştirilecek programları belirleyebilmesi için verilir.
 
 `celtPrograms`\
-[içinde] Dizilerde ve dizilerde program `pProgram` ve/veya `rgpProgramNodes` program düğümlerinin sayısı.
+'ndaki `pProgram` Ve dizilerindeki program ve/veya program düğümlerinin sayısı `rgpProgramNodes` .
 
 `pCallback`\
-[içinde] Hata ayıklama olaylarını SDM'ye göndermek için kullanılacak [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesi.
+'ndaki Hata ayıklama olaylarını SDM 'ye göndermek için kullanılacak [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesi.
 
 `dwReason`\
-[içinde] Bu programların eklenmesinin nedenini belirten [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) numaralandırma değeri. Daha fazla bilgi için Açıklamalar bölümüne bakın.
+'ndaki [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) numaralandırmasından bu programları ekleme nedeninizi belirten bir değer. Daha fazla bilgi için, açıklamalar bölümüne bakın.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bir programa iliştirilmanın üç nedeni vardır:
+ Bir programa eklemek için aşağıdaki gibi üç neden vardır:
 
-- `ATTACH_REASON_LAUNCH`kullanıcı programa iliştirdiği için DE'nin programa iliştirdiğini gösterir.
+- `ATTACH_REASON_LAUNCH` Kullanıcı kendisini içeren işlemi başlatduğundan DE, ' ın programa iliştirdiğini gösterir.
 
-- `ATTACH_REASON_USER`kullanıcının bir programa (veya program içeren işleme) eklemek için DE'yi açıkça istediğini gösterir.
+- `ATTACH_REASON_USER` Kullanıcının açıkça bir programa (veya bir program içeren işlem) iliştirmeyi istediğini gösterir.
 
-- `ATTACH_REASON_AUTO`belirli bir işlemdeki diğer programların hata ayıklama zaten olduğundan DE belirli bir programa iliştiriyor gösterir. Buna otomatik ekleme de denir.
+- `ATTACH_REASON_AUTO` aynı anda belirli bir işlemdeki diğer programlarda hata ayıklaması yapıldığından DE belirli bir programa ekleme olduğunu gösterir. Bu, otomatik iliştirme olarak da adlandırılır.
 
-  Bu yöntem çağrıldığında, DE'nin bu olayları sırayla göndermesi gerekir:
+  Bu yöntem çağrıldığında, DE bu olayların sırayla gönderilmesi gerekir:
 
-1. [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) (hata ayıklama motorunun belirli bir örneği için gönderilmemişse)
+1. [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) (hata ayıklama altyapısının belirli bir örneği için henüz gönderilmezse)
 
 2. [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md)
 
 3. [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md)
 
-   Buna ek olarak, iliştirme nedeni `ATTACH_REASON_LAUNCH`ise, DE [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md) olay göndermek gerekiyor.
+   Ayrıca, iliştirme nedeni ise, `ATTACH_REASON_LAUNCH` de [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md) olayını göndermelidir.
 
-   DE, debugged olan programa karşılık gelen [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesi aldıktan sonra, herhangi bir özel arabirim için sorgulanabilir.
+   Ayrıca, hata ayıklamakta olan programa karşılık gelen [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesini aldıktan sonra, herhangi bir özel arabirim için sorgulanabilecek.
 
-   Tarafından verilen dizideki bir program düğümünün `pProgram` yöntemlerini çağırmadan önce veya `rgpProgramNodes`gerekirse, program `IDebugProgram2` düğümünün temsil ettiği arabirimde kimliğe bürünme etkinleştirilmelidir. Normalde, ancak, bu adım gerekli değildir. Daha fazla bilgi için [Güvenlik Sorunları'na](../../../extensibility/debugger/security-issues.md)bakın.
+   Veya tarafından verilen dizide bir program düğümünün yöntemlerini çağırmadan önce, `pProgram` `rgpProgramNodes` gerekli olduğunda kimliğe bürünme, `IDebugProgram2` Program düğümünü temsil eden arabirimde etkinleştirilmelidir. Ancak normalde bu adım gerekli değildir. Daha fazla bilgi için bkz. [güvenlik sorunları](../../../extensibility/debugger/security-issues.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

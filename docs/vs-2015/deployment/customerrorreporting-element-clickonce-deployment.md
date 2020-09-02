@@ -1,5 +1,5 @@
 ---
-title: '&lt;customErrorReporting&gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+title: '&lt;customErrorReporting &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -16,18 +16,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b7e8a0db3e10a277fe1c4a2f8fcd2bb85fa69e69
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187825"
 ---
-# <a name="ltcustomerrorreportinggt-element-clickonce-deployment"></a>&lt;customErrorReporting&gt; öğesi (ClickOnce dağıtımı)
+# <a name="ltcustomerrorreportinggt-element-clickonce-deployment"></a>&lt;customErrorReporting &gt; öğesi (ClickOnce dağıtımı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir hata oluştuğunda göstermek için bir URI belirtir.  
+Bir hata oluştuğunda gösterilecek URI 'yi belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <customErrorReporting  
@@ -36,12 +36,12 @@ Bir hata oluştuğunda göstermek için bir URI belirtir.
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe isteğe bağlıdır. Bu olmadan, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] özel yığının gösteren bir hata iletişim kutusu görüntüler. Varsa `customErrorReporting` öğesi mevcutsa, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] tarafından gösterilen URI'yi bunun yerine görüntülenir `uri` parametresi. Dıştaki özel durum sınıfı, iç özel durum sınıfı ve iç özel durum iletisi ' % s'hedef URI parametreleri olarak dahil edilir.  
+ Bu öğe isteğe bağlıdır. Bu olmadan, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] özel durum yığınını gösteren bir hata iletişim kutusu görüntüler. `customErrorReporting`Öğesi varsa, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bunun yerine parametresi tarafından belirtilen URI 'yi görüntüler `uri` . Hedef URI, dış özel durum sınıfını, iç özel durum sınıfını ve iç özel durum iletisini parametre olarak içerir.  
   
- Hata Raporlama işlevselliği uygulamanıza eklemek için bu öğeyi kullanırsınız. Oluşturulan URI hata türü hakkında bilgi içerdiğinden, Web sitenizi bilgileri ve görüntü, örneğin, uygun bir sorun giderme ekranı ayrıştırabilirsiniz.  
+ Uygulamanıza hata raporlama işlevi eklemek için bu öğeyi kullanın. Oluşturulan URI, hata türü hakkında bilgi içerdiğinden, Web siteniz bu bilgileri ayrıştırarak, örneğin uygun bir sorun giderme ekranı gibi görüntüleyebilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod parçacığında gösterildiği `customErrorReporting` bunu üretebilir oluşturulan URI ile birlikte bir öğe.  
+ Aşağıdaki kod parçacığında, `customErrorReporting` ÜRETILEN URI 'nin üretebilecekleri bir ile birlikte öğesi gösterilmektedir.  
   
 ```  
 <customErrorReporting uri=http://www.contoso.com/applications/error.asp />  

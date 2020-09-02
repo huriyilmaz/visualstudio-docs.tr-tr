@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1e74beb2903cd133dfdd322ce4c297692eae3411
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817196"
 ---
 # <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>Nasıl yapılır: XML düzenleyicisinden XSLT dönüşümü yürütme
@@ -29,7 +29,7 @@ XML Düzenleyicisi bir XSLT stil sayfasını bir XML belgesi ile ilişkilendirme
 
 2. XSLT stil sayfasını XML belgesiyle ilişkilendirin.
 
-    - `xml-stylesheet`XML belgesine bir işleme yönergesi ekleyin. Örneğin, belge giriş satırına aşağıdaki satırı ekleyin:`<?xml-stylesheet type='text/xsl' href='filename.xsl'?>`
+    - `xml-stylesheet`XML belgesine bir işleme yönergesi ekleyin. Örneğin, belge giriş satırına aşağıdaki satırı ekleyin: `<?xml-stylesheet type='text/xsl' href='filename.xsl'?>`
 
        -veya-
 

@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 95dcd7da113bfe996d00e617b7c8e2f9b68864d7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667968"
 ---
 # <a name="how-to-disable-the-hosting-process"></a>Nasıl Yapılır: Barındırma Sürecini Devre Dışı Bırakma
@@ -26,7 +26,7 @@ Barındırma işlemi etkinleştirildiğinde, bazı API 'lere yapılan çağrıla
 
 ### <a name="to-disable-the-hosting-process"></a>Barındırma işlemini devre dışı bırakmak için
 
-1. @No__t_0 bir çalıştırılabilir proje açın. Yürütülebilir dosyalar üretmeyen projeler (örneğin, sınıf kitaplığı veya hizmet projeleri) bu seçeneğe sahip değildir.
+1. İçinde yürütülebilir bir proje açın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Yürütülebilir dosyalar üretmeyen projeler (örneğin, sınıf kitaplığı veya hizmet projeleri) bu seçeneğe sahip değildir.
 
 2. **Proje** menüsünde **Özellikler**' e tıklayın.
 
@@ -38,11 +38,11 @@ Barındırma işlemi etkinleştirildiğinde, bazı API 'lere yapılan çağrıla
 
    Genel olarak, barındırma işlemi devre dışı olduğunda:
 
-- @No__t_0 uygulamalarda hata ayıklamaya başlamak için gereken süre artar.
+- Uygulamalarda hata ayıklamaya başlamak için gereken süre [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] artar.
 
 - Tasarım zamanı ifade değerlendirmesi kullanılamıyor.
 
 - Kısmi güven hata ayıklaması kullanılamıyor.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Uygulama geliştirme sırasında](https://msdn.microsoft.com/c9497d62-3b7b-4449-88e8-cf27acc9efe6) [hata ayıklama ve barındırma işlemi](../debugger/debugging-and-the-hosting-process.md) [barındırma süreci (VSHost. exe)](../ide/hosting-process-vshost-exe.md) derlemeleri
+ [Uygulama geliştirme sırasında](https://msdn.microsoft.com/c9497d62-3b7b-4449-88e8-cf27acc9efe6) [hata ayıklama ve barındırma işlemi](../debugger/debugging-and-the-hosting-process.md) [barındırma süreci (vshost.exe)](../ide/hosting-process-vshost-exe.md) derlemeleri

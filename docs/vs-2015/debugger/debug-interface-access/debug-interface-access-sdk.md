@@ -1,5 +1,5 @@
 ---
-title: Arabirim erişimi SDK'SINDA hata ayıklama | Microsoft Docs
+title: Hata ayıklama arabirimi erişim SDK 'Sı | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,32 +16,32 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ddaea95bc879364de99c0ec01213cda30fa4e7d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197618"
 ---
 # <a name="debug-interface-access-sdk"></a>Arabirim Erişimi SDK'sında Hata Ayıklama
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Microsoft hata ayıklama arabirimi erişim Yazılım Geliştirme Seti (DIA SDK), hata ayıklama bilgileri Microsoft postcompiler araçları tarafından oluşturulan program veritabanı (.pdb) dosyalarını depolanmış erişim sağlar. Sabit düzeltme postcompiler araçları tarafından oluşturulan .pdb dosyasının biçimi uğradığında çünkü biçim gösterme zordur. DIA API'sini kullanarak, arama ve gözatma hata ayıklama bilgisi .pdb dosyasında depolanan uygulamaları geliştirebilirsiniz. Bu tür uygulamalar Örneğin, yığın izlemesi arka plan bilgileri raporlayın ve performans verilerini çözümleme.  
+Microsoft hata ayıklama arabirimi erişimi yazılım geliştirme seti (DIA SDK), Microsoft postcompiler araçları tarafından oluşturulan program veritabanı (. pdb) dosyaları içinde depolanan hata ayıklama bilgilerine erişim sağlar. Postcompiler araçları tarafından oluşturulan. pdb dosyasının biçimi sabit düzeltme ile devam ettiğinden, biçimi açığa çıkarmak pratik değildir. DIA API 'sini kullanarak bir. pdb dosyasında depolanan hata ayıklama bilgilerini aramak ve bunları taramak için uygulamalar geliştirebilirsiniz. Örneğin, bu gibi uygulamalar, rapor yığını izleme geri bilgilerini ve performans verilerini analiz edebilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Başlarken](../../debugger/debug-interface-access/getting-started-debug-interface-access-sdk.md)  
- Özellikleri DIA SDK'sı genel bir bakış sağlar ve DIA SDK'sı kitaplığı dosyaları ve gerekli üstbilgisi yanı sıra yüklendiği belirtir.  
+ DIA SDK özelliklerine genel bir bakış sağlar ve gereken başlık ve kitaplık dosyalarının yanı sıra DIA SDK nereye yükleneceğini belirtir.  
   
  [.Pdb Dosyasını Sorgulama](../../debugger/debug-interface-access/querying-the-dot-pdb-file.md)  
- DIA API'SİNİN .pdb dosyasını sorgulama için nasıl kullanılacağı hakkında yönergeler sağlar.  
+ . Pdb dosyasını sorgulamak için ÇYA API 'sinin nasıl kullanılacağına ilişkin yönergeler sağlar.  
   
  [Simgeler ve Simge Etiketleri](../../debugger/debug-interface-access/symbols-and-symbol-tags.md)  
- Simgeler ve simge etiketleri DIA API içinde nasıl kullanılacağını açıklar.  
+ Sembol ve sembol etiketlerinin ÇYA API 'de nasıl kullanıldığını açıklar.  
   
  [Başvuru](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)  
- Arabirimleri, yöntemleri, numaralandırmaları ve yapıları DIA API içerir.  
+ DIA API 'sinin arabirimlerini, yöntemlerini, Numaralandırmaların ve yapılarını içerir.  
   
  [Dia2dump Örneği](../../debugger/debug-interface-access/dia2dump-sample.md)  
- DIA API'SİNİN aramak ve hata ayıklama bilgilerine göz atmak için nasıl kullanılacağı gösterilmektedir.  
+ Hata ayıklama bilgilerini aramak ve taramak için, DIA API 'sinin nasıl kullanılacağını gösterir.  
   
  [Dia2dump.cpp Kaynak Dosyası](../../debugger/debug-interface-access/dia2dump-cpp-source-file.md)  
- Kaynak kodu tarafından kullanılan [Dia2dump örneği](../../debugger/debug-interface-access/dia2dump-sample.md) DIA API göstermek için.
+ [Dia2dump örneği](../../debugger/debug-interface-access/dia2dump-sample.md) tarafından, DIA API 'sini göstermek için kullanılan kaynak kodu.

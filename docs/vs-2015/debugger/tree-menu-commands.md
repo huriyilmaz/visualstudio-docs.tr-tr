@@ -12,25 +12,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 66ac968f21ef28916f038f8abf54331bea2b972f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68144564"
 ---
 # <a name="tree-menu-commands"></a>Ağaç Menü Komutları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Ağaç** menü komutlarını genişletmek veya daraltmak için görünümler sağlar.  
+**Ağaç** menüsü, görünümleri genişletmek veya daraltmak için komutlar sağlar.  
   
  **Bir düzey Genişlet**  
- Geçerli seçilmiş öğe Sistem Görünümü'nde bir düzey altındaki görüntüleyerek genişletir.  
+ Bir düzey altındaki bir düzeyi görüntüleyerek bir sistem görünümünde Şu anda seçili olan öğeyi genişletir.  
   
- **Dalı genişlet**  
- Seçili öğenin altındaki tüm düzeyleri genişletir.  
+ **Dalı Genişlet**  
+ Şu anda seçili olan öğenin altındaki tüm düzeyleri genişletir.  
   
  **Tümünü Genişlet**  
- Genişletir ve Sistem Görünümü'nde tüm düzeylerini görüntüler.  
+ Bir sistem görünümündeki tüm düzeyleri genişletir ve görüntüler.  
   
  **Daralt**  
- Seçili öğenin altındaki tüm düzeylerini daraltır.
+ Şu anda seçili olan öğenin altındaki tüm düzeyleri daraltır.

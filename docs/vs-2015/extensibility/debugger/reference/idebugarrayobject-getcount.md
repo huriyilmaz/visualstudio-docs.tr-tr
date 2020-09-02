@@ -13,10 +13,10 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 35cce37afc389501386ffec7b75b934e7933bc98
-ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197799"
 ---
 # <a name="idebugarrayobjectgetcount"></a>IDebugArrayObject::GetCount
@@ -24,7 +24,7 @@ ms.locfileid: "68197799"
 
 Dizideki öğelerin sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 [C++]  
@@ -45,10 +45,10 @@ int GetCount(
  dışı Sayıyı döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa, S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, dizi nesnesi çok boyutlu olsa bile, dizi nesnesinin tüm öğelerini tek boyutlu bir dizi olarak görür. Örneğin, dizi `myarray[3][2][6]`verildiğinde, bu yöntem `pdwElements` parametresinde 36 döndürür. Tek tek öğeleri tek tek almak için [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) metodunu kullanın.  
+ Bu yöntem, dizi nesnesi çok boyutlu olsa bile, dizi nesnesinin tüm öğelerini tek boyutlu bir dizi olarak görür. Örneğin, dizi verildiğinde `myarray[3][2][6]` , bu yöntem parametresinde 36 döndürür `pdwElements` . Tek tek öğeleri tek tek almak için [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) metodunu kullanın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

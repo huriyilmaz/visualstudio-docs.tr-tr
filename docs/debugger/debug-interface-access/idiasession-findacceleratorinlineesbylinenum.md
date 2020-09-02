@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ec927532ebc808fae0717e36439be356cb022b32
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85465876"
 ---
 # <a name="idiasessionfindacceleratorinlineesbylinenum"></a>IDiaSession::findAcceleratorInlineesByLinenum
@@ -35,11 +35,11 @@ HRESULT findAcceleratorInlineeLinesByName ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki `IDiaSymbol`Aranması gereken Hızlandırıcı saplama işlevine karşılık gelen bir.
+'ndaki `IDiaSymbol` Aranması gereken Hızlandırıcı saplama işlevine karşılık gelen bir.
 
  `file`
 
-'ndaki `IDiaSourceFile`Kaynak konumu.
+'ndaki `IDiaSourceFile` Kaynak konumu.
 
  `linenum`
 
@@ -51,7 +51,7 @@ HRESULT findAcceleratorInlineeLinesByName ( 
 
  `ppResult`
 
-dışı `IDiaEnumLineNumbers`Sonuçla başlatılan arabirim işaretçisine yönelik bir işaretçi.
+dışı `IDiaEnumLineNumbers` Sonuçla başlatılan arabirim işaretçisine yönelik bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.

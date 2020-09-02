@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c241662b2d80beb31fb62bcd3b5b9f4ff133a2ff
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85465687"
 ---
 # <a name="idiasessionfindinlineframesbyva"></a>IDiaSession::findInlineFramesByVA
@@ -32,7 +32,7 @@ HRESULT findInlineFramesByVA ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki `IDiaSymbol`Üst öğeyi temsil eden nesne.
+'ndaki `IDiaSymbol` Üst öğeyi temsil eden nesne.
 
  `va`
 
@@ -40,7 +40,7 @@ HRESULT findInlineFramesByVA ( 
 
  `ppResult`
 
-dışı `IDiaEnumSymbols`Alınan çerçevelerin listesini içeren bir nesnesi tutar.
+dışı `IDiaEnumSymbols` Alınan çerçevelerin listesini içeren bir nesnesi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.

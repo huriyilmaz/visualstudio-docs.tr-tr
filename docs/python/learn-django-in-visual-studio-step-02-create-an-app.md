@@ -1,7 +1,7 @@
 ---
-title: Visual Studio adım 2, görünümler ve sayfa şablonları Django öğretici öğrenin
+title: Visual Studio adım 2, görünümler ve sayfa şablonlarında Docgo öğreticisini öğrenin
 titleSuffix: ''
-description: Visual Studio projeleri bağlamında Django temellerinin bir walkthrough, özellikle bir uygulama oluşturma adımları ve görünümler ve şablonlar kullanarak.
+description: Visual Studio projeleri bağlamında, özellikle bir uygulama oluşturma ve görünümleri ve şablonları kullanma adımları için Docgo 'nun temel bilgileri.
 ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -12,54 +12,54 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 5befdfb5f6974ff7b042319121a27c3628757b6e
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
-ms.locfileid: "79302863"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89314179"
 ---
-# <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>Adım 2: Görünümler ve sayfa şablonları içeren bir Django uygulaması oluşturun
+# <a name="step-2-create-a-django-app-with-views-and-page-templates"></a>2. Adım: görünümler ve sayfa şablonlarıyla bir Docgo uygulaması oluşturma
 
 **Önceki adım: [Visual Studio projesi ve çözümü oluşturma](learn-django-in-visual-studio-step-01-project-and-solution.md)**
 
-Visual Studio projesinde şimdiye kadar sahip olduğunuz şey, bir veya daha fazla Django *uygulaması*çalıştırabilen bir Django *projesinin*yalnızca site düzeyindeki bileşenleridir. Bir sonraki adım, tek bir sayfa ile ilk uygulama nızı oluşturmaktır.
+Visual Studio projesinde şimdiye kadar olan özellikler, bir veya daha fazla Docgo *uygulaması*çalışabilen bir docgo *projesinin*yalnızca site düzeyi bileşenleridir. Sonraki adım, ilk uygulamanızı tek bir sayfa ile oluşturmaktır.
 
-Bu adımda şimdi nasıl öğrenmek:
+Bu adımda şu adımları öğrenebilirsiniz:
 
 > [!div class="checklist"]
-> - Tek sayfalı bir Django uygulaması oluşturma (adım 2-1)
-> - Uygulamayı Django projesinden çalıştırın (adım 2-2)
-> - HTML kullanarak görünüm oluşturma (adım 2-3)
-> - Django sayfa şablonu kullanarak görünüm oluşturma (adım 2-4)
+> - Tek sayfalı bir Docgo uygulaması oluşturma (adım 2-1)
+> - Uygulamayı Docgo projesinden çalıştırın (adım 2-2)
+> - HTML kullanarak bir görünüm işleme (adım 2-3)
+> - Docgo sayfa şablonu kullanarak bir görünüm işleme (adım 2-4)
 
-## <a name="step-2-1-create-an-app-with-a-default-structure"></a>Adım 2-1: Varsayılan yapıya sahip bir uygulama oluşturma
+## <a name="step-2-1-create-an-app-with-a-default-structure"></a>Adım 2-1: varsayılan yapıyla uygulama oluşturma
 
-Django uygulaması, belirli bir amaç için ilgili dosya kümesini içeren ayrı bir Python paketidir. Bir Django projesi, bir web ana bilgisayarTek bir etki alanı adından ayrı giriş noktaları herhangi bir sayıda hizmet verebilir gerçeğini yansıtan uygulamalar, herhangi bir sayıda içerebilir. Örneğin, contoso.com gibi bir etki alanı için bir Django projesi, support.contoso.com için ikinci bir uygulama ve docs.contoso.com için `www.contoso.com`üçüncü bir uygulama içerebilir. Bu durumda, Django projesi site düzeyinde URL yönlendirme ve ayarları *(urls.py* ve *settings.py* dosyalarında) işlerken, her uygulama kendi iç yönlendirmesi, görünümleri, modelleri, statik dosyaları ve yönetim arabirimi aracılığıyla kendi farklı stil ve davranışına sahiptir.
+Docgo uygulaması, belirli bir amaç için ilgili dosyalar kümesi içeren ayrı bir Python paketidir. Bir Docgo projesi herhangi bir sayıda uygulama içerebilir ve bu da bir Web konağının tek bir etki alanı adından herhangi bir sayıda ayrı giriş noktasına hizmeti verebildiği olguyu yansıtır. Örneğin, contoso.com gibi bir etki alanı için bir Docgo projesi, için bir uygulama `www.contoso.com` , support.contoso.com için ikinci bir uygulama ve docs.contoso.com için bir üçüncü uygulama içerebilir. Bu durumda, Docgo projesi site düzeyinde URL yönlendirme ve ayarlarını işler ( *URLs.py* ve *Settings.py* dosyalarında), her uygulamanın kendi ayrı stil ve kendi iç yönlendirme, görünümler, modeller, statik dosyalar ve yönetim arabirimi aracılığıyla davranışı vardır.
 
-Bir Django uygulaması genellikle standart bir dosya kümesiyle başlar. Visual Studio, bir Django projesi nde bir Django uygulamasını başlatmanın yanı sıra aynı amaca hizmet eden tümleşik bir menü komutu yla birlikte öğe şablonları sağlar:
+Bir Docgo uygulaması genellikle standart bir dosya kümesiyle başlar. Visual Studio, aynı amaca hizmet eden tümleşik bir menü komutuyla birlikte bir Docgo projesi içinde Docgo uygulamasını başlatmak için öğe şablonları sağlar:
 
-- Şablonlar: **Çözüm Gezgini'nde**projeyi sağ tıklatın ve**Yeni öğe ekle'yi** **Add** > seçin. Yeni **Öğe Ekle** iletişim kutusunda, **Django 1.9 App** şablonu seçin, **Ad** alanında uygulama adını belirtin ve **Tamam'ı**seçin.
+- Şablonlar: **Çözüm Gezgini**, projeye sağ tıklayın ve **Add**  >  **Yeni öğe**Ekle ' yi seçin. **Yeni öğe Ekle** Iletişim kutusunda **docgo 1,9 uygulama** şablonunu seçin, **ad** alanında uygulama adını belirtin ve **Tamam**' ı seçin.
 
-- Tümleşik komut: **Solution Explorer'da**projeyi sağ tıklatın ve**Django ekle uygulamasını**seçin. **Add** >  Bu komut sizi bir ad ister ve bir Django 1.9 uygulaması oluşturur.
+- Tümleşik komut: **Çözüm Gezgini**' de projeye sağ tıklayın ve **Add**  >  **docgo uygulaması**Ekle ' yi seçin. Bu komut sizden bir ad ister ve bir Docgo 1,9 uygulaması oluşturur.
 
-    ![Django uygulaması eklemek için menü komutu](media/django/step02-add-django-app-command.png)
+    ![Docgo uygulaması ekleme menü komutu](media/django/step02-add-django-app-command.png)
 
-Her iki yöntemi de kullanarak "HelloDjangoApp" adında bir uygulama oluşturun. Sonuç, projenizde aşağıdaki tabloda açıklandığı gibi öğeleri içeren bu ada sahip bir klasördür.
+Her iki yöntemi kullanarak, "Hellodocgoapp" adlı bir uygulama oluşturun. Sonuç, aşağıdaki tabloda açıklandığı gibi öğeleri içeren bu ada sahip projenizdeki bir klasördür.
 
-![Çözüm Explorer'daki Django uygulama dosyaları](media/django/step02-django-app-in-solution-explorer.png)
+![Çözüm Gezgini 'de docgo uygulama dosyaları](media/django/step02-django-app-in-solution-explorer.png)
 
 | Öğe | Açıklama |
 | --- | --- |
-| **\_\_init\_\_.py** | Uygulamayı paket olarak tanımlayan dosya. |
-| **Geçiş** | Django'nun, modellerdeki değişikliklerle hizalamak üzere veritabanını güncelleştiren komut dosyalarını depoladığı klasör. Django'nun geçiş araçları, veritabanının önceki herhangi bir sürümüne gerekli değişiklikleri uygulayarak geçerli modellere uymasını sağlar. Geçişleri kullanarak, modellerinize odaklanın ve Django'nun temel veritabanı şemasını ele alamasına izin verin. Göçler 6. şimdilik, klasör sadece bir * \_ \_\_\_init .py* dosyası içerir (klasörün kendi Python paketini tanımladığını gösterir). |
-| **şablonları** | Django sayfası için bir klasör, uygulama adıyla eşleşen bir klasör içinde tek bir dosya *index.html* içeren şablonlar. (Visual Studio 2017 15.7 ve öncesi, dosya doğrudan *şablonlar* altında yer almaktadır ve adım 2-4 alt klasörü oluşturmanızı emreder.) Şablonlar, görünümlerin bir sayfayı dinamik olarak işlemek için bilgi ekleyebileceği HTML bloklarıdır. Sayfa şablonu "değişkenler", `{{ content }}` *index.html*gibi, bu makalede (adım 2) daha sonra açıklandığı gibi dinamik değerler için yer tutuculardır. Genellikle Django uygulamaları, şablonları uygulama adıyla eşleşen bir alt klasöre yerleştirerek şablonları için bir ad alanı oluşturur. |
-| **admin.py** | Uygulamanın veritabanındaki verileri tohumlamak ve düzenleyen için kullanılan yönetim arabirimini (bkz. adım 6) genişletdiğiniz Python dosyası. Başlangıçta, bu dosya yalnızca `from django.contrib import admin`deyimi içerir. Varsayılan olarak, Django, Django projesinin *settings.py* dosyasındaki girişler aracılığıyla standart bir yönetim arabirimi içerir ve *urls.py'daki*varolan girişleri açıklamadan geçirerek açabilirsiniz. |
-| **apps.py** | Uygulama için yapılandırma sınıfını tanımlayan bir Python dosyası (bu tablodan sonra aşağıya bakın). |
-| **models.py** | Modeller, görünümlerin uygulamanın temel veritabanıyla etkileşimde bulunduğu işlevlerle tanımlanan veri nesneleridir (bkz. adım 6). Django, uygulamaların bu ayrıntılarla ilgilenmesi gerekmemesi için veritabanı bağlantı katmanı sağlar. *models.py* dosyası, modellerinizi oluşturmak için varsayılan bir yerdir ve `from django.db import models`başlangıçta yalnızca deyimi içerir. |
+| **\_\_init \_ \_ . Kopyala** | Uygulamayı paket olarak tanımlayan dosya. |
+| **geçişler** | Docgo 'nun, modellerdeki değişikliklerle uyum sağlamak üzere veritabanını güncelleştiren betikleri sakladığı bir klasör. Docgo 'nun geçiş araçları, geçerli modellerle eşleşecek şekilde veritabanının önceki bir sürümüne gerekli değişiklikleri uygular. Geçişleri kullanarak, yaptığınız geçişlerinizi modellerinize koruyun ve temel veritabanı şemasını Docgo 'ya izin verin. Geçişler adım 6 ' da ele alınmıştır. Şimdilik, klasör yalnızca bir * \_ \_ init \_ \_ . Kopyala* dosyası içerir (klasörün kendi Python paketini tanımladığını gösterir). |
+| **templates** | Uygulama adıyla eşleşen bir klasör içinde tek bir dosya *index.html* Içeren Docgo sayfa şablonları için bir klasör. (Visual Studio 2017 15,7 ve önceki sürümlerde dosya doğrudan *Şablonlar* altında bulunur ve adım 2-4 alt klasörü oluşturmanızı söyler.) Şablonlar, görünümün dinamik olarak bir sayfayı işlemek için bilgi ekleyebileceği HTML bloklarıdır. index.html içindeki gibi sayfa şablonu "değişkenleri", `{{ content }}` Bu makalenin ilerleyen kısımlarında açıklandığı gibi dinamik değerler için yer tutuculardır (2. adım). *index.html* Genellikle Docgo uygulamaları, uygulama adıyla eşleşen bir alt klasöre yerleştirerek şablonları için bir ad alanı oluşturur. |
+| **admin.py** | Uygulamanın yönetim arabirimini genişletmenizi sağlayan Python dosyası (bkz. 6. adım), bir veritabanındaki verileri tohum ve düzenlemek için kullanılır. Başlangıçta, bu dosya yalnızca ifadesini içerir, `from django.contrib import admin` . Varsayılan olarak, Docgo, *URLs.py*içindeki mevcut girişlerin açıklamasını kaldırarak, docgo projesinin *Settings.py* dosyasındaki girişler aracılığıyla standart bir yönetim arabirimi içerir. |
+| **apps.py** | Uygulama için bir yapılandırma sınıfı tanımlayan Python dosyası (bu tablodan sonra aşağıya bakın). |
+| **models.py** | Modeller, uygulamanın temel alınan veritabanıyla etkileşime geçen görünümler tarafından tanımlanan veri nesneleridir (bkz. 6. adım). Docgo, uygulamaların bu ayrıntılarla ilgilenmesini gerektirmeyen veritabanı bağlantısı katmanını sağlar. *Models.py* dosyası, modellerinizin oluşturulacağı varsayılan bir yerdir ve başlangıçta yalnızca ifadesini içerir `from django.db import models` . |
 | **tests.py** | Birim testlerinin temel yapısını içeren bir Python dosyası. |
-| **views.py** | Görünümler, genellikle bir HTTP isteği alan ve bir HTTP yanıtını döndüren web sayfaları olarak düşündüğünüz görünümlerdir. Görünümler genellikle web tarayıcılarının nasıl görüntüleneceğini bildiği HTML olarak işlenir, ancak görünümün mutlaka görünür olması gerekmez (ara form gibi). Görünüm, sorumluluğu HTML'yi tarayıcıya göndermek olan bir Python işlevi tarafından tanımlanır. views.py *views.py* dosyası, görünümler oluşturmak için varsayılan bir yerdir ve `from django.shortcuts import render`başlangıçta yalnızca deyimi içerir. |
+| **views.py** | Görünümler, genellikle bir HTTP isteği alıp HTTP yanıtı döndüren Web sayfaları olarak düşündüğünüzden oluşur. Görünümler genellikle Web tarayıcılarının nasıl görüntüleneceğini bildiğiniz HTML olarak işlenir, ancak bir görünümün görünür olması gerekmez (bir ara form gibi). Bir görünüm bir Python işlevi tarafından tanımlanır ve bu da sorumluluğu tarayıcıya gönderilmek üzere HTML 'yi işlemek için kullanılır. *Views.py* dosyası, görünümlerin oluşturulacağı ve başlangıçta yalnızca deyimin bulunduğu varsayılan bir yerdir `from django.shortcuts import render` . |
 
-"HelloDjangoApp" adı verirken *apps.py* içeriği aşağıdaki gibi görünür:
+*Apps.py* Içeriği "Hellodocgoapp" adı kullanılırken şöyle görünür:
 
 ```python
 from django.apps import AppConfig
@@ -68,15 +68,15 @@ class HelloDjangoAppConfig(AppConfig):
     name = 'HelloDjango'
 ```
 
-### <a name="question-is-creating-a-django-app-in-visual-studio-any-different-from-creating-an-app-on-the-command-line"></a>Soru: Visual Studio'da bir Django uygulaması oluşturmak komut satırında bir uygulama oluşturmaktan farklı mıdır?
+### <a name="question-is-creating-a-django-app-in-visual-studio-any-different-from-creating-an-app-on-the-command-line"></a>Soru: Visual Studio 'da komut satırında uygulama oluşturmaktan farklı bir Docgo uygulaması oluşturuluyor mu?
 
-Cevap:**Django** **ekle** > uygulama komutunu çalıştırmak veya Django uygulaması şablonuyla**Yeni Öğe** `manage.py startapp <app_name>` **Ekle'yi** > kullanmak Django komutuyla aynı dosyaları üretir. Visual Studio'da uygulama oluşturmanın yararı, uygulama klasörü ve tüm dosyalarının projeye otomatik olarak entegre edilmiş olmasıdır. Projenizde istediğiniz sayıda uygulama oluşturmak için aynı Visual Studio komutunu kullanabilirsiniz.
+Cevap: **Add**  >  **docgo uygulaması** Ekle komutunu çalıştırma veya **Add**  >  docgo uygulama şablonuyla**Yeni öğe** Ekle ' nin kullanılması docgo komutuyla aynı dosyaları oluşturur `manage.py startapp <app_name>` . Visual Studio 'da uygulama oluşturmanın avantajı, uygulama klasörünün ve tüm dosyalarının proje ile otomatik olarak tümleştirildiği bir avantajdır. Projenizde herhangi bir sayıda uygulama oluşturmak için aynı Visual Studio komutunu kullanabilirsiniz.
 
-## <a name="step-2-2-run-the-app-from-the-django-project"></a>Adım 2-2: Uygulamayı Django projesinden çalıştırın
+## <a name="step-2-2-run-the-app-from-the-django-project"></a>Adım 2-2: uygulamayı Docgo projesinden çalıştırma
 
-Bu noktada, projeyi Visual Studio'da yeniden çalıştırıyorsanız (araç çubuğu düğmesini veya **Hata** > **Ayıklama Hata Ayıklama'yı**kullanarak), yine de varsayılan sayfayı görürsünüz. Uygulamaya özgü bir sayfa tanımlamanız ve uygulamayı Django projesine eklemeniz gerektiğinden uygulama içeriği görünmez:
+Bu noktada, projeyi Visual Studio 'da yeniden çalıştırırsanız (araç çubuğu **düğmesini veya hata ayıklama**  >  **başlatma hata ayıklamayı**kullanarak), yine de varsayılan sayfayı görürsünüz. Uygulamaya özgü bir sayfa tanımlamanız ve uygulamayı Docgo projesine eklemeniz gerektiğinden hiçbir uygulama içeriği görünmez:
 
-1. *HelloDjangoApp* klasöründe, "dizin" adlı bir görünümü tanımlayan aşağıdaki kodla eşleşecek *şekilde views.py* değiştirin:
+1. *Merhaba Docgoapp* klasöründe, "index" adlı bir görünümü tanımlayan aşağıdaki kodla eşleşecek şekilde *views.py* değiştirin:
 
     ```python
     from django.shortcuts import render
@@ -86,7 +86,7 @@ Bu noktada, projeyi Visual Studio'da yeniden çalıştırıyorsanız (araç çub
         return HttpResponse("Hello, Django!")
     ```
 
-1. *BasicProject* klasöründe (adım 1'de oluşturulmuş), aşağıdaki kodu en az eşleşecek *şekilde urls.py* değiştirin (isterseniz öğretici yorumları saklayabilirsiniz):
+1. *BasicProject* klasöründe (adım 1 ' de oluşturulur), *URLs.py* öğesini en azından aşağıdaki kodla eşleşecek şekilde değiştirin (isterseniz, komutlarıaçıklamalarını koruyabilirsiniz):
 
     ```python
     from django.conf.urls import include, url
@@ -99,39 +99,39 @@ Bu noktada, projeyi Visual Studio'da yeniden çalıştırıyorsanız (araç çub
     ]
     ```
 
-    Her URL deseni, Django'nun belirli site göreli URL'leri (diğer `https://www.domain.com/`bir şekilde izleyen bölüm) ile yollarını izlediği görünümleri açıklar. Normal ifadeyle `urlPatterns` `^$` başlayan ilk giriş, site kökü için yönlendirmedir, "/". İkinci giriş, `^home$` özellikle "/ev" rotaları. Aynı görünüme giden herhangi bir sayıda yönlendirme niz olabilir.
+    Her URL modelinde, Docgo 'nun belirli siteyle ilgili URL 'Leri yönlendirdiğini (diğer bir deyişle, izleyen bölüm) açıklayan görünümler açıklanmaktadır `https://www.domain.com/` . `urlPatterns`Normal ifadeyle başlayan ilk giriş, `^$` "/" site kökünün yönlendirimiyle. İkinci girdi, `^home$` özellikle "/Home" yollar. Aynı görünümde herhangi bir sayıda üretim akışı olabilir.
 
-1. **Merhaba, Django** mesajını görmek için projeyi tekrar çalıştırın! görünümü tarafından tanımlandığı gibi. İşin izlendiğinde sunucuyu durdurun.
+1. **Hello, Docgo** iletisini görmek için projeyi yeniden çalıştırın! görünümü tarafından tanımlandığı gibi. İşiniz bittiğinde sunucuyu durdurun.
 
-### <a name="commit-to-source-control"></a>Kaynak denetimine bağlanma
+### <a name="commit-to-source-control"></a>Kaynak denetimine Kaydet
 
-Kodunuzda değişiklikler yaptığınız ve bunları başarıyla sınadığınız için, değişikliklerinizi gözden geçirmek ve kaynak denetimine işlemek için harika bir zaman. Bu öğreticideki sonraki adımlar, kaynak denetimine yeniden bağlanmanız için uygun zamanları hatırlatır ve sizi bu bölüme geri yönlendirir.
+Kodunuzda değişiklik yaptığınız ve bunları başarıyla test ettiğiniz için, değişiklikleri gözden geçirmek ve kaynak denetimine uygulamak harika bir süredir. Bu öğreticideki sonraki adımlar, kaynak denetimine yeniden kaydolmasını ve bu bölüme geri dönebilmeniz için uygun zamanları hatırlatır.
 
-1. **Team Explorer'a**yönlendirilen Visual Studio'nun (aşağıda daire içine alınmış) altındaki değişiklikler düğmesini seçin.
+1. **Takım Gezgini**gittiği, Visual Studio 'nun alt kısmındaki (aşağıda daire içinde) bulunan değişiklikler düğmesini seçin.
 
-    ![Visual Studio durum çubuğundaki kaynak denetimi değişiklikleri düğmesi](media/django/step02-source-control-changes-button.png)
+    ![Visual Studio durum çubuğunda kaynak denetimi değişiklikleri düğmesi](media/django/step02-source-control-changes-button.png)
 
-1. **Takım Gezgini'nde**,"İlk Django uygulamasını oluştur" gibi bir ileti ileti girin ve **Tümünü İşle'yi**seçin. Commit tamamlandığında, yerel olarak oluşturulan karma> bir ileti ** \<görürsünüz. Değişikliklerinizi sunucuyla paylaşmak için eşitleyin.** Değişiklikleri uzak deponuza itmek istiyorsanız, **Eşitle'yi**seçin ve **ardından Giden Taahhütler**altında **Itme'yi** seçin. Ayrıca, uzak bir zamana basmadan önce birden çok yerel taahhüt de biriktirebilirsiniz.
+1. **Takım Gezgini**, "Ilk Docgo uygulaması oluşturma" gibi bir teslim iletisi girin ve **Tümünü Yürüt**' ü seçin. Tamamlama tamamlandığında **yerel olarak oluşturulan bir Ileti kaydı görürsünüz \<hash> . Değişikliklerinizi sunucuyla paylaşmak için eşitleyin.** Değişiklikleri uzak deponuza göndermek istiyorsanız **Eşitle**' yi ve ardından **giden işlemeler**altında **Gönder** ' i seçin. Ayrıca, uzaktan göndermeden önce birden çok yerel işleme de birikmeniz gerekir.
 
-    ![Takım Gezgini'nde uzaklara itme taahhüdü](media/django/step02-source-control-push-to-remote.png)
+    ![Takım Gezgini 'da yürütmeleri uzak 'a gönderme](media/django/step02-source-control-push-to-remote.png)
 
-### <a name="question-what-is-the-r-prefix-before-the-routing-strings-for"></a>Soru: Yönlendirme dizelerinden önce 'r' öneki nedir?
+### <a name="question-what-is-the-r-prefix-before-the-routing-strings-for"></a>Soru: yönlendirme dizelerinden önce ' r ' öneki nedir?
 
-Cevap: Python'daki bir dizedeki 'r' öneki "ham" anlamına gelir ve Python'a dize içindeki karakterlerden kaçmasını bildirir. Normal ifadeler birçok özel karakter kullandığından, 'r' önekini kullanmak, bu dizeleri bir dizi\\' kaçış karakteri içermelerine göre okumayı çok daha kolay hale getirir.
+Cevap: Python 'daki bir dizedeki ' r ' öneki "RAW" anlamına gelir, bu da Python 'un dize içindeki herhangi bir karakteri atmamasını sağlar. Normal ifadeler çok sayıda özel karakter kullandığından, ' r ' önekini kullanmak Bu dizelerin bir dizi ' ' kaçış karakteri içerenden çok daha kolay olmasını sağlar \\ .
 
-### <a name="question-what-do-the--and--characters-mean-in-the-url-routing-entries"></a>Soru: URL yönlendirme girişlerinde ^ ve $ karakterleri ne anlama gelir?
+### <a name="question-what-do-the--and--characters-mean-in-the-url-routing-entries"></a>Soru: URL yönlendirme girişlerinde ^ ve $ karakterlerinin anlamı nedir?
 
-Cevap: URL desenlerini tanımlayan normal ifadelerde^ "satır başlangıcı" anlamına gelir ve $ yine URL'lerin site köküne (izleyen `https://www.domain.com/`bölüme) görece olduğu "satır sonu" anlamına gelir. Normal ifade `^$` etkili bir şekilde "boş" anlamına `https://www.domain.com/` gelir ve bu nedenle tam URL ile eşleşir (site köküne hiçbir şey eklenmez). Desen `^home$` tam `https://www.domain.com/home/`olarak eşleşir. (Django desen eşleştirme deseni / izleme kullanmaz.)
+Cevap: URL düzenlerini tanımlayan normal ifadelerde, ^ "satır başlangıcı" ve $ "satır sonu" anlamına gelir ve burada URL 'Ler site köküne (izleyen bölüm) göre değişir `https://www.domain.com/` . Normal ifade `^$` etkin bir şekilde "boş" anlamına gelir ve bu nedenle tam URL ile eşleşir `https://www.domain.com/` (site köküne hiçbir şey eklenmez). Desenler `^home$` tam olarak eşleşir `https://www.domain.com/home/` . (Docgo, sondaki/ın örüntüme düzeniyle eşleştirmeyi kullanmaz.)
 
-Eğer normal bir ifade de `^home`bir iz $ kullanmazsanız, o zaman URL desen "ev", "ev", "homestead" ve "home192837" gibi "ev" ile başlayan herhangi *bir* URL eşleşir.
+Normal ifadede ' de olduğu gibi sondaki $ kullanmıyorsanız `^home` , URL deseninin "Home", "ödev", "Homestead" ve "home192837" gibi "Home" ile başlayan *Tüm* URL 'ler eşleşir.
 
-Farklı normal ifadeleri denemek için, [pythex.org](https://www.pythex.org) [regex101.com](https://regex101.com) gibi çevrimiçi araçları deneyin.
+Farklı normal ifadelerle denemeler yapmak için [pythex.org](https://www.pythex.org)adresindeki [regex101.com](https://regex101.com) gibi çevrimiçi araçları deneyin.
 
-## <a name="step-2-3-render-a-view-using-html"></a>Adım 2-3: HTML kullanarak görünüm oluşturma
+## <a name="step-2-3-render-a-view-using-html"></a>Adım 2-3: HTML kullanarak bir görünüm Işleme
 
-Şimdiye `index` kadar *views.py* sahip olduğunuz işlev, sayfa için düz metin HTTP yanıtından başka bir şey oluşturmaz. Çoğu gerçek dünya web sayfaları, tabii ki, genellikle canlı verileri içeren zengin HTML sayfaları ile yanıt. Gerçekten de, bir işlevi kullanarak bir görünümü tanımlamak için birincil nedeni böylece dinamik olarak bu içeriği oluşturabilirsiniz.
+Şimdiye `index` kadar *views.py* sahip olduğunuz işlev, sayfa için düz metin bir HTTP yanıtından daha fazla şey oluşturuyor. Birçok gerçek dünyada Web sayfası, genellikle canlı verileri birleştiren zengin HTML sayfalarıyla yanıt verir. Aslında, bir işlevi kullanarak bir görünüm tanımlamanın birincil nedeni, bu içeriği dinamik olarak oluşturabilir.
 
-Bağımsız değişken `HttpResponse` sadece bir dize olduğundan, bir dize içinde istediğiniz herhangi bir HTML oluşturabilirsiniz. Basit bir örnek olarak, işlevi, sayfayı `index` her `from` yenilediğiniz de güncellenen dinamik içeriği kullanarak bir HTML yanıtı oluşturan aşağıdaki kodla (varolan ifadeleri tutma) değiştirin:
+Bağımsız değişkeni `HttpResponse` yalnızca bir dize olduğundan, bir dize içinde ISTEDIĞINIZ HTML 'yi oluşturabilirsiniz. Basit bir örnek olarak, `index` aşağıdaki kodla (var olan `from` deyimleri koruyarak), sayfayı her yenilediğiniz zaman güncelleştirilmiş dinamik içeriği kullanarak bir HTML yanıtı oluşturan şu kodla değiştirin:
 
 ```python
 from datetime import datetime
@@ -146,22 +146,22 @@ def index(request):
     return HttpResponse(html_content)
 ```
 
-"Merhaba**Django!** 16 Nisan 2018 Pazartesi 16:28:10". Saati güncellemek ve her istekte içeriğin oluşturulduğunu doğrulamak için sayfayı yenileyin. İşin izlendiğinde sunucuyu durdurun.
+"**Hello Docgo!** " gibi bir iletiyi görmek için projeyi yeniden çalıştırın. Pazartesi günü, 16 Nisan 2018, 16:28:10 ". Zamanı güncelleştirmek ve içeriğin her istekle birlikte oluşturulduğunu onaylamak için sayfayı yenileyin. İşiniz bittiğinde sunucuyu durdurun.
 
 > [!Tip]
-> Projeyi durdurma ve yeniden başlatmanın kısayolu, Hata > **Ayıklama** Menüsü komutunu **(Ctrl**+**Shift**+**F5)** veya hata ayıklama araç çubuğundaki **Yeniden Başlat** düğmesini kullanmaktır: **Debug**
+> Projeyi durdurma ve yeniden başlatmanın bir kısayolu, hata **ayıklama**  >  **yeniden başlatma** menü komutunu (**CTRL** + **SHIFT** + **F5**) veya hata ayıklama araç çubuğundaki **Yeniden Başlat** düğmesini kullanmaktır:
 >
-> ![Visual Studio'da hata ayıklama araç çubuğundaki yeniden başlatma düğmesi](media/debugging-restart-toolbar-button.png)
+> ![Visual Studio 'da hata ayıklama araç çubuğunda yeniden Başlat düğmesi](media/debugging-restart-toolbar-button.png)
 
-## <a name="step-2-4-render-a-view-using-a-page-template"></a>Adım 2-4: Sayfa şablonu kullanarak görünüm oluşturma
+## <a name="step-2-4-render-a-view-using-a-page-template"></a>Adım 2-4: sayfa şablonu kullanarak bir görünüm Işleme
 
-Kodda HTML oluşturmak çok küçük sayfalar için iyi çalışır, ancak sayfalar daha karmaşık hale geldikçe genellikle sayfanızın statik HTML bölümlerini (CSS ve JavaScript dosyalarına yapılan atıflarla birlikte) "sayfa şablonları" olarak korumak istersiniz ve içine dinamik eklersiniz, kod tarafından oluşturulan içerik. Önceki bölümde, yalnızca aramanın `now.strftime` tarih ve saati dinamiktir, bu da diğer tüm içeriğin bir sayfa şablonuna yerleştirilebileceği anlamına gelir.
+Kodda HTML oluşturma çok küçük sayfalar için sorunsuz çalışıyor, ancak sayfalar daha karmaşık bir şekilde elde ederken, daha sonra dinamik, kod tarafından oluşturulan içerik eklediğiniz "sayfa şablonları" olarak sayfanızın statik HTML parçalarını (CSS ve JavaScript dosyalarına başvurularıyla birlikte) korumak istersiniz. Önceki bölümde yalnızca çağrının Tarih ve saati `now.strftime` dinamiktir. Bu, diğer tüm içeriklerin bir sayfa şablonuna yerleştirilebileceği anlamına gelir.
 
-Django sayfa şablonu, "değişkenler" `{{` `}}`olarak adlandırılan ve ' da `{{ content }}`olduğu gibi . Django'nun baştan çıkarıcı modülü daha sonra değişkenleri kod olarak sağladığınız dinamik içerikle değiştirir.
+Bir Docgo sayfa şablonu, ' `{{` de olduğu gibi ve tarafından ayırıcı olan "değişkenler" adlı herhangi bir sayıda değiştirme belirteci içerebilen BIR HTML bloğudur `}}` `{{ content }}` . Docgo 'nın şablon oluşturma modülü daha sonra değişkenleri kodda sağladığınız Dinamik içerikle değiştirir.
 
-Aşağıdaki adımlar sayfa şablonlarının kullanımını gösterir:
+Aşağıdaki adımlarda sayfa şablonlarının kullanımı gösterilmektedir:
 
-1. Django projesini içeren *BasicProject* klasörü altında, *settings.py* dosyayı açın ve `INSTALLED_APPS` "HelloDjangoApp" uygulama adını listeye ekleyin. Uygulamayı listeye eklemek, Django projesine bu adı taşıyan bir uygulama içeren bir klasör olduğunu söyler:
+1. Docgo projesini içeren *BasicProject* klasörünün altında, *Settings.py* dosyasını açın ve "Hellodocgoapp" uygulama adını `INSTALLED_APPS` listeye ekleyin. Uygulamanın listeye eklenmesi, Docgo projesine, bir uygulama içeren bu adın bir klasörü olduğunu söyler:
 
     ```python
     INSTALLED_APPS = [
@@ -170,13 +170,13 @@ Aşağıdaki adımlar sayfa şablonlarının kullanımını gösterir:
     ]
     ```
 
-1. Ayrıca *settings.py,* nesnenin `TEMPLATES` django'ya yüklü bir uygulamanın *şablonlar* klasöründe şablonları aramasını sağlayan aşağıdaki satırı (varsayılan olarak dahil) içerdiğinden emin olun:
+1. Ayrıca, *Settings.py*' de, `TEMPLATES` nesnenin aşağıdaki satırı (varsayılan olarak dahildir) içerdiğinden emin olun. Bu, docgo 'nun yüklü bir uygulamanın *Şablonlar* klasöründeki şablonları aramasını sağlar:
 
     ```json
     'APP_DIRS': True,
     ```
 
-1. *HelloDjangoApp* klasöründe, *templates/HelloDjangoApp/index.html* sayfası şablon dosyasını (veya vs 2017 15.7 ve daha önce `{{ content }}` *templates/index.html)* açın ve bir değişken içerdiğini gözlemleyin:
+1. *Merhaba docgoapp* klasöründe, bir değişken içerdiğini gözlemlemek için *Templates/hellodocgoapp/index.html* sayfa şablonu dosyasını (veya vs 2017 15,7 ve önceki sürümlerde *Şablonlar/index.html* ) açın `{{ content }}` :
 
     ```html
     <html>
@@ -190,7 +190,7 @@ Aşağıdaki adımlar sayfa şablonlarının kullanımını gösterir:
     </html>
     ```
 
-1. *HelloDjangoApp* klasöründe, *views.py* açın `index` ve işlevi `django.shortcuts.render` yardımcı işlevi kullanan aşağıdaki kodla değiştirin. Yardımcı, `render` sayfa şablonlarıyla çalışmak için basitleştirilmiş bir arabirim sağlar. Varolan `from` tüm ifadeleri sakladığından emin olun.
+1. *Merhaba Docgoapp* klasöründe *views.py* ' ı açın ve `index` işlevi, yardımcı işlevini kullanan aşağıdaki kodla değiştirin `django.shortcuts.render` . `render`Yardımcı, sayfa şablonlarıyla çalışmak için basitleştirilmiş bir arabirim sağlar. Tüm mevcut deyimleri tutmaya dikkat edin `from` .
 
     ```python
     from django.shortcuts import render   # Added for this step
@@ -208,11 +208,11 @@ Aşağıdaki adımlar sayfa şablonlarının kullanımını gösterir:
         )
     ```
 
-    Gördüğünüz `render`gibi, ilk bağımsız değişken, uygulamanın *şablonlar* klasöründeki şablon dosyasına göreli yol tarafından izlenen istek nesnesidir. Uygunsa desteklediği görünüm için bir şablon dosyası adlandırılır. Üçüncü bağımsız `render` değişken, şablonun atıfta bulunduğu değişkenler sözlüğüdür. Sözlükte nesneler ekleyebilirsiniz, bu durumda şablondaki bir değişken `{{ object.property }}`.
+    İçin ilk bağımsız değişken, `render` görebileceğiniz gibi, istek nesnesidir ve sonra uygulamanın *Şablonlar* klasörü içindeki şablon dosyasının göreli yolu gelir. Uygunsa, desteklediği görünüm için bir şablon dosyası adlandırılır. Üçüncü bağımsız değişkeni, `render` daha sonra şablonun başvurduğu değişkenlerin bir sözlüğüdür. Sözlüğe nesne ekleyebilirsiniz, bu durumda şablondaki bir değişken başvuru yapabilir `{{ object.property }}` .
 
-1. Projeyi çalıştırın ve çıktıyı gözlemleyin. 2-2. adımda görülenve şablonun çalıştığını belirten benzer bir ileti görmeniz gerekir.
+1. Projeyi çalıştırın ve çıktıyı gözlemleyin. Bu şekilde, şablonun çalışıp çalışmadığını belirten, 2-2 adımında görülen benzer bir ileti görmeniz gerekir.
 
-    Ancak, `render` işlev otomatik olarak HTML `content` kaçar, çünkü özellik kullanılan HTML yalnızca düz metin olarak işlenir gözlemleyin. Otomatik kaçış, enjeksiyon saldırılarına karşı kazara güvenlik açıklarını önler: geliştiriciler genellikle bir sayfadan giriş toplar ve şablon yer tutucu aracılığıyla başka bir sayfada değer olarak kullanır. Kaçmak, HTML'yi sayfa şablonunda ve kodun dışında tutmanın yine en iyisi olduğunu da hatırlatmaktadır. Neyse ki, gerektiğinde ek değişkenler oluşturmak için basit bir konudur. Örneğin, sayfa başlığı ekleyen ve sayfa şablonundaki tüm biçimlendirmeyi saklayan aşağıdaki biçimlendirmeyle eşleşecek *şablonlarla* *index.html'i* değiştirin:
+    Ancak, özellikte kullandığınız HTML 'nin `content` yalnızca düz metin olarak işlediğini gözlemleyin, çünkü `render` işlev OTOMATIK olarak HTML 'den çıkar. Otomatik kaçış, yanlışlıkla güvenlik açıklarına ekleme saldırıları önler: geliştiriciler genellikle bir sayfadan giriş toplar ve bir şablon yer tutucusu aracılığıyla başka bir değer olarak bu değeri kullanır. Kaçış Ayrıca, HTML 'nin sayfa şablonunda ve kodun dışında tutulması için daha iyi bir anımsatıcı işlevi görür. Neyse ki, gerektiğinde ek değişkenler oluşturmanın basit bir önemi vardır. Örneğin, bir sayfa başlığı ekleyen ve sayfa şablonunda tüm biçimlendirmeyi tutan aşağıdaki işaretlerle eşleşecek şekilde *index.html* 'yi *şablonlarla* değiştirin:
 
     ```html
     <html>
@@ -225,7 +225,7 @@ Aşağıdaki adımlar sayfa şablonlarının kullanımını gösterir:
     </html>
     ```
 
-    Ardından, `index` sayfa şablonundaki tüm değişkenler için değerler sağlamak için görünüm işlevini aşağıdaki gibi yazın:
+    Ardından `index` , sayfa şablonundaki tüm değişkenler için değerler sağlamak üzere görünüm işlevini aşağıdaki şekilde yazın:
 
     ```python
     def index(request):
@@ -243,40 +243,40 @@ Aşağıdaki adımlar sayfa şablonlarının kullanımını gösterir:
         )
     ```
 
-1. Sunucuyu durdurun ve projeyi yeniden başlatın ve sayfanın artık düzgün şekilde görüntülenin:
+1. Sunucuyu durdurup projeyi yeniden başlatın ve sayfanın artık düzgün şekilde işlediğini gözlemleyin:
 
-    ![Şablonu kullanarak uygulama çalıştırma](media/django/step02-result.png)
+    ![Şablonu kullanarak uygulamayı çalıştırma](media/django/step02-result.png)
 
-1. <a name="template-namespacing"></a>Visual Studio 2017 sürüm 15.7 ve daha önceki sürüm: Son adım olarak, şablonlarınızı uygulamanızla aynı adlandırılmış bir alt klasöre taşıyın, bu da bir ad alanı oluşturur ve projeye ekleyebileceğiniz diğer uygulamalarla olası çakışmaları önler. (VS 2017 15.8+ şablonları bunu sizin için otomatik olarak yapar.) Diğer bir deyişle, *HelloDjangoApp*adlı *şablonlarda* bir alt klasör oluşturun, *index.html'i* bu alt klasöre taşıyın ve şablonun `index` yeni yoluna başvurmak için görünüm işlevini değiştirin, *HelloDjangoApp/index.html.* Ardından projeyi çalıştırın, sayfanın düzgün işleyip işlemediğini doğrulayın ve sunucuyu durdurun.
+1. <a name="template-namespacing"></a>Visual Studio 2017 sürüm 15,7 ve önceki sürümler: son bir adım olarak, şablonlarınızı uygulamanız ile aynı adlı bir alt klasöre taşıyın. Bu, bir ad alanı oluşturur ve projeye ekleyebileceğiniz diğer uygulamalarla olası çakışmaları önler. (VS 2017 'deki şablonlar 15.8 + bunu sizin için otomatik olarak yapın.) Diğer bir deyişle, *Merhaba docgoapp*adlı *şablonlarda* bir alt klasör oluşturun, *index.html* 'yi bu alt klasöre taşıyın ve `index` Görünüm Işlevini, şablonun yeni yoluna, *Merhaba docgoapp/index.html*öğesine başvuracak şekilde değiştirin. Ardından projeyi çalıştırın, sayfanın düzgün şekilde işlediğini doğrulayın ve sunucuyu durdurun.
 
-1. Değişikliklerinizi kaynak denetimine bağla ve istenirse, [adım 2-2](#commit-to-source-control)altında açıklandığı gibi uzaktan deponuzu güncelleştirin.
+1. Değişikliklerinizi kaynak denetimine kaydedin ve isterseniz, uzak deponuzu [adım 2-2](#commit-to-source-control)' de açıklandığı gibi güncelleştirin.
 
-### <a name="question-do-page-templates-have-to-be-in-a-separate-file"></a>Soru: Sayfa şablonları ayrı bir dosyada olmak zorunda mı?
+### <a name="question-do-page-templates-have-to-be-in-a-separate-file"></a>Soru: sayfa şablonlarının ayrı bir dosyada olması gerekir mi?
 
-Yanıt: Şablonlar genellikle ayrı HTML dosyalarında muhafaza edilebilse de, satır içinde şablon da kullanabilirsiniz. Ancak, biçimlendirme ve kod arasında temiz bir ayrım sağlamak için ayrı bir dosya kullanılması önerilir.
+Cevap: Şablonlar genellikle ayrı HTML dosyalarında tutulabilse de, bir satır içi şablonu da kullanabilirsiniz. Ancak, biçimlendirme ve kod arasında temiz ayrımı sürdürmek için, ayrı bir dosya kullanılması önerilir.
 
-### <a name="question-must-templates-use-the-html-file-extension"></a>Soru: Şablonlar .html dosya uzantısını kullanmalı mı?
+### <a name="question-must-templates-use-the-html-file-extension"></a>Soru: şablonlar. html dosya uzantısını kullanmalıdır mi?
 
-Cevap: Sayfa şablonu dosyalarının *.html* uzantısı tamamen isteğe bağlıdır, çünkü `render` her zaman işleve ikinci bağımsız değişkende dosyaya giden tam göreli yolu tanımlarsınız. Ancak, Visual Studio (ve diğer editörler) genellikle sayfa şablonları kesinlikle HTML olmadığı gerçeğini ağır basar *.html* dosyaları ile kod tamamlama ve sözdizimi renklendirme gibi özellikler verir.
+Yanıt: sayfa şablonu dosyaları için *. html* uzantısı tamamen isteğe bağlıdır; çünkü her zaman, işleve ikinci bağımsız değişkende dosyanın tam yolunu her zaman belirlersiniz `render` . Ancak, Visual Studio (ve diğer düzenleyiciler), genellikle, sayfa şablonlarının tamamen HTML olmaması durumunda kod tamamlama ve *. html* dosyalarıyla söz dizimi renklendirme gibi özellikler sağlar.
 
-Aslında, bir Django projesiyle çalışırken Visual Studio, düzenlediğiniz HTML dosyasının aslında bir Django şablonu olduğunu otomatik olarak algılar ve belirli otomatik tamamlama özellikleri sağlar. Örneğin, bir Django sayfası şablonu yorum `{#`yazmaya başladığınızda, Visual `#}` Studio otomatik olarak kapanış karakterleri verir. **Yorum Seçimi** ve **Yorumsuz Seçim** komutları **(Gelişmiş'i** **Edit** > menüsünde ve araç çubuğunda) HTML yorumları yerine şablon açıklamaları da kullanır.
+Aslında, bir Docgo projesiyle çalışırken Visual Studio, düzenlemekte olduğunuz HTML dosyasının gerçekte bir Docgo şablonu olduğu zaman otomatik olarak algılar ve belirli otomatik tamamlanmış özellikleri sağlar. Örneğin, bir Docgo sayfa şablonu açıklaması yazmaya başladığınızda, `{#` Visual Studio otomatik olarak kapanış `#}` karakterleri verir. **Açıklama seçimi** ve **seçim komutlarının açıklamasını kaldırın** ( **Edit**  >  **Gelişmiş** düzenleme menüsünde ve araç çubuğunda), HTML açıklamaları yerine şablon açıklamalarını de kullanır.
 
-### <a name="question-when-i-run-the-project-i-see-an-error-that-the-template-cannot-be-found-whats-wrong"></a>Soru: Projeyi çalıştırdığımda şablonun bulunamadığı bir hata görüyorum. Ne oldu?
+### <a name="question-when-i-run-the-project-i-see-an-error-that-the-template-cannot-be-found-whats-wrong"></a>Soru: projeyi çalıştırdığımda, şablonun bulunamadığını belirten bir hata görüyorum. Ne oldu?
 
-Yanıt: Şablonun bulunamadığı hataları görürseniz, uygulamayı Django projesinin *listedeki settings.py* eklediğinizden `INSTALLED_APPS` emin olun. Bu giriş olmadan, Django uygulamanın *şablonlar* klasörüne bakmayı bilemez.
+Cevap: şablonun bulunamadığını belirten hatalar görürseniz, uygulamayı listede Docgo projesinin *Settings.py* eklediğinizden emin olun `INSTALLED_APPS` . Bu giriş olmadan Docgo, uygulamanın *Şablonlar* klasörünü aramak için bilgi vermez.
 
-### <a name="question-why-is-template-namespacing-important"></a>Soru: Şablon adaralığı neden önemlidir?
+### <a name="question-why-is-template-namespacing-important"></a>Soru: Template namespacing neden önemlidir?
 
-Cevap: Django `render` işlevde atıfta bulunulan bir şablon aradığında, önce göreli yola uyan hangi dosyayı bulursa onu kullanır. Aynı projede şablonlar için aynı klasör yapılarını kullanan birden fazla Django uygulamanız varsa, bir uygulamanın istemeden başka bir uygulamadan şablon kullanması olasıdır. Bu tür hataları önlemek için, her zaman bir uygulamanın *şablonlar* klasörünün altında, herhangi bir yinelemeyi önlemek için uygulamanın adıyla eşleşen bir alt klasör oluşturun.
+Cevap: Docgo, işlevde başvurulan bir şablonu ararken `render` , ilk bulduğu dosyayı göreli yol ile eşleşen bir dosya kullanır. Şablonlar için aynı klasör yapılarını kullanan aynı projede birden çok Docgo uygulamanız varsa, bu, bir uygulamanın başka bir uygulamadaki bir şablonu yanlışlıkla kullanması olasıdır. Bu tür hatalardan kaçınmak için her zaman bir uygulamanın *Şablonlar* klasörü altında, herhangi bir yinelemeyi önlemek için uygulamanın adıyla eşleşen bir alt klasör oluşturun.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Statik dosyalara hizmet, sayfa ekleme ve şablon kalıtımını kullanma](learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md)
+> [Statik dosyaları sunma, sayfa ekleme ve şablon devralmayı kullanma](learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md)
 
-## <a name="go-deeper"></a>Daha derine inin
+## <a name="go-deeper"></a>Daha derin git
 
-- [İlk Django uygulaması, bölüm 1 yazma - views](https://docs.djangoproject.com/en/2.0/intro/tutorial01/#write-your-first-view) (docs.djangoproject.com)
-- Içerir ve devralma gibi Django şablonlarının daha fazla yeteneği için Bkz. [Django şablon dili](https://docs.djangoproject.com/en/2.0/ref/templates/language/) (docs.djangoproject.com)
-- [inLearning](https://www.linkedin.com/learning/topics/regular-expressions) (LinkedIn) üzerinde düzenli ifade eğitimi
-- GitHub'da Öğretici kaynak kodu: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
+- [Ilk Docgo uygulamanızı yazma, Bölüm 1-görünümler](https://docs.djangoproject.com/en/2.0/intro/tutorial01/#write-your-first-view) (docs.djangoproject.com)
+- Dahil ve devralma gibi Docgo şablonlarının daha fazla özelliği için bkz [. docgo şablonu dili](https://docs.djangoproject.com/en/2.0/ref/templates/language/) (docs.djangoproject.com)
+- Inlearning (LinkedIn) için [normal ifade eğitimi](https://www.linkedin.com/learning/topics/regular-expressions)
+- GitHub 'daki öğretici kaynak kodu: [Microsoft/Python-Sample-vs-Learning-docgo](https://github.com/Microsoft/python-sample-vs-learning-django)

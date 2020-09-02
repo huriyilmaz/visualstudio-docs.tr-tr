@@ -9,17 +9,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4bebaa8c197d0b0a4447739d900062bef2bda37c
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816663"
 ---
 # <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>İzlenecek yol: Gerçekçi bir 3B bilardo topu oluşturma
 
 Bu izlenecek yol, Visual Studio 'daki gölgelendirici tasarımcısını ve görüntü düzenleyicisini kullanarak gerçekçi bir 3B mildo topu oluşturmayı gösterir. Milbdo topu 3B görünümü, çeşitli gölgelendirici tekniklerini uygun doku kaynaklarıyla birleştirerek elde edilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu yönergeyi tamamlamak için aşağıdaki bileşenler ve beceriler gereklidir:
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::GetThis | Microsoft Docs
+title: 'IDebugMethodField:: GetThis | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 786f3986875518470ed5756a0f7b57f4f93f5ca2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62563617"
 ---
 # <a name="idebugmethodfieldgetthis"></a>IDebugMethodField::GetThis
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Alır `this` (`Me` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) metodunu içeren nesne işaretçisi.  
+`this` `Me` [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] Yöntemi içeren nesnenin (ın) işaretçisini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetThis(   
@@ -40,13 +40,13 @@ int GetThis(
   
 #### <a name="parameters"></a>Parametreler  
  `ppClass`  
- [out] Döndürür bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) "Bu" işaretçiyi temsil eden nesne.  
+ dışı "This" işaretçisini temsil eden bir [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Nesne yönelimli dillerde, genellikle geçerli bir sınıf örneğinin örtülü bir işaretçi yok. Bu olarak bilinir `this` C# / C++ ve `Me` içinde [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
+ Nesne yönelimli dillerde, genellikle bir sınıfın geçerli örneklemesi için örtülü bir işaretçi vardır. Bu, `this` C#/c + + ve içinde olduğu gibi bilinir `Me` [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   

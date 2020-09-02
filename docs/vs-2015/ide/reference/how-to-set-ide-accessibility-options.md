@@ -12,24 +12,24 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: afff9e06c4333f4910e22e963d24090c1d1e4c6a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651328"
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>Nasıl Yapılır: IDE Erişilebilirlik Seçeneklerini Ayarlama
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], görme zorluğu olan kişilerin ve yazma zorluğu çeken kişilerin yazmasını kolaylaştıran özellikler içerir. Bu özellikler, düzenleyicilerde metnin boyut ve renginin değiştirilmesini, araç çubuklarındaki metin ve düğmelerin boyutunu değiştirmeyi, yöntemlerin ve parametrelerin otomatik olarak tamamlanmasını de bir kaç tane ad edileceğini içerir.
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] az görme zorluğu olan kişilerin ve yazma zorluğu sınırlı kişiler için okumayı kolaylaştıran özellikler içerir. Bu özellikler, düzenleyicilerde metnin boyut ve renginin değiştirilmesini, araç çubuklarındaki metin ve düğmelerin boyutunu değiştirmeyi, yöntemlerin ve parametrelerin otomatik olarak tamamlanmasını de bir kaç tane ad edileceğini içerir.
 
- Ayrıca, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] en sık yazılan karakterleri daha erişilebilir hale getirmek için Dvorak klavye düzenlerini destekler. Ayrıca, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bulunan varsayılan kısayol tuşlarını özelleştirebilirsiniz. Daha fazla bilgi için bkz. [klavye kısayollarını tanımlama ve özelleştirme](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
+ Ayrıca, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] en sık yazılan karakterlerin daha erişilebilir olmasını sağlayan Dvorak klavye düzenlerini destekler. Ayrıca, ile kullanılabilen varsayılan kısayol tuşlarını özelleştirebilirsiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [klavye kısayollarını tanımlama ve özelleştirme](../../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md).
 
 > [!NOTE]
 > Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ## <a name="editors-dialogs-and-tool-windows"></a>Düzenleyiciler, diyaloglar ve araç pencereleri
- Varsayılan olarak, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] içindeki iletişim kutuları ve araç pencereleri işletim sistemiyle aynı yazı tipi boyutunu ve renklerini kullanır. IDE, iletişim kutuları, araç çubukları ve araç pencerelerinin çerçevesinin renk ayarları bir renk düzenini temel alarak: açık veya koyu. Geçerli renk temasını [Genel, ortam, Seçenekler Iletişim kutusunda](../../ide/reference/general-environment-options-dialog-box.md)değiştirebilirsiniz.
+ Varsayılan olarak, içindeki iletişim kutuları ve araç pencereleri [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] işletim sistemiyle aynı yazı tipi boyutunu ve renklerini kullanır. IDE, iletişim kutuları, araç çubukları ve araç pencerelerinin çerçevesinin renk ayarları bir renk düzenini temel alarak: açık veya koyu. Geçerli renk temasını [Genel, ortam, Seçenekler Iletişim kutusunda](../../ide/reference/general-environment-options-dialog-box.md)değiştirebilirsiniz.
 
  Ayrıca, düzenleyicinin kod görünümünde açılır pencereleri de görüntüleyebilirsiniz. Bu pencereler geçerli nesne üzerindeki kullanılabilir Üyeler ve bir işlevi veya ifadeyi tamamlamaya yönelik parametreler için sizi uyarır. Yazma güçlüğü çekiyorsanız, bu pencereler yararlı olabilir. Ancak, bu kişiler, bazı kullanıcılar için sorunlu olabilecek kod düzenleyicisine odaklanmayı engellemez. Bu pencereleri devre dışı bırakarak, Seçenekler iletişim kutusunu açıp **otomatik liste üyelerini** ve **parametre bilgilerini** **metin düzenleyicisinde**, **tüm diller**, **genel** sayfasında bulunan **Seçenekler iletişim kutusunda** temizleyerek temizleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: genel düzenleyici seçeneklerini ayarlama](https://msdn.microsoft.com/704e4a7b-2162-4bed-8a47-f4f6ffec98c2).
 
@@ -71,7 +71,7 @@ ms.locfileid: "72651328"
  Ayrıca, düzenleyicideki metin, kenar boşluğu göstergeleri, boşluk ve kod öğeleri için varsayılan renkleri değiştirmeyi de seçebilirsiniz.
 
 > [!NOTE]
-> İşletim sisteminizdeki tüm uygulama pencereleri için yüksek karşıtlık renkleri kullanmak istiyorsanız sol <strong>alt +</strong>sol **SHIFT + PRINT Screen**tuşlarına basın. @No__t_0 açıksa, yüksek karşıtlık renklerini tam olarak uygulamak için [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kapatıp yeniden açın.
+> İşletim sisteminizdeki tüm uygulama pencereleri için yüksek karşıtlık renkleri kullanmak istiyorsanız sol <strong>alt +</strong>sol **SHIFT + PRINT Screen**tuşlarına basın. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Açıksa, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] yüksek karşıtlık renklerini tam olarak uygulamak için kapatın ve yeniden açın.
 
 ##### <a name="to-change-the-color-of-items-in-the-editor"></a>Düzenleyicideki öğelerin rengini değiştirmek için
 

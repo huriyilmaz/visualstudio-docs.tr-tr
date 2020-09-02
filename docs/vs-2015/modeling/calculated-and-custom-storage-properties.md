@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 372159a7405eb7a350aa55c55cf0c7e582dc98e4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72668368"
 ---
 # <a name="calculated-and-custom-storage-properties"></a>Hesaplanan ve Özel Depolama Özellikleri
@@ -26,11 +26,11 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
 ## <a name="kinds-of-domain-properties"></a>Etki alanı özelliklerinin türleri
  DSL tanımında, aşağıdaki tabloda listelendiği gibi bir etki alanı özelliği **türünü** ayarlayabilirsiniz:
 
-|Alan özelliği türü|Açıklama|
+|Alan özelliği türü|Description|
 |--------------------------|-----------------|
 |**Standart** (varsayılan)|*Depoya* kaydedilen ve dosyaya serileştirilmiş bir alan özelliği.|
-|**Hesapla**|Depoda kaydedilmemiş ancak diğer değerlerden hesaplanan salt bir salt okunurdur.<br /><br /> Örneğin, `Person.Age` `Person.BirthDate` hesaplanabilir.<br /><br /> Hesaplamayı gerçekleştiren kodu sağlamanız gerekir. Genellikle, diğer etki alanı özelliklerinden değeri hesaplayabilirsiniz. Ancak dış kaynakları da kullanabilirsiniz.|
-|**Özel depolama**|Doğrudan depoya kaydedilmemiş, ancak hem Get hem de set olabilecek bir etki alanı özelliği.<br /><br /> Değeri alan ve ayarlamış olan yöntemleri sağlamanız gerekir.<br /><br /> Örneğin, `Person.FullAddress` `Person.StreetAddress`, `Person.City` ve `Person.PostalCode` depolanabilir.<br /><br /> Ayrıca, dış kaynaklara erişebilirsiniz. Örneğin, bir veritabanından değerler almak ve ayarlamak için.<br /><br /> @No__t_0 true olduğunda kodunuzun depodaki değerleri ayarlaması gerekmez. Bkz. [işlemler ve özel ayarlayıcılar](#setters).|
+|**Hesaplanmış**|Depoda kaydedilmemiş ancak diğer değerlerden hesaplanan salt bir salt okunurdur.<br /><br /> Örneğin, `Person.Age` öğesinden hesaplanabilir `Person.BirthDate` .<br /><br /> Hesaplamayı gerçekleştiren kodu sağlamanız gerekir. Genellikle, diğer etki alanı özelliklerinden değeri hesaplayabilirsiniz. Ancak dış kaynakları da kullanabilirsiniz.|
+|**Özel depolama**|Doğrudan depoya kaydedilmemiş, ancak hem Get hem de set olabilecek bir etki alanı özelliği.<br /><br /> Değeri alan ve ayarlamış olan yöntemleri sağlamanız gerekir.<br /><br /> Örneğin,, `Person.FullAddress` ve içinde depolanabilir `Person.StreetAddress` `Person.City` `Person.PostalCode` .<br /><br /> Ayrıca, dış kaynaklara erişebilirsiniz. Örneğin, bir veritabanından değerler almak ve ayarlamak için.<br /><br /> Kodunuz, true olduğunda depodaki değerleri ayarlamanıza memelidir `Store.InUndoRedoOrRollback` . Bkz. [işlemler ve özel ayarlayıcılar](#setters).|
 
 ## <a name="providing-the-code-for-a-calculated-or-custom-storage-property"></a>Hesaplanmış veya özel bir depolama özelliği için kod sağlama
  Bir etki alanı özelliğinin türünü hesaplanmış veya özel depolama olarak ayarlarsanız, erişim yöntemleri sağlamanız gerekir. Çözümünüzü oluşturduğunuzda bir hata raporu, size gerekli olanları bildirir.
@@ -45,7 +45,7 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
 
 3. **Çözüm Gezgini**araç çubuğundan **Tüm Şablonları Dönüştür** ' e tıklayın.
 
-4. **Yapı** menüsünde **çözüm oluştur**' a tıklayın.
+4. **Yapı** menüsünde **Yapı Çözümü**’ne tıklayın.
 
      Şu hata iletisini alıyorsunuz: "*YourClass* , Get*yourproperty*için bir tanım içermiyor."
 
@@ -56,11 +56,11 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
     > [!NOTE]
     > Bu dosya DslDefinition. dsl 'den oluşturulur. Bu dosyayı düzenlerseniz, **Tüm Şablonları Dönüştür**' e tıkladığınızda yaptığınız değişiklikler kaybedilir. Bunun yerine, gerekli yöntemi ayrı bir dosyaya ekleyin.
 
-6. Sınıf dosyasını ayrı bir klasörde oluşturun veya açın, örneğin CustomCode \\*YourDomainClass*. cs.
+6. Sınıf dosyasını ayrı bir klasörde oluşturun veya açın, örneğin CustomCode \\ *YourDomainClass*. cs.
 
      Ad alanının oluşturulan kodla aynı olduğundan emin olun.
 
-7. Sınıf dosyasında, etki alanı sınıfının kısmi bir uygulamasını yazın. Sınıfında, aşağıdaki örneğe benzer eksik `Get` yöntemi için bir tanım yazın:
+7. Sınıf dosyasında, etki alanı sınıfının kısmi bir uygulamasını yazın. Sınıfında, aşağıdaki örneğe benzer eksik yöntem için bir tanım yazın `Get` :
 
     ```
     namespace Company.FamilyTree
@@ -70,7 +70,7 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
     }  }
     ```
 
-8. **Türü** **özel depolama**olarak ayarlarsanız Ayrıca bir `Set` yöntemi sağlamanız gerekecektir. Örneğin:
+8. **Türü** **özel depolama**olarak ayarlarsanız, bir yöntemi de belirtmeniz gerekir `Set` . Örneğin:
 
     ```
     void SetAgeValue(int value)
@@ -79,16 +79,16 @@ Etki alanına özgü dil (DSL) içindeki tüm etki alanı özellikleri, diyagram
             System.DateTime.Today.Year - value; }
     ```
 
-     @No__t_0 true olduğunda kodunuzun depodaki değerleri ayarlaması gerekmez. Bkz. [işlemler ve özel ayarlayıcılar](#setters).
+     Kodunuz, true olduğunda depodaki değerleri ayarlamanıza memelidir `Store.InUndoRedoOrRollback` . Bkz. [işlemler ve özel ayarlayıcılar](#setters).
 
 9. Çözümü derleyin ve çalıştırın.
 
 10. Özelliği test edin. **Geri almayı** ve **yinelemeyi**denediğinizden emin olun.
 
-## <a name="setters"></a>İşlemler ve özel ayarlayıcılar
+## <a name="transactions-and-custom-setters"></a><a name="setters"></a> İşlemler ve özel ayarlayıcılar
  Özel depolama özelliğinin set yönteminde bir işlem açmanız gerekmez, çünkü Yöntem genellikle etkin bir işlem içinde çağırılır.
 
- Ancak, Kullanıcı geri alma veya yeniden yapma işlemini çağrılırsa veya bir işlem geri alınırsa set yöntemi de çağrılabilir. @No__t_0 true olduğunda, set yönteminiz aşağıdaki gibi davranır:
+ Ancak, Kullanıcı geri alma veya yeniden yapma işlemini çağrılırsa veya bir işlem geri alınırsa set yöntemi de çağrılabilir. <xref:Microsoft.VisualStudio.Modeling.Store.InUndoRedoOrRollback%2A>True olduğunda, set yönteminiz aşağıdaki gibi davranır:
 
 - Diğer etki alanı özelliklerine değer atama gibi, depoda değişiklik yapmamalıdır. Geri alma Yöneticisi, değerlerini ayarlayacaktır.
 

@@ -1,5 +1,5 @@
 ---
-title: İleti Seçenekleri iletişim kutusu | Microsoft Docs
+title: İleti seçenekleri Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,45 +13,45 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b5aaf79478ba84d87d3dc6d7868bdb13ee0168f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198188"
 ---
 # <a name="message-options-dialog-box"></a>İleti Seçenekleri İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İletileri listelenen seçmek için bu iletişim kutusunu kullanın [iletiler görünümünü](../debugger/messages-view.md). Bu iletişim kutusu görüntülemeyi tercih **günlük iletilerini** gelen **Spy** menüsü.  
+[Iletiler görünümünde](../debugger/messages-view.md)hangi iletilerin listelendiğini seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu göstermek için **Spy** menüsünde **günlük iletileri** ' ni seçin.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Pencereler Sekmesi, İleti Seçenekleri İletişim Kutusu](../debugger/windows-tab-message-options-dialog-box.md)  
- Listelemek için ileti türlerini seçmek için kullanılır. Bulucu Aracı'nı içerir.  
+ Listeye eklenecek ileti türlerini seçmek için kullanılır. Bulucu aracını içerir.  
   
  [İletiler Sekmesi, İleti Seçenekleri İletişim Kutusu](../debugger/messages-tab-message-options-dialog-box.md)  
- Görüntüleme için ileti türlerini seçmek için kullanılır.  
+ Görüntülenecek ileti türlerini seçmek için kullanılır.  
   
  [Çıktı Sekmesi, İleti Seçenekleri İletişim Kutusu](../debugger/output-tab-message-options-dialog-box.md)  
- Görüntülenecek ileti verileri belirtmek için kullanılır.  
+ Görüntülenecek ileti verilerini belirtmek için kullanılır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [İleti Arama İletişim Kutusu](../debugger/message-search-dialog-box.md)  
- İleti görünümünde belirli bir ileti düğüm bulmak için kullanılır.  
+ Ileti görünümünde belirli bir iletinin düğümünü bulmak için kullanılır.  
   
  [İleti Özellikleri İletişim Kutusu](../debugger/message-properties-dialog-box.md)  
- İleti görünümünde seçilen bir ileti özelliklerini görüntülemek için kullanılır.  
+ Ileti görünümünde seçilen bir iletinin özelliklerini görüntülemek için kullanılır.  
   
  [Spy++ Başvurusu](../debugger/spy-increment-reference.md)  
- Her Spy ++ menü ve iletişim kutusunu tanımlayan bölümler içerir.  
+ Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.  
   
- [İletiler görünümünde ileti arama](../debugger/how-to-search-for-a-message-in-messages-view.md)  
- Belirli bir ileti'ta iletiler görünümü bulmak açıklanmaktadır.  
+ [Iletiler görünümünde Ileti arama](../debugger/how-to-search-for-a-message-in-messages-view.md)  
+ Iletiler görünümünde belirli bir iletinin nasıl bulunacağını açıklar.  
   
  [İletiler Görünümü](../debugger/messages-view.md)  
- Bir pencere, işlem veya iş parçacığı ile ilişkili ileti akışı görüntüler.  
+ Pencere, işlem veya iş parçacığı ile ilişkili ileti akışını görüntüler.  
   
  [Spy++ Görünümleri](../debugger/spy-increment-views.md)  
- Spy ++ ağaç görünümlerini windows, iletileri, süreçleri ve iş parçacıkları açıklar.  
+ Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.  
   
- [Spy++ kullanma](../debugger/using-spy-increment.md)  
- Spy ++ araç tanıtır ve nasıl kullanılacağını açıklar.
+ [Spy++ Kullanma](../debugger/using-spy-increment.md)  
+ Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.

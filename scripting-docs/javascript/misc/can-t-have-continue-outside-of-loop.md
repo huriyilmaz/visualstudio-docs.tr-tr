@@ -15,18 +15,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: e1223b3cee7f0246d8d685260fb6ea9ad0045347
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85817651"
 ---
 # <a name="cant-have-continue-outside-of-loop"></a>Döngü dışında 'continue' olamaz
 **Continue** ifadesini bir döngünün dışında kullanmaya çalıştınız. **Continue** deyimleri yalnızca a gövdesi içinde kullanılabilir:  
   
-- `do-while`gerçekleştirmek  
+- `do-while` gerçekleştirmek  
   
-- `while`gerçekleştirmek  
+- `while` gerçekleştirmek  
   
 - **for** döngüsü,  
   
@@ -36,9 +36,9 @@ ms.locfileid: "85817651"
   
 - **Continue** ifadesinin gövdesi içinde göründüğünden emin olun:  
   
-  - `do-while`gerçekleştirmek  
+  - `do-while` gerçekleştirmek  
 
-  - `while`gerçekleştirmek  
+  - `while` gerçekleştirmek  
 
   - **for** döngüsü,  
 

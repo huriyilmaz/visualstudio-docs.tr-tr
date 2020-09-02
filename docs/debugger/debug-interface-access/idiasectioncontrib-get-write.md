@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5c3f91077dfeadaad60dee88ded5998b81593867
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85466079"
 ---
 # <a name="idiasectioncontribget_write"></a>IDiaSectionContrib::get_write
@@ -33,7 +33,7 @@ HRESULT get_write ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE`Bölüm üzerine yazılıp yazılamayacağını döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` Bölüm üzerine yazılıp yazılamayacağını döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.
