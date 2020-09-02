@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::frameForVA | Microsoft Docs
+title: 'IDiaStackWalkHelper:: frameForVA | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c4a36c31058912d1acc3d92e907954e48255c23a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150125"
 ---
 # <a name="idiastackwalkhelperframeforva"></a>IDiaStackWalkHelper::frameForVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Belirtilen sanal adres içeren yığın çerçevesini alır.  
+Belirtilen sanal adresi içeren yığın çerçevesini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT frameForVA(   
@@ -36,13 +36,13 @@ HRESULT frameForVA( 
   
 #### <a name="parameters"></a>Parametreler  
  `va`  
- [in] Çerçeve veriler için sanal adres.  
+ 'ndaki Çerçeve verilerinin sanal adresi.  
   
  `ppFrame`  
- [out] Bir [Idiaframedata](../../debugger/debug-interface-access/idiaframedata.md) belirtilen adreste yığın çerçevesini temsil eden nesne.  
+ dışı Belirtilen adresteki yığın çerçevesini temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

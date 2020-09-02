@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkframe::searchforreturnaddressstart | Microsoft Docs
+title: 'IDiaStackWalkFrame:: searchForReturnAddressStart | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4f2d34c4f10679d6f0702dead5352ddf088704b4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150177"
 ---
 # <a name="idiastackwalkframesearchforreturnaddressstart"></a>IDiaStackWalkFrame::searchForReturnAddressStart
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Belirtilen yığın çerçevesinin veya belirtilen adres'e yakın bir dönüş adresi arar.  
+Belirtilen adreste veya yakınında bir dönüş adresi için belirtilen yığın çerçevesini arar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT searchForReturnAddressStart (   
@@ -37,17 +37,17 @@ HRESULT searchForReturnAddressStart ( 
   
 #### <a name="parameters"></a>Parametreler  
  `frame`  
- [in] Bir [Idiaframedata](../../debugger/debug-interface-access/idiaframedata.md) geçerli yığın çerçevesini temsil eden nesne.  
+ 'ndaki Geçerli yığın çerçevesini temsil eden bir [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) nesnesi.  
   
  `startAddress`  
- [in] Bir sanal bellek adres aramaya başlanacak.  
+ 'ndaki Aramanın başlatılacağı bir sanal bellek adresi.  
   
  `returnAddress`  
- [out] En yakın işlevi dönüş adresi döndürür `startAddress`.  
+ dışı En yakın işlev dönüş adresini döndürür `startAddress` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiastackwalkframe](../../debugger/debug-interface-access/idiastackwalkframe.md)   
+ [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)   
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

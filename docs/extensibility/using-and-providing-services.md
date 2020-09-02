@@ -1,5 +1,5 @@
 ---
-title: Hizmet Kullanma ve Sağlama | Microsoft Dokümanlar
+title: Hizmetleri kullanma ve sağlama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,35 +13,35 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 8741d8d66af96ad4c6abea44b238393a34c5aa95
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80698733"
 ---
 # <a name="using-and-providing-services"></a>Hizmetleri Kullanma ve Sağlama
-Hizmet, iki VSPackages arasındaki bir sözleşmedir. Bir VSPackage, başka bir VSPackage'ın tüketilmesi için belirli bir arayüz kümesi sunar. Örneğin, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> hizmet, yüklenenen herhangi bir VSPackage'a sunar. Bu hizmet, <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> etkinlik günlüğüne yazmak için kullanılabilecek arabirimi sağlar. Daha fazla bilgi için [bkz: Etkinlik Günlüğü'nün kullanımı.](../extensibility/how-to-use-the-activity-log.md)
+Hizmet iki VSPackages arasında bir sözleşmedir. Bir VSPackage, başka bir VSPackage kullanmak için belirli bir arabirim kümesi sunar. Örneğin, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] <xref:Microsoft.VisualStudio.Shell.Interop.SVsActivityLog> hizmeti her türlü VSPackage hizmetine sunar. Bu hizmet, <xref:Microsoft.VisualStudio.Shell.Interop.IVsActivityLog> etkinlik günlüğüne yazmak için kullanılabilecek arabirimi sağlar. Daha fazla bilgi için bkz. [nasıl yapılır: etkinlik günlüğünü kullanma](../extensibility/how-to-use-the-activity-log.md).
 
- VSPackages <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService> arayüzü kullanarak kendi hizmetleri sunabilir ...
+ VSPackages, arabirimini kullanarak kendi hizmetlerini sunabilir <xref:Microsoft.VisualStudio.Shell.Interop.IProfferService> .
 
- Visual Studio aşağıdaki gibi önemli hizmetler sunar:
+ Visual Studio aşağıdakiler gibi önemli hizmetler sunar:
 
-|IDE hizmeti|Açıklama|
+|IDE hizmeti|Description|
 |-----------------|-----------------|
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>|Temel işlevlerle, VSPackages'le ve kayıt defteriyle ilgili IDE hizmetlerine erişim sağlar.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>|Araçlar ve belge pencereleri oluşturma olanağı gibi IDE'de temel pencere ve Kullanıcı Arabirimi ile ilgili işlevsellik sağlar.|
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution>|Projeleri sayısalama, yeni projeler oluşturma ve proje değişikliklerini izleme gibi çözümle ilgili temel işlevleri sağlar.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>|Temel işlevlerle, VSPackages ve kayıt defteriyle ilgili IDE hizmetlerine erişim sağlar.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>|IDE 'de araçlar ve belge pencereleri oluşturma gibi temel bir Pencereleme ve Kullanıcı arabirimi ile ilgili işlevsellik sağlar.|
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution>|Projeleri listeleme, yeni projeler oluşturma ve proje değişikliklerini izleme gibi çözümle ilgili temel işlevleri sağlar.|
 
 ## <a name="in-this-section"></a>Bu Bölümde
-- [Hizmet Esasları](../extensibility/internals/service-essentials.md) Visual Studio hizmetinin önemli unsurlarını sunar.
+- [Service Essentials](../extensibility/internals/service-essentials.md) Bir Visual Studio hizmetinin önemli öğelerini gösterir.
 
-- [Nasıl Yapilir: Hizmet Alın](../extensibility/how-to-get-a-service.md) Bir hizmeti nasıl isteyeceğimi (tüketeceklerini) tartışır.
+- [Nasıl yapılır: hizmet alma](../extensibility/how-to-get-a-service.md) Bir hizmetin nasıl isteneceğini (kullanacağınızı) açıklar.
 
-- [Nasıl yapilir: Hizmet Sağlama](../extensibility/how-to-provide-a-service.md) Bir hizmetin nasıl sağverilebildiğini tartışır.
+- [Nasıl yapılır: hizmet sağlama](../extensibility/how-to-provide-a-service.md) Hizmetini nasıl sağlayabileceğinizi açıklar.
 
-- [Nasıl: Bir Asynchronous Visual Studio Service sağlayın](../extensibility/how-to-provide-an-asynchronous-visual-studio-service.md) Eşzamanlı bir hizmetin nasıl sağverilebildiğini tartışır.
+- [Nasıl yapılır: zaman uyumsuz bir Visual Studio hizmeti sağlama](../extensibility/how-to-provide-an-asynchronous-visual-studio-service.md) Bir zaman uyumsuz hizmeti nasıl sağlayabileceğinizi açıklar.
 
-- [Nasıl yapılsın: HizmetlerLe Sorun Giderme](../extensibility/how-to-troubleshoot-services.md) Ortak sorunları tartışır ve bunlara çözümler sunar.
+- [Nasıl yapılır: hizmetler sorunlarını giderme](../extensibility/how-to-troubleshoot-services.md) Yaygın sorunları açıklar ve bunlara çözümler sunar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 - [Visual Studio SDK](../extensibility/visual-studio-sdk.md)

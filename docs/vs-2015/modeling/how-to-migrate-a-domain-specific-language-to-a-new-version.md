@@ -10,25 +10,25 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 45f7b38f7dbb6ea470b2d9e186dc8e6bf4b33b1e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657336"
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>Nasıl yapılır: Etki Alanına Özgü Dili Yeni Sürüme Geçirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_2 ile dağıtılan [!INCLUDE[dsl](../includes/dsl-md.md)] sürümünden [!INCLUDE[vs2010](../includes/vs2010-md.md)] için, etki alanına özgü dili tanımlayan ve kullanan projeleri geçirebilirsiniz.
+[!INCLUDE[vs2010](../includes/vs2010-md.md)]İle dağıtılan sürümüne, etki alanına özgü dili tanımlayan ve kullanan projeleri geçirebilirsiniz [!INCLUDE[dsl](../includes/dsl-md.md)] [!INCLUDE[vs_orcas_long](../includes/vs-orcas-long-md.md)] .
 
- Bir geçiş aracı [!INCLUDE[vssdk_current_long](../includes/vssdk-current-long-md.md)] bir parçası olarak sağlanır. Araç, DSL araçlarını kullanan veya tanımlayan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projeleri ve çözümleri dönüştürür.
+ Bir geçiş aracı bir parçası olarak sağlanır [!INCLUDE[vssdk_current_long](../includes/vssdk-current-long-md.md)] . Araç, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kullanan veya dsl araçlarını tanımlayan projeleri ve çözümleri dönüştürür.
 
- Geçiş aracını açıkça çalıştırmanız gerekir: [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir çözüm açtığınızda bu otomatik olarak başlatılmaz. Araç ve ayrıntılı kılavuz belgesi şu yolda bulunabilir:
+ Geçiş aracını açıkça çalıştırmanız gerekir: ' de bir çözüm açtığınızda bu otomatik olarak başlatılmaz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Araç ve ayrıntılı kılavuz belgesi şu yolda bulunabilir:
 
  **% Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**
 
 ## <a name="before-you-migrate-your-dsl-projects"></a>DSL projelerinizi geçirmeden önce
- Geçiş Aracı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje dosyalarını ( **. csproj**) ve çözüm dosyalarını ( **. sln**) değiştirir.
+ Geçiş Aracı [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Proje dosyalarını (**. csproj**) ve çözüm dosyalarını (**. sln**) değiştirir.
 
 #### <a name="to-prepare-projects-for-migration"></a>Projeleri geçişe hazırlamak için.
 
@@ -61,11 +61,11 @@ ms.locfileid: "72657336"
 
 4. Projeleri dönüştürün.
 
-   1. **Dönüştür**' e tıklayın.
+   1. **Dönüştür**'e tıklayın.
 
-        Her proje dosyası dönüştürüldükten sonra _Project._ **csproj** 'un bir kopyası _Project_ **. VS2008. csproj** olarak kaydedilir
+        Her proje dosyası dönüştürüldükten sonra _Project._**csproj** 'un bir kopyası _Project_**. VS2008. csproj** olarak kaydedilir
 
-        Her çözümün bir kopyası **. sln** , _Solution_ **. VS2008. sln** olarak kaydedilir
+        Her çözümün bir kopyası _solution_**. sln** , _Solution_**. VS2008. sln** olarak kaydedilir
 
    2. Bildirilen tüm başarısız dönüştürmeleri araştırın.
 

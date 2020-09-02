@@ -1,5 +1,5 @@
 ---
-title: Arayüzler (Visual Studio Hata Ayıklama) | Microsoft Dokümanlar
+title: Arabirimler (Visual Studio hata ayıklama) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,14 +11,14 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d31eb6900841dee9d2675e87bac573b432ff2acb
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80715075"
 ---
 # <a name="interfaces-visual-studio-debugging"></a>Arabirimler (Visual Studio Hata Ayıklama)
-Yöntemler, içindekiler tablosundaki her arabirimin altında ve Vtable sırasına göre arayüz sayfasında alfabetik olarak listelenir.
+Yöntemler, içindekiler tablosundaki her arabirim altında ve vtable sırasındaki arabirim sayfasında alfabetik olarak listelenir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)
@@ -27,16 +27,16 @@ Yöntemler, içindekiler tablosundaki her arabirimin altında ve Vtable sırası
 
 - [İfade Değerlendirme Arabirimleri](../../../extensibility/debugger/reference/expression-evaluation-interfaces.md)
 
- Kesme modunda arama yığınındaki ifadeleri değerlendiren arabirimleri açıklar.
+ Kesme modunda bir çağrı yığınında ifadeleri değerlendiren arabirimleri açıklar.
 
 - [Sembol Sağlayıcısı Arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)
 
- Bir sembol sağlayıcısının türleri tanımlayıcılarla ilişkilendirmek için uyguladığı arabirimleri açıklar.
+ Bir sembol sağlayıcının türleri tanımlayıcılarla ilişkilendirmek için uyguladığı arabirimleri açıklar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
 - [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)
 
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] Hata Ayıklama SDK arabirimleri, sayısallaştırıcılar ve yapıları için belgeler içerir.
+ Hata ayıklama SDK 'sının arabirimleri, Numaralandırıcılar ve yapıları için belgeler içerir [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [API Başvurusu](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)

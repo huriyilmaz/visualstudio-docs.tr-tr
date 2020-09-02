@@ -1,5 +1,5 @@
 ---
-title: Kesme Noktası Hataları | Microsoft Dokümanlar
+title: Kesme noktası hataları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,24 +13,24 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0766792f19faf7c1933c6576ab41f65ec1b31ae9
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739224"
 ---
 # <a name="breakpoint-errors"></a>Kesme noktası hataları
-Bir kesme noktası koda bağlanmaya çalıştığında ancak başarısız olduğunda aşağıdaki işlemi açıklar.
+Aşağıdaki, bir kesme noktası koda bağlamayı denediğinde ancak başarısız olduğunda süreci açıklar.
 
-## <a name="troubleshoot-a-breakpoint-error"></a>Bir kesme noktası hatagiderme
+## <a name="troubleshoot-a-breakpoint-error"></a>Kesme noktası hatası sorunlarını giderme
 
-1. Hata ayıklama altyapısı (DE), oturum hata ayıklama yöneticisine (SDM) bir [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) gönderir.
+1. Hata ayıklama altyapısı (DE), oturum hata ayıklama Yöneticisi 'ne (SDM) bir [IDebugBreakpointErrorEvent2](../../extensibility/debugger/reference/idebugbreakpointerrorevent2.md) gönderir.
 
-2. SDM hata kesme noktası almak için [IDebugBreakpointErrorEvent2::GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) (IDebugErrorBreakpoint2**) `ppErrorBP`çağırır.
+2. SDM, hata kesme noktasını almak için [IDebugBreakpointErrorEvent2:: GetErrorBreakpoint](../../extensibility/debugger/reference/idebugbreakpointerrorevent2-geterrorbreakpoint.md) (IDebugErrorBreakpoint2 * *) öğesini çağırır `ppErrorBP` .
 
-3. SDM, hata kesme noktasının kaynaklandığı bekleyen kesme noktasını almak için [IDebugErrorBreakpoint2::GetPendingBreakpoint'i](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md) çağırır.
+3. SDM, hata kesme noktasının kaynaklandığı bekleyen kesme noktasını almak için [IDebugErrorBreakpoint2:: GetPendingBreakpoint](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getpendingbreakpoint.md) öğesini çağırır.
 
-4. SDM, hata kesme noktasının neden bağlanamamasının nedenini almak için [IDebugErrorBreakpoint2::GetBreakpointResolution'ı](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) çağırır.
+4. SDM, hata kesme noktasının bağlama nedenini almak için [IDebugErrorBreakpoint2:: GetBreakpointResolution](../../extensibility/debugger/reference/idebugerrorbreakpoint2-getbreakpointresolution.md) öğesini çağırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata ayıklama olaylarını çağırma](../../extensibility/debugger/calling-debugger-events.md)
+- [Hata ayıklayıcı olaylarını çağırma](../../extensibility/debugger/calling-debugger-events.md)

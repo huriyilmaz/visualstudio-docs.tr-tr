@@ -7,13 +7,13 @@ ms.author: pozandev
 manager: jillfra
 ms.workload: multiple
 ms.openlocfilehash: e8b35a566eb0f2457d6eb8ae3a33235df2a64cd3
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75849155"
 ---
-# <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>Nasıl yapılır: uzantılardan kaynaklanan Kullanıcı arabirimi gecikmelerini tanılama
+# <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>Nasıl yapılır: Uzantılardan kaynaklanan kullanıcı arabirimi gecikmelerini tanılama
 
 UI yanıt vermediğinde, Visual Studio, yaprak ile başlayıp temel doğru çalışarak UI iş parçacığının çağrı yığınını inceler. Eğer Visual Studio, bir çağrı yığını çerçevesinin yüklü ve etkin bir uzantının parçası olan bir modüle ait olduğunu belirlerse, bir bildirim gösterir.
 
@@ -33,7 +33,7 @@ Tanılama işlemine genel bakış aşağıdaki gibidir:
 4. Bildirimi tekrar görüntülenecek şekilde tetikleyin.
 5. ETW izlemeyi durdurun.
 6. Gecikme KIMLIĞINI almak için etkinlik günlüğünü inceleyin.
-7. 6\. adımdaki gecikme KIMLIĞINI kullanarak ETW izlemesini çözümleyin.
+7. 6. adımdaki gecikme KIMLIĞINI kullanarak ETW izlemesini çözümleyin.
 
 Aşağıdaki bölümlerde, bu adımları daha ayrıntılı bir şekilde inceleyeceğiz.
 
@@ -43,7 +43,7 @@ UI gecikmesini tanılamak için, ilk olarak Visual Studio 'Nun bildirimi göster
 
 ## <a name="restart-vs-with-activity-logging-on"></a>Etkinlik günlüğü ile VS 'yi yeniden Başlat
 
-Visual Studio, bir sorun ayıklanırken yararlı bilgiler sağlayan bir "etkinlik günlüğü" oluşturabilir. Visual Studio 'da etkinlik günlüğünü açmak için `/log` komut satırı seçeneğiyle Visual Studio 'Yu açın. Visual Studio başlatıldıktan sonra, etkinlik günlüğü şu konumda depolanır:
+Visual Studio, bir sorun ayıklanırken yararlı bilgiler sağlayan bir "etkinlik günlüğü" oluşturabilir. Visual Studio 'da etkinlik günlüğü 'nü açmak için, komut satırı seçeneğiyle birlikte Visual Studio 'Yu açın `/log` . Visual Studio başlatıldıktan sonra, etkinlik günlüğü şu konumda depolanır:
 
 ```DOS
 %APPDATA%\Microsoft\VisualStudio\<vs_instance_id>\ActivityLog.xml
@@ -71,7 +71,7 @@ PerfView izleme toplamayı başlatduktan sonra, bildirimin tekrar görünmesi i�
 
 ## <a name="examine-the-activity-log-to-get-the-delay-id"></a>Gecikme KIMLIĞINI almak için etkinlik günlüğünü inceleyin
 
-Daha önce bahsedildiği gibi, etkinlik günlüğünü *%AppData%\microsoft\visualstudio\<vs_instance_id > \ActivityLog.xml*adresinde bulabilirsiniz. Visual Studio bir uzantı Kullanıcı arabirimi gecikmesi algıladığında, kaynak olarak `UIDelayNotifications` etkinlik günlüğüne bir düğüm yazar. Bu düğüm, UI gecikmesi hakkında dört bilgi içerir:
+Daha önce bahsedildiği gibi, etkinlik günlüğünü *%AppData%\microsoft\visualstudio \<vs_instance_id>\ActivityLog.xml*adresinde bulabilirsiniz. Visual Studio Uzantı UI gecikmesini her algıladığında, kaynak olarak etkinlik günlüğüne bir düğüm yazar `UIDelayNotifications` . Bu düğüm, UI gecikmesi hakkında dört bilgi içerir:
 
 - Bir VS oturumunda UI gecikmesini benzersiz bir şekilde tanımlayan ardışık bir sayı olan UI gecikme KIMLIĞI
 - Visual Studio oturumunuzu baştan kapatmaya benzersiz bir şekilde tanımlayan oturum KIMLIĞI
@@ -102,7 +102,7 @@ Sonra, izleme dosyasını açın. Bunu, aynı PerfView örneğini kullanarak ya 
 Ardından, sol bölmedeki izleme dosyasını seçin ve sağ tıklama ya da bağlam menüsünden **Aç** ' ı seçerek dosyayı açın.
 
 > [!NOTE]
-> Varsayılan olarak PerfView bir ZIP arşivi verir. *Trace. zip*' i açtığınızda Arşivi otomatik olarak açar ve izleme açılır. Bu, izleme koleksiyonu sırasında **ZIP** kutusunun işaretini kaldırarak atlayabilirsiniz. Ancak, farklı makinelerde izlemeleri aktarmayı ve kullanmayı planlıyorsanız, **ZIP** kutusunun denetlenmesini kesinlikle öneririz. Bu seçenek olmadan, Ngen derlemeleri için gerekli pdb 'leri, izlemeye eşlik etmez ve bu nedenle, Ngen derlemelerinin sembolleri hedef makinede çözümlenmeyecektir. (Ngen derlemeleri için pdb 'leri hakkında daha fazla bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/creating-ngen-pdbs-for-profiling-reports/) bakın.)
+> Varsayılan olarak PerfView bir ZIP arşivi verir. *trace.zip*açtığınızda, Arşivi otomatik olarak açar ve izlemeyi açar. Bu, izleme koleksiyonu sırasında **ZIP** kutusunun işaretini kaldırarak atlayabilirsiniz. Ancak, farklı makinelerde izlemeleri aktarmayı ve kullanmayı planlıyorsanız, **ZIP** kutusunun denetlenmesini kesinlikle öneririz. Bu seçenek olmadan, Ngen derlemeleri için gerekli pdb 'leri, izlemeye eşlik etmez ve bu nedenle, Ngen derlemelerinin sembolleri hedef makinede çözümlenmeyecektir. (Ngen derlemeleri için pdb 'leri hakkında daha fazla bilgi için [Bu blog gönderisine](https://devblogs.microsoft.com/devops/creating-ngen-pdbs-for-profiling-reports/) bakın.)
 
 PerfView 'in izlemeyi işlemesi ve açması birkaç dakika sürebilir. İzleme açıkken, altında çeşitli "görünümler" listesi görüntülenir.
 
@@ -110,15 +110,15 @@ PerfView 'in izlemeyi işlemesi ve açması birkaç dakika sürebilir. İzleme a
 
 Kullanıcı arabirimi gecikmesi zaman aralığını almak için önce **Olaylar** görünümünü kullanacağız:
 
-1. İzleme altında `Events` düğümünü seçerek ve sağ tıklama ya da bağlam menüsünden **Aç** ' ı seçerek **Olaylar** görünümünü açın.
-2. Sol bölmedeki "`Microsoft-VisualStudio/ExtensionUIUnresponsiveness`" öğesini seçin.
+1. **Events** `Events` İzleme altındaki düğüm ' i seçerek ve sağ tıklama veya bağlam menüsünden **Aç** ' ı seçerek Olaylar görünümünü açın.
+2. `Microsoft-VisualStudio/ExtensionUIUnresponsiveness`Sol bölmede "" seçeneğini belirleyin.
 3. ENTER tuşuna basın
 
-Seçim uygulanır ve tüm `ExtensionUIUnresponsiveness` olayları sağ bölmede görüntülenir.
+Seçim uygulanır ve tüm `ExtensionUIUnresponsiveness` Olaylar sağ bölmede görüntülenir.
 
 ![Olaylar görünümünde olayları seçme](media/perfview-event-selection.png)
 
-Sağ bölmedeki her satır bir UI gecikmesine karşılık gelir. Bu olay, 6. adımdaki etkinlik günlüğündeki gecikme KIMLIĞIYLE eşleşmesi gereken bir "gecikme KIMLIĞI" değeri içerir. UI gecikmesi sonunda `ExtensionUIUnresponsiveness` tetiklendiğinden, olayın zaman damgası (kabaca) UI gecikmesi bitiş saatini işaretler. Olay gecikme süresini de içerir. UI gecikmesi başladığında zaman damgasını elde etmek için bitiş zaman damgasından süreyi çıkartabiliriz.
+Sağ bölmedeki her satır bir UI gecikmesine karşılık gelir. Bu olay, 6. adımdaki etkinlik günlüğündeki gecikme KIMLIĞIYLE eşleşmesi gereken bir "gecikme KIMLIĞI" değeri içerir. `ExtensionUIUnresponsiveness`UI gecikmesi sonunda tetiklendiğinden, olayın zaman damgası (kabaca) UI gecikmesi bitiş saatini işaretler. Olay gecikme süresini de içerir. UI gecikmesi başladığında zaman damgasını elde etmek için bitiş zaman damgasından süreyi çıkartabiliriz.
 
 ![UI gecikmesi zaman aralığını hesaplama](media/ui-delay-time-range.png)
 
@@ -137,7 +137,7 @@ Zaman aralığına sahip olduktan sonra, **olay** görünümünü kapatabilir ve
 **Iş parçacığı zaman yığınları** görünümünde, sayfanın sol üst kısmında, zaman aralığını önceki adımda hesapladığımız değerlerle ayarlayabilirsiniz ve yığınların o zaman aralığına ayarlanabilmesi için **ENTER** tuşuna basın.
 
 > [!NOTE]
-> Visual Studio zaten açık olduktan sonra izleme koleksiyonu başlatılırsa, Kullanıcı arabirimi (başlangıç) iş parçacığının hangi iş parçacığı tarafından belirlenebileceği belirlenir. Ancak, Kullanıcı arabirimi (başlangıç) iş parçacığının yığındaki ilk öğe, en olası işletim sistemi dll 'Lerinin (*ntdll. dll* ve *Kernel32. dll*) ardından `devenv!?` ve ardından `msenv!?`. Bu sıra, UI iş parçacığını belirlemenize yardımcı olabilir.
+> Visual Studio zaten açık olduktan sonra izleme koleksiyonu başlatılırsa, Kullanıcı arabirimi (başlangıç) iş parçacığının hangi iş parçacığı tarafından belirlenebileceği belirlenir. Ancak, Kullanıcı arabirimi (başlangıç) iş parçacığının yığındaki ilk öğe, en olası işletim sistemi dll 'lardır (*ntdll.dll* ve *kernel32.dll*) `devenv!?` ve ardından ve sonra `msenv!?` . Bu sıra, UI iş parçacığını belirlemenize yardımcı olabilir.
 
  ![Başlangıç iş parçacığını tanımlama](media/ui-delay-startup-thread.png)
 
@@ -156,4 +156,4 @@ PerfView, kodunuzda performans sorunlarını belirlemek için kullanabileceğini
 Ayrıca, etkin uzantıları yazmak için en iyi uygulamalar hakkında rehberlik sağlayan uzantılar için yeni Visual Studio statik Çözümleyicileri ( [burada](https://www.nuget.org/packages/microsoft.visualstudio.sdk.analyzers)NuGet paketi) kullanabilirsiniz. [Vs SDK Çözümleyicileri](https://github.com/Microsoft/VSSDK-Analyzers/blob/master/doc/index.md) ve [iş parçacığı Çözümleyicileri](https://github.com/Microsoft/vs-threading/blob/master/doc/analyzers/index.md)listesini görüntüleyin.
 
 > [!NOTE]
-> Denetim sahibi olmayan bağımlılıklar nedeniyle yanıt verme süresini adreslemezseniz (örneğin, uzantınızın UI iş parçacığında zaman uyumlu VS hizmetlerini çağırması gerekiyorsa), bunun hakkında bilgi almak istiyoruz. Visual Studio Iş ortağı programımızın bir üyesiyseniz, bir geliştirici destek isteği göndererek bizimle iletişim kurun. Aksi takdirde, görüşlerinizi göndermek için ' bir sorun bildir ' aracını kullanın ve başlığa `"Extension UI Delay Notifications"` ekleyin. Lütfen analizlerinizin ayrıntılı bir açıklamasını da ekleyin.
+> Denetim sahibi olmayan bağımlılıklar nedeniyle yanıt verme süresini adreslemezseniz (örneğin, uzantınızın UI iş parçacığında zaman uyumlu VS hizmetlerini çağırması gerekiyorsa), bunun hakkında bilgi almak istiyoruz. Visual Studio Iş ortağı programımızın bir üyesiyseniz, bir geliştirici destek isteği göndererek bizimle iletişim kurun. Aksi takdirde, görüşlerinizi göndermek ve başlığa eklemek için ' bir sorun bildir ' aracını kullanın `"Extension UI Delay Notifications"` . Lütfen analizlerinizin ayrıntılı bir açıklamasını da ekleyin.

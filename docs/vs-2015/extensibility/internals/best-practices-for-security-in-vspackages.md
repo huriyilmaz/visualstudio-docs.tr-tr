@@ -1,5 +1,5 @@
 ---
-title: Vspackage'larda güvenlik için en iyi uygulamalar | Microsoft Docs
+title: VSPackages 'ta güvenlik için en iyi uygulamalar | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,25 +13,25 @@ caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 940644cd3950c38c6383371c1844b54b328acd0c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697277"
 ---
 # <a name="best-practices-for-security-in-vspackages"></a>VSPackage’larda Güvenlik için En İyi Yöntemler
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yüklenecek [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] bilgisayarınızda yönetici kimlik bilgilerine sahip bir bağlamda çalıştırıyor olmalısınız. Güvenliği ve dağıtımı temel birimini bir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] uygulama [VSPackages](../../extensibility/internals/vspackages.md). Bir VSPackage'ı kullanarak kaydedilmelidir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], gerektiren yönetici kimlik bilgileri.  
+Bilgisayarınıza yüklemek için [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] yönetici kimlik bilgilerine sahip bir bağlamda çalıştırıyor olmanız gerekir. Temel güvenlik birimi ve uygulamanın dağıtımı, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [VSPackages](../../extensibility/internals/vspackages.md)'dir. Bir VSPackage [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , yönetim kimlik bilgileri gerektiren kullanılarak kaydedilmelidir.  
   
- Yöneticiler, kayıt defteri ve dosya sistemine yazma ve herhangi bir kodu çalıştırmak için tam izinleri vardır. Geliştirme, dağıtma veya bir VSPackage'ı yüklemek için bu izinlere sahip olmalıdır.  
+ Yöneticiler kayıt defteri ve dosya sistemine yazmak ve herhangi bir kodu çalıştırmak için tam izinlere sahiptir. VSPackage geliştirmek, dağıtmak veya yüklemek için bu izinlere sahip olmanız gerekir.  
   
- VSPackage yüklendikten hemen sonra tam olarak güvenilirdir. VSPackage'ı ile ilişkili izin nedeniyle bu yüksek düzeyde farkında olmadan kötü amaçlı olan bir VSPackage'ı yüklemek mümkündür.  
+ Yüklendikten hemen sonra VSPackage tamamen güvenilirdir. VSPackage ile ilişkili bu üst düzey izin nedeniyle, kötü amaçlı bir amaç içeren bir VSPackage 'ı yanlışlıkla yüklemek mümkündür.  
   
- Kullanıcılar VSPackages yalnızca güvenilir kaynaklardan gelen yükleme emin olmanız gerekir. VSPackage geliştirme şirketler kesin ad ve oturumunu, kullanıcı söz konusu oynama güvence altına almak için engellenir. VSPackage geliştirme şirketler, web hizmetleri ve değerlendirmek ve güvenlik sorunları düzeltmek için uzaktan yükleme gibi dış bağımlılıklarını incelemeniz gerekir.  
+ Kullanıcılar, VSPackages 'ı yalnızca güvenilir kaynaklardan yüklediklerinden emin olmalıdır. VSPackages geliştiren şirketlerin, kullanıcının izinsiz değişiklik yapmasını güvence altına almak için, onları kesin olarak adı ve imzalayabilmelidir. VSPackages geliştiren şirketler, herhangi bir güvenlik sorununu değerlendirmek ve düzeltmek üzere Web Hizmetleri ve uzaktan yükleme gibi dış bağımlılıklarını incelemelidir.  
   
- Daha fazla bilgi için .NET Framework için güvenli kodlama kılavuzları bakın ([https://msdn.microsoft.com/library/d55zzx87.aspx](https://msdn.microsoft.com/library/d55zzx87.aspx)).  
+ Daha fazla bilgi için bkz. .NET Framework () için güvenli kodlama yönergeleri [https://msdn.microsoft.com/library/d55zzx87.aspx](https://msdn.microsoft.com/library/d55zzx87.aspx) .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Eklenti güvenliği](https://msdn.microsoft.com/library/44a5c651-6246-4310-b371-65378917c799)   
- [DDEX güvenlik](https://msdn.microsoft.com/44a52a70-5c98-450e-993d-4a3b32f69ba8)
+ [Eklenti Güvenliği](https://msdn.microsoft.com/library/44a5c651-6246-4310-b371-65378917c799)   
+ [DDEX güvenliği](https://msdn.microsoft.com/44a52a70-5c98-450e-993d-4a3b32f69ba8)

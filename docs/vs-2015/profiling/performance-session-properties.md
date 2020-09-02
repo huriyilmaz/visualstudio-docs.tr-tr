@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cd521a853d9ec8c1a3fee8e50e87217621a73a89
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75848157"
 ---
 # <a name="performance-session-properties"></a>Performans Oturum Özellikleri
@@ -25,7 +25,7 @@ ms.locfileid: "75848157"
 
 Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyecek ayarları yapılandırmanıza olanak sağlar. Profil oluşturma oturumu için oluşturulan raporları da depolar.  
   
- **Requirements**  
+ **Gereksinimler**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
@@ -44,7 +44,7 @@ Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyec
   
  [.NET Bellek Ayırma ve Yaşam Süresi Verilerini Toplama](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)  
   
- [Nasıl Yapılır: Performans Veri Dosyası Adlandırma Seçeneklerini Ayarlama](../profiling/how-to-set-performance-data-file-name-options.md)  
+ [Nasıl yapılır: performans veri dosyası adı seçeneklerini ayarlama](../profiling/how-to-set-performance-data-file-name-options.md)  
   
 ## <a name="launch"></a>Başlat  
  Bu ayarlar, ikili bir listeden seçim yapmanız ve ikili dosyaların başlangıç sırasını belirtmenizi sağlar.  
@@ -67,7 +67,7 @@ Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyec
   Daha fazla bilgi için bkz [. nasıl yapılır: örnekleme olaylarını seçme](../profiling/how-to-choose-sampling-events.md)  
   
 ## <a name="binary"></a>İkili  
- Bu ayarlar, izlenen ikiliyi başka bir konuma değiştirmek isteyip istemediğinizi belirtmenize olanak tanır. Örneğin, My. DLL dosyasını profillendirilir ve izlenen ikilinin yerini değiştirmek istemiyorsanız, My. DLL ' nin yedek kopyası My. orig. DLL adlı bir yedekleme oluşturulur. Daha sonra, My. DLL verileri toplamak için yoklamalar eklenerek değiştirilir. İzlenen ikilinin yeniden konumlandırmaya karar verirseniz, orijinal ikili yeniden adlandırılmaz ve izlenen ikili, izleme sırasında kullanılmak üzere belirtilen konuma kopyalanır.  
+ Bu ayarlar, izlenen ikiliyi başka bir konuma değiştirmek isteyip istemediğinizi belirtmenize olanak tanır. Örneğin, My.DLL profilini oluşturup, izlenen ikilinin yeniden konumlandırılacağını seçerseniz, My.Orig.DLL adlı My.DLL bir yedek kopyası oluşturulur. Daha sonra, verileri toplamak için yoklamalar eklenerek My.DLL değiştirilir. İzlenen ikilinin yeniden konumlandırmaya karar verirseniz, orijinal ikili yeniden adlandırılmaz ve izlenen ikili, izleme sırasında kullanılmak üzere belirtilen konuma kopyalanır.  
   
  Daha fazla bilgi için bkz. [nasıl yapılır: başlatılacak Ikiliyi belirtme](../profiling/how-to-specify-the-binary-to-start.md)  
   
@@ -75,13 +75,13 @@ Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyec
  Daha fazla bilgi için bkz. [Katman etkileşimi verilerini toplama](../profiling/collecting-tier-interaction-data.md)  
   
 ## <a name="instrumentation"></a>İzleme  
- Bu ayarlar, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web sayfalarında JScript kodu için performans verileri toplamanıza olanak sağlar ve izleme işleminden önce veya sonra gerçekleşmesini istediğiniz herhangi bir **araç öncesi** ve **sonrası** olay belirtebilirsiniz.  
+ Bu ayarlar, Web sayfalarında JScript kodu için performans verileri toplamanıza olanak sağlar [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ve izleme işleminden önce veya sonra gerçekleşmesini istediğiniz herhangi bir **araç öncesi** ve **sonrası** olay belirtebilirsiniz.  
   
  Daha fazla bilgi için bkz.  
   
  [Nasıl Yapılır: Web Sayfalarında JavaScript Kodunun Profilini Oluşturma](../profiling/how-to-profile-javascript-code-in-web-pages.md)  
   
- [Nasıl Yapılır: Ön ve Son İzleme Komutları Belirtme](../profiling/how-to-specify-pre-and-post-instrument-commands.md)  
+ [Nasıl yapılır: Ön ve Son İzleme Komutları Belirtme](../profiling/how-to-specify-pre-and-post-instrument-commands.md)  
   
 ## <a name="cpu-counters"></a>CPU sayaçları  
  Bu ayarlar, izleme profili oluşturma yöntemini kullanırken CPU performans sayaçları hakkında veri toplamanıza olanak tanır. Taşınabilir performans sayaçları, CPU tasarımı veya üreticisi ne olursa olsun kullanılabilir. Platform olayları, CPU tasarımına ve üreticisine özeldir. Yonga hakkında performans sayaçları hakkında daha fazla bilgi için bkz. belirli işlemci belgeleri.  
@@ -89,11 +89,11 @@ Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyec
  Daha fazla bilgi için bkz [. nasıl yapılır: CPU sayacı verilerini toplama](../profiling/how-to-collect-cpu-counter-data.md)  
   
 ## <a name="windows-events"></a>Windows Olayları  
- Profil oluşturma sırasında, olay izleme sağlayıcılarından veri toplayabilirsiniz. VSPerfReport. exe komut satırı aracı `/calltrace` seçeneğini kullanarak verileri görüntüleyebilirsiniz. Windows için olay Izleme (ETW) hakkında daha fazla bilgi için bkz. [olay Izleme hakkında](https://msdn2.microsoft.com/library/aa363668.aspx).  
+ Profil oluşturma sırasında, olay izleme sağlayıcılarından veri toplayabilirsiniz. VSPerfReport.exe komut satırı araç seçeneğini kullanarak verileri görüntüleyebilirsiniz `/calltrace` . Windows için olay Izleme (ETW) hakkında daha fazla bilgi için bkz. [olay Izleme hakkında](https://msdn2.microsoft.com/library/aa363668.aspx).  
   
  Daha fazla bilgi için bkz.  
   
- [Nasıl Yapılır: Windows İçin Olay İzleme (ETW) Verileri Toplama](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)  
+ [Nasıl yapılır: Windows için Olay İzleme (ETW) Verileri](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)  
   
  [VSPerfReport](../profiling/vsperfreport.md).  
   
@@ -107,11 +107,11 @@ Bir **performans oturumu** , uygulamanın profili oluşturma şeklini belirleyec
   
  Daha fazla bilgi için bkz.  
   
- [Nasıl Yapılır: .NET Framework Çalışma Zamanını Belirtin](../profiling/how-to-specify-the-dotnet-framework-runtime.md)  
+ [Nasıl yapılır: .NET Framework çalışma zamanını belirtme](../profiling/how-to-specify-the-dotnet-framework-runtime.md)  
   
- [Nasıl Yapılır: Ek İzleme Seçeneklerini Belirtme](../profiling/how-to-specify-additional-instrumentation-options.md)  
+ [Nasıl yapılır: ek Izleme seçeneklerini belirtme](../profiling/how-to-specify-additional-instrumentation-options.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel bakış](../profiling/overviews-performance-tools.md)   
+ [Tahmin](../profiling/overviews-performance-tools.md)   
  [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)   
- [Veri Koleksiyonunu Denetleme](../profiling/controlling-data-collection.md)
+ [Veri Toplama Denetimi](../profiling/controlling-data-collection.md)

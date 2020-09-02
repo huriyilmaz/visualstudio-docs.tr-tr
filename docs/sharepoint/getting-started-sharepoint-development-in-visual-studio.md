@@ -15,9 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 999a23f8765a72feb22822120a11e1b38b9ac946
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86017089"
 ---
 # <a name="get-started-sharepoint-development-in-visual-studio"></a>Kullanmaya başlayın (Visual Studio 'da SharePoint geliştirme)
@@ -25,17 +26,17 @@ ms.locfileid: "86017089"
 
  SharePoint 2013 ve SharePoint eklentileri hakkında daha fazla bilgi için bkz. [sharepoint 2013](https://www.microsoft.com/microsoft-365/previous-versions/microsoft-sharepoint-2013) ve [derleme SharePoint eklentileri](/sharepoint/dev/sp-add-ins/sharepoint-add-ins).
 
- SharePoint, Web tabanlı bir işbirliği platformu sunar. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], liste tanımları, iş akışları, iş verileri bağlantı modelleri ve site tanımları dahil olmak üzere SharePoint siteleri ve içeriği oluşturmak için birçok proje şablonu sağlar. Ayrıca, ' de SharePoint projeleri ve araçları için Uzantılar oluşturabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
+ SharePoint, Web tabanlı bir işbirliği platformu sunar. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , liste tanımları, iş akışları, iş verileri bağlantı modelleri ve site tanımları dahil olmak üzere SharePoint siteleri ve içeriği oluşturmak için birçok proje şablonu sağlar. Ayrıca, ' de SharePoint projeleri ve araçları için Uzantılar oluşturabilirsiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-|Konu başlığı|Description|
+|Konu|Description|
 |-----------|-----------------|
 |[SharePoint hataları için ek bilgiler](../sharepoint/additional-information-for-sharepoint-errors.md)|SharePoint geliştirme ve sorun giderme sırasında yardımın nerede bulunacağını açıklar.|
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-|Konu başlığı|Description|
+|Konu|Description|
 |-----------|-----------------|
 |[SharePoint Çözümleri Geliştirme](../sharepoint/developing-sharepoint-solutions.md)|' De SharePoint geliştirmesini açıklar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .|
 |[SharePoint için genel bir geliştirme ortamı ayarlama](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)|SharePoint çözümü oluşturmak için gerekli yüklemeleri açıklar|

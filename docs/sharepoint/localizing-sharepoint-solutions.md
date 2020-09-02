@@ -18,9 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 0a7b04ab1f77eba15f2bc617f89514a8d0952674
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86017149"
 ---
 # <a name="localize-sharepoint-solutions"></a>SharePoint çözümlerini yerelleştirin
@@ -85,7 +86,7 @@ $Resources:String ID
 <asp:<class> runat="server" Text="<%$Resources:<Resource File Name>, <String ID>%>" />
 ```
 
- Örnek:
+ Örneğin:
 
 ```aspx-csharp
 <asp:Button ID="btn1" runat="server" onclick="btn1_Click" Text="<%$Resources:Resource1,String7%>"></asp:Button>
@@ -97,7 +98,7 @@ $Resources:String ID
 <asp:literal ID="<ID>" runat="server" Text="<%$Resources:<Resource File Name>, <String ID>%>" />
 ```
 
- Örnek:
+ Örneğin:
 
 ```aspx-csharp
 <asp:literal ID="Literal1" runat="server" Text="<%$Resources:Resource1, String9%>" />
@@ -108,7 +109,7 @@ $Resources:String ID
 ### <a name="localize-code"></a>Kodu yerelleştirin
  Özellik dizelerini ve biçimlendirmeyi yerelleştirmeye ek olarak [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] , çözüm kodunuzda görüntülenen ileti dizelerini ve hata dizelerini de yerelleştirmeniz gerekir. Yerelleştirilmiş bilgilendirme ve hata iletileri uydu Derlemeleriyle bulunur. Uydu derlemeleri, kullanıcılar için görünür olan [!INCLUDE[TLA2#tla_ui](../sharepoint/includes/tla2sharptla-ui-md.md)] ve özel durumlar gibi metin ve çıkış iletileri gibi dizeleri içerir.
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Standart .NET Framework hub ve bağlı bileşen modelini kullanır. Hub veya ana program derlemesi, varsayılan dil kaynaklarını içerir. Bağlı bileşenler veya uydu derlemeleri dile özgü kaynakları içerir. Daha fazla bilgi için bkz. [kaynakları paketleme ve dağıtma](/previous-versions/dotnet/netframework-4.0/sb6a8618(v=vs.100)). Uydu derlemeleri kaynak (*. resx*) dosyalarından derlenir. Projenize ve çözüm paketine dile özgü kaynak dosyaları eklediğinizde, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kaynak dosyalarını *{Project Name} .resources.dll*adlı uydu Derlemeleriyle derler.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Standart .NET Framework hub ve bağlı bileşen modelini kullanır. Hub veya ana program derlemesi, varsayılan dil kaynaklarını içerir. Bağlı bileşenler veya uydu derlemeleri dile özgü kaynakları içerir. Daha fazla bilgi için bkz. [kaynakları paketleme ve dağıtma](/previous-versions/dotnet/netframework-4.0/sb6a8618(v=vs.100)). Uydu derlemeleri kaynak (*. resx*) dosyalarından derlenir. Projenize ve çözüm paketine dile özgü kaynak dosyaları eklediğinizde, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] kaynak dosyalarını *{Project Name} .resources.dll*adlı uydu Derlemeleriyle derler.
 
  ASPX biçimlendirmesinde olduğu gibi, projenize ayrı kaynak dosyası proje öğeleri ekleyerek SharePoint uygulama kodunu yerelleştirin; biri varsayılan dil ve diğeri her yerelleştirilmiş dil için. Ancak, daha önce belirtildiği gibi, ASPX işaretlemesini yerelleştirme için kaynak dosyalarınız zaten varsa, kodu yerelleştirme için yeniden kullanabilirsiniz. Kaynak dosyaları oluşturmanız gerekiyorsa, varsayılan dil kaynak dosyasına bir *. resx* uzantısıyla tercih ettiğiniz bir ad verin. Yerelleştirilmiş kaynak dosyalarını dile özgü kültürle aynı adı eklenmiş şekilde adlandırın [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] . Uydu kaynak derlemelerinin oluşturulmasını sağlamak için her kaynak dosyanın derleme eylemi özelliğini gömülü kaynak olarak ayarlayın.
 

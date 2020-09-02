@@ -18,9 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 6f257dfed2fe439c5ab22ab9951b6258116c6567
-ms.sourcegitcommit: f9e44f5ab6a1dfb56c945c9986730465e1adb6fc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86017134"
 ---
 # <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>İzlenecek yol: ilişkilendirme ve başlatma formları ile iş akışı oluşturma
@@ -53,7 +54,7 @@ ms.locfileid: "86017134"
 >
 > Ayrıca bilgisayarınız, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Aşağıdaki yönergelerde bazı Kullanıcı arabirimi öğeleri için farklı adlar veya konumlar gösterebilir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Sahip olduğunuz sürüm ve kullandığınız ayarlar bu öğeleri tespit. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - Ve SharePoint 'in desteklenen sürümleri [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] .
@@ -167,7 +168,7 @@ ms.locfileid: "86017134"
 
 2. Menü çubuğunda, **Proje**  >  **Yeni öğe Ekle** ' yi seçerek **Yeni öğe Ekle** iletişim kutusunu görüntüleyin.
 
-3. İletişim kutusu ağacı görünümünde, **Visual C#** veya **Visual Basic** (Proje dilinize bağlı olarak) öğesini genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
+3. İletişim kutusu ağacı görünümünde, **Visual C#** veya **Visual Basic**  (Proje dilinize bağlı olarak) öğesini genişletin, **SharePoint** düğümünü genişletin ve ardından **2010** düğümünü seçin.
 
 4. Şablon listesinde, **Iş akışı başlatma formu** şablonunu seçin.
 

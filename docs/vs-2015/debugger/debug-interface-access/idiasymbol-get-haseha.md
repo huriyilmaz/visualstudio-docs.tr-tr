@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_haseha | Microsoft Docs
+title: 'IDiaSymbol:: get_hasEHa | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 87adaa2e43068784e5ec6488030f147891a027dd
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64817254"
 ---
-# <a name="idiasymbolgethaseha"></a>IDiaSymbol::get_hasEHa
+# <a name="idiasymbolget_haseha"></a>IDiaSymbol::get_hasEHa
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-İşlev (yapılandırılmış) zaman uyumsuz özel durum işlemeyi içerip içermediğini belirten bir bayrak alır.  
+İşlevin zaman uyumsuz (yapılandırılmış) özel durum işleme içerip içermediğini belirten bir bayrak alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT get_hasEHa(  
@@ -35,23 +35,23 @@ HRESULT get_hasEHa(
   
 #### <a name="parameters"></a>Parametreler  
  `pFlag`  
- [out] Döndürür `TRUE` hiç bir zaman uyumsuz özel durum işleme; işlevi varsa, aksi halde döndürür `FALSE`.  
+ dışı `TRUE` İşlevin zaman uyumsuz özel durum işleme sahip olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Uyumlu veya zaman uyumsuz yapılandırılmış özel durum işlemeyi C++ stili özel durum işleme ile karıştırmak mümkündür, ancak belirli bir derleyici anahtarı, etkinleştirmek için/eha gerektirir.  
+ C++ stili özel durum işleme ile zaman uyumsuz veya yapılandırılmış özel durum işlemeyi karıştırmak mümkündür, ancak etkinleştirmek için özel bir derleyici anahtarı (/EHa) gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|Gereksinim|Açıklama|  
+|Gereksinim|Description|  
 |-----------------|-----------------|  
-|Üst bilgi:|dia2.h|  
-|Sürüm:|DIA SDK v8.0|  
+|Üst bilgi|dia2. h|  
+|Sürüm:|DIA SDK v 8.0|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

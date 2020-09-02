@@ -1,5 +1,5 @@
 ---
-title: ClickOnce dağıtım stratejisini seçme | Microsoft Docs
+title: ClickOnce dağıtım stratejisi seçme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -17,16 +17,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cce51860b335e16fe507b20e41a5adba0b3fa278
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63418203"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64805602"
 ---
 # <a name="choosing-a-clickonce-deployment-strategy"></a>ClickOnce Dağıtım Stratejisini Seçme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Dağıtmak için üç farklı strateji vardır bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] öncelikle dağıtmakta olduğunuz uygulama türüne bağlıdır seçtiğiniz strateji; uygulama. Üç dağıtım stratejisi aşağıdaki gibidir:  
+Uygulama dağıtmaya yönelik üç farklı strateji vardır [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ; seçtiğiniz strateji birincil olarak dağıttığınız uygulamanın türüne bağlıdır. Üç dağıtım stratejisi aşağıdaki gibidir:  
   
 - Web'den veya bir Ağ Paylaşımı'ndan yükle  
   
@@ -35,39 +35,39 @@ Dağıtmak için üç farklı strateji vardır bir [!INCLUDE[ndptecclick](../inc
 - Uygulamayı Web'den veya Ağ Paylaşımı'ndan başlat  
   
     > [!NOTE]
-    > Dağıtım stratejisi seçmenin yanı sıra, uygulama güncelleştirmeleri sağlamak için de bir strateji seçmek isteyeceksiniz. Daha fazla bilgi için [ClickOnce güncelleştirme stratejisini seçme](../deployment/choosing-a-clickonce-update-strategy.md).  
+    > Dağıtım stratejisi seçmenin yanı sıra, uygulama güncelleştirmeleri sağlamak için de bir strateji seçmek isteyeceksiniz. Daha fazla bilgi için bkz. [ClickOnce güncelleştirme stratejisi seçme](../deployment/choosing-a-clickonce-update-strategy.md).  
   
 ## <a name="install-from-the-web-or-a-network-share"></a>Web'den veya bir Ağ Paylaşımı'ndan yükle  
- Bu stratejiyi kullandığınızda, uygulamanız bir Web sunucusuna veya ağ dosyası paylaşımına dağıtılır. Son kullanıcı uygulamayı yüklemek istediğinde, Web sayfası üzerinde bir simgeye tıklar veya dosya paylaşımındaki simgeye çift tıklar. Sonra son kullanıcının bilgisayarında uygulama indirilir, kurulur ve başlatılır. Öğeleri eklenir **Başlat** menü ve **Program Ekle veya Kaldır** içinde **Denetim Masası**.  
+ Bu stratejiyi kullandığınızda, uygulamanız bir Web sunucusuna veya ağ dosyası paylaşımına dağıtılır. Son kullanıcı uygulamayı yüklemek istediğinde, Web sayfası üzerinde bir simgeye tıklar veya dosya paylaşımındaki simgeye çift tıklar. Sonra son kullanıcının bilgisayarında uygulama indirilir, kurulur ve başlatılır. Öğeler **Başlat** menüsüne ve **Denetim Masası**'Ndaki **Program Ekle veya Kaldır** ' a eklenir.  
   
  Bu strateji ağ bağlantısına bağlı olduğundan, yerel ağ veya yüksek hızlı Internet bağlantısı erişimi olan kullanıcılar çok iyi çalışır.  
   
- Uygulamayı Web'den dağıtırsanız, URL kullanımı etkinleştirildiğinde bağımsız değişkenleri uygulamaya geçirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Bir çevrimiçi bir ClickOnce uygulamasında sorgu dize bilgilerini alma](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md). Bu belgede açıklanan diğer yöntemleri kullanarak etkinleştirilen bir uygulamaya bağımsız değişkenler geçirilemez.  
+ Uygulamayı Web'den dağıtırsanız, URL kullanımı etkinleştirildiğinde bağımsız değişkenleri uygulamaya geçirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: sorgu dizesi bilgilerini bir çevrimiçi ClickOnce uygulamasında alma](../deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application.md). Bu belgede açıklanan diğer yöntemleri kullanarak etkinleştirilen bir uygulamaya bağımsız değişkenler geçirilemez.  
   
- İçinde bu dağıtım stratejisini etkinleştirmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], tıklayın **Web'den** veya **UNC yolu veya dosya paylaşımı** üzerinde **nasıl yükleneceğini** Yayımla Sihirbazı'nın sayfa.  
+ İçinde bu dağıtım stratejisini etkinleştirmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , **Web 'Den** veya Yayımla sihirbazının **yüklü** olan sayfasında bulunan **bir UNC yolundan veya dosya paylaşımından** ' ya tıklayın.  
   
  Bu, varsayılan dağıtım stratejisidir.  
   
 ## <a name="install-from-a-cd"></a>CD'den yükle  
- Bu stratejiyi kullandığınızda, uygulamanız CD-ROM veya DVD gibi çıkarılabilir ortamla dağıtılır. Kullanıcı uygulamayı yüklemeyi seçtiğinde, yüklü ve başlatılmış ve öğeleri eklenir önceki seçeneği ile **Başlat** menü ve **Program Ekle veya Kaldır** içinde **denetimi Paneli**.  
+ Bu stratejiyi kullandığınızda, uygulamanız CD-ROM veya DVD gibi çıkarılabilir ortamla dağıtılır. Önceki seçenekte olduğu gibi, Kullanıcı uygulamayı yüklemeyi seçtiğinde, yüklenir ve başlatılır, öğeler **Başlat** menüsüne ve **Denetim Masası**'Ndaki **Program Ekle/Kaldır** ' a eklenir.  
   
  Bu strateji en iyi, devamlı ağ bağlantısı olmayan veya bant genişliği düşük bağlantısı olan kullanıcılara dağıtılacak uygulamalar için çalışır. Uygulama çıkarılabilir ortamdan yüklendiğinden yükleme için ağ bağlantısı gerekmez, ancak ağ bağlantısını yine de uygulama güncelleştirmeleri için gereklidir.  
   
- İçinde bu dağıtım stratejisini etkinleştirmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], tıklayın **CD-ROM veya DVD-ROM** üzerinde **nasıl yükleneceğini** Yayımla Sihirbazı'nın sayfa.  
+ İçinde bu dağıtım stratejisini etkinleştirmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , Yayımlama Sihirbazı 'Nın **yüklü** olan sayfasında **bir CD-ROM veya DVD-ROM ' a** tıklayın.  
   
- Bu dağıtım stratejisini el ile etkinleştirmek için değiştirin **deploymentProvider** dağıtım bildirimi içinde etiketi. (Visual Studio'da bu özellik olarak kullanıma sunulan **yükleme URL'si** üzerinde **Yayımla** sayfası Proje Tasarımcısı. İçinde Mage.exe **Başlat konumu**.)  
+ Bu dağıtım stratejisini el ile etkinleştirmek için dağıtım bildiriminde **deploymentProvider** etiketini değiştirin. (Visual Studio 'da, bu özellik proje tasarımcısının **Yayımla** sayfasında **yükleme URL 'si** olarak gösterilir. Mage.exe **başlangıç konumudur**.)  
   
 ## <a name="start-the-application-from-the-web-or-a-network-share"></a>Uygulamayı Web'den veya Ağ Paylaşımı'ndan başlat  
- Uygulamanın bir Web uygulaması gibi davranması dışında, bu strateji birinci stratejiye benzer. Kullanıcı Web sayfası üzerinde bir bağlantıyı tıkladığında (veya dosya paylaşımında bir simgeye çift tıklarsa) uygulama başlatılır. Kullanıcı uygulamayı kapatırsa, artık yerel bilgisayarlarında kullanılamıyor; hiçbir şey eklenir **Başlat** menüsü veya **Program Ekle veya Kaldır** içinde **Denetim Masası**.  
+ Uygulamanın bir Web uygulaması gibi davranması dışında, bu strateji birinci stratejiye benzer. Kullanıcı Web sayfası üzerinde bir bağlantıyı tıkladığında (veya dosya paylaşımında bir simgeye çift tıklarsa) uygulama başlatılır. Kullanıcılar uygulamayı kapatsa da, yerel bilgisayarlarında artık kullanılamaz; **Başlat** menüsüne veya **Denetim Masası**'Ndaki **Program Ekle veya Kaldır** 'a hiçbir şey eklenmez.  
   
 > [!NOTE]
 > Teknik olarak uygulama, Web uygulamalarının Web önbelleğine indirilmesi gibi yerel bilgisayar üzerinde uygulama önbelleğine indirilir ve kurulur. Web önbelleği gibi, dosyalar son olarak uygulama önbelleğinden atılır. Ancak, kullanıcı uygulamanın Web'den veya dosya paylaşımından çalıştığını zanneder.  
   
  Bu strateji en iyi seyrek kullanılan uygulamalar için çalışır. Örneğin, genellikle her yıl yalnızca bir kez çalıştırılan bir çalışan-yarar aracı.  
   
- İçinde bu dağıtım stratejisini etkinleştirmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], tıklayın **uygulama yüklemeyen** üzerinde **yükleme veya Web'den çalıştırın** Yayımla Sihirbazı'nın sayfa.  
+ ' De bu dağıtım stratejisini etkinleştirmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , Yayımla sihirbazının **Web 'den yüklemek veya buradan Çalıştır** sayfasında **uygulamayı yüklemeyin** ' e tıklayın.  
   
- Bu dağıtım stratejisini el ile etkinleştirmek için değiştirin **yükleme** dağıtım bildirimi içinde etiketi. (Bunun değeri olabilir **true** veya **false**. Mage.exe içinde kullanım **yalnızca çevrimiçi** seçeneğini **uygulama türü** listesi.)  
+ Bu dağıtım stratejisini el ile etkinleştirmek için dağıtım bildiriminde **install** etiketini değiştirin. (Değeri **true** veya **false**olabilir. Mage.exe ' de, **uygulama türü** listesinde **yalnızca çevrimiçi** seçeneğini kullanın.)  
   
 ## <a name="web-browser-support"></a>Web Tarayıcısı Desteği  
  .NET Framework 3.5 kullanan uygulamalar herhangi bir tarayıcı kullanarak yüklenebilir.  
@@ -76,6 +76,6 @@ Dağıtmak için üç farklı strateji vardır bir [!INCLUDE[ndptecclick](../inc
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)   
- [ClickOnce güncelleştirme stratejisini seçme](../deployment/choosing-a-clickonce-update-strategy.md)   
- [Nasıl yapılır: Yayımlama Sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
+ [ClickOnce güncelleştirme stratejisi seçme](../deployment/choosing-a-clickonce-update-strategy.md)   
+ [Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
  [ClickOnce Uygulamalarının Güvenliğini Sağlama](../deployment/securing-clickonce-applications.md)

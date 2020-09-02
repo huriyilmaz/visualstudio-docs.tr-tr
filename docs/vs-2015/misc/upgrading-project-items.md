@@ -1,5 +1,5 @@
 ---
-title: Proje öğeleri yükseltme | Microsoft Docs
+title: Proje öğeleri yükseltiliyor | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -12,31 +12,31 @@ ms.assetid: 8af29dd4-eaf1-4b3c-b602-198e1a3dff23
 caps.latest.revision: 14
 manager: jillfra
 ms.openlocfilehash: eb3619e187c7856cf03ee60c8a04cbe527bf0a69
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65698691"
 ---
-# <a name="upgrading-project-items"></a>Proje öğeleri yükseltme
-Ekler veya öğeleri uygulamaz proje sistemleri içinde yönetmek, proje yükseltme işlemine katılmasını gerekebilir. Crystal Reports, proje sistemi için eklenebilir bir öğenin bir örnektir.  
+# <a name="upgrading-project-items"></a>Proje öğeleri yükseltiliyor
+Uygulamadıysanız proje sistemleri içine öğe ekler veya bunları yönetiyorsanız, proje yükseltme işlemine katılmanız gerekebilir. Crystal Reports, proje sistemine eklenebilecek bir öğe örneğidir.  
   
- Genellikle, proje öğesi uygulayıcılar hangi proje başvuruları ve diğer proje özellikleri var. bir yükseltme kararı vermeniz nelerdir bilmesi gerektiğinden proje zaten tam olarak oluşturulmuş ve yükseltilen yararlanmak isteyen.  
+ Genellikle proje öğesi uygulayıcıları, proje başvurularının ne olduğunu ve başka proje özelliklerinin yükseltme kararı vermek için ne olduğunu bilmeleri gerektiğinden, zaten tam olarak örneklenen ve yükseltilen bir projeden yararlanmak istiyor.  
   
-### <a name="to-get-the-project-upgrade-notification"></a>Proje yükseltme bildirim almak için  
+### <a name="to-get-the-project-upgrade-notification"></a>Proje yükseltme bildirimini almak için  
   
-1. Ayarlama <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80.SolutionOrProjectUpgrading> proje öğesi uygulamanızda bayrağı (vsshell80.idl içinde tanımlanmıştır). Bu proje öğenizin otomatik olarak VSPackage'ı neden olduğunda yük [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kabuğu, proje sistemi yükseltme sürecinde olduğunu belirler.  
+1. <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80.SolutionOrProjectUpgrading>Proje öğesi uygulamanızda bayrağını ayarlayın (vsshell80. IDL içinde tanımlanmıştır). Bu, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] kabuk bir proje sisteminin yükseltme sürecinde olduğunu belirlediğinde, proje öğesi VSPackage 'ın otomatik olarak yüklenmesine neden olur.  
   
-2. Öneri <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade> aracılığıyla arabirim <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution2.AdviseSolutionEvents%2A> yöntemi.  
+2. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade>Yöntemi aracılığıyla arabirime tavsiye edin <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution2.AdviseSolutionEvents%2A> .  
   
-3. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade> Arabirimi, proje sistemi uygulama yükseltme işlemlerini tamamladı ve yeni yükseltilen proje oluşturulduktan sonra tetiklenir. Senaryoya bağlı olarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade> arabirimi sonra tetiklenir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenSolution%2A>, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A>, veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterLoadProject%2A> yöntemleri.  
+3. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade>Arabirim, proje sistemi uygulamasının yükseltme işlemlerini tamamladıktan sonra yeni yükseltilen proje oluşturulduktan sonra tetiklenir. Senaryoya bağlı olarak, arabirim,, <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEventsProjectUpgrade> veya yöntemlerinden sonra tetiklenir <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenSolution%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterLoadProject%2A> .  
   
-### <a name="to-upgrade-the-project-item-files"></a>Proje öğesi dosyaları yükseltmek için  
+### <a name="to-upgrade-the-project-item-files"></a>Proje öğesi dosyalarını yükseltmek için  
   
-1. Proje öğesi uygulamanızda dosya yedekleme işlemi dikkatle yönetmeniz gerekir. Yan yana yedeklemesi için bu özellikle geçerlidir burada `fUpgradeFlag` parametresinin <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> yöntemi ayarlandığında <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS>, "eski" belirlenmiş dosyalarını boyunca yedeklenmiş dosyaları yerleştirildiği. Proje zaman yükseltildi sistem saatinden daha önce Yedeklenen dosyaların eski belirlenebilir. Ayrıca, bunu önlemek için belirli adımlar sürece, yazılabilir.  
+1. Dosya yedekleme sürecini proje öğesi uygulamanızda dikkatle yönetmeniz gerekir. Bu, yöntemin parametresinin olarak ayarlandığı, bir yan yana yedekleme için geçerlidir. burada, `fUpgradeFlag` <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory.UpgradeProject%2A> <xref:Microsoft.VisualStudio.Shell.Interop.__VSPPROJECTUPGRADEVIAFACTORYFLAGS> yedeklenen dosyalar ". old" olarak belirlenmiş olan dosyaların yanına yerleştirilir. Projenin yükseltilme sırasında sistem saatinden daha eski olan yedeklenen dosyalar eski olarak belirlenebilir. Ayrıca, bunu engellemek için özel adımlar yapmadığınız takdirde bunların üzerine yazılabilir.  
   
-2. Zaman, proje öğesi proje yükseltme bir bildirim alır. **Visual Studio Dönüştürme Sihirbazı** gösterilmeye devam eder. Bu nedenle, yöntemlerini kullanmanız gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUpgradeLogger> arabirimi yükseltme iletileri Sihirbazı kullanıcı Arabirimi sağlar.  
+2. Proje öğesi proje yükseltmesinin bir bildirimini aldığında, **Visual Studio Dönüştürme Sihirbazı** yine de görüntülenir. Bu nedenle, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUpgradeLogger> Sihirbaz kullanıcı arabirimine yükseltme iletileri sağlamak için arabirimin yöntemlerini kullanmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Dönüştürme Sihirbazı](https://msdn.microsoft.com/4acfd30e-c192-4184-a86f-2da5e4c3d83c)   
- [Özel projelerini yükseltme](../misc/upgrading-custom-projects.md)
+ [Özel projeleri yükseltme](../misc/upgrading-custom-projects.md)

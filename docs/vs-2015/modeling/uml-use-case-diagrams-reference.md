@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cbea61c2a26b1dc81487365ef8fc3f320ac95943
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657301"
 ---
 # <a name="uml-use-case-diagrams-reference"></a>UML Kullanım Durumu Diyagramları: Başvuru
@@ -44,12 +44,12 @@ Visual Studio 'da *kullanım durumu diyagramı* , uygulamanızı veya sisteminiz
 ### <a name="actors-use-cases-and-subsystems"></a>Aktör, kullanım örnekleri ve alt sistemler
  ![Kullanım örneği diyagramındaki öğeler](../modeling/media/uml-ucovactor.png "UML_UCOvActor")
 
-|**Şeklinin**|**Öğe**|**Açıklama ve ana Özellikler**|
+|**Şekil**|**Öğe**|**Açıklama ve ana Özellikler**|
 |---------------|-----------------|-----------------------------------------|
-|1\.|**Aktör**|Uygulamanızla veya sisteminizle etkileşen bir Kullanıcı, kuruluş veya dış sistemi temsil eder. Aktör bir tür türüdür.<br /><br /> -   **resim yolu** -varsayılan aktör simgesi yerine kullanılması gereken bir görüntünün dosya yolu. Simgenin Visual Studio projesi içindeki bir kaynak dosyası olması gerekir.|
-|2|**Kullanım örneği**|Belirli bir hedefin takibinde bir veya daha fazla aktör tarafından gerçekleştirilen eylemleri temsil eder. Kullanım örneği bir tür türüdür.<br /><br /> -   **konuları** -kullanım örneğinin göründüğü alt sistem.|
+|1|**Actor** (Oyuncu)|Uygulamanızla veya sisteminizle etkileşen bir Kullanıcı, kuruluş veya dış sistemi temsil eder. Aktör bir tür türüdür.<br /><br /> -   **Görüntü yolu** -varsayılan aktör simgesi yerine kullanılması gereken bir görüntünün dosya yolu. Simgenin Visual Studio projesi içindeki bir kaynak dosyası olması gerekir.|
+|2|**Kullanım örneği**|Belirli bir hedefin takibinde bir veya daha fazla aktör tarafından gerçekleştirilen eylemleri temsil eder. Kullanım örneği bir tür türüdür.<br /><br /> -   **Konular** -kullanım örneğinin göründüğü alt sistem.|
 |3|**Kaldırma**|Aktörün bir kullanım durumunda bir parçasını aldığını belirtir.|
-|4|**Alt sistem veya bileşen**|Üzerinde çalıştığınız sistem veya uygulama veya bunun bir parçası. Büyük bir ağdan bir uygulamadaki tek bir sınıfa kadar herhangi bir şey olabilir.<br /><br /> Bir sistemin veya bileşenin desteklediği kullanım örnekleri, dikdörtgeni içinde görüntülenir. Sisteminizin kapsamını netleştirmek için dikdörtgen dışında bazı kullanım durumlarının gösterilmesi yararlı olabilir.<br /><br /> Kullanım örneği diyagramında bir alt sistem temelde bir bileşen diyagramında bileşen ile aynı türde.<br /><br /> -   **dolaylı olarak örneklenmiştir** -false ise, çalışan sisteminizde bu alt sisteme doğrudan karşılık gelen bir veya daha fazla nesne vardır. True ise, alt sistem tasarımınızda yürütme sisteminde görüntülenen ve yalnızca bileşen bölümlerinin örneklenmesi aracılığıyla görünen bir yapıdır.|
+|4|**Alt sistem veya bileşen**|Üzerinde çalıştığınız sistem veya uygulama veya bunun bir parçası. Büyük bir ağdan bir uygulamadaki tek bir sınıfa kadar herhangi bir şey olabilir.<br /><br /> Bir sistemin veya bileşenin desteklediği kullanım örnekleri, dikdörtgeni içinde görüntülenir. Sisteminizin kapsamını netleştirmek için dikdörtgen dışında bazı kullanım durumlarının gösterilmesi yararlı olabilir.<br /><br /> Kullanım örneği diyagramında bir alt sistem temelde bir bileşen diyagramında bileşen ile aynı türde.<br /><br /> -   **Dolaylı olarak örneklenmiştir** -false ise, çalışan sisteminizde bu alt sisteme doğrudan karşılık gelen bir veya daha fazla nesne vardır. True ise, alt sistem tasarımınızda yürütme sisteminde görüntülenen ve yalnızca bileşen bölümlerinin örneklenmesi aracılığıyla görünen bir yapıdır.|
 
 ### <a name="structuring-use-cases"></a>Kullanım örneklerini yapılandırma
  ![Include, Extend ve Genelleştirme ile kullanım örnekleri](../modeling/media/uml-ucovstructure.png "UML_UCOvStructure")
@@ -57,12 +57,12 @@ Visual Studio 'da *kullanım durumu diyagramı* , uygulamanızı veya sisteminiz
 |Şekil|**Öğe**|Açıklama|
 |-----------|-----------------|-----------------|
 |5|**İçeriyor**|Dahil edilen kullanım örneği, içerilen bir kullanım durumu çağırır veya çağırır. Ekleme, kullanım durumunun daha küçük adımlara nasıl bölüneceğini göstermek için kullanılır. Dahil edilen kullanım durumu, ok ucu sonundadır.<br /><br /> Diyagramda adımların sırasını göstermediğine dikkat edin. Bu ayrıntıları anlatmak için bir etkinlik diyagramı, sıralı diyagram veya başka bir belge kullanabilirsiniz.|
-|6|**Genişletmeyi**|Genişletme kullanım örneği, Genişletilmiş kullanım örneğine hedefler ve adımlar ekler. Uzantılar yalnızca belirli koşullar altında çalışır. Genişletilmiş kullanım durumu, ok ucu sonundadır.<br /><br /> Diyagramın, uzantının geçerli olduğu tam koşulları göstermediğine dikkat edin: bunları bir yoruma veya başka bir belgeye kaydedebilirsiniz.|
+|6|**Genişletme**|Genişletme kullanım örneği, Genişletilmiş kullanım örneğine hedefler ve adımlar ekler. Uzantılar yalnızca belirli koşullar altında çalışır. Genişletilmiş kullanım durumu, ok ucu sonundadır.<br /><br /> Diyagramın, uzantının geçerli olduğu tam koşulları göstermediğine dikkat edin: bunları bir yoruma veya başka bir belgeye kaydedebilirsiniz.|
 |7|**Devralma**|Özelleştirilmiş ve genelleştirilmiş bir öğe ilişkilendirir. Genelleştirilmiş öğe, ok ucu sonundadır.<br /><br /> Özelleştirilmiş kullanım örneği, genelleştirilinin hedeflerini ve aktörlerini devralır ve bunları elde etmek için daha özel hedefler ve adımlar ekleyebilir.<br /><br /> Özelleştirilmiş aktör, Genelleştirme 'nin kullanım örneklerini, özniteliklerini ve ilişkilendirmelerini devralır ve daha fazla eklenebilir.|
 |8|**Bağımlılık**|Kaynak tasarımının hedefin tasarımına bağlı olduğunu gösterir.|
 |9|**Yorum**|Diyagrama genel notlar eklemek için kullanılır.|
-|10|**Deposunun**|Yapıt, başka bir diyagrama veya belgeye bağlantı sağlar. Çözüm Gezgini bir dosyayı sürükleyerek oluşturabilirsiniz. Diyagramda başka bir öğeye bağımlılığı ile bağlanabilir. Bir yapıt genellikle kullanım örneğini ayrıntılı olarak açıklayan bir sıralı diyagram, OneNote sayfası, Word belgesi veya PowerPoint sunumuna bağlamak için kullanılır. Belge, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözümünde bir öğe ya da SharePoint sitesi gibi paylaşılan konumdaki bir belge olabilir.<br /><br /> -   **köprü**. Diyagramın veya belgenin URL veya dosya yolu.<br /><br /> Bağlandığı dosyayı veya Web sayfasını açmak için bir yapıya çift tıklayın.|
-|11 (gösterilmez)|**Paketlerle**|Kullanım örnekleri, aktörler ve alt sistemler paketler içinde bulunabilir. Paket şekilleri diyagramda görünmez, ancak diyagramın **LinkedPackage** özelliğini ayarlayabilirsiniz. Diyagramda daha sonra oluşturduğunuz öğeler pakete yerleştirilir. Daha fazla bilgi için bkz. [paketleri ve ad alanlarını tanımlama](../modeling/define-packages-and-namespaces.md).|
+|10|**Yapıt**|Yapıt, başka bir diyagrama veya belgeye bağlantı sağlar. Çözüm Gezgini bir dosyayı sürükleyerek oluşturabilirsiniz. Diyagramda başka bir öğeye bağımlılığı ile bağlanabilir. Bir yapıt genellikle kullanım örneğini ayrıntılı olarak açıklayan bir sıralı diyagram, OneNote sayfası, Word belgesi veya PowerPoint sunumuna bağlamak için kullanılır. Belge, çözümdeki bir öğe [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] veya SharePoint sitesi gibi paylaşılan konumdaki bir belge olabilir.<br /><br /> -   **Köprü**. Diyagramın veya belgenin URL veya dosya yolu.<br /><br /> Bağlandığı dosyayı veya Web sayfasını açmak için bir yapıya çift tıklayın.|
+|11 (gösterilmez)|**Paketler**|Kullanım örnekleri, aktörler ve alt sistemler paketler içinde bulunabilir. Paket şekilleri diyagramda görünmez, ancak diyagramın **LinkedPackage** özelliğini ayarlayabilirsiniz. Diyagramda daha sonra oluşturduğunuz öğeler pakete yerleştirilir. Daha fazla bilgi için bkz. [paketleri ve ad alanlarını tanımlama](../modeling/define-packages-and-namespaces.md).|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [UML Kullanım örneği diyagramları: yönergeler](../modeling/uml-use-case-diagrams-guidelines.md) [UML modellerini ve diyagramlarını düzenleme](../modeling/edit-uml-models-and-diagrams.md) [UML sıralı diyagramları: başvuru](../modeling/uml-sequence-diagrams-reference.md) [UML sınıf diyagramları](../modeling/uml-class-diagrams-reference.md) : başvuru [UML Bileşen diyagramları](../modeling/uml-component-diagrams-reference.md) : başvuru UML [bileşen](../modeling/uml-component-diagrams-reference.md) diyagramları: başvuru

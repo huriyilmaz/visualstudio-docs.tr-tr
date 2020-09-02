@@ -1,5 +1,5 @@
 ---
-title: Idiasession::symsareequiv | Microsoft Docs
+title: 'IDiaSession:: Symsareequıv | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ba8c77d7d97da75ce82fcbe732db64acf633b8af
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150221"
 ---
 # <a name="idiasessionsymsareequiv"></a>IDiaSession::symsAreEquiv
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-İki simge eşdeğer olup olmadığını denetler.  
+İki sembolün eşdeğer olup olmadığını denetler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT symsAreEquiv (   
@@ -36,14 +36,14 @@ HRESULT symsAreEquiv ( 
   
 #### <a name="parameters"></a>Parametreler  
  `symbolA`  
- [in] İlk [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) Karşılaştırmada kullanılan nesne.  
+ 'ndaki Karşılaştırmada kullanılan ilk [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi.  
   
  `symbolB`  
- [in] İkinci `IDiaSymbol` Karşılaştırmada kullanılan nesne.  
+ 'ndaki `IDiaSymbol` Karşılaştırmada kullanılan ikinci nesne.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Simgeleri eşdeğer ise döndürür `S_OK`; Aksi halde döndürür `S_FALSE`, simgeler eşdeğer değildir. Aksi takdirde bir hata kodunu döndürür.  
+ Semboller eşdeğer ise, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` simgeler eşdeğer değildir. Aksi takdirde, bir hata kodu döndürün.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiasession](../../debugger/debug-interface-access/idiasession.md)   
+ [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a852b0e5ac6c6a677caab97279a0b0cb0299d27f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670631"
 ---
-# <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>Nasıl yapılır: kaydırma çubuğunu özelleştirerek kodunuzu Izleme
+# <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>Nasıl Yapılır: Kaydırma Çubuğunu Özelleştirerek Kodunuzu İzleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Uzun kod dosyalarıyla çalışırken her şeyi göz önünde bulundurmanız zor olabilir. Kodunuzda neler olduğunu bir kuşbakışı görünümü sağlamak için kod penceresinin kaydırma çubuğunu özelleştirebilirsiniz.

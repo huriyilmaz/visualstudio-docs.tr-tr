@@ -11,10 +11,10 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: 9031b0107babf3d31b6e3b70bb7952cd83467d7d
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238796"
 ---
 # <a name="python-projects-in-visual-studio"></a>Visual Studio 'da Python projeleri
@@ -75,7 +75,7 @@ Visual Studio, sıfırdan veya mevcut koddan bir Python projesi ayarlamanıza y�
 
 Aşağıdaki tabloda, Visual Studio 2017 ve üzeri sürümlerde kullanılabilen şablonlar özetlenmektedir (tüm şablonlar önceki sürümlerde kullanılamaz):
 
-| Şablon | Açıklama |
+| Şablon | Description |
 | --- | --- |
 | [**Mevcut Python kodundan**](#create-project-from-existing-files) | Bir klasör yapısındaki mevcut Python kodundan bir Visual Studio projesi oluşturur.  |
 | **Python uygulaması** | Tek, boş kaynak dosyası olan yeni bir Python uygulaması için temel bir proje yapısı. Varsayılan olarak, proje varsayılan genel ortamın konsol yorumlayıcısında çalışır ve bu, [farklı bir ortam atayarak](selecting-a-python-environment-for-a-project.md)değiştirebilirsiniz. |

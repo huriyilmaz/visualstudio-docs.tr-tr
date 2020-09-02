@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugThreads2::GetCount | Microsoft Dokümanlar
+title: 'IEnumDebugThreads2:: GetCount | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 81c697c3b2121cb5cc59ebcd51f92f9a15cdc4b3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80715211"
 ---
 # <a name="ienumdebugthreads2getcount"></a>IEnumDebugThreads2::GetCount
-Numaralandırmadaki eleman sayısını verir.
+Numaralandırmadaki öğe sayısını döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetCount(
@@ -41,13 +41,13 @@ int GetCount(
 
 ## <a name="parameters"></a>Parametreler
 `pcelt`\
-[çıkış] Numaralandırmadaki eleman sayısını verir.
+dışı Numaralandırmadaki öğe sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, `Next`yalnızca , , `Clone`, `Skip`ve `Reset` yöntemlerin uygulanması gerektiğini belirten alışılmış COM numaralandırma arabiriminin bir parçası değildir.
+ Bu yöntem, yalnızca,, `Next` `Clone` `Skip` ve `Reset` yöntemlerinin uygulanması gerektiğini belirten normal com numaralandırma arabiriminin bir parçası değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)

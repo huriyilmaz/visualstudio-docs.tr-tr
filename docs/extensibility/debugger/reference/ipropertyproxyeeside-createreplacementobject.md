@@ -1,5 +1,5 @@
 ---
-title: ipropertyproxyeeside::createreplacementobject | Microsoft Dokümanlar
+title: 'IPropertyProxyEESide:: CreateReplacementObject | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f449a505c56c180f1bab021007f1b635a2461996
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80715035"
 ---
 # <a name="ipropertyproxyeesidecreatereplacementobject"></a>IPropertyProxyEESide::CreateReplacementObject
-İfade değerlendiricisine (EE) özgü bir veri nesnesinin kopyasını oluşturur.
+İfade değerlendirici (EE) öğesine özel bir veri nesnesinin kopyasını oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT CreateReplacementObject(
@@ -43,18 +43,18 @@ int CreateReplacementObject(
 
 ## <a name="parameters"></a>Parametreler
 `dataIn`\
-[içinde] Kopyalanacak verileri tutan bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesi.
+'ndaki Kopyalanacak verileri tutan bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesi.
 
 `dataOut`\
-[çıkış] Yeni `IEEDataStorage` bir nesne döndürür.
+dışı Yeni bir `IEEDataStorage` nesne döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, bayt bir dizi temsil eden bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesneverilir. Bu gelen veri nesnesi genellikle EE tarafından uygulanmaz. Ancak, bu yöntemle döndürülen nesne her zaman EE tarafından uygulanır `IEEDataStorage` ve bu da EE'nin arabirimi istenilen sınıfa uygulamasına olanak tanır.
+ Bu yönteme, bir bayt dizisini temsil eden bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesi verilir. Bu gelen veri nesnesi genellikle EE tarafından uygulanmaz. Ancak, bu yöntemin döndürdüğü nesne her zaman EE tarafından uygulanır. Bu, her zaman her `IEEDataStorage` türlü sınıfa arayüzün uygulanmasını sağlar.
 
- Gelen `IEEDataStorage` nesne tarafından sağlanan verilerin giden `IEEDataStorage` nesnedeki aynı veriler olması gerektiğini unutmayın.
+ Gelen nesne tarafından sağlanan verilerin `IEEDataStorage` giden nesnedeki verilerle aynı olması gerektiğini unutmayın `IEEDataStorage` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)

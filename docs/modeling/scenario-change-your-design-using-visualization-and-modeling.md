@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: db584adc01a3f0f161d451d73df6a8deab08b869
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238900"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>Senaryo: Görselleştirme ve modelleme kullanarak tasarımınızı değiştirme
@@ -81,10 +81,10 @@ Aşağıdaki tabloda, bu araçların yazılım geliştirme yaşam döngüsünün
 
 |Araç/rol|Kullanıcı gereksinimleri Modelleme|İş süreci modelleme|Sistem mimarisi & tasarımı|Kod görselleştirme & araştırması|Doğrulama|
 |------|-|-|-|-|-|
-|Etki alanına özgü dil (DSL) diyagramı|Evet|Evet|Evet|||
-|Bağımlılık diyagramı, katman doğrulama|||Evet|Evet|Evet|
-|Kod eşlemesi|||Evet|Evet|Evet|
-|Sınıf Tasarımcısı (kod tabanlı)||||Evet||
+|Etki alanına özgü dil (DSL) diyagramı|Yes|Yes|Yes|||
+|Bağımlılık diyagramı, katman doğrulama|||Yes|Yes|Yes|
+|Kod eşlemesi|||Yes|Yes|Yes|
+|Sınıf Tasarımcısı (kod tabanlı)||||Yes||
 
 Bağımlılık diyagramları çizmek için, mevcut bir çözümün parçası olarak bir modelleme projesi oluşturmanız veya yeni bir tane oluşturmanız gerekir. Bu diyagramların modelleme projesinde oluşturulması gerekir.
 Bağımlılık diyagramlarındaki öğeler, modelleme projesinde bulunur, ancak ortak modelde depolanmaz. Kod haritaları ve koddan oluşturulan .NET sınıf diyagramları, modelleme projesi dışında bulunur.

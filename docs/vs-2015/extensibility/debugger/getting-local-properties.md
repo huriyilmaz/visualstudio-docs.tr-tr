@@ -13,28 +13,28 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b174af9e107c13c3d8a79f00493fe5dbdd180ec6
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436389"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64816816"
 ---
 # <a name="getting-local-properties"></a>Yerel Özellikleri Alma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için lütfen bkz [CLR ifade Değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Visual Studio çağrıları [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) almak için bir [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) görüntülenmesi Yereller için erişim sağlayan nesne **Yereller** penceresi. Visual Studio sonra çağıran [sonraki](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) her yerel için görüntülenecek bilgileri alınamıyor. Bu örnekte, sınıf `CEnumPropertyInfo` uygulayan `IEnumDebugPropertyInfo2` arabirimi.  
+ Visual Studio, **Yereller** penceresinde görüntülenecek tüm Yereller için erişim sağlayan bir [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi elde etmek için [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) 'ı çağırır. Ardından Visual Studio, her yerel için görüntülenecek bilgileri almak için [İleri](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) ' yi çağırır. Bu örnekte, sınıfı `CEnumPropertyInfo` `IEnumDebugPropertyInfo2` arabirimini uygular.  
   
- Bu uygulaması `IEnumDebugPropertyInfo2::Next` aşağıdaki görevleri gerçekleştirir:  
+ Bu uygulama `IEnumDebugPropertyInfo2::Next` aşağıdaki görevleri gerçekleştirir:  
   
-1. Depolanacak bilgiler nerede olursa dizi temizler.  
+1. Bilgilerin depolanacağı diziyi temizler.  
   
-2. Çağrıları [sonraki](../../extensibility/debugger/reference/ienumdebugfields-next.md) her yerel için döndürülen depolama [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) döndürülecek dizi. [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi sağlandı olduğunda bu `CEnumPropertyInfo` sınıfının örneği.  
+2. Döndürülen [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) döndürülmek üzere, her bir yerel için [İleri](../../extensibility/debugger/reference/ienumdebugfields-next.md) çağrı yapılır. Bu sınıf örneği oluşturulurken [IEnumDebugFields](../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi sağlandı `CEnumPropertyInfo` .  
   
 ## <a name="managed-code"></a>Yönetilen kod  
- Bu örnekte uygulanışı gösterilmektedir `IEnumDebugPropertyInfo2::EnumChildren` bir yöntemin Yereller yönetilen kod için.  
+ Bu örnek, `IEnumDebugPropertyInfo2::EnumChildren` Yönetilen koddaki yöntemin yerelleri için bir uygulamasını gösterir.  
   
 ```csharp  
 namespace EEMC  
@@ -97,7 +97,7 @@ namespace EEMC
 ```  
   
 ## <a name="unmanaged-code"></a>Yönetilmeyen Kod  
- Bu örnekte uygulanışı gösterilmektedir `IEnumDebugPropertyInfo2::EnumChildren` yönetilmeyen kodda bir yöntemin Yereller için.  
+ Bu örnek, `IEnumDebugPropertyInfo2::EnumChildren` yönetilmeyen koddaki yöntemin yerelleri için bir uygulamasını gösterir.  
   
 ```cpp#  
 STDMETHODIMP CEnumPropertyInfo::Next(  
@@ -159,5 +159,5 @@ STDMETHODIMP CEnumPropertyInfo::Next(
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Örnek yerel öğeler uygulaması](../../extensibility/debugger/sample-implementation-of-locals.md)   
+ [Yereller için örnek uygulama](../../extensibility/debugger/sample-implementation-of-locals.md)   
  [Yerel Öğeleri Numaralandırma](../../extensibility/debugger/enumerating-locals.md)

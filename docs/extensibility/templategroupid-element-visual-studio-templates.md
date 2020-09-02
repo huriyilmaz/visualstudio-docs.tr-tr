@@ -1,5 +1,5 @@
 ---
-title: TemplateGroupID Öğesi (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: TemplateGroupID öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,18 +15,19 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: affc324418e3745f85fb0b91a0ef7abda0ab28b0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699072"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>TemplateGroupID Öğesi (Visual Studio Şablonları)
-Bir öğe şablonunun ne tür bir projede görüneceğini belirtir. [ShowByDefault (Visual Studio Templates)](../extensibility/showbydefault-visual-studio-templates.md) olarak ayarlandığında `false`bu öğe önemlidir. [ShowByDefault (Visual Studio Şablonları)](../extensibility/showbydefault-visual-studio-templates.md) `true`ayarlandığında, tüm proje türlerinde bir öğe şablonu kullanılabilir.
+Öğe şablonlarının ne tür projenin gösterileceğini belirtir. Bu öğe, [ShowByDefault (Visual Studio şablonları)](../extensibility/showbydefault-visual-studio-templates.md) olarak ayarlandığında önemlidir `false` . [ShowByDefault (Visual Studio şablonları)](../extensibility/showbydefault-visual-studio-templates.md) olarak ayarlandığında `true` , tüm proje türlerinde bir öğe şablonu kullanılabilir.
 
- \<VSTemplate \<> ŞablonVeri> \<ŞablonGroupID>
+ \<VSTemplate> \<TemplateData>
+ \<TemplateGroupID>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <TemplateGroupID> ... </TemplateGroupID>
@@ -45,28 +46,28 @@ Bir öğe şablonunun ne tür bir projede görüneceğini belirtir. [ShowByDefau
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.|
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|
 
 ## <a name="text-value"></a>Metin Değeri
  Bir metin değeri gereklidir.
 
- Metin, öğe şablonları kategorisi için bir tanımlayıcı belirtir.
+ Metin bir öğe şablonları kategorisi için tanımlayıcıyı belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
- `TemplateGroupID`bir unsurdur.
+ `TemplateGroupID` bir öğesidir.
 
- Öğenin `TemplateGroupID` değeri, **Yeni Öğe Ekle** iletişim kutusunda görünen şablonları\\filtrelemek için proje sistem kaydı (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio*\<sürüm numarası>* \Projeler)\\ile birlikte kullanılır.
+ Öğe değeri, `TemplateGroupID` Proje sistem kaydı (HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio \projects) ile birlikte, \\ *\<version number>* \\ **Yeni öğe Ekle** iletişim kutusunda görünen şablonları filtrelemek için kullanılır.
 
-|Görsel C++ Değeri|Anlamı|
+|Visual C++ değeri|Anlamı|
 |------------------------|-------------|
-|VC-Yerli|Yerel projeler için kullanılır. Proje türü belirlenemezse de varsayılan değerdir.|
-|VC Yönetilen|Yönetilen (/clr) projeler için kullanılır|
-|VC-Windows|Windows platformlarını hedefleyen tüm projeler için kullanılır (yerel/yönetilen/depo)|
-|WinRT-Yerli-UAP|Windows 10 mağaza projeleri için kullanılır|
-|KodPaylaşımı-Yerel|Paylaşılan öğe projeleri için kullanılır|
-|WinRT-Yerli-6.3|Windows 8.1 Store projeleri için kullanılır|
-|WinRT-Yerli-Telefon-6.3|Windows Phone 8.1 projeleri için kullanılır|
-|WinRT-Yerli|Windows 8.0 Store projeleri için kullanılır|
+|VC-yerel|Yerel projeler için kullanılır. Ayrıca, bir proje türü belirlenemiyorsa varsayılan değer.|
+|VC tarafından yönetilen|Yönetilen (/CLR) projeler için kullanılır|
+|VC-Windows|Windows platformunu hedefleyen tüm projeler için kullanılır (Yerel/yönetilen/mağaza)|
+|WinRT-yerel-UAP|Windows 10 mağazası projeleri için kullanılır|
+|CodeSharing-yerel|Paylaşılan öğe projeleri için kullanılır|
+|WinRT-yerel-6,3|Windows 8.1 mağaza projeleri için kullanılır|
+|WinRT-yerel-telefon-6,3|Windows Phone 8,1 projeleri için kullanılır|
+|WinRT-yerel|Windows 8,0 mağaza projeleri için kullanılır|
 |VC-Android|Android projeleri için kullanılır|
 
 ## <a name="see-also"></a>Ayrıca bkz.

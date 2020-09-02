@@ -1,5 +1,5 @@
 ---
-title: ipropertyproxyeeside::getmanagedviewercreationData | Microsoft Dokümanlar
+title: 'IPropertyProxyEESide:: GetManagedViewerCreationData | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2e72922b348c8744f10037e199e93f735ff4be8e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714959"
 ---
 # <a name="ipropertyproxyeesidegetmanagedviewercreationdata"></a>IPropertyProxyEESide::GetManagedViewerCreationData
-Bu görüntüleyiciyi anında anlabilmek için bu özellik türü için görüntüleyici hakkındaki bilgileri alır.
+Bu görüntüleyicinin örneğini oluşturmak için bu özellik türü için Görüntüleyici hakkındaki bilgileri alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetManagedViewerCreationData(
@@ -51,28 +51,28 @@ int GetManagedViewerCreationData(
 
 ## <a name="parameters"></a>Parametreler
 `assemName`\
-[çıkış] Bu nesneyi tutan derlemenin adını döndürür.
+dışı Bu nesneyi tutan derlemenin adını döndürür.
 
 `assemBytes`\
-[çıkış] Bu nesnenin montaj baytlarını içeren bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesi döndürür (bayt yoksa bu geçersiz bir değerdir).
+dışı Bu nesnenin derleme baytlarını içeren bir [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) nesnesi döndürür (kullanılabilir bayt yoksa bu null değerdir).
 
 `assemPdb`\
-[çıkış] Bu `IEEDataStorage` nesne için sembol deposu bilgilerini içeren bir nesne döndürür (bu, sembol deposu yoksa bu geçersiz bir değerdir).
+dışı `IEEDataStorage` Bu nesnenin sembol deposu bilgilerini içeren bir nesne döndürür (kullanılabilir sembol deposu yoksa bu null bir değerdir).
 
 `className`\
-[çıkış] Bu nesneyi içeren sınıf adını döndürür.
+dışı Bu nesneyi içeren sınıf adını döndürür.
 
 `alr`\
-[çıkış] Assemblyin yerini gösteren [ASSEMBLYLOCRESOLUTION](../../../extensibility/debugger/reference/assemblylocresolution.md) numaralandırmasından bir değer verir.
+dışı [Assemblylocresolution](../../../extensibility/debugger/reference/assemblylocresolution.md) numaralandırmasından derlemenin konumunu gösteren bir değer döndürür.
 
 `replacementOk`\
-[çıkış] Bu nesnenin`TRUE`değeri değiştirilebiliyorsa sıfırsız ( ) döndürür; sıfır`FALSE`( ) nesne salt okunursa.
+dışı `TRUE`Bu nesnenin değeri değiştirilebiliyorsa sıfır olmayan () değerini döndürür; `FALSE` nesne salt okunurdur sıfır ().
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, yönetilen bir görüntüleyicianlık için tür görüntüleyiciler tarafından kullanılır.
+ Bu yöntem, yönetilen bir Görüntüleyici örneği oluşturmak için tür Görselleştiriciler tarafından kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)

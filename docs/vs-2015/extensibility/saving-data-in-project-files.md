@@ -1,5 +1,5 @@
 ---
-title: Proje dosyalarında verileri kaydetme | Microsoft Docs
+title: Verileri proje dosyalarına kaydetme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,28 +13,28 @@ caps.latest.revision: 29
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fc671963854e4fa0c2af763de5000fac82a839b8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432523"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64817568"
 ---
 # <a name="saving-data-in-project-files"></a>Proje Dosyalarında Verileri Kaydetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Proje alt kaydedebilir ve proje dosyasındaki alt özgü verileri alma. Yönetilen paket Framework (MPF), bu görevi gerçekleştirmek için iki arabirim sağlar:  
+Proje alt türü, proje dosyasında alt türe özgü verileri kaydedebilir ve alabilir. Yönetilen paket çerçevesi (MPF), bu görevi gerçekleştirmek için iki arabirim sağlar:  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> Erişim özellik değerleri için arabirim sağlar **MSBuild** proje dosyasının. Tarafından sağlanan yöntemleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> yüklemek veya kaydetmek için kullanıcı gereksinimlerini ilgili verileri oluşturduğunuzda, herhangi bir kullanıcı tarafından çağrılabilir.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>Arabirim, proje dosyasının **MSBuild** bölümünde özellik değerlerine erişime izin verir. Tarafından verilen Yöntemler, <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> kullanıcının derlemeden ilgili verileri yüklemesi veya kaydetmesi gerektiğinde herhangi bir kullanıcı tarafından çağrılabilir.  
   
-- <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> Serbest biçimli XML olmayan derleme ilgili verileri kalıcı hale getirmek için kullanılır. Tarafından sağlanan yöntemleri <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> tarafından aranır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] her [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] derleme olmayan proje dosyasındaki ilgili verileri kalıcı hale getirilmesi.  
+- , <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> Derleme olmayan ilgili verileri serbest BIÇIMLI XML 'de kalıcı hale getirmek için kullanılır. Tarafından verilen Yöntemler, <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] derleme olmayan ilgili verileri proje dosyasında kalıcı hale getirmek için tarafından çağırılır.  
   
-  Derleme ve ilgili derleme olmayan verileri kalıcı hale getirmek nasıl hakkında daha fazla bilgi için bkz. [MSBuild proje dosyasında verileri kalıcı hale](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md).  
+  Derlemeyi ve derleme dışı ilgili verileri kalıcı hale getirme hakkında daha fazla bilgi için bkz. [MSBuild proje dosyasındaki kalıcı veriler](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md).  
   
-## <a name="saving-and-retrieving-build-related-data"></a>İlgili verileri kaydetme ve derleme alma  
+## <a name="saving-and-retrieving-build-related-data"></a>Derleme ile ilgili verileri kaydetme ve alma  
   
-#### <a name="to-save-a-build-related-data-in-the-project-file"></a>İlgili verileri proje dosyasındaki bir yapı kaydetmek için  
+#### <a name="to-save-a-build-related-data-in-the-project-file"></a>Derleme ile ilgili verileri proje dosyasına kaydetmek için  
   
-- Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A> proje dosyasının tam yol kaydetmek için yöntemi.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetPropertyValue%2A>Proje dosyasının tam yolunu kaydetmek için yöntemini çağırın.  
   
     ```  
     private SpecializedProject project;  
@@ -47,9 +47,9 @@ Proje alt kaydedebilir ve proje dosyasındaki alt özgü verileri alma. Yönetil
         (uint)_PersistStorageType.PST_PROJECT_FILE, newFullPath));  
     ```  
   
-#### <a name="to-retrieve-build-related-data-from-the-project-file"></a>Proje dosyasından ilgili verileri derleme almak için  
+#### <a name="to-retrieve-build-related-data-from-the-project-file"></a>Proje dosyasından derleme ile ilgili verileri almak için  
   
-- Çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetPropertyValue%2A> proje dosyasının tam yol almak için yöntemi.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetPropertyValue%2A>Proje dosyasının tam yolunu almak için yöntemini çağırın.  
   
     ```  
     private SpecializedProject project;  
@@ -62,11 +62,11 @@ Proje alt kaydedebilir ve proje dosyasındaki alt özgü verileri alma. Yönetil
         (uint)_PersistStorageType.PST_PROJECT_FILE, out fullPath));  
     ```  
   
-## <a name="saving-and-retrieving-non-build-related-data"></a>Kaydetme ve alma olmayan ilgili verileri oluştur  
+## <a name="saving-and-retrieving-non-build-related-data"></a>Derlemeden ilgili olmayan verileri kaydetme ve alma  
   
-#### <a name="to-save-non-build-related-data-in-the-project-file"></a>İlgili verileri proje dosyasındaki derleme olmayan kaydetmek için  
+#### <a name="to-save-non-build-related-data-in-the-project-file"></a>Derleme olmayan ilgili verileri proje dosyasına kaydetmek için  
   
-1. Uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.IsFragmentDirty%2A> kendi geçerli dosyasını bir XML parçası son başlatıldığından beri değiştirilip değiştirilmediğini saptamak için yönteminin kaydedildi.  
+1. <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.IsFragmentDirty%2A>BIR XML parçasının geçerli dosyasına son kaydedduğundan bu yana değişip değişmediğini belirleme yöntemini uygulayın.  
   
     ```  
     public int IsFragmentDirty(uint storage, out int pfDirty)  
@@ -96,7 +96,7 @@ Proje alt kaydedebilir ve proje dosyasındaki alt özgü verileri alma. Yönetil
     }  
     ```  
   
-2. Uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A> proje dosyasında XML verileri kaydetmek için yöntemi.  
+2. <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Save%2A>XML verilerini proje dosyasına kaydetmek için yöntemini uygulayın.  
   
     ```  
     public int Save(ref Guid guidFlavor, uint storage, out string pbstrXMLFragment, int fClearDirty)  
@@ -145,9 +145,9 @@ Proje alt kaydedebilir ve proje dosyasındaki alt özgü verileri alma. Yönetil
     }  
     ```  
   
-#### <a name="to-retrieve-non-build-related-data-in-the-project-file"></a>Derleme olmayan proje dosyasındaki ilgili verileri almak için  
+#### <a name="to-retrieve-non-build-related-data-in-the-project-file"></a>Derleme olmayan ilgili verileri proje dosyasında almak için  
   
-1. Uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.InitNew%2A> proje uzantısı özellikleri ve diğer yapı bağımsız veri başlatmak için yöntemi. XML yapılandırma verilerini proje dosyasında mevcut değilse bu yöntem çağrılır.  
+1. <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.InitNew%2A>Proje uzantısı özelliklerini ve diğer derleme bağımsız verilerini başlatmak için yöntemini uygulayın. Bu yöntem, proje dosyasında bir XML yapılandırma verisi yoksa çağrılır.  
   
     ```  
     public int InitNew(ref Guid guidFlavor, uint storage)  
@@ -163,7 +163,7 @@ Proje alt kaydedebilir ve proje dosyasındaki alt özgü verileri alma. Yönetil
         return VSConstants.S_OK;  
     ```  
   
-2. Uygulama <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A> proje dosyasından XML verileri yüklemek için yöntemi.  
+2. <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment.Load%2A>Proje DOSYASıNDAN XML verilerini yüklemek için yöntemini uygulayın.  
   
     ```  
     public int Load(ref Guid guidFlavor, uint storage, string pszXMLFragment)  
@@ -208,7 +208,7 @@ Proje alt kaydedebilir ve proje dosyasındaki alt özgü verileri alma. Yönetil
     ```  
   
 > [!NOTE]
-> Bu konuda sağlanan tüm kod örnekleri, daha büyük bir örneğin bölümlerdir [VSSDK örnekleri](../misc/vssdk-samples.md).  
+> Bu konuda sağlanan tüm kod örnekleri, [VSSDK örneklerinin](../misc/vssdk-samples.md)daha büyük bir örneğinin parçalarından oluşur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [MSBuild Proje Dosyasında Verileri Kalıcı Hale Getirme](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)

@@ -10,10 +10,10 @@ ms.assetid: 694ffb31-132c-4d63-b930-8254e7c50c25
 ms.reviewer: Jamie.Young
 manager: jillfra
 ms.openlocfilehash: a651aaa74465f053aa0ae7eee0f3caba3f288192
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238913"
 ---
 # <a name="color-value-reference-for-visual-studio"></a>Visual Studio için renk değeri başvurusu
@@ -96,7 +96,7 @@ Bu başvuru kılavuzunu kullanırken şunları unutmayın:
 |**Ön plan: üzerine gelme**| ![#FF1E1E1E renk örneği](../../extensibility/ux-guidelines/media/1E1E1E.png "#FF1E1E1E renk örneği")<br />`#FF1E1E1E` | ![#FFF1F1F1 renk örneği](../../extensibility/ux-guidelines/media/F1F1F1.png "#FFF1F1F1 renk örneği")<br />`#FFF1F1F1` | ![#FF1E1E1E renk örneği](../../extensibility/ux-guidelines/media/1E1E1E.png "#FF1E1E1E renk örneği")<br />`#FF1E1E1E` | ![HighlightText renk örneği](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText renk örneği")<br />`HighlightText` |
 |**Arka plan**| ![#FFEEEEF2 renk örneği](../../extensibility/ux-guidelines/media/EEEEF2.png "#FFEEEEF2 renk örneği")<br />`#FFEEEEF2` | ![#FF292929 renk örneği](../../extensibility/ux-guidelines/media/292929.png "#FF292929 renk örneği")<br />`#FF292929` | ![#FFEEEEF2 renk örneği](../../extensibility/ux-guidelines/media/EEEEF2.png "#FFEEEEF2 renk örneği")<br />`#FFEEEEF2` | ![Denetim örneği](../../extensibility/ux-guidelines/media/HCControl.png "Denetim örneği")<br />`Control` |
 |**Arka plan: üzerine gelme**| ![#FFC9DEF5 renk örneği](../../extensibility/ux-guidelines/media/C9DEF5.png "#FFC9DEF5 renk örneği")<br />`#FFC9DEF5` | ![#FF3E3E40 renk örneği](../../extensibility/ux-guidelines/media/3E3E40.png "#FF3E3E40 renk örneği")<br />`#FF3E3E40` | ![#FFFFFCF4 renk örneği](../../extensibility/ux-guidelines/media/FFFCF4.png "#FFFFFCF4 renk örneği")<br />`#FFFFFCF4` | ![Renk örneğini Vurgula](../../extensibility/ux-guidelines/media/HCHighlight.png "Renk örneğini Vurgula")<br />`Highlight` |
-|**Kenarlık**| Yok | Yok | Yok | Yok |
+|**Kenarlık**| Hiçbiri | Hiçbiri | Hiçbiri | Hiçbiri |
 |**Kenarlık: üzerine gelme**| ![#FFC9DEF5 renk örneği](../../extensibility/ux-guidelines/media/C9DEF5.png "#FFC9DEF5 renk örneği")<br />`#FFC9DEF5` | ![#FF3E3E40 renk örneği](../../extensibility/ux-guidelines/media/3E3E40.png "#FF3E3E40 renk örneği")<br />`#FF3E3E40` | ![#FFE5C365 renk örneği](../../extensibility/ux-guidelines/media/E5C365.png "# #FFE5C365 renk örneği")<br />`#FFE5C365` | ![WindowFrame renk örneği](../../extensibility/ux-guidelines/media/HCWindowFrame.png "WindowFrame renk örneği")<br />`WindowFrame` |
 
 ### <a name="category-group"></a>Kategori grubu
@@ -170,7 +170,7 @@ Bu başvuru kılavuzunu kullanırken şunları unutmayın:
 > [!NOTE]
 > **Yüksek Karşıtlık renk örnekleri yalnızca karşılaştırma için gösterilir.** Yüksek Karşıtlık Kullanıcı arabirimi için sistem renk adını kullanın ve bu renk örneklerinde damlalık veya renk seçici kullanmayın. Bu konudaki Yüksek Karşıtlık örnekler, Windows 'da Yüksek Karşıtlık #1 temasını yansıtır. Renkler diğer Yüksek Karşıtlık temalarda farklı görünecektir.
 
-### <a name="content"></a>İçerik
+### <a name="content"></a>Content
 
 | | Açık Tema | Koyu tema | Mavi Tema | Yüksek Karşıtlık |
 | --- | :---: | :---: | :---: | :---: |

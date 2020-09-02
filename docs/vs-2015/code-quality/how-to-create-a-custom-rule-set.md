@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 6e4aef02a2bb320112d7d268da28cf66b1ec6751
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657442"
 ---
 # <a name="how-to-create-a-custom-rule-set"></a>Nasıl yapılır: Özel Kural Kümesi Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0, [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] ve [!INCLUDE[vsPro](../includes/vspro-md.md)], kod analizi ile ilişkili belirli proje ihtiyaçlarını karşılamak için özel bir *kural kümesi* oluşturabilir ve değiştirebilirsiniz. Özel bir kural kümesi oluşturmak için, kural kümesi düzenleyicisinde bir veya daha fazla standart kural kümesi açarsınız. Daha sonra belirli kuralları ekleyebilir veya kaldırabilir ve kod analizi bir kuralın ihlal edildiğini belirlediğinde oluşan eylemi değiştirebilirsiniz.
+, Ve ' de, ve ' de, [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] [!INCLUDE[vsPro](../includes/vspro-md.md)] kod analizi ile ilişkili belirli proje ihtiyaçlarını karşılamak için özel bir *kural kümesi* oluşturabilir ve değiştirebilirsiniz. Özel bir kural kümesi oluşturmak için, kural kümesi düzenleyicisinde bir veya daha fazla standart kural kümesi açarsınız. Daha sonra belirli kuralları ekleyebilir veya kaldırabilir ve kod analizi bir kuralın ihlal edildiğini belirlediğinde oluşan eylemi değiştirebilirsiniz.
 
  Yeni bir özel kural kümesi oluşturmak için yeni bir dosya adı kullanarak bu dosyayı kaydedersiniz. Özel kural kümesi projeye otomatik olarak atanır.
 
@@ -31,7 +31,7 @@ ms.locfileid: "72657442"
 
 #### <a name="to-open-an-empty-rule-set-file-in-the-rule-set-editor"></a>Kural kümesi düzenleyicisinde boş bir kural kümesi dosyasını açmak için
 
-1. @No__t_1 **Dosya** menüsünde, **Yeni** ' nin üzerine gelin ve ardından **Dosya**' ya tıklayın.
+1. **Dosya** menüsünde [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] , **Yeni** ' nin üzerine gelin ve ardından **Dosya**' ya tıklayın.
 
 2. **Yeni dosya** iletişim kutusunda, **yüklü şablonlar** listesinde **genel** ' i tıklatın ve ardından **kod analizi kural kümesi**' ni seçin.
 
@@ -47,9 +47,9 @@ ms.locfileid: "72657442"
 
    - Özelleştirmek istediğiniz kural kümesini seçin.
 
-     \- veya-
+     \- veya
 
-   - **@No__t_1Browse seçin...** listede olmayan var olan bir kural kümesini belirtmek için >.
+   - **\<Browse...>** Listede olmayan mevcut bir kural kümesini belirtmek için seçin.
 
 4. Kural kümesi düzenleyicisinde kuralları göstermek için **Aç** ' a tıklayın.
 
@@ -59,7 +59,7 @@ ms.locfileid: "72657442"
 
 2. **Özellikler** sekmesinde, **Kod Analizi**' ne tıklayın.
 
-3. **@No__t_1Choose birden çok kural kümesi seçin...**  **Bu kural kümesini Çalıştır>** .
+3. **\<Choose multiple rule sets...>** **Bu kural kümesini Çalıştır**' ı seçin.
 
 4. **Kural kümeleri Ekle veya Kaldır** iletişim kutusunda, yeni kural kümesini temel almak istediğiniz kural kümelerini seçin ve ardından **Tamam**' a tıklayın.
 
@@ -97,7 +97,7 @@ ms.locfileid: "72657442"
 
 - Tüm gruplardaki kuralları daraltmak için **Tümünü Daralt**' a tıklayın.
 
-- Kuralların gruplandırıldığı alanı değiştirmek için **Gruplandırma ölçütü** listesinden alanı seçin. Gruplandırılmamış kuralları göstermek için **\<None >** seçin.
+- Kuralların gruplandırıldığı alanı değiştirmek için **Gruplandırma ölçütü** listesinden alanı seçin. Gruplandırılmamış kuralları göstermek için öğesini seçin **\<None>** .
 
 - Kural sütunlarındaki alanları eklemek veya kaldırmak için **sütun seçenekleri**' ye tıklayın.
 

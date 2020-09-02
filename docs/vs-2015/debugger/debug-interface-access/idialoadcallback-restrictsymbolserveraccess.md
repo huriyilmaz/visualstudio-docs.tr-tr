@@ -1,5 +1,5 @@
 ---
-title: Idialoadcallback::restrictsymbolserveraccess | Microsoft Docs
+title: 'Ialoadcallback:: RestrictSymbolServerAccess | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,28 +14,28 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fddf9812810e7d184859f60d98f51000b824092a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150596"
 ---
 # <a name="idialoadcallbackrestrictsymbolserveraccess"></a>IDiaLoadCallback::RestrictSymbolServerAccess
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Erişim bir simge sunucusuna simgeleri çözme izin verilip verilmediğini belirler.  
+Sembolleri çözümlemek için bir sembol sunucusuna erişime izin verilip verilmeyeceğini belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT RestrictSymbolServerAccess();  
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Herhangi bir dışındaki kod dönüş `S_OK` bir simge sunucusuna simgeleri çözme kullanımını engeller.  
+ Dışındaki herhangi bir dönüş kodu `S_OK` sembolleri çözümlemek için sembol sunucusunun kullanılmasını engeller.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

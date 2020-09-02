@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugEmlakInfo2 | Microsoft Dokümanlar
+title: IEnumDebugPropertyInfo2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -13,47 +13,47 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: bfa0f8feff6a53b84a6337e5bea8bdc622e19a20
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80715348"
 ---
 # <a name="ienumdebugpropertyinfo2"></a>IEnumDebugPropertyInfo2
-Bu arabirim [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapıları sayısallandırır.
+Bu arabirim [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılarını numaralandırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IEnumDebugPropertyInfo2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- Hata ayıklama altyapısı (DE), belirli bir özelliğin bilgilerini temsil etmek için bu arabirimi uygular.
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Hata ayıklama altyapısı (DE), belirli bir özellik için bilgileri göstermek üzere bu arabirimi uygular.
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Belirli bir özelliğin çocuklarını temsil eden bu arabirimi elde etmek için [EnumChildren'ı](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) arayın. Belirli bir yığın çerçevesinin özelliklerini temsil eden bu arabirimi elde etmek için [EnumProperties'i](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) arayın.
+ Belirli bir özelliğin alt öğelerini temsil eden bu arabirimi edinmek için [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) öğesini çağırın. Belirli bir yığın çerçevesinin özelliklerini temsil eden bu arabirimi edinmek için [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) 'i çağırın.
 
-## <a name="methods-in-vtable-order"></a>Vtable Sıralı Yöntemler
- Aşağıdaki tabloda `IEnumDebugPropertyInfo2`.
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IEnumDebugPropertyInfo2` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Sonraki](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md)|Numaralandırma sırasında belirli sayıda [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapı alır.|
-|[Atlamak](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-skip.md)|Numaralandırma sırasında belirli sayıda [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapıyı atlar.|
-|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-reset.md)|Numaralandırma sırasını başa sıfırlar.|
-|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-clone.md)|Geçerli numaralandırma durumuyla aynı numaralandırma durumunu içeren bir numaralandırma oluşturucu oluşturur.|
-|[GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md)|Bir numaralandırmadaki [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapıların sayısını alır.|
+|[Sonraki](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md)|Sabit Listesi dizisinde belirtilen sayıda [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapısını alır.|
+|[Atla](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-skip.md)|Sabit Listesi dizisinde belirtilen sayıda [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapısını atlar.|
+|[Sıfırla](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-reset.md)|Bir numaralandırma dizisini başlangıca sıfırlar.|
+|[Kopyalama](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-clone.md)|Geçerli numaralandırıcı ile aynı numaralandırma durumunu içeren bir Numaralandırıcı oluşturur.|
+|[GetCount](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2-getcount.md)|Bir Numaralandırıcı içindeki [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılarının sayısını alır.|
 
 ## <a name="remarks"></a>Açıklamalar
- Genel olarak, özellik, bir ad, değer, adres ve tür yanı sıra ilişkili özellik nesnesi veya yığın çerçevesine uygun diğer bilgileri içerebilir bilgi hiyerarşisi. Daha fazla bilgi için [IDebugProperty2'ye](../../../extensibility/debugger/reference/idebugproperty2.md) bakın.
+ Genel olarak, bir özellik ad, değer, adres ve tür, ilişkili özellik nesnesine veya yığın çerçevesine uygun diğer bilgileri içerebilen bir bilgi hiyerarşisidir. Daha fazla bilgi için bkz. [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) .
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Temel Arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)

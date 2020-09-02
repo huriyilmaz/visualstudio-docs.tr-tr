@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_editandcontinueenabled | Microsoft Docs
+title: 'IDiaSymbol:: get_editAndContinueEnabled | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 74ac007a3b9d42677c77989ea36c6e20f9cd35f7
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697712"
 ---
-# <a name="idiasymbolgeteditandcontinueenabled"></a>IDiaSymbol::get_editAndContinueEnabled
+# <a name="idiasymbolget_editandcontinueenabled"></a>IDiaSymbol::get_editAndContinueEnabled
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Modül ile derlenen olup olmadığını belirten bir bayrak alır [/z7, / zi, /zı (hata ayıklama bilgileri biçimi)](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8) derleyici anahtarı.  
+Modülün [/Z7,/Zi,/ZI (hata ayıklama bilgileri biçimi)](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8) derleyici anahtarıyla derlendiğini belirten bir bayrak alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_editAndContinueEnabled (   
@@ -35,21 +35,21 @@ HRESULT get_editAndContinueEnabled ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Döndürür `TRUE` Düzenle ve devam et; derleme etkinleştirildiyse döndürür, aksi takdirde, `FALSE`.  
+ dışı `TRUE` Derlemede Düzenle ve devam et etkinleştirilmişse döndürür; Aksi takdirde, döndürür `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için mevcut olmadığı anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin simge için kullanılamadığı anlamına gelir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|Gereksinim|Açıklama|  
+|Gereksinim|Description|  
 |-----------------|-----------------|  
-|Üst bilgi:|dia2.h|  
-|Sürüm:|DIA SDK v7.0|  
+|Üst bilgi|dia2. h|  
+|Sürüm:|DIA SDK v 7.0|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [/Z7, /Zi, /ZI (Hata Ayıklama Bilgileri Biçimi)](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)
+ [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
+ [/Z7,/Zi,/ZI (hata ayıklama bilgileri biçimi)](https://msdn.microsoft.com/library/ce9fa7e1-0c9b-47e3-98ea-26d1a16257c8)
