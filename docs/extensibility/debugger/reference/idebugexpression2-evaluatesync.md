@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::EvaluateSync | Microsoft Dokümanlar
+title: 'IDebugExpression2:: EvaluateSync | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 306ed6af2a0a0b8fdb4525a112e680e289e6e6df
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729682"
 ---
 # <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
-Bu yöntem, ifadeyi eşzamanlı olarak değerlendirir.
+Bu yöntem, ifadeyi zaman uyumlu olarak değerlendirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EvaluateSync(
@@ -47,27 +47,27 @@ int EvaluateSync(
 
 ## <a name="parameters"></a>Parametreler
 `dwFlags`\
-[içinde] İfade değerlendirmesini kontrol eden [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasından gelen bayrakların birleşimi.
+'ndaki İfade değerlendirmesini denetleyen [Evalflags](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasındaki bayrakların birleşimi.
 
 `dwTimeout`\
-[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden maksimum süre. Süresiz beklemek için kullanın. `INFINITE`
+'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süre (milisaniye cinsinden). `INFINITE`Sonsuza kadar beklemek için kullanın.
 
 `pExprCallback`\
-[içinde] Bu parametre her zaman null bir değerdir.
+'ndaki Bu parametre her zaman bir null değerdir.
 
 `ppResult`\
-[çıkış] İfade değerlendirme sonucunu içeren [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesini döndürür.
+dışı İfade değerlendirmesinin sonucunu içeren [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde bir hata kodu döndürür. Bazı tipik hata kodları şunlardır:
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür. Bazı tipik hata kodları şunlardır:
 
 |Hata|Açıklama|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|Başka bir ifade şu anda değerlendirilmektedir ve eşzamanlı ifade değerlendirmesi desteklenmemektedir.|
-|E_EVALUATE_TIMEOUT|Değerlendirme zaman doldu.|
+|E_EVALUATE_BUSY_WITH_EVALUATION|Şu anda başka bir ifade değerlendirilemekte ve eşzamanlı ifade değerlendirmesi desteklenmiyor.|
+|E_EVALUATE_TIMEOUT|Değerlendirme zaman aşımına uğradı.|
 
 ## <a name="remarks"></a>Açıklamalar
-Senkron değerlendirme için, değerlendirme tamamlandıktan sonra bir olayı Visual Studio'ya geri göndermeye gerek yoktur.
+Zaman uyumlu değerlendirme için değerlendirme tamamlandıktan sonra Visual Studio 'ya bir olay gönderilmesi gerekli değildir.
 
 ## <a name="example"></a>Örnek
 Aşağıdaki örnek, `CExpression` [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.

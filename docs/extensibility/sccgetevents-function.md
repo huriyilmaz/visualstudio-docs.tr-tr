@@ -1,5 +1,5 @@
 ---
-title: SccGetEvents Fonksiyonu | Microsoft Dokümanlar
+title: SccGetEvents Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 91b3debf0e686ceece3048cf3d92b629e3359edd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80700814"
 ---
-# <a name="sccgetevents-function"></a>SccGetEvents fonksiyonu
-Bu işlev sıralanmış durum olayını alır.
+# <a name="sccgetevents-function"></a>SccGetEvents işlevi
+Bu işlev, bir sıraya alınmış durum olayını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 SCCRTN SccGetEvents (
@@ -36,34 +36,34 @@ SCCRTN SccGetEvents (
 ### <a name="parameters"></a>Parametreler
  pvContext
 
-[içinde] Kaynak denetimi eklentisi bağlam yapısı.
+'ndaki Kaynak denetimi eklentisi bağlam yapısı.
 
  lpFileName
 
-[içinde, dışarı] Kaynak denetim eklentisinin döndürülen dosya adını (_MAX_PATH karaktere kadar) koyduğu arabellek.
+[in, out] Kaynak denetimi eklentisinin döndürülen dosya adını (_MAX_PATH karaktere kadar) yerleştirme arabelleği.
 
- lpDurum
+ lpStatus
 
-[içinde, dışarı] Durum kodunu döndürür (olası değerler için [Dosya durum koduna](../extensibility/file-status-code-enumerator.md) bakın).
+[in, out] Durum kodunu döndürür (olası değerler için [dosya durum koduna](../extensibility/file-status-code-enumerator.md) bakın).
 
- pnEtkinliklerKalan
+ Pneventskaldı
 
-[içinde, dışarı] Bu aramadan sonra kuyrukta kalan giriş sayısını döndürür. Bu numara büyükse, arayan kişi tüm bilgileri aynı anda almak için [SccQueryInfo'yu](../extensibility/sccqueryinfo-function.md) aramaya karar verebilir.
+[in, out] Bu çağrıdan sonra sırada kalan giriş sayısını döndürür. Bu sayı büyükse, çağıran tüm bilgileri bir kerede almak için [SccQueryInfo](../extensibility/sccqueryinfo-function.md) çağrısına karar verebilir.
 
 ## <a name="return-value"></a>Döndürülen değer
- Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
-|SCC_OK|Olayların başarılı ol.|
-|SCC_E_OPNOTSUPPORTED|Bu işlev desteklenmez.|
-|SCC_E_NONSPECIFICERROR|Nonspesifik bir hata.|
+|SCC_OK|Olayları başarılı bir şekilde alın.|
+|SCC_E_OPNOTSUPPORTED|Bu işlev desteklenmiyor.|
+|SCC_E_NONSPECIFICERROR|Özel olmayan hata.|
 
 ## <a name="remarks"></a>Açıklamalar
- Bu işlev, kaynak denetimi altındaki dosyalar için durum güncelleştirmeleri olup olmadığını görmek için boşta işleme sırasında çağrılır. Kaynak denetimi eklentisi bildiği tüm dosyaların durumunu korur ve durum değişikliği eklentitarafından ne zaman belirtilirse, durum ve ilişkili dosya bir sırada depolanır. Çağrıldığında, `SccGetEvents` sıranın üst öğesi alınır ve döndürülür. Bu işlev yalnızca önceden önbelleğe alınmış bilgileri döndürmek için sınırlandırılmıştır ve çok hızlı bir geri dönüş olmalıdır (diğer bir şekilde diskin okunması veya kaynak denetim sisteminden durum sorulması gerekir); aksi takdirde IDE'nin performansı bozulmaya başlayabilir.
+ Bu işlev, kaynak denetimi altındaki dosyalar için herhangi bir durum güncelleştirmesi olup olmadığını görmek için boşta işleme sırasında çağrılır. Kaynak denetimi eklentisi, bildiği tüm dosyaların durumunu korur ve eklenti tarafından bir durum değişikliği olduğunda, durum ve ilişkili dosya bir kuyrukta depolanır. `SccGetEvents`Çağrıldığında, sıranın üst öğesi alınır ve döndürülür. Bu işlev, yalnızca daha önce önbelleğe alınmış bilgileri döndürecek şekilde kısıtlıdır ve çok hızlı bir şekilde (disk okuma veya kaynak denetim sistemine durum sorma) sahip olmalıdır; Aksi takdirde IDE 'nin performansı azalmayı başlatabilir.
 
- Rapor için durum güncelleştirmesi yoksa, kaynak denetimi eklentisi işaret edilen arabellekte boş bir dize `lpFileName`depolar. Aksi takdirde, eklenti durum bilgilerinin değiştiği dosyanın tam yol adını depolar ve uygun durum kodunu döndürür [(Dosya durum kodunda](../extensibility/file-status-code-enumerator.md)ayrıntılı değerlerden biri).
+ Raporlanacak durum güncelleştirmesi yoksa, kaynak denetimi eklentisi tarafından işaret edilen arabellekte boş bir dize depolar `lpFileName` . Aksi halde eklenti, durum bilgisinin değiştiği dosyanın tam yol adını depolar ve uygun durum kodunu ( [dosya durum kodunda](../extensibility/file-status-code-enumerator.md)ayrıntılanmış değerlerden biri) döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)
 - [Dosya durum kodu](../extensibility/file-status-code-enumerator.md)

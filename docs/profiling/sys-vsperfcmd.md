@@ -1,5 +1,5 @@
 ---
-title: Sys (VSPerfCmd) | Microsoft Dokümanlar
+title: Sys (VSPerfCmd) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 294a6f9e-b49f-4c83-b322-5ac5411b66fb
@@ -10,50 +10,50 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 435393ac536eb70f2f3f6d38b16eaab645848704
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74778186"
 ---
 # <a name="sys-vsperfcmd"></a>Sys (VSPerfCmd)
-*VSPerfCmd.exe* **Sys** seçeneği, sistem arama olaylarına örneklenmiş profil oluşturma olayını (profilli uygulamadan işletim sistemine fonksiyon çağrıları) ayarlar ve isteğe bağlı olarak 10 varsayılanından bir örnekleme aralığındaki sistem çağrılarının sayısını değiştirir.
+*VSPerfCmd.exe* **sys** seçeneği, sistem çağrısı olaylarına örneklenmiş profil oluşturma olayını (profili oluşturulan uygulamadan işletim sistemine işlev çağrıları) ayarlar ve isteğe bağlı olarak, örnekleme aralığındaki sistem çağrılarının sayısını varsayılan değer olan 10 ' dan değiştirir.
 
- **Sys** yalnızca **Başlat** veya **Ekle** seçeneğini de içeren bir komut satırında kullanılabilir.
+ **Sys** yalnızca **başlatma** veya **iliştirme** seçeneğini de içeren bir komut satırında kullanılabilir.
 
- Varsayılan olarak, profiloluşturucu örnekleme olayı işlemci saat döngüleri olarak ayarlanır ve örnekleme aralığı 10.000.000 olarak ayarlanır. **Zamanlayıcı**, **PF**, **Sys**ve **Sayaç** seçenekleri örnekleme olayını ve örnekleme aralığını ayarlamanızı sağlar. **GC** seçeneği, her ayırma ve çöp toplama olayında .NET bellek verilerini toplar. Bu seçeneklerden yalnızca biri komut satırında belirtilebilir.
+ Varsayılan olarak, profil oluşturucu örnekleme olayı, işlemci saati döngüleri olarak ayarlanır ve örnekleme aralığı 10.000.000 olarak ayarlanır. **Zamanlayıcı**, **PF**, **sys**ve **sayaç** seçenekleri, örnekleme olayını ve örnekleme aralığını ayarlamanıza olanak sağlar. **GC** seçeneği, her bir ayırma ve çöp toplama olayında .net bellek verilerini toplar. Komut satırında bu seçeneklerden yalnızca biri belirtilebilir.
 
- Örnekleme olayı ve örnekleme aralığı yalnızca **Başlat** veya **Ekle** seçeneği içeren ilk komut satırında ayarlanabilir.
+ Örnekleme olayı ve örnekleme aralığı yalnızca bir **başlatma** veya **iliştirme** seçeneği içeren ilk komut satırında ayarlanabilir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 VSPerfCmd.exe {/Launch:AppName|Attach:PID} /Sys[:Events] [Options]
 ```
 
 #### <a name="parameters"></a>Parametreler
- `Events`Örnekleme aralığındaki sistem çağrı olaylarının sayısını belirten bir tamsayı değeri. `Events` Belirtilmemişse, aralık 10 olarak ayarlanır.
+ `Events` Bir örnekleme aralığındaki sistem çağrı olaylarının sayısını belirten bir tamsayı değeri. `Events`Belirtilmemişse, Aralık 10 olarak ayarlanır.
 
-## <a name="required-options"></a>Gerekli Seçenekler
- **Sys** aşağıdaki seçeneklerden birini gerektirir.
+## <a name="required-options"></a>Gerekli seçenekler
+ **Sys** , aşağıdaki seçeneklerden birini gerektirir.
 
- **Başlatma:** `AppName` Profilleyiciyi ve tarafından `AppName`belirtilen uygulamayı başlatır.
+ **Başlatma:** `AppName` Profil oluşturucuyu ve tarafından belirtilen uygulamayı başlatır `AppName` .
 
- **Ekle:** `PID` Profiloluşturucuyu . `PID`
+ **Ekle:** `PID` Profil oluşturucuyu tarafından belirtilen işleme iliştirir `PID` .
 
-## <a name="invalid-options"></a>Geçersiz Seçenekler
- Aşağıdaki seçenekler **Sys**ile aynı komut satırında belirtilemez.
+## <a name="invalid-options"></a>Geçersiz seçenekler
+ Aşağıdaki seçenekler **sys**ile aynı komut satırında belirtilemez.
 
- **PF**[**:**`Events`] Örnekleme olayını sayfa hatalarına ayarlar ve `Events`isteğe bağlı olarak örnekleme aralığını .'a ayarlar Varsayılan PF aralığı 10'dur.
+ **PF**[**:** `Events` ] örnekleme olayını sayfa hatalarına ayarlar ve isteğe bağlı olarak örnekleme aralığını olarak ayarlar `Events` . Varsayılan PF aralığı 10 ' dur.
 
- **Zamanlayıcı**[**:**`Cycles`] Örnekleme olayını işlemci saat döngülerine ayarlar `Cycles`ve isteğe bağlı olarak örnekleme aralığını . Varsayılan Zamanlayıcı aralığı 10.000.000'dir.
+ **Süreölçer**[**:** `Cycles` ], örnekleme olayını işlemci saati döngüleri olarak ayarlar ve isteğe bağlı olarak örnekleme aralığını olarak ayarlar `Cycles` . Varsayılan süreölçer aralığı 10.000.000 ' dir.
 
- **Sayaç:** `Name``,Reload`[`,FriendlyName`[ ]] Örnekleme olayını CPU `Name` performans sayacına ayarlar `Reload`ve örnekleme aralığını .
+ **Sayaç:** `Name` [ `,Reload` [ `,FriendlyName` ]] Örnekleme olayını tarafından belirtilen CPU performans sayacına ayarlar `Name` ve örnekleme aralığını olarak ayarlar `Reload` .
 
- **GC**[**:**{**Ayırma**&#124;**Ömür Boyu**}} .NET bellek verilerini toplar. Varsayılan olarak **(Ayırma),** veriler her bellek ayırma olayında toplanır. Ömür **boyu** parametresi belirtildiğinde, her çöp toplama olayında veriler de toplanır.
+ **GC**[**:**{**Allocation**&#124;**Lifetime**}] .net bellek verilerini toplar. Varsayılan olarak,**Allocation**veriler her bellek ayırma olayında toplanır. **Ömür** parametresi belirtildiğinde her çöp toplama olayında de veriler toplanır.
 
 ## <a name="example"></a>Örnek
- Bu örnek, profilci örnekleme olayının sistem çağrılarına nasıl ayarlanını ve örnekleme aralığının örnek başına 20 çağrıya nasıl ayarlanıncaya kadar ayarlanıncagösterilmektedir.
+ Bu örnekte, profil oluşturucu örnekleme olayının Sistem çağrılarına nasıl ayarlanacağı ve örnekleme aralığının örnek başına 20 çağrı olarak nasıl ayarlanacağı gösterilmektedir.
 
 ```cmd
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp
@@ -62,6 +62,6 @@ VSPerfCmd.exe /Launch:TestApp.exe /Sys:20
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPerfCmd](../profiling/vsperfcmd.md)
-- [Profil tek başına uygulamalar](../profiling/command-line-profiling-of-stand-alone-applications.md)
-- [Web uygulamaları ASP.NET profil](../profiling/command-line-profiling-of-aspnet-web-applications.md)
+- [Tek başına uygulamalar profili](../profiling/command-line-profiling-of-stand-alone-applications.md)
+- [ASP.NET Web uygulamaları profili](../profiling/command-line-profiling-of-aspnet-web-applications.md)
 - [Profil hizmetleri](../profiling/command-line-profiling-of-services.md)

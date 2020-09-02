@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::EvaluateAsync | Microsoft Dokümanlar
+title: 'IDebugExpression2:: EvaluateAsync | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2cd1eba56f8e3c5a1a779acc3330790e9ba2bc96
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729756"
 ---
 # <a name="idebugexpression2evaluateasync"></a>IDebugExpression2::EvaluateAsync
-Bu yöntem ifadeyi eşsenkronize olarak değerlendirir.
+Bu yöntem, ifadeyi zaman uyumsuz olarak değerlendirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EvaluateAsync (
@@ -43,20 +43,20 @@ int EvaluateAsync(
 
 ## <a name="parameters"></a>Parametreler
 `dwFlags`\
-[içinde] İfade değerlendirmesini kontrol eden [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasından gelen bayrakların birleşimi.
+'ndaki İfade değerlendirmesini denetleyen [Evalflags](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasındaki bayrakların birleşimi.
 
 `pExprCallback`\
-[içinde] Bu parametre her zaman null bir değerdir.
+'ndaki Bu parametre her zaman bir null değerdir.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde bir hata kodu döndürür. Tipik bir hata kodu:
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür. Tipik bir hata kodu:
 
 |Hata|Açıklama|
 |-----------|-----------------|
-|E_EVALUATE_BUSY_WITH_EVALUATION|Başka bir ifade şu anda değerlendirilmektedir ve eşzamanlı ifade değerlendirmesi desteklenmemektedir.|
+|E_EVALUATE_BUSY_WITH_EVALUATION|Şu anda başka bir ifade değerlendirilemekte ve eşzamanlı ifade değerlendirmesi desteklenmiyor.|
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yöntem, ifade değerlendirmesine başladıktan hemen sonra geri dönmelidir. İfade başarıyla değerlendirildiğinde, [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) Ekle veya [Ekle](../../../extensibility/debugger/reference/idebugprogram2-attach.md) aracılığıyla sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) olay geri [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)çağırmasına gönderilmelidir.
+Bu yöntem, ifade değerlendirmesini başlattıktan hemen sonra döndürmelidir. İfade başarıyla değerlendirildiğinde, [Attach](../../../extensibility/debugger/reference/idebugprogram2-attach.md) veya [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md)aracılığıyla sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) Event geri çağırması için bir [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) gönderilmesi gerekir.
 
 ## <a name="example"></a>Örnek
 Aşağıdaki örnek, `CExpression` [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) arabirimini uygulayan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.

@@ -18,29 +18,29 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 79987c77da7959c4ba37a4ae8e5b689a052cbbbc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193633"
 ---
 # <a name="setthreadcount"></a>SetThreadCount
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Genel iş parçacığı sayısını ayarlar ve bu sayı geçerli iş parçacığına atar.  
+Genel iş parçacığı sayısını ayarlar ve bu sayıyı geçerli iş parçacığına atar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 HRESULT WINAPI SetThreadCount(int threadCount);  
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- [in] `threadCount`  
+ 'ndaki `threadCount`  
  Kullanılacak iş parçacığı sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bir [HRESULT])<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) [başarılı] () ile<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) iş parçacığı sayısı güncelleştirdiyseniz biti ayarlanmamış.  
+ A [HRESULT] (<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) ile [başarılı] (<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) iş parçacığı sayısı güncellendiyse bit ayarlanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** FileTracker.h
+ **Üst bilgi:** FileTracker. h

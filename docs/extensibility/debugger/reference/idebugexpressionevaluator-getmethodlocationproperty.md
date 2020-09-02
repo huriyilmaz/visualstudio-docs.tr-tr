@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator::GetMethodLocationProperty | Microsoft Dokümanlar
+title: 'Idebugexpressiondeğerlendirici:: GetMethodLocationProperty | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a6ba87d6c1a1f7370ce5e209440589f362b87035
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729526"
 ---
 # <a name="idebugexpressionevaluatorgetmethodlocationproperty"></a>IDebugExpressionEvaluator::GetMethodLocationProperty
-Bu yöntem, yöntem konumunu dönüştürür ve bellek adresine ofset.
+Bu yöntem, bir yöntem konumunu ve sapmayı bir bellek adresine dönüştürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetMethodLocationProperty( 
@@ -49,27 +49,27 @@ int GetMethodLocationProperty(
 
 ## <a name="parameters"></a>Parametreler
 `upstrFullyQualifiedMethodPlusOffset`\
-[içinde] Yöntem konumu ve ofset, bir dize olarak ifade.
+'ndaki Yöntem konumu ve değeri dize olarak ifade edilir.
 
 `pSymbolProvider`\
-[içinde] [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) nesnesi olarak ifade edilen sembol sağlayıcı.
+'ndaki Bir [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) nesnesi olarak ifade edilen sembol sağlayıcısı.
 
 `pAddress`\
-[içinde] Yöntem içinde bir adres, bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi olarak ifade.
+'ndaki Yöntemi içindeki bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi olarak ifade edilen adres.
 
 `pBinder`\
-[içinde] Bağlayıcı bir [IDebugBinder nesnesi](../../../extensibility/debugger/reference/idebugbinder.md) olarak ifade edilir.
+'ndaki [Idebugciltçi](../../../extensibility/debugger/reference/idebugbinder.md) nesnesi olarak ifade edilen bağlayıcı.
 
 `ppProperty`\
-[çıkış] Bellek adresini temsil eden bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimi döndürür.
+dışı Bellek adresini temsil eden bir [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) arabirimi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
  Döndürülen adres, örneğin bir kesme noktası ayarlamak için kullanılabilir.
 
- Adı `upstrFullyQualifiedMethodPlusOffset`rağmen , Bu parametre kısmen nitelikli yöntem adı geçirilebilir. Bu durumda, seçili yöntem içine alan `pAddress`biridir. Bu parametrenin nasıl yorumlanacağı ifade değerlendiricinin uygulanmasına ve desteklediği dile kadardır.
+ Ada rağmen `upstrFullyQualifiedMethodPlusOffset` Bu parametreye kısmen nitelenmiş bir yöntem adı geçirilebilir. Bu durumda, seçilen yöntem içine eklenen bir yöntemdir `pAddress` . Bu parametrenin yorumlanması, ifade değerlendiricisi 'nin ve desteklediği dilin uygulamasına göre yapılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)

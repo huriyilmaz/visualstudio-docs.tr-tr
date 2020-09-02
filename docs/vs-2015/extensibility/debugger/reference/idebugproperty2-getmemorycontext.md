@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetMemoryContext | Microsoft Docs
+title: 'IDebugProperty2:: GetMemoryContext | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a3ad83bfe36f468dd0e2d7d040c188fd69970a82
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193490"
 ---
 # <a name="idebugproperty2getmemorycontext"></a>IDebugProperty2::GetMemoryContext
@@ -24,7 +24,7 @@ ms.locfileid: "68193490"
 
 Özellik değerinin bellek bağlamını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetMemoryContext (   
@@ -40,10 +40,10 @@ int GetMemoryContext(
   
 #### <a name="parameters"></a>Parametreler  
  `ppMemory`  
- [out] Döndürür [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) bu özellik ile ilişkilendirilmiş bellek temsil eden nesne.  
+ dışı Bu özellikle ilişkili belleği temsil eden [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) nesnesini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür. Döndürür `S_GETMEMORYCONTEXT_NO_MEMORY_CONTEXT` varsa alınacak bellek bağlam yok.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür. `S_GETMEMORYCONTEXT_NO_MEMORY_CONTEXT`Alınacak bellek bağlamı yoksa döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

@@ -1,5 +1,5 @@
 ---
-title: CvReleaseMarkerSeries işlevi | Microsoft Docs
+title: CvReleaseMarkerSeries Işlevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6bfa9952a834110ef0fea36568ea210b637547aa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68177749"
 ---
 # <a name="cvreleasemarkerseries-function"></a>CvReleaseMarkerSeries İşlevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İşaret serisi serbest bırakır. Aksi takdirde uygulama serbest çökebilir sonra işaret serisi nesnesi kullanmayın. İşaret serisi yayımlamayı hatası bellek sızıntısına neden olur.  
+Bırakma işaretçisi serisi. Bırakma işleminden sonra işaretleyici serisi nesnesi kullanmayın; aksi takdirde uygulama kilitlenebilir. İşaretleyici serisini serbest bırakma hatası, bellek sızıntısına neden olur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 HRESULT CvReleaseMarkerSeries(  
@@ -35,13 +35,13 @@ HRESULT CvReleaseMarkerSeries(
   
 #### <a name="parameters"></a>Parametreler  
  `pMarkerSeries`  
- Nesne değişkeni sağlayıcı adresi. Adresi boş olamaz, değişken herhangi bir değere sahip olabilir.  
+ Sağlayıcı nesne değişkeninin adresi. Adres NULL olamaz, değişken herhangi bir değere sahip olabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- S_OK işaret serisi başarıyla serbest bırakıldı veya hata kodu var. durumda tüm hatalar. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.  
+ İşaretleyici serisi ne zaman yayınlanmışsa S_OK veya herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** cvmarkers.h  
+ **Üst bilgi:** cvişaretleyiciler. h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+ [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

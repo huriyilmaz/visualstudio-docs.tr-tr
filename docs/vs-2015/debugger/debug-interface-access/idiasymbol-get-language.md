@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_language | Microsoft Docs
+title: 'IDiaSymbol:: get_language | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cd9adeba1b3ac84fa6a09d6c6f25b77e35cd429f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64819200"
 ---
-# <a name="idiasymbolgetlanguage"></a>IDiaSymbol::get_language
+# <a name="idiasymbolget_language"></a>IDiaSymbol::get_language
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kaynak dili alır.  
+Kaynağın dilini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_language (   
@@ -35,14 +35,14 @@ HRESULT get_language ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir değer döndürür [CV_CFL_LANG numaralandırması](../../debugger/debug-interface-access/cv-cfl-lang.md) kaynak dili belirten sabit listesi.  
+ dışı Kaynak dilini belirten [CV_CFL_LANG numaralandırma](../../debugger/debug-interface-access/cv-cfl-lang.md) numaralandırmasından bir değer döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md)   
+ [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [CV_CFL_LANG Numaralandırması](../../debugger/debug-interface-access/cv-cfl-lang.md)

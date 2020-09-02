@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 78b2e80611983e69f11465269dcf15dad7d6351e
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329696"
 ---
 # <a name="marker_seriesmarker_series-constructor"></a>marker_series:: marker_series Oluşturucusu
@@ -39,9 +39,9 @@ marker_series(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `_SeriesName`Oluşturulacak serinin adı.
+ `_SeriesName` Oluşturulacak serinin adı.
 
- `_ProviderGuid`Seri sağlayıcının GUID 'SI.
+ `_ProviderGuid` Seri sağlayıcının GUID 'SI.
 
 ## <a name="requirements"></a>Gereksinimler
  **Üst bilgi:** *cvmarkersobj. h*

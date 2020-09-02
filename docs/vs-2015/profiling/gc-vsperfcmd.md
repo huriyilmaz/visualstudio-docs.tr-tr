@@ -10,42 +10,42 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2bdb28f74dd305dc497521e95d38e00192c21c54
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193597"
 ---
 # <a name="gc-vsperfcmd"></a>GC (VSPerfCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**GC** seçenek, .NET Framework bellek ayırma ve nesne yaşam verilerinin koleksiyonunu etkinleştirir. **GC** seçeneği, yalnızca örnekleme profili oluşturma yöntemi ve yalnızca ile kullanılabilir **başlatma** seçeneği.  
+**GC** seçeneği, .NET Framework bellek ayırma ve nesne yaşam süresi verilerinin toplanmasını mümkün bir şekilde sunar. **GC** seçeneği yalnızca örnekleme profili oluşturma yöntemiyle ve yalnızca **başlatma** seçeneği ile kullanılabilir.  
   
- Kullanırken **GC** seçeneğini VSPerfClrEnv **/sampleon** komut gerekli değildir.  
+ **GC** seçeneğini kullanırken, VSPerfClrEnv **/sampleon** komutu gerekli değildir.  
   
- Parametre belirtilmezse veya **ayırma** parametresi belirtildiğinde, yalnızca .NET Framework bellek ayırma verileri toplanır. Varsa **ömrü** parametresi belirtildiğinde, hem .NET Framework bellek ayırma hem de .NET Framework nesne yaşam verisi toplanır.  
+ Hiçbir parametre belirtilmemişse veya **ayırma** parametresi belirtilmişse yalnızca .NET Framework bellek ayırma verileri toplanır. **Ömür** parametresi belirtilirse, hem .NET Framework bellek ayırma hem de .NET Framework nesne yaşam süresi verileri toplanır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 VSPerfCmd.exe /Launch:AppName /GC[:{Allocation|Lifetime}] [Options]  
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- **ayırma**  
- Varsayılan. .NET Framework bellek ayırma verileri toplar.  
+ **Ayırma**  
+ Varsayılan. .NET Framework bellek ayırma verilerini toplar.  
   
  **Ömür**  
- Hem .NET Framework bellek ayırma verisini hem de .NET Framework nesne yaşam süresi verisi toplar.  
+ .NET Framework bellek ayırma verilerini ve .NET Framework nesne yaşam süresi verilerini toplar.  
   
-## <a name="required-options"></a>Gerekli seçenekleri  
- **GC** seçeneği yalnızca kullanılabilir ile **başlatma** seçeneği.  
+## <a name="required-options"></a>Gerekli seçenekler  
+ **GC** seçeneği yalnızca **başlatma** seçeneği ile kullanılabilir.  
   
- **Başlat:** `AppName`  
- Belirtilen uygulamayı başlatır ve örnekleme yöntemiyle profili oluşturma başlar.  
+ **Başlatma:**`AppName`  
+ Belirtilen uygulamayı başlatır ve örnekleme yöntemiyle profil oluşturmaya başlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir uygulama başlatır ve .NET Framework bellek ayırma verileri toplar.  
+ Aşağıdaki örnek bir uygulamayı başlatır ve .NET Framework bellek ayırma verilerini toplar.  
   
 ```  
 VSPerfCmd.exe /Launch:TestApp.exe /gc  
@@ -53,6 +53,6 @@ VSPerfCmd.exe /Launch:TestApp.exe /gc
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Bağımsız uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [ASP.NET Web uygulamalarında profil oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Tek başına uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [ASP.NET Web uygulamalarının profilini oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [Profil Oluşturma Hizmetleri](../profiling/command-line-profiling-of-services.md)

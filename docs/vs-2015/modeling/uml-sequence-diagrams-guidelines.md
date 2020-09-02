@@ -24,10 +24,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cdd853307bdea28c48762a6a3f0416e698b577ff
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850132"
 ---
 # <a name="uml-sequence-diagrams-guidelines"></a>UML Sıralı Diyagramlar: Yönergeler
@@ -54,7 +54,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
  [Denetim yapılarını parçalar ile açıklama](#Fragments)
 
-## <a name="Using"></a>UML sıralı diyagramlarını kullanma
+## <a name="using-uml-sequence-diagrams"></a><a name="Using"></a> UML sıralı diyagramlarını kullanma
  Farklı program ayrıntısı düzeylerinde çeşitli amaçlar için sıralı diyagramlar kullanabilirsiniz. Sıralı diyagram çizmek için tipik durumlar aşağıdaki gibidir:
 
 - Sisteminizin kullanıcılarını ve amaçlarını özetleyen bir kullanım örneği diyagramınız varsa, sistemin ana bileşenlerinin her kullanım örneğinin hedefini yerine getirmek için nasıl etkileşime gireceğini betimleyen sıralı diyagramlar çizebilirsiniz. Daha fazla bilgi için bkz. [UML Kullanım örneği diyagramları: yönergeler](../modeling/uml-use-case-diagrams-guidelines.md).
@@ -79,7 +79,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 #### <a name="use-case-details"></a>Kullanım örneği ayrıntıları
  Kullanım durumu, bir kullanıcının hedefini, hedefi elde etmek için bir adım dizisiyle birlikte temsil eder. Adımların sırası çeşitli yollarla açıklanabilir. Bir seçenek, kullanıcılar ve sistemin ana bileşenleri arasındaki etkileşimleri gösteren bir sıra diyagramı çizmektir. Daha fazla bilgi için bkz. [UML Kullanım örneği diyagramları: yönergeler](../modeling/uml-use-case-diagrams-guidelines.md).
 
-## <a name="BasicSteps"></a>Çizim sırası diyagramları için temel adımlar
+## <a name="basic-steps-for-drawing-sequence-diagrams"></a><a name="BasicSteps"></a> Çizim sırası diyagramları için temel adımlar
  Sıralı diyagramlarda öğelerin tüm listesi için bkz. [UML sıralı diyagramlar: başvuru](../modeling/uml-sequence-diagrams-reference.md).
 
 > [!NOTE]
@@ -115,7 +115,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 3. Bilinmeyen bir olay kaynağından (9) veya bilinmeyen alıcılara yayınlar (10) gelen bir iletiyi göstermek için, diyagramda veya boş alana bir zaman uyumsuz ileti çizin. Bu iletiler *bulunan iletiler* (9) ve *kayıp iletiler* (10) olarak adlandırılır.
 
     > [!NOTE]
-    > Kayıp veya bulunan iletileri olan bir yaşam çizgisi grubunu taşımak için, bunları taşımadan önce yaşam çizgilerini seçmek üzere aşağıdaki adımları izleyin: Bu yaşam çizgilerinin çevresine bir dikdörtgen çizin veya her bir yaşam çizgisine tıkladığınızda **CTRL** tuşunu basılı tutun. Tüm yaşam çizgilerini **seçmek Için** **Tümünü seç** veya **CTRL**+' i kullanırsanız ve sonra bunları taşırsanız, bu yaşam çizgilerine eklenen kayıp veya bulunan iletiler hareket etmez. Bu senaryo ortaya çıkarsa, bu iletileri ayrı olarak taşıyabilirsiniz.
+    > Kayıp veya bulunan iletileri olan bir yaşam çizgisi grubunu taşımak için, bunları taşımadan önce yaşam çizgilerini seçmek üzere aşağıdaki adımları izleyin: Bu yaşam çizgilerinin çevresine bir dikdörtgen çizin veya her bir yaşam çizgisine tıkladığınızda **CTRL** tuşunu basılı tutun. Tüm yaşam çizgilerini seçmek için **Tümünü Seç** veya **CTRL** + **A** kullanırsanız, bu yaşam çizgilerine eklenen kayıp veya bulunan iletiler de hareket etmez. Bu senaryo ortaya çıkarsa, bu iletileri ayrı olarak taşıyabilirsiniz.
 
 4. Aynı bileşene veya sisteme her bir ana ileti için sıralı diyagramlar çizin.
 
@@ -123,7 +123,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - Bir iletiyi yaşam çizgisinde yukarı veya aşağı sürükleyin. Başka iletilerin üzerine veya bir yürütme bloğunun içine veya dışına sürükleyebilirsiniz.
 
-     \- veya -
+     \- veya
 
 - İleti konumlarını ayarlamak için iletiye tıklayın ve **yukarı ok** ve **aşağı ok** tuşlarını kullanın. İletilerin sırasını değiştirmek için **SHIFT + yukarı ok** ve **SHIFT + aşağı ok** tuşlarını kullanın.
 
@@ -144,7 +144,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
   - Yaşam çizgisine sağ tıkladıktan sonra **Sınıf Oluştur**' u seçin.
 
-     veya
+     -veya-
 
   - Yaşam çizgisini seçin, **F4**tuşuna basın ve ardından **Özellikler** penceresinde, **tür** özelliğini varolan bir tür olarak ayarlayın veya yeni bir tür için adı belirtin. İleti etiketine sağ tıklayın ve sonra **Işlem oluştur**' u seçin.
 
@@ -165,11 +165,11 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 2. Etkileşimi pakete sürükleyin.
 
-     \- veya -
+     \- veya
 
      Etkileşime sağ tıklayın ve ardından **Kes**' e tıklayın. Pakete sağ tıklayın ve ardından **Yapıştır**' a tıklayın.
 
-## <a name="Simple"></a>Basit sıralı diyagramlar oluşturma ve kullanma
+## <a name="creating-and-using-simple-sequence-diagrams"></a><a name="Simple"></a> Basit sıralı diyagramlar oluşturma ve kullanma
  En basit ve en yaygın olarak kullanılan sıralı diyagram formu yalnızca yaşam çizgilerini ve iletileri içerir. Bu tür bir diyagram, tasarımınızda nesneler arasındaki ya da sisteminiz ile kullanıcıları arasında tipik bir etkileşim sırasını açıkça göstermenizi sağlar. Bu, tasarımınızı tartışmanıza ve iletmanıza yardımcı olmak için genellikle yeterlidir.
 
  Basit bir sıra diyagramı çizerken göz önünde bulundurmanız gereken bazı noktalar aşağıda verilmiştir.
@@ -179,7 +179,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - Gönderenin alıcının bir yanıt döndürmesini (3) beklediği bir etkileşimi anlatmak için **zaman uyumlu** aracını kullanın.
 
-     **<\<> >** ok, yürütme oluşumunun sonunda gösterilir. Bu, denetimin göndericiye dönmesini gösterir.
+     **<\<return>>** Yürütme oluşumunun sonunda bir ok görüntülenir. Bu, denetimin göndericiye dönmesini gösterir.
 
 - Gönderenin alıcıyı beklemeden hemen devam edebildiği bir etkileşimi anlatmak için **zaman uyumsuz** aracı kullanın (4).
 
@@ -256,7 +256,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - Bazı yaşam çizgileri birden fazla görev türünü ele geçiriyor gibi görünüyor. Her bir yaşam çizgisinin sorumluluklarını açıklayan ve aldığı her iletiye yanıt olarak yaptığı işi özetleyen bir kısa cümlesini bulmanın kolay olması gerekir.
 
-## <a name="ClassesAndLifelines"></a>Sınıflar ve yaşam çizgileri
+## <a name="classes-and-lifelines"></a><a name="ClassesAndLifelines"></a> Sınıflar ve yaşam çizgileri
  Sıra diyagramlarındaki yaşam çizgileri sınıfların veya bileşen arabirimlerinin örneklerini gösterir. Bir yaşam çizgisine iki şekilde ad verebilirsiniz:
 
 |**Bu amaçla**|**Bu biçimi kullan**|
@@ -274,7 +274,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - UML Model Gezgini 'nden bir sınıf, bileşen veya arabirimi sıralı diyagram üzerine sürükleyin.
 
-   \- veya -
+   \- veya
 
   1. İlgili diyagramda sınıf, bileşen veya arabirime sağ tıklayın ve ardından **yaşam çizgisi oluştur**' a tıklayın.
 
@@ -323,7 +323,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
          Sınıf veya arabirim sınıf diyagramında görüntülenir.
 
-         \- veya -
+         \- veya
 
     3. Yeni arabirimi **UML Model Gezgini** ' nden bileşen diyagramında bir bileşene veya bağlantı noktasına sürükleyin.
 
@@ -332,7 +332,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 ### <a name="creating-classes-for-parameters"></a>Parametreler için sınıflar oluşturma
  İletilere bir sıralı diyagramda parametreler ekleyebilirsiniz. Parametre türlerini anlatmak için UML sınıf diyagramı kullanabilirsiniz.
 
-## <a name="Multiple"></a>Yeniden kullanılabilir etkileşim sıraları oluşturma
+## <a name="creating-reusable-interaction-sequences"></a><a name="Multiple"></a> Yeniden kullanılabilir etkileşim sıraları oluşturma
  Ayırmak istediğiniz ayrıntı içeren bir diziyi veya çeşitli diyagramlar arasında ortak olan bir sırayı betimleyen ayrı bir diyagram kullanabilirsiniz.
 
  Bir diyagramda, başka bir diyagramdaki ayrıntılara işaret eden bir etkileşim kullanım dikdörtgeni (12) oluşturabilirsiniz.
@@ -349,7 +349,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 3. Etkileşim kullanımıyla ilgili ada çift tıklayın ve bu diyagramda yeniden kullanılabilir sıranın etkisini tanımlayacak şekilde yeniden adlandırın.
 
-     \- veya -
+     \- veya
 
      Parametresi ile bir işlev çağrısı gibi bir ad yazın.
 
@@ -357,7 +357,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
      Yeni sıralı diyagram oluşturmak için **yeni dizi oluştur** 'a tıklayın
 
-     \- veya -
+     \- veya
 
      Var olan bir diyagrama bağlamak için **sıralama bağlantısı** ' na tıklayın.
 
@@ -384,14 +384,14 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
 
 - Etkileşim kullanımına çift tıklayın.
 
-     \- veya -
+     \- veya
 
      Etkileşim kullanımına sağ tıklayın ve ardından **Diziye Git ' e**tıklayın.
 
 ### <a name="creating-a-placeholder-with-an-interaction-use"></a>Etkileşim kullanımı ile yer tutucu oluşturma
  Bir etkileşim kullanımını başka bir diyagrama bağlamadan oluşturabilirsiniz. Bu, ayrıntıları henüz çalışılmakta olan dizinin bir parçası için bir yer tutucu olarak kullanabilirsiniz. İstediğiniz sonucu belirtmek için etkileşim kullanımı adını kullanın.
 
-## <a name="Collapse"></a>Yaşam çizgileri gruplarını daraltma
+## <a name="collapsing-groups-of-lifelines"></a><a name="Collapse"></a> Yaşam çizgileri gruplarını daraltma
  Bir yaşam çizgisi kümesini birlikte daraltabilir, böylece grup bir yaşam çizgisi olarak görünür. Bu, bir nesne grubunu tek bir bileşen olarak görselleştirmenize yardımcı olur. Daraltılmış bir gruptaki yaşam çizgileri arasındaki iletiler ve etkileşim kullanımları gizlidir. Diğer yaşam çizgilerini içeren iletiler ve etkileşim sıraları gösterilir.
 
 #### <a name="to-collapse-a-group-of-lifelines-together"></a>Bir yaşam çizgisi grubunu birlikte daraltmak için
@@ -416,7 +416,7 @@ Visual Studio 'da bir etkileşimi göstermek için bir *sıra diyagramı* çizeb
     > [!NOTE]
     > Grubun adı, gruptaki tüm bağlantılarla birlikte yorumlara veya iş öğelerine kaybolacaktır.
 
-## <a name="Fragments"></a>Denetim yapılarını parçalar ile açıklama
+## <a name="describing-control-structures-with-fragments"></a><a name="Fragments"></a> Denetim yapılarını parçalar ile açıklama
  Birleşik parçaları (13) kullanarak bir sıralı diyagramda döngüleri, dalları ve eşzamanlı işlemeyi tanımlayabilirsiniz. Alternatif olarak, bunun yerine bir etkinlik diyagramı kullanmayı düşünün. Etkinlik diyagramı, aktörler arasındaki iletileri göstermek için yararlı değildir, ancak bazı durumlarda döngüler, dallar ve eşzamanlılık gösterme konusunda daha iyi bir seçenektir.
 
  Parça türlerinin tam listesi için bkz. [UML sıralı diyagramlarında parçaların bulunduğu denetim akışını açıklama](../modeling/describe-control-flow-with-fragments-on-uml-sequence-diagrams.md).

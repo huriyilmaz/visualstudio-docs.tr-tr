@@ -1,5 +1,5 @@
 ---
-title: Idialoadcallback::restrictregistryaccess | Microsoft Docs
+title: 'Ialoadcallback:: RestrictRegistryAccess | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,28 +14,28 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: edc1bc130f2e8320de0cbd0e0ac3f84dad71b903
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150602"
 ---
 # <a name="idialoadcallbackrestrictregistryaccess"></a>IDiaLoadCallback::RestrictRegistryAccess
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kayıt defteri sorguları sembol arama yollarını bulmak için kullanılabilir olmadığını belirler.  
+Simge arama yollarını bulmak için kayıt defteri sorgularının kullanılabileceğini belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT RestrictRegistryAccess();  
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Herhangi bir dışındaki kod dönüş `S_OK` simge arama yolu için kayıt defterini sorgulayarak engeller.  
+ Dışında herhangi bir dönüş kodu `S_OK` , sembol arama yolları için kayıt defterinin sorgulanmasını önler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

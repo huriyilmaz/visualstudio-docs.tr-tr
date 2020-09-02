@@ -20,42 +20,42 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d11969ecfbe9a7e3fd02ad289b0de95512b0b8f4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68177504"
 ---
 # <a name="debugging-web-applications"></a>Web Uygulamalarında Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu bölümde, birden fazla Web uygulamalarında hata ayıklamak açıklanmaktadır.  
+Bu bölümde birçok Web uygulaması türünün nasıl ayıklanacağı açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Web Uygulamalarında Hata Ayıklama](../debugger/how-to-debug-web-applications.md)  
- Hata ayıklama açıklar bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] proje hala geliştirilmektedir.  
+ [Nasıl Yapılır: Web Uygulamalarında Hata Ayıklama](../debugger/how-to-debug-web-applications.md)  
+ Bir projede hata ayıklamanın [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] hala geliştirme aşamasında nasıl yapılacağını açıklar.  
   
  [Dağıtılmış Web Uygulamalarında Hata Ayıklama](../debugger/debugging-deployed-web-applications.md)  
- Zaten dağıtılmış bir hata ayıklama açıklanmaktadır [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulaması.  
+ Zaten dağıtılmış bir Web uygulamasının nasıl hata ayıklaması yapılacağını açıklar [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] .  
   
  [İstemci Tarafı Betikte Hata Ayıklama](../debugger/client-side-script-debugging.md)  
- Test betikleri ve istemci tarafı betiklerde anlatılmaktadır [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] sayfaları.  
+ Sayfalardaki betikleri ve istemci tarafı betikleri test etmeyi açıklar [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] .  
   
  [İzlenecek yol: Web Formunda Hata Ayıklama](../debugger/walkthrough-debugging-a-web-form.md)  
- Nasıl hata ayıklanacağı gösterilmiştir bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulaması.  
+ Bir Web uygulamasında hata ayıklamayı gösterir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] .  
   
- [Nasıl yapılır: ASP.NET Özel Durumlarında Hata Ayıklama](../debugger/how-to-debug-aspnet-exceptions.md)  
- Hata ayıklama sırasında oluşan özel durumlar açıklanmaktadır [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulamalar.  
+ [Nasıl Yapılır: ASP.NET Özel Durumlarında Hata Ayıklama](../debugger/how-to-debug-aspnet-exceptions.md)  
+ Uygulamalarda hata ayıklarken oluşan özel durumlarla nasıl başa çıkılabileceğinizi açıklar [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] .  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [ASP.NET'de Hata Ayıklamaya Hazırlanıyor](../debugger/preparing-to-debug-aspnet.md)  
- Hata ayıklamayı etkinleştirmek için gereken adımları açıklar [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulamalar.  
+ Uygulamalarda hata ayıklamayı etkinleştirmek için gereken adımları açıklar [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] .  
   
  [Dağıtılmış Web Uygulamalarında Hata Ayıklama](../debugger/debugging-deployed-web-applications.md)  
- Zaten dağıtılmış bir hata ayıklama açıklanmaktadır [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] Web uygulaması.  
+ Zaten dağıtılmış bir Web uygulamasının nasıl hata ayıklaması yapılacağını açıklar [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Web uygulamalarında ve betikte hata ayıklama](../debugger/debugging-web-applications-and-script.md)   
  [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)   
- [Hata ayıklayıcı temel bilgileri](../debugger/debugger-basics.md)   
- [Visual Studio’da hata ayıklama](../debugger/debugging-in-visual-studio.md)
+ [Hata ayıklayıcı temelleri](../debugger/debugger-basics.md)   
+ [Visual Studio'da Hata Ayıklama](../debugger/debugging-in-visual-studio.md)

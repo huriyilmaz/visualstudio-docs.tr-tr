@@ -1,5 +1,5 @@
 ---
-title: Veri kümesi görselleştiricisi iletişim kutusu | Microsoft Docs
+title: Veri kümesi görselleştiricisi Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,25 +26,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 829363dcbf5e8cc4a9151f369d6b0191fc282d44
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65697847"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>Veri Kümesi Görselleştiricisi İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Veri kümesi görselleştiricisi, bir veri kümesi, DataTable, DataView veya DataViewManager nesnenin içeriğini görüntülemenizi sağlar. Bu Görselleştirici hata ayıklayıcı değişken penceresinde veya DataTip, söz konusu nesnelerin değeri yanında Büyüteç simgesine tıklayarak erişebilirsiniz.  
+DataSet Visualizer, bir DataSet, DataTable, DataView veya DataViewManager nesnesinin içeriğini görüntülemenizi sağlar. Hata ayıklayıcı değişkenleri penceresinde veya bir veri Ipucunda bu nesnelerden birinin değerinin yanında görünen büyüteç simgesine tıklayarak bu Görselleştirici 'a erişebilirsiniz.  
   
- Bu Görselleştirici nesneleri için değişiklik yapabilirsiniz. Bir satır işleme hemen sonra değişiklikler kaydedilecek.  
+ Bu Görselleştirici içindeki nesnelerde değişiklik yapabilirsiniz. Bir satırı işlemenizden hemen sonra değişiklikler kaydedilir.  
   
 ## <a name="uielement-list"></a>UIElement Listesi  
  Tablo  
- Tablo görselleştirmek istediğiniz veri kümesi içinde seçmek için bu açılan liste kullanın.  
+ Görselleştirmek istediğiniz veri kümesi içindeki bir tabloyu seçmek için bu açılan liste kutusunu kullanın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)   
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)   
  [Özel Görselleştiriciler oluşturma](../debugger/create-custom-visualizers-of-data.md)   
- [Değişken Windows](https://msdn.microsoft.com/library/ce0a67f6-2502-4b7a-ba45-cc32f8aeba3e)   
+ [Değişken pencereleri](https://msdn.microsoft.com/library/ce0a67f6-2502-4b7a-ba45-cc32f8aeba3e)   
  [Veri İpuçları'ndaki veri değerlerini görüntüleme](../debugger/view-data-values-in-data-tips-in-the-code-editor.md)

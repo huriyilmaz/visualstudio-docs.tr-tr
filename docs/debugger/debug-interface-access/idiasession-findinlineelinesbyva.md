@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0d28c00ea33f0dc07b6785691e9528c4e3b02421
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85465715"
 ---
 # <a name="idiasessionfindinlineelinesbyva"></a>IDiaSession::findInlineeLinesByVA
@@ -32,7 +32,7 @@ HRESULT findInlineeLinesByVA ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki `IDiaSymbol`Üst öğeyi temsil eden nesne.
+'ndaki `IDiaSymbol` Üst öğeyi temsil eden nesne.
 
  `va`
 
@@ -44,7 +44,7 @@ HRESULT findInlineeLinesByVA ( 
 
  `ppResult`
 
-dışı `IDiaEnumLineNumbers`Alınan satır numaralarının listesini içeren bir nesnesi tutar.
+dışı `IDiaEnumLineNumbers` Alınan satır numaralarının listesini içeren bir nesnesi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.

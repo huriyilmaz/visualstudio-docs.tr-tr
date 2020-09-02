@@ -11,64 +11,64 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3a95b7da718f050357f6ecd79c90c389dd6085d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204612"
 ---
 # <a name="elements-of-the-isolated-shell"></a>Yalıtılmış Kabuğun Öğeleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kayıt defteri ayarları, çalışma zamanı ayarlarını ve uygulama giriş noktası, yalıtılmış Kabuk uygulaması ve kendi .vsct, .pkgdef, and.pkgundef dosyaları değiştirebilirsiniz.  
+Yalıtılmış Kabuk uygulamanızın kayıt defteri ayarlarını, çalışma zamanı ayarlarını ve uygulama giriş noktasını ve. vsct,. pkgdef ve. pkgundef dosyalarını değiştirebilirsiniz.  
   
-## <a name="registry-settings"></a>Kayıt defteri ayarları  
- .pkgdef ve .pkgundef dosyaları hem yalıtılmış Kabuk uygulaması için kayıt defteri ayarlarını değiştirin. Uygulamayı çalıştırdığınızda, aşağıdaki sırayla kayıt defteri ayarları tanımlanır:  
+## <a name="registry-settings"></a>Kayıt Defteri Ayarları  
+ . Pkgdef ve. pkgundef dosyaları, yalıtılmış Kabuk uygulaması için kayıt defteri ayarlarını değiştirir. Uygulama çalıştırıldığında, kayıt defteri ayarları aşağıdaki sırada tanımlanır:  
   
- Uygulamayı çalıştırdığınızda, aşağıdaki sırayla kayıt defteri ayarları tanımlanır:  
+ Uygulama çalıştırıldığında, kayıt defteri ayarları aşağıdaki sırada tanımlanır:  
   
 1. Uygulama için kayıt defteri anahtarı oluşturulur.  
   
-2. Kayıt defteri, belirtilen anahtarları ve girişleri tanımlayarak uygulamanın .pkgdef dosyasından güncelleştirilir.  
+2. Kayıt defteri, belirtilen anahtarları ve girişleri tanımlayarak uygulamanın. pkgdef dosyasından güncelleştirilir.  
   
-3. Uygulamanızın bir parçası olan her paket için bu paket .pkgdef dosyasından kayıt defteri güncelleştirilir. Her paket uygulamanın .pkgdef dosyasında $RootKey$ \Packages tarafından tanımlanan\\{*vsPackageGuid*} paketi için anahtar.  
+3. Uygulamanızın parçası olan her paket için kayıt defteri Bu paketin. pkgdef dosyasından güncelleştirilir. Her paket, paket için $RootKey $ \Packages \\ {*VsPackageGuid*} anahtarıyla uygulamanın. pkgdef dosyasında tanımlanır.  
   
-4. Kayıt defteri AppEnvConfig.pkgdef ve BaseConfig.pkgdef içinde güncelleştirilir *Visual Studio SDK yükleme yolunu*\Common7\IDE\ShellExtensions\Platform dizin. Bu, Visual Studio'nun bir parçası ve ayrıca Visual Studio Kabuğu (yalıtılmış mod) yeniden dağıtılabilir paketi parçası dosyalarıdır.  
+4. Kayıt defteri, *Visual STUDIO SDK yükleme yolu*\Common7\IDE\ShellExtensions\Platform dizinindeki AppEnvConfig. pkgdef ve BaseConfig. pkgdef öğesinden güncelleştirilir. Bu dosyalar, Visual Studio 'nun bir parçasıdır ve Visual Studio Kabuğu (yalıtılmış mod) yeniden dağıtılabilir paketi 'nin bir parçasıdır.  
   
-5. Kayıt defteri, belirtilen anahtarları ve girişleri kaldırarak uygulama .pkgundef dosyasından güncelleştirilir.  
+5. Kayıt defteri, belirtilen anahtarlar ve girdileri kaldırarak uygulamanın. pkgundef dosyasından güncelleştirilir.  
   
 ## <a name="run-time-settings"></a>Çalışma zamanı ayarları  
- Bir kullanıcının yalıtılmış Kabuk uygulaması başladığında Visual Studio Kabuğu başlangıç giriş noktası çağırır. Uygulama ayarları, uygulamanız başlatıldığında, şu şekilde tanımlanır:  
+ Kullanıcı yalıtılmış kabuk uygulamasını başlattığında, Visual Studio Kabuğu 'nun başlangıç giriş noktasını çağırır. Uygulama ayarları, uygulamanız başlatıldığında aşağıdaki gibi tanımlanır:  
   
-1. Visual Studio Kabuğu uygulama kayıt defteri belirli anahtarlar için denetler. Bir anahtarı ayarı, başlangıç giriş noktası çağrısında belirtilirse, bu değeri kayıt defteri değerini geçersiz kılar.  
+1. Visual Studio Kabuğu, uygulama kayıt defterini belirli anahtarlar için denetler. Başlangıç giriş noktasına yapılan çağrıda bir anahtarın ayarı belirtilmişse, bu değer kayıt defterindeki değeri geçersiz kılar.  
   
-2. Kayıt defteri ya da giriş noktası parametresi bir ayarın değerini belirtir ve ayarı için varsayılan değer kullanılır.  
+2. Kayıt defteri veya giriş noktası parametresi bir ayarın değerini belirtiyorsa, ayar için varsayılan değer kullanılır.  
   
-   Bir kullanıcı, komut satırından, uygulama başlatıldığında, tüm komut satırı anahtarları bunları Devenv yaptığı aynı şekilde davranır Visual Studio Kabuğu geçirilir. Devenv anahtarları hakkında daha fazla bilgi için bkz. [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md) ve [VSPackage geliştirme için Devenv komut satırı anahtarları](../extensibility/devenv-command-line-switches-for-vspackage-development.md). Bir paket için komut satırı anahtarları nasıl kayıtları hakkında daha fazla bilgi için bkz. [komut satırı anahtarları ekleme](../extensibility/adding-command-line-switches.md).  
+   Bir kullanıcı uygulamanızı komut satırından başlattığında, tüm komut satırı anahtarları Visual Studio Shell 'e geçirilir ve bu, devenv tarafından aynı şekilde davranır. Devenv anahtarları hakkında daha fazla bilgi için bkz. [Devenv komut satırı anahtarları](../ide/reference/devenv-command-line-switches.md) ve [VSPackage geliştirme Için Devenv komut satırı anahtarları](../extensibility/devenv-command-line-switches-for-vspackage-development.md). Bir paketin komut satırı anahtarlarına nasıl kaydolduktan ilişkin daha fazla bilgi için bkz. [komut satırı anahtarları ekleme](../extensibility/adding-command-line-switches.md).  
   
 ## <a name="the-start-entry-point"></a>Başlangıç giriş noktası  
- Appenvstub.dll dosyası, yalıtılmış Kabuk erişimi için giriş noktaları içerir. Uygulama başladığında, başlangıç giriş noktası Appenvstub.dll çağırır.  
+ Appenvstub.dll dosyası yalıtılmış kabuğa erişmek için giriş noktaları içerir. Uygulama başlatıldığında Appenvstub.dll başlangıç giriş noktasını çağırır.  
   
- Uygulama davranışını başlangıç Giriş noktasına geçirilir son parametresinin değerini değiştirerek değiştirebilirsiniz. Daha fazla bilgi için [yalıtılmış Kabuk giriş noktası parametreleri (C++)](../extensibility/isolated-shell-entry-point-parameters-cpp.md).  
+ Başlangıç giriş noktasına geçirilen son parametrenin değerini değiştirerek uygulamanın davranışını değiştirebilirsiniz. Daha fazla bilgi için bkz. [yalıtılmış Kabuk giriş noktası parametreleri (C++)](../extensibility/isolated-shell-entry-point-parameters-cpp.md).  
   
-## <a name="the-vsct-file"></a>. Vsct dosyası  
- .Vsct dosyası standart hangi Visual Studio kullanıcı Arabirimi öğeleri uygulamada kullanılabilir belirtmenize olanak sağlar. Daha fazla bilgi için [. Vsct dosyaları](../extensibility/modifying-the-isolated-shell-by-using-the-dot-vsct-file.md).  
+## <a name="the-vsct-file"></a>İçin. Vsct dosyası  
+ . Vsct dosyası, uygulamada hangi standart Visual Studio Kullanıcı arabirimi öğelerinin kullanılabilir olduğunu belirtmenizi sağlar. Daha fazla bilgi için bkz [.. Vsct dosyaları](../extensibility/modifying-the-isolated-shell-by-using-the-dot-vsct-file.md).  
   
-## <a name="the-pkgundef-file"></a>. Pkgundef dosyası  
- Uygulama, Visual Studio zaten yüklü olduğu bir bilgisayara yüklendiğinde, Visual Studio kayıt defteri girdilerini bir kopyasını uygulama için yapılır. Varsayılan olarak, uygulama bilgisayarda yüklü olan VSPackages kullanır. .Pkgundef dosyası uygulamadan Visual Studio Kabuğu veya uzantıları belirli öğeleri kaldırmak için kayıt defteri girdilerini dışlamanıza olanak sağlar. Daha fazla bilgi için [. Pkgundef dosyaları](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgundef-file.md).  
+## <a name="the-pkgundef-file"></a>İçin. Pkgundef dosyası  
+ Uygulama, Visual Studio 'nun zaten yüklü olduğu bir bilgisayara yüklendiğinde, uygulama için Visual Studio kayıt defteri girdilerinin bir kopyası yapılır. Varsayılan olarak, uygulama bilgisayarda zaten yüklü olan VSPackages 'yi kullanır. . Pkgundef dosyası, Visual Studio kabuğu veya uzantılarının belirli öğelerini uygulamadan kaldırmak için kayıt defteri girdilerini dışlamanızı sağlar. Daha fazla bilgi için bkz [.. Pkgundef dosyaları](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgundef-file.md).  
   
- .Pkgundef dosyası uygulamadan Visual Studio Kabuğu veya uzantıları belirli öğeleri kaldırmak için kayıt defteri girdilerini dışlamanıza olanak sağlar. Daha fazla bilgi için [. Pkgundef dosyaları](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgundef-file.md).  
+ . Pkgundef dosyası, Visual Studio kabuğu veya uzantılarının belirli öğelerini uygulamadan kaldırmak için kayıt defteri girdilerini dışlamanızı sağlar. Daha fazla bilgi için bkz [.. Pkgundef dosyaları](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgundef-file.md).  
   
- Paket hariç tutabilirsiniz GUID'leri kümesini listelenir [paket GUID'leri, Visual Studio özellikleri](../extensibility/package-guids-of-visual-studio-features.md).  
+ Dışarıda bırakabilmeniz gereken paket GUID 'Leri kümesi, [Visual Studio özelliklerinin paket GUID](../extensibility/package-guids-of-visual-studio-features.md)'lerinde listelenmiştir.  
   
-## <a name="the-pkgdef-file"></a>. Pkgdef dosyası  
- .Pkgdef dosyası, uygulama için uygulama yüklendiğinde, ayarladığınız kayıt defteri girişleri tanımlamanıza olanak sağlar. .Pkgdef dosyası açıklamasını ve Visual Studio Kabuğu kullanan kayıt defteri girdilerini listesi için bkz [. Pkgdef dosyaları](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md).  
+## <a name="the-pkgdef-file"></a>İçin. Pkgdef dosyası  
+ . Pkgdef dosyası, uygulama yüklendiğinde ayarlanan uygulama için kayıt defteri girişleri tanımlamanızı sağlar. . Pkgdef dosyasının açıklaması ve Visual Studio Kabuğu 'nun kullandığı kayıt defteri girdilerinin bir listesi için bkz [.. Pkgdef dosyaları](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md).  
   
 ## <a name="substitution-strings"></a>Değiştirme dizeleri  
- .Pkgdef ve .pkgundef dosyalarında kullanılan değiştirme dizeleri listelenen [değiştirme dizeleri kullanılır. Pkgdef ve. Pkgundef dosyaları](../extensibility/substitution-strings-used-in-dot-pkgdef-and-dot-pkgundef-files.md).  
+ . Pkgdef ve. pkgundef dosyalarında kullanılan değiştirme dizeleri, [' de kullanılan değiştirme dizelerinde listelenmiştir. Pkgdef ve. Pkgundef dosyaları](../extensibility/substitution-strings-used-in-dot-pkgdef-and-dot-pkgundef-files.md).  
   
 ## <a name="other-settings"></a>Diğer ayarlar  
- Yalıtılmış Kabuk uygulaması üzerinde Microsoft.VisualStudio.GraphModel.dll bağlıysa, yalıtılmış Kabuk uygulamanızın .config dosyasına aşağıdaki bağlama yeniden yönlendirmesini ekleme gerekir:  
+ Yalıtılmış Kabuk uygulamanız Microsoft.VisualStudio.GraphModel.dll bağımlıysa, yalıtılmış Kabuk uygulamanızın. config dosyasına aşağıdaki bağlama yeniden yönlendirmesini eklemeniz gerekir:  
   
 ```  
 <dependentAssembly>  

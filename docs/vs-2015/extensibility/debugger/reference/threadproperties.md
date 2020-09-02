@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4815a1e42b98fba812e8a3c2a53516bff16081db
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204817"
 ---
 # <a name="threadproperties"></a>THREADPROPERTIES
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir iş parçacığı özelliklerini açıklar.  
+Bir iş parçacığının özelliklerini açıklar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _tagTHREADPROPERTIES {   
@@ -52,35 +52,35 @@ public struct THREADPROPERTIES { 
   
 ## <a name="members"></a>Üyeler  
  dwFields  
- Bayraklarının bir birleşimi [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) bu yapının hangi alanlarda geçerli olduğunu açıklayan sabit listesi,.  
+ Bu yapıdaki hangi alanların geçerli olduğunu açıklayan [THREADPROPERTY_FIELDS](../../../extensibility/debugger/reference/threadproperty-fields.md) Numaralandırmadaki bayrakların birleşimi.  
   
  dwThreadId  
- İş parçacığı kimliği.  
+ İş parçacığı KIMLIĞI.  
   
  dwSuspendCount  
- İş parçacığını askıya alma sayısı.  
+ İş parçacığı askıya alma sayısı.  
   
  dwThreadState  
- Bir değer [THREADSTATE](../../../extensibility/debugger/reference/threadstate.md) çalışma iş parçacığı durumunu belirten sabit listesi.  
+ İş parçacığının durumunu gösteren [ThreadState](../../../extensibility/debugger/reference/threadstate.md) sabit listesinden bir değer.  
   
  bstrPriority  
- İş parçacığı önceliği belirten bir dize; Örneğin, "yukarıda Normal", "Normal" veya "Zaman kritik".  
+ İş parçacığı önceliğini belirten bir dize; Örneğin, "normalin üzerinde", "normal" veya "zaman kritik".  
   
  bstName  
  İş parçacığı adı.  
   
  bstrLocation  
- Genellikle burada yürütme şu anda durdu yöntemin adı ifade edilen iş parçacığı konumu (en üstteki yığın çerçevesi genellikle).  
+ Genellikle yürütmenin Şu anda sonlandırıldığı yöntemin adı olarak ifade edilen iş parçacığı konumu (genellikle en üstteki yığın çerçevesi).  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı için bir çağrı tarafından doldurulur [GetThreadProperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) yöntemi. Bu nedenle döndürülen bilgileri, genellikle doldurma içinde kullanılır **iş parçacıkları** penceresi.  
+ Bu yapı, [Getthreadproperties](../../../extensibility/debugger/reference/idebugthread2-getthreadproperties.md) yöntemine yapılan bir çağrı ile doldurulur. Döndürülen bilgiler genellikle **Iş parçacıkları** penceresini doldurmak için kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   
