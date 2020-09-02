@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetEEService | Microsoft Dokümanlar
+title: 'IDebugBinder3:: GetEEService | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 7c08d7df4a6b05be489f6b9ab06569c085f3b1f8
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735830"
 ---
 # <a name="idebugbinder3geteeservice"></a>IDebugBinder3::GetEEService
-Bu yöntem istenen bir hizmeti döndürür.
+Bu yöntem istenen hizmeti döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetEEService(
@@ -47,22 +47,22 @@ Int GetEEService(
 
 ## <a name="parameters"></a>Parametreler
 `vendor`\
-[içinde] `GUID` bir satıcının (null değeri kabul edilebilir).
+[in] `GUID` bir satıcı (null değer kabul edilebilir).
 
 `language`\
-[içinde] `GUID` bir dilin (null değeri kabul edilebilir).
+[in] `GUID` bir dil (null değer kabul edilebilir).
 
 `iid`\
-[içinde] `IID` elde etmek için hizmet.
+[in] `IID` hizmeti edinin.
 
 `ppService`\
-[çıkış] İstenen hizmetin arabirimi.
+dışı İstenen hizmete yönelik bir arabirim.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Tip `IID` Visualizer hizmetinin kullanılabilir olup olmadığını`IID_IEEVisualizerServiceProvider`görmek için [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md) arabirimini () geçirin. Eğer öyleyse, ifade değerlendirici türü görselleştiricileri desteklemek için [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) arabirimini elde edebilirsiniz. Ayrıntılar için [Verileri Görselleştirme ve Görüntüleme'ye](../../../extensibility/debugger/visualizing-and-viewing-data.md) bakın.
+ `IID`Tür görselleştiricisi hizmeti 'nin kullanılabilir olup olmadığını görmek Için [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md) arabirimine ( `IID_IEEVisualizerServiceProvider` ) geçin. Bu durumda, ifade değerlendirici, tür görselleştiricileri desteklemek için [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) arabirimini alabilir. Ayrıntılar için bkz. [verileri görselleştirme ve görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

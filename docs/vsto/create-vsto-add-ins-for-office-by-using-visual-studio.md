@@ -13,23 +13,23 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1222e6603ea45e1a4172af84b9062c17a407c28c
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72986156"
 ---
 # <a name="create-vsto-add-ins-for-office-by-using-visual-studio"></a>Visual Studio kullanarak Office için VSTO Eklentileri oluşturma
   Office 'i genişleten .NET Framework uygulamalar oluşturmak için Visual Studio 'daki Microsoft Office Geliştirici Araçları ' nı kullanabilirsiniz. Bu uygulamalar *Office çözümleri*olarak da adlandırılır.
 
- Office geliştirici araçları, çeşitli iş ihtiyaçlarını karşılamak için Office çözümleri oluşturmanıza yardımcı olan özellikler sağlar. Araçlar, Visual Basic veya görsel C#kullanarak Office çözümleri oluşturmanıza yardımcı olan proje şablonlarını ve Office çözümleriniz için özel kullanıcı arabirimleri oluşturmanıza yardımcı olan görsel tasarımcıları içerir.
+ Office geliştirici araçları, çeşitli iş ihtiyaçlarını karşılamak için Office çözümleri oluşturmanıza yardımcı olan özellikler sağlar. Araçlar, Visual Basic veya Visual C# ' yi kullanarak Office çözümleri oluşturmanıza yardımcı olan proje şablonlarını ve Office çözümleriniz için özel kullanıcı arabirimleri oluşturmanıza yardımcı olan görsel tasarımcıları içerir.
 
 [!include[Add-ins note](includes/addinsnote.md)]
 
  Office geliştirme hakkında en son bilgiler için [Microsoft Office Geliştirici Merkezi](https://developer.microsoft.com/office/docs)' ne bakın.
 
 ## <a name="in-this-section"></a>Bu bölümde
-- [Visual Studio &#40;'da Office geliştirme ile çalışmaya başlama&#41;](getting-started-office-development-in-visual-studio.md)
+- [Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](getting-started-office-development-in-visual-studio.md)
 
  Office çözümleri oluşturmak için bir geliştirme bilgisayarı yapılandırma, Office çözümlerini oluşturmaya başlama ve Visual Studio 'da Office geliştirmeye yönelik yenilikler hakkında bilgilere bağlantılar sağlar.
 
@@ -79,11 +79,11 @@ ms.locfileid: "72986156"
 
 - [Office çözümleri oluşturma](building-office-solutions.md)
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Office projeleri ve diğer proje türleri oluşturma arasındaki farklılıklar hakkında bilgi sağlar.
+ İçindeki Office projelerini ve diğer proje türlerini oluşturma arasındaki farklılıklar hakkında bilgi sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - [Office projelerinde hata ayıklama](debugging-office-projects.md)
 
- Office projelerinin hata ayıklaması ve [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]diğer proje türleri arasındaki farklar hakkında bilgi sağlar.
+ İçindeki Office projelerinin hata ayıklaması ve diğer proje türleri arasındaki farklar hakkında bilgi sağlar [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
 - [Güvenli Office çözümleri](securing-office-solutions.md)
 
@@ -97,13 +97,13 @@ ms.locfileid: "72986156"
 
  Ortak görevleri gerçekleştirmeye yönelik adım adım yönergeler veren örnek uygulamalara ve konulara bağlantılar sağlar.
 
-- [Visual Studio &#40;'da Genel başvuru Office geliştirme&#41;](general-reference-office-development-in-visual-studio.md)
+- [Visual Studio 'da Office geliştirme &#40;Genel başvuru&#41;](general-reference-office-development-in-visual-studio.md)
 
  Office birincil birlikte çalışma derlemeleri, bildirimleri, Kullanıcı arabirimi öğeleri ve hata iletileri hakkında ayrıntılı bilgi için bağlantılar sağlar.
 
-- [Visual Studio &#40;'da yönetilen başvuru Office geliştirme&#41;](managed-reference-office-development-in-visual-studio.md)
+- [Visual Studio 'da Office geliştirme &#40;yönetilen başvuru&#41;](managed-reference-office-development-in-visual-studio.md)
 
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]hedefleyen Office projelerinde kullanılan API ad alanları ve türleri hakkında bilgi bağlantıları sağlar. .NET Framework 3,5 ' i hedefleyen Office projelerinde kullanılan ad alanları ve türler hakkında API başvuru belgeleri için, Visual Studio 2008 belgelerindeki aşağıdaki başvuru bölümüne bakın: [2007 sistem tarafından yönetilen başvuru](managed-reference-office-development-in-visual-studio.md).
+ ' İ hedefleyen Office projelerinde kullanılan API ad alanları ve türleri hakkında bilgi bağlantıları sağlar [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] . .NET Framework 3,5 ' i hedefleyen Office projelerinde kullanılan ad alanları ve türler hakkında API başvuru belgeleri için, Visual Studio 2008 belgelerindeki aşağıdaki başvuru bölümüne bakın: [2007 sistem tarafından yönetilen başvuru](managed-reference-office-development-in-visual-studio.md).
 
 - [Yönetilmeyen API başvurusu &#40;Visual Studio 'da Office geliştirme&#41;](unmanaged-api-reference-office-development-in-visual-studio.md)
 
@@ -118,4 +118,4 @@ ms.locfileid: "72986156"
 
 - [Visual Studio 'Da uygulama geliştirme](https://msdn.microsoft.com/97490c1b-a247-41fb-8f2c-bc4c201eff68) Web uygulamaları, XML Web Hizmetleri ve geleneksel istemci uygulamaları tasarlamak, geliştirmek, hatalarını ayıklamak ve dağıtmak için Visual Studio 'Yu nasıl kullanabileceğinizi açıklayan konuların bağlantılarını içerir.
 
-- [Visual Studio 'da .NET Framework programlama](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) Visual Basic ve Visual C#'teki .NET Framework uygulama geliştirmeyi açıklar.
+- [Visual Studio 'da .NET Framework programlama](/previous-versions/visualstudio/visual-studio-2010/k1s94fta(v=vs.100)) Visual Basic ve Visual C# ' de .NET Framework ile uygulama geliştirmeyi anlatır.

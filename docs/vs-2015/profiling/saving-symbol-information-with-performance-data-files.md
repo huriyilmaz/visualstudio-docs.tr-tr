@@ -1,5 +1,5 @@
 ---
-title: Performans veri dosyalarıyla birlikte sembol bilgilerini kaydetme | Microsoft Docs
+title: Simge bilgilerini performans veri dosyalarıyla kaydetme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,58 +13,58 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e9d2e8b0414746523d0f76e8266f6463d9c05574
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160292"
 ---
 # <a name="saving-symbol-information-with-performance-data-files"></a>Performans Veri Dosyalarıyla Birlikte Sembol Bilgilerini Kaydetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanıyorsanız [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve tümleşik geliştirme ortamı (IDE) dosyalarını analiz etmek için planlama, VSP dosyası farklı bir bilgisayara taşımak, proje ayarları kaydetmek için performansı ayarlayın veya *serileştirmek* içindeki semboller Rapor dosyanız. Bu rapor dosyasının boyutu artar. Semboller serileştirmek iki nedenden dolayı gereklidir:  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Dosyaları çözümlemek için tümleşik geliştirme ortamı (IDE) kullanıyorsanız ve VSP dosyanızı farklı bir bilgisayara taşımayı planlıyorsanız, performans projesi ayarlarını rapor dosyanızdaki sembolleri kaydetmek veya *seri hale* getirmek için ayarlamanız gerekir. Bu, bir rapor dosyasının boyutunu artırır. İki nedenle sembolleri serileştirmek gereklidir:  
   
-- Eklemek için bir performans raporu hedef derlemelere önce kod sembolleri geçici depolama konumlarından kaybolur.  
+- Hedef derlemeler geçici depolamadaki konumlarından kaybolmadan önce bir performans raporuna kod sembolleri eklemek için.  
   
-- Performans Raporu profili oluşturulmuş bilgisayarı taşınabilir ve analiz farklı simgeler olabilir başka bir bilgisayarda rapor açılırsa, aynı bilgileri çıkarır sembolleri korumak için.  
+- Sembolleri korumak için, performans raporunun profili oluşturulmuş bilgisayardan taşınabilir olması ve rapor başka bir bilgisayarda analiz için açılırsa farklı sembolleri olabilen aynı bilgileri çıkışları.  
   
   **Gereksinimler**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
-  Sembolleri buradan serileştirebiliyorsa [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE veya komut satırından:  
+  Sembolleri [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 'den veya komut satırından seri hale getirebilirsiniz:  
   
-- Semboller serileştirmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE, noktasına **Araçları** menü çubuğu ve ardından **seçenekleri**. İçinde **seçenekleri** penceresinde **performans araçları**ve ardından **sembol bilgisini otomatik serileştir** onay kutusu.  
+- IDE 'de sembolleri seri hale getirmek için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] menü çubuğundaki **Araçlar** ' ın üzerine gelin ve ardından **Seçenekler**' e tıklayın. **Seçenekler** penceresinde, **performans araçları**' nı seçin ve ardından **sembol bilgilerini otomatik olarak seri hale getirme** onay kutusunu seçin.  
   
-- Rapor dosyaları kaydettiğinizde PACKSYMBOLS eşdeğer komut satırı seçeneğini ' dir. Semboller serileştirmek için şunu yazın **vsperfreport userrulesdirectory packsymbols filename.vsp**.  
+- Rapor dosyalarını kaydettiğinizde, PACKSYMBOLS, eşdeğer komut satırı seçeneğidir. Sembolleri seri hale getirmek için **VSPerfReport/summary: all/packsymbols filename. vsp**yazın.  
   
 ## <a name="troubleshooting-symbol-problems"></a>Sembol sorunlarını giderme  
- Kendi kodunuzda simgeleri görmüyorsanız, bazı yaygın çözümleri mevcuttur:  
+ Kendi kodunuzda herhangi bir sembol görmüyorsanız bazı yaygın çözümler kullanılabilir:  
   
-- Vsperfreport /debugsympath, burada sembol bilgilerini profil oluşturucu bileşenleri yükleniyor ve olup kullanılan sembol dosyalarını projenizde dosyalarla eşleşmesini konumları tam bir listesini görüntülemek için komut satırında çalıştırın.  
+- Profiler bileşenlerinin sembol bilgilerini yüklediği konumların ve kullanılan sembol dosyalarının projenizin kullandığı dosyalarla eşleşip eşleşmeksizin, bir komut satırında VSPerfReport/debugsympath komutunu çalıştırın.  
   
-- Vsperfreport packsymbols bayrağıyla ya da çalıştırdığınızdan emin olun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] genel performans Gezgini seçeneklerinde serileştirme sembol bilgileri seçeneğe sahip bir IDE.  
+- VSPerfReport komutunu/PACKSYMBOLS bayrağıyla veya IDE 'de, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] genel performans Gezgini seçeneklerinde serileştirme sembol bilgisi seçeneğinin seçili olduğundan emin olun.  
   
-- Tür veri topladıysanız /SUMMARY:TYPE vsperfreport komut satırına ekleyin.  
+- Tür verisi topladıysanız, VSPerfReport komut satırına/SUMMARY: TYPE ekleyin.  
   
-  Windows veya başka Microsoft programlarını sembolleri görmüyorsanız:  
+  Windows veya diğer Microsoft programlarından sembolleri görmüyorsanız:  
   
-- Windows sembol önbelleğinizi yolunu ayarladığınızdan emin olun. Sembol önbellek yolunu ayarlamak için aşağıdakilerden birini yapın:  
+- Windows sembol önbelleğinizin yolunu ayarladığınızdan emin olun. Sembol önbelleği yolunu ayarlamak için aşağıdakilerden birini yapın:  
   
-  - Kümesi hata ayıklayıcısı -> Semboller seçeneğini [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] doğru yola bir IDE.  
+  - IDE 'deki Debugger->sembolleri seçeneğini [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] doğru yola ayarlayın.  
   
-  - -Symbolpath seçeneği VSPerfReport, semboller içeren için komut satırına ekleyin.  
+  - Sembollerinizi dahil etmek için VSPerfReport komut satırına-SymbolPath seçeneğini ekleyin.  
   
-- Semboller görmüyorsanız [!INCLUDE[vstecasp](../includes/vstecasp-md.md)], sembol sunucusu ASP sunucu için doğru bir şekilde ayarlandığından emin olun.  
+- İçinde herhangi bir sembol görmüyorsanız [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] , sembol sunucusunun ASP sunucusu için doğru şekilde ayarlandığından emin olun.  
   
-## <a name="repacking-symbols"></a>Repacking semboller  
- Bir rapora simgeleri yeniden paketleyin istiyorsanız VsPerfReport komut satırı aracını kullanarak bunu yapabilirsiniz. Aşağıdaki komut satırlarını kullanın:  
+## <a name="repacking-symbols"></a>Simgeleri yeniden paketleme  
+ Sembolleri bir rapora yeniden paketetmek isterseniz, bunu komut satırı aracı VsPerfReport ' u kullanarak yapabilirsiniz. Aşağıdaki komut satırlarını kullanın:  
   
- VsPerfReport - clearpackedsymbols filename.vsp  
+ VsPerfReport-clearpackedsymbols filename. vsp  
   
- VsPerfReport - packsymbols-summary: all filename.vsp  
+ VsPerfReport-packsymbols-Summary: tüm filename. vsp  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Verileri kaydetme ve dışarı aktarma performans araçları](../profiling/saving-and-exporting-performance-tools-data.md)   
- [Nasıl yapılır: Başvuru Windows sembol bilgileri](../profiling/how-to-reference-windows-symbol-information.md)   
+ [Performans araçları verilerini kaydetme ve dışarı aktarma](../profiling/saving-and-exporting-performance-tools-data.md)   
+ [Nasıl yapılır: Windows sembol bilgilerine başvuru](../profiling/how-to-reference-windows-symbol-information.md)   
  [VSPerfReport](../profiling/vsperfreport.md)
