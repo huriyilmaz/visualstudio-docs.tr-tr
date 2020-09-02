@@ -20,37 +20,37 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 08db6a5d22cacc348a9ef36fd9e9857d5b55642a
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703731"
 ---
 # <a name="signfile-task"></a>SignFile Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belirtilen dosyayı belirtilen sertifikayı kullanarak imzalar.  
+Belirtilen sertifikayı kullanarak belirtilen dosyayı imzalar.  
   
 ## <a name="parameters"></a>Parametreler  
- Parametreleri aşağıdaki tabloda açıklanmıştır `SignFile` görev.  
+ Aşağıdaki tablo, görevin parametrelerini açıklar `SignFile` .  
   
- SHA-256'yı sertifikaları izin verilen .NET 4.5 olan makinelere ve daha yüksek olduğunu unutmayın.  
+ SHA-256 sertifikalarına yalnızca .NET 4,5 ve üzeri makinelerde izin verildiğini unutmayın.  
   
 > [!WARNING]
-> Visual Studio 2013 güncelleştirme 3'te başlayarak, bu görevin dosyası için hedef framework sürümünü belirtmenizi sağlayan yeni bir imzası vardır. SHA-256'yı MSBuild işleminde kullandığı için mümkün olan karma yere yalnızca hedef Framework'ü .NET 4.5 olduğunda yeni imza kullanmak için kullanmaları ya da daha yüksek olursunuz. Aşağıda veya .NET 4.0 hedef çerçeve ise SHA-256 karma kullanılmayacak.  
+> Visual Studio 2013 güncelleştirme 3 ' den başlayarak, bu görevin dosya için hedef Framework sürümünü belirtmenize izin veren yeni bir imzası vardır. MSBuild işlemi yalnızca hedef Framework .NET 4,5 veya üzeri olduğunda SHA-256 karmaları kullandığından, yeni imzayı mümkün olduğunda kullanmanız önerilir. Hedef çerçeve .NET 4,0 veya altındaysa, SHA-256 karması kullanılmaz.  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`CertificateThumbprint`|Gerekli `String` parametresi.<br /><br /> İmzalama için kullanılacak sertifikayı belirtir. Bu sertifika, geçerli kullanıcının kişisel deposunda olmalıdır.|  
-|`SigningTarget`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametresi.<br /><br /> Sertifika ile imzalamak için dosyaları belirtir.|  
-|`TimestampUrl`|İsteğe bağlı `String` parametresi.<br /><br /> Zaman damgası sunucusunun URL'sini belirtir.|  
+|`CertificateThumbprint`|Gerekli `String` parametre.<br /><br /> İmzalama için kullanılacak sertifikayı belirtir. Bu sertifika, geçerli kullanıcının kişisel deposunda olmalıdır.|  
+|`SigningTarget`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Sertifikayla imzalanacak dosyaları belirtir.|  
+|`TimestampUrl`|İsteğe bağlı `String` parametre.<br /><br /> Zaman damgalama sunucusunun URL 'sini belirtir.|  
 |`TargetFrameworkVersion`|Hedef için kullanılan .NET Framework sürümü.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yukarıda listelenen parametrelerin yanı sıra, bu görev parametreleri devralan <xref:Microsoft.Build.Utilities.Task> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [görev temel sınıf](../msbuild/task-base-class.md).  
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından parametreleri devralır <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [görev temel sınıfı](../msbuild/task-base-class.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `SignFile` belirtilen dosyaları imzalamak için görev `FilesToSign` koleksiyon öğesi tarafından belirtilen sertifika ile `Certificate` özelliği.  
+ Aşağıdaki örnek, `SignFile` `FilesToSign` özelliği tarafından belirtilen sertifikayla öğe koleksiyonunda belirtilen dosyaları imzalamak için görevini kullanır `Certificate` .  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -70,10 +70,10 @@ Belirtilen dosyayı belirtilen sertifikayı kullanarak imzalar.
 ```  
   
 > [!NOTE]
-> Sertifika parmak izini sertifika SHA-1 karmasını ' dir. Daha fazla bilgi için [güvenilen kök CA sertifikasının SHA-1 karması elde](https://msdn.microsoft.com/dd641990-9a88-4228-a245-017797131a87).  
+> Sertifika parmak izi, sertifikanın SHA-1 karmasıdır. Daha fazla bilgi için bkz. [Güvenilen bir kök CA SERTIFIKASıNıN SHA-1 karmasını alma](https://msdn.microsoft.com/dd641990-9a88-4228-a245-017797131a87).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Exec` belirtilen dosyaları imzalamak için görev `FilesToSign` koleksiyon öğesi tarafından belirtilen sertifika ile `Certificate` özelliği. Derleme işlemi sırasında Windows Installer dosyaları imzalamak için bunu kullanabilirsiniz.  
+ Aşağıdaki örnek, `Exec` `FilesToSign` özelliği tarafından belirtilen sertifikayla öğe koleksiyonunda belirtilen dosyaları imzalamak için görevini kullanır `Certificate` . Bunu, derleme işlemi sırasında Windows Installer dosyaları imzalamak için kullanabilirsiniz.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  

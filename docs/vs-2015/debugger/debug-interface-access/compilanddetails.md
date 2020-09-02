@@ -14,48 +14,48 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 34349bf096d8bb98ae4b3de7c7a922b8d28bc4f8
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703008"
 ---
 # <a name="compilanddetails"></a>CompilandDetails
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Derlenecek bilgi simgeleri ile arasında bölünür bir `SymTagCompiland` etiketi (az ayrıntı) ve bir `SymTagCompilandDetails` etiketi (yüksek ayrıntı). `SymTagCompilandDetails` Ek sembol yüklenmesi gerekir. Ancak, çok sayıda kullanıma hazır değil derlenecek hakkında bilgi sağlar. bir `SymTagCompiland` sembol.  
+Compiland bilgileri, bir `SymTagCompiland` etiketle (düşük ayrıntı) ve bir `SymTagCompilandDetails` etiketle (yüksek ayrıntı) simgeler arasında bölünür. `SymTagCompilandDetails` ek sembolleri yüklemeyi gerektirir. Ancak, bir sembol ile kullanılamayan compiland hakkında çok fazla bilgi sağlar `SymTagCompiland` .  
   
 ## <a name="properties"></a>Özellikler  
- Aşağıdaki tabloda bu sembol türü için geçerli olan özellikleri gösterir.  
+ Aşağıdaki tabloda, bu sembol türü için geçerli olan özellikler gösterilmektedir.  
   
 |Özellik|Veri türü|Açıklama|  
 |--------------|---------------|-----------------|  
-|[IDiaSymbol::get_backEndBuild](../../debugger/debug-interface-access/idiasymbol-get-backendbuild.md)|`DWORD`|Derleyicinin arka uç yapı numarası.|  
+|[IDiaSymbol::get_backEndBuild](../../debugger/debug-interface-access/idiasymbol-get-backendbuild.md)|`DWORD`|Derleyicinin arka uç derleme numarası.|  
 |[IDiaSymbol::get_backEndMajor](../../debugger/debug-interface-access/idiasymbol-get-backendmajor.md)|`DWORD`|Derleyicinin arka uç ana sürüm numarası.|  
 |[IDiaSymbol::get_backEndMinor](../../debugger/debug-interface-access/idiasymbol-get-backendminor.md)|`DWORD`|Derleyicinin arka uç alt sürüm numarası.|  
-|[IDiaSymbol::get_compilerName](../../debugger/debug-interface-access/idiasymbol-get-compilername.md)|`BSTR`|(Yalnızca DIA SDK V8.0 veya üzeri sürümlerde) bu derlenecek üretilen derleme adı.|  
-|[IDiaSymbol::get_editAndContinueEnabled](../../debugger/debug-interface-access/idiasymbol-get-editandcontinueenabled.md)|`BOOL`|`TRUE` derleme için Düzenle ve devam et etkinleştirildiyse.|  
-|[IDiaSymbol::get_frontEndBuild](../../debugger/debug-interface-access/idiasymbol-get-frontendbuild.md)|`DWORD`|Derleyici ön derleme sayısı.|  
-|[IDiaSymbol::get_frontEndMajor](../../debugger/debug-interface-access/idiasymbol-get-frontendmajor.md)|`DWORD`|Derleyici ön uç ana sürüm sayısı.|  
-|[IDiaSymbol::get_frontEndMinor](../../debugger/debug-interface-access/idiasymbol-get-frontendminor.md)|`DWORD`|Derleyici ön uç alt sürüm sayısı.|  
-|[IDiaSymbol::get_hasDebugInfo](../../debugger/debug-interface-access/idiasymbol-get-hasdebuginfo.md)|`BOOL`|`TRUE` Bu derlenecek hata ayıklama bilgileri (yalnızca DIA SDK V8.0 veya üzeri) sahipse.|  
-|[IDiaSymbol::get_hasManagedCode](../../debugger/debug-interface-access/idiasymbol-get-hasmanagedcode.md)|`BOOL`|`TRUE` Bu derlenecek (yalnızca DIA SDK v8.0 veya üzeri sürümlerde) yönetilen kodu içeriyorsa.|  
-|[IDiaSymbol::get_hasSecurityChecks](../../debugger/debug-interface-access/idiasymbol-get-hassecuritychecks.md)|`BOOL`|`TRUE` derlenecek ile derlenen varsa [/GS (arabellek güvenlik denetimi)](https://msdn.microsoft.com/library/8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e) derleyici anahtarı (yalnızca DIA SDK V8.0 veya üzeri).|  
-|[IDiaSymbol::get_isCVTCIL](../../debugger/debug-interface-access/idiasymbol-get-iscvtcil.md)|`BOOL`|`TRUE` derlenecek ortak Ara dil (CIL) koddan yerel koda dönüştürülmüş durumunda.|  
-|[IDiaSymbol::get_isDataAligned](../../debugger/debug-interface-access/idiasymbol-get-isdataaligned.md)|`BOOL`|`TRUE` Kullanıcı tanımlı tür (UDT) için hizalı durumunda bazı bellek sınırı (yalnızca DIA SDK V8.0 veya üzeri) belirttiniz.|  
-|[IDiaSymbol::get_isHotpatchable](../../debugger/debug-interface-access/idiasymbol-get-ishotpatchable.md)|`BOOL`|`TRUE` derlenecek ile derlenen varsa [/hotpatch (düzeltme eki eklenebilen görüntü oluşturma)](https://msdn.microsoft.com/library/aad539b6-c053-4c78-8682-853d98327798) derleyici anahtarı (yalnızca DIA SDK v8.0 veya üzeri).|  
-|[IDiaSymbol::get_isLTCG](../../debugger/debug-interface-access/idiasymbol-get-isltcg.md)|`BOOL`|`TRUE` derlenecek ile derlenen varsa [/LTCG (bağlama zamanı kodu oluşturma)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2) derleyici anahtarı (yalnızca DIA SDK V8.0 veya üzeri).|  
-|[IDiaSymbol::get_isMSILNetmodule](../../debugger/debug-interface-access/idiasymbol-get-ismsilnetmodule.md)|`BOOL`|Derlenecek bir Microsoft Ara dil (MSIL) modülünün (yalnızca DIA SDK v8.0 veya üzeri sürümlerde) ise TRUE.|  
-|[IDiaSymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)|`DWORD`|Kaynak kod dili.|  
-|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|Derlenecek dosya simgesi.|  
-|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|Sözcük üst simge kimliği.|  
-|[IDiaSymbol::get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md)|`DWORD`|Derlenecek derlendiği platform (biri [CV_CPU_TYPE_e numaralandırması](../../debugger/debug-interface-access/cv-cpu-type-e.md) değerler).|  
-|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Sembol, dizin kimliği.|  
-|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagCompilandDetails` (biri [SymTagEnum numaralandırması](../../debugger/debug-interface-access/symtagenum.md) değerler).|  
+|[IDiaSymbol::get_compilerName](../../debugger/debug-interface-access/idiasymbol-get-compilername.md)|`BSTR`|Bu compiland üreten derleyicinin adı (yalnızca DIA SDK V 8.0 veya üzeri).|  
+|[IDiaSymbol::get_editAndContinueEnabled](../../debugger/debug-interface-access/idiasymbol-get-editandcontinueenabled.md)|`BOOL`|`TRUE` derlemede Düzenle ve devam et etkinse.|  
+|[IDiaSymbol::get_frontEndBuild](../../debugger/debug-interface-access/idiasymbol-get-frontendbuild.md)|`DWORD`|Derleyicinin ön uç derleme numarası.|  
+|[IDiaSymbol::get_frontEndMajor](../../debugger/debug-interface-access/idiasymbol-get-frontendmajor.md)|`DWORD`|Derleyicinin ön uç büyük sürüm numarası.|  
+|[IDiaSymbol::get_frontEndMinor](../../debugger/debug-interface-access/idiasymbol-get-frontendminor.md)|`DWORD`|Derleyicinin ön uç alt sürüm numarası.|  
+|[IDiaSymbol::get_hasDebugInfo](../../debugger/debug-interface-access/idiasymbol-get-hasdebuginfo.md)|`BOOL`|`TRUE` Bu compiland hata ayıklama bilgilerine sahipse (yalnızca DIA SDK V 8.0 veya üzeri sürümlerde).|  
+|[IDiaSymbol::get_hasManagedCode](../../debugger/debug-interface-access/idiasymbol-get-hasmanagedcode.md)|`BOOL`|`TRUE` Bu compiland, yönetilen kod içeriyorsa (yalnızca DIA SDK v 8.0 veya üzeri).|  
+|[IDiaSymbol::get_hasSecurityChecks](../../debugger/debug-interface-access/idiasymbol-get-hassecuritychecks.md)|`BOOL`|`TRUE` compiland, [/GS (arabellek güvenlik denetimi)](https://msdn.microsoft.com/library/8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e) derleyici anahtarıyla derlenmişse (yalnızca DIA SDK v 8.0 veya üzeri sürümlerde).|  
+|[IDiaSymbol::get_isCVTCIL](../../debugger/debug-interface-access/idiasymbol-get-iscvtcil.md)|`BOOL`|`TRUE` compiland ortak ara dil (CıL) kodundan yerel koda dönüştürülmüşse.|  
+|[IDiaSymbol::get_isDataAligned](../../debugger/debug-interface-access/idiasymbol-get-isdataaligned.md)|`BOOL`|`TRUE` Kullanıcı tanımlı türler (UDT) belirli bir bellek sınırına hizalanmışsa (yalnızca DIA SDK V 8.0 veya üzeri).|  
+|[IDiaSymbol::get_isHotpatchable](../../debugger/debug-interface-access/idiasymbol-get-ishotpatchable.md)|`BOOL`|`TRUE` compiland, [/hotpatch (düzeltme eki uygulanabilir görüntü oluşturma)](https://msdn.microsoft.com/library/aad539b6-c053-4c78-8682-853d98327798) derleyici anahtarı (yalnızca DIA SDK v 8.0 veya üzeri) ile derlenmişse.|  
+|[IDiaSymbol::get_isLTCG](../../debugger/debug-interface-access/idiasymbol-get-isltcg.md)|`BOOL`|`TRUE` compiland, [/LTCG (bağlama zamanı kodu oluşturma)](https://msdn.microsoft.com/library/788c6f52-fdb8-40c2-90af-4026ea2cf2e2) derleyicisi anahtarıyla derlenmişse (yalnızca DIA SDK v 8.0 veya üzeri sürümlerde).|  
+|[IDiaSymbol::get_isMSILNetmodule](../../debugger/debug-interface-access/idiasymbol-get-ismsilnetmodule.md)|`BOOL`|Compiland bir Microsoft ara dili (MSIL) modülüdür (yalnızca DIA SDK v 8.0 veya üzeri sürümlerde) TRUE.|  
+|[IDiaSymbol::get_language](../../debugger/debug-interface-access/idiasymbol-get-language.md)|`DWORD`|Kaynak kodu dili.|  
+|[IDiaSymbol::get_lexicalParent](../../debugger/debug-interface-access/idiasymbol-get-lexicalparent.md)|`IDiaSymbol*`|Compiland sembolü.|  
+|[IDiaSymbol::get_lexicalParentId](../../debugger/debug-interface-access/idiasymbol-get-lexicalparentid.md)|`DWORD`|Sözlü üst simgenin KIMLIĞI.|  
+|[IDiaSymbol::get_platform](../../debugger/debug-interface-access/idiasymbol-get-platform.md)|`DWORD`|Compiland 'in derlendiği platform ( [CV_CPU_TYPE_e sabit listesi](../../debugger/debug-interface-access/cv-cpu-type-e.md) değerlerinden biri).|  
+|[IDiaSymbol::get_symIndexId](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md)|`DWORD`|Simgenin dizin KIMLIĞI.|  
+|[IDiaSymbol::get_symTag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md)|`DWORD`|Döndürür `SymTagCompilandDetails` ( [SymTagEnum numaralandırma](../../debugger/debug-interface-access/symtagenum.md) değerlerinden biri).|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyiciler genellikle iki geçişli derleyici bilinen bir formda gelir; bazı derleyici sürümlerinde, her geçişi ayrı bir program tarafından ele alınır. Bu ön uç ve arka uç derleyicileri, sırasıyla, bu nedenle arka ve ön uç sürüm numaraları için Sembol Özellikleri bilinir.  
+ Derleyiciler genellikle iki taramalı derleyici olarak bilinen bir biçimde gelir; bazı derleyici sürümlerinde her geçiş ayrı bir program tarafından işlenir. Bunlar sırasıyla ön uç ve arka uç derleyicileri olarak bilinir, bu nedenle arka uç ve ön uç sürüm numaraları için sembol özellikleri.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Derlenecek](../../debugger/debug-interface-access/compiland.md)   
+ [Compiland](../../debugger/debug-interface-access/compiland.md)   
  [Simge Türlerinin Sözcük Hiyerarşisi](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)

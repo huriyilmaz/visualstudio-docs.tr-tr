@@ -12,22 +12,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9b08035deec65c8c42fe875d380d9cc3d15533a4
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75850263"
 ---
 # <a name="concurrency-visualizer-command-line-utility-cvcollectioncmd"></a>Eşzamanlılık Görselleştiricisi Komut Satırı Yardımcı Programı (CVCollectionCmd)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (CVCollectionCmd. exe), bunları Visual Studio için eşzamanlılık görselleştiricisi içinde görüntüleyebilmeniz için komut satırından izleme toplamak üzere kullanabilirsiniz. Oir 'ler, Visual Studio yüklü olmayan bilgisayarlarda kullanılabilir.  
+Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (CVCollectionCmd.exe) kullanarak, bunları Visual Studio için eşzamanlılık görselleştiricisi içinde görüntüleyebilmeniz için komut satırından izleme toplayabilirsiniz. Oir 'ler, Visual Studio yüklü olmayan bilgisayarlarda kullanılabilir.  
   
 > [!NOTE]
 > Visual Studio 2013 başlayarak eşzamanlılık görselleştiricisi isteğe bağlı bir uzantıdır. (Daha önce Visual Studio 'Ya eklenmiştir.) [Visual Studio 2015 Için eşzamanlılık görselleştiricisi koleksiyon araçları](https://www.microsoft.com/download/details.aspx?id=49103) 'Nı indirme merkezi ' nden indirebilirsiniz.  
   
 ## <a name="download-the-concurrency-visualizer-command-line-utility"></a>Eşzamanlılık görselleştiricisi komut satırı yardımcı programını indirin  
- Komut satırı yardımcı programını indirip yüklemek için, [Visual Studio 2015 Için eşzamanlılık görselleştiricisi koleksiyon araçları](https://www.microsoft.com/download/details.aspx?id=49103) ' na gidin ve yönergeleri izleyin. Varsayılan olarak, CVCollectionCmd. exe,%ProgramFiles%\Microsoft Eşzamanlılık görselleştiricisi koleksiyon araçları \ (% ProgramFiles (x86)% \ Microsoft eşzamanlılık görselleştiricisi koleksiyon araçları \ x64 bilgisayarlarda yüklü).  
+ Komut satırı yardımcı programını indirip yüklemek için, [Visual Studio 2015 Için eşzamanlılık görselleştiricisi koleksiyon araçları](https://www.microsoft.com/download/details.aspx?id=49103) ' na gidin ve yönergeleri izleyin. Varsayılan olarak, CVCollectionCmd.exe%ProgramFiles%\Microsoft concurrency Visualizer koleksiyon araçları \ (% ProgramFiles (x86)% \ Microsoft eşzamanlılık görselleştiricisi koleksiyon araçları \ x64 bilgisayarlarda yüklü).  
   
 ## <a name="collect-a-trace-with-cvcollectioncmd"></a>CVCollectionCmd ile izleme toplama  
  Uygulamayı CVCollectionCmd ile başlatarak veya buna ekleyerek bir izleme toplayabilirsiniz. Seçenekleriniz için aşağıdaki komut başvurusuna bakın. Örneğin:  
@@ -41,17 +41,17 @@ Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (CVCo
   
  **CvCollectionCmd/?**  
   
-|Seçenek|Açıklama|Parametreler|Döndürülen değerler|  
+|Seçenek|Açıklama|Parametreler|Dönüş değerleri|  
 |------------|-----------------|----------------|-------------------|  
-|Sorgu|Koleksiyonun başlatılıp başlatılmayacağını döndürür.|Yok.|koleksiyon başlamaya hazırsanız 0.<br /><br /> 1 koleksiyon zaten devam ediyorsa.<br /><br /> 2 koleksiyon devam etmiyor, ancak bir veya daha fazla gerekli [ETW](https://msdn.microsoft.com/library/ac99a063-e2d2-40cc-b659-d23c2f783f92) oturumu zaten etkin.|  
+|Sorgu|Koleksiyonun başlatılıp başlatılmayacağını döndürür.|Hiçbiri|koleksiyon başlamaya hazırsanız 0.<br /><br /> 1 koleksiyon zaten devam ediyorsa.<br /><br /> 2 koleksiyon devam etmiyor, ancak bir veya daha fazla gerekli [ETW](https://msdn.microsoft.com/library/ac99a063-e2d2-40cc-b659-d23c2f783f92) oturumu zaten etkin.|  
 |Başlat|Belirtilen işlemi eşzamanlılık görselleştiricisi altında çalıştırır.|Yürütülebilir dosyanın yolu.|çalışma başarılı olursa 0.<br /><br /> 1 hedef uygulama başlatılamadığından çalıştırma başarısız olduysa.<br /><br /> Bu, CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için yeterli izinlere sahip olduğu için, çalıştırma başarısız olursa 13.|  
-|Kullanıma aç|Sistem genelinde izleme toplamaya başlar; Aksi takdirde, bir işlem belirtilmişse bir işleme iliştirir.|Yok.|ek başarılı olursa 0.<br /><br /> Belirtilen işlem geçersiz veya belirsiz olduğundan ek başarısız olursa 1.<br /><br /> CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için izinleri yetersiz olduğundan, ek başarısız olursa 13.|  
+|İliştir|Sistem genelinde izleme toplamaya başlar; Aksi takdirde, bir işlem belirtilmişse bir işleme iliştirir.|Yok.|ek başarılı olursa 0.<br /><br /> Belirtilen işlem geçersiz veya belirsiz olduğundan ek başarısız olursa 1.<br /><br /> CVCollectionCmd 'nin belirtilen çıkış dizinine yazmak için izinleri yetersiz olduğundan, ek başarısız olursa 13.|  
 |Ayır|Koleksiyonu durduruyor.|Yok.|Bu, kesilmesi başarılı olursa 0 ' dır.<br /><br /> 1 Şu anda devam eden bir dağıtım başarısız olduğu için çıkarılabilir işlem başarısız oldu.<br /><br /> 2, koleksiyon durdurulamadığından gönderilemedi.|  
-|Çözümle|Belirtilen izlemeyi analiz eder.|CVTrace dosyasının tam yolu.|analiz başarılı olursa 0.<br /><br /> 1 analiz başlatılamıyor, çünkü belirtilen izleme sistem genelinde, ancak hedef işlem belirtilmedi.<br /><br /> 2 analiz başlatılamıyor, çünkü izleme sistem genelinde değil ve bir işlem belirtildi.<br /><br /> 3 belirtilen işlem geçersiz olduğundan analiz başarısız oldu.<br /><br /> 4 belirtilen CVTrace dosyası geçersiz olduğundan analiz başarısız oldu.|  
+|Çözümleme|Belirtilen izlemeyi analiz eder.|CVTrace dosyasının tam yolu.|analiz başarılı olursa 0.<br /><br /> 1 analiz başlatılamıyor, çünkü belirtilen izleme sistem genelinde, ancak hedef işlem belirtilmedi.<br /><br /> 2 analiz başlatılamıyor, çünkü izleme sistem genelinde değil ve bir işlem belirtildi.<br /><br /> 3 belirtilen işlem geçersiz olduğundan analiz başarısız oldu.<br /><br /> 4 belirtilen CVTrace dosyası geçersiz olduğundan analiz başarısız oldu.|  
 |LaunchArgs|Hedef yürütülebilir bağımsız değişkenleri belirtir. Bu seçenek yalnızca başlatma komutu için geçerlidir.|Uygulamanın komut satırı bağımsız değişkenleri.|Yok.|  
 |OutDir|İzleme dosyalarının kaydedileceği dizini belirtir. Başlatma ve Iliştirme komutları için geçerlidir.|Dizin yolu veya göreli yol.|Yok.|  
-|İşlem|Attach komutu yürütüldüğünde iliştirilecek veya çözümle komutu yürütüldüğünde analiz edilecek işlem olan işlemi belirtir. Ekle ve çözümle komutları için geçerlidir.|İşlemin PID 'SI veya adı.|Yok.|  
-|Yapılandırma|Koleksiyon ayarlarının varsayılanlar dışında olmasını istiyorsanız, yapılandırma dosyasının yolunu belirtir.   Başlat, Ekle ve çözümle komutları için geçerlidir.|XML yapılandırma dosyasının dizin yolu veya göreli yolu.|Yok.|  
+|İşleme|Attach komutu yürütüldüğünde iliştirilecek veya çözümle komutu yürütüldüğünde analiz edilecek işlem olan işlemi belirtir. Ekle ve çözümle komutları için geçerlidir.|İşlemin PID 'SI veya adı.|Yok.|  
+|Config|Koleksiyon ayarlarının varsayılanlar dışında olmasını istiyorsanız, yapılandırma dosyasının yolunu belirtir.   Başlat, Ekle ve çözümle komutları için geçerlidir.|XML yapılandırma dosyasının dizin yolu veya göreli yolu.|Yok.|  
   
 ## <a name="customizing-configuration-settings"></a>Yapılandırma ayarlarını özelleştirme  
  İzlemeleri toplamak için CVCollectionCmd kullanırsanız ve koleksiyon ayarlarını özelleştirmek istiyorsanız, bunları belirtmek için bir yapılandırma dosyası kullanın.  
@@ -59,20 +59,20 @@ Eşzamanlılık görselleştiricisi komut satırı yardımcı programını (CVCo
 > [!NOTE]
 > İzlemeleri toplamak için Visual Studio kullandığınızda, yapılandırma dosyasını doğrudan değiştirmeyin.  Bunun yerine, ayarları değiştirmek için [Gelişmiş ayarlar](../profiling/advanced-settings-dialog-box-concurrency-visualizer.md) iletişim kutusunu kullanın.  
   
- Koleksiyon ayarlarını değiştirmek için, CVCollectionCmd yardımcı programını çalıştıracağınız makinede bir yapılandırma dosyası oluşturun. Yapılandırma dosyasını sıfırdan oluşturabilir veya Visual Studio 'nun yüklü olduğu bilgisayarda yapılandırma dosyasını kopyalayabilir ve bunu değiştirebilirsiniz. Dosya `UserConfig.xml` olarak adlandırılır ve **Yerel AppData** klasöründe bulunur. Yardımcı programını çalıştırdığınızda, başlatma, Iliştirme veya çözümle komutuyla birlikte yapılandırma seçeneğini kullanın.  Yapılandırma seçeneği ile ilişkili parametrede, yapılandırma dosyasının yolunu belirtin.  
+ Koleksiyon ayarlarını değiştirmek için, CVCollectionCmd yardımcı programını çalıştıracağınız makinede bir yapılandırma dosyası oluşturun. Yapılandırma dosyasını sıfırdan oluşturabilir veya Visual Studio 'nun yüklü olduğu bilgisayarda yapılandırma dosyasını kopyalayabilir ve bunu değiştirebilirsiniz. Dosya adlandırılır `UserConfig.xml` ve **Yerel AppData** klasöründe bulunur. Yardımcı programını çalıştırdığınızda, başlatma, Iliştirme veya çözümle komutuyla birlikte yapılandırma seçeneğini kullanın.  Yapılandırma seçeneği ile ilişkili parametrede, yapılandırma dosyasının yolunu belirtin.  
   
 ### <a name="configuration-file-tags"></a>Yapılandırma dosyası etiketleri  
  Yapılandırma dosyası XML tabanlıdır. Geçerli Etiketler ve değerler şunlardır:  
   
-|Etiket|Açıklama|Değerler|  
+|Etiket|Description|Değerler|  
 |---------|-----------------|------------|  
-|Yapılandırma|Genel yapılandırma dosyasını kaldırır.|Şu öğeleri içermelidir:<br /><br /> -MinorVersion<br />-MajorVersion|  
-|MajorVersion|Yapılandırma dosyasının ana sürümünü belirtir.|[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] projeleri için 1 olmalıdır. 1 değilse, yardımcı program çalışmaz.|  
-|MinorVersion|Yapılandırma dosyasının ikincil sürümünü belirtir.|[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] projeleri için 0 olmalıdır. 0 değilse, yardımcı program çalışmaz.|  
+|Config|Genel yapılandırma dosyasını kaldırır.|Şu öğeleri içermelidir:<br /><br /> -MinorVersion<br />-MajorVersion|  
+|MajorVersion|Yapılandırma dosyasının ana sürümünü belirtir.|Projeler için 1 olmalıdır [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] . 1 değilse, yardımcı program çalışmaz.|  
+|MinorVersion|Yapılandırma dosyasının ikincil sürümünü belirtir.|Projeler için 0 olmalıdır [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] . 0 değilse, yardımcı program çalışmaz.|  
 |Includeenvsymbolpath|Ortam sembol yolunun (_NT_SYMBOL_PATH) kullanılıp kullanılmayacağını belirleyen bir değer ayarlar.|-True<br />-False|  
 |DeleteEtlsAfterAnalysis|Analiz tamamlandığında ETL dosyalarının silinip silinmediğini belirleyen bir değer ayarlar.|-True<br />-False|  
 |SymbolPath|Sembol sunucusunun yolunu belirtir. Daha fazla bilgi için bkz. [hata ayıklama sembol dosyalarını almak Için Microsoft sembol sunucusunu kullanma](https://support.microsoft.com/kb/311503).|Bir dizin adı veya URL 'SI.|  
-|İşaretler|İşaretleyici sağlayıcılarının listesini içerir.|Sıfır veya daha fazla MarkerProvider öğesi içerebilir.|  
+|İşaretleyiciler|İşaretleyici sağlayıcılarının listesini içerir.|Sıfır veya daha fazla MarkerProvider öğesi içerebilir.|  
 |MarkerProvider|Tek bir işaret sağlayıcısını belirtir.|Şu öğeleri içermelidir:<br /><br /> -Düzey<br />-GUID<br />-Ad<br /><br /> Şu öğeleri içerebilir:<br /><br /> -Kategoriler<br />-IsEnabled|  
 |Düzey|Bir MarkerProvider 'ın önem düzeyini ayarlar.|-Düşük<br />-Normal<br />-Yüksek<br />-Kritik<br />-Her şey|  
 |Guid|ETW işaretleyici sağlayıcısının genel benzersiz tanımlayıcısı.|BIR GUıD.|  

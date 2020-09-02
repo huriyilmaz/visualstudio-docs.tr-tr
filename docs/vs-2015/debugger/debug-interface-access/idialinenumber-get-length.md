@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_length | Microsoft Docs
+title: 'IDiaLineNumber:: get_length | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9a1fd9dda0e61da4353df7f3fc222df988d022c1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152072"
 ---
-# <a name="idialinenumbergetlength"></a>IDiaLineNumber::get_length
+# <a name="idialinenumberget_length"></a>IDiaLineNumber::get_length
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir blok içinde bayt sayısını alır.  
+Bir bloktaki bayt sayısını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_length (   
@@ -35,13 +35,13 @@ HRESULT get_length ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir bloğu içinde bulunan bayt sayısını döndürür.  
+ dışı Bir bloktaki bayt sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Blok kaynak kod satırı tarafından temsil edilen uzunluğudur [Idialinenumber](../../debugger/debug-interface-access/idialinenumber.md) nesne.  
+ Blok, [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) nesnesi tarafından temsil edilen satırdaki kaynak kodunun uzunluğudur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

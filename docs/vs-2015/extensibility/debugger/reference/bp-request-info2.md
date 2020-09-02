@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 65edef6585fd8367c6fb23c291bf4e8376de8861
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153354"
 ---
-# <a name="bprequestinfo2"></a>BP_REQUEST_INFO2
+# <a name="bp_request_info2"></a>BP_REQUEST_INFO2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Satıcı GUID, kısıtlama ve İzleme noktası gibi bir kesme noktası uygulamak için gereken bilgileri içerir.  
+Satıcı GUID, kısıtlama ve izleme noktası dahil bir kesme noktası uygulamak için gereken bilgileri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _BP_REQUEST_INFO2 {  
@@ -64,53 +64,53 @@ public struct BP_REQUEST_INFO2 {
   
 ## <a name="members"></a>Üyeler  
  `dwFields`  
- Bayraklarının bir birleşimi [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) hangi alanların doldurulmuş belirten sabit listesi.  
+ [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) Numaralandırmadaki, doldurulacak alanları belirten bayrakların birleşimi.  
   
  `guidLanguage`  
- Dil GUID.  
+ Dil GUID 'SI.  
   
  `bpLocation`  
- [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısı kesme noktası konumu türünü belirtir.  
+ Kesme noktası konumunun türünü belirten [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısı.  
   
  `pProgram`  
- [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) kesme noktası oluştuğu uygulamanın temsil eden nesne.  
+ Kesme noktasının gerçekleştiği uygulamayı temsil eden [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.  
   
  `bstrProgramName`  
- Kesme noktası oluştuğu uygulamanın adı.  
+ Kesme noktasının gerçekleştiği uygulamanın adı.  
   
  `pThread`  
- [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) kesme noktası oluştuğu iş parçacığını temsil eden nesne.  
+ Kesme noktasının gerçekleştiği iş parçacığını temsil eden [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) nesnesi.  
   
  `bstrThreadName`  
- Kesme noktası oluştuğu iş parçacığı adı.  
+ Kesme noktasının gerçekleştiği iş parçacığının adı.  
   
  `bpCondition`  
- [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) yapısı altında kesme noktası yangın koşullar açıklanmaktadır.  
+ Kesme noktasının tetikleneceği koşulları açıklayan [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) yapısı.  
   
  `bpPassCount`  
- [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) kesme noktası geçişi sayısı bilgilerini içeren yapısı.  
+ Kesme noktasının geçiş sayısı bilgilerini içeren [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) yapısı.  
   
  `dwFlags`  
- Bayraklarının bir birleşimi [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) istenen kesme noktası için bayrakları belirten sabit listesi.  
+ İstenen kesme noktasına yönelik bayrakları belirten [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) numaralandırmasındaki bayrakların birleşimi.  
   
  `guidVendor`  
- Satıcı GUİD'si. Null değeri olabilir.  
+ Satıcının GUID 'SI. Null bir değer olabilir.  
   
  `bstrConstraint`  
- Kesme noktası kısıtlama adı. Null değeri olabilir.  
+ Kesme noktası kısıtlamasının adı. Null bir değer olabilir.  
   
  `bstrTracepoint`  
- İzleme noktası adı. Null değeri olabilir.  
+ İzleme noktasının adı. Null bir değer olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı tarafından döndürülen [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md) yöntemi.  
+ Bu yapı [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md) yöntemi tarafından döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

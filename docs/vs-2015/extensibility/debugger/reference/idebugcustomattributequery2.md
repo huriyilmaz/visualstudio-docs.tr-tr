@@ -14,52 +14,52 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d4bc592ff0198d4cc93d500c39167e214e63f032
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702585"
 ---
 # <a name="idebugcustomattributequery2"></a>IDebugCustomAttributeQuery2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu alan için özel bir öznitelik var olup olmadığını belirler ve varsa, öznitelik bilgileri döndürür.  
+Bu alan için özel bir özniteliğin varlığını belirler ve varsa, öznitelik bilgilerini döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugCustomAttributeQuery2 : IDebugCustomAttributeQuery  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Sembol sağlayıcısı bu arabirimi uygulayan aynı nesne üzerinde uygulayan [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) özel öznitelikler desteklemek için.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Bir sembol sağlayıcısı, özel öznitelikleri desteklemek için [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) 'ı uygulayan aynı nesne üzerinde bu arabirimi uygular.  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Kullanım [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) bu arabirimden edinme [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabirimi.  
+ Bu arabirimi [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) arabiriminden almak için [QueryInterface](https://msdn.microsoft.com/library/62fce95e-aafa-4187-b50b-e6611b74c3b3) kullanın.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir **IDebugCustomAttributeQuery** arabirimi.  
-  
-|Yöntem|Açıklama|  
-|------------|-----------------|  
-|[IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)|Özel bir öznitelik ada göre var olup olmadığını belirler.|  
-|[GetCustomAttributeByName](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md)|Belirtilen özel özniteliğin öznitelik bilgileri alır.|  
-  
- Ek olarak **IDebugCustomAttributeQuery** yöntemleri `IDebugCustomAttributeQuery2` aşağıdaki yöntemi uygular:  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Aşağıdaki tabloda, **ıdebugcustomattributequery** arabiriminin yöntemleri gösterilmektedir.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md)|Bu alana ekli tüm özel öznitelikleri için bir numaralandırıcı alır.|  
+|[IsCustomAttributeDefined](../../../extensibility/debugger/reference/idebugcustomattributequery2-iscustomattributedefined.md)|Özel bir özniteliğin ada göre varolup olmadığını belirler.|  
+|[GetCustomAttributeByName](../../../extensibility/debugger/reference/idebugcustomattributequery2-getcustomattributebyname.md)|Verilen özel öznitelik için öznitelik bilgilerini alır.|  
+  
+ **Idebugcustomattributequery** yöntemlerine ek olarak, `IDebugCustomAttributeQuery2` aşağıdaki yöntemi uygular:  
+  
+|Yöntem|Açıklama|  
+|------------|-----------------|  
+|[EnumCustomAttributes](../../../extensibility/debugger/reference/idebugcustomattributequery2-enumcustomattributes.md)|Bu alana eklenen tüm özel öznitelikler için bir Numaralandırıcı alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) yöntem bu alan için tanımlanan tüm özel öznitelikleri için bir numaralandırıcı döndürür.  
+ [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) yöntemi, bu alan için tanımlanan tüm özel öznitelikler için bir Numaralandırıcı döndürebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: sh.h  
+ Üstbilgi: SH. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Sembol sağlayıcısı arabirimleri](../../../extensibility/debugger/reference/symbol-provider-interfaces.md)   

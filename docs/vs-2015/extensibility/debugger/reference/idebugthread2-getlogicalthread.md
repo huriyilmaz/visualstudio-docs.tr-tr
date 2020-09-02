@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetLogicalThread | Microsoft Docs
+title: 'IDebugThread2:: GetLogicalThread | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f430ea7ba69ca55bc76543d853396e22b193cf02
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153058"
 ---
 # <a name="idebugthread2getlogicalthread"></a>IDebugThread2::GetLogicalThread
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklama altyapısı, bu yöntemi uygulaması değil.  
+Hata ayıklama motorları bu yöntemi uygulamaz.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetLogicalThread(   
@@ -42,13 +42,13 @@ int GetLogicalThread( 
   
 #### <a name="parameters"></a>Parametreler  
  `pStackFrame`  
- [in] Bir [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) yığın çerçevesini temsil eden nesne.  
+ 'ndaki Yığın çerçevesini temsil eden bir [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) nesnesi.  
   
  `ppLogicalThread`  
- [out] Döndürür bir `IDebugLogicalThread2` ilişkili mantıksal iş parçacığını temsil eden arabirim. Hata ayıklama altyapısı uygulama bu null bir değere ayarlamanız gerekir.  
+ dışı `IDebugLogicalThread2` İlişkili mantıksal iş parçacığını temsil eden bir arabirim döndürür. Bir hata ayıklama altyapısı uygulamasının bunu null bir değere ayarlaması gerekir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Hata ayıklama altyapısı uygulamaları her zaman dönüş `E_NOTIMPL`.  
+ Hata ayıklama altyapısı uygulamaları her zaman döndürülür `E_NOTIMPL` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

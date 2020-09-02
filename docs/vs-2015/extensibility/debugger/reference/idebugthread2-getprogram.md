@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetProgram | Microsoft Docs
+title: 'IDebugThread2:: GetProgram | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a78f831f5df6506b0aa607a6378f8e37caa8e5ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153033"
 ---
 # <a name="idebugthread2getprogram"></a>IDebugThread2::GetProgram
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir iş parçacığı çalıştığı program alır.  
+Bir iş parçacığının çalıştığı programı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetProgram (   
@@ -40,10 +40,10 @@ int GetProgram ( 
   
 #### <a name="parameters"></a>Parametreler  
  `ppProgram`  
- [out] Döndürür bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) bu iş parçacığı çalışıyor program temsil eden nesne.  
+ dışı Bu iş parçacığının çalıştığı programı temsil eden bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   

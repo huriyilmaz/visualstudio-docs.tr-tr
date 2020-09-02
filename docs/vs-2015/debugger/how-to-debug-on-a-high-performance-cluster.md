@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Yüksek performanslı kümede hata ayıklama | Microsoft Docs'
+title: 'Nasıl yapılır: yüksek performanslı bir kümede hata ayıklama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,92 +18,92 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f4487b168c3d405b2449bcfb9515e60f0ea67ed1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702687"
 ---
-# <a name="how-to-debug-on-a-high-performance-cluster"></a>Nasıl yapılır: Yüksek performanslı kümede hata ayıklama
+# <a name="how-to-debug-on-a-high-performance-cluster"></a>Nasıl Yapılır: Yüksek Performanslı Kümede Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yüksek performanslı kümede çoklu işlem program hata ayıklama uzak bilgisayardaki sıradan bir programın hata ayıklama gibi değildir. Ancak, bazı ek hususlar vardır. Genel Uzaktan Kurulum gereksinimleri için bkz [uzaktan hata ayıklama](../debugger/remote-debugging.md).  
+Yüksek performanslı bir kümede çok İşlemsiz bir programın hata ayıklaması, uzak bir bilgisayardaki sıradan bir programın hata ayıklamasına benzer. Ancak bazı ek hususlar vardır. Genel uzaktan kurulum gereksinimleri için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).  
   
- Yüksek performanslı kümede hata ayıklaması yaparken, tüm kullanabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] windows ve uzaktan hata ayıklama için kullanılabilir olan teknikleri hata ayıklama. Ancak, uzaktan hata ayıklaması yaptığınızdan, harici konsol penceresi kullanılabilir değil.  
+ Yüksek performanslı bir kümede hata ayıklarken, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Uzaktan hata ayıklama için kullanılabilen tüm hata ayıklama pencerelerini ve tekniklerini kullanabilirsiniz. Ancak uzaktan hata ayıklaması yaptığınız için dış konsol penceresi kullanılamaz.  
   
- **İş parçacıkları** penceresi ve **işlemleri** penceresi özellikle paralel uygulamalarda hata ayıklama için yararlıdır. Bu windows kullanma hakkında daha fazla ipucu için bkz. [nasıl yapılır: İşlemler penceresini kullanma](https://msdn.microsoft.com/0207ce2f-8ceb-4fe7-b2b5-4dd35b035ed7) ve [nasıl yapılır: İş parçacıkları penceresini kullanma](../debugger/how-to-use-the-threads-window.md).  
+ **Iş parçacıkları** penceresi ve **süreçler** penceresi özellikle paralel uygulamalarda hata ayıklamak için faydalıdır. Bu pencereleri kullanma hakkında ipuçları için bkz. [nasıl yapılır: Işlem penceresini kullanma](https://msdn.microsoft.com/0207ce2f-8ceb-4fe7-b2b5-4dd35b035ed7) ve [nasıl yapılır: Iş parçacıkları penceresini kullanma](../debugger/how-to-use-the-threads-window.md).  
   
- Aşağıdaki yordamlar, yüksek performanslı kümede hata ayıklama için özellikle yararlı olan bazı teknikleri gösterir.  
+ Aşağıdaki yordamlarda, özellikle yüksek performanslı bir kümede hata ayıklama için yararlı olan bazı teknikler gösterilmektedir.  
   
- Paralel uygulamada hata ayıklaması yaparken, belirli bir iş parçacığı, işlem veya bilgisayarda bir kesme noktası ayarlamak isteyebilirsiniz. Bu, normal bir kesme noktası oluşturarak ve sonra bir kesme noktası filtresi ekleyerek yapabilirsiniz.  
+ Paralel bir uygulamada hata ayıklarken, belirli bir iş parçacığı, süreç veya bilgisayarda bir kesme noktası ayarlamak isteyebilirsiniz. Bunu, normal bir kesme noktası oluşturarak ve sonra bir kesme noktası filtresi ekleyerek yapabilirsiniz.  
   
 ### <a name="to-open-the-breakpoint-filter-dialog-box"></a>Kesme noktası filtresi iletişim kutusunu açmak için  
   
-1. Bir kaynak penceresinde kesme noktası glifine sağ **ayrıştırılmış kodu** penceresinde **çağrı yığını** penceresinde veya **kesme noktaları** penceresi.  
+1. Kaynak penceresinde, **ayrıştırma** penceresinde, **çağrı yığını** penceresinde veya **kesme noktaları** penceresinde bir kesme noktası glifi ' ne sağ tıklayın.  
   
-2. Kısayol menüsünde **filtre**. Bu seçenek üst düzey veya alt menüsü altında görünebilir **kesme noktaları**.  
+2. Kısayol menüsünde **filtre**' ye tıklayın. Bu seçenek en üst düzeyde veya **kesme noktaları**altındaki alt menüde görünebilir.  
   
 ### <a name="to-set-a-breakpoint-on-a-specific-computer"></a>Belirli bir bilgisayarda bir kesme noktası ayarlamak için  
   
-1. Bilgisayar adını alın **işlemleri** penceresi.  
+1. **İşlem** penceresinden bilgisayar adını alın.  
   
-2. Bir kesme noktası seçin ve açın **kesme noktası filtresi** önceki yordamda açıklanan iletişim kutusu.  
+2. Bir kesme noktası seçin ve önceki yordamda açıklandığı gibi **kesme noktası filtresi** iletişim kutusunu açın.  
   
-3. İçinde **kesme noktası filtresi** iletişim kutusunda:  
+3. **Kesme noktası filtresi** iletişim kutusunda şunu yazın:  
   
      MachineName =*yourmachinename*  
   
-     Daha karmaşık bir filtre oluşturmak için kullanarak ifadeleri birleştirebilirsiniz `&`, AND işleci `||`, OR işleci `!`, NOT işleci ve parantezler.  
+     Daha karmaşık bir filtre oluşturmak için, yan tümceleri, `&` and işlecini, `||` , or işlecini, `!` , Not işleci ve parantezleri kullanarak birleştirebilirsiniz.  
   
-4. **Tamam**'ı tıklatın.  
+4. **Tamam**’a tıklayın.  
   
 ### <a name="to-set-a-breakpoint-on-a-specific-process"></a>Belirli bir işlemde bir kesme noktası ayarlamak için  
   
-1. İşlem adı alma veya işlem kimlik numarasını **işlemleri** penceresi.  
+1. **İşlemler** penceresinden işlem adını veya işlem kimliği numarasını alın.  
   
-2. Bir kesme noktası seçin ve açın **kesme noktası filtresi** ve ilk yordamdaki gibi iletişim kutusu.  
+2. Bir kesme noktası seçin ve ilk yordamda olduğu gibi **kesme noktası filtresi** iletişim kutusunu açın.  
   
-3. İçinde **kesme noktası filtresi** iletişim kutusunda:  
+3. **Kesme noktası filtresi** iletişim kutusunda şunu yazın:  
   
      `ProcessName =`  *yourprocessname*  
   
      —veya—  
   
-     `ProcessID =` *yourprocessIDnumber*  
+     `ProcessID =`*Yourprocessıdnumber*  
   
-     Daha karmaşık bir filtre oluşturmak için kullanarak ifadeleri birleştirebilirsiniz `&`, AND işleci `||`, OR işleci `!`, NOT işleci ve parantezler.  
+     Daha karmaşık bir filtre oluşturmak için, yan tümceleri, `&` and işlecini, `||` , or işlecini, `!` , Not işleci ve parantezleri kullanarak birleştirebilirsiniz.  
   
-4. **Tamam**'ı tıklatın.  
+4. **Tamam**’a tıklayın.  
   
 ### <a name="to-set-a-breakpoint-on-a-specific-thread"></a>Belirli bir iş parçacığında bir kesme noktası ayarlamak için  
   
-1. İş parçacığı adı veya iş parçacığı kimlik numarasını **iş parçacıkları** penceresi.  
+1. İş parçacığı adı veya iş parçacığı KIMLIĞI numarasını iş **parçacıkları** penceresinden alın.  
   
-2. Bir kesme noktası seçin ve açın **kesme noktası filtresi** bölümündeki ilk yordamda açıklandığı gibi iletişim kutusu.  
+2. Bir kesme noktası seçin ve ilk yordamda açıklandığı gibi **kesme noktası filtresi** iletişim kutusunu açın.  
   
-3. İçinde **kesme noktası filtresi** iletişim kutusunda:  
+3. **Kesme noktası filtresi** iletişim kutusunda şunu yazın:  
   
-     `ThreadName =` *yourthreadname*  
+     `ThreadName =`*yourthreadname*  
   
      —veya—  
   
-     `ThreadID =` *yourthreadIDnumber*  
+     `ThreadID =`*Yourthreadıdnumber*  
   
-     Daha karmaşık bir filtre oluşturmak için kullanarak ifadeleri birleştirebilirsiniz `&`, AND işleci `||`, OR işleci `!`, NOT işleci ve parantezler.  
+     Daha karmaşık bir filtre oluşturmak için, yan tümceleri, `&` and işlecini, `||` , or işlecini, `!` , Not işleci ve parantezleri kullanarak birleştirebilirsiniz.  
   
-4. **Tamam**'ı tıklatın.  
+4. **Tamam**’a tıklayın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, adlı bir bilgisayarda bir kesme noktası için bir filtre oluşturma işlemi gösterilmektedir `marvin` ve adlı bir iş parçacığı `fourier1`.  
+ Aşağıdaki örnek, adlı bir bilgisayar ve adlı bir iş parçacığı için bir kesme noktası için bir filtre oluşturmayı gösterir `marvin` `fourier1` .  
   
 ```  
 (MachineName = marvin) & (ThreadName = fourier1)  
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çok iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
+ [Çok Iş parçacıklı uygulamalarda hata ayıklama](../debugger/debug-multithreaded-applications-in-visual-studio.md)   
  [Uzaktan hata ayıklama](../debugger/remote-debugging.md)   
- [Nasıl yapılır: İşlemler penceresini kullanma](https://msdn.microsoft.com/0207ce2f-8ceb-4fe7-b2b5-4dd35b035ed7)   
- [Nasıl yapılır: İş parçacıkları penceresini kullanma](../debugger/how-to-use-the-threads-window.md)   
- [İş parçacıklarında ve işlemlerde](https://msdn.microsoft.com/73d87480-9af3-4d1b-baf5-397d5d876ae6)   
+ [Nasıl yapılır: süreçler penceresini kullanma](https://msdn.microsoft.com/0207ce2f-8ceb-4fe7-b2b5-4dd35b035ed7)   
+ [Nasıl yapılır: Iş parçacıkları penceresini kullanma](../debugger/how-to-use-the-threads-window.md)   
+ [İş parçacıkları ve süreçler](https://msdn.microsoft.com/73d87480-9af3-4d1b-baf5-397d5d876ae6)   
  [Kesme Noktalarını Kullanma](../debugger/using-breakpoints.md)

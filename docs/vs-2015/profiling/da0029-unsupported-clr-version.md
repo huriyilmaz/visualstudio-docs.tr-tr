@@ -1,5 +1,5 @@
 ---
-title: 'DA0029: Desteklenmeyen CLR sürümü | Microsoft Docs'
+title: 'DA0029: desteklenmeyen CLR sürümü | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,26 +17,26 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 532427618f476e1e187d8a1c88749810f9d157c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152658"
 ---
 # <a name="da0029-unsupported-clr-version"></a>DA0029: Desteklenmeyen CLR Sürümü
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kural Kimliği | DA0029 |  
-| Kategori | Profil oluşturma araçları kullanım |  
+Kural kimliği | DA0029 |  
+| Kategori | Profil Oluşturma Araçları kullanımı |  
 | Profil oluşturma yöntemi | Komut satırından profil oluşturma |  
-| İleti | Koleksiyon sırasında desteklenmeyen CLR sürümü algılandı. Yönetilen semboller değil çözebilir doğru. |  
+| İleti | Koleksiyon sırasında desteklenmeyen bir CLR sürümü algılandı. Yönetilen semboller doğru şekilde çözümlenmeyebilir. |  
 | Kural türü | Bilgi. |  
   
-## <a name="cause"></a>Sebep  
- Kullanan bir uygulama profili çalıştığınız [!INCLUDE[net_v11_long](../includes/net-v11-long-md.md)] profil oluşturma araçları tarafından desteklenmiyor.  
+## <a name="cause"></a>Nedeni  
+ Profil Oluşturma Araçları tarafından desteklenmeyen öğesini kullanan bir uygulamayı profile çalışıyorsunuz [!INCLUDE[net_v11_long](../includes/net-v11-long-md.md)] .  
   
 ## <a name="rule-description"></a>Kural Tanımı  
- Profil oluşturma araçlarından uygulama içinde çalışan yönetilen kod için simgeleri çözme mümkün olmayacaktır. Bu uyarı oluşur. Profil oluşturma araçlarından çalışmakta olan uygulamalar için yönetilen kodu sembol çözümlenemiyor [!INCLUDE[net_v11_long](../includes/net-v11-long-md.md)].  
+ Bu uyarı, profil oluşturma araçlarının uygulamada çalışan yönetilen kodun sembollerini çözemediği için oluşur. Profil oluşturma araçları, çalıştıran uygulamalar için yönetilen kod sembollerini çözemez [!INCLUDE[net_v11_long](../includes/net-v11-long-md.md)] .  
   
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?  
  Yok.

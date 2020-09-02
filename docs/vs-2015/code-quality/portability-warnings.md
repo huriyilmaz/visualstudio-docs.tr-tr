@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 932474143b4770e81d8bfca14ab05a6538ae84a8
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72671163"
 ---
 # <a name="portability-warnings"></a>Taşınabilirlik Uyarıları
@@ -29,7 +29,7 @@ Taşınabilirlik uyarıları, farklı işletim sistemleri arasında taşınabili
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
 |[CA1900: Değer tür alanları taşınabilir olmalıdır](../code-quality/ca1900-value-type-fields-should-be-portable.md)|Bu kural, 64 bit işletim sistemlerinde yönetilmeyen koda kopyalandıklarında açık bir düzen özniteliği kullanılarak belirtilen yapıların doğru şekilde hizalanmasını denetler.|
 |[CA1901: P/Invoke bildirimleri taşınabilir olmalıdır](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|Bu kural, her parametrenin boyutunu ve bir P/Invoke dönüş değerini değerlendirir ve 32-bit ve 64-bit işletim sistemlerinde yönetilmeyen koda sıralandığında boyutunun doğru olduğunu doğrular.|

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Kısmen güvenilen uygulamada hata ayıklama | Microsoft Docs'
+title: 'Nasıl yapılır: kısmi güven uygulamasında hata ayıklama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,68 +19,68 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 030fef750cc1e0f0932de32fca1a0ffef56bc8f3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704481"
 ---
-# <a name="how-to-debug-a-partial-trust-application"></a>Nasıl yapılır: Kısmen güvenilen uygulamada hata ayıklama
+# <a name="how-to-debug-a-partial-trust-application"></a>Nasıl Yapılır: Kısmen Güvenilen Uygulamada Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Windows ve konsol uygulamaları için geçerlidir.  
   
- [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md) yararlanan kısmi güven uygulamaları dağıtmayı kolaylaştırır [kod erişim güvenliği](https://msdn.microsoft.com/library/859af632-c80d-4736-8d6f-1e01b09ce127) makine kaynaklarına erişimi sınırlamak için.  
+ [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md) , bir makinedeki kaynaklara erişimi sınırlandırmak Için [kod erişim güvenliği](https://msdn.microsoft.com/library/859af632-c80d-4736-8d6f-1e01b09ce127) avantajlarından yararlanan kısmi güven uygulamalarının dağıtılmasını kolaylaştırır.  
   
- Kısmi güven uygulamasında hata ayıklama olabilir bir challenge, kısmi güven uygulamaları, farklı güvenlik izinlerine sahip (ve bu nedenle farklı davranır çünkü) bağlı olarak burada yüklenirler. Kısmen güvenilen uygulamada, internet'ten yüklü değilse, birkaç izinlerine sahip olur. Yerel intranetten yüklü değilse, daha fazla izne sahip ve yerel bilgisayardan yüklü değilse, tüm izinlere sahip olacaktır. Ayrıca özel bölgeleri, özel izinlere sahip olabilir. Tüm bu koşullar altında kısmen güvenilen uygulamada hata ayıklama gerekebilir. Neyse ki, Visual Studio bu de kolaylaştırır.  
+ Kısmi güven uygulamalarının hata ayıklaması zor olabilir, çünkü kısmi güven uygulamaları farklı güvenlik izinlerine sahiptir (ve bu nedenle farklı davranır). İnternet 'ten yüklüyse, kısmi bir güven uygulaması birkaç izne sahip olur. Yerel intranetten yüklüyse, daha fazla izne sahip olur ve yerel bilgisayardan yüklüyse, tam izinleri olur. Özel izinlerle özel bölgelere de sahip olabilirsiniz. Bu koşulların herhangi birinde veya tümünde kısmi güven uygulamasında hata ayıklaması yapmanız gerekebilir. Neyse ki Visual Studio bu kadar kolay hale gelir.  
   
- Visual Studio'da hata ayıklama oturumu başlamadan önce bir uygulamanın yüklendiği benzetimini yapmak için istediğiniz bölgeyi seçebilirsiniz. Hata ayıklaması başlattığınızda, uygulama bu bölgeden yüklenmiş bir kısmi güven uygulamanız için uygun izinleri olur. Bu, uygulama davranışını bu bölgeden indirilen bir kullanıcıya görüneceği şekilde görmenize olanak sağlar.  
+ Visual Studio 'da bir hata ayıklama oturumuna başlamadan önce, ' den yüklenen bir uygulamanın benzetimini yapmak istediğiniz bölgeyi seçebilirsiniz. Hata ayıklamayı başlattığınızda, uygulama ilgili bölgeden yüklenen kısmi güven uygulamasına uygun izinlere sahip olur. Bu, uygulamanın bu bölgeden indirilen bir kullanıcıya göründüğü şekilde davranışını görmenizi sağlar.  
   
- Uygulama izni yok bir eylem gerçekleştirmeye çalışırsa, bir özel durum oluşur. Bu noktada özel durum Yardımcısı'nı, sorunu önlemek için yeterli izinlere sahip hata ayıklama oturumunu yeniden olanak tanıyan ek bir izni ekleme olanağı sağlar.  
+ Uygulama, izni olmayan bir eylem gerçekleştirmeye çalışırsa, bir özel durum oluşur. Bu noktada, özel durum Yardımcısı, sorunu önlemek için gerekli izinlere sahip hata ayıklama oturumunu yeniden başlatmanızı sağlayan ek bir izin ekleme şansı sağlar.  
   
- Daha sonra geri dönün ve hata ayıklama sırasında eklenen hangi izinlerin bakın. Hata ayıklama sırasında bir izin eklemek zorunda kalırsa, onu büyük olasılıkla bir kullanıcı onay istemi bu noktada kodunuza ekleyin gerektiğini belirtir.  
+ Daha sonra geri dönüp hata ayıklama sırasında eklediğiniz izinleri görebilirsiniz. Hata ayıklama sırasında bir izin eklemeniz gerekiyorsa, büyük olasılıkla kodunuzda bu noktada bir Kullanıcı onay Istemi eklemeniz gerektiğini gösterir.  
   
 > [!NOTE]
-> Hata ayıklama görselleştiricileri kısmi güven uygulama tarafından izin verilenden daha yüksek ayrıcalıklar gerektirir. Kısmi güven ile koddaki durdurulduğunda görselleştiriciler yüklemez. Görselleştirici kullanarak hata ayıklama için tam güven ile kodu çalıştırmanız gerekir.  
+> Hata ayıklayıcı Görselleştiriciler kısmi güven uygulaması tarafından izin verilenden daha fazla ayrıcalık gerektiriyor. Kısmi güvenle kodda durdurulduğunda, Görselleştiriciler yüklenmez. Görselleştirici kullanarak hata ayıklamak için, kodu tam güvenle çalıştırmanız gerekir.  
   
-### <a name="to-choose-a-zone-for-your-partial-trust-application"></a>Kısmi güven uygulamanız için bir bölge seçmek için  
+### <a name="to-choose-a-zone-for-your-partial-trust-application"></a>Kısmi güven uygulamanız için bir bölge seçmek üzere  
   
-1. Gelen **proje** menüsünde seçin _Projectname_**özellikleri**.  
+1. **Proje** menüsünde, _ProjectName_**Özellikler**' i seçin.  
   
-2. İçinde *Projectname* özellik sayfaları, tıklayın **güvenlik** sayfası.  
+2. *ProjectName* özellik sayfalarında **güvenlik** sayfasına tıklayın.  
   
-3. Seçin **ClickOnce güvenlik ayarlarını etkinleştirme**.  
+3. **ClickOnce güvenlik ayarlarını etkinleştir**' i seçin.  
   
-4. Altında **uygulamanızı yükleneceği kaynak bölge**, aşağı açılan liste kutusunda tıklayın ve yüklenen uygulama benzetimini yapmak istediğiniz bölgeyi seçin.  
+4. **Uygulamanızın yükleneceği bölge**bölümünde, açılan liste kutusuna tıklayın ve üzerinde yüklenmekte olan uygulamanın benzetimini yapmak istediğiniz bölgeyi seçin.  
   
-     **Uygulamanın gerektirdiği izinler** kılavuz kullanılabilir tüm izinleri gösterir. Onay işareti, uygulamaya verilen izinleri belirtir.  
+     **Uygulama Kılavuzu için gereken izinler** , tüm kullanılabilir izinleri gösterir. Onay işareti, uygulamanıza verilen izinleri belirtir.  
   
-5. Seçtiğiniz bölge olduysa **(özel)**, doğru özel ayarları'nda seçin **ayarı** sütununun **izinleri** kılavuz.  
+5. Seçtiğiniz bölge **(özel)** Ise, **izinler** kılavuzunun **ayar** sütununda doğru özel ayarları seçin.  
   
-6. Tıklayın **Tamam** özellik sayfalarını kapatmak için.  
+6. Özellik sayfalarını kapatmak için **Tamam** ' ı tıklatın.  
   
-### <a name="to-add-an-extra-permission-when-a-security-exception-occurs"></a>Bir güvenlik özel durumu oluştuğunda ek bir izin eklemek için  
+### <a name="to-add-an-extra-permission-when-a-security-exception-occurs"></a>Bir güvenlik özel durumu oluştuğunda ek izin eklemek için  
   
-1. **Özel durum Yardımcısı'nı** iletisiyle iletişim kutusu görüntülenir: **SecurityException işlenmedi.**  
+1. **Özel durum Yardımcısı** iletişim kutusu şu iletiyle görüntülenir: **SecurityException işlenmedi.**  
   
-2. İçinde **özel durum Yardımcısı'nı** iletişim kutusunun **eylemleri**, tıklayın **proje ekleme izni**.  
+2. **Özel durum Yardımcısı** iletişim kutusunda, **Eylemler**altında, **projeye izin Ekle**' ye tıklayın.  
   
-3. **Yeniden hata ayıklama** iletişim kutusu görüntülenir.  
+3. **Hata ayıklamayı yeniden Başlat** iletişim kutusu görüntülenir.  
   
-    - Yeni izni olan hata ayıklama oturumunu yeniden isterseniz **Evet**.  
+    - Hata ayıklama oturumunu yeni izinle yeniden başlatmak istiyorsanız **Evet**' e tıklayın.  
   
-    - Henüz yeniden istemiyorsanız tıklayın **Hayır**.  
+    - Henüz yeniden başlatmak istemiyorsanız **Hayır**' a tıklayın.  
   
 ### <a name="to-view-extra-permissions-added-while-debugging"></a>Hata ayıklama sırasında eklenen ek izinleri görüntülemek için  
   
-1. Gelen **proje** menüsünde seçin _Projectname_**özellikleri**.  
+1. **Proje** menüsünde, _ProjectName_**Özellikler**' i seçin.  
   
-2. İçinde *Projectname* özellik sayfaları, tıklayın **güvenlik** sayfası.  
+2. *ProjectName* özellik sayfalarında **güvenlik** sayfasına tıklayın.  
   
-3. Bakmak **uygulamanın gerektirdiği izinler** kılavuz. Eklediğiniz herhangi bir ek izne sahip iki simgeyi **dahil edilen** sütun: izinleriniz, tüm dahil, normal işaretine ve şuna benzeyen bir balon "i" harfini içeren ek bir simge.  
+3. **Uygulama Kılavuzu için gereken izinlere** bakın. Eklediğiniz herhangi bir ek izin, eklenen sütunda iki simgeye sahiptir **: dahil edilen** tüm izinlere sahip olan normal onay işareti ve "i" harfini içeren bir balon gibi görünen ek bir simge.  
   
-4. Dikey kaydırma çubuğu tamamını görüntülemek için kullanın **uygulamanın gerektirdiği izinler** kılavuz.  
+4. Uygulama Kılavuzu için **gereken tüm izinleri** görüntülemek için dikey kaydırma çubuğunu kullanın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)   
- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+ [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)

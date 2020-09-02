@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3e1669affa89c91ca3ae1958c22ff3ec4d56bb8c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670961"
 ---
 # <a name="editing-xslt-style-sheets"></a>XSLT Stil Sayfalarını Düzenleme
@@ -24,7 +24,7 @@ XML Düzenleyicisi, XSLT stil sayfalarını düzenlemek için de kullanılabilir
 ## <a name="xslt-features"></a>XSLT Özellikleri
  Aşağıdaki tabloda XSLT stil sayfalarıyla çalışmaya özgü özellikler açıklanmaktadır.
 
- **Sözdizimi renklendirme** @No__t_1, `match` vb. gibi XSLT anahtar sözcükleri, **yazı tipleri ve renkler** ayarları tarafından belirtilen XSLT anahtar sözcüğü renginde görüntülenir.
+ **Sözdizimi renklendirme** , Ve gibi XSLT anahtar sözcükleri, `template` `match` **yazı tipleri ve renkler** ayarları tarafından belirtilen XSLT anahtar sözcüğü renginde görüntülenir.
 
  **Dalgalı alt çizgiler** XML Düzenleyicisi, XSLT stil sayfalarını doğrulamak için yüklü xslt. xsd dosyasını kullanır. Doğrulama hataları mavi dalgalı alt çizgiler olarak gösterilir. XML Düzenleyicisi aynı zamanda stil sayfasını arka planda derler ve derleyici hatalarını ya da uyarıları uygun dalgalı alt çizgilerle raporlar.
 

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_isnaked | Microsoft Docs
+title: 'IDiaSymbol:: get_isNaked | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 64989ca10416ab2ad9606c94b3f3bc977f60c5ee
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702355"
 ---
-# <a name="idiasymbolgetisnaked"></a>IDiaSymbol::get_isNaked
+# <a name="idiasymbolget_isnaked"></a>IDiaSymbol::get_isNaked
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-İşlev olup olmadığını belirten bir bayrak alır [naked](https://msdn.microsoft.com/library/69723241-05e1-439b-868e-20a83a16ab6d) özniteliği (diğer bir deyişle, işlev derleyici tarafından eklenen giriş veya çıkış kodu olmayan).  
+İşlevin [çıplak](https://msdn.microsoft.com/library/69723241-05e1-439b-868e-20a83a16ab6d) özniteliğe sahip olup olmadığını belirten bir bayrak alır (yani, işlevin derleyici tarafından eklenen giriş veya bitiş kodu yok).  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT get_isNaked(  
@@ -35,21 +35,21 @@ HRESULT get_isNaked(
   
 #### <a name="parameters"></a>Parametreler  
  `pFlag`  
- [out] Döndürür `TRUE` işlevi varsa `naked` özniteliği; Aksi halde döndürür `FALSE`.  
+ dışı `TRUE` İşlevin özniteliğe sahip olup olmadığını döndürür `naked` ; Aksi takdirde, döndürür `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|Gereksinim|Açıklama|  
+|Gereksinim|Description|  
 |-----------------|-----------------|  
-|Üst bilgi:|dia2.h|  
-|Sürüm:|DIA SDK v8.0|  
+|Üst bilgi|dia2. h|  
+|Sürüm:|DIA SDK v 8.0|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [Naked İşlevi Çağrıları](https://msdn.microsoft.com/library/2a66847a-a43f-4541-a7be-c9f5f29b5fdb)
+ [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
+ [Naked Işlev çağrıları](https://msdn.microsoft.com/library/2a66847a-a43f-4541-a7be-c9f5f29b5fdb)

@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluationCompleteEvent2::GetExpression | Microsoft Dokümanlar
+title: 'IDebugExpressionEvaluationCompleteEvent2:: GetExpression | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 0c6ed79edadf9191604291a4c6f0f07b0aa1f0dd
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729582"
 ---
 # <a name="idebugexpressionevaluationcompleteevent2getexpression"></a>IDebugExpressionEvaluationCompleteEvent2::GetExpression
-Orijinal ifadeyi alır.
+Özgün ifadeyi alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetExpression( 
@@ -41,13 +41,13 @@ int GetExpression( 
 
 ## <a name="parameters"></a>Parametreler
 `ppExpr`\
-[çıkış] Ayrıştılı ifadeyi temsil eden bir [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) nesnesi döndürür.
+dışı Ayrıştırılmış ifadeyi temsil eden bir [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, bir çağrıda oluşturulan [nesneyi ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemine döndürür.
+ Bu yöntem, [ParseText](../../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) yöntemine yapılan çağrıda oluşturulan nesneyi döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)

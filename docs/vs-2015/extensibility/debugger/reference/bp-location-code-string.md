@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 50c48098aee3b1077edec99210e7ab624d2a8d6c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153459"
 ---
-# <a name="bplocationcodestring"></a>BP_LOCATION_CODE_STRING
+# <a name="bp_location_code_string"></a>BP_LOCATION_CODE_STRING
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Tümleşik geliştirme ortamından (IDE) kullanıcının girebileceği bir dizesini kod kesme noktaları ayarlamak için kullanılır.  
+Kullanıcının tümleşik geliştirme ortamından (IDE) girebileceği bir dizeye göre kod kesme noktaları ayarlamak için kullanılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _BP_LOCATION_CODE_STRING {   
@@ -35,20 +35,20 @@ typedef struct _BP_LOCATION_CODE_STRING { 
   
 ## <a name="members"></a>Üyeler  
  `bstrContext`  
- Kod içinde kesme, genellikle bir yöntem veya işlev adı olarak görülen bir çağrı yığınında bağlamı.  
+ Bir çağrı yığınında görülen, genellikle bir yöntem veya işlev adı içindeki kesme noktasının bağlamı.  
   
  `bstrCodeExpr`  
- Kodu kesme noktası tanımlamak için kullanıcının yazdığı bir dize.  
+ Kullanıcının kod kesme noktasını tanımlamakta kullandığı dize.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı üyesidir [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısı bir birleşimin parçası olarak.  
+ Bu yapı, bir birleşimin parçası olarak [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısının bir üyesidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

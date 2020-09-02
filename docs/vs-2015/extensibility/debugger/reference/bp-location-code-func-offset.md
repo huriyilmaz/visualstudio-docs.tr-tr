@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8fa72fb88358d4c60f7bccb77dcbd9e76d148b7a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153442"
 ---
-# <a name="bplocationcodefuncoffset"></a>BP_LOCATION_CODE_FUNC_OFFSET
+# <a name="bp_location_code_func_offset"></a>BP_LOCATION_CODE_FUNC_OFFSET
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Kodda bir işlevdeki bir kesme noktası uzaklık konumunu açıklar.  
+Koddaki bir işlevdeki bir kesme noktasının konum konumunu açıklar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _BP_LOCATION_CODE_FUNC_OFFSET {   
@@ -35,22 +35,22 @@ typedef struct _BP_LOCATION_CODE_FUNC_OFFSET { 
   
 ## <a name="members"></a>Üyeler  
  `bstrContext`  
- Kesme noktası bağlamında, genellikle de bir yöntem veya işlev adı olarak görülen bir çağrı yığınında.  
+ Kesme noktası bağlamı, genellikle çağrı yığınında görülen bir yöntem veya işlev adıdır.  
   
  `pFuncPos`  
- [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md) işlevi ve işlev göreli konumunu baştan adını tanımlayan nesne.  
+ İşlevin adını ve işlevin başından ilgili göreli konumu açıklayan [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md) nesnesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı üyesidir [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısı bir birleşimin parçası olarak.  
+ Bu yapı, bir birleşimin parçası olarak [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısının bir üyesidir.  
   
- `pFuncPos` Üye nerede işlev kesme noktası ayarlanacağını gösterir.  
+ `pFuncPos`Üye, işlev kesme noktasının nereye ayarlanacağını gösterir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

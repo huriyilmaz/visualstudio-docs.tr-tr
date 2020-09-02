@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetName | Microsoft Docs
+title: 'IDebugThread2:: GetName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 509db8c30aabd8a4163ea433bb06a99d4bfa2fb9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153049"
 ---
 # <a name="idebugthread2getname"></a>IDebugThread2::GetName
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir iş parçacığı adını alır.  
+Bir iş parçacığının adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetName (   
@@ -40,13 +40,13 @@ int GetName ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pbstrName`  
- [out] İş parçacığı adını döndürür.  
+ dışı İş parçacığının adını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Alınan adı her zaman görüntülenebilir bir addır ve bu ad iş parçacığı açıklar. İş parçacığı adı türetilen destekler adlı iş parçacıkları veya hata ayıklama altyapısı türetilmiş bir ad olabilir bir çalışma zamanı mimarisi. Alternatif olarak, iş parçacığının adı için bir çağrı tarafından ayarlanabilir [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md) yöntemi.  
+ Alınan ad her zaman görüntülenebilen bir addır ve bu ad iş parçacığını açıklar. İş parçacığı adı, adlandırılmış iş parçacıklarını destekleyen bir çalışma zamanı mimarisinden türetilebilir veya hata ayıklama altyapısından türetilmiş bir ad olabilir. Alternatif olarak, iş parçacığının adı [SetThreadName](../../../extensibility/debugger/reference/idebugthread2-setthreadname.md) yöntemine yapılan bir çağrıyla ayarlanabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   

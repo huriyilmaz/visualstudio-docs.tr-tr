@@ -12,29 +12,29 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: bc6476c925f37d70ab45bae129a8b8a379ee519c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68152766"
 ---
 # <a name="execution-control-and-state-evaluation"></a>Yürütme Denetimi ve Durum Değerlendirmesi
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir uygulamada hata ayıklama işlevlerin içine Adımlama, kesme noktalarında durduruluyor ve yürütme devam böyle yürütme denetimi özelliklerini uygulama gerektirir. Visual Studio hata ayıklama temelleri, yürütme denetimi olayları hata ayıklayıcı bileşenleri arasında gönderilir.  
+Bir uygulamada hata ayıklamak, bu tür yürütme denetimi özelliklerinin işlevleri üzerinde Adımlama, kesme noktalarında durdurulması ve yürütmeye devam edilmesi için uygulanması gerekir. Visual Studio hata ayıklama, hata ayıklayıcı bileşenleri arasında gönderilen olaylar üzerinde yürütme denetimini temel alır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Program Denetimi](../../extensibility/debugger/program-control.md)  
- Program düzeyinde gerçekleşir aşağıdaki yordamları listeler: sonraki deyimi ayarlamak, yürütme, Adımlama, devam etmeden, askıya alma ve sürdürme.  
+ Program düzeyinde gerçekleşen aşağıdaki yordamları listeler: sonraki ifadeyi ayarlama, yürütme, adımla, devam etme, askıya alma ve sürdürme.  
   
  [Kesme Noktasıyla İlgili Metotlar](../../extensibility/debugger/breakpoint-related-methods.md)  
- Sınır tanımlar ve Visual Studio'nun desteklediği kesme noktaları tür bekleniyor.  
+ Visual Studio tarafından desteklenen kesme noktası türlerini ve ilgili sınırı tanımlar.  
   
  [Çağrı Yığını Değerlendirme](../../extensibility/debugger/call-stack-evaluation.md)  
- Uygulama kesme modu sırasında yığın çerçevelerini çağrı yığınının görüntülemeyi sağlayan yöntemlerin ele alınmaktadır.  
+ Kesme modu sırasında çağrı yığınının yığın çerçevelerini görüntülemeye izin veren yöntemlerin uygulanmasını açıklar.  
   
  [İfade Değerlendirme](../../extensibility/debugger/expression-evaluation-visual-studio-debugging-sdk.md)  
- Nasıl hata ayıklama altyapısı (DE), ifade değerlendirme (EE) ve oturum hata ayıklama Yöneticisi ayrıştırma dahil olan ve bir ifadenin değerlendirilmesi IDE'nin windows birine girilen açıklanmaktadır.  
+ Hata ayıklama altyapısı (DE), ifade değerlendirmesi (EE) ve oturum hata ayıklama Yöneticisi 'nin IDE 'nin bir Windows 'a girilen bir ifadenin ayrıştırılmasına ve hesaplanmasına nasıl dahil olduğunu açıklar.  
   
  [Denetim Olayları](../../extensibility/debugger/control-events.md)  
- Denetlenen programın yürütülmesi sırasında olayları göndermek için kullanılan arabirimi açıklanır.
+ Programın denetlenen yürütmesi sırasında olayları göndermek için kullanılan arabirimi açıklar.

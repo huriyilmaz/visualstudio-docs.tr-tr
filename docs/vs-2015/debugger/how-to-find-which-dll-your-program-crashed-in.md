@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Hangi DLL'de kilitlendiğini programınızın bulma | Microsoft Docs"
+title: "Nasıl yapılır: programınızın hangi DLL 'de kilitlendiğini bulma | Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -27,34 +27,34 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 44ebe042ff6e2507530e4be410e768550e922b44
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703625"
 ---
-# <a name="how-to-find-which-dll-your-program-crashed-in"></a>Nasıl yapılır: Hangi DLL'de kilitlendiğini programınızın bulma
+# <a name="how-to-find-which-dll-your-program-crashed-in"></a>Nasıl Yapılır: Programınızın Hangi DLL'de Kilitlendiğini Bulma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[NOT]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünden içeri ve dışarı aktarma ayarları seçin. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+NOTUN
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için Araçlar menüsünden Içeri ve dışarı aktarma ayarları ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
- Uygulamanızı bir sistem DLL'i veya başka birisinin kodu çağrısı sırasında kilitleniyor bulmak kilitlenme oluştuğunda hangi DLL etkindi gerekirse. Kendi programımı dışında bir DLL içindeki bir kilitlenme karşılaşırsanız, konumu şunu kullanarak belirleyebilirsiniz **modülleri** penceresi.  
+ Uygulamanız bir sistem DLL 'SI veya başka birinin kodu çağrısı sırasında kilitlenirse, kilitlenme oluştuğunda hangi DLL 'nin etkin olduğunu bulmanız gerekir. Kendi programınızın dışında bir DLL 'de kilitlenmeyle karşılaşırsanız, bu konumu **modüller** penceresini kullanarak belirleyebilirsiniz.  
   
-### <a name="to-find-where-a-crash-occurred-using-the-modules-window"></a>Modüller penceresini kullanarak bir kilitlenme burada bulmak için oluştu  
+### <a name="to-find-where-a-crash-occurred-using-the-modules-window"></a>Modüller penceresini kullanarak bir kilitlenmenin nerede oluştuğunu bulmak için  
   
-1. Kilitlenme durumu oluştuğu adresini not edin.  
+1. Çökmenin gerçekleştiği adresi aklınızda edin.  
   
-2. Üzerinde **hata ayıklama** menüsünde seçin **Windows**, tıklatıp **modülleri**.  
+2. **Hata Ayıkla** menüsünde **Windows**' u seçin ve **modüller**' e tıklayın.  
   
-3. İçinde **modülleri** penceresinde Bul **adresi** sütun. Bunu görmek için kaydırma çubuğunu kullanmanız gerekebilir.  
+3. **Modüller** penceresinde **Adres** sütununu bulun. Bunu görmek için kaydırma çubuğunu kullanmanız gerekebilir.  
   
-4. Tıklayın **adresi** DLL'leri adresine göre sıralamak için sütunun üstünde düğme.  
+4. Dll 'Leri adrese göre sıralamak için sütunun en üstündeki **Adres** düğmesine tıklayın.  
   
-5. Sıralanmış listenin kilitlenme konumu adresi aralığı içeren DLL bulmak için tarayın.  
+5. Adres aralığı kilitlenme konumunu içeren DLL 'yi bulmak için sıralanmış listeyi tarayın.  
   
-6. Bakmak **adı** ve **yolu** DLL adı ve yolu görmek için sütun.  
+6. DLL adını ve yolunu görmek için **ad** ve **yol** sütunlarına bakın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: DLL'lerde hata ayıklama](../debugger/how-to-debug-native-dlls.md)   
- [Nasıl yapılır: Modüller Penceresini Kullanma](../debugger/how-to-use-the-modules-window.md)
+ [Nasıl yapılır: yerel dll 'Lerde hata ayıklama](../debugger/how-to-debug-native-dlls.md)   
+ [Nasıl Yapılır: Modüller Penceresini Kullanma](../debugger/how-to-use-the-modules-window.md)
