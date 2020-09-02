@@ -14,16 +14,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: eddd72d648e7349f51096a21131f38c2e370a277
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656779"
 ---
 # <a name="disabling-the-visual-studio-debugger-for-windows-workflow-foundation-legacy"></a>Windows Workflow Foundation için Visual Studio Hata Ayıklayıcısını Devre Dışı Bırakma (Eski)
-Bu konu, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] [!INCLUDE[wf](../includes/wf-md.md)] uygulamalar oluştururken yapılandırma dosyası kullanarak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hata ayıklayıcının devre dışı bırakılacağını açıklar. @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
+Bu konuda [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[wf](../includes/wf-md.md)] , eski sürümünde uygulamalar oluşturulurken yapılandırma dosyası kullanılarak hata ayıklayıcının devre dışı bırakılması açıklanmaktadır [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Ya da ' i hedefliyorsanız, eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
- Varsayılan olarak, [!INCLUDE[wf](../includes/wf-md.md)] için [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] hata ayıklayıcı bir konak işlemi için etkinleştirilmiştir. İş akışı hata ayıklamasını devre dışı bırakmak için, ana bilgisayar yapılandırma dosyasının **\<system. diagnostics >** bölümüne bir "DisableWorkflowDebugging" girdisi **\<switches >** öğesi ekleyerek açıkça devre dışı bırakmanız gerekir.
+ Varsayılan olarak, [!INCLUDE[vs_current_long](../includes/vs-current-long-md.md)] için hata ayıklayıcı [!INCLUDE[wf](../includes/wf-md.md)] bir konak işlemi için etkinleştirilmiştir. İş akışı hata ayıklamasını devre dışı bırakmak için, **\<switches>** **\<system.diagnostics>** ana bilgisayar yapılandırma dosyasının bölümüne bir "DisableWorkflowDebugging" girdi öğesi ekleyerek açık olarak kapatmanız gerekir.
 
  Aşağıdaki örnek, iş akışı hata ayıklamasını devre dışı bırakmak için konak yapılandırma dosyasının nasıl değiştirileceğini gösterir.
 

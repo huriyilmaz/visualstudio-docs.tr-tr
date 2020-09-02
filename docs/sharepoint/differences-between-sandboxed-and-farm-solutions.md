@@ -1,5 +1,5 @@
 ---
-title: Korumalı arasındaki farklar ve Grup çözümleri | Microsoft Docs
+title: Korumalı ve Grup çözümleri arasındaki farklılıklar | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,29 +16,29 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 073e62b473ebfcec5f71ae1907e8f9e385333411
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62967552"
 ---
-# <a name="differences-between-sandboxed-and-farm-solutions"></a>Korumalı arasındaki farklar ve Grup çözümleri
-  Bir SharePoint çözüm derlediğinizde, SharePoint sunucusuna dağıtır ve hata ayıklamak için bir hata ayıklayıcı ekler. Çözüm hata ayıklamak için kullanılan işlem Korumalı çözüm özelliğinin ayarına bağlıdır: Korumalı çözüm veya Grup çözümü.
+# <a name="differences-between-sandboxed-and-farm-solutions"></a>Korumalı ve Grup çözümleri arasındaki farklılıklar
+  Bir SharePoint çözümünü derlerken, SharePoint sunucusuna dağıtılır ve hata ayıklayıcı, hata ayıklaması için iliştirir. Çözümde hata ayıklamak için kullanılan işlem, Korumalı çözüm özelliğinin ayarına bağlıdır: Korumalı çözüm veya Grup çözümü.
 
- Daha fazla bilgi için [korumalı çözümle ilgili konular](../sharepoint/sandboxed-solution-considerations.md).
+ Daha fazla bilgi için bkz. [Korumalı çözüm konuları](../sharepoint/sandboxed-solution-considerations.md).
 
-## <a name="farm-solutions"></a>Küme çözümleri
- IIS çalışan işlemi (W3WP.exe) barındırılan, küme çözümleri, tüm Grup etkileyebilecek kodu çalıştırın. Korumalı çözüm özelliği "Grup çözümü" olarak ayarlanmış bir SharePoint projesi hata ayıklaması yaparken, SharePoint çeker veya IIS çalışan işlemi tarafından kilitlenmiş dosyaları serbest bırakmak için özelliği dağıtır önce sistemin IIS uygulama havuzunu geri dönüştürür. Yalnızca SharePoint projenin site URL'si tanıtıcısıyla IIS uygulama havuzu geri dönüştürülmeden.
+## <a name="farm-solutions"></a>Grup çözümleri
+ IIS çalışan işleminde (W3WP.exe) barındırılan Grup çözümleri, tüm grubu etkileyebilecek kodu çalıştırır. Korumalı çözüm özelliği "Grup çözümü" olarak ayarlanmış bir SharePoint projesinde hata ayıkladığınızda, sistem IIS uygulama havuzu SharePoint geri çekme işleminden önce geri dönüştürülür veya IIS çalışan işlemi tarafından kilitlenen tüm dosyaları serbest bırakmak için özelliği dağıtır. Yalnızca SharePoint projesinin site URL 'sini sunan IIS uygulama havuzu geri dönüştürüldü.
 
-## <a name="sandboxed-solutions"></a>Korumalı alana alınan çözümler
- SharePoint kullanıcı kodu çözüm çalışan işlemindeki (SPUCWorkerProcess.exe) barındırılan, korumalı çözümler site koleksiyonu çözümü, yalnızca etkileyebilecek kodu çalıştırın. Korumalı çözümler IIS çalışan işlemindeki çalıştırmayın çünkü IIS uygulama havuzu ya da IIS sunucusunu yeniden başlatmanız gerekir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hata ayıklayıcı, denetimleri ve otomatik olarak SharePoint SPUserCodeV4 hizmetinde tetikleyen SPUCWorkerProcess işlem ekler. Çözüm en son sürümünü yüklemek için Geri Dönüşüm SPUCWorkerProcess işlemi için gerekli değildir.
+## <a name="sandboxed-solutions"></a>Korumalı çözümler
+ SharePoint kullanıcı kodu çözümü çalışan işleminde (SPUCWorkerProcess.exe) barındırılan korumalı çözümler, yalnızca çözümün site koleksiyonunu etkileyebilecek kodu çalıştırır. Korumalı çözümler IIS çalışan işleminde çalışmadığından, ne IIS uygulama havuzu ne de IIS sunucusunun yeniden başlatılması gerekir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SPUserCodeV4 hizmetinin SharePoint 'te otomatik olarak tetiklediği ve denetimlerinde hata ayıklayıcıyı SPUCWorkerProcess işlemine iliştirir. SPUCWorkerProcess işleminin çözümün en son sürümünü yüklemek için geri dönüştürülmesi gerekli değildir.
 
-## <a name="either-type-of-solution"></a>Çözüm ya da türü
- Her iki çözüm türü ile [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] da tarayıcıya istemci tarafı komut dosyası hata ayıklamayı etkinleştirmek için hata ayıklayıcı ekler. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hata ayıklama altyapısı bu amaç için betik kullanır. Betik hata ayıklamasını etkinleştirmek için istendiğinde varsayılan tarayıcı ayarlarınızı değiştirmeniz gerekir.
+## <a name="either-type-of-solution"></a>Her iki çözüm türü
+ Her iki çözüm türü ile [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] de hata ayıklayıcıyı tarayıcıya ekler ve istemci tarafı komut dosyası hata ayıklamayı etkinleştirir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Bu amaçla betik hata ayıklama altyapısını kullanır. Betik hata ayıklamasını etkinleştirmek için, istendiğinde varsayılan tarayıcı ayarlarını değiştirmeniz gerekir.
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] hata ayıklayıcı, geçerli site çalışan yalnızca W3WP veya SPUCWorkerProcess işlemleri için ekler. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca yönetilen COM Plus ve iş akışı hata ayıklama altyapıları ekler.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] yalnızca geçerli siteyi çalıştıran W3WP veya SPUCWorkerProcess işlemlerine hata ayıklayıcıyı iliştirir. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Ayrıca, yönetilen COM Plus ve Workflow hata ayıklama altyapılarını da iliştirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [SharePoint çözümlerinde hata ayıklama](../sharepoint/debugging-sharepoint-solutions.md)
-- [Derleme ve SharePoint çözümlerinde hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
-- [Korumalı çözümle ilgili konular](../sharepoint/sandboxed-solution-considerations.md)
+- [SharePoint Çözümlerinde hata ayıklama](../sharepoint/debugging-sharepoint-solutions.md)
+- [SharePoint çözümlerini derleme ve hata ayıklama](../sharepoint/building-and-debugging-sharepoint-solutions.md)
+- [Korumalı çözüm konuları](../sharepoint/sandboxed-solution-considerations.md)

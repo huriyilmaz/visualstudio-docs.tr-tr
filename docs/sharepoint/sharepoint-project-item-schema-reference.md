@@ -24,32 +24,32 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: bc15ff5c384ec63f99ed50a5f3c700efd7ba3c18
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63007725"
 ---
 # <a name="sharepoint-project-item-schema-reference"></a>SharePoint proje öğesi şema başvurusu
-  Visual Studio, içeriğini doğrulamak için SharePoint proje öğesi şema kullanır *.spdata* dosyaları. Bir *.spdata* dosya içeriğini ve bir SharePoint Proje öğesinin davranışını belirtir. SharePoint Proje öğeleri içeriği hakkında daha fazla bilgi için bkz. [öğe şablonları ve proje şablonları SharePoint Proje öğeleri için oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
+  Visual Studio, *. spdata* dosyalarının içeriğini doğrulamak için SharePoint proje öğesi şemasını kullanır. *. Spdata* dosyası bir SharePoint proje öğesinin içeriğini ve davranışını belirtir. SharePoint proje öğelerinin içerikleri hakkında daha fazla bilgi için bkz. [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).
 
- SharePoint proje öğesi şema ProjectItemModelSchema.xsd olarak adlandırılır ve % Program Files (x86)%\Microsoft Visual Studio 11.0\Xml\Schemas. varsayılan olarak yüklenir
+ SharePoint proje öğesi şeması Projectıtemmodelschema. xsd olarak adlandırılmıştır ve% Program Files (x86)% \ Microsoft Visual Studio 11.0 \ Xml\şeması \ ' de varsayılan olarak yüklenir.
 
- Kök öğe [ProjectItem](../sharepoint/projectitem-element.md) öğesi. Aşağıdaki tabloda şema tarafından tanımlanan tüm öğeleri açıklar.
+ Kök öğesi [ProjectItem](../sharepoint/projectitem-element.md) öğesidir. Aşağıdaki tabloda, şema tarafından tanımlanan tüm öğeler açıklanmaktadır.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[ExtensionData](../sharepoint/extensiondata-element.md)|SharePoint proje öğesi ile ilişkilendirilmiş özel veri öğelerinin bir koleksiyonunu temsil eder.|
-|[Extensiondataıtem](../sharepoint/extensiondataitem-element.md)|Anahtar/değer biçiminde SharePoint proje öğesi ile ilişkili bir özel veri öğesini temsil eder. Dize, anahtar ve değer olmalıdır.|
-|[FeatureProperties](../sharepoint/featureproperties-element.md)|SharePoint'te dağıtıldığında bir özellikle birlikte eklenen özellik değerleri koleksiyonunu temsil eder. Bir özellik dağıtıldıktan sonra kodunuzdaki özellik değerlerine erişebilirsiniz.|
-|[FeatureProperty](../sharepoint/featureproperty-element.md)|SharePoint'te dağıtıldığında bir özellikle birlikte eklenen değer özel bir özelliği temsil eder. Bir özellik dağıtıldıktan sonra kodunuzdaki özellik erişebilirsiniz.|
-|[Dosyalar](../sharepoint/files-element.md)|Bir özellik öğe dosyası veya proje çıktısı gibi SharePoint proje öğesi ile dağıtmak için dosyaları belirtir.|
-|[ProjectItem](../sharepoint/projectitem-element.md)|Bir SharePoint proje öğesi temsil eder.|
-|[Projectıtemfile](../sharepoint/projectitemfile-element.md)|SharePoint'te dağıtıldığında proje öğesi ile eklenecek özellik öğesi dosyası gibi bir SharePoint dosyasını temsil eder.|
-|[Projectıtemfolder](../sharepoint/projectitemfolder-element.md)|Eşlenmiş bir klasörü temsil eder.|
-|[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|SharePoint'te dağıtıldığında ile proje öğesi eklemek için bir proje çıktısını temsil eder.|
-|[SafeControl](../sharepoint/safecontrol-element.md)|ASPX denetim ya da herhangi bir SharePoint sitesinde ASPX sayfasında erişmek herhangi bir kullanıcı için güvenli olarak tasarlanmış bir Web Bölümü temsil eder.|
-|[SafeControls](../sharepoint/safecontrols-element.md)|ASPX denetimleri ve Web bölümleri, herhangi bir SharePoint sitesinde ASPX sayfasında erişmek herhangi bir kullanıcı için güvenli olarak belirlenmiş bir koleksiyonunu temsil eder.|
+|[ExtensionData](../sharepoint/extensiondata-element.md)|SharePoint proje öğesiyle ilişkili özel veri öğelerinin koleksiyonunu temsil eder.|
+|[ExtensionDataItem](../sharepoint/extensiondataitem-element.md)|Anahtar/değer biçiminde SharePoint proje öğesiyle ilişkili özel bir veri öğesini temsil eder. Anahtar ve değer dizeler olmalıdır.|
+|[FeatureProperties](../sharepoint/featureproperties-element.md)|SharePoint 'e dağıtıldığında bir özelliğe dahil olan özellik değerlerinin koleksiyonunu temsil eder. Bir özellik dağıtıldıktan sonra, kodunuzda özellik değerlerine erişebilirsiniz.|
+|[FeatureProperty](../sharepoint/featureproperty-element.md)|SharePoint 'e dağıtıldığında bir özelliğe dahil olan özel bir özelliği temsil eder. Bir özellik dağıtıldıktan sonra, kodunuzda özelliğine erişebilirsiniz.|
+|[Dosyalar](../sharepoint/files-element.md)|Bir özellik öğesi dosyası veya bir projenin çıktısı gibi SharePoint proje öğesiyle dağıtılacak dosyaları belirtir.|
+|[ProjectItem](../sharepoint/projectitem-element.md)|Bir SharePoint proje öğesini temsil eder.|
+|[ProjectItemFile](../sharepoint/projectitemfile-element.md)|SharePoint 'e dağıtıldığında proje öğesiyle birlikte dahil edilecek özellik öğesi dosyası gibi bir SharePoint dosyasını temsil eder.|
+|[ProjectItemFolder](../sharepoint/projectitemfolder-element.md)|Eşlenmiş bir klasörü temsil eder.|
+|[ProjectOutputFile](../sharepoint/projectoutputfile-element.md)|SharePoint 'e dağıtıldığında proje öğesiyle birlikte dahil edilecek bir projenin çıkışını temsil eder.|
+|[SafeControl](../sharepoint/safecontrol-element.md)|Herhangi bir kullanıcının SharePoint sitesindeki herhangi bir ASPX sayfasına erişmesi için güvenli olarak belirlenmiş bir ASPX denetimi veya Web bölümü temsil eder.|
+|[SafeControls](../sharepoint/safecontrols-element.md)|Herhangi bir kullanıcının SharePoint sitesindeki herhangi bir ASPX sayfasına erişmesi için güvenli olarak belirlenmiş bir ASPX denetimleri ve Web Bölümleri koleksiyonunu temsil eder.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Öğe şablonları ve SharePoint Proje öğeleri için proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)
+- [SharePoint proje öğeleri için öğe şablonları ve proje şablonları oluşturma](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)

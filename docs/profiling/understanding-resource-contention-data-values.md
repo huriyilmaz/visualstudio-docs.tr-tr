@@ -1,5 +1,5 @@
 ---
-title: Kaynak Çekişmesi Veri Değerlerini Anlama | Microsoft Dokümanlar
+title: Kaynak çakışması veri değerlerini anlama | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,26 +12,26 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 3f522d1854cae86d9dc6e757ef0c9a62f4511800
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74779993"
 ---
-# <a name="understand-resource-contention-data-values"></a>Kaynak çekişme veri değerlerini anlama
+# <a name="understand-resource-contention-data-values"></a>Kaynak çakışması veri değerlerini anlama
 
-Kaynak çekişmesi profil oluşturma, bir uygulamada rakip iş parçacıkları paylaşılan bir kaynağa erişim beklemek zorunda her zaman ayrıntılı arama yığını bilgileri toplar.
+Kaynak Çekişmesi profili oluşturma, bir uygulamadaki rekabet iş parçacıklarının paylaşılan bir kaynağa erişim için beklemeye zorlanması durumunda ayrıntılı çağrı yığını bilgilerini toplar.
 
-Kaynak çekişme raporları, toplam çekişme sayısını ve beklemenin gerçekleştiği modüller, işlevler, kaynak kodu satırları ve yönergeleri için kaynak beklerken harcanan toplam zamanı görüntüler.
+Kaynak çekişmeleri, modüller, işlevler, kaynak kodu satırları ve bekleme gerçekleştiği yönergelerin bir kaynağı beklerken harcanan toplam çekişme sayısını ve toplam süreyi görüntüler.
 
-- Kapsayıcı değerler, bir işlevi kaynak çekişmelerine göre beklemeye zorlayan toplam çekişme sayısını ve işlevin beklediği toplam süreyi görüntüler.  İşlev tarafından çağrılan alt işlevler tarafından neden olduğu çekişmeler kapsayıcı değerlere dahil edilir.
+- Kapsamlı değerler, bir işlevi kaynak çekişmeleri ve işlevin bekleme toplam süresi tarafından beklemeye zorlayan toplam çekişmelerin sayısını görüntüler.  İşlev tarafından çağrılan alt işlevlerin neden olduğu çekişmeler, kapsamlı değerlere dahildir.
 
-- Özel değerler yalnızca bir işlevi beklemeye zorlayan ve işlevin gövdesindeki koddan kaynaklanan çekişme sayısını görüntüler. Alt işlevlerden kaynaklanan çekişmeler dahil edilmez. İşlev için özel süre, yalnızca işlev gövdesindeki ifadelerden kaynaklanan bekleme sürelerini de içerir.
+- Dışlamalı değerler yalnızca bir işlevin beklemesini ve işlevin gövdesinde kodun neden olduğunu zorlayan çekişmelerin sayısını görüntüler. Alt işlevlerin neden olduğu çekişmeler dahil değildir. İşlevin dışlamalı zamanı, yalnızca işlev gövdesinde deyimlerin neden olduğu bekleme sürelerini de içerir.
 
-Kaynak çekişme raporu görünümleri, zaman içinde tek tek çekişme olaylarını gösteren ve belirli bir olayı oluşturan çağrı yığınlarını gösteren zaman çizelgesi grafiklerini de içerir. Daha fazla bilgi için aşağıdaki konulardan birine bakın:
+Kaynak çekişme raporu görünümleri Ayrıca zaman içinde bireysel çekişme olaylarını gösteren zaman çizelgesi grafiklerini içerir ve belirli bir olayı oluşturan çağrı yığınlarını gösterir. Daha fazla bilgi için aşağıdaki konulardan birine bakın:
 
-- [İş parçacığı ayrıntıları görünümü](../profiling/thread-details-view-contention-data.md)
+- [İş parçacığı Ayrıntıları görünümü](../profiling/thread-details-view-contention-data.md)
 
-- [Kaynak ayrıntıları görünümü](../profiling/resource-details-view-contention-data.md)
+- [Kaynak Ayrıntıları görünümü](../profiling/resource-details-view-contention-data.md)
 
-Eşzamanlılık profillemenin ikinci modu hakkında daha fazla bilgi için [Concurrency Visualizer](../profiling/concurrency-visualizer.md)bölümüne bakın.
+Eşzamanlılık profili oluşturma işleminin ikinci modu hakkında daha fazla bilgi için bkz. [Eşzamanlılık görselleştiricisi](../profiling/concurrency-visualizer.md).

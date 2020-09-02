@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c01c034fb08315737c57ef8674230b837a9fa6de
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670336"
 ---
 # <a name="personalizing-the-visual-studio-ide"></a>Visual Studio IDE’yi kişiselleştirme
@@ -27,7 +27,7 @@ Bu bölümde, kendi geliştirme tarzlarınızı ve gereksinimlerinizi en iyi şe
  Pencere konumlarını ve davranışını düzenlemek ve özel düzenleri kaydetmek için bkz. [pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md).
 
 ### <a name="general-environment-options"></a>Genel ortam seçenekleri
- Birçok ortam ayarını özelleştirmek için **Hızlı Başlat**'a `environment` yazın. Özellik sayfası göründüğünde, bu sayfadaki çeşitli ayarlar hakkında daha fazla yardım için **F1** tuşuna basabilirsiniz. Ayrıca bkz. [ortam seçenekleri Iletişim kutusu](../ide/reference/environment-options-dialog-box.md).
+ Birçok ortam ayarını özelleştirmek için `environment` **Hızlı Başlat**' a yazın. Özellik sayfası göründüğünde, bu sayfadaki çeşitli ayarlar hakkında daha fazla yardım için  **F1** tuşuna basabilirsiniz. Ayrıca bkz. [ortam seçenekleri Iletişim kutusu](../ide/reference/environment-options-dialog-box.md).
 
 ### <a name="external-tools"></a>Dış Araçlar
  Menülerde ve araç çubuklarında hangi dış araçların göründüğünü özelleştirmek için bkz. [dış araçları yönetme](../ide/managing-external-tools.md).
@@ -36,13 +36,13 @@ Bu bölümde, kendi geliştirme tarzlarınızı ve gereksinimlerinizi en iyi şe
  Siz ve takımınız için özel bir başlangıç sayfası oluşturmak için, bkz [. başlangıç sayfasını özelleştirme](../ide/customizing-the-start-page-for-visual-studio.md)
 
 ### <a name="environment-color-themes"></a>Ortam renk temaları
- Açık, koyu ve mavi arasındaki renk temasını değiştirmek için **Hızlı Başlat** 'da ortam yazın ve **ortam &#124; genel**' i seçin. Düzenleyicideki renklendirme seçeneklerini değiştirmek için **Hızlı Başlat** 'a `environment` yazın ve **ortam &#124; yazı tipi ve renkler**' i seçin. Ayrıca bkz. [nasıl yapılır: yazı tiplerini ve renkleri değiştirme](../ide/how-to-change-fonts-and-colors-in-visual-studio.md).
+ Açık, koyu ve mavi arasındaki renk temasını değiştirmek için **Hızlı Başlat** 'da ortam yazın ve **genel &#124; ortam**' ı seçin. Düzenleyicideki renklendirme seçeneklerini değiştirmek için `environment` **Hızlı Başlat** ' ı yazın ve **ortam &#124; yazı tipi ve renkler**' i seçin. Ayrıca bkz. [nasıl yapılır: yazı tiplerini ve renkleri değiştirme](../ide/how-to-change-fonts-and-colors-in-visual-studio.md).
 
 ### <a name="menus-and-toolbars"></a>Menüler ve araç çubukları
  Menü ya da araç çubuğu öğeleri eklemek veya kaldırmak için bkz. [nasıl yapılır: özelleştirme menüleri ve araç çubukları](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md).
 
 ### <a name="main-menu-casing"></a>Ana menü büyük harfleri
- Popüler talep nedeniyle, **hızlı** başlangıç ' de `environment` yazarak ve **ortam &#124; genel**' i seçerek **başlık durumu** ve **tüm büyük harfler** arasındaki ana menü büyük küçük harf özelliğini değiştirebilirsiniz.
+ Popüler talep nedeniyle, Hızlı Başlangıç ' a yazıp ve genel &#124; ortam ' ı seçerek **başlık durumu** ve **tüm büyük harfler** arasındaki ana menüyü değiştirebilirsiniz `environment` **QuickLaunch** **Environment &#124; General**.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio IDE](../ide/visual-studio-ide.md)

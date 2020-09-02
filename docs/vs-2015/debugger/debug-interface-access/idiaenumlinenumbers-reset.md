@@ -1,5 +1,5 @@
 ---
-title: Idiaenumlinenumbers::reset | Microsoft Docs
+title: 'IDiaEnumLineNumbers:: Reset | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,25 +14,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e407a91914b034cbf7739c50effe76fd02d6957c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190083"
 ---
 # <a name="idiaenumlinenumbersreset"></a>IDiaEnumLineNumbers::Reset
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir numaralandırma sıralı başlangıç durumuna sıfırlar.  
+Bir numaralandırma dizisini başlangıca sıfırlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Reset();  
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Döndürür `S_OK`.  
+ `S_OK` döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

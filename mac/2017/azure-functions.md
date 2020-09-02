@@ -1,5 +1,5 @@
 ---
-title: Azure İşlevleri’ne giriş
+title: Azure İşlevleri’ne Giriş
 description: Mac için Visual Studio 'de Azure işlevleri 'ni kullanma.
 author: heiligerdankgesang
 ms.author: dominicn
@@ -8,13 +8,13 @@ ms.technology: vs-ide-install
 ms.assetid: 25CD47A4-5B32-4734-8EF3-E24A02AABF29
 ms.topic: how-to
 ms.openlocfilehash: f2621ab30099baae5521c8b2226f288ec1a2531b
-ms.sourcegitcommit: 2ce59c2ffeba5ba7f628c2e6c75cba4731deef8a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85938854"
 ---
-# <a name="introduction-to-azure-functions"></a>Azure İşlevleri’ne giriş
+# <a name="introduction-to-azure-functions"></a>Azure İşlevleri’ne Giriş
 
 Azure işlevleri, altyapıyı açıkça sağlamak veya yönetmek zorunda kalmadan, kod – – işlevleri – –, bulutta olay odaklı kod parçacıkları oluşturup çalıştırmanın bir yoludur. Azure Işlevleri hakkında daha fazla bilgi için bkz. [Azure işlevleri belgeleri](/azure/azure-functions/).
 
@@ -50,7 +50,7 @@ Mac için Visual Studio, varsayılan bir işlevle dahil .NET Standard bir proje 
 Yeni proje aşağıdaki dosyaları içerir:
 
 * **Your-Function-Name.cs** – Bu sınıf seçtiğiniz işlevin ortak kodunu içerir. İşlev adına sahip bir **fonksiyonadı** özniteliği ve işlevi neyin tetikleyeceğini belirten bir tetikleyici özniteliği içerir (örn. bir HTTP isteği). İşlev yöntemi hakkında daha fazla bilgi için bkz. [Azure Işlevleri C# Geliştirici başvurusu](/azure/azure-functions/functions-dotnet-class-library) makalesi.
-* **host.js** : Bu dosya, işlevler ana bilgisayarı için genel yapılandırma seçeneklerini açıklar. Örnek bir dosya ve bu dosya için kullanılabilir ayarlar hakkında bilgi için bkz. [Azure işlevleri için başvuruhost.js](/azure/azure-functions/functions-host-json).
+* **host.js** : Bu dosya, işlevler ana bilgisayarı için genel yapılandırma seçeneklerini açıklar. Örnek bir dosya ve bu dosya için kullanılabilir ayarlar hakkında bilgi için bkz. [ Azure işlevleri için başvuruhost.js](/azure/azure-functions/functions-host-json).
 * **local.settings.js** : Bu dosya, işlevleri yerel olarak çalıştırmaya yönelik tüm ayarları içerir. Bu ayarlar Azure Functions Core Tools tarafından kullanılır. Daha fazla bilgi için Azure Functions Core Tools makalesindeki [yerel ayarlar dosyası](/azure/azure-functions/functions-run-local#local-settings-file) ' na bakın.
 
 Artık Mac için Visual Studio yeni bir Azure Işlevleri projesi oluşturduğunuza göre, yerel makinenizden varsayılan HTTP ile tetiklenen işlevi test edebilirsiniz.
@@ -91,12 +91,12 @@ Mac için Visual Studio Azure Işlevleri desteğiyle, işlevinizi yerel gelişti
 
 ## <a name="publish-to-azure"></a>Azure’da Yayımlama
 
-1. Proje adına sağ tıklayıp **yayımla > Azure**'da Yayımla ' yı seçin: Azure 'da ![ Yayımla menü seçeneği](media/azure-functions-image5.png)
+1. Proje adına sağ tıklayıp **yayımla > Azure**'da Yayımla ' yı seçin: Azure 'da  ![ Yayımla menü seçeneği](media/azure-functions-image5.png)
 2. Azure hesabınızı Mac için Visual Studio için zaten bağladıysanız, kullanılabilir uygulama hizmetlerinin bir listesi görüntülenir. Oturum açmadıysanız bunu yapmanız istenir.
 3. **Azure App Service Yayımla** iletişim kutusunda, var olan bir uygulama hizmetini seçebilir veya **Yeni**' ye tıklayarak yeni bir tane oluşturabilirsiniz.
 4. **Yeni App Service oluştur** iletişim kutusunda ayarlarınızı girin: ![ Azure 'a Yayımla menü seçeneği](media/azure-functions-image7.png)
 
-    |Ayar  |Description  |
+    |Ayar  |Açıklama  |
     |---------|---------|
     |**App Service adı**|Yeni işlev uygulamanızı tanımlayan genel olarak benzersiz bir ad.|
     |**Abonelik**|Kullanılacak Azure aboneliği.|

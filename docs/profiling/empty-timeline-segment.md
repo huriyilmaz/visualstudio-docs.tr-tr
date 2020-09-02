@@ -1,5 +1,5 @@
 ---
-title: Boş Zaman Çizelgesi Segmenti | Microsoft Dokümanlar
+title: Boş zaman çizelgesi segmenti | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,23 +13,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a96cdc7ae4edc7ea7193d5b95dfc73fa1747c1fb
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62970115"
 ---
-# <a name="empty-timeline-segment"></a>Boş zaman çizelgesi kesimi
-Eşzamanlılık Görselleştiricisinde, zaman çizelgesinin bir bölümünün boş olmasının (beyaz bir arka plana sahip olmasının) nedeni kanalın türüne bağlıdır.
+# <a name="empty-timeline-segment"></a>Boş zaman çizelgesi segmenti
+Eşzamanlılık görselleştiricisi içinde, zaman çizelgesinin bir bölümünün boş olması neden olur (beyaz bir arka plana sahiptir) Kanal türüne bağlıdır.
 
-- CPU iş parçacığı kanalı için, iş parçacığı zaman çizelgesinin bu bölümünde var olmadığı anlamına gelir. İş parçacığıyla ilgileniyorsanız, yakınlaştırma denetimini kullanarak veya yatay kaydırma yaparak yürütme bölümünü bulabilirsiniz.
+- Bir CPU iş parçacığı kanalı için, iş parçacığının bu bölümü zaman çizelgesinin bu kısmı sırasında olmadığı anlamına gelir. İş parçacığı ile ilgileniyorsanız, Yakınlaştırma denetimini kullanarak veya yatay olarak kaydırma yaparak yürütülmekte olan bölümünü bulabilirsiniz.
 
-- Bir G/Ç kanalı için, o anda hedef işlem adına disk erişimi nin gerçekleşmemiş olduğu anlamına gelir.
+- G/ç kanalı için, bu noktada hedef işlem adına disk erişimi gerçekleşmediği anlamına gelir.
 
-- DirectX kanalı için, zaman çizelgesinin bu bölümünde hedef işlem adına GPU çalışması yapılmadığı anlamına gelir.
+- DirectX kanalı için, zaman çizelgesinin bu bölümü sırasında hedef işlem adına hiçbir GPU işi gerçekleştirilmediği anlamına gelir.
 
-- Bir işaretleyici kanalı için, hiçbir işaretçi oluşturulduğu anlamına gelir.
+- İşaretleyici kanal için, hiçbir işaretleyici üretilmediği anlamına gelir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)
-- [Yakınlaştırma denetimi (İş Parçacığı Görünümü)](../profiling/zoom-control-threads-view.md)
+- [Yakınlaştırma denetimi (Iş parçacıkları görünümü)](../profiling/zoom-control-threads-view.md)

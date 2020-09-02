@@ -1,106 +1,106 @@
 ---
 title: Git ile çalışma
-description: Mac için Visual Studio'da Git'i kullanma.
+description: Mac için Visual Studio git 'i kullanma.
 author: heiligerdankgesang
 ms.author: dominicn
 ms.date: 05/06/2018
 ms.assetid: 852B6A9D-AEFA-4EF4-A5DD-94A506019D20
 ms.custom: video
 ms.openlocfilehash: 33148c5202251525504864f26177da4497b5fabe
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74983563"
 ---
 # <a name="working-with-git"></a>Git ile çalışma
 
-Git, ekiplerin aynı belgeler üzerinde aynı anda çalışmasını sağlayan dağıtılmış bir sürüm kontrol sistemidir. Bu, tüm dosyaları içeren merkezi bir sunucu olduğu anlamına gelir, ancak bir depo bu merkezi kaynaktan kullanıma alındığında, tüm depo yerel makineye klonlanır.
+Git, ekiplerin aynı belgelerde aynı anda çalışmasına izin veren bir dağıtılmış sürüm denetim sistemidir. Bu, tüm dosyaları içeren bir merkezi sunucu olduğu anlamına gelir ancak bir depo bu Merkezi kaynaktan kullanıma alındığı zaman, tüm deponun yerel makineye klonlanmış olması gerekir.
 
-Aşağıdaki bölümlerde Git'in Mac için Visual Studio'da sürüm kontrolü için nasıl kullanılabileceğini inceleyeceğiz.
+Aşağıdaki bölümler, git 'in Mac için Visual Studio sürüm denetimi için nasıl kullanılabileceğini keşfedebilir.
 
-## <a name="git-version-control-menu"></a>Git sürüm kontrol menüsü
+## <a name="git-version-control-menu"></a>Git sürümü Denetim menüsü
 
-Aşağıdaki resimde, Visual Studio tarafından Mac için Sürüm Denetimi menü öğesi tarafından sağlanan seçenekler gösterilmiştir:
+Aşağıdaki görüntüde sürüm denetim menüsü öğesi tarafından Mac için Visual Studio tarafından belirtilen seçenekler gösterilmektedir:
 
-![Sürüm Denetimi menü öğesi](media/version-control-gitVersionControlMenu.png)
+![Sürüm denetimi menü öğesi](media/version-control-gitVersionControlMenu.png)
 
-## <a name="push-and-pull"></a>İtme ve Çekme
+## <a name="push-and-pull"></a>Gönderim ve çekme
 
-İtme ve Çekme Git içinde en sık kullanılan eylemlerden ikisidir. Diğer kişilerin uzak depoda yaptığı değişiklikleri eşitlemek için oradan **çekmeniz** gerekir. Bu **Sürüm Denetimi > Update Solution**seçerek Mac için Visual Studio yapılır.
+Git içinde en sık kullanılan eylemlerden biri gönderiliyor ve çekiliyor. Diğer kişilerin uzak depoya yaptığı değişiklikleri eşleştirmek için Buradan **çekmeniz** gerekir. Bu, **sürüm denetimi > güncelleştirme çözümü**seçilerek Mac için Visual Studio yapılır.
 
-Dosyalarınızı güncelleştirip gözden geçirdikten ve işledikten sonra, başkalarının değişikliklerinize erişebilmesi için bunları uzak depoya **itmeniz** gerekir. Bu **Sürüm Denetimi > Push Changes**seçerek Mac için Visual Studio yapılır. Bu, taahhüt edilen değişiklikleri görüntülemenize olanak tanıyan Push iletişim kutusunu görüntüler ve aşağıdakileri yapmak için şubeyi seçer:
+Dosyalarınızı güncelleştirdikten sonra gözden geçirdikten ve kaydettikten sonra başkalarının değişikliklere erişmesine izin vermek **için bunları uzak** depoya göndermeniz gerekir. Bu, **sürüm denetimi > gönderme değişiklikleri**seçilerek Mac için Visual Studio yapılır. Bu, anında Iletme iletişim kutusunu görüntüleyerek, kaydedilen değişiklikleri görüntülemenize ve şu şekilde gönderim yapılacak dalı seçmenizi sağlar:
 
-![Taahhüt edecek dalı gösteren iletişim kutusu](media/version-control-gitPush.png)
+![Yürütülecek dalı gösteren iletişim kutusu](media/version-control-gitPush.png)
 
-Ayrıca, Commit iletişim kutusu aracılığıyla değişikliklerinizi aynı anda gerçekleştirebilir ve itebilirsiniz:
+Ayrıca, Kaydet iletişim kutusu aracılığıyla değişikliklerinizi aynı anda kaydedebilir ve gönderebilirsiniz:
 
-![Aynı anda nasıl bağlanıp itineceklerini gösteren seçenek.](media/version-control-commitPush.png)
+![Aynı anda nasıl kayıt yapılacağını ve gönderileceğini gösteren seçenek.](media/version-control-commitPush.png)
 
-## <a name="blame-log-and-merge"></a>Suçlama, Günlüğe Kaydetme ve Birleştirme
+## <a name="blame-log-and-merge"></a>Güçlendirme, günlüğe kaydetme ve birleştirme
 
-Pencerenin alt kısmında, aşağıda gösterildiği gibi görüntülenen beş sekme vardır:
+Pencerenin alt kısmında, aşağıda gösterildiği gibi beş sekme görüntülenir:
 
-![Sürüm Denetimi sekmeleri](media/version-control-gitTabs.png)
+![Sürüm denetimi sekmeleri](media/version-control-gitTabs.png)
 
 Bunlar aşağıdaki eylemlere izin verir:
 
-* **Kaynak** - Kaynak kod dosyanızı görüntüler.
-* **Değişiklikler** - Yerel dosyanızla temel dosya arasındaki kod değişikliğini görüntüler. Ayrıca, dosyanın farklı karhes farklı sürümlerikarşılaştırabilirsiniz:
+* **Kaynak** -kaynak kodu dosyanızı görüntüler.
+* **Değişiklikler** -yerel dosyanız ve temel dosya arasındaki koddaki değişikliği görüntüler. Ayrıca, farklı karmalardan dosyanın farklı sürümlerini de karşılaştırabilirsiniz:
 
     ![Değişiklikler sekmesi](media/version-control-gitChange.png)
 
-* **Blame** - Kodun her bölümüyle ilişkili kullanıcı adını görüntüler.
-* **Günlük** - Dosyadan sorumlu tüm taahhütleri, saatleri, tarihleri, mesajları ve kullanıcıları görüntüler:
+* **Blame** -her kod bölümüyle ilişkili kullanıcının Kullanıcı adını görüntüler.
+* **Günlük** -dosyadan sorumlu tüm işlemeler, saatler, tarihler, iletiler ve kullanıcıları görüntüler:
 
     ![Günlük sekmesi](media/version-control-gitLog.png)
 
-* **Birleştirme** - Çalışmanızı işlerken birleştirme çakışması varsa bu kullanılabilir. Sizin ve diğer geliştirici tarafından yapılan değişikliklerin görsel bir gösterimini göstererek kodun her iki bölümünü de temiz bir şekilde birleştirmenizi sağlar.
+* **Birleştir** -işinizi kaydederken bir birleştirme çakışması varsa bu kullanılabilir. Siz ve diğer geliştirici tarafından yapılan değişikliklerin görsel bir temsilini gösterir. Bu, her iki kod bölümünü düzgün bir şekilde birleştirmenizi sağlar.
 
 ## <a name="switching-branches"></a>Dalları değiştirme
 
-Varsayılan olarak, bir depoda oluşturulan ilk dal **Ana** dal olarak bilinir. Teknik olarak ana şube ile diğer dal arasında farklı bir şey yoktur, ancak ana dal geliştirme ekiplerinde en sık 'canlı' veya 'üretim' dalı olarak düşünülen daldır.
+Varsayılan olarak, bir depoda oluşturulan ilk dal, **ana** dal olarak bilinir. Ana dal ile diğeri arasında teknik açıdan farklılık yoktur, ancak ana dal, geliştirme ekiplerinde en sık ' Live ' veya ' üretim ' dalı olarak düşündük.
 
-Master 'ı (veya başka bir dalı) dallandırarak bağımsız bir gelişim çizgisi oluşturulabilir. Bu, zaman içinde bir noktada ana dalanın yeni bir sürümünü sağlar ve 'canlı' olandan bağımsız olarak gelişime olanak sağlar. Dalları bu şekilde kullanmak genellikle yazılım geliştirmedeki özellikler için kullanılır
+Bağımsız bir geliştirme hattı, ana öğe (veya başka bir dal) üzerinde dallandırarak oluşturulabilir. Bu, ana dalın zaman içinde yeni bir sürümünü sağlar ve ' canlı ' ' den bağımsız olarak geliştirmeye olanak tanır. Dalları bu şekilde kullanmak, genellikle yazılım geliştirmede özellikler için kullanılır
 
-Kullanıcılar her depo için istedikleri kadar dal oluşturabilir, ancak bir dalı kullanmayı bitirdikten sonra depoyu düzenli tutmak için bu şubenin silinmesi önerilir.
+Kullanıcılar her depo için istedikleri kadar çok dal oluşturabilir, ancak bir dalı kullanmayı bitirdikten sonra depoyu düzenli tutmak üzere silmiş olması önerilir.
 
-**Şubeler, Sürüm Kontrolü'ne**göz atarak > Şubeleri ve Uzaktan Kumandaları Yöneterek Mac için Visual Studio'da görüntülenir...
+Dallar, sürüm denetimine göz atarak Mac için Visual Studio **ve uzak dalları yönetmek > görüntülenir...**:
 
-![Şubegörünümü](media/version-control-gitBranch2.png)
+![Dallar görünümü](media/version-control-gitBranch2.png)
 
-Listede seçerek ve **Şubeye Geçiş** düğmesine basarak başka bir dala geçin.
+Listede seçip **dala geç** düğmesine basarak başka bir dala geçiş yapın.
 
-Yeni bir dal oluşturmak için Git deposu yapılandırma iletişim kutusunda **Yeni** düğmesini seçin. Yeni şube adını girin:
+Yeni bir dal oluşturmak için Git deposu yapılandırma iletişim kutusunda **Yeni** düğmesini seçin. Yeni dal adını girin:
 
-![Yeni dal oluşturma](media/version-control-gitBranch.png)
+![Yeni dal oluştur](media/version-control-gitBranch.png)
 
-İzleme _dalınıza_ uzak bir dal da ayarlayabilirsiniz. [Git belgelerinde](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#Tracking-Branches)şubeleri izleme hakkında daha fazla bilgi edinin.
+Ayrıca, _izleme_ dalınıza uzak bir dal ayarlayabilirsiniz. [Git belgelerindeki](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches#Tracking-Branches)dalları izleme hakkında daha fazla bilgi edinin.
 
-Çözüm Defteri'ndeki proje adının yanındaki geçerli dala bakın:
+Proje adının yanındaki Çözüm Bölmesi geçerli dala bakın:
 
- ![Çözüm defterinde görüntülenen geçerli dal](media/version-control-gitBranchName.png)
+ ![Geçerli dal çözüm panelinde gösteriliyor](media/version-control-gitBranchName.png)
 
-## <a name="reviewing-and-committing"></a>İnceleme ve taahhüt
+## <a name="reviewing-and-committing"></a>İnceleme ve kaydetme
 
-Dosyalardaki değişiklikleri gözden geçirmek için, bu konuda daha önce gösterildiği her belgede Değişiklikler, Suçlama, Günlük ve Birleştirme sekmelerini kullanın.
+Dosyalardaki değişiklikleri gözden geçirmek için, bu konunun başında gösterildiği gibi, her belge üzerinde yapılan değişiklikleri, güçlendirme 'yi, günlüğü ve birleştirme sekmelerini kullanın.
 
-Sürüm Denetimi > Gözden Geçir çözüm öğesini inceleyerek projenizdeki tüm değişiklikleri gözden geçirin ve menü öğesini **gerçekleştirin:**
+Sürüm denetimine göz atarak, **çözüm ve COMMIT menü öğesini gözden geçirin >** projenizdeki tüm değişiklikleri gözden geçirin:
 
-![Kod görünümünü gözden geçirme](media/version-control-gitReviewCommit.png)
+![Kod görünümünü gözden geçir](media/version-control-gitReviewCommit.png)
 
-Bu, bir projenin her dosyasındaki tüm değişikliklerin Geri Döndürülme, Yama Oluşturma veya Commit seçeneğiyle görüntülenmesini sağlar.
+Bu, bir proje dosyasındaki tüm değişikliklerin, alma, düzeltme eki oluşturma veya tamamlama seçeneğiyle görüntülenmesine olanak sağlar.
 
-Bir dosyayı uzak depoya işlemek için **Commit**tuşuna basın, bir ileti girin ve Commit Düğmesi ile onaylayın:
+Uzak depoya bir dosyayı kaydetmek için, **Kaydet**' e basın, bir teslim iletisi girin ve Kaydet düğmesini kullanarak onaylayın:
 
-![Dosya işleme](media/version-control-gitCommit.png)
+![Dosya yürütülüyor](media/version-control-gitCommit.png)
 
-Değişikliklerinizi yatırdıktan sonra, diğer kullanıcıların bunları görmesine izin vermek için bunları uzak depoya itin.
+Değişikliklerinizi kaydettikten sonra, diğer kullanıcıların bunları görmesine izin vermek için uzak depoya gönderin.
 
-## <a name="related-video"></a>İlgili Video
+## <a name="related-video"></a>İlgili video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Manage-Projects-with-Git/player]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-* [Kodunuzu Visual Studio 2017 ve Azure Repos Git ile paylaşın](/azure/devops/repos/git/share-your-code-in-git-vs-2017)
+* [Kodunuzu Visual Studio 2017 ve git Azure Repos ile paylaşma](/azure/devops/repos/git/share-your-code-in-git-vs-2017)

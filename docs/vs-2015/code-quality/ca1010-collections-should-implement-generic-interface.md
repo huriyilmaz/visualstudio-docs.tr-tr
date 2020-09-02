@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: b141d755c717ad6650d2a49c98c2b26547066b7a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545528"
 ---
 # <a name="ca1010-collections-should-implement-generic-interface"></a>CA1010: Koleksiyonlar genel arabirimi uygulamalıdır
@@ -58,7 +58,7 @@ ms.locfileid: "85545528"
 
 ## <a name="example-violation"></a>Örnek Ihlali
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, bu kuralı ihlal eden genel olmayan sınıftan türetilen bir sınıfı (başvuru türü) gösterir `CollectionBase` .
 
 ### <a name="code"></a>Kod
@@ -69,7 +69,7 @@ ms.locfileid: "85545528"
 
 ## <a name="fix-by-base-class-change"></a>Temel sınıf değişikliğine göre düzeltir
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, koleksiyonun Taban sınıfını genel olmayan `CollectionBase` sınıftan genel `Collection<T>` ( `Collection(Of T)` ın [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ) sınıfına değiştirerek ihlalini düzeltir.
 
 ### <a name="code"></a>Kod
@@ -80,7 +80,7 @@ ms.locfileid: "85545528"
 
 ## <a name="fix-by-interface-implementation"></a>Arabirim uygulamasına göre onarma
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, bu genel arabirimleri uygulayarak ihlalini düzeltir: `IEnumerable<T>` , `ICollection<T>` , ve `IList<T>` ( `IEnumerable(Of T)` , `ICollection(Of T)` , ve `IList(Of T)` içinde [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ).
 
 ### <a name="code"></a>Kod

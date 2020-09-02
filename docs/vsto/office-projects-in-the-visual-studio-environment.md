@@ -42,85 +42,85 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 65f3a3abfe7e49872c7131a247d74612200bf42a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62978064"
 ---
 # <a name="office-projects-in-the-visual-studio-environment"></a>Visual Studio ortamında Office projeleri
-  Microsoft Office projeleri, Visual Studio'daki diğer proje türlerine (Windows Forms projeleri gibi) benzer bir geliştirme deneyimine sahiptir. Proje öğeleri oluşturduğunuzda veya bir Office projesi görünür **Çözüm Gezgini**. Belge düzeyinde projeler için, belge (yani, Word belgesi veya Excel çalışma kitabı) Visual Studio'da açılır ve belge bir görsel tasarımcı gibi davranır.
+  Microsoft Office projeleri, Visual Studio'daki diğer proje türlerine (Windows Forms projeleri gibi) benzer bir geliştirme deneyimine sahiptir. Bir Office projesi oluşturduğunuzda veya açtığınızda, proje öğeleri **Çözüm Gezgini**görüntülenir. Belge düzeyinde projeler için, belge (yani, Word belgesi veya Excel çalışma kitabı) Visual Studio'da açılır ve belge bir görsel tasarımcı gibi davranır.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="project-items-in-solution-explorer"></a>Çözüm Gezgini'nde proje öğeleri
- Bir belge düzeyi projede **Çözüm Gezgini** aşağıdaki varsayılan öğeleri görüntüler:
+## <a name="project-items-in-solution-explorer"></a>Çözüm Gezgini proje öğeleri
+ Belge düzeyi projesinde, **Çözüm Gezgini** aşağıdaki varsayılan öğeleri görüntüler:
 
 - Projenin özelleştirdiği belge, çalışma kitabı ve sayfa düğümleri. Bu düğümler; belge, çalışma kitabı ve sayfalar ile ilişkili kod dosyaları için kapsayıcı işlevi görür.
 
 - Projenin özelleştirdiği belge, çalışma kitabı ve sayfalar ile ilişkili kod dosyaları. Word projelerinde, kod dosyaları Word belgesi veya şablonu ile ilişkilidir. Excel projelerinde, kod dosyaları Excel çalışma kitabı veya şablonuyla ve çalışma kitabı veya şablondaki her bir çalışma sayfası ve grafik sayfası ile ilişkilidir.
 
-- Doğrudan düzenlemeniz için tasarlanmamış gizli proje dosyaları. Daha fazla bilgi için [gizli proje dosyaları](#hiddenfiles).
+- Doğrudan düzenlemeniz için tasarlanmamış gizli proje dosyaları. Daha fazla bilgi için bkz. [gizli proje dosyaları](#hiddenfiles).
 
-  Bir VSTO eklenti projesinde **Çözüm Gezgini** aşağıdaki varsayılan öğeleri görüntüler:
+  VSTO eklenti projesinde, **Çözüm Gezgini** aşağıdaki varsayılan öğeleri görüntüler:
 
-- Uygulama düğümü. Bu düğüm gibi konak uygulama ile aynı ada sahip **Word**, **Excel**, veya **Outlook**. Bu uygulama düğümü ThisAddIn kod dosyasını içerir. Ayrıca sağlar **Namespace for Host Item** özelliği. Bu özellik hakkında daha fazla bilgi için bkz. [Office projelerinde Özellikler](../vsto/properties-in-office-projects.md).
+- Uygulama düğümü. Bu düğüm, **Word**, **Excel**veya **Outlook**gibi ana bilgisayar uygulamasıyla aynı ada sahiptir. Bu uygulama düğümü ThisAddIn kod dosyasını içerir. Ayrıca **konak öğesi özelliği Için ad alanı** sağlar. Bu özellik hakkında daha fazla bilgi için bkz. [Office projelerindeki Özellikler](../vsto/properties-in-office-projects.md).
 
-- ThisAddIn kod dosyası. Bu dosyada oluşturulan `ThisAddIn` VSTO eklenti için sınıf. Bu sınıf hakkında daha fazla bilgi için bkz: [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
+- ThisAddIn kod dosyası. Bu dosya, `ThisAddIn` VSTO eklentisi için oluşturulan sınıfı içerir. Bu sınıf hakkında daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
 
-- Doğrudan düzenlemeniz için tasarlanmamış gizli proje dosyaları. Daha fazla bilgi için [gizli proje dosyaları](#hiddenfiles).
+- Doğrudan düzenlemeniz için tasarlanmamış gizli proje dosyaları. Daha fazla bilgi için bkz. [gizli proje dosyaları](#hiddenfiles).
 
 ### <a name="temporary-certificates"></a>Geçici Sertifikalar
- Office projeleri ayrıca adlı geçici bir sertifika içerir *proje adı*_TemporaryKey.pfx. Bu sertifika, geliştirme sırasında projenin uygulama ve dağıtım bildirimlerini imzalamak için kullanılır. Daha fazla bilgi için [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md) ve [güvenli Office çözümleri](../vsto/securing-office-solutions.md).
+ Office projeleri ayrıca *Proje adı*_TemporaryKey. pfx adlı geçici bir sertifika içerir. Bu sertifika, geliştirme sırasında projenin uygulama ve dağıtım bildirimlerini imzalamak için kullanılır. Daha fazla bilgi için bkz. [Office çözümlerine güven verme](../vsto/granting-trust-to-office-solutions.md) ve [Office çözümlerini güvenli hale getirme](../vsto/securing-office-solutions.md).
 
-### <a name="hiddenfiles"></a> Gizli proje dosyaları
- Bazı proje dosyaları varsayılan olarak gizlidir. Bu dosyalar Visual Studio tarafından oluşturulur ve proje türüne göre farklılık gösterir. Gizli dosyaları görüntülemek için tıklatın **tüm dosyaları göster** içinde **Çözüm Gezgini**.
+### <a name="hidden-project-files"></a><a name="hiddenfiles"></a> Gizli proje dosyaları
+ Bazı proje dosyaları varsayılan olarak gizlidir. Bu dosyalar Visual Studio tarafından oluşturulur ve proje türüne göre farklılık gösterir. Gizli dosyaları görüntülemek için **Çözüm Gezgini** **tüm dosyaları göster** ' e tıklayın.
 
  Gizli proje dosyalarında değişiklik yapmayın. Bu dosyaların doğrudan değiştirilmesi desteklenmez ve projenizin bozulmasına neden olabilir. Gizli proje dosyaları, belgede belirli değişiklikler olduğu durumlarda yeniden oluşturulur. Gizli bir proje dosyasında el ile değişiklikler yaparsanız, dosya yeniden oluşturulduğunda bu değişiklikler kaybolur.
 
-## <a name="document-designer-in-document-level-projects"></a>Belge düzeyinde projelerde belge Tasarımcısı
+## <a name="document-designer-in-document-level-projects"></a>Belge düzeyi projelerde belge Tasarımcısı
  Excel ve Word için belge düzeyinde projeler, Visual Studio'da projenizle ilişkili belgeyi barındıran bir tasarımcı sunar. Tasarımcı, Visual Studio ortamının dışına çıkmadan belgede değişiklik yapmanızı sağlar.
 
- Bir belgeyi tasarımcıda açmak için kod dosyasına çift tıklayın **Çözüm Gezgini** belgeyle ilişkili. Örneğin, çalışma sayfasını açmak için **Sayfa1** Excel projesinde tasarımcıda çift **Sayfa1** kod dosyası.
+ Tasarımcıda bir belge açmak için, belgeyle ilişkili **Çözüm Gezgini** kod dosyasına çift tıklayın. Örneğin **, çalışma sayfasını** Tasarımcıda bir Excel projesinde açmak için **Sheet1** kod dosyasına çift tıklayın.
 
- Belgeyi tasarımcıda değiştirirken, Office uygulamasının yerel işlevselliğinden yararlanabilirsiniz. Örneğin, belgeye veya bir çalışma sayfasına metin girebilir veya tablo ya da grafik ekleme gibi görevleri gerçekleştirmek için Şerit'i kullanabilirsiniz. Varsayılan olarak, klavye kısayolu eşlemeleri Visual Studio eşlemelerine varsayılan olur. Office kullanılacak klavye kısayolu eşlemeleri bunun yerine, ayarları değiştirmek **Microsoft Office Klavyesi ayarları** düğümünde **seçenekleri** iletişim kutusunda **Araçları** menüsü .
+ Belgeyi tasarımcıda değiştirirken, Office uygulamasının yerel işlevselliğinden yararlanabilirsiniz. Örneğin, belgeye veya bir çalışma sayfasına metin girebilir veya tablo ya da grafik ekleme gibi görevleri gerçekleştirmek için Şerit'i kullanabilirsiniz. Varsayılan olarak, klavye kısayolu eşlemeleri Visual Studio eşlemelerine varsayılan olur. Bunun yerine Office klavye kısayol eşlemelerini kullanmak için **Araçlar** menüsündeki **Seçenekler** Iletişim kutusunda bulunan **klavye ayarları düğümü Microsoft Office** ayarlarını değiştirin.
 
 ### <a name="controls-on-documents"></a>Belgeler Üzerindeki Denetimler
- Sürükleyebilirsiniz *konak denetimlerini* ve Visual Studio'dan Windows Forms denetimleri **araç kutusu** belge tasarım yüzeyine. Konak denetimleri Office nesnelerinin özelleşmiş sürümleri olup (Word içerik denetimleri ve Excel aralıkları gibi), Visual Studio ile oluşturulmuş Office projelerinde kullanılabilirler. Konak denetimlerinin karşılık gelen Office nesnelerinde bulunmayan, veri bağlama ve ek olaylar gibi ilave özellikleri vardır.
+ Visual Studio **araç kutusundan** belge tasarım yüzeyine *konak denetimleri* ve Windows Forms denetimleri sürükleyebilirsiniz. Konak denetimleri Office nesnelerinin özelleşmiş sürümleri olup (Word içerik denetimleri ve Excel aralıkları gibi), Visual Studio ile oluşturulmuş Office projelerinde kullanılabilirler. Konak denetimlerinin karşılık gelen Office nesnelerinde bulunmayan, veri bağlama ve ek olaylar gibi ilave özellikleri vardır.
 
- Daha fazla bilgi için [konak öğelerini ve denetimlerine genel bakış için ana bilgisayar](../vsto/host-items-and-host-controls-overview.md) ve [Windows forms denetimlerine Office belgeleri genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md).
+ Daha fazla bilgi için bkz. [konak öğeleri ve konak denetimlerine genel bakış](../vsto/host-items-and-host-controls-overview.md) ve [Office belgelerindeki Windows Forms denetimlerine genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md).
 
-### <a name="excel-worksheets-and-workbooks-in-the-designer"></a>Excel çalışma kitabı ve tasarımcıda çalışma
- Bir çalışma sayfasını tasarımcıda açtığınızda, çalışma sayfasını doğrudan Excel'de açtığınızda yaptığınız gibi değiştirebilirsiniz. Bir çalışma sayfası hücresine çift tıklarsanız hücre düzenleme moduna geçer. Bir konak denetimi içeren bir hücreye çift tıklarsanız Kod Düzenleyicisi açılır ve Visual Studio denetim için varsayılan olay işleyicisini oluşturur. Diğer çalışma sayfalarına gitmek için tasarımcının en altında çalışma sayfası sekmelerine tıklayabilirsiniz.
+### <a name="excel-worksheets-and-workbooks-in-the-designer"></a>Tasarımcıda Excel çalışma sayfaları ve çalışma kitapları
+ Bir çalışma sayfasını tasarımcıda açtığınızda, çalışma sayfasını doğrudan Excel'de açtığınızda yaptığınız gibi değiştirebilirsiniz. Bir çalışma sayfası hücresine çift tıklarsanız hücre düzenleme moduna geçer. Konak denetimi içeren bir hücreye çift tıklarsanız, kod Düzenleyicisi açılır ve Visual Studio denetim için varsayılan olay işleyicisini oluşturur. Diğer çalışma sayfalarına gitmek için tasarımcının en altında çalışma sayfası sekmelerine tıklayabilirsiniz.
 
  Çalışma kitabını tasarımcıda açtığınızda tasarım yüzeyi bulunmaz. Çalışma kitabına ilişkin tasarım görünümü tasarımcıyı dolduran büyük bir bileşen alanıdır.
 
- Çalışma kitabının ve çalışma kitabındaki tüm sayfaların ilişkili birer kod dosyası vardır. Her kod dosyası oluşturulan bir içerir *konak öğesi* çalışma kitabını veya sayfasını temsil eden sınıf. Daha fazla bilgi için [otomatikleştirmek genişletilmiş nesneleri kullanarak Excel](../vsto/automating-excel-by-using-extended-objects.md).
+ Çalışma kitabının ve çalışma kitabındaki tüm sayfaların ilişkili birer kod dosyası vardır. Her kod dosyası, çalışma kitabını veya sayfasını temsil eden oluşturulmuş bir *konak öğesi* sınıfını içerir. Daha fazla bilgi için bkz. [genişletilmiş nesneleri kullanarak Excel 'ı otomatikleştirme](../vsto/automating-excel-by-using-extended-objects.md).
 
 ### <a name="word-documents-in-the-designer"></a>Tasarımcıda Word belgeleri
  Belgeyi tasarımcıda açtığınızda, doğrudan Word'de açtığınızda yaptığınız gibi değiştirebilirsiniz. Belgedeki bir sözcüğe çift tıklarsanız, sözcük seçili hale gelir. Ancak sözcük bir konak denetiminin içindeyse, kod düzenleyicisi açılır ve Visual Studio denetim için varsayılan olay işleyicisini oluşturur.
 
- Belgenin ilişkili bir kod dosyası vardır. Oluşturulan bir kod dosyası içeren *konak öğesi* belgeyi temsil eden sınıf. Daha fazla bilgi için [belge konak öğesi](../vsto/document-host-item.md).
+ Belgenin ilişkili bir kod dosyası vardır. Kod dosyası, belgeyi temsil eden oluşturulmuş bir *konak öğesi* sınıfını içerir. Daha fazla bilgi için bkz. [belge konak öğesi](../vsto/document-host-item.md).
 
-### <a name="design-mode-vs-runtime-mode"></a>Tasarım modu ve çalışma zamanı modu karşılaştırması
- Bir belge Visual Studio ortamında açık durumdayken, her zaman içinde *tasarım modu*. Bazı görevler (örneğin, belge yüzeyine bir konak denetimi sürüklemek gibi) sadece tasarım modunda gerçekleştirebilir.
+### <a name="design-mode-vs-runtime-mode"></a>Tasarım modu ile çalışma zamanı modu
+ Visual Studio ortamında bir belge açıldığında, her zaman *Tasarım modundadır*. Bazı görevler (örneğin, belge yüzeyine bir konak denetimi sürüklemek gibi) sadece tasarım modunda gerçekleştirebilir.
 
- Belgeyi görüntülemek için *çalışma zamanı modu*, uygulamayı ve belgeyi Visual Studio'nun dışında açmalısınız. Ayrıca, projeyi derleyip çalıştırabilirsiniz ve böylece, belge ve uygulama otomatik olarak Visual Studio'nun dışında açılır.
+ Belgeyi *çalışma zamanı modunda*görüntülemek için, uygulamayı ve belgeyi Visual Studio 'nun dışında açmanız gerekir. Ayrıca, projeyi derleyip çalıştırabilirsiniz ve böylece, belge ve uygulama otomatik olarak Visual Studio'nun dışında açılır.
 
 ## <a name="code-editor"></a>Kod Düzenleyicisi
  Kod Düzenleyicisi çözümünüzdeki görünür kod dosyalarını görüntüleyip değiştirebilmenizi sağlar. Bu dosyalar çözümünüzün davranışını tanımlayan kodu içerir.
 
- Kod Düzenleyicisi hakkında daha fazla bilgi için bkz. [kod ve metin düzenleyicide kod yazma](../ide/writing-code-in-the-code-and-text-editor.md). Office projelerinde kod yazma hakkında daha fazla bilgi için bkz. [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md).
+ Kod Düzenleyicisi hakkında daha fazla bilgi için bkz. kod [ve metin düzenleyicisinde kod yazma](../ide/writing-code-in-the-code-and-text-editor.md). Office projelerinde kod yazma hakkında daha fazla bilgi için bkz. [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md).
 
 ## <a name="properties-window"></a>Özellik penceresi
- **Özellikleri** penceresi seçili proje öğeleri için özellikleri görüntüler **Çözüm Gezgini**ve belge veya denetimler gibi Tasarımcısı'nda seçtiğiniz kullanıcı Arabirimi öğeleri için bir Belge düzeyi projesi. Bazı özellikler uygulamaya ve belgeye özgü olurken, bazı özellikler tüm projeler genelinde aynıdır.
+ **Özellikler** penceresi **Çözüm Gezgini**' de seçilen proje öğelerinin özelliklerini ve tasarımcıda seçilen kullanıcı arabirimi öğelerini (örneğin, denetimler veya belge düzeyindeki bir proje) görüntüler. Bazı özellikler uygulamaya ve belgeye özgü olurken, bazı özellikler tüm projeler genelinde aynıdır.
 
 ## <a name="data-sources-window"></a>Veri Kaynakları penceresi
- Kullanabileceğiniz **veri kaynakları** penceresi veri kaynağını belgenizin üzerine sürükleyebilir ve oluşturan bir denetimi için belge düzeyinde Office projelerinde veri kaynağına bağlı. Daha fazla bilgi için [Visual Studio'da verilere denetimler bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).
+ Belge düzeyi Office projelerindeki **veri kaynakları** penceresini kullanarak bir veri kaynağını belgenize sürükleyebilir ve veri kaynağına bağlanan bir denetim oluşturabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'da denetimleri verilere bağlama](../data-tools/bind-controls-to-data-in-visual-studio.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office çözümleri oluşturma ve tasarlama](../vsto/designing-and-creating-office-solutions.md)
+- [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md)
 - [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md)
-- [Nasıl yapılır: Visual Studio'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md)
-- [Office projelerinde Özellikler](../vsto/properties-in-office-projects.md)
+- [Nasıl yapılır: Visual Studio 'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md)
+- [Office projelerindeki Özellikler](../vsto/properties-in-office-projects.md)

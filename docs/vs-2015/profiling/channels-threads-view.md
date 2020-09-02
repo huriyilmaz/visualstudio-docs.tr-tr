@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: df93a87285bdf1172e75b63ed956c1aa978fc71e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85545541"
 ---
 # <a name="channels-threads-view"></a>Kanallar (İş Parçacıkları Görünümü)
@@ -28,7 +28,7 @@ Eşzamanlılık görselleştiricisi dört tür kanal gösterir: iş parçacığ�
 ## <a name="thread-channels"></a>İş parçacığı kanalları  
  İş parçacığı kanalı, yalnızca bir iş parçacığı için iş parçacığı durumunu renge göre gösterir. Kanal adında durakladığınızda, verilen iş parçacığı için Başlat işlevi görüntülenir. Eşzamanlılık görselleştiricisi çeşitli iş parçacığı türlerini algılar. En yaygın türleri aşağıdaki tabloda gösterilmiştir.  
   
-|İş Parçacığı|Açıklama|  
+|İş Parçacığı|Description|  
 |-|-|  
 |Ana iş parçacığı|Uygulamayı başlatan iş parçacığı.|  
 |Çalışan iş parçacığı|Uygulama ana iş parçacığı tarafından oluşturulan bir iş parçacığı.|  

@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: İlk VSTO eklentinizi projesi oluşturma'
+title: 'İzlenecek yol: proje için ilk VSTO eklentisini oluşturma'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,26 +16,26 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 4a84d295a47d3391f27e7101ad815dca0c910aa6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62981418"
 ---
-# <a name="walkthrough-create-your-first-vsto-add-in-for-project"></a>İzlenecek yol: İlk VSTO eklentinizi projesi oluşturma
-  Bu kılavuzda, Microsoft Office Project için VSTO eklentisi oluşturma işlemini göstermektedir. Bu tür bir çözüm içinde oluşturduğunuz özellikler uygulamanın kendisinin projeleri açık olan bağımsız olarak kullanılabilir. Daha fazla bilgi için [Office çözümleri geliştirmesine genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
+# <a name="walkthrough-create-your-first-vsto-add-in-for-project"></a>İzlenecek yol: proje için ilk VSTO eklentisini oluşturma
+  Bu izlenecek yol, Microsoft Office projesi için bir VSTO eklentisi oluşturmayı gösterir. Bu tür çözümde oluşturduğunuz özellikler, hangi projelerin açık olduğuna bakılmaksızın uygulamanın kendisi için kullanılabilir. Daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
 
  [!INCLUDE[appliesto_projallapp](../vsto/includes/appliesto-projallapp-md.md)]
 
  Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Bir proje VSTO eklentisi projesi oluşturma.
+- Proje VSTO eklentisi projesi oluşturma.
 
-- Yeni bir proje için bir görev eklemek için proje nesne modeli kullanan kod yazma.
+- Yeni bir projeye görev eklemek için projenin nesne modelini kullanan kodu yazma.
 
-- Geliştirme ve test etmek için proje çalıştırma.
+- Test etmek için projeyi oluşturma ve çalıştırma.
 
-- Tamamlanmış projeyi VSTO eklentisi artık otomatik olarak geliştirme bilgisayarınızda çalıştırılır, böylece temizleme.
+- VSTO eklentisinin geliştirme bilgisayarınızda artık otomatik olarak çalışmamasını sağlamak için tamamlanmış projeyi Temizleme.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -46,90 +46,90 @@ ms.locfileid: "62981418"
 
 - [!INCLUDE[Project_15_short](../vsto/includes/project-15-short-md.md)] veya [!INCLUDE[Project_14_short](../vsto/includes/project-14-short-md.md)].
 
-## <a name="create-the-project"></a>Projeyi oluşturma
+## <a name="create-the-project"></a>Proje oluşturma
 
-### <a name="to-create-a-new-project-in-visual-studio"></a>Visual Studio'da yeni bir proje oluşturmak için
+### <a name="to-create-a-new-project-in-visual-studio"></a>Visual Studio 'da yeni bir proje oluşturmak için
 
-1. Başlangıç [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+1. Başlatın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] .
 
-2. Üzerinde **dosya** menüsünde **yeni**ve ardından **proje**.
+2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje**' ye tıklayın.
 
-3. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic**ve ardından **Office/SharePoint**.
+3. Şablonlar bölmesinde, **Visual C#** veya **Visual Basic**' i genişletin ve ardından **Office/SharePoint**' i genişletin.
 
-4. Genişletilmiş altında **Office/SharePoint** düğümünü **Office eklentilerini** düğümü.
+4. Genişletilmiş **Office/SharePoint** düğümü altında **Office eklentileri** düğümünü seçin.
 
-5. Proje şablonları listesinde seçin **Project 2010 Eklentisi** veya **Project 2013 eklentisi**.
+5. Proje şablonları listesinde **project 2010 eklentisi** veya **Project 2013 eklentisi**' ni seçin.
 
-6. İçinde **adı** kutusuna **FirstProjectAddIn**.
+6. **Ad** kutusuna **FirstProjectAddIn**yazın.
 
-7. **Tamam**'ı tıklatın.
+7. **Tamam**’a tıklayın.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] oluşturur **FirstProjectAddIn** proje ve açılır **ThisAddIn** Düzenleyicisi'nde kod dosyası.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]**FirstProjectAddIn** projesini oluşturur ve **ThisAddIn** kod dosyasını düzenleyicide açar.
 
-## <a name="write-code-that-adds-a-new-task-to-a-project"></a>Bir projeye yeni bir görev ekler kod yazma
- Ardından, ThisAddIn kod dosyası için kodu ekleyin. Yeni kod, bir projeye yeni bir görev eklemek için proje nesne modeli kullanır. Varsayılan olarak, aşağıdaki oluşturulan kodun ThisAddIn kod dosyasını içerir:
+## <a name="write-code-that-adds-a-new-task-to-a-project"></a>Projeye yeni bir görev ekleyen kodu yazın
+ Ardından, ThisAddIn kod dosyasına kod ekleyin. Yeni kod, projeye yeni bir görev eklemek için proje nesne modelini kullanır. Varsayılan olarak, ThisAddIn kod dosyası aşağıdaki oluşturulan kodu içerir:
 
-- Kısmi bir tanımını `ThisAddIn` sınıfı. Bu sınıf, kodunuz için bir giriş noktası sağlar ve proje nesne modeli erişim sağlar. Daha fazla bilgi için [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md). Kalanı `ThisAddIn` sınıfı değiştirmemeniz gereken bir gizli kod dosyasında tanımlanır.
+- Sınıfın kısmi tanımı `ThisAddIn` . Bu sınıf, kodunuz için bir giriş noktası sağlar ve projenin nesne modeline erişim sağlar. Daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md). Sınıfın geri kalanı, `ThisAddIn` değiştirmemelisiniz bir gizli kod dosyasında tanımlanır.
 
-- `ThisAddIn_Startup` Ve `ThisAddIn_Shutdown` olay işleyicileri. Proje yüklediğinde ve VSTO eklenti bellekten olay işleyicilere çağrılır. Bu olay işleyicileri, VSTO Eklenti yüklendiğinde başlatmak ve kaldırıldığında, VSTO eklenti tarafından kullanılan kaynakları temizlemek için kullanın. Daha fazla bilgi için [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
+- `ThisAddIn_Startup`Ve `ThisAddIn_Shutdown` olay işleyicileri. Bu olay işleyicileri, proje VSTO eklentinizi yüklediğinde ve kaldırıldığında çağrılır. Bu olay işleyicilerini, yüklendiğinde VSTO eklentisini başlatmak ve bu etkinlik kaldırıldığında VSTO eklentisi tarafından kullanılan kaynakları temizlemek için kullanın. Daha fazla bilgi için bkz. [Office Projelerindeki Olaylar](../vsto/events-in-office-projects.md).
 
-### <a name="to-add-a-task-to-a-new-project"></a>Yeni bir proje için bir görev eklemek için
+### <a name="to-add-a-task-to-a-new-project"></a>Yeni bir projeye görev eklemek için
 
-1. ThisAddIn kod dosyasında, aşağıdaki kodu ekleyin `ThisAddIn` sınıfı. Bu kod için bir olay işleyicisi tanımlar `NewProject` olayı `Microsoft.Office.Interop.MSProject.Application` sınıfı.
+1. ThisAddIn kod dosyasında, sınıfına aşağıdaki kodu ekleyin `ThisAddIn` . Bu kod, sınıfının olayı için bir olay işleyicisini tanımlar `NewProject` `Microsoft.Office.Interop.MSProject.Application` .
 
-    Kullanıcı yeni bir proje oluşturduğu zaman, bu olay işleyicisi, projeye bir görev ekler.
+    Kullanıcı yeni bir proje oluşturduğunda, bu olay işleyicisi projeye bir görev ekler.
 
     [!code-vb[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/VisualBasic/Trin_ProjectAddInTutorial/ThisAddIn.vb#1)]
     [!code-csharp[Trin_ProjectAddInTutorial#1](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#1)]
 
-   Proje değiştirmek için aşağıdaki nesneler bu kod örneği kullanır:
+   Projeyi değiştirmek için, bu kod örneği aşağıdaki nesneleri kullanır:
 
-- `Application` Alanını `ThisAddIn` sınıfı. `Application` Alan döndürür bir `Microsoft.Office.Interop.MSProject.Application` proje geçerli örneği temsil eden nesne.
+- `Application` `ThisAddIn` Sınıfının alanı. `Application`Alan, `Microsoft.Office.Interop.MSProject.Application` projenin geçerli örneğini temsil eden bir nesne döndürür.
 
-- `pj` NewProject olayı için olay işleyicisi parametresi. `pj` Parametresi bir `Microsoft.Office.Interop.MSProject.Project` projeyi temsil eden nesne. Daha fazla bilgi için [proje çözümleri](../vsto/project-solutions.md).
+- `pj`NewProject olayı için olay işleyicisinin parametresi. `pj`Parametresi `Microsoft.Office.Interop.MSProject.Project` , projeyi temsil eden bir nesnedir. Daha fazla bilgi için bkz. [proje çözümleri](../vsto/project-solutions.md).
 
-1. C# kullanıyorsanız, aşağıdaki kodu ekleyin `ThisAddIn_Startup` olay işleyicisi. Bu kod bağlanır `Application_Newproject` NewProject olayı olay işleyicisi.
+1. C# kullanıyorsanız, olay işleyicisine aşağıdaki kodu ekleyin `ThisAddIn_Startup` . Bu kod, `Application_Newproject` olay Işleyicisini NewProject olayı ile bağlar.
 
      [!code-csharp[Trin_ProjectAddInTutorial#2](../vsto/codesnippet/CSharp/Trin_ProjectAddInTutorial/ThisAddIn.cs#2)]
 
-## <a name="test-the-project"></a>Test projesi
- Derleme ve projeyi çalıştırın, ortaya çıkan yeni projede yeni bir görev göründüğünü doğrulayın.
+## <a name="test-the-project"></a>Projeyi test etme
+ Projeyi derleyip çalıştırdığınızda yeni görevin ortaya çıkan yeni projede göründüğünü doğrulayın.
 
 ### <a name="to-test-the-project"></a>Projeyi test etmek için
 
-1. Tuşuna **F5** oluşturup projeyi çalıştırın. Microsoft Project başlatır ve yeni boş bir proje otomatik olarak açılır.
+1. Projenizi derlemek ve çalıştırmak için **F5** tuşuna basın. Microsoft Project başlar ve yeni boş bir projeyi otomatik olarak açar.
 
-     Proje oluşturduğunuzda, proje için yapı çıkış klasöründe bulunan bütünleştirilmiş kod derlenir. Visual Studio ayrıca bulmak ve VSTO eklentisi yüklemek projeyi etkinleştirin kayıt defteri girişleri kümesi oluşturur ve VSTO eklenti çalıştırmak, geliştirme bilgisayarının güvenlik ayarlarını yapılandırır. Daha fazla bilgi için [Office çözüm derleme işlemine genel bakış](/previous-versions/visualstudio/visual-studio-2010/h2c9cdc0(v=vs.100)).
+     Projeyi derlediğinizde kod, projenin yapı çıkış klasörüne dahil olan bir derlemeye derlenir. Visual Studio Ayrıca, proje 'nin VSTO eklentisini bulmasını ve yüklemesini sağlayan bir kayıt defteri girişleri kümesi oluşturur ve VSTO eklentisinin çalışmasını sağlamak için geliştirme bilgisayarındaki güvenlik ayarlarını yapılandırır. Daha fazla bilgi için bkz. [Office çözümü derleme işlemine genel bakış](/previous-versions/visualstudio/visual-studio-2010/h2c9cdc0(v=vs.100)).
 
-2. Yeni bir görev boş projeye eklendiğini doğrulayın.
+2. Boş projeye yeni bir görevin eklendiğini doğrulayın.
 
-3. Aşağıdaki metni göründüğünü doğrulayın **görev adı** görev alanı.
+3. Görevin **görev adı** alanında aşağıdaki metnin göründüğünü doğrulayın.
 
-     **Bu metin, kod kullanarak eklendi.**
+     **Bu metin kod kullanılarak eklenmiştir.**
 
-4. Microsoft Project kapatın.
+4. Microsoft Project 'i kapatın.
 
-## <a name="clean-up-the-project"></a>Projeyi Temizle
- Bir projeyi geliştirmeye işiniz bittiğinde, VSTO eklentisi derleme, kayıt defteri girişleri ve güvenlik ayarları Geliştirme bilgisayarınızdan kaldırın. Aksi halde, Microsoft Project geliştirme bilgisayarında her açışlarında VSTO eklentisi çalışacaktır.
+## <a name="clean-up-the-project"></a>Projeyi temizle
+ Projeyi geliştirmeyi bitirdiğinizde, VSTO eklenti derlemesini, kayıt defteri girişlerini ve güvenlik ayarlarını geliştirme bilgisayarınızdan kaldırın. Aksi halde, Microsoft Project 'i geliştirme bilgisayarında her açışınızda VSTO eklentisi çalışacaktır.
 
 ### <a name="to-clean-up-your-project"></a>Projenizi temizlemek için
 
-1. Visual Studio'da üzerinde **derleme** menüsünde tıklatın **çözümü Temizle**.
+1. Visual Studio 'da, **Yapı** menüsünde **Çözümü Temizle**' ye tıklayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Bir temel VSTO eklentisi projesi oluşturduğunuz, VSTO eklentileri aşağıdaki konulardan geliştirme hakkında daha fazla bilgi edinebilirsiniz:
+ Project için temel bir VSTO eklentisi oluşturduğunuza göre, şu konulardan VSTO eklentileri geliştirme hakkında daha fazla bilgi edinebilirsiniz:
 
-- VSTO eklentileri için proje'nda gerçekleştirebileceğiniz genel programlama görevleri: [VSTO eklentilerini programlama](../vsto/programming-vsto-add-ins.md).
+- Proje için VSTO eklentileri içinde gerçekleştirebileceğiniz genel programlama görevleri: [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
 
-- Proje nesne modeli kullanarak: [Proje çözümleri](../vsto/project-solutions.md).
+- Projenin nesne modelini kullanma: [proje çözümleri](../vsto/project-solutions.md).
 
-- Derleme ve VSTO eklentileri için proje hata ayıklama: [Office çözümleri oluşturmanıza](../vsto/building-office-solutions.md).
+- Proje için VSTO eklentileri oluşturma ve hata ayıklama: [Office çözümlerini derleme](../vsto/building-office-solutions.md).
 
-- Project için VSTO eklentileri dağıtma: [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md).
+- Proje için VSTO eklentileri dağıtma: [bir Office çözümü dağıtın](../vsto/deploying-an-office-solution.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [VSTO eklentilerini programlama](../vsto/programming-vsto-add-ins.md)
+- [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)
 - [Proje çözümleri](../vsto/project-solutions.md)
-- [Office çözümleri oluşturun](../vsto/building-office-solutions.md)
+- [Office çözümleri oluşturma](../vsto/building-office-solutions.md)
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
 - [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md)

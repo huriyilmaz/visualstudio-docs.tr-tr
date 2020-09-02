@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_base | Microsoft Docs
+title: 'IDiaStackFrame:: get_base | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3ad1647c31dba9b313d67a55d9435bcd5843a5a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190599"
 ---
-# <a name="idiastackframegetbase"></a>IDiaStackFrame::get_base
+# <a name="idiastackframeget_base"></a>IDiaStackFrame::get_base
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Çerçevenin temel adresi alır.  
+Çerçevenin taban adresini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_base (   
@@ -35,10 +35,10 @@ HRESULT get_base ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Taban adresi döndürür.  
+ dışı Temel adresi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` özelliği desteklenmiyorsa. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Özelliğin desteklenip desteklenmediğini döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

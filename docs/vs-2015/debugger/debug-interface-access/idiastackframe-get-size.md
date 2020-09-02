@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_size | Microsoft Docs
+title: 'IDiaStackFrame:: get_size | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e0f646dd6bfe93835d2d30280c7e57e7de2fbefa
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68190502"
 ---
-# <a name="idiastackframegetsize"></a>IDiaStackFrame::get_size
+# <a name="idiastackframeget_size"></a>IDiaStackFrame::get_size
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yığın çerçevesinin bayt cinsinden boyutunu alır.  
+Yığın çerçevesinin boyutunu bayt cinsinden alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_size (   
@@ -35,10 +35,10 @@ HRESULT get_size ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Yığın çerçevesinin boyutu bayt cinsinden döndürür.  
+ dışı Yığın çerçevesinin boyutunu bayt cinsinden döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` özelliği desteklenmiyorsa. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Özelliğin desteklenip desteklenmediğini döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

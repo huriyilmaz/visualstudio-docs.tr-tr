@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2::GetPortRequest | Microsoft Docs
+title: 'IDebugPort2:: GetPortRequest | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9b41106cc4e7cdfc04bcd1934b5959089d078206
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68202908"
 ---
 # <a name="idebugport2getportrequest"></a>IDebugPort2::GetPortRequest
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Daha önce (varsa) bağlantı noktası oluşturmak için kullanılan bağlantı noktası açıklamasını alır.  
+Bağlantı noktasını oluşturmak için daha önce kullanılan bir bağlantı noktasının açıklamasını alır (varsa).  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetPortRequest(   
@@ -40,10 +40,10 @@ int GetPortRequest( 
   
 #### <a name="parameters"></a>Parametreler  
  `ppRequest`  
- [out] Döndürür bir [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) bağlantı noktası oluşturmak için kullanılan istek temsil eden nesne.  
+ dışı Bağlantı noktasını oluşturmak için kullanılan isteği temsil eden bir [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  Döndürür `E_PORT_NO_REQUEST` bir bağlantı noktası kullanarak oluşturulmamışsa bir [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) bağlantı isteği.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  Bir `E_PORT_NO_REQUEST` bağlantı noktasının bir [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) bağlantı noktası isteği kullanılarak oluşturulup oluşturulmadıysa döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   

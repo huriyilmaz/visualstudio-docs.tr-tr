@@ -1,0 +1,150 @@
+- name: Mac için Visual Studio
+  href: /visualstudio/mac/
+- name: IDE Turu
+  href: ide-tour.md
+- name: Yükleme
+  href: installation.md
+  items:
+    - name: Bir güvenlik duvarı veya ara sunucunun arkasına yükleme ve burada kullanma
+      href: /visualstudio/mac/install-behind-a-firewall-or-proxy-server
+    - name: Bir önizleme sürümünü yükleme
+      href: /visualstudio/mac/install-preview
+    - name: Güncelleştirme
+      href: /visualstudio/mac/update
+    - name: Mac için Visual Studio 2019 Güncelleştirmesi
+      href: /visualstudio/mac/update-vsmac-8.0
+    - name: Kaldır
+      href: /visualstudio/mac/uninstall
+- name: Kullanıcı Hesapları
+  href: /visualstudio/mac/user-accounts
+  items:
+    - name: Oturum Açma
+      href: /visualstudio/mac/signing-in
+    - name: Aboneliği Etkinleştirme
+      href: /visualstudio/mac/enable-subscription
+- name: IDE’yi Özelleştirme
+  href: /visualstudio/mac/customizing-the-ide
+  items:
+    - name: Mac için Visual Studio’yu Genişletme
+      href: /visualstudio/mac/extending-visual-studio-mac
+- name: Projeler ve Çözümler
+  href: /visualstudio/mac/projects-and-solutions
+  items:
+    - name: Yeni Projeler oluşturma
+      href: /visualstudio/mac/create-new-projects
+    - name: Proje öğeleri ekleme ve kaldırma
+      href: /visualstudio/mac/add-and-remove-project-items
+    - name: Çözümleri ve Proje özelliklerini yönetme
+      href: /visualstudio/mac/managing-solutions-and-project-properties
+    - name: Bir projedeki başvuruları yönetme
+      href: /visualstudio/mac/managing-references-in-a-project
+      items:
+        - name: İzlenecek yol - Projenize NuGet paketi ekleme
+          href: /visualstudio/mac/nuget-walkthrough
+    - name: Uygulama Kaynaklarını Yönetme
+      href: /visualstudio/mac/managing-app-resources
+    - name: 'Nasıl yapılır: Birden çok çözüm veya örneği açma'
+      href: /visualstudio/mac/open-multiple-solutions
+- name: Kaynak Düzenleyicisi
+  href: /visualstudio/mac/source-editor
+  items:
+    - name: Yeniden Düzenle
+      href: /visualstudio/mac/refactoring
+    - name: Açıklamalar
+      href: /visualstudio/mac/comments
+    - name: Düzenleyici Davranışı
+      href: /visualstudio/mac/editor-behavior
+    - name: Görev Açıklamaları
+      href: /visualstudio/mac/task-comments
+    - name: Kod Parçacıkları
+      href: /visualstudio/mac/snippets
+    - name: Blok Seçimi
+      href: /visualstudio/mac/block-selection
+    - name: Düzenleyici Temaları
+      href: /visualstudio/mac/editor-themes
+    - name: EditorConfig
+      href: /visualstudio/mac/editorconfig
+    - name: Ortak Klavye Kısayolları
+      href: /visualstudio/mac/keyboard-shortcuts
+- name: Hata Ayıklama
+  href: /visualstudio/mac/debugging
+  items:
+    - name: Veri Görselleştirmeleri
+      href: /visualstudio/mac/data-visualizations
+- name: Derleme ve Oluşturma
+  href: /visualstudio/mac/compiling-and-building
+  items:
+    - name: Projeleri ve Çözümleri Oluşturma ve Temizleme
+      href: /visualstudio/mac/building-and-cleaning-projects-and-solutions
+    - name: Derleme Eylemleri
+      href: /visualstudio/mac/build-actions
+    - name: Derleme Sistemini Özelleştirme
+      href: /visualstudio/mac/customizing-build-system
+    - name: Yapılandırmalar
+      href: /visualstudio/mac/configurations
+      items:
+        - name: Yapılandırmaları Oluşturma ve Düzenleme
+          href: /visualstudio/mac/create-and-edit-configurations
+- name: Sürüm Denetimi
+  href: /visualstudio/mac/version-control
+  items:
+    - name: TF Sürüm Denetimi
+      href: /visualstudio/mac/tf-version-control
+    - name: Git Deposu Ayarlama
+      href: /visualstudio/mac/set-up-git-repository
+    - name: Git ile çalışma
+      href: /visualstudio/mac/working-with-git
+    - name: Subversion Deposu Ayarlama
+      href: /visualstudio/mac/set-up-subversion-repository
+    - name: Subversion ile çalışma
+      href: /visualstudio/mac/working-with-subversion
+- name: Web Uygulaması Dağıtımı
+  href: /visualstudio/mac/web-app-deployment
+  items:
+    - name: Azure App Service’e yayımlama
+      href: /visualstudio/mac/publish-app-svc
+    - name: Klasöre Yayımlama
+      href: /visualstudio/mac/publish-folder
+- name: İş yükleri
+  href: /visualstudio/mac/workloads
+  items:
+    - name: ASP.NET Core
+      href: /visualstudio/mac/asp-net-core
+      items:
+        - name: Razor
+          href: /visualstudio/mac/razor
+        - name: Javascript
+          href: /visualstudio/mac/javascript
+    - name: Azure
+      href: /visualstudio/mac/azure-workload
+      items:
+        - name: Azure İşlevleri’ne Giriş
+          href: /visualstudio/mac/azure-functions
+        - name: 'Öğretici: Azure İşlevleri'
+          href: /visualstudio/mac/azure-functions-lab
+        - name: Bağlı Hizmetler
+          href: /visualstudio/mac/connected-services
+    - name: Unity Oyun Geliştirme
+      href: /visualstudio/mac/unity-tools
+      items:
+        - name: Kurulum
+          href: /visualstudio/mac/setup-vsmac-tools-unity
+        - name: Unity Araçlarını Kullanma
+          href: /visualstudio/mac/using-vsmac-tools-unity
+        - name: Unity’de .NET 4.x kullanma
+          href: /visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context
+        - name: Değişiklik Günlüğü
+          href: /visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context
+    - name: Xamarin ile mobil uygulamalar
+      href: /visualstudio/mac/xamarin
+- name: Erişilebilirlik
+  href: /visualstudio/mac/accessibility
+- name: Sorun giderme
+  href: /visualstudio/mac/troubleshooting
+  items:
+    - name: Visual Studio Müşteri Deneyimini Geliştirme Programı
+      href: /visualstudio/mac/visual-studio-experience-improvement-program
+    - name: Sorun Bildirme
+      href: /visualstudio/mac/report-a-problem
+    - name: 'Sorun Giderme: Güncelleştirici, bilgileri alırken hatalarla karşılaşıyor'
+      href: updater-troubleshooting.md

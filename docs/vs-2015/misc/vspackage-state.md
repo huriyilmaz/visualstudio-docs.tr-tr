@@ -1,5 +1,5 @@
 ---
-title: VSPackage'ı durumu | Microsoft Docs
+title: VSPackage durumu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: devlang-csharp
@@ -12,70 +12,70 @@ ms.assetid: 6056a9ea-e7a8-481c-9fc8-340229fa12d9
 caps.latest.revision: 25
 manager: jillfra
 ms.openlocfilehash: f3140b527673f87b1d7c552e99584232494aed7f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62980001"
 ---
-# <a name="vspackage-state"></a>VSPackage'ı durumu
-Pek çok etken kalıcı değerleri ya da durumu, belirlemek bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uygulama.  
+# <a name="vspackage-state"></a>VSPackage durumu
+Birçok etken, bir uygulamanın kalıcı değerler veya durumu kümesini tespit ediyor [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
-- Projeler, proje ve yapılandırma özelliklerine sahiptir.  
+- Projeler proje ve yapılandırma özelliklerine sahiptir.  
   
-- Çözüm özellikleri vardır.  
+- Çözümlerin özellikleri vardır.  
   
-- Kullanıcı ayarları, belge pencerelerini, araç pencerelerini, yerleştirme durumu ve klavye kısayolları konumunu ve boyutunu belirler.  
+- Kullanıcı ayarları, Belge pencerelerinin, araç pencerelerinin, yerleştirme durumunun ve klavye kısayollarının boyutunu ve konumunu belirlenir.  
   
-- Uygulamalar kullanıcı seçenekleri sahip olabilir.  
+- Uygulamalar, bir kullanıcının ayarladığı seçeneklere sahip olabilir.  
   
-- Uygulamanın oluşturduğu nesneler, kendi özelliklerine sahip olabilir.  
+- Bir uygulamanın oluşturduğu nesneler kendi özelliklerine sahip olabilir.  
   
-  Bazı yollar şunlardır, bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uygulama durumu yönetilebilir:  
+  Uygulama durumunun yönetilebilmesi için bazı yollar şunlardır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :  
   
-- Proje ve çözüm özellik sayfaları.  
+- Proje ve çözüm Özellik sayfaları aracılığıyla.  
   
-- Aracılığıyla **içeri ve dışarı aktarma ayarları Sihirbazı**, ayarları bir bilgisayardan diğerine taşımak bir kullanıcı etkinleştirir.  
+- Bir kullanıcının ayarları bir bilgisayardan diğerine taşımasını sağlayan **içeri ve dışarı aktarma ayarları Sihirbazı**aracılığıyla.  
   
-- Aracılığıyla **seçenekleri** iletişim kutusunda, uygulamalarla ilgili seçenekleri içerir.  
+- **Seçenekler** iletişim kutusunda, uygulamalarla ilgili seçenekleri içerir.  
   
-- Aracılığıyla **özellikleri** nesnelerin özelliklerini sunan penceresi.  
+- Nesneler özelliklerini kullanıma sunan **Özellikler** penceresi aracılığıyla.  
   
-- Otomasyon sayesinde. Bir uygulama için Otomasyon karşılaştıklarını VSPackage ve nesne özelliklerine erişebilirsiniz.  
+- Otomasyon aracılığıyla. Bir uygulama, Automation 'a sunulan VSPackage ve nesne özelliklerine erişebilir.  
   
-  Uygulama durumunu temel uygulama durumunu geri ve kaydedilmesini sağlayan çeşitli Kalıcılık mekanizmasıdır.  
+  Uygulama durumunu temel alan uygulama durumunun kaydedilip geri yüklenmesini sağlayan çeşitli Kalıcılık mekanizmalarda bulunur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Durum Kalıcılık desteği](../misc/support-for-state-persistence.md)  
- VSPackage durumu sıfırlanıyor kaydetme ve geri yükleme için yaygın stratejileri listelenmektedir.  
+ [Durum kalıcılığı desteği](../misc/support-for-state-persistence.md)  
+ Bir VSPackage 'ın durumunu kaydetme, geri yükleme ve sıfırlamaya yönelik yaygın stratejileri listeler.  
   
  [Seçenekler ve Seçenekler Sayfaları](../extensibility/internals/options-and-options-pages.md)  
- Genel ve özel seçenekler sayfaları tanıtır ve bunların nasıl uygulanacağını açıklar.  
+ Genel ve özel seçenek sayfalarını tanıtır ve bunların nasıl uygulanacağını açıklar.  
   
  [Seçenekler Sayfası Oluşturma](../extensibility/creating-an-options-page.md)  
- İki seçenekler sayfaları, basit bir sayfa ve bir özel sayfa nasıl oluşturulacağını açıklar.  
+ İki seçenek sayfasının, basit bir sayfanın ve özel bir sayfanın nasıl oluşturulduğunu açıklar.  
   
  [Ayarlar kategorileri için destek](../misc/support-for-settings-categories.md)  
- Kullanıcı ayarlarını ve nasıl bunlar oluşturulan ve kalıcı açıklanır.  
+ Kullanıcı ayarlarını ve bunların nasıl oluşturulduğunu ve kalıcı olduğunu açıklar.  
   
- [Ayarları Kategorisi Oluşturma](../extensibility/creating-a-settings-category.md)  
- Nasıl oluşturulacağını açıklayan bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ayarları kategorisi ve değerleri kaydedin ve ayarları dosyasından değerleri geri yüklemek için kullanabilirsiniz.  
+ [Ayarlar Kategorisi Oluşturma](../extensibility/creating-a-settings-category.md)  
+ Bir ayarlar kategorisinin nasıl oluşturulduğunu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve bir ayarlar dosyasından değerleri kaydetmek ve geri yüklemek için nasıl kullanılacağını açıklar.  
   
  [Özellikleri ve Özellik Penceresini Genişletme](../extensibility/extending-properties-and-the-property-window.md)  
- Görüntülemek ve bir nesnenin değerini değiştirmek açıklanmaktadır **özellikleri** penceresi.  
+ **Özellikler** penceresinde bir nesnenin değerinin nasıl görüntüleneceğini ve değiştirileceğini açıklar.  
   
  [Özellikleri ve Özellik Penceresini Kullanıma Sunma](../extensibility/exposing-properties-to-the-properties-window.md)  
- Bir nesnenin ortak özellikler kullanıma açıklanmaktadır **özellikleri** penceresi.  
+ Bir nesnenin ortak özelliklerinin **Özellikler** penceresinde nasıl kullanılabileceğini açıklar.  
   
  [Proje ve Yapılandırma Özellikleri için Destek](../extensibility/internals/support-for-project-and-configuration-properties.md)  
- Görüntüleme ve yapılandırma özelliklerini değiştirme açıklanmaktadır.  
+ Proje ve yapılandırma özelliklerinin nasıl görüntüleneceğini ve değiştirileceğini açıklar.  
   
  [Proje Özelliklerini Alma](../extensibility/getting-project-properties.md)  
- Proje Özellikleri görüntüleyen bir araç penceresinde yönetilen VSPackage'ı oluşturma adımlarında yol gösterir.  
+ Bir araç penceresinde proje özelliklerini görüntüleyen bir yönetilen VSPackage oluşturma adımlarında size rehberlik eder.  
   
  [Ayarlar Deposu Kullanma](../extensibility/using-the-settings-store.md)  
- Ayarları Store Kalıcılık mekanizması ve nasıl kullanılacağını açıklar.  
+ Ayarlar deposu Kalıcılık mekanizmasını ve nasıl kullanılacağını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [VSPackage’lar](../extensibility/internals/vspackages.md)  
- Bir genel yönlendirme oluşturma ve VSPackages kullanma açıklayan konulara sağlar.
+ VSPackages oluşturmayı ve kullanmayı açıklayan konularda genel bir yönlendirme sağlar.

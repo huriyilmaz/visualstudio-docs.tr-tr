@@ -13,14 +13,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b2b5dcbc69853007eebec65142f522f8a942abd1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656842"
 ---
 # <a name="debugging-workflows-with-the-workflow-designer"></a>İş Akışı Tasarımcısı ile İş Akışlarında Hata Ayıklama
-@No__t_0, iş akışlarının ve özel etkinliklerin hatalarını ayıklama özelliğini sağlar. İşlem ve davranış, varsayılan [!INCLUDE[vs2010](../includes/vs2010-md.md)] hata ayıklayıcıyla benzerdir. Bu bölümdeki konularda geleneksel hata ayıklama yordamlarının yanı sıra XAML ve ifadelerin hatalarını ayıklama işlemi açıklanır.
+, [!INCLUDE[wfd1](../includes/wfd1-md.md)] İş akışlarının ve özel etkinliklerin hatalarını ayıklama özelliğini sağlar. İşlem ve davranış, varsayılan [!INCLUDE[vs2010](../includes/vs2010-md.md)] hata ayıklayıcıyla benzerdir. Bu bölümdeki konularda geleneksel hata ayıklama yordamlarının yanı sıra XAML ve ifadelerin hatalarını ayıklama işlemi açıklanır.
 
 ## <a name="in-this-section"></a>Bu Bölümde
  [Nasıl Yapılır: İş Akışı Hata Ayıklayıcısını Çağırma](../workflow-designer/how-to-invoke-the-workflow-debugger.md)

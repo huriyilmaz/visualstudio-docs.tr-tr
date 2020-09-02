@@ -1,5 +1,5 @@
 ---
-title: Office çözümlerine genel bakış yerel veritabanı dosyaları kullanma
+title: Office çözümlerinde yerel veritabanı dosyalarını kullanma genel bakış
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,31 +15,31 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: ea260a6286c8a923d56ab7a5088b55de57004489
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62982246"
 ---
-# <a name="use-local-database-files-in-office-solutions-overview"></a>Office çözümlerine genel bakış yerel veritabanı dosyaları kullanma
-  SQL Server Express gibi bir veritabanı dosyası içerebilir (*.mdf*) dosya veya bir Microsoft Office Access (*.mdb*) dosyasında Office çözümünüzü. Bu, son kullanıcıların merkezi bir veritabanındaki bakım çözümünde yalnızca tek bir bilgisayarda kullanılan örneğin yerel Envanter gerekli olduğu durumlarda yerel bir veritabanı bakımı olanak tanır.
+# <a name="use-local-database-files-in-office-solutions-overview"></a>Office çözümlerinde yerel veritabanı dosyalarını kullanma genel bakış
+  Office çözümünüzde SQL Server Express (*. mdf*) dosyası veya Microsoft Office erişim (*. mdb*) dosyası gibi bir veritabanı dosyası ekleyebilirsiniz. Bu, son kullanıcıların, örneğin tek bir bilgisayarda kullanılan yerel bir envanter çözümünde, merkezi bir veritabanının saklanması gerekmediği durumlarda yerel bir veritabanını korumalarını sağlar.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="import-the-database-file-into-a-project"></a>Veritabanı dosyası bir projeye içeri aktarma
- Veritabanı dosyasını projenize aktarmak için kullanın **veri kaynağı Yapılandırma Sihirbazı** veritabanı dosyasını temel alan bir veri kaynağını oluşturmak için. Sihirbaz projenize veritabanı dosyası ve bir türü belirtilmiş veri kümesi ekler.
+## <a name="import-the-database-file-into-a-project"></a>Veritabanı dosyasını bir projeye içeri aktarma
+ Veritabanı dosyasını projenize aktarmak için, veritabanı dosyasını temel alan bir veri kaynağı oluşturmak üzere **veri kaynağı Yapılandırma Sihirbazı** ' nı kullanın. Sihirbaz, veritabanı dosyasını ve yazılmış bir veri kümesini projenize ekler.
 
 ## <a name="deploy-the-database-file"></a>Veritabanı dosyasını dağıtma
- **Veri kaynağı Yapılandırma Sihirbazı** yerel veritabanı dosyasındaki bağlantılar oluşturmak için göreli bir yol kullanır. Bu dosyalar göreli konumlarını korur çözüm bir bilgisayardan diğerine kopyalamak sağlar.
+ **Veri kaynağı Yapılandırma Sihirbazı** , yerel veritabanı dosyasına bağlantı oluşturmak için göreli bir yol kullanır. Bu, dosyaların göreli konumlarını koruyabilmeniz durumunda çözümü bir bilgisayardan diğerine kopyalamanızı sağlar.
 
- Bir sunucuya çözümünüzü dağıtın ve ardından her son kullanıcıya belgeyi dağıtın, gerekir el ile de veritabanı dosyası dağıtmak ve belge göre aynı konumda yükleyin. Veritabanı dosyası isterse de taşınır sürece bu, son kullanıcı kendi bilgisayarda yeni bir konuma belge taşınamıyor anlamına gelir.
+ Çözümünüzü bir sunucuya dağıtır ve ardından belgeyi her bir son kullanıcıya dağıtırsanız, veritabanı dosyasını da el ile dağıtmanız ve belgeye göre aynı konuma kurmanız gerekir. Bu, veritabanı dosyasını da taşımadığı takdirde son kullanıcının belgeyi veya bilgisayarındaki yeni bir konuma taşıyamayacağı anlamına gelir.
 
-## <a name="local-database-files-and-caching-the-dataset"></a>Yerel veritabanı dosyaları ve veri kümesi önbelleğe alma
- Microsoft Office Excel ve Microsoft Office Word için belge düzeyi çözümlerde, belge kümelerinde veri kümesi örneği öznitelik ile işaretleyerek önbelleğe alabilir <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>. Eklediğinizde, veritabanı dosyasını projenize kullanarak **veri kaynağı Yapılandırma Sihirbazı**, yazılan veri kümesi projenize otomatik olarak eklenir. Uygulanacak nadiren gereklidir <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> bu veri kümesine veri kullanıcının bilgisayarında yerel olduğundan. Daha fazla bilgi için [veriyi önbelleğe alma](../vsto/caching-data.md).
+## <a name="local-database-files-and-caching-the-dataset"></a>Yerel veritabanı dosyaları ve veri kümesini önbelleğe alma
+ Excel ve Microsoft Office Word 'Ün Microsoft Office belge düzeyi çözümlerinde, DataSet örneğini özniteliğiyle işaretleyerek belgedeki veri kümelerini önbelleğe alabilirsiniz <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> . **Veri kaynağı Yapılandırma Sihirbazı**'nı kullanarak veritabanı dosyasını projenize eklediğinizde, bir türü belirtilmiş veri kümesi projenize otomatik olarak eklenir. <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute>Veriler kullanıcının bilgisayarında zaten yerel olduğundan, bu veri kümesine uygulanması nadiren gereklidir. Daha fazla bilgi için bkz. [önbelleği verileri](../vsto/caching-data.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümlerinde denetimlere veri bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
-- [Nasıl yapılır: Belgeleri veritabanı verileriyle doldurma](../vsto/how-to-populate-documents-with-data-from-a-database.md)
-- [Nasıl yapılır: Bir konak kontrolü verileriyle veri kaynağını güncelleme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
+- [Office çözümlerinde verileri denetimlere bağlama](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Nasıl yapılır: belgeleri bir veritabanındaki verilerle doldurma](../vsto/how-to-populate-documents-with-data-from-a-database.md)
+- [Nasıl yapılır: bir konak denetimindeki verilerle veri kaynağını güncelleştirme](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
-- [Verileri önbelleğe](../vsto/caching-data.md)
+- [Önbellek verileri](../vsto/caching-data.md)

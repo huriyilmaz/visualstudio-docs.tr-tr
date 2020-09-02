@@ -13,47 +13,47 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 4bb98e2b1c83ff06570a77dc84ce6a7bf690f81d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62967474"
 ---
 # <a name="extend-sharepoint-packaging-and-deployment"></a>SharePoint paketleme ve dağıtımını genişletme
-  Paketleme ve dağıtım işlemi SharePoint projeleri için genişletebilirsiniz.
+  SharePoint projeleri için paketleme ve dağıtım sürecini genişletebilirsiniz.
 
-## <a name="create-deployment-steps"></a>Dağıtım adımı oluşturma
- Bir SharePoint projesi dağıttığınızda [!INCLUDE[vs_current_short](../sharepoint/includes/vs-current-short-md.md)] bir dizi dağıtım adımı yürütür. Visual Studio Geri Çekiliyor ve çözümleri ekleme gibi birçok görevi için yerleşik dağıtım adımlarını içerir. Ancak, kendi dağıtım adımları da oluşturabilirsiniz.
+## <a name="create-deployment-steps"></a>Dağıtım adımları oluştur
+ Bir SharePoint projesi dağıtırken, [!INCLUDE[vs_current_short](../sharepoint/includes/vs-current-short-md.md)] bir dizi dağıtım adımını yürütür. Visual Studio, geri çekiliyor ve çözüm ekleme gibi birçok görev için yerleşik dağıtım adımları içerir. Bununla birlikte, kendi dağıtım adımlarınızı da oluşturabilirsiniz.
 
- Bir dağıtım adımı oluşturmak nasıl gösteren bir kılavuz için bkz. [izlenecek yol: SharePoint projeleri için bir özel dağıtım adımı oluşturmak](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
+ Dağıtım adımının nasıl oluşturulacağını gösteren bir anlatım için bkz. [Izlenecek yol: SharePoint projeleri için özel dağıtım adımı oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
 
-## <a name="create-deployment-configurations"></a>Dağıtım yapılandırmaları oluşturma
- Bir dağıtım yapılandırması için belirli bir projenin yürütülür, ancak tüm SharePoint Proje öğeleri etkileyebilecek dağıtım adımları kümesidir. Her dağıtım yapılandırmasının Proje dağıtıldığında çalıştırılan adım kümesi ve projeyi geri çekilebilir çalıştırılan başka bir kümesi içerir. [!INCLUDE[vs_current_short](../sharepoint/includes/vs-current-short-md.md)] iki yerleşik dağıtım yapılandırmaları içerir ancak aynı zamanda kendi oluşturabilirsiniz. Bir dağıtım yapılandırması oluşturduğunuzda, yerleşik dağıtım adımları ve oluşturduğunuz dağıtım adımları ekleyebilirsiniz.
+## <a name="create-deployment-configurations"></a>Dağıtım yapılandırması oluşturma
+ Dağıtım yapılandırması, belirli bir proje için yürütülen ancak tüm SharePoint proje öğelerini etkileyebilecek bir dağıtım adımları kümesidir. Her dağıtım yapılandırmasında, proje dağıtıldığında yürütülen bir adım kümesi ve proje geri çekildiğinde yürütülen başka bir küme bulunur. [!INCLUDE[vs_current_short](../sharepoint/includes/vs-current-short-md.md)] , iki yerleşik dağıtım yapılandırması içerir, ancak kendiniz de oluşturabilirsiniz. Bir dağıtım yapılandırması oluşturduğunuzda, oluşturduğunuz yerleşik dağıtım adımlarını ve dağıtım adımlarını dahil edebilirsiniz.
 
- Dağıtım yapılandırmasının nasıl oluşturulacağını gösteren bir kılavuz için bkz. [izlenecek yol: SharePoint projeleri için bir özel dağıtım adımı oluşturmak](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
+ Dağıtım yapılandırması oluşturmayı gösteren bir anlatım için bkz. [Izlenecek yol: SharePoint projeleri için özel dağıtım adımı oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
 
-## <a name="run-code-when-a-sharepoint-solution-is-deployed-or-retracted"></a>Bir SharePoint çözümünü dağıtılan ya da geri çekilebilir kodu çalıştırın.
- Bir SharePoint çözümünü dağıtılan ya da geri çekilebilir ek görevleri gerçekleştirmek için olayları işleyebilir. Visual Studio aşağıdaki senaryolarda işleyebileceği olayları oluşturur:
+## <a name="run-code-when-a-sharepoint-solution-is-deployed-or-retracted"></a>Bir SharePoint çözümü dağıtıldığında veya geri çekildiğinde kodu çalıştırma
+ Bir SharePoint çözümü dağıtıldığında veya geri çekildiğinde ek görevleri gerçekleştirmek için olayları işleyebilirsiniz. Visual Studio, aşağıdaki senaryolarda işleyebilmeniz için olaylar oluşturur:
 
-- Önce ve sonra her bir dağıtım adımı için bir SharePoint proje öğesi yürütülür. Daha fazla bilgi için [nasıl yapılır: Dağıtım adımları yürütüldüğünde kodu çalıştırma](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md).
+- Her dağıtım adımı bir SharePoint proje öğesi için yürütülmeden önce ve sonra. Daha fazla bilgi için bkz. [nasıl yapılır: dağıtım adımları yürütüldüğünde kodu çalıştırma](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md).
 
-- Önce ve sonra bir SharePoint Proje dağıtılan veya geri çekilebilir. Daha fazla bilgi için [nasıl yapılır: Bir SharePoint Proje dağıtılan ya da geri çekilebilir kodu çalıştırmak](../sharepoint/how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted.md).
+- Bir SharePoint projesi dağıtıldıktan veya geri çekildikten önce ve sonra. Daha fazla bilgi için bkz. [nasıl yapılır: bir SharePoint projesi dağıtıldığında veya geri çekildiğinde kodu çalıştırma](../sharepoint/how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted.md).
 
-## <a name="handle-deployment-conflicts"></a>Dağıtım çakışmalarını işleme
- SharePoint Proje öğeleri, modüller, Web bölümleri, liste örnekleri ve içerik türleri dahil olmak üzere bazı türler, yerleşik dağıtım çakışması çözümü sağlar. Bu proje öğelerinden birini içeren bir çözümü dağıttığınızda, Visual Studio ilk kez bir dosya zaten aynı adı, URL'si veya kimliği olan SharePoint sitesindeki dağıtmakta olduğunuz öğesinde bir dosya olarak mevcut olup olmadığını denetler. Bir çakışma varsa, Visual Studio otomatik olarak çakışmayı çözebildiğinde veya Visual Studio çakışmayı veya dağıtımı iptal olmasını isteyip istemediğinizi belirlemek için isteyebilir. Daha fazla bilgi için [sorun giderme SharePoint paketleme ve dağıtım](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md).
+## <a name="handle-deployment-conflicts"></a>Dağıtım çakışmalarını işle
+ Modüller, Web bölümleri, liste örnekleri ve içerik türleri de dahil olmak üzere bazı SharePoint proje öğesi türleri, yerleşik dağıtım çakışması çözümü sağlar. Bu proje öğelerinden birini içeren bir çözüm dağıttığınızda, Visual Studio ilk olarak SharePoint sitesinde dağıttığınız öğedeki bir dosya olarak aynı ada, URL 'ye veya KIMLIĞE sahip bir dosyanın var olup olmadığını denetler. Bir çakışma varsa, Visual Studio çakışmayı otomatik olarak çözümleyebilir veya Visual Studio 'Nun çakışmayı çözmesi veya dağıtımı iptal etmek isteyip istemediğinizi belirlemenizi isteyebilir. Daha fazla bilgi için bkz. [SharePoint paketleme ve dağıtım sorunlarını giderme](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md).
 
- Bu özellik olup olmadığını denetleyen ve dağıtım çakışmaları çözer kendi kodunuzu sağlayarak genişletebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Dağıtım çakışmalarını işleme](../sharepoint/how-to-handle-deployment-conflicts.md).
+ Bu özelliği, dağıtım çakışmalarını denetleyen ve çözen kendi kodunuzu sunarak genişletebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: dağıtım çakışmalarını işleme](../sharepoint/how-to-handle-deployment-conflicts.md).
 
-## <a name="run-command-line-operations-before-or-after-a-project-is-deployed"></a>Önce veya bir proje dağıtıldıktan sonra komut satırı işlemlerini çalıştırın
- Bir SharePoint çözümünü dağıttığınızda, bir komut satırı işlemi çalıştırmak istiyorsanız, ayarlayabileceğiniz <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.PreDeploymentCommand%2A> ve <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.PostDeploymentCommand%2A> özelliklerini bir <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> nesne. Visual Studio, önce ve proje dağıtıldıktan sonra bu komutları yürütür.
+## <a name="run-command-line-operations-before-or-after-a-project-is-deployed"></a>Proje dağıtıldıktan önce veya sonra komut satırı işlemlerini Çalıştır
+ Bir SharePoint çözümü dağıtıldığında bir komut satırı işlemi çalıştırmak istiyorsanız, <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.PreDeploymentCommand%2A> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject.PostDeploymentCommand%2A> bir nesnenin ve özelliklerini ayarlayabilirsiniz <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> . Visual Studio, proje dağıtıldıktan önce ve sonra bu komutları yürütür.
 
- Bazı durumlarda, dağıtım çakışmalarını görebilirsiniz. Çakışmaları çözümlemek için çeşitli yollar vardır. Daha fazla bilgi için [sorun giderme SharePoint paketleme ve dağıtım](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md).
+ Bazı durumlarda, dağıtım çakışmalarını görebilirsiniz. Çakışmaları çözümlemek için çeşitli farklı yollar vardır. Daha fazla bilgi için bkz. [SharePoint paketleme ve dağıtım sorunlarını giderme](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md).
 
 ## <a name="customize-validation-rules"></a>Doğrulama kurallarını özelleştirme
- Çözüm paketine (.wsp) dağıtmadan önce özel özellik ve paket doğrulama kuralları özellik veya paket geçerli olduğunu doğrulamak için oluşturabilirsiniz. Örneğin, doğrulama sorunları gidermeye yardımcı olmak için geliştiriciler için bilgi, uyarı veya hatalar bildirebilir. Daha fazla bilgi için [nasıl yapılır: Özel özellik ve paket doğrulama kuralları için SharePoint çözümleri oluşturma](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).
+ Bir çözüm paketini (. wsp) dağıtmadan önce, özelliğin veya paketin geçerli olduğunu doğrulamak için özel özellik ve paket doğrulama kuralları oluşturabilirsiniz. Örneğin, doğrulama sorunlarını çözmesine yardımcı olmak için geliştiricilere bilgi, uyarı veya hata bildirebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: SharePoint çözümleri için özel özellik ve paket doğrulama kuralları oluşturma](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Nasıl yapılır: Dağıtım adımları yürütüldüğünde kodu çalıştırma](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)
-- [İzlenecek yol: SharePoint projeleri için bir özel dağıtım adımı oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)
-- [Nasıl yapılır: Özel özellik ve paket doğrulama kuralları için SharePoint çözümleri oluşturma](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)
-- [SharePoint Proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md)
+- [Nasıl yapılır: dağıtım adımları yürütüldüğünde kodu çalıştırma](../sharepoint/how-to-run-code-when-deployment-steps-are-executed.md)
+- [İzlenecek yol: SharePoint projeleri için özel bir dağıtım adımı oluşturma](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)
+- [Nasıl yapılır: SharePoint çözümleri için özel özellik ve paket doğrulama kuralları oluşturma](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)
+- [SharePoint proje sistemini genişletme](../sharepoint/extending-the-sharepoint-project-system.md)

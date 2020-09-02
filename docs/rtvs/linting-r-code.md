@@ -1,6 +1,6 @@
 ---
-title: Linting R kodu
-description: Visual Studio'nun r için geliştirme linting desteği ile nasıl çalışılır, linter seçenekleri de dahil olmak üzere.
+title: R kodu
+description: Kter seçenekleri de dahil olmak üzere R için Visual Studio 'nun derleme desteğiyle çalışma.
 ms.date: 07/02/2018
 ms.topic: conceptual
 f1_keywords:
@@ -11,64 +11,64 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: aecf9d95fb8a3b2cda659e2694bff145424e150b
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62970750"
 ---
-# <a name="lint-r-code-in-visual-studio"></a>Visual Studio'da Lint R kodu
+# <a name="lint-r-code-in-visual-studio"></a>Visual Studio 'da LINT R kodu
 
-Linter, olası hataları, biçimlendirme sorunlarını ve sahte beyaz alan gibi diğer kod gürültüsünü ortaya çıkarmak için kodu analiz eder. Linter kullanmak, tanımlayıcıların nasıl adverildiği gibi belirli kodlama kurallarını da teşvik eder. Bu tür sözleşmeler takımlar ve diğer işbirlikçi durumlarda yararlıdır.
+Bir şifre, olası hataları, biçimlendirme sorunlarını ve sursuz boşluk gibi diğer kod gürültülerini ortaya çıkarmak için kodu analiz eder. Bir lter kullanılması, tanımlayıcıların nasıl adlandırıldığı gibi belirli kodlama kurallarının da sağlanmasına yardımcı olur. Bu tür kurallar takımlar ve diğer işbirliği durumları içinde faydalıdır.
 
-R Tools for Visual Studio (RTVS), bu makalede açıklanan çeşitli seçenekler aracılığıyla kontrol edilen R için yerleşik bir linter sağlar. Bu seçenekler **Araçlar** > **Seçenekleri** > Metin**Editörü** > **R** > **Lint**bulunur.
+Visual Studio için R Araçları (RTVS), bu makalede açıklanan çeşitli seçeneklerle denetlenen, R için yerleşik bir yerleşik olarak sunulur. Bu seçenekler **Araçlar**  >  **Seçenekler**  >  **metin Düzenleyicisi**  >  **R**  >  **Lint**' te bulunur.
 
-Tiftik varsayılan olarak devre dışı bırakılır. Tiftik etkinleştirmek **için, True için** >  **True**Tüm**Etkinleştir metif** seçeneğini ayarlayın.
+LINT varsayılan olarak devre dışıdır. Lint 'i etkinleştirmek için, **Tüm**  >  **Enable Lint** seçeneğini **true**olarak ayarlayın.
 
-Etkinleştirildiğinde, siz yazarken linter düzenleyicide çalışır. Sorunlar yeşil dalgalı olarak görünür. Aşağıdaki grafikte, örneğin, RTVS bir atama `=` yerine `<-` kullanımı, işlev bağımsız değişkenleri etrafında boşluk eksikliği, Pascal durumda ve büyük harf tanımlayıcıları kullanımı ve bir yarı nokta kullanımı da dahil olmak üzere altı tiftik sorunları belirlemiştir. Bir sorunun üzerinde gezinmek bir açıklama sağlar.
+Etkinleştirildiğinde, bir düzenleyici, yazarken düzenleyicide çalışır. Sorunlar yeşil dalgalı çizgiler gibi görünür. Aşağıdaki grafikte, örneğin, RTVS, `=` `<-` atama için yerine kullanılması, işlev bağımsız değişkenlerinde boşluk olmaması, Pascal büyük/küçük harf tanımlayıcıları kullanımı ve noktalı virgülden kullanımı dahil olmak üzere altı LINT sorunu tanımlamıştır. Bir sorunun üzerine gelindiğinde bir açıklama sağlanır.
 
-![R kodu için linter çıktı örnekleri](media/linting-01.png)
+![R kodu için kodsuz çıkış örnekleri](media/linting-01.png)
 
-Genellikle bir proje veya dosyanın gereksinimlerine bağlı olarak linter seçeneklerini değiştirirsiniz. Örneğin, Pascal-case tanımlayıcıları yerine `=` çevrimiçi `<-` bir kurstan örnek kod kullanabilirsiniz. Varsayılan linter seçenekleri bu gibi durumlarda bayrak çünkü bu tür kod sık linter uyarıları gösterir. Bu kodla çalışırken, her örneği düzeltmek için zaman harcamak yerine seçenekleri devre dışı bırakabilirsiniz.
+Genellikle bir proje ya da dosyanın ihtiyaçlarına bağlı olarak, bu seçenekleri değiştirirsiniz. Örneğin, çevrimiçi bir kursta örnek kod, `=` `<-` Pascal-case tanımlayıcılarıyla birlikte yerine kullanılabilir. Bu tür kodlar, bu durumları işaret ettiğinden sık kullanılan uyarıları gösterir. Bu kodla çalışırken, her örneği düzeltme süresini harcama yerine seçenekleri devre dışı bırakabilirsiniz.
 
 ## <a name="assignment-group"></a>Atama grubu
 
-| Seçenek | Varsayılan değer | Tiftik etkisi |
+| Seçenek | Varsayılan değer | LINT efekti |
 | --- | --- | --- |
-| **Zorlamak\<-** | **True** | Atama `<-` için ne zaman kullanılmadığını tanımlar. |
+| **Zorlamayı \<-** | **True** | `<-`Atama için ne zaman kullanılmadığını tanımlar. |
 
 ## <a name="naming-group"></a>Adlandırma grubu
 
-Bu seçenekler, farklı adlandırma kuralları kullanan tanımlayıcıları işaretleyin:
+Bu seçenekler, farklı adlandırma kuralları kullanan tanımlayıcılara bayrak ekleyin:
 
-| Seçenek | Varsayılan değer | Tiftik etkisi |
+| Seçenek | Varsayılan değer | LINT efekti |
 | --- | --- | --- |
-| **Bayrak camelCase** | **False** | CamelCase kullanan tanımlayıcıları bayraklar. |
-| **Uzun adları işaretleme** | **False** | Adları **Max ad uzunluğu** ayarını aşan tanımlayıcıları bayraklar. |
-| **Birden çok noktayı işaretleme** | **True** | Birden çok nokta kullanan tanımlayıcıları bayraklar. |
-| **Bayrak PascalCase** | **True** | PascalCase kullanan tanımlayıcıları bayraklar. |
-| **Bayrak snake_case** | **False** | Alt çizer kullanan bayraklar tanımlayıcıları. |
-| **Bayrak BÜYÜK HARF** | **True** | Tüm kapakları kullanan tanımlayıcıları bayraklar. |
-| **Maksimum ad uzunluğu** | **32** | **Bayrak uzun adlar** ayarı ile uygulanan uzunluk. |
+| **CamelCase 'i işaretle** | **False** | CamelCase kullanan bayraklar tanımlayıcıları. |
+| **Uzun adları işaretle** | **False** | Adları **en büyük ad uzunluğu** ayarını aşan bayrak tanımlayıcıları. |
+| **Birden çok noktaya bayrak Ekle** | **True** | Birden çok nokta kullanan bayraklar tanımlayıcıları. |
+| **PascalCase 'i işaretle** | **True** | PascalCase kullanan bayraklar tanımlayıcıları. |
+| **Bayrak snake_case** | **False** | Alt çizgi kullanan bayraklar tanımlayıcıları. |
+| **BÜYÜK harf işareti** | **True** | Tüm Cap 'leri kullanan bayraklar tanımlayıcıları. |
+| **En fazla ad uzunluğu** | **32** | **Uzun adları işaretle** ayarıyla uygulanan uzunluk. |
 
 ## <a name="spacing-group"></a>Aralık grubu
 
-Bu seçenekler, bunların tümü varsayılan olarak **True** olarak ayarlanır, linter'in boşluk sorunlarını tanımladığı yeri denetler: işlev adlarından sonra, virgüllerin etrafında, işleçlerin etrafında, kıvırcık konumları açma ve kapatma, önce boşluk (ve içindeki boşluk ()
+Hepsi varsayılan olarak **true** olarak ayarlanan bu seçenekler, her birinin boşluk sorunlarını belirlediği yerleri denetler: işlev adlarından sonra, işlecin etrafında, büyük konumlarda boşluk, açma ve kapatma, kaşlı konumlar, (ve içinde boşluk).
 
-## <a name="statements-group"></a>İfadeler grubu
+## <a name="statements-group"></a>Deyim grubu
 
-| Seçenek | Varsayılan değer | Tiftik etkisi |
+| Seçenek | Varsayılan değer | LINT efekti |
 | --- | --- | --- |
-| **Birden çok** | **True** | Birden çok deyimin aynı satırda ne zaman olduğunu tanımlar. |
-| **Noktalı virgül** | **True** | Yarım kolon kullanımlarını tanımlar. |
+| **Birden çok** | **True** | Aynı satırda birden çok deyim olduğunu tanımlar. |
+| **Noktalı virgülle** | **True** | Noktalı virgüllerle kullanımları tanımlar. |
 
 ## <a name="text-group"></a>Metin grubu
 
-| Seçenek | Varsayılan değer | Tiftik etkisi |
+| Seçenek | Varsayılan değer | LINT efekti |
 | --- | --- | --- |
-| **Çizgi uzunluğu sınırı** | **False** | Linter bayraklarının Max satır **uzunluğu** seçeneğinden daha uzun çizgiler olup olmadığını ayarlar. |
-| **Maksimum çizgi uzunluğu** | **80** | **Satır uzunluğu sınırı** seçeneği tarafından uygulanan çizgi uzunluğunu ayarlar. |
+| **Satır uzunluğu sınırı** | **False** | Lint aracıdır 'ın çizgileri **en fazla satır uzunluğu** seçeneğinden daha uzun olup olmayacağını ayarlar. |
+| **En fazla satır uzunluğu** | **80** | Satır uzunluğu **sınırı** seçeneği tarafından uygulanan satır uzunluğunu ayarlar. |
 
-## <a name="whitespace-group"></a>Beyaz uzay grubu
+## <a name="whitespace-group"></a>Boşluk grubu
 
-Hepsi varsayılan olarak **True** olarak ayarlanmış olan bu seçenekler, linter'in beyaz alan sorunlarını tanımladığı yeri denetler: sekmelerin kullanımı, çift tırnak kullanımı, boş satırları izleme ve beyaz alanı takip etme.
+Hepsi varsayılan olarak **true** olarak ayarlanan bu seçenekler, her birinin boşluk sorunlarını tanımladığı konumu denetler: sekmelerin kullanımı, çift tırnak işareti, sondaki boş satırlar ve sondaki boşluk.

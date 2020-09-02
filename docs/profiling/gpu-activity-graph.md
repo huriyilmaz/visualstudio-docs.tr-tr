@@ -1,5 +1,5 @@
 ---
-title: GPU Etkinlik Grafiği | Microsoft Dokümanlar
+title: GPU etkinlik grafiği | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,21 +11,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5734b9eb1b4307f7c32dcb8a170f7c6c571f46ca
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62969572"
 ---
-# <a name="gpu-activity-graph"></a>GPU Etkinlik grafiği
-EşzamanlıLık Görselleştiricisindeki GPU Etkinlik grafiği, zaman içinde kullanılmakta olan DirectX motorsayısıyla ölçülen sistemdeki DirectX etkinlik düzeyini görüntüler.  Grafik, hangi belirli motorların kullanıldığını göstermez.  Herhangi bir GPU çalışmasını işliyorsa, bir motorun kullanımda olduğu kabul edilir.
+# <a name="gpu-activity-graph"></a>GPU etkinlik grafiği
+Eşzamanlılık görselleştiricisi içindeki GPU etkinlik grafiği, zaman içinde kullanımda olan DirectX altyapısının sayısıyla ölçülen, sistemdeki DirectX etkinliğinin düzeyini görüntüler.  Grafik hangi belirli altyapıların kullanıldığını göstermez.  Bir altyapının herhangi bir GPU işini işlemesi durumunda kullanımda olduğu kabul edilir.
 
-## <a name="gpu-activity-graph-colors"></a>GPU Etkinlik grafik renkleri
- Yeşil, DirectX Motorlarının geçerli işlemle tüketimini gösterir.
+## <a name="gpu-activity-graph-colors"></a>GPU etkinliği grafik renkleri
+ Yeşil, geçerli işlem tarafından DirectX altyapısının tüketimini gösterir.
 
- Açık gri, DirectX Motorlarının sistemdeki diğer işlemler tarafından tüketimini gösterir. DirectX motorlarının tüketimini diğer işlemlere göre azaltmak için, sistemde çalışan diğer işlemlerin sayısını azaltın.
+ Açık gri, DirectX altyapısının sistemdeki diğer işlemlere göre tüketimini gösterir. DirectX altyapısının diğer işlemlere göre kullanımını azaltmak için, sistemde çalışan diğer işlemlerin sayısını azaltın.
 
- Beyaz, kullanılmayan DirectX motorlarının sistemdeki kullanılabilirliğini gösterir. Eğer onları yararlanmak için daha fazla fırsat bulabilirseniz bu motorlar süreciiçin kullanılabilir. Bazı motorlar yalnızca belirli türde görevler için kullanılabilir.
+ Beyaz, sistemde kullanılmayan DirectX altyapılarının kullanılabilirliğini gösterir. Bunlardan faydalananlara daha fazla fırsat bulabiliyorsanız, bu altyapılarınız işleminiz için kullanılabilir. Bazı altyapılar yalnızca belirli türde görevler için kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Kullanım Görünümü](../profiling/utilization-view.md)

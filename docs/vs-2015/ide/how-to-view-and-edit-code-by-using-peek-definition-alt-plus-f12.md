@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 40772919031200466999df2dfbf651fae3ee01e7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670563"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>Nasıl yapılır: Özet Tanımı'nı Kullanarak Kodu Görüntüleme ve Düzenleme (Alt+F12)
@@ -21,7 +21,7 @@ ms.locfileid: "72670563"
 
 Yazmakta olduğunuz koddan çıkmadan kodu görüntülemek ve düzenlemek için Özet **tanım** komutunu kullanabilirsiniz. **Tanıma göz atın** ve **Tanıma Git** aynı bilgileri gösterir, ancak **göz atma tanımı** bir açılır pencerede gösterir ve **Tanıma Git** kodu ayrı bir kod penceresinde gösterir. **Tanıma Git** , bağlamınızın (yani, etkin kod penceresi, geçerli satır ve imleç konumu) tanım kodu penceresine geçiş yapmasına neden olur. Özet **tanımı**'nı kullanarak tanımı görüntüleyip düzenleyebilir ve özgün kod dosyasında yerinizi tutarken tanım dosyası içinde gezinebilirsiniz.
 
- **Peek tanımını** , Visual Basic ve C++ kodla C#birlikte kullanabilirsiniz. Visual Basic, **Gözatma tanımı** , tanım meta verileri olmayan semboller için **nesne tarayıcısı** bir bağlantı gösterir (örneğin, içinde yerleşik .NET Framework türler).
+ **Açıklama tanımını** C#, Visual Basic ve C++ kodu ile birlikte kullanabilirsiniz. Visual Basic, **Gözatma tanımı** , tanım meta verileri olmayan semboller için **nesne tarayıcısı** bir bağlantı gösterir (örneğin, içinde yerleşik .NET Framework türler).
 
 > [!IMPORTANT]
 > Visual Studio 2013'ün herhangi bir Express sürümünde bu komutu kullanamazsınız.
@@ -32,11 +32,11 @@ Yazmakta olduğunuz koddan çıkmadan kodu görüntülemek ve düzenlemek için 
 
 1. Araştırmak istediğiniz bir yöntemin kısayol menüsünü açarak Özet **tanımını** bulabilirsiniz. (Klavye: Alt+F12)
 
-     Bu çizimde `Print()` adlı bir yöntem için Özet **tanım** penceresi gösterilmektedir:
+     Bu çizimde adlı bir yöntem için Özet **tanım** penceresi gösterilmektedir `Print()` :
 
      ![Pencereye göz atma](../ide/media/peekwindow.png "PeekWindow")
 
-     Tanım penceresi orijinal dosyadaki `printer.Print(“Hello World!”)` satırının altında görüntülenir. Pencerede, özgün dosyanızdaki kodlardan hiçbiri gizlenmez. @No__t_0 çağrısını izleyen satırlar, tanım penceresinin altında görünür.
+     Tanım penceresi `printer.Print(“Hello World!”)` Orijinal dosyadaki satırın altında görünür. Pencerede, özgün dosyanızdaki kodlardan hiçbiri gizlenmez. Çağrıyı izleyen satırlar, `printer.Print(“Hello World!”)` Tanım penceresinin altında görünür.
 
 2. İmleci, kod tanımı penceresinde farklı konumlara taşıyabilirsiniz. Özgün kod penceresinde tanım penceresinin altında veya üstünde gezinmeye devam edebilirsiniz.
 
@@ -66,7 +66,7 @@ Yazmakta olduğunuz koddan çıkmadan kodu görüntülemek ve düzenlemek için 
 
 - Bu klavye kısayollarını **göz atma** penceresiyle birlikte kullanabilirsiniz:
 
-    |İşlevi|Klavye kısayolu|
+    |İşlev|Klavye kısayolu|
     |-------------------|-----------------------|
     |Tanım penceresini açma|Alt+F12|
     |Tanım penceresini kapatma|Esc|
@@ -79,4 +79,4 @@ Yazmakta olduğunuz koddan çıkmadan kodu görüntülemek ve düzenlemek için 
     > Aynı klavye kısayollarını, Visual Studio 'da başka bir yerde kullandığınız şekilde bir Özet **tanım** penceresinde kod düzenlemek için de kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Üretkenlik İpuçları](../ide/productivity-tips-for-visual-studio.md)
+ [Üretkenlik Ipuçları](../ide/productivity-tips-for-visual-studio.md)

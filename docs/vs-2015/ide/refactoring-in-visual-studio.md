@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c1030068ad083ff9bc8f4bdf5b203eb75eed7617
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670316"
 ---
 # <a name="refactoring-in-visual-studio"></a>Visual Studio'da yeniden düzenleme
@@ -31,17 +31,17 @@ Yeniden düzenleme, korumayı kolaylaştırmak, anlamak ve genişletmek, ancak d
 
    Yeniden düzenleme mantığı dil sözdizimine yakından bağlı olduğundan, Visual Studio 'daki her dil hizmeti kendi yeniden düzenleme yeteneklerini sağlar. Daha fazla bilgi için aşağıdaki sayfalara bakın:
 
-### <a name="refactoring-in-c"></a>C \# yeniden düzenleme
+### <a name="refactoring-in-c"></a>C 'de yeniden düzenleme\#
  [Yeniden Düzenleme (C#)](../csharp-ide/refactoring-csharp.md)
 
 ### <a name="refactoring-in-visual-basic"></a>Visual Basic yeniden düzenleme
  [Yeniden düzenleme ve yeniden adlandırma Iletişim kutusu (Visual Basic)](https://msdn.microsoft.com/library/001d2d81-9bb6-4e8e-ae3a-20c0daaa3959)
 
-### <a name="refactoring-in-c"></a>Yeniden düzenlemeC++
+### <a name="refactoring-in-c"></a>C++ ' da yeniden düzenleme
  [Kod yazma ve yeniden düzenleme (C++)](https://msdn.microsoft.com/library/56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6)
 
-### <a name="refactoring-in-f"></a>F \# yeniden düzenleme
- İçin F# yeniden düzenleme desteği, üçüncü taraf bir Visual Studio uzantısı olan [ F# görsel güç araçları](https://visualstudiogallery.msdn.microsoft.com/136b942e-9f2c-4c0b-8bac-86d774189cff)'nda sağlanır.
+### <a name="refactoring-in-f"></a>F 'de yeniden düzenleme\#
+ F # için yeniden düzenleme desteği, üçüncü taraf bir Visual Studio uzantısı olan [Visual F# güç araçları](https://visualstudiogallery.msdn.microsoft.com/136b942e-9f2c-4c0b-8bac-86d774189cff)'nda verilmiştir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Kod ve metin düzenleyicisinde kod yazma](../ide/writing-code-in-the-code-and-text-editor.md) [Visual Studio IDE](../ide/visual-studio-ide.md)
