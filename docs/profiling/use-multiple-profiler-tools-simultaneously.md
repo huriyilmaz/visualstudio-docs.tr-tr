@@ -10,13 +10,13 @@ manager: AndSter
 ms.workload:
 - multiple
 ms.openlocfilehash: f72757d46496c3990c0a0d4205753d185078eac7
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85332037"
 ---
-# <a name="using-multiple-profiler-tools-simultaneously"></a>Aynı anda birden çok profil Oluşturucu aracını kullanma
+# <a name="using-multiple-profiler-tools-simultaneously"></a>Aynı anda birden çok profil oluşturucu aracını kullanma
 
 Performans profili Oluşturucu, performans sorunlarının anlaşılmasına yardımcı olmak için aynı oturumda birden çok araçların kullanılabileceği fikrle tasarlanmıştır. Performans Profiler 'daki çoğu araç, [CPU kullanımı](../profiling/cpu-usage.md), [.net Async aracı](../profiling/analyze-async.md)ve [veritabanı](../profiling/analyze-database.md) aracı gibi eşzamanlı olarak çalışmayı destekler. Aynı tanılama oturumunda araçları aynı anda çalıştırmak için, yanındaki onay kutusuna tıklayın ve ardından tanılama oturumunu başlatın.
 

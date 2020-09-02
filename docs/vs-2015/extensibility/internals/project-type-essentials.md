@@ -1,5 +1,5 @@
 ---
-title: Proje türü temel bileşenleri | Microsoft Docs
+title: Proje türü temelleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,18 +11,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7e45d5f252deaf1788ae5093048ef8afb900fbe4
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704070"
 ---
 # <a name="project-type-essentials"></a>Proje Türü Temel Bileşenleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Proje birden fazla dil için APIleri içerir [!INCLUDE[csprcs](../../includes/csprcs-md.md)] veya [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Ayrıca, kendi proje türleri oluşturmanızı sağlar.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , veya gibi diller için birçok proje türü [!INCLUDE[csprcs](../../includes/csprcs-md.md)] içerir [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Ayrıca kendi proje türlerinizi oluşturmanıza imkan tanır.  
   
- Özel komutlar, düzenleyiciler ve araç pencerelerini eklemek istiyorsanız [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], yeni bir proje türü oluşturmak zorunda kalmadan yapabilirsiniz. Daha fazla bilgi için aşağıdaki konulara bakın:  
+ Yalnızca öğesine özel komutlar, düzenleyiciler veya araç pencereleri eklemek istiyorsanız [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , bunu yeni bir proje türü oluşturmadan yapabilirsiniz. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:  
   
 - [Komutlar, Menüler ve Araç Çubukları](../../extensibility/internals/commands-menus-and-toolbars.md)  
   
@@ -30,11 +30,11 @@ ms.locfileid: "65704070"
   
 - [Araç Pencerelerini Genişletme ve Özelleştirme](../../extensibility/extending-and-customizing-tool-windows.md)  
   
-  Benzer şekilde, sağlanan davranışını özelleştirmek istiyorsanız [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ve [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] yapabileceğiniz proje türleri, proje alt türleri kullanarak. Daha fazla bilgi için [proje alt türleri](../../extensibility/internals/project-subtypes.md).  
+  Benzer şekilde, sağlanan ve proje türlerinin davranışını özelleştirmek istiyorsanız, bunu [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Proje alt türlerini kullanarak yapabilirsiniz. Daha fazla bilgi için bkz. [Proje alt türleri](../../extensibility/internals/project-subtypes.md).  
   
-  Yeni bir proje türü dışında bir dil tabanlı projeler için oluşturmalısınız [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ve [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] bir veya daha fazlasını desteklemek istiyorsanız:  
+  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Aşağıdakilerden birini veya birkaçını desteklemek istiyorsanız, dışındaki bir dili temel alan projeler için yeni bir proje türü oluşturmanız gerekir:  
   
-- Yapı  
+- Oluşturma  
   
 - Dağıtım  
   
@@ -44,27 +44,27 @@ ms.locfileid: "65704070"
   
 - Hata Ayıklama  
   
-- Çözüm Gezgini'nde proje öğeleri  
+- Çözüm Gezgini proje öğeleri  
   
-- **Proje Aç** veya **yeni proje** iletişim kutuları  
+- **Açık proje** veya **Yeni proje** iletişim kutuları  
   
-- Proje iç içe geçme  
+- İçe proje iç içe  
   
-- Proje türleri özellikleri hakkında daha fazla bilgi için aşağıdakilere bakın:  
+- Proje türlerinin özellikleri hakkında daha fazla bilgi için aşağıdakilere bakın:  
   
-- Proje türleridir kümesi arabirimleri uygulayan nesneler vspackage'ta [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bekliyor. C# proje türü geliştirmek için kullanıyorsanız, yönetilen paket çerçevesini proje sınıfları için gerekli arabirimleri uygulayabilir ve bu uygulamayı devral olanak verir. Daha fazla bilgi için [bir proje türü (C#) uygulamak için yönetilen paket çerçevesini kullanarak](../../extensibility/internals/using-the-managed-package-framework-to-implement-a-project-type-csharp.md).  
+- Proje türleri, beklenen arabirim kümesini uygulayan bir VSPackage nesneleridir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Bir proje türü geliştirmek Için C# kullanıyorsanız, yönetilen paket çerçevesi proje sınıfları sizin için gerekli arabirimleri uygular ve bu uygulamayı devralmasını sağlar. Daha fazla bilgi için bkz. [bir proje türü uygulamak Için yönetilen paket çerçevesini kullanma (C#)](../../extensibility/internals/using-the-managed-package-framework-to-implement-a-project-type-csharp.md).  
   
-- C++ geliştiricileri için HierUtil Kitaplığı'nda sınıflar benzer bir şekilde çalışır. Daha fazla bilgi için [derleme içinde değil: Bir proje türü (C++) uygulamak için HierUtil7 proje sınıflarını kullanarak](https://msdn.microsoft.com/a5c16a09-94a2-46ef-87b5-35b815e2f346).  
+- C++ geliştiricileri için, HierUtil kitaplığındaki sınıflar benzer bir şekilde çalışır. Daha fazla bilgi için bkz. [derlemede değil: bir proje türü uygulamak Için HierUtil7 proje sınıflarını kullanma (C++)](https://msdn.microsoft.com/a5c16a09-94a2-46ef-87b5-35b815e2f346).  
   
-- Bir .exe veya .dll derleme tipik kaynak kodu dosyaları dışında veri proje türlerini destekler. Örneğin, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] veritabanı projeleri diskte depolanan dosyaların komut ve sorgu için başvurular içerir ve komutları ekleme **Çözüm Gezgini** yürütmek için betikleri ve bir veritabanı, ancak projeleri sorguları desteklemez davranış oluşturun. Daha fazla bilgi için [açma ve kaydetme proje öğeleri](../../extensibility/internals/opening-and-saving-project-items.md).  
+- Proje türleri, bir. exe veya. dll derlemesine oluşturan tipik kaynak kodu dosyalarından farklı verileri destekleyebilir. Örneğin, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] veritabanı projeleri disk üzerinde depolanan betik ve sorgu dosyalarının başvurularını içerir ve bir veritabanına karşı betikleri ve sorguları yürütmek için **Çözüm Gezgini** komutlar ekler, ancak projeler derleme davranışını desteklemez. Daha fazla bilgi için bkz. [Proje öğelerini açma ve kaydetme](../../extensibility/internals/opening-and-saving-project-items.md).  
   
-- Tüm dosyaları kullanmak bir proje türü yok. Örneğin, bir proje türü, bir veritabanında onunla ilişkili tüm verileri saklayabilirsiniz. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Proje türleri, projeleri ve proje öğeleri için verileri nasıl kalıcı üzerinde tam denetim verir. Daha fazla bilgi için [proje türü tasarım kararları](../../extensibility/internals/project-type-design-decisions.md).  
+- Proje türü, dosyaları kullanmak zorunda değildir. Örneğin, bir proje türü tüm verilerini bir veritabanında saklayabilir. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] proje türlerine, projelere ve proje öğelerine yönelik verileri nasıl kalıcı hale getirebileceği üzerinde tüm denetim sağlar. Daha fazla bilgi için bkz. [Proje türü tasarım kararları](../../extensibility/internals/project-type-design-decisions.md).  
   
-- Proje türleri sağlamalıdır bir *proje fabrikası*, bir proje örneği oluşturan bir nesne olan her tür [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] açmak veya bu proje türüne göre bir proje oluşturmak için bildirilir. Daha fazla bilgi için [oluşturma proje örnekleri tarafından kullanarak proje Fabrikalarını](../../extensibility/internals/creating-project-instances-by-using-project-factories.md).  
+- Proje türleri bir proje *fabrikası*sağlamalıdır ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Bu proje türünü temel alan bir proje açmak veya oluşturmak için her zaman proje türünün bir örneğini oluşturan bir nesne olmalıdır. Daha fazla bilgi için bkz. [Proje fabrikalarını kullanarak proje örnekleri oluşturma](../../extensibility/internals/creating-project-instances-by-using-project-factories.md).  
   
-- Proje türleri, projeleri ve proje öğeleri için şablonlar sağlamanız gerekir. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Kullanıcılar yeni projeler oluşturmak ve yeni öğeler eklemek için var olan projeleri şablonları kullanır. Daha fazla bilgi için [ekleme proje ve proje öğesi şablonları](../../extensibility/internals/adding-project-and-project-item-templates.md).  
+- Proje türleri, projeler ve proje öğeleri için şablon sağlamalıdır. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Kullanıcılar yeni projeler oluştururken ve varolan projelere yeni öğeler eklerken şablonları kullanır. Daha fazla bilgi için bkz. [Proje ve proje öğesi şablonları ekleme](../../extensibility/internals/adding-project-and-project-item-templates.md).  
   
-- Proje türleri hata ayıklama ve yayın gibi birden çok yapılandırmaları destekler. Kullanıcılar, farklı bir proje yapılandırmaları sağladığınız özellik sayfalarını kullanarak değiştirebilirsiniz. Daha fazla bilgi için [yapılandırma seçeneklerini yönetme](../../extensibility/internals/managing-configuration-options.md).  
+- Proje türleri, hata ayıklama ve yayın gibi birden fazla yapılandırmayı destekleyebilir. Kullanıcılar, sağladığınız özellik sayfalarını kullanarak bir projenin farklı yapılandırmasını değiştirebilir. Daha fazla bilgi için bkz. [yapılandırma seçeneklerini yönetme](../../extensibility/internals/managing-configuration-options.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Proje Türlerini Dağıtma](../../extensibility/internals/deploying-project-types.md)

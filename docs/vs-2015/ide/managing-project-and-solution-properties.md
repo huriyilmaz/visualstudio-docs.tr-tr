@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ec48aac60a8f15527c92d19a38ca9f996dcfdd6f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651357"
 ---
 # <a name="managing-project-and-solution-properties"></a>Proje ve Çözüm Özelliklerini Yönetme
@@ -33,19 +33,19 @@ Projelerin, derleme, hata ayıklama, test ve dağıtmanın birçok yönünü yö
 ## <a name="project-properties"></a>Proje Özellikleri
  Proje özellikleri gruplar halinde düzenlenir ve her grubun kendi özellik sayfası vardır ve sayfalar farklı diller ve proje türleri için farklı olabilir.
 
-### <a name="c-and-visual-basic-projects"></a>C#ve Visual Basic projeleri
- C# Ve Visual Basic projelerinde, Özellikler **Proje tasarımcısında**gösterilir. Aşağıdaki çizimde, içindeki C#bir WPF projesi için derleme özellik sayfası gösterilmektedir:
+### <a name="c-and-visual-basic-projects"></a>C# ve Visual Basic projeleri
+ C# ve Visual Basic projelerinde, Özellikler **Proje tasarımcısında**gösterilir. Aşağıdaki çizimde, C# ' de bir WPF projesi için derleme özellik sayfası gösterilmektedir:
 
  ![Visual Studio proje Tasarımcısı](../ide/media/vs2015-proppage-build.png "VS2015_PropPage_Build")
 
  Proje Tasarımcısı 'ndaki her özellik sayfası hakkında daha fazla bilgi için bkz. [Proje Özellikleri başvurusu](../ide/reference/project-properties-reference.md).
 
-### <a name="c-and-javascript-projects"></a>C++ve JavaScript projeleri
- C++ve JavaScript projelerinin, proje özelliklerini yönetmek için farklı bir kullanıcı arabirimi vardır. Bu çizimde bir C++ proje özellik sayfası (JavaScript sayfaları benzerdir) gösterilmektedir:
+### <a name="c-and-javascript-projects"></a>C++ ve JavaScript projeleri
+ C++ ve JavaScript projelerinin proje özelliklerini yönetmek için farklı bir kullanıcı arabirimi vardır. Bu çizimde bir C++ proje özellik sayfası gösterilmektedir (JavaScript sayfaları benzerdir):
 
- ![Visual C&#43; &#43; proje özellikleri](../ide/media/vs2015-projprops-cpp.png "VS2015_ProjProps_cpp")
+ ![Visual C&#43;&#43; projesi özellikleri](../ide/media/vs2015-projprops-cpp.png "VS2015_ProjProps_cpp")
 
- Proje özellikleri hakkında C++ daha fazla bilgi için bkz. [Proje özellikleriyle çalışma](https://msdn.microsoft.com/library/9b0d6f8b-7d4e-4e61-aa75-7d14944816cd). JavaScript özellikleri hakkında daha fazla bilgi için bkz. [Özellik sayfaları, JavaScript](../ide/reference/property-pages-javascript.md).
+ C++ proje özellikleri hakkında daha fazla bilgi için bkz. [Proje özellikleriyle çalışma](https://msdn.microsoft.com/library/9b0d6f8b-7d4e-4e61-aa75-7d14944816cd). JavaScript özellikleri hakkında daha fazla bilgi için bkz. [Özellik sayfaları, JavaScript](../ide/reference/property-pages-javascript.md).
 
 ## <a name="solution-properties"></a>Çözüm özellikleri
  Çözümdeki özelliklere erişmek için, **Çözüm Gezgini** ' deki çözüm düğümüne sağ tıklayın ve **Özellikler**' i seçin. İletişim kutusunda, hata ayıklama veya sürüm derlemeleri için proje yapılandırmaları ayarlayabilir, F5 tuşuna basıldığında hangi projelerin başlangıç projesi olması gerektiğini seçebilir ve kod analizi seçeneklerini ayarlarsınız.

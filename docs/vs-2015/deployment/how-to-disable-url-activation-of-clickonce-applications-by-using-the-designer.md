@@ -18,34 +18,34 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 27690ab275d0c7ef2a090fa8ef2e42887ae9daeb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153808"
 ---
 # <a name="how-to-disable-url-activation-of-clickonce-applications-by-using-the-designer"></a>Nasıl yapılır: Tasarımcıyı Kullanarak ClickOnce Uygulamalarında URL Etkinleştirmeyi Devre Dışı Bırakma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Genellikle, bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama bir Web sunucusundan yükledikten hemen sonra otomatik olarak başlayacak. Güvenlik nedeniyle, bu davranışı devre dışı bırakmak ve uygulamayı başlatmak için kullanıcılar karar verebilir **Başlat** menü yerine. Aşağıdaki yordam, URL etkinleştirmeyi devre dışı bırakmak açıklar.  
+Genellikle bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama, bir Web sunucusundan yüklendikten hemen sonra otomatik olarak başlatılır. Güvenlik nedenleriyle, bu davranışı devre dışı bırakmayı ve kullanıcılara bunun yerine **Başlangıç** menüsünden uygulamayı başlatmasını söylemeniz gerekebilir. Aşağıdaki yordamda URL etkinleştirmeyi devre dışı bırakma açıklanmaktadır.  
   
- Bu teknik yalnızca kullanılabilir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] kullanıcının bilgisayarında bir Web sunucusundan yüklenen uygulamalar. Yalnızca kendi URL'yi kullanarak başlatılabilir, yalnızca çevrimiçi uygulamalar için kullanılamaz. Yalnızca çevrimiçi ve yüklü uygulamaları arasındaki fark hakkında daha fazla bilgi için bkz: [ClickOnce dağıtım stratejisini seçme](../deployment/choosing-a-clickonce-deployment-strategy.md).  
+ Bu teknik, yalnızca [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] kullanıcının bilgisayarında bir Web sunucusundan yüklenen uygulamalar için kullanılabilir. Yalnızca kendi URL 'SI kullanılarak başlatılabilen, yalnızca çevrimiçi uygulamalar için kullanılamaz. Yalnızca çevrimiçi ve yüklü uygulamalar arasındaki fark hakkında daha fazla bilgi için bkz. [ClickOnce dağıtım stratejisi seçme](../deployment/choosing-a-clickonce-deployment-strategy.md).  
   
- Bu yordamı kullanır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Bu görevi kullanarak da gerçekleştirebilirsiniz [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]. Daha fazla bilgi için [nasıl yapılır: ClickOnce uygulamalarında URL etkinleştirmeyi devre dışı](../deployment/how-to-disable-url-activation-of-clickonce-applications.md).  
+ Bu yordam kullanır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Ayrıca, kullanarak bu görevi gerçekleştirebilirsiniz [!INCLUDE[winsdklong](../includes/winsdklong-md.md)] . Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce UYGULAMALARıNıN URL etkinleştirmeyi devre dışı bırakma](../deployment/how-to-disable-url-activation-of-clickonce-applications.md).  
   
 ## <a name="procedure"></a>Yordam  
   
 #### <a name="to-disable-url-activation-for-your-application"></a>Uygulamanız için URL etkinleştirmeyi devre dışı bırakmak için  
   
-1. İçinde proje adınıza sağ **Çözüm Gezgini**, tıklatıp **özellikleri**.  
+1. **Çözüm Gezgini**' de proje adına sağ tıklayın ve **Özellikler**' e tıklayın.  
   
-2. Üzerinde **özellikleri** sayfasında **Yayımla** sekmesi.  
+2. **Özellikler** sayfasında, **Yayımla** sekmesine tıklayın.  
   
-3. Tıklayın **seçenekleri**.  
+3. **Seçenekler**’e tıklayın.  
   
-4. Tıklayın **bildirimlerini**.  
+4. **Bildirimler**' e tıklayın.  
   
-5. Etiketli onay kutusunu seçin **engelleyecek bir URL ile etkinleştirilmekte olan uygulamanın**.  
+5. **Uygulamanın BIR URL aracılığıyla etkinleştirilmesini engelle**etiketli onay kutusunu seçin.  
   
 6. Uygulamanızı dağıtın.  
   

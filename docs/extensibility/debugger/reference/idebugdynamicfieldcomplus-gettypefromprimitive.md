@@ -1,5 +1,5 @@
 ---
-title: IDebugDynamicFieldCOMPlus::GetTypeFromPrimitive | Microsoft Dokümanlar
+title: 'Idebugdynamicfieldcomplus:: GetTypeFromPrimitive | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +15,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 89a0e559fbdf2824d334903a668bbdef8dbb6fff
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731282"
 ---
 # <a name="idebugdynamicfieldcomplusgettypefromprimitive"></a>IDebugDynamicFieldCOMPlus::GetTypeFromPrimitive
-İlkel türüne verilen bir türü alır.
+Temel türü verilen bir türü alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetTypeFromPrimitive(
@@ -42,13 +42,13 @@ int GetTypeFromPrimitive(
 
 ## <a name="parameters"></a>Parametreler
 `dwCorElementType`\
-[içinde] İlkel türü temsil eden [CorElementType Numaralandırma'dan](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) gelen değer.
+'ndaki Temel türü temsil eden [CorElementType numaralandırmasındaki](/dotnet/framework/unmanaged-api/metadata/corelementtype-enumeration) değer.
 
 `ppType`\
-[çıkış] Türünü temsil eden [IDebugField'ı](../../../extensibility/debugger/reference/idebugfield.md) döndürür.
+dışı Türü temsil eden [IDebugField 'ı](../../../extensibility/debugger/reference/idebugfield.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugDynamicFieldCOMPlus](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus.md)

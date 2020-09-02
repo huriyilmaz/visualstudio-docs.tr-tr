@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c3374f67f4fba11543e3dbbca47fef621dd2e714
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595897"
 ---
 # <a name="override-and-extend-the-generated-classes"></a>Oluşturulan sınıfları geçersiz kılma ve genişletme
@@ -28,7 +28,7 @@ Oluşturulan kodu genişletmenize olanak tanımak için çeşitli mekanizmalar s
 
 Kısmi sınıf tanımları, bir sınıfın birden fazla yerde tanımlanmasını sağlar. Bu, oluşturduğunuz kodu kendi yazdığınız koddan ayırmanızı sağlar. El ile yazılmış kodunuzda, oluşturulan kod tarafından devralınan sınıfları geçersiz kılabilirsiniz.
 
-Örneğin, DSL tanımınızda `Book`adlı bir etki alanı sınıfı tanımlarsanız, geçersiz kılma yöntemleri ekleyen özel kod yazabilirsiniz:
+Örneğin, DSL tanımınızda adlı bir etki alanı sınıfı tanımlarsanız `Book` , geçersiz kılma yöntemleri ekleyen özel kod yazabilirsiniz:
 
 ```csharp
 public partial class Book
@@ -52,13 +52,13 @@ Oluşturulan sınıflarda yöntemlerin çoğu, modelleme ad alanlarındaki sabit
 
 Bununla birlikte, etki alanı sınıfı için **Double türetilmiş** bayrağını ayarlayarak bu yöntemleri geçersiz kılabilirsiniz. Bu, biri diğerinin soyut taban sınıfı olmak üzere iki sınıfın oluşturulmasına neden olur. Tüm Yöntem ve özellik tanımları temel sınıfta bulunur ve yalnızca Oluşturucu türetilmiş sınıfta bulunur.
 
-Örneğin, örnek Library. dsl ' de, `CirculationBook` etki alanı sınıfı `Generates``Double Derived` özelliği `true`olarak ayarlanmıştır. Bu alan sınıfı için oluşturulan kod iki sınıf içerir:
+Örneğin, örnek Library. dsl ' de, `CirculationBook` etki alanı sınıfının `Generates``Double Derived` özelliği olarak ayarlanır `true` . Bu alan sınıfı için oluşturulan kod iki sınıf içerir:
 
-- bir soyut olan ve tüm yöntemleri ve özellikleri içeren `CirculationBookBase`.
+- `CirculationBookBase`, bir soyut ve tüm yöntem ve özellikleri içerir.
 
-- `CirculationBookBase`türetilen `CirculationBook`. Oluşturucular dışında boştur.
+- `CirculationBook`, öğesinden türetilmiş `CirculationBookBase` . Oluşturucular dışında boştur.
 
-Herhangi bir yöntemi geçersiz kılmak için, türetilmiş sınıfın `CirculationBook`gibi kısmi bir tanımını oluşturursunuz. Oluşturulan yöntemleri ve modelleme çerçevesinden devralınan yöntemleri geçersiz kılabilirsiniz.
+Herhangi bir yöntemi geçersiz kılmak için, gibi türetilmiş sınıfın kısmi bir tanımını oluşturursunuz `CirculationBook` . Oluşturulan yöntemleri ve modelleme çerçevesinden devralınan yöntemleri geçersiz kılabilirsiniz.
 
 Model öğeleri, ilişkiler, şekiller, diyagramlar ve bağlayıcılar dahil olmak üzere tüm öğe türleriyle bu yöntemi kullanabilirsiniz. Ayrıca, diğer oluşturulan sınıfların yöntemlerini geçersiz kılabilirsiniz. ToolboxHelper gibi bazı oluşturulan sınıflar her zaman çift türetilir.
 
@@ -66,13 +66,13 @@ Model öğeleri, ilişkiler, şekiller, diyagramlar ve bağlayıcılar dahil olm
 
 Oluşturucuyu geçersiz kılamazsınız. Çift türetilmiş sınıflarda bile, Oluşturucu türetilmiş sınıfta olmalıdır.
 
-Kendi oluşturucuyu sağlamak istiyorsanız, DSL tanımındaki etki alanı sınıfı için `Has Custom Constructor` ayarlayarak bunu yapabilirsiniz. **Tüm Şablonları Dönüştür**' e tıkladığınızda, oluşturulan kod bu sınıf için bir Oluşturucu içermez. Eksik oluşturucuya bir çağrı içerecektir. Bu, çözümü oluşturduğunuzda bir hata raporuna neden olur. Elde etmeniz gerekenleri açıklayan oluşturulan kodda bir açıklama görmek için hata raporuna çift tıklayın.
+Kendi oluşturucuyu sağlamak istiyorsanız, `Has Custom Constructor` dsl tanımındaki etki alanı sınıfı için ayarı yaparak bunu yapabilirsiniz. **Tüm Şablonları Dönüştür**' e tıkladığınızda, oluşturulan kod bu sınıf için bir Oluşturucu içermez. Eksik oluşturucuya bir çağrı içerecektir. Bu, çözümü oluşturduğunuzda bir hata raporuna neden olur. Elde etmeniz gerekenleri açıklayan oluşturulan kodda bir açıklama görmek için hata raporuna çift tıklayın.
 
 Oluşturulan dosyalardan ayrı bir dosyaya kısmi bir sınıf tanımı yazın ve oluşturucuyu sağlayın.
 
 ### <a name="flagged-extension-points"></a>Bayrak eklenmiş uzantı noktaları
 
-Bayrak eklenmiş bir uzantı noktası, DSL tanımında bir özellik veya bir özel yöntem sağlayabileceğiniz bir onay kutusu ayarlayabileceğiniz yerdir. Özel oluşturucular bir örnektir. Diğer örneklerde, bir etki alanı özelliğinin `Kind` hesaplanan veya özel depolama olarak ayarlanması ya da bir bağlantı oluşturucusunun **özel** bayrağını ayarlanması dahildir.
+Bayrak eklenmiş bir uzantı noktası, DSL tanımında bir özellik veya bir özel yöntem sağlayabileceğiniz bir onay kutusu ayarlayabileceğiniz yerdir. Özel oluşturucular bir örnektir. Diğer örneklerde, `Kind` bir etki alanı özelliğinin hesaplanmış veya özel depolama olarak ayarlanması ya da bir bağlantı oluşturucusunun **özel** bayrağını ayarlanması dahildir.
 
 Her durumda, bayrağını ayarlayıp kodu yeniden oluşturduğunuzda bir yapı hatası olur. Sağlamanız gerekenleri açıklayan bir açıklama görmek için hataya çift tıklayın.
 
@@ -80,7 +80,7 @@ Her durumda, bayrağını ayarlayıp kodu yeniden oluşturduğunuzda bir yapı h
 
 İşlem Yöneticisi, bir özellikte değişiklik gibi, belirtilen bir olayın gerçekleştiği bir işlemin sonundan önce çalışan kurallar tanımlamanızı sağlar. Kurallar genellikle depodaki farklı öğeler arasında eşitlemeyi sürdürmek için kullanılır. Örneğin, diyagramın modelin geçerli durumunu görüntülediğinden emin olmak için kurallar kullanılır.
 
-Kurallar her bir nesne için bir kural kaydeden koda sahip olmanız gerekmez, her sınıf temelinde tanımlanır. Daha fazla bilgi için [kuralları yaymak değişiklikleri içinde modeli](../modeling/rules-propagate-changes-within-the-model.md).
+Kurallar her bir nesne için bir kural kaydeden koda sahip olmanız gerekmez, her sınıf temelinde tanımlanır. Daha fazla bilgi için bkz. [model Içindeki değişiklikleri yayma kuralları](../modeling/rules-propagate-changes-within-the-model.md).
 
 ### <a name="store-events"></a>Olayları depola
 

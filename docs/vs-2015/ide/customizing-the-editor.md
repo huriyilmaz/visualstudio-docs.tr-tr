@@ -13,16 +13,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 87a27cdb6b278a01434662017e05e5dca38b8c9d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665854"
 ---
 # <a name="customizing-the-editor"></a>Düzenleyiciyi Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Biçimlendirme, sekme, yazı tipi ve renkler, IntelliSense ve düzenleyicinin diğer birçok özelliğini genel veya belirli bir dil düzenleyicisinde seçenekleri değiştirerek özelleştirebilirsiniz. Bu seçenekler hakkında daha fazla bilgi için bkz. [metin düzenleyici seçenekleri Iletişim kutusu](../ide/reference/text-editor-options-dialog-box.md) veya **hızlı Başlat**'a `Editor` türü. Ayrıca, düzenleyici pencerelerinin nasıl görüntülendiğini de değiştirebilirsiniz.
+Biçimlendirme, sekme, yazı tipi ve renkler, IntelliSense ve düzenleyicinin diğer birçok özelliğini genel veya belirli bir dil düzenleyicisinde seçenekleri değiştirerek özelleştirebilirsiniz. Bu seçenekler hakkında daha fazla bilgi için bkz. [metin düzenleyici seçenekleri Iletişim kutusu](../ide/reference/text-editor-options-dialog-box.md) veya `Editor` **Hızlı Başlat**'a yazma. Ayrıca, düzenleyici pencerelerinin nasıl görüntülendiğini de değiştirebilirsiniz.
 
 ## <a name="in-this-section"></a>Bu Bölümde
  Bu konularda metin ve kod düzenleyicisinin görünüm ve davranışının nasıl ayarlanacağı açıklanmaktadır.

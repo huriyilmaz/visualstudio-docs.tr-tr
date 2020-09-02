@@ -1,5 +1,5 @@
 ---
-title: '&lt;loc &gt; (JavaScript) | Microsoft Docs'
+title: '&lt;Loc &gt; (JavaScript) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,18 +13,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cf6016b2c12fd5ebe7cfb76c14c776508d99d2db
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651472"
 ---
-# <a name="ltlocgt-javascript"></a>&lt;loc &gt; (JavaScript)
+# <a name="ltlocgt-javascript"></a>&lt;Loc &gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Yerelleştirilmiş IntelliSense bilgilerini sağlayan sepet dosyasının konumunu ve türünü belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 <loc filename="filename"
@@ -32,19 +32,19 @@ Yerelleştirilmiş IntelliSense bilgilerini sağlayan sepet dosyasının konumun
 ```
 
 #### <a name="parameters"></a>Parametreler
- Isteğe bağlı `filename`. Bağımsız kültür için yerelleştirme bilgilerini içeren sepet dosyasının kök adı. Visual Studio yerelleştirme bilgilerini aradığında, bu dosyanın kültüre özgü bir sürümünü bulmaya çalışır. Örneğin, `filename` jQuery. xml ise, Visual Studio `<loc>` öğesini içeren. js dosyası ile aynı konumdaki doğru kültüre özgü klasörü (JA gibi) arar. Kültüre özgü bir klasör bulunursa, bir jQuery. xml dosyasının mevcut olup olmadığını denetler. Doğru dosyayı bulamazsa, bunun yerine yönetilen kaynak konum kurallarını kullanır. @No__t_0 varsayılan değeri, geçerli dosyanın adıdır, ancak. js yerine. xml uzantısıyla.
+ `filename` Seçim. Bağımsız kültür için yerelleştirme bilgilerini içeren sepet dosyasının kök adı. Visual Studio yerelleştirme bilgilerini aradığında, bu dosyanın kültüre özgü bir sürümünü bulmaya çalışır. Örneğin, jquery.xml ise `filename` , Visual Studio öğeyi içeren. js dosyası ile aynı konumdaki doğru kültüre özgü klasörü (ja gibi) arar `<loc>` . Kültüre özgü bir klasör bulunursa, içinde bir jquery.xml dosyasının bulunup bulunmadığını denetler. Doğru dosyayı bulamazsa, bunun yerine yönetilen kaynak konum kurallarını kullanır. Varsayılan değeri, `filename` . js yerine. xml uzantısıyla, geçerli dosyanın adıdır.
 
- Isteğe bağlı `format`. Yerelleştirme için kullanılan sepet dosyasının türü. Açık Ajax meta verileri tarafından tanımlanan ileti demeti kullanımını belirtmek için `messagebundle` kullanın. Önerilen biçim `messagebundle`. Ancak, bu biçim Microsoft Ajax veya. winmd dosyalarında desteklenmez. Microsoft Ajax ve Windows Çalışma Zamanı tarafından kullanılan standart .NET Framework yerelleştirme biçimini belirtmek için `vsdoc` kullanın. Bu öznitelik isteğe bağlıdır. Varsayılan biçimdir `vsdoc`.
+ `format` Seçim. Yerelleştirme için kullanılan sepet dosyasının türü. `messagebundle`Açık Ajax meta verileri tarafından tanımlanan ileti demeti kullanımını belirtmek için kullanın. `messagebundle` önerilen biçimdir. Ancak, bu biçim Microsoft Ajax veya. winmd dosyalarında desteklenmez. `vsdoc`Microsoft Ajax ve Windows çalışma zamanı tarafından kullanılan standart .NET Framework yerelleştirme biçimini belirtmek için kullanın. Bu öznitelik isteğe bağlıdır. `vsdoc` Varsayılan biçimdir.
 
 ## <a name="remarks"></a>Açıklamalar
- @No__t_0 öğesi, `<reference>` öğesiyle aynı bölümdeki dosyanın en üstünde yer almalıdır. @No__t_0 öğesi için kullanım kuralları `<reference>` öğesi ile aynıdır. Daha fazla bilgi için, [JavaScript IntelliSense](../ide/javascript-intellisense.md)'Teki "başvuru yönergeleri" bölümüne bakın.
+ `<loc>`Öğesi, öğesiyle aynı bölümdeki dosyanın en üstünde yer almalıdır `<reference>` . Öğesi için kullanım kuralları `<loc>` öğesi ile aynıdır `<reference>` . Daha fazla bilgi için, [JavaScript IntelliSense](../ide/javascript-intellisense.md)'Teki "başvuru yönergeleri" bölümüne bakın.
 
- Visual Studio her. js dosyası için tek bir `<loc>` öğesini işler. Birden çok `<loc>` öğesi varsa, yalnızca tek bir `<loc>` öğesi kullanılır. Hangi `<loc>` öğesinin kullanılacağını belirlemek için davranış tanımlı değil.
+ Visual Studio `<loc>` her. js dosyası için tek bir öğeyi işler. Birden çok `<loc>` öğe varsa, yalnızca tek bir `<loc>` öğe kullanılır. Kullanılacak öğeyi belirleme davranışı `<loc>` tanımlı değil.
 
- İleti paketi biçimini kullanırken, XML belge açıklamalarındaki `locid` özniteliğini kullanarak `name` öznitelik değerini belirtin.
+ İleti paketi biçimini kullanırken, `locid` öznitelik değerini belirtmek IÇIN XML belge açıklamalarındaki özniteliğini kullanın `name` .
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, `<loc>` öğesinin messagedemeti biçimiyle nasıl kullanılacağını gösterir. Aşağıdaki XML 'i messageFilename. xml adlı bir dosyaya ekleyin ve dosyayı `filename` parametresinin açıklamasında belirtildiği gibi doğru kültüre özgü klasöre yerleştirin.
+ Aşağıdaki örnek, `<loc>` öğesinin messagedemeti biçimiyle nasıl kullanılacağını gösterir. Aşağıdaki XML 'i messageFilename.xml adlı bir dosyaya ekleyin ve dosyayı, parametrenin açıklamasında belirtildiği gibi doğru kültüre özgü klasöre yerleştirin `filename` .
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -56,7 +56,7 @@ Yerelleştirilmiş IntelliSense bilgilerini sağlayan sepet dosyasının konumun
 
 ```
 
- Messagedemeti örneği için, projenizdeki bir JavaScript dosyasına aşağıdaki kodu ekleyin. @No__t_0 öğesi JavaScript dosyasındaki ilk satır olarak görünmelidir. Bu koddaki açıklamalar, varsa yerelleştirilmiş açıklamalarla değiştirileceğini caktır.
+ Messagedemeti örneği için, projenizdeki bir JavaScript dosyasına aşağıdaki kodu ekleyin. `<loc>`Öğe, JavaScript dosyasının ilk satırı olarak görünmelidir. Bu koddaki açıklamalar, varsa yerelleştirilmiş açıklamalarla değiştirileceğini caktır.
 
 ```javascript
 /// <loc filename="messageFilename.xml" format="messagebundle"/>
@@ -70,7 +70,7 @@ function doSomething(a,b)
 
 ```
 
- Aşağıdaki örnek VSDoc biçimini kullanır. Aşağıdaki XML 'i scriptFilename. xml adlı bir dosyaya ekleyin ve dosyayı doğru kültüre özgü klasöre yerleştirin.
+ Aşağıdaki örnek VSDoc biçimini kullanır. Aşağıdaki XML 'i scriptFilename.xml adlı bir dosyaya ekleyin ve dosyayı doğru kültüre özgü klasöre yerleştirin.
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
@@ -102,4 +102,4 @@ function illuminate(a)
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [XML Belge Açıklamaları](../ide/xml-documentation-comments-javascript.md)
+ [XML belge açıklamaları](../ide/xml-documentation-comments-javascript.md)

@@ -10,25 +10,25 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d1e15a8c00a0614d020defd2df7b06665289a8b2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72666058"
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 Metin Şablonları Yazma Yönergeleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-@No__t_0 içinde program kodu veya diğer uygulama kaynakları oluşturuyorsanız bu genel yönergeler yararlı olabilir. Bunlar sabit kurallar değildir.
+Bu genel yönergeler ' de program kodu veya diğer uygulama kaynakları oluşturuyorsanız yararlı olabilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Bunlar sabit kurallar değildir.
 
 ## <a name="guidelines-for-design-time-t4-templates"></a>Tasarım zamanı T4 şablonları için yönergeler
- Tasarım zamanı T4 şablonları, tasarım zamanında [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projenizde kod üreten şablonlardır. Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
+ Tasarım zamanı T4 şablonları, tasarım zamanında projenizde kod üreten şablonlardır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [T4 Metin şablonları kullanarak tasarım zamanı kodu oluşturma](../modeling/design-time-code-generation-by-using-t4-text-templates.md).
 
  Uygulamanın değişken yönlerini oluşturun.
 Kod üretimi, uygulamanın proje sırasında değişebilir ya da uygulamanın farklı sürümleri arasında değişiklik gösterebilir. Ne üretilecektir daha kolay bir şekilde belirleyebilmeniz için bu değişken yönlerini daha değişmez açılardan ayırın. Örneğin, uygulamanız bir Web sitesi sağlıyorsa, bir sayfadan diğerine gezinti yollarını tanımlayan mantığın standart sayfasını ayırın.
 
  Değişken yönlerini bir veya daha fazla kaynak modelinde kodlayın.
-Model, oluşturulacak kodun değişken bölümlerinin belirli değerlerini almak için her şablonun okuduğu bir dosya veya veritabanıdır. Modeller veritabanları, kendi tasarımınızın, diyagramlarınızın veya etki alanına özgü dillerinizin XML dosyaları olabilir. Genellikle, bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projesinde birçok dosya oluşturmak için bir model kullanılır. Her dosya ayrı bir şablondan oluşturulur.
+Model, oluşturulacak kodun değişken bölümlerinin belirli değerlerini almak için her şablonun okuduğu bir dosya veya veritabanıdır. Modeller veritabanları, kendi tasarımınızın, diyagramlarınızın veya etki alanına özgü dillerinizin XML dosyaları olabilir. Genellikle, bir proje içinde birçok dosya oluşturmak için bir model kullanılır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Her dosya ayrı bir şablondan oluşturulur.
 
  Bir projede birden fazla model kullanabilirsiniz. Örneğin, Web sayfaları arasında gezinti için bir model ve sayfaların düzeni için ayrı bir model tanımlayabilirsiniz.
 
@@ -43,22 +43,22 @@ Elde edilen kodun, kullanıcıların gerektirdiği şekilde çalıştığını d
  Bazı durumlarda, Genel testler doğrudan modelde gerçekleştirilebilir. Örneğin, Web sitesindeki her sayfanın başka bir gezinmede erişilebilir olmasını sağlayan bir test yazabilirsiniz.
 
  Özel koda izin ver: kısmi sınıflar oluşturun.
-Oluşturulan koda ek olarak el ile yazdığınız koda izin verin. Kod oluşturma şemasının ortaya çıkabilecek tüm olası Çeşitlemeler için hesap yapabilmesi olağan dışı bir durum olabilir. Bu nedenle, oluşturulan kodların bazılarını eklemek veya geçersiz kılmak için beklemeniz gerekir. Oluşturulan malzemenin [!INCLUDE[csprcs](../includes/csprcs-md.md)] veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] gibi bir .NET dilinde olması halinde, iki strateji özellikle yararlı olur:
+Oluşturulan koda ek olarak el ile yazdığınız koda izin verin. Kod oluşturma şemasının ortaya çıkabilecek tüm olası Çeşitlemeler için hesap yapabilmesi olağan dışı bir durum olabilir. Bu nedenle, oluşturulan kodların bazılarını eklemek veya geçersiz kılmak için beklemeniz gerekir. Oluşturulan malzemenin veya gibi bir .NET dilinde olduğu yerlerde [!INCLUDE[csprcs](../includes/csprcs-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , özellikle yararlı olur:
 
 - Oluşturulan sınıflar kısmi olmalıdır. Bu, oluşturulan koda içerik eklemenize olanak sağlar.
 
 - Sınıfların, diğeri öğesinden devralan çiftler halinde oluşturulması gerekir. Temel sınıf, oluşturulan tüm yöntemleri ve özellikleri içermeli ve türetilmiş sınıf yalnızca oluşturucuları içermelidir. Bu, el ile yazılmış kodunuzun oluşturulan yöntemlerin herhangi birini geçersiz kılmasını sağlar.
 
-  XML gibi diğer oluşturulmuş dillerde, el ile yazılmış ve oluşturulmuş içeriğin basit birleşimlerini yapmak için `<#@include#>` yönergesini kullanın. Daha karmaşık durumlarda, oluşturulan dosyayı el ile yazılmış dosyalarla birleştiren bir işlem sonrası adımı yazmanız gerekebilir.
+  XML gibi diğer oluşturulmuş dillerde, `<#@include#>` el ile yazılmış ve oluşturulmuş içeriğin basit birleşimlerini oluşturmak için yönergesini kullanın. Daha karmaşık durumlarda, oluşturulan dosyayı el ile yazılmış dosyalarla birleştiren bir işlem sonrası adımı yazmanız gerekebilir.
 
-  Birden çok şablonlarda benzer metin ve kod bloklarını tekrarlamadan kaçınmak Için ortak malzemeleri içerme dosyaları veya çalışma zamanı şablonlarına taşıyın, `<#@ include #>` yönergesini kullanın. Daha fazla bilgi için bkz. [T4 Içerme yönergesi](../modeling/t4-include-directive.md).
+  Birden çok şablonlarda benzer metin ve kod bloklarını tekrarlamadan kaçınmak Için ortak malzemeleri içerme dosyalarına veya çalışma zamanı şablonlarına taşıyın, `<#@ include #>` yönergesini kullanın. Daha fazla bilgi için bkz. [T4 Içerme yönergesi](../modeling/t4-include-directive.md).
 
-  Ayrıca, ayrı bir projede çalışma zamanı metin şablonları oluşturabilir ve bunları tasarım zamanı şablonundan çağırabilirsiniz. Bunu yapmak için `<#@ assembly #>` yönergesini kullanarak ayrı projeye erişin.
+  Ayrıca, ayrı bir projede çalışma zamanı metin şablonları oluşturabilir ve bunları tasarım zamanı şablonundan çağırabilirsiniz. Bunu yapmak için, `<#@ assembly #>` farklı projeye erişmek üzere yönergesini kullanın.
 
   Büyük kod bloklarını ayrı bir derlemeye taşımayı düşünün.
-  Büyük kod bloklarında ve sınıf özellik bloklarınız varsa, bu kodların bazılarını ayrı bir projede derleyebileceğiniz yöntemlere taşımak yararlı olabilir. Şablondaki koda erişmek için `<#@ assembly #>` yönergesini kullanabilirsiniz. Daha fazla bilgi için bkz. [T4 derleme yönergesi](../modeling/t4-assembly-directive.md).
+  Büyük kod bloklarında ve sınıf özellik bloklarınız varsa, bu kodların bazılarını ayrı bir projede derleyebileceğiniz yöntemlere taşımak yararlı olabilir. `<#@ assembly #>`Şablondaki koda erişmek için yönergesini kullanabilirsiniz. Daha fazla bilgi için bkz. [T4 derleme yönergesi](../modeling/t4-assembly-directive.md).
 
-  Yöntemleri şablonun devraldığı bir soyut sınıfa koyabilirsiniz. Soyut sınıfın <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> devralması gerekir. Daha fazla bilgi için bkz. [T4 şablon yönergesi](../modeling/t4-template-directive.md).
+  Yöntemleri şablonun devraldığı bir soyut sınıfa koyabilirsiniz. Soyut sınıf öğesinden devralması gerekir <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation?displayProperty=fullName> . Daha fazla bilgi için bkz. [T4 şablon yönergesi](../modeling/t4-template-directive.md).
 
   Kod oluşturma, yapılandırma dosyaları için bir değişken uygulama yazmanın bir yöntemi, bir yapılandırma dosyasını kabul eden genel program kodunu yazmaktır. Bu şekilde yazılmış bir uygulama çok esnektir ve uygulamanın yeniden oluşturulması gerekmeden iş gereksinimleri değiştiğinde yeniden yapılandırılabilir. Ancak, bu yaklaşımın bir dezavantajı uygulamanın daha belirli bir uygulamadan daha az iyi bir şekilde gerçekleştirilecektir. Ayrıca, kısmen en genel türler ile ilgilendiğinden, program kodunun okunması ve saklanması daha zor olacaktır.
 
@@ -100,7 +100,7 @@ Her çalışma zamanı şablonu, şablonla aynı ada sahip kısmi bir sınıf ta
 
  `private string ComputeTotal() { ... }`
 
- Özel koda izin ver: uzantı noktaları belirtin \< # + sınıf özelliği blokları # > üzerinde sanal yöntemler oluşturmayı düşünün. Bu, tek bir şablonun değişiklik yapılmadan birçok bağlamda kullanılmasına izin verir. Şablonu değiştirmek yerine, en düşük ek mantığı sağlayan bir türetilmiş sınıf oluşturabilirsiniz. Türetilmiş sınıf, normal bir kod olabilir veya bir çalışma zamanı şablonu olabilir.
+ Özel koda izin ver: uzantı noktaları sağlar ' de sanal yöntemler oluşturmayı düşünün \<#+ class feature blocks #> . Bu, tek bir şablonun değişiklik yapılmadan birçok bağlamda kullanılmasına izin verir. Şablonu değiştirmek yerine, en düşük ek mantığı sağlayan bir türetilmiş sınıf oluşturabilirsiniz. Türetilmiş sınıf, normal bir kod olabilir veya bir çalışma zamanı şablonu olabilir.
 
  Örneğin, MyStandardRunTimeTemplate.tt içinde:
 
@@ -122,9 +122,9 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
 ```
 
 ## <a name="guidelines-for-all-t4-templates"></a>Tüm T4 şablonları için yönergeler
- Metin oluşturma işleminden ayrı veri toplamayı hesaplama ve metin bloklarını karıştırmaktan kaçının. Her metin şablonunda, değişkenleri ayarlamak ve karmaşık hesaplamalar gerçekleştirmek için # Code Block # > ilk \< kullanın. İlk metin bloğundan şablonun sonuna veya ilk \< # + sınıf özelliği blok # >, uzun ifadelerden kaçının ve metin blokları içermediği sürece döngülerin ve koşullarından kaçının. Bu uygulama, şablonu okumayı ve bakımını daha kolay hale getirir.
+ Metin oluşturma işleminden ayrı veri toplamayı hesaplama ve metin bloklarını karıştırmaktan kaçının. Her metin şablonunda, \<# code block #> değişkenleri ayarlamak ve karmaşık hesaplamalar gerçekleştirmek için ilkini kullanın. İlk metin bloğundan önce şablonun sonuna veya birinciden, \<#+ class feature block #> uzun ifadelerden kaçının ve metin blokları içermedikçe döngülerin ve koşullarından kaçının. Bu uygulama, şablonu okumayı ve bakımını daha kolay hale getirir.
 
- İçerme dosyaları için `.tt` kullanmayın, içerme dosyaları için `.ttinclude` gibi farklı bir dosya adı uzantısı kullanın. Yalnızca çalışma zamanı veya tasarım zamanı metin şablonları olarak işlenmesini istediğiniz dosyalar için `.tt` kullanın. Bazı durumlarda, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] `.tt` dosyalarını tanır ve kendi özelliklerini işleme için otomatik olarak ayarlar.
+ `.tt`İçerme dosyaları için kullanmayın, gibi farklı bir dosya adı uzantısı kullanın `.ttinclude` . `.tt`Yalnızca çalışma zamanı veya tasarım zamanı metin şablonları olarak işlenmesini istediğiniz dosyalar için kullanın. Bazı durumlarda, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] dosyaları tanır `.tt` ve işlenmek üzere özelliklerini otomatik olarak ayarlar.
 
  Her şablonu sabit bir prototip olarak başlatın.
 Oluşturmak istediğiniz kod veya metnin bir örneğini yazın ve doğru olduğundan emin olun. Ardından uzantısını. tt olarak değiştirin ve modeli okuyarak içeriği değiştiren kodu artımlı olarak ekleyin.

@@ -1,5 +1,5 @@
 ---
-title: Dil yer alan | Microsoft Docs
+title: Kapsanan diller | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,30 +11,30 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0920999eee7460c8bf697e245bae55a3641b8e18
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184284"
 ---
 # <a name="contained-languages"></a>Kapsanan Dillerin
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)] 
 
-*Bulunan diller* diğer diller tarafından bulunan diller. Örneğin, HTML biçiminde [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] sayfalar içerebilir [!INCLUDE[csprcs](../includes/csprcs-md.md)] veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] betikler. Bir çift dil mimarisi, .aspx dosyası Düzenleyicisi HTML ve komut dosyası dili için IntelliSense, renklendirme ve diğer düzenleme özellikleri sağlamak için gereklidir.  
+*İçerilen diller* , diğer dillerin içerdiği dillerdir. Örneğin, sayfalardaki HTML, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)] veya [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] komut dosyaları içerebilir. . Aspx dosya Düzenleyicisi 'nin hem HTML hem de komut dosyası dili için IntelliSense, renklendirme ve diğer düzenleme özellikleri sağlaması için çift dil mimarisi gereklidir.  
   
 ## <a name="implementation"></a>Uygulama  
- Uygulamanız için bağımsız dillerini en önemli arabirimi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguage> arabirimi. Bu arabirim, bir birincil dili içinde barındırılan herhangi bir dil tarafından uygulanır. Dil hizmetin Renklendirici, metin Görünümü Filtresi ve birincil dil hizmeti kimliği erişmenizi sağlar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguageFactory> Oluşturmanızı sağlayan bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguage> arabirimi. Aşağıdaki adımlar nasıl uygulayacağınızı içindeki bir dil gösterir:  
+ Kapsanan diller için uygulamanız gereken en önemli arabirim <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguage> arabirimidir. Bu arabirim, birincil bir dil içinde barındırılabilecek herhangi bir dil tarafından uygulanır. Dil hizmetinin Colorizer, metin görünümü filtresi ve birincil dil hizmeti KIMLIĞINE erişim sağlar. , <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguageFactory> Bir arabirim oluşturmanıza olanak sağlar <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguage> . Aşağıdaki adımlarda, içerilen bir dilin nasıl uygulanacağı gösterilmektedir:  
   
-1. Kullanım `QueryService()` dil hizmet kimliği ve arabirimi Kimliğini almak için <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguageFactory>.  
+1. `QueryService()`Dil HIZMETI kimliğini ve ARABIRIM kimliğini almak için kullanın <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguageFactory> .  
   
-2. Çağrı <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguageFactory.GetLanguage%2A> yöntemi oluşturmak için bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguage> arabirimi. Başarılı bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> arabirimi, bir veya daha fazla [kimlikleri öğesi](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID>) ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator> arabirimi.  
+2. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguageFactory.GetLanguage%2A>Bir arabirim oluşturmak için yöntemini çağırın <xref:Microsoft.VisualStudio.TextManager.Interop.IVsContainedLanguage> . Bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> arabirim, bir veya daha fazla [öğe kimliği](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID>) ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator> arabirim geçirin.  
   
-3. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator> Metin arabelleği Düzenleyicisi nesnedir, arabirim, bir birincil dosya bir konumda ikincil dilin arabelleğine eşleştirmek için gereken temel hizmetleri sağlar.  
+3. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator>Metin arabelleği Düzenleyicisi nesnesi olan arabirim, birincil bir dosyadaki konumları ikincil dilin arabelleğine eşlemek için gereken temel hizmetleri sağlar.  
   
-     Örneğin, bir tek bir .aspx dosyasına ASP, HTML ve içerdiği tüm kod birincil dosya içerir. Ancak, ikincil bir arabellek ikincil arabelleği geçerli kod dosyası yapmak için bir sınıf tanımları ile birlikte yalnızca kapsanan kod içerir. Arabellek Düzenleyici bir arabellek düzenlemeleri birbirleriyle koordine işini gerçekleştirir.  
+     Örneğin, tek bir. aspx dosyasında, birincil dosya ASP, HTML ve içerdiği tüm kodu içerir. Ancak, İkincil arabellek, ikincil arabelleği geçerli bir kod dosyası haline getirmek için, tüm sınıf tanımlarına sahip yalnızca içerilen kodu içerir. Arabellek Düzenleyicisi, bir arabellekten diğerine düzenleme yapma işini işler.  
   
-4. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator.SetSpanMappings%2A> Birincil dili olan yöntemi ilgili metin ikincil arabellekteki metni, arabellek içinde eşlendiği arabellek Düzenleyici söyler.  
+4. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator.SetSpanMappings%2A>Birincil dil olan yöntemi, arabellek düzenleyicisine arabelleğin içindeki metnin ikincil arabellekte karşılık gelen metinle eşlendiğini söyler.  
   
-     Bir dizide dil geçirir <xref:Microsoft.VisualStudio.TextManager.Interop.NewSpanMapping> yapısı, şu anda yalnızca bir birincil ve ikincil bir yayılma içerir.  
+     Dil, <xref:Microsoft.VisualStudio.TextManager.Interop.NewSpanMapping> Şu anda yalnızca birincil ve ikincil bir yayılma içeren bir yapının dizisini geçirir.  
   
-5. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator.MapPrimaryToSecondarySpan%2A> Yöntemi ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator.MapSecondaryToPrimarySpan%2A> yöntem birincil ikincil arabelleğe ve eşleme sağlar.
+5. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator.MapPrimaryToSecondarySpan%2A>Yöntemi ve yöntemi, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBufferCoordinator.MapSecondaryToPrimarySpan%2A> birincil ve ikincil arabelleğe eşlemeyi sağlar ve tam tersi de geçerlidir.

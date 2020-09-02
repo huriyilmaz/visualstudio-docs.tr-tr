@@ -13,41 +13,41 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 008e7ca15595db249c05485f0d9e8f8b1277993e
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595468"
 ---
 # <a name="log-devenvexe"></a>/Log (devenv.exe)
 
-Tüm etkinliği, sorun giderme amacıyla günlük dosyasına kaydeder. Bu dosya, en az `devenv /log` bir kez aradıktan sonra görüntülenir. Varsayılan olarak, günlük dosyası burada bulunur:
+Tüm etkinliği, sorun giderme amacıyla günlük dosyasına kaydeder. Bu dosya, `devenv /log` en az bir kez çağrıldıktan sonra görüntülenir. Varsayılan olarak, günlük dosyası şurada bulunur:
 
-**%APPDATA%\\\\Microsoft\\VisualStudio**\<Sürüm\>**\\ActivityLog.xml**
+**% AppData% \\ Microsoft \\ VisualStudio \\ ** \<Version\> ** \\ActivityLog.xml**
 
-Nerede \<\> Sürüm Visual Studio sürümüdür. Ancak, farklı bir yol ve dosya adı belirtebilirsiniz.
+\<Version\>Visual Studio sürümüdür. Ancak, farklı bir yol ve dosya adı belirtebilirsiniz.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```shell
 devenv /Log NameOfLogFile
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
-- *NameoflogFile*
+- *NameOfLogFile*
 
-  Gereklidir. Kaydolmak için günlük dosyasının tam yolu ve adı.
+  Gereklidir. Kaydedilecek günlük dosyasının tam yolu ve adı.
 
 ## <a name="remarks"></a>Açıklamalar
 
 Bu anahtar, diğer tüm anahtarlardan sonra komut satırının en sonunda görünmelidir.
 
-Günlük, yalnızca `/Log` anahtarla açtığınız Visual Studio'nun tüm örnekleri için yazılır.
+Günlük yalnızca, anahtarla açtığınız tüm Visual Studio örnekleri için yazılır `/Log` .
 
 ## <a name="example"></a>Örnek
 
-Bu örnek, kullanıcının `MyVSLog.xml` ev dizinindeki dosyaya günlüğe kaydetmeyi yönlendirir.
+Bu örnek `MyVSLog.xml` , kullanıcının giriş dizinindeki dosyasına günlüğü yönlendirir.
 
 ```shell
 devenv /log "%USERPROFILE%\MyVSLog.xml"

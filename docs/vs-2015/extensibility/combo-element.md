@@ -1,5 +1,5 @@
 ---
-title: Combos öğesi | Microsoft Docs
+title: Birleşik öğe öğesi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: daa89266d653743a743f42e5f0b8e11c954adc1a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184408"
 ---
 # <a name="combo-element"></a>Combo Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir açılan kutunun içinde görünen komutlar tanımlar. Şu şekilde birleşik giriş kutuları dört çeşit vardır: Aşağı açılan, DynamicCombo, IndexCombo ve MRUCombo.  
+Birleşik giriş kutusunda görünen komutları tanımlar. Aşağıda gösterildiği gibi dört tür Birleşik giriş kutusu vardır: DropDownCombo, DynamicCombo, IndexCombo ve MRUCombo.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <combo guid="guidMyCommandSet" id="MyCommand" defaultWidth="20" idCommandList="MyCommandListID" priority="0x102" type="DropDownCombo">  
@@ -40,28 +40,28 @@ Bir açılan kutunun içinde görünen komutlar tanımlar. Şu şekilde birleşi
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|guid|Gerekli. GUID/ID komut tanımlayıcısı GUİD'si.|  
-|kimlik|Gerekli. Kimliği bir GUID/ID komut tanımlayıcısı.|  
-|defaultWidth|Gerekli. Birleşik giriş kutusu için bir piksel genişliği belirten bir tamsayı.|  
-|idCommandList|Gerekli. Birleşik giriş kutusunda görüntülenecek öğelerin listesini almak için etkin bir komutu kuyruğa hedef gönderilen bir kimliği. Kimlik denetimi ile aynı GUID kapsamda olur.|  
-|priority|İsteğe bağlı. Bir sayısal değer yönelik önceliği belirtir.|  
-|türü|İsteğe bağlı. Düğmenin türü belirten bir numaralandırılmış değeri.<br /><br /> Belirtilmemişse, düğme kullanır.<br /><br /> Aşağı açılan<br /> VSPackage'ı bu birleşik giriş kutusunun içeriğini doldurma için sorumludur. Kullanıcının herhangi bir şey bu açılan metin kutusuna yazamazsınız.<br /><br /> DynamicCombo<br /> VSPackage'ı bu birleşik giriş kutusunun içeriğini doldurmak için sorumludur. Kullanıcı bu birleşik düzenleyebilir ve ayrıca öğeleri seçin.<br /><br /> IndexCombo<br /> BT'nin dışında DynamicCombo aynı metin yerine öğenin dizinini oluşturur.<br /><br /> MRUCombo<br /> VSPackage'ı adına tümleşik geliştirme ortamı (IDE) tarafından doldurulur.  Kullanıcı bu birleşik giriş kutusunda düzenleyebilirsiniz. Son 16 girişleri birleşik giriş kutusu başına en fazla IDE hatırlar.<br /><br /> Kullanıcı bir birleşik giriş kutusunda seçerse ya da yeni bir şeyler girer, IDE uygun VSPackage size bildirir.|  
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID 'SI.|  
+|kimlik|Gereklidir. GUID/ID komut tanımlayıcısının KIMLIĞI.|  
+|defaultWidth|Gereklidir. Birleşik giriş kutusu için piksel genişliğini belirten bir tamsayı.|  
+|ıdcommandlist|Gereklidir. Birleşik giriş kutusunda görüntülenecek öğe listesini almak için etkin komutu hedefine gönderilen bir kimlik. KIMLIK, denetimle aynı GUID kapsamında olacaktır.|  
+|Priority|İsteğe bağlı. Önceliği belirten sayısal bir değer.|  
+|tür|İsteğe bağlı. Düğme türünü belirten, numaralandırılmış bir değer.<br /><br /> Verilmezse, düğme kullanır.<br /><br /> DropDownCombo<br /> VSPackage, bu Birleşik giriş kutusunun içeriğini doldurmaktan sorumludur. Kullanıcı bu açılan kutunun metin kutusuna herhangi bir şey yazamaz.<br /><br /> DynamicCombo<br /> VSPackage, bu Birleşik giriş kutusunun içeriğini doldurmaktan sorumludur. Kullanıcı bu Birleşik eklentiyi düzenleyebilir ve içindeki öğeleri de seçebilir.<br /><br /> IndexCombo<br /> DynamicCombo ile aynıdır, ancak kendi metni yerine öğenin dizinini oluşturur.<br /><br /> MRUCombo<br /> VSPackage adına tümleşik geliştirme ortamı (IDE) tarafından doldurulmuştur.  Kullanıcı bu Birleşik giriş kutusunda düzenleyebilir. IDE, Birleşik giriş kutusu başına son 16 girişe kadar hatırlar.<br /><br /> Kullanıcı Birleşik giriş kutusunda bir şey seçtiğinde veya yeni bir şey girerse, IDE uygun VSPackage 'a bildirim gönderir.|  
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|Üst öğe|İsteğe bağlı. Düğmenin üst öğe.|  
-|CommandFlag|Gerekli. Bkz: [Command Flag öğesi](../extensibility/command-flag-element.md). Bir düğme için geçerli CommandFlag değerler aşağıdaki gibidir.<br /><br /> -CaseSensitive<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> -DynamicVisibility<br /><br /> -Süzme<br /><br /> -IconAndText<br /><br /> -NoAutoComplete<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -StretchHorizontally|  
-|Dizeler|Gerekli. Bkz: [dizeleri öğesi](../extensibility/strings-element.md). Alt ButtonText öğesi tanımlanmalıdır.|  
-|Ek Açıklama|İsteğe bağlı bir açıklama.|  
+|Üst|İsteğe bağlı. Düğmenin üst öğesi.|  
+|CommandFlag|Gereklidir. Bkz. [komut bayrağı öğesi](../extensibility/command-flag-element.md). Bir düğme için geçerli CommandFlag değerleri aşağıdaki gibidir.<br /><br /> -CaseSensitive<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> -DynamicVisibility<br /><br /> -Filtre tuşları<br /><br /> -IconAndText<br /><br /> -NoAutoComplete<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -Üzerinde yatay|  
+|Dizeler|Gereklidir. Bkz. [dizeler öğesi](../extensibility/strings-element.md). Alt ButtonText öğesi tanımlanmalıdır.|  
+|Ek Açıklama|İsteğe bağlı açıklama.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Commands Öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutları koleksiyonunu temsil eder.|  
+|[Commands öğesi](../extensibility/commands-element.md)|VSPackage araç çubuğundaki komutların koleksiyonunu temsil eder.|  
   
 ## <a name="example"></a>Örnek  
   

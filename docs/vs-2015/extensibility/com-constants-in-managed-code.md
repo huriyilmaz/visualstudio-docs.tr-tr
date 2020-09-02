@@ -11,16 +11,16 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f502f8ac10c28ff8c25433792ab60caf6ee05bfc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184441"
 ---
 # <a name="com-constants-in-managed-code"></a>Yönetilen Kodda COM Sabitleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yönetilen paket Framework (MPF) bazı standart COM sabitleri yönetilen kod için kullanılabilir hale getirir. Bu sabitler, başvuru amacıyla aşağıda listelenmiştir.  
+Yönetilen paket çerçevesi (MPF), bazı standart COM sabitleri yönetilen kod için kullanılabilir hale getirir. Bu sabitler, başvurunuz için aşağıda listelenmiştir.  
   
 ## <a name="boolean-hresult-values"></a>Boole HRESULT değerleri  
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>  

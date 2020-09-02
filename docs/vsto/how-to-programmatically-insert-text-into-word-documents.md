@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: aef597099964333771fd488e0541b4ea4daf4553
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541511"
 ---
 # <a name="how-to-programmatically-insert-text-into-word-documents"></a>Nasıl yapılır: program aracılığıyla Word belgelerine metin ekleme
@@ -89,7 +89,7 @@ ms.locfileid: "85541511"
      [!code-csharp[Trin_VstcoreWordAutomation#55](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#55)]
 
 ## <a name="insert-text-using-typetext"></a>TypeText kullanarak metin ekleme
- <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A>Yöntemi, Seçime metin ekler. <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A>kullanıcının bilgisayarında ayarlanan seçeneklere bağlı olarak farklı davranır. Aşağıdaki yordamdaki kod bir <xref:Microsoft.Office.Interop.Word.Selection> nesne değişkeni bildirir ve açıksa **üzerine yazma** seçeneğini kapatır. **Üzerine yazma** seçeneği etkinleştirilirse, imlecin yanındaki tüm metinlerin üzerine yazılır.
+ <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A>Yöntemi, Seçime metin ekler. <xref:Microsoft.Office.Interop.Word.Selection.TypeText%2A> kullanıcının bilgisayarında ayarlanan seçeneklere bağlı olarak farklı davranır. Aşağıdaki yordamdaki kod bir <xref:Microsoft.Office.Interop.Word.Selection> nesne değişkeni bildirir ve açıksa **üzerine yazma** seçeneğini kapatır. **Üzerine yazma** seçeneği etkinleştirilirse, imlecin yanındaki tüm metinlerin üzerine yazılır.
 
 ### <a name="to-insert-text-using-the-typetext-method"></a>TypeText yöntemini kullanarak metin eklemek için
 

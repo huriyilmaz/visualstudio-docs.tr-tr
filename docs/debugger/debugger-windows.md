@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c27d2b4436fc5defedcda44c4f7840760018ade
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188547"
 ---
 # <a name="inspect-data-using-debugger-windows-in-visual-studio"></a>Visual Studio 'da hata ayıklayıcı pencerelerini kullanarak verileri İnceleme
@@ -24,18 +24,18 @@ Programınızda hata ayıklarken çoğu hata ayıklayıcı penceresini açabilir
 |-|-|-|
 |Kesme noktaları|CTRL + ALT + B|[Kesme noktaları kullan](../debugger/using-breakpoints.md)|
 |Özel durum ayarları|CTRL + ALT + E|[Hata ayıklayıcı ile özel durumları yönetme](../debugger/managing-exceptions-with-the-debugger.md)|
-|Çıkış|CTRL + ALT + O|[Çıktı Penceresi](../ide/reference/output-window.md)|
-|Servisi|CTRL + ALT + W, (1, 2, 3, 4)|[İzleme ve Hızlı İzleme Pencereleri](../debugger/watch-and-quickwatch-windows.md)|
+|Çıktı|CTRL + ALT + O|[Çıkış Penceresi](../ide/reference/output-window.md)|
+|İzle|CTRL + ALT + W, (1, 2, 3, 4)|[İzleme ve Hızlı İzleme Pencereleri](../debugger/watch-and-quickwatch-windows.md)|
 |QuickWatch|SHIFT + F9|[İzleme ve Hızlı İzleme Pencereleri](../debugger/watch-and-quickwatch-windows.md)|
 |Otolar|CTRL + ALT + V, A|[Otomatikler ve Yereller Pencereleri](../debugger/autos-and-locals-windows.md)|
 |Ayarlanmalıdır|CTRL + ALT + V, L|[Otomatikler ve Yereller Pencereleri](../debugger/autos-and-locals-windows.md)|
 |Çağrı yığınları|CTRL + ALT + C|[Nasıl Yapılır: Çağrı Yığını Penceresini Kullanma](../debugger/how-to-use-the-call-stack-window.md)|
-|Hemen|CTRL + ALT + ı|[Komut Penceresi](../ide/reference/immediate-window.md)|
+|Hemen|CTRL + ALT + ı|[Komut penceresi](../ide/reference/immediate-window.md)|
 |Paralel Yığınlar|MRK: + SHıFT + D, S|[Paralel Yığınlar Penceresini Kullanma](../debugger/using-the-parallel-stacks-window.md)|
 |Paralel Izleme|MRK: + SHıFT + D, (1, 2, 3, 4)|[Çoklu Iş parçacıklı uygulamalarda hata ayıklamaya başlayın](../debugger/get-started-debugging-multithreaded-apps.md)|
 |İş Parçacıkları|CTRL + ALT + H|[Iş parçacıkları penceresini kullanarak hata ayıkla](../debugger/how-to-use-the-threads-window.md)|
-|Modüller|CTRL + ALT + U|[Nasıl Yapılır: Modüller Penceresini Kullanma](../debugger/how-to-use-the-modules-window.md)|
-|GPU Iş parçacıkları|-|[Nasıl Yapılır: GPU İş Parçacıkları Penceresini Kullanma](../debugger/how-to-use-the-gpu-threads-window.md)|
+|Modül|CTRL + ALT + U|[Nasıl Yapılır: Modüller Penceresini Kullanma](../debugger/how-to-use-the-modules-window.md)|
+|GPU Iş parçacıkları|-|[Nasıl yapılır: GPU Iş parçacıkları penceresini kullanma](../debugger/how-to-use-the-gpu-threads-window.md)|
 |Görevler|MRK: + SHıFT + D, K|[Görevleri Penceresini Kullanma](../debugger/using-the-tasks-window.md)|
 |Python hata ayıklama etkileşimli|SHIFT + ALT + ı|[Python etkileşimli REPL](../python/python-interactive-repl-in-visual-studio.md)|
 |JavaScript Konsolu|CTRL + ALT + V, C|[Hızlı Başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md)|

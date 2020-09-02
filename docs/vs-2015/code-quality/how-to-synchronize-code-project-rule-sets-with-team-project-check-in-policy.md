@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 3c6e7550940f9d2efa5ca228123310f1b861ee76
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651593"
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy"></a>Nasıl yapılır: Takım Projesi İade İlkesiyle Kod Proje Kural Kümelerini Eşitleme
@@ -47,7 +47,7 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 3. **Kod Analizi**' ne tıklayın.
 
-4. **Bu kural kümesini Çalıştır** listesinde **\<Browse... öğesine tıklayın. >** .
+4. **Bu kural kümesini Çalıştır** listesinde, öğesine tıklayın **\<Browse...>** .
 
 5. **Aç** iletişim kutusunda, iade ilkesi kural kümesi dosyasını belirtin.
 
@@ -55,7 +55,7 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 1. Bu konunun önceki kısımlarında yer alan yordamlardan birini izleyerek, proje ayarları iletişim kutusunun Kod Analizi sayfasında takım projesinin iade ilkesini seçin.
 
-2. **Aç**' a tıklayın.
+2. **Aç**’a tıklayın.
 
 3. Kural kümesi düzenleyicisini kullanarak kural ekleyin veya kaldırın.
 
@@ -65,6 +65,6 @@ Kod projeleri için kod analizi ayarlarını, en azından iade ilkesi için kura
 
 5. Kod projesi için Özellikler iletişim kutusunu açın ve **Kod Analizi** sayfasını görüntüleyin.
 
-6. **Bu kural kümesini Çalıştır** listesinde **\<Browse... öğesine tıklayın. >** .
+6. **Bu kural kümesini Çalıştır** listesinde, öğesine tıklayın **\<Browse...>** .
 
 7. **Aç** iletişim kutusunda, kural kümesi dosyasını belirtin.

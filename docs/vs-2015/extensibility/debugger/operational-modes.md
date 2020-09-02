@@ -1,5 +1,5 @@
 ---
-title: Çalışma modları | Microsoft Docs
+title: İşletimsel modlar | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,50 +11,50 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c4009ab6268140117c8fd1294adcc52ac347b799
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153715"
 ---
 # <a name="operational-modes"></a>Çalışma Modları
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Üç moddan, IDE, şu şekilde çalışabilir vardır:  
+IDE 'nin çalışması için aşağıdaki gibi üç mod vardır:  
   
-- [Tasarım modu](#vsconoperationalmodesanchor1)  
+- [Tasarım Modu](#vsconoperationalmodesanchor1)  
   
 - [Çalıştırma modu](#vsconoperationalmodesanchor2)  
   
 - [Kesme modu](#vsconoperationalmodesanchor3)  
   
-  Özel hata ayıklama altyapısı (DE) bu modları arasında nasıl geçiş geçiş yöntemleriyle ilgili bilgi sahibi olmasını gerektiren bir uygulama kararıdır. DE olabilir veya doğrudan bu modlardan uygulayamaz. Bu gerçekten kullanıcı eylemi veya DE olayları temel alarak geçiş hata ayıklama paketi modları modlarıdır. Örneğin, bir DE durdurma olayından tarafından kesme modu için çalışma moduna geçiş instigated. Sonu modunda veya adım modunda çalıştırın ya da geçiş adımı veya çalıştırma gibi işlemleri gerçekleştiren kullanıcı tarafından instigated. DE geçiş hakkında daha fazla bilgi için bkz: [yürütme denetimi](../../extensibility/debugger/control-of-execution.md).  
+  Bu modlar arasındaki özel hata ayıklama altyapısı (DE) geçişleriniz, geçiş mekanizmalarına alışmanızı gerektiren bir uygulama karardır. Bu modları doğrudan uygulayamayabilir. Bu modlar aslında Kullanıcı eylemine veya olayları temel alan paket modlarında hata ayıklamasız. Örneğin, çalıştırma modundan kesme moduna geçiş, DE ' dan bir durdurma olayı tarafından içe işlenir. Kesme modundan ya da adım moduna geçiş, Kullanıcı tarafından, adım veya yürütme gibi işlemleri gerçekleştiren işlemler tarafından geçersiz. DE geçişleri hakkında daha fazla bilgi için bkz. [yürütmenin denetimi](../../extensibility/debugger/control-of-execution.md).  
   
-## <a name="vsconoperationalmodesanchor1"></a> Tasarım modu  
- Tasarım modu süre içerisinde hata ayıklama uygulamanızda özellikleri ayarlayabilirsiniz Visual Studio hata ayıklama, nonrunning durum şeklindedir.  
+## <a name="design-mode"></a><a name="vsconoperationalmodesanchor1"></a> Tasarım modu  
+ Tasarım modu, Visual Studio hata ayıklamanın çalışma dışı durumudur ve bu sırada uygulamanızdaki hata ayıklama özelliklerini ayarlayabilirsiniz.  
   
- Yalnızca birkaç hata ayıklama özellikleri, Tasarım modunda kullanılır. Bir geliştirici, kesme noktaları ayarlamak veya izleme ifadeleri oluşturmak tercih edebilirsiniz. DE hiçbir zaman yüklendi veya IDE tasarım modundayken çağrılır. DE ile etkileşim yalnızca çalıştırma ve kesme modu sırasında gerçekleşir.  
+ Tasarım modu sırasında yalnızca birkaç hata ayıklama özelliği kullanılır. Geliştirici, kesme noktaları ayarlamayı veya gözcü ifadeleri oluşturmayı seçebilir. IDE tasarım modundayken DE hiçbir şekilde yüklenilmez veya çağrılmaz. Yalnızca çalıştırma ve kesme modları sırasında aynı şekilde etkileşim gerçekleşir.  
   
-## <a name="vsconoperationalmodesanchor2"></a> Çalıştırma modu  
- IDE içinde hata ayıklama oturumunda bir program çalıştığında çalışma modunda gerçekleşir. Uygulama, bir kesme noktasına isabet kadar veya bir özel durum kadar sonlandırma kadar çalışır. Sonlandırma, Tasarım modunda DE geçişleri için uygulama çalıştırıldığında. Bir kesme noktasına isabet ya da bir özel durum kesme modu için DE geçer.  
+## <a name="run-mode"></a><a name="vsconoperationalmodesanchor2"></a> Çalıştırma modu  
+ Çalışma modu, bir program IDE 'deki bir hata ayıklama oturumunda çalıştığında oluşur. Uygulama sonlandırana kadar, bir kesme noktasına vurana veya bir özel durum oluşturuluncaya kadar çalışır. Uygulama sonlandırılmak üzere çalıştığında, DE tasarım moduna geçer. Kesme noktası isabet edildiğinde veya bir özel durum oluştuğunda kesme moduna geçiş yapar.  
   
-## <a name="vsconoperationalmodesanchor3"></a> Kesme modu  
- Kesme modu, hata ayıklama programın yürütülmesini askıya alındığında gerçekleşir. Kesme moduna Geliştirici sonuna uygulamanın anlık görüntüsünü sunar ve uygulama durumunu çözümlemek ve uygulamanın nasıl çalıştırılacağını değiştirmek geliştiricinin sağlar. Geliştirici görüntüleyebilir ve kodu düzenleyin, inceleyin veya verileri değiştirme, uygulamayı yeniden başlatın, yürütme bitiş veya aynı noktasından yürütmeye devam et.  
+## <a name="break-mode"></a><a name="vsconoperationalmodesanchor3"></a> Kesme modu  
+ Hata ayıklama programının yürütülmesi askıya alındığında kesme modu oluşur. Kesme modu, geliştirici, kesme sırasında uygulamanın bir anlık görüntüsünü sunar ve geliştiricinin uygulamanın durumunu çözümlemesine ve uygulamanın nasıl çalışacağını değiştirmesine olanak tanır. Geliştirici kodu görüntüleyebilir ve düzenleyebilir, verileri inceleyebilir veya değiştirebilir, uygulamayı başlatabilir, yürütmeyi sonlandırabilir veya aynı noktadan yürütmeye devam edebilir.  
   
- Kesme moduna DE zaman uyumlu durdurma olay gönderme sırasında girilir. Durdurma olaylar olarak da bilinir, zaman uyumlu durdurma olayları bildirmek oturum hata ayıklama Yöneticisi (SDM) ve IDE, ayıklanan uygulamayı kod yürütme durduruldu. [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md) ve [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md) arabirimleri durdurma olayları örnekleri verilmiştir.  
+ DE zaman uyumlu durdurma olayı gönderdiğinde kesme modu girilir. Olayları durdurma da denilen zaman uyumlu durdurma olayları, oturum hata ayıklama Yöneticisi 'ne (SDM) ve hata ayıklamakta olan uygulamanın kod yürütmeyi durdurduğunu bildirir. [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md) ve [IDebugExceptionEvent2](../../extensibility/debugger/reference/idebugexceptionevent2.md) arabirimleri olayları durdurma örnekleridir.  
   
- Geçiş hata ayıklayıcı kesme modundan modu adımı veya çalıştırmak için aşağıdaki yöntemlerden birini yapılan bir çağrıyla durdurma olayları ettirilen:  
+ Olayları durdurma, hata ayıklayıcıyı kesme modundan çalışacak şekilde veya adım moduna geçirerek aşağıdaki yöntemlerden birine bir çağrı ile devam eder:  
   
-- [Execute](../../extensibility/debugger/reference/idebugprocess3-execute.md)  
+- [Yürütme](../../extensibility/debugger/reference/idebugprocess3-execute.md)  
   
-- [Step](../../extensibility/debugger/reference/idebugprocess3-step.md)  
+- [Adım](../../extensibility/debugger/reference/idebugprocess3-step.md)  
   
-- [Continue](../../extensibility/debugger/reference/idebugprocess3-continue.md)  
+- [Devam et](../../extensibility/debugger/reference/idebugprocess3-continue.md)  
   
-### <a name="vsconoperationalmodesanchor4"></a> Adım modu  
- Adım modu, program kodu veya içine, üzerinden veya bir işlev dışına sonraki satıra adımlar oluşur. Yöntemini çağırarak bir adımı yürütülür [adım](../../extensibility/debugger/reference/idebugprocess3-step.md). Bu yöntem gerektirir `DWORD`belirtin s [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) ve [STEPKIND](../../extensibility/debugger/reference/stepkind.md) giriş parametresi olarak listeleme.  
+### <a name="step-mode"></a><a name="vsconoperationalmodesanchor4"></a> Adım modu  
+ Adım modu, program sonraki kod satırında veya bir işlevin içine, üzerine ya da dışına çıktığında oluşur. Yöntem [adımı](../../extensibility/debugger/reference/idebugprocess3-step.md)çağırarak bir adım yürütülür. Bu yöntem `DWORD` , giriş parametreleri olarak [stepunit](../../extensibility/debugger/reference/stepunit.md) ve [stepkind](../../extensibility/debugger/reference/stepkind.md) numaralandırmaları belirten s gerektirir.  
   
- Program kodu veya bir işlev uygulamasına sonraki satıra başarıyla adımları ya da imleç ya da bir kesme noktası Ayarla çalıştığı DE otomatik olarak geri kesme modu geçer.  
+ Program bir sonraki kod satırına veya bir işleve başarıyla adımla ya da imleç ya da bir küme kesme noktasına çalışırsa, DE otomatik olarak kesme moduna geçer.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yürütme Denetimi](../../extensibility/debugger/control-of-execution.md)

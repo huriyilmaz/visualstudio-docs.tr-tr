@@ -18,32 +18,32 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: da002fe757d623a665b39c16cc10e77e492e2660
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68199927"
 ---
 # <a name="starttrackingcontext"></a>StartTrackingContext
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir izleme bağlamına başlayın.  
+Bir izleme bağlamı başlatın.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 HRESULT WINAPI StartTrackingContext(LPCTSTR intermediateDirectory, LPCTSTR taskName);  
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- [in] `intermediateDirectory`  
- İzleme günlüğü depolanacağı dizin.  
+ 'ndaki `intermediateDirectory`  
+ İzleme günlüğünün depolayabileceği dizin.  
   
- [in] `taskName`  
- İzleme bağlamı tanımlar. Bu ad, günlük dosyası adı oluşturmak için kullanılır.  
+ 'ndaki `taskName`  
+ İzleme bağlamını tanımlar. Bu ad, günlük dosyası adını oluşturmak için kullanılır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bir [HRESULT])<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) [başarılı] () ile<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) izleme bağlamına oluşturulduysa biti ayarlanmamış.  
+ A [HRESULT] (<!-- TODO: review code entity reference <xref:assetId:///HRESULT?qualifyHint=False&amp;autoUpgrade=True>  -->) ile [başarılı] (<!-- TODO: review code entity reference <xref:assetId:///SUCCEEDED?qualifyHint=False&amp;autoUpgrade=True>  -->) izleme bağlamı oluşturulduysa bit ayarlanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** FileTracker.h
+ **Üst bilgi:** FileTracker. h

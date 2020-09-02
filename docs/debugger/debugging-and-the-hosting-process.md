@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f77df2eae643b658e915662e0f50f6a376141d27
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188463"
 ---
 # <a name="debugging-and-the-hosting-process"></a>Hata Ayıklama ve Barındırma İşlemi
@@ -36,10 +36,10 @@ Visual Studio barındırma süreci hata ayıklayıcı performansını geliştiri
  Tasarım zamanı ifadesi her zaman barındırma işlemini kullanır. **Proje özelliklerindeki** barındırma işlemini devre dışı bırakmak, sınıf kitaplığı projeleri için tasarım zamanı ifade değerlendirmesini devre dışı bırakır. Diğer proje türleri için tasarım zamanı ifade değerlendirmesi devre dışı değildir. Bunun yerine, Visual Studio gerçek yürütülebiliri başlatır ve barındırma işlemi olmadan tasarım zamanı değerlendirmesi için kullanır. Bu fark farklı sonuçlar üretebilir.
 
 ## <a name="appdomaincurrentdomainfriendlyname-differences"></a>AppDomain. CurrentDomain. FriendlyName farkları
- `AppDomain.CurrentDomain.FriendlyName`, barındırma işleminin etkin olmasına bağlı olarak farklı sonuçlar döndürür. Barındırma işlemi etkinken `AppDomain.CurrentDomain.FriendlyName` çağırırsanız, *app_name*`.vhost.exe`döndürür. Bunu çağırdığınızda barındırma işlemi devre dışı bırakılırsa, *app_name*`.exe`döndürür.
+ `AppDomain.CurrentDomain.FriendlyName` barındırma işleminin etkin olup olmadığına bağlı olarak farklı sonuçlar döndürür. `AppDomain.CurrentDomain.FriendlyName`Barındırma işlemini etkin olarak çağırırsanız, *app_name*döndürür `.vhost.exe` . Bunu çağırırsanız barındırma işlemi devre dışı bırakılır, *app_name*döndürür `.exe` .
 
 ## <a name="assemblygetcallingassemblyfullname-differences"></a>Assembly. GetCallingAssembly (). FullName farkları
- `Assembly.GetCallingAssembly().FullName`, barındırma işleminin etkin olmasına bağlı olarak farklı sonuçlar döndürür. Barındırma işlemi etkinken `Assembly.GetCallingAssembly().FullName` çağırırsanız, `mscorlib`döndürür. Barındırma işlemi devre dışı bırakılmışsa `Assembly.GetCallingAssembly().FullName` çağırırsanız, uygulama adını döndürür.
+ `Assembly.GetCallingAssembly().FullName` barındırma işleminin etkin olup olmadığına bağlı olarak farklı sonuçlar döndürür. `Assembly.GetCallingAssembly().FullName`Barındırma işlemi etkin olarak çağırırsanız, döndürür `mscorlib` . `Assembly.GetCallingAssembly().FullName`Barındırma işlemi devre dışı olarak çağırırsanız, uygulama adını döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

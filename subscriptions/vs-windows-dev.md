@@ -8,10 +8,10 @@ ms.date: 04/20/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil olan Windows Geliştirici hesabı hakkında bilgi edinin.
 ms.openlocfilehash: 02d968875bec5d23fe25daaea5d2829f29a67111
-ms.sourcegitcommit: 186c0c250d85ac74274fa1e438b4c7c7108d8a36
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86875481"
 ---
 # <a name="windows-developer-account-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde Windows Geliştirici hesabı
@@ -43,10 +43,10 @@ Bu işlem için bir "özel" tarayıcı penceresi oluşturmanızı öneririz.  Ö
 ## <a name="eligibility"></a>Önceliği
 | Abonelik düzeyi                                                 |     Kanallar                                            | Avantaj                                                          | Yenilenebilir?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Dahil       |  Evet|
-| GitHub Enterprise ile Visual Studio Enterprise   | VL  | Dahil       |  Evet|
-| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Dahil                                                            |Evet|
-| GitHub Enterprise ile Visual Studio Professional | VL                                        | Dahil                                                            |Evet|
+| Visual Studio Enterprise (Standart)   | VL, Azure, perakende, seçili NFR<sup>1</sup> | Dahil       |  Yes|
+| GitHub Enterprise ile Visual Studio Enterprise   | VL  | Dahil       |  Yes|
+| Visual Studio Professional (Standart) | VL, Azure, perakende                                       | Dahil                                                            |Yes|
+| GitHub Enterprise ile Visual Studio Professional | VL                                        | Dahil                                                            |Yes|
 | Visual Studio Test Professional (Standart)                         | VL, perakende                                              | Kullanılamaz                                            |  NA|
 | MSDN Platformları (Standart)                                          | VL, perakende                                              |  Kullanılamaz                                            |  NA|
 | Visual Studio Enterprise, Visual Studio Professional (aylık bulut) | Azure                                       | Kullanılamaz                                                           |NA|

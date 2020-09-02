@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Burada Visual Studio 2015 kopyaları dosyaları belirtin. | Microsoft Docs'
+title: 'Nasıl yapılır: Visual Studio 2015 dosyaları kopyaladığını belirtme | Microsoft Docs'
 titleSuffix: ''
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
@@ -18,35 +18,35 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8759145dd4a7647cad6e9964ae1f1c97d333b626
-ms.sourcegitcommit: 6196d0b7fdcb08ba6d28a8151ad36b8d1139f2cc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65226166"
 ---
 # <a name="how-to-specify-where-visual-studio-copies-the-files"></a>Nasıl yapılır: Visual Studio'nun Dosyaları Nereye Kopyalayacağını Belirtme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-ClickOnce kullanarak bir uygulamayı yayımladığınızda `Publish Location` özelliği burada bildirimini ve uygulama dosyalarını isimlerine konumunu belirtir. Bu, bir dosya yolu veya bir FTP sunucusuna bir yolu olabilir.
+ClickOnce kullanarak bir uygulamayı yayımladığınızda, `Publish Location` özelliği uygulama dosyalarının ve bildiriminin bulunduğu konumu belirtir. Bu bir dosya yolu veya bir FTP sunucusunun yolu olabilir.
 
- Belirtebileceğiniz `Publish Location` özelliği **Yayımla** sayfasının **Proje Tasarımcısı**, veya Yayımlama Sihirbazı'nı kullanarak. Daha fazla bilgi için [nasıl yapılır: Yayımlama Sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).
+ `Publish Location`Özelliği **Proje Tasarımcısı**' nın **Yayımla** sayfasında veya Yayımla Sihirbazı ' nı kullanarak belirtebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).
 
 > [!NOTE]
-> ClickOnce kullanarak bir uygulamanın birden fazla sürüm yüklediğinizde, yükleme uygulamanın önceki sürümlerini belirttiğiniz yayımlama konum arşivinde adlı bir klasöre taşır. Yükleme dizini temizler önceki sürümünden önceki sürümleri bu şekilde korur arşivleme.
+> ClickOnce kullanarak bir uygulamanın birden fazla sürümünü yüklediğinizde yükleme, uygulamanın önceki sürümlerini belirttiğiniz Yayımla konumundaki arşiv adlı bir klasöre taşır. Önceki sürümlerin bu şekilde arşivlenmesi, yükleme dizinini önceki sürümden klasörlerin temizlenmesini önler.
 
-### <a name="to-specify-a-publishing-location"></a>Bir yayımlama konumu belirtmek için
+### <a name="to-specify-a-publishing-location"></a>Yayımlama konumu belirtmek için
 
-1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünde tıklatın **özellikleri**.
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.
 
-2. Tıklayın **Yayımla** sekmesi.
+2. **Yayımla** sekmesine tıklayın.
 
-3. İçinde **yayımlama konumu** aşağıdaki biçimlerden birini kullanarak Yayınlama konumu girin:
+3. **Yayımlama konumu** alanına, aşağıdaki biçimlerden birini kullanarak yayımlama konumu girin:
 
-   - Bir dosya paylaşımını veya disk yolu yayımlamak için bir UNC yolu kullanılarak yolunu girin (\\\Server\ApplicationName) veya bir dosya yolu (C:\Deploy\ApplicationName).
+   - Bir dosya paylaşımında veya disk yolunda yayımlamak için, yolu bir UNC yolu ( \\ \Server\applicationname) veya bir dosya yolu (C:\Deploy\ApplicationName) kullanarak girin.
 
-   - FTP sunucusuna yayımlamak için biçim ftp kullanarak yolunu girin:\//ftp.microsoft.com/ApplicationName.
+   - Bir FTP sunucusuna yayımlamak için FTP:/ftp.microsoft.com/ApplicationName biçimini kullanarak yolu girin \/ .
 
-     Metin mevcut olması gerektiğini unutmayın **yayımlama konumu** Gözat sırayla kutusuna (**...** ) çalışmaya düğmesi.
+     Göz at (**...**) düğmesinin çalışması Için **Yayımlama konumu** kutusunda metnin mevcut olması gerektiğini unutmayın.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md) [nasıl yapılır: Yayımlama Sihirbazını Kullanarak ClickOnce Uygulaması Yayımlama](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+ [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md) [nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md) yayımlama

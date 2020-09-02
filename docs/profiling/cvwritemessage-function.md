@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 66fb584090a0b6483c18f8254eb4a96b6186d51e
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85332131"
 ---
 # <a name="cvwritemessage-function"></a>CvWriteMessage işlevi
@@ -93,15 +93,15 @@ HRESULT CvWriteMessageExVA(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `argList`Bağımsız değişkenlerin listesi.
+ `argList` Bağımsız değişkenlerin listesi.
 
- `category`Yayılma kategorisi
+ `category` Yayılma kategorisi
 
- `level`Yayılma alanının önem düzeyi.
+ `level` Yayılma alanının önem düzeyi.
 
- `pMarkerSeries`Geçerli işaretleyici serisi bağlamı. NULL olamaz.
+ `pMarkerSeries` Geçerli işaretleyici serisi bağlamı. NULL olamaz.
 
- `pMessage`İleti biçimi dizesi. NULL olamaz.
+ `pMessage` İleti biçimi dizesi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
  İleti başarıyla yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.

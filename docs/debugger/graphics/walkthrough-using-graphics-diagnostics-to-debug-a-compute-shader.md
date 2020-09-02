@@ -1,5 +1,5 @@
 ---
-title: Grafik Tanılama'yı kullanarak bilgisayar gölgelendiricide hata ayıklama
+title: Grafik tanılamayı kullanarak işlem Gölgelendiricisinde hata ayıklama
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 69287456-644b-4aff-bd03-b1bbb2abb82a
@@ -9,101 +9,101 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 19ae8472aaafbad1a04485ff2e3a2637f345bc00
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66262859"
 ---
 # <a name="walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader"></a>İzlenecek yol: Hesaplayıcı Gölgelendiricisinde Hata Ayıklamak için Grafik Tanılamayı Kullanma
-Bu izlenecek yol, Visual Studio grafik tanılama araçları hatalı sonuçlar üreten bir compute gölgelendiriciyi incelemek için nasıl kullanılacağını gösterir.
+Bu izlenecek yol, yanlış sonuçlar üreten bir işlem gölgelendiricisi araştırmak için Visual Studio Grafik Tanılama araçlarının nasıl kullanılacağını göstermektedir.
 
- Bu örneklerde bu görevler gösterilir:
+ Bu izlenecek yol aşağıdaki görevleri gösterir:
 
-- Kullanarak **grafik olay listesi** olası sorun kaynaklarını bulmak için.
+- Sorunun olası kaynaklarını bulmak için **grafik olay listesini** kullanma.
 
-- Kullanarak **grafik olay çağrı yığını** hangi compute gölgelendiricisinin yürütüleceğini tarafından DirectCompute belirlemek için `Dispatch` olay.
+- Bir DirectCompute olayı tarafından hangi bilgi işlem gölgelendiricisinin yürütüleceğini belirleyen **grafik olay çağrı yığınını** kullanma `Dispatch` .
 
-- Kullanarak **grafik ardışık düzen aşamaları** penceresini ve HLSL hata ayıklayıcısı sorunun kaynağı olan compute gölgelendiriciyi incelemek için.
+- Sorun kaynağı olan işlem gölgelendiriciyi incelemek için **grafik ardışık düzen aşamaları** penceresini ve HLSL hata ayıklayıcısını kullanma.
 
 ## <a name="scenario"></a>Senaryo
- Bu senaryoda, benzetim güncelleştirmesinin hesaplama açısından en yoğun bölümlerini gerçekleştirmek için DirectCompute kullanan bir Akışkan dinamiği benzetimi yazdınız. Uygulamayı çalıştırdığınızda, veri kümesi ve UI işlenmesi doğru görünür, ancak benzetim beklendiği gibi davranmaz. Grafik tanılamayı kullanarak sorunu bir grafik günlüğüne böylece uygulamanın hatalarını ayıklayabilir miyim yakalayabilirsiniz. Sorun, uygulamada şu şekilde görünür:
+ Bu senaryoda, simülasyon güncelleştirmesinin en yoğun hesaplama kullanan parçalarını gerçekleştirmek için DirectCompute kullanan bir sıvı-Dynamics simülasyonu yazmış olursunuz. Uygulama çalıştırıldığında, veri kümesinin ve Kullanıcı arabiriminin işlenmesi doğru görünür, ancak benzetim beklendiği gibi davranır. Grafik Tanılama kullanarak, uygulamanın hatalarını ayıklayabilmeniz için sorunu bir grafik günlüğüne yakalayabilirsiniz. Sorun uygulamada şöyle görünür:
 
- ![Benzetimli sıvı yanlış şekilde davranır. ](media/gfx_diag_demo_compute_shader_fluid_problem.png "gfx_diag_demo_compute_shader_fluid_problem")
+ ![Sanal akıcı yanlış davranır.](media/gfx_diag_demo_compute_shader_fluid_problem.png "gfx_diag_demo_compute_shader_fluid_problem")
 
- Grafik sorunlarını grafik günlüğünde yakalama hakkında daha fazla bilgi için bkz: [Capturing Graphics Information](capturing-graphics-information.md).
+ Grafik sorunlarının grafik günlüğünde nasıl yakalanacağı hakkında daha fazla bilgi için bkz. [grafik bilgilerini yakalama](capturing-graphics-information.md).
 
 ## <a name="investigation"></a>Araştırma
- Grafik tanılama araçları, yakalanan kareleri inceleyebilmeniz için grafik günlük dosyasını yüklemek için kullanabilirsiniz.
+ Yakalanan çerçeveleri incelemenize olanak sağlamak için Grafik Tanılama araçlarını kullanarak grafik günlük dosyasını yükleyebilirsiniz.
 
-#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Grafik günlüğünde bir çerçeveyi incelemek için
+#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Grafik günlüğündeki bir çerçeveyi incelemek için
 
-1. Visual Studio'da, yanlış benzetim sonuçlarının gösterildiği çerçeveyi içeren grafik günlüğünü yükleyin. Yeni bir grafik Tanılama sekmesi Visual Studio'da görünür. Bu sekmenin üst kısmında seçilen çerçevenin işleme hedefi çıktısı ' dir. Alt parçasıdır **çerçeve listesi**, bir küçük resim her yakalanan çerçeve görüntüler.
+1. Visual Studio 'da, yanlış simülasyon sonuçlarını gösteren bir çerçeve içeren bir grafik günlüğü yükleyin. Visual Studio 'da yeni bir Grafik Tanılama sekmesi görüntülenir. Bu sekmenin en üst kısmında, seçili karenin işleme hedefi çıkışı bulunur. Alt kısımda, yakalanan her çerçevenin küçük resmini görüntüleyen **çerçeve listesidir**.
 
-2. İçinde **çerçeve listesi**, yanlış benzetim davranışını gösteren bir çerçeve seçin. Hata benzetimi kod ve işleme kodu değil gibi görünüyor olsa da, yine de DirectCompute olayları, Direct3D olaylarıyla birlikte çerçeve çerçeve olarak yakalandığından bir çerçeve seçmeniz gerekir. Bu senaryoda, grafik sekmesi şu şekilde görünür günlük:
+2. **Çerçeve listesinde**, yanlış simülasyon davranışını gösteren bir çerçeve seçin. Hata, işleme kodu değil simülasyon kodunda yer alsa da, DirectCompute olayları, Direct3D olayları ile birlikte çerçeve temelinde yakalandığından, hala bir çerçeve seçmeniz gerekir. Bu senaryoda grafik günlüğü sekmesi şöyle görünür:
 
-    ![Grafik belgesi Visual Studio'da oturum açın. ](media/gfx_diag_demo_compute_shader_fluid_step_1.png "gfx_diag_demo_compute_shader_fluid_step_1")
+    ![Visual Studio 'da grafik günlüğü belgesi.](media/gfx_diag_demo_compute_shader_fluid_step_1.png "gfx_diag_demo_compute_shader_fluid_step_1")
 
-   Sorunu gösteren bir çerçeveyi seçtikten sonra kullanabileceğiniz **grafik olay listesi** tanılamak için. **Grafik olay listesi** her DirectCompute çağrısı ve etkin çerçeve sırasında yapılan her Direct3D API çağrısı için bir olay içerir — örneğin, GPU üzerinde hesaplama çalıştırmak için veya veri kümesi veya Arabirimi işlemek için API çağrısı. Bu durumda, ilgileniriz `Dispatch` GPU'da çalışan Benzetimin parçalarını temsil eden olayları.
+   Sorunu gösteren bir çerçeve seçtikten sonra, grafikleri tanımak için **grafik olay listesi** ' ni kullanabilirsiniz. **Grafik olay listesi** , etkin çerçeve sırasında yapılan her DirectCompute çağrısı ve Direct3D API çağrısı için bir olay içerir — ÖRNEĞIN, GPU üzerinde bir hesaplama ÇALıŞTıRMAK için API çağrıları veya veri kümesini veya Kullanıcı arabirimini işlemek. Bu durumda, `Dispatch` GPU üzerinde çalışan benzetimin parçalarını temsil eden olaylarla ilgileniyoruz.
 
-#### <a name="to-find-the-dispatch-event-for-the-simulation-update"></a>Benzetimi güncelleştirmesine ilişkin dağıtma olayını bulmak için
+#### <a name="to-find-the-dispatch-event-for-the-simulation-update"></a>Simülasyon güncelleştirmesine ait dağıtım olayını bulmak için
 
-1. Üzerinde **grafik tanılama** araç seçin **olay listesi** açmak için **grafik olay listesi** penceresi.
+1. **Grafik tanılama** araç çubuğunda **olay listesi** ' ni seçerek **grafik olay listesi** penceresini açın.
 
-2. İnceleme **grafik olay listesi** veri kümesini oluşturan çizim olayı için. Bunu kolaylaştırmak için girin `Draw` içinde **arama** sağ üst köşesinde kutusunda **grafik olay listesi** penceresi. Bu, yalnızca başlıklarında "Çiz" olan olaylar içeren listenin filtreler. Bu senaryoda, bunların olaylarının gerçekleştiğini keşfedersiniz oluştu:
+2. Veri kümesini işleyen çizim olayı için **grafik olay listesini** inceleyin. Bunun daha kolay olması için `Draw` **grafik olay listesi** penceresinin sağ üst köşesindeki **arama** kutusuna girin. Bu, listeyi yalnızca kendi başlıklarında "Çiz" olan olayları içerecek şekilde filtreler. Bu senaryoda, bu çizim olaylarının oluştuğunu fark edersiniz:
 
-    ![Olay listesi &#40;EL&#41; çizmek olayları gösterir. ](media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx_diag_demo_compute_shader_fluid_step_2")
+    ![Olay listesi &#40;EL&#41; çizim olaylarını gösterir.](media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx_diag_demo_compute_shader_fluid_step_2")
 
-3. Grafik günlük belgesi sekmesindeki oluşturma hedef izlerken her çizim olayının üzerinden geçin.
+3. Grafik günlüğü belgesi sekmesinde işleme hedefini izlerken her çizim olayında ilerleyin.
 
-4. İşleme hedefi işlenmiş dataseti ilk kez görüntülediğinde durdurun. Bu senaryoda, ilk çizim olayında veri kümesi oluşturulur. Benzetimdeki hata gösterilmiştir:
+4. Render hedefinin işlenen veri kümesini ilk kez görüntülediğini durdur. Bu senaryoda, veri kümesi ilk çizim olayında işlenir. Simülasyonu içindeki hata gösterilir:
 
-    ![Bu benzetimi veri kümesi olay işleme çizin. ](media/gfx_diag_demo_compute_shader_fluid_step_3.png "gfx_diag_demo_compute_shader_fluid_step_3")
+    ![Bu çizim olayı simülasyon veri kümesini işler.](media/gfx_diag_demo_compute_shader_fluid_step_3.png "gfx_diag_demo_compute_shader_fluid_step_3")
 
-5. Şimdi **grafik olay listesi** için `Dispatch` benzetimi güncelleştiren bir olay. Benzetim oluşturulmadan önce güncelleştirildiğinden emin olma olasılığı yüksektir çünkü, ilk hakkında yoğunlaşabilirsiniz `Dispatch` sonuçlarını işleyen çizim olayından önce oluşan olaylar. Bunu kolaylaştırmak için değiştirme **arama** kutusun `Draw;Dispatch;CSSetShader(`. Hem de içeren bu liste filtreler `Dispatch` ve `CSSetShader` çizim olaylarına ek olarak olaylar. Bu senaryoda olduğunu fark birkaç `Dispatch` Olaylar oluştuysa çizim olayından önce:
+5. Şimdi benzetimi güncelleştiren olay için **grafik olay listesini** inceleyin `Dispatch` . Simülasyonu işlenmeden önce güncelleştirildiğinden, önce `Dispatch` sonuçları işleyen çizim olayından önce oluşan olaylara odaklanabilirsiniz. Bunun daha kolay olması için **arama** kutusunu okumak üzere değiştirin `Draw;Dispatch;CSSetShader(` . Bu, listenin Ayrıca, `Dispatch` `CSSetShader` Çizim olaylarının yanı sıra olayları da içermesi için listeye filtre uygular. Bu senaryoda, `Dispatch` Çizim olayından önce birkaç olay oluştuğunu fark edersiniz:
 
-    ![Çizim EL gösterir, gönderme ve CSSetShader olayları](media/gfx_diag_demo_compute_shader_fluid_step_4.png "gfx_diag_demo_compute_shader_fluid_step_4")
+    ![EL ile çizim, dağıtım ve CSSetShader olayları gösterilmektedir](media/gfx_diag_demo_compute_shader_fluid_step_4.png "gfx_diag_demo_compute_shader_fluid_step_4")
 
-   Artık, büyük olasılıkla pek çok az sayıda bildiğinize göre `Dispatch` olayların soruna karşılık gelen, daha ayrıntılı olarak inceleyebilirsiniz.
+   Potansiyel olarak çok sayıda olayın kaç kez `Dispatch` soruna karşılık geldiğini bildiğinize göre, bunları daha ayrıntılı bir şekilde inceleyebilirsiniz.
 
-#### <a name="to-determine-which-compute-shader-a-dispatch-call-executes"></a>Hangi dağıtım çağrısına gölgelendirici yürüttüğünü belirlemek için
+#### <a name="to-determine-which-compute-shader-a-dispatch-call-executes"></a>Bir dağıtım çağrısının hangi işlem gölgelendiricisinin yürüttüğünü belirleme
 
-1. Üzerinde **grafik tanılama** araç seçin **olay çağrı yığını** açmak için **grafik olay çağrı yığını** penceresi.
+1. **Grafik tanılama** araç çubuğunda, **olay çağrısı yığını** ' nı seçerek **grafik olay çağrı yığını** penceresini açın.
 
-2. Benzetim sonuçlarını işleyen çizim olayından başlayarak her geriye önceki `CSSetShader` olay. Ardından **grafik olay çağrı yığını** penceresinde çağrı sitesine gitmek için en üstteki işlevi seçin. İlk parametresini kullanabilirsiniz çağıran sitede [CSSetShader](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-cssetshader) işlev çağrısı hangi compute gölgelendiricisinin yürütüleceğini tarafından sonraki belirlemek için `Dispatch` olay.
+2. Simülasyon sonuçlarını işleyen çizim olayından başlayarak, bir önceki olaya geri doğru ilerleyin `CSSetShader` . Ardından, **grafik olay çağrı yığını** penceresinde, çağrı sitesine gitmek için en üstteki işlevi seçin. Çağıran sitede, bir sonraki olay tarafından hangi işlem gölgelendiricisinin yürütüleceğini öğrenmek için [CSSetShader](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-cssetshader) işlev çağrısının ilk parametresini kullanabilirsiniz `Dispatch` .
 
-   Bu senaryoda, üç çift vardır `CSSetShader` ve `Dispatch` her çerçevede olayları. Geriye doğru tümleştirme adımını (burada sıvı Parçacıklar gerçekten taşınır) üçüncü çifti temsil çalışırken, ikinci çift hesaplamayı zorla adımını (burada her parçacığı etkileyen güçleri hesaplanır) temsil eder ve ilk çift temsil eder Yoğunluk hesaplama adımını.
+   Bu senaryoda, `CSSetShader` her çerçevede üç çift ve olay vardır `Dispatch` . Geriye doğru çalışarak, üçüncü çift tümleştirme adımını temsil eder (akıcı parçacıkların gerçekten taşındığı), ikinci çift, zorunlu hesaplama adımını (her parçacığı etkileyen güçler hesaplanır) ve ilk çift, yoğunluk hesaplama adımını temsil eder.
 
-#### <a name="to-debug-the-compute-shader"></a>Bilgisayar gölgelendiricide hata ayıklamak için
+#### <a name="to-debug-the-compute-shader"></a>İşlem Gölgelendiricisinde hata ayıklamak için
 
-1. Üzerinde **grafik tanılama** araç seçin **ardışık düzen aşamaları** açmak için **grafik ardışık düzen aşamaları** penceresi.
+1. **Grafik tanılama** araç çubuğunda, Işlem **hattı aşamaları** ' nı seçerek **grafik ardışık düzen aşamaları** penceresini açın.
 
-2. Üçüncü seçin `Dispatch` olay (çizim olayından hemen önce gelen bir) ve ardından **grafik ardışık düzen aşamaları** penceresi altında **hesaplayıcı gölgelendiricisi** aşama öğesini  **Hata Ayıklamayı Başlat**.
+2. Üçüncü olayı seçin `Dispatch` (çizim olayından hemen önce gelen bir olay) ve ardından **grafik ardışık düzen aşamaları** penceresinde, **işlem gölgelendirici** aşaması altında, **hata ayıklamayı Başlat**' ı seçin.
 
-    ![Üçüncü dağıtma olayını seçme içinde EL.](media/gfx_diag_demo_compute_shader_fluid_step_6.png "gfx_diag_demo_compute_shader_fluid_step_6")
+    ![EL ile üçüncü dağıtım olayını seçme.](media/gfx_diag_demo_compute_shader_fluid_step_6.png "gfx_diag_demo_compute_shader_fluid_step_6")
 
-    HLSL hata ayıklayıcı tümleştirme adımını gerçekleştiren gölgelendiricide başlatılır.
+    HLSL hata ayıklayıcısı, tümleştirme adımını gerçekleştiren gölgelendiricide başlatılır.
 
-3. Hatanın kaynağını aramak için tümleştirme adımının compute gölgelendirici kaynak kodunu inceleyin. HLSL compute-gölgelendirici kodunda hata ayıklamak için grafik tanılama kullandığınızda, kod içinde gezinebilmek ve izleme pencereleri gibi diğer bilinen hata giderme araçlarını kullanın. Bu senaryoda, yok görünüyor, tümleştirme adımını gerçekleştiren hesaplayıcı gölgelendiricisinde hata olarak belirleyin.
+3. Hatanın kaynağını aramak üzere tümleştirme adımının işlem gölgelendirici kaynak kodunu inceleyin. HLSL COMPUTE-Shader kodunda hata ayıklamak için Grafik Tanılama kullandığınızda, kod içinde iler, izleme pencereleri gibi diğer tanıdık hata ayıklama araçlarını kullanabilirsiniz. Bu senaryoda, tümleştirme adımını gerçekleştiren işlem gölgelendiricide bir hata gibi görünmediğini belirlersiniz.
 
-    ![IntegrateCS compute gölgelendirici hata ayıklaması. ](media/gfx_diag_demo_compute_shader_fluid_step_7.png "gfx_diag_demo_compute_shader_fluid_step_7")
+    ![Integratecs işlem Gölgelendiricisinde hata ayıklama.](media/gfx_diag_demo_compute_shader_fluid_step_7.png "gfx_diag_demo_compute_shader_fluid_step_7")
 
-4. Bilgisayar gölgelendiricide hata ayıklamayı durdurmak için **hata ayıklama** araç seçin **hata ayıklamayı Durdur** (klavye: Shift + F5).
+4. İşlem gölgelendiricide hata ayıklamayı durdurmak için, **hata** ayıklama araç çubuğunda **hata ayıklamayı Durdur** (klavye: Shift + F5) öğesini seçin.
 
-5. Ardından, ikinci seçin `Dispatch` olay ve önceki adımda yaptığınız gibi compute gölgelendirici hata ayıklamayı Başlat.
+5. Ardından, ikinci olayı seçin `Dispatch` ve daha önceki adımda yaptığınız gibi işlem Gölgelendiricisinde hata ayıklamayı başlatın.
 
-    ![İkinci dağıtma olayını seçme içinde EL.](media/gfx_diag_demo_compute_shader_fluid_step_8.png "gfx_diag_demo_compute_shader_fluid_step_8")
+    ![EL ile ikinci dağıtım olayını seçme.](media/gfx_diag_demo_compute_shader_fluid_step_8.png "gfx_diag_demo_compute_shader_fluid_step_8")
 
-    HLSL hata ayıklayıcısı, her sıvı parçacık üzerinde etkin olan kuvvetleri hesaplayan bir gölgelendirici sırasında başlatılır.
+    HLSL hata ayıklayıcısı, her bir sıvı parçacığı üzerinde işlem yapan güçleri hesaplayan gölgelendiricide başlatılır.
 
-6. Zorla hesaplama adımı için compute gölgelendirici kaynak kodunu inceleyin. Bu senaryoda hatanın kaynağının burada olduğunu belirlersiniz.
+6. Zorla Hesaplama adımı için işlem gölgelendirici kaynak kodunu inceleyin. Bu senaryoda, hatanın kaynağının burada olduğunu belirlersiniz.
 
-    ![Hata ayıklama ForceCS&#95;basit gölgelendirici işlem. ](media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx_diag_demo_compute_shader_fluid_step_9")
+    ![ForceCS&#95;basit işlem Gölgelendiricisinde hata ayıklama.](media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx_diag_demo_compute_shader_fluid_step_9")
 
-   Hatanın konumunu belirledikten sonra hata ayıklamayı durdurmak ve etkileşim kuran Parçacıklar arasındaki mesafeyi doğru hesaplamak için compute gölgelendirici kaynak kodunu değiştirin. Bu senaryoda, yalnızca satırın değiştirdiğiniz `float2 diff = N_position + P_position;` için `float2 diff = N_position - P_position;`:
+   Hatanın konumunu belirledikten sonra, hata ayıklamayı durdurabilir ve işlem gölgelendirici kaynak kodunu değiştirerek, etkileşim kuran parçacıkların arasındaki mesafeyi doğru şekilde hesaplayabilirsiniz. Bu senaryoda, yalnızca satırı şu `float2 diff = N_position + P_position;` şekilde değiştirirsiniz `float2 diff = N_position - P_position;` :
 
-   ![Düzeltilmiş işlem&#45;gölgelendirici kodu. ](media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx_diag_demo_compute_shader_fluid_step_10")
+   ![Düzeltilen işlem gölgelendirici kodu&#45;.](media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx_diag_demo_compute_shader_fluid_step_10")
 
-   Hesaplayıcı gölgelendiricileri çalışma zamanında derlendiğinden nasıl bunların benzetim üzerindeki etkisini gözlemlemek için değişiklikler yaptıktan sonra bu senaryoda, yalnızca uygulamayı yeniden başlatabilirsiniz. Uygulamayı yeniden oluşturmanız gerekmez. Uygulamayı çalıştırdığınızda, şimdi Benzetimin doğru olduğunu keşfedin.
+   Bu senaryoda, işlem gölgelendiriciler çalışma zamanında derlendiğinden, değişiklikleri yaptıktan sonra, benzetimi nasıl etkilediğini gözlemlemek için uygulamayı yeniden başlatmanız yeterlidir. Uygulamayı yeniden derlemek zorunda değilsiniz. Uygulamayı çalıştırdığınızda, simülasyonu 'nin artık doğru şekilde davranacağını fark edersiniz.
 
-   ![Benzetimli sıvı doğru şekilde davranır. ](media/gfx_diag_demo_compute_shader_fluid_resolution.png "gfx_diag_demo_compute_shader_fluid_resolution")
+   ![Sanal akıcı doğru şekilde davranır.](media/gfx_diag_demo_compute_shader_fluid_resolution.png "gfx_diag_demo_compute_shader_fluid_resolution")

@@ -12,22 +12,22 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7a2b2f04e1088b9b06cb05015a6b0b4da5d60927
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153745"
 ---
-# <a name="modules"></a>Modüller
+# <a name="modules"></a>Modül
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Hata ayıklayıcı mimarisi bakımından bir **Modülü**:  
+Hata ayıklayıcı mimarisi açısından bir **Modül**:  
   
-- Kod, bir yürütülebilir dosya veya bir DLL gibi fiziksel bir kapsayıcıdır.  
+- , Yürütülebilir dosya veya DLL gibi fiziksel bir kod kapsayıcısıdır.  
   
-- Onun semboller yeniden yükleyin ve kendisini açıklar. Modül tanımları, IDE'nin modülleri penceresinde görüntülenir.  
+- , Kendi simgelerini yeniden yükleyebilir ve kendisi tanımlayabilir. Modül açıklamaları IDE 'nin modüller penceresinde görüntülenir.  
   
-- Tarafından temsil edilen bir [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md) arabirimi, modül tanımlamak için hata ayıklama altyapısı tarafından oluşturuldu.  
+- , Modülü anlatmak için bir hata ayıklama altyapısı tarafından oluşturulan bir [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md) arabirimi tarafından temsil edilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata ayıklayıcı kavramları](../../extensibility/debugger/debugger-concepts.md)   

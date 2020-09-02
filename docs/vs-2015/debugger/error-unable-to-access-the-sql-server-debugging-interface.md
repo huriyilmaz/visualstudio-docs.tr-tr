@@ -18,20 +18,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 323e67458d934d27800cac710f79857a98d6c6c5
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65682654"
 ---
-# <a name="error-unable-to-access-the-sql-server-debugging-interface"></a>Hata: SQL Server hata ayıklama arayüzüne erişilemiyor
+# <a name="error-unable-to-access-the-sql-server-debugging-interface"></a>Hata: SQL Server hata ayıklama arabirimine erişilemiyor
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir makine üzerinde SQL hata ayıklamayı denediğinizde bu ileti, burada SQL hata ayıklama etkin değil oluşur.  
+Bu ileti, SQL hata ayıklamanın etkinleştirilmediği bir makinede SQL hata ayıklamayı denediğinizde oluşur.  
   
 ### <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Bkz: [SQL hata ayıklamayı kurma](https://msdn.microsoft.com/3db09e68-edcc-42de-9c22-4e97cfd55ab3).  
+- Bkz. [SQL hata ayıklamayı ayarlama](https://msdn.microsoft.com/3db09e68-edcc-42de-9c22-4e97cfd55ab3).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL hata ayıklama](https://msdn.microsoft.com/f27c17e6-1d90-49f2-9fc0-d02e6a27f109)
+ [SQL hatalarını ayıklama](https://msdn.microsoft.com/f27c17e6-1d90-49f2-9fc0-d02e6a27f109)

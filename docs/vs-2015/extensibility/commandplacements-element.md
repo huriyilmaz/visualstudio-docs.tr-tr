@@ -14,20 +14,20 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dbe65cc38bd14d859507d795ce32657f53ca8b44
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184306"
 ---
 # <a name="commandplacements-element"></a>CommandPlacements Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-CommandPlacements öğesi CommandPlacement öğeleri ve diğer CommandPlacements gruplandırmaları gruplandırır.  
+CommandPlacements öğesi, Commandyerleştirme öğelerini ve diğer CommandPlacements gruplandırmaları gruplandırır.  
   
- CommandPlacements öğesi isteğe bağlıdır. Hiçbir komut, grupları veya menüler, ikincil bir konumda eklenmelidir, bu bölümde .vsct dosyanıza dahil gerekmez.  
+ CommandPlacements öğesi isteğe bağlıdır. İkincil bir konuma hiçbir komut, Grup veya menü eklenmemelidir, bu bölümü. vsct dosyanıza eklemeniz gerekmez.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <CommandPlacements>  
@@ -43,14 +43,14 @@ CommandPlacements öğesi CommandPlacement öğeleri ve diğer CommandPlacements
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|CommandPlacements|CommandPlacement öğeleri gruplandırır ve diğer CommandPlacements gruplandırmaları.|  
-|[CommandPlacement Öğesi](../extensibility/commandplacement-element.md)|Düğmeler, grupları ve menüler birden fazla grup veya menüdeki dahil edilmesini sağlar.|  
+|CommandPlacements|Commandyerleştirme öğelerini ve diğer CommandPlacements gruplamalarını gruplandırır.|  
+|[CommandPlacement Öğesi](../extensibility/commandplacement-element.md)|Düğmelerin, grupların ve menülerin birden fazla gruba veya menüye dahil edilmesini sağlar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -70,5 +70,5 @@ CommandPlacements öğesi CommandPlacement öğeleri ve diğer CommandPlacements
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [CommandPlacement öğesi](../extensibility/commandplacement-element.md)   
+ [Commandyerleştirme öğesi](../extensibility/commandplacement-element.md)   
  [Visual Studio Komut Tablosu (.Vsct) Dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 7fa9aa7a4a19ebd5ae45ee84364e71043a28f6be
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651458"
 ---
 # <a name="localizing-applications"></a>Uygulamaları Yerelleştirme
@@ -32,12 +32,12 @@ ms.locfileid: "72651458"
 
  [Güvenlik ve yerelleştirilmiş uydu derlemeleri](../ide/security-and-localized-satellite-assemblies.md) Ortak özel anahtar çiftleriyle, uydu derlemelerini imzalamayı açıklar.
 
- [Ana ve yerelleştirilmiş uydu derlemeleri Için sürüm numaraları](../ide/version-numbers-for-main-and-localized-satellite-assemblies.md) , Bir uygulamanın ana derlemesi ile hangi uydu derlemelerinin çalıştığını belirleyen <xref:System.Resources.SatelliteContractVersionAttribute> sınıfını tanıtır.
+ [Ana ve yerelleştirilmiş uydu derlemeleri Için sürüm numaraları](../ide/version-numbers-for-main-and-localized-satellite-assemblies.md) <xref:System.Resources.SatelliteContractVersionAttribute> , Bir uygulamanın ana derlemesi ile hangi uydu derlemelerinin çalıştığını belirleyen sınıfını tanıtır.
 
- [Yerelleştirme Için bağımsız kaynak dilleri](../ide/neutral-resources-languages-for-localization.md) , Bir uygulamanın ana derlemesine dahil olan kaynakların kültürünü belirten <xref:System.Resources.NeutralResourcesLanguageAttribute> sınıfını tanıtır.
+ [Yerelleştirme Için bağımsız kaynak dilleri](../ide/neutral-resources-languages-for-localization.md) <xref:System.Resources.NeutralResourcesLanguageAttribute> Bir uygulamanın ana derlemesine dahil olan kaynakların kültürünü belirten sınıfını tanıtır.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [.NET Framework göre uluslararası uygulamalara giriş](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) Visual Basic veya görsel C#kullanarak uluslararası bir pazar için yazılım geliştirme ile ilgili kavramların tartışıldığı açıklanır.
+ [.NET Framework göre uluslararası uygulamalara giriş](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) Visual Basic veya Visual C# kullanarak uluslararası bir pazar için yazılım geliştirme ile ilgili kavramların tartışıldığı açıklanır.
 
  [Genelleştirme Windows Forms](https://msdn.microsoft.com/library/72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5) Birden çok kültürü destekleyen Windows uygulamaları oluşturma hakkındaki sayfalara bağlantılar sağlar.
 

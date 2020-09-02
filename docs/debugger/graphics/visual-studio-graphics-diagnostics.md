@@ -12,16 +12,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e69d88bb5764836d82232cec26606009eaf694d7
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73187741"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama
 Visual Studio*Grafik tanılama* , Direct3D uygulamalarında işleme ve performans sorunlarını kaydetmek ve analiz etmek için bir araç kümesidir. Grafik Tanılama, Windows bilgisayarınızda, Windows cihaz öykünücüsünde veya uzak bir bılgısayarda veya cihazda yerel olarak çalışan uygulamalarda kullanılabilir.
 
- Grafik Tanılama iş akışı, uygulamanızın daha sonra hemen, paylaşılan veya daha sonra çözümlenebilmesini sağlayacak şekilde Direct3D 'yi nasıl kullandığı gibi (canlı) bir kayıt yakalayarak başlar. Yakalama oturumları, Visual Studio 'dan veya komut satırı yakalama aracı **DXCap. exe**' den el ile başlatılabilir ve denetlenebilir. Yakalama oturumları Ayrıca, Grafik Tanılama yakalama API 'Leri kullanılarak programlı bir şekilde başlatılabilir ve denetlenebilir.
+ Grafik Tanılama iş akışı, uygulamanızın daha sonra hemen, paylaşılan veya daha sonra çözümlenebilmesini sağlayacak şekilde Direct3D 'yi nasıl kullandığı gibi (canlı) bir kayıt yakalayarak başlar. Yakalama oturumları, Visual Studio 'dan veya komut satırı yakalama aracı **dxcap.exe**el ile başlatılabilir ve denetlenebilir. Yakalama oturumları Ayrıca, Grafik Tanılama yakalama API 'Leri kullanılarak programlı bir şekilde başlatılabilir ve denetlenebilir.
 
  Bir yakalama oturumu kaydedildikten sonra, içeriği Visual Studio *grafik Çözümleyicisi* tarafından herhangi bir zamanda çalınabilir ve uygulamanın kullandığı tam aynı kaynakları ve işleme komutlarını kullanarak yakalanan çerçeveleri yeniden oluşturabilirsiniz. Daha sonra, grafik Çözümleyicisi penceresinde sunulan araçları kullanarak, yakalanan çerçevelerden herhangi biri ayrıntılı olarak analiz edilebilir. Bu araçlar, herhangi bir Direct3D API çağrısını, kaynağını, ardışık düzen durumu nesnesini, ardışık düzen aşamasını veya Yakalanan çerçevede herhangi bir pikselin tüm boyutlarını incelemek için kullanılabilir. Concert içindeki bu araçları kullanarak, bir işleme sorunu, Yakalanan çerçevede nasıl göründüğünü ve uygulamanın kaynak kodunda, gölgelendiricilerinin veya grafik varlıklarındaki kök nedenine nasıl gidebilirler.
 
@@ -52,7 +52,7 @@ Visual Studio*Grafik tanılama* , Direct3D uygulamalarında işleme ve performan
 
  [Olay çağrısı yığını](graphics-event-call-stack.md) Şu anda seçili olan olayın çağrı yığınını incelemek için **grafik olay çağrı yığınını** kullanın. böylece, işleme sorunuyla ilgili uygulama koduna gidebilirsiniz.
 
- [Piksel geçmişi](graphics-pixel-history.md) Şu anda seçili olan pikselin onu etkileyen olaylardan nasıl etkilendiğini analiz etmek için **Grafik piksel geçmişi** penceresini kullanarak belirli işleme sorunlarına neden olan olayların olayını veya birleşimini belirleyebilirsiniz. Piksel geçmişi özellikle bir nesne yanlış işlendiğinde, piksel gölgelendirici çıkışı yanlış veya çerçeve arabelleği ile yanlış şekilde birleştirildiğinden ya da pikselleri atıldığından bile bir nesne görünmediğinde yararlı olur çerçeve arabelleğine ulaşmadan önce.
+ [Piksel geçmişi](graphics-pixel-history.md) Şu anda seçili olan pikselin onu etkileyen olaylardan nasıl etkilendiğini analiz etmek için **Grafik piksel geçmişi** penceresini kullanarak belirli işleme sorunlarına neden olan olayların olayını veya birleşimini belirleyebilirsiniz. Piksel geçmişi özellikle bir nesne yanlış işlendiğinde, piksel gölgelendirici çıkışı yanlış veya çerçeve arabelleği ile yanlış bir şekilde birleştirildiğinden ya da bir nesne, çerçeve arabelleğine erişmeden önce bunların pikselleri atıldığından bile görünmediğinde yararlı olur.
 
  [Nesne tablosu](graphics-object-table.md) Seçili olan olay için geçerli olan belirli Direct3D nesnelerinin ve kaynakların özelliklerini ve içeriğini incelemek için **grafik nesne tablosunu** kullanın. Nesne tablosu, bir olay sırasında etkin olan grafik cihazı bağlamını belirlemenize ve sabit arabellekler, köşe arabellekleri ve dokular gibi grafik kaynaklarının içeriğini incelemenize yardımcı olabilir.
 
@@ -66,5 +66,5 @@ Visual Studio*Grafik tanılama* , Direct3D uygulamalarında işleme ve performan
 
 | Başlık | Açıklama |
 | - | - |
-| [Hata ayıklayıcı Özellik turu](../debugger-feature-tour.md) | [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]hata ayıklama işlevini tanıtır. |
+| [Hata ayıklayıcı Özellik turu](../debugger-feature-tour.md) | İçindeki hata ayıklama işlevini tanıtır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . |
 | [DirectX grafik ve oyun](/windows/win32/directx) | DirectX grafik teknolojilerini tartışan makaleler sağlar. |

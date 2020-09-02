@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Ampul önerilerini görüntüleme | Microsoft Docs'
+title: 'İzlenecek yol: ampul önerilerini görüntüleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,53 +9,53 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8f135247241e8cf441cba2c1f63984dc69f7114c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438155"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64850655"
 ---
-# <a name="walkthrough-displaying-light-bulb-suggestions"></a>İzlenecek yol: Ampul Önerilerini Görüntüleme
+# <a name="walkthrough-displaying-light-bulb-suggestions"></a>İzlenecek Yol: Ampul Önerilerini Görüntüleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerleşik kod Çözümleyicileri veya kodu yeniden düzenleme tarafından tanımlanan sorunlar için düzeltmeler Visual Studio Düzenleyicisi'nde kullanılan simgeler şunlardır.  
+Hafif bulbs, Visual Studio düzenleyicisinde, yerleşik kod Çözümleyicileri veya kod yeniden düzenleme tarafından tanımlanan sorunların düzeltmeleri gibi bir dizi eylemi göstermek üzere genişleterek kullanılan simgelerdir.  
   
- Visual C# ve Visual Basic düzenleyicilerde yazma ve kendi kod Çözümleyicileri otomatik olarak ampuller görüntüleyen eylemlerle paketlemek için .NET derleyici Platformu ("Roslyn") kullanabilirsiniz. Daha fazla bilgi için bkz.:  
+ Visual C# ve Visual Basic düzenleyicilerinde Ayrıca, açık bulbs 'leri otomatik olarak görüntüleyen eylemlerle kendi kod Çözümleyicileri yazmak ve paketlemek için .NET Compiler Platform ("Roslyn") de kullanabilirsiniz. Daha fazla bilgi için bkz.  
   
-- [Nasıl yapılır: Yazma bir C# tanılama ve kod düzeltmesi](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
+- [Nasıl yapılır: C# tanısı ve kod onarımı yazma](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-C%23-Analyzer-and-Code-Fix)  
   
-- [Nasıl yapılır: Visual Basic tanılama ve kod düzeltmenizi yazın](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
+- [Nasıl yapılır: Visual Basic tanılama ve kod onarımı yazma](https://github.com/dotnet/roslyn/wiki/How-To-Write-a-Visual-Basic-Analyzer-and-Code-Fix)  
   
-  Diğer diller C++ gibi ampuller gibi bir öneri, bu işlevin bir saplama uygulaması oluşturmak için bazı hızlı eylemler için de sağlar.  
+  C++ gibi diğer diller Ayrıca, söz konusu işlevin saplama uygulamasını oluşturma önerisi gibi bazı hızlı eylemler için hafif bulbs sağlar.  
   
-  İşte bir ampul gibi görünüyor. Geçersiz olduğunda bir Visual Basic veya Visual C# projesinde, kırmızı dalgalı bir değişken adı altında görünür. Geçersiz tanımlayıcı fare bir ampul imlecin yanında görüntülenir.  
+  İşte ampul şöyle görünür. Visual Basic veya Visual C# projesinde, geçersiz olduğunda bir değişken adının altında kırmızı renkli bir çizgi görünür. Geçersiz tanımlayıcı üzerinde fare yaptığınızda imlecin yakınında bir ampul görüntülenir.  
   
-  ![Ampul](../extensibility/media/lightbulb.png "ampul")  
+  ![ampul](../extensibility/media/lightbulb.png "Ampul")  
   
-  Ampul tarafından aşağı oka tıklayın, seçili eylem önizlemesi ile birlikte bir dizi önerilen eylemi görüntülenir. Bu durumda, eylem çalışırsa, kodunuzda yapılan değişiklikleri gösterir.  
+  Ampul ışığının aşağı okuna tıkladığınızda, bir dizi Önerilen eylem, seçili eylemin önizlemesi ile birlikte görüntülenir. Bu durumda, eylemi çalıştırırsanız kodunuzda yapılacak değişiklikleri gösterir.  
   
-  ![Ampul Önizleme](../extensibility/media/lightbulbpreview.png "LightBulbPreview")  
+  ![ampul Önizleme](../extensibility/media/lightbulbpreview.png "Açık Bulbpreview")  
   
-  Ampuller kendi önerilen eylemler sağlamak için kullanabilirsiniz. Örneğin, açma küme ayraçları yeni bir satıra Taşı veya bunları önceki satır sonuna taşı eylemleri sağlayabilir. Aşağıdaki örneklerde, geçerli sözcüğü görünür bir ampul oluşturma işlemi gösterilmektedir ve iki sahip önerilen eylemler: **Büyük harfe Dönüştür** ve **küçük harfe Dönüştür**.  
+  Açık bulbs kullanarak kendi önerdiğimiz eylemleri sağlayabilirsiniz. Örneğin, küme ayracını yeni bir satıra taşımak veya önceki satırın sonuna taşımak için Eylemler sağlayabilirsiniz. Aşağıdaki izlenecek yol, geçerli kelimede görüntülenen ve iki önerilen eyleme sahip olan bir ampul oluşturmayı gösterir: **büyük harfe Dönüştür** ve **küçük harfe Dönüştür**.  
   
-## <a name="prerequisites"></a>Önkoşullar  
- Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'sını yükleme](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Ön koşullar  
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Yönetilen Genişletilebilirlik Çerçevesi (MEF) proje oluşturma  
+## <a name="creating-a-managed-extensibility-framework-mef-project"></a>Managed Extensibility Framework (MEF) projesi oluşturma  
   
-1. Bir C# VSIX projesi oluşturun. (İçinde **yeni proje** iletişim kutusunda **Visual C# / genişletilebilirlik**, ardından **VSIX projesi**.) Çözüm adı `LightBulbTest`.  
+1. C# VSıX projesi oluşturun. ( **Yeni proje** iletişim kutusunda, **Visual C#/genişletilebilirliği**, sonra **VSIX projesi**' ni seçin.) Çözümü adlandırın `LightBulbTest` .  
   
-2. Ekleme bir **Düzenleyicisi sınıflandırıcı** projeye öğe şablonu. Daha fazla bilgi için [bir düzenleyici öğesi şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
+2. Projeye bir **Düzenleyici sınıflandırıcı** öğe şablonu ekleyin. Daha fazla bilgi için bkz. [bir düzenleyici öğe şablonuyla uzantı oluşturma](../extensibility/creating-an-extension-with-an-editor-item-template.md).  
   
-3. Varolan sınıf dosyaları silin.  
+3. Varolan sınıf dosyalarını silin.  
   
-4. Proje şu başvuruyu ekleyin ve ayarlayın **Yereli Kopyala** için `False`:  
+4. Aşağıdaki başvuruyu projeye ekleyin ve yereli **Kopyala** ' yı ayarlayın `False` :  
   
-     Microsoft.VisualStudio.Language.Intellisense  
+     Microsoft. VisualStudio. Language. IntelliSense  
   
-5. Yeni bir sınıf dosyası ekleyin ve adlandırın **LightBulbTest**.  
+5. Yeni bir sınıf dosyası ekleyin ve onu **Lightbulbtest**olarak adlandırın.  
   
-6. Aşağıdaki using deyimlerini:  
+6. Deyimleri kullanarak aşağıdakileri ekleyin:  
   
     ```csharp  
     using System;  
@@ -72,9 +72,9 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
   
     ```  
   
-## <a name="implementing-the-light-bulb-source-provider"></a>Ampul kaynak sağlayıcısı uygulama  
+## <a name="implementing-the-light-bulb-source-provider"></a>Ampul kaynak sağlayıcısını uygulama  
   
-1. LightBulbTest.cs sınıf dosyasında LightBulbTest sınıfı silin. Adlı bir sınıf ekleyin **TestSuggestedActionsSourceProvider** uygulayan <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>. Adlı dışarı **Test Önerilen Eylemler** ve <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "metin".  
+1. LightBulbTest.cs sınıf dosyasında, LightBulbTest sınıfını silin. Öğesini uygulayan **Testmütedadctionssourceprovider** adlı bir sınıf ekleyin <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider> . **Önerilen bir test eylemi** adı ve <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> "metin" ile dışarı aktarın.  
   
     ```csharp  
     [Export(typeof(ISuggestedActionsSourceProvider))]  
@@ -83,14 +83,14 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     internal class TestSuggestedActionsSourceProvider : ISuggestedActionsSourceProvider  
     ```  
   
-2. Kaynak sağlayıcısı sınıf içinde alma <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> ve bir özellik olarak ekleyin.  
+2. Kaynak sağlayıcısı sınıfının içinde öğesini içeri aktarıp <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> özellik olarak ekleyin.  
   
     ```csharp  
     [Import(typeof(ITextStructureNavigatorSelectorService))]  
     internal ITextStructureNavigatorSelectorService NavigatorService { get; set; }  
     ```  
   
-3. Uygulama <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider.CreateSuggestedActionsSource%2A> döndürülecek yöntemi bir <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> nesne. Kaynak sonraki bölümde ele alınacaktır.  
+3. <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider.CreateSuggestedActionsSource%2A>Bir nesne döndürmek için yöntemini uygulayın <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> . Kaynağı bir sonraki bölümde ele alınacaktır.  
   
     ```csharp  
     public ISuggestedActionsSource CreateSuggestedActionsSource(ITextView textView, ITextBuffer textBuffer)  
@@ -104,15 +104,15 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     ```  
   
 ## <a name="implementing-the-isuggestedactionsource"></a>ISuggestedActionSource uygulama  
- Önerilen eylem kaynak önerilen eylemleri kümesini toplamak ve doğru bağlamda eklemeden sorumludur. Bu durumda bağlamı geçerli sözcüğü ve önerilen eylemleri **UpperCaseSuggestedAction** ve **LowerCaseSuggestedAction**, hangi aşağıdaki bölümde ele alınacaktır.  
+ Önerilen eylem kaynağı, önerilen eylemlerin kümesini toplamaktan ve bunları doğru bağlama göre eklemekten sorumludur. Bu durumda, bağlam geçerli sözcüklerdir ve Önerilen Eylemler, aşağıdaki bölümde tartışacak olan en üst **üsteetmüm** ve küçük **casemümüm**.  
   
-1. Bir sınıf ekleyin **TestSuggestedActionsSource** uygulayan <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>.  
+1. Uygulayan bir **Testmüteakctionssource** sınıfı ekleyin <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource> .  
   
     ```csharp  
     internal class TestSuggestedActionsSource : ISuggestedActionsSource  
     ```  
   
-2. Önerilen eylemi kaynak sağlayıcısı, metin arabelleği ve metin görünümünü özel salt okunur alanlar ekleyin.  
+2. Önerilen eylem kaynak sağlayıcısı, metin arabelleği ve metin görünümü için özel salt okuma alanları ekleyin.  
   
     ```csharp  
     private readonly TestSuggestedActionsSourceProvider m_factory;  
@@ -120,7 +120,7 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     private readonly ITextView m_textView;  
     ```  
   
-3. Özel alanları ayarlayan bir oluşturucu ekleyin.  
+3. Özel alanları ayarlayan bir Oluşturucu ekleyin.  
   
     ```csharp  
     public TestSuggestedActionsSource(TestSuggestedActionsSourceProvider testSuggestedActionsSourceProvider, ITextView textView, ITextBuffer textBuffer)  
@@ -131,7 +131,7 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     }  
     ```  
   
-4. İmlecin altındaki sözcüğünü döndüren özel bir yöntem ekleyin. Aşağıdaki yöntem, imleci geçerli konumda arar ve metin yapısına Gezgin sözcük kapsamı için sorar. İmleç bir sözcük ise <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> out parametresi, döndürülen; Aksi takdirde `out` parametresi `null` ve yöntemi `false`.  
+4. İmlecin altında olan sözcüğü döndüren özel bir yöntem ekleyin. Aşağıdaki yöntem imlecin geçerli konumuna bakar ve metin yapısı Gezginine sözcüğün kapsamını sorar. İmleç bir sözcükse, <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> Out parametresinde döndürülür; Aksi takdirde `out` parametre olur `null` ve Yöntem döndürülür `false` .  
   
     ```csharp  
     private bool TryGetWordUnderCaret(out TextExtent wordExtent)  
@@ -156,9 +156,9 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     }  
     ```  
   
-5. Uygulama <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.HasSuggestedActionsAsync%2A> yöntemi. Düzenleyici ampul görüntülenecek öğrenmek için bu yöntemi çağırır. Bu çağrı oldukça sık örneğin her İmleç bir satırından taşıdığında veya bir hata dalgalı fare geldiğinde yapılır. Bu yöntem çalışırken, gerçekleştirmek diğer UI işlemlerine izin vermek üzere uyumsuzdur. Çoğu durumda, bu yöntemin bazı ayrıştırma ve geçerli satırın analizi gerçekleştirmek için gerekir, bu nedenle işlem biraz zaman alabilir.  
+5. Yöntemini uygulayın <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.HasSuggestedActionsAsync%2A> . Düzenleyici, ampulün görüntülenip görüntülenmeyeceğini öğrenmek için bu yöntemi çağırır. Bu çağrı oldukça sık yapılır, örneğin, imleç bir satırdan diğerine geçilişinde veya fare bir hata dalgalı çizgi üzerine geldiğinde. Bu yöntem çalışırken diğer kullanıcı arabirimi işlemlerinin tamamlanmasına izin vermek için zaman uyumsuzdur. Çoğu durumda, bu yöntemin geçerli satırı ayrıştırma ve analiz gerçekleştirmesi gerekir, bu nedenle işleme biraz zaman alabilir.  
   
-     Bizim uygulamasında zaman uyumsuz olarak alır <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> ve boşluklar dışında metin olup ölçüde başka bir deyişle, önemli olup olmadığını belirler.  
+     Uygulamamızda zaman uyumsuz olarak alır <xref:Microsoft.VisualStudio.Text.Operations.TextExtent> ve kapsamın önemli olup olmadığını belirler, yani, boşluk dışında bir metin içerip içermediğini belirler.  
   
     ```csharp  
     public Task<bool> HasSuggestedActionsAsync(ISuggestedActionCategorySet requestedActionCategories, SnapshotSpan range, CancellationToken cancellationToken)  
@@ -176,10 +176,10 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     }  
     ```  
   
-6. Uygulama <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.GetSuggestedActions%2A> bir dizi döndüren yöntemi <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> içeren farklı nesneleri <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> nesneleri. Ampul genişletildiğinde bu yöntem çağrılır.  
+6. <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource.GetSuggestedActions%2A>Farklı nesneleri içeren bir nesne dizisi döndüren yöntemini uygulayın <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> . Bu yöntem, ampul genişletildiğinde çağrılır.  
   
     > [!WARNING]
-    > Emin olmanız gerekir uygulamaları `HasSuggestedActionsAsync()` ve `GetSuggestedActions()` olan tutarlı; are, `HasSuggestedActionsAsync()` döndürür `true`, ardından `GetSuggestedActions()` görüntülemek için bazı eylemler olması gerekir. Çoğu durumda `HasSuggestedActionsAsync()` hemen önce çağrılır `GetSuggestedActions()`, ancak bu her zaman böyle değildir. Örneğin, kullanıcı tuşlarına basarak ampul eylemleri çağırır (CTRL +.) yalnızca `GetSuggestedActions()` çağrılır.  
+    > Ve uygulamalarının tutarlı olduğundan emin olmanız gerekir `HasSuggestedActionsAsync()` `GetSuggestedActions()` ; Yani, `HasSuggestedActionsAsync()` döndürürse `true` `GetSuggestedActions()` görüntülenecek eylemlere sahip olmalıdır. Çoğu durumda `HasSuggestedActionsAsync()` hemen hemen çağrılır `GetSuggestedActions()` , ancak bu her zaman durum değildir. Örneğin, Kullanıcı (CTRL +.) tuşuna basarak ampul eylemlerini çağrılırsa, yalnızca `GetSuggestedActions()` çağırılır.  
   
     ```csharp  
     public IEnumerable<SuggestedActionSet> GetSuggestedActions(ISuggestedActionCategorySet requestedActionCategories, SnapshotSpan range, CancellationToken cancellationToken)  
@@ -196,13 +196,13 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     }   
     ```  
   
-7. Tanımlayan bir `SuggestedActionsChanged` olay.  
+7. Bir `SuggestedActionsChanged` olay tanımlayın.  
   
     ```csharp  
     public event EventHandler<EventArgs> SuggestedActionsChanged;  
     ```  
   
-8. Uygulama tamamlamak için uygulamaları ekleme `Dispose()` ve `TryGetTelemetryId()` yöntemleri. Telemetri yapın, böylece yalnızca false değerini döndürür ve kümesi için boş GUID istemezsiniz.  
+8. Uygulamayı gerçekleştirmek için ve yöntemlerine yönelik uygulamalar ekleyin `Dispose()` `TryGetTelemetryId()` . Telemetriyi yapmak istemiyorum, bu yüzden yalnızca false döndürün ve GUID 'yi Empty olarak ayarlayın.  
   
     ```csharp  
     public void Dispose()  
@@ -217,20 +217,20 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     }  
     ```  
   
-## <a name="implementing-light-bulb-actions"></a>Ampul eylemleri uygulama  
+## <a name="implementing-light-bulb-actions"></a>Ampul gerçekleştirme eylemleri  
   
-1. Projede Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll ve kümesi bir başvuru ekleyin **Yereli Kopyala** için `False`.  
+1. Projede, Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll bir başvuru ekleyin ve yereli **Kopyala** olarak ayarlayın `False` .  
   
-2. İki sınıf oluşturma ilk adlı `UpperCaseSuggestedAction` ve ikinci adlı `LowerCaseSuggestedAction`. Her iki sınıfları uygulayan <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction>.  
+2. İlk adlandırılmış `UpperCaseSuggestedAction` ve ikinci adlı iki sınıf oluşturun `LowerCaseSuggestedAction` . Her iki sınıf de uygular <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction> .  
   
     ```csharp  
     internal class UpperCaseSuggestedAction : ISuggestedAction   
     internal class LowerCaseSuggestedAction : ISuggestedAction  
     ```  
   
-     Bir çağrı dışında her iki sınıflar benzer <xref:System.String.ToUpper%2A> ve diğer çağrılar <xref:System.String.ToLower%2A>. Yalnızca büyük harf Eylem sınıfına aşağıdaki adımları kapsar, ancak her iki sınıf uygulamalıdır. Büyük harf eylem olarak küçük eylemi uygulamak için bir desen uygulamak için adımları kullanın.  
+     Her iki sınıf de tek bir çağrı <xref:System.String.ToUpper%2A> ve diğer çağrılar dışında benzer <xref:System.String.ToLower%2A> . Aşağıdaki adımlar yalnızca büyük harfli eylem sınıfını kapsar, ancak her iki sınıfı da uygulamanız gerekir. Büyük harfli eylemi, küçük harfli eylemi uygulamak için bir model olarak uygulama adımlarını kullanın.  
   
-3. Aşağıdaki using deyimlerini bu sınıflar için:  
+3. Bu sınıflar için aşağıdaki using deyimlerini ekleyin:  
   
     ```csharp  
     using Microsoft.VisualStudio.Imaging.Interop;  
@@ -241,7 +241,7 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
   
     ```  
   
-4. Bir özel alan kümesi bildirin.  
+4. Özel alanlar kümesi bildirin.  
   
     ```csharp  
     private ITrackingSpan m_span;  
@@ -250,7 +250,7 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     private ITextSnapshot m_snapshot;  
     ```  
   
-5. Alanları ayarlayan bir oluşturucu ekleyin.  
+5. Alanları ayarlayan bir Oluşturucu ekleyin.  
   
     ```csharp  
     public UpperCaseSuggestedAction(ITrackingSpan span)  
@@ -262,7 +262,7 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     }  
     ```  
   
-6. Uygulama <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetPreviewAsync%2A> olan eylem Önizleme görünmesi yöntemi.  
+6. Yöntemi, <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetPreviewAsync%2A> eylem önizlemesini görüntüleyecek şekilde uygulayın.  
   
     ```csharp  
     public Task<object> GetPreviewAsync(CancellationToken cancellationToken)  
@@ -274,7 +274,7 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     }  
     ```  
   
-7. Uygulama <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetActionSetsAsync%2A> boş olan döndürecek şekilde yöntemi <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> sabit listesi.  
+7. <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.GetActionSetsAsync%2A>Yöntemi boş bir sabit listesi döndüren şekilde uygulayın <xref:Microsoft.VisualStudio.Language.Intellisense.SuggestedActionSet> .  
   
     ```csharp  
     public Task<IEnumerable<SuggestedActionSet>> GetActionSetsAsync(CancellationToken cancellationToken)  
@@ -283,7 +283,7 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     }  
     ```  
   
-8. Özellikleri aşağıdaki gibi uygulayın.  
+8. Özellikleri aşağıdaki şekilde uygulayın.  
   
     ```csharp  
     public bool HasActionSets  
@@ -318,7 +318,7 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     }  
     ```  
   
-9. Uygulama <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A> aralık içindeki metni kendi büyük harf eşdeğeri ile değiştirerek yöntemi.  
+9. <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedAction.Invoke%2A>Yayılma alanındaki metni büyük harfli eşdeğerleriyle değiştirerek yöntemini uygulayın.  
   
     ```csharp  
     public void Invoke(CancellationToken cancellationToken)  
@@ -328,9 +328,9 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     ```  
   
     > [!WARNING]
-    > Ampul işlemi **Invoke** yöntemi uygulamanın UI göstermesi için beklenmiyor.  Eylem (örneğin bir önizleme ya da seçimi iletişim) yeni kullanıcı Arabirimi getirirseniz, doğrudan içinden kullanıcı Arabirimi gösterme **Invoke** yöntemi ancak bunun yerine döndürme sonra kullanıcı arabirimini görüntülemek için zamanlama **Invoke**.  
+    > Ampul eylemi **çağırma** yönteminin Kullanıcı arabirimini göstermesi beklenmez.  Eyleminiz yeni kullanıcı arabirimi (örneğin, önizleme veya seçim iletişim kutusu) alıyorsa, Kullanıcı arabirimini doğrudan **Invoke** yönteminin içinden görüntülememeyin, bunun yerine **Invoke**'tan döndükten sonra Kullanıcı arabirimini görüntülemeyi zamanlayın.  
   
-10. Uygulama tamamlamak için ekleme `Dispose()` ve `TryGetTelemetryId()` yöntemleri.  
+10. Uygulamayı gerçekleştirmek için `Dispose()` ve `TryGetTelemetryId()` yöntemlerini ekleyin.  
   
     ```csharp  
     public void Dispose()  
@@ -345,23 +345,23 @@ Ampuller bir eylemler kümesi görüntülemek için genişletin, örneğin yerle
     }  
     ```  
   
-11. Aynı şeyi yapmak unutmayın `LowerCaseSuggestedAction` görünen metni değiştirme "Dönüştür '{0}' küçük harfe" ve çağrı <xref:System.String.ToUpper%2A> için <xref:System.String.ToLower%2A>.  
+11. `LowerCaseSuggestedAction`Görüntülenecek metni "' ' öğesini {0} küçük harfe Dönüştür" ve çağrısı olacak şekilde değiştirmek için aynı şeyi yapmayın <xref:System.String.ToUpper%2A> <xref:System.String.ToLower%2A> .  
   
-## <a name="building-and-testing-the-code"></a>Oluşturma ve kod test etme  
- Bu kodu test etmek için LightBulbTest Çözümü derleyin ve deneysel örneğinde çalıştırın.  
+## <a name="building-and-testing-the-code"></a>Kodu derleme ve test etme  
+ Bu kodu test etmek için, LightBulbTest çözümünü derleyin ve deneysel örnekte çalıştırın.  
   
-1. Çözümü oluşturun.  
+1. Çözümü derleyin.  
   
-2. Bu projede hata ayıklayıcıda çalıştırdığınızda, Visual Studio'nun ikinci bir örneğini başlatılır.  
+2. Bu projeyi hata ayıklayıcıda çalıştırdığınızda, Visual Studio 'nun ikinci bir örneği oluşturulur.  
   
-3. Bir metin dosyası oluşturun ve bir metin yazın. Metnin soluna bir ampul de görürsünüz.  
+3. Bir metin dosyası oluşturun ve metin yazın. Metnin solunda bir ampul görmeniz gerekir.  
   
-     ![Ampul test](../extensibility/media/testlightbulb.png "TestLIghtBulb")  
+     ![ampul sınamasını yapın](../extensibility/media/testlightbulb.png "Testlightampul")  
   
-4. Ampul gelin. Aşağı ok görmeniz gerekir.  
+4. Ampul ışığı üzerine gelin. Aşağı ok görmeniz gerekir.  
   
-5. Ampule tıkladığınızda, iki önerilen eylem, seçili eylem önizlemesiyle birlikte görüntülenmesi gerekir.  
+5. Ampul ' i tıklattığınızda, seçili eylemin önizlemesiyle birlikte önerilen iki eylem görüntülenmelidir.  
   
-     ![Ampul, genişletilmiş test](../extensibility/media/testlightbulbexpanded.gif "TestLIghtBulbExpanded")  
+     ![test ampul, genişletilmiş](../extensibility/media/testlightbulbexpanded.gif "Testlightbulbgenişletilen")  
   
-6. İlk eylem tıklarsanız, geçerli kelimenin tüm metni büyük harfe dönüştürülmelidir. İkinci eylem tıklarsanız, bütün metni küçük harflere dönüştürülmelidir.
+6. İlk eyleme tıklarsanız, geçerli sözcükteki tüm metinlerin büyük harfe dönüştürülmesi gerekir. İkinci eyleme tıklarsanız, tüm metinlerin küçük harfe dönüştürülmesi gerekir.

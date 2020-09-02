@@ -10,34 +10,34 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: 5c46506e81e5334efea9060e957269e92e9d49cc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65531910"
 ---
-# <a name="use-expression-body-or-block-body-for-lambda-expressions"></a>Lambda ifadeleri için ifade gövdesi veya blok gövdesi kullanma
+# <a name="use-expression-body-or-block-body-for-lambda-expressions"></a>Lambda ifadeleri için ifade gövdesi veya blok gövdesi kullan
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 
-**Ne:** Bir ifade gövdesi veya blok gövde kullanmak için bir lambda ifade refactor sağlar.
+**Ne:** Bir lambda ifadesini bir ifade gövdesi veya blok gövdesi kullanmak için yeniden düzenlemenize olanak tanır.
 
-**Ne zaman:** Lambda ifadelerini bir ifade gövdesi veya blok gövde kullanmak için tercih edersiniz.
+**Ne zaman:** Lambda ifadelerini bir ifade gövdesi veya blok gövdesi kullanmak üzere tercih edersiniz.
 
-**Neden:** Lambda ifadeleri kullanıcı tercihinize göre okunabilirliği artırmak için yeniden kullanılabilir.
+**Neden:** Lambda ifadeleri, Kullanıcı tercihlerinize göre okunabilirliğini geliştirmek için yeniden düzenlenmiş olabilir.
 
-## <a name="lambda-expression-body-or-block-body-refactoring"></a>Lambda ifade vücut veya blok vücut refactoring
+## <a name="lambda-expression-body-or-block-body-refactoring"></a>Lambda ifadesi gövdesi veya blok gövdesini yeniden düzenleme
 
-1. İmlecinizi bir lambda operatörünün sağına yerleştirin.
-2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+1. İmlecinizi bir lambda işlecinin sağına yerleştirin.
+2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
-  ![Lambda expression/block body kullanın](media/block-body-lambda.png)
+  ![Lambda ifadesi/blok gövdesi kullan](media/block-body-lambda.png)
 
-3. **lambda ifadeleri için blok gövdesini kullan'ı** seçin veya **lambda ifadeleri için ifade gövdesini kullanın.**
+3. **Lambda ifadeleri için blok gövdesi kullan** veya **lambda ifadeleri için ifade gövdesi**kullan ' ı seçin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yeniden Düzenle](../refactoring-in-visual-studio.md)
-- [.NET Geliştiricileri için ipuçları](../csharp-developer-productivity.md)
+- [.NET geliştiricileri için ipuçları](../csharp-developer-productivity.md)

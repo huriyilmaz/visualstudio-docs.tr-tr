@@ -1,5 +1,5 @@
 ---
-title: 'Hata: Transact-SQL yürütmesi hata ayıklama olmadan bitti | Microsoft Docs'
+title: 'Hata: Transact-SQL yürütmesi hata ayıklama olmadan sonlandırıldı | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,39 +18,39 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: cdfcaa42c55f87711b0889c6a67d1a4799b84fed
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65681072"
 ---
 # <a name="error-transact-sql-execution-ended-without-debugging"></a>Hata: Transact-SQL yürütmesi hata ayıklaması yapılmadan sonlandı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Hata ayıklayıcı hata ayıklama iletisi, SQL Server'dan almaz ve Transact-SQL veya SQLCLR yordam hata ayıklamaya çalıştığınız bu hata oluşur.  
+Bu hata, bir Transact-SQL veya SQLCLR yordamını hata ayıklamaya çalışırken ve hata ayıklayıcı SQL Server hata ayıklama iletilerini almadığında oluşur.  
   
- Bu ağ sorunları nedeniyle veya SQL Server üzerinde sorunları olabilir, ancak en olası nedeni izinlerle ilgili bir sorun.  
+ Bunun nedeni ağ sorunlarından veya SQL Server sorunlarından kaynaklanabilir, ancak en olası nedeni bir izin sorunudur.  
   
- Kullanılan iki hesap vardır:  
+ Dahil olmak üzere iki hesap vardır:  
   
-- Kullanıcı hesabı uygulama hesabıdır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] olarak çalışıyor.  
+- Uygulama hesabı, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] olarak çalışan kullanıcı hesabıdır.  
   
-- Bağlantı hesabı SQL Server'a bağlantı kurmak için kullanılan kimliktir. Bu mutlaka bağlantı SQL kimlik doğrulaması kullanıyorsanız gibi Visual Studio çalıştıran kimliğin ile aynı değildir.  
+- Bağlantı hesabı, SQL Server bağlantısını yapmak için kullanılan kimliktir. Bu, bağlantı SQL kimlik doğrulaması kullanıyor gibi, Visual Studio 'Nun çalıştırdığı kimlikle aynı değildir.  
   
-  SQL hata ayıklama, uygulama hesabı bağlantı hesapla eşleşmesi gerekir veya sysadmin olmanız gerekir.  
+  SQL hata ayıklaması, uygulama hesabının bağlantı hesabıyla eşleşmesi veya sysadmin olması gerekir.  
   
-  Uygulama hesabı sa gibi bir SQL oturum açma kullanıyorsanız, kurulum SQL Server'da sysadmin olarak olması gerekir. Varsayılan olarak, yöneticiler makine SQL server üzerinde çalıştığı SQL Server Sistem bulunur.  
+  Sa gibi bir SQL oturum açma kullanıyorsanız, uygulama hesabının bir sysadmin olarak SQL Server kurulması gerekir. Varsayılan olarak, SQL Server makinesinde çalışan yöneticiler SQL Server sysadmins ' dir.  
   
-  Bu hatayı düzeltmek için ihtiyacınız olabilecek:  
+  Bu hatayı düzeltmek için şunları yapmanız gerekebilir:  
   
-- İzinleri ayarlarınızı doğrulayın. Daha fazla bilgi için [nasıl yapılır: Hata ayıklama için SQL Server izinleri ayarla](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414).  
+- İzin ayarlarınızı doğrulayın. Daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama için SQL Server Izinleri ayarlama](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414).  
   
-- SQL hata ayıklamayı'ı doğru bir şekilde ayarlandığından emin olun.  
+- Doğru ayarlandıysa SQL hata ayıklamanın bulunduğundan emin olun.  
   
-- Ağ veya veritabanı yöneticinize başvurun.  
+- Ağınız veya veritabanı yöneticinizle görüşün.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL hata ayıklamayı kurma](https://msdn.microsoft.com/3db09e68-edcc-42de-9c22-4e97cfd55ab3)   
- [Nasıl yapılır: Hata ayıklama için SQL Server izinleri ayarlayın](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)   
+ [SQL hata ayıklamayı ayarlama](https://msdn.microsoft.com/3db09e68-edcc-42de-9c22-4e97cfd55ab3)   
+ [Nasıl yapılır: hata ayıklama için SQL Server Izinleri ayarlama](https://msdn.microsoft.com/84e088d0-0409-41d4-841b-f5d4b0fda414)   
  [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)   
- [Uzaktan Hata Ayıklama](../debugger/remote-debugging.md)
+ [Uzaktan hata ayıklama](../debugger/remote-debugging.md)

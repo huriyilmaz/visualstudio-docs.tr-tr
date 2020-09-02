@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8bd74f4d61c74a4dc348f7a615e103b283a15fc0
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73189625"
 ---
 # <a name="accessibility-in-office-projects"></a>Office projelerinde erişilebilirlik
@@ -48,7 +48,7 @@ Microsoft Visual Studio ve Microsoft Office, standart erişilebilirlik gereksini
 
      Değişikliğin etkili olması için Visual Studio 'Yu yeniden başlatmanız gerektiğini belirten bir ileti görüntülenir.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
 5. Visual Studio 'Yu yeniden başlatın ve projenizi yeniden açın.
 

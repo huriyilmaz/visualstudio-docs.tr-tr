@@ -14,53 +14,53 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5fe8a99ee59a347fdcb7cff601b75139760630f7
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595962"
 ---
 # <a name="new-file-command"></a>Yeni Dosya Komutu
-Yeni bir dosya oluşturur ve açar. Dosya Çeşitli Dosyalar klasörü altında görünür.
+Yeni bir dosya oluşturur ve açar. Dosya, Miscellaneous Files klasörünün altında görünür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cmd
 File.NewFile [filename] [/t:templatename] [/editor:editorname]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 `filename`
 
-İsteğe bağlı. Dosyanın adı. Ad sağlanmadıysa, varsayılan ad sağlanır. Şablon adı listelenmemişse, bir metin dosyası oluşturulur.
+İsteğe bağlı. Dosyanın adı. Ad sağlanmazsa, varsayılan bir ad verilir. Şablon adı listelenmiyorsa, bir metin dosyası oluşturulur.
 
 ## <a name="switches"></a>Anahtarlar
-/t:`templatename`\
-İsteğe bağlı. Oluşturulacak dosya türünü belirtir.
+/t`templatename`\
+İsteğe bağlı. Oluşturulacak dosyanın türünü belirtir.
 
-/t:`templatename` bağımsız değişken sözdizimi, Yeni Dosya İletişim Kutusu'nda bulunan bilgileri yansıtıyor. Bir ters eğik çizgi ()`\`ve şablon adı izleyen kategori adını girin ve tüm dizeyi tırnak işaretlerine bürün.
+/T: `templatename` Argument sözdizimi, yeni dosya Iletişim kutusunda bulunan bilgileri yansıtır. Kategori adının arkasından bir ters eğik çizgi ( `\` ) ve şablon adı girin ve tüm dizeyi tırnak işaretleri içine alın.
 
-Örneğin, yeni [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] bir kaynak dosyası oluşturmak için /t:`templatename` bağımsız değişken için aşağıdakileri girersiniz.
+Örneğin, yeni bir [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] kaynak dosyası oluşturmak için/t: Argument için aşağıdakini girersiniz `templatename` .
 
 ```cmd
 /t:"Visual C++\C++ File (.cpp)"
 ```
 
-Yukarıdaki örnek, C++ Dosya şablonunun **Yeni Dosya** iletişim kutusunda Visual C++ kategorisinin altında bulunduğunu gösterir.
+Yukarıdaki örnek, C++ dosya şablonunun **yeni dosya** iletişim kutusunda Visual C++ kategorisinin altında bulunduğunu gösterir.
 
-/e:`editorname`\
-İsteğe bağlı. Dosyanın açılacağı düzenleyicinin adı. Bağımsız değişken belirtilir, ancak düzenleyici adı sağlanmamışsa, **Ile Aç** iletişim kutusu görüntülenir.
+/e`editorname`\
+İsteğe bağlı. Dosyanın açıldığı düzenleyicinin adı. Bağımsız değişken belirtilmişse ancak düzenleyici adı sağlanmadığında, **birlikte Aç** iletişim kutusu görüntülenir.
 
-/e:`editorname` bağımsız değişken sözdizimi, teklif işaretleriyle birlikte açık iletişim kutusunda göründükleri gibi düzenleyici adlarını kullanır.
+/E: `editorname` Argument sözdizimi, birlikte Aç Iletişim kutusunda göründükleri gibi, tırnak işaretleri içine alınan düzenleyici adlarını kullanır.
 
-Örneğin, kaynak kod düzenleyicisinde bir dosya açmak için /e:`editorname` bağımsız değişkeniçin aşağıdakileri girersiniz.
+Örneğin, kaynak kodu düzenleyicisinde bir dosya açmak için,/e: Argument için aşağıdakini girersiniz `editorname` .
 
 ```cmd
 /e:"Source Code (text) Editor"
 ```
 
 ## <a name="example"></a>Örnek
-Bu örnek, "test1.htm" adlı yeni bir web sayfası oluşturur ve kaynak kod düzenleyicisinde açar.
+Bu örnekte, "test1.htm" yeni bir Web sayfası oluşturulur ve kaynak kodu düzenleyicisinde açılır.
 
 ```cmd
 >File.NewFile test1 /t:"General\HTML Page" /e:"Source Code (text) Editor"
@@ -68,8 +68,8 @@ Bu örnek, "test1.htm" adlı yeni bir web sayfası oluşturur ve kaynak kod düz
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Görsel Stüdyo Komutları](../../ide/reference/visual-studio-commands.md)
-- [Komut Penceresi](../../ide/reference/command-window.md)
-- [Komut Penceresi](../../ide/reference/immediate-window.md)
-- [Bul/Komut Kutusu](../../ide/find-command-box.md)
+- [Visual Studio komutları](../../ide/reference/visual-studio-commands.md)
+- [Komut penceresi](../../ide/reference/command-window.md)
+- [Komut penceresi](../../ide/reference/immediate-window.md)
+- [Bul/komut kutusu](../../ide/find-command-box.md)
 - [Visual Studio Komut Diğer Adları](../../ide/reference/visual-studio-command-aliases.md)

@@ -17,73 +17,73 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: 87a167a75f3b06522da77d562b0137df89757975
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75596222"
 ---
 # <a name="options-text-editor-c-intellisense"></a>Seçenekler, Metin Düzenleyici, C#, IntelliSense
 
-C# için **IntelliSense'in** davranışını etkileyen ayarları değiştirmek için IntelliSense seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için **Araçlar** > **Seçenekleri'ni**seçin ve ardından **Metin Düzenleyicisi** > **C#** > **IntelliSense'i**seçin.
+C# için IntelliSense davranışını etkileyen ayarları değiştirmek için **IntelliSense** seçenekleri sayfasını kullanın. Bu seçenekler sayfasına erişmek için **Araçlar**  >  **Seçenekler**' i ve ardından **metin düzenleyici**  >  **C#**  >  **IntelliSense**' i seçin.
 
 **IntelliSense** seçenekleri sayfası aşağıdaki seçenekleri içerir:
 
-## <a name="completion-lists"></a>Tamamlama Listeleri
+## <a name="completion-lists"></a>Tamamlanma listeleri
 
-- Bir karakter yazdıktan sonra tamamlanma listesini göster*
+- Bir karakter yazıldıktan sonra tamamlanma listesini göster *
 
-   Bu seçenek seçildiğinde, Yazmaya başladığınızda IntelliSense tamamlanma listesini otomatik olarak görüntüler. Bu seçenek seçilmediğinde, IntelliSense tamamlama hala **IntelliSense** menüsünden veya **Ctrl**+**Space**tuşuna basarak kullanılabilir.
+   Bu seçenek belirlendiğinde, yazmaya başladığınızda IntelliSense, tamamlanma listesini otomatik olarak görüntüler. Bu seçenek seçili olmadığında, IntelliSense tamamlanmaya hala **IntelliSense** menüsünde veya **CTRL** + **Space**'e basılarak ulaşılabilir.
 
-- Karakter silindikten sonra tamamlanma listesini göster
+- Bir karakter silindikten sonra tamamlanma listesini göster
 
-- Tamamlama listesi öğelerinin eşleşen bölümlerini vurgulama
+- Tamamlanma listesi öğelerinin eşleşen bölümlerini Vurgula
 
 - Tamamlama öğesi filtrelerini göster
 
-## <a name="snippets-behavior"></a>Parçacıklar davranışı
+## <a name="snippets-behavior"></a>Kod parçacıkları davranışı
 
-- Asla parçacıklar içermez
+- Kod parçacıklarını hiçbir şekilde eklemeyin
 
-   Bu seçenek seçildiğinde, IntelliSense hiçbir zaman c# kodu parçacıkları için diğer adları tamamlama listesine eklenmez.
+   Bu seçenek belirlendiğinde, IntelliSense hiçbir zaman tamamlama listesine C# kod parçacıkları için diğer adlar eklemektedir.
 
-- Her zaman parçacıklar içerir
+- Her zaman parçacıkları dahil et
 
-   Bu seçenek seçildiğinde, IntelliSense tamamlama listesine C# kodu parçacıkları için takma adlar ekler. Kod snippet diğer adı bir anahtar kelime ile aynı olduğu durumlarda, örneğin, [sınıf,](/dotnet/csharp/language-reference/keywords/class)anahtar kelime kısayol ile değiştirilir. Daha fazla bilgi için [C# Kodu Parçacıkları'na](../../ide/visual-csharp-code-snippets.md)bakın.
+   Bu seçenek belirlendiğinde, IntelliSense, tamamlama listesine C# kod parçacıkları için diğer adlar ekler. Kod parçacığı diğer adının bir anahtar sözcükle aynı olduğu durumda (örneğin, [sınıfı](/dotnet/csharp/language-reference/keywords/class)), anahtar sözcüğü kısayol ile değiştirilmiştir. Daha fazla bilgi için bkz. [C# kod parçacıkları](../../ide/visual-csharp-code-snippets.md).
 
-- ?-Sekme tanımlayıcıdan sonra yazıldığında parçacıkları ekleme
+- Bir tanımlayıcıdan sonra?-Tab yazıldığında kod parçacıklarını dahil et
 
-   Bu seçenek seçildiğinde, IntelliSense tamamlanma listesine C# kodu parçacıkları için takma adlar **ekler?** + **Sekme** tanımlayıcıdan sonra basılır
+   Bu **seçenek belirlendiğinde, IntelliSense ne zaman** + tamamlandığında, C# kod parçacıkları için diğer adları tamamlama listesine ekler. Bir tanımlayıcı sonrasında **sekmeye** basıldığında
 
 ## <a name="enter-key-behavior"></a>Anahtar davranışı girin
 
-- Enter'a asla yeni satır ekleme
+- ENTER 'a hiçbir şekilde yeni satır eklemeyin
 
-   Tamamlanma listesinde bir öğe seçilip **Enter**tuşuna bastıktan sonra yeni bir satırın otomatik olarak eklenmediğini belirtir.
+   Tamamlanma listesindeki bir öğeyi seçip **ENTER**tuşuna basarak yeni bir satırın hiçbir şekilde otomatik olarak eklendiğine belirtir.
 
-- Yalnızca tam olarak yazılan sözcüğün sonundan sonra enter'a yeni satır ekleyin
+- Yalnızca tam yazılan kelimeden sonra ENTER 'a yeni satır ekle
 
-   Tamamlanma listesindeki bir giriş için tüm karakterleri yazıp Enter **tuşuna**basarsan, yeni bir satır otomatik olarak eklenir ve imleç yeni satıra taşınır.
+   Tamamlanma listesindeki bir girdinin tüm karakterlerini yazıp **ENTER**' a basarsanız, otomatik olarak yeni bir satır eklenir ve imleç yeni satıra gider.
 
-   Örneğin, yazıp `else` **Enter**tuşuna basarsan, editörde aşağıdakiler görünür:
+   Örneğin, yazıp ENTER `else` tuşuna basarsanız, düzenleyicide aşağıdakiler **Enter**görüntülenir:
 
    `else`
 
-   `|`(imleç konumu)
+   `|` (imleç konumu)
 
-   Ancak, yalnızca `el` yazarsanız ve sonra **Enter**tuşuna baslarsanız, editörde aşağıdakiler görüntülenir:
+   Ancak, yalnızca yazıp `el` **ENTER**tuşuna basarsanız, düzenleyicide aşağıdakiler görüntülenir:
 
-   `else|`(imleç konumu)
+   `else|` (imleç konumu)
 
-- Enter'a her zaman yeni satır ekleyin
+- ENTER 'a her zaman yeni satır ekle
 
-   Tamamlanma listesindeki bir giriş için karakterlerden *herhangi* birini yazıp Enter **tuşuna**basarsan, yeni bir satır otomatik olarak eklenir ve imleç yeni satıra taşınır.
+   Tamamlanma listesindeki bir girdinin karakterlerinden *birini yazıp* **ENTER**' a basarsanız, otomatik olarak yeni bir satır eklenir ve imleç yeni satıra gider.
 
 ## <a name="show-name-suggestions"></a>Ad önerilerini göster
 
-Yakın zamanda seçtiğiniz üyeler için otomatik nesne adı tamamlama gerçekleştirir.
+Son zamanlarda seçtiğiniz üyeler için otomatik nesne adı tamamlamayı gerçekleştirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Genel, Ortam, Seçenekler İletişim Kutusu](../../ide/reference/general-environment-options-dialog-box.md)
-- [IntelliSense Kullanma](../../ide/using-intellisense.md)
+- [IntelliSense kullanma](../../ide/using-intellisense.md)
