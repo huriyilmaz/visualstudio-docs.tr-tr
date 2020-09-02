@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::RemovePort | Microsoft Docs
+title: 'IDebugPortSupplier2:: RemovePort | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 986c304918ead986b76662cadfbd2b4122550fe2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188245"
 ---
 # <a name="idebugportsupplier2removeport"></a>IDebugPortSupplier2::RemovePort
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir bağlantı noktası kaldırır.  
+Bir bağlantı noktasını kaldırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT RemovePort(   
@@ -40,13 +40,13 @@ int RemovePort( 
   
 #### <a name="parameters"></a>Parametreler  
  `pPort`  
- [in] Bir [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) kaldırılacak bağlantı noktasını temsil eden nesne.  
+ 'ndaki Kaldırılacak bağlantı noktasını temsil eden bir [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem bağlantı noktasının bağlantı noktası tedarikçi iç etkin bağlantı noktalarını listeden kaldırır.  
+ Bu yöntem bağlantı noktasını bağlantı noktası sağlayıcısının iç etkin bağlantı noktaları listesinden kaldırır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   

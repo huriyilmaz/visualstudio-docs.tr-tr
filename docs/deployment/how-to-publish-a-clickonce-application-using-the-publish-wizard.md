@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 518252ac24dc45036587de114f68cd0a77b8c5b8
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382308"
 ---
 # <a name="how-to-publish-a-clickonce-application-using-the-publish-wizard"></a>Nasıl yapılır: yayımlama sihirbazını kullanarak ClickOnce uygulaması yayımlama
@@ -59,7 +59,7 @@ Yayımlama Sihirbazı 'nı çalıştırmadan önce, yayımlama özelliklerini uy
 
    - Uygulamayı doğrudan yayımlama konumundan çalıştırmak istiyorsanız Hayır ' a tıklayın **, bu uygulama yalnızca çevrimiçi olarak kullanılabilir**. **Başlat** menüsünde bir kısayol oluşturulmayacak.
 
-     Devam etmek için **İleri** 'ye tıklayın.
+     Devam etmek için **İleri**'ye tıklayın.
 
 6. Uygulamayı yayımlamak için **son** ' a tıklayın.
 
@@ -88,7 +88,7 @@ Yayımlama Sihirbazı 'nı çalıştırmadan önce, yayımlama özelliklerini uy
 
    - Uygulama güncelleştirmeleri denet, **uygulama güncelleştirmeleri denetmeyecektir**öğesine tıklayın.
 
-     Devam etmek için **İleri** 'ye tıklayın.
+     Devam etmek için **İleri**'ye tıklayın.
 
 6. Uygulamayı yayımlamak için **son** ' a tıklayın.
 

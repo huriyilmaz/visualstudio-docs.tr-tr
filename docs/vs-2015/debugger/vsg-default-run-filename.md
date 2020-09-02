@@ -10,18 +10,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2980d34028c58a6abadb2df21bf22c8d37cda6e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160769"
 ---
-# <a name="vsgdefaultrunfilename"></a>VSG_DEFAULT_RUN_FILENAME
+# <a name="vsg_default_run_filename"></a>VSG_DEFAULT_RUN_FILENAME
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Grafik günlük dosyası varsayılan dosya adını tanımlar.  
+Grafik günlük dosyasının varsayılan dosya adını tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 #define VSG_DEFAULT_FILENAME filename  
@@ -29,22 +29,22 @@ Grafik günlük dosyası varsayılan dosya adını tanımlar.
   
 #### <a name="parameters"></a>Parametreler  
  `filename`  
- Grafik bilgilerini programla yakalandığında, varsayılan olarak grafik günlük dosyasına verilen dosya adı.  
+ Grafik bilgileri programlı olarak yakalanarak grafik günlük dosyasına varsayılan olarak verilen dosya adı.  
   
 ## <a name="value"></a>Değer  
- Günlük dosyası grafik dosya adını temsil eden bir dize. Varsayılan olarak, L"default.vsglog".  
+ Grafik günlük dosyasının dosya adını temsil eden bir dize sabit değeri. Varsayılan olarak, L "default. vsglog".  
   
 ```cpp  
 #define VSG_DEFAULT_FILENAME L"default.vsglog"  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Önişlemci sembolü `DONT_SAVE_VSGLOG_TO_TEMP` tanımlı, daha sonra dosya adı yakalanan uygulamayı geçerli dizine göreli veya mutlak bir yol; Aksi takdirde, bu kullanıcının geçici dosya dizinine göreli ve mutlak bir yol olamaz.  
+ Önişlemci sembolü `DONT_SAVE_VSGLOG_TO_TEMP` tanımlanmışsa, dosya adı yakalanan uygulamanın geçerli dizinine göre değişir veya mutlak bir yoldur; Aksi takdirde, kullanıcının geçici dosyalar dizinine göredir ve mutlak bir yol olamaz.  
   
- Dahil etmeden önce tanımlanan dosya adını değiştirmek için onu yeniden tanımlamalısınız `vsgcapture.h` programınızdaki.  
+ Tanımlı dosya adını değiştirmek için, programınıza dahil etmeden önce yeniden tanımlamanız gerekir `vsgcapture.h` .  
   
 ## <a name="example"></a>Örnek  
- Bu örnek yakalama dosya varsayılan dosya adını değiştirmek nasıl gösterir:  
+ Bu örnek, yakalama dosyasının varsayılan dosya adının nasıl değiştirileceğini gösterir:  
   
 ```cpp  
 // Redefine the default capture filename before including vsgcapture.h  

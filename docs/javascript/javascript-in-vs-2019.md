@@ -12,15 +12,15 @@ ms.author: mikejo
 manager: jillfra
 monikerRange: '>= vs-2019'
 ms.openlocfilehash: a4cdb685a11df8e013025fd91dd8869fe5851d93
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87453667"
 ---
 # <a name="javascript-and-typescript-in-visual-studio-2019"></a>Visual Studio 2019 ' de JavaScript ve TypeScript
 
-## <a name="overview"></a>Genel Bakış
+## <a name="overview"></a>Genel bakış
 
 Visual Studio 2019, JavaScript geliştirmesi için hem doğrudan JavaScript hem de daha üretken ve keyifli bir JavaScript geliştirme deneyimi sağlamak amacıyla geliştirilen [TypeScript programlama dilini](http://www.typescriptlang.org/)kullanarak, özellikle de proje ölçeğinde zengin destek sunar. Birçok uygulama türü ve hizmeti için, Visual Studio 'da JavaScript veya TypeScript kodu yazabilirsiniz.
 

@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::EnumPrograms | Microsoft Dokümanlar
+title: 'IDebugProcess2:: EnumPrograms | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 56b1c939802406394bdf09e3cfa8c76f5103d974
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724087"
 ---
 # <a name="idebugprocess2enumprograms"></a>IDebugProcess2::EnumPrograms
 Bu işlemin içerdiği tüm programların listesini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumPrograms( 
@@ -41,10 +41,10 @@ int EnumPrograms( 
 
 ## <a name="parameters"></a>Parametreler
 `ppEnum`\
-[çıkış] İşlemdeki tüm programların listesini içeren bir [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) nesnesi döndürür.
+dışı İşlemdeki tüm programların listesini içeren bir [IEnumDebugPrograms2](../../../extensibility/debugger/reference/ienumdebugprograms2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

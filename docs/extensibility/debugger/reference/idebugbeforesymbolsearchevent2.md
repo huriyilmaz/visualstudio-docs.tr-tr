@@ -1,5 +1,5 @@
 ---
-title: IDebugBeforeSymbolSearchEvent2 | Microsoft Dokümanlar
+title: IDebugBeforeSymbolSearchEvent2 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,37 +11,37 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9d6f3f78e165ba2f4453131b7b459e3061243ff6
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80736116"
 ---
 # <a name="idebugbeforesymbolsearchevent2"></a>IDebugBeforeSymbolSearchEvent2
-Hata ayıklama altyapısı (DE), bu arabirimi, sembol yükleri sırasında durum çubuğu iletisini ayarlamak üzere oturum hata ayıklama yöneticisine (SDM) gönderir.
+Hata ayıklama altyapısı (DE), sembol yüklemeleri sırasında durum çubuğu iletisini ayarlamak için bu arayüzü oturum hata ayıklama Yöneticisi 'ne (SDM) gönderir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugBeforeSymbolSearchEvent2 : IUnknown
 ```
 
-## <a name="notes-for-implementers"></a>Uygulayıcılar için Notlar
- DE, sembol yükleri sırasında durum çubuğu iletisini ayarlaması gerektiğinde bu arabirimi uygular. Bu arabirim yalnızca komut dosyası yorumlayıcılarıyla çalışan veya bunların bir parçası olan hata ayıklama motorları tarafından uygulanır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi bu arabirimle aynı nesne üzerinde uygulanmalıdır (SDM, **IDebugEvent2** arabirimine erişmek için **QueryInterface'i** kullanır).
+## <a name="notes-for-implementers"></a>Implemenonun notları
+ Bu arabirim, sembol yüklemeleri sırasında durum çubuğu iletisini ayarlaması gerektiğinde DE uygular. Bu arabirim yalnızca ile çalışan veya betik yorumlayıcılarının bir parçası olan hata ayıklama motorları tarafından uygulanır. [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabiriminin bu arabirimle aynı nesne üzerinde uygulanması gerekır (SDM, **IDebugEvent2** arabirimine erişmek için **QueryInterface** kullanır).
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- DE, sembol yükleri sırasında durum çubuğu iletisini ayarlaması gerektiğinde bu olay nesnesini oluşturur ve gönderir. Olay, sdm tarafından sağlanan [iDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) geri arama işlevi kullanılarak, programa eklendiğinde debugged olarak gönderilir.
+ DE, sembol yüklemeleri sırasında durum çubuğu iletisini ayarlaması gerektiğinde bu olay nesnesini oluşturur ve gönderir. Olay, hata ayıklamakta olan programa eklendiğinde SDM tarafından sağlanan [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) callback işlevi kullanılarak gönderilir.
 
 ## <a name="methods"></a>Yöntemler
- Aşağıdaki tabloda `IDebugBeforeSymbolSearchEvent2`.
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugBeforeSymbolSearchEvent2` .
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[GetModuleName](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2-getmodulename.md)|Şu anda debugged olan modülün adını alır.|
+|[GetModuleName](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2-getmodulename.md)|Şu anda hata ayıklanan modülün adını alır.|
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: Msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

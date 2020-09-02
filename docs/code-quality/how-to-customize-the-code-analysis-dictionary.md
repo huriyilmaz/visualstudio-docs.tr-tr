@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e1a50374a2603153cc7f4770a9aaf5ba72fbe007
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87453649"
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>Nasıl yapılır: Kod Çözümleme Dizinini Özelleştirme
@@ -74,7 +74,7 @@ Aşağıdaki XML yapısını kullanarak özel sözcüklerinizi tanımlayın:
 
 - [Sözlük/Kısaltmalar/CasingExceptions/Kısaltma](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)
 
-### <a name="dictionarywordsrecognizedword"></a><a name="BKMK_DictionaryWordsRecognizedWord"></a>Sözlük/sözcük/tanınan/Word
+### <a name="dictionarywordsrecognizedword"></a><a name="BKMK_DictionaryWordsRecognizedWord"></a> Sözlük/sözcük/tanınan/Word
 
 Kod analizinin doğru yazılmış olarak tanımladığı koşullar listesine bir terim eklemek için, terimi bir sözlük/kelimeler/tanınan/Word öğesinin iç metni olarak ekleyin. Sözlük/sözcük/tanınan/Word öğelerinin terimleri büyük/küçük harfe duyarlı değildir.
 
@@ -109,7 +109,7 @@ Sözlük/kelimeler/tanınan düğümlerdeki terimler aşağıdaki kod çözümle
 
 - [CA2204: Harfler doğru yazılmalıdır](../code-quality/ca2204.md)
 
-### <a name="dictionarywordsunrecognizedword"></a><a name="BKMK_DictionaryWordsUnrecognizedWord"></a>Sözlük/sözcük/tanınmayan/sözcük
+### <a name="dictionarywordsunrecognizedword"></a><a name="BKMK_DictionaryWordsUnrecognizedWord"></a> Sözlük/sözcük/tanınmayan/sözcük
 
 Kod analizinin doğru yazılmış olarak tanımladığı koşullar listesinden bir terimi dışlamak için, bir sözlük/sözcük/tanınmayan/Word öğesinin iç metni olarak hariç tutulacak terimi ekleyin. Sözlük/sözcük/tanınmayan/Word öğelerinin terimleri büyük/küçük harfe duyarlı değildir.
 
@@ -144,7 +144,7 @@ Sözlük/kelimeler/tanınmayan düğüm içindeki terimler aşağıdaki kod çö
 
 - [CA2204: Harfler doğru yazılmalıdır](../code-quality/ca2204.md)
 
-### <a name="dictionarywordsdeprecatedtermpreferredalternate"></a><a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a>Sözlük/sözcük/kullanım dışı/terim [ @PreferredAlternate ]
+### <a name="dictionarywordsdeprecatedtermpreferredalternate"></a><a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a> Sözlük/sözcük/kullanım dışı/terim [ @PreferredAlternate ]
 
 Kod analizinin kullanım dışı olarak tanımladığı koşullar listesine bir terim eklemek için, terimi bir sözlük/kelimeler/kullanım dışı/terim öğesinin iç metni olarak ekleyin. Kullanım dışı bırakılan bir terim, doğru yazılmış ancak kullanılmamalıdır.
 
@@ -181,7 +181,7 @@ Sözlük/kelimeler/kullanım dışı düğüm içindeki terimler aşağıdaki ko
 
 - [CA1726: Tercih edilen terimleri kullanın](../code-quality/ca1726.md)
 
-### <a name="dictionarywordscompoundtermcompoundalternate"></a><a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a>Sözlük/sözcük/bileşik/terim [ @CompoundAlternate ]
+### <a name="dictionarywordscompoundtermcompoundalternate"></a><a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a> Sözlük/sözcük/bileşik/terim [ @CompoundAlternate ]
 
 Yerleşik sözlük, bazı terimleri bileşik bir terim yerine tek ve ayrık terimler olarak tanımlar. Kod analizinin Birleşik bir sözcük olarak tanımladığı ve terimin doğru büyük küçük harflerini belirten terimler listesine bir terim eklemek için, terimi bir sözlük/sözcük/bileşik/terim öğesinin iç metni olarak ekleyin. Terim öğesinin Compoundalternatif özniteliğinde, tek tek sözcüklerin (Pascal Case) ilk harfini büyük harfe ayırarak bileşik terimi oluşturan tek kelimeleri belirtin. İç metinde belirtilen terimin otomatik olarak sözlüğe/sözcüklere/DiscreteExceptions listesine eklendiğini unutmayın.
 
@@ -214,7 +214,7 @@ Sözlük/kelimeler/bileşik düğüm içindeki terimler aşağıdaki kod çözü
 
 - [CA1704: Tanımlayıcılar doğru yazılmalıdır](../code-quality/ca1704.md)
 
-### <a name="dictionarywordsdiscreteexceptionsterm"></a><a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a>Sözlük/kelimeler/DiscreteExceptions/Term
+### <a name="dictionarywordsdiscreteexceptionsterm"></a><a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a> Sözlük/kelimeler/DiscreteExceptions/Term
 
 Bir terimi, kod analizinin, Bileşik sözcüklerin büyük küçük harf kuralları tarafından denetlenme sırasında tek ve ayrı bir sözcük olarak tanımladığı bir terimi dışlamak için, terimi bir sözlük/kelimeler/DiscreteExceptions/Term öğesinin iç metni olarak ekleyin. Sözlük/kelimeler/DiscreteExceptions/Term öğesindeki terim büyük/küçük harfe duyarlı değildir.
 
@@ -239,7 +239,7 @@ Sözlük/kelimeler/DiscreteExceptions düğümündeki terimler aşağıdaki kod 
 
 - [CA1702: Bileşik sözcüklerin büyük küçük harfleri doğru olmalıdır](../code-quality/ca1702.md)
 
-### <a name="dictionaryacronymscasingexceptionsacronym"></a><a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a>Sözlük/Kısaltmalar/CasingExceptions/Kısaltma
+### <a name="dictionaryacronymscasingexceptionsacronym"></a><a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a> Sözlük/Kısaltmalar/CasingExceptions/Kısaltma
 
 Kod analizinin doğru yazılmış olarak tanımladığı terimler listesine bir kısaltma eklemek ve terim Bileşik sözcüklerin büyük küçük harf kuralları tarafından denetlendiğinde kısaltmasının nasıl ekleneceğini belirtmek için, terimi bir Sözlük/Kısaltmalar/CasingExceptions/kısaltması öğesinin iç metni olarak ekleyin. Sözlük/Kısaltmalar/CasingExceptions/kısaltması öğesindeki kısaltma büyük/küçük harfe duyarlıdır.
 
@@ -262,7 +262,7 @@ Sözlük/Kısaltmalar/CasingExceptions düğümündeki terimler aşağıdaki kod
 
 - [CA1709: Tanımlayıcılar doğru büyük küçük harfe sahip olmalıdır](../code-quality/ca1709.md)
 
-## <a name="to-apply-a-custom-dictionary-to-a-project"></a><a name="BKMK_ToApplyACustomDictionaryToAProject"></a>Bir projeye özel bir sözlük uygulamak için
+## <a name="to-apply-a-custom-dictionary-to-a-project"></a><a name="BKMK_ToApplyACustomDictionaryToAProject"></a> Bir projeye özel bir sözlük uygulamak için
 
 1. **Çözüm Gezgini**, aşağıdaki yordamlardan birini kullanın:
 

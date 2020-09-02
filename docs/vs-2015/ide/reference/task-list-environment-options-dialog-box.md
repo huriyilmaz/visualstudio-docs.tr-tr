@@ -25,10 +25,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 72e5f82fa3ca4b7ca909ee07e5b77a31b3e20879
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72650970"
 ---
 # <a name="task-list-environment-options-dialog-box"></a>Görev Listesi, Ortam, Seçenekler İletişim Kutusu
@@ -42,12 +42,12 @@ Bu seçenekler sayfası **görev listesi** anımsatıcılar üreten açıklama b
 > [!NOTE]
 > Bir görev açıklamasını silmek için, yorumu bulmak için bağlantıyı kullanın ve ardından kodunuzu koddan kaldırın.
 
- Dosya adlarını yalnızca seçili olduğunda göster, Görev Listesi **Dosya** sütunu, tam yollarını değil yalnızca düzenlenecek dosyaların adlarını görüntüler.
+ Dosya adlarını yalnızca seçili olduğunda göster, Görev Listesi **Dosya** sütunu, tam **Task List** yollarını değil yalnızca düzenlenecek dosyaların adlarını görüntüler.
 
 ## <a name="tokens"></a>Belirteçler
  Kodunuza, metni **belirteç listesindeki**bir belirteçle başlayan bir açıklama eklediğinizde **görev listesi** , dosya düzenlenmek üzere her açıldığında yorumlarınızı yeni giriş olarak görüntüler. Kodunuzda yorum satırına doğrudan geçmek için bu **görev listesi** girişe tıklayabilirsiniz. Daha fazla bilgi için [görev listesi kullanma](../../ide/using-the-task-list.md)konusuna bakın.
 
- Belirteç listesi, belirteçlerin bir listesini görüntüler ve özel belirteçler eklemenize veya kaldırmanıza olanak sağlar. Açıklama belirteçleri Visual C# ve Visual C++için büyük/küçük harfe duyarlıdır, ancak Visual Basic.
+ Belirteç listesi, belirteçlerin bir listesini görüntüler ve özel belirteçler eklemenize veya kaldırmanıza olanak sağlar. Açıklama belirteçleri, Visual C# ve Visual C++ için büyük/küçük harfe duyarlıdır, ancak Visual Basic değildir.
 
 > [!NOTE]
 > İstenen belirteci **belirteç listesinde**göründüğü şekilde tam olarak yazmadıysanız, **görev listesi**bir yorum görevi görüntülenmez.

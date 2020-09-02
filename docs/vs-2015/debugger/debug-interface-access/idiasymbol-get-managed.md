@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_managed | Microsoft Docs
+title: 'IDiaSymbol:: get_managed | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 26c963f2a64b7521dfe362d61a50faefe8ea4e7f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64782867"
 ---
-# <a name="idiasymbolgetmanaged"></a>IDiaSymbol::get_managed
+# <a name="idiasymbolget_managed"></a>IDiaSymbol::get_managed
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yönetilen kod için Sembol başvurmadığını belirten bir bayrak alır.  
+Simgenin yönetilen koda başvurduğunu belirten bir bayrak alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_managed (   
@@ -35,13 +35,13 @@ HRESULT get_managed ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Döndürür `TRUE` sembol yönetilen kod için; başvuruyorsa, aksi takdirde döndürür `FALSE`.  
+ dışı `TRUE` Simgenin yönetilen kodu ifade eder; Aksi takdirde, döndürür `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

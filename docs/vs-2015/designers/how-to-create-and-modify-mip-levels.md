@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 99d2b07a64781929962ff37823ddcbf219598331
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664476"
 ---
 # <a name="how-to-create-and-modify-mip-levels"></a>Nasıl yapılır: MIP Düzeyleri Oluşturma ve Değiştirme
@@ -45,4 +45,4 @@ Bu belgede, doku alanı ayrıntı düzeyi (LoD) için *MIP düzeylerini* oluştu
 > Ayrı ayrı MıP düzeylerinin içeriğini değiştirmeniz gerekmiyorsa — belirli etkileri elde etmek gibi, kaynak dokusundaki de derleme zamanında MIP haritaları oluşturmanızı öneririz. Bu, MıP seviyesindeki değişiklikler diğer düzeylere otomatik olarak yayılmadığından, MıP düzeylerinin kaynak dokuyla eşitlenmiş durumda kalmasını sağlamaya yardımcı olur. Derleme zamanında mı haritaları oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: mı haritaları Içeren dokuyu dışarı aktarma](../designers/how-to-export-a-texture-that-contains-mipmaps.md).
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Nasıl Yapılır: Temel Doku Oluşturma](../designers/how-to-create-a-basic-texture.md)
+ [Nasıl yapılır: temel doku oluşturma](../designers/how-to-create-a-basic-texture.md)

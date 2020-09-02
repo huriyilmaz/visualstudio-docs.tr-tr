@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: hatalar içinC++ C kodunu çözümleme | Microsoft Docs'
+title: 'İzlenecek yol: hatalar için C-C + + kodunu çözümleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -15,16 +15,16 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: c822dbcc6a1ece2040da22a3442dd584c3926d97
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77272440"
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>İzlenecek yol: Kod Kusurları için C/C++ Kodunu Analiz Etme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası kod kusurları için c/Code 'un nasıl çözümlendiğini gösterir.  
+Bu izlenecek yol, C/C++ kodu için kod analizi aracını kullanarak olası kod kusurları için C/C++ kodunun nasıl çözümlendiğini gösterir.  
   
  Bu kılavuzda, olası kod kusurları için C/C++ kodunuzu çözümlemek üzere Kod analizini kullanma sürecinde adım adım ilerleyin.  
   
@@ -44,11 +44,11 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
   
 - [Demo örneğinin](../code-quality/demo-sample.md)bir kopyası.  
   
-- C/C++hakkında temel bilgiler.  
+- C/C++ hakkında temel bilgiler.  
   
 ### <a name="to-run-code-defect-analysis-on-native-code"></a>Yerel kodda kod hatası analizini çalıştırmak için  
   
-1. Tanıtım çözümünü [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]açın.  
+1. Tanıtım çözümünü ' de açın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
      Demo çözümü artık **Çözüm Gezgini**doldurur.  
   
@@ -64,7 +64,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
   
 5. **Kod Analizi**' ne tıklayın.  
   
-6. **Derleme IçinC++ Kod analizini etkinleştir** onay kutusunu tıklatın.  
+6. **Derlemede C/C++ Için kod analizini etkinleştir** onay kutusunu tıklayın.  
   
 7. Codekusurları projesini yeniden derleyin.  
   
@@ -74,13 +74,13 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
   
 1. **Görünüm** menüsünde **hata listesi**' a tıklayın.  
   
-     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]' de seçtiğiniz geliştirici profiline bağlı olarak, **Görünüm** menüsünde **diğer pencereler** ' i işaret etmeniz ve ardından **hata listesi**' e tıklamanız gerekebilir.  
+     İçinde seçtiğiniz geliştirici profiline bağlı olarak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , **Görünüm** menüsünde **diğer pencereleri** işaret etmeniz ve ardından **hata listesi**' ne tıklamanız gerekebilir.  
   
 2. **Hata listesi**, aşağıdaki uyarıya çift tıklayın:  
   
      Uyarı C6230: anlamsal olarak farklı türler arasında örtük atama: Boole bağlamında HRESULT kullanılıyor.  
   
-     Kod Düzenleyicisi, `bool``ProcessDomain()`işlevindeki uyarıya neden olan satırı görüntüler. Bu uyarı, Boole sonucunun beklenen bir ' if ' bildiriminde bir HRESULT kullanıldığını gösterir.  
+     Kod Düzenleyicisi, işlevde uyarıya neden olan satırı görüntüler `bool``ProcessDomain()` . Bu uyarı, Boole sonucunun beklenen bir ' if ' bildiriminde bir HRESULT kullanıldığını gösterir.  
   
 3. BAŞARıLı makroyu kullanarak bu uyarıyı düzeltin. Kodunuz aşağıdaki koda benzemelidir:  
   
@@ -100,7 +100,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
   
 ### <a name="to-treat-warning-as-an-error"></a>Uyarıyı hata olarak değerlendirmek için  
   
-1. Hata. cpp dosyasında, uyarı C6001 bir hata olarak değerlendirmek için aşağıdaki `#pragma` ifadesini dosyanın başına ekleyin:  
+1. Hata. cpp dosyasında, `#pragma` Uyarı C6001 bir hata olarak değerlendirmek için dosyanın başlangıcına aşağıdaki ifadeyi ekleyin:  
   
     ```  
     #pragma warning (error: 6001)  
@@ -110,7 +110,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
   
      **Hata listesi**, C6001 artık hata olarak görüntülenir.  
   
-3. `i` başlatarak ve 0 ' a `j` **hata listesi** kalan iki C6001 hatasını düzeltin.  
+3. ' İ başlatarak ve 0 ' a **hata listesi** kalan iki C6001 hatasını düzeltin `i` `j` .  
   
 4. Codekusurları projesini yeniden derleyin.  
   
@@ -126,7 +126,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
   
 3. **Kod Analizi**' ne tıklayın.  
   
-4. **Derleme IçinC++ Kod analizini etkinleştir** onay kutusunu seçin.  
+4. **Derlemede C/C++ Için kod analizini etkinleştir** onay kutusunu seçin.  
   
 5. Ek açıklama projesini yeniden derleyin.  
   
@@ -158,7 +158,7 @@ Bu izlenecek yol, C/C++ C++ Code için kod analizi aracını kullanarak olası k
   
 ### <a name="to-use-source-code-annotation"></a>Kaynak kodu ek açıklamasını kullanmak için  
   
-1. Aşağıdaki örnekte gösterildiği gibi, ön ve post koşullarını kullanarak `AddTail` işlevin biçimsel parametrelerini ve dönüş değerini not edin:  
+1. `AddTail`Aşağıdaki örnekte gösterildiği gibi, ön ve post koşullarını kullanarak işlevin biçimsel parametrelerini ve dönüş değerini not edin:  
   
      `[returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail`  
   

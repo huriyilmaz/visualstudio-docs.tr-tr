@@ -1,5 +1,5 @@
 ---
-title: Bir eski dil hizmeti kaydetme2 | Microsoft Docs
+title: Eski dil Service2 kaydetme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,40 +13,40 @@ caps.latest.revision: 25
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 07d70bb1d77dc3022b06c4036317e31692307f98
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188844"
 ---
-# <a name="registering-a-legacy-language-service"></a>Eski dil hizmeti kaydediliyor
+# <a name="registering-a-legacy-language-service"></a>Eski Dil Hizmeti Kaydetme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Aşağıdaki bölümlerde kayıt defteri girdilerinin listesi çeşitli dil için kullanılabilir hizmet seçenekleri sağlanır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+Aşağıdaki bölümler, ' de kullanılabilen çeşitli dil hizmeti seçenekleri için kayıt defteri girişlerinin listesini sağlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
- Kayıt defteri girdileri aşağıdaki listedeki *VS Reg kök* hkey_local_machıne\software\microsoft\visualstudio için eşittir\\*X.Y*burada *X.Y* olduğu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sürüm numarası.  
+ Aşağıdaki kayıt defteri girdileri listesinde, *vs reg Root* HKEY_LOCAL_MACHINE \Software\microsoft\visualstudio \\ *X. y*' ye eşittir; burada *X. Y* [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sürüm numarasıdır.  
   
 ## <a name="registry-entries-for-language-service-options"></a>Dil hizmeti seçenekleri için kayıt defteri girişleri  
- *VS Reg kök*\Languages\Language Hizmetleri\\*dil adı* anahtarı, aşağıdaki değerleri içerebilir.  
+ *Vs reg root*\ Languages\language Services \\ *dil adı* anahtarı aşağıdaki değerleri içerebilir.  
   
 |Ad|Tür|Aralık|Açıklama|  
 |----------|----------|-----------|-----------------|  
-|(Varsayılan)|REG_SZ|*\<GUID >*|Dil hizmeti GUİD'si.|  
-|LangResID|REG_DWORD|0x0 0xffff|Dil yerelleştirilmiş metin adı için kaynak tanımlayıcısı (ResID) dize.|  
-|Paket|REG_SZ|*\<GUID >*|VSPackage'ı GUİD'si.|  
-|ShowCompletion|REG_DWORD|0-1|Belirtir olup olmadığını **deyim tamamlama** seçeneklerini **seçenekleri** iletişim kutusu etkinleştirilir.|  
-|ShowSmartIndent|REG_DWORD|0-1|Belirtir olup olmadığını belirleme seçeneği **akıllı** , girintilendirme **seçenekleri** iletişim kutusu etkin.|  
-|RequestStockColors|REG_DWORD|0-1|Belirtir olup özel veya varsayılan renkler, renk anahtar sözcükler için kullanılır.|  
-|ShowHotURLs|REG_DWORD|0-1|URL'leri kullanıcının tıklayabileceği olup olmadığını belirtir.|  
-|Etkin olmayan URL'ler için varsayılan|REG_DWORD|0-1|İlk ayarını belirtir **etkinleştirme tek tıkla URL gezinmesini** seçeneğini **seçenekleri** iletişim kutusu.|  
-|DefaultToInsertSpaces|REG_DWORD|0-1|Dil hizmeti "kendi varsayılan sekme seçeneği boşluklar Ekle" olup olmadığını belirtir.|  
-|ShowDropdownBarOption|REG_DWORD|0-1|Etkinleştirir veya devre dışı bırakır **gezinti çubuğu** seçeneğini **seçenekleri** gösterir veya gizler iletişim kutusu **gezinti çubuğu**.|  
-|Yalnızca tek bir kod penceresi|REG_DWORD|0-1|Etkinleştirir veya devre dışı bırakır **yeni pencere** içindeki seçim **penceresi** dil hizmeti menüsü.|  
-|EnableAdvancedMembersOption|REG_DWORD|0-1|Etkinleştirir veya devre dışı bırakan bir **seçenekleri** iletişim kutusu ayarını **Gelişmiş üyeleri Gizle**.|  
-|Destek CF_HTML|REG_DWORD|0-1|Düzenleyicide HTML veri kopyalama ve yapıştırma sağlayan belirtir.|  
-|EnableLineNumbersOption|REG_DWORD|0-1|Belirtir olup olmadığını **satır numaraları** seçeneklerini **seçenekleri** iletişim kutusu, bir dil hizmeti için etkinleştirildi.|  
-|HideAdvancedMembersByDefault|REG_DWORD|0-1|Gelişmiş üyeler gibi özel alanları tamamlama listelerine gizlenip gizlenmeyeceğini belirtir.|  
-|ShowBraceCompletion|REG_DWORD|0-1|Belirtir olup olmadığını **ayraç tamamlama** seçeneğini **seçenekleri** iletişim kutusu etkin.|  
+|(Varsayılan)|REG_SZ|*\<GUID>*|Dil hizmetinin GUID 'SI.|  
+|Dil dili|REG_DWORD|0x0-0xFFFF|Dilin yerelleştirilmiş metin adı için dize kaynak tanımlayıcısı (resd).|  
+|Paket|REG_SZ|*\<GUID>*|VSPackage GUID 'SI.|  
+|ShowCompletion|REG_DWORD|0-1|**Seçenekler** Iletişim kutusundaki **deyimin tamamlama** seçeneklerinin etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
+|Showsmartgirintile|REG_DWORD|0-1|**Seçenekler** Iletişim kutusunda **akıllı** girintileme seçme seçeneğinin etkinleştirilip etkinleştirilmediğini belirtir.|  
+|RequestStockColors|REG_DWORD|0-1|Özel veya varsayılan renklerin anahtar sözcükleri renklendirmek için kullanılıp kullanılmayacağını belirtir.|  
+|ShowHotURLs|REG_DWORD|0-1|Kullanıcının URL 'ye tıklayıp tıklaamayacağını belirtir.|  
+|Varsayılan değer, etkin olmayan URL 'Ler|REG_DWORD|0-1|**Seçenekler** iletişim kutusunda **tek tıklama URL 'si gezintisini etkinleştir** seçeneğinin başlangıç ayarını belirtir.|  
+|Defaulttoınsertspaces|REG_DWORD|0-1|Dil hizmetinin varsayılan sekme seçeneği olarak "boşluk Ekle" olup olmadığını belirtir.|  
+|ShowDropdownBarOption|REG_DWORD|0-1|**Gezinti çubuğunu**gösteren veya gizleyen **Seçenekler** iletişim kutusunda **Gezinti çubuğu** seçeneğini sunar veya devre dışı bırakır.|  
+|Yalnızca tek kod penceresi|REG_DWORD|0-1|Dil hizmeti için **pencere** menüsündeki **yeni pencere** seçeneğini devre dışı bırakır veya devre dışı bırakır.|  
+|EnableAdvancedMembersOption|REG_DWORD|0-1|**Gelişmiş üyeleri Gizle**Için bir **seçenek** iletişim kutusu ayarını etkinleştirilir veya devre dışı bırakır.|  
+|Destek CF_HTML|REG_DWORD|0-1|Düzenleyicinin HTML verilerinin kopyalanmasını ve yapıştırmasını etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
+|EnableLineNumbersOption|REG_DWORD|0-1|**Seçenekler** Iletişim kutusundaki **satır numaraları** seçeneklerinin bir dil hizmeti için etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
+|HideAdvancedMembersByDefault|REG_DWORD|0-1|Özel alanlar gibi gelişmiş üyelerin tamamlanma listelerinde gizli olup olmadığını belirtir.|  
+|ShowBraceCompletion|REG_DWORD|0-1|**Seçenekler** Iletişim kutusunda **küme ayracı tamamlama** seçeneğinin etkin olup olmadığını belirtir.|  
   
 ### <a name="example"></a>Örnek  
   
@@ -63,12 +63,12 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
         ShowDropdownBarOption = reg_dword:0x00000001  
 ```  
   
-## <a name="registry-entries-for-debugger-languages-options"></a>Hata ayıklayıcısı dil seçenekleri için kayıt defteri girişleri  
- *VS Reg kök*\Languages\Language Hizmetleri\\*dil adı*\Debugger dilleri\\*GUID*\ anahtarı, aşağıdakileri içerebilir değerler.  
+## <a name="registry-entries-for-debugger-languages-options"></a>Hata ayıklayıcı dilleri için kayıt defteri girişleri seçenekleri  
+ *Vs reg root*\Languages\language Services \\ *dil adı*\debugger dilleri \\ *GUID*\ Key aşağıdaki değerleri içerebilir.  
   
 |Ad|Tür|Aralık|Açıklama|  
 |----------|----------|-----------|-----------------|  
-|(Varsayılan)|REG_SZ|metin|Varsayılan değer, dilin adını belge için kullanılabilir. Bu anahtarın adını karşılık gelen bir giriş olan, ifade değerlendiricisi GUID'dir  *\<VS Reg kök >* \AD7Metrics\Expression değerlendiricisi.|  
+|(Varsayılan)|REG_SZ|metin|Varsayılan değer dilin adını belgelemek için kullanılabilir. Bu anahtarın adı, \Ad7metrics\expression değerlendirici içinde karşılık gelen bir girişe sahip bir ifade değerlendirici GUID 'sidir *\<VS Reg Root>* .|  
   
 ### <a name="example"></a>Örnek  
   
@@ -82,14 +82,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
             (Default) = reg_sz:C++  
 ```  
   
-## <a name="registry-entries-for-editor-tools-options"></a>Düzenleyici araç seçenekleri için kayıt defteri girişleri  
- Özellik sayfaları ve özelliği düğümü için EditorToolsOptions anahtarı altındaki kayıt defteri anahtarlarını ekleyebilirsiniz. Özellik Sayfaları'nda bu anahtarları ve değerlerini tanımlamak **seçenekleri** iletişim kutusu (üzerinde **Araçları** menüsü) dil hizmeti yapılandırmak için kullanılır. Aşağıdaki örnekte, *sayfa adı* bir özellik sayfası adıdır ve *düğüm adı* ağaçta bir düğümün adını açıktır **seçenekleri** iletişim kutusu. Sayfa ve düğüm girdileri ayrı olarak belirtilmelidir.  
+## <a name="registry-entries-for-editor-tools-options"></a>Düzenleyici araçları seçenekleri için kayıt defteri girişleri  
+ Özellik sayfaları ve özellik düğümleri için Editoraraçları seçenekler anahtarının altına kayıt defteri anahtarları ekleyebilirsiniz. Bu anahtarlar ve değerleri, dil hizmetini yapılandırmak için kullanılan **Seçenekler** iletişim kutusundaki ( **Araçlar** menüsünde) özellik sayfalarını belirler. Aşağıdaki örnekte, *sayfa adı* bir özellik sayfasının adıdır ve *düğüm adı* , **Seçenekler** iletişim kutusundaki ağaçtaki bir düğümün adıdır. Sayfa girişi ve düğüm girdisi ayrı olarak belirtilmelidir.  
   
 |Ad|Tür|Aralık|Açıklama|  
 |----------|----------|-----------|-----------------|  
-|(Varsayılan)|REG_SZ|resID|Bu seçenek sayfada yerelleştirilmiş görünen adı. Ad metin veya # olabilir`nnn`burada `nnn` uydu DLL'deki belirtilen VSPackage'ı, bir dize kaynak kimliği.|  
-|Paket|REG_SZ|*GUID*|Bu seçenekler sayfası uygulayan VSPackage GUİD'si.|  
-|Sayfa|REG_SZ|*GUID*|VSPackage'ı çağırarak istemek için GUID özellik sayfasının <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> yöntemi. Bu kayıt defteri girişi mevcut değilse, kayıt defteri anahtarı bir düğüm, bir sayfa açıklar.|  
+|(Varsayılan)|REG_SZ|RESID|Bu seçenek sayfasının yerelleştirilmiş görünen adı. Ad, `nnn` `nnn` belirtilen VSPackage 'ın uydu dll 'sinde bir DIZE kaynak kimliği olan harflerden oluşan bir metin veya # olabilir.|  
+|Paket|REG_SZ|*'INI*|Bu seçenekler sayfasını uygulayan VSPackage GUID 'ı.|  
+|Sayfa|REG_SZ|*'INI*|Yöntemi çağırarak VSPackage 'dan istek yapılacak Özellik sayfasının GUID 'ı <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.GetPropertyPage%2A> . Bu kayıt defteri girdisi yoksa, kayıt defteri anahtarı bir sayfayı değil, bir düğümü tanımlar.|  
   
 ### <a name="example"></a>Örnek  
   
@@ -117,11 +117,11 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ```  
   
 ## <a name="registry-entries-for-file-name-extension-options"></a>Dosya adı uzantısı seçenekleri için kayıt defteri girişleri  
- Dosya uzantısı için giriş, örneğin ".myext" başında nokta içermelidir.  
+ Dosya uzantısının girdisi, ". myext" gibi önde gelen süreyi içermelidir.  
   
 |Ad|Tür|Aralık|Açıklama|  
 |----------|----------|-----------|-----------------|  
-|(Varsayılan)|REG_SZ|*GUID*|Bu dosya adı uzantısı türü için varsayılan dil hizmeti için hizmet GUID'si.|  
+|(Varsayılan)|REG_SZ|*'INI*|Bu dosya adı uzantısı türü için varsayılan dil hizmeti için hizmet GUID 'SI.|  
   
 ### <a name="example"></a>Örnek  
   
@@ -134,16 +134,16 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ```  
   
 ## <a name="registry-entries-for-editor-options"></a>Düzenleyici seçenekleri için kayıt defteri girişleri  
- *VS Reg kök*\Editors anahtarı, aşağıdaki değerleri içerebilir:  
+ *Vs reg root*\düzenleyiciler anahtarı aşağıdaki değerleri içerebilir:  
   
 |Ad|Tür|Aralık|Açıklama|  
 |----------|----------|-----------|-----------------|  
-|(Varsayılan)|REG_SZ|""|Kullanılmayan; uygulamanızın adını buraya belgeleri koyabilirsiniz.|  
-|DefaultToolboxTab|REG_SZ|""|Düzenleyici etkin olduğunda varsayılan hale getirmek için araç kutusu sekmesi adı.|  
-|DisplayName|REG_SZ|resID|Görüntülenecek ad **birlikte Aç** iletişim kutusu. Adı dize kaynak kimliği veya adı standart biçimindedir.|  
-|ExcludeDefTextEditor|REG_DWORD|0-1|İçin kullanılan **birlikte Aç** menü komutu. Belirli bir dosya türü için kullanılabilir düzenleyicilerin listesini varsayılan metin düzenleyicisinde listelemek istemiyorsanız bu değeri 1 olarak ayarlayın.|  
-|LinkedEditorGUID|REG_SZ|*\<GUID >*|Bir dosya ile kod sayfası destek açabilirsiniz herhangi bir dil hizmeti için kullanılır. Örneğin, açtığınızda, bir .txt dosyasına kullanarak **birlikte Aç** komut seçenekleri kodlama olmadan ve Kaynak Kod Düzenleyicisi'ni kullanarak için sağlanır.<br /><br /> Alt adını belirtilen için kod düzenleyici fabrikası GUID'idir; Bu belirli kayıt defteri girdisi bağlı normal Düzenleyici fabrikası için GUID'dir. Bu giriş amacı, IDE varsayılan Düzenleyicisi'ni kullanarak bir dosya açılmazsa, IDE listesinde sonraki Düzenleyicisi'ni kullanmayı deneyin. Bu düzenleyici fabrikası temelde başarısız Düzenleyici fabrikası ile aynı olduğu için bu sonraki Düzenleyicisi Kod Düzenleyici fabrikası olmamalıdır.|  
-|Paket|REG_SZ|*\<GUID >*|Görünen ad ResID VSPackage GUİD'i.|  
+|(Varsayılan)|REG_SZ|""|Kullanılmayan belgelerinizi buraya yerleştirebilirsiniz.|  
+|DefaultToolboxTab|REG_SZ|""|Düzenleyici etkin olduğunda varsayılan hale getirmek için araç kutusu sekmesinin adı.|  
+|DisplayName|REG_SZ|RESID|**Birlikte Aç** iletişim kutusunda görüntülenecek ad. Ad, dize kaynak KIMLIĞI veya standart biçimdeki bir addır.|  
+|ExcludeDefTextEditor|REG_DWORD|0-1|**Birlikte Aç** menü komutu için kullanılır. Belirli bir dosya türü için kullanılabilir Düzenleyiciler listesinde varsayılan metin düzenleyiciyi listelemek istemiyorsanız, bu değeri 1 olarak ayarlayın.|  
+|LinkedEditorGUID|REG_SZ|*\<GUID>*|Kod sayfası desteğiyle bir dosyayı açan herhangi bir dil hizmeti için kullanılır. Örneğin, **birlikte Aç** komutunu kullanarak bir. txt dosyası açtığınızda, kaynak kodu düzenleyicisini kodlama olmadan kullanmak için seçenekler sağlanır.<br /><br /> Alt anahtarın adında belirtilen GUID, CodePage Düzenleyicisi fabrikası içindir; Bu belirli kayıt defteri girişinde belirtilen bağlı GUID, normal düzenleyici fabrikası içindir. Bu girdinin amacı, IDE 'nin varsayılan düzenleyiciyi kullanarak bir dosya açmadığından, IDE 'nin listedeki bir sonraki düzenleyiciyi kullanmayı deneyidir. Bu düzenleyici fabrikası temel olarak başarısız olan düzenleyici fabrikası ile aynı olduğundan, bu sonraki düzenleyici kod sayfası düzenleyici fabrikası olmamalıdır.|  
+|Paket|REG_SZ|*\<GUID>*|Görünen adın Restıd 'si için VSPackage GUID 'i.|  
   
 ### <a name="example"></a>Örnek  
   
@@ -158,13 +158,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
       Package              = reg_sz:{1B437D20-F8FE-11D2-A6AE-00104BCC7269}  
 ```  
   
-## <a name="registry-entries-for-logical-view-options"></a>Mantıksal görünüm seçenekleri için kayıt defteri girişleri  
- *VS Reg kök*\Editors\\*Düzenleyicisi GUI >* \LogicalViews anahtarı, aşağıdaki değerleri içerebilir.  
+## <a name="registry-entries-for-logical-view-options"></a>Mantıksal Görünüm seçenekleri için kayıt defteri girişleri  
+ *Vs reg root*\Düzenleyiciler \\ *Düzenleyicisi GUI>* \logicalviews anahtarı aşağıdaki değerleri içerebilir.  
   
 |Ad|Tür|Aralık|Açıklama|  
 |----------|----------|-----------|-----------------|  
-|(Varsayılan)|REG_SZ||Kullanılmayan.|  
-|*\<GUID >*|REG_SZ|""|Desteklenen mantıksal görünümleri anahtarı. Gereksinim duyduğunuz kadar bu olabilir. Önemli, kayıt defteri girişini adıdır her zaman boş bir dize değil değeri.|  
+|(Varsayılan)|REG_SZ||Kullanılmıyor.|  
+|*\<GUID>*|REG_SZ|""|Desteklenen mantıksal görünümlere yönelik anahtar. İhtiyaç duyduğunuz kadar çok sayıda sahip olabilirsiniz. Kayıt defteri girişinin adı, her zaman boş bir dize olan değer değil önemli şeydir.|  
   
 ### <a name="example"></a>Örnek  
   
@@ -181,14 +181,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\
 ```  
   
 ## <a name="registry-entries-for-editor-extension-options"></a>Düzenleyici uzantısı seçenekleri için kayıt defteri girişleri  
- *VS Reg kök*\Editors\\*Düzenleyici GUİD'i*\Extensions anahtarı, aşağıdaki değerleri içerebilir. Başında nokta dosya adı uzantısı içermez.  
+ *Vs reg root*\Düzenleyiciler \\ *Düzenleyicisi GUID*\Extensions anahtarı aşağıdaki değerleri içerebilir. Dosya adı uzantısı, önde gelen dönemi içermez.  
   
 |Ad|Tür|Aralık|Açıklama|  
 |----------|----------|-----------|-----------------|  
-|(Varsayılan)|REG_SZ||Kullanılmayan.|  
-|*\<ext >*|REG_DWORD|0 0xffffffff|Uzantıları göreli önceliğini. İki veya daha fazla dil aynı uzantı paylaşıyorsanız, daha yüksek öncelikli dil seçilir.|  
+|(Varsayılan)|REG_SZ||Kullanılmıyor.|  
+|*\<ext>*|REG_DWORD|0-0xFFFFFFFF|Uzantıların göreli önceliği. İki veya daha fazla dil aynı uzantıyı paylaşıyorsa, daha yüksek öncelikli dil seçilir.|  
   
- Ayrıca, bir düzenleyici için geçerli kullanıcının varsayılan seçimi HKEY_Current_User\Software\Microsoft\VisualStudio içinde depolanan\\*X.Y*\Default düzenleyicileri\\*ext*. Seçilen dil hizmeti özel girişi GUID'dir. Bu, geçerli kullanıcının önceliklidir.  
+ Ayrıca, geçerli kullanıcının bir düzenleyici için varsayılan seçimi HKEY_Current_User \Software\Microsoft\VisualStudio \\ *X. Y*\ varsayılan düzenleyiciler EXT ' da depolanır \\ *ext*. Seçilen dil hizmetinin GUID 'SI özel girişte. Bu, geçerli kullanıcı için öncelik alır.  
   
 ### <a name="example"></a>Örnek  
   
@@ -204,25 +204,25 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0\
        shtml     = reg_dword:0x00000027  
 ```  
   
-## <a name="registry-entries-for-managed-package-framework-language-service-options"></a>Yönetilen paket Framework dil hizmeti seçenekleri için kayıt defteri girişleri  
- Aşağıdaki kayıt defteri girdilerini yönetilen paket framework (MPF) dil hizmeti sınıfları özgüdür. Bu kayıt defteri girdileri dil hizmeti çeşitli IntelliSense özelliklerini ve diğer gelişmiş düzenleme özellikleri için desteği belirtir.  
+## <a name="registry-entries-for-managed-package-framework-language-service-options"></a>Yönetilen paket çerçevesi dil hizmeti seçenekleri için kayıt defteri girişleri  
+ Aşağıdaki kayıt defteri girdileri, yönetilen paket çerçevesi (MPF) dil hizmeti sınıflarına özgüdür. Bu kayıt defteri girdileri, çeşitli IntelliSense özellikleri ve diğer gelişmiş Düzenle özellikleri için dil hizmetindeki desteği gösterir.  
   
- Bu kayıt defteri girdileri erişilir <xref:Microsoft.VisualStudio.Package.LanguagePreferences> sınıfı.  
+ Bu kayıt defteri girişlerine sınıfı aracılığıyla erişilir <xref:Microsoft.VisualStudio.Package.LanguagePreferences> .  
   
 |Ad|Tür|Aralık|Açıklama|  
 |----------|----------|-----------|-----------------|  
-|CodeSense|REG_DWORD|0-1|IntelliSense işlemlerini destekler.|  
-|MatchBraces|REG_DWORD|0-1|Eşleşen küme ayraçları, parantezleri ve köşeli ayraçlar gibi dil çiftleri için destek.|  
-|Quickınfo'da|REG_DWORD|0-1|Hızlı bilgi IntelliSense işlemi için destek.|  
-|ShowMatchingBrace|REG_DWORD|0-1|Eşleşen dil çift durum çubuğunda görüntülemek için destek.|  
-|MatchBracesAtCaret|REG_DWORD|0-1|Genellikle iki öğe vurgulama ile eşleşen dil çiftlerini görüntülemek için destek.|  
-|MaxErrorMessages|REG_DWORD|0-n|Sayısı, görüntülenebilen hataları **hata listesi** penceresi.|  
-|CodeSenseDelay|REG_DWORD|0-n|Ayrıştırma bir IntelliSense işlemi için herhangi bir arka plan başlatmadan önce gecikme milisaniye sayısı.|  
+|CodeSense|REG_DWORD|0-1|IntelliSense işlemleri için destek.|  
+|Matchparantezleri|REG_DWORD|0-1|Parantez, parantezler ve köşeli ayraç gibi eşleşen dil çiftleri için destek.|  
+|QuickInfo|REG_DWORD|0-1|IntelliSense hızlı bilgi işlemi için destek.|  
+|Showmatchingayracın|REG_DWORD|0-1|Durum çubuğunda eşleşen dil çiftinin görüntülenmesi için destek.|  
+|Matchbracesatşapka|REG_DWORD|0-1|Genellikle iki öğenin vurgulanması yoluyla, eşleşen dil çiftlerini görüntüleme desteği.|  
+|MaxErrorMessages|REG_DWORD|0-n|**Hata listesi** penceresinde görüntülenebilen en fazla hata sayısı.|  
+|CodeSenseDelay|REG_DWORD|0-n|Bir IntelliSense işlemi için arka plan ayrıştırması başlatmadan önce gecikme süresi (milisaniye).|  
 |EnableAsyncCompletion|REG_DWORD|0-1|Arka plan ayrıştırma desteği.|  
-|EnableCommenting|REG_DWORD|0-1|Desteği seçilen metin blokları açıklama eklemek için ve ayrıca uncommenting seçili metin için destek anlamına gelir.|  
-|EnableFormatSelection|REG_DWORD|0-1|Otomatik Girinti gibi metin biçimlendirme veya küme ayraçlarının konumu ayarlama desteği.|  
-|AutoOutlining|REG_DWORD|0-1|(Daratılmadan bölge) ana hat oluşturma desteği.|  
-|MaxRegions|REG_DWORD|0-n|Gizli bölgeler dosya başına en fazla sayısı.|  
+|Enableyorum oluşturma|REG_DWORD|0-1|Seçili metin bloklarını açıklama eklemek için destek ve ayrıca seçili metnin yorum kaldırma desteğini de gerektirir.|  
+|EnableFormatSelection|REG_DWORD|0-1|Otomatik girintileme veya küme ayraçları konumunu ayarlama gibi biçimlendirme metni için destek.|  
+|Oto anahat oluşturma|REG_DWORD|0-1|Ana hat (daraltılabilen bölgeler) için destek.|  
+|Maxregion|REG_DWORD|0-n|Dosya başına en fazla gizli bölge sayısı.|  
   
 ```  
 ExampleHKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\  

@@ -13,40 +13,40 @@ caps.latest.revision: 40
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ac07a2c6becd46a2536e6a9b3340d075d5f078f2
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63403252"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64782606"
 ---
 # <a name="adding-a-command-to-the-solution-explorer-toolbar"></a>Çözüm Gezgini Araç Çubuğuna Komut Ekleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yol, bir düğme ekleme işlemi açıklanır **Çözüm Gezgini** araç çubuğu.  
+Bu izlenecek yol, **Çözüm Gezgini** araç çubuğuna nasıl düğme ekleneceğini gösterir.  
   
- Herhangi bir araç çubuğunu veya menüyü komutunda Visual Studio'da bir düğme olarak adlandırılır. Düğme tıklandığında komut işleyici kod yürütülür. Genellikle, ilgili komutları bir grup oluşturmak için birlikte gruplandırılır. Menüleri ve araç çubukları grupları için kapsayıcı işlevi görür. Öncelik grubundaki tek tek komutlarla menü veya araç çubuğunda görüntülenme sırasını belirler. Bir düğme araç çubuğunu veya menüyü görünürlüğünü denetleme tarafından görüntülenmesini engelleyebilirsiniz. Listelenen bir komutu bir `<VisibilityConstraints>` .vsct dosyası bölümünü yalnızca ilişkili bağlam içinde görünür. Gruplara görünürlük uygulanamaz.  
+ Bir araç çubuğu veya menüdeki herhangi bir komuta, Visual Studio 'da düğme denir. Düğmeye tıklandığında, komut işleyicisindeki kod yürütülür. Genellikle, ilgili komutlar bir grup oluşturmak için birlikte gruplandırılır. Menüler veya araç çubukları, gruplar için kapsayıcı olarak davranır. Öncelik, bir gruptaki bireysel komutların menüde veya araç çubuğunda görünme sırasını belirler. Bir düğmenin, görünürlüğünü denetleyerek araç çubuğunda veya menüde görüntülenmesini engelleyebilirsiniz. `<VisibilityConstraints>`. Vsct dosyasının bir bölümünde listelenen bir komut yalnızca ilişkili bağlamda görünür. Görünürlük, gruplara uygulanamıyor.  
   
- Menüleri ve araç çubuğu komutlarını .vsct dosyaları hakkında daha fazla bilgi için bkz: [komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).  
+ Menüler, araç çubuğu komutları ve. vsct dosyaları hakkında daha fazla bilgi için bkz. [Komutlar, menüler ve araç çubukları](../extensibility/internals/commands-menus-and-toolbars.md).  
   
 > [!NOTE]
-> XML komut tablosu (.vsct) dosyaları, menüler ve komutlar, Vspackage'larda nasıl görüneceğini tanımlamak için komut tablosu (.ctc) yapılandırma dosyaları yerine kullanın. Daha fazla bilgi için [Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).  
+> Menü ve komutlarının Vspackakleriniz içinde nasıl göründüğünü tanımlamak için komut tablosu yapılandırma (. CTC) dosyaları yerine XML komut tablosu (. vsct) dosyaları kullanın. Daha fazla bilgi için bkz [. Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md).  
   
-## <a name="prerequisites"></a>Önkoşullar  
- Visual Studio 2015'ten başlayarak, size Visual Studio SDK İndirme Merkezi'nden yüklemeyin. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK'yi daha sonra yükleyebilirsiniz. Daha fazla bilgi için [Visual Studio SDK'sını yükleme](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="prerequisites"></a>Ön koşullar  
+ Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).  
   
 ## <a name="creating-an-extension-with-a-menu-command"></a>Bir Menü Komutuyla Uzantı Oluşturma  
- Adlı bir VSIX projesi oluşturun `SolutionToolbar`. Adlı bir menü komutu öğesi şablonu ekleme **ToolbarButton**. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).  
+ Adlı bir VSıX projesi oluşturun `SolutionToolbar` . **ToolBarButton**adlı bir menü komut öğesi şablonu ekleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için, bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
-## <a name="adding-a-button-to-the-solution-explorer-toolbar"></a>Çözüm Gezgini araç çubuğuna bir düğme ekleme  
- Kılavuzun bu bölümünde, bir düğmeye ekleme işlemi açıklanır **Çözüm Gezgini** araç çubuğu. Düğmeye tıklandığında geri çağırma yöntemi kod çalıştırılır.  
+## <a name="adding-a-button-to-the-solution-explorer-toolbar"></a>Çözüm Gezgini araç çubuğuna düğme ekleme  
+ İzlenecek yolun bu bölümü, **Çözüm Gezgini** araç çubuğuna nasıl düğme ekleneceğini gösterir. Düğmeye tıklandığında, geri çağırma yöntemindeki kod çalıştırılır.  
   
-1. ToolbarButtonPackage.vsct dosyasında Git `<Symbols>` bölümü. `<GuidSymbol>` Paketi şablonu tarafından oluşturulan komut ve menü grubu düğüm içeriyor. Ekleme bir `<IDSymbol>` komutunuz tutacak bir grup bildirmek için bu düğümü öğesi.  
+1. ToolbarButtonPackage. vsct dosyasında  `<Symbols>` bölümüne gidin. `<GuidSymbol>`Düğüm, paket şablonu tarafından oluşturulan menü grubunu ve komutu içerir. `<IDSymbol>`Komutunuz grubunu barındıracak grubu bildirmek için bu düğüme bir öğe ekleyin.  
   
     ```xml  
     <IDSymbol name="SolutionToolbarGroup" value="0x0190"/>  
     ```  
   
-2. İçinde `<Groups>` bölümünde, mevcut Grup girişten sonra tanımlayın, bildirilen yeni grubu önceki adımda.  
+2. `<Groups>`Bölümünde, varolan Grup girişinden sonra, önceki adımda bildirdiğiniz yeni grubu tanımlayın.  
   
     ```xml  
     <Group guid="guidToolbarButtonPackageCmdSet"  
@@ -55,9 +55,9 @@ Bu izlenecek yol, bir düğme ekleme işlemi açıklanır **Çözüm Gezgini** a
           </Group>  
     ```  
   
-     Üst GUID:ID çifti ayarını `guidSHLMainMenu` ve `IDM_VS_TOOL_PROJWIN` bu Grup koyar **Çözüm Gezgini** araç çubuğu ve yüksek öncelikli değeri onu koyar sonra diğer komut grupları.  
+     Üst GUID: ID çiftini ayarlama `guidSHLMainMenu` ve `IDM_VS_TOOL_PROJWIN` bu grubu **Çözüm Gezgini** araç çubuğuna yerleştirir ve yüksek öncelikli bir değer ayarlamak, diğer komut gruplarından sonra bunu koyar.  
   
-3. İçinde `<Buttons>` bölümünde, oluşturulan üst Kimliğini değiştirme `<Button>` önceki adımda tanımladığınız grubunu yansıtacak şekilde girişi. Değiştirilmiş `<Button>` öğesi şu şekilde görünmelidir:  
+3. `<Buttons>`Bölümünde, oluşturulan girdinin ana kimliğini, `<Button>` önceki adımda tanımladığınız grubu yansıtacak şekilde değiştirin. Değiştirilen `<Button>` öğe şöyle görünmelidir:  
   
     ```xml  
     <Button guid="guidToolbarButtonPackageCmdSet" id="ToolbarButtonId" priority="0x0100" type="Button">  
@@ -69,29 +69,29 @@ Bu izlenecek yol, bir düğme ekleme işlemi açıklanır **Çözüm Gezgini** a
     </Button>  
     ```  
   
-4. Projeyi oluşturmak ve hata ayıklamaya başlayın. Deneysel örneği açılır.  
+4. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görüntülenir.  
   
-     **Çözüm Gezgini** mevcut düğmeleri sağındaki araç yeni komut düğmesi görüntülemelidir. Strikethrough düğmesi simgesi bulunuyor.  
+     **Çözüm Gezgini** araç çubuğu, varolan düğmelerin sağ tarafındaki yeni komut düğmesini görüntülemelidir. Düğme simgesi üstü çizilir.  
   
 5. Yeni düğmesine tıklayın.  
   
-     İletiyi içeren bir iletişim kutusu **ToolbarButtonPackage içinde SolutionToolbar.ToolbarButton.MenuItemCallback()** görüntülenmesi gerekir.  
+     **SolutionToolbar. ToolbarButton. Menuıitemcallback () içinde bulunan Toolbarbuttonpackage** iletisini içeren bir iletişim kutusu görüntülenmelidir.  
   
-## <a name="controlling-the-visibility-of-a-button"></a>Bir düğmesinin görünürlüğünü denetleme  
- Kılavuzun bu bölümünde, bir araç çubuğu üzerindeki bir düğme görünürlüğünü denetleme işlemi gösterilmektedir. İçinde bir veya daha fazla proje için bir bağlam ayarlayarak `<VisibilityConstraints>` bölümü SolutionToolbar.vsct dosyasının yalnızca bir projede veya projelerde açık olduğunda görüntülenecek bir düğme kısıtlayın.  
+## <a name="controlling-the-visibility-of-a-button"></a>Bir düğmenin görünürlüğünü denetleme  
+ İzlenecek yolun bu bölümü, bir araç çubuğundaki bir düğmenin görünürlüğünü nasıl denetleyeceğinizi gösterir. SolutionToolbar. vsct dosyasının bölümündeki bir veya daha fazla projeye bir bağlam ayarlayarak `<VisibilityConstraints>` , bir düğmeyi yalnızca proje veya projeler açıkken görüntülenecek şekilde kısıtlayabilirsiniz.  
   
-#### <a name="to-display-a-button-when-one-or-more-projects-are-open"></a>Bir veya daha fazla proje açıkken bir düğme görüntülemek için  
+#### <a name="to-display-a-button-when-one-or-more-projects-are-open"></a>Bir veya daha fazla proje açık olduğunda bir düğme göstermek için  
   
-1. İçinde `<Buttons>` bölümü ToolbarButtonPackage.vsct varolan iki komut bayrakları ekleme `<Button>` öğesi, arasında `<Strings>` ve `<Icons>` etiketler.  
+1. `<Buttons>`ToolbarButtonPackage. vsct bölümünde, `<Button>` ve etiketlerinin arasına var olan öğeye iki komut bayrağı ekleyin `<Strings>` `<Icons>` .  
   
    ```xml  
    <CommandFlag>DefaultInvisible</CommandFlag>  
    <CommandFlag>DynamicVisibility</CommandFlag>  
    ```  
   
-    `DefaultInvisible` Ve `DynamicVisibility` bayrakları bunu ayarlanmalıdır Bu girdiler `<VisibilityConstraints>` bölüm etkisi alabilir.  
+    `DefaultInvisible`Ve `DynamicVisibility` bayrakları, bölümündeki girişlerin etkin olabilmesi için ayarlanmalıdır `<VisibilityConstraints>` .  
   
-2. Oluşturma bir `<VisibilityConstraints>` iki bölüm `<VisibilityItem>` girdileri. Yeni bir bölüm kapattıktan sonra put `</Commands>` etiketi.  
+2. `<VisibilityConstraints>`İki girişi olan bir bölüm oluşturun `<VisibilityItem>` . Yeni bölümü, kapanış etiketinden hemen sonra koyun `</Commands>` .  
   
    ```xml  
    <VisibilityConstraints>  
@@ -104,19 +104,19 @@ Bu izlenecek yol, bir düğme ekleme işlemi açıklanır **Çözüm Gezgini** a
    </VisibilityConstraints>  
    ```  
   
-    Her görünürlük öğesi, belirtilen düğmenin görüntülendiği bir koşulunu temsil eder. Birden çok koşul uygulamak için aynı düğme için birden çok girişi oluşturmanız gerekir.  
+    Her görünürlük öğesi, belirtilen düğmenin görüntülendiği bir koşulu temsil eder. Birden çok koşul uygulamak için aynı düğme için birden çok giriş oluşturmanız gerekir.  
   
-3. Projeyi oluşturmak ve hata ayıklamaya başlayın. Deneysel örneği açılır.  
+3. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görüntülenir.  
   
-    **Çözüm Gezgini** araç üstü çizili düğmesini içermiyor.  
+    **Çözüm Gezgini** araç çubuğu üstünü çizili düğme içermiyor.  
   
-4. Bir proje içeren herhangi bir çözümü açın.  
+4. Proje içeren herhangi bir çözümü açın.  
   
-    Strikethrough düğmesi, varolan düğmeleri sağındaki araç çubuğunda görünür.  
+    Üzerine çizili düğme, var olan düğmelerin sağındaki araç çubuğunda görüntülenir.  
   
-5. Üzerinde **dosya** menüsünü tıklatın **çözümü Kapat**. Düğme araç çubuğundan kaybolur.  
+5. **Dosya** menüsünde **çözümü kapat**' a tıklayın. Düğme araç çubuğundan kaybolur.  
   
-   Düğmesinin görünürlüğünü tarafından denetlenir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSPackage yüklenene kadar. VSPackage'ı yüklendikten sonra düğmesinin görünürlüğünü VSPackage'ı tarafından denetlenir.  Daha fazla bilgi için [MenuCommands Vs. OleMenuCommands](../misc/menucommands-vs-olemenucommands.md).  
+   Düğmenin görünürlüğü, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSPackage yükleninceye kadar denetlenir. VSPackage yüklendikten sonra, düğmenin görünürlüğü VSPackage tarafından denetlenir.  Daha fazla bilgi için bkz. [MenuCommands vs. OleMenuCommands](../misc/menucommands-vs-olemenucommands.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Komutlar, Menüler ve Araç Çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

@@ -1,5 +1,5 @@
 ---
-title: Bir eski dil hizmeti kaydetme1 | Microsoft Docs
+title: Eski dil Service1 kaydetme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,19 +11,19 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9d78050f455e83b43dc114ad80fc084dc5604103
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188861"
 ---
-# <a name="registering-a-legacy-language-service"></a>Eski dil hizmeti kaydediliyor
+# <a name="registering-a-legacy-language-service"></a>Eski Dil Hizmeti Kaydetme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yönetilen paket çerçevesini (MPF), dil hizmeti tarafından bir VSPackage proffered (bkz [VSPackages](../../extensibility/internals/vspackages.md)) ve kayıtlı [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kayıt defteri anahtarları ve girişleri ekleyerek. Bu kayıt işlemi kısmen yükleme sırasında ve kısmen çalışma zamanı içinde yapılır.  
+Yönetilen paket çerçevesi 'nde (MPF), dil hizmeti bir VSPackage (bkz. [VSPackages](../../extensibility/internals/vspackages.md)) tarafından sağlanır ve [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kayıt defteri anahtarları ve girişleri eklenerek ile kaydedilir. Bu kayıt işlemi kısmen yükleme sırasında ve kısmen çalışma zamanında yapılır.  
   
-## <a name="register-the-language-service-by-using-attributes"></a>Dil hizmeti öznitelikleri kullanarak kaydetme  
- Aşağıdaki öznitelikler, bir dil hizmeti kaydetmek için kullanılır.  
+## <a name="register-the-language-service-by-using-attributes"></a>Dil hizmetini öznitelikleri kullanarak kaydetme  
+ Aşağıdaki öznitelikler bir dil hizmetini kaydetmek için kullanılır.  
   
 - <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute>  
   
@@ -38,7 +38,7 @@ Yönetilen paket çerçevesini (MPF), dil hizmeti tarafından bir VSPackage prof
   Bu öznitelikler aşağıda açıklanmıştır  
   
 ### <a name="provideserviceattribute"></a>ProvideServiceAttribute  
- Bu öznitelik, bir dil hizmeti hizmet olarak kaydeder.  
+ Bu öznitelik, dil hizmetinizi bir hizmet olarak kaydeder.  
   
 ### <a name="example"></a>Örnek  
   
@@ -57,7 +57,7 @@ namespace TestLanguagePackage
 ```  
   
 ### <a name="providelanguageserviceattribute"></a>ProvideLanguageServiceAttribute  
- Bu öznitelik, bir dil hizmeti özel bir dil hizmeti kaydeder. Dil hizmetinize sunan özellikleri belirten seçenekleri ayarlamanıza olanak sağlar. Bu örnek, bir dil hizmeti sağlayan seçenekler kümesini gösterir. Dil hizmeti seçenekleri tam kümesi için bkz: <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute>.  
+ Bu öznitelik, dil hizmetinizi özellikle bir dil hizmeti olarak kaydeder. Dil hizmetinizin sunduğu özellikleri belirleyen seçenekleri ayarlamanıza olanak sağlar. Örnek, bir dil hizmetinin sağlayagösterdiği seçeneklerin bir alt kümesini gösterir. Dil hizmeti seçeneklerinin tam kümesi için bkz <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> ..  
   
 ### <a name="example"></a>Örnek  
   
@@ -82,7 +82,7 @@ namespace TestLanguagePackage
 ```  
   
 ### <a name="providelanguageextensionattribute"></a>ProvideLanguageExtensionAttribute  
- Bu öznitelik, bir dosya uzantısına sahip, dil hizmeti ilişkilendirir. Uzantıya sahip bir dosya yüklendiğinde bir proje, dil hizmetinin başlatıldığından ve dosyanın içeriğini görüntülemek için kullanılır.  
+ Bu öznitelik, dil hizmetinizi bir dosya uzantısıyla ilişkilendirir. Bu uzantıya sahip bir dosya yüklendiğinde, herhangi bir projede dil hizmetiniz başlatılır ve dosyanın içeriğini göstermek için kullanılır.  
   
 ### <a name="example"></a>Örnek  
   
@@ -101,7 +101,7 @@ namespace TestLanguagePackage
 ```  
   
 ### <a name="providelanguagecodeexpansionattribute"></a>ProvideLanguageCodeExpansionAttribute  
- Bu öznitelik, hangi koddan genişletme veya parçacık şablonu elde edilen bir konuma kaydeder. Bu bilgileri tarafından kullanılan **kod parçacıkları tarayıcı** ve bir kod parçacığı kaynak dosyaya eklendiğinde, düzenleyici.  
+ Bu öznitelik, kod genişletme veya kod parçacığı şablonlarının alındığı bir konumu kaydeder. Bu bilgiler, kaynak dosyasına bir kod parçacığı eklendiğinde **kod parçacıkları tarayıcısı** ve düzenleyici tarafından kullanılır.  
   
 ### <a name="example"></a>Örnek  
   
@@ -127,10 +127,10 @@ namespace TestLanguagePackage
 ```  
   
 ### <a name="providelanguageeditoroptionpageattribute"></a>ProvideLanguageEditorOptionPageAttribute  
- Bu öznitelik, görüntülenecek özellik sayfası kaydeder **seçenekleri** iletişim kutusunun altında **metin düzenleyici** kategorisi. Dil hizmetiniz için görüntülenecek her sayfa için özniteliklerden birini kullanın. Sayfalarınızı bir ağaç yapısı içinde düzenlemek istiyorsanız, her bir ağaç düğümünü tanımlamak için ek öznitelikler kullanın.  
+ Bu öznitelik, **metin düzenleyici** kategorisi altındaki **Seçenekler** iletişim kutusunda görüntülenmek üzere bir özellik sayfası kaydeder. Dil hizmetiniz için görüntülenecek her sayfa için bu özniteliklerden birini kullanın. Sayfalarınızı bir ağaç yapısında düzenlemeniz gerekiyorsa, ağacın her düğümünü tanımlamak için ek öznitelikler kullanın.  
   
 ### <a name="example"></a>Örnek  
- Bu örnek, iki özellik sayfalarını gösterir. **seçenekleri** ve **Indenting**ve ikinci özellik sayfasını içeren bir düğüm.  
+ Bu örnekte, iki özellik sayfası, **Seçenekler** ve **girintileme**ve ikinci özellik sayfasını içeren bir düğüm gösterilmektedir.  
   
 ```csharp  
 using Microsoft.VisualStudio.Shell;  
@@ -161,11 +161,11 @@ namespace TestLanguagePackage
 }  
 ```  
   
-## <a name="proffer-the-language-service-at-runtime"></a>Dil hizmeti zamanında proffer  
- Dil paketinizi yüklendiğinde söylemelisiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dil hizmetiniz hazır hale gelir. Bunun için hizmet proffering tarafından. Bu yapılır <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> yöntemi. Ayrıca, arka plan ayrıştırmayı gerçekleştirilebilir, boş dönemlerde dil hizmetinizi çağırır zamanlayıcıyı başlatmak gerekir. Boşta Bu zamanlayıcı da aracılığıyla uyguladıysanız belge özelliklerini güncelleştirmek için kullanılan <xref:Microsoft.VisualStudio.Package.DocumentProperties> sınıfı. Bir zamanlayıcı desteklemek için paketinizi uygulamalıdır <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent> arabirimi (yalnızca <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle%2A> yöntemi tam olarak uygulanması gerekiyor; kalan yöntemler, varsayılan değerleri döndürebilir).  
+## <a name="proffer-the-language-service-at-runtime"></a>Çalışma zamanında dil hizmeti proffer  
+ Dil paketiniz yüklendiğinde, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dil hizmetinizin hazırlanmaya yaradığını bildirmeniz gerekir. Bu, hizmeti kaydederek yapabilirsiniz. Bu, <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> yönteminde yapılır. Ayrıca, boşta kalma süreleri sırasında dil hizmetinizi çağıran bir Zamanlayıcı başlatmanız gerekir, böylece arka plan ayrıştırma gerçekleştirilebilir. Bu boşta Zamanlayıcı, sınıf aracılığıyla herhangi bir uyguladıysanız belge özelliklerini güncelleştirmek için de kullanılır <xref:Microsoft.VisualStudio.Package.DocumentProperties> . Bir zamanlayıcıyı desteklemek için paketinizin arabirimini uygulaması gerekir <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent> (yalnızca <xref:Microsoft.VisualStudio.OLE.Interop.IOleComponent.FDoIdle%2A> yöntemin tam olarak uygulanması gerekir; kalan Yöntemler varsayılan değerleri döndürebilir).  
   
 ### <a name="example"></a>Örnek  
- Bu örnekte, bir hizmet proffering ve boş bir zamanlayıcı sağlama tipik bir yaklaşım gösterilmektedir.  
+ Bu örnek, bir hizmeti ve boşta kalma süreölçeri sağlamayı sağlayan tipik bir yaklaşımı gösterir.  
   
 ```csharp  
   

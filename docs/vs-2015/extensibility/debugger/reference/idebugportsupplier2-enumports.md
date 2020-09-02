@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::EnumPorts | Microsoft Docs
+title: 'IDebugPortSupplier2:: TRTs | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9324314160e5efe7174f0f6987d5cf0782ccb1ff
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188319"
 ---
 # <a name="idebugportsupplier2enumports"></a>IDebugPortSupplier2::EnumPorts
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bağlantı noktası sağlayıcısı tarafından sağlanan tüm bağlantı noktalarının bir listesini alır.  
+Bir bağlantı noktası sağlayıcısı tarafından sağlanan tüm bağlantı noktalarının listesini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT EnumPorts(   
@@ -40,10 +40,10 @@ int EnumPorts( 
   
 #### <a name="parameters"></a>Parametreler  
  `ppEnum`  
- [out] Döndürür bir [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) sağlanan bağlantı noktalarının bir listesini içeren nesne.  
+ dışı Verilen bağlantı noktası listesini içeren bir [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   

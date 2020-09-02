@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::GetAttachedSessionName | Microsoft Dokümanlar
+title: 'IDebugProcess2:: Getattachedoturumadı | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,19 +16,19 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b70fd48adacdbbf936c6997fc373ad4a8d7e696b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80724075"
 ---
 # <a name="idebugprocess2getattachedsessionname"></a>IDebugProcess2::GetAttachedSessionName
-Bu işlemi hata ayıklayan oturumun adını alır. Bir IDE, bu bilgileri belirli bir makinede belirli bir işlemi hata ayıklayan bir kullanıcıya görüntüleyebilir.
+Bu işlemde hata ayıklama yapan oturumun adını alır. IDE, bu bilgileri belirli bir makinedeki belirli bir işlemde hata ayıklama yapan bir kullanıcıya görüntüleyebilir.
 
 > [!NOTE]
-> Bu yöntem amortismana sokuldu ve uygulanması `E_NOTIMPL`her zaman geri dönmelidir.
+> Bu yöntem kullanım dışıdır ve uygulamanın her zaman döndürmelidir `E_NOTIMPL` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 HRESULT GetAttachedSessionName(
@@ -40,7 +40,7 @@ HRESULT GetAttachedSessionName(
 `pbstrSessionName`\
 
 ## <a name="return-value"></a>Dönüş Değeri
- Bu yöntem her `E_NOTIMPL`zaman dönmelidir.
+ Bu yöntem her zaman döndürmelidir `E_NOTIMPL` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)

@@ -1,5 +1,5 @@
 ---
-title: SupportsCodeSeparation öğesi (Visual Studio şablonları) | Microsoft Docs
+title: Supportscodeayrım öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,22 +14,22 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: dd454873fb6a81e66efa99ed68007408f87ff824
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160498"
 ---
 # <a name="supportscodeseparation-element-visual-studio-templates"></a>SupportsCodeSeparation Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Belirtir olup olmadığını **kod ayrı dosyaya Yerleştir** onay kutusunu etkin **Yeni Öğe Ekle** iletişim kutusu.  
+**Yeni öğe Ekle** iletişim kutusunda **farklı dosya yerleştir** onay kutusunun etkin olup olmadığını belirtir.  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<SupportsCodeSeparation >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<SupportsCodeSeparation>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <SupportsCodeSeparation> true/false </SupportsCodeSeparation>  
@@ -48,22 +48,22 @@ Belirtir olup olmadığını **kod ayrı dosyaya Yerleştir** onay kutusunu etki
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **yeni öğe** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** ya da **Yeni öğe** iletişim kutusunda nasıl görüntülediğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Metin olmalıdır `true` veya `false`gösteren olup olmadığını **kod ayrı dosyaya Yerleştir** onay kutusunu etkin **Yeni Öğe Ekle** iletişim kutusu.  
+ Metin `true` , ya da `false` **Yeni öğe Ekle** Iletişim kutusunda **farklı dosya yerleştir** onay kutusunun etkin olup olmadığını belirten bir değer olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SupportsCodeSeparation` İsteğe bağlı bir öğedir. Varsayılan değer `false` şeklindedir.  
+ `SupportsCodeSeparation` isteğe bağlı bir öğedir. Varsayılan değer: `false`.  
   
- `SupportsCodeSeparation` Öğesi, yalnızca Web öğesi şablonları için kullanılabilir.  
+ `SupportsCodeSeparation`Öğesi yalnızca Web öğesi şablonları için kullanılabilir.  
   
- Kod ayırma veya arka plan kod sayfa modeli, bir dosya ve başka bir dosyaya programlama kod biçimlendirme tutmak sağlar. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ve diğer .NET dilleri, bu modeli kullanın.  
+ Kod ayrımı veya arka plan kod modeli, biçimlendirmeyi bir dosyada ve diğer bir dosyadaki programlama kodunda tutmanıza olanak sağlar. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ve diğer .NET dilleri bu modeli kullanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, görüntülenecek belirtir **kod ayrı dosyaya Yerleştir** seçeneği.  
+ Aşağıdaki örnek, **yer kodunu ayrı dosya** seçeneğinde göstermek için belirtir.  
   
 ```  
 <VSTemplate Version="3.0.0" Type="Project"  

@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::SetPassCount | Microsoft Docs
+title: 'IDebugPendingBreakpoint2:: SetPassCount | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 42a4c4b008b34a66a408cbb9a5615ae3fbbf8407
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188600"
 ---
 # <a name="idebugpendingbreakpoint2setpasscount"></a>IDebugPendingBreakpoint2::SetPassCount
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bekleyen kesme noktasıyla ilişkili parola sayısı değiştirir veya ayarlar.  
+Bekleyen kesme noktasıyla ilişkili geçiş sayısını ayarlar veya değiştirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT SetPassCount(   
@@ -41,13 +41,13 @@ int SetPassCount( 
   
 #### <a name="parameters"></a>Parametreler  
  `bpPassCount`  
- [in] A [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) geçişi sayısı içeren yapısı.  
+ 'ndaki Geçiş sayısını içeren [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) yapısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_BP_DELETED` kesme noktası silinmiş olması durumunda.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_BP_DELETED`Kesme noktasının silinip silinmediğini döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Daha önce bekleyen kesme noktasıyla ilişkili tüm geçiş sayısı kaybolur. Bu Kesme noktasının bağlı tüm kesme noktalarını bunların pass sayısını ayarlamak için çağrılır `bpPassCount` parametresi.  
+ Daha önce bekleyen kesme noktasıyla ilişkili olan tüm geçiş sayısı kaybolur. Bu bekleyen kesme noktasından bağlantılı tüm kesme noktaları, geçiş sayısını parametreye ayarlamak için çağırılır `bpPassCount` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   

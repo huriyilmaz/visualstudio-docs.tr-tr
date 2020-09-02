@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 99ed79b1654057c4114ceb171b5cb1e1dfdb439f
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87425400"
 ---
 # <a name="common-msbuild-project-items"></a>Yaygın MSBuild proje öğeleri
@@ -76,7 +76,7 @@ Yerel bir bildirim dosyasını veya bu tür bir dosyaya yapılan başvuruyu tems
 
 ### <a name="projectreference"></a>ProjectReference
 
-Başka bir projenin başvurusunu temsil eder. `ProjectReference`öğeler, hedef tarafından [başvuru](#reference) öğelerine dönüştürülür `ResolveProjectReferences` `ProjectReference` . bu nedenle, dönüştürme işlemi onun üzerine yazmazsa, başvurudaki geçerli meta veriler üzerinde geçerli olabilir.
+Başka bir projenin başvurusunu temsil eder. `ProjectReference` öğeler, hedef tarafından [başvuru](#reference) öğelerine dönüştürülür `ResolveProjectReferences` `ProjectReference` . bu nedenle, dönüştürme işlemi onun üzerine yazmazsa, başvurudaki geçerli meta veriler üzerinde geçerli olabilir.
 
 |Öğe meta veri adı|Açıklama|
 |---------------|-----------------|
@@ -112,7 +112,7 @@ Oluşturulan derlemeye gömülebilen kaynakları temsil eder.
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 | LogicalName | Gerekli dize. Gömülü kaynağın mantıksal adı. |
 
-### <a name="content"></a>İçerik
+### <a name="content"></a>Content
 
 Projeye derlenmemiş ancak birlikte gömülebilir veya onunla birlikte yayımlanabilir olan dosyaları temsil eder.
 
@@ -128,7 +128,7 @@ Projeye derlenmemiş ancak birlikte gömülebilir veya onunla birlikte yayımlan
 | Görünür | İsteğe bağlı Boolean. Visual Studio 'da **Çözüm Gezgini** dosyanın görüntülenip görüntülenmeyeceğini gösterir. |
 | CopyToOutputDirectory | İsteğe bağlı dize. Dosyanın çıkış dizinine kopyalanıp kopyalanmayacağını belirler. Değerler şunlardır:<br /><br /> 1. hiçbir şekilde<br />2. her zaman<br />3. Preservenebatı |
 
-### <a name="none"></a>Yok
+### <a name="none"></a>Hiçbiri
 
 Yapı işleminde rolü olmaması gereken dosyaları temsil eder.
 
@@ -170,4 +170,4 @@ Ad alanları Visual Basic Derleyicisi tarafından içeri aktarılması gereken d
 
 - [Yaygın MSBuild proje özellikleri](../msbuild/common-msbuild-project-properties.md)
 - [.NET Core SDK projeleri için MSBuild özellikleri](/dotnet/core/project-sdk/msbuild-props)
-- [Ortak MSBuild öğe meta verileri](common-msbuild-item-metadata.md)
+- [Yaygın MSBuild öğesi meta verileri](common-msbuild-item-metadata.md)

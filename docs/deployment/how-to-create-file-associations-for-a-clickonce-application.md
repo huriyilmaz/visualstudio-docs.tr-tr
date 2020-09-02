@@ -16,14 +16,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 76ecc41a852d80319f8a171ed590eb73680d92cc
-ms.sourcegitcommit: 3f491903e0c10db9a3f3fc0940f7b587fcbf9530
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85382503"
 ---
 # <a name="how-to-create-file-associations-for-a-clickonce-application"></a>Nasıl yapılır: ClickOnce uygulaması için dosya ilişkilendirmeleri oluşturma
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]uygulamalar bir veya daha fazla dosya adı uzantısıyla ilişkilendirilebilen için, Kullanıcı bu türden bir dosya açtığında uygulamanın otomatik olarak başlatılması gerekir. Bir uygulamaya dosya adı uzantısı desteği eklemek [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] basittir.
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulamalar bir veya daha fazla dosya adı uzantısıyla ilişkilendirilebilen için, Kullanıcı bu türden bir dosya açtığında uygulamanın otomatik olarak başlatılması gerekir. Bir uygulamaya dosya adı uzantısı desteği eklemek [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] basittir.
 
 ### <a name="to-create-file-associations-for-a-clickonce-application"></a>ClickOnce uygulaması için dosya ilişkilendirmeleri oluşturmak için
 
@@ -54,6 +54,6 @@ ms.locfileid: "85382503"
     Daha fazla bilgi için bkz. [Mage.exe (bildirim oluşturma ve düzenleme aracı)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [\<fileAssociation>dosyalarında](../deployment/fileassociation-element-clickonce-application.md)
+- [\<fileAssociation> dosyalarında](../deployment/fileassociation-element-clickonce-application.md)
 - [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)
 - [Mage.exe (Bildirim Oluşturma ve Düzenleme Aracı)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)

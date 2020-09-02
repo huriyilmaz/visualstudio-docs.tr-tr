@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::ResolveDynamicType | Microsoft Dokümanlar
+title: 'Idebugciltçi:: ResolveDynamicType | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: a3e490d06444d555625136d6b7ba2a8e99169f59
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735984"
 ---
 # <a name="idebugbinderresolvedynamictype"></a>IDebugBinder::ResolveDynamicType
 Bu yöntem, bir değişkenin tam türünü döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT ResolveDynamicType (
@@ -43,13 +43,13 @@ int ResolveDynamicType(
 
 ## <a name="parameters"></a>Parametreler
 `pDynamic`\
-[içinde] Bir değişken türünü temsil eden bir [IDebugDynamicField.](../../../extensibility/debugger/reference/idebugdynamicfield.md)
+'ndaki Bir değişkenin türünü temsil eden bir [ıdebugdynamicfield](../../../extensibility/debugger/reference/idebugdynamicfield.md) .
 
 `ppResolved`\
-[çıkış] Değişkenin türü hakkında belirli bilgiler veren bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) döndürür.
+dışı Değişkenin türü hakkında belirli bilgiler sağlayan bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)

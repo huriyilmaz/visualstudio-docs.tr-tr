@@ -1,5 +1,5 @@
 ---
-title: Modüller görünümü - .NET bellek örnekleme verileri | Microsoft Docs
+title: Modüller görünümü-.NET Bellek Örnekleme verileri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,39 +12,39 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: abc5f1f6a15271fa3ec530658add2b6ca3027959
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160860"
 ---
 # <a name="modules-view---net-memory-sampling-data"></a>Modüller Görünümü - .NET Bellek Örnekleme Verileri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Örnekleme metodu kullanılarak toplanan .NET bellek ayırma verisini modülleri görünümünü bellek verileri profil oluşturma çalıştırmasını içinde yürütülen modülleri göre gruplandırır. Her bir hiyerarşik ağaç kökünde modülüdür. Modülündeki işlevlerin modülü düğümünün altında listelenir.  
+Örnekleme yöntemi kullanılarak toplanan .NET bellek ayırma verilerinin Modüller görünümü, bellek verilerini profil oluşturma çalıştırmasında yürütülen modüller tarafından gruplandırır. Her modül hiyerarşik bir ağacın köküdür. Modülün işlevleri modül düğümünün altında listelenir.  
   
- Bellek ayırma deyimleri kaynak dosya satır numaralarını işlevi düğümünün altında listelenir ve ayırmayı yönergeleri adresleri satırı düğümünün altında listelenir. Dahil ve hariç olan değerler her zaman satır verileri ve yönerge verileri için aynıdır.  
+ Bellek ayıran deyimlerin kaynak dosya satır numaraları, işlev düğümünün altında listelenir ve ayırmayı yapan yönergelerin adresleri satır düğümünün altında listelenir. Satır verileri ve yönerge verileri için her zaman kapsamlı ve dışlamalı değerler aynıdır.  
   
 |Sütun|Açıklama|  
 |------------|-----------------|  
-|**Ad**|Modül, işlev, satır numarası veya yönerge adresi adı.|  
-|**İşlem kimliği**|İşlem, profil oluşturma çalışması Kimliğine (PID).|  
-|**İşlem adı**|İşlemin adı.|  
-|**Modül adı**|İşlevi içeren modül adı.|  
+|**Ad**|Modülün, işlevin, satır numarasının veya yönerge adresinin adı.|  
+|**İşlem Kimliği**|Profil oluşturma çalıştırmasının işlem KIMLIĞI (PID).|  
+|**İşlem adı**|Sürecin adı.|  
+|**Modül Adı**|İşlevi içeren modülün adı.|  
 |**Modül yolu**|Modülün yolu.|  
-|**Kaynak dosyası**|Bu işlevin tanımını içeren kaynak dosya.|  
-|**İşlevin satır numarası**|Satır numarası kaynak dosyada bu işlevin başlangıcı.|  
-|**Kapsamlı ayırmalar**|-Bir işlev için işlevi tarafından oluşturulan nesnelerin toplam sayısı. Bu işlev tarafından çağrılan işlevler oluşturulan nesneleri içerir.<br />-Bir modül için en az bir işlev modülünden ayrılan profil oluşturma yürütmesine nesneleri sayısı yürütülüyor. Modül işlevleri tarafından çağrılan işlevler oluşturulan nesneleri içerir.<br />-Bir satır veya yönergesi, çizgi veya yönergesi tarafından ayrılan nesnelerin toplam sayısı için.|  
-|**Kapsamlı ayırma yüzdesi**|, Profil oluşturma çalışmasında ayrılan tüm nesneleri yüzdesi olan modülün, işlev, satır veya yönerge kapsamlı ayırmalar.|  
-|**Dışlamalı ayırmalar**|-Geçerli işlev, işlev işlev gövdesinin kod yürütülürken, oluşturulan nesne sayısı için (diğer bir deyişle, ne işlev çağrı yığınının en üstünde zaman). Sayı, bu işlev tarafından çağrılan işlevler oluşturulan nesneleri içermez.<br />-Bir modül için modülündeki işlevlerin dışlamalı ayırmalar toplamı.<br />-Bir satır veya yönergesi, bu satırı veya yönergesi tarafından oluşturulmuş nesneleri toplam sayısı için.|  
-|**Dışlamalı ayırma yüzdesi**|, Profil oluşturma çalışmasında ayrılan tüm nesneleri yüzdesi olan modülün, işlev, satır veya yönerge dışlamalı ayırmalar.|  
-|**Kapsamlı bayt**|-Bir işlev için işlev tarafından ayrılan bayt sayısı. Bu işlev tarafından çağrılan işlevler ayrılan bayt sayısını içerir.<br />-Bir modül için en az bir işlev modülünden ayrılan bir profil oluşturma çalışmasında yer ayrılan bayt sayısı yürütülüyor. Modül işlevleri tarafından çağrılan tüm işlevleri oluşturulan nesneleri içerir.<br />-Bir satır veya yönergesi, çizgi veya yönergesi tarafından oluşturulan nesnelerin toplam sayısı için.|  
-|**Kapsamlı bayt yüzdesi**|Kapsamlı bayt modülü, işlev, satır veya yönerge olan, profil oluşturma çalışmasında ayrılan tüm baytların yüzdesi.|  
-|**Dışlamalı bayt**|-Bir işlev için işlev tarafından ayrılan bayt sayısı. Bu işlev tarafından çağrılan işlevlerdeki ayrılan bayt sayısı içermez.<br />-Bir modül için modülündeki işlevleri tarafından ayrılan özel baytları toplamı.<br />-Bir satır veya yönergesi, bu satırı veya yönergesi tarafından ayrılan nesnelerin toplam sayısı için.|  
-|**Dışlamalı bayt yüzdesi**|Dışlamalı bayt modülü, işlev, satır veya yönerge olan, profil oluşturma çalışmasında ayrılan tüm baytların yüzdesi.|  
+|**Kaynak Dosya**|Bu işlevin tanımını içeren kaynak dosya.|  
+|**İşlev satır numarası**|Kaynak dosyada bu işlevin başlangıcına ait satır numarası.|  
+|**Kapsamlı ayırmalar**|-Bir işlev için, işlev tarafından oluşturulan toplam nesne sayısı. Bu sayı, bu işlev tarafından çağrılan işlevlerde oluşturulan nesneleri içerir.<br />-Bir modül için, modülden en az bir işlev yürütüldüğü sırada ayrılan bir profil oluşturma çalıştırmasında nesne sayısı. Bu sayı, modül işlevleri tarafından çağrılan işlevlerde oluşturulan nesneleri içerir.<br />-Çizgi veya yönerge için, çizgi veya yönerge tarafından ayrılan toplam nesne sayısı.|  
+|**Kapsamlı ayırmalar%**|Profil oluşturma çalıştırmasında ayrılan, modülün, işlevin, çizginin veya yönergenin kapsamlı ayırmaları olan tüm nesnelerin yüzdesi.|  
+|**Dışlamalı ayırmalar**|-Geçerli işlev için, işlev, işlev gövdesinin kodunu yürütürken oluşturulan nesne sayısı (yani, işlev çağrı yığınının en üstünde olduğunda). Numara, bu işlev tarafından çağrılan işlevlerde oluşturulmuş nesneleri içermez.<br />-Bir modül için, modüldeki işlevlerin dışlamalı ayırmaların toplamı.<br />-Bir çizgi veya yönerge için, bu çizgi veya yönerge tarafından oluşturulan toplam nesne sayısı.|  
+|**Dışlamalı ayırmalar%**|Profil oluşturma çalıştırmasında ayrılan, modülün, işlevin, çizginin veya yönergenin özel ayırmaları olan tüm nesnelerin yüzdesi.|  
+|**Kapsamlı baytlar**|-Bir işlev için, işlev tarafından ayrılan bayt sayısı. Bu sayı, bu işlev tarafından çağrılan işlevlerde ayrılan baytları içerir.<br />-Bir modül için, modülden en az bir işlev yürütüldüğü sırada ayrılan bir profil oluşturma çalıştırmasında ayrılan bayt sayısı. Bu sayı, modül işlevleri tarafından çağrılan tüm işlevlerde oluşturulan nesneleri içerir.<br />-Çizgi veya yönerge için, çizgi veya yönerge tarafından oluşturulan toplam nesne sayısı.|  
+|**Dahil edilen baytlar%**|Profil oluşturma çalıştırmasında ayrılan, modülün, işlevin, çizginin veya yönergenin dahil olduğu baytların yüzdesi.|  
+|**Dışlamalı baytlar**|-Bir işlev için, işlev tarafından ayrılan toplam bayt sayısı. Numara, bu işlev tarafından çağrılan işlevlerde ayrılan baytları içermez.<br />-Bir modül için, modüldeki işlevlerle ayrılan özel baytlar toplamı.<br />-Bir çizgi veya yönerge için, bu çizgi veya yönergeyle ayrılan toplam nesne sayısı.|  
+|**Dışlamalı bayt yüzdesi**|Profil oluşturma çalıştırmasında ayrılan ve modülün, işlevin, çizginin veya yönergenin özel baytları olan tüm baytların yüzdesi.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)   
- [Modüller görünümü - izleme](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
+ [Nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md)   
+ [Modüller görünümü-Izleme](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [Modüller görünümü](../profiling/modules-view-sampling-data.md)   
  [Modüller Görünümü](../profiling/modules-view-instrumentation-data.md)

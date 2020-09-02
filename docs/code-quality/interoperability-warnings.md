@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 74bffffa2b4f95aeab20438199bb19693a1a3b94
-ms.sourcegitcommit: 9a7fb8556a5f3dbb4459122fefc7e7a8dfda753a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87235127"
 ---
 # <a name="interoperability-warnings"></a>Birlikte Çalışabilirlik Uyarıları
@@ -27,7 +27,7 @@ Birlikte çalışabilirlik uyarıları COM istemcileriyle etkileşimi destekler.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-| Kural | Açıklama |
+| Kural | Description |
 | - | - |
 | [CA1400: P/Invoke giriş noktaları bulunmalıdır](../code-quality/ca1400.md) | Ortak veya korumalı yöntem System.Runtime.InteropServices.DllImportAttribute özniteliği kullanılarak işaretlenir. Yönetilmeyen kitaplık bulunamadı ya da yöntem için bir işlev kitaplığında eşleştirilemedi. |
 | [CA1401: P/Invoke görünür olmamalıdır](../code-quality/ca1401.md) | Ortak bir türdeki ortak veya korumalı yöntemin System.Runtime.InteropServices.DllImportAttribute özniteliği vardır (Ayrıca, Visual Basic Declare anahtar sözcüğü tarafından uygulanır). Bu tür yöntemler açıkta kalmamalıdır. |
