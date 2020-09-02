@@ -21,38 +21,38 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0292bf5b62bf150a598b4c750929ba6928216a50
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65691265"
 ---
 # <a name="debugging-linq"></a>LINQ'de Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tümleşik hata ayıklama dilini destekler, bazı kısıtlamalarla (LINQ) kodunda sorgulayın. Hata ayıklama özelliklerinin çoğu LINQ deyimleriyle Adımlama, kesme noktaları ayarlama ve sonuçları hata ayıklayıcı pencerelerinde görüntüleme dahil olmak üzere çalışın. Bu konu LINQ hata ayıklamanın önemli sınırlamalarını açıklar.  
+[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , dil ile tümleşik sorgu (LINQ) kodunda hata ayıklamayı destekler, bazı sınırlamalar vardır. Çoğu hata ayıklama özelliğinin adım adım, kesme noktaları ayarlama ve sonuçları hata ayıklayıcı penceresinde görüntüleme dahil olmak üzere LINQ deyimleriyle birlikte çalışır. Bu konu, LINQ hata ayıklamanın başlıca sınırlamalarını açıklamaktadır.  
   
-## <a name="BKMK_ViewingLINQResults"></a> LINQ sonuçlarını görüntüleme  
- DataTips, izleme penceresi ve QuickWatch iletişim kutusunu kullanarak, bir LINQ ifadesini sonucunu görüntüleyebilirsiniz. Bir kaynak penceresi kullandığınızda, kaynak penceresinde bir sorgunun işaretçisini duraklatabilirsiniz ve bir DataTip görünür. Bir LINQ değişkenini kopyalayıp İzle penceresine veya QuickWatch iletişim kutusuna yapıştırın.  
+## <a name="viewing-linq-results"></a><a name="BKMK_ViewingLINQResults"></a> LINQ sonuçlarını görüntüleme  
+ DataTips, izleme penceresi ve QuickWatch iletişim kutusunu kullanarak bir LINQ deyimin sonucunu görüntüleyebilirsiniz. Kaynak penceresi kullandığınızda, kaynak penceredeki bir sorgu üzerindeki işaretçiyi duraklatabilir ve bir DataTip belirir. Bir LINQ değişkenini kopyalayabilir ve izleme penceresi veya QuickWatch iletişim kutusuna yapıştırabilirsiniz.  
   
- LINQ içinde bir sorgu oluşturulduğunda veya bildirildiğinde ancak sorgu kullanılmadıysa değerlendirilmez. Bu nedenle sorgu değerlendirilene kadar bir değeri yok. Sorgu oluşturmaya ve değerlendirmeye tam bir açıklaması için bkz [(C#) LINQ sorgularına giriş](https://msdn.microsoft.com/library/37895c02-268c-41d5-be39-f7d936fa88a8) veya [bilgisayarınızı ilk LINQ sorgusu yazma](https://msdn.microsoft.com/library/4affb732-3e9b-4479-aa31-1f9bd8183cbe).  
+ LINQ içinde, bir sorgu oluşturulduğunda veya bildirildiğinde, ancak yalnızca sorgu kullanıldığında değerlendirilmez. Bu nedenle, sorgu değerlendirilene kadar bir değere sahip değildir. Sorgu oluşturma ve değerlendirme hakkında tam bir açıklama için bkz. [LINQ Sorgularına Giriş (C#)](https://msdn.microsoft.com/library/37895c02-268c-41d5-be39-f7d936fa88a8) veya [Ilk LINQ sorgunuzu yazma](https://msdn.microsoft.com/library/4affb732-3e9b-4479-aa31-1f9bd8183cbe).  
   
- Bir sorgunun sonucu görüntülemek için hata ayıklayıcı sorguyu değerlendirmelidir. Hata ayıklayıcıda LINQ Sorgu sonucu görüntülediğinizde oluşan bu örtülü değerlendirme, düşünmeniz gereken bazı etkilere sahiptir:  
+ Bir sorgunun sonucunu göstermek için, hata ayıklayıcı tarafından değerlendirilmelidir. Hata ayıklayıcıda bir LINQ sorgu sonucu görüntülediğinizde oluşan bu örtük değerlendirme, dikkate almanız gereken bazı etkilere sahiptir:  
   
-- Her değerlendirme sorgusunun zaman alır. Sonuç düğümlerinin genişletilmesi zaman alır. Bazı sorgular için yinelenen değerlendirme belirgin bir performans düşüşüyle sonuçlanabilir.  
+- Sorgunun her değerlendirmesi zaman alır. Sonuçlar düğümünü genişletme zaman alır. Bazı sorgular için yinelenen değerlendirme, fark edilebilir bir performans cezasına neden olur.  
   
-- Bir sorgunun değerlendirilmesi verilerin değerinde veya programınızın durumunu yapılan değişiklikler etkilere neden olabilir. Tüm sorguların yan etkisi yoktur. Bir sorgu yan etkileri olmadan güvenli bir şekilde değerlendirilebilir olup olmadığını belirlemek için sorguyu uygulayan kodu anlamanız gerekir.  
+- Bir sorguyu değerlendirmek, verilerin değerinde veya programınızın durumunda yapılan değişiklikler olan yan etkilere neden olabilir. Tüm sorguların yan etkileri yoktur. Bir sorgunun yan etkileri olmadan güvenle değerlendirilemeyeceğini anlamak için sorguyu uygulayan kodu anlamanız gerekir.  
   
-## <a name="BKMK_SteppingAndLinq"></a> Adımlama ve LINQ  
- LINQ kodunu ayıklarken Adımlama hakkında bilmeniz gereken belirli davranış farkları vardır.  
+## <a name="stepping-and-linq"></a><a name="BKMK_SteppingAndLinq"></a> Adımlama ve LINQ  
+ LINQ Code hata ayıklarken, adımlamayı bilmeniz gereken bazı davranış farklılıkları vardır.  
   
-### <a name="linq-to-sql"></a>LINQ - SQL  
- İçinde bir LINQ to SQL sorgularında koşul kodu hata ayıklayıcının denetimi dışında ' dir. Bu nedenle, doğrulama koduna geçemezsiniz. Bir ifade ağacına derleyen herhangi bir sorgu hata ayıklayıcının denetimi dışında kod oluşturur.  
+### <a name="linq-to-sql"></a>LINQ to SQL  
+ LINQ to SQL sorgularda, koşul kodu hata ayıklayıcı denetiminin ötesinde olur. Bu nedenle, koşul koduna ilerlenemez. Bir ifade ağacına derlenen herhangi bir sorgu, hata ayıklayıcının denetiminin ötesinde bir kod üretir.  
   
-### <a name="stepping-in-visual-basic"></a>Visual Basic'de Adımlama  
- Bir Visual Basic programını adımladığınızda ve hata ayıklayıcı bir sorgu bildirimiyle karşılaştığında bildirime girmez ancak bildirimin tamamını tek bir deyim olarak vurgular. Bu davranış, sorgu çağrılana kadar değerlendirilmediğinden oluşur. Daha fazla bilgi için [Visual Basic'te LINQ'e giriş](https://msdn.microsoft.com/library/3047d86e-0d49-40e2-928b-dc02e46c7984).  
+### <a name="stepping-in-visual-basic"></a>Visual Basic adımla  
+ Bir Visual Basic programı aracılığıyla adımlarken ve hata ayıklayıcı bir sorgu bildirimiyle karşılaştığında, bildirime adımla, ancak tüm bildirimi tek bir ifade olarak vurgular. Bu davranış, sorgu çağrılana kadar değerlendirilmediği için oluşur. Daha fazla bilgi için bkz. [VISUAL BASIC LINQ 'e giriş](https://msdn.microsoft.com/library/3047d86e-0d49-40e2-928b-dc02e46c7984).  
   
- Aşağıdaki örnek kodda gezinirseniz, hata ayıklayıcı sorgu bildirimini veya sorgu oluşturmayı tek bir deyim olarak vurgular.  
+ Aşağıdaki örnek kodda ilerederseniz, hata ayıklayıcı sorgu bildirimini veya sorgu oluşturmayı tek bir ifade olarak vurgular.  
   
 ```  
 Function MyFunction(ByVal x As Char)  
@@ -72,10 +72,10 @@ Sub Main()
 End Sub  
 ```  
   
- Yeniden adımladığınızda hata ayıklayıcısı vurgular `For Each cur In x`. İsteğe bağlı olarak sonraki adımında, işleve adımları `MyFunction`. Doğruluk sonra `MyFunction`, gezindikten `Console.WriteLine(cur.ToSting())`. Hata ayıklayıcı bu kodu değerlendirse bile herhangi bir noktada, sorgu bildirimindeki koşul kodu adım adım.  
+ Bir kez daha adım hata ayıklayıcı vurgulanmıştır `For Each cur In x` . Sonraki adımda, işlevine adımları uygulayın `MyFunction` . Üzerinden adımladıktan sonra `MyFunction` , öğesine atlar `Console.WriteLine(cur.ToSting())` . Herhangi bir noktada, hata ayıklayıcı kodu değerlendirse de sorgu bildirimindeki koşul kodunda adım adım ilerlemez.  
   
-### <a name="replacing-a-predicate-with-a-function-to-enable-stepping-visual-basic"></a>Koşulu Adımlamaya (Visual Basic) etkinleştirmek için bir işlevle değiştirme  
- Varsa, hata ayıklama amacıyla koşul kodu üzerinden adımlamak için koşulu orijinal koşul kodunu içeren bir işlev çağrısıyla değiştirebilirsiniz. Örneğin, bu kod olduğunu varsayalım:  
+### <a name="replacing-a-predicate-with-a-function-to-enable-stepping-visual-basic"></a>Bir koşulu adımlamayı etkinleştirmek için bir Işlevle değiştirme (Visual Basic)  
+ Hata ayıklama amacıyla koşul kodu ' nu adım adım yapmanız gerekirse, koşulu özgün koşul kodunu içeren bir işlev çağrısıyla değiştirebilirsiniz. Örneğin, bu koda sahip olduğunuzu varsayalım:  
   
 ```  
 Dim items() as integer ={1, 2, 3, 4, 5, 6, 7, 8, 9, 10}  
@@ -88,7 +88,7 @@ For each item in query
 Next  
 ```  
   
- Koşul kodu adlı yeni bir işleve taşıyabilirsiniz `IsEven`:  
+ Koşul kodunu, adlı yeni bir işleve taşıyabilirsiniz `IsEven` :  
   
 ```  
 Dim items () as integer ={1, 2, 3, 4, 5, 6, 7, 8, 9, 10}  
@@ -105,20 +105,20 @@ Function IsEven(item As =Integer) as Boolean
 End Function  
 ```  
   
- Düzeltilmiş sorgu çağrıları işlev `IsEven` her geçişte `items`. Her öğenin belirtilen koşulu karşılayıp ve kodda adım adım olup olmadığını görmek için hata ayıklayıcı penceresini kullanabilirsiniz `IsEven`. Bu örnekteki koşul oldukça basittir. Ancak, hata ayıklama yapmanızı daha zor bir karşılaştırmanız varsa bu teknik çok kullanışlı olabilir.  
+ Düzeltilen sorgu `IsEven` , her geçişte işlevini aracılığıyla çağırır `items` . Hata ayıklayıcı pencerelerini her bir öğenin belirtilen koşulu karşılayıp karşılamadığını görmek için kullanabilir ve içindeki kodda ilerlemeyeceğinizi görebilirsiniz `IsEven` . Bu örnekteki koşul oldukça basittir. Ancak, hata ayıklaması yapmanız için daha zor bir koşul varsa, bu teknik çok faydalı olabilir.  
   
-## <a name="BKMK_EditandContinueNotSupportedforLINQ"></a> Düzenle ve devam et LINQ için desteklenmiyor  
- Düzenle ve devam et, LINQ sorgularında yapılan değişiklikleri desteklemez. Ekleme, kaldırma veya hata ayıklama oturumu sırasında bir LINQ ifadesini değiştirin, bildiren değişikliğin Düzenle ve devam et tarafından desteklenmez bir iletişim kutusu görünür. Bu noktada, ya değişiklikleri geri almak veya hata ayıklama oturumunu durdurmak ve düzenlenen kodla yeni bir oturumu yeniden başlatabilirsiniz.  
+## <a name="edit-and-continue-not-supported-for-linq"></a><a name="BKMK_EditandContinueNotSupportedforLINQ"></a> Düzenle ve devam et LINQ için desteklenmiyor  
+ Düzenle ve devam et, LINQ sorgularında yapılan değişiklikleri desteklemez. Hata ayıklama oturumu sırasında bir LINQ ifadesi ekler, kaldırırsanız veya değiştirirseniz, değişikliğin Düzenle ve devam et tarafından desteklenmediğini belirten bir iletişim kutusu görüntülenir. Bu noktada, değişiklikleri geri alabilir ya da hata ayıklama oturumunu durdurabilir ve düzenlenmiş kodla yeni bir oturumu yeniden başlatabilirsiniz.  
   
- Ayrıca, Düzenle ve devam et, türü veya bir LINQ deyiminde kullanılan bir değişkenin değerini değiştirmeyi desteklemez. Yine, ya değişiklikleri geri almak veya durdurabilir ve hata ayıklama oturumunu yeniden başlatın.  
+ Ayrıca, Düzenle ve devam et, LINQ ifadesinde kullanılan bir değişkenin türünün veya değerinin değiştirilmesini desteklemez. Yine, değişiklikleri geri alabilir veya hata ayıklama oturumunu durdurup yeniden başlatabilirsiniz.  
   
- C# ' ta, Düzenle ve devam et LINQ sorgusu içeren bir yöntem herhangi bir kod kullanamazsınız.  
+ C# ' de, LINQ sorgusu içeren bir yöntemde Düzenle ve devam et kullanamazsınız.  
   
- Visual Basic'te, LINQ olmayan kodda bile LINQ sorgusu içeren bir yöntem üzerinde Düzenle ve devam et kullanabilirsiniz. Ekleyebilir veya LINQ deyiminden önce kod değişiklikleri LINQ sorgusunun satır numarasını etkilese kaldırın. Visual Basic hata ayıklama deneyimi için LINQ olmayan kodda, LINQ öncesi olduğu gibi aynı kalır. Değiştirme, ekleme veya değişiklikleri uygulamak için hata ayıklamayı durdurmak istemediğiniz sürece LINQ sorgusu, ancak kaldırma olamaz.  
+ Visual Basic, LINQ sorgusu içeren bir yöntemde bile, LINQ olmayan kodda Düzenle ve devam et ' i kullanabilirsiniz. Değişiklikler LINQ sorgusunun satır numarasını etkilese bile, LINQ ifadesinden önce kod ekleyebilir veya kaldırabilirsiniz. LINQ dışı koda yönelik Visual Basic hata ayıklama deneyimi, LINQ 'ın tanıtılmasından önceki gibi kalır. Değişiklikleri uygulamak için hata ayıklamayı durdurmak istemediğiniz müddetçe, LINQ sorgusunu değiştiremez, ekleyemez veya kaldıramazsınız.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [SQL hata ayıklama](https://msdn.microsoft.com/f27c17e6-1d90-49f2-9fc0-d02e6a27f109)   
- [Yan etkiler ve ifadeler](https://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e)   
- [Özel durumları hata ayıklayıcısı ile yönetme](../debugger/managing-exceptions-with-the-debugger.md)   
- [LINQ sorguları (C#) giriş](https://msdn.microsoft.com/library/37895c02-268c-41d5-be39-f7d936fa88a8)   
- [Visual Basic'de LINQ'e giriş](https://msdn.microsoft.com/library/3047d86e-0d49-40e2-928b-dc02e46c7984)
+ [SQL hatalarını ayıklama](https://msdn.microsoft.com/f27c17e6-1d90-49f2-9fc0-d02e6a27f109)   
+ [Yan etkiler ve Ifadeler](https://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e)   
+ [Hata ayıklayıcı ile özel durumları yönetme](../debugger/managing-exceptions-with-the-debugger.md)   
+ [LINQ Sorgularına Giriş (C#)](https://msdn.microsoft.com/library/37895c02-268c-41d5-be39-f7d936fa88a8)   
+ [Visual Basic'de LINQ'e Giriş](https://msdn.microsoft.com/library/3047d86e-0d49-40e2-928b-dc02e46c7984)

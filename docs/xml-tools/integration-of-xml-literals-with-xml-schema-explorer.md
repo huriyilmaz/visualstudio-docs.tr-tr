@@ -9,17 +9,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 576f403d92ae1c80d9c7fba1757278ae5c5f25ac
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592600"
 ---
 # <a name="integration-of-xml-literals-with-xml-schema-explorer"></a>XML şema Gezgini ile XML sabit değerlerini tümleştirme
 
 Visual Basic XML sabit değerlerini destekler. Bu, XML parçalarını doğrudan Visual Basic kodunuza birleştirebilmeniz anlamına gelir. Daha fazla bilgi için bkz. [XML değişmez değerleri genel bakış](/dotnet/visual-basic/programming-guide/language-features/xml/xml-literals-overview).
 
-## <a name="how-to"></a>Nasıl Yapılır?
+## <a name="how-to"></a>Nasıl yapılır
 
 Visual Basic projenizdeki bir XSD dosyası bir XML sabit değeri içeriyorsa, XML şema **Gezgini**'nde XML şeması kümesini görüntüleyebilirsiniz. Bir XML sabit değeri ile ilişkili Şema kümesini görüntülemek için, XML sabit değerinde bir xml düğümüne veya XML ad alanı içeri aktarma ' ya sağ tıklayın ve **şema Gezgininde göster**' i seçin.
 

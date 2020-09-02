@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 92cf53ed499318d60c8da5147685e3f0f340e404
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72736232"
 ---
 # <a name="executable-for-debugging-session-dialog-box"></a>Hata Ayıklama Oturumu İçin Yürütülebilir İletişim Kutusu
@@ -39,5 +39,5 @@ Bu iletişim kutusu, çalıştırılabilir dosya belirtilmediğinde bir DLL 'de 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Studio’da hata ayıklama](../debugger/index.yml)
+- [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

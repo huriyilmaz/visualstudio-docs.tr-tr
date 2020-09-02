@@ -9,15 +9,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 5a52d152a78ee585cc2724d8504feff1e72558cf
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592561"
 ---
-# <a name="sample-xsd-file-relationships"></a>Örnek XSD dosyası: İlişkiler
+# <a name="sample-xsd-file-relationships"></a>Örnek XSD dosyası: Ilişkiler
 
-Aşağıdaki XSD dosyası, XSD Şema Tasarımcısı belgelerinde çeşitli örneklerde kullanılır. Bu dosya ek açıklamalar ve belgeler ile bir satınalma sipariş şemasıdır.
+Aşağıdaki XSD dosyası, XSD şema Tasarımcısı belgelerindeki çeşitli örneklerde kullanılır. Bu dosya, ek açıklamalar ve belgeler içeren bir satın alma Siparişi şemadır.
 
 ```xml
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -65,4 +65,4 @@ Aşağıdaki XSD dosyası, XSD Şema Tasarımcısı belgelerinde çeşitli örne
 ```
 
 > [!NOTE]
-> Örnek şirketler, kuruluşlar, ürünler, alan adları, e-posta adresleri, logolar, kişiler, yerler ve burada gösterilen olaylar hayalidir. Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olaylarla hiçbir ilişki amaçlanmamıştır veya çıkarılmalıdır.
+> Burada adı geçen örnek şirketler, kuruluşlar, ürünler, etki alanı adları, e-posta adresleri, logolar, kişiler, konumlar ve olaylar hayal ürünüdür. Herhangi bir gerçek şirket, kuruluş, ürün, etki alanı adı, e-posta adresi, logo, kişi, yer veya olay ile ilişki amaçlanmamıştır.

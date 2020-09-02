@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e9de4e43346c0c7261bbd834349f09619b262e17
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72737936"
 ---
 # <a name="edit-and-continue-dialog-box"></a>Düzenle ve Devam Et İletişim Kutusu
@@ -30,5 +30,5 @@ ms.locfileid: "72737936"
  **Bu iletişim kutusunu hiçbir daha gösterme** Bu onay kutusunu seçerseniz, **Düzenle ve devam et** daha sonra izin istemeden kod değişikliklerini uygular. **Seçenekler** iletişim kutusuna gidip **hata ayıklama** klasörünü açıp, **Düzenle ve devam et** sayfasına tıklayıp, **hata ayıklama komutları tarafından çağırılır** ve **ilk olarak sor**seçeneğini belirleyerek bu uyarıyı yeniden açabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
 - [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/library/bcew296c.aspx)

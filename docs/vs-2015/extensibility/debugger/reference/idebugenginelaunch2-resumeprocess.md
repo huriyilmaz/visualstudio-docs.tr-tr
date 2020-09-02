@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineLaunch2::ResumeProcess | Microsoft Docs
+title: 'IDebugEngineLaunch2:: ResumeProcess | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 49ba5157dfb72d22298a51a907be1ad86088bab7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195686"
 ---
 # <a name="idebugenginelaunch2resumeprocess"></a>IDebugEngineLaunch2::ResumeProcess
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Sürdürür, yürütme işlemi.  
+İşlem yürütmeye devam eder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT ResumeProcess (   
@@ -40,13 +40,13 @@ int ResumeProcess ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pProcess`  
- [in] Bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) işlemi sonlandırmaz temsil eden nesne.  
+ 'ndaki Devam ettirilebilecek işlemi temsil eden bir [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) nesnesi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem çağrısı bir işlem başlatıldı sonra çağrılır [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemi.  
+ Bu yöntem, bir işlem başlatıldıktan sonra [Launchaskıya alındı](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemine çağrısıyla çağrılır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)   

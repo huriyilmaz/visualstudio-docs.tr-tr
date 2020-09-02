@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib | Microsoft Docs
+title: IDiaSectionContrib | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,60 +14,60 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: fc263d7238166f4f381bac35f0482ca2433f7b33
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150472"
 ---
 # <a name="idiasectioncontrib"></a>IDiaSectionContrib
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir bölüm katkı açıklayan alır verileri, diğer bir deyişle, bitişik bir bellek bloğu tarafından bir derlenecek görüntüye katkıda.  
+Bir bölüm katkısını açıklayan verileri alır, diğer bir deyişle, bir compiland tarafından görüntüye katkıda bulunulan bir bellek bloğu.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDiaSectionContrib : IUnknown  
 ```  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDiaSectionContrib`.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaSectionContrib` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IDiaSectionContrib::get_compiland](../../debugger/debug-interface-access/idiasectioncontrib-get-compiland.md)|Bu bölümde katkıda derlenecek dosya simgesi bir başvuru alır.|  
-|[IDiaSectionContrib::get_addressSection](../../debugger/debug-interface-access/idiasectioncontrib-get-addresssection.md)|Katkı'nın adresi bölüm bölümünü alır.|  
-|[IDiaSectionContrib::get_addressOffset](../../debugger/debug-interface-access/idiasectioncontrib-get-addressoffset.md)|Katkı'nın adresi uzaklık bölümünü alır.|  
-|[IDiaSectionContrib::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-relativevirtualaddress.md)|Görüntü göreli sanal adres (RVA) katkı alır.|  
-|[IDiaSectionContrib::get_virtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-virtualaddress.md)|Katkı sanal adres (VA) alır.|  
+|[IDiaSectionContrib::get_compiland](../../debugger/debug-interface-access/idiasectioncontrib-get-compiland.md)|Bu bölüme katkıda bulunan compiland simgesine bir başvuru alır.|  
+|[IDiaSectionContrib::get_addressSection](../../debugger/debug-interface-access/idiasectioncontrib-get-addresssection.md)|Katkı adresinin bölüm kısmını alır.|  
+|[IDiaSectionContrib::get_addressOffset](../../debugger/debug-interface-access/idiasectioncontrib-get-addressoffset.md)|Katkı adresinin konum kısmını alır.|  
+|[IDiaSectionContrib::get_relativeVirtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-relativevirtualaddress.md)|Katkıdan görüntü göreli sanal adresini (RVA) alır.|  
+|[IDiaSectionContrib::get_virtualAddress](../../debugger/debug-interface-access/idiasectioncontrib-get-virtualaddress.md)|Katkı sanal adresini (VA) alır.|  
 |[IDiaSectionContrib::get_length](../../debugger/debug-interface-access/idiasectioncontrib-get-length.md)|Bir bölümdeki bayt sayısını alır.|  
-|[IDiaSectionContrib::get_notPaged](../../debugger/debug-interface-access/idiasectioncontrib-get-notpaged.md)|Bölüm bellek yetersiz disk belleğine alınacak olamaz olup olmadığını gösteren bir bayrak alır.|  
-|[IDiaSectionContrib::get_nopad](../../debugger/debug-interface-access/idiasectioncontrib-get-nopad.md)|Bölüm sonraki bellek sınırına sıfır değil olup olmadığını belirten bir bayrak alır.|  
-|[IDiaSectionContrib::get_code](../../debugger/debug-interface-access/idiasectioncontrib-get-code.md)|Bölüm yürütülebilir kod içerip içermediğini gösteren bir bayrak alır.|  
-|[IDiaSectionContrib::get_code16bit](../../debugger/debug-interface-access/idiasectioncontrib-get-code16bit.md)|Bölüm 16-bit kod içerip içermediğini gösteren bir bayrak alır.|  
-|[IDiaSectionContrib::get_initializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-initializeddata.md)|Bölüm başlatılmamış veri içerip içermediğini gösteren bir bayrak alır.|  
-|[IDiaSectionContrib::get_uninitializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-uninitializeddata.md)|Bölüm başlatılmamış veri içerip içermediğini gösteren bir bayrak alır.|  
-|[IDiaSectionContrib::get_informational](../../debugger/debug-interface-access/idiasectioncontrib-get-informational.md)|Bir bölüm yorum veya benzer bilgileri içerip içermediğini belirten bir bayrak alır.|  
-|[IDiaSectionContrib::get_remove](../../debugger/debug-interface-access/idiasectioncontrib-get-remove.md)|Bellek içi görüntünün yapılmadığı bölümü kaldırılır olup olmadığını gösteren bir bayrak alır.|  
-|[IDiaSectionContrib::get_comdat](../../debugger/debug-interface-access/idiasectioncontrib-get-comdat.md)|Bölüm COMDAT kayıt olup olmadığını belirten bir bayrak alır.|  
-|[IDiaSectionContrib::get_discardable](../../debugger/debug-interface-access/idiasectioncontrib-get-discardable.md)|Bölümü atılır olup olmadığını gösteren bir bayrak alır.|  
-|[IDiaSectionContrib::get_notCached](../../debugger/debug-interface-access/idiasectioncontrib-get-notcached.md)|Bölüm önbelleğe alınamaz olup olmadığını gösteren bir bayrak alır.|  
-|[IDiaSectionContrib::get_share](../../debugger/debug-interface-access/idiasectioncontrib-get-share.md)|Bölüm bellekte paylaşılabilir olup olmadığını gösteren bir bayrak alır.|  
-|[IDiaSectionContrib::get_execute](../../debugger/debug-interface-access/idiasectioncontrib-get-execute.md)|Bölüm kod olarak yürütülebilir olup olmadığını belirten bir bayrak alır.|  
-|[IDiaSectionContrib::get_read](../../debugger/debug-interface-access/idiasectioncontrib-get-read.md)|Bölüm okunup okunamayacağını gösteren bir bayrak alır.|  
-|[IDiaSectionContrib::get_write](../../debugger/debug-interface-access/idiasectioncontrib-get-write.md)|Bölüm yazılıp yazılamayacağını gösteren bir bayrak alır.|  
-|[IDiaSectionContrib::get_dataCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-datacrc.md)|Bölümünde veri Döngüsel artıklık denetimi (CRC) alır.|  
-|[IDiaSectionContrib::get_relocationsCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-relocationscrc.md)|Bölüm için yerleştirme bilgilerinin CRC alır.|  
-|[IDiaLineNumber::get_compilandId](../../debugger/debug-interface-access/idialinenumber-get-compilandid.md)|Bölüm için derlenecek tanımlayıcısını alır.|  
+|[IDiaSectionContrib::get_notPaged](../../debugger/debug-interface-access/idiasectioncontrib-get-notpaged.md)|Bölümün disk belleğine alınmış olup olmadığını gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_nopad](../../debugger/debug-interface-access/idiasectioncontrib-get-nopad.md)|Bölümün bir sonraki bellek sınırına geçirilip geçirilmeyeceğini belirten bir bayrak alır.|  
+|[IDiaSectionContrib::get_code](../../debugger/debug-interface-access/idiasectioncontrib-get-code.md)|Bölümün yürütülebilir kod içerip içermediğini gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_code16bit](../../debugger/debug-interface-access/idiasectioncontrib-get-code16bit.md)|Bölümün 16 bit kod içerip içermediğini gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_initializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-initializeddata.md)|Bölümün başlatılmış verileri içerip içermediğini gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_uninitializedData](../../debugger/debug-interface-access/idiasectioncontrib-get-uninitializeddata.md)|Bölümün başlatılmamış verileri içerip içermediğini gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_informational](../../debugger/debug-interface-access/idiasectioncontrib-get-informational.md)|Bir bölümün yorumların veya benzer bilgilerin içerip içermediğini gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_remove](../../debugger/debug-interface-access/idiasectioncontrib-get-remove.md)|Bellek içi görüntünün bir parçası oluşturulmadan önce bölümün kaldırılıp kaldırılmadığını gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_comdat](../../debugger/debug-interface-access/idiasectioncontrib-get-comdat.md)|Bölümün bir COMDAT kaydı olup olmadığını gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_discardable](../../debugger/debug-interface-access/idiasectioncontrib-get-discardable.md)|Bölümün atılıp atılamayacağını gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_notCached](../../debugger/debug-interface-access/idiasectioncontrib-get-notcached.md)|Bölümün önbelleğe alınıp alınmayacağını belirten bir bayrak alır.|  
+|[IDiaSectionContrib::get_share](../../debugger/debug-interface-access/idiasectioncontrib-get-share.md)|Bölümün bellekte paylaşılıp paylaşılamayacağını gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_execute](../../debugger/debug-interface-access/idiasectioncontrib-get-execute.md)|Bölümün kod olarak yürütülebilir olup olmadığını gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_read](../../debugger/debug-interface-access/idiasectioncontrib-get-read.md)|Bölümün okunup okunamayacağını gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_write](../../debugger/debug-interface-access/idiasectioncontrib-get-write.md)|Bölümün yazılıp yazılamayacağını gösteren bir bayrak alır.|  
+|[IDiaSectionContrib::get_dataCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-datacrc.md)|Bölümündeki verilerin Döngüsel artıklık denetimini (CRC) alır.|  
+|[IDiaSectionContrib::get_relocationsCrc](../../debugger/debug-interface-access/idiasectioncontrib-get-relocationscrc.md)|Bölüm için yeniden konumlandırma bilgilerinin CRC 'sini alır.|  
+|[IDiaLineNumber::get_compilandId](../../debugger/debug-interface-access/idialinenumber-get-compilandid.md)|Bölüm için compiland tanımlayıcısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Bu arabirim çağırılarak alınır [Idiaenumsectioncontribs::Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md) ve [Idiaenumsectioncontribs::Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md) yöntemleri. Bkz: [Idiaenumsectioncontribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) arabirimi alma örneği `IDiaSectionContrib` arabirimi.  
+ Bu arabirim, [IDiaEnumSectionContribs:: Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md) ve [IDiaEnumSectionContribs:: Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md) yöntemleri çağırarak elde edilir. Arabirimi alma örneği için bkz. [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) arabirimi `IDiaSectionContrib` .  
   
 ## <a name="example"></a>Örnek  
- Bu işlev, her bölüm ilişkili simgeleri birlikte adresini gösterir. Bkz: [Idiaenumsectioncontribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) arabirimi nasıl `IDiaSectionContrib` arabirimi elde edilir.  
+ Bu işlev, tüm ilişkili simgelere birlikte her bölümün adresini gösterir. Arabirimin nasıl elde edilir olduğunu görmek için [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) arabirimine bakın `IDiaSectionContrib` .  
   
 ```cpp#  
 void PrintSectionContrib(IDiaSectionContrib* pSecContrib, IDiaSession* pSession)  
@@ -130,14 +130,14 @@ void PrintSectionContrib(IDiaSectionContrib* pSecContrib, IDiaSession* pSession)
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üst bilgi: dia2.h  
+ Üstbilgi: dia2. h  
   
- Kitaplık: diaguids.lib  
+ Kitaplık: diaguid. lib  
   
  DLL: msdia80.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arabirimler (arabirim erişimi SDK'SINDA hata ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [Idiaenumsectioncontribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)   
- [Idiaenumsectioncontribs::Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)   
+ [Arabirimler (hata ayıklama arabirimi erişim SDK 'Sı)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+ [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)   
+ [IDiaEnumSectionContribs:: Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md)   
  [IDiaEnumSectionContribs::Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md)

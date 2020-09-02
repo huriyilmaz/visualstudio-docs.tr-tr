@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 81bab324c58c06cc1ca553bae2f81faf474c4ad0
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592847"
 ---
 # <a name="edit-xslt-style-sheets"></a>XSLT stil sayfalarını düzenleme
@@ -25,7 +25,7 @@ Aşağıdaki tabloda XSLT stil sayfalarıyla çalışmaya özgü özellikler aç
 
 **Sözdizimi renklendirme**
 
-`template` ve `match`gibi XSLT anahtar sözcükleri, **yazı tipleri ve renkler** ayarları tarafından belirtilen XSLT anahtar sözcüğü renginde görüntülenir.
+Ve gibi XSLT anahtar sözcükleri `template` , `match` **yazı tipleri ve renkler** ayarları tarafından belirtilen XSLT anahtar sözcüğü renginde görüntülenir.
 
 **Dalgalı alt çizgiler**
 
@@ -39,7 +39,7 @@ Betik bloklarında kod, XSLT hata ayıklayıcısı tarafından desteklenir, böy
 
 Bir XSL dönüşümünü yürütebilir ve XML düzenleyicisinden çıktıyı görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: XML DÜZENLEYICISINDEN XSLT dönüşümü yürütme](../xml-tools/how-to-execute-an-xslt-transformation-from-the-xml-editor.md).
 
-**XSLT hata ayıklama**
+**XSLT hatası ayıklama**
 
 XSLT hata ayıklayıcısını XML düzenleyicisinde bir XSLT dosyasından başlatabilirsiniz. Hata ayıklayıcı XSLT dosyasındaki kesme noktalarını ayarlamayı, XSLT yürütme durumunu görüntülemeyi ve daha fazlasını destekler. Bir XSLT değişkeninin üzerine gelindiğinde, değişkenin değerine sahip bir araç Ipucu oluşur. Hata ayıklayıcı, bir stil sayfasında hata ayıklamak veya başka bir uygulamadan çağrılan derlenmiş bir XSL dönüşümünün hatalarını ayıklamak için kullanılabilir. Daha fazla bilgi için bkz. [XSLT hata ayıklama](../xml-tools/debugging-xslt.md).
 

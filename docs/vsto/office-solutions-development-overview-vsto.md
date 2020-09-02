@@ -1,5 +1,5 @@
 ---
-title: Ofis çözümleri geliştirme genel bakış (VSTO)
+title: Office çözümleri geliştirmesine genel bakış (VSTO)
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,81 +14,81 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: abb58d30e33ab5cfe713175b40cd32f593921ae9
-ms.sourcegitcommit: 054815dc9821c3ea219ae6f31ebd9cd2dc8f6af5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80543944"
 ---
-# <a name="office-solutions-development-overview-vsto"></a>Ofis çözümleri geliştirme genel bakış (VSTO)
-  Microsoft Office'i çözümleriçin ön uç olarak kullanarak, Word'deki sözcük işleme özellikleri, Excel'in veri çözümleme özellikleri ve Outlook'un e-posta yönetimi özellikleri gibi tanıdık Microsoft Office kullanıcı arabirimlerinden ve araçlarından yararlanabilirsiniz. Office uygulamalarını özelleştirmek ve iş süreçleriniz için ihtiyacınız olan belirli özellikleri eklemek için Visual Studio'da çözümler geliştirebilirsiniz. Örneğin, Word'ü, önceden varolan veya güncellenebilir hale getirilebilen parçalardan sözleşmeleri birleştiren bir sözleşme üretecine dönüştürebilirsiniz. Excel ile, farklı projeler için özelleştirilmiş otomatik bir bütçe çalışma sayfası oluşturabilirsiniz. Kullanıcılarınız ofis çözümlerini çevrimdışı da alabilir ve bu da karmaşık çözümleri web tabanlı bir mimari kullandığınızda olduğundan daha pratik hale getirir.
+# <a name="office-solutions-development-overview-vsto"></a>Office çözümleri geliştirmesine genel bakış (VSTO)
+  Çözüm için ön uç olarak Microsoft Office kullanarak, Word 'deki sözcük işleme özellikleri, Excel 'in veri analizi özellikleri ve Outlook 'un e-posta yönetimi özellikleri gibi tanıdık Microsoft Office Kullanıcı arabirimleri ve araçlarından faydalanabilirsiniz. Visual Studio 'da Office uygulamalarını özelleştirmek ve iş işlemleriniz için gereken belirli özellikleri eklemek için çözümler geliştirebilirsiniz. Örneğin, Word 'Ü, düzenlenebilir veya düzenlenemez hale getirilen, önceden var olan parçaların dışına çeviren sözleşmeleri bir sözleşme oluşturucusuna dönüştürebilirsiniz. Excel ile, farklı projeler için özelleştirilmiş bir otomatik bütçe çalışma sayfası oluşturabilirsiniz. Kullanıcılarınız Ayrıca, Web tabanlı bir mimari kullanıyorsanız, karmaşık çözümlerin daha pratik olmasını sağlayan Office çözümlerini çevrimdışına alabilir.
 
- Bu konu, Visual Studio'daki Office geliştirici araçlarında bulunan Office için Visual Studio Araçları (VSTO) şablonlarını kullanarak oluşturabileceğiniz Office çözümleri türlerine genel bir bakış sağlar. Office ile nasıl geliştirilecekhakkında genel bilgi için [Office geliştirici merkezine](https://developer.microsoft.com/office)bakın.
+ Bu konu başlığı altında, Visual Studio 'da Office geliştirici araçları 'nda bulunan Office Visual Studio Araçları for Office (VSTO) şablonlarını kullanarak oluşturabileceğiniz Office çözümlerinin türlerine genel bakış sunulmaktadır. Office ile geliştirme hakkında genel bilgi için bkz. [Office Geliştirici Merkezi](https://developer.microsoft.com/office).
 
 ## <a name="choose-an-office-project-type"></a>Office proje türü seçin
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]VSTO tabanlı Office geliştirme için aşağıdaki proje şablonları türlerini sağlar:
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , VSTO tabanlı Office geliştirme için aşağıdaki proje şablonu türlerini sağlar:
 
-- **Belge düzeyinde özelleştirmeler** belirli bir belgeyle ilişkilidir.
+- **Belge düzeyi özelleştirmeleri** belirli bir belge ile ilişkilendirilir.
 
-- **VSTO Eklentileri** uygulamanın kendisi ile ilişkilidir.
+- **VSTO eklentileri** uygulamayla birlikte ilişkilendirilir.
 
-  Bu proje türlerinden hangisinin çözümünüz için en iyi olduğuna karar vermek için, kodunuzun yalnızca belirli bir belge açıkken çalışmasını mı istediğinizi veya uygulama çalışırken kodun kullanılabilir olmasını isteyip istemediğiniz hakkında düşünün. Proje şablonları hakkında daha fazla bilgi için [Bkz. Office proje şablonlarına genel bakış.](../vsto/office-project-templates-overview.md)
+  Çözümünüz için bu proje türlerinden hangisinin en iyisi olduğuna karar vermek için, kodunuzun yalnızca belirli bir belge açık olduğunda mı yoksa uygulamanın her çalıştığında kodun kullanılabilir olmasını mi istediğinizi düşünün. Proje şablonları hakkında daha fazla bilgi için bkz. [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md).
 
-  Oluşturabileceğiniz proje türleri, geliştirme bilgisayarına yüklediğiniz Office uygulamalarına bağlıdır. Daha fazla bilgi için Bkz. [Office uygulamasına ve proje türüne göre kullanılabilen Özellikler.](../vsto/features-available-by-office-application-and-project-type.md)
+  Oluşturabileceğiniz proje türleri, geliştirme bilgisayarına hangi Office uygulamalarına yüklediğinize bağlıdır. Daha fazla bilgi için bkz. [Office uygulaması ve proje türü tarafından kullanılabilen özellikler](../vsto/features-available-by-office-application-and-project-type.md).
 
 ### <a name="document-level-customizations"></a>Belge düzeyinde özelleştirmeler
- Belge düzeyindeözelleştirmeler, Microsoft Office Word veya Microsoft Office Excel'de tek bir belge, çalışma kitabı veya şablonla ilişkili bir derlemeden oluşur. İlişkili belge açıldığında montaj yüklenir. Oluşturduğunuz özelleştirmelerle ilgili özellikler yalnızca ilişkili belge açıkolduğunda kullanılabilir. Özelleştirmeler, herhangi bir belge açıkken yeni bir menü öğesi veya şerit sekmesi ni görüntülemek gibi uygulama genelinde değişiklik yapamaz.
+ Belge düzeyi özelleştirmeleri, Microsoft Office Word veya Microsoft Office Excel 'de tek bir belge, çalışma kitabı veya şablon ile ilişkili bir derlemeden oluşur. Derleme, ilişkili belge açıldığında yüklenir. Oluşturduğunuz özelleştirmelerdeki özellikler yalnızca ilişkili belge açık olduğunda kullanılabilir. Özelleştirmeler, herhangi bir belge açıkken yeni bir menü öğesi veya şerit sekmesi görüntüleme gibi uygulama genelinde değişiklikler yapamaz.
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]belge düzeyinde özelleştirmeler oluşturmanıza yardımcı olacak araçlar içerir. Özelleştirdiğiniz [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]belge, denetimleri sürükleyip üzerine bırakarak belgeyi tasarlamanızı sağlayan bir tasarım yüzeyi olarak barındırılır. Windows [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Forms denetimleri, sürükle ve bırak veri bağlama ve tümleşik hata ayıklama gibi belge düzeyindeki projelerde birçok özellik mevcuttur.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Belge düzeyinde özelleştirmeler oluşturmanıza yardımcı olacak araçlar içerir. Özelleştirdiğiniz belge içinde tasarım yüzeyi olarak barındırılır [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve bu sayede denetimleri sürükleyip bırakarak belgeyi tasarlamanızı sağlar. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Windows Forms denetimleri, sürükle ve bırak veri bağlama ve tümleşik hata ayıklayıcı gibi belge düzeyi projelerde birçok diğer özellik mevcuttur.
 
  Özelleştirmeler hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
-- [Excel için belge düzeyinde özelleştirmeleri programlamaya başlayın](../vsto/getting-started-programming-document-level-customizations-for-excel.md)
+- [Excel için belge düzeyi özelleştirmelerini Programlamaya Başlama](../vsto/getting-started-programming-document-level-customizations-for-excel.md)
 
-- [Word için belge düzeyinde özelleştirmeleri programlamaya başlayın](../vsto/getting-started-programming-document-level-customizations-for-word.md)
+- [Word için belge düzeyi özelleştirmeleri Programlamaya Başlama](../vsto/getting-started-programming-document-level-customizations-for-word.md)
 
-- [Belge düzeyinde özelleştirmelerin mimarisi](../vsto/architecture-of-document-level-customizations.md)
+- [Belge düzeyi özelleştirmelerinin mimarisi](../vsto/architecture-of-document-level-customizations.md)
 
-### <a name="vsto-add-ins"></a>VSTO Eklentileri
- VSTO Eklentileri, Microsoft Office uygulamasıyla ilişkili bir derlemeden oluşur. Genellikle, ilişkili uygulama başlatıldığında VSTO Eklentisi çalışır, ancak kullanıcılar uygulama zaten çalışmaya başladıktan sonra VSTO Eklentileri de yükleyebilir. Oluşturduğunuz VSTO Eklentileri'ndeki özellikler, hangi belgelerin açık olduğuna bakılmaksızın uygulamanın kendisi tarafından kullanılabilir.
+### <a name="vsto-add-ins"></a>VSTO eklentileri
+ VSTO eklentileri Microsoft Office uygulamayla ilişkili bir derlemeden oluşur. Genellikle, VSTO eklentisi, ilişkili uygulama başlatıldığında çalışır, ancak kullanıcılar, uygulama zaten çalıştıktan sonra VSTO Eklentilerini de yükleyebilir. Oluşturduğunuz belge, hangi belgeler açık olursa olsun, oluşturduğunuz VSTO Eklentilerindeki özellikler uygulamanın kendisi tarafından kullanılabilir.
 
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]VSTO Eklentileri oluşturmanıza yardımcı olacak araçlar içerir. Eklenti projeleri, VSTO Eklentisini temsil eden otomatik olarak oluşturulan bir sınıf içerir. Bu sınıf, VSTO Eklentisi yüklenip kapatıldığında ana bilgisayar uygulamasının nesne modeline erişmek ve kodu çalıştırmak için kullanabileceğiniz özellikler ve olaylar sağlar. Diğer [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] birçok özellik, Windows Forms ve tümleşik hata ayıklama gibi VSTO Eklenti projelerinde kullanılabilir.
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , VSTO eklentileri oluşturmanıza yardımcı olan araçları içerir. Eklenti projeleri, VSTO eklentisini temsil eden otomatik olarak oluşturulan bir sınıfı içerir. Bu sınıf, konak uygulamasının nesne modeline erişmek ve VSTO eklentisi yüklendiğinde ve kapatıldığında kodu çalıştırmak için kullanabileceğiniz özellikler ve olaylar sağlar. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]Windows Forms ve tümleşik bir hata ayıklayıcı gıbı VSTO eklentisi projelerinde birçok farklı özellik mevcuttur.
 
- VSTO Eklentileri hakkında daha fazla bilgi için aşağıdaki konulara bakın:
+ VSTO eklentileri hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
-- [VSTO Eklentileri programlamaya başlayın](../vsto/getting-started-programming-vsto-add-ins.md)
+- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)
 
 - [VSTO Eklentileri Mimarisi](../vsto/architecture-of-vsto-add-ins.md)
 
-## <a name="automate-office-applications-by-using-primary-interop-assemblies"></a>Birincil interop derlemelerini kullanarak Office uygulamalarını otomatikleştirin
- Uygulamanın nesne modeline erişen kod yazarak Office uygulamasının özelliklerini çözüme programlı olarak dahil edebilirsiniz. Nesne modelleri, çeşitli özellikler ve yöntemlerle işlevselliği ortaya çıkaran sınıfların bir düzenlemesidir. Her Office uygulaması için nesne modeli farklıdır.
+## <a name="automate-office-applications-by-using-primary-interop-assemblies"></a>Birincil birlikte çalışma derlemelerini kullanarak Office uygulamalarını otomatikleştirin
+ Uygulamanın nesne modeline erişen kod yazarak bir Office uygulamasının özelliklerini program aracılığıyla çözümünüze ekleyebilirsiniz. Nesne modelleri, işlevleri çeşitli özellikler ve yöntemlerle sunan sınıfların bir düzenlemesidir. Her bir Office uygulaması için nesne modeli farklıdır.
 
- Office geliştirme araçlarını [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]kullanarak oluşturulan bir çözümden Office uygulamasının nesne modelini kullanmak için, uygulama için birincil interop derlemesini (PIA) kullanmanız gerekir. PIA, çözümünüzün yönetilen kodunun Office uygulamasının COM tabanlı nesne modeliyle etkileşimkurmasını sağlar.
+ İçindeki Office geliştirme araçları kullanılarak oluşturulan bir çözümden Office uygulamasının nesne modelini kullanmak için [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , uygulama için birincil birlikte çalışma derlemesini (PIA) kullanmanız gerekir. PIA, çözümünüzdeki yönetilen kodun Office uygulamasının COM tabanlı nesne modeliyle etkileşime geçmesini sağlar.
 
- Çoğu geliştirme görevini gerçekleştirmek için Office PI'lerini geliştirme bilgisayarınızdaki genel montaj önbelleğine yüklü ve kayıtlı olmalıdır. Daha fazla bilgi için [bkz.](../vsto/configuring-a-computer-to-develop-office-solutions.md) VSTO Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarda Office PI'leri gerekmez. Daha fazla bilgi için [Tasarım'a](../vsto/designing-and-creating-office-solutions.md)bakın ve Office çözümleri oluşturun.
+ Geliştirme görevlerinin çoğunu gerçekleştirmek için Office PIA 'Ları geliştirme bilgisayarınızda genel derleme önbelleğinde yüklü ve kayıtlı olmalıdır. Daha fazla bilgi için bkz. [Office çözümleri geliştirmek için bir bilgisayarı yapılandırma](../vsto/configuring-a-computer-to-develop-office-solutions.md). Office PIA 'leri, VSTO Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarında gerekli değildir. Daha fazla bilgi için bkz. [Office çözümleri tasarlama ve oluşturma](../vsto/designing-and-creating-office-solutions.md).
 
- VSTO Office çözümlerinde PiA'ları kullanma hakkında daha fazla bilgi için aşağıdaki konulara bakın:
+ VSTO Office çözümlerinde PIA 'leri kullanma hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
 - [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md)
 
-- [Ofis birincil interop montajları](../vsto/office-primary-interop-assemblies.md)
+- [Office birincil birlikte çalışma derlemeleri](../vsto/office-primary-interop-assemblies.md)
 
-## <a name="run-microsoft-vsto-office-solutions-on-end-user-computers"></a>Microsoft VSTO Office çözümlerini son kullanıcı bilgisayarlarda çalıştırma
- VsTO Office çözümü oluşturduğunuzda, dağıtım gereksinimlerinin geliştirme seçeneklerinizi nasıl etkileyebileceğini göz önünde bulundurun.
+## <a name="run-microsoft-vsto-office-solutions-on-end-user-computers"></a>Son kullanıcı bilgisayarlarında Microsoft VSTO Office çözümlerini çalıştırma
+ Bir VSTO Office çözümü oluşturduğunuzda, dağıtım gereksinimlerinin geliştirme seçimlerinizi nasıl etkileyebileceğini göz önünde bulundurun.
 
 ### <a name="deployment-options"></a>Dağıtım seçenekleri
- Office geliştirme araçlarını kullanarak oluşturduğunuz çözümleri dağıtmak için ClickOnce [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]veya Windows Installer'ı kullanın. ClickOnce dağıtımı, en az kullanıcı etkileşimi ile yüklenebilecek ve çalıştırılabilen kendi kendini güncelleştiren çözümler oluşturmanıza olanak tanır. Windows Installer (*.msi*) dosyaları son kullanıcı bilgisayarlarına kolayca dağıtılabilir veya Systems Management Server (SMS) kullanılarak dağıtılabilir. VSTO Office çözümlerini dağıtma hakkında daha fazla bilgi için [bkz.](../vsto/deploying-an-office-solution.md)
+ İçindeki Office geliştirme araçlarını kullanarak oluşturduğunuz çözümleri dağıtmak için ClickOnce veya Windows Installer kullanın [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] . ClickOnce dağıtımı, en az kullanıcı etkileşimi ile yüklenebilen ve çalıştırılabilen kendi kendini güncelleştiren çözümler oluşturmanıza olanak sağlar. Windows Installer (*. msi*) dosyaları, son kullanıcı bilgisayarlarına kolayca dağıtılabilir veya Systems Management Server (SMS) kullanılarak dağıtılabilir. VSTO Office çözümlerini dağıtma hakkında daha fazla bilgi için bkz. [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md).
 
 ### <a name="install-prerequisites"></a>Ön koşulları yükleme
- Son kullanıcılar, Office geliştirme araçlarını [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]kullanarak oluşturduğunuz bir çözümü çalıştırabilmeleri için önce, bilgisayarlarının belirli ön koşullar yüklü olması gerekir. ClickOnce'yi kullanarak veya bir Windows Installer dosyası oluşturarak çözümünüzü dağıtırsanız, bu ön koşullar çözümünüzle birlikte yüklenebilir. Daha fazla bilgi için dağıtım [için Office çözüm ön koşulları](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e) ve nasıl olunması: Office [çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına ön koşullar yükleyin.](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98)
+ Son kullanıcıların ' de Office geliştirme araçları 'nı kullanarak oluşturduğunuz bir çözümü çalıştırabilmeleri için [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] , bilgisayarlarının belirli önkoşulların yüklü olması gerekir. Çözümünüzü ClickOnce kullanarak veya bir Windows Installer dosyası oluşturarak dağıtırsanız, bu önkoşullar çözümünüzle birlikte yüklenebilir. Daha fazla bilgi için bkz. [dağıtım Için Office çözüm önkoşulları](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e) ve [nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yüklemek](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).
 
 ### <a name="security"></a>Güvenlik
- VSTO Office çözümleri için güvenlik, çözümü yüklerve yüklerken [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] yaptığı bir dizi denetim tarafından uygulanır. Bu denetimler, dağıtım bildiriminin konumunun güvenilir olup olmadığını veya dağıtım bildirimini imzalamak için kullanılan sertifikanın güvenilir olup olmadığını doğrulamayı içerir. Daha fazla bilgi için [Secure Office çözümlerine](../vsto/securing-office-solutions.md)bakın.
+ VSTO Office çözümleri için güvenlik, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] çözümü yüklediğinde ve yüklediğinde yaptığı bir dizi denetim tarafından zorlanır. Bu denetimler, dağıtım bildiriminin konumunun güvenilip güvenilmediğini veya dağıtım bildirimini imzalamak için kullanılan sertifikanın güvenilir olup olmadığını doğrulamaya dahildir. Daha fazla bilgi için bkz. [güvenli Office çözümleri](../vsto/securing-office-solutions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Visual Studio&#41;'&#40;Office geliştirmeye başlayın](../vsto/getting-started-office-development-in-visual-studio.md)
-- [Belge düzeyinde özelleştirmelerin mimarisi](../vsto/architecture-of-document-level-customizations.md)
+- [Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Belge düzeyi özelleştirmelerinin mimarisi](../vsto/architecture-of-document-level-customizations.md)
 - [VSTO Eklentileri Mimarisi](../vsto/architecture-of-vsto-add-ins.md)
-- [Excel için belge düzeyinde özelleştirmeleri programlamaya başlayın](../vsto/getting-started-programming-document-level-customizations-for-excel.md)
-- [Word için belge düzeyinde özelleştirmeleri programlamaya başlayın](../vsto/getting-started-programming-document-level-customizations-for-word.md)
-- [VSTO Eklentileri programlamaya başlayın](../vsto/getting-started-programming-vsto-add-ins.md)
+- [Excel için belge düzeyi özelleştirmelerini Programlamaya Başlama](../vsto/getting-started-programming-document-level-customizations-for-excel.md)
+- [Word için belge düzeyi özelleştirmeleri Programlamaya Başlama](../vsto/getting-started-programming-document-level-customizations-for-word.md)
+- [VSTO Eklentilerini Programlamaya Başlama](../vsto/getting-started-programming-vsto-add-ins.md)

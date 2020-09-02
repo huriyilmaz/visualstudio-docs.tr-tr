@@ -12,10 +12,10 @@ ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: e35f5decee2a908a9d1075ff3f6365a1d358c7b2
-ms.sourcegitcommit: dae5dfd626277b58ebd7b21a75757f683f1eacc5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "70739318"
 ---
 # <a name="publish-webapplicationvm-windows-powershell-script"></a>Publish-WebApplicationVM (Windows PowerShell betiği)
@@ -40,74 +40,74 @@ Dağıtımın ayrıntılarını açıklayan JSON yapılandırma dosyasının yol
 | Gerekli mi? |true |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ### <a name="subscriptionname"></a>SubscriptionName
 Sanal makineyi oluşturmak istediğiniz Azure aboneliğinin adı.
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |Abonelik dosyasındaki ilk aboneliği kullanır |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ### <a name="webdeploypackage"></a>WebDeployPackage
-Sanal makinede yayımlanacak Web dağıtım paketinin yolu. Bu paketi Visual Studio 'daki Web 'i Yayımla Sihirbazı 'nı kullanarak oluşturabilirsiniz. Bkz [. nasıl yapılır: Visual Studio](https://msdn.microsoft.com/library/dd465323.aspx)'Da bir Web dağıtım paketi oluşturun.
+Sanal makinede yayımlanacak Web dağıtım paketinin yolu. Bu paketi Visual Studio 'daki Web 'i Yayımla Sihirbazı 'nı kullanarak oluşturabilirsiniz. Bkz. [nasıl yapılır: Visual Studio 'Da Web dağıtım paketi oluşturma](https://msdn.microsoft.com/library/dd465323.aspx).
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ### <a name="allowuntrusted"></a>Allowgüvenilmeyen
 Doğru ise, güvenilen kök yetkili tarafından imzalanmamış sertifikaların kullanılmasına izin verin.
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
-| Varsayılan değer |false |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| Varsayılan değer |yanlış |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ### <a name="vmpassword"></a>VMPassword
 Sanal makine hesabının kimlik bilgileri. Örnek:-VMPassword @ {Name = "admin"; Password = "parola"}
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ### <a name="databaseserverpassword"></a>DatabaseServerPassword
 Azure 'da SQL veritabanı için kimlik bilgileri. Örnek:-DatabaseServerPassword @ {Name = "admin"; Password = "parola"}
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ### <a name="sendhostmessagestooutput"></a>Sendhostiletitooutput
 Doğru ise, komut dosyasından çıkış akışına iletileri yazdırın.
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
-| Varsayılan değer |false |
-| İşlem hattı girişi kabul edilsin mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| Varsayılan değer |yanlış |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="remarks"></a>Açıklamalar
 Geliştirme ve test ortamları oluşturmak için betiğin nasıl kullanılacağına ilişkin ayrıntılı bir açıklama için, bkz. [geliştirme ve test ortamlarında yayımlamak Için Windows PowerShell betiklerini kullanma](vs-azure-tools-publishing-using-powershell-scripts.md).

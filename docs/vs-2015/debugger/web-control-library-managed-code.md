@@ -1,5 +1,5 @@
 ---
-title: Web denetim kitaplığı (yönetilen kod için) | Microsoft Docs
+title: Web denetim kitaplığı (yönetilen kod) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,38 +18,38 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 031f894eb2e117a213f4f9fbbf08ac57a1512d61
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65688172"
 ---
 # <a name="web-control-library-managed-code"></a>Web Kontrol Kitaplığı (Yönetilen Kod)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Web Denetim Kitaplığı proje şablonu, bir DLL oluşturur. Sınıf kitaplığının DLL olduğundan, doğrudan çalıştıramazsınız. Oluşturmalısınız bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] denetim katıştırır sayfası. Daha fazla bilgi için [Web denetim kitaplığı şablonu](https://msdn.microsoft.com/00666b07-71d2-4ace-a13c-cc130a3ce372).  
+Web denetim kitaplığı proje şablonu bir DLL oluşturur. Sınıf kitaplığı bir DLL olduğundan, doğrudan çalıştıramazsınız. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]Denetimi katıştıran bir sayfa oluşturmalısınız. Daha fazla bilgi için bkz. [Web denetim kitaplığı şablonu](https://msdn.microsoft.com/00666b07-71d2-4ace-a13c-cc130a3ce372).  
   
-### <a name="to-debug-a-web-control-library-method-1"></a>Bir Web denetim kitaplığı (yöntemi 1) hata ayıklamak için  
+### <a name="to-debug-a-web-control-library-method-1"></a>Web denetim kitaplığında hata ayıklamak için (Yöntem 1)  
   
-1. Varolan Web Denetim Kitaplığı projesini açın veya yeni bir tane oluşturun.  
+1. Var olan bir Web denetim kitaplığı projesi açın veya yeni bir tane oluşturun.  
   
-2. Oluşturma bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] denetim katıştırır sayfası.  
+2. [!INCLUDE[vstecasp](../includes/vstecasp-md.md)]Denetimi katıştıran bir sayfa oluşturun.  
   
-3. Barındıran Web sitesinde [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] adlı bir alt dizin oluşturma, test bandı `/Code`.  
+3. Test bandı barındıran Web sitesinde [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] adlı bir alt dizin oluşturun `/Code` .  
   
-4. Kaynak kodu denetimine kopyalayın `/Code` alt.  
+4. Denetimin kaynak kodunu `/Code` alt dizine kopyalayın.  
   
-5. Kaynak kodunda açın `/Code` alt ve kesme noktaları ayarlayın.  
+5. Kaynak kodunu `/Code` alt dizinde açın ve kesme noktaları ayarlayın.  
   
-6. Test bandı için işaret eden bir URL ile bir tarayıcı penceresi açın. Denetiminde bir kesme noktası isabet edilir ve hata ayıklamaya başlayabilirsiniz.  
+6. Test bandı işaret eden bir URL ile tarayıcı penceresi açın. Denetimdeki bir kesme noktasına isabet edilir ve hata ayıklamayı başlatabilirsiniz.  
   
-### <a name="to-debug-a-web-control-library-method-2"></a>Bir Web denetim kitaplığı (yöntem 2) hata ayıklamak için  
+### <a name="to-debug-a-web-control-library-method-2"></a>Web denetim kitaplığında hata ayıklamak için (Yöntem 2)  
   
-1. Konak uygulama projesini ve Web denetimi projenin aynı çözüm içinde oluşturun.  
+1. Aynı çözümde konak uygulama projesini ve Web denetimi projesini oluşturun.  
   
-2. İçinde **Çözüm Gezgini**, konak uygulamaya sağ tıklayın ve seçin **Başvuru Ekle**.  
+2. **Çözüm Gezgini**, konak uygulamasına sağ tıklayın ve **Başvuru Ekle**' yi seçin.  
   
-3. Web denetim projesine bir başvuru ekleyin.  
+3. Web denetimi projesine bir başvuru ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [ASP.NET Web Uygulamaları](../debugger/debugging-preparation-aspnet-web-applications.md)
+ [ASP.NET Web uygulamaları](../debugger/debugging-preparation-aspnet-web-applications.md)

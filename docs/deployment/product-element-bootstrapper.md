@@ -1,5 +1,5 @@
 ---
-title: '&lt;Ürün&gt; öğesi (Önyükleyici) | Microsoft Docs'
+title: '&lt;Ürün &gt; öğesi (önyükleyici) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,16 +16,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d6dca2c7838ce40f8d24e3afbd898206d0cb9191
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66747448"
 ---
-# <a name="ltproductgt-element-bootstrapper"></a>&lt;Ürün&gt; öğesi (Önyükleyici)
-`Product` En üst düzey XML öğesi bir ürün dosyası içinde bir öğedir.
+# <a name="ltproductgt-element-bootstrapper"></a>&lt;Ürün &gt; öğesi (önyükleyici)
+`Product`Öğesi, bir ürün dosyasının içindeki en üst düzey xml öğesidir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Product
@@ -138,14 +138,14 @@ ProductCode
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `Product` Öğesi, bir ürün dosyasında gereklidir. Aşağıdaki özniteliği var.
+ `Product`Öğe bir ürün dosyasında gereklidir. Aşağıdaki özniteliğe sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
 |`ProductCode`|Ürün için benzersiz bir tanımlayıcı.|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, .NET Framework yükleme için bir tam ürün dosyası gösterir.
+ Aşağıdaki kod örneği, .NET Framework yüklemek için tüm ürün dosyalarını gösterir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

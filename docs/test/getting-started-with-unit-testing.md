@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c167e98f9419842876aed713e008b8746064669a
-ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82153043"
 ---
 # <a name="get-started-with-unit-testing"></a>Birim testini kullanmaya başlama
@@ -40,7 +40,7 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
       }
    ```
 
-1. **Çözüm Gezgini**, çözüm düğümünü seçin. Ardından, üstteki menü çubuğundan **Dosya** > **Ekle** > **Yeni proje**' yi seçin.
+1. **Çözüm Gezgini**, çözüm düğümünü seçin. Ardından, üstteki menü çubuğundan **Dosya**  >  **Ekle**  >  **Yeni proje**' yi seçin.
 
 1. Yeni proje iletişim kutusunda, kullanmak istediğiniz test çerçevesi için bir birim testi proje şablonu bulun ve seçin.
 
@@ -142,10 +142,10 @@ Bu bölümde, birim testi projesinin nasıl oluşturulduğu açıklanmaktadır.
 1. [Test Gezgini](../test/run-unit-tests-with-test-explorer.md)'ni açın.
 
    ::: moniker range=">=vs-2019"
-   Test Gezgini 'ni açmak için üst menü çubuğundan test **Test Gezgini** ' **ni seçin.** >
+   Test Gezgini 'ni açmak için **Test** > üst menü çubuğundan test **Test Gezgini** ' ni seçin.
    ::: moniker-end
    ::: moniker range="vs-2017"
-   Test Gezgini 'ni açmak için üst menü çubuğundan **Windows** > **Test Gezgini** 'ni **Test** > et ' i seçin.
+   Test Gezgini 'ni açmak için **Test** > **Windows** > üst menü çubuğundan Windows **Test Gezgini** 'ni test et ' i seçin.
    ::: moniker-end
 
 1. **Tümünü Çalıştır**' a tıklayarak birim testlerinizi çalıştırın.
@@ -166,7 +166,7 @@ Visual Studio 2017 veya sonraki sürümlerde MSTest, xUnit veya NUnit test çer�
 > [!NOTE]
 > Canlı birim testi yalnızca Enterprise sürümünde kullanılabilir.
 
-1. **Test** > **Live Unit Testing**Live Unit Testing > **Başlat**' a tıklayarak **Test** menüsünden canlı birim testi ' ni açın.
+1. **Test**Live Unit Testing Başlat ' a tıklayarak **Test** menüsünden canlı birim testi ' ni açın  >  **Live Unit Testing**  >  **Start**.
 
    ::: moniker range="vs-2017"
 
@@ -211,7 +211,7 @@ Visual Studio 'da Boost, Google ve NUnit gibi üçüncü taraf test çerçeveler
 
 1. Test etmek istediğiniz kodu içeren çözümü açın.
 
-2. **Çözüm Gezgini** çözüme sağ tıklayın ve**Yeni proje** **Ekle** > ' yi seçin.
+2. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
 
 3. **NUnit test projesi** proje şablonunu seçin.
 
@@ -235,7 +235,7 @@ Visual Studio 'da Boost, Google ve NUnit gibi üçüncü taraf test çerçeveler
 
 4. Test projesinden test etmek istediğiniz kodu içeren projeye bir başvuru ekleyin.
 
-   **Çözüm Gezgini**' de projeye sağ tıklayın ve ardından**başvuru** **Ekle** > ' yi seçin. ( **Başvurular** veya **Bağımlılıklar** düğümünün sağ tıklama menüsünde de bir başvuru ekleyebilirsiniz.)
+   **Çözüm Gezgini**' de projeye sağ tıklayın ve ardından başvuru **Ekle**' yi seçin  >  **Reference**. ( **Başvurular** veya **Bağımlılıklar** düğümünün sağ tıklama menüsünde de bir başvuru ekleyebilirsiniz.)
 
 5. Test yönteminiz için kod ekleyin.
 

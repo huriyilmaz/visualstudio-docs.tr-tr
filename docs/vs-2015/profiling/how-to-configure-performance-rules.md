@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Performans kuralları yapılandırma | Microsoft Docs'
+title: 'Nasıl yapılır: performans kurallarını yapılandırma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,31 +12,31 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 71593496613c75485fd30481777d0fcc1102c11c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179580"
 ---
-# <a name="how-to-configure-performance-rules"></a>Nasıl yapılır: Performans Kurallarını Yapılandırma
+# <a name="how-to-configure-performance-rules"></a>Nasıl yapılır: performans kurallarını yapılandırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Th Visual Studio Profil Araçları Performans uyarılarını, program yürütme yavaşlatabilir profili oluşturulmuş bir uygulamada sorunları gösterir. Uyarı toplama metotlarını daha kullanışlı verileri toplamak için değiştirmeniz gerekebilir de belirtebilir. Performans uyarıları profil oluşturma oturumunu otomatik olarak oluşturulur ve görünür **hata listesi** bir profil oluşturma veri dosyasını açıldığında penceresi [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]. Belirli uyarıları ilgilendiğiniz ve bazı uyarılar oluştu zamanlayıcılara harekete Geçirilmemesi senaryoları için geçerli olmayabilir. Belirli uyarıları gizlemek veya göstermek için Performans uyarılarını yapılandırabilirsiniz.  
+Visual Studio 'nun performans uyarıları Profil Oluşturma Araçları programın yürütülmesini yavaşlatabilecek, profili oluşturulmuş bir uygulamadaki sorunları gösterir. Uyarılar Ayrıca, daha yararlı veriler toplamak için koleksiyon yöntemlerini değiştirmeniz gerekebilecek anlamına da gelebilir. Performans uyarıları bir profil oluşturma oturumunda otomatik olarak oluşturulur ve ' de bir profil oluşturma veri dosyası açıldığında **hata listesi** penceresinde görüntülenir [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] . Belirli uyarılar ilgilendiğiniz senaryolar için uygulanmayabilir ve bazı uyarılar doğru şekilde oluşturulabilir. Belirli uyarıları göstermek veya gizlemek için performans uyarılarını yapılandırabilirsiniz.  
   
-### <a name="to-configure-profiler-performance-warnings"></a>Profil Oluşturucu Performans uyarılarını yapılandırmak için  
+### <a name="to-configure-profiler-performance-warnings"></a>Profil Oluşturucu performans uyarılarını yapılandırmak için  
   
-1. Üzerinde **Araçları** menüsünü tıklatın **seçenekleri**.  
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.  
   
-2. Genişletin **performans araçları**ve ardından **kuralları**.  
+2. **Performans araçları**' nı genişletin ve ardından **kurallar**' a tıklayın.  
   
-3. Bir uyarıyı devre dışı bırakmak veya etkinleştirmek için seçin veya uyarı yanındaki onay kutusunu temizleyin **kimliği** ve adı.  
+3. Bir uyarıyı etkinleştirmek veya devre dışı bırakmak için, uyarı **kimliği** ve adının yanındaki onay kutusunu işaretleyin veya temizleyin.  
   
-4. Bir kural hanedan arasındaki düzeyini belirtmek için **eylem** hücre yanındaki kural ve uyarı düzeyi'ye tıklayın.  
+4. Bir kuralın warzil düzeyini belirtmek için kuralın yanındaki **eylem** hücresine tıklayın ve sonra uyarı düzeyine tıklayın.  
   
-    - **Devre dışı bırakılmış** -(Bu, kural kimliği yanındaki onay kutusunu temizleyerek ile aynı) kuralı devre dışı bırakır.  
+    - **Devre dışı** -kuralı devre dışı bırakır (kural kimliği 'nin yanındaki onay kutusunun temizlenmesiyle aynıdır).  
   
-    - **Uyarı** -uyarı kuralı görüntüler.  
+    - **Uyarı** -kuralı uyarı olarak görüntüler.  
   
-    - **Hata** - yürütme profil oluşturmayı durdurur ve kuralın hata olarak görüntüler.  
+    - **Hata** -yürütme profili oluşturma ve kuralı hata olarak görüntüleme.  
   
-    - **Bilgi** -görüntüler kural yalnızca bilgi olarak.
+    - **Bilgi** -kuralı yalnızca bilgi olarak görüntüler.

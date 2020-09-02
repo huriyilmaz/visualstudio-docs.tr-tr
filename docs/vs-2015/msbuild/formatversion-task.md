@@ -15,36 +15,36 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ee6e163bd6587d93c970a56ac1c08383084ddc0c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149620"
 ---
 # <a name="formatversion-task"></a>FormatVersion Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Düzeltme numarası için sürüm numarası ekler.  
+Sürüm numarasına Düzeltme numarasını ekler.  
   
-- #1. durum: Giriş: Sürüm =\<tanımlanmamış >;  Gözden geçirme =\<umursamaz >;   Çıkış: OutputVersion "1.0.0.0" =  
+- Örnek #1: giriş: sürüm = \<undefined> ;  Düzeltme = \<don't care> ;   Çıkış: OutputVersion = "1.0.0.0"  
   
-- #2. durum: Giriş: Sürüm = "1.0.0.*" düzeltme "5" çıkış =: OutputVersion "1.0.0.5" =  
+- Case #2: Input: Version = "1.0.0. *" Revision = "5" çıkış: OutputVersion = "1.0.0.5"  
   
-- #3. durum: Giriş: Sürüm = "1.0.0.0" Düzeltme =\<umursamaz >;  Çıkış: OutputVersion "1.0.0.0" =  
+- Case #3: Input: Version = "1.0.0.0" Düzeltme = \<don't care> ;  Çıkış: OutputVersion = "1.0.0.0"  
   
 ## <a name="parameters"></a>Parametreler  
- Parametreleri aşağıdaki tabloda açıklanmıştır `FormatVersion` görev.  
+ Aşağıdaki tablo, görevin parametrelerini açıklar `FormatVersion` .  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`FormatType`|İsteğe bağlı `String` parametresi.<br /><br /> Biçim türünü belirtir.<br /><br /> -"Sürüm" = sürümü.<br />-"Path"= Değiştir"." ile "_";|  
-|`OutputVersion`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Düzeltme numarası içeren çıkış sürümünü belirtir.|  
-|`Revision`|İsteğe bağlı `Int32` parametresi.<br /><br /> Düzeltme sürümü eklenecek belirtir.|  
-|`Version`|İsteğe bağlı `String` parametresi.<br /><br /> Sürüm numarası dizeyi biçimlendirmek için belirtir.|  
+|`FormatType`|İsteğe bağlı `String` parametre.<br /><br /> Biçim türünü belirtir.<br /><br /> -"Sürüm" = sürüm.<br />-"Path" = "." yerine "_";|  
+|`OutputVersion`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Düzeltme numarasını içeren çıkış sürümünü belirtir.|  
+|`Revision`|İsteğe bağlı `Int32` parametre.<br /><br /> Sürüme eklenecek düzeltmeyi belirtir.|  
+|`Version`|İsteğe bağlı `String` parametre.<br /><br /> Biçimlendirilecek sürüm numarası dizesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tabloda listelenen parametreleri sahip olmaya ek olarak, bu görev parametreleri devralan <xref:Microsoft.Build.Tasks.TaskExtension> kendisi sınıfının devraldığı <xref:Microsoft.Build.Utilities.Task> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
+ Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görevleri](../msbuild/msbuild-tasks.md)   
- [Görev Başvurusu](../msbuild/msbuild-task-reference.md)
+ [Görevlerinize](../msbuild/msbuild-tasks.md)   
+ [Görev başvurusu](../msbuild/msbuild-task-reference.md)

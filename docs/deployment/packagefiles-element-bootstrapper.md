@@ -1,5 +1,5 @@
 ---
-title: '&lt;PackageFiles&gt; öğesi (Önyükleyici) | Microsoft Docs'
+title: '&lt;PackageFiles &gt; öğesi (önyükleyici) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,16 +16,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 81a12f400ee870798759237e202d2ca358fefa69
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66747518"
 ---
-# <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles&gt; öğesi (Önyükleyici)
-`PackageFiles` Ögesinin `PackageFile` sonucu olarak çalıştırılan yükleme paketleri tanımlayan öğeleri `Command` öğesi.
+# <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles &gt; öğesi (önyükleyici)
+`PackageFiles`Öğesi, `PackageFile` öğesinin sonucu olarak yürütülen yükleme paketlerini tanımlayan öğeleri içerir `Command` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <PackageFiles
@@ -42,27 +42,27 @@ ms.locfileid: "66747518"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `PackageFiles` Öğesi aşağıdaki özniteliklere sahiptir.
+ `PackageFiles`Öğesi aşağıdaki özniteliğe sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`CopyAllPackageFiles`|İsteğe bağlı. Varsa kümesine `false`, yükleyici yalnızca öğesinden başvurulan dosyaları indirir `Command` öğesi. Varsa kümesine `true`, tüm dosyalar indirilir.<br /><br /> Varsa kümesine `IfNotHomesite`, yükleyici aynı davranış göstereceği gibi `False` varsa `ComponentsLocation` ayarlanır `HomeSite`ve aksi takdirde aynı davranış göstereceği gibi `True`. Bu ayar, kendileri paketleri HomeSite senaryosunda kendi davranışı önyükleyici vermesini sağlamak da yararlı olabilir.<br /><br /> Varsayılan, `true` değeridir.|
+|`CopyAllPackageFiles`|İsteğe bağlı. Olarak ayarlanırsa `false` , yükleyici yalnızca öğeden başvurulan dosyaları indirir `Command` . Olarak ayarlanırsa `true` , tüm dosyalar indirilir.<br /><br /> Olarak ayarlanırsa `IfNotHomesite` , yükleyici, olarak ayarlanmış gibi davranır `False` `ComponentsLocation` `HomeSite` ve aksi takdirde aynı `True` şekilde çalışır. Bu ayar, kendisine ait önyükleme yapan paketlerin bir HomeSite senaryosunda kendi davranışlarını yürütmesine olanak tanımak için yararlı olabilir.<br /><br /> Varsayılan değer: `true`.|
 
 ## <a name="packagefile"></a>PackageFile
- `PackageFile` Öğesi alt öğesi olan `PackageFiles` öğesi. A `PackageFiles` öğesi en az bir olmalı `PackageFile` öğesi.
+ `PackageFile`Öğesi, öğesinin bir alt öğesidir `PackageFiles` . Bir `PackageFiles` öğe en az bir öğe içermelidir `PackageFile` .
 
  `PackageFile` Aşağıdaki özniteliklere sahiptir.
 
 | Öznitelik | Açıklama |
 |---------------| - |
-| `Name` | Gerekli. Paket dosyasının adı. Bu addır, `Command` öğesi, bir paket yükleyen koşullarını tanımlayan olduğunda başvuracağı. Bu değer aynı zamanda bir anahtar olarak kullanılan `Strings` gibi araçlar yerelleştirilmiş adı almak için tablo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] paketi tanımlamak için kullanır. |
-| `HomeSite` | İsteğe bağlı. Uzak sunucuda yükleyiciyi dahil edilmezse paketinin konumu. |
-| `CopyOnBuild` | İsteğe bağlı. Önyükleyici paket dosyası diske oluşturma zamanında kopyalama olup olmadığını belirtir. Varsayılan değer True'dur. |
-| `PublicKey` | Paketin sertifikayı imzalayan şifrelenmiş ortak anahtarı. Gerekli if `HomeSite` kullanılan, isteğe bağlı; Aksi takdirde. |
-| `Hash` | İsteğe bağlı. Paket dosyası bir SHA1 karması. Bu, yükleme sırasında dosya bütünlüğünü doğrulamak için kullanılır. Aynı karma paket dosyasından deltanın hesaplanamaması durumunda paketi yüklü değil. |
+| `Name` | Gereklidir. Paket dosyasının adı. Bu, `Command` bir paketin yüklendiği koşulları tanımladığında öğenin başvurulacağını olan addır. Bu değer Ayrıca, `Strings` [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] paketin, paketi tanımlamakta kullanacağı yerelleştirilmiş adı almak için tabloya bir anahtar olarak da kullanılır. |
+| `HomeSite` | İsteğe bağlı. Yükleyiciye dahil değilse, uzak sunucudaki paketin konumu. |
+| `CopyOnBuild` | İsteğe bağlı. Önyükleyici 'nin, derleme zamanında paket dosyasını diske kopyalaması gerekip gerekmediğini belirtir. Varsayılan değer true 'dur. |
+| `PublicKey` | Paketin sertifika imzalayan şifreli ortak anahtar. Kullanılıyorsa gereklidir `HomeSite` ; Aksi takdirde, isteğe bağlıdır. |
+| `Hash` | İsteğe bağlı. Paket dosyasının SHA1 karması. Bu, yüklemenin zamanında dosyanın bütünlüğünü doğrulamak için kullanılır. Aynı karma paket dosyasından hesaplanamaz, paket yüklenmez. |
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, .NET Framework dağıtılabilir paketini ve bağımlılıklarını gibi Windows Installer için paketler tanımlar.
+ Aşağıdaki kod örneği, .NET Framework yeniden dağıtılabilir paketi için paketleri ve Windows Installer gibi bağımlılıklarını tanımlar.
 
 ```xml
 <PackageFiles>
@@ -74,6 +74,6 @@ ms.locfileid: "66747518"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [\<Ürün > öğesi](../deployment/product-element-bootstrapper.md)
-- [\<Paket > öğesi](../deployment/package-element-bootstrapper.md)
+- [\<Product> dosyalarında](../deployment/product-element-bootstrapper.md)
+- [\<Package> dosyalarında](../deployment/package-element-bootstrapper.md)
 - [Ürün ve paket şema başvurusu](../deployment/product-and-package-schema-reference.md)

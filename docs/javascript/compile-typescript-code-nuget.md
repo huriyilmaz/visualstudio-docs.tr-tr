@@ -11,10 +11,10 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: ac917248915129b8d93dc776ac7d35a2ed227069
-ms.sourcegitcommit: b8ec700fc4c14c68c6ce280f29c19870261990d8
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87454603"
 ---
 # <a name="compile-typescript-code-aspnet-core"></a>TypeScript kodunu derle (ASP.NET Core)
@@ -110,7 +110,7 @@ Visual Studio 'nun Node.js bir sürümünü veya sizin beklediğiniz sürümden 
 
 ### <a name="nuget-package-structure-details"></a>NuGet paket yapısı ayrıntıları
 
-`Microsoft.TypeScript.MSBuild.nupkg`iki ana klasör içerir:
+`Microsoft.TypeScript.MSBuild.nupkg` iki ana klasör içerir:
 
 - *derleme* klasörü
 

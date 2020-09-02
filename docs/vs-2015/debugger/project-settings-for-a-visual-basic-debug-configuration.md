@@ -1,5 +1,5 @@
 ---
-title: Proje bir Visual Basic hata ayıklama yapılandırması ayarları | Microsoft Docs
+title: Visual Basic hata ayıklama yapılandırması için proje ayarları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,40 +24,40 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 27acc89790e0759d3b284e3d9a4c6798c3d9a16f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687571"
 ---
 # <a name="project-settings-for-a-visual-basic-debug-configuration"></a>Visual Basic Hata Ayıklama Yapılandırması Proje Ayarları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Proje ayarlarını değiştirebilirsiniz bir [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] hata ayıklama yapılandırmasında **özellik sayfaları** anlatıldığı gibi penceresinde [hata ayıklama ve yayın yapılandırmaları](../debugger/how-to-set-debug-and-release-configurations.md). Aşağıdaki tablolarda, hata ayıklayıcı ile ilgili ayarların nerede bulunacağı gösterilmektedir **özellik sayfaları** penceresi.  
+Hata [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] [ayıklama ve sürüm yapılandırmalarında](../debugger/how-to-set-debug-and-release-configurations.md)açıklanan şekilde, **Özellik sayfaları** penceresinde bir hata ayıklama yapılandırması için proje ayarlarını değiştirebilirsiniz. Aşağıdaki tablolarda, **Özellik sayfaları** penceresinde hata ayıklayıcı ile ilgili ayarların nerede bulunacağı gösterilmektedir.  
   
 > [!WARNING]
-> Bu konuda Store uygulamaları için geçerli değildir. Bkz: [(VB, C#, C++ ve XAML) bir hata ayıklama oturumu başlatın](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)  
+> Bu konu, Mağaza uygulamaları için geçerlidir. Bkz. [hata ayıklama oturumu başlatma (vb, C#, C++ ve XAML)](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)  
   
 ### <a name="debug-tab"></a>Hata ayıklama sekmesi  
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|**Yapılandırma**|Uygulama derlemek için modu ayarlar. Arasından seçim **etkin (hata ayıklama)**, **hata ayıklama**, **yayın**, **yapılandırmalarında**.|  
-|**Başlatma eylemi**|Bu grubu denetimleri, hata ayıklama menüsünden Başlangıç meydana gelir eylemi belirtir.<br /><br /> -   **Proje başlangıç** varsayılandır ve hata ayıklama için başlangıç projesi başlatır. Daha fazla bilgi için [NIB nasıl: Başlangıç projelerini ayarlama](https://msdn.microsoft.com/31465836-0911-48db-a5d9-e456b635e970).<br />-   **Harici program Başlat** başlatmak ve olmayan bir programa ekledikten sağlayan parçası olan bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje. Daha fazla bilgi için [çalışan işlemlere ekleme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).<br />-   **URL'de tarayıcı başlatmak** bir Web uygulaması ayıklamanızı sağlar.|  
-|**Komut satırı bağımsız değişkenleri**|Ayıklanacak programın komut satırı bağımsız değişkenlerini belirtir. Komut başlangıç dış program içinde belirtilen program adı addır. Başlatma eylemi için başlangıç URL'si olarak ayarlanırsa, komut satırı bağımsız değişkenleri göz ardı edilir.|  
-|**Çalışma dizini**|Ayıklanan programın çalışma dizini belirtir. İçinde [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], çalışma dizini uygulamayı başlatan dizindir. Varsayılan çalışma dizini, \bin\Debug veya geçerli yapılandırmasına bağlı olarak, \bin\Release bağlıdır.|  
-|**Uzak makine kullanma**|Uzaktan hata ayıklama, onay kutusu seçili olduğunda etkindir. Metin kutusunda, hata ayıklama amacıyla nerede uygulamanın çalışacağı uzak bir makine adını yazın veya bir [Msvsmon sunucu adı](https://msdn.microsoft.com/library/55b60ce7-834b-4e83-a10e-fe4248260a4c). Uzak makinede EXE konumunu derleme sekmesi çıkış yolu özelliği tarafından belirtilir. Konum, uzak makinede paylaşılabilir bir dizin olmalıdır.|  
-|**Yönetilmeyen kodda hata ayıklama**|Yerel (yönetilmeyen) Win32 koddaki çağrıları yönetilen uygulamanızın hatalarını ayıklamanızı sağlar. Bu hata ayıklayıcı türü için karma seçerek aynı etkiye sahip bir [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] proje.|  
-|**SQL Server hata ayıklama**|SQL Server veritabanı nesnelerini hata ayıklamasını sağlar.|  
+|**Yapılandırma**|Uygulamayı derlemek için modu ayarlar. **Etkin (hata ayıklama)**, **hata ayıklama**, **yayın**, **Tüm yapılandırmaların**arasından seçim yapın.|  
+|**Başlatma eylemi**|Bu denetim grubu, hata ayıklama menüsünden Başlat ' ı seçtiğinizde gerçekleştirilecek eylemi belirtir.<br /><br /> -   **Projeyi Başlat** varsayılandır ve başlangıç projesini hata ayıklama için başlatır. Daha fazla bilgi için bkz. [nib nasıl yapılır: başlangıç projelerini ayarlama](https://msdn.microsoft.com/31465836-0911-48db-a5d9-e456b635e970).<br />-   **Dış programı Başlat** , bir projenin parçası olmayan bir programı başlatıp eklemenize olanak sağlar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [çalışan Işlemlere iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).<br />-   **URL 'de tarayıcıyı Başlat** bir Web uygulamasında hata ayıklamanıza olanak sağlar.|  
+|**Komut satırı bağımsız değişkenleri**|Hata Ayıklanacak programın komut satırı bağımsız değişkenlerini belirtir. Komut adı, dış program Başlat bölümünde belirtilen program adıdır. Başlat eylemi başlangıç URL 'SI olarak ayarlandıysa komut satırı bağımsız değişkenleri yok sayılır.|  
+|**Çalışma dizini**|Hata ayıklanan programın çalışma dizinini belirtir. [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]' De, çalışma dizini, uygulamanın başlatıldığı dizindir. Geçerli yapılandırmaya bağlı olarak, varsayılan çalışma dizini \bin\Debug veya \bin\Release ' dir.|  
+|**Uzak makineyi kullan**|Onay kutusu seçildiğinde, uzaktan hata ayıklama etkinleştirilir. Metin kutusunda, uygulamanın hata ayıklama amacıyla çalışacağı uzak makinenin adını veya bir [msvsmon sunucu adını](https://msdn.microsoft.com/library/55b60ce7-834b-4e83-a10e-fe4248260a4c)yazabilirsiniz. Uzak makinedeki EXE konumu, derleme sekmesindeki çıkış yolu özelliği tarafından belirtilir. Konum, uzak makinede paylaşılabilir bir dizin olmalıdır.|  
+|**Yönetilmeyen kod hata ayıklaması**|Yönetilen uygulamanızdan yerel (yönetilmeyen) Win32 koduna yapılan çağrıların hatalarını ayıklamanızı sağlar. Bu, bir projede hata ayıklayıcı türü için karışık seçme ile aynı etkiye sahiptir [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] .|  
+|**SQL Server hata ayıklama**|SQL Server veritabanı nesnelerinin hatalarını ayıklamasına izin verir.|  
   
-### <a name="compile-tab-press-advanced-compile-options-button"></a>Sekme derle: Gelişmiş derleme seçenekleri düğmesine basın  
+### <a name="compile-tab-press-advanced-compile-options-button"></a>Derle sekmesi: Gelişmiş derleme seçenekleri düğmesine basın  
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|**Eniyileştirmeleri etkinleştir**|Bu seçenek işaretinin kaldırılması gerekir. En iyi duruma getirme neden görünen kaynak kodundan farklı olacak şekilde gerçekte çalıştırılan kod [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ve bu nedenle hata ayıklaması zor yapar. Kodun en iyilenmesi ise sembolleri olmayan yüklenemeyen varsayılan olarak yalnızca kendi kodum'hata ayıklama sırasında.|  
-|**Hata ayıklama bilgileri üret**|Varsayılan olarak, hem hata ayıklama ve yayın tarafından tanımlanan sürümleri, bu (/ debug derleyici seçeneği eşdeğer) ayarı oluşturur hata ayıklama bilgileri oluşturma zamanında. Hata ayıklayıcı, hata ayıklaması yapıyorsanız kullanışlı bir formda değişken adları ve diğer bilgileri göstermek için bu bilgileri kullanır. Programınızın bu bilgiler olmadan derleme yaparsanız, hata ayıklayıcı işlevselliği sınırlı olacaktır. Daha fazla bilgi için [/debug](https://msdn.microsoft.com/library/c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2).|  
-|**DEBUG sabitini tanımlayın**|Bu sembol tanımlama sağlayan çıkış işlevlerin koşullu derleme [hata ayıklama sınıfı](https://msdn.microsoft.com/library/system.diagnostics.debug.aspx). Tanımlanan bu simge ile hata ayıklama sınıfı yöntemleri çıkışı Oluştur [çıkış penceresine](../ide/reference/output-window.md). Bu sembol olmadan hata ayıklama sınıfı yöntemleri derlenmemiş ve hiçbir çıktı oluşturulur. Bu simge hata ayıklama sürümünde tanımlanan ve yayın sürümünde tanımlı değil. Bir sürümde bu sembol tanımlama, programınızı yavaşlar gereksiz kod oluşturur.|  
-|**TRACE sabitini tanımlayın**|Bu sembol tanımlama sağlayan çıkış işlevlerin koşullu derleme [izleme sınıfı](https://msdn.microsoft.com/library/system.diagnostics.trace.aspx). Bu simgeyle tanımlanan izleme sınıfı yöntemleri çıkışı Oluştur [çıkış penceresine](../ide/reference/output-window.md). Bu sembol olmadan izleme sınıfı yöntemleri derlenmemiş ve hiçbir izleme çıktısına oluşturulur. Bu simge, hem hata ayıklama ve yayın sürümleri için varsayılan olarak tanımlanır.|  
+|**İyileştirmeleri etkinleştir**|Bu seçenek işaretlenmemelidir. İyileştirme, aslında yürütülen kodun içinde görülen kaynak koddan farklı olmasına neden olur [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve bu nedenle hata ayıklamayı zorlaştırır. Kod iyileştirildiğinden, Yalnızca kendi kodum hata ayıklaması sırasında semboller varsayılan olarak yüklenmez.|  
+|**Hata ayıklama bilgisi oluştur**|Hem hata ayıklama hem de yayın sürümlerinde varsayılan olarak tanımlanan bu ayar (/debug derleyici seçeneğine eşdeğerdir) derleme zamanında hata ayıklama bilgileri oluşturur. Hata ayıklayıcı, hata ayıklama sırasında yararlı bir biçimde değişken adlarını ve diğer bilgileri göstermek için bu bilgileri kullanır. Programınızı bu bilgi olmadan derlerseniz, hata ayıklayıcı işlevselliği sınırlı olacaktır. Daha fazla bilgi için bkz. [/Debug](https://msdn.microsoft.com/library/c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2).|  
+|**Hata ayıklama sabiti tanımla**|Bu sembolün tanımlanması, çıkış işlevlerinin [hata ayıklama sınıfından](https://msdn.microsoft.com/library/system.diagnostics.debug.aspx)koşullu derlemesini mümkün bir şekilde sunar. Bu sembol tanımlanmış olduğunda, hata ayıklama sınıfı yöntemleri [Çıkış penceresinde](../ide/reference/output-window.md)çıkış oluşturur. Bu sembol olmadan hata ayıklama sınıfı yöntemleri derlenmez ve hiçbir çıkış oluşturulmaz. Bu simge hata ayıklama sürümünde tanımlanmalıdır ve yayın sürümünde tanımlanmamıştır. Bu sembolün bir yayın sürümünde tanımlanması, programınızı yavaşlattığı gereksiz kodu oluşturur.|  
+|**Izleme sabitini tanımlama**|Bu sembolün tanımlanması, [Trace sınıfından](https://msdn.microsoft.com/library/system.diagnostics.trace.aspx)çıkış işlevlerinin koşullu derlemesini mümkün bir şekilde sunar. Bu sembol tanımlanmış olarak, Trace class yöntemleri [Çıkış penceresinde](../ide/reference/output-window.md)çıktı oluşturur. Bu sembol olmadan, Izleme sınıfı yöntemleri derlenmez ve hiçbir Izleme çıkışı oluşturulmaz. Bu simge, hem hata ayıklama hem de yayın sürümleri için varsayılan olarak tanımlanmıştır.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata Ayıklayıcısı Ayarları ve Hazırlığı](../debugger/debugger-settings-and-preparation.md)

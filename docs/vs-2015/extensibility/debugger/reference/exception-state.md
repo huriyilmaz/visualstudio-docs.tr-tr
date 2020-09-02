@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4e30d9cc9df592cc6feb97c14449dbc6a122ec63
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149364"
 ---
-# <a name="exceptionstate"></a>EXCEPTION_STATE
+# <a name="exception_state"></a>EXCEPTION_STATE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Özel durum durumu belirtir.  
+Özel durum durumunu belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_EXCEPTION_STATE {   
@@ -77,65 +77,65 @@ public enum enum_EXCEPTION_STATE { 
   
 ## <a name="members"></a>Üyeler  
  EXCEPTION_NONE  
- Özel durumda Dur değil.  
+ Özel durumunda durmayın.  
   
  EXCEPTION_STOP_FIRST_CHANCE  
- Özel durum sırasında ilk Açmadığınızda durdurun. Bir özel durum olayı açıklayan bu bayrağı özel durum olayı bir ilk fırsat özel durum olayı olduğunu gösterir.  
+ İlk özel durum tetikde durdur. Özel durum olayını açıkladığınızda, bu bayrak özel durum olayının ilk şans özel durum olayı olduğunu gösterir.  
   
  EXCEPTION_STOP_SECOND_CHANCE  
- Özel durum ikinci tetikleyicisinin tetikleme adresindeki durdurun. Bir özel durum olayı açıklayan özel durum olayı bir ikinci şans özel durum olayı olduğunu gösterir.  
+ Özel durumun ikinci olarak TETİKİ durdur. Bir özel durum olayını açıkladığınızda, özel durum olayının ikinci şans özel durum olayı olduğunu gösterir.  
   
  EXCEPTION_STOP_USER_FIRST_CHANCE  
- Bir kullanıcı modu özel ilk tetikleyicisinin tetikleme adresindeki durdurun. Bir özel durum olayı açıklayan özel durum olayı, kullanıcı ilk fırsat özel durum olayı olduğunu gösterir.  
+ Kullanıcı modu özel durumunun ilk aşamasında durun. Bir özel durum olayını açıkladığınızda, özel durum olayının bir birinci şans Kullanıcı özel durum olayı olduğunu gösterir.  
   
  EXCEPTION_STOP_USER_UNCAUGHT  
- Bir kullanıcı modu özel durum yakalanmadı durdur. Bir özel durum olayı açıklayan özel durum olayı bir yakalanmayan kullanıcı modu özel durum olayı olduğunu gösterir.  
+ Bir Kullanıcı modu özel durumu yakalanmadığında durdur. Bir özel durum olayını açıkladığınızda, özel durum olayının yakalanamayan bir Kullanıcı modu özel durum olayı olduğunu gösterir.  
   
  EXCEPTION_STOP_ALL  
- Hiçbir özel durdurun. Bir özel durum olayı açıklayan kurulurken kullanılmaz.  
+ Herhangi bir özel durum üzerinde durun. Bir özel durum olayı açıklanırken kullanılmaz.  
   
  EXCEPTION_CANNOT_BE_CONTINUED  
- Bir özel durum olayı açıklayan özel durum gelen ettirilemez gösterir.  
+ Bir özel durum olayını açıkladığınızda, özel durumun devam ettirilemez olduğunu gösterir.  
   
  EXCEPTION_CODE_SUPPORTED  
- Özel durum kodu, destekleyici sahip olduğunu gösterir. Bir özel durum görüntülenmesinde kullanılan  
+ Özel durumun onu destekleyen kodu olduğunu gösterir. Özel durum görüntülemek için kullanılır  
   
  EXCEPTION_CODE_DISPLAY_IN_HEX  
- Özel durum kodunu onaltılık olarak görüntüleneceğini belirtir. Bir özel durum görüntülenmesinde kullanılır.  
+ Özel durum kodunun onaltılı olarak görüntülenmesi gerektiğini gösterir. Özel durum görüntülemek için kullanılır.  
   
  EXCEPTION_JUST_MY_CODE_SUPPORTED  
- Özel durum kodu JustMyCode desteklediğini belirtir. Bir özel durum görüntülenmesinde kullanılır.  
+ Özel durum kodunun, Barkodmkodu desteklediğini gösterir. Özel durum görüntülemek için kullanılır.  
   
  EXCEPTION_MANAGED_DEBUG_ASSISTANT  
- Yönetilen kod hata ayıklayıcı özel durumlarını işlemelidir gösterir. Aksi durumda kümesi, varsayılan hata ayıklayıcı özel durumları işler. Bu geçirilir [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) yöntemi ve kullanılan değil [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısı.  
+ Yönetilen kod hata ayıklayıcının özel durumları işlemesinin gerektiği anlamına gelir. Ayarlanmamışsa, varsayılan hata ayıklayıcı özel durumları işler. Bu, [Setallexceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) yöntemine geçirilir ve [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısında kullanılmaz.  
   
  EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT  
- ESKİ, KULLANMAYIN.  
+ ARTıK KULLANıLMıYOR, KULLANMAYıN.  
   
  EXCEPTION_STOP_SECOND_CHANCE_USE_PARENT  
- ESKİ, KULLANMAYIN.  
+ ARTıK KULLANıLMıYOR, KULLANMAYıN.  
   
  EXCEPTION_STOP_USER_FIRST_CHANCE_USE_PARENT  
- ESKİ, KULLANMAYIN.  
+ ARTıK KULLANıLMıYOR, KULLANMAYıN.  
   
  EXCEPTION_STOP_USER_SECOND_CHANCE_USE_PARENT  
- ESKİ, KULLANMAYIN.  
+ ARTıK KULLANıLMıYOR, KULLANMAYıN.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Olarak kullanılan `dwState` üyesi [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısı, özel durum ve ne hakkında yapılabilir durumunu göstermek için.  
+ `dwState`Özel durumun durumunu ve bunun için neler yapılabileceğini göstermek için [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısının üyesi olarak kullanılır.  
   
- Bu değerleri de geçirilen [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) tüm özel durumları durumunu ayarlamak için yöntemi.  
+ Bu değerler, tüm özel durumların durumunu ayarlamak için [Setallexceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) yöntemine de geçirilir.  
   
- Bu bayraklar bir bit düzeyinde OR ile birleştirilebilir.  
+ Bu bayraklar bit düzeyinde OR ile birleştirilebilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md)   
  [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)

@@ -1,5 +1,5 @@
 ---
-title: Office Word Klavyesi, Klavyesi ayarları, Seçenekler iletişim kutusu
+title: Office Word Klavyesi, klavye ayarları, Seçenekler iletişim kutusu
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,23 +17,23 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 5180aa2f4c5022cedcba2c5377d2ff2ac14ffb28
-ms.sourcegitcommit: cc5fd59e5dc99181601b7db8b28d7f8a83a36bab
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66835987"
 ---
-# <a name="microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box"></a>Microsoft Office Word Klavyesi, Microsoft Office Klavyesi ayarları, Seçenekler iletişim kutusu
-  Kısayol tuşları, Microsoft Office Word ve Visual Studio hem de işler. Aynı kısayol tuş bileşimi Word ve Visual Studio'da farklı komutlar için bildirimde bulunabilir. Word belge düzeyi projede Visual Studio açık olduğunda, aynı anda yalnızca bir uygulama kısayol tuşu komutlarını alır. Varsayılan olarak, Visual Studio tüm kısayol tuşu komutlarını alır, ancak Word belgesi seçerek odağa sahip olduğunda bildirim ve mesajları alacak yapabileceğiniz **dinamik klavye düzeni**.
+# <a name="microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box"></a>Microsoft Office Word klavye, Microsoft Office Klavye ayarları, Seçenekler iletişim kutusu
+  Microsoft Office Word ve Visual Studio kısayol tuşlarını her ikisi de işler. Aynı kısayol tuşu birleşimi Word ve Visual Studio 'daki farklı komutlar için de kullanılabilir. Word, Visual Studio 'da belge düzeyindeki bir projede açıldığında, kısayol tuşu komutlarını yalnızca bir seferde tek bir uygulama alır. Varsayılan olarak, Visual Studio tüm kısayol tuşu komutlarını alır, ancak belge odaklanıldığında, **dinamik klavye düzeni**seçerek Word 'ün bunları almasını sağlayabilirsiniz.
 
- Şu anda kısayol tuşlarını işleyen uygulama komutuna atanmış kısayol tuşu kullanırsanız, kısayol tuşunu diğer uygulamaya geçirilir.
+ Şu anda kısayol tuşlarını işleyen uygulamada bir komuta atanmamış bir kısayol tuşu kullanırsanız, kısayol tuşu diğer uygulamaya geçirilir.
 
- Siz değiştirene kadar belirlediğiniz seçeneğe Word projeleri için yürürlükte kalır. Seçimi Microsoft Office Excel projeleri etkilemez. herhangi bir değişiklik Excel için Microsoft Office Excel Klavyesi seçenekleri kullanarak yapmalısınız.
+ Seçtiğiniz seçenek, siz değiştirene kadar Word projeleri için geçerli olmaya devam edecektir. Seçim Excel projelerini Microsoft Office etkilemez; Excel 'de Microsoft Office Excel klavye seçeneklerini kullanarak herhangi bir değişiklik yapmanız gerekir.
 
 ## <a name="uielement-list"></a>UIElement listesi
- **Visual Studio klavye düzeni** Word belgesi odağa sahip olsa bile tüm kısayol tuşu komutlarını, Visual Studio alır. Örneğin, işlev tuşuna basarsanız **F5** belge odaklanmışken Visual Studio başlatılır, çözümünüzün hata ayıklama.
+ **Visual Studio klavye düzeni** Word belgesi odağa sahip olsa bile, Visual Studio tüm kısayol tuşu komutlarını alır. Örneğin, belge odaklanmışken **F5** işlev tuşuna basarsanız, Visual Studio çözümünüzün hata ayıklamasını başlatır.
 
- **Dinamik klavye düzeni** Visual Studio, yalnızca odağı varken kısayol tuşu komutlarını alır. Word belgesi odağa sahip olduğunda, sözcük tüm kısayol tuşu komutlarını alır. Örneğin işlev tuşuna basarsanız, **F5** Word belgesi odaklanmışken Word açar **Bul ve Değiştir** iletişim kutusuyla **Git** sekmesi seçili. Basarsanız **F5** Visual Studio, Visual Studio odaklanmışken başlatır, çözümünüzün hata ayıklama.
+ **Dinamik klavye düzeni** Visual Studio yalnızca odağa sahip olduğunda kısayol tuşu komutlarını alır. Word belgesi odağa sahip olduğunda, Word tüm kısayol tuşu komutlarını alır. Örneğin, Word belgesi odağa sahip iken **F5** işlev tuşuna basarsanız, sözcük **Bul ve Değiştir** iletişim kutusunu seçili **Git** sekmesi ile açar. Visual Studio odaklandığında **F5** tuşuna basarsanız, Visual Studio çözümünüzün hata ayıklamasını başlatır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Microsoft Office Excel Klavyesi, Microsoft Office Klavyesi ayarları, Seçenekler iletişim kutusu](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)
+- [Microsoft Office Excel klavye, Microsoft Office Klavye ayarları, Seçenekler iletişim kutusu](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)

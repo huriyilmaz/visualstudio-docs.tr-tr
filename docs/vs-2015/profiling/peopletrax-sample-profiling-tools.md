@@ -1,5 +1,5 @@
 ---
-title: PeopleTrax örneği (profil oluşturma araçları) | Microsoft Docs
+title: PeopleTrax örneği (Profil Oluşturma Araçları) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,13 +15,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e8984f37709f0f24722ae65a04972f940e955ff9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195535"
 ---
 # <a name="peopletrax-sample-profiling-tools"></a>PeopleTrax Örneği (Profil Oluşturma Araçları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-PeopleTrax örneği uygulama için birkaç adım adım izlenecek yollar için kullanılan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] profil oluşturma araçları. Kişiler Trax uygulama kodu içeren bir .zip dosyası indirebilirsiniz [MSDN Kod Galerisi](https://code.msdn.microsoft.com/).
+PeopleTrax örnek uygulaması Profil Oluşturma Araçları için birkaç adım adım izlenecek yol için kullanılır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . [MSDN kod galerisinden](https://code.msdn.microsoft.com/)Insanlar Trax uygulama kodunu içeren bir. zip dosyasını indirebilirsiniz.

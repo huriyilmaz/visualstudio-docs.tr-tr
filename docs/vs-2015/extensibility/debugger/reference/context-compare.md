@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a9cf283cf7239b5ed74e38ca534538a286a477c2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179964"
 ---
-# <a name="contextcompare"></a>CONTEXT_COMPARE
+# <a name="context_compare"></a>CONTEXT_COMPARE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-İki bellek bağlamları karşılaştırma ölçütü belirtir.  
+İki bellek bağlamlarını karşılaştırma ölçütlerini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_CONTEXT_COMPARE {   
@@ -57,44 +57,44 @@ public enum enum_CONTEXT_COMPARE { 
   
 ## <a name="members"></a>Üyeler  
  CONTEXT_EQUAL  
- Hedef bellek bağlamına eşit olan listesinde ilk bellek içeriği bulur.  
+ Listedeki hedef bellek bağlamına eşit olan ilk bellek bağlamını bulun.  
   
  CONTEXT_LESS_THAN  
- Hedef bellek bağlam'dan küçük listedeki ilk bellek bağlam bulun.  
+ Listede hedef bellek bağlamından daha az olan ilk bellek bağlamını bulun.  
   
  CONTEXT_GREATER_THAN  
- Hedef bellek bağlamını anlamaktan büyük listesinde ilk bellek içeriği bulur.  
+ Listede hedef bellek bağlamından daha büyük olan ilk bellek bağlamını bulun.  
   
  CONTEXT_LESS_THAN_OR_EQUAL  
- Hedef bellek bağlam eşit veya daha az olan listesinde ilk bellek içeriği bulur.  
+ Listede, hedef bellek bağlamından daha küçük veya ona eşit olan ilk bellek bağlamını bulun.  
   
  CONTEXT_GREATER_THAN_OR_EQUAL  
- Büyüktür veya eşittir hedef bellek bağlam listedeki ilk bellek bağlam bulun.  
+ Listede, hedef bellek bağlamından daha büyük veya ona eşit olan ilk bellek bağlamını bulun.  
   
  CONTEXT_SAME_SCOPE  
- Hedef bellek bağlamı ile aynı kapsamda olan listesinde ilk bellek içeriği bulur.  
+ Hedef bellek bağlamıyla aynı kapsamdaki listede bulunan ilk bellek bağlamını bulun.  
   
  CONTEXT_SAME_FUNCTION  
- Hedef bellek kapsamla aynı işlevde listesinde ilk bellek içeriği bulabilirsiniz.  
+ Hedef bellek kapsamıyla aynı işlevde bulunan listedeki ilk bellek bağlamını bulun.  
   
  CONTEXT_SAME_MODULE  
- Hedef bellek içerik olarak aynı modülde listesinde ilk bellek içeriği bulabilirsiniz.  
+ Listede, hedef bellek içeriğiyle aynı modülde olan ilk bellek bağlamını bulun.  
   
  CONTEXT_SAME_PROCESS  
- Hedef bellek içerik olarak aynı işlemde olan listesinde ilk bellek içeriği bulur.  
+ Listede, hedef bellek içeriğiyle aynı işlemde olan ilk bellek bağlamını bulun.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bağımsız değişken olarak geçirilen [karşılaştırma](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) yöntemi.  
+ [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) metoduna bir bağımsız değişken olarak geçirilir.  
   
- Bu değerler, belirtilen karşılaştırma ölçütleri karşılayan bir listedeki ilk bellek içeriği bulmak için kullanılır. Bir bellek bağlamı kendisine karşı karşılaştırmak için bellek içerikleri bir listesi verilir `IDebugMemoryContext2::Compare` yöntemi. Karşılaştırma işleci olan listede ilk bellek bağlam `true` sonra döndürülür.  
+ Bu değerler, belirtilen karşılaştırma ölçütlerini karşılayan bir listedeki ilk bellek bağlamını bulmak için kullanılır. Bellek bağlamına, yöntemi aracılığıyla kendisini karşılaştırmak için bellek bağlamlarının bir listesi verilir `IDebugMemoryContext2::Compare` . Karşılaştırma işlecinin daha sonra döndürüldüğü listedeki ilk bellek bağlamı `true` döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Karşılaştır](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)

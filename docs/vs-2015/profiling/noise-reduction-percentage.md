@@ -14,13 +14,13 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c6407b40f58c3acc02705379768085793a2b79b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195547"
 ---
 # <a name="noise-reduction-percentage"></a>Gürültü Azaltma Yüzdesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Varsayılan olarak, gürültü azaltma yüzdesi ayarının değeri 2'dir. Büyüktür veya eşittir Bu ayar için kapsamlı süre yüzdesi olan girişleri çağrı ağacında gösterilmektedir. Ayarı değiştirerek, çağrı ağacında görüntülenen giriş sayısını kontrol edebilirsiniz. Örneğin, 10 değeri değiştirilirse büyüktür veya eşittir % 10 için kapsamlı bir süresi olan çağrı ağacı girişleri gösterir. Bir ayarın değerini artırarak, işlemin performansını etkiler büyük girişlerdeki odaklanabilirsiniz.
+Varsayılan olarak, gürültü azaltma yüzdesi ayarının değeri 2 ' dir. Çağrı ağacında yalnızca bu ayardan büyük veya buna eşit bir yüzde dahil süresi olan girişler gösterilir. Ayarı değiştirerek, çağrı ağacında görüntülenen giriş sayısını kontrol edebilirsiniz. Örneğin, değerini 10 olarak değiştirmek, yalnızca %10 ' dan büyük veya buna eşit bir iç zaman içeren çağrı ağacı girdilerini gösterir. Ayarın değerini artırarak, işleminizin performansı üzerinde daha büyük etkileri olan girişlere odaklanırsınız.

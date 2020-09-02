@@ -1,5 +1,5 @@
 ---
-title: OnError öğesi (MSBuild) | Microsoft Docs
+title: HataDurumunda öğe (MSBuild) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,22 +20,22 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 46f6907bea5954cffae92b41398717a8247350e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195669"
 ---
 # <a name="onerror-element-msbuild"></a>OnError Öğesi (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yürütülmek üzere bir veya daha fazla hedef neden `ContinueOnError` özniteliği `false` için başarısız bir görev.  
+`ContinueOnError`Öznitelik `false` başarısız bir görev için ise, bir veya daha fazla hedefin yürütülmesine neden olur.  
   
- \<Proje >  
- \<Hedef >  
- \<OnError >  
+ \<Project>  
+ \<Target>  
+ \<OnError>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <OnError ExecuteTargets="TargetName"  
@@ -49,8 +49,8 @@ Yürütülmek üzere bir veya daha fazla hedef neden `ContinueOnError` özniteli
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için [koşullar](../msbuild/msbuild-conditions.md).|  
-|`ExecuteTargets`|Gerekli öznitelik.<br /><br /> Bir görev başarısız olursa yürütmek için hedefler. Birden çok hedef noktalı virgülle ayırın. Birden çok hedefe, belirtilen sırayla yürütülür.|  
+|`Condition`|İsteğe bağlı öznitelik.<br /><br /> Değerlendirilecek koşul. Daha fazla bilgi için bkz. [koşullar](../msbuild/msbuild-conditions.md).|  
+|`ExecuteTargets`|Gerekli öznitelik.<br /><br /> Bir görev başarısız olursa yürütülecek hedefler. Birden çok hedefi noktalı virgülle ayırın. Birden çok hedef belirtilen sırada yürütülür.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -59,15 +59,15 @@ Yürütülmek üzere bir veya daha fazla hedef neden `ContinueOnError` özniteli
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Hedef](../msbuild/target-element-msbuild.md)|İçin kapsayıcı öğe [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] görevleri.|  
+|[Hedef](../msbuild/target-element-msbuild.md)|Görevler için kapsayıcı öğesi [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] yürütür `OnError` öğe varsa, `Target` öğenin görevler başarısız oluyor `ContinueOnError` özniteliğini `ErrorAndStop` (veya `false`). Görev başarısız olduğunda, belirtilen hedef `ExecuteTargets` özniteliği yürütülür. Varsa birden fazla `OnError` hedef öğesinde `OnError` öğeleri görevi başarısız olduğunda sırayla yürütülür.  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] öğe öğesinin `OnError` `Target` görevlerden biri `ContinueOnError` `ErrorAndStop` (veya) olarak ayarlanan öznitelik ile başarısız `false` olursa, öğesini yürütür. Görev başarısız olduğunda, özniteliğinde belirtilen hedefler `ExecuteTargets` yürütülür. Hedefte birden fazla `OnError` öğe varsa, `OnError` görev başarısız olduğunda öğeler sırayla yürütülür.  
   
- Hakkında bilgi için `ContinueOnError` özniteliği için bkz: [görev öğesi (MSBuild)](../msbuild/task-element-msbuild.md). Hedefleri hakkında daha fazla bilgi için bkz: [hedefleri](../msbuild/msbuild-targets.md).  
+ Özniteliği hakkında daha fazla bilgi için `ContinueOnError` , bkz. [görev öğesi (MSBuild)](../msbuild/task-element-msbuild.md). Hedefler hakkında daha fazla bilgi için bkz. [targets](../msbuild/msbuild-targets.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kodu çalıştırır `TaskOne` ve `TaskTwo` görevleri. Varsa `TaskOne` başarısız olursa [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] değerlendirir `OnError` öğesi ve yürüten `OtherTarget` hedef.  
+ Aşağıdaki kod `TaskOne` ve `TaskTwo` görevlerini yürütür. `TaskOne`Başarısız olursa, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] öğesini değerlendirir `OnError` ve `OtherTarget` hedefi yürütür.  
   
 ```  
 <Target Name="ThisTarget">  
@@ -81,4 +81,4 @@ Yürütülmek üzere bir veya daha fazla hedef neden `ContinueOnError` özniteli
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Proje dosyası şema başvurusu](../msbuild/msbuild-project-file-schema-reference.md)   
- [Hedefler](../msbuild/msbuild-targets.md)
+ [Targets](../msbuild/msbuild-targets.md)
