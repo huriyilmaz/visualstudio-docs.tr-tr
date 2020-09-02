@@ -1,5 +1,5 @@
 ---
-title: Visibilityıtem öğesi | Microsoft Docs
+title: VisibilityItem öğesi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,24 +12,24 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f6f71e145282d1d6e340060b9798ca54c9af9f4e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62584852"
 ---
 # <a name="visibilityitem-element"></a>VisibilityItem Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`VisibilityItem` Komutları ve araç çubuklarını statik görünürlüğünü belirler. Her giriş, bir komut veya menü ve ayrıca bir ilişkili komut UI bağlamı tanımlar. Visual Studio, bunları tanımlama VSPackage'ları yüklemeden komutlar, menüler ve araç çubukları ve kendi görünürlük algılar. IDE kullanır <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> komut UI bağlamı etkin olup olmadığını belirlemek için yöntemi.  
+`VisibilityItem`Öğesi, komutların ve araç çubuklarının statik görünürlüğünü belirler. Her giriş bir komutu veya menüyü ve ayrıca ilişkili bir komut UI bağlamını tanımlar. Visual Studio, bunları tanımlayan VSPackages 'ları yüklemeden komutları, menüleri ve araç çubuklarını ve bunların görünürlüğünü algılar. IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> bir komut UI bağlamının etkin olup olmadığını anlamak için yöntemini kullanır.  
   
- VSPackage'ı yüklendikten sonra Visual Studio komut görünürlük VSPackage'ı tarafından belirlenecek bekliyor yerine `VisibilityItem`. Komutun görünürlüğü belirlemek için ya da uygulayabilirsiniz <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> olay işleyicisi veya <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> komutunuz nasıl uyguladıysanız bağlı olarak yöntemi.  
+ VSPackage yüklendikten sonra Visual Studio, komut görünürlüğünü, yerine VSPackage tarafından belirlenecek şekilde bekler `VisibilityItem` . Komutınızın görünürlüğünü öğrenmek için, <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.BeforeQueryStatus> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> komutunuza nasıl uyguladığınıza bağlı olarak olay işleyicisini ya da yöntemini uygulayabilirsiniz.  
   
- Bir komut veya sahip menü bir `VisibilityItem` öğesi, yalnızca ilişkili bağlam etkin olduğunda görünür. Her bir bağlam içi komut bileşimi için bir giriş ekleyerek, bir veya daha fazla komut UI bağlamı ile tek bir komut, menü veya araç ilişkilendirebilirsiniz. Bir komut veya menü birden fazla komut UI bağlamı ile ilişkili ise, ilişkili komut UI bağlamları herhangi biri etkin olduğunda ardından bir komut veya menüyü görülebilir.  
+ `VisibilityItem`Yalnızca ilişkili bağlam etkin olduğunda bir öğesi olan bir komut veya menü görünür. Her komut bağlamı kombinasyonu için bir giriş ekleyerek, tek bir komutu, menüyü veya araç çubuğunu bir veya daha fazla komut UI bağlamıyla ilişkilendirebilirsiniz. Bir komut veya menü birden çok komut UI bağlamlarına ilişkiliyse, ilişkili komut Kullanıcı arabirimi bağlamlarından herhangi biri etkin olduğunda komut veya menü görünür olur.  
   
- `VisibilityItem` Öğesi uygulandığı yalnızca komutlar, menüler ve araç çubuklarını, grupları uygulanmaz. İlgili olmayan bir öğe `VisibilityItem` öğesi, kendi üst menü etkin olduğunda görülebilir.  
+ `VisibilityItem`Öğe yalnızca komutlar, menüler ve araç çubukları için geçerlidir, gruplar için geçerli değildir. İlişkili bir öğesi olmayan bir öğe, `VisibilityItem` üst menüsü etkin olduğunda görünür olur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <VisibilityItem  
@@ -45,22 +45,22 @@ ms.locfileid: "62584852"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|GUID|Gerekli. GUID/ID komut tanımlayıcısı GUİD'si.|  
-|kimlik|Gerekli. GUID/ID komut tanımlayıcısı kimliği.|  
-|bağlam|Gerekli. UI bağlamı komutu görülebilir.|  
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID 'SI.|  
+|kimlik|Gereklidir. GUID/ID komut tanımlayıcısının KIMLIĞI.|  
+|bağlam|Gereklidir. Komutun görünür olduğu kullanıcı arabirimi bağlamı.|  
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[VisibilityConstraints Öğesi](../extensibility/visibilityconstraints-element.md)|`VisibilityConstraints` Komutları ve araç çubukları grupları statik görünürlüğünü belirler.|  
+|[VisibilityConstraints Öğesi](../extensibility/visibilityconstraints-element.md)|`VisibilityConstraints`Öğesi, komut ve araç çubuklarının statik görünürlüğünü belirler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Standart bir Visual Studio UI bağlamları içinde tanımlanan *Visual Studio SDK yükleme yolunu*\VisualStudioIntegration\Common\Inc\vsshlids.h dosyasında da olarak <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids> ve <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> sınıfları. UI bağlamları daha eksiksiz bir kümesini tanımlanan <xref:Microsoft.VisualStudio.VSConstants> sınıfı.  
+ Standart Visual Studio Kullanıcı arabirimi bağlamları, ve sınıflarının yanı sıra *Visual STUDIO SDK yükleme yolu*\VisualStudioIntegration\Common\Inc\vsshlids.h dosyasında da tanımlanmıştır <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids> <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> . Sınıfında daha kapsamlı bir UI bağlamı kümesi tanımlanmıştır <xref:Microsoft.VisualStudio.VSConstants> .  
   
 ## <a name="example"></a>Örnek  
   
@@ -77,5 +77,5 @@ ms.locfileid: "62584852"
  <xref:Microsoft.VisualStudio.VSConstants>   
  <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids>   
  <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>   
- [VisibilityConstraints öğesi](../extensibility/visibilityconstraints-element.md)   
+ [Visibilitykýsýtlamaöğesi](../extensibility/visibilityconstraints-element.md)   
  [Visual Studio Komut Tablosu (.Vsct) Dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

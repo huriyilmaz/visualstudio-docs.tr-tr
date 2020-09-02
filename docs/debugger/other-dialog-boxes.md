@@ -1,5 +1,5 @@
 ---
-title: Diğer iletişim kutuları | Microsoft Docs
+title: Diğer Iletişim kutuları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,23 +12,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6eda65a49fce09dbbb085da7258a8536484af174
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62905112"
 ---
 # <a name="other-dialog-boxes"></a>Diğer İletişim Kutuları
-Bu iletişim kutularından Spy ++ programı hakkında bilgi görüntüler.
+Bu iletişim kutularında Spy + + programı hakkında bilgiler görüntülenir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [İlgili Microsoft Spy ++](../debugger/about-microsoft-spy-increment.md) Spy ++ programı'nın sahipliği hakkında bilgi.
+ [Microsoft Spy + + hakkında](../debugger/about-microsoft-spy-increment.md) Spy + + programının sahipliğiyle ilgili bilgiler.
 
- [Spy ++ Yardımı için telif hakkı bildirimi](../debugger/copyright-notice-for-spy-increment-help.md) yasal telif hakkı bildirimi.
+ [Spy + + Yardımı Için telif hakkı bildirimi](../debugger/copyright-notice-for-spy-increment-help.md) Telif hakkı yasal bildirimi.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Spy ++ başvurusu](../debugger/spy-increment-reference.md) her Spy ++ menü ve iletişim kutusunu açıklayan bölümleri içerir.
+ [Spy + + başvurusu](../debugger/spy-increment-reference.md) Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.
 
- [Spy ++ kullanma](../debugger/using-spy-increment.md) Spy ++ araç tanıtır ve nasıl kullanılacağını açıklar.
+ [Spy + + kullanma](../debugger/using-spy-increment.md) Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.
 
- [Spy ++ görünümleri](../debugger/spy-increment-views.md) Spy ++ ağaç görünümlerini windows, iletileri, süreçleri ve iş parçacıkları açıklar.
+ [Spy + + görünümleri](../debugger/spy-increment-views.md) Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.

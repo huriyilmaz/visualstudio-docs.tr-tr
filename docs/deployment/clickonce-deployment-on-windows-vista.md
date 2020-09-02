@@ -1,5 +1,5 @@
 ---
-title: Windows Vista'da ClickOnce dağıtımı | Microsoft Docs
+title: Windows Vista 'da ClickOnce dağıtımı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,37 +18,37 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4beefddd429384fadda71d9742e8c0fac606c38e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62900508"
 ---
 # <a name="clickonce-deployment-on-windows-vista"></a>Windows Vista'da ClickOnce dağıtımı
 
-Visual Studio'da uygulamaları oluşturma, Windows Vista kullanıcı hesabı denetimi (UAC) normalde gömülü bir bildirim üretir uygulamanın yürütülebilir dosyasına ikili olarak XML verilerinde kodlanmış.  ClickOnce ve Registration-Free COM uygulamaları dış bildiriminde gerektirdiğinden, Visual Studio bu projelerin bir gömülü bildirimi yerine UAC verileri içeren bir dosya oluşturur. ClickOnce ve Registration-Free COM dağıtımları için Visual Studio bilgileri adlı bir dosyadan kullanır *app.manifest* dış UAC bildirim bilgilerini oluşturmak için. Diğer tüm durumlarda için Visual Studio UAC veri uygulamanın yürütülebilir dosyasına katıştırır.
+Windows Vista 'da Kullanıcı hesabı denetimi (UAC) için Visual Studio 'da uygulamalar derleme, normalde, uygulamanın yürütülebilir dosyasında ikili XML verileri olarak kodlanmış bir katıştırılmış bildirim oluşturur.  ClickOnce ve kayıtsız COM uygulamaları için bir dış bildirim gerekir, bu nedenle Visual Studio bu projeler için katıştırılmış bir bildirim yerine UAC verilerini içeren bir dosya oluşturur. ClickOnce ve kayıtsız COM dağıtımları için, Visual Studio dış UAC bildirim bilgileri oluşturmak için *app. manifest* adlı bir dosyadaki bilgileri kullanır. Diğer tüm durumlarda, Visual Studio UAC verilerini uygulamanın yürütülebilir dosyasına katıştırır.
 
-Visual Studio, bildirim oluşturmak üzere aşağıdaki seçenekleri sağlar:
+Visual Studio, bildirim oluşturma için aşağıdaki seçenekleri sağlar:
 
-- Gömülü bir bildirim kullanın. UAC veri uygulamanın yürütülebilir dosyasına katıştırma ve normal bir kullanıcı olarak çalıştırın.
+- Gömülü bir bildirim kullanın. UAC verilerini uygulamanın yürütülebilir dosyasına ekleyin ve normal bir kullanıcı olarak çalıştırın.
 
-   (ClickOnce kullanmadığınız sürece) varsayılan ayar budur. Bu ayar, Visual Studio çalıştığı her zamanki şekilde Windows Vista'da destekler, hem iç hem de dış nesil kullanarak bildirim `AsInvoker`.
+   Bu, varsayılan ayardır (ClickOnce kullanmadığınız durumlar dışında). Bu ayar, kullanarak Visual Studio 'nun Windows Vista 'da çalıştığı olağan şekilde, hem iç hem de dış bildirim oluşturma ile birlikte desteklenir `AsInvoker` .
 
-- Harici bildirim kullanın. Harici bir bildirim oluşturmak *app.manifest*.
+- Dış bildirim kullanın. *App. manifest*kullanarak bir dış bildirim oluşturun.
 
-   Bu bilgileri kullanarak yalnızca dış bildirimi oluşturur *app.manifest*. ClickOnce veya Registration-Free COM kullanılarak bir uygulama yayımladığınızda, Visual Studio ekler *app.manifest* projeye sağ tıklatın ve ardından bu seçeneği ekler.
+   Bu, *app. manifest*'teki bilgileri kullanarak yalnızca dış bildirimi oluşturur. Bir uygulamayı ClickOnce veya kayıtsız COM kullanarak yayımladığınızda, Visual Studio projeye *app. manifest* ekler ve sonra bu seçeneği ekler.
 
-- Hiçbir bildirim kullanın. Bir bildirim olmadan uygulamayı oluşturun.
+- Bildirim yok ' u kullanın. Bildirimi olmayan uygulamayı oluşturun.
 
-   Bu yaklaşım olarak da bilinir, *sanallaştırma*. Visual Studio'nun önceki sürümlerindeki mevcut uygulamalarla uyumluluk için bu seçeneği kullanın.
+   Bu yaklaşım *sanallaştırma*olarak da bilinir. Visual Studio 'nun önceki sürümlerindeki mevcut uygulamalarla uyumluluk için bu seçeneği kullanın.
 
-  Yeni özellikler kullanılabilir **uygulama** sayfası Proje Tasarımcısı (Visual C# projeleri yalnızca için) ve MSBuild proje dosyası biçimi.
+  Yeni özellikler, proje Tasarımcısı 'nın **uygulama** sayfasında (yalnızca Visual C# projeleri için) ve MSBuild proje dosyası biçiminde bulunur.
 
-  Visual Studio IDE içinde UAC bildirim üretme yapılandırma yöntemi proje türü (Visual C# veya Visual Basic) bağlı olarak farklılık gösterir.
+  Visual Studio IDE 'de UAC bildirim oluşturmayı yapılandırma yöntemi, proje türüne (Visual C# veya Visual Basic) göre farklılık gösterir.
 
-  * Bildirim oluşturmak üzere Visual C# projelerini yapılandırma hakkında daha fazla bilgi için bkz: [uygulama sayfası, Proje Tasarımcısı (C#)](../ide/reference/application-page-project-designer-csharp.md).
+  * Visual C# projelerini bildirim üretimi için yapılandırma hakkında bilgi için bkz. [uygulama sayfası, proje Tasarımcısı (C#)](../ide/reference/application-page-project-designer-csharp.md).
 
-  * Visual Basic projeleri için bildirim oluşturma yapılandırma hakkında daha fazla bilgi için bkz: [uygulama sayfası, Proje Tasarımcısı (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md).
+  * Bildirim üretimi için Visual Basic projeleri yapılandırma hakkında daha fazla bilgi için bkz. [uygulama sayfası, proje Tasarımcısı (Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)

@@ -1,5 +1,5 @@
 ---
-title: ProjectExtensions öğesi (MSBuild) | Microsoft Docs
+title: Projecısions öğesi (MSBuild) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,21 +20,21 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0afc4f73ed287f753acf87bd0b112e6f5303e996
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62551262"
 ---
 # <a name="projectextensions-element-msbuild"></a>ProjectExtensions Öğesi (MSBuild)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sağlar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] proje dosyalarını içerecek olmayan[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] bilgileri. Herhangi bir şey içinde bir `ProjectExtensions` öğesi tarafından yoksayılacak [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].  
+[!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]Proje dosyalarının bilgi olmayan bilgiler içermesini sağlar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] . Bir öğenin içindeki her şey `ProjectExtensions` tarafından yok sayılacak [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
- \<Proje >  
- \<ProjectExtensions >  
+ \<Project>  
+ \<ProjectExtensions>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <ProjectExtensions>  
@@ -46,22 +46,22 @@ Sağlar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] proje dosyalar�
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok.  
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Project](../msbuild/project-element-msbuild.md)|Gerekli kök öğesi bir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] proje dosyası.|  
+|[Project](../msbuild/project-element-msbuild.md)|Proje dosyasının gerekli kök öğesi [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca bir `ProjectExtensions` öğesi olarak kullanılabilir bir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] proje.  
+ `ProjectExtensions`Bir projede yalnızca bir öğe kullanılabilir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği bilgileri depolanıyor tümleşik geliştirme ortamından gösterir bir `ProjectExtensions` öğesi.  
+ Aşağıdaki kod örneği, bir öğesinde depolanan tümleşik geliştirme ortamının bilgilerini gösterir `ProjectExtensions` .  
   
 ```  
 <ProjectExtensions>  
@@ -77,4 +77,4 @@ Sağlar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] proje dosyalar�
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Proje Dosyası Şema Başvurusu](../msbuild/msbuild-project-file-schema-reference.md)  
- [MSBuild](msbuild.md)
+ [MSBUILD](msbuild.md)

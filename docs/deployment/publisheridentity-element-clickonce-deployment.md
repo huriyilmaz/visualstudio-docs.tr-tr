@@ -1,5 +1,5 @@
 ---
-title: '&lt;publisherIdentity&gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+title: '&lt;publisherIdentity &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,16 +17,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 995b002784c1e76ceed36e51edb1ae893448f448
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62927545"
 ---
-# <a name="ltpublisheridentitygt-element-clickonce-deployment"></a>&lt;publisherIdentity&gt; öğesi (ClickOnce dağıtımı)
-Bu dağıtım bildirimi imzalayan yayımcı hakkında bilgi içerir.
+# <a name="ltpublisheridentitygt-element-clickonce-deployment"></a>&lt;publisherIdentity &gt; öğesi (ClickOnce dağıtımı)
+Bu dağıtım bildirimini imzalayan yayımcı hakkındaki bilgileri içerir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <publisherIdentity
@@ -36,18 +36,18 @@ Bu dağıtım bildirimi imzalayan yayımcı hakkında bilgi içerir.
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `publisherIdentity` Öğesi imzalı bildirimler için gereklidir. Aşağıdaki tabloda, öznitelikleri gösterir `publisherIdentity` öğeyi destekler.
+ `publisherIdentity`İmzalı bildirimler için öğesi gereklidir. Aşağıdaki tabloda, `publisherIdentity` öğesinin desteklediği öznitelikler gösterilmektedir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`name`|Gerekli. Bu uygulamayı yayımlayan taraf kimliğini açıklar.|
-|`issuerKeyHash`|Gerekli. Ortak anahtar sertifika verenin SHA-1 karması içerir.|
+|`name`|Gereklidir. Bu uygulamayı yayımlayan tarafın kimliğini açıklar.|
+|`issuerKeyHash`|Gereklidir. Sertifika verenin ortak anahtarının SHA-1 karmasını içerir.|
 
 #### <a name="parameters"></a>Parametreler
 
 ## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
 
-## <a name="exceptions"></a>Özel Durumlar
+## <a name="exceptions"></a>Özel durumlar
 
 ## <a name="remarks"></a>Açıklamalar
 

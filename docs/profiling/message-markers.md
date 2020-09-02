@@ -1,5 +1,5 @@
 ---
-title: İleti İşaretleyicileri | Microsoft Dokümanlar
+title: İleti Işaretçileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,18 +11,18 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0b668f0331345e6a1022ef79105614f4a22e91d9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62830084"
 ---
 # <a name="message-markers"></a>İleti işaretçileri
-İleti işaretçisi günlük çıktısını temsil eder. İleti, belirli bir zamanda belirli bir iş parçacığı tarafından verilen bir dizedir. İletileri diğer araçlarla kullanılmak üzere bir metin dosyasına dışa aktarabilirsiniz. İleti dizesini görüntülemek için işaretçiyi EşzamanlıLık Görselleştiricisi'ndeki bir iletiye dinleyebilirsiniz. İşaretçiler [raporundaki](../profiling/markers-report.md)tüm ileti işaretçilerini görüntüleyebilirsiniz.  Aşağıdaki resimde bir ileti işaretçisi gösterilmektedir.
+Bir ileti işaretçisi, günlük çıkışını temsil eder. İleti, belirli bir zamanda belirli bir iş parçacığı tarafından verilen bir dizedir. İletileri diğer araçlarla kullanmak üzere bir metin dosyasına dışarı aktarabilirsiniz. İleti dizesini görüntülemek için işaretçiyi eşzamanlılık görselleştiricisi içindeki bir iletiye taşıyabilirsiniz. Ve [işaretçiler raporundaki](../profiling/markers-report.md)tüm ileti işaretleyicilerini görüntüleyebilirsiniz.  Aşağıdaki çizimde bir ileti işaretçisi gösterilmektedir.
 
-## <a name="message-aggregation-markers"></a>İleti toplama işaretleri
- Bazen Eşzamanlılık Görselleştiricisinde birbirine o kadar yakın olan birden çok ileti, tek tek çizilemeyecek şekilde gerçekleşir. Bu durumda, temel iletileri temsil eden bir *ileti toplama işaretçisi* gösterilir. İşaretçiyi bu simgelerden birine dayadığınızda, bir araç ipucu temsil edilen temel ileti sayısını görüntüler. İletileri görüntülemek için yakınlaştırın.  Tüm yolu yakınlaştırır ve yine de bir toplama işaretçisi alırsanız, [Işaretçiler Raporu'nda](../profiling/markers-report.md)temel iletileri görüntüleyebilirsiniz.
+## <a name="message-aggregation-markers"></a>İleti toplama işaretçileri
+ Bazen birden çok ileti meydana gelir ve bu nedenle, eşzamanlılık görselleştiricisi içindeki bir diğeri ayrı olarak çizilemez. Bu gerçekleştiğinde, temel alınan iletileri temsil eden bir *ileti toplama işaretleyicisi* gösterilir. İşaretçiyi Bu simgelerden birine bıraktığınızda, bir araç ipucu temsil edilen temeldeki ileti sayısını görüntüler. İletileri görüntülemek için yakınlaştırın.  Tüm yolu yakınlaştırırsanız ve yine de toplama işaretleyicisi alırsanız, temel alınan iletileri [Işaretçiler raporunda](../profiling/markers-report.md)görüntüleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Eşzamanlı Görselleştirici işaretleri](../profiling/concurrency-visualizer-markers.md)
+- [Eşzamanlılık görselleştiricisi işaretçileri](../profiling/concurrency-visualizer-markers.md)
 - [Eşzamanlılık Görselleştiricisi SDK](../profiling/concurrency-visualizer-sdk.md)

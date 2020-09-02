@@ -16,23 +16,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0f3b22dacdb0192df70f9fcb13b8a228188f129d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62900332"
 ---
 # <a name="clickonce-reference"></a>ClickOnce Başvurusu
-Aşağıdaki sayfalar, ClickOnce uygulamaları göstermek için kullanılan XML dosyalarını yapısını açıklar.
+Aşağıdaki sayfalarda ClickOnce uygulamalarını temsil etmek için kullanılan XML dosyalarının yapısı açıklanır.
 
 ## <a name="in-this-section"></a>Bu bölümde
- [ClickOnce Uygulama Bildirimi](../deployment/clickonce-application-manifest.md)
+ [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)
 
- Listeler ve bir uygulama bildirimi oluşturan öznitelikleri ve öğeleri açıklar.
+ Uygulama bildirimini oluşturan öğeleri ve öznitelikleri listeler ve tanımlar.
 
  [ClickOnce Dağıtım Bildirimi](../deployment/clickonce-deployment-manifest.md)
 
- Listeler ve bir dağıtım bildirimi oluşturan öznitelikleri ve öğeleri açıklar.
+ , Bir dağıtım bildirimi oluşturan öğeleri ve öznitelikleri listeler ve tanımlar.
 
  [Ürün ve Paket Şema Başvurusu](../deployment/product-and-package-schema-reference.md)
 
@@ -40,7 +40,7 @@ Aşağıdaki sayfalar, ClickOnce uygulamaları göstermek için kullanılan XML 
 
  [ClickOnce Yönetilmeyen API Başvurusu](../deployment/clickonce-unmanaged-api-reference.md)
 
- Dfshim.DLL'den yönetilmeyen genel API'ler listeler.
+ dfshim.dll 'ten yönetilmeyen ortak API 'Leri listeler.
 
 ## <a name="reference"></a>Başvuru
 
@@ -51,8 +51,8 @@ Aşağıdaki sayfalar, ClickOnce uygulamaları göstermek için kullanılan XML 
 
 <xref:System.Deployment.Application>
 
- Yönetilen kod içinde ClickOnce destekleyen ortak sınıfların belgelerine başvurmak için bağlantılar sağlar.
+ Yönetilen kod içinde ClickOnce 'ı destekleyen ortak sınıfların başvuru belgelerine bağlantılar sağlar.
 
  [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)
 
- İzlenecek yollar sağlar ve nasıl-için ClickOnce görevleri gerçekleştiren kullanıcının.
+ , ClickOnce görevlerini gerçekleştiren izlenecek yollar ve nasıl yapılır.

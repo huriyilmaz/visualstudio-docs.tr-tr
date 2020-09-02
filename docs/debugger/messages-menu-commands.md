@@ -11,17 +11,17 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 283d079d01c5395b542a68b37b73c638702e7cda
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62845896"
 ---
 # <a name="messages-menu-commands"></a>İletiler Menü Komutları
-**İletileri** menü, ileti görüntülemeleri denetlemek için komutları sağlar.
+**İletiler** menüsü, ileti görünümlerini denetlemek için komutlar sağlar.
 
- **Başlat/Durdur günlüğü** başlatıldığında veya durdurulduğunda yapılacak görüntüleyin.
+ **Günlüğü Başlat/Durdur** İleti görünümünü başlatır veya sonlandırır.
 
- **Günlüğe kaydetme seçeneklerini** açılır **MessageOptions** iletişim kutusu, ileti arama ölçütleri belirtebileceğiniz.
+ **Günlüğe kaydetme seçenekleri** İleti arama ölçütlerini belirtebileceğiniz **MessageOptions** iletişim kutusunu açar.
 
- **Günlüğü Temizle** etkin iletiler görünümünü içeriğini temizler.
+ **Günlüğü Temizle** Etkin Iletiler görünümünün içeriğini temizler.

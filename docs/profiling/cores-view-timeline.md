@@ -1,5 +1,5 @@
 ---
-title: Cores View Zaman Çizelgesi | Microsoft Dokümanlar
+title: Çekirdekler görünümü zaman çizelgesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,15 +13,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7ae006788f2704459de7ef32f01385e196e28c04
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62553116"
 ---
-# <a name="cores-view-timeline"></a>Cores Zaman çizelgesini görüntüleyin
-Zaman çizelgesindeki her satır, profilli sistemdeki mantıksal bir işlemci çekirdeğini temsil eder. Her satır için yatay eksen, belirli bir noktada hangi iş parçacığının mantıksal bir çekirdek üzerinde çalıştığını gösterir. İş parçacığı tanımlayan bir araç ipucu nu döndürmek için zaman çizelgesindeki ilgi çekici rengin üzerinde gezinebilirsiniz. İş parçacığı tanımlamasına yardımcı olmak için, pencerenin altındaki gösterge her rengin neyi temsil eder olduğunu gösterir. Yakınlaştırma aracını kullanarak yakınlaştırıp uzaklaştırın, tıklatArak ve sürükleyerek veya CTRL tuşuna basarak ve fare tekerleğini hareket ettirerek kullanın. Cores View ve Threads View arasında geçiş yaptığınızda yakınlaştırma tutarlılığı korunur.
+# <a name="cores-view-timeline"></a>Çekirdekler görünümü zaman çizelgesi
+Zaman çizelgesindeki her satır, profili oluşturulmuş sistemdeki mantıksal bir işlemci çekirdeğini temsil eder. Her satır için yatay eksen, belirli bir noktadaki mantıksal bir çekirdek üzerinde hangi iş parçacığının çalıştığını gösterir. İş parçacığını tanımlayan bir araç ipucunu döndürmek için bir zaman çizelgesinde ilgilendiğiniz bir rengin üzerine gelebilmeniz gerekir. İş parçacığı kimliği konusunda yardımcı olmak için pencerenin alt kısmındaki gösterge, her rengin ne temsil ettiğini gösterir. Yakınlaştırmak ve kapatmak için Yakınlaştır aracını kullanın ve CTRL tuşuna basarak veya fare tekerleğini taşıyarak yakınlaştırın. Çekirdek görünümü ve Iş parçacıkları görünümü arasında geçiş yaptığınızda yakınlaştırma tutarlılığı sürdürülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çekirdekler Görünümü](../profiling/cores-view.md)
-- [Yakınlaştırma denetimi (İş Parçacığı Görünümü)](../profiling/zoom-control-threads-view.md)
+- [Yakınlaştırma denetimi (Iş parçacıkları görünümü)](../profiling/zoom-control-threads-view.md)

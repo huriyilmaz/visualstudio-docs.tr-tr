@@ -1,5 +1,5 @@
 ---
-title: VSTU tarafından oluşturulan Proje Dosyalarını Özelleştir | Microsoft Dokümanlar
+title: VSTU tarafından oluşturulan proje dosyalarını özelleştirme | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2018
 ms.technology: vs-unity-tools
@@ -11,17 +11,17 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: ad52e9f97dfbb9a5d0b3d65085c6c2627ccb2232
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62819535"
 ---
 # <a name="customize-project-files-created-by-vstu"></a>VSTU tarafından oluşturulan proje dosyalarını özelleştirme
-Visual Studio Tools for Unity, proje dosyası oluşturma sırasında Unity tarzı bir geri arama sağlar. Proje dosyasını `VisualStudioIntegration.ProjectFileGeneration` yeniden oluşturulduğunda değiştirmek için olaya kaydolun.
+Unity için Visual Studio Araçları proje dosyası oluşturma sırasında Unity stili geri çağırma sağlar. `VisualStudioIntegration.ProjectFileGeneration`Her oluşturulduğunda proje dosyasını değiştirmek için olaya kaydolun.
 
 ## <a name="demonstrates"></a>Gösteriler
- Visual Studio Tools for Unity tarafından oluşturulan Visual Studio proje dosyalarının nasıl özelleştirileni.
+ Unity için Visual Studio Araçları tarafından oluşturulan Visual Studio proje dosyalarını özelleştirme.
 
 ## <a name="example"></a>Örnek
 
@@ -70,4 +70,4 @@ public class ProjectFileHook
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Örnek: Günlük geri arama](../cross-platform/share-the-unity-log-callback-with-vstu.md)
+ [Örnek: günlük geri arama](../cross-platform/share-the-unity-log-callback-with-vstu.md)

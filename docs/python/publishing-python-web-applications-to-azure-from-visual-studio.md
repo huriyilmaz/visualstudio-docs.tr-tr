@@ -1,6 +1,6 @@
 ---
-title: Python uygulamasını Azure Uygulama Hizmetinde yayımlama
-description: Git dağıtımı ve Linux için kapsayıcılar ve IIS'de dağıtım dahil olmak üzere Bir Python uygulamasını Azure Uygulama Hizmetine yayımlama seçenekleri.
+title: Azure App Service için bir Python uygulaması yayımlama
+description: Bir Python uygulamasını Linux için git dağıtımı ve kapsayıcıları ve IIS 'e dağıtma dahil olmak üzere Azure App Service yayımlama seçenekleri.
 ms.date: 03/13/2019
 ms.topic: conceptual
 author: JoshuaPartlow
@@ -12,40 +12,40 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: c3c8d6c16f2f7e432b6b5e988bf63521f3dfc8c0
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62784121"
 ---
 # <a name="publish-to-azure-app-service"></a>Azure App Service’e yayımlama
 
-Şu anda Python, Linux için Azure Uygulama Hizmeti'nde desteklenir ve bu makalede açıklandığı gibi [Git dağıtımı](#publish-to-app-service-on-linux-using-git-deploy) ve [kapsayıcıları](#publish-to-app-service-on-linux-using-containers)kullanarak uygulamaları yayımlayabilirsiniz.
+Mevcut olduğunda Python, Linux için Azure App Service desteklenir ve bu makalede açıklandığı gibi [Git dağıtımı](#publish-to-app-service-on-linux-using-git-deploy) ve [kapsayıcıları](#publish-to-app-service-on-linux-using-containers)kullanarak uygulama yayımlayabilirsiniz.
 
 > [!Note]
-> Windows için Azure Uygulama Hizmeti'ndeki Python desteği resmi olarak küçümsür. Sonuç olarak, Visual Studio'daki **Yayımla** komutu yalnızca bir [IIS hedefi](#publish-to-iis)için resmi olarak desteklenir ve Azure Uygulama Hizmeti'nde uzaktan hata ayıklama artık resmi olarak desteklenmez.
+> Windows için Azure App Service Python desteği resmi olarak kullanım dışıdır. Sonuç olarak, Visual Studio 'daki **Yayımla** komutu resmi olarak yalnızca bir [IIS hedefi](#publish-to-iis)için desteklenir ve Azure App Service üzerinde uzaktan hata ayıklama artık resmi olarak desteklenmez.
 >
-> Ancak, Windows'daki Uygulama Hizmeti için Python uzantıları kullanılabilir durumda kaldığından, ancak servis edilmeyeceğini veya güncelleştirilmediği için, [Windows'da Uygulama Hizmeti'ne Yayımlama](publish-to-app-service-windows.md) özellikleri şimdilik hala çalışır.
+> Ancak Windows özelliklerinde [App Service yayımlama](publish-to-app-service-windows.md) , windows üzerinde App Service için Python uzantıları kullanılabilir olmaya devam ettiğinden, ancak hizmet verilmeyecektir veya güncelleştirilemediği için yine de çalışır.
 
-## <a name="publish-to-app-service-on-linux-using-git-deploy"></a>Git dağıtımı kullanarak Linux'ta Uygulama Hizmetine yayımlama
+## <a name="publish-to-app-service-on-linux-using-git-deploy"></a>Git dağıtımını kullanarak Linux üzerinde App Service yayımlama
 
-Git deploy, Linux'taki bir Uygulama Hizmetini git deposunun belirli bir şubesine bağlar. Bu şubeye kod işlemek Otomatik Olarak App Hizmetine dağıtır ve Uygulama *Hizmeti, requirements.txt'de*listelenen bağımlılıkları otomatik olarak yükler. Bu durumda, Linux'taki App Service kodunuzu Gunicorn web sunucusunu kullanan önceden yapılandırılmış bir kapsayıcı görüntüsünde çalıştırın. Şu anda, bu hizmet Önizleme'dedir ve üretim kullanımı için desteklenmez.
+Git Deploy, Linux üzerinde App Service bir git deposunun belirli bir dalına bağlar. Bu dala kod yürütme, otomatik olarak App Service dağıtır ve App Service *requirements.txt*listelenen tüm bağımlılıkları otomatik olarak yüklüyor. Bu durumda, Linux üzerinde App Service, kodunuzu Gunic, Web sunucusunu kullanan önceden yapılandırılmış bir kapsayıcı görüntüsünde çalıştırır. Bu hizmet, şu anda önizleme aşamasındadır ve üretim kullanımı için desteklenmez.
 
 Daha fazla bilgi için Azure belgelerinde aşağıdaki makalelere bakın:
 
-- [Hızlı başlangıç: Uygulama Hizmeti'nde bir Python web uygulaması oluşturun,](/azure/app-service/containers/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json) basit bir Flask uygulamasını ve yerel bir Git deposundan dağıtım kullanarak Git dağıtma işleminin kısa bir geçiş sürecini sağlar.
-- [Python nasıl yapılandırılabilen](/azure/app-service/containers/how-to-configure-python) Linux kapsayıcısındaki Uygulama Hizmetinin özelliklerini ve uygulamanız için Gunicorn başlangıç komutunu nasıl özelleştireceğimiz açıklanır.
+- [Hızlı başlangıç: App Service bir Python web uygulaması oluşturma](/azure/app-service/containers/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json) basit bir Flask uygulaması ve yerel bir git deposundan dağıtım kullanılarak git dağıtım işlemine kısa bir yol sağlar.
+- [Python 'u yapılandırma](/azure/app-service/containers/how-to-configure-python) Linux kapsayıcısında App Service özelliklerini açıklar ve uygulamanız Için gunicgınstartup komutunu nasıl özelleştireceğinizi açıklar.
 
-## <a name="publish-to-app-service-on-linux-using-containers"></a>Kapsayıcıları kullanarak Linux'ta Uygulama Hizmetine yayımlama
+## <a name="publish-to-app-service-on-linux-using-containers"></a>Kapsayıcıları kullanarak Linux üzerinde App Service yayımlama
 
-Linux'ta App Service ile önceden oluşturulmuş konteynere güvenmek yerine, kendi konteynırınızı sağlayabilirsiniz. Bu seçenek, hangi web sunucularını kullandığınızı seçmenize ve kapsayıcının davranışını özelleştirmenize olanak tanır.
+Linux üzerinde App Service önceden oluşturulmuş kapsayıcıya güvenmek yerine kendi kapsayıcınızı sağlayabilirsiniz. Bu seçenek, kullandığınız Web sunucularını seçmenizi ve kapsayıcının davranışını özelleştirmenizi sağlar.
 
-Kapsayıcıoluşturmak, yönetmek ve itmek için iki seçenek vardır:
+Kapsayıcıları derlemek, yönetmek ve göndermek için iki seçenek vardır:
 
-- Visual Studio Code ve Docker uzantısını kullanın, [Docker Konteynerlerini kullanarak Python'u Dağıt'ta](https://code.visualstudio.com/docs/python/tutorial-deploy-containers)açıklandığı gibi. Visual Studio Code'u kullanmasanız bile, makale, üretime hazır uwsgi ve nginx web sunucularını kullanarak Flask ve Django uygulamaları için konteyner görüntüleri oluşturma konusunda yararlı ayrıntılar sağlar. Daha sonra aynı kapsayıcıyı Azure CLI'yi kullanarak dağıtabilirsiniz.
+- [Docker kapsayıcılarını kullanarak Python dağıtma](https://code.visualstudio.com/docs/python/tutorial-deploy-containers)bölümünde açıklandığı gibi Visual Studio Code ve Docker uzantısını kullanın. Visual Studio Code kullanmasanız bile, bu makalede, üretim-Ready uwsgi ve NGINX web sunucularını kullanarak Flask ve Docgo uygulamalarına yönelik kapsayıcı görüntüleri oluşturmaya yönelik faydalı Ayrıntılar sunulmaktadır. Azure CLı kullanarak aynı kapsayıcıyı dağıtabilirsiniz.
 
-- Azure belgelerinde [özel bir Docker görüntüsünü kullanma'da](/azure/app-service/containers/tutorial-custom-docker-image) açıklandığı gibi komut satırını ve Azure CLI'yi kullanın. Ancak bu kılavuz geneldir ve Python'a özgü değildir.
+- Azure belgelerindeki [özel bir Docker görüntüsü kullanma](/azure/app-service/containers/tutorial-custom-docker-image) bölümünde açıklandığı gibi, komut satırını ve Azure CLI 'yi kullanın. Bu kılavuz genel, ancak ve Python 'a özgü değildir.
 
-## <a name="publish-to-iis"></a>IIS'de yayımlayın
+## <a name="publish-to-iis"></a>IIS 'de Yayımla
 
-Visual Studio'dan, **Yayımla** komutuyla Windows sanal makinesine veya IIS özellikli başka bir bilgisayara yayımlayabilirsiniz. IIS'yi kullanırken, uygulamada Python yorumlayıcısını nerede bulacağını gösteren bir *web.config* dosyası oluşturduğunuzdan veya değiştirdiğinden emin olun. Daha fazla bilgi [için IIS için web uygulamalarını yapılandır'a](configure-web-apps-for-iis-windows.md)bakın.
+Visual Studio 'da **Yayımla** komutuyla bir Windows sanal makinesine veya diğer IIS özellikli bilgisayarlara yayımlayabilirsiniz. IIS kullanırken, uygulamada Python yorumlayıcısını bulma konusunda IIS 'ye bildiren bir *web.config* dosyası oluşturmayı veya değiştirmeyi unutmayın. Daha fazla bilgi için bkz. [IIS için Web uygulamalarını yapılandırma](configure-web-apps-for-iis-windows.md).

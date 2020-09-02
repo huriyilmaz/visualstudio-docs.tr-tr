@@ -1,5 +1,5 @@
 ---
-title: Uzak araçları indirme engelini kaldırma
+title: Uzak Araçlar indirmenin engellemesini kaldır
 ms.date: 07/19/2018
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -10,49 +10,49 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8a243033bf5831952d83fdf688302651e02b76b7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62903036"
 ---
-# <a name="how-to-unblock-the-download-of-the-remote-tools-on-windows-server"></a>Nasıl yapılır: Windows Server'da uzak Araçlar'ın indirme engelini kaldırma
+# <a name="how-to-unblock-the-download-of-the-remote-tools-on-windows-server"></a>Nasıl yapılır: Windows Server 'da uzak araçların indirilmesini kaldırma
 
-Varsayılan güvenlik ayarlarını Internet Explorer'da Windows Server bileşenleri gibi uzak araçları indirmek zaman yapabilirsiniz.
+Windows Server 'da Internet Explorer 'daki varsayılan güvenlik ayarları, uzak Araçlar gibi bileşenlerin indirileceği zaman alıcı olabilir.
 
-* Web siteleri açarak ve kaynağı içeren etki alanını açıkça izin verilmediği sürece web kaynaklara erişimi engeller Internet Explorer Artırılmış Güvenlik Yapılandırması etkin (diğer bir deyişle, güvenilen). Bu ayarı devre dışı olsa da, bir güvenlik riski sunabilir çünkü bunu önermiyoruz.
+* Gelişmiş güvenlik yapılandırması, Internet Explorer 'da etkinleştirilir ve bu da, kaynağı içeren etki alanına açıkça izin verilmediği (yani, güvenilen) Web sitelerini açmanızı ve Web kaynaklarına erişmenizi önler. Bu ayarı devre dışı bırakabilseniz de, bir güvenlik riski sunabileceğinden bunu önermiyoruz.
 
-* Windows Server 2016, bir varsayılan ayarı **Internet Seçenekleri** > **güvenlik** > **Internet**  >   **Özel düzey** > **indirir** ayrıca indirmeler devre dışı bırakır dosya. Doğrudan Windows Server'da uzak araçları indirmek isterseniz, dosya indirme etkinleştirmeniz gerekir.
+* Windows Server 2016 ' de, **Internet seçenekleri**  >  **güvenliği**  >  **Internet**  >  **özel düzeyi**  >  **indirmelerinde** varsayılan ayar dosya indirmelerini devre dışı bırakır. Uzak araçları doğrudan Windows Server 'a indirmeyi seçerseniz, dosya indirmeyi etkinleştirmelisiniz.
 
-Windows Server'da araçları indirmek için aşağıdakilerden birini öneririz:
+Araçları Windows Server 'a indirmek için aşağıdakilerden birini öneririz:
 
-* Çalışan bir Visual Studio gibi farklı bir bilgisayarda Uzak araçları indirmek ve ardından kopyalama *.exe* Windows Server'a dosya.
+* Uzak araçları, Visual Studio çalıştıran bir bilgisayar gibi farklı bir bilgisayara indirin ve ardından *. exe* dosyasını Windows Server 'a kopyalayın.
 
-* Uzaktan hata ayıklayıcıyı çalıştırmak [bir dosya paylaşımından](../debugger/remote-debugging.md#fileshare_msvsmon) Visual Studio makinenizde.
+* Uzaktan hata ayıklayıcıyı Visual Studio makinenizde [bir dosya paylaşımından](../debugger/remote-debugging.md#fileshare_msvsmon) çalıştırın.
 
-* Doğrudan Windows Server'da uzak araçları indirmek ve Güvenilen siteler eklemek için istemleri kabul edin. Bu çok sayıda istemleri neden olabilir, böylece Modern Web siteleri genellikle çok sayıda üçüncü taraf kaynakları içerir. Ayrıca, yeniden yönlendirilen bağlantıları el ile eklenmesi gerekebilir. Yükleme başlamadan önce bazı Güvenilen siteler eklemek seçebilirsiniz. Git **Internet Seçenekleri > Güvenlik > Güvenilen siteler > siteleri** ve aşağıdaki siteleri ekleyin.
+* Uzak araçları doğrudan Windows Server 'a indirin ve güvenilen siteler eklemek için istemleri kabul edin. Modern Web siteleri çoğunlukla birçok üçüncü taraf kaynağı içerir, bu nedenle bu çok sayıda istem oluşmasına neden olabilir. Ayrıca, yeniden yönlendirilen bağlantıların el ile eklenmesi gerekebilir. İndirilmeye başlamadan önce bazı güvenilen siteleri eklemeyi tercih edebilirsiniz. **Güvenlik > güvenilen siteler > siteleri > Internet seçenekleri** ' ne gidin ve aşağıdaki siteleri ekleyin.
 
   * visualstudio.microsoft.com
-  * download.VisualStudio.microsoft.com
+  * download.visualstudio.microsoft.com
   * hakkında: boş
 
-  My.visualstudio.com hata ayıklayıcıyı eski sürümleri için oturum açma başarılı olduğundan emin olmak için bu ek siteleri ekleyin:
+  My.visualstudio.com üzerindeki hata ayıklayıcının eski sürümleri için, oturum açmanın başarılı olduğundan emin olmak için bu ek siteleri ekleyin:
 
-  * Microsoft.com
+  * microsoft.com
   * go.microsoft.com
   * download.microsoft.com
   * my.visualstudio.com
   * login.microsoftonline.com
-  * Login.live.com
+  * login.live.com
   * secure.aadcdn.microsoftonline-p.com
   * msft.sts.microsoft.com
-  * auth.Gfx.MS
+  * auth.gfx.ms
   * app.vssps.visualstudio.com
   * vlscppe.microsoft.com
   * query.prod.cms.rt.microsoft.com
 
-    Uzak Araçlar'ı indirirken bu etki alanları eklemek seçin ve sonra seçin, **Ekle** istendiğinde.
+    Uzak araçları indirirken bu etki alanlarını eklemeyi seçerseniz, istendiğinde **Ekle** ' yi seçin.
 
     ![Engellenen içerik iletişim kutusu](../debugger/media/remotedbg-blocked-content.png)
 
-    Yazılımı indirdiğinizde, çeşitli web sitesi komut dosyaları ve kaynakları yüklemeye izin vermek için bazı ek istekler alın. My.VisualStudio.com üzerinde oturum açma başarılı olduğundan emin olmak için ek etki alanlarını eklemenizi öneririz.
+    Yazılımı indirdiğinizde, çeşitli web sitesi betikleri ve kaynakları yüklemeye izin vermek için bazı ek istekler alırsınız. My.visualstudio.com 'de, oturum açma işleminin başarılı olduğundan emin olmak için ek etki alanları eklemenizi öneririz.

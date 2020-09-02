@@ -1,5 +1,5 @@
 ---
-title: Pencere menü komutları | Microsoft Docs
+title: Pencere menüsü komutları | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,25 +11,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a0d6332be7049d575b15c229b5892112fc972895
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62900973"
 ---
 # <a name="window-menu-commands"></a>Pencere Menü Komutları
-**Penceresi** menü Spy ++ windows yönetmek için komutlar sağlar.
+**Pencere** menüsü, Spy + + pencerelerini yönetmek için komutlar sağlar.
 
- **Art arda** cascade desenindeki tüm windows yeniden düzenler.
+ **Basamakla** Basamaklı bir düzende tüm pencereleri yeniden düzenler.
 
- **Yatay Döşe** Yatay Döşe desenindeki tüm windows yeniden düzenleyin.
+ **Yatay Döşe** Yatay döşeme düzeninde tüm pencereleri yeniden düzenleyin.
 
- **Dikey Döşe** Dikey Döşe desenindeki tüm windows yeniden düzenler.
+ **Dikey Döşe** Dikey döşeme düzeninde tüm pencereleri yeniden düzenler.
 
- **Simgeleri Düzenle** windows küçülttüğünüzde görünümünü simgeleri yeniden düzenler.
+ **Simgeleri Düzenle** Windows simge durumuna küçültülmüş ise görünüm simgelerini yeniden düzenler.
 
- **Kapat / Tümünü Kapat** Spy ++'ta bir ya da tüm windows kapatır.
+ **Tümünü Kapat/Kapat** Spy + + ' daki bir veya tüm pencereleri kapatır.
 
- **Yenileme** seçili Görünümü yeniler.
+ **Yenile** Şu anda seçili olan görünümü yeniler.
 
- **Pencere** belirli bir pencere seçilmesine izin verir.
+ **Pencere** Belirli bir pencerenin seçimine izin verir.

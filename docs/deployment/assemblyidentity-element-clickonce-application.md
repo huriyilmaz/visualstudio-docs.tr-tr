@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyIdentity&gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
+title: '&lt;AssemblyIdentity &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7870fcf644103ec7f048a809e439cb962f63bd07
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62900673"
 ---
-# <a name="ltassemblyidentitygt-element-clickonce-application"></a>&lt;assemblyIdentity&gt; öğesi (ClickOnce uygulaması)
-Dağıtılan uygulamayı tanımlayan bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım.
+# <a name="ltassemblyidentitygt-element-clickonce-application"></a>&lt;AssemblyIdentity &gt; öğesi (ClickOnce uygulaması)
+Bir dağıtımda dağıtılan uygulamayı tanımlar [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 
@@ -40,20 +40,20 @@ Dağıtılan uygulamayı tanımlayan bir [!INCLUDE[ndptecclick](../deployment/in
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `assemblyIdentity` Öğesi gereklidir. Alt öğe içerir ve aşağıdaki özniteliklere sahiptir.
+ `assemblyIdentity`Öğe gereklidir. Alt öğesi içermez ve aşağıdaki özniteliklere sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Name`|Gerekli. Uygulamanın adını tanımlar.<br /><br /> Varsa `Name` özel karakterler içeriyor ve tek veya çift tırnak gibi uygulama etkinleştirmesi başarısız olabilir.|
-|`Version`|Gerekli. Uygulamanın sürüm numarası şu biçimde belirtir: `major.minor.build.revision`|
-|`publicKeyToken`|İsteğe bağlı. Son 8 baytını temsil eden 16 karakterlik bir onaltılık dize belirtir `SHA-1` altında derleme veya uygulama imzalanan ortak anahtarı değerini karma. Katalog imzalamak için kullanılan ortak anahtar, 2048 bit olmalıdır veya büyük.<br /><br /> Bu öznitelik, bir derlemeyi imzalamayı önerilir ancak isteğe bağlı olsa da gereklidir. Bir derlemeyi imzalı değilse, değeri otomatik olarak imzalanan bir derlemeden kopyalama ya da sıfır "kukla" değerini kullanın.|
-|`processorArchitecture`|Gerekli. İşlemciyi belirtir. Geçerli değerler `msil` tüm işlemciler için `x86` 32-bit Windows için `IA64` 64 bit Windows için ve `Itanium` Intel 64-bit Itanium işlemcilere için.|
-|`language`|Gerekli. İki bölümü dil kodlarını tanımlar (örneğin, `en-US`) derlemenin. Bu öğe `asmv2` ad alanı. Belirtilmemişse, varsayılan değer `neutral`.|
+|`Name`|Gereklidir. Uygulamanın adını tanımlar.<br /><br /> `Name`Tek veya çift tırnak gibi özel karakterler içeriyorsa, uygulama etkinleştiremeyebilir.|
+|`Version`|Gereklidir. Uygulamanın sürüm numarasını aşağıdaki biçimde belirtir: `major.minor.build.revision`|
+|`publicKeyToken`|İsteğe bağlı. `SHA-1`Uygulamanın veya derlemenin imzalandığı ortak anahtarın karma değerinin son 8 baytını temsil eden 16 karakterlik bir onaltılık dize belirtir. Kataloğu imzalamak için kullanılan ortak anahtar 2048 bit veya daha büyük olmalıdır.<br /><br /> Bir derlemeyi imzalamak önerilse ancak isteğe bağlı olsa da, bu öznitelik gereklidir. Bir bütünleştirilmiş kod imzasız ise, kendinden imzalı bir derlemeden bir değer kopyalamanız veya tümü sıfırlardan oluşan bir "kukla" değeri kullanmanız gerekir.|
+|`processorArchitecture`|Gereklidir. İşlemciyi belirtir. Geçerli değerler `msil` tüm işlemciler için `x86` 32 bit windows, `IA64` 64 bit Windows için ve `Itanium` Intel 64 bit Itanium işlemcilere yöneliktir.|
+|`language`|Gereklidir. Derlemenin iki bölümden oluşan dil kodlarını tanımlar (örneğin, `en-US` ). Bu öğe `asmv2` ad alanıdır. Belirtilmemişse, varsayılan olur `neutral` .|
 
 ## <a name="examples"></a>Örnekler
 
 ### <a name="description"></a>Açıklama
- Aşağıdaki kod örneğinde gösterilmiştir bir `assemblyIdentity` öğesinde bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama bildirimi. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md).
+ Aşağıdaki kod örneği `assemblyIdentity` bir uygulama bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu kod örneği, [ClickOnce uygulama bildiriminde](../deployment/clickonce-application-manifest.md)sağlanmış daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
 
@@ -68,5 +68,5 @@ Dağıtılan uygulamayı tanımlayan bir [!INCLUDE[ndptecclick](../deployment/in
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
-- [\<assemblyIdentity > öğesi](../deployment/assemblyidentity-element-clickonce-deployment.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [\<assemblyIdentity> dosyalarında](../deployment/assemblyidentity-element-clickonce-deployment.md)

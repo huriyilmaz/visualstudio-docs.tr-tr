@@ -1,5 +1,5 @@
 ---
-title: İletiler sekmesi, ileti seçenekleri iletişim kutusu | Microsoft Docs
+title: İletiler sekmesi, Ileti seçenekleri Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,31 +11,31 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: de50e6fe997ce10266cbb51f2fd91c318ab2bd1f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62905538"
 ---
 # <a name="messages-tab-message-options-dialog-box"></a>İletiler Sekmesi, İleti Seçenekleri İletişim Kutusu
-Kullanım **iletileri** listesine ileti türlerini seçmek için sekmesinde [iletiler görünümünü](../debugger/messages-view.md)ve ileti arama ölçütlerini belirtmek için. Görüntülenecek [ileti seçenekleri iletişim kutusu](../debugger/message-options-dialog-box.md), seçin **günlük iletilerini** gelen **Spy** menüsü.
+İleti [görünümünde](../debugger/messages-view.md)listelemek istediğiniz ileti türlerini seçmek ve ileti arama ölçütlerini belirtmek için **iletiler** sekmesini kullanın. [Ileti seçenekleri Iletişim kutusunu](../debugger/message-options-dialog-box.md)göstermek için **Spy** menüsünde **günlük iletileri** ' ni seçin.
 
- Genellikle, ilk kez seçtiğinizde **ileti grupları**ve seçim tek tek seçerek ince ayar yapma **görünümüne iletileri**. **Tüm** düğmesini seçer tüm ileti türleri ve **hiçbiri** düğmesi tüm türleri temizler.
+ Genellikle, önce **Ileti grupları**' nı seçin ve ardından **görüntülenecek iletileri**tek tek seçerek seçimi hassas şekilde ayarlayabilirsiniz. All **düğmesi tüm** ileti türlerini seçer ve **hiçbiri** düğmesi tüm türleri temizler.
 
- Aşağıdaki ayarlar kullanılabilir **iletileri** sekmesinde:
+ **İletiler** sekmesinde aşağıdaki ayarlar kullanılabilir:
 
- **İletiler görünümü** belirli iletileri görüntülemek için seçin. Yeni bir ileti penceresinde oluşturduğunuzda, onu tüm iletileri görüntüleyebilirsiniz. Filtre zaman gelen iletileri **iletileri** sekmesinde, filtre yalnızca uygulandığı yeni iletileri, zaten Windows görünümünde görüntülenen iletileri.
+ **Görüntülenecek iletiler** Görüntülenecek belirli iletileri seçin. Yeni bir Iletiler penceresi oluşturduğunuzda, tüm iletiler görüntülenebilir. İletileri **iletiler** sekmesinden filtreleyerek, bu filtre yalnızca yeni iletiler için geçerlidir, Windows görünümünde zaten görüntülenmiş iletiler değildir.
 
- **İleti grupları** görüntülemek için ileti grupları seçin. Kullanılabilir gruplar şunlardır:
+ **Ileti grupları** Görüntülenecek ileti gruplarını seçin. Kullanılabilir gruplar şunlardır:
 
-- WM_USER: bir kod ile büyüktür veya eşittir WM_USER
+- WM_USER: WM_USER büyük veya eşit bir kodla
 
-- Kayıtlı: kayıtlı **RegisterWindowMessage** çağırın
+- Kaydedildi: **RegisterWindowMessage** çağrısıyla kaydedilir
 
-- Bilinmiyor: Bilinmeyen iletileri 0 aralığındaki (WM_USER - 1)
+- Bilinmiyor: 0 ile arasında bilinmeyen iletiler (WM_USER-1)
 
-  Unutmayın bu **ileti grupları** altında belirli girdiler için eşlemeyin **iletiler için görünümü**. Bir grubu seçtiğinizde, doğrudan ileti akışına seçimi uygulanır.
+  Bu **Ileti gruplarının** , **görüntülenecek iletiler**altındaki belirli girdilerle eşlemediğine unutmayın. Bir grup seçtiğinizde, seçim doğrudan ileti akışına uygulanır.
 
-  Gri bir onay kutusu içinde **ileti grupları** belirten **iletiler için görünümü** liste kutusu, o gruptaki iletileri değiştirildi; ileti türlerini o gruptaki tüm seçilir.
+  **Ileti grupları** içindeki gri onay kutusu, görüntülenecek **iletiler** liste kutusunda o gruptaki iletiler için değiştirildiğini belirtir; Bu gruptaki ileti türlerinin hepsi seçili değil.
 
-  **Ayarları varsayılan olarak Kaydet** ileti arama seçenekleri daha sonra kullanmak için geçerli ayarları kaydedin. Bu ayarlar, ayrıca Spy ++ çıkarken kaydedilir.
+  **Ayarları varsayılan olarak kaydet** Geçerli ayarları daha sonra ileti arama seçenekleri olarak kullanmak üzere kaydedin. Bu ayarlar, Spy + + ' dan çıkıldığında da kaydedilir.

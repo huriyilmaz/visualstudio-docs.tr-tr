@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Cihaz durumu nedeniyle nesnelerin eksikliği | Microsoft Docs'
+title: 'İzlenecek yol: cihaz durumu nedeniyle nesneler eksik | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1b0d2bbd-0729-4aa5-8308-70c5bf1468c5
@@ -9,99 +9,99 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0e85aa8fc5af3f32f117b112e8624962a49d90c6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62895456"
 ---
 # <a name="walkthrough-missing-objects-due-to-device-state"></a>İzlenecek yol: Cihaz Durumu Nedeniyle Eksik Nesneler
-Bu izlenecek yolda nasıl kullanılacağını gösterir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nedeni eksik bir nesne incelemek için grafik Tanılama, cihaz durumu yanlış.
+Bu izlenecek yol [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , hatalı yapılandırılmış cihaz durumu nedeniyle eksik olan bir nesneyi araştırmak için grafik tanılama nasıl kullanacağınızı gösterir.
 
- Bu izlenecek yol gösterir nasıl yapılır:
+ Bu izlenecek yol, nasıl yapılacağını göstermektedir:
 
-- Kullanım **grafik olay listesi** olası sorun kaynaklarını bulmak için.
+- Sorunun olası kaynaklarını bulmak için **grafik olay listesi** ' ni kullanın.
 
-- Kullanım **grafik ardışık düzen aşamaları** etkisini denetlemek için pencere `DrawIndexed` Direct3D API'sini çağırır.
+- Direct3D API çağrılarının etkisini denetlemek için **grafik ardışık düzen aşamaları** penceresini kullanın `DrawIndexed` .
 
-- Kullanım **grafik piksel geçmişi** sorunu daha ayrıntılı belirtmek gerekirse bulunacak penceresi.
+- Sorunu daha özel olarak bulmak için **Grafik piksel geçmişi** penceresini kullanın.
 
-- Olası sorunları veya yanlış yapılandırmalar için cihaz durumunu inceleyin.
+- Olası sorunlar veya yapılandırma hataları için cihaz durumunu inceleyin.
 
 ## <a name="scenario"></a>Senaryo
- Nedenlerden biri dolayısıyla nesneler, 3B bir uygulamada nereye beklenen görünmeyebilir olduğundan işleme çıkarılacak nesneleri neden olur grafik cihazlarının yanlış yapılandırma — Örneğin, Sarım düzeni sebep olduğunda hata culled üçgen , veya Derinlik test işlevi sebep olduğunda tüm piksel nesneyi reddedilir.
+ Nesnelerin bir 3-b uygulamada beklendikleri yerde görünmemesinin nedenlerinden biri, grafik cihazının bir hatalı şekilde (örneğin, sargı sırası bir hata nedeniyle ortaya çıkarılmasına neden olur) veya derinlik testi işlevinin nesnedeki tüm piksellerin reddedilmesine neden olmasına neden olabilir.
 
- Bu kılavuzda açıklanan senaryoda, yalnızca ilk aşama 3-b uygulama geliştirmede ulaştınız ve ilk kez test etmeye hazırsınız. Bununla birlikte, uygulamayı çalıştırdığınızda, yalnızca kullanıcı arabirimi ekranı işlenir. Böylece uygulamanın hatalarını ayıklayabilir miyim grafik tanılamayı kullanarak sorunu bir grafik günlük dosyasına yakalayın. Sorun, uygulamada şu şekilde görünür:
+ Bu kılavuzda açıklanan senaryoda, 3-b Uygulamanızı geliştirmede ilk kilometre taşına ulaştınız ve ilk kez test etmeye hazırsınız. Ancak, uygulamayı çalıştırdığınızda yalnızca kullanıcı arabirimi ekranda işlenir. Grafik Tanılama kullanarak, uygulamanın hatalarını ayıklayabilmeniz için sorunu bir grafik günlük dosyasına yakalarsınız. Sorun uygulamada şöyle görünür:
 
- ![Sorun çözülmezse önce uygulamayı](media/vsg_walkthru1_firstview.png "vsg_walkthru1_firstview")
+ ![Sorun düzeltilme öncesi uygulama](media/vsg_walkthru1_firstview.png "vsg_walkthru1_firstview")
 
- Grafik sorunlarını grafik günlüğünde yakalama hakkında daha fazla bilgi için bkz: [Capturing Graphics Information](capturing-graphics-information.md).
+ Grafik sorunlarının grafik günlüğünde nasıl yakalanacağı hakkında daha fazla bilgi için bkz. [grafik bilgilerini yakalama](capturing-graphics-information.md).
 
 ## <a name="investigation"></a>Araştırma
- Grafik tanılama araçlarını kullanarak, test sırasında yakalanan çerçeveleri incelemek için grafik günlük dosyasını yükleyebilirsiniz.
+ Grafik Tanılama araçlarını kullanarak, test sırasında yakalanan çerçeveleri incelemek için grafik günlük dosyasını yükleyebilirsiniz.
 
-#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Grafik günlüğünde bir çerçeveyi incelemek için
+#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Grafik günlüğündeki bir çerçeveyi incelemek için
 
-1. İçinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], eksik model sergiler çerçeveyi içeren grafik günlüğünü yükleyin. Yeni bir grafik Tanılama sekmesi görünür [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Bu sekmenin üst kısmında seçilen çerçevenin işleme hedefi çıktısı ' dir. Alt parçasıdır **çerçeve listesi**, bir küçük resim her yakalanan çerçeve görüntüler.
+1. İçinde [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , eksik modeli gösteren bir çerçeve içeren bir grafik günlüğü yükleyin. İçinde yeni bir Grafik Tanılama sekmesi görüntülenir [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bu sekmenin en üst kısmında, seçili karenin işleme hedefi çıkışı bulunur. Alt kısımda, yakalanan her çerçeveyi bir küçük resim olarak görüntüleyen **çerçeve listesidir**.
 
-2. İçinde **çerçeve listesi**, model görüntülenmez gösteren bir çerçeve seçin. İşleme hedefi, Seçilen çerçevenin yansıtacak şekilde güncelleştirilir. Bu senaryoda, grafik sekmesi şu şekilde görünür günlük:
+2. **Çerçeve listesinde**, modelin görüntülenmediğini gösteren bir çerçeve seçin. Oluşturma hedefi seçili çerçeveyi yansıtacak şekilde güncelleştirilir. Bu senaryoda grafik günlüğü sekmesi şöyle görünür:
 
-    ![.Vsglog sekme framebuffer Önizleme ve çerçeve listesi](media/vsg_walkthru1_experiment.png "vsg_walkthru1_experiment")
+    ![. Vsglog sekmesi framebuffer önizleme ve çerçeve listesi](media/vsg_walkthru1_experiment.png "vsg_walkthru1_experiment")
 
-   Sorunu gösteren bir çerçeveyi seçtikten sonra kullanabileceğiniz **grafik olay listesi** tanılamak için. **Grafik olay listesi** etkin çerçeve için işlemek için yapılan her Direct3D API çağrısı cihaz durumunu ayarlamak için oluşturun ve arabellek güncelleştirin ve çerçeve içinde görünen nesneler çizmek için API çağrısı içerir. Olduğundan çağrılarının pek çok ilgi çekici genellikle (ama her zaman kullanılmaz) karşılık gelen bir uygulamada beklendiği gibi çalışırken işleme hedefi değişiklik örneğin çizme, gönderme, kopyalama veya açık çağrıları. Her bir uygulama oluşturulmasını geometri temsil ettiğinden çizim çağrıları özellikle ilgi çekici (gönderme çağrılar da de geometri oluşturma).
+   Sorunu gösteren bir çerçeve seçtikten sonra, grafikleri tanımak için **grafik olay listesi** ' ni kullanabilirsiniz. **Grafik olay listesi** , etkin çerçeveyi işlemek için yapılan her Direct3D API çağrısını içerir, örneğin, cihaz durumunu ayarlamak için API çağrıları, arabellekleri oluşturma ve güncelleştirme, ve çerçevede görünen nesneleri çizme. Birçok çağrı türü, uygulama beklendiği gibi çalıştığında (her zaman değil) işleme hedefinde karşılık gelen bir değişikliğin (örneğin, çizim, dağıtım, kopyalama veya temizleme) olduğu için ilginç hale gelir. Çizim çağrıları özellikle ilginç olduğundan, her biri uygulamanın işlenmiş olduğu geometriyi temsil ettiğinden (dağıtım çağrıları geometriyi de işleyebilir).
 
-#### <a name="to-ensure-that-draw-calls-are-being-made"></a>Bu çizim çağrıları yapılan emin olmak için
+#### <a name="to-ensure-that-draw-calls-are-being-made"></a>Çizim çağrılarının yapıldığından emin olmak için
 
-1. Açık **grafik olay listesi** penceresi. Üzerinde **grafik tanılama** araç seçin **olay listesi**.
+1. **Grafik olay listesi** penceresini açın. **Grafik tanılama** araç çubuğunda **olay listesi**' ni seçin.
 
-2. İnceleme **grafik olay listesi** çizim çağrıları. Bunu kolaylaştırmak için "Çiz" girin **arama** sağ üst köşesinde kutusunda **grafik olay listesi** penceresi. Bu, yalnızca başlıklarında "Çiz" olan olaylar içeren listenin filtreler. Bu senaryoda birkaç çizim çağrıları yapılan keşfedin:
+2. Çizim çağrıları için **grafik olay listesini** inceleyin. Bunun daha kolay olması için **grafik olay listesi** penceresinin sağ üst köşesindeki **arama** kutusuna "Çiz" yazın. Bu, listeyi yalnızca kendi başlıklarında "Çiz" olan olayları içerecek şekilde filtreler. Bu senaryoda, birkaç çizim çağrısının yapıldığını fark edersiniz:
 
-    ![Yakalanan olaylar gösteren grafik olay listesi](media/vsg_walkthru1_.png "vsg_walkthru1_")
+    ![Yakalanan olayları gösteren grafik olay listesi](media/vsg_walkthru1_.png "vsg_walkthru1_")
 
-   Bu çizim çağrıları yapılan onayladıktan sonra hangisinin eksik geometriye karşılık gelen belirleyebilirsiniz. Eksik geometri işleme hedefine (Bu örnekte) olması nedeniyle dikkatin değil olduğunu bildiğiniz olduğundan, kullanabileceğiniz **grafik ardışık düzen aşamaları** penceresi, çizim çağrısı çıktılarının belirlemek için eksik geometriye karşılık gelir. **Grafik ardışık düzen aşamaları** penceresi işleme hedefi üzerindeki etkisini bağımsız olarak her bir çizim çağrısına gönderildiği geometri gösterir. Çizim çağrıları arasında taşırken, ardışık düzen aşamaları bu çağrıyla ilişkili geometri gösterecek şekilde güncelleştirilir ve işleme hedefi çıktısı çağrı tamamlandıktan sonra işleme hedefi durumunu göstermek için güncelleştirilir.
+   Çizim çağrılarının yapıldığını doğruladıktan sonra, hangi hangisinin eksik geometriye karşılık geldiğini belirleyebilirsiniz. Eksik geometriyi oluşturma hedefine çizilmediğini bildiğiniz için (Bu durumda), hangi çizim çağrısının eksik geometriye karşılık geldiğini öğrenmek için **grafik ardışık düzen aşamaları** penceresini kullanabilirsiniz. **Grafik ardışık düzen aşamaları** penceresi, işleme hedefi üzerindeki etkisiyle bağımsız olarak her bir çizim çağrısına gönderilen geometriyi gösterir. Çizim çağrılarında geçiş yaparken, işlem hattı aşamaları bu çağrıyla ilişkili geometriyi gösterecek şekilde güncelleştirilir ve işleme hedefi çıkışı, çağrı tamamlandıktan sonra oluşturma hedefinin durumunu gösterecek şekilde güncelleştirilir.
 
-#### <a name="to-find-the-draw-call-for-the-missing-geometry"></a>Çizim çağrısı için eksik geometri bulmak için
+#### <a name="to-find-the-draw-call-for-the-missing-geometry"></a>Eksik geometri için çizim çağrısını bulmak için
 
-1. Açık **grafik ardışık düzen aşamaları** penceresi. Üzerinde **grafik tanılama** araç seçin **ardışık düzen aşamaları**.
+1. **Grafik ardışık düzen aşamaları** penceresini açın. **Grafik tanılama** araç çubuğunda, Işlem **hattı aşamaları**' nı seçin.
 
-2. İzleme sırasında her bir çizim çağrısı aracılığıyla Taşı **grafik ardışık düzen aşamaları** eksik model penceresi. **Giriş Assembler** aşaması ham model verileri gösterir. **Köşe gölgelendiricisi** aşama dönüştürülmüş model verileri gösterir. **Piksel gölgelendiricisi** aşaması piksel gölgelendirici çıkışı gösterir. **Çıkış Birleştiricisi** aşama Bu çizim çağrısı ve tüm önceki çizim çağrıları birleştirilmiş işleme hedefi gösterir.
+2. Eksik model için **grafik ardışık düzen aşamaları** penceresini izlerken her çizim çağrısıyla geçiş yapın. **Giriş assembler** aşaması, ham model verilerini gösterir. **Köşe gölgelendirici** aşaması, dönüştürülmüş model verilerini gösterir. **Pixel gölgelendirici** aşaması, pixel gölgelendirici çıkışını gösterir. **Output-Merger** aşaması, bu çizim çağrısının birleştirilmiş işleme hedefini ve önceki tüm çizim çağrılarını gösterir.
 
-3. Eksik modeline karşılık gelen bir çizim çağrısı ulaştınız durdur. Bu senaryoda, **grafik ardışık düzen aşamaları** geometri işlenir ancak işleme hedef görünmedi pencere gösterir:
+3. Eksik modele karşılık gelen çizim çağrısına ulaşıldığında durur. Bu senaryoda, **grafik ardışık düzen aşamaları** penceresi, geometrinin oluşturulduğunu ancak render hedefinde görünmediğini belirtir:
 
-    ![Ardışık Düzen Görüntüleyicisi eksik nesneyi gösteren](media/vsg_walkthru1_pipeline.png "vsg_walkthru1_pipeline")
+    ![Eksik nesneyi gösteren ardışık düzen Görüntüleyicisi](media/vsg_walkthru1_pipeline.png "vsg_walkthru1_pipeline")
 
-   Eksik geometri uygulama oluşturulmasını ve karşılık gelen bir çizim çağrısı bulun onayladıktan sonra bir kısmı eksik geometri gösterin ve ardından işleme hedefi çıktısı seçebileceğiniz **grafik piksel geçmişi** piksel neden dışlanan bulmak için pencere. Piksel geçmişi, belirli bir piksel üzerinde bir etkisi yapmış olabileceği her bir çizim çağrısı bir listesini içerir. Her bir çizim çağrısı **grafik piksel geçmişi** penceresi da görüntülenen bir sayı tarafından tanımlanan **grafik olay listesi** penceresi. Bu, piksel eksik geometri görüntülenmelidir doğrulamanıza yardımcı olur ve piksel neden dışlandı bulmak için
+   Uygulamanın eksik geometriyi kullandığını ve ilgili çizim çağrısını bulacağını doğruladıktan sonra, oluşturma hedefi çıktısının eksik geometriyi göstermesi gereken bir kısmını seçebilirsiniz ve ardından piksellerin neden dışlandığına ilişkin bilgi edinmek için **Grafik piksel geçmişi** penceresini kullanın. Piksel geçmişi, belirli bir piksel üzerinde etkiye sahip olabilecek her çizim çağrısının bir listesini içerir. **Grafik piksel geçmişi** penceresindeki her çizim çağrısı, **grafik olay listesi** penceresinde de görüntülenen bir sayıyla tanımlanır. Bu, pikselin eksik geometriyi görüntülemesi gerektiğini ve pikselin neden dışlandığına ilişkin olduğunu doğrulamanıza yardımcı olur
 
-#### <a name="to-determine-why-the-pixel-was-excluded"></a>Neden için piksel dışarıda bırakıldı belirlemek için
+#### <a name="to-determine-why-the-pixel-was-excluded"></a>Pikselin neden dışlanacağını belirleme
 
-1. Açık **grafik piksel geçmişi** penceresi. Üzerinde **grafik tanılama** araç seçin **piksel geçmişi**.
+1. **Grafik piksel geçmişi** penceresini açın. **Grafik tanılama** araç çubuğunda **piksel geçmişi**' ni seçin.
 
-2. Temel **piksel gölgelendiricisi** bir kısmı eksik geometri içermesi gereken bir pikselin framebuffer çıktı küçük resim seçin. Bu senaryoda, çoğu işleme hedefinin piksel gölgelendirici çıkışı kapsamalıdır; bir pikselin seçildikten sonra **grafik piksel geçmişi** penceresi şu şekilde görünür:
+2. **Piksel gölgelendirici** küçük resmine göre, eksik geometrinin bir kısmını içermesi gereken framebuffer çıkışında bir piksel seçin. Bu senaryoda, piksel gölgelendirici çıkışı, işleme hedefinin çoğunu kapsamalıdır; bir piksel seçildikten sonra **Grafik piksel geçmişi** penceresi şöyle görünür:
 
-    ![Piksel Geçmişi penceresini ilgili gösteren çizim çağrıları](media/vsg_walkthru1_hist1.png "vsg_walkthru1_hist1")
+    ![İlgili çizim çağrılarını gösteren piksel geçmişi penceresi](media/vsg_walkthru1_hist1.png "vsg_walkthru1_hist1")
 
-3. Seçili işleme hedef piksel inceleyerek çizim çağrısı sayısını eşleştirerek geometri değerinin bir bölümü yer aldığını onaylayın (gelen **grafik olay listesi** pencere) bir çizim çağrıları **grafik Piksel geçmişi** penceresi. Çağrılarında hiçbiri **grafik piksel geçmişi** penceresi eşleşme, inceleyerek, çizim çağrısı (dışında 1. adım) bu adımları yineleyin bir eşleşme bulana kadar. Bu senaryoda, eşleşen çizim çağrısı şöyle görünür:
+3. Seçilen işleme hedefi pikselinin, İnceleme yaptığınız çizim çağrısının sayısıyla ( **grafik olay listesi** penceresinden) **Grafik piksel geçmişi** penceresindeki çizim çağrılarından birine eşleştirerek geometri 'nin bir bölümünü içerdiğini doğrulayın. **Grafik piksel geçmişi** penceresindeki çağrılardan hiçbiri, araştırdığı çizim çağrısıyla eşleşmiyorsa, bir eşleşme bulana kadar bu adımları (1. adım) tekrarlayın. Bu senaryoda, eşleşen çizim çağrısı şöyle görünür:
 
-    ![Piksel Geçmişi penceresini gösteren parça bilgileri](media/vsg_walkthru1_hist2.png "vsg_walkthru1_hist2")
+    ![Parça bilgisini gösteren piksel geçmişi penceresi](media/vsg_walkthru1_hist2.png "vsg_walkthru1_hist2")
 
-4. Bir eşleşme bulduğunuzda, eşleşen çizim çağrısını genişletin **grafik piksel geçmişi** penceresi ve piksel dışarıda bırakıldı onaylayın. Her bir çizim çağrısı **grafik piksel geçmişi** penceresi, karşılık gelen nesnenin geometrisini sonucunda bu piksel kesiştiğinden bir veya daha fazla geometrik temelleri (noktaları, çizgiler veya üçgenler) karşılık gelir. Her tür kesişimi pikselin son rengini için katkıda bulunabilir. Derinlik testinde başarısız oldu çünkü hariç temel soldan sağa doğru aşağı slopes okun üzerine Harf Z gösteren bir simge ile temsil edilir.
+4. Bir eşleşme bulduğunuzda, **Grafik piksel geçmişi** penceresinde eşleşen çizim çağrısını genişletin ve pikselin dışlandığından emin olun. **Grafik piksel geçmişi** penceresindeki her çizim çağrısı, ilgili nesnenin geometrisinin bir sonucu olarak bu pikseli kesişen eden bir veya daha fazla geometrik temel noktalara (punto, çizgi veya üçgenler) karşılık gelir. Her bir kesişim, pikselin son rengine katkıda bulunabilir. Derinlik testinin, eğri olarak soldan sağa aşağı doğru bir ok üzerindeki Z harfini gösteren bir simge ile temsil edildiği, hariç tutulan bir temel.
 
-5. Duruma çıkarılmasına neden daha ayrıntılı incelemek için hariç tutulan bir temel öğeyi genişletin. İçinde **çıkış Birleştiricisi** grubunda, işaretçiyi **sonucu**. Temel neden dışlandı bir araç ipucu belirtir. Bu senaryoda, derinlik testinde başarısız oldu ve bu nedenle pikselin son rengini için katkıda bulundu mu değil çünkü temel dışlandı İnceleme ortaya çıkarır.
+5. Çıkarılan bir temel öğeyi, dışlanmasının neden olduğu durumu daha ayrıntılı incelemek için genişletin. **Çıktı Merger** grubunda, işaretçiyi **sonucun**üzerine taşıyın. Araç ipucu, temel masının Neden dışlandığını gösterir. Bu senaryoda, İnceleme, derinlik testinde başarısız olduğu ve bu nedenle pikselin son rengine katkıda bulunmadığı için ilkel öğesinin dışlanacağını ortaya koyar.
 
-   Geometri, ilkel derinlik testinde başarısız olduğundan görünmüyor belirledikten sonra bu sorunun yapılandırılmış cihaz durumuna ilgili olup olmadığını düşündüğünüz. Cihaz durumu ve diğer Direct3D nesnesini kullanarak veri incelenebilir **Graphics Object Table**.
+   Geometrinin derinlik testinde başarısız olduğu için geometri 'nin görünmediğini belirledikten sonra, bu sorunun hatalı yapılandırılmış cihaz durumuyla ilgili olduğunu şüpheli olabilirsiniz. Cihaz durumu ve diğer Direct3D nesne verileri **grafik nesne tablosu**kullanılarak incelenebilir.
 
 #### <a name="to-examine-device-state"></a>Cihaz durumunu incelemek için
 
-1. Açık **Graphics Object Table** penceresi. Üzerinde **grafik tanılama** araç seçin **nesne tablosu**.
+1. **Grafik nesne tablosu** penceresini açın. **Grafik tanılama** araç çubuğunda **nesne tablosu**' nu seçin.
 
-2. Bulun **D3D10 cihazı** nesnesine **Graphics Object Table**ve ardından açın **D3D10 cihazı** nesne. Yeni bir **d3d10 cihazı** sekmesi açılır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Bunu kolaylaştırmak için sıralayabilirsiniz **Graphics Object Table** tarafından **türü**:
+2. **Grafik nesnesi tablosunda** **D3D10 cihaz** nesnesini bulun ve **D3D10 cihaz** nesnesini açın. Yeni bir **D3D10 cihazı** sekmesi içinde açılır [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] . Bunun daha kolay olması için **grafik nesne tablosunu** **türe**göre sıralayabilirsiniz:
 
     ![Grafik nesne tablosu ve ilgili cihaz durumu](media/vsg_walkthru1_objtable.png "vsg_walkthru1_objtable")
 
-3. Görüntülenen cihaz durumunu incelemek **d3d10 cihazı** olası sorunlar için sekmesinde. Geometri, ilkel derinlik testinde başarısız olduğundan görünmez olduğundan derinlik testinde etkileyen derinlik kalıbı gibi cihaz durumu odaklanabilirsiniz. Bu senaryoda, **derinlik kalıbı açıklaması** (altında **çıkış birleşme durumu**) için genel olmayan bir değer içeriyor **derinliği işlevi** üyesi `D3D10_COMPARISON_GREATER`:
+3. Olası sorunlar için **D3D10 cihaz** sekmesinde görüntülenen cihaz durumunu inceleyin. Geometri, temel elemanlar derinlik testinde başarısız olduğu için görünmediğinden, derinlik testini etkileyen derinlik kalıbı gibi cihaz durumuna odaklanırsınız. Bu senaryoda, **derinlik kalıbı açıklaması** ( **çıktı birleşme durumu**altında), **derinlik işlevi** üyesi için seyrek bir değer içerir `D3D10_COMPARISON_GREATER` :
 
-    ![Derinlik kalıbı bilgilerini gösteren D3D10 cihazı penceresi](media/vsg_walkthru1_devicestate.png "vsg_walkthru1_devicestate")
+    ![Derinlik kalıbı bilgilerini gösteren D3D10 cihaz penceresi](media/vsg_walkthru1_devicestate.png "vsg_walkthru1_devicestate")
 
-   İşleme sorunun nedenini yapılandırılmış derinliği işlevi olabilir belirledikten sonra burada derinliği işlevi yanlış ayarlanmış bulmak için kod bilginizi birlikte bu bilgileri kullanın ve ardından sorunu gidermek. Kodla alışkın değilseniz, sorun için hata ayıkladığınız sırada topladığınız ipuçları kullanarak arayabilir — Örneğin, temel **derinlik kalıbı açıklaması** Bu senaryoda, kod sözcükleri arayabilir. "ayrıntılı" veya "Daha büyük" gibi. Kod giderdikten sonra yeniden oluşturmak ve uygulamayı yeniden işleme sorunun çözüldüğünü bulmak için çalıştırın:
+   İşleme sorununun nedeninin yanlış yapılandırılmış bir derinlik işlevi olabileceğini belirledikten sonra, bu bilgileri, derinlik işlevinin doğru şekilde ayarlandığını bulmak için kodu bilginiz ile birlikte kullanabilir ve sonra sorunu çözebilirsiniz. Kodu tanımıyorsanız, hata ayıklarken topladığınız ipuçları kullanarak sorunu arayabilirsiniz — Örneğin, Bu senaryodaki **derinlik kalıbı açıklamasına** bağlı olarak, kodda "derinlik" veya "daha büyük" gibi sözcükleri arayabilirsiniz. Kodu düzelttikten sonra, oluşturma sorununun çözümlenme sorununu saptamak için yeniden derleyin ve uygulamayı yeniden çalıştırın:
 
-   ![Sorun düzeltildikten sonra uygulama](media/vsg_walkthru1_finalview.png "vsg_walkthru1_finalview")
+   ![Sorun giderildikten sonra uygulama](media/vsg_walkthru1_finalview.png "vsg_walkthru1_finalview")

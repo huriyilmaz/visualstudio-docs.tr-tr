@@ -9,66 +9,66 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cf2aba33089623dc98a90c23166291bb2d6e7123
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62905290"
 ---
-# <a name="getting-started-with-the-snapshot-debugger"></a>Anlık görüntü hata ayıklayıcısı ile çalışmaya başlama
+# <a name="getting-started-with-the-snapshot-debugger"></a>Snapshot Debugger kullanmaya başlama
 
-Visual Studio Snapshot Debugger artık hizmete bağlıdır ve hatalarını ayıklamaya yardımcı olmak için anlık görüntüleri başlayabilir.
+Visual Studio Snapshot Debugger artık hizmetinize bağlı ve hata ayıklamayla ilgili yardım almak için anlık görüntüler toplamaya başlayabilirsiniz.
 
-Snapshot Debugger'ı kullanmak için kodunuzda bazı anlık görüntü noktaları ayarlayın, anlık görüntüleri başlatmak için düğmeye tıklayın ve ardından senaryonuzu çalıştırın. Çalıştırmaları kod, bir anlık görüntü noktası ayarladığınız, uygulamanızın bir anlık görüntü alınır. Sonra anlık görüntüyü Visual Studio tanılama araçları Penceresi'nde tıklayarak açın. Yalnızca yerel gibi hizmetinizde anlık görüntü artık ayıklayabilirsiniz. Ayrıntılı yönergeler için okumaya devam edin.
+Snapshot Debugger kullanmak için, kodunuzda bazı anlık görüntü noktaları ayarlayın, anlık görüntüleri toplamaya başlamak için düğmeye tıklayın ve ardından senaryonuzu çalıştırın. Bir anlık görüntü noktası belirlediğiniz kod çalıştırıldığında, uygulamanızın bir anlık görüntüsü alınır. Ardından Tanılama Araçları penceresinde Visual Studio 'da üzerine tıklayarak anlık görüntüyü açın. Artık, yerel olarak hizmetinize benzer şekilde, anlık görüntüde hata ayıklaması yapabilirsiniz. Ayrıntılı yönergeler için okumaya devam edin.
 
-## <a name="collect-and-view-snapshots"></a>Toplama ve anlık görüntüleri görüntüleme
+## <a name="collect-and-view-snapshots"></a>Anlık görüntüleri toplama ve görüntüleme
 
-Snapshot Debugger, uygulamanızdan anlık görüntüleri toplar. Anlık görüntüleri gibi bir noktada, uygulama resimlerinin saati gösterir. Ne zaman ve nereye kodda bir anlık görüntü noktası ayarlayarak bir anlık görüntü toplamak Visual Studio söyleyin. Anlık görüntü noktası size, incelemekte sorun bir anlık görüntü elde emin olmak için gereken koşulları ayarlayın.
+Snapshot Debugger, uygulamanızın anlık görüntülerini toplar. Anlık görüntüler, zaman içinde bir noktada uygulamanızın resimleri gibidir. Kodda bir anlık görüntü noktası ayarlayarak, Visual Studio 'ya ne zaman ve nereye bir anlık görüntü toplanacağını söylemiş olursunuz. Anlık görüntü noktasında araştırdığınız sorunun anlık görüntüsünü aldığınızdan emin olmak için ihtiyacınız olan tüm koşulları ayarlarsınız.
 
-### <a name="set-a-snappoint"></a>Bir anlık görüntü noktası ayarlayın
+### <a name="set-a-snappoint"></a>Anlık görüntü noktası ayarla
 
-1. Kod Düzenleyicisi'nde bir anlık görüntü noktası ayarlamak ilginizi çeken bir kod satırının yanındaki sol kanaldaki tıklayın. Bildiğiniz çalışacak kod olduğundan emin olun.
+1. Kod Düzenleyicisi 'nde, bir anlık görüntü noktası ayarlamak için ilgilendiğiniz kod satırının yanındaki sol cilt payı tıklatın. Bu kodun çalıştırılacağını bildiğiniz bir kod olduğundan emin olun.
 
     ![Düzenleyicide bir anlık görüntü noktası ayarlama](../media/snapshot-startpage-set-snappoint.png)
 
-    Sol taraftaki tıklattığınız mor Altıgene görünür.
+    Sola tıkladığınızda, mor altıon görünür.
 
-2. Tıklayın **toplamaya Başla** anlık görüntü noktasını etkinleştirmek için.
+2. Anlık görüntü noktasını açmak için **toplamayı Başlat** ' a tıklayın.
 
-### <a name="open-a-snapshot"></a>Bir anlık görüntüsünü Aç
+### <a name="open-a-snapshot"></a>Anlık görüntü aç
 
-1. Anlık görüntü noktası isabet edildiğinde bir anlık görüntü sağdaki tanılama araçları penceresi görüntülenir. Penceresi açık değilse, bunu seçerek açabilirsiniz **hata ayıklama** > **Windows** > **tanılama araçlarını Göster**.
+1. Anlık görüntü noktası isabet edildiğinde, sağdaki Tanılama Araçları penceresinde bir anlık görüntü görüntülenir. Pencere açılmazsa, **Hata Ayıkla**  >  **Windows**  >  **göster tanılama araçları**öğesini seçerek açabilirsiniz.
 
     ![Tanılama Araçları penceresinde anlık görüntü](../media/snapshot-startpage-diagsession-window.png)
 
-2. Anlık görüntü açmak için çift tıklayın.
+2. Anlık görüntüye çift tıklayarak açın.
 
-### <a name="inspect-snapshot-data"></a>Anlık görüntü verileri İnceleme
+### <a name="inspect-snapshot-data"></a>Anlık görüntü verilerini İnceleme
 
-Bu görünümden veri ipuçlarını görüntülemek, yerel öğeler, Gözcüler, kullanma ve çağırmak için değişkenlerden gelerek yığın windows ve ayrıca ifadeleri değerlendirin.
+Bu görünümden, veri Ipuçlarını görüntülemek, Yereller, Izler ve çağrı yığını pencerelerini kullanmak ve ayrıca ifadeleri değerlendirmek için değişkenlerin üzerine geldiğinizde arama yapabilirsiniz.
 
-Web sitesinin kendisinde hala çalışıyor ve son kullanıcıların etkilenen değildir. Varsayılan olarak, anlık görüntü noktası yalnızca bir anlık görüntü olarak yakalanır. Anlık görüntü yakalandıktan sonra diğer bir deyişle, anlık görüntü noktası devre dışı bırakır. Anlık görüntü noktası başka bir anlık görüntü yakalamak istiyorsanız, anlık görüntü noktası tıklayarak tekrar açabilirsiniz **koleksiyonu Güncelleştir**.
+Web sitesinin kendisi de canlı ve son kullanıcılar etkilenmemektedir. Varsayılan olarak, anlık görüntü noktası başına yalnızca bir anlık görüntü yakalanır. Diğer bir deyişle, anlık görüntü yakalandıktan sonra, anlık görüntü noktası kapanır. Anlık görüntü noktasında başka bir anlık görüntü yakalamak istiyorsanız, **koleksiyonu Güncelleştir**' e tıklayarak anlık görüntü noktasını yeniden açabilirsiniz.
 
-### <a name="set-a-logpoint"></a>Bir günlüğe kaydetme noktası ayarlayın
+### <a name="set-a-logpoint"></a>Logpoint ayarlama
 
-1. Bir anlık görüntü noktası simgesi (mor Altıgene) sağ tıklatın ve seçin **ayarları**.
+1. Bir anlık görüntü noktası simgesine (mor altıon) sağ tıklayın ve **Ayarlar**' ı seçin.
 
-2. İçinde **anlık görüntü noktası ayarları** penceresinde **eylemleri**.
+2. Anlık görüntü **noktası ayarları** penceresinde **Eylemler**' i seçin.
 
     ![Anlık görüntü noktası koşulları](../media/snapshot-startpage-logpoint.png)
 
-3. İçinde **ileti** günlüğe kaydetmek istediğiniz bir günlük iletisi girin. Ayrıca, kaşlı ayraçlar içinde yerleştirerek değişkenleri, bir günlük iletisinde değerlendirebilirsiniz.
+3. **İleti** alanına, günlüğe kaydetmek istediğiniz bir günlük iletisi girin. Ayrıca, günlük iletinizde değişkenleri küme ayraçları içine yerleştirerek değerlendirebilirsiniz.
 
-    Seçerseniz **çıkış penceresine Gönder**, günlüğe kaydetme noktası isabet edildiğinde tanılama araçları penceresinde bir ileti görüntülenir.
+    **Çıkış penceresi gönder**' i seçerseniz, oturum noktası isabet edildiğinde ileti Tanılama Araçları penceresinde görünür.
 
-    Seçerseniz **uygulama günlüğüne Gönder**, gelen iletileri görebilirsiniz herhangi bir ileti görüntülenir `System.Diagnostics.Trace` (veya `ILogger` .NET core'da), günlüğe kaydetme noktası isabet edildiğinde App Insights gibi.
+    **Uygulama günlüğüne gönder**' i seçerseniz ileti, `System.Diagnostics.Trace` `ILogger` oturum noktası isabet edildiğinde App Insights gibi (veya .NET Core) iletileri görebileceğiniz her yerde görüntülenir.
 
-## <a name="learn-more"></a>Daha fazla bilgi edinin
+## <a name="learn-more"></a>Daha Fazla Bilgi Edinin
 
-Snapshot Debugger hakkında daha fazla bilgi bulabilirsiniz [docs sayfasının](../debug-live-azure-applications.md). Hataları bulmak daha kolay hale getirmek için koşulları ayarlama hakkında daha fazla bilgi edinin.
+[Belgeler sayfasında](../debug-live-azure-applications.md)Snapshot Debugger hakkında daha fazla bilgi edinebilirsiniz. Hataları bulmayı kolaylaştırmak için koşulları ayarlama hakkında daha fazla bilgi edinin.
 
-## <a name="dont-show-me-this-again"></a>Yok ' Bu yeniden Göster
+## <a name="dont-show-me-this-again"></a>Bunu bir daha gösterme
 
-Snapshot Debugger bağlandığınızda hiç anlık görüntü hata ayıklayıcısı başlangıç sayfası gösterme değiştirmek **Göster 'Başlarken' sayfasında oturum başlangıcı** seçeneğini **Araçları**  >   **Seçenekleri** > **anlık görüntü hata ayıklayıcısı**.
+Snapshot Debugger bağladığınızda Snapshot debugger başlangıç sayfasını hiçbir zaman göstermek için, **Araçlar**seçenekler Snapshot Debugger **oturum başlatma seçeneğinde ' Başlarken ' sayfasını göster** seçeneğini değiştirin  >  **Options**  >  **Snapshot Debugger**.
 
-![Anlık görüntü hata ayıklayıcısı aracı seçeneği sayfası](../media/snapshot-startpage-tools-options.png)
+![Snapshot Debugger araç seçeneği sayfası](../media/snapshot-startpage-tools-options.png)

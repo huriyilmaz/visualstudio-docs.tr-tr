@@ -1,5 +1,5 @@
 ---
-title: Sayfa dosyası sekmesi, işlem özellikleri iletişim kutusu | Microsoft Docs
+title: Sayfa dosyası sekmesi, Işlem özellikleri Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 25dc3b0aca1b58c18ae4038540c14fc4dbfe4036
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62904113"
 ---
 # <a name="page-file-tab-process-properties-dialog-box"></a>Sayfa Dosyası Sekmesi, İşlem Özellikleri İletişim Kutusu
-Kullanım **sayfa dosyası** işleminin disk belleği dosyasını incelemek için sekmesinde. Görüntülenecek [işlem özellikleri iletişim kutusu](../debugger/process-properties-dialog-box.md), odağı Taşı bir [işlemler görünümü](../debugger/processes-view.md) penceresi. Herhangi bir işlem düğümü ağacında seçin ve ardından **özellikleri** gelen **görünümü** menüsü.
+Bir işlemin sayfalama dosyasını incelemek için **sayfa dosyası** sekmesini kullanın. [Işlem özellikleri Iletişim kutusunu](../debugger/process-properties-dialog-box.md)görüntülemek için odağı bir [işlem görünümü](../debugger/processes-view.md) penceresine taşıyın. Ağaçta herhangi bir işlem düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
- Aşağıdaki ayarlar kullanılabilir **sayfa dosyası** sekmesinde:
+ Aşağıdaki ayarlar **sayfa dosyası** sekmesinde bulunur:
 
 |Giriş|Açıklama|
 |-----------|-----------------|
-|**Sayfa dosyası baytları**|Bu işlem, disk belleği dosyasını kullanarak sayfa geçerli sayısı. Disk belleği dosyası, sayfa işlemi tarafından kullanılan, ancak diğer dosyaları bulunmayan veri depolar. Disk belleği dosyası tüm işlemler tarafından kullanılır ve diğer işlemleri çalışırken yetersiz disk belleği dosyasında alan, hatalara neden olabilir.|
-|**Tepedeki sayfa dosyası baytları**|Bu işlem disk belleği dosyasında kullanılan sayfa sayısı.|
-|**Sayfa hataları**|Bu işlemde çalışan iş parçacığı tarafından sayfa hataları sayısı. Bir iş parçacığı çalışma ana belleğe kümesinde olmayan bir sanal bellek sayfa başvurduğunda bir sayfa hatası oluşur. Bekleme listesinde ise, bu nedenle, sayfa diskten alınmayacak ve bu nedenle zaten bellekte ana ya da bunu bir başkası tarafından kullanılıp kullanılmadığını işlemek sayfa paylaşılan ile.|
+|**Sayfa dosyası baytları**|Bu işlemin sayfalama dosyasında kullandığı geçerli sayfa sayısı. Sayfalama dosyası, işlem tarafından kullanılan ancak diğer dosyalarda bulunmayan veri sayfalarını depolar. Disk belleği dosyası tüm süreçler tarafından kullanılır ve disk belleği dosyasında boşluk olmaması, diğer işlemlerin çalıştığı sırada hatalara neden olabilir.|
+|**Yoğun sayfa dosyası baytları**|Bu işlemin sayfalama dosyasında kullandığı en fazla sayfa sayısı.|
+|**Sayfa hataları**|Bu işlemde yürütülen iş parçacıklarının sayfa hatası sayısı. Bir iş parçacığı, ana bellekteki çalışma kümesinde olmayan bir sanal bellek sayfasına başvurduğunda bir sayfa hatası oluşur. Bu nedenle, sayfa bekleme listeteyse ve bu nedenle zaten ana bellekteyse veya sayfanın paylaşıldığı başka bir işlem tarafından kullanılıyorsa, sayfa diskten alınmayacak.|

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio kullanıcı deneyimi yönergeleri | Microsoft Docs
+title: Visual Studio Kullanıcı deneyimi yönergeleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,23 +9,23 @@ caps.latest.revision: 4
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 02b01c2c1262d6c48f51f9c1867094913b8cd715
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62584937"
 ---
 # <a name="visual-studio-user-experience-guidelines"></a>Visual Studio Kullanıcı Deneyimi Yönergeleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Visual Studio kullanıcı deneyimi yönergeleri, yeni özellikler için Visual Studio tasarım olanlar için tasarlanmıştır. Yeni kullanıcı arabirimi (UI) tasarımcıları sorunsuz ve tutarlı bir geliştirme ortamında kullanıcı deneyimleri oluşturabilirsiniz. böylece bu yönergeleri ortak kullanıcı modeller ve etkileşim desenleri hakkında bilgi içerir.  
+Visual Studio Kullanıcı deneyimi yönergeleri, Visual Studio için yeni özellikler tasarlayan kullanıcılara yöneliktir. Bu yönergeler, yeni kullanıcı arabirimi (UI) tasarımcılarının geliştirme ortamında sorunsuz ve tutarlı kullanıcı deneyimleri oluşturabilmesi için ortak Kullanıcı modelleri ve etkileşim desenleri hakkında bilgiler içerir.  
   
- Microsoft ürünleri anlamına gelir Windows tarafından sağlanan yönergeleri anlamak için yazılım geliştirme. Dikkat edilmesi gereken üç önemli kaynakları şunlardır:  
+ Microsoft ürünleri için yazılım geliştirme, Windows tarafından sunulan Kılavuzu anlama anlamına gelir. Farkında olacak üç önemli kaynak vardır:  
   
-- [Windows kullanıcı deneyimi etkileşim kuralları](https://msdn.microsoft.com/library/aa511258.aspx). Windows Masaüstü davranış ve görünümünü temel unsurları bu yönergelerdir.  
+- [Windows Kullanıcı deneyimi etkileşim yönergeleri](https://msdn.microsoft.com/library/aa511258.aspx). Bu yönergeler Windows Masaüstü davranışı ve görünümü için temel bilgiler içerir.  
   
-- Uygun yerlerde ortamımız için genel Windows yönergeleri yerine geçen platforma özgü yönergelerdir bu Visual Studio yönergeleri.  
+- Bu Visual Studio yönergeleri, ortamınız için uygun olan genel Windows talimatlarını yerine geçen platforma özel yönergeler olan bu Visual Studio kılavuzlarından biri.  
   
-- [Denetimleri ve UWP uygulamaları için desenler](/windows/uwp/design/controls-and-patterns) bazı durumlarda Visual Studio içinde kullanılabilir yeni çıkan desenleri için bir başvuru.  
+- [UWP uygulamalarının denetimleri ve desenleri](/windows/uwp/design/controls-and-patterns) , Visual Studio içindeki bazı örneklerde kullanılabilen, gelişen desenler için bir başvurudur.  
   
-  Bu yönergeleri, Visual Studio için tasarlarken yapmanız gerekenler hakkında bilgi sağlar ve bazı durumlarda nasıl yapılacağı ile ilgili bilgiler de dahildir. Daha ayrıntılı uygulama bilgileri ve belirli bir uygulama programlama arabirimi (API) Visual Studio tümleşik geliştirme ortamına (IDE) tümleştirilebilen çözümler için kod yazmanıza olanak tanıyan hakkında bilgi edinmek için kullanın[Visual Studio Yazılım Geliştirme Seti (SDK)](https://msdn.microsoft.com/library/bb166441.aspx).
+  Bu yönergeler, Visual Studio için tasarlanırken ne yapacaklarıyla ilgili bilgiler verir ve bazı durumlarda bunun nasıl yapılacağı hakkında bilgiler de dahildir. Daha ayrıntılı uygulama bilgileri ve Visual Studio tümleşik geliştirme ortamı (IDE) ile tümleştirilen çözümler için kod yazmanıza izin veren belirli uygulama programlama arabirimleri (API 'Ler) hakkında bilgi edinmek için [Visual Studio yazılım geliştirme seti 'ni (SDK)](https://msdn.microsoft.com/library/bb166441.aspx)kullanın.

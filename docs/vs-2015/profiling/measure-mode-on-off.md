@@ -1,5 +1,5 @@
 ---
-title: Ölçüm modu açık-kapalı | Microsoft Docs
+title: Ölçü modu açık | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,20 +14,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 92db719f8af2688dc70ddb5ac253c17095302766
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62563278"
 ---
 # <a name="measure-mode-onoff"></a>Ölçüm Modu Açık/Kapalı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu aracı kullanarak zaman çizelgesinde süreyi tam olarak ölçebilirsiniz. Ölçüm modu etkinleştirmek için (cetvel simgesi olan) ölçü düğmesine tıklayın ve ardından zaman çizelgesinde sürükleyin. Sürüklediğinizde, işaretçi altındaki alan sarı renkle vurgulanır ve araç çubuğu düğmesinin sağındaki ölçülen zaman görünür olduğuna dikkat edin. Bu değer, belirli bir olay ne kadar sürüyor hemen görmenize olanak tanıyan sürüklerken dinamik olarak hesaplanır. Fare düğmesini bıraktığınızda, saat değeri görünür kalır.  
+Bu aracı kullanarak, zaman çizelgesinde zaman uzunluğunu tam olarak ölçebilirsiniz. Ölçü modunu etkinleştirmek için ölçü düğmesine (bir cetvel simgesine sahiptir) tıklayın ve sonra zaman çizelgesinde sürükleyin. Sürüklerken, işaretçinin altındaki alanın sarı renkle vurgulandığına ve düğmenin sağındaki araç çubuğunda ölçülen sürenin göründüğüne dikkat edin. Bu değer, sürüklediğiniz şekilde dinamik olarak hesaplanır, böylece belirli bir olayın ne kadar süreceğine hemen bakabilirsiniz. Fare düğmesini serbest bırakırsanız, saat değeri görünür kalır.  
   
- Ölçüm işlemini tekrar edebilirsiniz, ancak yalnızca en son ölçüm gösterilir. Ölçüm modu yeniden kapatmak için ölçü düğmesine tıklayın.  
+ Ölçüm işlemini tekrarlayabilirsiniz, ancak yalnızca en son ölçüm gösterilir. Ölçü modunu kapatmak için ölçü düğmesine tekrar tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kanalları Yönet](../profiling/manage-channels.md)   
- [Yakınlaştırma Denetimi (iş parçacıkları görünümü)](../profiling/zoom-control-threads-view.md)   
+ [Kanalları yönetme](../profiling/manage-channels.md)   
+ [Yakınlaştırma denetimi (Iş parçacıkları görünümü)](../profiling/zoom-control-threads-view.md)   
  [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

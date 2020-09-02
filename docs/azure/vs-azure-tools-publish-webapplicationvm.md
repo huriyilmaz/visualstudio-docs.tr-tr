@@ -1,6 +1,6 @@
 ---
-title: Yayımlama WebApplicationVM | Microsoft Docs
-description: Bir sanal makine bir web uygulamasına dağıtmayı öğrenin. Bu betik, mevcut olmaması durumunda Azure aboneliğinizde gerekli kaynakları oluşturur.
+title: Publish-WebApplicationVM | Microsoft Docs
+description: Bir Web uygulamasını bir sanal makineye dağıtmayı öğrenin. Bu betik, mevcut değilse, Azure aboneliğinizde gerekli kaynakları oluşturur.
 author: ghogen
 manager: jillfra
 assetId: de4cec95-f73f-44d9-babd-9f47f2633cdb
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.date: 11/11/2016
 ms.author: ghogen
 ms.openlocfilehash: 8b4b7a05de87ab8b70046b51fe9f256f05d3aee5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62572291"
 ---
 # <a name="publish-webapplicationvm-windows-powershell-script"></a>Publish-WebApplicationVM (Windows PowerShell betiği)
-Bir sanal makine için bir web uygulaması dağıtır. Mevcut olmaması durumunda betik, Azure aboneliğinizde gerekli kaynakları oluşturur.
+Bir sanal makineye bir Web uygulaması dağıtır. Komut dosyası, mevcut değilse, Azure aboneliğinizde gerekli kaynakları oluşturur.
 
 ```
 Publish-WebApplicationVM
@@ -31,86 +31,86 @@ Publish-WebApplicationVM
 ```
 
 ### <a name="configuration"></a>Yapılandırma
-Dağıtım ayrıntılarını açıklayan JSON yapılandırma dosyası yolu.
+Dağıtımın ayrıntılarını açıklayan JSON yapılandırma dosyasının yolu.
 
 | Diğer adlar | yok |
 | --- | --- |
 | Gerekli mi? |true |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| Ardışık giriş yapılabilir mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
-### <a name="subscriptionname"></a>subscriptionName
-Sanal makineyi oluşturmak istediğiniz Azure aboneliği adı.
+### <a name="subscriptionname"></a>SubscriptionName
+Sanal makineyi oluşturmak istediğiniz Azure aboneliğinin adı.
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
-| Varsayılan değer |Abonelik ilk abonelik kullanır |
-| Ardışık giriş yapılabilir mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| Varsayılan değer |Abonelik dosyasındaki ilk aboneliği kullanır |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ### <a name="webdeploypackage"></a>WebDeployPackage
-Sanal makineye yayımlamak için web dağıtım paketi yolu. Bu paket, Visual Studio'da Web'i Yayımla Sihirbazı'nı kullanarak oluşturabilirsiniz. Bkz: [nasıl yapılır: Visual Studio'da bir Web dağıtım paketi oluşturma](https://msdn.microsoft.com/library/dd465323.aspx).
+Sanal makinede yayımlanacak Web dağıtım paketinin yolu. Bu paketi Visual Studio 'daki Web 'i Yayımla Sihirbazı 'nı kullanarak oluşturabilirsiniz. Bkz. [nasıl yapılır: Visual Studio 'Da Web dağıtım paketi oluşturma](https://msdn.microsoft.com/library/dd465323.aspx).
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| Ardışık giriş yapılabilir mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
-### <a name="allowuntrusted"></a>AllowUntrusted
-TRUE ise bir güvenilir kök yetkilisi tarafından imzalanmadığını sertifikaların kullanılmasına izin verin.
+### <a name="allowuntrusted"></a>Allowgüvenilmeyen
+Doğru ise, güvenilen kök yetkili tarafından imzalanmamış sertifikaların kullanılmasına izin verin.
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
-| Varsayılan değer |false |
-| Ardışık giriş yapılabilir mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| Varsayılan değer |yanlış |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ### <a name="vmpassword"></a>VMPassword
-Sanal makine hesabı için kimlik bilgileri. Örnek: - VMPassword @{Name = "Yönetici"; Parola = "password"}
+Sanal makine hesabının kimlik bilgileri. Örnek:-VMPassword @ {Name = "admin"; Password = "parola"}
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| Ardışık giriş yapılabilir mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ### <a name="databaseserverpassword"></a>DatabaseServerPassword
-Azure SQL veritabanı için kimlik bilgileri. Örnek: - DatabaseServerPassword @{Name = "Yönetici"; Parola = "password"}
+Azure 'da SQL veritabanı için kimlik bilgileri. Örnek:-DatabaseServerPassword @ {Name = "admin"; Password = "parola"}
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
 | Varsayılan değer |yok |
-| Ardışık giriş yapılabilir mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
-### <a name="sendhostmessagestooutput"></a>SendHostMessagesToOutput
-TRUE ise, yazdırma komut dosyasından çıkış akışına iletileri.
+### <a name="sendhostmessagestooutput"></a>Sendhostiletitooutput
+Doğru ise, komut dosyasından çıkış akışına iletileri yazdırın.
 
 | Diğer adlar | yok |
 | --- | --- |
-| Gerekli mi? |false |
+| Gerekli mi? |yanlış |
 | Konum |adlandırılmış |
-| Varsayılan değer |false |
-| Ardışık giriş yapılabilir mi? |false |
-| Joker karakterler kabul edilsin mi? |false |
+| Varsayılan değer |yanlış |
+| İşlem hattı girişi kabul edilsin mi? |yanlış |
+| Joker karakterler kabul edilsin mi? |yanlış |
 
 ## <a name="remarks"></a>Açıklamalar
-Geliştirme ve Test ortamları oluşturmak için komut dosyası kullanmayı tam bir açıklaması için bkz [yayımlamak için geliştirme ve Test ortamları için Windows PowerShell betiklerini kullanarak](vs-azure-tools-publishing-using-powershell-scripts.md).
+Geliştirme ve test ortamları oluşturmak için betiğin nasıl kullanılacağına ilişkin ayrıntılı bir açıklama için, bkz. [geliştirme ve test ortamlarında yayımlamak Için Windows PowerShell betiklerini kullanma](vs-azure-tools-publishing-using-powershell-scripts.md).
 
-JSON yapılandırma dosyası, dağıtılacak nedir ayrıntılarını belirtir. Bu ad, benzeşim grubu, VHD görüntüsünü ve boyutunu sanal makine gibi bir proje oluşturduğunuzda, belirttiğiniz bilgileri içerir. Ayrıca veritabanlarını sağlamak için sanal makine üzerindeki uç noktaları varsa içerir ve web dağıtım parametreleri. Aşağıdaki kod, örnek bir JSON yapılandırma dosyası gösterir:
+JSON yapılandırma dosyası, dağıtılması gereken ayrıntıları belirtir. Projeyi oluştururken belirttiğiniz bilgileri içerir (örneğin ad, benzeşim grubu, VHD görüntüsü ve sanal makinenin boyutu). Ayrıca sanal makinedeki uç noktaları, sağlama yapılacak veritabanlarını ve Web Dağıtım parametrelerini de içerir. Aşağıdaki kod örnek bir JSON yapılandırma dosyasını göstermektedir:
 
 ```
 {
@@ -179,4 +179,4 @@ JSON yapılandırma dosyası, dağıtılacak nedir ayrıntılarını belirtir. B
 }
 ```
 
-Ne sağlanan değiştirmek için JSON yapılandırma dosyasını düzenleyebilirsiniz. Bir sanal makine ve bulut hizmeti gerekli, ancak veritabanı bölümü isteğe bağlıdır.
+Sağlanan öğeleri değiştirmek için JSON yapılandırma dosyasını düzenleyebilirsiniz. Bir sanal makine ve bulut hizmeti gereklidir, ancak veritabanı bölümü isteğe bağlıdır.

@@ -20,36 +20,36 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: adbddc2fb36e5036e535dfc1049945187fe14ed0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62558495"
 ---
 # <a name="warning-task"></a>Uyarı Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Günlükleri bir derleme sırasında bir uyarı değerlendirilen bir koşullu ifadeye göre.  
+Değerlendirilen bir koşullu ifadeye dayanan bir derleme sırasında bir uyarı kaydeder.  
   
 ## <a name="parameters"></a>Parametreler  
- Parametreleri aşağıdaki tabloda açıklanmıştır `Warning` görev.  
+ Katlama tablosu, görevin parametrelerini açıklar `Warning` .  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`Code`|İsteğe bağlı `String` parametresi.<br /><br /> Uyarıyla ilişkilendirilecek uyarı kodu.|  
-|`File`|İsteğe bağlı `String` parametresi.<br /><br /> Varsa ilgili dosyayı belirtir. Uyarı görevi içeren dosyayı herhangi bir dosya sağlanırsa, kullanılır.|  
-|`HelpKeyword`|İsteğe bağlı `String` parametresi.<br /><br /> Uyarıyla ilişkilendirilecek Yardım anahtar sözcüğü.|  
-|`Text`|İsteğe bağlı `String` parametresi.<br /><br /> Uyarı metni, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] günlüğe `Condition` parametresi değerlendirilen `true`.|  
+|`Code`|İsteğe bağlı `String` parametre.<br /><br /> Uyarıyla ilişkilendirilecek uyarı kodu.|  
+|`File`|İsteğe bağlı `String` parametre.<br /><br /> Varsa ilgili dosyayı belirtir. Dosya sağlanmazsa, uyarı görevini içeren dosya kullanılır.|  
+|`HelpKeyword`|İsteğe bağlı `String` parametre.<br /><br /> Uyarıyla ilişkilendirilecek Yardım anahtar sözcüğü.|  
+|`Text`|İsteğe bağlı `String` parametre.<br /><br /> [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]Parametresi olarak değerlendirilirse günlüğe kaydeden uyarı metni `Condition` `true` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Warning` Görev sağlayan [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] gerekli yapılandırma veya bir sonraki devam etmeden önce özellik varlığını denetlemek için projeleri derleme adımı.  
+ `Warning`Görev, [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] bir sonraki derleme adımına geçmeden önce, projelerin gerekli bir yapılandırma veya özellik varlığını denetlemesini sağlar.  
   
- Varsa `Condition` parametresinin `Warning` görev değerlendirilen `true`, değerini `Text` parametresi günlüğe kaydedilir ve yürütmek yapı devam eder. Varsa bir `Condition` parametre döndürrmek değil veya gerçekleştirmez, uyarı metni günlüğe kaydedilir. Günlüğe kaydetme hakkında daha fazla bilgi için bkz. [derleme günlükleri alma](../msbuild/obtaining-build-logs-with-msbuild.md).  
+ `Condition` `Warning` Görevin parametresi olarak değerlendirilirse `true` , `Text` parametrenin değeri günlüğe kaydedilir ve derleme yürütülmeye devam eder. Bir `Condition` parametre mevcut değilse, uyarı metni günlüğe kaydedilir. Günlüğe kaydetme hakkında daha fazla bilgi için bkz. [Derleme günlüklerini alma](../msbuild/obtaining-build-logs-with-msbuild.md).  
   
- Yukarıda listelenen parametrelerin yanı sıra, bu görev parametreleri devralan <xref:Microsoft.Build.Tasks.TaskExtension> kendisi sınıfının devraldığı <xref:Microsoft.Build.Utilities.Task> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, komut satırında ayarlanan özellikler denetler. Özellikleri ayarlanmadı varsa, projeye bir uyarı olayını başlatır ve değerini günlüklerini `Text` parametresinin `Warning` görev.  
+ Aşağıdaki kod örneği, komut satırında ayarlanan özellikleri denetler. Hiçbir özellik ayarlanmamışsa, proje bir uyarı olayı oluşturur ve görevin parametresinin değerini günlüğe kaydeder `Text` `Warning` .  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  

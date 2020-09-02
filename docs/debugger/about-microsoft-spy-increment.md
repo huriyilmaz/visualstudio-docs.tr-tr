@@ -1,5 +1,5 @@
 ---
-title: Microsoft Spy ++ hakkında | Microsoft Docs
+title: Microsoft Spy + + hakkında | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,11 +11,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 54877dfd5164cae2c256f21fc2886d779ecf64a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62564274"
 ---
 # <a name="about-microsoft-spy"></a>Microsoft Spy++ Hakkında
-Telif hakkı, sürüm, sahipliği ve Spy ++ ile ilgili diğer bilgileri görüntülemek için bu iletişim kutusunu kullanın.
+Bu iletişim kutusunu, Spy + + hakkında telif hakkı, sürüm, sahiplik ve diğer bilgileri göstermek için kullanın.

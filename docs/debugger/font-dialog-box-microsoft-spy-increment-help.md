@@ -1,5 +1,5 @@
 ---
-title: Yazı tipi iletişim kutusu (Microsoft Spy ++ Yardımı) | Microsoft Docs
+title: Yazı tipi Iletişim kutusu (Microsoft Spy + + yardım) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,28 +11,28 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1746b8419c342b5627e1c6374b2b29f08f7ee75c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62849875"
 ---
 # <a name="font-dialog-box-microsoft-spy-help"></a>Yazı Tipi İletişim Kutusu (Microsoft Spy++ Yardımı)
-Kullanılan karakter yazı tipi yapılandırmak için bu iletişim kutusunu kullanın. bir [Spy ++ görünümleri](../debugger/spy-increment-views.md) penceresi. Bu iletişim kutusunu görüntülemek için genişletin **görünümü** menüsünü seçip **yazı tipi**.
+[Spy + + görünümleri](../debugger/spy-increment-views.md) penceresinde kullanılan karakter yazı tipini yapılandırmak için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için, **Görünüm** menüsünü genişletin ve **yazı tipi**' ni seçin.
 
  Aşağıdaki ayarlar kullanılabilir:
 
- **Yazı tipi** odaklı Spy ++ görünümleri penceresi için karakter yazı tipi.
+ **Yazı tipi** Odağı olan Spy + + görünümleri penceresinin karakter yazı tipi.
 
- **Yazı tipi stili** odaklı Spy ++ görünümleri penceresi için yazı tipi stili.
+ **Yazı tipi stili** Odağı olan Spy + + görünümleri penceresinin yazı tipi stili.
 
- **Boyutu** odaklı Spy ++ görünümleri penceresi için yazı tipi boyutu.
+ **Boyut** Odağı olan Spy + + görünümleri penceresinin yazı tipi boyutu.
 
- **Varsayılan olarak yazı tipi kaydetme** Spy ++ görünümleri açarken geçerli yazı tipi ayarlarını tercihlerinizi kaydeder.
+ **Yazı tipini varsayılan olarak kaydet** Spy + + görünümlerini açarken geçerli yazı tipi ayarlarını tercihleriniz olarak kaydeder.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Spy ++ görünümleri](../debugger/spy-increment-views.md) Spy ++ ağaç görünümlerini windows, iletileri, süreçleri ve iş parçacıkları açıklar.
+ [Spy + + görünümleri](../debugger/spy-increment-views.md) Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.
 
- [Spy ++ kullanma](../debugger/using-spy-increment.md) Spy ++ araç tanıtır ve nasıl kullanılacağını açıklar.
+ [Spy + + kullanma](../debugger/using-spy-increment.md) Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.
 
- [Spy ++ başvurusu](../debugger/spy-increment-reference.md) her Spy ++ menü ve iletişim kutusunu açıklayan bölümleri içerir.
+ [Spy + + başvurusu](../debugger/spy-increment-reference.md) Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.

@@ -1,6 +1,6 @@
 ---
-title: R için Değişken Gezgin
-description: Visual Studio'daki Değişken Gezgin, geçerli R oturumunda belirli bir kapsamdaki tüm değişkenleri gösterir.
+title: R için Değişken Gezgini
+description: Visual Studio 'daki Değişken Gezgini, geçerli R oturumunda verilen bir kapsamdaki tüm değişkenleri gösterir.
 ms.date: 01/24/2018
 ms.topic: conceptual
 author: kraigb
@@ -9,15 +9,15 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: 799b7f2789898e0d02d9588f9a3ad7d1e8098a00
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62809877"
 ---
 # <a name="variable-explorer"></a>Değişken Gezgini
 
-**R Tools** > **Windows** > Variable**Explorer** (veya **R Tools** > **Veri Bilimi Ayarlarını**kullandıysanız **Ctrl**+**8)** kullanılarak açılan **Değişken Gezgin** penceresi, geçerli R oturumunda belirli bir kapsamdaki tüm değişkenleri gösterir. Örneğin, **Değişken Gezgini'ni** açıp [etkileşimli pencereye](interactive-repl-for-r-in-visual-studio.md)aşağıdaki satırları girerseniz:
+**R araçları**Windows değişken Gezgini kullanılarak açılan **değişken Gezgini** penceresi  >  **Windows**  >  **Variable Explorer** (veya **Ctrl** + **8** **R araçları**  >  **veri bilimi ayarları**kullandıysanız CTRL 8), geçerli R oturumunda belirli bir kapsamdaki tüm değişkenleri gösterir. Örneğin, **değişken Gezgini** açarsanız ve [etkileşimli pencereye](interactive-repl-for-r-in-visual-studio.md)aşağıdaki satırları girerseniz:
 
 ```R
 x <- 42
@@ -25,52 +25,52 @@ y <- 43
 n <- c(1,2,3,5,8,13)
 ```
 
-**Değişken Gezgin** penceresi sonra aşağıdaki gibi görünür:
+**Değişken Gezgini** penceresi aşağıdaki gibi görünür:
 
-![Visual Studio'da değişken explorer penceresi](media/variable-explorer-window.png)
+![Visual Studio 'da değişken Gezgin penceresi](media/variable-explorer-window.png)
 
-Oturumda tanımlanan daha karmaşık bir R veri çerçeveniz varsa, verilere yönlendirebilirsiniz. Örneğin, çalıştırdıktan `cars <- mtcars` sonra Değişken Gezgini'ndeki farklı düğümleri genişleterek **Variable Explorer**veri kümesinde gezinebilirsiniz:
+Oturumda tanımlanmış daha karmaşık bir R veri çerçevesine sahipseniz verilere gidebilirsiniz. Örneğin, çalıştırdıktan sonra, `cars <- mtcars` **değişken Gezgini**farklı düğümleri genişleterek veri kümesinde gezinebilirsiniz:
 
-![Değişken Gezginin genişletilmiş görünümü](media/variable-explorer-expanded-results.png)
+![Değişken Gezgini genişletilmiş görünümü](media/variable-explorer-expanded-results.png)
 
-Değişkenleri silmek için Sağ tıklatın ve **Sil'i**seçin veya değişkeni seçin ve **Sil** tuşuna basın.
+Değişkenleri silmek için sağ tıklayın ve **Sil**' i seçin ya da değişkeni seçip **Delete** tuşuna basın.
 
-Artımlı aramayı kullanarak veri çerçevesinde bir gözlem de arayabilirsiniz. Önce, aramak istediğiniz veri çerçevesindeki düğümleri genişletin, ardından arama kutusuna arama terimleri girin.
+Ayrıca, artımlı arama kullanarak bir veri çerçevesindeki gözlemde arayabilirsiniz. İlk olarak, aramak istediğiniz veri çerçevesindeki düğümleri genişletin ve arama kutusuna arama terimlerini girin.
 
 ## <a name="details-table-view"></a>Ayrıntılar (tablo) görünümü
 
-Veriler genellikle aynı olduğundan, büyüteç simgesini seçerek veya ayrıntıları **göster'i**seçerek herhangi bir karmaşık veri türünü ayrı bir tablo olarak görüntüleyebilirsiniz.
+Veriler çoğunlukla tablo olarak olduğu için, büyüteç simgesini seçerek veya sağ tıklayıp **Ayrıntıları göster**' i seçerek herhangi bir karmaşık veri türünü ayrı bir tablo olarak görüntüleyebilirsiniz.
 
-![Değişken Gezgin tablo görünümü](media/variable-explorer-table-view.png)
+![Değişken Gezgini tablo görünümü](media/variable-explorer-table-view.png)
 
-Bir sütun başlığına tıkladığınızda verileri sütuna göre sıralar (artan ve azalan arasında dönüşümlü). **Shift'i** basılı tutmak ve ek sütunları tıklatmak bu sütunları sıralamaya da ekler. **Shift** olmayan bir sütunu tıklatmak tek sütun sıralamasına döner.
+Sütun başlığına tıklanması verileri sütuna göre sıralar (artan ve azalan arasında değişen). **SHIFT** tuşunu basılı tutmak ve ek sütunlara tıklatmak, bu sütunları sıralamaya de ekler. **SHIFT** olmadan bir sütuna tıkladığınızda tek sütunlu sıralama döndürülür.
 
-Sütun başlıklarını tıklatma sırası, sıralamanın gerçekleştirilme sırasını belirler. Örneğin, **Shift**+ **cyl** sütununa**tıklayın,** sonra **Shift**+artan silindirler ve azalan mil başına galon için listeyi sıralamak için iki kez **mpg** sütununa**tıklayın:**
+Sütun başlıklarını tıklamayı seçtiğiniz sıra, sıralamanın gerçekleştirileceği sırayı belirler. Örneğin, sağ **üst karakter** + sütununa **cyl** **tıklayın** **Shift** + ve sonra listeyi artan silindir ve azalan mil başına-galon için sıralamak üzere **MPG** sütununa iki kez**tıklayın** :
 
-![İki sütuna göre veri sıralama tablo görünümü.](media/variable-explorer-table-view-sorting.png)
+![İki sütuna göre veri sıralamanın tablo görünümü.](media/variable-explorer-table-view-sorting.png)
 
-**Değişken Gezginve** tablo görünümleri ayrı Visual Studio pencerelerinde olduğundan, bunları yan yana çalışma için istediğiniz gibi düzenleyebilirsiniz. Genel yönergeler için [Visual Studio'daki pencere düzenlerini özelleştir'e](../ide/customizing-window-layouts-in-visual-studio.md) bakın.
+**Değişken Gezgini** ve tablo görünümleri ayrı Visual Studio Windows içinde olduğundan, bunları yan yana çalışma için istediğiniz şekilde düzenleyebilirsiniz. Genel yönergeler için bkz. [Visual Studio 'da pencere düzenlerini özelleştirme](../ide/customizing-window-layouts-in-visual-studio.md) .
 
-## <a name="open-in-excel-or-other-csv-capable-application"></a>Excel'de açık (veya diğer CSV özellikli uygulama)
+## <a name="open-in-excel-or-other-csv-capable-application"></a>Excel 'de aç (veya CSV özellikli diğer uygulama)
 
-Daha fazla manipülasyon ve analiz için, oturum değişkenlerini CSV'ye aktarmak genellikle yararlıdır. Dışa aktarma, **Değişken Gezgini'ndeki**](media/variable-explorer-excel-icon.png)her düğümün yanındaki küçük Excel simgesi (Excel![dışaak simgesi) ile veya bir öğeyi sağ tıklatarak ve **CSV Uygulamasında Aç'ı**seçerek yapılır. Simgeyi seçmek, verileri *%userprofile%\Documents\RTVS_CSV_Exports* klasöründe yeni bir CSV dosyasına yazar ve ardından *.csv* uzantısı ile ilişkili olan uygulamada açan bu dosyayı başlatır.
+Daha fazla düzenleme ve çözümleme için, oturum değişkenlerini CSV 'ye aktarmak genellikle yararlı olur. Dışarı aktarma işlemi, ![ değişken Gezgini her bir düğümün yanındaki küçük Excel simgesiyle (Excel dışa aktarma simgesi ](media/variable-explorer-excel-icon.png) ) veya **Variable Explorer**BIR öğeye sağ tıklayıp **CSV uygulamasında aç**' ı seçerek yapılır. Simgenin seçilmesi, verileri *%userprofile%\Documents\ RTVS_CSV_Exports* klasöründe yenı bir CSV dosyasına yazar ve ardından bu dosyayı başlatır *. csv* uzantısıyla ilişkili herhangi bir uygulamanın bulunduğu bu dosya açılır.
 
 ## <a name="scopes"></a>Kapsamlar
 
-Varsayılan olarak **Değişken Gezgini** genel kapsama açılır. Pencerenin üst kısmındaki açılır pencereden bir paket seçerek paket kapsamına geçebilirsiniz.
+Varsayılan olarak **değişken Gezgini** genel kapsama açılır. Pencerenin en üstündeki açılan listeden bir paket seçerek paket kapsamına geçebilirsiniz.
 
-![Paket kapsamını gösteren değişken gezgin](media/variable-explorer-package-scopes.png)
+![Paket kapsamını gösteren değişken Gezgini](media/variable-explorer-package-scopes.png)
 
-Hata ayıklayıcıdaki bir kesme noktasında durdurulduğunda işlev kapsamına da geçebilirsiniz **(Değişken Gezginin** hata ayıklanan kodun işlev kapsamına otomatik olarak geçmediğini unutmayın):
+Ayrıca, hata ayıklayıcıdaki bir kesme noktasında durdurulduğunda bir işlev kapsamına geçiş yapabilirsiniz ( **değişken Gezgini** , hata ayıklanan kodun işlev kapsamına otomatik olarak geçmediğini unutmayın):
 
-![Hata ayıklama sırasında bir veri çerçevesi gösteren Değişken Gezgin](media/variable-explorer-as-locals-window.png)
+![Hata ayıklama sırasında bir veri çerçevesini göstermek Değişken Gezgini](media/variable-explorer-as-locals-window.png)
 
-**Değişken Gezgin,** hata ayıklayıcıda yerel değişkenleri bir işlevde göstermek gibi koda adım attıkça işlev kapsamını otomatik olarak değiştirir.
+**Değişken Gezgini** , bir işlevdeki yerel değişkenleri gösterme gibi, hata ayıklayıcıdaki kodda adım adım iler, işlev kapsamını otomatik olarak değiştirir.
 
-## <a name="import-data-into-variable-explorer"></a>Verileri Değişken Gezgine aktarma
+## <a name="import-data-into-variable-explorer"></a>Değişken Gezgini verileri içeri aktarma
 
-**R Araçları** > **Veri** menüsünden de kullanılabilen Değişken **Gezgin** araç çubuğundaki iki komut, R oturumunuza harici CSV veri kümelerini içe aktarın: Veri **kümesini Web URL'sinden R Oturumuna aktarın** ve **Text File'dan R Session'a Veri Kümesi'ni aktarın.**
+**Değişken Gezgini** araç çubuğunda, **r araçları**  >  **verileri** menüsünde de kullanılabilen iki komut, dış CSV veri kümelerini r oturumunuza içeri aktarın: **veri kümesini Web URL 'sinden r oturumuna** aktar ve **veri kümesini metin dosyasından r oturumuna**aktar.
 
-İçe aktarılacağı CSV dosyasını tanımladıktan sonra Visual Studio, veri dosyasının nasıl ayrıştırılacağını (diğer bir deyişle alan ayırıcısının ne olduğunu ve tırnak ların nasıl işleyeceğini) denetleme seçenekleriniz olan bir **Alma Veri Kümesi** iletişim kutusu görüntüler. Ayrıca, içe aktarılan veri çerçevesinin ve özgün veri dosyasının önizlemesini de görebilirsiniz:
+İçeri aktarılacak CSV dosyasını tanımladıktan sonra, Visual Studio bu veri dosyasının nasıl ayrıştırılabileceğini (yani alan ayırıcısının ne olduğunu ve tekliflerin nasıl işleneceğini) denetleme seçeneklerinizin bulunduğu bir **Içeri aktarma veri kümesi** iletişim kutusu görüntüler. Ayrıca, içeri aktarılan veri çerçevesinin ve özgün veri dosyasının önizlemesini de görebilirsiniz:
 
-![Veri kümesi iletişim kutusunu içe aktarma](media/variable-explorer-import-dataset-dialog.png)
+![Veri kümesini içeri aktar iletişim kutusu](media/variable-explorer-import-dataset-dialog.png)

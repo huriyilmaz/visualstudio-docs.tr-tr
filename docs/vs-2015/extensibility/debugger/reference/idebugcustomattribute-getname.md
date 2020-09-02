@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetName | Microsoft Docs
+title: 'IDebugCustomAttribute:: GetName | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4463fc4f9d321b26487e885255843a7acd945f76
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62569276"
 ---
 # <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
@@ -24,7 +24,7 @@ ms.locfileid: "62569276"
 
 Özel özniteliğin adını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetName(   
@@ -40,13 +40,13 @@ int GetName(
   
 #### <a name="parameters"></a>Parametreler  
  `bstrName`  
- [out] Özel özniteliğin adını içeren bir dize döndürür.  
+ dışı Özel özniteliğin adını içeren bir dize döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem tarafından döndürülen adlandırılmış bir öznitelik bildirmek için kullanılan sınıf adına karşılık gelir. C# bir bildiriminde kullanıldığında bir özel öznitelik adı kesilmesini "Özniteliği" soneki sağladığından, bu tam olarak bir özel öznitelik sınıfı adını karşılık gelebilir.  
+ Bu yöntem tarafından döndürülen adlandırılmış öznitelik, özniteliği bildirmek için kullanılan sınıfın adına karşılık gelir. Bu, C# ' ın bir bildirimde kullanıldığında özel öznitelik adından "öznitelik" sonekinin bırakılmasına izin veren bir özel öznitelik sınıfının adına tam olarak karşılık gelmeyebilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

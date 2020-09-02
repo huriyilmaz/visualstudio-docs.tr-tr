@@ -1,5 +1,5 @@
 ---
-title: '&lt;derleme&gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
+title: '&lt;Assembly &gt; öğesi (ClickOnce uygulaması) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6b629243920021adc3833f43f268f05638029dc7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62900766"
 ---
-# <a name="ltassemblygt-element-clickonce-application"></a>&lt;derleme&gt; öğesi (ClickOnce uygulaması)
-Uygulama bildirimi için üst düzey öğe.
+# <a name="ltassemblygt-element-clickonce-application"></a>&lt;Assembly &gt; öğesi (ClickOnce uygulaması)
+Uygulama bildirimi için en üst düzey öğe.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 
@@ -36,7 +36,7 @@ Uygulama bildirimi için üst düzey öğe.
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `assembly` Öğesi kök öğe ve gereklidir. Alt ilk bağımsız öğe olmalıdır bir `assemblyIdentity` öğesi. Bildirim öğeler şu ad alanlarından birinde olmalıdır:
+ `assembly`Öğesi kök öğesidir ve gereklidir. İlk kapsanan öğesi bir `assemblyIdentity` öğesi olmalıdır. Bildirim öğeleri şu ad alanlarından birinde olmalıdır:
 
  `urn:schemas-microsoft-com:asm.v1`
 
@@ -44,16 +44,16 @@ Uygulama bildirimi için üst düzey öğe.
 
  `http://www.w3.org/2000/09/xmldsig#`
 
- Derlemenin alt öğeleri, bu ad alanlarında, devralma veya etiketleme tarafından da olması gerekir.
+ Derlemenin alt öğeleri de bu ad alanlarında, devralmayla veya etiketlemeyle olmalıdır.
 
- `assembly` Öğesi aşağıdaki özniteliklere sahiptir.
+ `assembly`Öğesi aşağıdaki özniteliğe sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`manifestVersion`|Gerekli. `manifestVersion` Özniteliği ayarlanmalıdır `1.0`.|
+|`manifestVersion`|Gereklidir. `manifestVersion`Özniteliğin olarak ayarlanması gerekir `1.0` .|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneğinde gösterilmiştir bir `assembly` öğesi için bir uygulama bildiriminde bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama. Bu kod örneği, sağlanan daha büyük bir örneğin parçasıdır [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md).
+ Aşağıdaki kod örneği, `assembly` bir uygulama için uygulama bildiriminde bir öğe gösterir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu kod örneği, [ClickOnce uygulama bildiriminde](../deployment/clickonce-application-manifest.md)sağlanmış daha büyük bir örneğin bir parçasıdır.
 
 ```xml
 <asmv1:assembly
@@ -70,5 +70,5 @@ Uygulama bildirimi için üst düzey öğe.
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
-- [\<derleme > öğesi](../deployment/assembly-element-clickonce-deployment.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [\<assembly> dosyalarında](../deployment/assembly-element-clickonce-deployment.md)

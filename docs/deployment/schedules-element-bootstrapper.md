@@ -1,5 +1,5 @@
 ---
-title: '&lt;Zamanlamalar&gt; öğesi (Önyükleyici) | Microsoft Docs'
+title: '&lt;Zamanlamalar &gt; öğesi (önyükleyici) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,16 +16,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a2f6e4ae90dbd36dab4f4df7f72d5ecf57ee04b1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62927338"
 ---
-# <a name="ltschedulesgt-element-bootstrapper"></a>&lt;Zamanlamalar&gt; öğesi (Önyükleyici)
-`Schedules` Ögesinin `Schedule` hangi komutları tarafından tanımlanan belirli zamanlarda tanımlayan öğeleri `Command` öğesi çalıştırılmalıdır.
+# <a name="ltschedulesgt-element-bootstrapper"></a>&lt;Zamanlamalar &gt; öğesi (önyükleyici)
+`Schedules`Öğesi, `Schedule` öğesi tarafından tanımlanan komutların çalıştırılması gereken belirli zamanları tanımlayan öğeleri içerir `Command` .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Schedules>
@@ -40,28 +40,28 @@ ms.locfileid: "62927338"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `Schedules` Öğesi alt öğesi olan `Product` öğesi. Her `Product` öğesi, en fazla bir olabilir `Schedules` öğesi. `Schedules` Öğesi özniteliklere sahip değildir.
+ `Schedules`Öğesi, öğesinin bir alt öğesidir `Product` . Her `Product` öğenin en fazla bir öğesi olabilir `Schedules` . `Schedules`Öğesinde hiç öznitelik yok.
 
-## <a name="schedule"></a>Zamanlama
- `Schedule` Öğesi alt öğesi olan `Schedules` öğesi. A `Schedules` öğesi en az bir olmalı `Schedule` öğesi.
+## <a name="schedule"></a>Zamanla
+ `Schedule`Öğesi, öğesinin bir alt öğesidir `Schedules` . Bir `Schedules` öğe en az bir öğe içermelidir `Schedule` .
 
- `Schedule` Aşağıdaki özniteliklere sahiptir.
+ `Schedule` aşağıdaki özniteliğe sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Name`|Gerekli. Zamanlama öğesinin adı. Bu karşılık gelir `ScheduleName` özelliği `Command` öğesi. Olduğunda bir `Command` adlandırılmış zamanlama başvuran tarafından belirtilen zaman yalnızca yürütülecek `Schedule` öğesi. Zamanlamalar ayrıca ile ilişkili olabilir `FailIf` ve `BypassIf` koşullu bu testleri belirli bir zamanlamaya göre çalıştırma için kısıtlama öğeleri. Daha fazla bilgi için [ \<komutları > öğesi](../deployment/commands-element-bootstrapper.md).|
+|`Name`|Gereklidir. Zamanlama öğesinin adı. Bu `ScheduleName` , öğesinin özelliğine karşılık gelir `Command` . Bir `Command` , adlandırılmış zamanlamaya başvurduğunda, yalnızca bu öğe tarafından belirtilen zamanda yürütülür `Schedule` . Zamanlamalar Ayrıca, `FailIf` `BypassIf` Bu koşullu testlerin belirtilen zamanlamaya göre yürütülmesini kısıtlayan ve öğeleriyle ilişkili olabilir. Daha fazla bilgi için bkz. [ \<Commands> öğesi](../deployment/commands-element-bootstrapper.md).|
 
- Belirli bir `Schedule` öğe aşağıdaki alt tam olarak birine sahip.
+ Verilen bir `Schedule` öğe aşağıdaki alt öğelerden tam olarak birine sahip olabilir.
 
 ## <a name="buildlist"></a>BuildList
- `BuildList` Önyükleme uygulaması başladıktan hemen sonra bir komut çalıştırmak için yükleyici öğesi bildirir.
+ `BuildList`Öğesi, yükleyiciyi önyükleme uygulaması başlatıldıktan hemen sonra bir komut yürütmesini söyler.
 
 ## <a name="beforepackage"></a>BeforePackage
- `BeforePackage` Öğesi belirtilen paket yüklenmeden önce bir komut çalıştırmak için yükleyici bildirir.
+ `BeforePackage`Öğesi, belirtilen paket yüklenmeden önce yükleyiciye bir komut yürütmesini söyler.
 
 ## <a name="afterpackage"></a>AfterPackage
- `AfterPackage` Öğesi belirtilen paket yüklendikten sonra bir komut çalıştırmak için yükleyici bildirir.
+ `AfterPackage`Öğesi, belirtilen paket yüklendikten sonra yükleyiciye bir komut yürütmesini söyler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [\<Ürün > öğesi](../deployment/product-element-bootstrapper.md)
+- [\<Product> dosyalarında](../deployment/product-element-bootstrapper.md)
 - [Ürün ve paket şema başvurusu](../deployment/product-and-package-schema-reference.md)

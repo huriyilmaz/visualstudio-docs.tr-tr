@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_rawlvarınstancevalue | Microsoft Docs
+title: 'IDiaStackFrame:: get_rawLVarInstanceValue | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c8ff78c38ad077084b3dea9c96e3251ffddb2206
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62573020"
 ---
-# <a name="idiastackframegetrawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
+# <a name="idiastackframeget_rawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu yöntem, ham bayt olarak belirlenen yerel değişkenin değerini alır.  
+Bu yöntem belirtilen yerel değişkenin değerini ham bayt olarak alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_rawLVarInstanceValue(  
@@ -38,19 +38,19 @@ HRESULT get_rawLVarInstanceValue(
   
 #### <a name="parameters"></a>Parametreler  
  `pInstance`  
- [in] Bir `IDiaLVarInstance` değerini almak için yerel değişken bir örneğini temsil eden nesne.  
+ 'ndaki `IDiaLVarInstance` Değerini almak için bir yerel değişken örneğini temsil eden nesne.  
   
  `cbDataMax`  
- [in] Arabellekteki bayt sayısı tarafından işaret edilen `pbData`. Bu, en fazla 8 bayt olabilir (`sizeof(ULONGLONG)`).  
+ 'ndaki Arabellekte tarafından işaret edilen en fazla bayt sayısı `pbData` . Bu en fazla 8 bayt ( `sizeof(ULONGLONG)` ) olabilir.  
   
  `pcbData`  
- [out] Gerçek arabellekteki depolanan bayt sayısını döndürür.  
+ dışı Arabellekte depolanan gerçek bayt sayısını döndürür.  
   
  `pbData`  
- [out] Veri ile doldurulacak bir arabellek. Bu olamaz `NULL`.  
+ dışı Verilerle doldurulacak bir arabellek. Bu, olamaz `NULL` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

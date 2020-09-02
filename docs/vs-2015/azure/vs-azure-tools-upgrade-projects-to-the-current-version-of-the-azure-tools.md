@@ -1,6 +1,6 @@
 ---
-title: Azure Araçları'nın geçerli sürümüne projeleri yükseltme | Microsoft Docs
-description: Azure Visual Studio projesinde Azure Araçları'nın geçerli sürümüne yükseltmeyi öğrenin
+title: Projeleri Azure Araçları 'nın geçerli sürümüne yükseltme | Microsoft Docs
+description: Visual Studio 'da bir Azure projesini Azure araçlarının güncel sürümüne nasıl yükselteceğinizi öğrenin
 author: ghogen
 manager: jillfra
 assetId: 1d64070a-078d-468a-87f4-e6715de6475f
@@ -12,35 +12,35 @@ ms.topic: conceptual
 ms.date: 11/18/2016
 ms.author: ghogen
 ms.openlocfilehash: 27ab6619a4d36fc105a3b8a668a31a33ae4c2a43
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62793740"
 ---
 # <a name="how-to-upgrade-projects-to-the-current-version-of-the-azure-tools-for-visual-studio"></a>Projeleri Visual Studio için Azure Araçları'nın güncel sürümüne yükseltme
-## <a name="overview"></a>Genel Bakış
-Azure Araçları (veya 1.6 yeni bir önceki sürüm)'in geçerli sürümünü yükledikten sonra Azure Araçları kullanılarak oluşturulmuş herhangi bir projeyi 1.6 önce sürüm (Kasım 2011) otomatik olarak yükseltilecek açmadan hemen sonra. Bu araçları 1.6 (Kasım 2011) sürümünü kullanarak projeleri oluşturulan ve hala yüklü sürümü varsa, daha eski bir sürümde bu projeleri açmak ve daha sonra bunları yükseltilmesi gerekip gerekmediğini belirleme.
+## <a name="overview"></a>Genel bakış
+Geçerli Azure araçları sürümünü (veya 1,6 'den daha yeni bir sürümü) yükledikten sonra, bir Azure Araçları 1,6 sürümü kullanılarak oluşturulan tüm projeler, siz açarsınız, otomatik olarak yükseltilir (Kasım 2011). Bu araçların 1,6 (Kasım 2011) sürümünü kullanarak projeler oluşturduysanız ve bu sürümü hala yüklüyse, bu projeleri eski sürümde açabilir ve daha sonra bunları yükseltireceğinize karar verebilirsiniz.
 
-## <a name="how-your-project-changes-when-you-upgrade-it"></a>Bu yükseltme yaptığınızda, projenizin nasıl değiştiğini
-Yükseltmek istediğinizi belirtin veya bir proje otomatik olarak yükseltilir, projeniz belirli bütünleştirilmiş kodların geçerli sürümleri ile çalışacak şekilde değiştirilir ve bu bölümde açıklandığı gibi bazı özellikler de değiştirilir. Projenizi Araçları'nın daha yeni sürümü ile uyumlu olacak şekilde başka değişiklikler gerektiriyorsa, bu değişiklikleri el ile yapmalısınız.
+## <a name="how-your-project-changes-when-you-upgrade-it"></a>Yükselttiğinizde projeniz nasıl değişir
+Bir proje otomatik olarak yükseltildiyse veya onu yükseltmek istediğinizi belirtirseniz, projeniz belirli derlemelerin geçerli sürümleriyle çalışacak şekilde değiştirilir ve bu bölümde açıklanan bazı özellikler de değiştirilir. Projeniz diğer değişikliklerin araçların daha yeni sürümü ile uyumlu olmasını gerektiriyorsa, bu değişiklikleri el ile yapmanız gerekir.
 
-* Web.config dosyası web rolleri ve çalışan rolleri için app.config dosyasında Microsoft.WindowsAzure.Diagnostics.DiagnosticMonitorTraceListener.dll daha yeni sürümü başvurmak için güncelleştirilmiştir.
-* Microsoft.WindowsAzure.StorageClient.dll Microsoft.WindowsAzure.Diagnostics.dll ve Microsoft.WindowsAzure.ServiceRuntime.dll derlemeleri yeni sürümleriyle yükseltilir.
-* Azure projesi (.ccproj) dosyasında depolanan yayımlama profillerine taşınmıştır uzantısı .azurePubXml ile ayrı bir dosya içinde **Yayımla** alt.
-* Yayımlama profili bazı özellikleri, yeni ve değiştirilmiş özellikler destekleyecek şekilde güncelleştirilir. **AllowUpgrade** değiştirilir **DeploymentReplacementMethod** olduğundan, dağıtılmış bir bulut hizmetinde aynı anda veya artımlı olarak güncelleştirebilirsiniz.
-* Özellik **UseIISExpressByDefault** eklenir ve böylece hata ayıklama için kullanılan web sunucusu otomatik olarak Internet Information Services (IIS) IIS Express için değişmez false olarak ayarlayın. IIS Express, araçların daha yeni sürümleri ile oluşturulan projeleri için varsayılan web sunucusu olabilir.
-* Azure önbelleği bir veya daha fazla proje rolleri barındırılıyorsa bir proje yükseltildiğinde bazı özellikler hizmet yapılandırma (.cscfg dosyası) ve hizmet tanımı (.csdef dosyası) değiştirilir. Azure önbellek NuGet paketini projeye kullanıyorsa, proje paketi en son sürümüne yükseltilir. Web.config dosyasını açın ve istemci yapılandırması, yükseltme işlemi sırasında düzgün şekilde tutulan doğrulamanız gerekir. Azure önbellek istemci derlemelerine başvurular NuGet paketi kullanmadan dts'e eklediyseniz, bu derlemeler güncelleştirilmez; Ayrıca, yeni sürümleri bu başvuruları el ile güncelleştirmeniz gerekir.
+* Web rollerinin web.config dosyası ve çalışan rolleri için app.config dosyası, Microsoft.WindowsAzure.Diagnostics.DiagnosticMonitorTraceListener.dll daha yeni sürümüne başvuracak şekilde güncelleştirilir.
+* Microsoft.WindowsAzure.StorageClient.dll, Microsoft.WindowsAzure.Diagnostics.dll ve Microsoft.WindowsAzure.ServiceRuntime.dll derlemeleri yeni sürümlere yükseltilir.
+* Azure proje dosyasında (. ccproj) depolanan yayımlama profilleri, **Yayımla** alt dizininde. azurePubXml uzantılı ayrı bir dosyaya taşınır.
+* Yayımla profilindeki bazı özellikler yeni ve değiştirilmiş özellikleri destekleyecek şekilde güncelleştirilir. Dağıtılmış bir bulut hizmetini eşzamanlı olarak veya artımlı olarak güncelleştirebilmeniz için **Allowupgrade** , **Deploymentreplacementmethod** ile değiştirilmiştir.
+* **UseIISExpressByDefault** özelliği eklenir ve false olarak ayarlanır, böylece hata ayıklama için kullanılan Web sunucusu otomatik olarak Internet INFORMATION SERVICES (IIS) ' den IIS Express ' e değişmez. IIS Express, araçların yeni sürümleriyle oluşturulan projelere yönelik varsayılan Web sunucusudur.
+* Azure önbelleği, projenizin rollerinin bir veya daha fazlasına barındırılıyorsa, bir proje yükseltildiğinde hizmet yapılandırmasındaki (. cscfg dosyası) ve hizmet tanımındaki (. csdef dosyası) bazı özellikler değiştirilir. Proje Azure önbelleğe alma NuGet paketini kullanıyorsa, proje paketin en son sürümüne yükseltilir. web.config dosyasını açmanız ve yükseltme işlemi sırasında istemci yapılandırmasının düzgün şekilde korunduğundan emin olmanız gerekir. Azure önbelleğe alma istemci derlemelerine başvuruları NuGet paketini kullanmadan eklediyseniz, bu derlemeler güncellenmez; Bu başvuruları yeni sürümlere el ile güncelleştirmeniz gerekir.
 
 > [!IMPORTANT]
-> İçin F# projeleri, böylece bu derlemelerin yeni sürümlerini oldukları Azure derlemelere başvuruları el ile güncelleştirmeniz gerekir.
+> F # projeleri için, Azure derlemelerine yapılan başvuruları, bu derlemelerin daha yeni sürümlerine başvuracak şekilde el ile güncelleştirmeniz gerekir.
 > 
 > 
 
-### <a name="how-to-upgrade-an-azure-project-to-the-current-release"></a>Bir Azure projesi geçerli sürüme yükseltme
-1. Yükseltilen proje için kullanmak istediğiniz Visual Studio yüklemesini içine Azure Araçları'nın geçerli sürümü yükleyin ve ardından yükseltmek istediğiniz projeyi açın. Projeyi Azure Araçları ile oluşturulmuş olsa bile yayın önce 1.6 (Kasım 2011) projeyi otomatik olarak geçerli sürümüne yükseltilir. Projenizi oluşturduysanız ile Kasım 2011 sürüm ve sürümü yüklüdür, bu sürümde projeyi açar.
-2. Çözüm Gezgini'nde proje düğümü için kısayol menüsünü açın, **özellikleri**ve ardından **uygulama** görüntülenen iletişim kutusunda sekmesi.
+### <a name="how-to-upgrade-an-azure-project-to-the-current-release"></a>Bir Azure projesini geçerli sürüme yükseltme
+1. Azure araçlarının güncel sürümünü, yükseltilen proje için kullanmak istediğiniz Visual Studio yüklemesinde yükleme ve ardından yükseltmek istediğiniz projeyi açın. Proje 1,6 (2011 Kasım) öncesi bir Azure araçları sürümü ile oluşturulduysa, proje otomatik olarak geçerli sürüme yükseltilir. Proje Kasım 2011 sürümüyle oluşturulduysa ve bu yayın hala yüklüyse, proje o sürümde açılır.
+2. Çözüm Gezgini, proje düğümünün kısayol menüsünü açın, **Özellikler**' i seçin ve ardından görüntülenen Iletişim kutusunun **uygulama** sekmesini seçin.
    
-    **Uygulama** sekmesi, projeyle ilişkili Araçlar sürümü gösterir. Azure Araçları'nın geçerli sürümü varsa, proje zaten yükseltildi. Hangi sekmesini gösteren daha araçları daha yeni bir sürümünü yüklediyseniz bir **yükseltme** düğmesi görünür.
-3. Seçin **yükseltme** Araçları'nın geçerli sürümüne bir projeyi yükseltmesine düğmesi.
-4. Projeyi oluşturmak ve ardından API değişikliklerden kaynaklanan hataları çözün. Kodunuz için yeni sürümü değiştirme hakkında daha fazla bilgi için özel API belgelerine bakın.
+    **Uygulama** sekmesi, projeyle ilişkili araçlar sürümünü gösterir. Geçerli Azure araçları sürümü görüntülenirse, proje zaten yükseltilmiştir. Araçların gösterdiği sürümden daha yeni bir sürümünü yüklediyseniz, bir **yükseltme** düğmesi görünür.
+3. Bir projeyi araçların güncel sürümüne yükseltmek için **Yükselt** düğmesini seçin.
+4. Projeyi derleyin ve ardından API değişikliklerinden kaynaklanan tüm hataları çözün. Yeni sürüm için kodunuzun nasıl değiştirileceği hakkında daha fazla bilgi için, belirli bir API 'nin belgelerine bakın.

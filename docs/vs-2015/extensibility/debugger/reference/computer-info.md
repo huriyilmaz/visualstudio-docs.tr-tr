@@ -11,18 +11,18 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b7b5c49aea62ff1f7cb6416f7e02f7e7a3c0a166
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62561773"
 ---
-# <a name="computerinfo"></a>COMPUTER_INFO
+# <a name="computer_info"></a>COMPUTER_INFO
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklayıcı üzerinde çalıştığı bilgisayar açıklar.  
+Hata ayıklayıcının çalıştığı bilgisayarı tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct tagCOMPUTER_INFO  
@@ -42,25 +42,25 @@ public struct COMPUTER_INFO
 }  
 ```  
   
-## <a name="terms"></a>Koşulları  
+## <a name="terms"></a>Terimler  
  wProcessorArchitecture  
- Mikro işlemci mimarisini tanımlar.  
+ Mikro işlemcinin mimarisini tanımlar.  
   
  wSuiteMask  
- Suite maske tanımlar.  
+ Paket maskesini tanımlar.  
   
  dwOperatingSystemVersion  
  İşletim sistemi sürüm numarası.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı tarafından döndürülen [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md) yöntemi.  
+ Bu yapı [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md) yöntemi tarafından döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üst bilgi: Msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

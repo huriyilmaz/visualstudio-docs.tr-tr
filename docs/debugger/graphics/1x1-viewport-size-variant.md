@@ -1,5 +1,5 @@
 ---
-title: 1 x 1 Görünüm penceresi boyut çeşidi | Microsoft Docs
+title: 1x1 Görünüm penceresi boyut varyantı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3dbc3247-00f5-4644-8ff9-72e9febcf09a
@@ -9,25 +9,25 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a5b2c96b11c2075ce88b43cdebc34b905141c973
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62848732"
 ---
 # <a name="1x1-viewport-size-variant"></a>1x1 Görünüm Penceresi Boyut Çeşidi
-Tüm işleme hedeflerde Görünüm penceresi boyutları 1 x 1 piksel azaltır.
+Tüm işleme hedeflerindeki Görünüm penceresi boyutunu 1x1 piksele düşürür.
 
-## <a name="interpretation"></a>Yorumu
- Daha küçük bir Görünüm penceresi, gölgelendirme için sahip olduğunuz piksel sayısını azaltır. Ancak, daha küçük bir Görünüm penceresi için sahip köşelerin sayısını azaltmaz işlem. Görünüm penceresi boyutları 1 x 1 piksel etkili bir şekilde ayarlanması piksel gölgelendirme uygulamanızdan ortadan kaldırır.
+## <a name="interpretation"></a>Yorumlama
+ Daha küçük bir görünüm penceresi, gölgelendirmek istediğiniz piksel sayısını azaltır. Ancak, daha küçük bir görünüm penceresi, işlemek istediğiniz köşe sayısını azaltmaz. Görünüm penceresi boyutlarını 1x1 piksel olarak ayarlamak, uygulamanızdan piksel gölgelendirmesini etkin bir şekilde ortadan kaldırır.
 
- Bu değişken, bir büyük bir performans kazancı gösteriyorsa, uygulamanızı doldurma oranı çok fazla tüketen gösterebilir. Ayrıca, uygulamanızı daha sonra üzerine önemli zaman gölgelendirme piksel harcayabilirsiniz veya çözünürlüğünüz hedef platform için çok yüksek olabilir, ayrıca olarak bilmeniz *overdraw*. Daha küçük bir çerçeve arabelleği veya overdraw miktarını azaltmayı uygulamanızın performansı iyileştirir.
+ Bu çeşit büyük bir performans kazancı gösteriyorsa, uygulamanızın çok fazla sayıda dolgusu kullandığını gösteriyor olabilir. Ayrıca, çözümlemenizin hedef platform için çok yüksek olması veya uygulamanız daha sonra üzerine yazılmış ve *fazla çizim*olarak da bilinen önemli zaman gölgeleme piksellerini harcayabilir. Daha küçük bir çerçeve arabelleği veya fazla çizim miktarını azaltmak, uygulamanızın performansını iyileştirir.
 
 ## <a name="remarks"></a>Açıklamalar
- Görünüm penceresi boyutları 1 x 1 piksel yapılan her çağrı sonra sıfırlanır `ID3D11DeviceContext::OMSetRenderTargets` veya `ID3D11DeviceContext::RSSetViewports`.
+ Görünüm penceresi boyutları, veya için her çağrıdan sonra 1x1 piksel olarak `ID3D11DeviceContext::OMSetRenderTargets` sıfırlanır `ID3D11DeviceContext::RSSetViewports` .
 
 ## <a name="example"></a>Örnek
- Bu değişken, aşağıdaki kod ile yeniden oluşturulabilir:
+ Bu varyant aşağıdaki kodla yeniden oluşturulabilir:
 
 ```cpp
 D3D11_VIEWPORT viewport;

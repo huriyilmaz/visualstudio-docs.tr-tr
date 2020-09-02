@@ -11,26 +11,26 @@ ms.assetid: 6003607e-fc19-4bf9-a299-9f6adf8e92eb
 caps.latest.revision: 13
 manager: jillfra
 ms.openlocfilehash: 1d20b865c6f07d76320a7df8402810c82869ddfb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62822392"
 ---
 # <a name="hiding-properties-that-have-child-properties"></a>Alt özellikleri olan özellikleri gizleme
-Alt özellikleri taşıyan özellikler gizlemek isteyebilirsiniz:  
+Alt özellikleri olan özellikleri gizlemek isteyebilirsiniz:  
   
-- Burada ana proje bazı yönlerini alt projeyi program aracılığıyla denetimleri iç içe projeler varsa.  
+- Üst projenin program aracılığıyla alt projenin bazı yönlerini denetlediği iç içe projeler varsa.  
   
-- Varsa bir denetimi ile özel bir tasarımcı kullanın ve geliştiriciler, denetimin tüm özelliklerini tam erişim vermek istiyor musunuz.  
+- Özelleştirilmiş tasarımcı ile bir denetim kullanıyorsanız ve geliştiricilere, denetimin tüm özelliklerine tam erişim vermek istemiyorsanız.  
   
-- Varsa bir nesnenin kapsamı sahiplik ve özellikleri görünümünü sınırlamak istiyorsunuz.  
+- Bir nesnenin kapsam sahipliğiniz varsa ve özelliklerin görünümünü sınırlamak istiyorsanız.  
   
-### <a name="to-hide-properties-that-have-child-properties"></a>Alt özellikleri taşıyan özellikler gizlemek için  
+### <a name="to-hide-properties-that-have-child-properties"></a>Alt özellikleri olan özellikleri gizlemek için  
   
-1. Ayarlama `pfDisplay` parametresinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.DisplayChildProperties%2A> için `FALSE`.  
+1. `pfDisplay`Parametresini <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.DisplayChildProperties%2A> olarak ayarlayın `FALSE` .  
   
-2. Ayarlama `pfHide` parametresinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> için `TRUE`.  
+2. `pfHide`Parametresini <xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing.HideProperty%2A> olarak ayarlayın `TRUE` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Özellikler Görüntü Kılavuzu](../extensibility/internals/properties-display-grid.md)

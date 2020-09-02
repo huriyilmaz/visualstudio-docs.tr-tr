@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: bc840ac19e48f6a0a6a597ec667a4bc799070e59
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62901835"
 ---
 # <a name="tree-menu-commands"></a>Ağaç Menü Komutları
-**Ağaç** menü komutlarını genişletmek veya daraltmak için görünümler sağlar.
+**Ağaç** menüsü, görünümleri genişletmek veya daraltmak için komutlar sağlar.
 
- **Bir düzey Genişlet** sistem görünümünde seçili öğenin bir düzey altındaki görüntüleyerek genişletir.
+ **Bir düzey Genişlet** Bir düzey altındaki bir düzeyi görüntüleyerek bir sistem görünümünde Şu anda seçili olan öğeyi genişletir.
 
- **Dalı genişlet** seçili öğenin altındaki tüm düzeyleri genişletir.
+ **Dalı Genişlet** Şu anda seçili olan öğenin altındaki tüm düzeyleri genişletir.
 
- **Tümünü Genişlet** genişler ve Sistem Görünümü'nde tüm düzeylerini görüntüler.
+ **Tümünü Genişlet** Bir sistem görünümündeki tüm düzeyleri genişletir ve görüntüler.
 
- **Daralt** seçili öğenin altındaki tüm düzeylerini daraltır.
+ **Daraltma** Şu anda seçili olan öğenin altındaki tüm düzeyleri daraltır.

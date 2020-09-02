@@ -1,5 +1,5 @@
 ---
-title: Biçim belirleyiciler hata ayıklayıcı (C#) | Microsoft Docs
+title: Hata ayıklayıcıda biçim belirticileri (C#) | Microsoft Docs
 ms.date: 11/21/2018
 ms.topic: conceptual
 dev_langs:
@@ -26,19 +26,19 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: caaf36e286f1bdc664ebdbb10e3baf7ed28183e7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62849829"
 ---
-# <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Biçim belirleyiciler içinde C# Visual Studio hata ayıklayıcısı
-İçinde bir değer görüntülenir biçimini değiştirebilirsiniz **Watch** biçim belirticilerini kullanarak pencere. İçindeki Biçim belirticileri kullanabilirsiniz **hemen** penceresinde **komut** penceresi, [izleme noktaları](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)ve kaynak pencerelerinde. Bu pencereler içinde bir ifade üzerinde duraklarsanız, sonuç görünür bir [DataTip](../debugger/view-data-values-in-data-tips-in-the-code-editor.md) belirtilen biçim görüntülenir.
+# <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısında C# içindeki biçim belirticileri
+Biçim belirticilerini kullanarak, **izleme** penceresinde bir değerin görüntülendiği biçimi değiştirebilirsiniz. Biçim belirticilerini **hemen** penceresinde, **komut** penceresinde, [izlenenoktalarda](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints)ve kaynak penceresinde de kullanabilirsiniz. Bu pencerelerin bir ifadesinde durakladıysanız, sonuç belirtilen biçim görüntüsüne göre bir  [veri ipucunda](../debugger/view-data-values-in-data-tips-in-the-code-editor.md) görüntülenir.
 
-Bir biçim belirtici kullanmak için bir virgül ve uygun belirticisi tarafından değişken ifade girin.
+Biçim belirleyicisi kullanmak için, değişken ifadesini ve ardından virgül ve uygun belirticisi girin.
 
-## <a name="set-format-specifiers"></a>Biçim belirticileri kümesi
-Aşağıdaki kod örneği kullanacağız:
+## <a name="set-format-specifiers"></a>Biçim belirticilerini ayarla
+Aşağıdaki örnek kodu kullanacağız:
 
 ```csharp
 {
@@ -48,33 +48,33 @@ Aşağıdaki kod örneği kullanacağız:
 }
 ```
 
-Ekleme `my_var1` değişkenini **Watch** hata ayıklarken, pencere **hata ayıklama** > **Windows** > **izleyin**  >  **1 izleyin**. Ardından, değişkeni sağ tıklatın ve seçin **onaltılık gösterim**. Artık **Watch** penceresi 0x0065 değeri gösterir. Bu değer bir onaltılık tamsayı yerine bir ondalık tamsayı olarak görmek için ondalık biçim belirteci ekleme **, d** içinde **adı** değişken adından sonra sütun. **Değer** sütun gösterdiğini **101**.
+`my_var1`Hata ayıklama sırasında değişkeni **izleme** penceresine ekleyin, Windows Watch 'da **hata ayıklama**  >  **Windows**  >  **Watch**  >  **1**' i izleyin. Sonra, değişkene sağ tıklayıp **onaltılık görüntü**' i seçin. Şimdi **İzle** penceresinde 0x0065 değeri gösterilir. Bu değeri bir onaltılık tamsayı yerine ondalık tamsayı olarak görmek için, değişken adından sonra **ad** sütununa **d** ondalık biçim belirleyicisi ekleyin. **Değer** sütununda artık **101**gösterilmektedir.
 
 ![WatchFormatCSharp](../debugger/media/watchformatcsharp.png "WatchFormatCSharp")
 
 ::: moniker range=">= vs-2019" 
 
-Görüntüleyebilir ve değeri bir virgül (,) ekleyerek kullanılabilir biçim belirleyicilerinin bir listeden seçim **Watch** penceresi. 
+**İzleme** penceresindeki değere bir virgül (,) ekleyerek kullanılabilir biçim belirticileri listesinden görüntüleyebilir ve seçim yapabilirsiniz. 
 
 ![FormatSpecCSharp](../debugger/media/vs-2019/format-specs-csharp.png "FormatSpecCSharp")
 
 ::: moniker-end
 
 ## <a name="format-specifiers"></a>Biçim belirticileri
-Aşağıdaki tabloda açıklanmıştır C# biçim belirleyiciler Visual Studio hata ayıklayıcı için.
+Aşağıdaki tabloda, Visual Studio hata ayıklayıcısı için C# biçim belirticileri açıklanmaktadır.
 
-|Belirleyici|Biçimi|Özgün izleme değeri|Görüntüler|
+|Belirleyici|Biçimlendir|Özgün Izleme değeri|Görüntülenmektedir|
 |---------------|------------|--------------------------|--------------|
-|AC|Örtülü değerlendirme özellikleri ve örtük işlev çağrılarını devre dışı bırakıldığında, yararlı olabilecek bir ifade değerlendirmesi zorlar.|"Kapalı işlev değerlendirme kullanıcı tarafından devre dışı" iletisi|\<Değer >|
-|d|Ondalık tamsayı|0x0065|101|
-|dinamik|Dinamik bir görünümü kullanarak belirtilen nesneyi görüntüler|Dinamik görünüm dahil olmak üzere nesnenin tüm üyelerini görüntüler|Yalnızca dinamik görünüm görüntüler|
-|h|Onaltılık tamsayı|61541|0x0000F065|
-|Nq|hiçbir tırnak işaretleri dize|"Benim dize"|My dize|
-|nse|Davranış biçimini değil belirtir. "Yan etkiler" ifadesiyle değerlendirir. İfade yorumlanamıyor ve yalnızca Değerlendirme sürümü (örneğin, bir işlev çağrısı) çözülebilir, bunun yerine bir hata görürsünüz.|Yok|Yok|
-|gizli|Tüm genel ve genel olmayan üyeleri görüntüler|Görüntüler Genel üyeler|Tüm üyelerini görüntüler|
-|Ham|Ham madde düğümüne göründüğü gibi öğesi görüntüler. Proxy nesneleri yalnızca geçerli.|Sözlük\<T >|Sözlük işlenmemiş bir görünümünü\<T >|
-|sonuçlar|IEnumerable veya IEnumerable uygulayan bir tür değişkeninin ile kullanılan\<T >, genellikle bir sorgu ifadesinin sonucu. Sorgu sonucu içeren üyelerini görüntüler.|Tüm üyelerini görüntüler|Üyeleri karşılamak görüntüler sorgunun koşulları|
+|m|Özellik ve örtük işlev çağrılarının örtük değerlendirmesi kapalıyken yararlı olabilecek bir ifadenin değerlendirmesini zorla.|İleti "örtük işlev değerlendirmesi Kullanıcı tarafından kapatılmış"|\<value>|
+|d|ondalık tamsayı|0x0065|101|
+|dynamic|Belirtilen nesneyi dinamik görünüm kullanarak görüntüler|Dinamik görünüm dahil olmak üzere nesnenin tüm üyelerini görüntüler|Yalnızca dinamik görünümü görüntüler|
+|h|onaltılı tamsayı|61541|0x0000F065|
+|nq|tırnak işareti olmayan dize|"Dizim"|Dizim|
+|No dili|Biçimi değil, davranışı belirtir. İfadeyi "yan etkisi yok" ile değerlendirir. İfade yorumlanamaz ve yalnızca bir değerlendirme tarafından çözümlenebiliyorsa (örneğin, işlev çağrısı), bunun yerine bir hata görürsünüz.|Yok|Yok|
+|gizli|Tüm genel ve genel olmayan üyeleri görüntüler|Ortak üyeleri görüntüler|Tüm üyeleri görüntüler|
+|Madde|Öğeyi ham öğe düğümünde göründüğü gibi görüntüler. Yalnızca Proxy nesnelerinde geçerlidir.|Sözlük\<T>|Sözlüğün ham görünümü\<T>|
+|sonuçlar|Genellikle bir sorgu ifadesinin sonucu olan IEnumerable veya IEnumerable uygulayan bir tür değişkeniyle kullanılır \<T> . Yalnızca sorgu sonucunu içeren üyeleri görüntüler.|Tüm üyeleri görüntüler|Sorgunun koşullarını karşılayan üyeleri görüntüler|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [İzleme ve QuickWatch windows](../debugger/watch-and-quickwatch-windows.md)
-- [Otolar ve yerel öğeler pencerelerinde](../debugger/autos-and-locals-windows.md)
+- [İzleme ve hızlı gözcü pencereleri](../debugger/watch-and-quickwatch-windows.md)
+- [Oto ve Yereller pencereleri](../debugger/autos-and-locals-windows.md)

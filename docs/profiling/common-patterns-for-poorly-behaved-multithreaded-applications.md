@@ -1,5 +1,5 @@
 ---
-title: Kötü-Behaved Multithreaded Uygulamalar için Ortak Desenler | Microsoft Dokümanlar
+title: Kötü Iş parçacıklı uygulamalar için ortak desenler | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,61 +12,61 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 4aec033266ccb2a6e6dcd0342669b7c31082488a
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62788931"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Hatalı davranan çok iş parçacıklı uygulamalar için ortak desenler
 
-Eşzamanlılık Görselleştiricisi, geliştiricilerin çok iş parçacığı yla dolu bir uygulamanın davranışını görselleştirmelerine yardımcı olur. Bu araç, kötü davranan çok iş parçacığı uygulamaları için ortak desenler bir galeri içerir. Galeri, her desentarafından temsil edilen davranışın açıklamasıyla birlikte, araç aracılığıyla ortaya çıkarılan tipik ve tanınabilir görsel desenler, bu davranışın olası sonucunu ve bunu çözmek için en yaygın yaklaşımı içerir.
+Eşzamanlılık görselleştiricisi, geliştiricilerin çok iş parçacıklı bir uygulamanın davranışını görselleştirmesine yardımcı olur. Bu araç, çok iş parçacıklı uygulamalar için hatalı davranan yaygın desenler galerisini içerir. Galeri, araçla birlikte sunulan tipik ve tanınabilir görsel desenleri, her bir desen tarafından temsil edilen davranışın açıklaması, bu davranışın büyük bir sonucu ve bunu çözmek için en yaygın yaklaşım içerir.
 
-## <a name="lock-contention-and-serialized-execution"></a>Kilit çekişmesi ve serileştirilmiş yürütme
+## <a name="lock-contention-and-serialized-execution"></a>Kilit çakışması ve serileştirilmiş yürütme
 
-![Seri leştirilmiş yürütmeyle sonuçlanan kilit çekişmesi](../profiling/media/lockcontention_serialized.png "LockContention_Serialized")
+![Seri hale getirilmiş yürütmeye neden olan kilit çakışması](../profiling/media/lockcontention_serialized.png "LockContention_Serialized")
 
-Bazen paralelleştirilmiş bir uygulama, birkaç iş parçacığı na ve bilgisayarda yeterli sayıda mantıksal çekirdek olmasına rağmen seri olarak yürütmeye devam eder. İlk belirti kötü multithreaded performans, belki de biraz daha yavaş bir seri uygulama daha. İş Parçacıkları Görünümü'nde, paralel çalışan birden çok iş parçacığı görmezsiniz; bunun yerine, yalnızca bir iş parçacığı herhangi bir zamanda yürütülen olduğunu görürsünüz. Bu noktada, iş parçacığında bir eşitleme kesimini tıklattığınızda, engellenen iş parçacığı (arama yığınını engelleme) için bir çağrı yığını ve engelleme koşulunu kaldıran iş parçacığı (arama yığınını kaldırma) görebilirsiniz. Ayrıca, engellemeyi kaldırma çağrı yığını çözümlediğiniz işlemde oluşursa, Iş Parçacığına Hazır bağlayıcı görüntülenir. Bu noktadan itibaren, serileştirmenin nedenini daha da araştırmak için arama yığınlarını engelleme ve engellemeyi kaldırma dan kodunuza gidebilirsiniz.
+Bazı durumlarda, çok sayıda iş parçacığı olmasına rağmen bilgisayar yeterli sayıda mantıksal çekirdeğe sahip olsa bile, paralel bir uygulama stubbornly bir şekilde yürütülmeye devam eder. İlk belirti, büyük olasılıkla bir seri uygulamadan biraz daha yavaş olan çok iş parçacıklı performanstır. Iş parçacıkları görünümünde paralel olarak çalışan birden çok iş parçacığı görmezsiniz; Bunun yerine, herhangi bir zamanda yalnızca bir iş parçacığının yürütüğünü görürsünüz. Bu noktada, bir iş parçacığında bir eşitleme segmentine tıklarsanız, engellenen iş parçacığı (çağrı yığınını engelleme) ve engelleme koşulunu kaldıran iş parçacığı (çağrı yığınının engellemesini kaldırma) için çağrı yığınını görebilirsiniz. Ayrıca, analiz ettiğiniz işlemde engellemeyi kaldırma çağrı yığını gerçekleşirse, Iş parçacığı için kullanılabilir bir bağlayıcı görüntülenir. Bu noktadan sonra, bir serileştirme nedenini daha da araştırmak için engelleme ve çağrı yığınlarını engellemeyi kaldırma ' dan kodunuza gidebilirsiniz.
 
-Aşağıdaki resimde gösterildiği gibi, Eşzamanlılık Görselleştiricisi de cpu kullanım görünümünde bu belirti ortaya çıkarabilir, burada, birden fazla iş parçacığı varlığına rağmen, uygulama yalnızca bir mantıksal çekirdek tüketir.
+Aşağıdaki çizimde gösterildiği gibi eşzamanlılık görselleştiricisi de bu belirtiyi CPU kullanımı görünümünde kullanıma sunabileceğinden, burada birden çok iş parçacığı varlığına rağmen uygulama yalnızca bir mantıksal çekirdek tüketir.
 
-Daha fazla bilgi için, "Sorun bölümü ile başlatın" MSDN Dergisi makale [Konu Performansı - Kaynak Çekişme Concurrency Profilleme Visual Studio 2010](https://msdn.microsoft.com/magazine/ff714587.aspx)bakın.
+Daha fazla bilgi için, bkz. MSDN Magazine makalesi [Iş parçacığı performans-kaynak çekişme profili Visual Studio 2010](https://msdn.microsoft.com/magazine/ff714587.aspx).
 
-![Kilit Çekişmesi](../profiling/media/lockcontention_2.png "LockContention_2")
+![Kilit çakışması](../profiling/media/lockcontention_2.png "LockContention_2")
 
-## <a name="uneven-workload-distribution"></a>Düzensiz iş yükü dağılımı
+## <a name="uneven-workload-distribution"></a>Düzensiz iş yükü dağıtımı
 
 ![Düzensiz iş yükü](../profiling/media/unevenworkload_1.png "UnevenWorkLoad_1")
 
-Bir uygulamada birkaç paralel iş parçacığı arasında düzensiz bir çalışma dağılımı oluştuğunda, önceki resimde gösterildiği gibi, her iş parçacığı çalışmasını tamamlarken tipik bir merdiven adımı deseni görüntülenir. Eşzamanlı Görselleştirici en sık her eşzamanlı iş parçacığı için çok yakın başlangıç zamanlarını gösterir. Ancak, bu iş parçacıkları genellikle aynı anda sona ermek yerine düzensiz bir şekilde sona erer. Bu desen, bir grup paralel iş parçacığı arasında düzensiz bir çalışma dağılımını gösterir ve bu da performansın düşmesine neden olabilir. Böyle bir soruna en iyi yaklaşım, çalışmanın paralel iş parçacıkları arasında bölündüğü algoritmayı yeniden değerlendirmektir.
+Bir uygulamadaki çeşitli paralel iş parçacıkları arasında düzensiz bir iş dağıtımı gerçekleştiğinde, önceki çizimde gösterildiği gibi, her bir iş parçacığının çalışmasını tamamlarsa, tipik bir merdiven adımı görüntülenir. Eşzamanlılık görselleştiricisi genellikle her bir eşzamanlı iş parçacığı için çok yakın başlangıç zamanlarını gösterir. Ancak, bu iş parçacıkları genellikle aynı anda sona ermek yerine düzensiz bir şekilde sona eriyor. Bu model, bir dizi paralel iş parçacığı arasında düzensiz bir şekilde bir dağıtım olduğunu gösterir. Bu, performansın düşmesine neden olabilir. Bu tür bir soruna en iyi yaklaşım, çalışmanın paralel iş parçacıkları arasında bölündüğü algoritmayı yeniden değerlendirmelidir.
 
-Aşağıdaki resimde gösterildiği gibi, Eşzamanlılık Görselleştiricisi de CPU Kullanımı Görünümü'nde bu belirti ortaya çıkarabilir CPU kullanımı nda kademeli bir adım aşağı olarak.
+Aşağıdaki çizimde gösterildiği gibi eşzamanlılık görselleştiricisi ayrıca CPU kullanımı görünümünde bu belirtiyi CPU kullanımında aşamalı bir adım olarak kullanıma sunabilir.
 
 ![Düzensiz iş yükü](../profiling/media/unevenworkload_2.png "UnevenWorkload_2")
 
-## <a name="oversubscription"></a>Oversubscription
+## <a name="oversubscription"></a>Aşırı abonelik
 
-![Oversubscription](../profiling/media/oversubscription.png "Oversubscription")
+![Aşırı abonelik](../profiling/media/oversubscription.png "Aşırı abonelik")
 
-Aşırı abonelik durumunda, bir işlemdeki etkin iş parçacığı sayısı sistemdeki kullanılabilir mantıksal çekirdek sayısından daha büyüktür. Önceki resimde, tüm etkin iş parçacıklarında önemli preemption bantlama ile oversubscription sonuçlarını gösterir. Buna ek olarak, gösterge preemption (bu örnekte yüzde 84) harcanan zaman büyük bir yüzdesi gösterir. Bu, işlemin sistemden mantıksal çekirdek sayısından daha fazla eşzamanlı iş parçacığı yürütmesini istediğini gösterebilir. Ancak, bu, sistemdeki diğer işlemlerin bu işlem için kullanılabilir olduğu varsayılan kaynakları kullandığını da gösterebilir.
+Fazla abonelik durumunda, bir işlemdeki etkin iş parçacıklarının sayısı sistemdeki kullanılabilir mantıksal çekirdek sayısından daha büyük. Önceki çizimde, tüm etkin iş parçacıklarında önemli önalım bantlarla fazla abonelik sonuçları gösterilmektedir. Ayrıca, göstergede büyük bir yüzde önalım (Bu örnekte yüzde 84) harcandığını gösterir. Bu, işlemin sisteme, mantıksal çekirdek sayısından daha fazla eşzamanlı iş parçacığı yürütmesini isteyeceğini gösteriyor olabilir. Bununla birlikte, bu durum sistemdeki diğer işlemlerin bu işlem için kullanılabilir kabul edilen kaynakları kullandığını da belirtebilir.
 
-Bu sorunu değerlendirirken aşağıdakileri göz önünde bulundurmanız gerekir:
+Bu sorunu değerlendirirken şunları göz önünde bulundurmanız gerekir:
 
-- Genel sistem aşırı abone olabilir. Sistemdeki diğer işlemlerin iş parçacığınızı önceden gözden geçirebileceğini göz önünde bulundurun. İş parçacıkları görünümünde bir önalım kesimi üzerinde duraklattığınızda, bir araç ucu iş parçacığı ve iş parçacığı preempted işlemi tanımlar. Bu işlem, işlemin izinden alındı tüm zaman boyunca yürütülen mutlaka biri değildir, ancak işleminize karşı preemption basınç oluşturulan hakkında bir ipucu sağlar.
+- Genel sistem aşırı abone olabilir. Sistem üzerindeki diğer işlemlerin iş parçacıklarınız öncelik verme olabileceğini göz önünde bulundurun. İş parçacıkları görünümünde bir önalım segmentinin üzerinde durakladığınızda, bir araç ipucu iş parçacığını ve iş parçacığını yok eden işlemi belirler. Bu işlem, işleminiz önceden geçersiz hale gelen bir süre boyunca yürütülene gerek kalmaz, ancak işlem için önalım basıncı oluşturma hakkında bir ipucu sağlar.
 
-- İşleminizin bu çalışma aşamasında yürütülmesi için uygun iş parçacığı sayısını nasıl belirlediğini değerlendirin. İşleminiz doğrudan etkin paralel iş parçacığı sayısını hesaplarsa, bu algoritmayı sistemdeki kullanılabilir mantıksal çekirdek sayısını daha iyi hesaba katmak için değiştirmeyi düşünün. Eşzamanlılık Çalışma Zamanı, Görev Paralel Kitaplığı veya PLINQ kullanıyorsanız, bu kitaplıklar iş parçacığı sayısını hesaplama işini gerçekleştirir.
+- İşleminizin bu iş aşamasında yürütülmek üzere uygun iş parçacığı sayısını nasıl belirlediğini değerlendirin. İşleminiz etkin paralel iş parçacığı sayısını doğrudan hesapladığında, sistemdeki kullanılabilir mantıksal çekirdek sayısı için bu algoritmayı daha iyi hesaba göre değiştirmeyi göz önünde bulundurun. Eşzamanlılık Çalışma Zamanı, görev paralel kitaplığı veya PLıNQ ' i kullanırsanız, bu kitaplıklar iş parçacığı sayısını hesaplama işini gerçekleştirir.
 
-## <a name="inefficient-io"></a>Verimsiz G/Ç
+## <a name="inefficient-io"></a>Verimsiz g/ç
 
-![Verimsiz Ben&#47;O](../profiling/media/inefficient_io.png "Inefficient_IO")
+![Verimsiz&#47;O](../profiling/media/inefficient_io.png "Inefficient_IO")
 
-G/Ç'nin aşırı kullanımı veya kötüye kullanımı, uygulamalardaki verimsizliklerin yaygın bir nedenidir. Önceki çizimi göz önünde bulundurun. Görünür Zaman Çizelgesi Profili, görünür iş parçacığı süresinin yüzde 44'ünün G/Ç tarafından tüketildiğini gösterir. Zaman çizelgesi, profilli uygulamanın Sık sık G/Ç tarafından engellendiğini gösteren büyük miktarda G/Ç gösterir. G/Ç türleri ve programınızın engellendiği yerle ilgili ayrıntıları görmek için sorunlu bölgeleri yakınlaştırın, Görünür Zaman Çizelgesi Profilini inceleyin ve ardından geçerli arama yığınlarını görmek için belirli bir G/Ç bloğunu tıklatın.
+G/ç 'nin aşırı kullanım veya kötüye kullanımı, verimsizlikleri uygulamalarında yaygın bir nedendir. Önceki çizimi göz önünde bulundurun. Görünür zaman çizelgesi profili, görünen iş parçacığı süresinin yüzde 44 ' unun g/ç tarafından tüketildiğini gösterir. Zaman çizelgesi, profili oluşturulmuş uygulamanın sıklıkla g/ç tarafından engellendiğini gösteren büyük miktarda g/ç 'yi gösterir. Bir g/ç türü ve programınızın engellediği yer hakkındaki ayrıntıları görmek için sorunlu bölgelere yakınlaştırın, görünür zaman çizelgesi profilini inceleyin ve ardından geçerli çağrı yığınlarını görmek için belirli bir g/ç bloğuna tıklayın.
 
-## <a name="lock-convoys"></a>Konvoyları kilitleyin
+## <a name="lock-convoys"></a>Convoys 'i kilitle
 
-![Konvoyları kilitleyin](../profiling/media/lock_convoys.png "Lock_Convoys")
+![Convoys 'i kilitle](../profiling/media/lock_convoys.png "Lock_Convoys")
 
-Kilit konvoyları, uygulama ilk gelen, ilk hizmet sırasına göre kilitler aldığında ve kilitteki varış oranı edinme oranından daha yüksek olduğunda oluşur. Bu iki koşulun birleşimi, kilidin yedeklemeye başlaması için isteklere neden olur. Bu sorunla mücadele etmenin bir yolu, "haksız" kilitleri veya kilitsiz durumlarda bunları bulmak için ilk iş parçacığına erişim sağlayan kilitleri kullanmaktır. Önceki resimde bu konvoy davranışı gösterilmektedir. Sorunu çözmek için, eşitleme nesneleri için çekişmeyi azaltmayı deneyin ve haksız kilitleri kullanmayı deneyin.
+Kilit convoys, uygulama ilk ve ilk kez sunulan bir siparişte kilit elde etdiğinde ve kilit sırasındaki varış hızı, Alım hızından yüksekse oluşur. Bu iki koşulun birleşimi kilit isteklerinin yedeklemeye başlatılmasına neden olur. Bu sorunu çözmek için bir yol, "haksız" kilitleri veya kilitlenmemiş durumlarda ilk iş parçacığına erişim veren kilitleri kullanmaktır. Önceki çizimde bu konvoy davranışı gösterilmektedir. Sorunu çözmek için eşitleme nesnelerinin çekişmesini azaltmayı deneyin ve dengeli olmayan kilitleri kullanmayı deneyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

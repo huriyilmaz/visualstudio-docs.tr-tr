@@ -1,5 +1,5 @@
 ---
-title: İşlem özellikleri iletişim kutusu | Microsoft Docs
+title: İşlem özellikleri Iletişim kutusu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -12,35 +12,35 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2448659a8725c7e284e12a99d52478144ebec1b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62903762"
 ---
 # <a name="process-properties-dialog-box"></a>İşlem Özellikleri İletişim Kutusu
-Belirli bir işlemle ilgili daha fazla bilgi için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı taşıyın. bir [işlemler görünümü](../debugger/processes-view.md) penceresi. Herhangi bir işlem düğümü ağacında seçin ve ardından **özellikleri** gelen **görünümü** menüsü.
+Belirli bir işlem hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir [Işlem görünümü](../debugger/processes-view.md) penceresine taşıyın. Ağaçta herhangi bir işlem düğümünü seçin, sonra **Görünüm** menüsünden **Özellikler** ' i seçin.
 
- Windows 98 ve Windows 95 işletim sistemlerinde, yalnızca değiştirilmiş bir sürümünü **genel** sekmesi görüntülenir.
+ Windows 98 ve Windows 95 işletim sistemlerinde, **genel** sekmesinin yalnızca değiştirilmiş bir sürümü görüntülenir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Genel sekmesi, işlem özellikleri iletişim kutusu](../debugger/general-tab-thread-properties-dialog-box.md) Bul bu iletişim kutusu seçili işlem hakkında daha fazla bilgiyi kullanın.
+ [Genel sekmesi, Işlem özellikleri Iletişim kutusu](../debugger/general-tab-thread-properties-dialog-box.md) Seçilen işlem hakkında daha fazla bilgi edinmek için bu iletişim kutusunu kullanın.
 
- [Bellek sekmesi, işlem özellikleri iletişim kutusu](../debugger/memory-tab-process-properties-dialog-box.md) nasıl bir işlem bellek kullandığını göstermek için bu sekmeyi kullanın.
+ [Bellek sekmesi, Işlem özellikleri Iletişim kutusu](../debugger/memory-tab-process-properties-dialog-box.md) Bir işlemin belleği nasıl kullandığını göstermek için bu sekmeyi kullanın.
 
- [Sayfa dosyası sekmesi, işlem özellikleri iletişim kutusu](../debugger/page-file-tab-process-properties-dialog-box.md) işleminin disk belleği dosyasını incelemek için bu sekmeyi kullanın.
+ [Sayfa dosyası sekmesi, Işlem özellikleri Iletişim kutusu](../debugger/page-file-tab-process-properties-dialog-box.md) Bir işlemin sayfalama dosyasını incelemek için bu sekmeyi kullanın.
 
- [Alan sekmesi, işlem özellikleri iletişim kutusu](../debugger/space-tab-process-properties-dialog-box.md) bir işlemin adres alanı incelemek için bu sekmeyi kullanın.
+ [Boşluk sekmesi, Işlem özellikleri Iletişim kutusu](../debugger/space-tab-process-properties-dialog-box.md) Bir işlemin adres alanını incelemek için bu sekmeyi kullanın.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [İşlem arama iletişim kutusu](../debugger/process-search-dialog-box.md) işlem görünümünde belirli bir işlem düğümü bulmak için kullanılır.
+ [Işlem arama Iletişim kutusu](../debugger/process-search-dialog-box.md) Işlem görünümündeki belirli bir işlemin düğümünü bulmak için kullanılır.
 
- [Spy ++ başvurusu](../debugger/spy-increment-reference.md) her Spy ++ menü ve iletişim kutusunu açıklayan bölümleri içerir.
+ [Spy + + başvurusu](../debugger/spy-increment-reference.md) Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.
 
- [İşlemler görünümünde işlem arama](../debugger/how-to-search-for-a-process-in-processes-view.md) nasıl işlemler görünümünde belirli bir işlem bulunacağını açıklar.
+ [Işlemler görünümünde Işlem arama](../debugger/how-to-search-for-a-process-in-processes-view.md) Işlemler görünümünde belirli bir işlemin nasıl bulunacağını açıklar.
 
- [İşler görünümü](../debugger/processes-view.md) etkin işlemler ağaç görünümünü görüntüler.
+ [Işlem görünümü](../debugger/processes-view.md) Etkin işlemlerin ağaç görünümünü görüntüler.
 
- [Spy ++ görünümleri](../debugger/spy-increment-views.md) Spy ++ ağaç görünümlerini windows, iletileri, süreçleri ve iş parçacıkları açıklar.
+ [Spy + + görünümleri](../debugger/spy-increment-views.md) Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.
 
- [Spy ++ kullanma](../debugger/using-spy-increment.md) Spy ++ araç tanıtır ve nasıl kullanılacağını açıklar.
+ [Spy + + kullanma](../debugger/using-spy-increment.md) Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.

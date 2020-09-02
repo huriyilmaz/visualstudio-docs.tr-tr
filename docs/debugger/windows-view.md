@@ -1,5 +1,5 @@
 ---
-title: Windows görüntüleme | Microsoft Docs
+title: Windows görünümü | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,39 +13,39 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: fef652cbaa83fde61f098fb8fcef9558473fe19a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62900871"
 ---
 # <a name="windows-view"></a>Pencereler Görünümü
-İlk kez Spy ++ açtığınızda, Windows görünüm sistemdeki tüm windows ve denetimleri ağacını görüntüler. Pencere tanıtıcısı ve sınıf adı gösterilir. Geçerli masaüstü pencere ağacının en üstünde değil. Diğer tüm windows masaüstünün alt öğesi olan ve standart pencere hiyerarşisi göre listelenir. Eşdüzey pencerelerin ebeveynleri altında girintili expansible listelerde görünür.
+Spy + + ' ı ilk kez açtığınızda, Windows görünümü sistemdeki tüm pencerelerin ve denetimlerin bir ağacını görüntüler. Pencere tanıtıcısı ve sınıf adı gösterilir. Geçerli masaüstü penceresi ağacın en üstünde bulunur. Diğer tüm pencereler masaüstünün alt öğesi ve standart pencere hiyerarşisine göre listelenir. Eşdüzey pencereler, üst öğelerinin altında girintili listelerde görünür.
 
- Aşağıdaki şekilde, en üst düğüme genişletilmiş tipik bir Spy ++ Windows görünümü gösterilmektedir.
+ Aşağıdaki şekilde, üst düğüm genişletilmiş tipik bir Spy + + Windows görünümü gösterilmektedir.
 
- ![Spy&#43; &#43; Windows görünümü](../debugger/media/spy--_windowsview.png "Spy ++ _WindowsView") Spy ++ Windows görüntüle
+ ![Spy&#43;&#43; Windows görünümü](../debugger/media/spy--_windowsview.png "Spy + + _WindowsView") Spy + + Windows görünümü
 
- Geçerli masaüstü pencere ağacının en üstünde değil. Diğer tüm windows masaüstünün alt öğesi olan ve Z sırasına göre sıralı eşdüzey pencerelerin ile standart pencere hiyerarşisi göre listelenir. Genişlet veya herhangi bir üst düğüm ağacı tıklayarak Daralt + veya - düğümün yanındaki simge.
+ Geçerli masaüstü penceresi ağacın en üstünde bulunur. Diğer tüm pencereler masaüstünün alt öğesi ve standart pencere hiyerarşisine göre, Z düzenine göre sıralanmış eşdüzey pencereler ile listelenir. Düğümün yanındaki + veya-symbol simgesine tıklayarak ağacın herhangi bir üst düğümünü genişletebilir veya daraltabilirsiniz.
 
- Windows görünümü odağa sahip olduğunda, Bulucu Aracı'nda kullanabileceğiniz [pencere arama iletişim kutusu](../debugger/window-search-dialog-box.md) Sisteminizde hiçbir penceresini açık bilgilerini görüntülemek için.
+ Windows görünümü odağa sahip olduğunda, sisteminizde açık olan herhangi bir pencereden bilgileri görüntülemek için [pencere arama Iletişim kutusunda](../debugger/window-search-dialog-box.md) Bulucu aracını kullanabilirsiniz.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Nasıl yapılır: Bulucu Aracı kullanma](../debugger/how-to-use-the-finder-tool.md) nasıl windows özellikleri ve iletileri için bu aracı tarar gösterir.
+ [Nasıl yapılır: Bulucu aracını kullanma](../debugger/how-to-use-the-finder-tool.md) Bu aracın Windows 'un özellikler veya iletiler için nasıl tarayacağını gösterir.
 
- [Nasıl yapılır: Windows görünümünde pencere arama](../debugger/how-to-search-for-a-window-in-windows-view.md) Windows görünümünde belirli bir pencere Bul açıklanmaktadır.
+ [Nasıl yapılır: Windows görünümünde pencere arama](../debugger/how-to-search-for-a-window-in-windows-view.md) Windows görünümünde belirli bir pencerenin nasıl bulunacağını açıklar.
 
- [Nasıl yapılır: Pencere özelliklerini görüntüleme](../debugger/how-to-display-window-properties.md) m yordamları için pencere Özellikleri iletişim kutusu açılıyor.
+ [Nasıl yapılır:](../debugger/how-to-display-window-properties.md) pencere özellikleri iletişim kutusunu açmak Için pencere özelliklerini görüntüleme yordamları.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Spy ++ görünümleri](../debugger/spy-increment-views.md) Spy ++ ağaç görünümlerini windows, iletileri, süreçleri ve iş parçacıkları açıklar.
+ [Spy + + görünümleri](../debugger/spy-increment-views.md) Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.
 
- [Spy ++ kullanma](../debugger/using-spy-increment.md) Spy ++ araç tanıtır ve nasıl kullanılacağını açıklar.
+ [Spy + + kullanma](../debugger/using-spy-increment.md) Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.
 
- [Pencere Bul iletişim kutusu](../debugger/find-window-dialog-box.md) özelliklerini veya belirli bir pencere iletileri görüntülemek için kullanılır.
+ [Pencere bul Iletişim kutusu](../debugger/find-window-dialog-box.md) Belirli bir penceredeki özellikleri veya iletileri görüntülemek için kullanılır.
 
- [Pencere arama iletişim kutusu](../debugger/window-search-dialog-box.md) Windows görünümünde belirli bir pencere için düğüm bulmak için kullanılır.
+ [Pencere arama Iletişim kutusu](../debugger/window-search-dialog-box.md) Windows görünümünde belirli bir pencerenin düğümünü bulmak için kullanılır.
 
- [Pencere Özellikleri iletişim kutusu](../debugger/window-properties-dialog-box.md) Windows görünümünde seçilen bir pencere özelliklerini görüntülemek için kullanılır.
+ [Pencere özellikleri Iletişim kutusu](../debugger/window-properties-dialog-box.md) Windows görünümü 'nde seçilen pencerenin özelliklerini görüntülemek için kullanılır.
 
- [Spy ++ başvurusu](../debugger/spy-increment-reference.md) her Spy ++ menü ve iletişim kutusunu açıklayan bölümleri içerir.
+ [Spy + + başvurusu](../debugger/spy-increment-reference.md) Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.

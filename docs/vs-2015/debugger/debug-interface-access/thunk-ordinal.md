@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b98098c0b6e1de9c3c2ceda5c644bc2957ab22bd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62576414"
 ---
-# <a name="thunkordinal"></a>THUNK_ORDINAL
+# <a name="thunk_ordinal"></a>THUNK_ORDINAL
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 Dönüştürücü türlerini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef enum THUNK_ORDINAL {   
@@ -41,34 +41,34 @@ typedef enum THUNK_ORDINAL { 
 } THUNK_ORDINAL;  
 ```  
   
-## <a name="elements"></a>Öğeleri  
+## <a name="elements"></a>Öğeler  
  THUNK_ORDINAL_NOTYPE  
  Standart dönüştürücü.  
   
  THUNK_ORDINAL_ADJUSTOR  
- A `this` adjustor dönüştürücü.  
+ Bir `this` ayarlanıcısı dönüştürücü.  
   
  THUNK_ORDINAL_VCALL  
- Sanal çağrı dönüştürücü.  
+ Sanal Çağrı dönüştürücü.  
   
  THUNK_ORDINAL_PCODE  
- P-code dönüştürücü.  
+ P kodu dönüştürücü.  
   
  THUNK_ORDINAL_LOAD  
- Gecikme yükü dönüştürücü.  
+ Yük dönüştürücü gecikmesi.  
   
  THUNK_ORDINAL_TRAMP_INCREMENTAL  
- Artımlı trampoline dönüştürücü (trampoline dönüştürücü çağrıları bir bellek alanından Sıçrama için kullanılır).  
+ Artımlı trampoline dönüştürücü (bir trampoline dönüştürücü, bir bellek alanından diğerine yapılan çağrıları sıçramalar için kullanılır).  
   
  THUNK_ORDINAL_TRAMP_BRANCHISLAND  
  Dal noktası trampoline dönüştürücü.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu sabit listesi değerleri çağrısından döndürülen [Idiasymbol::get_thunkordinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) yöntemi.  
+ Bu Numaralandırmadaki değerler, [IDiaSymbol:: get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) metoduna yapılan çağrıdan döndürülür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: cvconst.h  
+ Üst bilgi: cvconst. h  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri ve yapıları](../../debugger/debug-interface-access/enumerations-and-structures.md)   
+ [Numaralandırmalar ve yapılar](../../debugger/debug-interface-access/enumerations-and-structures.md)   
  [IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)

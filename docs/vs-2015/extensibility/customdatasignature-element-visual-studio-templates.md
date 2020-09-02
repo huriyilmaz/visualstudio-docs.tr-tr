@@ -12,22 +12,22 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 784704bea43a87f1aebdc42941906179dca815ce
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62580423"
 ---
 # <a name="customdatasignature-element-visual-studio-templates"></a>CustomDataSignature Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Özel veri bulunacak metin imza belirtir.  
+Özel verileri bulmak için metin imzasını belirtir.  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<CustomDataSignature >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<CustomDataSignature>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <CustomDataSignature>"string"</CustomDataSignature>  
@@ -46,15 +46,15 @@ ms.locfileid: "62580423"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve ya da nasıl görüntüleneceğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** ya da **Yeni öğe Ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Metin özel verileri bulmak için gerekli olan metin imzası olan bir dizedir.  
+ Metin, özel verileri bulmak için gereken metin imzasına sahip bir dizedir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CustomDataSignature` İsteğe bağlı bir öğedir.  
+ `CustomDataSignature` isteğe bağlı bir öğedir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)   
