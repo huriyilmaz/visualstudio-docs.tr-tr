@@ -9,22 +9,22 @@ caps.latest.revision: 10
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c561555df40bc02c3c9f3090ee1de4c0f329bcdc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657178"
 ---
 # <a name="using-microsoftvisualstudiotesttoolscppunittestframework"></a>Microsoft.VisualStudio.TestTools.CppUnitTestFramework Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu konu, `Microsoft::VisualStudio::CppUnitTestFramework` ad alanının ortak üyelerini listeler.
+Bu konu, ad alanının ortak üyelerini listeler `Microsoft::VisualStudio::CppUnitTestFramework` .
 
- Üst bilgi dosyaları _VisualStudio2012 [x86] InstallFolder_ **\Vc\unittest\ınclude** klasöründe bulunur.
+ Üst bilgi dosyaları  _VisualStudio2012 [x86] InstallFolder_**\Vc\unittest\ınclude** klasöründe bulunur.
 
- Lib dosyaları _VisualStudio2012 [x86] InstallFolder_ **\Vc\unittest\lib** klasöründe bulunur.
+ Lib dosyaları  _VisualStudio2012 [x86] InstallFolder_**\Vc\unittest\lib** klasöründe bulunur.
 
-## <a name="BKMK_In_this_topic"></a>Bu konuda
+## <a name="in-this-topic"></a><a name="BKMK_In_this_topic"></a> Bu konuda
  [CppUnitTest. h](#BKMK_CppUnitTest_h)
 
 - [Test sınıfları ve yöntemleri oluşturma](#BKMK_Create_test_classes_and_methods)
@@ -67,7 +67,7 @@ Bu konu, `Microsoft::VisualStudio::CppUnitTestFramework` ad alanının ortak üy
 
     - [Yanlış](#BKMK_General_Is_False)
 
-    - [Neden](#BKMK_General_Fail)
+    - [Başarısız](#BKMK_General_Fail)
 
   - [Windows Çalışma Zamanı onayları](#BKMK_WinRT_Asserts)
 
@@ -93,15 +93,15 @@ Bu konu, `Microsoft::VisualStudio::CppUnitTestFramework` ad alanının ortak üy
 
     - [Ileti yaz](#BKMK_Write_Message)
 
-## <a name="BKMK_CppUnitTest_h"></a>CppUnitTest. h
+## <a name="cppunittesth"></a><a name="BKMK_CppUnitTest_h"></a> CppUnitTest. h
 
-### <a name="BKMK_Create_test_classes_and_methods"></a>Test sınıfları ve yöntemleri oluşturma
+### <a name="create-test-classes-and-methods"></a><a name="BKMK_Create_test_classes_and_methods"></a> Test sınıfları ve yöntemleri oluşturma
 
 ```cpp
 TEST_CLASS(className)
 ```
 
- Test yöntemleri içeren her sınıf için gereklidir. *ClassName* bir test sınıfı olarak tanımlar. `TEST_CLASS`, namescape Scope 'ta bildirilmelidir.
+ Test yöntemleri içeren her sınıf için gereklidir. *ClassName* bir test sınıfı olarak tanımlar. `TEST_CLASS` namescape Scope öğesinde bildirilmelidir.
 
 ```cpp
 TEST_METHOD(methodName)
@@ -111,11 +111,11 @@ TEST_METHOD(methodName)
 
 ```
 
- *MethodName* öğesini bir test yöntemi olarak tanımlar. `TEST_METHOD`, yöntemin sınıfının kapsamında bildirilmelidir.
+ *MethodName* öğesini bir test yöntemi olarak tanımlar. `TEST_METHOD` , yöntemin sınıfının kapsamında bildirilmelidir.
 
-### <a name="BKMK_Initialize_and_cleanup"></a>Başlatma ve Temizleme
+### <a name="initialize-and-cleanup"></a><a name="BKMK_Initialize_and_cleanup"></a> Başlatma ve Temizleme
 
-#### <a name="BKMK_Test_methods"></a>Test yöntemleri
+#### <a name="test-methods"></a><a name="BKMK_Test_methods"></a> Test yöntemleri
 
 ```cpp
 TEST_METHOD_INITIALIZE(methodName)
@@ -125,7 +125,7 @@ TEST_METHOD_INITIALIZE(methodName)
 
 ```
 
- *MethodName* öğesini, her test yöntemi çalıştırılmadan önce çalışan bir yöntem olarak tanımlar. `TEST_METHOD_INITIALIZE`, test sınıfında yalnızca bir kez tanımlanabilir ve test sınıfında tanımlanmalıdır.
+ *MethodName* öğesini, her test yöntemi çalıştırılmadan önce çalışan bir yöntem olarak tanımlar. `TEST_METHOD_INITIALIZE` , bir test sınıfında yalnızca bir kez tanımlanabilir ve test sınıfında tanımlanması gerekir.
 
 ```cpp
 TEST_METHOD_CLEANUP(methodName)
@@ -135,9 +135,9 @@ TEST_METHOD_CLEANUP(methodName)
 
 ```
 
- *MethodName* öğesini her test yöntemi çalıştırıldıktan sonra çalışan bir yöntem olarak tanımlar. `TEST_METHOD_CLEANUP`, test sınıfında yalnızca bir kez tanımlanabilir ve test sınıfının kapsamında tanımlanmalıdır.
+ *MethodName* öğesini her test yöntemi çalıştırıldıktan sonra çalışan bir yöntem olarak tanımlar. `TEST_METHOD_CLEANUP` , bir test sınıfında yalnızca bir kez tanımlanabilir ve test sınıfının kapsamında tanımlanmalıdır.
 
-#### <a name="BKMK_Test_classes"></a>Test sınıfları
+#### <a name="test-classes"></a><a name="BKMK_Test_classes"></a> Test sınıfları
 
 ```cpp
 TEST_CLASS_INITIALIZE(methodName)
@@ -147,7 +147,7 @@ TEST_CLASS_INITIALIZE(methodName)
 
 ```
 
- *MethodName* öğesini her test sınıfı oluşturulduktan sonra çalışan bir yöntem olarak tanımlar. `TEST_CLASS_INITIALIZE`, test sınıfında yalnızca bir kez tanımlanabilir ve test sınıfının kapsamında tanımlanmalıdır.
+ *MethodName* öğesini her test sınıfı oluşturulduktan sonra çalışan bir yöntem olarak tanımlar. `TEST_CLASS_INITIALIZE` , bir test sınıfında yalnızca bir kez tanımlanabilir ve test sınıfının kapsamında tanımlanmalıdır.
 
 ```cpp
 TEST_CLASS_CLEANUP(methodName)
@@ -157,9 +157,9 @@ TEST_CLASS_CLEANUP(methodName)
 
 ```
 
- *MethodName* öğesini her test sınıfı oluşturulduktan sonra çalışan bir yöntem olarak tanımlar. `TEST_CLASS_CLEANUP`, test sınıfında yalnızca bir kez tanımlanabilir ve test sınıfının kapsamında tanımlanmalıdır.
+ *MethodName* öğesini her test sınıfı oluşturulduktan sonra çalışan bir yöntem olarak tanımlar. `TEST_CLASS_CLEANUP` , bir test sınıfında yalnızca bir kez tanımlanabilir ve test sınıfının kapsamında tanımlanmalıdır.
 
-#### <a name="BKMK_Test_modules"></a>Test modülleri
+#### <a name="test-modules"></a><a name="BKMK_Test_modules"></a> Test modülleri
 
 ```cpp
 TEST_MODULE_INITIALIZE(methodName)
@@ -168,17 +168,17 @@ TEST_MODULE_INITIALIZE(methodName)
 }
 ```
 
- Bir modül yüklendiğinde çalıştırılan *MethodName* yöntemini tanımlar. `TEST_MODULE_INITIALIZE`, test modülünde yalnızca bir kez tanımlanabilir ve ad alanı kapsamında bildirilmelidir.
+ Bir modül yüklendiğinde çalıştırılan *MethodName* yöntemini tanımlar. `TEST_MODULE_INITIALIZE` , bir test modülünde yalnızca bir kez tanımlanabilir ve ad alanı kapsamında bildirilmelidir.
 
 ```cpp
 TEST_MODULE_CLEANUP(methodName)
 ```
 
- Bir modül kaldırıldığında çalıştırılan *MethodName* yöntemini tanımlar. `TEST_MODULE_CLEANUP`, test modülünde yalnızca bir kez tanımlanabilir ve ad alanı kapsamında bildirilmelidir.
+ Bir modül kaldırıldığında çalıştırılan *MethodName* yöntemini tanımlar. `TEST_MODULE_CLEANUP` , bir test modülünde yalnızca bir kez tanımlanabilir ve ad alanı kapsamında bildirilmelidir.
 
-### <a name="BKMK_Create_test_attributes"></a>Test öznitelikleri oluşturma
+### <a name="create-test-attributes"></a><a name="BKMK_Create_test_attributes"></a> Test öznitelikleri oluşturma
 
-#### <a name="BKMK_Test_method_attributes"></a>Test yöntemi öznitelikleri
+#### <a name="test-method-attributes"></a><a name="BKMK_Test_method_attributes"></a> Test yöntemi öznitelikleri
 
 ```cpp
 BEGIN_TEST_METHOD_ATTRIBUTE(testMethodName)
@@ -187,11 +187,11 @@ BEGIN_TEST_METHOD_ATTRIBUTE(testMethodName)
 END_TEST_METHOD_ATTRIBUTE()
 ```
 
- Bir veya daha fazla `TEST_METHOD_ATTRIBUTE` makrolarıyla tanımlanan öznitelikleri *testClassName*test yöntemine ekler.
+ `TEST_METHOD_ATTRIBUTE` *TestClassName*test yöntemine bir veya daha fazla makro ile tanımlanan öznitelikleri ekler.
 
- @No__t_0 makrosu, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
+ `TEST_METHOD_ATTRIBUTE`Makro, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
 
-#### <a name="BKMK_Test_class_attributes"></a>Test sınıfı öznitelikleri
+#### <a name="test-class-attributes"></a><a name="BKMK_Test_class_attributes"></a> Test sınıfı öznitelikleri
 
 ```cpp
 BEGIN_TEST_CLASS_ATTRIBUTE(testClassName)
@@ -200,11 +200,11 @@ BEGIN_TEST_CLASS_ATTRIBUTE(testClassName)
 END_TEST_CLASS_ATTRIBUTE()
 ```
 
- *TestClassName*test sınıfına bir veya daha fazla `TEST_CLASS_ATTRIBUTE` makrolarıyla tanımlanan öznitelikleri ekler.
+ `TEST_CLASS_ATTRIBUTE` *TestClassName*test sınıfına bir veya daha fazla makro ile tanımlanan öznitelikleri ekler.
 
- @No__t_0 makrosu, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
+ `TEST_CLASS_ATTRIBUTE`Makro, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
 
-#### <a name="BKMK_Test_module_attributes"></a>Test modülü öznitelikleri
+#### <a name="test-module-attributes"></a><a name="BKMK_Test_module_attributes"></a> Test modülü öznitelikleri
 
 ```cpp
 BEGIN_TEST_MODULE_ATTRIBUTE(testModuleName)
@@ -213,48 +213,48 @@ BEGIN_TEST_MODULE_ATTRIBUTE(testModuleName)
 END_TEST_MODULE_ATTRIBUTE()
 ```
 
- *TestModuleName*test modülüne bir veya daha fazla `TEST_MODULE_ATTRIBUTE` makrolarıyla tanımlanan öznitelikleri ekler.
+ `TEST_MODULE_ATTRIBUTE` *TestModuleName*test modülüne bir veya daha fazla makro ile tanımlanan öznitelikleri ekler.
 
- @No__t_0 makrosu, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
+ `TEST_MODULE_ATTRIBUTE`Makro, *ÖznitelikAdı* ve *AttributeValue*değeri olan bir özniteliği tanımlar.
 
-#### <a name="BKMK_Pre_defined_attributes"></a>Önceden tanımlanmış öznitelikler
- Önceden tanımlanmış bu öznitelik makroları, yukarıda açıklanan `TEST_METHOD_ATTRIBUTE`, `TEST_CLASS_ATTRIBUTE` veya `TEST_MODULE_ATTRIBUTE` makrolar için değiştirilebilir.
+#### <a name="pre-defined-attributes"></a><a name="BKMK_Pre_defined_attributes"></a> Önceden tanımlanmış öznitelikler
+ Önceden tanımlanmış bu öznitelik makroları, `TEST_METHOD_ATTRIBUTE` `TEST_CLASS_ATTRIBUTE` veya yukarıda açıklanan makrolar için değiştirilebilir `TEST_MODULE_ATTRIBUTE` .
 
 ```cpp
 TEST_OWNER(ownerAlias)
 ```
 
- Name `Owner` ve *ownerAlias*özniteliği değeri olan bir özniteliği tanımlar.
+ `Owner` *OwnerAlias*öğesinin Name ve Attribute değeri ile bir özniteliği tanımlar.
 
 ```cpp
 TEST_DESCRIPTION(description)
 ```
 
- @No__t_0 adı ve *Açıklama*özniteliği değeri olan bir özniteliği tanımlar.
+ `Description`Açıklaması ve öznitelik değeri *Açıklama*olan bir özniteliği tanımlar.
 
 ```cpp
 TEST_PRIORITY(priority)
 ```
 
- @No__t_0 adı ve *Öncelik*değeri olan özniteliği tanımlar.
+ Öncelik değeri olan bir özniteliği tanımlar `Priority` ve özniteliği. *priority*
 
 ```cpp
 TEST_WORKITEM(workitem)
 ```
 
- Name `WorkItem` ve *WorkItem*özniteliği değeri olan bir özniteliği tanımlar.
+ `WorkItem` *WorkItem*'ın adı ve öznitelik değeri olan bir özniteliği tanımlar.
 
 ```cpp
 TEST_IGNORE()
 ```
 
- @No__t_0 adı ve `true` öznitelik değeri olan bir özniteliği tanımlar.
+ Adı ve özniteliği değeri olan bir özniteliği tanımlar `Ignore` `true` .
 
-## <a name="BKMK_CppUnitTestAssert_h"></a>CppUnitTestAssert. h
+## <a name="cppunittestasserth"></a><a name="BKMK_CppUnitTestAssert_h"></a> CppUnitTestAssert. h
 
-### <a name="BKMK_General_Asserts"></a>Genel onaylar
+### <a name="general-asserts"></a><a name="BKMK_General_Asserts"></a> Genel onaylar
 
-#### <a name="BKMK_General_Are_Equal"></a>Eşittir
+#### <a name="are-equal"></a><a name="BKMK_General_Are_Equal"></a> Eşittir
  İki nesnenin eşit olduğunu doğrulama
 
 ```cpp
@@ -310,7 +310,7 @@ static void AreEqual(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Are_Not_Equal"></a>Eşit değildir
+#### <a name="are-not-equal"></a><a name="BKMK_General_Are_Not_Equal"></a> Eşit değildir
  İki Double Double 'ın eşit olmadığından emin olun
 
 ```cpp
@@ -366,7 +366,7 @@ static void AreNotEqual(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Are_Same"></a>Aynı
+#### <a name="are-same"></a><a name="BKMK_General_Are_Same"></a> Aynı
  İki başvuruyu aynı nesne örneğine (kimlik) başvurmuş olduğunu doğrulayın.
 
 ```cpp
@@ -378,7 +378,7 @@ static void AreSame(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Are_Not_Same"></a>Aynı değil
+#### <a name="are-not-same"></a><a name="BKMK_General_Are_Not_Same"></a> Aynı değil
  İki başvuruların aynı nesne örneğine (kimlik) başvurmadığından emin olun.
 
 ```cpp
@@ -390,7 +390,7 @@ static void AreNotSame (
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Is_Null"></a>Null
+#### <a name="is-null"></a><a name="BKMK_General_Is_Null"></a> Null
  Bir işaretçinin NULL olduğunu doğrulayın.
 
 ```cpp
@@ -401,7 +401,7 @@ static void IsNull(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Is_Not_Null"></a>Null değil
+#### <a name="is-not-null"></a><a name="BKMK_General_Is_Not_Null"></a> Null değil
  Bir işaretçinin NULL olmadığından emin olun
 
 ```cpp
@@ -412,7 +412,7 @@ static void IsNotNull(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Is_True"></a>Doğru
+#### <a name="is-true"></a><a name="BKMK_General_Is_True"></a> Doğru
  Koşulun doğru olduğunu doğrulama
 
 ```cpp
@@ -422,7 +422,7 @@ static void IsTrue(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Is_False"></a>Yanlış
+#### <a name="is-false"></a><a name="BKMK_General_Is_False"></a> Yanlış
  Koşulun yanlış olduğunu doğrulama
 
 ```cpp
@@ -432,7 +432,7 @@ static void IsFalse(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-#### <a name="BKMK_General_Fail"></a>Neden
+#### <a name="fail"></a><a name="BKMK_General_Fail"></a> Neden
  Test çalışması sonucunun başarısız olmasını zorla
 
 ```cpp
@@ -441,9 +441,9 @@ static void Fail(
     const __LineInfo* pLineInfo = NULL)
 ```
 
-### <a name="BKMK_WinRT_Asserts"></a>Windows Çalışma Zamanı onayları
+### <a name="windows-runtime-asserts"></a><a name="BKMK_WinRT_Asserts"></a> Windows Çalışma Zamanı onayları
 
-#### <a name="BKMK_WinRT_Are_Equal"></a>Eşittir
+#### <a name="are-equal"></a><a name="BKMK_WinRT_Are_Equal"></a> Eşittir
  İki Windows Çalışma Zamanı işaretçilerinin eşit olduğunu doğrular.
 
 ```
@@ -466,7 +466,7 @@ static void AreEqual(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="BKMK_WinRT_Are_Same"></a>Aynı
+#### <a name="are-same"></a><a name="BKMK_WinRT_Are_Same"></a> Aynı
  İki Windows Çalışma Zamanı aynı nesneye başvuruda bulunduğunu doğrular.
 
 ```
@@ -478,7 +478,7 @@ static void AreSame(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="BKMK_WinRT_Are_Not_Equal"></a>Eşit değildir
+#### <a name="are-not-equal"></a><a name="BKMK_WinRT_Are_Not_Equal"></a> Eşit değildir
  İki Windows Çalışma Zamanı işaretçilerinin eşit olmadığını doğrular.
 
 ```
@@ -501,7 +501,7 @@ static void AreNotEqual(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="BKMK_WinRT_Are_Not_Same"></a>Aynı değil
+#### <a name="are-not-same"></a><a name="BKMK_WinRT_Are_Not_Same"></a> Aynı değil
  İki Windows Çalışma Zamanı başvurusunun aynı nesneye başvurmadığını doğrular.
 
 ```
@@ -513,7 +513,7 @@ static void AreNotSame(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="BKMK_WinRT_Is_Null"></a>Null
+#### <a name="is-null"></a><a name="BKMK_WinRT_Is_Null"></a> Null
  Windows Çalışma Zamanı işaretçisinin bir nullptr olduğunu doğrular.
 
 ```
@@ -524,7 +524,7 @@ static void IsNull(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-#### <a name="BKMK_WinRT_Is_Not_Null"></a>Null değil
+#### <a name="is-not-null"></a><a name="BKMK_WinRT_Is_Not_Null"></a> Null değil
  Windows Çalışma Zamanı işaretçisinin bir nullptr olmadığını doğrular.
 
 ```
@@ -535,9 +535,9 @@ static void IsNotNull(
     const __LineInfo* pLineInfo= nullptr)
 ```
 
-### <a name="BKMK_Exception_Asserts"></a>Özel durum onayları
+### <a name="exception-asserts"></a><a name="BKMK_Exception_Asserts"></a> Özel durum onayları
 
-#### <a name="BKMK_Expect_Exception"></a>Özel durum bekliyor
+#### <a name="expect-exception"></a><a name="BKMK_Expect_Exception"></a> Özel durum bekliyor
  Bir işlevin özel durum harekete geçirdiğini doğrulayın:
 
 ```
@@ -558,16 +558,16 @@ template<typename _EXPECTEDEXCEPTION, typename _RETURNTYPE>
     const __LineInfo* pLineInfo = NULL)
 ```
 
-## <a name="BKMK_CppUnitTestLogger_h"></a>Cppunittestgünlükçü. h
+## <a name="cppunittestloggerh"></a><a name="BKMK_CppUnitTestLogger_h"></a> Cppunittestgünlükçü. h
 
-### <a name="BKMK_Logger"></a>Medi
+### <a name="logger"></a><a name="BKMK_Logger"></a> Medi
  Günlükçü sınıfı, yazılacak statik yöntemler içerir
 
 ```
 class Logger
 ```
 
-### <a name="BKMK_Write_Message"></a>Ileti yaz
+### <a name="write-message"></a><a name="BKMK_Write_Message"></a> Ileti yaz
 
 ```
 static void
@@ -651,4 +651,4 @@ public:
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Birim testi kod](../test/unit-test-your-code.md) [biriminiz test Gezgini ile yerel kod test Gezgini](https://msdn.microsoft.com/8a09d6d8-3613-49d8-9ffe-11375ac4736c) [mevcut C++ uygulamalara birim testleri ekleme](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)
+ [Birim testi kod](../test/unit-test-your-code.md) [biriminiz test Gezgini ile yerel kod test Gezgini](https://msdn.microsoft.com/8a09d6d8-3613-49d8-9ffe-11375ac4736c) [mevcut C++ uygulamalarına birim testleri ekleme](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)

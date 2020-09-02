@@ -34,46 +34,46 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b9a46523c4c856367e77c345c7e44d0dbc87508f
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845980"
 ---
 # <a name="xml-tools-in-visual-studio"></a>Visual Studio'daki XML Araçları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Genişletilebilir Biçimlendirme Dili (XML) * veri tanımlamak için bir biçim sağlayan bir biçimlendirme dilidir. Bu, birden çok platformda daha kesin bildirimleri içerik ve daha anlamlı arama sonuçlarının kolaylaştırır. Ayrıca, XML veri sunudan ayrımı sağlar. Örneğin, HTML etiketleri tarayıcıya kalın veya italik verileri görüntülemek için kullandığınız; XML etiketleri yalnızca şehir adı, sıcaklık ve barometric baskısı gibi verileri tanımlamak için kullanın. XML verilerini bir tarayıcıda sunmak için Genişletilebilir Stil Sayfası Dili (XSL) gibi stil sayfaları ve geçişli stil sayfaları (CSS) kullanırsınız. XML verileri, sunu ve işlem ayırır. Bu, görüntülemek ve farklı bir stil sayfaları ve uygulamaları uygulayarak istediğiniz verileri işlemek sağlar.
+Genişletilebilir biçimlendirme dili (XML) *, verileri tanımlamaya yönelik biçim sağlayan bir biçimlendirme dilidir. Bu, içeriğin daha kesin bildirimlerini ve birden çok platformda daha anlamlı arama sonuçlarını kolaylaştırır. Ayrıca, XML sununun verilerin ayrılmasını de mümkün değildir. Örneğin, HTML 'de, tarayıcıya verileri kalın veya italik olarak göstermesini söylemek için Etiketler kullanabilirsiniz; XML 'de, yalnızca şehir adı, sıcaklık ve barometrik baskısı gibi verileri anlatmak için Etiketler kullanırsınız. XML 'de, verileri bir tarayıcıda sunmak için Genişletilebilir Stil sayfası dili (XSL) ve geçişli stil sayfaları (CSS) gibi stil sayfalarını kullanırsınız. XML, verileri sunudan ve işlemden ayırır. Bu, farklı stil sayfaları ve uygulamalar uygulayarak verileri istediğiniz gibi görüntülemenizi ve işlemenizi sağlar.
 
- XML Web üzerinden teslimat için optimize edilmiştir SGML bir alt kümesidir. Bu, World Wide Web Consortium (W3C) tarafından tanımlanır. Bu Standardizasyon Tekdüzen ve uygulamaları veya satıcılar bağımsız yapılandırılmış veri olacağını garanti eder.
+ XML, Web üzerinden teslim için optimize edilmiş bir SGML alt kümesidir. World Wide Web Konsorsiyumu (W3C) tarafından tanımlanır. Bu Standartlaştırma, yapılandırılmış verilerin tek tek ve uygulamalardan veya satıcıların bağımsız olmasını güvence altına alır.
 
- XML'dir özelliklerinin çoğu özünde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Aşağıdaki konu listesi içinde sunulan XML ilgili özellikler ve Araçlar adları [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].
+ XML, ve ' nin birçok özelliğinin çekirdeğundan oluşur [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . Aşağıdaki konu listesi, ve ' de sunulan XML ile ilgili araçları ve özellikleri adlandırır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .
 
- Daha fazla bilgi için [XML Geliştirici Merkezi](https://msdn.microsoft.com/data/bb190600.aspx), sağlayan en son belgeler, teknik bilgileri, indirmeler, haber grupları ve diğer kaynaklar için XML geliştiriciler.
+ Daha fazla bilgi için, XML geliştiricileri için en son belgeleri, teknik bilgileri, indirmeleri, haber gruplarını ve diğer kaynakları sağlayan [XML Geliştirici Merkezi](https://msdn.microsoft.com/data/bb190600.aspx)' ne bakın.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [XML verileriyle çalışma](../xml-tools/working-with-xml-data.md) şekilde veri XML rolünde işlenir Discusses [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ [XML verileriyle çalışma](../xml-tools/working-with-xml-data.md) Verilerin işlendiği şekilde XML rolünü ele alır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
- [XSLT hata ayıklama](../xml-tools/debugging-xslt.md) XSLT hatalarını ayıklamak için Visual Studio hata ayıklayıcıyı kullanma hakkındaki konulara bağlantılar sağlar.
+ [XSLT hata ayıklama](../xml-tools/debugging-xslt.md) XSLT hatalarını ayıklamak için Visual Studio hata ayıklayıcısını kullanma hakkındaki konuların bağlantılarını sağlar.
 
 ## <a name="reference"></a>Başvuru
- [Microsoft.VisualStudio.XmlEditor](https://msdn.microsoft.com/library/microsoft.visualstudio.xmleditor.aspx) sunan [XML Düzenleyicisi](https://msdn.microsoft.com/library/ms255810.aspx) ayrıştırma ağacı aracılığıyla [System.Xml.Linq](https://msdn.microsoft.com/library/system.xml.linq.aspx) XML belgeleri için.
+ [Microsoft.VisualStudio.XmlDüzenleyicisi](https://msdn.microsoft.com/library/microsoft.visualstudio.xmleditor.aspx) [XML Düzenleyicisi](https://msdn.microsoft.com/library/ms255810.aspx) ayrıştırma ağacınıSystem.Xml aracılığıyla gösterir [ . ](https://msdn.microsoft.com/library/system.xml.linq.aspx) XML belgeleri için LINQ.
 
- [XML standartları başvurusu](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) XML, belge türü tanımı (DTD'nin), XML Şeması Tanım Dili (XSD) ve XSLT de dahil olmak üzere, XML teknolojileri hakkında bilgi sağlar.
+ [XML standartları başvurusu](https://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) XML, belge türü tanımı (DTD), XML şeması tanım dili (XSD) ve XSLT gibi XML teknolojileri hakkında bilgi sağlar.
 
- <xref:System.Xml?displayProperty=fullName> Sınıfları ve oluşturan diğer öğeleri açıklayan <xref:System.Xml> ad alanı ve her bir öğede daha ayrıntılı bilgi için bağlantılar sağlar.
+ <xref:System.Xml?displayProperty=fullName> Ad alanını oluşturan sınıfları ve diğer öğeleri açıklar <xref:System.Xml> ve her öğe hakkında daha ayrıntılı bilgi için bağlantılar sağlar.
 
- <xref:System.Xml.Serialization?displayProperty=fullName> Sınıfları ve oluşturan diğer öğeleri açıklayan <xref:System.Xml.Serialization> ad alanı ve her öğeyle ilgili daha ayrıntılı bilgi için bağlantılar sağlar.
+ <xref:System.Xml.Serialization?displayProperty=fullName> Ad alanını oluşturan sınıfları ve diğer öğeleri açıklar <xref:System.Xml.Serialization> ve her öğe hakkında daha ayrıntılı bilgi için bağlantılar sağlar.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [XML belge nesne modeli (DOM)](https://msdn.microsoft.com/library/b5e52844-4820-47c0-a61d-de2da33e9f54) Describes nasıl <xref:System.Xml.XmlDocument> ve onun ilişkili sınıfları W3C belge nesne modeli (çekirdek) Düzey 1 ve 2. düzey ad alanı desteği belirtimleri ile uyumlu.
+ [XML belge nesne modeli (DOM)](https://msdn.microsoft.com/library/b5e52844-4820-47c0-a61d-de2da33e9f54) <xref:System.Xml.XmlDocument> Ve ilişkili SıNıFLARıNıN W3C belge nesne modeli (çekirdek) düzey 1 ve düzey 2 ad alanı destek belirtimlerine uygun olduğunu açıklar.
 
- [XmlReader okuma XML](https://msdn.microsoft.com/3029834c-a27e-4331-b7aa-711924062182) Describes nasıl <xref:System.Xml.XmlReader> Önbelleklenmemiş, iletme yalnızca, salt okunur erişim XML verilerini bir XML akışı sağlar.
+ [XmlReader Ile XML okuma](https://msdn.microsoft.com/3029834c-a27e-4331-b7aa-711924062182) <xref:System.Xml.XmlReader> BIR XML akışı üzerinden önbelleğe alınmamış, yalnızca iletme, XML verilerine salt okuma erişimi sağlar.
 
- [XML XmlWriter ile yazma](https://msdn.microsoft.com/ea41f72c-e1d3-4e0a-ab0f-f0eb1c27ab86) Describes nasıl <xref:System.Xml.XmlWriter> Önbelleklenmemiş, sağlar. yalnızca XML akışlarını ve W3C standardı ile uyum XML belgeleri oluşturmanıza yardımcı olur oluşturma yolu iletin.
+ [XmlWriter Ile xml yazma](https://msdn.microsoft.com/ea41f72c-e1d3-4e0a-ab0f-f0eb1c27ab86) ' <xref:System.Xml.XmlWriter> Nin önbelleğe alınmamış, salt ileri, XML akışları oluşturma ve W3C standardına uygun XML belgeleri oluşturmanıza yardımcı olduğunu açıklar.
 
- [XSLT dönüşümleri](https://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03) Describes nasıl <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı XSLT 1.0 öneri uygular.
+ [XSLT dönüşümleri](https://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03) <xref:System.Xml.Xsl.XslCompiledTransform> SıNıFıNıN XSLT 1,0 önerisi nasıl uyguladığını açıklar.
 
- [XPath veri modelini kullanarak XML verilerini işleme](https://msdn.microsoft.com/library/536c6fce-1453-4654-9c72-bca54d47e081) Describes nasıl <xref:System.Xml.XPath.XPathNavigator> sınıfı içinde depolanan XML verileri işleyebilir bir <xref:System.Xml.XPath.XPathDocument> veya <xref:System.Xml.XmlDocument> nesne. <xref:System.Xml.XPath.XPathNavigator> Sınıfı XQuery 1.0 ve XPath 2.0 veri modeline dayanır ve gidin ve XML verileri düzenlemek için kullanılabilir.
+ [XPath veri modelini kullanarak XML verilerini işleme](https://msdn.microsoft.com/library/536c6fce-1453-4654-9c72-bca54d47e081) <xref:System.Xml.XPath.XPathNavigator> Sınıfının bir veya nesnesinde depolanan xml verilerini nasıl işleyebileceğinizi açıklar <xref:System.Xml.XPath.XPathDocument> <xref:System.Xml.XmlDocument> . <xref:System.Xml.XPath.XPathNavigator>Sınıfı, XQuery 1,0 ve XPath 2,0 veri modelini temel alır ve XML verilerinde gezinmek ve bunları düzenlemek için kullanılabilir.
 
- [XML şema nesne modeli (SOM)](https://msdn.microsoft.com/library/a897a599-ffd1-43f9-8807-e58c8a7194cd) oluşturmak ve XML şemaları sağlayarak işlemek için kullanılan sınıfları açıklar bir <xref:System.Xml.Schema.XmlSchema> yüklemek ve bir şema düzenlemek için sınıf.
+ [XML şema nesne modeli (som)](https://msdn.microsoft.com/library/a897a599-ffd1-43f9-8807-e58c8a7194cd) <xref:System.Xml.Schema.XmlSchema> Bir şemayı yüklemek ve düzenlemek için bir sınıf sağlayarak xml şemaları oluşturmak ve işlemek için kullanılan sınıfları açıklar.

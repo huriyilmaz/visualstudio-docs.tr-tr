@@ -12,24 +12,24 @@ caps.latest.revision: 17
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 89a07bc5a5c4c8b7a6054b53610325c654355bc8
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65695954"
 ---
 # <a name="roadmap-for-extending-the-debugger"></a>Hata Ayıklayıcıyı Genişletmek için Yol Haritası
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu belgeler genişletmeye yönelik kılavuz ve başvuru bilgileri sağlar [!INCLUDE[vs_current_short](../../includes/vs-current-short-md.md)] ile hata ayıklayıcı [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)].  
+Bu belge [!INCLUDE[vs_current_short](../../includes/vs-current-short-md.md)] , hata ayıklayıcıyı ile genişletmek için kılavuz ve başvuru bilgileri sağlar [!INCLUDE[vsipsdk](../../includes/vsipsdk-md.md)] .  
   
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] belgeleri hata ayıklama, örnekler, kapsamlı bir referans ve tipik Hata Ayıklayıcısı'nı özelleştirme yolları gösteren birkaç temsili senaryo içerir.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] hata ayıklama belgelerinin örnekleri, kapsamlı bir başvuru ve hata ayıklayıcıyı özelleştirmenin tipik yollarını gösteren çeşitli temsili senaryolar bulunur.  
   
- Derleyici ve çıktısını ürününüzü hata ayıklama uygulamak için yapılması gerekenleri belirleyin. Varsa, derleyici:  
+ Derleyicinizi ve çıktısı, ürününüzün hata ayıklamayı uygulamak için ne yapmanız gerektiğini tespit ediyor. Derleyicinizi:  
   
-- Windows yerel işletim sistemini hedefleyen ve yazan bir. PDB dosyası içinde tümleşik olarak yerel kod hata ayıklama altyapısı (DE) ile programlar ayıklayabilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Bir DE ya da ifade değerlendiricisi uygulama gerekmez. İfade değerlendirici, C++ programlama dilinin sözdizimi yazılır.  
+- Windows yerel işletim sistemini hedefler ve a yazar. PDB dosyası, ile tümleştirilmiş yerel kod hata ayıklama altyapısı (DE) ile programlarda hata ayıklaması yapabilirsiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Bir DE veya ifade değerlendirici uygulamanız gerekmez. İfade değerlendiricisi, C++ programlama dilinin sözdizimi için yazılmıştır.  
   
-- Microsoft Ara dili (MSIL) çıktı, içine tümleştirilmiştir yönetilen kod hata ayıklama altyapısıyla DE, programların ayıklayabilir üretir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Bu nedenle, yalnızca bir ifade değerlendiricisi uygulama. Örnek ifade değerlendiricisi sağlanır. Daha fazla bilgi için aşağıdaki konulara bakın:  
+- Microsoft ara dili (MSIL) çıkışı üretir, yönetilen kod hata ayıklama altyapısı ile, ayrıca ile tümleştirilmiş programlarda hata ayıklaması yapabilirsiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Bu nedenle, yalnızca bir ifade değerlendirici uygulamanız gerekir. Sizin için örnek bir ifade değerlendirici sunulmaktadır. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:  
   
      [İfade Değerlendirme](../../extensibility/debugger/expression-evaluation-visual-studio-debugging-sdk.md)  
   
@@ -41,11 +41,11 @@ Bu belgeler genişletmeye yönelik kılavuz ve başvuru bilgileri sağlar [!INCL
   
      [Ortak Dil Çalışma Zamanı İfade Değerlendiricisi Yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)  
   
-- Bir işletim sistemi veya başka bir çalışma zamanı ortamında özel hedefler, kendi DE yazmanız gerekir. ATL COM kullanarak basit bir DE oluşturan bir Öğreticisi sağlanır. Daha fazla bilgi için aşağıdaki konulara bakın:  
+- Özel bir işletim sistemini veya diğer bir çalışma zamanı ortamını hedefler, kendi DE yazmanız gerekir. ATL COM kullanarak basit bir DE oluşturan bir öğretici sunulmaktadır. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın:  
   
      [Özel Hata Ayıklama Altyapısı Oluşturma](../../extensibility/debugger/creating-a-custom-debug-engine.md)  
   
-     [Öğretici: ATL COM kullanarak bir hata ayıklama altyapısı oluşturma](https://msdn.microsoft.com/9097b71e-1fe7-48f7-bc00-009e25940c24)  
+     [Öğretici: ATL COM kullanarak hata ayıklama altyapısı oluşturma](https://msdn.microsoft.com/9097b71e-1fe7-48f7-bc00-009e25940c24)  
   
      [Bağlantı Noktası Sağlayıcısı Uygulama](../../extensibility/debugger/implementing-a-port-supplier.md)  
   

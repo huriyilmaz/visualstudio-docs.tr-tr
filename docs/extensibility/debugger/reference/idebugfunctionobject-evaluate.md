@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::Değerlendir | Microsoft Dokümanlar
+title: 'IDebugFunctionObject:: değerlendir | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 529a5f67c808efa258bc0cb9899f546dbb90d431
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728504"
 ---
 # <a name="idebugfunctionobjectevaluate"></a>IDebugFunctionObject::Evaluate
-İşlevi çağırır ve ortaya çıkan değeri nesne olarak döndürür.
+İşlevini çağırır ve sonuç değerini bir nesne olarak döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Evaluate( 
@@ -47,22 +47,22 @@ int Evaluate(
 
 ## <a name="parameters"></a>Parametreler
 `ppParams`\
-[içinde] Giriş parametrelerini temsil eden [Bir IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesne dizisi. Bu parametrelerin her biri `Create` [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) arabirimindeki yöntemlerden biriyle oluşturulmuştur.
+'ndaki Giriş parametrelerini temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesneleri dizisi. Bu parametrelerin her biri `Create` [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) arabirimindeki yöntemlerden biriyle oluşturulmuştur.
 
 `dwParams`\
-[içinde] Dizideki `ppParams` parametrelerin sayısı.
+'ndaki Dizideki parametrelerin sayısı `ppParams` .
 
 `dwTimeout`\
-[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden en büyük süreyi belirtir. Süresiz beklemek için kullanın. `INFINITE`
+'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süreyi milisaniye olarak belirtir. `INFINITE`Sonsuza kadar beklemek için kullanın.
 
 `ppResult`\
-[çıkış] İşlevin nesne olarak değerini temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) döndürür.
+dışı İşlevin değerini bir nesne olarak temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yöntem, [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) nesnesi tarafından temsil edilen işleve çağrı yıkıyor ve yürütür.
+ Bu yöntem, [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) nesnesinin temsil ettiği işleve bir çağrı yapar ve yürütülür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

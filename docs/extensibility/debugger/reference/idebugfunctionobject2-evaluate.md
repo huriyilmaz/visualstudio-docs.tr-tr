@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject2::Değerlendirme | Microsoft Dokümanlar
+title: 'IDebugFunctionObject2:: değerlendir | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: d87d7d3531d198a1478b4aaa55b354c3ac101302
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728440"
 ---
 # <a name="idebugfunctionobject2evaluate"></a>IDebugFunctionObject2::Evaluate
-İşlevi çağırır ve ortaya çıkan değeri nesne olarak döndürür.
+İşlevini çağırır ve sonuç değerini bir nesne olarak döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Evaluate (
@@ -47,22 +47,22 @@ int Evaluate (
 
 ## <a name="parameters"></a>Parametreler
 `ppParams`\
-[içinde] Giriş parametrelerini temsil eden [Bir IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesne dizisi. Bu parametrelerin her biri, bu arabirimdeki Oluşturma yöntemlerinden biri kullanılarak oluşturulmuştur.
+'ndaki Giriş parametrelerini temsil eden bir [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nesneleri dizisi. Bu parametrelerin her biri, bu arabirimdeki Create yöntemlerinden biri kullanılarak oluşturulmuştur.
 
 `dwParams`\
-[içinde] Dizideki `ppParams` parametrelerin sayısı.
+'ndaki Dizideki parametrelerin sayısı `ppParams` .
 
 `dwEvalFlags`\
-[içinde] [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasından değerlendirmenin nasıl yapılacağını belirten bayrakların birleşimi.
+'ndaki [Evalflags](../../../extensibility/debugger/reference/evalflags.md) numaralandırmasındaki, değerlendirmenin nasıl gerçekleştirileceğini belirten bayrakların birleşimi.
 
 `dwTimeout`\
-[içinde] Bu yöntemden dönmeden önce beklemek için milisaniye cinsinden en büyük süreyi belirtir. Sonsuza kadar beklemek için **SONSUZ** kullanın.
+'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süreyi milisaniye olarak belirtir. Sonsuza kadar beklemek için **sonsuz** kullanın.
 
 `ppResult`\
-[çıkış] İşlevin nesne olarak değerini temsil eden bir **IDebugObject** döndürür.
+dışı İşlevin değerini bir nesne olarak temsil eden bir **IDebugObject** döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugFunctionObject2](../../../extensibility/debugger/reference/idebugfunctionobject2.md)

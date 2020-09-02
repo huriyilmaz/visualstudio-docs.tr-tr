@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 73d8e54938659920227b3614046b8a8f933023ff
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670221"
 ---
 # <a name="add-existing-project-command"></a>Varolan Projeyi Ekle Komutu
@@ -26,16 +26,16 @@ ms.locfileid: "72670221"
 
 Geçerli çözüme mevcut bir projeyi ekler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 File.AddExistingProject filename
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `filename`. Çözüme eklenecek projenin Uzantısı ile tam yol ve proje adı.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `filename` Seçim. Çözüme eklenecek projenin Uzantısı ile tam yol ve proje adı.
 
- @No__t_0 bağımsız değişkeni boşluk içeriyorsa, tırnak işaretleri içine alınmalıdır.
+ `filename`Bağımsız değişken boşluk içeriyorsa, tırnak işaretleri içine alınmalıdır.
 
  Dosya adı belirtilmemişse, komut, kullanıcının bir proje seçmesini sağlamak için dosya iletişim kutusunu açar.
 
@@ -43,7 +43,7 @@ File.AddExistingProject filename
  Otomatik tamamlama, yazarken doğru yolu ve dosya adını bulmaya çalışır.
 
 ## <a name="example"></a>Örnek
- Bu örnek, TestProject1 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] projesini geçerli çözüme ekler.
+ Bu örnek, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] TestProject1 projesini geçerli çözüme ekler.
 
 ```
 >File.AddExistingProject "c:\visual studio projects\TestProject1.vbproj"

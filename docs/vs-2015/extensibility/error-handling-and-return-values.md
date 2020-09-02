@@ -1,5 +1,5 @@
 ---
-title: Hata işleme ve dönüş değerleri | Microsoft Docs
+title: Hata Işleme ve dönüş değerleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,50 +13,50 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 74e61e60384b3e98bf26eb8208696ecb9223efa3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65696341"
 ---
 # <a name="error-handling-and-return-values"></a>Hata İşleme ve Dönüş Değerleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPackages ve COM aynı mimariye hataları için kullanın. `SetErrorInfo` Ve `GetErrorInfo` işlevleri Win32 uygulama programlama arabirimi (API) bir parçasıdır. Tümleşik geliştirme ortamında (IDE) herhangi bir VSPackage alırken bir hata bildirimi, bu genel Win32 API'ları zengin hata bilgileri kaydetmek için çağırabilirsiniz. [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] Hata bilgilerini yönetmek için birlikte çalışma derlemelerini sağlar.  
+VSPackages ve COM, hatalar için aynı mimariyi kullanır. `SetErrorInfo`Ve `GetErrorInfo` Işlevleri, Win32 uygulama programlama ARABIRIMININ (API) bir parçasıdır. Tümleşik geliştirme ortamındaki (IDE) herhangi bir VSPackage, hata bildirimi alırken zengin hata bilgilerini kaydetmek için bu genel Win32 API 'Lerini çağırabilir. , [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] Hata bilgilerini yönetmek için birlikte çalışma derlemeleri sağlar.  
   
-## <a name="interop-methods"></a>Birlikte çalışma yöntemi  
- Kolaylık, IDE bir yöntem sağlar. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A>, Win32 API'larını çağırma yerine kullanılacak. Yönetilen kod kullanılan <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A>. Bir hata oluştuğunda `HRESULT` burada hata iletisini görüntülenmelidir düzeyinde ulaşan (Bu genellikle nesnedir uygulama bir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> komut işleyicisi), IDE başka bir yöntem kullanır <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A>, uygun bir ileti kutusu görüntülemek için. Yönetilen kod kullanılan <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> yöntemi.  
+## <a name="interop-methods"></a>Birlikte çalışma yöntemleri  
+ Bir kolaylık olması halinde, IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> Win32 API 'lerini çağırmak yerine kullanmak için bir yöntem sağlar. Yönetilen kod kullanımı <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> . `HRESULT`Hata iletisinin gösterilmesi gereken düzeye bir hata ulaştığında (Bu genellikle bir <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> komut işleyicisini uygulayan nesnedir), IDE, <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> uygun ileti kutusunu göstermek için başka bir yöntem kullanır. Yönetilen kodda <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> yöntemini kullanın.  
   
- VSPackage'ı uygulayan, normal olarak, COM nesneleri uygulamak `ISupportErrorInfo`. `ISupportErrorInfo` Arabirimi sağlar zengin hata bilgileri çağrı zincirini dikey olarak taşıyabilirsiniz. İş parçacıkları arasında veya işlemler arasında kullanılabilir nesneleri desteklemelidir `ISupportErrorInfo` zengin hata bilgisini çağırana geri düzgün bir şekilde sıralanmış olduğundan emin olmak için.  
+ VSPackage uygulayıcısı olarak COM nesneleriniz normalde uygular `ISupportErrorInfo` . `ISupportErrorInfo`Arabirim, zengin hata bilgilerinin, çağrı zincirinde dikey olarak taşınmasını sağlar. İşlem genelinde veya iş parçacıkları genelinde kullanılabilecek nesneler, `ISupportErrorInfo` zengin hata bilgilerinin çağırana doğru şekilde geri sıralandığından emin olmak için desteklemelidir.  
   
- VSPackage'ları için ilgili ve, düzenleyici fabrikaları, düzenleyiciler, hiyerarşileri, dahil olmak üzere IDE genişletme ile ilgili ve Hizmetleri, sunulan tüm nesneleri zengin hata bilgileri desteklemelidir. IDE uygulamak için bu VSPackage nesneler ihtiyacı olmasa da `ISupportErrorInfo`, her zaman teşvik edilir.  
+ VSPackages ile ilgili olan ve düzenleyici fabrikası, düzenleyiciler, hiyerarşiler ve sunulan hizmetler de dahil olmak üzere IDE 'yi genişletmeye dahil olan tüm nesneler, zengin hata bilgilerini desteklemelidir. IDE, bu VSPackage nesnelerinin uygulanmasını gerektirse de `ISupportErrorInfo` her zaman önerilir.  
   
- IDE hata bilgilerini raporlama ve bir kullanıcıya görüntülemek için sorumlu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] her bir `HRESULT` IDE'ye yayılır. Ayrıca oluşturma mekanizması ıde'dir `ErrorInfo` nesneleri.  
+ IDE, hata bilgilerini bildirmekten ve [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE 'ye her yayıldıktan sonra bir kullanıcıya görüntülüyor `HRESULT` . IDE, nesne oluşturmaya yönelik mekanizmaya de sahiptir `ErrorInfo` .  
   
 ## <a name="general-guidelines"></a>Genel Yönergeler  
- Kullanabileceğiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> VSPackage uygulamanız için de iç hataları bildirin ve ayarlamak için yöntemleri. Ancak, genel bir kural olarak, VSPackage hata iletileri işlemek için aşağıdaki yönergeleri izleyin:  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A>Ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> yöntemlerini, VSPackage uygulamanızda iç hataları ayarlamak ve raporlamak için de kullanabilirsiniz. Bununla birlikte, genel bir kural olarak, VSPackage 'daki hata iletilerini işlemek için aşağıdaki yönergeleri izleyin:  
   
-- Uygulama `ISupportErrorInfo` VSPackage COM nesnelerinizi.  
+- `ISupportErrorInfo`VSPackage com nesnelerinizi uygulayın.  
   
-- Bir hata raporlama mekanizmasını çağırır oluşturma <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> uygulayan nesneler yönteminde <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>.  
+- Uygulayan nesnelerde yöntemini çağıran bir hata raporlama mekanizması oluşturun <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> .  
   
-- Kullanıcılara hataları görüntülemek IDE izin <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> yöntemi.  
+- IDE 'nin yöntemi aracılığıyla kullanıcılara hata görüntülemesine izin verin <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> .  
   
-## <a name="error-information-in-the-ide"></a>IDE'de hata bilgileri  
- Aşağıdaki kurallar hata bilgisini nasıl ele alınacağını belirtmek [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE:  
+## <a name="error-information-in-the-ide"></a>IDE 'de hata bilgileri  
+ Aşağıdaki kurallar IDE 'de hata bilgilerinin nasıl işleneceğini gösterir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] :  
   
-- Eski hata bilgisi kullanıcılara bildirilmedi güvence altına almak için bir savunma stratejisi işlevleri gibi çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> yöntemini çağırmanız <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> yöntemi. Geçirin `null` herhangi bir şey çağıran yeni hata bilgilerini ayarlayabilir önce önbelleğe alınan hata iletilerini temizleyin.  
+- Eski hata bilgilerinin kullanıcılara bildirilmediğinden emin olmak için savunma stratejisi olarak, yöntemi çağıran işlevler <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ReportErrorInfo%2A> öncelikle <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> yöntemi çağırmalıdır. `null`Yeni hata bilgileri ayarlayabilen herhangi bir şeyi çağırmadan önce önbelleğe alınmış hata iletilerini temizlemek için geçirin.  
   
-- Hata iletileri doğrudan bildirmeyen işlevleri çağırmak için yalnızca verilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> varsa bunlar bir hatayı döndürmeden yöntemi `HRESULT`. Temizle izin verilse `ErrorInfo` girişteki bir işleve veya döndürülürken <xref:Microsoft.VisualStudio.VSConstants.S_OK>. Bir çağrı, bir hata döndürür. Bu kuralın tek özel durum olduğunda `HRESULT` , alıcı tarafın açıkça kurtarmak veya güvenli bir şekilde yoksay.  
+- Doğrudan hata iletilerini bildirmeyen işlevlerin yalnızca <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> bir hata döndürmeleri durumunda yöntemi çağırması için izin verilir `HRESULT` . `ErrorInfo`Girişi bir işleve veya döndürme sırasında temizlemek için izin verilir <xref:Microsoft.VisualStudio.VSConstants.S_OK> . Bu kuralın tek istisnası, bir çağrının, `HRESULT` alıcı tarafın açıkça kurtarabileceği veya güvenli bir şekilde yoksaydığı bir hata döndürdüğü durumdur.  
   
-- Açıkça bir hatayı gözardı herhangi bir tarafa `HRESULT` çağırmalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> yöntemiyle <xref:Microsoft.VisualStudio.VSConstants.S_OK>. Aksi takdirde, `ErrorInfo` nesnesi yanlışlıkla kullanılabilir başka bir taraf kendi sağlamadan bir hata oluşturduğunda `ErrorInfo`.  
+- Açıkça bir hatayı yok sayan herhangi bir tarafın `HRESULT` <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> ile yöntemini çağırması gerekir <xref:Microsoft.VisualStudio.VSConstants.S_OK> . Aksi takdirde, `ErrorInfo` nesne yanlışlıkla başka bir taraf kendi kendine sağlamadan bir hata oluşturduğunda kullanılıyor olabilir `ErrorInfo` .  
   
-- Bir hata kaynaklanan tüm yöntemleri `HRESULT` çağrılacak denetlemeleri <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> zengin hata bilgileri sağlamak için yöntemi. Varsa döndürülen `HRESULT` olan özel bir `FACILITY_ITF` uygun sağlamak için hata ve ardından yöntemi gereklidir `ErrorInfo`nesne. Döndürülen hata, bir standart sistem hatası ise (örneğin, <xref:Microsoft.VisualStudio.VSConstants.E_OUTOFMEMORY>, <xref:Microsoft.VisualStudio.VSConstants.E_ABORT>, <xref:Microsoft.VisualStudio.VSConstants.E_INVALIDARG>, <xref:Microsoft.VisualStudio.VSConstants.E_UNEXPECTED>ve benzeri) hata kodu açıkça çağırmadan döndürmek için kabul edilebilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> yöntemi. Kaynaklanan bir hata olduğunda bir savunma kodlama strateji olarak `HRESULT` (sistem hataları), her zaman çağrı <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> ile yöntemi `ErrorInfo` daha fazla ayrıntı'nde hatayı açıklayan veya `null`.  
+- Bir hata oluşturan tüm yöntemlerin `HRESULT` <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> zengin hata bilgileri sağlamak için yöntemini çağırması önerilir. Döndürülen `HRESULT` özel bir `FACILITY_ITF` hata ise, uygun bir nesne sağlamak için yöntemi gerekir `ErrorInfo` . Döndürülen hata standart sistem hatası ise (örneğin,,,, vb <xref:Microsoft.VisualStudio.VSConstants.E_OUTOFMEMORY> <xref:Microsoft.VisualStudio.VSConstants.E_ABORT> <xref:Microsoft.VisualStudio.VSConstants.E_INVALIDARG> <xref:Microsoft.VisualStudio.VSConstants.E_UNEXPECTED> .), yöntemi açıkça çağrılmadan hata kodunu döndürmek kabul edilebilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> . Bir hata oluştuğunda (sistem hataları dahil) Savunma kod oluşturma stratejisi olarak, hatayı `HRESULT` <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.SetErrorInfo%2A> `ErrorInfo` daha ayrıntılı olarak açıklayan veya ya da yöntemini her zaman çağırın `null` .  
   
-- Başka bir çağrı tarafından kaynaklanan hatayla başarısız alınan bilgilere geçmesi gerekir döndüren tüm işlevleri çağırmak `HRESULT` değiştirmeden `ErrorInfo` nesne.  
+- Başka bir çağrının kaynaklandığı bir hatayı döndüren tüm işlevler, nesne üzerinde değişiklik yapmadan, içindeki başarısız çağrıdan alınan bilgileri iletmelidir `HRESULT` `ErrorInfo` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   
- [Seterrorınfo (Bileşen Otomasyonu)](https://msdn.microsoft.com/8eaacfac-fc37-4eaa-870b-10b99d598d66)   
- [Geterrorınfo](https://msdn.microsoft.com/03317526-8c4f-4173-bc10-110c8112676a)   
- [ISupportErrorInfo arabirimi](https://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32)
+ [SetErrorInfo (Bileşen Otomasyonu)](https://msdn.microsoft.com/8eaacfac-fc37-4eaa-870b-10b99d598d66)   
+ [GetErrorInfo](https://msdn.microsoft.com/03317526-8c4f-4173-bc10-110c8112676a)   
+ [Iupporterrorınfo arabirimi](https://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32)

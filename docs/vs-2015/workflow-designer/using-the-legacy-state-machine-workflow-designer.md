@@ -19,14 +19,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 77bb2c7abb49dbf6fe973ebc80f8340000e4afbd
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75846001"
 ---
 # <a name="using-the-legacy-state-machine-workflow-designer"></a>Eski Durum Makinesi İş Akışı Tasarımcısını Kullanma
-[!INCLUDE[vs2010](../includes/vs2010-md.md)] içinde [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedefleyen yeni bir durum makinesi iş akışı projesi oluştururken, **durum makinesi Iş akışı konsol uygulamasını** veya **durum makinesi iş akışı kitaplığı** eski proje şablonunu kullanmayı seçebilirsiniz. Bu durum makinesi proje şablonlarından birini seçerseniz, durum makinesi Tasarımcısı eski iş akışı Tasarımcısı Kullanıcı arabirimi olarak sunulur. Eski durum makinesi proje şablonları hakkında daha fazla bilgi için bkz. [nasıl yapılır: durum makinesi Iş akışı konsol uygulamaları (eski)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md) ve [nasıl yapılır: durum makinesi Iş akışı kitaplığı oluşturma (eski)](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).
+Ya da ' i hedefleyen yeni bir durum makinesi iş akışı projesi oluştururken [!INCLUDE[vs2010](../includes/vs2010-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] , **durum makinesi iş akışı konsol uygulamasını** ya da **durum makinesi iş akışı kitaplığı** eski proje şablonunu kullanmayı seçebilirsiniz. Bu durum makinesi proje şablonlarından birini seçerseniz, durum makinesi Tasarımcısı eski iş akışı Tasarımcısı Kullanıcı arabirimi olarak sunulur. Eski durum makinesi proje şablonları hakkında daha fazla bilgi için bkz. [nasıl yapılır: durum makinesi Iş akışı konsol uygulamaları (eski)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md) ve [nasıl yapılır: durum makinesi Iş akışı kitaplığı oluşturma (eski)](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).
 
  Bir durum makinesi iş akışı, bir durumlar kümesinden oluşur. Bir durum, ilk durum olarak gösterilir. Her durum, belirli bir olay kümesini alabilir. Bir olaya bağlı olarak, başka bir duruma geçiş yapılabilir. Durum makinesi iş akışı son bir duruma sahip olabilir. Son duruma bir geçiş yapıldığında iş akışı sonlanır.
 
@@ -40,13 +40,13 @@ ms.locfileid: "75846001"
 ## <a name="state-machine-workflow-activities"></a>Durum makinesi Iş akışı etkinlikleri
  Aşağıdaki tabloda, bir durum makinesi iş akışı tasarımcısında kullanılan önemli etkinlikler açıklanmaktadır.
 
-|Araç kutusu adı|Etkinlik|Açıklama|
+|Araç kutusu adı|Etkinlik|Description|
 |------------------|--------------|-----------------|
 |**Durum**|[StateActivity](https://msdn2.microsoft.com/library/system.workflow.activities.stateactivity.aspx)|Durum makinesindeki bir durumu temsil eder; , ek **StateActivity** etkinlikleri içerebilir. Daha fazla bilgi için bkz. [StateActivity etkinliğini kullanma](https://msdn2.microsoft.com/library/bb628612.aspx).|
 |**SetState**|[SetStateActivity](https://msdn2.microsoft.com/library/system.workflow.activities.setstateactivity.aspx)|Yeni bir duruma geçiş belirtir. Daha fazla bilgi için bkz. [SetStateActivity etkinliğini kullanma](https://msdn2.microsoft.com/library/bb628469.aspx).|
 |**StateInitialization**|[StateInitializationActivity](https://msdn2.microsoft.com/library/system.workflow.activities.stateinitializationactivity.aspx)|Bir durum girildiğinde yürütülür; , diğer etkinlikleri içerebilir. Daha fazla bilgi için bkz. [StateInitialization etkinliğini kullanma](https://msdn2.microsoft.com/library/bb675253.aspx).|
 |**Statesonlandırılması**|[StateFinalizationActivity](https://msdn2.microsoft.com/library/system.workflow.activities.statefinalizationactivity.aspx)|[StateActivity](https://msdn2.microsoft.com/library/system.workflow.activities.stateactivity.aspx) etkinliğinden çıkarken içerilen etkinlikleri yürütür. Daha fazla bilgi için bkz. [StateFinalizationActivity etkinliğini kullanma](https://msdn2.microsoft.com/library/bb675278.aspx).|
-|**EventDriven**|[EventDrivenActivity](https://msdn2.microsoft.com/library/system.workflow.activities.eventdrivenactivity.aspx)|Yürütmeye başlamak için bir dış olaya güvenen durumlar için kullanılır. **EventDrivenActivity** etkinliğinin ilk alt etkinlik olarak [IEventActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ieventactivity.aspx) arabirimini uygulayan bir etkinliği olmalıdır. Daha fazla bilgi için bkz. [EventDrivenActivity etkinliğini kullanma](https://msdn2.microsoft.com/library/bb628466.aspx).|
+|**Olaytemelli**|[EventDrivenActivity](https://msdn2.microsoft.com/library/system.workflow.activities.eventdrivenactivity.aspx)|Yürütmeye başlamak için bir dış olaya güvenen durumlar için kullanılır. **EventDrivenActivity** etkinliğinin ilk alt etkinlik olarak [IEventActivity](https://msdn2.microsoft.com/library/system.workflow.activities.ieventactivity.aspx) arabirimini uygulayan bir etkinliği olmalıdır. Daha fazla bilgi için bkz. [EventDrivenActivity etkinliğini kullanma](https://msdn2.microsoft.com/library/bb628466.aspx).|
 
  Bir durum makinesi iş akışındaki ana bileşen [StateActivity](https://msdn2.microsoft.com/library/system.workflow.activities.stateactivity.aspx) etkinliğidir. Olaylar bir durum makinesi iş akışındaki çeşitli noktalarda yakalandığından, olaylarla ilişkili görevleri işlemek için farklı durumlar girilir. İş akışı ömrü boyunca iş akışı bırakabilir ve birkaç farklı durum girebilir. Bu durumlar [SetStateActivity](https://msdn2.microsoft.com/library/system.workflow.activities.setstateactivity.aspx) etkinliğini kullanarak birbirlerine bağlanır.
 

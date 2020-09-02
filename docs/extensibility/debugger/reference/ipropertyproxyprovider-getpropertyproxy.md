@@ -1,5 +1,5 @@
 ---
-title: iPropertyProxySağlayıcı::GetPropertyProxy | Microsoft Dokümanlar
+title: 'IPropertyProxyProvider:: GetPropertyProxy | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 35c23fc56c883845bdb7fb73daa60a845ee5e21a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714834"
 ---
 # <a name="ipropertyproxyprovidergetpropertyproxy"></a>IPropertyProxyProvider::GetPropertyProxy
-Belirtilen proxy kimliği için özellik proxy arabirimini alır.
+Belirtilen proxy KIMLIĞI için özellik proxy arabirimini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetPropertyProxy(
@@ -43,16 +43,16 @@ int GetPropertyProxy(
 
 ## <a name="parameters"></a>Parametreler
 `dwID`\
-[içinde] İstenilen özellik proxy kimliği.
+'ndaki İstenen özellik proxy 'sinin KIMLIĞI.
 
 `proxy`\
-[çıkış] Bir [IPropertyProxyEESide nesnesi](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) döndürür.
+dışı Bir [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Dış tip görüntüleyicileri desteklemek için, bu yöntem genellikle çağrıyı [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md) yöntemine ileter. IEEVisualizerService'in nasıl elde edilebildiğini öğrenmek için [Verileri Görselleştirme ve Görüntüleme'ye](../../../extensibility/debugger/visualizing-and-viewing-data.md) bakın.
+ Dış tür görselleştiricileri desteklemek için, bu yöntem genellikle [GetPropertyProxy](../../../extensibility/debugger/reference/ieevisualizerservice-getpropertyproxy.md) metoduna çağrıyı iletir. Ieevisualizerhizmeti 'nin nasıl elde edilildiği hakkında ayrıntılı bilgi için bkz. [verileri görselleştirme ve görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IPropertyProxyProvider](../../../extensibility/debugger/reference/ipropertyproxyprovider.md)

@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ac188bcf7975b8da1bbc71a90d3b6c34b095d424
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845573"
 ---
 # <a name="walkthrough-creating-a-code-snippet"></a>İzlenecek Yol: Kod Parçacığı Oluşturma
@@ -85,13 +85,13 @@ Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Ya
 
      `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippets`
 
-6. Bir Visual Basic projesi açıp bir kod dosyası açarak kod parçacığınızı test edin. Dosyada bağlam menüsünde kod **parçacığı Ekle** ' ye, sonra da **kod**parçacıklarında tıklayın. **Visual Basic kod parçacığı My**adlı bir kod parçacığı görmeniz gerekir. Çift tıklatın.
+6. Bir Visual Basic projesi açıp bir kod dosyası açarak kod parçacığınızı test edin. Dosyada bağlam menüsünde kod **parçacığı Ekle** ' ye, sonra da **kod**parçacıklarında tıklayın. **Visual Basic kod parçacığı My**adlı bir kod parçacığı görmeniz gerekir. Çift tıklayın.
 
-7. Koda `Console.WriteLine("Hello, World!")` eklendiğini görmeniz gerekir.
+7. `Console.WriteLine("Hello, World!")`Koda ekli olarak görmeniz gerekir.
 
 ### <a name="adding-description-and-shortcut-fields"></a>Açıklama ve kısayol alanları ekleme
 
-1. Açıklama alanları, kod parçacıkları yöneticisinde görüntülenirken kod parçacığınızı hakkında daha fazla bilgi verir. Kısayol, kod parçacığınızı eklemek için kullanıcıların yazsaykullandığı bir etikettir. `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet`dosyasını açarak eklemiş olduğunuz kod parçacığını düzenleyin.
+1. Açıklama alanları, kod parçacıkları yöneticisinde görüntülenirken kod parçacığınızı hakkında daha fazla bilgi verir. Kısayol, kod parçacığınızı eklemek için kullanıcıların yazsaykullandığı bir etikettir. Dosyayı açarak eklemiş olduğunuz kod parçacığını düzenleyin `%USERPROFILE%\Documents\Visual Studio 2013\Code Snippets\Visual Basic\My Code Snippet\VBCodeSnippet.snippet` .
 
 2. Üstbilgi öğesine yazar ve açıklama öğeleri ekleyin ve bunları içine girin.
 
@@ -122,11 +122,11 @@ Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Ya
 
 6. Kod parçacığı dosyasını yeniden kaydedin.
 
-7. Kısayolu test etmek için bir Visual Basic projesi açın ve bir kod dosyası açın. Dosyaya `hello` yazın ve TAB tuşuna basın. Kod parçacığı kodu eklenmelidir.
+7. Kısayolu test etmek için bir Visual Basic projesi açın ve bir kod dosyası açın. `hello`Dosyayı yazın ve Tab tuşuna basın. Kod parçacığı kodu eklenmelidir.
 
 ### <a name="to-add-references-and-imports"></a>Başvurular ve Içeri aktarmalar eklemek için
 
-1. Visual Basic parçacıkları ile, Başvurular öğesini kullanarak bir projeye başvuru ekleyebilir ve Içeri aktarmalar öğesini kullanarak bir Içeri aktarmalar bildirimi ekleyebilirsiniz. (Diğer dillerdeki kod parçacıkları bu özelliğe sahip değildir.) Örneğin, kod örnekteki `Console.WriteLine` `MessageBox.Show`olarak değiştirirseniz, System. Windows. Forms. dll derlemesini projeye eklemeniz gerekebilir.
+1. Visual Basic parçacıkları ile, Başvurular öğesini kullanarak bir projeye başvuru ekleyebilir ve Içeri aktarmalar öğesini kullanarak bir Içeri aktarmalar bildirimi ekleyebilirsiniz. (Diğer dillerdeki kod parçacıkları bu özelliğe sahip değildir.) Örneğin, `Console.WriteLine` kod örneğinde olarak değiştirirseniz `MessageBox.Show` , System.Windows.Forms.dll derlemeyi projeye eklemeniz gerekebilir.
 
 2. Kod parçacığınızı açın.
 
@@ -169,7 +169,7 @@ Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Ya
 
     ```
 
-9. Projenin özelliklerine bakın. Başvurular sekmesi, System. Windows. Forms. dll ' ye bir başvuru içerir.
+9. Projenin özelliklerine bakın. Başvurular sekmesi System.Windows.Forms.dll bir başvuru içerir.
 
 ### <a name="adding-replacements"></a>Değişiklik ekleme
 
@@ -230,7 +230,7 @@ Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Ya
     </Declarations>
     ```
 
-6. Kod bölümünde, çevreleyen $ işaretleriyle birlikte bulunan değişikliklere başvurabilirsiniz, örneğin `$replacement$`:
+6. Kod bölümünde, çevreleyen $ işaretleriyle birlikte bulunan değişikliklere başvurulacağını, örneğin `$replacement$` :
 
     ```
     <Code Language="VB" Kind="method body">
@@ -248,7 +248,7 @@ Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Ya
 
 8. Bir Visual Basic projesi açın ve kod parçacığını ekleyin.
 
-9. Kod aşağıdaki gibi görünmelidir, burada `SQL connection string` ve `dcConnection` değiştirmeler Açık Turuncu renkle vurgulanır. Bir diğerine gitmek için TAB tuşuna basın.
+9. Kod aşağıdaki gibi görünmelidir, burada değişiklikler `SQL connection string` ve `dcConnection` Açık Turuncu renkle vurgulanır. Bir diğerine gitmek için TAB tuşuna basın.
 
     ```
     Dim daCustomers As SqlDataAdapter
@@ -262,4 +262,4 @@ Yalnızca birkaç adımdan oluşan bir kod parçacığı oluşturabilirsiniz. Ya
     ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Kod Parçacıkları Şema Başvurusu](../ide/code-snippets-schema-reference.md)
+ [Kod parçacıkları şema başvurusu](../ide/code-snippets-schema-reference.md)

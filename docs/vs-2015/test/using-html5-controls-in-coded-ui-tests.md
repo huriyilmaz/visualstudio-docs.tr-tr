@@ -9,10 +9,10 @@ caps.latest.revision: 19
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 029b547102863f4798ad261deb678c4d98596916
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657198"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>Kodlanmış UI Testlerinde HTML5 Denetimleri Kullanma
@@ -20,7 +20,7 @@ ms.locfileid: "72657198"
 
 Kodlanmış UI testleri, Internet Explorer 9 ve Internet Explorer 10 ' da bulunan HTML5 denetimlerinin bazılarına yönelik destek içerir.
 
- **Requirements**
+ **Gereksinimler**
 
 - Visual Studio Enterprise
 
@@ -37,7 +37,7 @@ Kodlanmış UI testleri, Internet Explorer 9 ve Internet Explorer 10 ' da buluna
 
 - [Video denetimi](#video-control)
 
-- [Kaydırıcı](#slider)
+- [Slider](#slider)
 
 - [ProgressBar](#progressbar)
 
@@ -46,14 +46,14 @@ Kodlanmış UI testleri, Internet Explorer 9 ve Internet Explorer 10 ' da buluna
 
  ![HTML5 ses denetimi](../test/media/codedui-html5-audio.png)
 
-|Eylem|Yapılmıyor|Oluşturulan kod|
+|Eylem|Kayıt|Oluşturulan kod|
 |------------|---------------|--------------------|
-|**Ses çal**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|00:00:00 \<name > ses çal|Htmdefdio. Play (TimeSpan)|
-|**Ses içinde belirli bir zamana arama**|@No__t_0name > Ses ara 00:01:48|Htmdefdio. Seek (TimeSpan)|
-|**Sesi Duraklat**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|@No__t_0name > sesini Duraklat: 00:01:53|Htmdefdio. Pause (TimeSpan)|
-|**Sesi sustur**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|Sessiz \<name > Ses|Htmdefdio. Mute ()|
-|**Sesi aç**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|@No__t_0name > sesi aç|Htmdefdio. aç ()|
-|**Ses düzeyini Değiştir**|@No__t_0name > sesini %79 olarak ayarla|Htmdefdio. SetVolume (float)|
+|**Ses çal**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|\<name>00:00:00 'den ses çal|Htmdefdio. Play (TimeSpan)|
+|**Ses içinde belirli bir zamana arama**|\<name>Sesi 00:01:48 'e ara|Htmdefdio. Seek (TimeSpan)|
+|**Sesi Duraklat**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|\<name>Sesi 00:01:53 ' de Duraklat|Htmdefdio. Pause (TimeSpan)|
+|**Sesi sustur**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|Sesi sustur \<name>|Htmdefdio. Mute ()|
+|**Sesi aç**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|\<name>Sesi aç|Htmdefdio. aç ()|
+|**Ses düzeyini Değiştir**|\<name>Ses hacmini %79 olarak ayarla|Htmdefdio. SetVolume (float)|
 
  Aşağıdaki özellikler Htmdefdio için kullanılabilir ve bunların tümüne bir onaylama işlemi ekleyebilirsiniz:
 
@@ -76,26 +76,26 @@ string Src
 string Volume
 ```
 
- **Arama özellikleri:** @No__t_1 için arama özellikleri `Id`, `Name` ve `Title`.
+ **Arama özellikleri:** İçin arama özellikleri `HtmlAudio` `Id` ve ' dir `Name` `Title` .
 
- **Filtre özellikleri:** @No__t_1 için filtre özellikleri `Src`, `Class`, `ControlDefinition` ve `TagInstance`.
+ **Filtre özellikleri:** İçin filtre özellikleri `HtmlAudio` `Src` , ve ' `Class` dir `ControlDefinition` `TagInstance` .
 
 > [!NOTE]
-> Arama ve duraklatma için zaman miktarı önemli olabilir. Kayıttan yürütme sırasında, kodlanmış UI testi sesi duraklatmadan önce `(TimeSpan)` belirtilen zamana kadar bekler. Bazı özel durumlar tarafından, belirtilen süre duraklatma komutuna vurmadan önce geçmişse, bir özel durum oluşturulur.
+> Arama ve duraklatma için zaman miktarı önemli olabilir. Kayıttan yürütme sırasında, kodlanmış UI testi sesi duraklatmadan önce içinde belirtilen zamana kadar bekler `(TimeSpan)` . Bazı özel durumlar tarafından, belirtilen süre duraklatma komutuna vurmadan önce geçmişse, bir özel durum oluşturulur.
 
 ### <a name="video-control"></a>Video denetimi
  **Video denetimi:** HTML5 video denetimindeki eylemler doğru şekilde kaydedilir ve kayıttan yürütülür.
 
  ![HTML5 video denetimi](../test/media/codedui-html5-video.png)
 
-|Eylem|Yapılmıyor|Oluşturulan kod|
+|Eylem|Kayıt|Oluşturulan kod|
 |------------|---------------|--------------------|
-|**Videoyu oynat**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|00:00:00 \<name > Videoyu oynat|HtmlVideo. Play (TimeSpan)|
-|**Videoda belirli bir zamana arama**|00:01:48 \<name > video ara|HtmlVideo. Seek (TimeSpan)|
-|**Videoyu Duraklat**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|00:01:53 \<name > videoyu Duraklat|HtmlVideo. Pause (TimeSpan)|
-|**Videoyu sustur**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|@No__t_0name > videoyu susturma|HtmlVideo. Mute ()|
-|**Videoyu aç**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|@No__t_0name > videoyu aç|HtmlVideo. aç ()|
-|**Video hacmini değiştirme**|@No__t_0name > videonun hacmini %79 olarak ayarlayın||
+|**Videoyu oynat**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|\<name>Videoyu 00:00:00 'den oynat|HtmlVideo. Play (TimeSpan)|
+|**Videoda belirli bir zamana arama**|\<name>Videoyu 00:01:48 ile ara|HtmlVideo. Seek (TimeSpan)|
+|**Videoyu Duraklat**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|\<name>Videoyu 00:01:53 adresinden Duraklat|HtmlVideo. Pause (TimeSpan)|
+|**Videoyu sustur**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|Videoyu sustur \<name>|HtmlVideo. Mute ()|
+|**Videoyu aç**<br /><br /> Doğrudan denetimden veya denetimler bağlam menüsünden.|\<name>Videoyu aç|HtmlVideo. aç ()|
+|**Video hacmini değiştirme**|\<name>Video hacmini %79 olarak ayarlayın||
 
  Htmdefdio 'ın tüm özellikleri HtmlVideo için kullanılabilir. Ayrıca, aşağıdaki üç özellik de kullanılabilir. Onaylama, tümüne eklenebilir.
 
@@ -106,21 +106,21 @@ string VideoWidth
 
 ```
 
- **Arama özellikleri:** @No__t_1 için arama özellikleri `Id`, `Name` ve `Title`.
+ **Arama özellikleri:** İçin arama özellikleri `HtmlVideo` `Id` ve ' dir `Name` `Title` .
 
- **Filtre özellikleri:** @No__t_1 için filtre özellikleri `Src`, `Poster`, `Class`, `ControlDefinition` ve `TagInstance`.
+ **Filtre özellikleri:** İçin filtre özellikleri `HtmlVideo` ,, `Src` ve ' dir `Poster` `Class` `ControlDefinition` `TagInstance` .
 
 > [!NOTE]
 > -30s veya + 30s etiketlerini kullanarak videoyu geri sarın veya ileri sardıysanız, bu, uygun zamana göre arama yapmak için toplanır.
 
-### <a name="slider"></a>Kaydırıcı
+### <a name="slider"></a>Slider
  **Kaydırıcı denetimi:** HTML5 kaydırıcı denetimindeki eylemler doğru şekilde kaydedilir ve kayıttan yürütülür.
 
  ![HTML5 kaydırıcı denetimi](../test/media/codedui-html5-slider.png)
 
-|Eylem|Yapılmıyor|Oluşturulan kod|
+|Eylem|Kayıt|Oluşturulan kod|
 |------------|---------------|--------------------|
-|**Kaydırıcıda bir konum ayarlayın**|@No__t_1name > kaydırıcısının konumunu \<x > olarak ayarlama|HtmlSlider. ValueAsNumber = \<x >|
+|**Kaydırıcıda bir konum ayarlayın**|Konumu kaydırıcı olarak \<x> Ayarla \<name>|HtmlSlider. ValueAsNumber =\<x>|
 
  Aşağıdaki özellikler HtmlSlider için kullanılabilir ve bunların tümüne onay eklenebilir:
 
@@ -134,7 +134,7 @@ string ValueAsNumber
 ```
 
 ### <a name="progressbar"></a>ProgressBar
- **ProgressBar denetimi:** ProgressBar, ınteractable olmayan bir denetimdir. Bu denetimin `Value` ve `Max` özelliklerine onaylama ekleyebilirsiniz.
+ **ProgressBar denetimi:** ProgressBar, ınteractable olmayan bir denetimdir. `Value` `Max` Bu denetimin ve özelliklerine onay ekleyebilirsiniz.
 
  ![HTML5 ProgressBar denetimi](../test/media/codedui-html5-progressbar.png)
 

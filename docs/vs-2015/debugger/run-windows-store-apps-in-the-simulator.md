@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d072f54dfe351d54e3e115dca7a91bec77fbb9e6
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75844925"
 ---
 # <a name="run-windows-store-apps-in-the-simulator"></a>Simülatörde Microsoft Store uygulamaları çalıştırma
@@ -35,12 +35,12 @@ Windows Mağazası uygulamaları için Visual Studio simülatör, bir Windows Ma
 > [!IMPORTANT]
 > Visual Studio 2015 simülatör, coğrafi konum düğmesini içermez. Bunun nedeni, Windows 10 simülatörü coğrafi konum simülasyonu içermez. Bu tür bir benzetim yapmanız gerekiyorsa, Windows 8.1 veya daha önceki işletim sistemlerinde Visual Studio 2013 simülasyonu kullanabilirsiniz.  
   
-## <a name="BKMK_Set_the_simulator_as_the_target"></a>Simülatör 'ı hedef olarak ayarlayın  
+## <a name="set-the-simulator-as-the-target"></a><a name="BKMK_Set_the_simulator_as_the_target"></a> Simülatör 'ı hedef olarak ayarlayın  
  Windows mağazası uygulamanızı simülatör 'da çalıştırmak için hata ayıklayıcı **Standart** araç çubuğunda **hata ayıklamayı Başlat** düğmesinin yanındaki aşağı açılan listeden **simülatör** ' ı seçin.  
   
  ![Simülatör 'da çalıştırma](../debugger/media/vsrun-f5-simulator.png "VSRUN_F5_Simulator")  
   
-## <a name="BKMK_Choose_an_interaction_mode"></a>Etkileşim modu seçin  
+## <a name="choose-an-interaction-mode"></a><a name="BKMK_Choose_an_interaction_mode"></a> Etkileşim modu seçin  
  Aşağıdaki etkileşim modlarını seçebilirsiniz  
   
 - ![Fare modu düğmesi](../debugger/media/simulator-mousemodebtn.png "SIMULATOR_MouseModeBtn") Fare modu: etkileşim modunu fare hareketleri olarak ayarlar. Tıklama, Çift tıklama ve sürüklendiğinde fare hareketleri vardır.  
@@ -79,19 +79,19 @@ Windows Mağazası uygulamaları için Visual Studio simülatör, bir Windows Ma
 
   - Sol düğmeye basın ve fare tekerleğini ileri döndürün (uygulamadan uzağa), nesneyi saat yönünde döndürün.  
 
-## <a name="BKMK_Enable_or_disable_Always_on_top_mode"></a>Always on üstteki modu etkinleştir veya devre dışı bırak  
+## <a name="enable-or-disable-always-on-top-mode"></a><a name="BKMK_Enable_or_disable_Always_on_top_mode"></a> Always on üstteki modu etkinleştir veya devre dışı bırak  
  Simülatör penceresini her zaman diğer pencerelerin üstünde olacak şekilde ayarlayabilirsiniz. **En üstteki pencereyi aç** düğmesi simülatör penceresinin **Always on üstteki** modunu sunar veya devre dışı bırakır.  
   
-## <a name="BKMK_Change_the_device_orientation"></a>Cihaz yönünü değiştirme  
+## <a name="change-the-device-orientation"></a><a name="BKMK_Change_the_device_orientation"></a> Cihaz yönünü değiştirme  
  Simülatör 90 derece bir yöne döndürerek dikey ve yatay arasındaki cihaz yönünü değiştirebilirsiniz.  
   
 > [!NOTE]
-> Simülatör bir projenin [DisplayProperties. oto Rotationpreferences](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayproperties.autorotationpreferences.aspx) özelliğini dikkate almaz. Örneğin, projeniz yönü `Landscape`olarak ayarlarsa ve simülatörü dikey yönlendirmeye döndürdüğünüzde simülatör görüntü görüntüsü de döndürülür ve yeniden boyutlandırılır. Bu ayarları gerçek bir cihazda test edin.  
+> Simülatör bir projenin [DisplayProperties. oto Rotationpreferences](https://msdn.microsoft.com/library/windows/apps/windows.graphics.display.displayproperties.autorotationpreferences.aspx) özelliğini dikkate almaz. Örneğin, projeniz yönü olarak ayarlarsa `Landscape` ve simülatörü dikey yönlendirmeye döndürdüğünüzde simülatör görüntü görüntüsü de döndürülür ve yeniden boyutlandırılır. Bu ayarları gerçek bir cihazda test edin.  
   
 > [!NOTE]
 > Simülatör 'in bir kenarının, üzerinde görüntülenen ekrandan daha büyük olması için simülatörü döndürdüğünüzde, simülatör ekran içine sığacak şekilde otomatik olarak yeniden boyutlandırılır. Yeniden döndürürseniz simülatör özgün boyutuna yeniden boyutlandırılmaz.  
   
-## <a name="BKMK_Change_the_simulated_screen_size_and_resolution"></a>Sanal ekran boyutunu ve çözünürlüğünü değiştirme  
+## <a name="change-the-simulated-screen-size-and-resolution"></a><a name="BKMK_Change_the_simulated_screen_size_and_resolution"></a> Sanal ekran boyutunu ve çözünürlüğünü değiştirme  
  Sanal ekran boyutunu ve çözünürlüğünü değiştirmek için paletteki **çözümü Değiştir** düğmesini seçin ve listeden yeni bir boyut ve çözünürlük seçin.  
   
  Ekran boyutu ve çözümlemesi *, ekran genişliği inç, piksel genişliği X piksel yüksekliği*olarak listelenir. Hem ekran boyutunun hem de çözümlemenin benzetildiğini unutmayın. Simülatörde birlikte bulunan konum, seçilen cihaz boyutunun ve çözünürlüğündeki ortak ordinına çevrilir.  
@@ -99,7 +99,7 @@ Windows Mağazası uygulamaları için Visual Studio simülatör, bir Windows Ma
 > [!NOTE]
 > Uygulamanıza bit eşlem görüntülerinin ölçeklendirilen sürümlerini kaydedebilir ve Windows geçerli ölçek için doğru görüntüyü yükler. Daha fazla bilgi için bkz. [yanıt veren tasarım 101](https://msdn.microsoft.com/library/windows/apps/dn958435.aspx). Ancak, Windows 'un çözünürlüğe uyacak şekilde farklı bir görüntü görebilmesi için simülatör çözünürlüğünü değiştirirseniz, yeni görüntüyü görüntülemek için hata ayıklama oturumunuzu durdurup yeniden başlatmanız gerekir.  
   
-## <a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a>Windows Mağazası 'na göndermek için uygulamanızın ekran görüntüsünü yakalayın  
+## <a name="capture-a-screenshot-of-your-app-for-submission-to-the-windows-store"></a><a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a> Windows Mağazası 'na göndermek için uygulamanızın ekran görüntüsünü yakalayın  
  Windows uygulama mağazası 'na bir uygulama gönderdiğinizde, uygulamanın ekran görüntülerini dahil etmeniz gerekir.  
   
 > [!NOTE]
@@ -111,8 +111,8 @@ Windows Mağazası uygulamaları için Visual Studio simülatör, bir Windows Ma
   
      ![Ekran görüntüsü ayarları bağlam menüsü](../debugger/media/simulator-screenshotsettingscntxmnu.png "SIMULATOR_ScreenShotSettingsCntxMnu")  
   
-## <a name="BKMK_Simulate_network_connection_properties"></a>Ağ bağlantısı özelliklerinin benzetimini yap  
- Ağ bağlantısı maliyetinin veya veri planı durum değişikliklerinin farkında olmadan ve uygulamanızın bu bilgileri kullanarak dolaşım veya bir yandan bu bilgileri aşmasını önlemek için bu bilgileri kullanmasını sağlayarak uygulamanızın kullanıcılarına tarifeli ağ bağlantısı maliyetini yönetmesine yardımcı olabilirsiniz. Belirtilen veri aktarımı sınırı. [Windows. Networking. Connectivity](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.aspx) API 'leri, oturum açmak Için [NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) ve [TriggerType](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.triggertype.aspx) olaylarına yanıt vermenizi sağlar. Bkz. [hızlı başlangıç: tarifeli ağ maliyeti kısıtlamalarını yönetme](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx).  
+## <a name="simulate-network-connection-properties"></a><a name="BKMK_Simulate_network_connection_properties"></a> Ağ bağlantısı özelliklerinin benzetimini yap  
+ Ağ bağlantısı maliyetinin veya veri planı durum değişikliklerinin farkında tutarak ve uygulamanızın bu bilgileri kullanarak dolaşım veya belirtilen bir veri aktarım limitini aşmaktan kaçınmak için bu bilgileri kullanmasını sağlayarak uygulamanızın kullanıcılarına tarifeli ağ bağlantısı maliyetini yönetmesine yardımcı olabilirsiniz. [Windows. Networking. Connectivity](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.aspx) API 'leri, oturum açmak Için [NetworkStatusChanged](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.networkstatuschanged.aspx) ve [TriggerType](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.systemtrigger.triggertype.aspx) olaylarına yanıt vermenizi sağlar. Bkz. [hızlı başlangıç: tarifeli ağ maliyeti kısıtlamalarını yönetme](https://msdn.microsoft.com/library/windows/apps/Hh750310.aspx).  
   
  Ağ maliyetinizi algılayan kodunuzun hatalarını ayıklamak veya test etmek için simülatör, [GetInternetConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.networkinformation.getinternetconnectionprofile.aspx)tarafından döndürülen [ConnectionProfile](https://msdn.microsoft.com/library/windows/apps/windows.networking.connectivity.connectionprofile.aspx) nesnesi aracılığıyla kullanıma sunulan bir ağın özelliklerini taklit edebilir.  
   
@@ -148,7 +148,7 @@ Windows Mağazası uygulamaları için Visual Studio simülatör, bir Windows Ma
   
    [Windows Mağazası uygulamalarında askıya alma, sürdürülme ve arka plan olaylarını tetikleme](https://msdn.microsoft.com/library/windows/apps/hh974425.aspx)  
   
-## <a name="BKMK_Navigate_the_simulator_with_the_keyboard"></a>Klavyeye Benzetici ile gezinme  
+## <a name="navigate-the-simulator-with-the-keyboard"></a><a name="BKMK_Navigate_the_simulator_with_the_keyboard"></a> Klavyeye Benzetici ile gezinme  
  Simülatör penceresi simülatör araç çubuğuna odaklanmak için **Ctrl + Alt + Yukarı ok** tuşlarına basarak simülatör araç çubuğuna gidebilirsiniz. Araç çubuğu düğmeleri arasında gezinmek için **yukarı oku** ve **aşağı oku** kullanın.  
   
  **Ctrl + Alt + F4**tuşlarına basarak simülatörü kapatabilirsiniz.  

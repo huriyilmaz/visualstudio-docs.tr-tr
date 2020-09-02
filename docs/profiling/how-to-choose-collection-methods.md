@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 4dbc54fc394f75778f74d9b6b02e93882129cdb9
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329274"
 ---
 # <a name="how-to-choose-collection-methods"></a>Nasıl yapılır: koleksiyon yöntemleri seçme
@@ -31,7 +31,7 @@ Uygulamanız için en uygun koleksiyon yöntemini belirtmek üzere performans ot
 
 - Sihirbazın ilk sayfasında, aşağıdaki seçeneklerden birini seçin:
 
-| Seçenek | Description |
+| Seçenek | Açıklama |
 |----------------------------| - |
 | **CPU örnekleme** | İlk analizler ve CPU kullanımı sorunlarını analiz etmek için yararlı olan uygulama istatistiklerini toplar. |
 | **Yapısı** | Odaklanmış analizler ve giriş/çıkış performans sorunlarını analiz etmek için yararlı olan ayrıntılı zamanlama verilerini toplar. |

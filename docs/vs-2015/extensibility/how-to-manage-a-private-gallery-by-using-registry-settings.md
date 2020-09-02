@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Kayıt defteri ayarlarını kullanarak özel bir galeriyi yönetme | Microsoft Docs'
+title: 'Nasıl yapılır: kayıt defteri ayarlarını kullanarak özel galeri yönetme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,19 +12,19 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a55b7aa486edfd3775b12dca9d143c2e5f280884
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204154"
 ---
-# <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>Nasıl yapılır: Bir Özel Galeriyi Kayıt Defteri Ayarlarını Kullanarak Yönetme
+# <a name="how-to-manage-a-private-gallery-by-using-registry-settings"></a>Nasıl Yapılır: Bir Özel Galeriyi Kayıt Defteri Ayarlarını Kullanarak Yönetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir yönetici veya Geliştirici yalıtılmış kabuk uzantısı, denetimleri, şablonlar ve araçlar Visual Studio Galerisi, Örnekler Galerisi veya özel galeriler erişimi denetleyebilirsiniz. Bir galeri kullanılabilir veya kullanılamaz hale getirmek için değiştirilmiş kayıt defteri anahtarları ve değerlerini açıklayan .pkgdef dosyası oluşturun.  
+Bir Yöneticiyseniz veya yalıtılmış bir kabuk uzantısının geliştiricisiyseniz, Visual Studio galerisinde, örnekler galerisinde veya özel galerilerinde denetimlere, şablonlara ve araçlara erişimi kontrol edebilirsiniz. Bir galeriyi kullanılabilir hale getirmek veya devre dışı bırakmak için, değiştirilmiş kayıt defteri anahtarlarını ve bunların değerlerini açıklayan bir. pkgdef dosyası oluşturun.  
   
-## <a name="managing-private-galleries"></a>Özel galeriler yönetme  
- Galeriler birden çok bilgisayara erişimi denetlemek için .pkgdef dosyası oluşturabilirsiniz. Bu dosya aşağıdaki biçime sahip olmalıdır.  
+## <a name="managing-private-galleries"></a>Özel galerileri yönetme  
+ Birden çok bilgisayardaki galerilere erişimi denetlemek için. pkgdef dosyası oluşturabilirsiniz. Bu dosya aşağıdaki biçimde olmalıdır.  
   
 ```  
 [$RootPath$\ExtensionManager\Repositories\{UniqueGUID}]  
@@ -38,22 +38,22 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
   
 ```  
   
- `Repositories` Anahtar etkin veya devre dışı bırakılacak Galerisine başvuruyor. Visual Studio Galerisi'ne ve Örnekler Galerisi GUID'lerini aşağıdaki depoyu kullanın:  
+ `Repositories`Anahtar etkinleştirilecek veya devre dışı bırakılacak galeriye başvurur. Visual Studio Galerisi ve Örnekler Galerisi aşağıdaki depo GUID 'Lerini kullanır:  
   
 - Visual Studio Galerisi: 0F45E408-7995-4375-9485-86B8DB553DC9  
   
 - Örnekler Galerisi: AEB9CB40-D8E6-4615-B52C-27E307F8506C  
   
-  `Disabled` Değeri, isteğe bağlıdır. Varsayılan olarak, bir galeri etkinleştirilir.  
+  `Disabled`Değer isteğe bağlıdır. Varsayılan olarak, bir galeri etkindir.  
   
-  `Priority` Değeri galeriler Seçenekler iletişim kutusunda listelenen sırasını belirler. Visual Studio Galerisi 10 öncelikli ve öncelik 20 Örnekler Galerisi sahiptir. Özel galeriler 100 öncelikli olarak başlatın. Birkaç galeriler aynı öncelik değeri varsa, bunların yerelleştirilmiş değerini göründükleri sırayla belirlenir `DisplayName` öznitelikleri.  
+  `Priority`Değer, galerinin Seçenekler iletişim kutusunda listelenme sırasını belirler. Visual Studio Galerisinde öncelik 10 ve örnekler galerinin önceliği 20 ' dir. Özel galeriler 100 önceliğiyle başlar. Birkaç galerinin aynı öncelik değeri varsa, bunların görünme sırası yerelleştirilmiş özniteliklerinin değerleriyle belirlenir `DisplayName` .  
   
-  `Protocol` Atom veya SharePoint tabanlı galerileri değeri gereklidir.  
+  `Protocol`Atom tabanlı veya SharePoint tabanlı Galeriler için bu değer gereklidir.  
   
-  Ya da `DisplayName`, veya her ikisini de `DisplayNameResourceID` ve `DisplayNamePackageGuid`, belirtilmesi gerekir. Tüm belirtilirse, ardından `DisplayNameResourceID` ve `DisplayNamePackageGuid` çifti kullanılır.  
+  Ya da `DisplayName` her ikisi `DisplayNameResourceID` de `DisplayNamePackageGuid` belirtilmelidir. Tümü belirtilmişse, `DisplayNameResourceID` ve `DisplayNamePackageGuid` çifti kullanılır.  
   
-## <a name="disabling-the-visual-studio-gallery-using-a-pkgdef-file"></a>Visual Studio Galerisi .pkgdef dosyası kullanarak devre dışı bırakma  
- .Pkgdef dosyası bir galeride devre dışı bırakabilirsiniz. Şu giriş, Visual Studio Galerisi devre dışı bırakır:  
+## <a name="disabling-the-visual-studio-gallery-using-a-pkgdef-file"></a>Bir. pkgdef dosyası kullanarak Visual Studio galerisini devre dışı bırakma  
+ Bir. pkgdef dosyasındaki bir galeriyi devre dışı bırakabilirsiniz. Aşağıdaki giriş, Visual Studio galerisini devre dışı bırakır:  
   
 ```  
 [$RootPath$\ExtensionManager\Repositories\{0F45E408-7995-4375-9485-86B8DB553DC9}]  
@@ -61,7 +61,7 @@ DisplayNamePackageGuid={GUID} (REG_SZ)
   
 ```  
   
- Şu girişi Örnekler Galerisi devre dışı bırakır:  
+ Aşağıdaki girdi, örnekler galerisini devre dışı bırakır:  
   
 ```  
 [$RootPath$\ExtensionManager\Repositories\{AEB9CB40-D8E6-4615-B52C-27E307F8506C}]  

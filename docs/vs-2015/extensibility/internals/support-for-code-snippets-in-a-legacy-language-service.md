@@ -1,5 +1,5 @@
 ---
-title: Eski dil hizmetinde kod parçacıkları için destek | Microsoft Docs
+title: Eski dil hizmetindeki kod parçacıkları için destek | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,54 +13,54 @@ caps.latest.revision: 29
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 33218dd8fe7cee4a6700dcb289719ffae932bbe0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65691783"
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Kod Parçacıkları için Destek
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kod parçacığı bir kaynak dosyasına eklenen kod parçasıdır. Kod parçacığının kendisi bir XML tabanlı bir alan kümesi ile şablonudur. Kod parçacığı eklenir ve, kod parçacığının eklenmiş olduğu bağlama bağlı olarak farklı değerlere sahip olabilir, bu alanlar vurgulanır. Hemen kod parçacığı eklendikten sonra kod parçacığı dil hizmeti biçimlendirebilirsiniz.  
+Kod parçacığı, kaynak dosyaya eklenen bir kod parçasıdır. Kod parçacığı, bir alan kümesi içeren XML tabanlı bir şablondur. Bu alanlar, kod parçacığı eklendikten sonra vurgulanır ve kod parçacığının eklendiği içeriğe bağlı olarak farklı değerlere sahip olabilir. Kod parçacığı eklendikten hemen sonra dil hizmeti kod parçacığını biçimlendirebilir.  
   
- Kod parçacığı, SEKME tuşunu kullanarak geçtiğiniz için kod parçacığı alanlarını izin veren bir özel düzenleme modunda eklenir. IntelliSense stili açılan menüler alanlarını destekler. Kullanıcı ENTER veya ESC tuşuna yazarak, kaynak dosyaya kod parçacığını kaydeder. Kod parçacıkları hakkında daha fazla bilgi için bkz. [kod parçacıkları](../../ide/code-snippets.md).  
+ Kod parçacığı, kod parçacığının alanlarının TAB tuşu kullanılarak gezinilebilir olmasını sağlayan özel bir düzenleme moduna eklenir. Alanlar, IntelliSense stili açılan menüleri destekleyebilir. Kullanıcı, kod parçacığını, ENTER veya ESC tuşunu yazarak kaynak dosyasına kaydeder. Kod parçacıkları hakkında daha fazla bilgi edinmek için lütfen bkz. [kod parçacıkları](../../ide/code-snippets.md).  
   
- Eski dil Hizmetleri bir VSPackage'ı bir parçası olarak uygulanır, ancak dil hizmeti özellikleri uygulamak için daha yeni MEF uzantıları kullanmaktır. Daha fazla bilgi için bkz: [izlenecek yol: Kod parçacıkları uygulama](../../extensibility/walkthrough-implementing-code-snippets.md).  
+ Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Daha fazla bilgi edinmek için bkz. [Izlenecek yol: kod parçacıkları uygulama](../../extensibility/walkthrough-implementing-code-snippets.md).  
   
 > [!NOTE]
-> Yeni bir düzenleyici API hemen kullanmaya başlamak öneririz. Bu dil hizmetinizin performansını ve yeni düzenleyici özellikleri yararlanmanıza olanak tanır.  
+> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.  
   
-## <a name="managed-package-framework-support-for-code-snippets"></a>Yönetilen kod parçacıkları için paket Framework desteği  
- Kod parçacığını eklemek için şablonu okuma gelen çoğu kod parçacığı işlevleri (MPF) yönetilen paket çerçevesini destekler ve özel etkinleştirme düzenleme modunda. Destek aracılığıyla yönetilir <xref:Microsoft.VisualStudio.Package.ExpansionProvider> sınıfı.  
+## <a name="managed-package-framework-support-for-code-snippets"></a>Kod parçacıkları için yönetilen paket çerçevesi desteği  
+ Yönetilen paket çerçevesi (MPF), kod parçacığını eklemek ve özel düzenleme modunu etkinleştirmek için şablonu okumaktan birçok kod parçacığı işlevini destekler. Destek, sınıfı aracılığıyla yönetilir <xref:Microsoft.VisualStudio.Package.ExpansionProvider> .  
   
- Zaman <xref:Microsoft.VisualStudio.Package.Source> sınıf örneği, <xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionProvider%2A> yönteminde <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfı almak için çağırılır bir <xref:Microsoft.VisualStudio.Package.ExpansionProvider> nesne (unutmayın temel <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfı her zaman döndüren yeni bir <xref:Microsoft.VisualStudio.Package.ExpansionProvider> her nesne <xref:Microsoft.VisualStudio.Package.Source> Nesne).  
+ <xref:Microsoft.VisualStudio.Package.Source>Sınıf örneği oluşturulduğunda, <xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionProvider%2A> <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfındaki yöntemi bir nesnesi elde etmek için çağrılır <xref:Microsoft.VisualStudio.Package.ExpansionProvider> (temel <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfın her bir nesne için her zaman yeni bir nesne döndürdüğünü unutmayın <xref:Microsoft.VisualStudio.Package.ExpansionProvider> <xref:Microsoft.VisualStudio.Package.Source> ).  
   
- MPF genişletme işlevleri desteklemiyor. Bir genişletme işlevi bir kod parçacığı şablonunda katıştırılır ve bir alanın yerleştirileceği bir veya daha fazla değer döndüren bir adlandırılmış bir işlevdir. Dil tarafından döndürülen değerlerin hizmetinin kendisi aracılığıyla bir <xref:Microsoft.VisualStudio.Package.ExpansionFunction> nesne. <xref:Microsoft.VisualStudio.Package.ExpansionFunction> Nesne genişletme işlevleri desteklemek için dil hizmeti tarafından uygulanan gerekir.  
+ MPF genişletme işlevlerini desteklemez. Genişletme işlevi, bir kod parçacığı şablonuna gömülü ve bir alana yerleştirilecek bir veya daha fazla değer döndüren adlandırılmış bir işlevdir. Değerler bir nesne aracılığıyla dil hizmetinin kendisi tarafından döndürülür <xref:Microsoft.VisualStudio.Package.ExpansionFunction> . <xref:Microsoft.VisualStudio.Package.ExpansionFunction>Genişleme işlevlerini desteklemek için nesnenin dil hizmeti tarafından uygulanması gerekir.  
   
-## <a name="providing-support-for-code-snippets"></a>Kod parçacıkları için desteği sağlama  
- Kod parçacıkları desteğini etkinleştirmek için sağlayın veya kod parçacıkları yükleyin ve bu kod parçacığı eklemek kullanıcı araçlarını sağlamanız gerekir. Kod parçacıkları desteğini etkinleştirmek için üç adım vardır:  
+## <a name="providing-support-for-code-snippets"></a>Kod parçacıkları için destek sağlama  
+ Kod parçacıkları desteğini etkinleştirmek için, parçacıkları sağlamanız veya kurmanız gerekir ve kullanıcının bu kod parçacıklarını eklemesi için gereken araçları sağlamanız gerekir. Kod parçacıkları desteğini etkinleştirmenin üç adımı vardır:  
   
-1. Kod parçacığı dosyalar yükleniyor.  
+1. Kod parçacığı dosyaları yükleniyor.  
   
-2. Dil hizmeti için kod parçacıkları etkinleştiriliyor.  
+2. Dil hizmetiniz için kod parçacıkları etkinleştiriliyor.  
   
-3. Çağırma <xref:Microsoft.VisualStudio.Package.ExpansionProvider> nesne.  
+3. Nesnesi çağrılıyor <xref:Microsoft.VisualStudio.Package.ExpansionProvider> .  
   
-### <a name="installing-the-snippet-files"></a>Kod parçacığı dosyaları yükleme  
- Tüm parçaları bir dil için varsayılan olarak, genellikle bir parçacık şablonu dosya başına XML dosyaları, şablon olarak depolanır. Kod parçacığı şablonları için kullanılan XML şeması hakkında daha fazla bilgi için bkz: [kod parçacıkları şema başvurusu](../../ide/code-snippets-schema-reference.md). Her parçacık şablonu dil kimliği ile tanımlanır. Bu dil kimliği kayıt defterinde belirtilen ve içine yerleştirin `Language` özniteliği \<kod > şablondaki etiketi.  
+### <a name="installing-the-snippet-files"></a>Kod parçacığı dosyalarını yükleme  
+ Bir dilin tüm kod parçacıkları, genellikle her dosya için bir kod parçacığı şablonu olan XML dosyalarında şablon olarak depolanır. Kod parçacığı şablonları için kullanılan XML şeması hakkında daha fazla bilgi için bkz. [kod parçacıkları şema başvurusu](../../ide/code-snippets-schema-reference.md). Her kod parçacığı şablonu bir dil KIMLIĞIYLE tanımlanır. Bu dil KIMLIĞI kayıt defterinde belirtilir ve `Language` \<Code> şablondaki etiketin özniteliğine konur.  
   
- Genellikle parçacık şablonu dosyalarının depolandığı iki konum vardır: (1) dilinizi yüklendiği ve 2) kullanıcının klasöründeki. Bu konumlar kayıt defterine bu nedenle, eklenen Visual Studio **kod parçacıkları Yöneticisi** parçacıkları bulabilirsiniz. Kullanıcının kullanıcı tarafından oluşturulan kod parçacıkları depolandığı bir klasördür.  
+ Genellikle kod parçacığı şablonu dosyalarının depolandığı iki konum vardır: 1) ve Kullanıcı klasöründe dilinizin yüklendiği 2). Bu konumlar kayıt defterine eklenerek, Visual Studio **kod parçacıkları yöneticisinin** kod parçacıklarını bulabilmesini sağlar. Kullanıcının klasörü, Kullanıcı tarafından oluşturulan kod parçacıklarının depolandığı yerdir.  
   
- Yüklü bir kod parçacığı şablon dosyaları için tipik klasör düzeni şöyle görünür: *[InstallRoot]*\\ *[TestLanguage]* \Snippets\\ *[LCID]* \Snippets.  
+ Yüklenen kod parçacığı şablon dosyaları için tipik klasör düzeni şuna benzer: *[InstallRoot]* \\ *[TestLanguage]* \parçacıklar \\ *[LCID]* \Snippets.  
   
- *[InstallRoot]*  dilinizi yüklenmiş olduğu klasördür.  
+ *[InstallRoot]* , dilinizin yüklendiği klasördür.  
   
- *[TestLanguage]*  diliniz bir klasör adı olarak adıdır.  
+ *[TestLanguage]* , dilinizin bir klasör adı olarak adıdır.  
   
- *[LCID]*  yerel ayar kimliğidir. Bu, kod parçacıkları nasıl yerelleştirilmiş sürümlerini, depolanır. Örneğin, İngilizce yerel ayar Kimliğini 1033, bu nedenle ' *[LCID]* 1033 tarafından değiştirilir.  
+ *[LCID]* , yerel ayar kimliğidir. Bu, kod parçacılarınızın yerelleştirilmiş sürümlerinin depolandığı bir şekilde yapılır. Örneğin, Ingilizce 'nin yerel ayar KIMLIĞI 1033, bu nedenle *[LCID]* 1033 ile değiştirilmiştir.  
   
- Bir ek dosyası sağlanmalıdır ve genellikle SnippetsIndex.xml veya ExpansionsIndex.xml (.xml biten geçerli bir dosya kullanabilirsiniz) adlı bir dizin dosyası. Bu dosya genellikle depolanan *[InstallRoot]*\\ *[TestLanguage]* klasör kod parçacıklarının klasör yanı sıra dil kimliği tam konumu ve dil GUID belirtir kod kullanan hizmet. Dizin dosyasının tam yolu, daha sonra "yükleme kayıt defteri girdileri içinde" açıklandığı gibi kayıt defterine konur. SnippetsIndex.xml dosyası örneği aşağıdadır:  
+ Bir ek dosyanın sağlanması ve genellikle SnippetsIndex.xml veya ExpansionsIndex.xml olarak adlandırılan bir dizin dosyası olması gerekir (. xml dosyasında biten geçerli bir dosya adını kullanabilirsiniz). Bu dosya genellikle *[InstallRoot]* \\ *[TestLanguage]* klasöründe depolanır ve kod parçacıkları klasörünün tam konumunu ve kod parçacıklarını kullanan dil hizmetinin GUID kimliğini ve GUID 'sini belirtir. Dizin dosyasının tam yolu, daha sonra "kayıt defteri girdilerini yükleme" bölümünde açıklandığı gibi kayıt defterine konur. Bir SnippetsIndex.xml dosyasına bir örnek aşağıda verilmiştir:  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -77,26 +77,26 @@ Kod parçacığı bir kaynak dosyasına eklenen kod parçasıdır. Kod parçacı
 </SnippetCollection>  
 ```  
   
- \<Dil > etiketi, dil kimliği belirtir ( `Lang` özniteliği) ve dil hizmeti GUID.  
+ \<Language>Etiket, DIL kimliğini ( `Lang` özniteliği) ve DIL hizmeti GUID 'sini belirtir.  
   
- Bu örnekte, Visual Studio yükleme klasöründe, dil hizmetinin yüklü olduğu varsayılır. Kullanıcının geçerli yerel ayar kimliği ile değiştirildiği LCID % Birden çok \<SnippetDir > etiketleri eklenebilir, her farklı bir dizin ve yerel ayar için bir tane. Ayrıca, bir kod parçacığı klasörüne alt klasörlerdeki her biri ile dizin dosyasında tanımlanır içerebilir \<SnippetSubDir > etiketi katıştırılmış bir \<SnippetDir > etiketi.  
+ Bu örnek, dil hizmetinizi Visual Studio yükleme klasörüne yüklediğinizi varsayar. % LCıD%, kullanıcının geçerli yerel ayar KIMLIĞIYLE değiştirilmiştir. \<SnippetDir>Her farklı dizin ve yerel ayar için bir tane olmak üzere birden çok etiket eklenebilir. Buna ek olarak, bir kod parçacığı klasörü, her biri dizin dosyasında bir etikete gömülü olan etiketi ile tanımlanan alt klasörleri içerebilir \<SnippetSubDir> \<SnippetDir> .  
   
- Kullanıcılar kendi diliniz için de oluşturabilirsiniz. Bu genellikle kullanıcının ayarlarını, örneğin klasöründeki *[TestDocs]* \Code parçacıkları\\ *[TestLanguage]* \Test kod parçacıkları, burada *[TestDocs]* Visual Studio kullanıcı ayarları klasörün konumu.  
+ Kullanıcılar, diliniz için kendi kod parçacıklarını da oluşturabilir. Bunlar genellikle kullanıcının ayarlar klasöründe depolanır (örneğin, [ *TestDocs]* \Code parçacıklarında \\ *[TestLanguage]* \test kodu parçacıkları; burada *[TestDocs]* , Visual Studio 'nun Kullanıcı ayarları klasörünün konumudur.  
   
- Aşağıdaki değişim öğeleri depolanmış bir yolda yerleştirilebilir \<DirPath > etiketinde dizin dosyası.  
+ Aşağıdaki değiştirme öğeleri, \<DirPath> Dizin dosyasındaki etiketinde saklanan yola yerleştirilebilir.  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|%LCID%|Yerel ayar kimliği.|  
-|InstallRoot %|Visual Studio, örneğin, C:\Program Files\Microsoft Visual Studio 8 yükleme klasörünü kök.|  
-|%ProjDir%|Geçerli projeyi içeren klasörü.|  
-|ProjItem %|Geçerli proje öğesi içeren klasör.|  
-|%TestDocs%|Klasöründe kullanıcının ayarlarını, örneğin, C:\Documents ve ayarları\\ *[username]* \My Documents\Visual Studio\8.|  
+|IC|Yerel ayar KIMLIĞI.|  
+|InstallRoot|Visual Studio için kök yükleme klasörü, örneğin, C:\Program Files\Microsoft Visual Studio 8.|  
+|% ProjDir%|Geçerli projeyi içeren klasör.|  
+|% ProjItem%|Geçerli Proje öğesini içeren klasör.|  
+|% TestDocs%|Kullanıcının ayarlar klasöründeki klasör; Örneğin, C:\Documents and Settings \\ *[UserName]* \Bir studio\8.|  
   
-### <a name="enabling-code-snippets-for-your-language-service"></a>Kod parçacıkları, dil hizmeti için etkinleştirme  
- Ekleyerek dil hizmetiniz için kod parçacıkları etkinleştirebilirsiniz <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> özniteliği, Vspackage'e (bkz [eski dil hizmetinde kaydetme](../../extensibility/internals/registering-a-legacy-language-service1.md) Ayrıntılar için). <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.ShowRoots%2A> Ve <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.SearchPaths%2A> parametreler isteğe bağlıdır, ancak içermesi gerekir `SearchPaths` haber vermek için parametre adlı **kod parçacıkları Yöneticisi** , kod parçacıkları konumunu.  
+### <a name="enabling-code-snippets-for-your-language-service"></a>Dil hizmetiniz için kod parçacıklarını etkinleştirme  
+ Özelliği VSPackage 'a ekleyerek dil hizmetiniz için kod parçacıklarını etkinleştirebilirsiniz <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute> (Ayrıntılar Için [eski dil hizmeti kaydetme](../../extensibility/internals/registering-a-legacy-language-service1.md) konusuna bakın). <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.ShowRoots%2A>Ve <xref:Microsoft.VisualStudio.Shell.ProvideLanguageCodeExpansionAttribute.SearchPaths%2A> parametreleri isteğe bağlıdır, ancak `SearchPaths` **kod parçacıkları yöneticisini kod parçacığı yöneticisine** bilgilendirmek için adlandırılmış parametreyi dahil etmelisiniz.  
   
- Bu öznitelik kullanmaya ilişkin bir örnek verilmiştir:  
+ Bu özniteliğin nasıl kullanılacağına ilişkin bir örnek aşağıda verilmiştir:  
   
 ```  
 [ProvideLanguageCodeExpansion(  
@@ -108,18 +108,18 @@ Kod parçacığı bir kaynak dosyasına eklenen kod parçasıdır. Kod parçacı
          SearchPaths = @"%InstallRoot%\Test Snippet Language\Snippets\%LCID%\")]    // Path to snippets  
 ```  
   
-### <a name="calling-the-expansion-provider"></a>Genişletme sağlayıcıya çağrı  
- Dil hizmeti ekleme çağrılan yöntem yanı sıra, herhangi bir kod parçacığı eklenmesini denetler.  
+### <a name="calling-the-expansion-provider"></a>Genişletme sağlayıcısını çağırma  
+ Dil hizmeti, herhangi bir kod parçacığının eklenmesini ve eklemenin çağrılma şeklini denetler.  
   
-## <a name="calling-the-expansion-provider-for-code-snippets"></a>Genişletme sağlayıcısını çağırmak için kod parçacıkları  
- Genişletme sağlayıcısını çağırmak için iki yolu vardır: bir menü komutunu kullanarak veya bir tamamlama listesinden bir kısayolunu kullanarak.  
+## <a name="calling-the-expansion-provider-for-code-snippets"></a>Kod parçacıkları için genişletme sağlayıcısını çağırma  
+ Genişletme sağlayıcısını çağırmak için iki yol vardır: bir menü komutu veya bir tamamlama listesinden kısayol kullanarak.  
   
-### <a name="inserting-a-code-snippet-by-using-a-menu-command"></a>Bir menü komutu kullanılarak bir kod parçacığı ekleme  
- Kod parçacığı tarayıcıda görüntülemek için bir menü komutu kullanmak için bir menü komutu eklemek ve sonra çağrı <xref:Microsoft.VisualStudio.Package.ExpansionProvider.DisplayExpansionBrowser%2A> yönteminde <xref:Microsoft.VisualStudio.Package.ExpansionProvider> arabirimi yanıt olarak bu menü komutu.  
+### <a name="inserting-a-code-snippet-by-using-a-menu-command"></a>Bir menü komutu kullanarak kod parçacığı ekleme  
+ Kod parçacığı tarayıcısını göstermek üzere bir menü komutu kullanmak için, bir menü komutu ekler ve sonra <xref:Microsoft.VisualStudio.Package.ExpansionProvider.DisplayExpansionBrowser%2A> <xref:Microsoft.VisualStudio.Package.ExpansionProvider> Bu menü komutuna yanıt olarak arabirimindeki yöntemi çağırın.  
   
-1. Bir komut ve bir düğmeyi .vsct dosyanıza ekleyin. Bu nedenle de yapmak için yönergeler bulabilirsiniz [izlenecek yol: Visual Studio Paket şablonu kullanarak bir menü komutu oluşturmak](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de).  
+1. . Vsct dosyanıza bir komut ve düğme ekleyin. Izlenecek yönergeleri şu şekilde bulabilirsiniz [: Visual Studio paket şablonunu kullanarak bir menü komutu oluşturma](https://msdn.microsoft.com/library/1985fa7d-aad4-4866-b356-a125b6a246de).  
   
-2. Öğesinden bir sınıf türetin <xref:Microsoft.VisualStudio.Package.ViewFilter> sınıf ve geçersiz kılma <xref:Microsoft.VisualStudio.Package.ViewFilter.QueryCommandStatus%2A> desteği için yeni menü komutu belirtmek için yöntemi. Bu örnekte, her zaman menü komutunu sağlar.  
+2. Sınıfından bir sınıf türetirsiniz <xref:Microsoft.VisualStudio.Package.ViewFilter> ve <xref:Microsoft.VisualStudio.Package.ViewFilter.QueryCommandStatus%2A> yeni menü komutu için desteği göstermek üzere yöntemi geçersiz kılar. Bu örnek, her zaman menü komutunu sunar.  
   
     ```csharp  
     using Microsoft.VisualStudio.Package;  
@@ -155,7 +155,7 @@ Kod parçacığı bir kaynak dosyasına eklenen kod parçasıdır. Kod parçacı
     }  
     ```  
   
-3. Geçersiz kılma <xref:Microsoft.VisualStudio.Package.ViewFilter.HandlePreExec%2A> yönteminde <xref:Microsoft.VisualStudio.Package.ViewFilter> almak için sınıf <xref:Microsoft.VisualStudio.Package.ExpansionProvider> nesne ve çağrı <xref:Microsoft.VisualStudio.Package.ExpansionProvider.DisplayExpansionBrowser%2A> o nesne üzerindeki yöntemi.  
+3. <xref:Microsoft.VisualStudio.Package.ViewFilter.HandlePreExec%2A> <xref:Microsoft.VisualStudio.Package.ViewFilter> Nesneyi almak için sınıfındaki yöntemini geçersiz kılın <xref:Microsoft.VisualStudio.Package.ExpansionProvider> ve <xref:Microsoft.VisualStudio.Package.ExpansionProvider.DisplayExpansionBrowser%2A> yöntemi bu nesnede çağırın.  
   
     ```csharp  
     using Microsoft.VisualStudio.Package;  
@@ -205,7 +205,7 @@ Kod parçacığı bir kaynak dosyasına eklenen kod parçasıdır. Kod parçacı
   
     ```  
   
-     Aşağıdaki yöntemleri <xref:Microsoft.VisualStudio.Package.ExpansionProvider> sınıfı çağrılır Visual Studio tarafından verilen sırasına göre kod parçacığı ekleme işlemi sırasında:  
+     Sınıfında aşağıdaki yöntemler <xref:Microsoft.VisualStudio.Package.ExpansionProvider> Visual Studio tarafından kod parçacığını ekleme işlemi sırasında verilen sırada çağırılır:  
   
 4. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnItemChosen%2A>  
   
@@ -217,16 +217,16 @@ Kod parçacığı bir kaynak dosyasına eklenen kod parçasıdır. Kod parçacı
   
 8. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnAfterInsertion%2A>  
   
-     Sonra <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnAfterInsertion%2A> yöntemi çağrıldığında, kod parçacığının eklenmiş ve <xref:Microsoft.VisualStudio.Package.ExpansionProvider> nesnedir yalnızca eklenmiş bir kod parçacığını değiştirmek için kullanılan bir özel düzenleme modunda.  
+     <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnAfterInsertion%2A>Yöntemi çağrıldıktan sonra, kod parçacığı eklenmiştir ve <xref:Microsoft.VisualStudio.Package.ExpansionProvider> nesne, yeni eklenen bir kod parçacığını değiştirmek için kullanılan özel bir düzenleme modundadır.  
   
-### <a name="inserting-a-code-snippet-by-using-a-shortcut"></a>Bir kısayol kullanarak bir kod parçacığı ekleme  
- Tamamlama listesinden bir kısayol menü komutunu uygulama daha çok daha karmaşık uygulamasıdır. Kod parçacığı kısayollarında önce IntelliSense Sözcük tamamlama listesine eklemeniz gerekir. Ardından kod parçacığı kısayol adı tamamlama sonucunda eklendiğinde algılamalıdır. Son olarak, kod parçacığı başlık ve kısayol adı kullanarak yolu almalı ve bu bilgileri geçirmek <xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A> metodunda <xref:Microsoft.VisualStudio.Package.ExpansionProvider> yöntemi.  
+### <a name="inserting-a-code-snippet-by-using-a-shortcut"></a>Bir kısayol kullanarak kod parçacığı ekleme  
+ Bir tamamlama listesinden kısayol uygulaması, bir menü komutu uygulamaktan çok daha karmaşıktır. Önce IntelliSense sözcük tamamlama listesine kod parçacığı kısayolları eklemeniz gerekir. Daha sonra, bir kod parçacığı kısayol adının tamamlanma sonucu olarak ne zaman eklendiğini tespit etmeniz gerekir. Son olarak, kısayol adını kullanarak kod parçacığı başlığını ve yolunu edinmeniz ve bu bilgileri yöntemdeki yönteme iletmeniz gerekir <xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A> <xref:Microsoft.VisualStudio.Package.ExpansionProvider> .  
   
- Kod parçacığı kısayollarında Sözcük tamamlama listesine eklemek için bunlara ekleyin <xref:Microsoft.VisualStudio.Package.Declarations> nesnesine, <xref:Microsoft.VisualStudio.Package.AuthoringScope> sınıfı. Bir kod parçacığı ad kısaca tanımlayabilirsiniz emin olmanız gerekir. Bir örnek için bkz [izlenecek yol: Kod parçacıkları (eski uygulama) yüklü bir listesini alma](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md).  
+ Sözcük tamamlama listesine kod parçacığı kısayolları eklemek için bunları <xref:Microsoft.VisualStudio.Package.Declarations> <xref:Microsoft.VisualStudio.Package.AuthoringScope> sınıfınıza nesnesine ekleyin. Kısayolu bir kod parçacığı adı olarak belirleyediğinizden emin olmanız gerekir. Bir örnek için bkz. [Izlenecek yol: yüklü kod parçacıklarının listesini alma (eski uygulama)](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md).  
   
- Kod parçacığı kısayolun ekleme algılayabilir <xref:Microsoft.VisualStudio.Package.Declarations.OnAutoComplete%2A> yöntemi <xref:Microsoft.VisualStudio.Package.Declarations> sınıfı. Kaynak dosyaya kod parçacığı adı zaten eklenmiş olduğundan, genişletme eklendiğinde kaldırılmalıdır. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A> Yöntemi için kod parçacığı ekleme noktasını tanımlayan bir yayılma alır; aralık kaynak dosyadaki tüm kod parçacığı adı içeriyorsa, söz konusu ad kod parçacığı tarafından değiştirilir.  
+ Sınıfın yönteminde kod parçacığı kısayolunun eklenmesini tespit edebilirsiniz <xref:Microsoft.VisualStudio.Package.Declarations.OnAutoComplete%2A> <xref:Microsoft.VisualStudio.Package.Declarations> . Kod parçacığı adı kaynak dosyaya zaten eklenmiş olduğundan, genişletme eklendiğinde kaldırılmalıdır. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A>Yöntemi, kod parçacığı için ekleme noktasını açıklayan bir yayma alır; yayılma alanı kaynak dosyadaki tüm kod parçacığı adını içeriyorsa, bu ad kod parçacığına göre değişir.  
   
- Bir hali aşağıdadır bir <xref:Microsoft.VisualStudio.Package.Declarations> parçacığı ekleme kısayol adı verilen işleme sınıfı. Diğer yöntemlerle <xref:Microsoft.VisualStudio.Package.Declarations> sınıfı, açıklık için atlanmış. Bu sınıfın Oluşturucusu alır Not bir <xref:Microsoft.VisualStudio.Package.LanguageService> nesne. Bu, sürümünden geçirilebilir <xref:Microsoft.VisualStudio.Package.AuthoringScope> nesne (örneğin, uygulamanız <xref:Microsoft.VisualStudio.Package.AuthoringScope> sınıfı alabilir <xref:Microsoft.VisualStudio.Package.LanguageService> nesne oluşturucusunda ve bu nesne için geçirin, `TestDeclarations` sınıf oluşturucu).  
+ Bir <xref:Microsoft.VisualStudio.Package.Declarations> kısayol adı verilen kod parçacığı eklemeyi işleyen bir sınıfın sürümü aşağıda verilmiştir. Sınıftaki diğer yöntemler <xref:Microsoft.VisualStudio.Package.Declarations> netme için atlandı. Bu sınıfın oluşturucusunun bir nesne aldığını unutmayın <xref:Microsoft.VisualStudio.Package.LanguageService> . Bu, nesne sürüminizden geçirilebilir <xref:Microsoft.VisualStudio.Package.AuthoringScope> (örneğin, <xref:Microsoft.VisualStudio.Package.AuthoringScope> sınıfının uygulamanız <xref:Microsoft.VisualStudio.Package.LanguageService> nesneyi oluşturucuda alabilir ve bu nesneyi `TestDeclarations` sınıf yapıcısına geçirebilir).  
   
 ```  
 [C#]  
@@ -328,7 +328,7 @@ namespace TestLanguagePackage
 }  
 ```  
   
- Dil hizmeti kısayol adı girdiğinde, çağrı <xref:Microsoft.VisualStudio.Package.ExpansionProvider.FindExpansionByShortcut%2A> dosya adı ve kod parçacığı başlığı elde etmek için yöntemi. Daha sonra dil hizmeti çağırır <xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A> yönteminde <xref:Microsoft.VisualStudio.Package.ExpansionProvider> kod parçacığını eklemek için sınıfı. Aşağıdaki yöntemlerden Visual Studio tarafından verilen sırayla çağrılır <xref:Microsoft.VisualStudio.Package.ExpansionProvider> kod parçacığını ekleme işlemi sırasında sınıfı:  
+ Dil hizmeti kısayol adını aldığında, <xref:Microsoft.VisualStudio.Package.ExpansionProvider.FindExpansionByShortcut%2A> dosya adını ve kod parçacığı başlığını almak için yöntemini çağırır. Dil hizmeti daha sonra <xref:Microsoft.VisualStudio.Package.ExpansionProvider.InsertNamedExpansion%2A> <xref:Microsoft.VisualStudio.Package.ExpansionProvider> kod parçacığını eklemek için sınıfındaki yöntemini çağırır. Aşağıdaki yöntemler, <xref:Microsoft.VisualStudio.Package.ExpansionProvider> kod parçacığını ekleme işlemi sırasında sınıfında verilen sırada Visual Studio tarafından çağırılır:  
   
 1. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.IsValidKind%2A>  
   
@@ -338,15 +338,15 @@ namespace TestLanguagePackage
   
 4. <xref:Microsoft.VisualStudio.Package.ExpansionProvider.OnAfterInsertion%2A>  
   
-   Dil hizmetiniz için yüklü kod parçacıklarının listesini alma hakkında daha fazla bilgi için bkz. [izlenecek yol: Kod parçacıkları (eski uygulama) yüklü bir listesini alma](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md).  
+   Dil hizmetiniz için yüklü kod parçacıklarının listesini alma hakkında daha fazla bilgi için bkz. [Izlenecek yol: yüklü kod parçacıklarının listesini alma (eski uygulama)](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md).  
   
-## <a name="implementing-the-expansionfunction-class"></a>ExpansionFunction sınıfı  
- Bir genişletme işlevi bir kod parçacığı şablonunda katıştırılır ve bir alanın yerleştirileceği bir veya daha fazla değer döndüren bir adlandırılmış bir işlevdir. Dil hizmetinizde genişletme işlevleri desteklemek için öğesinden bir sınıf türetin <xref:Microsoft.VisualStudio.Package.ExpansionFunction> sınıfı ve uygulama <xref:Microsoft.VisualStudio.Package.ExpansionFunction.GetCurrentValue%2A> yöntemi. Ardından geçersiz kılmanız gerekir <xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionFunction%2A> yönteminde <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfının yeni bir örneğini oluşturmada sürümünüzün döndürülecek <xref:Microsoft.VisualStudio.Package.ExpansionFunction> desteklediğiniz her genişletme işlevi için sınıf. Bir genişletme işlevden olası değerlerin bir listesini destekliyorsa, geçersiz kılmalısınız <xref:Microsoft.VisualStudio.Package.ExpansionFunction.GetIntellisenseList%2A> yönteminde <xref:Microsoft.VisualStudio.Package.ExpansionFunction> bu değerlerin bir listesini döndürmek için sınıf.  
+## <a name="implementing-the-expansionfunction-class"></a>ExpansionFunction sınıfını uygulama  
+ Genişletme işlevi, bir kod parçacığı şablonuna gömülü ve bir alana yerleştirilecek bir veya daha fazla değer döndüren adlandırılmış bir işlevdir. Dil hizmetinizdeki genişletme işlevlerini desteklemek için, sınıfından bir sınıf türetmeniz <xref:Microsoft.VisualStudio.Package.ExpansionFunction> ve metodunu uygulamanız gerekir <xref:Microsoft.VisualStudio.Package.ExpansionFunction.GetCurrentValue%2A> . Daha sonra <xref:Microsoft.VisualStudio.Package.LanguageService.CreateExpansionFunction%2A> , <xref:Microsoft.VisualStudio.Package.LanguageService> <xref:Microsoft.VisualStudio.Package.ExpansionFunction> destekettiğiniz her genişletme işlevi için sınıfının yeni bir örneğini döndürmek üzere sınıfındaki yöntemini geçersiz kılmanız gerekir. Bir genişletme işlevinden olası değerler listesini destekediyorsanız, <xref:Microsoft.VisualStudio.Package.ExpansionFunction.GetIntellisenseList%2A> <xref:Microsoft.VisualStudio.Package.ExpansionFunction> Bu değerlerin bir listesini döndürmek için sınıfındaki metodunu da geçersiz kılmanız gerekir.  
   
- Bağımsız değişken almaz veya diğer alanlarına erişmek gereken bir genişletme işlevi, genişletme sağlayıcısını genişletme işlev çağrıldığı zaman tarafından tam olarak atanamaz düzenlenebilir bir alanı ile ilişkilendirilmemelidir. Sonuç olarak, genişletme işlevi bağımsız değişkenlerinden veya diğer herhangi bir alan değeri elde etmek mümkün değil.  
+ Genişletme sağlayıcısı, genişleme işlevinin çağrıldığı süre tarafından tam olarak başlatılamadığından, bağımsız değişkenler veya diğer alanlara erişmesi gereken bir genişletme işlevi, düzenlenebilir bir alanla ilişkilendirilmemelidir. Sonuç olarak, genişletme işlevi bağımsız değişkenlerinin veya başka bir alanın değerini elde edemeyebilir.  
   
 ### <a name="example"></a>Örnek  
- Aşağıda, bir örnek nasıl bir basit genişletme işlevini çağırdı `GetName` uygulanabilir. Bu genişletme işlevi birkaç temel sınıf adına genişletme işlev örneği her zaman ekler (ilişkili kod parçacığı her zaman için karşılık gelen eklenir).  
+ Aşağıda, bir basit genişletme işlevinin nasıl uygulanabileceğini gösteren bir örnek verilmiştir `GetName` . Bu genişletme işlevi, genişletme işlevi her başlatıldığında bir taban sınıf adına bir sayı ekler (ilişkili kod parçacığı eklendiği her seferinde buna karşılık gelir).  
   
 ```csharp  
 using Microsoft.VisualStudio.Package;  
@@ -393,6 +393,6 @@ namespace TestLanguagePackage
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Eski dil hizmeti özellikleri](../../extensibility/internals/legacy-language-service-features1.md)   
- [Eski dil hizmeti kaydediliyor](../../extensibility/internals/registering-a-legacy-language-service1.md)   
+ [Eski dil hizmetini kaydetme](../../extensibility/internals/registering-a-legacy-language-service1.md)   
  [Kod parçacıkları](../../ide/code-snippets.md)   
  [İzlenecek yol: Yüklü Kod Parçacıklarının Listesini Alma (Eski Uygulama)](../../extensibility/internals/walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation.md)

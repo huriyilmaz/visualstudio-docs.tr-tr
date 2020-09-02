@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::get_registerValue | Microsoft Docs
+title: 'IDiaStackWalkHelper:: get_registerValue | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4dde30ebcda46d75271b15ec5b7f7c1ac49f384b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150111"
 ---
-# <a name="idiastackwalkhelpergetregistervalue"></a>IDiaStackWalkHelper::get_registerValue
+# <a name="idiastackwalkhelperget_registervalue"></a>IDiaStackWalkHelper::get_registerValue
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir kayıt değeri alır.  
+Bir kaydın değerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_registerValue (   
@@ -36,16 +36,16 @@ HRESULT get_registerValue ( 
   
 #### <a name="parameters"></a>Parametreler  
  `index`  
- [in] Bir değer [CV_HREG_e numaralandırması](../../debugger/debug-interface-access/cv-hreg-e.md) hangi değerin alınacağı kaydetme belirten sabit listesi.  
+ 'ndaki Değerin hangi kayda alınacağını belirten [CV_HREG_e sabit](../../debugger/debug-interface-access/cv-hreg-e.md) listesi numaralandırmasından bir değer.  
   
  `pRetVal`  
- [out] Kayıt geçerli değerini döndürür.  
+ dışı Kaydın geçerli değerini döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Boyutu rağmen `pRetVal` parametresi, bir uygulama yalnızca ne kasa normalde tutan depolamanız gerekir. Örneğin, yalnızca düşük 8 bitlik verilen değer 8-bit kayıt tutar. Bu 8-bit değeri, 64-bit Bu yöntemden döndürülen genişletilir.  
+ Parametrenin boyutuna rağmen `pRetVal` bir uygulama yalnızca kaydın normal olarak tuttuğu şeyi depolamalıdır. Örneğin, 8 bitlik bir kayıt yalnızca verilen değerin en düşük 8 bitini barındırır. Bu yöntemden döndürülen bu 8 bitlik değer 64-bit olarak genişletilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

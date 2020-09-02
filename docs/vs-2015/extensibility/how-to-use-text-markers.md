@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Metin işaretçileri kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: metin Işaretleyicileri kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,51 +11,51 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 25c3c4f3a3d9a253b9ec671892d0d44ccf9ca3ab
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63430955"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64800725"
 ---
-# <a name="how-to-use-text-markers"></a>Nasıl yapılır: Metin işaretçileri kullanma
+# <a name="how-to-use-text-markers"></a>Nasıl Yapılır: Metin İşaretçileri Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Düzenlemek için metin işaretçileri uygulanabilir bir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> nesne.  
+Metin işaretçileri, bir nesneyi düzenlemek için uygulanabilir <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer> .  
   
 ## <a name="procedures"></a>Yordamlar  
   
 #### <a name="to-apply-text-markers"></a>Metin işaretçileri uygulamak için  
   
-1. Bir örneği elde <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> sınıfı.  
+1. Sınıfının bir örneğini edinin <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> .  
   
     > [!NOTE]
-    > Çekirdek Düzenleyici düzenlemekte olduğu herhangi bir belge otomatik olarak standart metin işaretçileri uygular ve standart metin işaretçileri açıkça uygulamak gerekli olmamalıdır.  
+    > Çekirdek Düzenleyici, düzenleme yaptığı herhangi bir belgeye standart metin işaretleyicileri otomatik olarak uygular ve standart metin işaretleyicilerini açıkça uygulamak gerekli değildir.  
   
-2. İşaret türü kimliği, ilgilendiğiniz çağırarak işaretinin elde <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager.GetRegisteredMarkerTypeID%2A> yöntemiyle `GUID` , çalışmak istediğiniz metin işaretçisi.  
+2. Üzerinde <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager.GetRegisteredMarkerTypeID%2A> `GUID` çalışmak istediğiniz metin işaretleyicisi ile yöntemini çağırarak ilgilendiğiniz işaretin Işaret türü kimliğini edinin.  
   
     > [!NOTE]
-    > Kullanmayın `GUID` VSPackage'ı veya metin işaretçisi sağlayan hizmet.  
+    > `GUID`Metin işaretçisini sağlayan VSPackage veya hizmetin kullanmayın.  
   
-3. İşaret türü kimliği elde çağırarak kullanım <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager.GetRegisteredMarkerTypeID%2A> yöntemi çağırmak için bir parametre olarak <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> yöntemi veya <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A> metin işaretçisi metnin belirli bir bölgeye uygulamak için yöntemi.  
+3. Yöntemi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager.GetRegisteredMarkerTypeID%2A> çağırmak için bir parametre olarak yöntemini <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> veya <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A> belirli bir metin bölgesine metin işaretçisi uygulamak için yöntemini çağırarak elde EDILEN işaret türü kimliğini kullanın.  
   
-#### <a name="to-add-features-to-text-markers"></a>Metin işaretçileri için özellikler eklemek için  
+#### <a name="to-add-features-to-text-markers"></a>Metin işaretçilerine özellikler eklemek için  
   
-1. Bir metin işaretçisi araç ipuçları, özel bağlam menüsü veya işleyici gibi özel durumlar için ek özellikler eklemek için istenebilir. Bunu yapmak için:  
+1. Araç ipuçları, özel bağlam menüsü veya özel koşullara yönelik işleyici gibi bir metin işaretine ek özellikler eklemek istenebilir. Bunun için:  
   
-2. Bir nesneyi uygulama oluşturma <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> arabirimi.  
+2. Arabirimini uygulayan bir nesne oluşturun <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> .  
   
-3. Ek işlevler isterseniz, uygulama <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClientEx>ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClientAdvanced> arabirimleri uygulayan aynı nesne üzerinde <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> arabirimi.  
+3. Ek işlevsellik isteniyorsa, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClientEx> ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClientAdvanced> arabirimini uygulayan aynı nesne üzerinde arabirimleri uygulayın <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> .  
   
-4. Geçirmek <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> çağrısına oluşturma arabirimi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> yöntemi veya <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A> metin işaretçisi metnin belirli bir bölgeye uygulamak için kullanılan yöntem.  
+4. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient>Oluşturduğunuz arayüzü, yöntemine yapılan çağrıya <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.CreateLineMarker%2A> veya metin <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextStream.CreateStreamMarker%2A> işaretçisini belirli bir metin bölgesine uygulamak için kullanılan yönteme geçirin.  
   
-5. Bağlam menüsü destek bir metin işaretçisi bölgeye eklerken menü oluşturmak gereklidir.  
+5. Bir metin işaretçisi bölgesine bağlam menüsü desteği eklendiğinde, menüyü oluşturmak için gereklidir.  
   
-     Bir bağlam menüsü bakın oluşturma hakkında daha fazla bilgi için [bağlam menüleri](../extensibility/context-menus.md).  
+     Bağlam menüsü oluşturma hakkında daha fazla bilgi için bkz. [Bağlam menüleri](../extensibility/context-menus.md).  
   
-6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Ortam çağırır sağlanan arabirim yöntemleri gibi <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.GetTipText%2A> yöntemi veya <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.ExecMarkerCommand%2A> gerektiğinde yöntemi.  
+6. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Ortam, yöntemi gibi sağlanan arabirimlerin <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.GetTipText%2A> veya <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.ExecMarkerCommand%2A> gerektiğinde yöntemin yöntemlerini çağırır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Metin işaretçileri eski API'si ile kullanma](../extensibility/using-text-markers-with-the-legacy-api.md)   
- [Nasıl yapılır: Standart metin işaretçileri Ekle](../extensibility/how-to-add-standard-text-markers.md)   
- [Nasıl yapılır: Özel metin işaretçileri oluşturma](../extensibility/how-to-create-custom-text-markers.md)   
- [Nasıl yapılır: Hata İşaretçileri Uygulama](../extensibility/how-to-implement-error-markers.md)
+ [Eski API ile metin Işaretleyicileri kullanma](../extensibility/using-text-markers-with-the-legacy-api.md)   
+ [Nasıl yapılır: standart metin Işaretçileri ekleme](../extensibility/how-to-add-standard-text-markers.md)   
+ [Nasıl yapılır: özel metin Işaretçileri oluşturma](../extensibility/how-to-create-custom-text-markers.md)   
+ [Nasıl Yapılır: Hata İşaretçilerini Uygulama](../extensibility/how-to-implement-error-markers.md)

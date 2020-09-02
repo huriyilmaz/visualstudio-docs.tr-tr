@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::ResolveRuntimeType | Microsoft Docs
+title: 'Idebugciltçi:: ResolveRuntimeType | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 69b1418c76e01b87bcd6d992a82ce58287e79ceb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192301"
 ---
 # <a name="idebugbinderresolveruntimetype"></a>IDebugBinder::ResolveRuntimeType
@@ -24,7 +24,7 @@ ms.locfileid: "68192301"
 
 Bu yöntem, bir nesnenin çalışma zamanı türünü belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT ResolveRuntimeType(   
@@ -42,18 +42,18 @@ int ResolveRuntimeType(
   
 #### <a name="parameters"></a>Parametreler  
  `pObject`  
- [in] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) çözümlenecek.  
+ 'ndaki Çözümlenecek [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) .  
   
  `ppResolved`  
- [out] Olarak nesne türünü döndüren bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md).  
+ dışı Nesnenin türünü bir [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)olarak döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir nesnenin çalışma zamanı türü derleme zamanında her zaman bilinmiyor. Örneğin, çok biçimlilik kullanarak, bağımsız değişken bir işleve bir button sınıfı gibi temel sınıf olarak geçirilebilir. Gerçek bağımsız değişken bir radyo düğmesi sınıfı gibi türetilmiş bir sınıf olabilir.  
+ Bir nesnenin çalışma zamanı türü, derleme zamanında her zaman bilinmez. Örneğin, çok biçimlilik kullanarak, bir bağımsız değişken bir işleve, düğme sınıfı gibi temel sınıfı olarak geçirilebilir. Gerçek bağımsız değişken, bir radyo düğmesi sınıfı gibi türetilmiş bir sınıf olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   
+ [Idebugciltçi](../../../extensibility/debugger/reference/idebugbinder.md)   
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

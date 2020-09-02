@@ -14,10 +14,10 @@ caps.latest.revision: 29
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d6a4f7f1631ac4bfc651f5df347db010cf47a656
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657130"
 ---
 # <a name="using-the-assert-classes"></a>Onay Sınıfları Kullanma
@@ -26,7 +26,7 @@ ms.locfileid: "72657130"
 Belirli işlevleri doğrulamak için UnitTestingFramework ad alanının onaylama sınıflarını kullanın. Bir birim testi yöntemi, geliştirme kodunuzda bir yöntemin kodunu, ancak yalnızca onaylama deyimleri dahil etmeniz durumunda kodun davranışının doğruluğunu bildirir.
 
 ## <a name="kinds-of-asserts"></a>Onay türleri
- @No__t_0 ad alanı çeşitli tür onaylama sınıfları sağlar:
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting>Ad alanı çeşitli tür onaylama sınıfları sağlar:
 
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>
 
@@ -60,4 +60,4 @@ Belirli işlevleri doğrulamak için UnitTestingFramework ad alanının onaylama
  Test yönteminin, geliştirme kodunuzda bir yöntem tarafından oluşturulması beklendiğini doğrulamak istediğiniz bir özel durumun bu yöntemde gerçekten atılmakta olduğunu doğrulamak istediğinizde, ExpectedExceptionAttribute özniteliğiyle bir test yöntemi süsleyerek.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [mevcut kod Için birim testleri oluşturma ve çalıştırma](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173) <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
+ <xref:Microsoft.VisualStudio.TestTools.UnitTesting>[Mevcut kod Için birim testleri oluşturma ve çalıştırma](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)

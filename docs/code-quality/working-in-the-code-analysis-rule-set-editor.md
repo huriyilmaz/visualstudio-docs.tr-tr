@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d1e53df97c0535f59d0b96e9608ad55f2cb5ab21
-ms.sourcegitcommit: 4d7c883ea3eedd795eeb4a9d3bd3dee82c8e093e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88893313"
 ---
 # <a name="use-the-code-analysis-rule-set-editor"></a>Kod analizi kural kümesi düzenleyicisini kullanma
@@ -23,7 +23,7 @@ Kod analizi kural kümesi Düzenleyicisi, özel bir kural kümesine dahil edilen
 
 Aşağıdaki tabloda önem derecesi seçenekleri gösterilmektedir:
 
-|Eylem (önem derecesi)|Açıklama|
+|Eylem (önem derecesi)|Description|
 |-|-|
 |Uyarı|**Hata listesi** ve derleme zamanında bir uyarı oluşturur.|
 |Hata|**Hata listesi** ve derleme zamanında bir hata oluşturur.|
@@ -48,7 +48,7 @@ Kural kümesi Düzenleyicisi ' nin araç çubuğunu, kural kümesi kılavuzunda 
 
 Aşağıdaki tabloda, kural kümesi düzenleyicisinin araç çubuğundaki denetimler açıklanmaktadır.
 
-|ToolBar denetimi|Açıklama|
+|ToolBar denetimi|Description|
 |---------------------|-----------------|
 |**Tümünü Genişlet**|Tüm gruplardaki kuralları gösterir.|
 |**Tümünü Daralt**|Tüm gruplardaki kuralları gizler.|
@@ -69,7 +69,7 @@ Aşağıdaki tabloda bir kural kümesi alanları açıklanmaktadır:
 
 |Alan|Açıklama|
 |-----------|-----------------|
-|**NUMARASıNı**|Kuralın tanımlayıcısı.|
+|**ID**|Kuralın tanımlayıcısı.|
 |**Kategori**|Kural kümelerinde üyeliklerine ek olarak, kod analizi kuralları da kategoriye göre gruplandırılır. Daha fazla bilgi için bkz. [Kod Analizi uyarıları](../code-quality/code-analysis-for-managed-code-warnings.md).|
 |**Ad**|Kuralın başlığı.|
 |**Ad Alanı**|Kuralın ad alanı.|

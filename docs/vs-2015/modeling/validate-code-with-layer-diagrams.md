@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 45b82ece15cfef4d313764027c0220453a6d4849
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75845440"
 ---
 # <a name="validate-code-with-layer-diagrams"></a>Katman diyagramları ile kod doğrulama
@@ -43,9 +43,9 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
    Kodu farklı bir mimariye taşıdığınız zaman iş gerektiren kodu veya bağımlılıkları bulun.
 
-  **Requirements**
+  **Gereksinimler**
 
-- {1&gt;Visual Studio&lt;1}
+- Visual Studio
 
 - Team Foundation yapısı ile kodu otomatik olarak doğrulamak için Team Foundation Yapı sunucunuzdaki Visual Studio
 
@@ -58,33 +58,33 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 > [!IMPORTANT]
 > Katman doğrulamasını Team Foundation yapısı ile çalıştırmak istiyorsanız, Yapı sunucunuza aynı Visual Studio sürümünü de yüklemelisiniz.
 
-- [Bir öğenin doğrulamayı destekleyip desteklemediğini görün](#SupportsValidation)
+- [Bir öğenin doğrulamayı destekleyip desteklemediğini görme](#SupportsValidation)
 
-- [Doğrulama için diğer .NET derlemelerini ve projelerini ekleyin](#IncludeReferences)
+- [Diğer .NET derlemelerini ve projelerini doğrulama için dahil etme](#IncludeReferences)
 
 - [Kodu el ile doğrulama](#ValidateManually)
 
-- [Kodu otomatik olarak doğrula](#ValidateAuto)
+- [Kodu otomatik olarak doğrulama](#ValidateAuto)
 
 - [Katman doğrulama sorunlarını giderme](#TroubleshootingValidation)
 
 - [Katman doğrulama hatalarını anlama ve çözme](#UnderstandingValidationErrors)
 
-## <a name="SupportsValidation"></a>Bir öğenin doğrulamayı destekleyip desteklemediğini görün
+## <a name="see-if-an-item-supports-validation"></a><a name="SupportsValidation"></a> Bir öğenin doğrulamayı destekleyip desteklemediğini görün
  Katmanları Web sitelerine, Office belgelerine, düz metin dosyalarına ve birden çok uygulama arasında paylaşılan projelerdeki dosyalara bağlayabilirsiniz, ancak doğrulama işlemi bunları içermez. Doğrulama hataları, aralarında hiçbir bağımlılığın görünmediği ayrı katmanlara bağlanmış projelere veya derlemelere olan başvurular için görünmez. Kod bu başvuruları kullanmazsa böyle başvurular bağımlılık olarak düşünülmez.
 
 1. Katman diyagramında bir veya daha fazla katman seçin, seçiminize sağ tıklayın ve **bağlantıları görüntüle**' ye tıklayın.
 
 2. **Katman Gezgini**' nde **doğrulamayı destekler** sütununa bakın. Değer false ise, öğe doğrulamayı desteklemez.
 
-## <a name="IncludeReferences"></a>Doğrulama için diğer .NET derlemelerini ve projelerini ekleyin
+## <a name="include-other-net-assemblies-and-projects-for-validation"></a><a name="IncludeReferences"></a> Doğrulama için diğer .NET derlemelerini ve projelerini ekleyin
  Öğeleri katman diyagramına sürüklediğinizde, karşılık gelen .NET derlemelerine veya projelere başvurular, modelleme projesindeki **Katman başvuruları** klasörüne otomatik olarak eklenir. Bu klasör, doğrulama sırasında analiz edilen derlemeler ve projeler için başvurular içerir. Ayrıca, diğer .NET derlemelerini ve projeleri katman diyagramına el ile sürüklemeden doğrulama için ekleyebilirsiniz.
 
 1. **Çözüm Gezgini**, modelleme projesine veya **Katman başvuruları** klasörüne sağ tıklayın ve ardından **Başvuru Ekle**' ye tıklayın.
 
 2. **Başvuru Ekle** iletişim kutusunda derlemeler veya projeler ' i seçin ve ardından **Tamam**' a tıklayın.
 
-## <a name="ValidateManually"></a>Kodu el ile doğrulama
+## <a name="validate-code-manually"></a><a name="ValidateManually"></a> Kodu el ile doğrulama
  Çözüm öğeleriyle bağlantılı bir açık katman diyagramı varsa, diyagramdaki kısayolu **Doğrula** komutunu çalıştırabilirsiniz. Ayrıca, **/p: ValidateArchitecture** özel özelliği **true**olarak ayarlanmış şekilde **MSBuild** komutunu çalıştırmak için komut istemi ' ni de kullanabilirsiniz. Örneğin, kodda değişiklik yaparken bağımlılık çakışmalarını önceden yakalayabilmek için düzenli olarak katman doğrulama gerçekleştirin.
 
 #### <a name="to-validate-code-from-an-open-layer-diagram"></a>Kodu açık bir katman diyagramından doğrulamak için
@@ -99,13 +99,13 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 2. Her bir hatanın kaynağını görüntülemek için **hata listesi** penceresindeki hataya çift tıklayın.
 
     > [!NOTE]
-    > [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], hatanın kaynağı yerine bir kod Haritası gösterebilir. Bu, kodun katman diyagramı tarafından belirlenmeyen derlemesinde bağımlılığı varsa ya da kodun katman diyagramı tarafından belirlenen bağımlılığı eksikse ortaya çıkar. Bağımlılığın var olup olmayacağını öğrenmek için kod haritasını veya kodu gözden geçirin. Kod eşlemeleri hakkında daha fazla bilgi için bkz. [çözümlerinizi genelinde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md).
+    > [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hatanın kaynağı yerine bir kod Haritası gösterebilir. Bu, kodun katman diyagramı tarafından belirlenmeyen derlemesinde bağımlılığı varsa ya da kodun katman diyagramı tarafından belirlenen bağımlılığı eksikse ortaya çıkar. Bağımlılığın var olup olmayacağını öğrenmek için kod haritasını veya kodu gözden geçirin. Kod eşlemeleri hakkında daha fazla bilgi için bkz. [çözümlerinizi genelinde harita bağımlılıkları](../modeling/map-dependencies-across-your-solutions.md).
 
 3. Hataları yönetmek için bkz. [doğrulama hatalarını yönetme](#ManageErrors).
 
 #### <a name="to-validate-code-at-the-command-prompt"></a>Kodu komut isteminde doğrulamak için
 
-1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komut istemi ' ni açın.
+1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Komut istemi 'ni açın.
 
 2. Aşağıdakilerden birini seçin:
 
@@ -115,34 +115,34 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
      msbuild <FilePath+ModelProjectFileName>.modelproj /p:ValidateArchitecture=true
      ```
 
-     - veya -
+     - veya
 
-       Modelleme projesi (. modelproj) dosyasını ve katman diyagramını içeren klasöre gidin ve aşağıdaki özel özellikle [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] çalıştırın:
+       Modelleme projesi (. modelproj) dosyasını ve katman diyagramını içeren klasöre gidin ve [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] aşağıdaki özel özellikle çalıştırın:
 
      ```
      msbuild /p:ValidateArchitecture=true
      ```
 
-   - Kodu Çözümdeki tüm modelleme projelerine karşı doğrulamak için aşağıdaki özel özellikle [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] çalıştırın:
+   - Çözümdeki tüm modelleme projelerine karşı kodu doğrulamak için [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] aşağıdaki özel özellikle çalıştırın:
 
      ```
      msbuild <FilePath+SolutionName>.sln /p:ValidateArchitecture=true
      ```
 
-     - veya -
+     - veya
 
-       Bir katman diyagramı içeren modelleme projesi içermesi gereken çözüm klasörüne gidin ve aşağıdaki özel özellikle [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] çalıştırın:
+       Katman diyagramı içeren modelleme projesi içermesi gereken çözüm klasörüne gidin ve [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] aşağıdaki özel özellikle çalıştırın:
 
      ```
      msbuild /p:ValidateArchitecture=true
      ```
 
-     Oluşan hatalar listelenecektir. [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]hakkında daha fazla bilgi için bkz. [MSBuild](../msbuild/msbuild.md) ve [MSBuild görevi](../msbuild/msbuild-task.md).
+     Oluşan hatalar listelenecektir. Hakkında daha fazla bilgi için [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] bkz. [MSBuild](../msbuild/msbuild.md) ve [MSBuild görevi](../msbuild/msbuild-task.md).
 
    Doğrulama hataları hakkında daha fazla bilgi için bkz. [katman doğrulama hatalarını anlama ve çözme](#UnderstandingValidationErrors).
 
-### <a name="ManageErrors"></a>Doğrulama hatalarını yönetme
- Geliştirme işlemi sırasında, doğrulama esnasında bildirilen çakışmaların bazılarını gizlemek isteyebilirsiniz. Örneğin, zaten çözdüğünüz veya özel senaryonuzla ilgili olmayan hataları gizlemek isteyebilirsiniz. Bir hatayı bastırdığınızda, [!INCLUDE[esprfound](../includes/esprfound-md.md)]bir iş öğesini günlüğe kaydetmek iyi bir uygulamadır.
+### <a name="manage-validation-errors"></a><a name="ManageErrors"></a> Doğrulama hatalarını yönetme
+ Geliştirme işlemi sırasında, doğrulama esnasında bildirilen çakışmaların bazılarını gizlemek isteyebilirsiniz. Örneğin, zaten çözdüğünüz veya özel senaryonuzla ilgili olmayan hataları gizlemek isteyebilirsiniz. Bir hatayı bastırdığınızda, içinde bir iş öğesi kaydetmek iyi bir uygulamadır [!INCLUDE[esprfound](../includes/esprfound-md.md)] .
 
 > [!WARNING]
 > Bir iş öğesi oluşturmak veya bu öğeye bağlanmak için TFS kaynak kodu denetimine (SCC) zaten bağlanmış olmanız gerekir. Farklı bir TFS SCC bağlantısını açmaya çalışırsanız, Visual Studio geçerli çözümü otomatik olarak kapatır. Bir iş öğesini oluşturmayı veya bir iş öğesini bağlamayı denemeden önce uygun SCC 'e zaten bağlı olduğunuzdan emin olun. Visual Studio 'nun sonraki sürümlerinde, bir SCC 'e bağlı değilseniz menü komutları kullanılamaz.
@@ -153,14 +153,14 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
   **Hata listesi** penceresindeki doğrulama hatalarını yönetmek için bu görevleri kullanın:
 
-|**Alıcı**|**Bu adımları izleyin**|
+|**Amaç**|**Bu adımları izleyin**|
 |------------|----------------------------|
 |Doğrulama sırasında seçili hataları gizleme|Seçilen bir veya birden çok hataya sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından **hataları Gizle**' ye tıklayın.<br /><br /> Gizlenen hatalar üstü çizili biçimde görünür. Doğrulamayı daha sonra çalıştırdığınızda bu hatalar görünmez.<br /><br /> Gizlenen hatalar, ilgili katman diyagramı dosyası için .gizlenenler dosyasında izlenir.|
 |Seçili hataların gizlenmesini durdurma|Seçili gizlenen hata veya hatalara sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından hataları gizlemeyi **Durdur**' a tıklayın.<br /><br /> Doğrulamayı daha sonra çalıştırdığınızda seçili gizlenen hatalar görünecektir.|
 |Tüm gizlenen hataları **hata listesi** penceresinde geri yükle|**Hata listesi** penceresinde herhangi bir yere sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından **Tüm gizlenen hataları göster**' e tıklayın.|
 |**Hata listesi** penceresinden gizlenen tüm hataları gizle|**Hata listesi** penceresinde herhangi bir yere sağ tıklayın, **doğrulama hatalarını Yönet**' in üzerine gelin ve ardından **Tüm gizlenen hataları Gizle**' ye tıklayın.|
 
-## <a name="ValidateAuto"></a>Kodu otomatik olarak doğrula
+## <a name="validate-code-automatically"></a><a name="ValidateAuto"></a> Kodu otomatik olarak doğrula
  Her yerel bir yapı çalıştırışınızda katman doğrulama gerçekleştirebilirsiniz. Takınınız Team Foundation Yapısı kullanıyorsa, özel bir MSBuild görevi oluşturarak belirtebileceğiniz geçitli iadelerle katman doğrulaması gerçekleştirebilir ve doğrulama hatalarını toplamak için yapı raporları kullanabilirsiniz. Geçitli iade derlemeleri oluşturmak için bkz. [değişiklikleri doğrulamak için geçitli iade derleme Işlemi kullanma](https://msdn.microsoft.com/library/9cfc8b9c-1023-40fd-8ab5-1b1bd9c172ec).
 
 #### <a name="to-validate-code-automatically-during-a-local-build"></a>Kodu yerel yapı sırasında otomatik olarak doğrulamak için
@@ -171,7 +171,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 <ValidateArchitecture>true</ValidateArchitecture>
 ```
 
- \- veya -
+ \- veya
 
 1. **Çözüm Gezgini**, katman diyagramını veya diyagramlarını içeren modelleme projesine sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
@@ -195,9 +195,9 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
     `/p:ValidateArchitecture=true`
 
-   Doğrulama hataları hakkında daha fazla bilgi için bkz. [katman doğrulama hatalarını anlama ve çözme](#UnderstandingValidationErrors). [!INCLUDE[esprbuild](../includes/esprbuild-md.md)]hakkında daha fazla bilgi için bkz.:
+   Doğrulama hataları hakkında daha fazla bilgi için bkz. [katman doğrulama hatalarını anlama ve çözme](#UnderstandingValidationErrors). Hakkında daha fazla bilgi için [!INCLUDE[esprbuild](../includes/esprbuild-md.md)] bkz.
 
-- [Uygulamayı oluşturun](/azure/devops/pipelines/index)
+- [Uygulama oluşturma](/azure/devops/pipelines/index)
 
 - [Yapı işleminiz için varsayılan şablonu kullanın](https://msdn.microsoft.com/library/43930b12-c21b-4599-a980-2995e3d16e31)
 
@@ -207,14 +207,14 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
 - [Çalışan bir yapı için Ilerlemeyi izleme](https://msdn.microsoft.com/library/e51e3bad-2d1d-4b7b-bfcc-c43439c6c8ef)
 
-## <a name="TroubleshootingValidation"></a>Katman doğrulama sorunlarını giderme
+## <a name="troubleshoot-layer-validation-issues"></a><a name="TroubleshootingValidation"></a> Katman doğrulama sorunlarını giderme
  Aşağıdaki tabloda katman doğrulama sorunları ve bunların çözümü açıklanmaktadır. Bu sorunlar, kod ve tasarım arasındaki çakışmalarla sonuçlanan hatalardan ayrılır. Bu hatalar hakkında daha fazla bilgi için bkz. [katman doğrulama hatalarını anlama ve çözme](#UnderstandingValidationErrors).
 
-|**Sorun**|**Olası neden**|**Çözümleme**|
+|**Sorun**|**Olası neden**|**Çözünürlük**|
 |---------------|------------------------|--------------------|
 |Doğrulama hataları beklendiği gibi gerçekleşmez.|Doğrulama Çözüm Gezgini'ndeki diğer katman diyagramlarından kopyalanmış ve aynı modelleme projesinde bulunan katman diyagramlarında işe yaramaz. Bu şekilde kopyalanan katman diyagramları, orijinal katman diyagramıyla aynı başvuruları içerir.|Modelleme projesine yeni bir katman diyagramı ekleyin.<br /><br /> Öğeleri kaynak katmanı diyagramından yeni diyagrama kopyalayın.|
 
-## <a name="UnderstandingValidationErrors"></a>Katman doğrulama hatalarını anlama ve çözme
+## <a name="understanding-and-resolving-layer-validation-errors"></a><a name="UnderstandingValidationErrors"></a> Katman doğrulama hatalarını anlama ve çözme
  Kodu katman diyagramına karşı doğruladığınız zaman, kod tasarımla çakıştığında doğrulama hataları oluşur. Örneğin, aşağıdaki durumlar doğrulama hatalarının oluşmasına neden olabilir:
 
 - Yapı yanlış katmana atanmış. Bu durumda, yapıyı taşıyın.
@@ -225,7 +225,7 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 
   Aşağıdaki bölümde, bu hatalarda kullanılan sözdizimi belirtilmekte, bu hataların anlamı açıklanmakta ve bunları çözmek veya yönetmek için yapabilecekleriniz önerilmektedir.
 
-|**Söz dizimi**|**Açıklama**|
+|**Syntax**|**Açıklama**|
 |----------------|---------------------|
 |*ArtifactN*(*ArtifactTypeN*)|*ArtifactN* katman diyagramındaki bir katmanla ilişkili bir yapıdır.<br /><br /> *ArtifactTypeN* , bir **sınıf** veya **Yöntem**gibi *ArtifactN*türüdür, örneğin:<br /><br /> MySolution.MyProject.MyClass.MyMethod(Method)|
 |*NamespaceNameN*|Bir ad alanının adı.|
@@ -235,8 +235,8 @@ Kodun tasarımıyla çakışmadığından emin olmak için, Visual Studio 'daki 
 |**Hata sözdizimi**|**Hata açıklaması**|
 |----------------------|---------------------------|
 |AV0001: geçersiz bağımlılık: *Artifact1*(*ArtifactType1*)--> *Artifact2*(*ArtifactType2*)<br /><br /> Katmanlar: *LayerName1 & lt*, *LayerName2* &#124; Bağımlılıklar: *dependencyType*|*Layername1 & lt* *LayerName2*üzerinde doğrudan bağımlılığı olmadığından *LayerName1 & lt* içindeki *Artifact1* , *LayerName2* içindeki *Artifact2* bağımlılığı içermemelidir.|
-|AV1001: geçersiz ad alanı: *yapıt*<br /><br /> Katman: *LayerName* &#124; gereken ad alanı: *NamespaceName1* &#124; geçerli ad alanı: *NamespaceName2*|*LayerName* , ilişkili yapıtların *NamespaceName1*'e ait olması gerekir. *Yapıt* , *NamespaceName1*değil *NamespaceName2*' dir.|
-|AV1002: yasak ad alanına bağlıdır: *Artifact1*(*ArtifactType1*) &#124; *Artifact2*(*ArtifactType2*)<br /><br /> Katman: *LayerName* &#124; yasak ad alanı: *NamespaceName* &#124; bağımlılıkları: *dependencyType*|*LayerName* , ilişkili yapıtların *NamespaceName*'e bağlı olmaması gerekir. *Artifact2* *NamespaceName*içinde olduğu için *Artifact1* , *Artifact2* öğesine bağımlı olamaz.|
+|AV1001: geçersiz ad alanı: *yapıt*<br /><br /> Katman: *LayerName* &#124; gerekli ad alanı: *NamespaceName1* &#124; geçerli ad alanı: *NamespaceName2*|*LayerName* , ilişkili yapıtların *NamespaceName1*'e ait olması gerekir. *Yapıt* , *NamespaceName1*değil *NamespaceName2*' dir.|
+|AV1002: yasak ad alanına bağlıdır: *Artifact1*(*ArtifactType1*) &#124; *Artifact2*(*ArtifactType2*)<br /><br /> Katman: *LayerName* &#124; yasak ad alanı: *NamespaceName* &#124; Bağımlılıklar: *dependencyType*|*LayerName* , ilişkili yapıtların *NamespaceName*'e bağlı olmaması gerekir. *Artifact2* *NamespaceName*içinde olduğu için *Artifact1* , *Artifact2* öğesine bağımlı olamaz.|
 |AV1003: yasak ad alanında: *yapıt*(*ArtifactType*)<br /><br /> Katman: *LayerName* &#124; yasak ad alanı: *NamespaceName*|*LayerName* , ilişkili yapıtların *NamespaceName*'e ait olmasını gerektirir. *Yapıt* *NamespaceName*'e aittir.|
 |AV3001: eksik bağlantı: '*LayerName*' katmanı bulunamayan '*yapıt*' öğesine bağlanır. Eksik bir derleme başvurunuz mu var?|*LayerName* , bulunamayan bir yapıya bağlantı sağlar. Örneğin, sınıfla kurulan bir bağlantı kayıp olabilir; çünkü modelleme projesinde sınıfı içeren derlemeye yapılan bir başvuru yoktur.|
 |AV9001: Mimari çözümleme iç hatalar buldu. Sonuçlar tamamlanmamış olabilir. Daha fazla bilgi için ayrıntılı yapı olay günlüğü veya çıkış penceresine bakın.|Daha fazla ayrıntı için yapı olay günlüğü veya çıkış penceresine bakın.|

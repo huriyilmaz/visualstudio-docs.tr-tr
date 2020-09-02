@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_virtual | Microsoft Docs
+title: 'IDiaSymbol:: get_virtual | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: dd085926c25bd15b321222ce36a0d61a5f650649
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64798116"
 ---
-# <a name="idiasymbolgetvirtual"></a>IDiaSymbol::get_virtual
+# <a name="idiasymbolget_virtual"></a>IDiaSymbol::get_virtual
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Sanal işlev olup olmadığını belirten bir bayrak alır.  
+İşlevin sanal olup olmadığını belirten bir bayrak alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_virtual (   
@@ -35,13 +35,13 @@ HRESULT get_virtual ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Döndürür `TRUE` işlevi ise; Aksi halde sanal döndürür `FALSE`.  
+ dışı `TRUE` İşlevin sanal olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

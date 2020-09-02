@@ -10,21 +10,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b829f98597afb6ab1430d61022306ec840decb12
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656752"
 ---
 # <a name="error-handling-activity-designers"></a>Hata İşleme Etkinlik Tasarımcıları
-Hata Işleme etkinliği tasarımcıları [!INCLUDE[wfd1](../includes/wfd1-md.md)] ' de hata işlemeyi yönetmek için kullanılır. Bu bölümde yer alan konular [!INCLUDE[wfd2](../includes/wfd2-md.md)] etkinliğinin ve Şablon tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
+Hata işleme etkinlik tasarımcıları ' de hata işlemeyi yönetmek için kullanılır [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Bu bölümde yer alan konular, [!INCLUDE[wfd2](../includes/wfd2-md.md)] etkinliğin ve Şablon tasarımcılarının nasıl kullanılacağına ilişkin yönergeler sağlar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Yeniden throw](../workflow-designer/rethrow-activity-designer.md) @No__t_1 etkinliği oluşturmak ve yapılandırmak için kullanılır.
+ [Yeniden throw](../workflow-designer/rethrow-activity-designer.md) Etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.Rethrow> .
 
- [Throw](../workflow-designer/throw-activity-designer.md) @No__t_1 etkinliği oluşturmak ve yapılandırmak için kullanılır.
+ [Throw](../workflow-designer/throw-activity-designer.md) Etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.Throw> .
 
- [TryCatch](../workflow-designer/trycatch-activity-designer.md) @No__t_1 etkinliği oluşturmak ve yapılandırmak için kullanılır.
+ [TryCatch](../workflow-designer/trycatch-activity-designer.md) Etkinlik oluşturmak ve yapılandırmak için kullanılır <xref:System.Activities.Statements.TryCatch> .
 
 ## <a name="reference"></a>Başvuru
 

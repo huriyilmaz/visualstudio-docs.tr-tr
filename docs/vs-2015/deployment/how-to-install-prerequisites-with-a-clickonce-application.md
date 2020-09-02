@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: ClickOnce uygulamasıyla Önkoşulları Yükleme | Microsoft Docs'
+title: 'Nasıl yapılır: ClickOnce uygulamasıyla önkoşulları yüklemek | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -18,57 +18,57 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 18c8dd4d0bc79ac2f3af44b8b5f8dd6faacb9f45
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434074"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64796759"
 ---
 # <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>Nasıl yapılır: ClickOnce Uygulamasıyla Önkoşulları Yükleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tüm [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamaları gerektirir çalıştırılabilmesi için önce .NET Framework sürümünü doğru bir bilgisayara yüklenir; pek çok uygulama diğer Önkoşullar da sahip. Yayımlama sırasında bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama, bir dizi önkoşul bileşenlerinin yanı sıra müşterilerinizin uygulamanıza paketlenmiş seçebilirsiniz. Yükleme sırasında her önkoşulu zaten mevcut olup olmadığını belirlemek bir denetim gerçekleştirilir. Bu yüklemeden önce değil yüklenecekse [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama.  
+Tüm [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamalar, çalıştırılmadan önce bir bilgisayara .NET Framework 'nin doğru sürümünün yüklü olmasını gerektirir; birçok uygulamanın da başka önkoşulları da vardır. Bir uygulamayı yayımlarken [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , uygulamanızla birlikte paketlenebilmeniz için bir önkoşul bileşenleri kümesi seçebilirsiniz. Yükleme zamanında, her önkoşul için, zaten mevcut olup olmadığını belirlemede bir denetim gerçekleştirilecek. Aksi takdirde, uygulama yüklenmeden önce yüklenir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] .  
   
- Paketleme ve önkoşulları yerine bileşenler için indirme konumu belirtebilirsiniz. Örneğin, yayımladığınız her uygulamasına Önkoşullar dahil olmak üzere yerine, bir merkezi dosya paylaşımı veya tüm önkoşulların için yükleyicileri içeren Web konumu kullanabilirsiniz — yükleme zamanında bileşenler indirilir ve Bu konumdan yüklü.  
+ Paketleme ve yayımlama önkoşulları yerine, bileşenler için de bir indirme konumu belirtebilirsiniz. Örneğin, yayımladığınız her uygulamayla önkoşulları dahil etmek yerine, tüm önkoşulların yükleyicilerinin bulunduğu merkezi bir dosya paylaşımından veya Web konumundan (yükleme zamanında), bileşenler indirilir ve bu konumdan yüklenir.  
   
 > [!IMPORTANT]
-> İlk yayımlamadan önce önkoşul yükleyicisi paketleri geliştirme bilgisayarınıza eklemelisiniz [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama. Daha fazla bilgi için [nasıl yapılır: ClickOnce uygulamasına Önkoşullar dahil etme](../deployment/how-to-include-prerequisites-with-a-clickonce-application.md).  
+> İlk uygulamanızı yayımlamadan önce geliştirme bilgisayarınıza önkoşul Yükleyici paketleri eklemeniz gerekir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Daha fazla bilgi için bkz. [nasıl yapılır: önkoşulları ClickOnce uygulamasıyla ekleme](../deployment/how-to-include-prerequisites-with-a-clickonce-application.md).  
   
- Önkoşullar yönetilen **önkoşulları** iletişim kutusu, erişilebilir **Yayımla** bölmesinde **Proje Tasarımcısı**.  
+ Önkoşullar, **Proje Tasarımcısı**' nın **Yayımla** bölmesinden erişilebilen **Önkoşullar** iletişim kutusunda yönetilir.  
   
 > [!NOTE]
-> Önceden belirlenmiş Önkoşullar listesine ek olarak kendi bileşenleri listesine ekleyebilirsiniz. Daha fazla bilgi için [önyükleyici paketleri oluşturma](../deployment/creating-bootstrapper-packages.md).  
+> Önkoşul listesine ek olarak, kendi bileşenlerinizi listeye ekleyebilirsiniz. Daha fazla bilgi için bkz. [önyükleyici paketleri oluşturma](../deployment/creating-bootstrapper-packages.md).  
   
-### <a name="to-specify-prerequisites-to-install-with-a-clickonce-application"></a>Yükleme ClickOnce uygulamasıyla önkoşulları belirlemek için  
+### <a name="to-specify-prerequisites-to-install-with-a-clickonce-application"></a>ClickOnce uygulamasıyla yüklenecek önkoşulları belirtmek için  
   
-1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünü tıklatın **özellikleri**.  
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.  
   
-2. Seçin **Yayımla** bölmesi.  
+2. **Yayımla** bölmesini seçin.  
   
-3. Tıklayın **önkoşulları** açmak için düğmeyi **önkoşulları** iletişim kutusu.  
+3. **Önkoşullar iletişim kutusunu** açmak için **Önkoşullar** düğmesine tıklayın.  
   
-4. İçinde **önkoşulları** iletişim kutusunda, emin olun **Önkoşul bileşenlerini yüklemek için Kurulum programını Oluştur** onay kutusu seçilidir.  
+4. **Önkoşullar** iletişim kutusunda, **Önkoşul bileşenlerini yüklemek Için Kurulum programı oluştur** onay kutusunun işaretli olduğundan emin olun.  
   
-5. İçinde **önkoşulları** listesinde, yükleyin ve ardından istediğiniz bileşenleri seçin **Tamam**.  
+5. **Önkoşullar** listesinde, yüklemek istediğiniz bileşenleri işaretleyin ve ardından **Tamam**' a tıklayın.  
   
-     Seçili bileşenler paketlenmeli ve yanı sıra müşterilerinizin uygulamanıza yayımlandı.  
+     Seçili bileşenler paketlenecektir ve uygulamanızla birlikte yayımlanır.  
   
-### <a name="to-specify-a-different-download-location-for-prerequisites"></a>Önkoşullar için farklı indirme konumunu belirtmek için  
+### <a name="to-specify-a-different-download-location-for-prerequisites"></a>Önkoşullar için farklı bir indirme konumu belirtmek için  
   
-1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünü tıklatın **özellikleri**.  
+1. **Çözüm Gezgini**' de bir proje seçiliyken, **Proje** menüsünde **Özellikler**' e tıklayın.  
   
-2. Seçin **Yayımla** bölmesi.  
+2. **Yayımla** bölmesini seçin.  
   
-3. Tıklayın **önkoşulları** açmak için düğmeyi **önkoşulları** iletişim kutusu.  
+3. **Önkoşullar iletişim kutusunu** açmak için **Önkoşullar** düğmesine tıklayın.  
   
-4. İçinde **önkoşulları** iletişim kutusunda, emin olun **Önkoşul bileşenlerini yüklemek için Kurulum programını Oluştur** onay kutusu seçilidir.  
+4. **Önkoşullar** iletişim kutusunda, **Önkoşul bileşenlerini yüklemek Için Kurulum programı oluştur** onay kutusunun işaretli olduğundan emin olun.  
   
-5. İçinde **Önkoşullar için yükleme konumunu belirtin** bölümünden **aşağıdaki konumdan önkoşulları karşıdan**.  
+5. **Önkoşullar için yükleme konumunu belirtin** bölümünde, **aşağıdaki konumdan önkoşulları indir**' i seçin.  
   
-6. Aşağı açılan listeden bir konum seçin veya bir URL, dosya yolunu veya FTP konumu girin ve ardından **Tamam.**  
+6. Açılan listeden bir konum seçin veya bir URL, dosya yolu veya FTP konumu girin ve ardından Tamam ' a tıklayın **.**  
   
     > [!NOTE]
-    > Belirtilen bileşenler için yükleyicileri belirtilen konumda bulunduğundan emin olmanız gerekir.  
+    > Belirtilen bileşenler için yükleyicilerin belirtilen konumda mevcut olduğundan emin olmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ClickOnce uygulamalarını yayımlama](../deployment/publishing-clickonce-applications.md)   

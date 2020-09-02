@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Düzenleyici dosya türlerini kaydetme | Microsoft Docs'
+title: 'Nasıl yapılır: düzenleyici dosya türlerini kaydetme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,22 +11,22 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 8d22e61d88b5f6e3959a369f6957efbc824384b2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204112"
 ---
-# <a name="how-to-register-editor-file-types"></a>Nasıl yapılır: Düzenleyici Dosya Türlerini Kaydetme
+# <a name="how-to-register-editor-file-types"></a>Nasıl Yapılır: Düzenleyici Dosya Türlerini Kaydetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir parçası olarak sağlanan kayıt öznitelikleri kullanarak dosya türleri Düzenleyicisi kaydetmek için en kolay yolu olan [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] yönetilen paket framework (MPF) sınıfları. Yerel paketinizi uyguluyorsanız [!INCLUDE[vcprvc](../includes/vcprvc-md.md)], düzenleyici ve ilişkili uzantıları kaydeden bir kayıt defteri betik da yazabilirsiniz.  
+Düzenleyici dosya türlerini kaydetmek için en kolay yol, [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] yönetilen paket çerçevesi (MPF) sınıflarının bir parçası olarak sağlanmış kayıt özniteliklerini kullanmaktır. Paketinizi yerel olarak uygulamadıysanız [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] , düzenleyicinizi ve ilişkili uzantıları kaydeden bir kayıt defteri betiği de yazabilirsiniz.  
   
-## <a name="registration-using-mpf-classes"></a>Kayıt MPF sınıflarını kullanma  
+## <a name="registration-using-mpf-classes"></a>MPF sınıfları kullanarak kayıt  
   
-#### <a name="to-register-editor-file-types-using-mpf-classes"></a>Düzenleyici dosya türleri MPF sınıflarını kullanarak kaydetmek için  
+#### <a name="to-register-editor-file-types-using-mpf-classes"></a>MPF sınıfları kullanarak düzenleyici dosya türlerini kaydetmek için  
   
-1. Sağlamak <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute> , VSPackage sınıfına düzenleyiciniz için uygun parametrelerle sınıfın.  
+1. <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute>VSPackage sınıfının sınıfında düzenleyiciniz için uygun parametreleri sağlayın.  
   
     ```  
     [Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute(typeof(EditorFactory), ".Sample", 32,   
@@ -35,17 +35,17 @@ Bir parçası olarak sağlanan kayıt öznitelikleri kullanarak dosya türleri D
          NameResourceID = 106)]  
     ```  
   
-     Burada ". Bu düzenleyici için kaydedilen uzantısı SAMPLE"ve"32"öncelik düzeyini ise.  
+     Burada ". Örnek ", bu düzenleyici için kayıtlı olan uzantıdır ve" 32 "öncelik düzeyidir.  
   
-     `projectGuid` Tanımlanan, çeşitli dosya türleri için GUID'dir <xref:Microsoft.VisualStudio.VSConstants.CLSID.MiscellaneousFilesProject_guid>. Çeşitli dosya türü sağlanır, böylece sonuç dosyası derleme sürecinin bir parçası olacağı değil.  
+     , `projectGuid` İçinde tanımlanan çeşitli dosya türlerinin GUID 'sidir <xref:Microsoft.VisualStudio.VSConstants.CLSID.MiscellaneousFilesProject_guid> . Çeşitli dosya türü, sonuçta elde edilen dosya yapı sürecinin bir parçası olarak kalmayacak şekilde sağlanır.  
   
-     `TemplateDir` Yönetilen temel Düzenleyici örneği ile birlikte gelen şablon dosyalarını içeren klasörü temsil eder.  
+     `TemplateDir` yönetilen temel düzenleyici örneğine dahil edilen şablon dosyalarını içeren klasörü temsil eder.  
   
-     `NameResourceID` BasicEditorUI proje Resources.h dosyasında tanımlanır ve Düzenleyici "My Düzenleyicisi" olarak tanımlar.  
+     `NameResourceID` , BasicEditorUI projesinin resources. h dosyasında tanımlanır ve düzenleyiciyi "düzenleyicim" olarak tanımlar.  
   
-2. Geçersiz kılma <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> yöntemi.  
+2. Yöntemini geçersiz kılın <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> .  
   
-     Uygulamanızda <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> yöntemi, çağrı <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> yöntemi ve örneği, düzenleyici fabrikası gösterilen aşağıda geçirin.  
+     Yöntemi uygulamanızda, <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> yöntemi çağırın ve Düzenleyici fabrikanızın örneğini aşağıda gösterildiği gibi geçirin.  
   
     ```  
     protected override void Initialize()  
@@ -59,18 +59,18 @@ Bir parçası olarak sağlanan kayıt öznitelikleri kullanarak dosya türleri D
     }  
     ```  
   
-     Bu adım, düzenleyici fabrikası hem Düzenleyici dosya uzantıları kaydeder.  
+     Bu adım hem düzenleyici fabrikası hem de düzenleyici dosya uzantılarını kaydeder.  
   
-3. Düzenleyici fabrikaları kaydını silin.  
+3. Düzenleyici fabrikalarının kaydını silin.  
   
-     VSPackage'ı çıkarıldığından, düzenleyici fabrikaları otomatik kaydı. Düzenleyici Üreteç nesnesi uyguluyorsa <xref:System.IDisposable> arabirimi, kendi `Dispose` ile Fabrika kaydını sonra yöntemi çağrıldığında [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+     VSPackage atıldığı zaman düzenleyici fabrikaları otomatik olarak silinir. Düzenleyici Fabrika nesnesi arabirimini uyguluyorsa <xref:System.IDisposable> , bu özelliğin yöntemi, `Dispose` fabrikada kaydı yapıldıktan sonra çağrılır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
-## <a name="registration-using-a-registry-script"></a>Kayıt defteri betik kullanarak kayıt  
- Yerel Düzenleyici fabrikaları ve dosya türlerini kaydetme [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] yapılır aşağıdaki gösterildiği gibi windows kayıt defterine yazmak için kayıt defteri betik kullanarak.  
+## <a name="registration-using-a-registry-script"></a>Kayıt defteri betiği kullanarak kayıt  
+ Düzenleyici fabrikalarını ve dosya türlerini yerel olarak kaydetmek [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] , aşağıda gösterildiği gibi Windows kayıt defterine yazmak için bir kayıt defteri betiği kullanılarak yapılır.  
   
-#### <a name="to-register-editor-file-types-using-a-registry-script"></a>Editor konfigurace kaydetmek için kayıt defteri betik kullanarak türleri  
+#### <a name="to-register-editor-file-types-using-a-registry-script"></a>Kayıt defteri betiği kullanarak düzenleyici dosya türlerini kaydetmek için  
   
-1. Kayıt defteri betiğinizde Düzenleyici üreteci ve GUID dize Düzenleyici fabrikası gösterildiği gibi tanımlayın `GUID_BscEditorFactory` aşağıdaki kayıt defteri betik bölümü. Ayrıca, uzantı ve düzenleyici uzantısı önceliğini tanımlayın:  
+1. Kayıt defteri betiğinizde, `GUID_BscEditorFactory` aşağıdaki kayıt defteri komut dosyasının bölümünde gösterildiği gibi düzenleyici fabrikası ve düzenleyici FABRIKASı GUID dizesini tanımlayın. Ayrıca, düzenleyici uzantısının uzantısını ve önceliğini tanımlayın:  
   
     ```  
   
@@ -90,13 +90,13 @@ Bir parçası olarak sağlanan kayıt öznitelikleri kullanarak dosya türleri D
     }  
     ```  
   
-     Bu örnekte Düzenleyicisi dosya uzantısı ".rtf" tanımlanır ve önceliği "50" olur. GUID dizeleri BscEdit kodunuzla Resource.h dosyasında tanımlanır.  
+     Bu örnekteki düzenleyici dosyası uzantısı ". RTF" ve önceliği "50" olarak tanımlanır. GUID dizeleri Bscedıt örnek projesinin Resource. h dosyasında tanımlanmıştır.  
   
-2. VSPackage kaydetme.  
+2. VSPackage 'a kaydolun.  
   
-3. Düzenleyici üreteci kaydettirir.  
+3. Düzenleyici fabrikasını kaydedin.  
   
-     Düzenleyici üreteci kaydedilmiştir <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> uygulaması.  
+     Düzenleyici fabrikası, <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> uygulamaya kaydedilir.  
   
     ```  
     // create editor factory.  
@@ -127,4 +127,4 @@ Bir parçası olarak sağlanan kayıt öznitelikleri kullanarak dosya türleri D
     }  
     ```  
   
-     GUID dizeleri BscEdit proje Resource.h dosyasında tanımlanır.
+     GUID dizeleri Bscedıt projesinin Resource. h dosyasında tanımlanmıştır.
