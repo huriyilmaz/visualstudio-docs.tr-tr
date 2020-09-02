@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Geri alma yığını clear | Microsoft Docs'
+title: 'Nasıl yapılır: geri alma yığınını temizleme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,20 +11,20 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: db77f93fd7f6af16b5358b75b6ffcd5927430653
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62549187"
 ---
-# <a name="how-to-clear-the-undo-stack"></a>Nasıl yapılır: Geri alma yığını Temizle
+# <a name="how-to-clear-the-undo-stack"></a>Nasıl Yapılır: Geri Alma Yığınını Temizleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Aşağıdaki yordam, geri alma yığını temizlemek açıklanmaktadır.  
+Aşağıdaki yordamda geri alma yığınının nasıl temizleneceği açıklanmaktadır.  
   
-### <a name="to-clear-the-undo-stack"></a>Geri alma yığını temizlemek için  
+### <a name="to-clear-the-undo-stack"></a>Geri alma yığınını temizlemek için  
   
-1. Geri alma yığını kullanımını temizlemek için [IOleUndoManager::DiscardFrom](/windows/desktop/api/ocidl/nf-ocidl-ioleundomanager-discardfrom) yöntemi. Bunun bir örneği verilmiştir:  
+1. Geri alma yığınını temizlemek için, [IOleUndoManager::D SCC](/windows/desktop/api/ocidl/nf-ocidl-ioleundomanager-discardfrom) ' i kullanın. Aşağıda buna bir örnek verilmiştir:  
   
     ```  
     HRESULT CCmdWindow::ClearUndoStack()  
@@ -45,4 +45,4 @@ Aşağıdaki yordam, geri alma yığını temizlemek açıklanmaktadır.
     ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Nasıl yapılır: Geri Alma Yönetimi Uygulama](../extensibility/how-to-implement-undo-management.md)
+ [Nasıl Yapılır: Geri Alma Yönetimini Uygulama](../extensibility/how-to-implement-undo-management.md)

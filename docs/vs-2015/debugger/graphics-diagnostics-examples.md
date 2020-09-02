@@ -1,5 +1,5 @@
 ---
-title: Grafik tanılama örnekleri | Microsoft Docs
+title: Grafik Tanılama örnekleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,34 +10,34 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 14b4ac689109e29baa4ee06c668b208d0d5227b0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159711"
 ---
 # <a name="graphics-diagnostics-examples"></a>Grafik Tanılama Örnekleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu örnekler kullanarak DirectX tabanlı uygulamalarda işleme sorunları hatalarını ayıklamak nasıl [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] grafik tanılama.  
+Bu örneklerde, Grafik Tanılama kullanarak DirectX tabanlı uygulamalarda işleme sorunlarının nasıl ayıklanacağı gösterilmektedir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
 ## <a name="capturing-graphics-information"></a>Graf bilgilerini yakalama  
- Uygulamanızda işleme sorunlarını tanılamak için grafik Tanılama'yı kullanabilmeniz için önce çalıştığı sırada bir uygulamadan grafik bilgilerini yakalama gerekir. Grafik bilgilerini yerel olarak çalışan bir uygulamadan veya uzak bir bilgisayar veya başka bir cihaz üzerinde çalışan bir uygulamadan yakalanabilir. Bu izlenecek yollar nasıl el ile veya programlama yoluyla bir uygulamadan grafik bilgilerini yakalayabilir gösterilmektedir:  
+ Uygulamanızdaki işleme sorunlarını tanılamak için Grafik Tanılama kullanabilmeniz için, çalışırken uygulamadan grafik bilgilerini yakalamanız gerekir. Grafik bilgileri, yerel olarak çalışan bir uygulamadan veya uzak bir bilgisayarda ya da başka bir cihazda çalışan bir uygulamadan yakalanabilir. Bu izlenecek yollar, bir uygulamadan el ile veya program aracılığıyla grafik bilgilerini nasıl yakalayabileceğiniz göstermektedir:  
   
 - [İzlenecek yol: Grafik Bilgilerini Yakalama](../debugger/walkthrough-capturing-graphics-information.md)  
   
 - [İzlenecek yol: Grafik Bilgilerini Program Aracılığıyla Yakalama](../debugger/walkthrough-capturing-graphics-information-programmatically.md)  
   
-## <a name="use-graphics-diagnostics-with-an-arm-based-device"></a>ARM tabanlı bir cihazla grafik Tanılama'yı kullanma  
- Uzaktan hata ayıklamayı kullanarak ARM tabanlı bir cihaz üzerinde Direct3D uygulamanızın hatalarını ayıklamak için grafik tanılama kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Bir ARM cihazla grafik tanılama kullanmak](../debugger/how-to-use-graphics-diagnostics-with-an-arm-device.md).  
+## <a name="use-graphics-diagnostics-with-an-arm-based-device"></a>ARM tabanlı bir cihazla Grafik Tanılama kullanma  
+ Uzaktan hata ayıklamayı kullanarak, ARM tabanlı bir cihazda Direct3D uygulamanızda hata ayıklamak için Grafik Tanılama kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ARM cihazındaki grafik tanılama kullanma](../debugger/how-to-use-graphics-diagnostics-with-an-arm-device.md).  
   
 ## <a name="playing-back-graphics-information"></a>Grafik bilgilerini kayıttan yürütme  
- Çalışan bir uygulamadan grafik bilgilerini yakalama sonra işleme sorunlarını tanılamak için yakalanan olayları oynatabilirsiniz. Kayıttan yürütme için geliştirme makinenizi kullanabilirsiniz veya bir uzak makine ya da bağlı olduğunuz cihaz kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Grafik tanılama kayıttan yürütme makinesini değiştirme](../debugger/how-to-change-the-graphics-diagnostics-playback-machine.md).  
+ Çalışan bir uygulamadan grafik bilgilerini yakaladıktan sonra, işleme sorunlarının tanılanabilmesi için yakalanan olayları kayıttan çalabilirsiniz. Kayıttan yürütmek için geliştirme makinenizi kullanabilir veya bağlı olduğunuz uzak bir makineyi veya cihazı kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: grafik tanılama kayıttan yürütme makinesini değiştirme](../debugger/how-to-change-the-graphics-diagnostics-playback-machine.md).  
   
-## <a name="debugging-missing-objects"></a>Eksik nesneleri hata ayıklama  
- Eksik bir nesne (veya nesneler) deneyimine grafik geliştiriciler en yaygın işleme sorunlarını biridir. Bu tür sorunlar, hataları birkaç farklı türde nesneyi görünüşe göre kaybolmasına neden olabilir çünkü tanı koymak güç olabilir. Eksik nesneleri tipik nedenleri yapılandırılmış cihaz durumu, nesnenin geometrisini veya yanlış yapılandırılmış grafik ardışık düzen dönüştürme sorunları olabilir.  
+## <a name="debugging-missing-objects"></a>Eksik nesnelerde hata ayıklama  
+ Eksik bir nesne (veya nesneleri), grafik geliştiricilerin deneyen yaygın işleme sorunlarından biridir. Birçok farklı hata türü nesnenin kaybolması nedeniyle bu tür bir sorun tanınabilmesi zor olabilir. Eksik nesnelerin tipik nedenleri, yanlış yapılandırılmış cihaz durumunu, nesnenin geometrisini dönüştürmesiyle ilgili sorunları veya hatalı yapılandırılmış bir grafik işlem hattını içerir.  
   
- Bu senaryolar, bir nesne neden eksik olduğunu belirlemek ve sorumlu kodu bulmak için grafik tanılama nasıl kullanabileceğinizi gösterir.  
+ Bu senaryolar, bir nesnenin neden eksik olduğunu belirleyebilmek ve sorumlu kodu bulmak için Grafik Tanılama nasıl kullanabileceğinizi gösterir.  
   
 - [İzlenecek yol: Cihaz Durumu Nedeniyle Eksik Nesneler](../debugger/walkthrough-missing-objects-due-to-device-state.md)  
   
@@ -45,14 +45,14 @@ Bu örnekler kullanarak DirectX tabanlı uygulamalarda işleme sorunları hatala
   
 - [İzlenecek yol: Yanlış Yapılandırılmış Ardışık Düzen Nedeniyle Eksik Nesneler](../debugger/walkthrough-missing-objects-due-to-misconfigured-pipeline.md)  
   
-## <a name="debugging-rendering-errors"></a>İşleme hatalarını ayıklama  
- Doğru görünümü olmaması bir nesne (veya nesneler) grafik geliştiriciler deneyimini başka bir yaygın bir sorundur. Bu tür sorunlar yanlış görünümünü ve bunun nedenini gelen çok belirgin değişebilir olduğundan tanı koymak güç olabilir — yanlış doku bağlama — çok çok hafif — gölgelendirici kodu veya gölgelendiricileri arasındaki etkileşim beklenmeyen bir hata. Bazı sorunların hatalarının bir bileşimiyle kaynaklanıyor olabilir.  
+## <a name="debugging-rendering-errors"></a>Hata ayıklama oluşturma hataları  
+ Doğru görünüme sahip olmayan bir nesne (veya nesneler), grafik geliştiricilerin deneydiklerinin yaygın bir sorundur. Bu tür bir sorun, yanlış görünüm ve nedeni çok açık olan, yanlış dokuyu bağlama (gölgelendirici kodundaki bir hata ya da gölgelendiriciler arasında beklenmeyen bir etkileşim) için çok daha belirgin bir şekilde bağlantı sağladığından, tanılanması zor olabilir. Bazı sorunlar nedeniyle hataların bir birleşimi olabilir.  
   
- Küçük gölgelendirici hata tarafından neden olmayan şekilde Zarif işleme sorunuyla aşağı izlemek için grafik tanılama nasıl kullanabileceğinizi gösteren bir senaryo aşağıda verilmiştir:  
+ Aşağıda, küçük bir gölgelendirici hatasından kaynaklanan, olmayan, hafif bir işleme sorununu izlemek için Grafik Tanılama nasıl kullanabileceğinizi gösteren bir senaryo verilmiştir:  
   
 - [İzlenecek yol: Gölgeleme Nedeniyle Çıkan Oluşturma Hatalarını Ayıklama](../debugger/walkthrough-debugging-rendering-errors-due-to-shading.md)  
   
-## <a name="debugging-compute-shaders"></a>Hesaplayıcı gölgelendiricilerde hata ayıklama  
- DirectCompute hesaplayıcı gölgelendiricisi hatalı sonuçlar üreten bir çekirdek hata ayıklamak için grafik tanılama kullanabilirsiniz. DirectCompute ile GPU işlem gücüne çok sayıda paralel veri öğeleri üzerinde hesaplamalar gerçekleştirmek için kullanabilirsiniz. Belirli tür sorunları, GPU kullanan birden çok kez daha iyi iyileştirilmiş CPU kod daha hızlı gerçekleştirebilirsiniz. Bununla birlikte, geleneksel hata ayıklayıcılar, GPU üzerinde çalışan kod algılayamaz. Bu türde bir kod hata ayıklama, çoğunlukla satıcıya özgü ve daha iyi Visual Studio ile tümleşebilen değil özel araçlar gerektirir. Bir aralık Gpu'lar, COMPUTE gölgelendirici hata ayıklaması daha tutarlı hale getirmek için grafik tanılama gönderme DirectCompute olayları yakalar; Direct3D işleme olaylarının yanı sıra — böylece sorunları compute gölgelendirici kodunuzda hata ayıklamak için alışık olduğunuz araçları kullanabilirsiniz.  
+## <a name="debugging-compute-shaders"></a>İşlem gölgelendiricileri hatalarını ayıklama  
+ Hatalı sonuçlar üreten DirectCompute COMPUTE-Shader çekirdekler hatalarını ayıklamak için grafik tanılama kullanabilirsiniz. DirectCompute ile, çok sayıda veri öğesi üzerinde hesaplamalar gerçekleştirmek için GPU 'nun hesaplama gücünü kullanabilirsiniz. Belirli sorun türleri için GPU kullanımı, hatta iyi iyileştirilmiş CPU kodundan birçok kez daha hızlı çalışabilir. Ancak, geleneksel hata ayıklayıcıları GPU üzerinde çalışan kodu algılayamaz. Bu tür kodların hata ayıklaması, genellikle satıcıya özgü özelleştirilmiş araçlar gerektirir ve Visual Studio ile iyi tümleşebilir. İşlem gölgelendirici hata ayıklamasını bir dizi GPU 'da daha tutarlı hale getirmek için Grafik Tanılama, işlem gölgelendirici kodunuzda hata ayıklamak üzere tanıdık araçları kullanabilmeniz için, Direct3D işleme olaylarının yanı sıra DirectCompute dağıtım olaylarını yakalar.  
   
- Bir hesaplayıcı gölgelendiricisinde hata nedeniyle bir simülasyon sorunu çözmeye anlatan bir senaryo için bkz [izlenecek yol: Hesaplayıcı Gölgelendiricisinde hata ayıklamak için grafik tanılamayı kullanma](../debugger/walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md).
+ Bir işlem gölgelendirici içindeki hatanın neden olduğu simülasyon sorununun nasıl ayıklanacağını gösteren bir senaryo için bkz. [Izlenecek yol: Using grafik tanılama, Işlem gölgelendiricide hata ayıklama](../debugger/walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md).

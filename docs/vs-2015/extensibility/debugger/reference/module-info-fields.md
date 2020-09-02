@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b80235f4ae769acbe3c61ad4b597898ee774d6a9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62547331"
 ---
-# <a name="moduleinfofields"></a>MODULE_INFO_FIELDS
+# <a name="module_info_fields"></a>MODULE_INFO_FIELDS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklama modülü bilgi bayrakları belirtir.  
+Hata ayıklama modülü bilgileri için bayrakları belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_MODULE_INFO_FIELDS {   
@@ -65,59 +65,59 @@ public enum enum_MODULE_INFO_FIELDS { 
   
 ## <a name="members"></a>Üyeler  
  MIF_NONE  
- Alanların yapısında başlatma/kullanın.  
+ Yapıdaki alanların hiçbirini başlatma/kullanma.  
   
  MIF_NAME  
- Başlat/kullanım `m_bstrName` alanındaki [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısı.  
+ `m_bstrName` [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısındaki alanı başlatın/kullanın.  
   
  MIF_URL  
- Başlat/kullanım `m_bstrUrl` alanındaki `MODULE_INFO` yapısı.  
+ Yapıda alanı başlatın/kullanın `m_bstrUrl` `MODULE_INFO` .  
   
  MIF_VERSION  
- Başlat/kullanım `m_bstrVersion` alanındaki `MODULE_INFO` yapısı.  
+ Yapıda alanı başlatın/kullanın `m_bstrVersion` `MODULE_INFO` .  
   
  MIF_DEBUGMESSAGE  
- Başlat/kullanım `m_bstrDebugMessage` alanındaki `MODULE_INFO` yapısı.  
+ Yapıda alanı başlatın/kullanın `m_bstrDebugMessage` `MODULE_INFO` .  
   
  MIF_LOADADDRESS  
- Başlat/kullanım `m_addrLoadAddress` alanındaki `MODULE_INFO` yapısı.  
+ Yapıda alanı başlatın/kullanın `m_addrLoadAddress` `MODULE_INFO` .  
   
  MIF_PREFFEREDADDRESS  
- Başlat/kullanım `m_addrPreferredLoadAddress` alanındaki `MODULE_INFO` yapısı.  
+ Yapıda alanı başlatın/kullanın `m_addrPreferredLoadAddress` `MODULE_INFO` .  
   
  MIF_SIZE  
- Başlat/kullanım `m_dwSize` alanındaki `MODULE_INFO` yapısı.  
+ Yapıda alanı başlatın/kullanın `m_dwSize` `MODULE_INFO` .  
   
  MIF_LOADORDER  
- Başlat/kullanım `m_dwLoadOrder` alanındaki `MODULE_INFO` yapısı.  
+ Yapıda alanı başlatın/kullanın `m_dwLoadOrder` `MODULE_INFO` .  
   
  MIF_TIMESTAMP  
- Başlat/kullanım `m_TimeStamp` alanındaki `MODULE_INFO` yapısı.  
+ Yapıda alanı başlatın/kullanın `m_TimeStamp` `MODULE_INFO` .  
   
  MIF_URLSYMBOLLOCATION  
- Başlat/kullanım `m_bstrUrlSymbolLocation` alanındaki `MODULE_INFO` yapısı.  
+ Yapıda alanı başlatın/kullanın `m_bstrUrlSymbolLocation` `MODULE_INFO` .  
   
  MIF_FLAGS  
- Başlat/kullanım `m_dwModuleFlags` alanındaki `MODULE_INFO` yapısı.  
+ Yapıda alanı başlatın/kullanın `m_dwModuleFlags` `MODULE_INFO` .  
   
  MIF_ALLFIELDS  
- Tüm alanlarda başlatma/kullanım `MODULE_INFO` yapısı.  
+ Yapıdaki tüm alanları başlatın/kullanın `MODULE_INFO` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu değerleri bir bağımsız değişken olarak geçirilen [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) hangi alanları göstermek için yöntemi [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısı olan başlatılacak.  
+ Bu değerler, [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) yapısının hangi alanlarının başlatıldığını göstermek Için [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) yöntemine bir bağımsız değişken olarak geçirilir.  
   
- Bu değerleri de kullanılan `MODULE_INFO` yapısı hangi alanların kullanılan ve geçerli olduğunu belirtmek için.  
+ Bu değerler, `MODULE_INFO` hangi alanların kullanıldığını ve geçerli olduğunu göstermek için yapıda de kullanılır.  
   
- Bu bayrak bit düzeyinde ile birleştirilebilir `OR`.  
+ Bu bayraklar bit düzeyinde birleştirilebilir `OR` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md)   
  [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md)

@@ -1,5 +1,5 @@
 ---
-title: G / Ç zamanı (iş parçacıkları görünümü) | Microsoft Docs
+title: G-ç zamanı (Iş parçacıkları görünümü) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 86c14292edcf8f132a14b67e931c5121105a9dc8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187440"
 ---
 # <a name="io-time-threads-view"></a>G/Ç Zamanı (İş Parçacıkları Görünümü)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu segmentlerde faaliyet zaman çizelgesi, g/ç olarak sınıflandırılmış bir kez engelleme ile ilişkilidir. Başka bir deyişle, bir iş parçacığı bir g/ç işlemin tamamlanmasını bekliyor. İş parçacığı eşzamanlılık görselleştiricisi g/ç olarak sayılıyor bir ı GÇ ile ilgili çekirdek bekleyin veya bir API engellenmiş olabilir. API'leri gibi `CreateFile()`, `ReadFile()`, ve `WSARecv()` bu gruba girer.  
+Zaman çizelgesindeki bu segmentler, g/ç olarak kategorilere ayrılan engelleyici sürelerle ilişkilendirilir. Bu, bir iş parçacığının bir g/ç işleminin bitmesini beklediği anlamına gelir. İş parçacığı bir API 'de engellenmiş olabilir veya g/ç ile ilgili bir çekirdek, eşzamanlılık görselleştiricinin g/ç olarak sayımının tamamlanmasını bekler. , Ve gibi API 'Ler `CreateFile()` `ReadFile()` `WSARecv()` Bu gruba girer.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

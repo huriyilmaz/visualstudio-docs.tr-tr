@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0b51ff1b20f197de5b6773413558b7e71764780b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72655412"
 ---
 # <a name="the-connection-property-in-the-application-settings-file-is-missing-or-incorrect"></a>Uygulama Ayarları dosyasındaki bağlantı özelliği eksik veya hatalı
@@ -25,7 +25,7 @@ Uygulama ayarları dosyasındaki bağlantı özelliği eksik veya yanlış. . Db
 
 ### <a name="to-respond-to-this-message"></a>Bu iletiye yanıt vermek için
 
-- **Tamam**'a tıklayın. . Dbml dosyasında yer alan bağlantı bilgileri uygulama ayarlarına eklenir.
+- **Tamam**’a tıklayın. . Dbml dosyasında yer alan bağlantı bilgileri uygulama ayarlarına eklenir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio 'da LINQ to SQL araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md) [izlenecek yol: LINQ to SQL sınıfları oluşturma (O-R Designer)](https://msdn.microsoft.com/library/35aad4a4-2e8a-46e2-ae09-5fbfd333c233) [nib: nasıl yapılır: uygulama ayarları ekleme veya kaldırma](https://msdn.microsoft.com/a233965c-126d-46ab-add4-efb758f576f4) [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)

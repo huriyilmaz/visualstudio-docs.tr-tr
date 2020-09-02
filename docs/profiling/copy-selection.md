@@ -1,5 +1,5 @@
 ---
-title: Kopya Seçimi | Microsoft Dokümanlar
+title: Seçimi Kopyala | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ea96fe521afe713b1eafd59390047bfdb427f6fe
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62553233"
 ---
 # <a name="copy-selection"></a>Seçimi kopyala
-Rapor sekmesinden tüm arama yığınını kopyalamak için **Kopyala'yı**tıklatın. Daha sonra bu eylemi destekleyen herhangi bir programda çağrı yığınıyapıştırabilirsiniz.
+Tüm çağrı yığınını rapor sekmesinden kopyalamak için **Kopyala**' ya tıklayın. Daha sonra bu eylemi destekleyen herhangi bir programa çağrı yığınını yapıştırabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

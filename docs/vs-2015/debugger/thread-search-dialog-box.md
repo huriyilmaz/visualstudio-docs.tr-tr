@@ -1,5 +1,5 @@
 ---
-title: İş parçacığı arama iletişim kutusu | Microsoft Docs
+title: İş parçacığı arama Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,43 +12,43 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 7090045097ed8d11d18faee44dcd74bb6f573b1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197461"
 ---
 # <a name="thread-search-dialog-box"></a>İş Parçacığı Arama İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bulmak ve belirli bir dizi düğümü seçmek için bu iletişim kutusunu kullanın [iş parçacıkları görünümü](../debugger/threads-view.md). Bu iletişim kutusunu görüntülemek için odağı taşıyın. bir **iş parçacıkları** Görünümü penceresi. Ardından **bulma iş parçacığı** gelen **arama** menüsü.  
+[Iş parçacıkları görünümündeki](../debugger/threads-view.md)belirli bir iş parçacığının düğümünü bulmak ve seçmek için bu iletişim kutusunu kullanın. Bu iletişim kutusunu görüntülemek için odağı bir **Iş parçacığı** Görünümü penceresine taşıyın. Sonra **arama** menüsünden **iş parçacığı bul** ' u seçin.  
   
  Aşağıdaki ayarlar kullanılabilir:  
   
- **iş parçacığı**  
- Aramak için iş parçacığı kimliği.  
+ **Zincirinin**  
+ Aranacak iş parçacığı KIMLIĞI.  
   
- **Module**  
+ **Modül**  
  Aranacak modül dizesi.  
   
  **Arama yönü yukarı veya aşağı**  
- Search'ün ilk yönü.  
+ Aramanın ilk yönü.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [İş Parçacığı Özellikleri İletişim Kutusu](../debugger/thread-properties-dialog-box.md)  
- Seçili iş parçacıkları görünümünde iş parçacığı özelliklerini görüntülemek için kullanılır.  
+ Iş parçacıkları görünümünde seçilen bir iş parçacığının özelliklerini görüntülemek için kullanılır.  
   
  [Spy++ Başvurusu](../debugger/spy-increment-reference.md)  
- Her Spy ++ menü ve iletişim kutusunu tanımlayan bölümler içerir.  
+ Her bir Spy + + menü ve iletişim kutusunu açıklayan bölümler içerir.  
   
- [İş parçacıkları görünümünde iş parçacığı arama](../debugger/how-to-search-for-a-thread-in-threads-view.md)  
- Belirli bir iş parçacığını Bul iş parçacıkları Görünümü'nde açıklanmaktadır.  
+ [İş parçacıkları görünümünde Iş parçacığı arama](../debugger/how-to-search-for-a-thread-in-threads-view.md)  
+ Iş parçacıkları görünümünde belirli bir iş parçacığının nasıl bulunacağını açıklar.  
   
  [İş Parçacıkları Görünümü](../debugger/threads-view.md)  
- Etkin iş parçacığı bir ağaç görünümünü gösterir  
+ Etkin iş parçacıklarının ağaç görünümünü görüntüler  
   
  [Spy++ Görünümleri](../debugger/spy-increment-views.md)  
- Spy ++ ağaç görünümlerini windows, iletileri, süreçleri ve iş parçacıkları açıklar.  
+ Windows, ileti, işlem ve iş parçacıklarının Spy + + ağaç görünümlerini açıklar.  
   
- [Spy++ kullanma](../debugger/using-spy-increment.md)  
- Spy ++ araç tanıtır ve nasıl kullanılacağını açıklar.
+ [Spy++ Kullanma](../debugger/using-spy-increment.md)  
+ Spy + + aracını tanıtır ve nasıl kullanılabileceğini açıklar.

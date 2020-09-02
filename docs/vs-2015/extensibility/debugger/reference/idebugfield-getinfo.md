@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetInfo | Microsoft Docs
+title: 'IDebugField:: GetInfo | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b4b4b17242d1d2098c085acae0b88c91ecfb5441
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62547773"
 ---
 # <a name="idebugfieldgetinfo"></a>IDebugField::GetInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem, alanın görüntülenebilir bilgilerini alır.  
+Bu yöntem, alanla ilgili görüntülenebilen bilgileri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetInfo(   
@@ -42,13 +42,13 @@ int GetInfo(
   
 #### <a name="parameters"></a>Parametreler  
  `dwFields`  
- [in] Bir birleşimi [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) görüntülenecek bilgi seçer sabitler. Alanın bir sembol temsil ediyorsa, genellikle sembol adı ve türü budur.  
+ 'ndaki Görüntülenecek bilgileri seçen [FIELD_INFO_FIELDS](../../../extensibility/debugger/reference/field-info-fields.md) sabitlerin birleşimi. Alan bir sembolü temsil ediyorsa, bu genellikle sembol adı ve türüdür.  
   
  `pFieldInfo`  
- [out] Bilgi sağlanan içinde döndürür [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısı.  
+ dışı Sağlanan [FIELD_INFO](../../../extensibility/debugger/reference/field-info.md) yapısındaki bilgileri döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugCustomAttributes::Reset | Microsoft Docs
+title: 'IEnumDebugCustomAttributes:: Reset | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ff86808bfd33cf7112091b028140f538932dee28
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62551357"
 ---
 # <a name="ienumdebugcustomattributesreset"></a>IEnumDebugCustomAttributes::Reset
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Sabit listesi sırası başlangıç durumuna sıfırlar.  
+Numaralandırma dizisini başlangıca sıfırlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 HRESULT Reset(void);  
@@ -35,11 +35,11 @@ int Reset();
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem çağrıldığında sonra yapılan sonraki çağrıda [sonraki](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) yöntemi numaralandırma ilk öğeyi döndürür.  
+ Bu yöntem çağrıldıktan sonra [Next](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md) yöntemine yapılan sonraki çağrı, numaralandırmanın ilk öğesini döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md)   
- [Next](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md)
+ [Sonraki](../../../extensibility/debugger/reference/ienumdebugcustomattributes-next.md)

@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 1cf759e01e5f152f2220124c90f145bfbbe3c01d
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651584"
 ---
 # <a name="implementing-custom-code-analysis-check-in-policies-for-managed-code"></a>Yönetilen Kod için Özel Kod Çözümleme İade İlkelerini Uygulama
@@ -39,7 +39,7 @@ Bir kod analizi iade ilkesi, bir takım projesi üyelerinin, sürüm denetimine 
 
 #### <a name="to-create-the-version-control-folder-for-the-check-in-policy-rule-set"></a>İade İlkesi kural kümesi için sürüm denetim klasörünü oluşturmak için
 
-1. @No__t_0 ' de, takım projesi düğümünü genişletin ve **kaynak denetimi**' ne tıklayın.
+1. İçinde [!INCLUDE[esprtfc](../includes/esprtfc-md.md)] , takım projesi düğümünü genişletin ve ardından **kaynak denetimi**' ne tıklayın.
 
 2. **Klasörler** bölmesinde, takım projesine sağ tıklayın ve ardından **Yeni klasör**' e tıklayın.
 
@@ -82,7 +82,7 @@ Bir kod analizi iade ilkesi, bir takım projesi üyelerinin, sürüm denetimine 
 
 3. **Iade ilkesi** listesinde, **Kod Analizi**' ne çift tıklayın ve **yönetilen kod için kod analizini zorla** onay kutusunun seçili olduğundan emin olun.
 
-4. **Bu kural kümesini Çalıştır** listesinde, **kaynak denetimi > \< kural kümesi Seç**' e tıklayın.
+4. **Bu kural kümesini Çalıştır** listesinde, öğesine tıklayın **\<Select Rule Set from Source Control>** .
 
 5. Sürüm denetimindeki iade ilkesi kural kümesi dosyasının yolunu yazın.
 
@@ -116,6 +116,6 @@ Bir kod analizi iade ilkesi, bir takım projesi üyelerinin, sürüm denetimine 
 
 6. Diğer şirketlerden gelen bileşenlerdeki kodu yoksaymak için, **oluşturulan koddan sonuçları bastır** onay kutusunu seçin.
 
-7. **Bu kural kümesini Çalıştır** listesinde **\<Browse... öğesine tıklayın. >** .
+7. **Bu kural kümesini Çalıştır** listesinde, öğesine tıklayın **\<Browse...>** .
 
 8. İade İlkesi kural kümesi dosyasının yerel sürümünü belirtin.

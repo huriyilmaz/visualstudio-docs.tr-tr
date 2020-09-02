@@ -15,24 +15,24 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8b8dfd5c2aaf6e7ced24bc952d7ccadc04cc72f1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72654684"
 ---
 # <a name="themes-workflow-designer-options-dialog-box-legacy"></a>Temalar, İş Akışı Tasarımcısı, Seçenekler İletişim Kutusu (Eski)
-Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] **Temalar, iş akışı Tasarımcısı, Seçenekler** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
+Bu konu başlığı altında, **Temalar, iş akışı Tasarımcısı, Seçenekler** iletişim kutusunun eski ' de nasıl kullanılacağı açıklanmaktadır [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Ya da ' i hedefliyorsanız, eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Bir tema, bir iş akışının arka plan ve ön plan renklerini, stillerini, simgelerini ve diğer görsel öğelerini tanımlar. Temaları diğer iş akışları tarafından yeniden kullanmak üzere kaydedebilirsiniz. **Temalar, iş akışı Tasarımcısı, Seçenekler** iletişim kutusunu kullanarak varsayılan ve kaydedilmiş özel temaları seçebilirsiniz. Bu iletişim kutusunu açmak için **Iş akışı** menüsünde **Özel Tema seç** ' e tıklayın. Veya iş akışı tasarım yüzeyine sağ tıklayıp **Özel Tema seç ' e**tıklayın.
 
  Aşağıdaki tabloda, **Temalar, iş akışı Tasarımcısı, Seçenekler** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
 
-|Arabirim Öğesi|Açıklama|
+|Arabirim Öğesi|Description|
 |----------------|-----------------|
 |**Yeni**|Yeni bir tema oluşturmak için [Tema yapılandırması Iletişim kutusunu (eski)](../workflow-designer/theme-configuration-dialog-box-legacy.md) açmak üzere tıklayın.|
 |**Değiştir...**|Seçili temayı değiştirmek için [Tema yapılandırması Iletişim kutusunu (eski)](../workflow-designer/theme-configuration-dialog-box-legacy.md) açmak üzere tıklayın.|
-|**Ata**|. WTM dosya adı uzantısı kullanan bir iş akışı teması dosyasına gitmek için tıklayın.|
+|**Gözat**|. WTM dosya adı uzantısı kullanan bir iş akışı teması dosyasına gitmek için tıklayın.|
 |**Bir tema seçin**|Temalar listesinin tema adı sütun başlığı. Listeden bir tema seçin, düzenlemek için **Değiştir** ' e tıklayın veya Seçili temayı iş akışı için kullanmak üzere **Tamam** ' a tıklayın.|
 |**Açıklama**|Temalar listesinin Tema açıklaması sütun başlığı.|
 |**Konum**|Temalar listesinin Tema konumu sütun başlığı.|

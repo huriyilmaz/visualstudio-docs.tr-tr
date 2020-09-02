@@ -12,27 +12,27 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 22943d3049ff0e24d00c7c29750e7dcd0efaf846
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158366"
 ---
 # <a name="hierarchies-in-visual-studio"></a>Visual Studio’da Hiyerarşiler
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tümleşik geliştirme ortamı (IDE) proje olarak görüntüleyen bir *hiyerarşi*. IDE içinde bir hiyerarşi, her düğüme bir ilişkili özellikler kümesini sahip olduğu düğümlerinin ağacıdır. A *proje hiyerarşisi* proje öğelerini, öğeleri ilişkileri ve öğeleri ilişkili özellikler ve komutları tutan bir kapsayıcıdır.
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Tümleşik geliştirme ortamı (IDE) bir projeyi *hiyerarşi*olarak görüntüler. IDE 'de hiyerarşi, her düğümün ilişkili özellikler kümesi olduğu düğüm ağacıdır. *Proje hiyerarşisi* projenin öğelerini, öğelerin ilişkilerini ve öğelerin ilişkili özelliklerini ve komutlarını tutan bir kapsayıcıdır.
 
- İçinde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], hiyerarşi arabirimini kullanarak proje hiyerarşileri Yönet <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>. <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> Arabirimi, proje öğeleri için çağırma standart komut işleyici yerine uygun hiyerarşisi penceresi komutları yönlendirir.
+ İçinde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , hiyerarşi arabirimini kullanarak proje hiyerarşilerini yönetirsiniz <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> . <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy>Arabirim, Proje öğelerinden çağırma komutlarını standart komut işleyicisi yerine uygun hiyerarşi penceresine yeniden yönlendirir.
 
-## <a name="project-hierarchies"></a>Proje hiyerarşiler
- Her proje hiyerarşisi, görüntüleyebileceği ve düzenleyebileceği öğeleri içerir. Bu öğeler, proje türüne göre değişiklik gösterir. Örneğin, bir veritabanı projesi veritabanı tabloları, veritabanı görünümlerini ve saklı yordamlarını içerebilir. Bir programlama dili proje Öte yandan, büyük olasılıkla kaynak dosyaları ve bit eşlemler ve iletişim kutuları için kaynak dosyaları içerir. Bir proje hiyerarşisi oluşturduğunuzda, bazı ek esneklik sağlayan hiyerarşileri yuvalanabilir.
+## <a name="project-hierarchies"></a>Proje hiyerarşileri
+ Her proje hiyerarşisi, görüntüleyebileceğiniz ve düzenleyebileceğiniz öğeleri içerir. Bu öğeler proje türüne göre farklılık gösterir. Örneğin, bir veritabanı projesi saklı yordamlar, veritabanı görünümleri ve veritabanı tabloları içerebilir. Diğer yandan bir programlama dili projesi, büyük olasılıkla bit eşlemler ve iletişim kutuları için kaynak dosyaları ve kaynak dosyaları içerir. Hiyerarşiler iç içe olabilir, bu da bir proje hiyerarşisi oluştururken bazı ek esneklik sağlar.
 
- Yeni bir proje türü oluşturduğunuzda, proje türü içinde düzenlenebilir öğeleri tam kümesini denetler. Ancak, projeleri düzenleme desteği sahip oldukları olmayan öğeler içerebilir. Örneğin, Visual C++, HTML dosya türü için özelleştirilmiş bir düzenleyici sağlamaz olsa da Visual C++ projeleri HTML dosyaları içerebilir.
+ Yeni bir proje türü oluşturduğunuzda proje türü, içinde düzenlenebilecek öğelerin tüm kümesini denetler. Ancak projeler, düzen desteği olmayan öğeler içerebilir. Örneğin, Visual C++, HTML dosya türü için özelleştirilmiş bir düzenleyici sağlamasa bile, Visual C++ projeler HTML dosyaları içerebilir.
 
- Kalıcılık içerdikleri öğelerin hiyerarşileri Yönet. Uygulama hiyerarşisi hiyerarşi içinde öğelerin Kalıcılık etkileyen herhangi bir özel özellikler denetim gerekir. Örneğin, öğeleri deposundaki dosyaları yerine nesneleri temsil ediyorsa, hiyerarşi uygulama söz konusu nesnelerin Kalıcılık kontrol gerekir. IDE uyumlu kullanıcı girişi öğelerini kaydetmek için hiyerarşi yönlendirir, ancak IDE öğeleri kaydetmek için gereken tüm eylemleri denetlemez. Bunun yerine, denetiminde projesidir.
+ Hiyerarşiler içerdikleri öğelerin kalıcılığını yönetir. Hiyerarşinin uygulanması, hiyerarşideki öğelerin kalıcılığını etkileyen özel özellikleri denetmelidir. Örneğin, öğeler dosyalar yerine bir depodaki nesneleri temsil ediyorsa, hiyerarşi uygulamasının bu nesnelerin kalıcılığını denetmesi gerekir. IDE, öğeleri Kullanıcı girişiyle uyumlu olarak kaydetmek için hiyerarşiyi yönlendirir, ancak IDE, bu öğeleri kaydetmek için gereken herhangi bir eylemi denetlemez. Bunun yerine, proje denetimde olur.
 
- Bir kullanıcı bir öğe bir düzenleyicide açıldığında, o öğe denetimleri hiyerarşi seçilir ve etkin olan hiyerarşi haline gelir. Seçili hiyerarşiyi bir öğeye hareket kullanılabilir komutları kümesini belirler. Bu şekilde kullanıcı odağı izleme, kullanıcının geçerli bağlam yansıtacak şekilde hiyerarşi sağlar.
+ Bir Kullanıcı düzenleyicide bir öğeyi açtığında, bu öğeyi denetleyen hiyerarşi seçilir ve etkin hiyerarşi haline gelir. Seçili hiyerarşi, öğede işlem yapması için kullanılabilen komut kümesini belirler. Kullanıcı odağı bu şekilde izlemek, hiyerarşinin kullanıcının geçerli içeriğini yansıtmasını sağlar.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Proje türleri](../../extensibility/internals/project-types.md) [seçim ve para birimi IDE'de](../../extensibility/internals/selection-and-currency-in-the-ide.md) [VSSDK örnekleri](../../misc/vssdk-samples.md)
+ IDE [VSSDK örneklerindeki](../../misc/vssdk-samples.md) [Proje türleri](../../extensibility/internals/project-types.md) [seçimi ve para birimi](../../extensibility/internals/selection-and-currency-in-the-ide.md)

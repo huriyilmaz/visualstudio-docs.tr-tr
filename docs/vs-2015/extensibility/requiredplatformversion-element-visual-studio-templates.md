@@ -9,27 +9,27 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2e5ba8cfef6674b5603cf03c73619f686338af3c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68159279"
 ---
 # <a name="requiredplatformversion-element-visual-studio-templates"></a>RequiredPlatformVersion Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Proje şablonu düzgün çalışması için gerekli işletim sistemi en düşük sürümünü belirtir. Bu öğe oluşturmak için proje şablonları kullanılan [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamalar.  
+Proje şablonunun doğru çalışması için gereken en düşük işletim sistemi sürümünü belirtir. Bu öğe, uygulama oluşturan proje şablonları için kullanılır [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] .  
   
- `RequiredPlatformVersion` Değeri doğrudan işletim sistemi sürümü ile karşılaştırılır. Varsa `RequiredPlatformVersion` işletim sistemi sürümünden daha yüksek olan şablon görünmez **yeni proje** iletişim kutusu. Bir şablon için belirttiğiniz için [!INCLUDE[win8](../includes/win8-md.md)] veya üzeri olarak ayarlayın `RequiredPlatformVersion` 6.2.0 için. Bir şablon için belirttiğiniz için [!INCLUDE[win81](../includes/win81-md.md)] veya üzeri olarak ayarlayın RequiredPlatformVersion 6.3.0 için.  
+ `RequiredPlatformVersion`Değer, işletim sisteminin sürümü ile doğrudan karşılaştırılır. , `RequiredPlatformVersion` İşletim sistemi sürümünden daha yüksekse, şablon **Yeni proje** iletişim kutusunda görünmez. Veya üzeri bir şablon belirtmek için [!INCLUDE[win8](../includes/win8-md.md)] , `RequiredPlatformVersion` 6.2.0 olarak ayarlayın. Veya üzeri bir şablon belirtmek için [!INCLUDE[win81](../includes/win81-md.md)] RequiredPlatformVersion değerini 6.3.0 olarak ayarlayın.  
   
- Belirten şablonları `RequiredPlatformVersion`= 8 önceki müşteri ile uyumlu [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] şablonları.  
+ = 8 ' i belirten şablonlar `RequiredPlatformVersion` önceki müşteri şablonlarıyla uyumludur [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] .  
   
  VSTemplate  
 TemplateData  
-... TargetPlatformName  
+..... TargetPlatformName  
 RequiredPlatformVersion  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <RequiredPlatformVersion> OperatingSystem </RequiredPlatformVersion>  
@@ -48,16 +48,16 @@ RequiredPlatformVersion
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplatePlatformName](../extensibility/templatedata-element-visual-studio-templates.md)|Platformunu belirtir, proje şablonu hedefler.|  
+|[TemplatePlatformName](../extensibility/templatedata-element-visual-studio-templates.md)|Proje şablonunun hedeflediği platformu belirtir.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu metin şablon için gerekli en düşük işletim sistemi sürümünü belirtir.  
+ Bu metin, şablonun gerektirdiği en düşük işletim sistemi sürümünü belirtir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte belirten proje şablonunun hedeflediği [!INCLUDE[win8](../includes/win8-md.md)] veya üzeri.  
+ Bu örnek, proje şablonunun hedeflediği [!INCLUDE[win8](../includes/win8-md.md)] veya daha sonraki bir sürümünü belirtir.  
   
 ```xml  
 <VSTemplate Type="Project" Version="3.0.0"    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  

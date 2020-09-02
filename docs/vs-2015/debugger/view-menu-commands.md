@@ -1,5 +1,5 @@
 ---
-title: Menü komutlarını görüntüleme | Microsoft Docs
+title: Menü komutlarını görüntüle | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -12,25 +12,25 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6f8efd65c60b28c0ba50419770351d62cb615dec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146469"
 ---
 # <a name="view-menu-commands"></a>Görünüm Menü Komutları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Görünümü** menü komutları Spy ++ denetlemek için kullanıcı arabirimi sağlar.  
+**Görünüm** menüsü, Spy + + Kullanıcı arabirimini denetlemeye yönelik komutlar sağlar.  
   
  **Yazı tipi**  
- Açılır **yazı tipi** iletişim kutusu, geçerli Spy ++ görünümü kullanmak için bir yazı tipi seçebileceğiniz.  
+ Geçerli Spy + + görünümünde kullanmak üzere yazı tipi seçebileceğiniz **yazı tipi** iletişim kutusunu açar.  
   
- **Araç Çubuğu**  
- Araç çubuğunu görüntüler ya da gizler.  
+ **Toolbar**  
+ Araç çubuğunu gizler veya görüntüler.  
   
- **Durum çubuğu**  
- Durum çubuğu görüntüler ya da gizler.  
+ **Durum Çubuğu**  
+ Durum çubuğunu gizler veya görüntüler.  
   
  **Özellikler**  
- Açılır **özellikleri** etkin görünüm için iletişim kutusu.
+ Etkin görünüm için **Özellikler** iletişim kutusunu açar.

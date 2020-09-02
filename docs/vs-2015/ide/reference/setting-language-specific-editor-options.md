@@ -14,29 +14,29 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 868c4e2f8b03002bbf7c6a6d0855f2a9af3fa95f
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72654298"
 ---
 # <a name="setting-language-specific-editor-options"></a>Dile Özgü Düzenleyici Seçeneklerini Ayarlama
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], belirli programlama dilleri için uygulanan çeşitli metin düzenleyici seçenekleri sunar.
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] belirli programlama dilleri için uygulanan çeşitli metin düzenleyici seçenekleri sunar.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Seçenekler, metin düzenleyici, temel (Visual Basic)](../../ide/reference/options-text-editor-basic-visual-basic.md) @No__t_1 kod için son yapılar, kod yeniden biçimlendirme, ana hat ve hata düzeltme önerilerine yönelik ayarları açıklar.
+ [Seçenekler, metin düzenleyici, temel (Visual Basic)](../../ide/reference/options-text-editor-basic-visual-basic.md) Son yapılar, kod yeniden biçimlendirme, ana hat ve hata düzeltme önerilerine yönelik ayarları, diğerleri arasında kod için açıklar [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .
 
- [Seçenekler, metin düzenleyici, C/C++, biçimlendirme](../../ide/reference/options-text-editor-c-cpp-formatting.md) , c ve C++ Code için anahat oluşturma, girintileme, hızlı bilgi ve diğer ayarları açıklar.
+ [Seçenekler, metin düzenleyici, C/C++, biçimlendirme](../../ide/reference/options-text-editor-c-cpp-formatting.md) C ve C++ kodu için anahat oluşturma, girintileme, hızlı bilgi ve diğer ayarları açıklar.
 
- [Seçenekler, metin düzenleyici, C/C++, gelişmiş,](../../ide/reference/options-text-editor-c-cpp-advanced.md) c ve C++kullanılırken IntelliSense ve veritabanı dosyaları için ayarları açıklar.
+ [Seçenekler, metin düzenleyici, C/C++, gelişmiş](../../ide/reference/options-text-editor-c-cpp-advanced.md) C ve C++ kullanılırken IntelliSense ve veritabanı dosyaları için ayarları açıklar.
 
- [Seçenekler, metin düzenleyici, C#biçimlendirme](../../ide/reference/options-text-editor-csharp-formatting.md) , diğerleri ve J# için C# , girintileme, yeni satır biçimlendirme ve metin sarma ayarlarını açıklar.
+ [Seçenekler, metin düzenleyici, C#, biçimlendirme](../../ide/reference/options-text-editor-csharp-formatting.md) Diğer bir deyişle C# ve J# için, girintileme, yeni satır biçimlendirme ve metin kaydırma ayarlarını açıklar.
 
- [Seçenekler, metin C#düzenleyici, gelişmiş](../../ide/reference/options-text-editor-csharp-advanced.md) , ve J# için C# anahat, hata tanımlama ve XML belgesi Açıklama ayarlarını açıklar.
+ [Seçenekler, metin düzenleyici, C#, gelişmiş](../../ide/reference/options-text-editor-csharp-advanced.md) C# ve J# için anahat oluşturma, hata tanımlama ve XML belge açıklama ayarlarını açıklar.
 
- [Seçenekler, metin C#düzenleyici, IntelliSense](../../ide/reference/options-text-editor-csharp-intellisense.md) , C# ve J# kodunda çalışırken IntelliSense tamamlanma listesinin nasıl davranacağını belirten ayarları açıklar.
+ [Seçenekler, metin düzenleyici, C#, IntelliSense](../../ide/reference/options-text-editor-csharp-intellisense.md) C# ve J# kodunda çalışırken IntelliSense tamamlanma listesinin nasıl davranacağını belirten ayarları açıklar.
 
  [Doğrulama, CSS, metin düzenleyici, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/library/5afe0808-16bb-420f-b620-7ca1a4d9f2cc) Geçişli stil sayfaları (CSS) için deyimin tamamlanmasını ve hata düzeltme ayarlarını açıklar.
 

@@ -13,18 +13,18 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ca7d6bfb799f0a9460702c4b581ef3f5261672b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147492"
 ---
-# <a name="jmccodespec"></a>JMC_CODE_SPEC
+# <a name="jmc_code_spec"></a>JMC_CODE_SPEC
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yapı, modül JustMyCode bilgilerini ayarlamak için kullanılır.  
+Bu yapı, bir modül için Adatmycode bilgilerini ayarlamak için kullanılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _JMC_CODE_SPEC {  
@@ -41,21 +41,21 @@ public struct JMC_CODE_SPEC {
 ```  
   
 ## <a name="members"></a>Üyeler  
- fIsUserCode  
- Sıfır olmayan (`TRUE`) modülü kullanıcı kodu; göz önünde bulundurulması, aksi takdirde, sıfır (`FALSE`) modülü harici kod olarak işlem görecek ve değil ayıklanacak ise.  
+ Fkullanıcıkodu  
+ `TRUE`Modül Kullanıcı kodu olarak düşünülse sıfır olmayan (), aksi takdirde, `FALSE` Modül dış kod olarak değerlendirilip ayıklanamayacak kadar sıfır ().  
   
  bstrModuleName  
  Söz konusu modülün adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı için tür yapıları listesi olarak geçirilen [SetJustMyCodeState](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md) yöntemi.  
+ Bu yapı, [Setyatmycodestate](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md) metoduna bu tür yapıların bir listesi olarak geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

@@ -12,16 +12,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f313865f892fb17b5c7e2c5f0ad7ecfc800be803
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145571"
 ---
 # <a name="tier-interaction-views"></a>Etkileşim Görünümleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Katman etkileşim profili oluşturma veritabanları ile iletişim kuran çok katmanlı uygulamaların işlevlerin yürütme sürelerini hakkında ek bilgi sağlayan [!INCLUDE[vstecado](../includes/vstecado-md.md)]. Verileri yalnızca zaman uyumlu işlev çağrıları için toplanır. Tüm profil oluşturma yöntemleri katman etkileşim verileri içerebilir.  
+Katman etkileşimi profili oluşturma, ile veritabanlarıyla iletişim kuran çok katmanlı uygulamalardaki işlevlerin yürütme zamanları hakkında ek bilgiler sağlar [!INCLUDE[vstecado](../includes/vstecado-md.md)] . Veriler yalnızca zaman uyumlu işlev çağrıları için toplanır. Katman etkileşim verilerini tüm profil oluşturma yöntemlerine dahil edebilirsiniz.  
   
  **Gereksinimler**  
   

@@ -14,48 +14,48 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bd60c855bacaf62beec47c9f977d0ab220ce7ca6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145540"
 ---
 # <a name="tier-interactions-view"></a>Katman Etkileşimleri Görünümü
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Katman etkileşim profili oluşturma veritabanları ile iletişim kuran çok verili uygulamaların yürütme sürelerini işlevleri hakkında ek bilgi sağlayan [!INCLUDE[vstecado](../includes/vstecado-md.md)]. Verileri yalnızca zaman uyumlu işlev çağrıları için toplanır.  
+Katman etkileşimi profili oluşturma, ile veritabanlarıyla iletişim kuran çok katmanlı uygulamaların işlevlerinde yürütme süreleri hakkında ek bilgiler sağlar [!INCLUDE[vstecado](../includes/vstecado-md.md)] . Veriler yalnızca zaman uyumlu işlev çağrıları için toplanır.  
   
  **Gereksinimler**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)]  
   
-  Etkileşimleri görünümü iki dosyada katman etkileşim verileri görüntüler:  
+  Etkileşimler görünümü, katman etkileşim verilerini iki bölme halinde görüntüler:  
   
-- Ana bölme bir hiyerarşik ağaç vardır. Veritabanı bağlantıları ilişkin birleşik veriler en üst düzey satır içeren bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] sayfası ya da işlem. Alt düğümler üst veritabanı bağlantıları ilişkin birleşik veriler içerir.  
+- Ana bölme hiyerarşik bir ağacıdır. En üst düzey satır, bir sayfa veya işlemin veritabanı bağlantıları için toplanan verileri içerir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] . Alt düğümler, üst öğenin veritabanı bağlantıları için toplanan verileri içerir.  
   
-- Bir veritabanı çağrısı düğüm ana bölmede tıkladığınızda, veriler veritabanı çağrısı örneği için Ayrıntılar bölmesinde görüntülenir.  
+- Ana bölmedeki bir veritabanı çağrısı düğümüne tıkladığınızda, veritabanı çağrısının örneğine ilişkin veriler Ayrıntılar bölmesinde görüntülenir.  
   
-  Süre, milisaniye sayısını veya CPU saat işareti olarak görüntülenir. Görüntülenen zaman birimi değiştirmek için tıklayın **Araçları** menüsünde tıklayın **seçenekleri**ve ardından aşağıdakilerden birini seçin **zamanın gösterilme biçimi değerleri olarak** seçenekleri.  
+  Süre, milisaniye sayısı veya CPU saat işaretleri sayısı olarak görüntülenir. Görüntülenecek zaman birimini değiştirmek için, **Araçlar** menüsüne tıklayın, **Seçenekler**' e tıklayın ve ardından **zaman değerlerini göster** seçeneklerinden birini belirleyin.  
   
-## <a name="master-pane"></a>Ana bölmesi  
+## <a name="master-pane"></a>Ana bölme  
   
 |Sütun|Açıklama|  
 |------------|-----------------|  
-|**Ad**|-Bir üst düzey satır, profili oluşturulmuş işlem ya da Web sayfası adı için.<br />-Veritabanı bağlantısı için bir satır, veritabanını barındıran sunucunun adı.|  
-|**Veritabanı**|(Yalnızca veritabanı bağlantı satırlar) veritabanının adı.|  
-|**Sayısı**|İşlem, Web sayfası veya veritabanı bağlantısı tarafından oluşturulan isteklerinin toplam sayısı.|  
-|**Toplam geçen süre**|İşlem, Web sayfası veya veritabanı bağlantısı herhangi bir isteği yürütmek için harcanan toplam süre.|  
-|**Geçen maksimum süre**|İşlem, Web sayfası veya veritabanı bağlantısı herhangi bir istek yürütülürken harcanan maksimum süre.|  
-|**Geçen minimum süre**|İşlem, Web sayfası veya veritabanı bağlantısı herhangi bir istek yürütülürken harcanan minimum süre.|  
-|**Geçen ortalama süre**|İşlem, Web sayfası veya veritabanı bağlantısı isteği yürütmek için harcanan ortalama süre.|  
+|**Ad**|-En üst düzey bir satır için, profili oluşturulmuş işlemin veya Web sayfasının adı.<br />-Veritabanı bağlantı satırı için, veritabanını barındıran sunucunun adı.|  
+|**Veritabanı**|Veritabanının adı (yalnızca veritabanı bağlantı satırları).|  
+|**Biriktirme**|İşlem, Web sayfası veya veritabanı bağlantısı tarafından oluşturulan isteklerin toplam sayısı.|  
+|**Geçen toplam süre**|İşlem, Web sayfası veya veritabanı bağlantısından herhangi bir isteği yürütmek için harcanan toplam süre.|  
+|**Geçen en uzun süre**|İşlem, Web sayfası veya veritabanı bağlantısından herhangi bir isteği yürütmek için harcanan en uzun süre.|  
+|**Geçen en az süre**|İşlem, Web sayfası veya veritabanı bağlantısından herhangi bir isteği yürütmek için harcanan en kısa süre.|  
+|**Ortalama geçen süre**|İşlemin, Web sayfasının veya veritabanı bağlantısının bir isteğini yürütmek için harcanan ortalama süre.|  
   
-## <a name="database-connection-details-pane"></a>Veritabanı bağlantı ayrıntıları bölmesi  
+## <a name="database-connection-details-pane"></a>Veritabanı bağlantısı ayrıntıları bölmesi  
   
 |Sütun|Açıklama|  
 |------------|-----------------|  
 |**Komut metni**|İsteğin SQL sorgusu.|  
-|**Sorgu sayısı**|Sorgu çalıştırılma sayısı.|  
-|**Toplam geçen süre**|Örnek sorgu yürütmek için harcanan toplam süre.|  
-|**Geçen maksimum süre**|Herhangi bir örnek sorgu yürütmek için harcanan maksimum süre.|  
-|**Geçen minimum süre**|Herhangi bir örnek sorgu yürütmek için harcanan minimum süre.|  
-|**Geçen ortalama süre**|Bir örnek sorgu yürütmek için harcanan ortalama süre.|
+|**Sorgu sayısı**|Sorgunun kaç kez çalıştırıldığı.|  
+|**Geçen toplam süre**|Sorgunun örneklerini yürütmek için harcanan toplam süre.|  
+|**Geçen en uzun süre**|Sorgunun herhangi bir örneğini yürütmek için harcanan en uzun süre.|  
+|**Geçen en az süre**|Sorgunun herhangi bir örneğini yürütmek için harcanan en kısa süre.|  
+|**Ortalama geçen süre**|Sorgunun bir örneğini yürütmek için harcanan ortalama süre.|

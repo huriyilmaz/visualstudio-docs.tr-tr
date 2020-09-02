@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 3d56f2dfc2924008a6be293fe1498f0ffe32abaf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651434"
 ---
 # <a name="logical-operators-in-search-expressions"></a>Arama İfadelerindeki Mantıksal İşleçler
@@ -27,11 +27,11 @@ Mantıksal işleçleri kullanarak, daha karmaşık arama ifadelerini daha basit 
 > [!IMPORTANT]
 > Arama altyapısının bunları tanıması için tüm büyük harflerle mantıksal işleçler girmeniz gerekir.
 
-|Arama yapmak için|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|Örnek|Sonuç|
+|Arama yapmak için|Kullanın|Örnek|Sonuç|
 |-------------------|---------|-------------|------------|
 |Aynı konunun her iki terimi|AND|DIB ve palet|Hem "DIB" hem de "palet" içeren konular.|
 |Konu başlığında iki terim|VEYA|Raster veya vektör|"Tarama" ya da "vektör" içeren konular.|
-|Aynı konu başlığında ikinci terim olmadan ilk terim|BAŞLATıLMADı|"işletim sistemi" DOS DEĞIL|"İşletim sistemi" ("DOS" değil) içeren konular.|
+|Aynı konu başlığında ikinci terim olmadan ilk terim|NOT|"işletim sistemi" DOS DEĞIL|"İşletim sistemi" ("DOS" değil) içeren konular.|
 |Her iki terim de bir konu başlığında birlikte kapat|KALEMIN|çekirdeğin YAKıNıNDA Kullanıcı|"Kernel" öğesinin yakın yakınına "user" içeren konular.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.

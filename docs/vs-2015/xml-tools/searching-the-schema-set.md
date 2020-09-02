@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0e3a8563d5e2cd29c9c521761498d7ef87b7cbab
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656166"
 ---
 # <a name="searching-the-schema-set"></a>Şema Kümesini Arama
@@ -32,11 +32,11 @@ XML şeması Gezgini şema kümesini aşağıdaki yollarla aramanızı sağlar:
 
  XML şeması Gezgini şema kümesini Aşağıdakiler için arar:
 
-- Belirtilen anahtar sözcükle eşleşen herhangi bir `name` veya `ref` özniteliği. Bu, öğeleri, öznitelikleri, türleri ve diğer adı adına göre bulmanızı sağlar.
+- `name` `ref` Belirtilen anahtar sözcükle eşleşen any veya öznitelikler. Bu, öğeleri, öznitelikleri, türleri ve diğer adı adına göre bulmanızı sağlar.
 
-- Include deyimlerinin `schemaLocation` öznitelikleri.
+- `schemaLocation`Include deyimlerinin öznitelikleri.
 
-- İmport deyimlerinin `namespace` öznitelikleri.
+- `namespace`İmport deyimlerinin öznitelikleri.
 
 ## <a name="schema-specific-search"></a>Şemaya özgü arama
  XML şeması Gezgini, XML şema Gezgini 'nin bağlam menüsünü kullanarak erişebileceğiniz yerleşik aramalar da içerir. Kullanılabilir bağlam menüleri hakkında daha fazla bilgi için bkz. [Bağlam menüleri](../xml-tools/context-menus-xml-schema-explorer.md). Ayrıca, başlangıç görünümünden şemaya özgü bir arama da yapabilirsiniz; daha fazla bilgi için [Başlangıç görünümü](../xml-tools/start-view.md) konusunun "şema kümesi ayrıntıları" bölümüne bakın.

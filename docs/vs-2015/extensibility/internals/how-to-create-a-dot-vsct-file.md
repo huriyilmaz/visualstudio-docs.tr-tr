@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Oluşturma bir. Vsct dosya | Microsoft Docs'
+title: 'Nasıl yapılır: oluşturma. Vsct dosyası | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,55 +11,55 @@ caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a2483c000bb7c9446ac51bb94ef4006a7b2ac89f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158343"
 ---
-# <a name="how-to-create-a-vsct-file"></a>Nasıl yapılır: .Vsct Dosyası Oluşturma
+# <a name="how-to-create-a-vsct-file"></a>Nasıl Yapılır: .Vsct Dosyası Oluşturma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir XML tabanlı Visual Studio komut tablosu (.vsct) yapılandırma dosyası oluşturmanın birkaç yolu vardır.  
+XML tabanlı Visual Studio komut tablosu yapılandırma (. vsct) dosyası oluşturmanın birkaç yolu vardır.  
   
-- İçinde yeni bir VSPackage oluşturabilirsiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] paketi şablonu.  
+- Paket şablonunda yeni bir VSPackage oluşturabilirsiniz [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
-- XML-tabanlı komut tablosu yapılandırma derleyici Vsct.exe, varolan .ctc dosyasından bir dosya oluşturmak için kullanabilirsiniz.  
+- Var olan bir. CTC dosyasından bir dosya oluşturmak için, XML tabanlı komut tablosu yapılandırma derleyicisini Vsct.exe kullanabilirsiniz.  
   
-- Vsct.exe varolan .cto dosyasından .vsct dosyası oluşturmak için kullanabilirsiniz.  
+- Var olan bir. CTO dosyasından bir. vsct dosyası oluşturmak için Vsct.exe kullanabilirsiniz.  
   
-- El ile yeni bir .vsct dosyası da oluşturabilirsiniz.  
+- El ile yeni bir. vsct dosyası oluşturabilirsiniz.  
   
-  Bu konuda, el ile yeni .vsct dosyası oluşturma açıklanmaktadır.  
+  Bu konuda, yeni bir. vsct dosyasının el ile nasıl oluşturulacağı açıklanmaktadır.  
   
-### <a name="to-manually-create-a-new-vsct-file"></a>El ile yeni bir .vsct dosyası oluşturmak için  
+### <a name="to-manually-create-a-new-vsct-file"></a>El ile yeni bir. vsct dosyası oluşturmak için  
   
-1. Başlangıç [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+1. Başlatın [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
-2. Üzerinde **dosya** menüsünde **yeni**ve ardından **dosya**.  
+2. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Dosya**' ya tıklayın.  
   
-3. İçinde **şablonları** bölmesinde tıklayın **XML dosyası** ve ardından **açık**.  
+3. **Şablonlar** bölmesinde, **XML dosyası** ' na ve sonra **Aç**' a tıklayın.  
   
-4. Üzerinde **görünümü** menüsünde tıklatın **Özellikler penceresi** XML dosyasının özelliklerini görüntülemek için.  
+4. **Görünüm** menüsünde, **Özellikler penceresi** ' ne tıklayarak XML dosyasının özelliklerini görüntüleyin.  
   
-5. İçinde **özellikleri** penceresi, şemalar özelliği Gözat (...) düğmesine tıklayın.  
+5. **Özellikler** penceresinde, şemalar özelliğindeki (...) düğmesine tıklayın.  
   
-6. XSD şemaları listesinde vsct.xsd şema seçin. Listede değilse, **Ekle** ve dosyayı yerel bir sürücüde bulun. Tıklayın **Tamam** işiniz bittiğinde.  
+6. XSD şemaları listesinde vsct. xsd şemasını seçin. Listede yoksa, **Ekle** ' ye tıklayın ve dosyayı yerel bir sürücüde bulun. İşiniz bittiğinde **Tamam** ' a tıklayın.  
   
-7. XML dosyasında yazın `<CommandTable` ve sonra SEKME tuşuna basın. Kapatma etiketi yazarak `>`.  
+7. XML dosyasında yazın `<CommandTable` ve ardından SEKME tuşuna basın. Yazarak etiketi kapatın `>` .  
   
-     Bu temel .vsct dosyası oluşturur.  
+     Bu, temel bir. vsct dosyası oluşturur.  
   
-8. XML dosyasının eklemek istediğiniz öğeleri doldurmak, için uygun [VSCT şema](../../extensibility/vsct-xml-schema-reference.md). Daha fazla bilgi için [yazma. Vsct dosyaları](../../extensibility/internals/authoring-dot-vsct-files.md)  
+8. [Vsct şemasına](../../extensibility/vsct-xml-schema-reference.md)göre eklemek istediğiniz XML dosyasının öğelerini girin. Daha fazla bilgi için bkz [. yazma. Vsct dosyaları](../../extensibility/internals/authoring-dot-vsct-files.md)  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yalnızca .vsct dosyası bir projeye ekleme derlemek için neden olmaz. Derleme işleminde içermelidir.  
+ Yalnızca bir. vsct dosyasını bir projeye eklemek, derlemeye neden olmaz. Yapı sürecinde bu dosyayı eklemeniz gerekir.  
   
-### <a name="to-add-a-vsct-file-to-project-compilation"></a>Projenin derlenmesi için .vsct dosyası eklemek için  
+### <a name="to-add-a-vsct-file-to-project-compilation"></a>Proje derlemesine bir. vsct dosyası eklemek için  
   
-1. Proje dosyanız, düzenleyicide açın. Proje yüklenirse, onu önce bellekten gerekir.  
+1. Proje dosyanızı düzenleyicide açın. Proje yüklüyse, önce onu kaldırmanız gerekir.  
   
-2. Ekleme bir [ItemGroup öğesi](../../msbuild/itemgroup-element-msbuild.md) aşağıdaki örnekte gösterildiği gibi bir VSCTCompile öğesi içeren.  
+2. Aşağıdaki örnekte gösterildiği gibi, VSCTCompile öğesi içeren bir [ItemGroup öğesi](../../msbuild/itemgroup-element-msbuild.md) ekleyin.  
   
     ```xml  
     <ItemGroup>  
@@ -70,9 +70,9 @@ Bir XML tabanlı Visual Studio komut tablosu (.vsct) yapılandırma dosyası olu
   
     ```  
   
-     ResourceName öğe her zaman ayarlanmalıdır `Menus.ctmenu`.  
+     ResourceName öğesi her zaman olarak ayarlanmalıdır `Menus.ctmenu` .  
   
-3. Projeniz bir .resx dosyası içeriyorsa, aşağıdaki örnekte gösterildiği gibi bir MergeWithCTO öğesi içeren bir EmbeddedResource öğeyi ekleyin.  
+3. Projeniz bir. resx dosyası içeriyorsa, aşağıdaki örnekte gösterildiği gibi bir MergeWithCTO öğesi içeren bir EmbeddedResource öğesi ekleyin.  
   
     ```xml  
     <EmbeddedResource Include="VSPackage.resx">  
@@ -82,21 +82,21 @@ Bir XML tabanlı Visual Studio komut tablosu (.vsct) yapılandırma dosyası olu
   
     ```  
   
-     Bu işaretleme, katıştırılmış kaynaklar içeren ItemGroup öğesi içinde gitmeniz gerekir.  
+     Bu biçimlendirme, gömülü kaynakları içeren ItemGroup öğesinin içine gitmelidir.  
   
-4. Genellikle, bir paket dosyası açmak *ProjectName*Package.cs veya *ProjectName*Düzenleyicisi'nde Package.vb.  
+4. Genellikle, düzenleyicide *projectname*Package.cs veya *ProjectName*Package. vb adlı paket dosyasını açın.  
   
-5. ProvideMenuResource özniteliği aşağıdaki örnekte gösterildiği gibi paket sınıfına ekleyin.  
+5. Aşağıdaki örnekte gösterildiği gibi, Package sınıfına bir ProvideMenuResource özniteliği ekleyin.  
   
     ```csharp  
     [ProvideMenuResource("Menus.ctmenu", 1)]  
     ```  
   
-     İlk parametre değeri, proje dosyasında tanımlanan ResourceName özniteliğinin değeri aynı olmalıdır.  
+     İlk parametre değeri, proje dosyasında tanımladığınız ResourceName özniteliğinin değeriyle eşleşmelidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yazma. Vsct dosyaları](../../extensibility/internals/authoring-dot-vsct-files.md)   
+ [Özgün. Vsct dosyaları](../../extensibility/internals/authoring-dot-vsct-files.md)   
  [Visual Studio komut tablosu (. Vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
- [Nasıl yapılır: Oluşturma bir. Vsct mevcut bir dosya. Ctc dosyası](../../misc/how-to-create-a-dot-vsct-file-from-an-existing-dot-ctc-file.md)   
- [Nasıl yapılır: Oluşturma bir. Vsct mevcut bir dosya. Cto dosyası](../../misc/how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file.md)   
+ [Nasıl yapılır: oluşturma. Varolan bir dosyadan vsct dosyası. CTC dosyası](../../misc/how-to-create-a-dot-vsct-file-from-an-existing-dot-ctc-file.md)   
+ [Nasıl yapılır: oluşturma. Varolan bir dosyadan vsct dosyası. CTO dosyası](../../misc/how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file.md)   
  [VSCT XML Şeması Başvurusu](../../extensibility/vsct-xml-schema-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio çalışma alanı oluşturma | Microsoft Docs
+title: Visual Studio 'da çalışma alanı derlemesi | Microsoft Docs
 ms.date: 02/21/2018
 ms.topic: conceptual
 author: vukelich
@@ -8,57 +8,57 @@ manager: viveis
 ms.workload:
 - vssdk
 ms.openlocfilehash: 82660ee772280563b91830aaf1a18da0bc742b28
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62553334"
 ---
-# <a name="workspace-build"></a>Çalışma alanı oluşturma
+# <a name="workspace-build"></a>Çalışma alanı derlemesi
 
-Derleme desteği [Klasör Aç](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) senaryoları sağlamak için bir uzatıcı gerektirir [dizine](workspace-indexing.md) ve [dosya bağlamını](workspace-file-contexts.md) verilerini [çalışma](workspaces.md), olarak çalıştırılacak iyi derleme eylemi.
+[Açık klasör](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) senaryolarında derleme desteği, [çalışma alanı](workspaces.md)için [dizinli](workspace-indexing.md) ve [Dosya bağlamı](workspace-file-contexts.md) verilerinin yanı sıra çalıştırılacak derleme eyleminin sağlaması için bir genişletici gerektirir.
 
-Uzantınızı ihtiyacınız, bir ana hat aşağıdadır.
+Uzantınızın ihtiyacı olacak bir ana hat aşağıda verilmiştir.
 
-## <a name="build-file-context"></a>Dosya içerik oluşturun
+## <a name="build-file-context"></a>Derleme dosya bağlamı
 
-- Sağlayıcı üreteci
-  - `ExportFileContextProviderAttribute` özniteliğini `supportedContextTypeGuids` tüm geçerli `string` arasındaki sabitleri `BuildContextTypes`
-  - Uygulayan `IWorkspaceProviderFactory<IFileContextProvider>`
-  - Dosya içeriği sağlayıcısı
-    - Döndürür bir `FileContext` her biri için işlemi ve desteklenen yapılandırma derleme
+- Sağlayıcı fabrikası
+  - `ExportFileContextProviderAttribute``supportedContextTypeGuids`tüm geçerli sabitleri olan özniteliği `string``BuildContextTypes`
+  - Uygular `IWorkspaceProviderFactory<IFileContextProvider>`
+  - Dosya bağlamı sağlayıcısı
+    - `FileContext`Her derleme işlemi için bir döndür ve desteklenen yapılandırma
       - `contextType` Kaynak <xref:Microsoft.VisualStudio.Workspace.Build.BuildContextTypes>
-      - `context` uygulayan <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> ile `Configuration` özelliği olarak derleme yapılandırmasını (örneğin `"Debug|x86"`, `"ret"`, veya `null` uygulanabilir değilse). Alternatif olarak, bir örneğini kullanması <xref:Microsoft.VisualStudio.Workspace.Build.BuildConfigurationContext>. Yapılandırma değeri **gerekir** dizinli dosya veri değeri yapılandırmasından eşleşmesi.
+      - `context` , <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> `Configuration` yapı yapılandırması olarak özelliği ile uygular (örneğin,, `"Debug|x86"` `"ret"` veya `null` geçerli değilse). Alternatif olarak, bir örneğini kullanın <xref:Microsoft.VisualStudio.Workspace.Build.BuildConfigurationContext> . Yapılandırma değeri, dizinli dosya veri değeri **yapılandırmasıyla eşleşmelidir.**
 
-## <a name="indexed-build-file-data-value"></a>Dizinli derleme dosya veri değeri
+## <a name="indexed-build-file-data-value"></a>Dizinli derleme dosyası veri değeri
 
-- Sağlayıcı üreteci
-  - `ExportFileScannerAttribute` özniteliğini `IReadOnlyCollection<FileDataValue>` desteklenen bir tür olarak
-  - Uygulayan `IWorkspaceProviderFactory<IFileScanner>`
-- Üzerinde dosya tarayıcı `ScanContentAsync<T>`
-  - Veri döndüren zaman `FileScannerTypeConstants.FileDataValuesType` bağımsız değişken türü
-  - Her yapılandırma ile oluşturulmuş bir dosya veri değerini döndürür:
-    - `type` olarak `BuildConfigurationContext.ContextTypeGuid`
-    - `context` Yapı yapılandırmanızı olarak (örneğin `"Debug|x86"`, `"ret"`, veya `null` uygulanabilir değilse). Bu değer **gerekir** dosya bağlamını yapılandırmasından eşleşmesi.
+- Sağlayıcı fabrikası
+  - `ExportFileScannerAttribute``IReadOnlyCollection<FileDataValue>`desteklenen tür olarak özniteliği
+  - Uygular `IWorkspaceProviderFactory<IFileScanner>`
+- Dosya tarayıcısı açık `ScanContentAsync<T>`
+  - `FileScannerTypeConstants.FileDataValuesType`Tür bağımsız değişkeni olduğunda verileri döndürür
+  - İle oluşturulan her yapılandırma için bir dosya veri değeri döndürür:
+    - `type` gerektiği `BuildConfigurationContext.ContextTypeGuid`
+    - `context` derleme yapılandırmanız (örneğin, `"Debug|x86"` `"ret"` veya `null` yoksa) olarak. Bu değer, dosya bağlamındaki **yapılandırmayla eşleşmelidir.**
 
 ## <a name="build-file-context-action"></a>Derleme dosya bağlamı eylemi
 
-- Sağlayıcı üreteci
-  - `ExportFileContextActionProvider` özniteliğini `supportedContextTypeGuids` tüm geçerli `string` arasındaki sabitleri `BuildContextTypes`
-  - Uygulayan `IWorkspaceProviderFactory<IFileContextActionProvider>`
-- Eylem sağlayıcısında `IFileContextActionProvider.GetActionsAsync`
-  - Döndürür bir `IFileContextAction` eşleşen verilen `FileContext.ContextType` değeri
+- Sağlayıcı fabrikası
+  - `ExportFileContextActionProvider``supportedContextTypeGuids`tüm geçerli sabitleri olan özniteliği `string``BuildContextTypes`
+  - Uygular `IWorkspaceProviderFactory<IFileContextActionProvider>`
+- Eylem sağlayıcısı açık `IFileContextActionProvider.GetActionsAsync`
+  - `IFileContextAction`Verilen değerle eşleşen bir değer döndürür `FileContext.ContextType`
 - Dosya bağlamı eylemi
-  - Implements `IFileContextAction` ve <xref:Microsoft.VisualStudio.Workspace.Extensions.VS.IVsCommandItem>
-  - `CommandGroup` özellik döndürür `16537f6e-cb14-44da-b087-d1387ce3bf57`
-  - `CommandId` olan `0x1000` yapı için `0x1010` yeniden oluşturma için veya `0x1020` temizlemek için
+  - `IFileContextAction`Ve uygular<xref:Microsoft.VisualStudio.Workspace.Extensions.VS.IVsCommandItem>
+  - `CommandGroup` Özellik dönüşleri `16537f6e-cb14-44da-b087-d1387ce3bf57`
+  - `CommandId``0x1000`derleme, `0x1010` yeniden oluşturma veya `0x1020` Temizleme için
 
 >[!NOTE]
->Bu yana `FileDataValue` sıralanması gerekiyor, bazı çalışma ve hangi dosya tarama için tam yapı işlevselliğinde noktası açma arasındaki süre miktarını olacaktır. Gecikme, daha önce önbelleğe alınmış dizin olduğundan ilk bir klasör açılırken görülür.
+>`FileDataValue`Dizin oluşturulması gerektiğinden, çalışma alanının açılması ve dosyanın tam yapı işlevselliği için tarandığı nokta arasında bir süre olacaktır. Daha önce önbelleğe alınmış bir dizin olmadığından, gecikme bir klasörün ilk açılışından görünür.
 
-## <a name="reporting-messages-from-a-build"></a>Bir yapıdan raporlama iletileri
+## <a name="reporting-messages-from-a-build"></a>Bir derlemeden rapor iletileri
 
-Derleme bilgi, uyarı ve hata iletileri kullanıcılara iki yoldan biriyle ortaya çıkabilir. Basit bir yolla kullanmaktır <xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService> ve sağlayan bir <xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage>, şu şekilde:
+Yapı, kullanıcılara iki şekilde bilgi, uyarı ve hata iletileri yüzeysel olabilir. Basit yolu, <xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService> ve gibi bir sağlamak için <xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage> ' yi kullanmaktır:
 
 ```csharp
 using Microsoft.VisualStudio.Workspace;
@@ -88,22 +88,22 @@ private static void OutputBuildMessage(IWorkspace workspace)
 }
 ```
 
-`BuildMessage.Type` ve `BuildMessage.LogMessage` bilgileri kullanıcıya Burada sunulan davranışını denetler. Tüm `BuildMessage.TaskType` dışındaki değeri `None` oluşturacak bir **hata listesi** sağlanan Ayrıntılar girişi. `LogMessage` her zaman içinde çıkarır **derleme** bölmesinde **çıkış** araç penceresi.
+`BuildMessage.Type` ve `BuildMessage.LogMessage` bilgilerin kullanıcıya sunulma davranışını kontrol edin. Dışında herhangi bir `BuildMessage.TaskType` değer `None` , verilen ayrıntılara sahip bir **hata listesi** girişi üretir. `LogMessage`**çıktı** araç penceresinin **Build** bölmesinde her zaman çıkış olur.
 
-Alternatif olarak, uzantıları doğrudan etkileşim kurabilir **hata listesi** veya **derleme** bölmesi. Visual Studio 2017 sürüm 15.7'dan önceki sürümlerde bir hata var. burada `pszProjectUniqueName` bağımsız değişkeni <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane2.OutputTaskItemStringEx2*> göz ardı edilir.
+Alternatif olarak, uzantılar **hata listesi** veya **Yapı** bölmesiyle doğrudan etkileşime geçebilir. Visual Studio 2017 sürüm 15,7 ' den önceki sürümlerde, `pszProjectUniqueName` bağımsız değişkeninin <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputWindowPane2.OutputTaskItemStringEx2*> yok sayıldığı bir hata var.
 
 >[!WARNING]
->Arayanlar `IFileContextAction.ExecuteAsync` rastgele temel uygulamaları sağlayabilir `IProgress<IFileContextActionProgressUpdate>` bağımsız değişken. Hiçbir zaman çağırma `IProgress<IFileContextActionProgressUpdate>.Report(IFileContextActionProgressUpdate)` doğrudan. Şu anda bu bağımsız değişken kullanmak için hiçbir genel yönergeleri vardır, ancak bu yönergelerdir değiştirilebilir.
+>' De çağıranlar `IFileContextAction.ExecuteAsync` bağımsız değişken için rastgele temel uygulamalar sağlayabilir `IProgress<IFileContextActionProgressUpdate>` . Hiçbir şekilde `IProgress<IFileContextActionProgressUpdate>.Report(IFileContextActionProgressUpdate)` doğrudan çağırmayın. Şu anda bu bağımsız değişkeni kullanmaya yönelik genel bir kılavuz yoktur, ancak bu yönergeler değişebilir.
 
-## <a name="build-related-apis"></a>Derleme ilgili API'ler
+## <a name="build-related-apis"></a>Derleme ilgili API 'Leri
 
-- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> Yapı yapılandırma ayrıntıları sağlar.
-- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService> gösterir <xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage>kullanıcılara s.
+- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildConfigurationContext> derleme yapılandırma ayrıntılarını sağlar.
+- <xref:Microsoft.VisualStudio.Workspace.Build.IBuildMessageService><xref:Microsoft.VisualStudio.Workspace.Build.BuildMessage>kullanıcıları gösterir.
 
-## <a name="tasksvsjson-and-launchvsjson"></a>Tasks.vs.JSON ve launch.vs.json
+## <a name="tasksvsjson-and-launchvsjson"></a>Üzerinde tasks.vs.jsve launch.vs.js
 
-Bir launch.vs.json ya da tasks.vs.json dosyası yazma hakkında daha fazla bilgi için bkz: [yapı özelleştirme ve hata ayıklama görevleri](../ide/customize-build-and-debug-tasks-in-visual-studio.md).
+Dosya launch.vs.jsüzerinde tasks.vs.jsyazma hakkında bilgi için, bkz. [Yapı ve hata ayıklama görevlerini özelleştirme](../ide/customize-build-and-debug-tasks-in-visual-studio.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-* [Dil sunucusu Protokolü](language-server-protocol.md) -dil sunucuları Visual Studio'ya tümleştirmeyi öğrenin.
+* [Dil sunucusu protokolü](language-server-protocol.md) -dil sunucularını Visual Studio ile tümleştirmeyi öğrenin.

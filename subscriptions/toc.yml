@@ -1,0 +1,196 @@
+- name: Visual Studio abonelikleri
+  href: index.yml
+- name: Yenilikler
+  href: whats-new-in-subscriptions.md
+- name: Abonelikler
+  items:
+    - name: Abonelik satın alma
+      items:
+        - name: Retail
+          href: buy-activate-retail.md
+        - name: Bulut
+          items:
+            - name: Genel bakış
+              href: vscloud-overview.md
+            - name: Faturalandırma hakkında SSS
+              href: vscloud-billing-faq.md
+            - name: CSP’ler için satın alma
+              href: vscloud-csp.md
+        - name: GitHub Enterprise ile Visual Studio
+          href: access-github.md
+        - name: Microsoft İş Ortağı Ağı
+          items:
+            - name: İş ortakları için abonelikler
+              href: program-mpn.md
+            - name: MPN için abonelikleri yönetme
+              href: manage-mpn-subscriptions.md
+        - name: Startup’lar için Microsoft
+          href: program-startups.md
+    - name: Oturum açın
+      items:
+        - name: Microsoft Hesaplarıyla oturum açma
+          href: sign-in-msa.md
+        - name: İş veya okul hesaplarıyla oturum açma
+          href: sign-in-work.md
+        - name: GitHub ile oturum açma
+          href: sign-in-github.md
+        - name: Bağlı kimlikler
+          href: use-connected-identities.md
+        - name: Alternatif kimlikler
+          href: vs-alternate-identity.md
+        - name: Oturum açma sorunları
+          href: sign-in-issues.md
+        - name: Abone verilerinin anonimleştirilmesi
+          href: anonymization.md
+    - name: Abonelikler portalına genel bakış
+      href: using-the-subscriber-portal.md
+    - name: Aboneliklerinizi yönetme
+      href: manage-vs-subscriptions.md
+    - name: Abonelik yöneticinize başvurma
+      href: contact-my-admin.md
+    - name: Yararları
+      items:
+        - name: Araçlar
+          items:
+            - name: Azure DevTest bireysel kredisi
+              href: vs-azure.md
+            - name: Azure DevOps
+              href: vs-azure-devops.md
+            - name: Azure DevTest Kullandıkça Öde
+              href: vs-azure-payg.md
+            - name: Azure EA Geliştirme ve Test
+              href: azure-ea-devtest.md
+            - name: CAST Highlight
+              href: vs-cast.md
+            - name: CloudPilot
+              href: vs-cloudpilot.md
+            - name: Kurumlar için Microsoft 365 uygulamaları
+              href: microsoft-365-apps-for-enterprise.md
+            - name: Microsoft 365 geliştiricisi
+              href: vs-m365.md
+            - name: Parasoft
+              href: vs-parasoft.md
+            - name: Power BI Pro
+              href: vs-pbi.md
+            - name: Visual Studio App Center
+              href: vs-visual-studio-app-center.md
+            - name: Visual Studio IDE
+              href: vs-ide-benefit.md
+            - name: WhiteSource Bolt
+              href: vs-whitesource.md
+            - name: Windows Geliştirici Hesabı
+              href: vs-windows-dev.md
+            - name: Windows Sanal Masaüstü
+              href: vs-windows-virtual-desktop.md
+        - name: Profesyonel geliştirme
+          items:
+            - name: CODE Magazine
+              href: vs-code-magazine.md
+            - name: DataCamp
+              href: vs-datacamp.md
+            - name: LinkedIn Learning
+              href: vs-linkedin-learning.md
+            - name: Pluralsight
+              href: vs-pluralsight.md
+        - name: Destek
+          items:
+            - name: Azure Topluluğu
+              href: vs-azure-community.md
+            - name: Concierge Desteği
+              href: vs-concierge-chat.md
+            - name: Teknik Destek
+              href: vs-tech-support.md
+- name: Yazılım ve anahtarlar
+  items:
+    - name: Yazılım indirmeleri
+      items:
+        - name: Ürün kullanılabilirliği
+          href: product-availability.md
+        - name: Yazılım indirme
+          href: download-software.md
+    - name: Kullanılabilir yazılım indirmelerinin listesi
+      href: software-download-list.md
+    - name: Ürün anahtarları
+      items:
+        - name: Ürün anahtarlarına genel bakış
+          href: product-keys.md
+        - name: Anahtar bulma ve isteme
+          href: find-keys.md
+        - name: İnternet tanıtımları
+          href: internet-demos.md
+- name: Yöneticiler
+  items:
+    - name: Yönetici sorumlulukları
+      items:
+        - name: Yönetici sorumlulukları
+          href: admin-responsibilities.md
+        - name: Ön üretim envanteri
+          href: admin-inventory.md
+        - name: Büyük takımları ve dışarıdan yüklenicileri yönetme
+          href: manage-teams.md
+        - name: Kullanıcı atamalarını izleme ve siparişleri işleme
+          href: assignments-orders.md
+    - name: Yönetici portalına erişme
+      items:
+        - name: Toplu Lisans
+          href: volume-license.md
+        - name: MPSA
+          href: mpsa.md
+        - name: Abonelikler
+          href: cloud-admin.md
+        - name: Müşteriler için iş ortaklarını yönetme
+          href: open-migration.md
+        - name: 'Video öğretici: Yönetici portalına erişme'
+          href: 'https://youtu.be/plSu6fpi7UI'
+    - name: Yönetici portalını kullanma
+      items:
+        - name: Süper yöneticiler ve yöneticiler
+          href: admin-roles.md
+        - name: Anlaşma tercihlerini belirleme
+          href: admin-prefs.md
+        - name: Genel bakış
+          href: using-admin-portal.md
+        - name: Aylık abonelikler ekleme
+          href: add-monthly-subs.md
+        - name: Abonelikleri atama
+          items:
+            - name: Tek kullanıcı ekleme
+              href: assign-license.md
+            - name: Birden çok kullanıcı ekleme
+              href: assign-license-bulk.md
+            - name: Özel abonelikler atama
+              href: assign-guid.md
+        - name: Abonelikleri düzenleme
+          href: edit-license.md
+        - name: Abonelikleri silme
+          href: delete-license.md
+        - name: Abonelik arama
+          href: search-license.md
+        - name: Abonelikleri dışarı aktarma
+          href: exporting-subscriptions.md
+        - name: Fazla Yüklemeler
+          href: handle-overclaimed-license.md
+        - name: En fazla kullanım
+          href: maximum-usage.md
+        - name: Süresi dolan abonelikler
+          href: handle-expired-license.md
+        - name: 'Abone oturum açma senaryoları  '
+          href: aliasing.md
+        - name: Kişisel e-posta ile oturum açan aboneler
+          href: personal-email-sign-ins.md
+        - name: GitHub Enterprise ile Visual Studio’yu Yönetme
+          href: assign-github.md
+- name: Kaynaklar
+  items:
+    - name: Visual Studio lisanslama teknik incelemesi
+      href: 'https://visualstudio.microsoft.com/wp-content/uploads/2019/06/Visual-Studio-Licensing-Whitepaper-May-2019.pdf'
+    - name: Abonelik seçeneklerini ve fiyatlandırmalarını karşılaştırma
+      href: 'https://visualstudio.microsoft.com/vs/pricing'
+    - name: Visual Studio IDE özelliklerini karşılaştırma
+      href: 'https://visualstudio.microsoft.com/vs/compare'
+    - name: Visual Studio Yönetim ve Abonelik Desteği
+      href: 'https://visualstudio.microsoft.com/support/support-overview-vs'
+    - name: Toplu lisanslama hükümleri
+      href: 'https://www.microsoft.com/licensing/product-licensing/products.aspx'
+    - name: Microsoft Ürün ve Hizmet Sözleşmesi (MPSA)
+      href: 'https://www.microsoft.com/licensing/mpsa/default.aspx'

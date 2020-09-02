@@ -1,5 +1,5 @@
 ---
-title: '&lt;bağımlılık&gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+title: '&lt;Dependency &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -27,18 +27,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f191b11dfce5b3877d0a31e260e092000a556a5a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68187777"
 ---
-# <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;bağımlılık&gt; öğesi (ClickOnce dağıtımı)
+# <a name="ltdependencygt-element-clickonce-deployment"></a>&lt;Dependency &gt; öğesi (ClickOnce dağıtımı)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sürümü yüklemek için uygulama ve uygulama bildiriminin konumunu tanımlar.  
+Yüklenecek uygulamanın sürümünü ve uygulama bildiriminin konumunu tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -74,63 +74,63 @@ Sürümü yüklemek için uygulama ve uygulama bildiriminin konumunu tanımlar.
 ```  
   
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler  
- `dependency` Öğesi gereklidir. Bu öznitelikleri yok. Bir dağıtım bildirimi birden çok olabilir `dependency` öğeleri.  
+ `dependency`Öğe gereklidir. Hiç özniteliği yok. Dağıtım bildiriminde birden fazla öğe olabilir `dependency` .  
   
- `dependency` Öğesi genellikle ifade ana uygulama için bağımlılıklar içinde bulunan derlemeler üzerinde bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama. Main.exe uygulamanız DotNetAssembly.dll olarak adlandırılan bir derleme kullanırsa, bu derleme bağımlılık bölümünde listelenmesi gerekir. Bağımlılık, ancak aynı zamanda diğer türleri gibi belirli bir ortak dil çalışma zamanı sürümünü bağımlılıkları bağımlılık bir derlemeyi genel derleme önbelleğinde (GAC) veya bir COM nesnesi ifade edebilir. Bir dokunmadan dağıtım teknolojisi olduğundan [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] olamaz başlatma indirme ve yükleme bağımlılıkları, ancak bu tür engellemez uygulamanın çalışmasını bir veya daha fazla belirtilen bağımlılık yoksa.  
+ `dependency`Öğesi genellikle bir uygulama içinde yer alan derlemelerdeki ana uygulamanın bağımlılıklarını ifade eder [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Main.exe uygulamanız DotNetAssembly.dll adlı bir derlemeyi kullanıyorsa, bu derlemenin bir bağımlılık bölümünde listelenmesi gerekir. Ancak bağımlılık, ortak dil çalışma zamanının belirli bir sürümünde, genel derleme önbelleğindeki (GAC) bir derlemede veya bir COM nesnesinde bağımlılıklar gibi diğer bağımlılıklar türlerini de ifade edebilir. Dokunma gerektirmeyen bir dağıtım teknolojisi olduğundan, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Bu tür bağımlılıkların indirilmesini ve yüklenmesini başlatamaz, ancak belirtilen bağımlılıklardan biri veya daha fazlası yoksa uygulamanın çalışmasını önler.  
   
 ## <a name="dependentassembly"></a>dependentAssembly  
- Gerekli. Bu öğeyi içeren `assemblyIdentity` öğesi. Aşağıdaki tabloda öznitelikleri gösterir `dependentAssembly` destekler.  
+ Gereklidir. Bu öğe öğesi içerir `assemblyIdentity` . Aşağıdaki tabloda, desteklediği öznitelikler gösterilmektedir `dependentAssembly` .  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`preRequisite`|İsteğe bağlı. Bu derlemenin GAC'de zaten olmaması gerektiğini belirtir. Geçerli değerler `true` ve `false`. Varsa `true`ve belirtilen derlemeyi GAC içinde yok, uygulamayı çalıştırmak başarısız olur.|  
-|`visible`|İsteğe bağlı. Bağımlılıkları da dahil olmak üzere, en üst düzey uygulama kimliği tanımlar. Tarafından dahili olarak kullanılan [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama depolama ve etkinleştirme yönetmek için.|  
-|`dependencyType`|Gerekli. Bu bağımlılık ve uygulama arasındaki ilişki. Geçerli değerler şunlardır:<br /><br /> -   `install`. Bileşenini, geçerli uygulamadan ayrı bir yükleme temsil eder.<br />-   `preRequisite`. Bileşen geçerli uygulama tarafından gereklidir.|  
+|`preRequisite`|İsteğe bağlı. Bu derlemenin GAC 'de zaten var olması gerektiğini belirtir. Geçerli değerler `true` ve ' dir `false` . `true`Ve belirtilen derleme GAC 'de yoksa, uygulama çalıştırılamaz.|  
+|`visible`|İsteğe bağlı. Bağımlılıkları da dahil olmak üzere en üst düzey uygulama kimliğini tanımlar. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]Uygulama depolamayı ve etkinleştirmeyi yönetmek için tarafından dahili olarak kullanılır.|  
+|`dependencyType`|Gereklidir. Bu bağımlılık ve uygulama arasındaki ilişki. Geçerli değerler:<br /><br /> -   `install`. Bileşen geçerli uygulamadan ayrı bir yüklemeyi temsil eder.<br />-   `preRequisite`. Bileşen geçerli uygulama için gereklidir.|  
 |`codebase`|İsteğe bağlı. Uygulama bildiriminin tam yolu.|  
-|`size`|İsteğe bağlı. Uygulama bildirimini bayt cinsinden boyutu.|  
+|`size`|İsteğe bağlı. Uygulama bildiriminin bayt cinsinden boyutu.|  
   
-## <a name="assemblyidentity"></a>assemblyIdentity  
- Gerekli. Bu öğenin alt öğesi olan `dependentAssembly` öğesi. İçeriği `assemblyIdentity` aynı açıklandığı olmalıdır [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama bildirimi. Aşağıdaki tabloda gösterilmektedir dosyanın öznitelikleri `assemblyIdentity` öğesi.  
+## <a name="assemblyidentity"></a>AssemblyIdentity  
+ Gereklidir. Bu öğe, öğesinin bir alt öğesidir `dependentAssembly` . İçeriği, `assemblyIdentity` uygulama bildiriminde açıklananla aynı olmalıdır [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] . Aşağıdaki tablo, öğesinin özniteliklerini gösterir `assemblyIdentity` .  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`Name`|Gerekli. Uygulamanın adını tanımlar.|  
-|`Version`|Gerekli. Uygulamanın sürüm sayısını şu biçimde belirtir: `major.minor.build.revision`|  
-|`publicKeyToken`|Gerekli. Son 8 bayt altında derleme veya uygulama imzalanan ortak anahtarı SHA-1 karmasını temsil eden 16 karakterlik bir onaltılık dize belirtir. İmzalamak için kullanılan ortak anahtar, 2048 bit olmalıdır veya büyük.|  
-|`processorArchitecture`|Gerekli. Mikro işlemciyi belirtir. Geçerli değerler `x86` 32-bit Windows için ve `IA64` 64 bit Windows için.|  
-|`Language`|İsteğe bağlı. Derlemenin iki bölümü dil kodlarını tanımlar. Örneğin, EN-US, İngilizce (ABD) anlamına gelir. Varsayılan, `neutral` değeridir. Bu öğe `asmv2` ad alanı.|  
-|`type`|İsteğe bağlı. Geriye dönük uyumluluk Windows yan yana ile yüklemek için teknoloji. Yalnızca izin verilen değer `win32`.|  
+|`Name`|Gereklidir. Uygulamanın adını tanımlar.|  
+|`Version`|Gereklidir. Uygulamanın sürüm numarasını aşağıdaki biçimde belirtir: `major.minor.build.revision`|  
+|`publicKeyToken`|Gereklidir. Uygulamanın veya derlemenin imzalandığı ortak anahtarın SHA-1 karmasının son 8 baytını temsil eden 16 karakterlik bir onaltılık dize belirtir. İmzalamak için kullanılan ortak anahtar 2048 bit veya daha büyük olmalıdır.|  
+|`processorArchitecture`|Gereklidir. Mikroişlemciyi belirtir. Geçerli değerler `x86` 32 bitlik Windows ve `IA64` 64 bit Windows içindir.|  
+|`Language`|İsteğe bağlı. Derlemenin iki bölüm dil kodunu tanımlar. Örneğin, EN-US, Ingilizce (ABD) anlamına gelir. Varsayılan değer: `neutral`. Bu öğe `asmv2` ad alanıdır.|  
+|`type`|İsteğe bağlı. Windows yan yana yüklemesi teknolojisi ile geriye dönük uyumluluk için. İzin verilen tek değer `win32` .|  
   
 ## <a name="hash"></a>hash  
- `hash` İsteğe bağlı bir alt öğedir `file` öğesi. `hash` Öğesi özniteliklere sahip değildir.  
+ `hash`Öğesi, öğesinin isteğe bağlı bir alt öğesidir `file` . `hash`Öğesinde hiç öznitelik yok.  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bir uygulamadaki tüm dosyaların algoritmik bir karma dosyaların hiçbiri dağıtımdan sonra değişmediğinden emin olmak için güvenlik denetimi olarak kullanır. Varsa `hash` öğesi dahil değildir, bu denetimi gerçekleştirilmeyecek. Bu nedenle, atlama `hash` öğesi önerilmez.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] herhangi bir dosyanın dağıtımdan sonra değişmediğinden emin olmak için bir uygulamadaki tüm dosyaların algoritmik karmasını güvenlik denetimi olarak kullanır. `hash`Öğe dahil değilse, bu denetim gerçekleştirilmez. Bu nedenle, `hash` öğesinin atlanması önerilmez.  
   
-## <a name="dsigtransforms"></a>dsig:TRANSFORMS  
- `dsig:Transforms` Öğesi gerekli alt öğesi olan `hash` öğesi. `dsig:Transforms` Öğesi özniteliklere sahip değildir.  
+## <a name="dsigtransforms"></a>dsig: dönüşümler  
+ `dsig:Transforms`Öğesi, öğesinin gerekli bir alt öğesidir `hash` . `dsig:Transforms`Öğesinde hiç öznitelik yok.  
   
-## <a name="dsigtransform"></a>dsig:Transform  
- `dsig:Transform` Öğesi gerekli alt öğesi olan `dsig:Transforms` öğesi. Aşağıdaki tabloda gösterilmektedir dosyanın öznitelikleri `dsig:Transform` öğesi.  
-  
-|Öznitelik|Açıklama|  
-|---------------|-----------------|  
-|`Algorithm`|Bu dosya için Özet hesaplamak için kullanılan algoritma. Şu anda kullanılan tek değer [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] olduğu `urn:schemas-microsoft-com:HashTransforms.Identity`.|  
-  
-## <a name="dsigdigestmethod"></a>dsig  
- `dsig:DigestMethod` Öğesi gerekli alt öğesi olan `hash` öğesi. Aşağıdaki tabloda gösterilmektedir dosyanın öznitelikleri `dsig:DigestMethod` öğesi.  
+## <a name="dsigtransform"></a>dsig: dönüştürme  
+ `dsig:Transform`Öğesi, öğesinin gerekli bir alt öğesidir `dsig:Transforms` . Aşağıdaki tablo, öğesinin özniteliklerini gösterir `dsig:Transform` .  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`Algorithm`|Bu dosya için Özet hesaplamak için kullanılan algoritma. Şu anda kullanılan tek değer [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] olduğu `http://www.w3.org/2000/09/xmldsig#sha1`.|  
+|`Algorithm`|Bu dosya için Özeti hesaplamak için kullanılan algoritma. Şu anda tarafından kullanılan tek değer [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] `urn:schemas-microsoft-com:HashTransforms.Identity` .|  
   
-## <a name="dsigdigestvalue"></a>DigestValue  
- `dsig:DigestValue` Öğesi gerekli alt öğesi olan `hash` öğesi. `dsig:DigestValue` Öğesi özniteliklere sahip değildir. Metin değeri, belirtilen dosya için hesaplanan karmasıdır.  
+## <a name="dsigdigestmethod"></a>dsig: DigestMethod  
+ `dsig:DigestMethod`Öğesi, öğesinin gerekli bir alt öğesidir `hash` . Aşağıdaki tablo, öğesinin özniteliklerini gösterir `dsig:DigestMethod` .  
+  
+|Öznitelik|Açıklama|  
+|---------------|-----------------|  
+|`Algorithm`|Bu dosya için Özeti hesaplamak için kullanılan algoritma. Şu anda tarafından kullanılan tek değer [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] `http://www.w3.org/2000/09/xmldsig#sha1` .|  
+  
+## <a name="dsigdigestvalue"></a>dsig: DigestValue  
+ `dsig:DigestValue`Öğesi, öğesinin gerekli bir alt öğesidir `hash` . `dsig:DigestValue`Öğesinde hiç öznitelik yok. Metin değeri, belirtilen dosya için hesaplanan karmadır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dağıtım bildirimleri genellikle sahip tek bir `assemblyIdentity` adı ve sürümü uygulama bildiriminin tanımlayan öğesi.  
+ Dağıtım bildirimlerinin genellikle `assemblyIdentity` uygulama bildiriminin adını ve sürümünü tanımlayan tek bir öğesi vardır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örnekte gösterildiği bir `dependency` öğesinde bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtım bildirimi.  
+ Aşağıdaki kod örneğinde bir `dependency` dağıtım bildiriminde bir öğe gösterilmektedir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] .  
   
 ```  
 <!-- Identify the assembly dependencies -->  
@@ -149,7 +149,7 @@ Sürümü yüklemek için uygulama ve uygulama bildiriminin konumunu tanımlar.
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, zaten GAC'de kurulu bir derleme üzerinde bir bağımlılık belirtir.  
+ Aşağıdaki kod örneği GAC 'de zaten yüklü olan bir derlemeye bağımlılığı belirtir.  
   
 ```  
 <dependency>  
@@ -160,7 +160,7 @@ Sürümü yüklemek için uygulama ve uygulama bildiriminin konumunu tanımlar.
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir bağımlılık belirli bir ortak dil çalışma zamanı sürümünü belirtir.  
+ Aşağıdaki kod örneği, ortak dil çalışma zamanının belirli bir sürümü için bir bağımlılık belirtir.  
   
 ```  
 <dependency>  
@@ -171,7 +171,7 @@ Sürümü yüklemek için uygulama ve uygulama bildiriminin konumunu tanımlar.
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir işletim sistemi bağımlılık belirtir.  
+ Aşağıdaki kod örneği bir işletim sistemi bağımlılığını belirtir.  
   
 ```  
 <dependency>  
@@ -185,4 +185,4 @@ Sürümü yüklemek için uygulama ve uygulama bildiriminin konumunu tanımlar.
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [ClickOnce dağıtım bildirimi](../deployment/clickonce-deployment-manifest.md)   
- [\<dependency> Öğesi](../deployment/dependency-element-clickonce-application.md)
+ [\<dependency> Dosyalarında](../deployment/dependency-element-clickonce-application.md)

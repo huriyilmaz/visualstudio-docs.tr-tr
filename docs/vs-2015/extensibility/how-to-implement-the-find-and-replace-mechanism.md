@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Uygulama Bul ve Değiştir mekanizması | Microsoft Docs'
+title: 'Nasıl yapılır: bul ve Değiştir mekanizmasını uygulama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,28 +11,28 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d4362d0b0c3f013ce6f38d13265dcc181c77012c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62548704"
 ---
-# <a name="how-to-implement-the-find-and-replace-mechanism"></a>Nasıl yapılır: Uygulama Bul ve Değiştir mekanizması
+# <a name="how-to-implement-the-find-and-replace-mechanism"></a>Nasıl Yapılır: Bul ve Değiştir Mekanizması Uygulama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio Bul/Değiştir kullanmanın iki yolu sağlar. Bir metin resim kabuğa geçirin ve, arama, vurgulama ve değiştirmeyi metin işlemek yoludur. Bu, kullanıcıların birden çok metin yayılma belirtmesine izin verir. Alternatif olarak, bu işlev, VSPackage'ı kontrol edebilirsiniz. Her iki durumda da geçerli hedef ve bütün açık belgeleri hedeflerini hakkında Kabuk bildirmeniz gerekir.  
+Visual Studio, Bul/Değiştir uygulamamanın iki yolunu sağlar. Bir yol, bir metin görüntüsünü kabuğa geçirmek ve metni aramayı, vurgulamayı ve değiştirmeyi sağlamak için bir yoldur. Bu, kullanıcıların birden çok metin yaymalarını belirlemesine olanak sağlar. Alternatif olarak, VSPackage bu işlevin kendisini denetleyebilir. Her iki durumda da, geçerli hedef ve tüm açık belgelerin hedefleri hakkında, kabuğa bildirimde bulunmalıdır.  
   
 ### <a name="to-implement-findreplace"></a>Bul/Değiştir uygulamak için  
   
-1. Uygulama <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget> çerçeve özellikleri tarafından döndürülen nesne bir arabirimdeki <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID> veya <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID>. Özel bir düzenleyici oluşturuyorsanız, özel düzenleyici sınıfı bir parçası olarak bu arabirimi uygulamalıdır.  
+1. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget>Arabirimini çerçeve özellikleri veya tarafından döndürülen nesnelerden birine uygulayın <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID> <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID> . Özel bir düzenleyici oluşturuyorsanız, bu arabirimi özel düzenleyici sınıfının bir parçası olarak uygulamalısınız.  
   
-2. Kullanım <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetCapabilities%2A> düzenleyiciniz destekleyen seçenekleri belirtin ve metin, görüntü arama uygulayıp uygulamadığını belirtmek için yöntemi.  
+2. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetCapabilities%2A>Düzenleyicinizi desteklediği seçenekleri belirtmek ve metin resmi aramasını uygulayıp uygulamadığını göstermek için yöntemini kullanın.  
   
-     Düzenleyici metin, görüntü arama destekliyorsa, uygulama <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetSearchImage%2A>.  
+     Düzenleyiciniz metin resmi aramasını destekliyorsa, uygulayın <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.GetSearchImage%2A> .  
   
-     Aksi takdirde uygulama <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A> ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A>.  
+     Aksi takdirde, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A> ve uygulayın <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A> .  
   
-3. Uygularsanız <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A> ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A> yöntemleri çağırarak arama görevlerinizi basitleştirebilecek <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindHelper> arabirimi.  
+3. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Find%2A>Ve <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindTarget.Replace%2A> yöntemlerini uygularsanız, arabirimini çağırarak arama görevlerinizi kolaylaştırabilirsiniz <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindHelper> .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsFindHelper>   

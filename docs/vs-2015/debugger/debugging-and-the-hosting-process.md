@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama ve barındırma işlemi | Microsoft Docs
+title: Hata ayıklama ve barındırma Işlemi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,30 +18,30 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 10f3968367b188203671fa6bfff48bc482efe4f7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157892"
 ---
 # <a name="debugging-and-the-hosting-process"></a>Hata Ayıklama ve Barındırma İşlemi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio barındırma işlemini, hata ayıklayıcı performansı artırır ve kısmi güven hata ayıklama ve tasarım zamanı ifade değerlendirmesi gibi yeni hata ayıklayıcı özelliklerini etkinleştirir. Gerekirse, barındırma işlemini devre dışı bırakabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Barındırma işlemini devre dışı](../ide/how-to-disable-the-hosting-process.md). Aşağıdaki bölümlerde, barındırma işlemi olmadan ve hata ayıklama arasındaki bazı farklar açıklanmaktadır.  
+Visual Studio barındırma süreci hata ayıklayıcı performansını geliştirir ve kısmi güven hata ayıklama ve tasarım zamanı ifade değerlendirmesi gibi yeni hata ayıklayıcı özelliklerini sağlar. Gerekirse barındırma işlemini devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: barındırma Işlemini devre dışı bırakma](../ide/how-to-disable-the-hosting-process.md). Aşağıdaki bölümlerde, barındırma işlemi olmadan ve ile hata ayıklama arasındaki bazı farklılıklar açıklanır.  
   
-## <a name="partial-trust-debugging-and-click-once-security"></a>Kısmi güven hata ayıklama ve tıklayın-bir kez güvenlik  
- Kısmi güven hata ayıklama barındırma işlemini gerektiriyor. Barındırma işlemini devre dışı bırakırsanız, kısmi güven güvenliği etkinleştirilmiş olsa dahi kısmi güven hata ayıklama çalışmaz **güvenlik** sayfasının **proje özellikleri**. Daha fazla bilgi için [nasıl yapılır: Barındırma işlemini devre dışı](../ide/how-to-disable-the-hosting-process.md) ve [nasıl yapılır: Kısmen güvenilen uygulamada hata ayıklama](../debugger/how-to-debug-a-partial-trust-application.md).  
+## <a name="partial-trust-debugging-and-click-once-security"></a>Kısmi güven hata ayıklama ve bir kez güvenlik  
+ Kısmi güvenle hata ayıklama barındırma işlemini gerektirir. Barındırma işlemini devre dışı bırakırsanız, **proje özelliklerinin** **güvenlik** sayfasında kısmi güven güvenliği etkin olsa bile kısmi güven hata ayıklaması çalışmaz. Daha fazla bilgi için bkz. [nasıl yapılır: barındırma Işlemini devre dışı bırakma](../ide/how-to-disable-the-hosting-process.md) ve [nasıl yapılır: kısmi güven uygulamasında hata ayıklama](../debugger/how-to-debug-a-partial-trust-application.md).  
   
-## <a name="design-time-expression-evaluation"></a>Tasarım zamanı ifade değerlendirmesi  
- Tasarım zamanı ifade her zaman, barındırma işlemi kullanır. Barındırma devre dışı bırakma işlemi **proje özellikleri** sınıf kitaplığı projeleri için tasarım zamanı ifade değerlendirmesi devre dışı bırakır. Diğer proje türleri için tasarım zamanı ifade değerlendirmesi devre dışı değil. Bunun yerine, Visual Studio gerçek yürütülebilir başlar ve barındırma işlemi olmadan tasarım zamanı değerlendirmesi için kullanır. Bu fark, farklı sonuçlar üretebilir.  
+## <a name="design-time-expression-evaluation"></a>Tasarım zamanı Ifade değerlendirmesi  
+ Tasarım zamanı ifadesi her zaman barındırma işlemini kullanır. **Proje özelliklerindeki** barındırma işlemini devre dışı bırakmak, sınıf kitaplığı projeleri için tasarım zamanı ifade değerlendirmesini devre dışı bırakır. Diğer proje türleri için tasarım zamanı ifade değerlendirmesi devre dışı değildir. Bunun yerine, Visual Studio gerçek yürütülebiliri başlatır ve barındırma işlemi olmadan tasarım zamanı değerlendirmesi için kullanır. Bu fark farklı sonuçlar üretebilir.  
   
-## <a name="appdomaincurrentdomainfriendlyname-differences"></a>AppDomain.CurrentDomain.FriendlyName farkları  
- `AppDomain.CurrentDomain.FriendlyName` barındırma işlemi etkin olup olmadığını bağlı olarak farklı sonuçlar döndürür. Eğer `AppDomain.CurrentDomain.FriendlyName` barındırma işlemi etkin döndürür *app_name*`.vhost.exe`. Bunu devre dışı barındırma işlemini çağırdığınızda, döndürür *app_name*`.exe`.  
+## <a name="appdomaincurrentdomainfriendlyname-differences"></a>AppDomain. CurrentDomain. FriendlyName farkları  
+ `AppDomain.CurrentDomain.FriendlyName` barındırma işleminin etkin olup olmadığına bağlı olarak farklı sonuçlar döndürür. `AppDomain.CurrentDomain.FriendlyName`Barındırma işlemini etkin olarak çağırırsanız, *app_name*döndürür `.vhost.exe` . Bunu çağırırsanız barındırma işlemi devre dışı bırakılır, *app_name*döndürür `.exe` .  
   
-## <a name="assemblygetcallingassemblyfullname-differences"></a>Assembly.GetCallingAssembly(). FullName farkları  
- `Assembly.GetCallingAssembly().FullName` barındırma işlemi etkin olup olmadığını bağlı olarak farklı sonuçlar döndürür. Eğer `Assembly.GetCallingAssembly().FullName` barındırma işlemi etkin döndürür `mscorlib`. Eğer `Assembly.GetCallingAssembly().FullName` barındırma işlemini devre dışı uygulama adını döndürür.  
+## <a name="assemblygetcallingassemblyfullname-differences"></a>Assembly. GetCallingAssembly (). FullName farkları  
+ `Assembly.GetCallingAssembly().FullName` barındırma işleminin etkin olup olmadığına bağlı olarak farklı sonuçlar döndürür. `Assembly.GetCallingAssembly().FullName`Barındırma işlemi etkin olarak çağırırsanız, döndürür `mscorlib` . `Assembly.GetCallingAssembly().FullName`Barındırma işlemi devre dışı olarak çağırırsanız, uygulama adını döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Barındırma süreci (vshost.exe)](../ide/hosting-process-vshost-exe.md)   
- [Nasıl yapılır: Kısmen güvenilen uygulamada hata ayıklama](../debugger/how-to-debug-a-partial-trust-application.md)   
- [Nasıl yapılır: Barındırma İşlemini Devre Dışı Bırakma](../ide/how-to-disable-the-hosting-process.md)
+ [Barındırma Işlemi (vshost.exe)](../ide/hosting-process-vshost-exe.md)   
+ [Nasıl yapılır: kısmi güven uygulamasında hata ayıklama](../debugger/how-to-debug-a-partial-trust-application.md)   
+ [Nasıl Yapılır: Barındırma Sürecini Devre Dışı Bırakma](../ide/how-to-disable-the-hosting-process.md)

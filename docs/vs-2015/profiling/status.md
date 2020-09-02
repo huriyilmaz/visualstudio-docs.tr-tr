@@ -10,71 +10,71 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3f64364caf914c030fef806c5ae17e90a8368fa3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157793"
 ---
 # <a name="status"></a>Durum
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPerfCmd.exe **durumu** seçeneği profil oluşturucuyu ve şu anda profillenen herhangi bir işlem durumuyla ilgili bilgileri görüntüler.  
+VSPerfCmd.exe **Status** seçeneği, profil oluşturucunun durumu ve şu anda profili oluşturulan tüm süreçler hakkındaki bilgileri görüntüler.  
   
- **Durumu** seçeneği, komut satırında belirtilen tek seçenek olması gerekir. Profil Oluşturucu ile VSPerfCmd.exe başlatılmalıdır **Başlat** herhangi bir durum görüntülenebilmesi seçeneği.  
+ **Durum** seçeneği, komut satırında belirtilen tek seçenek olmalıdır. Herhangi bir durumun görüntülenebilmesi için profil oluşturucunun VSPerfCmd.exe **Start** seçeneğiyle başlatılması gerekir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 VSPerfCmd.exe /Status  
 ```  
   
 #### <a name="parameters"></a>Parametreler  
- Yok.  
+ Hiçbiri  
   
 ## <a name="remarks"></a>Açıklamalar  
- **Durumu** seçeneği profil oluşturucu için aşağıdaki durum bilgileri görüntülenir.  
+ **Durum** seçeneği, Profil Oluşturucu için aşağıdaki durum bilgilerini görüntüler.  
   
  **Çıkış dosyası adı**  
  Geçerli profil oluşturucu veri dosyasının yolu ve dosya adı.  
   
- **Koleksiyon modu**  
- Örnek veya izleme  
+ **Toplama modu**  
+ ÖRNEK veya Izleme  
   
- **En fazla işlem**  
- Tek seferde profili işlemlerin sayısı ve şu anda etkin işlem sayısı.  
+ **En fazla Işlem**  
+ Tek seferde profili oluşturulabilecek en fazla işlem sayısı ve şu anda etkin olan işlem sayısı.  
   
- **En fazla iş parçacığı**  
- Tek seferde profili iş parçacığı sayısı.  
+ **En fazla Iş parçacığı**  
+ Tek seferde profili oluşturulabilecek en fazla iş parçacığı sayısı.  
   
  **Arabellek sayısı**  
- Profil oluşturma veri yazmada ayrılmış bellek arabellek sayısı.  
+ Profil oluşturma verilerini yazmak için ayrılan bellek arabelleği sayısı.  
   
- **Arabellek boyutu**  
- Bir bellek arabelleğin bayt cinsinden boyutu.  
+ **Arabelleklerin boyutu**  
+ Bellek arabelleğinin bayt cinsinden boyutu.  
   
- **Durumu** seçeneği şu anda profili oluşturulan her işlem için aşağıdaki durum bilgileri görüntüler.  
+ **Durum** seçeneği, şu anda profili oluşturulan her işlem için aşağıdaki durum bilgilerini görüntüler.  
   
- **İşlem**  
- Profilli işlemin adı.  
+ **İşleme**  
+ Profili oluşturulan işlemin adı.  
   
- **İşlem kimliği**  
- İşlem sistem tanımlayıcısı.  
+ **İşlem Kimliği**  
+ İşlemin sistem tanımlayıcısı.  
   
- **İş parçacığı sayısı**  
- Şu anda çalışan iş parçacıklarının sayısı.  
+ **Iş parçacığı sayısı**  
+ Şu anda yürütülmekte olan iş parçacıklarının sayısı.  
   
- **Başlat/Durdur sayısı**  
- Bu işlem için veri toplamayı denetlemek için birincil iç Profil Oluşturucu sayısı. Sayısı, veri toplamak için birine eşit olmalıdır. Başlat/Durdur sayısını gösterilen VSPerfCmd seçenek ve profil oluşturucu API'ler ile yönetilebilir **GlobalOn**, **GlobalOff**, **ProcessOn**, **ProcessOff**, **ThreadOn**, ve **ThreadOff**.  
+ **Başlangıç/durdurma sayısı**  
+ Bu işlem için veri toplamayı denetlemek üzere birincil iç profil oluşturucu sayısı. Sayım, veri toplamak için bire eşit olmalıdır. Başlat/Durdur sayısı profil oluşturucu API 'Leri ve VSPerfCmd seçenekleri **GlobalOn**, **globaloff**, **ProcessOn**, **ProcessOff**, **ThreadOn**ve **ThreadOff**tarafından yönetilebilir.  
   
- **Askıya alma/sürdürme sayısı**  
- Bu işlem için veri toplamayı denetlemek için ikincil iç Profil Oluşturucu sayısı. Sayısı, veri toplamak için sıfıra eşit veya daha az olmalıdır. **Askıya alma/sürdürme** sayısı yalnızca profil oluşturucu tarafından API'leri yönetilebilir.  
+ **Askıya alma/sürdürülme sayısı**  
+ Bu işlem için veri toplamayı denetlemek üzere ikincil iç profil oluşturucu sayısı. Sayım, veri toplamak için sıfırdan küçük veya sıfıra eşit olmalıdır. **Askıya alma/sürdürülme** sayısı yalnızca profil oluşturucu API 'leri tarafından yönetilebilir.  
   
- **İzleyiciye erişim hakkına sahip kullanıcılar**  
- Profil Oluşturucu için erişime sahip kullanıcılar adlarını listeler. Ek kullanıcılar verilebilir erişim VSPerfCmd.exe kullanarak **yönetici** seçeneği  
+ **İzlemek için erişim haklarına sahip kullanıcılar**  
+ Profil oluşturucuya erişimi olan kullanıcıların adlarını listeler. Ek kullanıcılara, VSPerfCmd.exe **yönetici** seçeneği kullanılarak erişim verilebilir  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [VSPerfCmd](../profiling/vsperfcmd.md)   
- [Bağımsız uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [ASP.NET Web uygulamalarında profil oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Tek başına uygulamaların profilini oluşturma](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [ASP.NET Web uygulamalarının profilini oluşturma](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
  [Profil Oluşturma Hizmetleri](../profiling/command-line-profiling-of-services.md)

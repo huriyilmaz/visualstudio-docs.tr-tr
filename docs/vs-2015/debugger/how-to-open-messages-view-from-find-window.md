@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bul penceresinden iletiler görünümünü açma | Microsoft Docs'
+title: 'Nasıl yapılır: bul penceresinden Iletiler görünümünü açma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,45 +13,45 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ee29135e659eff7e4965b6b1fb0d24de2c2e90cc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157881"
 ---
 # <a name="how-to-open-messages-view-from-find-window"></a>Nasıl yapılır: Bul Penceresinden İletiler Görünümünü Açma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanılacak kullanışlı bulabileceğiniz **Bul penceresi** iletişim kutusunu hedef penceresi seçin ve ardından o pencereyi iletiler görünümünü açın.  
+Bir hedef pencere seçmek için **pencere bul** iletişim kutusunu kullanmayı ve ardından söz konusu pencerenin iletiler görünümünü açmayı kullanışlı bulabilirsiniz.  
   
-### <a name="to-open-a-messages-view-window-using-the-find-window-dialog-box"></a>Pencere Bul iletişim kutusunu kullanarak iletileri görünüm penceresini açmak için  
+### <a name="to-open-a-messages-view-window-using-the-find-window-dialog-box"></a>Pencereyi bul iletişim kutusunu kullanarak bir Iletiler görünümü penceresi açmak için  
   
-1. Spy ++ hem hedef penceresi görünür, böylece windows düzenleyin.  
+1. Windows 'larınızı hem Spy + + hem de hedef pencere görünür olacak şekilde düzenleyin.  
   
-2. Gelen **Spy** menüsünde seçin **Bul penceresi**.  
+2. **Spy** menüsünde **pencereyi bul**' u seçin.  
   
-     [Bul penceresi iletişim kutusu](../debugger/find-window-dialog-box.md) açılır.  
+     [Pencereyi bul Iletişim kutusu](../debugger/find-window-dialog-box.md) açılır.  
   
-3. Gelen **Windows** sekmesinde, sürükleyin **Bulucu Aracı** hedef aralığında. Aracı sürüklerken **Bul penceresi** iletişim kutusunda seçili penceresinde ayrıntılarını görüntüler.  
+3. **Windows** sekmesinden, hedef pencerenin üzerine **Bulucu aracını** sürükleyin. Aracı sürüklerken, **pencereyi bul** iletişim kutusu seçili penceredeki ayrıntıları görüntüler.  
   
-     – veya –  
+     veya  
   
-     (Örneğin, hata ayıklayıcı'dan kopyalanan) incelemek istediğiniz pencere tanıtıcısı varsa, içine yazabilirsiniz **işlemek** metin kutusu.  
+     İncelemek istediğiniz pencerenin işleyicisine sahipseniz (örneğin, hata ayıklayıcıdan kopyalanmış), bunu **tanıtıcı** metin kutusuna yazabilirsiniz.  
   
-4. Altında **Göster**seçin **iletileri**.  
+4. **Göster**altında **iletiler**' i seçin.  
   
-5. Tuşuna **Tamam**.  
+5. **Tamam**'a basın.  
   
-     Boş bir [iletiler görünümünü](../debugger/messages-view.md) penceresi açılır ve **iletileri** Spy ++ araç çubuğuna menü eklenir.  
+     Boş bir [Iletiler görünümü](../debugger/messages-view.md) penceresi açılır ve Spy + + araç çubuğuna bir **iletiler** menüsü eklenir.  
   
-6. Gelen **iletileri** menüsünde seçin **günlüğe kaydetme seçenekleri**.  
+6. **İletiler** menüsünde **günlüğe kaydetme seçenekleri**' ni seçin.  
   
-     [İleti seçenekleri iletişim kutusu](../debugger/message-options-dialog-box.md) açılır.  
+     [Ileti seçenekleri Iletişim kutusu](../debugger/message-options-dialog-box.md) açılır.  
   
-7. Görüntülemek istediğiniz iletileri için Seçenekler'i seçin.  
+7. Göstermek istediğiniz iletilerin seçeneklerini belirleyin.  
   
-8. Tuşuna **Tamam** günlük iletilerini başlatmak için.  
+8. İletileri kaydetmeye başlamak için **Tamam** 'a basın.  
   
-     Seçilen seçeneklere bağlı olarak, iletileri etkin iletileri görünüm penceresine akış başlayın.  
+     Seçilen seçeneklere bağlı olarak, iletiler etkin Iletiler görünümü penceresinde akışa başlar.  
   
-9. Yeterli sayıda ileti olduğunda seçin **Günlüğü Durdur** gelen **iletileri** menüsü.
+9. Yeterli iletiniz olduğunda **iletiler** menüsünden **günlüğü durdur** ' u seçin.

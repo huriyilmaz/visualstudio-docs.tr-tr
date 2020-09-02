@@ -13,30 +13,30 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c5bed77a6ec6f8f819137b6859ea0934260f1f03
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158403"
 ---
 # <a name="hierarchies-and-selection"></a>Hiyerarşiler ve Seçim
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Özelleştirdiğinizde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], anlamanız gereken nasıl [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] hiyerarşileri projeleri ve nasıl kullanıcıya görüntülenen belirlemek için seçim bağlamını kullanır gibi işler. Bu bölümde kavramlarını ele alınmaktadır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] hiyerarşiler ve seçim.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]' Yi özelleştirirken, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] proje gibi hiyerarşilerin nasıl işlediğini ve kullanıcıya neyin gösterileceğini belirlemek için seçim bağlamını nasıl kullandığını anlamanız gerekir. Bu bölümde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] hiyerarşiler ve seçim kavramlarını ele alınmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Visual Studio’da Hiyerarşiler](../../extensibility/internals/hierarchies-in-visual-studio.md)  
- Proje hiyerarşileri ve Hiyerarşiler genel kavramını açıklar.  
+ Proje hiyerarşilerini ve genel hiyerarşiler kavramını açıklar.  
   
  [IDE’de Seçim ve Para Birimi](../../extensibility/internals/selection-and-currency-in-the-ide.md)  
- Açıklayan nasıl [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE) kullanıcının şu anda etkin nesneler hakkındaki bilgileri saklar ve VSPackages para birimi izlemenize olanak tanır.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Tümleşik geliştirme ortamının (IDE), kullanıcının şu anda etkin olan nesneleriyle ilgili bilgileri nasıl koruduğu ve VSPackages 'in para birimini izlemesine olanak tanır.  
   
  [Seçim Bağlamı Nesneleri](../../extensibility/internals/selection-context-objects.md)  
- Kullanıcının seçimi bağlam odaklanan bir pencere nasıl belirlemek için modeli ele alınmaktadır.  
+ Kullanıcının seçim bağlamını bir pencerede nasıl belirleyebileceğinizi gösteren modeli açıklar.  
   
  [Kullanıcıya Geri Bildirim](../../extensibility/internals/feedback-to-the-user.md)  
- Açıklar nasıl kullanılabilecek işlevleri [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kullanıcının geçerli seçimi bağlam ve genel IDE bağlam bağlıdır.  
+ ' Deki kullanılabilir işlevselliğin, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kullanıcının geçerli seçim bağlamına ve genel IDE içeriğine göre nasıl olduğunu açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Mimari](../../extensibility/internals/project-types-architecture.md)  
- Proje türleri hakkında teknik bilgi sağlar.
+ Proje türleri hakkında ayrıntılı teknik bilgi sağlar.
