@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: e1a3083b59ad0cec727f753395768a214ff571b7
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85284002"
 ---
 # <a name="how-to-specify-build-events-c"></a>Nasıl yapılır: derleme olayları belirtme (C#)
@@ -179,4 +179,4 @@ Sonra, uygulama bildirimini değiştirmek için bu komutu derleme sonrası bir o
 - [Derleme olayları sayfası, proje Tasarımcısı (C#)](../ide/reference/build-events-page-project-designer-csharp.md)
 - [Oluşturma öncesi olay/oluşturma sonrası olay komut satırı iletişim kutusu](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)
 - [Nasıl yapılır: derleme olaylarını belirtme (Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)
-- [Derle ve derle](../ide/compiling-and-building-in-visual-studio.md)
+- [Derleme ve oluşturma](../ide/compiling-and-building-in-visual-studio.md)

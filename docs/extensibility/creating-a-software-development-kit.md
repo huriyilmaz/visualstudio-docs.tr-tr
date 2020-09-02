@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 61e547be5f240cafccc058eb7ea2249fd492554b
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904109"
 ---
 # <a name="create-a-software-development-kit"></a>Yazılım geliştirme seti oluşturma
@@ -195,7 +195,7 @@ Aşağıdaki liste, dosyanın öğelerini verir:
 
 16. Dosya başvurusu: yalnızca denetimleri içeren veya yerel Wınmds olan başvurular için belirtilir. Bir başvurunun denetimler içerip içermediğini belirtme hakkında bilgi için bkz. aşağıdaki [araç kutusu öğelerinin konumunu belirtme](#ToolboxItems) .
 
-## <a name="specify-the-location-of-toolbox-items"></a><a name="ToolboxItems"></a>Araç kutusu öğelerinin konumunu belirtin
+## <a name="specify-the-location-of-toolbox-items"></a><a name="ToolboxItems"></a> Araç kutusu öğelerinin konumunu belirtin
 
 *SDKManifest.xml* şemasının **ToolBoxItems** öğesi hem platform hem de Uzantı SDK 'larında araç kutusu öğelerinin kategori ve konumunu belirtir. Aşağıdaki örneklerde farklı konumların nasıl belirtilmesi gösterilmektedir. Bu, WinMD veya DLL başvuruları için geçerlidir.
 

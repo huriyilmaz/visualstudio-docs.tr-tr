@@ -12,10 +12,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: e5351fe6a713c217f8fca20d6740b542dc75f053
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904122"
 ---
 # <a name="add-a-toolbar-to-a-tool-window"></a>Araç penceresine araç çubuğu ekleme
@@ -27,7 +27,7 @@ Bu izlenecek yol, araç penceresine bir araç çubuğunun nasıl ekleneceğini g
 
  Araç çubuğu ekleme hakkında daha fazla bilgi için bkz. [araç çubuğu ekleme](../extensibility/adding-a-toolbar.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yüklememeyin. Visual Studio kurulumuna isteğe bağlı bir özellik olarak dahildir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yükleme](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-a-toolbar-for-a-tool-window"></a>Araç penceresi için araç çubuğu oluşturma

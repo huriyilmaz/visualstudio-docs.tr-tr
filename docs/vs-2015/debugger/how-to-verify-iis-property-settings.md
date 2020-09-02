@@ -21,63 +21,63 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ac2ce4f823d82d8a0d8569e15c4ba8920d91d36c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65686826"
 ---
-# <a name="how-to-verify-iis-property-settings"></a>Nasıl yapılır: IIS özellik ayarlarını doğrulama
+# <a name="how-to-verify-iis-property-settings"></a>Nasıl Yapılır: IIS Özellik Ayarlarını Doğrulama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-IIS Yönetim Aracı'nı kullanarak bir Web uygulaması için özellikleri ayarlayabilirsiniz. Bu ayarlar doğrulanıyor genellikle sorun giderme gerekli bir adım, bu nedenle bu özellikleri çalıştırmak, uygulama için doğru şekilde ayarlamanız gerekir.  
+IIS yönetim aracını kullanarak bir Web uygulamasının özelliklerini ayarlayabilirsiniz. Uygulamanın çalışması için bu özelliklerin doğru ayarlanmış olması gerekir, bu nedenle bu ayarların doğrulanması genellikle sorun gidermede gerekli bir adımdır.  
   
 > [!NOTE]
-> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için seçin **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio'da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-check-iis-settings-for-the-web-application"></a>IIS Web uygulamasının ayarlarını denetlemek için  
+### <a name="to-check-iis-settings-for-the-web-application"></a>Web uygulamasının IIS ayarlarını denetlemek için  
   
-1. Açık **Yönetimsel Araçlar** penceresi: Üzerinde **Başlat** menüsünde **programlar**ve ardından **Yönetimsel Araçlar**. Varsa **Yönetimsel Araçlar** görünmez **programlar** menüsü, ardından içinde Ara **Denetim Masası**.  
+1. **Yönetimsel Araçlar** penceresini açın: **Başlat** menüsünde, **Programlar**' ın üzerine gelin ve **Yönetimsel Araçlar**' a tıklayın. **Yönetimsel Araçlar** **Programlar** menüsünde görünmezse, **Denetim Masası**'nda bu uygulamayı arayın.  
   
-    - Windows 2000'de seçin **Internet Hizmetleri Yöneticisi'ni**.  
+    - Windows 2000 ' de **İnternet Hizmetleri Yöneticisi**' yi seçin.  
   
-    - Windows XP'de seçin **Internet Information Services**.  
+    - Windows XP 'de **Internet Information Services**' yi seçin.  
   
-    - Windows Server 2003'te çift **sunucunuzu yönetin**.  
+    - Windows Server 2003 ' de **Sunucunuzu Yönetin**' e çift tıklayın.  
   
-         **Sunucunuzu yönetin** penceresi açılır. Altında **uygulama sunucusu**, tıklayın **bu uygulama sunucusunu yönetmek**.  
+         **Sunucunuzu yönetme** penceresi açılır. **Uygulama sunucusu**altında **Bu uygulama sunucusunu yönet**' e tıklayın.  
   
-         **Uygulama sunucusu** penceresi açılır. Açık **Internet Information Services (IIS) Yöneticisi'ni** sol bölmedeki düğüm.  
+         **Uygulama sunucusu** penceresi açılır. Sol bölmedeki **Internet Information Services (IIS) Yöneticisi** düğümünü açın.  
   
-2. İletişim kutusunda, ağaç denetimi düğümü makineniz için tıklayın. Tıklayın **Web siteleri** düğümünü ve Web uygulamasının düğümünü seçin. Bir Web sitesi düğümü ve bu nedenle bir eşdüzeyi ya da olacak **varsayılan Web sitesi** düğümü veya bir sanal dizin düğümü altında varolan bir Web sitesi düğümü.  
+2. İletişim kutusunda, makineniz için ağaç denetim düğümüne tıklayın. **Web siteleri** düğümüne tıklayın ve Web uygulamasının düğümünü seçin. Bu, bir Web sitesi düğümü ve bu nedenle **varsayılan Web sitesi** düğümünün bir eşdüzey öğesi ya da var olan bir Web sitesi düğümünün altında bir sanal dizin düğümü olacaktır.  
   
-3. Web uygulamasına sağ tıklayın ve kısayol menüsünde **özellikleri**.  
+3. Web uygulamasına sağ tıklayın ve kısayol menüsünde **Özellikler**' e tıklayın.  
   
 4. Web uygulaması için güvenlik ayarlarını doğrulayın:  
   
-    1. Web uygulamasındaki **özellikleri** penceresinde tıklayın **dizin güvenliği** sekmesine ve tıklayın **Düzenle**.  
+    1. Web uygulaması **özellikleri** penceresinde, **Dizin Güvenliği** sekmesine tıklayın ve **Düzenle**' ye tıklayın.  
   
-    2. İçinde **kimlik doğrulama yöntemleri** iletişim kutusunda **anonim erişimi etkinleştir** ve **tümleşik Windows kimlik doğrulaması** henüz seçili değilse.  
+    2. **Kimlik doğrulama yöntemleri** iletişim kutusunda, **anonim erişimi etkinleştir** ' i seçin ve henüz seçili değilse **Tümleşik Windows kimlik doğrulamasını** etkinleştirin.  
   
-    3. Tıklayın **Tamam** kapatmak için **kimlik doğrulama yöntemleri** iletişim kutusu.  
+    3. **Kimlik doğrulama yöntemleri** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-5. Bir ATL Sunucu uygulaması için DEBUG fiilini, ISAPI uzantısı ile ilişkili olduğunu doğrulayın. Daha fazla bilgi için [nasıl yapılır: DEBUG fiilini uzantısıyla ilişkilendirin](https://msdn.microsoft.com/50d261d3-4bd4-41c0-b44e-3591086f121e).  
+5. Bir ATL sunucu uygulaması için, hata ayıklama fiilinin ISAPI uzantınızın ilişkili olduğunu doğrulayın. Daha fazla bilgi için bkz. [nasıl yapılır: uzantı Ile hata ayıklama fiilini ilişkilendirme](https://msdn.microsoft.com/50d261d3-4bd4-41c0-b44e-3591086f121e).  
   
-6. İçin bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulama, uygulama kümesinde bir uygulama adı için sanal klasör emin **Internet Information Services (IIS) Yöneticisi'ni**, **Internet Hizmetleri Yöneticisi'ni** veya  **Internet Information Services**.  
+6. Bir uygulama için, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulamanın sanal klasörünün **Internet INFORMATION SERVICES (IIS) yöneticisi**, **İnternet Hizmetleri Yöneticisi** veya **Internet Information Services**bir uygulama adı ayarlanmış olduğundan emin olun.  
   
-    1. Web uygulamasındaki **özellikleri** penceresinde **dizin** sekmesinde, uygulamayı sanal bir dizinde ise veya **giriş dizini** sekmesinde uygulama ise, bir Web sitesi.  
+    1. Web uygulaması **Özellikler** penceresinde, uygulama bir sanal dizinde ise veya uygulama bir Web sitesi Ise **giriş dizini** sekmesinde **Dizin** sekmesini seçin.  
   
-    2. Doğrulayın adlarında **yerel yol** uygulamanın gerçekten dağıtılacağı dizinin adıyla aynıdır.  
+    2. **Yerel yoldaki** adın, uygulamanın gerçekten dağıtıldığı dizinin adıyla eşleştiğini doğrulayın.  
   
-    3. Altında **uygulama ayarları**, uygulamayı içeren kök dizinin adını yazın.  
+    3. **Uygulama ayarları**' nın altında, uygulamayı içeren kök dizinin adını yazın.  
   
-    4. Tıklayın **Tamam** kapatmak için **özellikleri** iletişim kutusu.  
+    4. **Özellikler** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-7. İçin bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulama tıklayın **ASP.NET** doğrulayın ve sekme doğru sürümünü [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] belirtilir.  
+7. Bir [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] uygulama için **ASP.net** sekmesine tıklayın ve doğru sürümünün belirtildiğinden emin olun [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] .  
   
-8. Tıklayın **Tamam** kapatmak için **özellikleri** iletişim kutusu.  
+8. **Özellikler** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-9. Tıklayın **Tamam** kapatmak için **Internet Information Services (IIS) Yöneticisi'ni**, **Internet Hizmetleri Yöneticisi'ni**, veya **Internet Information Services**iletişim kutusu.  
+9. **Internet Information Services (IIS) Yöneticisi**, **İnternet Hizmetleri Yöneticisi**veya **Internet Information Services** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Sorun giderme](../debugger/debugging-web-applications-troubleshooting.md)

@@ -1,5 +1,5 @@
 ---
-title: Kanca işlevlerini rapor | Microsoft Docs
+title: Rapor kancası Işlevleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,31 +26,31 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0a492a1db8b65cad74d02cec0f43bf0c81461730
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687506"
 ---
 # <a name="report-hook-functions"></a>Kanca İşlevlerini Raporla
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir rapor kanca işlevini kullanarak yüklü [_CrtSetReportHook](https://msdn.microsoft.com/library/1ae7c64f-8c84-4797-9574-b59f00f7a509), her zaman çağrılır [_CrtDbgReport](https://msdn.microsoft.com/library/6e581fb6-f7fb-4716-9432-f0145d639ecc) hata ayıklama raporunu oluşturur. Filtreleme raporların ayırmaları belirli türlerde odaklanmak, başka şeylerin yanında, kullanabilirsiniz. Bir rapor kanca işlevini aşağıdaki gibi bir prototipe sahip olmalıdır:  
+[_CrtSetReportHook](https://msdn.microsoft.com/library/1ae7c64f-8c84-4797-9574-b59f00f7a509)kullanılarak yüklenen bir rapor kancası işlevi, [_CrtDbgReport](https://msdn.microsoft.com/library/6e581fb6-f7fb-4716-9432-f0145d639ecc) bir hata ayıklama raporu oluşturduğunda her seferinde çağırılır. Diğer şeyler arasında, raporları belirli ayırma türlerine odaklanmak üzere filtrelemek için kullanabilirsiniz. Bir rapor kancası işlevinin, aşağıdaki gibi bir prototipi olmalıdır:  
   
 ```  
 int YourReportHook(int nRptType, char *szMsg, int *retVal);  
 ```  
   
- Geçirdiğiniz işaretçiyi **_CrtSetReportHook** türünde **_CRT_REPORT_HOOK**CRTDBG içinde tanımlanan gibi. Y:  
+ **_CrtSetReportHook** için geçirdiğiniz işaretçi, CRTDBG içinde tanımlanan **_CRT_REPORT_HOOK**türündedir. Olsun  
   
 ```  
 typedef int (__cdecl *_CRT_REPORT_HOOK)(int, char *, int *);  
 ```  
   
- Çalışma zamanı kitaplığı, kanca işlevini çağırdığında *nRptType* bağımsız değişken içeren rapor kategorisi (**_CRT_WARN**, **_CRT_ERROR**, veya **_CRT _ASSERT**), *szMsg* montajı rapor ileti dizeye bir işaretçi içerir ve *retVal* belirtir olup olmadığını `_CrtDbgReport` normal yürütmenin devam etmelidir rapor veya başlangıç hata ayıklayıcı oluşturduktan sonra. (A *retVal* sıfır değeri, yürütme devam eder, hata ayıklayıcı 1 değerini başlatır.)  
+ Çalışma zamanı kitaplığı, kanca işlevinizi çağırdığında, *nRptType* bağımsız değişkeni raporun kategorisini içerir (**_CRT_WARN**, **_CRT_ERROR**veya **_CRT_ASSERT**), *szMsg* , tam olarak birleştirilmiş bir rapor iletisi dizesine yönelik bir işaretçi içerir ve *retval* , `_CrtDbgReport` raporu oluşturduktan veya hata ayıklayıcısını başlattıktan sonra normal yürütmeye devam edilip edilmeyeceğini belirtir. (Bir *retval* değeri sıfır yürütmeye devam eder, 1 değeri hata ayıklayıcıyı başlatır.)  
   
- Daha fazla raporlama olmadan gerekli olacak şekilde kanca söz konusu iletiyi tamamen işleyen, döndürme zorunluluğu **TRUE**. Döndürürse **FALSE**, `_CrtDbgReport` rapor normalde ileti olur.  
+ Kanca sorudaki iletiyi tamamen işlediğinde daha fazla raporlama gerekmiyorsa, **true**döndürmelidir. **False**döndürürse, `_CrtDbgReport` iletiyi normal olarak rapor eder.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklama kanca işlevi yazma](../debugger/debug-hook-function-writing.md)   
- [crt_dbg2 örnek](https://msdn.microsoft.com/21e1346a-6a17-4f57-b275-c76813089167)
+ [Hata ayıklama kanca Işlevi yazma](../debugger/debug-hook-function-writing.md)   
+ [crt_dbg2 örneği](https://msdn.microsoft.com/21e1346a-6a17-4f57-b275-c76813089167)

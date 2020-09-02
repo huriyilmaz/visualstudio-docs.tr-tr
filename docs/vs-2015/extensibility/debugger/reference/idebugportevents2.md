@@ -13,48 +13,48 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 5e0f6455e6df8db88b1aae1a7b7f6965c0ee524b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68188525"
 ---
 # <a name="idebugportevents2"></a>IDebugPortEvents2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu arabirim, işlem ve program oluşturma ve yok etme belirli bir bağlantı noktası üzerinde dinleyici (genellikle oturum hata ayıklama Yöneticisi [SDM] veya hata ayıklama altyapısı) bildirir. Bu bilgiler bağlantı noktası üzerinde çalışan programları ve işlemleri gerçek zamanlı bir görünümünü sunmak için kullanılabilir.  
+Bu arabirim, belirli bir bağlantı noktasında işlem ve program oluşturma ve yok etme için bir dinleyiciye (genellikle oturum hata ayıklama Yöneticisi [SDM] veya hata ayıklama altyapısı) bildirir. Bu bilgiler, bağlantı noktasında çalışan işlemlerin ve programların gerçek zamanlı bir görünümünü sunmak için kullanılabilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugPortEvents2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Visual Studio, genellikle program oluşturma ve yok etme hakkında bildirim almak için bu arabirimi uygular. Hata ayıklama altyapısı ayrıca bağlantı noktası gibi olayları dinlemek için bu arabirimi uygulayabilir.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Visual Studio, genellikle program oluşturma ve yok etme hakkında bildirim almak için bu arabirimi uygular. Bir hata ayıklama altyapısı, bu tür bağlantı noktası olaylarını dinlemek için de bu arabirimi uygulayabilir.  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Tüm [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) arabirimleri için sorgulanabilir bir <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> arabirimi. Ardından <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.FindConnectionPoint%2A> yöntemi `IDebugPortEvents2` çağrılma yeri <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> arabirimi almak için bir <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> arabirimi. Son olarak, <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise%2A> yönteminde <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> arabirimi aracılığıyla olayları göndermek için çağırılır [olay](../../../extensibility/debugger/reference/idebugportevents2-event.md) yöntemi.  
+ Tüm [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) arabirimleri, bir arabirim için sorgulanabilir <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> . Ardından <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer.FindConnectionPoint%2A> yöntemi arabirimi `IDebugPortEvents2` <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> almak için arabiriminde çağırılır <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> . Son olarak, <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint.Advise%2A> <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> [olay](../../../extensibility/debugger/reference/idebugportevents2-event.md) yöntemi aracılığıyla olayları göndermek için arabirimindeki yöntemi çağırılır.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Yöntemini aşağıdaki tabloda gösterilmektedir `IDebugPortEvents2`.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Aşağıdaki tabloda, yöntemi gösterilmektedir `IDebugPortEvents2` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Event](../../../extensibility/debugger/reference/idebugportevents2-event.md)|Oluşturma ve yok etme süreçleri ve bağlantı noktası programları açıklayan olaylar gönderir.|  
+|[Olay](../../../extensibility/debugger/reference/idebugportevents2-event.md)|Bağlantı noktasındaki işlemlerin ve programların oluşturulmasını ve yok edilmesini tanımlayan olayları gönderir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IDebugPortEvents2` SDM tarafından ayıklanmakta olan bir işlem içinde çalıştırmak programlarda hata ayıklama için de kullanılır.  
+ `IDebugPortEvents2` , zaten ayıklanmakta olan bir işlemde çalışan programlarda hata ayıklamak için SDM tarafından da kullanılır.  
   
- Bağlantı noktası olayları için SDM bu arabirim tarafından geçirilir.  
+ Bağlantı noktası olayları bu arabirim tarafından SDM 'ye geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Temel arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)   
+ [Çekirdek arabirimler](../../../extensibility/debugger/reference/core-interfaces.md)   
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)

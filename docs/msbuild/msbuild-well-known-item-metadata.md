@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c810e166ef6f04befdbf7a5d18fe20bb65b8a299
-ms.sourcegitcommit: dda98068c0f62ccd1a19fdfde4bdb822428d0125
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87425387"
 ---
 # <a name="msbuild-well-known-item-metadata"></a>MSBuild tanınmış öğe meta verileri
@@ -51,7 +51,7 @@ Bu makaledeki ilk tablo, oluşturma sırasında her öğeye atanan meta verileri
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ortak MSBuild öğe meta verileri](common-msbuild-item-metadata.md)
+- [Yaygın MSBuild öğesi meta verileri](common-msbuild-item-metadata.md)
 - [Öğeler](../msbuild/msbuild-items.md)
 - [Toplu İşleme](../msbuild/msbuild-batching.md)
 - [MSBuild başvurusu](../msbuild/msbuild-reference.md)
