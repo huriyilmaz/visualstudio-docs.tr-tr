@@ -17,48 +17,48 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 847fa53acad63cec151222521ed8f85090c52080
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158860"
 ---
 # <a name="msbuild-project-file-schema-reference"></a>MSBuild Proje Dosyası Şema Başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tüm bir tablo sağlar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] XML Şeması öğeleri kullanılabilir öznitelikler ve alt öğeleri.  
+Tüm [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] XML şema öğelerinin kullanılabilir özniteliklerini ve alt öğelerini içeren bir tablo sağlar.  
   
- [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] derleme ve oluşturma nasıl yapı altyapısının ne istemek için proje dosyalarını kullanır. [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Proje dosyalardır izliyor XML dosyaları [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] XML şeması. Bu bölümde belgeleri için XML şema tanımı (.xsd) dosyası [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)].  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] derleme altyapısına ne tür derlemeyi ve nasıl oluşturulacağını bildirmek için proje dosyalarını kullanır. [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Proje dosyaları, XML şemasına bağlı XML dosyalarıdır [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] . Bu bölüm için XML şema tanımı (. xsd) dosyasını belgeler [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
-## <a name="msbuild-xml-schema-elements"></a>MSBuild XML Şeması öğeleri  
- Aşağıdaki tabloda tüm listeler [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] XML Şeması öğeleri alt öğeleri ve öznitelikleri birlikte.  
+## <a name="msbuild-xml-schema-elements"></a>MSBuild XML şema öğeleri  
+ Aşağıdaki tabloda, tüm [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] XML şema öğeleri alt öğeleri ve öznitelikleriyle birlikte listelenmektedir.  
   
 |Öğe|Alt Öğeler|Öznitelikler|  
 |-------------|--------------------|----------------|  
-|[Öğe Seç (MSBuild)](../msbuild/choose-element-msbuild.md)|Aksi takdirde<br /><br /> Ne zaman|--|  
+|[Öğe Seç (MSBuild)](../msbuild/choose-element-msbuild.md)|Güvenmiyorsanız<br /><br /> Ne zaman|--|  
 |[İçeri Aktarma Öğesi (MSBuild)](../msbuild/import-element-msbuild.md)|--|Koşul<br /><br /> Project|  
-|[ImportGroup Öğesi](../msbuild/importgroup-element.md)|İçeri Aktarma|Koşul|  
-|[Öğe Unsuru (MSBuild)](../msbuild/item-element-msbuild.md)|*Itemmetadata*|Koşul<br /><br /> Hariç tutma<br /><br /> Şunları Dahil Et:<br /><br /> Kaldır|  
-|[ItemDefinitionGroup Öğesi (MSBuild)](../msbuild/itemdefinitiongroup-element-msbuild.md)|*Öğesi*|Koşul|  
-|[ItemGroup Öğesi (MSBuild)](../msbuild/itemgroup-element-msbuild.md)|*Öğesi*|Koşul|  
-|[ItemMetadata Öğesi (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)|*Öğesi*|Koşul|  
+|[ImportGroup öğesi](../msbuild/importgroup-element.md)|İçeri Aktar|Koşul|  
+|[Öğe Unsuru (MSBuild)](../msbuild/item-element-msbuild.md)|*ItemMetadata*|Koşul<br /><br /> Exclude<br /><br /> Şunları Dahil Et:<br /><br /> Kaldır|  
+|[ItemDefinitionGroup Öğesi (MSBuild)](../msbuild/itemdefinitiongroup-element-msbuild.md)|*Öğe*|Koşul|  
+|[ItemGroup Öğesi (MSBuild)](../msbuild/itemgroup-element-msbuild.md)|*Öğe*|Koşul|  
+|[ItemMetadata Öğesi (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)|*Öğe*|Koşul|  
 |[OnError Öğesi (MSBuild)](../msbuild/onerror-element-msbuild.md)|--|Koşul<br /><br /> ExecuteTargets|  
-|[Otherwise Öğesi (MSBuild)](../msbuild/otherwise-element-msbuild.md)|Bunu seçin<br /><br /> ItemGroup<br /><br /> PropertyGroup|--|  
+|[Otherwise Öğesi (MSBuild)](../msbuild/otherwise-element-msbuild.md)|Seçin:<br /><br /> ItemGroup<br /><br /> PropertyGroup|--|  
 |[Çıktı Öğesi (MSBuild)](../msbuild/output-element-msbuild.md)|--|Koşul<br /><br /> ItemName<br /><br /> ÖzellikAdı<br /><br /> TaskParameter|  
-|[Parameter Öğesi](../msbuild/parameter-element.md)|--|Çıkış<br /><br /> ParameterType<br /><br /> Gerekli|  
-|[Parameter Grup Öğesi](../msbuild/parametergroup-element.md)|*Parametre*|--|  
-|[Proje Öğesi (MSBuild)](../msbuild/project-element-msbuild.md)|Bunu seçin<br /><br /> İçeri Aktarma<br /><br /> ItemGroup<br /><br /> ProjectExtensions<br /><br /> PropertyGroup<br /><br /> Hedef<br /><br /> UsingTask|DefaultTargets<br /><br /> InitialTargets<br /><br /> ToolsVersion<br /><br /> TreatAsLocalProperty<br /><br /> xmlns|  
+|[Parameter öğesi](../msbuild/parameter-element.md)|--|Çıktı<br /><br /> ParameterType<br /><br /> Gerekli|  
+|[ParameterGroup Öğesi](../msbuild/parametergroup-element.md)|*Parametre*|--|  
+|[Proje Öğesi (MSBuild)](../msbuild/project-element-msbuild.md)|Seçin:<br /><br /> İçeri Aktar<br /><br /> ItemGroup<br /><br /> ProjectExtensions<br /><br /> PropertyGroup<br /><br /> Hedef<br /><br /> UsingTask|DefaultTargets<br /><br /> InitialTargets<br /><br /> ToolsVersion<br /><br /> TreatAsLocalProperty<br /><br /> özniteliði|  
 |[ProjectExtensions Öğesi (MSBuild)](../msbuild/projectextensions-element-msbuild.md)|--|--|  
 |[Özellik Öğesi (MSBuild)](../msbuild/property-element-msbuild.md)|--|Koşul|  
-|[PropertyGroup Öğesi (MSBuild)](../msbuild/propertygroup-element-msbuild.md)|*Özelliği*|Koşul|  
-|[Hedef Öğe (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *Görev*|AfterTargets<br /><br /> BeforeTargets<br /><br /> Koşul<br /><br /> DependsOnTargets<br /><br /> Girişler<br /><br /> KeepDuplicateOutputs<br /><br /> Ad<br /><br /> Çıktılar<br /><br /> Döndürür|  
-|[Görev Öğesi (MSBuild)](../msbuild/task-element-msbuild.md)|Çıkış|Koşul<br /><br /> ContinueOnError<br /><br /> *Parametre*|  
-|[TaskBody Öğesi (MSBuild)](../msbuild/taskbody-element-msbuild.md)|*Veri*|Değerlendir|  
-|[UsingTask Öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup<br /><br /> TaskBody|AssemblyFile<br /><br /> AssemblyName<br /><br /> Koşul<br /><br /> TaskFactory<br /><br /> TaskName|  
-|[When Öğesi (MSBuild)](../msbuild/when-element-msbuild.md)|Bunu seçin<br /><br /> ItemGroup<br /><br /> PropertyGroup|Koşul|  
+|[PropertyGroup Öğesi (MSBuild)](../msbuild/propertygroup-element-msbuild.md)|*Özellik*|Koşul|  
+|[Hedef Öğe (MSBuild)](../msbuild/target-element-msbuild.md)|OnError<br /><br /> *Görev*|AfterTargets<br /><br /> BeforeTargets<br /><br /> Koşul<br /><br /> Bağımlıdsonhedefleri<br /><br /> Girişler<br /><br /> "Pduperepteçıkışları<br /><br /> Name<br /><br /> Çıkışlar<br /><br /> Döndürülenler|  
+|[Görev Öğesi (MSBuild)](../msbuild/task-element-msbuild.md)|Çıktı|Koşul<br /><br /> ContinueOnError<br /><br /> *Parametre*|  
+|[TaskBody Öğesi (MSBuild)](../msbuild/taskbody-element-msbuild.md)|*Veriler*|Değerlendir|  
+|[UsingTask Öğesi (MSBuild)](../msbuild/usingtask-element-msbuild.md)|ParameterGroup<br /><br /> TaskBody|AssemblyFile & lt<br /><br /> AssemblyName<br /><br /> Koşul<br /><br /> TaskFactory<br /><br /> Silinecek|  
+|[When Öğesi (MSBuild)](../msbuild/when-element-msbuild.md)|Seçin:<br /><br /> ItemGroup<br /><br /> PropertyGroup|Koşul|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Görev başvurusu](../msbuild/msbuild-task-reference.md)   
- [Koşullar](../msbuild/msbuild-conditions.md)   
- [MSBuild Başvurusu](../msbuild/msbuild-reference.md)  
- [MSBuild](msbuild.md)
+ [Durumunda](../msbuild/msbuild-conditions.md)   
+ [MSBuild başvurusu](../msbuild/msbuild-reference.md)  
+ [MSBUILD](msbuild.md)

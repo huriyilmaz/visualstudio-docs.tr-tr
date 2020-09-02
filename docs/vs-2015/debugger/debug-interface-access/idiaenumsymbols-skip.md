@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbols::Skip | Microsoft Docs
+title: 'IDiaEnumSymbols:: Skip | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e7a6a3f06572392cad2edbf125d0ff6491b508c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62563708"
 ---
 # <a name="idiaenumsymbolsskip"></a>IDiaEnumSymbols::Skip
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir numaralandırma sıralı sembolleri belirtilen sayıda atlar.  
+Bir numaralandırma dizisinde belirtilen sayıda sembolleri atlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Skip (   
@@ -35,10 +35,10 @@ HRESULT Skip ( 
   
 #### <a name="parameters"></a>Parametreler  
  celt  
- [in] Sabit listesi sırası atlamak için sembolleri sayısı.  
+ 'ndaki Atlanacak numaralandırma dizisindeki simgelerin sayısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` atlamak için daha fazla sembol varsa.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` atlanacak başka sembol yoksa, döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)

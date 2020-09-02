@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::SetDebuggerPresent | Microsoft Docs
+title: 'IDebugProgramPublisher2:: Setdebuggersun | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 571da5e7baa720dc2e26fc629e2887cd0e3bdfa9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146290"
 ---
 # <a name="idebugprogrampublisher2setdebuggerpresent"></a>IDebugProgramPublisher2::SetDebuggerPresent
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Program yayımcı, bir hata ayıklayıcı mevcut ve çalışıyor olduğunu söyler.  
+Program yayımcısına bir hata ayıklayıcının var olduğunu ve çalıştığını söyler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT SetDebuggerPresent(  
@@ -40,13 +40,13 @@ int SetDebuggerPresent(
   
 #### <a name="parameters"></a>Parametreler  
  `fDebuggerPresent`  
- [in] Sıfır olmayan (`TRUE`) bir hata ayıklayıcı varsa, sıfır (`FALSE`), değilse.  
+ 'ndaki Bir hata ayıklayıcı varsa sıfır olmayan ( `TRUE` ), değilse sıfır ( `FALSE` ).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Döndürülen veri varlığı veya yokluğu bir hata ayıklayıcı yansıtılır [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) yöntemi: var. döndürülen değer kümesi veya önceki bir çağrı tarafından temizlenmiş `SetDebuggerPresent` yöntemi.  
+ Bir hata ayıklayıcının varlığı veya yokluğu, [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) yönteminden döndürülen verilere yansıtılır: döndürülen değer, metodun önceki çağrısıyla ayarlanır veya temizlenir `SetDebuggerPresent` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   

@@ -20,10 +20,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 26ed1ef8941db17c9cc087a80afcad2b4ce982de
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72650829"
 ---
 # <a name="international-settings-environment-options-dialog-box"></a>Uluslararası Ayarlar, Ortam, Seçenekler İletişim Kutusu
@@ -37,7 +37,7 @@ Uluslararası Ayarlar sayfası, makinenizde tümleşik geliştirme ortamının (
  **Dil** Yüklü ürün dili sürümleri için kullanılabilir dilleri listeler. Makinenizde birden fazla dil sürümü yüklü değilse bu seçenek kullanılamaz. Birden çok ürün dili veya ürünlerin karışık dil yüklemesi ortamı paylaşıyorsa, dil seçimi **Microsoft Windows Ile aynı**olarak değiştirilir.
 
 > [!CAUTION]
-> Birden çok dilin yüklü olduğu bir sistemde, Visual C++ derleme araçları (CL. exe, LINK. exe, nmake. exe, bscmake. exe ve ilgili dosyalar) bu ayardan etkilenmez. Bu araçlar, yüklenen son dilin sürümünü kullanır ve Visual C++ derleme araçları uydu dll modelini kullanmadığından, daha önce yüklenen dile yönelik araçların üzerine yazılır.
+> Birden çok dilin yüklü olduğu bir sistemde, Visual C++ derleme araçları (cl.exe, link.exe, nmake.exe, bscmake.exe ve ilgili dosyalar) bu ayardan etkilenmez. Bu araçlar, yüklenen son dilin sürümünü kullanır ve Visual C++ yapı araçları uydu DLL modelini kullanmadığından, daha önce yüklenen dile yönelik araçların üzerine yazılır.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Ortam Seçenekleri İletişim Kutusu](../../ide/reference/environment-options-dialog-box.md)

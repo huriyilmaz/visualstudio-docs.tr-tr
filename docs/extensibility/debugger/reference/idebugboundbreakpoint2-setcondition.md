@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::SetCondition | Microsoft Dokümanlar
+title: 'IDebugBoundBreakpoint2:: SetCondition | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f23fbe1b353378ca521fa802bdeae25fd12476df
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735465"
 ---
 # <a name="idebugboundbreakpoint2setcondition"></a>IDebugBoundBreakpoint2::SetCondition
-Bu bağlama kesme noktasıyla ilişkili koşulu ayarlar veya değiştirir.
+Bu ilişkili kesme noktasıyla ilişkili koşulu ayarlar veya değiştirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetCondition( 
@@ -42,13 +42,13 @@ int SetCondition( 
 
 ## <a name="parameters"></a>Parametreler
 `bpCondition`\
-[içinde] Durumu açıklayan [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) numaralandırmadeğeri.
+'ndaki Koşulu açıklayan [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) Numaralandırmadaki bir değer.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür. Bağlı `E_BP_DELETED` kesme noktası nesnesinin durumu `BPS_DELETED` ayarlanmışsa [(BP_STATE](../../../extensibility/debugger/reference/bp-state.md) numaralandırmanın bir parçası) döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. , `E_BP_DELETED` Bağlantılı kesme noktası nesnesinin durumunun `BPS_DELETED` ( [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) sabit listesinin parçası) olarak ayarlanmış olup olmadığını döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Daha önce bu kesme noktası ile ilişkili herhangi bir koşul kaybolur.
+ Daha önce bu kesme noktasıyla ilişkilendirilmiş olan herhangi bir koşul kaybolur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md)

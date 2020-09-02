@@ -1,5 +1,5 @@
 ---
-title: Idiaenumınjectedsources::Next | Microsoft Docs
+title: 'IDiaEnumInjectedSources:: Next | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d40ed9acf9e8c82fa315517c0abc3eb6f6d3b036
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62580524"
 ---
 # <a name="idiaenuminjectedsourcesnext"></a>IDiaEnumInjectedSources::Next
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Belirtilen bir numaralandırma sıralı eklenen kaynakları sayısını alır.  
+Sabit Listesi dizisinde belirtilen sayıda eklenen kaynağı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Next (   
@@ -37,17 +37,17 @@ HRESULT Next ( 
   
 #### <a name="parameters"></a>Parametreler  
  celt  
- [in] Alınacak Numaralandırıcı eklenen kaynakları sayısı.  
+ 'ndaki Alınacak Numaralandırıcı içindeki eklenen kaynak sayısı.  
   
- http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp  
- [out] Bir dizi döndürür [Idiaınjectedsource](../../debugger/debug-interface-access/idiainjectedsource.md) istenen eklenen kaynakları temsil eden nesneleri.  
+ rgelt  
+ dışı İstenen eklenmiş kaynakları temsil eden [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) nesnelerinin bir dizisini döndürür.  
   
- pceltFetched  
- [out] Eklenen kaynakları getirilen bir numaralandırıcı döndürür.  
+ Pceltfettiz  
+ dışı Getirilen Numaralandırıcı içindeki eklenen kaynak sayısını döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` artık eklenen kaynakları varsa. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Daha fazla eklenen kaynak yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaenumınjectedsources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)   
+ [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)   
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

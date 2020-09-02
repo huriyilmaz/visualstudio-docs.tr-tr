@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f209ed773a72c3925661bd81ecfe2685408b3189
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147458"
 ---
-# <a name="launchflags"></a>LAUNCH_FLAGS
+# <a name="launch_flags"></a>LAUNCH_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklama başlatma bayrakları belirtir.  
+Hata ayıklama başlatma bayraklarını belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_LAUNCH_FLAGS {   
@@ -47,29 +47,29 @@ public enum enum_LAUNCH_FLAGS { 
   
 ## <a name="members"></a>Üyeler  
  LAUNCH_DEBUG  
- Hata ayıklama işlemi başlatır.  
+ Hata ayıklama işlemini başlatır.  
   
  LAUNCH_NODEBUG  
- Hata ayıklama olmadan işlem başlatır.  
+ İşlemi hata ayıklamadan başlatır.  
   
  LAUNCH_ENABLE_ENC  
- KULLANIM DIŞI, KULLANMAYIN.  
+ KULLANıM DıŞı, KULLANMAYıN.  
   
  LAUNCH_MERGE_ENV  
- Bir işlem başlatır ve ortam başlatan konakla birleştirir.  
+ İşlemi başlatır ve ortamı Başlatan ana bilgisayarla birleştirir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu değerleri bir bağımsız değişken olarak geçirilen [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemi.  
+ Bu değerler, [Launchaskıya alındı](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemine bir bağımsız değişken olarak geçirilir.  
   
- Bu bayrak bit düzeyinde ile birleştirilebilir `OR`.  
+ Bu bayraklar bit düzeyinde birleştirilebilir `OR` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;summary &gt; (JavaScript) | Microsoft Docs'
+title: '&lt;Özet &gt; (JavaScript) | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -13,18 +13,18 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: f283c2c1825c4b8b02fb5b044ce113231a919317
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646844"
 ---
-# <a name="ltsummarygt-javascript"></a>&lt;summary &gt; (JavaScript)
+# <a name="ltsummarygt-javascript"></a>&lt;Özet &gt; (JavaScript)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 Bir işlev veya yöntem için açıklama belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 <summary locid="descriptionID">description
@@ -32,15 +32,15 @@ Bir işlev veya yöntem için açıklama belirtir.
 ```
 
 #### <a name="parameters"></a>Parametreler
- Isteğe bağlı `locid`. İşlev veya yöntem hakkında yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki `name` öznitelik değerine karşılık gelir. Tanımlayıcı türü [\<loc >](../ide/loc-javascript.md) öğesinde belirtilen biçime bağlıdır.
+ `locid` Seçim. İşlev veya yöntem hakkında yerelleştirme bilgileri için tanımlayıcı. Tanımlayıcı, bir üye KIMLIĞI ya da `name` OpenAjax meta verileri tarafından tanımlanan bir ileti grubundaki öznitelik değerine karşılık gelir. Tanımlayıcı türü, öğesinde belirtilen biçime bağlıdır [\<loc>](../ide/loc-javascript.md) .
 
- Isteğe bağlı `description`. İşlevin veya metodun açıklaması.
+ `description` Seçim. İşlevin veya metodun açıklaması.
 
 ## <a name="remarks"></a>Açıklamalar
- [@No__t_1summary >](../ide/summary-javascript.md), [\<param >](../ide/param-javascript.md)ve [\<returns >](../ide/returns-javascript.md)dahil olmak üzere işlevleri Not eklemek için kullanılan öğeler, hiçbir deyimden önce işlev gövdesine yerleştirilmelidir.
+ , Ve içeren işlevleri Not eklemek için kullanılan öğelerin [\<summary>](../ide/summary-javascript.md) , [\<param>](../ide/param-javascript.md) [\<returns>](../ide/returns-javascript.md) herhangi bir deyimden önce işlev gövdesine yerleştirilmesi gerekir.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod `<summary>` öğesinin nasıl kullanılacağını gösterir.
+ Aşağıdaki kod öğesinin nasıl kullanılacağını gösterir `<summary>` .
 
 ```javascript
 function areaFunction(radiusParam)
@@ -56,4 +56,4 @@ function areaFunction(radiusParam)
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [XML Belge Açıklamaları](../ide/xml-documentation-comments-javascript.md)
+ [XML belge açıklamaları](../ide/xml-documentation-comments-javascript.md)

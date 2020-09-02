@@ -13,18 +13,18 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6152ff5f493134812916f28e0b908bf98ecdbb35
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62561879"
 ---
-# <a name="addresskind"></a>ADDRESS_KIND
+# <a name="address_kind"></a>ADDRESS_KIND
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Adresleri türlerini belirtir.  
+Adres türlerini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 enum enum_ADDRESS_KIND {  
@@ -55,46 +55,46 @@ public enum enum_ADDRESS_KIND {
 };  
 ```  
   
-## <a name="terms"></a>Koşulları  
+## <a name="terms"></a>Terimler  
  ADDRESS_KIND_NATIVE  
- Tarafından temsil edilen bir yerel adres [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) yapısı.  
+ [NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md) yapısıyla temsil edilen yerel bir adres.  
   
  ADDRESS_KIND_UNMANAGED_THIS_RELATIVE  
- Yönetilmeyen bir adresi göreli bir `this` (`Me` Visual Basic'te) işaretçi tarafından temsil edilen ve [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) yapısı.  
+ Bir `this` ( `Me` Visual Basic) işaretçisine ve [UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md) yapısına göre temsil edilen yönetilmeyen bir adres.  
   
  ADDRESS_KIND_UNMANAGED_PHYSICAL  
- Tarafından temsil edilen bir yönetilmeyen bir fiziksel adresi [UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) yapısı.  
+ [UNMANAGED_ADDRESS_PHYSICAL](../../../extensibility/debugger/reference/unmanaged-address-physical.md) yapısıyla temsil edilen yönetilmeyen bir fiziksel adres.  
   
  ADDRESS_KIND_METHOD  
- Bir sınıf tarafından temsil edilen bir yöntem [METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) yapısı.  
+ [METADATA_ADDRESS_METHOD](../../../extensibility/debugger/reference/metadata-address-method.md) yapısıyla temsil edilen bir sınıf yöntemi.  
   
  ADDRESS_KIND_FIELD  
- Tarafından temsil edilen bir sınıfının bir alanı [METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) yapısı.  
+ [METADATA_ADDRESS_FIELD](../../../extensibility/debugger/reference/metadata-address-field.md) yapısıyla temsil edilen bir sınıf alanı.  
   
  ADDRESS_KIND_LOCAL  
- Adresi için bir yerel değişken ve tarafından temsil edilen [METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) yapısı.  
+ Adres yerel bir değişken için ve [METADATA_ADDRESS_LOCAL](../../../extensibility/debugger/reference/metadata-address-local.md) yapısıyla temsil edilir.  
   
  ADDRESS_KIND_PARAM  
- Tarafından temsil edilen bir yöntem veya işlev parametresi [METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) yapısı.  
+ [METADATA_ADDRESS_PARAM](../../../extensibility/debugger/reference/metadata-address-param.md) yapısıyla temsil edilen bir yöntem veya işlev parametresi.  
   
  ADDRESS_KIND_ARRAYELEM  
- Tarafından temsil edilen bir dizi öğesine [METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) yapısı.  
+ [METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md) yapısıyla temsil edilen bir dizi öğesi.  
   
  ADDRESS_KIND_RETVAL  
- Tarafından temsil edilen bir dönüş değeri [METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) yapısı.  
+ [METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md) yapısıyla temsil edilen bir dönüş değeri.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) yöntemi döndürür [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) olası yapıları bir birleşimini içeren yapı [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) yapısı. `dwKind` Alanını `DEBUG_ADDRESS_UNION` yapısı ayrı tutma `ADDRESS_KIND` değerini ve nasıl birleşim alanın yorumlanması gerektiğini açıklar.  
+ [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) yöntemi olası yapıların birleşimini içeren [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) yapısını döndürür, [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) yapısı. `dwKind` `DEBUG_ADDRESS_UNION` Yapının alanı `ADDRESS_KIND` değeri tutar ve birleşim alanının nasıl yorumlanacağını açıklar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: sh.h  
+ Üstbilgi: SH. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)   
  [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)

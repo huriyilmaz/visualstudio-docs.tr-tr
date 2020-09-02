@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericParamField::GetIndex | Microsoft Docs
+title: 'Idebuggenericparamfield:: GetIndex | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,18 +11,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 327bf1eb28e3313ee8072e6330f9bbc23d3b83ce
-ms.sourcegitcommit: 0cd282a7584b9bfd4df7882f8fdf3ad8a270e219
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62580384"
 ---
 # <a name="idebuggenericparamfieldgetindex"></a>IDebugGenericParamField::GetIndex
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu genel parametre dizinini alır.  
+Bu genel parametrenin dizinini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetIndex(  
@@ -38,16 +38,16 @@ int GetIndex(
   
 #### <a name="parameters"></a>Parametreler  
  `pIndex`  
- [out] Bu genel parametre değeri dizini.  
+ dışı Bu genel parametrenin dizin değeri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Örneğin, Dictionary(K,V) için K dizin 0, V dizin 1.  
+ Örneğin, sözlük (K, V) için, K dizini 0, V Dizin 1 ' dir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugGenericParamFieldType** gösteren nesne [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimi.  
+ Aşağıdaki örnek, [ıdebuggenericparamfield](../../../extensibility/debugger/reference/idebuggenericparamfield.md) arabirimini kullanıma sunan bir **cdebuggenericparamtcobject** için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 HRESULT CDebugGenericParamFieldType::GetIndex(DWORD* pIndex)  

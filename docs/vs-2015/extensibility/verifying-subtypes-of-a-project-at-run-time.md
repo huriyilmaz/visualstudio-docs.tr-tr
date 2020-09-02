@@ -1,5 +1,5 @@
 ---
-title: Çalışma zamanında proje alt türlerini doğrulama | Microsoft Docs
+title: Çalışma zamanında bir projenin alt türlerini doğrulama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,20 +12,20 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1e3940097ac53255b7bdd2c12c9ccc64605016e1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62584911"
 ---
 # <a name="verifying-subtypes-of-a-project-at-run-time"></a>Çalışma Zamanında Proje Alt Türlerini Doğrulama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Özel proje alt türü üzerinde olduğu bir VSPackage'ı alt tür ve böylece alt mevcut değilse düzgün bir şekilde devredebilirsiniz aramak için mantık eklemeniz gerekir. Aşağıdaki yordam, belirtilen alt varlığını doğrulamak gösterilmektedir.  
+Özel bir proje alt türüne bağımlı olan VSPackage, alt tür yoksa düzgün bir şekilde başarısız olması için o alt türü aramak için mantık içermelidir. Aşağıdaki yordamda, belirtilen bir alt tür varlığının nasıl doğrulanyapılacağı gösterilmektedir.  
   
-### <a name="to-verify-the-presence-of-a-subtype"></a>Bir alt varlığını doğrulamak için  
+### <a name="to-verify-the-presence-of-a-subtype"></a>Bir alt tür varlığını doğrulamak için  
   
-1. Proje ve çözüm nesneler olarak proje hiyerarşisi almak bir <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> , VSPackage için aşağıdaki kodu ekleyerek nesne.  
+1. VSPackage 'a aşağıdaki kodu ekleyerek proje ve çözüm nesnelerinden proje hiyerarşisini bir nesne olarak alın <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> .  
   
     ```  
     EnvDTE.DTE dte;  
@@ -42,7 +42,7 @@ ms.locfileid: "62584911"
   
     ```  
   
-2. Hiyerarşi için cast <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected> arabirimi.  
+2. Hiyerarşiyi <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected> arabirime atayın.  
   
     ```  
     IVsAggregatableProjectCorrected AP;  
@@ -50,14 +50,14 @@ ms.locfileid: "62584911"
   
     ```  
   
-3. Çağırarak proje türü GUID'ın listesini alın <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected.GetAggregateProjectTypeGuids%2A>.  
+3. Öğesini çağırarak proje türü GUID 'Lerinin listesini alın <xref:Microsoft.VisualStudio.Shell.Flavor.IVsAggregatableProjectCorrected.GetAggregateProjectTypeGuids%2A> .  
   
     ```  
     string projTypeGuids = AP.GetAggregateProjectTypeGuids().ToUpper();  
   
     ```  
   
-4. Belirtilen alt türe GUİD'i kontrol edin.  
+4. Belirtilen alt tür için GUID listesini denetleyin.  
   
     ```  
     // Replace the string "MyGUID" with the GUID of the subtype.  

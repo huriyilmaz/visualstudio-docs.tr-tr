@@ -1,5 +1,5 @@
 ---
-title: Gürültü Azaltma Yüzdesi | Microsoft Dokümanlar
+title: Gürültü azaltma yüzdesi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,11 +13,11 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9d3021aef3f9a2e11849991327a6ef8783b62439
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62794319"
 ---
 # <a name="noise-reduction-percentage"></a>Gürültü Azaltma Yüzdesi
-Varsayılan olarak, Gürültü Azaltma Yüzdesi ayarının değeri 2'dir. Yalnızca bu ayardan daha büyük veya eşit olan kapsayıcı süre yüzdesi olan girişler çağrı ağacında gösterilir. Ayarı değiştirerek, çağrı ağacında görüntülenen giriş sayısını denetleyebilirsiniz. Örneğin, değeri 10 olarak değiştirmek yalnızca %10'dan büyük veya eşit bir zamana sahip arama ağacı girişlerini gösterir. Ayarın değerini artırarak, işleminizin performansı üzerinde daha büyük etkileri olan girişlere odaklanabilirsiniz.
+Varsayılan olarak, gürültü azaltma yüzdesi ayarının değeri 2 ' dir. Çağrı ağacında yalnızca bu ayardan büyük veya buna eşit bir yüzde dahil süresi olan girişler gösterilir. Ayarı değiştirerek, çağrı ağacında görüntülenen giriş sayısını kontrol edebilirsiniz. Örneğin, değerini 10 olarak değiştirmek, yalnızca %10 ' dan büyük veya buna eşit bir iç zaman içeren çağrı ağacı girdilerini gösterir. Ayarın değerini artırarak, işleminizin performansı üzerinde daha büyük etkileri olan girişlere odaklanırsınız.

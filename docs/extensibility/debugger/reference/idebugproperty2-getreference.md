@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetReference | Microsoft Dokümanlar
+title: 'IDebugProperty2:: GetReference | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4f119a00139e2af44f771fa0903c73b8003dd77f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80721360"
 ---
 # <a name="idebugproperty2getreference"></a>IDebugProperty2::GetReference
-Özelliğin değerine bir başvuru verir.
+Özelliğin değerine bir başvuru döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetReference(
@@ -41,10 +41,10 @@ int GetReference(
 
 ## <a name="parameters"></a>Parametreler
 `ppRererence`\
-[çıkış] Özelliğin değerine başvuruyu temsil eden bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi döndürür.
+dışı Özelliğin değerine bir başvuruyu temsil eden bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, genellikle `E_NOTIMPL` bir hata `E_GETREFERENCE_NO_REFERENCE`kodu döndürür veya .
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, genellikle veya bir hata kodu `E_NOTIMPL` döndürür `E_GETREFERENCE_NO_REFERENCE` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2::EnumCustomAttributes | Microsoft Docs
+title: 'IDebugCustomAttributeQuery2:: EnumCustomAttributes | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b09285b2fbab65321d0949be7fbd9c7a03c54ed3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62568414"
 ---
 # <a name="idebugcustomattributequery2enumcustomattributes"></a>IDebugCustomAttributeQuery2::EnumCustomAttributes
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu alana ekli tüm özel öznitelikleri için bir numaralandırıcı alır.  
+Bu alana eklenen tüm özel öznitelikler için bir Numaralandırıcı alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT EnumCustomAttributes(   
@@ -40,13 +40,13 @@ int EnumCustomAttributes(
   
 #### <a name="parameters"></a>Parametreler  
  `ppEnum`  
- [out] Döndürür bir [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) özel öznitelik listesini temsil eden nesne; Aksi takdirde, özel öznitelik yoksa null değeri döndürür.  
+ dışı Özel özniteliklerin listesini temsil eden bir [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) nesnesi döndürür; Aksi takdirde, özel öznitelik yoksa null değeri döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu alan özel öznitelik yoksa başarılıysa S_OK veya S_FALSE döndürür. Aksi takdirde bir hata kodu döndürür;  
+ Başarılı olursa, bu alanda özel öznitelik yoksa S_OK veya S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür;  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir alan birden çok özel özniteliklere sahip olabilir.  
+ Bir alan birden çok özel özniteliğe sahip olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)   

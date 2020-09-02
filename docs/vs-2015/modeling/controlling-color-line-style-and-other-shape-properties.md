@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d5d296f5ab3f5c584558b373b57c175fb2bacef4
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667851"
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>Renk, Çizgi Stili ve Diğer Şekil Özelliklerini Denetleme
@@ -29,7 +29,7 @@ Renk gibi bazı şekil özellikleri ' açığa çıkarılan ' olabilir. Bu, şek
  Artık şekil, program kodunda veya Kullanıcı olarak ayarlayabileceğiniz bir etki alanı özelliğine sahiptir.
 
 ## <a name="dynamically-updating-an-exposed-property"></a>Sunulan bir özelliği dinamik olarak güncelleştirme
- Genellikle, ortaya çıkan özelliği başka bir özelliğe bağımlı hale getirmek istersiniz. Örneğin, belirli bir etki alanı özelliği sıfırdan küçük olduğunda bir şeklin kırmızı olmasını isteyebilirsiniz. Bu bağımlılığı yapmak için bir [kural](../modeling/rules-propagate-changes-within-the-model.md)oluşturun. Örneğin:
+ Genellikle, ortaya çıkan özelliği başka bir özelliğe bağımlı hale getirmek istersiniz. Örneğin, belirli bir etki alanı özelliği sıfırdan küçük olduğunda bir şeklin kırmızı olmasını isteyebilirsiniz. Bu bağımlılığı yapmak için bir [kural](../modeling/rules-propagate-changes-within-the-model.md)oluşturun. Örnek:
 
 ```csharp
 using System;

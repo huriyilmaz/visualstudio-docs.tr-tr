@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointRequest2::GetRequestInfo | Microsoft Docs
+title: 'IDebugBreakpointRequest2:: GetRequestInfo | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 998312e9f6dcf16e5afedb22cec870acdcd0efa1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158804"
 ---
 # <a name="idebugbreakpointrequest2getrequestinfo"></a>IDebugBreakpointRequest2::GetRequestInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu kesme noktası istek tanımlayan kesme noktası isteği bilgilerini alır.  
+Bu kesme noktası isteğini açıklayan kesme noktası istek bilgilerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetRequestInfo(   
@@ -42,16 +42,16 @@ int GetRequestInfo( 
   
 #### <a name="parameters"></a>Parametreler  
  `dwFields`  
- [in] Bayraklarının bir birleşimi [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) hangi alanların belirleyen sabit listesi `pBPRequestInfo` parametresi doldurulması üzeresiniz.  
+ 'ndaki [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) Numaralandırmadaki, parametresindeki hangi alanların doldurulacağını belirleyen bayrakların birleşimi `pBPRequestInfo` .  
   
  `pBPRequestInfo`  
- [out] Belirtir [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) kesme noktası istek açıklaması ile doldurulacak yapısı.  
+ dışı Kesme noktası isteğinin açıklamasıyla birlikte doldurulacak [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) yapısını belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CDebugBreakpointRequest` gösteren nesne [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) arabirimi.  
+ Aşağıdaki örnek, `CDebugBreakpointRequest` [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```  
 HRESULT CDebugBreakpointRequest::GetRequestInfo(  

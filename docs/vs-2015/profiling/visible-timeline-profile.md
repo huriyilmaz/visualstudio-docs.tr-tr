@@ -14,16 +14,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8803d5fcdd8bd1da85cc26977d68f2c96b15563f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68145323"
 ---
 # <a name="visible-timeline-profile"></a>Görünür Zaman Çizelgesi Profili
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Görünür zaman çizelgesi profili iş parçacığı engelleme görünüm için istatistiksel bilgiler ve raporlar için bağlantılar sağlar. Yakınlaştırma, uzaklaştırma, yatay kaydırma, Kanallar Gizle veya kanalları Göster olarak etkin göstergesi sayıları şu anda Görünümü'nde nedir yansıtacak şekilde değiştirin. Göstergeye bir öğe hakkında bir rapor görüntülemek için öğeyi tıklatın.  
+Iş parçacığı engelleme görünümü için görünür zaman çizelgesi profili, istatistiksel bilgiler ve raporlara bağlantılar sağlar. Yakınlaştırma, büyütme, yatay kaydırma, kanalları gizleme veya kanalları gösterme gibi, etkin göstergedeki numaralar şu anda görünümde olan öğeleri yansıtacak şekilde değişir. Göstergedeki bir öğeyle ilgili bir raporu görüntülemek için öğeye tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

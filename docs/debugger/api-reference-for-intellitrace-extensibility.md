@@ -1,5 +1,5 @@
 ---
-title: IntelliTrace genişletilebilirliği için API Başvurusu | Microsoft Docs
+title: IntelliTrace Genişletilebilirliği için API başvurusu | Microsoft Docs
 ms.date: 11/07/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,19 +11,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1fb5044059fa005c1d67b3b7055a294bb22e124e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62564300"
 ---
-# <a name="api-reference-for-intellitrace-extensibility"></a>IntelliTrace genişletilebilirliği için API Başvurusu
+# <a name="api-reference-for-intellitrace-extensibility"></a>IntelliTrace Genişletilebilirliği için API başvurusu
 
-Bu bölümdeki bilgileri kullanarak, okuma ve uygulamanızda .itrace dosyaları kodlayıp kod çözebilirsiniz IntelliTrace genişletilebilirlik API'leri kullanabilirsiniz.
+Bu bölümdeki bilgileri kullanarak, IntelliTrace genişletilebilirlik API 'Lerini kullanarak uygulamanızdaki. iTrace dosyalarını okuyabilir ve kodunu çözer.
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-Bu ad alanı, IntelliTrace genişletilebilirlik API'leri içerir:
+Bu ad alanı IntelliTrace genişletilebilirlik API 'Lerini içerir:
 
 - <xref:Microsoft.VisualStudio.IntelliTrace>
 
@@ -31,4 +31,4 @@ Bu ad alanı, IntelliTrace genişletilebilirlik API'leri içerir:
 
 [IntelliTrace](../debugger/intellitrace.md) IntelliTrace ile hata ayıklama hakkında bilgi sağlar.
 
-[Geliştirici kodu örnekleri](https://code.msdn.microsoft.com/) IntelliTrace genişletilebilirliğin nasıl kullanılacağını gösteren bir örnek uygulama barındırır.
+[Geliştirici kodu örnekleri](https://code.msdn.microsoft.com/) IntelliTrace Genişletilebilirliği kullanmayı gösteren örnek bir uygulama barındırır.

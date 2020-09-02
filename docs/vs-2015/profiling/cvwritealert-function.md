@@ -1,5 +1,5 @@
 ---
-title: CvWriteAlert işlevi | Microsoft Docs
+title: CvWriteAlert Işlevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,18 +20,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0f5c428b471c576c1ca15b73a1c8b2ccfa2cc7b6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62551227"
 ---
 # <a name="cvwritealert-function"></a>CvWriteAlert İşlevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir uyarı eşzamanlılık görselleştiricisi izleme dosyasına yazar.  
+Eşzamanlılık görselleştiricisi izleme dosyasına bir uyarı yazar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```  
 HRESULT CvWriteAlertW(  
@@ -59,23 +59,23 @@ HRESULT CvWriteAlertVA(
   
 #### <a name="parameters"></a>Parametreler  
  `argList`  
- Bağımsız değişken listesi.  
+ Bağımsız değişkenlerin listesi.  
   
  `pMarkerSeries`  
- Geçerli işaret serisi bağlamı. NULL olamaz.  
+ Geçerli işaretleyici serisi bağlamı. NULL olamaz.  
   
  `pMessage`  
  İleti biçimi dizesi. NULL olamaz.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- İletinin başarılı bir şekilde yazıldığında S_OK. Hata kodu: var olan herhangi bir hata durumunda. Hata koşulu denetleyen için başarılı/başarısız makroları kullanın.  
+ İleti başarıyla yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** cvmarkers.h  
+ **Üst bilgi:** cvişaretleyiciler. h  
   
  **Unicode:** CvWriteAlertW, CvWriteAlertVW  
   
  **ANSI:** CvWriteAlertA, CvWriteAlertVA  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [C++ Kitaplık Başvurusu](../profiling/cpp-library-reference.md)
+ [C++ Kitaplığı başvurusu](../profiling/cpp-library-reference.md)

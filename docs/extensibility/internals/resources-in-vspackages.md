@@ -1,5 +1,5 @@
 ---
-title: VSPackages'taki Kaynaklar | Microsoft Dokümanlar
+title: VSPackages 'teki kaynaklar | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,42 +13,42 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 493e9834e3d7cf6d82cebb8dd93d5369678c7be0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80705598"
 ---
 # <a name="resources-in-vspackages"></a>VSPackage’lardaki Kaynaklar
-Yerelleştirilmiş kaynakları yerel uydu UI DL'lerine, yönetilen uydu DL'lerine veya yönetilen bir VSPackage'a katıştırabilirsiniz.
+Yerelleştirilmiş kaynakları yerel uydu UI dll 'Lerine, yönetilen uydu dll 'Lerine veya yönetilen bir VSPackage 'a ekleyebilirsiniz.
 
- Bazı kaynaklar VSPackages'e katışdırılamaz. Aşağıdaki yönetilen türleri katıştırılmış olabilir:
+ Bazı kaynaklar VSPackages içine Katıştırılamaz. Aşağıdaki yönetilen türler gömülebilir:
 
 - Dizeler
 
-- Paket yük anahtarları (aynı zamanda dizeleri olan)
+- Paket yükleme anahtarları (Ayrıca dizeler)
 
 - Araç penceresi simgeleri
 
-- Derlenmiş Komut Tablosu Çıktısı (CTO) dosyaları
+- Derlenen komut tablosu çıkışı (CTO) dosyaları
 
-- CTO bit eşlemleri
+- CTO bit eşlemler
 
-- Komut Satırı Yardım
+- Komut satırı yardımı
 
 - İletişim kutusu verileri hakkında
 
-  Yönetilen paketteki kaynaklar kaynak kimliğiyle seçilir. Özel durum, CTMENU olarak adlandırılması gereken CTO dosyasıdır. CTO dosyası kaynak tablosunda bir `byte[]`. Diğer tüm kaynak öğeleri türüne göre tanımlanır.
+  Yönetilen paketteki kaynaklar kaynak KIMLIĞI tarafından seçilir. Özel durum, CTMENU adlı bir CTO dosyasıdır. CTO dosyası kaynak tablosunda bir olarak görünmelidir `byte[]` . Diğer tüm kaynak öğeleri türe göre tanımlanır.
 
-  Yönetilen kaynakların <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> kullanılabilir olduğunu belirtmek [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] için özniteliği kullanabilirsiniz.
+  <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>Yönetilen kaynakların kullanılabilir olduğunu göstermek için özniteliğini kullanabilirsiniz [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .
 
   [!code-csharp[VSSDKResources#1](../../extensibility/internals/codesnippet/CSharp/resources-in-vspackages_1.cs)]
   [!code-vb[VSSDKResources#1](../../extensibility/internals/codesnippet/VisualBasic/resources-in-vspackages_1.vb)]
 
-  Bu <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> şekilde ayarlayarak, örneğin kaynakları ararken yönetilmeyen uydu DL'lerini göz ardı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] etmesi gerektiğini <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>gösterir. Aynı [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] kaynak kimliğine sahip iki veya daha fazla kaynakla karşılaşırsa, bulduğu ilk kaynağı kullanır.
+  <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>Bu şekilde ayarlanması [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , örneğin kullanarak, kaynakları ararken yönetilmeyen uydu dll 'lerini yoksayması gerektiğini belirtir <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A> . [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Aynı kaynak kimliğine sahip iki veya daha fazla kaynakla karşılaşırsa, bulduğu ilk kaynağı kullanır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir araç penceresi simgesinin yönetilen bir temsilidir.
+ Aşağıdaki örnek bir araç penceresi simgesinin yönetilen bir gösterimidir.
 
 ```
 <data name="1001"
@@ -64,7 +64,7 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 </data>
 ```
 
- Aşağıdaki örnek, CTMENU adı verilmesi gereken CTO bayt dizininin nasıl gömüleceğini gösterir.
+ Aşağıdaki örnek, CTMENU 'nin adlandırılması gereken CTO bayt dizisinin nasıl ekleneceğini gösterir.
 
 ```
 <data name="CTMENU"
@@ -80,11 +80,11 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 </data>
 ```
 
-## <a name="implementation-notes"></a>Uygulama Notları
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]mümkün olduğunda VSPackages'ın yüklenmesigeciktirir. Bir VSPackage'a bir CTO dosyası yerleştirmenin bir sonucu, birleştirilmiş bir komut tablosu oluşturduğunda Kurulum sırasında tüm bu VSPackages'ı belleğe yüklemesi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] gerekir. Kaynaklar, VSPackage'da kod çalıştırmadan meta verileri inceleyerek VSPackage'dan çıkarılabilir. VSPackage şu anda başharfe fişlenmemişolduğundan, performans kaybı en az düzeydedir.
+## <a name="implementation-notes"></a>Uygulama notları
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] mümkün olduğunda VSPackages yükleme gecikmeleri. Bir VSPackage içindeki bir CTO dosyasını gömmenin bir sonucu, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Kurulum sırasında bir birleştirilmiş komut tablosu oluştururken bulunan tüm VSPackages 'leri belleğe yüklemelidir. Kaynak, VSPackage 'da kod çalıştırmadan meta verileri inceleyerek VSPackage 'dan ayıklanabilir. VSPackage Şu anda başlatılmaz, bu nedenle performans kaybı en düşük düzeydedir.
 
- Kurulumdan sonra bir VSPackage'dan kaynak [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] istediğinde, bu paketin zaten yüklenmiş ve başolarak başlatılması olasıdır, bu nedenle performans kaybı en az düzeydedir.
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Kurulumdan sonra bir VSPackage kaynağından bir kaynak istediğinde, bu paketin daha önce yüklenmiş ve başlatılmış olması olasıdır, bu nedenle performans kaybı en düşük düzeydedir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [VSPackage’ları Yönetme](../../extensibility/managing-vspackages.md)
-- [MFC Uygulamalarında Yerelleştirilmiş Kaynaklar: Uydu DLL'leri](/cpp/build/localized-resources-in-mfc-applications-satellite-dlls)
+- [MFC uygulamalarında yerelleştirilmiş kaynaklar: uydu dll 'Leri](/cpp/build/localized-resources-in-mfc-applications-satellite-dlls)

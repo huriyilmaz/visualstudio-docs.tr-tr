@@ -1,5 +1,5 @@
 ---
-title: 'PTVS kullanmaya Başlarken: Kod düzenleme | Microsoft Docs'
+title: "PTV 'leri kullanmaya başlama: kodu düzenleniyor | Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-python
@@ -10,31 +10,31 @@ author: kraigb
 ms.author: kraigb
 manager: jillfra
 ms.openlocfilehash: 2e883970b4b265b1864d53ef6e1f347160e5aeb9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62550918"
 ---
-# <a name="getting-started-with-ptvs-editing-code"></a>PTVS kullanmaya Başlarken: Kod düzenleme
+# <a name="getting-started-with-ptvs-editing-code"></a>PTVS Kullanmaya Başlarken: Kodları Düzenleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-PTVS Python üretken Visual Studio Düzenleyicisi deneyimi sağlar.  
+PTV 'ler, Python için üretken Visual Studio Düzenleyicisi deneyimi sağlar.  
   
- Bu çok kısa yönergeleri izleyebilirsiniz [youtube video](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
+ Bu yönergeleri, çok kısa bir [youtube videosunda](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)izleyebilirsiniz.  
   
- Temel boş Python uygulaması proje şablonu ile başlayın.  
+ Temel boş Python uygulaması proje şablonunu kullanmaya başlayın.  
   
- Yazmaya başlayın bir `from … import` Düzenleyicisi'nde satır.  Açılır tamamlanma listesi olan içeri aktarma için kullanılabilir modüllerin tam listesini görürsünüz.  Bu liste, Python ve hangi sürümü göre farklılık gösterir, yüklediğiniz kitaplıkları.  Matematik kitaplığı, bir örnek olarak kullanabilirsiniz.  Karakterleri dahil olmak üzere öğelerle tamamlamaları filtrelerin listesini yazarken, yazdığınız fark edeceksiniz.  İçeri aktararak deyim tamamlama `sin` tanımlayıcısı.  
+ Düzenleyicide bir satır yazmaya başlayın `from … import` .  Açılır menü tamamlanma listesinin içeri aktarma için kullanılabilen modüllerin tam bir listesi olduğunu görürsünüz.  Bu liste, Python sürümünüze ve yüklediğiniz kitaplıklara göre farklılık gösterir.  Örnek olarak matematik kitaplığını kullanın.  Yazdığınız karakterler de dahil olmak üzere, bu öğelere yönelik tamamlama filtresi listesini yazdığınızda bu olduğunu fark edeceksiniz.  Tanımlayıcıyı içeri aktararak ifadeyi doldurun `sin` .  
   
 ```python  
 from math import sin  
   
 ```  
   
- İlişkisiz ancak Kitaplıklarınızı içinde bulunabilir tanımlayıcının kullanırsanız kodlama sırasında ihtiyacınız uygun içeri aktarma deyimi eklemek için açılan bir hızlı düzeltme PTVS sunar.  Örneğin, yazdığınız `cos`, gördüklerinizle sonra **alma matematik** sunulan.  
+ Kodlama sırasında, ilişkisiz olan ancak kitaplıklarınızda bulunan bir tanımlayıcı kullanırsanız, PTV 'ler, ihtiyacınız olan uygun içeri aktarma ekstresini eklemek için bir açılır hızlı çözüm sunar.  Örneğin, yazıp, `cos` **matematik 'dan içeri aktarma** seçeneğini görürsünüz.  
   
- Bir kod parçacığı, kod oluşturmak için kullanabilirsiniz.  Düzen menüsünün altında IntelliSense ve kod parçacığı Ekle'ı seçin.  Artık, Python ve ardından def olarak seçin  İşlev çağrısı `make_dot_string` ve bir parametre ekleyin `x`.  Dosyaya artık test odaklı geliştirme için Onaylamalar ekleyebilirsiniz ve PTVS tamamlanma listeleri yeni işlev zaten sunabilir bakın.  
+ Kod oluşturmak için bir kod parçacığı kullanabilirsiniz.  Düzenle menüsünde IntelliSense ' i seçin ve ardından kod parçacığı ekleyin.  Şimdi Python ve sonra def ' i seçin.  İşlevi çağırın `make_dot_string` ve bir parametre ekleyin `x` .  Sınama temelli geliştirme için şimdi dosyaya onaylar ekleyebilirsiniz ve PTV 'leri zaten tamamlanma listelerinde yeni işlevi sunabilir.  
   
 ```python  
 assert make_dot_string(90) == '          o'  
@@ -42,18 +42,18 @@ assert make_dot_string(180) == 'o'
   
 ```  
   
- Şimdi yeni işleve geri dönün ve aşağıdaki gövdesi yazmaya başlayın:  
+ Şimdi yeni işleve dönün ve aşağıdaki gövdeyi yazmaya başlayın:  
   
 ```python  
 return " " * int(10 * cos(radians(x)) + 10) + "o"  
   
 ```  
   
- PTVS PTVS bu işleve yapılan çağrı siteleri incelediği parametresi bir tamsayıdır çünkü varsayar görürsünüz.   Hızlı düzeltme içeri aktarmak için kullanmanız gerekecektir `radians`.  
+ PTV 'ler çağrı sitelerini bu işleve çözümleytiğinden PTV 'nin parametreyi bir tamsayı olduğunu varsaydığını görürsünüz.   İçeri aktarmak için hızlı düzelme de kullanmanız gerekecektir `radians` .  
   
- Ana blok yazarak oluşturmak için başka bir kod parçacığı kullanın `main` en üst düzey, akıllı etiket UI çağırma ve kullanarak sekme "def ana..." seçmek için  Çağırmak için bir temel döngüsü yazma `make_dot_string`.  PTVS dönem tuşuna basın ve önerilen tamamlamaları bkz işlevi tarafından bir dize döndürür. bilir görürsünüz.  Bu tür bilgiler, programınızın tamamı akar, değerlerinizi düştüğünden her yerde sunabilmemiz araç ipuçları ve daha iyi yardımcı olacak tamamlamaları anlamak ve kodunuzu yazabilirsiniz.  
+ En üst düzeyde yazarak bir ana blok oluşturmak için başka bir kod parçacığı kullanın `main` , akıllı etiket Kullanıcı arabirimini çağırır ve "def Main...." seçeneğini belirlemek için Tab komutunu kullanın.  Çağırmak için bir temel döngü yazın `make_dot_string` .  Bkz. PTV 'ler işlevi, dönem ' e basabilir ve sunulan tamamlama ' yı görürseniz işlevin bir dize döndürdüğünü bilir.  Bu tür bilgileri tüm programınızın tamamında akacak, böylece değerlerinizin sonunda, kodunuzu daha iyi anlamanıza ve yazmanıza yardımcı olacak araç ipuçları ve tamamlamalar sağlayabiliriz.  
   
- Yazdırmak için bir çağrı ekleyin ve bir ana aşağıdakine benzer olmalıdır:  
+ Yazdırmak için bir çağrı ekleyin ve aşağıdakine benzer bir ana sahip olmanız gerekir:  
   
 ```python  
 def main ():  
@@ -62,10 +62,10 @@ def main ():
         print(s)  
 ```  
   
- F5 tuşuna basarsanız, cmd.exe penceresinde kodu çalıştırır ve sürekli salınım yapan bir nokta görürsünüz.  
+ F5 tuşuna basarsanız, kod cmd.exe pencerede çalışır ve ileri ve geri atma noktası olduğunu görürsünüz.  
   
- Bu çok kısa yönergeleri izleyebilirsiniz [youtube video](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
+ Bu yönergeleri, çok kısa bir [youtube videosunda](https://www.youtube.com/watch?v=uZGZNEyyeKs&index=3&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)izleyebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Wiki belgeleri](https://github.com/Microsoft/PTVS/wiki/Editor-Features)   
- [PTVS kullanmaya başlama ve kapsamlı videolar alma](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+ [PTV 'Leri kullanmaya başlama ve derinlemesine bakış videoları](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

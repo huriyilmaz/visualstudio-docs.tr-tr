@@ -1,5 +1,5 @@
 ---
-title: Performans araçları ile çalışmaya başlama | Microsoft Docs
+title: Performans araçlarıyla çalışmaya başlama | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -13,33 +13,33 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ee0cb763cdfcd049ac389b54a2348c0a733b907d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158222"
 ---
-# <a name="getting-started-with-performance-tools"></a>Performans araçları ile çalışmaya başlama
+# <a name="getting-started-with-performance-tools"></a>Performans araçları 'nı kullanmaya başlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu bölümde, kavramlar ve Topla, görüntülemek ve Visual Studio performans araçları kullanarak kod performansını çözümlemek uygulanacak görevlere genel bir bakış sağlar.  
+Bu bölümde, Visual Studio performans araçlarını kullanarak kod performansını topladığınızda, görüntülerken ve analiz ettiğinizde uygulayacağınız kavramlara ve görevlere ilişkin bir genel bakış sunulmaktadır.  
   
- Bu araçlar, performans verilerini toplamanıza ve analiz için birkaç yol sağlar. Ancak birçok durumda, başlamak için en iyi yolu, performans sorunlarını kodunuzda işaret edebilir ve uygulama istatistikleri toplamanıza olanak tanır performans Sihirbazı'nın varsayılan ayarlarını kullanın.  
+ Bu araçlar, performans verilerini toplamak ve analiz etmek için çeşitli yollar sağlar. Ancak çoğu durumda, en iyi başlangıç yolu, kodunuzda performans sorunlarına yol açabilir uygulama istatistiklerini toplamanıza olanak sağlayan varsayılan performans Sihirbazı ayarlarını kullanmaktır.  
   
-- *Performans uyarıları* yaygın kodlama sorunlarını size bildirir. Uyarılar Visual Studio hata penceresinde görüntülenir. Kaynak kodunuzu uyarıdan arttıracağına ve ayrıntılı yardımcı olacak Yardım konularını daha verimli kod yazın.  
+- *Performans uyarıları* , yaygın kodlama sorunları konusunda sizi uyarır. Uyarılar, Visual Studio hataları penceresinde görüntülenir. Uyarıdan kaynak kodunuza ve daha verimli kod yazmanıza yardımcı olan ayrıntılı yardım konularına gidebilirsiniz.  
   
-- Performans raporları, tüm uygulamanın çağırma ağacına belirli bir işlevin çağrılmasından ve çağrılan işlevlerinden işlemleri ve program yürütme verilerine kod satırlarını uygulama yapınızın farklı düzeylerine kaynağından görünümler sağlar.  
+- Performans raporları, kaynak kodu satırlarından işlemlere, uygulama yapınızın farklı seviyelerine yönelik görünümler sağlar ve belirli bir işlevin çağırma ve çağrılan işlevlerinden tüm uygulamanın çağrı ağacına program yürütme verileri sağlar.  
   
 ## <a name="common-tasks"></a>Ortak Görevler  
   
-|Görev|İlgili içerik|  
+|Görev|İlgili İçerik|  
 |----------|---------------------|  
-|**Hızlı bir uygulama veya bir Web sitesi profili:** Performans Sihirbazı'nı yapılandırma ve Visual Studio çözümü veya bir Web sitesi için profil oluşturma oturumunu çalıştırmak için kullanın.|-   [Performans profili oluşturma Başlangıç Kılavuzu](../profiling/beginners-guide-to-performance-profiling.md)<br />-   [Nasıl Yapılır: Web Sitesinin Performans Verileri Toplama](../profiling/how-to-collect-performance-data-for-a-web-site.md)|  
-|**Sihirbaz kullanmadan bir uygulama profili:** Performans oturumu özellik sayfaları bir performans oturumu oluşturmak için kullanmayı öğrenin.|-   [Nasıl Yapılır: El ile Performans Oturumları Oluşturma](../profiling/how-to-manually-create-performance-sessions.md)|  
-|**Deneyin:** Örnek bir uygulama için profil oluşturarak, uygulamalı deneyim edinin.|-   [İzlenecek yol: Performans Sorunlarını Tanımlama](../profiling/walkthrough-identifying-performance-problems.md)<br />-   [PeopleTrax örneği](../profiling/peopletrax-sample-profiling-tools.md)|  
+|**Bir uygulamayı veya bir Web sitesini hızlıca profili:** Bir Visual Studio çözümü veya bir Web sitesi için profil oluşturma oturumu yapılandırmak ve çalıştırmak için performans Sihirbazı 'Nı kullanın.|-   [Performans profili oluşturma için yeni başlayanlar kılavuzu](../profiling/beginners-guide-to-performance-profiling.md)<br />-   [Nasıl yapılır: bir Web sitesi için performans verilerini toplama](../profiling/how-to-collect-performance-data-for-a-web-site.md)|  
+|**Sihirbaz olmadan bir uygulama profili oluşturma:** Performans oturumu oluşturmak için performans oturumu özellik sayfalarını kullanmayı öğrenin.|-   [Nasıl yapılır: El Ile performans oturumları oluşturma](../profiling/how-to-manually-create-performance-sessions.md)|  
+|**Deneyin:** Örnek bir uygulamanın profilini oluşturarak uygulamalı deneyim alın.|-   [İzlenecek yol: performans sorunlarını tanımlama](../profiling/walkthrough-identifying-performance-problems.md)<br />-   [PeopleTrax örneği](../profiling/peopletrax-sample-profiling-tools.md)|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Genel bakış](../profiling/overviews-performance-tools.md)   
- [Veri Araçları performansını analiz etme](../profiling/analyzing-performance-tools-data.md)   
+ [Tahmin](../profiling/overviews-performance-tools.md)   
+ [Performans araçları verilerini çözümleme](../profiling/analyzing-performance-tools-data.md)   
  [Verileri çözümlemek için performans kurallarını kullanma](../profiling/using-performance-rules-to-analyze-data.md)   
  [Performans Oturumlarını Yapılandırma](../profiling/configuring-performance-sessions.md)

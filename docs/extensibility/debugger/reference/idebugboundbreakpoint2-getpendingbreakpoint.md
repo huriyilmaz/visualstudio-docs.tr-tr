@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetPendingBreakpoint | Microsoft Dokümanlar
+title: 'IDebugBoundBreakpoint2:: GetPendingBreakpoint | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,16 +17,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 4037cff1e080b4af97dbc56de4802f6f73504649
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735482"
 ---
 # <a name="idebugboundbreakpoint2getpendingbreakpoint"></a>IDebugBoundBreakpoint2::GetPendingBreakpoint
-Belirtilen bağlama kesme noktasının oluşturulduğu bekleyen kesme noktasını alır.
+Belirtilen bağlantılı kesme noktasının oluşturulduğu bekleyen kesme noktasını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetPendingBreakpoint( 
@@ -42,16 +42,16 @@ int GetPendingBreakpoint( 
 
 ## <a name="parameters"></a>Parametreler
 `ppPendingBreakpoint`\
-[çıkış] Bu bağlama kesme noktasını oluşturmak için kullanılan bekleyen kesme noktasını temsil eden [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesini döndürür.
+dışı Bu bağlantılı kesme noktasını oluşturmak için kullanılan bekleyen kesme noktasını temsil eden [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) nesnesini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Bekleyen bir kesme noktası, bir veya birden çok programa uygulanabilecek bir kesme noktasını koda bağlamak için gereken tüm bilgilerin bir koleksiyonu olarak düşünülebilir.
+Bekleyen bir kesme noktası, bir veya daha fazla program için uygulanabilen bir kesme noktasını bağlamak için gereken tüm gerekli bilgilerin bir koleksiyonu olarak düşünülebilir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, `CBoundBreakpoint` [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, `CBoundBreakpoint` [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```
 HRESULT CBoundBreakpoint::GetPendingBreakpoint(

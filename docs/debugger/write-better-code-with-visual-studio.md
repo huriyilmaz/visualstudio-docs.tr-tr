@@ -1,6 +1,6 @@
 ---
 title: Hata ayıklama teknikleri ve araçları
-description: Özel durumları düzeltmek, hataları düzeltmek ve kodunuzu geliştirmek için Visual Studio'u kullanarak daha az hatayla daha iyi kod yazın
+description: Özel durumları onarmak, hataları onarmak ve kodunuzu geliştirmek için Visual Studio 'Yu kullanarak daha az hata ile daha iyi kod yazın
 ms.custom:
 - debug-experiment
 - seodec18
@@ -14,54 +14,54 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2ac595098d793e44d65312a09fc8857225f150ef
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79302030"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89311397"
 ---
 # <a name="debugging-techniques-and-tools-to-help-you-write-better-code"></a>Daha iyi kod yazmanıza yardımcı olacak hata ayıklama teknikleri ve araçları
 
-Kodunuzdahataları ve hataları düzeltmek zaman alan ve bazen de sinir bozucu bir görev olabilir. Etkili bir şekilde hata ayıklama öğrenmek için zaman alır, ancak Visual Studio gibi güçlü bir IDE işinizi çok daha kolay hale getirebilir. Bir IDE hataları düzeltmek ve daha hızlı ve sadece bu değil, kod hata ayıklama yardımcı olabilir, ama aynı zamanda daha az hata ile daha iyi kod yazmanıza yardımcı olabilir. Bu makaledeki amacımız size "hata düzeltme" işleminin bütünsel bir görünümünü vermektir, böylece kod çözümleyicisini ne zaman kullanacağınızı, hata ayıklayıcıyı ne zaman kullanacağınızı, özel durumları nasıl düzelteceğinizi ve niyet için nasıl kod kullanılacağını bileceksiniz. Hata ayıklamayı kullanmanız gerektiğini zaten biliyorsanız, [hata ayıklamaya ilk bakışta](../debugger/debugger-feature-tour.md)bakın.
+Kodunuzda hataların ve hataların düzeltilmesi, zaman alan ve bazen sinir bozucu bir görev olabilir. Etkin bir şekilde hata ayıklamanın nasıl yapılacağını öğrenmek zaman alabilir, ancak Visual Studio gibi güçlü bir IDE, işinizi çok daha kolay hale getirir. IDE, hataları düzeltmenize ve kodunuzun hatalarını daha hızlı şekilde hata ayıklamanıza yardımcı olabilir, ancak aynı zamanda daha az hata ile daha fazla kod yazmanıza yardımcı olabilir. Bu makalede, size "hata düzeltme" işleminin bir bütünsel görünümünü sunmamız, bu nedenle Code Analyzer 'ın ne zaman hata ayıklayıcıyı kullanacağınızı, özel durumların nasıl düzeltileceğini ve amaç kodunun nasıl yapılacağını bilmeniz için size "hata düzeltme" sürecinin bir görünümünü sunmaktır. Hata ayıklayıcıyı kullanmanız gerektiğini zaten biliyorsanız bkz. [hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md).
 
-Bu makalede, kodlama oturumlarınızı daha verimli hale getirmek için IDE'den yararlanma hakkında konuşuyoruz. Çeşitli görevlere değiniyoruz, örneğin:
+Bu makalede, kodlama oturumlarınızın daha üretken olmasını sağlamak için IDE 'yi kullanma hakkında konuşuyoruz. Şöyle birçok göreve dokunuyoruz:
 
-* IDE'nin kod çözümleyicisini yararlanarak hata ayıklama için kodunuzu hazırlayın
+* IDE 'nin kod çözümleyicisini kullanarak kodunuzu hata ayıklama için hazırlayın
 
-* Özel durumlar (çalışma zamanı hataları) nasıl düzeltilir?
+* Özel durumları çözme (çalışma zamanı hataları)
 
-* Amaç için kodlayarak hataları en aza indirme (assert kullanarak)
+* Amacı kodlayarak hataları en aza indirme (onaylama kullanarak)
 
-* Hata ayıklama ne zaman kullanılır?
+* Hata ayıklayıcının ne zaman kullanılacağı
 
-Bu görevleri göstermek için, uygulamalarınızı hata ayıklamaya çalışırken karşılaşacağınız en yaygın hata ve hata türlerinden birkaçını gösteririz. Örnek kod C#olmasına rağmen, kavramsal bilgiler genellikle C++, Visual Basic, JavaScript ve Visual Studio tarafından desteklenen diğer diller için de geçerlidir (not edilendurumlar hariç). Ekran görüntüleri C#'da.
+Bu görevleri göstermek için, uygulamalarınızda hata ayıklamaya çalışırken karşılaşabileceğiniz en yaygın hata ve hata türlerinden birkaçını gösteririz. Örnek kod C# olsa da, kavramsal bilgiler genellikle C++, Visual Basic, JavaScript ve Visual Studio tarafından desteklenen diğer diller için geçerlidir (aksi belirtilmedikçe). Ekran görüntüleri C# ' de bulunur.
 
-## <a name="create-a-sample-app-with-some-bugs-and-errors-in-it"></a>Bazı hatalar ve hatalar içeren örnek bir uygulama oluşturma
+## <a name="create-a-sample-app-with-some-bugs-and-errors-in-it"></a>Bazı hatalar ve hatalarda bir örnek uygulama oluşturun
 
-Aşağıdaki kod, Visual Studio IDE'yi kullanarak düzeltebileceğiniz bazı hatalara sahiptir. Buradaki uygulama, json verilerini bazı işlemlerden almayı, verileri bir nesneye deserialize etmeyi ve yeni verilerle basit bir listeyi güncelleştirmeyi simüle eden basit bir uygulamadır.
+Aşağıdaki kodda, Visual Studio IDE kullanarak düzeltebilmeniz için bazı hatalar vardır. Bu uygulama, bazı bir işlemden JSON verisi alma, verileri bir nesne serisini kaldırma ve yeni verilerle basit bir listeyi güncelleştirme benzetimi yapan basit bir uygulamadır.
 
 Uygulamayı oluşturmak için:
 
-1. Oluşturmak istediğiniz uygulama türüne bağlı olarak Visual Studio yüklü olmalı ve **.NET Core çapraz platform geliştirme** veya **.NET masaüstü geliştirme** iş yükü yüklü olmalıdır.
+1. Oluşturmak istediğiniz uygulama türüne bağlı olarak, Visual Studio yüklü ve **.NET Core platformlar arası geliştirme** veya **.net masaüstü geliştirme** iş yükü yüklü olmalıdır.
 
-    Visual Studio'yu henüz yüklemediyseniz, visual [studio indirme sayfasına](https://visualstudio.microsoft.com/downloads/) gidin ve ücretsiz olarak yükleyin.
+    Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/)   sayfasına giderek ücretsiz olarak yükleme yapın.
 
-    İş yükünü yüklemeniz gerekiyorsa ancak visual studio'nuz varsa, **Araçlar** > **Araçları ve Özellikleri Al'ı**tıklatın. Visual Studio Installer başlattı. **.NET Core çapraz platform geliştirme** veya **.NET masaüstü geliştirme iş** yükünü seçin ve sonra **Değiştir'i**seçin.
+    İş yükünü yüklemeniz gerekir, ancak Visual Studio zaten varsa **Araçlar**  >  **ve Özellikler al**' a tıklayın. Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
 1. Visual Studio'yu açın.
 
     ::: moniker range=">=vs-2019"
-    Başlangıç penceresinde yeni **bir proje oluştur'u**seçin. Arama kutusuna **konsol** yazın ve ardından **Konsol Uygulaması (.NET Core)** veya **Konsol Uygulaması 'nı (.NET Framework)** seçin. **İleri**’yi seçin. **Console_Parse_JSON** gibi bir proje adı yazın ve **Oluştur'u**tıklatın.
+    Başlangıç penceresinde **Yeni proje oluştur**' u seçin. Arama kutusuna **konsolunu** yazın ve **konsol uygulaması (.NET Core)** ya da **konsol uygulaması (.NET Framework)** seçeneğini belirleyin. **İleri**’yi seçin. **Console_Parse_JSON** gibi bir proje adı yazın ve **Oluştur**' a tıklayın.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    Üst menü çubuğundan **Yeni** > **New** > **Dosya Yı**seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında, **Konsol Uygulaması'nı**seçin ve orta bölmede Konsol **Uygulaması (.NET Core)** veya **Konsol Uygulaması (.NET Framework)** seçeneğini belirleyin. **Console_Parse_JSON** gibi bir ad yazın ve **Tamam'ı**tıklatın.
+    Üstteki menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje**' yi seçin. **Yeni proje** iletişim kutusunun sol bölmesinde, **Visual C#** altında, **konsol uygulaması**' nı seçin ve ardından Ortadaki bölmede **konsol uygulaması (.net Core)** veya **konsol uygulaması (.NET Framework)** seçeneğini belirleyin. **Console_Parse_JSON** gibi bir ad yazın ve **Tamam**' a tıklayın.
     ::: moniker-end
 
-    **Konsol Uygulaması (.NET Core)** veya Console **App (.NET Framework)** proje şablonu görmüyorsanız, Visual Studio Installer'ı açan **Araçlar** > **Araçları ve Özellikleri Al'a**gidin. **.NET Core çapraz platform geliştirme** veya **.NET masaüstü geliştirme iş** yükünü seçin ve sonra **Değiştir'i**seçin.
+    **Konsol uygulaması (.NET Core)** veya **konsol uygulaması (.NET Framework)** proje şablonunu görmüyorsanız, **Araçlar**' a gidin  >  ve Visual Studio yükleyicisi açan araçlar**ve Özellikler**' e gidin. **.NET Core platformlar arası geliştirme** veya **.net masaüstü geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
-    Visual Studio, sağ bölmede Solution Explorer'da görünen konsol projesini oluşturur.
+    Visual Studio, sağ bölmedeki Çözüm Gezgini görüntülenen konsol projesini oluşturur.
 
-1. Projenin *Program.cs* dosyasındaki varsayılan kodu aşağıdaki örnek kodla değiştirin.
+1. Projenin *program.cs* dosyasındaki varsayılan kodu aşağıdaki örnek kodla değiştirin.
 
 ```csharp
 using System;
@@ -184,37 +184,37 @@ namespace Console_Parse_JSON
 }
 ```
 
-## <a name="find-the-red-and-green-squiggles"></a>Kırmızı ve yeşil dalgalı bul!
+## <a name="find-the-red-and-green-squiggles"></a>Kırmızı ve yeşil dalgalı çizgiler bulun!
 
-Örnek uygulamayı başlatmayı ve hata ayıklayıcıyı çalıştırmayı denemeden önce, kod düzenleyicisindeki kırmızı ve yeşil dalgalı squiggles kodunu kontrol edin. Bunlar, IDE'nin kod çözümleyicisi tarafından tanımlanan hataları ve uyarıları temsil eder. Kırmızı dalgalı, kodu çalıştırmadan önce düzeltmeniz gereken derleme zamanı hatalarıdır. Yeşil dalgalı lar uyarılardır. Uyarılarınızı düzeltmeden uygulamanızı sık sık çalıştırabiliyor olsanız da, bunlar hata kaynağı olabilir ve bunları araştırarak sık sık kendinize zaman ve sorun dan tasarruf emebilirsiniz. Bu uyarılar ve hatalar, liste görünümünü tercih ederseniz **Hata Listesi** penceresinde de gösterir.
+Örnek uygulamayı başlatmayı ve hata ayıklayıcıyı çalıştırmayı denemeden önce, kırmızı ve yeşil dalgalı çizgiler için kod düzenleyicisinde kodu kontrol edin. Bunlar, IDE 'nin kod Çözümleyicisi tarafından tanımlanan hataları ve uyarıları temsil eder. Kırmızı dalgalı çizgiler, kodu çalıştırmadan önce düzeltilmesi gereken derleme zamanı hatalardır. Yeşil dalgalı çizgiler uyarılardır. Genellikle, uyarıları düzeltmeden uygulamanızı çalıştırabilmenize karşın, bu hatalar bir hata kaynağı olabilir ve genellikle kendinizi inceleyerek kendi zaman ve sorunlarını kaydedebilirsiniz. Bu uyarılar ve hatalar Ayrıca bir liste görünümünü tercih ediyorsanız **hata listesi** penceresinde görünür.
 
-Örnek uygulamada, düzeltmeniz gereken birkaç kırmızı dalgalı ve baktığınız bir yeşil dalgalı madde görürsünüz. İşte ilk hata.
+Örnek uygulamada, düzeltilmesi gereken birkaç kırmızı dalgalı çizgiler ve bakacağımız yeşil bir tane görürsünüz. İlk hata şudur.
 
-![Kırmızı dalgalı olarak gösterilen hata](../debugger/media/write-better-code-red-squiggle.png)
+![Kırmızı dalgalı çizgi olarak gösterilen hata](../debugger/media/write-better-code-red-squiggle.png)
 
-Bu hatayı gidermek için, Ampul simgesi tarafından temsil edilen IDE'nin başka bir özelliğine bakacaksınız.
+Bu hatayı onarmak için, bir IDE 'nin ampul simgesiyle temsil eden başka bir özelliğine bakacaksınız.
 
-## <a name="check-the-light-bulb"></a>Ampulü kontrol et!
+## <a name="check-the-light-bulb"></a>Ampul ' i kontrol edin!
 
-İlk kırmızı dalgalı bir derleme zamanı hatasını temsil eder. Üzerine oturun ve mesajı ```The name `Encoding` does not exist in the current context```görüyorsunuz.
+İlk kırmızı dalgalı çizgi bir derleme zamanı hatasını temsil eder. Üzerine gelin ve iletiyi görürsünüz ```The name `Encoding` does not exist in the current context``` .
 
-Bu hatanın sol altta bir ampul simgesi gösterdiğine dikkat edin. Tornavida ![simgesi tornavida](../ide/media/screwdriver-icon.png)simgesi ile ![birlikte,](../ide/media/light-bulb-icon.png) ampul simgesi ampul ampul simgesi düzeltmek veya kod satırında yeniden faktör yardımcı olabilir Hızlı Eylemler temsil eder. Ampul, düzeltmeniz *gereken* sorunları temsil eder. Tornavida, düzeltmeyi seçebileceğiniz sorunlar içindir. Soldaki **System.Text'i kullanarak** bu hatayı gidermek için önerilen ilk düzeltmeyi kullanın.
+Bu hata, sol alt tarafta bir ampul simgesi gösterdiğine dikkat edin. Screwdriver simgesi ![ screwdriver simgesiyle birlikte ampul simgesi ](../ide/media/screwdriver-icon.png) ![ ampul simgesi, ](../ide/media/light-bulb-icon.png) kodu satır içi olarak düzeltmenize veya yeniden oluşturmanıza yardımcı olabilecek hızlı eylemleri temsil eder. Ampul, düzeltilmesi *gereken* sorunları temsil eder. Screwdriver, düzeltilmesi gerekebilecek sorunlar içindir. Soldaki **System. Text öğesini kullanarak** bu hatayı çözmek için ilk önerilen sorunu kullanın.
 
-![Kodu düzeltmek için ampulü kullanın](../debugger/media/write-better-code-missing-include.png)
+![Kodu onarmak için ampul kullanın](../debugger/media/write-better-code-missing-include.png)
 
-Bu öğeyi tıklattığınızda, `using System.Text` Visual Studio *Program.cs* dosyasının üst kısmındaki deyimi ekler ve kırmızı dalgalı kaybolur. (Önerilen düzeltmenin ne yapacağından emin değilseniz, düzeltmeyi uygulamadan önce sağdaki **Önizleme değişiklikleri** bağlantısını seçin.)
+Bu öğeye tıkladığınızda, Visual Studio `using System.Text` *program.cs* dosyasının en üstüne ifadesini ekler ve kırmızı dalgalı çizgi kaybolur. (Önerilen bir düzeltmesinin ne yapacakından emin değilseniz, bu değişikliği uygulamadan önce sağ taraftaki **Değişiklikleri Önizle** bağlantısını seçin.)
 
-Önceki hata, genellikle kodunuza yeni `using` bir deyim ekleyerek düzeltirdiğiniz yaygın bir hatadır. Bu tür hatalar gibi ```The type or namespace `Name` cannot be found.``` bu hatalar için birkaç yaygın, benzer hatalar eksik bir derleme başvurusu gösterebilir (projeyi sağ tıklatın,**Başvuru** **Ekle'yi** > seçin), yanlış yazılmış bir ad veya eklemeniz gereken eksik bir kitaplık (C#için, projeyi sağ tıklatın ve **NuGet Paketlerini Yönet'i**seçin).
+Yukarıdaki hata, kodunuza yeni bir ifade ekleyerek genellikle düzelten yaygın bir yoldur `using` . Bu tür hatalar gibi bu tür hataların yaygın olarak karşılaşılan birkaç hatası vardır ```The type or namespace `Name` cannot be found.``` (projeye sağ tıklayın, başvuru **Ekle**' yi seçin  >  **Reference**), yanlış yazılmış bir ad veya eklemeniz gereken eksik bir kitaplık olabilir (C# için projeye sağ tıklayıp **NuGet Paketlerini Yönet**' i seçin).
 
-## <a name="fix-the-remaining-errors-and-warnings"></a>Kalan hataları ve uyarıları düzeltme
+## <a name="fix-the-remaining-errors-and-warnings"></a>Kalan hataları ve uyarıları çözme
 
-Bu kodda bakmak için birkaç dalgalı vardır. Burada, yaygın bir tür dönüştürme hatası görürsünüz. Dalgalı üzerinde gezinirken, kodun bir dizeyi bir int'e dönüştürmeye çalıştığını görürsünüz ve dönüştürme yapmak için açık kod eklemediğiniz sürece desteklenmez.
+Bu kodda aranacak birkaç dalgalı çizgiler daha vardır. Burada, ortak bir tür dönüştürme hatası görürsünüz. Dalgalı çizgi üzerine geldiğinizde, kodun bir dizeyi bir int 'e dönüştürmeye çalışıyor olduğunu görürsünüz. Bu, dönüştürmeyi yapmak için açık kod eklemediğiniz takdirde desteklenmez.
 
 ![Tür dönüştürme hatası](../debugger/media/write-better-code-conversion-error.png)
 
-Kod çözümleyicisi niyetinizi tahmin edemediği için, bu sefer size yardımcı olacak ampul ler yok. Bu hatayı gidermek için kodun amacını bilmeniz gerekir. Bu örnekte, `points` `points` `totalpoints`'ye eklemeye çalıştığınız için sayısal (tamsayı) değeri olması gerektiğini görmek çok zor değildir.
+Kod Çözümleyicisi amacınızı tahmin edemediği için, bu süreyi kullanmanıza yardımcı olacak açık bir bulu yok. Bu hatayı onarmak için kodun amacını bilmeniz gerekir. Bu örnekte, ' `points` ye eklemeye çalıştığınız için sayısal (tamsayı) değeri olması gerektiğini görmek çok zor değildir `points` `totalpoints` .
 
-Bu hatayı düzeltmek için `points` sınıfın `User` üyesini aşağıdakilerden değiştirin:
+Bu hatayı onarmak için `points` sınıfın üyesini şu şekilde değiştirin `User` :
 
 ```csharp
 [DataMember]
@@ -228,13 +228,13 @@ internal string points;
 internal int points;
 ```
 
-Kod düzenleyicisindeki kırmızı kıvrımlı çizgiler yok.
+Kod düzenleyicisinde kırmızı dalgalı çizgiler kaybolur.
 
-Daha sonra, `points` veri üyesinin bildiriminde yeşil dalgalı üzerinde gezinmek. Kod çözümleyicisi, değişkene hiçbir zaman bir değer atanmadı.
+Ardından, veri üyesinin bildiriminde yeşil dalgalı çizgi üzerine gelin `points` . Kod çözümleyici, değişkene hiçbir değer atanmadığını söyler.
 
 ![Atanmamış değişken için uyarı iletisi](../debugger/media/write-better-code-warning-message.png)
 
-Genellikle, bu düzeltilmesi gereken bir sorunu temsil eder. Ancak, örnek uygulamada aslında deserialization işlemi `points` sırasında değişkende veri depolama ve daha sonra `totalpoints` veri üyesi için bu değeri ekleyerek. Bu örnekte, kodun amacını biliyorsunuz ve uyarıyı güvenle yok sayabilirsiniz. Ancak, uyarıyı ortadan kaldırmak istiyorsanız, aşağıdaki kodu değiştirebilirsiniz:
+Genellikle, bu, düzeltilmesi gereken bir sorunu temsil eder. Ancak, örnek uygulamada, `points` seri durumdan çıkarma işlemi sırasında verileri değişkende depolarsınız ve sonra bu değeri `totalpoints` veri üyesine ekleyebilirsiniz. Bu örnekte, kodun amacını bilir ve uyarıyı güvenle yoksayabilirsiniz. Ancak, uyarıyı ortadan kaldırmak istiyorsanız aşağıdaki kodu değiştirebilirsiniz:
 
 ```csharp
 item.totalpoints = users[i].points;
@@ -247,33 +247,33 @@ item.points = users[i].points;
 item.totalpoints += users[i].points;
 ```
 
-Yeşil dalgalı gidiyor.
+Yeşil dalgalı çizgi kaybolur.
 
-## <a name="fix-an-exception"></a>Özel durumu düzeltme
+## <a name="fix-an-exception"></a>Özel durumu çözme
 
-Tüm kırmızı dalgalı sabit ve çözüldü - ya da en azından araştırılmış - tüm yeşil squiggles, hata ayıklayıcı başlatmak ve uygulamayı çalıştırmak için hazır.
+Tüm Red dalgalı çizgiler ve çözümlenen--veya en az araştırılan--tüm yeşil dalgalı çizgiler, hata ayıklayıcıyı başlatmaya ve uygulamayı çalıştırmaya başlayabilirsiniz.
 
-**Hata** Ayıklama > Hata**Ayıklama'ya**veya Hata **Ayıklama** Başlat düğmesine basın Hata Ayıklama araç çubuğunda Hata ![Ayıklama](../debugger/media/dbg-tour-start-debugging.png "Hata Ayıklama'yı Başlatma") başlat.
+Hata ayıklama araç çubuğunda **F5** tuşuna basın (hata**Ayıkla > Başlat**) ![veya hata](../debugger/media/dbg-tour-start-debugging.png "Hata ayıklamayı Başlat") **ayıklamayı** Başlat düğmesine basın.
 
-Bu noktada, örnek uygulama bir `SerializationException` özel durum (çalışma zamanı hatası) atar. Diğer bir de, uygulama seri hale getirmeye çalıştığı verilerle boğulur. Uygulamayı hata ayıklama modunda başlattığınız (hata ayıklayıcı ekli) için hata ayıklayıcının Özel Durum Yardımcısı sizi özel durum atan koda götürür ve size yararlı bir hata iletisi verir.
+Bu noktada, örnek uygulama bir `SerializationException` özel durum (çalışma zamanı hatası) oluşturur. Yani, uygulama Serileştirmeye çalıştığı verileri alır. Uygulamayı hata ayıklama modunda (hata ayıklayıcı ekli) başlattığınız için, hata ayıklayıcının özel durum Yardımcısı özel durumu oluşturan koda doğru bir hata iletisi verir.
 
-![Serileştirme Özel Durum oluşur](../debugger/media/write-better-code-serialization-exception.png)
+![SerializationException meydana geldi](../debugger/media/write-better-code-serialization-exception.png)
 
-Hata iletisi, değerin `4o` bir sonda olarak ayrıştılamayacağını bildirir. Yani, bu örnekte, veri kötü `4o` olduğunu `40`biliyorum: olmalıdır. Ancak, gerçek bir senaryoda verilerin denetiminde değilseniz (bir web hizmetinden aldığınızı varsayalım), bu konuda ne yaparsınız? Bunu nasıl düzeltebiliyorsun?
+Hata mesajı, değerin `4o` tamsayı olarak ayrıştırılamadığına bildirir. Bu nedenle, bu örnekte verilerin hatalı olduğunu bilirsiniz: `4o` olmalıdır `40` . Ancak gerçek bir senaryoda (bir Web hizmetinden alıyoruz) verilerin denetiminde değilseniz, bununla ilgili ne yapmanız gerekir? Bunu nasıl giderebilirim?
 
-Bir özel durum vurduğunuzda, birkaç soru sormanız (ve yanıtlamanız) gerekir:
+Bir özel durum vurmanız durumunda, birkaç soruyu sormanız (ve yanıtlamanız) gerekir:
 
-* Bu özel durum sadece düzeltebileceğiniz bir hata mı? Veya
+* Bu özel durum yalnızca çözebilmeniz için bir hata mu? Veya
 
-* Bu özel durum, kullanıcılarınızın karşılaşabileceği bir durum mudur?
+* Bu özel durum, kullanıcılarınızın karşılaşabileceği bir şeydir mi?
 
-Eğer eskiyse, hatayı düzelt. (Örnek uygulamada, bu kötü verileri düzeltmek anlamına gelir.) Ikincisi ise, bir `try/catch` blok kullanarak kodunuzda özel durum işlemek gerekebilir (sonraki bölümde diğer olası stratejiler bakmak). Örnek uygulamada aşağıdaki kodu değiştirin:
+Bu, eski ise hatayı düzeltir. (Örnek uygulamada, bu, bozuk verileri düzeltir anlamına gelir.) İkinci ise, bir blok kullanarak kodunuzda özel durumu işlemeniz gerekebilir `try/catch` (sonraki bölümde yer aldığı diğer stratejileri inceleyeceğiz). Örnek uygulamada aşağıdaki kodu değiştirin:
 
 ```csharp
 users = ser.ReadObject(ms) as User[];
 ```
 
-bu kod ile:
+yerine şu kodu yazın:
 
 ```csharp
 try
@@ -287,13 +287,13 @@ catch (SerializationException)
 }
 ```
 
-Bir `try/catch` bloğun bazı performans maliyeti vardır, bu nedenle bunları yalnızca gerçekten ihtiyacınız olduğunda, yani (a) uygulamanın sürüm sürümünde nerede oluşabilecekleri ve (b) yönteme ilişkin belgelerin özel durumu denetlemeniz gerektiğini gösterdiği durumlarda (belgelerin tamamlandığı varsayarak!) kullanmak istersiniz. Çoğu durumda, bir özel durumu uygun şekilde işleyebilirsiniz ve kullanıcının bu konuda bilmesi gerekmez.
+Bir `try/catch` blok bazı performans maliyetlerine sahiptir, bu nedenle yalnızca gerçekten ihtiyacınız olduğunda, yani (a) uygulamanın yayın sürümünde oluşabileceği ve (b) yöntemi için belge, özel durumu denetlemeniz gerektiğini (belgelerin tamamlandığı varsayılarak!) gösterir. Birçok durumda, bir özel durumu uygun şekilde işleyebilir ve kullanıcının bunu bilmesi gerekmez.
 
 Özel durum işleme için birkaç önemli ipucu aşağıda verilmiştir:
 
-* Bir hatayı ortaya çıkarmak `catch (Exception) {}`veya işlemek için uygun eylemi yapmayan boş bir catch bloğu kullanmaktan kaçının. Boş veya bilgilendirici olmayan bir catch bloğu özel durumları gizleyebilir ve kodunuzu hata ayıklamayı kolaylaştırmak yerine daha zor hale getirebilir.
+* `catch (Exception) {}`Bir hatayı göstermek veya işlemek için uygun eylemi olmayan, gibi boş bir catch bloğu kullanmaktan kaçının. Boş veya bilgilendirici olmayan bir catch bloğu özel durumları gizleyebilir ve kodunuzu daha kolay hale getirmek yerine hata ayıklamanın daha zor hale getirebilirsiniz.
 
-* Özel `try/catch` durumu (örnek uygulamada)`ReadObject`atan belirli bir işlevin etrafındaki bloğu kullanın. Daha büyük bir kod yığınıetrafında kullanırsanız, hatanın konumunu gizlersiniz. Örneğin, burada gösterilen üst `try/catch` işleviçin `ReadToObject`çağrı etrafında blok kullanmayın, ya da özel durum oluştu tam olarak bilemezsin.
+* `try/catch`Özel durumu oluşturan özel işlevin etrafındaki bloğu kullanın ( `ReadObject` Örneğin, örnek uygulamada). Daha büyük bir kod öbeği etrafında kullanıyorsanız hatanın konumunu gizlemiş olursunuz. Örneğin, `try/catch` burada gösterilen üst işleve yapılan çağrının etrafında bloğu kullanmayın `ReadToObject` veya tam olarak özel durumun nerede oluştuğunu bilemezsiniz.
 
     ```csharp
     // Don't do this
@@ -306,19 +306,19 @@ Bir `try/catch` bloğun bazı performans maliyeti vardır, bu nedenle bunları y
     }
     ```
 
-* Uygulamanıza eklediğiniz yabancı işlevler, özellikle dış verilerle (web isteği gibi) etkileşimde bulunanlar için, işlevin hangi özel durumları ortaya atmasını sağlayacaklarını görmek için belgeleri denetleyin. Bu, doğru hata işleme ve uygulamanızın hata ayıklama için kritik bilgiler olabilir.
+* Uygulamanıza dahil ettiğiniz, özellikle dış verilerle (örneğin, bir Web isteği) etkileşimde bulunan tanıdık işlevler için, işlevin hangi özel durumları oluşturacaklarına bakmak için belgelere bakın. Bu, doğru hata işleme ve uygulamanızda hata ayıklama için kritik bilgiler olabilir.
 
-Örnek uygulama için, `SerializationException` `GetJsonData` 'ye değiştirerek `4o` `40`yöntemdeki düzeltme
+Örnek uygulama için öğesini `SerializationException` `GetJsonData` olarak değiştirerek metodunu onarın `4o` `40` .
 
-## <a name="clarify-your-code-intent-by-using-assert"></a>Assert'ı kullanarak kod amacınızı netleştirin
+## <a name="clarify-your-code-intent-by-using-assert"></a>Onaylama kullanarak kod amacınızı açıklığa kavuşturun
 
-Hata Ayıklama Araç Çubuğu'ndaki **(Ctrl** + **Shift** + **F5)** Uygulamayı Yeniden **Başlat** ![Restart App](../debugger/media/dbg-tour-restart.png "Yeniden BaşlatApp") düğmesini tıklatın. Bu, uygulamayı daha az adımda yeniden başlatır. Konsol penceresinde aşağıdaki çıktıyı görürsünüz.
+Hata ayıklama araç çubuğundaki uygulamayı **yeniden** ![Başlat](../debugger/media/dbg-tour-restart.png "RestartApp") (**CTRL**  +  **SHIFT**  +  **F5**) düğmesine tıklayın. Bu, uygulamayı daha az adımda yeniden başlatır. Konsol penceresinde aşağıdaki çıktıyı görürsünüz.
 
-![Çıktıdaki null değeri](../debugger/media/write-better-code-using-assert-null-output.png)
+![Çıktıda null değer](../debugger/media/write-better-code-using-assert-null-output.png)
 
-Bu çıktıda doğru olmayan bir şey görebilirsiniz. **üçüncü** kaydın adı ve **soyadı** boş!
+Bu çıktıda gerçekten doğru olmayan bir şeyi görebilirsiniz. üçüncü kaydın **adı** ve **Soyadı** boştur!
 
-Bu yararlı bir kodlama uygulaması hakkında konuşmak için iyi bir zaman, `assert` genellikle az kullanılan, hangi işlevleri ifadeleri kullanmaktır. Aşağıdaki kodu ekleyerek, emin `firstname` olmak için bir çalışma `lastname` zamanı `null`denetimi eklersiniz ve değil. Yöntemde aşağıdaki kodu `UpdateRecords` değiştirin:
+Bu, işlevinizdeki deyimleri kullanmak üzere genellikle az kullanılan, faydalı bir kodlama uygulaması hakkında konuşmak için iyi bir zamandır `assert` . Aşağıdaki kodu ekleyerek, ve ' nin olmadığından emin olmak için bir çalışma zamanı denetimi dahil edersiniz `firstname` `lastname` `null` . Yönteminde aşağıdaki kodu değiştirin `UpdateRecords` :
 
 ```csharp
 if (existingUser == false)
@@ -341,28 +341,28 @@ if (existingUser == false)
     user.lastname = users[i].lastname;
 ```
 
-Geliştirme `assert` işlemi sırasında işlevlerinize bu gibi ifadeler ekleyerek, kodunuzu belirlemenize yardımcı olabilirsiniz. Önceki örnekte, aşağıdakileri belirtiriz:
+`assert`Geliştirme süreci sırasında işlevlerinize bu gibi deyimler ekleyerek, kodunuzun amacını belirtmenize yardımcı olabilirsiniz. Yukarıdaki örnekte, aşağıdakileri belirttik:
 
-* İlk ad için geçerli bir dize gereklidir
-* Soyadı için geçerli bir dize gereklidir
+* İlk ad için geçerli bir dize gerekir
+* Son ad için geçerli bir dize gerekiyor
 
-Bu şekilde niyet belirterek, gereksinimlerinizi uygularsınız. Bu, geliştirme sırasında hataları yüzeye çıkarmak için kullanabileceğiniz basit ve kullanışlı bir yöntemdir. (`assert` ifadeler birim testlerinde ana unsur olarak da kullanılır.)
+Bu şekilde amacı belirterek gereksinimlerinizi zorunlu kılabilirsiniz. Bu, geliştirme sırasında hataları yüzeyde kullanabileceğiniz basit ve kullanışlı bir yöntemdir. ( `assert` deyimler Ayrıca birim testlerinde ana öğe olarak da kullanılır.)
 
-Hata Ayıklama Araç Çubuğu'ndaki **(Ctrl** + **Shift** + **F5)** Uygulamayı Yeniden **Başlat** ![Restart App](../debugger/media/dbg-tour-restart.png "Yeniden BaşlatApp") düğmesini tıklatın.
-
-> [!NOTE]
-> Kod `assert` yalnızca Hata Ayıklama yapısında etkindir.
-
-Yeniden başlattığınızda, hata ayıklama `assert` deyimi duraklar, çünkü `users[i].firstname != null` ifade `false` yerine `true`.
-
-![Assert false'a çözüm gösterir](../debugger/media/write-better-code-using-assert.png)
-
-Hata, `assert` araştırmanız gereken bir sorun olduğunu gösterir. `assert`bir özel durum görmemeniz gereken birçok senaryoyu kapsayabilir. Bu örnekte, kullanıcı bir özel durum görmez `null` ve bir `firstname` değer kayıt listenizdeki gibi eklenir. Bu, daha sonra sorunlara neden olabilir (konsol çıkışında gördüğünüz gibi) ve hata ayıklama daha zor olabilir.
+Hata ayıklama araç çubuğundaki uygulamayı **yeniden** ![Başlat](../debugger/media/dbg-tour-restart.png "RestartApp") (**CTRL**  +  **SHIFT**  +  **F5**) düğmesine tıklayın.
 
 > [!NOTE]
-> `null` Değer üzerinde bir yöntem çağırdığınız senaryolarda, sonuç. `NullReferenceException` Normalde genel bir özel `try/catch` durum için bir blok kullanmaktan kaçınmak istersiniz, yani belirli kitaplık işlevine bağlı olmayan bir özel durum. Herhangi bir nesne `NullReferenceException`bir . Emin değilseniz kitaplık işlevi için belgeleri denetleyin.
+> `assert`Kod yalnızca bir hata ayıklama derlemesinde etkindir.
 
-Hata ayıklama işlemi sırasında, gerçek bir kod `assert` düzeltmesi ile değiştirmeniz gerektiğini bilene kadar belirli bir ifadeyi tutmak iyidir. Kullanıcının uygulamanın bir sürüm yapısında özel durumla karşılaşabiliyor sayılacağına karar verdiğinizi varsayalım. Bu durumda, uygulamanızın önemli bir özel durum ortaya çıkarmadığından veya başka bir hataya yol açmadığından emin olmak için kodu yeniden düzenlemeniz gerekir. Bu nedenle, bu kodu düzeltmek için aşağıdaki kodu değiştirin:
+' İ yeniden başlattığınızda, `assert` ifadesi `users[i].firstname != null` yerine olarak değerlendirdiği için hata ayıklayıcı deyimde duraklatılır `false` `true` .
+
+![Onaylama, yanlış olarak çözümleniyor](../debugger/media/write-better-code-using-assert.png)
+
+`assert`Hata, araştırmanız gereken bir sorun olduğunu söyler. `assert` , özel durum görmemenizi gerektiren birçok senaryoyu kapsayabilir. Bu örnekte, Kullanıcı bir özel durum görmez ve `null` Kayıt listenizde bir değer eklenir `firstname` . Bu, daha sonra (konsol çıktısında gördüğünüz gibi) sorunlara neden olabilir ve hata ayıklama zor olabilir.
+
+> [!NOTE]
+> Değer üzerinde bir yöntemi çağıran senaryolarda `null` , bir `NullReferenceException` sonuç. Genellikle `try/catch` genel bir özel durum için bir blok kullanmaktan kaçınmak istersiniz, diğer bir deyişle, belirli bir kitaplık işlevine bağlı olmayan bir özel durumdur. Herhangi bir nesne bir oluşturabilir `NullReferenceException` . Emin değilseniz, kitaplık işlevine yönelik belgelere bakın.
+
+Hata ayıklama işlemi sırasında, `assert` gerçek bir kodu düzeltme ile değiştirmeniz gerektiğini öğrenene kadar belirli bir deyimin tutulması iyi olur. Kullanıcının, uygulamanın yayın derlemesinde özel durumla karşılaşmasına karar verdiğinizi varsayalım. Bu durumda, uygulamanızın önemli bir özel durum oluşturmadığını veya başka bir hatayla sonuçlanmayacağını doğrulamak için kodu yeniden düzenlemeniz gerekir. Bu nedenle, bu kodu onarmak için aşağıdaki kodu değiştirin:
 
 ```csharp
 if (existingUser == false)
@@ -370,7 +370,7 @@ if (existingUser == false)
     User user = new User();
 ```
 
-bu kod ile:
+yerine şu kodu yazın:
 
 ```csharp
 if (existingUser == false && users[i].firstname != null && users[i].lastname != null)
@@ -378,9 +378,9 @@ if (existingUser == false && users[i].firstname != null && users[i].lastname != 
     User user = new User();
 ```
 
-Bu kodu kullanarak, kod gereksinimlerinizi karşılar ve verilere `firstname` `lastname` bir `null` veya değeri olan bir kaydın eklenmediğinden emin olun.
+Bu kodu kullanarak, kod gereksinimlerinizi karşılamanız ve veya değerine sahip bir kaydın `firstname` `lastname` `null` verilere eklenmediğinden emin olmanız gerekir.
 
-Bu örnekte, iki `assert` ifadeyi bir döngünün içine ekledik. Genellikle, kullanırken, `assert`bir işlevin `assert` veya yöntemin giriş noktasında (başlangıçta) deyimeklemek en iyisidir. Şu anda örnek `UpdateRecords` uygulamadaki yönteme bakıyorsunuz. Bu yöntemde, yöntem bağımsız değişkenlerinden biri varsa, `null`sorun olduğunuzu biliyorsunuz, `assert` bu nedenle her ikisini de işlevin giriş noktasında bir deyimle denetleyin.
+Bu örnekte, `assert` bir döngünün içindeki iki deyimi ekledik. Genellikle, kullanırken `assert` `assert` bir işlevin veya yöntemin giriş noktasında (başlangıç) deyimler eklemek en iyisidir. Şu anda `UpdateRecords` örnek uygulamadaki yöntemine bakıyorsunuz. Bu yöntemde, yöntem bağımsız değişkenlerinden herhangi biri olduğunda sorun olduğunu bildiğiniz `null` `assert` için, işlevin giriş noktasındaki bir deyimle birlikte bunları işaretleyin.
 
 ```csharp
 public static void UpdateRecords(List<User> db, User[] users)
@@ -389,37 +389,37 @@ public static void UpdateRecords(List<User> db, User[] users)
     Debug.Assert(users != null);
 ```
 
-Önceki ifadeler için, amacınız varolan verileri`db`yüklemek ( )`users`ve yeni veri almak ( ) bir şey güncelleştirmeden önce.
+Yukarıdaki deyimler için, size herhangi bir şeyi güncelleştirmeden önce var olan verileri ( `db` ) ve yeni verileri () almanızı ve amacınızı yapmanız gerekir `users` .
 
-Çözülen `assert` her türlü ifadeyi `true` kullanabilirsiniz. `false` Örneğin, bunun gibi bir `assert` ifade ekleyebilirsiniz.
+`assert`Veya olarak çözümlenen herhangi bir tür ifadeyle kullanabilirsiniz `true` `false` . Bu nedenle, örneğin, `assert` buna benzer bir ifade ekleyebilirsiniz.
 
 ```csharp
 Debug.Assert(users[0].points > 0);
 ```
 
-Aşağıdaki amacı belirtmek isterseniz, önceki kod yararlıdır: kullanıcının kaydını güncelleştirmek için sıfırdan (0) büyük yeni bir nokta değeri gereklidir.
+Aşağıdaki amacı belirtmek istiyorsanız, yukarıdaki kod yararlı olur: kullanıcının kaydını güncelleştirmek için sıfırdan büyük yeni bir nokta değeri (0) gerekir.
 
 ## <a name="inspect-your-code-in-the-debugger"></a>Hata ayıklayıcıda kodunuzu inceleyin
 
-Tamam, artık örnek uygulama ile yanlış her şeyi kritik sabit ettik, diğer önemli şeyler üzerine taşıyabilirsiniz!
+Şimdi, örnek uygulamada yanlış olan her şeyi düzelttiniz, diğer önemli malzelere geçebilirsiniz!
 
-Hata ayıklayıcının Özel Durum Yardımcısı'nı gösterdik, ancak hata ayıklayıcı, kodunuzda adım atma ve değişkenlerini inceleme gibi diğer şeyleri de yapmanızı sağlayan çok daha güçlü bir araçtır. Bu daha güçlü yetenekler birçok senaryoda, özellikle de aşağıdakidurumlarda yararlıdır:
+Hata ayıklayıcının özel durum Yardımcısı ' nı gösterdi, ancak hata ayıklayıcı, kodunuzda adım adım ve değişkenlerini İnceleme gibi diğer şeyleri de yapmanızı sağlayan çok daha güçlü bir araçtır. Bu daha güçlü yetenekler birçok senaryoda faydalıdır, özellikle aşağıdakiler aşağıda verilmiştir:
 
-* Kodunuzda bir çalışma zamanı hatasını yalıtmaya çalışıyorsunuz, ancak bunu daha önce tartışılan yöntemler ve araçları kullanarak yapamıyorsunuz.
+* Kodunuzda bir çalışma zamanı hatasını yalıtmak istiyorsunuz, ancak daha önce ele alınan yöntemleri ve araçları kullanarak yapamıyordu.
 
-* Kodunuzu doğrulamak, diğer bir deyişle, beklediğiniz şekilde davrandığından ve istediğinizi yaptığından emin olmak için çalışırken izleyin.
+* Kodunuzu doğrulamak, diğer bir deyişle, çalışırken izlemek ve istediğiniz şekilde davrandığından emin olmak için, çalışırken izleyin.
 
-    Kodunuzu çalışırken izlemek öğreticidir. Kodunuz hakkında bu şekilde daha fazla bilgi edinebilir ve hataları belirgin belirtiler ortaya çıkmadan önce genellikle tanımlayabilirsiniz.
+    Çalışırken kodunuzu izlemek için kullanılır. Kodunuz hakkında daha fazla bilgi edinmek için bu yöntemi kullanabilirsiniz.
 
-Hata ayıklamanın temel özelliklerini nasıl kullanacağınızı öğrenmek [için, mutlak yeni başlayanlar için Hata Ayıklama bölümüne](../debugger/debugging-absolute-beginners.md)bakın.
+Hata ayıklayıcının temel özelliklerini nasıl kullanacağınızı öğrenmek için bkz. [mutlak yeni başlayanlar Için hata ayıklama](../debugger/debugging-absolute-beginners.md).
 
-## <a name="fix-performance-issues"></a>Performans sorunlarını düzeltme
+## <a name="fix-performance-issues"></a>Performans sorunlarını çözme
 
-Başka bir tür hata, uygulamanızın yavaş çalışmasına veya çok fazla bellek kullanmasına neden olan verimsiz kodiçerir. Genellikle, performansı en iyi duruma etmek daha sonra uygulama geliştirmenizde yaptığınız bir şeydir. Ancak, performans sorunlarıyla erken karşılaşabilirsiniz (örneğin, uygulamanızın bir kısmının yavaş çalıştığını görürsünüz) ve uygulamanızı profil oluşturma araçlarıyla erkenden test etmeniz gerekebilir. CPU Kullanım aracı ve Memory Analyzer gibi profil oluşturma araçları hakkında daha fazla bilgi için [profil oluşturma araçlarına ilk bakışta](../profiling/profiling-feature-tour.md)bakın.
+Başka bir türdeki hatalar, uygulamanızın yavaş çalışmasına veya çok fazla bellek kullanmasına neden olan verimsiz kod içerir. Genellikle, performansı en iyi duruma getirmek uygulama geliştirmede daha sonra yaptığınız şeydir. Bununla birlikte, performans sorunlarıyla karşılaşabilirsiniz (örneğin, uygulamanızın bir bölümünün yavaş çalıştığını görürsünüz) ve uygulamanızı önceden profil oluşturma araçlarıyla test etmeniz gerekebilir. CPU kullanımı aracı ve bellek Çözümleyicisi gibi profil oluşturma araçları hakkında daha fazla bilgi için bkz. [profil oluşturma araçlarına ilk bakış](../profiling/profiling-feature-tour.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu makalede, kodunuzda ki birçok yaygın hatadan kaçınmayı ve düzeltmeyi ve hata ayıklayıcıyı ne zaman kullanacağınızı öğrendiniz. Ardından, hataları düzeltmek için Visual Studio hata ayıklama sını kullanma hakkında daha fazla bilgi edinin.
+Bu makalede, kodunuzdaki birçok yaygın hatanın nasıl önleneceğini ve hata ayıklayıcının ne zaman kullanılacağını öğrendiniz. Ardından, hataları onarmak için Visual Studio hata ayıklayıcısını kullanma hakkında daha fazla bilgi edinin.
 
 > [!div class="nextstepaction"]
 > [Başlayanlar için hata ayıklama](../debugger/debugging-absolute-beginners.md)

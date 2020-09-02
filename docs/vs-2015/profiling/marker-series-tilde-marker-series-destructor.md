@@ -1,5 +1,5 @@
 ---
-title: 'marker_series:: ~ marker_series yok Edicisi | Microsoft Docs'
+title: 'marker_series:: ~ marker_series yıkıcı | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,27 +14,27 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4d363b554babfbac994d9ec71eddbefd68f38d50
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62562822"
 ---
-# <a name="markerseriesmarkerseries-destructor"></a>marker_series::~marker_series Yok Edicisi
+# <a name="marker_seriesmarker_series-destructor"></a>marker_series::~marker_series Yok Edicisi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Marker_series nesnesini yok eder ve ayrılan tüm kaynakları serbest bırakır.  
+Marker_series nesnesini yok eder ve tüm ayrılmış kaynakları serbest bırakır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 ~marker_series();  
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** cvmarkersobj.h  
+ **Üst bilgi:** cvmarkersobj. h  
   
- **Namespace:** CONCURRENCY::Diagnostic  
+ **Ad alanı:** Eşzamanlılık::d ıagstik  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [marker_series Sınıfı](../profiling/marker-series-class.md)

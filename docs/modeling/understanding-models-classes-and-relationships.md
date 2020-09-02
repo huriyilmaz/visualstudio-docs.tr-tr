@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c2e8891307520ee841fbed1591565624f2016939
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75565909"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>Modelleri, Sınıfları ve İlişkileri Anlama
@@ -22,7 +22,7 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
  Bu konuda, DSL tanımının merkezi özellikleri açıklanmaktadır.
 
 ## <a name="the-dsl-definition"></a>DSL tanımı
- `Dsl\DslDefinition.dsl`açtığınızda, Visual Studio pencereniz aşağıdaki resme benzer.
+ Açtığınızda `Dsl\DslDefinition.dsl` , Visual Studio pencereniz aşağıdaki resme benzer.
 
  ![DSL Tasarımcısı](../modeling/media/dsl_designer.png)
 
@@ -128,11 +128,11 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
  Bir DSL tanımında ilişki oluşturduğunuzda, özellik ve ilişki adlarına varsayılan değerler verilir. Ancak, bunları değiştirebilirsiniz.
 
 ## <a name="multiplicities"></a>Çeşitlilimler
- Çoğullılıklar, bir etki alanı ilişkisinde kaç öğenin aynı role sahip olduğunu belirtir. Örnekte, **Katalog** rolünde bulunan sıfır-çok (0..\*) çoğulluk ayarı, **Yayımcı** etki alanı sınıfının herhangi bir örneğinin, vermek Istediğiniz kadar çok sayıda **PublisherCatalog** ilişki bağlantısına sahip olduğunu belirtir.
+ Çoğullılıklar, bir etki alanı ilişkisinde kaç öğenin aynı role sahip olduğunu belirtir. Örnekte, Katalog rolünde bulunan sıfırdan çok (0.. \* ) çoğulluk ayarı, **Yayımcı** etki alanı **Catalog** sınıfının herhangi bir örneğinin, vermek istediğiniz kadar çok **PublisherCatalog** ilişki bağlantılarına sahip olduğunu belirtir.
 
- Diyagram üzerine yazarak veya **Özellikler** penceresindeki `Multiplicity` özelliğini değiştirerek bir rolün çoğulluğu yapılandırın. Aşağıdaki tabloda bu özelliğin ayarları açıklanmaktadır.
+ Diyagram üzerine yazarak veya `Multiplicity` **Özellikler** penceresinde özelliğini değiştirerek bir rolün çoğulluğu yapılandırın. Aşağıdaki tabloda bu özelliğin ayarları açıklanmaktadır.
 
-|Çokluk türü|Açıklama|
+|Çokluk türü|Description|
 |-|-|
 |0.. * (sıfırdan fazla)|Alan sınıfının her örneği, ilişkinin birden fazla örneğine veya ilişkinin örneklerine sahip olabilir.|
 |0.. 1 (sıfır-bir)|Alan sınıfının her örneği, ilişkinin birden fazla örneğine veya ilişkinin örneklerine sahip olamaz.|
@@ -150,4 +150,4 @@ Bir etki alanına özgü dil (DSL), yazılabilir olabilecek özel program kodlar
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Etki alanına özgü dil araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Alana Özgü Dil Araçları sözlüğü](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

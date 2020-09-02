@@ -1,6 +1,6 @@
 ---
-title: Linux'ta Uzaktan R Hizmeti Kurma
-description: Ubuntu'da Uzaktan R Hizmeti ve Linux için Windows Alt Sistemi nasıl kurulamaz?
+title: Linux üzerinde uzak R hizmetini ayarlama
+description: Ubuntu ve Linux için Windows alt sistemi üzerinde uzak R hizmetini ayarlama.
 ms.date: 12/04/2017
 ms.topic: conceptual
 author: kraigb
@@ -10,108 +10,108 @@ manager: jillfra
 ms.workload:
 - data-science
 ms.openlocfilehash: c4d65388db0ef90f807ec85b8c9216d717c2b571
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62809563"
 ---
 # <a name="remote-r-service-for-linux"></a>Linux için Uzak R Hizmeti
 
-Linux için Uzaktan R Hizmeti şu anda rtvs-daemon olarak paketlenmiştir. Daemon Ubuntu 16.04, 16.10 LTS masaüstü, sunucu ve Linux çalışan Ubuntu için Windows Alt sistemi üzerinde desteklenir ve test edilmiştir. Bu makalenin büyük bölümü, bu farklı sistemlerde Uzaktan R Hizmeti kurmak için yönergeler sağlar.
+Linux için uzak R hizmeti şu anda rtvs-daemon olarak paketlenmiştir. Arka plan programı Ubuntu 16,04, 16,10 LTS Desktop, Server ve Ubuntu çalıştıran Linux için Windows alt sistemi üzerinde desteklenir ve test edilmiştir. Bu makalenin toplu sayfasında, uzak R hizmetini bu farklı sistemlerde ayarlamaya yönelik yönergeler sağlanmaktadır.
 
-Uzak makineyi yapılandırdıktan sonra, aşağıdaki adımlar Visual Studio için R Tools (RTVS) ile bu hizmete bağlanır:
+Uzak makineyi yapılandırdıktan sonra, aşağıdaki adımlar Visual Studio için R Araçları (RTVS) bu hizmete bağlanır:
 
-1. Çalışma Alanları penceresini açmak için **R Tools** > **Windows** > Çalışma**Alanlarını'nı** seçin. **Workspaces**
-1. **Bağlantı Ekle'yi**seçin.
-1. Bağlanağa bir ad verin ve (Linux için Windows Alt `https://public-ip:5444` Sistemi) veya (Azure kapsayıcısı) gibi `https://localhost:5444` URL'sini sağlayın. Tamamlandığında **Kaydet'i** seçin.
-1. Bağlantı simgesini seçin veya bağlantı öğesini çift tıklatın.
-1. Oturum açma kimlik bilgilerini sağlayın. Kullanıcı adı (Linux uzak `<<unix>>\` bilgisayarlara tüm bağlantılar için gerekli) gibi `<<unix>>\ruser1` önceden belirlenmiş olmalıdır.
-1. Kendi imzalı sertifika kullanıyorsanız, bir uyarı görebilirsiniz. İleti, uyarıyı düzeltmek için yönergeler sağlar.
+1. **R Tools**  >  **Windows**  >  **Çalışma alanları** penceresini açmak için R araçları Windows**çalışma alanları** ' nı seçin.
+1. **Bağlantı ekle**' yi seçin.
+1. Bağlama bir ad verin ve URL 'sini sağlayın (örneğin, `https://localhost:5444` Linux için Windows alt sistemi) veya `https://public-ip:5444` (Azure Container). Tamamlandığında **Kaydet** ' i seçin.
+1. Bağlantı simgesini seçin veya bağlantı öğesine çift tıklayın.
+1. Oturum açma kimlik bilgilerini sağlayın. Kullanıcı adının `<<unix>>\` ' de olduğu gibi `<<unix>>\ruser1` (Linux uzak bilgisayarlara yönelik tüm bağlantılarda olması gerekir) öneki olmalıdır.
+1. Otomatik olarak imzalanan sertifika kullanıyorsanız, bir uyarı görebilirsiniz. İleti, uyarıyı düzeltmek için yönergeler sağlar.
 
-## <a name="set-up-remote-r-service"></a>Uzaktan R Hizmetini Ayarlama
+## <a name="set-up-remote-r-service"></a>Uzak R hizmetini ayarlama
 
 Bu bölümde aşağıdaki seçenekler açıklanmaktadır:
 
-- [Fiziksel Ubuntu bilgisayar](#physical-ubuntu-computer)
-- [Azure'da Ubuntu Server VM veya Data Science VM](#ubuntu-server-vm-or-data-science-vm-on-azure)
-- [Yerel veya uzak Docker konteyneri (temiz yapı)](#local-or-remote-docker-container-clean-build)
-- [Azure Kapsayıcı Örneklerinde Çalışan Kapsayıcı](#container-running-on-azure-container-instances)
+- [Fiziksel Ubuntu bilgisayarı](#physical-ubuntu-computer)
+- [Azure 'da Ubuntu sunucu VM 'si veya Veri Bilimi VM'si](#ubuntu-server-vm-or-data-science-vm-on-azure)
+- [Yerel veya uzak Docker kapsayıcısı (derlemeyi temizle)](#local-or-remote-docker-container-clean-build)
+- [Azure Container Instances üzerinde çalışan kapsayıcı](#container-running-on-azure-container-instances)
 
-Her durumda, uzak bilgisayarda aşağıdaki R yorumlayıcılarından biri yüklü olmalıdır:
+Her durumda, uzak bilgisayarda aşağıdaki R yorumlayıcılarını yüklemiş olmanız gerekir:
 
 - [Microsoft R Open](https://mran.microsoft.com/open/)
 - [Windows için CRAN R](https://cran.r-project.org/bin/linux/ubuntu/)
 
-### <a name="physical-ubuntu-computer"></a>Fiziksel Ubuntu bilgisayar
+### <a name="physical-ubuntu-computer"></a>Fiziksel Ubuntu bilgisayarı
 
-1. Bir kez bilgisayara giriş, rtvs-daemon tarball indirin:
+1. Bilgisayarda oturum açtıktan sonra rtvs-Daemon tarbol 'yi indirin:
 
     ```bash
     wget -O rtvs-daemon.tar.gz https://aka.ms/r-remote-services-linux-binary-current
     tar -xvzf rtvs-daemon.tar.gz
     ```
 
-1. Yükleme komut dosyasını çalıştırın:
+1. Install betiğini çalıştırın:
 
     ```bash
     sudo ./rtvs-install
     ```
 
-    Sessiz bir otomasyon `sudo ./rtvs-install -s`için.
+    Sessiz bir otomasyon için kullanın `sudo ./rtvs-install -s` .
 
-1. Hizmeti etkinleştirin ve başlatın:
+1. Hizmeti etkinleştirme ve başlatma:
 
     ```bash
     sudo systemctl enable rtvsd
     sudo systemctl start rtvsd
     ```
 
-1. SSL sertifikasını yapılandırın (üretim için gereklidir). Varsayılan olarak, rtvs-daemon `ssl-cert-snakeoil.pem` `ssl-cert-snakeoil.pem` kullanır ve `ssl-cert` paket tarafından oluşturulan. Kurulum sırasında, onlar içine `ssl-cert-snakeoil.pfx`birleştirilir. Üretim amacıyla yöneticiniz tarafından sağlanan SSL sertifikasını kullanın. SSL sertifikası *bir .pfx* dosya ve isteğe bağlı alma şifresi sağlayarak yapılandırılabilir: */etc/rtvs/rtvsd.config.json*.
+1. SSL sertifikasını yapılandırın (üretim için gereklidir). Varsayılan olarak, rtvs-Daemon, `ssl-cert-snakeoil.pem` `ssl-cert-snakeoil.pem` paket tarafından oluşturulan ve öğesini kullanır `ssl-cert` . Yükleme sırasında birleştirilirler `ssl-cert-snakeoil.pfx` . Üretim amacıyla, yöneticiniz tarafından sunulan SSL sertifikasını kullanın. SSL sertifikası, içinde bir *. pfx* dosyası ve isteğe bağlı içeri aktarma parolası sağlayarak yapılandırılabilir: */etc/rtvs/rtvsd.config.json*.
 
-1. (İsteğe bağlı) Hizmetin çalışır durumda olup olmadığını denetleyin:
+1. Seçim Hizmetin çalışıp çalışmadığını denetleyin:
 
     ```bash
     ps -A -f | grep rtvsd
     ```
 
-    Kullanıcı adı `rtvssvc`altında çalışan bir işlem görmüyorsanız. Aşağıdaki komutu kullanarak başlatın:
+    Kullanıcı adı altında çalışan bir işlem görmüyorsanız `rtvssvc` . Aşağıdaki komutu kullanarak başlatın:
 
     ```bash
     sudo systemctl start rtvsd
     ```
 
-1. Rtvs-daemon daha fazla yapılandırmak `man rtvsd`için bkz.
+1. Rtvs-Daemon ' ı daha fazla yapılandırmak için bkz `man rtvsd` ..
 
-### <a name="ubuntu-server-vm-or-data-science-vm-on-azure"></a>Azure'da Ubuntu Server VM veya Data Science VM
+### <a name="ubuntu-server-vm-or-data-science-vm-on-azure"></a>Azure 'da Ubuntu sunucu VM 'si veya Veri Bilimi VM'si
 
 #### <a name="create-a-vm"></a>VM oluşturma
 
-1. [Azure portalında](https://portal.azure.com)oturum açın.
-1. Sanal Makinelere gidin ve ardından **Ekle'yi**seçin.
-1. Kullanılabilir VM görüntüleri listesinde aşağıdakilerden birini arayın ve seçin:
-    - Ubuntu Sunucu:`Ubuntu Server 16.04 LTS`
-    - Veri Bilimi VM: `Linux Data Science` (ayrıntılar için Data Science Sanal [Makineler](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) e bakınız)
-1. Dağıtım modelini `Resource manager` oluştur'a ayarlayın ve **seçin.**
-1. VM için bir ad seçin, bir kullanıcı adı ve parola sağlayın (SSH ortak anahtar girişi desteklenmedığından parola gereklidir).
-1. VM yapılandırması için istenen diğer değişiklikleri yapın.
-1. Bir VM boyutu seçin, yapılandırmayı doğrulayın ve **Oluştur'u**seçin. VM oluşturulduktan sonra bir sonraki bölüme geçin.
+1. [Azure portalında](https://portal.azure.com) oturum açın.
+1. Sanal makinelere gidin ve **Ekle**' yi seçin.
+1. Kullanılabilir VM görüntüleri listesinde aşağıdakilerden birini arayıp seçin:
+    - Ubuntu sunucusu: `Ubuntu Server 16.04 LTS`
+    - Veri Bilimi VM'si: `Linux Data Science` (Ayrıntılar için bkz. [veri bilimi sanal makineleri](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/) )
+1. Dağıtım modelini olarak ayarlayın `Resource manager` ve **Oluştur**' u seçin.
+1. VM için bir ad seçin, bir Kullanıcı adı ve parola belirtin (SSH ortak anahtar oturumu desteklenmediğinden parola gereklidir).
+1. VM yapılandırmasında istediğiniz diğer değişiklikleri yapın.
+1. Bir VM boyutu seçin, yapılandırmayı doğrulayın ve **Oluştur**' u seçin. VM oluşturulduktan sonra sonraki bölüme geçin.
 
-#### <a name="configure-the-vm"></a>VM yapılandırma
+#### <a name="configure-the-vm"></a>VM'yi yapılandırma
 
-1. VM'nin **Ağ bölümüne,** izin verilen gelen bağlantı noktası olarak 5444 ekleyin. Farklı bir bağlantı noktası kullanmak için, RTVS daemon config dosyasındaki ayarı değiştirin (*/etc/rtvs/rtvsd.config.json*).
-1. (İsteğe bağlı) Bir DNS adı ayarlayın; IP adresini de kullanabilirsiniz.
-1. WIndows için PuTTY gibi bir SSH istemcisi kullanarak VM'ye bağlanın.
-1. Yukarıdaki [Fiziksel Ubuntu bilgisayar](#physical-ubuntu-computer) için yönergeleri izleyin.
+1. VM 'nin **ağ** bölümünde, izin verilen bir gelen bağlantı noktası olarak 5444 ekleyin. Farklı bir bağlantı noktası kullanmak için RTVS Daemon yapılandırma dosyasında ayarı değiştirin (*/etc/rtvs/rtvsd.config.json*).
+1. Seçim Bir DNS adı belirleyin; IP adresini de kullanabilirsiniz.
+1. WIndows için PuTTY gibi bir SSH istemcisi kullanarak VM 'ye bağlanın.
+1. Yukarıdaki [fiziksel Ubuntu bilgisayarı](#physical-ubuntu-computer) için yönergeleri izleyin.
 
-### <a name="windows-subsystem-for-linux-wsl"></a>Linux için Windows Alt Sistemi (WSL)
+### <a name="windows-subsystem-for-linux-wsl"></a>Linux için Windows alt sistemi (WSL)
 
 1. [Windows 10](/windows/wsl/install-win10#install-the-windows-subsystem-for-linux) veya [Windows Server](/windows/wsl/install-on-server#enable-the-windows-subsystem-for-linux-wsl)için WSL yükleme yönergelerini izleyin.
-1. Windows'da bash başlatın ve bir istisna dışında bir [Fiziksel Ubuntu bilgisayar](#physical-ubuntu-computer) önceki yönergeleri izleyin. Adım 3 için, WSL `rtvsd`şu anda systemd/systemctl arabirimlerini desteklemediği için hizmeti komutu kullanarak başlatın.
+1. Windows üzerinde Bash 'i başlatın ve bir özel durum içeren bir [fiziksel Ubuntu bilgisayarı](#physical-ubuntu-computer) için önceki yönergeleri izleyin. `rtvsd`WSL Şu anda systemd/systemctl arabirimlerini desteklemediği için, 3. adım yerine komutu kullanarak hizmeti başlatın.
 
-### <a name="local-or-remote-docker-container-clean-build"></a>Yerel veya uzak Docker konteyneri (temiz yapı)
+### <a name="local-or-remote-docker-container-clean-build"></a>Yerel veya uzak Docker kapsayıcısı (derlemeyi temizle)
 
-1. Aşağıdaki içeriği içeren ve Uzak R hizmeti daemon'unu ve R. **Note'un**en son sürümünü yükleyen bir Docker dosyası oluşturun: Bu komut dosyası, son iki `RUN` ifadede istediğiniz gibi değiştirebileceğiniz "foobar" parolasıyla "ruser1" adlı bir kullanıcı oluşturur.
+1. Aşağıdaki içeriklerle bir Docker dosyası oluşturun, bu, uzak R hizmeti Daemon 'u ve R 'nin en son sürümünü yüklüyor. **Note**: Bu betik, "foobar" parolasıyla birlikte "ruser1" adlı bir kullanıcı oluşturur ve bu, son iki deyimde istediğiniz gibi değişiklik yapabilir `RUN` .
 
     ```docker
     FROM ubuntu:16.04
@@ -147,25 +147,25 @@ Her durumda, uzak bilgisayarda aşağıdaki R yorumlayıcılarından biri yükl�
     EXPOSE 5444
     ```
 
-1. Docker dosyasını oluşturun ve çalıştırın:
+1. Docker dosyasını derleyin ve çalıştırın:
 
     ```bash
     docker build -t myrimage .
     docker run -p 5444:5444 myrimage rtvsd
     ```
 
-1. RTVS'den içerdiğine bağlanmak `https://localhost:5444` için yol, kullanıcı `<<unix>>\ruser1`adı `foobar`ve parola olarak kullanın. Kapsayıcı uzak bir bilgisayarda çalışıyorsa, bunun yerine yol olarak kullanın. `https://remote-host-name:5444` Bağlantı noktası güncellenerek değiştirilebilir */etc/rtvs/rtvsd.config.json*.
+1. RTVS 'den kapsar öğesine bağlanmak için `https://localhost:5444` yol, Kullanıcı adı `<<unix>>\ruser1` ve parola kullanın `foobar` . Kapsayıcı uzak bir bilgisayarda çalışıyorsa, `https://remote-host-name:5444` bunun yerine yol olarak kullanın. Bağlantı noktası, *üzerinde/etc/rtvs/rtvsd.config.js*güncelleştirilerek değiştirilebilir.
 
-### <a name="container-running-on-azure-container-instances"></a>Azure Kapsayıcı Örneklerinde Çalışan Kapsayıcı
+### <a name="container-running-on-azure-container-instances"></a>Azure Container Instances üzerinde çalışan kapsayıcı
 
-1. Görüntüyü oluşturmak için [Yerel veya uzak Docker kapsayıcısındaki (temiz yapı)](#local-or-remote-docker-container-clean-build) yönergeleri izleyin.
-1. Kapsayıcıyı Docker hub'ına veya Azure Kapsayıcı Deposu'na itin.
-1. Azure CLI'yi başlatın `az login` ve komutu kullanarak oturum açın.
-1. Kapsayıcıyı `az container create` `systemd` hizmet olarak çalışacak `rtvsd` `--command-line "rtvsd"` şekilde ayarlamadıysanız, kapsayıcıyı kullanmak için komutu kullanın. Aşağıdaki komutta, görüntünün Docker hub'ında olması beklenmektedir. Komut satırına Kapsayıcı Deposu kimlik bağımsız değişkenlerini ekleyerek Azure Kapsayıcı Deposu'nu da kullanabilirsiniz.
+1. Görüntüyü oluşturmak için [yerel veya uzak Docker kapsayıcısında (temiz derleme)](#local-or-remote-docker-container-clean-build) yönergeleri izleyin.
+1. Kapsayıcıyı Docker Hub veya Azure Container Repository 'ye gönderin.
+1. Azure CLı 'yı başlatın ve komutunu kullanarak oturum açın `az login` .
+1. `az container create` `--command-line "rtvsd"` Kapsayıcıyı `rtvsd` bir hizmet olarak çalışacak şekilde ayarladıysanız kullanarak kapsayıcıyı oluşturmak için komutunu kullanın `systemd` . Aşağıdaki komutta, görüntünün Docker Hub 'ında olması beklenmektedir. Azure Container Repository 'yi, kapsayıcı deposu kimlik bilgisi bağımsız değişkenlerini komut satırına ekleyerek de kullanabilirsiniz.
 
     ```bash
     az container create --image myimage:latest --name myaz-container --resource-group myaz-container-res --ip-address public --port 5444 --cpu 2 --memory 4 --command-line "rtvsd"
     ```
 
-1. Durumu `az container list` denetlemek için komutu kullanın. Bak `provisioningState`: `Succeeded`.
-1. Sağlama başarılı olduysa, artık kapsayıcıya bağlanabilirsiniz. RTVS'den kapsayıcıya `ipAddress` bağlanmak için docker dosyasındaki kimlik bilgileriyle birlikte kullandığınız alanda genel IP adresine bakın.
+1. `az container list`Durumu denetlemek için komutunu kullanın. Ara `provisioningState` : `Succeeded` .
+1. Sağlama başarılı olursa artık kapsayıcıya bağlanabilirsiniz. `ipAddress`RTVS 'ten kapsayıcıya bağlanmak için Docker dosyasındaki kimlik bilgileriyle birlikte kullandığınız alanda genel IP adresini arayın.

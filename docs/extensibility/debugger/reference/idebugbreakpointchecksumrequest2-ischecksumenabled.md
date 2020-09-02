@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointChecksumRequest2::IsChecksumEnabled | Microsoft Dokümanlar
+title: 'IDebugBreakpointChecksumRequest2:: ıschecksumenabled | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,16 +14,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5c30dbdbc3c75f22331c61f42dbe9aa829020725
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80735113"
 ---
 # <a name="idebugbreakpointchecksumrequest2ischecksumenabled"></a>IDebugBreakpointChecksumRequest2::IsChecksumEnabled
-Bu belge için denetim umuna etkin olup olmadığını belirler.
+Bu belge için sağlama toplamı etkinleştirilip etkinleştirilmediğini belirler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT IsChecksumEnabled(
@@ -39,10 +39,10 @@ public int IsChecksumEnabled(
 
 ## <a name="parameters"></a>Parametreler
 `pfChecksumEnabled`\
-[çıkış] Checksum etkinse TRUE döndürür; aksi takdirde, FALSE döndürür.
+dışı Sağlama toplamı etkinse doğru döndürür; Aksi takdirde, FALSE döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugBreakpointChecksumRequest2](../../../extensibility/debugger/reference/idebugbreakpointchecksumrequest2.md)

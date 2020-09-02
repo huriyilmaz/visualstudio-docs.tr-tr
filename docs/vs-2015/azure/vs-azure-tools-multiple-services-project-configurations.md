@@ -1,6 +1,6 @@
 ---
-title: Azure projenizi birden çok hizmet yapılandırması kullanarak yapılandırma | Microsoft Dokümanlar
-description: ServiceDefinition.csdef, ServiceConfiguration.Local.cscfg ve ServiceConfiguration.Cloud.cscfg dosyalarını değiştirerek bir Azure bulut hizmeti projesini nasıl yapılandırabilirsiniz öğrenin.
+title: Azure projenizi birden çok hizmet yapılandırması kullanarak yapılandırma | Microsoft Docs
+description: ServiceDefinition. csdef, ServiceConfiguration. Local. cscfg ve ServiceConfiguration. Cloud. cscfg dosyalarını değiştirerek bir Azure bulut hizmeti projesini nasıl yapılandıracağınızı öğrenin.
 author: ghogen
 manager: jillfra
 assetId: a4fb79ed-384f-4183-9f74-5cac257206b9
@@ -12,97 +12,97 @@ ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
 ms.openlocfilehash: 59996180661806eee60d18ab4b7b5fd26f4a2e7b
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79302576"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89312749"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Visual Studio'da Azure projenizi birden çok hizmet yapılandırması kullanacak şekilde yapılandırma
 
-Visual Studio'daki bir Azure bulut hizmeti `ServiceDefinition.csdef` `ServiceConfiguration.Local.cscfg`projesi `ServiceConfiguration.Cloud.cscfg`üç yapılandırma dosyası içerir: , , ve:
+Visual Studio 'da bir Azure bulut hizmeti projesi üç yapılandırma dosyası içerir: `ServiceDefinition.csdef` , `ServiceConfiguration.Local.cscfg` ve `ServiceConfiguration.Cloud.cscfg` :
 
-- `ServiceDefinition.csdef`bulut hizmetinin gereksinimlerini ve rollerini açıklamak ve tüm örnekler için geçerli ayarları sağlamak için Azure'a dağıtılır. Ayarlar çalışma zamanında Azure Hizmet Barındırma Çalışma Zamanı API'sini kullanarak okunabilir. Bu dosya Yalnızca bulut hizmeti durdurulduğunda Azure'da güncelleştirilebilir.
-- `ServiceConfiguration.Local.cscfg`ve `ServiceConfiguration.Cloud.cscfg` tanım dosyasındaki ayarlar için değerler sağlayın ve her rol için çalışacak örnek sayısını belirtin. "Yerel" dosyası yerel hata ayıklama kullanılan değerleri içerir; "Bulut" dosyası Azure'a olarak `ServiceConfiguration.cscfg` dağıtılır ve sunucu ortamı için ayarlar sağlar. Bulut hizmetiniz Azure'da çalışırken bu dosya güncellenebilir.
+- `ServiceDefinition.csdef` , bulut hizmeti ve rollerinin gereksinimlerini ve tüm örneklere uygulanan ayarları sağlamak üzere Azure 'a dağıtılır. Azure hizmeti barındırma çalışma zamanı API 'SI kullanılarak çalışma zamanında ayarlar okunabilir. Bu dosya, Azure 'da yalnızca bulut hizmeti durdurulduğunda güncelleştirilir.
+- `ServiceConfiguration.Local.cscfg` ve `ServiceConfiguration.Cloud.cscfg` tanım dosyasındaki ayarlar için değerler sağlayın ve her bir rol için çalıştırılacak örneklerin sayısını belirtin. "Yerel" dosya, yerel hata ayıklamada kullanılan değerleri içerir; "bulut" dosyası Azure 'a olarak dağıtılır `ServiceConfiguration.cscfg` ve sunucu ortamı için ayarları sağlar. Bu dosya, bulut hizmetiniz Azure 'da çalışırken güncelleştirilemeyebilir.
 
-Yapılandırma ayarları Visual Studio'da geçerli rol için özellik sayfaları kullanılarak yönetilir ve değiştirilir (rolü sağ tıklatın ve **Özellikler'i**seçin veya rolü çift tıklatın). Değişiklikler, **Hizmet Yapılandırması** açılır açılır arasında hangi yapılandırma seçilirse seçilsin kapsama alanı olabilir. Web ve çalışan rollerinin özellikleri, aşağıdaki bölümlerde açıklanan durumlar dışında benzerdir.
+Yapılandırma ayarları, geçerli rolün Özellik sayfaları kullanılarak Visual Studio 'da yönetilir ve değiştirilir (Role sağ tıklayıp **Özellikler**' i seçin ya da role çift tıklayın). Değişiklikler, **hizmet yapılandırması** açılır penceresinde hangi yapılandırmanın seçiltiğine göre kapsamlandırılır. Web ve çalışan rollerinin özellikleri, aşağıdaki bölümlerde açıklananlar dışında benzerdir.
 
 ![VS_Solution_Explorer_Roles_Properties](./media/vs-azure-tools-multiple-services-project-configurations/IC784076.png)
 
-Hizmet tanımı ve hizmet yapılandırma dosyalarının temel şemaları hakkında bilgi için [.csdef XML Schema](/azure/cloud-services/schema-csdef-file) ve [.cscfg XML Schema](/azure/cloud-services/schema-cscfg-file) makalelerine bakın. Hizmet yapılandırması hakkında daha fazla bilgi için [Bulut Hizmetlerinin Nasıl Yapılandırıldığı'na](/azure/cloud-services/cloud-services-how-to-configure-portal)bakın.
+Hizmet tanımı ve hizmet yapılandırma dosyaları için temel alınan şemalar hakkında daha fazla bilgi için, bkz [.. CSDEF XML şeması](/azure/cloud-services/schema-csdef-file) ve [. cscfg XML şeması](/azure/cloud-services/schema-cscfg-file) makaleleri. Hizmet yapılandırması hakkında daha fazla bilgi için bkz. [nasıl yapılandırılır Cloud Services](/azure/cloud-services/cloud-services-how-to-configure-portal).
 
 ## <a name="configuration-page"></a>Yapılandırma sayfası
 
-### <a name="service-configuration"></a>Hizmet Yapılandırması
+### <a name="service-configuration"></a>Hizmet yapılandırması
 
-Hangi `ServiceConfiguration.*.cscfg` dosyanın değişikliklerden etkilendiğini seçer. Varsayılan olarak, Yerel ve Bulut türevleri vardır ve yapılandırma dosyalarını kopyalamak, yeniden adlandırmak ve kaldırmak için **Yönet...** komutunu kullanabilirsiniz. Bu dosyalar bulut hizmeti projenize eklenir ve **Solution Explorer'da**görünür. Ancak, yapılandırmaları yeniden adlandırma veya kaldırma yalnızca bu denetimden yapılabilir.
+Hangi `ServiceConfiguration.*.cscfg` dosyanın değişikliklerden etkilendiğini seçer. Varsayılan olarak, yerel ve bulut çeşitleri vardır ve yapılandırma dosyalarını kopyalamak, yeniden adlandırmak ve kaldırmak için **Yönet...** komutunu kullanabilirsiniz. Bu dosyalar, bulut hizmeti projenize eklenir ve **Çözüm Gezgini**görüntülenir. Ancak, yapılandırmaların yeniden adlandırılması veya kaldırılması yalnızca bu denetimden yapılabilir.
 
 ### <a name="instances"></a>Örnekler
 
-**Örnek** sayısı özelliğini, hizmetin bu rol için çalıştırması gereken örnek sayısına ayarlayın.
+**Örnek** sayısı özelliğini hizmetin bu rol için çalışması gereken örnek sayısına ayarlayın.
 
-**VM boyutu** özelliğini **Ekstra Küçük,** **Küçük,** **Orta,** **Büyük**veya **Ekstra Büyük**olarak ayarlayın.  Daha fazla bilgi için bkz. [Bulut Hizmetlerinin Boyutları](/azure/cloud-services/cloud-services-sizes-specs).
+**VM boyutu** özelliğini **çok küçük**, **küçük**, **Orta**, **büyük**veya çok **büyük**olarak ayarlayın.  Daha fazla bilgi için bkz. [Bulut Hizmetlerinin Boyutları](/azure/cloud-services/cloud-services-sizes-specs).
 
-### <a name="startup-action-web-role-only"></a>Başlangıç Eylemi (yalnızca Web rolü)
+### <a name="startup-action-web-role-only"></a>Başlangıç eylemi (yalnızca Web rolü)
 
-Visual Studio'nun HTTP uç noktaları veya HTTPS uç noktaları veya hata ayıklamaya başladığınızda her ikisi için bir web tarayıcısı başlatması gerektiğini belirtmek için bu özelliği ayarlayın.
+Bu özelliği, Visual Studio 'Nun HTTP uç noktaları veya HTTPS uç noktaları için bir Web tarayıcısı başlatması gerektiğini belirtmek için veya hata ayıklamayı başlattığınızda her iki durumda da ayarlayın.
 
-**HTTPS bitiş noktası** seçeneği yalnızca rolünüz için zaten bir HTTPS bitiş noktası tanımladıysanız kullanılabilir. **Bitiş Noktaları** özelliği sayfasında bir HTTPS bitiş noktası tanımlayabilirsiniz.
+**Https uç noktası** seçeneği, yalnızca rolünüz IÇIN bir HTTPS uç noktası tanımladıysanız kullanılabilir. **Uç noktalar** Özellik SAYFASıNDA bir HTTPS uç noktası tanımlayabilirsiniz.
 
-Zaten bir HTTPS bitiş noktası eklediyseniz, https uç noktası seçeneği varsayılan olarak etkinleştirilir ve Visual Studio hata ayıklamaya başladığınızda, her iki başlangıç seçeneğinin de etkin olduğunu varsayarak, http uç noktanız için bir tarayıcıya ek olarak bu uç nokta için bir tarayıcı başlatır.
+Zaten bir HTTPS uç noktası eklediyseniz, HTTPS uç noktası seçeneği varsayılan olarak etkindir ve Visual Studio, hata ayıklamaya başladığınızda, HTTP uç noktanızın bir tarayıcısına ek olarak, her iki başlatma seçeneğinin de etkinleştirildiğinden bu uç nokta için bir tarayıcı başlatır.
 
 ### <a name="diagnostics"></a>Tanılama
 
-Varsayılan olarak, Web rolü için tanılama etkinleştirilir. Azure bulut hizmeti projesi ve depolama hesabı yerel depolama emülatörü kullanacak şekilde ayarlanmıştır. Azure'a dağıtmaya hazır olduğunuzda, azure depolama alanını kullanmak için oluşturucu düğmesini **(...**) seçebilirsiniz. Tanılama verilerini isteğe bağlı olarak veya otomatik olarak zamanlanan aralıklarla depolama hesabına aktarabilirsiniz. Azure tanılama hakkında daha fazla bilgi için [bkz.](/azure/cloud-services/cloud-services-dotnet-diagnostics)
+Varsayılan olarak, Web rolü için tanılama etkindir. Azure bulut hizmeti projesi ve depolama hesabı yerel depolama öykünücüsünü kullanacak şekilde ayarlanır. Azure 'a dağıtmaya hazırsanız, bunun yerine Azure Storage 'ı kullanmak için Oluşturucu düğmesini (**...**) seçebilirsiniz. Tanılama verilerini depolama hesabına isteğe bağlı olarak veya otomatik olarak zamanlanmış aralıklarla aktarabilirsiniz. Azure Tanılama hakkında daha fazla bilgi için bkz. [azure Cloud Services ve sanal makinelerde tanılamayı etkinleştirme](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
 ## <a name="settings-page"></a>Ayarlar sayfası
 
-**Ayarlar** sayfasında, yapılandırmaya ad değeri çiftleri olarak ayarlar ekleyebilirsiniz. Rolde çalışan kod, özellikle [GetConfigurationSettingValue](/previous-versions/azure/reference/ee772857(v=azure.100)) yöntemi olan Azure [Yönetilen Kitaplığı](/previous-versions/azure/dn602775(v=azure.11))tarafından sağlanan sınıfları kullanarak çalışma zamanında yapılandırma ayarlarınızın değerlerini okuyabilir.
+**Ayarlar** sayfasında bir yapılandırmaya ad-değer çiftleri olarak ayarlar ekleyebilirsiniz. Rol içinde çalışan kod, [Azure yönetilen Kitaplığı](/previous-versions/azure/dn602775(v=azure.11))tarafından sunulan sınıfları kullanarak çalışma zamanında yapılandırma ayarlarınızın değerlerini okuyabilir, özellikle [Getconfigurationsettingvalue](/previous-versions/azure/reference/ee772857(v=azure.100)) yöntemi.
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>Depolama hesabı için bağlantı dizesi yapılandırma
 
-Bağlantı dizesi, depolama emülatörü veya Azure depolama hesabı için bağlantı ve kimlik doğrulama bilgileri sağlayan bir ayardır. Bir roldeki kod Azure depolama alanına (blobs, kuyruklar veya tablolar) erişse, bir bağlantı dizesi gerekir.
+Bağlantı dizesi, depolama öykünücüsü veya bir Azure depolama hesabı için bağlantı ve kimlik doğrulama bilgileri sağlayan bir ayardır. Bir roldeki kod, Azure depolama (blob 'lar, kuyruklar veya tablolar) ile eriştiğinde bir bağlantı dizesine ihtiyaç duyuyor.
 
 > [!Note]
-> Azure depolama hesabı için bir bağlantı dizesi tanımlı bir biçim kullanmalıdır [(bkz.](/azure/storage/common/storage-configure-connection-string)
+> Azure depolama hesabı bağlantı dizesi tanımlı bir biçim kullanmalıdır (bkz. [Azure Storage bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string)).
 
-Bağlantı dizesini gerektiğinde yerel depolamayı kullanacak şekilde ayarlayabilir ve bulut hizmetini uygulamaya dağıttığınızda bir Azure depolama hesabına ayarlayabilirsiniz. Bağlantı dizesinin düzgün ayarlanmaması, rolünüzün başlamamasına veya başlatma, meşgul ve durdurma durumları arasında geçiş yapmamasına neden olabilir.
+Bağlantı dizesini, gerektiğinde yerel depolamayı kullanacak şekilde ayarlayabilir ve uygulamayı bulut hizmeti dağıtırken bir Azure depolama hesabına ayarlayabilirsiniz. Bağlantı dizesinin düzgün şekilde ayarlanamaması, rolünüzün başlamamasına veya başlatma, meşgul ve durdurma durumlarında geçiş yapılmasına neden olabilir.
 
-Bağlantı dizesi oluşturmak için **Ayar Ekle'yi** seçin ve **Türü** "Bağlantı Dizesi" olarak ayarlayın.
+Bir bağlantı dizesi oluşturmak için **Ayar ekle** ' yi seçin ve **türü** "bağlantı dizesi" olarak ayarlayın.
 
-Yeni veya varolan bağlantı dizeleri için **...** * **Depolama Bağlantı String oluştur** iletişim kutusunu açmak için **Değer** alanının sağında:
+Yeni veya mevcut bağlantı dizeleri için... seçeneğini belirleyin **.** * **depolama bağlantı dizesi oluştur** iletişim kutusunu açmak için **değer** alanının sağında:
 
-1. **Connect kullanarak Bağlan'ın**altında, abonelikten bir depolama hesabı seçmek için **aboneliğiniz** seçeneğini seçin. Visual Studio daha sonra `.publishsettings` dosyadan otomatik olarak depolama hesabı kimlik bilgilerini alır.
-1. El **ile girilen kimlik bilgilerini** seçmek, Azure portalındaki bilgileri kullanarak hesap adını ve anahtarı doğrudan belirtmenize olanak tanır. Hesap anahtarını kopyalamak için:
-    1. Azure portalındaki depolama hesabına gidin ve **Anahtarları Yönet'i**seçin.
-    1. Hesap anahtarını kopyalamak için Azure portalındaki depolama hesabına gidin, **Ayarlar > Erişim tuşlarını**seçin ve ardından panodaki birincil erişim anahtarını kopyalamak için kopyala düğmesini kullanın.
-1. Bağlantı seçeneklerinden birini seçin. **Özel uç noktaları belirtin,** lekeler, tablolar ve kuyruklar için belirli URL'ler belirtmenizi ister. Özel uç noktalar, [özel etki alanlarını](/azure/storage/blobs/storage-custom-domain-name) kullanmanıza ve erişimi daha tam olarak denetlemenize olanak sağlar. Bkz. [Azure Depolama Bağlantı Dizelerini Yapılandırma.](/azure/storage/common/storage-configure-connection-string)
-1. Yapılandırmayı yeni bağlantı dizesiyle güncelleştirmek için **Tamam,** ardından **Dosya >** Kaydet'i seçin.
+1. **Kullanarak bağlan**altında, aboneliğinizden bir depolama hesabı seçmek için **abonelik** seçeneğini belirleyin. Daha sonra Visual Studio, depolama hesabı kimlik bilgilerini dosyadan otomatik olarak alır `.publishsettings` .
+1. **El ile girilen kimlik bilgilerinin** seçilmesi, Azure Portal bilgileri kullanarak doğrudan hesap adı ve anahtarı belirtmenize olanak tanır. Hesap anahtarını kopyalamak için:
+    1. Azure portal depolama hesabına gidin ve **anahtarları Yönet**' i seçin.
+    1. Hesap anahtarını kopyalamak için Azure portal depolama hesabına gidin, **ayarlar > erişim anahtarları**' nı seçin ve ardından Kopyala düğmesini kullanarak birincil erişim anahtarını panoya kopyalayın.
+1. Bağlantı seçeneklerinden birini belirleyin. **Özel uç noktaları belirtin** , Bloblar, tablolar ve kuyruklar Için belirli URL 'leri belirtmenizi ister. Özel uç noktalar [özel etki alanlarını](/azure/storage/blobs/storage-custom-domain-name) kullanmanıza ve erişimi daha tam olarak denetlemenize olanak tanır. Bkz. [Azure Storage bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string).
+1. **Tamam**' ı ve ardından yeni bağlantı dizesiyle yapılandırmayı güncelleştirmek için **Dosya > kaydet** ' i seçin.
 
-Yine, uygulamanızı Azure'da yayımladığınızda, bağlantı dizesi için Azure depolama hesabını içeren hizmet yapılandırmasını seçin. Uygulamanız yayımlandıktan sonra, uygulamanın Azure depolama hizmetlerine karşı beklendiği gibi çalıştığından doğrulayın.
+Uygulamanızı Azure 'da yayımladığınızda, bağlantı dizesinin Azure Depolama hesabını içeren hizmet yapılandırmasını seçin. Uygulamanız yayımlandıktan sonra, uygulamanın Azure Storage hizmetlerinde beklendiği gibi çalıştığını doğrulayın.
 
-Hizmet yapılandırmalarının nasıl güncelleştirilenhakkında daha fazla bilgi için, [depolama hesapları için bağlantı dizelerini yönet bölümüne](vs-azure-tools-configure-roles-for-cloud-service.md#manage-connection-strings-for-storage-accounts)bakın.
+Hizmet yapılandırmalarının nasıl güncelleştirilmesi hakkında daha fazla bilgi için bkz. [depolama hesapları için bağlantı dizelerini yönetme](vs-azure-tools-configure-roles-for-cloud-service.md#manage-connection-strings-for-storage-accounts)bölümü.
 
 ## <a name="endpoints-page"></a>Uç noktalar sayfası
 
-Bir web rolü genellikle bağlantı noktası 80 üzerinde tek bir HTTP bitiş noktası vardır. Diğer taraftan, bir alt rolünde herhangi bir sayıda HTTP, HTTPS veya TCP uç noktası olabilir. Uç noktalar, dış istemciler için kullanılabilen giriş uç noktaları veya hizmette çalışan diğer rolleriçin kullanılabilen dahili uç noktalar olabilir.
+Bir Web rolünün genellikle bağlantı noktası 80 üzerinde tek bir HTTP uç noktası vardır. Diğer yandan bir çalışan rolünün herhangi bir sayıda HTTP, HTTPS veya TCP uç noktası olabilir. Uç noktalar, dış istemciler için kullanılabilir olan giriş uç noktaları veya hizmette çalışan diğer roller için kullanılabilir iç uç noktalar olabilir.
 
-- Bir HTTP bitiş noktasını dış istemciler ve Web tarayıcıları için kullanılabilir hale getirmek için, bitiş noktası türünü girişe değiştirin ve bir ad ve ortak bağlantı noktası numarası belirtin.
-- Bir HTTPS bitiş noktasını dış istemciler ve Web tarayıcıları için kullanılabilir hale getirmek için, bitiş noktası türünü **giriş ekiolarak**değiştirin ve bir ad, ortak bağlantı noktası numarası ve yönetim sertifikası adı belirtin. Yönetim sertifikası belirtemeden önce **sertifikaları Sertifikalar** özelliği sayfasında da tanımlamanız gerekir.
-- Bulut hizmetindeki diğer rollertarafından dahili erişim için bir uç noktası kullanılabilir hale getirmek için, uç nokta türünü dahili olarak değiştirin ve bu bitiş noktası için bir ad ve olası özel bağlantı noktaları belirtin.
+- Bir HTTP uç noktasını dış istemciler ve Web tarayıcıları için kullanılabilir hale getirmek için, uç nokta türünü giriş olarak değiştirin ve bir ad ve genel bağlantı noktası numarası belirtin.
+- HTTPS uç noktasını dış istemciler ve Web tarayıcıları için kullanılabilir hale getirmek için, uç nokta türünü **giriş**olarak değiştirin ve bir ad, genel bağlantı noktası numarası ve bir yönetim sertifikası adı belirtin. Ayrıca, bir yönetim sertifikası belirttıklamadan önce **Sertifikalar** Özellik sayfasında sertifikayı tanımlamanız gerekir.
+- Bir uç noktayı bulut hizmetindeki diğer roller tarafından iç erişim için kullanılabilir hale getirmek için, uç nokta türünü iç olarak değiştirin ve bu uç nokta için bir ad ve olası özel bağlantı noktaları belirtin.
 
 ## <a name="local-storage-page"></a>Yerel depolama sayfası
 
-Bir rol için bir veya daha fazla yerel depolama kaynağı ayırmak için **Yerel Depolama** özelliği sayfasını kullanabilirsiniz. Yerel depolama kaynağı, bir rolün bir örneğinin çalıştırıldığı Azure sanal makinesinin dosya sisteminde ayrılmış bir dizindir.
+Bir rol için bir veya daha fazla yerel depolama kaynağı ayırmak üzere **yerel depolama** özellik sayfasını kullanabilirsiniz. Yerel depolama kaynağı, bir rolün örneğinin çalıştırıldığı Azure sanal makinesinin dosya sistemindeki ayrılmış bir dizindir.
 
 ## <a name="certificates-page"></a>Sertifikalar sayfası
 
-**Sertifikalar** özelliği sayfası, hizmet yapılandırmanıza sertifikalarınız hakkında bilgi ekler. Sertifikalarınızın hizmetinizle birlikte paketlenmemiş olduğunu unutmayın; sertifikalarınızı [Azure portalı](https://portal.azure.com)üzerinden Azure'a ayrı ayrı yüklemeniz gerekir.
+**Sertifikalar** Özellik sayfası, hizmet yapılandırmanıza sertifikalarınızı hakkında bilgi ekler. Sertifikalarınızın hizmetinize paketlenmemiş olduğunu unutmayın; [Azure Portal](https://portal.azure.com)aracılığıyla sertifikalarınızı Azure 'a ayrı olarak yüklemeniz gerekir.
 
-Buraya sertifika eklemek, hizmet yapılandırmanıza sertifikalarınız hakkında bilgi ekler. Sertifikalar hizmetle birlikte paketlenmemiştir; sertifikalarınızı Azure portalı üzerinden ayrı olarak yüklemeniz gerekir.
+Buraya bir sertifika eklendiğinde, hizmet yapılandırmanıza sertifikanız hakkında bilgiler eklenir. Sertifikalar, hizmetle paketlenmez; sertifikalarınızı Azure portal aracılığıyla ayrı olarak yüklemeniz gerekir.
 
-Bir sertifikayı rolünüzle ilişkilendirmek için sertifika için bir ad sağlayın. **Bitiş Noktaları** sayfasında bir HTTPS bitiş noktası yapılandırDığınızda sertifikaya başvurmak için bu adı kullanırsınız. Ardından, sertifika deposunun **Yerel Makine** mi yoksa **Geçerli Kullanıcı** mı olduğunu ve mağazanın adını belirtin. Son olarak, sertifikanın parmak izini girin. Sertifika Geçerli Kullanıcı\Kişisel (Benim) mağazasındaysa, doldurulan bir listeden sertifikayı seçerek sertifikanın parmak izini girebilirsiniz. Başka bir konumda yaşıyorsa, parmak izi değerini elle girin.
+Bir sertifikayı rolünüzün ilişkilendirilmesi için, sertifika için bir ad sağlayın. Bu adı, **uç noktalar** SAYFASıNDA bir HTTPS uç noktası yapılandırdığınızda sertifikaya başvurmak için kullanırsınız. Ardından, sertifika deposunun **yerel makine** mı yoksa **Geçerli Kullanıcı** ve deponun adı mı olduğunu belirtin. Son olarak, sertifikanın parmak izini girin. Sertifika geçerli User\Personal (My) depolduysa, doldurulmuş bir listeden sertifikayı seçerek sertifikanın parmak izini girebilirsiniz. Başka bir konumda yer alıyorsa, parmak izi değerini el ile girin.
 
-Sertifika deposundan bir sertifika eklediğinizde, ara sertifikalar sizin için yapılandırma ayarlarına otomatik olarak eklenir. Ayrıca, ssl için hizmetinizi doğru şekilde yapılandırmak için bu ara sertifikaların Azure'a yüklenmesi gerekir.
+Sertifika deposundan bir sertifika eklediğinizde, tüm ara sertifikalar sizin için yapılandırma ayarlarına otomatik olarak eklenir. Ayrıca, bu ara sertifikaların, hizmetinizi SSL için doğru şekilde yapılandırması için Azure 'a yüklenmesi gerekir.
 
-Hizmetinizle ilişkilendirdiğiniz tüm yönetim sertifikaları, hizmetiniz için yalnızca bulutta çalışırken geçerlidir. Hizmetiniz yerel geliştirme ortamında çalışırken, bilgi işlem emülatörü tarafından yönetilen standart bir sertifika kullanır.
+Hizmetinize ilişkilendirdiğiniz tüm yönetim sertifikaları hizmetinize yalnızca bulutta çalışırken uygulanır. Hizmetiniz yerel geliştirme ortamında çalışırken, işlem öykünücüsü tarafından yönetilen standart bir sertifika kullanır.

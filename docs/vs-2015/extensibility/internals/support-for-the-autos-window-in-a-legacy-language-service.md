@@ -1,5 +1,5 @@
 ---
-title: Eski dil hizmetinde otomatik değişkenler penceresi için destek | Microsoft Docs
+title: Eski dil hizmetindeki oto penceresi için destek | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,28 +12,28 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 01d2046d7693b23865555abb06962dead4a435ae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157589"
 ---
 # <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>Eski Dil Hizmetinde Otomatik Değişkenler Penceresi için Destek
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-**Otolar** penceresi değişkenleri ve hata ayıklanan programa (ya da bir kesme noktası veya bir özel durum nedeniyle) duraklatıldığında, kapsamdaki parametreleri gibi ifadeler görüntüler. İfadeler, değişkenler, yerel veya genel ve yerel kapsama değişmiş olan parametreler içerebilir. **Otolar** penceresi de bir sınıf, yapı veya başka bir tür örneklemeleri içerir. İfade değerlendiricisi değerlendirebilirsiniz herhangi bir şey olabilecek gösterilebileceği **Otolar** penceresi.  
+Bu **pencere,** hata ayıklamakta olan program duraklatıldığında (kesme noktası ya da bir özel durum nedeniyle) kapsamdaki değişkenler ve parametreler gibi ifadeleri görüntüler. İfadeler, yerel kapsamda değiştirilmiş değişkenleri, yerel veya genel ve parametreleri içerebilir. Ayrıca **, bir** sınıf, yapı veya başka bir türün örneklemeleri de içerebilir. Bir ifade değerlendirici 'nin değerlendirebileceği her türlü şey, **oto** penceresinde görüntülenebilir.  
   
- Yönetilen paket çerçevesini (MPF) için doğrudan destek sağlamaz **Otolar** penceresi. Ancak, kılarsanız <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> yöntemi, bir ifade içinde listesini döndürebilir **Otolar** penceresi.  
+ Yönetilen paket çerçevesi (MPF), **oto** penceresi için doğrudan destek sağlamaz. Ancak, yöntemini geçersiz kılarsınız <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> , **oto** penceresinde sunulacak ifadelerin bir listesini döndürebilirsiniz.  
   
-## <a name="implementing-support-for-the-autos-window"></a>Otomatik değişkenler penceresi için uygulama desteği  
- Tüm destek sağlamak için yapmanız gereken **Otolar** penceredir uygulamak için <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> yönteminde <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfı. Uygulamanız ifadeleri gözükeceğini kaynak dosyasının bir konumda verilen karar vermelisiniz **Otolar** penceresi. Yöntem her bir dizenin tek bir ifade temsil eden bir dize listesi döndürür. Dönüş değeri <xref:Microsoft.VisualStudio.VSConstants.S_OK> listenin ifadeleri içerdiğini gösterir ancak <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> gösterecek şekilde hiçbir ifade olduğunu gösterir.  
+## <a name="implementing-support-for-the-autos-window"></a>Oto penceresi için destek uygulama  
+ **Oto** penceresini desteklemek için yapmanız gereken tek şey, <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> yöntemi <xref:Microsoft.VisualStudio.Package.LanguageService> sınıfına uygulamaktır. Uygulamanız kaynak dosyasında bir konum verilmeye karar vermelidir, hangi ifadeler **oto** penceresinde görünmelidir. Yöntemi, her bir dizenin tek bir ifadeyi temsil ettiği dizelerin listesini döndürür. Dönüş değeri, <xref:Microsoft.VisualStudio.VSConstants.S_OK> listenin ifadeler içerdiğini, ancak <xref:Microsoft.VisualStudio.VSConstants.S_FALSE> gösterilecek hiçbir ifade olmadığını gösterir.  
   
- Döndürülen gerçek ifadeler, değişkenlerin ya da kod bu konumda görünen parametreleri adlarıdır. İfade değerlendirici değerlerini ve ardından görüntülenen türlerini almak için bu adlar geçirilecek **Otolar** penceresi.  
+ Döndürülen gerçek ifadeler, koddaki bu konumda görünen değişkenlerin veya parametrelerin adlarıdır. Bu adlar, daha sonra **oto** penceresinde görüntülenen değerleri ve türleri almak için ifade değerlendirici 'e geçirilir.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek bir uygulamasını gösterir <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> gelen ifadeleri bir listesini alır yöntemi <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ayrıştırma nedeni kullanarak yöntemini <xref:Microsoft.VisualStudio.Package.ParseReason>. Her bir ifadenin olarak kaydırılan bir `TestVsEnumBSTR` uygulayan <xref:Microsoft.VisualStudio.TextManager.Interop.IVsEnumBSTR> arabirimi.  
+ Aşağıdaki örnek, <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> ayrıştırma nedenini kullanarak yöntemden bir ifade listesi alan bir yönteminin bir uygulamasını gösterir <xref:Microsoft.VisualStudio.Package.ParseReason> . İfadelerin her biri, arabirimini uygulayan bir olarak sarmalanır `TestVsEnumBSTR` <xref:Microsoft.VisualStudio.TextManager.Interop.IVsEnumBSTR> .  
   
- Unutmayın `GetAutoExpressionsCount` ve `GetAutoExpression` yöntemleri olan özel yöntemler `TestAuthoringSink` nesne ve bu örnek destek eklenmiştir. Eklenen hangi ifadeleri bir şekilde temsil ettikleri `TestAuthoringSink` ayrıştırıcının nesnesiyle (çağırarak <xref:Microsoft.VisualStudio.Package.AuthoringSink.AutoExpression%2A> yöntemi) ayrıştırıcının dışında erişilebilir.  
+ `GetAutoExpressionsCount`Ve `GetAutoExpression` yöntemlerinin nesne üzerinde özel yöntemler olduğunu `TestAuthoringSink` ve bu örneği desteklemek için eklendiğini unutmayın. Bu, ayrıştırıcının nesneye eklenen ifadelere `TestAuthoringSink` ( <xref:Microsoft.VisualStudio.Package.AuthoringSink.AutoExpression%2A> yöntemini çağırarak) ayrıştırıcı dışında erişilebilen bir yolu temsil eder.  
   
 ```csharp  
 using Microsoft.VisualStudio;  

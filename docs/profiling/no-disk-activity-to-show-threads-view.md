@@ -1,5 +1,5 @@
 ---
-title: Gösterilen Disk Etkinliği Yok (İş Parçacığı Görünümü) | Microsoft Dokümanlar
+title: Gösterilecek disk etkinliği yok (Iş parçacıkları görünümü) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a88679d5423fc0ed2340638e5e1634bb3c81a20c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62794463"
 ---
-# <a name="no-disk-activity-to-show-threads-view"></a>Gösterilen disk etkinliği yok (İş Parçacıkları Görünümü)
-Disk G/Ç kanallarındaki geçerli zaman aralığıiçin disk etkinliği görüntülenemez. Uzaklaştırır veya kaydırırsanız disk etkinliği görüntülenebilir. Ayrıca, hiçbir disk kanalları gizli olduğundan emin olun.
+# <a name="no-disk-activity-to-show-threads-view"></a>Gösterilecek disk etkinliği yok (Iş parçacıkları görünümü)
+Disk g/ç kanallarındaki geçerli zaman aralığı için disk etkinliği görüntülenemez. Uzaklaştırırsanız veya kaydırdığınızda disk etkinliği görüntülenebilir. Ayrıca, hiçbir disk kanalının gizlenmediğini doğrulayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

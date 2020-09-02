@@ -1,5 +1,5 @@
 ---
-title: Idiasession::get_loadaddress | Microsoft Docs
+title: 'IDiaSession:: get_loadAddress | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 00ac9345001983aa9829848c4adafae69151d81a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62558297"
 ---
-# <a name="idiasessiongetloadaddress"></a>IDiaSession::get_loadAddress
+# <a name="idiasessionget_loadaddress"></a>IDiaSession::get_loadAddress
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bu sembol deposu sembolleri karşılık gelen bir yürütülebilir dosya için yük adresi alır.  
+Bu sembol deposundaki simgelere karşılık gelen yürütülebilir dosyanın yükleme adresini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_loadAddress (   
@@ -35,14 +35,14 @@ HRESULT get_loadAddress ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Bir .exe veya .dll dosyası yüklendiği bir sanal adres (VA) döndürür.  
+ dışı Bir. exe dosyasının veya. dll dosyasının yüklendiği bir sanal adres (VA) döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yük döndürülen her zaman sıfır sürece adresidir özellikle kullanılarak ayarlanan [Idiasession::put_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yöntemi.  
+ Açıkça [IDiaSession::p ut_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) yöntemi kullanılarak ayarlanmamışsa döndürülen yükleme adresi her zaman sıfırdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiasession](../../debugger/debug-interface-access/idiasession.md)   
+ [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
  [IDiaSession::put_loadAddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md)
