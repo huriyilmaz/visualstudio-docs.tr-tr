@@ -8,20 +8,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 8d441d74d1ddea5a7b5dd063d302ec93e75fc1c9
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591898"
 ---
 # <a name="t4-assembly-directive"></a>T4 Derleme Yönergesi
 
-Visual Studio tasarım zamanı metin şablonunda `assembly` yönergesi, şablon kodunuzun türlerini kullanabilmesi için bir derlemeyi yükler. Bu efekt, Visual Studio projesine derleme başvurusu eklemeye benzer.
+Visual Studio tasarım zamanı metin şablonunda `assembly` yönerge, şablon kodunuzun türlerini kullanabilmesi için bir derlemeyi yükler. Bu efekt, Visual Studio projesine derleme başvurusu eklemeye benzer.
 
  Metin şablonları yazma hakkında genel bir bakış için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
 
 > [!NOTE]
-> Çalışma zamanı (önceden işlenmiş) metin şablonunda `assembly` yönergesine ihtiyacınız yoktur. Bunun yerine, gerekli derlemeleri Visual Studio projenizin **başvurularına** ekleyin.
+> `assembly`Çalışma zamanı (önceden işlenmiş) metin şablonunda yönergeye ihtiyacınız yoktur. Bunun yerine, gerekli derlemeleri Visual Studio projenizin **başvurularına** ekleyin.
 
 ## <a name="using-the-assembly-directive"></a>Derleme Yönergesini Kullanma
  Yönergenin sözdizimi aşağıdaki gibidir:
@@ -32,11 +32,11 @@ Visual Studio tasarım zamanı metin şablonunda `assembly` yönergesi, şablon 
 
  Derleme adı aşağıdakilerden biri olmalıdır:
 
-- GAC 'deki bir derlemenin tanımlayıcı adı, örneğin `System.Xml.dll`. Ayrıca, `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`gibi uzun biçimi de kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:System.Reflection.AssemblyName>.
+- GAC 'deki bir derlemenin tanımlayıcı adı, örneğin `System.Xml.dll` . Ayrıca, gibi uzun biçimi de kullanabilirsiniz `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"` . Daha fazla bilgi için bkz. <xref:System.Reflection.AssemblyName>.
 
 - Derlemenin mutlak yolu
 
-  `$(SolutionDir)`gibi Visual Studio değişkenlerine başvurmak için `$(variableName)` sözdizimini kullanabilirsiniz ve ortam değişkenlerine başvurmak için `%VariableName%`. Örneğin:
+  Sözdizimini kullanarak, gibi `$(variableName)` Visual Studio değişkenlerine başvurabilir `$(SolutionDir)` ve `%VariableName%` ortam değişkenlerine başvurabilirsiniz. Örneğin:
 
 ```
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>
@@ -63,10 +63,10 @@ Visual Studio tasarım zamanı metin şablonunda `assembly` yönergesi, şablon 
 
 - DSL'nizi içeren derleme.
 
-## <a name="msbuild"></a>MSBuild ve Visual Studio 'da proje özelliklerini kullanma
+## <a name="using-project-properties-in-both-msbuild-and-visual-studio"></a><a name="msbuild"></a> MSBuild ve Visual Studio 'da proje özelliklerini kullanma
  $ (SolutionDir) gibi Visual Studio makroları MSBuild 'de çalışmıyor. Şablonları yapı makinenizde dönüştürmek isterseniz, bunun yerine proje özelliklerini kullanmanız gerekir.
 
- Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek, `myLibFolder`adlı bir özelliği tanımlar:
+ Proje özelliği tanımlamak için .csproj veya .vbproj dosyanızı düzenleyin. Bu örnek adında bir özelliği tanımlar `myLibFolder` :
 
 ```xml
 <!-- Define a project property, myLibFolder: -->

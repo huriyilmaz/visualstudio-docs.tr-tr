@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ac683ff6e7079478d5b4e642918df4e281a53f0b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645647"
 ---
 # <a name="full-text-search-tips"></a>Tam Metin Araması İpuçları
@@ -32,7 +32,7 @@ Yardım 'da bilgi bulmanın daha kullanışlı yöntemlerinden biri tam metin ar
 ### <a name="general-guidelines"></a>Genel Yönergeler
  Aşağıdaki tablo, yardım 'da arama sorguları geliştirmeye yönelik bazı temel kuralları ve yönergeleri içerir.
 
-|Sözdizimi|Açıklama|
+|Syntax|Description|
 |------------|-----------------|
 |Büyük/küçük harf duyarlılığı|Aramalar büyük/küçük harfe duyarlı değildir. Büyük veya küçük harfli karakterler kullanarak arama ölçütlerinizi geliştirin. Örneğin, "OLE" ve "OLE" aynı sonuçları döndürür.|
 |Karakter birleşimleri|Yalnızca tek harf (a – z) veya sayı (0 – 9) için arama yapamazsınız. "And", "from" ve "with" gibi belirli ayrılmış kelimeleri aramaya çalışırsanız, bunlar yok sayılır. Daha fazla bilgi için, bu konunun ilerleyen kısımlarında "aramalardaki (sözcükleri Durdur) sözcükler yoksayıldı" başlığına bakın.|
@@ -45,7 +45,7 @@ Yardım 'da bilgi bulmanın daha kullanışlı yöntemlerinden biri tam metin ar
 > 1. Tümcecik aramaları desteklenmez. Bir arama dizesinde birden fazla sözcük belirtirseniz, döndürülen konular belirttiğiniz tüm kelimeleri içerir ancak belirttiğiniz tam ifade değildir.
 >    2. Arama tümceciğinin kelimeleri arasındaki ilişkiyi belirtmek için mantıksal işleçleri kullanın. Aramanızı daha da belirginleştirmek için ve, veya gibi mantıksal işleçleri dahil edebilirsiniz. Örneğin, "yakın birleşim bildirme" araması yaparsanız, arama sonuçları birbirleriyle "bildirme" ve "Union" sözcüklerini içeren konuları içerir. Daha fazla bilgi için bkz. [arama Ifadelerinde mantıksal işleçler](../ide/logical-operators-in-search-expressions.md).
 
-### <a name="filters"></a>FilTReleri
+### <a name="filters"></a>Filtreler
  Gelişmiş arama işleçlerini kullanarak arama sonuçlarını daha da kısıtlayabilirsiniz. Yardım, tam metin aramasının sonuçlarını filtrelemek için kullanabileceğiniz üç kategori içerir: Başlık, kod ve anahtar sözcük. Daha fazla bilgi için bkz. [arama Ifadelerinde gelişmiş arama işleçleri](../ide/advanced-search-operators-in-search-expressions.md).
 
 ### <a name="ranking-of-search-results"></a>Arama sonuçlarının derecelendirmesi
@@ -61,4 +61,4 @@ Yardım 'da bilgi bulmanın daha kullanışlı yöntemlerinden biri tam metin ar
  Genellikle durdurma kelimeleri olarak adlandırılan yaygın olarak oluşan sözcükler veya sayılar, tam metin araması sırasında otomatik olarak yoksayılır. Örneğin, "pass through" ifadesini arıyorsanız, arama sonuçları "pass" sözcüğünü içeren, ancak "Through" sözcüğünü içeren konuları görüntüler.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [](../ide/locate-information.md) [Arama Ifadelerinde bilgi mantıksal işleçlerini](../ide/logical-operators-in-search-expressions.md) bulma
+ [Locate Information](../ide/locate-information.md) [Arama Ifadelerinde bilgi mantıksal işleçlerini](../ide/logical-operators-in-search-expressions.md) bulma

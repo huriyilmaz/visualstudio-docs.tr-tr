@@ -1,5 +1,5 @@
 ---
-title: Engelleme zamanı Profil raporu | Microsoft Docs
+title: Engelleme zamanı profil raporu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,52 +14,52 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0efeb7fb0eb481d0b8d62ff4a9ebf9daad98c39f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68147236"
 ---
 # <a name="blocking-time-profile-report"></a>Engelleme Zamanı Profil Raporu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Profil raporlarını engelleme her kategorisi (örneğin, "G/ç" veya "Eşitleme") belirli çağrı yığınlarını engelleme zamanı veri toplama sağlayın. Önalım raporu geçerli işlem önalım örneklerinin birlikte etkisiz işlemleri listeler. Engelleme Profil raporu oluşturmak için araç engelleme API çağrıları toplar ve bunları çağrı yığınlarını ağacının toplanır. Bu raporlarda gösterilen verileri geçerli zaman aralığı, gizli dizileri ve uygulanabilir aşağıdaki iki filtre olarak değişir:  
+Profil raporları, her engelleme kategorisine özgü çağrı yığınları için toplu engelleme zaman verileri sağlar (örneğin, "g/ç" veya "eşitleme"). Önalım raporu, önalım örneklerinin sayısıyla birlikte geçerli işlemi içeren işlemleri listeler. Engelleme profili raporunu oluşturmak için araç, API çağrılarını engellemeyi ve bunları bir çağrı yığını ağacına biriktirir. Bu raporlarda gösterilen veriler, geçerli zaman aralığına, gizli iş parçacıklarına ve uygulanabilecek aşağıdaki iki filtreye göre farklılık gösterir:  
   
-- Yalnızca kendi kodum seçtiyseniz bir düzey altındaki kullanıcı kodunun yanı sıra kullanıcı koduna sahip yığın çerçevelerini sunulur.  
+- Yalnızca kendi kodum seçilirse, yalnızca Kullanıcı kodu olan yığın çerçeveleri ve kullanıcı kodunun altında bir düzey gösterilir.  
   
-- Gürültü azaltma değeri ayarlarsanız, belirtilen sıklıkta atlanır daha az olan yığınları Harmanlanmış.  
+- Gürültü azaltma değeri ayarlandıysa, belirtilen sıklığından daha az olan harmanlanmış yığınlar atlanır.  
   
-  Engelleme zamanı için harcanan kod satırının bulmak için herhangi bir çağrı ağacını giriş genişletin. Kendi kısayol menüsünde bir giriş kaynağı olan satırını bulun, seçin **kaynağı görüntüle**. Bu bir kısayol menüsünde, çağıran kod satırı bulunacak seçin **çağrı siteleri görünümünü**. Yalnızca bir çağrı sitesini kullanılabilir, komut vurgulanan satırlık bir kod için çağrı sitesini bağlanır. Birden çok çağrı siteleri varsa, komutu bir girişi seçin ve ardından bir iletişim kutusu açılır **kaynağa Git** vurgulanan çağrı sitesini bulmaya düğmesi. Genellikle en iyi örnek, en çok zaman veya her ikisi de çağrı sitedeki kaynak kodunu görüntülemek en kullanışlıdır.  
+  Engelleme zamanının harcadığı kod satırını bulmak için herhangi bir çağrı ağacı girişini genişletin. Bir girdinin kaynak çizgisini bulmak için, kısayol menüsünde **kaynağı görüntüle**' yi seçin. Bunu çağıran kod satırını bulmak için kısayol menüsünde, **çağrı sitelerini görüntüle**' yi seçin. Yalnızca bir adet çağrı sitesi varsa, komut, çağrı sitesi için vurgulanan kod satırına bağlanır. Birden çok çağrı sitesi varsa, komut bir giriş seçebileceğiniz ve sonra vurgulanan çağrı sitesini bulmak için **Kaynağa Git** düğmesini seçebileceğiniz bir iletişim kutusu açar. En çok, en çok örneğe sahip olan çağrı sitesi için kaynak kodunu, en son saati veya her ikisini birden görüntülemek en yararlı seçenektir.  
   
-## <a name="blocking-time-report-columns"></a>Engelleme zamanı Rapor sütunları  
- Aşağıdaki tabloda her engelleme zamanı rapor için sütunları gösterir.  
+## <a name="blocking-time-report-columns"></a>Engelleme zamanı rapor sütunları  
+ Aşağıdaki tabloda her engelleme zamanı raporunun sütunları gösterilmektedir.  
   
 |Sütun adı|Açıklama|  
 |-----------------|-----------------|  
-|Ad|İşlev adı çağrı yığınının her düzeyi.|  
-|Örnekler|Görünür zaman aralığı için engelleme çağrısının örnek sayısı.|  
-|Kapsamlı engelleme süresi|Engelleme çağrı yığını ağacı Bu düzey için toplanan tüm yığınları için harcanan zamanı toplamı. Dışlamalı engelleme süresi Bu işlevin ve tüm alt düğümlerin dışlamalı engelleme süresi toplamı kapsamlı sayıdır.|  
-|Dışlamalı engelleme süresi|Sırasında bu harcanan toplam engelleme zamanı işlev çağrı yığınının en düşük düzeydir. Yüksek dışlamalı engelleme süresi olan bir benzersiz çağrı yığını girdisi, ilgilendiğiniz bir işlevi olabilir.|  
-|API/bekleme kategorisi|Çağrı yığınının en alt düzeyinde işlevler için yalnızca gösterilir. Engelleme çağrı imzası tanınan burada engelleme API adı sağlanır. İmza tanınmıyorsa çekirdek tarafından raporlanan bilgileri sağlanır.|  
-|Ayrıntılar|İşlev tam adı. Kullanılabilir olduğunda bu satır sayısını içerir.|  
+|Ad|Çağrı yığınının her bir düzeyi için işlevin adı.|  
+|Örnekler|Görünen zaman aralığı için engelleme çağrısının örnek sayısı.|  
+|Kapsamlı engelleme süresi|Çağrı yığını ağacının bu düzeyine kadar toplanan tüm yığınlar için harcanan toplam engelleme süresi. Dahil edilen sayı bu işlev için dışlamalı engelleme zamanının toplamı ve tüm alt düğümleri için dışlamalı engelleme süresi.|  
+|Dışlamalı engelleme süresi|Bu işlevin çağrı yığınının en düşük düzeyi olduğu zaman harcanan toplam engelleme süresi. Yüksek dışlamalı bir engelleme süresine sahip benzersiz bir çağrı yığını girişi, ilgilendiğiniz bir işlev olabilir.|  
+|API/bekleme kategorisi|Yalnızca çağrı yığınının en düşük düzeyindeki işlevler için gösterilir. Engelleme çağrısının imzasının tanınması durumunda, engelleyici API 'nin adı sağlanır. İmza tanınmazsa, çekirdek tarafından bildirilen bilgiler sağlanır.|  
+|Ayrıntılar|İşlevin tam adı. Bu, kullanılabilir olduğunda satır sayısını içerir.|  
   
 ### <a name="synchronization"></a>Eşitleme  
- Eşitleme rapor, eşitleme ve her çağrı yığınının kez engelleme toplama engelleme segmentleri sorumlu olan çağrılarını gösterir. Daha fazla bilgi için [eşitleme zamanı](../profiling/synchronization-time.md)  
+ Eşitleme raporu, eşitlemede bloke olan kesimlerden sorumlu olan çağrıları ve her bir çağrı yığınının toplam engellenme sürelerini gösterir. Daha fazla bilgi için bkz. [eşitleme saati](../profiling/synchronization-time.md)  
   
 ### <a name="sleep"></a>Uyku  
- Uyku rapor uyku harcanan zaman için öznitelikli zaman ve her bir çağrı yığınını toplama engelleme sürelerinin engellemek için sorumlu olan çağrılarını gösterir. Daha fazla bilgi için [uyku zaman](../profiling/sleep-time.md).  
+ Uyku raporu, uyumaya harcanan zamana ve her bir çağrı yığınının toplam engellenme zamanına sahip olan zamanı engelleme işleminden sorumlu olan çağrıları gösterir. Daha fazla bilgi için bkz. [uyku süresi](../profiling/sleep-time.md).  
   
 ### <a name="io"></a>G/Ç  
- G/ç rapor g/ç ve her çağrı yığınının kez engelleme toplama engelleme segmentleri sorumlu olan çağrılarını gösterir. Daha fazla bilgi için [g/ç zamanı (iş parçacıkları görünümü)](../profiling/i-o-time-threads-view.md).  
+ G/ç raporu g/ç 'de engelleyen kesimlerden sorumlu olan çağrıları ve her bir çağrı yığınının toplam engellenme sürelerini gösterir. Daha fazla bilgi için bkz. [g/ç zamanı (Iş parçacıkları görünümü)](../profiling/i-o-time-threads-view.md).  
   
 ### <a name="memory-management"></a>Bellek Yönetimi  
- Bellek yönetimi raporu, bellek yönetimi işlemleri ve her çağrı yığınının kez engelleme toplama engelleme segmentleri sorumlu olan çağrılarını gösterir. Daha fazla bilgi için [bellek yönetimi zamanı](../profiling/memory-management-time.md).  
+ Bellek yönetimi raporu, bellek yönetimi işlemlerini engelleyen kesimlerden sorumlu olan çağrıları ve her bir çağrı yığınının toplam engellenme sürelerini gösterir. Daha fazla bilgi için bkz. [bellek yönetimi zamanı](../profiling/memory-management-time.md).  
   
 ### <a name="preemption"></a>Önalım  
- Önalım raporu geçerli işlem örneklerinin sayısını birlikte etkisiz işlemleri listeler.  Her işlem, geçerli işlemdeki iş parçacıkları yerine belirli dizileri görüntülemek ve iş parçacığı başına önalım örneklerinin dökümünü görüntülemek için genişletebilirsiniz. Bu engelleme rapor diğerlerine göre daha az eyleme dönüştürülebilir çünkü önalım işleminizi üzerinde genellikle uygulanan işletim sistemi tarafından kodunuzda bir sorundan değil. Daha fazla bilgi için [Önalım zamanı](../profiling/preemption-time.md).  
+ Önalım raporu, geçerli işlemi örnek sayısıyla birlikte alan işlemleri listeler.  Her bir işlemi, geçerli işlemdeki iş parçacıklarının değiştirildiği belirli iş parçacıklarını görüntülemek ve iş parçacığı başına önalım örneklerinin dökümünü görüntülemek için genişletebilirsiniz. Bu engelleme raporu, kodunuzun kodunuzda bir sorun değil, önalım genellikle işletim sistemi tarafından işlebir şekilde yapıldığından, diğerleri bundan daha az işlem yapılabilir. Daha fazla bilgi için bkz. [önalım Time](../profiling/preemption-time.md).  
   
-### <a name="ui-processing"></a>UI işleme  
- UI işleme rapor UI işleme bloklarını ve her çağrı yığınının kez engelleme toplama engelleme segmentleri engellemek için sorumlu olan çağrılarını gösterir. Daha fazla bilgi için [UI işleme zamanı](../profiling/ui-processing-time.md).  
+### <a name="ui-processing"></a>UI Işleme  
+ UI Işleme raporu, Kullanıcı arabirimi işleme blokları üzerinde engelleyici olan kesimleri ve her bir çağrı yığınının toplam engellenme süresini engelleyen çağrıları gösterir. Daha fazla bilgi için bkz. [UI Işleme süresi](../profiling/ui-processing-time.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

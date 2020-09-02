@@ -15,10 +15,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 2d7bb7e0f3dfee3dd1bf3e9b42afd5837a29f6ee
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72646815"
 ---
 # <a name="template-parameters"></a>Şablon Parametreleri
@@ -37,9 +37,9 @@ ms.locfileid: "72646815"
 
 #### <a name="to-enable-parameter-substitution-in-templates"></a>Şablonlarda parametre değişimini etkinleştirmek için
 
-1. Şablonun. vstemplate dosyasında, parametre değişimini etkinleştirmek istediğiniz öğeye karşılık gelen `ProjectItem` öğesini bulun.
+1. Şablonun. vstemplate dosyasında, `ProjectItem` parametre değişimini etkinleştirmek istediğiniz öğeye karşılık gelen öğeyi bulun.
 
-2. @No__t_1 öğesinin `ReplaceParameters` özniteliğini `true` olarak ayarlayın.
+2. `ReplaceParameters` `ProjectItem` Öğesinin özniteliğini olarak ayarlayın `true` .
 
 3. Proje öğesi için kod dosyasında uygun yerlerde parametreler ekleyin. Örneğin, aşağıdaki parametre bir dosyadaki ad alanı için güvenli proje adının kullanılacağını belirtir:
 
@@ -56,7 +56,7 @@ ms.locfileid: "72646815"
 |Parametre|Açıklama|
 |---------------|-----------------|
 |`clrversion`|Ortak dil çalışma zamanının (CLR) geçerli sürümü.|
-|`GUID [1-10]`|Proje dosyasındaki proje GUID 'INI değiştirmek için kullanılan GUID. En fazla 10 benzersiz GUID belirtebilirsiniz (örneğin, `guid1)`.|
+|`GUID [1-10]`|Proje dosyasındaki proje GUID 'INI değiştirmek için kullanılan GUID. En fazla 10 benzersiz GUID belirtebilirsiniz (örneğin, `guid1)` .|
 |`itemname`|**Yeni öğe Ekle** iletişim kutusunda Kullanıcı tarafından girilen ad.|
 |`machinename`|Geçerli bilgisayar adı (örneğin, COMPUTER01).|
 |`projectname`|**Yeni proje** iletişim kutusunda Kullanıcı tarafından girilen ad.|
@@ -65,7 +65,7 @@ ms.locfileid: "72646815"
 |`safeitemname`|**Yeni öğe Ekle** iletişim kutusunda, tüm güvenli olmayan karakterler ve boşluklar kaldırılmış şekilde Kullanıcı tarafından girilen ad.|
 |`safeprojectname`|**Yeni proje** iletişim kutusunda, tüm güvenli olmayan karakterler ve boşluklar kaldırılmış şekilde Kullanıcı tarafından belirtilen ad.|
 |`time`|Geçerli saat, GG/AA/YYYY 00:00:00 biçiminde.|
-|`SpecificSolutionName`|Çözümün adı. "Çözüm dizini oluştur" işaretlendiğinde `SpecificSolutionName` çözüm adı vardır. "Çözüm dizini oluştur" işaretli olmadığında `SpecificSolutionName` boştur.|
+|`SpecificSolutionName`|Çözümün adı. "Çözüm dizini oluştur" işaretlendiğinde, `SpecificSolutionName` çözüm adı vardır. "Çözüm dizini oluştur" işaretli olmadığında, `SpecificSolutionName` boştur.|
 |`userdomain`|Geçerli Kullanıcı etki alanı.|
 |`username`|Geçerli Kullanıcı adı.|
 |`webnamespace`|Geçerli Web sitesinin adı. Bu parametre, benzersiz sınıf adlarını güvence altına almak için Web formu şablonunda kullanılır. Web sitesi Web sunucusunun kök dizinde ise, bu şablon parametresi Web sunucusunun kök dizinine çözümlenir.|
@@ -75,7 +75,7 @@ ms.locfileid: "72646815"
  Parametre değiştirme sırasında kullanılan varsayılan ayrılmış şablon parametrelerine ek olarak kendi şablon parametrelerinizi ve değerlerini belirtebilirsiniz. Daha fazla bilgi için bkz. [CustomParameters öğesi (Visual Studio şablonları)](../extensibility/customparameters-element-visual-studio-templates.md)
 
 ## <a name="example-replacing-files-names"></a>Örnek: dosya adlarını değiştirme
- @No__t_0 özniteliğiyle bir parametre kullanarak proje öğeleri için değişken dosya adları belirtebilirsiniz. Örneğin,. exe dosyasının, dosya adı olarak `$projectname$` tarafından belirtilen proje adını kullanmasını belirtebilirsiniz.
+ Özniteliği ile bir parametre kullanarak proje öğeleri için değişken dosya adları belirtebilirsiniz `TargetFileName` . Örneğin,. exe dosyasının `$projectname$` , dosya adı olarak, tarafından belirtilen proje adını kullanmasını belirtebilirsiniz.
 
 ```
 <TemplateContent>
@@ -89,7 +89,7 @@ ms.locfileid: "72646815"
 ```
 
 ## <a name="example-using-the-project-name-for-the-namespace-name"></a>Örnek: ad alanı adı için proje adını kullanma
- Class1.cs bir görsel C# sınıf dosyasındaki ad alanı için proje adını kullanmak için, aşağıdaki sözdizimini kullanın:
+ Visual C# sınıf dosyası Class1.cs ad alanı için proje adını kullanmak için, aşağıdaki sözdizimini kullanın:
 
 ```
 #region Using directives

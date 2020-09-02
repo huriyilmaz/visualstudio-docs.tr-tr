@@ -13,18 +13,18 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 59bfec972750a4f893d1cb8b7cf08710bcca761a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62555979"
 ---
 # <a name="customparameter-element-visual-studio-templates"></a>CustomParameter Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir özel parametre adı ve şablondan bir proje veya öğe oluşturulduğunda kullanılacak değeri içerir.  
+Şablondan bir proje veya öğe oluşturulduğunda kullanılacak özel bir parametre adı ve değeri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <CustomParameter Name="name" Value="value">  
@@ -37,8 +37,8 @@ Bir özel parametre adı ve şablondan bir proje veya öğe oluşturulduğunda k
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`Name`|Gerekli. Parametrenin adı. Parametre biçimi $*adı*$.|  
-|`Value`|Gerekli. Parametre değiştirme değeri.|  
+|`Name`|Gereklidir. Parametrenin adı. Parametrelerin biçimi $*Name*$ olur.|  
+|`Value`|Gereklidir. Parametrenin değiştirme değeri.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,13 +47,13 @@ Bir özel parametre adı ve şablondan bir proje veya öğe oluşturulduğunda k
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|Sihirbaz parametresi değişiklik yaptığında için Şablon Sihirbazı'nı geçirilecek özel parametreler gruplandırır.|  
+|[CustomParameters](../extensibility/customparameters-element-visual-studio-templates.md)|Sihirbaz parametre değişiklikleri yaptığında şablon sihirbazına geçirilecek özel parametreleri gruplandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir şablon içerdiğinde `CustomParameter` öğeleri, her örnek `Name` özniteliği ile değiştirilir `Value` oluşturulan proje veya öğe dosya özniteliği.  
+ Şablon `CustomParameter` öğeleri içerdiğinde, her örnek `Name` özniteliği `Value` oluşturulan proje veya öğe dosyalarındaki özniteliğiyle değiştirilmiştir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, şablonda birkaç özel parametreler kullanmayı gösterir. Bir proje veya öğe oluşturulduğunda aşağıdaki özel parametreleri, tüm örneklerini ile bir şablondan `$color1$` ve `$color2$` şablon dosyaları ile değiştirilecek `Red` ve `Blue`sırasıyla.  
+ Aşağıdaki örnek, bir şablonda birkaç özel parametrenin nasıl kullanılacağını gösterir. Bir şablon veya öğe, aşağıdaki özel parametrelerle bir şablondan oluşturulduğunda, `$color1$` `$color2$` şablon dosyalarındaki ve içindeki tüm örnekleri sırasıyla ve ile yerine geçer `Red` `Blue` .  
   
 ```  
 <CustomParameters>  

@@ -11,36 +11,36 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 04d64ac489858e3a912b144b494430aec5b925d5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197044"
 ---
 # <a name="idebugfirewallconfigurationcallback2"></a>IDebugFirewallConfigurationCallback2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Sorun için DCOM kullanan bir hata ayıklama altyapısı sağlar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] güvenlik duvarı uzaktan hata ayıklama engellemez emin olmak için kullanıcı Arabirimi.  
+[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]Kullanıcı arabirimine, güvenlik duvarının uzaktan hata ayıklamayı engellememesini istemek IÇIN DCOM kullanan bir hata ayıklama altyapısı sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugFirewallConfigurationCallback2 : IUnknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Oturum hata ayıklama Yöneticisi bağlantı noktası nesnesi tarafından uygulanır.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Oturum hata ayıklama yöneticisinin bağlantı noktası nesnesi tarafından uygulanır.  
   
 ## <a name="methods"></a>Yöntemler  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugFirewallConfigurationCallback2`.  
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugFirewallConfigurationCallback2` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[EnsureDCOMUnblocked](../../../extensibility/debugger/reference/idebugfirewallconfigurationcallback2-ensuredcomunblocked.md)|Güvenlik Duvarı uzaktan hata ayıklama engellemediğinizden emin istekler.|  
+|[EnsureDCOMUnblocked](../../../extensibility/debugger/reference/idebugfirewallconfigurationcallback2-ensuredcomunblocked.md)|Güvenlik duvarının uzaktan hata ayıklamayı engellememe isteklerini ister.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üst bilgi: Msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

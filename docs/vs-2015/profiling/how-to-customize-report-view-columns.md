@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Rapor görünümü sütunlarını özelleştirme | Microsoft Docs'
+title: 'Nasıl yapılır: rapor görünümü sütunlarını özelleştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,16 +15,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: f1f6cf340d7c0ef87f34fc908e075f36eed2962c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68146118"
 ---
 # <a name="how-to-customize-report-view-columns"></a>Nasıl yapılır: Rapor Görünümü Sütunlarını Özelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio Team System geliştirme sürümü Performans araçları tümleşik geliştirme ortamına (IDE) kesintisiz bir kullanıcı deneyimi sağlamak için tam olarak tümleşiktir. Aşağıdaki listede ekleme, kaldırma ve sütunları yeniden düzenleme özelleştirilmiş görünümleri etmektedir:  
+Visual Studio Team System Development Edition 'daki performans araçları, sorunsuz bir kullanıcı deneyimi sağlamak için tümleşik geliştirme ortamı (IDE) ile tamamen tümleşiktir. Aşağıdaki liste sütunları ekleyerek, kaldırarak ve yeniden düzenleyerek özelleştirilebilen görünümlerin temsilcisidir:  
   
 - [Modüller Görünümü](../profiling/modules-view.md)  
   
@@ -34,7 +34,7 @@ Visual Studio Team System geliştirme sürümü Performans araçları tümleşik
   
 - [Yönerge İşaretçileri (IP) Görünümü](../profiling/instruction-pointers-ips-view.md)  
   
-- [Çağıran/Çağrılan Görünümü](../profiling/caller-callee-view.md)  
+- [Arayan/çağrılan görünümü](../profiling/caller-callee-view.md)  
   
 - [Çağrı Ağacı Görünümü](../profiling/call-tree-view.md)  
   
@@ -50,7 +50,7 @@ Visual Studio Team System geliştirme sürümü Performans araçları tümleşik
   
 1. Rapor görünümünü açın.  
   
-2. Rapor görünümü yüzeyine sağ tıklayın ve ardından **sütunları Ekle/Kaldır**.  
+2. Rapor görünümü yüzeyine sağ tıklayın ve ardından **sütun Ekle/Kaldır**' a tıklayın.  
   
      **Sütunları Ekle/Kaldır** iletişim kutusu görüntülenir.  
   
@@ -58,4 +58,4 @@ Visual Studio Team System geliştirme sürümü Performans araçları tümleşik
   
 4. Sütunları yeniden sıralamak için ok düğmesine tıklayın.  
   
-5.           **Tamam**'ı tıklatın.
+5. **Tamam**’a tıklayın.

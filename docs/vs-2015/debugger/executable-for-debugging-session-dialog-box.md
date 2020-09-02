@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama oturumu iletişim kutusu için yürütülebilir | Microsoft Docs
+title: Hata ayıklama oturumu için yürütülebilir Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -22,24 +22,24 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c2ee71c5e23b0c5784cd2fe9b57b46fe28d41d30
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157463"
 ---
 # <a name="executable-for-debugging-session-dialog-box"></a>Hata Ayıklama Oturumu İçin Yürütülebilir İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir DLL'nin hatasını ayıklamaya çalıştığınızda hangi hiçbir yürütülebilir dosyası için belirtilen bu iletişim kutusu görüntülenir. Visual Studio, DLL doğrudan başlatılamıyor. Bunun yerine, belirtilen çalıştırılabiliri Başlat. Yürütülebilir dosya tarafından çağrıldığında DLL hatalarını ayıklayabilir.  
+Bu iletişim kutusu, çalıştırılabilir dosya belirtilmediğinde bir DLL 'de hata ayıklamaya çalıştığınızda görüntülenir. Visual Studio doğrudan DLL 'yi başlatamaz. Bunun yerine, belirtilen yürütülebiliri başlatacaktır. Yürütülebilir dosya tarafından çağrıldığında DLL 'de hata ayıklaması yapabilirsiniz.  
   
  **Yürütülebilir dosya adı**  
- Hata ayıklama DLL çağıran bir yürütülebilir dosya için yol adı girin.  
+ Hata ayıklaması yaptığınız DLL 'yi çağıran bir yürütülebilir dosyanın yolunu girin.  
   
- **Proje burada olabilir URL (sadece ATL Sunucusu için) erişilebilir**  
- Bir ATL Sunucu DLL ayıklıyorsanız, projenin bulunduğu URL'yi girin.  
+ **Projenin erişilebileceği URL (yalnızca ATL sunucusu)**  
+ ATL sunucu DLL dosyasında hata ayıklaması yapıyorsanız, projenin bulunabileceği URL 'YI girin.  
   
- Sonraki hata ayıklama oturumları için bunları yeniden girmeniz gerekmez şekilde giriş yapıldığında, bu ayarları projenin özellik sayfaları depolanır. Ayarları değiştirmeniz gerekiyorsa, özellik sayfaları açın ve değerlerini değiştirin. Hata ayıklama oturumu için yürütülebilir bir belirtme hakkında daha fazla bilgi için bkz. [DLL'lerin hata ayıklama](../debugger/how-to-debug-native-dlls.md).  
+ Bu ayarlar girildikten sonra proje özellik sayfalarında depolanır, bu nedenle sonraki hata ayıklama oturumları için bunları yeniden girmeniz gerekmez. Ayarları değiştirmeniz gerekiyorsa, özellik sayfalarını açıp değerleri değiştirebilirsiniz. Hata ayıklama oturumu için yürütülebilir dosya belirtme hakkında daha fazla bilgi için bkz. [hata ayıklama dll 'leri](../debugger/how-to-debug-native-dlls.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Visual Studio’da hata ayıklama](../debugger/debugging-in-visual-studio.md)
+ [Visual Studio'da Hata Ayıklama](../debugger/debugging-in-visual-studio.md)

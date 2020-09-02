@@ -1,5 +1,5 @@
 ---
-title: Araç penceresi ekran yapılandırması | Microsoft Docs
+title: Araç penceresi yapılandırma görüntüleme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,19 +12,19 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1af78bd58c42cf1312e36621011802e908c9e919
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186389"
 ---
 # <a name="tool-window-display-configuration"></a>Araç Penceresi Ekran Yapılandırması
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPackage araç penceresi, varsayılan konum, boyut, yerleştirme stilini ve diğer görünürlük bilgileri kaydedildiğinde, isteğe bağlı değerler belirtilir. Araç penceresi kayıt hakkında daha fazla bilgi için bkz. [aracı Windows kayıt defteri](../extensibility/tool-windows-in-the-registry.md)  
+VSPackage bir araç penceresi kaydettiğinde, varsayılan konum, boyut, yerleştirme stili ve diğer görünürlük bilgileri isteğe bağlı değerlerde belirtilir. Araç penceresi kaydı hakkında daha fazla bilgi için bkz [. kayıt defterindeki araç pencereleri](../extensibility/tool-windows-in-the-registry.md)  
   
-## <a name="window-display-information"></a>Pencere bilgilerini görüntüle  
- Bir araç penceresinin temel görüntü yapılandırma en fazla altı isteğe bağlı değerler depolanır:  
+## <a name="window-display-information"></a>Pencere görüntüleme bilgileri  
+ Bir araç penceresinin temel görüntüleme yapılandırması, en fazla altı isteğe bağlı değere depolanır:  
   
 ```  
 HKEY_LOCAL_MACHINE\  
@@ -37,17 +37,17 @@ HKEY_LOCAL_MACHINE\
               (Default)       = reg_sz: <Package GUID>Name            = reg_sz: <name of tool window>Float           = reg_sz: <position>Style           = reg_sz: <dock style>Window          = reg_sz: <window GUID>Orientation     = reg_sz: <orientation>DontForceCreate = reg_dword: 0x00000000  
 ```  
   
-|Ad|Tür|Veri|Açıklama|  
+|Ad|Tür|Veriler|Açıklama|  
 |----------|----------|----------|-----------------|  
-|Ad|REG_SZ|"Kısa adını buraya gelecek"|Araç penceresi açıklayan kısa bir ad. Yalnızca başvuru kayıt defteri için kullanılır.|  
-|Float|REG_SZ|"X1, Y1, X2, Y2"|Dört virgülle ayrılmış değerler. X1, Y1 olan araç penceresinin sol üst köşesinin koordinatı. X2, Y2 olan sağ alt köşedeki koordinatı. Ekran koordinatlarında tüm değerler.|  
-|Stil|REG_SZ|"MDI"<br /><br /> "Kaydırabilirsiniz"<br /><br /> "Bağlı"<br /><br /> "Sekmeli"<br /><br /> "AlwaysFloat"|İlk belirten bir anahtar sözcüğü, araç penceresi durumunu görüntüler.<br /><br /> "MDI" = ile MDI pencere yerleştirildi.<br /><br /> "Kaydırabilirsiniz" kayan =.<br /><br /> "Bağlı" = başka bir pencere (penceresi girdisinde belirtilen) ile bağlantılı.<br /><br /> "Sekmeli" = başka bir araç penceresi ile birleştirilmiş.<br /><br /> "AlwaysFloat" = yerleştirilmiş olabilir.<br /><br /> Daha fazla bilgi için aşağıdaki Açıklamalar bölümüne bakın.|  
-|Pencere|REG_SZ|*\<GUID >*|Bir pencere için araç penceresi bağlı sekmeli veya GUID'si. GUID kendi windows birini ya da windows biri ait olabileceği [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] IDE.|  
-|Hizalama|REG_SZ|"Sol"<br /><br /> "Sağ"<br /><br /> "Top"<br /><br /> "Alt"|Aşağıdaki Açıklamalar bölümüne bakın.|  
-|DontForceCreate|REG_DWORD|0 veya 1|Bu girdiyi yok ve değeri sıfır olmadığında penceresi yüklendi ancak hemen görüntülenir.|  
+|Ad|REG_SZ|"Kısa ad buraya gelecek"|Araç penceresini açıklayan kısa bir ad. Yalnızca kayıt defterindeki başvuru için kullanılır.|  
+|Float|REG_SZ|"X1, Y1, X2, Y2"|Dört virgülle ayrılmış değer. X1, Y1 araç penceresinin sol üst köşesinin koordinatı. X2, Y2 sağ alt köşenin koordinatıdır. Tüm değerler ekran koordinatlarına göre yapılır.|  
+|Stil|REG_SZ|ÜSTÜNE<br /><br /> Float<br /><br /> Bağlandı<br /><br /> Işleminde<br /><br /> "AlwaysFloat"|Araç penceresinin ilk görüntüleme durumunu belirten bir anahtar sözcük.<br /><br /> "MDI" = MDI penceresiyle yerleştirildi.<br /><br /> "Float" = kayan.<br /><br /> "Linked" = başka bir pencereyle bağlantılı (pencere girişinde belirtilir).<br /><br /> "Sekmeli" = başka bir araç penceresiyle birleştirilir.<br /><br /> "AlwaysFloat" = sabitlenemez.<br /><br /> Daha fazla bilgi için aşağıdaki açıklamalar bölümüne bakın.|  
+|Pencere|REG_SZ|*\<GUID>*|Araç penceresinin bağlanacağı veya sekmeli bir pencerenin GUID 'SI. GUID, kendi Windows veya IDE 'deki pencerelerin birine ait olabilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .|  
+|Yön|REG_SZ|Tarafta<br /><br /> Right<br /><br /> Yüksek<br /><br /> Aşağıya|Aşağıdaki açıklamalar bölümüne bakın.|  
+|DontForceCreate|REG_DWORD|0 veya 1|Bu giriş mevcut olduğunda ve değeri sıfır olmadığında pencere yüklenir, ancak hemen görüntülenmez.|  
   
 ### <a name="comments"></a>Açıklamalar  
- Yönlendirme girişi başlık çubuğunu çift tıklatıldığında burada araç penceresi noktaları konumunu tanımlar. Pencere girdisinde belirtilen pencere göre konumdur. Stil Giriş "Bağlı" olarak ayarlanırsa, yönlendirme girişi "Sol", "Hakkı", "Üst" veya "Alt" olabilir. Varsa stili Giriş "Sekmeli", "Giriş bırakılabilir" yönlendirmesini veya "Sağ" ve burada sekme eklenir belirtir. Stil Giriş "Kaydırabilirsiniz" ise, araç penceresi ilk kayar. Başlık çubuğunu çift tıklatıldığında, Yönlendirme ve pencere girişleri uygulamak ve pencerenin "Sekmeli" style kullanır. Stil Giriş "AlwaysFloat" ise, araç penceresi yerleştirilmiş olamaz. Stil Giriş "MDI" ise, araç penceresi MDI alanına bağlıdır ve pencere giriş yoksayılır.  
+ Yön girişi, başlık çubuğu çift tıklatıldığında araç penceresinin zaman içindeki konumunu tanımlar. Konum, pencere girişinde belirtilen pencereye göre belirlenir. Stil girdisi "bağlandı" olarak ayarlandıysa, yönlendirme girdisi "left", "Right", "top" veya "bottom" olabilir. Stil girişi "Sekmeli" ise, yönlendirme girdisi "left" veya "Right" olabilir ve sekmenin nereye ekleneceğini belirtir. Stil girişi "float" ise, araç penceresi ilk olarak kayar. Başlık çubuğu çift tıklandığında, yön ve pencere girişleri uygulanır ve pencere "Sekmeli" stilini kullanır. Stil girişi "AlwaysFloat" ise araç penceresi sabitlenemez. Stil girişi "MDI" ise, araç penceresi MDI alanına bağlanır ve pencere girişi yok sayılır.  
   
 ### <a name="example"></a>Örnek  
   
@@ -68,8 +68,8 @@ HKEY_LOCAL_MACHINE\
               Window          = reg_sz: {34E76E81-EE4A-11D0-00A0C90FFFC3}  
 ```  
   
-## <a name="tool-window-visibility"></a>Aracı penceresinde görünürlük  
- İsteğe bağlı görünürlük alt değerleri, bir araç penceresinin görünürlüğü ayarları belirler. Değerleri adlarını, pencerenin görünürlük gerektiren komutlarının GUID'leri depolamak için kullanılır. IDE komut yürütülürse, araç penceresi oluşturulur ve görünür hale güvence altına alır.  
+## <a name="tool-window-visibility"></a>Araç penceresi görünürlüğü  
+ İsteğe bağlı görünürlük alt anahtarındaki değerler bir araç penceresinin görünürlük ayarlarını belirlenir. Değerlerin adları, pencerenin görünürlüğünü gerektiren komutların GUID 'Lerini depolamak için kullanılır. Komut yürütülürse, IDE araç penceresinin oluşturulup görünür hale getirilme garantisi verir.  
   
 ```  
 HKEY_LOCAL_MACHINE\  
@@ -86,10 +86,10 @@ HKEY_LOCAL_MACHINE\
                 <GUID>    = reg_sz:  
 ```  
   
-|Ad|Tür|Veri|Açıklama|  
+|Ad|Tür|Veriler|Açıklama|  
 |----------|----------|----------|-----------------|  
-|(Varsayılan)|REG_SZ|Yok.|Boş bırakın.|  
-|*\<GUID >*|REG_DWORD veya REG_SZ|0 veya açıklayıcı bir dize.|İsteğe bağlı. Girişin adı görünürlük gerektiren bir komutun GUID olması gerekir. Değer, yalnızca bilgilendirici bir dize içerir. Genellikle, değeri olan bir `reg_dword` 0 olarak ayarlayın.|  
+|(Varsayılan)|REG_SZ|Hiçbiri|Boş bırakın.|  
+|*\<GUID>*|REG_DWORD veya REG_SZ|0 veya açıklayıcı bir dize.|İsteğe bağlı. Girdinin adı, görünürlük gerektiren bir komutun GUID 'SI olmalıdır. Değer yalnızca bilgilendirici bir dize tutar. Genellikle değer `reg_dword` 0 olarak ayarlanır.|  
   
 ### <a name="example"></a>Örnek  
   
@@ -109,4 +109,4 @@ HKEY_LOCAL_MACHINE\
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [VSPackage'ı temel bileşenleri](../misc/vspackage-essentials.md)
+ [VSPackage temelleri](../misc/vspackage-essentials.md)

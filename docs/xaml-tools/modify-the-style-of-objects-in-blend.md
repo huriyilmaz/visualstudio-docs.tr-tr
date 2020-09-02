@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f38bfc7a6899ff1d61b8103204bb58df5c5106a6
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592954"
 ---
 # <a name="modify-the-style-of-objects-in-blend-for-visual-studio"></a>Visual Studio için Blend içindeki nesnelerin stilini değiştirme
@@ -47,9 +47,9 @@ Düğme gibi bir denetimden görsel fırça oluşturun. Aşağıdaki çizimlerde
 
 Bir denetimin görünümünü ve davranışını bir kez tasarlayabilir ve bu tasarımı farklı denetimlere uygulayabilir, böylece bunları ayrı ayrı tutmak zorunda kalmazsınız.
 
-**Bir stil kullanmanız gerekir mi?** : yalnızca varsayılan özellikleri (örneğin, bir düğmenin rengi) ayarlamak istiyorsanız, bir *Stil*kullanın. Bir stili uyguladıktan sonra bile bir denetimi değiştirebilirsiniz.
+**Bir stil kullanmanız gerekir mi?**: yalnızca varsayılan özellikleri (örneğin, bir düğmenin rengi) ayarlamak istiyorsanız, bir *Stil*kullanın. Bir stili uyguladıktan sonra bile bir denetimi değiştirebilirsiniz.
 
-**Bir şablon kullanmanız gerekir mi?** : bir denetimin yapısını değiştirmek istiyorsanız, bir *şablon*kullanın. Bir grafiği veya logoyu bir düğmeye dönüştürmeyi düşünün. Bir şablonu ona uyguladıktan sonra bir denetimi değiştiremezsiniz.
+**Bir şablon kullanmanız gerekir mi?**: bir denetimin yapısını değiştirmek istiyorsanız, bir *şablon*kullanın. Bir grafiği veya logoyu bir düğmeye dönüştürmeyi düşünün. Bir şablonu ona uyguladıktan sonra bir denetimi değiştiremezsiniz.
 
 ### <a name="create-a-template-or-style"></a>Şablon veya stil oluşturma
 
@@ -75,7 +75,7 @@ Bir stil oluşturmak için, nesneyi seçin ve ardından **nesne** menüsünde **
 
 > [!NOTE]
 > Her denetim türü için stil veya şablon oluşturamazsınız. Bir denetim bunları desteklemiyorsa, içerik haritası düğmesi çalışma yüzeyi üzerinde görünmez.
-> Ana belgenizin düzenlenme kapsamına dönmek için, kapsamı **geri** Döndür ' e tıklayarak ![kapsamını simgeye](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png)döndürün.
+> Ana belgenizin düzenlenme kapsamına dönmek için, kapsamı Döndür ' e tıklayarak **Return scope to** ![ kapsam simgesine döndürün ](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png) .
 
 ### <a name="apply-a-style-or-template-to-a-control"></a>Denetime stil veya şablon uygulama
 
@@ -85,7 +85,7 @@ Bir stil oluşturmak için, nesneyi seçin ve ardından **nesne** menüsünde **
 
 ### <a name="restore-the-default-style-or-template-of-a-control"></a>Bir denetimin varsayılan stilini veya şablonunu geri yükleme
 
-Denetimi seçin ve **Özellikler** **penceresinde **Stil** veya **şablon** özelliğini bulun. **Gelişmiş Seçenekler**' i seçin ve ardından kısayol menüsünde **Sıfırla** ' ya tıklayın.
+Denetimi seçin ve * * Özellikler * * * * penceresinde **Stil** veya **şablon** özelliğini bulun. **Gelişmiş Seçenekler**' i seçin ve ardından kısayol menüsünde **Sıfırla** ' ya tıklayın.
 
 ## <a name="visual-states"></a>Görsel durumlar
 
@@ -93,7 +93,7 @@ Görsel durumlar, bir denetimin görünüşünü durumunu temel alarak değişti
 
 ![Fare durumuna göre](../designers/media/a95c671a-5639-40b9-83db-1e6b214330d5.png)
 
-[WPF denetimlerinizin durumunu yönetmek](https://www.youtube.com/watch?v=m0PlkF5i6uw)](../designers/media/bldadminconsoleinitialconfigicon.PNG) **kısa bir video Izleyin:** ![Oynat düğmesi.
+**Kısa bir video izleyin:** ![ Oynat düğmesi ](../designers/media/bldadminconsoleinitialconfigicon.PNG) [WPF denetimlerinizin durumunu yönetin](https://www.youtube.com/watch?v=m0PlkF5i6uw).
 
 ## <a name="resources-create-colors-styles-and-templates-and-reuse-them-later"></a>Kaynaklar: renkler, stiller ve şablonlar oluşturun ve daha sonra yeniden kullanın
 

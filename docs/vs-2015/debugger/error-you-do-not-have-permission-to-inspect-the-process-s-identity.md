@@ -1,5 +1,5 @@
 ---
-title: 'Hata: İnceleme işlemi için izniniz yok&#39;s kimlik | Microsoft Docs'
+title: 'Hata: işlemi&#39;s kimliğini denetlemek için izniniz yok | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,56 +15,56 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d66eacb1b7f5205ea430d7154f67d05bdd047a74
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157516"
 ---
-# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>Hata: İnceleme işlemi için izniniz yok&#39;s kimlik
+# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>Hata: işlemi&#39;s kimliğini İnceleme izniniz yok
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İşlem kimliğini İnceleme için izniniz yok. Bu, sisteminizin yapılandırması nedeniyle olabilir.  
+İşlemin kimliğini İnceleme izniniz yok. Bunun nedeni sisteminizin yapılandırması olabilir.  
   
- Hata ayıklayıcı, hata ayıklama için gereken bilgi işlem kimliğini İnceleme ulaşamadı. En olası nedeni, Terminal Hizmetleri devre dışı bırakılan ' dir. Terminal Hizmetleri varsayılan olarak etkindir. Yeniden etkinleştirmek için aşağıdaki adımları izleyin.  
+ Hata ayıklayıcı, hata ayıklama için gerekli bilgiler olan işlem kimliğini incemedi. En olası neden, Terminal Hizmetleri 'nin devre dışı bırakılmasından kaynaklanıyor. Terminal Hizmetleri hizmeti varsayılan olarak etkindir. Yeniden etkinleştirmek için bu adımları izleyin.  
   
-### <a name="to-enable-terminal-services"></a>Terminal Hizmetleri'ni etkinleştirmek için  
+### <a name="to-enable-terminal-services"></a>Terminal Hizmetleri 'ni etkinleştirmek için  
   
-1. Tıklayın **Başlat** seçip **Denetim Masası**.  
+1. **Başlat** ' a ve ardından **Denetim Masası**' nı seçin.  
   
-2. Denetim Masası'ndaki seçin **Klasik görünümüne geç**, gerekirse ve çift tıklatarak **Yönetimsel Araçlar**.  
+2. Denetim Masası 'nda, gerekirse **Klasik görünüme geç**' i seçin ve ardından **Yönetimsel Araçlar**' a çift tıklayın.  
   
-3. İçinde **Yönetimsel Araçlar** penceresinde çift **Bilgisayar Yönetimi**.  
+3. **Yönetimsel Araçlar** penceresinde, **Bilgisayar Yönetimi**' ne çift tıklayın.  
   
-4. Bilgisayar Yönetimi penceresinde **hizmetler ve uygulamalar** düğümü.  
+4. Bilgisayar Yönetimi penceresinde, **Hizmetler ve uygulamalar** düğümünü genişletin.  
   
-5. Altında **hizmetler ve uygulamalar**, tıklayın **Hizmetleri**.  
+5. **Hizmetler ve uygulamalar**altında **Hizmetler**' e tıklayın.  
   
-     Hizmetler listesini sağ bölmede görünür.  
+     Sağ bölmede hizmetlerin bir listesi görüntülenir.  
   
-6. İçinde **Hizmetleri** listesinde, sağ **Terminal Hizmetleri** seçip **özellikleri**.  
+6. **Hizmetler** listesinde, **Terminal Hizmetleri** ' ne sağ tıklayın ve ardından **Özellikler**' i seçin.  
   
-7. İçinde **Terminal Hizmetleri özellikleri** penceresinde, Git **genel** ayarlayın ve sekme **başlangıç türü** için **el ile**.  
+7. **Terminal Hizmetleri Özellikler** penceresinde **genel** sekmesine gidin ve **Başlangıç türünü** **el ile**olarak ayarlayın.  
   
-8. **Tamam**'ı tıklatın.  
+8. **Tamam**’a tıklayın.  
   
 9. Bilgisayarı yeniden başlatın.  
   
-     Bu yordam, Uzak Masaüstü otomatik olarak etkinleştirmemektedir. Uzak Masaüstü bilgisayarınızda etkinleştirmek istiyorsanız, aşağıdaki ek yordamı gerçekleştirin.  
+     Bu yordam uzak masaüstünü otomatik olarak etkinleştirmez. Bilgisayarınızda uzak masaüstü 'Nü etkinleştirmek istiyorsanız, aşağıdaki ek yordamı gerçekleştirin.  
   
-### <a name="to-enable-remote-desktop"></a>Uzak Masaüstü'nü etkinleştirmek için  
+### <a name="to-enable-remote-desktop"></a>Uzak Masaüstü 'Nü etkinleştirmek için  
   
-1. Tıklayın **Başlat** ve ardından sağ tıklayarak **Bilgisayarım**.  
+1. **Başlat** ' a tıklayın ve **ardından Bilgisayarım '** a sağ tıklayın.  
   
-2. Seçin **özellikleri**.  
+2. **Özellikler**'i seçin.  
   
      **Sistem Özellikleri** penceresi görüntülenir.  
   
-3. Tıklayın **uzak**.  
+3. **Uzak**öğesine tıklayın.  
   
-4. Altında **Uzak Masaüstü**seçin **bu bilgisayara uzaktan bağlanmak kullanıcıların**.  
+4. **Uzak Masaüstü**altında, **kullanıcıların bu bilgisayara uzaktan bağlanmasına izin ver**' i seçin.  
   
-5. **Tamam**'ı tıklatın.  
+5. **Tamam**’a tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Uzaktan Hata Ayıklama Hataları ve Sorun Giderme](../debugger/remote-debugging-errors-and-troubleshooting.md)

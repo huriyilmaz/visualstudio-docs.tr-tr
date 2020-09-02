@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b7c5f9c19573a04b1d9a8d7b8c6e9450aef9bc44
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645726"
 ---
 # <a name="findcommand-box"></a>Bul/Komut Kutusu
@@ -25,17 +25,17 @@ ms.locfileid: "72645726"
 
 **Bul/komut** kutusundan metin araması yapabilir ve Visual Studio komutlarını çalıştırabilirsiniz. **Bul/komut** kutusu hala bir araç çubuğu denetimi olarak kullanılabilir, ancak artık varsayılan olarak görünmez. **Standart** araç çubuğunda **Düğme Ekle veya Kaldır** ' ı ve ardından **bul**' u seçerek **Bul/komut** kutusunu görüntüleyebilirsiniz.
 
- Bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komutu çalıştırmak için, (>) işaretiyle daha büyük bir işareti ile ön yüzü.
+ Bir komutu çalıştırmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , (>) işaretiyle daha büyük bir işareti ile ön yüzü yapın.
 
  **Bul/komut** kutusu, girilen son 20 öğeyi korur ve bir açılan listede görüntüler. Ok tuşlarını seçerek listede gezinebilirsiniz.
 
- ![Bul&#47;komut kutusu](../ide/media/findcommandbox.png "FindCommandBox") Bul/komut kutusu
+ ![&#47;komut kutusu bul](../ide/media/findcommandbox.png "FindCommandBox") Bul/komut kutusu
 
 ## <a name="searching-for-text"></a>Metin arama
  Varsayılan olarak, **Bul/komut** kutusunda metin belirttiğinizde ve ardından Enter tuşunu seçtiğinizde, Visual Studio geçerli belgeyi veya araç penceresini **dosyalarda bul** iletişim kutusunda belirtilen seçenekleri kullanarak arar. Daha fazla bilgi için bkz. [metni bulma ve değiştirme](../ide/finding-and-replacing-text.md).
 
 ## <a name="entering-commands"></a>Komutları girme
- Metin aramak yerine tek bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komutu veya diğer ad vermek üzere **Bul/komut** kutusunu kullanmak için, daha büyük (>) sembolüyle önceden ortaya çıkacak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komutunu girin. Örneğin:
+ Metin aramak yerine, tek bir komut veya diğer ad vermek üzere **Bul/komut** kutusunu kullanmak için, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ' den büyük (>) simgesiyle önceden çıkacak komutu girin. Örneğin:
 
 ```
 >File.NewFile c:\temp\MyFile /t:"General\Text File"

@@ -1,5 +1,5 @@
 ---
-title: Grafik Tanılama'ne genel bakış | Microsoft Docs
+title: Grafik Tanılama genel bakış | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,118 +10,118 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2dc0d0bf4efd8c30d874a24e94d3933d2eef713a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68186562"
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio Grafik Tanılama’ya Genel Bakış
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio *grafik tanılama* kaydetme ve ardından Direct3D uygulamalar oluşturma ve performans sorunları çözümleme araçları kümesidir. Grafik Tanılama, Windows PC, bir Windows cihaz öykünücüsü veya bir uzak bilgisayar veya cihaz üzerinde yerel olarak çalışan uygulamalarda kullanılabilir.
+Visual Studio *Grafik tanılama* , Direct3D uygulamalarında işleme ve performans sorunlarını kaydetmek ve analiz etmek için bir araç kümesidir. Grafik Tanılama, Windows bilgisayarınızda, Windows cihaz öykünücüsünde veya uzak bir bılgısayarda veya cihazda yerel olarak çalışan uygulamalarda kullanılabilir.
 
 ## <a name="using-graphics-diagnostics-to-debug-rendering-problems"></a>İşleme sorunlarında hata ayıklamak için Grafik Tanılama'yı kullanma
  Grafik açısından zengin bir uygulamada işleme sorunları hatalarının ayıklanması, hata ayıklayıcıyı başlatıp herhangi bir kodda adım adım ilerlemek kadar basit işlem değildir. Her kare içinde, her biri karmaşık bir durum, veri, parametre ve kod kümesine göre olmak üzere yüz binlerce benzersiz piksel üretilirken, tanılamaya çalıştığınız sorunu bunlar arasında belki de yalnızca birkaç piksel sergileyecektir. He bir pikseli üreten kodun, yüzlerce pikseli paralel olarak işlemden geçiren özel amaçlı donanımlarda yürütülmesi meseleyi daha da karmaşık bir hale getirir. Çok fazla veriyle karşı karşıya kalındığında, iş parçacıklarının yoğun olmadığı kodlarda bile yarar sağlanması zor olan geleneksel hata ayıklama araçları ve teknikleri etkisiz kalmaktadır.
 
- İçindeki grafik tanılama araçları [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sorun ve sonra geri sorunun kaynağına yalnızca alakalı gölgelendirici koduna, odaklanarak izleme işlem hattı gösteren görsel yapılarla başlatarak işleme sorunlarını bulmanıza yardımcı olmak için tasarlanmıştır Aşama, çizim çağrıları, kaynaklar ve cihaz durumu — uygulamanın kendi kaynak kodunda.
+ İçindeki Grafik Tanılama araçları, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uygulamanın kendi kaynak kodunda yalnızca ilgili gölgelendirici kodu, ardışık düzen aşamaları, çizim çağrıları, kaynaklar ve cihaz durumu üzerine odaklanarak sorunun kaynağına geri dönerek işleme sorunlarını bulmanıza yardımcı olmak üzere tasarlanmıştır.
 
 ## <a name="directx-version-compatibility"></a>DirectX sürümü uyumluluğu
- Grafik tanılama Direct3D 12, Direct3D 11 ve Direct3D 10 kullanan uygulamaları destekler ve Direct2D kullanan uygulamalar için sınırlı destek sağlar. Direct3D, DirectDraw veya diğer grafik API'lerinin önceki sürümlerini kullanan uygulamaları desteklemez.
+ Grafik Tanılama Direct3D 12, Direct3D 11 ve Direct3D 10 kullanan uygulamaları destekler ve Direct2D kullanan uygulamalar için sınırlı destek sağlar. Direct3D, DirectDraw veya diğer grafik API'lerinin önceki sürümlerini kullanan uygulamaları desteklemez.
 
 ### <a name="windows-10-and-direct3d-12"></a>Windows 10 ve Direct3D 12
- Windows 10, Direct3D'ın sonraki sürümü tanıtır *Direct3D 12*, Direct3D 11 ve Direct3D 10 arasında önemli ölçüde farklı olduğu. Bu farklar DirectX geri modern grafik donanımının ve tam potansiyelini unleashing ile aynı doğrultuda içine taşıyın, ancak ayrıca büyük API değişiklikleri getirmek ve kaynak yaşam süreleri ve Çekişme yönetmek için programcı büyük sorumluluk yerleştirin. Sahip olmak harika hata ayıklama araçları, Visual Studio 2015'te grafik tanılama Direct3D12 destekler. böylece bu geçiş baştan doğru yapmak grafik programcılar yardımcı olmak önemlidir. Farklar rağmen grafik tanılama Direct3D 12 çerçeve analizi özelliği geçerli durumun özellik-eşliği ile grafik tanılama Direct3D 11.2 ile tutar. Yakında, Direct3D 12'deki karşılaşabileceğiniz hatalar yeni tür gidermenize yardımcı olacak yeni tanılama araçları ardından Direct3D 12 çerçeve analizi için destek eklenecektir.
+ Windows 10, Direct3D 10 ve Direct3D 11 ' den önemli ölçüde farklı olan Direct3D, Direct3D *12*' nin bir sonraki sürümünü sunmaktadır. Bu farklılıklar, DirectX 'i modern grafik donanımı ile hizalı hale getirir ve tam potansiyelini açığa çıkarır, ancak büyük API değişikliklerini de getirir ve kaynak yaşam sürelerini ve çekişmeyi yönetmek için programcıya daha fazla sorumluluk yerleştirir. Grafik programcıların bu geçişi yapmasına yardımcı olmak için harika hata ayıklama araçlarının olması çok önemlidir. bu nedenle, Visual Studio 2015 ' deki Grafik Tanılama, başlangıçtan itibaren Direct3D12 hakkını destekler. Bu farklılıklara rağmen, Direct3D 12 ile Grafik Tanılama, Çerçeve Analizi özelliğinin geçerli özel durumu ile, Direct3D 11,2 ile Grafik Tanılama özellik eşliği sağlar. Yakında Direct3D 12 ' de çerçeve analizine yönelik destek eklenecektir ve sonra Direct3D 12 ' de karşılaşabileceğiniz yeni hata türlerini çözmenize yardımcı olacak yeni tanılama araçları eklenir.
 
- Windows 10, Direct3D oyun ve bunlar üzerinde dayanan uygulamalar, önceki sürümleri için destek de korur. Visual Studio 2015'te grafik tanılama Direct3D 10 ve Direct3D 11 Windows 10 yanı sıra Windows 8.1 desteklemeye devam eder.
+ Windows 10 Ayrıca, Direct3D 'nin önceki sürümleri ve bunlara dayanan Oyunlar ve uygulamalar için destek sağlar. Visual Studio 2015 ' de Grafik Tanılama, Windows 10 ' da Direct3D 10 ve Direct3D 11 ' i desteklemeye devam eder, ayrıca Windows 8.1.
 
-### <a name="windows-81-and-direct3d-112"></a>Windows 8.1 ve Direct3D 11.2
- İçinde [!INCLUDE[win81](../includes/win81-md.md)], DirectX 11.2, çalışma zamanı aracılığıyla grafik bilgilerini yakalama için destek içeren yeni özellikleri tanıtır. [!INCLUDE[win81](../includes/win81-md.md)] Yeni çalışma zamanı tabanlı yakalama kullanır; olarak bilinen *sağlam yakalama*— DirectX tüm sürümleri için özel olarak, [!INCLUDE[win81](../includes/win81-md.md)] destekler. Güçlü yakalama Direct3D 11.2'ün yeni özelliklerini de destekler.
+### <a name="windows-81-and-direct3d-112"></a>Windows 8.1 ve Direct3D 11,2
+ [!INCLUDE[win81](../includes/win81-md.md)]' De DirectX 11,2, çalışma zamanı aracılığıyla grafik bilgilerini yakalamaya yönelik destek içeren yeni özellikler sunar. [!INCLUDE[win81](../includes/win81-md.md)] , yalnızca destekleyen tüm DirectX sürümleri için *güçlü yakalama*olarak bilinen yeni çalışma zamanı tabanlı yakalamayı kullanır [!INCLUDE[win81](../includes/win81-md.md)] . Sağlam yakalama Ayrıca Direct3D 11,2 'nin yeni özelliklerini de destekler.
 
 ### <a name="limited-direct2d-support"></a>Sınırlı Direct2D desteği
  Direct2D, Direct3D üzerine kurulu bir kullanıcı modu API'si olduğundan, Direct2D kullanan uygulamalarda işleme sorunlarındaki hataları ayıklamaya yardımcı olması için Grafik Tanılama'yı kullanabilirsiniz. Bununla birlikte, üst düzey Direct2D olayları yerine yalnızca temeli oluşturan Direct3D olayları kaydedildiğinden, Direct2D olayları Grafik Olay Listesi'nde görünmez. Ayrıca, Direct2D olayları ve sonuç Direct3D olayları arasındaki ilişki her zaman net olmadığından, Direct2D kullanan uygulamalarda işleme sorunları hatalarını ayıklamak için Grafik Tanılama kullanılması her zaman basit değildir. Yine de, Direct2D kullanan uygulamalarda düşük düzeyli işleme sorunları hakkında bilgi almak için Grafik Tanılama'yı kullanabilirsiniz.
 
-## <a name="graphics-diagnostics-features-in-visual-studio"></a>Visual Studio grafik tanılama özellikleri
- Grafik Tanılama, adanmış bir arabirimi vardır — grafik Çözümleyicisi penceresi-için işleme sorunları, ancak tanılama ayrıca bazı araçlar Visual Studio ekler.
+## <a name="graphics-diagnostics-features-in-visual-studio"></a>Visual Studio 'da Grafik Tanılama Özellikleri
+ Grafik Tanılama, işleme sorunlarını tanılamak için özel bir arabirime sahiptir — grafik Çözümleyicisi penceresi, ancak Visual Studio arabirimine bazı araçlar da ekler.
 
 ### <a name="the-graphics-toolbar-visual-studio"></a>Grafik araç çubuğu (Visual Studio)
- Grafik araç çubuğu, grafik tanılama komutlarına hızlı erişim sağlar.
+ Grafik araç çubuğu Grafik Tanılama komutlara hızlı erişim sağlar.
 
- **Tanılamayı Başlat** düğmesi uygulamayı grafik tanılama altında çalıştırır. Bir uygulama grafik tanılama altında çalışırken **sonraki kareyi Yakala** düğmesi etkinleşir.
+ **Tanılamayı Başlat** düğmesi grafik tanılama altında uygulamayı çalıştırır. Grafik Tanılama altında bir uygulama çalıştığında, **sonraki işlenen çerçeveyi yakala** düğmesi etkinleştirilir.
 
 ### <a name="diagnostics-capture-interface"></a>Tanılama yakalama arabirimi
- Uygulamanızı grafik tanılama altında çalıştırdığınızda, Visual Studio çerçeveleri yakalamak için kullanabilirsiniz ve ayrıca geçerli CPU ve GPU yük görüntüleyen bir tanılama oturumu arabirimini görüntüler. CPU ve GPU yük, kendi performans özellikleri yerine nedeniyle işleme hataları yakalamak isteyebileceğiniz çerçeveler tanımlamanıza yardımcı olması için görüntülenir.
+ Uygulamanızı Grafik Tanılama altında çalıştırdığınızda, Visual Studio çerçeveleri yakalamak için kullanabileceğiniz ve aynı zamanda geçerli CPU ve GPU yükünü görüntüleyen bir Tanılama oturumu arabirimini görüntüler. CPU ve GPU yükü, hataları işlemek yerine, performans özellikleri nedeniyle yakalamak isteyebileceğiniz çerçeveleri belirlemenize yardımcı olacak şekilde görüntülenir.
 
- Bu çerçeve ancak yakalamak için tek yolu değildir. Programlı yakalama arabirimini kullanarak veya komut satırı yakalama programını kullanarak da kare yakalayabilirsiniz dxcap.exe.
+ Bu, ancak çerçeveleri yakalamaya yönelik tek yoldur. Ayrıca, Programlı yakalama arabirimini kullanarak veya dxcap.exe komut satırı yakalama programını kullanarak çerçeveler yakalayabilirsiniz.
 
- Bkz: [Capturing Graphics Information](../debugger/capturing-graphics-information.md) daha fazla bilgi için.
+ Daha fazla bilgi için bkz. [grafik bilgilerini yakalama](../debugger/capturing-graphics-information.md) .
 
 ### <a name="gpu-usage"></a>GPU Kullanımı
- Grafik tanılama Direct3D uygulamanızın performansını da profilini oluşturabilirsiniz. Profil oluşturma verilerini grafik olaylarını tarafından kaydetme ayrıntılarını dengesiz çünkü bu kullanılacak çerçeveleri yakalamasını önler ayrı grafik Çözümleyicisi ile incelenir.
+ Grafik Tanılama Ayrıca Direct3D uygulamanızın performansını da düzenleyebilir. Profil oluşturma verileri grafik olaylarının ayrıntıları kaydederek çarpılacağından, bu, grafik Çözümleyicisi ile incelenerek kullanılacak çerçeveleri yakalamaktan farklıdır.
 
- Bkz: [GPU kullanımı](../debugger/gpu-usage.md) daha fazla bilgi için.
+ Daha fazla bilgi için bkz. [GPU kullanımı](../debugger/gpu-usage.md) .
 
 ### <a name="directx-control-panel"></a>DirectX denetim masası
  DirectX denetim masası, DirectX'in davranış şeklini değiştirmek için kullanabileceğiniz bir DirectX bileşenidir; örneğin, DirectX çalışma zamanı bileşenlerinin hata ayıklama sürümünü etkinleştirebilir, raporlanan hata ayıklama iletilerinin türünü seçebilir ve daha düşük kapasiteli donanımlara öykünmek için belirli grafik donanımı yeteneklerinin kullanılmasına izin vermeyebilirsiniz. DirectX üzerinde bu düzeyde bir denetim DirectX uygulamanızda hata ayıklamanıza ve uygulamayı test etmenize yardımcı olabilir. DirectX denetim masasına Visual Studio'dan erişebilirsiniz.
 
 ##### <a name="to-open-the-directx-control-panel"></a>DirectX denetim masasını açmak için
 
-- Menü çubuğunda, **hata ayıklama**, **grafik**, **DirectX Denetim Masası'ndaki**.
+- Menü çubuğunda **Hata Ayıkla**, **grafikler**, **DirectX Denetim Masası**' nı seçin.
 
 ## <a name="graphics-analyzer"></a>Grafik Çözümleyicisi
- Visual Studio grafik Çözümleyicisi zaten yakalanan çerçeve işleme ve performans sorunları incelemek için adanmış bir arabirimdir. Grafik Çözümleyicisi keşfedin ve uygulamanızı işleme davranışını anlamanıza yardımcı olacak birkaç araç bulabilirsiniz. Her aracı farklı türde bir, denetlenen kare hakkında bilgiler sunar ve Araçlar, sezgisel dar başlayarak bir işleme sorunun kaynağı için birlikte kullanılmak üzere tasarlanmıştır framebuffer görünümüne.
+ Visual Studio Grafik Çözümleyicisi, zaten yakaladığınız çerçevelerdeki işleme ve performans sorunlarını incelemek için ayrılmış bir arabirimdir. Grafik Çözümleyicisi 'nin içinde uygulamanızın işleme davranışını keşfetmenize ve anlamanıza yardımcı olacak çeşitli araçlar bulacaksınız. Her araç, incelenmekte olan çerçeve hakkında farklı türde bir bilgi sunar ve araçlar, bir işleme sorununun kaynağı üzerinde, framebuffer 'ın görünümüyle başlayarak bir işleme sorunu durumunda kullanılmak üzere tasarlanmıştır.
 
- Bu örnekte, grafik Çözümleyicisi'nde araçlar tipik yerleşimi gösterilmiştir.
+ Bu çizimde, grafik Çözümleyicisi 'ndeki araçların tipik bir düzeni gösterilmektedir.
 
  ![Tüm grafik hata ayıklayıcısı pencereleri](../debugger/media/graphicsdebuggerwindows.png "GraphicsDebuggerWindows")
 
 ### <a name="the-graphics-toolbar-graphics-analyzer"></a>Grafik araç çubuğu (grafik Çözümleyicisi)
- Grafik araç çubuğu, grafik Çözümleyicisi araç pencerelerini hızlı erişim sağlar.
+ Grafik araç çubuğu, grafik Çözümleyicisi araç pencereleri için hızlı erişim sağlar.
 
- ![Grafik araç çubuğu grafik tanılama modunda](../debugger/media/vsg-toolbar.png "vsg_toolbar")
+ ![Grafik tanılama modundaki grafik araç çubuğu](../debugger/media/vsg-toolbar.png "vsg_toolbar")
 
 ### <a name="graphics-log-document"></a>Grafik günlük belgesi
- Grafik Çözümleyicisi grafik günlük belgesi en önemli araç penceresidir. Bu pencere tüm uygulamanızı grafik tanılama altında çalışan tarafından yakalanan kareleri temsil eder. Buradan inceleyin veya piksel geçmişi aracıyla incelemek istediğiniz belirli bir pikseli seçmek için farklı bir çerçeve seçebilirsiniz. Bu belge değişiklikleri seçili olan olay framebuffer zaman içinde nasıl etkilendiğini görmenize olanak tanıyan yansıtmak için görüntülenen framebuffer resim.
+ Grafik Çözümleyicisi 'nin içinde grafik günlük belgesi en belirgin araç penceresidir. Bu pencere, Grafik Tanılama altında uygulamanızı çalıştırarak yakaladığınız tüm kareleri temsil eder. Buradan, piksel geçmişi aracıyla incelemek istediğiniz belirli bir pikseli incelemek veya seçmek için farklı bir çerçeve seçebilirsiniz. Bu belgede görüntülenen framebuffer görüntüsü, framebuffer 'ın zaman içinde nasıl etkilendiğini görebilmeniz için, şu anda seçili olan olayı yansıtacak şekilde değişir.
 
- [Grafik günlük belgesi](../debugger/graphics-log-document.md) de yardımcı olur çerçeve analizi aracı için giriş noktası anlamak çerçevenin performans yapılandırılmış olan belirli yönlerini işleme biçimini değiştirme ve kıyaslama sonuçları sağlayarak özgün sürümle karşılaştırın.
+ [Grafik günlük belgesi](../debugger/graphics-log-document.md) Ayrıca, oluşturma işlemi belirli yönlerinin yapılandırılıp orijinal ile karşılaştırılacağı kıyaslama sonuçları değiştirilerek bir çerçevenin performansını anlamanıza yardımcı olan Çerçeve Analizi aracına giriş noktasıdır.
 
 ### <a name="event-list"></a>Olay listesi
- Grafik olaylarını her Direct3D API çağrısı ve kullanıcı tanımlı olay'ı işaretleyin.
+ Grafik olayları her Direct3D API çağrısını ve Kullanıcı tanımlı olayları işaretler.
 
- [Olay listesi](../debugger/graphics-event-list.md) tüm incelemekte çerçeve sırasında kaydedilmiş grafik olaylarını gösterir. Önemli olan bulmanıza yardımcı olmak için olay listesi hiyerarşik olarak görüntülenebilir — son durum değişikliği altındaki sonraki çağrı çizmek — veya bir zaman çizelgesi olarak. Ayrıca, ait oldukları sıraya göre olaylar kodludur ve yalnızca ilgilendiğiniz olayları dahil etmek için listeyi filtreleyebilirsiniz.
+ [Olay listesi](../debugger/graphics-event-list.md) , incelediğiniz çerçeve sırasında kaydedilen tüm grafik olaylarını gösterir. Ne önemli olduğunu bulmanıza yardımcı olmak için olay listesi, sonraki çizim çağrısının altındaki son durum değişiklikleri ile ya da bir zaman çizelgesi olarak hiyerarşik olarak görüntülenebilir. Ayrıca, olaylar ait oldukları sıraya göre renk kodludur ve yalnızca ilgilendiğiniz olayları içerecek şekilde listeye filtre uygulayabilirsiniz.
 
- Listesinde bir olay seçtiğinizde, grafik analizi araçları geri kalanı, Olay sırasındaki çerçeve durumunu yansıtır. Bu şekilde, GPU üzerinde herhangi bir olay etkisini görebilirsiniz. Örneğin, sonraki çizim çağrıları'na göre engellediği olur bile herhangi bir çizim anlık etkisini framebuffer üzerinde çağrı görebilirsiniz. Bazı olayları, parametre veya ilişkili kaynak nesneleri hakkında daha fazla ayrıntı için izlemeniz gereken bir köprü de var.
+ Listede bir olay seçtiğinizde, grafik çözümleme araçlarının geri kalanı bu olay sırasında çerçevenin durumunu yansıtır. Bu şekilde, herhangi bir etkinliğin GPU üzerinde etkisini görebilirsiniz. Örneğin, sonraki çizim çağrıları tarafından gizlense bile, framebuffer üzerinde herhangi bir çizim çağrısının hemen etkisini görebilirsiniz. Ayrıca, bazı olaylarda, parametreleri veya ilgili kaynak nesneleri hakkında daha fazla ayrıntı görmek için izleyebileceğiniz köprüler de vardır.
 
-### <a name="pipeline-stages"></a>Ardışık Düzen aşamaları
- Direct3D tarafından sağlanan grafik ardışık düzeninden uygulamanızdaki her bir çizim çağrısına gider. İşlem hattındaki her bir aşamada, önceki aşamanın çıktısı küçük bir program tarafından dönüştürülür, gölgelendirici adlı ve ekrana son işlenen kadar sonraki aşamaya ardından geçirilir. Çıkış biçimi sonraki aşamasına beklediğinden ya da tek bir aşamada yalnızca hatalı sonuçlar üreten farklı olduğunda ardışık düzen aşamaları arasında sınırında birçok işleme hataları oluşur. Normalde, yalnızca son sonuçları ekranda görür ve işlem hattı, hatanın oluştuğu kolayca bildiremez sahip olursunuz.
+### <a name="pipeline-stages"></a>Ardışık düzen aşamaları
+ Uygulamanızdaki her çizim çağrısı, Direct3D tarafından sunulan grafik işlem hattı üzerinden geçer. İşlem hattının her aşamasında, önceki aşamadaki çıkış, gölgelendirici olarak adlandırılan küçük bir program tarafından dönüştürülür ve son olarak ekrana işlenene kadar sonraki aşamaya geçirilir. Çıkış biçimi bir sonraki aşamanın beklediği tarihten farklı olduğunda veya herhangi bir aşama hatalı sonuçlar ürettiğinden, çok sayıda işleme hatası ardışık düzen aşamaları arasındaki sınırda oluşur. Normalde, ekranınızda gördüğünüz gibi yalnızca nihai sonuçları elde edersiniz ve hata hattının nerede oluştuğunu kolayca anlayabilirsiniz.
 
- [Ardışık düzen aşamaları](../debugger/graphics-pipeline-stages.md) penceresi görselleştirir sonucu, her bir aşamaya bağımsız olarak, hangi aşamada daha kolay belirleyebilirsiniz bir işleme sorunun ilk görünür. Diğer bir deyişle, aşama saptadıktan sonra sağa ardışık düzen aşamaları penceresinden, gölgelendirici hata ayıklamaya başlayabilirsiniz.
+ [Ardışık düzen aşamaları](../debugger/graphics-pipeline-stages.md) penceresi, her aşamanın sonucunu bağımsız olarak görselleştirir, böylece bir işleme sorununun ilk olarak hangi aşamada göründüğünü daha kolay bir şekilde belirleyebilmenizi sağlayabilirsiniz. Hangi aşamayı olduğunu belirledikten sonra, ardışık düzen aşamaları penceresinden gölgelendiricisinin hata ayıklamasını başlatabilirsiniz.
 
 ### <a name="graphics-state"></a>Grafik Durumu
- Oluşturma işlemleri, genellikle birden fazla nesne arasında yayılır durumu çok bağlıdır. Çok çeşitli işleme sorunları, yanlış yapılandırılmış durumuna göre neden olur.
+ İşleme işlemleri, genellikle birden çok nesne arasında yayılan büyük bir duruma bağlıdır. Birçok tür işleme sorunu, yanlış yapılandırılmış durum nedeniyle oluşur.
 
- [Durumu](../debugger/graphics-state.md) penceresini bulmak daha kolaydır ve önceki itibaren gerçekleşen durum değişiklikleri vurgular arama de çizin tek bir yerde birlikte her çizim çağrısı ile ilgili durum bilgilerini toplar.
+ [Durum](../debugger/graphics-state.md) penceresi, her çizim çağrısıyla ilgili durum bilgilerini tek bir yerde toplayıp daha kolay bulunur ve ayrıca önceki çizim çağrısından bu yana gerçekleşen durum değişikliklerinin vurgulanmasını sağlar.
 
 ### <a name="pixel-history"></a>Piksel geçmişi
- Karmaşık sahneler için birden çok kez tek bir çerçevede gölgeli bir piksel seyrek değil. Bazen önceki renk renkleri birleştirilir yalnızca üzerine, ancak diğer katıdır birlikte saydamlık gibi efektler elde etmek için. Bunları birbirine birleştirmek sonucunu doğru görünümü sahip olmadığında bir renge yanlış veya yolu ile ilgili bir sorun varsa birleştirilen olup olmadığını kolayca bildiremez. Diğer durumlarda, bir nesne katkıyı piksel herhangi bir nedenden dolayı reddedildiği için eksik olduğu görünebilir.
+ Karmaşık sahneler içinde, bir pikselin tek bir karede birden çok kez gölgelendirilme yaygın olmayan bir durumdur. Bazen önceki rengin üzerine yazılır, ancak saydamlık gibi etkilere ulaşmak için renkler birlikte birleştirilir. Bunları birlikte birleştirmenin sonucu doğru görünüme sahip olmadığında, renklerin yanlış olduğunu veya birleştirilme yöntemiyle ilgili bir sorun olup olmadığını kolayca anlayabilirsiniz. Başka bir deyişle, pikselin katkısı bazı nedenlerle reddedildiği için bir nesne eksik görünebilir.
 
- [Piksel geçmişi](../debugger/graphics-pixel-history.md) pencere çerçevesinde, reddedilen Katkıları da dahil olmak üzere her pikselin tam gölgelendirici geçmişi görselleştirir. Reddedilen olmayan katkılar için ham gölgelendirici sonuçlarını ve her yeni renk Öncekine ile nasıl birleştirilmiş görüntüler. Bu bilgilere sahip olarak, gölgelendirici sonuçları blend veya bir işlenen nesnesi katkıyı piksel yanlış reddedildiği için ne zaman eksik piksel cinsinden hataları kaynağı bulmak çok daha kolay olur.
+ [Piksel geçmişi](../debugger/graphics-pixel-history.md) penceresi, kabul edilecek katılımlar dahil olmak üzere, çerçevedeki her pikselin tam gölgelendirici geçmişini görselleştirir. Reddedilmeyen katkılar için, ham gölgelendirici sonuçlarını ve her yeni rengin öncekiyle birlikte nasıl birleştirildiğini görüntüler. Bu bilgilerle, hata kaynağını, gölgelendirici sonuçlarının karışdığı piksellerde veya bir işlenen nesne eksik olduğunda bulmak çok daha kolaydır çünkü pikselin katkısı yanlış bir şekilde reddediliyordu.
 
-### <a name="event-call-stack"></a>Olay Çağırma yığını
- Gölgelendirici kodunda bir Direct3D uygulaması işleme sorunlarındaki yalnızca kaynağı değilse, bazen uygulamanızın kaynak kodu yanlış parametre geçirir veya Direct3D oldukça doğru yapılandırmaz. Tüm piksel reddettiği için işlenen nesne eksik olduğunda daha önce bahsedildiği özelliğini piksel geçmişi bulmanıza yardımcı olabilecek hata için bir türüdür. Bu tür bir hatayı, genellikle bir ayarı yanlış gerçekleşir, genellikle bir derinlik testinde nasıl gerçekleştirildiğini denetler ve size, yanlış yere eksik nesnenin çağrı yığınında bulabilirsiniz gibi çizim çağrısı çıktılarının.
+### <a name="event-call-stack"></a>Olay çağrısı yığını
+ Gölgelendirici kodu, bir Direct3D uygulamasındaki işleme sorunlarının tek kaynağı değildir, bazen uygulamanızın kaynak kodu yanlış parametreyi geçirir ya da Direct3D 'yi doğrudan yapılandırmaz. Daha önce tartışılan özelliğin, piksel geçmişinin, tüm pikselleri reddedildiği için bir işlenen nesne eksik olduğu durumlarda, daha önce ele alınan bir hata türü. Bu tür bir hata, genellikle derinlik testinin nasıl gerçekleştirileceğini denetleyen bir ayarı yanlış yapılandırdığınızda oluşur ve genellikle yanlışlıkla hatalı nesnenin çizim çağrısının çağrı yığınında bir yerde bulunabilir.
 
- [Olay çağrı yığını](../debugger/graphics-event-call-stack.md) penceresi olay listesinde her grafik olayı tam çağrı yığınını görüntüler ve hata ayıklama bilgileri kullanılabiliyorsa kaynak kodu, uygulamanızın bağlantı da sağlar. Öncelikle, uygulamanızın kaynak kodunda geldiği için geri GPU üzerinde göründüğü gelen bir hatadan sonra için güçlü bir araçtır.
+ [Olay çağrı yığını](../debugger/graphics-event-call-stack.md) penceresi, olay listesindeki her grafik olayının tüm çağrı yığınını görüntüler, hatta hata ayıklama bilgisi varsa uygulamanızın kaynak koduna atlamanızı sağlar. Bu, GPU 'da, uygulamanın kaynak kodunda kaynaklandığı yere geri doğru bir hata takip etmek için güçlü bir araçtır.
 
 ### <a name="object-table"></a>Nesne tablosu
- Uygulama oluşturur, yüzlerce veya hatta kaynak nesneleri binlerce büyük olasılıkla yedeklenen her karede. Bu arka arabellek içerir ve işleme hedefleri, dokular, köşe arabellekleri, dizin arabelleklerinin, genel arabellekler — hemen Direct3D hatırlar her şeyi bir nesnedir.
+ Uygulamanızın oluşturduğu her çerçeve muhtemelen yüzlerce veya hatta binlerce kaynak nesnesi tarafından desteklenir. Bunlar, geri arabellekleri ve işleme hedeflerini, dokuları, köşe arabellekleri, dizin arabellekleri, genel arabellekleri içerebilir. neredeyse her şey Direct3D anımsar bir nesnedir.
 
- [Nesne tablosu](../debugger/graphics-object-table.md) tüm seçili grafik olay sırada mevcut nesneleri olay listesi görüntüler. Tipik bir uygulamada bulunan nesnelerin çoğu dokular olduğundan, olay listesi bir bakışta görüntüleri ile ilgili ayrıntıları göstermek için optimize edilmiştir. Tür sütunu, her satırda hangi nesne çeşidi olduğunu bildirir. ve alt türü veya nesnenin daha fazla biçim sütunu gösterir. Diğer ayrıntıları da gösterilir. Bazı nesneler (bir görüntü olarak doku görüntüleyebilirsiniz) doku ya da (arabellek Görüntüleyicisi'ni nasıl ayrıştırır ve ham arabelleği bayt arabelleği tanımlayarak görüntüler seçebilirsiniz arabellekleri gibi daha özel bir Görüntüleyici ile nesneyi görüntülemek için izlemeniz gereken bir köprü de vardır. Biçim için).
+ [Nesne tablosu](../debugger/graphics-object-table.md) , olay listesinde seçilen grafik olayı sırasında var olan tüm nesneleri görüntüler. Tipik bir uygulamadaki çoğu nesne dokularından olduğundan, bir bakışta görüntülerle ilgili ayrıntıları göstermek için olay listesi en iyi duruma getirilir. Tür sütunu, her satırda ne tür bir nesne olduğunu söyler ve biçim sütunu nesnenin alt türünü veya sürümünü gösterir. Diğer ayrıntılar da gösterilir. Bazı nesneler aynı zamanda, nesneyi daha özelleştirilmiş bir Görüntüleyici (örneğin, dokuyu bir resim olarak görüntüleyebilirsiniz) veya arabellekler gibi daha özel bir görüntüleyiciyle görüntülemek için kullanabileceğiniz köprülere sahiptir (arabellek biçimini tanımlayarak, arabellek görüntüleyicisinin ham arabellek baytlarını nasıl ayrıştırıp görüntüleyeceğini seçebilirsiniz).
 
-### <a name="frame-analysis"></a>Çerçeve analizi
- Uygulamanızın grafik yalnızca doğru olmasına gerek yok: çok daha hızlı olması gerekir. Daha az güçlü cihazlarda tümleşik grafik veya cep telefonları ile dizüstü bilgisayarlar gibi. Ve yine de çok harika görünecek gerekir.
+### <a name="frame-analysis"></a>Çerçeve Analizi
+ Uygulamanızın grafiklerin doğru olması gerekmez; bunlar hızlı bir şekilde olmalıdır. Tümleşik grafik veya cep telefonlarına sahip dizüstü bilgisayarlar gibi daha güçlü cihazlarda bile. Ayrıca, hala harika bir bakmaları gerekir.
 
- [Çerçeve analizi](../debugger/graphics-frame-analysis.md) aracı otomatik olarak uygulamanın kullandığı Direct3D biçimini değiştirme ve kıyaslama sonuçları karşılaştırma için sağlayarak olası performans iyileştirmelerini keşfediyor. Örneğin, çerçeve analizi MIP eşleme MIP eşlemesinden yararlı olabilir, ancak şu anda etkin olmayan dokular açığa her doku üzerinde etkinleştirebilirsiniz. Bunu destekleyen donanımlar üzerinde çerçeve analizi aynı zamanda GPU'nun performans sayaçlarından toplanan bilgiler sunar; bu bilgi düzeyi yüksek sayıda doku getirme takılma gibi donanım düzeyinde performans sorunlarını tanımlamak veya İsabetsiz Önbellek.
+ [Çerçeve Analizi](../debugger/graphics-frame-analysis.md) Aracı, uygulamanın Direct3D kullanma şeklini otomatik olarak değiştirerek ve karşılaştırma için kıyaslama sonuçları sağlayarak olası performans iyileştirmelerini araştırır. Örneğin, Çerçeve Analizi her dokuda MIP eşlemeyi etkinleştirebilir ve bu da MIP eşlemesinin avantajlarından faydalanabilecek ancak şu anda etkin olmayan dokuları açığa çıkarmayabilir. Bunu destekleyen donanımda, Çerçeve Analizi GPU 'nun performans sayaçlarından toplanan bilgileri de gösterir. bu bilgi düzeyi, yüksek sayıda doku getirme takılması veya önbellek isabetsizliği gibi donanım düzeyinde performans sorunlarını tanımlayabilir.
 
- Ancak çerçeve analizi hakkında hızlı bozmayacağı – en az miktarda görsel kaliteyi vererek while çoğu performans elde etme hakkında olduğunu. Bazen büyük bir ekranda harika göründüğünden pahalı efekt küçük ekranındaki burada daha basit bir etkisi olmadan pil boşaltma yalnızca kadar iyi görünebilir telefonda görüntülendiğinde aynı etkiyi yapmaz. Grafik analizi sağlayan değerlendirmesi ve otomatik değişiklikleri, bir cihaz yelpazesinde uygulamanız için doğru dengeyi bulmak yardımcı olabilir.
+ Ancak Çerçeve Analizi yalnızca hızlı bir şekilde değil, en az sayıda görsel kalite elde edilirken en iyi performansı elde eteceğiz. Bazen büyük bir ekran üzerinde harika görünen pahalı bir efekt, daha basit bir etkinin pili boşaltmadan daha iyi görünebileceği bir telefonun küçük ekranında görüntülendiklerinde aynı etkiyi yapmaz. Grafik analizinin sağladığı otomatik değişiklikler ve değerlendirmeler, uygulamanız için bir dizi cihaz genelinde doğru olan dengeyi bulmanıza yardımcı olabilir.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Komut satırı Yakalama aracı](../debugger/command-line-capture-tool.md) [HLSL hata ayıklayıcısı](../debugger/hlsl-shader-debugger.md)
+ [Komut satırı yakalama aracı](../debugger/command-line-capture-tool.md) [HLSL hata ayıklayıcısı](../debugger/hlsl-shader-debugger.md)

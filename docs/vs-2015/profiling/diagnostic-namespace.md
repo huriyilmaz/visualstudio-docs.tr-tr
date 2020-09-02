@@ -1,5 +1,5 @@
 ---
-title: Tanılama Namespace | Microsoft Docs
+title: Tanılama ad alanı | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d412cfa5a9b5e7e90aeac3ac6bbb530b0ef48ad0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68157586"
 ---
 # <a name="diagnostic-namespace"></a>Tanılama Ad Alanı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-`diagnostics` Ad alanı için eşzamanlılık görselleştiricisi işaretleyicileri yayma işlevselliği sağlar.  
+`diagnostics`Ad alanı eşzamanlılık görselleştiricisi işaretçilerini yayma işlevlerini sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace diagnostic;  
@@ -37,19 +37,19 @@ namespace diagnostic;
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|[marker_series Sınıfı](../profiling/marker-series-class.md)|Tek bir sağlayıcı tarafından oluşturulan olayları seri bir kanalı temsil eder.|  
-|[span Sınıfı](../profiling/span-class.md)|Uygulamanın bir aşama tanımlar.|  
+|[marker_series Sınıfı](../profiling/marker-series-class.md)|Tek bir sağlayıcı tarafından oluşturulan olayların seri kanalını temsil eder.|  
+|[Span sınıfı](../profiling/span-class.md)|Uygulamanın aşamasını tanımlar.|  
   
-### <a name="enumerations"></a>Numaralandırmalar  
+### <a name="enumerations"></a>Listelemeler  
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|[marker_importance Sabit Listesi](../profiling/marker-importance-enumeration.md)|Eşzamanlılık görselleştiricisi işaretleyicisi önem düzeyini temsil eder.|  
+|[marker_importance Numaralandırması](../profiling/marker-importance-enumeration.md)|Bir eşzamanlılık görselleştiricisi işaretçisinin önem derecesini temsil eder.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** cvmarkersobj.h  
+ **Üst bilgi:** cvmarkersobj. h  
   
- **Namespace:** Eşzamanlılık  
+ **Ad alanı:** Zamanlı  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Eşzamanlılık Ad Alanı (Eşzamanlılık Görselleştiricisi)](../profiling/concurrency-namespace-concurrency-visualizer.md)

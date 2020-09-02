@@ -9,15 +9,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 04c6415fed131abc5a102f6ec15c69e33f21fd68
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592353"
 ---
 # <a name="xml-schema-explorer"></a>XML Şema Gezgini
 
-XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışmanıza olanak tanımak için MICROSOFT VISUAL STUDIO ve XML Düzenleyicisi ile tümleşiktir. Bir XML şema dosyası açtığınızda, **şema kümesi** düğümü **XML şema Gezgini**'nde görünür. Hedef dosyanız için dahil edilen, içeri aktarılan veya yeniden tanımlanmış şemaların yanı sıra bir `include` veya `import` bildirimiyle başvurulan tüm dosyalar da **XML şema Gezgini**'nde görünür.
+XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışmanıza olanak tanımak için MICROSOFT VISUAL STUDIO ve XML Düzenleyicisi ile tümleşiktir. Bir XML şema dosyası açtığınızda, **şema kümesi** düğümü **XML şema Gezgini**'nde görünür. Hedef dosyanız için dahil edilen, içeri aktarılan veya yeniden tanımlanmış şemaların yanı sıra bir veya ifadesiyle başvurulan tüm dosyalar `include` `import` da **XML şema Gezgini**'nde görünür.
 
 **XML şeması Gezgini** şunları yapmanızı sağlar:
 
@@ -54,7 +54,7 @@ XML **şema Gezgini** , XML şeması tanım DILI (xsd) şemaları ile çalışma
 
 - Üçüncü düzey dosyaları içerir.
 
-- Dördüncü düzey genel düğümleri içerir. Bu öğe, gruplar, karmaşık türler, basit türler, öznitelikler, öznitelik grupları ve `include`, `import`ve `redefine` deyimlerini içerebilir.
+- Dördüncü düzey genel düğümleri içerir. Bu öğe, gruplar, karmaşık türler, basit türler, öznitelikler, öznitelik grupları, ve `include` , `import` ve `redefine` deyimleri içerebilir.
 
 Aşağıda bir ağaç yapısına örnek verilmiştir:
 
@@ -67,7 +67,7 @@ Bir düğümü etkinleştirmek için çift tıklayın veya düğüm seçildiğin
 
 - Bir düğümü etkinleştirmek, bu düğümün tanımlandığı dosyayı açar (dosya zaten açık değilse) ve dosyadaki düğümü seçer.
 
-- Bir dosya düğümünü etkinleştirmek seçili dosyayı açar (zaten açık değilse) ve `<schema>` düğümünü vurgular.
+- Bir dosya düğümünü etkinleştirmek seçili dosyayı açar (zaten açık değilse) ve `<schema>` düğümü vurgular.
 
 - Bir SchemaSet veya Namespace düğümünü etkinleştirmek hiçbir şey yapmaz.
 

@@ -1,5 +1,5 @@
 ---
-title: Cores View Zoom Aracı | Microsoft Dokümanlar
+title: Çekirdekler Görünümü Yakınlaştırma aracı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,20 +13,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: c6862493de844ad8108009a2103752122114ae6c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62553051"
 ---
-# <a name="cores-view-zoom-tool"></a>Cores Görünüm Yakınlaştırma aracı
-Yakınlaştırma denetimi, belirli ilgi çekici alanlara odaklanabilmeniz için zaman çizelgesini yakınlaştırmanızı ve uzaklaştırmanızı sağlayan bir kaydırıcıdır. Bu denetim geçerli görünümün ortasını yakınlaştırır, bu nedenle yakınlaştırmadan önce görünümü ayarlayın.
+# <a name="cores-view-zoom-tool"></a>Çekirdekler Görünümü Yakınlaştırma aracı
+Yakınlaştırma denetimi, belirli bir ilgilendiğiniz alanlara odaklanabilmeniz için zaman çizelgesinde yakınlaştırıp uzaklaşmanızı sağlayan bir kaydırıcıdır. Bu denetim geçerli görünümün ortasına yakınlaşarak, yakınlaştırma yapmadan önce görünümü ayarlayın.
 
-## <a name="other-ways-to-zoom"></a>Yakınlaştırmanın diğer yolları
+## <a name="other-ways-to-zoom"></a>Yakınlaştırmak için diğer yollar
 
-- Yakınlaştırma: Zaman çizelgesi görünümünde bir alan seçmek için sürükle. Fare düğmesini serbest bıraktığınızda, zaman çizelgesi görünümü seçili aralığı yakınlaştırır.
+- Yakınlaştırma: zaman çizelgesi görünümündeki bir alanı seçmek için sürükleyin. Fare düğmesini serbest bırakırsanız, zaman çizelgesi görünümü seçili aralığa göre yakınlaştırılır.
 
-- Yakınlaştırma ve uzaklaştırma: Zaman çizelgesinin üzerine geçin ve fare tekerleğihareket ederken **Ctrl** tuşuna basın.
+- Yakınlaştırma ve uzaklaştırma: zaman çizelgesinin üzerine gelin ve fare tekerleğini taşırken **CTRL** tuşuna basın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çekirdekler Görünümü](../profiling/cores-view.md)

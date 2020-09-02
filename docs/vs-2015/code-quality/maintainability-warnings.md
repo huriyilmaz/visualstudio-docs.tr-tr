@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: e448a72e2ff92b3e3028829d4b1e7658c304ee3c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667888"
 ---
 # <a name="maintainability-warnings"></a>Bakım Uyarıları
@@ -29,12 +29,12 @@ Bakımsız uyarılar kitaplığı ve uygulama bakımını destekler.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-|Kural|Açıklama|
+|Kural|Description|
 |----------|-----------------|
-|[CA1500: Değişken adları alan adlarıyla eşleşmemelidir](../code-quality/ca1500-variable-names-should-not-match-field-names.md)|Bir örnek yöntemi, bir parametre ya da adı bildirim türünün bir örnek alanıyla eşleşen bir yerel değişken bildirir ve bu da hatalara yol açar.|
+|[CA1500: Değişken adları alan adları ile eşleşmemelidir](../code-quality/ca1500-variable-names-should-not-match-field-names.md)|Bir örnek yöntemi, bir parametre ya da adı bildirim türünün bir örnek alanıyla eşleşen bir yerel değişken bildirir ve bu da hatalara yol açar.|
 |[CA1501: Aşırı devralmadan kaçının](../code-quality/ca1501-avoid-excessive-inheritance.md)|Devralma hiyerarşisinde düzeyleri dörtten fazla olan türdür. İç içe yuvalanmış hiyerarşileri izlemek, anlamak ve muhafaza etmek zor olabilir.|
 |[CA1502: Aşırı karmaşıklıktan kaçının](../code-quality/ca1502-avoid-excessive-complexity.md)|Bu kural, sayılarla ve şartlı şubelerle tanımlanan, yönteme giden doğrusal bağımsız yolların sayısını ölçer.|
-|[CA1504: Yanlış alan adlarını gözden geçirin](../code-quality/ca1504-review-misleading-field-names.md)|Bir örnek alanının adı "s_" ile başlar veya statik ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] paylaşılan) alanının adı "m_" ile başlar.|
+|[CA1504: Yanıltıcı alan adlarını gözden geçirin](../code-quality/ca1504-review-misleading-field-names.md)|Bir örnek alanının adı "s_" ile başlar veya statik (paylaşılan [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ) alanının adı "m_" ile başlar.|
 |[CA1505: Bakımı yapılamayan kodlardan kaçının](../code-quality/ca1505-avoid-unmaintainable-code.md)|Bir tür veya yöntemin düşük bakım dizin değeri vardır. Düşük bakım dizini muhtemelen koruması zor olan ve yeniden tasarım için iyi bir aday olan tür veya yöntemi içerir.|
 |[CA1506: Aşırı sınıf bağlantısından kaçının](../code-quality/ca1506-avoid-excessive-class-coupling.md)|Bu kural türü veya yöntemini içeren benzersiz türde başvuru sayısı belirlenerek eşlenmesiyle sınıfı ölçer.|
 

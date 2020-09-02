@@ -7,10 +7,10 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: f9f30dd3eaeb6905088e7eec9db1fa9cc2b0f32c
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592961"
 ---
 # <a name="keyboard-shortcuts-for-xaml-designer"></a>XAML Tasarımcısı için klavye kısayolları
@@ -23,7 +23,7 @@ Bu tabloda, çalışma yüzeyinde öğelerle çalışmak için kullanılabilen k
 
 |**Bu eylemi gerçekleştirmek için**|**Bunu yapın**|
 | - |-----------------|
-|Öğe oluşturma|**Ctrl**+**N** tuşlarına basın|
+|Öğe oluşturma|**CTRL** + **N** tuşlarına basın|
 |Yinelenen öğe|**Alt** tuşunu basılı tutun ve bir ok tuşuna basın.|
 |Denetimdeki metni düzenleme|**F2** tuşuna basın (çıkmak için **ESC** tuşuna basın)|
 |Tek bir öğe seçin|Öğeleri belgede göründükleri sırada seçmek için **Tab** tuşuna basın. (Ayrıca, ok tuşlarını kullanarak öğeleri de seçebilirsiniz.)|
@@ -31,10 +31,10 @@ Bu tabloda, çalışma yüzeyinde öğelerle çalışmak için kullanılabilen k
 |Bitişik olmayan birden çok öğe seç|İlk ve son öğeleri seçerken **CTRL** tuşuna basın ve basılı tutun|
 |Seçili öğeleri taşı|Ok tuşlarına basın. (Her tuş tuşuna basarak geçiş mesafesini artırmak için **SHIFT** tuşunu basılı tutabilirsiniz.)|
 |Bir öğeyi 15 derece artışlarla döndürme|Öğeyi döndürürken **SHIFT** tuşunu basılı tutun|
-|Tüm öğeleri seç|**Ctrl**+**A** 'ya basın|
-|Tüm öğelerin seçimini temizle|**Ctrl**+**SHIFT**+**A** 'ya basın|
+|Tüm öğeleri seç|**CTRL**tuşuna basın + **A**|
+|Tüm öğelerin seçimini temizle|**CTRL** + **SHIFT** + **A** tuşuna basın|
 |Öğe tutamaçlarını göster veya gizle|**F9** tuşuna basın|
-|Öğe için bir özellik seçin|Seçili bir öğe ve Özellikler penceresi odaklanıldığında **Tab**tuşuna basın. (Odağı Özellikler penceresi değiştirmek için **Ctrl**+**sekmesini** kullanın.) Aşağı açılan listelerden özellik değerlerini seçmek için ok tuşlarını kullanabilirsiniz.|
+|Öğe için bir özellik seçin|Seçili bir öğe ve Özellikler penceresi odaklanıldığında **Tab**tuşuna basın. ( **CTRL** + kullanın Odağı Özellikler penceresi değiştirme **sekmesi** .) Aşağı açılan listelerden özellik değerlerini seçmek için ok tuşlarını kullanabilirsiniz.|
 
 ## <a name="document-outline-window-shortcuts"></a>Belge ana hat penceresi kısayolları
 
@@ -42,10 +42,10 @@ Aşağıdaki tabloda, belge ana hattı penceresindeki öğelerle çalışırken 
 
 |**Bu eylemi gerçekleştirmek için**|**Bunu yapın**|
 | - |-----------------|
-|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerini gizle|**CTRL**+**H**|
-|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerini göster|**Shıft**+**CTRL**+**H**|
-|Odak belge anahattı penceresinde olduğunda çalışma yüzeyi nesnelerini kilitle|**Ctrl**+**L**|
-|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerinin kilidini aç|**Shıft**+**CTRL**+**L**|
+|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerini gizle|**CTRL** + **H**|
+|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerini göster|**SHIFT** + **CTRL** + **H**|
+|Odak belge anahattı penceresinde olduğunda çalışma yüzeyi nesnelerini kilitle|**CTRL** + **L**|
+|Odak belge anahattı penceresinde iken çalışma yüzeyi nesnelerinin kilidini aç|**SHIFT** + **CTRL** + **L**|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

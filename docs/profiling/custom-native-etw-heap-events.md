@@ -1,5 +1,5 @@
 ---
-title: Özel Yerli ETW Yığın Olaylar | Microsoft Dokümanlar
+title: Özel yerel ETW yığın olayları | Microsoft Docs
 ms.date: 02/24/2017
 ms.topic: conceptual
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
@@ -11,19 +11,19 @@ dev_langs:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1bb6f906cbfb715d67f6e10ddcecf094bc25821f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62552973"
 ---
 # <a name="custom-native-etw-heap-events"></a>Özel yerel ETW yığın olayları
 
-Visual Studio, yerel bellek profilleyicisi de dahil olmak üzere çeşitli [profil oluşturma ve tanılama araçları](../profiling/profiling-feature-tour.md)içerir.  Bu profiloluşturucu, [ETW olaylarını](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) yığın sağlayıcısından bağlar ve belleğin nasıl tahsis edildiğinin ve kullanıldığının analizini sağlar.  Varsayılan olarak, bu araç yalnızca standart Windows yığınından yapılan ayırmaları çözümleyebilir ve bu yerel yığın dışında herhangi bir ayırma görüntülenmez.
+Visual Studio, yerel bellek Oluşturucu da dahil olmak üzere çeşitli [profil oluşturma ve tanılama araçları](../profiling/profiling-feature-tour.md)içerir.  Bu profil oluşturucu, yığın sağlayıcısından [ETW olaylarını](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) takar ve belleğin nasıl ayrılacağını ve kullanılmakta olduğunu analiz sağlar.  Varsayılan olarak, bu araç yalnızca standart Windows yığınından yapılan ayırmaları analiz edebilir ve bu yerel yığın dışındaki tüm ayırmalar görüntülenmez.
 
-Kendi özel yığınınızı kullanmak ve standart yığından tahsis ataktan kaçınmak isteyebileceğin birçok durum vardır.  Örneğin, [virtualAlloc'u](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) kullanarak uygulamanın veya oyunun başında büyük miktarda bellek ayırabilir ve ardından bu liste deki kendi bloklarınızı yönetebilirsiniz.  Bu senaryoda, bellek profiloluşturucu aracı yalnızca ilk ayırma yı görür, bellek yığını içinde yapılan özel yönetimi değil.  Ancak, Özel Yerel Yığın ETW Sağlayıcısı'nı kullanarak, aracı standart yığın dışında yaptığınız ayırmalar hakkında bildirebilirsiniz.
+Kendi özel öbekinizi kullanmak isteyebileceğiniz ve standart öbekten ayırma yüküyle karşılaşmamak isteyebileceğiniz birçok durum vardır.  Örneğin, [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 'yi uygulama veya oyunun başlangıcında büyük miktarda bellek ayırmak için kullanabilir ve ardından bu liste içinde kendi bloklarınızı yönetebilirsiniz.  Bu senaryoda, bellek Oluşturucu aracı yalnızca ilk ayırmayı görebilir ve özel yönetiğinizin bellek öbeği içinde yapılmadığından emin olur.  Ancak, özel yerel yığın ETW sağlayıcısını kullanarak, aracın standart yığın dışında yaptığınız tüm ayırmalar hakkında bilgi almasına izin verebilirsiniz.
 
-Örneğin, aşağıdaki gibi bir projede özel bir yığın vardır, `MemoryPool` yalnızca Windows yığınında tek bir ayırma görürsünüz:
+Örneğin, aşağıdaki gibi bir projede `MemoryPool` özel bir yığın olduğu gibi, yalnızca Windows yığınında tek bir ayırma görürsünüz:
 
 ```cpp
 class Foo
@@ -45,61 +45,61 @@ Foo* pFoo2 = (Foo*)mPool.allocate();
 Foo* pFoo3 = (Foo*)mPool.allocate();
 ```
 
-Özel yığın izleme olmadan [Bellek Kullanımı](../profiling/memory-usage.md) aracından bir anlık görüntü sadece tek 8192 bayt ayırma gösterir ve havuz tarafından yapılan özel ayırmaların hiçbiri:
+[Bellek kullanımı](../profiling/memory-usage.md) aracından özel yığın izleme olmadan bir anlık görüntü yalnızca tek 8192 baytlık ayırmayı ve havuz tarafından gerçekleştirilen özel ayırmaların hiçbirini göstermez:
 
 ![Windows yığın ayırma](media/heap-example-windows-heap.png)
 
-Aşağıdaki adımları gerçekleştirerek, özel yığınında bellek usgae izlemek için aynı aracı kullanabilirsiniz.
+Aşağıdaki adımları gerçekleştirerek, bu aracı, özel yığındaki bellek usgae 'yi izlemek için de kullanabilirsiniz.
 
-## <a name="how-to-use"></a>Nasıl kullanılır
+## <a name="how-to-use"></a>Nasıl kullanılır?
 
-Bu kitaplık C ve C++'da kolayca kullanılabilir.
+Bu kitaplık, C ve C++ ' da kolayca kullanılabilir.
 
-1. Özel yığın ETW sağlayıcısı için üstbilgi ekleyin:
+1. Özel yığın ETW sağlayıcısı için üst bilgiyi ekleyin:
 
    ```cpp
    #include <VSCustomNativeHeapEtwProvider.h>
    ```
 
-1. Dekoratörü, işaretçiyi `__declspec(allocator)` yeni ayrılan yığın belleğe döndüren özel yığın yöneticinizdeki herhangi bir işleve ekleyin.  Bu dekoratör, aracın döndürülen bellek türünü doğru bir şekilde tanımlamasına olanak tanır.  Örnek:
+1. `__declspec(allocator)`Yeni ayrılan yığın belleğine bir işaretçi döndüren özel yığın yöneticinizin herhangi bir işlevine dekoratör ekleyin.  Bu dekoratör, aracın döndürülen bellek türünü doğru şekilde tanımlamasına olanak sağlar.  Örneğin:
 
    ```cpp
    __declspec(allocator) void *MyMalloc(size_t size);
    ```
 
    > [!NOTE]
-   > Bu dekoratör derleyiciye bu işlevin bir ayırıcıya çağrı olduğunu söyleyecektir.  İşleviçin yapılan her arama, çağrı sitesinin adresini, çağrı talimatının boyutunu ve yeni `S_HEAPALLOCSITE` bir simgeye yeni nesnenin typeId'ini çıkaracaktır.  Bir çağrı yığını tahsis edildiğinde, Windows bu bilgileri içeren bir ETW olayı yayacaktır.  Bellek profilleyici aracı, bir `S_HEAPALLOCSITE` sembolle eşleşen bir iade adresi bulmak için çağrı yığınında yürür ve semboldeki typeId bilgileri ayırmanın çalışma zamanı türünü görüntülemek için kullanılır.
+   > Bu dekoratör, derleyiciye bu işlevin bir ayırıcı çağrısı olduğunu bildirir.  İşlevine yapılan her çağrı, CallSite adresini, çağrı yönergesinin boyutunu ve yeni nesnenin TypeId değerini yeni bir sembol olarak çıktı `S_HEAPALLOCSITE` .  Bir çağrı yığını ayrıldığında, Windows bu bilgilerle bir ETW olayı yayar.  Bellek profili Oluşturucu Aracı, bir sembol ile eşleşen dönüş adresini arayan çağrı yığını 'e kılavuzluk eder `S_HEAPALLOCSITE` ve simgenin içindeki TypeId bilgisi, ayırmanın çalışma zamanı türünü göstermek için kullanılır.
    >
-   > Kısacası, bu tür olarak `(B*)(A*)MyMalloc(sizeof(B))` araç ta gösterilecek gibi görünen `B`bir `void` `A`çağrı anlamına gelir , değil ya da .
+   > Kısacası bu, gibi görünen bir çağrının `(B*)(A*)MyMalloc(sizeof(B))` `B` , ya da değil, araçta görüneceğini gösterir `void` `A` .
 
-1. C++'da, `VSHeapTracker::CHeapTracker` profil oluşturma aracında gösterilecek yığın için bir ad sağlayan nesneyi oluşturun:
+1. C++ için, `VSHeapTracker::CHeapTracker` yığın için, profil oluşturma aracında görünecek bir ad sağlayarak nesnesini oluşturun:
 
    ```cpp
    auto pHeapTracker = std::make_unique<VSHeapTracker::CHeapTracker>("MyCustomHeap");
    ```
 
-   C kullanıyorsanız, `OpenHeapTracker` bunun yerine işlevi kullanın.  Bu işlev, diğer izleme işlevlerini ararken kullanacağınız bir tanıtıcıyı döndürecektir:
+   C kullanıyorsanız, `OpenHeapTracker` bunun yerine işlevini kullanın.  Bu işlev, diğer izleme işlevlerini çağırırken kullanacağınız bir tanıtıcı döndürür:
 
    ```C
    VSHeapTrackerHandle hHeapTracker = OpenHeapTracker("MyHeap");
    ```
 
-1. Özel işlevinizi kullanarak belleği ayırırken, ayırmayı izlemek için işaretçiyi belleğe ve boyutuna geçirerek `AllocateEvent` (C++) veya `VSHeapTrackerAllocateEvent` (C) yöntemini arayın:
+1. Özel işlevinizi kullanarak bellek ayırırken, `AllocateEvent` ayırmayı izlemek için, (C++) veya `VSHeapTrackerAllocateEvent` (C) yöntemini çağırın, bu durumda, belleğin ve boyutunun boyutuna geçer:
 
    ```cpp
    pHeapTracker->AllocateEvent(memPtr, size);
    ```
 
-   or
+   veya
 
    ```C
    VSHeapTrackerAllocateEvent(hHeapTracker, memPtr, size);
    ```
 
    > [!IMPORTANT]
-   > Özel ayırıcı işlevinizi daha önce açıklanan `__declspec(allocator)` dekoratörle etiketlemeyi unutmayın.
+   > Özel ayırıcı işlevinizi, `__declspec(allocator)` daha önce açıklanan dekoratörü ile etiketleyerek unutmayın.
 
-1. Özel işlevinizi kullanarak belleği ayırırken, ayırmayı izlemek için işaretçiyi `DeallocateEvent` belleğe geçen (C++) veya `VSHeapTracerDeallocateEvent` (C) işlevini çağırın:
+1. Özel işlevinizi kullanarak bellek ayırmayı kaldırdığınızda, `DeallocateEvent` ayırmayı izlemek için, (C++) veya `VSHeapTracerDeallocateEvent` (C) işlevini, belleğe işaretçiyi geçirerek çağırın:
 
    ```cpp
    pHeapTracker->DeallocateEvent(memPtr);
@@ -111,7 +111,7 @@ Bu kitaplık C ve C++'da kolayca kullanılabilir.
    VSHeapTrackerDeallocateEvent(hHeapTracker, memPtr);
    ```
 
-1. Özel işlevinizi kullanarak belleği yeniden `ReallocateEvent` ayırırken, (C++) veya `VSHeapReallocateEvent` (C) yöntemini çağırArak yeni belleğe, ayırmanın boyutuna ve eski belleğe işaretçiye geçen bir işaretçiyi seçin:
+1. Özel işlevinizi kullanarak belleği yeniden konumlandırdığınızda, `ReallocateEvent` (C++) veya `VSHeapReallocateEvent` (C) yöntemini çağırın, yeni belleğe bir işaretçi, ayırmanın boyutu ve eski belleğe yönelik bir işaretçi ile geçer:
 
    ```cpp
    pHeapTracker->ReallocateEvent(memPtrNew, size, memPtrOld);
@@ -123,7 +123,7 @@ Bu kitaplık C ve C++'da kolayca kullanılabilir.
    VSHeapTrackerReallocateEvent(hHeapTracker, memPtrNew, size, memPtrOld);
    ```
 
-1. Son olarak, C++'daki özel yığın izleyicisini kapatmak `CHeapTracker` ve temizlemek için, yıkıcıyı el ile veya standart `CloseHeapTracker` kapsam kuralları yla veya C'deki işlevle kullanın:
+1. Son olarak, C++ ' da özel yığın izleyicisini kapatmak ve temizlemek için, `CHeapTracker` yıkıcıyı el ile veya standart kapsam kuralları aracılığıyla veya `CloseHeapTracker` C içindeki işlevi kullanarak kullanın:
 
    ```cpp
    delete pHeapTracker;
@@ -136,25 +136,25 @@ Bu kitaplık C ve C++'da kolayca kullanılabilir.
    ```
 
 ## <a name="track-memory-usage"></a>Bellek kullanımını izleme
-Bu çağrılar yerinde yken, özel yığın kullanımınız artık Visual Studio'daki standart **Bellek Kullanımı** aracı kullanılarak izlenebilir.  Bu aracın nasıl kullanılacağı hakkında daha fazla bilgi için lütfen [Bellek Kullanımı](../profiling/memory-usage.md) belgelerine bakın. Anlık görüntülerle yığın profil oluşturmayı etkinleştirdiğinizden emin olun, aksi takdirde özel yığın kullanımınızın görüntülendiğini görmezsiniz.
+Bu çağrılar yerinde olduğunda, özel yığın kullanımınız artık Visual Studio 'daki standart **bellek kullanımı** Aracı kullanılarak izlenebilir.  Bu aracın nasıl kullanılacağı hakkında daha fazla bilgi için lütfen [bellek kullanımı](../profiling/memory-usage.md) belgelerine bakın. Anlık görüntülerle yığın profili oluşturmayı etkinleştirmiş olduğunuzdan emin olun, aksi takdirde özel yığın kullanımınız görüntülendiğini görmezsiniz.
 
-![Yığın Profil oluşturmayı etkinleştirme](media/heap-enable-heap.png)
+![Yığın profili oluşturmayı etkinleştir](media/heap-enable-heap.png)
 
-Özel yığın izlemenizi görüntülemek için, Görünümü *NT Yığın'dan* daha önce adlandırılmış kendi yığınınıza değiştirmek için **Anlık Görüntü** penceresinin sağ üst köşesinde bulunan **Yığın** açılır penceresini kullanın.
+Özel yığın izlemeyi görüntülemek için, **anlık görüntü** penceresinin sağ üst köşesinde bulunan **yığın** açılan listesini kullanarak, görünümü *NT yığınından* daha önce adlandırılan şekilde kendi yığına değiştirin.
 
-![Yığın Seçimi](media/heap-example-custom-heap.png)
+![Yığın seçimi](media/heap-example-custom-heap.png)
 
-Yukarıdaki kod örneğini `MemoryPool` kullanarak, `VSHeapTracker::CHeapTracker` bir nesne `allocate` oluşturarak ve `AllocateEvent` kendi yöntemimiz şimdi yöntemi çağırarak, şimdi bu özel ayırmanın sonucunu görebilirsiniz, `Foo`toplam da 24 bayt, tüm tür .
+Yukarıdaki kod örneğini kullanarak `MemoryPool` bir `VSHeapTracker::CHeapTracker` nesne oluşturma ve kendi `allocate` yöntemizin artık `AllocateEvent` yöntemi çağıran, bu özel ayırmanın sonucunu, her bir 24 bayt ön alma, tüm tür olan üç örnek gösteriliyor `Foo` .
 
-Varsayılan *NT Yığın* yığını, nesnemizin `CHeapTracker` eklenmesiyle öncekiyle aynı görünür.
+Varsayılan *NT yığın* yığını, nesnemizin eklenmesiyle birlikte daha önce de aynı şekilde görünür `CHeapTracker` .
 
-![İzleyici ile NT Yığın](media/heap-example-windows-heap.png)
+![Izleyici ile NT yığını](media/heap-example-windows-heap.png)
 
-Standart Windows yığınında olduğu gibi, anlık görüntüleri karşılaştırmak ve ana [Bellek Kullanımı](../profiling/memory-usage.md) belgelerinde açıklanan özel yığınınızdaki sızıntıları ve bozulmaları aramak için de bu aracı kullanabilirsiniz.
+Standart Windows yığınında olduğu gibi, anlık görüntüleri karşılaştırmak ve özel yığında, ana [bellek kullanımı](../profiling/memory-usage.md) belgelerinde açıklanan sızıntı ve bozulmaları aramak için de bu aracı kullanabilirsiniz.
 
 > [!TIP]
-> Visual Studio ayrıca Hata **Ayıklama** > **Performans Profilleyici** menüsüseçeneğinden veya **Alt**+**F2** klavye kombinasyonundan etkinleştirilen Performans **Profiloluşturma** araç setinde bir Bellek **Kullanımı** aracı içerir.  Bu özellik yığın izleme içermez ve burada açıklandığı gibi özel yığın görüntülemez.  Hata **Ayıklama** > **Windows** > **Show Tanılama Araçları** menüsü veya **Ctrl**+**Alt**+**F2** klavye kombinasyonuyla etkinleştirilebilen **yalnızca Tanılama Araçları** penceresi bu işlevselliği içerir.
+> Visual Studio Ayrıca, **hata ayıklama** **Memory Usage** **Performance Profiling**  >  **performansı profil oluşturucu** menü seçeneğinden veya **alt** + **F2** klavye bileşiminin etkin olan performans profili oluşturma araç takımı 'nda bir bellek kullanımı aracı içerir.  Bu özellik yığın izlemeyi içermez ve burada açıklandığı gibi özel öbekinizi göstermez.  Yalnızca **Hata Ayıkla** **Diagnostic Tools**  >  **Windows**  >  **göster tanılama araçları** menüsüyle veya **CTRL** + **alt** + **F2** klavye birleşimi ile etkinleştirilebilen tanılama araçları pencere, bu işlevi içerir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-[Profil oluşturma araçlarına](../profiling/profiling-feature-tour.md)
-ilk bakış[Bellek Kullanımı](../profiling/memory-usage.md)
+[Profil oluşturma araçlarına](../profiling/profiling-feature-tour.md) 
+ ilk bakış [Bellek kullanımı](../profiling/memory-usage.md)

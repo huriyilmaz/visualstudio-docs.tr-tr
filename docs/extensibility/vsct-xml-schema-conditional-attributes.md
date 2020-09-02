@@ -1,5 +1,5 @@
 ---
-title: VSCT XML Şema Koşullu Öznitelikler | Microsoft Dokümanlar
+title: VSCT XML şeması Koşullu öznitelikleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,31 +12,31 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f2b1fb3ee1b2cd396f25ec5591a585f8d87648d0
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80697940"
 ---
-# <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML şema koşullu öznitelikleri
-Koşullu öznitelikleri tüm listelere ve öğelere uygulayabilirsiniz. Mantıksal işleçler ve sembol genişletme ifadeleri doğru veya yanlış olarak değerlendirilir. Doğruysa, ilişkili liste veya öğe elde edilen çıktıya dahil edilir.
+# <a name="vsct-xml-schema-conditional-attributes"></a>VSCT XML şeması Koşullu öznitelikleri
+Koşullu öznitelikleri tüm listelerine ve öğelere uygulayabilirsiniz. Mantıksal işleçler ve sembol genişletme ifadeleri true veya false olarak değerlendirilir. True ise, ilişkili liste veya öğe ortaya çıkan çıktıya dahil edilir.
 
- Belirteç genişletmelerini diğer belirteç genişletmelerine veya sabitlere karşı test edebilirsiniz. İşlev, `Defined()` değeri olmasa bile belirli bir adın tanımlanıp tanımlanmadığını sınar.
+ Belirteç genişletmeleri diğer belirteç genişletmeleri veya sabitlerine karşı test edebilirsiniz. İşlevi, `Defined()` bir değer olmasa bile belirli bir adın tanımlanıp tanımlanmadığını sınar.
 
- Bir Koşul özniteliği bir listeye uygulandığında, koşul listedeki her alt öğeye uygulanır. Bir alt öğenin kendisi bir Durum özniteliği içeriyorsa, durumu bir AND işlemi ile üst ifade ile birleştirilir.
+ Bir koşul özniteliği bir listeye uygulandığında, koşul listedeki her alt öğeye uygulanır. Bir alt öğenin kendisi bir koşul özniteliği içeriyorsa, koşulu bir ve işlemi tarafından üst ifadeyle birleştirilir.
 
- 1, '1' ve 'true' değerleri doğru, 0, '0' ve 'yanlış' değerleri yanlış olarak değerlendirilir.
+ 1, ' 1 ' ve ' true ' değerleri true olarak değerlendirilir ve 0, ' 0 ' ve ' false ' yanlış olarak değerlendirilir.
 
 ## <a name="operators"></a>İşleçler
  Koşullu ifadeleri değerlendirmek için aşağıdaki işleçleri kullanın.
 
-|İşleç|Tanım|
+|Operatör|Tanım|
 |--------------|----------------|
 |(,)|Gruplandırma|
 |!|Mantıksal değil|
-|\<, >, \<=, >=, ==, !=|İlişkisel ve Eşitlik|
+|\<, >, \<=, >=, ==, !=|İlişkisel ve eşitlik|
 |ve|Boole|
-|or|Boole|
+|veya|Boole|
 
 ## <a name="examples"></a>Örnekler
 

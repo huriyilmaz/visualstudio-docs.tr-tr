@@ -14,35 +14,35 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.openlocfilehash: 2e5782c49f26925d9eda81f04653b1a20666c6b1
-ms.sourcegitcommit: 748d9cd7328a30f8c80ce42198a94a4b5e869f26
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68149164"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89312112"
 ---
-1. Uzak bilgisayarda bulmak ve başlatmak **uzaktan hata ayıklayıcı** gelen **Başlat** menüsü. 
+1. Uzak bilgisayarda, **Uzaktan hata ayıklayıcıyı** **Başlat** menüsünden bulun ve başlatın. 
    
-   Uzak bilgisayarda yönetici izinlerine sahip değilseniz, sağ **uzaktan hata ayıklayıcı** seçin **yönetici olarak çalıştır**. Aksi takdirde, yalnızca başlatın normalde.
+   Uzak bilgisayarda yönetici izinleriniz yoksa, **Uzaktan hata ayıklayıcı** uygulamasına sağ tıklayın ve **yönetici olarak çalıştır**' ı seçin. Aksi takdirde, normal olarak başlatmanız yeterlidir.
 
-   Ekleme planlıyorsanız bir yönetici olarak çalıştırdığınızdan veya farklı bir kullanıcı altında çalışan bir işlemi (IIS gibi) hesabı, sağ **uzaktan hata ayıklayıcı** seçin **yöneticiolarakçalıştır**. Daha fazla bilgi için [uzaktan hata ayıklayıcı yönetici olarak çalıştır](../remote-debugging-errors-and-troubleshooting.md#run-the-remote-debugger-as-an-administrator).
+   Yönetici olarak çalışan veya farklı bir kullanıcı hesabı altında (IIS gibi) çalışan bir işleme iliştirmeyi planlıyorsanız, **Uzaktan hata ayıklayıcı** uygulamasına sağ tıklayın ve **yönetici olarak çalıştır**' ı seçin. Daha fazla bilgi için bkz. [Uzaktan hata ayıklayıcıyı yönetici olarak çalıştırma](../remote-debugging-errors-and-troubleshooting.md#run-the-remote-debugger-as-an-administrator).
    
-1. İlk kez uzaktan hata ayıklayıcıyı başlattığınızda (veya önce yapılandırdığınızdan,), **uzaktan hata ayıklama Yapılandırması** iletişim kutusu görüntülenir.  
+1. Uzaktan hata ayıklayıcıyı ilk kez başlattığınızda (veya yapılandırmadan önce), **Uzaktan hata ayıklama yapılandırması** iletişim kutusu görüntülenir.  
   
-    ![Uzaktan hata ayıklayıcı yapılandırma](../media/remotedebuggerconfwizardpage.png "uzaktan hata ayıklayıcı yapılandırma")  
+    ![Uzaktan hata ayıklayıcı yapılandırması](../media/remotedebuggerconfwizardpage.png "Uzaktan hata ayıklayıcı yapılandırması")  
   
-1. Windows Web Servisleri API, yalnızca Windows Server 2008 R2 üzerinde gerçekleşen yüklü değilse, seçin **yükleme** düğmesi.  
+1. Windows Web Hizmetleri API 'SI yüklü değilse ve yalnızca Windows Server 2008 R2 'de olduğunda, **yükleme** düğmesini seçin.  
   
-1. Uzak Araçlar üzerinde kullanmak istediğiniz en az bir ağ türünü seçin. Bilgisayarları bir etki alanına bağlıysanız, ilk öğe seçmeniz gerekir. Bilgisayar bir çalışma grubunda veya ev grubu bağlıysa, uygun şekilde ikinci veya üçüncü öğeyi seçin.  
+1. Üzerinde Uzak araçları kullanmak istediğiniz en az bir ağ türü seçin. Bilgisayarlar bir etki alanı üzerinden bağlandıysa, ilk öğeyi seçmeniz gerekir. Bilgisayarlar bir çalışma grubu veya ev grubu üzerinden bağlandıysa, ikinci veya üçüncü öğeyi uygun şekilde seçin.  
   
-1. Seçin **uzaktan hata ayıklamayı Yapılandır** güvenlik duvarını yapılandırmak ve uzaktan hata ayıklayıcıyı başlatın.  
+1. Güvenlik duvarını yapılandırmak ve uzaktan hata ayıklayıcıyı başlatmak için **Uzaktan hata ayıklamayı Yapılandır** ' ı seçin.  
   
-1. Yapılandırma tamamlandığında, **uzaktan hata ayıklayıcı** penceresi görüntülenir.
+1. Yapılandırma tamamlandığında, **Uzaktan hata ayıklayıcı** penceresi görüntülenir.
   
-    ![Uzaktan hata ayıklayıcı penceresini](../media/remotedebuggerwindow.png "uzaktan hata ayıklayıcı penceresi")
+    ![Uzaktan hata ayıklayıcı penceresi](../media/remotedebuggerwindow.png "Uzaktan hata ayıklayıcı penceresi")
   
-    Uzaktan hata ayıklayıcı şimdi bir bağlantı için bekliyor. Sunucu adı ve bağlantı noktası numarasına uzaktan bağlantı yapılandırmasını Visual Studio'da ayarlayın.  
+    Uzaktan hata ayıklayıcı artık bir bağlantı bekliyor. Visual Studio 'da uzak bağlantı yapılandırmasını ayarlamak için gösterilen sunucu adını ve bağlantı noktası numarasını kullanın.  
   
-Uzaktan hata ayıklayıcıyı durdurmak için seçin **dosya** > **çıkış**. Buradan yeniden **Başlat** menüsünden veya komut satırından:  
+Uzaktan hata ayıklayıcıyı durdurmak için **Dosya**  >  **Çıkış**' ı seçin. **Başlat** menüsünden veya komut satırından yeniden başlatabilirsiniz:  
   
 ```cmd
 <Remote debugger installation directory>\msvsmon.exe

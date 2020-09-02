@@ -1,5 +1,5 @@
 ---
-title: Ayıklama arabirimi yeniden düzenlemesiC#() | Microsoft Docs
+title: Ayıklama arabirimi yeniden düzenlemesi (C#) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -17,10 +17,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: fdcf281e1ace40d1d7cdac0be302810ea173581b
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667562"
 ---
 # <a name="extract-interface-refactoring-c"></a>Ayıklama Arabirimi Yeniden Düzenlemesi (C#)
@@ -34,7 +34,7 @@ Ayıklama arabirimi, mevcut bir sınıf, yapı veya arabirimden kaynaklanan üye
 
 ### <a name="to-use-extract-interface"></a>Ayıklama arabirimini kullanmak için
 
-1. @No__t_0 adlı bir konsol uygulaması oluşturun ve `Program` aşağıdaki kodla değiştirin
+1. Adlı bir konsol uygulaması oluşturun `ExtractInterface` ve ardından `Program` aşağıdaki kodla değiştirin
 
     ```csharp
     // Invoke Extract Interface on ProtoA.
@@ -45,7 +45,7 @@ Ayıklama arabirimi, mevcut bir sınıf, yapı veya arabirimden kaynaklanan üye
     }
     ```
 
-2. İmleci `MethodB` konumuna yerleştirilmiş ve yeniden **düzenleme** menüsünde **Arabirimi Ayıkla** ' ya tıklayın.
+2. İmleci `MethodB` ve yeniden **Düzenle** menüsünde **Arabirimi Ayıkla** ' yı tıklatın.
 
      **Arabirimi Ayıkla** iletişim kutusu görüntülenir.
 
@@ -55,7 +55,7 @@ Ayıklama arabirimi, mevcut bir sınıf, yapı veya arabirimden kaynaklanan üye
 
 3. **Tümünü Seç**' e tıklayın.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
      Yeni dosya, IProtoA.cs ve aşağıdaki kodu görürsünüz:
 

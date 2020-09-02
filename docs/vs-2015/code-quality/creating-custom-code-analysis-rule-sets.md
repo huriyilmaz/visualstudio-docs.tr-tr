@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 19b7079f2a24e6a904a2d1266e7605f0e56e5dae
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72667685"
 ---
 # <a name="creating-custom-code-analysis-rule-sets"></a>Özel Kod Çözümlemesi Kural Kümeleri Oluşturma
@@ -29,4 +29,4 @@ Bir veya daha fazla kural içeren bir kural kümesi belirterek, yönetilen bir k
  [Kural kümesi düzenleyicisinde çalışma](../code-quality/working-in-the-code-analysis-rule-set-editor.md) Özel bir kural kümesindeki kod analizi kurallarını gruplandırmak, sıralamak, filtrelemek ve değiştirmek için kural kümesi düzenleyicisinin nasıl kullanılacağını açıklar.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Kod analizi kural kümesi başvurusu](../code-quality/code-analysis-rule-set-reference.md) [yönetilen kod kalitesini analiz etme](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md) [Kod analiziniC++ kullanarak C/Code kalitesini analiz etme](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md)
+ [Kod analizi kural kümesi başvurusu](../code-quality/code-analysis-rule-set-reference.md) [yönetilen kod kalitesini analiz etme](../code-quality/analyzing-managed-code-quality-by-using-code-analysis.md) [Kod analizini kullanarak C/C++ kod kalitesini analiz etme](../code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis.md)

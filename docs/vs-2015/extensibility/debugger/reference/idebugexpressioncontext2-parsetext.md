@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext2::ParseText | Microsoft Docs
+title: IDebugExpressionContext2::P arseText | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1fbd9252663f766035f628946e6aa93b1c00322a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68158389"
 ---
 # <a name="idebugexpressioncontext2parsetext"></a>IDebugExpressionContext2::ParseText
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Daha sonra değerlendirmesi için metin biçiminde bir ifade ayrıştırır.  
+Daha sonraki değerlendirme için metin biçimindeki bir ifadeyi ayrıştırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT ParseText(   
@@ -50,33 +50,33 @@ int ParseText( 
   
 #### <a name="parameters"></a>Parametreler  
  `pszCode`  
- [in] Ayrıştırılacak ifade.  
+ 'ndaki Ayrıştırılacak ifade.  
   
  `dwFlags`  
- [in] Bayraklarının bir birleşimi [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) ayrıştırma denetleyen sabit listesi.  
+ 'ndaki Ayrıştırma denetleyen [parseflags](../../../extensibility/debugger/reference/parseflags.md) numaralandırmasındaki bayrakların birleşimi.  
   
  `nRadix`  
- [in] Herhangi bir sayısal bilgisi Ayrıştırmada kullanılacak sayı tabanı `pszCode`.  
+ 'ndaki İçinde herhangi bir sayısal bilgi ayrıştırılırken kullanılacak taban tabanı `pszCode` .  
   
  `ppExpr`  
- [out] Döndürür [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) bağlama ve değerlendirme için hazır olan ayrıştırılmış ifadeyi temsil eden nesne.  
+ dışı Bağlama ve değerlendirme için hazırlanma olan ayrıştırılmış ifadeyi temsil eden [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) nesnesini döndürür.  
   
  `pbstrError`  
- [out] İfade bir hata varsa hata iletisi döndürür.  
+ dışı İfade bir hata içeriyorsa hata iletisini döndürür.  
   
  `pichError`  
- [out] Hata karakter dizinini döndürür `pszCode` ifade bir hata içeriyorsa.  
+ dışı İfade bir hata içeriyorsa içindeki hatanın karakter dizinini döndürür `pszCode` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem çağrıldığında, hata ayıklama altyapısı (DE) ifade ayrıştırma ve doğruluğu doğrulayın. `pbstrError` Ve `pichError` parametreleri doldurulmuş ifade geçersizse.  
+ Bu yöntem çağrıldığında, bir hata ayıklama altyapısı (DE), ifadeyi ayrıştırır ve doğruluğu doğru şekilde doğrular. `pbstrError` `pichError` İfade geçersizse ve parametreleri doldurulmuş olabilir.  
   
- İfade, yalnızca ayrıştırılmış değerlendirilmez olduğunu unutmayın. Bir sonraki çağrı [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) veya [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) yöntemleri ayrıştırılmış ifadeyi değerlendirir.  
+ İfadenin değerlendirilmediğini ve yalnızca ayrıştırılmadığını unutmayın. Daha sonra [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) veya [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) yöntemlerine yapılan bir çağrı, ayrıştırılmış ifadeyi değerlendirir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CEnvBlock` gösteren nesne [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimi. Bu örnek, bir ortam değişkeni adı olarak ayrıştırılmak için ifadeyi değerlendirir ve söz konusu değişkeninin değerini alır.  
+ Aşağıdaki örnek, `CEnvBlock` [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir. Bu örnek, ifadeyi bir ortam değişkeninin adı olarak ayrıştırılacak şekilde değerlendirir ve bu değişkenin değerini alır.  
   
 ```cpp#  
 HRESULT CEnvBlock::ParseText(  

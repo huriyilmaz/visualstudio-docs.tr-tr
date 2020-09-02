@@ -1,5 +1,5 @@
 ---
-title: 'PTVS kullanmaya Başlarken: Etkileşimli Python | Microsoft Docs'
+title: "PTV 'leri kullanmaya başlama: etkileşimli Python | Microsoft Docs"
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-python
@@ -10,29 +10,29 @@ author: kraigb
 ms.author: kraigb
 manager: jillfra
 ms.openlocfilehash: 4fba8bf658a50a7a7e28abace1eb622ab14f5f26
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62550993"
 ---
-# <a name="getting-started-with-ptvs-interactive-python"></a>PTVS kullanmaya Başlarken: Etkileşimli Python
+# <a name="getting-started-with-ptvs-interactive-python"></a>PTVS Kullanmaya Başlarken: Etkileşimli Python
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Etkileşimli bir komut istemlerini veya okuma-eval-print döngüler (REPLs) bir anahtar üretken programlama dillerini araçlardır.  Bunlar keşfedin ve API'ler hakkında bilgi edinmek için API kullanarak denemeler için kod parçacıkları yürütmek izin ve etkileşimli olarak çalışan kodu, program veya projeleri içerecek şekilde geliştirin.  
+Etkileşimli istemler veya okuma-değerlendirme-yazdırma döngüleri (REPLs), üretken programlama dilleri için önemli bir araçtır.  API 'Ler bulma ve öğrenmek için kod parçacıklarını yürütmenize, API kullanmaya denemeler yapmanıza ve etkileşimli olarak projeler veya programlara dahil etmek üzere çalışma kodu geliştirmenize olanak tanır.  
   
- Bu çok kısa yönergeleri izleyebilirsiniz [youtube video](https://www.youtube.com/watch?v=yc2CROtTsC0&index=5&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
+ Bu yönergeleri, çok kısa bir [youtube videosunda](https://www.youtube.com/watch?v=yc2CROtTsC0&index=5&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)izleyebilirsiniz.  
   
- Python ortamları penceresinde tüm Python ortamları listesini görürsünüz.  Bunları bir etkileşimli penceresini veya REPL. açmak için herhangi birini seçebilirsiniz.  Bir komut istemi'nde Python.exe hiç olmadığı kadar çalıştırdıktan sonra bir python REPL gördüğünüz önce.  REPL, ister ve kod girebilirsiniz, enter tuşuna basın ve kodunuzun sonuçları hemen görün.  Bu durumu tüm yürütme, değişken atamaları vb. içeren bir canlı yürütme bağlamıdır.  Sonuçlar, sonraki gönderiler REPL, komut istemi bulunduran değişkenlere başvurabilir.  Çok satırlı kod yazma ve bunların tümünü tek seferde (örneğin, bir yöntem bildiriminde veya birden çok deyime) yürütün.  
+ Python ortamları penceresinde, tüm Python ortamlarınızın listesini görürsünüz.  Etkileşimli bir pencere veya REPL açmak için bunlardan herhangi birini seçebilirsiniz.  Bir komut isteminde Python.exe çalıştırdığınız zaman daha önce bir Python REPL 'u gördünüz.  REPL sizi sorar ve kod girebilir, ENTER tuşuna basabilir ve kodunuzun sonuçlarını hemen görebilirsiniz.  Bu, tüm yürütmelerin, değişken atamalarınızın vb. tüm durumlarını içeren canlı bir yürütme bağlamıdır.  Daha sonra REPL istemine daha sonraki Gönderimlerle sonuçları tutan değişkenlere başvurabilirsiniz.  Birden çok satır kod yazabilir ve hepsini tek seferde (örneğin, bir yöntem bildirimi veya birden çok deyim) çalıştırabilirsiniz.  
   
- Yeni bir kitaplık kullanılarak başlattığınızda REPL kitaplığını inceleyin denemek için harika bir yoludur.  İçeri aktarma kitaplığı, alt paketler, sınıfları ve işlevleri inceleyin.  Python öğrenebilirsiniz tüm bu bilgileri kendi `help()` işlevi.  Ayrıca, Python araçları için Visual Studio (PTVS) öneriler ve kitaplık yürütmek gerek kalmadan mevcut düzenleyicisinde kullanılan kodu modelleme dayalı belgeler sağlar.  PTVS Python çalışma zamanını bilgilerinden kodu yürüttüğünüzde, PTVS önerileri geliştirmek için kullanır.  
+ Yeni bir kitaplık kullanmaya başladığınızda, REPL, kitaplığı denemek için harika bir yoldur.  Kitaplığı içeri aktarabilir, alt paketleri, sınıfları ve işlevleri inceleyebilirsiniz.  Python, bu bilgileri kendi `help()` işlevleriyle söyleyebilir.  Ayrıca, Visual Studio için Python Araçları (PTV), düzenleyicide kullanılan kod modelinden temel olarak, kitaplığı yürütmeye gerek kalmadan, öneriler ve belgeler sağlar.  Kodu yürüttüğünüzde PTV, PTV önerilerini geliştirmek için Python çalışma zamanının bilgilerini kullanır.  
   
- Etkileşimli pencere, geliştirirken kodunuzu test de dahil olmak üzere, yinelemeli veya gelişime kod geliştirme için de yararlıdır.  Düzenleyici penceresinde bir işlev seçin, sağ işaretçi düğmesine basın ve etkileşimli Gönder'i seçin.  Bu komut, sonraki giriş olarak etkileşimli pencereye seçimi kopyalar ve yürütür.  Sonuçları anında görürsünüz.  Önceki giriş değişiklikler yapmanız gerekirse, kod yürütmek için kodu geri alma ve Ctrl + Enter tuşlarına basın değiştirmek için yukarı ok tuşlarına basabilirsiniz.  Giriş sonunda ENTER tuşuna basarak çalıştırır, ancak giriş ortasında Enter tuşuna basarak yeni bir satır ekler.  
+ Etkileşimli pencere, kodunuzun geliştirilmesi sırasında test edilmesi de dahil olmak üzere yinelemeli veya evkte kod geliştirme için de yararlıdır.  Bir düzenleyici penceresinde bir işlev seçebilir, sağ işaretçi düğmesine basabilir ve etkileşimli olarak gönder ' i seçebilirsiniz.  Bu komut, seçimi sonraki giriş olarak etkileşimli pencereye kopyalar ve yürütür.  Sonuçları hemen görürsünüz.  Önceki girişte değişiklik yapmanız gerekirse, kodu geri almak, değiştirmek ve CTRL + ENTER tuşlarına basarak kodu yürütmek için yukarı ok tuşuna basabilirsiniz.  Girişin sonunda ENTER tuşuna basmak onu yürütür, ancak girişin ortasında ENTER tuşuna basmak yeni bir satır ekler.  
   
- Dilediğiniz sayıda her Python yükleme için etkileşimli bir pencere açabilirsiniz.  Görüntüyü Temizle, sıfırlama yürütme bağlamı, vb. için pencerenin üstündeki düğmeleri vardır.  Geçmişinizi değişmeden kalır.  
+ Her Python yüklemesi için istediğiniz kadar etkileşimli bir pencere açabilirsiniz.  Pencerenin üst kısmında, ekranı Temizleme, yürütme bağlamını sıfırlama vb. gibi düğmeler bulunur.  Geçmişinizde dokunulmamış olarak kalır.  
   
- Bu çok kısa yönergeleri izleyebilirsiniz [youtube video](https://www.youtube.com/watch?v=yc2CROtTsC0&index=5&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff).  
+ Bu yönergeleri, çok kısa bir [youtube videosunda](https://www.youtube.com/watch?v=yc2CROtTsC0&index=5&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)izleyebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Wiki belgeleri](https://github.com/Microsoft/PTVS/wiki/Interactive-REPL)   
- [PTVS kullanmaya başlama ve kapsamlı videolar alma](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)
+ [PTV 'Leri kullanmaya başlama ve derinlemesine bakış videoları](https://www.youtube.com/playlist?list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff)

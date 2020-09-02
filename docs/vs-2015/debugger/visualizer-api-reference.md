@@ -1,5 +1,5 @@
 ---
-title: Görselleştirici API Başvurusu | Microsoft Docs
+title: Görselleştirici API başvurusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,16 +19,16 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ef86bcca5e7b8b6fa8f2b6c5e7a0efe86ab5ba17
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68197454"
 ---
 # <a name="visualizer-api-reference"></a>Görselleştirici API Başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Görselleştirici API'leri için Visual Studio hata ayıklayıcı Görselleştirici yazma isteyen kullanıcılar için sağlanır. Görselleştirici kullanıcı arabirimi Visual Studio hata ayıklayıcısını işlevselliğini genişleten küçük bir uygulamadır. Görselleştirici görüntüleyebilir (ve, isteğe bağlı olarak, Düzenle) görselleştiricisi için tasarlanmış belirli bir türün veri nesnesi.  
+Görselleştirici API 'Leri, Visual Studio hata ayıklayıcısı için Görselleştirici yazmak isteyen kullanıcılar için sağlanır. Görselleştirici, Visual Studio hata ayıklayıcısı Kullanıcı arabiriminin işlevselliğini genişleten küçük bir uygulamadır. Görselleştirici, Görselleştirici tasarlandığı belirli bir türün veri nesnesini görüntüleyebilir (ve isteğe bağlı olarak düzenleyebilir).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
@@ -43,6 +43,6 @@ Görselleştirici API'leri için Visual Studio hata ayıklayıcı Görselleştir
 - <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource?displayProperty=fullName>  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: C# ile Görselleştirici yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
- [Nasıl yapılır: Görselleştirici yazma](../debugger/how-to-write-a-visualizer.md)   
+ [İzlenecek yol: C 'de Görselleştirici Yazma #](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)   
+ [Nasıl yapılır: Görselleştirici Yazma](../debugger/how-to-write-a-visualizer.md)   
  [Özel Görselleştirici Oluşturma](../debugger/create-custom-visualizers-of-data.md)
