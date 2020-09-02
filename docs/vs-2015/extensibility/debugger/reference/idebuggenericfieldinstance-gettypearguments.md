@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldInstance::GetTypeArguments | Microsoft Docs
+title: 'Idebuggenericfieldınstance:: GetTypeArguments | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: bef4d6c0d36eafd0279d97ecad2d1d2cc0656e2c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180827"
 ---
 # <a name="idebuggenericfieldinstancegettypearguments"></a>IDebugGenericFieldInstance::GetTypeArguments
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu örneğin tür parametresi bağımsız değişkenlerini alır.  
+Bu örnek için tür parametresi bağımsız değişkenlerini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetTypeArguments(  
@@ -43,16 +43,16 @@ int GetTypeArguments(
   
 #### <a name="parameters"></a>Parametreler  
  `cArgs`  
- [in] Tür parametreleri sayısı.  
+ 'ndaki Tür parametrelerinin sayısı.  
   
  `ppArgs`  
- [out] Tür parametreleri dizisi döndürür.  
+ dışı Parametre türünde bir dizi döndürür.  
   
  `pcArgs`  
- [out içinde] Üye sayısı `ppArgs` dizisi.  
+ [in, out] Dizideki üye sayısı `ppArgs` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugGenericFieldInstance](../../../extensibility/debugger/reference/idebuggenericfieldinstance.md)

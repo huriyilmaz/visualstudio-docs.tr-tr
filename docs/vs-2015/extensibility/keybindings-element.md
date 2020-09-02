@@ -14,18 +14,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2649dee6bbf87b43caee260ddb2b6bbd217c7ae7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180319"
 ---
 # <a name="keybindings-element"></a>KeyBindings Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-KeyBindings öğesi grupları tuş öğeleri ve diğer KeyBindings gruplandırmaları.  
+KeyBindings öğesi, anahtar bağlama öğelerini ve diğer KeyBindings gruplandırmaları gruplandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <KeyBindings>  
@@ -41,14 +41,14 @@ KeyBindings öğesi grupları tuş öğeleri ve diğer KeyBindings gruplandırma
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[KeyBinding Öğesi](../extensibility/keybinding-element.md)|Komut için klavye kısayolları belirtir.|  
-|[Tuş bağlama](../extensibility/keybindings-element.md)|Tuş öğeleri gruplandırır ve diğer KeyBindings gruplandırmaları.|  
+|[KeyBinding Öğesi](../extensibility/keybinding-element.md)|Komutlar için klavye kısayollarını belirler.|  
+|[KeyBindings](../extensibility/keybindings-element.md)|Anahtar bağlama öğelerini ve diğer KeyBindings gruplandırmaları gruplandırır.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

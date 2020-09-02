@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::RemoveSetException | Microsoft Docs
+title: 'IDebugEngine2:: RemoveSetException | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 53ba8c9c1934ee1c036e14fb51abd5babcf7e4c5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195962"
 ---
 # <a name="idebugengine2removesetexception"></a>IDebugEngine2::RemoveSetException
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Belirtilen özel durum artık hata ayıklama altyapısı tarafından işlenecek şekilde kaldırır.  
+Belirtilen özel durumu, artık hata ayıklama altyapısı tarafından işlenmemesi için kaldırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT RemoveSetException(   
@@ -40,15 +40,15 @@ int RemoveSetException( 
   
 #### <a name="parameters"></a>Parametreler  
  `pException`  
- [in] Bir [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) kaldırılacak özel durumu açıklayan yapısı.  
+ 'ndaki Kaldırılacak özel durumu açıklayan [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) yapısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kaldırılmakta olan özel durum daha önce daha önceki bir çağrı tarafından ayarlanmış olması gerekir [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) yöntemi.  
+ Kaldırılmakta olan özel durum daha önce [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) metoduna daha önceki bir çağrı tarafından ayarlanmış olmalıdır.  
   
- Tüm küme özel durumları tek seferde kaldırmak için çağrı [RemoveAllSetExceptions](../../../extensibility/debugger/reference/idebugengine2-removeallsetexceptions.md) yöntemi.  
+ Tüm set özel durumlarını tek seferde kaldırmak için [RemoveAllSetExceptions](../../../extensibility/debugger/reference/idebugengine2-removeallsetexceptions.md) yöntemini çağırın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   

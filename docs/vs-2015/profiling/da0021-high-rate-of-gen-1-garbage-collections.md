@@ -14,10 +14,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d901d09350af063a11e3d156f36a100df85e7718
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586925"
 ---
 # <a name="da0021-high-rate-of-gen-1-garbage-collections"></a>DA0021: Yüksek oranda 1. nesil atık toplama
@@ -42,7 +42,7 @@ Kural kimliği | DA0021 |
  Bu kural, çok fazla 1. nesil atık toplama işlemi meydana geldiğinde ateşlenir. Çok sayıda çok kısa süreli nesne nesil 0 toplama işlemi devam ediyor ancak daha sonra 1. nesil bir koleksiyonda toplanıyorsa, bellek yönetiminin maliyeti aşırı olabilir. Daha fazla bilgi için, MSDN Web sitesindeki Riko [maridın](https://docs.microsoft.com/archive/blogs/ricom/mid-life-crisis) performans katmanını ' na bakın.  
   
 ## <a name="how-to-investigate-a-warning"></a>Uyarı araştırma  
- Profil oluşturma verilerinin [Işaretler görünümüne](../profiling/marks-view.md) gitmek Için hatalar Listesi penceresinde iletiye çift tıklayın. **Gen 0 koleksiyonlarının .NET CLR\\bellek** sayısını ve **Genel 1 koleksiyonlar sütunlarının .NET CLR\\bellek sayısını** bulun. Çöp toplamanın daha sık gerçekleştiği program yürütmesinin belirli aşamaları olup olmadığını saptayın. Yönetilen bellek ayırmaları deseninin aşırı bellek yönetimi ek yüküne neden olup olmadığını görmek için bu değerleri **GC sütunundaki% Time** ile karşılaştırın.  
+ Profil oluşturma verilerinin [Işaretler görünümüne](../profiling/marks-view.md) gitmek Için hatalar Listesi penceresinde iletiye çift tıklayın. ** \\ Gen 0 KOLEKSIYONLARıNıN .NET CLR bellek** sayısını ve ** \\ Genel 1 koleksiyonlar sütunlarının .NET CLR bellek sayısını** bulun. Çöp toplamanın daha sık gerçekleştiği program yürütmesinin belirli aşamaları olup olmadığını saptayın. Yönetilen bellek ayırmaları deseninin aşırı bellek yönetimi ek yüküne neden olup olmadığını görmek için bu değerleri **GC sütunundaki% Time** ile karşılaştırın.  
   
  Uygulamanın yönetilen bellek kullanımı modelini anlamak için, a.NET bellek ayırma profilini ve istek nesnesi yaşam süresi ölçümlerini çalıştıran bir kez daha profilini yeniden çalıştırın.  
   

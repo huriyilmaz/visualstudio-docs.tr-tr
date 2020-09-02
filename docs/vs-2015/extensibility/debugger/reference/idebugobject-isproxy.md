@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsProxy | Microsoft Docs
+title: 'IDebugObject:: IsProxy | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,10 +12,10 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0777a7e9696009124841ba177af70e5a23a6ea52
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180512"
 ---
 # <a name="idebugobjectisproxy"></a>IDebugObject::IsProxy
@@ -23,7 +23,7 @@ ms.locfileid: "68180512"
 
 Nesnenin saydam bir ara sunucu olup olmadığını belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT IsProxy (  
@@ -39,13 +39,13 @@ int IsProxy (
   
 #### <a name="parameters"></a>Parametreler  
  `pfIsProxy`  
- [out] `TRUE` saydam proxy; nesne ise, aksi takdirde, `FALSE`.  
+ [out] `TRUE` nesne saydam bir ara sunucu ise Aksi takdirde, `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem varsayılan C++ hata ayıklama altyapısı tarafından gerçekleştirilir.  
+ Bu yöntem, varsayılan C++ hata ayıklama altyapısı tarafından uygulanır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

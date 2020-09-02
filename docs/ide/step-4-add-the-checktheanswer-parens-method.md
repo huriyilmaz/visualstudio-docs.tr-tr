@@ -14,51 +14,51 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 199cee66013392a253139abf8ef1b88b502abac2
-ms.sourcegitcommit: ce3d0728ec1063ab548dac71c8eaf26d20450acc
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80472617"
 ---
 # <a name="step-4-add-the-checktheanswer-method"></a>4. Adım: CheckTheAnswer() yöntemi ekleme
 
-Bu öğreticinin dördüncü bölümünde, matematik sorunlarının `CheckTheAnswer()`yanıtlarının doğru olup olmadığını belirleyen bir yöntem yazacaksınız. Bu konu temel kodlama kavramları hakkında bir öğretici serisinin bir parçasıdır. [Öğreticiye](../ide/tutorial-2-create-a-timed-math-quiz.md)genel bir bakış için bkz.
+Bu öğreticinin dördüncü bölümünde, `CheckTheAnswer()` matematik sorunlarına verilen yanıtların doğru olup olmadığını belirleyen bir yöntemi yazacaksınız. Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 > [!NOTE]
-> Bu konu temel kodlama kavramları hakkında bir öğretici serisinin bir parçasıdır. [Öğreticiye](../ide/tutorial-2-create-a-timed-math-quiz.md)genel bir bakış için bkz.
+> Bu konu, temel kodlama kavramlarıyla ilgili bir öğretici serisinin bir parçasıdır. Öğreticiye genel bakış için bkz. [öğretici 2: zamanlı matematik testi oluşturma](../ide/tutorial-2-create-a-timed-math-quiz.md).
 
 ## <a name="to-verify-whether-the-answers-are-correct"></a>Yanıtların doğru olup olmadığını doğrulamak için
 
 > [!NOTE]
-> Visual Basic'te birlikte takip ediyorsanız, bu `Function` yöntem bir değer `Sub` döndürdüğünden, her zamanki anahtar kelime yerine anahtar kelimeyi kullanırsınız. Gerçekten bu kadar basit: bir alt bir değer döndürmez, ama bir işlev yapar.
+> Visual Basic ' de takip ediyorsanız, `Function` `Sub` Bu yöntem bir değer döndürdüğünden, her zamanki anahtar sözcüğü yerine anahtar sözcüğünü kullanırsınız. Oldukça basittir: Sub bir değer döndürmez, ancak bir işlev yapar.
 
-1. `CheckTheAnswer()` Yöntemi ekleyin. Bu yöntem, yaptığınız diğer yöntemlerle aynı doğrultuda `StartTheQuiz()`olmalıdır.
+1. Yöntemini ekleyin `CheckTheAnswer()` . Bu yöntem, yaptığınız gibi diğer yöntemleri içeren bir satır içinde olmalıdır `StartTheQuiz()` .
 
-     Bu yöntem çağrıldığında, addend1 ve addend2 değerlerini ekler ve sonucu toplam <xref:System.Windows.Forms.NumericUpDown> denetimindeki değerle karşılaştırır. Değerler eşitse, `true`yöntem . Aksi takdirde, yöntem `false`bir değer döndürür. Kodunuz aşağıdaki gibi görünmelidir.
+     Bu yöntem çağrıldığında, addend1 ve addend2 değerlerini ekler ve sonucu, Sum denetimindeki değer ile karşılaştırır <xref:System.Windows.Forms.NumericUpDown> . Değerler eşitse, yöntemi bir değeri döndürür `true` . Aksi takdirde, yöntemi bir değeri döndürür `false` . Kodunuzun aşağıdaki gibi görünmesi gerekir.
 
      [!code-vb[VbExpressTutorial3Step4#8](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_1.vb)]
      [!code-csharp[VbExpressTutorial3Step4#8](../ide/codesnippet/CSharp/step-4-add-the-checktheanswer-parens-method_1.cs)]
 
      [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
-     Ardından, zamanlayıcının <xref:System.Windows.Forms.Timer.Tick> olay işleyicisinin yeni `CheckTheAnswer()` yöntemi çağırması için yöntemdeki kodu güncelleştirerek yanıtı denetlersiniz.
+     Daha sonra, <xref:System.Windows.Forms.Timer.Tick> yeni yöntemi çağırmak için zamanlayıcının olay işleyicisine yönelik yöntemdeki kodu güncelleştirerek yanıtı kontrol edersiniz `CheckTheAnswer()` .
 
-2. `Timer1_Tick()` Yöntemdeki `if else` ifadeye aşağıdaki kodu ekleyin, böylece kullanıcı yanıtı doğru aldığında zamanlayıcı durur.
+2. Aşağıdaki kodu `if else` yöntemindeki ifadeye ekleyin `Timer1_Tick()` , böylece Zamanlayıcı, Kullanıcı yanıt hakkını aldığında duraklar.
 
      [!code-vb[VbExpressTutorial3Step4#10](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_2.vb)]
      [!code-csharp[VbExpressTutorial3Step4#10](../ide/codesnippet/CSharp/step-4-add-the-checktheanswer-parens-method_2.cs)]
 
-     Yanıt doğruysa, `CheckTheAnswer()` döndürür. `true` Olay işleyicisi zamanlayıcıyı durdurur, bir tebrik iletisi gösterir ve ardından **Başlat** düğmesini yeniden kullanılabilir hale getirir. Aksi takdirde, sınav devam ediyor.
+     Yanıt doğruysa, `CheckTheAnswer()` döndürür `true` . Olay işleyicisi zamanlayıcıyı durduruyor, kutlama iletisini gösterir ve sonra **Başlat** düğmesini tekrar kullanılabilir yapar. Aksi takdirde, test devam eder.
 
-3. Programınızı kaydedin, çalıştırın, bir test başlatın ve ekleme sorununa doğru bir yanıt sağlayın.
+3. Programınızı kaydedin, çalıştırın, bir test başlatın ve ek sorun için doğru bir yanıt sağlayın.
 
     > [!NOTE]
-    > Yanıtınızı girdiğinizde, yanıtınızı girmeye başlamadan önce varsayılan değeri seçmeniz veya sıfırı el ile silmeniz gerekir. Bu davranışı daha sonra bu öğreticide düzelteceksiniz.
+    > Yanıtınızı girerken, yanıtınızı girmeden önce varsayılan değeri seçmeniz ya da sıfırı el ile silmeniz gerekir. Bu davranışı daha sonra bu öğreticide düzelteceksiniz.
 
-     Doğru bir yanıt verdiğinizde, bir ileti kutusu açılır, **Başlat** düğmesi kullanılabilir hale gelir ve zamanlayıcı durur.
+     Doğru bir yanıt sağladığınızda, bir ileti kutusu açılır, **Başlat** düğmesi kullanılabilir hale gelir ve Zamanlayıcı durduruluyor.
 
 ## <a name="to-continue-or-review"></a>Devam etmek veya gözden geçirmek için
 
-- Bir sonraki öğretici adıma gitmek için **[Bkz. Adım 5: SayısalUpDown denetimleri için olay işleyicileri girin.](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)**
+- Sonraki öğretici adımına gitmek için bkz. 5. **[Adım: NumericUpDown denetimleri için olay Işleyicileri ekleme](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)**.
 
-- Önceki öğretici adıma dönmek için [bkz: Adım 3: Geri sayım sayıcı ekleyin.](../ide/step-3-add-a-countdown-timer.md)
+- Önceki öğretici adımına dönmek için bkz. 3. [Adım: geri sayım Zamanlayıcısı ekleme](../ide/step-3-add-a-countdown-timer.md).

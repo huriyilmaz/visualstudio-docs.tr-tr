@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 9e9f7de69cfd969db8ae905ea65bbf868cf2c88a
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904448"
 ---
 # <a name="walkthrough-use-a-shell-command-with-an-editor-extension"></a>İzlenecek yol: Düzenleyici uzantısı ile bir Shell komutu kullanma
@@ -22,7 +22,7 @@ VSPackage 'da, düzenleyiciye menü komutları gibi özellikler ekleyebilirsiniz
 
  Bu izlenecek yol, bir VSPackage 'ın Managed Extensibility Framework (MEF) bileşeni bölümüyle birlikte kullanımını gösterir. Menü komutunu Visual Studio Kabuğu ile kaydetmek için VSPackage kullanmanız gerekir. Ve, MEF bileşeni bölümüne erişmek için komutunu da kullanabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Visual Studio 2015 ' den başlayarak, Visual Studio SDK 'sını indirme merkezinden yükleyemezsiniz. Visual Studio kurulumunda isteğe bağlı bir özellik olarak eklenmiştir. VS SDK ' yı daha sonra da yükleyebilirsiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
 ## <a name="create-an-extension-with-a-menu-command"></a>Menü komutuyla uzantı oluşturma

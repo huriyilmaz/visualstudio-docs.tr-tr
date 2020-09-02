@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: d3f6299a8be52aef068746ca33e48341da55f778
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586887"
 ---
 # <a name="item-functions"></a>Öğe işlevleri
@@ -23,7 +23,7 @@ Görev ve hedeflerdeki kod, projedeki öğeler hakkında bilgi almak için (MSBu
 
 ## <a name="string-item-functions"></a>Dize öğesi işlevleri
 
-Herhangi bir öğe değerinde çalıştırmak için .NET Framework dize yöntemleri ve özellikleri kullanabilirsiniz. Yöntemler <xref:System.String> için yöntem adını belirtin. Özellikler <xref:System.String> için, "get_" öğesinden sonra özellik adını belirtin.
+Herhangi bir öğe değerinde çalıştırmak için .NET Framework dize yöntemleri ve özellikleri kullanabilirsiniz. <xref:System.String>Yöntemler için yöntem adını belirtin. <xref:System.String>Özellikler için, "get_" öğesinden sonra özellik adını belirtin.
 
 Birden çok dizeye sahip öğeler için, dize yöntemi veya özelliği her bir dizede çalışır.
 
@@ -54,12 +54,12 @@ Aşağıdaki örnekte, bu dize öğesi işlevlerinin nasıl kullanılacağı gö
 
 Aşağıdaki tabloda, öğeler için kullanılabilen iç işlevler listelenmiştir.
 
-|İşlev|Örnek|Açıklama|
+|İşlev|Örnek|Description|
 |--------------|-------------|-----------------|
 |`Count`|`@(MyItem->Count())`|Öğelerin sayısını döndürür.|
-|`DirectoryName`|`@(MyItem->DirectoryName())`|Her öğe `Path.DirectoryName` için eşdeğerini döndürür.|
-|`Distinct`|`@(MyItem->Distinct())`|Farklı `Include` değerlere sahip öğeleri döndürür. Meta veriler yoksayıldı. Karşılaştırma büyük/küçük harfe duyarlıdır.|
-|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|Farklı `itemspec` değerlere sahip öğeleri döndürür. Meta veriler yoksayıldı. Karşılaştırma büyük/küçük harfe duyarlıdır.|
+|`DirectoryName`|`@(MyItem->DirectoryName())`|`Path.DirectoryName`Her öğe için eşdeğerini döndürür.|
+|`Distinct`|`@(MyItem->Distinct())`|Farklı değerlere sahip öğeleri döndürür `Include` . Meta veriler yoksayıldı. Karşılaştırma büyük/küçük harfe duyarlıdır.|
+|`DistinctWithCase`|`@(MyItem->DistinctWithCase())`|Farklı değerlere sahip öğeleri döndürür `itemspec` . Meta veriler yoksayıldı. Karşılaştırma büyük/küçük harfe duyarlıdır.|
 |`Reverse`|`@(MyItem->Reverse())`|Öğeleri ters sırada döndürür.|
 |`AnyHaveMetadataValue`|`@(MyItem->AnyHaveMetadataValue("MetadataName", "MetadataValue"))`|Herhangi bir `boolean` öğenin belirtilen meta veri adı ve değerine sahip olup olmadığını belirtmek için öğesini döndürür. Karşılaştırma büyük/küçük harfe duyarlıdır.|
 |`ClearMetadata`|`@(MyItem->ClearMetadata())`|Meta verileri işaretsiz öğeleri döndürür. Yalnızca, `itemspec` tutulur.|
@@ -104,7 +104,7 @@ Aşağıdaki örnek, iç öğe işlevlerinin nasıl kullanılacağını gösterm
 
 ## <a name="msbuild-condition-functions"></a>MSBuild koşul işlevleri
 
-Ve `HasTrailingSlash` işlevleri `Exists` öğe işlevleri değildir. Bu öznitelikler, `Condition` özniteliğiyle birlikte kullanılmak üzere kullanılabilir. Bkz. [MSBuild koşulları](msbuild-conditions.md).
+Ve işlevleri `Exists` `HasTrailingSlash` öğe işlevleri değildir. Bu öznitelikler, özniteliğiyle birlikte kullanılmak üzere kullanılabilir `Condition` . Bkz. [MSBuild koşulları](msbuild-conditions.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -12,17 +12,17 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d6bd7a5d9622f7aea7382522dcf69ce660b61ae7
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904734"
 ---
 # <a name="walkthrough-publish-a-visual-studio-extension"></a>İzlenecek yol: Visual Studio uzantısı yayımlama
 
 Bu izlenecek yol, Visual Studio Market bir Visual Studio uzantısını nasıl yayımlayacağınızı gösterir. Uzantınızı Market 'e eklediğinizde, geliştiriciler yeni ve güncelleştirilmiş uzantılara gözatabilmeniz için **uzantıları ve güncelleştirmeleri** kullanabilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
  Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual Studio SDK 'Yı yüklemeyi](../extensibility/installing-the-visual-studio-sdk.md).
 
@@ -150,7 +150,7 @@ Uzantıyı Visual Studio Market ve bilgisayarınızdan kaldırabilirsiniz.
 
 2. Sağ üst köşede bulunan uzantıları **Yayımla** ' ya tıklayın. **TestPublish**yayımlamak için kullandığınız yayımcıyı seçin. **TestPublish** listesi görüntülenir.
 
-3. Uzantı girişine sağ tıklayın ve **Kaldır**' a tıklayın. Uzantıyı kaldırmak isteyip istemediğinizi onaylamanız istenir. **Tamam**'a tıklayın.
+3. Uzantı girişine sağ tıklayın ve **Kaldır**' a tıklayın. Uzantıyı kaldırmak isteyip istemediğinizi onaylamanız istenir. **Tamam**’a tıklayın.
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>Uzantıyı bilgisayarınızdan kaldırmak için
 

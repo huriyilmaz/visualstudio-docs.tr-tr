@@ -1,5 +1,5 @@
 ---
-title: Hata ayıklama yığın ayırma işlevleri sürümleri | Microsoft Docs
+title: Yığın ayırma Işlevlerinin hata ayıklama sürümleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -26,30 +26,30 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 13f8d8b79ecf586048aacf3cd9442c596f184be3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65691167"
 ---
 # <a name="debug-versions-of-heap-allocation-functions"></a>Öbek Atama İşlevleri Hata Ayıklama Sürümleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-C çalışma zamanı kitaplığı, özel öbek atama işlevleri hata ayıklama sürümlerini içerir. Bu işlevler sürümle aynı ada sahip sürümleri _dbg eklenir. Bu konuda bir CRT işlevini sürümü _dbg sürümü arasındaki farkları açıklar kullanarak `malloc` ve `_malloc_dbg` örnekler.  
+C çalışma zamanı kitaplığı, yığın ayırma işlevlerinin özel hata ayıklama sürümlerini içerir. Bu işlevler, _dbg eklenen sürüm sürümleriyle aynı ada sahiptir. Bu konu, bir CRT işlevinin yayın sürümü ve _dbg sürümü arasındaki farkları `malloc` ve örnekleri kullanılarak açıklar `_malloc_dbg` .  
   
- Zaman [_DEBUG](https://msdn.microsoft.com/library/a9901568-4846-4731-a404-399d947e2e7a) olan tanımlanan, CRT tüm eşler [malloc](https://msdn.microsoft.com/library/144fcee2-be34-4a03-bb7e-ed6d4b99eea0) çağrılar [_malloc_dbg](https://msdn.microsoft.com/library/c97eca51-140b-4461-8bd2-28965b49ecdb). Bu nedenle, kodu kullanarak yeniden gerekmez `_malloc_dbg` yerine `malloc` hata ayıklama sırasında avantajlardan yararlanabilir.  
+ [_DEBUG](https://msdn.microsoft.com/library/a9901568-4846-4731-a404-399d947e2e7a) TANıMLANDıĞıNDA, CRT tüm [malloc](https://msdn.microsoft.com/library/144fcee2-be34-4a03-bb7e-ed6d4b99eea0) çağrılarını [_malloc_dbg](https://msdn.microsoft.com/library/c97eca51-140b-4461-8bd2-28965b49ecdb)eşler. Bu nedenle, `_malloc_dbg` `malloc` hata ayıklarken avantajları almak için yerine kodunuzu yeniden yazmanız gerekmez.  
   
- Çağırmak isteyebilirsiniz `_malloc_dbg` açıkça ancak. Çağırma `_malloc_dbg` açıkça bazı avantajları eklemiştir:  
+ `_malloc_dbg`Ancak, açıkça çağırmak isteyebilirsiniz. `_malloc_dbg`Açıkça çağırmak bazı ek avantajlara sahiptir:  
   
-- İzleme `_CLIENT_BLOCK` ayırmaları yazın.  
+- `_CLIENT_BLOCK`Tür ayırmaları izleniyor.  
   
-- Ayırma isteği gerçekleştiği kaynak dosya ve satır numarası depolama.  
+- Kaynak dosya ve ayırma isteğinin gerçekleştiği satır numarası depolanıyor.  
   
-  Dönüştürmek istemiyorsanız, `malloc` çağrılar `_malloc_dbg`, tanımlayarak, kaynak dosya bilgileri edinebilirsiniz [_CRTDBG_MAP_ALLOC](https://msdn.microsoft.com/library/435242b8-caea-4063-b765-4a608200312b), tüm çağrıları doğrudan önişlemci harita neden `malloc` için`_malloc_dbg` çevresinde bir sarmalayıcı güvenmek yerine `malloc`.  
+  Çağrılarınızı öğesine dönüştürmek istemiyorsanız, Önişlemci 'nin `malloc` `_malloc_dbg` [_CRTDBG_MAP_ALLOC](https://msdn.microsoft.com/library/435242b8-caea-4063-b765-4a608200312b) `malloc` `_malloc_dbg` çevresindeki bir sarmalayıcı temelinde tüm çağrıları öğesine doğrudan eşlemesine neden olan _CRTDBG_MAP_ALLOC tanımlayarak kaynak dosya bilgilerini elde edebilirsiniz `malloc` .  
   
-  İstemci bloklarında ayırmaları ayrı türlerini izlemek için çağırmalıdır `_malloc_dbg` doğrudan ve `blockType` parametresi `_CLIENT_BLOCK`.  
+  İstemci bloklarında ayrı ayırma türlerini izlemek için, `_malloc_dbg` doğrudan çağırmanız ve `blockType` parametresini olarak ayarlamanız gerekir `_CLIENT_BLOCK` .  
   
-  _DEBUG tanımlı değil, çağrılar `malloc` değil etkilenir, çağrılar `_malloc_dbg` için çözümlendiği `malloc`, tanımını [_CRTDBG_MAP_ALLOC](https://msdn.microsoft.com/library/435242b8-caea-4063-b765-4a608200312b) göz ardı edilir ve kaynak dosya bilgileri saklamanıza ayırma isteği belirtilmedi. Çünkü `malloc` blok türü parametresi yok, için istekleri `_CLIENT_BLOCK` türler standart ayırmaları kabul edilir.  
+  _DEBUG tanımlanmadığında, çağrısı olumsuz değildir, öğesine yapılan `malloc` çağrılar `_malloc_dbg` olarak çözümlenir `malloc` , [_CRTDBG_MAP_ALLOC](https://msdn.microsoft.com/library/435242b8-caea-4063-b765-4a608200312b) tanımı yok sayılır ve ayırma isteğiyle ilgili kaynak dosya bilgileri sağlanmaz. `malloc`Bir blok türü parametresine sahip olmadığından, `_CLIENT_BLOCK` türlerin istekleri Standart ayırma olarak değerlendirilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [CRT Hata Ayıklama Teknikleri](../debugger/crt-debugging-techniques.md)

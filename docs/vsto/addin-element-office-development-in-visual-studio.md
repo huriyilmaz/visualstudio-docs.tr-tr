@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: cf922799301aef67ee70c480dd9e0823382cbd47
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543773"
 ---
 # <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;AddIn &gt; öğesi (Visual Studio 'Da Office geliştirme)
@@ -70,7 +70,7 @@ ms.locfileid: "85543773"
 
 ## <a name="document-level-customization-example"></a>Belge düzeyi özelleştirmesi örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki kod örneği, kullanılarak dağıtılan belge düzeyi Office çözümünde **eklenti öğesini gösterir** [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod
@@ -134,7 +134,7 @@ ms.locfileid: "85543773"
 
 ## <a name="vsto-add-in-example"></a>VSTO eklentisi örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki kod örneği, kullanılarak dağıtılan uygulama düzeyi Office çözümünde **eklenti öğesini gösterir** [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] . Bu kod örneği, [Office çözümleri Için uygulama bildirimlerinde](../vsto/application-manifests-for-office-solutions.md)sunulan daha büyük bir örneğin bir parçasıdır.
 
 ### <a name="code"></a>Kod

@@ -15,10 +15,10 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c57fab57b4f9baf24212e2806d6d4acd913dff91
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586740"
 ---
 # <a name="debugging-gpu-code"></a>GPU Kodunda Hata Ayıklama
@@ -27,7 +27,7 @@ ms.locfileid: "82586740"
 Grafik işleme birimi (GPU) üzerinde çalışan C++ kodunda hata ayıklaması yapabilirsiniz. Visual Studio 'da GPU hata ayıklama desteği, yarış algılama, işlem başlatma ve bunlara ekleme ve hata ayıklama pencerelerini tümleştirme içerir.  
   
 ## <a name="supported-platforms"></a>Desteklenen Platformlar  
- Hata [!INCLUDE[win7](../includes/win7-md.md)]ayıklama, [!INCLUDE[win8](../includes/win8-md.md)] [!INCLUDE[winsvr08_r2](../includes/winsvr08-r2-md.md)],, ve [!INCLUDE[winserver8](../includes/winserver8-md.md)]üzerinde desteklenir. Yazılım öykünücüsünde [!INCLUDE[win8](../includes/win8-md.md)]hata ayıklama için veya [!INCLUDE[winserver8](../includes/winserver8-md.md)] gerekir. Donanımda hata ayıklama için, grafik kartınızın sürücülerini yüklemelisiniz. Tüm donanım satıcıları tüm hata ayıklayıcı özelliklerini uygulamaz. Sınırlamalar için satıcı belgelerine bakın.  
+ Hata ayıklama,,, ve üzerinde desteklenir [!INCLUDE[win7](../includes/win7-md.md)] [!INCLUDE[win8](../includes/win8-md.md)] [!INCLUDE[winsvr08_r2](../includes/winsvr08-r2-md.md)] [!INCLUDE[winserver8](../includes/winserver8-md.md)] . Yazılım öykünücüsünde hata ayıklama için [!INCLUDE[win8](../includes/win8-md.md)] veya [!INCLUDE[winserver8](../includes/winserver8-md.md)] gerekir. Donanımda hata ayıklama için, grafik kartınızın sürücülerini yüklemelisiniz. Tüm donanım satıcıları tüm hata ayıklayıcı özelliklerini uygulamaz. Sınırlamalar için satıcı belgelerine bakın.  
   
 > [!NOTE]
 > Visual Studio 'da GPU hata ayıklamayı desteklemek isteyen bağımsız donanım satıcıları, VSD3DDebug arabirimini uygulayan ve kendi sürücülerini hedefleyen bir DLL oluşturmanız gerekir.  

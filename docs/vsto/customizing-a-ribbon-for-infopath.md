@@ -14,14 +14,14 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 76ec069ef71890a69fdbd41f40bd91cf75d93cd4
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71255515"
 ---
 # <a name="customize-a-ribbon-for-infopath"></a>InfoPath için bir şeridi özelleştirme
-  Microsoft Office InfoPath ' te şeridi özelleştirdiğinizde, özel şeritlerinizin uygulamada nerede görüneceğini göz önünde bulundurmanız gerekir. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)], aşağıdaki üç InfoPath uygulama penceresi türünde şeridi görüntüleyebilir:
+  Microsoft Office InfoPath ' te şeridi özelleştirdiğinizde, özel şeritlerinizin uygulamada nerede görüneceğini göz önünde bulundurmanız gerekir. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] , aşağıdaki üç InfoPath uygulama penceresi türünde şeridi görüntüleyebilir:
 
 - Tasarım modunda açılan bir form şablonu görüntüleyen Windows.
 
@@ -49,20 +49,20 @@ ms.locfileid: "71255515"
 |**Microsoft. InfoPath. Editor**|Form şablonunu temel alan bir form görüntüleyen pencereler.|
 |**Microsoft. InfoPath. PrintPreview**|Baskı Önizleme penceresi.|
 
- Projeye birden fazla şerit ekleyebilirsiniz. Birden fazla şerit bir Şerit kimliğini paylaşıyorsa, çalışma zamanında hangi Şeritin görüntüleneceğini belirtmek `ThisAddin` için projenizin sınıfındaki `CreateRibbonExtensibilityObject` yöntemi geçersiz kılın. Daha fazla bilgi için bkz. [Şerit 'e genel bakış](../vsto/ribbon-overview.md).
+ Projeye birden fazla şerit ekleyebilirsiniz. Birden fazla şerit bir şerit KIMLIĞINI paylaşıyorsa, `CreateRibbonExtensibilityObject` `ThisAddin` çalışma zamanında hangi Şeritin görüntüleneceğini belirtmek için projenizin sınıfındaki yöntemi geçersiz kılın. Daha fazla bilgi için bkz. [Şerit 'e genel bakış](../vsto/ribbon-overview.md).
 
 ## <a name="specify-the-ribbon-type-by-using-ribbon-xml"></a>Şerit XML kullanarak Şerit türünü belirtme
- **Şerit (XML)** öğesini kullanıyorsanız, <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> yöntemindeki *ribbonID* parametresinin değerini kontrol edin ve uygun Şeriti döndürün.
+ **Şerit (XML)** öğesini kullanıyorsanız, yöntemindeki *ribbonID* parametresinin değerini kontrol edin <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> ve uygun Şeriti döndürün.
 
- <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> Yöntemi, Visual Studio tarafından Şerit kod dosyasında otomatik olarak oluşturulur. *RibbonID* parametresi, açılan InfoPath penceresinin türünü tanımlayan bir dizedir.
+ <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A>Yöntemi, Visual Studio tarafından Şerit kod dosyasında otomatik olarak oluşturulur. *RibbonID* parametresi, açılan InfoPath penceresinin türünü tanımlayan bir dizedir.
 
- Aşağıdaki kod örneği, yalnızca tasarım modunda form şablonu görüntüleyen bir pencerede özel bir şerit 'in nasıl görüntüleneceğini gösterir. Görüntülenecek Şerit, Şerit sınıfında oluşturulan `GetResourceText()` yönteminde belirtilir. Şerit sınıfı hakkında daha fazla bilgi için bkz. [RIBBON XML](../vsto/ribbon-xml.md).
+ Aşağıdaki kod örneği, yalnızca tasarım modunda form şablonu görüntüleyen bir pencerede özel bir şerit 'in nasıl görüntüleneceğini gösterir. Görüntülenecek Şerit, `GetResourceText()` Şerit sınıfında oluşturulan yönteminde belirtilir. Şerit sınıfı hakkında daha fazla bilgi için bkz. [RIBBON XML](../vsto/ribbon-xml.md).
 
  [!code-csharp[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs#1)]
  [!code-vb[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Çalışma zamanında Şerite erişin](../vsto/accessing-the-ribbon-at-run-time.md)
-- [Şerite Genel Bakış](../vsto/ribbon-overview.md)
+- [Şerite genel bakış](../vsto/ribbon-overview.md)
 - [Şerit Tasarımcısı](../vsto/ribbon-designer.md)
 - [Şerit XML](../vsto/ribbon-xml.md)

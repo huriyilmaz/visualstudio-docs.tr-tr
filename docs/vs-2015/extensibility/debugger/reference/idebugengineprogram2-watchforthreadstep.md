@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineProgram2::WatchForThreadStep | Microsoft Docs
+title: 'IDebugEngineProgram2:: WatchForThreadStep | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 59489af368c2e95a2d3cc93edbd6f7ab02a1c156
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195650"
 ---
 # <a name="idebugengineprogram2watchforthreadstep"></a>IDebugEngineProgram2::WatchForThreadStep
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Yürütme için izler (veya yürütme için izlemeyi durdurur) belirli bir iş parçacığı üzerinde gerçekleşmesi için.  
+Verilen iş parçacığında yürütmeyi izler (veya yürütme için izlemeyi Durdur).  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT WatchForThreadStep(   
@@ -46,24 +46,24 @@ int WatchForThreadStep( 
   
 #### <a name="parameters"></a>Parametreler  
  `pOriginatingProgram`  
- [in] Bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) basamaklı program temsil eden nesne.  
+ 'ndaki Bulanan programı temsil eden bir [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesi.  
   
  `dwTid`  
- [in] İzlemek için iş parçacığı tanımlayıcısını belirtir.  
+ 'ndaki İzlenecek iş parçacığının tanımlayıcısını belirtir.  
   
  `fWatch`  
- [in] Sıfır olmayan (`TRUE`) anlamına gelir Başlat tarafından tanımlanan iş parçacığı üzerindeki yürütme için izlemeyi `dwTid`; Aksi takdirde, sıfır (`FALSE`) anlamına gelir, üzerinde yürütme için İzlemeyi Durdur `dwTid`.  
+ 'ndaki Sıfır olmayan ( `TRUE` ), tarafından tanımlanan iş parçacığında yürütme için izlemeye başlayan anlamına gelir `dwTid` ; Aksi takdirde, sıfır ( `FALSE` ), üzerinde yürütme İzlemeyi Durdur anlamına gelir `dwTid` .  
   
  `dwFrame`  
- [in] Adım türü denetleyen bir çerçeve dizinini belirtir. Bu olduğunda değeri sıfır (0) "adımla" adımı türüdür ve iş parçacığı tarafından tanımlanan her program durması gerektiğini `dwTid` yürütür. Zaman `dwFrame` sıfır olan "Atla" ve yalnızca tarafından iş parçacığı tanıtılan program durması gerektiğini adım türüdür `dwTid` dizini eşit veya daha yığın çerçeve çalışıyor `dwFrame`.  
+ 'ndaki Adım türünü denetleyen bir çerçeve dizini belirtir. Bu değer sıfır (0) olduğunda, adım türü "adımla" ve program her iş parçacığının yürütüldüğü her seferinde durdurulmalıdır `dwTid` . `dwFrame`Sıfır dışında bir adım türü "adımla" olur ve program yalnızca tarafından tanımlanan iş parçacığı, `dwTid` dizini yığına eşit veya daha yüksek olan bir çerçevede çalışıyorsa durmalıdır `dwFrame` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ne zaman oturum hata ayıklama Yöneticisi (SDM) tarafından tanımlanan, bir program adımları `pOriginatingProgram` parametresi bildirir diğer tüm eklenmiş programlardan bu yöntemi çağırarak.  
+ Oturum hata ayıklama Yöneticisi (SDM), parametre tarafından tanımlanan bir programın yaptığı adımlarda, `pOriginatingProgram` Bu yöntemi çağırarak diğer tüm ekli programları bilgilendirir.  
   
- Bu yöntem, yalnızca aynı iş parçacığı Adımlama için geçerlidir.  
+ Bu yöntem yalnızca aynı iş parçacığı adımlaması için geçerlidir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugEngineProgram2](../../../extensibility/debugger/reference/idebugengineprogram2.md)   

@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c98bec69631b852521f682a24dd1b5ce6ddf0424
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662566"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Nasıl yapılır: Program Kodunda Dosyadan Model Açma
@@ -21,14 +21,14 @@ ms.locfileid: "72662566"
 
 DSL modellerini herhangi bir uygulamada açabilirsiniz.
 
- @No__t_0 uzantısından bu amaçla ModelBus kullanabilirsiniz. ModelBus bir modeldeki model veya öğelere başvurmak ve taşındıktan sonra modeli bulmak için standart bir mekanizma sağlar. Daha fazla bilgi için bkz. [Visual Studio ModelBus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
+ Bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uzantıdan, bu amaçla ModelBus kullanabilirsiniz. ModelBus bir modeldeki model veya öğelere başvurmak ve taşındıktan sonra modeli bulmak için standart bir mekanizma sağlar. Daha fazla bilgi için bkz. [Visual Studio ModelBus kullanarak modelleri tümleştirme](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
 
 ## <a name="target-framework"></a>Hedef Çerçeve
  Uygulama projenizin **hedef çerçevesini** **.NET Framework 4**olarak ayarlayın.
 
 #### <a name="to-set-the-target-framework"></a>Hedef Framework 'ü ayarlamak için
 
-1. DSL modelini okumak istediğiniz uygulama için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] projesi açın.
+1. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]DSL modeli okumak istediğiniz uygulama için projeyi açın.
 
 2. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
@@ -37,25 +37,25 @@ DSL modellerini herhangi bir uygulamada açabilirsiniz.
 > [!NOTE]
 > Proje oluşturma iletişim kutusunda **.NET Framework 4** ' ü seçtiyseniz bile bunu yapmanız gerekebilir. Hedef Framework **.NET Framework 4 Istemci profili**olmamalıdır.
 
-## <a name="references"></a>Referanslar
+## <a name="references"></a>Başvurular
  Bu başvuruları [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] uygulama projenize eklemeniz gerekir:
 
 - `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 
-  - **Başvuru Ekle** iletişim kutusunda **.net** sekmesinde bunu görmüyorsanız, **gözden** geçirme sekmesine tıklayın ve `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\` ' a gidin.
+  - **Başvuru Ekle** iletişim kutusunda **.net** sekmesinde bunu görmüyorsanız, **Gözden** geçirme sekmesine tıklayın ve öğesine gidin `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\` .
 
-- Dsl projenizin bin klasörü altında bulacağınız DSL derlemenizin olması gerekir. Genellikle kendi adı şu biçimdedir: *yourcompany*. *Projeniz* `.Dsl.dll`.
+- Dsl projenizin bin klasörü altında bulacağınız DSL derlemenizin olması gerekir. Genellikle kendi adı şu biçimdedir: *yourcompany*. *Yourprojem* `.Dsl.dll` .
 
 ## <a name="important-classes-in-the-dsl"></a>DSL 'deki önemli sınıflar
  DSL 'yi okuyan kodu yazmadan önce, DSL 'niz tarafından oluşturulan sınıfların bazılarının adlarını bilmeniz gerekir. DSL çözümünüzde **DSL** projesini açın ve **GeneratedCode** klasörüne bakın. Alternatif olarak, proje **başvurularında**DSL derlemesine çift tıklayın ve **nesne TARAYıCıSı**' de dsl ad alanını açın.
 
  Şunları belirlemeniz gereken sınıflardır:
 
-- *YourDslRootClass* -bu, `DslDefinition.dsl` kök sınıfın adıdır.
+- *YourDslRootClass* -bu, içindeki kök sınıfın adıdır `DslDefinition.dsl` .
 
-- *Yourdslname* `SerializationHelper`-Bu sınıf DSL projenizdeki `SerializationHelper.cs` tanımlanmıştır.
+- *Yourdslname* `SerializationHelper` -Bu sınıf `SerializationHelper.cs` DSL projenizde tanımlanmıştır.
 
-- *Yourdslname* `DomainModel`-Bu sınıf DSL projenizdeki `DomainModel.cs` tanımlanmıştır.
+- *Yourdslname* `DomainModel` -Bu sınıf `DomainModel.cs` DSL projenizde tanımlanmıştır.
 
 ## <a name="reading-from-a-file"></a>Bir dosyadan okuma
  Aşağıdaki örnek, önemli sınıfların aşağıdaki gibi olduğu bir DSL okumak için tasarlanmıştır:

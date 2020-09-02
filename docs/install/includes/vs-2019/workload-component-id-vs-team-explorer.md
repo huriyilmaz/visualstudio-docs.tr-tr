@@ -11,10 +11,10 @@ ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
 ms.openlocfilehash: 276a99c6d9f2c1245137cc99d943fe63eb1a3711
-ms.sourcegitcommit: 78face15e71c305a2146358df51f8f1fefe3388f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87805714"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2019"></a>Visual Studio çekirdek Düzenleyicisi (Visual Studio Takım Gezgini 2019 ile birlikte)
@@ -25,7 +25,7 @@ ms.locfileid: "87805714"
 
 ### <a name="components-included-by-this-workload"></a>Bu iş yükünün içerdiği bileşenler
 
-Bileşen KIMLIĞI | Ad | Sürüm | Bağımlılık türü
+Bileşen KIMLIĞI | Name | Sürüm | Bağımlılık türü
 --- | --- | --- | ---
 Microsoft. VisualStudio. Component. CoreEditor | Visual Studio temel Düzenleyicisi | 16.1.28811.260 | Gerekli
 Microsoft. VisualStudio. Component. Startpagedenemeler. cpp | C++ kullanıcıları için Visual Studio başlangıç sayfası | 16.0.28315.86 | İsteğe Bağlı
@@ -34,6 +34,6 @@ Microsoft. VisualStudio. Component. Startpagedenemeler. cpp | C++ kullanıcılar
 
 Bunlar herhangi bir iş yüküne dahil olmayan, ancak tek bir bileşen olarak seçilebilir olan bileşenlerdir.
 
-Bileşen KIMLIĞI | Ad | Sürüm
+Bileşen KIMLIĞI | Name | Sürüm
 --- | --- | ---
 yok | yok | yok

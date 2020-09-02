@@ -12,20 +12,20 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 75d96098e8444aac9a4fc6f895099435b54f640b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180323"
 ---
 # <a name="keybinding-element"></a>KeyBinding Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Komut için klavye kısayolları KeyBinding öğesi belirtir.  
+KeyBinding öğesi komutların klavye kısayollarını belirler.  
   
- Komutlar tek ve çift tuş bağlamaları ilişkili olabilir. Tek bir anahtar bağlaması, CTRL + S örneğidir **Kaydet** komutu. Bir komut tetiklemek için iki ardışık tuş birleşimleri çift anahtar bağlamalarını gerektirir. CTRL + K, CTRL + K, bir yer işareti ayarlamak için bir çift anahtar bağlama örneğidir.  
+ Komutlarda kendileriyle ilişkilendirilmiş tek ve çift anahtar bağlamaları bulunabilir. Tek tuşla bağlama bir örnek **Kaydet** komutu için CTRL + S ' dir. Çift anahtar bağlamaları bir komutun tetiklenmesi için iki ardışık anahtar kombinasyonu gerektirir. Çift anahtar bağlamasının bir örneği CTRL + K, CTRL + K, bir yer işareti ayarlamak için bir örnektir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Keybinding guid="MyGuid" id="MyId" Editor="MyEditor" key1="B" key2="x" mod1="Control" mod2="Alt" />  
@@ -38,28 +38,28 @@ Komut için klavye kısayolları KeyBinding öğesi belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|guid|Gerekli.|  
-|kimlik|Gerekli.|  
-|düzenleyici|Gerekli. GUID Düzenleyici klavye kısayolu etkin olacağı düzenleme bağlamı gösterir. Genel bağlama kapsam "guidVSStd97" değeridir.|  
-|key1|Gerekli. Geçerli değerler tüm typable alfasayısal karakterler ve ayrıca 0 x ve VK_constants önünde iki basamaklı onaltılık değerlerini içerir.|  
-|Değişiklik1|İsteğe bağlı. Herhangi bir bileşimini boşlukla ayrılmış SHIFT CTRL ve ALT.|  
-|key2|İsteğe bağlı. Geçerli değerler tüm typable alfasayısal karakterler ve ayrıca 0 x ve VK_constants önünde iki basamaklı onaltılık değerlerini içerir.|  
-|mod2|İsteğe bağlı. Herhangi bir bileşimini boşlukla ayrılmış SHIFT CTRL ve ALT.|  
-|Öykünücü|İsteğe bağlı.|  
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|guid|Gereklidir.|  
+|kimlik|Gereklidir.|  
+|düzenleyici|Gereklidir. Düzenleyici GUID 'SI, bu klavye kısayolunun etkin olacağı düzenleme bağlamını gösterir. Genel bağlama kapsamı değeri "guidVSStd97" değeridir.|  
+|key1|Gereklidir. Geçerli değerler, tüm tyıılabilen alfasayısal değerleri ve bundan önce 0x ve VK_constants olan iki basamaklı onaltılık değerler içerir.|  
+|mod1|İsteğe bağlı. Boşluğa göre ayrılan CTRL, ALT ve SHIFT 'in herhangi bir birleşimi.|  
+|key2|İsteğe bağlı. Geçerli değerler, tüm tyıılabilen alfasayısal değerleri ve bundan önce 0x ve VK_constants olan iki basamaklı onaltılık değerler içerir.|  
+|mod2|İsteğe bağlı. Boşluğa göre ayrılan CTRL, ALT ve SHIFT 'in herhangi bir birleşimi.|  
+|öykünücü|İsteğe bağlı.|  
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|Üst öğe||  
+|Üst||  
 |Ek Açıklama||  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[KeyBindings Öğesi](../extensibility/keybindings-element.md)|Tuş öğeleri gruplandırır ve diğer KeyBindings gruplandırmaları.|  
+|[KeyBindings Öğesi](../extensibility/keybindings-element.md)|Anahtar bağlama öğelerini ve diğer KeyBindings gruplandırmaları gruplandırır.|  
   
 ## <a name="example"></a>Örnek  
   

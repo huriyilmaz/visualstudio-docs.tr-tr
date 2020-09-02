@@ -9,23 +9,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 389328e97f29d97962353e86f73c39c7c5459bfc
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75592418"
 ---
 # <a name="xml-document-validation"></a>XML belgesini doğrulama
 
 XML Düzenleyicisi, XML 1,0 söz dizimini denetler ve ayrıca siz yazarken veri doğrulaması gerçekleştirir. Düzenleyici bir belge türü tanımı (DTD) veya şema kullanarak doğrulayabilir. Kırmızı dalgalı alt çizgiler, XML 1,0 düzgün biçimlendirilmiş hataları vurgular. Mavi dalgalı alt çizgiler, DTD veya şema doğrulamasına göre anlam hataları gösterir. Her hatanın hata listesinde ilişkili bir girişi vardır. Fareyi dalgalı alt çizginin üzerinde duraklatarak hata mesajını da görüntüleyebilirsiniz.
 
-Doğrulamada kullanılan şemalar, derlenmiş bir şemanın `targetNamespace` öğenin xmlns bildirimiyle eşleştirerek bulunur. Derlenmiş şemalar, öncelik sırasına göre listelenen aşağıdaki konumlardan birinden yüklenir:
+Doğrulamada kullanılan şemalar, `targetNamespace` derlenmiş bir şemanın, öğenin xmlns bildirimiyle eşleşmesi ile bulunur. Derlenmiş şemalar, öncelik sırasına göre listelenen aşağıdaki konumlardan birinden yüklenir:
 
 - Belge **özellikleri** penceresinin **şemalar** alanında belirtilen dosya adından.
 
 - Satır içi şema veya DTD.
 
-- Dış DTD veya `xsd:schemaLocation` ve `xsd:noNamespaceSchemaLocation` özniteliği
+- Dış DTD veya `xsd:schemaLocation` and `xsd:noNamespaceSchemaLocation` özniteliği
 
 - "X-Schema" XDR şema ad alanı URI 'SI.
 

@@ -21,21 +21,21 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cb42067bb4c88777a6c25ace71f53b9d9b3aa36b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72745761"
 ---
 # <a name="assertion-failed-dialog-box"></a>Onaylama Başarısız İletişim Kutusu
 Bir onaylama deyimi, programınızda belirli bir noktada doğru tutmayı düşündüğünüz bir koşulu belirtir. Bu koşul doğru değilse, onaylama başarısız olur, programınızın yürütülmesi kesintiye uğrar ve bu iletişim kutusu görüntülenir.
 
-|Şuna tıklayın|Bitiş|
+|Eski kimlik doğrulamasını engelleme hakkında daha fazla bilgi edinmek için|Amaç|
 |-----------|--------|
-|retry|Onaylama sırasında hata ayıklayın veya yardım alın.|
-|Yoksay|Onayı yoksayın ve programı çalıştırmaya devam edin.|
-|Durdurulmaya|Programın yürütülmesini durdurur ve hata ayıklama oturumunu sonlandırın.|
+|Yeniden Dene|Onaylama sırasında hata ayıklayın veya yardım alın.|
+|Yoksayma|Onayı yoksayın ve programı çalıştırmaya devam edin.|
+|Durdurma|Programın yürütülmesini durdurur ve hata ayıklama oturumunu sonlandırın.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C/C++ Onaylamaları](../debugger/c-cpp-assertions.md)
+- [C/C++ Onayları](../debugger/c-cpp-assertions.md)

@@ -9,10 +9,10 @@ caps.latest.revision: 32
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0ec4c0a9594202b6755500d683c426238264aec3
-ms.sourcegitcommit: da5ebc29544fdbdf625ab4922c9777faf2bcae4a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82586974"
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>Kodlanmış UI Testleriyle SharePoint 2010 Uygulamalarını Test Etme
@@ -53,14 +53,14 @@ Kodlanmış UI testlerini bir SharePoint uygulamasına dahil etmek, Kullanıcı 
 > [!WARNING]
 > Herhangi bir Excel hücresine metin girme, ardından bir ok tuşu eyleminden, doğru şekilde kayıt yapmaz. Hücreleri seçmek için fareyi kullanın.
 
- Eylemleri boş bir hücreye kaydediyorsanız, hücreyi çift tıklayarak ve ardından bir metin ayarla işlemi gerçekleştirerek kodu değiştirmeniz gerekir. Bu, hücreye tıkladığınızda ve ardından herhangi bir klavye eyleminin ardından hücre `textarea` içinde etkinleştiğinden gereklidir. Yalnızca boş hücrede `setvalue` kaydetmek, `editbox` hücreye tıklanana kadar mevcut olmayan öğesini arar. Örneğin:
+ Eylemleri boş bir hücreye kaydediyorsanız, hücreyi çift tıklayarak ve ardından bir metin ayarla işlemi gerçekleştirerek kodu değiştirmeniz gerekir. Bu, hücreye tıkladığınızda ve ardından herhangi bir klavye eyleminin ardından hücre içinde etkinleştiğinden gereklidir `textarea` . Yalnızca `setvalue` boş hücrede kaydetmek, `editbox` hücreye tıklanana kadar mevcut olmayan öğesini arar. Örneğin:
 
 ```csharp
 Mouse.DoubliClick(uiItemCell,new Point(31,14));
 uiGridKeyboardInputEdit.Text=value;
 ```
 
- Boş olmayan bir hücrede eylem kaydediyorsanız, bir hücreye metin eklediğiniz anda, hücrenin alt öğesi olarak yeni \<bir div> denetimi eklendikçe, kaydetme biraz daha karmaşıktır. Yeni \<div> denetimi, az önce girdiğiniz metni içerir. Kaydedicinin, yeni \<div> denetimine eylemleri kaydetmesi gerekir; Ancak, test girilene kadar yeni \<div> denetimi mevcut olmadığından, bu yapılamıyor. Bu sorunu karşılamak için aşağıdaki kod değişikliklerini el ile yapmanız gerekir.
+ Boş olmayan bir hücrede eylem kaydediyorsanız, bir hücreye metin eklediğiniz anda, \<div> hücrenin alt öğesi olarak yeni bir denetim eklenir, bu durumda kaydetme biraz daha karmaşıktır. Yeni \<div> Denetim, az önce girdiğiniz metni içerir. Kaydedicinin yeni denetime eylemleri kaydetmesi gerekir \<div> ; ancak, \<div> Test girilene kadar yeni denetim mevcut olmadığından, bu işlem gerçekleştirilemiyor. Bu sorunu karşılamak için aşağıdaki kod değişikliklerini el ile yapmanız gerekir.
 
 1. Hücre başlatma ve oluşturma `RowIndex` ve `ColumnIndex` birincil özellikler 'e gidin:
 
@@ -69,7 +69,7 @@ uiGridKeyboardInputEdit.Text=value;
     this.mUIItemCell.SearchProperties[HtmlCell.PropertyNames. ColumnIndex] = "3";
     ```
 
-2. Hücrenin `HtmlDiv` alt öğesini bulun:
+2. `HtmlDiv`Hücrenin alt öğesini bulun:
 
     ```csharp
     private UITestControl getControlToDoubleClick(HtmlCell cell)
@@ -85,13 +85,13 @@ uiGridKeyboardInputEdit.Text=value;
 
     ```
 
-3. Üzerinde `HtmlDiv`fare çift tıklama eylemi için kod ekleyin:
+3. Üzerinde fare çift tıklama eylemi için kod ekleyin `HtmlDiv` :
 
     ```csharp
     Mouse.DoubleClick(uIItemPane, new Point(31, 14)); )
     ```
 
-4. Metin ayarlamak için kod ekleyin `TextArea`:
+4. Metin ayarlamak için kod ekleyin `TextArea` :
 
     ```csharp
     uIGridKeyboardInputEdit.Text = value; }
@@ -108,13 +108,13 @@ uiGridKeyboardInputEdit.Text=value;
 
 3. [Fiddler](http://www.fiddler2.com/fiddler2/)'i yükler. Bu, yalnızca HTTP trafiğini yakalayan ve günlüğe kaydeden bir araçtır.
 
-4. [FiddlerXap projesini](https://40jajy3iyl373v772m19fybm-wpengine.netdna-ssl.com/wp-content/uploads/sites/6/2019/02/FiddlerXapProxy.zip)indirin. Dosya sıkıştırmasını açın, oluşturun ve "CopySLHelper. bat" betiğini çalıştırarak, Fiddler aracını kullanırken Silverlight Web bölümlerini test etmek için gerekli olan yardımcı DLL 'yi çalıştırın.
+4. [FiddlerXap projesini](https://40jajy3iyl373v772m19fybm-wpengine.netdna-ssl.com/wp-content/uploads/sites/6/2019/02/FiddlerXapProxy.zip)indirin. Dosya sıkıştırmasını açın, derleyin ve "CopySLHelper.bat" betiğini çalıştırarak, Fiddler aracını kullanırken Silverlight Web bölümlerini test etmek için gerekli olan yardımcı DLL 'i yükleyebilirsiniz.
 
    Makinenizi ayarladıktan sonra, SharePoint 2010 uygulamanızı Silverlight Web parçalarıyla teste başlamak için şu adımları izleyin:
 
 #### <a name="testing-silverlight-web-parts"></a>Silverlight Web parçalarını test etme
 
-1. Fiddler'ı başlatın.
+1. Fiddler'ı Başlatın.
 
 2. Tarayıcı önbelleğini temizleyin. Bu gereklidir çünkü Silverlight UI Otomasyon Yardımcısı DLL 'sini içeren XAP dosyası tipik olarak önbelleğe alınır. Değiştirilen XAP dosyasının çekildiğinizden emin olmak istiyoruz, bu nedenle tarayıcı önbelleğini temizliyoruz.
 
@@ -122,7 +122,7 @@ uiGridKeyboardInputEdit.Text=value;
 
 4. Kaydediciyi başlatın ve normal bir Web uygulaması testi için yaptığınız gibi kod oluşturun.
 
-5. Oluşturulan kodun Microsoft. VisualStudio. TestTools. UITest. Extension. Silverlight. dll dosyasına başvurduğundan emin olmanız gerekir.
+5. Oluşturulan kodun Microsoft.VisualStudio.TestTools.UITest.Extension.Silverlight.dll başvurduğundan emin olmanız gerekir.
 
      Daha fazla bilgi için bkz. [Visual Studio 2012 Ile SharePoint 2010 Için UI test etme](https://devblogs.microsoft.com/devops/ui-testing-sharepoint-2010-with-visual-studio-2012/)
 

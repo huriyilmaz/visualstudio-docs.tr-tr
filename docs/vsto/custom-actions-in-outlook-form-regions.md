@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 817cf9fe8698c2908e873246a8971f90fe72b460
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71254450"
 ---
 # <a name="custom-actions-in-outlook-form-regions"></a>Outlook form bölgelerindeki özel eylemler
@@ -28,7 +28,7 @@ ms.locfileid: "71254450"
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
 ## <a name="add-custom-actions-to-a-form-region"></a>Form bölgesine özel eylemler ekleme
- Form bölgesine özel eylem eklemek için **özel eylemler** iletişim kutusunu kullanın. **Çözüm Gezgini**Içindeki form bölgesini seçerek **özel eylemler** Iletişim kutusunu açabilir, **Özellikler penceresinde** **bildirim** düğümünü genişleterek, **CustomActions** özelliğini seçip, ardından üç nokta düğmesi (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET mobil tasarımcı elips")).
+ Form bölgesine özel eylem eklemek için **özel eylemler** iletişim kutusunu kullanın. **Çözüm Gezgini**Içindeki form bölgesini seçip **Özellikler penceresinde** **bildirim** düğümünü genişleterek, **CustomActions** özelliğini seçerek ve ardından üç nokta düğmesine (![ASP.net Mobile Designer elips](../sharepoint/media/mwellipsis.gif "ASP.NET Mobile Designer elips")) tıklayarak **özel eylemler** iletişim kutusunu açabilirsiniz.
 
  Bir *hedef form*belirtmek Için **özel eylemler** iletişim kutusunu kullanabilirsiniz. Hedef form, Kullanıcı özel eylemi çalıştırdığında görünen formdur.
 
@@ -40,12 +40,12 @@ ms.locfileid: "71254450"
 |--------------|-----------------|
 |**AddressLike**|Hedef formun nasıl giderilecektir belirtir.|
 |**Gövde**|Özgün öğenin gövdesinin hedef forma nasıl ekleneceğini belirtir.|
-|**Etkinletir**|Özel eylemin etkin olup olmadığını gösterir. Bu özellik **false**olarak ayarlandıysa, özel eylem devre dışıdır.|
-|**Yöntemi**|Özel eylem yürütüldüğünde kullanılabilir yanıt türünü belirtir. Özel eylem formu gönderebilir, formu açabilir veya formu göndermek ya da açmak isteyip istemedikleri konusunda kullanıcıyı uyarır.|
+|**Etkin**|Özel eylemin etkin olup olmadığını gösterir. Bu özellik **false**olarak ayarlandıysa, özel eylem devre dışıdır.|
+|**Yöntem**|Özel eylem yürütüldüğünde kullanılabilir yanıt türünü belirtir. Özel eylem formu gönderebilir, formu açabilir veya formu göndermek ya da açmak isteyip istemedikleri konusunda kullanıcıyı uyarır.|
 |**Ad**|Koddaki bu özel eyleme başvurmak için kullanabileceğiniz dahili adı belirtir.|
 |**ShowOnRibbon**|Özel eylemin orijinal öğenin şeridinde görüntülenip görüntülenmeyeceğini gösterir.|
 |**SubjectPrefix**|Hedef formun konu satırının başlangıcına eklenen metni belirtir.|
-|**TargetForm**|Hedef formun ileti sınıfı adını belirtir. Örneğin, IPM yazın **.** Görev formunu açmak için görev.|
+|**TargetForm**|Hedef formun ileti sınıfı adını belirtir. Örneğin, IPM yazın **. ** Görev formunu açmak için görev.|
 |**Başlık**|Özel eylem düğmesinin etiketini belirtir.|
 
 ## <a name="customize-a-custom-action-at-run-time"></a>Çalışma zamanında özel bir eylemi özelleştirme

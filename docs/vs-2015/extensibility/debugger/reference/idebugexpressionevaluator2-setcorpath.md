@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::SetCorPath | Microsoft Docs
+title: 'IDebugExpressionEvaluator2:: SetCorPath | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c1508c7c0936f8ed8d92852e5b75c073cb9d85a4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68179920"
 ---
 # <a name="idebugexpressionevaluator2setcorpath"></a>IDebugExpressionEvaluator2::SetCorPath
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Hata ayıklayıcıda yüklenen ortak dil çalışma zamanı (CLR) için yolunu ayarlar.  
+Hata ayıklayıcıda yüklenen ortak dil çalışma zamanının (CLR) yolunu ayarlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT SetCorPath(  
@@ -39,13 +39,13 @@ int SetCorPath(
   
 #### <a name="parameters"></a>Parametreler  
  `pcstrCorPath`  
- [in] CLR yolunu Hata Ayıklayıcı'yüklendi.  
+ 'ndaki Hata ayıklayıcıda yüklenen CLR 'nin yolu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **ExpressionEvaluatorPackage** gösteren nesne [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) arabirimi.  
+ Aşağıdaki örnek, [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) arabirimini kullanıma sunan bir **ExpressionEvaluatorPackage** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 STDMETHODIMP ExpressionEvaluatorPackage::SetCorPath(LPCOLESTR pcstrCorPath)  

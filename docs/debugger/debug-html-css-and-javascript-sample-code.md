@@ -15,18 +15,18 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 460419d976211747c44f156a5821b88b75aa2e6b
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72745542"
 ---
 # <a name="debug-html-and-css-sample-code"></a>HTML ve CSS örnek kod hatalarını ayıklama
 
 Bu konudaki kod [hızlı başlangıç: hata AYıKLA HTML ve CSS](../debugger/quickstart-debug-html-and-css.md)için örnek dosyadır. Hızlı başlangıçta tasarımda bulunan hatalar kodun bu sürümünde düzeltilmiştir.
 
-## <a name="sample-code"></a>Örnek kod
-Aşağıdaki HTML kodu hızlı başlangıçtaki \<body > etiketinde kullanılır.
+## <a name="sample-code"></a>Örnek Kod
+Aşağıdaki HTML kodu \<body> hızlı başlangıçtaki etiketinde kullanılır.
 
 ```html
 <div id="flipTemplate" data-win-control="WinJS.Binding.Template"
@@ -50,7 +50,7 @@ Aşağıdaki CSS, default. css ' ye yapılan eklemeleri gösterir.
 }
 ```
 
-Aşağıdaki kod örneği, default. js ' deki tüm JavaScript kodunu gösterir. Bu kod için WinJS ad alanlarına başvurular, şablonun default. HTML dosyasında yer almalardır.
+Aşağıdaki kod örneği default.js içindeki tüm JavaScript kodunu gösterir. Bu kod için WinJS ad alanlarına yapılan başvurular, şablonun default.html dosyasıdır.
 
 ```javascript
 (function () {

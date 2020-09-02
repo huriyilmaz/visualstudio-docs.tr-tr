@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::CanSetObjectForVisualizer | Microsoft Docs
+title: 'IEEVisualizerDataProvider:: CanSetObjectForVisualizer | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: af1569e315b2010ad734c8776bd8436110365c40
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68196163"
 ---
 # <a name="ieevisualizerdataprovidercansetobjectforvisualizer"></a>IEEVisualizerDataProvider::CanSetObjectForVisualizer
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem, görselleştiricisi güncelleştirilmiş temsil ettiği veri nesnesi sahip olup olmadığını belirler.  
+Bu yöntem, Görselleştirici tarafından temsil ettiği veri nesnesine sahip olup olmadığını belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT CanSetObjectForVisualizer(  
@@ -40,13 +40,13 @@ int CanSetObjectForVisualizer(
   
 #### <a name="parameters"></a>Parametreler  
  `b`  
- [out] Sıfır olmayan (`TRUE`) Görselleştirici nesne güncelleştirilebilir, sıfır (`FALSE`) erişilemiyorsa.  
+ dışı `TRUE`Görselleştirici üzerindeki nesne güncelleştirilemeyebilir (), değilse sıfır ( `FALSE` ).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir nesne, salt okunur bellek, örneğin bağlı ise takımdaki herhangi biri olmayabilir.  
+ Örneğin, salt okuma belleğine bağlıysa bir nesne değiştirilebilir olmayabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)

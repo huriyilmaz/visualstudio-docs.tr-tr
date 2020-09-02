@@ -16,24 +16,24 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 39cf3e8d59a2ced26f878da979fa87fc663b5bab
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71253585"
 ---
 # <a name="get-started-programming-vsto-add-ins"></a>VSTO Eklentilerini Programlamaya Başlama
-  Microsoft Office uygulamalarını otomatikleştirmek, uygulamanın özelliklerini genişletmek ve uygulamanın kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini kullanabilirsiniz. VSTO eklentilerinin, Visual Studio kullanarak oluşturabileceğiniz diğer Office çözümü türleriyle nasıl Karşılaştırıldığı hakkında bilgi için bkz. [Office çözümleri geliştirmeye genel &#40;bakış VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
+  Microsoft Office uygulamalarını otomatikleştirmek, uygulamanın özelliklerini genişletmek ve uygulamanın kullanıcı arabirimini (UI) özelleştirmek için VSTO Eklentilerini kullanabilirsiniz. VSTO eklentilerinin, Visual Studio kullanarak oluşturabileceğiniz diğer Office çözümleri türleriyle nasıl Karşılaştırıldığı hakkında bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
 
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]
 
 ## <a name="create-vsto-add-in-projects"></a>VSTO eklenti projeleri oluşturma
  **Yeni proje** ILETIŞIM kutusundaki VSTO eklentisi proje şablonlarından bırını kullanarak VSTO eklenti projeleri oluşturun. Bu şablonlar gerekli derleme başvurularını ve proje dosyalarını içerir. Visual Studio, Office 'teki çoğu uygulama için VSTO eklentisi proje şablonları sağlar.
 
- VSTO eklenti projesi oluşturma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)'da Office projeleri oluşturun. Proje şablonları hakkında daha fazla bilgi için bkz. [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md).
+ VSTO eklenti projesi oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md). Proje şablonları hakkında daha fazla bilgi için bkz. [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md).
 
 ## <a name="develop-vsto-add-in-projects"></a>VSTO eklentisi projelerini geliştirme
- VSTO eklenti projesi oluşturduğunuzda, Visual Studio otomatik olarak bir *ThisAddIn. vb* (ın [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]) veya *ThisAddIn.cs* (ın C#) kod dosyası oluşturur. Bu dosya, VSTO `ThisAddIn` eklentisi için temel sağlayan sınıfını içerir. VSTO eklentisi yüklendiğinde veya kaldırıldığında, ana bilgisayar uygulamasının nesne modeline erişmek ve uygulamanın özelliklerini genişletmek için bu sınıfın üyelerini kullanabilirsiniz. Daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
+ VSTO eklenti projesi oluşturduğunuzda, Visual Studio otomatik olarak bir *ThisAddIn. vb* (ın [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] ) veya *ThisAddIn.cs* (C#) kod dosyası oluşturur. Bu dosya `ThisAddIn` , VSTO eklentisi için temel sağlayan sınıfını içerir. VSTO eklentisi yüklendiğinde veya kaldırıldığında, ana bilgisayar uygulamasının nesne modeline erişmek ve uygulamanın özelliklerini genişletmek için bu sınıfın üyelerini kullanabilirsiniz. Daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
 
 ## <a name="automate-applications-by-using-the-object-models"></a>Nesne modellerini kullanarak uygulamaları otomatikleştirin
  Microsoft Office uygulamaların nesne modelleri, VSTO Eklentilerindeki programlama yapabilecekleri birçok türü kullanıma sunar. Uygulamayı otomatikleştirebilmek için bu türleri kullanabilirsiniz. Örneğin, Outlook 'ta program aracılığıyla bir e-posta iletisi oluşturabilir ve gönderebilirsiniz ya da bir belgeyi açabilir ve Word 'e içerik ekleyebilirsiniz. Kod içinde ana bilgisayar uygulamasının nesne modeline erişme hakkında daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
@@ -78,7 +78,7 @@ ms.locfileid: "71253585"
 
 - [İzlenecek yol: PowerPoint için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)
 
-- [İzlenecek yol: Proje için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)
+- [İzlenecek yol: proje için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-project.md)
 
 - [İzlenecek yol: Word için ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md)
 
@@ -88,7 +88,7 @@ ms.locfileid: "71253585"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Nasıl yapılır: Visual Studio 'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md)
-- [Visual Studio &#40;'da Office geliştirme ile çalışmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
 - [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md)
 - [VSTO Eklentileri Mimarisi](../vsto/architecture-of-vsto-add-ins.md)
 - [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)

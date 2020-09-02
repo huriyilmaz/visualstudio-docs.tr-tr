@@ -1,5 +1,5 @@
 ---
-title: Hata F# ayıklama | Microsoft Docs
+title: 'Hata ayıklama F # | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,20 +17,20 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e7bc3934136f0966439bec2e4368488e52099602
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72738262"
 ---
-# <a name="debugging-f"></a>F \# hatalarını ayıklama
-Hata F# ayıklama, birkaç özel durum dışında yönetilen herhangi bir dilde hata ayıklamaya benzer:
+# <a name="debugging-f"></a>Hata ayıklama F\#
+F # hatası ayıklamak, birkaç özel durum dışında yönetilen herhangi bir dilde hata ayıklamaya benzer:
 
-- **Oto** penceresinde değişkenler görüntülenmez F# .
+- **Oto** penceresi, F # değişkenlerini görüntülemez.
 
-- İçin F#Düzenle ve devam et desteklenmez. Hata F# ayıklama oturumu sırasında kodun düzenlenme olasılığı vardır, ancak bu kaçınılmalıdır. Hata ayıklama oturumu sırasında kod değişiklikleri uygulanmadığından, hata ayıklama sırasında F# kodun düzenlenebilmesi, kaynak kodu ve hata ayıklanan kod arasında uyuşmazlık oluşmasına neden olur.
+- F # için Düzenle ve devam et desteklenmez. Hata ayıklama oturumu sırasında F # kodu düzenlenme olasılığı vardır, ancak bu kaçınılmalıdır. Hata ayıklama oturumu sırasında kod değişiklikleri uygulanmadığı için, hata ayıklama sırasında F # kodu düzenlenmesiyle kaynak kodu ve hata ayıklanan kod arasında uyuşmazlık olur.
 
-- Hata ayıklayıcı ifadeleri tanımıyor F# . Hata ayıklayıcı penceresinde veya hata ayıklama sırasında F# bir iletişim kutusunda ifade girmek için, ifadeyi C# sözdizimine çevirmeniz gerekir. Bir F# ifadeyi içine C#çevirdığınızda, eşitlik için karşılaştırma işleci olarak = C# = kullandığını ve tek bir = F# kullandığını unutmayın.
+- Hata ayıklayıcı F # ifadelerini tanımıyor. F # hata ayıklama sırasında bir hata ayıklayıcı penceresine veya bir iletişim kutusuna ifade girmek için, ifadeyi C# sözdizimine çevirmeniz gerekir. Bir F # ifadesini C# ' a çevirdığınızda, C# ' nin eşitlik için karşılaştırma işleci olarak = = kullandığını ve F # ' ın tek bir = kullandığını unutmayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yönetilen Kodda Hata Ayıklama](../debugger/debugging-managed-code.md)

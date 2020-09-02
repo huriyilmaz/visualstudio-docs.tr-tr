@@ -13,46 +13,46 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 1e43da0b05062c6c7b1c4d3cfe771ff0b93f83a9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68195789"
 ---
 # <a name="idebugengine3"></a>IDebugEngine3
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir veya daha fazla modülü hata ayıklama denetleyen bir tek hata ayıklama altyapısı (DE) temsil eder.  
+Bir veya daha fazla modülün hatalarını ayıklamayı denetleyen tek bir hata ayıklama altyapısını (DE) temsil eder.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugEngine3 : IDebugEngine2  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- (Simge destekliyorsa) Bu arabirim JustMyCode durumunu etkinleştirmek için özel bir DE tarafından uygulanır. Simgeler ve JustMyCode destekliyorsa, bu arabirim tarafından DE uygulanmalıdır.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Bu arabirim, bir özel DE (sembolleri destekliyorsa), izin vermek MyCode durumunu etkinleştirmek için uygulanır. Bu arabirim, sembolleri destekliyorsa ve bu arabirimin tarafından uygulanması gerekir.  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Bu arabirim, oturum hata ayıklama Yöneticisi (SDM) sembolleri konumlar için kullanıcı seçeneklerini geçirilecek tarafından çağrılır. Ayrıca, örneği oluşturulduğunda altyapısının GUID ayarlamak için çağrılır (Bu GUID altyapısı kayıt zamanı ölçümleri temel alır). SDM JustMyCode durumunu ayarlamak ve belirli bir duruma hata ayıklayıcı tarafından bilinen tüm özel durumları ayarlamak için bu arabirimi de çağırır.  
+ Bu arabirim, sembolleri yüklenecek konumlar için Kullanıcı seçeneklerini geçirmek üzere oturum hata ayıklama Yöneticisi (SDM) tarafından çağrılır. Ayrıca, örneklendirilir altyapının GUID 'sini ayarlamak için çağrılır (Bu GUID, altyapı kaydı zamanından alınan ölçümleri temel alır). SDM Ayrıca bu arabirimi çağırarak ve hata ayıklayıcı tarafından bilinen tüm özel durumları belirtilen bir duruma ayarlamak için çağırır.  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Devralınan yöntemleri yanı sıra [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md), `IDebugEngine3` arabirimi aşağıdaki yöntemleri sunar.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)öğesinden devralınan yöntemlere ek olarak, `IDebugEngine3` arabirim aşağıdaki yöntemleri sunar.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)|Yolu veya yolları DE aramak için hata ayıklama için kullanacağı ayarlar.|  
-|[LoadSymbols](../../../extensibility/debugger/reference/idebugengine3-loadsymbols.md)|Semboller yüklendi henüz uygulanmamış tüm modüller için sembolleri yükler.|  
-|[SetJustMyCodeState](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md)|JustMyCode bilgilerini DE belirtir.|  
-|[SetEngineGuid](../../../extensibility/debugger/reference/idebugengine3-setengineguid.md)|Ölçümleri DE GUID ayarlar.|  
-|[SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)|Belirtilen bir durum şu anda bekleyen tüm özel durumları ayarlayın.|  
+|[SetSymbolPath](../../../extensibility/debugger/reference/idebugengine3-setsymbolpath.md)|Aynı hata ayıklama sembolleri aramak için DE kullanacağı yolu veya yolları ayarlar.|  
+|[LoadSymbols](../../../extensibility/debugger/reference/idebugengine3-loadsymbols.md)|Henüz sembolleri yüklü olmayan tüm modüller için sembolleri yükler.|  
+|[SetJustMyCodeState](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md)|, ' In ' DE bir DE daha fazla bilgi sağlar.|  
+|[SetEngineGuid](../../../extensibility/debugger/reference/idebugengine3-setengineguid.md)|Ölçülerden DE GUID 'ı ayarlar.|  
+|[SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md)|Şu anda bekleyen tüm özel durumları belirtilen bir duruma ayarlayın.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)

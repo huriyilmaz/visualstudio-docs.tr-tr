@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetName | Microsoft Dokümanlar
+title: 'IDebugDocumentContext2:: GetName | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 253ef509a60e8bb2ce177235f4b93b370e66f484
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731815"
 ---
 # <a name="idebugdocumentcontext2getname"></a>IDebugDocumentContext2::GetName
-Bu belge bağlamını içeren belgenin görüntülenebilir adını alır.
+Bu belge bağlamını içeren belgenin görüntülenebilen adını alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetName(
@@ -43,19 +43,19 @@ int GetName(
 
 ## <a name="parameters"></a>Parametreler
 `gnType`\
-[içinde] GETNAME_TYPE numaralandırmadan döndürülecek ad türünü belirten bir değer. [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md)
+'ndaki [GETNAME_TYPE](../../../extensibility/debugger/reference/getname-type.md) numaralandırmasından döndürülecek ad türünü belirten bir değer.
 
 `pbstrFileName`\
-[çıkış] Dosyanın adını döndürür.
+dışı Dosyanın adını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
-Belge bağlamı belge adının kendisini depolamak için yazılmamışsa (Örnek'te gösterin) çağrıyı genellikle [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md) yöntemine iletir.
+Bu yöntem genellikle, belge adı belge adının kendisini depolamak üzere yazılmadığı sürece (örneğin gösterildiği gibi), çağrı [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md) yöntemine iletilir.
 
 ## <a name="example"></a>Örnek
-Aşağıdaki örnek, [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) `CDebugContext` arabirimini ortaya çıkaran basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
+Aşağıdaki örnek, `CDebugContext` [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.
 
 ```cpp
 HRESULT CDebugContext::GetName(GETNAME_TYPE gnType, BSTR* pbstrFileName)

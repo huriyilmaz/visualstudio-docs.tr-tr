@@ -14,42 +14,42 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: c6d3b4ece92bf278ef8d43dca7e449272982381c
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "71254987"
 ---
 # <a name="walkthroughs-using-word"></a>Word kullanarak izlenecek yollar
   Aşağıdaki izlenecek yollarda, Word Microsoft Office otomatikleştirebilmek ve Kullanıcı arabirimini (UI) özelleştirmek için belge düzeyi özelleştirmeleri ve VSTO eklentilerini kullanma yolları gösterilmektedir.
 
 ## <a name="document-level-walkthroughs"></a>Belge düzeyinde izlenecek yollar
-- [İzlenecek yol: Word](../vsto/walkthrough-creating-your-first-document-level-customization-for-word.md) için ilk belge düzeyi özelleştirmenizi oluşturma Word için bir temel belge düzeyi özelleştirmesi oluşturmayı gösterir.
+- [Izlenecek yol: Word için ilk belge düzeyi özelleştirmeyi oluşturma](../vsto/walkthrough-creating-your-first-document-level-customization-for-word.md) Word için temel bir belge düzeyi özelleştirmesi oluşturmayı gösterir.
 
-- [İzlenecek yol: Eylemler bölmesindeki](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md) bir belgeye metin ekleme kullanıcılar bir eylemler bölmesindeki denetimlere metin girerken bir Word belgesine nasıl metin ekleneceğini gösterir.
+- [Izlenecek yol: Eylemler bölmesinden belgeye metin ekleme](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md) Kullanıcılar bir eylemler bölmesindeki denetimlere metin girerken Word belgesine nasıl metin ekleneceğini gösterir.
 
-- [İzlenecek yol: Word Eylemler bölmesindeki](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md) denetimlere veri bağlama eylemler bölmesindeki denetimlere veri bağlamayı gösterir. Denetimler SQL Server veritabanındaki tablolar arasında bir ana/ayrıntı ilişkisi gösterir.
+- [Izlenecek yol: Word Eylemler bölmesindeki denetimlere veri bağlama](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md) Bir eylemler bölmesindeki denetimlere veri bağlamayı gösterir. Denetimler SQL Server veritabanındaki tablolar arasında bir ana/ayrıntı ilişkisi gösterir.
 
-- [İzlenecek yol: CheckBox denetimlerini](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md) kullanarak belge biçimlendirmesini değiştirme bir Word belgesindeki onay kutularının biçimlendirmeyi değiştirmek için nasıl kullanılacağını gösterir.
+- [Izlenecek yol: CheckBox denetimlerini kullanarak belge biçimlendirmesini değiştirme](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md) Biçimlendirmeyi değiştirmek için bir Word belgesinde onay kutularının nasıl kullanılacağını gösterir.
 
-- [İzlenecek yol: Metni bir belgedeki metin kutusunda görüntüle düğmesi](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md) , Word belgelerinde düğmelerin ve metin kutularının nasıl kullanılacağını gösterir.
+- [Izlenecek yol: düğme kullanarak bir belgedeki metin kutusunda metin görüntüleme](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md) Word belgelerinde düğmelerin ve metin kutularının nasıl kullanılacağını gösterir.
 
-- [İzlenecek yol: Radyo düğmelerini](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md) kullanarak bir belgedeki grafiği güncelleştirme bir Word belgesindeki grafik stillerinin, belge düzeyi özelleştirmesinde seçenek düğmelerini kullanarak nasıl değiştirileceğini gösterir.
+- [Izlenecek yol: radyo düğmelerini kullanarak bir belgedeki grafiği güncelleştirme](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md) Belge düzeyi özelleştirmesindeki seçenek düğmelerini kullanarak bir Word belgesindeki grafik stillerinin nasıl değiştirileceğini gösterir.
 
-- [İzlenecek yol: Yer işaretleri](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md) için kısayol menüleri oluştur, bir yer işareti içindeki metni biçimlendirmek için kullanılabilecek bir kısayol menüsü oluşturmayı gösterir.
+- [Izlenecek yol: yer işaretleri için kısayol menüleri oluşturma](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md) Bir yer işareti içindeki metni biçimlendirmek için kullanılabilecek bir kısayol menüsünün nasıl oluşturulacağını gösterir.
 
-- [İzlenecek yol: Visual Basic projesindeki](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md) VBA 'daki çağrı kodu belgedeki VBA kodundan bir özelleştirme derlemesinde kodun nasıl çağrılacağını gösterir.
+- [Izlenecek yol: Visual Basic PROJESINDEKI VBA 'dan kod çağırma](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md) Belgedeki VBA kodundan bir özelleştirme derlemesinde kodun nasıl çağrılacağını gösterir.
 
-- [İzlenecek yol: İçerik denetimlerini](../vsto/walkthrough-creating-a-template-by-using-content-controls.md) kullanarak şablon oluşturma bir Word şablonunda yapılandırılmış ve yeniden kullanılabilir içerik oluşturmak için içerik denetimlerini nasıl kullanacağınızı gösterir.
+- [Izlenecek yol: içerik denetimlerini kullanarak şablon oluşturma](../vsto/walkthrough-creating-a-template-by-using-content-controls.md) Bir Word şablonunda yapılandırılmış ve yeniden kullanılabilir içerik oluşturmak için içerik denetimlerini nasıl kullanacağınızı gösterir.
 
-- [İzlenecek yol: İçerik denetimlerini özel XML bölümlerine](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md) bağlama, Word belgesindeki içerik denetimlerini belgede depolanan XML verilerine bağlamayı gösterir.
+- [Izlenecek yol: içerik denetimlerini özel XML bölümlerine bağlama](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md) Word belgesindeki içerik denetimlerinin belgede depolanan XML verilerine nasıl bağlanacağını gösterir.
 
 ## <a name="application-level-walkthroughs"></a>Uygulama düzeyinde izlenecek yollar
-- [İzlenecek yol: Word](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md) için ilk VSTO eklentisini oluşturma Word için bir temel VSTO eklentisi oluşturmayı gösterir.
+- [Izlenecek yol: Word için Ilk VSTO eklentisini oluşturma](../vsto/walkthrough-creating-your-first-vsto-add-in-for-word.md) Word için temel bir VSTO eklentisinin nasıl oluşturulacağını gösterir.
 
-- [İzlenecek yol: Bir VSTO eklentisinin](../vsto/walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in.md) çalışma zamanında belgeye denetim ekleme, VSTO eklentisi kullanılarak bir belgeye nasıl denetim ekleneceğini gösterir.
+- [Izlenecek yol: BIR VSTO eklentisinin çalışma zamanında belgeye denetim ekleme](../vsto/walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in.md) VSTO eklentisini kullanarak bir belgeye nasıl denetim ekleneceğini gösterir.
 
-- [İzlenecek yol: Ribbon XML](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md) kullanarak özel sekme oluşturma bir VSTO eklentisinin içindeki xml tanımlayıcı dosyasını kullanarak nasıl özel bir şerit sekmesi oluşturulacağını gösterir.
+- [Izlenecek yol: ŞERIT XML kullanarak özel sekme oluşturma](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md) Bir VSTO eklentisinin içindeki XML tanımlayıcı dosyası kullanılarak nasıl özel Şerit sekmesinin oluşturulduğunu gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Excel kullanarak izlenecek yollar](../vsto/walkthroughs-using-excel.md)
