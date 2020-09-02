@@ -15,14 +15,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 8171c6dcfe285ade07531896893915d0e209e0c1
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670191"
 ---
 # <a name="theme-configuration-dialog-box-legacy"></a>Tema Yapılandırması İletişim Kutusu (Eski)
-Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] **Tema yapılandırması** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır. @No__t_1 veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] hedeflemek gerektiğinde eski [!INCLUDE[wfd2](../includes/wfd2-md.md)] kullanın.
+Bu konuda, eski ' deki **Tema yapılandırması** iletişim kutusunun nasıl kullanılacağı açıklanmaktadır [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Ya da ' i hedefliyorsanız, eski kullanın [!INCLUDE[wfd2](../includes/wfd2-md.md)] [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Bir tema, bir iş akışının arka plan ve ön plan renklerini, stillerini, simgelerini ve diğer görsel öğelerini tanımlar. Temaları diğer iş akışları tarafından yeniden kullanmak üzere kaydedebilirsiniz.
 
@@ -30,7 +30,7 @@ Bu konu başlığı altında, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)] **Te
 
  Aşağıdaki tabloda **Tema yapılandırması** iletişim kutusunun kullanıcı ARABIRIMI (UI) öğeleri açıklanmaktadır.
 
-|Arabirim Öğesi|Açıklama|
+|Arabirim Öğesi|Description|
 |----------------|-----------------|
 |**Tema adı:**|[Temalar, iş akışı Tasarımcısı, Seçenekler Iletişim kutusu (eski)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md)içinde temayı tanımlayan ad. Yeni Temalar için değiştirilebilir bir ad oluşturulur.|
 |**Tema konumu:**|Tema dosyasının dosya adı ve yolu. Oluşturulan Tema adına göre yeni temalar için bir değiştirilebilir dosya adı oluşturulur. Oluşturulan tema adını değiştirirseniz, dosya adını tema adıyla eşleşecek şekilde değiştirmek isteyebilirsiniz.|

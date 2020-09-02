@@ -1,5 +1,5 @@
 ---
-title: Korumalı çözümle ilgili konular | Microsoft Docs
+title: Korumalı çözüm konuları | Microsoft Docs
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -19,35 +19,35 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 3f6345e7627549c672aa28fac8cba5f6d9658a23
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435444"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64793822"
 ---
-# <a name="sandboxed-solution-considerations"></a>Korumalı çözümle ilgili konular
-  *Korumalı çözümler* kendi özel kod çözümlerini karşıya yüklemek site koleksiyonu kullanıcıları sağlayan Microsoft SharePoint 2010'daki bir özelliktir. Genel korumalı bir çözüm, kendi Web Bölümleri yükleme kullanıcı sayısıdır.
+# <a name="sandboxed-solution-considerations"></a>Korumalı çözüm konuları
+  *Korumalı çözümler* , site koleksiyonu kullanıcılarının kendi özel kod çözümlerini karşıya yüklemesine olanak sağlayan bir Microsoft SharePoint 2010 özelliğidir. Ortak bir korumalı çözüm, kullanıcılar kendi Web Bölümleri karşıya yüklüyor.
 
- Korumalı bir SharePoint uygulama Web grubunda sınırlı bir kısmını erişimi olan bir güvenli ve izlenen bir işlemde çalıştırır. Microsoft SharePoint 2010, korumalı alana alınan çözümler etkinleştirmek için özellikler, çözüm galerileri, izleme çözümü ve doğrulama çerçevesinin bir birleşimini kullanır.
+ Korumalı bir SharePoint uygulaması, Web grubunun sınırlı bir kısmına erişimi olan güvenli, izlenen bir işlemde çalışır. Microsoft SharePoint 2010, korumalı çözümleri etkinleştirmek için özelliklerin, çözüm galerlarının, çözüm izlemenin ve bir doğrulama çerçevesinin bir birleşimini kullanır.
 
-## <a name="specify-project-trust-level"></a>Proje güven düzeyi belirtin
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] bir Boolean projesi özelliği aracılığıyla korumalı alana alınan çözümler adlı destekler *Korumalı çözüm*. Bu özelliği, projedeki herhangi bir zamanda ayarlanabilir veya projeyi oluşturduğunuzda belirtilebilir **SharePoint Özelleştirme Sihirbazı**.
+## <a name="specify-project-trust-level"></a>Proje güven düzeyini belirtin
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] korumalı *çözüm*adlı bir Boole proje özelliği aracılığıyla korumalı çözümleri destekler. Bu özellik projede herhangi bir zamanda ayarlanabilir veya **SharePoint Özelleştirme sihirbazında**projeyi oluşturduğunuzda belirlenebilir.
 
 > [!NOTE]
-> Değiştirme *Korumalı çözüm* oluşturulduktan sonra bir projenin özellik doğrulama hatalarına neden olabilir.
+> Projenin, oluşturulduktan sonra *Korumalı çözüm* özelliğini değiştirmek doğrulama hatalarına neden olabilir.
 
- Çözüm Grup kapsamlı bir çözüm kabul edildiği *Korumalı çözüm* özelliği **false** veya seçtiğiniz **Grup çözümü olarak Dağıt** seçeneği. Ancak, çözümü farklı bir grup çözümünden anlamına gelir *Korumalı çözüm* özelliği **true** veya seçtiğiniz **bir korumalı çözüm olarak Dağıt** Sihirbazı'nda seçeneği.
+ *Korumalı çözüm* özelliği **false** olarak ayarlandıysa veya **Grup olarak dağıt** seçeneğini belirlerseniz çözüm, grup kapsamlı bir çözüm olarak değerlendirilir. Ancak, *Korumalı çözüm* özelliği **true** olarak ayarlanmışsa veya sihirbazda **Korumalı çözüm olarak dağıt** seçeneğini belirlerseniz çözüm bir grup çözümüyle farklı şekilde değerlendirilir.
 
-## <a name="sharepoint-site-hierarchy"></a>SharePoint site hiyerarşisi
- Nasıl korumalı alana alınan çözümler anlamak için iş, yardımcı olan SharePoint siteleri kapsamda hiyerarşik olduğunu öğrenmek için. Üst öğe Web grubu adı verilir ve diğer öğeleri kendisine bağımlı olan:
+## <a name="sharepoint-site-hierarchy"></a>SharePoint sitesi hiyerarşisi
+ Korumalı çözümlerin nasıl çalıştığını anlamak için, SharePoint sitelerinin kapsamda hiyerarşik olduğunu öğrenmenize yardımcı olur. Üst öğe Web grubu olarak bilinir ve diğer öğeler bunun alt öğesidir:
 
  Web grubu
 
- Bir Web uygulaması
+ Web uygulaması A
 
- Site koleksiyonu A1
+ Site koleksiyonu a1
 
- Site A1a
+ Site A1A
 
  Web uygulaması B
 
@@ -55,39 +55,39 @@ ms.locfileid: "63435444"
 
  Site B1a
 
- Site B1b
+ Site B1B
 
  Site koleksiyonu B2
 
- Site B2a
+ Site b2a
 
- Gördüğünüz gibi Web grupları sırayla alt sahip ve benzeri bir veya daha fazla site koleksiyonları içerebilir, bir veya daha fazla Web uygulamaları içerebilir. Yalnızca bu koleksiyon sitede bir site koleksiyonu etkileyen için yapılan ve başka hiçbir değiştirir. Ancak, Web grubu düzeyinde yapılan değişiklikler, gruptaki tüm site koleksiyonlarında etkiler.
+ Görebileceğiniz gibi, Web grupları bir veya daha fazla Web uygulaması içerebilir ve bu da alt siteleri olabilecek bir veya daha fazla site koleksiyonu içerebilir. Bir site koleksiyonunda yapılan değişiklikler yalnızca o site koleksiyonunu etkiler ve başka hiçbir değildir. Ancak, Web grubu düzeyinde yapılan değişiklikler gruptaki tüm site koleksiyonlarını etkiler.
 
- Windows SharePoint Services (WSS) 3.0, yalnızca grup düzeyine çözümlerini dağıtmanıza olanak sağlar ancak [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] grup düzeyinde (Grup çözümü) veya site koleksiyonu düzeyinde (Korumalı çözüm) için dağıtmanıza olanak tanır.
+ Windows SharePoint Services (WSS) 3,0, çözümleri yalnızca grup düzeyine dağıtmanıza izin verir, ancak [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] grup düzeyine (Grup çözümü) veya site koleksiyonu düzeyine (Korumalı çözüm) dağıtmanıza olanak tanır.
 
-## <a name="why-sandboxed-solutions"></a>Neden korumalı alana alınan çözümler?
- WSS 3.0 sürümünde, yalnızca grup düzeyi çözümleri dağıtılabilir. Bu, olası zararlı veya kararsız hale getiren çözümleri, etkilenen tüm Web grubunda ve tüm diğer site koleksiyonları ve bunun altında çalışan uygulamalar dağıtılmasını geliyordu. Ancak, korumalı alana alınan çözümler kullanarak, çözümlerinizi bir alt grup, belirli bir site koleksiyonu, bu alan için dağıtabilirsiniz. Ek koruma sağlamak için çözümün derleme ana yüklenmediğinden [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] işlem (*w3wp.exe*). Bunun yerine, ayrı bir işleme yüklenmesini (*SPUCWorkerProcess.exe*). Bu işlem, izlenen ve kotalar ve CPU döngülerini kullanma sıkı döngüler çalıştırma gibi zararlı etkinlikleri gerçekleştirmesine korumalı çözümlerinden grubunu korumak için azaltma uygular.
+## <a name="why-sandboxed-solutions"></a>Korumalı çözümler neden?
+ WSS 3,0 ' de çözümler yalnızca grup düzeyine dağıtılabilir. Bu, tüm Web grubunu ve bunun altında çalışan diğer tüm site koleksiyonlarını ve uygulamalarını etkileyen çözümlerin zararlı olabilecek veya kararsız hale getirilebilecek olması anlamına gelir. Ancak, korumalı çözümleri kullanarak çözümlerinizi belirli bir site koleksiyonu olan grubun alt alanına dağıtabilirsiniz. Ek koruma sağlamak için çözümün derlemesi ana [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] işleme (*w3wp.exe*) yüklenmez. Bunun yerine, ayrı bir işleme yüklenir (*SPUCWorkerProcess.exe*). Bu işlem izlenir ve grubu, CPU döngülerini kullanan sıkı döngüleri çalıştırmak gibi zararlı etkinlikleri gerçekleştiren korumalı çözümlerden korumak için kotalar ve azaltma uygular.
 
-## <a name="site-collection-solution-gallery"></a>Site koleksiyonu çözüm Galerisi
- [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] 2010 "site koleksiyonu çözüm Galerisi." bilinen bir özellik vardır. SharePoint 2010 merkezi yönetim sayfasından veya açarak bu özelliğe erişmek **Site eylemleri** menüsünde seçerek **Site Ayarları**ve ardından **çözümleri** altında bağlantı **galeriler** SharePoint sitesi. Çözüm galeriler site koleksiyonu yöneticileri, kendi site koleksiyonlarında bulunan çözümlerimi sağlayan çözümler depolarının ' dir.
+## <a name="site-collection-solution-gallery"></a>Site koleksiyonu Çözüm Galerisi
+ [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] 2010, "site koleksiyonu Çözüm Galerisi" olarak bilinen bir özelliğe sahiptir. Bu özelliğe SharePoint 2010 Merkezi Yönetim sayfasından veya **Site eylemleri** menüsünü açıp, **site ayarları**' nı seçerek ve ardından SharePoint sitesindeki **galeriler** altında **çözümler** bağlantısını seçerek erişebilirsiniz. Çözüm galerileri, site koleksiyonu yöneticilerinin site koleksiyonlarında çözümleri yönetmesini sağlayan çözümlerin depolarıdır.
 
- Çözüm Galerisi, Web SharePoint sitesinin kök dizininde depolanmış bir belge kitaplıktır. Çözüm Galerisi site şablonu değiştirir ve çözüm paketleri destekler. Bir SharePoint çözüm paketini olduğunda (*.wsp*) dosyası, bir korumalı çözüm işlenir.
+ Çözüm Galerisi, SharePoint sitesinin kök Web sitesinde depolanan bir belge kitaplığıdır. Çözüm Galerisi, site şablonlarının yerini alır ve çözüm paketlerini destekler. Bir SharePoint çözüm paketi (*. wsp*) dosyası karşıya yüklendiğinde, bir korumalı çözüm olarak işlenir.
 
 ## <a name="sandboxed-solution-limitations"></a>Korumalı çözüm sınırlamaları
- Bir korumalı çözüm dağıtılırken, SharePoint işlevselliği için kullanılabilir bir dizi yakınlarında herhangi bir güvenlik açığını azaltmak için sınırlıdır. Bu sınırlamaların bazıları şunlardır:
+ Korumalı bir çözüm dağıtıldığında, sahip olabileceği güvenlik açıklarını azaltmaya yardımcı olmak için kullanılabilen SharePoint işlevselliği dizisi sınırlıdır. Bu sınırlamaların bazıları aşağıdakileri içerir:
 
-- Korumalı çözümler dağıtılabilir çözüm öğeleri kullanabilecekleri sınırlı bir alt kümesine sahip. Site tanımları ve iş akışları gibi savunmasız SharePoint proje şablonları kullanılabilir değil.
+- Korumalı çözümler için kullanılabilir dağıtılabilir çözüm öğelerinin kısıtlı bir alt kümesi vardır. Site tanımları ve iş akışları gibi savunmasız olabilecek SharePoint proje şablonları kullanılamaz.
 
-- SharePoint Korumalı çözüm kod bir işlemde çalıştırır (*SPUCWorkerProcess.exe*) ana ayrı [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] uygulama havuzu (*w3wp.exe*) işlem.
+- SharePoint, ana* * [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] uygulama havuzu (*w3wp.exe*) işleminden ayrı bir işlemde (SPUCWorkerProcess.exe) Korumalı çözüm kodu çalıştırır.
 
-- Eşlenen klasörler projeye eklenemez.
+- Eşlenen klasörler projeye eklenemiyor.
 
-- Türlerini [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] derleme Microsoft.Office.Server korumalı çözümlerde kullanılamaz. Ayrıca, yalnızca türlerini [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] derleme Microsoft.SharePoint korumalı çözümlerde kullanılabilir.
+- [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]Microsoft. Office. Server derlemesindeki türler korumalı çözümlerde kullanılamaz. Ayrıca, [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] korumalı çözümlerde yalnızca Microsoft. SharePoint derlemesindeki türler kullanılabilir.
 
-  Korumalı bir çözüm, SharePoint sunucusunda herhangi bir etkisi yoktur, bir SharePoint çözümünü belirten gibi dikkat edin önemlidir; yalnızca SharePoint Proje SharePoint'ten nasıl dağıtıldığını belirler [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve hangi derlemelerin, bağlanır. Oluşturulan etkilemez *.wsp* dosyasını ve *.wsp* dosyasının olduğundan doğrudan için karşılık gelen veri *Korumalı çözüm* özelliği.
+  Korumalı bir çözüm olarak SharePoint Server üzerinde hiçbir etkisi olmadığı için bir SharePoint çözümünün belirtildiğine dikkat edin. yalnızca SharePoint projesinin SharePoint 'e nasıl dağıtıldığını [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ve hangi derlemelerin bağlandığı belirler. Oluşturulan *. wsp* dosyasını etkilemez ve *. wsp* dosyası, *Korumalı çözüm* özelliği ile doğrudan ilişkili hiçbir veri içermez.
 
-## <a name="capabilities-and-elements-in-sandboxed-solutions"></a>Özellikler ve öğeler korumalı alana alınan çözümler
- Korumalı çözümler, aşağıdaki özellikleri ve öğeleri destekler:
+## <a name="capabilities-and-elements-in-sandboxed-solutions"></a>Korumalı çözümlerdeki yetenekler ve öğeler
+ Korumalı çözümler aşağıdaki özellikleri ve öğeleri destekler:
 
 - İçerik türleri/alanları
 
@@ -97,11 +97,11 @@ ms.locfileid: "63435444"
 
 - Olay alıcıları
 
-- Özelliğini belirtme
+- Özellik belirtme çizgileri
 
 - Liste tanımları
 
-- Liste Örnekleri
+- Liste örnekleri
 
 - Modül/dosyalar
 
@@ -109,34 +109,34 @@ ms.locfileid: "63435444"
 
 - *Onet.xml*
 
-- SPItemEventReceiver
+- Spitemeventalıcısı
 
-- SPListEventReceiver
+- Splisteventalıcısı
 
 - SPWebEventReceiver
 
-- Öğesinden türetilen tüm Web bölümleri için destek `System.Web.UI.WebControls.WebParts.WebPart`
+- Öğesinden türetilen tüm Web Bölümleri için destek `System.Web.UI.WebControls.WebParts.WebPart`
 
 - Web Bölümleri
 
-- LCID'sine özellik öğeleri (yerine *Webtemp.xml*)
+- WebTemplate özellik öğeleri ( *Webtemp.xml*yerine)
 
 - Görsel Web Bölümleri
 
-  Korumalı çözümler, aşağıdaki özellikleri ve öğeleri desteklemez:
+  Korumalı çözümler aşağıdaki özellikleri ve öğeleri desteklemez:
 
 - Uygulama sayfaları
 
 - Özel eylem grubu
 
-- Grup kapsamı özellikleri
+- Grup kapsamlı özellikler
 
 - `HideCustomAction` öğesi
 
-- Web uygulama kapsamlı özellikleri
+- Web uygulaması kapsamlı özellikler
 
-- Kod ile iş akışları
+- Kod içeren iş akışları
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Korumalı arasındaki farklar ve Grup çözümleri](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)
+- [Korumalı ve Grup çözümleri arasındaki farklılıklar](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)
 - [SharePoint Çözümleri Geliştirme](../sharepoint/developing-sharepoint-solutions.md)

@@ -1,5 +1,5 @@
 ---
-title: Proje yapılandırması nesnesi | Microsoft Docs
+title: Proje yapılandırma nesnesi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,43 +12,43 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 32e4d34ec3d1fbe8753b4185cab76caa77038bd1
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434838"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64820303"
 ---
 # <a name="project-configuration-object"></a>Proje Yapılandırması Nesnesi
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Proje yapılandırması nesnesi yapılandırma bilgileri için kullanıcı Arabiriminde görünen yönetir.  
+Proje yapılandırma nesnesi, yapılandırma bilgilerinin kullanıcı arabirimine görüntüsünü yönetir.  
   
- ![Visual Studio Proje yapılandırması](../../extensibility/internals/media/vsprojectcfg.gif "vsProjectCfg")  
-Proje yapılandırması özellik sayfaları  
+ ![Visual Studio proje yapılandırması](../../extensibility/internals/media/vsprojectcfg.gif "vsProjectCfg")  
+Proje yapılandırma Özellik sayfaları  
   
- Proje yapılandırma sağlayıcısı, proje yapılandırmalarını yönetir. Ortamı ve ve bir projenin yapılandırmalar hakkında bilgi almak için proje yapılandırma sağlayıcısı nesnesine bağlı arabirimler çağrı erişim elde etmek için diğer paketleri.  
-  
-> [!NOTE]
-> Oluşturamaz veya program aracılığıyla çözüm yapılandırma dosyalarını düzenleyebilirsiniz. Kullanmalısınız `DTE.SolutionBuilder`. Bkz: [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md) daha fazla bilgi için.  
-  
- Kullanıcı Arabirimi yapılandırmasında kullanılacak bir görünen ad yayımlamak için projenizi uygulamalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_DisplayName%2A>. Ortam çağrıları <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A>, listesini döndürür `IVsCfg` ortamın kullanıcı Arabiriminde listelenecek yapılandırma ve Platform bilgileri için görünen adları almak için kullanabileceğiniz işaretçileri. Etkin yapılandırma ve platform etkin çözüm yapılandırmasındaki, depolanan projenin yapılandırması tarafından belirlenir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager.FindActiveProjectCfg%2A> Yöntemi, etkin proje yapılandırmasını almak için kullanılabilir.  
-  
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> Nesne isteğe bağlı olarak uygulanabilir üzerinde <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2> nesnesi ile <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProviderEventsHelper> nesne almanızı sağlayacak bir `IVsProjectCfg2` nesne kurallı proje yapılandırma adına bağlı.  
-  
- Bir uygulamasını sağlamak üzere, projeler için ortam ve diğer projeler için proje yapılandırmalarını erişmesini sağlamak için başka bir yolu ise `IVsCfgProvider2::GetCfgs` bir veya daha fazla yapılandırma nesneleri döndürmek için yöntemi. Projeleri de uygulayabilir <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>, işlevinden devralan `IVsProjectCfg` ve böylece `IVsCfg`, yapılandırmaya özgü bilgileri sağlamak için. <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2> platformlar ve işlevselliği ekleme, silme ve yeniden adlandırma proje yapılandırmaları destekler.  
+ Proje yapılandırma sağlayıcısı proje yapılandırmalarını yönetir. Ortam ve diğer paketler, bir projenin yapılandırmaları hakkında erişim kazanmak ve bu bilgileri almak için, proje yapılandırma sağlayıcısı nesnesine eklenen arabirimleri çağırın.  
   
 > [!NOTE]
-> Visual Studio için iki yapılandırma türü sınırlı artık yapılandırmaları işleyen kodu değil yazılması varsayımlar ile yapılandırmaları sayısı hakkında ya da varsayımıyla yazılmalıdır bu yana, tek sahip bir proje yapılandırma, hata ayıklama veya perakende mutlaka olması. Bu kullanımını kolaylaştırır <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsReleaseOnly%2A> ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsDebugOnly%2A> artık kullanılmıyor.  
+> Çözüm yapılandırma dosyalarını programlı olarak oluşturamaz veya düzenleyemezsiniz. Kullanmanız gerekir `DTE.SolutionBuilder` . Daha fazla bilgi için bkz. [çözüm yapılandırması](../../extensibility/internals/solution-configuration.md) .  
   
- Çağırma `QueryInterface` yönteminden döndürülen nesne üzerinde`IVsGetCfgProvider::GetCfgProvider` alır `IVsCfgProvider2`. Varsa `IVsGetCfgProvider` çağırarak bulunamadı `QueryInterface` üzerinde `IVsProject3` proje nesne, çağırarak yapılandırma sağlayıcısı nesnesi erişebilir `QueryInterface` için döndürülen nesne hiyerarşisi kök tarayıcı nesnede `IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_BrowseObject)`, aracılığıyla veya bir yapılandırma sağlayıcısı için döndürülen işaretçiye `IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_ConfigurationProvider)`.  
+ Yapılandırma Kullanıcı arabiriminde kullanılacak bir görünen ad yayımlamak için projenizin uygulanması gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_DisplayName%2A> . Ortam, <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgs%2A> `IVsCfg` uygulamanın kullanıcı arabiriminde listelenecek yapılandırma ve platform bilgilerinin görünen adlarını almak için kullanabileceğiniz bir işaretçiler listesi döndüren ortam çağırır. Etkin yapılandırma ve platform, projenin etkin çözüm yapılandırmasında depolanan yapılandırması tarafından belirlenir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager.FindActiveProjectCfg%2A>Yöntemi, etkin proje yapılandırmasını almak için kullanılabilir.  
   
- `IVsProjectCfg2` öncelikli olarak dağıtım yönetim nesneleri ve derleme, hata ayıklama erişim sağlar ve projeleri grup çıkışları özgürlüğü sağlar. Yöntemlerinin `IVsProjectCfg` ve `IVsProjectCfg2` uygulamak için kullanılan <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> derleme işlemini yönetmek için ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> yapılandırmasının çıktı grupları için işaretçiler.  
+ Nesne, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider> <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2> <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProviderEventsHelper> `IVsProjectCfg2` kurallı proje yapılandırma adına göre bir nesne almanıza izin vermek için nesne ile nesne üzerinde uygulanabilir.  
   
- Proje grupları yapılandırma yapılandırması bir grup içinde bulunan çıktı sayısı değişebilir olsa bile desteklediği her bir yapılandırma için aynı sayıda döndürmesi gerekir. Grupları da aynı tanımlayıcı bilgileri (kurallı ad, görünen ad ve grup bilgilerini) yapılandırma yapılandırması bir proje içinde olmalıdır. Daha fazla bilgi için [çıkış için proje yapılandırması](../../extensibility/internals/project-configuration-for-output.md).  
+ Ortamı ve proje yapılandırmalarına erişimi olan diğer projeleri sağlamanın bir başka yolu da projeler için bir `IVsCfgProvider2::GetCfgs` veya daha fazla yapılandırma nesnesi döndürecek şekilde bir uygulama sağlamaktır. Projeler Ayrıca, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> `IVsProjectCfg` `IVsCfg` yapılandırmaya özgü bilgileri sağlamak için ve bundan itibaren devralan de uygulayabilir. <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2> , proje yapılandırmalarının eklenmesi, silinmesi ve yeniden adlandırılması için platformları ve işlevleri destekler.  
   
- Hata ayıklamayı etkinleştirmek için yapılandırmalarınızı uygulamalıdır <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>. `IVsDebuggableProjectCfg` bir yapılandırma başlatmak için hata ayıklayıcı izin vermek için projeleri tarafından uygulanan isteğe bağlı bir arabirim ve ile yapılandırma nesne üzerinde uygulanan `IVsCfg` ve `IVsProjectCfg`. F5 tuşuna basarak hata ayıklayıcıyı başlatmak seçtiğinde ortam onu çağırır.  
+> [!NOTE]
+> Visual Studio artık iki yapılandırma türüyle sınırlı olmadığından, yapılandırmaları işleyen kod, yapılandırma sayısıyla ilgili varsayımlar ile yazılmamalıdır ve yalnızca bir yapılandırmaya sahip bir projenin hata ayıklaması ya da perakende olması varsayımıyla yazılması gerekir. Bu, ve eski sürümlerini kullanımını sağlar <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsReleaseOnly%2A> <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg.get_IsDebugOnly%2A> .  
   
- `ISpecifyPropertyPages` ve `IDispatch` özellik sayfaları ile birlikte alma ve yapılandırma bağımlı bilgileri kullanıcıya göstermek için kullanılır. Daha fazla bilgi için [özellik sayfaları](../../extensibility/internals/property-pages.md).  
+ `QueryInterface`Alanından döndürülen nesne üzerinde çağırma `IVsGetCfgProvider::GetCfgProvider` `IVsCfgProvider2` . `IVsGetCfgProvider`Proje nesnesi üzerinde çağrılırken bulunmazsa, `QueryInterface` `IVsProject3` `QueryInterface` için döndürülen nesne için hiyerarşi kök tarayıcı nesnesini çağırarak `IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_BrowseObject)` veya için döndürülen yapılandırma sağlayıcısına yönelik bir işaretçi aracılığıyla yapılandırma sağlayıcısı nesnesine erişebilirsiniz `IVsHierarchy::GetProperty(VSITEM_ROOT, VSHPROPID_ConfigurationProvider)` .  
+  
+ `IVsProjectCfg2` Öncelikle derleme, hata ayıklama ve dağıtım Yönetim nesnelerine erişim sağlar ve projelere çıkışları gruplama özgürlüğü sağlar. `IVsProjectCfg`Ve yöntemleri `IVsProjectCfg2` <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> Yapı sürecini yönetmek için ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsOutputGroup> bir yapılandırmanın çıkış grupları için işaretçiler için kullanılabilir.  
+  
+ Projenin desteklediği her yapılandırma için aynı sayıda grubu döndürmesi gerekir, ancak bir grup içinde yer alan çıkışların sayısı yapılandırmadan yapılandırmaya farklılık gösterebilir. Gruplar, yapılandırmanın bir proje içinde yapılandırmayla aynı tanımlayıcı bilgilerine (kurallı ad, görünen ad ve grup bilgisi) sahip olması gerekir. Daha fazla bilgi için bkz. [çıktı Için proje yapılandırması](../../extensibility/internals/project-configuration-for-output.md).  
+  
+ Hata ayıklamayı etkinleştirmek için, yapılandırmalarınızın uygulanması gerekir <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> . `IVsDebuggableProjectCfg` , hata ayıklayıcının bir yapılandırmayı başlatması ve ve ile yapılandırma nesnesine uygulanması için projeler tarafından uygulanan isteğe bağlı bir arabirimdir `IVsCfg` `IVsProjectCfg` . Kullanıcı F5 'e basarak hata ayıklayıcıyı başlatmak için bu ortamı çağırır.  
+  
+ `ISpecifyPropertyPages` ve `IDispatch` yapılandırmaya bağımlı bilgileri almak ve kullanıcıya göstermek için özellik sayfaları ile birlikte kullanılır. Daha fazla bilgi için bkz. [Özellik sayfaları](../../extensibility/internals/property-pages.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılandırma seçeneklerini yönetme](../../extensibility/internals/managing-configuration-options.md)   

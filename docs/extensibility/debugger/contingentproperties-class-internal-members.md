@@ -1,5 +1,5 @@
 ---
-title: ContingentProperties Sınıf - Dahili Üyeler | Microsoft Dokümanlar
+title: Kıgentproperties sınıfı-Iç Üyeler | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,22 +12,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: c6441cafcc34a06464061b41691ea5faa32fc359
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739105"
 ---
-# <a name="contingentproperties-class---internal-members"></a>ContingentProperties sınıfı - dahili üyeler
-Nesne <xref:System.Threading.Tasks.Task> için ek özellikler içerir.
+# <a name="contingentproperties-class---internal-members"></a>Kıgentproperties sınıfı-iç Üyeler
+Bir nesne için ek özellikler içerir <xref:System.Threading.Tasks.Task> .
 
  **Ad alanı:**<xref:System.Threading.Tasks?displayProperty=fullName>
 
- **Montaj:** mscorlib (mscorlib.dll olarak)
+ **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
 
- Bu dahili üyelere .NET Framework'den erişemediğiniz için, ortak ara dilde (CIL) aşağıdaki sözdizimi sağlanır.
+ Bu iç üyelere .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .class auto ansi nested assembly beforefieldinit ContingentProperties
@@ -38,12 +38,12 @@ Nesne <xref:System.Threading.Tasks.Task> için ek özellikler içerir.
 
 ### <a name="fields"></a>Alanlar
 
-|Adı|Açıklama|
+|Ad|Açıklama|
 |----------|-----------------|
-|[m_children](../../extensibility/debugger/m-children-field.md)|Bu göreve kayıtlı alt görevlerin listesi.|
+|[m_children](../../extensibility/debugger/m-children-field.md)|Bu görevle kaydedilen alt görevlerin listesi.|
 
 ## <a name="remarks"></a>Açıklamalar
- .NET Framework, bu sınıfın alanlarını yalnızca ihtiyaç duyulduğunda başolarak inceler.
+ .NET Framework, bu sınıfın alanlarını yalnızca gerektiğinde başlatır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [.NET Framework için paralel uzantı dahili](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [.NET Framework için paralel uzantı iç işlevleri](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

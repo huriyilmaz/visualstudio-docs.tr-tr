@@ -1,5 +1,5 @@
 ---
-title: LAUNCH_FLAGS | Microsoft Dokümanlar
+title: LAUNCH_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: f18fb850641391f451f5eedb08b7130566dd4de3
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714714"
 ---
 # <a name="launch_flags"></a>LAUNCH_FLAGS
-Hata ayıklama başlatBayraklarını belirtir.
+Hata ayıklama başlatma bayraklarını belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_LAUNCH_FLAGS {
@@ -48,29 +48,29 @@ public enum enum_LAUNCH_FLAGS {
 
 ## <a name="fields"></a>Alanlar
 `LAUNCH_DEBUG`\
-Hata ayıklama işlemini başlatir.
+Hata ayıklama işlemini başlatır.
 
 `LAUNCH_NODEBUG`\
-Hata ayıklamadan işlemi başlatir.
+İşlemi hata ayıklamadan başlatır.
 
 `LAUNCH_ENABLE_ENC`\
-AMORTISMANA, KULLANMAYıN.
+KULLANıM DıŞı, KULLANMAYıN.
 
 `LAUNCH_MERGE_ENV`\
-İşlemi başlatir ve ortamı başlatan ana bilgisayarla birleştirir.
+İşlemi başlatır ve ortamı Başlatan ana bilgisayarla birleştirir.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu değerler [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemine bağımsız değişken olarak aktarılır.
+Bu değerler, [Launchaskıya alındı](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) yöntemine bir bağımsız değişken olarak geçirilir.
 
-Bu bayraklar biraz ile `OR`birleştirilebilir.
+Bu bayraklar bit düzeyinde birleştirilebilir `OR` .
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: msdbg.h
+Üst bilgi: msdbg. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)

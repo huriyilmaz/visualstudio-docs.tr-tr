@@ -12,10 +12,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 54036b985c90be926eaa56f6ebe60d1f3903e0b2
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657318"
 ---
 # <a name="uml-model-element-types"></a>UML model öğesi türleri
@@ -26,9 +26,9 @@ Bir UML modelini programlama arabirimi aracılığıyla okuyabilir ve düzenleye
  Her türün ayrıntıları [UML modelleme genişletilebilirliği Için API başvurusunda](../modeling/api-reference-for-uml-modeling-extensibility.md)verilmiştir.
 
 ## <a name="element-types"></a>Öğe türleri
- Bu, derlemede tanımlanan tür kümesidir `Microsoft.VisualStudio.Uml.Interfaces.dll`.
+ Bu, derlemede tanımlanan tür kümesidir `Microsoft.VisualStudio.Uml.Interfaces.dll` .
 
- Her öğenin tam adı "`Microsoft.VisualStudio.Uml.`" ve ardından listelenen addır.
+ Her öğenin tam adı " `Microsoft.VisualStudio.Uml.` " ve ardından listelenen addır.
 
  Kolaylık olması için, bu liste devralma hiyerarşisi olarak ayarlanır. Bir türün birden fazla üst türe sahip olduğu durumlarda, ek üst türler iki nokta üst üste (:)) sonra listelenir.
 
@@ -195,4 +195,4 @@ Classes.IElement
 ```
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- UML [genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md) [](../modeling/define-validation-constraints-for-uml-models.md) UML [modelleme genişletilebilirliği için UML Model API başvurusu](../modeling/api-reference-for-uml-modeling-extensibility.md)
+ UML [genişletmek için profil tanımlama](../modeling/define-a-profile-to-extend-uml.md) [Define validation constraints for UML models](../modeling/define-validation-constraints-for-uml-models.md) UML [modelleme genişletilebilirliği için UML Model API başvurusu](../modeling/api-reference-for-uml-modeling-extensibility.md)

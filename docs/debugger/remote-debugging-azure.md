@@ -12,10 +12,10 @@ ms.workload:
 - dotnetcore
 - azure
 ms.openlocfilehash: debf44bfe8187a7fd84e04b4362283658f636f17
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536792"
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio"></a>Visual Studio 'da Azure 'da IIS 'de uzaktan hata ayıklama ASP.NET Core
@@ -42,7 +42,7 @@ Azure 'da uzaktan hata ayıklama için önerilen yol, senaryonuza bağlıdır:
 > [!WARNING]
 > Bu öğreticideki adımları tamamladığınızda oluşturduğunuz Azure kaynaklarını sildiğinizden emin olun. Bu şekilde, gereksiz ücretleri kullanmaktan kaçınabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 ::: moniker range=">=vs-2019"
 Visual Studio 2019, bu makalede gösterilen adımları izlemek için gereklidir.
@@ -68,7 +68,7 @@ Proxy üzerinden bağlı iki bilgisayar arasında hata ayıklama desteklenmez. Y
 
 1. About.cshtml.cs dosyasını açın ve yöntemde bir kesme noktası ayarlayın `OnGet` (eski şablonlarda, bunun yerine HomeController.cs ' yi açın ve yöntemde kesme noktasını ayarlayın `About()` ).
 
-## <a name="remote-debug-aspnet-core-on-an-azure-app-service"></a><a name="remote_debug_azure_app_service"></a>Azure App Service uzaktan hata ayıklama ASP.NET Core
+## <a name="remote-debug-aspnet-core-on-an-azure-app-service"></a><a name="remote_debug_azure_app_service"></a> Azure App Service uzaktan hata ayıklama ASP.NET Core
 
 Visual Studio 'da uygulamanızı hızlı bir şekilde sağlanan bir IIS örneğine hızlıca yayımlayabilir ve hata ayıklayabilirsiniz. Ancak, IIS yapılandırması önceden ayarlanmış olur ve bunu özelleştiremezsiniz. Daha ayrıntılı yönergeler için bkz. [Visual Studio kullanarak Azure 'a ASP.NET Core Web uygulaması dağıtma](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs). (IIS 'yi özelleştirme olanağına ihtiyacınız varsa, bir [Azure VM](#remote_debug_azure_vm)'de hata ayıklamayı deneyin.)
 
@@ -98,7 +98,7 @@ Visual Studio 'da uygulamanızı hızlı bir şekilde sağlanan bir IIS örneği
 
     İşte bu kadar! Bu konudaki adımların geri kalanı, bir Azure sanal makinesinde uzaktan hata ayıklama için geçerlidir.
 
-## <a name="remote-debug-aspnet-core-on-an-azure-vm"></a><a name="remote_debug_azure_vm"></a>Azure VM 'de uzaktan hata ayıklama ASP.NET Core
+## <a name="remote-debug-aspnet-core-on-an-azure-vm"></a><a name="remote_debug_azure_vm"></a> Azure VM 'de uzaktan hata ayıklama ASP.NET Core
 
 Windows Server için bir Azure VM oluşturabilir, ardından IIS 'yi ve diğer gerekli yazılım bileşenlerini yükleyip yapılandırabilirsiniz. Bu, bir Azure App Service dağıtmaya kıyasla daha fazla zaman alır ve bu öğreticideki kalan adımları izlemenizi gerektirir.
 
@@ -191,7 +191,7 @@ Uygulama başarıyla dağıtıldıktan sonra otomatik olarak başlamalıdır. Uy
 
 Uygulamayı PowerShell, RoboCopy kullanarak IIS 'e kopyalamak istiyorsanız veya dosyaları el ile kopyalamak istiyorsanız uygulamanızı dağıtmak için bu seçeneği kullanabilirsiniz.
 
-### <a name="configure-the-aspnet-core-web-site-on-the-windows-server-computer"></a><a name="BKMK_deploy_asp_net"></a>Windows Server bilgisayarında ASP.NET Core Web sitesini yapılandırma
+### <a name="configure-the-aspnet-core-web-site-on-the-windows-server-computer"></a><a name="BKMK_deploy_asp_net"></a> Windows Server bilgisayarında ASP.NET Core Web sitesini yapılandırma
 
 Yayımlama ayarlarını içeri aktarıyorsanız, bu bölümü atlayabilirsiniz.
 
@@ -211,20 +211,20 @@ Web Dağıtımı kullanmıyorsanız, dosya sistemini veya diğer araçları kull
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
-### <a name="download-and-install-the-remote-tools-on-windows-server"></a><a name="BKMK_msvsmon"></a>Windows Server 'da uzak araçları indirme ve yükleme
+### <a name="download-and-install-the-remote-tools-on-windows-server"></a><a name="BKMK_msvsmon"></a> Windows Server 'da uzak araçları indirme ve yükleme
 
 Visual Studio sürümünüz ile eşleşen uzak araçların sürümünü indirin.
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
-### <a name="set-up-the-remote-debugger-on-windows-server"></a><a name="BKMK_setup"></a>Windows Server 'da uzaktan hata ayıklayıcı 'yı ayarlama
+### <a name="set-up-the-remote-debugger-on-windows-server"></a><a name="BKMK_setup"></a> Windows Server 'da uzaktan hata ayıklayıcı 'yı ayarlama
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 > [!NOTE]
 > Ek kullanıcılar için izinler eklemeniz gerekiyorsa, kimlik doğrulama modunu veya uzaktan hata ayıklayıcı bağlantı noktası numarasını değiştirin, bkz. [Uzaktan hata ayıklayıcıyı yapılandırma](../debugger/remote-debugging.md#configure_msvsmon).
 
-### <a name="attach-to-the-aspnet-application-from-the-visual-studio-computer"></a><a name="BKMK_attach"></a>Visual Studio bilgisayarından ASP.NET uygulamasına iliştirme
+### <a name="attach-to-the-aspnet-application-from-the-visual-studio-computer"></a><a name="BKMK_attach"></a> Visual Studio bilgisayarından ASP.NET uygulamasına iliştirme
 
 1. Visual Studio bilgisayarında, hata ayıklamaya çalıştığınız çözümü açın (Bu makaledeki adımları takip ediyorsanız,**Myaspapp** ).
 2. Visual Studio 'da, **Işleme eklemek > hata ayıkla** ' ya tıklayın (Ctrl + Alt + P).
@@ -277,7 +277,7 @@ Visual Studio sürümünüz ile eşleşen uzak araçların sürümünü indirin.
 
     Kesme noktası Visual Studio 'da isabet almalıdır.
 
-### <a name="troubleshooting-open-required-ports-on-windows-server"></a><a name="bkmk_openports"></a>Sorun giderme: gerekli bağlantı noktalarını Windows Server 'da aç
+### <a name="troubleshooting-open-required-ports-on-windows-server"></a><a name="bkmk_openports"></a> Sorun giderme: gerekli bağlantı noktalarını Windows Server 'da aç
 
 Çoğu kurulumda, gerekli bağlantı noktaları ASP.NET ve uzaktan hata ayıklayıcı yüklemesi tarafından açılır. Ancak, dağıtım sorunlarını gidermekte ve uygulama bir güvenlik duvarının arkasında barındırılıyorsa, doğru bağlantı noktalarının açık olduğunu doğrulamanız gerekebilir.
 

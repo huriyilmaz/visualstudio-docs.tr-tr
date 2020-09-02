@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 0be3049718a97455ecce2b2df2f95c730a303110
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657353"
 ---
 # <a name="or-designer-messages"></a>O/R Tasarımcısı İletileri
@@ -22,13 +22,13 @@ ms.locfileid: "72657353"
 Bu konuda, O/R Tasarımcısı ile çalışırken karşılaşabileceğiniz iletiler listelenmektedir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
- [Bir ilişki \<association adı oluşturulamıyor >-özellik iki kez listelendi](../data-tools/cannot-create-an-association-association-name-property-listed-twice.md)
+ [Bir ilişki oluşturulamıyor \<association name> -özellik iki kez listelenmiş](../data-tools/cannot-create-an-association-association-name-property-listed-twice.md)
 
- [İlişki \<association adı oluşturulamıyor >-özellik türleri eşleşmiyor](../data-tools/cannot-create-an-association-association-name-property-types-do-not-match.md)
+ [İlişki oluşturulamıyor \<association name> -özellik türleri eşleşmiyor](../data-tools/cannot-create-an-association-association-name-property-types-do-not-match.md)
 
  [Bir DataContext yöntemin dönüş türünü değiştirme işlemi geri alınamaz](../data-tools/changing-the-return-type-of-a-datacontext-method-cannot-be-undone.md)
 
- [Veritabanı nesnesi \<object adı için şema bilgileri alınamadı >](../data-tools/could-not-retrieve-schema-information-for-database-object-object-name.md)
+ [Veritabanı nesnesi için şema bilgileri alınamadı \<object name>](../data-tools/could-not-retrieve-schema-information-for-database-object-object-name.md)
 
  [Seçili veritabanı nesnelerinin biri veya daha fazlası, hedef sınıfın şemasıyla eşleşmeyen bir şema döndürüyor](../data-tools/one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class.md)
 
@@ -40,9 +40,9 @@ Bu konuda, O/R Tasarımcısı ile çalışırken karşılaşabileceğiniz iletil
 
  [Tasarımcıya eklemekte olduğunuz nesneler, tasarımcının kullanmakta olduğundan farklı bir veri bağlantısı kullanıyor](../data-tools/the-objects-you-are-adding-to-the-designer-use-a-different-data-connection-than-the-designer-is-currently-using.md)
 
- [@No__t_1property name > özelliği silinemiyor](../data-tools/the-property-property-name-cannot-be-deleted.md)
+ [\<property name> özelliği silinemiyor](../data-tools/the-property-property-name-cannot-be-deleted.md)
 
- [@No__t_1property ad > özelliği, Association \<association adına katıldığından silinemiyor >](../data-tools/the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md)
+ [\<property name> özelliği \<association name> ilişkilendirmesine katıldığından silinemiyor](../data-tools/the-property-property-name-cannot-be-deleted-because-it-is-participating-in-the-association-association-name.md)
 
  [Seçilen sınıf bir veya birden çok DataContext yöntemi için bir dönüş türü olarak kullanıldığından silinemiyor](../data-tools/the-selected-class-cannot-be-deleted-because-it-is-used-as-a-return-type-for-one-or-more-datacontext-methods.md)
 
@@ -60,4 +60,4 @@ Bu konuda, O/R Tasarımcısı ile çalışırken karşılaşabileceğiniz iletil
 ## <a name="related-sections"></a>İlgili Bölümler
  [Visual Studio'daki LINQ to SQL Araçları](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 
- [LINQ to SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)
+ [LINQ - SQL](https://msdn.microsoft.com/library/73d13345-eece-471a-af40-4cc7a2f11655)

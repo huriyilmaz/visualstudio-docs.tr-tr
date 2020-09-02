@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 37bfd1ab57fd0e37f32a55d5bfc3787cb0c0cbd2
-ms.sourcegitcommit: 577c905de52057a741e68c2ed168ea527813fda5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88248052"
 ---
 # <a name="create-custom-views-of-c-objects-in-the-debugger-using-the-natvis-framework"></a>Natvis çerçevesini kullanarak hata ayıklayıcıda C++ nesnelerinin özel görünümlerini oluşturma
@@ -683,7 +683,7 @@ UIVisualizer öğesine bir örnek aşağıda verilmiştir:
 
 - Bir `ServiceId`  -  `Id` öznitelik çifti bir tanımlar `UIVisualizer` . , `ServiceId` Görselleştiricisi paketinin sunduğu hizmetin GUID 'sidir. `Id` , bir hizmet birden fazla sağlıyorsa görselleştiricilerin fark eden benzersiz bir tanımlayıcıdır. Yukarıdaki örnekte, aynı görselleştiricisi hizmeti iki Görselleştiriciler sağlar.
 
-- `MenuName`Öznitelik, hata ayıklayıcıdaki büyüteç simgesinin yanında açılan kutuda görüntülenecek Görselleştirici adını tanımlar. Örnek:
+- `MenuName`Öznitelik, hata ayıklayıcıdaki büyüteç simgesinin yanında açılan kutuda görüntülenecek Görselleştirici adını tanımlar. Örneğin:
 
   ![UIVisualizer menü kısayol menüsü](../debugger/media/dbg_natvis_vectorvisualizer.png "UIVisualizer menü kısayol menüsü")
 

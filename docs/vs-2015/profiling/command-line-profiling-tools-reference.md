@@ -1,5 +1,5 @@
 ---
-title: Komut satırı profil araçları başvurusu | Microsoft Docs
+title: Komut satırı Profil Oluşturma Araçları başvurusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,32 +10,32 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c32d703d7acde00494ff5378d77a61ddbe4e2c76
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68176610"
 ---
 # <a name="command-line-profiling-tools-reference"></a>Komut Satırı Profil Araçları Başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Komut satırı performans araçları uygulamalarına komut isteminden profil programcıların imkan tanır. Aşağıdaki komut satırı profil oluşturma araçları komut isteminden profil kodu sağlar.  
+Komut satırı performans araçları, programcıların, komut isteminde uygulamalarının profilini yapmasına izin verir. Aşağıdaki komut satırı profil oluşturma araçları komut isteminde kodu profilinize izin verir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [VSInstr](../profiling/vsinstr.md)  
- VSInstr.exe İzleme seçenekleri listeler.  
+ VSInstr.exe izleme seçeneklerini listeler.  
   
  [VSInstr Uyarıları](../profiling/vsinstr-warnings.md)  
- Vsınstr aracı tarafından verilen uyarılarını listeler.  
+ VSInstr aracı tarafından verilen uyarıları listeler.  
   
  [VSPerfCLREnv](../profiling/vsperfclrenv.md)  
- Yönetilen kod profil oluşturma için ortamı yapılandırmak için VSPerfCLREnv.exe seçenekleri listeler.  
+ Yönetilen kodun profilini oluşturmak için ortamı yapılandırmak üzere VSPerfCLREnv.exe seçeneklerini listeler.  
   
  [VSPerfCmd](../profiling/vsperfcmd.md)  
  Performans verilerini toplamak için VSPerfCmd.exe seçeneklerini listeler.  
   
  [VSPerfMon](../profiling/vsperfmon.md)  
- Veri toplama toplamak için VSPerfMon.exe seçenekleri listeler.  
+ Veri toplamayı toplamaya yönelik VSPerfMon.exe seçeneklerini listeler.  
   
  [VSPerfReport](../profiling/vsperfreport.md)  
- VSPerfReport.exe raporları oluşturmak için komut satırı seçenekleri listeler.
+ Rapor oluşturmak için VSPerfReport.exe komut satırı seçeneklerini listeler.

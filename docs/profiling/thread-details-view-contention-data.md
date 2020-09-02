@@ -1,5 +1,5 @@
 ---
-title: İş Parçacığı Ayrıntıları Görünümü - Çekişme Verileri | Microsoft Dokümanlar
+title: İş parçacığı Ayrıntıları görünümü-çekişme verileri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -14,49 +14,49 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: 679fd9fd039fa903f5df5a479fa4f0e119bb7a9c
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74778173"
 ---
-# <a name="thread-details-view---contention-data"></a>İş Parçacığı Ayrıntıları görünümü - çekişme verileri
-İş Parçacığı Ayrıntıları görünümü, kaynaklar üzerindeki çekişmelerden kaynaklanan bir profil oluşturma çalışmasının seçili iş parçacığındaki engelleme olaylarının bir zaman çizelgesi grafiğini sunar. Başka bir iş parçacığı kaynağa erişimi kilitlediği için iş parçacığı yürütmeyi askıya almak zorunda kaldığında engelleme olayı oluşur.
+# <a name="thread-details-view---contention-data"></a>İş parçacığı Ayrıntıları görünümü-çekişme verileri
+Iş parçacığı Ayrıntıları görünümü, kaynak üzerinde çekişmeler nedeniyle oluşan profil oluşturma çalıştırmasının seçili iş parçacığındaki engelleme olaylarının zaman çizelgesi grafiğini sunar. Başka bir iş parçacığının bir kaynağa erişimi kilitlendiğinden, iş parçacığı yürütmeyi beklemeye zorken engelleyici bir olay oluşur.
 
- Bu görünüm, iş parçacığının yürütme zaman çizelgesini yatay çubuk olarak ve engelleme olaylarını iş parçacığı için yatay bir zaman çizelgesi üzerinde dikey çubuk olarak temsil eder. Gerektiğinde, tek tek olayları görüntülemek için zaman çizelgesinin bir bölümünü yakınlaştırabilirsiniz. Olaya yol açan işlevlerin yürütme yolunu görüntülemek için olay çubuğunu tıklatın. İşlevler **Çağrı Yığını** penceresinde görünür. Bir işlevin kaynak kodu kullanılabilir olduğunda, Visual Studio IDE'deki kaynak dosyayı yeniden oluşturmak için işlev adını tıklatabilirsiniz.
+ Bu görünüm, iş parçacığının yürütme zaman çizelgesini yatay bir çubuk olarak ve engelleyici olayları iş parçacığı için yatay bir zaman çizelgesinde dikey çubuk olarak gösterir. Gerektiğinde, tek tek olayları görüntülemek için zaman çizelgesinin bir bölümünü yakınlaştırabilirsiniz. Olaya işaret eden işlevlerin yürütme yolunu görüntülemek için olay çubuğuna tıklayın. İşlevler **çağrı yığını** penceresinde görünür. Bir işlevin kaynak kodu kullanılabilir olduğunda, Visual Studio IDE 'de kaynak dosyayı düzenlemek için işlev adına tıklayabilirsiniz.
 
-## <a name="navigate-the-timeline"></a>Zaman çizelgesinde gezinme
+## <a name="navigate-the-timeline"></a>Zaman çizelgesinde gezin
 
-#### <a name="to-zoom-in-on-a-timeline-segment"></a>Zaman çizelgesi segmentini yakınlaştırmak için
+#### <a name="to-zoom-in-on-a-timeline-segment"></a>Bir zaman çizelgesi segmentini yakınlaştırmak için
 
-- Zaman çizelgesinin bir alanını seçmek için fare işaretçisini tıklatın ve sürükleyin.
+- Zaman çizelgesindeki bir alanı seçmek için fare işaretçisini tıklatın ve sürükleyin.
 
-     Fareyi serbest bıraktığınızda, görünüm seçili zaman kesimine yakınlaştırır. Daha ayrıntılı olarak yakınlaştırmak için işlemi yineleyebilirsiniz. Zaman kaydırma çubuğundaki kaydırma kutusu, görünümde görüntülenen zaman kesiminin göreli boyutunu temsil eder.
+     Fareyi serbest bırakırsanız, görünüm seçilen zaman segmentine yakınlaştırır. Daha ayrıntılı bir şekilde yakınlaştırmak için işlemi yineleyebilirsiniz. Zaman kaydırma çubuğundaki kaydırma kutusu, görünümde görüntülenen zaman diliminin göreli boyutunu temsil eder.
 
-#### <a name="to-zoom-out-on-a-timeline"></a>Zaman çizelgesini uzaklaştırmak için
+#### <a name="to-zoom-out-on-a-timeline"></a>Bir zaman çizelgesinde uzaklaştırmak için
 
-- Önceki yakınlaştırma düzeyine dönmek için **Uzaklaştır'ı** tıklatın.
+- Önceki yakınlaştırma düzeyine dönmek için **uzaklaştır** ' ı tıklatın.
 
-- Görünümdeki tüm zaman çizelgesini göstermek için **Yakınlaştır'ı Sıfırla'yı** tıklatın.
+- Görünümdeki tüm zaman çizelgesini göstermek için **Yakınlaştırma sıfırlaması** ' na tıklayın.
 
 #### <a name="to-view-the-call-stack-of-an-event"></a>Bir olayın çağrı yığınını görüntülemek için
 
-- Zaman çizelgesi grafiğinde, olayı temsil eden dikey çubuğu tıklatın.
+- Zaman çizelgesi grafiğinde, olayı temsil eden dikey çubuğa tıklayın.
 
-#### <a name="to-view-or-edit-the-source-code-of-a-function-in-the-call-stack"></a>Arama yığınındaki bir işlevin kaynak kodunu görüntülemek veya görüntülemek için
+#### <a name="to-view-or-edit-the-source-code-of-a-function-in-the-call-stack"></a>Çağrı yığınında bir işlevin kaynak kodunu görüntülemek veya düzenlemek için
 
-- Arama **Yığını** penceresinde işlev adını tıklatın.
+- **Çağrı yığını** penceresinde, işlev adına tıklayın.
 
-  İşlev kaynak kodu geçerli projenin bir parçası olmalıdır.
+  İşlev kaynak kodu, geçerli projenin bir parçası olmalıdır.
 
-#### <a name="to-view-the-contention-events-of-a-resource-in-all-threads-in-the-profiling-run"></a>Profil oluşturma çalışmasındaki tüm iş parçacıklarında bir kaynağın çekişme olaylarını görüntülemek için
+#### <a name="to-view-the-contention-events-of-a-resource-in-all-threads-in-the-profiling-run"></a>Profil oluşturma çalıştırmasında tüm iş parçacıklarında bir kaynağın çekişme olaylarını görüntülemek için
 
-- Zaman çizelgesi grafiğinde, kaynağın adını veya kimliğini tıklatın.
+- Zaman çizelgesi grafiğinde kaynağın adına veya KIMLIğINE tıklayın.
 
-     [Seçili](../profiling/resource-details-view-contention-data.md) kaynak için Kaynak Ayrıntıları Görünümü görüntülenir.
+     Seçili kaynak için [Kaynak Ayrıntıları görünümü](../profiling/resource-details-view-contention-data.md) görüntülenir.
 
-#### <a name="to-view-the-thread-contention-data-in-the-processes-window"></a>İşlemler penceresinde iş parçacığı çekişme verilerini görüntülemek için
+#### <a name="to-view-the-thread-contention-data-in-the-processes-window"></a>Işler penceresinde iş parçacığı çakışması verilerini görüntülemek için
 
-- Zaman çizelgesi grafiğinde **Toplam'ı**tıklatın.
+- Zaman çizelgesi grafiğinde **Toplam**' a tıklayın.
 
-     [İşlem Görünümü](../profiling/process-view-contention-data.md) seçili iş parçacığıyla görünür.
+     [Işlem görünümü](../profiling/process-view-contention-data.md) seçili iş parçacığı ile görüntülenir.

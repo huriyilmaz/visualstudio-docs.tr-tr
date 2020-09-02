@@ -13,49 +13,49 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e8e0aa8f5cc45e0f6e012ecb3f0a27a22725a259
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63421221"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64805634"
 ---
 # <a name="expression-evaluator-architecture"></a>İfade Değerlendirici Mimarisi
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için lütfen bkz [CLR ifade Değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Özel bir dil Visual Studio hata ayıklama paket tümleştirme, gerekli ifade değerlendiricisi (EE) arabirimleri uygulayan ve ortak dil çalışma zamanı sembol sağlayıcısı (SP) ve bağlayıcı arabirimleri çağırma anlamına gelir. SP ve bağlayıcı, geçerli yürütme adresi birlikte ifadelerin değerlendirilme bağlam nesneleridir. Bu arabirimler oluşturmak ve kullanma bilgileri bir EE mimarisini temel kavramlar temsil eder.  
+ Özel bir dili Visual Studio hata ayıklama paketiyle tümleştirmek, gerekli ifade değerlendirici (EE) arabirimlerini uygulama ve ortak dil çalışma zamanı sembol sağlayıcısı (SP) ve Ciltçi arabirimlerini çağırma anlamına gelir. SP ve Ciltçi nesneleri, geçerli yürütme adresiyle birlikte, ifadelerin değerlendirildiği bağlamıdır. Bu arabirimlerin ürettiği ve tükettiği bilgiler, bir EE mimarisinde temel kavramları temsil eder.  
   
 ## <a name="overview"></a>Genel Bakış  
   
-### <a name="parsing-the-expression"></a>İfade ayrıştırma  
- Bir program ayıklanırken ifadeler nedeniyle ama her zaman, hataları ayıklanan programa (kullanıcı tarafından yerleştirilmiş bir kesme noktası veya bir bir özel durumun) bir kesme noktasında durduruldu sayısı için değerlendirilir. Tarafından temsil edilen zaman Visual Studio alır bir yığın çerçevesi şu anda olduğu [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) arabiriminden hata ayıklama altyapısı (DE). Visual Studio sonra çağıran [GetExpressionContext](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) edinme [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimi. Bu arabirim, ifadeleri değerlendirilebilen bir bağlamı temsil eder; [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) değerlendirme işlemi için giriş noktasıdır. Bu noktaya kadar tüm arabirimleri DE tarafından uygulanır.  
+### <a name="parsing-the-expression"></a>Ifadeyi ayrıştırma  
+ Bir programda hata ayıklarken, ifadeler bir dizi nedenden dolayı değerlendirilir, ancak hata ayıklamakta olan program bir kesme noktasında durdurulduğunda (Kullanıcı tarafından ya da bir özel durum nedeniyle oluşan bir kesme noktası). Visual Studio, [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) arabirimi tarafından temsil edilen bir yığın ÇERÇEVESINI (de) hata ayıklama altyapısından (de) aldığında şu anda. Daha sonra Visual Studio [IDebugExpressionContext2](../../extensibility/debugger/reference/idebugexpressioncontext2.md) arabirimini almak Için [GetExpressionContext](../../extensibility/debugger/reference/idebugstackframe2-getexpressioncontext.md) öğesini çağırır. Bu arabirim, ifadelerin değerlendirileceği bağlamı temsil eder; [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) , değerlendirme işleminin giriş noktasıdır. Bu noktaya kadar tüm arabirimler DE tarafından uygulanır.  
   
- Zaman `IDebugExpressionContext2::ParseText` olan adlı kesme noktası oluştuğu kaynak dosyanın dili ile ilişkilendirilmiş EE DE başlatır (DE ayrıca SH bu noktada oluşturur). EE tarafından temsil edilen [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md) arabirimi. Daha sonra DE çağırır [ayrıştırma](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) ifade (metin biçiminde) ayrıştırılmış bir ifadeye dönüştürmek için değerlendirme için hazır. Bu ayrıştırılmış ifade tarafından temsil edilen [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) arabirimi. İfade genellikle ayrıştırılması ve bu noktada değerlendirilmez unutmayın.  
+ `IDebugExpressionContext2::ParseText`Çağrıldığında,, kesme noktasının gerçekleştiği kaynak dosyanın diliyle ILIŞKILI Ee 'ı başlatır (Ayrıca, bu noktada sh 'i de başlatır). EE, [ıdebugexpressiondeğerlendirici](../../extensibility/debugger/reference/idebugexpressionevaluator.md) arabirimi tarafından temsil edilir. Ardından, ifadeyi (metin biçiminde) Ayrıştırılacak bir ifadeye dönüştürmek için [ayrıştırmayı](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) çağırır. Bu ayrıştırılmış ifade [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) arabirimi tarafından temsil edilir. İfadenin genellikle ayrıştırılıp bu noktada değerlendirilmediğini unutmayın.  
   
- DE uygulayan bir nesne oluşturur [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) arabirimi puts `IDebugParsedExpression` içine nesne `IDebugExpression2` nesne ve döndürür `IDebugExpression2` nesnesinden `IDebugExpressionContext2::ParseText`.  
+ DE [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) arabirimini uygulayan bir nesne oluşturur, nesnesini `IDebugParsedExpression` nesnesine koyar `IDebugExpression2` ve `IDebugExpression2` öğesinden nesnesini döndürür `IDebugExpressionContext2::ParseText` .  
   
-### <a name="evaluating-the-expression"></a>İfade değerlendirme  
- Visual Studio ya da çağırır [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) veya [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) ayrıştırılmış ifade değerlendirilemiyor. Bu yöntemlerin ikisi de arama [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) (`IDebugExpression2::EvaluateSync` yöntemi çağıran hemen while `IDebugExpression2::EvaluateAsync` yöntemi bir arka plan iş parçacığı aracılığıyla çağırır) ayrıştırılmış ifade değerlendirilip döndürülecek bir [ IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) ayrıştırılmış ifadenin türü ve değeri temsil eden arabirim. `IDebugParsedExpression::EvaluateSync` Ayrıştırılmış ifade tarafından temsil edilen bir asıl değere dönüştürmek için sağlanan SH, adresi ve Bağlayıcısı'nı kullanan `IDebugProperty2` arabirimi.  
+### <a name="evaluating-the-expression"></a>Ifade değerlendiriliyor  
+ Visual Studio, ayrıştırılmış ifadeyi değerlendirmek için [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) ya da [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) öğesini çağırır. Bu yöntemlerin her ikisi de [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) , `IDebugExpression2::EvaluateSync` `IDebugExpression2::EvaluateAsync` ayrıştırılmış ifadeyi değerlendirmek ve ayrıştırılmış ifadenin değerini ve türünü temsil eden bir [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) arabirimi döndürmek için EvaluateSync öğesini çağırır (yöntemi hemen, bir arka plan iş parçacığı aracılığıyla çağırır). `IDebugParsedExpression::EvaluateSync` , ayrıştırılmış ifadeyi arabirim tarafından temsil edilen gerçek bir değere dönüştürmek için sağlanan SH, Address ve Ciltçi 'yi kullanır `IDebugProperty2` .  
   
 ### <a name="for-example"></a>Örneğin  
- Çalışan bir program içinde bir kesme noktasına isabet sonra bir değişkende görüntülemek kullanıcının seçtiği **QuickWatch** iletişim kutusu. Bu iletişim kutusu, değişkenin adını, değeri ve türünü gösterir. Kullanıcı, genellikle değeri değiştirebilirsiniz.  
+ Çalışan bir programda bir kesme noktasına isabet ettikten sonra, Kullanıcı **hızlı izleme** iletişim kutusunda bir değişken görüntülemeyi seçer. Bu iletişim kutusu değişkenin adını, değerini ve türünü gösterir. Kullanıcı genellikle değeri değiştirebilir.  
   
- Zaman **QuickWatch** iletişim kutusu gösterilir, incelenmekte değişkeninin adını metin olarak gönderilir [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md). Bu döndürür bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) ayrıştırılmış ifadesi, bu durumda temsil eden bir nesne, değişken. [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) ardından oluşturmak için çağrılan bir `IDebugProperty2` adının yanı sıra değişken değerini ve türünü temsil eden nesne. Görüntülenen bu bilgilerdir.  
+ **QuickWatch** iletişim kutusu gösterildiğinde, incelenmekte olan değişkenin adı, [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md)'e metin olarak gönderilir. Bu, ayrıştırılmış ifadeyi temsil eden bir [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) nesnesi döndürür, bu durumda değişkeni. [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) daha sonra `IDebugProperty2` değişkenin değerini ve türünü ve adını temsil eden bir nesne oluşturmak için çağrılır. Bu bilgiler görüntülenir.  
   
- Kullanıcı, değişkenin değeri değişirse [SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) program çıktığında kullanılacak şekilde, bellek değişkenin değeri değişir yeni değerle çağrılır çalışıyor.  
+ Kullanıcı değişkenin değerini değiştirirse, [SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) yeni değerle çağrılır ve bu nedenle, program çalışmaya devam ettiğinde kullanılacak.  
   
- Bkz: [görüntüleme Yereller](../../extensibility/debugger/displaying-locals.md) değişkenlerin değerlerini görüntüleme, bu işlemle ilgili daha fazla ayrıntı için. Bkz: [yerel değerinin değiştirilmesi](../../extensibility/debugger/changing-the-value-of-a-local.md) nasıl bir değişkenin değeri değişir hakkında daha fazla bilgi.  
+ Değişkenlerin değerlerini görüntüleme işlemi hakkında daha fazla ayrıntı için bkz. [Locals görüntüleme](../../extensibility/debugger/displaying-locals.md) . Bir değişkenin değerinin nasıl değiştirildiği hakkında daha fazla ayrıntı için bkz. [yerel öğenin değerini değiştirme](../../extensibility/debugger/changing-the-value-of-a-local.md) .  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Değerlendirme Bağlamı](../../extensibility/debugger/evaluation-context.md)  
- EE DE çağırdığında, geçirilen bağımsız değişkenler sağlar.  
+ , EE çağrısı yaparken geçirilen bağımsız değişkenleri sağlar.  
   
  [Anahtar İfade Değerlendiricisi Arabirimleri](../../extensibility/debugger/key-expression-evaluator-interfaces.md)  
- Değerlendirme bağlamı ile birlikte bir EE yazarken gereken önemli arabirimler açıklanmaktadır.  
+ Bir EE yazarken, değerlendirme bağlamı ile birlikte gereken önemli arabirimleri açıklar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir CLR ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
- [Yerel öğeleri görüntüleme](../../extensibility/debugger/displaying-locals.md)   
+ [CLR Ifade Değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
+ [Yerelleri görüntüleme](../../extensibility/debugger/displaying-locals.md)   
  [Yerel Bir Öğenin Değerini Değiştirme](../../extensibility/debugger/changing-the-value-of-a-local.md)

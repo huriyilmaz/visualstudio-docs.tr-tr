@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Atom oluşturmak için özel bir galeriyi akış | Microsoft Docs'
+title: 'Nasıl yapılır: özel galeri için Atom akışı oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,31 +12,31 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f6d4ba78028774e8fbf8e281afa2855781dab43a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204204"
 ---
-# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Nasıl yapılır: Özel Bir Galeri için Atom Akışı Oluşturma
+# <a name="how-to-create-an-atom-feed-for-a-private-gallery"></a>Nasıl Yapılır: Özel Bir Galeri için Atom Akışı Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir Atom (uzantıları içeren ve akışa ekleme bir intranet konumu için RSS akışı) oluşturabileceğiniz **Uzantılar ve güncelleştirmeler** özel bir galeri olarak. Daha fazla bilgi için [özel galeriler](../extensibility/private-galleries.md).  
+Uzantıları içeren bir intranet konumuna bir atom (RSS) akışı oluşturabilir ve akışı **uzantılara ve güncelleştirmelere** özel galeri olarak ekleyebilirsiniz. Daha fazla bilgi için bkz. [özel galeriler](../extensibility/private-galleries.md).  
   
-## <a name="creating-an-atom-feed"></a>Oluşturma bir Atom akışı  
- Atom akışı özel bir galeri oluşturmak için öncelikle bir klasöre uzantılarınızı (.vsix dosyaları) toplamanız gerekir. İsterseniz, alt klasörler halinde düzenleyebilirsiniz. Ayrıca, aşağıdaki kaynakları gerekir:  
+## <a name="creating-an-atom-feed"></a>Atom akışı oluşturma  
+ Özel Galeri olarak bir Atom akışı oluşturmak için, önce uzantılarınızı (. vsix Files) bir klasöre toplamanız gerekir. İsterseniz bunları alt klasörler halinde düzenleyebilirsiniz. Ayrıca aşağıdaki kaynaklara ihtiyacınız olacaktır:  
   
-- Uzantıları özel bir galeri kullanılabilmesini atom.xml dosyası. Atom.xml dosyaya bağlanma hakkında daha fazla bilgi için **Uzantılar ve güncelleştirmeler**, bkz: [özel galeriler](../extensibility/private-galleries.md).  
+- Uzantıları özel galeri olarak kullanılabilir hale getiren bir atom.xml dosyası. atom.xml dosyasını **uzantılara ve güncelleştirmelere**bağlama hakkında daha fazla bilgi için bkz. [özel galeriler](../extensibility/private-galleries.md).  
   
-- (Örneğin, ekran görüntüleri) extensions ayıklanan herhangi bir görüntü dosyalarını içeren bir klasör. Böylece yer alır, görüntü yollarında göreli bağlantıları atom.xml dosyayı içeren **Uzantılar ve güncelleştirmeler**.  
+- Uzantılardan ayıklanan görüntü dosyalarını içeren bir klasör (örneğin, ekran görüntüleri). atom.xml dosyası, **Uzantılar ve güncelleştirmelerde**kullanılabilmesi için bu görüntülere yönelik göreli bağlantıları içerir.  
   
-  Örneğin, bir klasöre toplanan aşağıdaki iki uzantıları varsayın:  
+  Örneğin, aşağıdaki iki uzantıyı bir klasöre topladığınızı varsayalım:  
   
-- Template_Wizard_239.vsix boş bir VSIX proje şablonudur.  
+- Boş bir VSıX proje şablonu olan Template_Wizard_239. vsix.  
   
-- SelectionHighlight.vsix Seçili sözcüğün tüm örneklerinin vurgulamak için bir araçtır.  
+- SelectionHighlight. vsix, seçilen bir kelimenin tüm örneklerini vurgulamak için bir araçtır.  
   
-  Atom.xml dosyasının içeriğini aşağıdaki örneğe benzer:  
+  atom.xml dosyanın içeriği aşağıdaki örneğe benzer:  
   
 ```  
   <?xml version="1.0" encoding="utf-8" ?>   
@@ -73,7 +73,7 @@ Bir Atom (uzantıları içeren ve akışa ekleme bir intranet konumu için RSS a
   
 ```  
   
- Görüntüleri oluşturulan bir klasörde ekran görüntüleri için dikkat edin iki bağlantı etiketlerini bakın.  
+ İki bağlantı etiketlerinin görüntünün oluşturulan klasöründeki ekran görüntülerini ifade ettiğini unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Özel Galeriler](../extensibility/private-galleries.md)

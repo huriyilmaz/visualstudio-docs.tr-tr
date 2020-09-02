@@ -1,5 +1,5 @@
 ---
-title: Arayan-Aranan görünümü | Microsoft Docs
+title: Arayan-çağrılan görünümü | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,32 +17,32 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 58aca542571066ecfa9328c9600972665e757150
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68176627"
 ---
 # <a name="callercallee-view"></a>Arayan/Aranan görünümü
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Arayan/Aranan görünümü seçili işlev ve üst ve alt işlevleri için profil bilgilerini görüntüler. Arayan/Aranan görünümü üç Kılavuzlar içerir:  
+Arayan/çağrılan görünümü seçili bir işlev ve üst ve alt işlevleri için profil oluşturma bilgilerini görüntüler. Arayan/çağrılan görünümü üç kılavuz içerir:  
   
- **Geçerli işlev** Orta Kılavuz ve bunun görüntülenen bilgi seçili işlev için profil oluşturmayı gösterir. Değerler, toplanan tüm işlev çağrıları profil oluşturma çalışması içerir.  
+ **Geçerli işlev** ortadaki kılavuzda görüntülenir ve seçili işlev için profil oluşturma bilgilerini gösterir. Değerler, profil oluşturma çalıştırmasında toplanan işleve yapılan tüm çağrıları içerir.  
   
- **Geçerli işlevi çağırmış işlevler** üst kılavuz görüntülenir ve çağıran (üst) işlevi'öğesinden gelen çağrılar tarafından oluşturulan değerleri seçili (geçerli) işlevinin sayısını gösterir.  
+ **Geçerli işlevi çağıran işlevler** üst kılavuzda görüntülenir ve çağıran (üst) işlevden çağrılar tarafından oluşturulan seçili (geçerli) işlevin değerlerinin sayısını gösterir.  
   
- **Geçerli işlev tarafından çağrılan işlevler** alt kılavuz ve bunun görüntülenen geçerli işlev tarafından alt işlev çağrıldığında çağrılan (alt) işlevleri için seçili işlev bilgileri profil oluşturma gösterilmektedir.  
+ **Geçerli işlev tarafından çağrılan işlevler** alt kılavuzda görüntülenir ve alt işlev geçerli işlev tarafından çağrıldığında seçili işlevin aranan (alt) işlevlerine ilişkin profil oluşturma bilgilerini gösterir.  
   
- Çağıran/çağrılan Görünümü'nde kullanılabilir olan sütunlarda veri toplamak için kullanılan profil oluşturma yöntemine (örnekleme veya Araçlar) bağlıdır ve .NET bellek verileri profil oluşturma çalışmasında toplanan açmasa da Çalıştır.  
+ Arayan/çağrılan görünümünde kullanılabilen sütunlar, verileri toplamak için kullanılan profil oluşturma yöntemine (örnekleme veya izleme) ve .NET bellek verilerinin profil oluşturma çalıştırmasında toplanıp toplanmadığına bağlıdır.  
   
- Rapor görünümü Orta kısmındaki geçerli işlevin herhangi bir görünümün diğer iki bölümü listelenen işlevlerin çift tıklayarak gereken farklı işlevi seçebilirsiniz. Rapor görünümü, değişiklikleri yansıtacak şekilde otomatik olarak güncelleştirilir.  
+ Görünümün diğer iki bölümünde listelenen işlevlerden herhangi birine çift tıklayarak rapor görünümünün ikinci bölümünde geçerli Işlev olarak farklı bir işlev seçebilirsiniz... Rapor görünümü değişiklikleri yansıtacak şekilde otomatik olarak güncelleştirilir.  
   
- Sütun adları tıklayarak verileri yeniden sıralayabilirsiniz. Ek sütunları çağıran/çağrılan görünümü eklenebilir. Daha fazla bilgi için [nasıl yapılır: Rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md).  
+ Sütun adları ' na tıklayarak verileri sıralayabilirsiniz. Çağıran/çağrılan görünümüne ek sütunlar eklenebilir. Daha fazla bilgi için bkz. [nasıl yapılır: rapor görünümü sütunlarını özelleştirme](../profiling/how-to-customize-report-view-columns.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arayan / Aranan görünümü - örnekleme verileri](../profiling/caller-callee-view-sampling-data.md)   
- [Arayan/Aranan görünümü - izleme verileri](../profiling/caller-callee-view-instrumentation-data.md)   
- [Arayan/Aranan görünümü - .NET bellek izleme verileri](../profiling/caller-callee-view-net-memory-instrumentation-data.md)   
- [Arayan/Aranan görünümü - .NET bellek örnekleme verileri](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
- [Arayan / Aranan görünümü - çakışma verileri](../profiling/caller-callee-view-contention-data.md)
+ [Çağıran/çağrılan görünümü-örnekleme verileri](../profiling/caller-callee-view-sampling-data.md)   
+ [Arayan/çağrılan görünümü-Izleme verileri](../profiling/caller-callee-view-instrumentation-data.md)   
+ [Arayan/çağrılan görünümü-NET bellek Izleme verileri](../profiling/caller-callee-view-net-memory-instrumentation-data.md)   
+ [Arayan/Aranan görünümü-.NET Bellek Örnekleme verileri](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
+ [Arayan/çağrılan görünümü-çekişme verileri](../profiling/caller-callee-view-contention-data.md)

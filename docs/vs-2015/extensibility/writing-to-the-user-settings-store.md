@@ -1,5 +1,5 @@
 ---
-title: Kullanıcı ayarları Store için yazma | Microsoft Docs
+title: Kullanıcı ayarları deposuna yazma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,43 +9,43 @@ caps.latest.revision: 4
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 764d9b81297c6bbefd1f5fdf7c77e4d514bb5045
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63408494"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64821277"
 ---
 # <a name="writing-to-the-user-settings-store"></a>Kullanıcı Ayarları Deposuna Yazma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Kullanıcı ayarları benzeyen yazılabilir ayarlarıdır **Araçlar / Seçenekler** iletişim ve özellikleri windows belirli bir iletişim kutusu. Visual Studio uzantıları bunlar küçük miktarlarda veri depolamak için kullanabilirsiniz. Bu izlenecek yolda not defteri için Visual Studio dış bir araç olarak okuma ve kullanıcı ayarları deposuna yazma tarafından nasıl ekleneceğini gösterir.  
+Kullanıcı ayarları, **Araçlar/Seçenekler** iletişim kutusu, Özellikler pencereleri ve diğer diğer iletişim kutuları gibi yazılabilir ayarlardır. Visual Studio uzantıları, küçük miktarlarda veri depolamak için bunları kullanabilir. Bu izlenecek yol, Kullanıcı ayarları deposundan okuma ve yazma yoluyla Visual Studio 'ya bir dış araç olarak not defteri eklemeyi gösterir.  
   
 ### <a name="backing-up-your-user-settings"></a>Kullanıcı ayarlarınızı yedekleme  
   
-1. Hata ayıklama ve yordamı yineleyin dış Araçlar ayarlarına olması gerekir. Bunu yapmak için bunları gerektiği gibi geri yükleyebilirsiniz, böylece özgün ayarlarına kaydetmeniz gerekir.  
+1. Hata ayıklama ve yordamı yinelemek için dış araçlar ayarlarını sıfırlayabilmeniz gerekir. Bunu yapmak için özgün ayarları kaydetmeniz gerekir, böylece bunları gerektiği gibi geri yükleyebilirsiniz.  
   
-2. Regedit.exe'yi açın.  
+2. Regedit.exe açın.  
   
-3. HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External araçları gidin\\.  
+3. HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\14.0Exp\External Araçları ' na gidin \\ .  
   
     > [!NOTE]
-    > \14.0Exp\ ve değil \14.0 içeren anahtar baktığınızdan emin olun\\. Visual Studio'nun deneysel örneği çalıştırdığınızda, kullanıcı ayarlarınızı kayıt defteri kovanında "14.0Exp" dir.  
+    > \ 14,0 değil, \14.0Exp\ içeren anahtara baktığınızdan emin olun \\ . Visual Studio 'nun Deneysel örneğini çalıştırdığınızda, Kullanıcı ayarlarınız "14.0 exp" kayıt defteri kovanında bulunur.  
   
-4. \External Tools\ alt sağ tıklayın ve ardından **dışarı**. Emin olun **Seçili dal** seçilir.  
+4. \External Tools \ AltAnahtar öğesine sağ tıklayın ve ardından **dışarı aktar**' a tıklayın. **Seçili dalın** seçili olduğundan emin olun.  
   
-5. Sonuçta elde edilen dış Tools.reg dosyayı kaydedin.  
+5. Elde edilen dış araçlar. reg dosyasını kaydedin.  
   
-6. Daha sonra dış araçların ayarlarını sıfırlamak istediğiniz zaman HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0Exp\External Tools\ içinde kayıt defteri anahtarı seçin ve tıklayın **Sil** bağlam menüsünde.  
+6. Daha sonra, dış araçlar ayarlarını sıfırlamak istediğinizde, \Software\Microsoft\VisualStudio\14.0Exp\External Tools \ kayıt defteri anahtarını HKEY_CURRENT_USER seçin ve bağlam menüsünde **Sil** ' e tıklayın.  
   
-7. Zaman **Anahtar Silinmesini Onayla** iletişim kutusu görüntülendikten sonra **Evet**.  
+7. **Anahtar silmeyi onayla** iletişim kutusu göründüğünde **Evet**' e tıklayın.  
   
-8. Daha önce kaydettiğiniz dış Tools.reg dosyaya sağ tıklayın, **birlikte Aç**ve ardından **Kayıt Defteri Düzenleyicisi'ni**.  
+8. Daha önce kaydettiğiniz dış araçlar. reg dosyasına sağ tıklayın, **birlikte Aç**' a ve ardından **kayıt defteri Düzenleyicisi**' ne tıklayın.  
   
 ## <a name="writing-to-the-user-settings-store"></a>Kullanıcı Ayarları Deposuna Yazma  
   
-1. UserSettingsStoreExtension adlı bir VSIX projesi oluşturun ve ardından UserSettingsStoreCommand adlı özel bir komut ekleyin. Özel komut oluşturma hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)  
+1. UserSettingsStoreExtension adlı bir VSıX projesi oluşturun ve ardından UserSettingsStoreCommand adlı bir özel komut ekleyin. Özel bir komut oluşturma hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)  
   
-2. UserSettingsStoreCommand.cs içinde aşağıdaki ekleme using deyimlerini:  
+2. UserSettingsStoreCommand.cs ' de, aşağıdaki using deyimlerini ekleyin:  
   
     ```csharp  
     using System.Collections.Generic;  
@@ -53,7 +53,7 @@ Kullanıcı ayarları benzeyen yazılabilir ayarlarıdır **Araçlar / Seçenekl
     using Microsoft.VisualStudio.Shell.Settings;  
     ```  
   
-3. MenuItemCallback, yöntem gövdesi silme ve kullanıcı ayarlarını depolamak, aşağıdaki gibi alır:  
+3. MenuItemCallback içinde, yönteminin gövdesini silin ve Kullanıcı ayarları deposunu aşağıdaki gibi alın:  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -63,7 +63,7 @@ Kullanıcı ayarları benzeyen yazılabilir ayarlarıdır **Araçlar / Seçenekl
     }  
     ```  
   
-4. Artık, Not Defteri zaten dış bir araç olarak ayarlanmasına bulun. İle tüm dış araçları ToolCmd ayarı "Not", şu şekilde olup olmadığını belirlemek için yineleme yapmanız gerekir:  
+4. Şimdi Not defteri 'nin zaten dış bir araç olarak ayarlanmış olup olmadığını öğrenin. ToolCmd ayarının "Notepad" olup olmadığını ve aşağıdaki gibi tüm dış araçları kullanarak yineleme yapmanız gerekir:  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -87,7 +87,7 @@ Kullanıcı ayarları benzeyen yazılabilir ayarlarıdır **Araçlar / Seçenekl
   
     ```  
   
-5. Not Defteri'ni dış bir araç olarak ayarlanmamışsa, aşağıdaki gibi ayarlayın:  
+5. Not defteri bir dış araç olarak ayarlanmamışsa, aşağıdaki gibi ayarlayın:  
   
     ```vb  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -123,10 +123,10 @@ Kullanıcı ayarları benzeyen yazılabilir ayarlarıdır **Araçlar / Seçenekl
     }  
     ```  
   
-6. Kodu test edin. İkinci kez çalıştırmadan önce kayıt defterini geri alma işlemleri gerekir böylece onu dış bir araç olarak not defteri ekler unutmayın.  
+6. Kodu test edin. Not defteri 'nin bir dış araç olarak eklediğini unutmayın, bu yüzden kayıt defterini ikinci bir kez çalıştırmadan önce geri almanız gerekir.  
   
-7. Kodu derlemek ve hata ayıklamaya başlayın.  
+7. Kodu derleyin ve hata ayıklamayı başlatın.  
   
-8. Üzerinde **Araçları** menüsünde tıklatın **çağırma UserSettingsStoreCommand**. Bu Not Defteri'ne ekler **Araçları** menüsü.  
+8. **Araçlar** menüsünde **UserSettingsStoreCommand komutunu çağır**' a tıklayın. Bu, Not defteri 'Ni **Araçlar** menüsüne ekler.  
   
-9. Not Defteri'ni araçları görürsünüz / Seçenekler menüsü ve tıklayarak **not defteri** bir not defteri örneği ayarlama duruma getirmeniz gerekir.
+9. Artık Araçlar/Seçenekler menüsünde Not defteri ' ni görmeniz ve **Not** defteri ' ne tıklamak, Not defteri 'nin bir örneğini göstermelidir.

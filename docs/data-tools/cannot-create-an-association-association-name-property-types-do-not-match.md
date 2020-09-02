@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 4b9735c711abe7826d241e8c8aa7ade0a5f5d5e0
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85536727"
 ---
 # <a name="cannot-create-an-association-ltassociation-namegt---property-types-do-not-match"></a>İlişki &lt; ilişkilendirme adı oluşturulamıyor &gt; -özellik türleri eşleşmiyor
@@ -31,7 +31,7 @@ ms.locfileid: "85536727"
 
 3. **Ilişki özelliklerini** inceleyin ve aynı veri türünde Özellikler ' i seçin.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

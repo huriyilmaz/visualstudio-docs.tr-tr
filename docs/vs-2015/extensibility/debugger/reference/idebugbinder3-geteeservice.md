@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetEEService | Microsoft Docs
+title: 'IDebugBinder3:: GetEEService | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 982802d1e89434322aba4f5078ceb6dd5a850034
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193040"
 ---
 # <a name="idebugbinder3geteeservice"></a>IDebugBinder3::GetEEService
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem, istenen hizmeti döndürür.  
+Bu yöntem istenen hizmeti döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetEEService(  
@@ -46,25 +46,25 @@ Int GetEEService(
   
 #### <a name="parameters"></a>Parametreler  
  `vendor`  
- [in] `GUID` bir satıcının (bir null değer kabul edilebilir).  
+ [in] `GUID` bir satıcı (null değer kabul edilebilir).  
   
  `language`  
- [in] `GUID` dilinin (bir null değer kabul edilebilir).  
+ [in] `GUID` bir dil (null değer kabul edilebilir).  
   
  `iid`  
- [in] `IID` almak için hizmeti.  
+ [in] `IID` hizmeti edinin.  
   
  `ppService`  
- [out] İstenen hizmet için bir arabirim.  
+ dışı İstenen hizmete yönelik bir arabirim.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Geçirmek `IID` için [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md) arabirimi (`IID_IEEVisualizerServiceProvider`) tür görselleştiricisi hizmetin kullanılabilir olup olmadığını görmek için. Bu nedenle, ifade değerlendiricisi elde [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) tür görselleştiricileri desteklemek için arabirim. Bkz: [Visualizing ve verileri görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) Ayrıntılar için.  
+ `IID`Tür görselleştiricisi hizmeti 'nin kullanılabilir olup olmadığını görmek Için [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md) arabirimine ( `IID_IEEVisualizerServiceProvider` ) geçin. Bu durumda, ifade değerlendirici, tür görselleştiricileri desteklemek için [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md) arabirimini alabilir. Ayrıntılar için bkz. [verileri görselleştirme ve görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md) .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)   
  [IEEVisualizerServiceProvider](../../../extensibility/debugger/reference/ieevisualizerserviceprovider.md)   
- [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)   
+ [Ieevisualizerhizmeti](../../../extensibility/debugger/reference/ieevisualizerservice.md)   
  [Verileri Görselleştirme ve Görüntüleme](../../../extensibility/debugger/visualizing-and-viewing-data.md)

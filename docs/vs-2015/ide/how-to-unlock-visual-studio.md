@@ -11,10 +11,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a71a045661c48fd36733ecd8d2266470667a5c35
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670590"
 ---
 # <a name="how-to-unlock-visual-studio"></a>Visual Studio Kilidini Açma
@@ -29,7 +29,7 @@ Visual Studio 'Yu 30 güne kadar ücretsiz değerlendirebilirsiniz. IDE 'de otur
 ## <a name="to-unlock-visual-studio-using-an-online-subscription"></a>Çevrimiçi bir abonelik kullanarak Visual Studio 'Nun kilidini açmak için
  Microsoft hesabı veya bir iş veya okul hesabıyla ilişkili bir MSDN veya Visual Studio Online aboneliğini kullanarak Visual Studio 'Nun kilidini açmak için:
 
-1. IDE 'nin sağ üst köşesindeki "oturum aç" düğmesine tıklayın (veya hesap ayarları iletişim kutusunu açmak için Dosya > Hesap ayarları ' na gidin ve "oturum aç" düğmesine tıklayın.)
+1. IDE 'nin sağ üst köşesindeki "oturum aç" düğmesine tıklayın (veya hesap ayarları iletişim kutusunu açmak için dosya > hesap ayarları ' na gidin ve "oturum aç" düğmesine tıklayın.)
 
 2. Microsoft hesabı veya bir iş ya da okul hesabı için kimlik bilgilerini girin. Visual Studio, hesabınızla ilişkili bir MSDN aboneliği veya Visual Studio Team Services aboneliği bulur.
 
@@ -68,9 +68,9 @@ Visual Studio 'Yu 30 güne kadar ücretsiz değerlendirebilirsiniz. IDE 'de otur
 ### <a name="updating-expired-licenses"></a>Vadesi geçen lisanslar güncelleştiriliyor
  Aboneliğinizin süresi tamamen dolmuşsa ve Visual Studio için artık erişim haklarınız yoksa, şunları yapmanız gerekir:
 
-1. Aboneliğinizi yenileyin. Kullanmakta olduğunuz lisans hakkında daha fazla bilgi görmek için Dosya > Hesap ayarları iletişim kutusuna gidin ve iletişim kutusunun sağ tarafındaki lisans bilgilerine bakın.
+1. Aboneliğinizi yenileyin. Kullanmakta olduğunuz lisans hakkında daha fazla bilgi görmek için dosya > hesap ayarları iletişim kutusuna gidin ve iletişim kutusunun sağ tarafındaki lisans bilgilerine bakın.
 
-2. Farklı bir hesapla ilişkili başka bir aboneliğiniz varsa, "Hesap Ekle..." seçeneğine tıklayarak bu hesabı Dosya > Hesap ayarları iletişim kutusunun sol tarafındaki tüm hesaplar listesine ekleyin. bağlantısının.
+2. Farklı bir hesapla ilişkili başka bir aboneliğiniz varsa, "Hesap Ekle..." seçeneğine tıklayarak bu hesabı dosya > hesap ayarları iletişim kutusunun sol tarafındaki tüm hesaplar listesine ekleyin. ücretsiz bir hesap oluşturabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [Visual Studio'da Oturum Açma](../ide/signing-in-to-visual-studio.md)

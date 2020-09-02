@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 78ac9b0aba4e56b2240ef65783231d31d77e5144
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670345"
 ---
 # <a name="perform-quick-actions-with-light-bulbs"></a>Ampullerle hızlı eylemler gerçekleştirme
@@ -23,7 +23,7 @@ Hafif bulbs, Visual Studio 2015 ' deki yeni bir üretkenlik özelliğidir. Bunla
 
  ![Küçük ampul simgesi](../ide/media/vs2015-lightbulbsmall.png "VS2015_LightBulbSmall")
 
- C# Ve Visual Basic, kırmızı renkli bir kıvrımlı ve Visual Studio 'nun sorunu gidermeye yönelik bir önerisi varsa bir ampul görürsünüz. Örneğin, kırmızı renkli bir çizgi ile belirtilen bir hata varsa, bu hata için düzeltmeler kullanılabilir olduğunda bir ampul belirir. ' C++De, bir üstbilgi dosyasına yeni bir işlev eklediğinizde, bu işlevin saplama uygulamasını oluşturmak için sunulan bir ampul görürsünüz. Herhangi bir dil için üçüncü taraflar, bir SDK 'nın parçası olarak özel tanılama ve öneriler sağlayabilir ve Visual Studio Light bulbs bu kurallara göre ince çalışır.
+ C# ve Visual Basic ' de, kırmızı renkli bir dalgalı çizgi ve Visual Studio 'Nun sorunu nasıl gidereceğiyle ilgili bir önerisi olduğunu gösteren bir ampul görürsünüz. Örneğin, kırmızı renkli bir çizgi ile belirtilen bir hata varsa, bu hata için düzeltmeler kullanılabilir olduğunda bir ampul belirir. C++ ' da, bir üstbilgi dosyasına yeni bir işlev eklediğinizde, bu işlevin saplama uygulamasını oluşturmak için sunulan bir ampul görürsünüz. Herhangi bir dil için üçüncü taraflar, bir SDK 'nın parçası olarak özel tanılama ve öneriler sağlayabilir ve Visual Studio Light bulbs bu kurallara göre ince çalışır.
 
 ## <a name="to-see-a-light-bulb"></a>Ampul görmek için
 
@@ -39,6 +39,6 @@ Hafif bulbs, Visual Studio 2015 ' deki yeni bir üretkenlik özelliğidir. Bunla
  ![Hafif ampul genişletildi](../ide/media/vs2015-lightbulb-hover-expanded.png "VS2015_LightBulb_hover_expanded")
 
 ## <a name="to-do-a-refactoring"></a>Yeniden düzenleme yapmak için
- Bağlam menüsünü açmak için sağ tıklayarak yeniden düzenlemeler işlemini gerçekleştirmeye devam edebilirsiniz, ancak CTRL + tuşlarına da basabilirsiniz. yeniden düzenleme seçeneklerini göstermek için. Aşağıdaki çizimde, CTRL + tuşlarına bastıktan sonra ayıklama yöntemi yeniden düzenlemesi sunulmaktadır. `Math.Abs` çağrısını içeren satırda bir yerde:
+ Bağlam menüsünü açmak için sağ tıklayarak yeniden düzenlemeler işlemini gerçekleştirmeye devam edebilirsiniz, ancak CTRL + tuşlarına da basabilirsiniz. yeniden düzenleme seçeneklerini göstermek için. Aşağıdaki çizimde, CTRL + tuşlarına bastıktan sonra ayıklama yöntemi yeniden düzenlemesi sunulmaktadır. çağrıyı içeren satırda bir yerde `Math.Abs` :
 
  ![Yeniden düzenleme seçeneklerini gösteren ampul](../ide/media/vs2015-lightbulbs-refactor.png "VS2015_LightBulbs_refactor")

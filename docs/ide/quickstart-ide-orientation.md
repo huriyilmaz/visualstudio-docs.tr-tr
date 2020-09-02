@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 08ec25312068d5c69cdb0df9b7c293ae0575f608
-ms.sourcegitcommit: d8609a78b460d4783f5d59c0c89454910a4dbd21
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "88238861"
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>Hızlı başlangıç: Visual Studio IDE 'ye Ilk bakış
@@ -47,7 +47,7 @@ Visual Studio 'Yu açtıktan sonra ilk olarak **Başlangıç sayfası büyük ol
 
 ::: moniker range=">=vs-2019"
 
-## <a name="start-window"></a> Başlangıç penceresi
+## <a name="start-window"></a>Başlangıç penceresi
 
 Visual Studio 'Yu açtıktan sonra ilk olarak göreceğiniz şey başlangıç penceresidir. Başlangıç penceresi, "koda ulaşmak" için daha hızlı yardımcı olacak şekilde tasarlanmıştır. Kodu kopyalama veya kullanıma alma, mevcut bir projeyi veya çözümü açma, yeni bir proje oluşturma veya yalnızca bazı kod dosyalarını içeren bir klasörü açma seçeneklerine sahiptir.
 

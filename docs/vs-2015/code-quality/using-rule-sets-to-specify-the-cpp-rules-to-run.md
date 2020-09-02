@@ -1,5 +1,5 @@
 ---
-title: Çalıştırılacak C++ kuralları belirtmek Için kural kümeleri kullanma | Microsoft Docs
+title: Çalıştırılacak C++ kurallarını belirtmek için kural kümeleri kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-code-analysis
@@ -10,16 +10,16 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: ff105af1d817613b324e1158130457eb906c753f
-ms.sourcegitcommit: 68f893f6e472df46f323db34a13a7034dccad25a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "77277859"
 ---
 # <a name="using-rule-sets-to-specify-the-c-rules-to-run"></a>Çalıştırılacak C++ Kurallarını Belirtmek için Kural Kümeleri Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] ve [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)]' de, kod analizi ile ilişkili belirli proje ihtiyaçlarını karşılamak için özel bir *kural kümesi* oluşturabilir ve değiştirebilirsiniz. Özel C++ bir kural kümesi oluşturmak Için, VISUAL Studio IDEC++ 'de bir C/Project açık olmalıdır. Daha sonra kural kümesi düzenleyicisinde bir standart kural kümesi açıp, belirli kuralları ekleyip kaldırarak ve isteğe bağlı olarak, kod analizi bir kuralın ihlal edildiğini belirlediğinde oluşan eylemi değiştirirsiniz.  
+Ve ' de [!INCLUDE[vsPreShort](../includes/vspreshort-md.md)] [!INCLUDE[vsUltShort](../includes/vsultshort-md.md)] , kod analizi ile ilişkili belirli proje ihtiyaçlarını karşılamak için özel bir *kural kümesi* oluşturabilir ve değiştirebilirsiniz. Özel bir C++ kural kümesi oluşturmak için Visual Studio IDE 'de bir C/C++ projesi açık olmalıdır. Daha sonra kural kümesi düzenleyicisinde bir standart kural kümesi açıp, belirli kuralları ekleyip kaldırarak ve isteğe bağlı olarak, kod analizi bir kuralın ihlal edildiğini belirlediğinde oluşan eylemi değiştirirsiniz.  
   
  Yeni bir özel kural kümesi oluşturmak için yeni bir dosya adı kullanarak bu dosyayı kaydedersiniz. Özel kural kümesi projeye otomatik olarak atanır.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "77277859"
   
    - Özelleştirmek istediğiniz kural kümesini seçin.  
   
-     \- veya-  
+     \- veya  
   
-   - **\<gözatmaya seç...** listede olmayan var olan bir kural kümesini belirtmek için >.  
+   - **\<Browse...>** Listede olmayan var olan bir kural kümesini belirtmeyi seçin.  
   
 4. Kural kümesi düzenleyicisinde kuralları göstermek için **Aç** ' ı seçin.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "77277859"
   
 - Tüm gruplardaki kuralları daraltmak için **Tümünü Daralt**' ı seçin.  
   
-- Kuralların gruplandırıldığı alanı değiştirmek için **Gruplandırma ölçütü** listesinden alanı seçin. Gruplandırılmamış kuralları göstermek için **\<yok >** seçin.  
+- Kuralların gruplandırıldığı alanı değiştirmek için **Gruplandırma ölçütü** listesinden alanı seçin. Gruplandırılmamış kuralları göstermek için öğesini seçin **\<None>** .  
   
 - Kural sütunlarındaki alanları eklemek veya kaldırmak için **sütun seçenekleri**' yi seçin.  
   

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_isaggregated | Microsoft Docs
+title: 'IDiaSymbol:: get_isAggregated | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9345aee08dcc5c27bfa6c20f9b5821d1875a5b99
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64822172"
 ---
-# <a name="idiasymbolgetisaggregated"></a>IDiaSymbol::get_isAggregated
+# <a name="idiasymbolget_isaggregated"></a>IDiaSymbol::get_isAggregated
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Veri simgenin bir toplama veya semboller koleksiyonunu parçası olup olmadığını belirten bir bayrak alır; Derleyici, toplanan sembolleri ayrı varlıklar olarak değerlendirir, ancak bunlar gerçekten tek bir büyük simge bir parçası.  
+Veri sembolünün sembol toplamanın veya bir koleksiyonunun bir parçası olup olmadığını belirten bir bayrak alır; Derleyici toplanmış sembolleri ayrı varlıklar olarak değerlendirir, ancak bunlar aslında tek bir büyük simgenin parçalarından oluşur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_isAggregated(  
@@ -35,24 +35,24 @@ HRESULT get_isAggregated(
   
 #### <a name="parameters"></a>Parametreler  
  `pFlag`  
- [out] Döndürür `TRUE` veriler birleştirilmesinden üst sembol; split simgeleri bir parçasıdır, aksi halde döndürür `FALSE`.  
+ dışı `TRUE` Verilerin bir üst sembolden bölünen bir sembol toplamasının parçası olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya bir hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Idiasymbol::get_issplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md) yöntemi `TRUE` toplanmış sembol üst simge için.  
+ [IDiaSymbol:: get_isSplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md) yöntemi, `TRUE` toplanan simgelerin üst öğesi olan sembol içindir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|Gereksinim|Açıklama|  
+|Gereksinim|Description|  
 |-----------------|-----------------|  
-|Üst bilgi:|dia2.h|  
-|Sürüm:|DIA SDK v8.0|  
+|Üst bilgi|dia2. h|  
+|Sürüm:|DIA SDK v 8.0|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md)   
+ [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [IDiaSymbol::get_isSplitted](../../debugger/debug-interface-access/idiasymbol-get-issplitted.md)

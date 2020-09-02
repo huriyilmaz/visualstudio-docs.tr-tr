@@ -1,5 +1,5 @@
 ---
-title: 0 x-2 x-4 x MSAA çeşitleri | Microsoft Docs
+title: 0x-2x-4X MSAA çeşitleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
@@ -9,53 +9,53 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 707d63d3ae5fb487f6232321a1d9d3128d379e06
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64816540"
 ---
 # <a name="0x2x4x-msaa-variants"></a>0x/2x/4x MSAA Çeşitleri
-Geçersiz kılmalar birden çok örnek düzgünleştirme (MSAA) ayarları tüm işleme hedefleri ve takas zincirleri.
+Tüm işleme hedefleri ve takas zincirlerinde çok örnekli düzgünleştirme (MSAA) ayarlarını geçersiz kılar.
 
-## <a name="interpretation"></a>Yorumu
- Birden çok örnek düzgünleştirme, her pikselin içinde birden çok konumda örnekleri katılarak visual kalite yükselir; Daha fazla örnek MSAA daha yüksek düzeylerde yararlanın ve MSAA, yalnızca bir örnek pikselin Merkezi'nden alınır. Genellikle uygulamanızda MSAA özelliklerini etkinleştirme vardır ancak belirgin bir büyüklükteki işleme performansını, ancak bazı iş yüklerinin altında veya belirli Gpu'lar üzerindeki maliyeti, neredeyse hiçbir etkisi ile önceki.
+## <a name="interpretation"></a>Yorumlama
+ Çoklu örnek kenar yumuşatma, her pikselde birden çok konumda örnek alarak görsel kaliteyi artırır; daha fazla MSAA düzeyi daha fazla örnek alır ve MSAA olmadan, pikselin merkezinden yalnızca bir örnek alınır. Uygulamanızda MSAA 'nın etkinleştirilmesi, genellikle işleme performansında düşük bir maliyetle oluşur ancak bazı iş yükleri veya belirli GPU 'Larda, neredeyse hiçbir etkisi yoktur.
 
- Uygulamanız etkin MSAA zaten varsa, daha düşük MSAA çeşitleri var olan ve daha üst düzey MSAA doğurur göreli performans maliyetini gösterir. Özellikle, 0 x MSAA değişken MSAA olmadan performanslarını gösterir.
+ Uygulamanızda zaten MSAA etkinse, daha az MSAA çeşitlemeleri mevcut, daha üst düzey MSAA 'nın ilgili performans maliyetini gösterir. Özellikle, 0x MSAA değişkeni, MSAA olmadan uygulamanızın göreli performansını gösterir.
 
- Uygulamanız zaten etkin MSAA yoksa, 2 x MSAA ve 4 x MSAA çeşitleri bunları uygulamanızda etkinleştirme göreli performans maliyetini gösterir. Maliyet çalışarak düşük olduğunda, uygulamanızın resim kalitesini artırmak MSAA etkinleştirme göz önünde bulundurun.
+ Uygulamanızda zaten MSAA etkin değilse, 2x MSAA ve 4X MSAA türevleri, bunları uygulamanızda etkinleştirmenin göreli performans maliyetini gösterir. Maliyet kabul edilebilir olduğunda, uygulamanızın görüntü kalitesini artırmak için MSAA 'yı etkinleştirmeyi düşünün.
 
 > [!NOTE]
-> Donanımınız için tüm biçimler MSAA tam olarak desteklemeyebilir. Bu çeşitleri birini çalışan olamaz etrafında bir donanım sınırlama karşılaşırsanız, kendi sütununda bir performans Özet Tablo boş olur ve bir hata iletisi oluşturulur.
+> Donanımınız, tüm biçimler için MSAA 'yi tam olarak desteklemeyebilir. Bu çeşitlerden herhangi biri, içinde çalışılabilecek bir donanım sınırlamasıyla karşılaştığında, performans Özeti tablosundaki sütunu boş olur ve bir hata iletisi oluşturulur.
 
 ## <a name="remarks"></a>Açıklamalar
- Örnek sayısı ve örnek kalitesi bağımsız değişkenler için çağrılar üzerinde bu çeşitleri geçersiz kılma `ID3DDevice::CreateTexture2D` işleme hedefleri oluşturun. Özellikle, bu parametreleri geçersiz olduğunda:
+ Bu çeşitler, `ID3DDevice::CreateTexture2D` işleme hedefleri oluşturmaya yönelik çağrılarındaki örnek sayısı ve örnek kalitesi bağımsız değişkenlerini geçersiz kılar. Özellikle, bu parametreler şu durumlarda geçersiz kılınır:
 
-- `D3D11_TEXTURE2D_DESC` Geçirilen nesne `pDesc` olan bir işleme hedefi; açıklar:
+- `D3D11_TEXTURE2D_DESC`Geçirilen nesne `pDesc` bir işleme hedefini açıklar; yani:
 
-  - BindFlags üyesi D3D11_BIND_TARGET bayrağı veya D3D11_BIND_DEPTH_STENCIL bayrağı ayarlanmış sahiptir.
+  - BindFlags üyesi D3D11_BIND_TARGET bayrak ya da D3D11_BIND_DEPTH_STENCIL bayrak kümesine sahip.
 
-  - Kullanım üye D3D11_USAGE_DEFAULT için ayarlanır.
+  - Kullanım üyesi D3D11_USAGE_DEFAULT olarak ayarlanır.
 
-  - CPUAccessFlags üye 0 olarak ayarlanır.
+  - CPUAccessFlags üyesi 0 olarak ayarlanır.
 
-  - MipLevels üye 1 olarak ayarlayın.
+  - MIN düzeyleri üyesi 1 olarak ayarlanır.
 
-- İstenen işleme tarafından belirlenen şekilde hedef biçimi (D3D11_TEXTURE2D_DESC::Format üyesi) için cihaz istenen örnek sayısı (0, 2 veya 4) ve örnek kalitesi (0) destekler. `ID3D11Device::CheckMultisampleQualityLevels`.
+- Cihaz, tarafından belirlendiği şekilde, istenen işleme hedefi biçimi (D3D11_TEXTURE2D_DESC:: biçim üyesi) için istenen örnek sayısı (0, 2 veya 4) ve örnek kalitesi (0) destekler `ID3D11Device::CheckMultisampleQualityLevels` .
 
-  Daha sonra D3D11_TEXTURE2D_DESC::BindFlags üye ayarlanmış D3D_BIND_SHADER_RESOURCE veya D3D11_BIND_UNORDERED_ACCESS bayrağı varsa, doku iki sürümü oluşturulur; işleme hedefi olarak kullanılmak üzere işaretli Bu bayraklar ilk vardır ve diğer MSAA olmayan doku ilk sürümü için Çözümle arabellek olarak görev yapacak dokunulmadan Bu bayraklar. Sırasız erişim için veya bir gölgelendirici kaynak olarak bir MSAA doku kullanarak geçerli olmayacaktır, çünkü bu gereklidir; Örneğin, bir MSAA olmayan doku beklediğiniz gibi olduğundan hatalı sonuçlar üzerinde çalışan bir gölgelendirici karşılaşırsınız. Ardından değişken MSAA olmayan ikincil doku oluşturduysa MSAA işleme hedef cihaz bağlamında unset olduğunda içeriği MSAA olmayan doku çözümlenir. Benzer şekilde, MSAA işleme her hedef bir gölgelendirici kaynak olarak bağlı veya bir sırasız erişim Görünümü'nde kullanılır, çözümlenen MSAA olmayan doku yerine bağlıdır.
+  D3D11_TEXTURE2D_DESC:: BindFlags üyesinin D3D_BIND_SHADER_RESOURCE veya D3D11_BIND_UNORDERED_ACCESS bayrakları ayarlandıysa, dokunun iki sürümü oluşturulur; İlki, render hedefi olarak kullanılmak üzere bu bayrakları temizledi ve diğeri, ilk sürüm için bir çözümleme arabelleği olarak davranması için bu bayrakları içeren bir MSAA olmayan dokudır. Bu gereklidir çünkü bir MSAA dokusunun gölgelendirici kaynağı olarak kullanılması veya sıralanmamış erişimin geçerli olması olası değildir. Örneğin, üzerinde işlem yapan bir gölgelendirici, MSAA olmayan bir doku beklediği için hatalı sonuçlar üretir. Değişken ikincil bir MSAA dışı doku oluşturmışsa, MSAA işleme hedefi cihaz bağlamından her ayarlanmadığında, içeriği MSAA olmayan dokuya çözümlenir. Benzer şekilde, MSAA render hedefi bir gölgelendirici kaynağı olarak bağlanması veya sıralanmamış bir erişim görünümünde kullanılması gerektiğinde, çözümlenen MSAA olmayan doku bunun yerine bağlanır.
 
-  Ayrıca geçersiz kılma kullanılarak oluşturulan tüm takas zincirleri MSAA ayarlarını bu çeşitleri `IDXGIFactory::CreateSwapChain`, `IDXGIFactory2::CreateSwapChainForHwnd`, `IDXGIFactory2::CreateSwapChainForCoreWindow`, `IDXGIFactory2::CreateSwapChainForComposition`, ve `ID3D11CreateDeviceAndSwapChain`.
+  Bu çeşitler Ayrıca,,, ve kullanılarak oluşturulan tüm takas zincirlerinde MSAA ayarlarını geçersiz kılar `IDXGIFactory::CreateSwapChain` `IDXGIFactory2::CreateSwapChainForHwnd` `IDXGIFactory2::CreateSwapChainForCoreWindow` `IDXGIFactory2::CreateSwapChainForComposition` `ID3D11CreateDeviceAndSwapChain` .
 
-  Bu değişikliklerin net etkisiyle tüm işleme bir MSAA işleme hedefi gerçekleştirilir ancak uygulamanızın bunlardan birini kullanıp kullanmadığını işleme hedefler ya da takas zinciri arabellekler gölgelendirici kaynağı görünümü veya sırasız erişim görünümü olarak ve ardından veri örneklenen olan çözümlenen gelen , işleme hedefinin MSAA olmayan kopyalama.
+  Bu değişikliklerin net etkisi, tüm işlemenin bir MSAA işleme hedefine yapıldığından, ancak uygulamanız bu işleme hedeflerinden birini ya da bir gölgelendirici kaynak görünümü veya sırasız erişim görünümü olarak takas zinciri arabelleklerini kullanıyorsa, veriler işleme hedefinin çözümlenmiş, MSAA olmayan kopyasından örneklenir.
 
 ## <a name="restrictions-and-limitations"></a>Kısıtlamalar ve sınırlamalar
- Direct3D11 içinde MSAA dokular MSAA olmayan dokular daha büyük/küçük harf kısıtlanır. Örneğin, çağıramazsınız `ID3D11DeviceContext::UpdateSubresource` MSAA doku ve arama `ID3D11DeviceContext::CopySubresourceRegion` kaynak kaynak ve hedef kaynak örnek kalitesini ve örnek sayısı, bu değişken bir MSAA ayarları geçersiz kılan kurduğunuzda gerçekleşebilir eşleşmezse başarısız Kaynak ancak diğer.
+ Direct3D11 ' de, MSAA dokuları, MSAA olmayan dokulardan daha kısıtlanıyor. Örneğin, `ID3D11DeviceContext::UpdateSubresource` BIR MSAA dokusundaki `ID3D11DeviceContext::CopySubresourceRegion` arayamadıysanız ve kaynak kaynağın ve hedef kaynağın örnek sayısı ve örnek kalitesi eşleşmezse, bu değişken BIR kaynağın MSAA ayarlarını geçersiz kıldığında meydana gelebilir.
 
- Kayıttan yürütme bu çakışma türlerini algıladığında, amaçlanan bir davranış çoğaltmak için en iyi çaba İlkesi kolaylaştırır, ancak sonuçları tam olarak eşleşmesi mümkün olmayabilir. Bunun etkilerine yanlış bilgilendirici bir şekilde bu çeşitleri performansını seyrek olsa da, olası — Örneğin, ne zaman piksel gölgelendiricisi akış denetimi belirlenir kesin bir doku içeriğini tarafından — çünkü çoğaltılmış doku özdeş içeriğe sahip olmayabilir.
+ Kayıttan yürütme bu tür çakışmaları algıladığında, amaçlanan davranışı çoğaltmak için en iyi çabayı yapar, ancak sonuçları tam olarak eşleştirmek mümkün olmayabilir. Bu, bu varyantlar performansını yanlış temsil eden bir şekilde etkilemek için bunun yaygın bir durumdur olsa da, örneğin, bir piksel gölgelendiricisi içindeki akış denetimi bir dokunun kesin içeriğine göre belirlenir; çünkü çoğaltılan doku aynı içeriğe sahip olmayabilir.
 
 ## <a name="example"></a>Örnek
- İşleme hedefleri kullanarak oluşturduğunuz için bu çeşitleri üretilebilmeleri `ID3D11Device::CreateTexture2D` aşağıdakine benzer bir kod kullanarak:
+ Bu çeşitler, kullanılarak oluşturulan işleme hedefleri için aşağıdaki `ID3D11Device::CreateTexture2D` gibi kod kullanılarak yeniden oluşturulabilir:
 
 ```cpp
 D3D11_TEXTURE2D_DESC target_description;
@@ -66,7 +66,7 @@ d3d_device->CreateTexture2D(&target_description, nullptr, &render_target);
 ```
 
 ## <a name="example"></a>Örnek
- Veya IDXGISwapChain::CreateSwapChain veya D3D11CreateDeviceAndSwapChain aşağıdakine benzer bir kod kullanarak kullanılarak oluşturulan takas zincirleri için:
+ Ya da ıdxgiswapzincirine:: Createswapzinciri veya D3D11CreateDeviceAndSwapChain kullanılarak oluşturulan takas zincirlerini şunun gibi kod kullanarak:
 
 ```cpp
 DXGI_SWAP_CHAIN_DESC chain_description;

@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findlinesbylinenum | Microsoft Docs
+title: 'IDiaSession:: findLinesByLinenum | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d7ef4ab516bffbc13f47616c2f20fdd71cac38b0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63418334"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64805741"
 ---
 # <a name="idiasessionfindlinesbylinenum"></a>IDiaSession::findLinesByLinenum
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Belirtilen satır numarası kaynak dosyada içinde ya da yakın bulunma derlenecek satır numaralarını belirler.  
+Kaynak dosyadaki belirtilen satır numarasının içinde veya yakınında bulunduğu compiland 'ın satır numaralarını belirler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT findLinesByLinenum (   
@@ -39,28 +39,28 @@ HRESULT findLinesByLinenum ( 
   
 #### <a name="parameters"></a>Parametreler  
  `compiland`  
- [in] Bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) için satır numaralarını aranacağı derlenecek temsil eden nesne. Bu parametre olamaz `NULL`.  
+ 'ndaki Satır numaralarının aranacağı compiland 'yi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi. Bu parametre olamaz `NULL` .  
   
  `file`  
- [in] Bir [Idiasourcefile](../../debugger/debug-interface-access/idiasourcefile.md) içinde arama yapmak istediğiniz kaynak dosyasını temsil eden nesne. Bu parametre olamaz `NULL`.  
+ 'ndaki İçinde arama yapılacak kaynak dosyayı temsil eden bir [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) nesnesi. Bu parametre olamaz `NULL` .  
   
  `linenum`  
- [in] Bir tane tabanlı satır numarasını belirtir.  
+ 'ndaki Tek tabanlı satır numarasını belirtir.  
   
 > [!NOTE]
-> Tüm satırları belirtmek için sıfır kullanamazsınız (kullanın [Idiasession::findlines](../../debugger/debug-interface-access/idiasession-findlines.md) tüm satırları Bul yöntemi).  
+> Tüm satırları belirtmek için sıfır kullanamazsınız (tüm satırları bulmak için [IDiaSession:: findLines](../../debugger/debug-interface-access/idiasession-findlines.md) metodunu kullanın).  
   
  `column`  
- [in] Sütun sayısını belirtir. Sıfır tüm sütunları belirtmek için kullanın. Bir bayt uzaklığı içine satır bir sütundur.  
+ 'ndaki Sütun numarasını belirtir. Tüm sütunları belirtmek için sıfır kullanın. Sütun, bir satıra bir bayt kaymadır.  
   
  `ppResult`  
- [out] Döndürür bir [Idiaenumlinenumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) satır numaralarını listesini içeren objta alınır.  
+ dışı Alınan satır numaralarının bir listesini içeren bir [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objta döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir kaynak dosyasını açın, bu dosya tarafından katkıda bulunulan derleme listeleme ve her derlenecek başladığı kaynak dosyadaki satır numaralarını bulmak gösterilmektedir.  
+ Aşağıdaki örnekte, bir kaynak dosyanın nasıl açılacağı, bu dosyanın katkıda bulunduğu compıı 'nin nasıl numaralandırılacağı ve her bir compiland 'in başladığı kaynak dosyadaki satır numaralarının nasıl bulunacağı gösterilmektedir.  
   
 ```cpp#  
 void ShowLinesInCompilands(IDiaSession *pSession, LPCOLESTR filename)  
@@ -100,8 +100,8 @@ void ShowLinesInCompilands(IDiaSession *pSession, LPCOLESTR filename)
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiaenumlinenumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
- [Idiasession](../../debugger/debug-interface-access/idiasession.md)   
- [Idiasession::findlinesbyaddr](../../debugger/debug-interface-access/idiasession-findlinesbyaddr.md)   
- [Idiasourcefile](../../debugger/debug-interface-access/idiasourcefile.md)   
+ [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   
+ [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
+ [IDiaSession:: findLinesByAddr](../../debugger/debug-interface-access/idiasession-findlinesbyaddr.md)   
+ [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md)   
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

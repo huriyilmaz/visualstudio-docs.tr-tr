@@ -1,5 +1,5 @@
 ---
-title: Verilerin özel Görselleştiricilerini oluşturma | Microsoft Docs
+title: Özel Görselleştiriciler oluşturma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,37 +24,37 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 50df868f0e01d49d4c49bccae32d743d5291a066
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434904"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64820653"
 ---
-# <a name="create-custom-visualizers-of-data"></a>Verilerin özel Görselleştiricilerini oluşturma
+# <a name="create-custom-visualizers-of-data"></a>Özel Görselleştiriciler oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Görselleştiriciler bileşenlerinin [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] hata ayıklayıcı kullanıcı arabirimi. A *Görselleştirici* bir iletişim kutusu veya bir değişkeni veya nesneyi, veri türüne uygun bir şekilde görüntülemek için başka bir arabirim oluşturur. Örneğin, bir HTML Görselleştirici bir HTML dizesi olarak yorumlar ve sonucu bir tarayıcı penceresinde görüneceği şekilde görüntüler; bit eşlem Görselleştirici bir bit eşlem yapısı yorumlar ve onu gösteren grafiği görüntüler. Bazı görselleştiriciler yanı sıra değişiklik verilerini görüntülemek etkinleştirin.  
+Görselleştiriciler, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] hata ayıklayıcı Kullanıcı arabiriminin bileşenleridir. *Görselleştirici* , bir değişken veya nesneyi veri türüne uygun şekilde göstermek için bir iletişim kutusu veya başka bir arabirim oluşturur. Örneğin, bir HTML Görselleştiricisini bir HTML dizesini yorumlar ve bir tarayıcı penceresinde görüneceği şekilde sonucu görüntüler; bit eşlem görselleştiricisi bir bit eşlem yapısını Yorumlar ve temsil ettiği grafiği görüntüler. Bazı Görselleştiriciler, verileri görüntülemenizi ve değiştirmenizi sağlar.  
   
- [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] Hata ayıklayıcı altı standart görselleştiriciler içerir. Bunlar, metin, HTML, XML ve JSON görselleştiriciler, her biri dize nesneler üzerinde çalışmak, bir WPF nesne görsel ağacı özelliklerini görüntülemek için WPF ağacı görselleştiricisini, ve veri kümesi, DataView ve DataTable nesneleri için çalışan bir veri kümesi görselleştiricisi. Ek görselleştiriciler, gelecekte Microsoft Corporation'ın indirilebilir olabilir ve üçüncü taraflar ve topluluktan kullanılabilir. Ayrıca, kendi görselleştiriciler yazabilir ve bunları yüklemek [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] hata ayıklayıcı.  
-  
-> [!NOTE]
-> İçinde **Store** uygulamalar, yalnızca standart metin, HTML, XML ve JSON görselleştiriciler desteklenir. Özel (kullanıcı tarafından oluşturulmuş) görselleştiriciler desteklenmez.  
-  
- Görselleştiriciler hata ayıklayıcıda bir Büyüteç simgesi ile gösterilir. Büyüteç simgesini gördüğünüzde bir **DataTip**, hata ayıklayıcı değişken penceresinde veya buna **QuickWatch** iletişim kutusu, veri türüne uygun Görselleştirici seçmek için Büyüteç tıklayabilirsiniz karşılık gelen nesne.  
-  
- Görselleştiriciler Compact Framework'te desteklenmez.  
+ [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)]Hata ayıklayıcı altı standart Görselleştiriciler içerir. Bunlar, hepsi dize nesnelerinde çalışan metin, HTML, XML ve JSON görselleştiricilerini gösterir; WPF nesne görsel ağacının özelliklerini görüntülemek için WPF ağaç görselleştiricisi; Veri kümesi, DataView ve DataTable nesneleri için de kullanılabilir olan veri kümesi görselleştiricisi. Ek Görselleştiriciler gelecekte Microsoft Corporation 'dan indirilebilir ve üçüncü taraflar ve topluluk tarafından kullanılabilir. Ayrıca, kendi görselleştiricilerini yazabilir ve [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] hata ayıklayıcıya yükleyebilirsiniz.  
   
 > [!NOTE]
-> Hata ayıklama görselleştiricileri kısmi güven uygulama tarafından izin verilenden daha yüksek ayrıcalıklar gerektirir. Sonuç olarak, kısmi güven ile koddaki durdurulduğunda görselleştiriciler yüklenmiyor. Görselleştirici kullanarak hata ayıklama için tam güven ile kodu çalıştırmanız gerekir.  
+> **Mağaza** uygulamalarında yalnızca standart metın, HTML, XML ve JSON Görselleştiriciler desteklenir. Özel (Kullanıcı tarafından oluşturulan) Görselleştiriciler desteklenmez.  
+  
+ Görselleştiriciler, hata ayıklayıcıda büyüteç simgesiyle gösterilir. Bir veri **ipucunda**büyüteç simgesini, bir hata ayıklayıcı değişkenleri penceresinde veya **QuickWatch** iletişim kutusunda gördüğünüzde, ilgili nesnenin veri türüne uygun bir Görselleştirici seçmek için Büyüteç Camı ' ne tıklayabilirsiniz.  
+  
+ Görselleyiciler Compact Framework 'te desteklenmez.  
+  
+> [!NOTE]
+> Hata ayıklayıcı Görselleştiriciler kısmi güven uygulaması tarafından izin verilenden daha fazla ayrıcalık gerektiriyor. Sonuç olarak, kısmi güvenle kodda durdurulduğunda Görselleştiriciler yüklenmez. Görselleştirici kullanarak hata ayıklamak için, kodu tam güvenle çalıştırmanız gerekir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Görselleştirici Yazma](../debugger/how-to-write-a-visualizer.md)  
+ [Nasıl Yapılır: Görselleştirici Yazma](../debugger/how-to-write-a-visualizer.md)  
   
- [İzlenecek yol: C# Dilinde Görselleştirici Yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)  
+ [İzlenecek Yol: C# ile Görselleştirici Yazma](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)  
   
- [Nasıl yapılır: Görselleştiriciyi Yükleme](../debugger/how-to-install-a-visualizer.md)  
+ [Nasıl yapılır: Görselleştirici yüklemesi](../debugger/how-to-install-a-visualizer.md)  
   
- [Nasıl yapılır: Görselleştiriciyi Test Etme ve Hatalarını Ayıklama](../debugger/how-to-test-and-debug-a-visualizer.md)  
+ [Nasıl yapılır: Görselleştiriciyi test etme ve hata ayıklama](../debugger/how-to-test-and-debug-a-visualizer.md)  
   
  [Görselleştirici API Başvurusu](../debugger/visualizer-api-reference.md)  
   

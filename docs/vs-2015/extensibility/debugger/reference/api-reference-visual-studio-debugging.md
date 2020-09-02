@@ -1,5 +1,5 @@
 ---
-title: API Başvurusu (Visual Studio hata ayıklama) | Microsoft Docs
+title: API başvurusu (Visual Studio hata ayıklama) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,42 +11,42 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f3e95200cf29c8561798c858635c3864d635fb40
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63424510"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64795742"
 ---
 # <a name="api-reference-visual-studio-debugging"></a>API Başvurusu (Visual Studio Hata Ayıklama)
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Başvuru bölümünde, API, sözdizimi ve kullanımı için tüm API öğeleri gösteren bir kılavuz kavramsal bir genel bakış ve kod örnekleri kaynaklardan içerir. Tüm başvurular, kategoriye göre alfabetik olarak listelenir.  
+Başvuru bölümü, API 'ye kavramsal genel bakış, tüm API öğelerinin sözdizimini ve kullanımını gösteren bir kılavuz ve kod örnekleri örneği içerir. Tüm başvurular kategoriye göre alfabetik olarak listelenir.  
   
- Aşağıdaki tablo ortak gösterir `HRESULT` yöntemleri tarafından döndürülen değer.  
+ Aşağıdaki tabloda `HRESULT` Yöntemler tarafından döndürülen ortak değerler gösterilmektedir.  
   
 |Ad|Açıklama|Değer|  
 |----------|-----------------|-----------|  
 |S_OK|Başarılı.|0x00000000|  
-|E_UNEXPECTED|Beklenmeyen hata oluştu.|0x8000FFFF|  
-|E_NOTIMPL|Henüz uygulanmadı.|0x80004001|  
-|E_OUTOFMEMORY|İşlemi tamamlamak için yeterli bellek yok.|0x8007000E|  
+|E_UNEXPECTED|Beklenmeyen hata.|0x8000FFFF|  
+|E_NOTIMPL|Uygulanmaz.|0x80004001|  
+|E_OUTOFMEMORY|İşlemi tamamlamaya yetecek bellek yok.|0x8007000E|  
 |E_INVALIDARG|Bir veya daha fazla bağımsız değişken geçersiz.|0x80070057|  
-|E_NOINTERFACE|Böyle bir arabirim desteklenmiyor.|0x80004002|  
+|E_NOINTERFACE|Böyle bir arabirim desteklenmiyordur.|0x80004002|  
 |E_POINTER|Geçersiz işaretçi.|0x80004003|  
-|E_HANDLE|Geçersiz işleyici.|0x80070006|  
+|E_HANDLE|Geçersiz tanıtıcı.|0x80070006|  
 |E_ABORT|İşlem iptal edildi.|0x80004004|  
-|E_FAIL|Beklenmeyen hata oluştu.|0x80004005|  
+|E_FAIL|Beklenmeyen hata.|0x80004005|  
 |E_ACCESSDENIED|Genel erişim reddedildi hatası.|0x80070005|  
   
 > [!NOTE]
-> Olduğunda bir [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] yöntemi hata ayıklama döndürür `S_OK`, varsayılır parametresi işaretçiler geçerli olan her şeyi, diğer bir deyişle, doğrulama üzerinde parametresi işaretçileri yürütülür, `S_OK` döndürülür.  
+> Bir [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklama yöntemi `S_OK` döndürüldüğünde, tüm out parametre işaretçilerinin geçerli olduğu varsayılır, yani, döndürülen parametre işaretçileri üzerinde hiçbir doğrulama yapılmaz `S_OK` .  
   
 > [!NOTE]
-> Geçersiz veya `NULL` [out] parametreleri IDE'nin kilitlenmesine neden.  
+> Geçersiz veya `NULL` [out] PARAMETRELERI IDE 'nin kilitlenmesine neden olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arabirimleri](../../../extensibility/debugger/reference/interfaces-visual-studio-debugging.md)   
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Arabirimlerdeki](../../../extensibility/debugger/reference/interfaces-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [Hata ayıklama için SDK Yardımcıları](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
+ [Hata ayıklama için SDK yardımcıları](../../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
  [Visual Studio Hata Ayıklayıcı Genişletilebilirliği](../../../extensibility/debugger/visual-studio-debugger-extensibility.md)

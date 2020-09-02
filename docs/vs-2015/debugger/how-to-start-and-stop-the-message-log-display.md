@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: İleti günlüğü görüntülemeyi başlatıp | Microsoft Docs'
+title: 'Nasıl yapılır: Ileti günlüğü görüntülemeyi başlatma ve durdurma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,21 +14,21 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d2e31fc094b777b328347bdcd783b69f1539f246
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68176548"
 ---
 # <a name="how-to-start-and-stop-the-message-log-display"></a>Nasıl yapılır: İleti Günlüğü Görüntülemeyi Başlatma ve Durdurma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Olduğunda bir [iletiler görünümünü](../debugger/messages-view.md) penceresi, etkin bir **günlüğü Başlat** veya **Günlüğü Durdur** seçim görünür Spy ++ hakkında **iletileri** menüsünde ve karşılık gelen **günlüğü Başlat** veya **Günlüğü Durdur** araç çubuğu düğmesi etkin hale gelir.  
+Bir [Iletiler görünümü](../debugger/messages-view.md) penceresi etkinken, Spy + + **iletiler** menüsünde günlüğe kaydetmeyi **Başlat** veya **günlüğü durdur** seçeneği görünür ve ilgili günlük **kaydını Başlat** veya **günlüğü durdur** araç çubuğu düğmesi etkin olur.  
   
-### <a name="to-start-the-message-log-display"></a>İleti günlüğü görüntülemeyi başlatmak için  
+### <a name="to-start-the-message-log-display"></a>İleti günlüğü görüntüsünü başlatmak için  
   
-1. Gelen **iletileri** menüsünde seçin **günlüğü Başlat**.  
+1. **İletiler** menüsünden **Günlüğü Başlat**' ı seçin.  
   
-### <a name="to-stop-the-message-log-display"></a>İleti günlüğü görüntülemeyi durdurmak için  
+### <a name="to-stop-the-message-log-display"></a>İleti günlüğü görüntüsünü durdurmak için  
   
-1. Gelen **iletileri** menüsünde seçin **Günlüğü Durdur**.
+1. **İletiler** menüsünden **günlüğü durdur**' u seçin.

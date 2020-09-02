@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Köşe gölgeleme nedeniyle nesnelerin eksikliği | Microsoft Docs'
+title: 'İzlenecek yol: köşe gölgelemesi nedeniyle eksik nesneler | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,121 +10,121 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d54fdce78528f348e99436c3a58d15e1cbe861b7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63444273"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64823465"
 ---
 # <a name="walkthrough-missing-objects-due-to-vertex-shading"></a>İzlenecek yol: Köşe Gölgeleme Nedeniyle Eksik Nesneler
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yolda nasıl kullanılacağını gösterir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] köşe gölgelendirici aşaması sırasında oluşan bir hata nedeniyle eksik bir nesne incelemek için grafik tanılama araçları.  
+Bu izlenecek yol, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] köşe gölgelendirici aşamasında oluşan bir hata nedeniyle eksik olan bir nesneyi araştırmak için grafik tanılama araçlarının nasıl kullanılacağını gösterir.  
   
- Bu örneklerde bu görevler gösterilir:  
+ Bu izlenecek yol aşağıdaki görevleri gösterir:  
   
-- Kullanarak **grafik olay listesi** olası sorun kaynaklarını bulmak için.  
+- Sorunun olası kaynaklarını bulmak için **grafik olay listesini** kullanma.  
   
-- Kullanarak **grafik ardışık düzen aşamaları** etkisini denetlemek için pencere `DrawIndexed` Direct3D API'sini çağırır.  
+- Direct3D API çağrılarının etkisini denetlemek için **grafik ardışık düzen aşamaları** penceresini kullanma `DrawIndexed` .  
   
-- Kullanarak **HLSL hata ayıklayıcısı** köşe gölgelendiricisi incelemek için.  
+- Köşe gölgelendiriciyi incelemek için **HLSL hata ayıklayıcısını** kullanma.  
   
-- Kullanarak **grafik olay çağrı yığını** yanlış bir HLSL sabiti kaynağını bulmaya yardımcı olacak.  
+- Yanlış bir HLSL sabitinin kaynağını bulmaya yardımcı olması için **grafik olay çağrı yığınını** kullanma.  
   
 ## <a name="scenario"></a>Senaryo  
- Eksik bir nesnenin bir 3B uygulamada sık karşılaşılan nedenlerinden oluşur köşe gölgelendiricisi nesnenin köşe hatalı veya beklenmedik bir şekilde dönüştürür — Örneğin, nesne çok küçük bir boyuta ölçeklendirilir veya kamera göründüğü şekilde dönüştürülmüş , yerine önündeki.  
+ 3-b uygulamadaki eksik bir nesnenin yaygın nedenlerinin biri, köşe gölgelendiricisi nesnenin köşelerini yanlış veya beklenmedik bir şekilde dönüştürdüğünden oluşur — Örneğin, nesne çok küçük bir boyuta ölçeklenmekte veya kendisi yerine kameranın arkasında görünecek şekilde dönüştürülebilmesine olanak sağlar.  
   
- Bu senaryoda, test etmek için uygulamayı çalıştırdığınızda, arka plan beklendiği gibi işlenir ancak nesnelerinden birine görünmez. Böylece uygulamanın hatalarını ayıklayabilir miyim grafik tanılamayı kullanarak sorunu bir grafik günlüğüne yakalayın. Sorun, uygulamada şu şekilde görünür:  
+ Bu senaryoda, uygulama test etmek üzere çalıştırıldığında, arka plan beklenen şekilde işlenir, ancak nesnelerden biri görünmez. Grafik Tanılama kullanarak, uygulamanın hatalarını ayıklayabilmeniz için sorunu bir grafik günlüğüne yakalarsınız. Sorun uygulamada şöyle görünür:  
   
- ![Nesne görülebilir değildir. ](../debugger/media/gfx-diag-demo-missing-object-shader-problem.png "gfx_diag_demo_missing_object_shader_problem")  
+ ![Nesne görülemedi.](../debugger/media/gfx-diag-demo-missing-object-shader-problem.png "gfx_diag_demo_missing_object_shader_problem")  
   
 ## <a name="investigation"></a>Araştırma  
- Grafik tanılama araçlarını kullanarak, test sırasında yakalanan çerçeveleri incelemek için grafik günlük dosyasını yükleyebilirsiniz.  
+ Grafik Tanılama araçlarını kullanarak, test sırasında yakalanan çerçeveleri incelemek için grafik günlük dosyasını yükleyebilirsiniz.  
   
-#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Grafik günlüğünde bir çerçeveyi incelemek için  
+#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Grafik günlüğündeki bir çerçeveyi incelemek için  
   
-1. İçinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], eksik nesne sergiler çerçeveyi içeren grafik günlüğünü yükleyin. Yeni bir grafik günlüğü sekmesi görünür [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Bu sekmenin üst kısmında seçilen çerçevenin işleme hedefi çıktısı ' dir. Alt parçasıdır **çerçeve listesi**, bir küçük resim her yakalanan çerçeve görüntüler.  
+1. İçinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , eksik nesneyi gösteren bir çerçeve içeren bir grafik günlüğü yükleyin. İçinde yeni bir grafik günlüğü sekmesi görüntülenir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Bu sekmenin en üst kısmında, seçili karenin işleme hedefi çıkışı bulunur. Alt kısımda, yakalanan her çerçeveyi bir küçük resim olarak görüntüleyen **çerçeve listesidir**.  
   
-2. İçinde **çerçeve listesi**, nesne görüntülenmez gösteren bir çerçeve seçin. İşleme hedefi, Seçilen çerçevenin yansıtacak şekilde güncelleştirilir. Bu senaryoda, grafik sekmesi şu şekilde görünür günlük:  
+2. **Çerçeve listesinde**, nesnenin görüntülenmediğini gösteren bir çerçeve seçin. Oluşturma hedefi seçili çerçeveyi yansıtacak şekilde güncelleştirilir. Bu senaryoda grafik günlüğü sekmesi şöyle görünür:  
   
-    ![Grafik belgesi Visual Studio'da oturum](../debugger/media/gfx-diag-demo-missing-object-shader-step-1.png "gfx_diag_demo_missing_object_shader_step_1")  
+    ![Visual Studio 'da grafik günlüğü belgesi](../debugger/media/gfx-diag-demo-missing-object-shader-step-1.png "gfx_diag_demo_missing_object_shader_step_1")  
   
-   Sorunu gösteren bir çerçeveyi seçtikten sonra kullanarak tanılamak başlayabilirsiniz **grafik olay listesi**. **Grafik olay listesi** etkin çerçeve için işlemek için yapılan her Direct3D API çağrısı cihaz durumunu ayarlamak için oluşturun ve arabellek güncelleştirin ve çerçeve içinde görünen nesneler çizmek için API çağrısı içerir. Olduğundan çağrılarının pek çok ilgi çekici genellikle (ama her zaman kullanılmaz) karşılık gelen bir uygulamada beklendiği gibi çalışırken işleme hedefi değişiklik örneğin çizme, gönderme, kopyalama veya açık çağrıları. Her bir uygulama oluşturulmasını geometri temsil ettiğinden çizim çağrıları özellikle ilgi çekici (gönderme çağrılar da de geometri oluşturma).  
+   Sorunu gösteren bir çerçeve seçtikten sonra **grafik olay listesini**kullanarak tanımayı deneyebilirsiniz. **Grafik olay listesi** , etkin çerçeveyi işlemek için yapılan her Direct3D API çağrısını içerir, örneğin, cihaz durumunu ayarlamak için API çağrıları, arabellekleri oluşturma ve güncelleştirme, ve çerçevede görünen nesneleri çizme. Birçok çağrı türü, uygulama beklendiği gibi çalıştığında (her zaman değil) işleme hedefinde karşılık gelen bir değişikliğin (örneğin, çizim, dağıtım, kopyalama veya temizleme) olduğu için ilginç hale gelir. Çizim çağrıları özellikle ilginç olduğundan, her biri uygulamanın işlenmiş olduğu geometriyi temsil ettiğinden (dağıtım çağrıları geometriyi de işleyebilir).  
   
-   Eksik nesne işleme hedefine (Bu örnekte) olması nedeniyle dikkatin değil olduğunu bildiğiniz — Sahne geri kalanı, beklendiği gibi çizilir. ancak bu — kullanabileceğiniz **grafik olay listesi** ile birlikte **grafik ardışık düzen Aşamalar** , çizim çağrısı çıktılarının belirlemek için aracı için eksik nesne geometrisinin karşılık gelir. **Grafik ardışık düzen aşamaları** penceresi işleme hedefi üzerindeki etkisini bağımsız olarak her bir çizim çağrısına gönderildiği geometri gösterir. Çizim çağrıları arasında taşırken, ardışık düzen aşamaları bu çağrıyla ilişkili geometri gösterecek şekilde güncelleştirilir ve işleme hedefi çıktısı çağrı tamamlandıktan sonra işleme hedefi durumunu göstermek için güncelleştirilir.  
+   Eksik nesnenin render Target 'a çizilmediğini (Bu durumda) bildiğiniz, ancak sahnenin geri kalanının beklenen şekilde çizildiğini bildiğiniz için grafik **olay listesini** **grafik ardışık düzen aşamaları** aracıyla birlikte kullanarak, hangi çizim çağrısının eksik nesnenin geometrisine karşılık geldiğini belirleyebilirsiniz. **Grafik ardışık düzen aşamaları** penceresi, işleme hedefi üzerindeki etkisiyle bağımsız olarak her bir çizim çağrısına gönderilen geometriyi gösterir. Çizim çağrılarında geçiş yaparken, işlem hattı aşamaları bu çağrıyla ilişkili geometriyi gösterecek şekilde güncelleştirilir ve işleme hedefi çıkışı, çağrı tamamlandıktan sonra oluşturma hedefinin durumunu gösterecek şekilde güncelleştirilir.  
   
-#### <a name="to-find-the-draw-call-for-the-missing-geometry"></a>Çizim çağrısı için eksik geometri bulmak için  
+#### <a name="to-find-the-draw-call-for-the-missing-geometry"></a>Eksik geometri için çizim çağrısını bulmak için  
   
-1. Açık **grafik olay listesi** penceresi. Üzerinde **grafik tanılama** araç seçin **olay listesi**.  
+1. **Grafik olay listesi** penceresini açın. **Grafik tanılama** araç çubuğunda **olay listesi**' ni seçin.  
   
-2. Açık **grafik ardışık düzen aşamaları** penceresi. Üzerinde **grafik tanılama** araç seçin **ardışık düzen aşamaları**.  
+2. **Grafik ardışık düzen aşamaları** penceresini açın. **Grafik tanılama** araç çubuğunda, Işlem **hattı aşamaları**' nı seçin.  
   
-3. Her geçerken çağrı çizin **grafik olay listesi** penceresi, watch **grafik ardışık düzen aşamaları** eksik nesnesinin penceresi. Bunu kolaylaştırmak için "Çiz" girin **arama** sağ üst köşesinde kutusunda **grafik olay listesi** penceresi. Bu, yalnızca başlıklarında "Çiz" olan olaylar içeren listenin filtreler.  
+3. **Grafik olay listesi** penceresinde her çizim çağrısıyla geçiş yaparken, eksik nesnenin **grafik ardışık düzen aşamaları** penceresini izleyin. Bunun daha kolay olması için **grafik olay listesi** penceresinin sağ üst köşesindeki **arama** kutusuna "Çiz" yazın. Bu, listeyi yalnızca kendi başlıklarında "Çiz" olan olayları içerecek şekilde filtreler.  
   
-    İçinde **grafik ardışık düzen aşamaları** penceresinde **giriş Assembler** aşaması nesne geometrisinin, dönüştürülen önce gösterir ve **köşe gölgelendiricisi** aşama aynı gösterir Bunu dönüştürüldükten sonra nesne. Bu senaryoda, görüntülendiğinde eksik nesne buldunuz bilmeniz **giriş Assembler** aşama ve hiçbir şey görüntülenir **köşe gölgelendiricisi** aşaması.  
+    **Grafik ardışık düzen aşamaları** penceresinde, **giriş assembler** aşaması nesnenin geometrisini dönüştürüldükten önce gösterir ve **köşe gölgelendirici** aşaması dönüştürüldükten sonra aynı nesneyi gösterir. Bu senaryoda, eksik nesneyi **Input assembler** aşamasında görüntülenirken buldığınızı ve **köşe gölgelendirici** aşamasında hiçbir şey gösterilmediğini bilirsiniz.  
   
    > [!NOTE]
-   > Varsa diğer geometri aşamaları — Örneğin, kabuk gölgelendiricisi, etki alanı gölgelendiricisi ve geometri gölgelendirici aşamaları — nesneyi işlemek, sorunun nedenini olması olabilir. Genellikle, erken aşama sonucu görüntülenmez veya beklenmedik bir şekilde görüntülenir sorun ilgilidir.  
+   > Diğer geometri aşamaları — Örneğin, Hull gölgelendirici, etki alanı gölgelendirici veya geometri gölgelendirici aşamaları — nesneyi işlerse, bu, sorunun nedeni olabilir. Genellikle, sorun, sonucun görüntülenmeyen veya beklenmedik bir şekilde görüntülendiği en erken aşama ile ilgilidir.  
   
-4. Eksik bir nesneye karşılık gelen bir çizim çağrısı ulaştığında durdurun. Bu senaryoda, **grafik ardışık düzen aşamaları** penceresi geometri (giriş Assembler küçük resim gösterilir) GPU verildiğini gösterir, ancak yanlış sırasında bir sorun nedeniyle işleme hedefi görünmüyor Köşe gölgelendirici aşaması (köşe gölgelendiricisi küçük resim gösterilir):  
+4. Eksik nesneye karşılık gelen çizim çağrısına ulaştığınızda durdur. Bu senaryoda, **grafik ardışık düzen aşamaları** penceresi, GEOMETRININ GPU 'ya verildiğini (giriş derleyicisi küçük resminin gösterdiği) belirtir, ancak köşe gölgelendirici aşamasında (köşe gölgelendirici küçük resminin gösterdiği) bir sorun oluştuğundan işleme hedefinde görünmez:  
   
-    ![DrawIndexed olay ve işlem hattı üzerindeki etkisini](../debugger/media/gfx-diag-demo-missing-object-shader-step-2.png "gfx_diag_demo_missing_object_shader_step_2")  
+    ![Bir DrawIndexed olayı ve bu işlem hattı üzerindeki etkisi](../debugger/media/gfx-diag-demo-missing-object-shader-step-2.png "gfx_diag_demo_missing_object_shader_step_2")  
   
-   Sonra uygulamayı bir çizim çağrısı eksik nesne geometrisinin için verilen onaylayın ve Bul köşe gölgelendirici aşaması sırasında sorun ortaya, HLSL hata ayıklayıcısı, köşe gölgelendiricisi incelemek ve nesne geometrisinin neler olduğunu öğrenmek için kullanabilirsiniz. HLSL hata ayıklayıcısı, HLSL kodu adımlayın yürütme sırasında HLSL değişkenleri durumunu incelemek için kullanın ve sorunu tanılamanıza yardımcı olmak için kesme noktaları ayarlayın.  
+   Uygulamanın eksik nesnenin geometrisi için bir çizim çağrısı yaptığını ve bu sorunun köşe gölgelendirici aşamasında olduğunu bulduktan sonra, köşe gölgelendiriciyi incelemek ve nesnenin geometrisine ne olduğunu bulmak için HLSL hata ayıklayıcısını kullanabilirsiniz. HLSL hata ayıklayıcısını kullanarak yürütme sırasında HLSL değişkenlerinin durumunu inceleyebilir, HLSL kodunda adım adım ilerleyin ve sorunu tanılamanıza yardımcı olması için kesme noktaları ayarlayabilirsiniz.  
   
-#### <a name="to-examine-the-vertex-shader"></a>Köşe gölgelendirici incelemek için  
+#### <a name="to-examine-the-vertex-shader"></a>Köşe gölgelendiriciyi incelemek için  
   
-1. Köşe gölgelendirici aşaması hatalarını ayıklamaya başlayın. İçinde **grafik ardışık düzen aşamaları** penceresi altında **köşe gölgelendiricisi** aşama öğesini **hata ayıklamayı Başlat** düğmesi.  
+1. Köşe gölgelendirici aşamasında hata ayıklamayı başlatın. **Grafik ardışık düzen aşamaları** penceresinde, **köşe gölgelendirici** aşamasının altında, **hata ayıklamayı Başlat** düğmesini seçin.  
   
-2. Çünkü **giriş Assembler** aşama görünür iyi verileri köşe gölgelendiricisine sağlamak ve **köşe gölgelendiricisi** aşama görünür hiçbir çıktı oluşturmak için köşe gölgelendiricisi çıkışı incelemek istediğiniz yapısı, `output`. HLSL kodunuz içinde adım adım olarak, bir daha yakın olması ne zaman Ara `output` değiştirilir.  
+2. **Giriş** derleyicisi aşaması, köşe gölgelendiricisine iyi veri sunacak şekilde göründüğünden ve **köşe gölgelendirici** aşaması hiçbir çıkış üretmediğinde göründüğünden, köşe gölgelendirici çıkış yapısını incelemek istersiniz `output` . HLSL kodunda iler, değiştirildiğinde, daha yakından bir görünüme sahip olursunuz `output` .  
   
-3. İlk kez `output` değiştirildiğinde, üye `worldPos` yazılır.  
+3. İlk kez `output` değiştirildiğinde, üye `worldPos` öğesine yazılır.  
   
-    !["Output.worldPos" değerini makul görünür](../debugger/media/gfx-diag-demo-missing-object-shader-step-4.png "gfx_diag_demo_missing_object_shader_step_4")  
+    !["Output. worldPos" değeri makul görünüyor](../debugger/media/gfx-diag-demo-missing-object-shader-step-4.png "gfx_diag_demo_missing_object_shader_step_4")  
   
-    Değerini makul gibi göründüğünden, değiştiren sonraki satıra kadar kod içerisinde ilerlemeye devam `output`.  
+    Değeri makul bir şekilde göründüğünden, değiştiren bir sonraki satıra kadar koddan çalışmaya devam edersiniz `output` .  
   
-4. Bir sonraki `output` değiştirildiğinde, üye `pos` yazılır.  
+4. Sonraki sefer `output` değiştirildiğinde, üye `pos` öğesine yazılır.  
   
-    !["Output.pos" değerini çıkış zeroed](../debugger/media/gfx-diag-demo-missing-object-shader-step-5.png "gfx_diag_demo_missing_object_shader_step_5")  
+    !["Output. POS" değeri sıfırlandı](../debugger/media/gfx-diag-demo-missing-object-shader-step-5.png "gfx_diag_demo_missing_object_shader_step_5")  
   
-    Bu süre, değerini `pos` üye — sıfırlardan — şüpheli görünüyor. Ardından, belirlemek istediğiniz nasıl `output.pos` gelen sıfır değerine sahip.  
+    Bu kez, `pos` üyenin değeri — tüm sıfır — şüpheli görünür. Sonra, nasıl `output.pos` sıfırlardan oluşan bir değere sahip olduğunu öğrenmek istersiniz.  
   
-5. Olduğunu fark edersiniz `output.pos` adlı bir değişken değerini alan `temp`. Önceki satırında gördüğünüz değerini `temp` önceki değerine adlı bir sabit ile çarpılmasıyla elde edilen sonucu olan `projection`. Bu şüpheli `temp`ait şüpheli değerdir bu Çarpım sonucunu. Üzerinde işaretçiyi getirdiğinizde `projection`, değeri de sıfırlardan olduğuna dikkat edin.  
+5. Öğesinin `output.pos` değerini adlı bir değişkenden aldığını fark edersiniz `temp` . Önceki satırda, değerinin, `temp` önceki değerini adlı bir sabit değerle çarpması sonucu olduğunu görürsünüz `projection` . `temp`Bu çarpma 'nın sonucu şüpheli bir değer olduğunu şüphelenir. İşaretçiyi üzerine getirdiğinizde `projection` , değerinin de tümünün sıfırlardan olduğunu fark edersiniz.  
   
-    ![Projeksiyon matris hatalı bir dönüşüm içeren](../debugger/media/gfx-diag-demo-missing-object-shader-step-6.png "gfx_diag_demo_missing_object_shader_step_6")  
+    ![Projeksiyon matrisi hatalı bir dönüşüm içeriyor](../debugger/media/gfx-diag-demo-missing-object-shader-step-6.png "gfx_diag_demo_missing_object_shader_step_6")  
   
-    Bu senaryoda, inceleme, ortaya çıkarır `temp`ait şüpheli değer büyük olasılıkla kendi çarpım kaynaklanan `projection`ve çünkü `projection` bir projeksiyon matris içerecek şekilde hazırlanmıştır sabittir olmaması gerektiği olduğunu bildiğiniz Tüm sıfırları içerir.  
+    Bu senaryoda, İnceleme `temp` şüpheli değeri büyük olasılıkla çarpmasının neden olduğu anlamına gelir `projection` ve `projection` bir yansıtma matrisi içermesi amaçlanan bir sabit olduğundan, tümünün sıfırlardan oluşmalıdır.  
   
-   Karar verdikten sonra HLSL sabiti `projection`— gölgelendirici uygulamanız tarafından geçirilen — olası kaynak sorununu, sonraki adım, uygulamanızın kaynak kodunda konumu bulmak için nereye sabit arabelleğini girilir. Kullanabileceğiniz **grafik olay çağrı yığını** bu konumu bulunamadı.  
+   `projection`Uygulamanızın gölgelendiricisine geçirdiğini belirten HLSL sabitinin, sorunun olası kaynağı olduğunu belirledikten sonra, bir sonraki adım, sabit arabelleğin doldurulduğu uygulamanızın kaynak kodunda konumunu bulmakta olur. Bu konumu bulmak için **grafik olay çağrı yığınını** kullanabilirsiniz.  
   
-#### <a name="to-find-where-the-constant-is-set-in-your-apps-source-code"></a>Uygulamanızın kaynak kodunda sabiti ayarlandığı bulmak için  
+#### <a name="to-find-where-the-constant-is-set-in-your-apps-source-code"></a>Uygulamanın, uygulamanızın kaynak kodunda ayarlandığı yeri bulmak için  
   
-1. Açık **grafik olay çağrı yığını** penceresi. Üzerinde **grafik tanılama** araç seçin **grafik olay çağrı yığını**.  
+1. **Grafik olay çağrı yığını** penceresini açın. **Grafik tanılama** araç çubuğunda **grafik olay çağrı yığını**' nı seçin.  
   
-2. Uygulamanızın kaynak koda çağrı yığınında yukarı gidin. İçinde **grafik olay çağrı yığını** penceresinde sabit arabelleğini var. dolu olmadığını görmek için en üstteki arama seçin. Yüklü değilse, burada da girilir bulana kadar çağrı yığınının devam edin. Bu senaryoda, sabit arabelleğini doldurulmuş olduğunu keşfedin; kullanarak `UpdateSubresource` Direct3D API — daha fazla, adlı bir işlev çağrı yığınında yukarı `MarbleMaze::Render`, ve adlı bir sabit arabellek nesneden değeri gelen `m_marbleConstantBufferData` :  
+2. Çağrı yığınını uygulamanızın kaynak koduna gidin. **Grafik olay çağrı yığını** penceresinde, sabit arabelleğin orada doldurulup doldurulamayacağını görmek için en üstteki çağrıyı seçin. Aksi takdirde, nerede doldurulacağını bulana kadar çağrı yığınını devam edin. Bu senaryoda, sabit arabelleğin doldurulduğunu ( `UpdateSubresource` DIRECT3D API 'sini kullanarak), adlandırılmış bir işlevde çağrı yığınını daha `MarbleMaze::Render` sonra ve değeri adlı bir sabit arabellek nesnesinden geldiğini fark edersiniz `m_marbleConstantBufferData` :  
   
-    ![Nesnenin sabit arabelleğini ayarlayan kodu](../debugger/media/gfx-diag-demo-missing-object-shader-step-7.png "gfx_diag_demo_missing_object_shader_step_7")  
+    ![Nesnenin sabit arabelleğini ayarlayan kod](../debugger/media/gfx-diag-demo-missing-object-shader-step-7.png "gfx_diag_demo_missing_object_shader_step_7")  
   
    > [!TIP]
-   > Uygulamanız aynı anda hata ayıklaması yapıyorsanız bu konumda bir kesme noktası ayarlayabilirsiniz ve sonraki kare işlendiğinde ulaşılır. Ardından üyelerini inceleyebilirsiniz `m_marbleConstantBufferData` onaylamak için değerini `projection` üyesi sabit arabelleğini dolduğunda tümü sıfır olarak ayarlayın.  
+   > Uygulamanızda aynı anda hata ayıklaması yapıyorsanız, bu konumda bir kesme noktası ayarlayabilirsiniz ve bir sonraki çerçeve işlendiğinde bu, bu noktada bu olacaktır. Ardından üyelerini inceleyerek, `m_marbleConstantBufferData` `projection` sabit arabellek doldurulduktan sonra üyenin değerinin tümünün sıfıra ayarlandığını doğrulayabilirsiniz.  
   
-   Burada sabit arabelleğini doldurulur konum bulun ve değerleri değişkeninden geldiğini bulmak sonra `m_marbleConstantBufferData`, sonraki adıma nereden bulmaktır `m_marbleConstantBufferData.projection` üye tümü sıfır olarak ayarlanır. Kullanabileceğiniz **tüm başvuruları Bul** hızla değerini değiştirir kodunu tarama `m_marbleConstantBufferData.projection`.  
+   Sabit arabelleğin doldurulduğu konumu bulduktan ve değerlerinin değişkenden geldiği keşfederden sonra `m_marbleConstantBufferData` , bir sonraki adım `m_marbleConstantBufferData.projection` üyenin tüm sıfırları olarak ayarlandığını bulmayacaktır. Değerini değiştiren kodu hızla taramak için **tüm başvuruları bul** ' a yararlanabilirsiniz `m_marbleConstantBufferData.projection` .  
   
-#### <a name="to-find-where-the-projection-member-is-set-in-your-apps-source-code"></a>Yansıtma üyesi, uygulamanızın kaynak kodunda belirlendiği bulmak için  
+#### <a name="to-find-where-the-projection-member-is-set-in-your-apps-source-code"></a>Yansıtma üyesinin uygulamanızın kaynak kodunda ayarlandığı yeri bulmak için  
   
-1. Başvuruları Bul `m_marbleConstantBufferData.projection`. Değişken için kısayol menüsünü açın `m_marbleConstantBufferData`ve ardından **tüm başvuruları Bul**.  
+1. Başvuruları bulun `m_marbleConstantBufferData.projection` . Değişken için kısayol menüsünü açın `m_marbleConstantBufferData` ve ardından **tüm başvuruları bul**' u seçin.  
   
-2. Uygulamanızın kaynak kodundaki satır konumuna gitmek için burada `projection` üye değiştirilmişse, bu satırda seçin **sembol sonuçları Bul** penceresi. Yansıtma üyesi değiştiren ilk sonucu sorunun nedeni olabileceğinden, uygulamanızın kaynak kodunun çeşitli alanları incelemek olabilir.  
+2. Uygulamanın, üyenin değiştirildiği kaynak kodundaki satırın konumuna gitmek için `projection` , **sembol sonuçları bul** penceresinde bu satırı seçin. Projeksiyon üyesini değiştiren ilk sonuç sorunun nedeni olmayabilir, uygulamanızın kaynak kodunun birkaç alanını incelemeniz gerekebilir.  
   
-   Konumun bulduktan sonra nerede `m_marbleConstantBufferData.projection` , yanlış bir değer kökenini belirlemek için çevreleyen kaynak kodu inceleyebilirsiniz ayarlanmış. Bu senaryoda olduğunu fark değerini `m_marbleConstantBufferData.projection` adlı yerel bir değişken `projection` kod tarafından verilen bir değere başlatılmadan önce `m_camera->GetProjection(&projection);` sonraki satıra.  
+   Öğesinin ayarlandığı konumu bulduktan sonra `m_marbleConstantBufferData.projection` , hatalı değerin kaynağını belirleyebilmek için çevreleyen kaynak kodunu inceleyebilirsiniz. Bu senaryoda, değerinin bir `m_marbleConstantBufferData.projection` `projection` sonraki satırdaki kod tarafından verilen bir değere başlatılmadan önce adlı yerel bir değişkene ayarlandığını fark edersiniz `m_camera->GetProjection(&projection);` .  
   
-   ![Marble projeksiyon başlatma önce ayarlanır](../debugger/media/gfx-diag-demo-missing-object-shader-step-9.png "gfx_diag_demo_missing_object_shader_step_9")  
+   ![Mermer projeksiyonu başlatmadan önce ayarlandı](../debugger/media/gfx-diag-demo-missing-object-shader-step-9.png "gfx_diag_demo_missing_object_shader_step_9")  
   
-   Sorunu gidermek için değerini ayarlar kod satırına Taşı `m_marbleConstantBufferData.projection` yerel değişkenin değerini başlatır satırdan `projection`.  
+   Sorunu gidermek için, `m_marbleConstantBufferData.projection` yerel değişkenin değerini Başlatan satırdan sonra değerini ayarlayan kod satırını taşırsınız `projection` .  
   
-   ![Düzeltilmiş C&#43; &#43; kaynak kodu](../debugger/media/gfx-diag-demo-missing-object-shader-step-10.png "gfx_diag_demo_missing_object_shader_step_10")  
+   ![Düzeltilen C&#43;&#43; kaynak kodu](../debugger/media/gfx-diag-demo-missing-object-shader-step-10.png "gfx_diag_demo_missing_object_shader_step_10")  
   
-   Kod düzelttikten sonra yeniden oluşturmak ve yeniden işleme sorunun çözüldüğünü bulmak için uygulamayı çalıştırın:  
+   Kodu düzelttikten sonra, oluşturma sorununun çözümlenme sorununu saptamak için yeniden oluşturabilir ve uygulamayı tekrar çalıştırabilirsiniz:  
   
-   ![Şimdi nesnesinde görüntülenir. ](../debugger/media/gfx-diag-demo-missing-object-shader-resolution.png "gfx_diag_demo_missing_object_shader_resolution")
+   ![Nesne artık görüntülendi.](../debugger/media/gfx-diag-demo-missing-object-shader-resolution.png "gfx_diag_demo_missing_object_shader_resolution")

@@ -13,53 +13,53 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c0bca6ccd3738518df339084b0f6463be181e52d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192910"
 ---
 # <a name="idebugcoreserver2"></a>IDebugCoreServer2
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu arabirim, temsil ve ağ üzerindeki bir makinede bir sunucudan bilgi almak için kullanılır.  
+Bu arabirim, ağdaki bir makinedeki bir sunucudan bilgi göstermek ve almak için kullanılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDebugCoreServer2 : IUknown  
 ```  
   
-## <a name="notes-for-implementers"></a>Uygulayanlar için Notlar  
- Visual Studio, bir sunucu temsil etmek için bu arabirimi uygular. Visual Studio'nun her örneği, bu arabirim bir örneğini oluşturur.  
+## <a name="notes-for-implementers"></a>Implemenonun notları  
+ Visual Studio, bir sunucuyu temsil etmek için bu arabirimi uygular. Visual Studio 'nun her örneği, bu arabirimin bir örneğini oluşturur.  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Özel bağlantı noktası sağlayıcısı bir çağrıda bu arabirimin aldığı [olay](../../../extensibility/debugger/reference/idebugportevents2-event.md).  
+ Özel bir bağlantı noktası sağlayıcısı bu arabirimi bir [olay](../../../extensibility/debugger/reference/idebugportevents2-event.md)çağrısıyla alır.  
   
- Bu arabirim için bir çağrı aracılığıyla dolaylı olarak bir hata ayıklama altyapısı elde edebilirsiniz [GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md) (döndüren [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md), türetilmiş bir arabirim `IDebugCoreServer2`).  
+ Bir hata ayıklama altyapısı, bu arabirimi bir [GetServer](../../../extensibility/debugger/reference/idebugdefaultport2-getserver.md) çağrısıyla dolaylı olarak alabilir ( [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md), öğesinden türetilmiş bir arabirim `IDebugCoreServer2` ).  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDebugCoreServer2`.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDebugCoreServer2` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md)|Bir makine özniteliklerini ve adını alır.|  
-|[GetMachineName](../../../extensibility/debugger/reference/idebugcoreserver2-getmachinename.md)|Bir makine adını alır.|  
-|[GetPortSupplier](../../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)|Bir makinede var olan bağlantı noktası sağlayıcısı alır.|  
-|[GetPort](../../../extensibility/debugger/reference/idebugcoreserver2-getport.md)|Bir makinede zaten bir bağlantı noktasını alır.|  
-|[EnumPorts](../../../extensibility/debugger/reference/idebugcoreserver2-enumports.md)|Tüm bağlantı noktaları için bir numaralandırıcı bir makinede oluşturur.|  
-|[EnumPortSuppliers](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md)|Tüm bağlantı noktası sağlayıcıları için bir numaralandırıcı bir makinede oluşturur.|  
-|[GetMachineUtilities_V7](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineutilities-v7.md)|Makine yardımcı programlar bir makine için alır.|  
+|[GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md)|Bir makinenin adını ve özniteliklerini alır.|  
+|[GetMachineName](../../../extensibility/debugger/reference/idebugcoreserver2-getmachinename.md)|Makinenin adını alır.|  
+|[GetPortSupplier](../../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)|Bir makinede bulunan bir bağlantı noktası sağlayıcısı alır.|  
+|[GetPort](../../../extensibility/debugger/reference/idebugcoreserver2-getport.md)|Bir makinede zaten bulunan bir bağlantı noktasını alır.|  
+|[EnumPorts](../../../extensibility/debugger/reference/idebugcoreserver2-enumports.md)|Bir makinedeki tüm bağlantı noktaları için bir Numaralandırıcı oluşturur.|  
+|[EnumPortSuppliers](../../../extensibility/debugger/reference/idebugcoreserver2-enumportsuppliers.md)|Bir makinedeki tüm bağlantı noktası tedarikçileri için bir Numaralandırıcı oluşturur.|  
+|[GetMachineUtilities_V7](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineutilities-v7.md)|Makine için makine yardımcı programlarını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu arabirim, ağdaki makineler üzerinde çalışan işlemler göz atmak için Visual Studio tarafından da kullanılır.  
+ Bu arabirim, ağdaki makinelerde çalışan işlemlere gitmek için Visual Studio tarafından da kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   

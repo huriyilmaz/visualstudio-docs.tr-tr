@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::EnumChildren | Microsoft Docs
+title: 'IDebugProperty2:: EnumChildren | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 6cd5b29978b6b67cc80e95b86603b0caf487c26c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68164952"
 ---
 # <a name="idebugproperty2enumchildren"></a>IDebugProperty2::EnumChildren
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Alt özellik öğelerinin bir listesini alır.  
+Özelliğin alt öğelerinin bir listesini alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT EnumChildren (   
@@ -52,28 +52,28 @@ int EnumChildren ( 
   
 #### <a name="parameters"></a>Parametreler  
  `dwFields`  
- [in] Bayraklarının bir birleşimi [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) hangi alanların numaralandırılmış belirten numaralandırma [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılardır doldurulmalıdır.  
+ 'ndaki Numaralandırılmış [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) yapılardaki hangi alanların doldurulacağını belirten [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) Numaralandırmadaki bayrakların birleşimi.  
   
  `dwRadix`  
- [in] Sayısal yedeklenmesine biçimlendirmede kullanılacak sayı tabanı belirtir.  
+ 'ndaki Herhangi bir sayısal bilgiyi biçimlendirmede kullanılacak taban 'i belirtir.  
   
  `guidFilter`  
- [in] GUID ile kullanılan filtrenin `dwAttribFilter` ve `pszNameFilter` hangi parametreleri `DEBUG_PROPERTY_INFO` alt öğesi olan sıralanması. Örneğin, `guidFilterLocals` yerel değişkenler için filtreler.  
+ 'ndaki `dwAttribFilter` `pszNameFilter` Hangi `DEBUG_PROPERTY_INFO` alt öğelerin numaralandırılacağını seçmek için ve parametreleriyle kullanılan filtrenin GUID 'si. Örneğin, `guidFilterLocals` yerel değişkenler için filtreler.  
   
  `dwAttribFilter`  
- [in] Bayraklarının bir birleşimi [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) belirtir, örneğin Numaralandırılacak nesnelerin türü numaralandırması `DBG_ATTRIB_METHOD` alt öğeleri bu özelliğin olabilecek tüm yöntemleri için. Birlikte `guidFilter` ve `pszNameFilter` parametreleri.  
+ 'ndaki [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) `DBG_ATTRIB_METHOD` Bu özelliğin alt öğesi olabilecek tüm yöntemler için, örneğin, Numaralandırılacak nesne türlerini belirten DBG_ATTRIB_FLAGS Numaralandırmadaki bayrakların birleşimi. `guidFilter`Ve parametreleriyle birlikte kullanılır `pszNameFilter` .  
   
  `pszNameFilter`  
- [in] İle kullanılan filtresinin adını `guidFilter` ve `dwAttribFilter` hangi parametreleri `DEBUG_PROPERTY_INFO` alt öğesi olan sıralanması. Örneğin, bu parametre "MyX" filtreleri adı "MyX." tüm alt ayarlama  
+ 'ndaki `guidFilter` `dwAttribFilter` Hangi `DEBUG_PROPERTY_INFO` alt öğelerin numaralandırılacağını seçmek için ve parametreleriyle kullanılan filtrenin adı. Örneğin, bu parametre, "MyX" adlı tüm alt öğeler için "MyX" filtrelerine ayarlanıyor  
   
  `dwTimeout`  
- [in] Bu yöntemden geri dönmeden önce beklenecek milisaniye cinsinden en uzun süreyi belirtir. Kullanım `INFINITE` süresiz bekleme.  
+ 'ndaki Bu yöntemden dönmeden önce beklenecek en uzun süreyi milisaniye olarak belirtir. `INFINITE`Sonsuza kadar beklemek için kullanın.  
   
  `ppEnum`  
- [out] Döndürür bir [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) alt özellikleri listesini içeren nesne.  
+ dışı Alt özelliklerin bir listesini içeren bir [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

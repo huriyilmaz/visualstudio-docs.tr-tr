@@ -1,5 +1,5 @@
 ---
-title: XAML kod Düzenleyicisi
+title: XAML kod düzenleyici
 description: Visual Studio 'da XAML kod Düzenleyicisi turuna katılın
 ms.date: 06/16/2020
 ms.topic: overview
@@ -8,13 +8,13 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 6421fd0139b04262ac5f1e835f010c1372c034ee
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329173"
 ---
-# <a name="xaml-code-editor"></a>XAML kod Düzenleyicisi
+# <a name="xaml-code-editor"></a>XAML kod düzenleyici
 
 [Visual STUDIO IDE](../get-started/visual-studio-ide.md) 'deki xaml kod Düzenleyicisi, Windows platformu ve [Xamarin. Forms](/xamarin/xamarin-forms/user-interface/text/editor/)için WPF ve UWP uygulamaları oluşturmak için ihtiyacınız olan tüm araçları içerir. Bu makalede, XAML tabanlı uygulamalar geliştirirken kod düzenleyicisinin oynadığı rol ve Visual Studio 2019 ' deki XAML kod Düzenleyicisi için benzersiz olan özellikler özetlenmektedir.
 
@@ -173,7 +173,7 @@ Ayrıca, kaydırma çubuğunun görünümünü ve içerdiği ek özellikleri de�
 
 Diğerleri, kaydırma çubuğunda küçük bir kod satırını görüntüleyen *harita modunu*kullanarak daha fazla teşekkür ederiz. Bir dosyada çok fazla kod bulunan geliştiriciler, eşleme modunun, varsayılan kaydırma çubuğunu kullanmaktan daha etkili şekilde kod satırlarına izlemelerinin ne olduğunu fark edebilir.
 
-Kaydırma çubuğunun varsayılan ayarlarının nasıl değiştirileceği hakkında daha fazla bilgi için, [kaydırma çubuğunu özelleştirme](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md) sayfasına bakın.
+Kaydırma çubuğunun varsayılan ayarlarının nasıl değiştirileceği hakkında daha fazla bilgi için,  [kaydırma çubuğunu özelleştirme](../ide/how-to-track-your-code-by-customizing-the-scrollbar.md) sayfasına bakın.
 
 ## <a name="xaml-specific-features"></a>XAML 'e özgü özellikler
 

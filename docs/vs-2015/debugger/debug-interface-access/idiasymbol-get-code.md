@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_code | Microsoft Docs
+title: 'IDiaSymbol:: get_code | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 13fe5511c5bb95e32ec2ded10420073a9818e11f
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64822148"
 ---
-# <a name="idiasymbolgetcode"></a>IDiaSymbol::get_code
+# <a name="idiasymbolget_code"></a>IDiaSymbol::get_code
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Simgenin bir kod adresine başvurmadığını belirten bir bayrak alır.  
+Simgenin bir kod adresine başvuru yapıp kullanmadığını belirten bir bayrak alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_code (   
@@ -35,20 +35,20 @@ HRESULT get_code ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pRetVal`  
- [out] Döndürür `TRUE` sembol için bir kod adresiyle başvuruyorsa, döndürür, aksi takdirde, `FALSE`.  
+ dışı `TRUE` Simgenin bir kod adresine başvuruyorsa, aksi takdirde döndürür `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde döndürür `S_FALSE` veya hata kodu.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.  
   
 > [!NOTE]
-> Dönüş değeri `S_FALSE` özelliği simge için kullanılabilir değil anlamına gelir.  
+> Dönüş değeri, `S_FALSE` özelliğin sembol için kullanılamadığı anlamına gelir.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
-|Gereksinim|Açıklama|  
+|Gereksinim|Description|  
 |-----------------|-----------------|  
-|Üst bilgi:|dia2.h|  
-|Sürüm:|DIA SDK v7.0|  
+|Üst bilgi|dia2. h|  
+|Sürüm:|DIA SDK v 7.0|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)
