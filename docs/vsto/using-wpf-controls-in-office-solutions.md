@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 717e24315d1f6e57eda224ef17cc4ea5b5d550c9
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73189755"
 ---
 # <a name="use-wpf-controls-in-office-solutions"></a>Office çözümlerinde WPF denetimlerini kullanma
@@ -49,7 +49,7 @@ Office çözümlerinde doğrudan UI öğelerine WPF denetimleri ekleyemezsiniz. 
 
      Varsayılan olarak, WPF Kullanıcı denetimi Tasarımcısı açık olduğunda, **araç kutusu** yalnızca WPF denetimleri içerir.
 
-4. Projeyi oluşturun.
+4. Projeyi derleyin.
 
 5. Projenize bir eylemler bölmesi, form bölgesi veya özel görev bölmesi ekleyin:
 
@@ -61,7 +61,7 @@ Office çözümlerinde doğrudan UI öğelerine WPF denetimleri ekleyemezsiniz. 
 
 6. **Araç kutusunun** *ProjectName* **WPF Kullanıcı denetimleri** sekmesinden, Eylemler bölmesi, form BÖLGESI veya özel görev bölmesi için WPF Kullanıcı denetimini tasarımcıya sürükleyin.
 
-     Visual Studio otomatik olarak, Kullanıcı arabirimi öğesinde WPF Kullanıcı denetimini barındıran bir <xref:System.Windows.Forms.Integration.ElementHost> nesnesi oluşturur.
+     Visual Studio otomatik olarak <xref:System.Windows.Forms.Integration.ElementHost> , Kullanıcı arabirimi ÖĞESINDE WPF Kullanıcı denetimini barındıran bir nesne oluşturur.
 
 7. Projeyi yeniden derleyin.
 
@@ -73,7 +73,7 @@ Office çözümlerinde doğrudan UI öğelerine WPF denetimleri ekleyemezsiniz. 
 
 3. **Araç kutusundan**WPF Kullanıcı denetimi TASARıM yüzeyine WPF denetimleri ekleyin.
 
-4. Projeyi oluşturun.
+4. Projeyi derleyin.
 
 5. Projeye bir **Kullanıcı denetim** öğesi (bir Windows Forms Kullanıcı denetimi) ekleyin.
 
@@ -81,7 +81,7 @@ Office çözümlerinde doğrudan UI öğelerine WPF denetimleri ekleyemezsiniz. 
 
 7. **Araç kutusunun** *ProjectName* **WPF Kullanıcı denetimleri** sekmesinden, WPF Kullanıcı denetimini tasarımcıya sürükleyin.
 
-     Visual Studio otomatik olarak, Windows Forms Kullanıcı denetimindeki WPF Kullanıcı denetimini barındıran bir <xref:System.Windows.Forms.Integration.ElementHost> nesnesi oluşturur.
+     Visual Studio otomatik olarak <xref:System.Windows.Forms.Integration.ElementHost> Windows Forms Kullanıcı DENETIMINDEKI WPF Kullanıcı denetimini barındıran bir nesne oluşturur.
 
 8. Program aracılığıyla Windows Forms Kullanıcı denetimini belgeye veya çalışma kitabına ekleyen kodu yazın. Daha fazla bilgi için bkz. [çalışma zamanında Office belgelerine denetim ekleme](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
@@ -94,7 +94,7 @@ Office çözümlerinde doğrudan UI öğelerine WPF denetimleri ekleyemezsiniz. 
 
 Visual Studio, Office çözümlerinizde Windows Forms denetimleri kullanmanıza yardımcı olan özellikler sağlar, ancak WPF denetimleri için benzer özellikler sağlamaz. Örneğin, denetimleri **araç kutusundan**sürükleyerek veya çalışma zamanında yardımcı yöntemler kullanarak belgelere ve çalışma sayfalarına Windows Forms denetimleri ekleyebilirsiniz. Ancak, bu araçlar WPF denetimleri için kullanılamaz.
 
-WPF denetimleri, bir Windows Forms denetimi veya formu ile WPF denetimleri arasında bir tümleştirme katmanı olarak <xref:System.Windows.Forms.Integration.ElementHost> sınıfını kullanır. Çözümünüze tasarım zamanında WPF denetimleri eklediğinizde, Visual Studio sizin için otomatik olarak bir <xref:System.Windows.Forms.Integration.ElementHost> nesnesi oluşturur.
+WPF denetimleri, <xref:System.Windows.Forms.Integration.ElementHost> bir Windows Forms denetimi veya formu Ile WPF denetimleri arasında bir tümleştirme katmanı olarak sınıfını kullanır. Çözümünüze tasarım zamanında WPF denetimleri eklediğinizde, Visual Studio sizin için otomatik olarak bir <xref:System.Windows.Forms.Integration.ElementHost> nesne oluşturur.
 
 ## <a name="wpf-resources"></a>WPF kaynakları
 

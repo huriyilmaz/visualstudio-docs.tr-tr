@@ -11,10 +11,10 @@ ms.workload:
 - multiple
 monikerRange: vs-2017
 ms.openlocfilehash: 00fd0c03bf460cd8b72a10d15501994d7a2aa10a
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541720"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP uygulamalarında ağ kullanımını analiz etme
@@ -53,12 +53,12 @@ Visual Studio **ağ** Tanılama Aracı, [Windows. Web. http API 'si](/uwp/api/wi
 
  ![Ağ aracı ayrıntıları bölmesi](../profiling/media/network_detailsviewpane.png "NETWORK_DetailsViewPane")
 
-|Name|Açıklama|
+|Ad|Açıklama|
 |-|-|
-|**Üst Bilgiler**|Olayın istek üstbilgileri hakkında bilgi.|
+|**Üst bilgiler**|Olayın istek üstbilgileri hakkında bilgi.|
 |**Gövde**|İstek ve yanıt yükü verileri.|
 |**Parametreler**|Sorgu dizesi parametre adları ve değerleri.|
-|**Çerezler**|Yanıt ve istek tanımlama bilgisi verileri.|
+|**Özgü**|Yanıt ve istek tanımlama bilgisi verileri.|
 |**Zamanlama**|Seçilen kaynakları alırken aşamaların bir grafiği.|
 
  Ağ **Özet** çubuğu, herhangi bir noktada görüntülenen ağ işlemlerinin sayısını, ne kadar veri aktarıldığını, ne kadar zaman aktarılacağını ve kaç hatanın (4xx veya 5xx yanıtı) görünür olduğunu gösterir.

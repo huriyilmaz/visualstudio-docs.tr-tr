@@ -1,5 +1,5 @@
 ---
-title: Visual Studio aboneliklerinde yenilikler
+title: Visual Studio aboneliklerindeki yenilikler
 description: Visual Studio aboneliklerini yönetmek için kullanabileceğiniz yeni ve güncelleştirilmiş özellikler hakkında bilgi edinin.
 ms.custom: ''
 ms.date: 04/01/2020
@@ -9,55 +9,55 @@ ms.author: v-evwin
 manager: lank
 ms.assetid: 2dc938b5-37e9-4dfc-8676-5d0a91d366ab
 ms.openlocfilehash: c19bb72a7d5262c5d0864d12d44266c8ef016acf
-ms.sourcegitcommit: ade07bd1cf69b8b494d171ae648cfdd54f7800d3
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "81649689"
 ---
-# <a name="what39s-new-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde yeni&#39;
+# <a name="what39s-new-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde ne&#39;yenidir
 
-Sizin için daha kullanışlı hale getirmek için Abonelik avantajları paketini sık sık güncelleriz. Ayrıca, size mümkün olan en iyi deneyimi sunmak için abone ve abonelik yönetimi portallarımızda geliştirmeler de yapacağız.  Üç ayda bir sıralanmış en son özellikler ve güncelleştirmeler hakkında bilgi edinmek için okumaya devam edin.
+Abonelik avantajları paketini sık sık güncelleştiririz. Ayrıca olası en iyi deneyimi sağlamak için abone ve abonelik yönetimi portallarımızla ilgili geliştirmeler de yapacağız.  Üç aylık olarak sıralanan en son özellikler ve güncelleştirmeler hakkında bilgi edinmek için okumaya devam edin.
 
 ## <a name="2020-q1-january-march"></a>2020 Ç1 (Ocak-Mart)
 
-### <a name="subscriptions-administration-portal"></a>Abonelikler Yönetim Portalı
-2020 yılının ilk çeyreğinde yeni bir görünüm ve Visual Studio Abonelikleri https://manage.visualstudio.comYönetim Portalı için bazı yeni özellikler gördüm . Portaldaki değişiklikler yeni bir renk düzeni ve bazı araçların yeniden düzenlenmesini içeriyordu.  Abonelik tahsislerinize genel bakış, anlaşma ayrıntıları ve maksimum kullanım artık sol üstteki düğmelerle denetlenir.  Bu, abonelik atama ve düzenleme gibi en sık yaptığınız yönetim görevleri için kullanılabilir ekran alanını en üst düzeye çıkarmanıza yardımcı olur.  
+### <a name="subscriptions-administration-portal"></a>Abonelikler yönetim portalı
+2020 ilk çeyreği, Visual Studio abonelikleri yönetim portalı için ' de yeni bir görünüm ve yeni bazı özellikler gördük https://manage.visualstudio.com . Portalda yapılan değişiklikler yeni bir renk şeması ve bazı araçların yeniden düzenlemesini içeriyordu.  Abonelik ayırmanızın, anlaşma ayrıntılarınızın ve en yüksek kullanımlarınızın genel bakışı artık sol üstteki düğmelere göre denetlenmektedir.  Bu, aboneliklerin atanması ve düzenlenmesine benzer şekilde, en sık yaptığınız yönetim görevleri için kullanılabilir ekran alanının en üst düzeye çıkmasına yardımcı olur.  
 
-Ayrıca invididual aboneler eklemek ve bir açılan **+ Ekle** menüsünde toplu eklemeler gerçekleştirmek için seçenekleri birleştirdik. 
+Ayrıca, bir açılan menü **+ Ekle** menüsünde birlikte bulunan ve toplu eklemeler gerçekleştirmeye yönelik seçenekleri de ekledik. 
 
    > [!div class="mx-imgBorder"]
-   > ![Abonelikler İdaresi portalı için yeni UI](_img/whats-new/new-admin-ui.png)
+   > ![Abonelikler yönetim portalı için yeni kullanıcı arabirimi](_img/whats-new/new-admin-ui.png)
 
-#### <a name="connect-emails"></a>E-postaları Bağla
-Microsoft Hesapları (MSA) kullanan aboneleri Azure Etkin Dizininize (Azure AD) bağlamayı kolaylaştırdık, böylece iki kimliği hızlı bir şekilde bağlayabilirsiniz.  Azure AD kimliklerinin kullanılması, daha fazla güvenlik ve daha kolay abonelik yönetimi sağlar.  Daha fazla bilgi için [kişisel oturum açma makalemize](personal-email-sign-ins.md) göz atın. 
+#### <a name="connect-emails"></a>E-postaları bağlama
+Microsoft hesaplarını (MSA) kullanan aboneleri Azure Active Directory (Azure AD) ile eşleştirmeye çok daha kolay hale getirebiliyoruz. böylece, iki kimliği hızlıca bağlayabilirsiniz.  Azure AD kimliklerini kullanmak daha yüksek güvenlik ve daha kolay abonelik yönetimi sağlar.  Daha fazla bilgi için [kişisel oturum açma makalemize](personal-email-sign-ins.md) göz atın. 
 
-#### <a name="add-subscribers-using-azure-active-directory-groups"></a>Azure Etkin Dizin gruplarını kullanarak abone ekleme
-Kuruluşunuz Azure Etkin Dizin (Azure AD) kullanıyorsa, artık abonelikleri Azure REKLAM gruplarını kullanarak yönetebilirsiniz.  Gruplara abonelik atamak, aynı türdeki abonelikleri birden çok kullanıcıya çok hızlı bir şekilde sağlama olanağı sağlar.  Azure AD grubuna yeni kullanıcılar eklendiğinde, otomatik olarak bir abonelik atanır.  Bir kullanıcı Azure REKLAM grubundan kaldırılırsa, aboneliği de kaldırılır.  Bu, kuruluşunuzun abonelik yönetiminizi otomatikleştirmesi ve yöneticilerin zaman ve çabadan tasarruf edinmesine yardımcı olur.  Ayrıntılar için belgelerimizdeki [birden çok kullanıcı ekle](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-azure-active-directory-groups-to-assign-subscriptions) makalesine göz atın. 
+#### <a name="add-subscribers-using-azure-active-directory-groups"></a>Azure Active Directory grupları kullanarak abone ekleme
+Kuruluşunuz Azure Active Directory (Azure AD) kullanıyorsa, artık Azure AD gruplarını kullanarak abonelikleri yönetebilirsiniz.  Gruplara abonelik atamak, birden çok kullanıcıya aynı türdeki abonelikleri çok hızlı bir şekilde sağlama olanağı sunar.  Azure AD grubuna yeni kullanıcılar eklendiğinde, bu kullanıcılara otomatik olarak bir abonelik atanır.  Bir Kullanıcı Azure AD grubundan kaldırılırsa, abonelikleri de kaldırılır.  Bu, kuruluşunuzun abonelik yönetimini otomatikleştirmesine, yönetim ve zaman ve çaba tasarrufu sağlamanıza yardımcı olur.  Ayrıntılar için belgelerimizde [birden çok Kullanıcı Ekle](https://docs.microsoft.com/visualstudio/subscriptions/assign-license-bulk#use-azure-active-directory-groups-to-assign-subscriptions) makalesine göz atın. 
 
 ### <a name="cast-highlight"></a>CAST Highlight
-Ortağımız CAST Highlight tarafından sunulan avantajların genişletilmeye devam ettiğini duyurmaktan mutluluk duyuyoruz. 
-- Visual Studio Enterprise aboneliklerinde yer alan avantajın süresi altı aya uzatıldı.  
-- Visual Studio Professional aboneleri artık tek bir uygulamayı üç ay boyunca değerlendirmelerine olanak tanıyan bir abonelik alabilirler. 
+İş ortağımız, atama Vurgumız tarafından sunulan avantajların bir genişletmesinin duyurulduğu için mutluyuz. 
+- Visual Studio Enterprise aboneliklerine dahil olan avantajın uzunluğu altı aya genişletildi.  
+- Visual Studio Professional aboneler şimdi bir abonelik alabilir ve bu da, üç ay boyunca tek bir uygulamayı değerlendirmelerine olanak tanır. 
 
 ## <a name="2020-q2-april-june"></a>2020 Ç2 (Nisan-Haziran)
 
-### <a name="visual-studio-subscriptions-portal"></a>Görsel Stüdyo Abonelikleri Portalı
+### <a name="visual-studio-subscriptions-portal"></a>Visual Studio abonelikleri portalı
 
-Visual Studio Abonelikleri Portalı görünüm ve kullanım kolaylığı nda önemli değişikliklere uğramıştir.  
+Visual Studio abonelikleri portalı, görünüm ve kullanım kolaylığıyla önemli değişikliklere neden oldu.  
 
-- Avantajlar kutucukları yeniden boyutlandırıldı ve belirli bir kategorideki tüm döşemeleri görmek için sola veya sağa kaydırmanız gerekmeden pencerede görüntülenir. 
-- Mevcut tüm avantajlarınızı görüntülemeyi seçebilir veya Kategori Seçici'yi kullanarak yalnızca bir kategori görüntüleyebilirsiniz.
+- Avantajlar kutucukları yeniden boyutlandırıldı ve pencerede, belirli bir kategorideki tüm kutucukları görmek için sola veya sağa kaydırmaya gerek kalmaz. 
+- Tüm kullanılabilir avantajlarınızı görüntülemeyi veya kategori seçiciyi kullanarak yalnızca bir kategoriyi görüntülemeyi seçebilirsiniz.
    > [!div class="mx-imgBorder"]
    > ![Yeni avantajlar kategori seçici](_img/whats-new/whats-new-category-picker.png)
-- Ayrıca Abonelik Seçici'yi pencerenin sağ üst köşesinden daha erişilebilir bir konuma taşıdık.
+- Ayrıca, pencerenin sağ üst köşesinden abonelik seçiciyi daha erişilebilir bir konuma taşıdık.
    > [!div class="mx-imgBorder"]
    > ![Yeni abonelik seçici](_img/whats-new/whats-new-sub-picker.png)
-- Yeni veya popüler avantajlar arayın, avantajlar listesinin en üstüne bir "Öne Çıkan avantaj" ekledik.  
+- Yeni veya popüler avantajları çağırmak için avantajlar listesinin en üstünde "öne çıkan bir avantaj" ekledik.  
    > [!div class="mx-imgBorder"]
-   > ![Yeni özellikli yarar](_img/whats-new/whats-new-featured.png)
+   > ![Yeni öne çıkan avantaj](_img/whats-new/whats-new-featured.png)
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- Yeni özellikleri ile yeni [Abonelikler Yönetimi portalı](https://manage.visualstudio.com) UI göz atın
-- [CAST Highlight](vs-cast.md) hakkında daha fazla bilgi edinin
-- Visual Studio aboneliklerinde yenilikler hakkında en son bilgileri görmek için buraya göz atın!
+- Yeni [abonelikler yönetim portalı](https://manage.visualstudio.com) Kullanıcı arabirimine yeni özellikleriyle göz atın
+- [Atama vurgusu](vs-cast.md) hakkında daha fazla bilgi edinin
+- Visual Studio aboneliklerindeki yenilikler hakkında en son bilgiler için burayı iade ettiğinizden emin olun!

@@ -23,10 +23,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: efe2b176db9f6f22f9e38775d5fc8acad87655ba
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651379"
 ---
 # <a name="managing-application-resources-net"></a>Uygulama Kaynaklarını Yönetme (.NET)
@@ -39,6 +39,6 @@ Kaynak dosyaları, bir uygulamanın parçası olan ancak derlenmediği, örneği
  Windows Mağazası uygulamaları, Masaüstü uygulamalarından farklı bir kaynak modeli kullanır. Windows Mağazası uygulamalarındaki kaynaklar hakkında daha fazla bilgi için, bkz. Windows Dev Center Web sitesinde [uygulama kaynaklarını tanımlama](https://msdn.microsoft.com/library/windows/apps/hh465228.aspx) .
 
 ## <a name="working-with-resources"></a>Kaynaklarla çalışma
- Yönetilen bir kod projesinde, proje özellikleri penceresini açın ( **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve **Özellikler**' i seçin veya **Hızlı Başlat** penceresine **Proje özellikleri** yazın veya Alt + Enter yazın.  **Çözüm Gezgini** pencere). **Kaynaklar** sekmesini seçin. Projenizde bir tane yoksa bir. resx dosyası ekleyebilirsiniz, farklı türlerde kaynaklar ekleyip silebilir ve mevcut kaynakları değiştirebilirsiniz.
+ Yönetilen bir kod projesinde proje özellikleri penceresini açın ( **Çözüm Gezgini** ' de proje düğümüne sağ tıklayın ve **Özellikler**' i seçin veya **Hızlı Başlat** penceresine **Proje ÖZELLIKLERI** yazın veya **Çözüm Gezgini** penceresinde Alt + Enter yazın. **Kaynaklar** sekmesini seçin. Projenizde bir tane yoksa bir. resx dosyası ekleyebilirsiniz, farklı türlerde kaynaklar ekleyip silebilir ve mevcut kaynakları değiştirebilirsiniz.
 
- C++ Projelerdeki kaynaklarla nasıl çalışabileceğinizi öğrenmek için bkz. [nasıl yapılır: kaynak oluşturma](https://msdn.microsoft.com/library/aad44914-9145-45a3-a7d8-9de89b366716).
+ C++ projelerindeki kaynaklarla nasıl çalışabileceğinizi öğrenmek için bkz. [nasıl yapılır: kaynak oluşturma](https://msdn.microsoft.com/library/aad44914-9145-45a3-a7d8-9de89b366716).

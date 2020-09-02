@@ -15,23 +15,23 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1766fe22573554b41ebfaa38fbd9e8d6c90c5790
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595767"
 ---
 # <a name="build-devenvexe"></a>/Build (devenv.exe)
 
-Belirli bir çözüm yapılandırma dosyası kullanarak bir çözüm veya proje oluşturur.
+Belirtilen çözüm yapılandırma dosyasını kullanarak bir çözüm veya proje oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```shell
 devenv SolutionName /Build [SolnConfigName [/Project ProjName [/ProjectConfig ProjConfigName]] [/Out OutputFilename]]
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
 - *SolutionName*
 
@@ -39,35 +39,35 @@ devenv SolutionName /Build [SolnConfigName [/Project ProjName [/ProjectConfig Pr
 
 - *SolnConfigName*
 
-  İsteğe bağlı. *SolutionName'de*adı geçen `Debug` çözümü `Release`oluşturmak için kullanılacak çözüm yapılandırmasının adı (veya) Birden çok çözüm platformu varsa, platformu da belirtmeniz `Debug|Win32`gerekir (örneğin,). Bu bağımsız değişken belirtilmemişse`""`veya boş bir dize ise ( ), araç çözümün etkin yapılandırmasını kullanır.
+  İsteğe bağlı. `Debug` `Release` *SolutionName*içinde adlı çözümü oluşturmak için kullanılacak Çözüm yapılandırmasının adı (veya gibi). Birden çok çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu bağımsız değişken belirtilmemişse veya boş bir dize ( `""` ) ise, araç çözümün etkin yapılandırmasını kullanır.
 
-- `/Project`*ProjName*
+- `/Project` *ProjName*
 
-  İsteğe bağlı. Çözüm içindeki proje dosyasının yolu ve adı. *SolutionName* klasöründen proje dosyasına veya projenin görüntü adıveya proje dosyasının tam yolunu ve adını göreli bir yol girebilirsiniz.
+  İsteğe bağlı. Çözüm içindeki bir proje dosyasının yolu ve adı. *SolutionName* klasöründen proje dosyasına ya da projenin görünen adına veya proje dosyasının tam yolunu ve adına bir göreli yol girebilirsiniz.
 
-- `/ProjectConfig`*ProjConfigName*
+- `/ProjectConfig`*Projconfigname*
 
-  İsteğe bağlı. Adlandırılmış proje yi oluştururken `Debug` kullanılacak `Release`proje yapı yapılandırmasının adı (örneğin veya) kullanılacaktır. Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir `Debug|Win32`(örneğin, ). Bu anahtar belirtilirse, *SolnConfigName* bağımsız değişkenini geçersiz kılar.
+  İsteğe bağlı. `Debug`Adlandırılmış proje oluşturulurken kullanılacak bir proje derleme yapılandırmasının (veya gibi `Release` ) adı. Birden fazla çözüm platformu varsa, platformu da belirtmeniz gerekir (örneğin, `Debug|Win32` ). Bu anahtar belirtilmişse, *Solnconfigname* bağımsız değişkenini geçersiz kılar.
 
 - `/Out`*OutputFilename*
 
-  İsteğe bağlı. Aracın çıktısını göndermek istediğiniz bir dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
+  İsteğe bağlı. Aracın çıkışını göndermek istediğiniz dosyanın adı. Dosya zaten varsa, araç çıktıyı dosyanın sonuna ekler.
 
 ## <a name="remarks"></a>Açıklamalar
 
-- Anahtar, `/Build` tümleşik geliştirme ortamında (IDE) **Çözüm Oluştur** menüsü komutuyla aynı işlevi gerçekleştirir.
+- `/Build`Anahtar, tümleşik geliştirme ortamı (IDE) Içinde **yapı çözümü** menü komutu ile aynı işlevi gerçekleştirir.
 
-- Çift tırnak içinde boşluklar içeren dizeleri içine.
+- Boşluk içeren dizeleri çift tırnak içine alın.
 
-- Hatalar da dahil olmak üzere yapılariçin özet bilgiler komut penceresinde veya `/Out` anahtarla belirtilen herhangi bir günlük dosyasında görüntülenebilir.
+- Hatalar da dahil olmak üzere derlemeler için Özet bilgiler, komut penceresinde veya anahtarla belirtilen herhangi bir günlük dosyasında görüntülenebilir `/Out` .
 
-- Anahtar `/Build` yalnızca son yapıdan bu yana değişen projeler oluşturur. Tüm projeleri bir çözümde oluşturmak için bunun yerine [/yeniden oluşturma'yı](../../ide/reference/rebuild-devenv-exe.md) kullanın.
+- `/Build`Anahtar yalnızca son derlemeden bu yana değiştirilen projeleri oluşturur. Bir Çözümdeki tüm projeleri oluşturmak için, bunun yerine [/Rebuild](../../ide/reference/rebuild-devenv-exe.md) kullanın.
 
-- **Geçersiz proje yapılandırması**yazan bir hata iletisi alırsanız, bir çözüm platformu veya proje `Debug|Win32`platformu (örneğin, ) belirttiğinden emin olun.
+- **Geçersiz proje yapılandırması**belirten bir hata iletisi alırsanız, bir çözüm platformu veya proje platformu belirttiğinizden emin olun (örneğin, `Debug|Win32` ).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki komut, proje `CSharpWinApp`yapı yapılandırmasını `Debug` kullanarak `MySolution`projeyi oluşturur.
+Aşağıdaki komut, `CSharpWinApp` `Debug` içindeki proje yapı yapılandırmasını kullanarak projeyi oluşturur `MySolution` .
 
 ```shell
 devenv "%USERPROFILE%\source\repos\MySolution.sln" /build Debug /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Debug
@@ -75,8 +75,8 @@ devenv "%USERPROFILE%\source\repos\MySolution.sln" /build Debug /project "CSharp
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projeler ve çözümler oluşturma ve temizleme](../../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
+- [Projeleri ve çözümleri oluşturma ve temizleme](../../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
 - [Devenv komut satırı anahtarları](../../ide/reference/devenv-command-line-switches.md)
 - [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
-- [/Temiz (devenv.exe)](../../ide/reference/clean-devenv-exe.md)
+- [/Clean (devenv.exe)](../../ide/reference/clean-devenv-exe.md)
 - [/Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

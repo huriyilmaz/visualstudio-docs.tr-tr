@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cd66c62d74bfe63d8376b5520b42cb20c8c0a3a7
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651608"
 ---
 # <a name="how-to-use-transactions-to-update-the-model"></a>Nasıl yapılır: Modeli Güncelleştirmek için İşlemleri Kullanma
@@ -21,12 +21,12 @@ ms.locfileid: "72651608"
 
 İşlemler, depoda yapılan değişikliklerin grup olarak değerlendirildiğinden emin olmanızı sağlar. Gruplanmış değişiklikler, tek bir birim olarak uygulanabilir veya geri alınabilir.
 
- Program kodunuz, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] görselleştirme ve modelleme SDK 'daki depodaki herhangi bir öğeyi değiştirdiğinde, eklediğinde ya da sildiği zaman bir işlemin içinde bunu yapması gerekir. Değişiklik gerçekleştiğinde depolarla ilişkilendirilmiş <xref:Microsoft.VisualStudio.Modeling.Transaction> etkin bir örneği olmalıdır. Bu, tüm model öğeleri, ilişkiler, şekiller, diyagramlar ve özellikleri için geçerlidir.
+ Program kodunuz, görselleştirme ve modelleme SDK 'daki depodaki herhangi bir öğeyi değiştirdiğinde, eklediğinde ya da sildiği zaman [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir işlemin içinde bunu yapması gerekir. <xref:Microsoft.VisualStudio.Modeling.Transaction>Değişiklik gerçekleştiğinde depolarla ilişkilendirilmiş etkin bir örnek olmalıdır. Bu, tüm model öğeleri, ilişkiler, şekiller, diyagramlar ve özellikleri için geçerlidir.
 
  İşlem mekanizması tutarsız durumlardan kaçınmanıza yardımcı olur. Bir işlem sırasında hata oluşursa, tüm değişiklikler geri alınır. Kullanıcı bir geri alma komutu gerçekleştiriyorsa, her son işlem tek bir adım olarak değerlendirilir. Kullanıcılar, ayrı işlemlere açıkça yerleştirmediğiniz takdirde son bir değişikliğin parçalarını geri alamaz.
 
 ## <a name="opening-a-transaction"></a>İşlem açma
- Bir işlemi yönetmenin en kullanışlı yöntemi, `try...catch` bildiriminde yer aldığı `using` deyimidir:
+ Bir işlemi yönetmenin en kullanışlı yöntemi, `using` bir bildirimde yer aldığı deyimdir `try...catch` :
 
 ```
 Store store; ...
@@ -52,11 +52,11 @@ catch (Exception ex)
 }
 ```
 
- Değişiklikler sırasında son `Commit()` engelleyen bir özel durum oluşursa, mağaza önceki durumuna sıfırlanır. Bu, hataların modeli tutarsız bir durumda bırakmadığından emin olmanıza yardımcı olur.
+ Değişiklikler sırasında nihai işlemi engelleyen bir özel durum `Commit()` oluşursa, mağaza önceki durumuna sıfırlanır. Bu, hataların modeli tutarsız bir durumda bırakmadığından emin olmanıza yardımcı olur.
 
- Bir işlem içinde istediğiniz sayıda değişiklik yapabilirsiniz. Yeni işlemleri etkin bir işlem içinde açabilirsiniz. İç içe geçmiş işlemler, kapsayan işlem bitmeden önce yürütmeli veya geri alınmalıdır. Daha fazla bilgi için <xref:Microsoft.VisualStudio.Modeling.Transaction.TransactionDepth%2A> özelliği örneğine bakın.
+ Bir işlem içinde istediğiniz sayıda değişiklik yapabilirsiniz. Yeni işlemleri etkin bir işlem içinde açabilirsiniz. İç içe geçmiş işlemler, kapsayan işlem bitmeden önce yürütmeli veya geri alınmalıdır. Daha fazla bilgi için, özelliği için örneğe bakın <xref:Microsoft.VisualStudio.Modeling.Transaction.TransactionDepth%2A> .
 
- Değişikliklerinizi kalıcı hale getirmek için, işlem atılmadan önce işlemi `Commit` gerekir. İşlem içinde yakalanamayan bir özel durum oluşursa, depo, değişikliklerden önce durumuna sıfırlanır.
+ Değişikliklerinizi kalıcı hale getirmek için, `Commit` işlem atılmadan önce işlemden önce yapmalısınız. İşlem içinde yakalanamayan bir özel durum oluşursa, depo, değişikliklerden önce durumuna sıfırlanır.
 
 ## <a name="rolling-back-a-transaction"></a>Bir işlem geri alınıyor
  Deponun ' de kalmasını veya işlemden önce durumuna geri dönmemesini sağlamak için şu taktiklerinden birini kullanabilirsiniz:

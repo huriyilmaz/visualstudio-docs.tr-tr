@@ -9,10 +9,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: eeeb9ffb92b2bf97513923bdef901dacd1a9a67a
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73189721"
 ---
 # <a name="migration-activity-designers"></a>Migration etkinlik tasarımcıları
@@ -25,13 +25,13 @@ Bu bölümde yer alan konular İş Akışı Tasarımcısı etkinlik tasarımcıl
 
 Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
-- [Denetim Akışı](../workflow-designer/control-flow-activity-designers.md)
+- [Denetim akışı](../workflow-designer/control-flow-activity-designers.md)
 
 - [Akış Çizelgesi](../workflow-designer/flowchart-activity-designers.md)
 
 - [Etkinlik Tasarımcılarını kullanma](control-flow-activity-designers.md)
 
-- [Messaging](../workflow-designer/messaging-activity-designers.md)
+- [Mesajlaşma](../workflow-designer/messaging-activity-designers.md)
 
 - [Çalışma Zamanı](../workflow-designer/runtime-activity-designers.md)
 
@@ -41,4 +41,4 @@ Diğer etkinlik tasarımcıları türleri için aşağıdaki konulara bakın:
 
 - [Koleksiyon](../workflow-designer/collection-activity-designers.md)
 
-- [Hata İşleme](../workflow-designer/error-handling-activity-designers.md)
+- [Hata Işleme](../workflow-designer/error-handling-activity-designers.md)

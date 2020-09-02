@@ -27,21 +27,21 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6c2d048387e4e81763a63b5bf010c36c87beeacf
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72665915"
 ---
 # <a name="culture-specific-classes-for-global-windows-forms-and-web-forms"></a>Genel Windows Formları ve Web Formları İçin Kültüre Özgü Sınıflar
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Her kültürün Tarih, saat, sayı, para birimi ve diğer bilgileri görüntülemek için farklı kuralları vardır. @No__t_0 ad alanı, <xref:System.Globalization.DateTimeFormatInfo>, **Takvim**ve <xref:System.Globalization.NumberFormatInfo> gibi kültüre özgü değerlerin nasıl görüntülendiğini değiştirmek için kullanılabilecek sınıfları içerir.
+Her kültürün Tarih, saat, sayı, para birimi ve diğer bilgileri görüntülemek için farklı kuralları vardır. <xref:System.Globalization>Ad alanı <xref:System.Globalization.DateTimeFormatInfo> ,,, ve **gibi**kültüre özgü değerlerin görüntülenme şeklini değiştirmek için kullanılabilecek sınıfları içerir <xref:System.Globalization.NumberFormatInfo> .
 
 ## <a name="using-the-culture-setting"></a>Kültür ayarını kullanma
- Ancak çoğu zaman, çalışma zamanında kuralları otomatik olarak belirleyebilmek ve bilgileri uygun şekilde biçimlendirmek için uygulamada veya **Bölgesel Seçenekler** denetim masasında depolanan kültür ayarını kullanırsınız. Kültürü ayarlama hakkında daha fazla bilgi için bkz. [How: Windows Forms Genelleştirme ](https://msdn.microsoft.com/694e049f-0b91-474a-9789-d35124f248f0) veya [How için kültür ve Kullanıcı Arabirimi kültürünü ayarlayın: ASP.NET Web sayfası Genelleştirme ](https://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0) için kültür ve UI kültürü ayarlayın. Kültür ayarına göre bilgileri otomatik olarak biçimlendiruygulayan sınıflar kültüre özgü olarak adlandırılır. Kültüre özgü bazı yöntemler <xref:System.IFormattable.ToString%2A?displayProperty=fullName>, <xref:System.Console.WriteLine%2A?displayProperty=fullName> ve <xref:System.String.Format%2A?displayProperty=fullName>. Kültüre özgü bazı işlevler (Visual Basic dilde) `MonthName` ve `WeekDayName`.
+ Ancak çoğu zaman, çalışma zamanında kuralları otomatik olarak belirleyebilmek ve bilgileri uygun şekilde biçimlendirmek için uygulamada veya **Bölgesel Seçenekler** denetim masasında depolanan kültür ayarını kullanırsınız. Kültürü ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Kültür ve Kullanıcı Arabirimi kültürünü Windows Forms Genelleştirme Için ayarlama](https://msdn.microsoft.com/694e049f-0b91-474a-9789-d35124f248f0) veya [nasıl yapılır: ASP.NET Web sayfası Genelleştirme için kültürü ve Kullanıcı Arabirimi kültürünü ayarlama](https://msdn.microsoft.com/library/76091f86-f967-4687-a40f-de87bd8cc9a0). Kültür ayarına göre bilgileri otomatik olarak biçimlendiruygulayan sınıflar kültüre özgü olarak adlandırılır. Kültüre özgü bazı yöntemler <xref:System.IFormattable.ToString%2A?displayProperty=fullName> , ve ' dir <xref:System.Console.WriteLine%2A?displayProperty=fullName> <xref:System.String.Format%2A?displayProperty=fullName> . Kültüre özgü bazı işlevler (Visual Basic dilinde) `MonthName` ve ' dir `WeekDayName` .
 
- Örneğin, aşağıdaki kod, geçerli kültürün para birimini biçimlendirmek için <xref:System.IFormattable.ToString%2A> yöntemini nasıl kullanabileceğinizi gösterir:
+ Örneğin, aşağıdaki kod, <xref:System.IFormattable.ToString%2A> geçerli kültürün para birimini biçimlendirmek için yöntemini nasıl kullanabileceğinizi gösterir:
 
 ```vb
 ' Put the Imports statements at the beginning of the code module
@@ -71,7 +71,7 @@ Console.WriteLine(myInt.ToString("C", Thread.CurrentThread.CurrentCulture));
  `$100.00`
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- <xref:System.IFormattable.ToString%2A?displayProperty=fullName><xref:System.Globalization.DateTimeFormatInfo>
+ <xref:System.IFormattable.ToString%2A?displayProperty=fullName> <xref:System.Globalization.DateTimeFormatInfo>
  <xref:System.Globalization.NumberFormatInfo>
  <xref:System.Globalization.Calendar>
  <xref:System.Console.WriteLine%2A?displayProperty=fullName>

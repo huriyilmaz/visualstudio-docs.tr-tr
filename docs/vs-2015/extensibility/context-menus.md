@@ -11,19 +11,19 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9baab8ef64fa1952eff138165f608e25960c8cfd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184272"
 ---
 # <a name="context-menus"></a>Bağlam Menüleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bağlam menüleri kullanıcı etkin bir istemci alanını bölgesinde tıkladığında görüntülenir ve farenin sağ düğmesi bırakıldığında temizleyin.  
+Bağlam menüleri, bir kullanıcı istemci alanının etkin bir bölgesine sağ tıkladığında ve sağ fare düğmesi serbest bırakıldığında ' i seçtiğinde görüntülenir.  
   
 ## <a name="editor-context-menus"></a>Düzenleyici Bağlam Menüleri  
- Kesintiye tarafından `ECMD_SHOWCONTEXTMENU`, düzenleyicide görüntülenir bağlam menüleri, dil hizmeti denetleyebilirsiniz. Kendi bağlam menüsünü görüntülemek için oturum geçirildiğinde bu komutu işlemek, <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> çağırarak <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A>. Bu komut işlememesi IDE düzenleyici için sağlanan standart bağlam menüsü görüntülenir. Bağlam menüsü işaret başına temelinde içeriğini de denetleyebilirsiniz. Bu konu hakkında daha fazla bilgi için bkz. [kullanarak metin işaretçileri eski API'siyle](../extensibility/using-text-markers-with-the-legacy-api.md) ve [kesintiye eski dil hizmeti komutlarını](../extensibility/internals/intercepting-legacy-language-service-commands.md).  
+ `ECMD_SHOWCONTEXTMENU`Bu işlem, dil hizmetiniz düzenleyicide görüntülenecek bağlam menülerini denetleyebilir. Kendi bağlam menünüzün görüntülenmesini sağlamak için, bu komutu çağırarak öğesine geçirildiğinde işleyin <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.ShowContextMenu%2A> . Bu komutu işlemeyin, IDE, düzenleyici için sunulan standart bağlam menüsünü görüntüler. Bağlam menüsünün içeriğini işaret başına temelinde da denetleyebilirsiniz. Bunun hakkında daha fazla bilgi için, bkz. [eskı API Ile metin Işaretleyicileri kullanma](../extensibility/using-text-markers-with-the-legacy-api.md) ve [eski dil hizmeti ile kesintiye uğratan hizmet komutları](../extensibility/internals/intercepting-legacy-language-service-commands.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Eski dil hizmeti geliştirme](../extensibility/internals/developing-a-legacy-language-service.md)   

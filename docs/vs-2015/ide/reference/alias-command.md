@@ -18,10 +18,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 6da744b0db9e41cd1e5039a1bd0d5c93bc4c734a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72651686"
 ---
 # <a name="alias-command"></a>Diğer Ad Komutu
@@ -30,18 +30,18 @@ ms.locfileid: "72651686"
 Tüm komut, komut ve bağımsız değişkenler ya da başka bir diğer ad için yeni bir diğer ad oluşturur.
 
 > [!TIP]
-> Bağımsız değişken olmadan `>alias` yazmak, diğer adların ve bunların tanımlarının geçerli listesini görüntüler.
+> `>alias`Bağımsız değişken olmadan yazmak, diğer adların ve tanımlarının geçerli listesini görüntüler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```
 Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 ```
 
-## <a name="arguments"></a>Arguments
- Isteğe bağlı `aliasname`. Yeni diğer ad için ad. @No__t_0 için hiçbir değer sağlanmazsa, geçerli diğer adların ve tanımlarının bir listesi görüntülenir.
+## <a name="arguments"></a>Bağımsız değişkenler
+ `aliasname` Seçim. Yeni diğer ad için ad. İçin hiçbir değer sağlanmazsa `aliasname` , geçerli diğer adların ve tanımlarının bir listesi görüntülenir.
 
- Isteğe bağlı `aliasstring`. Tüm komut adı veya var olan diğer ad ve diğer ad olarak oluşturmak istediğiniz parametreler. @No__t_0 için bir değer sağlanmadığında, belirtilen diğer ad için diğer ad ve diğer ad dizesi görüntülenir.
+ `aliasstring` Seçim. Tüm komut adı veya var olan diğer ad ve diğer ad olarak oluşturmak istediğiniz parametreler. İçin değer sağlanmazsa `aliasstring` , belirtilen diğer ad için diğer ad ve diğer ad dizesi görüntülenir.
 
 ## <a name="switches"></a>Anahtarlar
  /DELETE veya/del&lt ya da/d Isteğe bağlı. Belirtilen diğer adı siler ve otomatik tamamlamayı kaldırır.
@@ -53,16 +53,16 @@ Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 
  Bu komutu verirken, diğer adlarla değil, anahtardan hemen sonra gelen anahtarları eklemeniz gerekir, aksi takdirde anahtar, diğer ad dizesinin bir parçası olarak dahil edilir.
 
- @No__t_0 anahtarı, diğer adlar geri yüklenmeden önce onay ister. @No__t_0 kısa bir biçimi yoktur.
+ Bu `/reset` anahtar, diğer adlar geri yüklenmeden önce onay ister. İçin kısa bir biçim yoktur `/reset` .
 
 ## <a name="examples"></a>Örnekler
- Bu örnek, `upper` için yeni bir diğer ad oluşturur. Makebüyük komutu.
+ Bu örnek, `upper` tüm komut Edit. Makebüyük komutu için yeni bir diğer ad oluşturur.
 
 ```
 >Tools.Alias upper Edit.MakeUpperCase
 ```
 
- Bu örnek, `upper` diğer adı siler.
+ Bu örnek, diğer adı siler, `upper` .
 
 ```
 >Tools.alias /delete upper

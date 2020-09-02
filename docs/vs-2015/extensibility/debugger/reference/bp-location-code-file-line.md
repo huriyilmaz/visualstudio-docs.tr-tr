@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 29fbb041a90118e7725ed3140e6583c7ac756a07
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153478"
 ---
-# <a name="bplocationcodefileline"></a>BP_LOCATION_CODE_FILE_LINE
+# <a name="bp_location_code_file_line"></a>BP_LOCATION_CODE_FILE_LINE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Belirli bir satır kod kaynak dosyada kesme noktası konumu için verileri içerir.  
+Bir kod kaynağı dosyasında belirli bir satırdaki bir kesme noktasının konumunu içeren verileri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _BP_LOCATION_CODE_FILE_LINE {   
@@ -35,20 +35,20 @@ typedef struct _BP_LOCATION_CODE_FILE_LINE { 
   
 ## <a name="members"></a>Üyeler  
  `bstrContext`  
- Kesme noktası bağlamında, genellikle de bir yöntem veya işlev adı olarak görülen bir çağrı yığınında.  
+ Kesme noktası bağlamı, genellikle çağrı yığınında görülen bir yöntem veya işlev adıdır.  
   
  `pDocPos`  
- [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) kesme noktası belge konumunu temsil eden nesne.  
+ Kesme noktasının belge konumunu temsil eden [IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md) nesnesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı üyesidir [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısı bir birleşimin parçası olarak.  
+ Bu yapı, bir birleşimin parçası olarak [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısının bir üyesidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 385d313d0a8796d2aba93903e95e989ac1e0ced6
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73189718"
 ---
 # <a name="design-and-create-office-solutions"></a>Office çözümleri tasarlama ve oluşturma
@@ -44,16 +44,16 @@ Visual Studio, birçok farklı Office çözümü türü oluşturmak için kullan
 
 - [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]
 
-  Projeniz için seçtiğiniz .NET Framework sürümü, çözümünüzün çalışması için son kullanıcı bilgisayarlarında gereklidir. Örneğin, projeniz [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]hedefliyorsa, son kullanıcı bilgisayarlarında [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] gereklidir. Bu örnekte, son kullanıcı bilgisayarlarında yalnızca .NET Framework 3,5 yüklüyse çözümünüz çalışmaz.
+  Projeniz için seçtiğiniz .NET Framework sürümü, çözümünüzün çalışması için son kullanıcı bilgisayarlarında gereklidir. Örneğin, projeniz [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] ' i hedefliyorsa, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] son kullanıcı bilgisayarlarında gereklidir. Bu örnekte, son kullanıcı bilgisayarlarında yalnızca .NET Framework 3,5 yüklüyse çözümünüz çalışmaz.
 
-  .NET Framework 3,5 ' i hedefleyen bir VSTO eklenti projesini geçirirseniz, Visual Studio, yüklemiş olduğunuz Office sürümüne bağlı olarak, projenizin hedef çerçevesini [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] veya daha yeni bir sürüme değiştirir.
+  .NET Framework 3,5 ' i hedefleyen bir VSTO eklenti projesini geçirirseniz, Visual Studio, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] yüklediğiniz Office sürümüne bağlı olarak projenizin hedef çerçevesini veya daha yenisini değiştirir.
 
   Ancak, Visual Studio hedef Framework 'ü değiştirdikten sonra, belirli özellikleri kullanıyorsa projenizdeki bazı kodları değiştirmeniz gerekebilir. Hedef Framework 'ün nasıl değiştirileceği hakkında daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/visual-studio-multi-targeting-overview.md). Projenizde yapmanız gerekebilecek değişiklikler hakkında daha fazla bilgi için bkz. [Office çözümlerini .NET Framework 4 veya sonraki bir sürüme geçirme](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md).
 
   Visual Studio, projeniz için hedef .NET Framework değiştirirse ve çözümünüzü dağıtmak için ClickOnce kullanıyorsanız, **Önkoşullar** iletişim kutusunda .NET Framework ilgili sürümü seçtiğinizden emin olun. Projeniz için hedef çerçeveyi değiştirdiğinizde bu seçim otomatik olarak değişmez. Daha fazla bilgi için bkz. [nasıl yapılır: Office çözümlerini çalıştırmak için son kullanıcı bilgisayarlarına önkoşulları yüklemek](https://msdn.microsoft.com/74dd2c52-838f-4abf-b2b4-4d7b0c2a0a98).
 
 > [!NOTE]
-> [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]kullanarak oluşturduğunuz Office projelerinde .NET Framework 3,5 veya önceki bir sürümü hedeflenemez. [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] kullanarak oluşturduğunuz Office projeleri, ilk olarak [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)] sunulan özellikler gerektirir
+> Kullanarak oluşturduğunuz Office projelerinde .NET Framework 3,5 veya önceki bir sürümü hedeflenemez [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] . Kullanarak oluşturduğunuz Office projeleri [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] , ilk olarak [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)]
 
 ### <a name="understand-when-the-office-pias-are-required-on-end-user-computers"></a>Son kullanıcı bilgisayarlarında Office PIA 'ların ne zaman gerekli olduğunu anlayın
  Varsayılan olarak, projedeki her bir Office PIA başvurusunun **birlikte çalışma türlerini katıştır** özelliği **true**olarak ayarlandıysa ve varsayılan değer olan Office birincil birlikte çalışma derlemelerinin (PIA 'lar) Son Kullanıcı bilgisayarlara yüklenmesi gerekmez. Bu senaryoda, çözümünüz tarafından kullanılan PIA türleri için tür bilgileri, projeyi oluştururken çözüm derlemesine katıştırılır. Çalışma zamanında, Office uygulamasının COM tabanlı nesne modeline çağrı yapmak için PIA yerine gömülü tür bilgileri kullanılır. PIA 'lerden gelen türlerin çözümünüze nasıl katıştırıldığı hakkında daha fazla bilgi için bkz. [tür denklik ve katıştırılmış birlikte çalışma türleri](/dotnet/framework/interop/type-equivalence-and-embedded-interop-types).
@@ -63,17 +63,17 @@ Visual Studio, birçok farklı Office çözümü türü oluşturmak için kullan
 ### <a name="understand-the-client-profile"></a>İstemci profilini anlayın
  .NET Framework Istemci profili, tam .NET Framework bir alt kümesidir. Yalnızca .NET Framework istemci özelliklerini kullanmanız gerekiyorsa ve Office çözümünüz için mümkün olan en hızlı dağıtım deneyimini sağlamak istiyorsanız .NET Framework Istemci profilini hedefleyebilirsiniz. Daha fazla bilgi için bkz. [.NET Framework istemci profili](/dotnet/framework/deployment/client-profile).
 
- [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]hedefleyen bir Office projesi oluşturduğunuzda, [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)] varsayılan olarak hedeflenir. Tam [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]için geliştirme yapmak istiyorsanız, bu seçeneği Proje oluşturulduktan sonra ayarlamanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/visual-studio-multi-targeting-overview.md).
+ ' İ hedefleyen bir Office projesi oluşturduğunuzda, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_client_v40_long](../vsto/includes/net-client-v40-long-md.md)] Varsayılan olarak hedeflenmelidir. Tam için geliştirme yapmak istiyorsanız [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] , bu seçeneği Proje oluşturulduktan sonra ayarlamanız gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: .NET Framework bir sürümünü hedefleme](../ide/visual-studio-multi-targeting-overview.md).
 
 ## <a name="create-solutions-for-the-64-bit-edition-of-microsoft-office"></a>Microsoft Office 64 bit sürümü için çözümler oluşturma
  Microsoft Office, 64-bit ve 32 bit sürümlerde kullanılabilir. Her iki sürümde çalışabilen Office çözümleri oluşturmak için, projenizin platform hedefi ayarı **herhangi BIR CPU**olarak ayarlanmalıdır. Bu, Office projeleri için varsayılan değerdir. Daha fazla bilgi için bkz. [Office çözümleri oluşturma](../vsto/building-office-solutions.md).
 
- Microsoft Office 'ın 64-bit ve 32 bit sürümleri tarafından kullanılan [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ayrı 64-bit ve 32 bit sürümleri vardır. Daha fazla bilgi için bkz. [Office çalışma zamanına genel bakış Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
+ [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]Microsoft Office 'ın 64-bit ve 32 bit sürümleri tarafından kullanılan ayrı 64-bit ve 32 bit sürümleri vardır. Daha fazla bilgi için bkz. [Office çalışma zamanına genel bakış Visual Studio Araçları](../vsto/visual-studio-tools-for-office-runtime-overview.md).
 
 ## <a name="assemblies-in-office-solutions"></a>Office çözümlerinde derlemeler
  Visual Studio 'da Office geliştirme araçları 'nı kullanarak bir Office projesi oluşturduğunuzda, yazdığınız kod sonunda bir derlemeye derlenir. Derleme paylaşılan bir sunucuya veya istemci bilgisayardaki bir dizine dağıtılır.
 
- Office çözümlerinde derlemeler bir Office uygulaması tarafından yüklenir. Derleme yüklendikten sonra, derlemedeki kod uygulamada oluşturulan olaylara yanıt verebilir, örneğin, bir Kullanıcı bir menü öğesini tıkladığında. Derlemedeki kod ayrıca, uygulamayı otomatikleştirebilmek ve genişletmek için nesne modelini çağırabilir ve [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)]sınıfların herhangi birini kullanabilir. Daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerinin mimarisi](../vsto/architecture-of-document-level-customizations.md) ve [VSTO eklentilerinin mimarisi](../vsto/architecture-of-vsto-add-ins.md).
+ Office çözümlerinde derlemeler bir Office uygulaması tarafından yüklenir. Derleme yüklendikten sonra, derlemedeki kod uygulamada oluşturulan olaylara yanıt verebilir, örneğin, bir Kullanıcı bir menü öğesini tıkladığında. Derlemedeki kod ayrıca, uygulamayı otomatikleştirebilmek ve genişletmek için nesne modelini çağırabilir ve içindeki sınıflardan herhangi birini kullanabilir [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] . Daha fazla bilgi için bkz. [belge düzeyi özelleştirmelerinin mimarisi](../vsto/architecture-of-document-level-customizations.md) ve [VSTO eklentilerinin mimarisi](../vsto/architecture-of-vsto-add-ins.md).
 
  Office çözümleri derlemeyi tanımlamak için dağıtım bildirimlerini ve uygulama bildirimlerini kullanır. Bildirimler derlemenin adı, sürümü ve konumu hakkında bilgiler içerir, böylece uygulamanın doğru derlemeyi bulabileceği, bağlayabilmesi ve çalıştırmasına olanak sağlar. Daha fazla bilgi için bkz. [Office çözümlerinde uygulama ve dağıtım bildirimleri](../vsto/application-and-deployment-manifests-in-office-solutions.md).
 

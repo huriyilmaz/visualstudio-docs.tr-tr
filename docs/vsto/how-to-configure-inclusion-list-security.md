@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 459cf3f33197939a916a5f11a94bbaf09e8142e3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541641"
 ---
 # <a name="how-to-configure-inclusion-list-security"></a>Nasıl yapılır: ekleme listesi güvenliğini yapılandırma
@@ -54,7 +54,7 @@ ms.locfileid: "85541641"
 
     |Dize değeri alt anahtarı|Değer|
     |-------------------------|-----------|
-    |**Internet**|**AuthenticodeRequired**|
+    |**İnternet**|**AuthenticodeRequired**|
     |**UntrustedSites**|**Devre dışı**|
     |**Bilgisayarım**|**Etkin**|
     |**Yerel Intranet**|**Etkin**|
@@ -114,7 +114,7 @@ ms.locfileid: "85541641"
     |Dize değeri alt anahtarı|Değer|
     |-------------------------|-----------|
     |**UntrustedSites**|**Devre dışı**|
-    |**Internet**|**AuthenticodeRequired**|
+    |**İnternet**|**AuthenticodeRequired**|
     |**Bilgisayarım**|**AuthenticodeRequired**|
     |**Yerel Intranet**|**AuthenticodeRequired**|
     |**TrustedSites**|**AuthenticodeRequired**|
@@ -171,7 +171,7 @@ ms.locfileid: "85541641"
     |Dize değeri alt anahtarı|Değer|
     |-------------------------|-----------|
     |**UntrustedSites**|**Devre dışı**|
-    |**Internet**|**Devre dışı**|
+    |**İnternet**|**Devre dışı**|
     |**Bilgisayarım**|**Devre dışı**|
     |**Yerel Intranet**|**Devre dışı**|
     |**TrustedSites**|**Devre dışı**|

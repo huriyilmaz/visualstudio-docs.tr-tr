@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Visual Studio çözümünün parçası olmayan yürütülebilir öğede hata ayıklama | Microsoft Docs'
+title: 'Nasıl yapılır: Visual Studio çözümünün bir parçası değil yürütülebilir dosya hatalarını ayıklama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -23,49 +23,49 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: e33233fd313cd6a73013ce55333a860663ddb601
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704518"
 ---
-# <a name="how-to-debug-an-executable-not-part-of-a-visual-studio-solution"></a>Nasıl yapılır: Visual Studio çözümünün parçası olmayan yürütülebilir öğede hata ayıklama
+# <a name="how-to-debug-an-executable-not-part-of-a-visual-studio-solution"></a>Nasıl Yapılır: Visual Studio Çözümünün Parçası Olmayan Yürütülebilir Öğede Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bazen, hata ayıklama olmayan yürütülebilir bir dosya isteyebilirsiniz parçası olan bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proje. Oluşturduğunuz dışında bir yürütülebilir dosya olabilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ya da başka birinden aldığınız bir çalıştırılabilir.  
+Bazen, bir projenin parçası olmayan bir çalıştırılabilirin hatalarını ayıklamak isteyebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Dışında oluşturduğunuz bir yürütülebilir dosya veya başka bir kişiden aldığınız bir yürütülebilir dosya olabilir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
- Visual Studio dışında yürütülebilir dosyayı başlatmak ve onu kullanarak eklemek için bu sorunun her zamanki yanıtı olan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] hata ayıklayıcı. Daha fazla bilgi için[çalışan işlemlere ekleme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
+ Bu sorunun her zamanki yanıtı, yürütülebilir dosyayı Visual Studio dışında başlatmak ve hata ayıklayıcıyı kullanarak buna eklemektir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Daha fazla bilgi için bkz.[çalışan Işlemlere iliştirme](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
- Bir uygulamaya eklemek, birkaç saniye sürer, bazı adımları el ile gerektirir. Bu gecikme, başlatma sırasında oluşan bir sorunu çözmeye çalışıyorsanız, eklemenin yardımcı olmayacağı olduğunu gösterir. Ayrıca, kullanıcı girişini beklemeyen ve hızlı şekilde biten bir program ayıklıyorsanız, buna eklemek için zaman olmayabilir. Varsa [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] yüklü, böyle bir program için EXE projesi oluşturabilirsiniz.  
+ Bir uygulamaya eklemek için bazı el ile adımlar gerekir, bu nedenle birkaç saniye sürer. Bu hafif gecikme, başlangıç sırasında oluşan bir sorunu ayıklamaya çalışıyorsanız iliştirme işleminin yardımcı olmayacağı anlamına gelir. Ayrıca, Kullanıcı girişini beklememe ve hızlı bir şekilde sona ermediği bir programda hata ayıklaması yapıyorsanız, buna iliştirmek için zaman açamayabilirsiniz. [!INCLUDE[vcprvc](../includes/vcprvc-md.md)]Yüklüyse, böyle bir program için BIR exe projesi oluşturabilirsiniz.  
   
-### <a name="to-create-an-exe-project-for-an-existing-executable"></a>Varolan bir yürütülebilir dosya için bir EXE projesi oluşturmak için  
+### <a name="to-create-an-exe-project-for-an-existing-executable"></a>Mevcut bir yürütülebilir dosya için bir EXE projesi oluşturmak için  
   
-1. Üzerinde **dosya** menüsünde tıklatın **açık** seçip **proje**.  
+1. **Dosya** menüsünde **Aç** ' a tıklayın ve **Proje**' yi seçin.  
   
-2. İçinde **Proje Aç** iletişim kutusu, açılan listeyi tıklatın **dosya adı** kutusunda ve seçin **tüm proje dosyaları**.  
+2. **Proje Aç** iletişim kutusunda, **dosya adı** kutusunun yanındaki aşağı açılan listeye tıklayın ve **tüm proje dosyaları**' nı seçin.  
   
-3. Yürütülebilir dosyayı bulun ve tıklatın **Tamam**.  
+3. Yürütülebilir dosyayı bulun ve **Tamam**' a tıklayın.  
   
-     Bu yürütülebilir dosya içeren geçici bir çözüm oluşturur.  
+     Bu, yürütülebilir dosyayı içeren geçici bir çözüm oluşturur.  
   
-### <a name="to-import-an-executable-into-a-visual-studio-solution"></a>Bir yürütülebilir dosya bir Visual Studio çözümüne aktarmak için  
+### <a name="to-import-an-executable-into-a-visual-studio-solution"></a>Bir yürütülebilir dosyayı bir Visual Studio çözümüne aktarmak için  
   
-1. Üzerinde **dosya** menüsünde **Proje Ekle**ve ardından **mevcut proje**.  
+1. **Dosya** menüsünde **Proje Ekle**' nin üzerine gelin ve ardından **Varolan proje**' ye tıklayın.  
   
-2. İçinde **Varolan Proje Ekle** iletişim kutusu, açılan listeyi tıklatın **dosya adı** kutusunda ve seçin **tüm proje dosyaları**.  
+2. **Varolan Proje Ekle** iletişim kutusunda, **dosya adı** kutusunun yanındaki aşağı açılan listeye tıklayın ve **tüm proje dosyaları**' nı seçin.  
   
-3. Bulup yürütülebilir dosyayı seçin.  
+3. Yürütülebilir dosyayı bulun ve seçin.  
   
-4. **Tamam**'ı tıklatın.  
+4. **Tamam**’a tıklayın.  
   
-5. Yürütülebilir bir yürütme komutu seçerek Başlat **Başlat**, gelen **hata ayıklama** menüsü.  
+5. **Hata Ayıkla** menüsünden **Başlangıç**gibi bir yürütme komutu seçerek yürütülebilir dosyayı başlatın.  
   
     > [!NOTE]
-    > Programlama dillerinin tümü EXE projelerini desteklemez. Yükleme [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] bu özelliği kullanmak istiyorsanız.  
+    > Tüm programlama dilleri EXE projelerini desteklemez. [!INCLUDE[vcprvc](../includes/vcprvc-md.md)]Bu özelliği kullanmanız gerekiyorsa, ' i yükleyebilirsiniz.  
   
-     Kaynak kodu olmayan yürütülebilir bir dosyada hata ayıklama, çalışan bir yürütülebilir ekleme ya da yürütülebilir dosyasına ekleyin kullanılabilir hata ayıklama özellikleri sınırlıdır bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözüm. Yürütülebilir dosya uyumlu biçimde hata ayıklama bilgileri olmadan oluşturulduysa, kullanılabilir özellikler daha da sınırlı. Kaynak kodu varsa, kaynak koda içeri aktarmak için en iyi yaklaşım olan [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve yürütülebilir dosya hata ayıklama yapısını oluşturmak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+     Kaynak kodu olmadan bir yürütülebilir dosyada hata ayıklaması yaparken, kullanılabilir hata ayıklama özellikleri sınırlı olarak çalışır, çalışan bir çalıştırılabilire iliştirilip veya yürütülebilir dosyayı bir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çözüme eklemektir. Yürütülebilir dosya, uyumsuz bir biçimde hata ayıklama bilgileri olmadan oluşturulduysa, kullanılabilir özellikler daha fazla sınırlıdır. Kaynak kodunuz varsa, en iyi yaklaşım kaynak kodu içine aktarmak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ve içinde yürütülebilir dosyanın hata ayıklama derlemesini oluşturmaktır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)   
- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)   
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)   
  [DBG dosyaları](https://msdn.microsoft.com/91e449e9-8b65-4123-960f-2107cd1f1cfd)
