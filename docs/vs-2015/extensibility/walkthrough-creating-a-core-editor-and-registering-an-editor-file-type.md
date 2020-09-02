@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Çekirdek düzenleyici oluşturma ve bir düzenleyici dosya türü kaydetme | Microsoft Docs'
+title: 'İzlenecek yol: Çekirdek Düzenleyici oluşturma ve bir düzenleyici dosya türünü kaydetme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,42 +11,42 @@ caps.latest.revision: 30
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 14296aa335ba6710d4d9eac8e5338af7463c0aac
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687644"
 ---
-# <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>İzlenecek yol: Çekirdek düzenleyici oluşturma ve bir düzenleyici dosya türü kaydetme
+# <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>İzlenecek Yol: Temel Düzenleyici Oluşturma ve Düzenleyici Dosya Türü Kaydetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çekirdek Düzenleyicisi .myext dosya adı uzantısına sahip bir dosya yüklendi.  
+Bu izlenecek yol [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ,. myext dosya adı uzantısına sahip bir dosya yüklendiğinde çekirdek düzenleyiciyi Başlatan bir VSPackage oluşturmayı gösterir.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu izlenecek yolda takip etmek için Visual Studio SDK'yı yüklemeniz gerekir. Daha fazla bilgi için [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
+ Bu yönergeyi izlemek için, Visual Studio SDK 'sını yüklemelisiniz. Daha fazla bilgi için bkz. [Visual STUDIO SDK](../extensibility/visual-studio-sdk.md).  
   
-## <a name="locations-for-the-visual-studio-package-project-template"></a>Visual Studio Paket projesi şablonu için konumları  
- Visual Studio Paket proje şablonu, üç farklı konumlarda bulunabilir **yeni proje** iletişim:  
+## <a name="locations-for-the-visual-studio-package-project-template"></a>Visual Studio paketi proje şablonu konumları  
+ Visual Studio paketi proje şablonu, **Yeni proje** iletişim kutusunda üç farklı konumda bulunabilir:  
   
-1. Visual Basic genişletilebilirliği altında. Visual Basic proje varsayılan dildir.  
+1. Visual Basic genişletilebilirlik altında. Projenin varsayılan dili Visual Basic.  
   
-2. C# genişletilebilirlik altında. Varsayılan proje C# dilidir.  
+2. C# genişletilebilirliği altında. Projenin varsayılan dili C# ' dir.  
   
-3. Diğer proje türleri genişletilebilirliği altında. C++ projesinin varsayılan dildir.  
+3. Diğer proje türleri genişletilebilirliği altında. Projenin varsayılan dili C++ ' dır.  
   
-### <a name="to-create-the-vspackage"></a>VSPackage'ı oluşturmak için  
+### <a name="to-create-the-vspackage"></a>VSPackage oluşturmak için  
   
-- Başlangıç [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oluşturup bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] adlı VSPackage `MyPackage`açıklandığı gibi [izlenecek yol: Bir menü komutu VSPackage'ı oluşturma](https://msdn.microsoft.com/d699c149-5d1e-47ff-94c7-e1222af02c32).  
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]' İ başlatın ve [!INCLUDE[csprcs](../includes/csprcs-md.md)] `MyPackage` [Izlenecek yol: bir menü komutu olan VSPackage](https://msdn.microsoft.com/d699c149-5d1e-47ff-94c7-e1222af02c32)adlı bir VSPackage oluşturun.  
   
-### <a name="to-add-the-editor-factory"></a>Düzenleyici üreteci eklemek için  
+### <a name="to-add-the-editor-factory"></a>Düzenleyici fabrikası eklemek için  
   
-1. Sağ **MyPackage** proje, işaret **Ekle** ve ardından **sınıfı**.  
+1. **MyPackage** projesine sağ tıklayın, **Ekle** ' nin üzerine gelin ve ardından **sınıf**' a tıklayın.  
   
-2. İçinde **Yeni Öğe Ekle** iletişim kutusunda, emin **sınıfı** şablonu seçili türü `EditorFactory.cs` adı ve ardından **Ekle** sınıfı projenize eklemek için.  
+2. **Yeni öğe Ekle** iletişim kutusunda, **sınıf** şablonunun seçili olduğundan emin olun, `EditorFactory.cs` ad için yazın ve ardından **Ekle** ' ye tıklayarak sınıfı projenize ekleyin.  
   
-     Otomatik olarak EditorFactory.cs dosyanın açılması gerekir.  
+     EditorFactory.cs dosyası otomatik olarak açılmalıdır.  
   
-3. Aşağıdaki derlemelere de kodunuzdan başvurur.  
+3. Kodunuzda aşağıdaki derlemelere başvuru yapın.  
   
     ```vb  
     Imports System.Runtime.InteropServices  
@@ -69,9 +69,9 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
   
     ```  
   
-4. Bir GUID değeri ekleyin `EditorFactory` ekleyerek sınıfı `Guid` özniteliği sınıf bildiriminden hemen önce.  
+4. `EditorFactory` `Guid` Sınıf bildiriminden hemen önce özniteliğini ekleyerek SıNıFA bir GUID ekleyin.  
   
-     Yeni bir GUID guidgen.exe programı kullanarak oluşturabileceğiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] komut istemi veya tıklayarak komut **GUID Oluştur** üzerinde **Araçları** menüsü. Burada kullanılan GUID yalnızca bir örnektir; Projenizde kullanmayın.  
+     Komut isteminde guidgen.exe programını kullanarak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] veya **Araçlar** menüsünde **GUID oluştur** ' a tıklayarak yeni bir GUID oluşturabilirsiniz. Burada kullanılan GUID yalnızca bir örnektir; Bunu projenizde kullanmayın.  
   
     ```vb  
     <Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")> _  
@@ -81,7 +81,7 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
     [Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")]   
     ```  
   
-5. Sınıf tanımında üst pakete ve bir hizmet sağlayıcısı içerecek şekilde iki özel değişkeni ekleyin.  
+5. Sınıf tanımında, ana paketi ve bir hizmet sağlayıcısını içerecek şekilde iki özel değişken ekleyin.  
   
     ```vb  
     Class EditorFactory  
@@ -98,7 +98,7 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
   
     ```  
   
-6. Türünden bir parametre alan bir genel sınıf oluşturucu Ekle <xref:Microsoft.VisualStudio.Shell.Package>:  
+6. Türünde bir parametre alan bir ortak sınıf oluşturucu ekleyin <xref:Microsoft.VisualStudio.Shell.Package> :  
   
     ```vb  
     Public Sub New(ByVal parentPackage As Package)  
@@ -113,7 +113,7 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
     }  
     ```  
   
-7. Değiştirme `EditorFactory` sınıf türetmek için bildirimi <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> arabirimi.  
+7. `EditorFactory`Arabirimden türetmek için sınıf bildirimini değiştirin <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> .  
   
     ```vb  
     Class EditorFactory Implements IVsEditorFacto  
@@ -124,11 +124,11 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
   
     ```  
   
-8. Sağ <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>, tıklayın **arabirim uygulama**ve ardından **uygulama arabirimi açıkça**.  
+8. Sağ tıklayın <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> , **arabirimi Uygula**' ya ve ardından **arabirimi açıkça Uygula**' ya tıklayın.  
   
-     Bu, uygulanması gereken dört yöntemleri ekler <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> arabirimi.  
+     Bu, arayüzde uygulanması gereken dört yöntemi ekler <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> .  
   
-9. Öğesinin içeriğini değiştirin `IVsEditorFactory.Close` yöntemini aşağıdaki kod ile.  
+9. `IVsEditorFactory.Close` yönteminin içeriğini aşağıdaki kodla değiştirin.  
   
     ```vb  
     Return VSConstants.S_OK  
@@ -138,7 +138,7 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
     return VSConstants.S_OK;  
     ```  
   
-10. Öğesinin içeriğini değiştirin `IVsEditorFactory.SetSite` aşağıdaki kod ile.  
+10. Öğesinin içeriğini `IVsEditorFactory.SetSite` aşağıdaki kodla değiştirin.  
   
     ```vb  
     Me.serviceProvider = psp  
@@ -150,7 +150,7 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
     return VSConstants.S_OK;  
     ```  
   
-11. Öğesinin içeriğini değiştirin `IVsEditorFactory.MapLogicalView` yöntemini aşağıdaki kod ile.  
+11. `IVsEditorFactory.MapLogicalView` yönteminin içeriğini aşağıdaki kodla değiştirin.  
   
     ```vb  
     Dim retval As Integer = VSConstants.E_NOTIMPL  
@@ -173,7 +173,7 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
     return retval;  
     ```  
   
-12. Öğesinin içeriğini değiştirin `IVsEditorFactory.CreateEditorInstance` yöntemini aşağıdaki kod ile.  
+12. `IVsEditorFactory.CreateEditorInstance` yönteminin içeriğini aşağıdaki kodla değiştirin.  
   
     ```vb  
     Dim retval As Integer = VSConstants.E_FAIL          
@@ -316,24 +316,24 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
     return retval;   
     ```  
   
-13. Projeyi derleyin ve hiçbir hata olmadığından emin olun.  
+13. Projeyi derleyin ve hata olmadığından emin olun.  
   
-### <a name="to-register-the-editor-factory"></a>Düzenleyici üreteci kaydetmek için  
+### <a name="to-register-the-editor-factory"></a>Düzenleyici fabrikasını kaydetmek için  
   
-1. İçinde **Çözüm Gezgini**, olan dize tablosuna açın Resources.resx dosyasına çift tıklayarak giriş **Dize1** seçili.  
+1. **Çözüm Gezgini**' de, Resources. resx dosyasına çift tıklayarak girdiyi **Dize1** Selected dize tablosunda açın.  
   
-2. Tanımlayıcı için adını değiştirmek `IDS_EDITORNAME` ve metni **MyPackage Düzenleyici.** Bu dize Düzenleyici adı olarak görünür.  
+2. Tanımlayıcının adını `IDS_EDITORNAME` ve metnini **MyPackage Düzenleyicisi** olarak değiştirin. Bu dize, düzenleyicinin adı olarak görünür.  
   
-3. VSPackage.resx dosyasını açın ve yeni bir dize, adı kümesine **101** ve değeri `IDS_EDITORNAME`. Bu, az önce oluşturduğunuz dize erişmek için bir kaynak kimliği ile paket sağlar.  
+3. VSPackage. resx dosyasını açın ve yeni bir dize ekleyin, adı **101** ve değerini olarak ayarlayın `IDS_EDITORNAME` . Bu, yeni oluşturduğunuz dizeye erişmek için bir kaynak KIMLIĞINE sahip paketi sağlar.  
   
     > [!NOTE]
-    > Başka VSPackage.resx dosya içeriyorsa, dize `name` özniteliğini **101**, başka bir benzersiz, sayısal değer, burada ve aşağıdaki adımları değiştirin.  
+    > VSPackage. resx dosyası, `name` özniteliğin **101**olarak ayarlandığı başka bir dize içeriyorsa, başka bir benzersiz, sayısal değer ve aşağıdaki adımlarda bu değeri değiştirin.  
   
-4. İçinde **Çözüm Gezgini**, MyPackagePackage.cs dosyasını açın.  
+4. **Çözüm Gezgini**, MyPackagePackage.cs dosyasını açın.  
   
-     Ana paket dosyası budur.  
+     Bu, ana paket dosyasıdır.  
   
-5. Aşağıdaki kullanıcı öznitelikleri hemen önüne ekleyin `Guid` özniteliği.  
+5. Aşağıdaki kullanıcı özniteliklerini özniteliğiyle hemen önce ekleyin `Guid` .  
   
     ```vb  
     <ProvideEditorFactoryAttribute(GetType(EditorFactory), 101)> _  
@@ -347,9 +347,9 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
           ".myext", 32, NameResourceID = 101)]   
     ```  
   
-     <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute> Özniteliği böylece uzantısı yüklenir, Düzenleyicisi Fabrika çağrılan sahip bir dosya için istediğiniz zaman bu .myext dosya uzantısı, düzenleyici fabrikası ile ilişkilendirir.  
+     <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute>Özniteliği. myext dosya uzantısını düzenleyici fabrikasında ilişkilendirir, bu sayede bu uzantıya sahip bir dosya yüklendiğinde düzenleyici fabrikası çağırılır.  
   
-6. Özel bir değişken ekleyin `MyPackage` , sınıf oluşturucusu hemen önce ve türü verin `EditorFactory`.  
+6. Bir özel değişkeni `MyPackage` , oluşturucudan hemen önce sınıfa ekleyin ve türü verin `EditorFactory` .  
   
     ```vb  
     Private editorFactory As EditorFactory  
@@ -359,7 +359,7 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
     private EditorFactory editorFactory;  
     ```  
   
-7. Bulma `Initialize` yöntemi (açmanız gerekebilir `Package Members` gizli bölge) ve çağrısından sonra aşağıdaki kodu ekleyin `base.Initialize()`.  
+7. Yöntemini bulun `Initialize` ( `Package Members` gizli bölgeyi açmanız gerekebilir) ve çağrısından sonra aşağıdaki kodu ekleyin `base.Initialize()` .  
   
     ```vb  
     'Create our editor factory and register it.   
@@ -374,27 +374,27 @@ Bu izlenecek yol başlatan bir VSPackage'ı oluşturma işlemini gösterir [!INC
   
     ```  
   
-8. Program derleyin ve hiçbir hata olmadığından emin olun.  
+8. Programı derleyin ve hata olmadığından emin olun.  
   
-     Bu adım için Deneysel kayıt defteri kovanında Düzenleyici üreteci kaydeder [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Resource.h dosyasını geçersiz kılmak isteyip istemediğiniz sorulur tıklatmak **Tamam**.  
+     Bu adım, düzenleyici fabrikasını için deneysel kayıt defteri kovanına kaydeder [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Resource. h dosyasını geçersiz kılmanız istenirse, **Tamam**' a tıklayın.  
   
-9. TextFile1.myext adlı örnek bir dosya oluşturun.  
+9. TextFile1. myext adlı örnek bir dosya oluşturun.  
   
-10. Tuşuna **F5** Deneysel örneğini açmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+10. Deneysel bir örneğini açmak için **F5** tuşuna basın [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
-11. Deneysel [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], **dosya** menüsünde **açık** ve ardından **dosya**.  
+11. Deneysel öğesinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **Dosya** menüsünde **Aç** ' ın üzerine gelin ve ardından **Dosya**' ya tıklayın.  
   
-12. TextFile1.myext bulun ve ardından **açık**.  
+12. TextFile1. myext bulun ve **Aç**' a tıklayın.  
   
-     Dosya artık yüklenmesi.  
+     Dosya şimdi yüklenmelidir.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Çekirdek Düzenleyicisi işleme çok çeşitli metin tabanlı dosya türleri ve zengin özellikler gibi söz dizimi vurgulama, ayraç eşleştirme sağlamak için dil Hizmetleri ve IntelliSense Sözcük tamamlama ve üye tamamlama listeleri ile yakın bir tümleştirmede çalışır. Metin tabanlı dosyaları ile çalışıyorsanız, çekirdek Düzenleyicisi, belirli dosya türlerini destekleyen özel dil hizmeti ile birlikte kullanabilirsiniz.  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Çekirdek Düzenleyici, çok çeşitli metin tabanlı dosya türlerini işler ve sözdizimi vurgulama, küme ayracı eşleştirme ve IntelliSense sözcük tamamlama ve üye Tamamlama listeleri gibi zengin bir özellik kümesi sağlamak için dil hizmetleriyle yakın bir şekilde çalışmaktadır. Metin tabanlı dosyalarla çalışıyorsanız, temel düzenleyiciyi, belirli dosya türlerinizi destekleyen özel bir dil hizmetiyle birlikte kullanabilirsiniz.  
   
- VSPackage çağırabilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] çekirdek Düzenleyicisi tarafından bir düzenleyici fabrikası sağlama. Bu düzenleyici fabrikası herhangi kendisiyle ilişkilendirilmiş bir dosya yüklendiğinde kullanılır. Dosya bir projesinin bir parçasıysa çekirdek Düzenleyicisi'ni otomatik olarak, sizin VSPackage tarafından geçersiz kılınmadığı sürece çağrılır. Dosya bir proje dışında yüklenirse, ancak ardından çekirdek Düzenleyici açıkça, VSPackage tarafından çağrılması gerekir.  
+ Bir VSPackage, [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir düzenleyici fabrikası sağlayarak çekirdek düzenleyiciyi çağırabilir. Bu düzenleyici fabrikası, onunla ilişkili bir dosya yüklendiğinde kullanılır. Dosya bir projenin parçasıysa, VSPackage tarafından geçersiz kılınmadıkça çekirdek Düzenleyici otomatik olarak çağrılır. Ancak, dosya bir projenin dışına yüklenirse, çekirdek Düzenleyici, VSPackage tarafından açıkça çağrılmalıdır.  
   
- Çekirdek Düzenleyicisi hakkında daha fazla bilgi için bkz: [çekirdek Düzenleyicisi içinde](../extensibility/inside-the-core-editor.md).  
+ Çekirdek Düzenleyici hakkında daha fazla bilgi için bkz. [Çekirdek Düzenleyici içindeki](../extensibility/inside-the-core-editor.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Çekirdek Düzenleyicisi içinde](../extensibility/inside-the-core-editor.md)   
+ [Çekirdek düzenleyicinin içinde](../extensibility/inside-the-core-editor.md)   
  [Eski API'yi Kullanarak Temel Düzenleyiciyi Başlatma](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)

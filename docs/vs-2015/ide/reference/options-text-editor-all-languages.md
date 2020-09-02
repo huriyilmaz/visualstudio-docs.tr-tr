@@ -21,10 +21,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ebe2da1dec9917a792f3e4e02516a79cff605c80
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662398"
 ---
 # <a name="options-text-editor-all-languages"></a>Seçenekler, Metin Düzenleyici, Tüm Diller
@@ -75,7 +75,7 @@ Bu iletişim kutusu, kod düzenleyicisinin varsayılan davranışını değişti
 > [!TIP]
 > Boşluk, sekme ve satır uçları göstergelerini görüntülemek ve bu nedenle girintili çizgileri tamamen boş olan satırlardan ayırt etmek için, **Düzenle** menüsünden **Gelişmiş** ' i seçin ve **boşluğu görüntüle**' yi seçin.
 
-## <a name="display"></a>Ekran
+## <a name="display"></a>Göster
  Satır numaraları seçildiğinde, her kod satırının yanında bir satır numarası görünür.
 
 > [!NOTE]

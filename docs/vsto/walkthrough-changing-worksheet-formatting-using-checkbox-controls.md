@@ -15,152 +15,152 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 42d2c46f6fd61d74476933cfda3dea8c62b00c95
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67328698"
 ---
 # <a name="walkthrough-change-worksheet-formatting-using-checkbox-controls"></a>İzlenecek yol: CheckBox denetimlerini kullanarak çalışma sayfası biçimlendirmesini değiştirme
-  Bu izlenecek yol, onay kutularını biçimini değiştirmek için bir Microsoft Office Excel çalışma sayfasında kullanmanın temellerini gösterir. Oluşturma ve kod projenize eklemek için Visual Studio'da Office geliştirme araçlarını kullanın. Sonuç tamamlanmış bir örnek görmek için Excel denetimleri örneğine bakın [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md).
+  Bu izlenecek yol, biçimlendirmeyi değiştirmek için Microsoft Office Excel çalışma sayfasındaki onay kutularını kullanmanın temellerini gösterir. Visual Studio 'da Office geliştirme araçları 'nı kullanarak projenize kod oluşturmanız ve kod eklemeniz gerekir. Sonucu tamamlanmış bir örnek olarak görmek için bkz. [Office geliştirme örnekleri ve izlenecek yollar](../vsto/office-development-samples-and-walkthroughs.md): Excel denetimleri örneği.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
- Bu kılavuz boyunca, öğreneceksiniz nasıl yapılır:
+ Bu izlenecek yol sırasında şunları yapmayı öğreneceksiniz:
 
-- Metin ve denetimlerin çalışma sayfasına ekleyin.
+- Çalışma sayfasına metin ve denetimler ekleyin.
 
-- Bir seçenek belirlendiğinde, metni biçimlendirin.
+- Bir seçenek belirlendiğinde metni biçimlendirin.
 
 - Projenizi test edin.
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] veya [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
-## <a name="create-the-project"></a>Projeyi oluşturma
- Bu adımda, Visual Studio kullanarak bir Excel çalışma kitabı projesi oluşturur.
+## <a name="create-the-project"></a>Proje oluşturma
+ Bu adımda, Visual Studio 'Yu kullanarak bir Excel çalışma kitabı projesi oluşturacaksınız.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Adlı bir Excel çalışma kitabı projesi oluşturun **My Excel biçimlendirme**. Emin olun **yeni belge oluşturma** seçilir. Daha fazla bilgi için [nasıl yapılır: Visual Studio'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **Excel Biçimme**adında bir Excel çalışma kitabı projesi oluşturun. **Yeni belge oluştur** ' un seçili olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve ekler **My Excel biçimlendirme** için proje **Çözüm Gezgini**.
+     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Excel biçimlendirme** projesini **Çözüm Gezgini**ekler.
 
 ## <a name="add-text-and-controls-to-the-worksheet"></a>Çalışma sayfasına metin ve denetimler ekleme
- Bu kılavuz için üç gerekir <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> denetimleri ve bazı metin bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi.
+ Bu izlenecek yol için, <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> denetimde üç denetim ve bazı metinler gerekecektir <xref:Microsoft.Office.Tools.Excel.NamedRange> .
 
-### <a name="to-add-three-check-boxes"></a>Üç onay kutusunu eklemek için
+### <a name="to-add-three-check-boxes"></a>Üç onay kutusu eklemek için
 
-1. Çalışma kitabı Visual Studio tasarımcısı ve açık olduğundan emin olun `Sheet1` açıktır.
+1. Çalışma kitabının Visual Studio tasarımcısında açık olduğunu ve açık olduğunu doğrulayın `Sheet1` .
 
-2. Gelen **ortak denetimleri** sekmesinde **araç kutusu**, sürükleyin bir <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> denetim ya da hücre yanına **B2** içinde **Sayfa1**.
+2. **Araç kutusu**' nun **ortak denetimler** sekmesinden, bir <xref:Microsoft.Office.Tools.Excel.Controls.CheckBox> denetimi **Sheet1**içindeki **B2** hücresine veya yakınında sürükleyin.
 
-3. Gelen **görünümü** menüsünde **özellikleri** penceresi.
+3. **Görünüm** menüsünde **Özellikler** penceresi ' ni seçin.
 
-4. Olduğundan emin olun **Checkbox1** nesne adı liste kutusunda görülebilir **özellikleri** penceresinde ve aşağıdaki özellikleri değiştirin:
+4. **CheckBox1** öğesinin **Özellikler** penceresinin nesne adı liste kutusunda göründüğünden emin olun ve aşağıdaki özellikleri değiştirin:
 
     |Özellik|Değer|
     |--------------|-----------|
-    |**Ad**|**applyBoldFont**|
+    |**Ad**|**Applybold yazı tipi**|
     |**Metin**|**Kalın**|
 
-5. İkinci bir onay kutusu üzerinde veya yakınında hücre sürükleyin **B4** ve aşağıdaki özellikleri değiştirin:
+5. **B4** hücresinde veya yakınında bir ikinci onay kutusu sürükleyin ve aşağıdaki özellikleri değiştirin:
 
     |Özellik|Değer|
     |--------------|-----------|
-    |**Ad**|**ApplyItalicFont**|
+    |**Ad**|**applyItalicFont**|
     |**Metin**|**İtalik**|
 
-6. Üçüncü onay kutusu üzerinde veya yakınında hücre sürükleyin **B6** ve aşağıdaki özellikleri değiştirin:
+6. **B6** hücresinde veya yakınında bir üçüncü onay kutusu sürükleyin ve aşağıdaki özellikleri değiştirin:
 
     |Özellik|Değer|
     |--------------|-----------|
-    |**Ad**|**applyUnderlineFont**|
-    |**Metin**|**Alt çizgi**|
+    |**Ad**|**Applyunderlineyazı tipi**|
+    |**Metin**|**Altçizgi**|
 
-7. Tutarken, tüm üç onay kutusu denetimini seçmek **Ctrl** anahtarı.
+7. **CTRL** tuşunu basılı tutarken üç onay kutusu denetimini seçin.
 
-8. Excel'de biçimi sekmenin Yerleştir grubunda tıklatın **Hizala**ve ardından **Sola Hizala**.
+8. Excel 'deki biçim grubunun düzenleme grubunda **Hizala**' ya ve ardından **Sola Hizala**' ya tıklayın.
 
-     Üç onay kutusu denetimi, sol tarafında, seçtiğiniz ilk denetim konumunda hizalanır.
+     Üç onay kutusu denetimi, seçtiğiniz ilk denetimin konumunda sol tarafta hizalanır.
 
-     Ardından, sürükleyin bir <xref:Microsoft.Office.Tools.Excel.NamedRange> çalışma denetimi.
+     Sonra, <xref:Microsoft.Office.Tools.Excel.NamedRange> çalışma sayfasına bir denetim sürükleyin.
 
     > [!NOTE]
-    > Ayrıca ekleyebilirsiniz <xref:Microsoft.Office.Tools.Excel.NamedRange> yazarak denetim **textFont** içine **adı** kutusu.
+    > Ayrıca, <xref:Microsoft.Office.Tools.Excel.NamedRange> **ad** kutusuna **TextFont** yazarak da denetim ekleyebilirsiniz.
 
-#### <a name="to-add-text-to-a-namedrange-control"></a>Metin NamedRange denetimine eklemek için
+#### <a name="to-add-text-to-a-namedrange-control"></a>NamedRange denetimine metin eklemek için
 
-1. Gelen **Excel denetimleri** Sürükle araç kutusu sekmesi bir <xref:Microsoft.Office.Tools.Excel.NamedRange> hücre denetimi **B9**.
+1. Araç kutusunun **Excel denetimleri** sekmesinden bir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi **B9**hücresine sürükleyin.
 
-2. Doğrulayın **$B$ 9** düzenlenebilir metin kutusu ve söz konusu hücrenin görünür **B9** seçilir. Yüklü değilse, hücreyi tıklatın **B9** seçin.
+2. **$B $9** ' nin düzenlenebilir metin kutusunda göründüğünü ve **B9** hücresinin seçildiğini doğrulayın. Aksi takdirde, seçmek için hücre **B9** ' a tıklayın.
 
-3. **Tamam**'ı tıklatın.
+3. **Tamam**’a tıklayın.
 
-4. Hücre **B9** adında bir aralığa dönüşür `NamedRange1`.
+4. **B9** hücresi adlı bir Aralık haline gelir `NamedRange1` .
 
-    Çalışma sayfasında görünür bir gösterge yoktur ancak `NamedRange1` görünür **adı kutusuna** (hemen üstüne çalışma sol tarafta), hücre **B9** seçilir.
+    Çalışma sayfasında görünür bir gösterge yoktur, ancak `NamedRange1` **B9** hücresi seçildiğinde **ad kutusunda** (sol taraftaki çalışma sayfasının hemen üzerinde) görünür.
 
-5. Olduğundan emin olun **NamedRange1** nesne adı liste kutusunda görülebilir **özellikleri** penceresinde ve aşağıdaki özellikleri değiştirin:
+5. **NamedRange1** 'in **Özellikler** penceresinin nesne adı liste kutusunda göründüğünden emin olun ve aşağıdaki özellikleri değiştirin:
 
    |Özellik|Değer|
    |--------------|-----------|
    |**Ad**|**textFont**|
-   |**Value2**|**Bu metin biçimini değiştirmek için bir onay kutusuna tıklayın.**|
+   |**Value2**|**Bu metnin biçimlendirmesini değiştirmek için bir onay kutusuna tıklayın.**|
 
-   Ardından, bir seçenek belirlendiğinde, metni biçimlendirmek için kod yazın.
+   Sonra, bir seçenek belirlendiğinde metni biçimlendirmek için kodu yazın.
 
-## <a name="format-the-text-when-an-option-is-selected"></a>Bir seçenek belirlendiğinde, metin biçimlendirme
- Bu bölümde, böylece kullanıcı biçimlendirme seçeneği seçtiğinde, çalışma sayfasındaki metin biçimi değiştirilir kod yazacaksınız.
+## <a name="format-the-text-when-an-option-is-selected"></a>Bir seçenek belirlendiğinde metni biçimlendirin
+ Bu bölümde, Kullanıcı bir biçimlendirme seçeneği seçtiğinde, çalışma sayfasındaki metnin biçiminin değiştirildiği şekilde kod yazacaksınız.
 
-### <a name="to-change-formatting-when-a-check-box-is-selected"></a>Bir onay kutusu seçildiğinde biçimini değiştirmek için seçili
+### <a name="to-change-formatting-when-a-check-box-is-selected"></a>Bir onay kutusu seçildiğinde biçimlendirmeyi değiştirmek için
 
-1. Sağ **Sayfa1**ve ardından **kodu görüntüle** kısayol menüsünde.
+1. **Sayfa1**öğesine sağ tıklayın ve ardından kısayol menüsünde **kodu görüntüle** ' ye tıklayın.
 
-2. Aşağıdaki kodu ekleyin <xref:System.Windows.Forms.Control.Click> olay işleyicisine `applyBoldFont` onay kutusunu:
+2. Aşağıdaki kodu <xref:System.Windows.Forms.Control.Click> onay kutusunun olay işleyicisine ekleyin `applyBoldFont` :
 
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#7](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#7)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#7)]
 
-3. Aşağıdaki kodu ekleyin <xref:System.Windows.Forms.Control.Click> olay işleyicisine `applyItalicFont` onay kutusunu:
+3. Aşağıdaki kodu <xref:System.Windows.Forms.Control.Click> onay kutusunun olay işleyicisine ekleyin `applyItalicFont` :
 
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#8](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#8)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#8](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#8)]
 
-4. Aşağıdaki kodu ekleyin <xref:System.Windows.Forms.Control.Click> olay işleyicisine `applyUnderlineFont` onay kutusunu:
+4. Aşağıdaki kodu <xref:System.Windows.Forms.Control.Click> onay kutusunun olay işleyicisine ekleyin `applyUnderlineFont` :
 
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#9](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#9)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#9)]
 
-5. C# ' ta onay kutuları için olay işleyicileri eklemelisiniz <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> aşağıda gösterildiği gibi olay. Olay işleyicileri oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
+5. C# ' ta, aşağıda gösterildiği gibi onay kutuları için olay işleyicileri eklemeniz gerekir <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> . Olay işleyicileri oluşturma hakkında bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#10)]
 
 ## <a name="test-the-application"></a>Uygulamayı test etme
- Artık, çalışma kitabınızı seçin veya onay kutusunu temizleyin, metni doğru biçimlendirildiğinden emin olmak için test edebilirsiniz.
+ Artık, bir onay kutusunu seçtiğinizde veya temizlediğinizde metnin doğru biçimlendirildiğinden emin olmak için çalışma kitabınızı test edebilirsiniz.
 
 ### <a name="to-test-your-workbook"></a>Çalışma kitabınızı test etmek için
 
-1. Tuşuna **F5** projeyi çalıştırın.
+1. Projenizi çalıştırmak için **F5** tuşuna basın.
 
-2. Seçin veya onay kutusunun işaretini kaldırın.
+2. Onay kutusunu seçin veya temizleyin.
 
-3. Metni doğru şekilde biçimlendirildiğini doğrulayın.
+3. Metnin doğru biçimlendirildiğinden emin olun.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Bu izlenecek yol, onay kutularını kullanarak ve Excel çalışma sayfalarında metin biçimlendirme temellerini gösterir. Sonraki gelebilir bazı görevler aşağıda verilmiştir:
+ Bu izlenecek yol, Excel çalışma sayfalarındaki onay kutularını ve biçimlendirme metnini kullanmanın temellerini gösterir. Daha sonra gelebilecek bazı görevler şunlardır:
 
-- Projeyi dağıtma. Daha fazla bilgi için [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md).
-- Bir düğmeye bir metin kutusunu doldurmak için kullanma. Daha fazla bilgi için [izlenecek yol: Düğme kullanarak çalışma sayfasındaki metin kutusunda metin görüntüleme](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md).
+- Projeyi dağıtma. Daha fazla bilgi için bkz. [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md).
+- Bir metin kutusunu doldurmak için düğme kullanma. Daha fazla bilgi için bkz. [Izlenecek yol: düğme kullanarak çalışma sayfasındaki metin kutusunda metin kutusu görüntüleme](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Excel kullanarak izlenecek yollar](../vsto/walkthroughs-using-excel.md)
 - [NamedRange denetimi](../vsto/namedrange-control.md)
-- [Office belgelerindeki Windows Forms denetimleri sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
+- [Office belgelerindeki Windows Forms denetimlerinin sınırlamaları](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)

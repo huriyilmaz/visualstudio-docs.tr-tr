@@ -1,6 +1,6 @@
 ---
-title: npm paketlerini package.json ile yapılandır
-description: package.json kullanarak npm paket sürümlerini belirtin
+title: NPM paketlerini package.jsile yapılandırma
+description: package.jskullanarak NPM paket sürümlerini belirtin
 ms.date: 09/06/2018
 ms.topic: conceptual
 ms.devlang: javascript
@@ -12,33 +12,33 @@ dev_langs:
 ms.workload:
 - nodejs
 ms.openlocfilehash: 652ff7b0380fc03a3f9c8155a2f8696d9dfee5b9
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67692370"
 ---
 # <a name="packagejson-configuration"></a>package.json yapılandırması
 
-Çok sayıda npm paketi içeren bir Düğüm.js uygulaması geliştiriyorsanız, projenizi oluştururken bir veya daha fazla paket güncelleştirilmişse uyarılar veya hatalarla karşılaştığınızda sık rastlanan bir durum değildir. Bazen, bir sürüm çakışma sonuçları veya bir paket sürümü amortismana kalmıştır. Burada, [package.json](https://docs.npmjs.com/files/package.json) dosyanızı yapılandırmanıza ve uyarılar veya hatalar gördüğünüzde neler olup bittiğini anlamanıza yardımcı olacak birkaç hızlı ipucu verilmiştir. Bu *package.json* için tam bir rehber değildir ve sadece npm paket sürümü odaklanmıştır.
+Çok sayıda NPM paketi olan bir Node.js uygulaması geliştiriyorsanız, bir veya daha fazla paket güncelleştirildikten sonra projenizi oluştururken uyarı veya hatalara çalışmak yaygın bir şekilde çalışmaz. Bazen sürüm çakışması sonuçları veya paket sürümü kullanım dışı bırakılmıştır. İşte [package.jsdosya üzerinde](https://docs.npmjs.com/files/package.json) yapılandırmanıza ve uyarılar veya hatalar gördüğünüzde neler olduğunu anlamanıza yardımcı olacak birkaç hızlı ipucu. Bu, * üzerindepackage.js* için kapsamlı bir kılavuz değildir ve yalnızca NPM paketi sürümü oluşturma ' ya odaklanmıştır.
 
-npm paket sürüm sisteminin katı kuralları vardır. Sürüm biçimi burada aşağıdaki gibidir:
+NPM paketi sürüm oluşturma sistemi katı kurallara sahiptir. Sürüm biçimi buradan aşağıda verilmiştir:
 
 ```
 [major].[minor].[patch]
 ```
 
-Uygulamanızda 5.2.1 sürümü içeren bir paket olduğunu varsayalım. Ana sürüm 5, küçük sürüm 2 ve yama 1'dir.
+Bir 5.2.1 sürümü ile uygulamanızdaki bir paketiniz olduğunu varsayalım. Ana sürüm 5 ' tir, ikincil sürüm 2 ' dir ve Düzeltme Eki 1 ' dir.
 
-* Büyük bir sürüm güncelleştirmesinde, paket geriye doğru uyumsuz, yani değişiklikleri bozan yeni özellikler içerir.
-* Küçük bir sürüm güncelleştirmesinde, önceki paket sürümleriyle geriye dönük olarak uyumlu olan pakete yeni özellikler eklendi.
-* Bir yama güncelleştirmesinde, bir veya daha fazla hata düzeltmesi dahildir. Hata düzeltmeleri her zaman geriye dönük uyumludur.
+* Ana sürüm güncelleştirmesinde, paket geriye dönük olarak uyumsuz olan yeni özellikleri, yani son değişiklikleri içerir.
+* Küçük bir sürüm güncelleştirmesinde, önceki paket sürümleriyle geriye dönük olarak uyumlu olan pakete yeni özellikler eklenmiştir.
+* Bir yama güncelleştirmesinde, bir veya daha fazla hata düzeltmesi dahildir. Hata düzeltmeleri her zaman geriye dönük olarak uyumludur.
 
-Bazı npm paket özelliklerinin bağımlılıkları olduğunu belirtmekte fayda var. Örneğin, Webpack ile TypeScript derleyici paketinin (ts-loader) yeni bir özelliğini kullanmak için, webpack npm paketini ve webpack-cli paketini güncellemeniz de mümkündür.
+Bu, bazı NPM paketi özelliklerinin bağımlılıklara sahip olduğunu belirtmekte bir değer. Örneğin, WebPack ile TypeScript derleyici paketinin (TS-Loader) yeni bir özelliğini kullanmak için, WebPack NPM paketini ve WebPack-CLI paketini de güncelleştirmeniz gerekir.
 
-Paket sürümünü yönetmenize yardımcı olmak için npm, *package.json'da*kullanabileceğiniz birkaç gösterimi destekler. Bu gösterimleri, uygulamanızda kabul etmek istediğiniz paket güncelleştirmelerinin türünü denetlemek için kullanabilirsiniz.
+NPM, paket sürümü oluşturmayı yönetmeye yardımcı olmak için * üzerindepackage.js*kullanabileceğiniz çeşitli gösterimleri destekler. Uygulamanızda kabul etmek istediğiniz paket güncelleştirmelerinin türünü denetlemek için bu gösterimleri kullanabilirsiniz.
 
-Diyelim ki React kullanıyorsunuz ve **react** ve **react-dom** npm paketini eklemeniz gerekiyor. Bunu *paket.json* dosyanızda çeşitli şekillerde belirtebilirsiniz. Örneğin, paketin tam sürümünü aşağıdaki gibi belirtebilirsiniz.
+Yanıt kullandığınızı **ve tepki verme ve** **tepki verme-Dom** NPM paketini dahil etmeniz gerektiğini varsayalım. Bunu, *package.js* dosyadaki çeşitli yollarla belirtebilirsiniz. Örneğin, bir paketin tam sürümünün kullanımını aşağıda gösterildiği gibi belirtebilirsiniz.
 
   ```json
   "dependencies": {
@@ -47,9 +47,9 @@ Diyelim ki React kullanıyorsunuz ve **react** ve **react-dom** npm paketini ekl
   },
   ```
 
-Önceki gösterimi kullanarak, npm her zaman belirtilen tam sürümü, 16.4.2 alırsınız.
+Önceki gösterimi kullanarak, NPM her zaman belirtilen tam sürümü alır, 16.4.2.
 
-Güncelleştirmeleri yama güncelleştirmeleri (hata düzeltmeleri) ile sınırlamak için özel bir gösterim kullanabilirsiniz. Bu örnekte:
+Düzeltme Eki güncelleştirmelerine yönelik güncelleştirmeleri sınırlandırmak için özel bir gösterim (hata düzeltmeleri) kullanabilirsiniz. Bu örnekte:
 
   ```json
   "dependencies": {
@@ -58,9 +58,9 @@ Güncelleştirmeleri yama güncelleştirmeleri (hata düzeltmeleri) ile sınırl
   },
   ```
 
-npm'e bir paketi yalnızca yamalı olduğunda güncellemesini söylemek için tilde (~) karakterini kullanırsınız. Yani, npm tepki 16.4.2 16.4.3 (veya 16.4.4, vb) güncelleyebilirsiniz, ancak büyük veya küçük sürümü için bir güncelleştirme kabul etmez. Yani, 16.4.2 16.5.0 güncelleştirilmeyecektir.
+NPM 'ye düzeltme eki eklendiğinde yalnızca bir paketi güncelleştirmesi gerektiğini bildirmek için tilde (~) karakterini kullanın. Bu nedenle, NPM, 16.4.3 (veya 16.4.4, vb.) için yanıt 16.4.2 güncelleştirebilir, ancak büyük veya küçük sürümde bir güncelleştirmeyi kabul etmez. Bu nedenle 16.4.2, 16.5.0 olarak güncellenmez.
 
-NPM'nin küçük sürüm numarasını güncelleştirebileceğini belirtmek için caret (^) simgesini de kullanabilirsiniz.
+Ayrıca, NPM 'nin ikincil sürüm numarasını güncelleştirecan belirtmek için şapka işareti (^) sembolünü de kullanabilirsiniz.
 
   ```json
   "dependencies": {
@@ -69,8 +69,8 @@ NPM'nin küçük sürüm numarasını güncelleştirebileceğini belirtmek için
   },
   ```
 
-Bu gösterimi kullanarak, npm react 16.4.2 ile 16.5.0 (veya 16.5.1, 16.6.0, vb.) güncelleyebilir, ancak ana sürümiçin bir güncelleştirme kabul etmez. Yani, 16.4.2 17.0.0 güncelleştirilmeyecek.
+Bu gösterimi kullanarak, NPM, 16.5.0 (veya 16.5.1, 16.6.0, vb.) için yanıt 16.4.2 güncelleştirebilir, ancak ana sürüme yönelik bir güncelleştirmeyi kabul etmez. Bu nedenle 16.4.2, 17.0.0 olarak güncellenmez.
 
-nPM paketleri güncellediğinde, uygulamanızda kullanılan tüm iç içe paketler de dahil olmak üzere gerçek npm paket sürümlerini listeleyen bir *paket-lock.json* dosyası oluşturur. *package.json* uygulamanız için doğrudan bağımlılıkları kontrol ederken, iç içe geçen bağımlılıkları (belirli bir npm paketinin gerektirdiği diğer npm paketleri) denetlemez. Diğer geliştiricilerin ve sınayıcıların iç içe geçen paketler de dahil olmak üzere kullandığınız tam paketleri kullandığından emin olmanız gerekiyorsa, geliştirme döngünüzdeki *package-lock.json* dosyasını kullanabilirsiniz. Daha fazla bilgi için npm belgelerinde [package-lock.json'a](https://docs.npmjs.com/files/package-lock.json) bakın.
+NPM, paketleri güncelleştirdiğinde, tüm iç içe paketler dahil olmak üzere uygulamanızda kullanılan gerçek NPM paket sürümlerini listeleyen bir *package-lock.js* dosya oluşturur. *package.js* , uygulamanıza yönelik doğrudan bağımlılıkları denetliyorsa, iç içe bağımlılıkları (belirli bir NPM paketi için gereken diğer NPM paketleri) denetlemez. Diğer geliştiricilerin ve Test edicilerin, iç içe geçmiş paketler dahil olmak üzere kullandığınız tam paketleri kullanmakta olduğundan emin olmanız gerekiyorsa, geliştirme döngünüzdeki dosya *package-lock.js* kullanabilirsiniz. Daha fazla bilgi için NPM belgelerindeki [package-lock.js](https://docs.npmjs.com/files/package-lock.json) bölümüne bakın.
 
-Visual Studio için *package-lock.json* dosyası projenize eklenmez, ancak proje klasöründe bulabilirsiniz.
+Visual Studio için, dosyadaki *package-lock.js* projenize eklenmez, ancak proje klasöründe bulabilirsiniz.

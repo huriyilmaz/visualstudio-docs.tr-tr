@@ -8,10 +8,10 @@ ms.date: 04/20/2020
 ms.topic: how-to
 description: Visual Studio aboneliğinize dahil edilen parasoft Virtualınitialize/SOA Test Professional aboneliğini nasıl etkinleştireceğinizi öğrenin.
 ms.openlocfilehash: 8472c27e0196ec5837fccb17535061ea9b1b4867
-ms.sourcegitcommit: 05487d286ed891a04196aacd965870e2ceaadb68
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85904385"
 ---
 # <a name="parasoft-virtualizesoatest-professional-desktop-in-visual-studio-subscriptions"></a>Visual Studio aboneliklerinde parasoft Virtualınitialize/SOAtest Professional Desktop
@@ -89,8 +89,8 @@ Daha önce ve daha sık test edin.  Kullanılamayan gelişen uygulamalar ve sist
 
 ## <a name="support-resources"></a>Destek kaynakları
 - Parasoft ürünleriyle ilgili yardıma mı ihtiyacınız var?  Aşağıdaki kaynakları inceleyin:
-  - Teknik destek:https://www.parasoft.com/support/
-  - Parasoft Kaynak Merkezi:https://www.parasoft.com/resources/
+  - Teknik destek:  https://www.parasoft.com/support/
+  - Parasoft Kaynak Merkezi:  https://www.parasoft.com/resources/
 - Visual Studio abonelikleri için Sales, abonelikler, hesaplar ve faturalandırma konusunda yardım için Visual Studio [abonelikleri desteğiyle](https://visualstudio.microsoft.com/subscriptions/support/)görüşün.
 - Visual Studio IDE, Azure DevOps Services veya diğer Visual Studio ürünleri veya hizmetleri hakkında sorularınız mı var?  [Visual Studio desteği](https://visualstudio.microsoft.com/support/)' ni ziyaret edin.
 

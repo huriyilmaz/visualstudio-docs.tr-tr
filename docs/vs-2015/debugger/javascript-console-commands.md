@@ -1,5 +1,5 @@
 ---
-title: JavaScript Konsolu komutları | Microsoft Docs
+title: JavaScript konsol komutları | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -19,69 +19,69 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: d5c4223699c720750514aaf2b9abc18b34ae4269
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65690595"
 ---
 # <a name="javascript-console-commands"></a>JavaScript Konsolu komutları
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows ve Windows Phone için geçerlidir] (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
+Windows ve Windows Phone] için geçerlidir (.. /Image/windows_and_phone_content.png "windows_and_phone_content")  
   
- İleti göndermek ve Visual Studio JavaScript konsol penceresinde diğer görevleri gerçekleştirmek için komutlarını kullanabilirsiniz. Bu pencere kullanmayı gösteren örnekler için bkz [hızlı başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md). Bu konu başlığı altındaki bilgiler, Windows Store uygulamaları, Windows Phone Store uygulamaları ve Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan uygulamalar için geçerlidir. Cordova uygulamalarında desteklenen Konsolu komutları hakkında daha fazla bilgi için bkz. [Debug Your App](https://msdn.microsoft.com/library/c2a4a1d4-a4e8-47ec-811f-ad207c54f4d1). Internet Explorer F12 araçlarındaki konsolunu kullanma hakkında daha fazla bilgi için bkz. [bu konuda](https://msdn.microsoft.com/library/ie/dn255006.aspx).  
+ Komutları kullanarak, Visual Studio 'nun JavaScript Konsol penceresinde ileti gönderebilir ve diğer görevleri gerçekleştirebilirsiniz. Bu pencerenin nasıl kullanılacağını gösteren örnekler için bkz. [hızlı başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md). Bu konudaki bilgiler, Apache Cordova için Visual Studio Araçları kullanılarak oluşturulan Windows Mağazası uygulamaları, Windows Phone mağaza uygulamaları ve uygulamalar için geçerlidir. Cordova uygulamalarında desteklenen konsol komutları hakkında bilgi için bkz. [uygulamanızda hata ayıklama](https://msdn.microsoft.com/library/c2a4a1d4-a4e8-47ec-811f-ad207c54f4d1). Konsolunu Internet Explorer F12 araçları 'nda kullanma hakkında bilgi için [Bu konuya](https://msdn.microsoft.com/library/ie/dn255006.aspx)bakın.  
   
- JavaScript Konsolu penceresi kapatıldığında, Visual Studio'da seçerek hata ayıklarken bunu açabilirsiniz **hata ayıklama** > **Windows** > **JavaScript Konsol**.  
+ JavaScript Konsolu penceresi kapalıysa, Visual Studio 'da hata ayıklama sırasında **Debug**  >  **Windows**  >  **JavaScript Konsolu**Hata Ayıkla ' yı seçerek açabilirsiniz.  
   
 > [!NOTE]
-> Penceresi bir hata ayıklama oturumu sırasında kullanılabilir durumda değilse, hata ayıklayıcı türü ayarlandığından emin olun **betik** proje için hata ayıklama özellikleri.  
+> Pencere hata ayıklama oturumu sırasında kullanılamıyorsa, hata ayıklayıcı türünün projenin hata ayıklama özelliklerinde **betik** olarak ayarlandığından emin olun.  
   
-## <a name="console-object-commands"></a>Konsol nesne komutları  
- Bu tablo için söz dizimi görülmektedir `console` nesne komutları JavaScript konsol penceresinde kullanabilirsiniz veya konsola kodunuzdan iletileri göndermek için kullanabilirsiniz. Böylece bilgi iletilerini ve hata iletileri ayırt etmek isterseniz, bu nesne forms sayısını sağlar.  
+## <a name="console-object-commands"></a>Konsol nesnesi komutları  
+ Bu tabloda `console` JavaScript Konsol penceresinde kullanabileceğiniz nesne komutlarının söz dizimi ve kodunuzu, koddan konsola göndermek için kullanabileceğiniz sözdizimi gösterilmektedir. Bu nesne, isterseniz bilgilendirici iletileri ve hata mesajlarını ayırt edebilmeniz için bir dizi form sağlar.  
   
- Daha uzun komut formun kullanabileceğiniz `window.console.[command]` konsol adlı yerel nesneleriyle olası Karışıklığı önlemek gerekiyorsa.  
+ `window.console.[command]`Konsol adlı yerel nesnelerle ilgili olası karışıklık oluşmasını önlemek istiyorsanız, daha uzun bir komut formunu kullanabilirsiniz.  
   
 > [!TIP]
-> Visual Studio'nun eski sürümlerini komutların tam bir set desteklemez. IntelliSense konsol nesne üzerinde desteklenen komutlar hakkında hızlı bilgi almak için kullanın.  
+> Visual Studio 'nun eski sürümleri, tüm komut kümesini desteklemez. Desteklenen komutlar hakkında hızlı bilgi almak için konsol nesnesinde IntelliSense kullanın.  
   
 |Komut|Açıklama|Örnek|  
 |-------------|-----------------|-------------|  
-|`assert(expression, message)`|Bir ileti gönderir `expression` değerlendiren **false**.|`console.assert((x == 1), "assert message: x != 1");`|  
-|`clear()`|Betik hata iletileri de dahil olmak üzere konsol penceresinden iletileri temizler ve ayrıca konsol penceresinde görüntülenen betik temizler. Giriş konsolunu komut isteminden girdiğiniz betik temizlemez.|`console.clear();`|  
-|`count(title)`|Sayımı komutunu çağrıldı sayısı konsol penceresine gönderir. Her çağrı sayısı benzersiz olarak isteğe bağlı olarak tanımlanan `title`.<br /><br /> Konsol penceresinde var olan girdiyi tarafından tanımlanan `title` parametre (varsa) ve sayısı komutu tarafından güncelleştirildi. Yeni bir giriş oluşturulmaz.|`console.count();`<br /><br /> `console.count("inner loop");`|  
-|`debug(message)`|Gönderen `message` konsol penceresi.<br /><br /> Bu komut, console.log için aynıdır.<br /><br /> Komutu kullanılarak geçirilen nesneleri, bir dize değerine dönüştürülür.|`console.debug("logging message");`|  
-|`dir(object)`|Belirtilen nesnenin konsol penceresine gönderir ve bir nesne görselleştiricisi içinde görüntüler. Görselleştirici, konsol penceresinde özellikleri incelemek için kullanabilirsiniz.|`console.dir(obj);`|  
-|`dirxml(object)`|Belirtilen XML düğümün gönderdiği `object` konsol penceresi ve bir XML düğümü ağaç olarak görüntüler.|`console.dirxaml(xmlNode);`|  
-|`error(message)`|Gönderen `message` konsol penceresi. İleti metni, kırmızı ve başında tarafından bir hata simgesi.<br /><br /> Komutu kullanılarak geçirilen nesneleri, bir dize değerine dönüştürülür.|`console.error("error message");`|  
-|`group(title)`|Konsol penceresine gönderilen iletiler için bir gruplama başlar ve isteğe bağlı gönderen `title` Grup etiketi olarak. Grupları iç içe geçebilir ve ağaç görünümünde konsol penceresinde görünür.<br /><br /> Grup * komutları bir bileşen modeli kullanımda olduğunda bazı senaryolarda konsol penceresi çıkışını görüntülemek daha kolay yapabilirsiniz.|`console.group("Level 2 Header");` <br /> `console.log("Level 2");` <br /> `console.group();` <br /> `console.log("Level 3");` <br /> `console.warn("More of level 3");` <br /> `console.groupEnd();` <br /> `console.log("Back to level 2");` <br /> `console.groupEnd();` <br /> `console.debug("Back to the outer level");`|  
-|`groupCollapsed(title)`|Konsol penceresine gönderilen iletiler için bir gruplama başlar ve isteğe bağlı gönderen `title` Grup etiketi olarak. Kullanılarak gönderilen grupları `groupCollapsed` varsayılan olarak daraltılmış görünümünde görünür. Grupları iç içe geçebilir ve ağaç görünümünde konsol penceresinde görünür.|Kullanım aynıdır `group` komutu.<br /><br /> Örneğin bakın `group` komutu.|  
-|`groupEnd()`|Geçerli grubun sona erer.<br /><br /> Gereksinimler:<br /><br /> Visual Studio 2013|Örneğin bakın `group` komutu.|  
-|`info(message)`|Gönderen `message` konsol penceresi. İleti bir bilgi simgesi başında vardır.|`console.info("info message");`<br /><br /> Daha fazla örnek için bkz. [console.log çıktı biçimlendirme](#ConsoleLog) bu konuda.|  
-|`log(message)`|Gönderen `message` konsol penceresi.<br /><br /> Bir nesne geçirirseniz, bu komut söz konusu nesne konsol penceresine gönderir ve bir nesne görselleştiricisi içinde görüntüler. Görselleştirici, konsol penceresinde özellikleri incelemek için kullanabilirsiniz.|`console.log("logging message");`|  
-|`msIsIndependentlyComposed(element)`|Web uygulamalarında kullanılır. JavaScript kullanarak Store uygulamalarında desteklenmiyor.|Desteklenmez.|  
-|`profile(reportName)`|Web uygulamalarında kullanılır. JavaScript kullanarak Store uygulamalarında desteklenmiyor.|Desteklenmez.|  
-|`profileEnd()`|Web uygulamalarında kullanılır. JavaScript kullanarak Store uygulamalarında desteklenmiyor.|Desteklenmez.|  
-|`select(element)`|Belirtilen HTML seçer `element` içinde [DOM Gezgini](../debugger/quickstart-debug-html-and-css.md).|Console.Select(element);|  
-|`time (name)`|İsteğe bağlı olarak tanımlanan bir süreölçer başlatır `name` parametresi. İle kullanıldığında `console.timeEnd`, hesaplar arasında geçen süreyi `time` ve `timeEnd`ve konsolunu kullanarak (ms cinsinden ölçülür) sonucu gönderir `name` öneki olarak dize. Uygulama kodunun performansı ölçmek için izlemeyi etkinleştirmek için kullanılır.|`console.time("app start");  app.start();  console.timeEnd("app start");`|  
-|`timeEnd(name)`|İsteğe bağlı olarak tanımlanan bir zamanlayıcı durur `name` parametresi. Bkz: `time` konsol komutu.|`console.time("app start"); app.start(); console.timeEnd("app start");`|  
-|`trace()`|Bir yığın izlemesi konsol penceresine gönderir. İzleme, tam çağrı yığınını içerir ve dosya adı ve satır numarası sütunu numarası gibi bilgileri içerir.|`console.trace();`|  
-|`warn(message)`|Gönderen `message` konsol penceresinde, bir uyarı simgesi ile başlar.<br /><br /> Komutu kullanılarak geçirilen nesneleri, bir dize değerine dönüştürülür.|`console.warn("warning message");`|  
+|`assert(expression, message)`|`expression` **False**olarak değerlendirilirse bir ileti gönderir.|`console.assert((x == 1), "assert message: x != 1");`|  
+|`clear()`|Komut dosyası hata iletileri de dahil olmak üzere konsol penceresinden iletileri temizler ve ayrıca konsol penceresinde görünen betiği de temizler. Konsol giriş istemine girdiğiniz betiği temizlemez.|`console.clear();`|  
+|`count(title)`|Count komutunun konsol penceresine çağrılme sayısını gönderir. Count çağrısı her bir isteğe bağlı tarafından benzersiz şekilde tanımlanır `title` .<br /><br /> Konsol penceresinde Varolan giriş, `title` (varsa) parametresi tarafından tanımlanır ve sayı komutu tarafından güncelleştirilir. Yeni bir giriş oluşturulmaz.|`console.count();`<br /><br /> `console.count("inner loop");`|  
+|`debug(message)`|`message`Konsol penceresine gönderir.<br /><br /> Bu komut, Console. log ile aynıdır.<br /><br /> Komutu kullanılarak geçirilen nesneler bir dize değerine dönüştürülür.|`console.debug("logging message");`|  
+|`dir(object)`|Belirtilen nesneyi konsol penceresine gönderir ve bir nesne görselleştiricisi içinde görüntüler. Görselleştiriciyi konsol penceresindeki özellikleri incelemek için kullanabilirsiniz.|`console.dir(obj);`|  
+|`dirxml(object)`|Belirtilen XML düğümünü `object` konsol penceresine gönderir ve bunu BIR XML düğümü ağacı olarak görüntüler.|`console.dirxaml(xmlNode);`|  
+|`error(message)`|`message`Konsol penceresine gönderir. İleti metni kırmızı ve bir hata simgesiyle önceden ortaya çıkmış.<br /><br /> Komutu kullanılarak geçirilen nesneler bir dize değerine dönüştürülür.|`console.error("error message");`|  
+|`group(title)`|Konsol penceresine gönderilen iletiler için bir gruplandırma başlatır ve isteğe bağlı `title` olarak bir grup etiketi gönderir. Gruplar, iç içe olabilir ve konsol penceresinde bir ağaç görünümünde görünebilir.<br /><br /> Grup * komutları, bir bileşen modelinin kullanımda olduğu durumlarda olduğu gibi bazı senaryolarda konsol penceresi çıkışını görüntülemeyi daha kolay hale getirir.|`console.group("Level 2 Header");` <br /> `console.log("Level 2");` <br /> `console.group();` <br /> `console.log("Level 3");` <br /> `console.warn("More of level 3");` <br /> `console.groupEnd();` <br /> `console.log("Back to level 2");` <br /> `console.groupEnd();` <br /> `console.debug("Back to the outer level");`|  
+|`groupCollapsed(title)`|Konsol penceresine gönderilen iletiler için bir gruplandırma başlatır ve isteğe bağlı `title` olarak bir grup etiketi gönderir. Kullanılarak gönderilen gruplar `groupCollapsed` Varsayılan olarak daraltılmış bir görünümde görünür. Gruplar, iç içe olabilir ve konsol penceresinde bir ağaç görünümünde görünebilir.|Kullanım, `group` komutla aynıdır.<br /><br /> Komut için örneğe bakın `group` .|  
+|`groupEnd()`|Geçerli grubu sonlandırır.<br /><br /> Gereksinimler:<br /><br /> Visual Studio 2013|Komut için örneğe bakın `group` .|  
+|`info(message)`|`message`Konsol penceresine gönderir. İleti bir bilgi simgesiyle önceden başlatılacaktır.|`console.info("info message");`<br /><br /> Daha fazla örnek için, bu konunun ilerleyen kısımlarında, bkz. [biçimlendirme konsolu. log output](#ConsoleLog) .|  
+|`log(message)`|`message`Konsol penceresine gönderir.<br /><br /> Bir nesne geçirirseniz, bu komut bu nesneyi konsol penceresine gönderir ve bir nesne görselleştiricisi içinde görüntüler. Görselleştiriciyi konsol penceresindeki özellikleri incelemek için kullanabilirsiniz.|`console.log("logging message");`|  
+|`msIsIndependentlyComposed(element)`|Web Apps 'te kullanılır. JavaScript kullanılarak Mağaza uygulamalarında desteklenmez.|Desteklenmez.|  
+|`profile(reportName)`|Web Apps 'te kullanılır. JavaScript kullanılarak Mağaza uygulamalarında desteklenmez.|Desteklenmez.|  
+|`profileEnd()`|Web Apps 'te kullanılır. JavaScript kullanılarak Mağaza uygulamalarında desteklenmez.|Desteklenmez.|  
+|`select(element)`|`element` [DOM Gezgini](../debugger/quickstart-debug-html-and-css.md)'nde belirtilen HTML 'yi seçer.|Console. Select (öğe);|  
+|`time (name)`|İsteğe bağlı parametre tarafından tanımlanan bir Zamanlayıcı başlatır `name` . İle kullanıldığında `console.timeEnd` , ve arasında geçen süreyi hesaplar `time` `timeEnd` ve sonucu, `name` ön ek olarak dizeyi kullanarak konsola gönderir (MS olarak ölçülür). Performansı ölçmek için uygulama kodunun izleme özelliğini etkinleştirmek için kullanılır.|`console.time("app start");  app.start();  console.timeEnd("app start");`|  
+|`timeEnd(name)`|İsteğe bağlı parametre tarafından tanımlanan bir süreölçeri sonlandırır `name` . Bkz `time` . konsol komutu.|`console.time("app start"); app.start(); console.timeEnd("app start");`|  
+|`trace()`|Konsol penceresine bir yığın izlemesi gönderir. İzleme, tam çağrı yığınını içerir ve dosya adı, satır numarası ve sütun numarası gibi bilgileri içerir.|`console.trace();`|  
+|`warn(message)`|`message`, Bir uyarı simgesiyle önceden ortaya çıkacak konsol penceresine gönderir.<br /><br /> Komutu kullanılarak geçirilen nesneler bir dize değerine dönüştürülür.|`console.warn("warning message");`|  
   
 ## <a name="miscellaneous-commands"></a>Çeşitli komutlar  
- Bu komutlar da (koddan kullanılamaz) JavaScript konsol penceresinde kullanılabilir.  
+ Bu komutlar JavaScript Konsol penceresinde de mevcuttur (koddan kullanılamaz).  
   
 |Komut|Açıklama|Örnek|  
 |-------------|-----------------|-------------|  
-|`$0`, `$1`, `$2`, `$3`, `$4`|Konsol penceresinde belirtilen öğeyi döndürür. `$0` DOM Gezgini'nde seçili öğeyi döndürür `$1` DOM Gezgini ve dördüncü daha önce seçilen öğenin kadar benzeri daha önce seçilen öğeyi döndürür.|$3|  
-|`$(id)`|Kimliğe göre bir öğeyi döndürür Bunun için bir kısayol komut olduğunu `document.getElementById(id)`burada `id` öğesi kimliğini temsil eden bir dize|`$("contenthost")`|  
-|`$$(selector)`|CSS Seçici söz dizimini kullanarak belirtilen Seçici eşleşen öğeleri dizisi döndürür. Bunun için bir kısayol komut olduğunu `document.querySelectorAll()`.|`$$(".itemlist")`|  
-|`cd()`<br /><br /> `cd(window)`|İfade değerlendirme bağlamının sayfasını varsayılan düzey penceresinden belirtilen çerçeve penceresine değiştirmenize olanak tanır. Çağırma `cd()` en üst düzey penceresine bağlamı olmadan parametrelerini döndürür.|`cd();`<br /><br /> `cd(myframe);`|  
-|`select(element)`|Belirtilen öğeyi seçer [DOM Gezgini](../debugger/quickstart-debug-html-and-css.md).|`select(document.getElementById("element"));`<br /><br /> `select($("element"));`<br /><br /> `select($1);`|  
-|`dir(object)`|Belirtilen nesne için Görselleştirici döndürür. Görselleştirici, konsol penceresinde özellikleri incelemek için kullanabilirsiniz.|`dir(obj);`|  
+|`$0`, `$1`, `$2`, `$3`, `$4`|Konsol penceresine belirtilen öğeyi döndürür. `$0` DOM Gezgini 'nde Şu anda seçili olan öğeyi döndürür, daha `$1` önce DOM Gezgini 'nde seçili olan öğeyi ve daha sonra dördüncü daha önce seçilmiş olan öğeyi döndürür.|$3|  
+|`$(id)`|KIMLIĞE göre bir öğe döndürür. Bu `document.getElementById(id)` , `id` öğesi kimliği temsil eden bir dize olan için bir kısayol komutdur.|`$("contenthost")`|  
+|`$$(selector)`|CSS seçici söz dizimini kullanarak belirtilen seçiciyle eşleşen öğelerin dizisini döndürür. Bu bir kısayol komutdur `document.querySelectorAll()` .|`$$(".itemlist")`|  
+|`cd()`<br /><br /> `cd(window)`|İfade değerlendirmesinin bağlamını, sayfanın varsayılan en üst düzey penceresinden belirtilen çerçevenin penceresine değiştirmenize olanak sağlar. `cd()`Parametresiz çağırmak, üst düzey pencerenin bağlamını döndürür.|`cd();`<br /><br /> `cd(myframe);`|  
+|`select(element)`|[DOM Gezgini](../debugger/quickstart-debug-html-and-css.md)'nde belirtilen öğeyi seçer.|`select(document.getElementById("element"));`<br /><br /> `select($("element"));`<br /><br /> `select($1);`|  
+|`dir(object)`|Belirtilen nesne için bir Görselleştirici döndürür. Görselleştiriciyi konsol penceresindeki özellikleri incelemek için kullanabilirsiniz.|`dir(obj);`|  
   
-## <a name="checking-whether-a-console-command-exists"></a>Konsolu komut olup olmadığı denetleniyor  
- Belirli bir komut bunu kullanmayı denemeden önce mevcut olup olmadığını kontrol edebilirsiniz. Bu örnek varlığını denetler `console.log` komutu. Varsa `console.log` var, kodu çağırır.  
+## <a name="checking-whether-a-console-command-exists"></a>Konsol komutunun mevcut olup olmadığı denetleniyor  
+ Kullanmayı denemeden önce belirli bir komutun mevcut olup olmadığını kontrol edebilirsiniz. Bu örnek, komutun varlığını denetler `console.log` . Varsa `console.log` , kod onu çağırır.  
   
 ```javascript  
 if (console && console.log) {  
@@ -90,11 +90,11 @@ if (console && console.log) {
   
 ```  
   
-## <a name="examining-objects-in-the-javascript-console-window"></a>JavaScript Konsolu penceresi nesneleri İnceleme  
- JavaScript Konsolu penceresi kullandığınızda, kapsam içi herhangi bir nesne ile etkileşim kurabilir. Konsol penceresinde bir kapsam dışı nesne incelemek için kullanın `console.log` , `console.dir`, veya kodunuzun diğer komutlar. Kodunuzda bir kesme noktası ayarlayarak kapsamda olmakla birlikte alternatif olarak, konsol penceresinde nesneden etkileşim kurabilirsiniz (**kesme noktası** > **kesme noktası Ekle**).  
+## <a name="examining-objects-in-the-javascript-console-window"></a>JavaScript Konsol penceresinde nesneleri İnceleme  
+ JavaScript Konsol penceresini kullanırken kapsam içinde olan herhangi bir nesneyle etkileşime geçebilirsiniz. Konsol penceresinde kapsam dışı bir nesneyi incelemek için, `console.log` `console.dir` veya kodunuzda diğer komutları kullanın. Alternatif olarak, kodunuzda bir kesme noktası ayarlayarak (**kesme**noktası Ekle kesme noktası), nesne kapsam içinde olduğunda, nesne ile etkileşim kurabilirsiniz  >  **Insert Breakpoint**.  
   
-## <a name="ConsoleLog"></a> Console.log çıktı biçimlendirme  
- Birden çok bağımsız değişkenler, `console.log`, konsol bağımsız değişken bir dizi olarak kabul et ve çıktıyı birleştirir.  
+## <a name="formatting-consolelog-output"></a><a name="ConsoleLog"></a> Biçimlendirme konsolu. log çıktısı  
+ ' A birden çok bağımsız değişken geçirirseniz `console.log` , konsol bağımsız değişkenleri bir dizi olarak değerlendirir ve çıktıyı birleştirir.  
   
 ```javascript  
 var user = new Object();  
@@ -107,20 +107,20 @@ console.log(user.first, user.last);
   
 ```  
   
- `console.log` Ayrıca, çıktıyı biçimlendirmek için "printf" değiştirme desenleri destekler. Değiştirme desenleri ilk bağımsız değişken olarak kullanırsanız, ek bağımsız değişkenler, belirli kalıplarla kullanıldıkları sırada değiştirmek için kullanılır.  
+ `console.log` Ayrıca, çıktıyı biçimlendirmek için "printf" değiştirme desenlerini de destekler. İlk bağımsız değişkende değiştirme desenleri kullanıyorsanız, belirtilen desenleri kullanıldıkları sırada değiştirmek için ek bağımsız değişkenler kullanılacaktır.  
   
  Aşağıdaki değiştirme desenleri desteklenir:  
   
-- %s - dize  
-   %i - tamsayı  
-   %d - tamsayı  
-   %f - float  
-   %o - nesne  
-   %b - ikili  
-   %x - onaltılık  
-   %e - üs  
+- % s-dize  
+   % i-tamsayı  
+   % d-tamsayı  
+   % f-float  
+   % o-nesne  
+   % b-ikili  
+   % x-onaltılı  
+   % e-üs  
   
-  Değiştirme desenlerinde kullanmanın bazı örnekler şunlardır `console.log`:  
+  Aşağıda değiştirme desenlerinin kullanılmasına ilişkin bazı örnekler verilmiştir `console.log` :  
   
 ```javascript  
 var user = new Object();  
@@ -138,5 +138,5 @@ console.log("%s is %f years old!", user.first, user.age);
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hızlı Başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md)   
- [Hızlı Başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md)
+ [Hızlı başlangıç: JavaScript hata ayıklama](../debugger/quickstart-debug-javascript-using-the-console.md)   
+ [Hızlı başlangıç: HTML ve CSS hatalarını ayıklama](../debugger/quickstart-debug-html-and-css.md)

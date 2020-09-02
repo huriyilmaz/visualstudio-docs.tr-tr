@@ -18,28 +18,28 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: bb870bcc3c4297d5d1b403176f931f75e418d423
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149705"
 ---
 # <a name="formaturl-task"></a>FormatUrl Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bir URL doğru bir URL biçimine dönüştürür.  
+URL 'YI doğru URL biçimine dönüştürür.  
   
 ## <a name="parameters"></a>Parametreler  
- Parametreleri aşağıdaki tabloda açıklanmıştır `FormatUrl` görev.  
+ Aşağıdaki tablo, görevin parametrelerini açıklar `FormatUrl` .  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`InputUrl`|İsteğe bağlı `String` parametresi.<br /><br /> Biçimlendirilecek URL'sini belirtir.|  
-|`OutputUrl`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Biçimlendirilmiş bir URL belirtir.|  
+|`InputUrl`|İsteğe bağlı `String` parametre.<br /><br /> Biçimlendirilecek URL 'YI belirtir.|  
+|`OutputUrl`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Biçimlendirilen URL 'YI belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tabloda listelenen parametreleri sahip olmaya ek olarak, bu görev parametreleri devralan <xref:Microsoft.Build.Tasks.TaskExtension> kendisi sınıfının devraldığı <xref:Microsoft.Build.Utilities.Task> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
+ Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görevleri](../msbuild/msbuild-tasks.md)   
- [Görev Başvurusu](../msbuild/msbuild-task-reference.md)
+ [Görevlerinize](../msbuild/msbuild-tasks.md)   
+ [Görev başvurusu](../msbuild/msbuild-task-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Tasarım zamanında hata ayıklama | Microsoft Docs'
+title: 'İzlenecek yol: tasarım zamanında hata ayıklama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,22 +24,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 54466cc3561c194199bbad2b35cd00433da2b0f3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149425"
 ---
-# <a name="walkthrough-debugging-at-design-time"></a>İzlenecek yol: Tasarım Zamanında Düzenleme
+# <a name="walkthrough-debugging-at-design-time"></a>İzlenecek Yol: Tasarım Zamanında Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio kullanabileceğiniz **hemen** uygulamanız çalışmıyorken bir işlevi veya alt yordamı yürütmek için penceresi. İşlev veya alt yordam bir kesme noktası içeriyorsa, Visual Studio uygun noktada yürütmeyi keser. Ardından, programınızın durumunu incelemek için hata ayıklayıcı penceresini kullanabilirsiniz. Bu özellik tasarım zamanında hata ayıklama çağrılır.  
+Uygulamanız çalışmadığı sırada bir işlevi veya alt yordamı yürütmek için Visual Studio **anında** penceresini kullanabilirsiniz. İşlev veya alt yordam bir kesme noktası içeriyorsa, Visual Studio uygun noktada yürütmeyi keser. Daha sonra program durumlarınızı incelemek için hata ayıklayıcı pencerelerini kullanabilirsiniz. Bu özellik tasarım zamanında hata ayıklama olarak adlandırılır.  
   
- Aşağıdaki yordam, bu özelliği nasıl kullanabileceğinizi gösterir.  
+ Aşağıdaki yordamda bu özelliği nasıl kullanabileceğiniz gösterilmektedir.  
   
-### <a name="to-hit-breakpoints-from-the-immediate-window"></a>Hemen penceresinde kesme noktaları isabet  
+### <a name="to-hit-breakpoints-from-the-immediate-window"></a>Komut penceresinden isabet kesme noktaları için  
   
-1. Bir Visual Basic konsol uygulamasına aşağıdaki kodu yapıştırın:  
+1. Aşağıdaki kodu bir Visual Basic konsol uygulamasına yapıştırın:  
   
     ```  
     Module Module1  
@@ -63,24 +63,24 @@ Visual Studio kullanabileceğiniz **hemen** uygulamanız çalışmıyorken bir i
     End Module  
     ```  
   
-2. Okuma, satırında bir kesme noktası ayarlamak `s="Add BreakPoint Here"`.  
+2. ' I okuyan satırda bir kesme noktası ayarlayın `s="Add BreakPoint Here"` .  
   
-3. Aşağıdakileri yazın **hemen** penceresi: `?MyFunction<enter>`  
+3. **Hemen** penceresine şunu yazın:`?MyFunction<enter>`  
   
-4. Kesme noktalarına isabet ettirilmedi ve çağrı yığını doğru olduğunu doğrulayın.  
+4. Kesme noktasının isabet ettiğini ve çağrı yığınının doğru olduğunu doğrulayın.  
   
-5. Üzerinde **hata ayıklama** menüsünde tıklatın **devam**, yine de tasarım modunda olduğunu doğrulayın.  
+5. **Hata Ayıkla** menüsünde, **devam**' a tıklayın ve hala tasarım modunda olduğunuzdan emin olun.  
   
-6. Aşağıdakileri yazın **hemen** penceresi: `?MyFunction<enter>`  
+6. **Hemen** penceresine şunu yazın:`?MyFunction<enter>`  
   
-7. Aşağıdakileri yazın **hemen** penceresi: `?MySub<enter>`  
+7. **Hemen** penceresine şunu yazın:`?MySub<enter>`  
   
-8. Kesme noktasına isabet ve statik değişkenin değerini inceleyin doğrulayın `i` içinde **Yereller** penceresi. Bu değeri 3 olmalıdır.  
+8. Kesme noktasına isabet ettiğini doğrulayın ve Locals penceresinde static değişkenin değerini inceleyin `i` . **Locals** 3 değeri olmalıdır.  
   
-9. Çağrı yığınını doğru olduğundan emin olun.  
+9. Çağrı yığınının doğru olduğunu doğrulayın.  
   
-10. Üzerinde **hata ayıklama** menüsünde tıklatın **devam**, yine de tasarım modunda olduğunu doğrulayın.  
+10. **Hata Ayıkla** menüsünde, **devam**' a tıklayın ve hala tasarım modunda olduğunuzdan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)   
- [Hata Ayıklayıcısı Temel Bilgileri](../debugger/debugger-basics.md)
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)   
+ [Hata Ayıklayıcı Temel Bilgileri](../debugger/debugger-basics.md)

@@ -21,10 +21,10 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 15a94d20ade7bfe3e5aaac2c90bb3ba452ef4330
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72738181"
 ---
 # <a name="debugging-native-code-faqs"></a>Yerel Kod Hata Ayıklaması SSS
@@ -49,5 +49,5 @@ Aşağıdaki konular, bazı sık sorulan soruların yanıtlarını içerir:
 - [MFC 'de durdurulmuşsa, MFC 'yi çağıran Işleve nasıl geri alabilirim?](../debugger/how-to-get-back-to-the-function-that-called-mfc-if-halted.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

@@ -1,5 +1,5 @@
 ---
-title: ClickOnce uygulamalarında yerel ve uzak veri erişimi | Microsoft Docs
+title: ClickOnce uygulamalarında yerel ve uzak verilere erişme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-deployment
@@ -17,98 +17,98 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 1ce6b6ee633e926709b0c15c2234077055600a07
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65688125"
 ---
 # <a name="accessing-local-and-remote-data-in-clickonce-applications"></a>ClickOnce Uygulamalarında Yerel ve Uzak Veri Erişimi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Çoğu uygulama veri üretir veya tüketir. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Okuma ve yerel olarak ve uzaktan veri yazma için çeşitli seçenekler sunar.  
+Çoğu uygulama veri kullanır veya üretir. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , hem yerel olarak hem de uzaktan veri okumak ve yazmak için çeşitli seçenekler sunar.  
   
-## <a name="local-data"></a>Yerel veriler  
- İle [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], aşağıdaki yöntemlerden birini kullanarak yerel olarak veri depolamak ve yükleyin:  
+## <a name="local-data"></a>Yerel Veriler  
+ İle [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , aşağıdaki yöntemlerden herhangi birini kullanarak verileri yerel olarak yükleyebilir ve kaydedebilirsiniz:  
   
 - [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Veri dizini  
   
 - Yalıtılmış Depolama  
   
-- Diğer yerel dosyaları  
+- Diğer yerel dosyalar  
   
-### <a name="clickonce-data-directory"></a>ClickOnce Data Directory  
- Her [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] yerel bir bilgisayarda yüklü uygulama kullanıcının belgeler ve ayarlar klasöründe depolanan bir veri dizinine sahip. Dahil herhangi bir dosyayı bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama ve işaretli bir "veri" dosyası, bir uygulama yüklendiğinde bu dizine kopyalanır. Veri dosyaları en sık kullanılan bir dosya türünde olabilir metin, XML ve Microsoft Access .mdb dosyaları gibi veritabanı dosyaları.  
+### <a name="clickonce-data-directory"></a>ClickOnce veri dizini  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]Yerel bir bilgisayarda yüklü olan her uygulamanın, kullanıcının belgeler ve Ayarlar klasöründe depolanan bir veri dizini vardır. Bir uygulamaya eklenen [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ve "veri" dosyası olarak işaretlenen tüm dosyalar, bir uygulama yüklendiğinde bu dizine kopyalanır. Veri dosyaları, en sık kullanılan metin, XML ve Microsoft Access. mdb dosyaları gibi veritabanı dosyaları olan herhangi bir dosya türünde olabilir.  
   
- Veri dizini uygulama açıkça depolar ve tutar veriler, yönetilen uygulama verileri için tasarlanmıştır. Tüm statik uygulama bildiriminde "veri" olarak işaretlenen değil (nondependency) dosyalar yerine uygulama dizininde bulunur. Uygulamanın yürütülebilir (.exe) dosyaları ve derlemeleri bulunduğu bu dizindir.  
-  
-> [!NOTE]
-> Olduğunda bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulaması kaldırıldığında, kendi veri dizini de kaldırılır. Hiçbir zaman son kullanıcı tarafından yönetilen belgeler gibi verilerini depolamak için veri dizini kullanın.  
-  
-#### <a name="marking-data-files-in-a-clickonce-distribution"></a>ClickOnce dağıtım veri dosyalarında işaretleme  
- Mevcut bir dosyayı veri dizini içine koymak için var olan dosyayı bir veri dosyası olarak işaretlemelisiniz, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanın uygulama bildirim dosyası. Daha fazla bilgi için [nasıl yapılır: Bir ClickOnce uygulamasına bir veri dosyası dahil etme](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).  
-  
-#### <a name="reading-from-and-writing-to-the-data-directory"></a>Okuma ve yazma için veri dizini  
- Veri dizini okuma gerektirir, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama isteği okuma izni; benzer şekilde, dizine yazma izni gerektirir. Tam güven ile çalışacak şekilde yapılandırılmışsa, uygulamanızın otomatik olarak bu izne sahip. İzin yükseltilmesi ya da güvenilir uygulama dağıtımı'nı kullanarak uygulamanız için yükseltme yaptığınıza izinler hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md).  
+ Veri dizini, uygulamanın açıkça sakladığı ve sakladığı veriler olan uygulama tarafından yönetilen verilere yöneliktir. Uygulama bildiriminde "veri" olarak işaretlenmemiş tüm statik, bağımlılığı olmayan dosyalar, uygulama dizininde yer alır. Bu dizin, uygulamanın yürütülebilir (. exe) dosyalarının ve derlemelerinin bulunduğu yerdir.  
   
 > [!NOTE]
-> Kuruluşunuz güvenilen uygulama dağıtımı kullanmaz ve izin yükseltme devre dışı bırakılmış ise, izinleri sunduğundan başarısız olur.  
+> Bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama kaldırıldığında, veri dizini de kaldırılır. Belgeler gibi son kullanıcı tarafından yönetilen verileri depolamak için hiçbir şekilde veri dizinini kullanmayın.  
   
- Uygulamanızın bu izinlere sahip olduktan sonra veri dizini içindeki sınıflarda yöntem çağrıları kullanarak erişebildiğinizi <xref:System.IO>. Bir Windows Forms içinde veri dizini yolunu elde edebilirsiniz [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] kullanarak uygulama <xref:System.Deployment.Application.ApplicationDeployment.DataDirectory%2A> tanımlanan özellik <xref:System.Deployment.Application.ApplicationDeployment.CurrentDeployment%2A> özelliği <xref:System.Deployment.Application.ApplicationDeployment>. Verilerinize erişmek için en uygun ve önerilen yöntem budur. Aşağıdaki kod örneği, bir veri dosyası olarak dağıtımınızda bulunan alan ve csv.txt olarak adlı bir metin dosyası için bunun nasıl yapılacağını gösterir.  
+#### <a name="marking-data-files-in-a-clickonce-distribution"></a>ClickOnce dağıtımındaki veri dosyalarını işaretleme  
+ Var olan bir dosyayı veri dizinine koymak için, mevcut dosyayı [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanızın uygulama bildirimi dosyasında bir veri dosyası olarak işaretlemeniz gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: bir ClickOnce uygulamasına veri dosyası ekleme](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).  
+  
+#### <a name="reading-from-and-writing-to-the-data-directory"></a>Veri dizininden okuma ve yazma  
+ Veri dizininden okuma, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanızın okuma izni istemesini gerektirir; benzer şekilde, dizine yazmak Için yazma izni gerekir. Uygulamanız tam güvenle çalışacak şekilde yapılandırıldıysa bu izne otomatik olarak sahip olur. Izin yükseltmesini veya güvenilir uygulama dağıtımını kullanarak uygulamanıza ilişkin izinleri yükseltme hakkında daha fazla bilgi için bkz. [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md).  
+  
+> [!NOTE]
+> Kuruluşunuz güvenilir uygulama dağıtımı kullanmıyorsa ve Izin yükseltmesini devre dışı bırakırsanız, izinler başarısız olur.  
+  
+ Uygulamanız bu izinlere sahip olduktan sonra, içindeki sınıflarda yöntem çağrılarını kullanarak veri dizinine erişebilir <xref:System.IO> . Veri dizininin yolunu, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] <xref:System.Deployment.Application.ApplicationDeployment.DataDirectory%2A> öğesinin özelliğinde tanımlanan özelliğini kullanarak bir Windows Forms uygulaması içinde elde edebilirsiniz <xref:System.Deployment.Application.ApplicationDeployment.CurrentDeployment%2A> <xref:System.Deployment.Application.ApplicationDeployment> . Verilerinize erişmek için en kullanışlı ve önerilen yöntem budur. Aşağıdaki kod örneği, bir veri dosyası olarak dağıtımınıza eklediğiniz CSV.txt adlı bir metin dosyası için nasıl yapılacağını gösterir.  
   
  [!code-csharp[ClickOnce.OpenDataFile#1](../snippets/csharp/VS_Snippets_Winforms/ClickOnce.OpenDataFile/CS/Form1.cs#1)]
  [!code-vb[ClickOnce.OpenDataFile#1](../snippets/visualbasic/VS_Snippets_Winforms/ClickOnce.OpenDataFile/VB/Form1.vb#1)]  
   
- Veri dosyaları olarak dağıtımınızdaki dosyalardan işaretleme daha fazla bilgi için bkz: [nasıl yapılır: Bir ClickOnce uygulamasına bir veri dosyası dahil etme](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).  
+ Dağıtımınızdaki dosyaları veri dosyası olarak işaretleme hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir ClickOnce uygulamasına veri dosyası ekleme](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md).  
   
- İlgili değişkenleri kullanarak veri dizini yolunu de edinebilirsiniz <xref:System.Windows.Forms.Application> gibi sınıf <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A>.  
+ Ayrıca, sınıfında, gibi ilgili değişkenleri kullanarak veri dizini yolunu elde edebilirsiniz <xref:System.Windows.Forms.Application> <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A> .  
   
- Diğer dosya türlerini yönetmek için ek izinler gerektirebilir. Bir Access (.mdb) veritabanı dosyası kullanmak istiyorsanız, örneğin, uygulama tam güven ilgili kullanmak için onay gerekir <xref:System.Data> sınıfları.  
+ Diğer dosya türlerini işlemek için ek izinler gerekebilir. Örneğin, bir Access Database (. mdb) dosyası kullanmak istiyorsanız, uygulamanızın ilgili sınıfları kullanabilmesi için tam güven onayı gerekir <xref:System.Data> .  
   
 #### <a name="data-directory-and-application-versions"></a>Veri dizini ve uygulama sürümleri  
- Bir uygulamanın her sürümü diğer sürümlerden yalıtılmış kendi veri dizini vardır. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] böylece uygulamanın çalışma zamanında yeni veri dosyalarını oluşturmak için bir konum ister tüm veri dosyalarını dağıtımdaki bağımsız olarak bu dizin oluşturur. Bir uygulamanın yeni bir sürümü yüklü olduğunda [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] tüm dosyaları önceki sürümün Veri Dizininden yeni sürümün veri dizinine kopyalar; oluşturan veya orijinal Dağıtımdaki uygulama.  
+ Bir uygulamanın her sürümü kendi veri dizinine sahiptir ve bu, diğer sürümlerden yalıtılmıştır. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanın çalışma zamanında yeni veri dosyaları oluşturmak için bir konumu olması adına, dağıtıma dahil edilmiş herhangi bir veri dosyası olup olmadığından bağımsız olarak bu dizini oluşturur. Bir uygulamanın yeni bir sürümü yüklendiğinde, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] önceki sürümün veri dizinindeki tüm mevcut veri dosyalarını, özgün dağıtıma dahil edilip edilmeyeceğini veya uygulama tarafından oluşturulup oluşturulmayacağını yeni sürümün veri dizinine kopyalayacaktır.  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bir veri dosyası, farklı karma değeri uygulamanın yeni sürümü eski bir sürümü varsa dosyanın eski bir sürümünü daha yeni bir sunucu sürümüyle yerini alır. Ayrıca, yeni oluşturulan uygulama'nın önceki bir sürümüne sahip bir dosya aynı ada yeni sürümün dağıtımdaki bir dosya olarak [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] eski sürümün dosya yeni dosyanın üzerine yazar. Her iki durumda da, eski dosyaları içinde veri dizini adlı bir alt eklenecek `.pre`, böylece uygulama geçiş amacıyla eski verileri erişmeye devam edebilirsiniz.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , bir veri dosyasının yeni sürümde uygulamanın eski sürümünde farklı bir karma değeri varsa, dosyanın eski sürümünü sunucunun yeni sürümüyle değiştirir. Ayrıca, uygulamanın önceki sürümü yeni sürümün dağıtımına dahil olan bir dosyayla aynı ada sahip yeni bir dosya oluşturulduysa, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] eski sürümün dosyasının üzerine yeni dosya yazılır. Her iki durumda da eski dosyalar, adlı veri dizini içindeki bir alt dizine dahil edilir `.pre` , böylece uygulama geçiş amacıyla eski verilere erişmeye devam edebilir.  
   
- Daha ayrıntılı veri geçişini gerekiyorsa, kullanabileceğiniz [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtım için yeni veri dizini eski veriler dizininden özel geçiş yapmak API. Mevcut bir yüklemeyi kullanarak test gerekecektir <xref:System.Deployment.Application.ApplicationDeployment.IsFirstRun%2A>, güncelleştirme kullanarak indirin <xref:System.Deployment.Application.ApplicationDeployment.Update%2A> veya <xref:System.Deployment.Application.ApplicationDeployment.UpdateAsync%2A>, ve herhangi bir özel veri geçişi iş güncelleştirme sonrası kendi tamamlandı.  
+ Verilerin daha ayrıntılı geçirilmesi gerekiyorsa, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] eski veri dizininden yeni veri dizinine özel geçiş yapmak için DAĞıTıM API 'sini kullanabilirsiniz. Kullanarak kullanılabilir bir indirmeyi test etmeniz <xref:System.Deployment.Application.ApplicationDeployment.IsFirstRun%2A> , veya kullanarak güncelleştirmeyi indirmeniz <xref:System.Deployment.Application.ApplicationDeployment.Update%2A> <xref:System.Deployment.Application.ApplicationDeployment.UpdateAsync%2A> ve güncelleştirme tamamlandıktan sonra herhangi bir özel veri geçişi çalışmasını yapmanız gerekir.  
   
 ### <a name="isolated-storage"></a>Yalıtılmış Depolama  
- Yalıtılmış Depolama oluşturmak ve basit bir API kullanarak dosyalara erişmek için bir API sağlar. Depolanan dosyaların konumunu gerçek hem geliştiriciler hem de kullanıcı gizlenir.  
+ Yalıtılmış depolama, basit bir API kullanarak dosya oluşturmak ve bunlara erişmek için bir API sağlar. Depolanan dosyaların gerçek konumu hem geliştiriciden hem de kullanıcıdan gizlenir.  
   
- Yalıtılmış Depolama works tüm sürümlerinde [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. Yalıtılmış Depolama ayrıca kısmen güvenilir uygulamaların ek izin verilmesine gerek kalmadan çalışır. Uygulamanızı kısmi güvende çalıştırmanız gerekir, ancak uygulamaya özgü verileri korumalıdır yalıtılmış depolama kullanmanız gerekir.  
+ Yalıtılmış depolama, tüm sürümlerinde çalışmaktadır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . Yalıtılmış depolama, ek izin onayları gerekmeden kısmen güvenilen uygulamalarda da kullanılabilir. Uygulamanızın kısmi güvende çalışması gerekiyorsa, ancak uygulamaya özgü verileri korumalıdır, yalıtılmış depolamayı kullanmanız gerekir.  
   
- Daha fazla bilgi için [yalıtılmış depolama](https://msdn.microsoft.com/library/aff939d7-9e49-46f2-a8cd-938d3020e94e).  
+ Daha fazla bilgi için bkz. [yalıtılmış depolama](https://msdn.microsoft.com/library/aff939d7-9e49-46f2-a8cd-938d3020e94e).  
   
-### <a name="other-local-files"></a>Diğer yerel dosyaları  
- Uygulamanızı veya bunları raporlar, resimler, müzik ve benzeri gibi son kullanıcı verilerini kaydetmesi çalışmanız gerekiyorsa, uygulamanızı gerektirecek <xref:System.Security.Permissions.FileIOPermission> okuyup verileri yerel dosya sistemine yazma.  
+### <a name="other-local-files"></a>Diğer yerel dosyalar  
+ Uygulamanızın rapor, görüntü, müzik ve benzeri Son Kullanıcı verilerini ile çalışması veya kaydetmesi gerekiyorsa, uygulamanızın <xref:System.Security.Permissions.FileIOPermission> yerel dosya sistemine veri okuması ve yazması gerekir.  
   
 ## <a name="remote-data"></a>Uzak Veriler  
- Belirli bir noktada, uygulamanız müşteri verileri veya market bilgileri gibi uzak bir Web sitesinden bilgi almak büyük olasılıkla gerekir. Bu bölümde, uzak veri almak için en yaygın teknikleri açıklar.  
+ Bazı bir noktada, uygulamanız büyük olasılıkla müşteri verileri veya Pazar bilgileri gibi uzak bir Web sitesinden bilgi almak zorunda kalır. Bu bölümde, uzak verileri almak için en yaygın teknikler açıklanmaktadır.  
   
 ### <a name="accessing-files-by-using-http"></a>HTTP kullanarak dosyalara erişme  
- Kullanarak bir Web sunucusundan veri erişebilirsiniz <xref:System.Net.WebClient> veya <xref:System.Net.HttpWebRequest> sınıfını <xref:System.Net> ad alanı. Veriler, statik dosyalar olabilir veya [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ham metin veya XML verisi döndüren uygulamalar. Verilerinizi XML biçiminde verileri almanın en hızlı yolu kullanarak ise, <xref:System.Xml.XmlDocument> sınıf ayarlanmış <xref:System.Xml.XmlDocument.Load%2A> yöntemi bağımsız değişken olarak bir URL alır. Bir örnek için bkz. [DOM'da XML belgesi okuma](https://msdn.microsoft.com/library/a4fb291f-5630-49ba-a49a-5b66c3b71e49).  
+ Bir Web sunucusundan, <xref:System.Net.WebClient> ya da <xref:System.Net.HttpWebRequest> ad alanındaki sınıfını kullanarak verilere erişebilirsiniz <xref:System.Net> . Veriler, [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] ham metin veya XML verileri döndüren statik dosyalar ya da uygulamalar olabilir. Verileriniz XML biçimindeyse, verileri almanın en hızlı yolu, <xref:System.Xml.XmlDocument> <xref:System.Xml.XmlDocument.Load%2A> yöntemi bağımsız değişken olarak bir URL 'yi alan sınıfını kullanmaktır. Bir örnek için bkz. [Dom 'a BIR XML belgesi okuma](https://msdn.microsoft.com/library/a4fb291f-5630-49ba-a49a-5b66c3b71e49).  
   
- Uygulamanızın HTTP üzerinden uzak verilere eriştiğinde, güvenlik düşünmek zorunda. Varsayılan olarak, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanın erişim için ağ kaynaklarına, uygulamanızın nasıl dağıtıldığına bağlı olarak, kısıtlanmış olabilir. Bu kısıtlamalar, kötü amaçlı programlar ayrıcalıklı uzak veri erişimini veya bir kullanıcının bilgisayarına ağdaki diğer bilgisayarlara saldırmak için kullanmasını önlemek için uygulanır.  
+ Uygulamanız HTTP üzerinden uzak verilere eriştiğinde güvenliği göz önünde bulundurmanız gerekir. Varsayılan olarak uygulamanızın [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ağ kaynaklarına erişimi, uygulamanızın nasıl dağıtıldığına bağlı olarak kısıtlanmış olabilir. Bu kısıtlamalar, kötü amaçlı programların ayrıcalıklı uzak verilere erişim sağlamasını veya ağdaki diğer bilgisayarlara saldırmak için bir kullanıcının bilgisayarını kullanmasını önlemeye yönelik olarak uygulanır.  
   
- Aşağıdaki tabloda, kullanabileceğinize dağıtım stratejilerini ve varsayılan Web izinlerini listeler.  
+ Aşağıdaki tabloda, kullanabileceğiniz dağıtım stratejileri ve bunların varsayılan Web izinleri listelenmektedir.  
   
 |Dağıtım türü|Varsayılan ağ izinleri|  
 |---------------------|---------------------------------|  
-|Web yüklemesi|Yalnızca uygulamanın yüklendiği Web sunucusuna erişebilirsiniz|  
-|Dosya Paylaşımı yükleme|Tüm Web sunucularına erişemiyor|  
-|CD-ROM yükleme|Tüm Web sunucularına erişebilir|  
+|Web yüklemesi|Yalnızca uygulamanın yüklendiği Web sunucusuna erişebilir|  
+|Dosya paylaşımının yüklenmesi|Hiçbir Web sunucusuna erişilemiyor|  
+|CD-ROM yüklemesi|Herhangi bir Web sunucusuna erişebilir|  
   
- Varsa, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama, bir Web sunucusu güvenlik kısıtlamaları nedeniyle erişemez, uygulama onay gerekir <xref:System.Net.WebPermission> bu Web sitesi için. Güvenlik izinlerini artırma hakkında daha fazla bilgi için bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulaması, bakın [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]Uygulamanız güvenlik kısıtlamaları nedeniyle bir Web sunucusuna erişemediği takdirde uygulamanın <xref:System.Net.WebPermission> Bu web sitesi için onay olması gerekir. Bir uygulama için güvenlik izinlerini artırma hakkında daha fazla bilgi için [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bkz. [ClickOnce uygulamalarının güvenliğini sağlama](../deployment/securing-clickonce-applications.md).  
   
-### <a name="accessing-data-through-an-xml-web-service"></a>Bir XML Web hizmeti aracılığıyla verilere erişme  
- Verilerinizi XML Web hizmeti olarak kullanıma sunma, verileri bir XML Web hizmeti proxy'si kullanarak erişebilirsiniz. Proxy bir [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] sınıfı kullanarak oluşturduğunuz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. XML Web hizmeti işlemleri — müşteriler, yerleştirme siparişler ve benzeri alma gibi — proxy üzerinde yöntemler olarak sunulur. Bu Web Hizmetleri ham metin veya XML dosyaları çok daha kolay hale getirir.  
+### <a name="accessing-data-through-an-xml-web-service"></a>XML Web hizmeti üzerinden verilere erişme  
+ Verilerinizi bir XML Web hizmeti olarak kullanıma sundıysanız, verilere bir XML Web hizmeti proxy 'si kullanarak erişebilirsiniz. Proxy, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] kullanarak oluşturduğunuz bir sınıftır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . XML Web hizmeti 'nin (örneğin, müşterileri alma, sipariş yerleştirme vb.) işlemleri proxy üzerinde yöntemler olarak gösterilir. Bu, Web hizmetlerinin ham metin veya XML dosyalarından kullanımını çok daha kolay hale getirir.  
   
- Aynı güvenlik kısıtlamalara göre XML Web hizmeti HTTP üzerinden çalışırsa, hizmet kısıtlanacaktır <xref:System.Net.WebClient> ve <xref:System.Net.HttpWebRequest> sınıfları.  
+ XML Web hizmetiniz HTTP üzerinden çalışıyorsa, hizmet ve sınıflarıyla aynı güvenlik kısıtlamalarına göre bağlanır <xref:System.Net.WebClient> <xref:System.Net.HttpWebRequest> .  
   
-### <a name="accessing-a-database-directly"></a>Bir veritabanına doğrudan erişme  
- Sınıfları için kullanabileceğiniz <xref:System.Data> ağınızı, ancak SQL Server için güvenlik sorunları hesaba gibi bir veritabanı sunucusu ile doğrudan bağlantı kurmak için ad alanı. HTTP isteklerinin tersine, veritabanı bağlantı isteklerini kısmi güven altında varsayılan olarak her zaman Yasak; yüklerseniz bu izin varsayılan olarak yalnızca bulunur, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ROM'dan uygulama. Bu, uygulama tam güven verir. Belirli bir SQL Server veritabanına erişimi etkinleştirmek için uygulamanızın istemelisiniz <xref:System.Data.SqlClient.SqlClientPermission> ona; SQL Server dışındaki bir veritabanına erişimi etkinleştirmek için bunu istemelisiniz <xref:System.Data.OleDb.OleDbPermission>.  
+### <a name="accessing-a-database-directly"></a>Veritabanına doğrudan erişme  
+ <xref:System.Data>Ağınızdaki SQL Server gibi bir veritabanı sunucusuyla doğrudan bağlantı kurmak için ad alanı içindeki sınıfları kullanabilirsiniz, ancak güvenlik sorunlarını dikkate almalısınız. HTTP isteklerinden farklı olarak, veritabanı bağlantı istekleri kısmi güven altında her zaman varsayılan olarak yasaktır; yalnızca [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanızı BIR CD-ROM ' d a n yüklerseniz varsayılan olarak bu izinlere sahip olursunuz. Bu, uygulamanıza tam güven sağlar. Belirli bir SQL Server veritabanına erişimi etkinleştirmek için uygulamanızın buna istemesi gerekir <xref:System.Data.SqlClient.SqlClientPermission> ; SQL Server dışında bir veritabanına erişimi etkinleştirmek için, istemesi gerekir <xref:System.Data.OleDb.OleDbPermission> .  
   
- Çoğu zaman, veritabanına doğrudan erişim gerekmez, ancak bunun yerine yazılan bir Web sunucusu uygulaması aracılığıyla erişirsiniz [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] veya bir XML Web hizmeti. Bu şekilde tüm veritabanı erişimlerinin ise genellikle en iyi yöntem, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama bir Web sunucusundan dağıtılır. Kısmi güven Server'da uygulamanızın izinlerini yükseltme olmadan erişebilir.  
+ Çoğu zaman, veritabanına doğrudan erişmeniz gerekmez, ancak [!INCLUDE[vstecasp](../includes/vstecasp-md.md)] veya BIR XML Web hizmetinde yazılmış bir Web sunucusu uygulaması aracılığıyla bunun yerine ona erişir. Bu şekilde veritabanına erişmek, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulamanız bir Web sunucusundan dağıtılırsa en iyi yöntemdir. Uygulamanızın izinlerini yükseltme yapmadan kısmi güvende sunucuya erişebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Nasıl yapılır: ClickOnce Uygulamasına bir Veri Dosyası Dahil Etme](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)

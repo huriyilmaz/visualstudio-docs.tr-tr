@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Küme hata ayıklama ve yayın yapılandırmaları | Microsoft Docs'
+title: 'Nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -36,39 +36,39 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4984355c12a92529a943fe6778740ac2d7f522f8
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65703658"
 ---
-# <a name="how-to-set-debug-and-release-configurations"></a>Nasıl yapılır: Küme hata ayıklama ve yayın yapılandırmaları
+# <a name="how-to-set-debug-and-release-configurations"></a>Nasıl Yapılır: Hata Ayıklama ve Dağıtım Yapılandırmalarını Ayarlama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio projeleri ayrı sürümü ve hata ayıklama yapılandırması, programınız için. Adların da ifade ettiği şekilde, hata ayıklama sürümünün hata ayıklama ve yayın sürümünü son sürüm dağıtımı oluşturun.  
+Visual Studio projeleri, programınız için ayrı sürüm ve hata ayıklama yapılandırmalarına sahiptir. Adların de gösterildiği gibi, hata ayıklama için hata ayıklama sürümü ve son sürüm dağıtımı için yayın sürümü oluşturacaksınız.  
   
- Programınızın hata ayıklama yapılandırması tam sembolik hata ayıklama bilgileri ve en iyileştirme olmadan derlenir. Kaynak kodu ve oluşturulan yönergeler arasındaki ilişki daha karmaşık olacağından en iyileştirme hata ayıklama, karmaşık hale getirir.  
+ Programınızın hata ayıklama yapılandırması, tam sembolik hata ayıklama bilgileriyle derlenir ve iyileştirme yapılmaz. Kaynak kodu ve oluşturulan yönergeler arasındaki ilişki daha karmaşık olduğundan iyileştirme, hata ayıklamayı karmaşıklaştırır.  
   
- Programınızın sürüm yapılandırması hiçbir sembolik hata ayıklama bilgisi içermez ve tamamen en iyileştirilmiştir. Hata ayıklama bilgileri oluşturulabilir PDB dosyalarında kullanılan derleyici seçeneklerine bağlı olarak. PDB dosyaları oluşturmak, daha sonra yayım sürümünüzde hata ayıklama gerekirse çok kullanışlı olabilir.  
+ Programınızın yayın yapılandırması sembolik hata ayıklama bilgisi içermez ve tamamen iyileştirilir. Hata ayıklama bilgileri, kullanılan derleyici seçeneklerine bağlı olarak PDB dosyalarında oluşturulabilir. Daha sonra yayın sürümünüzde hata ayıklaması yapmanız gerekiyorsa PDB dosyalarının oluşturulması çok yararlı olabilir.  
   
- Derleme yapılandırmaları hakkında daha fazla bilgi için bkz. [derleme yapılandırmalarını anlama](../ide/understanding-build-configurations.md).  
+ Derleme konfigürasyonları hakkında daha fazla bilgi için bkz. [derleme yapılandırmasını anlama](../ide/understanding-build-configurations.md).  
   
- Derleme yapılandırmasını değiştirebilirsiniz **derleme** menüsünde, araç çubuğundan veya projenin özellik sayfalarındaki. Dile özgü proje özellik sayfaları. Aşağıdaki yordam, menü ve araç, yapı yapılandırmasını değiştirme işlemi gösterilmektedir. Farklı dillerde projelerde derleme yapılandırmasını değiştirme hakkında daha fazla bilgi için İlgili Konular'a bölümüne bakın.  
+ Yapı yapılandırmasını, araç çubuğundan veya projenin özellik sayfalarında **Yapı** menüsünden değiştirebilirsiniz. Proje özellik sayfaları dile özgüdür. Aşağıdaki yordamda, yapı yapılandırmasının menü ve araç çubuğundan nasıl değiştirileceği gösterilmektedir. Farklı dillerdeki projelerde yapı yapılandırmasını değiştirme hakkında daha fazla bilgi için aşağıdaki Ilgili konular bölümüne bakın.  
   
 ### <a name="to-change-the-build-configuration"></a>Yapı yapılandırmasını değiştirmek için  
   
-1. Yapı menüsünde: tıklayın **derleme / Configuration Manager**, ardından **hata ayıklama** veya **yayın**.  
+1. Derleme menüsünden: **Oluştur/Configuration Manager**' a tıklayın, ardından **Hata Ayıkla** veya **Yayınla**' yı seçin.  
   
-2. Ya da araç çubuğunda **hata ayıklama** veya **yayın** gelen **çözüm yapılandırmaları** liste kutusu.  
+2. Araç çubuğunda, **çözüm yapılandırması** liste kutusunda **Hata Ayıkla** veya **Yayınla** ' yı seçin.  
   
-     ![araç derleme Yapılandırması](../debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
+     ![araç çubuğu derleme yapılandırması](../debugger/media/toolbarbuildconfiguration.png "ToolbarBuildConfiguration")  
   
-     Bu araç, Express sürümlerinde kullanılamaz. Kullanabileceğiniz **Çözümü Derle F6** ve **hata ayıklamayı Başlat F5** menü öğelerinin yapılandırmayı seçin.  
+     Bu araç çubuğu Express sürümlerinde kullanılamaz. Yapılandırmayı seçmek için **Build Solution komutunu F6** ve **hata ayıklamayı Başlat F5** menü öğelerini kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md)   
  [C++ hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
- [Hata ayıklama yapılandırması proje ayarları C#](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Hata ayıklama yapılandırması proje ayarları bir Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [Nasıl yapılır: Yapılandırmaları oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md)   
- [Hata ayıklama ve yayın proje yapılandırmaları](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)
+ [C# hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Visual Basic hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [Nasıl yapılır: yapılandırma oluşturma ve düzenleme](../ide/how-to-create-and-edit-configurations.md)   
+ [Hata ayıklama ve yayın projesi yapılandırması](https://msdn.microsoft.com/0440b300-0614-4511-901a-105b771b236e)

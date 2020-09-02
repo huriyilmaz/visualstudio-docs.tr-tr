@@ -19,14 +19,14 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2704f4e73b1077f14c89e377453a858d341a2738
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72738274"
 ---
 # <a name="debugger-settings-and-preparation"></a>Hata Ayıklayıcısı Ayarları ve Hazırlığı
-Bu bölümde hata ayıklayıcı ile ilgili özellik ayarları ve [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı ile programınızda hata ayıklaması yapmak için gereken hazırlık açıklanmaktadır. Programınızı proje şablonlarını kullanarak [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] oluşturursanız, bu ayarlar hata ayıklama yapılandırmasında sizin için doğru şekilde ayarlanır.
+Bu bölümde hata ayıklayıcı ile ilgili özellik ayarları ve hata ayıklayıcıyla programınızın hatalarını ayıklamak için gereken hazırlık açıklanmaktadır [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] . Programınızı [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] proje şablonlarını kullanarak oluşturursanız, bu ayarlar hata ayıklama yapılandırmasında sizin için doğru şekilde ayarlanır.
 
  Daha fazla bilgi için bkz. [nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md).
 
@@ -34,7 +34,7 @@ Bu bölümde hata ayıklayıcı ile ilgili özellik ayarları ve [!INCLUDE[vsprv
 
  [Nasıl yapılır: hata ayıklayıcı ayarlarını belirtme](../debugger/how-to-specify-debugger-settings.md) **Seçenekler** iletişim kutusunda hata ayıklayıcı ayarlarını açıklar.
  
- [Hata ayıklayıcı proje ayarları](../debugger/debugger-project-settings.md) Hata ayıklayıcı ayarlarını belirtme, hata ayıklama ve sürüm yapılandırmalarının nasıl ayarlanacağı ve sembolleri ve kaynak kodunun nasıl yönetileceği açıklanmaktadır. Ayrıca C++, C# F#,, ve Visual Basic hata ayıklama yapılandırmalarının yanı sıra web projelerinin uygun proje ayarlarını da açıklar.
+ [Hata ayıklayıcı proje ayarları](../debugger/debugger-project-settings.md) Hata ayıklayıcı ayarlarını belirtme, hata ayıklama ve sürüm yapılandırmalarının nasıl ayarlanacağı ve sembolleri ve kaynak kodunun nasıl yönetileceği açıklanmaktadır. Ayrıca, C++, C#, F # ve Visual Basic hata ayıklama yapılandırmalarının yanı sıra web projelerinin uygun proje ayarlarını da açıklar.
 
  [DLL projelerinde hata ayıklama](../debugger/debugging-dll-projects.md) DLL projelerinde hata ayıklama, DLL projesinden hata ayıklama, karışık modda hata ayıklama ve yönetilen kod Web denetim kitaplığında hata ayıklama için önerilen proje ayarlarını açıklar.
 
@@ -47,6 +47,6 @@ Bu bölümde hata ayıklayıcı ile ilgili özellik ayarları ve [!INCLUDE[vsprv
  [Nasıl yapılır: hata ayıklama için eski bir .NET Framework sürümünü belirtme](../debugger/how-to-specify-a-dotnet-framework-version-for-debugging.md) Hangi sürümün kullanılacağını hata ayıklayıcı olarak göstermek için bir kayıt defteri anahtarının nasıl ayarlanacağını açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
-- [Visual Studio’da hata ayıklama](../debugger/index.yml)
+- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [Visual Studio'da Hata Ayıklama](../debugger/index.yml)
 - [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md)

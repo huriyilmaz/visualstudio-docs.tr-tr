@@ -1,5 +1,5 @@
 ---
-title: GetFrameworkPath görevi | Microsoft Docs
+title: GetFrameworkPath Görevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: msbuild
@@ -20,36 +20,36 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2b528d0a4971d1d070c69d12cdb9a693d9a30f20
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149490"
 ---
 # <a name="getframeworkpath-task"></a>GetFrameworkPath Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yolunu alır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] derlemeler.  
+Derlemelerin yolunu alır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .  
   
 ## <a name="task-parameters"></a>Görev parametreleri  
- Parametreleri aşağıdaki tabloda açıklanmıştır `GetFrameworkPath` görev.  
+ Aşağıdaki tablo, görevin parametrelerini açıklar `GetFrameworkPath` .  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`FrameworkVersion11Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Framework sürüm 1.1 derlemeleri için yolu varsa içeriyor. Aksi halde döndürür `null`.|  
-|`FrameworkVersion20Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Framework sürüm 2.0 derlemeleri için yolu varsa içeriyor. Aksi halde döndürür `null`.|  
-|`FrameworkVersion30Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Framework sürüm 3.0 derlemeleri için yolu varsa içeriyor. Aksi halde döndürür `null`.|  
-|`FrameworkVersion35Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Framework sürüm 3.5 derlemeleri için yolu varsa içeriyor. Aksi halde döndürür `null`.|  
-|`FrameworkVersion40Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Framework sürüm 4.0 derlemeleri için yolu varsa içeriyor. Aksi halde döndürür `null`.|  
-|`Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa, son framework derlemeleri için yolu içerir. Aksi halde döndürür `null`.|  
+|`FrameworkVersion11Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa Framework sürüm 1,1 derlemelerinin yolunu içerir. Aksi halde döndürür `null` .|  
+|`FrameworkVersion20Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa Framework sürüm 2,0 derlemelerinin yolunu içerir. Aksi halde döndürür `null` .|  
+|`FrameworkVersion30Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa Framework sürüm 3,0 derlemelerinin yolunu içerir. Aksi halde döndürür `null` .|  
+|`FrameworkVersion35Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa Framework sürüm 3,5 derlemelerinin yolunu içerir. Aksi halde döndürür `null` .|  
+|`FrameworkVersion40Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa Framework sürüm 4,0 derlemelerinin yolunu içerir. Aksi halde döndürür `null` .|  
+|`Path`|İsteğe bağlı `String` çıkış parametresi.<br /><br /> Varsa, en son çerçeve derlemelerinin yolunu içerir. Aksi halde döndürür `null` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Çeşitli sürümlerini [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] olan yüklüyse, bu görev sürümü döndürür [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] üzerinde çalışmak üzere tasarlanmıştır.  
+ Uygulamasının birkaç sürümü [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] yüklüyse, bu görev [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] üzerinde çalışmak üzere tasarlanan sürümü döndürür.  
   
- Yukarıda listelenen parametrelerin yanı sıra, bu görev parametreleri devralan <xref:Microsoft.Build.Tasks.TaskExtension> kendisi sınıfının devraldığı <xref:Microsoft.Build.Utilities.Task> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `GetFrameworkPath` yolunu depolamak için görev [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] içinde `FrameworkPath` özelliği.  
+ Aşağıdaki örnek, öğesini `GetFrameworkPath` özelliğindeki öğesine yolunu depolamak için kullanır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `FrameworkPath` .  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -64,5 +64,5 @@ Yolunu alır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] derlemeler.
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Görevleri](../msbuild/msbuild-tasks.md)   
- [Görev Başvurusu](../msbuild/msbuild-task-reference.md)
+ [Görevlerinize](../msbuild/msbuild-tasks.md)   
+ [Görev başvurusu](../msbuild/msbuild-task-reference.md)

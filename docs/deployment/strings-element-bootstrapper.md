@@ -1,5 +1,5 @@
 ---
-title: '&lt;Dizeleri&gt; öğesi (Önyükleyici) | Microsoft Docs'
+title: '&lt;Dizeler &gt; öğesi (önyükleyici) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -19,16 +19,16 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a8bc56bf980bba6326b3615b6892ec555b795ec8
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66747405"
 ---
-# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Dizeleri&gt; öğesi (Önyükleyici)
+# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Dizeler &gt; öğesi (önyükleyici)
 Ürün adları, paket adları ve yükleme hata iletileri için yerelleştirilmiş dizeleri tanımlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <Strings>
@@ -40,19 +40,19 @@ ms.locfileid: "66747405"
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `Strings` Öğesi alt öğesi olan `Package` öğesi. Bu öznitelikleri yok.
+ `Strings`Öğesi, öğesinin bir alt öğesidir `Package` . Hiç özniteliği yok.
 
 ## <a name="string"></a>Dize
- `String` Öğesi alt öğesi olan `Strings` öğesi. A `Strings` öğesi bir veya daha fazla olabilir `String` öğeleri.
+ `String`Öğesi, öğesinin bir alt öğesidir `Strings` . Bir `Strings` öğenin bir veya daha fazla öğesi olabilir `String` .
 
- `String` Aşağıdaki özniteliklere sahiptir.
+ `String` aşağıdaki özniteliğe sahiptir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`Name`|Gerekli. Dize adı.|
+|`Name`|Gereklidir. Dizenin adı.|
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, tüm dizeleri İngilizce için .NET Framework yükleyicisi belirtir.
+ Aşağıdaki kod örneği, .NET Framework yükleyicisi için tüm Ingilizce dizeleri belirtir.
 
 ```xml
 <Strings>
@@ -74,4 +74,4 @@ ms.locfileid: "66747405"
 ```
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [\<Paket > öğesi](../deployment/package-element-bootstrapper.md)
+- [\<Package> dosyalarında](../deployment/package-element-bootstrapper.md)

@@ -1,5 +1,5 @@
 ---
-title: XmlPoke Görev | Microsoft Dokümanlar
+title: XmlPoke Görevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -17,34 +17,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b69afc20d15802ad79b201ca38e2d69f1d473b1e
-ms.sourcegitcommit: 0b8497b720eb06bed8ce2194731177161b65eb84
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82072519"
 ---
 # <a name="xmlpoke-task"></a>XmlPoke görevi
 
-XPath sorgusunda belirtilen değerleri XML dosyasına ayarlar.
+Bir XPath sorgusu tarafından belirtilen değerleri bir XML dosyasına ayarlar.
 
 ## <a name="parameters"></a>Parametreler
 
- Aşağıdaki tabloda görevparametreleri `XmlPoke` açıklanmaktadır.
+ Aşağıdaki tablo, görevin parametrelerini açıklar `XmlPoke` .
 
 |Parametre|Açıklama|
 |---------------|-----------------|
-|`Namespaces`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgu önekleri için ad alanlarını belirtir. `Namespaces`özniteliklere `Namespace` `Prefix` sahip elemanlardan oluşan bir XML parçacığıdır. `Uri` Öznitelik, `Prefix` öznitelikte `Uri` belirtilen ad alanıyla ilişkilendirmek için önek belirtir. Boş `Prefix`kullanmayın.|
+|`Namespaces`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgu ön ekleri için ad alanlarını belirtir. `Namespaces``Namespace`özniteliği ve öznitelikleri olan öğelerinden oluşan BIR XML kod `Prefix` parçacığı `Uri` . Öznitelik, `Prefix` özniteliğinde belirtilen ad alanıyla ilişkilendirilecek ön eki belirtir `Uri` . Boş kullanmayın `Prefix` .|
 |`Query`|İsteğe bağlı `String` parametre.<br /><br /> XPath sorgusunu belirtir.|
 |`Value`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> Belirtilen yola eklenecek değeri belirtir.|
-|`XmlInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> XML girişini bir dosya yolu olarak belirtir.|
+|`XmlInputPath`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> parametre.<br /><br /> XML girişini dosya yolu olarak belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
- Tabloda listelenen parametrelere sahip olmanın yanı sıra, bu görev <xref:Microsoft.Build.Tasks.TaskExtension> sınıftan devralınan parametreleri de devralır. <xref:Microsoft.Build.Utilities.Task> Bu ek parametrelerin ve açıklamalarının listesi için [TaskExtension taban sınıfına](../msbuild/taskextension-base-class.md)bakın.
+ Bu görev, tabloda listelenen parametrelere sahip olmanın yanı sıra sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).
 
 ## <a name="example"></a>Örnek
 
-Burada değiştirmek için bir sample.xml:
+Değiştirilecek bir sample.xml aşağıda verilmiştir:
 
 ```xml
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -55,7 +55,7 @@ Burada değiştirmek için bir sample.xml:
 </Package>
 ```
 
-Bu örnekte, değiştirmek `/Package/mp:PhoneIdentity/PhoneProductId`istiyorsanız,
+Bu örnekte, değiştirmek istiyorsanız, `/Package/mp:PhoneIdentity/PhoneProductId` şunu kullanın
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -77,7 +77,7 @@ Bu örnekte, değiştirmek `/Package/mp:PhoneIdentity/PhoneProductId`istiyorsan�
 </Project>
 ```
 
-`dn`burada varsayılan ad alanı için yapay ad alanı öneki olarak kullanılır.
+`dn` Varsayılan ad alanı için yapay bir ad alanı öneki olarak kullanılır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

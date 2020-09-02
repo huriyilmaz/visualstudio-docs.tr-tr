@@ -1,5 +1,5 @@
 ---
-title: C++ Projelerde hata ayıklama özelliklerini etkinleştirme (-D_DEBUG) | Microsoft Docs
+title: C++ projelerinde hata ayıklama özelliklerini etkinleştirme (-D_DEBUG) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -25,22 +25,22 @@ manager: jillfra
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 19d341cba47e0a3d2259cc57d239c63420095347
-ms.sourcegitcommit: 5f6ad1cefbcd3d531ce587ad30e684684f4c4d44
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72737950"
 ---
-# <a name="enabling-debug-features-in-c-projects-d_debug"></a>C++ Projelerde hata ayıklama özelliklerini etkinleştirme (/D_DEBUG)
-@No__t_0, programınızı derleme **_Hata ayıklama** simgesiyle derlerken onay gibi hata ayıklama özellikleri etkinleştirilir. **_Debug** 'ı iki şekilde tanımlayabilirsiniz:
+# <a name="enabling-debug-features-in-c-projects-d_debug"></a>C++ projelerinde hata ayıklama özelliklerini etkinleştirme (/D_DEBUG)
+' De [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] , program, tanımlı **_DEBUG** simgesiyle derlerken onay gibi hata ayıklama özellikleri etkinleştirilir. **_DEBUG** iki şekilde tanımlayabilirsiniz:
 
-- Kaynak kodunuzda **#define _HATA ayıklama** belirtin veya
+- Kaynak kodunuzda **#define _debug** belirtin veya
 
-- **/D_DEBUG** derleyici seçeneğini belirtin. (Sihirbazları kullanarak projenizi Visual Studio 'da oluşturursanız, **/D_DEBUG** hata ayıklama yapılandırmasında otomatik olarak tanımlanır.)
+- **/D_DEBUG** derleyici seçeneğini belirtin. (Sihirbazları kullanarak Visual Studio 'da projenizi oluşturursanız **/D_DEBUG** hata ayıklama yapılandırmasında otomatik olarak tanımlanır.)
 
-  **_Hata ayıklama** tanımlandığında, derleyici **#ifdef _debug** ve `#endif` ile çevrelenen kod bölümlerini derler.
+  **_DEBUG** tanımlandığında derleyici, **#ifdef _debug** ve ile çevrelenen kod bölümlerini derler `#endif` .
 
-  MFC programının hata ayıklama yapılandırması MFC kitaplığının hata ayıklama sürümüyle bağlantı etmelidir. MFC üst bilgi dosyaları, tanımladığınız simgelere göre ( **_Debug** ve **_UNICODE**gıbı) bağlantılı olarak MFC kitaplığının doğru sürümünü belirlenir. Ayrıntılar için bkz. [MFC kitaplık sürümleri](/cpp/mfc/mfc-library-versions).
+  MFC programının hata ayıklama yapılandırması MFC kitaplığının hata ayıklama sürümüyle bağlantı etmelidir. MFC başlık dosyaları, **_DEBUG** ve **_UNICODE**gibi tanımladığınız SIMGELERE göre bağlantı için MFC kitaplığının doğru sürümünü belirlenir. Ayrıntılar için bkz. [MFC kitaplık sürümleri](/cpp/mfc/mfc-library-versions).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

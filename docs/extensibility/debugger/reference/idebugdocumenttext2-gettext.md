@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetText | Microsoft Dokümanlar
+title: 'IDebugDocumentText2:: GetText | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 2429bdf3f09eff168210a7b835a9e506d74d63ea
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80731582"
 ---
 # <a name="idebugdocumenttext2gettext"></a>IDebugDocumentText2::GetText
 Belgedeki belirtilen konumdan metni alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetText(
@@ -47,22 +47,22 @@ int GetText(
 
 ## <a name="parameters"></a>Parametreler
 `pos`\
-[içinde] Alınacak metnin konumunu gösteren [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) bir yapı.
+'ndaki Alınacak metnin konumunu gösteren [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) yapısı.
 
 `cMaxChars`\
-[içinde] Alınacak metnin en fazla karakter sayısı.
+'ndaki Alınacak metnin en fazla karakter sayısı.
 
 `pText`\
-[içinde, dışarı] İstenilen metinle doldurulacak bir arabellek için bir işaretçi. Bu arabellek en az `cMaxChars` sayıda geniş karakter içerebilmelidir.
+[in, out] İstenen metinle doldurulacak bir arabelleğin işaretçisi. Bu arabelleğin en az `cMaxChars` sayıda karakter içermesi gerekir.
 
 `pcNumChars`\
-[çıkış] Gerçekte alınan karakter sayısını döndürür.
+dışı Gerçekten alınan karakter sayısını döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
-Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="example"></a>Örnek
-Bu örnek, bu yöntemin C#'dan nasıl çağrılabileceğini gösterir.
+Bu örnek, bu yöntemin C# ' den nasıl çağrılabilecek olduğunu gösterir.
 
 ```csharp
 using System.Runtime.Interop.Services;

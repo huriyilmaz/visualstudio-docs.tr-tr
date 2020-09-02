@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 6ab66089de25b7648b13e1ba05f88ab55b7868df
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348034"
 ---
 # <a name="watch-variables-with-watch-windows-and-quickwatch"></a>Pencereleri Izle ve hızlı Gözcü ile değişkenleri izleyin
@@ -116,7 +116,7 @@ Ayrıca, izleme penceresi nesnenin özellik listesini görüntülerken özellik 
 
 ::: moniker-end
 
-### <a name="refresh-watch-values"></a><a name="bkmk_refreshWatch"></a>İzleme değerlerini Yenile
+### <a name="refresh-watch-values"></a><a name="bkmk_refreshWatch"></a> İzleme değerlerini Yenile
 
 Bir ifade değerlendirildiğinde bir yenileme simgesi (dairesel ok) **izleme** penceresinde görünebilir. Yenile simgesi bir hatayı veya güncel olmayan bir değeri gösterir.
 
@@ -153,7 +153,7 @@ Yenileme simgesini kullanmayı göstermek için:
 
 1. Değeri yenilemek için Yenile simgesini seçin veya ara çubuğuna basın. Hata ayıklayıcı ifadeyi yeniden değerlendirsin.
 
-### <a name="expression-side-effects"></a><a name="bkmk_sideEffects"></a>İfade yan etkileri
+### <a name="expression-side-effects"></a><a name="bkmk_sideEffects"></a> İfade yan etkileri
 
 Bazı ifadelerin değerlendirilmesi bir değişkenin değerini değiştirebilir veya aksi takdirde uygulamanızın durumunu etkileyebilir. Örneğin, aşağıdaki ifadeyi değerlendirmek değerini değiştirir `var1` :
 
@@ -169,7 +169,7 @@ Yan efekt atamasını önlemenin bir yolu otomatik işlev değerlendirmesini dev
 
 Yalnızca C# için, özellikler veya örtük işlev çağrıları değerlendirmesi kapalıyken, **izleme** penceresindeki bir değişken **adına** **AC** biçim değiştiricisi ekleyerek değerlendirmeyi zorlayabilirsiniz. Bkz. [C# içindeki biçim belirticileri](../debugger/format-specifiers-in-csharp.md).
 
-## <a name="use-object-ids-in-the-watch-window-c-and-visual-basic"></a><a name="bkmk_objectIds"></a>İzleme penceresi nesne kimliklerini kullanma (C# ve Visual Basic)
+## <a name="use-object-ids-in-the-watch-window-c-and-visual-basic"></a><a name="bkmk_objectIds"></a> İzleme penceresi nesne kimliklerini kullanma (C# ve Visual Basic)
 
 Bazen belirli bir nesnenin davranışını gözlemlemek isteyebilirsiniz. Örneğin, bir yerel değişken tarafından başvurulan bir nesneyi, bu değişken kapsam dışına çıktıktan sonra izlemek isteyebilirsiniz. C# ve Visual Basic içinde, başvuru türlerinin belirli örnekleri için nesne kimlikleri oluşturabilir ve bunları **izleme** penceresinde ve kesme noktası koşullarında kullanabilirsiniz. Nesne KIMLIĞI, ortak dil çalışma zamanı (CLR) hata ayıklama Hizmetleri ve nesnesiyle ilişkili olarak oluşturulur.
 
@@ -242,8 +242,8 @@ Bazı betik dilleri (örneğin, JavaScript veya Python) dinamik veya [Duck](http
 
 Bir nesnenin yalnızca **dinamik görünümünü** görüntülemek Için, **izleme** penceresindeki dinamik nesne adından sonra **dinamik** bir Biçim belirleyicisi ekleyin:
 
-- C# için:`ObjectName, dynamic`
-- Visual Basic için:`$dynamic, ObjectName`
+- C# için: `ObjectName, dynamic`
+- Visual Basic için: `$dynamic, ObjectName`
 
 >[!NOTE]
 >- Bir sonraki kod satırına adımlamak için C# hata ayıklayıcısı **dinamik görünümdeki** değerleri otomatik olarak yeniden değerlendirmez.

@@ -22,10 +22,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 4cb670ab52e321f15c5b009c66ca40623409f10a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662391"
 ---
 # <a name="options-text-editor-all-languages-tabs"></a>Seçenekler, Metin Düzenleyici, Tüm Diller, Sekmeler
@@ -36,7 +36,7 @@ Bu iletişim kutusu, kod düzenleyicisinin varsayılan davranışını değişti
 > [!CAUTION]
 > Bu sayfa tüm geliştirme dillerinin varsayılan seçeneklerini ayarlar. Bu iletişim kutusunda bir seçeneğin sıfırlanması, burada seçili olan seçimler için tüm dillerdeki sekmeler seçeneklerini sıfırlayacaktır. Yalnızca bir dile ait metin düzenleyici seçeneklerini değiştirmek için, bu dilin alt klasörünü genişletin ve seçenek sayfalarını seçin.
 
- Belirli programlama dilleri için sekmeler seçenekler sayfalarında farklı ayarlar seçilirse, "tekil metin biçimleri için girinti ayarları birbirleriyle çakışıyor" iletisi, farklı **girintileme** seçenekleri için görüntülenir; ve "tekil metin biçimleri için sekme ayarları birbirleriyle çakışıyor" iletisi, farklı **sekme** seçenekleri için görüntülenir. Örneğin, **akıllı girintileme** seçeneği Visual Basic için seçilmişse bu anımsatıcı görüntülenir, ancak görsel C++için **blok girintileme** seçilidir.
+ Belirli programlama dilleri için sekmeler seçenekler sayfalarında farklı ayarlar seçilirse, "tekil metin biçimleri için girinti ayarları birbirleriyle çakışıyor" iletisi, farklı **girintileme** seçenekleri için görüntülenir; ve "tekil metin biçimleri için sekme ayarları birbirleriyle çakışıyor" iletisi, farklı **sekme** seçenekleri için görüntülenir. Örneğin, **akıllı girintileme** seçeneği Visual Basic için seçilmişse bu anımsatıcı görüntülenir, ancak Visual C++ için **blok girintileme** seçilidir.
 
 > [!NOTE]
 > Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [Visual Studio 'Da geliştirme ayarlarını özelleştirme](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).

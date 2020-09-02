@@ -1,5 +1,5 @@
 ---
-title: Office çözümlerine güven ihsan edin
+title: Office çözümlerine güven verme
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,38 +16,38 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: cf7a68d5d3567305e4f70049d76a1c260ddecf25
-ms.sourcegitcommit: 95f26af1da51d4c83ae78adcb7372b32364d8a2b
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303304"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89315245"
 ---
-# <a name="grant-trust-to-office-solutions"></a>Office çözümlerine güven ihsan edin
-  Office çözümlerine güven vermek, çözüm derlemesine, uygulama bildirimine, dağıtım bildirimine ve belgeye güvenecek şekilde her hedef bilgisayarın güvenlik ilkesini değiştirmek anlamına gelir. Güven, Office çözümüne siz veya son kullanıcı tarafından verilebilir.
+# <a name="grant-trust-to-office-solutions"></a>Office çözümlerine güven verme
+  Office çözümlerine güven verme, her hedef bilgisayarın güvenlik ilkesini, çözüm derlemesine, uygulama bildirimine, dağıtım bildirimine ve belgeye güvenmek için değiştirme anlamına gelir. Sizin tarafınızdan veya son kullanıcı tarafından Office çözümüne güven verilebilir.
 
  Uygulama ve dağıtım bildirimlerini imzalayarak Office çözümüne tam güven verebilirsiniz.
 
- Son [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] kullanıcılar, güven isteminde güven kararı alarak Office çözümüne güven verebilir.
+ Son kullanıcılar, güven isteminde bir güven kararı sunarak Office çözümüne güven verebilir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] .
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="trust-the-solution-by-signing-the-application-and-deployment-manifests"></a><a name="Signing"></a>Uygulama ve dağıtım bildirimlerini imzalayarak çözüme güvenin
- Office çözümleri için tüm uygulama ve dağıtım bildirimleri yayımcıyı tanımlayan bir sertifikayla imzalanmalıdır. Sertifikalar güven kararları vermek için bir temel sağlar.
+## <a name="trust-the-solution-by-signing-the-application-and-deployment-manifests"></a><a name="Signing"></a> Uygulama ve dağıtım bildirimlerini imzalayarak çözüme güvenin
+ Office çözümlerine yönelik tüm uygulama ve dağıtım bildirimlerinin yayımcıyı tanımlayan bir sertifikayla imzalanması gerekir. Sertifikalar, güven kararları vermek için bir temel sağlar.
 
- Sizin için geçici bir sertifika oluşturulur ve siz hata ayıklama sırasında çözümün çalışması için yapı zamanında güven verilir. Geçici bir sertifikayla imzalanmış bir çözüm yayımlarsanız, son kullanıcıdan bir güven kararı alınması istenir.
+ Sizin için geçici bir sertifika oluşturulur ve derleme zamanında güven verilir, böylece çözüm hata ayıklarken çalışacaktır. Geçici bir sertifikayla imzalanan bir çözüm yayımlarsanız, son kullanıcıdan bir güven kararı yapması istenir.
 
- Çözümü bilinen ve güvenilen bir sertifikayla imzalarsanız, çözüm son kullanıcıdan güven kararı vermesini sormadan otomatik olarak yüklenir. İmzalama için nasıl sertifika alacağıhakkında daha fazla bilgi için [ClickOnce ve Authenticode](../deployment/clickonce-and-authenticode.md)bölümüne bakın. Sertifika alındıktan sonra, sertifikaya Güvenilen Yayıncılar listesine eklenerek açıkça güvenilmesi gerekir. Daha fazla bilgi için [bkz: ClickOnce uygulamaları için istemci bilgisayara güvenilir bir yayımcı ekleyin.](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)
+ Çözümü bilinen ve güvenilen bir sertifikayla imzalayabilirseniz çözüm, son kullanıcıdan bir güven kararı vermesini istemeden otomatik olarak yüklenir. İmzalama için bir sertifika alma hakkında daha fazla bilgi için bkz. [ClickOnce and Authenticode](../deployment/clickonce-and-authenticode.md). Bir sertifika alındıktan sonra, sertifikaya güvenilen yayımcılar listesine eklenerek açık bir şekilde güvenilmelidir. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce uygulamaları için bir istemci bilgisayara güvenilir yayımcı ekleme](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md).
 
- Bir geliştirici çözümü geçici bir sertifikayla işaretlerse, yönetici Microsoft .NET Framework araçlarından biri olan Bildirim Oluşturma ve Düzenleme Aracı'nı *(mage.exe)* kullanarak bilinen ve güvenilir bir sertifikayla özelleştirmeyi yeniden imzalayabilir. İmzalama çözümleri hakkında daha fazla bilgi için [bkz: Office çözümlerini nasıl imzala](../vsto/how-to-sign-office-solutions.md) ve [nasıl imzala: Uygulama ve dağıtım bildirimlerini imzalayın.](../ide/how-to-sign-application-and-deployment-manifests.md)
+ Bir geliştirici çözümü geçici bir sertifikayla imzalarsa, yönetici Microsoft .NET Framework araçlarından biri olan Bildirim Oluşturma ve Düzenleme Aracı (*mage.exe*) kullanarak özelleştirmeyi bilinen ve güvenilen bir sertifikayla yeniden imzalayabilirler. Çözümleri imzalama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office çözümlerini imzalama](../vsto/how-to-sign-office-solutions.md) ve [nasıl yapılır: uygulama ve dağıtım bildirimlerini](../ide/how-to-sign-application-and-deployment-manifests.md)imzalama.
 
-## <a name="trust-the-solution-by-using-the-clickonce-trust-prompt"></a><a name="TrustPrompt"></a>ClickOnce güven istemini kullanarak çözüme güvenin
- [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]çözüm sertifikasına güvenen kuruluş çapında bir ilke yoksa, son kullanıcıdan güven kararını vermesini ister. Son kullanıcı çözüme güven veriyorsa, bu güven kararını depolamak için bir URL ve ortak anahtar içeren bir dahil etme listesi girişi oluşturulur. Güvenilen özelleştirme daha sonra çalıştırıldığında, son kullanıcıdan tekrar istenmez.
+## <a name="trust-the-solution-by-using-the-clickonce-trust-prompt"></a><a name="TrustPrompt"></a>ClickOnce güven istemi 'ni kullanarak çözüme güvenin
+ [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] çözümün sertifikasına güvenen kuruluş genelinde bir ilke yoksa, son kullanıcıdan güven kararı vermesini ister. Son Kullanıcı çözüme güven veriyorsa, bu güven kararını depolamak için bir URL ve ortak anahtar içeren bir ekleme listesi girişi oluşturulur. Güvenilir bir özelleştirme daha sonra çalıştırıldığında son kullanıcıya bir daha istenmez.
 
- Yöneticiler güven istemini [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] devre dışı kılabilir veya istem'in yalnızca Authenticode sertifikasıyla imzalanan çözümler için oluşmasını isteyebilir. MyComputer, LocalIntranet, Internet, TrustedSites ve UntrustedSites bölgeleri için bu ayarları nasıl değiştireceğiniz hakkında daha fazla bilgi için [bkz.](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md)
+ Yöneticiler, güven isteğini devre dışı bırakabilir [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] veya yalnızca bir Authenticode sertifikasıyla imzalanmış çözümler için gerçekleşmesini gerektirebilir. Bu ayarları Bilgisayarım, LocalIntranet, Internet, TrustedSites ve UntrustedSites bölgelerinde değiştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce güven istemi davranışını yapılandırma](../deployment/how-to-configure-the-clickonce-trust-prompt-behavior.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)
 - [Belgelere güven verme](../vsto/granting-trust-to-documents.md)
-- [Sorun Giderme Office çözüm güvenliği](../vsto/troubleshooting-office-solution-security.md)
-- [Office çözümleri için özel güvenlik konuları](../vsto/specific-security-considerations-for-office-solutions.md)
+- [Office çözüm güvenliği sorunlarını giderme](../vsto/troubleshooting-office-solution-security.md)
+- [Office çözümleri için belirli güvenlik konuları](../vsto/specific-security-considerations-for-office-solutions.md)

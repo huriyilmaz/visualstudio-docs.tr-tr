@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3d6e9ee79602f3a0db8f68d701120c450bfee721
-ms.sourcegitcommit: dab57cebd484228e6f0cf7ab1b9685c575410c06
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "82153054"
 ---
 # <a name="tutorial-learn-to-debug-c-code-using-visual-studio"></a>Öğretici: Visual Studio kullanarak C# kodunda hata ayıklamayı öğrenin
@@ -36,7 +36,7 @@ Bu öğreticide şunları yapacaksınız:
 > * Veri ipuçlarında ve hata ayıklayıcı Windows 'da değişkenleri İnceleme
 > * Çağrı yığınını inceleyin
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 ::: moniker range=">=vs-2019"
 
@@ -61,7 +61,7 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ::: moniker-end
 
-İş yükünü yüklemeniz gerekir, ancak zaten Visual Studio 'ya sahipseniz **Araçlar** > **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açılır. Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
+İş yükünü yüklemeniz gerekir, ancak zaten Visual Studio 'ya sahipseniz **Araçlar**  >  **ve Özellikler al.**.. ' a giderek Visual Studio yükleyicisi açılır. Visual Studio Yükleyicisi başlatılır. **.NET Core platformlar arası geliştirme** iş yükünü seçin ve ardından **Değiştir**' i seçin.
 
 ## <a name="create-a-project"></a>Proje oluşturma
 
@@ -153,13 +153,13 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
      Bu öğreticide, hata ayıklayıcıyı kullanarak bu uygulamaya daha yakından bakacağız ve hata ayıklayıcı özelliklerine göz atalım.
 
-2. Kırmızı durma ![hata ayıklamayı Durdur](../../debugger/media/dbg-tour-stop-debugging.png "Hata ayıklamayı Durdur") düğmesine (**SHIFT** + **F5**) basarak hata ayıklayıcıyı durdurun.
+2. Kırmızı durma ![hata ayıklamayı Durdur](../../debugger/media/dbg-tour-stop-debugging.png "Hata ayıklamayı Durdur") düğmesine (**SHIFT**  +  **F5**) basarak hata ayıklayıcıyı durdurun.
 
 3. Konsol penceresinde bir tuşa basarak konsol penceresini kapatın.
 
 ## <a name="set-a-breakpoint-and-start-the-debugger"></a>Kesme noktası ayarlama ve hata ayıklayıcıyı başlatma
 
-1. `Main` İşlevin `for` döngüsünde, aşağıdaki kod satırının sol kenar boşluğuna tıklayarak bir kesme noktası ayarlayın:
+1. `for` `Main` İşlevin döngüsünde, aşağıdaki kod satırının sol kenar boşluğuna tıklayarak bir kesme noktası ayarlayın:
 
     `name += letters[i];`
 
@@ -181,35 +181,35 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 Çoğu durumda buradaki klavye kısayollarını kullanıyoruz. Bu, uygulamanızı hata ayıklayıcıda yürütmek için iyi bir yoldur (menü komutları gibi eşdeğer komutlar parantez içinde gösterilir).
 
-1. `name += letters[i]` İfadede duraklalarken, `letters` değişkenin üzerine gelin ve varsayılan değerini, dizideki ilk öğenin değerini görürsünüz `char[10]`.
+1. İfadede duraklalarken `name += letters[i]` , değişkenin üzerine gelin `letters` ve varsayılan değerini, dizideki ilk öğenin değerini görürsünüz `char[10]` .
 
      Değişkenleri incelemenizi sağlayan özellikler, hata ayıklayıcının en yararlı özelliklerinden biridir ve bunu yapmak için farklı yollar vardır. Genellikle, bir sorunu ayıklamaya çalıştığınızda, değişkenlerin belirli bir zamanda sahip olmalarını istediğiniz değerleri depolayıp depoladığını bulmaya çalışıyorsunuz.
 
-1. Değişkenin içerdiği `letters` tüm öğeleri içeren özelliklerini görmek için değişkeni genişletin.
+1. Değişkenin `letters` içerdiği tüm öğeleri içeren özelliklerini görmek için değişkeni genişletin.
 
      ![Veri ipucunu görüntüleme](../csharp/media/get-started-view-data-tip.png "Veri Ipucunu görüntüleme")
 
-1. Sonra, `name` değişkenin üzerine gelin ve geçerli değerini boş bir dize olarak görürsünüz.
+1. Sonra, değişkenin üzerine gelin `name` ve geçerli değerini boş bir dize olarak görürsünüz.
 
-1. Yöntem çağrısına ilerlemek için **F10** tuşuna basın (veya **hata ayıklama > Adımlama**' i seçin) ve ardından F10 bir kez daha tuşuna basın. **F10** `SendMessage`
+1. Yöntem çağrısına ilerlemek için **F10** tuşuna basın (veya **hata ayıklama > Adımlama**' i seçin) `SendMessage` ve ardından **F10** bir kez daha tuşuna basın.
 
-     F10 hata ayıklayıcıyı, uygulama kodunuzda işlevlere veya yöntemlere adımla bir sonraki ifadeye ilerletir (kod yine de çalıştırılır). `SendMessage` Yöntem çağrısında F10 tuşuna basarak, için `SendMessage` uygulama kodu atlandık (Bu, şu anda ilgilentik olabilir).
+     F10 hata ayıklayıcıyı, uygulama kodunuzda işlevlere veya yöntemlere adımla bir sonraki ifadeye ilerletir (kod yine de çalıştırılır). Yöntem çağrısında F10 tuşuna basarak `SendMessage` , için uygulama kodu atlandık `SendMessage` (Bu, şu anda ilgilentik olabilir).
 
-1. Bir kez `for` döngü aracılığıyla birkaç kez yineleyebilir, kesme noktasında tekrar duraklatarak ve değerini denetlemek için `name` her seferinde üzerine gelindiğinde, **F10** tuşuna basın (veya **hata ayıklama** > **adımından**).
+1. Bir **F10** kez döngü aracılığıyla **Debug**  >  **Step Over**birkaç kez yineleyebilir `for` , kesme noktasında tekrar duraklatarak ve `name` değerini denetlemek için her seferinde üzerine gelindiğinde, F10 tuşuna basın (veya hata ayıklama adımından).
 
      ![Veri ipucunu görüntüleme](../csharp/media/get-started-data-tip.gif "Veri Ipucunu görüntüleme")
 
-     Değişkenin değeri `for` , döngü her tekrarında değişir ve `f`değerlerini, sonra `fr` `fre`, vb. gösterir. Bu senaryoda hata ayıklayıcıyı daha hızlı bir şekilde ilerletmek için **F5** tuşuna basabilir (veya **Hata Ayıkla** > **devam et**' i seçebilirsiniz), bunun yerine bir sonraki ifade yerine kesme noktasına ilerletebilirsiniz.
+     Değişkenin değeri, döngü her tekrarında değişir ve `for` değerlerini, sonra, vb. gösterir `f` `fr` `fre` . Bu senaryoda hata ayıklayıcıyı daha hızlı bir şekilde ilerletmek için **F5** tuşuna basabilir (veya **Hata Ayıkla**  >  **devam et**' i seçebilirsiniz), bunun yerine bir sonraki ifade yerine kesme noktasına ilerletebilirsiniz.
 
      Genellikle, hata ayıklarken, değişkenleri üzerinde özellik değerlerini denetlemeye yönelik hızlı bir yol isteyeceksiniz ve bu değerlerin depolanmasını beklediğinizi ve veri ipuçları bunu yapmanın iyi bir yoludur.
 
-1. `Main` Metodun `for` döngüsünde hala duraklatıldıktan sonra, `SendMessage` Yöntem çağrısında duraklamadan **F11** tuşuna basın (veya **Hata Ayıkla > adımla**' yı seçin).
+1. Metodun döngüsünde hala duraklatıldıktan `for` `Main` sonra, yöntem çağrısında duraklamadan **F11** tuşuna basın (veya **Hata Ayıkla > adımla**' yı seçin) `SendMessage` .
 
      Şu kod satırında olmalısınız:
 
      `SendMessage(name, a[i]);`
 
-1. Yönteme adım eklemek için bir kez daha F11 tuşuna basın. **F11** `SendMessage`
+1. Yönteme adım eklemek için bir kez daha **F11** tuşuna basın `SendMessage` .
 
      Sarı işaretçi `SendMessage` yöntemine ilerler.
 
@@ -217,24 +217,24 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
      F11, **adımla** komutuna ve aynı anda uygulama yürütmeyi tek bir ifadeye ilerletir. F11, yürütme akışını en ayrıntılı incelemek için iyi bir yoldur. Varsayılan olarak, hata ayıklayıcı kullanıcı olmayan koddan atlar (daha fazla ayrıntı istiyorsanız, bkz. [yalnızca kendi kodum](../../debugger/just-my-code.md)).
 
-     `SendMessage` Yöntemi incelemeyi bitirdiğinizde ve yönteminden yararlanmak ve hata ayıklayıcıda kalmak istediğinizi varsayalım. Bunu, **Step Out** komutunu kullanarak yapabilirsiniz.
+     Yöntemi incelemeyi bitirdiğinizde `SendMessage` ve yönteminden yararlanmak ve hata ayıklayıcıda kalmak istediğinizi varsayalım. Bunu, **Step Out** komutunu kullanarak yapabilirsiniz.
 
-1. **SHIFT** + **F11** tuşuna basın (veya **hata ayıklama > Step Out**).
+1. **SHIFT**  +  **F11** tuşuna basın (veya **hata ayıklama > Step Out**).
 
      Bu komut, geçerli yöntem veya işlev dönene kadar uygulama yürütmeyi sürdürür (ve hata ayıklayıcıyı ilerletir).
 
-     Yöntem çağrısında duraklamış `for` `Main` `SendMessage` olması için, yöntemde döngüde geri dönüş yapmanız gerekir. Kodunuzda taşımanın farklı yolları hakkında daha fazla bilgi için bkz. [hata ayıklayıcıdaki koda gitme](../../debugger/navigating-through-code-with-the-debugger.md).
+     Yöntem `for` çağrısında duraklamış olması için, yöntemde döngüde geri dönüş yapmanız gerekir `Main` `SendMessage` . Kodunuzda taşımanın farklı yolları hakkında daha fazla bilgi için bkz. [hata ayıklayıcıdaki koda gitme](../../debugger/navigating-through-code-with-the-debugger.md).
 
 ## <a name="navigate-code-using-run-to-click"></a>Çalıştırmak için Çalıştır 'ı kullanarak kodu gezin
 
 1. Kesme noktasına tekrar ilerlemek için **F5** tuşuna basın.
 
-1. Kod Düzenleyicisi 'nde, `Console.WriteLine` aşağı kaydırarak `SendMessage` metodun üzerine gelin ve tıklama düğmesine **tıklayarak** düğmenin sol tarafta görünmesini bekleyin. ![Run to Click](../../debugger/media/dbg-tour-run-to-click.png "RunToClick") Düğme araç ipucu "yürütmeyi buraya kadar Çalıştır" gösterir.
+1. Kod Düzenleyicisi 'nde, aşağı kaydırarak metodun üzerine gelin ve `Console.WriteLine` `SendMessage` **tıklama düğmesine tıklayarak** düğmenin sol tarafta görünmesini bekleyin. ![Run to Click](../../debugger/media/dbg-tour-run-to-click.png "RunToClick") Düğme araç ipucu "yürütmeyi buraya kadar Çalıştır" gösterir.
 
      ![Tıklama için Çalıştır özelliğini kullanın](../csharp/media/get-started-run-to-click.png "Tıklanan Satıra Kadar Çalıştır")
 
    > [!NOTE]
-   > **Tıklama Için Çalıştır düğmesi '** de [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)]yenidir. (Yeşil ok düğmesini görmüyorsanız, hata ayıklayıcıyı doğru yere ilerletmek için bu örnekte **F11** kullanın.)
+   > **Tıklama Için Çalıştır düğmesi '** de yenidir [!include[vs_dev15](../../misc/includes/vs_dev15_md.md)] . (Yeşil ok düğmesini görmüyorsanız, hata ayıklayıcıyı doğru yere ilerletmek için bu örnekte **F11** kullanın.)
 
 2. **Tıklama düğmesine tıklayarak** ![' ye tıklayın.](../../debugger/media/dbg-tour-run-to-click.png "RunToClick")
 
@@ -244,17 +244,17 @@ Visual Studio 'Yu henüz yüklemediyseniz, [Visual Studio İndirmeleri](https://
 
 ## <a name="restart-your-app-quickly"></a>Uygulamanızı hızlıca yeniden başlatın
 
-Hata ayıklama araç çubuğundaki uygulamayı **yeniden** ![Başlat](../../debugger/media/dbg-tour-restart.png "RestartApp") (**CTRL** + **SHIFT** + **F5**) düğmesine tıklayın.
+Hata ayıklama araç çubuğundaki uygulamayı **yeniden** ![Başlat](../../debugger/media/dbg-tour-restart.png "RestartApp") (**CTRL**  +  **SHIFT**  +  **F5**) düğmesine tıklayın.
 
 **Yeniden Başlat**'a bastığınızda, uygulamanın durdurulması ve hata ayıklayıcının yeniden başlatılması ile zaman kazandırır. Hata ayıklayıcı, kodu yürüterek vuran ilk kesme noktasında duraklatılır.
 
-Hata ayıklayıcı daha önce `for` döngü içinde ayarladığınız kesme noktasında yeniden durmaktadır.
+Hata ayıklayıcı daha önce döngü içinde ayarladığınız kesme noktasında yeniden durmaktadır `for` .
 
 ## <a name="inspect-variables-with-the-autos-and-locals-windows"></a>Oto ve Yereller pencerelerinde değişkenleri İnceleme
 
 1. Kod düzenleyicisinin alt kısmındaki **oto** penceresine bakın.
 
-    Kapatılmışsa, hata ayıklayıcıda **hata ayıklama** > **Windows** > **oto öğeleri**' ni seçerek açın.
+    Kapatılmışsa, hata ayıklayıcıda **hata ayıklama**  >  **Windows**  >  **oto öğeleri**' ni seçerek açın.
 
     **Oto** penceresinde, değişkenleri ve bunların geçerli değerlerini görürsünüz. **Oto** penceresi, geçerli satırda veya önceki satırda kullanılan tüm değişkenleri gösterir (dile özgü davranışa yönelik belgelere bakın).
 
@@ -268,23 +268,23 @@ Hata ayıklayıcı daha önce `for` döngü içinde ayarladığınız kesme nokt
 
 ## <a name="set-a-watch"></a>İzleme ayarlama
 
-1. Ana kod Düzenleyicisi penceresinde `name` değişkene sağ tıklayın ve **Gözcü Ekle**' yi seçin.
+1. Ana kod Düzenleyicisi penceresinde değişkene sağ tıklayın `name` ve **Gözcü Ekle**' yi seçin.
 
     **İzleme** penceresi, kod düzenleyicisinin en altında açılır. Bir gözü tutmak istediğiniz bir değişken (veya bir ifade) belirtmek için bir **Gözcü** penceresi kullanabilirsiniz.
 
-    Artık `name` değişkende bir izleme kümesi vardır ve hata ayıklayıcıda geçiş yaparken değer değişikliğini görebilirsiniz. Diğer değişken pencerelerinin aksine, **Gözcü** penceresi her zaman izlemekte olduğunuz değişkenleri gösterir (kapsam dışında gri renkte gösterilir).
+    Artık değişkende bir izleme kümesi vardır `name` ve hata ayıklayıcıda geçiş yaparken değer değişikliğini görebilirsiniz. Diğer değişken pencerelerinin aksine, **Gözcü** penceresi her zaman izlemekte olduğunuz değişkenleri gösterir (kapsam dışında gri renkte gösterilir).
 
 ## <a name="examine-the-call-stack"></a>Çağrı yığınını inceleyin
 
-1. `for` Döngüde durakladığında, varsayılan olarak sağ alt bölmede açık olan **çağrı yığını** penceresine tıklayın.
+1. Döngüde durakladığında `for` , varsayılan olarak sağ alt bölmede açık olan **çağrı yığını** penceresine tıklayın.
 
-    Kapatılmışsa, hata ayıklayıcıda hata **Ayıkla** > **Windows** > **çağrı yığını**' nı seçerek dosyayı açın.
+    Kapatılmışsa, hata ayıklayıcıda hata **Ayıkla**  >  **Windows**  >  **çağrı yığını**' nı seçerek dosyayı açın.
 
-2. Yöntemde hata ayıklayıcı duraklatıldığını görene kadar birkaç kez F11 ' e tıklayın. **F11** `SendMessage` **Çağrı yığını** penceresine bakın.
+2. Yöntemde hata ayıklayıcı duraklatıldığını görene kadar birkaç kez **F11** ' e tıklayın `SendMessage` . **Çağrı yığını** penceresine bakın.
 
     ![Çağrı yığınını inceleyin](../csharp/media/get-started-call-stack.png "ExamineCallStack")
 
-    Çağrı yığını penceresi, yöntemlerin ve işlevlerin hangi sırada **çağrılacağını** gösterir. Üstteki satırda geçerli işlev (Bu uygulamadaki `SendMessage` yöntemi) gösterilir. İkinci satır, `Main` yönteminden çağrılan `SendMessage` ve bu şekilde devam eden gösterir.
+    Çağrı yığını penceresi, yöntemlerin ve işlevlerin hangi sırada **çağrılacağını** gösterir. Üstteki satırda geçerli işlev ( `SendMessage` Bu uygulamadaki yöntemi) gösterilir. İkinci satır, `SendMessage` `Main` yönteminden çağrılan ve bu şekilde devam eden gösterir.
 
    > [!NOTE]
    > **Çağrı yığını** penceresi, tutulma gibi bazı NDES 'Teki hata ayıklama perspektifine benzer.
@@ -297,13 +297,13 @@ Hata ayıklayıcı daha önce `for` döngü içinde ayarladığınız kesme nokt
 
 ## <a name="change-the-execution-flow"></a>Yürütme akışını değiştirme
 
-1. Yöntemi çalıştırmak için F11 tuşuna iki kez basın. **F11** `Console.WriteLine`
+1. Yöntemi çalıştırmak için **F11** tuşuna iki kez basın `Console.WriteLine` .
 
-1. `SendMessage` Yöntem çağrısında hata ayıklayıcı duraklatıldığında, sol taraftaki sarı oku (yürütme işaretçisi) almak için fareyi kullanın ve sarı oku bir satır yukarı doğru aşağı taşıyın `Console.WriteLine`.
+1. Yöntem çağrısında hata ayıklayıcı duraklatıldığında `SendMessage` , sol taraftaki sarı oku (yürütme işaretçisi) almak için fareyi kullanın ve sarı oku bir satır yukarı doğru aşağı taşıyın `Console.WriteLine` .
 
 1. **F11**tuşuna basın.
 
-    Hata ayıklayıcı `Console.WriteLine` yöntemini yeniden çalıştırır (bunu konsol penceresi çıktısında görürsünüz).
+    Hata ayıklayıcı yöntemini yeniden çalıştırır `Console.WriteLine` (bunu konsol penceresi çıktısında görürsünüz).
 
     Yürütme akışını değiştirerek, farklı kod yürütme yollarını test etme veya hata ayıklayıcıyı yeniden başlatmanıza gerek kalmadan kodu yeniden çalıştırma gibi işlemleri yapabilirsiniz.
 

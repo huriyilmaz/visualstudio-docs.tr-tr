@@ -1,5 +1,5 @@
 ---
-title: 'Hata ayıklama hazırlığı: Windows Hizmetleri | Microsoft Docs'
+title: 'Hata Ayıklama Hazırlığı: Windows Hizmetleri | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -20,20 +20,20 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 2e68792b62e3e5538476063b5298579ecc58e4db
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65691301"
 ---
-# <a name="debugging-preparation-windows-services"></a>Hata ayıklama hazırlığı: Windows Hizmetleri
+# <a name="debugging-preparation-windows-services"></a>Hata Ayıklama Hazırlığı: Windows Hizmetleri
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Microsoft Windows altında arka planda çalışan bir programı bir Windows hizmetidir. Telnet hizmeti ve bilgisayarınızın görünür saat güncelleştirmeleri Windows Saat hizmeti verilebilir. Bir Windows hizmeti gelen içinde çalıştırılamaz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]; Hizmet Denetim Yöneticisi'nin bağlamında çalıştırmanız gerekir. Daha fazla bilgi için [Windows Hizmetleri oluşturma](https://msdn.microsoft.com/library/0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff), [hata ayıklama Windows hizmet uygulamaları](https://msdn.microsoft.com/library/63ab0800-0f05-4f1e-88e6-94c73fd920a2), ve [Windows hizmet uygulamaları](https://msdn.microsoft.com/library/ba72d648-9553-4849-b829-069ad5ea014b).  
+Windows hizmeti, Microsoft Windows altında arka planda çalışan bir programdır. Bu örnek, bilgisayarınızın görünür saatini güncelleştiren Telnet hizmetini ve Windows Saat hizmetini içerir. Bir Windows hizmeti içinden çalıştırılamaz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ; hizmet denetimi Yöneticisi 'nin bağlamı içinde çalıştırılmalıdır. Daha fazla bilgi için bkz. [Windows Hizmetleri oluşturma](https://msdn.microsoft.com/library/0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff), [Windows hizmet uygulamalarında hata ayıklama](https://msdn.microsoft.com/library/63ab0800-0f05-4f1e-88e6-94c73fd920a2)ve [Windows hizmet uygulamaları](https://msdn.microsoft.com/library/ba72d648-9553-4849-b829-069ad5ea014b).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yönetilen kodda hata ayıklama](../debugger/debugging-managed-code.md)   
- [C#, F#ve Visual Basic proje türleri](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
- [Hata ayıklama yapılandırması proje ayarları C#](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Hata ayıklama yapılandırması proje ayarları bir Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [Nasıl yapılır: OnStart Yönteminde Hata Ayıklama](../debugger/how-to-debug-the-onstart-method.md)
+ [C#, F # ve Visual Basic proje türleri](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)   
+ [C# hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Visual Basic hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [Nasıl yapılır: OnStart yönteminde hata ayıklama](../debugger/how-to-debug-the-onstart-method.md)

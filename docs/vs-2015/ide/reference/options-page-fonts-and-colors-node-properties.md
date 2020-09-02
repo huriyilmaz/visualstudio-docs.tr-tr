@@ -13,10 +13,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 23aa4eff3339ad3cd3ab7d4106745dc6fa83df34
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72662423"
 ---
 # <a name="options-page-fonts-and-colors-node-properties"></a>Seçenekler Sayfası, Yazı Tipleri ve Renkler Düğümü Özellikleri
@@ -29,18 +29,18 @@ Bu belge, **Seçenekler** Iletişim kutusunun **ortam** kategorisinde **yazı ti
 ## <a name="text-editor-or-printer-or-dialogs-and-tool-windows"></a>Metin düzenleyici veya yazıcı veya diyaloglar ve araç pencereleri
  `DTE.Properties("FontsAndColors", "TextEditor")`
 
- veya
+ -veya-
 
  `DTE.Properties("FontsAndColors", "Printer")`
 
- veya
+ -veya-
 
  `DTE.Properties("FontsAndColors", "Dialogs and Tool Windows")`
 
 |Özellik Öğesi Adı|Değer|Açıklama|
 |------------------------|-----------|-----------------|
 |FontFamily|Get/Set (dize)|"Courier New" gibi kullanılacak yazı tipi adı.|
-|Fontkarakterkümesi|Al/ayarla (<xref:EnvDTE.vsFontCharSet>)|Ibranice veya Rusça gibi kullanılacak karakter kümesi türünü belirten bir <xref:EnvDTE.vsFontCharSet> değeri.|
+|Fontkarakterkümesi|Get/Set ( <xref:EnvDTE.vsFontCharSet> )|<xref:EnvDTE.vsFontCharSet>İbranice veya Rusça gibi kullanılacak karakter kümesi türünü belirten bir değer.|
 |FontSize|Al/ayarla (kısa)|Kullanılacak yazı tipi boyutu (punto). Örneğin, 10 veya 12.|
 
 ## <a name="see-also"></a>Ayrıca Bkz.

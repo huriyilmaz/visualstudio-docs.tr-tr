@@ -1,5 +1,5 @@
 ---
-title: Yayımlama Sayfası, Proje Tasarımcısı (Office Geliştirme)
+title: Yayımlama sayfası, proje Tasarımcısı (Office geliştirme)
 ms.date: 02/02/2017
 ms.topic: conceptual
 f1_keywords:
@@ -17,89 +17,89 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 86d575b254209b547504ea6d746d03853990bfb4
-ms.sourcegitcommit: 7eb2fb21805d92f085126f3a820ac274f2216b4e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "67328998"
 ---
-# <a name="publish-page-project-designer-office-development-in-visual-studio"></a>Yayımlama Sayfası, Proje Tasarımcısı (Visual Studio'da Office Geliştirme)
-  **Yayımla** sayfasının **Proje Tasarımcısı** dağıtım özelliklerini yapılandırmak için kullanılır.
+# <a name="publish-page-project-designer-office-development-in-visual-studio"></a>Yayımlama sayfası, proje Tasarımcısı (Visual Studio 'da Office geliştirme)
+  **Proje Tasarımcısı** ' nın **Yayımla** sayfası, dağıtımın özelliklerini yapılandırmak için kullanılır.
 
- Bu sayfaya erişmek için projeyi seçin **Çözüm Gezgini**ve ardından **proje** menüsünde seçin *Projectname* **özellikleri** . Varsa **Yayımla** sayfası görüntülenmez öğesini **Yayımla** sekmesi.
+ Bu sayfaya erişmek için **Çözüm Gezgini**' de projeyi seçin ve ardından **Proje** menüsünde *ProjectName* **Özellikler**' i seçin. **Yayımla** sayfası görüntülenmiyorsa, **Yayımla** sekmesini seçin.
 
 > [!NOTE]
-> De Yayınlama konumu ayarlayabilirsiniz **Yayımlama Sihirbazı**. Daha fazla bilgi için [nasıl yapılır: ClickOnce kullanarak Office çözümü yayımlama](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8).
+> Yayımlama **Sihirbazı**' nda yayımlama konumunu da ayarlayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce kullanarak Office çözümü yayımlama](https://msdn.microsoft.com/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8).
 
 ## <a name="uielement-list"></a>UIElement listesi
- **Yayımlama klasörü konumu (web sitesi, ftp sunucusu veya dosya yolu)** gerekli.
+ **Yayımlama klasörü konumu (Web sitesi, FTP sunucusu veya dosya yolu)** Gerekli.
 
- Yayımlama klasörü konumu için ve Visual Studio çözüm dosyalarını bildirimleri, derlemeleri ve diğer dosyalar gibi yapı kopyaladığı dizin olan. Bu dizine yazma erişimi olmalıdır.
+ Yayımlama klasörü konumu, Visual Studio 'Nun bildirim, derleme ve diğer dosyalar gibi çözüm dosyalarını, derlemeden kopyaladığı dizindir. Bu dizine yazma erişiminizin olması gerekir.
 
- Seçenekler, yerel bilgisayar, bir UNC dosyası paylaşımı veya bir HTTP/HTTPS web sitesi içerir. Yol yerel olabilir (*c:\foldername\publishfolder*), göreli (*yayımlama\\* ), veya tam bir konum ( *\\\servername\foldername* veya http://<em>servername/foldername</em>).
+ Seçenekler yerel bilgisayar, UNC dosya paylaşma veya bir HTTP/HTTPS Web sitesi içerir. Yol yerel (*c:\folder\\publishfolder*), göreli (*Yayımla \\ *) veya tam bir konum (* \\ \SunucuAdı* \ KlasörAdı veya http://<em>ServerName/KlasörAdı</em>) olabilir.
 
- Varsayılan olarak, yayımlama konumdur *http://localhost/projectname/* , IIS yüklü değilse veya *yayımlama\\*  IIS yüklü değilse dizin.
+ Varsayılan olarak, yayımlama konumu *http://localhost/projectname/* IIS yüklü veya IIS yüklü değilse * \\ Yayımla* dizinidir.
 
- **Yükleme klasörü URL'si** isteğe bağlı.
+ **Yükleme klasörü URL 'si** Seçim.
 
- Yükleme klasörü URL'si, son kullanıcının özelleştirme yükleyecek dizindir. Ayrıca çözüm güncelleştirmeleri denetlemek için kullanacağı yoludur. Yayımlama klasörü konumu ile aynı yol olabilir, ancak bu zorunlu değildir.
+ Yükleme klasörü URL 'SI, son kullanıcının özelleştirmeyi yükleyeceksiniz. Ayrıca, çözümün güncelleştirmeleri denetlemek için kullanacağı yoldur. Yol, yayımlama klasörü konumuyla aynı olabilir, ancak bu bir gereksinim değildir.
 
- Seçenekler, yerel bilgisayar, bir UNC dosyası paylaşımı veya bir HTTP/HTTPS web sitesi içerir. Yol yerel olabilir (*c:\foldername\publishfolder*), göreli (*yayımlama\\* ), veya tam bir konum ( *\\\servername\foldername* veya http://<em>servername/foldername</em>). Tüm HTTP/HTTPS konumlar US-ASCII karakter ile oluşturulması gerekir. Unicode karakterler desteklenmez.
+ Seçenekler yerel bilgisayar, UNC dosya paylaşma veya bir HTTP/HTTPS Web sitesi içerir. Yol yerel (*c:\folder\\publishfolder*), göreli (*Yayımla \\ *) veya tam bir konum (* \\ \SunucuAdı* \ KlasörAdı veya http://<em>ServerName/KlasörAdı</em>) olabilir. Tüm HTTP/HTTPS konumları US-ASCII karakterlerle oluşturulmalıdır. Unicode karakterler desteklenmez.
 
- Yükleme yolu olarak ayarlanırsa özelleştirme dosyaları kullanıcıların özelleştirme yükleyebilmesi o konumda olmalıdır. Yalnızca son dağıtım konumunu biliyorsanız konumu olarak ayarlanmalıdır.
+ Yükleme yolu ayarlandıysa, kullanıcıların özelleştirmeyi yüklemesi için bu konumda özelleştirme dosyaları olmalıdır. Konum yalnızca son dağıtım konumunu biliyorsanız ayarlanmalıdır.
 
- Yükleme dosyaları belge veya Kurulum programı ilişkili bir konuma gibi CD seçeneğiyle kullanılıyorsa bu kutuyu boş bırakın.
+ Yükleme dosyaları belge veya Kurulum programı ile ilişkili bir konumdaysa (örneğin, CD seçeneğinde), bu kutuyu boş bırakın.
 
- Bu değer daha sonra yönetici tarafından atanabilir. Daha fazla bilgi için [nasıl yapılır: Office çözümünü yükleme yolunu değiştirmek](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).
+ Bu değer, daha sonra bir yönetici tarafından atanabilir. Daha fazla bilgi için bkz. [nasıl yapılır: bir Office çözümünün yükleme yolunu değiştirme](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).
 
- **Önkoşullar** önkoşulları Kurulum programına dahil veya yükleme sırasında isteğe bağlı olarak indirilir.
+ **Önkoşullar** Önkoşullar Kurulum programına dahil edilebilir veya yükleme sırasında isteğe bağlı olarak indirilebilir.
 
-- **Bileşen satıcısının web sitesinden önkoşulları**: Microsoft bu önkoşulları indirmek için bu seçeneği kullanın.
+- **Önkoşulları bileşen satıcısının Web sitesinden indir**: Bu seçeneği Microsoft 'un bu önkoşullarını indirmek için kullanın.
 
-- **Uygulamamla aynı konumdan önkoşulları karşıdan yükleyin**: Önkoşullar, yükleyici paketi için bu seçeneği kullanın. Kurulum programı önkoşul dosyalarıyla dahil olmak üzere çözüm boyutu artar.
+- **Önkoşulları Uygulamam ile aynı konumdan indir**: yükleyicinizdeki önkoşulları paketlemek için bu seçeneği kullanın. Önkoşul dosyalarını Kurulum programına dahil etmek çözümün boyutunu artırır.
 
-- **Aşağıdaki konumdan önkoşulları karşıdan yükleyin**: Önkoşullar son kullanıcılar için ayrı bir web sayfası veya ağ paylaşımında başka bir Kurulum programı olarak kullanılabilmesi için bu seçeneği kullanın.
+- **Önkoşulları aşağıdaki konumdan indir**: önkoşulları son kullanıcılara bir Web sayfası veya ağ paylaşımındaki başka bir kurulum programı olarak ayrı kullanılabilir hale getirmek için kullanın.
 
-  **Güncelleştirmeleri** güncelleştirme aralığı çözüm güncelleştirmeleri ne sıklıkla denetleyeceğini belirler. Her yedi günde denetlemek için varsayılandır.
+  **Güncelleştirmeler** Güncelleştirme aralığı, çözümün güncelleştirmeleri ne sıklıkta denetleyeceğini belirler. Varsayılan değer her yedi günde bir denetdir.
 
-  Belge düzeyinde özelleştirme veya VSTO eklentisi her yüklenişinde güncelleştirmeleri denetleme güncel tutmanın, ancak başlangıç performansı etkiler.
+  Her belge düzeyi özelleştirmesi veya VSTO eklentisi yüklendiğinde güncelleştirmeleri denetlemek, ancak başlangıç performansını etkiler.
 
-  Bir CD veya çıkarılabilir sürücü kullanarak dağıtıyorsanız, bu ayar **asla güncelleştirmeleri denetleme**.
+  Bir CD veya çıkarılabilir sürücü kullanarak dağıtıyorsanız, bu ayarı **hiçbir şekilde güncelleştirmeleri denetmeme**olarak ayarlayın.
 
-  **Seçenekler (Açıklama)** Yayımlama seçenekleri aşağıdaki özellikler için ayarlanabilir:
+  **Seçenekler (Açıklama)** Aşağıdaki özellikler için yayımlama seçenekleri ayarlanabilir:
 
-- Yayımlama dili: Office çözümünün yerel ayar.
+- Yayımlama dili: Office çözümünün yerel ayarı.
 
-- Yayımcı adı: şirketiniz veya Geliştirici adıyla görünür **Program Ekle/Kaldır** veya **programlar ve Özellikler**.
+- Yayımcı adı: **Program Ekle/Kaldır** veya **Programlar ve Özellikler**bölümünde göründüğü gibi şirket veya geliştirici adı.
 
-- Ürün adı: olarak Office çözümünün adı görünür **Program Ekle/Kaldır** veya **programlar ve Özellikler**.
+- Ürün adı: Office çözümünün **Program Ekle/Kaldır** veya **Programlar ve Özellikler**bölümünde göründüğü şekilde adı.
 
-- Destek URL'si: konumun son kullanıcıların bir Office çözümü için teknik destek birimine başvurun.
+- Destek URL 'SI: son kullanıcıların Office çözümü için teknik desteğe başvurumu.
 
-  **Seçenekler (Office ayarları)** Yayımlama seçenekleri aşağıdaki özellikler için ayarlanabilir:
+  **Seçenekler (Office ayarları)** Aşağıdaki özellikler için yayımlama seçenekleri ayarlanabilir:
 
-- Çözüm adı: olarak Office çözümünün adı Office uygulamasında görünür.
+- Çözüm adı: Office uygulamasında göründüğü haliyle Office çözümünün adı.
 
-- Açıklama: Office uygulamasında Office çözümünün haliyle açıklaması görünür.
+- Açıklama: Office çözümünün Office uygulamasında göründüğü haliyle açıklaması.
 
-- VSTO eklenti yükleme davranışı.
+- VSTO eklentisi yükleme davranışı.
 
-  - Başlangıçta yüklenen: Office uygulaması başlatıldığında VSTO eklentisi yükleneceğini belirtir.
+  - Başlangıçta yükle: Office uygulaması başlatıldığında VSTO eklentisinin yüklendiğini belirtir.
 
-  - İsteğe bağlı yükleme: uygulama, bir kullanıcı VSTO eklenti işlevini kullanan bir kullanıcı Arabirimi öğesi tıkladığında gibi gerektirdiğinde, VSTO eklentisi yükleneceğini belirtir.
+  - Isteğe bağlı yükleme: VSTO eklentisinin uygulama gerektirdiğinde, örneğin, bir kullanıcının VSTO eklentisinin işlevselliğini kullanan bir kullanıcı ARABIRIMI öğesine tıkladığı durumlarda, bu eklentinin yükleneceğini belirtir.
 
-  **Yayımlama dili** bu seçenek, Microsoft Yazılımı Lisans koşulları dili ayarlar ve önkoşullar listesinde dil paketlerini içerir. Dil özelleştirme etkilemez. Dil Kurulum programı, Visual Studio'nun yüklü dilleri tarafından belirlenir.
+  **Yayımlama dili** Bu seçenek, Microsoft yazılımı lisans koşullarının dilini ayarlar ve Önkoşullar listesindeki dil paketlerini içerir. Özelleştirmenin dilini etkilemez. Kurulum programındaki dil, Visual Studio 'nun yüklü dilleri tarafından belirlenir.
 
-  Değiştirme hakkında daha fazla bilgi için **yayımlama dilini**, bkz: [nasıl yapılır: ClickOnce uygulaması için yayımlama dilini değiştirme](../deployment/how-to-change-the-publish-language-for-a-clickonce-application.md).
+  **Yayımlama dilini**değiştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: ClickOnce uygulaması Için yayımlama dilini değiştirme](../deployment/how-to-change-the-publish-language-for-a-clickonce-application.md).
 
-  **Yayım sürümü** özelleştirme için sürüm numarasını ayarlar. Sürüm numarası değiştirildiğinde, uygulama bir güncelleştirme olarak yayımlanır. Yeni bir klasör, önceden yayımlanmış sürümünün üzerine yazmasını engellemek için derleme işlemi sırasında her sürüm için oluşturulur. Yayınlama sürümünü her parçası (**ana**, **küçük**, **derleme**, **düzeltme**) en fazla beş rakam içerebilir.
+  **Yayımlama sürümü** Özelleştirme için sürüm numarasını ayarlar. Sürüm numarası değiştirildiğinde, uygulama bir güncelleştirme olarak yayımlanır. Derleme işlemi sırasında, daha önce yayımlanan sürümün üzerine yazılmasını engellemek için her bir sürüm için yeni bir klasör oluşturulur. Yayımla sürümünün her bölümü (**ana**, **İkincil**, **derleme**, **Düzeltme**) en fazla beş basamak içerebilir.
 
-  **Her yayında düzeltmeyi otomatik artış** isteğe bağlı. (Varsayılan) seçildiğinde **düzeltme** parçası sürüm numarası artırılır bir özelleştirme her yayımlandığında. Bu, bir güncelleştirme olarak yayımlanacak özelleştirme neden olur.
+  **Her sürümde düzeltmeyi otomatik olarak artır** Seçim. Seçildiğinde (varsayılan), özelleştirmenin her yayımlanışında sürüm numarasının **Düzeltme** bölümü bir artırılır. Bu, özelleştirmenin güncelleştirme olarak yayımlanmasına neden olur.
 
-  **Şimdi Yayımla** geçerli ayarları kullanarak uygulamanın yayınlar. Eşdeğer **son** düğmesine **Yayımlama Sihirbazı**.
+  **Şimdi Yayımla** Geçerli ayarları kullanarak uygulamayı yayımlar. **Yayımla sihirbazındaki** **son** düğmesine eşittir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Office çözümünü dağıtma](../vsto/deploying-an-office-solution.md)
 - [ClickOnce kullanarak Office çözümü dağıtma](../vsto/deploying-an-office-solution-by-using-clickonce.md)
-- [Office çözüm dağıtım önkoşulları](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e)
+- [Dağıtım için Office çözüm önkoşulları](https://msdn.microsoft.com/9f672809-43a3-40a1-9057-397ce3b5126e)

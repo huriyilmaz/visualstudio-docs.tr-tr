@@ -11,10 +11,10 @@ manager: crdun
 ms.workload:
 - unity
 ms.openlocfilehash: e817318f7b16040ed598ac4dce8f1c6017bdf83e
-ms.sourcegitcommit: 43df639b2cd99200f725a8ebb941477481a6f0ff
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "87471538"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Değişiklik Günlüğü (Unity için Visual Studio Araçları, Mac)
@@ -59,7 +59,7 @@ Yayın tarihi, 23 Haziran 2020
 
   - [`UNT0016`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0016.md)Tanılama eklendi. `Invoke` `InvokeRepeating` `StartCoroutine` `StopCoroutine` Dize sabit değeri olan ilk bağımsız değişken,, veya kullanarak tür kullanımı güvenli değildir.
 
-  - [`UNT0017`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0017.md)Tanılama eklendi. `SetPixels`çağırma yavaş.
+  - [`UNT0017`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0017.md)Tanılama eklendi. `SetPixels` çağırma yavaş.
 
 ### <a name="bug-fixes"></a>Hata düzeltmeleri
 
@@ -71,7 +71,7 @@ Yayın tarihi, 23 Haziran 2020
 
   - Unity ileti Sihirbazı 'nda iletileri filtrelerken seçimi sıfırlamayın.
   
-  - [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0004.md), [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) `IDE0044` `IDE0051` `CS0649` Serializefield özniteliğiyle donatılmış tüm alanlar için gösterme (salt okunur), (kullanılmamış), (atanmamış), ve bu kurallara göre düzeltildi. `CS0649`Genişletilen tüm türlerin ortak alanları için gösterme (hiçbir şekilde atanmadı) `Unity.Object` .
+  - [`USP0004`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0004.md), [`USP0006`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0006.md) [`USP0007`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/USP0007.md) `IDE0044` `IDE0051` `CS0649` Serializefield özniteliğiyle donatılmış tüm alanlar için gösterme (salt okunur), (kullanılmamış), (atanmamış), ve bu kurallara göre düzeltildi. `Unity.Object` öğesini genişleten her türdeki genel alanlar için `CS0649` (hiçbir zaman atanmamış) öğesini gizleyin.
 
   - İçin sabit genel tür parametresi denetimi [`UNT0014`](https://github.com/microsoft/Microsoft.Unity.Analyzers/blob/main/doc/UNT0014.md) .
 
@@ -258,7 +258,7 @@ Yayın tarihi, 23 Eylül 2019
 - **Tümleştirme**
 
   - IDE 'nin kullanılmayan parametreleri kaldırmak üzere hızlı bir çözüm göstermesini engellemek için, IDE0060 için yeni bir supprescursor eklendi.
-    - `USP0005`için `IDE0060` : Unity Iletileri Unity çalışma zamanı tarafından çağrılır.
+    - `USP0005` için `IDE0060` : Unity Iletileri Unity çalışma zamanı tarafından çağrılır.
 
 ## <a name="2320"></a>2.3.2.0
 
@@ -280,10 +280,10 @@ Yayın tarihi, 16 Eylül 2019
     - `UNT0009`: Initializeonload özniteliği bir sınıfa uygulanırken, bir statik Oluşturucu sağlamanız gerekir. InitializeOnLoad özniteliği, düzenleyici başlatıldığında bunun çağrılmasını sağlar.
     - `UNT0010`: MonoBehaviours yalnızca AddComponent () kullanılarak oluşturulmalıdır. MonoBehaviour bir bileşendir ve bunun GameObject’e eklenmesi gerekir.
     - `UNT0011`: ScriptableObject yalnızca CreateInstance () kullanılarak oluşturulmalıdır. Unity ileti yöntemlerinin işlenmesi için ScriptableObject’in Unity altyapısı tarafından oluşturulması gerekir.
-    - `USP0001`için `IDE0029` : Unity nesneleri null birleştirme kullanmamalıdır.
-    - `USP0002`için `IDE0031` : Unity nesneleri null yayma kullanmamalıdır.
-    - `USP0003`için `IDE0051` : Unity Iletileri Unity çalışma zamanı tarafından çağrılır.
-    - `USP0004`için `IDE0044` : SerializeField özniteliğine sahip alanlar ReadOnly yapılmamalıdır.
+    - `USP0001` için `IDE0029` : Unity nesneleri null birleştirme kullanmamalıdır.
+    - `USP0002` için `IDE0031` : Unity nesneleri null yayma kullanmamalıdır.
+    - `USP0003` için `IDE0051` : Unity Iletileri Unity çalışma zamanı tarafından çağrılır.
+    - `USP0004` için `IDE0044` : SerializeField özniteliğine sahip alanlar ReadOnly yapılmamalıdır.
 
 ## <a name="2310"></a>2.3.1.0
 

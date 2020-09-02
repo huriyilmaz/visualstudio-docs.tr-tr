@@ -12,10 +12,10 @@ ms.workload:
 - data-science
 - azure
 ms.openlocfilehash: 34fd56b37113467b7cbb2dfb8ac6fdba01b79cc6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85543760"
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service-windows"></a>Azure App Service (Windows) üzerinde Python ortamı ayarlama
@@ -151,8 +151,8 @@ FastCGI, istek düzeyinde çalışacak bir arabirimdir. IIS, gelen bağlantılar
 `<appSettings>`Burada tanımlanan, uygulamanız için ortam değişkenleri olarak kullanılabilir:
 
 - Değeri, `PYTHONPATH` ücretsiz olarak genişletilebilir, ancak uygulamanızın kökünü içermelidir.
-- `WSGI_HANDLER`uygulamanızdan bir WSGI uygulaması Importable öğesine işaret etmelidir.
-- `WSGI_LOG`isteğe bağlıdır, ancak uygulamanızda hata ayıklama için önerilir.
+- `WSGI_HANDLER` uygulamanızdan bir WSGI uygulaması Importable öğesine işaret etmelidir.
+- `WSGI_LOG` isteğe bağlıdır, ancak uygulamanızda hata ayıklama için önerilir.
 
 Şişe, Flask ve Docgo Web uygulamaları için *web.config* içeriğiyle ilgili ek ayrıntılar için bkz. [Azure 'da yayımlama](publishing-python-web-applications-to-azure-from-visual-studio.md) .
 
@@ -167,7 +167,7 @@ Paketleri doğrudan sunucu ortamına yüklemek için aşağıdaki yöntemlerden 
 | [Azure App Service kudu konsolu](#azure-app-service-kudu-console) | Paketleri etkileşimli olarak kurar. Paketler saf Python olmalıdır veya tekerlek yayımlamalıdır. |
 | [Kudu REST API](#kudu-rest-api) | Paket yüklemesini otomatik hale getirmek için kullanılabilir.  Paketler saf Python olmalıdır veya tekerlek yayımlamalıdır. |
 | Uygulama ile paket | Paketleri doğrudan projenize yükleyip uygulamanızın bir parçası gibi App Service dağıtın. Sahip olduğunuz bağımlılıklara ve bunları ne sıklıkta güncelleştirdiğinize bağlı olarak, bu yöntem, çalışan bir dağıtımı almanın en kolay yolu olabilir. Kitaplıkların, sunucudaki Python sürümüyle eşleşmesi gerekir, aksi takdirde dağıtımdan sonra hataları görmeniz önerilir. Bu, App Service site uzantılarında Python 'un sürümleri python.org ' de yayımlanan sürümlerle tamamen aynı olduğundan, yerel geliştirme için uyumlu bir sürümü kolayca edinebilirsiniz. |
-| Sanal ortamlar | Desteklenmiyor. Bunun yerine, paketlemeyi kullanın ve `PYTHONPATH` ortam değişkenini paketlerin konumunu işaret etmek üzere ayarlayın. |
+| Sanal ortamlar | Desteklenmez. Bunun yerine, paketlemeyi kullanın ve `PYTHONPATH` ortam değişkenini paketlerin konumunu işaret etmek üzere ayarlayın. |
 
 ### <a name="azure-app-service-kudu-console"></a>Azure App Service kudu konsolu
 

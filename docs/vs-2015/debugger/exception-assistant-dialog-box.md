@@ -1,5 +1,5 @@
 ---
-title: Özel durum Yardımcısı iletişim kutusu | Microsoft Docs
+title: Özel durum Yardımcısı Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,42 +24,42 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5019547d2e06684b51f1513445521eca0e5143e1
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65702869"
 ---
 # <a name="exception-assistant-dialog-box"></a>Özel Durum Yardımcısı İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-**Özel durum Yardımcısı'nı** çalışma zamanı özel durum oluştuğunda iletişim kutusu görüntülenir. **Özel durum Yardımcısı'nı** özel durumun türünü görüntüler, ek bilgiler ve sorun giderme ipuçları için bağlantılar sağlar, Ek Yardım için çevrimiçi arama için bir yol sağlar ve kullanıcının gibi belirli eylemleri gerçekleştirmesine izin verir özel durumun ayrıntılarını görüntüleme.  
+Çalışma zamanı özel durumu oluştuğunda **özel durum Yardımcısı** iletişim kutusu görüntülenir. Özel **durum Yardımcısı** özel durum türünü görüntüler, sorun giderme ipuçlarına ek bilgi ve bağlantılar sağlar, çevrimiçi ek yardım aramak için bir yol sağlar ve kullanıcının özel durum ayrıntılarını görüntüleme gibi belirli eylemleri gerçekleştirmesini sağlar.  
   
 ## <a name="task-list"></a>Görev Listesi  
- Bir konu ilgilenen karşılaştığınız özel durumun türünü sorun giderme için görüntülenen ipucu iletilerinden birini tıklayın **sorun giderme ipuçları** bölmesi.  
+ Karşılaştığınız özel durumun türüyle ilgili sorun giderme hakkında bilgi için, **sorun giderme ipuçları** bölmesinde görünen İpucu iletilerinden birine tıklayın.  
   
- Özel durumla ilişkili eylemler gerçekleştirmek için eylem bölmesinde görüntülenen Eylemler birine tıklayın.  
+ Özel durumla ilişkili eylemleri gerçekleştirmek için eylem bölmesinde görünen eylemlerden birine tıklayın.  
   
- Etkinleştirme veya özel durum Yardımcısı'nı devre dışı bırakma hakkında daha fazla bilgi için bkz. [genel, hata ayıklama, Seçenekler iletişim kutusu](../debugger/general-debugging-options-dialog-box.md).  
+ Özel durum yardımcısını etkinleştirme veya devre dışı bırakma hakkında daha fazla bilgi için bkz. [Genel, hata ayıklama, Seçenekler Iletişim kutusu](../debugger/general-debugging-options-dialog-box.md).  
   
-## <a name="user-interface-element-list"></a>Kullanıcı arabirimi öğesi listesi  
+## <a name="user-interface-element-list"></a>Kullanıcı arabirimi öğe listesi  
  **Özel durum türü**  
- Oluşan özel durumun türünü görüntüler.  
+ Oluşturulan özel durum türünü görüntüler.  
   
- **Ek bilgi**  
- Özel durum hakkında ek bilgi görüntüler.  
+ **Ek Bilgiler**  
+ Özel durumla ilgili ek bilgileri görüntüler.  
   
  **Sorun Giderme İpuçları**  
- Sorun giderme ipuçları yardımcı olabilecek bağlantıları görüntüler, özel durumun kaynağı keşfedin.  
+ Özel durumun kaynağını keşfetmenize yardımcı olabilecek sorun giderme ipuçlarına yönelik bağlantıları görüntüler.  
   
  **Eylemler**  
- Özel durum nesnesi hakkında daha fazla bilgi görmenizi gibi gerçekleştirilebilecek işlemleri listeler.  
+ Özel durum nesnesi hakkında daha fazla bilgi görmek gibi gerçekleştirilebilecek eylemleri listeler.  
   
- **Çevrimiçi Yardım alın**  
- Ek Yardım için çevrimiçi aramanıza olanak sağlar.  
+ **Çevrimiçi yardım alın**  
+ Çevrimiçi ek yardım aramanızı sağlar.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)   
- [Özel durum Yardımcısını kullanma](https://msdn.microsoft.com/library/e0a78c50-7318-4d54-af51-40c00aea8711)   
- [Nasıl yapılır: Özel durum yardımcısıyla çalışma zamanı hataları düzeltin](https://msdn.microsoft.com/library/23b08d45-7b20-42c9-bdc9-fb3157ad823b)   
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)   
+ [Özel durum yardımcısını kullanma](https://msdn.microsoft.com/library/e0a78c50-7318-4d54-af51-40c00aea8711)   
+ [Nasıl yapılır: özel durum Yardımcısı ile çalışma zamanı hatalarını düzeltme](https://msdn.microsoft.com/library/23b08d45-7b20-42c9-bdc9-fb3157ad823b)   
  [Hata Türleri](https://msdn.microsoft.com/library/3048aabf-8c97-4e13-9150-853769cb5f6f)

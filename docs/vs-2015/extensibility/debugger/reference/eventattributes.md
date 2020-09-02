@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3026845be9aa6623d6c5cd42406385e8c5c2a11e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68149370"
 ---
 # <a name="eventattributes"></a>EVENTATTRIBUTES
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Olay öznitelikleri belirtir.  
+Olay özniteliklerini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_EVENTATTRIBUTES {   
@@ -53,39 +53,39 @@ public enum enum_EVENTATTRIBUTES { 
   
 ## <a name="members"></a>Üyeler  
  EVENT_ASYNCHRONOUS  
- Zaman uyumsuz bir olaydır ve olay yanıt gerekli olduğunu gösterir.  
+ Olayın zaman uyumsuz olduğunu ve olaya yanıt gerekmediğini gösterir.  
   
  EVENT_SYNCHRONOUS  
- Olay zaman uyumlu olduğunu gösterir; yoluyla yanıt [ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md).  
+ Olayın zaman uyumlu olduğunu belirtir; [ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md)aracılığıyla yanıtlayın.  
   
  EVENT_STOPPING  
- Durdurma olay olduğunu gösterir. İle birleştirilmelidir `EVENT_ASYNCHRONOUS` veya `EVENT_SYNCHRONOUS`.  
+ Bunun bir durdurma olayı olduğunu gösterir. Ya da ile birleştirilmelidir `EVENT_ASYNCHRONOUS` `EVENT_SYNCHRONOUS` .  
   
  EVENT_ASYNC_STOP  
- Zaman uyumsuz durdurma olay gösterir. Şu anda bu tür bir olay. Bu bayrağı yalnızca bir yer tutucudur.  
+ Zaman uyumsuz durdurma olayını gösterir. Şu anda böyle bir olay yok. Bu bayrak yalnızca bir yer tutucudur.  
   
  EVENT_SYNC_STOP  
- Zaman uyumlu durdurma olay gösterir (bir birleşimini `EVENT_SYNCHRONOUS` ve `EVENT_STOPPING`). Durdurma olay gönderdiğinde, bu değer bir hata ayıklama altyapısı (DE) kullanılır. Yanıt için bir çağrı yoluyla yapılan [yürütme](../../../extensibility/debugger/reference/idebugprogram2-execute.md), [adım](../../../extensibility/debugger/reference/idebugprogram2-step.md), veya [devam](../../../extensibility/debugger/reference/idebugprogram2-continue.md).  
+ Zaman uyumlu durdurma olayını belirtir ( `EVENT_SYNCHRONOUS` ve birleşimi `EVENT_STOPPING` ). Bu değer, bir durdurma olayı gönderdiğinde bir hata ayıklama altyapısı (DE) tarafından kullanılır. Yanıt, [yürütme](../../../extensibility/debugger/reference/idebugprogram2-execute.md), [adım](../../../extensibility/debugger/reference/idebugprogram2-step.md)ve [devam etme](../../../extensibility/debugger/reference/idebugprogram2-continue.md)çağrısı yoluyla yapılır.  
   
  EVENT_IMMEDIATE  
- IDE hemen ve eşzamanlı olarak gönderilen bir olay gösterir. Bu bayrak, gibi diğer bayraklar birlikte `EVENT_ASYNCHRONOUS`, `EVENT_SYNCHRONOUS`, veya `EVENT_SYNC_STOP` olay ve yanıt mekanizmasını (varsa) bilinir olgu türünü belirtmek için.  
+ IDE 'ye anında ve zaman uyumlu olarak gönderilen bir olayı gösterir. Bu bayrak `EVENT_ASYNCHRONOUS` , `EVENT_SYNCHRONOUS` `EVENT_SYNC_STOP` olay türünü ve yanıt mekanizmasının (varsa) bilindiğini belirtmek için, veya gibi diğer bayraklarla birleştirilir.  
   
  EVENT_EXPRESSION_EVALUATION  
- İfade değerlendirmesinin sonucu olayıdır.  
+ Olay, ifade değerlendirmesinin bir sonucudur.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu değerleri geçirilir `dwAttrib` parametresinin [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) yöntemi.  
+ Bu değerler `dwAttrib` [olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) yönteminin parametresine geçirilir.  
   
- Bu değerler, bit düzeyinde ile birleştirilebilir `OR`.  
+ Bu değerler, bit düzeyinde birleştirilebilir `OR` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md)   
- [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Olay](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

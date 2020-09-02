@@ -12,67 +12,67 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 2ec79aab58e167ff2c935317897ba10a042a2e5a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68180362"
 ---
 # <a name="visual-studio-shell"></a>Visual Studio Kabuğu
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Kabuktur tümleştirmesi, birincil aracı [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Ortak Hizmetleri paylaşan VSPackage'ı etkinleştirmek için gerekli işlevselliği sağlar. Çünkü mimari amacı, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] birincil işlevselliği Vspackage'larda vest kullanmaktır Kabuğu'nu temel işlevleri sağlar ve kendi bileşeni Vspackage'lar arasında arası iletişimi desteklemek için bir çerçevedir.  
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Kabuk, ' deki tümleştirme birincil aracısıdır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Kabuk, VSPackages 'ın ortak hizmetleri paylaşmasını sağlamak için gerekli işlevleri sağlar. Öğesinin mimari hedefi [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSPackages içindeki birincil işlevselliğe Vest çünkü kabuk, temel işlevleri sağlamak ve bileşen VSPackages 'ler arasında çapraz iletişim desteği sağlamak için bir çerçevedir.  
   
 ## <a name="shell-responsibilities"></a>Kabuk sorumlulukları  
- Kabuk aşağıdaki anahtar sorumluluklara sahiptir:  
+ Kabukta aşağıdaki önemli sorumluluklar vardır:  
   
-- Temel kullanıcı arabirimini (UI) öğeleri (COM arabirimleri) destek. Bunlar, varsayılan menüleri ve araç çubukları, belge pencere çerçeveleri veya çok Belgeli Arabirim (MDI) alt pencereler ve aracı pencere çerçeveleri ve yerleştirme desteği içerir.  
+- Destekleyici (COM arabirimleri aracılığıyla) Kullanıcı arabiriminin temel öğeleri (UI). Bunlar arasında varsayılan menüler ve araç çubukları, belge penceresi çerçeveleri veya çok belgeli arabirim (MDI) alt pencereleri ve araç penceresi çerçeveleri ve yerleştirme desteği bulunur.  
   
-- Tüm açık belgelerde çalıştırılan Belge tablosu (RDT) çalışan bir listesini, belgelerin Kalıcılık koordine ve birden fazla yolla ya da uyumsuz şekilde bir belge açılamıyor güvence altına almak için koruma.  
+- Belgelerin kalıcılığını koordine etmek ve bir belgenin birden fazla yoldan veya uyumsuz yollarla açılabileceğinden emin olmak için, çalışan bir belge tablosunda (RDT) Şu anda açık olan tüm belgelerin çalışmakta olan bir listesini koruyun.  
   
-- Komut Yönlendirme ve komut işleme arabirimini destekleyen `IOleCommandTarget`.  
+- Komut yönlendirme ve komut işleme arabirimini destekleme `IOleCommandTarget` .  
   
-- VSPackage uygun zamanlarda yükleniyor. VSPackage gecikme yükleme Kabuk performansını geliştirmek için gereklidir.  
+- VSPackages, uygun zamanlarda yükleniyor. Kabuğun performansını iyileştirmek için VSPackage gecikme yükleme gerekir.  
   
-- Belirli yönetme paylaşılan hizmetler gibi <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>, temel Kabuk işlevleri sağlayan ve <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>, temel Pencereleme işlevleri sağlar.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.SVsShell>Temel bir kabuk işlevselliği sağlayan ve temel bir Pencereleme işlevselliği sağlayan, gibi bazı paylaşılan hizmetleri yönetme <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> .  
   
-- Çözüm (.sln) dosyaları yönetme. Çözümler, ilgili projelerin, Visual C++ 6.0 (.dsw) çalışma alanı dosyaları benzer grupları içerir.  
+- Çözüm (. sln) dosyalarını yönetme. Çözümler, Visual C++ 6,0 ' deki çalışma alanı (. DSW) dosyalarına benzer ilgili proje gruplarını içerir.  
   
-- İzleme Kabuk genelinde seçimi, bağlam ve para birimi. Kabuk öğeleri aşağıdaki türde izler:  
+- Kabuk genelinde seçimi, bağlamı ve para birimini izleme. Kabuk aşağıdaki öğe türlerini izler:  
   
   - Geçerli proje  
   
-  - Geçerli proje öğe veya öğe kimliği geçerli <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>  
+  - Geçerli proje öğesi veya öğe kimliği geçerli <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>  
   
-  - Geçerli seçim için **özellikleri** penceresi veya `SelectionContainer`  
+  - **Özellikler** penceresi için geçerli seçim veya`SelectionContainer`  
   
-  - Kimlikleri veya komutlar, menüler ve araç çubukları görünürlüğünü denetleme CmdUIGuids UI bağlamı  
+  - Komutların, menülerin ve araç çubuklarının görünürlüğünü denetleyen UI bağlam kimlikleri veya Cmduiguid 'Leri  
   
-  - Etkin pencereyi, belge ve geri alma yöneticisi gibi şu anda etkin öğeleri  
+  - Etkin pencere, belge ve geri alma yöneticisi gibi şu anda etkin olan öğeler  
   
-  - Dinamik Yardım sürücü kullanıcı bağlamı öznitelikleri  
+  - Dinamik yardım 'ı hedefleyen Kullanıcı bağlamı öznitelikleri  
   
-  Kabuk yüklü VSPackages ve geçerli Hizmetleri arasındaki iletişim de aracılık. Kabuk temel özellikleri destekler ve bunları tüm VSPackages tümleşik kullandırır [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Bu temel özellikleri, aşağıdaki öğeleri ekleyin:  
+  Kabuk Ayrıca yüklü VSPackages ve geçerli hizmetler arasındaki iletişimi de dengeler. Bu, kabuğun temel özelliklerini destekler ve ' de tümleştirilmiş tüm VSPackages tarafından kullanılabilir hale getirir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Bu temel özellikler aşağıdaki öğeleri içerir:  
   
-- **Hakkında** iletişim kutusu ve karşılama ekranı  
+- İletişim kutusu ve giriş ekranı **hakkında**  
   
-- **Yeni ve varolan öğeyi ekle ekleme** iletişim kutuları  
+- **Yeni ve varolan öğe** Ekle iletişim kutuları  
   
-- **Sınıf Görünümü** penceresi ve **Nesne Tarayıcısı**  
+- **Sınıf görünümü** pencere ve **nesne tarayıcısı**  
   
-- **Başvuruları** iletişim kutusu  
+- **Başvurular** iletişim kutusu  
   
 - **Belge Anahattı** penceresi  
   
-- **Dinamik Yardım** penceresi  
+- **Dinamik yardım** penceresi  
   
-- **Bulma** ve **değiştirin**  
+- **Bul** ve **Değiştir**  
   
-- **Projeyi açın** ve **açık dosya** iletişim kutuları üzerinde **yeni** menüsü  
+- **Yeni** menüde **Proje Aç** ve **Dosya Aç** iletişim kutuları  
   
-- **Seçenekleri** iletişim kutusunda **Araçları** menüsü  
+- **Araçlar** menüsündeki **Seçenekler** iletişim kutusu  
   
-- **Özellikleri** penceresi  
+- **Özellikler** penceresi  
   
 - **Çözüm Gezgini**  
   
