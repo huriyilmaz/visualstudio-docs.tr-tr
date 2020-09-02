@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: de5868674790239b8374ef9796308280588ae96e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547257"
 ---
 # <a name="how-to-add-bookmark-controls-to-word-documents"></a>Nasıl yapılır: Word belgelerine yer Işareti denetimleri ekleme
@@ -38,7 +38,7 @@ ms.locfileid: "85547257"
 
   Denetimler hakkında daha fazla bilgi için <xref:Microsoft.Office.Tools.Word.Bookmark> bkz. [Bookmark Control](../vsto/bookmark-control.md).
 
-## <a name="add-bookmark-controls-at-design-time"></a><a name="designtime"></a>Tasarım zamanında Bookmark denetimleri ekleme
+## <a name="add-bookmark-controls-at-design-time"></a><a name="designtime"></a> Tasarım zamanında Bookmark denetimleri ekleme
  Belge <xref:Microsoft.Office.Tools.Word.Bookmark> düzeyindeki bir projede belgeye tasarım zamanında denetim eklemenin birkaç yolu vardır:
 
 - Visual Studio **araç kutusundan**.
@@ -65,7 +65,7 @@ ms.locfileid: "85547257"
 
 3. Yer işaretine eklemek istediğiniz metni veya diğer öğeleri seçin.
 
-4. **Tamam**'a tıklayın.
+4. **Tamam**’a tıklayın.
 
      Varsayılan yer işaretinin adını korumak istemiyorsanız, adı **Özellikler** penceresinde değiştirebilirsiniz.
 
@@ -77,7 +77,7 @@ ms.locfileid: "85547257"
 
 3. **Yer işareti** iletişim kutusunda yeni yer işaretinin adını yazın ve **Ekle**' ye tıklayın.
 
-## <a name="add-bookmark-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a>Belge düzeyindeki bir projede çalışma zamanında yer Işareti denetimleri ekleme
+## <a name="add-bookmark-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> Belge düzeyindeki bir projede çalışma zamanında yer Işareti denetimleri ekleme
  <xref:Microsoft.Office.Tools.Word.Bookmark>Projenizdeki sınıf özelliğinin yöntemlerini kullanarak çalışma zamanında belgenize programlı bir şekilde denetim ekleyebilirsiniz <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> `ThisDocument` . Aşağıdaki yollarla bir denetim eklemek için kullanabileceğiniz iki yöntem aşırı yüklemesi vardır <xref:Microsoft.Office.Tools.Word.Bookmark> :
 
 - Belirtilen bir <xref:Microsoft.Office.Tools.Word.Bookmark> aralığa ekleyin.
@@ -96,7 +96,7 @@ ms.locfileid: "85547257"
     > [!NOTE]
     > <xref:Microsoft.Office.Tools.Word.Bookmark>Varolan bir denetimi oluşturmak istiyorsanız, <xref:Microsoft.Office.Interop.Word.Bookmark> <xref:Microsoft.Office.Tools.Word.ControlCollection.AddBookmark%2A> yöntemini kullanın ve var olan öğesini geçirin <xref:Microsoft.Office.Interop.Word.Bookmark> .
 
-## <a name="add-bookmark-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>VSTO eklenti projesindeki çalışma zamanında yer Işareti denetimleri ekleme
+## <a name="add-bookmark-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> VSTO eklenti projesindeki çalışma zamanında yer Işareti denetimleri ekleme
  <xref:Microsoft.Office.Tools.Word.Bookmark>VSTO eklentisini kullanarak çalışma zamanında herhangi bir açık belgeye program aracılığıyla denetimler ekleyebilirsiniz. Bunu yapmak için, açık bir <xref:Microsoft.Office.Tools.Word.Document> belgeyi temel alan bir konak öğesi oluşturun ve ardından <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> Bu konak öğesinin özelliğinin yöntemlerini kullanın. Aşağıdaki yollarla bir denetim eklemek için kullanabileceğiniz iki yöntem aşırı yüklemesi vardır <xref:Microsoft.Office.Tools.Word.Bookmark> :
 
 - Belirtilen bir <xref:Microsoft.Office.Tools.Word.Bookmark> aralığa ekleyin.

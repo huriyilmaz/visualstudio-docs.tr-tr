@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a5b2f2e2dc00eda388b2a2d075924fa72f9eff1a
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670307"
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio için Üretkenlik İpuçları
@@ -25,7 +25,7 @@ Bu ipuçlarını izleyerek Visual Studio 'da kodunuzda daha hızlı ve verimli b
 
  [Visual Studio Araçları erişme](../ide/productivity-tips-for-visual-studio.md#BKMK_Access)
 
- [Kod Yazma](../ide/productivity-tips-for-visual-studio.md#BKMK_Writing)
+ [Kod yazma](../ide/productivity-tips-for-visual-studio.md#BKMK_Writing)
 
  [Kodunuzun Içinde gezinme](../ide/productivity-tips-for-visual-studio.md#BKMK_Navigating)
 
@@ -35,10 +35,10 @@ Bu ipuçlarını izleyerek Visual Studio 'da kodunuzda daha hızlı ve verimli b
 
  [Dosyaları, araç çubuklarını ve pencereleri yönetme](../ide/productivity-tips-for-visual-studio.md#BKMK_Managing)
 
-## <a name="BKMK_Access"></a>Visual Studio Araçları erişme
+## <a name="accessing-visual-studio-tools"></a><a name="BKMK_Access"></a> Visual Studio Araçları erişme
  Başlangıç ekranına veya görev çubuğuna sabitederseniz Geliştirici Komut İstemi veya başka bir araca daha kolay erişebilirsiniz.
 
-1. Başlangıç ekranından `Visual Studio Tools` girin ve Enter tuşunu seçin.
+1. Başlangıç ekranından girin `Visual Studio Tools` ve Enter tuşunu seçin.
 
 2. **Dosya Gezgini**'nde, istediğiniz öğenin kısayol menüsünü açın:
 
@@ -60,7 +60,7 @@ Bu ipuçlarını izleyerek Visual Studio 'da kodunuzda daha hızlı ve verimli b
 
 3. Başlatmak veya **görev çubuğuna sabitlemek** **Için sabitle ' yi** seçin.
 
-## <a name="BKMK_Writing"></a>Kod yazma
+## <a name="writing-code"></a><a name="BKMK_Writing"></a> Kod yazma
  Aşağıdaki özellikleri kullanarak daha hızlı bir şekilde kod yazın.
 
 - **Örnek uygulamaları kullanın**. MSDN Kod Galerisi 'nden örnek uygulamalar indirerek ve yükleyerek uygulama geliştirmeyi hızlandırabilirsiniz. Ayrıca, bu alana yönelik bir örnek paketi indirerek ve inceleyerek belirli bir teknoloji veya programlama kavramı de öğrenebilirsiniz.
@@ -93,7 +93,7 @@ Bu ipuçlarını izleyerek Visual Studio 'da kodunuzda daha hızlı ve verimli b
 
      Bir tanımı açılır pencerede açmak için, öğeyi vurgulayın, sonra alt + F12 tuşlarını seçin veya öğe için kısayol menüsünü açın ve ardından **Gözat**' ı seçin. Ayrı bir kod penceresinde bir tanımı açmak için, öğe için kısayol menüsünü açın ve ardından **Tanıma Git**' i seçin.
 
-## <a name="BKMK_Navigating"></a>Kodunuzun Içinde gezinme
+## <a name="navigating-within-your-code"></a><a name="BKMK_Navigating"></a> Kodunuzun Içinde gezinme
  Kodunuzda belirli konumları daha hızlı bir şekilde bulmak ve taşımak için çeşitli teknikler kullanabilirsiniz.
 
 - **Kod satırları yer işareti**. Bir dosyadaki belirli kod satırlarına hızlıca gezinmek için yer işaretlerini kullanabilirsiniz.
@@ -106,22 +106,22 @@ Bu ipuçlarını izleyerek Visual Studio 'da kodunuzda daha hızlı ve verimli b
 
 - **Kodunuzun genel yapısına gözatın**. **Çözüm Gezgini**, Koleksiyonlarınızda sınıfları ve bunların türlerini ve üyelerini arayabilir ve bunlara gözatabilirler. Ayrıca sembolleri arayabilir, yöntemin Çağrı hiyerarşisini görüntüleyebilir, sembol başvurularını bulabilir ve diğer görevleri gerçekleştirebilirsiniz. **Çözüm Gezgini**bir kod öğesi seçerseniz, ilişkili dosya bir **Önizleme** sekmesinde açılır ve imleç dosyadaki öğeye gider. Daha fazla bilgi için bkz. [kod yapısını görüntüleme](../ide/viewing-the-structure-of-code.md).
 
-## <a name="BKMK_Finding"></a>Öğeleri daha hızlı bulma
+## <a name="finding-items-faster"></a><a name="BKMK_Finding"></a> Öğeleri daha hızlı bulma
  Araç pencerelerinin içeriğini yalnızca geçerli göreviniz için ilgili bilgileri gösterecek şekilde filtrelemeye ek olarak komutlar, dosyalar ve seçenekler için IDE genelinde arama yapabilirsiniz.
 
 - **Araç pencerelerinin Içeriğini filtreleyin**. **Araç kutusu**, **özellikler** penceresi ve **Çözüm Gezgini**gibi birçok araç penceresinin içeriği içinde arama yapabilirsiniz ancak yalnızca adları belirttiğiniz karakterleri içeren öğeleri görüntüleyebilirsiniz.
 
 - **Yalnızca ele almak istediğiniz hataları görüntüleyin**. **Hata listesi** araç çubuğunda **filtre** düğmesini seçerseniz, **hata listesi** penceresinde görüntülenen hata sayısını azaltabilirsiniz. Yalnızca düzenleyicide açık olan dosyalardaki hataları, yalnızca geçerli dosyadaki hataları veya yalnızca geçerli projedeki hataları görüntüleyebilirsiniz. Ayrıca, belirli hataları bulmak için Hata Listesi penceresi içinde arama yapabilirsiniz.
 
-- **İletişim kutularını, menü komutlarını ve seçenekleri bulun**. [Hızlı Başlat, ortam, Seçenekler Iletişim kutusunda](../ide/reference/quick-launch-environment-options-dialog-box.md) , bulmayı denediğiniz öğeler için anahtar sözcükler veya ifadeler girin. Örneğin, `new project` girerseniz aşağıdaki seçenekler görüntülenir:
+- **İletişim kutularını, menü komutlarını ve seçenekleri bulun**. [Hızlı Başlat, ortam, Seçenekler Iletişim kutusunda](../ide/reference/quick-launch-environment-options-dialog-box.md) , bulmayı denediğiniz öğeler için anahtar sözcükler veya ifadeler girin. Örneğin, aşağıdaki seçenekler şunu girerseniz görüntülenir `new project` :
 
-     Şekil 3: `new project` için hızlı başlatma sonuçları listesi
+     Şekil 3: için hızlı başlatma sonuçları listesi `new project`
 
      ![' Yeni proje ' için hızlı başlatma sonuçları](../ide/media/productivity-quicklaunch.png "Productivity_QuickLaunch")
 
      **Hızlı başlatma** , **Yeni proje** Iletişim kutusu, **Yeni öğe Ekle** Iletişim kutusu ve **Seçenekler** iletişim kutusundaki projeler ve çözümler sayfası bağlantılarını diğerleri arasında görüntüler. Hızlı başlatma sonuçları, proje dosyalarını ve araç pencerelerini de içerebilir.
 
-## <a name="BKMK_Debugging"></a>Hata ayıklama kodu
+## <a name="debugging-code"></a><a name="BKMK_Debugging"></a> Hata ayıklama kodu
  Hata ayıklama çok fazla zaman alabilir, ancak aşağıdaki ipuçları süreci hızlandırabilmeniz için size yardımcı olabilir.
 
 - **Aynı sayfayı, uygulamayı veya siteyi farklı tarayıcılarda test edin**. Kodunuzun hatalarını ayıkladığınızda, [sayfa denetçisi (Visual Studio)](https://msdn.microsoft.com/library/65880969-1ad2-47be-85b9-bb12c81bf209)dahil olmak üzere yüklü Web tarayıcıları arasında kolayca geçiş **yapabilirsiniz iletişim kutusunu** açmaya gerek yoktur. Hata ayıklama **Başlat** düğmesinin yanındaki **Standart** araç çubuğunda bulunan **hata ayıklama hedefi** listesini kullanabilirsiniz. Bu işlem, hata ayıklama veya sayfaları görüntüleme olarak hangi tarayıcıyı kullandığınızı hızlıca doğrulamak için kullanılır.
@@ -140,11 +140,11 @@ Bu ipuçlarını izleyerek Visual Studio 'da kodunuzda daha hızlı ve verimli b
 
      Bir DataTip eklemek için, hata ayıklayıcı kesme modunda olmalıdır. İmleci değişkenine yerleştirin ve ardından görüntülenen veri Ipucunda sabitle düğmesini seçin. Hata ayıklama durdurulduğunda, değişkeni içeren kod satırının yanına kaynak dosyada mavi bir pin simgesi görünür. Mavi PIN 'e işaret ederseniz, en son hata ayıklama oturumundan değişkenin değeri görünür.
 
-- **Hemen penceresini temizleyin**. Tasarım zamanında `>cls` veya `>Edit.ClearAll` girerek [hemen pencerenin](../ide/reference/immediate-window.md) içeriklerini silebilirsiniz.
+- **Hemen penceresini temizleyin**. Tasarım zamanında, veya girerek [hemen pencerenin](../ide/reference/immediate-window.md) içeriğini silebilirsiniz. `>cls``>Edit.ClearAll`
 
      Ek komutlar hakkında daha fazla bilgi için bkz. [Visual Studio komut diğer adları](../ide/reference/visual-studio-command-aliases.md).
 
-## <a name="BKMK_Managing"></a>Dosyaları, araç çubuklarını ve pencereleri yönetme
+## <a name="managing-files-toolbars-and-windows"></a><a name="BKMK_Managing"></a> Dosyaları, araç çubuklarını ve pencereleri yönetme
  Herhangi bir zamanda birden fazla kod dosyasında çalışıyor olabilir ve bir uygulama geliştirirken çeşitli araç pencereleri arasında hareket edebilirsiniz. Aşağıdaki ipuçlarını kullanarak düzeninizi izleyebilirsiniz.
 
 - **Sık kullandığınız dosyaları düzenleyicide görünür tutun**. Düzenleyicide kaç dosya açık olursa olsun, görünür kalması için dosyaları sekmenin sol tarafına sabitleyebilirsiniz.

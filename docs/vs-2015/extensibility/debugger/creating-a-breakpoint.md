@@ -1,5 +1,5 @@
 ---
-title: Bir kesme noktası oluşturma | Microsoft Docs
+title: Kesme noktası oluşturma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,19 +12,19 @@ caps.latest.revision: 9
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7cde6d660506e05195ef9f5c0825845cee10ae5c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63383485"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64805486"
 ---
 # <a name="creating-a-breakpoint"></a>Kesme Noktası Oluşturma
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir kesme noktası oluşturma işlemi açıklanmaktadır.  
+Aşağıda, kesme noktası oluşturma işlemi açıklanmaktadır.  
   
 ## <a name="methods-in-breakpoint-creation"></a>Kesme noktası oluşturma yöntemleri  
- Bir kesme noktası bağlanması gereken bir modül yüklendiğinde oturum hata ayıklama Yöneticisi (SDM) aşağıdaki yöntemleri çağırır:  
+ Bir kesme noktası bağlamak için gereken modül yüklendiğinde, oturum hata ayıklama Yöneticisi (SDM) aşağıdaki yöntemleri çağırır:  
   
 1. [IDebugPendingBreakpoint2::Enable](../../extensibility/debugger/reference/idebugpendingbreakpoint2-enable.md)  
   
@@ -33,7 +33,7 @@ Bir kesme noktası oluşturma işlemi açıklanmaktadır.
 3. [IDebugPendingBreakpoint2::CanBind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-canbind.md)  
   
     > [!NOTE]
-    > **CanBind** yalnızca bir kullanıcı kesme noktaları penceresinde kesme noktası yaptığında çağrılır.  
+    > **Canbind** , yalnızca bir Kullanıcı kesme noktaları penceresinden bir kesme noktası yaptığında çağrılır.  
   
 4. [IDebugPendingBreakpoint2::Bind](../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)  
   

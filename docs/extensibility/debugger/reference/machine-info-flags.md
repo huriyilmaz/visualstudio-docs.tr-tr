@@ -1,5 +1,5 @@
 ---
-title: MACHINE_INFO_FLAGS | Microsoft Dokümanlar
+title: MACHINE_INFO_FLAGS | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: b74955d65ff34c4787de03c3b03383fe7eb702cc
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714504"
 ---
 # <a name="machine_info_flags"></a>MACHINE_INFO_FLAGS
-Bir makineyi tanımlamak için kullanılır.
+Bir makineyi tanımlamakta kullanılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 enum enum_MACHINE_INFO_FLAGS { 
@@ -42,18 +42,18 @@ public enum enum_MACHINE_INFO_FLAGS { 
 
 ## <a name="fields"></a>Alanlar
  `MCIFLAG_TERMINAL_SERVICES_AVAILABLE`\
- Terminal hizmetlerinin kullanılabilir olduğunu gösterir.
+ Terminal Hizmetleri 'nin kullanılabilir olduğunu gösterir.
 
 ## <a name="remarks"></a>Açıklamalar
- `Flags` [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) yapının üyesi olarak kullanılır.
+ `Flags` [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) yapısının üyesi olarak kullanılır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: msdbg.h
+ Üst bilgi: msdbg. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Numaralandırma](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
+- [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)
 - [MACHINE_INFO_FIELDS](../../../extensibility/debugger/reference/machine-info-fields.md)

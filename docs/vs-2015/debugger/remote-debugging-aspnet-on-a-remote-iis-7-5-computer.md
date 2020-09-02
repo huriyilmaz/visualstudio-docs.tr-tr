@@ -1,5 +1,5 @@
 ---
-title: Uzak bir IIS 7.5 ASP.NET hata ayıklama uzak bilgisayarı | Microsoft Docs
+title: Uzak IIS 7,5 bilgisayarında uzaktan hata ayıklama ASP.NET | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,61 +10,61 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c43f392cddfd5ea36180d9b2675db82469f86ce0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63446082"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64807145"
 ---
-# <a name="remote-debugging-aspnet-on-a-remote-iis-computer"></a>Uzaktan hata ayıklama Uzak IIS bilgisayarında ASP.NET
+# <a name="remote-debugging-aspnet-on-a-remote-iis-computer"></a>Uzak IIS Bilgisayarında Uzaktan ASP.NET ile Hata Ayıklama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-IIS ile Windows Server bilgisayarı için bir ASP.NET Web uygulamasını dağıtma ve uzaktan hata ayıklama için ayarlayın. Bu kılavuz, ayarlayın ve Visual Studio 2015 MVC 4.5.2 uygulama yapılandırmak, IIS'ye dağıtma ve Visual Studio'dan uzak hata ayıklayıcıyı iliştirmek açıklanmaktadır.
+Bir ASP.NET Web uygulamasını IIS ile Windows Server bilgisayarına dağıtabilir ve uzaktan hata ayıklama için ayarlayabilirsiniz. Bu kılavuzda, Visual Studio 2015 MVC 4.5.2 uygulamasını ayarlama ve yapılandırma, IIS 'ye dağıtma ve Visual Studio 'dan uzaktan hata ayıklayıcı iliştirme açıklanmaktadır.
 
-Bu yordamlar bu sunucu yapılandırmaları üzerinde test edilmiştir:
+Bu yordamlar, bu sunucu yapılandırmalarında test edilmiştir:
 * Windows Server 2012 R2 ve IIS 10
-* Windows Server 2008 R2 ve IIS 7.5
+* Windows Server 2008 R2 ve IIS 7,5
 
-Bu makaledeki bilgilerin çoğu için de geçerlidir ASP.NET core uygulamaları dağıtımını farklıdır ve ek adımlar gerektirir dışında uzak bir ASP.NET Core uygulaması hata ayıklama için. IIS ile ASP.NET Core uygulaması dağıtmak için tüm bölümleri tamamlayın gerekecektir [bu makalede](https://docs.asp.net/en/latest/publishing/iis.html).
+Bu makaledeki bilgilerin çoğu Ayrıca, ASP.NET Core uygulamalarının dağıtımı farklı olduğundan ve ek adımlar gerektirdiğinden ASP.NET Core bir uygulamada uzaktan hata ayıklama için de geçerlidir. IIS 'ye bir ASP.NET Core uygulaması dağıtmak için, [Bu makalenin](https://docs.asp.net/en/latest/publishing/iis.html)tüm bölümlerini doldurmanız gerekir.
 
-## <a name="prerequisites-install-the-remote-debugger-on-the-windows-server-computer"></a>Önkoşullar: uzaktan hata ayıklayıcıyı Windows Server yüklü bir bilgisayara yükleyin.
+## <a name="prerequisites-install-the-remote-debugger-on-the-windows-server-computer"></a>Önkoşullar: uzak hata ayıklayıcıyı Windows Server bilgisayarına yükler
 
-Uzaktan hata ayıklayıcıyı Windows Server'a yükleme hakkında yönergeler için bkz: [uzaktan hata ayıklama](../debugger/remote-debugging.md).
+Uzaktan hata ayıklayıcının Windows Server bilgisayarına nasıl indirileceği hakkında yönergeler için bkz. [Uzaktan hata ayıklama](../debugger/remote-debugging.md).
 
-ASP.NET uygulamalarının uzaktan hata ayıklama yapmak için uzaktan hata ayıklayıcı uygulamasını yönetici olarak çalıştırmak veya uzaktan hata ayıklayıcıyı bir hizmet olarak başlat. Uzaktan hata ayıklayıcıyı bir hizmet içinde bulunan çalıştırma hakkında ayrıntılar [uzaktan hata ayıklama](../debugger/remote-debugging.md).
+ASP.NET uygulamalarında uzaktan hata ayıklama yapmak için, uzaktan hata ayıklayıcı uygulamasını Yönetici olarak çalıştırabilir veya uzaktan hata ayıklayıcıyı bir hizmet olarak başlatabilirsiniz. Uzaktan hata ayıklayıcıyı bir hizmet olarak çalıştırmaya ilişkin ayrıntılar, [Uzaktan hata ayıklama](../debugger/remote-debugging.md)bölümünde bulunabilir.
 
-Yüklendikten sonra uzaktan hata ayıklayıcı hedef makinede çalıştığından emin olun. (Yüklü değilse, arama **uzaktan hata ayıklayıcı** içinde **Başlat** menüsü. ) Uzaktan hata ayıklayıcı penceresini aşağıdaki gibi görünür. (varsayılan bağlantı noktası numarası 4020 olduğu)
+Yüklendikten sonra, uzaktan hata ayıklayıcının hedef makinede çalıştığından emin olun. (Yoksa, **Başlat** menüsünde **Uzaktan hata ayıklayıcı** için arama yapın. ) Uzaktan hata ayıklayıcı penceresi şuna benzer. (4020 varsayılan bağlantı noktası numarasıdır)
 
 ![RemoteDebuggerWindow](../debugger/media/remotedebuggerwindow.png "RemoteDebuggerWindow")
   
-## <a name="create-the-application-on-the-visual-studio-computer"></a>Visual Studio bilgisayarında uygulama oluşturun  
+## <a name="create-the-application-on-the-visual-studio-computer"></a>Uygulamayı Visual Studio bilgisayarda oluşturma  
   
-1. Yeni bir ASP.NET MVC uygulaması oluşturun. (**Dosya / yeni / Project**, ardından **Visual C# / Web / ASP.NET Web uygulaması** . İçinde **ASP.NET 4.5.2** şablonları bölümünden **MVC**. Emin olun **buluttaki konak** Azure bölümü altında seçilmedi. Projeyi adlandırın **MyMVC**.)
-1. HomeController.cs dosyasını açın ve bir kesim noktası `About()` yöntemi.
-1. İçinde **Çözüm Gezgini**, proje düğümüne sağ tıklayıp **Yayımla**.
-1. İçin **yayımlama hedefi seçin**seçin **özel** ve profil adı **MyMVC**. **İleri**'ye tıklayın.
-1. Üzerinde **bağlantı** sekmesinde, belirleyin **yayımlama yöntemi** alanı **dosya sistemi** ve **hedef konum** yerel bir dizin alanı. **İleri**'ye tıklayın.
+1. Yeni bir MVC ASP.NET uygulaması oluşturun. (**Dosya/yeni/proje**, sonra **Visual C#/web/ASP.NET Web uygulaması** ' nı seçin. **ASP.NET 4.5.2** Templates bölümünde **MVC**' yi seçin. **Bulutta konağın** Azure bölümünde seçili olmadığından emin olun. Projeyi **Mymvc**olarak adlandırın.)
+1. HomeController.cs dosyasını açın ve yönteminde bir kesme noktası ayarlayın `About()` .
+1. **Çözüm Gezgini**, proje düğümüne sağ tıklayın ve **Yayımla**' yı seçin.
+1. **Bir yayımlama hedefi seç**için **özel** ' i seçin ve profili **mymvc**olarak adlandırın. **İleri**’ye tıklayın.
+1. **Bağlantı** sekmesinde, **Yayımlama yöntemi** alanını **dosya sistemi** ve **hedef konum** alanı olarak bir yerel dizine ayarlayın. **İleri**’ye tıklayın.
 
     ![RemoteDBG_Publish_Local](../debugger/media/remotedbg-publish-local.png "RemoteDBG_Publish_Local")
-1. Yapılandırmayı ayarlamak **hata ayıklama**. Tıklayın **yayımlama**.
+1. Yapılandırmayı **hata ayıklama**olarak ayarlayın. **Yayımla**’ya tıklayın.
 
     ![RemoteDBG_Publish_Debug_Config](../debugger/media/remotedbg-publish-debug-config.png "RemoteDBG_Publish_Debug_Config")
     
-    Uygulama yerel dizine yayımlanması gerekir.
+    Uygulamanın yerel dizine yayımlanması gerekir.
 
-## <a name="BKMK_deploy_asp_net"></a> Windows Server Uzak bilgisayarda ASP.NET uygulaması dağıtma
+## <a name="deploy-the-aspnet-application-on-the-windows-server-remote-computer"></a><a name="BKMK_deploy_asp_net"></a> ASP.NET uygulamasını Windows Server uzak bilgisayarda dağıtma
 
- Bu bölümde, Windows Server bilgisayarında zaten IIS etkinleştirilmiş olduğunu varsayar. Windows Server 2012 R2 üzerinde görmek [IIS yapılandırması](https://docs.asp.net/en/latest/publishing/iis.html#iis-configuration) IIS etkinleştirmek için. (Bir ASP.NET Core uygulaması dağıtmaya çalıştığınız sürece, bu makalede diğer bölümlerini atlayabilirsiniz. ASP.NET Core için aşağıda açıklanan adımları yerine uygulamayı dağıtmak için bu makaledeki adımları izleyin.)
-1. ASP.NET ASP.NET 4.5 yüklemek için Web Platformu bileşenlerini yükleyin (Windows Server 2012 R2'de sunucu düğümünden seçin **yeni Web Platformu bileşenlerini Al** ve ASP.NET için arama)
+ Bu bölümde, Windows Server bilgisayarında zaten IIS etkinleştirilmiş olduğu varsayılır. Windows Server 2012 R2 'de IIS 'yi etkinleştirmek için [IIS yapılandırması](https://docs.asp.net/en/latest/publishing/iis.html#iis-configuration) bölümüne bakın. (Bir ASP.NET Core uygulaması dağıtmaya çalışmadıkça, bu makalenin diğer bölümlerini atlayabilirsiniz. ASP.NET Core için, burada açıklanan adımlar yerine, uygulamayı dağıtmak için makalesindeki adımları izleyin.)
+1. ASP.NET 'yi yüklemek için Web Platformu bileşenlerini kullanın ASP.NET 4,5 (Windows Server 2012 R2 'deki sunucu düğümünden, **Yeni Web platformu bileşenleri al** ' ı seçin ve ardından ASP.NET için arama yapın)
 
     ![RemoteDBG_IIS_AspNet_45](../debugger/media/remotedbg-iis-aspnet-45.png "RemoteDBG_IIS_AspNet_45")
 
-    Windows Server 2008 R2'de, bunun yerine şu komutu kullanarak ASP.NET 4'ü yükleyin:   **C:\Windows\Microsoft.NET\Framework(64)\v4.0.30319\aspnet_regiis.exe -ir**
-1. ASP.NET proje dizini Visual Studio bilgisayarı yerel bir dizine kopyalayın (hangi sizi ararız **C:\Publish**) Windows Server bilgisayarında. Projeyi el ile kopyalayın, Xcopy, Web dağıtımı, Robocopy, Powershell veya diğer seçenekleri kullanın.
+    Windows Server 2008 R2 'de, bu komutu kullanmak yerine ASP.NET 4 ' ü   **\v4.0.30319\aspnet_regiis.exe: C:\Windows\Microsoft.NET\Framework (64)-IR**
+1. ASP.NET proje dizinini, Visual Studio bilgisayarından Windows Server bilgisayarında yerel bir dizine ( **C:\publish**çağıracağız) kopyalayın. Projeyi el ile kopyalayabilir, xcopy, Web Dağıtımı, Robocopy, PowerShell veya diğer seçenekleri kullanabilirsiniz.
 
     > [!CAUTION]
-    > Kod veya yeniden oluşturma için değişiklikler yapmanız gerekirse yeniden yayımlamanız ve bu adımı yineleyin. Yerel kaynak ve simgeler, uzak makineye kopyaladığınız yürütülebilir dosyanın tam olarak eşleşmelidir.
-1. Web.config dosyasının doğru sürümü .NET Framework'ün gösterdiğinden emin olun.  Örneğin, Windows Server 2008 R2 üzerinde varsayılan olarak yüklü .NET Framework sürüm 4.0.30319 ancak bir ASP.NET 4.5.2 oluşturduğumuz sürümü. Windows Server bilgisayarında ASP.NET 4.0 uygulama çalışıyorsa, sürümü değiştirmek gerekir:
+    > Kodda değişiklik yapmanız veya yeniden oluşturmanız gerekiyorsa, bu adımı yeniden yayımlamanız ve yinelemeniz gerekir. Uzak makineye kopyaladığınız yürütülebilir dosya yerel kaynak ve sembollerle tam olarak eşleşmelidir.
+1. web.config dosyasının .NET Framework doğru sürümünü listelediğinden emin olun.  Örneğin, Windows Server 2008 R2 'de varsayılan olarak yüklenen .NET Framework sürümü 4.0.30319 'dir, ancak bir ASP.NET 4.5.2 sürümü oluşturduk. Windows Server bilgisayarında bir ASP.NET 4,0 uygulaması çalışıyorsa, sürümü değiştirmeniz gerekir:
   
     ```xml
     <system.web>
@@ -75,37 +75,37 @@ Yüklendikten sonra uzaktan hata ayıklayıcı hedef makinede çalıştığında
   
     ```
 
-1. Açık **Internet Information Services (IIS) Yöneticisi'ni** gidin **siteleri**.
-1. Sağ **varsayılan Web sitesi** düğümünü seçip alt **uygulama Ekle**.
-1. Ayarlama **diğer** alanı **MyMVC** uygulama havuzu alanını **ASP.NET v4.0** (ASP.NET 4.5 uygulama havuzu için bir seçenek değildir). Ayarlama **fiziksel yolu** için **C:\Publish** (kopyaladığınız ASP.NET proje dizini).
+1. **Internet Information Services (IIS) Yöneticisi** ' ni açın ve **siteler**' e gidin.
+1. **Varsayılan Web sitesi** düğümüne sağ tıklayın ve **Uygulama Ekle**' yi seçin.
+1. **Diğer ad** alanını **Mymvc** ve uygulama havuzu alanı olarak **ASP.net v 4.0** olarak ayarlayın (ASP.NET 4,5, uygulama havuzu için bir seçenek değildir). **Fiziksel yolu** **C:\publish** olarak ayarlayın (ASP.NET proje dizinini kopyaladığınız yerdir).
 
     >[!NOTE] 
-    > ASP.NET Core uygulamaları için uygulama havuzu alanın ayarlanacağı **yönetilen kod yok**.
-1. Sağ tıklayarak dağıtımı test etme **varsayılan Web sitesi** seçip **Gözat**.
-    Uygulama başarıyla dağıtıldı, web sayfasını görürsünüz.
+    > ASP.NET Core uygulamalar için uygulama havuzu alanını **yönetilen kod yok**olarak ayarlayın.
+1. **Varsayılan Web sitesi** ' ne sağ tıklayıp, ardından da **Araştır**' ı seçerek dağıtımı test edin.
+    Uygulamayı başarıyla dağıttıysanız, Web sayfasını görürsünüz.
 
-## <a name="attach-to-the-aspnet-application-from-the-visual-studio-computer"></a>Visual Studio bilgisayardan ASP.NET uygulamasına ekleme
+## <a name="attach-to-the-aspnet-application-from-the-visual-studio-computer"></a>Visual Studio bilgisayarından ASP.NET uygulamasına iliştirme
 
-1. Visual Studio bilgisayarda açın **MyMVC** çözüm.
-1. Visual Studio'da **hata ayıklama / iliştirme** (**Ctrl + Alt + P**).
-1. Niteleyici alanın ayarlanacağı  **\<uzak bilgisayar adı >: 4020**.
-1. Tıklayın **Yenile**.
-    Bazı işlemler görünür görmelisiniz **kullanılabilir işlemler** penceresi.
+1. Visual Studio bilgisayarında, **Mymvc** çözümünü açın.
+1. Visual Studio 'da **Hata Ayıkla/Işleme Ekle** (**Ctrl + Alt + P**) seçeneğine tıklayın.
+1. Niteleyici alanını şu şekilde ayarlayın ** \<remote computer name> : 4020**.
+1. **Yenile**'ye tıklayın.
+    **Kullanılabilir süreçler** penceresinde bazı işlemlerin göründüğünü görmeniz gerekir.
 
-    Herhangi bir işlem görmüyorsanız (bağlantı noktası gereklidir) uzak bilgisayar adı yerine IP adresini kullanarak deneyin. Kullanım `ipconfig` IPv4 adresini almak için komut satırında.
-1. Denetleme **tüm kullanıcıların işlemlerini göster**.
-1. Aranacak **w3wp.exe** tıklatıp **iliştirme**.
+    Herhangi bir işlem görmüyorsanız, uzak bilgisayar adı yerine IP adresini kullanmayı deneyin (bağlantı noktası gereklidir). `ipconfig`IPv4 adresini almak için bir komut satırında kullanın.
+1. **Tüm kullanıcıların süreçlerini göster**' i işaretleyin.
+1. **w3wp.exe** bulun ve **Ekle**' ye tıklayın.
 
-     İşlem adı hızlıca bulmak için işlemi ilk harflerini yazın.
+     İşlem adını hızlı bir şekilde bulmak için işlemin ilk harfini yazın.
      
     >[!NOTE]
-    > ASP.NET Core uygulaması için w3wp.exe yerine dnx.exe işlem'i seçin. (Bu işlem adı gelecek bir sürümde değişebilir.)
+    > ASP.NET Core bir uygulama için w3wp.exe yerine dnx.exe sürecini seçin. (Bu işlem adı yaklaşan bir sürümde değişebilir.)
 
     ![RemoteDBG_AttachToProcess](../debugger/media/remotedbg-attachtoprocess.png "RemoteDBG_AttachToProcess")
 
-1. Uzak bilgisayarın Web sitesini açın. Bir tarayıcıda Git **http://\<uzak bilgisayar adı >** .
+1. Uzak bilgisayarın Web sitesini açın. Bir tarayıcıda **http:// \<remote computer name> **adresine gidin.
     
-    ASP.NET web sayfası görmeniz gerekir.
-1. ASP.NET web sayfasındaki bağlantısını tıklatın **hakkında** sayfası.
+    ASP.NET Web sayfasını görmeniz gerekir.
+1. ASP.NET Web sayfasında, **hakkında** sayfasının bağlantısına tıklayın.
 
-    Visual Studio'da kesme noktasına isabet.
+    Kesme noktası Visual Studio 'da isabet almalıdır.

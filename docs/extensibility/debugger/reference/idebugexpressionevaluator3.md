@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator3 | Microsoft Dokümanlar
+title: IDebugExpressionEvaluator3 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,37 +11,37 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: d25cd8cd4aec351df2a483e930bf469fbc086a68
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729118"
 ---
 # <a name="idebugexpressionevaluator3"></a>IDebugExpressionEvaluator3
 > [!IMPORTANT]
-> Visual Studio 2015'te ifade değerlendiricilerinin bu şekilde uygulanması amortismana uymaktadır. CLR ifade değerlendiricilerinin uygulanması hakkında bilgi için lütfen [CLR İfade Değerlendiriciler](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [Yönetilen İfade Değerlendirici Örneği'ne](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)bakın.
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).
 
- Gelişmiş bir parser ağacı olan bir ifade değerlendiriciyi (EE) temsil eder.
+ Gelişmiş ayrıştırıcı ağacı ile bir ifade değerlendirici (EE) temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 IDebugExpressionEvaluator3 : IDebugExpressionEvaluator2
 ```
 
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar
- Ayrıştırıcının bu sürümü, sembol sağlayıcısını ve değerlendirme çerçevesinin adresini geçer.
+ Ayrıştırıcısının bu sürümü, değerlendirme çerçevesinin sembol sağlayıcısını ve adresini geçirir.
 
 ## <a name="methods"></a>Yöntemler
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) arabirimindeki yöntemlere ek olarak, bu arabirim aşağıdaki yöntemi uygular:
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|[Parse2](../../../extensibility/debugger/reference/idebugexpressionevaluator3-parse2.md)|İfade dizesini, sembol sağlayıcısı ve değerlendirme çerçevesinin adresi verilen ayrışmış bir ifadeye dönüştürür.|
+|[Parse2](../../../extensibility/debugger/reference/idebugexpressionevaluator3-parse2.md)|Bir ifade dizesini sembol sağlayıcısı ve değerlendirme çerçevesinin adresi verilen ayrıştırılmamış ifadeye dönüştürür.|
 
 ## <a name="requirements"></a>Gereksinimler
- Başlık: Ee.h
+ Üstbilgi: ee. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll

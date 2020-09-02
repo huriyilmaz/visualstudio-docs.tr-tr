@@ -1,5 +1,5 @@
 ---
-title: TemplateData Element (Visual Studio Şablonları) | Microsoft Dokümanlar
+title: TemplateData öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -14,18 +14,18 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: f3ce0226286e8cc4623b66c043eb7bd376597118
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80699189"
 ---
 # <a name="templatedata-element-visual-studio-templates"></a>TemplateData Öğesi (Visual Studio Şablonları)
-Şablonu kategorilere ayırın ve Yeni **Proje'de** veya **Yeni Öğe Ekle** iletişim kutusunda nasıl görüntüleyeceğini tanımlar.
+Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.
 
- \<VSTemplate \<> ŞablonVeri>
+ \<VSTemplate> \<TemplateData>
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 <TemplateData>
@@ -47,42 +47,42 @@ ms.locfileid: "80699189"
 
 | Öğe | Açıklama |
 | - | - |
-| [Adı](../extensibility/name-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> **Yeni Proje** veya **Yeni Öğe Ekle** iletişim kutusunda göründüğü gibi şablonun adını belirtir. |
-| [Açıklama](../extensibility/description-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> **Yeni Proje** veya **Yeni Öğe Ekle** iletişim kutusunda görünen şablonun açıklamasını belirtir. |
-| [Simge](../extensibility/icon-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> Şablon için **Yeni Proje** veya **Yeni Öğe Ekle** iletişim kutusunda görünen simge olarak hizmet veren resim dosyasının yolunu ve dosya adını belirtir. |
-| [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> Proje şablonu, **Yeni Proje** iletişim kutusunda belirtilen grubun altında görünecek şekilde kategorilere ayırıyor. |
-| [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Proje şablonu, **Yeni Proje** iletişim kutusunda belirtilen alt kategorialtında görünecek şekilde sınıflandırın. |
-| [TemplateID](../extensibility/templateid-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablon kimliğini belirtir. |
-| [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablon grubu kimliğini belirtir. |
-| [SortOrder](../extensibility/sortorder-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> **Yeni Proje** veya **Yeni Öğe Ekle** iletişim kutusunda göründüğü gibi, şablonu düzenlemek için kullanılan değeri, aynı kategorideki diğer şablonlar arasında belirtir. |
-| [CreateNewFolder](../extensibility/createnewfolder-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Projenin anında oluşturulup oluşturulmadığını belirtir. |
-| [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Visual Studio proje sisteminin proje veya öğe için oluşturulduğunda oluşturacağı adı belirtir. |
-| [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Visual Studio proje sisteminin oluşturulduğunda bir proje veya öğe için varsayılan adı oluşturup oluşturmayacağını belirtir. |
-| [PromptForSaveOnCreation](../extensibility/promptforsaveoncreation-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Projenin geçici bir proje olarak oluşturulup oluşturulamayacağını belirtir (yalnızca Visual Studio 2017). |
-| [EnableLocationBrowseButton](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> **Gözat** düğmesinin **Yeni Proje** iletişim kutusunda kullanılabilir olup olmadığını belirtir, böylece kullanıcılar yeni bir proje kaydedilirken varsayılan dizini kolayca değiştirebilir. |
-| [Gizli](../extensibility/hidden-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablonun Yeni Proje'de veya **Yeni** **Öğe Ekle** iletişim kutusunda görünüp görünmediğini belirtir. |
-| [NumberOfParentCategoriesToRollUp](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> **Şablonu Yeni Proje** iletişim kutusunda görüntüleyecek üst kategorilerin sayısını belirtir. |
+| [Ad](../extensibility/name-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda göründüğü gibi şablonun adını belirtir. |
+| [Açıklama](../extensibility/description-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda göründüğü gibi şablonun açıklamasını belirtir. |
+| [Simg](../extensibility/icon-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> Şablon için **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünen simge olarak hizmet gören görüntü dosyasının yolunu ve dosya adını belirtir. |
+| [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) | Gerekli öğe.<br /><br /> Proje şablonunu **Yeni proje** iletişim kutusunda belirtilen grubun altında görünecek şekilde kategorilere ayırır. |
+| [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Proje şablonunu, **Yeni proje** iletişim kutusunda belirtilen alt kategori altında görünecek şekilde sınıflandırır. |
+| [TemplateID](../extensibility/templateid-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablon KIMLIĞINI belirtir. |
+| [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablon grubu KIMLIĞINI belirtir. |
+| [SortOrder](../extensibility/sortorder-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda göründüğü gibi, şablonu düzenlemek için kullanılan bir değeri belirtir. |
+| [CreateNewFolder](../extensibility/createnewfolder-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Projenin örneklenmesi sırasında içeren bir klasörün oluşturulup oluşturulmayacağını belirtir. |
+| [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Visual Studio proje sisteminin oluşturulduğu sırada proje veya öğe için üretekullanacağı adı belirtir. |
+| [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Visual Studio proje sisteminin, oluşturulduğunda bir proje veya öğe için varsayılan adı oluşturup üretmeyeceğini belirtir. |
+| [PromptForSaveOnCreation](../extensibility/promptforsaveoncreation-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Projenin geçici bir proje olarak oluşturulup oluşturuamayacağını belirtir (yalnızca Visual Studio 2017). |
+| [EnableLocationBrowseButton](../extensibility/enablelocationbrowsebutton-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Kullanıcıların yeni bir projenin kaydedildiği varsayılan dizini kolayca değiştirebilmeleri için **Yeni proje** iletişim kutusunda, **tarayıcı** düğmesinin kullanılabilir olup olmadığını belirtir. |
+| [Lene](../extensibility/hidden-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablonun **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünüp başlatılmayacağını belirtir. |
+| [NumberOfParentCategoriesToRollUp](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> **Yeni proje** iletişim kutusunda şablonu görüntüleyecek üst kategori sayısını belirtir. |
 | [LocationFieldMRUPrefix](../extensibility/locationfieldmruprefix-element-visual-studio-templates.md) | İsteğe bağlı öğe. |
-| [LocationField](../extensibility/locationfield-element-visual-studio-project-templates.md) | İsteğe bağlı öğe.<br /><br /> **Yeni Proje** iletişim kutusundaki **Konum** metin kutusunun etkin, devre dışı veya proje şablonu için gizli olup olmadığını belirtir. |
-| [RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablon yalnızca belirli bir minimum sürümü destekliyorsa bu öğeyi ve varsa .NET Framework'ün sonraki sürümlerini kullanın. |
-| [SupportsMasterPage](../extensibility/supportsmasterpage-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablonun web projeleri için bir ana sayfayı destekleyip desteklemediğini belirtir. |
-| [SupportsCodeSeparation](../extensibility/supportscodeseparation-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablonun web projeleri için kod ayrımını mı yoksa sayfa arkasındaki kod arkasındaki modeli mi desteklediğini belirtir. |
-| [SupportsLanguageDropDown](../extensibility/supportslanguagedropdown-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablonun birden çok dil için aynı olup olmadığını ve **Dil** seçeneğinin **Yeni Proje** iletişim kutusundan kullanılabilir olup olmadığını belirtir. |
-| [TargetPlatformName](../extensibility/targetplatformname-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Proje şablonunun hedeflenebilen platformu belirtir. Bu öğe, uygulama oluşturmak [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] için bir proje şablonu kullanıldığını belirtir. |
+| [LocationField](../extensibility/locationfield-element-visual-studio-project-templates.md) | İsteğe bağlı öğe.<br /><br /> **Yeni proje** Iletişim kutusundaki **konum** metin kutusunun etkin, devre dışı ya da proje şablonu için gizli olup olmadığını belirtir. |
+| [RequiredFrameworkVersion](../extensibility/requiredframeworkversion-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablon yalnızca belirli bir minimum sürümü ve varsa .NET Framework daha sonraki sürümlerini destekliyorsa bu öğeyi kullanın. |
+| [SupportsMasterPage](../extensibility/supportsmasterpage-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablonun Web projeleri için ana sayfayı destekleyip desteklemediğini belirtir. |
+| [SupportsCodeSeparation](../extensibility/supportscodeseparation-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablonun kod ayrımını veya Web projeleri için arka plan kod modeli ' ni destekleyip desteklemediğini belirtir. |
+| [SupportsLanguageDropDown](../extensibility/supportslanguagedropdown-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Şablonun birden çok dil için özdeş olup olmadığını ve **dil** seçeneğinin **Yeni proje** iletişim kutusundan kullanılıp kullanılamayacağını belirtir. |
+| [TargetPlatformName](../extensibility/targetplatformname-element-visual-studio-templates.md) | İsteğe bağlı öğe.<br /><br /> Proje şablonunun hedeflediği platformu belirtir. Bu öğe, uygulama oluşturmak için bir proje şablonu kullanıldığını belirtir [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] . |
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Proje şablonu, öğe şablonu veya başlangıç kiti için tüm meta verileri içerir.|
+|[VSTemplate](../extensibility/vstemplate-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Proje şablonu, öğe şablonu veya başlangıç seti için tüm meta verileri içerir.|
 
 ## <a name="remarks"></a>Açıklamalar
- `TemplateData`gerekli bir unsurdur.
+ `TemplateData` gerekli bir öğedir.
 
- İsteğe bağlı bir öğe eklemezseniz, bu öğeiçin varsayılan değer kullanılır.
+ İsteğe bağlı bir öğe eklemezseniz, bu öğe için varsayılan değer kullanılır.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki örnek, bir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] uygulama için proje şablonu için meta verileri gösterir.
+ Aşağıdaki örnek, bir uygulama için bir proje şablonu meta verilerini gösterir [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] .
 
 ```
 <VSTemplate Type="Project" Version="3.0.0"

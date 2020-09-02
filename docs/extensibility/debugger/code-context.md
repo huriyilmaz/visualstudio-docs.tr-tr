@@ -1,5 +1,5 @@
 ---
-title: Kod Bağlamı | Microsoft Dokümanlar
+title: Kod bağlamı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,25 +11,25 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 6424c1182f30b1bbfe6c166209b94afb7ec45549
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739158"
 ---
 # <a name="code-context"></a>Kod bağlamı
-Hata [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ayıklamada, **kod bağlamı:**
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Hata ayıklama sırasında **kod bağlamı**:
 
-- Hata ayıklama altyapısı (DE) tarafından bilindiği gibi koddaki bir konumun soyutlamasını sağlar. Günümüzde çoğu çalışma zamanı mimarisi için, bir kod bağlamı bir programın yönerge akışında bir adres olarak düşünülebilir. Kodun yönergeler tarafından temsil edilemeyebildiği geleneksel olmayan dillerde, kod bağlamı başka yollarla temsil edilebilir.
+- Hata ayıklama altyapısı (DE) tarafından bilinen kodda bir konumun soyutlamasını sağlar. Günümüzde çoğu çalışma zamanı mimarilerinde, bir programın yönerge akışında bir kod bağlamı adres olarak düşünülebilir. Geleneksel olmayan diller için kodun yönergelerle temsil edilebileceği durumlarda, bir kod bağlamı başka yollarla temsil edilebilir.
 
-- Hata ayıklama programının yürütme akışındaki geçerli konumu açıklar.
+- Hata ayıklamakta olduğunuz programın yürütme akışındaki geçerli konumu açıklar.
 
-- Yalnızca bir program bir kesme noktasında durdurulduğunda var olabilir.
+- Yalnızca bir program kesme noktasında durdurulduğunda vardır.
 
-- İlişkili bir belge bağlamı vardır.
+- , İlişkili bir belge içeriğine sahiptir.
 
-- [IDebugCodeContext2](../../extensibility/debugger/reference/idebugcodecontext2.md) arabirimi tarafından uygulanır.
+- , Bir [IDebugCodeContext2](../../extensibility/debugger/reference/idebugcodecontext2.md) arabirimi tarafından uygulanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Belge bağlamı](../../extensibility/debugger/document-context.md)
-- [Hata ayıklama bağlamları](../../extensibility/debugger/debugger-contexts.md)
+- [Hata ayıklayıcı bağlamları](../../extensibility/debugger/debugger-contexts.md)

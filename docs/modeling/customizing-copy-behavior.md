@@ -8,10 +8,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b189d3dbd5c1872094b0c1be2a64eb2c02bf1e2e
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85547348"
 ---
 # <a name="customizing-copy-behavior"></a>Kopyalama Davranışını Özelleştirme
@@ -51,7 +51,7 @@ Rolü **yalnızca bağlantıya yaymak**Için rolün **yayan Copy** özelliğini 
  **Öğeleri kopyalayıp yapıştırarak hızla çoğaltın.** Normal olarak, yeni kopyaladığınız öğe hala seçilidir ve aynı öğe türünü üzerine yapıştıramazsınız.
 Etki alanı sınıfına bir öğe birleştirme yönergesi ekleyin ve birleştirme Işlemini üst sınıfa ilet olarak ayarlayın. Bu, sürükleme işlemlerinde aynı etkiye sahip olacaktır. Daha fazla bilgi için bkz. [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).
 
- \-veya
+ \- veya
 
  Öğeleri geçersiz kılarak yapıştırarak önce diyagramı seçin `ClipboardCommandSet.ProcessOnPasteCommand()` . Bu kodu DslPackage projesindeki özel bir dosyaya ekleyin:
 
@@ -75,7 +75,7 @@ partial class MyDslClipboardCommandSet
  **Kullanıcı seçili bir hedefi üzerine yapıştırdığı zaman ek bağlantılar oluştur.** Örneğin, bir açıklama kutusu bir öğeye yapıştırıldığında aralarında bir bağlantı yapılır.
 Hedef etki alanı sınıfına bir öğe birleştirme yönergesi ekleyin ve bağlantı ekleyerek birleştirme işlemini işleyecek şekilde ayarlayın. Bu, sürükleme işlemlerinde aynı etkiye sahip olacaktır. Daha fazla bilgi için bkz. [öğe oluşturma ve hareketini özelleştirme](../modeling/customizing-element-creation-and-movement.md).
 
- \-veya
+ \- veya
 
  `ClipboardCommandSet.ProcessOnPasteCommand()`Temel yöntemi çağırdıktan sonra ek bağlantılar oluşturmak için geçersiz kılın.
 
@@ -211,7 +211,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
  **Kullanıcıların öğeleri sürükleyip bırakması için izin verin.**
 Bkz. [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-to-add-a-drag-and-drop-handler.md).
 
-## <a name="customizing-link-copy-behavior"></a><a name="customizeLinks"></a>Bağlantı kopyalama davranışını özelleştirme
+## <a name="customizing-link-copy-behavior"></a><a name="customizeLinks"></a> Bağlantı kopyalama davranışını özelleştirme
  Kullanıcı bir öğeyi kopyaladığında, standart davranış herhangi bir katıştırılmış öğenin de kopyalanmasında olur. Standart kopyalama davranışını değiştirebilirsiniz. DSL tanımında bir ilişkinin bir tarafındaki bir rolü seçin Özellikler penceresi **yayar kopya** değerini ayarlayın.
 
  ![Etki alanı rolünün Copy özelliğini yayar](../modeling/media/dslpropagatescopy.png)
@@ -244,7 +244,7 @@ Bkz. [nasıl yapılır: sürükle ve bırak Işleyicisi ekleme](../modeling/how-
 
 2. Diyagram sınıfınız için kısmi bir sınıf tanımı ekleyin. Bu sınıfın adı **Dsl\GeneratedCode\Diagrams.cs**içinde bulunabilir.
 
-    Diyagram sınıfında, <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> ElementOperations alt sınıfınızın bir örneğini döndürmek için geçersiz kılın. Her çağrıda aynı örneği döndürmelidir.
+    Diyagram sınıfında,  <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> ElementOperations alt sınıfınızın bir örneğini döndürmek için geçersiz kılın. Her çağrıda aynı örneği döndürmelidir.
 
    Bu kodu DslPackage projesindeki özel bir kod dosyasına ekleyin:
 
@@ -284,12 +284,12 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 
  ElementOperations sınıfında iki yöntem tanımlayın:
 
-- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)`Kaynak öğenin hedef şeklinin, bağlayıcının veya diyagramın üzerine sürüklenemeyeceğini belirler.
+- `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)` Kaynak öğenin hedef şeklinin, bağlayıcının veya diyagramın üzerine sürüklenemeyeceğini belirler.
 
-- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)`kaynak öğeyi hedefle birleştiren.
+- `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)` kaynak öğeyi hedefle birleştiren.
 
 ### <a name="canmerge"></a>CanMerge ()
- `CanMerge()`fare diyagramda gezindiğinde kullanıcıya verilmesi gereken geri bildirimleri belirlemekte çağrılır. Yöntemine yönelik parametreler, fare üzerine gelindiğinde bulunan öğesidir ve sürükleme işleminin gerçekleştirildiği kaynak hakkındaki verileri içerir. Kullanıcı ekran üzerinde herhangi bir yerden sürükleyebilirsiniz. Bu nedenle, kaynak nesne birçok farklı türde olabilir ve farklı biçimlerde seri hale getirilebilir. Kaynak bir DSL veya UML modelli ise, veri parametresi bir ' ın serileştirmesi olur <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> . Sürükleme, kopyalama ve araç kutusu işlemleri, model parçalarını göstermek için Elementgroupprototipleri kullanır.
+ `CanMerge()` fare diyagramda gezindiğinde kullanıcıya verilmesi gereken geri bildirimleri belirlemekte çağrılır. Yöntemine yönelik parametreler, fare üzerine gelindiğinde bulunan öğesidir ve sürükleme işleminin gerçekleştirildiği kaynak hakkındaki verileri içerir. Kullanıcı ekran üzerinde herhangi bir yerden sürükleyebilirsiniz. Bu nedenle, kaynak nesne birçok farklı türde olabilir ve farklı biçimlerde seri hale getirilebilir. Kaynak bir DSL veya UML modelli ise, veri parametresi bir ' ın serileştirmesi olur <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> . Sürükleme, kopyalama ve araç kutusu işlemleri, model parçalarını göstermek için Elementgroupprototipleri kullanır.
 
  Öğe grubu prototipi, herhangi bir sayıda öğe ve bağlantı içerebilir. Öğe türleri, GUID 'Leri ile tanımlanabilir. GUID, temeldeki model öğesi değil, sürüklenen şekildir. Aşağıdaki örnekte, `CanMerge()` UML diyagramından bir sınıf şekli bu diyagrama sürüklendiğinde true değeri döndürür.
 

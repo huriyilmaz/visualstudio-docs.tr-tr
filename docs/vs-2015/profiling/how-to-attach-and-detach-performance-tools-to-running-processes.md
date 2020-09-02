@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Ekleme ve ayırma performans araçlarını çalışan işlemlere | Microsoft Docs'
+title: 'Nasıl yapılır: performans araçlarını çalıştırma Işlemlerine bağlama ve ayırma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -18,61 +18,61 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 0b8fc664ee47cd34ab984d1ac448b45c2f17c5b0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443714"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64804969"
 ---
-# <a name="how-to-attach-and-detach-performance-tools-to-running-processes"></a>Nasıl yapılır: Ekleme ve ayırma işlemleri çalıştırmak için performans araçları
+# <a name="how-to-attach-and-detach-performance-tools-to-running-processes"></a>Nasıl yapılır: performans araçlarını çalıştırma Işlemlerine bağlama ve ayırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Profil Oluşturucu ekleme veya örnekleme ve toplar performans verilerini daha kolay hale getirmek için çalışan bir işlemden ayırmak için kullanılabilir. Uygulama yükleme süresi hakkında veri toplama kaçınmak istiyorsanız ya da sonraki bir işlemin performansını izlemek için belirli bir duruma ulaştığında bir işlem profili için bu yöntemi kullanabilirsiniz.  
+Profil Oluşturucu, örnekleme yapmak ve performans verilerini toplamak için çalışan bir işlemden eklemek ya da ayırmak için kullanılabilir. Bu yöntemi, uygulama yükleme süresi hakkında veri toplamayı önlemek veya belirli bir duruma ulaştıktan sonra bir işlemin performansını izlemek istediğinizde bir işlemi profil için kullanabilirsiniz.  
   
 > [!NOTE]
-> Ekleme ve ayırma işlemleri içinden aşağıdaki adımları uygulamak [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] tümleşik geliştirme environmnent (IDE). Komut satırı araçlarının nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [komut satırından profil oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md). Profil hizmetler hakkında daha fazla bilgi için bkz. [profil oluşturma hizmetleri](../profiling/command-line-profiling-of-services.md).  
+> Aşağıdaki adımlar, [!INCLUDE[vs_current_short](../includes/vs-current-short-md.md)] Tümleşik geliştirme environmnent (IDE) içinden işlemleri eklemek ve ayırmak için geçerlidir. Komut satırı araçlarını kullanma hakkında daha fazla bilgi için, bkz. [komut satırından profil oluşturma](../profiling/using-the-profiling-tools-from-the-command-line.md). Hizmetleri profil oluşturma hakkında daha fazla bilgi için bkz. [profil oluşturma hizmetleri](../profiling/command-line-profiling-of-services.md).  
   
- Profili için kullanılabilir olan işlemleri, bilgisayarın yönetici tarafından ayarlanan kullanıcı erişimi izinleri bağlıdır. Örneğin, bir kullanıcı hesabı izni aşağıdakilerden herhangi biri olabilir:  
+ Profil için kullanılabilen süreçler, bilgisayarın yöneticisi tarafından ayarlanan Kullanıcı erişim Izinlerine bağlıdır. Örneğin, bir kullanıcı hesabı, aşağıdakilerden herhangi biri için izne sahip olabilir:  
   
-- Gelişmiş Özellikler, sürücü ve hizmeti başlatmak için yöneticiniz tarafından belirlenen zaman profil oluşturma.  
+- Yönetici, sürücüyü ve hizmeti başlatılmak üzere ayarladığınızda gelişmiş profil oluşturma özellikleri.  
   
-- Yalnızca (etki alanı kullanıcı) profil oluşturma örneği.  
+- Yalnızca örnek profil oluşturma (etki alanı kullanıcıları).  
   
-- Herkes için profil oluşturma için erişimi engeller.  
+- Herkes için profil oluşturma erişimini engelleyin.  
   
-  Daha fazla bilgi için [profil oluşturma ve Windows Vista Güvenliği](../profiling/profiling-and-windows-vista-security.md) ve yönetim seçeneklerini [VSPerfCmd](../profiling/vsperfcmd.md).  
+  Daha fazla bilgi için bkz. [profil oluşturma ve Windows Vista güvenliği](../profiling/profiling-and-windows-vista-security.md) ve [VSPerfCmd](../profiling/vsperfcmd.md)içindeki yönetici seçenekleri.  
   
 ### <a name="to-attach-to-a-running-process"></a>Çalışan bir işleme iliştirmek için  
   
-1. Üzerinde **Çözümle** menüsünde **Profiler** ve ardından **Attach/Detach**.  
+1. **Çözümle** menüsünde **Profil Oluşturucu** ' nın üzerine gelin ve ardından **Ekle/ayır**' a tıklayın.  
   
-     \- veya -  
+     \- veya  
   
-     İçinde **performans Gezgini**performans oturumu sağ tıklayın ve ardından **Attach/Detach**.  
+     **Performans Gezgini**' de, performans oturumuna sağ tıklayın ve ardından **Ekle/ayır**' a tıklayın.  
   
-     **İşleme iliştirmek Profiler** iletişim kutusu görüntülenir.  
+     **Işleme profil oluşturucu Ekle** iletişim kutusu görüntülenir.  
   
-2. Eklemek istediğiniz işlemin adını tıklayın.  
+2. Eklemek istediğiniz işlemin adına tıklayın.  
   
-3. Tıklayın **ekleme**.  
+3. **Ekle**' ye tıklayın.  
   
-### <a name="to-detach-from-a-running-process"></a>Çalışan bir işlemden ayırmak için  
+### <a name="to-detach-from-a-running-process"></a>Çalışan bir işlemden ayrılmak için  
   
-1. Üzerinde **Çözümle** menüsünde **Profiler** ve ardından **Attach/Detach**.  
+1. **Çözümle** menüsünde **Profil Oluşturucu** ' nın üzerine gelin ve ardından **Ekle/ayır**' a tıklayın.  
   
-     \- veya -  
+     \- veya  
   
-     İçinde **performans Gezgini**performans oturumu sağ tıklayın ve ardından **Attach/Detach**.  
+     **Performans Gezgini**' de, performans oturumuna sağ tıklayın ve ardından **Ekle/ayır**' a tıklayın.  
   
-     **İşleme iliştirmek Profiler** iletişim kutusu görüntülenir.  
+     **Işleme profil oluşturucu Ekle** iletişim kutusu görüntülenir.  
   
 2. Ayırmak istediğiniz görüntü adına tıklayın.  
   
-3. Tıklayın **ayırma**.  
+3. **Ayır**'a tıklayın.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Veri toplama denetimi](../profiling/controlling-data-collection.md)   
+ [Veri toplamayı denetleme](../profiling/controlling-data-collection.md)   
  [Performans oturumuna genel bakış](../profiling/performance-session-overview.md)   
- [Nasıl yapılır: Başlangıç ve bitiş performans verilerini toplama](../profiling/how-to-start-and-end-performance-data-collection.md)   
+ [Nasıl yapılır: performans veri toplamayı başlatma ve bitirme](../profiling/how-to-start-and-end-performance-data-collection.md)   
  [Profil oluşturma ve Windows Vista güvenliği](../profiling/profiling-and-windows-vista-security.md)   
  [VSPerfCmd](../profiling/vsperfcmd.md)

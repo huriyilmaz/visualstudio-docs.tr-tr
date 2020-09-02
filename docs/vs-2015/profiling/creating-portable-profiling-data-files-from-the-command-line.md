@@ -1,5 +1,5 @@
 ---
-title: Profil oluşturma veri dosyaları komut satırından taşınabilir oluşturma | Microsoft Docs
+title: Komut satırından taşınabilir profil oluşturma veri dosyaları oluşturuluyor | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -10,38 +10,38 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5d343392c9e554c5e51325964949cd3ea13237b8
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63434284"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64791233"
 ---
 # <a name="creating-portable-profiling-data-files-from-the-command-line"></a>Komut Satırından Taşınabilir Profil Oluşturma Veri Dosyaları Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Profil oluşturma verilerini daha kolay paylaşım yapmak için kullanabileceğiniz [VSPerfReport](../profiling/vsperfreport.md) bir .vsp dosyasına profil oluşturma için simgeleri eklemek için komut satırı aracı.  
+Profil oluşturma verilerinin paylaşılmasını daha kolay hale getirmek için [VSPerfReport](../profiling/vsperfreport.md) komut satırı aracını kullanarak bir profil oluşturma çalıştırmasının sembollerini. vsp dosyasına ekleyebilirsiniz.  
   
- Daha küçüktür ve IDE'de yük daha hızlı bir şekilde önceden çözümlenmiş bir profil oluşturma veri (.vsps) dosyası da oluşturabilirsiniz.  
+ Daha küçük olan ve daha hızlı bir şekilde IDE 'ye daha hızlı bir şekilde çözümlenebilecek profil oluşturma verileri (. vsps) dosyası da oluşturabilirsiniz.  
   
 > [!NOTE]
-> Sembol (.pdb) dosyalarının kullanılabilir olduğundan emin olun **VSPerfReport**. Daha fazla bilgi için [nasıl yapılır: Komut satırından sembol dosyası konumlarını belirtme](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md).  
+> Sembol (. pdb) dosyalarının **VSPerfReport**için kullanılabilir olduğundan emin olun. Daha fazla bilgi için bkz. [nasıl yapılır: sembol dosyası konumlarını komut satırından belirtme](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md).  
 >   
-> Yolu hakkında bilgi için **VSReport**, bkz: [komut satırı araçları yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
+> **VSReport**yolu hakkında daha fazla bilgi için bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
 >   
-> Profil oluşturma verilerinin bir .vsps dosyasında filtrelenemez.  
+> Bir. vsps dosyasındaki profil oluşturma verileri filtrelenemez.  
   
-### <a name="to-embed-the-symbols-for-a-profiling-run-into-a-profiling-data-vsp-file"></a>Bir profil oluşturma veri (.vsp) dosyasına bir profil oluşturma için simgeleri eklemek için  
+### <a name="to-embed-the-symbols-for-a-profiling-run-into-a-profiling-data-vsp-file"></a>Bir profil oluşturma için sembolleri profil oluşturma verileri (. vsp) dosyasına eklemek için  
   
-- Bir komut istemi penceresinde, aşağıdaki komutu yazın:  
+- Komut istemi penceresinde aşağıdaki komutu yazın:  
   
-   \<Yolu ><strong>VSPerfReport \<</strong> VSP dosyası > **packsymbols**  
+   \<Path><strong>VSPerfReport \<</strong> VSP dosyası> **/packsymbols**  
   
-   Varsayılan olarak, .vsp dosyasının temel adı ile .vsps dosyası olarak adlandırılır. Kullanarak bir diğer ad belirtebilirsiniz **çıkış** seçeneği.  
+   Varsayılan olarak,. vsps dosyası. vsp dosyasının temel adı ile adlandırılır. **Output** seçeneğini kullanarak alternatif bir ad belirtebilirsiniz.  
   
-### <a name="to-create-a-summary-profiling-data-file"></a>Özet bir profil oluşturma veri dosyasını oluşturmak için  
+### <a name="to-create-a-summary-profiling-data-file"></a>Özet profil oluşturma veri dosyası oluşturmak için  
   
-- Bir komut istemi penceresinde, aşağıdaki komutu yazın:  
+- Komut istemi penceresinde aşağıdaki komutu yazın:  
   
-   \<Yolu ><strong>VSPerfReport \<</strong> VSP dosyası > **/summaryfile** [**/Output:**\<dosya adı >]  
+   \<Path><strong>VSPerfReport \<</strong> VSP dosyası> **/summaryfile** [**/output:** \<File Name> ]  
   
-   Varsayılan olarak, .vsp dosyasının temel adı ile .vsps dosyası olarak adlandırılır. Kullanarak bir diğer ad belirtebilirsiniz **çıkış** seçeneği.
+   Varsayılan olarak,. vsps dosyası. vsp dosyasının temel adı ile adlandırılır. **Output** seçeneğini kullanarak alternatif bir ad belirtebilirsiniz.

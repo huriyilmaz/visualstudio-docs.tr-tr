@@ -1,5 +1,5 @@
 ---
-title: Idiaınjectedsource::get_source | Microsoft Docs
+title: 'IDiaInjectedSource:: get_source | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 856d0111e65b51b798dfe44a324c58c4db5457fd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192419"
 ---
-# <a name="idiainjectedsourcegetsource"></a>IDiaInjectedSource::get_source
+# <a name="idiainjectedsourceget_source"></a>IDiaInjectedSource::get_source
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kaynak kodu bayt alır.  
+Kaynak kodu baytlarını alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT get_source (   
@@ -37,16 +37,16 @@ HRESULT get_source ( 
   
 #### <a name="parameters"></a>Parametreler  
  `cbData`  
- [in] Veri arabellek boyutu temsil eden bayt sayısı.  
+ 'ndaki Veri arabelleğinin boyutunu temsil eden bayt sayısı.  
   
  `pcbData`  
- [out] Döndürülen bayt sayısını temsil eden bayt sayısı. Varsa `data` olduğu `NULL`, ardından `pcbData` verileri baytlık toplam sayısı kullanılabilir.  
+ dışı Döndürülen baytları temsil eden bayt sayısını döndürür. `data`İse `NULL` , `pcbData` kullanılabilir toplam veri baytı sayısıdır.  
   
  `data[]`  
- [out] Kaynak bayt ile doldurulacak olan bir arabellek.  
+ dışı Kaynak baytlarıyla doldurulacak bir arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` varsa bu özelliği desteklenmiyor. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Bu özellik desteklenmiyorsa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

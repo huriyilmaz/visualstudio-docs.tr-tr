@@ -15,17 +15,17 @@ monikerRange: vs-2017
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89dadc3213620b668160752e919679cccead90bc
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "74778030"
 ---
-# <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio profilci API başvurusu (yerel)
-Visual Studio profil oluşturucu API'leri, toplanan veri miktarını programlı olarak denetlemenize ve profil oluşturma sırasında hem zaman damgası hem de profil işaretleri eklemenize olanak sağlar. Yerel API'leri kullanmak için *VSPerf.h* başlık dosyasını ekleyin ve projenize *VSPerf.lib'i* ekleyin.
+# <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio profil oluşturucu API başvurusu (yerel)
+Visual Studio Profiler API 'Leri, toplanan veri miktarını programlı bir şekilde denetlemenize ve profil oluşturma sırasında hem zaman damgası hem de profil işaretlerini eklemenize olanak tanır. Yerel API 'Leri kullanmak için *VSPerf. h* üstbilgi dosyasını dahil edin ve projenize *VSPerf. lib* ekleyin.
 
 > [!NOTE]
-> Profil oluşturma araçlarına giden yolu almak [için](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)bkz.
+> Profil oluşturma araçlarının yolunu almak için, bkz. [komut satırı araçlarının yolunu belirtme](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).
 
 ## <a name="in-this-section"></a>Bu bölümde
 [CommentMarkAtProfile](../profiling/commentmarkatprofile.md)
@@ -48,5 +48,5 @@ Visual Studio profil oluşturucu API'leri, toplanan veri miktarını programlı 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil oluşturma araçları API'leri](../profiling/profiling-tools-apis.md)
-- [İzlenecek yol: Profil oluşturucu API'ler Kullanma](../profiling/walkthrough-using-profiler-apis.md)
+- [Profil araçları API 'Leri](../profiling/profiling-tools-apis.md)
+- [İzlenecek yol: Profil Oluşturucu API’lerini kullanma](../profiling/walkthrough-using-profiler-apis.md)

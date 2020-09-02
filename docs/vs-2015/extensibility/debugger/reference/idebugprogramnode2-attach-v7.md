@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNode2::Attach_V7 | Microsoft Docs
+title: 'IDebugProgramNode2:: Attach_V7 | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 08028f2b03f3ea36cc72172ca8f9de31740b49f3
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63417904"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64784993"
 ---
-# <a name="idebugprogramnode2attachv7"></a>IDebugProgramNode2::Attach_V7
+# <a name="idebugprogramnode2attach_v7"></a>IDebugProgramNode2::Attach_V7
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-KULLANIM DIŞI. KULLANMAYIN.  
+Kullanım dışı. KULLANMAYıN.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Attach_V7 (   
@@ -45,28 +45,28 @@ int Attach_V7 ( 
   
 #### <a name="parameters"></a>Parametreler  
  `pMDMProgram`  
- [in] [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) eklemek için program temsil eden arabirim.  
+ 'ndaki Eklenecek programı temsil eden [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) arabirimi.  
   
  `pCallback`  
- [in] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) SDM için hata ayıklama olayları göndermek için kullanılan arabirim.  
+ 'ndaki Hata ayıklama olaylarını SDM 'ye göndermek için kullanılacak [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) arabirimi.  
   
  `dwReason`  
- [in] Bir değer [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) ekleme nedenini belirten sabit listesi.  
+ 'ndaki Ekleme nedeninizi belirten [ATTACH_REASON](../../../extensibility/debugger/reference/attach-reason.md) numaralandırmasından bir değer.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bir uygulama her zaman döndürmelidir `E_NOTIMPL`.  
+ Bir uygulama her zaman döndürmelidir `E_NOTIMPL` .  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!WARNING]
-> Sürümünden itibaren [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], bu yöntem artık kullanılmamaktadır ve her zaman döndürmelidir `E_NOTIMPL`. Bkz: [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md) program düğümü, iliştirilemez için göstermek gerekiyorsa veya program düğümü yalnızca program ayarlıyorsanız alternatif bir yaklaşım için arabirim `GUID`. Aksi takdirde uygulama [iliştirme](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemi.  
+> İtibariyle [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] , bu yöntem artık kullanılmamaktadır ve her zaman döndürmelidir `E_NOTIMPL` . Program düğümünün, program düğümü tarafından yalnızca program olarak ayarlanması gerektiğini belirtmesi gerekiyorsa alternatif bir yaklaşım için [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md) arabirimine bakın `GUID` . Aksi takdirde, [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) metodunu uygulayın.  
   
-## <a name="prior-to-visual-studio-2005"></a>Visual Studio 2005'ten önce  
- Bu yöntem yalnızca DE ayıklanan programa Adres alanında çalıştırıyorsa uygulanması gerekiyor. Aksi takdirde, bu yöntem döndürmelidir `S_FALSE`.  
+## <a name="prior-to-visual-studio-2005"></a>Visual Studio 2005 öncesi  
+ Bu yöntemin yalnızca, hata ayıklamakta olan programın adres alanında çalışması durumunda uygulanması gerekir. Aksi takdirde, bu yöntem döndürmelidir `S_FALSE` .  
   
- Bu yöntem çağrıldığında DE göndermelisiniz [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) olay nesne, zaten bu örneği için gönderilmedi, [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) arabirimi yanı sıra [ IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) ve [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) olay nesneleri. [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md) olay nesnesi, ardından gönderilen `dwReason` parametresi `ATTACH_REASON_LAUNCH`.  
+ Bu yöntem çağrıldığında, [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) arabiriminin bu örneği için zaten gönderilmemiş ve [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) ve [IDebugLoadCompleteEvent2](../../../extensibility/debugger/reference/idebugloadcompleteevent2.md) olay NESNELERININ yanı sıra [IDebugEngineCreateEvent2](../../../extensibility/debugger/reference/idebugenginecreateevent2.md) Event nesnesini de göndermelidir. [IDebugEntryPointEvent2](../../../extensibility/debugger/reference/idebugentrypointevent2.md) olay nesnesi daha sonra parametresi ise gönderilir `dwReason` `ATTACH_REASON_LAUNCH` .  
   
- DE çağırmalı [GetProgramId](../../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) metodunda [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) tarafından sağlanan nesne [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) olay nesne ve bu programın GUID depolamanız gerekir Örnek verileri `IDebugProgram2` DE tarafından uygulanan bir nesne.  
+ Aynı [IDebugProgramCreateEvent2](../../../extensibility/debugger/reference/idebugprogramcreateevent2.md) olay nesnesi tarafından sağlanan [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) nesnesinde [GetProgramId](../../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) yöntemini ÇAĞıRMALıDıR ve bu programın GUID 'ini `IDebugProgram2` de tarafından uygulanan nesne için örnek verilerinde depolaması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md)   

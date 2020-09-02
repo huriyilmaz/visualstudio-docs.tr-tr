@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetAddress | Microsoft Dokümanlar
+title: 'IDebugField:: GetAddress | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1be3d839cabe3fce07cdd42720306bdac47282f5
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728997"
 ---
 # <a name="idebugfieldgetaddress"></a>IDebugField::GetAddress
-Bu yöntem, bir alanın hata ayıklama adresini alır.
+Bu yöntem bir alanın hata ayıklama adresini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetAddress( 
@@ -41,10 +41,10 @@ int GetAddress(
 
 ## <a name="parameters"></a>Parametreler
 `ppAddress`\
-[çıkış] Adresi [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi olarak döndürür.
+dışı Adresi bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesi olarak döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürün.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

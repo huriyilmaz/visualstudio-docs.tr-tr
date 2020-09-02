@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b06190568454977bfcb54d65db9011fc979f7591
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85329574"
 ---
 # <a name="cvinitprovider-function"></a>CvInitProvider işlevi
@@ -32,9 +32,9 @@ HRESULT CvInitProvider(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pGuid`Sağlayıcı GUID 'i. NULL olamaz.
+ `pGuid` Sağlayıcı GUID 'i. NULL olamaz.
 
- `ppProvider`Sağlayıcı bağlamını depolayacak bir çıktı değişkeninin adresi. NULL olamaz.
+ `ppProvider` Sağlayıcı bağlamını depolayacak bir çıktı değişkeninin adresi. NULL olamaz.
 
 ## <a name="return-value"></a>Döndürülen değer
  Sağlayıcı başarıyla başlatıldığında S_OK veya herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.

@@ -11,39 +11,39 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4d88cd0c20a8bbb29fee6b35d65813fd81f2eeb6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192632"
 ---
 # <a name="managing-configuration-options"></a>Yapılandırma Seçeneklerini Yönetme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Yeni bir proje türü oluşturduğunuzda, projenizi ne nasıl oluşturulacak, paketlenmiş, dağıtılan ve çalışma belirlemek proje ve çözüm yapılandırma ayarları yönetmeniz gerekir. Aşağıdaki konular, proje ve çözüm yapılandırma açıklanmaktadır.  
+Yeni bir proje türü oluşturduğunuzda, projenizin nasıl oluşturulup paketlenceğini, dağıtıldığını, dağıtılacağını ve çalıştırılacağını belirleyecek proje ve çözüm yapılandırma ayarlarını yönetmeniz gerekir. Aşağıdaki konularda proje ve çözüm yapılandırması ele alınmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Genel bakış](../../extensibility/internals/configuration-options-overview.md)  
- Açıklayan nasıl projelerinde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] birden çok yapılandırmaları destekler.  
+ [Genel Bakış](../../extensibility/internals/configuration-options-overview.md)  
+ İçindeki projelerin [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] birden çok yapılandırmayı nasıl destekleyebileceğinizi açıklar.  
   
  [Özellik Sayfaları](../../extensibility/internals/property-pages.md)  
- Kullanıcıların görüntüleyebileceği ve özellik sayfaları kullanarak proje yapılandırma bağımlı özellikleri ve bağımsız özelliklerini değiştirmek açıklar.  
+ Kullanıcıların, özellik sayfalarını kullanarak proje yapılandırmasına bağımlı özellikleri ve bağımsız özellikleri görüntüleyebileceği ve değiştirebileceği açıklanmaktadır.  
   
  [Çözüm Yapılandırması](../../extensibility/internals/solution-configuration.md)  
- Çözüm yapılandırmalarını içinde depolanan ve çözüm yapılandırmalarının davranışını nasıl doğrudan hakkında bilgi sağlar **Başlat** ve **derleme** komutları.  
+ Çözüm yapılandırmalarında nelerin depolanabileceği ve çözüm yapılandırmalarının **Start** ve **Build** komutlarının davranışını nasıl yönlendirdikleriniz hakkında bilgi sağlar.  
   
  [Proje Yapılandırması Nesnesi](../../extensibility/internals/project-configuration-object.md)  
- Proje yapılandırması nesnesi yapılandırma bilgileri için kullanıcı Arabiriminde görünen nasıl yönettiğini açıklanmaktadır.  
+ Proje yapılandırma nesnesinin, yapılandırma bilgilerinin kullanıcı arabirimine görüntüsünü nasıl yönettiğini açıklar.  
   
  [Derleme için Proje Yapılandırması](../../extensibility/internals/project-configuration-for-building.md)  
- Belirli bir çözümü için çözüm yapılandırmaları listesi tarafından nasıl yönetildiği açıklanır **çözüm yapılandırmaları** iletişim kutusu.  
+ Belirli bir çözüme yönelik çözüm yapılandırmalarının listesinin **çözüm konfigürasyonları** iletişim kutusu tarafından nasıl yönetildiğini açıklar.  
   
  [Dağıtımı Yönetmek için Proje Yapılandırması](../../extensibility/internals/project-configuration-for-managing-deployment.md)  
- Dağıtım ve iki şekilde Yasası tanımlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dağıtımını destekleyen projeleri destekler.  
+ Dağıtım yasası tanımlar ve iki yol, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] dağıtımı destekleyen projeleri destekler.  
   
  [Çıkış için Proje Yapılandırması](../../extensibility/internals/project-configuration-for-output.md)  
- Her yapılandırmayı desteklemek yapı işlemlerini ve arabirimleri ve hangi çıktı tarafından öğeleri kullanılabilir yöntemleri açıklar.  
+ Her yapılandırmanın destekleyebileceği derleme süreçlerini ve çıkış öğelerinin kullanılabilir hale getirilbileceği arabirimler ve yöntemleri açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Proje Türleri](../../extensibility/internals/project-types.md)  
- Temel yapı taşları projelerine genel bir bakış sağlar [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Projeler oluşturmak ve kodu derleme nasıl kontrol açıklayan ek konulara bağlantılar sağlanmaktadır.
+ , [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tümleşik geliştirme ortamının (IDE) temel yapı taşları olarak projelere genel bir bakış sağlar. Bağlantılar, projelerin kod oluşturma ve derleme şeklini açıklayan ek konulara sağlanır.

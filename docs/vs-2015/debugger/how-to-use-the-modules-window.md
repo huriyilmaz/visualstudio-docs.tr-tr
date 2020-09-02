@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Modüller penceresini kullanma | Microsoft Docs'
+title: 'Nasıl yapılır: modüller penceresini kullanma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -28,56 +28,56 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b592515692e23dce49c125c7895bd158904b653f
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65696123"
 ---
-# <a name="how-to-use-the-modules-window"></a>Nasıl yapılır: Modüller penceresini kullanma
+# <a name="how-to-use-the-modules-window"></a>Nasıl Yapılır: Modüller Penceresini Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[NOT]
-> Bu özellik, SQL veya komut dosyası hata ayıklama için kullanılamaz.  
+NOTUN
+> Bu özellik SQL veya betik hata ayıklaması için kullanılamaz.  
   
- **Modülleri** penceresi listeler dll ve EXE, programınız tarafından kullanılan ve her biri için ilgili bilgileri gösterir.  
+ **Modüller** penceresi, programınız tarafından kullanılan dll 'LERI ve exe 'yi listeler ve her biri için ilgili bilgileri gösterir.  
   
-### <a name="to-display-the-modules-window-in-break-mode-or-in-run-mode"></a>Modüller penceresini kesme modunda veya çalıştırma modunda görüntülemek için  
+### <a name="to-display-the-modules-window-in-break-mode-or-in-run-mode"></a>Modül penceresini kesme modunda veya çalışma modunda görüntüleme  
   
-- Üzerinde **hata ayıklama** menüsünde seçin **Windows**ve ardından **modülleri**.  
+- **Hata Ayıkla** menüsünde **Windows**' u seçin ve ardından **modüller**' i tıklatın.  
   
-     Varsayılan olarak, **modülleri** penceresi modülleri yükleme sırası tarafından sıralar. Ancak, herhangi bir sütuna göre sıralamak seçebilirsiniz.  
+     Varsayılan olarak **modüller** penceresi modülleri yükleme sırasına göre sıralar. Ancak, herhangi bir sütuna göre sıralamayı seçebilirsiniz.  
   
 ### <a name="to-sort-by-any-column"></a>Herhangi bir sütuna göre sıralamak için  
   
-- Sütun üst kısmındaki düğmeye tıklayın.  
+- Sütunun en üstündeki düğmeye tıklayın.  
   
-     Sembolleri yüklemek veya bir sembol yolu belirtin **modülleri** kısayol menüsünü kullanarak pencere.  
+     Kısayol menüsünü kullanarak, sembolleri yükleyebilir veya **modüller** penceresinden bir sembol yolu belirtebilirsiniz.  
   
 ## <a name="loading-symbols"></a>Semboller yükleniyor  
- İçinde **modülleri** penceresi, hata ayıklama simgeleri yüklü modüllerine sahip görebilirsiniz. Bu bilgiler görünür **sembol durumu** sütun. Durum diyorsa **atlandı loadingCannot bulun veya PDB dosyası açın**, veya **yükleme Ekle/Çıkar ayarı tarafından devre dışı bırakıldı**, hata ayıklayıcının sembolleri Microsoft ortak Sembol ' indirin yönlendirebilirsiniz sunucuları veya bilgisayarınızdaki bir sembol dizinden simgeleri yüklemek için. Daha fazla bilgi için [belirtin sembol (.pdb) ve kaynak dosyaları](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
+ **Modüller** penceresinde, hangi modüllerin hata ayıklama sembolleri yüklendiğini görebilirsiniz. Bu bilgiler **sembol durumu** sütununda görüntülenir. Durum **atlandı Load, pdb dosyasını bulamıyor veya açamıyor**ya da **içerme/hariç tutma ayarı ile devre dışı olarak yüklemeyi**, Microsoft ortak sembol sunucularından sembolleri indirmek veya bilgisayarınızdaki bir sembol dizininden sembolleri yüklemek için hata ayıklayıcıyı yönlendirebilirsiniz. Daha fazla bilgi için bkz. [simge (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
   
-#### <a name="to-load-symbols-manually"></a>Simgeleri el ile yüklemek için  
+#### <a name="to-load-symbols-manually"></a>Sembolleri el ile yüklemek için  
   
-1. İçinde **modülleri** penceresinde, kendisi için olmayan semboller modülü sağ tıklatın.  
+1. **Modüller** penceresinde, simgelerin yüklenmediği bir modüle sağ tıklayın.  
   
-2. İşaret **sembolleri şuradan Yükle** ve ardından **Microsoft sembol sunucuları** veya **sembol yolu**.  
+2. **Sembolleri yükle** ' nin üzerine gelin ve ardından **Microsoft sembol sunucuları** veya **sembol yolu**' na tıklayın.  
   
 #### <a name="to-change-symbol-load-settings"></a>Sembol yükleme ayarlarını değiştirmek için  
   
-1. İçinde **modülleri** penceresinde herhangi bir modülden sağ tıklayın.  
+1. **Modüller** penceresinde herhangi bir modüle sağ tıklayın.  
   
-2. Tıklayın **sembol ayarları**.  
+2. **Sembol ayarları**' na tıklayın.  
   
-     Artık açıklandığı gibi sembol yükleme ayarlarını değiştirebilirsiniz [sembol konumlarını belirtin ve yükleme davranışını](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Specify_symbol_locations_and_loading_behavior). Değişiklikler, hata ayıklama oturumunu yeniden başlatılana kadar etkili olmaz.  
+     Artık sembol [konumları belirtin ve yükleme davranışı](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Specify_symbol_locations_and_loading_behavior)bölümünde açıklandığı gibi sembol yükleme ayarlarını değiştirebilirsiniz. Değişiklikler hata ayıklama oturumu yeniden başlatılana kadar etkili olmaz.  
   
-#### <a name="to-change-symbol-load-behavior-for-a-specific-module"></a>Belirli bir modül için Sembol yükleme davranışını değiştirmek için  
+#### <a name="to-change-symbol-load-behavior-for-a-specific-module"></a>Belirli bir modülün sembol yükleme davranışını değiştirmek için  
   
-1. İçinde **modülleri** penceresinde modülü sağ tıklatın.  
+1. **Modüller** penceresinde modüle sağ tıklayın.  
   
-2. İşaret **otomatik sembol yükleme ayarlarını** ve ardından **elle her zaman yük** veya **varsayılan**. Değişiklikler, hata ayıklama oturumunu yeniden başlatılana kadar etkili olmaz.  
+2. **Otomatik sembol yükleme ayarları** ' nın üzerine gelin ve ardından **her zaman el ile** veya **varsayılan**olarak yükle ' Değişiklikler hata ayıklama oturumu yeniden başlatılana kadar etkili olmaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yürütmeyi kesme](https://msdn.microsoft.com/30fc4643-f337-4651-b1ff-f2de2c098d40)   
+ [Son yürütme](https://msdn.microsoft.com/30fc4643-f337-4651-b1ff-f2de2c098d40)   
  [Hata ayıklayıcıda verileri görüntüleme](../debugger/viewing-data-in-the-debugger.md)   
  [Simge (.pdb) ve Kaynak Dosyaları Belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)

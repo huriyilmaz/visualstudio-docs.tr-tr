@@ -1,5 +1,5 @@
 ---
-title: İşaretçiler Raporu | Microsoft Dokümanlar
+title: İşaret raporu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,34 +11,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 9502d2cf0081985cfbee2283af820c06d681ad9f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "64808265"
 ---
 # <a name="markers-report"></a>İşaretçiler Raporu
-İşaretçiler Raporu, görüntülenen zaman dilimindeki işaretçileri listeler.  Kaydırma veya yakınlaştırma veya şeritleri gizleme, işaretçilerin görünmesine veya kaybolmasına neden olabilir. Rapor, her işaretçi hakkında şu bilgileri içerir:
+Işaretçiler raporu, görünen zaman çerçevesinde işaretçileri listeler.  Yolları kaydırma veya büyütme ya da gizleme, işaretleyicilerin görünmesine veya kaybolmasına neden olabilir. Rapor, her işaretleyici hakkında şu bilgileri içerir:
 
-- Başladığı zaman, izin başlangıcına göre.
+- İzlemenin başlangıcına göre başladığı zaman.
 
-- Süresi. Bir an temsil ettikleri için süre bayraklar ve iletiler için sıfırdır.
+- Süresi. Bir anlık temsil ettiğinden, bayraklar ve mesajlar için süre sıfırdır.
 
-- Onu oluşturan iş parçacığının kimliği.
+- Kendisini oluşturan iş parçacığının KIMLIĞI.
 
-- Onu oluşturan Windows için Olay İzleme (ETW) sağlayıcısı.
+- Onu oluşturan Windows (ETW) sağlayıcısı için olay Izleme.
 
-- Yazıldığı işaret serisi.
+- Yazıldığı işaretleyici serisi.
 
-- Ait olduğu olaylar kategorisi.
+- Ait olduğu olayların kategorisi.
 
-- Önemi düzeyi.
+- Önem düzeyi.
 
-- Türü (yayılma alanı, bayrak veya ileti).
+- Türü (span, flag veya Message).
 
-- Neyi temsil edenüst düzey bir açıklama
+- Temsil edilecek özellikler için üst düzey bir açıklama
 
-  İşaretçiler Raporunu CSV dosyası olarak kaydetmek için **Dışa** Aktarma düğmesini seçin. CSV dosyasındaki verileri diğer uygulamalar veya araçlarla kullanabilirsiniz.
+  Işaretleyiciler raporunu bir CSV dosyası olarak kaydetmek için **dışarı aktar** düğmesini seçin. CSV dosyasındaki verileri diğer uygulamalarla veya araçlarla kullanabilirsiniz.
 
 > [!NOTE]
-> İşaretçiler Raporu 1.000 işaretçi görüntüleyebilir. Tüm işaretçileri görmek için raporun tamamını bir CSV dosyasına aktarın.
+> Işaretçiler raporu 1.000 işaretçileri gösterebilir. Tüm işaretçileri görmek için, tam raporu bir CSV dosyasına dışarı aktarın.

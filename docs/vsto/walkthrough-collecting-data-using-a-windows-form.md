@@ -1,5 +1,5 @@
 ---
-title: 'İzlenecek yol: Bir Windows formu kullanarak veri toplama'
+title: 'İzlenecek yol: Windows formu kullanarak veri toplama'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,20 +16,20 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 893418ca5eb82e9466ea13a12088b38fd496e695
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438586"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64789837"
 ---
-# <a name="walkthrough-collect-data-by-using-a-windows-form"></a>İzlenecek yol: Bir Windows formu kullanarak veri toplama
-  Bu izlenecek yol, bir Windows Form Microsoft Office Excel için belge düzeyi özelleştirmesinde açın, kullanıcıdan bilgi toplar ve bu bilgileri çalışma sayfası hücresine yazma gösterilmektedir.
+# <a name="walkthrough-collect-data-by-using-a-windows-form"></a>İzlenecek yol: Windows formu kullanarak veri toplama
+  Bu izlenecek yol, Excel Microsoft Office için belge düzeyi özelleştirmede bir Windows formu açmayı, kullanıcıdan bilgi toplamayı ve bu bilgileri bir çalışma sayfası hücresine yazmayı gösterir.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
- Excel için belge düzeyi projesi Bu izlenecek yolda özellikle kullansa da, diğer Office projeleri tarafından izlenecek yolda gösterilen kavramlar geçerlidir.
+ Bu izlenecek yol, Excel için belge düzeyindeki bir projeyi özellikle kullanıyor olsa da, izlenecek yol tarafından gösterilen kavramlar diğer Office projeleri için geçerlidir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
  Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
@@ -37,109 +37,109 @@ ms.locfileid: "63438586"
 - [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] veya [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
 > [!NOTE]
-> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
+> Bilgisayarınız, aşağıdaki yönergelerde yer alan Visual Studio kullanıcı arabirimi öğelerinden bazıları için farklı adlar veya konumlar gösterebilir. Sahip olduğunuz Visual Studio sürümü ve kullandığınız ayarlar bu öğeleri belirler. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
- İlk adım, bir Excel çalışma kitabı projesi oluşturmaktır.
+ İlk adım bir Excel çalışma kitabı projesi oluşturmaktır.
 
 ### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için
 
-1. Adlı bir Excel çalışma kitabı projesi oluşturun **girdiWinFormu**seçip **yeni belge oluşturma** Sihirbazı'nda. Daha fazla bilgi için [nasıl yapılır: Visual Studio'da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. **Winforminput**adlı bir Excel çalışma kitabı projesi oluşturun ve sihirbazda **Yeni belge oluştur** ' u seçin. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve ekler **girdiWinFormu** için proje **Çözüm Gezgini**.
+     Visual Studio tasarımcıda yeni Excel çalışma kitabını açar ve **Çözüm Gezgini** **Winforminput** projesini ekler.
 
-## <a name="add-a-namedrange-control-to-the-worksheet"></a>Çalışma sayfasına NamedRange Denetimi Ekle
+## <a name="add-a-namedrange-control-to-the-worksheet"></a>Çalışma sayfasına NamedRange denetimi ekleme
 
-### <a name="to-add-a-named-range-to-sheet1"></a>Adlandırılmış aralık Sheet1 eklemek için
+### <a name="to-add-a-named-range-to-sheet1"></a>Sayfa1 'e adlandırılmış bir Aralık eklemek için
 
-1. Hücresini seçin **A1** üzerinde `Sheet1`.
+1. **A1** hücresini seçin `Sheet1` .
 
-2. İçinde **adı** kutusuna **girdiFormu**.
+2. **Ad** kutusuna **forminput**yazın.
 
-     **Adı** kutusudur sütun hemen üstündeki formül çubuğunun solunda bulunan **A** çalışma sayfası.
+     **Ad** kutusu, formül çubuğunun solunda, çalışma sayfasının yalnızca **bir** sütununda bulunur.
 
-3. Tuşuna **girin**.
+3.  **Enter** tuşuna basın.
 
-     A <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi eklenir hücreye **A1**. Çalışma sayfasında görünür bir gösterge yoktur ancak **girdiFormu** görünür **adı** kutusu (yalnızca yukarıda çalışma sol tarafta) ve **özellikleri** penceresi zaman Hücre **A1** seçilir.
+     <xref:Microsoft.Office.Tools.Excel.NamedRange> **A1**hücresine bir denetim eklenir. Çalışma sayfasında görünür bir işaret yoktur, ancak **Forminput** , **ad** kutusunda (sağ taraftaki çalışma sayfasının hemen üzerinde) ve **a1** hücresi seçildiğinde **Özellikler** penceresinde görünür.
 
-## <a name="add-a-windows-form-to-the-project"></a>Projeye bir Windows formu Ekle
+## <a name="add-a-windows-form-to-the-project"></a>Projeye bir Windows formu ekleme
  Kullanıcıdan bilgi istemek için bir Windows formu oluşturun.
 
-### <a name="to-add-a-windows-form"></a>Bir Windows formu eklemek için
+### <a name="to-add-a-windows-form"></a>Windows formu eklemek için
 
-1. Projeyi seçin **girdiWinFormu** içinde **Çözüm Gezgini**.
+1. **Çözüm Gezgini**, **Winforminput** projesini seçin.
 
-2. Üzerinde **proje** menüsünde tıklatın **Windows formu eklemek**.
+2. **Proje** menüsünde **Windows formu Ekle**' ye tıklayın.
 
-3. Form adı **GetInputString.vb** veya **GetInputString.cs olarak**ve ardından **Ekle**.
+3. **GetInputString. vb** veya **GetInputString.cs**formunu adlandırın ve ardından **Ekle**' ye tıklayın.
 
-    Yeni form Tasarımcısı'nda açılır.
+    Yeni form tasarımcıda açılır.
 
-4. Ekleme bir <xref:System.Windows.Forms.TextBox> ve <xref:System.Windows.Forms.Button> form.
+4. Forma bir <xref:System.Windows.Forms.TextBox> ve ekleyin <xref:System.Windows.Forms.Button> .
 
-5. Düğmeyi seçin, özelliğini bulun **metin** içinde **özellikleri** penceresinde metni değiştirip **Tamam**.
+5. Düğmeyi seçin, **Özellikler** penceresinde özellik **metnini** bulun ve metni **Tamam**' a değiştirin.
 
-   Ardından, kod ekleyin `ThisWorkbook.vb` veya `ThisWorkbook.cs` kullanıcının bilgilerini toplamak için.
+   Ardından, `ThisWorkbook.vb` `ThisWorkbook.cs` kullanıcının bilgilerini toplamak için veya ' ye kod ekleyin.
 
-## <a name="display-the-windows-form-and-collecting-information"></a>Windows Form ve toplama bilgileri görüntüleme
- Bir örneğini oluşturmak `GetInputString` Windows formu görüntülemek ve ardından çalışma sayfasındaki bir hücreye kullanıcının bilgileri yazın.
+## <a name="display-the-windows-form-and-collecting-information"></a>Windows formunu görüntüleme ve bilgileri toplama
+ Windows form 'un bir örneğini oluşturun `GetInputString` ve görüntüleyin ve sonra kullanıcının bilgilerini çalışma sayfasındaki bir hücreye yazın.
 
-#### <a name="to-display-the-form-and-collect-information"></a>Görüntüleme formu ve bilgi toplamak için
+#### <a name="to-display-the-form-and-collect-information"></a>Formu görüntüleme ve bilgileri toplama
 
-1. Sağ **ThisWorkbook.vb** veya **ThisWorkbook.cs** içinde **Çözüm Gezgini**ve ardından **Kodu Görüntüle**.
+1. **Çözüm Gezgini**' de **ThisWorkbook. vb** veya **ThisWorkbook.cs** öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
-2. İçinde <xref:Microsoft.Office.Tools.Excel.Workbook.Open> olay işleyicisine `ThisWorkbook`, form için bir değişken bildirmek için aşağıdaki kodu ekleyin `GetInputString` ve formu gösterin.
+2. <xref:Microsoft.Office.Tools.Excel.Workbook.Open>Olay işleyicisinde `ThisWorkbook` , form için bir değişken bildirmek `GetInputString` ve sonra formu göstermek için aşağıdaki kodu ekleyin.
 
    > [!NOTE]
-   > C# içinde bir olay işleyicisi gösterildiği eklemelisiniz <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> aşağıdaki olay. Olay işleyicileri oluşturma hakkında daha fazla bilgi için bkz: [nasıl yapılır: Office projelerinde olay işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
+   > C# ' de, aşağıdaki olayda gösterildiği gibi bir olay işleyicisi eklemeniz gerekir <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> . Olay işleyicileri oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Office projelerinde olay Işleyicileri oluşturma](../vsto/how-to-create-event-handlers-in-office-projects.md).
 
     [!code-csharp[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#1)]
     [!code-vb[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#1)]
 
-3. Adlı bir yöntem oluşturma `WriteStringToCell` , adlandırılmış bir aralığa metin yazar. Bu yöntem formdan olarak adlandırılır ve kullanıcının girişi geçirilir <xref:Microsoft.Office.Tools.Excel.NamedRange> denetimi `formInput`, hücre **A1**.
+3. Adlandırılmış bir aralığa metin yazan adlı bir yöntem oluşturun `WriteStringToCell` . Bu yöntem formdan çağrılır ve kullanıcının girişi, <xref:Microsoft.Office.Tools.Excel.NamedRange> `formInput` **a1**hücresinde, denetime geçirilir.
 
     [!code-csharp[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#2)]
     [!code-vb[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#2)]
 
-   Ardından, forma düğmenin click işlemek için kod ekleyin olay.
+   Sonra, düğmenin Click olayını işlemek için forma kod ekleyin.
 
-## <a name="send-information-to-the-worksheet"></a>Çalışma sayfasına bilgileri Gönder
+## <a name="send-information-to-the-worksheet"></a>Çalışma sayfasına bilgi gönderin
 
-### <a name="to-send-information-to-the-worksheet"></a>Çalışma sayfasına bilgileri göndermek için
+### <a name="to-send-information-to-the-worksheet"></a>Çalışma sayfasına bilgi göndermek için
 
-1. Sağ **GetInputString** içinde **Çözüm Gezgini**ve ardından **Görünüm Tasarımcısı**.
+1. **Çözüm Gezgini**'de **GetInputString** öğesine sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
 
-2. Düğmenin kod dosyasını açmak için düğmeyi çift tıklatın <xref:System.Windows.Forms.Control.Click> olay işleyicisi eklenir.
+2. Düğme olay işleyicisi eklenmiş olarak kod dosyasını açmak için düğmeye çift tıklayın <xref:System.Windows.Forms.Control.Click> .
 
-3. Metin kutusunda girişi alan işleve göndermek için olay işleyicisine kod ekleyin `WriteStringToCell`ve ardından formu kapatın.
+3. Metin kutusundan girişi almak için olay işleyicisine kod ekleyin, bunu işleve gönderin `WriteStringToCell` ve sonra formu kapatın.
 
      [!code-csharp[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/CSharp/WinFormInputCS/GetInputString.cs#3)]
      [!code-vb[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/VisualBasic/WinFormInput/GetInputString.vb#3)]
 
-## <a name="test"></a>Test
- Artık proje çalıştırabilirsiniz. Windows Form görüntülenir ve girişinizi çalışma sayfasında görüntülenir.
+## <a name="test"></a>Test etme
+ Artık projeyi çalıştırabilirsiniz. Windows formu görünür ve giriş çalışma sayfasında görünür.
 
 ### <a name="to-test-your-workbook"></a>Çalışma kitabınızı test etmek için
 
-1. Tuşuna **F5** projeyi çalıştırın.
+1. Projenizi çalıştırmak için **F5** tuşuna basın.
 
-2. Windows Form göründüğünden emin olun.
+2. Windows form 'un göründüğünü onaylayın.
 
-3. Tür **Hello World** metin kutusuna ve ardından **Tamam**.
+3. Metin kutusuna **Merhaba Dünya** yazın ve ardından **Tamam**' a tıklayın.
 
-4. Onaylayın **Hello World** hücrede görünür **A1** çalışma sayfası.
+4. **Merhaba Dünya** çalışma sayfasının **a1** hücresinde göründüğünü onaylayın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
- Bu izlenecek yol, bir Windows Form ve çalışma veri geçirme gösteren temellerini gösterir. Gerçekleştirmek isteyebileceğiniz diğer görevler aşağıdakileri içerir:
+ Bu izlenecek yol, bir Windows formu gösterme ve bir çalışma sayfasına veri geçirme temellerini gösterir. Gerçekleştirmek isteyebileceğiniz diğer görevler şunlardır:
 
-- Bir Excel çalışma kitabı veya Word belgesi Windows Forms denetimleri kullanın. Daha fazla bilgi için [Windows Forms denetimleri Office belgeleri genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md).
+- Excel çalışma kitabı veya Word belgesi üzerinde Windows Forms denetimleri kullanın. Daha fazla bilgi için bkz. [Office belgelerindeki Windows Forms denetimleri genel bakış](../vsto/windows-forms-controls-on-office-documents-overview.md).
 
-- Belge düzeyinde özelleştirme veya bir VSTO eklentisi Microsoft Office uygulamasının kullanıcı arabirimini değiştirin. Daha fazla bilgi için [Office UI özelleştirmesi](../vsto/office-ui-customization.md).
+- Bir Microsoft Office uygulamasının Kullanıcı arabirimini belge düzeyi özelleştirmesindeki veya VSTO eklentiden değiştirin. Daha fazla bilgi için bkz. [OFFICE UI özelleştirmesi](../vsto/office-ui-customization.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Office çözümleri geliştirme](../vsto/developing-office-solutions.md)
 - [Office çözümlerinde kod yazma](../vsto/writing-code-in-office-solutions.md)
-- [VSTO eklentilerini programlama](../vsto/programming-vsto-add-ins.md)
-- [Belge düzeyi özelleştirmelerini programlama](../vsto/programming-document-level-customizations.md)
-- [Word'ü kullanarak izlenecek yollar](../vsto/walkthroughs-using-word.md)
+- [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md)
+- [Program belge düzeyi özelleştirmeleri](../vsto/programming-document-level-customizations.md)
+- [Word kullanarak izlenecek yollar](../vsto/walkthroughs-using-word.md)
 - [Excel kullanarak izlenecek yollar](../vsto/walkthroughs-using-excel.md)

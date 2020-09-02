@@ -372,12 +372,14 @@
                   href: ca1305.md
                 - name: 'CA1306: Veri türleri için yereli ayarlayın'
                   href: ca1306.md
-                - name: 'CA1307: StringComparison belirt'
+                - name: 'CA1307: Daha anlaşılır olması için StringComparison belirtin'
                   href: ca1307.md
                 - name: 'CA1308: Dizeleri büyük harfe normalleştirin'
                   href: ca1308.md
                 - name: 'CA1309: Sıralı StringComparison kullanın'
                   href: ca1309.md
+                - name: 'CA1310: Doğruluk için StringComparison belirtin'
+                  href: ca1310.md
                 - name: 'CA2101: P-Invoke dize bağımsız değişkenleri için sıralama belirtin'
                   href: ca2101.md
             - name: Birlikte çalışabilirlik uyarıları
@@ -569,6 +571,8 @@
                   href: ca1835.md
                 - name: 'CA1836: Kullanılabilir olduğunda Count yerine IsEmpty tercih edin'
                   href: ca1836.md
+                - name: 'CA1837: Process.GetCurrentProcess().Id yerine Environment.ProcessId kullanın'
+                  href: ca1837.md
                 - name: 'CA1838: P/Invoke’lar için StringBuilder parametreleri kullanmaktan kaçının'
                   href: ca1838.md
             - name: Taşınabilirlik uyarıları
@@ -601,6 +605,8 @@
                   href: ca2006.md
                 - name: 'CA2007: Doğrudan bir Görevi beklemeyin'
                   href: ca2007.md
+                - name: 'CA2008: TaskScheduler geçirmeden görev oluşturmayın'
+                  href: ca2008.md
                 - name: 'CA2009: Bir ImmutableCollection değeri üzerinde ToImmutableCollection çağırma'
                   href: ca2009.md
                 - name: 'CA2011: Özelliği, ayarlayıcısı içinde atama'
@@ -985,6 +991,8 @@
                   href: ca2247.md
                 - name: 'CA2248: Enum.HasFlag için doğru sabit listesi bağımsız değişkenini belirtin'
                   href: ca2248.md
+                - name: 'CA2249: String.IndexOf yerine String.Contains kullanmayı düşünün'
+                  href: ca2249.md
             - name: Otomatik özelliği askıya alma
               href: automatic-feature-suspension.md
             - name: Uyarıları yayımlama

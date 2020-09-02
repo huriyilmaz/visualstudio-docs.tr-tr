@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetTypeInfo | Microsoft Dokümanlar
+title: 'IDebugField:: GetTypeInfo | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: faa3464f0396999f36604aa88c429235d4849688
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80728783"
 ---
 # <a name="idebugfieldgettypeinfo"></a>IDebugField::GetTypeInfo
-Bu yöntem, sembol veya tür hakkında türbağımsız bilgi alır.
+Bu yöntem, sembol veya tür hakkındaki tür bağımsız bilgileri alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetTypeInfo( 
@@ -41,13 +41,13 @@ int GetTypeInfo(
 
 ## <a name="parameters"></a>Parametreler
 `pTypeInfo`\
-[çıkış] Verilen [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) yapısındaki tür bilgilerini verir.
+dışı Sağlanan [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) yapısındaki tür bilgilerini döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Türden bağımsız bilgiler, örneğin AppDomain'i, modülü ve sembolü içeren sınıfı içerir.
+ Tür bağımsız bilgiler, örneğin AppDomain, Module ve simgeyi içeren sınıf dahil olacaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [GetType](../../../extensibility/debugger/reference/idebugfield-gettype.md)

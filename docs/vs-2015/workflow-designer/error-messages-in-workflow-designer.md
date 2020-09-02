@@ -14,17 +14,17 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: d89c0dcad23a91ec6057311b9afde7d6d4702772
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656763"
 ---
 # <a name="error-messages-in-workflow-designer"></a>İş Akışı Tasarımcısında Hata İletileri
-Bu konu, [!INCLUDE[wfd1](../includes/wfd1-md.md)] çalışırken karşılaşılabilecek hata iletilerinin türlerini açıklar.
+Bu konu, ile çalışırken karşılaşılabilecek hata iletilerinin türlerini açıklar [!INCLUDE[wfd1](../includes/wfd1-md.md)] .
 
 ## <a name="situations-in-which-errors-in-the-workflow-designer-occur"></a>İş Akışı Tasarımcısı hatanın oluştuğu durumlar
- @No__t_0 hatalar aşağıdaki durumlarda oluşur:
+ Hatalar [!INCLUDE[wfd2](../includes/wfd2-md.md)] aşağıdaki durumlarda oluşur:
 
 1. İfadede bir hata var.
 
@@ -34,12 +34,12 @@ Bu konu, [!INCLUDE[wfd1](../includes/wfd1-md.md)] çalışırken karşılaşıla
 
 4. XAML dosyasında iş akışının yükleme başarısız olmasına neden olan hatalar vardır.
 
-   Geçersiz ifadeler ve karşılanmamış doğrulama kısıtlamaları iş akışının derlenmemesine neden olmaz. İş akışınızı oluşturma işlemi başarılı olur, ancak çalışma zamanında bir <xref:System.Activities.InvalidWorkflowException> oluşturulur. XAML dosyasında hatalar varsa, yapı başarısız olur.
+   Geçersiz ifadeler ve karşılanmamış doğrulama kısıtlamaları iş akışının derlenmemesine neden olmaz. İş akışınızı oluşturma işlemi başarılı olur, ancak <xref:System.Activities.InvalidWorkflowException> çalışma zamanında bir oluşturulur. XAML dosyasında hatalar varsa, yapı başarısız olur.
 
-   @No__t_0 içinde, bir iş akışı yüklendiğinde, hataları **hata listesi**görüntülenir. Hatanın kaynağı olan etkinliğe gitmek için **hata listesi**hataya çift tıklayın.
+   İçinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , bir iş akışı yüklendiğinde, hata **hata listesi**görüntülenir. Hatanın kaynağı olan etkinliğe gitmek için **hata listesi**hataya çift tıklayın.
 
 ### <a name="expression-errors"></a>İfade hataları
- Geçersiz bir ifade, ifadenin yanındaki beyaz ünlem işaretine sahip kırmızı bir daire ile belirtilir. Bu simgenin üzerine gelindiğinde, hatanın kaynağını açıklayan bir araç ipucu görüntülenir. @No__t_0 içinde, hata kaynağının altını çizili çizgiyi görüntülemek için ifadeye tıklayın. Çizgili metnin üzerine gelindiğinde, hatanın kaynağını açıklayan bir araç ipucu görüntülenir.
+ Geçersiz bir ifade, ifadenin yanındaki beyaz ünlem işaretine sahip kırmızı bir daire ile belirtilir. Bu simgenin üzerine gelindiğinde, hatanın kaynağını açıklayan bir araç ipucu görüntülenir. İçinde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , hata kaynağının altını çizili çizgiyi görüntülemek için ifadeye tıklayın. Çizgili metnin üzerine gelindiğinde, hatanın kaynağını açıklayan bir araç ipucu görüntülenir.
 
 ### <a name="activity-validation-errors"></a>Etkinlik doğrulama hataları
  Etkinliğin doğrulama kısıtlamaları karşılanmadığı zaman, etkinliğin sağ üst köşesinde beyaz ünlem işaretine sahip kırmızı bir daire görünür. Bu simgenin üzerine gelindiğinde, hatanın kaynağını açıklayan bir araç ipucu görüntülenir.

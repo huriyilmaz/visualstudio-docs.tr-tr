@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_METHOD | Microsoft Dokümanlar
+title: METADATA_ADDRESS_METHOD | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: bc3dd7a34e4f9a3e1b933781aeaf4e18cad7ec17
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714448"
 ---
 # <a name="metadata_address_method"></a>METADATA_ADDRESS_METHOD
-Bu yapı, bir sınıfın yönteminin adresini temsil eder.
+Bu yapı, bir sınıfın bir yönteminin adresini temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagMETADATA_ADDRESS_METHOD {
@@ -45,25 +45,25 @@ public struct METADATA_ADDRESS_METHOD {
 
 ## <a name="members"></a>Üyeler
  `tokMethod`\
- Yöntemin kimliği.
+ Metodun KIMLIĞI.
 
- [C++] `_mdToken` 32-bit `typedef` `int`için bir .
+ [C++] `_mdToken` , `typedef` 32 bitlik bir içindir `int` .
 
  `dwOffset`\
- Bu yönteme sınıf başlangıcından ofset (vtable içine ofset temsil edebilir).
+ Sınıfından olan fark bu yönteme başlar (vtable 'ın sapmasını temsil edebilir).
 
  `dwVersion`\
- Yöntemin sürümü (bu değer sembol sağlayıcısına özgüdür).
+ Metodun sürümü (Bu değer, sembol sağlayıcısı için benzersizdir).
 
 ## <a name="remarks"></a>Açıklamalar
- Bu yapı, `DEBUG_ADDRESS_UNION` yapı alanı [(ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmadan bir değer) `ADDRESS_KIND_METHOD` `dwKind` ayarlandığında, [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) yapıdaki birliğin bir parçasıdır.
+ Bu yapı, [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_METHOD` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
 
 ## <a name="requirements"></a>Gereksinimler
- Üstbilgi: sh.h
+ Üstbilgi: SH. h
 
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
- Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Yapılar ve Birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)
