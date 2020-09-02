@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Virtualize | Microsoft Docs
+title: 'IDebugPendingBreakpoint2:: Sanallaştır | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: caf4277afc63d403cc3d02c4d79b9e5f2b1b8d26
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68143886"
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu sanallaştırılmış bekleyen kesme noktasının durumunu değiştirir. Bir bekleyen kesme noktasının sanallaştırılmış, hata ayıklama altyapısı, yeni kodu programa yükleyen her zaman bu bağlama dener.  
+Bu bekleyen kesme noktasının sanallaştırılmış durumuna geçiş yapar. Bekleyen bir kesme noktası sanallaştırılmış olduğunda, hata ayıklama altyapısı, programa her yeni kod yüklendiğinde bağlamayı dener.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Virtualize(   
@@ -41,16 +41,16 @@ int Virtualize( 
   
 #### <a name="parameters"></a>Parametreler  
  `fVirtualize`  
- [in] İçin sıfır olmayan ayarlayın (`TRUE`) bekleyen kesme noktasının sanallaştırmak için ya da sıfıra (`FALSE`) sanallaştırma açmak için.  
+ 'ndaki `TRUE`Sanallaştırmayı devre dışı bırakmak için bekleyen kesme noktasını sanallaştırmak için () sıfır olmayan () olarak ayarlayın `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_BP_DELETED` kesme noktası silinmiş olması durumunda.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_BP_DELETED`Kesme noktasının silinip silinmediğini döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kod her yüklendiğinde, sanallaştırılmış bir kesme noktası bağlıdır.  
+ Her kod yüklendiğinde sanallaştırılmış bir kesme noktası bağlanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CPendingBreakpoint` gösteren nesne [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimi.  
+ Aşağıdaki örnek, `CPendingBreakpoint` [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 HRESULT CPendingBreakpoint::Virtualize(BOOL fVirtualize)    

@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: b48f91dcb68f44f070e596d674461367dcf22966
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85463521"
 ---
 # <a name="idiasymbolget_intro"></a>IDiaSymbol::get_intro
@@ -33,7 +33,7 @@ HRESULT get_intro ( 
 #### <a name="parameters"></a>Parametreler
 `pRetVal`
 
-dışı `TRUE`İşlevin giriş sanal olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` İşlevin giriş sanal olup olmadığını döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
 Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
@@ -56,7 +56,7 @@ Hem hem de `A::f1` `B::f1` sanal işlevlerdir, ancak `A::f1` giriş sanal.
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Açıklama|
+|Gereksinim|Description|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|

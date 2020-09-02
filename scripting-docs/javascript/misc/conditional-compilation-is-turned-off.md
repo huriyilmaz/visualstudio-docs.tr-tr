@@ -15,10 +15,10 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: da272529768f3227ce6e0ee3e0ebbf086140dd15
-ms.sourcegitcommit: ca777040ca372014b9af5e188d9b60bf56e3e36f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85816130"
 ---
 # <a name="conditional-compilation-is-turned-off"></a>Koşullu derleme kapalı
@@ -39,6 +39,6 @@ Koşullu derleme değişkenini, önce koşullu derlemeyi açmadan kullanmaya ça
 ## <a name="see-also"></a>Ayrıca bkz.  
  [Koşullu derleme](../../javascript/advanced/conditional-compilation-javascript.md)   
  [Koşullu derleme değişkenleri](../../javascript/advanced/conditional-compilation-variables-javascript.md)   
- [@cc_onEkstre](../../javascript/reference/at-cc-on-statement-javascript.md)   
- [@ifEkstre](../../javascript/reference/at-if-statement-javascript.md)   
- [@setEkstre](../../javascript/reference/at-set-statement-javascript.md)
+ [@cc_on Ekstre](../../javascript/reference/at-cc-on-statement-javascript.md)   
+ [@if Ekstre](../../javascript/reference/at-if-statement-javascript.md)   
+ [@set Ekstre](../../javascript/reference/at-set-statement-javascript.md)

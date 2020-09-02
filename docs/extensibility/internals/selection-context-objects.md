@@ -1,5 +1,5 @@
 ---
-title: Seçim Bağlam Nesneleri | Microsoft Dokümanlar
+title: Seçim bağlamı nesneleri | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,32 +12,32 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 4e4f33dd0168a667b8f266ea606cecf0c26d62f1
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80705506"
 ---
 # <a name="selection-context-objects"></a>Seçim Bağlamı Nesneleri
-Tümleşik geliştirme ortamı (IDE), IDE'de [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ne görüntülenmesi gerektiğini belirlemek için genel bir seçim bağlamı nesnesi kullanır. IDE'deki her pencerenin kendi seçim bağlamı nesnesi genel seçim bağlamına itilmiş olabilir. IDE, bu pencere nin odak noktası olduğunda, genel seçim bağlamını bir pencereden gelen değerlerle güncelleştirir. Daha fazla bilgi [için Kullanıcıya Geri Bildirim'e](../../extensibility/internals/feedback-to-the-user.md)bakın.
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]Tümleşik geliştirme ortamı (IDE), IDE 'de neyin gösterilmesi gerektiğini belirlemek için bir genel seçim bağlam nesnesi kullanır. IDE içindeki her bir pencere, genel seçim bağlamına gönderilen kendi seçim bağlamı nesnesine sahip olabilir. IDE, bir pencere odağa sahip olduğunda bir penceredeki değerlerle genel seçim bağlamını günceller. Daha fazla bilgi için bkz. [kullanıcıya geri bildirim](../../extensibility/internals/feedback-to-the-user.md).
 
- IDE'deki her pencere çerçevesi veya <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection>sitenin bir hizmeti vardır. VsPackage tarafından oluşturulan ve pencere çerçevesine sited olan `QueryService` nesne, <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> arabirime işaretçi almak için yöntemi aramalıdır.
+ IDE 'deki her pencere çerçevesinin veya sitesinin adlı bir hizmeti vardır <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> . VSPackage tarafından oluşturulan ve pencere çerçevesinde yer alan nesne, `QueryService` arabirime yönelik bir işaretçi almak için yöntemini çağırmalıdır <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection> .
 
- Çerçeve pencereleri, seçim bağlamı bilgilerinin bazı bölümlerinin başlatıldığında genel seçim bağlamına yayılmasını engelleyebilir. Bu yetenek, boş bir seçimle başlamak zorunda kalabilirsiniz araç pencereleri için yararlıdır.
+ Çerçeve pencereleri, seçim bağlamı bilgilerinin bölümlerinin, başlatıldıklarında genel seçim bağlamına yayılmasına devam edebilir. Bu özellik, boş bir seçimle başlamak zorunda olabilecek araç pencereleri için yararlıdır.
 
- Genel seçim bağlamını değiştirmek VSPackages'In izleyebilir olayları tetikler. VSPackages aşağıdaki görevleri uygulayarak `IVsTrackSelectionEx` ve <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> arabirimleri uygulayarak gerçekleştirebilir:
+ Genel seçim bağlamını değiştirmek, VSPackages 'in izleyebileceği olayları tetikler. VSPackages, ve arabirimlerini uygulayarak aşağıdaki görevleri gerçekleştirebilir `IVsTrackSelectionEx` <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection> :
 
-- Şu anda etkin olan dosyayı bir hiyerarşide güncelleştirin.
+- Hiyerarşide etkin olan dosyayı güncelleştirin.
 
-- Belirli türdeki öğeleri izleyin. Örneğin, VSPackage'ınız **özel** özellikler penceresi kullanıyorsa, etkin **Özellikler** penceresindeki değişiklikleri izleyebilir ve gerektiğinde sizinkini yeniden başlatabilirsiniz.
+- Belirli öğe türlerinde yapılan değişiklikleri izleyin. Örneğin, VSPackage özel bir **Özellikler** penceresi kullanıyorsa, etkin **Özellikler** penceresinde değişiklikleri izleyebilir ve gerektiğinde kendiniz yeniden başlatabilirsiniz.
 
-  Aşağıdaki sıra, tipik seçim izleme rotasını gösterir.
+  Aşağıdaki sırada, seçim izlemenin tipik bir kursu gösterilmektedir.
 
-1. IDE, seçim bağlamını yeni açılan pencereden alır ve genel seçim bağlamına koyar. Seçim bağlamında HIERARCHY_DONTPROPAGATE veya SELCONTAINER_DONTPROPAGATE kullanıyorsa, bu bilgiler genel içeriğe yayılmaz. Daha fazla bilgi [için Kullanıcıya Geri Bildirim'e](../../extensibility/internals/feedback-to-the-user.md)bakın.
+1. IDE, yeni açılan pencereden seçim bağlamını alır ve onu genel seçim bağlamına koyar. Seçim bağlamı HIERARCHY_DONTPROPAGATE veya SELCONTAINER_DONTPROPAGATE kullanıyorsa, bu bilgiler genel içeriğe yayılmaz. Daha fazla bilgi için bkz. [kullanıcıya geri bildirim](../../extensibility/internals/feedback-to-the-user.md).
 
-2. Bildirim olayları, bunları isteyen herhangi bir VSPackage'a yayınlanır.
+2. Bildirim olayları, isteyen herhangi bir VSPackage 'a yayınlanır.
 
-3. VSPackage, hiyerarşiyi güncelleştirme, bir aracı yeniden etkinleştirme veya diğer benzer görevleri gerçekleştirme gibi etkinlikler gerçekleştirerek aldığı olaylara göre hareket eder.
+3. VSPackage, bir hiyerarşiyi güncelleştirme, bir aracı veya benzer görevleri yeniden etkinleştirme gibi etkinlikleri gerçekleştirerek aldığı olaylara göre davranır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx>

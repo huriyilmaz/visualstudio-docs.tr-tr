@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: f294f2b64676f746cd9d155fe8c3580edc5f9821
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85463626"
 ---
 # <a name="idiasymbolget_hfadouble"></a>IDiaSymbol::get_hfaDouble
@@ -33,7 +33,7 @@ HRESULT get_hfaDouble( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE`Udt, Double türünde HFA verileri içeriyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` Udt, Double türünde HFA verileri içeriyorsa döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.

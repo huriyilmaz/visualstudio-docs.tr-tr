@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumConstructors | Microsoft Dokümanlar
+title: 'IDebugClassField:: Enumoluşturucular | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 607f4f4af3021389628fcc1be446ebbe95628b7c
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80734460"
 ---
 # <a name="idebugclassfieldenumconstructors"></a>IDebugClassField::EnumConstructors
-Bu sınıf için oluşturucular için bir sayısallaştırıcı oluşturur.
+Bu sınıf için oluşturucular için bir Numaralandırıcı oluşturur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumConstructors( 
@@ -43,18 +43,18 @@ int EnumConstructors(
 
 ## <a name="parameters"></a>Parametreler
 `cMatch`\
-[içinde] [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) numaralandırma, numaralandırmaya kadar yapıcıların türünü belirten bir değerdir.
+'ndaki Sabit listesi için oluşturucuların türünü belirten [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) Numaralandırmadaki bir değer.
 
 `ppEnum`\
-[çıkış] Oluşturucular listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Oluşturucu yoksa null değeri verir.
+dışı Oluşturucuların listesini temsil eden bir [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) nesnesi döndürür. Oluşturucu yoksa null değeri döndürür.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, S_OK döndürür veya S_FALSE eğer yapıcı lar yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, S_OK döndürür veya Oluşturucu yoksa S_FALSE döndürür. Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Numaralandırmanın her öğesi, bir oluşturucu yöntemi açıklayan bir [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) nesnesidir.
+ Sabit listesinin her öğesi bir Oluşturucu yöntemini açıklayan bir [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) nesnesidir.
 
- Genellikle oluşturucuların listesi, derleyici tarafından sağlanan varsayılan oluşturucuları içermez.
+ Oluşturucuların listesi genellikle derleyicinin sağladığı varsayılan oluşturucuları içermez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)

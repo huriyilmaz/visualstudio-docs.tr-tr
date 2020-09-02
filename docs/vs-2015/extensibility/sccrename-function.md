@@ -1,5 +1,5 @@
 ---
-title: SccRename işlevi | Microsoft Docs
+title: SccRename Işlevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 13
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: e78975acab0bf30f1f188cdd7b6454fd6e74ce6f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68143716"
 ---
 # <a name="sccrename-function"></a>SccRename İşlevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu işlev, kaynak denetimi Sistemi'nde bir dosyayı yeniden adlandırır.  
+Bu işlev, kaynak denetim sistemindeki bir dosyayı yeniden adlandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 SCCRTN SccRename(  
@@ -37,33 +37,33 @@ SCCRTN SccRename(
   
 #### <a name="parameters"></a>Parametreler  
  pvContext  
- [in] Kaynak Denetimi Eklentisi bağlam yapısı.  
+ 'ndaki Kaynak denetimi eklentisi bağlam yapısı.  
   
- hWnd  
- [in] Kaynak Denetimi Eklentisi sağladığı herhangi bir iletişim kutusu için bir üst öğe olarak kullanabileceğiniz IDE penceresi için bir tanıtıcı.  
+ lendiği  
+ 'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.  
   
- lpDosyaAdı  
- [in] Adlandırılan dosyasının tam dosya adı.  
+ lpFileName  
+ 'ndaki Yeniden adlandırılan dosyanın tam dosya adı.  
   
- lpNewName  
- [in] Tam yeni adı. Dizin yolu farklı ise, ardından dosyayı bir alt dizinden başka taşınmıştır.  
+ Lpyeniad  
+ 'ndaki Tam nitelikli yeni ad. Dizin yolu farklıysa, dosya bir alt dizinden diğerine taşınır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:  
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |SCC_OK|Yeniden adlandırma işlemi başarıyla tamamlandı.|  
-|SCC_E_PROJNOTOPEN|Proje kaynak denetimi altında açık değil.|  
+|SCC_E_PROJNOTOPEN|Proje, kaynak denetimi altında açık değil.|  
 |SCC_E_FILENOTCONTROLLED|Dosya kaynak denetimi altında değil.|  
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemi, ağ veya çakışma sorunları nedeniyle muhtemelen erişilirken sorun oluştu.|  
-|SCC_E_NOTAUTHORIZED|Kullanıcı bu işlemi tamamlamak için yetkili değil.|  
-|SCC_E_COULDNOTCREATEPROJECT|Projeyi yeniden adlandırma işleminin bir parçası oluşturulamadı.|  
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu.|  
+|SCC_E_NOTAUTHORIZED|Kullanıcı bu işlemi tamamlamaya yetkili değil.|  
+|SCC_E_COULDNOTCREATEPROJECT|Proje, yeniden adlandırma sürecinin bir parçası olarak oluşturulamadı.|  
 |SCC_E_OPNOTPERFORMED|İşlem gerçekleştirilmedi.|  
-|SCC_E_NONSPECIFICERROR|Belirtilmemiş veya genel bir hata oluştu.|  
+|SCC_E_NONSPECIFICERROR|Belirtilmeyen veya genel bir hata oluştu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu işlev, bir dosyayı yeniden adlandırmak veya taşımak bir konumdan diğerine kaynak denetim sistemi için kullanılabilir. Diskteki dosya erişmek kaynak denetimi eklentisi çalışmamalıdır. Yerel dosyayı yeniden adlandır IDE'nin sorumluluğundadır.  
+ Bu işlev, kaynak denetim sisteminde bir dosyayı yeniden adlandırmak veya bir konumdan diğerine taşımak için kullanılabilir. Kaynak denetimi eklentisinin diskteki dosyaya erişmeyi denememelidir. Bu, yerel dosyayı yeniden adlandırmak için IDE 'nin sorumluluğundadır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

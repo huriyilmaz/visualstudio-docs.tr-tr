@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 068720e4b35ca52e07351aeb6f74d7594fe69d1e
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85463437"
 ---
 # <a name="idiasymbolget_iscvtcil"></a>IDiaSymbol::get_isCVTCIL
@@ -33,7 +33,7 @@ HRESULT get_isCVTCIL(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE`Modülün CIL 'den yerel koda dönüştürülüp dönüştürüldüğünü döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` Modülün CIL 'den yerel koda dönüştürülüp dönüştürüldüğünü döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
@@ -46,7 +46,7 @@ dışı `TRUE`Modülün CIL 'den yerel koda dönüştürülüp dönüştürüld�
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Açıklama|
+|Gereksinim|Description|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

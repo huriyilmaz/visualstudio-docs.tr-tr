@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: a8d544a2172655df91e7156bc3f0d53b236490d1
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85463675"
 ---
 # <a name="idiasymbolget_hassecuritychecks"></a>IDiaSymbol::get_hasSecurityChecks
@@ -33,7 +33,7 @@ HRESULT get_hasSecurityChecks(
 #### <a name="parameters"></a>Parametreler
  `pFlag`
 
-dışı `TRUE`İşlevin herhangi bir güvenlik denetimi varsa döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` İşlevin herhangi bir güvenlik denetimi varsa döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, `S_FALSE` bir hata kodu döndürür.
@@ -43,7 +43,7 @@ dışı `TRUE`İşlevin herhangi bir güvenlik denetimi varsa döndürür; Aksi 
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Açıklama|
+|Gereksinim|Description|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 8.0|

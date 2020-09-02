@@ -1,5 +1,5 @@
 ---
-title: Önalım zamanı | Microsoft Docs
+title: Önalım saati | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,24 +14,24 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 6fd209f65464126650106eb4509cd3de39ad8c25
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68198072"
 ---
 # <a name="preemption-time"></a>Önalım Zamanı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu segmentlerde faaliyet zaman çizelgesi Önalım kategorilere ayrılır engelleme zamanı ile ilişkilidir. Bu kategori, bir iş parçacığı çıkış aşağıdaki nedenlerden biri nedeniyle geçiş, gelir:  
+Zaman çizelgesindeki bu segmentler, önalım olarak sınıflandırılan engelleme süresi ile ilişkilendirilir. Bu kategori, bir iş parçacığının şu nedenlerden biri nedeniyle dışarı geçmiş olduğunu gösterir:  
   
-- Zamanlayıcı daha yüksek öncelikli iş parçacığı kullanarak değiştirildi.  
+- Zamanlayıcı, daha yüksek öncelikli bir iş parçacığı kullanarak bunu değiştirdi.  
   
-- İş parçacığının yürütme kuantum süresi doldu ve diğer iş parçacıklarını yürütmek hazır.  
+- İş parçacığının yürütme doacıı ve diğer iş parçacıkları yürütülmeye hazırlanıyor.  
   
-  Bu süre boyunca, bir iş parçacığı eşzamanlılık görselleştiricisi Önalım sayılıyor bir çekirdek bekleme nedeni tarafından engellendi. Önalım segmentler mantıksal çekirdek dışında bir iş parçacığı gönderildiğinde ve yürütme iş parçacığı devam ettiğinde bitmelidir.  
+  Bu süre boyunca, eşzamanlılık görselleştiricisi önalım olarak saymasının bir çekirdek bekleme nedeni tarafından bir iş parçacığı engellenmiştir. Önalım kesimleri, bir iş parçacığı mantıksal bir çekirdeğin dışına gönderildiğinde başlar ve bu iş parçacığı yürütmeyi devam ettirir.  
   
-  Araç İpucu preempted kesimin önalım neden iş parçacığı ve işlem adını görüntüler. Ancak, bu üstlenmesinden iş parçacığı ve işlem gerçekten preempted dönem çalıştığını göstermez.  
+  Bir önden segment için araç ipucu, önalım neden olan işlemin veya iş parçacığının adını görüntüler. Ancak, bunun yerine geçen işlem veya iş parçacığının, aslında geçersiz bir süre boyunca Çalıştırıldığın göstermez.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [İş Parçacıkları Görünümü](../profiling/threads-view-parallel-performance.md)

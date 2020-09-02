@@ -27,10 +27,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 2f15adeb801e33a134c681c206e3a5b38ccce70f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538391"
 ---
 # <a name="how-to-add-content-controls-to-word-documents"></a>Nasıl yapılır: Word belgelerine Içerik denetimleri ekleme
@@ -48,7 +48,7 @@ ms.locfileid: "85538391"
 
   İçerik denetimleri hakkında daha fazla bilgi için bkz. [içerik denetimleri](../vsto/content-controls.md).
 
-## <a name="add-content-controls-at-design-time"></a><a name="designtime"></a>Tasarım zamanında Içerik denetimleri ekleme
+## <a name="add-content-controls-at-design-time"></a><a name="designtime"></a> Tasarım zamanında Içerik denetimleri ekleme
  Belge düzeyindeki bir projede belgeye tasarım zamanında içerik denetimleri eklemenin birkaç yolu vardır:
 
 - **Araç kutusunun** **Word denetimleri** sekmesinden bir içerik denetimi ekleyin.
@@ -94,7 +94,7 @@ ms.locfileid: "85538391"
 
 3. **Denetimler** grubunda, eklemek istediğiniz içerik denetimi simgesine tıklayın.
 
-## <a name="add-content-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a>Belge düzeyindeki bir projede çalışma zamanında içerik denetimleri ekleme
+## <a name="add-content-controls-at-run-time-in-a-document-level-project"></a><a name="runtimedoclevel"></a> Belge düzeyindeki bir projede çalışma zamanında içerik denetimleri ekleme
  Projenizdeki sınıf özelliğinin yöntemlerini kullanarak çalışma zamanında belgenize programlı bir şekilde içerik denetimleri ekleyebilirsiniz <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> `ThisDocument` . Her yöntemin, aşağıdaki yollarla bir içerik denetimi eklemek için kullanabileceğiniz üç aşırı yüklemesi vardır:
 
 - Geçerli seçime bir denetim ekleyin.
@@ -135,7 +135,7 @@ ms.locfileid: "85538391"
      [!code-csharp[Trin_ContentControlReference#702](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#702)]
      [!code-vb[Trin_ContentControlReference#702](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#702)]
 
-## <a name="add-content-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a>VSTO eklenti projesindeki çalışma zamanında içerik denetimleri ekleme
+## <a name="add-content-controls-at-run-time-in-a-vsto-add-in-project"></a><a name="runtimeaddin"></a> VSTO eklenti projesindeki çalışma zamanında içerik denetimleri ekleme
  Bir VSTO eklentisi kullanarak çalışma zamanında herhangi bir açık belgeye programlama yoluyla içerik denetimleri ekleyebilirsiniz. Bunu yapmak için, açık bir <xref:Microsoft.Office.Tools.Word.Document> belgeyi temel alan bir konak öğesi oluşturun ve ardından <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> Bu konak öğesinin özelliğinin yöntemlerini kullanın. Her yöntemin, aşağıdaki yollarla bir içerik denetimi eklemek için kullanabileceğiniz üç aşırı yüklemesi vardır:
 
 - Geçerli seçime bir denetim ekleyin.

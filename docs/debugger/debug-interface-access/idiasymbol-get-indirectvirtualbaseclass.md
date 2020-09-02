@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: ada2dc42f3733148c77a3b450b8419baf0a2037a
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85463612"
 ---
 # <a name="idiasymbolget_indirectvirtualbaseclass"></a>IDiaSymbol::get_indirectVirtualBaseClass
@@ -33,7 +33,7 @@ HRESULT get_indirectVirtualBaseClass ( 
 #### <a name="parameters"></a>Parametreler
  `pRetVal`
 
-dışı `TRUE`Kullanıcı tanımlı veri türü dolaylı bir sanal temel sınıf ise döndürür; Aksi takdirde, döndürür `FALSE` .
+dışı `TRUE` Kullanıcı tanımlı veri türü dolaylı bir sanal temel sınıf ise döndürür; Aksi takdirde, döndürür `FALSE` .
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, döndürür `S_FALSE` veya hata kodu döndürür.
@@ -43,7 +43,7 @@ dışı `TRUE`Kullanıcı tanımlı veri türü dolaylı bir sanal temel sınıf
 
 ## <a name="requirements"></a>Gereksinimler
 
-|Gereksinim|Açıklama|
+|Gereksinim|Description|
 |-----------------|-----------------|
 |Üst bilgi|dia2. h|
 |Sürüm:|DIA SDK v 7.0|
