@@ -13,41 +13,41 @@ caps.latest.revision: 28
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 32e8135328c11fd74311371d07645a525426371e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192732"
 ---
 # <a name="ide-defined-commands-menus-and-groups"></a>IDE Tanımlı Komutlar, Menüler ve Gruplar
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Birçok menüler, komutları ve komut grupları zaten tarafından tanımlanan [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE. Bu komutlar da genişlettiğinizde, kullanımınıza sunulan. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+Birçok menü, komut ve komut grubu, IDE tarafından kullanılmak üzere zaten tanımlanmış [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Bu komutlar, uzatdığınızda kullanım için de kullanılabilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
 ## <a name="finding-environment-defined-commands"></a>Ortam tanımlı komutları bulma  
- Ortam komutları dört .vsct dosyaları kümesi içinde tanımlanır:  
+ Ortam komutları bir dizi dört. vsct dosyasında tanımlanır:  
   
-- SharedCmdDef.vsct  
+- SharedCmdDef. vsct  
   
-- SharedCmdPlace.vsct  
+- SharedCmdPlace. vsct  
   
-- ShellCmdDef.vsct  
+- ShellCmdDef. vsct  
   
-- ShellCmdPlace.vsct  
+- ShellCmdPlace. vsct  
   
-  Bu dosyalar bulunur  *\<Visual Studio SDK'sını yükleme yolu >* \VisualStudioIntegration\Common\Inc\\. Bu dosyalar, menüler ve kendi menüler, gruplar ve komutlar için kapsayıcı olarak, VSPackage'ı komut tablosu (.vsct) yapılandırma dosyasında kullanabileceğiniz grupların GUID'leri ve tanımları sağlar.  
+  Bu dosyalar \VisualStudioIntegration\Common\Inc konumunda bulunur *\<Visual Studio SDK installation path>* \\ . Bu dosyalar, VSPackage 'ın komut tablosu yapılandırma (. vsct) dosyasında kendi menü, Grup ve komutlarınız için kapsayıcı olarak kullanabileceğiniz menü ve grupların tanımlarını ve GUID 'Lerini sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Visual Studio Menülerinin GUID’leri ve Kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)  
- Visual Studio menü çubuğundaki menüleri ve içerdikleri tüm grupların GUID ve ID değerleri sağlar.  
+ Visual Studio menü çubuğunda ve içerdikleri gruplardan menülerin GUID ve ID değerlerini verir.  
   
  [Visual Studio Araç Çubuklarının GUID’leri ve Kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md)  
- Visual Studio IDE'de araç çubukları ve içerdikleri tüm grupların GUID ve ID değerleri sağlar.  
+ Visual Studio IDE 'deki araç çubuklarının GUID ve KIMLIK değerlerini ve içerdikleri grupları verir.  
   
  [Visual Studio Komutlarının GUID’leri ve Kimlikleri](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md)  
- Tarafından Visual Studio IDE tanımlı komutlar GUID ve ID değerini verir.  
+ Visual Studio IDE tarafından tanımlanan komutların GUID ve ID değerlerini verir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio komut tablosu (. Vsct) dosyaları](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
- [Proje sistemlerini genişletmeye yönelik IDE tanımlı komutlar](../../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)   
+ [Proje sistemlerini genişletmek için IDE tanımlı komutlar](../../extensibility/internals/ide-defined-commands-for-extending-project-systems.md)   
  [VSPackage’ların Kullanıcı Arabirimi Öğeleri Eklemesi](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

@@ -12,18 +12,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 35c332682b609f6620f96cc8eb8499cca921d399
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204274"
 ---
 # <a name="group-element"></a>Group Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-VSPackage'ı komut grubunu tanımlar.  
+VSPackage komut grubunu tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Group guid="guidMyCommandSet" id="MyGroup" priority="0x101">  
@@ -38,23 +38,23 @@ VSPackage'ı komut grubunu tanımlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|guid|Gerekli. GUID/ID komut tanımlayıcısı GUİD'si.|  
-|kimlik|Gerekli. Kimliği bir GUID/ID komut tanımlayıcısı.|  
-|priority|İsteğe bağlı. Bir sayısal değer yönelik önceliği belirtir.|  
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|guid|Gereklidir. GUID/ID komut tanımlayıcısının GUID 'SI.|  
+|kimlik|Gereklidir. GUID/ID komut tanımlayıcısının KIMLIĞI.|  
+|Priority|İsteğe bağlı. Önceliği belirten sayısal bir değer.|  
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|Üst öğe|İsteğe bağlı. Düğmenin üst öğe.|  
-|Ek Açıklama|İsteğe bağlı bir açıklama.|  
+|Üst|İsteğe bağlı. Düğmenin üst öğesi.|  
+|Ek Açıklama|İsteğe bağlı açıklama.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Groups Öğesi](../extensibility/groups-element.md)|VSPackage komut gruplarını tanımlar girişleri içerir.|  
+|[Groups Öğesi](../extensibility/groups-element.md)|VSPackage 'un komut gruplarını tanımlayan girişleri içerir.|  
   
 ## <a name="example"></a>Örnek  
   

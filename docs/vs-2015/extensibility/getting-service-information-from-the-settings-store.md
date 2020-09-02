@@ -1,5 +1,5 @@
 ---
-title: Ayarları Store ' hizmet bilgilerini alma | Microsoft Docs
+title: Ayarlar deposundan hizmet bilgileri alınıyor | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,22 +9,22 @@ caps.latest.revision: 5
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: cfe754203ae9b4e951de5beef8cd829f9d7716bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204305"
 ---
 # <a name="getting-service-information-from-the-settings-store"></a>Ayarlar Deposu'ndan Hizmet Bilgilerini Alma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ayarlar deposu, tüm kullanılabilir hizmetleri bulmak için veya belirli bir hizmet yüklü olup olmadığını belirlemek için kullanabilirsiniz. Hizmet sınıfı türünü bilmeniz gerekir.  
+Tüm kullanılabilir hizmetleri bulmak veya belirli bir hizmetin yüklenip yüklenmediğini öğrenmek için ayarlar deposunu kullanabilirsiniz. Hizmet sınıfının türünü bilmeniz gerekir.  
   
-### <a name="to-list-the-available-services"></a>Kullanılabilir hizmetleri listeleyin  
+### <a name="to-list-the-available-services"></a>Kullanılabilir hizmetleri listelemek için  
   
-1. FindServicesExtension adlı bir VSIX projesi oluşturun ve ardından FindServicesCommand adlı özel bir komut ekleyin. Özel komut oluşturma hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)  
+1. Findservicesexten, adlı bir VSıX projesi oluşturun ve sonra FindServicesCommand adlı bir özel komut ekleyin. Özel bir komut oluşturma hakkında daha fazla bilgi için bkz. [bir menü komutuyla uzantı oluşturma](../extensibility/creating-an-extension-with-a-menu-command.md)  
   
-2. FindServicesCommand.cs içinde aşağıdaki ekleme using deyimlerini:  
+2. FindServicesCommand.cs ' de, aşağıdaki using deyimlerini ekleyin:  
   
     ```vb  
     using System.Collections.Generic;  
@@ -33,7 +33,7 @@ Ayarlar deposu, tüm kullanılabilir hizmetleri bulmak için veya belirli bir hi
     using System.Windows.Forms;  
     ```  
   
-3. Yapılandırma ayarları deposu alın ve ardından Hizmetleri adlı koleksiyon bulunamadı. Bu koleksiyon, kullanılabilir hizmetlerin hepsini içerir. MenuItemCommand yöntemi mevcut kodu kaldırın ve aşağıdakiyle değiştirin:  
+3. Yapılandırma ayarları deposunu alın ve ardından hizmet adlı alt koleksiyonu bulun. Bu koleksiyon, kullanılabilir tüm hizmetleri içerir. Menuıtemcommand yönteminde, var olan kodu kaldırın ve aşağıdaki kodla değiştirin:  
   
     ```  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -52,18 +52,18 @@ Ayarlar deposu, tüm kullanılabilir hizmetleri bulmak için veya belirli bir hi
     }  
     ```  
   
-4. Projeyi oluşturmak ve hata ayıklamaya başlayın. Deneysel örneği açılır.  
+4. Projeyi derleyin ve hata ayıklamayı başlatın. Deneysel örnek görüntülenir.  
   
-5. Deneysel örneğinde üzerinde **Araçları** menüsünde tıklatın **çağırma FindServicesCommand**.  
+5. Deneysel örnekte, **Araçlar** menüsünde **Findservicescommand komutunu çağır**' a tıklayın.  
   
-     Tüm hizmetler listeleyen bir ileti kutusu görmeniz gerekir.  
+     Tüm hizmetlerin listelendiği bir ileti kutusu görmeniz gerekir.  
   
-     Bu ayarları doğrulamak için Kayıt Defteri Düzenleyicisi'ni kullanabilirsiniz.  
+     Bu ayarları doğrulamak için kayıt defteri düzenleyicisini kullanabilirsiniz.  
   
-## <a name="finding-a-specific-service"></a>Belirli bir hizmet bulma  
- Ayrıca <xref:Microsoft.VisualStudio.Settings.SettingsStore.CollectionExists%2A> belirli bir hizmet yüklü olup olmadığını belirlemek için yöntemi. Hizmet sınıfı türünü bilmeniz gerekir.  
+## <a name="finding-a-specific-service"></a>Belirli bir hizmeti bulma  
+ Ayrıca, <xref:Microsoft.VisualStudio.Settings.SettingsStore.CollectionExists%2A> belirli bir hizmetin yüklenip yüklenmediğini anlamak için yöntemini de kullanabilirsiniz. Hizmet sınıfının türünü bilmeniz gerekir.  
   
-1. İçinde MenuItemCallback önceki yordamda oluşturduğunuz proje için yapılandırma ayarları deposu arama `Services` hizmetinin GUID ile adlı koleksiyon içeren koleksiyon. Bu durumda biz Yardım hizmeti için görünür.  
+1. Önceki yordamda oluşturduğunuz projenin MenuItemCallback öğesinde, `Services` hizmet GUID 'si tarafından adlandırılan alt koleksiyonun bulunduğu koleksiyon için yapılandırma ayarları deposunda arama yapın. Bu durumda, yardım hizmetine bakacağız.  
   
     ```  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -78,8 +78,8 @@ Ayarlar deposu, tüm kullanılabilir hizmetleri bulmak için veya belirli bir hi
     }  
     ```  
   
-2. Projeyi oluşturmak ve hata ayıklamaya başlayın.  
+2. Projeyi derleyin ve hata ayıklamayı başlatın.  
   
-3. Deneysel örneğinde üzerinde **Araçları** menüsünde tıklatın **çağırma FindServicesCommand**.  
+3. Deneysel örnekte, **Araçlar** menüsünde **Findservicescommand komutunu çağır**' a tıklayın.  
   
-     Metin içeren bir ileti görürsünüz **hizmet kullanılabilir Yardım:** ardından **True** veya **False**. Bu ayarı doğrulamak için önceki adımlarda gösterildiği gibi bir kayıt defteri düzenleyicisi kullanabilirsiniz.
+     Metin **yardım hizmeti kullanılabilir**  bir ileti görmeniz gerekir: **true** veya **false**. Bu ayarı doğrulamak için, önceki adımlarda gösterildiği gibi bir kayıt defteri düzenleyici kullanabilirsiniz.

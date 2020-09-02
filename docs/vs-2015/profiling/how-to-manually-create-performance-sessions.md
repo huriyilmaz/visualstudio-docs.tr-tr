@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Performans oturumlarını elle oluşturma | Microsoft Docs'
+title: 'Nasıl yapılır: El Ile performans oturumu oluşturma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -16,26 +16,26 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 622d349fd063cf0a22e3c286003490e088cd4440
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68192839"
 ---
-# <a name="how-to-manually-create-performance-sessions"></a>Nasıl yapılır: El ile Performans Oturumları Oluşturma
+# <a name="how-to-manually-create-performance-sessions"></a>Nasıl Yapılır: Performans Oturumlarını Elle Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Performans oturumu el ile oluşturabilirsiniz. Bir proje açın gerekmez [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Bunu yapmak için. Daha fazla bilgi için [performans oturumları yapılandırma](../profiling/configuring-performance-sessions.md).  
+El ile bir performans oturumu oluşturabilirsiniz. Bunu yapmak için ' de bir proje açmanız gerekli değildir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Daha fazla bilgi için bkz. [performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md).  
   
 ### <a name="to-manually-create-a-performance-session"></a>El ile bir performans oturumu oluşturmak için  
   
-1. Üzerinde **Çözümle** menüsünde **Profiler**ve ardından **yeni performans oturumu**.  
+1. **Çözümle** menüsünde **Profil Oluşturucu**' nın üzerine gelin ve ardından **yeni performans oturumu**' na tıklayın.  
   
-     Boş performans oturumu eklenir **performans Gezgini**.  
+     **Performans Gezgini**bir boş performans oturumu eklenir.  
   
-2. Sağ **hedefleri**ve ardından **hedef ikili Ekle**.  
+2. **Hedefler**' e sağ tıklayın ve ardından **hedef ikilisi Ekle**' ye tıklayın.  
   
-3. İçinde **hedef ikili Ekle** iletişim kutusunda dosya adını seçin ve ardından **açık**.  
+3. **Hedef Ikili Ekle** iletişim kutusunda, dosya adını seçin ve ardından **Aç**' a tıklayın.  
   
      Yeni bir ikili eklenir.  
   

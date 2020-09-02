@@ -1,5 +1,5 @@
 ---
-title: Idiasession::symbolbyıd | Microsoft Docs
+title: 'IDiaSession:: symbolById | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: ac409edcee7657e724822d1a72737c3142d8d93e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150200"
 ---
 # <a name="idiasessionsymbolbyid"></a>IDiaSession::symbolById
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir sembol benzersiz kimliğine göre alır.  
+Bir sembolü benzersiz tanımlayıcısına göre alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT symbolById (   
@@ -36,21 +36,21 @@ HRESULT symbolById ( 
   
 #### <a name="parameters"></a>Parametreler  
  `id`  
- [in] Benzersiz tanımlayıcısı.  
+ 'ndaki Benzersiz tanımlayıcı.  
   
  `ppSymbol`  
- [out] Döndürür bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) sembol temsil eden bir nesne alındı.  
+ dışı Alınan simgeyi temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirtilen tanımlayıcı, dahili olarak tüm sembolleri benzersiz olacak şekilde DIA SDK'sı tarafından kullanılan benzersiz bir değerdir.  
+ Belirtilen tanımlayıcı, tüm sembolleri benzersiz hale getirmek için DIA SDK tarafından dahili olarak kullanılan benzersiz bir değerdir.  
   
- Bu yöntem, örneğin, başka bir simge türünü gösteren simgenin almak için kullanılabilir (örneğe bakın).  
+ Bu yöntem, örneğin, başka bir simgenin türünü temsil eden simgeyi almak için kullanılabilir (örneğe bakın).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek alır bir [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md) temsil eden başka bir simge türü. Bu örnek nasıl kullanılacağını gösterir `symbolById` oturumdaki yöntemi. Basit bir yaklaşım çağırmaktır [Idiasymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md) tür simgesi doğrudan almak için yöntemi.  
+ Bu örnek, başka bir simgenin türünü temsil eden bir [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) alır. Bu örnek, oturumunda yönteminin nasıl kullanılacağını gösterir `symbolById` . Daha basit bir yaklaşım, tür sembolünü doğrudan almak için [IDiaSymbol:: get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md) yöntemini çağırmalıdır.  
   
 ```cpp#  
 IDiaSymbol *GetSymbolType(IDiaSymbol *pSymbol, IDiaSession *pSession)  
@@ -67,6 +67,6 @@ IDiaSymbol *GetSymbolType(IDiaSymbol *pSymbol, IDiaSession *pSession)
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Idiasession](../../debugger/debug-interface-access/idiasession.md)   
- [Idiasymbol](../../debugger/debug-interface-access/idiasymbol.md)   
+ [IDiaSession](../../debugger/debug-interface-access/idiasession.md)   
+ [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
  [IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)

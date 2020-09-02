@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::readMemory | Microsoft Docs
+title: 'IDiaStackWalkHelper:: readMemory | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 8bef01cd29bb2312bd682f2f1f1150ee78da293e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150062"
 ---
 # <a name="idiastackwalkhelperreadmemory"></a>IDiaStackWalkHelper::readMemory
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir veri bloğu bellek yürütülebilir dosyası görüntüden okur.  
+Bellek içindeki yürütülebilir dosyanın görüntüsünden bir veri bloğunu okur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT readMemory(   
@@ -39,22 +39,22 @@ HRESULT readMemory( 
   
 #### <a name="parameters"></a>Parametreler  
  `type`  
- [in] Bir değer [MemoryTypeEnum numaralandırması](../../debugger/debug-interface-access/memorytypeenum.md) okumak için bellek türünü belirten sabit listesi.  
+ 'ndaki Okunan bellek türünü belirten [MemoryTypeEnum numaralandırma](../../debugger/debug-interface-access/memorytypeenum.md) numaralandırmasından bir değer.  
   
- Va  
- [in] Sanal adres okumaya başlayacağı görüntüde.  
+ ka  
+ 'ndaki Okumaya başlamak için görüntüdeki sanal adres.  
   
  `cbData`  
- [in] Veri arabelleğin bayt cinsinden boyutu.  
+ 'ndaki Veri arabelleğinin bayt cinsinden boyutu.  
   
  `pcbData`  
- [out] Aslında okunan bayt sayısını döndürür. Varsa `pbData` olduğu `NULL`, sonra bu verilerin kullanılabilir bayt sayısı.  
+ dışı Gerçekten okunan bayt sayısını döndürür. `pbData`İse `NULL` , bu, kullanılabilir veri baytlarının toplam sayısıdır.  
   
  `pbData`  
- [out içinde] Okuma bellek ile doldurulmuş bir arabellek.  
+ [in, out] Okunan bellek ile doldurulmuş bir arabellek.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

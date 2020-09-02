@@ -12,32 +12,32 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: b3835c6cb537e7ac74862ac4a6794dd7b0bd5003
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72656973"
 ---
 # <a name="confirm-activity-designer"></a>Confirm Etkinlik Tasarımcısı
-Bir <xref:System.Activities.Statements.Confirm> etkinliği oluşturmak ve yapılandırmak için **Onayla** etkinliği Tasarımcısı kullanılır.
+Etkinlik oluşturmak ve yapılandırmak için **onaylama** etkinliği Tasarımcısı kullanılır <xref:System.Activities.Statements.Confirm> .
 
 ## <a name="the-confirm-activity"></a>Onayla etkinliği
- @No__t_0 etkinliği, <xref:System.Activities.Statements.CompensableActivity> bulunan bir etkinliğin <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> açıkça çağırır. @No__t_0 etkinliği bir <xref:System.Activities.Statements.CompensableActivity> <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A>, <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> veya <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> içinde kullanılmıyorsa, <xref:System.Activities.Statements.Confirm.Target%2A> özelliğini belirtmeniz gerekir.
+ <xref:System.Activities.Statements.Confirm>Etkinlik, <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> içinde bulunan bir etkinlik için açıkça öğesini çağırır <xref:System.Activities.Statements.CompensableActivity> . Etkinlik, <xref:System.Activities.Statements.Confirm> veya bir içinde kullanılmıyorsa, <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> <xref:System.Activities.Statements.CompensableActivity> özelliğini belirtmeniz gerekir <xref:System.Activities.Statements.Confirm.Target%2A> .
 
- @No__t_1 tarafından belirtilen <xref:System.Activities.Statements.CompensationToken>, <xref:System.Activities.Statements.CompensableActivity> <xref:System.Activities.Statements.CompensableActivity.Body%2A> başarıyla tamamlandığında <xref:System.Activities.Statements.CompensableActivity> açıkça onaylamak veya telafi etmek için bir yol sağlar.
+ <xref:System.Activities.Statements.CompensationToken>Tarafından belirtilen, <xref:System.Activities.Statements.Compensate.Target%2A> başarıyla tamamlandıktan sonra açıkça onaylamak veya telafi etmek için bir yol sağlar <xref:System.Activities.Statements.CompensableActivity> <xref:System.Activities.Statements.CompensableActivity.Body%2A> <xref:System.Activities.Statements.CompensableActivity> .
 
 ### <a name="using-the-confirm-activity-designer"></a>Onaylama etkinliği tasarımcısını kullanma
- **Onaylama** etkinliği tasarımcısı, [!INCLUDE[wfd2](../includes/wfd2-md.md)] sol tarafındaki araç **kutusu** sekmesine tıklanarak erişilen **araç kutusu** **Işlem** kategorisinde bulunabilir (alternatif olarak, görünümden **araç çubuğu** ' nu seçin).menü veya Ctrl + Alt + X.)
+ **Onaylama** etkinliği Tasarımcısı, **araç kutusunun**(alternatif olarak **Transaction** **Toolbox** [!INCLUDE[wfd2](../includes/wfd2-md.md)] , **Görünüm** menüsünden **araç çubuğu** sekmesine tıklanarak veya Ctrl + Alt + X ' i seçerek erişilen) araç kutusu işlem kategorisinde bulunabilir.
 
- **Onaylama** etkinliği Tasarımcısı **araç kutusundan** sürüklenip [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzeyine, örneğin <xref:System.Activities.Statements.Sequence> içinde olduğu gibi, her yerde bırakılmış olarak bırakılabilir. Bu, varsayılan olarak Onayla <xref:System.Activities.Activity.DisplayName%2A> <xref:System.Activities.Statements.Confirm> bir etkinlik oluşturur. @No__t_0 değeri, **Onayla** etkinliğinin üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
+ **Onaylama** etkinliği Tasarımcısı **araç kutusundan** sürüklenip, [!INCLUDE[wfd2](../includes/wfd2-md.md)] bir içinde olduğu gibi etkinliklerin genellikle yerleştirildiği yüzeyine bırakılabilir <xref:System.Activities.Statements.Sequence> . Bu <xref:System.Activities.Statements.Confirm> , varsayılan Onayla olan bir etkinlik oluşturur <xref:System.Activities.Activity.DisplayName%2A> . <xref:System.Activities.Activity.DisplayName%2A>Değer, **Onayla** etkinlik tasarımcısının üst bilgisinde veya özellik kılavuzunun **DisplayName** kutusunda düzenlenebilir.
 
 ### <a name="the-confirm-properties"></a>Özellikleri Onayla
- Aşağıdaki tabloda <xref:System.Activities.Statements.Confirm> özellikleri gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. @No__t_0 özelliği, özellik kılavuzunda veya [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzeyinde düzenlenebilir, ancak özellik kılavuzunda <xref:System.Activities.Statements.Confirm.Target%2A> özelliği düzenlenmelidir.
+ Aşağıdaki tabloda <xref:System.Activities.Statements.Confirm> Özellikler gösterilmektedir ve bunların tasarımcıda nasıl kullanıldığı açıklanmaktadır. Özellik, özellik <xref:System.Activities.Activity.DisplayName%2A> kılavuzunda veya [!INCLUDE[wfd2](../includes/wfd2-md.md)] yüzeyinde düzenlenebilir ancak özellik, özellik <xref:System.Activities.Statements.Confirm.Target%2A> kılavuzunda düzenlenmelidir.
 
-|Özellik adı|Gerekli|Kullanım|
+|Özellik Adı|Gerekli|Kullanım|
 |-------------------|--------------|-----------|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|@No__t_0 etkinliğinin isteğe bağlı kolay adını belirtir. Varsayılan değer onaylanır.|
-|<xref:System.Activities.Statements.Confirm.Target%2A>|Doğru|Bu <xref:System.Activities.Statements.Confirm> etkinliğinin <xref:System.Activities.Statements.CompensationToken> içeren <xref:System.Activities.InArgument%601> belirtir.|
+|<xref:System.Activities.Activity.DisplayName%2A>|Yanlış|Etkinliğin isteğe bağlı kolay adını belirtir <xref:System.Activities.Statements.CancellationScope> . Varsayılan değer onaylanır.|
+|<xref:System.Activities.Statements.Confirm.Target%2A>|Doğru|<xref:System.Activities.InArgument%601> <xref:System.Activities.Statements.CompensationToken> Bu etkinlik için öğesini içeren öğesini belirtir <xref:System.Activities.Statements.Confirm> .|
 
 ## <a name="see-also"></a>Ayrıca Bkz.
  [İşlem](../workflow-designer/transaction-activity-designers.md) [CancellationScope](../workflow-designer/cancellationscope-activity-designer.md) [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md) [telafi](../workflow-designer/compensate-activity-designer.md) [TransactionScope](../workflow-designer/transactionscope-activity-designer.md)

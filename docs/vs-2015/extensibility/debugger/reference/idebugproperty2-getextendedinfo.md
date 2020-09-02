@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetExtendedInfo | Microsoft Docs
+title: 'IDebugProperty2:: Gebir Deınfo | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 74810aab2f47a36c716891fd45b7424eb737b142
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68164983"
 ---
 # <a name="idebugproperty2getextendedinfo"></a>IDebugProperty2::GetExtendedInfo
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Genişletilmiş özelliği bilgilerini.  
+Özelliği için genişletilmiş bilgileri alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetExtendedInfo (   
@@ -42,26 +42,26 @@ int GetExtendedInfo ( 
   
 #### <a name="parameters"></a>Parametreler  
  `guidExtendedInfo`  
- [in] Alınacak genişletilmiş bilgi türünü tanımlayan GUID. Açıklamalar, Ayrıntılar için bkz.  
+ 'ndaki Alınacak genişletilmiş bilgilerin türünü belirleyen GUID. Ayrıntılar için bkz. açıklamalar.  
   
  `pExtendedInfo`  
- [out] Döndürür bir `VARIANT` (C++) veya nesne (C#) genişletilmiş özellik bilgileri almak için kullanılabilir. Örneğin, bu parametre döndürebilir bir `IUnknown` için sorgulanabilir arabirimi bir [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) arabirimi. Açıklamalar, Ayrıntılar için bkz.  
+ dışı `VARIANT` Genişletilmiş özellik bilgilerini almak için kullanılabilecek bir (C++) veya nesne (C#) döndürür. Örneğin, bu parametre `IUnknown` bir [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) arabirimi için sorgulanabilen bir arabirim döndürebilir. Ayrıntılar için bkz. açıklamalar.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi halde hata kodu döndürür. Döndürür `S_GETEXTENDEDINFO_NO_EXTENDEDINFO` almak için genişletilmiş bilgileri yoksa.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür. `S_GETEXTENDEDINFO_NO_EXTENDEDINFO`Alınacak genişletilmiş bilgi yoksa döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yöntem, kendisini çağırarak alınıyor için uygun olmayan bilgi almak amacıyla mevcut [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) yöntemi.  
+ Bu yöntem, [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) yöntemini çağırarak, kendisini alma amacını taşıyan bilgileri alma amacıyla mevcuttur.  
   
- Aşağıdaki GUID, genellikle (herhangi bir derleme adı kullanılamadığından GUID değerler için C# belirtilir) Bu yöntem tarafından tanınır. Ek GUID'leri iç kullanım için oluşturulabilir.  
+ Aşağıdaki GUID 'Ler genellikle bu yöntem tarafından tanınır (ad hiçbir derlemede kullanılamadığından, C# için GUID değerleri belirtilir). İç kullanım için ek GUID 'Ler oluşturulabilir.  
   
-|Ad|GUID|Açıklama|  
+|Name|GUID|Açıklama|  
 |----------|----------|-----------------|  
-|guidDocument|{3f98de84-fee9-11d0-b47f-00a0244a1dd2}|Döndürür bir `IUnknown` belge arabirimi. Genellikle, [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) arabirimi elde edilebilir buradan `IUnknown` arabirimi.|  
-|guidCodeContext|{e2fc65e 56ce - 11d 1-b528-00aax004a8797}|Döndürür bir `IUnknown` arabirimi belge içeriği. Genellikle, [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimi elde edilebilir buradan `IUnknown` arabirimi.|  
-|guidCustomViewerSupported|{d9c9da31-ffbe-4eeb-9186-23121e3c088c}|Genellikle bir ifade değerlendiricisi tarafından uygulanan özel bir görüntüleyicinin CLSID içeren bir dize döndürür.|  
-|guidExtendedInfoSlot|{6df235ad-82c6-4292-9c97-7389770bc42f}|Bu özellik bir yönetilen kodun yerel adresi temsil ediyorsa, istenen Yuva sayısını temsil eden 32 bit bir sayı döndürür.|  
-|guidExtendedInfoSignature|{b5fb6d46-f805-417f-96a3-8ba737073ffd}|İmza özelliği nesneyle ilişkili değişken içeren bir dize döndürür.|  
+|guidDocument|{3f98de84-fee9-11D0-b47f-00a0244a1dd2}|Belgeye bir `IUnknown` arabirim döndürür. Genellikle, [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) arabirimi Bu arabirimden elde edilebilir `IUnknown` .|  
+|guidCodeContext|{e2fc65e-56ce-11D1-b528-00aax004a8797}|`IUnknown`Belge bağlamına bir arabirim döndürür. Genellikle, [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) arabirimi Bu arabirimden elde edilebilir `IUnknown` .|  
+|Guidcustomviewerdestekleniyor|{d9c9da31-ffbe-4eeb-9186-23121e3c088c}|Genellikle bir ifade değerlendirici tarafından uygulanan özel bir görüntüleyicinin CLSID 'sini içeren bir dize döndürür.|  
+|Kılavuzu Xtendedinfoslot|{6df235ad-82c6-4292-9c97-7389770bc42f}|Bu özellik yönetilen bir kod yerel adresini temsil ediyorsa, istenen yuva numarasını temsil eden 32 bitlik bir sayı döndürür.|  
+|Kılavuzu Xtendedinfosignature|{b5fb6d46-f805-417f-96a3-8ba737073ffd}|Property nesnesiyle ilişkili değişkenin imzasını içeren bir dize döndürür.|  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

@@ -17,14 +17,14 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: cd8d18d95fabd858354c625d2c9b32459efc7193
-ms.sourcegitcommit: c150d0be93b6f7ccbe9625b41a437541502560f5
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75846149"
 ---
 # <a name="using-the-legacy-activity-designer"></a>Eski Etkinlik Tasarımcısını Kullanma
-Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]etkinlik tasarımcısının nasıl kullanılacağı açıklanmaktadır. [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] veya [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)]hedeflerken eski tasarımcıyı kullanın.
+Bu konu başlığı altında, etkinlik tasarımcısının eski ' de nasıl kullanılacağı açıklanmaktadır [!INCLUDE[wfd1](../includes/wfd1-md.md)] . Veya hedeflenirken eski tasarımcıyı kullanın [!INCLUDE[netfx35_long](../includes/netfx35-long-md.md)] [!INCLUDE[vstecwinfx](../includes/vstecwinfx-md.md)] .
 
  Etkinlik Tasarımcısı kendi özel etkinliklerinizi oluşturmanıza olanak sağlar.
 
@@ -46,7 +46,7 @@ Bu konuda, eski [!INCLUDE[wfd1](../includes/wfd1-md.md)]etkinlik tasarımcısın
 ## <a name="configuring-an-activity"></a>Etkinlik yapılandırma
  Etkinlik Tasarımcısı etkin olsa da, aşağıdaki tabloda listelenen özellikleri yapılandırmak için özellik tarayıcısını kullanabilirsiniz.
 
-|Özellik|Açıklamalar|
+|Özellik|Yorumlar|
 |--------------|--------------|
 |**Ad**|Etkinliğin adı.|
 |**Temel sınıf**|Etkinliğin türetildiği temel sınıf. Varsayılan temel sınıf [SequenceActivity](https://msdn2.microsoft.com/library/system.workflow.activities.sequenceactivity.aspx)'dir. **Özellikler** penceresinde, farklı bir temel sınıf **üç nokta** ( **...]** simgesini tıklayarak bir [.NET türü seçin iletişim kutusunda (eski)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md)bir temel sınıf seçin.|

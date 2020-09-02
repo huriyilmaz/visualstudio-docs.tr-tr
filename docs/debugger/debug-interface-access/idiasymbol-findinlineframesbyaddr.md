@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 3c45e99ecab38146f6ccba9fbaf176cdf5fddb67
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85464487"
 ---
 # <a name="idiasymbolfindinlineframesbyaddr"></a>IDiaSymbol::findInlineFramesByAddr
@@ -41,7 +41,7 @@ HRESULT findInlineFramesByAddr ( 
 
  `ppResult`
 
-dışı `IDiaEnumSymbols`Alınan çerçevelerin listesini içeren bir nesnesi tutar.
+dışı `IDiaEnumSymbols` Alınan çerçevelerin listesini içeren bir nesnesi tutar.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.

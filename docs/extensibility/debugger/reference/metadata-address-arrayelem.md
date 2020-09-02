@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_ARRAYELEM | Microsoft Dokümanlar
+title: METADATA_ADDRESS_ARRAYELEM | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,17 +16,17 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 67e39eb8b03dd6f75ac39155bd744e03084beb0b
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80714561"
 ---
 # <a name="metadata_address_arrayelem"></a>METADATA_ADDRESS_ARRAYELEM
 
-Bu yapı, bir dizi içinde bir dizi öğesini temsil eder.
+Bu yapı, dizi içindeki bir Array öğesini temsil eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 typedef struct _tagMETADATA_ADDRESS_ARRAYELEM {
@@ -45,22 +45,22 @@ public struct METADATA_ADDRESS_ARRAYELEM {
 ## <a name="members"></a>Üyeler
 
 `tokMethod`\
-Bu öğenin bir parçası olduğu dizinin kimliği.
+Bu öğenin bir parçası olan dizinin KIMLIĞI.
 
-[C++] `_mdToken` 32-bit `typedef` `int`için bir .
+[C++] `_mdToken` , `typedef` 32 bitlik bir içindir `int` .
 
 `dwIndex`\
-Dizi içinde bu öğenin dizin.
+Dizi içindeki bu öğenin dizini.
 
 ## <a name="remarks"></a>Açıklamalar
-Bu yapı, `DEBUG_ADDRESS_UNION` yapı alanı [(ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmadan bir değer) `ADDRESS_KIND_ARRAYELEM` `dwKind` ayarlandığında, [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) yapıdaki birliğin bir parçasıdır.
+Bu yapı, [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) `dwKind` `DEBUG_ADDRESS_UNION` yapı alanı `ADDRESS_KIND_ARRAYELEM` ( [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) numaralandırmasından bir değer) olarak ayarlandığında DEBUG_ADDRESS_UNION yapısındaki birleşimin bir parçasıdır.
 
 ## <a name="requirements"></a>Gereksinimler
-Üstbilgi: sh.h
+Üstbilgi: SH. h
 
-Ad alanı: Microsoft.VisualStudio.Debugger.Interop
+Ad alanı: Microsoft. VisualStudio. Debugger. Interop
 
-Montaj: Microsoft.VisualStudio.Debugger.Interop.dll
+Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::pdataForVA | Microsoft Docs
+title: IDiaStackWalkHelper::p dataForVA | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,18 +14,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5af921caa989d7279bb9f52751c452d91045cf3e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68150083"
 ---
 # <a name="idiastackwalkhelperpdataforva"></a>IDiaStackWalkHelper::pdataForVA
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Sanal adresle ilişkilendirilen PDATA veri bloğu döndürür.  
+Sanal adresle ilişkili PDATA veri bloğunu döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT pdataForVA(   
@@ -38,24 +38,24 @@ HRESULT pdataForVA( 
   
 #### <a name="parameters"></a>Parametreler  
  `va`  
- [in] Sanal adres edinmek için verilerin belirtir.  
+ 'ndaki Elde edilecek verilerin sanal adresini belirtir.  
   
  `cbData`  
- [in] Veri almak için bayt cinsinden boyutu.  
+ 'ndaki Elde edilecek verilerin bayt cinsinden boyutu.  
   
  `pcbData`  
- [out] Gerçek veri boyutunu edinilen bayt cinsinden döndürür.  
+ dışı Alınan bayt cinsinden gerçek veri boyutunu döndürür.  
   
  `pbData`  
- [out içinde] İstenen veriler ile doldurulmuş bir arabellek. Olamaz `NULL`.  
+ [in, out] İstenen verilerle doldurulmuş bir arabellek. Olamaz `NULL` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`. Döndürür `S_FALSE` hiçbir PDATA belirtilen adresi için varsa. Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`Belirtilen adres IÇIN PDATA yoksa döndürür. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- PDATA (".pdata" adlı bölümde) bir derlenecek özel durum işleme için işlevleri hakkında bilgi içerir.  
+ Bir compiland 'nin PDATA (". pdata" adlı bölüm), işlevler için özel durum işleme hakkında bilgi içerir.  
   
- Çağıran, arayan için ne kadar veri kullanılabilir isteyin gerek yoktur. Bu nedenle döndürülecek ne kadar veri olduğunu bilir. Bu nedenle, bu yöntemin bir hata ise döndürülecek bir uygulama için kabul edilebilir `pbData` parametresi `NULL`.  
+ Çağıranın ne kadar veri döndürüleceğini, çağıranın ne kadar veri olduğunu sorabilmesi için ne kadar veri döndürüleceğini bilir. Bu nedenle, parametresi bir hata döndürmek için bu yöntemin uygulanması kabul edilebilir `pbData` `NULL` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)
