@@ -1,5 +1,5 @@
 ---
-title: İlerleme durumu iletişim kutusu hata ayıklamayı durdurmak | Microsoft Docs
+title: Devam eden hata ayıklamayı Durdur Iletişim kutusu | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,22 +24,22 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 4fc4b72987be726ab06aeb92a0e3eec2a338949e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65684944"
 ---
 # <a name="stop-debugging-in-progress-dialog-box"></a>Devam Eden Hata Ayıklamayı Durdur İletişim Kutusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu iletişim kutusu, hata ayıklama oturumunu durdurmak hata ayıklayıcı çalışırken görünür, ancak oturumunu durdurmak için biraz zaman olan. Hata ayıklama oturumunu durdurmak normalde çok hızlı olması ve bu iletişim kutusunda görünmez. Bazı durumlarda, ayıklanan tüm işlemleri ayırma için ek süre sürer ancak. Birkaç saniye sürer oturum durduruluyor (veya bir ayırma hatası oluşursa), bu iletişim kutusu görüntülenir. Bu sıklıkla ortaya çıkarsa, dahili bir sorun nedeniyle olabilir ve Ürün Destek Hizmetleri'ne başvurun isteyebilirsiniz.  
+Hata ayıklayıcı bir hata ayıklama oturumunu durdurmayı denerken bu iletişim kutusu görüntülenir, ancak oturum durdurulduğunda bir süre sürer. Hata ayıklama oturumunun durdurulması genellikle çok hızlıdır ve bu iletişim kutusu görünmez. Ancak bazen, hata ayıklamakta olan tüm işlemlerin ayrılması ek bir zaman alır. Oturumun durdurulması birkaç saniyeden uzun sürerse (veya bir ayırma hatası oluşursa), bu iletişim kutusu görüntülenir. Bu sıklıkla oluşursa, bunun nedeni bir iç sorun olabilir ve ürün destek hizmetleri ile iletişim kurmak isteyebilirsiniz.  
   
- İşlemleri ayırma ve kaybolmasını bu iletişim kutusu için bekleyin veya kullanın **artık Durdur** hemen sonlandırılmasına zorlamak için düğme.  
+ İşlemlerin ayrılmasını bekleyebilir ve bu iletişim kutusunu görünmez hale getirebilirsiniz veya hemen sonlandırmayı zorlamak için **Şimdi durdur** düğmesini kullanabilirsiniz.  
   
- **Artık Durdur**  
- Anında hata ayıklama oturumunu sona erdirmek için bu düğmeye tıklayın. Kullanarak **artık Durdur**ayıklanan işlemleri ayırma yerine sona erer. Sistem işlemleri hata ayıklaması yapıyorsanız, bu işlemleri ile sonlandırma **artık Durdur** olabilir beklenmedik ve istenmeyen etkiler.  
+ **Şimdi durdur**  
+ Hata ayıklama oturumunu hemen sonlandırmak için bu düğmeye tıklayın. **Şimdi durdur**'un kullanılması, hata ayıklamakta olan işlemlerin ayrılması yerine sonlandırılır. Sistem işlemlerinde hata ayıklaması yapıyorsanız, **Şimdi durdur** ile bu işlemlerin sonlandırmasında beklenmedik ve istenmeyen etkileri olabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Hata ayıklayıcısı güvenliği](../debugger/debugger-security.md)   
- [Programları ayrılıyor](https://msdn.microsoft.com/f2c756c2-8079-474b-94c2-01c19a141a01)
+ [Hata ayıklayıcı güvenliği](../debugger/debugger-security.md)   
+ [Programları ayırma](https://msdn.microsoft.com/f2c756c2-8079-474b-94c2-01c19a141a01)

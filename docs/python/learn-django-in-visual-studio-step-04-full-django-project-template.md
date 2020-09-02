@@ -1,7 +1,7 @@
 ---
-title: Visual Studio adım 4, web proje şablonu Django öğretici öğrenin
+title: Visual Studio adım 4, Web proje şablonunda Docgo öğreticisini öğrenin
 titleSuffix: ''
-description: Visual Studio projeleri bağlamında Django temellerinin bir walkthrough, özellikle Django Web Project şablonu tarafından sağlanan özellikler.
+description: Visual Studio projeleri bağlamında, özellikle de Docgo Web projesi şablonu tarafından sunulan özellikler hakkında Docgo 'ya yönelik bir anlatım.
 ms.date: 11/19/2018
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -12,82 +12,82 @@ ms.workload:
 - python
 - data-science
 ms.openlocfilehash: c778d830b20797962306700a5af938eb3a3bb142
-ms.sourcegitcommit: 2975d722a6d6e45f7887b05e9b526e91cffb0bcf
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/20/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62961712"
 ---
-# <a name="step-4-use-the-full-django-web-project-template"></a>Adım 4: Tam Django Web Projesi şablonu kullanın
+# <a name="step-4-use-the-full-django-web-project-template"></a>4. Adım: tam Docgo Web proje şablonunu kullanma
 
-**Önceki adım: [Statik dosyalara hizmet edin, sayfa ekleyin ve şablon kalıtımını kullanın](learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md)**
+**Önceki adım: [statik dosyaları sunma, sayfa ekleme ve şablon devralmayı kullanma](learn-django-in-visual-studio-step-03-serve-static-files-and-add-pages.md)**
 
-Visual Studio'daki "Blank Django Web Project" şablonu üzerine bir uygulama oluşturarak Django'nun temellerini keşfettiğinize göre, "Django Web Project" şablonu tarafından üretilen dolgun uygulamayı kolayca anlayabilirsiniz.
+Visual Studio 'daki "boş Docgo Web projesi" şablonu üzerinde bir uygulama oluşturarak Socgo 'un temel bilgilerini incelediğinize göre, "Docgo Web projesi" şablonu tarafından üretilen Fuller uygulamasını kolayca anlayabilirsiniz.
 
-Bu adımda şimdi:
+Bu adımda Şu anda şunları yapabilirsiniz:
 
 > [!div class="checklist"]
-> - "Django Web Project" şablonu kullanarak daha dolgun bir Django web uygulaması oluşturun ve proje yapısını inceleyin (adım 4-1)
-> - Temel sayfa şablonundan devralan ve jQuery ve Bootstrap (adım 4-2) gibi statik JavaScript kitaplıklarını kullanan üç sayfadan oluşan proje şablonu tarafından oluşturulan görünümleri ve sayfa şablonlarını anlama
-> - Şablon tarafından sağlanan URL yönlendirmesini anlama (adım 4-3)
+> - "Docgo Web projesi" şablonunu kullanarak bir Fuller Docgo Web uygulaması oluşturun ve proje yapısını inceleyin (adım 4-1)
+> - Temel sayfa şablonundan alınan ve jQuery ve Bootstrap gibi statik JavaScript kitaplıklarını kullanan üç sayfadan oluşan, proje şablonu tarafından oluşturulan görünümleri ve sayfa şablonlarını anlayın (adım 4-2)
+> - Şablon tarafından sunulan URL yönlendirmesini anlayın (adım 4-3)
 
-Şablon, Adım 5'te kapsanan temel kimlik doğrulamasını da sağlar.
+Şablon Ayrıca, 5. adımda bahsedilen temel kimlik doğrulaması sağlar.
 
 ## <a name="step-4-1-create-a-project-from-the-template"></a>Adım 4-1: Şablondan proje oluşturma
 
-1. Visual Studio'da **Solution Explorer'a**gidin, bu eğitimde daha önce oluşturulan **LearningDjango** çözümüne sağ tıklayın ve**Yeni Proje** **Ekle'yi** > seçin. (Alternatif olarak, yeni bir çözüm kullanmak istiyorsanız, bunun yerine **Dosya** > **Yeni** > **Projesi'ni** seçin.)
+1. Visual Studio 'da **Çözüm Gezgini**gidin, bu öğreticide daha önce oluşturulan **learningdocgo** çözümüne sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin. (Alternatif olarak, yeni bir çözüm kullanmak isterseniz **Dosya**  >  ' yı seçin. **Yeni**  >  Bunun yerine **Proje** .)
 
-1. Yeni proje iletişim kutusunda, **Django Web Project** şablonunu arayın ve seçin, projeyi "DjangoWeb" olarak arayın ve **Tamam'ı**seçin.
+1. Yeni proje iletişim kutusunda **Docgo Web projesi** şablonunu arayıp seçin, "Docgoweb" projesini çağırın ve **Tamam**' ı seçin.
 
-1. Şablon yine bir *requirements.txt* dosyası içerdiğinden, Visual Studio bu bağımlılıkları nereye yükleyebileceğinizi sorar. Seçeneği seçin, **sanal ortama yükle**ve Sanal Ortam **Ekle** iletişim kutusunda varsayılanları kabul etmek için **Oluştur'u** seçin.
+1. Şablon bir *requirements.txt* dosyası Içerdiğinden, Visual Studio bu bağımlılıkların nereye yükleneceğini sorar. **Bir sanal ortama yükleyip**, sanal **ortam ekle** iletişim kutusunda Varsayılanları kabul etmek için **Oluştur** seçeneğini belirleyin.
 
-1. Visual Studio sanal ortamı ayarlamayı bitirdikten sonra, bir Django süper kullanıcısı (yani bir yönetici) oluşturmak için görüntülenen *readme.html'deki* yönergeleri izleyin. Visual Studio projesine sağ tıklayın ve **Python** > **Django Create Superuser** komutunu seçin, ardından istemleri izleyin. Uygulamanın kimlik doğrulama özelliklerini kullanırken kullanıcı adınızı ve parolanızı kullandığınızda kaydettiğinizden emin olun.
+1. Visual Studio sanal ortamı ayarlamayı tamamladıktan sonra, bir Docgo süper kullanıcısı (diğer bir deyişle, bir yönetici) oluşturmak için görüntülenen *readme.html* 'teki yönergeleri izleyin. Visual Studio projesine sağ tıklayıp **Python**  >  **docgo süper kullanıcı oluştur** komutunu seçip istemleri takip edin. Uygulamanın kimlik doğrulama özelliklerini kullanırken kullandığınız kullanıcı adını ve parolayı kaydettiğinizden emin olun.
 
-1. **DjangoWeb** **projesini, Solution Explorer'daki** projeyi sağ tıklatarak ve **Başlangıç Projesi olarak Set'i**seçerek Visual Studio çözümü için varsayılan olarak ayarlayın. Kalın olarak gösterilen başlangıç projesi, hata ayıklamayı başlattığınızda çalıştırılan şeydir.
+1. **Docgoweb** projesini, **Çözüm Gezgini** ' de projeye sağ tıklayıp **Başlangıç projesi olarak ayarla**' yı seçerek Visual Studio çözümü için varsayılan olacak şekilde ayarlayın. Kalın olarak gösterilen başlangıç projesi, hata ayıklayıcıyı başlattığınızda çalıştırılan şeydir.
 
-    ![DjangoWeb projesini başlangıç projesi olarak gösteren Çözüm Gezgini](media/django/step04-second-project-in-solution-set-as-startup-project.png)
+    ![Docgoweb projesini başlangıç projesi olarak gösteren Çözüm Gezgini](media/django/step04-second-project-in-solution-set-as-startup-project.png)
 
-1. **Hata Ayıklama** > **Hata Ayıklama** **(F5)** seçeneğini belirleyin veya sunucuyu çalıştırmak için araç çubuğundaki **Web Sunucusu** düğmesini kullanın:
+1. Sunucuyu çalıştırmak için **hata ayıklama**  >  **başlatma hata ayıklamayı Başlat** (**F5**) veya araç çubuğundaki **Web sunucusu** düğmesini seçin:
 
-    ![Visual Studio'da web sunucusu araç çubuğu düğmesini çalıştırın](media/django/run-web-server-toolbar-button.png)
+    ![Visual Studio 'da Web sunucusu araç çubuğu düğmesini Çalıştır](media/django/run-web-server-toolbar-button.png)
 
-1. Şablon tarafından oluşturulan uygulama, gezinme çubuğunu kullanarak arasında gezindiğiniz Ana Sayfa, Hakkında ve İletişim olmak üzere üç sayfadan oluşur. Uygulamanın farklı bölümlerini incelemek için bir veya iki dakika ayırın. **Oturum Açma** komutu aracılığıyla uygulamayla kimlik doğrulaması yapmak için daha önce oluşturulan süper kullanıcı kimlik bilgilerini kullanın.
+1. Şablon tarafından oluşturulan uygulamada, gezinti çubuğunu kullanma arasında gezinerek üç sayfa, giriş, bilgi ve Ilgili kişi bulunur. Uygulamanın farklı kısımlarını incelemek için bir dakika veya iki dakikanızı alın. Uygulamada **oturum açma** komutu aracılığıyla kimlik doğrulaması yapmak için, daha önce oluşturulan Süper Kullanıcı kimlik bilgilerini kullanın.
 
-    ![Django Web Project uygulamasının tam tarayıcı görünümü](media/django/step04-full-app-desktop-view.png)
+    ![Docgo Web projesi uygulamasının tam tarayıcı görünümü](media/django/step04-full-app-desktop-view.png)
 
-1. "Django Web Project" şablonu tarafından oluşturulan uygulama, mobil form etkenlerini barındıran duyarlı mizanpaj için Bootstrap'ı kullanır. Bu yanıt verme yeteneğini görmek için tarayıcıyı dar bir görünüme yeniden boyutlandırArak içeriğin dikey olarak işlenmesini ve gezinme çubuğunun menü simgesine dönüşmesini sağlar:
+1. "Docgo Web projesi" şablonu tarafından oluşturulan uygulama, mobil form faktörlerine uyum sağlayan, yanıt veren düzen için önyükleme kullanır. Bu yanıt hızını görmek için, içeriğin dikey olarak oluşturmaları ve gezinti çubuğunun bir menü simgesine dönüşmemesi için tarayıcıyı dar bir görünüme yeniden boyutlandırın:
 
-    ![Django Web Project uygulamasının mobil (dar) görünümü](media/django/step04-full-app-mobile-view.png)
+    ![Docgo Web projesi uygulamasının mobil (dar) görünümü](media/django/step04-full-app-mobile-view.png)
 
-1. Takip eden bölümler için uygulamayı çalışır durumda bırakabilirsiniz.
+1. Uygulamanın, izleyen bölümler için çalışır durumda kalmasını sağlayabilirsiniz.
 
-    Uygulamayı durdurmak ve kaynak [denetiminde değişiklikler yapmak](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)istiyorsanız, önce **Team Explorer'da** **Değişiklikler** sayfasını açın , sanal ortam için klasörü sağ tıklatın (muhtemelen **env),** ve **bu yerel öğeleri yoksay'ı**seçin.
+    Uygulamayı durdurmak ve [kaynak denetimine değişiklikleri uygulamak](learn-django-in-visual-studio-step-02-create-an-app.md#commit-to-source-control)istiyorsanız, önce **Takım Gezgini**içindeki **değişiklikler** sayfasını açın, sanal ortam (Belki de **env**) klasörüne sağ tıklayın ve **Bu yerel öğeleri yoksay**' ı seçin.
 
-### <a name="examine-what-the-template-creates"></a>Şablonun ne oluşturduğunu inceleme
+### <a name="examine-what-the-template-creates"></a>Şablonun ne oluşturduğunu inceleyin
 
-En geniş düzeyde, "Django Web Project" şablonu aşağıdaki yapıyı oluşturur:
+En geniş düzeyde, "Docgo Web projesi" şablonu aşağıdaki yapıyı oluşturur:
 
 - Proje kökündeki dosyalar:
-  - *manage.py*, Django idari programı.
-  - *db.sqlite3*, varsayılan bir SQLite veritabanı.
-  - *requirements.txt* Django 1.x bir bağımlılık içeren.
-  - *readme.html*, projeyi oluşturduktan sonra Visual Studio'da görüntülenen bir dosya. Önceki bölümde belirtildiği gibi, uygulama için bir süper kullanıcı (yönetici) hesabı oluşturmak için buradaki yönergeleri izleyin.
-- *Uygulama* klasörü görünümler, modeller, testler, formlar, şablonlar ve statik dosyalar dahil olmak üzere tüm uygulama dosyalarını içerir (bkz. adım 4-2). Genellikle daha farklı bir uygulama adı kullanmak için bu klasörü yeniden adnız.
-- *DjangoWeb* (Django projesi) klasörü tipik Django proje dosyalarını içerir: * \_ \_\_\_init .py*, *settings.py*, *urls.py*, ve *wsgi.py*. Proje şablonu kullanılarak, *settings.py* zaten uygulama ve veritabanı dosyası için yapılandırılmıştır ve *urls.py* giriş formu da dahil olmak üzere tüm uygulama sayfalarına giden rotalarla zaten yapılandırılmıştır.
+  - *Manage.py*, Docgo yönetim yardımcı programı.
+  - Varsayılan bir SQLite veritabanı olan *DB. SQLite3*.
+  - Docgo 1. x üzerinde bir bağımlılık içeren *requirements.txt* .
+  - Projeyi oluşturduktan sonra Visual Studio 'da görüntülenen bir dosya olan *readme.html*. Önceki bölümde belirtildiği gibi, uygulama için bir süper kullanıcı (yönetici) hesabı oluşturmak için buradaki yönergeleri izleyin.
+- *Uygulama* klasörü, görünümler, modeller, testler, formlar, şablonlar ve statik dosyalar dahil olmak üzere tüm uygulama dosyalarını içerir (bkz. Adım 4-2). Bu klasörü genellikle daha farklı bir uygulama adı kullanacak şekilde yeniden adlandırmanız gerekir.
+- *Docgoweb* (docgo Projesi) klasörü, tipik docgo proje dosyalarını içerir: * \_ \_ init \_ \_ . Kopyala*, *Settings.py*, *URLs.py*ve *wsgi.py*. Proje şablonunu kullanarak, *Settings.py* zaten uygulama ve veritabanı dosyası için yapılandırılmıştır ve *URLs.py* , oturum açma formu dahil olmak üzere tüm uygulama sayfalarına yönelik yollarla zaten yapılandırılmıştır.
 
-### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>Soru: Visual Studio projeleri arasında sanal bir ortamı paylaşmak mümkün mü?
+### <a name="question-is-it-possible-to-share-a-virtual-environment-between-visual-studio-projects"></a>Soru: Visual Studio projeleri arasında sanal bir ortam paylaşmak mümkün mü?
 
-Cevap: Evet, ancak bunu farklı projelerin zaman içinde farklı paketler kullanma olasılığının yüksek olduğu bilinciyle yapın ve bu nedenle paylaşılan bir sanal ortam, onu kullanan tüm projeler için tüm paketleri içermelidir.
+Cevap: Evet, ancak farklı projelerin zaman içindeki farklı paketleri büyük olasılıkla kullandığı bir tanıma sahip olur ve bu nedenle paylaşılan bir sanal ortam, kendisini kullanan tüm projelere yönelik tüm paketleri içermelidir.
 
-Bununla birlikte, varolan bir sanal ortamı kullanmak için aşağıdakileri yapın:
+Bununla birlikte, mevcut bir sanal ortamı kullanmak için şunları yapın:
 
-1. Visual Studio bağımlılıkları yüklemek istendiğinde, ben onları kendim seçeneği **yükleyeceğim** seçin.
-1. **Çözüm Gezgini'nde** **Python Ortamları** düğümüne sağ tıklayın ve **Varolan Sanal Ortam Ekle'yi**seçin.
-1. Sanal ortamı içeren klasöre gidin ve seçin, ardından **Tamam'ı**seçin.
+1. Visual Studio 'da bağımlılıkları yüklemek isteyip istemediğiniz sorulduğunda **kendim yükleyeceğim** seçeneğini belirleyin.
+1. **Çözüm Gezgini**, **Python ortamları** düğümüne sağ tıklayın ve **var olan sanal ortamı Ekle**' yi seçin.
+1. Adresine gidin ve sanal ortamı içeren klasörü seçip **Tamam**' ı seçin.
 
-## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>Adım 4-2: Proje şablonu tarafından oluşturulan görünümleri ve sayfa şablonlarını anlama
+## <a name="step-4-2-understand-the-views-and-page-templates-created-by-the-project-template"></a>Adım 4-2: proje şablonu tarafından oluşturulan görünümleri ve sayfa şablonlarını anlayın
 
-Projeyi çalıştırırken gözlemlediğiniz gibi, uygulama üç görünüm içerir: Ev, İletişim ve İletişim. Bu görünümlerin kodu *uygulama/görünümler* klasöründe bulunur. Her görünüm işlevi `django.shortcuts.render` yalnızca bir şablona ve basit bir sözlük nesnesine giden yol ile çağırır. Örneğin, Hakkında sayfası `about` işlev tarafından işlenir:
+Projeyi çalıştırdığınızda gözlemleyeceksiniz, uygulama üç görünüm içerir: Home, hakkında ve Ilgili kişi. Bu görünümlerin kodu *App/views* klasöründe bulunur. Her görünüm işlevi `django.shortcuts.render` , bir şablon yolunu ve basit bir sözlük nesnesini çağırır. Örneğin, hakkında sayfası işlevi tarafından işlenir `about` :
 
 ```python
 def about(request):
@@ -104,7 +104,7 @@ def about(request):
     )
 ```
 
-Şablonlar uygulamanın *şablonları/uygulama* klasöründe bulunur (ve genellikle *uygulamayı* gerçek uygulamanızın adıyla yeniden adlandırmak istersiniz). Temel şablon, *layout.html*, en kapsamlı. Gerekli tüm statik dosyaları (JavaScript ve CSS) ifade eder, diğer sayfaların geçersiz kaktEttiği "içerik" adlı bir bloğu tanımlar ve "komut dosyaları" adlı başka bir blok sağlar. *layout.html'den* aşağıdaki açıklamalı alıntılar bu belirli alanları gösterir:
+Şablonlar uygulamanın *Şablonlar/uygulama* klasöründe bulunur (ve genellikle *uygulamayı* gerçek uygulamanızın adıyla yeniden adlandırmak istersiniz). Temel şablon *layout.html*, en kapsamlıdır. Tüm gerekli statik dosyalara (JavaScript ve CSS) başvurur, diğer sayfaların geçersiz kılındığı "içerik" adlı bir blok tanımlar ve "betikler" adlı başka bir blok sağlar. *layout.html* 'den aşağıdaki ek açıklamalı alıntıları 'ler şu özel alanlara sahip:
 
 ```html
 <!DOCTYPE html>
@@ -144,7 +144,7 @@ def about(request):
 </html>
 ```
 
-Tek tek sayfa şablonları, *about.html,* *contact.html*, ve *index.html*, her temel şablon *düzeni.html*genişletmek . *about.html* en basit ve `{% extends %}` `{% block content %}` ve etiketleri gösterir:
+Tek tek sayfa şablonları, *about.html*, *contact.html*ve *index.html*, her biri temel şablonu *layout.html*'yi genişletir. *about.html* en basit olanıdır ve etiketlerini gösterir `{% extends %}` `{% block content %}` :
 
 ```html
 {% extends "app/layout.html" %}
@@ -159,17 +159,17 @@ Tek tek sayfa şablonları, *about.html,* *contact.html*, ve *index.html*, her t
 {% endblock %}
 ```
 
-*index.html* ve *contact.html* aynı yapıyı kullanın ve "içerik" bloğunda daha uzun içerik sağlayın.
+*index.html* ve *contact.html* aynı yapıyı kullanır ve "içerik" bloğunda tablodan içerik sağlar.
 
-*Şablonlar / uygulama* klasöründe de dördüncü sayfa *login.html*, *loginpartial.html* ile birlikte `{% include %}`bu *layout.html* kullanarak getirdi . Bu şablon dosyaları kimlik doğrulama adım 5'te açıklanır.
+*Şablonlar/App* klasöründe ayrıca, *layout.html* 'ye getirilen *loginpartial.html* ile birlikte *login.html*adlı dördüncü bir sayfa `{% include %}` . Bu şablon dosyaları, kimlik doğrulamasında 5. adımda ele alınmıştır.
 
-### <a name="question-can--block--and--endblock--be-indented-in-the-django-page-template"></a>Soru: Django sayfa şablonuna {% blok %} ve {% endblock %} girinti olabilir mi?
+### <a name="question-can--block--and--endblock--be-indented-in-the-django-page-template"></a>Soru: {% Block%} ve {% endblock%}, Docgo sayfa şablonunda girintilenebilir mi?
 
-Cevap: Evet, Django sayfa şablonları, belki de uygun ana öğeleri içinde hizalamak için, girintisi etiketleri girintisi iyi çalışır. Visual Studio proje şablonu tarafından oluşturulan sayfa şablonlarında girintisi değildir, böylece nereye yerleştirildiklerini net bir şekilde görebilirsiniz.
+Cevap: Evet, Docgo sayfa şablonları, blok etiketlerini girintilediğinizde ince çalışır, belki bunları uygun üst öğelerinde hizalayabilirsiniz. Bunlar, nereye yerleştirileceğini açıkça görebilmeniz için Visual Studio proje şablonu tarafından oluşturulan sayfa şablonlarında girintilenmez.
 
-## <a name="step-4-3-understand-the-url-routing-created-by-the-template"></a>Adım 4-3: Şablon tarafından oluşturulan URL yönlendirmesini anlama
+## <a name="step-4-3-understand-the-url-routing-created-by-the-template"></a>Adım 4-3: şablon tarafından oluşturulan URL yönlendirmesini anlama
 
-"Django Web Project" şablonu tarafından oluşturulan Django projesinin *urls.py* dosyası aşağıdaki kodu içerir:
+"Docgo Web projesi" şablonu tarafından oluşturulan Docgo projesinin *URLs.py* dosyası aşağıdaki kodu içerir:
 
 ```python
 from datetime import datetime
@@ -204,19 +204,19 @@ urlpatterns = [
 ]
 ```
 
-İlk üç URL deseni, `home` `contact`uygulamanın `about` *views.py* dosyasındaki ve görünümlerle doğrudan eşlenir. Desenler `^login/$` ve `^logout$`, diğer taraftan, uygulama tanımlı görünümler yerine yerleşik Django görünümleri kullanın. `url` Yönteme yapılan çağrılar, görünümü özelleştirmek için ek veriler de içerir. Adım 5 bu aramaları araştırıyor.
+İlk üç URL deseni `home` , `contact` `about` uygulamanın *views.py* dosyasındaki, ve görünümleriyle doğrudan eşlenir. Desenler `^login/$` ve `^logout$` diğer yandan, uygulama tanımlı görünümler yerine yerleşik Docgo görünümlerini kullanın. Yöntemine yapılan çağrılar, `url` görünümü özelleştirmek için ek veriler de içerir. 5. adım bu çağrıları araştırır.
 
-### <a name="question-in-the-project-i-created-why-does-the-about-url-pattern-uses-about-instead-of-about-as-shown-here"></a>Soru: Oluşturduğum projede, "hakkında" URL deseni neden burada gösterildiği gibi '^about$' yerine '^about' kullanıyor?
+### <a name="question-in-the-project-i-created-why-does-the-about-url-pattern-uses-about-instead-of-about-as-shown-here"></a>Soru: oluşturduğum projede neden "About" URL deseninin, burada gösterildiği gibi ' ^ about $ ' yerine ' ^ about ' kullanması gerekir mi?
 
-Cevap: Normal ifadede sondaki '$' eksikliği, proje şablonunun birçok sürümünde basit bir gözetimdi. URL deseni "hakkında" adlı bir sayfa için mükemmel derecede iyi çalışır, ancak '$' adlı URL deseni "about=django", "about09876", "aboutoflaughter" gibi URL'lerle de eşleşir. İzleyen '$' burada yalnızca "hakkında" eşleşen *only* bir URL deseni oluşturmak için gösterilir.
+Cevap: normal ifadede sondaki ' $ ' öğesinin olmaması, proje şablonunun birçok sürümünde basit bir bakış taşımıştı. URL deseninin "About" adlı bir sayfada kusursuz bir şekilde çalışması, ancak sondaki ' $ ' olmadan URL deseninin de "about = docgo", "about09876", "aboutoflaughter" vb. gibi URL 'Leri de eşleşmesi. ' $ ' Sonunda *yalnızca* "About" ile eşleşen bir URL deseninin oluşturulması gösterilmektedir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 > [!div class="nextstepaction"]
-> [Django'daki kullanıcıları kimlik doğrulaması](learn-django-in-visual-studio-step-05-django-authentication.md)
+> [Docgo 'da kullanıcıların kimliğini doğrulama](learn-django-in-visual-studio-step-05-django-authentication.md)
 
-## <a name="go-deeper"></a>Daha derine inin
+## <a name="go-deeper"></a>Daha derin git
 
-- [Web uygulamasını Azure Uygulama Hizmetine dağıtma](publishing-python-web-applications-to-azure-from-visual-studio.md)
-- [İlk Django uygulaması, bölüm 4 yazma - formlar ve genel görünümleri](https://docs.djangoproject.com/en/2.0/intro/tutorial04/) (docs.djangoproject.com)
-- GitHub'da Öğretici kaynak kodu: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
+- [Web uygulamasını Azure App Service dağıtma](publishing-python-web-applications-to-azure-from-visual-studio.md)
+- [Ilk Docgo uygulamanızı yazma, 4. Bölüm-Forms ve genel görünümler](https://docs.djangoproject.com/en/2.0/intro/tutorial04/) (docs.djangoproject.com)
+- GitHub 'daki öğretici kaynak kodu: [Microsoft/Python-Sample-vs-Learning-docgo](https://github.com/Microsoft/python-sample-vs-learning-django)

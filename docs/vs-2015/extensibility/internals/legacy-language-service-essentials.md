@@ -1,5 +1,5 @@
 ---
-title: Eski dil hizmeti temel bileşenleri | Microsoft Docs
+title: Eski dil hizmeti temelleri | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,37 +14,37 @@ caps.latest.revision: 22
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: a3926ff84f3b2e6415df1ca7333409c05d839685
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63436258"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64780684"
 ---
 # <a name="legacy-language-service-essentials"></a>Eski Dil Hizmeti Temel Bileşenleri
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir programlama dili, Visual Studio ile tümleştirmek için bir dil hizmeti sağlamanız gerekir. Bu konu eski dil Hizmetleri kullanılabilen özellikleri açıklar.  
+Programlama dilini Visual Studio ile tümleştirebilmek için bir dil hizmeti sağlamanız gerekir. Bu konuda, eski dil hizmetlerinde kullanılabilen özellikler açıklanmaktadır.  
   
- Eski dil Hizmetleri bir VSPackage'ı bir parçası olarak uygulanır, ancak dil hizmeti özellikleri uygulamak için daha yeni MEF uzantıları kullanmaktır. Dil hizmeti uygulamak için en yeni yolu hakkında daha fazla bilgi için bkz: [düzenleyici ve dil hizmeti uzantıları](../../extensibility/editor-and-language-service-extensions.md).  
+ Eski dil Hizmetleri VSPackage 'un bir parçası olarak uygulanır, ancak dil hizmeti özelliklerini uygulamak için daha yeni bir yol MEF uzantıları kullanmaktır. Dil hizmeti uygulama hakkında daha fazla bilgi edinmek için bkz. [Düzenleyici ve dil hizmeti uzantıları](../../extensibility/editor-and-language-service-extensions.md).  
   
 > [!NOTE]
-> Yeni bir düzenleyici API hemen kullanmaya başlamak öneririz. Bu dil hizmetinizin performansını ve yeni düzenleyici özellikleri yararlanmanıza olanak tanır.  
+> Yeni Düzenleyici API 'sini mümkün olan en kısa sürede kullanmaya başlamanızı öneririz. Bu, dil hizmetinizin performansını artırır ve yeni düzenleyici özelliklerinden yararlanmanızı sağlar.  
   
  Eski dil Hizmetleri aşağıdaki özellikleri sağlar:  
   
 |Özellik|Açıklama|  
 |-------------|-----------------|  
-|Söz dizimi renklendirmesi|Farklı renk ve yazı tipi stillerini farklı bir dil öğelerini görüntülemek Düzenleyici görünümü neden olur. Bu ayrım, dosyaları okuyup kolaylaştırabilir.<br /><br /> Genel bilgi için bkz. [eski dil hizmetinde söz dizimi renklerini](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md).<br /><br /> Yönetilen paket çerçevesini (MPF)'deki bu özellik hakkında daha fazla bilgi için bkz: [eski dil hizmetinde söz dizimi renklendirme](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md).|  
-|Deyim tamamlama|Bir deyim ya da kullanıcı yazmaya başlayıp anahtar sözcüğü tamamlar. Deyim tamamlama, daha az yazarak ve daha az hata olasılığını daha kolay zor ifadelerini girin kullanıcılara yardımcı olur.<br /><br /> Genel bilgi için bkz. [eski dil hizmetinde deyim tamamlama](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md).<br /><br /> MPF'deki bu özellik hakkında daha fazla bilgi için bkz: [eski dil hizmetinde Sözcük tamamlama](../../extensibility/internals/word-completion-in-a-legacy-language-service.md).|  
-|Ayraç eşleştirme|Küme ayraçları gibi eşleştirilmiş karakterler vurgular. Ne zaman kullanıcı bir kapatma karakteri gibi türleri "}", ayraç Eşleştirme vurgular karakteri gibi açma karşılık gelen "{". Bu özellik, birkaç karakterini düzeyleri olduğunda, kullanıcıları kapsayan karakterleri çiftlerinin doğru olduğunu onaylayın yardımcı olur.<br /><br /> MPF'deki bu özellik hakkında daha fazla bilgi için bkz: [eski dil hizmetinde Ayraç eşleştirme](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md).|  
-|Parametre bilgisi araç ipuçları|Kullanıcı şu anda yazarak aşırı yüklenmiş yöntem imzaları olası bir listesini görüntüler.<br /><br /> Genel bilgi için bkz. [eski dil hizmetinde parametre bilgisi](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md).<br /><br /> MPF'deki bu özellik hakkında daha fazla bilgi için bkz: [eski dil hizmetinde parametre bilgisi](../../extensibility/internals/parameter-info-in-a-legacy-language-service2.md).|  
-|Hata işaretçileri|Dalgalı kırmızı alt çizgi, olarak da bilinen bir dalgalı sözdizimsel olarak yanlış metin altında görüntüler. Hata işaretçileri, genellikle kullanıcıların yazılmış anahtar sözcükler, kapatılmamış parantezler, geçersiz karakterler ve benzer hatalar haberdar olmak için kullanılır.<br /><br /> MPF sınıflarda, hata işaretçileri otomatik olarak işlenir <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> yöntemi <xref:Microsoft.VisualStudio.Package.AuthoringSink> sınıfı.|  
+|Sözdizimi renklendirme|Düzenleyici görünümünün, dilin farklı öğeleri için farklı renkler ve yazı tipi stilleri görüntülemesine neden olur. Bu ayrım, dosyaları okumayı ve düzenlemeyi kolaylaştırabilir.<br /><br /> Genel bilgiler için, bkz. [eski dil hizmetindeki sözdizimi renklendirme](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md).<br /><br /> Bu özellik hakkında daha fazla bilgi için, bkz. [eski dil hizmetinde söz dizimi renklendirme](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md).|  
+|Ekstre tamamlama|Kullanıcının yazmaya başladığı bir ifadeyi veya anahtar sözcüğü tamamlar. Deyim tamamlama, kullanıcıların daha az yazma ve hata için daha az olasısız zor deyimleri daha kolay girmesine yardımcı olur.<br /><br /> Genel bilgi için, bkz. [eski dil hizmetinde deyimin tamamlanması](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md).<br /><br /> MPF 'deki bu özellik hakkında daha fazla bilgi için bkz. [eski dil hizmetinde sözcük tamamlama](../../extensibility/internals/word-completion-in-a-legacy-language-service.md).|  
+|Ayraç eşleştirme|Parantez gibi eşleştirilmiş karakterleri vurgular. Kullanıcı "}" gibi bir kapanış karakteri yazdığında, parantez eşleştirme, karşılık gelen "{" gibi açma karakterini vurgular. Birçok kapsayan karakter düzeyi olduğunda, bu özellik kullanıcıların kapsayan karakterlerin doğru şekilde eşleştirildiğini onaylamasını sağlar.<br /><br /> MPF 'deki bu özellik hakkında daha fazla bilgi için bkz. [eski dil hizmetinde küme ayracı eşleme](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md).|  
+|Parametre bilgileri araç ipuçları|Kullanıcının şu anda yazmakta olduğu aşırı yüklenmiş yöntem için olası imzaların bir listesini görüntüler.<br /><br /> Genel bilgiler için, [eski dil hizmetindeki parametre bilgilerine](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)bakın.<br /><br /> MPF 'deki bu özellik hakkında daha fazla bilgi için, [eski dil hizmetindeki parametre bilgilerine](../../extensibility/internals/parameter-info-in-a-legacy-language-service2.md)bakın.|  
+|Hata işaretçileri|Sözdizimsel olarak da bilinen dalgalı kırmızı alt çizgiyi, sözdizimsel olarak yanlış olan metin altında görüntüler. Hata işaretçileri genellikle, kullanıcıların yanlış yazılmış anahtar sözcüklerin, kapatılmamış parantezler, geçersiz karakterlerden ve benzer hataların farkında olması için kullanılır.<br /><br /> MPF sınıflarında, hata işaretçileri, sınıfının yönteminde otomatik olarak işlenir <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> <xref:Microsoft.VisualStudio.Package.AuthoringSink> .|  
   
- Bu özelliklerin çoğu, kaynak kodu ayrıştırmak için dil hizmeti gerektirir. Belirteç oluşturma ve kod derleyici veya yorumlayıcı ayrıştırma sık yeniden kullanabilirsiniz.  
+ Bu özelliklerin birçoğu, kaynak kodu ayrıştırmak için dil hizmetinin kullanılmasını gerektirir. Genellikle derleyici veya yorumlayıcı için simgeleme ve ayrıştırma kodunu yeniden kullanabilirsiniz.  
   
- Aşağıdaki özellikleri, programlama dili için destek ile ilgili ancak dil Hizmetleri bir parçası değildir:  
+ Aşağıdaki özellikler programlama dilleri desteğiyle ilgilidir ancak dil hizmetlerinin bir parçası değildir:  
   
 |Özellik|Açıklama|  
 |-------------|-----------------|  
-|İfade değerlendiricisi|Destekler [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] görüntülenecek kesme noktalarını doğrulama ve ifadelerin listesi sağladığı tarafından hata ayıklayıcı **Otolar** hata ayıklama penceresine.<br /><br /> Daha fazla bilgi için [hata ayıklama için dil hizmeti desteği](../../extensibility/internals/language-service-support-for-debugging.md).|  
-|Sembol tarama araçlarını|Destekler **Nesne Tarayıcısı**, **sınıf görünümü**, **çağrı tarayıcısı**, ve **sembol sonuçları Bul**.|
+|İfade değerlendiricileri|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Kesme noktalarını doğrulayarak ve **oto** hata ayıklama penceresinde görüntülenecek ifadelerin bir listesini sağlayarak hata ayıklayıcıyı destekler.<br /><br /> Daha fazla bilgi için bkz. [hata ayıklama Için dil hizmeti desteği](../../extensibility/internals/language-service-support-for-debugging.md).|  
+|Sembol tarama araçları|**Nesne tarayıcısı**, **sınıf görünümü**, **çağrı tarayıcısı**destekler ve **sembol sonuçlarını bulur**.|

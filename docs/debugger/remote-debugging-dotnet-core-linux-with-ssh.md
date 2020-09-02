@@ -10,10 +10,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 23bc0fa990a79b1855ec382f42248a0f847c3c9c
-ms.sourcegitcommit: 3d64bfb9bf85395357effe054db9a9afaa0be5ea
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/29/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "78200925"
 ---
 # <a name="remote-debug-net-core-on-linux-using-ssh"></a>SSH kullanarak Linux 'ta .NET Core 'da uzaktan hata ayıklama
@@ -34,21 +34,21 @@ sudo apt-get install openssh-server unzip curl
 
 Uygulamanızı hata ayıklamaya hazırlamak için:
 
-- Uygulamayı oluştururken bir hata ayıklama yapılandırması kullanmayı düşünün. Hata ayıklama derlenen koddan perakende koda derlenmiş kodun (sürüm yapılandırması) hata ayıklaması çok daha zordur. Sürüm yapılandırması kullanmanız gerekiyorsa Yalnızca kendi kodum önce devre dışı bırakın. Bu ayarı devre dışı bırakmak için **araçlar** > **Seçenekler** > **hata ayıklama**seçeneğini belirleyip **yalnızca kendi kodum etkinleştir**seçimini kaldırın.
+- Uygulamayı oluştururken bir hata ayıklama yapılandırması kullanmayı düşünün. Hata ayıklama derlenen koddan perakende koda derlenmiş kodun (sürüm yapılandırması) hata ayıklaması çok daha zordur. Sürüm yapılandırması kullanmanız gerekiyorsa Yalnızca kendi kodum önce devre dışı bırakın. Bu ayarı devre dışı bırakmak için **Araçlar**  >  **Seçenekler**  >  **hata ayıklama**' ı seçin ve ardından **yalnızca kendi kodum etkinleştir**' i kaldırın.
 
-- Projenizin [Taşınabilir pdb 'leri](https://github.com/OmniSharp/omnisharp-vscode/wiki/Portable-PDBs) (varsayılan ayar) olarak yapılandırıldığından emin olun ve PBX 'lerin dll ile aynı konumda olduğundan emin olun. Visual Studio 'da bunu yapılandırmak için projeye sağ tıklayın, ardından **gelişmiş** > **hata ayıklama bilgileri** > **derleme** > **Özellikler** ' i seçin.
+- Projenizin [Taşınabilir pdb 'leri](https://github.com/OmniSharp/omnisharp-vscode/wiki/Portable-PDBs) (varsayılan ayar) olarak yapılandırıldığından emin olun ve PBX 'lerin dll ile aynı konumda olduğundan emin olun. Visual Studio 'da yapılandırmak için projeye sağ tıklayın ve ardından **Özellikler**  >  **Build**  >  **Gelişmiş**  >  **hata ayıklama bilgileri**oluştur ' u seçin.
 
 Hata ayıklamadan önce uygulamayı dağıtmak için çeşitli yöntemler kullanabilirsiniz. Örneğin, şunları yapabilirsiniz:
 
-- Kaynakları hedef bilgisayara kopyalayın ve Linux makinesinde ```dotnet build``` oluşturun.
+- Kaynakları hedef bilgisayara kopyalayın ve Linux makinesinde ile derleyin ```dotnet build``` .
 
-- Uygulamayı Windows üzerinde oluşturun ve derleme yapıtlarını Linux makinesine aktarın. (Yapı yapıtları uygulamanın kendisini, bağımlı olabileceği çalışma zamanı kitaplıklarını ve *. Deps. JSON* dosyasını içerir.)
+- Uygulamayı Windows üzerinde oluşturun ve derleme yapıtlarını Linux makinesine aktarın. (Yapı yapıtları uygulamanın kendisinden, bağlı olabileceği çalışma zamanı kitaplıklarının ve dosyadaki *.deps.js* .)
 
 ## <a name="attach-the-debugger"></a>Hata ayıklayıcıyı iliştirme
 
 Bilgisayarlar yapılandırıldıktan sonra, uygulamayı Linux makinesinde başlatın ve ardından hata ayıklayıcıyı eklemeye hazırlanın.
 
-1. Visual Studio 'da **hata ayıkla** > **işleme Ekle... öğesine**tıklayın.
+1. Visual Studio 'da **Hata Ayıkla**  >  **işleme Ekle...** seçeneğini belirleyin.
 
 1. **Bağlantı türü** listesinde **SSH**' ı seçin.
 

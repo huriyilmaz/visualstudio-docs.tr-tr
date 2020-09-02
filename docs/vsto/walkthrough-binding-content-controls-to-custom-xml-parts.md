@@ -18,10 +18,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: a80488408f680530ed3c9b4094b2997e97484ce3
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544449"
 ---
 # <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>İzlenecek yol: içerik denetimlerini özel XML bölümlerine bağlama
@@ -61,7 +61,7 @@ ms.locfileid: "85544449"
 
 1. **EmployeeControls**adlı bir Word belgesi projesi oluşturun. Çözüm için yeni bir belge oluşturun. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]tasarımcıda yeni Word belgesini açar ve **EmployeeControls** projesini **Çözüm Gezgini**ekler.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] tasarımcıda yeni Word belgesini açar ve **EmployeeControls** projesini **Çözüm Gezgini**ekler.
 
 ## <a name="add-content-controls-to-the-document"></a>Belgeye içerik denetimleri ekleme
  Kullanıcının bir çalışanla ilgili bilgileri görüntüleyebileceği veya düzenleyebileceği üç farklı türde içerik denetimi içeren bir tablo oluşturun.

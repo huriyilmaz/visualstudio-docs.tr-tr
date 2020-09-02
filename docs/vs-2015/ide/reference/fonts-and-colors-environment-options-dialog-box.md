@@ -28,10 +28,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: a581328a22fda584e2e03a39cc34e9b4b369b280
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72650989"
 ---
 # <a name="fonts-and-colors-environment-options-dialog-box"></a>Yazı Tipleri ve Renkler, Ortam, Seçenekler İletişim Kutusu
@@ -50,14 +50,14 @@ ms.locfileid: "72650989"
 
    Metin Düzenleyicisi için yazı tipi stili, boyutu ve renk görüntüleme ayarlarındaki değişiklikler, varsayılan metin düzenleyicinizdeki metnin görünümünü etkiler. IDE dışında bir metin düzenleyicisinde açılan belgeler bu ayarlardan etkilenmeyecektir.
 
-- **Yazıcıda**
+- **Yazıcı**
 
    Yazıcı için yazı tipi stili, boyutu ve renk görüntüleme ayarlarındaki değişiklikler yazdırılan belgelerdeki metnin görünümünü etkiler.
 
   > [!NOTE]
   > Gerektiğinde, yazdırma için metin düzenleyicisinde görüntülenmek üzere kullanılandan farklı bir varsayılan yazı tipi seçebilirsiniz. Bu, hem tek baytlı hem de çift baytlık karakterler içeren kodu yazdırırken yararlı olabilir.
 
-- **Ekstre tamamlama**
+- **Deyim Tamamlama**
 
    Düzenleyicide ifade tamamlanma açılır penceresinde görünen metnin yazı tipi stilini ve boyutunu değiştirir.
 
@@ -89,10 +89,10 @@ ms.locfileid: "72650989"
 
  Bazı görüntü öğeleri şunlardır:
 
-|Öğeyi görüntüle|Açıklama|
+|Öğeyi görüntüle|Description|
 |------------------|-----------------|
-|**Düz metin**|Düzenleyicideki metin.|
-|**Seçili metin**|Düzenleyici odağa sahip olduğunda geçerli seçime dahil edilen metin.|
+|**Düz Metin**|Düzenleyicideki metin.|
+|**Seçilen Metin**|Düzenleyici odağa sahip olduğunda geçerli seçime dahil edilen metin.|
 |**Etkin olmayan seçili metin**|Düzenleyici odağı kaybettiği zaman geçerli seçime dahil edilen metin.|
 |**Gösterge kenar boşluğu**|Kod düzenleyicisinin sol tarafındaki kenar boşluğu, kesme noktaları ve yer işareti simgeleri görüntülenir.|
 |**Satır numaraları**|Her kod satırının yanında görünen isteğe bağlı sayılar|
@@ -112,7 +112,7 @@ ms.locfileid: "72650989"
 |**Kesme noktası-eşlenmiş (etkin)**|İfadelerin veya eşlenmiş kesme noktaları içeren satırların vurgu rengini belirtir. İfade düzeyi kesme noktaları etkinse veya [Genel, hata ayıklama, Seçenekler Iletişim kutusunda](../../debugger/general-debugging-options-dialog-box.md) **kesme noktaları veya geçerli ifade için tüm kaynak satırını VURGULA** seçeneği belirlenmişse ASP veya ASP.NET hata ayıklama için geçerlidir.|
 |**Kesme noktası-eşlenmiş (hata)**|Bir hata durumunda, eşleşen kesme noktaları içeren deyimlerin veya satırların vurgu rengini belirtir. İfade düzeyi kesme noktaları etkinse veya [Genel, hata ayıklama, Seçenekler Iletişim kutusunda](../../debugger/general-debugging-options-dialog-box.md) **kesme noktaları veya geçerli ifade için tüm kaynak satırını VURGULA** seçeneği belirlenmişse ASP veya ASP.NET hata ayıklama için geçerlidir.|
 |**Kesme noktası-eşlenmiş (uyarı)**|Bir uyarı durumunda eşlenmiş kesme noktaları içeren deyimler veya çizgiler için vurgu rengi belirtir. İfade düzeyi kesme noktaları etkinse veya [Genel, hata ayıklama, Seçenekler Iletişim kutusunda](../../debugger/general-debugging-options-dialog-box.md) **kesme noktaları veya geçerli ifade için tüm kaynak satırını VURGULA** seçeneği belirlenmişse ASP veya ASP.NET hata ayıklama için geçerlidir.|
-|**C/C++ Kullanıcı anahtar sözcükleri**|@No__t_0 yönergesinin aracılığıyla tanımlanan belirli bir kod dosyası içindeki bir sabit.|
+|**C/C++ Kullanıcı anahtar sözcükleri**|Yönergeyle tanımlanan belirli bir kod dosyası içindeki bir sabit `#define` .|
 |**Çağrı dönüşü**|Hata ayıklama sırasında bağlam en üst olmayan yığın çerçevesine dönüştürüldüğünde, kaynak deyimleri veya çağrı dönüş noktalarını belirten çizgiler için vurgu rengi belirtir.|
 |**Kod parçacığına bağımlı alan**|Geçerli düzenlenebilir alan değiştirildiğinde güncellenecek alan.|
 |**Kod parçacığı alanı**|Bir kod parçacığı etkin olduğunda düzenlenebilir alan.|
@@ -122,7 +122,7 @@ ms.locfileid: "72650989"
 |**Dokunulmayan kapsam alanı**|Birim testi kapsamında olmayan kod.|
 |**Kapsam kısmen dokunulmaz alanı**|Birim testinin kısmen kapsadığı kod.|
 |**Kapsam dokunulmaz alanı**|Bir birim testinin tamamen kapsadığı kod.|
-|**CSS yorumu**|Geçişli Stil Sayfaları bir yorum. Örneğin:<br /><br /> /* yorum \* /|
+|**CSS yorumu**|Geçişli Stil Sayfaları bir yorum. Örneğin:<br /><br /> /* yorum \*/|
 |**CSS anahtar sözcüğü**|Basamaklı stil sayfasındaki anahtar sözcükler.|
 |**CSS özellik adı**|Arka plan gibi bir özelliğin adı.|
 |**CSS özellik değeri**|Mavi gibi bir özelliğe atanan değer.|
@@ -137,16 +137,16 @@ ms.locfileid: "72650989"
 |**Ayrıştırılmış kaynak**|**Ayrıştırma** penceresinin içindeki kaynak satırları göstermek için kullanılan metnin rengi.|
 |**Ayrıştırılmış kod simgesi**|**Ayrıştırma** penceresinin içindeki sembol adlarını göstermek için kullanılan metin rengi.|
 |**Ayrıştırılmış kod metni**|İşlem kodunu ve verileri **ayrıştırma** penceresi içinde göstermek için kullanılan metnin rengi.|
-|**Dışlanan kod**|@No__t_0 gibi bir koşullu Önişlemci yönergesine göre derlenmemelidir.|
-|**Tanımlayıcısını**|Kod içindeki tanımlayıcılar, sınıf adları, yöntem adları ve değişken adları gibi.|
+|**Dışlanan kod**|Bir koşullu ön işlemci yönergesi başına, derlenemediği kod `#if` .|
+|**Tanımlayıcı**|Kod içindeki tanımlayıcılar, sınıf adları, yöntem adları ve değişken adları gibi.|
 |**Sözcükle**|Verilen dile ayrılan dil için anahtar sözcükler. Örneğin: sınıf ve ad alanı.|
 |**Bellek adresi**|**Bellek** penceresi içindeki adres sütununu göstermek için kullanılan metin rengi.|
 |**Bellek değişti**|**Bellek** penceresi içindeki değiştirilen verileri göstermek için kullanılan metnin rengi.|
 |**Bellek verileri**|**Bellek** penceresi içindeki verileri göstermek için kullanılan metin rengi.|
 |**Bellek okunamaz**|**Bellek** penceresi içindeki okunamaz bellek alanını göstermek için kullanılan metnin rengi.|
-|**Sayısından**|Kodda gerçek bir sayısal değeri temsil eden bir sayı.|
+|**Sayı**|Kodda gerçek bir sayısal değeri temsil eden bir sayı.|
 |**İşlecinde**|+,-, Ve! = gibi işleçler.|
-|**Diğer hata**|Diğer hata türleri diğer hata dalgalı çizgiler kapsamına girmeyen bir hata oluştu. Şu anda, Düzenle ve devam et 'de işlenmemiş düzenlemelerini içerir.|
+|**Farklı Bir Hata**|Diğer hata türleri diğer hata dalgalı çizgiler kapsamına girmeyen bir hata oluştu. Şu anda, Düzenle ve devam et 'de işlenmemiş düzenlemelerini içerir.|
 |**Önişlemci anahtar sözcüğü**|#İnclude gibi Önişlemci tarafından kullanılan anahtar sözcükler.|
 |**Salt okuma bölgesi**|Düzenlenemeyen kod. Örneğin, kod tanımı görünümü penceresinde veya Düzenle ve devam et sırasında değiştirilemeyen kodda görüntülenen kod.|
 |**Yeniden düzenleme arka planı**|**Değişiklikleri Önizle** iletişim kutusunun arka plan rengi.|
@@ -158,7 +158,7 @@ ms.locfileid: "72650989"
 |**SQL DML Işaretçisi**|Transact-SQL Düzenleyicisi için geçerlidir. Bu düzenleyicideki DML deyimleri, varsayılan olarak bir sınırlayıcı mavi kutusuyla işaretlenir.|
 |**Eski kod**|Yenisiyle değiştirilen kod bir güncelleştirme bekliyor. Bazı durumlarda, Düzenle ve devam et, kod değişikliklerini hemen uygulayamaz, ancak hata ayıklamaya devam ederken bunları daha sonra uygulayacaktır. Bu, şu anda yürütülmekte olan işlevi çağırması gereken bir işlevi düzenlerseniz veya çağrı yığınında bekleyen bir işleve 64 bayttan fazla yeni değişken eklerseniz oluşur. Bu durumda, hata ayıklayıcı bir "eski kod uyarısı" iletişim kutusu görüntüler ve söz konusu işlev bitene kadar yerine geçilen kod yürütülmeye devam eder ve yeniden çağırılır. Düzenle ve devam et, kod değişikliklerini o zaman uygular.|
 |**Dize**|Dize sabit değerleri.|
-|**Dize (C# @ harfine)**|İçindeki dize sabit C# değerleri, tam olarak yorumlanır. Örneğin:<br /><br /> @"x"|
+|**Dize (C# @ tam)**|C# dilinde, harfine yorumlanan dize sabit değerleri. Örneğin:<br /><br /> @"x"|
 |**Söz dizimi hatası**|Ayrıştırma hataları.|
 |**Görev Listesi kısayolu**|Bir satıra **görev listesi** kısayolu eklenirse ve gösterge kenar boşluğu devre dışıysa, çizgi vurgulanır.|
 |**İzleme noktası (devre dışı)**|Kullanılmadı.|
@@ -179,19 +179,19 @@ ms.locfileid: "72650989"
 |**Kullanıcı türleri (Temsilciler)**|Temsilciler için Color yazın.|
 |**Kullanıcı türleri (numaralandırmalar)**|Numaralandırmalar için kullanılan renk türü.|
 |**Kullanıcı türleri (arabirimler)**|Arabirimler için Color yazın.|
-|**Kullanıcı türleri (değer türleri)**|İçindeki C#yapılar gibi değer türleri için Color yazın.|
+|**Kullanıcı türleri (değer türleri)**|C# içindeki yapılar gibi değer türleri için Color yazın.|
 |**Visual Basic salt okuma Işaretçisi**|Özel durum bölgeleri, yöntem tanımı ve yaprak olmayan çağrı çerçeveleri gibi EnC 'yi belirlemek için kullanılan Visual Basic özgü bir işaretleyici.|
-|**Warning**|Derleyici uyarıları.|
+|**Uyarı**|Derleyici uyarıları.|
 |**Uyarı satırları yolu**|Statik analiz uyarı satırları için kullanılır.|
 |**XML özniteliği**|Öznitelik adları.|
 |**XML öznitelik teklifleri**|XML öznitelikleri için tırnak karakterleri.|
 |**XML öznitelik değeri**|XML özniteliklerinin içeriği.|
-|**XML CDATA bölümü**|@No__t_0 içeriği! [CDATA [...]] >.|
-|**XML açıklaması**|@No__t_0!----> içeriği.|
-|**XML sınırlayıcısı**|<, <?, <!, @No__t_0!--,--> da dahil olmak üzere XML sözdizimi sınırlayıcıları? \>, \<! [, ]] > ve [,].|
-|**XML doc özniteliği**|@No__t_0param Name = "I" gibi bir XML belge özniteliğinin değeri, "I" nin renklendirilme olduğu >.|
+|**XML CDATA bölümü**|İçeriği \<![CDATA[…]]> .|
+|**XML açıklaması**|İçeriği \<!-- --> .|
+|**XML sınırlayıcısı**|<, <?, <!, \<!--, --> ,? \> , \<![, ]]> , ve [,] dahil olmak üzere XML sözdizimi sınırlayıcıları.|
+|**XML doc özniteliği**|\<param name="I">"İ" nin renklendirilme gibi bir XML belgesi özniteliği değeri.|
 |**XML belgesi açıklaması**|XML belgeleri yorumlarına eklenen açıklamalar.|
-|**XML belge etiketi**|XML belgesi açıklamalarındaki Etiketler, örneğin<br /><br /> ///  \<summary >.|
+|**XML belge etiketi**|XML belgesi açıklamalarındaki Etiketler, örneğin<br /><br /> /// \<summary>.|
 |**XML anahtar sözcüğü**|CDATA, ıDREF ve NDATA gibi DTD anahtar sözcükleri.|
 |**XML adı**|Öğe adları ve Işleme yönergeleri hedef adı.|
 |**XML Işleme yönergesi**|Işleme yönergelerinin içerikleri, hedef adı dahil değildir.|

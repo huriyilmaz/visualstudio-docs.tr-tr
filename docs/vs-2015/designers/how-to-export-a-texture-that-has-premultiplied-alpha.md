@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 452048a512a9e2f8d4d44d5db99cc005c0dac55c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664433"
 ---
 # <a name="how-to-export-a-texture-that-has-premultiplied-alpha"></a>Nasıl yapılır: Ön Çarpımlı Alfa kullanan Doku Dışa Aktarma
@@ -28,7 +28,7 @@ Görüntü Içeriği ardışık düzeni, kaynak görüntüden ön çarpılmış 
 - Ön çarpılmış alfa oluşturmak için görüntü Içeriği ardışık düzeni yapılandırma.
 
 ## <a name="premultiplied-alpha"></a>Ön çarpılmış Alfa
- Önceden çarpılan Alfa, Texel 'nin renk katkısını ayırarak fiziksel malzemelerle gerçek dünya etkileşimini daha iyi temsil ettiğinden, geleneksel, ön çarpılmamış Alfa üzerinden çeşitli avantajlar sunar. sahne), kendi geçiş aşamasından (üzerinden izin verdiği temel rengin miktarı). Önceden çarpılan Alfa kullanmanın avantajlarından bazıları şunlardır:
+ Önceden çarpılan Alfa geleneksel, ön ödeme olmayan Alpha üzerinden çeşitli avantajlar sunar, çünkü Texel 'nin renk katılımına sahip olan (sahneye eklediği renk), bir fiziksel malzemelerle gerçek dünya etkileşimini daha iyi temsil eder. Önceden çarpılan Alfa kullanmanın avantajlarından bazıları şunlardır:
 
 - Ön çarpılmış alfa ile karıştırma, ilişkilendirilebilir bir işlemdir; birden çok yarı saydam dokuların karıştırılmasını elde etmek, dokuların karıştıralındığı sıra ne olursa olsun aynıdır.
 
@@ -48,4 +48,4 @@ Görüntü Içeriği ardışık düzeni, kaynak görüntüden ön çarpılmış 
 
 4. **Tamam** düğmesini seçin.
 
-   Projeyi oluşturduğunuzda, görüntü Içeriği ardışık düzeni kaynak görüntüyü çalışma biçiminden belirlediğiniz çıkış biçimine dönüştürür — bu, görüntünün ön çarpılmış Alfa biçimine dönüştürülmesini içerir ve sonuç projenin çıktısına kopyalanır dizinden.
+   Projeyi oluşturduğunuzda, görüntü Içeriği ardışık düzeni kaynak görüntüyü çalışma biçiminden belirlediğiniz çıkış biçimine dönüştürür — bu, görüntünün ön çarpılmış Alfa biçimine dönüştürülmesini içerir ve sonuç projenin çıkış dizinine kopyalanır.

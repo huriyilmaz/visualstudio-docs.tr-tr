@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: bfe9ae171f0f6fac1c2b5add5340de1c11f3da0f
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85544423"
 ---
 # <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;Postalamalar &gt; öğesi (Visual Studio 'Da Office geliştirme)
@@ -42,7 +42,7 @@ ms.locfileid: "85544423"
 
  `postActions`Öğesinde hiç öznitelik yok.
 
- `postActions`Aşağıdaki öğeye sahiptir.
+ `postActions` Aşağıdaki öğeye sahiptir.
 
 ### <a name="postaction"></a>Postaeylemi
  İsteğe bağlı. `postAction`Ad alanındaki öğesinin rolü, `vstav3` [Visual&#41;Studio 'da Office geliştirme &#40;&#60;postatransaction&#62; öğesi ](../vsto/postaction-element-office-development-in-visual-studio.md)içinde tanımlanmıştır.

@@ -9,18 +9,18 @@ caps.latest.revision: 6
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 7e6f1654c2497742231d12f19286f21a6395129d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68160452"
 ---
 # <a name="targetplatformname-element-visual-studio-templates"></a>TargetPlatformName Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Platformunu belirtir, proje şablonu hedefler. Bu öğe bir proje şablonu oluşturmak için kullanıldığını belirtmek için kullanılan [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] uygulamalar.  
+Proje şablonunun hedeflediği platformu belirtir. Bu öğe, uygulama oluşturmak için bir proje şablonu kullanılacağını belirtmek için kullanılır [!INCLUDE[win8_appname_long](../includes/win8-appname-long-md.md)] .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <VSTemplate>  
@@ -38,22 +38,22 @@ Platformunu belirtir, proje şablonu hedefler. Bu öğe bir proje şablonu oluş
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|İşletim sistemi sürümünü belirtir, proje şablonu hedefler.|  
+|[RequiredPlatformVersion](../extensibility/requiredplatformversion-element-visual-studio-templates.md)|Proje şablonunun hedeflediği işlem sisteminin sürümünü belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Metin olmalıdır **Windows**.  
+ Metin **Windows**olmalıdır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte belirten proje şablonunun hedeflediği [!INCLUDE[win8](../includes/win8-md.md)] veya üzeri.  
+ Bu örnek, proje şablonunun hedeflediği [!INCLUDE[win8](../includes/win8-md.md)] veya daha sonraki bir sürümünü belirtir.  
   
 ```xml  
 <VSTemplate Type="Project" Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">   

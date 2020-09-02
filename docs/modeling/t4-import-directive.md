@@ -8,15 +8,15 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 2a28bedd01e3a4f6a7a87b025ac9a9a6184da9b2
-ms.sourcegitcommit: d233ca00ad45e50cf62cca0d0b95dc69f0a87ad6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/01/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75591872"
 ---
 # <a name="t4-import-directive"></a>T4 İçe Aktarma Yönergesi
 
-Visual Studio T4 metin şablonunun kod blokları ' nda, `import` yönergesi, başka bir ad alanındaki öğelere tam nitelikli bir ad sağlamadan başvurabileceğiniz bir öğe sağlar. Bu, [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)]içinde C# veya `imports` `using` eşdeğerdir.
+Visual Studio T4 metin şablonunun kod blokları ' nda, yönerge, bir `import` diğer ad alanındaki öğelere tam nitelikli bir ad sağlamadan başvurabileceğiniz bir öğe sağlar. Bu, `using` C# veya içinde ' ın eşdeğeridir `imports` [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] .
 
 T4 Metin şablonları yazma hakkında genel bir bakış için bkz. [T4 metin şablonu yazma](../modeling/writing-a-t4-text-template.md).
 

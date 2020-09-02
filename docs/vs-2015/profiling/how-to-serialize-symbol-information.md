@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Sembol bilgilerini seri hale getirme | Microsoft Docs'
+title: 'Nasıl yapılır: sembol bilgilerini serileştirme | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -15,28 +15,28 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: c4ea056c48525014fffad0243dfeb4dd40a8daa3
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65687010"
 ---
-# <a name="how-to-serialize-symbol-information"></a>Nasıl yapılır: Sembol bilgilerini seri hale getirme
+# <a name="how-to-serialize-symbol-information"></a>Nasıl yapılır: Sembol Bilgilerini Serileştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Uygulamanızı çözümlemek zorunda semboller serileştirmek. Sembol seri hale getirme semboller .vsp dosyaya ekler. Sembol bilgilerini .vsp dosyasına ekleyerek, diğerleri erişmek özgün simgeleri zorunda kalmadan bir performans raporu analiz edebilirsiniz. Semboller sıralanır değil, özgün Araçlı .exe ve .vsp dosyasını çözümlemek için .pdb dosyaları olmalıdır.  
+Uygulamanızı çözümlemek için sahip olmanız gereken sembolleri seri hale getirebilirsiniz. Sembol serileştirme. vsp dosyasına semboller ekler. . Vsp dosyasına simge bilgileri ekleyerek, diğerleri özgün simgelere erişmeden bir performans raporu çözümleyebilir. Semboller serileştirilmeyen,. vsp dosyasını çözümlemek için özgün olarak işaretlenmiş. exe ve. pdb dosyalarına sahip olmanız gerekir.  
   
-### <a name="to-automatically-serialize-symbol-information"></a>Sembol bilgisini otomatik serileştir için  
+### <a name="to-automatically-serialize-symbol-information"></a>Sembol bilgilerini otomatik olarak seri hale getirmek için  
   
-1. Üzerinde **Araçları** menüsünü tıklatın **seçenekleri**.  
+1. **Tools** (Araçlar) menüsünde **Options**’a (Seçenekler) tıklayın.  
   
-     **Seçenekleri** iletişim kutusu görüntülenir.  
+     **Seçenekler** iletişim kutusu görüntülenir.  
   
-2. Tıklayın **performans araçları**.  
+2. **Performans araçları**' na tıklayın.  
   
-3. Altında **genel ayarı**seçin **sembol bilgisini otomatik serileştir**.  
+3. **Genel ayar**altında **otomatik olarak sembol bilgilerini seri hale getirme**' yi seçin.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)   
- [Nasıl yapılır: Başvuru Windows sembol bilgileri](../profiling/how-to-reference-windows-symbol-information.md)   
- [Nasıl yapılır: Analiz edilen raporu dosyaları Kaydet](https://msdn.microsoft.com/0340ddde-caf4-48ac-8af3-d15dcdade556)
+ [Nasıl yapılır: Windows sembol bilgilerine başvuru](../profiling/how-to-reference-windows-symbol-information.md)   
+ [Nasıl yapılır: çözümlenen rapor dosyalarını kaydetme](https://msdn.microsoft.com/0340ddde-caf4-48ac-8af3-d15dcdade556)

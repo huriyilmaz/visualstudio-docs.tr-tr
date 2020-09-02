@@ -19,21 +19,21 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 8d9c0f634ce95814ba746325e8efd67228653775
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63008735"
 ---
 # <a name="work-with-calendar-items"></a>Takvim öğeleriyle çalışma
-  <xref:Microsoft.Office.Interop.Outlook.AppointmentItem> Sınıfı ile takvim öğeleri görevleri gerçekleştirmek için kullandığınız özellikler ve yöntemler içerir.
+  <xref:Microsoft.Office.Interop.Outlook.AppointmentItem>Sınıfı, takvim öğeleriyle görevleri gerçekleştirmek için kullandığınız yöntemleri ve özellikleri içerir.
 
 |Görev|Yordam|
 |----------|---------------|
-|Randevu oluşturma ve alıcıları ekleyin.|[Nasıl yapılır: Randevuları program aracılığıyla oluşturma](../vsto/how-to-programmatically-create-appointments.md)|
-|Yinelenen bir randevu örneğini silin.|[Nasıl yapılır: Randevuları program aracılığıyla silme](../vsto/how-to-programmatically-delete-appointments.md)|
-|Bir takvim klasör oluşturun ve bir randevu öğesi ekleyin.|[Nasıl yapılır: Program aracılığıyla özel bir takvim oluşturma](../vsto/how-to-programmatically-create-a-custom-calendar.md)|
-|Toplantı isteği oluşturma ve gönderin.|[Nasıl yapılır: Program aracılığıyla toplantı isteği oluşturma](../vsto/how-to-programmatically-create-a-meeting-request.md)|
+|Bir randevu oluşturun ve alıcı ekleyin.|[Nasıl yapılır: program aracılığıyla randevu oluşturma](../vsto/how-to-programmatically-create-appointments.md)|
+|Yinelenen bir randevunun örneğini silin.|[Nasıl yapılır: program aracılığıyla randevuları silme](../vsto/how-to-programmatically-delete-appointments.md)|
+|Takvim klasörü oluşturun ve bir randevu öğesi ekleyin.|[Nasıl yapılır: program aracılığıyla özel bir takvim oluşturma](../vsto/how-to-programmatically-create-a-custom-calendar.md)|
+|Bir toplantı isteği oluşturun ve gönderin.|[Nasıl yapılır: program aracılığıyla toplantı isteği oluşturma](../vsto/how-to-programmatically-create-a-meeting-request.md)|
 
  Outlook görevleri ve Outlook nesne modeli hakkında daha fazla bilgi için bkz. [Outlook nesne modeline genel bakış](../vsto/outlook-object-model-overview.md).
 

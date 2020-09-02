@@ -15,33 +15,33 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 1b21f8c84082e19c1d9f43d6a2ae36d158a15c01
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "63008696"
 ---
 # <a name="work-with-documents"></a>Belgelerle çalışma
-  Bu bölümdeki konularda, Office projelerinde belgelerle çalışmak üzere Microsoft Office Word nesne modeli kullandığınız için adım adım yordamları ve kod örneklerini sağlar.
+  Bu bölümdeki konularda, Office projelerindeki belgelerle çalışmak üzere Microsoft Office Word nesne modelini kullanmaya yönelik adım adım yordamlar ve kod örnekleri sağlanmaktadır.
 
- Bazı durumlarda, VSTO eklentileri bu görevleri gerçekleştirmek yolu bunları belge düzeyi özelleştirmelerde gerçekleştirmek yolları farklıdır.
+ Bazı durumlarda, bu görevleri VSTO eklentilerinde gerçekleştirdiğiniz yollar, belge düzeyi özelleştirmelerde gerçekleştirdiğiniz yöntemlerle farklıdır.
 
 |Görev|Yordam|
 |----------|---------------|
-|Normal şablon veya farklı bir şablonu temel alan bir belge oluşturun.|[Nasıl yapılır: Program aracılığıyla yeni belgeler oluşturma](../vsto/how-to-programmatically-create-new-documents.md)|
-|Belirtilen bir belgeyi salt okunur veya okuma/yazma olarak açın.|[Nasıl yapılır: Varolan belgeleri program aracılığıyla açma](../vsto/how-to-programmatically-open-existing-documents.md)|
-|Etkin belge ya da belirtilen bir belge kapatın.|[Nasıl yapılır: Program aracılığıyla belgeleri kapatma](../vsto/how-to-programmatically-close-documents.md)|
-|Bir belgeyi, aynı ada veya yeni bir ad ile kaydedin.|[Nasıl yapılır: Program aracılığıyla belgeleri kaydetme](../vsto/how-to-programmatically-save-documents.md)|
-|Belgenin tamamını veya yalnızca geçerli sayfayı yazdır.|[Nasıl yapılır: Program aracılığıyla belgeleri yazdırma](../vsto/how-to-programmatically-print-documents.md)|
-|Belge yazdırma önizlemesini görüntüleyin.|[Nasıl yapılır: Baskı önizlemede program aracılığıyla belgeleri görüntüleme](../vsto/how-to-programmatically-display-documents-in-print-preview.md)|
-|Bir iletişim kutusu görüntüleme ve kullanıcı girişini toplamak.|[Nasıl yapılır: Word yerleşik iletişim kutularını program aracılığıyla kullanma](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)|
-|İşlevsellik görüntülemeden bir yerleşik iletişim kutusunu kullanın.|[Nasıl yapılır: Kullanım Word iletişim kutularını gizli modda program aracılığıyla](../vsto/how-to-programmatically-use-word-dialog-boxes-in-hidden-mode.md)|
-|Belgeye bir resim veya Word Art ekleme.|[Nasıl yapılır: Belgelere program aracılığıyla resim ve Word art ekleme](../vsto/how-to-programmatically-add-pictures-and-word-art-to-documents.md)|
-|Kullanıcılar, bir belge veya belgenin bir bölümünü düzenlemesini engelleyebilir.|[Nasıl yapılır: Program aracılığıyla belgeleri ve belge parçalarını koruma](../vsto/how-to-programmatically-protect-documents-and-parts-of-documents.md)|
-|Yazım denetimi yapar.|[Nasıl yapılır: Program aracılığıyla Yazımı denetleme](../vsto/how-to-programmatically-check-spelling-in-documents.md)|
-|Üstbilgisindeki veya altbilgisindeki bir belgeye ekleyin.|[Nasıl yapılır: Program aracılığıyla belgelere üstbilgiler ve altbilgiler ekleme](../vsto/how-to-programmatically-add-headers-and-footers-to-documents.md)|
-|Bir belgedeki tüm yorumları Kaldır.|[Nasıl yapılır: Belgelerden tüm açıklamaları program aracılığıyla kaldırma](../vsto/how-to-programmatically-remove-all-comments-from-documents.md)|
+|Normal şablonu veya farklı bir şablonu temel alan bir belge oluşturun.|[Nasıl yapılır: program aracılığıyla yeni belgeler oluşturma](../vsto/how-to-programmatically-create-new-documents.md)|
+|Belirtilen belgeyi salt oku/yaz veya salt okunurdur olarak aç.|[Nasıl yapılır: program aracılığıyla varolan belgeleri açma](../vsto/how-to-programmatically-open-existing-documents.md)|
+|Etkin belgeyi veya belirtilen belgeyi kapatın.|[Nasıl yapılır: program aracılığıyla belgeleri kapatma](../vsto/how-to-programmatically-close-documents.md)|
+|Aynı ada veya yeni bir ada sahip bir belge kaydedin.|[Nasıl yapılır: program aracılığıyla belgeleri kaydetme](../vsto/how-to-programmatically-save-documents.md)|
+|Tüm belgeyi veya yalnızca geçerli sayfayı yazdır.|[Nasıl yapılır: program aracılığıyla belgeleri yazdırma](../vsto/how-to-programmatically-print-documents.md)|
+|Belge için baskı önizlemeyi görüntüleyin.|[Nasıl yapılır: belgeleri baskı önizlemede program aracılığıyla görüntüleme](../vsto/how-to-programmatically-display-documents-in-print-preview.md)|
+|Yerleşik bir iletişim kutusu görüntüleyin ve Kullanıcı girişini toplayın.|[Nasıl yapılır: Word 'de program aracılığıyla yerleşik iletişim kutuları kullanma](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)|
+|Yerleşik iletişim kutusundaki işlevselliği görüntülemeden kullanın.|[Nasıl yapılır: gizli modda program aracılığıyla Word iletişim kutuları kullanma](../vsto/how-to-programmatically-use-word-dialog-boxes-in-hidden-mode.md)|
+|Belgeye resim veya WordArt ekleyin.|[Nasıl yapılır: belgelere program aracılığıyla resim ve Word art ekleme](../vsto/how-to-programmatically-add-pictures-and-word-art-to-documents.md)|
+|Kullanıcıların bir belgeyi veya belge parçasını düzenlemesini engelleyin.|[Nasıl yapılır: program aracılığıyla belgeleri ve belge parçalarını koruma](../vsto/how-to-programmatically-protect-documents-and-parts-of-documents.md)|
+|Yazım denetimi yapın.|[Nasıl yapılır: belgelerde program aracılığıyla yazımı denetleme](../vsto/how-to-programmatically-check-spelling-in-documents.md)|
+|Bir belgeye üst bilgi veya alt bilgi ekleyin.|[Nasıl yapılır: belgelere program aracılığıyla üstbilgiler ve altbilgiler ekleme](../vsto/how-to-programmatically-add-headers-and-footers-to-documents.md)|
+|Belgedeki tüm açıklamaları kaldırın.|[Nasıl yapılır: belgelerden tüm açıklamaları program aracılığıyla kaldırma](../vsto/how-to-programmatically-remove-all-comments-from-documents.md)|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [Word nesne modeline genel bakış](../vsto/word-object-model-overview.md)
-- [Office çözümleri geliştirmesine genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)

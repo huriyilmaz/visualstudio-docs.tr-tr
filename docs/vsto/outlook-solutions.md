@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 21e6478bb0f02383066a2c63dad1bdaf980a0b5b
-ms.sourcegitcommit: dcbb876a5dd598f2538e62e1eabd4dc98595b53a
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72985680"
 ---
 # <a name="outlook-solutions"></a>Outlook çözümleri
@@ -38,9 +38,9 @@ ms.locfileid: "72985680"
  VSTO eklenti projesi oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio 'Da Office projeleri oluşturma](../vsto/how-to-create-office-projects-in-visual-studio.md). Proje şablonları hakkında daha fazla bilgi için bkz. [Office proje şablonlarına genel bakış](../vsto/office-project-templates-overview.md).
 
 ## <a name="outlook-vsto-add-in-programming-model"></a>Outlook VSTO eklentisi programlama modeli
- Outlook VSTO eklentisi projesi oluşturduğunuzda, Visual Studio çözümünüzün temelini oluşturan `ThisAddIn`adlı bir sınıf oluşturur. Bu sınıf, kodunuzu yazmak için bir başlangıç noktası sağlar ve Outlook 'un nesne modelini VSTO eklentinize de sunar.
+ Outlook VSTO eklentisi projesi oluşturduğunuzda, Visual Studio çözümünüzün temeli olan adlı bir sınıf oluşturur `ThisAddIn` . Bu sınıf, kodunuzu yazmak için bir başlangıç noktası sağlar ve Outlook 'un nesne modelini VSTO eklentinize de sunar.
 
- `ThisAddIn` sınıfı ve VSTO eklentilerinde kullanabileceğiniz diğer özellikler hakkında daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
+ `ThisAddIn`VSTO eklentilerinde kullanabileceğiniz sınıf ve diğer özellikler hakkında daha fazla bilgi için bkz. [Program VSTO eklentileri](../vsto/programming-vsto-add-ins.md).
 
 ## <a name="automate-outlook-by-using-the-outlook-object-model"></a>Outlook nesne modelini kullanarak Outlook 'U otomatikleştirme
  Outlook nesne modeli, Outlook 'U otomatikleştirmek için kullanabileceğiniz birçok türü kullanıma sunar. Bu türler ortak görevleri gerçekleştirmek için kod yazmanıza olanak sağlar:
@@ -55,7 +55,7 @@ ms.locfileid: "72985680"
 
 ## <a name="customize-the-user-interface-of-an-outlook-application"></a>Outlook uygulamasının Kullanıcı arabirimini özelleştirme
 
-|Görev|Daha fazla bilgi için|
+|Görev|Daha fazla bilgi edinmek için|
 |----------|--------------------------|
 |Outlook denetçisinin Şeritine özel sekmeler ekleyin.|[Şerite genel bakış](../vsto/ribbon-overview.md)|
 |Outlook Inspector 'daki yerleşik bir sekmeye özel gruplar ekleyin.|[Nasıl yapılır: yerleşik bir sekmeyi özelleştirme](../vsto/how-to-customize-a-built-in-tab.md)|

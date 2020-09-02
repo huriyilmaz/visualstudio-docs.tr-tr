@@ -1,5 +1,5 @@
 ---
-title: SccDirDiff işlevi | Microsoft Docs
+title: SccDirDiff Işlevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 81279e0fdb0df6600686adc57bb1c5489e8e7aab
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432450"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64780823"
 ---
 # <a name="sccdirdiff-function"></a>SccDirDiff İşlevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu işlev, geçerli yerel dizin istemci diskte ve ilgili proje kaynak denetimi altında arasındaki farkları görüntüler.  
+Bu işlev, istemci diskinde geçerli yerel dizin ve kaynak denetimi altındaki karşılık gelen proje arasındaki farkları görüntüler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 SCCRTN SccDirDiff(  
@@ -38,49 +38,49 @@ SCCRTN SccDirDiff(
   
 #### <a name="parameters"></a>Parametreler  
  pContext  
- [in] Kaynak Denetimi Eklentisi bağlam yapısı.  
+ 'ndaki Kaynak denetimi eklentisi bağlam yapısı.  
   
- hWnd  
- [in] Kaynak Denetimi Eklentisi sağladığı herhangi bir iletişim kutusu için bir üst öğe olarak kullanabileceğiniz IDE penceresi için bir tanıtıcı.  
+ lendiği  
+ 'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.  
   
  lpDirName  
- [in] Bir görsel farkı göstermek yerel dizini tam yolu.  
+ 'ndaki Görsel bir farkı göstermek için yerel dizinin tam yolu.  
   
- CertOpenStore  
- [in] Komut bayrakları (bkz. Açıklamalar bölümü).  
+ dwFlags  
+ 'ndaki Komut bayrakları (bkz. açıklamalar bölümü).  
   
  pvOptions  
- [in] Kaynak denetimi fişi özel seçenekleri.  
+ 'ndaki Kaynak denetimi eklentisi özel seçenekleri.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:  
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|SCC_OK|Diskteki kaynak kod denetimi projede aynı dizindir.|  
-|SCC_I_FILESDIFFER|Kaynak kodu denetiminde projeden farklı diskte dizindir.|  
+|SCC_OK|Disk üzerindeki dizin, kaynak kodu denetimindeki projeyle aynıdır.|  
+|SCC_I_FILESDIFFER|Disk üzerindeki dizin, kaynak kodu denetimindeki projeden farklı.|  
 |SCC_I_RELOADFILE|Bir dosya veya projenin yeniden yüklenmesi gerekiyor.|  
-|SCC_E_FILENOTCONTROLLED|Dizin, kaynak kod denetimi altında değil.|  
-|SCC_E_NOTAUTHORIZED|Kullanıcı bu işlemi gerçekleştirmek için izin verilmiyor.|  
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemi, ağ veya çakışma sorunları nedeniyle muhtemelen erişilirken sorun oluştu. Bir yeniden deneme önerilir.|  
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Belirli olmayan hata oluştu.|  
+|SCC_E_FILENOTCONTROLLED|Dizin, kaynak kodu denetimi altında değil.|  
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmiyor.|  
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|  
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Özel olmayan hata.|  
 |SCC_E_FILENOTEXIST|Yerel dizin bulunamadı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu işlev, kaynak denetimi eklentisi kullanıcı için belirtilen dizine değişikliklerin bir listesini görüntülemek için istemek için kullanılır. Eklenti, kullanıcının dizini disk üzerinde sürüm denetimi altında karşılık gelen proje arasındaki farkları görüntülemek için seçtiğiniz bir biçimde kendi penceresi açılır.  
+ Bu işlev, kaynak denetimi eklentisinin kullanıcıya belirtilen bir dizin üzerinde yapılan değişikliklerin bir listesini görüntülemesini istemek için kullanılır. Eklenti, kullanıcının disk üzerindeki dizini ile sürüm denetimi altında karşılık gelen proje arasındaki farkları göstermek için kendi penceresini kendi tercih ettiği biçimde açar.  
   
- Dizinleri hiç eklenti destekler karşılaştırması, "hızlı fark" seçenekleri desteklenmiyor olsa bile, karşılaştırma dizinlerin bir dosya adı temelinde desteklemesi gerekir.  
+ Bir eklenti dizinlerin karşılaştırılmasını destekliyorsa, "hızlı fark" seçenekleri desteklenmediği halde bir dosya adı temelinde dizinlerin karşılaştırılmasını desteklememelidir.  
   
-|`dwFlags`|Yorumu|  
+|`dwFlags`|Yorumlama|  
 |---------------|--------------------|  
-|SCC_DIFF_IGNORECASE|Büyük küçük harf duyarsız karşılaştırma (hızlı fark veya görsel için kullanılabilir).|  
-|SCC_DIFF_IGNORESPACE|(Hızlı fark veya görsel için kullanılabilir) boşluk yok sayar.|  
-|SCC_DIFF_QD_CONTENTS|Kaynak Denetimi Eklentisi tarafından destekleniyorsa, sessizce bayt dizin karşılaştırır.|  
-|SCC_DIFF_QD_CHECKSUM|Eklenti tarafından desteklenen, sessiz bir sağlama toplamı aracılığıyla bir dizine karşılaştırır veya SCC_DIFF_QD_CONTENTS için desteklenmiyor, geri döner.|  
-|SCC_DIFF_QD_TIME|Eklenti tarafından desteklenen, sessiz bir şekilde karşılaştırır, zaman damgası aracılığıyla bir dizine veya SCC_DIFF_QD_CHECKSUM veya SCC_DIFF_QD_CONTENTS desteklenmiyor, geri döner.|  
+|SCC_DIFF_IGNORECASE|Büyük/küçük harfe duyarsız karşılaştırma (hızlı fark veya görsel için kullanılabilir).|  
+|SCC_DIFF_IGNORESPACE|Boşluğu yoksayar (hızlı fark veya görsel için kullanılabilir).|  
+|SCC_DIFF_QD_CONTENTS|Kaynak denetimi eklentisi tarafından destekleniyorsa, dizini, bayt bayt olarak sessizce karşılaştırır.|  
+|SCC_DIFF_QD_CHECKSUM|Eklenti tarafından destekleniyorsa, dizini bir sağlama toplamı aracılığıyla sessizce karşılaştırır veya desteklenmiyorsa SCC_DIFF_QD_CONTENTS geri döner.|  
+|SCC_DIFF_QD_TIME|Eklenti tarafından destekleniyorsa, dizini zaman damgası aracılığıyla sessizce karşılaştırır veya desteklenmiyorsa SCC_DIFF_QD_CHECKSUM veya SCC_DIFF_QD_CONTENTS geri döner.|  
   
 > [!NOTE]
-> Bu işlev, aynı komut bayrakları olarak kullanır [SccDiff](../extensibility/sccdiff-function.md). Ancak, bir kaynak denetimi eklentisi "hızlı fark" işlemi için dizinleri desteklemeyen tercih edebilirsiniz.  
+> Bu işlev, [SccDiff](../extensibility/sccdiff-function.md)ile aynı komut bayraklarını kullanır. Ancak, bir kaynak denetimi eklentisi dizinler için "hızlı fark" işlemini desteklememe seçeneğini seçebilirler.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kaynak Denetimi Eklentisi API İşlevleri](../extensibility/source-control-plug-in-api-functions.md)

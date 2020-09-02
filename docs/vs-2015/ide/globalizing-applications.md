@@ -14,10 +14,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: af49535233a809006f6109449ae524611b1adc45
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72645605"
 ---
 # <a name="globalizing-applications"></a>Uygulamaları Genelleştirme
@@ -33,6 +33,6 @@ Genelleştirme, birden çok kültür için işlev gören bir yazılım ürünü 
 
  [Genelleştirme ve yerelleştirme](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d) Web Forms sayfalarının Genelleştirme hakkındaki yardım sayfalarına bağlantılar sağlar.
 
- [.NET Framework göre uluslararası uygulamalara giriş](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) Visual Basic veya görsel C#kullanarak uluslararası bir pazar için yazılım geliştirme hakkında temel kavramları açıklar.
+ [.NET Framework göre uluslararası uygulamalara giriş](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) Visual Basic veya Visual C# kullanarak uluslararası bir pazar için yazılım geliştirme hakkında temel kavramları açıklar.
 
  [Dünya çapında kullanmaya yönelik uygulamalar geliştirmek Için En Iyi uygulamalar](https://msdn.microsoft.com/library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c) Tasarım sorunları ve terminolojisi gibi uluslararası bir hedef kitle için programlama hakkında bilgi sağlar.

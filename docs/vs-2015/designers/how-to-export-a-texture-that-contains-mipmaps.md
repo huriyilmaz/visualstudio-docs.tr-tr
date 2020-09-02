@@ -10,16 +10,16 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 55418f40f57e2279100fbb1c9ba4d12fae83a19c
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664438"
 ---
 # <a name="how-to-export-a-texture-that-contains-mipmaps"></a>Nasıl yapılır: Mipmap'leri İçeren Dokuyu Dışa Aktarma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Görüntü Içeriği ardışık düzeni, projenizin derleme aşamasının bir parçası olarak bir kaynak görüntüden MIN ile haritalar oluşturabilir. Her MıP düzeyinin görüntü içeriğini el ile belirtmeniz gerekmiyorsa — derleme zamanında MIMS haritaları oluşturmak mipmap içeriğinin hiçbir zaman eşitleme olmamasını ve MIMS haritaları oluşturma performans maliyetini ortadan kaldırmamasını sağlar çalışma zamanında.
+Görüntü Içeriği ardışık düzeni, projenizin derleme aşamasının bir parçası olarak bir kaynak görüntüden MIN ile haritalar oluşturabilir. Her MıP düzeyinin görüntü içeriğini el ile belirtmeniz gerekmiyorsa — derleme zamanında MIMS haritaları oluşturmak mipmap içeriğinin hiçbir zaman eşitleme olmamasını sağlar ve çalışma zamanında MIMS haritaları oluşturma performans maliyetini ortadan kaldırır.
 
  Bu belge Şu etkinlikleri gösterir:
 

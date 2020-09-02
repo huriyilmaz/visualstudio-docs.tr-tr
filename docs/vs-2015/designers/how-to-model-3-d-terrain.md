@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: ab202ed97ce2056313eb661d51d7150bb9689829
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72664421"
 ---
 # <a name="how-to-model-3-d-terrain"></a>Nasıl Yapılır: Model 3B Arazi
@@ -38,7 +38,7 @@ Bu belgede 3B teryağmm modeli oluşturmak için Model Düzenleyicisi 'nin nası
 
  İşiniz bittiğinde, modelin şöyle görünmesi gerekir:
 
- ![bir&#45;teryağmm modeli gösteren 3 D sahne](../designers/media/digit-terrain-model.png "Basamak Teryağmur-model")
+ ![bir teryağmm modeli gösteren 3&#45;D sahneyi](../designers/media/digit-terrain-model.png "Basamak Teryağmur-model")
 
  Başlamadan önce, **Özellikler** penceresi ve **araç kutusunun** görüntülendiğinden emin olun.
 
@@ -66,7 +66,7 @@ Bu belgede 3B teryağmm modeli oluşturmak için Model Düzenleyicisi 'nin nası
 
    Teryağma modeli tamamlanmıştır. İşte Phong gölgeleme uygulanmış son model:
 
-   ![bir&#45;teryağmm modeli gösteren 3 D sahne](../designers/media/digit-terrain-model.png "Basamak Teryağmur-model")
+   ![bir teryağmm modeli gösteren 3&#45;D sahneyi](../designers/media/digit-terrain-model.png "Basamak Teryağmur-model")
 
    [Nasıl yapılır: geometri tabanlı Gradyan Gölgelendirici Oluşturma](../designers/how-to-create-a-geometry-based-gradient-shader.md)bölümünde açıklanan gradyan gölgelendiricisi efektini göstermek için bu teryağmur modelini kullanabilirsiniz.
 

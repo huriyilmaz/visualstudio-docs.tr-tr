@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - data-storage
 ms.openlocfilehash: 3d812316de46caf7480146003f7ba1950ae3b9e2
-ms.sourcegitcommit: 1d4f6cc80ea343a667d16beec03220cfe1f43b8e
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85283040"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio'da verilere denetimler bağlama
@@ -32,7 +32,7 @@ Veri bağlama bağlamında, veri kaynağı, Kullanıcı arabiriminize bağlanabi
 
 | Veri kaynağı | **Windows Form Tasarımcısı için** sürükle ve bırak desteği | **WPF Tasarımcısında** sürükle ve bırak desteği | **Silverlight tasarımcısında** sürükle ve bırak desteği |
 | - | - | - | - |
-| Veri kümesi | Yes | Evet | Hayır |
+| Veri kümesi | Yes | Yes | Hayır |
 | Varlık Veri Modeli | Evet<sup>1</sup> | Yes | Yes |
 | LINQ to SQL sınıfları | <sup>2</sup> yok | <sup>2</sup> yok | <sup>2</sup> yok |
 | Hizmetler ( [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] WCF Hizmetleri ve Web Hizmetleri dahil) | Yes | Yes | Yes |

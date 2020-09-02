@@ -1,5 +1,5 @@
 ---
-title: Visual Studio'da karşılaştırılan VBA ve Office çözümleri
+title: Visual Studio 'da VBA ve Office çözümleri karşılaştırması
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,42 +14,42 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 24e7d3674712a17d940b94637db808c0d91d2d6a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "62982128"
 ---
-# <a name="vba-and-office-solutions-in-visual-studio-compared"></a>Visual Studio'da karşılaştırılan VBA ve Office çözümleri
-  Microsoft Visual Basic for Applications (VBA), Office uygulamaları ile tümleşiktir, yönetilmeyen kod kullanır. Visual Studio kullanılarak oluşturulan Microsoft Office projeleri .NET Framework ve Visual Studio Tasarım araçları avantajlarından yararlanmanıza olanak tanır.
+# <a name="vba-and-office-solutions-in-visual-studio-compared"></a>Visual Studio 'da VBA ve Office çözümleri karşılaştırması
+  Microsoft Visual Basic for Applications (VBA), Office uygulamalarıyla sıkı bir şekilde tümleştirilmiş yönetilmeyen kod kullanır. Visual Studio kullanılarak oluşturulan Microsoft Office projeleri, .NET Framework ve Visual Studio tasarım araçlarından yararlanmanızı sağlar.
 
- Visual Studio kullanarak oluşturabileceğiniz Office çözümleri türleri hakkında daha fazla bilgi için bkz [Office çözümleri geliştirmesine genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
+ Visual Studio kullanarak oluşturabileceğiniz Office çözümlerinin türleri hakkında daha fazla bilgi için bkz. [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
 
 ## <a name="comparison"></a>Karşılaştırma
- Aşağıdaki tabloda Office çözümlerini Visual Studio'da VBA çözümleri arasındaki temel bir karşılaştırma sağlar.
+ Aşağıdaki tabloda, Visual Studio 'da VBA çözümleri ve Office çözümleri arasında temel bir karşılaştırma sunulmaktadır.
 
-|VBA çözümleri|Visual Studio'da Office çözümleri|
+|VBA çözümleri|Visual Studio 'da Office çözümleri|
 |-------------------|---------------------------------------|
-|Belirli bir belge ile bağlı ve kalıcı kodu kullanır.|Belgedeki (için belge düzeyinde özelleştirmeler), ayrı olarak depolanan kod veya derlemedeki (VSTO eklentileri için) uygulama tarafından yüklenir.|
-|Office nesne modelleri ve VBA API'ler ile çalışır.|Hem de Office nesne modelleri için erişim sağlar ve [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] API'leri.|
-|Makro kaydı ve Basitleştirilmiş bir geliştirici deneyimi için tasarlanmıştır.|Güvenlik, daha kolay bir şekilde kod bakımı ve tam Visual Studio tümleşik geliştirme ortamı (IDE) kullanma olanağı için tasarlanmıştır.|
-|İyi Office uygulamalarıyla sıkı bir tümleştirme yararlı çözümleri için çalışır.|İyi Visual Studio'nun tam kaynaklardan yararlanan çözümler için çalışır ve [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)].|
-|Kuruluşlar için güvenlik ve dağıtım alanlarda özellikle sınırlamalar uygulanır.|Kurumsal kullanım için tasarlanmıştır.|
+|Belirli bir belgeye bağlı ve kalıcı olan kodu kullanır.|Belgeden (belge düzeyi özelleştirmeleri için) veya uygulama tarafından yüklenen bir derlemede (VSTO eklentileri için) ayrı olarak depolanan kodu kullanır.|
+|Office nesne modelleri ve VBA API 'Leri ile birlikte kullanılır.|Hem Office nesne modellerine hem de API 'lere erişim sağlar [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] .|
+|Makro kaydı ve Basitleştirilmiş geliştirici deneyimi için tasarlanmıştır.|Güvenlik, daha kolay kod bakımı ve tam Visual Studio tümleşik geliştirme ortamı (IDE) kullanma özelliği için tasarlanmıştır.|
+|Office uygulamalarıyla sıkı bir şekilde tümleştirmeden faydalanabilir çözümler için iyi sonuç verir.|, Visual Studio 'nun ve ' nin tam kaynaklarından faydalanabilir çözümler için iyi sonuç verir [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] .|
+|, Özellikle güvenlik ve dağıtım alanlarında bulunan, kuruluş için sınırlamalar içerir.|Kuruluşta kullanım için tasarlandı.|
 
- Bazı şeyler VBA kullanarak hızlı bir şekilde yapmak yine de kolaydır. Özellikle, VBA kullanmaya devam etmek isteyebilirsiniz:
+ Daha hızlı bir şekilde VBA kullanarak daha kolay hale getiriyoruz. Özellikle, için VBA 'Yı kullanmaya devam etmek isteyebilirsiniz:
 
-- Özel çalışma işlevleri.
+- Özel çalışma sayfası işlevleri.
 
-- Makro kaydetme.
+- Makro kaydı.
 
-## <a name="combine-vba-solutions-and-office-solutions-created-by-using-visual-studio"></a>VBA çözümlerini ve Visual Studio kullanılarak oluşturulan Office çözümlerini birleştirin
- Visual Studio kullanılarak oluşturulan Office Çözümlerinden VBA kodu çağırabilir ve VBA'dan Visual Studio kullanılarak oluşturulan Office çözümlerinde kod çağırabilir. Belirli teknik Office çözümünüzü VSTO eklentisi veya belge düzeyi özelleştirmesi olup bağlı olarak farklılık gösterir. Daha fazla bilgi için [çağrı kod VSTO eklentileri diğer Office Çözümlerinden](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md) ve [birleştirmek VBA ve belge düzeyi özelleştirmeleri](../vsto/combining-vba-and-document-level-customizations.md).
+## <a name="combine-vba-solutions-and-office-solutions-created-by-using-visual-studio"></a>Visual Studio kullanılarak oluşturulan VBA çözümlerini ve Office çözümlerini birleştirme
+ Visual Studio kullanarak oluşturulan Office Çözümlerinden VBA kodunu çağırabilirsiniz ve ayrıca VBA 'dan Visual Studio kullanarak oluşturulan Office çözümlerinde kod çağırabilirsiniz. Belirli bir teknik, Office çözümünüzün VSTO eklentisi veya belge düzeyi özelleştirmesi olmasına bağlı olarak farklılık gösterir. Daha fazla bilgi için bkz. [VSTO eklentilerindeki kodu diğer Office Çözümlerinden çağırma](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md) ve [VBA ve belge düzeyi özelleştirmelerini birleştirme](../vsto/combining-vba-and-document-level-customizations.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Office çözümleri geliştirmesine genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
-- [VSTO eklentilerinde diğer Office Çözümlerinden kod arama](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
+- [Office çözümleri geliştirmeye genel bakış &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)
+- [Diğer Office çözümlerindeki VSTO eklentilerindeki kodu çağırma](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)
 - [VBA ve belge düzeyi özelleştirmelerini birleştirme](../vsto/combining-vba-and-document-level-customizations.md)
-- [Belge düzeyi özelleştirmeler mimarisi](../vsto/architecture-of-document-level-customizations.md)
+- [Belge düzeyi özelleştirmelerinin mimarisi](../vsto/architecture-of-document-level-customizations.md)
 - [VSTO Eklentileri Mimarisi](../vsto/architecture-of-vsto-add-ins.md)
-- [Office çözümleri güvenliğini sağlama](../vsto/securing-office-solutions.md)
-- [Başlama &#40;Visual Studio'da Office geliştirme&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Güvenli Office çözümleri](../vsto/securing-office-solutions.md)
+- [Visual Studio 'da Office geliştirme &#40;kullanmaya başlama&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
