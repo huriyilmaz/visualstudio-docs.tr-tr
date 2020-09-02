@@ -34,10 +34,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 705b1a5992d1a3e7931c316c713d46e7e8c7f72e
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657778"
 ---
 # <a name="documents-environment-options-dialog-box"></a>Belgeler, Ortam, Seçenekler İletişim Kutusu
@@ -69,7 +69,7 @@ Tümleşik geliştirme ortamındaki (IDE) belgelerin görüntülenmesini denetle
 > [!NOTE]
 > Etkin Web uygulamasına dahil edilen Web belgelerinin **Dosya** menüsünde **Tarayıcıda görüntüle** komutunu etkinleştirmek için bu seçeneği belirleyin.
 
- **çeşitli dosyalar projesinde kaydedilen** **\<** *n* > öğeleri, **Çözüm Gezgini** **MiscellaneousFiles** klasöründe kalıcı hale getiriedilecek dosya sayısını belirtir. Bu dosyalar, bir düzenleyicide artık açık olmasalar bile listelenir. 0 ile 256 arasında bir tamsayı belirtebilirsiniz. Varsayılan sayı 0 ' dır.
+ ** \<** *n* **> çeşitli dosyalar projesinde kaydedilen öğeler** , **Çözüm Gezgini** **MiscellaneousFiles** klasöründe kalıcı hale getirmek için dosya sayısını belirtir. Bu dosyalar, bir düzenleyicide artık açık olmasalar bile listelenir. 0 ile 256 arasında bir tamsayı belirtebilirsiniz. Varsayılan sayı 0 ' dır.
 
  Örneğin, bu seçeneği 5 olarak ayarlarsanız ve 10 çeşitli dosyanın açık olması halinde, tüm 10 dosyalarını kapattığınızda, ilk 5, **diğer dosyalar** klasöründe gösterilmeye devam eder.
 

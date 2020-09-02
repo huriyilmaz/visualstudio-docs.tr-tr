@@ -1,5 +1,5 @@
 ---
-title: Android ve iOS üzerinde OpenGL ES uygulaması derleme | Microsoft Docs
+title: Android ve iOS üzerinde OpenGL ES uygulaması oluşturma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: tgt-pltfrm-cross-plat
@@ -12,142 +12,142 @@ author: corob-msft
 ms.author: corob
 manager: jillfra
 ms.openlocfilehash: b9f5db4ccd70136b711f5bd221244418cf843485
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68151191"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Android ve iOS Üzerinde OpenGL ES Uygulaması Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual C++ platformlar arası mobil geliştirme seçeneği için yükleme sırasında Visual Studio çözümleri ve iOS uygulamaları ve ortak kod paylaşma Android uygulamaları için projeler oluşturabilirsiniz. Bu konuda, bir basit bir iOS uygulamasının hem Android yerel etkinlik uygulaması oluşturan bir çözüm şablonu aracılığıyla size yol gösterir. C++ kodu, uygulamalar her platformda aynı animasyonlu döndürme küpünü görüntülemek için OpenGL ES kullanan ortak sahiptir. OpenGL ES (Embedded Systems veya GLES için OpenGL) bir 2D ve 3D grafikler mobil cihazlarda desteklenen API ' dir.  
+Çoklu Platform Mobil Uygulama Geliştirme için Visual C++ seçeneğini yüklediğinizde, ortak kod paylaşan iOS uygulamaları ve Android uygulamaları için Visual Studio çözümleri ve projeleri oluşturabilirsiniz. Bu konu, hem basit bir iOS uygulaması hem de Android yerel etkinlik uygulaması oluşturan bir çözüm şablonunda size rehberlik eder. Uygulamalar, her platformda aynı animasyonlu döndürme küpünü göstermek için OpenGL ES kullanan ortak C++ koduna sahiptir. OpenGL ES (katıştırılmış sistemler veya GLES için OpenGL), birçok mobil cihazda desteklenen 2B ve 3B bir grafik API 'sidir.  
   
- [Gereksinimleri](#req)   
- [Yeni bir OpenGLES uygulaması projesi oluşturma](#Create)   
- [Android uygulaması derleyebilir ve çalıştırabilirsiniz](#BuildAndroid)   
- [İOS uygulaması derleyebilir ve çalıştırabilirsiniz](#BuildIOS)   
- [Uygulamalarınızı özelleştirin](#Customize)  
+ [Gereklilik](#req)   
+ [Yeni bir OpenGLES uygulama projesi oluşturma](#Create)   
+ [Android uygulamasını derleme ve çalıştırma](#BuildAndroid)   
+ [İOS uygulamasını derleme ve çalıştırma](#BuildIOS)   
+ [Uygulamalarınızı özelleştirme](#Customize)  
   
-## <a name="req"></a> Gereksinimleri  
- İOS ve Android için OpenGL ES uygulama oluşturabilmeniz için önce tüm sistem gereksinimlerini karşılamanızın emin olmanız gerekir. Visual Studio 2015'te Visual C++ platformlar arası mobil geliştirme seçeneği için yüklemeniz gerekir. Gerekli üçüncü taraf araçları ve SDK'lar yüklemesine dahil ve Android için Visual Studio öykünücü yüklendiğinden emin olun. Daha fazla bilgi ve ayrıntılı yönergeler için bkz. [platformlar arası Mobil Geliştirme için Visual C++ yükleme](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md). Yapı ve test iOS uygulaması için bir Mac ihtiyaç duyarsınız bilgisayar, yükleme yönergelerine göre ayarlayın. İOS geliştirme için ayarlama hakkında daha fazla bilgi için bkz: [yükleme ve yapılandırma araçları kullanarak iOS derleme](../cross-platform/install-and-configure-tools-to-build-using-ios.md)  
+## <a name="requirements"></a><a name="req"></a> Gereklilik  
+ İOS ve Android için bir OpenGL ES uygulaması oluşturabilmeniz için önce tüm sistem gereksinimlerini karşıladığınızdan emin olmanız gerekir. Çoklu Platform Mobil Uygulama Geliştirme için Visual C++ seçeneğini Visual Studio 2015 ' de yüklemelisiniz. Yüklemede gerekli olan üçüncü taraf araçların ve SDK 'ların eklendiğinden ve Android için Visual Studio öykünücüsü ' nin yüklü olduğundan emin olun. Daha fazla bilgi ve ayrıntılı yönergeler için bkz. [ınstall çoklu platform mobil uygulama geliştirme için Visual C++](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md). İOS uygulamasını derlemek ve test etmek için, yükleme yönergelerine göre ayarlanmış bir Mac bilgisayar olması gerekir. İOS geliştirme için ayarlama hakkında daha fazla bilgi için bkz. [iOS kullanarak derlemek Için araçları kurma ve yapılandırma](../cross-platform/install-and-configure-tools-to-build-using-ios.md)  
   
-## <a name="Create"></a> Yeni bir OpenGLES uygulaması projesi oluşturma  
- Bu öğreticide, ardından oluşturabilir ve varsayılan uygulamasını Android için Visual Studio öykünücüsü'nün içinde çalıştırmak önce yeni bir OpenGL ES uygulaması projesi oluşturun. Ardından iOS için uygulama oluşturun ve uygulamayı iOS Simulator'da çalıştırmak.  
+## <a name="create-a-new-opengles-application-project"></a><a name="Create"></a> Yeni bir OpenGLES uygulama projesi oluşturma  
+ Bu öğreticide, önce yeni bir OpenGL ES uygulaması projesi oluşturun ve ardından Android için Visual Studio öykünücüsü içinde varsayılan uygulamayı derleyin ve çalıştırın. Ardından, iOS için uygulamayı derleyin ve uygulamayı iOS simülatöründe çalıştırın.  
   
 #### <a name="to-create-a-new-project"></a>Yeni bir proje oluşturmak için  
   
-1. Visual Studio'yu açın. Menü çubuğunda, **dosya**, **yeni**, **proje**.  
+1. Visual Studio'yu açın. Menü çubuğunda **Dosya**, **Yeni**, **Proje**' yi seçin.  
   
-2. İçinde **yeni proje** iletişim kutusunun **şablonları**, seçin **Visual C++** , **Çoklu Platform**ve ardından  **OpenGLES uygulaması (Android, iOS)** şablonu.  
+2. **Yeni proje** iletişim kutusunda, **Şablonlar**altında **Visual C++**, **platformlar arası**' ı seçin ve **OpenGLES uygulaması (Android, iOS)** şablonunu seçin.  
   
-3. Uygulama gibi bir ad verin `MyOpenGLESApp`ve ardından **Tamam**.  
+3. Uygulamaya benzer bir ad verin `MyOpenGLESApp` ve ardından **Tamam**' ı seçin.  
   
-    ![Yeni bir OpenGLES uygulaması projesi](../cross-platform/media/cppmdd-opengles-newproj.PNG "CPPMDD_OpenGLES_NewProj")  
+    ![Yeni OpenGLES uygulama projesi](../cross-platform/media/cppmdd-opengles-newproj.PNG "CPPMDD_OpenGLES_NewProj")  
   
-    Visual Studio, yeni bir çözüm oluşturur ve Çözüm Gezgini açılır.  
+    Visual Studio yeni çözümü oluşturur ve Çözüm Gezgini açar.  
   
-    ![Çözüm Gezgini'nde MyOpenGLESApp](../cross-platform/media/cppmdd-opengles-solexpl.PNG "CPPMDD_OpenGLES_SolExpl")  
+    ![Çözüm Gezgini Myopengtasapp](../cross-platform/media/cppmdd-opengles-solexpl.PNG "CPPMDD_OpenGLES_SolExpl")  
   
-   Yeni bir OpenGL ES uygulaması çözümü, üç kitaplık projeleri ve iki uygulama projeleri içerir. Kitaplık klasörüne bir paylaşılan kod projesi ve Paylaşılan koda başvuran iki platforma özgü projeler içerir:  
+   Yeni OpenGL ES uygulama çözümü, üç kitaplık projesi ve iki uygulama projesi içerir. Kitaplıklar klasörü, Paylaşılan koda başvuran, paylaşılan bir kod projesi ve platforma özel iki proje içerir:  
   
-- **MyOpenGLESApp.Android.NativeActivity** uygulamanızı android'de yerel bir etkinlik olarak uygulayan basitleştirin ve başvurular içerir. Giriş noktalarının tutkal kodun uygulama içinde MyOpenGLESApp.Shared ortak paylaşılan kodu içeren Main.cpp öğesi alanlarındadır. Önceden derlenmiş üst bilgiler pch.h içinde var. Bu yerel etkinlik uygulaması projesi MyOpenGLESApp.Android.Packaging proje tarafından devralındığında bir paylaşılan kitaplık (.so) dosyasına derlenir.  
+- **Myopengtasapp. Android. NativeActivity** , uygulamanızı Android 'de yerel bir etkinlik olarak uygulayan başvuruları ve birleştirici kodu içerir. Birleştirme kodundan gelen giriş noktalarının uygulanması, Myopengtasapp. Shared dosyasındaki ortak paylaşılan kodu içeren Main. cpp ' dir. Önceden derlenmiş üstbilgiler pch. h içinde. Bu yerel etkinlik uygulaması projesi, Myopenginsapp. Android. paketleme projesi tarafından seçilen paylaşılan bir kitaplık (. so) dosyasında derlenir.  
   
-- **MyOpenGLESApp.iOS.StaticLibrary** MyOpenGLESApp.Shared paylaşılan kodu içeren bir iOS statik kitaplık (.a) dosyası oluşturur. MyOpenGLESApp.iOS.Application proje tarafından oluşturulan uygulamaya bağlıdır.  
+- **Myopengtasapp. iOS. StaticLibrary** , Myopenglisapp. Shared dosyasındaki paylaşılan kodu Içeren bir iOS statik kitaplık (. a) dosyası oluşturur. Bu, Myopengtasapp. iOS. Application projesi tarafından oluşturulan uygulamayla bağlantılıdır.  
   
-- **MyOpenGLESApp.Shared** platformlar arasında çalışır paylaşılan kodu içerir. Önişlemci makroları platforma özgü kod koşullu derleme için kullanır. Paylaşılan kod proje başvurusu MyOpenGLESApp.Android.NativeActivity hem de MyOpenGLESApp.iOS.StaticLibrary tarafından seçilir.  
+- **Myopengtasapp. Shared** , platformlar arasında çalışacak paylaşılan kodu içerir. Platforma özgü kodun koşullu derlenmesi için Önişlemci makrolarını kullanır. Paylaşılan kod hem Myopengkasapp. Android. NativeActivity hem de Myopenglisapp. iOS. StaticLibrary içinde proje başvurusu tarafından alınır.  
   
-  Çözüm, Android ve iOS platformlara yönelik uygulamalar oluşturmak için iki proje vardır:  
+  Çözüm, Android ve iOS platformları için uygulamalar oluşturmak üzere iki projeye sahiptir:  
   
-- **MyOpenGLESApp.Android.Packaging** .apk dosyası dağıtım için bir Android cihaz veya öykünücü üzerinde oluşturur. Bu, kaynakları ve bildirim özelliklerini ayarladığınız yerdir AndroidManifest.xml dosyası içerir. Ayrıca, Ant yapı işlemini denetleyen build.xml dosyası içerir. Dağıtılan ve doğrudan Visual Studio'dan çalıştırma varsayılan olarak, başlangıç projesi olarak ayarlanır.  
+- **Myopenglesapp. Android. paketleme** , bir Android cihazında veya öykünücüsünde dağıtım için. apk dosyası oluşturur. Bu, bildirim özelliklerini ayarladığınız kaynakları ve AndroidManifest.xml dosyasını içerir. Ayrıca, ant yapı sürecini denetleyen build.xml dosyasını da içerir. Varsayılan olarak, doğrudan Visual Studio 'dan dağıtılabilmesi ve çalıştırmak için başlangıç projesi olarak ayarlanır.  
   
-- **MyOpenGLESApp.iOS.Application** kaynakları ve bir iOS uygulaması içinde MyOpenGLESApp.iOS.StaticLibrary bağlanan C++ statik kitaplık kodu oluşturmak için Objective-C Birleştirici kodlar içerir. Bu proje, Mac için Visual Studio ve uzak aracı tarafından aktarılan bir derleme paketi oluşturur. Bu proje oluşturduğunuzda, Visual Studio Mac uygulamanızı oluşturup komutları ve dosya gönderir.  
+- **Myopengtasapp. iOS. Application** , Myopengpersapp. IOS. StaticLibrary içindeki C++ statik kitaplık koduna bağlanan bir iOS uygulaması oluşturmak için kaynaklar ve hedef-C birleştirici kodunu içerir. Bu proje, Visual Studio ve uzak aracı tarafından Mac 'e aktarılan bir yapı paketi oluşturur. Bu projeyi yapılandırdığınızda, Visual Studio uygulamanızı derlemek ve Mac 'te dağıtmak için dosyaları ve komutları gönderir.  
   
-## <a name="BuildAndroid"></a> Android uygulaması derleyebilir ve çalıştırabilirsiniz  
- Şablon tarafından oluşturulan çözüm Android uygulamasını varsayılan proje olarak ayarlar.  Derleme ve yükleme ve Kurulum doğrulamak için bu uygulamayı çalıştırın. İlk test için Android için Visual Studio öykünücüsü'nün yüklü cihaz profilleri bir uygulamayı çalıştırın. Başka bir hedef uygulamanızı test etmek isterseniz, hedef öykünücü yükleyin veya cihazı bilgisayarınıza bağlayın.  
+## <a name="build-and-run-the-android-app"></a><a name="BuildAndroid"></a> Android uygulamasını derleme ve çalıştırma  
+ Şablon tarafından oluşturulan çözüm, Android uygulamasını varsayılan proje olarak ayarlar.  Yükleme ve kurulumunuzu doğrulamak için bu uygulamayı derleyip çalıştırabilirsiniz. İlk test için, uygulamayı Android için Visual Studio öykünücüsü tarafından yüklenen cihaz profillerinden birinde çalıştırın. Uygulamanızı başka bir hedefte test etmek isterseniz, hedef öykünücüsünü yükleyebilir veya cihazı bilgisayarınıza bağlayabilirsiniz.  
   
-#### <a name="to-build-and-run-the-android-native-activity-app"></a>Derleme ve Android yerel etkinlik uygulaması çalıştırmak için  
+#### <a name="to-build-and-run-the-android-native-activity-app"></a>Android yerel etkinlik uygulamasını derlemek ve çalıştırmak için  
   
-1. Zaten seçili değilse, seçin **x86** gelen **çözüm platformları** aşağı açılan listesi.  
+1. Henüz seçili değilse, **çözüm platformları** açılan listesinden **x86** ' yı seçin.  
   
-    ![Çözüm Platformu ayarlamak için x86](../cross-platform/media/cppmdd-opengles-solutionplat.png "CPPMDD_OpenGLES_SolutionPlat")  
+    ![Çözüm platformunu x86 olarak ayarlama](../cross-platform/media/cppmdd-opengles-solutionplat.png "CPPMDD_OpenGLES_SolutionPlat")  
   
-    X86 için Android öykünücüsü Windows hedeflemek için kullanın. Bir cihaz hedefliyorsanız, cihaz işlemciye göre çözüm platformunu seçin. Varsa **çözüm platformları** seçin, listeyi görüntülenmiyorsa **çözüm platformları** gelen **Ekle/Kaldır düğmeleri** listeleyin ve ardından platformunuzu seçin.  
+    Windows için Android Emulator hedeflemek için x86 kullanın. Bir cihazı hedefliyorsanız, cihaz işlemcisini temel alan çözüm platformunu seçin. **Çözüm platformları** listesi görüntülenmiyorsa, **Düğme Ekle/Kaldır** listesinden **çözüm platformları** ' nı seçin ve ardından platformunuzu seçin.  
   
-2. İçinde **Çözüm Gezgini**, MyOpenGLESApp.Android.Packaging projesi için kısayol menüsünü açın ve ardından **yapı**.  
+2. **Çözüm Gezgini**' de, Myopengtasapp. Android. paketleme projesi için kısayol menüsünü açın ve ardından **Oluştur**' u seçin.  
   
-    ![Android paketleme projesi derleme](../cross-platform/media/cppmdd-opengles-andbuild.png "CPPMDD_OpenGLES_AndBuild")  
+    ![Android paketleme projesi oluştur](../cross-platform/media/cppmdd-opengles-andbuild.png "CPPMDD_OpenGLES_AndBuild")  
   
-    Android kitaplığı ve Android uygulamasını paylaşılan için çıkış penceresine yapı işleminin çıkış görüntüler.  
+    Çıkış penceresi, Android paylaşılan kitaplığı ve Android uygulaması için yapı işleminin çıkışını görüntüler.  
   
     ![Android projeleri için derleme çıkışı](../cross-platform/media/cppmdd-opengles-andoutput.png "CPPMDD_OpenGLES_AndOutput")  
   
-3. VS öykünücüsü Android telefon (x86) profilleri, dağıtım hedefi seçin.  
+3. Dağıtım hedefleriniz olarak VS öykünücüsü Android Phone (x86) profillerinden birini seçin.  
   
     ![Dağıtım hedefini seçin](../cross-platform/media/cppmdd-opengles-pickemulator.png "CPPMDD_OpenGLES_PickEmulator")  
   
-    Diğer öykünücü yüklü veya bir Android cihazına bağlı, dağıtım hedef açılan listeden seçebilirsiniz. Uygulamayı çalıştırmak için yerleşik Çözüm Platformu hedef cihaz platformunu eşleşmesi gerekir.  
+    Başka öykünücüleri yüklediyseniz veya bir Android cihazı bağladıysanız, bunları dağıtım hedefi açılır listesinden seçebilirsiniz. Uygulamayı çalıştırmak için, oluşturulan çözüm platformunun hedef cihazın platformuyla eşleşmesi gerekir.  
   
-4. Hata ayıklamayı başlatmak için F5'e veya hata ayıklama olmadan Başlat için Shift + F5 tuşlarına basın.  
+4. Hata ayıklamayı başlatmak için F5 'e veya hata ayıklama olmadan başlamak için SHIFT + F5 'e basın.  
   
-    Visual Studio öykünücü, yüklemek ve kodunuzu dağıtmak için birkaç saniye sürer başlatır. Android için Visual Studio öykünücüsü uygulamayı'nasıl göründüğü aşağıda gösterilmiştir.  
+    Visual Studio, kodunuzu yüklemek ve dağıtmak için birkaç saniye geçen öykünücüyü başlatır. Uygulamanın Android için Visual Studio öykünücüsü 'nde nasıl göründüğü aşağıda verilmiştir.  
   
-    ![Android öykünücüsünde çalışan uygulama](../cross-platform/media/cppmdd-opengles-andemulator.png "CPPMDD_OpenGLES_AndEmulator")  
+    ![Android Emulator 'de çalışan uygulama](../cross-platform/media/cppmdd-opengles-andemulator.png "CPPMDD_OpenGLES_AndEmulator")  
   
-    Uygulama başlatıldıktan sonra kesme noktaları ayarlayın ve hata ayıklayıcı kodunuz içinde adım adım, Yereller inceleyin ve izlemek için kullanın.  
+    Uygulamanız başlatıldıktan sonra, kesme noktaları ayarlayabilir ve kod içinde ilerlemek, Yereller incelemek ve değerleri izlemek için hata ayıklayıcıyı kullanabilirsiniz.  
   
-5. SHIFT + hata ayıklamayı durdurmak için F5 tuşuna basın.  
+5. Hata ayıklamayı durdurmak için SHIFT + F5 tuşlarına basın.  
   
-    Öykünücüyü çalıştırmak için devam eden ayrı bir işlemdir. Düzenleme, derleme ve kodunuzun birden çok kez aynı öykünücüye dağıtmak. Uygulamanızı öykünücü uygulama Koleksiyonu'na görünür ve bunu doğrudan buradan başlatılabilir.  
+    Öykünücü çalışmaya devam eden ayrı bir işlemdir. Kodunuzu aynı öykünücüye birden çok kez düzenleyebilir, derleyebilir ve dağıtabilirsiniz. Uygulamanız öykünücü üzerindeki uygulama koleksiyonunda görünür ve doğrudan buradan başlatılabilir.  
   
-   C++ put oluşturulan Android yerel etkinlik uygulaması ve kitaplık projeleri Android platformu ile arabirim oluşturmak için "Yapıştırıcı" kod içeren bir dinamik kitaplık kodu paylaşılan. Bu, çoğu uygulama kodu kitaplıkta ve bildirimi, kaynaklar ve derleme yönergeleri paketleme projesi içerisine anlamına gelir. Paylaşılan kodun NativeActivity projedeki Main.cpp olarak çağrılır. Android NDK Geliştirici programına Android yerel etkinlik hakkında daha fazla bilgi için bkz [kavramları](https://developer.android.com/ndk/guides/concepts.html) sayfası.  
+   Oluşturulan Android yerel etkinlik uygulaması ve kitaplık projeleri, C++ paylaşılan kodunu, Android platformuyla arabirime "tutkalla" kodu içeren dinamik bir kitaplığa koyar. Bu, uygulama kodunun büyük bir kısmının kitaplıkta olduğu ve bildirim, kaynak ve derleme yönergelerinin paketleme projesinde olduğu anlamına gelir. Paylaşılan kod, NativeActivity projesindeki Main. cpp öğesinden çağrılır. Android yerel etkinliğinin nasıl programgörüntüleneceği hakkında daha fazla bilgi için bkz. Android Geliştirici NDK [kavramları](https://developer.android.com/ndk/guides/concepts.html) sayfası.  
   
-   Visual Studio Android platform araç takımını Clang kullanan NDK, kullanarak Android yerel etkinlik projeleri derler. Visual Studio için komut satırı anahtarları NativeActivity proje özelliklerinde eşleştirir ve derlemek için kullanılan seçenekler bağlantı ve hedef platformda hata ayıklama. Ayrıntılar için açık **özellik sayfaları** MyOpenGLESApp.Android.NativeActivity proje için iletişim kutusu. Komut satırı anahtarları hakkında daha fazla bilgi için bkz. [Clang derleyici kullanıcının el ile](http://clang.llvm.org/docs/UsersManual.html).  
+   Visual Studio, platform araç takımı olarak Clang kullanan Android NDK 'yi kullanarak Android yerel etkinlik projelerini oluşturur. Visual Studio, NativeActivity projesindeki özellikleri hedef platformda derlemek, bağlamak ve hata ayıklamak için kullanılan komut satırı anahtarlarına ve seçeneklere eşler. Ayrıntılar için, Myopengtasapp. Android. NativeActivity projesi için **Özellik sayfaları** iletişim kutusunu açın. Komut satırı anahtarları hakkında daha fazla bilgi için bkz. [Clang derleyicisi Kullanıcı el kitabı](http://clang.llvm.org/docs/UsersManual.html).  
   
-## <a name="BuildIOS"></a> İOS uygulaması derleyebilir ve çalıştırabilirsiniz  
- İOS uygulama projesi oluşturulur ve Visual Studio'da düzenlenemez, ancak lisans kısıtlamaları nedeniyle, oluşturulan ve gerekir bir Mac'ten dağıtılan Visual Studio, proje dosyaları aktarmak ve derleme, dağıtım ve hata ayıklama komutları yürütmek için Mac bilgisayarda çalışan uzak bir aracı ile iletişim kurar. Ayarlayın ve Visual Studio ve Mac kullanarak iOS uygulaması oluşturmadan önce iletişim kurmak için yapılandırmanız gerekir. Ayrıntılı yönergeler için bkz. [yükleme ve yapılandırma araçları iOS kullanarak derlemeye](../cross-platform/install-and-configure-tools-to-build-using-ios.md). Uzak aracı çalıştırmak ve Visual Studio Mac ile eşleştirildi sonra oluşturun ve yükleme ve Kurulum doğrulamak üzere iOS uygulamasını çalıştırın.  
+## <a name="build-and-run-the-ios-app"></a><a name="BuildIOS"></a> İOS uygulamasını derleme ve çalıştırma  
+ İOS uygulama projesi Visual Studio 'da oluşturulur ve düzenlenir, ancak lisanslama kısıtlamaları nedeniyle bir Mac 'ten oluşturulup dağıtılması gerekir. Visual Studio, proje dosyalarını aktarmak ve derleme, dağıtım ve hata ayıklama komutlarını yürütmek için Mac üzerinde çalışan bir uzak aracı ile iletişim kurar. İOS uygulamasını oluşturmadan önce, Mac ve Visual Studio 'Yu iletişim kuracak şekilde ayarlamanız ve yapılandırmanız gerekir. Ayrıntılı yönergeler için bkz. [iOS kullanarak derlemek Için araçları yükleyip yapılandırma](../cross-platform/install-and-configure-tools-to-build-using-ios.md). Uzak aracı çalışmaya başladıktan ve Visual Studio Mac ile eşleştirildikten sonra, yükleme ve kurulumunuzu doğrulamak için iOS uygulamasını derleyip çalıştırabilirsiniz.  
   
-#### <a name="to-build-and-run-the-ios-app"></a>Derleme ve iOS uygulamasını çalıştırmak için  
+#### <a name="to-build-and-run-the-ios-app"></a>İOS uygulamasını derlemek ve çalıştırmak için  
   
-1. Mac'inizde uzak Aracısı çalışıyor ve Visual Studio için Uzak Aracı eşleştirilir doğrulayın. Uzak Aracı başlatmak için bir Terminal uygulamasını penceresi açın ve girin `vcremote`. Daha fazla bilgi için [Visual Studio'da uzak aracı yapılandırma](../cross-platform/install-and-configure-tools-to-build-using-ios.md#ConfigureVS).  
+1. Mac 'inizde uzak aracının çalıştığını ve Visual Studio 'Nun uzak aracıyla eşleştirildiğini doğrulayın. Uzak aracıyı başlatmak için bir Terminal uygulaması penceresi açın ve girin `vcremote` . Daha fazla bilgi için bkz. [Visual Studio 'da uzak Aracıyı yapılandırma](../cross-platform/install-and-configure-tools-to-build-using-ios.md#ConfigureVS).  
   
     ![Vcremote çalıştıran Mac Terminal penceresi](../cross-platform/media/cppmdd-common-vcremote.png "CPPMDD_common_vcremote")  
   
-2. Zaten seçili değilse, seçin **x86** gelen **çözüm platformları** aşağı açılan listesi.  
+2. Henüz seçili değilse, **çözüm platformları** açılan listesinden **x86** ' yı seçin.  
   
-    ![Çözüm Platformu ayarlamak için x86](../cross-platform/media/cppmdd-opengles-solutionplat.png "CPPMDD_OpenGLES_SolutionPlat")  
+    ![Çözüm platformunu x86 olarak ayarlama](../cross-platform/media/cppmdd-opengles-solutionplat.png "CPPMDD_OpenGLES_SolutionPlat")  
   
-    X86 iOS simülatörü hedeflemek için kullanın. Bir iOS cihazı hedefliyorsanız, cihaz üzerinde (genellikle bir ARM işlemci) işlemciyi temel çözüm platformunu seçin. Varsa **çözüm platformları** seçin, listeyi görüntülenmiyorsa **çözüm platformları** gelen **Ekle/Kaldır düğmeleri** listeleyin ve ardından platformunuzu seçin.  
+    İOS simülatörünü hedeflemek için x86 kullanın. Bir iOS cihazını hedefliyorsanız, cihaz işlemcisini temel alan çözüm platformunu (genellikle ARM işlemcisi) seçin. **Çözüm platformları** listesi görüntülenmiyorsa, **Düğme Ekle/Kaldır** listesinden **çözüm platformları** ' nı seçin ve ardından platformunuzu seçin.  
   
-3. Çözüm Gezgini'nde MyOpenGLESApp.iOS.Application proje için kısayol menüsünü açın ve seçin **yapı**.  
+3. Çözüm Gezgini ' de, Myopengtasapp. iOS. Application projesinin kısayol menüsünü açın ve **Build**' ı seçin.  
   
-    ![İOS uygulaması projesi oluşturmak](../cross-platform/media/cppmdd-opengles-iosbuild.png "CPPMDD_OpenGLES_iOSBuild")  
+    ![İOS uygulama projesi oluştur](../cross-platform/media/cppmdd-opengles-iosbuild.png "CPPMDD_OpenGLES_iOSBuild")  
   
-    Çıkış penceresi iOS statik kitaplık ve iOS uygulaması için yapı işleminin çıkış görüntüler. Mac bilgisayarlarda, uzak aracı gösterir çalıştıran Terminal penceresinde, komut ve dosya etkinlik aktarın.  
+    Çıkış penceresinde iOS statik kitaplığı ve iOS uygulaması için yapı işleminin çıktısı görüntülenir. Mac üzerinde, uzak aracıyı çalıştıran Terminal penceresinde, komut ve dosya aktarımı etkinliği görüntülenir.  
   
-    Mac bilgisayarınızda istenebilir, bir kod imzalama isteğini kabul edin. Devam etmek için izin ver'ı seçin.  
+    Mac bilgisayarınızda, bir kod imzalama isteğini kabul etmeniz istenebilir. Devam etmek için Izin ver ' i seçin.  
   
-4. Seçin **iOS simülatörü** uygulamayı Mac üzerinde iOS Simulator'da çalıştırmak için araç çubuğunda Bu, simülatör başlatılması biraz sürebilir. Simülatörü çıktısını görmek için Mac'inizde öne getirmek zorunda kalabilirsiniz.  
+4. Uygulamayı Mac 'inizde iOS Benzeticisinde çalıştırmak için araç çubuğunda **IOS simülatörü** ' ni seçin. Simülatörü başlatmak biraz zaman alabilir. Çıktısını görmek için simülatörünü Mac 'inizde ön plana getirmeniz gerekebilir.  
   
-    ![İOS simülatörü'üzerinde çalışan uygulama](../cross-platform/media/cppmdd-opengles-iossimulator.png "CPPMDD_OpenGLES_iOSSimulator")  
+    ![İOS simülatörü üzerinde çalışan uygulama](../cross-platform/media/cppmdd-opengles-iossimulator.png "CPPMDD_OpenGLES_iOSSimulator")  
   
-    Uygulama başlatıldıktan sonra kesme noktaları ayarlayın ve Visual Studio hata ayıklayıcısını Yereller inceleyin, çağrı yığını görmek ve izlemek için kullanın.  
+    Uygulamanız başlatıldıktan sonra, kesme noktaları ayarlayabilir ve Visual Studio hata ayıklayıcısını kullanarak yerelleri inceleyebilir, çağrı yığınına bakın ve değerleri izleyin.  
   
-    ![İOS uygulama içinde kesme noktasında hata ayıklayıcı](../cross-platform/media/cppmdd-opengles-iosdebug.png "CPPMDD_OpenGLES_iOSDebug")  
+    ![İOS uygulamasında kesme noktasında hata ayıklayıcı](../cross-platform/media/cppmdd-opengles-iosdebug.png "CPPMDD_OpenGLES_iOSDebug")  
   
-5. SHIFT + hata ayıklamayı durdurmak için F5 tuşuna basın.  
+5. Hata ayıklamayı durdurmak için SHIFT + F5 tuşlarına basın.  
   
-    İOS Simulator Mac üzerinde çalışmaya devam eden ayrı bir işlemdir Düzenleme, derleme ve kodunuzun birden çok kez aynı iOS Simulator örneğine dağıtma. Dağıtıldıktan sonra kodunuzu doğrudan simülatörde çalıştırabilirsiniz.  
+    İOS simülatörü Mac 'inizde çalışmaya devam eden ayrı bir işlemdir. Kodunuzu aynı iOS simülatörü örneğine birden çok kez düzenleyebilir, derleyebilir ve dağıtabilirsiniz. Ayrıca, kodunuzu dağıtıldıktan sonra doğrudan simülatörde çalıştırabilirsiniz.  
   
-   Oluşturulan bir iOS uygulaması ve kitaplık projeleri yalnızca paylaşılan kod uygulayan bir statik kitaplıkta C++ kodu yerleştirin. Çoğu uygulama kodu, uygulama projesinde olur. Bu şablon projede paylaşılan kitaplık kodu çağrıları GameViewController.m dosyasında yapılır. İOS uygulamanızı oluşturmak için Visual Studio ile bir Mac üzerinde çalışan bir uzak istemci iletişimi gerektiren Xcode platform araç takımını kullanır  
+   Oluşturulan iOS uygulaması ve kitaplık projeleri, C++ kodunu yalnızca paylaşılan kodu uygulayan bir statik kitaplığa koyar. Uygulama kodunun çoğu uygulama projem. Bu şablon projesindeki Paylaşılan kitaplık koduna yapılan çağrılar GameViewController. d dosyasında yapılır. İOS uygulamanızı derlemek için, Visual Studio, Mac üzerinde çalışan bir uzak istemciyle iletişim gerektiren Xcode platform araç takımını kullanır.  
   
-   Visual Studio proje dosyalarını aktarır ve komutları Xcode kullanarak uygulamayı oluşturmak için uzak istemciye gönderir. Uzak istemci gönderir yapı durumu bilgileri Visual Studio dönün. Uygulama başarıyla oluşturdu, çalıştırın ve uygulamanın hatalarını ayıklamak için komutları göndermek için Visual Studio kullanabilirsiniz. Visual Studio hata ayıklayıcının iOS simülatörü çalışır mac'inizde veya bağlı bir iOS cihazında çalışan uygulama denetler. Visual Studio için komut satırı anahtarları StaticLibrary proje özelliklerinde eşleştirir ve oluşturmak için kullanılan seçenekler bağlantı ve hedef iOS platformunda hata ayıklama. Derleyici komut satırı seçeneği ayrıntılarını açın **özellik sayfaları** MyOpenGLESApp.iOS.StaticLibrary proje için iletişim kutusu.  
+   Visual Studio, proje dosyalarını aktarır ve Xcode kullanarak uygulamayı oluşturmak için uzak istemciye komutlar gönderir. Uzak istemci, derleme durum bilgilerini Visual Studio 'ya geri gönderir. Uygulama başarıyla derlenmiştir ve uygulamayı çalıştırmak ve uygulamada hata ayıklamak için komut göndermek üzere Visual Studio 'Yu kullanabilirsiniz. Visual Studio 'daki hata ayıklayıcı, Mac 'inizde çalışan iOS Benzeticisinde veya iliştirilmiş bir iOS cihazında çalıştırılan uygulamayı denetler. Visual Studio, StaticLibrary projesindeki özellikleri, hedef iOS platformunda derlemek, bağlamak ve hata ayıklamak için kullanılan komut satırı anahtarları ve seçenekleriyle eşler. Derleyici komut satırı seçeneği ayrıntıları için, Myopengtasapp. iOS. StaticLibrary projesi için **Özellik sayfaları** iletişim kutusunu açın.  
   
-## <a name="Customize"></a> Uygulamalarınızı özelleştirin  
- Paylaşılan C++ koduna eklemek veya ortak işlevselliği değiştirmek için değiştirebilirsiniz. Paylaşılan kod MyOpenGLESApp.Android.NativeActivity ve MyOpenGLESApp.iOS.Application projelerinde çağrıları eşleşecek şekilde değiştirmeniz gerekir. Önişlemci makroları, platforma özgü bölümler ortak kodunuzda belirtmek için kullanabilirsiniz. Önişlemci makrosu `__ANDROID__` Android için oluşturduğunuzda önceden tanımlanmış. Önişlemci makrosu `__APPLE__` iOS için oluşturduğunuzda önceden tanımlanmış.  
+## <a name="customize-your-apps"></a><a name="Customize"></a> Uygulamalarınızı özelleştirme  
+ Ortak işlevselliği eklemek veya değiştirmek için paylaşılan C++ kodunu değiştirebilirsiniz. Eşleşmesi için Myopengyesapp. Android. NativeActivity ve Myopenginsapp. iOS. Application projelerindeki Paylaşılan koda yapılan çağrıları değiştirmelisiniz. Ön işlemci makrolarını, ortak kodunuzda platforma özgü bölümler belirtmek için kullanabilirsiniz. Ön işlemci makrosu, `__ANDROID__` Android için derleme yaptığınızda önceden tanımlanmıştır. Ön işlemci makrosu, `__APPLE__` iOS için derleme yaptığınızda önceden tanımlanmıştır.  
   
- Belirli proje platformu için IntelliSense görmek için bağlam değiştiricisi açılan Düzenleyicisi penceresinin üst gezinti çubuğunda projeyi seçin.  
+ Belirli bir proje platformu için IntelliSense 'i görmek üzere düzenleyici penceresinin en üstündeki gezinti çubuğunda bulunan bağlam değiştirici açılan menüsünde projeyi seçin.  
   
- ![Proje bağlamı değiştiricisi açılan kutusunda Düzenleyicisi](../cross-platform/media/cppmdd-opengles-contextswitcher.png "CPPMDD_OpenGLES_ContextSwitcher")  
+ ![Düzenleyicide proje bağlamı değiştirici açılan menüsü](../cross-platform/media/cppmdd-opengles-contextswitcher.png "CPPMDD_OpenGLES_ContextSwitcher")  
   
- IntelliSense sorunlarını geçerli projede kırmızı dalgalı çizgi ile işaretlenir. Diğer projelerde sorunları mor dalgalı çizgi ile işaretlenir. Varsayılan olarak, Visual Studio kod renklendirme veya IntelliSense için Java veya Objective-C dosyaları desteklemez. Ancak, yine de kaynak dosyaları değiştirebilir ve uygulama adınız, simge ve diğer uygulama ayrıntılarını ayarlamak için kaynakları değiştirin.
+ Geçerli projedeki IntelliSense sorunları kırmızı dalgalı bir çizgiyle işaretlenir. Diğer projelerdeki sorunlar mor dalgalı bir çizgiyle işaretlenir. Varsayılan olarak Visual Studio, Java veya amaç-C dosyaları için kod renklendirme veya IntelliSense 'i desteklemez. Ancak, yine de kaynak dosyalarını değiştirebilir ve Uygulama adınızı, simgenizi ve diğer uygulama ayrıntılarını ayarlamak için kaynakları değiştirebilirsiniz.

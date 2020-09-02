@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 113d6aafbd09f6b726613405a8c1eb82f9e202e5
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330039"
 ---
 # <a name="cvleavespan-function"></a>CvLeaveSpan işlevi
@@ -31,7 +31,7 @@ HRESULT CvLeaveSpan(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `pSpan`Önceki CvEnterSpan * çağrısıyla döndürülen span nesnesi. NULL olamaz.
+ `pSpan` Önceki CvEnterSpan * çağrısıyla döndürülen span nesnesi. NULL olamaz.
 
 ## <a name="return-value"></a>Dönüş Değeri
  İleti başarıyla yazıldığında S_OK. Herhangi bir hata olması durumunda hata kodu. Hata koşulunu denetlemek için başarılı/başarısız makroları kullanın.

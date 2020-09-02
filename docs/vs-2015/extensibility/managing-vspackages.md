@@ -1,5 +1,5 @@
 ---
-title: VSPackage'ları yönetme | Microsoft Docs
+title: VSPackages 'yi yönetme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,34 +14,34 @@ caps.latest.revision: 36
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 0b56ab490342cfbda9c16408aa0937abd80728c9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194378"
 ---
 # <a name="managing-vspackages"></a>VSPackage’ları Yönetme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Çoğu durumda VSPackages, proje ve öğe şablonlarını kaydetme ve paket otomatik olarak yük yönetilmesi konusunda endişelenmesine gerek yoktur. Ancak, bazı durumlarda, paket yönetmek için biraz daha fazla bilgi edinmek gerekebilir.  
+Çoğu durumda, proje ve öğe şablonları paketi otomatik olarak kaydedip yüklerken VSPackages 'leri yönetme konusunda endişelenmenize gerek kalmaz. Ancak, bazı durumlarda paketinizi yönetmek için biraz daha fazla bilgi almanız gerekebilir.  
   
 ## <a name="using-the-experimental-instance"></a>Deneysel örneği kullanma  
- Deneysel örnek hakkında daha fazla bilgi için bkz. [deneysel örneğinde](../extensibility/the-experimental-instance.md).  
+ Deneysel örnek hakkında daha fazla bilgi edinmek için bkz. [deneysel örnek](../extensibility/the-experimental-instance.md).  
   
 ## <a name="registering-and-unregistering-vspackages"></a>VSPackage Kaydetme ve Kaydını Kaldırma  
- Kaydolun ve VSPackages ve diğer tür uzantılarla kaydı konusunda bilgi edinmek için bkz: [kaydetme ve kaydını kaldırma VSPackages](../extensibility/registering-and-unregistering-vspackages.md).  
+ VSPackages 'ları ve diğer uzantı türlerini kaydetme ve kaydını silme hakkında bilgi edinmek için bkz. [VSPackages kaydetme ve kaydını silme](../extensibility/registering-and-unregistering-vspackages.md).  
   
 ## <a name="loading-a-vspackage"></a>VSPackage yükleme  
- VSPackage sorsorgu CMDUICONTEXT GUID açık belirli bir zaman için ayarlanabilir. Daha fazla bilgi için [VSPackage yükleme](../extensibility/loading-vspackages.md).  
+ Belirli bir CMDUICONTEXT GUID açık olduğunda VSPackages, oto Load olarak ayarlanabilir. Daha fazla bilgi için bkz. [VSPackages yükleme](../extensibility/loading-vspackages.md).  
   
-## <a name="using-asyncpackage-to-load-vspackages-in-the-background"></a>AsyncPackage kullanarak arka planda VSPackage'ı yükleme  
- Visual Studio kullanıcı Arabirimi yanıt sürelerinde için arka plan iş parçacığında yükleme paketi AsyncPackage sınıfı sağlar. Daha fazla bilgi için [nasıl yapılır: Arka planda VSPackage AsyncPackage sayfanızdaki](../extensibility/how-to-use-asyncpackage-to-load-vspackages-in-the-background.md).  
+## <a name="using-asyncpackage-to-load-vspackages-in-the-background"></a>Arka planda VSPackages yüklemek için AsyncPackage kullanma  
+ AsyncPackage sınıfı, Visual Studio 'da daha iyi UI yanıt verme için bir arka plan iş parçacığında paket yüklenmesine izin verebilir. Daha fazla bilgi için bkz. [nasıl yapılır: arka planda VSPackages yüklemek Için AsyncPackage kullanma](../extensibility/how-to-use-asyncpackage-to-load-vspackages-in-the-background.md).  
   
-## <a name="rule-based-ui-context-for-extensions"></a>Uzantıları için kural tabanlı UI bağlamı  
- Uzantı yazarları, altında çalışacağı bir UI bağlamı etkinleştirildi ve ilişkili VSPackages yüklenen kesin koşulları tanımlamak kural tabanlı UI bağlamı sağlar. Daha fazla bilgi için [nasıl yapılır: Visual Studio uzantıları için kural tabanlı UI bağlamı kullanma](../extensibility/how-to-use-rule-based-ui-context-for-visual-studio-extensions.md).  
+## <a name="rule-based-ui-context-for-extensions"></a>Uzantılar için kural tabanlı kullanıcı arabirimi bağlamı  
+ Kural tabanlı kullanıcı arabirimi bağlamları uzantı yazarlarının, Kullanıcı arabirimi bağlamı etkinleştirilmiş ve ilişkili VSPackages 'nin altında kesin koşulları tanımlamasına olanak tanır. Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio uzantıları Için kural tabanlı kullanıcı arabirimi bağlamını kullanma](../extensibility/how-to-use-rule-based-ui-context-for-visual-studio-extensions.md).  
   
 ## <a name="troubleshooting-vspackages"></a>VSPackage Sorunlarını Giderme  
- Yükleme veya sorun yaşadığınızda VSPackage sorunlarını giderme teknikleri öğrenin: [VSPackage Sorunlarını Giderme](../extensibility/troubleshooting-vspackages.md)  
+ Yüklenmeyen veya hata yaşayan VSPackages sorunlarını giderme tekniklerini öğrenin: [VSPackages sorunlarını giderme](../extensibility/troubleshooting-vspackages.md)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [VSPackage’lar](../extensibility/internals/vspackages.md)

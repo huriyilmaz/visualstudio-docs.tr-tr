@@ -16,10 +16,10 @@ author: jillre
 ms.author: jillfra
 manager: wpickett
 ms.openlocfilehash: 8083edf04aa799c8031fbcd1b53a2e17104dd4a6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85538807"
 ---
 # <a name="ca2218-override-gethashcode-on-overriding-equals"></a>CA2218: GetHashCode'u Eşittir'i geçersiz kılarak geçersiz kılın
@@ -36,7 +36,7 @@ ms.locfileid: "85538807"
  Ortak tür geçersiz kılınır <xref:System.Object.Equals%2A?displayProperty=fullName> ancak geçersiz kılınmaz <xref:System.Object.GetHashCode%2A?displayProperty=fullName> .
 
 ## <a name="rule-description"></a>Kural Tanımı
- <xref:System.Object.GetHashCode%2A>karma algoritmalar ve karma tablo gibi veri yapıları için uygun olan geçerli örneğe bağlı olarak bir değer döndürür. Aynı türde ve eşit olan iki nesne, aşağıdaki türlerin örneklerinin doğru şekilde çalışmasını sağlamak için aynı karma kodu döndürmelidir:
+ <xref:System.Object.GetHashCode%2A> karma algoritmalar ve karma tablo gibi veri yapıları için uygun olan geçerli örneğe bağlı olarak bir değer döndürür. Aynı türde ve eşit olan iki nesne, aşağıdaki türlerin örneklerinin doğru şekilde çalışmasını sağlamak için aynı karma kodu döndürmelidir:
 
 - <xref:System.Collections.Hashtable?displayProperty=fullName>
 
@@ -54,7 +54,7 @@ ms.locfileid: "85538807"
 
 - <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=fullName>
 
-- Uygulayan türler<xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>
+- Uygulayan türler <xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>İhlaller Nasıl Düzeltilir?
  Bu kural ihlalini onarmak için uygulamasının bir uygulamasını sağlayın <xref:System.Object.GetHashCode%2A> . Aynı türde bir nesne çifti için, bir <xref:System.Object.Equals%2A> çiftin uygulamanız için dönerse uygulamanın aynı değeri döndürdüğünden emin olmanız gerekir `true` .
@@ -64,7 +64,7 @@ ms.locfileid: "85538807"
 
 ## <a name="class-example"></a>Sınıf örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, bu kuralı ihlal eden bir sınıfı (başvuru türü) gösterir.
 
 ### <a name="code"></a>Kod
@@ -78,7 +78,7 @@ ms.locfileid: "85538807"
 
 ## <a name="structure-example"></a>Yapı örneği
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
  Aşağıdaki örnek, bu kuralı ihlal eden bir yapıyı (değer türü) gösterir.
 
 ### <a name="code"></a>Kod

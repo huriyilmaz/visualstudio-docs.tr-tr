@@ -15,10 +15,10 @@ ms.workload:
 - uwp
 monikerRange: vs-2017
 ms.openlocfilehash: 524eb76696414cbbdba72266cc732ccb7e089f86
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85537247"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP uygulamalarında enerji kullanımını analiz etme
@@ -60,7 +60,7 @@ Enerji tüketimi Profil Oluşturucusu, bu *Güç* ve *enerji*tanımlarını kull
  Yöntem yürütüldüğünde, profil oluşturma verilerine bir iletiyle birlikte bir kullanıcı işareti eklenir.
 
 > [!NOTE]
-> - <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=nameWithType>arabirimini uygular <xref:Windows.Foundation.IClosable?displayProperty=nameWithType> ( <xref:System.IDisposable?displayProperty=nameWithType> C# ve vb 'de olarak tasarlanan). İşletim sistemi kaynaklarının sızmasını önlemek için, <xref:Windows.Foundation.Diagnostics.LoggingChannel.Close%2A?displayProperty=nameWithType> <xref:Windows.Foundation.Diagnostics.LoggingChannel.Dispose%2A?displayProperty=nameWithType> bir günlük kanalı ile işiniz bittiğinde çağırın (C# ve vb 'de).
+> - <xref:Windows.Foundation.Diagnostics.LoggingChannel?displayProperty=nameWithType> arabirimini uygular <xref:Windows.Foundation.IClosable?displayProperty=nameWithType> ( <xref:System.IDisposable?displayProperty=nameWithType> C# ve vb 'de olarak tasarlanan). İşletim sistemi kaynaklarının sızmasını önlemek için, <xref:Windows.Foundation.Diagnostics.LoggingChannel.Close%2A?displayProperty=nameWithType> <xref:Windows.Foundation.Diagnostics.LoggingChannel.Dispose%2A?displayProperty=nameWithType> bir günlük kanalı ile işiniz bittiğinde çağırın (C# ve vb 'de).
 > - Her açık günlük kanalının benzersiz bir adı olması gerekir. Aktiften çıkarılan bir kanalla aynı ada sahip yeni bir günlük kanalı oluşturmaya çalışırsanız, bir özel durum oluşturulur.
 
 Örnek kod için Windows SDK örnek [LoggingSession örneğine](https://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336)bakın.
@@ -130,8 +130,8 @@ if (performance && performance.mark) {
 |![2. Adım](../profiling/media/procguid_2.png "ProcGuid_2")|Zaman çizelgesi profil oluşturma oturumunun uzunluğunu, uygulama yaşam döngüsü etkinleştirme olaylarını ve kullanıcı işaretlerini gösterir.|
 |![3. Adım](../profiling/media/procguid_3.png "ProcGuid_3")|Mavi çubukları sürükleyip zaman çizelgesinde bir bölgeyi seçerek, raporu zaman çizelgesinin bir bölümüyle sınırlandırabilirsiniz.|
 |![4. adım](../profiling/media/procguid_4.png "ProcGuid_4")|**Güç kullanımı** grafiği, profil oluşturma oturumu sırasında bir cihaz kaynağı nedeniyle oluşan güç çıktısındaki değişikliği görüntüleyen çok satırlı bir grafiktir. Enerji Tüketimi profil oluşturucusu CPU, ağ etkinliği ve ekran görüntüsü tarafından kullanılan gücü izler.|
-|![5. Adım](../profiling/media/procguid_6.png "ProcGuid_6")|**Kaynaklar (açık/kapalı)** grafiğinde ağ enerji maliyetlerinin ayrıntıları sağlanmaktadır. **Ağ** çubuğu, ağ bağlantısının açık olduğu süreyi temsil eder. **Veri aktarımı** alt çubuğu, uygulamanın ağ üzerinden veri aldığı veya gönderdiği süredir.|
-|![6. Adım](../profiling/media/procguid_6a.png "ProcGuid_6a")|**Enerji Kullanım Özeti** , seçili zaman çizelgesinde CPU, ağ etkinliği ve ekran görüntüsü tarafından kullanılan toplam enerji miktarının orantılı miktarını gösterir.|
+|![5. adım](../profiling/media/procguid_6.png "ProcGuid_6")|**Kaynaklar (açık/kapalı)** grafiğinde ağ enerji maliyetlerinin ayrıntıları sağlanmaktadır. **Ağ** çubuğu, ağ bağlantısının açık olduğu süreyi temsil eder. **Veri aktarımı** alt çubuğu, uygulamanın ağ üzerinden veri aldığı veya gönderdiği süredir.|
+|![6. adım](../profiling/media/procguid_6a.png "ProcGuid_6a")|**Enerji Kullanım Özeti** , seçili zaman çizelgesinde CPU, ağ etkinliği ve ekran görüntüsü tarafından kullanılan toplam enerji miktarının orantılı miktarını gösterir.|
 
  **Enerji profili verilerini analiz etmek için**
 

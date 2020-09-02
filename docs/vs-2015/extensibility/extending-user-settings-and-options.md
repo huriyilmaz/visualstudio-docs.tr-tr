@@ -14,28 +14,28 @@ caps.latest.revision: 23
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 05e82002a01e15b26e84e7805b0ee092868eef5d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204444"
 ---
 # <a name="extending-user-settings-and-options"></a>Kullanıcı Ayarlarını ve Seçeneklerini Genişletme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio'da kullanıcı tercihlerini korumak başlıca iki yolu vardır. **Araçlar / Seçenekler** sayfalarına izin ayarları, genel ve dile özgü birçok farklı türde için kendi değerlerini ayarlamak kullanıcılar. Kullanıcı ayarları genel Visual Studio yapılandırması özelliklerini belirtmek kullanıcılardan izin verir. Seçenekler sayfaları hakkında daha fazla bilgi için bkz: [seçenekler ve Seçenekler sayfaları](../extensibility/internals/options-and-options-pages.md). Kullanıcı ayarları hakkında daha fazla bilgi için bkz. [kullanıcı ayarları desteği](../extensibility/internals/support-for-user-settings.md).  
+Visual Studio 'da, Kullanıcı tercihlerini korumak için iki ana yol vardır. **Araçlar/Seçenekler** sayfaları, kullanıcıların, hem genel hem de dile özgü birçok farklı tür ayar için kendi değerlerini ayarlamanıza olanak sağlar. Kullanıcı ayarları, kullanıcıların genel Visual Studio yapılandırma özelliklerini belirtmesini sağlar. Seçenekler sayfaları hakkında daha fazla bilgi için bkz. [Seçenekler ve Seçenekler sayfaları](../extensibility/internals/options-and-options-pages.md). Kullanıcı ayarları hakkında daha fazla bilgi için bkz. [Kullanıcı ayarları Için destek](../extensibility/internals/support-for-user-settings.md).  
   
  [Seçenekler Sayfası Oluşturma](../extensibility/creating-an-options-page.md)  
- Seçenekler sayfası oluşturma açıklanır.  
+ Seçenekler sayfasının nasıl oluşturulduğunu açıklar.  
   
- [Ayarları Kategorisi Oluşturma](../extensibility/creating-a-settings-category.md)  
- Ayarları kategorisi oluşturma açıklanır.  
+ [Ayarlar Kategorisi Oluşturma](../extensibility/creating-a-settings-category.md)  
+ Bir ayarlar kategorisinin nasıl oluşturulacağını açıklar.  
   
  [Ayarlar Deposu Kullanma](../extensibility/using-the-settings-store.md)  
- Ayarlar deposu kullanmayı açıklar.  
+ Ayarlar deposunun nasıl kullanılacağını açıklar.  
   
  [Ayarlar Deposu'ndan Hizmet Bilgilerini Alma](../extensibility/getting-service-information-from-the-settings-store.md)  
- Ayarlar Deposu'ndan kullanılabilir hizmetleri alın açıklanmaktadır.  
+ Ayarlar deposundan kullanılabilir hizmetlerin nasıl alınacağını açıklar.  
   
  [Kullanıcı Ayarları Deposuna Yazma](../extensibility/writing-to-the-user-settings-store.md)  
- Kullanıcı ayarları deposuna yazma açıklanmaktadır.
+ Kullanıcı ayarları deposuna yazmayı açıklar.

@@ -1,5 +1,5 @@
 ---
-title: NESNE_TÜRÜ | Microsoft Docs
+title: OBJECT_TYPE | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: fc23045fa70554133eba3a7f1326681bf31ea379
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205147"
 ---
-# <a name="objecttype"></a>OBJECT_TYPE
+# <a name="object_type"></a>OBJECT_TYPE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-İfade değerlendirici nesneden türünü belirtir.  
+İfade değerlendirici ' nden bir nesne türünü belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_OBJECT_TYPE {   
@@ -69,61 +69,61 @@ public enum enum_OBJECT_TYPE { 
   
 ## <a name="members"></a>Üyeler  
  OBJECT_TYPE_BOOLEAN  
- Bir Boole değeri bir nesne olduğunu gösterir.  
+ Nesnenin Boole olduğunu gösterir.  
   
  OBJECT_TYPE_CHAR  
- Bir nesne bir karakter olduğunu gösterir.  
+ Nesnenin bir karakter olduğunu gösterir.  
   
  OBJECT_TYPE_I1  
- Nesnesi bir bayt imzalı bir tamsayı olduğu anlamına gelir.  
+ Nesnenin tek baytlık işaretli bir tamsayı olduğunu gösterir.  
   
  OBJECT_TYPE_U1  
- Bir nesne için bir tane bayt işaretsiz tamsayı olduğunu gösterir.  
+ Nesnenin tek baytlık işaretsiz bir tamsayı olduğunu gösterir.  
   
  OBJECT_TYPE_I2  
- Nesne iki baytlık bir işaretli tamsayı olduğunu gösterir.  
+ Nesnenin iki baytlık işaretli bir tamsayı olduğunu gösterir.  
   
  OBJECT_TYPE_U2  
- Bir nesne bir iki bayt işaretsiz tamsayı olduğunu gösterir.  
+ Nesnenin iki baytlık işaretsiz bir tamsayı olduğunu gösterir.  
   
  OBJECT_TYPE_I4  
- Nesne dört baytlık bir işaretli tamsayı olduğunu gösterir.  
+ Nesnenin dört baytlık işaretli bir tamsayı olduğunu gösterir.  
   
  OBJECT_TYPE_U4  
- Dört bayt işaretsiz tamsayı bir nesne olduğunu gösterir.  
+ Nesnenin dört baytlık işaretsiz bir tamsayı olduğunu gösterir.  
   
  OBJECT_TYPE_I8  
- Nesne bir sekiz bayt imzalı tamsayı olduğunu gösterir.  
+ Nesnenin sekiz baytlık işaretli bir tamsayı olduğunu gösterir.  
   
  OBJECT_TYPE_U8  
- Bir nesne bir sekiz bayt işaretsiz tamsayı olduğunu gösterir.  
+ Nesnenin sekiz baytlık işaretsiz bir tamsayı olduğunu gösterir.  
   
  OBJECT_TYPE_R4  
- Nesne dört baytlık bir kayan noktalı sayı olduğunu gösterir.  
+ Nesnenin dört baytlık kayan noktalı sayı olduğunu gösterir.  
   
  OBJECT_TYPE_R8  
- Bir nesne bir sekiz bayt kayan noktalı sayı olduğunu gösterir.  
+ Nesnenin sekiz baytlık kayan noktalı sayı olduğunu gösterir.  
   
  OBJECT_TYPE_OBJECT  
- Bir nesne bir nesne olduğunu gösterir.  
+ Nesnenin bir nesne olduğunu gösterir.  
   
  OBJECT_TYPE_NULL  
- Nesne NULL olduğunu gösterir.  
+ Nesnenin NULL olduğunu gösterir.  
   
  OBJECT_TYPE_CLASS  
- Bir nesne bir sınıf olduğunu belirtir.  
+ Nesnenin bir sınıf olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bağımsız değişken olarak geçirilen [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) ve [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) yöntemleri.  
+ [Createprimitiveobject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) ve [createarrayobject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) yöntemlerine bir bağımsız değişken olarak geçirilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: ee.h  
+ Üstbilgi: ee. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md)   
  [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md)

@@ -1,5 +1,5 @@
 ---
-title: Yazı tipleri ve renkler kullanarak | Microsoft Docs
+title: Yazı tiplerini ve renkleri kullanma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -15,63 +15,63 @@ caps.latest.revision: 28
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 42ebc9414e3e5bb10f2468ed7f5f4fb4900e4ec6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68177228"
 ---
 # <a name="using-fonts-and-colors"></a>Yazı Tiplerini ve Renkleri Kullanma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-[!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] Metni görüntülemek için yazı tiplerini ve renklerini kullanma desteği sağlar.  
+, [!INCLUDE[vsipsdk](../includes/vsipsdk-md.md)] Metin göstermek için yazı tiplerinin ve renklerin kullanılmasına yönelik destek sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yazı Tipi ve Renklere Genel Bakış](../extensibility/font-and-color-overview.md)  
- Metin yazı tipi ve renk ayarları açıklanır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tümleşik geliştirme ortamı (IDE). Ayrıca kategorileri ve görüntü öğeleri kavramlar tanıtılır ve VSPackages ve çekirdek düzenleyici metin özniteliklerini kullanımını açıklar.  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Tümleşik geliştirme ortamında (IDE) metin yazı tipi ve renk ayarlarını açıklar. Ayrıca, kategorilerin ve görüntüleme öğelerinin kavramlarını tanıtır, VSPackages ve çekirdek düzenleyicinin metin özniteliklerini nasıl kullandığını açıklar.  
   
  [Metin Renklendirme İçin Yazı Tipi ve Renk Bilgilerini Alma](../extensibility/getting-font-and-color-information-for-text-colorization.md)  
- Metin renklendirmesi yönetme Vspackage'larda uygulamak için kılavuz bilgiler verilmektedir **kategorileri** dışında **metin düzenleyici**.  
+ **Metin Düzenleyicisi**dışındaki **kategorileri** yöneten VSPackages 'ta metin renklendirme uygulamak için yönergeler sağlar.  
   
  [Depolanan Yazı Tipi ve Renk Ayarlarına Erişme](../extensibility/accessing-stored-font-and-color-settings.md)  
- Açıklar nasıl geçerli yazı tipi ve renk ayarları depolanan, alınan ve uygulanır.  
+ Geçerli yazı tipi ve renk ayarlarının nasıl depolanacağını, alınabileceğini ve uygulanacağını açıklar.  
   
  [Özel Kategoriler ve Görüntüleme Öğeleri Uygulama](../extensibility/implementing-custom-categories-and-display-items.md)  
- Bir pencere oluşturabilir ve kullanmak, kendi temel adımlar açıklanmıştır **öğeleri görüntüle** ve **kategorileri** metin görüntülenmesini desteklemek için.  
+ Bir pencerenin, metin görüntülemeyi desteklemek için kendi **görüntüleme öğelerini** ve **kategorilerini** oluşturup kullanabileceği temel adımları açıklar.  
   
- VSPackage'ı uygulamak bu yaklaşım gerektirir <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider> ve ilgili arabirim.  
+ Bu yaklaşım, <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider> arabirimi ve ilgili arabirimleri uygulamak için bir VSPackage gerektirir.  
   
- [Nasıl yapılır: Yerleşik Yazı Tiplerine ve Renk Şemasına Erişim](../extensibility/how-to-access-the-built-in-fonts-and-color-scheme.md)  
- Tanımlamak ve bir kategori yerleşik yazı tipleri ve renkler kullanarak kaydetmek ve sistem tarafından sağlanan yazı tipleri ve renkler kullanımı başlatmak nasıl ele alınmaktadır.  
+ [Nasıl Yapılır: Yerleşik Yazı Tipi ve Renk Şemasına Erişme](../extensibility/how-to-access-the-built-in-fonts-and-color-scheme.md)  
+ Yerleşik yazı tipi ve renkler kullanarak bir kategorinin nasıl tanımlanacağını ve kaydedeceğinizi ve sistem tarafından belirtilen yazı tiplerinin ve renklerin kullanımını nasıl başlatabileceğini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider>  
- Bir örneğini sağlar `IVsFontAndColorDefaults` veya <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> listelenen belirli bir öğe için karşılık gelen arabirimi **ayarları için Göster** listesinde **yazı tipleri ve renkler** sayfasının**Seçenekleri** iletişim kutusu.  
+ `IVsFontAndColorDefaults` <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup> **Seçenekler** iletişim kutusunun **yazı tipleri ve renkler** sayfasında, **ayarları göster** listesinde listelenen belirli bir öğeye karşılık gelen bir örneği veya arabirimi sağlar.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults>  
- IDE desteklemek bir VSPackage sağlayan **yazı tipleri ve renkler** varsayılan yazı tipleri ve renkler penceresi veya kullanıcı Arabirimi bileşeninin tanımlayarak sayfası.  
+ Bir pencere veya Kullanıcı arabirimi bileşeni için varsayılan yazı tiplerini ve renkleri tanımlayarak bir VSPackage 'ın IDE **yazı tipi ve renkler** sayfasını desteklemesini sağlar.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorGroup>  
- Kullandığı bir mekanizma sağlar, yazı tipi ve renk desteği, bir görüntü öğesi grubu - iki veya daha fazla kategori birleşimi temsil eden bir süper kategorisi belirtebilirsiniz sağlayan bir VSPackage'ı.  
+ Yazı tipi ve renk desteği sağlayan bir VSPackage 'ın, iki veya daha fazla kategorinin birleşimini temsil eden bir süper kategori olan bir görüntüleme öğesi grubunu belirtmesini sağlayan bir mekanizma sağlar.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>  
- Yazı tipi ve renk verileri almak veya kayıt defterine kaydetmek bir VSPackage sağlar.  
+ Bir VSPackage 'ın yazı tipi ve renk verileri almasını veya kayıt defterine kaydedilmesini sağlar.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents>  
- Değişiklikler hakkında bilgi yazı tipi ve renk yazı tipi ve renk ayarlarını kullanan VSPackages bildirir.  
+ Yazı tipi ve renk ayarlarındaki değişikliklerle ilgili yazı tipi ve renk bilgilerini kullanan VSPackages 'i bilgilendirir.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorUtilities>  
- Yöntemleri tarafından kullanılan giriş ve çıkış verilerle çalışmaya yönelik araçlar sağlar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **yazı tipi ve renk** mekanizması.  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **Yazı tipi ve renk** mekanizmalarının yöntemleri tarafından kullanılan giriş ve çıkış verileriyle çalışmaya yönelik araçlar sağlar.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorCacheManager>  
- Önbelleğe alma yazı tipi ve renk ayarlarını denetler.  
+ Yazı tipi ve renk ayarlarının önbelleğe alınmasını denetler.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Eski Dil Hizmeti Geliştirme](../extensibility/internals/developing-a-legacy-language-service.md)  
- VSPackage özelleştirmek için dil hizmetleri nasıl kullanabileceğinizi anlatır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Düzenleyici.  
+ VSPackages 'in düzenleyiciyi özelleştirmek için dil hizmetlerini nasıl kullanabileceğinizi açıklar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  
   
  [Özel Düzenleyicilerde Söz Dizimi Renklendirmesi](../extensibility/syntax-coloring-in-custom-editors.md)  
- Descries nasıl [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Düzenleyicisi söz dizimi renklendirmesi uygulamak için dil Hizmetleri kullanır.  
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Düzenleyicinin sözdizimi renklendirme uygulamak için dil hizmetlerini nasıl kullandığını açıklamaktadır.  
   
  [Visual Studio’nun Diğer Bölümlerini Genişletme](../extensibility/extending-other-parts-of-visual-studio.md)  
- Nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] geri kalanını eşleşen kullanıcı Arabirimi öğeleri oluşturmak için Sertifika Hizmetleri'ni [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Hizmetlerin, geri kalanı ile eşleşen kullanıcı arabirimi öğeleri oluşturmak için nasıl kullanılacağını açıklar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .

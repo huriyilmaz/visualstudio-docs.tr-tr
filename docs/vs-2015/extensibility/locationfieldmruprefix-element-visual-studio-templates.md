@@ -1,5 +1,5 @@
 ---
-title: LocationFieldMRUPrefix öğesi (Visual Studio şablonları) | Microsoft Docs
+title: Locationfieldmrupredüzeltmesini öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,18 +14,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d0579a6783debf261290538e3f3346640d58e415
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194429"
 ---
 # <a name="locationfieldmruprefix-element-visual-studio-templates"></a>LocationFieldMRUPrefix Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-En son kullanılan (MRU) yollarında belirtir **yeni proje** ve **Yeni Öğe Ekle** iletişim kutusu.  
+**Yeni proje** ve **Yeni öğe Ekle** iletişim kutusunda en son kullanılan (MRU) yolları belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <LocationFieldMRUPrefix> ... </LocationFieldMRUPrefix>  
@@ -44,10 +44,10 @@ En son kullanılan (MRU) yollarında belirtir **yeni proje** ve **Yeni Öğe Ekl
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe yalnızca aracılığıyla oluşturulan şablonlarını için kullanılması gereken [!INCLUDE[vsipprvsip](../includes/vsipprvsip-md.md)].  
+ Bu öğe yalnızca aracılığıyla oluşturulan şablonlar için kullanılmalıdır [!INCLUDE[vsipprvsip](../includes/vsipprvsip-md.md)] .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)   

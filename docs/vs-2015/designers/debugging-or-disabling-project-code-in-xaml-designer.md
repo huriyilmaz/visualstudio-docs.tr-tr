@@ -10,10 +10,10 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: e7de0b3985e09f61fd0c63d1764304b150503883
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657927"
 ---
 # <a name="debugging-or-disabling-project-code-in-xaml-designer"></a>XAML Tasarımcısı'nda Proje Kodu Hatalarını Ayıklama veya Proje Kodunu Devre Dışı Bırakma
@@ -59,7 +59,7 @@ ms.locfileid: "72657927"
 
 6. Visual Studio 'nun yeni örneğinde, menü çubuğunda **Hata Ayıkla**, **İşleme İliştir**' i seçin.
 
-7. **Işleme İliştir** iletişim kutusunda, **kullanılabilir Işlemler** listesinde **xdesproc. exe**' yi seçin ve **Ekle** düğmesini seçin.
+7. **Işleme İliştir** iletişim kutusunda, **kullanılabilir işlemler** listesinde **XDesProc.exe**' yi seçin ve ardından **Ekle** düğmesini seçin.
 
      ![XAML Tasarımcısı işlemi](../designers/media/xaml-attach.png "XAML_Attach")
 

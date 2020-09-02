@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::GetMachineUtilities_V7 | Microsoft Docs
+title: 'IDebugCoreServer2:: GetMachineUtilities_V7 | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,21 +13,21 @@ caps.latest.revision: 18
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 131f5a5f276b3f93d2ede3d088556b6832cc3651
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63445281"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64831173"
 ---
-# <a name="idebugcoreserver2getmachineutilitiesv7"></a>IDebugCoreServer2::GetMachineUtilities_V7
+# <a name="idebugcoreserver2getmachineutilities_v7"></a>IDebugCoreServer2::GetMachineUtilities_V7
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem, bir sunucu için makine yardımcı programları alır.  
+Bu yöntem, bir sunucu için makine yardımcı programlarını alır.  
   
 > [!NOTE]
-> Bu yöntem artık kullanılmıyor: kullanmayın ([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] her zaman döndürür `E_NOTIMPL` bu yöntemi çağrılırsa). Bu, geçmiş nedenlerle korunur.  
+> Bu yöntem artık kullanılmıyor: kullanmayın ( [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] `E_NOTIMPL` Bu yöntem çağrılırsa her zaman döner). Bu, geçmiş nedenlerle tutulur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetMachineUtilities_V7(  
@@ -43,13 +43,13 @@ int GetMachineUtilities_V7(
   
 #### <a name="parameters"></a>Parametreler  
  `ppUtil`  
- [out] Döndürür bir `IDebugMDMUtil2_V7` makine yardımcı programları bilgilerini temsil eden arabirim.  
+ dışı `IDebugMDMUtil2_V7` Makine yardımcı programları bilgilerini temsil eden bir arabirim döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Her zaman döndürür `E_NOTIMPL`, belirten yöntem uygulanmadı.  
+ Her zaman `E_NOTIMPL` , yöntemin uygulanmadığını belirten ' i döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] her zaman döndürür `E_NOTIMPL` varsa, bu yöntem çağrılır.  
+ [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]`E_NOTIMPL`Bu yöntem çağrılırsa her zaman döndürülür.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

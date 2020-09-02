@@ -1,5 +1,5 @@
 ---
-title: Menus öğesi | Microsoft Docs
+title: Menüler öğesi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 10e4a865774798792a386a4736058b0a5068db85
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194248"
 ---
 # <a name="menus-element"></a>Menus Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Tüm bir VSPackage'ı uygulayan araç çubukları ve menüler tanımlar.  
+VSPackage 'ın uyguladığı tüm menüleri ve araç çubuklarını tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Menus>  
@@ -39,20 +39,20 @@ Tüm bir VSPackage'ı uygulayan araç çubukları ve menüler tanımlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Menus Öğesi](../extensibility/menus-element.md)|Tüm bir VSPackage'ı uygulayan araç çubukları ve menüler tanımlar.|  
+|[Menus Öğesi](../extensibility/menus-element.md)|VSPackage 'ın uyguladığı tüm menüleri ve araç çubuklarını tanımlar.|  
 |[Menu Öğesi](../extensibility/menu-element.md)|Tek bir menü veya araç çubuğunu temsil eder.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[Commands Öğesi](../extensibility/commands-element.md)|VSPackage'ı komutlarında koleksiyonunu temsil eder.|  
+|[Commands öğesi](../extensibility/commands-element.md)|VSPackage içindeki komutların koleksiyonunu temsil eder.|  
   
 ## <a name="example"></a>Örnek  
   
@@ -80,5 +80,5 @@ Tüm bir VSPackage'ı uygulayan araç çubukları ve menüler tanımlar.
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [VSPackage kullanıcı arabirimi öğelerini nasıl eklenir](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+ [VSPackages Kullanıcı arabirimi öğeleri ekleme](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [Komutlar, Menüler ve Araç Çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

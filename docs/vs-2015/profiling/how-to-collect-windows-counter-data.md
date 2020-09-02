@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Windows sayaç verileri toplama | Microsoft Docs'
+title: 'Nasıl yapılır: Windows sayaç verilerini toplama | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -17,43 +17,43 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 9743fa7defbbf3321636d2ba4799454713a647db
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63432776"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64836781"
 ---
-# <a name="how-to-collect-windows-counter-data"></a>Nasıl yapılır: Windows sayaç verileri toplama
+# <a name="how-to-collect-windows-counter-data"></a>Nasıl yapılır: Windows Sayaç Verileri Toplama
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Windows sayaçları profil oluşturma sırasında belirlenen aralıklarla toplanabilecek sistem performans sayaçları ' dir. Profil oluşturma araçları rapor işaretler görünümünde bir satır olarak etiketlenmiş **AutoMark** her koleksiyon aralığı. Satır o aralıkta performans sayaç değerlerini tanımlayan sütun içerir. Analizi iki belirli işaret arasındaki zaman dilimiyle sınırlamak için işaretleri, sağ tıklayın ve ardından seçin **filtre tarafından** ->  **işaretleri** kısayol menüsünden.  
+Windows sayaçları, profil oluşturma sırasında ayarlanan aralıklarda toplanabilecek sistem performans sayaçlarıdır. Profil Oluşturma Araçları raporun Işaretler görünümünde, bir satır her koleksiyon aralığı için **otomatik işaret** olarak etiketlenir. Satırda, bu aralıkta performans sayacı değerlerini tanımlayan sütunlar bulunur. Çözümlemeyi iki belirli işaret arasındaki bir zaman dilimi ile sınırlamak için, işaretleri seçin, sağ tıklayın ve ardından **Filter By**  ->   kısayol menüsünde**işaretlere** göre filtrele ' yi seçin.  
   
  **Gereksinimler**  
   
 - [!INCLUDE[vsUltLong](../includes/vsultlong-md.md)], [!INCLUDE[vsPreLong](../includes/vsprelong-md.md)], [!INCLUDE[vsPro](../includes/vspro-md.md)]  
   
 > [!NOTE]
-> Windows 8 ve Windows Server 2012'deki Gelişmiş güvenlik özellikleri Visual Studio profil oluşturucu bu platformlarda veri toplayan bir şekilde önemli değişiklikler gerekmiştir. Windows Store apps ayrıca yeni toplama teknikleri gerektirir. Bkz: [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+> Windows 8 ve Windows Server 2012 ' deki gelişmiş güvenlik özellikleri, Visual Studio Profiler 'ın bu platformlarda verileri nasıl topladığı konusunda önemli değişiklikler gerektirdi. Windows Mağazası uygulamaları da yeni koleksiyon teknikleri gerektirir. Bkz. [Windows 8 ve Windows Server 2012 uygulamalarında performans araçları](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
   
-### <a name="to-collect-windows-counter-data"></a>Windows sayaç verileri toplamak için  
+### <a name="to-collect-windows-counter-data"></a>Windows sayaç verilerini toplamak için  
   
-1. Performans Gezgini içinde Windows sayaçları yapılandırmak ve seçmek istediğiniz oturumu sağ **özellikleri**.  
+1. Performans Gezgini, Windows sayaçlarını yapılandırmak istediğiniz oturuma sağ tıklayın ve **Özellikler**' i seçin.  
   
-2. İçinde **özellik sayfaları**, tıklayın **Windows sayaçları**.  
+2. **Özellik sayfalarında** **Windows sayaçları**' na tıklayın.  
   
-3. Seçin **Windows sayaçları toplamak** onay kutusu.  
+3. **Windows sayaçlarını topla** onay kutusunu seçin.  
   
-4. İçinde **toplama aralığı (milisaniye)** metin kutusunda, bir zaman aralığı yazın.  
+4. **Koleksiyon aralığı (msecs)** metin kutusuna bir zaman aralığı yazın.  
   
-5. Bir kategori seçin **sayaç kategorisi** aşağı açılan listesi.  
+5. **Sayaç kategorisi** açılan listesinden bir kategori seçin.  
   
-6. Bir örnekten seçin **örneği** aşağı açılan listesi.  
+6. **Örnek** açılır listesinden bir örnek seçin.  
   
-7. Uygulamanızın profilini, kullanmak istediğiniz sayaçları seçin.  
+7. Uygulamanızı profillerinizi oluştururken kullanmak istediğiniz sayaçları seçin.  
   
-8. Tıklayın **uygulayın.**  
+8. Uygula ' ya tıklayın **.**  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Performans oturumlarını yapılandırma](../profiling/configuring-performance-sessions.md)   
- [Performans oturum özellikleri](../profiling/performance-session-properties.md)   
- [CPU ve Windows Sayaçları](../profiling/cpu-and-windows-counters.md)
+ [Performans oturumu özellikleri](../profiling/performance-session-properties.md)   
+ [CPU ve Windows sayaçları](../profiling/cpu-and-windows-counters.md)

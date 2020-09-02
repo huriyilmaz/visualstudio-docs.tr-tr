@@ -1,5 +1,5 @@
 ---
-title: Başlatmadan sonra ekleme | Microsoft Docs
+title: Bir başlatma Işleminden sonra iliştirme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -11,42 +11,42 @@ caps.latest.revision: 15
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 693cf6d746f51862415f2f30e46d48a998047f14
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437429"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64835336"
 ---
 # <a name="attaching-after-a-launch"></a>Başlatmadan Sonra Ekleme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Bir programı başlatan sonra hata ayıklama oturumu için söz konusu program hata ayıklama altyapısı (DE) eklemek hazırdır.  
+Bir program başlatıldıktan sonra, hata ayıklama oturumu, söz konusu programa hata ayıklama altyapısını (DE) eklemeye hazırdır.  
   
-## <a name="design-decisions"></a>Tasarım kararları  
- İletişim paylaşılan adres alanı içinde daha kolay olduğundan, hata ayıklama oturumunu DE arasındaki veya DE ve program arasındaki iletişimi kolaylaştırmak için daha fazla mantıklı olmadığını karar vermeniz gerekir. Aşağıdakiler arasında seçim yapın:  
+## <a name="design-decisions"></a>Tasarım Kararları  
+ İletişim, paylaşılan bir adres alanında daha kolay olduğundan, hata ayıklama oturumu ile DE arasındaki iletişimi kolaylaştırmak için veya ile program arasında daha mantıklı olup olmadığına karar vermelisiniz. Aşağıdakilerden birini seçin:  
   
-- Hata ayıklama oturumunu DE arasındaki iletişimi kolaylaştırmak için daha anlamlı olur, hata ayıklama oturumunu DE birlikte oluşturur ve programa eklemek için DE ister. Bu hata ayıklama oturumu ve DE birlikte bir adres alanı ve çalışma zamanı ortamı ve program başka bir araya bırakır.  
+- Hata ayıklama oturumu ve DE arasındaki iletişimi kolaylaştırmak için daha mantıklı bir fikir varsa, hata ayıklama oturumu birlikte oluşturur ve bunu programa iliştirmesini ister. Bu, hata ayıklama oturumunu ve bir adres alanında birlikte, aynı zamanda çalışma zamanı ortamı ve program ile birlikte bir arada bırakır.  
   
-- Ardından DE ve program arasındaki iletişimi kolaylaştırmak için daha anlamlı olur, çalışma zamanı ortamı birlikte DE oluşturur. SDM bir adres alanında ve DE, çalışma zamanı ortamı ve program başka bir araya bırakır. Tipik bir komut dosyası dilleri çalıştırmak için yorumlayıcıyı ile uygulanan bir DE budur.  
+- Ayrıca, ve programı arasındaki iletişimi kolaylaştırmak için daha anlamlı olursa çalışma zamanı ortamı da birlikte oluşturur. Bu, SDM 'yi bir adres alanında ve DE, çalışma zamanı ortamında ve programda birlikte bir arada bırakır. Bu, komut dosyalı dilleri çalıştırmak için bir yorumlayıcıyla uygulanan bir DE tipik bir davranıştır.  
   
     > [!NOTE]
-    > Ne DE programına iliştirir uygulamaya bağlıdır. KODU ve program arasındaki iletişimi de uygulamaya bağlıdır.  
+    > Program ne iliştirir uygulamaya bağımlıdır. De ve program arasındaki iletişim uygulamaya bağımlıdır.  
   
 ## <a name="implementation"></a>Uygulama  
- Programlı olarak oturum hata ayıklama Yöneticisi (SDM) ilk kez aldığında [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) başlatılacak programı temsil eden bir nesne çağırır [iliştirme](../../extensibility/debugger/reference/idebugprogram2-attach.md) iletmeden yöntemi, bir [ IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) sonraki nesne kullanılan geri SDM için hata ayıklama olaylarını geçirilecek. `IDebugProgram2::Attach` Sonra yöntemi çağırır [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) yöntemi. SDM nasıl alan hakkında daha fazla bilgi için `IDebugProgram2` arabirim için bkz: [bağlantı noktasına bildirme](../../extensibility/debugger/notifying-the-port.md).  
+ Programlı olarak, oturum hata ayıklama Yöneticisi (SDM), başlatılacak programı temsil eden [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md) nesnesini ilk kez aldığında, [Attach](../../extensibility/debugger/reference/idebugprogram2-attach.md) yöntemini çağırır ve daha sonra hata ayıklama olaylarını SDM 'ye geri geçirmek için kullanılan bir [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md) nesnesi iletir. `IDebugProgram2::Attach`Yöntemi daha sonra [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md) yöntemini çağırır. SDM 'nin arabirimi nasıl aldığı hakkında daha fazla bilgi için `IDebugProgram2` bkz. [bağlantı noktasına bildirme](../../extensibility/debugger/notifying-the-port.md).  
   
- Sizin DE, genellikle DE bir betik çalıştırarak yorumlayıcıyı bir parçası olduğundan hata ayıklanan programa aynı adres alanında çalıştırması gerekiyorsa `IDebugProgramNodeAttach2::OnAttach` yöntemi döndürür `S_FALSE`, attach işleminin tamamlandığını belirten.  
+ Ayrıca, hata ayıklamakta olan programla aynı adres alanında çalıştırılması gerekiyorsa, bu, genellikle bir betiği çalıştıran bir yorumlayıcının parçası olduğundan, `IDebugProgramNodeAttach2::OnAttach` yöntemi, `S_FALSE` Attach işlemini tamamladığını belirten olarak döner.  
   
- DE SDM adres alanında çalıştırıyorsa, diğer taraftan, `IDebugProgramNodeAttach2::OnAttach` yöntemi döndürür `S_OK` veya [IDebugProgramNodeAttach2](../../extensibility/debugger/reference/idebugprogramnodeattach2.md) arabirimi hiç üzerinde uygulanmadı [IDebugProgramNode2 ](../../extensibility/debugger/reference/idebugprogramnode2.md) ayıklanan programla ilişkili nesne. Bu durumda, [iliştirme](../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemi iliştirme işlemi tamamlamak için sonunda çağrılır.  
+ Öte yandan, diğer taraftan, SDM 'nin adres alanında da çalışıyorsa, `IDebugProgramNodeAttach2::OnAttach` yöntemi, `S_OK` [IDebugProgramNodeAttach2](../../extensibility/debugger/reference/idebugprogramnodeattach2.md) arabirimi, hata ayıklanan programla ilişkili [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) nesnesi üzerinde uygulanmaz. Bu durumda, [Attach yöntemi sonunda iliştirme işlemini](../../extensibility/debugger/reference/idebugengine2-attach.md) tamamlayacak şekilde çağırılır.  
   
- İkinci durumda, çağırmanız gerekir [GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) metodunda `IDebugProgram2` geçildi nesne `IDebugEngine2::Attach` yöntemi, depolama `GUID` yerel programı nesne ve bu dönüş `GUID` olduğunda `IDebugProgram2::GetProgramId` yöntemi daha sonra bu nesne üzerinde çağrılır. `GUID` Programın çeşitli hata ayıklama bileşenleri arasında benzersiz olarak tanımlamak için kullanılır.  
+ İkinci durumda, yöntemine geçirilen nesnede [GetProgramId](../../extensibility/debugger/reference/idebugprogram2-getprogramid.md) yöntemini çağırmanız `IDebugProgram2` `IDebugEngine2::Attach` , `GUID` Yerel program nesnesi içinde saklamanız ve `GUID` `IDebugProgram2::GetProgramId` yöntemi bu nesne üzerinde çağrıldığında bu işlemi geri döndürmelidir. , `GUID` Programı çeşitli hata ayıklama bileşenlerinde benzersiz bir şekilde tanımlamak için kullanılır.  
   
- Durumunda, dikkat `IDebugProgramNodeAttach2::OnAttach` döndüren yöntem `S_FALSE`, `GUID` programını kullanmak için bu yönteme geçirilen ve bu `IDebugProgramNodeAttach2::OnAttach` ayarlar yönteminin `GUID` yerel program nesne üzerinde.  
+ `IDebugProgramNodeAttach2::OnAttach`Döndürülen yöntemin, `S_FALSE` `GUID` program için kullanım için bu yönteme geçtiğini ve `IDebugProgramNodeAttach2::OnAttach` `GUID` Yerel program nesnesinde ayarlayan yöntemi olduğunu unutmayın.  
   
- DE artık program ve herhangi bir başlangıç olayı göndermek hazır olarak eklenir.  
+ DE artık programa iliştirilir ve başlangıç olayları gönderilmeye hazırdır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Doğrudan programa ekleme](../../extensibility/debugger/attaching-directly-to-a-program.md)   
+ [Doğrudan bir programa iliştirme](../../extensibility/debugger/attaching-directly-to-a-program.md)   
  [Bağlantı noktasına bildirme](../../extensibility/debugger/notifying-the-port.md)   
  [Hata ayıklama görevleri](../../extensibility/debugger/debugging-tasks.md)   
  [IDebugEventCallback2](../../extensibility/debugger/reference/idebugeventcallback2.md)   
@@ -56,4 +56,4 @@ Bir programı başlatan sonra hata ayıklama oturumu için söz konusu program h
  [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [IDebugProgramNodeAttach2](../../extensibility/debugger/reference/idebugprogramnodeattach2.md)   
  [OnAttach](../../extensibility/debugger/reference/idebugprogramnodeattach2-onattach.md)   
- [Attach](../../extensibility/debugger/reference/idebugengine2-attach.md)
+ [İliştir](../../extensibility/debugger/reference/idebugengine2-attach.md)

@@ -10,13 +10,13 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: c099839cda87819ec0ec7932c2b2e6aa7698fa52
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72670879"
 ---
-# <a name="how-to-edit-xml-files"></a>Nasıl yapılır: XML dosyalarını düzenleme
+# <a name="how-to-edit-xml-files"></a>Nasıl Yapılır: XML Dosyalarını Düzenleme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
 XML Düzenleyicisi, XML dosyaları için yeni düzenleyicidir. Tek başına bir XML dosyasında veya Visual Studio projesiyle ilişkili bir dosyada kullanılabilir. XML Düzenleyicisi şu dosya uzantılarıyla ilişkili:. config,. dtd,. xml,. xsd,. xdr,. Xsl,. XSLT ve. vssettings. XML Düzenleyicisi Ayrıca, kayıtlı belirli bir düzenleyici bulunmayan ve XML veya DTD içeriği içeren başka herhangi bir dosya türü ile ilişkilendirilir.
@@ -36,7 +36,7 @@ XML Düzenleyicisi, XML dosyaları için yeni düzenleyicidir. Tek başına bir 
 
 3. **Ad** alanına dosya adını girin ve **Ekle**' ye basın.
 
-     XML dosyası projeye eklenir ve XML düzenleyicisinde açılır. Dosya, `<?xml version="1.0" encoding="utf-8" ?>` varsayılan XML bildirimini içerir.
+     XML dosyası projeye eklenir ve XML düzenleyicisinde açılır. Dosya varsayılan XML bildirimini içerir, `<?xml version="1.0" encoding="utf-8" ?>` .
 
 ### <a name="to-add-an-existing-xml-file-to-a-project"></a>Bir projeye var olan bir XML dosyasını eklemek için
 
@@ -54,13 +54,13 @@ XML Düzenleyicisi, XML dosyaları için yeni düzenleyicidir. Tek başına bir 
 
 2. Yeni bir XML dosyası oluşturmak için **XML dosyasını** seçin; veya yeni bir XSLT stil sayfası oluşturmak için **XSLT dosyası** ' nı seçin.
 
-3. **Aç**' a tıklayın.
+3. **Aç**’a tıklayın.
 
 ### <a name="to-create-a-project-for-xml-files"></a>XML dosyaları için bir proje oluşturmak için
 
 1. **Dosya** menüsünde **Yeni**' yi ve ardından **Proje**' yi seçin.
 
-     **Yeni proje** iletişim kutusu görüntülenir.
+     **Yeni Proje** iletişim kutusu görünür.
 
 2. Seçtiğiniz kod dilini seçin, **boş proje**' yi seçin ve **Tamam**' ı tıklatın.
 

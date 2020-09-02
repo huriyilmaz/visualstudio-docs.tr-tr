@@ -23,10 +23,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: db6d4e8bc5b2f09194e03bbadc8f49b773d24f1e
-ms.sourcegitcommit: a77158415da04e9bb8b33c332f6cca8f14c08f8c
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "86386959"
 ---
 # <a name="dump-files-in-the-visual-studio-debugger"></a>Visual Studio hata ayıklayıcısındaki döküm dosyaları
@@ -39,7 +39,7 @@ Dökümler genellikle geliştiricilerin erişimi olmayan makinelerden gelen soru
 
 Visual Studio hata ayıklayıcı, yönetilen veya yerel kod için döküm dosyaları kaydedebilir. Visual Studio veya dosyaları *mini döküm* biçiminde kaydettiğinizde diğer uygulamalar tarafından oluşturulan döküm dosyalarının hatalarını ayıklayabilirler.
 
-## <a name="requirements-and-limitations"></a><a name="BKMK_Requirements_and_limitations"></a>Gereksinimler ve sınırlamalar
+## <a name="requirements-and-limitations"></a><a name="BKMK_Requirements_and_limitations"></a> Gereksinimler ve sınırlamalar
 
 - 64 bitlik makinelerden alınan döküm dosyalarında hata ayıklamak için, Visual Studio 'Nun 64 bit bir makinede çalışıyor olması gerekir.
 
@@ -51,7 +51,7 @@ Visual Studio hata ayıklayıcı, yönetilen veya yerel kod için döküm dosyal
 
 - En iyi duruma getirilmiş kodun döküm dosyalarının hatalarının ayıklanması kafa karıştırıcı olabilir. Örneğin, işlevlerin derleyici girişi beklenmeyen çağrı yığınlarıyla sonuçlanabilir ve diğer iyileştirmeler değişkenlerin ömrünü değiştirebilir.
 
-## <a name="dump-files-with-or-without-heaps"></a><a name="BKMK_Dump_files__with_or_without_heaps"></a>Heap 'ler içeren veya içermeyen döküm dosyaları
+## <a name="dump-files-with-or-without-heaps"></a><a name="BKMK_Dump_files__with_or_without_heaps"></a> Heap 'ler içeren veya içermeyen döküm dosyaları
 
 Döküm dosyalarının yığın bilgisi olabilir veya olmayabilir.
 
@@ -59,7 +59,7 @@ Döküm dosyalarının yığın bilgisi olabilir veya olmayabilir.
 
 - **Heap Içermeyen döküm dosyaları** , Heap 'ler dökümlerinden çok daha küçüktür, ancak hata ayıklayıcının sembol bilgilerini bulmak için uygulama ikili dosyalarını yüklemesi gerekir. Yüklenen ikili dosyalar, döküm oluşturma sırasında çalışan olanlarla tam olarak eşleşmelidir. Boap içermeyen döküm dosyaları yalnızca yığın değişkenlerinin değerlerini kaydeder.
 
-## <a name="create-a-dump-file"></a><a name="BKMK_Create_a_dump_file"></a>Döküm dosyası oluşturma
+## <a name="create-a-dump-file"></a><a name="BKMK_Create_a_dump_file"></a> Döküm dosyası oluşturma
 
 Visual Studio 'da bir işlemde hata ayıklarken, hata ayıklayıcı bir özel durumla veya kesme noktasında durdurulduğunda bir döküm kaydedebilirsiniz.
 
@@ -76,7 +76,7 @@ Visual Studio 'da bir işlemde hata ayıklarken, hata ayıklayıcı bir özel du
 >[!NOTE]
 >Windows mini döküm biçimini destekleyen herhangi bir programla döküm dosyaları oluşturabilirsiniz. Örneğin, [Windows Sysinternals](https://technet.microsoft.com/sysinternals/default) 'Daki **ProcDump** komut satırı yardımcı programı, tetikleyicilere veya isteğe bağlı olarak işlem kilitlenme döküm dosyaları oluşturabilir. Döküm dosyalarını oluşturmak için diğer araçları kullanma hakkında bilgi için bkz. [gereksinimler ve sınırlamalar](../debugger/using-dump-files.md#BKMK_Requirements_and_limitations) .
 
-## <a name="open-a-dump-file"></a><a name="BKMK_Open_a_dump_file"></a>Bir döküm dosyası açın
+## <a name="open-a-dump-file"></a><a name="BKMK_Open_a_dump_file"></a> Bir döküm dosyası açın
 
 1. Visual Studio 'da **Dosya**  >  **Aç**  >  **Dosya**' yı seçin.
 
@@ -90,7 +90,7 @@ Visual Studio 'da bir işlemde hata ayıklarken, hata ayıklayıcı bir özel du
    - Sembol yükleme konumlarını ayarlamak için **sembol yollarını ayarla**' yı seçin.
    - Hata ayıklamayı başlatmak için, **yalnızca yönetilen Ile hata**Ayıkla, **yalnızca yerel ile**Hata Ayıkla, **karma Ile**hata ayıklama veya **yönetilen bellekle hata ayıklama**seçeneğini belirleyin.
 
-## <a name="find-exe-pdb-and-source-files"></a><a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a>. Exe,. pdb ve kaynak dosyalarını bul
+## <a name="find-exe-pdb-and-source-files"></a><a name="BKMK_Find_binaries__symbol___pdb__files__and_source_files"></a> . Exe,. pdb ve kaynak dosyalarını bul
 
 Bir döküm dosyasında tam hata ayıklama özelliklerini kullanmak için, Visual Studio şunları gerektirir:
 

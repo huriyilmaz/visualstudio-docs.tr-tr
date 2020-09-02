@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetReference | Microsoft Docs
+title: 'IDebugProperty2:: GetReference | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,10 +13,10 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 73f6bb556c3f18c8327985ac7c46b77a3a6d2c01
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193476"
 ---
 # <a name="idebugproperty2getreference"></a>IDebugProperty2::GetReference
@@ -24,7 +24,7 @@ ms.locfileid: "68193476"
 
 Özelliğin değerine bir başvuru döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT GetReference(  
@@ -40,10 +40,10 @@ int GetReference(
   
 #### <a name="parameters"></a>Parametreler  
  `ppRererence`  
- [out] Döndürür bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) özelliğinin değeri için bir başvuruyu temsil eden nesne.  
+ dışı Özelliğin değerine bir başvuruyu temsil eden bir [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) nesnesi döndürür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde, genellikle bir hata kodu döndürür `E_NOTIMPL` veya `E_GETREFERENCE_NO_REFERENCE`.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, genellikle veya bir hata kodu `E_NOTIMPL` döndürür `E_GETREFERENCE_NO_REFERENCE` .  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

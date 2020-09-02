@@ -23,65 +23,65 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 3c29bd6a58d510d98f2a08c96d0cd0bc774e197e
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65679989"
 ---
 # <a name="localizing-clickonce-applications"></a>ClickOnce Uygulamalarını Yerelleştirme
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Yerelleştirme, uygulamanızın belirli bir kültür için uygun hale getirme işlemidir. Bu işlem, kullanıcı arabirimi (UI) metni doğru tarih ve para birimi biçimlendirme, bir form üzerinde denetimleri boyutunu ayarlama kullanarak bir bölgeye özgü dile çevirme içerir ve gerekirse yansıtma denetimleri sağdan sola.  
+Yerelleştirme, uygulamanızı belirli bir kültür için uygun hale getirme işlemidir. Bu işlem, Kullanıcı arabirimi (UI) metnini bölgeye özgü bir dile çevirmeyi, doğru tarih ve para birimi biçimlendirmesini kullanarak, form üzerindeki denetimlerin boyutunu ayarlamayı ve gerekirse denetimleri sağdan sola yansıtmayı içerir.  
   
- Bir veya daha fazla uydu derlemeleri oluşturma uygulama sonuçlarınızda yerelleştirme. Her derleme, kullanıcı Arabirimi dizeleri, resimler ve diğer kaynakları belirli bir kültüre özgü içerir. (Uygulamanızın ana yürütülebilir dosyanın uygulamanız için varsayılan kültürü dizeleri içerir.)  
+ Uygulamanızı yerelleştirme bir veya daha fazla uydu derlemesi oluşturulmasına neden olur. Her derleme, Kullanıcı arabirimi dizelerini, görüntüleri ve belirli bir kültüre özgü diğer kaynakları içerir. (Uygulamanızın ana yürütülebilir dosyası, uygulamanız için varsayılan kültüre yönelik dizeleri içerir.)  
   
- Bu konuda dağıtmak için üç yol açıklar bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] diğer kültürler için uygulama:  
+ Bu konuda, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] diğer kültürler için bir uygulamayı dağıtmanın üç yolu açıklanmaktadır:  
   
-- Tek bir dağıtımda tüm uydu derlemelerini içerir.  
+- Tüm uydu derlemelerini tek bir dağıtıma dahil edin.  
   
-- Her bulunan tek bir uydu derlemesi ile her bir kültür için bir dağıtım oluşturun.  
+- Her kültür için, her birine dahil olan tek bir uydu derlemesi ile bir dağıtım oluşturun.  
   
-- Uydu derlemelerini indirme.  
+- Uydu derlemelerini isteğe bağlı olarak indirin.  
   
-## <a name="including-all-satellite-assemblies-in-a-deployment"></a>Tüm uydu derlemelerin bir dağıtımda  
- Yayımlama birden çok yerine [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtımlarında, tek bir yayımlayabilirsiniz [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] tüm uydu derlemelerini içeren dağıtım.  
+## <a name="including-all-satellite-assemblies-in-a-deployment"></a>Tüm uydu derlemelerini bir dağıtıma dahil etme  
+ Birden çok dağıtımı yayımlamak yerine [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] Tüm uydu derlemelerini içeren tek bir dağıtım yayımlayabilirsiniz.  
   
- Varsayılan olarak bu yöntemdir [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. İçinde bu yöntemi kullanmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], ek bir iş yapmanız gerekmez.  
+ Bu yöntem, içindeki varsayılandır [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Bu yöntemi içinde kullanmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ek bir iş yapmanız gerekmez.  
   
- Bu yöntem MageUI.exe ile kullanmak için kültür uygulamanız için ayarlamalısınız **nötr** MageUI.exe içinde. Ardından, el ile tüm uydu derlemeler, dağıtımınızdaki eklemeniz gerekir. MageUI.exe, uydu derlemelerini kullanarak ekleyebilirsiniz **Doldur** düğmesini **dosyaları** uygulama bildiriminizin sekmesi.  
+ Bu yöntemi MageUI.exe kullanmak için, uygulamanız için kültürü MageUI.exe **bağımsız** olarak ayarlamanız gerekir. Ardından, tüm uydu derlemelerini dağıtımınıza el ile eklemeniz gerekir. MageUI.exe, uygulama bildiriminizde **dosyalar** sekmesindeki **doldur** düğmesini kullanarak uydu derlemelerini ekleyebilirsiniz.  
   
- Bu yaklaşımın avantajı, tek bir dağıtımı oluşturur ve yerelleştirilmiş dağıtım sürecinizi basitleştirir içindir. Çalışma zamanında, uygun bir uydu derlemesini, kullanıcının Windows işletim sistemine bağlı olarak kullanılan varsayılan kültürü kullanılır. Bu yaklaşımın bir dezavantajı, uygulama yüklendiğinde veya güncelleştirildiğinde bir istemci bilgisayar üzerinde olduğunda, tüm uydu derlemeleri indirir ' dir. Uygulamanız çok sayıda dizeleri veya müşterilerinizin yavaş ağ bağlantınız varsa bu işlem sırasında uygulama güncelleştirmesi performansını etkileyebilir.  
+ Bu yaklaşımın avantajı, tek bir dağıtım oluşturup yerelleştirilmiş dağıtım hikayenizi basitleştirmesidir. Çalışma zamanında, kullanıcının Windows işletim sisteminin varsayılan kültürüne bağlı olarak uygun uydu derlemesi kullanılacaktır. Bu yaklaşımın bir dezavantajı, uygulama her yüklendiğinde veya bir istemci bilgisayara güncelleştirildiğinde tüm uydu derlemelerini indirmesidir. Uygulamanızda çok sayıda dize varsa veya müşterilerinizin yavaş bir ağ bağlantısı varsa, bu işlem uygulama güncelleştirmesi sırasında performansı etkileyebilir.  
   
 > [!NOTE]
-> Bu yaklaşım, uygulamanızın yüksekliğini, genişliğini ve farklı kültürler farklı bir metin dizesi boyutlarının otomatik olarak uyum sağlayacak şekilde denetimleri konumunu ayarlar varsayar. Windows Forms denetimleri ve kolayca yerelleştirilebilir dahil olmak üzere bir form Tasarım olanak tanıyan teknolojileri çeşitli içeren <xref:System.Windows.Forms.FlowLayoutPanel> ve <xref:System.Windows.Forms.TableLayoutPanel> denetimlerin yanı sıra <xref:System.Windows.Forms.Control.AutoSize%2A> özelliği.  Ayrıca bkz: [nasıl yapılır: AutoSize ve TableLayoutPanel denetimini kullanarak Windows Forms'ta yerelleştirmeyi destekleme](https://msdn.microsoft.com/library/1zkt8b33\(v=vs.110\)).  
+> Bu yaklaşım, uygulamanızın farklı kültürlerde farklı metin dizesi boyutlarına uyum sağlamak üzere denetimlerin yüksekliğini, genişliğini ve konumunu otomatik olarak ayarladığını varsayar. Windows Forms, formunuzu <xref:System.Windows.Forms.FlowLayoutPanel> ve denetimleri ve özelliği de dahil olmak üzere kolayca yerelleştirilebilir hale getirmek için formunuzun tasarımını sağlayan çeşitli denetimler ve teknolojiler içerir <xref:System.Windows.Forms.TableLayoutPanel> <xref:System.Windows.Forms.Control.AutoSize%2A> .  Ayrıca bkz. [nasıl yapılır: AutoSize ve TableLayoutPanel denetimini kullanarak Windows Forms yerelleştirmeyi destekleme](https://msdn.microsoft.com/library/1zkt8b33\(v=vs.110\)).  
   
-## <a name="generate-one-deployment-for-each-culture"></a>Her bir kültür için bir dağıtım oluşturun  
- Bu dağıtım stratejisini içinde birden çok dağıtım oluşturun. Her dağıtımda, yalnızca belirli bir kültür için gereken uydu derleme içerir ve dağıtım kültüre özgü olarak işaretleyin.  
+## <a name="generate-one-deployment-for-each-culture"></a>Her kültür için bir dağıtım oluştur  
+ Bu dağıtım stratejisinde birden çok dağıtım oluşturursunuz. Her dağıtımda, yalnızca belirli bir kültür için gereken uydu derlemesini dahil edersiniz ve dağıtımı bu kültüre özel olarak işaretlersiniz.  
   
- İçinde bu yöntemi kullanmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ayarlayın **Dili Yayımla** özelliği **Yayımla** istenen bölge için sekmesinde. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bölgeyi seçin ve diğer tüm uydu derlemelerin dağıtımdan hariç gerekli uydu derlemesini otomatik olarak içerir.  
+ Bu yöntemi içinde kullanmak için [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] **Yayımla** sekmesinde **Yayımla dili** özelliğini istenen bölgeye ayarlayın. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , seçtiğiniz bölge için gereken uydu derlemesini otomatik olarak ekler ve diğer tüm uydu derlemelerini dağıtımdan hariç bırakır.  
   
- Microsoft MageUI.exe aracını kullanarak aynı şeyi gerçekleştirebilirsiniz [!INCLUDE[winsdklong](../includes/winsdklong-md.md)]. Kullanım **Doldur** düğmesini **dosyaları** uygulama bildiriminizi uygulama dizininden diğer tüm uydu derlemelerini hariç ve ardından ayarlamak için sekmesinde **kültür**alanına **adı** MageUI.exe, dağıtım bildiriminde için sekmesinde. Bu adımları yalnızca doğru uydu derlemesini içerir, ancak de ayarlar `language` özniteliği `assemblyIdentity` Dağıtım bildiriminizi kültüre karşılık gelen öğe.  
+ Aynı şeyi Microsoft 'taki MageUI.exe aracını kullanarak gerçekleştirebilirsiniz [!INCLUDE[winsdklong](../includes/winsdklong-md.md)] . Uygulama dizininden diğer tüm uydu derlemelerini hariç tutmak için uygulama bildiriminizde bulunan **dosyalar** sekmesindeki **doldur** düğmesini kullanın ve ardından MageUI.exe ' de dağıtım bildiriminiz için **ad** sekmesinde **kültür** alanını ayarlayın. Bu adımlar yalnızca doğru uydu derlemesini içermez, ancak aynı zamanda `language` `assemblyIdentity` dağıtım bildiriminizde öğe üzerindeki özniteliği ilgili kültür olarak ayarlar.  
   
- Uygulamayı yayımladıktan sonra her ek kültür için bu adımı tekrarlamalısınız uygulamanızın desteklediği. Farklı bir Web sunucusu veya dosya paylaşımına her zaman her bir uygulama bildirimi farklı uydu derlemesi başvurur ve her dağıtım bildirimi içinfarklıbirdeğergerekirçünküyayımladığınızdaneminolmanızgerekir`language`özniteliği.  
+ Uygulamayı yayımladıktan sonra, uygulamanızın desteklediği her ek kültür için bu adımı tekrarlamalısınız. Her uygulama bildirimi farklı bir uydu derlemesine başvuracağı ve her dağıtım bildiriminin öznitelik için farklı bir değere sahip olacağı için, her seferinde farklı bir Web sunucusu dizinine veya dosya paylaşma dizinine yayımladığınızdan emin olmanız gerekir `language` .  
   
-## <a name="downloading-satellite-assemblies-on-demand"></a>Uydu derlemelerini indirme  
- Tüm uydu derlemeleri tek bir dağıtımda karar verirseniz, bu sayede derlemeleri isteğe bağlı olarak işaretlemek isteğe bağlı indirme, kullanarak performansı artırabilirsiniz. Uygulama yüklendiğinde veya işaretlenen derlemeler yüklenmeyecektir. Çağırarak gerektiğinde derlemeleri yükleyebilirsiniz <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> metodunda <xref:System.Deployment.Application.ApplicationDeployment> sınıfı.  
+## <a name="downloading-satellite-assemblies-on-demand"></a>Uydu derlemelerini Isteğe bağlı olarak indirme  
+ Tüm uydu derlemelerini tek bir dağıtıma eklemeye karar verirseniz, derlemeleri isteğe bağlı olarak işaretlemenizi sağlayan isteğe bağlı indirmeyi kullanarak performansı artırabilirsiniz. İşaretlenmiş derlemeler, uygulama yüklendiğinde veya güncelleştirilirse indirilmeyecektir. Sınıfı üzerinde yöntemini çağırarak derlemeleri ihtiyacınız olduğunda yükleyebilirsiniz <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> <xref:System.Deployment.Application.ApplicationDeployment> .  
   
- Uydu derlemelerini indirme biraz isteğe bağlı derlemeleri diğer türleri farklıdır. Bu senaryoyu kullanarak etkinleştirme hakkında daha fazla bilgi ve kod örnekleri için [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] araçlarını [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)], bkz: [izlenecek yol: ClickOnce dağıtım API'si ile uydu derlemelerini indirme](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md).  
+ Uydu derlemelerinin isteğe bağlı indirilmesi, istek üzerine diğer derleme türlerinin indirilmekten biraz farklılık gösterir. İçin araçları kullanarak bu senaryonun nasıl etkinleştirileceği hakkında daha fazla bilgi ve kod örnekleri için [!INCLUDE[winsdkshort](../includes/winsdkshort-md.md)] [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] bkz. [Izlenecek yol: ClickOnce dağıtım API 'si Ile Isteğe bağlı uydu derlemelerini indirme](../deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api.md).  
   
- Bu senaryoda da etkinleştirebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  Ayrıca bkz: [izlenecek yol: API tasarımcıyı kullanarak ClickOnce dağıtımı ile uydu derlemelerini indirme](https://msdn.microsoft.com/library/ms366788\(v=vs.110\)) veya [izlenecek yol: API tasarımcıyı kullanarak ClickOnce dağıtımı ile uydu derlemelerini indirme](https://msdn.microsoft.com/library/ms366788\(v=vs.120\)).  
+ Ayrıca, bu senaryoyu ' de etkinleştirebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .  Ayrıca bkz. [Izlenecek yol: Tasarımcıyı kullanarak ClickOnce dağıtım API 'si Ile isteğe bağlı uydu derlemelerini indirme](https://msdn.microsoft.com/library/ms366788\(v=vs.110\)) ve [Tasarımcı kullanarak ClickOnce dağıtım API 'Si Ile uydu derlemelerini indirme](https://msdn.microsoft.com/library/ms366788\(v=vs.120\)).  
   
-## <a name="testing-localized-clickonce-applications-before-deployment"></a>ClickOnce uygulamaları dağıtmadan önce test yerelleştirilmiş  
- Bir Windows Forms uygulaması yalnızca şu durumlarda için bir uydu derlemesine kullanılacak <xref:System.Threading.Thread.CurrentUICulture%2A> özelliği uygulamanın ana iş parçacığı için uydu bütünleştirilmiş kodun kültüre ayarlayın. Yerel bir pazarda müşteri büyük olasılıkla zaten Windows yerelleştirilmiş bir sürümünü kültüre uygun varsayılan olarak ayarlanmış olan çalıştırırsınız.  
+## <a name="testing-localized-clickonce-applications-before-deployment"></a>Dağıtımdan önce yerelleştirilmiş ClickOnce uygulamalarını test etme  
+ Bir uydu derlemesi, yalnızca <xref:System.Threading.Thread.CurrentUICulture%2A> uygulamanın ana iş parçacığının özelliği uydu derlemesinin kültürüne ayarlandıysa Windows Forms bir uygulama için kullanılacaktır. Yerel pazarlardaki müşteriler muhtemelen kültüre uygun varsayılan olarak ayarlanmış bir Windows yerelleştirilmiş sürümünü zaten çalıştırıyor.  
   
- Uygulamanızın müşteriler için kullanılabilir hale getirmeden önce yerelleştirilmiş dağıtımları test etmek için üç seçeneğiniz vardır:  
+ Uygulamanızı müşteriler için kullanılabilir hale gelmeden önce yerelleştirilmiş dağıtımları test etmek için üç seçeneğiniz vardır:  
   
-- Çalıştırabileceğiniz, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygun bir uygulama yerelleştirilmiş Windows sürümleri.  
+- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]Uygulamanızı, Windows 'un uygun yerelleştirilmiş sürümlerinde çalıştırabilirsiniz.  
   
-- Ayarlayabileceğiniz <xref:System.Threading.Thread.CurrentUICulture%2A> program aracılığıyla uygulamanızdaki özelliği. (Bu özelliği çağırmadan önce ayarlanmalıdır <xref:System.Windows.Forms.Application.Run%2A> yöntemi.)  
+- <xref:System.Threading.Thread.CurrentUICulture%2A>Özelliğini uygulamanızda programlı olarak ayarlayabilirsiniz. (Yöntemi çağırabilmeniz için önce bu özelliğin ayarlanması gerekir <xref:System.Windows.Forms.Application.Run%2A> .)  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [\<assemblyIdentity > öğesi](../deployment/assemblyidentity-element-clickonce-deployment.md)   
+ [\<assemblyIdentity> Dosyalarında](../deployment/assemblyidentity-element-clickonce-deployment.md)   
  [ClickOnce güvenliği ve dağıtımı](../deployment/clickonce-security-and-deployment.md)   
- [Windows Forms’u Genelleştirme](https://msdn.microsoft.com/library/72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5)
+ [Windows Formlarını Genelleştirme](https://msdn.microsoft.com/library/72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5)

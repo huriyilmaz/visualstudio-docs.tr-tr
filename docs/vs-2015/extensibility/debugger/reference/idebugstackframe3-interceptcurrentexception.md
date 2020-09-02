@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame3::InterceptCurrentException | Microsoft Docs
+title: 'IDebugStackFrame3:: Yakatcurrentexception | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 42472690431d48a9baafbb0abee27c1a07d24fcd
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63428699"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64858181"
 ---
 # <a name="idebugstackframe3interceptcurrentexception"></a>IDebugStackFrame3::InterceptCurrentException
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Geçerli yığın çerçevesinde hata ayıklayıcı tarafından müdahale geçerli özel durumun istediğinde çağrılır.  
+Geçerli özel durumu ele almak istediğinde geçerli yığın çerçevesinde hata ayıklayıcı tarafından çağırılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT InterceptCurrentException(  
@@ -42,31 +42,31 @@ int InterceptCurrentException(
   
 #### <a name="parameters"></a>Parametreler  
  `dwFlags`  
- [in] Farklı eylemleri belirtir. Şu anda yalnızca [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md) değer `IEA_INTERCEPT` desteklenir ve belirtilmesi gerekir.  
+ 'ndaki Farklı eylemleri belirtir. Şu anda yalnızca [INTERCEPT_EXCEPTION_ACTION](../../../extensibility/debugger/reference/intercept-exception-action.md) değeri `IEA_INTERCEPT` desteklenir ve belirtilmelidir.  
   
  `pqwCookie`  
- [out] Belirli bir özel durum tanımlayan benzersiz bir değerdir.  
+ dışı Belirli bir özel durumu tanımlayan benzersiz değer.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılıysa S_OK döndürür; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa S_OK döndürür; Aksi takdirde, bir hata kodu döndürür.  
   
- En yaygın hata döndürür aşağıda verilmiştir.  
+ En yaygın hata döndürme aşağıda verilmiştir.  
   
 |Hata|Açıklama|  
 |-----------|-----------------|  
-|`E_EXCEPTION_CANNOT_BE_INTERCEPTED`|Geçerli özel durumun müdahale edilebilir.|  
-|`E_EXCEPTION_CANNOT_UNWIND_ABOVE_CALLBACK`|Geçerli yürütme çerçevesi için bir işleyici henüz arandığını edilmemiş.|  
-|`E_INTERCEPT_CURRENT_EXCEPTION_NOT_SUPPORTED`|Bu yöntem, bu çerçeve için desteklenmiyor.|  
+|`E_EXCEPTION_CANNOT_BE_INTERCEPTED`|Geçerli özel durum yakalanamıyor.|  
+|`E_EXCEPTION_CANNOT_UNWIND_ABOVE_CALLBACK`|Geçerli yürütme çerçevesi henüz bir işleyici için aranmadı.|  
+|`E_INTERCEPT_CURRENT_EXCEPTION_NOT_SUPPORTED`|Bu yöntem bu çerçeve için desteklenmiyor.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir özel durum oluştuğunda, hata ayıklayıcı özel durum işleme işlemi sırasında önemli noktaları çalışma zamanında denetiminden kazanır. Bu anahtar dakika hata ayıklayıcı çerçeve özel durum ıntercept isteyip istemediğini geçerli yığın çerçevesi sorabilirsiniz. Bu yığın çerçevesi (örneğin, bir try/catch bloğu program kodu içinde) özel durum işleyicisi almasa bile bu şekilde, aslında bir yığın çerçevesi için üzerinde halindeyken özel durum işleyicisi bir ilerlemesinden özel durumdur.  
+ Bir özel durum oluştuğunda, hata ayıklayıcı özel durum işleme işlemi sırasında anahtar noktalarında çalışma zamanından denetim kazanır. Bu önemli süre boyunca, çerçeve özel durumu ele almak isterse, hata ayıklayıcı geçerli yığın çerçevesini sorabilir. Bu şekilde, bir yığın çerçevesinin bir özel durum işleyicisi (örneğin, program kodunda bir try/catch bloğu) olmasa bile, ele geçirilebilecek bir özel durum aslında bir yığın çerçevesi için hareket halindeyken özel durum işleyicisidir.  
   
- Hata ayıklayıcı özel durum kesildi bilmek istediğinde, geçerli yığın çerçevesi nesne üzerinde bu yöntemi çağırır. Bu yöntem, özel durumun tüm ayrıntıları işlenmesinden sorumludur. Varsa [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md) arabirimi uygulanmadı veya `InterceptStackException` yöntemi herhangi bir hata döndürür ve hata ayıklayıcı özel durum normal işleme devam eder.  
+ Hata ayıklayıcı, özel durumun yakalanmak gerekip gerekmediğini bilmek istediğinde, geçerli yığın çerçeve nesnesi üzerinde bu yöntemi çağırır. Bu yöntem, özel durumun tüm ayrıntılarını işlemekten sorumludur. [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md) arabirimi uygulanmayabilir veya `InterceptStackException` Yöntem herhangi bir hata döndürürse, hata ayıklayıcı normal olarak özel durumu işlemeye devam eder.  
   
 > [!NOTE]
-> Ayıklanan programın çalışma zamanı .NET altında çalışırken özel durum diğer bir deyişle, yalnızca yönetilen kodda geçirilebilir. Elbette, üçüncü taraf dil uygulayıcılar uygulayabilirsiniz `InterceptStackException` , bu nedenle seçerseniz, kendi hata ayıklama altyapısı.  
+> Özel durumlar yalnızca yönetilen kodda yakalanabilir, diğer bir deyişle, hata Ayıklanan program .NET çalışma zamanı altında çalışmaktadır. Tabii ki, üçüncü taraf dil uygulayıcıları, `InterceptStackException` seçseler kendi hata ayıklama altyapılarında uygulanabilir.  
   
- Durdurma işlemi tamamlandıktan sonra bir [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) işareti verilen.  
+ Yakalaşmayı tamamladıktan sonra bir [IDebugInterceptExceptionCompleteEvent2](../../../extensibility/debugger/reference/idebuginterceptexceptioncompleteevent2.md) sinyali verilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)   

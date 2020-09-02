@@ -12,18 +12,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 9e736343212c4bf6acd833f5740b996c6c032c3f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439813"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64825157"
 ---
-# <a name="isolated-shell-entry-point-parameters-c"></a>Yalıtılmış Kabuk giriş noktası parametreleri (C++)
+# <a name="isolated-shell-entry-point-parameters-c"></a>Yalıtılmış Kabuk Giriş Noktası Parametreleri (C++)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Visual Studio shell tabanlı bir uygulama başladığında Visual Studio Kabuğu başlangıç giriş noktası çağırır. Aşağıdaki ayarlar, kabuk başlangıç giriş noktası çağrısında kılınabilir. Her ayarın bir açıklaması için bkz: [. Pkgdef dosyaları](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md).  
+Visual Studio Shell tabanlı bir uygulama başlatıldığında, Visual Studio Kabuğu 'nun başlangıç giriş noktasını çağırır. Aşağıdaki ayarlar, kabuğun başlangıç giriş noktası çağrısında geçersiz kılınabilir. Her ayarın açıklaması için bkz [.. Pkgdef dosyaları](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md).  
   
-- AddinsAllowed  
+- Addınsallowed  
   
 - AllowsDroppedFilesOnMainWindow  
   
@@ -43,45 +43,45 @@ Visual Studio shell tabanlı bir uygulama başladığında Visual Studio Kabuğu
   
 - HideMiscellaneousFilesByDefault  
   
-- HideSolutionConcept  
+- Hidesolutionkavram  
   
-- NewProjDlgInstalledTemplatesHdr  
+- Newprojdlınstalınstaltemplateshdr  
   
-- NewProjDlgSlnTreeNodeTitle  
+- Newprojdlslntreenodetitle  
   
 - SolutionFileCreatorIdentifier  
   
 - SolutionFileExt  
   
-- UserFilesSubFolderName  
+- Userfilesalt KlasörAdı  
   
 - UserOptsFileExt  
   
-  Visual Studio Kabuğu yalıtılmış şablona bir kaynak dosyası oluşturur *solutionName*.cpp, burada *solutionName* uygulama için çözüm adı. Bu dosya _tWinMain işlevi uygulamanın ana giriş noktasını tanımlar. Bu işlev, kabuk başlangıç giriş noktası çağırır.  
+  Visual Studio Kabuğu yalıtılmış şablonu *, SolutionName. cpp*adlı bir kaynak dosyası oluşturur, burada *SolutionName* uygulamanın çözüm adıdır. Bu dosya, uygulama için ana giriş noktasını tanımlar, _tWinMain işlevi. Bu işlev, kabuğun başlangıç giriş noktasını çağırır.  
   
-  Uygulama davranışını, uygulama başlatıldığında, bu ayarları değiştirerek değiştirebilirsiniz.  
+  Uygulamanın başlatıldığı zaman bu ayarları değiştirerek uygulamanın davranışını değiştirebilirsiniz.  
   
 ## <a name="parameters"></a>Parametreler  
- Visual Studio Kabuğu başlangıç giriş noktası beş parametreleri tanımlar. İlk dört parametre değiştirmeyin. Beşinci parametrenin ayarları geçersiz kılma listesini alır. Kabuk başlangıç giriş noktası bir uygulamanın ana giriş noktasından çağrılır.  
+ Visual Studio Kabuğu 'nun başlangıç giriş noktası beş parametre tanımlar. İlk dört parametreyi değiştirmeyin. Beşinci parametre ayarları geçersiz kılma listesini alır. Kabuğun başlangıç giriş noktası, bir uygulamanın ana giriş noktasından çağrılır.  
   
- Kabuk başlangıç giriş noktasını aşağıdaki imza içeriyor.  
+ Kabuğun başlangıç giriş noktası aşağıdaki imzaya sahiptir.  
   
 ```  
 typedef int (__cdecl *STARTFCN)(LPSTR, LPWSTR, int, GUID *, WCHAR *pszSettings);  
 ```  
   
- İstemediğiniz herhangi bir uygulama ayarı geçersiz kılmak için ayarları bırakın parametresi null bir işaretçi olarak geçersiz kılın.  
+ Herhangi bir uygulama ayarını geçersiz kılmak istemiyorsanız, ayarlar geçersiz kılma parametresinin değerini boş bir işaretçi olarak bırakın.  
   
- Bir veya daha fazla ayarlarını geçersiz kılmak için geçersiz kılınacak ayarlarını içeren bir Unicode dizesini geçirin. Ad-değer çiftleri noktalı virgülle ayrılmış bir listesini dizedir. Her çifti ayarını uygulamak için değer ardından eşittir (=), arkasından geçersiz kılmak için ayar adını içerir.  
+ Bir veya daha fazla ayarı geçersiz kılmak için, geçersiz kılınacak ayarları içeren bir Unicode dizesi geçirin. Dize, ad-değer çiftleri için noktalı virgülle ayrılmış bir listesidir. Her bir çift geçersiz kılınacak ayarın adını, ardından eşittir işareti (=) ve ardından ayara uygulanacak değeri içerir.  
   
 > [!NOTE]
-> Boşluk, Unicode dizelerini içermez.  
+> Unicode dizelerinde boşluk eklemeyin.  
   
- Boole ayarları için aşağıdaki dizelerden true değerini temsil eder; tüm dizeleri false değerini temsil eder. Bu dizeler büyük/küçük harfe duyarsızdır.  
+ Boole ayarları için aşağıdaki dizeler doğru değeri temsil eder; Tüm diğer dizeler yanlış değerini temsil eder. Bu dizeler büyük/küçük harfe duyarlıdır.  
   
 - \+  
   
-- 1.  
+- 1  
   
 - -1  
   
@@ -92,7 +92,7 @@ typedef int (__cdecl *STARTFCN)(LPSTR, LPWSTR, int, GUID *, WCHAR *pszSettings);
 - evet  
   
 ## <a name="example"></a>Örnek  
- Eklentileri devre dışı bırakın ve uygulamanız için varsayılan proje konumu değiştirmek için "AddinsAllowed=false;DefaultProjectsLocation=%USERPROFILE%\temp" en son parametreye ayarlayabilirsiniz.  
+ Eklentileri devre dışı bırakmak ve uygulamanız için varsayılan proje konumunu değiştirmek için, son parametreyi "Addınsallowed = false; DefaultProjectsLocation =%USERPROFILE%\temp" olarak ayarlayabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yalıtılmış Kabuğu özelleştirme](../extensibility/customizing-the-isolated-shell.md)   

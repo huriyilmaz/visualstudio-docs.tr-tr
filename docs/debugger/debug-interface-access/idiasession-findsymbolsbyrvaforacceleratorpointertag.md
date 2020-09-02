@@ -11,10 +11,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: cf05d60499da0317461d03d05579dce6124385f7
-ms.sourcegitcommit: 66f31cc4ce1236e638ab58d2f70d3646206386fa
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85465533"
 ---
 # <a name="idiasessionfindsymbolsbyrvaforacceleratorpointertag"></a>IDiaSession::findSymbolsByRVAForAcceleratorPointerTag
@@ -34,7 +34,7 @@ HRESULT findSymbolsByRVAForAcceleratorPointerTag ( 
 #### <a name="parameters"></a>Parametreler
  `parent`
 
-'ndaki `IDiaSymbol`Aranmak üzere Hızlandırıcı saplama işlevine karşılık gelen bir.
+'ndaki `IDiaSymbol` Aranmak üzere Hızlandırıcı saplama işlevine karşılık gelen bir.
 
  `tagValue`
 
@@ -46,7 +46,7 @@ HRESULT findSymbolsByRVAForAcceleratorPointerTag ( 
 
  `ppResult`
 
-dışı `IDiaEnumSymbols`Sonuçla başlatılan arabirim işaretçisine yönelik bir işaretçi.
+dışı `IDiaEnumSymbols` Sonuçla başlatılan arabirim işaretçisine yönelik bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş Değeri
  Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.

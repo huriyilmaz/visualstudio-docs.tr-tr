@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Kaynak Denetimi Eklentisi yükleme | Microsoft Docs'
+title: 'Nasıl yapılır: kaynak denetimi eklentisi yüklemesi | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,111 +12,111 @@ caps.latest.revision: 33
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 997e734f6d2ab6bcf70e3a4843ac66564683c79b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443308"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64833494"
 ---
-# <a name="how-to-install-a-source-control-plug-in"></a>Nasıl yapılır: Kaynak Denetimi Eklentisi Yükleme
+# <a name="how-to-install-a-source-control-plug-in"></a>Nasıl Yapılır: Kaynak Denetimi Eklentisi Yükleme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Kaynak Denetimi Eklentisi oluşturma üç adımdan oluşur:  
+Kaynak denetimi eklentisi oluşturma üç adımdan oluşur:  
   
-1. Bu belge kaynak denetimi eklentisi API başvuru bölümünde tanımlanan işlevleri ile bir dll dosyası oluşturun.  
+1. Bu belgenin kaynak denetimi eklentisi API Başvurusu bölümünde tanımlanan işlevlerle bir DLL oluşturun.  
   
-2. Kaynak Denetimi Eklentisi API tarafından tanımlanan işlevleri uygulayın. Zaman [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] çağrıları, eklentiden kullanılabilir duruma arabirimleri ve iletişim kutuları.  
+2. Kaynak denetimi eklentisi API tanımlı işlevlerini uygulayın. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Bu, için çağrı yaparken, arabirimleri ve iletişim kutularını eklentiyle kullanılabilir hale getirin.  
   
-3. DLL uygun kayıt defteri girişlerini yaparak kaydedin.  
+3. Uygun kayıt defteri girdilerini yaparak DLL 'yi kaydettirin.  
   
 ## <a name="integration-with-visual-studio"></a>Visual Studio ile Tümleştirme  
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Kaynak denetimi için kaynak denetimi eklentisi API uygun eklentileri destekler.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Kaynak denetimi eklentisi API 'sine uygun kaynak denetimi eklentilerini destekler.  
   
-### <a name="registering-the-source-control-plug-in"></a>Kaynak Denetimi Eklentisi kaydediliyor  
- Çalışan bir tümleşik geliştirme ortamı (IDE), kaynak denetim sistemine çağrı yapmadan önce ilk kaynak bulmalıdır API dışarı aktarır eklentisi DLL'sini denetim.  
+### <a name="registering-the-source-control-plug-in"></a>Kaynak denetimi eklentisini kaydetme  
+ Çalışan bir tümleşik geliştirme ortamı (IDE) kaynak denetim sistemine çağrı yapmadan önce, önce API 'YI dışarı aktaran kaynak denetimi eklentisi DLL 'sini bulmalıdır.  
   
-##### <a name="to-register-the-source-control-plug-in-dll"></a>Kaynak Denetimi Eklentisi DLL'sini kaydetmek için  
+##### <a name="to-register-the-source-control-plug-in-dll"></a>Kaynak denetimi eklentisi DLL 'sini kaydetmek için  
   
-1. Ürün adı alt anahtarı tarafından izlenen, şirket adı alt belirten yazılım alt HKEY_LOCAL_MACHINE anahtarı altında iki giriş ekleyin. HKEY_LOCAL_MACHINE\Software desendir\\ *[CompanyName]*\\ *[Ürün adı]*\\ *[Giriş]* = değer. İki girişin her zaman SCCServerName ve SCCServerPath çağrılır. Her bir normal bir dizedir.  
+1. Şirket adı alt anahtarını ve ardından ürün adı alt anahtarınızı belirten yazılım alt anahtarındaki HKEY_LOCAL_MACHINE anahtarı altına iki giriş ekleyin. Bu model HKEY_LOCAL_MACHINE \Software \\ *[Şirket adı]* \\ *[ürün adı]* \\ *[Entry]* = değeri. İki giriş her zaman SCCServerName ve SCCServerPath olarak adlandırılır. Her biri normal bir dizedir.  
   
-     Örneğin, şirket adınız, Microsoft ve kaynak denetimi ürününüzü ise SourceSafe, bu kayıt defteri yolu HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe şu şekilde olacaktır adı verilir. Bu alt anahtar ilk girişi SCCServerName, ürününüzü adlandırma bir kullanıcı tarafından okunabilen bir dizedir. İkinci girdi, SCCServerPath, kaynak tam yolunu kontrol IDE bağlanması gereken eklentisi DLL ' dir. Aşağıdaki örnek kayıt defteri girdileri sağlar:  
+     Örneğin, şirketinizin adı Microsoft ise ve kaynak denetimi ürününüz SourceSafe olarak adlandırılmışsa, bu kayıt defteri yolu HKEY_LOCAL_MACHINE \Software\microsoft\sourcesafeolur. Bu alt anahtarda, SCCServerName ilk girdisi, ürününüzü adlandırırken Kullanıcı tarafından okunabilen bir dizedir. İkinci girdi, SCCServerPath, IDE 'nin bağlanması gereken kaynak denetim eklentisi DLL 'inin tam yoludur. Aşağıda örnek kayıt defteri girdileri verilmiştir:  
   
-    |Örnek kayıt defteri girişi|Örnek değer|  
+    |Örnek kayıt defteri girdisi|Örnek değer|  
     |---------------------------|------------------|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\SCCServerName|Microsoft Visual SourceSafe|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\SCCServerPath|c:\vss\win32\ssscc.dll|  
+    |HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\SourceSafe\SCCServerName|Microsoft Visual SourceSafe|  
+    |HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\SourceSafe\SCCServerPath|c:\vss\win32\ssscc.dll|  
   
     > [!NOTE]
-    > SCCServerPath SourceSafe eklentisinde tam yoludur. Kaynak Denetimi Eklentisi, aynı kayıt defteri girişi yolları ancak farklı şirket ve ürün adlarını kullanır.  
+    > SCCServerPath, SourceSafe eklentisinin tam yoludur. Kaynak denetimi eklentiniz farklı şirket ve ürün adlarını, ancak aynı kayıt defteri giriş yollarını kullanacaktır.  
   
-2. Aşağıdaki isteğe bağlı bir kayıt defteri girdilerini, kaynak denetimi eklentiniz davranışını değiştirmek için kullanılabilir. Bu girişler SccServerName ve SccServerPath olarak aynı alt gidin.  
+2. Aşağıdaki isteğe bağlı kayıt defteri girdileri, kaynak denetimi eklentisinin davranışını değiştirmek için kullanılabilir. Bu girişler SccServerName ve SccServerPath ile aynı alt anahtara gider.  
   
-    - Kaynak denetimi-Tak-eklentisi seçim listesinde görünmesini istediğiniz değil HideInVisualStudioregistry giriş kullanılabilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Bu giriş, kaynak denetimi eklentisi otomatik geçiş da etkiler. Bu giriş için bir olası kullanım kaynak denetimi eklentiniz yerini alan bir kaynak denetim paketi sağladığınız ancak kullanıcı kaynak denetimi Eklentisi Kaynak denetimi pakete geçiş yapma kolaylaştırmak istiyorsanız ' dir. Kaynak Denetim paketi yüklendiğinde, eklenti gizler. Bu kayıt defteri girdisi ayarlar.  
+    - HideInVisualStudioregistry girişi, kaynak denetimi eklentisinin ' ın eklenti seçim listesinde görünmesini istemiyorsanız kullanılabilir [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Bu giriş, kaynak denetimi eklentisine otomatik değiştirmeyi de etkileyecektir. Bu giriş için olası bir kullanım, kaynak denetimi eklentisinin yerini alan bir kaynak denetimi paketi sağlarsanız ancak kullanıcının kaynak denetimi eklentisini kaynak denetimi paketine kullanmasını kolaylaştırmak istiyorsanız. Kaynak denetim paketi yüklendiğinde, eklentiyi gizleyen bu kayıt defteri girişini ayarlar.  
   
-         HideInVisualStudio bir DWORD değeri ve eklenti gizlemek için 1 veya eklenti göstermek için 0 olarak ayarlanır. Kayıt defteri girişini görünmüyorsa, varsayılan davranışı eklenti göstermektir.  
+         HideInVisualStudio bir DWORD değeridir ve eklentiyi gizlemek için 1, eklentiyi göstermek için 0 olarak ayarlanır. Kayıt defteri girdisi görünmezse, eklentiyi göstermek varsayılan davranış olur.  
   
-    - DisableSccManager kayıt defteri girdisini devre dışı bırakmak veya gizlemek için kullanılabilir **başlatma \<kaynak denetim sunucusuna >** normalde altında görüntülenen menü seçeneği **dosya**  ->   **Kaynak denetimi** alt menü. Bu menü seçme seçeneği çağrıları [SccRunScc](../../extensibility/sccrunscc-function.md) işlevi. Kaynak Denetimi Eklentisi bir dış program desteklemiyor olabilir ve bu nedenle, hatta Gizle veya devre dışı bırakmak isteyebilirsiniz **başlatma** menü seçeneği.  
+    - DisableSccManager kayıt defteri girişi, normalde **Dosya** ** \<Source Control Server> **  ->  **kaynak denetimi** alt menüsünde görüntülenen başlatma menüsü seçeneğini devre dışı bırakmak veya gizlemek için kullanılabilir. Bu menü seçeneğinin belirlenmesi [SccRunScc](../../extensibility/sccrunscc-function.md) işlevini çağırır. Kaynak denetimi eklentiniz bir dış programı desteklemeyebilir, bu nedenle **başlatma** menüsü seçeneğini devre dışı bırakmak veya hatta gizlemek isteyebilirsiniz.  
   
-         DisableSccManager ayarlanmadı DWORD değerini 0 olarak etkinleştirmek için **başlatma \<kaynak denetim sunucusuna >** menü seçeneğini menü seçeneği devre dışı bırakmak için 1 olarak ayarlayın ve menü seçeneğini gizleme 2 olarak ayarlayın. Bu kayıt defteri girdisi görünmüyorsa, menü seçeneği varsayılan davranışı göstermektir.  
+         DisableSccManager, **Başlat \<Source Control Server> ** menüsü seçeneğini etkinleştirmek için 0 olarak ayarlanır, menü seçeneğini devre dışı bırakmak için 1 olarak ayarlayın ve menü seçeneğini gizlemek için 2 olarak ayarlayın. Bu kayıt defteri girdisi görünmezse, varsayılan davranış menü seçeneğini gösterir.  
   
-    |Örnek kayıt defteri girişi|Örnek değer|  
+    |Örnek kayıt defteri girdisi|Örnek değer|  
     |---------------------------|------------------|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\HideInVisualStudio|1.|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SourceSafe\DisableSccManager|1.|  
+    |HKEY_LOCAL_MACHINE \Software\microsoft\sourcesafe\hideınvisualstudio|1|  
+    |HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\SourceSafe\DisableSccManager|1|  
   
-3. Alt anahtar SourceCodeControlProvider, yazılım alt HKEY_LOCAL_MACHINE anahtarı altında ekleyin.  
+3. SourceCodeControlProvider alt anahtarını, yazılım alt anahtarındaki HKEY_LOCAL_MACHINE anahtarı altına ekleyin.  
   
-     Bu alt anahtarı kayıt defteri girişini 1. adım kayıt defterinde yerleştirilen alt anahtarını temsil eden bir dize ProviderRegKey ayarlanır. HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\ProviderRegKey desendir yazılım =\\ *[CompanyName]*\\ *[Ürün adı]*.  
+     Bu alt anahtar altında, ProviderRegKey kayıt defteri girdisi, 1. adımdaki kayıt defterine yerleştirdiğiniz alt anahtarı temsil eden bir dizeye ayarlanır. Bu model, HKEY_LOCAL_MACHINE \software\sourcecodecontrolprovider\providerregkey = Software \\ *[Şirket adı]* \\ *[ürün adı]* şeklindedir.  
   
-     Örnek içerik için bu alt anahtar verilmiştir.  
+     Bu alt anahtar için örnek içerik aşağıda verilmiştir.  
   
     |Kayıt defteri girdisi|Örnek değer|  
     |--------------------|------------------|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\ProviderRegKey|SOFTWARE\Microsoft\SourceSafe|  
+    |HKEY_LOCAL_MACHINE \SOFTWARE\SourceCodeControlProvider\ProviderRegKey|SOFTWARE\Microsoft\SourceSafe|  
   
     > [!NOTE]
-    > Kaynak Denetimi Eklentisi giriş adları ve aynı alt kullanır ancak değeri farklı olacaktır.  
+    > Kaynak denetimi eklentiniz aynı alt anahtarı ve giriş adlarını kullanacaktır, ancak değer farklı olacaktır.  
   
-4. InstalledSCCProviders SourceCodeControlProvider alt anahtarı altında adlı bir alt anahtarını oluşturmak ve ardından bu alt anahtarı altında bir girdi yerleştirebilirsiniz.  
+4. SourceCodeControlProvider alt anahtarı altında ınstalınstalınstaltıcode adlı bir alt anahtar oluşturun ve ardından bu alt anahtarın altına bir giriş koyun.  
   
-     Bu giriş adı sağlayıcı (aynı SCCServerName girişi için belirtilen değer) kullanıcı tarafından okunabilen adıdır ve değeri, bir kez daha, 1. adımda oluşturduğunuz alt ise. HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders desendir\\ *[görünen adı]* yazılım =\\ *[CompanyName]* \\ *[Ürün adı]*.  
+     Bu girdinin adı, sağlayıcının kullanıcı tarafından okunabilen adıdır (SCCServerName girişi için belirtilen değerle aynıdır) ve değer, tekrar, 1. adımda oluşturulan alt anahtar. Bu model, HKEY_LOCAL_MACHINE \software\sourcecodecontrolprovider\ınstalınstalsınıbu Providers \\ *[görünen ad]* = yazılım \\ *[Şirket adı]* \\ *[ürün adı]* şeklindedir.  
   
      Örneğin:  
   
-    |Örnek kayıt defteri girişi|Örnek değer|  
+    |Örnek kayıt defteri girdisi|Örnek değer|  
     |---------------------------|------------------|  
-    |Visual SourceSafe HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\Microsoft|SOFTWARE\Microsoft\SourceSafe|  
+    |HKEY_LOCAL_MACHINE \Software\sourcecodecontrolprovider\ınstalınstalbir Sccproviders\microsoft Visual SourceSafe|SOFTWARE\Microsoft\SourceSafe|  
   
     > [!NOTE]
-    > Birden çok kaynak denetimi bu şekilde kayıtlı eklentileri olabilir. Bu, nasıl [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tüm yüklü kaynak denetimi eklentisi API tabanlı eklentiler bulur.  
+    > Bu şekilde kayıtlı birden fazla kaynak denetimi eklentisi olabilir. Bu, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tüm yüklü kaynak denetimi EKLENTISI API tabanlı eklentileri bulur.  
   
-## <a name="how-an-ide-locates-the-dll"></a>Bir IDE DLL nasıl bulur  
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] IDE olan iki kaynak bulma yolları denetleyen eklentisi DLL'sini:  
+## <a name="how-an-ide-locates-the-dll"></a>IDE 'nin DLL 'yi nasıl konumlandırır  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]IDE 'nin kaynak denetimi EKLENTISI dll 'sini bulmanın iki yolu vardır:  
   
-- Varsayılan kaynak denetimi eklentisi bulmak ve sessiz bir şekilde bağlanabilir.  
+- Varsayılan kaynak denetimi eklentisini bulun ve sessizce bu eklentiyi bağlayın.  
   
-- Tüm kayıtlı kaynak denetimi eklentileri, bir kullanıcının seçtiği bulun.  
+- Kullanıcının bir tane seçtiği tüm kayıtlı kaynak denetim eklentilerini bulun.  
   
-  İlk yol DLL bulmak için IDE ProviderRegKey girdisiyle HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider alt anahtarı altında arar. Bu giriş değerini başka bir alt anahtarına işaret eder. IDE ardından bu ikinci subkey under HKEY_LOCAL_MACHINE dizinine SccServerPath adlı bir giriş arar. Bu giriş değerini IDE DLL'ye işaret eder.  
-  
-> [!NOTE]
-> IDE göreli yollar (örneğin,.\NewProvider.DLL) DLL'leri yüklenmez. DLL tam yolun belirtilmesi gerekir (örneğin, c:\Providers\NewProvider.DLL). Bu, yetkisiz veya başkasının kimliğine bürünülerek gerçekleştirilen eklentisi DLL'sini yüklemesini engelleyerek IDE güvenliğini güçlendirir.  
-  
- İkinci bir yolla DLL bulmak için tüm girişleri için HKEY_LOCAL_MACHINE\Software\SourceCodeControlProvider\InstalledSCCProviders alt anahtarı altında IDE arar<em>.</em> Her girişin bir ada ve değere sahip. IDE, kullanıcıya bu adlarının bir listesini görüntüler<em>.</em> Kullanıcı adları seçtiğinde, IDE bir alt anahtarına işaret eden seçilen adı değeri bulur. Bu subkey under HKEY_LOCAL_MACHINE dizinine SccServerPath adlı bir giriş IDE arar. Bu giriş değerini doğru DLL'ye IDE işaret eder.  
-  
- DLL bulma her iki şekilde destek ve sonuç olarak, önceki bir ayarı üzerine ProviderRegKey, ayarlamak, kaynak denetimi eklentisi gerekir. Böylece kullanıcı kullanmak için hangi kaynak denetimi eklentisi seçeneği daha da önemlisi, onu kendisini InstalledSccProviders listesine eklemeniz gerekir.  
+  DLL 'yi birinci şekilde bulmak için IDE, ProviderRegKey girişi için HKEY_LOCAL_MACHINE \Software\SourceCodeControlProvider alt anahtarına bakar. Bu girdinin değeri başka bir alt anahtara işaret eder. Daha sonra IDE, HKEY_LOCAL_MACHINE altında bu ikinci alt anahtarda SccServerPath adlı bir giriş arar. Bu girdinin değeri, IDE 'yi DLL 'ye yönlendirir.  
   
 > [!NOTE]
-> Varsayılan kaynak denetimi eklentisi belirli bir makinede olarak HKEY_LOCAL_MACHINE anahtarı kullanıldığından yalnızca bir kaynak denetimi eklentisi kaydedilebilir (ancak [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kullanıcılara istedikleri gerçekten kullanmak için hangi kaynak denetimi eklentisini belirlemek bir belirli çözüm). Yükleme işlemi sırasında kaynak denetimi eklentisi zaten ayarlanmış olup olmadığını denetleyin; Bu durumda, kullanıcı yeni kaynak denetimi eklentisi varsayılan olarak yüklenen ayarlama gerekip gerekmediğini sorun. Yüklemeyi sırasında tüm kaynak denetimi eklentileri HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider içinde ortak olan diğer kayıt defteri alt anahtarları kaldırmayın; belirli, SCC alt kaldırın.  
+> IDE, göreli yollardan dll 'Leri yüklemez (örneğin, .\NewProvider.DLL). DLL 'nin tam yolu belirtilmelidir (örneğin, c:\Providers\NewProvider.DLL). Bu, yetkisiz veya kimliğine bürünülen eklenti dll 'lerinin yüklenmesini önleyecek şekilde IDE 'nin güvenliğini güçlendirir.  
   
-## <a name="how-the-ide-detects-version-1213-support"></a>IDE sürüm 1.2/1.3 desteği nasıl algılar  
- Nasıl mu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bir eklentiyi destekler kaynak denetimi eklentisi API sürümü 1.2 ve 1.3 işlevsellik olup olmadığını Algıla? Gelişmiş beceri bildirmek için kaynak denetimi eklentisi karşılık gelen işlev uygulamanız gerekir.  
+ DLL 'yi ikinci şekilde bulmak için IDE, tüm girdiler için HKEY_LOCAL_MACHINE \Software\sourcecodecontrolprovider\ınstalınstalsk\sccproviders alt anahtarına bakar<em>.</em> Her girdinin bir adı ve değeri vardır. IDE, kullanıcıya bu adların bir listesini görüntüler<em>.</em> Kullanıcı bir ad seçtiğinde, IDE bir alt anahtara işaret eden seçili ad için değeri bulur. IDE, HKEY_LOCAL_MACHINE altında bu alt anahtarda SccServerPath adlı bir giriş arar. Bu girdinin değeri, IDE 'yi doğru DLL 'ye yönlendirir.  
   
- İlk olarak, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] arama döndürülen değer denetler [SccGetVersion](../../extensibility/sccgetversion-function.md). Büyüktür veya eşittir 1.2 olmalıdır.  
+ Kaynak denetimi eklentisinin, DLL 'yi bulmanın ve sonuç olarak, bir önceki ayarın üzerine yazarak ProviderRegKey 'i ayarlama yöntemlerinin her ikisi de desteklemesi gerekir. Daha da önemlisi, kullanıcının hangi kaynak denetimi eklentisinin kullanılacağını tercih etabilmesi için kendisini ınstalınstalınstalınstaletnbulunan Sccproviders listesine eklemesi gerekir.  
   
- Ardından, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] belirli yeni özelliği inceleyerek desteklenip desteklenmediğini belirler `lpSccCaps` bağımsız değişkenine [Sccınitialize](../../extensibility/sccinitialize-function.md).  
+> [!NOTE]
+> HKEY_LOCAL_MACHINE anahtarı kullanıldığı için, yalnızca bir kaynak denetimi eklentisi belirli bir makinede varsayılan kaynak denetimi eklentisi olarak kaydedilebilir (ancak, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] kullanıcıların belirli bir çözüm için gerçekten hangi kaynak denetimi eklentisini kullanmasını istediğini belirlemesine izin verir). Yükleme işleminiz sırasında, bir kaynak denetimi eklentisinin zaten ayarlanmış olup olmadığını kontrol edin; Bu durumda, kullanıcıdan yeni kaynak denetimi eklentisinin varsayılan olarak yüklenip yüklenmediğini isteyip istemediğini sorar. Yükleme kaldırma sırasında, HKEY_LOCAL_MACHINE \SOFTWARE\SourceCodeControlProvider; içindeki tüm kaynak denetimi eklentileri için ortak olan diğer kayıt defteri alt anahtarlarını kaldırmayın. yalnızca belirli SCC alt anahtarlarınızı kaldırın.  
   
- Bu koşulların her ikisi karşılanırsa 1.2 ve 1.3 sürümlerinde desteklenen yeni işlevler çağrılabilir.  
+## <a name="how-the-ide-detects-version-1213-support"></a>IDE 'nin 1.2/1.3 desteğini algılaması  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Eklentinin kaynak denetimi EKLENTISI API sürüm 1,2 ve 1,3 işlevlerini destekleyip desteklemediğini nasıl tespit ediyor? Gelişmiş özelliği bildirmek için, kaynak denetimi eklentisinin ilgili işlevi uygulaması gerekir.  
+  
+ İlk olarak, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [SccGetVersion](../../extensibility/sccgetversion-function.md)çağırarak döndürülen değeri denetler. Bu, 1,2 değerinden büyük veya buna eşit olmalıdır.  
+  
+ Sonra, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] `lpSccCaps` [SccInitialize](../../extensibility/sccinitialize-function.md)'daki bağımsız değişkeni inceleyerek belirli yeni özelliğin desteklenip desteklenmediğini belirler.  
+  
+ Bu koşulların her ikisi de karşılanırsa, 1,2 ve 1,3 sürümlerinde desteklenen yeni işlevler çağrılabilir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Başlarken](../../extensibility/internals/getting-started-with-source-control-plug-ins.md)

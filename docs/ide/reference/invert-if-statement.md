@@ -11,40 +11,40 @@ dev_langs:
 ms.workload:
 - dotnet
 ms.openlocfilehash: a0419100cbc5fcd543eb250fa85cbfe2ebd1c97f
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65531584"
 ---
 # <a name="invert-if-statement"></a>if deyimini tersine çevirme
 
-Bu yeniden düzenleme aşağıdakiler için geçerlidir:
+Bu yeniden düzenleme için geçerlidir:
 
 - C#
 - Visual Basic
 
-**Ne:** Kodun anlamını değiştirmeden bir `if` veya `if else` ifadeyi tersine çevirmenizi sağlar.
+**Ne:** `if` Kodun anlamını değiştirmeden bir veya ifadesini ters çevirmenize olanak sağlar `if else` .
 
-**Ne zaman:** Ters çevrildiğinde `if` `if else` daha iyi anlaşılacak bir ifadeniz veya ifadeniz olduğunda.
+**Ne zaman:** `if` `if else` Ters çevrilme sırasında daha iyi anlaşılabilecek bir veya deyiminiz olduğunda.
 
-**Neden:** Bir `if` ifadenin `if else` veya ifadenin elle ters çevrilmesi çok daha uzun sürebilir ve büyük olasılıkla hatalara neden olabilir. Bu kod düzeltmesi, bu yeniden düzenlemeyi otomatik olarak yapmanıza yardımcı olur.
+**Neden:** `if` Or `if else` ifadesinin el ile tersine gelmesi çok daha uzun sürebilir ve muhtemelen hata verebilir. Bu kod çözümü, bu yeniden düzenlemeyi otomatik olarak yapmanıza yardımcı olur.
 
-## <a name="invert-if-statement-refactoring"></a>İfade refactoring eğer ters
+## <a name="invert-if-statement-refactoring"></a>İf deyiminizi yeniden düzenlemeyi ters çevir
 
-1. İmlecinizi bir `if` veya `if else` ifadeye yerleştirin.
+1. İmlecinizi bir `if` or `if else` ifadesine yerleştirin.
 
-    ![Eğer başka bir şey ters çevir](media/invert-if.png)
+    ![Değilse ters çevir](media/invert-if.png)
 
-2. **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+2. **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
 
-    ![Eğer başka bir kod düzeltmesi tersine çevir](media/invert-if-codefix.png)
+    ![Değilse kod düzeltmesini ters çevir](media/invert-if-codefix.png)
 
-3. **Eğer Ters Çevir'i**seçin.
+3. **Ters çevir**' i seçin.
 
-    ![Eğer başka bir sonuç ters çevir](media/invert-if-codefix-result.png)
+    ![Başka bir sonuç varsa ters çevir](media/invert-if-codefix-result.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yeniden Düzenle](../refactoring-in-visual-studio.md)
-- [.NET Geliştiricileri için ipuçları](../csharp-developer-productivity.md)
+- [.NET geliştiricileri için ipuçları](../csharp-developer-productivity.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::UnloadSymbols | Microsoft Docs
+title: 'IDebugComPlusSymbolProvider:: UnloadSymbols | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,18 +12,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: ad78f1b569180a93b195f6a4076cc7396dcf8e53
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68176773"
 ---
 # <a name="idebugcomplussymbolproviderunloadsymbols"></a>IDebugComPlusSymbolProvider::UnloadSymbols
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bellek Belirtilen modül için hata ayıklama sembollerini kaldırır.  
+Belirtilen modülün hata ayıklama sembollerini bellekten kaldırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT UnloadSymbols(  
@@ -41,16 +41,16 @@ int UnloadSymbols(
   
 #### <a name="parameters"></a>Parametreler  
  `ulAppDomainID`  
- [in] Uygulama etki alanı tanımlayıcısı.  
+ 'ndaki Uygulama etki alanının tanımlayıcısı.  
   
  `guidModule`  
- [in] Modülün benzersiz tanımlayıcısı.  
+ 'ndaki Modülün benzersiz tanıtıcısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek için bu yöntemi uygulaması gösterilmiştir bir **CDebugSymbolProvider** gösteren nesne [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimi.  
+ Aşağıdaki örnek, [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) arabirimini kullanıma sunan bir **CDebugSymbolProvider** nesnesi için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 HRESULT CDebugSymbolProvider::UnloadSymbols(  

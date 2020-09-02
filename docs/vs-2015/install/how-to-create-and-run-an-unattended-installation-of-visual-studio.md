@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Oluşturma ve katılımsız yükleme çalıştırma | Microsoft Docs'
+title: 'Nasıl yapılır: katılımsız yükleme oluşturma ve çalıştırma | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-install
@@ -13,166 +13,166 @@ author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.openlocfilehash: 26e059d4fdc8eadd422924dd6bbda6f7c945ccfb
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63433046"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64833473"
 ---
-# <a name="how-to-create-and-run-an-unattended-installation-of-visual-studio"></a>Nasıl yapılır: Oluşturma ve Visual Studio katılımsız yükleme çalıştırma
+# <a name="how-to-create-and-run-an-unattended-installation-of-visual-studio"></a>Nasıl Yapılır: Katılımsız Visual Studio Yüklemesi Oluşturma ve Çalıştırma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-İçin yükleme uygulamasını çalıştırarak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bir katılımsız (yani sessiz özelleştirilmiş olan) olarak DVD gibi medya yerine bir intranet üzerinden yükleme. Bu konu nasıl hazırlayacağınızı açıklar [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bu tür bir ağ paylaşımından yükleme.
+Yükleme uygulamasını [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] DVD gibi medya yerine bir intranet üzerinden katılımsız (yani özelleştirilmiş bir sessiz) yükleme olarak çalıştırabilirsiniz. Bu konu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , bir ağ paylaşımından bu yükleme türü için nasıl hazırlanılacağını açıklamaktadır.
 
-## <a name="creating-a-network-image"></a>Bir ağ görüntüsü oluşturma
- İlk olarak, bir ağ görüntüsü oluşturmak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] medya.
+## <a name="creating-a-network-image"></a>Ağ görüntüsü oluşturma
+ İlk olarak, medyanın ağ görüntüsünü oluşturun [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
 #### <a name="to-create-a-network-image"></a>Bir ağ görüntüsü oluşturmak için
 
-1. Sunucuda bir klasör oluşturun (örneğin, *sürücü*: \IDEinstall\\).
+1. Sunucuda bir klasör oluşturun (örneğin, *sürücü*: \ IDEinstall \\ ).
 
-2. Yükleyici'den indirin [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015)ve ardından çalıştırın *ürün*.exe/layout *sürücü*: \IDEinstall\
+2. Yükleyiciyi [My.VisualStudio.com](https://my.visualstudio.com/downloads?q=visual%20studio%20enterprise%202015)adresinden indirin ve ardından *Product*. exe/Layout *Drive*: \ıdeınstall\ ' i çalıştırın.
 
-3. Ideinstall klasörünü ağda paylaşın ve uygun güvenlik ayarlarını ayarlayın.
+3. Ağ üzerinde IDEinstall klasörünü paylaşma ve ardından uygun güvenlik ayarlarını belirleme.
 
-     İçin yükleme uygulamasının ağ yolu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] benzer \\ \\ *ServerName*\IDEinstall\\*ürün*.exe.
+     Yükleme uygulamasının ağ yolu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] \\ \\ *ServerName*\ ıdeınstall \\ *Product*. exe ' dir.
 
     > [!NOTE]
-    > Herhangi bir yol ve dosya adı birleşimi 260 karakterden uzunsa kurulum başarısız olabilir. Bir yolda uzunluğu en fazla [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 221 karakterdir.  Yerel yol adı 70 karakteri aşmamalıdır ve ağ yolu adı 39 karakteri aşmamalıdır.
+    > Herhangi bir yol ve dosya adı birleşimi 260 karakteri aşarsa, yükleme başarısız olabilir. İçindeki bir yolun en fazla uzunluğu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 221 karakterdir.  Yerel yol adı 70 karakteri aşmamalıdır ve ağ yolu adı 39 karakteri aşmamalıdır.
 
-     Yükleme de çalışmayabilir yol içinde klasör adlarında gömülü boşluklar varsa (örneğin, "\\\\*ServerName*\IDE yükleme" veya \\ \\ *ServerName*\Visual studio\\).
+     Ayrıca, yoldaki klasör adları katıştırılmış boşluklar içeriyorsa (örneğin, " \\ \\ *ServerName*\ IDE install" veya \\ \\ *ServerName*\Adim Studio \\ ), yükleme başarısız olabilir.
 
-## <a name="deploying-visual-studio-in-unattended-mode"></a>Katılımsız modda Visual Studio dağıtma
- Dağıtılacak [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] katılımsız modda AdminDeployment.xml dosyasını değiştirmeniz gerekir. Bunu yapmak için önce AdminDeployment.xml dosyasını kullanarak oluşturmalısınız `/CreateAdminFile`  *\<dosya konumu >* komut satırı parametresi. Ağınıza bir Visual Studio dağıtımı gönderin veya bu dosyayı koyarsanız bir kurulum içine çeker. Bu dosya daha sonra kullanabileceğiniz *sürücü*: \IDEinstall\packages dizin. AdminDeployment.xml dosyası bir işletim sistemi, mimari, Visual Studio ya da işletim sistemi dil sürümü için benzersiz değil.
+## <a name="deploying-visual-studio-in-unattended-mode"></a>Visual Studio 'Yu katılımsız modda dağıtma
+ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Katılımsız modda dağıtmak için AdminDeployment.xml dosyasını değiştirmeniz gerekir. Bunu yapmak için, önce `/CreateAdminFile` komut satırı parametresini kullanarak AdminDeployment.xml dosyasını oluşturmanız gerekir *\<file location>* . Daha sonra, bu dosyayı, bir Visual Studio dağıtımını ağınıza göndermek veya dosyayı *sürücü*: \ıdeınstall\packages dizinine yerleştirirseniz bir yüklemeye çekmek için kullanabilirsiniz. AdminDeployment.xml dosyası bir işletim sistemi, mimari, Visual Studio sürümü veya işletim sistemi dili için benzersiz değildir.
 
 > [!CAUTION]
-> Bazı durumlarda, seçili AdminDeployment.xml dosyasında listelenen öğelerin yüklenmemiş. Bu sorunu çözmek için işaretlenen öğeleri Yerleştir "Seçili ="yes"", **son** AdminDeployment.xml dosyası.
+> Bazen AdminDeployment.xml dosyasında seçili olarak listelenen öğeler yüklenmez. Bu sorunu çözmek için, "Selected =" Yes "" olarak işaretlenmiş öğeleri AdminDeployment.xml dosyasının **sonuna** yerleştirin.
 >
-> Ardından bir öğesi isteğe bağlı bağımlılıklar yüklemek istemiyorsanız, üst ilk öğesini seçin ve ardından isteğe bağlı bağımlılıklar aşağıdaki ekran görüntüsünde gösterildiği gibi ana sonra seçimini gerekir:
+> Bir öğenin isteğe bağlı bağımlılıklarını yüklemek istemiyorsanız, önce üst öğeyi seçmeli ve sonra aşağıdaki ekran görüntüsünde gösterildiği gibi üst öğeden sonra isteğe bağlı bağımlılıkların seçimini kaldırmanız gerekir:
 >
-> ![Yükleme öğeleri AdminDeployment.xml dosyasını sonunda](../install/media/vs2015-install-endoffileadmindeploy.PNG "vs2015_Install_EndOfFileAdminDeploy")
+> ![AdminDeployment.xml dosyasının sonundaki yükleme öğeleri](../install/media/vs2015-install-endoffileadmindeploy.PNG "vs2015_Install_EndOfFileAdminDeploy")
 >
-> Yalnızca bir üst isteğe bağlı alt öğeleri atlamak için bunu yapmak için başka bir yolu olan — herhangi diğer bir deyişle, olarak eklemeyin "Seçili"Hayır"=" öğeleri — ancak yine de tüm yerleştirmeniz gerekir "Seçili ="yes"" AdminDeployment.xml dosyasını sonunda öğeleri.
+> Bunu yapmanın bir başka yolu da bir üst öğenin isteğe bağlı alt öğelerini atmaktır. başka bir deyişle, "Selected =" No "" öğelerini eklemeyin, ancak yine de AdminDeployment.xml dosyanın sonundaki "Selected =" Yes "" öğelerini yerleştirmeniz gerekir.
 
 > [!IMPORTANT]
-> Yükleme sırasında bilgisayar otomatik olarak bir veya daha fazla kez yeniden başlatılabilir. Yeniden başlatıldıktan sonra bilgisayar yeniden başlatılmadan önce yüklemeyi gerçekleştirmek için oturum açıldıysa yeniden aynı kullanıcı hesabıyla oturum açmalısınız. Katılımsız yükleme çalıştırmadan önce Önkoşul bileşenlerini yükleyerek otomatik yeniden başlatmaları engelleyebilirsiniz. İçinde "Önlemek yeniden Kurulum sırasında" başlıklı bölüme daha fazla bilgi için bkz [Visual Studio Yönetici Kılavuzu](../install/visual-studio-administrator-guide.md).
+> Yükleme sırasında, bilgisayar bir veya daha fazla kez otomatik olarak yeniden başlatılabilir. Yeniden başlatıldıktan sonra, bilgisayar yeniden başlatılmadan önce yüklemeyi gerçekleştirmek üzere oturum açtığınız kullanıcı hesabıyla yeniden oturum açmanız gerekir. Katılımsız yüklemeyi çalıştırmadan önce önkoşul bileşenlerini yükleyerek otomatik yeniden başlatmalara engel olabilirsiniz. Daha fazla bilgi için [Visual Studio Yönetici Kılavuzu](../install/visual-studio-administrator-guide.md)'Ndaki "Kurulum sırasında yeniden başlatmayı önleyin" başlıklı bölüme bakın.
 
- AdminDeployment dosyası şeması aşağıdaki öğeleri içerir:
+ AdminDeployment dosya şeması, aşağıdaki öğeleri içerir:
 
 |Öğe|Öznitelik|Değerler|Açıklama|
 |-------------|---------------|------------|-----------------|
-|BundleCustomizations|TargetDir|*Yolu*|Yükleme uygulamasının kullanıcı arabirimindeki yolu geçersiz kılma olarak aynı şekilde davranır. Visual Studio zaten yüklüyse bu öğe yoksayılır.|
-|BundleCustomizations|NoWeb|Evet&#124;varsayılan|Bu öğenin değeri Evet ise, hiçbir zaman yükleme uygulaması kurma eylemi sırasında web sitesine gidin dener.|
-|Selectableıtemcustomization|Hidden|Evet&#124;yok|Bu öğenin değeri Evet ise, özelleştirme ağacında seçilebilir bir öğeyi gizler.|
-|Selectableıtemcustomization|Seçili|Evet&#124;yok|Seçer veya özelleştirme ağacında seçilebilir bir öğeyi siler.|
-|BundleCustomizations|Akış|Yol|Kullanıcı kullanmak istediği akış konumu.  Bu akış için kullanılan sonraki işlemleri (varsayılan olarak "varsayılan") makinedeki değiştirin.|
-|BundleCustomizations|SuppressRefreshPrompt|Evet&#124;varsayılan|Kullanıcı, kullanılabilir daha yeni bir tane yoksa, Kurulum yenilemek için istemde engeller.|
-|BundleCustomizations|NoRefresh|Evet&#124;varsayılan|Kullanılabilir daha yeni bir tane yoksa, Kurulum yenileyin olmaz.|
-|BundleCustomizations|NoCacheOnlyMode|Evet&#124;varsayılan|Paket önbelleğinin önceden doldurulmasını engeller.|
+|Paketleme Liözelleştirmeler|Dır|*Yol*|Yükleme uygulamasının Kullanıcı arabirimindeki yolu geçersiz kılma ile aynı şekilde davranır. Bu öğe, Visual Studio zaten yüklüyse yoksayılır.|
+|Paketleme Liözelleştirmeler|NoWeb|Evet&#124;varsayılan|Bu öğenin değeri Evet ise, yükleme uygulaması kurulum eylemi sırasında hiçbir şekilde Web 'e gitmeye çalışır.|
+|SelectableItemCustomization|Gizli|Evet&#124;Hayır|Bu öğenin değeri Evet ise, özelleştirme ağacındaki seçilebilir bir öğeyi gizler.|
+|SelectableItemCustomization|Seçili|Evet&#124;Hayır|Özelleştirme ağacındaki seçilebilir bir öğeyi seçer veya temizler.|
+|Paketleme Liözelleştirmeler|Akış|Yol|Kullanıcının kullanmak istediği akışın konumu.  Bu akış, makinedeki sonraki değiştirme işlemleri için (varsayılan olarak "varsayılan") kullanılır.|
+|Paketleme Liözelleştirmeler|SuppressRefreshPrompt|Evet&#124;varsayılan|, Daha yeni bir tane varsa, kullanıcının kurulum 'u yenilemesini engellemesine engel olur.|
+|Paketleme Liözelleştirmeler|NoRefresh|Evet&#124;varsayılan|Yeni bir tane varsa kurulum yenilemez.|
+|Paketleme Liözelleştirmeler|NoCacheOnlyMode|Evet&#124;varsayılan|Paket önbelleğinin önceden doldurulmasını engeller.|
 
 > [!WARNING]
-> Yükleme uygulaması, gizli olsa bile Selectableıtem öğesinin seçili durumuna uyar. Her zaman seçilebilir bir öğeyi yüklemek istiyorsanız, örneğin, onu gizli ve seçili olarak işaretleyebilirsiniz.
+> Yükleme uygulaması, gizlenmiş olsa bile SelectableItem 'ın seçili durumuna göre belirlenir. Örneğin, her zaman seçilebilir bir öğeyi yüklemek istiyorsanız, onu gizli ve seçili olarak işaretleyebilirsiniz.
 
-#### <a name="to-create-an-unattended-installation-of-visual-studio"></a>Visual Studio katılımsız yükleme oluşturmak için
+#### <a name="to-create-an-unattended-installation-of-visual-studio"></a>Visual Studio 'nun katılımsız bir yüklemesini oluşturmak için
 
-1. İçinde *sürücü*: \IDEinstall\AdminDeployment.XML dosya, "" aşağıdaki örnekte gösterildiği gibi Evet olarak "varsayılan" BundleCustomizations öğesinin NoWeb özniteliğinin değeri değiştirin:
+1. *Sürücü*:\IDEinstall\AdminDeployment.xml dosyası ' nda, aşağıdaki örnekte gösterildiği gibi, paketleme Licustomizations öğesinin NoWeb özniteliğinin değerini "default" iken "Yes" olarak değiştirin:
 
-     Değişiklik `<BundleCustomizations TargetDir="default" NoWeb="default"/>` için `<BundleCustomizations TargetDir="default" NoWeb="yes"/>`
+     Değiştir `<BundleCustomizations TargetDir="default" NoWeb="default"/>``<BundleCustomizations TargetDir="default" NoWeb="yes"/>`
 
-2. Selectableıtemcustomization özniteliğini isteğe bağlı bileşenler için gerektiği şekilde değiştirin ve dosyayı kaydedin.
+2. SelectableItemCustomization özniteliğini isteğe bağlı bileşenler için gereken şekilde değiştirin ve dosyayı kaydedin.
 
-## <a name="running-unattended-setup"></a>Katılımsız Kurulum çalıştırma
- Katılımsız Kurulum çalıştırabilirsiniz ya da istemci bilgisayarlarda Visual Studio için yükleme uygulamasını otomatik olarak çalıştırarak veya uygulamayı çalıştırmak kullanıcıların kendilerini tanımladığınız ayarlarla.
+## <a name="running-unattended-setup"></a>Katılımsız kurulum çalıştırma
+ Katılımsız kurulum 'u, istemci bilgisayarlarda Visual Studio için yükleme uygulamasını otomatik olarak çalıştırarak veya kullanıcıların sizin tanımladığınız ayarları kullanarak uygulamayı kendi kendilerine çalıştırmasına izin vererek çalıştırabilirsiniz.
 
-#### <a name="to-run-an-unattended-installation-on-a-client-computer"></a>Katılımsız bir yüklemeyi istemci bilgisayarda çalıştırmak için
+#### <a name="to-run-an-unattended-installation-on-a-client-computer"></a>İstemci bilgisayarda katılımsız yükleme çalıştırmak için
 
-- Açık **Başlat** menüsünde seçin **çalıştırma**yazıp enter \\ \\ *ServerName*\IDEinstall\vs_*ürün*.exe/adminfile *PathOfTheAdmindeployment.xmlFile*<em>AdditionalParametersAsNeeded</em>
+- **Başlat** menüsünü açın, **Çalıştır**' ı seçin ve sonra \\ \\ *sunucuadı*\ ıdeınstall\ vs_*Product*. exe/adminfile *PathOfTheAdmindeployment.xmldosya*<em>additionalparametersasgerekli</em> yazın
 
    Örneğin, aşağıdaki komut satırını belirtebilirsiniz: `\\server1\IDEinstall\vs_enterprise.exe /adminfile \\server1\ IDEinstall\AdminDeployment.xml /quiet /norestart`
 
-#### <a name="to-enable-clients-to-manually-install-visual-studio-with-pre-defined-settings"></a>Visual Studio'yu önceden tanımlanmış ayarlar ile el ile yüklemek istemcileri etkinleştirmek için
+#### <a name="to-enable-clients-to-manually-install-visual-studio-with-pre-defined-settings"></a>İstemcilerin Visual Studio 'Yu önceden tanımlı ayarlarla el ile yüklemesini sağlamak için
 
-1. Özelleştirilmiş AdminDeployment.xml dosyasını salt okunur bir ağ paylaşımına kopyalayın (örneğin, \\ \\ *ServerName*\IDEinstall\packages\AdminDeployment.xml).
+1. Özelleştirilmiş AdminDeployment.xml dosyasını salt okunurdur olan bir ağ paylaşımının içine kopyalayın (örneğin, \\ \\ *ServerName*\IDEinstall\packages\AdminDeployment.xml).
 
-2. Bu paylaşımdan yüklemek kullanıcıları etkinleştirin.
+2. Kullanıcıların söz konusu paylaşımdan yüklemesini sağlar.
 
-## <a name="maintaining-an-installation"></a>Yükleme koruması
- Açarsanız **Denetim Masası** ve yükleme uygulamasını yeniden çalıştırırsanız Visual Studio'nun özelliklerini değiştirebilir, programlama dillerini kaldırabilir ve onarmak veya Visual Studio'yu kaldırın.
+## <a name="maintaining-an-installation"></a>Yükleme sürdürme
+ **Denetim Masası** 'nı açıp yükleme uygulamasını yeniden çalıştırırsanız, Visual Studio 'nun özelliklerini değiştirebilir, programlama dillerini kaldırabilir ve Visual Studio 'yu onarabilir veya kaldırabilirsiniz.
 
 > [!NOTE]
-> Bakım modunu kullanmak için yerel bilgisayarda yönetici kimlik bilgileriniz olmalıdır.
+> Bakım modunu kullanmak için yerel bilgisayarda yönetici kimlik bilgilerine sahip olmanız gerekir.
 
-#### <a name="to-maintain-an-installation-on-a-client-computer"></a>Bir istemci bilgisayar yüklemesi korumak için
+#### <a name="to-maintain-an-installation-on-a-client-computer"></a>İstemci bilgisayarda yükleme sürdürmek için
 
-- Açık **Denetim Masası**ve ardından **programlar ve Özellikler**.
+- **Denetim Masası**' nı açın ve ardından **Programlar ve Özellikler**' i seçin.
 
-- Seçin [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ve ardından **değişiklik**.
+- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Öğesini seçin ve ardından **Değiştir**' i seçin.
 
-#### <a name="to-change-admindeployment-settings-on-a-client-computer-after-visual-studio-has-been-installed"></a>Visual Studio yüklendikten sonra istemci bilgisayarda AdminDeployment ayarlarını değiştirmek için
+#### <a name="to-change-admindeployment-settings-on-a-client-computer-after-visual-studio-has-been-installed"></a>İstemci bilgisayardaki AdminDeployment ayarlarını, Visual Studio yüklendikten sonra değiştirmek için
 
-1. Gerektiği gibi AdminDeployment.xml güncelleştirin.
+1. AdminDeployment.xml gerektiği şekilde güncelleştirin.
 
-2. Açık **Başlat** menüsünü ve ardından **çalıştırmak**.
+2. **Başlat** menüsünü açın ve **Çalıştır**' ı seçin.
 
-3. Aşağıdaki metni girin: \\\\*ServerName*\IDEinstall\vs_*ürün*.exe/adminfile PathToAdmindeployment.xml dosyası
+3. Şu metni girin: \\ \\ *ServerName*\ideınstall\ vs_*Product*. exe/adminfile PathToAdmindeployment.xml dosyası
 
-    AdditionalParametersAsNeeded
+    Additionalparametersasgerekli
 
     Örneğin, aşağıdaki komut satırını belirtebilirsiniz: `\\server1\IDEinstall\vs_enterprise.exe /adminfile \\server1\IDEinstall\AdminDeployment.xml /quiet /norestart`
 
-   Visual Studio yüklendikten sonra onarım varsayılan parametredir. Güncelleştirilmiş bir/adminfile ile Visual Studio'yu onarırsanız, güncelleştirilmiş AdminDeployment.xml dosyasını çağıran değerlerle geçerli yönetici dağıtma ayarları geçersiz kılar.
+   Visual Studio yüklendikten sonra varsayılan parametre onarım ' dır. Visual Studio 'Yu güncelleştirilmiş bir/AdminFile ile onarırsanız, güncel Yönetici dağıtım ayarlarını, güncelleştirilmiş AdminDeployment.xml dosyasının çağıranlarla birlikte geçersiz kılacaksınız.
 
-## <a name="updating-an-installation"></a>Bir yüklemeyi güncelleştirme
- Microsoft Visual Studio 2015 için birkaç güncelleştirme yayımladı. Bu bölümde, güncelleştirmeleri içerir, böylece Visual Studio 2015'in, katılımsız yükleme görüntüsünü güncelleştirmek açıklanmaktadır.
+## <a name="updating-an-installation"></a>Yükleme güncelleştiriliyor
+ Microsoft, Visual Studio 2015 için birkaç güncelleştirme yayımlamıştır. Bu bölümde, güncelleştirmeleri içermesi için Visual Studio 2015 ' nin katılımsız yükleme görüntünüzü güncelleştirme işlemleri açıklanmaktadır.
 
-#### <a name="to-update-an-unattended-installation-of-visual-studio"></a>Visual Studio katılımsız yüklemesini güncelleştirmek için
+#### <a name="to-update-an-unattended-installation-of-visual-studio"></a>Visual Studio 'nun katılımsız bir yüklemesini güncelleştirmek için
 
-1. Mevcut ağ görüntüde Product.exe dosyasını bulun, sağ tıklayın ve ardından **özellikleri**.
+1. Mevcut ağ görüntüsündeki Product.exe dosyasını bulun, sağ tıklayın ve ardından **Özellikler**' e tıklayın.
 
-2. Tıklayın **ayrıntıları** sekmesini ve sonra Not **ürün sürümü** özelliği.
+2. **Ayrıntılar** sekmesine tıklayın ve ardından **ürün sürümü** özelliğini aklınızda olun.
 
-    ![Visual Studio katılımsız yüklemesi Özellikleri iletişim kutusunda örneği](../install/media/unattended-install-properties-dialog-box.PNG "katılımsız yükleme - özellikleri iletişim kutusu")
+    ![Visual Studio 'nun katılımsız yüklemesinde Özellikler iletişim kutusu örneği](../install/media/unattended-install-properties-dialog-box.PNG "Katılımsız kurulum-Özellikler Iletişim kutusu")
 
 3. ###### <a name="if-the-product-version-is-140247200-or-140247201-follow-these-steps"></a>Ürün sürümü 14.0.24720.0 veya 14.0.24720.1 ise, şu adımları izleyin:
-   1. Çalıştırma *Product.exe* /layout *sürücü:* \IDEinstall Internet erişimi olan bir makinede. (Örneğin, çalıştırın: `vs_enterprise.exe /Layout d:\IDEinstall`.)
+   1. Internet erişimi olan bir makineye *Product.exe* /Layout *Drive:* \ıdeınstall komutunu çalıştırın. (Örneğin, şunu çalıştırın: `vs_enterprise.exe /Layout d:\IDEinstall` .)
 
-   2. / Layout işlemi tamamlandıktan sonra yeni görüntüyü yeni bir konuma kopyalayın.
+   2. /Layout tamamlandıktan sonra yeni görüntüyü yeni bir konuma kopyalayın.
 
-   3. Oluşturun ve AdminDeployment.xml dosyasını değiştirin. Bunu yapmak için `/CreateAdminFile`  *\<dosya konumu >* komut satırı parametresi. (Daha fazla bilgi için bu makalenin "Katılımsız modda Visual Studio dağıtma" bölümüne bakın.)
+   3. AdminDeployment.xml dosyasını oluşturun ve değiştirin. Bunu yapmak için `/CreateAdminFile` *\<file location>* komut satırı parametresini kullanın. (Daha fazla bilgi için, bu makalenin "Visual Studio 'Yu katılımsız modda dağıtma" bölümüne bakın.)
 
-   4. İstemci makinesinde daha önce yüklediğiniz Visual Studio kopyası güncelleştirmek için aşağıdaki komutu çalıştırın: "\\\\*Sunucu1*\IDEinstall_Updated_1\\*Product.exe*  /adminfile \\\server1\ IDEinstall_Updated_1\AdminDeployment.xml/quiet/norestart ".
+   4. İstemci makinede, daha önce yüklediğiniz Visual Studio kopyasını güncelleştirmek için aşağıdaki komutu çalıştırın: " \\ \\ *Sunucu1*\ IDEinstall_Updated_1 \\ *Product.exe* /adminfile \ \\ sunucu1\ IDEinstall_Updated_1\AdminDeployment.xml/quiet/norestart".
 
-        Örneğin, şunu çalıştırın: `\\server1\IDEinstall_Updated_1\vs_enterprise.exe /adminfile \\server1\IDEinstall_Updated_1\AdminDeployment.xml /quiet /norestart`
-5. ###### <a name="for-other-product-version-values-follow-these-steps"></a>Diğer ürün sürümü değerler için şu adımları izleyin:
-   1. Çalıştırma *Product.exe* /layout *sürücü:* \IDEinstall Internet erişimi olan bir makinede. (Örneğin, `vs-enterprise.exe /Layout d:\IDEinstall`.)
+        Örneğin şunu çalıştırın: `\\server1\IDEinstall_Updated_1\vs_enterprise.exe /adminfile \\server1\IDEinstall_Updated_1\AdminDeployment.xml /quiet /norestart`
+5. ###### <a name="for-other-product-version-values-follow-these-steps"></a>Diğer ürün sürümü değerleri için şu adımları izleyin:
+   1. Internet erişimi olan bir makineye *Product.exe* /Layout *Drive:* \ıdeınstall komutunu çalıştırın. (Örneğin, öğesini çalıştırın `vs-enterprise.exe /Layout d:\IDEinstall` .)
 
-   2. / Layout işlemi tamamlandıktan sonra yeni görüntüyü yeni bir konuma kopyalayın. (Veya bunun yerine mevcut ağ görüntü geçersiz kılabilir.)
+   2. /Layout tamamlandıktan sonra yeni görüntüyü yeni bir konuma kopyalayın. (Veya bunun yerine var olan ağ görüntüsünü geçersiz kılabilirsiniz.)
 
-   3. Oluşturun ve sonra AdminDeployment.xml dosyasını değiştirmektir. Bunu yapmak için `/CreateAdminFile`  *\<dosya konumu >* komut satırı parametresi. (Daha fazla bilgi için bu makalenin "Katılımsız modda Visual Studio dağıtma" bölümüne bakın.)
+   3. AdminDeployment.xml dosyasını oluşturun ve değiştirin. Bunu yapmak için `/CreateAdminFile` *\<file location>* komut satırı parametresini kullanın. (Daha fazla bilgi için, bu makalenin "Visual Studio 'Yu katılımsız modda dağıtma" bölümüne bakın.)
 
-   4. Görüntüyü yeni bir konuma kopyalayın, daha önce yüklediğiniz Visual Studio kopyası güncelleştirmek için istemci makinesinde aşağıdaki komutu çalıştırmanız gerekir: "\\\\*Sunucu1*\IDEinstall_Updated_1\\ *Product.exe* /adminfile \\\server1\ IDEinstall_Updated_1\AdminDeployment.xml/quiet/norestart ".
+   4. Görüntüyü yeni bir konuma kopyalarsanız, daha önce yüklediğiniz Visual Studio 'nun kopyasını güncelleştirmek için istemci makinesinde şu komutu çalıştırmanız gerekir: " \\ \\ *Sunucu1*\ IDEinstall_Updated_1 \\ *Product.exe* /adminfile \ \\ sunucu1\ IDEinstall_Updated_1\AdminDeployment.xml/quiet/norestart".
 
-        Örneğin, şunu çalıştırın: `\\server1\IDEinstall_Updated_1\vs_enterprise.exe /adminfile \\server1\IDEinstall_Updated_1\AdminDeployment.xml /quiet /norestart`
+        Örneğin şunu çalıştırın: `\\server1\IDEinstall_Updated_1\vs_enterprise.exe /adminfile \\server1\IDEinstall_Updated_1\AdminDeployment.xml /quiet /norestart`
 
-   5. Mevcut ağ görüntü geçersiz kılarsanız, önceki adımda listelenen komutunu çalıştırabilirsiniz ya da aşağıdakileri yapabilirsiniz:
-       1. Açık **Denetim Masası**ve ardından **programlar ve Özellikler**.
+   5. Var olan ağ görüntüsünü geçersiz kılarsınız, önceki adımda listelendiği gibi komutu çalıştırabilirsiniz veya şunları yapabilirsiniz:
+       1. **Denetim Masası**' nı açın ve ardından **Programlar ve Özellikler**' i seçin.
 
-       2. Seçin **Visual Studio**ve ardından **değişiklik**.
+       2. **Visual Studio**' yı ve ardından **Değiştir**' i seçin.
 
-       3. Visual Studio bakım modunda başlattıktan sonra tıklayın **Değiştir**.
+       3. Visual Studio bakım modunda başladıktan sonra **Değiştir**' e tıklayın.
 
-       4. En son güncelleştirmeyi Özellikler sayfasında görünmesi gerekir. Yüklemek için istediğiniz özellikleri seçin **sonraki**ve ardından **güncelleştirme** güncelleştirme hem yeni özellikler yüklemek için.
+       4. En son güncelleştirme Özellikler sayfasında görünmelidir. Yüklemek istediğiniz diğer özellikleri seçin, **İleri**' ye tıklayın ve **ardından Güncelleştir ' e tıklayarak** güncelleştirme ve yeni özellikleri yükleyebilirsiniz.
 
 ## <a name="registering-the-product"></a>Ürün kaydediliyor
- Yükleme tamamlandıktan sonra kopyanızı kaydetmenizi [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] içinden [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].
+ Yükleme tamamlandıktan sonra, içinden kopyanızı kaydedebilirsiniz [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] .
 
-#### <a name="to-register"></a>Kaydetmek için
+#### <a name="to-register"></a>Kaydolmak için
 
-1. Açık **yardımcı** menüsünü seçip **ürünü kayıt ettir**.
+1. **Yardım** menüsünü açın ve **ürünü kaydet**' i seçin.
 
 2. Ürün anahtarını girin.
 
-     (Daha fazla bilgi için [nasıl yapılır: Visual Studio ürün anahtarını bulmak](../install/how-to-locate-the-visual-studio-product-key.md) ve [nasıl yapılır: Visual Studio'yu dağıtırken ürün anahtarlarını otomatik olarak uygulama](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md) Konular.)
+     (Daha fazla bilgi için bkz. [nasıl yapılır: Visual Studio ürün anahtarını bulma](../install/how-to-locate-the-visual-studio-product-key.md) ve [nasıl yapılır: Visual Studio 'yu dağıtmaya yönelik ürün anahtarlarını otomatik olarak uygulama](../install/how-to-automatically-apply-product-keys-when-deploying-visual-studio.md) konuları.)
 
 ## <a name="see-also"></a>Ayrıca Bkz.
- [Visual Studio'yu yükleyin](../install/install-visual-studio-2015.md)
+ [Visual Studio'yu yükleme](../install/install-visual-studio-2015.md)

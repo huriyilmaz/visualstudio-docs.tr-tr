@@ -1,5 +1,5 @@
 ---
-title: Previewımage öğesi (Visual Studio şablonları) | Microsoft Docs
+title: Previewiımage öğesi (Visual Studio şablonları) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -12,22 +12,22 @@ caps.latest.revision: 7
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 90521b5ea05aae2f54e56f21b65933a93580da85
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194060"
 ---
 # <a name="previewimage-element-visual-studio-templates"></a>PreviewImage Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Ya da görünür önizleme görüntüsü için bir dosya adı olarak önizleme resmini belirler **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.  
+Önizleme görüntüsünün **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda görünecek olan önizleme resmini bir dosya adı olarak belirtir.  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<Previewımage >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<PreviewImage>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <PreviewImage>"filename"</PreviewImage>  
@@ -46,15 +46,15 @@ Ya da görünür önizleme görüntüsü için bir dosya adı olarak önizleme r
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve ya da nasıl görüntüleneceğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** ya da **Yeni öğe Ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Metin dosyası adını temsil eden bir dize olmalıdır.  
+ Metin bir dosya adını temsil eden bir dize olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `PreviewImage` İsteğe bağlı bir öğedir.  
+ `PreviewImage` isteğe bağlı bir öğedir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugEvent2::GetAttributes | Microsoft Dokümanlar
+title: 'IDebugEvent2:: GetAttributes | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: ffc3fc1b7988401611190fdf09e8041bf0dc5b1a
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729949"
 ---
 # <a name="idebugevent2getattributes"></a>IDebugEvent2::GetAttributes
 Bu hata ayıklama olayının özniteliklerini alır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetAttribute( 
@@ -41,13 +41,13 @@ int GetAttribute( 
 
 ## <a name="parameters"></a>Parametreler
 `pdwAttrib`\
-[çıkış] [EVENTATTRIBUTES](../../../extensibility/debugger/reference/eventattributes.md) numaralandırmagelen bayrakların birleşimi.
+dışı [EventAttributes](../../../extensibility/debugger/reference/eventattributes.md) numaralandırmasındaki bayrakların birleşimi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi tüm olaylariçin ortaktır. Bu yöntem, olay türünü açıklar; örneğin, olay senkron veya asynchronous ve bir durdurma olayıdır.
+ [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) arabirimi tüm olaylar için ortaktır. Bu yöntem, olay türünü açıklar; Örneğin, olay zaman uyumlu veya zaman uyumsuz olur ve bu bir durdurma olayıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md)

@@ -13,18 +13,18 @@ caps.latest.revision: 12
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c39aa316308f313bf23ef2c5680671585636f0a5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204947"
 ---
-# <a name="providerflags"></a>PROVIDER_FLAGS
+# <a name="provider_flags"></a>PROVIDER_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir program sağlayıcısından alınabilmesi için istenen özellikleri belirtir.  
+Bir program sağlayıcısından elde edilecek istenen özellikleri belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 enum enum_PROVIDER_FLAGS {  
@@ -53,28 +53,28 @@ public enum enum_PROVIDER_FLAGS {
   
 ## <a name="members"></a>Üyeler  
  PFLAG_NONE  
- Bayrakları belirtildi.  
+ Bayrak belirtilmedi.  
   
  PFLAG_REMOTE_PORT  
- Arayan istediği farklı bir makinede programların listesini [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ Çağıran, farklı bir makinede bulunan programların listesini ister [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .  
   
  PFLAG_DEBUGGEE  
- İşlem şu anda bu örneği tarafından ayıklanmakta olan [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ İşlem şu anda bu örneği tarafından ayıklanıyor [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .  
   
  PFLAG_ATTACH_TODEBUGGEE  
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Ayıklanan programa iliştirildi fakat bu başlatmadı.  
+ [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklanan programa bağlı ancak başlatılamadı.  
   
  PFLAG_REASON_WATCH  
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] olaylar için izleme.  
+ [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] olaylar için izliyor.  
   
  PFLAG_GET_PROGRAM_NODES  
- Arayan istediği `ProgramNodes` alanını [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) yapısı.  
+ Çağıran `ProgramNodes` [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) yapısını alan istiyor.  
   
  PFLAG_GET_IS_DEBUGGER_PRESENT  
- Arayan istediği `fIsTheDebuggerPresent` alanını `PROVIDER_PROCESS_DATA` yapısı.  
+ Çağıran, `fIsTheDebuggerPresent` yapının alanını istiyor `PROVIDER_PROCESS_DATA` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu bayrak, aşağıdaki yöntemi geçirilir:  
+ Bu bayraklar aşağıdaki yöntemlere geçirilir:  
   
 - [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)  
   
@@ -82,17 +82,17 @@ public enum enum_PROVIDER_FLAGS {
   
 - [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)  
   
-  Bu değerler, bit düzeyinde ile birleştirilebilir `OR`.  
+  Bu değerler, bit düzeyinde birleştirilebilir `OR` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md)   
  [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)   
  [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)   

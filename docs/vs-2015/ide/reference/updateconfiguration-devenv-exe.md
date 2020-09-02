@@ -1,5 +1,5 @@
 ---
-title: -Updateconfiguration (devenv. exe) | Microsoft Docs
+title: -Updateconfiguration (devenv.exe) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -14,28 +14,28 @@ author: jillre
 ms.author: jillfra
 manager: jillfra
 ms.openlocfilehash: 50773821b328ea81381744bc6f32b3907cd1c5bc
-ms.sourcegitcommit: a8e8f4bd5d508da34bbe9f2d4d9fa94da0539de0
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/19/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "72657916"
 ---
-# <a name="updateconfiguration-devenvexe"></a>/Updateconfiguration (devenv. exe)
+# <a name="updateconfiguration-devenvexe"></a>/Updateconfiguration (devenv.exe)
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-Sistemdeki [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] paketlerini birleştirmek ve tüm değişiklikler için MEF önbelleğini denetlemek [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bildirir.
+[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Sistemdeki paketleri birleştirmeye ve tüm DEĞIŞIKLIKLER için MEF önbelleğini denetlemeye bildirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```
 devenv /updateconfiguration
 ```
 
 ## <a name="remarks"></a>Açıklamalar
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bir VSıX paketi yüklediğinizde bu komutu otomatik olarak çalıştırır. @No__t_1 MEF önbelleğini güncelleştirmesi için dosyalarınızda düzeltme eki uygulandıktan sonra `devenv.exe /updateconfiguration` çalıştırmalısınız. Bu, Düzeltmelerinizin yeterli olup olmadığını değerlendirmenizi sağlar.
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bir VSıX paketi yüklediğinizde bu komutu otomatik olarak çalıştırır. `devenv.exe /updateconfiguration`MEF önbelleğini güncelleştiren şekilde dosyalarınıza düzeltme eki uygulandıktan sonra çalıştırmalısınız [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . Bu, Düzeltmelerinizin yeterli olup olmadığını değerlendirmenizi sağlar.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki komut satırı, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sistemdeki [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] paketlerini birleştirmeye ve tüm değişiklikler için MEF önbelleğini denetlemeye neden olur.
+ Aşağıdaki komut satırı, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sistemdeki paketleri birleştirmeye ve tüm DEĞIŞIKLIKLER için MEF önbelleğini denetlemeye neden olur.
 
 ```
 Devenv.exe /updateconfiguration

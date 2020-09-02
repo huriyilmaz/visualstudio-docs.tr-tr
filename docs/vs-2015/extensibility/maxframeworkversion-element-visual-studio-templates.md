@@ -12,21 +12,21 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 4a1c27e42574429dbb6b2eaeb140db484bf29db5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194323"
 ---
 # <a name="maxframeworkversion-element-visual-studio-templates"></a>MaxFrameworkVersion Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Şablon tarafından gerekli .NET Framework'ün en yüksek sürümü belirtir. Şablon içinde görüntülenip görüntülenmeyeceğini belirler **şablonları** bölümünü **Yeni Proje Ekle** iletişim kutusunda, seçili değere göre **hedef Framework sürümü** kutusunun **Yeni Proje Ekle** iletişim kutusu.  
+Şablonun gerektirdiği .NET Framework en yüksek sürümünü belirtir. Şablon, yeni **Proje Ekle iletişim** kutusunun **hedef Framework sürümü** kutusunda seçilen değere bağlı olarak **Yeni Proje Ekle** iletişim kutusunun **Şablonlar** bölümünde görüntülenip görüntülenmeyeceğini belirler.  
   
- \<VSTemplate >  
- \<MaxFrameworkVersion >  
+ \<VSTemplate>  
+ \<MaxFrameworkVersion>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <MaxFrameworkVersion> ... </MaxFrameworkVersion>  
@@ -45,18 +45,18 @@ ms.locfileid: "68194323"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve ya da nasıl görüntüleneceğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** ya da **Yeni öğe Ekle** iletişim kutusunda nasıl görüntüleneceğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Metin şablon tarafından izin verilen .NET Framework'ün en yüksek sürüm numarası olmalıdır.  
+ Metin, şablon tarafından izin verilen .NET Framework en yüksek sürüm numarası olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `MaxFrameworkVersion` İsteğe bağlı bir öğedir. Öğesinde `TemplateData` için bir filtre olarak görev yapar .vstemplate dosyasının **şablonları** bölümünü **Yeni Proje Ekle** iletişim kutusu. Yalnızca, .NET Framework gereksinimleri olan şablonları küçüktür `MaxFrameworkVersion` öğe değerlerini görüntülenir, seçilen değere göre **hedef Framework sürümü** kutusunun **Yeni Proje Ekle**iletişim kutusu. `MaxFrameworkVersion` Şekilde yanlışlıkla şablonları .NET Framework'ün yeni sürümleriyle kullanıldığında görüntülenen neden değil olarak gerekli olmadığı sürece öğesi'nin etmeyebilirsiniz.  
+ `MaxFrameworkVersion` isteğe bağlı bir öğedir. `TemplateData`. Vstemplate dosyasının bölümündeki öğesi, **Yeni Proje Ekle** iletişim kutusunun **Şablonlar** bölümü için bir filtre işlevi görür. `MaxFrameworkVersion` **Yeni Proje Ekle** Iletişim kutusunun **hedef Framework sürümü** kutusunda seçilen değere bağlı olarak yalnızca .NET Framework gereksinimleri öğe değerlerinden daha az olan şablonlar görüntülenecektir. `MaxFrameworkVersion`Öğe gerekli olmadığı sürece atlanmalıdır, bu nedenle, .NET Framework daha yeni sürümleriyle kullanıldığında şablonların görüntülenmesini istemeden neden olmaz.  
   
 ## <a name="example"></a>Örnek  
- Standart için meta veriler aşağıdaki örnekte [!INCLUDE[csprcs](../includes/csprcs-md.md)] sınıf şablonu.  
+ Aşağıdaki örnek, standart sınıf şablonu için meta verileri gösterir [!INCLUDE[csprcs](../includes/csprcs-md.md)] .  
   
 ```  
 <VSTemplate Type="Item" Version="3.0.0"  
@@ -75,7 +75,7 @@ ms.locfileid: "68194323"
 </VSTemplate>  
 ```  
   
- Bu örnekte, şablon tarafından gerekli .NET Framework'ün en yeni sürümün temsil ettiği `MaxFrameworkVersion`, 3.5. Yukarıdaki şablonu yalnızca 3.0 veya 3.5 seçtiğinizde görüntülenir **hedef Framework sürümü** kutusunda **Yeni Proje Ekle** iletişim kutusu.  
+ Bu örnekte, şablon için gereken .NET Framework en yüksek sürümü, tarafından temsil edilir `MaxFrameworkVersion` 3,5. Yukarıdaki şablon yalnızca **Yeni Proje Ekle** Iletişim kutusundaki **hedef Framework sürümü** kutusunda 3,0 veya 3,5 ' i seçtiğinizde görüntülenir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio Şablon Şeması Başvurusu](../extensibility/visual-studio-template-schema-reference.md)   

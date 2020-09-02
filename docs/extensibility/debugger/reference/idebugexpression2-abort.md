@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::İptal | Microsoft Dokümanlar
+title: 'IDebugExpression2:: Abort | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 5de2e34a8ae1e038c2109627099dacc5bd03a1ac
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80729768"
 ---
 # <a name="idebugexpression2abort"></a>IDebugExpression2::Abort
-Bu yöntem, [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) yöntemine yapılan bir çağrı yla başlatılan eşzamanlı ifade değerlendirmesini iptal eder.
+Bu yöntem, [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) yöntemine yapılan bir çağrı tarafından başlatılan zaman uyumsuz ifade değerlendirmesini iptal eder.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```cpp
 HRESULT Abort(
@@ -38,10 +38,10 @@ int Abort();
 ```
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Eşsenkronize ifade değerlendirmesi iptal edildiğinde, Ekle veya [Ekle](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemlerine geçirilen olay geri çağırmasına bir [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) olayı [göndermeyin.](../../../extensibility/debugger/reference/idebugprogram2-attach.md)
+ Zaman uyumsuz ifade değerlendirmesi iptal edildiğinde, [Attach](../../../extensibility/debugger/reference/idebugprogram2-attach.md) veya [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) yöntemlerine geçirilen olay geri çağırması için bir [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) olayı göndermeyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)

@@ -1,5 +1,5 @@
 ---
-title: Extern öğesi | Microsoft Docs
+title: Extern öğe | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,23 +14,23 @@ caps.latest.revision: 16
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 17477b7eb60aa332f6910019e28f4c53aa31ebf1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68204402"
 ---
 # <a name="extern-element"></a>Extern Öğesi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Extern öğesi, derleme zamanında .vsct dosyası ile birleştirmek için dış üstbilgi (.h) dosyalarla başvuruyor. VSCT derleyici için verilen ya da başvurduğu yoluna birleştirilecek dosyaları olmalıdır bir [INCLUDE öğesi](../extensibility/include-element.md). Dosyaları diğer .vsct dosyaları veya C++ üstbilgi dosyaları olabilir.  
+Extern öğesi, derleme zamanında. vsct dosyası ile birleştirmek için herhangi bir dış üstbilgi (. h) dosyasına başvurur. Birleştirilecek dosyalar, VSCT derleyicisine verilen veya bir [Include öğesi](../extensibility/include-element.md)tarafından başvurulan içerme yolunda olmalıdır. Dosyalar, diğer. vsct dosyaları veya C++ üst bilgi dosyaları olabilir.  
   
- Üst bilgi dosyaları tanımlarında biçiminde olmalıdır "# [Value] [simge] define" önceden tanımlı değilse değer başka bir sembol olabilir. Tanımları komut öğeleri koşullu ifadelerde kullanılabilir. Gerçekten kullanılmıyorsa herhangi bir simge atılacak.  
+ Üstbilgi dosyalarındaki tanımlar "#define [symbol] [Value]" biçiminde olmalıdır, daha önceden tanımlanmışsa değer başka bir sembol olabilir. Tanımlar, komut öğelerinin koşullu deyimlerinde kullanılabilir. Gerçekte kullanılmayan herhangi bir sembol atılır.  
   
  CommandTable Öğesi  
 Extern Öğesi  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <Extern href="stdidcmd.h" />  
@@ -43,9 +43,9 @@ Extern Öğesi
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|href|Gerekli. Üstbilgi dosyası yolu:<br /><br /> href="stdidcmd.h"|  
-|Koşul|İsteğe bağlı. Bkz: [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
-|dil|İsteğe bağlı. Tüm varsayılan dili [ \<dizeleri >](../extensibility/strings-element.md) komut tablosu öğeleri:<br /><br /> Dil = "en-us"|  
+|değerini|Gereklidir. Üst bilgi dosyasının yolu:<br /><br /> href = "Stdidcmd. h"|  
+|Koşul|İsteğe bağlı. Bkz. [koşullu öznitelikler](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|language|İsteğe bağlı. [\<Strings>](../extensibility/strings-element.md)Komut tablosundaki tüm öğelerin varsayılan dili:<br /><br /> Language = "en-US"|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -57,7 +57,7 @@ Extern Öğesi
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[CommandTable Öğesi](../extensibility/commandtable-element.md)|Tüm komutları temsil eden öğeler tanımlar — diğer bir deyişle, menü öğeleri, menüler, araç çubukları ve birleşik giriş kutuları — IDE'ye VSPackage sağlayan.|  
+|[CommandTable Öğesi](../extensibility/commandtable-element.md)|Bir VSPackage 'ın IDE 'ye sağladığı komutları (menü öğeleri, menüler, araç çubukları ve Birleşik giriş kutuları) temsil eden tüm öğeleri tanımlar.|  
   
 ## <a name="example"></a>Örnek  
   
@@ -73,5 +73,5 @@ Extern Öğesi
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Visual Studio komut tablosu (. Vsct) dosyaları](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
- [VSPackage kullanıcı arabirimi öğelerini nasıl eklenir](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+ [VSPackages Kullanıcı arabirimi öğeleri ekleme](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [Komutlar, Menüler ve Araç Çubukları](../extensibility/internals/commands-menus-and-toolbars.md)

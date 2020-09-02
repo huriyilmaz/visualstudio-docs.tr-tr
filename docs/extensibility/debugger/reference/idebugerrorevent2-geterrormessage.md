@@ -1,5 +1,5 @@
 ---
-title: IDebugErrorEvent2::GetErrorMessage | Microsoft Dokümanlar
+title: 'IDebugErrorEvent2:: GetErrorMessage | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 1ff1da2f2a2d24b958a613e6fe5cb58c0081ed3e
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730035"
 ---
 # <a name="idebugerrorevent2geterrormessage"></a>IDebugErrorEvent2::GetErrorMessage
-İnsan tarafından okunabilir bir hata iletisinin yapılmasına izin veren bilgileri verir.
+İnsanlar tarafından okunabilen bir hata iletisinin oluşturulmasına izin veren bilgileri döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT GetErrorMessage(
@@ -51,28 +51,28 @@ int GetErrorMessage(
 
 ## <a name="parameters"></a>Parametreler
 `pMessageType`\
-[çıkış] İleti türünü açıklayan [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md) numaralandırmasından bir değer döndürür.
+dışı İleti türünü açıklayan [MessageType](../../../extensibility/debugger/reference/messagetype.md) numaralandırmasından bir değer döndürür.
 
 `pbstrErrorFormat`\
-[çıkış] Kullanıcıya son iletinin biçimi (ayrıntılar için "Açıklamalar"a bakın).
+dışı Kullanıcıya son iletinin biçimi (Ayrıntılar için bkz. "açıklamalar").
 
 `hrErrorReason`\
-[çıkış] İletinin ilgili hata kodu.
+dışı İletinin bulunduğu hata kodu.
 
 `pdwType`\
-[çıkış] Hatanın önem derecesi (MB_XXX sabitlerini `MessageBox`kullanın; `MB_EXCLAMATION` `MB_WARNING`
+dışı Hatanın önem derecesi (için MB_XXX sabitleri kullanın `MessageBox` ; Örneğin, `MB_EXCLAMATION` veya `MB_WARNING` ).
 
 `pbstrHelpFileName`\
-[çıkış] Yardım dosyasına giden yol (yardım dosyası yoksa null değerine ayarlayın).
+dışı Yardım dosyasının yolu (Yardım dosyası yoksa null değere ayarlanır).
 
 `pdwHelpId`\
-[çıkış] Görüntülenecek yardım konusunun kimliği (yardım konusu yoksa 0 olarak ayarlayın).
+dışı Görüntülenecek Yardım konusunun KIMLIĞI (Yardım konusu yoksa 0 olarak ayarlanır).
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- Hata iletisi `"What I was doing.  %1"`. Daha `"%1"` sonra hata kodundan türetilen hata iletisi (döndürülür) `hrErrorReason`ile arayan tarafından değiştirilir. Parametre, `pMessageType` arayana son hata iletisinin nasıl görüntüleneceğini bildirir.
+ Hata iletisi, satırları üzerinde biçimlendirilmelidir `"What I was doing.  %1"` . `"%1"`Ardından, çağıran tarafından, hata kodundan (' de döndürülen) alınan hata iletisiyle değiştirilmelidir `hrErrorReason` . `pMessageType`Parametresi, çağıranın son hata iletisinin nasıl görüntüleneceğini söyler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md)

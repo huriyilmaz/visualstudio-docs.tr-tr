@@ -14,22 +14,22 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: d07a62027b494242d3c25aba00fbd5f4d75df78b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68193915"
 ---
 # <a name="projectsubtype-element-visual-studio-templates"></a>ProjectSubType Öğesi (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Şablon içinde belirtilen değerle bir alt kategorisi olarak sınıflandırır `ProjectType` öğesi.  
+Şablonu, öğesinde belirtilen değerin bir alt kategorisine sınıflandırır `ProjectType` .  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<ProjectSubType >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<ProjectSubType>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <ProjectSubType> SubType </ProjectSubType>  
@@ -48,30 +48,30 @@ ms.locfileid: "68193915"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Gerekli öğe.<br /><br /> Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
  Bir metin değeri gereklidir.  
   
- Bu değer, şablon kategorisidir belirtir.  
+ Bu değer, şablonun alt kategorisini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ProjectSubType` bir isteğe bağlı bir alt öğesidir `TemplateData`.  
+ `ProjectSubType` , öğesinin isteğe bağlı bir alt öğesidir `TemplateData` .  
   
- `ProjectSubType` Öğesi bir alt kategoriye sağlar [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) öğesi. Bu değer içerebilir:  
+ `ProjectSubType`Öğesi [ProjectType](../extensibility/projecttype-element-visual-studio-templates.md) öğesine bir alt kategori sağlar. Bu değer şunlar olabilir:  
   
-- `SmartDevice-NETCFv1`: Belirten şablonunun hedeflediği [!INCLUDE[Compact](../includes/compact-md.md)] sürüm 1.0.  
+- `SmartDevice-NETCFv1`: Şablonun 1,0 sürümünü hedeflediğini belirtir [!INCLUDE[Compact](../includes/compact-md.md)] .  
   
-- `SmartDevice-NETCFv2`: Belirten tempalate hedefleri [!INCLUDE[Compact](../includes/compact-md.md)] sürüm 2.0.  
+- `SmartDevice-NETCFv2`: Tempalate 'nın 2,0 sürümünü hedeflediğini belirtir [!INCLUDE[Compact](../includes/compact-md.md)] .  
   
-  Bir şablon içeriyorsa, bir `ProjectType` öğe değerini `Web`, `ProjectSubType` öğe şablonunun programlama dilini belirtir. Bu öğe, aşağıdaki değerlere sahip olabilir:  
+  Bir şablon `ProjectType` değeri olan bir öğesi içeriyorsa `Web` , `ProjectSubType` öğesi şablonun programlama dilini belirtir. Bu öğe aşağıdaki değerlere sahip olabilir:  
   
-- `CSharp`: Şablon oluşturur belirtir bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] Web proje veya öğe.  
+- `CSharp`: Şablonun bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] Web projesi veya öğe oluşturduğunu belirtir.  
   
-- `VisualBasic`: Şablon oluşturur belirtir bir [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Web proje veya öğe.  
+- `VisualBasic`: Şablonun bir [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] Web projesi veya öğe oluşturduğunu belirtir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir proje şablonu için meta verileri gösterir. bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] cihazı hedefleyen uygulama [!INCLUDE[Compact](../includes/compact-md.md)] sürüm 2.0.  
+ Aşağıdaki örnek, [!INCLUDE[csprcs](../includes/csprcs-md.md)] 2,0 sürümünü hedefleyen bir cihaz uygulaması için bir proje şablonu meta verilerini gösterir [!INCLUDE[Compact](../includes/compact-md.md)] .  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

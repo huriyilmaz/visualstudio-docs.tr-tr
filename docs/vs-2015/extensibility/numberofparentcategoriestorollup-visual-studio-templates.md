@@ -14,22 +14,22 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 278d8537ee253d8c79024d5e866befa1d65ded0d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194209"
 ---
 # <a name="numberofparentcategoriestorollup-visual-studio-templates"></a>NumberOfParentCategoriesToRollUp (Visual Studio Şablonları)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Şablonda görüntüler üst kategori sayısını belirtir **yeni proje** iletişim kutusu.  
+**Yeni proje** iletişim kutusunda şablonu görüntüleyecek üst kategori sayısını belirtir.  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<NumberOfParentCategoriesToRollUp >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<NumberOfParentCategoriesToRollUp>  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 <NumberOfParentCategoriesToRollUp>  
@@ -50,18 +50,18 @@ ms.locfileid: "68194209"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve nasıl görüntülendiğini tanımlar **yeni proje** veya **Yeni Öğe Ekle** iletişim kutusu.|  
+|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Şablonu kategorilere ayırır ve **Yeni proje** veya **Yeni öğe Ekle** iletişim kutusunda nasıl görüntülediğini tanımlar.|  
   
 ## <a name="text-value"></a>Metin Değeri  
- Bir `integer` değeri gereklidir.  
+ `integer`Değer gereklidir.  
   
- Bu değer, şablonda görüntüler üst kategori sayısını belirtir. **yeni proje** iletişim kutusu.  
+ Bu değer, şablonu **Yeni proje** iletişim kutusunda görüntüleyecek üst kategori sayısını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `NumberOfParentCategoriesToRollUp` İsteğe bağlı bir öğedir.  
+ `NumberOfParentCategoriesToRollUp` isteğe bağlı bir öğedir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek için meta verileri gösterir. bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] Windows uygulaması. Bu meta veriler ile bir şablon iki klasör düzeyi en üst düzey yerleştirdiyseniz [!INCLUDE[csprcs](../includes/csprcs-md.md)] düğümü, şablonu içinde üst düzey düğümünde görünür **yeni proje** iletişim kutusu. Varsa `NumberOfParentCategoriesToRollUp` ayarlanmazsa şablon yalnızca, BT konumlandırıldığını düğümünde görüntülenir.  
+ Bu örnek, bir Windows uygulaması için meta verileri gösterir [!INCLUDE[csprcs](../includes/csprcs-md.md)] . Bu meta verilere sahip bir şablon en üst düzey düğümün altına iki klasör düzeyi yerleştirirse [!INCLUDE[csprcs](../includes/csprcs-md.md)] , şablon **Yeni proje** iletişim kutusundaki en üst düzey düğümünde görünür. `NumberOfParentCategoriesToRollUp`Ayarlanmamışsa, şablon yalnızca fiziksel olarak bulunduğu düğümde görüntülenir.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  

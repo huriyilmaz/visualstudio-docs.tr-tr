@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 88ff2a1da1f937fd4011932979bd95057eb40dfd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68205060"
 ---
-# <a name="processinfoflags"></a>PROCESS_INFO_FLAGS
+# <a name="process_info_flags"></a>PROCESS_INFO_FLAGS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Açıklayan veya bir işlem özelliklerini belirtir.  
+Bir işlemin özelliklerini açıklar veya belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_PROCESS_INFO_FLAGS {   
@@ -47,29 +47,29 @@ enum enum_PROCESS_INFO_FLAGS { 
   
 ## <a name="members"></a>Üyeler  
  PIFLAG_SYSTEM_PROCESS  
- İşlem bir sistem işlemi olduğunu gösterir.  
+ İşlemin bir sistem işlemi olduğunu gösterir.  
   
  PIFLAG_DEBUGGER_ATTACHED  
- Hata ayıklayıcı tarafından ayıklanmakta olan işlemi belirtir. Olabilir bir [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklayıcı veya bazı diğer hata ayıklayıcı, örneğin, WinDbg olabilir.  
+ İşlemin hata ayıklayıcı tarafından ayıklanmakta olduğunu gösterir. Bu bir [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] hata ayıklayıcı olabilir ya da başka bir hata ayıklayıcı (örneğin, WinDbg) olabilir.  
   
  PIFLAG_PROCESS_STOPPED  
- İşlem durdurulur gösterir. Yalnızca şu durumlarda geçerli `PIFLAG_DEBUGGER_ATTACHED` ayrıca belirtilir. Kullanılabilir [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] ve daha sonra.  
+ İşlemin durdurulduğunu belirtir. Yalnızca `PIFLAG_DEBUGGER_ATTACHED` Ayrıca belirtilmişse geçerlidir. [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]Ve sonraki sürümlerinde kullanılabilir.  
   
  PIFLAG_PROCESS_RUNNING  
- İşlemin çalışmadığını gösterir. Yalnızca şu durumlarda geçerli `PIFLAG_DEBUGGER_ATTACHED` ayrıca belirtilir. Kullanılabilir [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] ve daha sonra.  
+ İşlemin çalıştığını gösterir. Yalnızca `PIFLAG_DEBUGGER_ATTACHED` Ayrıca belirtilmişse geçerlidir. [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]Ve sonraki sürümlerinde kullanılabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İçin kullanılan `Flags` üyesi [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) yapısı.  
+ `Flags` [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md) yapısının üyesi için kullanılır.  
   
- Bu bayrak bit düzeyinde ile birleştirilebilir `OR`.  
+ Bu bayraklar bit düzeyinde birleştirilebilir `OR` .  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [PROCESS_INFO](../../../extensibility/debugger/reference/process-info.md)

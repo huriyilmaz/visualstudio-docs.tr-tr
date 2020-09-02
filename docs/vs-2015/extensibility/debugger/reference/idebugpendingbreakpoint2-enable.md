@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::Enable | Microsoft Docs
+title: 'IDebugPendingBreakpoint2:: Enable | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -14,18 +14,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: f5dc3c1e37a817c1c962d05745db33422008c550
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68194486"
 ---
 # <a name="idebugpendingbreakpoint2enable"></a>IDebugPendingBreakpoint2::Enable
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bekleyen kesme noktasının etkinleştirilen durumunu değiştirir.  
+Bekleyen kesme noktasının etkin durumunu değiştirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 HRESULT Enable(   
@@ -41,18 +41,18 @@ int Enable( 
   
 #### <a name="parameters"></a>Parametreler  
  `fEnable`  
- [in] İçin sıfır olmayan ayarlayın (`TRUE`) bir bekleyen kesme noktasını etkinleştir veya sıfır (`FALSE`) devre dışı bırakmak için.  
+ 'ndaki `TRUE`Bekleyen bir kesme noktasını etkinleştirmek için () sıfır dışında (), devre dışı bırakmak için sıfır () olarak ayarlayın `FALSE` .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür. Döndürür `E_BP_DELETED` kesme noktası silinmiş olması durumunda.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür. `E_BP_DELETED`Kesme noktasının silinip silinmediğini döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir bekleyen kesme noktasının etkin veya devre dışı bırakıldıysa bağlı tüm kesme noktalarını aynı duruma ayarlanır.  
+ Bekleyen bir kesme noktası etkinleştirildiğinde veya devre dışı bırakıldığında, onunla bağlantılı tüm kesme noktaları aynı duruma ayarlanır.  
   
- Kesme noktası zaten etkin veya devre dışı olsa bile bu yöntem, gerekli sayıda çağrılabilir.  
+ Kesme noktası zaten etkinleştirilmiş veya devre dışı bırakılmış olsa bile, bu yöntem gerektiği kadar çok kez çağrılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bu yöntem için basit bir uygulama gösterilmektedir `CPendingBreakpoint` gösteren nesne [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimi.  
+ Aşağıdaki örnek, `CPendingBreakpoint` [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) arabirimini kullanıma sunan basit bir nesne için bu yöntemin nasıl uygulanacağını gösterir.  
   
 ```cpp#  
 HRESULT CPendingBreakpoint::Enable(BOOL fEnable)    

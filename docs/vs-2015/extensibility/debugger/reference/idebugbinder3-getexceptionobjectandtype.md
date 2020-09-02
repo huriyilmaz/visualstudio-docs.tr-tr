@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetExceptionObjectAndType | Microsoft Docs
+title: 'IDebugBinder3:: GetExceptionObjectAndType | Microsoft Docs'
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 8
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b6da9b1259518f3796968712b11c725a08aa9a01
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63443944"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64834355"
 ---
 # <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bu yöntem, herhangi bir nesne ile ilişkili özel durumu alır.  
+Bu yöntem, varsa bir nesneyle ilişkili özel durumu alır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetExceptionObjectAndType(  
@@ -42,16 +42,16 @@ int GetExceptionObjectAndType(
   
 #### <a name="parameters"></a>Parametreler  
  `ppException`  
- [out] Özel durumu temsil eden nesneyi döndürür.  
+ dışı Özel durumu temsil eden nesneyi döndürür.  
   
  `ppField`  
- [out] (Bu, bir null değer olabilir) özel duruma neden belirli bir alanı temsil eden nesneyi döndürür.  
+ dışı Özel duruma neden olmuş olabilecek belirli bir alanı temsil eden nesneyi döndürür (Bu bir null değer olabilir).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Başarılı olursa döndürür `S_OK`; Aksi takdirde bir hata kodu döndürür.  
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde, bir hata kodu döndürür.  
   
 > [!NOTE]
-> Tarafından döndürülen değeri, bir özel durum olup olmadığını denetleyin `ppException`: null değeri mi sonra Bu nesneyle ilişkili aynı durum geçerlidir.  
+> Bir özel durum olup olmadığını doğrulamak için, tarafından döndürülen değeri denetleyin `ppException` : null bir değer ise, bu nesneyle ilişkili bir özel durum yoktur.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

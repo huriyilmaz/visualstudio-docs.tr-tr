@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 7ff6b0449c877b5ae925ba2088917d7bacab4c34
-ms.sourcegitcommit: 57d96de120e0574e506dfd80bb7adfbac73f96be
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85330668"
 ---
 # <a name="marker_seriesis_enabled-method"></a>marker_series:: is_enabled yöntemi
@@ -33,9 +33,9 @@ bool is_enabled(
 ```
 
 #### <a name="parameters"></a>Parametreler
- `_Importance`Önem düzeyi.
+ `_Importance` Önem düzeyi.
 
- `_Category`Alan.
+ `_Category` Alan.
 
 ## <a name="return-value"></a>Döndürülen değer
 

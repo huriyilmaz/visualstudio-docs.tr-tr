@@ -1,5 +1,5 @@
 ---
-title: AsyncTaskMethodBuilder.m_builder Alan | Microsoft Dokümanlar
+title: AsyncTaskMethodBuilder. m_builder alanı | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,22 +11,22 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0dd8bd1215700b8387f420e3aaec7e2ce73d9fec
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80739398"
 ---
-# <a name="asynctaskmethodbuilderm_builder-field"></a>AsyncTaskMethodBuilder.m_builder alanı
-Bu genel olmayan örnek temsilcilerinin bulunduğu genel oluşturucu nesneyi temsil eder.
+# <a name="asynctaskmethodbuilderm_builder-field"></a>AsyncTaskMethodBuilder. m_builder alanı
+Bu genel olmayan örneğin temsilcilerin bulunduğu genel Oluşturucu nesnesini temsil eder.
 
  **Ad alanı:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>
 
- **Montaj:** mscorlib (mscorlib.dll olarak)
+ **Bütünleştirilmiş kod:** mscorlib (mscorlib.dll)
 
- Bu iç üyeye .NET Framework'den erişemediğiniz için, ortak ara dilde (CIL) aşağıdaki sözdizimi sağlanır.
+ Bu iç üyeye .NET Framework erişemediği için, ortak ara dil (CıL) içinde aşağıdaki sözdizimi sunulmaktadır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```csharp
 .field private valuetype System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<valuetype System.Threading.Tasks.VoidTaskResult> m_builder
@@ -36,4 +36,4 @@ Bu genel olmayan örnek temsilcilerinin bulunduğu genel oluşturucu nesneyi tem
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder>
-- [.NET Framework için paralel uzantı dahili](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
+- [.NET Framework için paralel uzantı iç işlevleri](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)
