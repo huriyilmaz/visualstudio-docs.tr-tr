@@ -13,18 +13,18 @@ caps.latest.revision: 10
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: b23073c41f5da7d1563a6be46e0d114334527b35
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153512"
 ---
-# <a name="bplocationcodeaddress"></a>BP_LOCATION_CODE_ADDRESS
+# <a name="bp_location_code_address"></a>BP_LOCATION_CODE_ADDRESS
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Kodda bir adresteki bir kesme noktası konumu açıklar.  
+Koddaki bir adresteki bir kesme noktasının konumunu açıklar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 typedef struct _BP_LOCATION_CODE_ADDRESS {   
@@ -37,26 +37,26 @@ typedef struct _BP_LOCATION_CODE_ADDRESS { 
   
 ## <a name="members"></a>Üyeler  
  `bstrContext`  
- Kesme noktası bağlamında, genellikle de bir yöntem veya işlev adı olarak görülen bir çağrı yığınında.  
+ Kesme noktası bağlamı, genellikle çağrı yığınında görülen bir yöntem veya işlev adıdır.  
   
  `bstrModuleUrl`  
- Kesme noktasını içeren modül URL'si.  
+ Kesme noktasını içeren modülün URL 'SI.  
   
  `bstrFunction`  
- Kesme noktasını içeren işlevi adı.  
+ Kesme noktasını içeren işlevin adı.  
   
  `bstrAddress`  
- Bağlamak için bir ifade değerlendiricisi tarafından ayrıştırılan kesme noktası adresini bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesne.  
+ Bir [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) nesnesine bağlamak için bir ifade değerlendirici tarafından ayrıştırılmış kesme noktasının adresi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapı üyesidir [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısı bir birleşimin parçası olarak.  
+ Bu yapı, bir birleşimin parçası olarak [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) yapısının bir üyesidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Yapılar ve birleşimler](../../../extensibility/debugger/reference/structures-and-unions.md)   

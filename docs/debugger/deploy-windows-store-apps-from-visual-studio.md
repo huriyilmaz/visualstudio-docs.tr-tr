@@ -14,10 +14,10 @@ manager: jillfra
 ms.workload:
 - uwp
 ms.openlocfilehash: 4c58dbb32ef0a476ac7e22a840e27e389c710f97
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188287"
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio’dan UWP uygulamaları dağıtma
@@ -36,7 +36,7 @@ Uygulamanızı Visual Studio 'dan hata **ayıklamayı Başlat** seçeneğini (kl
 
 - Başka bir uygulama veya yöntem tarafından başlatıldığında Ayıklanacak bir uygulama dağıtma.
 
-## <a name="BKMK_How_to_deploy_a_Windows_Store_app"></a>UWP uygulaması dağıtma
+## <a name="how-to-deploy-a-uwp-app"></a><a name="BKMK_How_to_deploy_a_Windows_Store_app"></a> UWP uygulaması dağıtma
  Uygulamayı el ile dağıtmak basit bir işlemdir:
 
 1. Uzak bir cihaza dağıtıyorsanız, uygulamanın başlangıç projesinin Özellik projesi sayfasında cihazın adını veya IP adresini belirtin. (Bunu yapmak için adımlar bu konuda daha sonra listelenmiştir.).
@@ -47,7 +47,7 @@ Uygulamanızı Visual Studio 'dan hata **ayıklamayı Başlat** seçeneğini (kl
 
 3. **Yapı** menüsünde **Dağıt** ' ı seçin.
 
-## <a name="BKMK_How_to_specify_a_remote_device"></a>Uzak cihaz belirtme
+## <a name="how-to-specify-a-remote-device"></a><a name="BKMK_How_to_specify_a_remote_device"></a> Uzak cihaz belirtme
 
 **Önkoşullar**
 
@@ -76,15 +76,15 @@ Dağıtım, uzak cihaza uygulama dosyalarını göndermek için uzaktan hata ay�
 
     **Uzak bağlantı** iletişim kutusu, yerel ağ alt ağındaki ve bir Ethernet kablosu tarafından doğrudan Visual Studio makinesine bağlı olan tüm cihazlardan cihazları görüntüler.
 
-   **Uzak cihazı bir C++ proje sayfasında belirtme**
+   **Bir C++ proje sayfasında uzak aygıtı belirtme**
 
-   ![Uzaktan&#43; &#43; hata ayıklama için C proje özellikleri](../debugger/media/vsrun_cpp_projprop_remote.png "VSRUN_CPP_ProjProp_Remote")
+   ![Uzaktan hata ayıklama için C&#43;&#43; proje özellikleri](../debugger/media/vsrun_cpp_projprop_remote.png "VSRUN_CPP_ProjProp_Remote")
 
 7. **Başlatma** listesinden **Uzaktan hata ayıklayıcı** ' yı seçin.
 
 8. **Makine adı** kutusuna uzak cihazın ağ adını girin. İsterseniz, uzaktan hata ayıklayıcı bağlantısı Seç iletişim kutusundan cihazı seçmek için kutudaki aşağı oku seçebilirsiniz.
 
-   **Uzak aygıtı bir görsel C# ve Visual Basic proje sayfasında belirtme**
+   **Visual C# ve Visual Basic proje sayfasında uzak aygıtı belirtme**
 
    ![Uzaktan hata ayıklama için yönetilen proje özellikleri](../debugger/media/vsrun_managed_projprop_remote.png "VSRUN_Managed_ProjProp_Remote")
 
@@ -92,27 +92,27 @@ Dağıtım, uzak cihaza uygulama dosyalarını göndermek için uzaktan hata ay�
 
 10. Uzak cihazın ağ adını **uzak makine** kutusuna girin veya **bul** ' a tıklayarak **Uzaktan hata ayıklayıcı bağlantısı Seç** iletişim kutusundan cihazı seçin.
 
-## <a name="BKMK_Deployment_options"></a>Dağıtım seçenekleri
+## <a name="deployment-options"></a><a name="BKMK_Deployment_options"></a> Dağıtım seçenekleri
 
 Başlangıç projesinin hata ayıklama özelliği sayfasında aşağıdaki dağıtım seçeneklerini belirleyebilirsiniz.
 
 **Ağ geri döngüsüne izin ver**
 
-Güvenlik nedenleriyle, standart biçimde yüklenen bir UWP veya [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] uygulamasının üzerinde yüklü olduğu cihaza ağ çağrıları yapmasına izin verilmez. Varsayılan olarak, Visual Studio dağıtımı, dağıtılan uygulama için bu kuraldan bir istisna oluşturur. Bu istisna, iletişim yordamlarını tek bir makinede test etmenizi sağlar. Uygulamanızı [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]göndermeden önce, uygulamanızı muafiyet olmadan test etmelisiniz.
+Güvenlik nedenleriyle, [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] Standart biçimde yüklenen BIR UWP veya uygulamanın yüklü olduğu cihaza ağ çağrıları yapmasına izin verilmez. Varsayılan olarak, Visual Studio dağıtımı, dağıtılan uygulama için bu kuraldan bir istisna oluşturur. Bu istisna, iletişim yordamlarını tek bir makinede test etmenizi sağlar. Uygulamanızı ' a göndermeden önce [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] , uygulamanızı muafiyet olmadan test etmelisiniz.
 
 Uygulamadan ağ geri döngü muafiyetini kaldırmak için:
 
-- C# Ve Visual Basic hata ayıklama özelliği sayfasında, **ağ geri döngüsüne izin ver** onay kutusunu temizleyin.
+- C# ve Visual Basic hata ayıklama özelliği sayfasında, **ağ geri döngüsüne Izin ver** onay kutusunu temizleyin.
 
-- C++ Hata ayıklama özelliği sayfasında, **ağ geri döngü değerini izin ver** ' i **Hayır**olarak ayarlayın.
+- C++ hata ayıklama özelliği sayfasında, **ağ geri döngü değerini Izin ver** olarak **Hayır**olarak ayarlayın.
 
-**Başlatma, ancak başlatıldığında kodumdaki hata ayıkla (C# ve Visual Basic)/uygulamayı Başlat ()C++**
+**Başlatma, ancak başlatıldığında kodumun hatalarını ayıklama (C# ve Visual Basic)/uygulamayı başlatma (C++)**
 
 Dağıtımı, uygulama başlatıldığında otomatik olarak bir hata ayıklama oturumu başlatacak şekilde yapılandırmak için:
 
-- C# Ve Visual Basic hata ayıklama özelliği sayfasında, **başlatılmayın ' i işaretleyin, ancak başlatma sırasında kodumdaki hata ayıklayın** onay kutusunu işaretleyin.
+- C# ve Visual Basic hata ayıklama özelliği sayfasında, **başlatılmayın ' i işaretleyin, ancak başladığında kodumdaki hata ayıkla** onay kutusunu işaretleyin.
 
-- C++ Hata ayıklama özelliği sayfasında, **Uygulamayı Başlat** değerini **Evet**olarak ayarlayın.
+- C++ hata ayıklama özelliği sayfasında, **Uygulamayı Başlat** değerini **Evet**olarak ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

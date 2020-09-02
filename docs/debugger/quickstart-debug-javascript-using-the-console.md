@@ -17,10 +17,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: e56350c2fd0583d3fef4e77e559a4df1fd894663
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348112"
 ---
 # <a name="debug-javascript-using-the-console-in-visual-studio"></a>Visual Studio 'da Konsolu kullanarak JavaScript hata ayıklama
@@ -46,7 +46,7 @@ JavaScript Konsolu penceresi şunları yapmanıza olanak sağlar:
 
 JavaScript Konsol penceresini kullanarak, hata ayıklayıcıyı durdurup yeniden başlatmadan uygulamanız ile etkileşime geçebilirsiniz. Daha fazla bilgi için bkz. [uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md). DOM Gezginini kullanma ve kesme noktaları ayarlama gibi diğer JavaScript hata ayıklama özellikleri hakkında bilgi için bkz. [hızlı başlangıç: Visual Studio 'DA HTML ve CSS](../debugger/quickstart-debug-html-and-css.md) ve [hata ayıklama uygulamalarında](debugging-windows-store-and-windows-universal-apps.md)hata ayıklama.
 
-## <a name="debug-by-using-the-javascript-console-window"></a><a name="InteractiveConsole"></a>JavaScript Konsol penceresini kullanarak hata ayıklama
+## <a name="debug-by-using-the-javascript-console-window"></a><a name="InteractiveConsole"></a> JavaScript Konsol penceresini kullanarak hata ayıklama
 Aşağıdaki adımlar bir uygulama oluşturur `FlipView` ve bir JavaScript kodlama hatasını etkileşimli olarak nasıl ayıklayacağınız gösterilmektedir.
 
 > [!NOTE]
@@ -192,7 +192,7 @@ Aşağıdaki adımlar bir uygulama oluşturur `FlipView` ve bir JavaScript kodla
 
     Düzeltilen örnek kodu içeren tüm default.html sayfasında, bkz. [hata ayıklama HTML, CSS ve JavaScript örnek kodu](../debugger/debug-html-css-and-javascript-sample-code.md).
 
-## <a name="interactive-debugging-and-break-mode"></a><a name="InteractiveDebuggingBreakMode"></a>Etkileşimli hata ayıklama ve kesme modu
+## <a name="interactive-debugging-and-break-mode"></a><a name="InteractiveDebuggingBreakMode"></a> Etkileşimli hata ayıklama ve kesme modu
 JavaScript konsol penceresi gibi JavaScript hata ayıklama araçlarını kullanırken kesme noktaları ve kod içine adımla ' yı kullanabilirsiniz. Hata ayıklayıcıda çalışan bir program bir kesme noktasıyla karşılaştığında, hata ayıklayıcı programın yürütülmesini geçici olarak askıya alır. Yürütme askıya alındığında, programınız çalışma modundan kesme moduna geçer. Yürütmeyi dilediğiniz zaman sürdürebilirsiniz.
 
 Bir program kesme modundayken JavaScript Konsol penceresini kullanarak geçerli betik yürütme bağlamında geçerli olan betikleri ve komutları çalıştırabilirsiniz. Bu yordamda, `FlipView` kesme modunun kullanımını göstermek için daha önce oluşturduğunuz uygulamanın sabit sürümünü kullanacaksınız.
@@ -233,14 +233,14 @@ Bir program kesme modundayken JavaScript Konsol penceresini kullanarak geçerli 
 
     Visual Studio 'ya geri dönmek için F12 veya Alt + Tab tuşlarına basın.
 
-## <a name="single-line-mode-and-multiline-mode-in-the-javascript-console-window"></a><a name="SinglelineMultilineMode"></a>JavaScript Konsol penceresinde tek satırlık mod ve çok satırlı mod
+## <a name="single-line-mode-and-multiline-mode-in-the-javascript-console-window"></a><a name="SinglelineMultilineMode"></a> JavaScript Konsol penceresinde tek satırlık mod ve çok satırlı mod
 JavaScript konsol penceresi için giriş istemi hem tek satırlık modu hem de çok satırlı modunu destekler. Bu konudaki etkileşimli hata ayıklama yordamı her iki modun kullanılmasına bir örnek sağlar. Modlar arasında geçiş yapmak için Ctrl + Alt + e tuşlarına basabilirsiniz.
 
 Tek satırlık mod giriş geçmişi sağlar. Yukarı ok ve aşağı ok tuşlarını kullanarak giriş geçmişine gidebilirsiniz. Betikleri çalıştırdığınızda tek satırlık mod giriş isteğini temizler. Komut dosyasını tek satırlık modda çalıştırmak için ENTER tuşuna basın.
 
 Betikler çalıştırdığınızda çok satırlı mod giriş isteğini temizlemez. Çok satırlı moddan tek satırlık moda geçtiğinizde giriş satırını **clear Input** (kırmızı "X") tuşuna basarak temizleyebilirsiniz. Bir betiği çok satırlı modda çalıştırmak için CTRL + ENTER tuşlarına basın veya pencerenin sağ alt köşesinde bulunan ok simgesini seçin.
 
-## <a name="switching-the-script-execution-context"></a><a name="Switching"></a>Betik Yürütme bağlamını değiştirme
+## <a name="switching-the-script-execution-context"></a><a name="Switching"></a> Betik Yürütme bağlamını değiştirme
 JavaScript konsol penceresi, tek bir Web platformu konağının (WWAHost.exe) tek bir örneğini temsil eden tek bir yürütme bağlamıyla etkileşime geçerek aynı anda bir kez etkileşim kurmanıza olanak tanır. Bazı senaryolarda, uygulamanız, bir `iframe` paylaşılan sözleşme, bir Web çalışanı veya bir denetim kullanırken olduğu gibi, konağın başka bir örneğini başlatabilir `WebView` . Konağın başka bir örneği çalıştırıyorsa, **hedef** listede Yürütme bağlamını seçerek uygulamayı çalıştırırken farklı bir yürütme bağlamı seçebilirsiniz.
 
 Aşağıdaki çizimde JavaScript Konsol penceresinde hedef liste gösterilmektedir.

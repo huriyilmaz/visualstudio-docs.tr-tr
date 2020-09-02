@@ -17,10 +17,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 77f5ca5dcc1b886ec56b7177dd0d6aa62a8ce4f0
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188638"
 ---
 # <a name="debugger-project-settings"></a>Hata Ayıklayıcı Proje Ayarları
@@ -33,20 +33,20 @@ Belirli proje ayarları hata ayıklamayı da etkiler. Bu ayarlar, hata ayıklay�
 
  [Nasıl yapılır: hata ayıklama ve yayın yapılandırmasını ayarlama](../debugger/how-to-set-debug-and-release-configurations.md) **Hata ayıklama** ve **Sürüm** ayarlarını ve aralarında geçiş yapılacağını açıklar.
 
- [Hata C++ ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md) C veya C++ projeler için **Özellik sayfaları** iletişim kutusunda bulunan özellikleri listeler.
+ [C++ hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-cpp-debug-configuration.md) C veya C++ projeleri için **Özellik sayfaları** iletişim kutusunda bulunan özellikleri listeler.
 
- [Hata C# ayıklama yapılandırmalarının proje ayarları](../debugger/project-settings-for-csharp-debug-configurations.md) , projeler için C# **Özellik sayfaları** iletişim kutusunda bulunan özellikleri listeler.
+ [C# hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-csharp-debug-configurations.md) C# projeleri için **Özellik sayfaları** iletişim kutusunda bulunan özellikleri listeler.
 
  [Web projeleri Için özellik sayfası ayarları](../debugger/property-pages-settings-for-web-projects.md) Web projeleri için **Özellik sayfaları** iletişim kutusunda bulunan özellikleri listeler.
 
- [Visual Basic hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projeler için **Özellik sayfaları** iletişim kutusunda bulunan özellikleri listeler.
+ [Visual Basic hata ayıklama yapılandırması proje ayarları](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) Projeler için **Özellik sayfaları** iletişim kutusunda bulunan özellikleri listeler [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] .
 
 ## <a name="related-sections"></a>İlgili Bölümler
  [Sembol (. pdb) ve kaynak dosyaları belirtme](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) Hata ayıklayıcının hata ayıklama bilgilerini göstermek için sembol dosyalarını ve kaynak dosyaları nasıl kullandığını açıklar.
 
  [Visual Studio 'da uygulamalarda hata ayıklama](debugging-windows-store-and-windows-universal-apps.md) UWP uygulamalarının hatalarını ayıklama işlemini açıklar. (Windows Geliştirme Merkezi)
 
- [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hata ayıklayıcı ile programınızda hata ayıklaması yapmak için hata ayıklayıcı ile ilgili özellik ayarlarını ve gereken hazırlama işlemini açıklar.
+ [Hata ayıklayıcı ayarları ve hazırlığı](../debugger/debugger-settings-and-preparation.md) Hata ayıklayıcı ile ilgili özellik ayarlarını ve hata ayıklayıcıyla programınızın hatalarını ayıklamak için gereken hazırlık işlemini açıklar [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] .
 
 ## <a name="see-also"></a>Ayrıca bkz.
- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
+ [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)

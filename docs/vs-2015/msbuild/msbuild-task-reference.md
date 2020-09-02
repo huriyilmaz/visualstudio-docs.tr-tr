@@ -17,213 +17,213 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 19fe581985ec173099790311517c0442a9c29c2f
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68154114"
 ---
 # <a name="msbuild-task-reference"></a>MSBuild Görev Başvurusu
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Görevler, derleme işlemi sırasında çalışan kodu sağlar. Görevleri aşağıdaki listede bulunan [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]. Zaman [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] yüklenen, ek görevler oluşturmak için kullanılan olan [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] projeleri. Daha fazla bilgi için [Visual C++ görevleri](../msbuild/msbuild-tasks-specific-to-visual-cpp.md).  
+Görevler, derleme işlemi sırasında çalışan kodu sağlar. Aşağıdaki listede yer alan görevler eklenmiştir [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] . [!INCLUDE[vcprvc](../includes/vcprvc-md.md)]Yüklendiğinde, projeleri oluşturmak için kullanılan ek görevler vardır [!INCLUDE[vcprvc](../includes/vcprvc-md.md)] . Daha fazla bilgi için bkz. [Visual C++ görevler](../msbuild/msbuild-tasks-specific-to-visual-cpp.md).  
   
- Bu bölümdeki konular, listelenen parametrelerin yanı sıra, her görev, ayrıca aşağıdaki parametrelere sahiptir:  
+ Bu bölümdeki konularda listelenen parametrelere ek olarak, her görev aşağıdaki parametrelere de sahiptir:  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`Condition`|İsteğe bağlı `String` parametresi.<br /><br /> A `Boolean` ifade eden [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] altyapısı bu görevi yürüten olup olmadığını belirlemek için kullanır. Tarafından desteklenen koşullar hakkında daha fazla bilgi için [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)], bkz: [koşullar](../msbuild/msbuild-conditions.md).|  
-|`ContinueOnError`|İsteğe bağlı parametre. Aşağıdaki değerlerden birini içerebilir:<br /><br /> -   **WarnAndContinue** veya **true**. Bir görev başarısız olduğunda, sonraki görevlerinde [hedef](../msbuild/target-element-msbuild.md) öğesi ile derleme devam yürütülecek ve görevin tüm hataları uyarı olarak kabul edilir.<br />-   **ErrorAndContinue**. Bir görev başarısız olduğunda, sonraki görevlerinde `Target` öğesi ile derleme devam yürütmek ve tüm hataları görev hata olarak kabul edilir.<br />-   **ErrorAndStop** veya **false** (varsayılan). Bir görev başarısız olduğunda, listesindeki kalan görevlere `Target` olmayan öğe ve derleme yürütülür ve tüm `Target` öğesi ve yapı başarısız olduğu değerlendirilir.<br /><br /> .NET Framework 4.5 yalnızca desteklenen önce sürümleri `true` ve `false` değerleri.<br /><br /> Daha fazla bilgi için [nasıl yapılır: Görevlerdeki hataları yoksayma](../msbuild/how-to-ignore-errors-in-tasks.md).|  
+|`Condition`|İsteğe bağlı `String` parametre.<br /><br /> `Boolean` [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] Altyapının bu görevin yürütülüp yürütülmeyeceğini belirlemede kullandığı bir ifade. Tarafından desteklenen koşullar hakkında daha fazla bilgi için [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] bkz. [koşullar](../msbuild/msbuild-conditions.md).|  
+|`ContinueOnError`|İsteğe bağlı parametre. , Aşağıdaki değerlerden birini içerebilir:<br /><br /> -   **WarnAndContinue** veya **true**. Bir görev başarısız olduğunda, [hedef](../msbuild/target-element-msbuild.md) öğe ve yapı içindeki sonraki görevler yürütülmeye devam eder ve görevdeki tüm hatalar uyarı olarak kabul edilir.<br />-   **Errportadcontinue**. Bir görev başarısız olduğunda, öğedeki sonraki görevler `Target` ve derleme yürütülmeye devam eder ve görevdeki tüm hatalar hata olarak değerlendirilir.<br />-   **Errportadstop** veya **false** (varsayılan). Bir görev başarısız olduğunda, öğe ve yapı içindeki kalan görevler `Target` yürütülmez ve tüm `Target` öğe ve derleme başarısız olarak kabul edilir.<br /><br /> 4,5 ' den önceki .NET Framework sürümleri yalnızca `true` ve değerlerini destekliyordu `false` .<br /><br /> Daha fazla bilgi için bkz. [nasıl yapılır: görevlerdeki hataları yoksayma](../msbuild/how-to-ignore-errors-in-tasks.md).|  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Task Temel Sınıfı](../msbuild/task-base-class.md)  
- Öğesinden türetilen görevleri birkaç parametre ekler <xref:Microsoft.Build.Utilities.Task> sınıfı.  
+ [Görev temel sınıfı](../msbuild/task-base-class.md)  
+ Sınıfından türetilen görevlere birkaç parametre ekler <xref:Microsoft.Build.Utilities.Task> .  
   
- [TaskExtension Temel Sınıfı](../msbuild/taskextension-base-class.md)  
- Öğesinden türetilen görevleri birkaç parametre ekler <xref:Microsoft.Build.Tasks.TaskExtension> sınıfı.  
+ [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md)  
+ Sınıfından türetilen görevlere birkaç parametre ekler <xref:Microsoft.Build.Tasks.TaskExtension> .  
   
- [ToolTaskExtension Temel Sınıfı](../msbuild/tooltaskextension-base-class.md)  
- Öğesinden türetilen görevleri birkaç parametre ekler <xref:Microsoft.Build.Tasks.ToolTaskExtension> sınıfı.  
+ [ToolTaskExtension temel sınıfı](../msbuild/tooltaskextension-base-class.md)  
+ Sınıfından türetilen görevlere birkaç parametre ekler <xref:Microsoft.Build.Tasks.ToolTaskExtension> .  
   
- [AL (Derleme Bağlayıcı) Görevi](../msbuild/al-assembly-linker-task.md)  
- Bir modül olan bir veya daha fazla veya kaynak dosyalar bildiriminden bir derleme oluşturur.  
+ [AL (derleme bağlayıcı) görevi](../msbuild/al-assembly-linker-task.md)  
+ Modüller ya da kaynak dosyaları olan bir veya daha fazla dosyadan bildirime sahip bir derleme oluşturur.  
   
- [AspNetCompiler Görevi](../msbuild/aspnetcompiler-task.md)  
- Aspnet_compiler.exe, ASP.NET uygulamalarının önceden derlemek için bir yardımcı program sarmalar.  
+ [AspNetCompiler görevi](../msbuild/aspnetcompiler-task.md)  
+ ASP.NET uygulamalarını önceden derlemeye yönelik bir yardımcı program olan aspnet_compiler.exe sarmalanmış.  
   
- [AssignCulture Görevi](../msbuild/assignculture-task.md)  
- Kültür tanımlayıcıları öğesine atar.  
+ [Atama kültür görevi](../msbuild/assignculture-task.md)  
+ Öğelere kültür tanımlayıcıları atar.  
   
- [AssignProjectConfiguration Görevi](../msbuild/assignprojectconfiguration-task.md)  
+ [Atama ProjectConfiguration görevi](../msbuild/assignprojectconfiguration-task.md)  
  Yapılandırma dizeleri listesini kabul eder ve bunları belirtilen projelere atar.  
   
- [AssignTargetPath Görevi](../msbuild/assigntargetpath-task.md)  
- Dosyaların bir listesini kabul eder ve ekler `<TargetPath>` zaten belirtilmezse, öznitelikleri.  
+ [Atamatargetpath görevi](../msbuild/assigntargetpath-task.md)  
+ Dosya listesini kabul eder ve `<TargetPath>` henüz belirtilmemişse öznitelikleri ekler.  
   
- [CallTarget Görevi](../msbuild/calltarget-task.md)  
- Bir hedef proje dosyasındaki çağırır.  
+ [CallTarget görevi](../msbuild/calltarget-task.md)  
+ Proje dosyasında bir hedef çağırır.  
   
- [CombinePath Görevi](../msbuild/combinepath-task.md)  
- Belirtilen yolu tek yola birleştirir.  
+ [CombinePath görevi](../msbuild/combinepath-task.md)  
+ Belirtilen yolları tek bir yol olarak birleştirir.  
   
- [ConvertToAbsolutePath Görevi](../msbuild/converttoabsolutepath-task.md)  
- Bir göreli yol veya başvuru bir mutlak yola dönüştürür.  
+ [ConvertToAbsolutePath görevi](../msbuild/converttoabsolutepath-task.md)  
+ Göreli bir yolu veya başvuruyu mutlak bir yola dönüştürür.  
   
- [Copy Görevi](../msbuild/copy-task.md)  
+ [Görevi Kopyala](../msbuild/copy-task.md)  
  Dosyaları yeni bir konuma kopyalar.  
   
- [CreateCSharpManifestResourceName Görevi](../msbuild/createcsharpmanifestresourcename-task.md)  
- Oluşturur bir [!INCLUDE[csprcs](../includes/csprcs-md.md)]-belirtilen .resx dosya adı veya diğer kaynak bildirim adı stili.  
+ [CreateCSharpManifestResourceName görevi](../msbuild/createcsharpmanifestresourcename-task.md)  
+ Verilen bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] . resx dosya adından veya başka bir kaynaktan bir-Style bildirim adı oluşturur.  
   
- [CreateItem Görevi](../msbuild/createitem-task.md)  
- Girdi öğelerinin öğeleri bir listeden diğerine kopyalanmasına izin verme, öğe koleksiyonlarını doldurur.  
+ [CreateItem görevi](../msbuild/createitem-task.md)  
+ Öğe koleksiyonlarını giriş öğelerinden doldurur ve öğelerin bir listeden diğerine kopyalanmasını sağlar.  
   
- [CreateProperty Görevi](../msbuild/createproperty-task.md)  
- Bir özellik veya dize diğerine kopyalanması için değerler sağlayan giriş değerleri özelliklerinden doldurur.  
+ [CreateProperty görevi](../msbuild/createproperty-task.md)  
+ Değerleri giriş değerlerinden doldurur ve değerlerin bir özellikten veya dizeden diğerine kopyalanmasını sağlar.  
   
- [CreateVisualBasicManifestResourceName Görevi](../msbuild/createvisualbasicmanifestresourcename-task.md)  
- Oluşturur bir [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]-belirtilen .resx dosya adı veya diğer kaynak bildirim adı stili.  
+ [CreateVisualBasicManifestResourceName görevi](../msbuild/createvisualbasicmanifestresourcename-task.md)  
+ Verilen bir [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] . resx dosya adından veya başka bir kaynaktan bir-Style bildirim adı oluşturur.  
   
- [Csc Görevi](../msbuild/csc-task.md)  
- Yürütülebilir dosyalar, dinamik bağlantı kitaplıkları veya kod modüllerini oluşturmak için Visual C# derleyicisini çağırır.  
+ [Csc görevi](../msbuild/csc-task.md)  
+ Yürütülebilir dosyalar, dinamik bağlantı kitaplıkları veya kod modülleri oluşturmak için Visual C# derleyicisini çağırır.  
   
- [Delete Görevi](../msbuild/delete-task.md)  
+ [Görevi Sil](../msbuild/delete-task.md)  
  Belirtilen dosyaları siler.  
   
- [Error Görevi](../msbuild/error-task.md)  
- Bir derleme durdurur ve değerlendirilen bir koşullu ifadeye göre bir hatayı günlüğe kaydeder.  
+ [Hata görevi](../msbuild/error-task.md)  
+ Bir derlemeyi durdurup değerlendirilen bir koşullu ifadeye göre bir hata kaydeder.  
   
- [Exec Görevi](../msbuild/exec-task.md)  
- Belirtilen bağımsız değişkenlerle belirtilen program veya komut çalıştırır.  
+ [Exec görevi](../msbuild/exec-task.md)  
+ Belirtilen program veya komutu belirtilen bağımsız değişkenlerle çalıştırır.  
   
  [FindAppConfigFile Görevi](../msbuild/findappconfigfile-task.md)  
- Sağlanan listelerinde app.config dosyasına bulur  
+ Varsa, belirtilen listelerdeki app.config dosyasını bulur.  
   
- [FindInList Görevi](../msbuild/findinlist-task.md)  
- Eşleşen öğebelirtimi belirtilen bir listede bir öğe bulur.  
+ [FindInList görevi](../msbuild/findinlist-task.md)  
+ Eşleşen itemspec içeren, belirtilen listedeki bir öğeyi bulur.  
   
- [FindUnderPath Görevi](../msbuild/findunderpath-task.md)  
- Belirtilen öğe koleksiyonunda öğelerin belirtilen klasörde ve alt klasörlerindeki tüm mevcut belirler.  
+ [FindUnderPath görevi](../msbuild/findunderpath-task.md)  
+ Belirtilen öğe koleksiyonundaki hangi öğelerin belirtilen klasörde ve tüm alt klasörlerinde var olduğunu belirler.  
   
- [FormatUrl Görevi](../msbuild/formaturl-task.md)  
- Bir URL doğru bir URL biçimine dönüştürür.  
+ [FormatUrl görevi](../msbuild/formaturl-task.md)  
+ URL 'YI doğru URL biçimine dönüştürür.  
   
- [FormatVersion Görevi](../msbuild/formatversion-task.md)  
- Düzeltme numarası için sürüm numarası ekler.  
+ [FormatVersion görevi](../msbuild/formatversion-task.md)  
+ Sürüm numarasına Düzeltme numarasını ekler.  
   
- [GenerateApplicationManifest Görevi](../msbuild/generateapplicationmanifest-task.md)  
- Oluşturur bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama bildirimi ya da yerel bir bildirim.  
+ [GenerateApplicationManifest görevi](../msbuild/generateapplicationmanifest-task.md)  
+ Bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] uygulama bildirimi veya yerel bildirim oluşturur.  
   
- [GenerateBootstrapper Görevi](../msbuild/generatebootstrapper-task.md)  
- Algılama, indirmek ve bir uygulama ve önkoşulları yüklemek için otomatik bir yol sağlar.  
+ [GenerateBootstrapper görevi](../msbuild/generatebootstrapper-task.md)  
+ Bir uygulamayı ve önkoşullarını tespit etmek, indirmek ve yüklemek için otomatikleştirilmiş bir yol sağlar.  
   
- [GenerateDeploymentManifest Görevi](../msbuild/generatedeploymentmanifest-task.md)  
- Oluşturur bir [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dağıtım bildirimi.  
+ [GenerateDeploymentManifest görevi](../msbuild/generatedeploymentmanifest-task.md)  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]Dağıtım bildirimi oluşturur.  
   
  [GenerateResource Görevi](../msbuild/generateresource-task.md)  
- .Txt ve .resx dosyalarını ortak dil çalışma zamanı ikili .resources dosyalarına dönüştürür.  
+ . Txt ve. resx dosyalarını ortak dil çalışma zamanı ikili. resources dosyalarına dönüştürür.  
   
- [GenerateTrustInfo Görevi](../msbuild/generatetrustinfo-task.md)  
- Uygulama güvenini taban bildirimini ve gelen oluşturur `TargetZone` ve `ExcludedPermissions` parametreleri.  
+ [GenerateTrustInfo görevi](../msbuild/generatetrustinfo-task.md)  
+ Temel bildirimden ve ve parametrelerinden uygulama güvenini oluşturur `TargetZone` `ExcludedPermissions` .  
   
- [GetAssemblyIdentity Görevi](../msbuild/getassemblyidentity-task.md)  
- Belirtilen dosyalardan derleme kimlikleri alır ve kimlik bilgilerini çıkarır.  
+ [GetAssemblyIdentity görevi](../msbuild/getassemblyidentity-task.md)  
+ Belirtilen dosyalardaki derleme kimliklerini alır ve kimlik bilgilerini çıkarır.  
   
  [GetFrameworkPath Görevi](../msbuild/getframeworkpath-task.md)  
- Yolunu alır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] derlemeler.  
+ Derlemelerin yolunu alır [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .  
   
- [GetFrameworkSdkPath Görevi](../msbuild/getframeworksdkpath-task.md)  
- Yolunu alır [!INCLUDE[winsdklong](../includes/winsdklong-md.md)].  
+ [GetFrameworkSdkPath görevi](../msbuild/getframeworksdkpath-task.md)  
+ Yolunu alır [!INCLUDE[winsdklong](../includes/winsdklong-md.md)] .  
   
- [GetReferenceAssemblyPaths Görevi](../msbuild/getreferenceassemblypaths-task.md)  
- Başvuru bütünleştirilmiş kodu yolları çeşitli çerçevesini döndürür.  
+ [GetReferenceAssemblyPaths görevi](../msbuild/getreferenceassemblypaths-task.md)  
+ Çeşitli çerçevelerin başvuru derleme yollarını döndürür.  
   
- [LC Görevi](../msbuild/lc-task.md)  
- Bir .licx dosyasından .license dosyası oluşturur.  
+ [LC görevi](../msbuild/lc-task.md)  
+ . Licx dosyasından bir. License dosyası oluşturur.  
   
- [MakeDir Görevi](../msbuild/makedir-task.md)  
- Dizin oluşturur ve gerekirse, tüm üst dizinleri.  
+ [MakeDir görevi](../msbuild/makedir-task.md)  
+ Dizinler ve gerekirse herhangi bir üst dizin oluşturur.  
   
- [Message Görevi](../msbuild/message-task.md)  
- Derleme sırasında bir ileti kaydeder.  
+ [İleti görevi](../msbuild/message-task.md)  
+ Derleme sırasında bir iletiyi günlüğe kaydeder.  
   
- [Move Görevi](../msbuild/move-task.md)  
- Dosyalarını yeni konuma taşır.  
+ [Görevi taşı](../msbuild/move-task.md)  
+ Dosyaları yeni bir konuma taşıın.  
   
- [MSBuild Görevi](../msbuild/msbuild-task.md)  
- Yapılar [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] başka projelerden [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] proje.  
+ [MSBuild görevi](../msbuild/msbuild-task.md)  
+ [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)]Başka bir projeden projeler oluşturur [!INCLUDE[vstecmsbuild](../includes/vstecmsbuild-md.md)] .  
   
  [ReadLinesFromFile Görevi](../msbuild/readlinesfromfile-task.md)  
- Öğe listesini bir metin dosyasından okur.  
+ Bir metin dosyasından öğelerin listesini okur.  
   
- [RegisterAssembly Görevi](../msbuild/registerassembly-task.md)  
- Belirtilen derleme içindeki meta veriyi okur ve kayıt defterine gerekli girişleri ekler.  
+ [RegisterAssembly görevi](../msbuild/registerassembly-task.md)  
+ Belirtilen derleme içindeki meta verileri okur ve gerekli girdileri kayıt defterine ekler.  
   
  [RemoveDir Görevi](../msbuild/removedir-task.md)  
- Belirtilen dizinlerin ve tüm alt dizinleri ve dosyaları kaldırır.  
+ Belirtilen dizinleri ve tüm dosyalarını ve alt dizinlerini kaldırır.  
   
- [RemoveDuplicates Görevi](../msbuild/removeduplicates-task.md)  
- Yinelenen öğeleri belirtilen öğeyi koleksiyondan kaldırır.  
+ [Removeyinelemeler görevi](../msbuild/removeduplicates-task.md)  
+ Belirtilen öğe koleksiyonundan yinelenen öğeleri kaldırır.  
   
- [RequiresFramework35SP1Assembly Görevi](../msbuild/requiresframework35sp1assembly-task.md)  
- Uygulama .NET Framework 3.5 SP1 isteyip istemediğini belirler.  
+ [RequiresFramework35SP1Assembly görevi](../msbuild/requiresframework35sp1assembly-task.md)  
+ Uygulamanın .NET Framework 3,5 SP1 gerektirip gerektirmediğini belirler.  
   
  ResGen görevi  
- Kullanımdan kalktı. Kullanım [GenerateResource görevi](../msbuild/generateresource-task.md) .txt ve .resx dosyaları için ve ortak dil çalışma zamanı ikili .resources dosyalarına dönüştürmek için görev.  
+ Kullanımdan kalktı. . Txt ve. resx dosyalarını ortak dil çalışma zamanı ikili. resources dosyalarına dönüştürmek için [GenerateResource görev](../msbuild/generateresource-task.md) görevini kullanın.  
   
- [ResolveAssemblyReference Görevi](../msbuild/resolveassemblyreference-task.md)  
- Belirtilen derlemelerini bağımlı derlemelerin belirler.  
+ [ResolveAssemblyReference görevi](../msbuild/resolveassemblyreference-task.md)  
+ Belirtilen derlemelere bağlı tüm derlemeleri belirler.  
   
- [ResolveComReference Görevi](../msbuild/resolvecomreference-task.md)  
- Bir veya daha fazla tür kitaplığı adları veya .tlb dosyaları listesini alır ve bu tür kitaplıklarını disk üzerindeki konumlara giderir.  
+ [ResolveComReference görevi](../msbuild/resolvecomreference-task.md)  
+ Bir veya daha fazla tür kitaplığı adının veya. tlb dosyasının bir listesini alır ve bu tür kitaplıklarını disk üzerindeki konumlara çözümler.  
   
- [ResolveKeySource Görevi](../msbuild/resolvekeysource-task.md)  
+ [ResolveKeySource görevi](../msbuild/resolvekeysource-task.md)  
  Tanımlayıcı ad anahtar kaynağını belirler  
   
- [ResolveManifestFiles Görevi](../msbuild/resolvemanifestfiles-task.md)  
- Yapı işleminde aşağıdaki öğeleri için bildirim üretme dosyaları giderir: öğe, bağımlılıkları, Uyduları, içerik, hata ayıklama sembolleri ve belgeleri yerleşik.  
+ [ResolveManifestFiles görevi](../msbuild/resolvemanifestfiles-task.md)  
+ Derleme işlemindeki aşağıdaki öğeleri bildirim oluşturma için dosyalara çözümler: oluşturulan öğeler, bağımlılıklar, uydu, içerik, hata ayıklama sembolleri ve belgeler.  
   
- [ResolveNativeReference Görevi](../msbuild/resolvenativereference-task.md)  
- Yerel başvurular çözümleniyor.  
+ [ResolveNativeReference görevi](../msbuild/resolvenativereference-task.md)  
+ Yerel başvuruları çözümler.  
   
- [ResolveNonMSBuildProjectOutput Görevi](../msbuild/resolvenonmsbuildprojectoutput-task.md)  
- MSBuild dışındaki proje başvuruları için çıkış dosyalarının belirler.  
+ [ResolveNonMSBuildProjectOutput görevi](../msbuild/resolvenonmsbuildprojectoutput-task.md)  
+ MSBuild olmayan proje başvuruları için çıkış dosyalarını belirler.  
   
- [SGen Görevi](../msbuild/sgen-task.md)  
- Bir XML serileştirme derleme türleri için belirtilen derlemesinde oluşturur.  
+ [SGen görevi](../msbuild/sgen-task.md)  
+ Belirtilen derlemedeki türler için bir XML serileştirme bütünleştirilmiş kodu oluşturur.  
   
- [SignFile Görevi](../msbuild/signfile-task.md)  
- Belirtilen dosyayı belirtilen sertifikayı kullanarak imzalar.  
+ [SignFile görevi](../msbuild/signfile-task.md)  
+ Belirtilen sertifikayı kullanarak belirtilen dosyayı imzalar.  
   
- [Touch Görevi](../msbuild/touch-task.md)  
- Dosya erişim ve değişiklik saatlerini ayarlar.  
+ [Dokunma görevi](../msbuild/touch-task.md)  
+ Dosyaların erişim ve değiştirme zamanlarını ayarlar.  
   
- [UnregisterAssembly Görevi](../msbuild/unregisterassembly-task.md)  
- Belirtilen derlemeleri COM birlikte çalışma amacıyla kaydını siler.  
+ [UnregisterAssembly görevi](../msbuild/unregisterassembly-task.md)  
+ Belirtilen derlemelerin COM birlikte çalışma amacıyla kaydını siler.  
   
- [UpdateManifest Görevi](../msbuild/updatemanifest-task.md)  
- Bir bildirimdeki seçili özelliklerini güncelleştirir ve Çekildi.  
+ [UpdateManifest görevi](../msbuild/updatemanifest-task.md)  
+ Bir bildirimde seçili özellikleri güncelleştirir ve yeniden imzalar.  
   
- [Vbc Görevi](../msbuild/vbc-task.md)  
- Yürütülebilir dosyalar, dinamik bağlantı kitaplıkları veya kod modüllerini oluşturmak için Visual Basic Derleyicisi çağırır...  
+ [Vbc görevi](../msbuild/vbc-task.md)  
+ Yürütülebilir dosyalar, dinamik bağlantı kitaplıkları veya kod modülleri oluşturmak için Visual Basic derleyicisini çağırır..  
   
- [Warning Görevi](../msbuild/warning-task.md)  
- Günlükleri bir derleme sırasında bir uyarı değerlendirilen bir koşullu ifadeye göre.  
+ [Uyarı görevi](../msbuild/warning-task.md)  
+ Değerlendirilen bir koşullu ifadeye dayanan bir derleme sırasında bir uyarı kaydeder.  
   
- [WriteCodeFragment Görevi](../msbuild/writecodefragment-task.md)  
- Belirtilen oluşturulan kod parçasını kullanarak geçici bir kod dosyası oluşturur. Dosya silinmez.  
+ [Writecobirleştirme görevi](../msbuild/writecodefragment-task.md)  
+ Belirtilen üretilen kod parçasını kullanarak geçici bir kod dosyası oluşturur. Dosyayı silmez.  
   
  [WriteLinesToFile Görevi](../msbuild/writelinestofile-task.md)  
- Belirtilen öğelerin belirtilen bir metin dosyasına yazar.  
+ Belirtilen öğeleri belirtilen metin dosyasına yazar.  
   
- [XmlPeek Görevi](../msbuild/xmlpeek-task.md)  
- Bir XML dosyasından XPath sorgusu tarafından belirtilen değerleri döndürür.  
+ [XmlPeek görevi](../msbuild/xmlpeek-task.md)  
+ XML dosyasından XPath sorgusuyla belirtilen değerleri döndürür.  
   
  [XmlPoke Görevi](../msbuild/xmlpoke-task.md)  
- Bir XML dosyasına bir XPath sorgusu tarafından belirtilen değerleri ayarlar.  
+ Bir XPath sorgusu tarafından belirtilen değerleri bir XML dosyasına ayarlar.  
   
- [XslTransformation Görevi](../msbuild/xsltransformation-task.md)  
- Kullanarak bir XML girişi dönüştürür bir *Genişletilebilir Stil Sayfası Dili Dönüşümü* (XSLT) veya XSLT ve çıktıları çıktı cihazına veya bir dosya için derlenmiş.  
+ [XslTransformation görevi](../msbuild/xsltransformation-task.md)  
+ *Genişletilebilir Stil sayfası dil dönüşümü* (XSLT) veya derlenen XSLT kullanarak bir XML girişini dönüştürür ve çıkış cihazına veya bir dosyaya çıktılar verir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [MSBuild başvurusu](../msbuild/msbuild-reference.md)   

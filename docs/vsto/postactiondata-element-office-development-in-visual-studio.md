@@ -15,10 +15,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 104af55fdc11b6afae757eff95a964dad83418a6
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541875"
 ---
 # <a name="ltpostactiondatagt-element-office-development-in-visual-studio"></a>&lt;postActionData &gt; öğesi (Visual Studio 'Da Office geliştirme)
@@ -36,7 +36,7 @@ ms.locfileid: "85541875"
 
  `postActions`Öğesinde hiç öznitelik yok.
 
- `postActions`alt öğesi yok.
+ `postActions` alt öğesi yok.
 
 ## <a name="post-deployment-action-example"></a>Dağıtım sonrası eylem örneği
 

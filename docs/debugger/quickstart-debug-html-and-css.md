@@ -18,10 +18,10 @@ monikerRange: vs-2017
 ms.workload:
 - uwp
 ms.openlocfilehash: 331cb056132a2d90a932ff250c9bdbb7e22e38af
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348268"
 ---
 # <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio 'da UWP uygulamalarında HTML ve CSS hatalarını ayıklama
@@ -32,7 +32,7 @@ DOM inceleme araçları tarafından sunulan etkileşimli hata ayıklama modelini
 
 JavaScript Konsol penceresini kullanma ve kesme noktaları ayarlama gibi diğer JavaScript hata ayıklama özellikleri hakkında bilgi için bkz. [hızlı başlangıç:](../debugger/quickstart-debug-javascript-using-the-console.md) [Visual Studio 'Da](debugging-windows-store-and-windows-universal-apps.md)JavaScript ve hata ayıklama uygulamaları.
 
-## <a name="inspecting-the-live-dom"></a><a name="InspectingDOM"></a>Canlı DOM inceleniyor
+## <a name="inspecting-the-live-dom"></a><a name="InspectingDOM"></a> Canlı DOM inceleniyor
 DOM Gezgini, işlenmiş sayfanın bir görünümünü gösterir ve DOM Gezgini 'ni kullanarak değerleri değiştirebilir ve sonuçları hemen görebilirsiniz. Bu, hata ayıklayıcıyı durdurup yeniden başlatmadan değişiklikleri test etmenizi sağlar. Bu yöntemi kullanarak sayfayla etkileşim kurarken, projenizdeki kaynak kodu değişmez, bu nedenle istenen kod düzeltmelerini bulduğunuzda, kaynak kodunuzda değişiklikler yaparsınız.
 
 > [!TIP]
@@ -230,7 +230,7 @@ Aşağıdaki yordamda, DOM Gezgini 'ni kullanarak bir uygulamada etkileşimli ol
 
     Yenileme özelliği hakkında daha fazla bilgi için bkz. [uygulamayı yenileme (JavaScript)](../debugger/refresh-an-app-javascript.md).
 
-## <a name="selecting-elements"></a><a name="SelectingElements"></a>Öğe seçme
+## <a name="selecting-elements"></a><a name="SelectingElements"></a> Öğe seçme
 Bir uygulamada hata ayıklarken DOM öğelerini üç şekilde seçebilirsiniz:
 
 - Doğrudan DOM Gezgini penceresinde (veya ok tuşlarını kullanarak) öğelere tıklayarak.

@@ -22,10 +22,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 0a818cfde2996b26bd9d5f31b128e41f2a9fe2e1
-ms.sourcegitcommit: 40bd5b27f247a07c2e2514acb293b23d6ce03c29
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "73188690"
 ---
 # <a name="com-and-activex-debugging"></a>COM ve ActiveX Hata Ayıklaması
@@ -39,11 +39,11 @@ Bu bölümde, COM uygulamalarında ve ActiveX denetimlerinde hata ayıklama hakk
  [Com hata ayıklama araçları](../debugger/com-debugging-tools.md) COM uygulamanızda hata ayıklama yararlı olabilecek görüntüleyicilerin ve örnek uygulamaların listesini görüntüler.
 
 ## <a name="related-sections"></a>İlgili Bölümler
- [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md) Hata ayıklama belgelerinin daha büyük bölümlerine bağlantılar sağlar. Bilgiler şunları içerir: hata ayıklayıcıdaki yenilikler, ayarlar ve hazırlık, kesme noktaları, özel durumları işleme, düzenleme ve devam etme, yönetilen kodda C++ hata ayıklama, hata ayıklama, hata ayıklama, SQL ve ActiveX, hata ayıklama dll 'leri ve Kullanıcı arabirim başvuruları.
+ [Hata ayıklayıcıya ilk bakış](../debugger/debugger-feature-tour.md) Hata ayıklama belgelerinin daha büyük bölümlerine bağlantılar sağlar. Bilgiler şunları içerir: hata ayıklayıcı, ayarlar ve hazırlık, kesme noktaları, özel durumları işleme, düzenleme ve devam etme, yönetilen kodda hata ayıklama, C++ projelerinde hata ayıklama, hata ayıklama, SQL ve ActiveX, hata ayıklama dll 'Leri ve Kullanıcı arabirimi başvuruları.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklayıcısı Güvenliği](../debugger/debugger-security.md)
-- [COM’a Giriş](/cpp/atl/introduction-to-com)
-- [ActiveX Denetimleri](/cpp/mfc/activex-controls)
+- [Hata Ayıklama Güvenliği](../debugger/debugger-security.md)
+- [COM'a Giriş](/cpp/atl/introduction-to-com)
+- [ActiveX denetimleri](/cpp/mfc/activex-controls)
 - [SDI Sunucu Uygulamaları](com-server-and-container-debugging.md)

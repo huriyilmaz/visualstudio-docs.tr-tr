@@ -1,5 +1,5 @@
 ---
-title: Kimin Yanlış Parametre Değeri Geçirdiğini Nasıl Bulabilirim? | Microsoft Docs
+title: Kimin Yanlış Parametre Değeri Geçirdiğini Nasıl Bulabilirim? | Microsoft Belgeleri
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -24,37 +24,37 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: b0787a0d700859e7728762fd7846911fcd41e369
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704548"
 ---
 # <a name="how-can-i-find-out-who-is-passing-a-wrong-parameter-value"></a>Kimin Yanlış Parametre Değeri Geçirdiğini Nasıl Bulabilirim?
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Sorun açıklaması  
- Benim birine yanlış parametre değeri geçirilir. Bu işlev her yerden çağrılır. Nasıl öğrenebilirim kullanıma neyin yanlış değer geçiyor?  
+Sorun Açıklaması  
+ Yanlış parametre değeri, işlevlerimin birine geçiriliyor. Bu işlev, tüm konumdan çağrılır. Yanlış değere ne geçirdiklerinizi nasıl öğrenebilirim?  
   
 ## <a name="solution"></a>Çözüm  
   
-#### <a name="to-resolve-this-problem"></a>Bu sorunu gidermek için  
+#### <a name="to-resolve-this-problem"></a>Bu sorunu çözmek için  
   
-1. İşlevin başında bir konum kesme noktası ayarlayın.  
+1. İşlevin başlangıcında bir konum kesme noktası ayarlayın.  
   
-2. Kesme noktasına sağ tıklayıp **koşul**.  
+2. Kesme noktasına sağ tıklayın ve **koşul**' ı seçin.  
   
-3. İçinde **kesme noktası koşulu** iletişim kutusu, tıklayarak **koşul** onay kutusu. Bkz: [kesme noktalarının Gelişmiş](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression).  
+3. **Kesme noktası koşulu** iletişim kutusunda, **koşul** onay kutusuna tıklayın. [Gelişmiş kesme noktaları](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)konusuna bakın.  
   
-4. Gibi bir ifade girin `Var==3`, metin kutusuna, burada `Var` hatalı değeri içeren parametrenin adıdır ve `3` ona iletilen hatalı değer.  
+4. Metin kutusuna, gibi bir ifade girin, `Var==3` burada `Var` Hatalı değeri içeren parametrenin adıdır ve `3` kendisine geçirilen hatalı değerdir.  
   
-5. Seçin **true'dur** radyo düğmesini tıklatıp tıklayın **Tamam** düğmesi.  
+5. **True ise** radyo düğmesini seçin ve **Tamam** düğmesine tıklayın.  
   
-6. Şimdi programı yeniden çalıştırın. Kesme noktası programın işlevin başında durdurulmasına neden olduğunda `Var` parametresinin değeri `3`.  
+6. Şimdi programı yeniden çalıştırın. Kesme noktası, parametrenin değeri olduğunda işlevin başlangıcında durmasına neden olur `Var` `3` .  
   
-7. Çağıran işlevi bulmak ve kaynak koduna gitmek için çağrı yığını penceresini kullanın. Daha fazla bilgi için [nasıl yapılır: Çağrı yığını penceresini kullanma](../debugger/how-to-use-the-call-stack-window.md).  
+7. Çağırma işlevini bulmak ve kaynak koduna gitmek için çağrı yığını penceresini kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: çağrı yığını penceresini kullanma](../debugger/how-to-use-the-call-stack-window.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Yerel kod hata ayıklaması SSS](../debugger/debugging-native-code-faqs.md)   
+ [Yerel kod SSS hatalarını ayıklama](../debugger/debugging-native-code-faqs.md)   
  [Kesme noktaları](https://msdn.microsoft.com/fe4eedc1-71aa-4928-962f-0912c334d583)   
  [Yerel Kodda Hata Ayıklama](../debugger/debugging-native-code.md)

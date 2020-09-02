@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c66894fe0515b28037bbb2a19715fa09cbf9fa62
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153585"
 ---
-# <a name="attachreason"></a>ATTACH_REASON
+# <a name="attach_reason"></a>ATTACH_REASON
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Bir program düğüme iliştirmek için hata ayıklama altyapısı (DE) nedenini belirtir.  
+Hata ayıklama altyapısının (DE) bir program düğümüne iliştirme nedenini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_ATTACH_REASON {   
@@ -45,25 +45,25 @@ public enum enum_ATTACH_REASON { 
   
 ## <a name="members"></a>Üyeler  
  ATTACH_REASON_AUTO  
- İşlem şu anda hata ayıklama modunda olduğundan ekleyin.  
+ İşlem şu anda hata ayıklama modunda olduğundan iliştirme.  
   
  ATTACH_REASON_LAUNCH  
- İşlem başlatıldığından ekleyin.  
+ İşlem başlatıldığından iliştirme.  
   
  ATTACH_REASON_USER  
- Bir kullanıcı isteği nedeniyle ekleyin.  
+ Kullanıcı isteği nedeniyle iliştirme.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu değerler için parametre olarak kullanılan [iliştirme](../../../extensibility/debugger/reference/idebugengine2-attach.md) ve [iliştirme](../../../extensibility/debugger/reference/idebugprogramex2-attach.md) yöntemleri.  
+ Bu değerler, [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) ve [Attach](../../../extensibility/debugger/reference/idebugprogramex2-attach.md) yöntemlerine parametre olarak kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [Ekleme](../../../extensibility/debugger/reference/idebugengine2-attach.md)   
- [Attach](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)
+ [İliştir](../../../extensibility/debugger/reference/idebugprogramex2-attach.md)

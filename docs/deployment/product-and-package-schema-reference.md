@@ -26,34 +26,34 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 1570aa3d4ea72dc1d133ce3096e1726fa1ffb782
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66745622"
 ---
 # <a name="product-and-package-schema-reference"></a>Ürün ve paket şema başvurusu
-A *ürün dosyası* tüm gerekli dış bağımlılıkları tanımlayan bir XML bildirimi olan bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] uygulama. .NET Framework ve Microsoft Data Access Components (MDAC) dış bağımlılıkların örnekleridir. Bir paket dosyası ürün dosyasına benzer ancak yerelleştirilmiş derlemeleri, lisans sözleşmelerini ve belgeler gibi bir bağımlılık kültüre bağlı bileşenleri yüklemek için kullanılır.
+*Ürün dosyası* , bir uygulamanın gerektirdiği tüm dış bağımlılıkları açıklayan bir XML bildirimidir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Dış bağımlılıklara örnek olarak .NET Framework ve Microsoft Data Access Components (MDAC) bulunur. Bir paket dosyası bir ürün dosyasına benzer, ancak yerelleştirilmiş derlemeler, lisans sözleşmeleri ve belgeler gibi bir bağımlılığın kültüre bağlı bileşenleri yüklemek için kullanılır.
 
- Ürün ve paket dosyası birini bir üst düzey `Product` veya `Package` öğesi, her biri aşağıdaki öğeleri içerir.
+ Ürün ve paket dosyası `Product` `Package` , her biri aşağıdaki öğeleri içeren en üst düzey veya öğeden oluşur.
 
 |Öğe|Açıklama|Öznitelikler|
 |-------------|-----------------|----------------|
-|[\<Product> Öğesi](../deployment/product-element-bootstrapper.md)|Ürün dosyaları için gerekli en üst düzey öğe.|None|
-|[\<Package> Öğesi](../deployment/package-element-bootstrapper.md)|Paket dosyaları için gerekli en üst düzey öğe.|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|
-|[\<RelatedProducts> Öğesi](../deployment/relatedproducts-element-bootstrapper.md)|Ürün dosyaları için isteğe bağlı öğe. Bu ürünü yükleyen veya bağımlı diğer ürünleri.|None|
-|[\<InstallChecks> Öğesi](../deployment/installchecks-element-bootstrapper.md)|Gerekli öğe. Listeler, yükleme sırasında yerel bilgisayarda gerçekleştirmek için bağımlılık denetler.|Yok.|
-|[\<Commands> Öğesi](../deployment/commands-element-bootstrapper.md)|Gerekli öğe.  Bir veya daha fazla yükleme denetimleri tarafından açıklandığı şekilde yürütür `InstallChecks`ve yüklenecek gerektiğini gösterir başarısız.|Yok.|
-|[\<PackageFiles> Öğesi](../deployment/packagefiles-element-bootstrapper.md)|Gerekli öğe. Bu yükleme işlemi tarafından yüklenmiş olabilecek paketleri listeler.|Yok.|
-|[\<Strings> Öğesi](../deployment/strings-element-bootstrapper.md)|Gerekli öğe. Depoları, ürün adı ve hata dizelerini sürümlerini yerelleştirilmiş.|Yok.|
+|[\<Product> Dosyalarında](../deployment/product-element-bootstrapper.md)|Ürün dosyaları için gerekli en üst düzey öğe.|Hiçbiri|
+|[\<Package> Dosyalarında](../deployment/package-element-bootstrapper.md)|Paket dosyaları için gerekli en üst düzey öğe.|`Culture`<br /><br /> `Name`<br /><br /> `EULA`|
+|[\<RelatedProducts> Dosyalarında](../deployment/relatedproducts-element-bootstrapper.md)|Ürün dosyaları için isteğe bağlı öğe. Bu ürünün yüklediği veya bağlı olduğu diğer ürünler.|Hiçbiri|
+|[\<InstallChecks> Dosyalarında](../deployment/installchecks-element-bootstrapper.md)|Gerekli öğe. Yükleme sırasında yerel bilgisayarda gerçekleştirilecek bağımlılık denetimlerini listeler.|Hiçbiri|
+|[\<Commands> Dosyalarında](../deployment/commands-element-bootstrapper.md)|Gerekli öğe.  , Tarafından açıklanan bir veya daha fazla yükleme denetimini yürütür `InstallChecks` ve Denetim başarısız olduğunda hangi paketin yükleneceğini belirtir.|Hiçbiri|
+|[\<PackageFiles> Dosyalarında](../deployment/packagefiles-element-bootstrapper.md)|Gerekli öğe. Bu yükleme işlemi tarafından yüklenebilen paketleri listeler.|Hiçbiri|
+|[\<Strings> Dosyalarında](../deployment/strings-element-bootstrapper.md)|Gerekli öğe. Ürün adının ve hata dizelerinin yerelleştirilmiş sürümlerini depolar.|Hiçbiri|
 
 ## <a name="remarks"></a>Açıklamalar
- Paketin şemanın tarafından tüketilen *Setup.exe*, kendi sabit kodlanmış az mantığı içeren bir görev önyükleme MS Build tarafından oluşturulan bir saplama programı. Şema her yönüyle yükleme işlemini yürütür.
+ Paket şeması, kendi kendine özgü bir mantığı içeren MS Build önyüklemesi görevi tarafından oluşturulan bir saplama programı olan *Setup.exe*tarafından kullanılır. Şema sürücüleri, yükleme işleminin her yönüyle.
 
- `InstallChecks` testler, setup.exe belirli bir paket varlığını gerçekleştirmeniz gerekir. `PackageFiles` Tüm Kurulum işlemi yüklemek için belirli bir testi başarısız olması olabilir paketleri listelenir. Her komut girişini komutları altında biri tarafından açıklanan testleri yürütür `InstallChecks`ve belirten `PackageFile` çalıştırılacak testin başarısız olması. Kullanabileceğiniz `Strings` ürün adları ve hata iletileri, böylece uygulamanız için herhangi bir sayıda diller yüklemek için tek bir yükleme ikili kullanabilirsiniz yerelleştirmek için öğesi.
+ `InstallChecks` setup.exe belirli bir paketin varlığı için gerçekleştirmesi gereken testler. `PackageFiles` Kurulum işleminin yüklenmesi gerekebilecek tüm paketleri listeler, belirli bir test başarısız olur. Komutları altındaki her komut girdisi tarafından tanımlanan testlerin birini yürütür `InstallChecks` ve `PackageFile` testin başarısız olması gerektiğini belirtir. `Strings`Ürün adlarını ve hata iletilerini yerelleştirmek için öğesini kullanabilirsiniz, böylece uygulamanızı istediğiniz sayıda dilde yüklemek için tek bir yükleme ikilisini kullanabilirsiniz.
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örneği, .NET Framework yükleme için bir tam ürün dosyası gösterir.
+ Aşağıdaki kod örneği, .NET Framework yüklemek için tüm ürün dosyalarını gösterir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -159,4 +159,4 @@ A *ürün dosyası* tüm gerekli dış bağımlılıkları tanımlayan bir XML b
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [ClickOnce dağıtım bildirimi](../deployment/clickonce-deployment-manifest.md)
-- [ClickOnce Uygulama bildirimi](../deployment/clickonce-application-manifest.md)
+- [ClickOnce uygulama bildirimi](../deployment/clickonce-application-manifest.md)

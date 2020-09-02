@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugCodeContexts2::Sonraki | Microsoft Dokümanlar
+title: 'IEnumDebugCodeContexts2:: Next | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: c6e54b44d9e0ece42b65bf12412d6906158bc7fa
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80717297"
 ---
 # <a name="ienumdebugcodecontexts2next"></a>IEnumDebugCodeContexts2::Next
-Numaralandırmadan sonraki eleman kümesini döndürür.
+Numaralandırmadaki öğelerin bir sonraki kümesini döndürür.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Next(
@@ -45,16 +45,16 @@ int Next(
 
 ## <a name="parameters"></a>Parametreler
 `celt`\
-[içinde] Alınacak öğe sayısı. Ayrıca `rgelt` dizinin en büyük boyutunu belirtir.
+'ndaki Alınacak öğe sayısı. Ayrıca, dizinin en büyük boyutunu belirtir `rgelt` .
 
 `rgelt`\
-[içinde, dışarı] Doldurulacak [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) öğeleri dizisi.
+[in, out] Doldurulacak [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) öğelerinin dizisi.
 
 `pceltFetched`\
-[çıkış] Gerçekte döndürülen öğe sayısını `rgelt`döndürür.
+dışı İçinde gerçekten döndürülen öğelerin sayısını döndürür `rgelt` .
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döndürür. İstenen öğe sayısından daha az ise döndürür; `S_FALSE` aksi takdirde, bir hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` . `S_FALSE`İstenen sayıda öğeden daha az döndürülüp döndürülmeyeceğini döndürür; Aksi takdirde, bir hata kodu döndürür.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)

@@ -1,5 +1,5 @@
 ---
-title: SccAdd Fonksiyonu | Microsoft Dokümanlar
+title: SccAdd Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 23a6226b0d3cc2441a509c16b2e4672a766f3329
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701308"
 ---
-# <a name="sccadd-function"></a>SccAdd fonksiyonu
-Bu işlev kaynak denetim sistemine yeni dosyalar ekler.
+# <a name="sccadd-function"></a>SccAdd işlevi
+Bu işlev, kaynak denetim sistemine yeni dosyalar ekler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 SCCRTN SccAdd(
@@ -39,66 +39,66 @@ SCCRTN SccAdd(
 ### <a name="parameters"></a>Parametreler
  pvContext
 
-[içinde] Kaynak denetimi eklentisi bağlam yapısı.
+'ndaki Kaynak denetimi eklentisi bağlam yapısı.
 
- Hwnd
+ lendiği
 
-[içinde] Kaynak denetim eklentisinin sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresine bir tanıtıcı.
+'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.
 
- nDosyalar
+ Nkarşıya
 
-[içinde] `lpFileNames` Dizide verilen geçerli projeye eklenecek seçili dosya sayısı.
+'ndaki Geçerli projeye dizide verilen şekilde eklenmek üzere seçilen dosya sayısı `lpFileNames` .
 
- lpFileNames
+ lpDosyaAdı
 
-[içinde] Eklenecek dosyaların tam nitelikli yerel adlarını dizi.
+'ndaki Eklenecek dosyaların tam nitelikli yerel adları dizisi.
 
- lpYorum yap
+ lpComment açıklaması
 
-[içinde] Eklenecek tüm dosyalara uygulanacak açıklama.
+'ndaki Eklenmekte olan tüm dosyalara uygulanacak yorum.
 
- pfOptions
+ Pfseçenekleri
 
-[içinde] Dosya başına sağlanan komut bayrakları dizisi.
+'ndaki Dosya başına temelinde sunulan komut bayrakları dizisi.
 
  pvOptions
 
-[içinde] Kaynak denetimi eklentisi özel seçenekleri.
+'ndaki Kaynak denetimi eklentisi özel seçenekleri.
 
 ## <a name="return-value"></a>Döndürülen değer
- Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Ekleme işlemi başarılı oldu.|
 |SCC_E_FILEALREADYEXISTS|Seçili dosya zaten kaynak denetimi altında.|
-|SCC_E_TYPENOTSUPPORTED|Dosyanın türü (örneğin, ikili) kaynak denetim sistemi tarafından desteklenmez.|
-|SCC_E_OPNOTSUPPORTED|Kaynak denetim sistemi bu işlemi desteklemez.|
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemine erişmede büyük olasılıkla ağ veya çekişme sorunları nedeniyle bir sorun vardı. Yeniden deneme önerilir.|
-|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmez.|
-|SCC_E_NONSPECIFICERROR|Nonspesifik başarısızlık; gerçekleştirilmeyen ekleyin.|
-|SCC_I_OPERATIONCANCELED|İşlem tamamlanmadan iptal edildi.|
-|SCC_I_RELOADFILE|Bir dosyanın veya projenin yeniden yüklenmesi gerekir.|
+|SCC_E_TYPENOTSUPPORTED|Dosya türü (örneğin, ikili) kaynak denetim sistemi tarafından desteklenmiyor.|
+|SCC_E_OPNOTSUPPORTED|Kaynak denetim sistemi bu işlemi desteklemiyor.|
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmiyor.|
+|SCC_E_NONSPECIFICERROR|Özel olmayan hata; ekleme gerçekleştirilmedi.|
+|SCC_I_OPERATIONCANCELED|İşlem tamamlanmadan önce iptal edildi.|
+|SCC_I_RELOADFILE|Bir dosya veya projenin yeniden yüklenmesi gerekiyor.|
 |SCC_E_FILENOTEXIST|Yerel dosya bulunamadı.|
 
 ## <a name="remarks"></a>Açıklamalar
- Her `fOptions` zamanki dosya başına bir `pfOptions` `LONG` seçenek belirtimi ile, bir dizi ile burada değiştirilir. Bunun nedeni, dosya türünün dosyadan dosyaya farklılık gösterebileceğidir.
+ Her zamanki gibi, her `fOptions` `pfOptions` dosya için tek bir seçenek belirtimine sahip bir dizi tarafından burada yer alır `LONG` . Bunun nedeni dosya türünün dosyadan dosyaya değişebiliyor olması olabilir.
 
 > [!NOTE]
-> Aynı dosya için hem `SCC_FILETYPE_TEXT` `SCC_FILETYPE_BINARY` de seçenekleri belirtmek geçersizdir, ancak ikisini de belirtmek için geçerlidir. Ne ayarı ayarla `SCC_FILETYPE_AUTO`aynıdır , bu durumda kaynak denetim eklentisi dosya türünü otomatik algılar.
+> Aynı dosya için hem hem de `SCC_FILETYPE_TEXT` seçeneklerini belirtmek geçersizdir `SCC_FILETYPE_BINARY` , ancak bunu belirtmek geçerli değildir. Ayarın hiçbiri, ayarıyla aynı değildir `SCC_FILETYPE_AUTO` , bu durumda kaynak denetimi eklentisi dosya türünü oto algılar.
 
- Aşağıda dizide kullanılan bayrakların `pfOptions` listesi verilmiştir:
+ Dizide kullanılan bayrakların listesi aşağıda verilmiştir `pfOptions` :
 
 |Seçenek|Değer|Anlamı|
 |------------|-----------|-------------|
-|SCC_FILETYPE_AUTO|0x00|Kaynak denetim eklentisi dosya türünü algılamalıdır.|
-|SCC_FILETYPE_TEXT|0x01|ASCII metin dosyalarını gösterir.|
+|SCC_FILETYPE_AUTO|-|Kaynak denetimi eklentisi dosya türünü algılamamalıdır.|
+|SCC_FILETYPE_TEXT|0x01|ASCII metin dosyasını gösterir.|
 |SCC_FILETYPE_BINARY|0x02|ASCII metni dışında bir dosya türünü gösterir.|
-|SCC_ADD_STORELATEST|0x04|Dosyanın sadece en son kopyasını saklar, delta yok.|
-|SCC_FILETYPE_TEXT_ANSI|0x08|Dosyayı ANSI metni olarak ele verir.|
-|SCC_FILETYPE_UTF8|0x10|Dosyayı UTF8 biçiminde Unicode metni olarak ele verir.|
-|SCC_FILETYPE_UTF16LE|0x20|Dosyayı UTF16 Little Endian formatında Unicode metni olarak ele verir.|
-|SCC_FILETYPE_UTF16BE|0x40|Dosyayı UTF16 Big Endian formatında Unicode metni olarak ele verir.|
+|SCC_ADD_STORELATEST|0x04|Yalnızca dosyanın en son kopyasını depolar, hiçbir deltas yoktur.|
+|SCC_FILETYPE_TEXT_ANSI|0x08|Dosyayı ANSI metni olarak değerlendirir.|
+|SCC_FILETYPE_UTF8|0x10|Dosyayı UTF8 biçiminde Unicode metin olarak değerlendirir.|
+|SCC_FILETYPE_UTF16LE|0x20|Dosyayı UTF16 little endian biçiminde Unicode metin olarak değerlendirir.|
+|SCC_FILETYPE_UTF16BE|0x40|Dosyayı UTF16 Big endian biçiminde Unicode metin olarak değerlendirir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)

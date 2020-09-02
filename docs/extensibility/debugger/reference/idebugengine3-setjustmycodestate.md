@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine3::SetJustMyCodeState | Microsoft Dokümanlar
+title: 'IDebugEngine3:: Setadatmycodestate | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -16,16 +16,16 @@ dev_langs:
 - CPP
 - CSharp
 ms.openlocfilehash: 9930f8ecf0c2f9b6fff4ce1c9e3edb935c5a7912
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80730679"
 ---
 # <a name="idebugengine3setjustmycodestate"></a>IDebugEngine3::SetJustMyCodeState
-Bu yöntem, hata ayıklama motoruna JustMyCode durum bilgileri hakkında bilgi verebolur.
+Bu yöntem, hata ayıklama altyapısına, Adatmycode durum bilgilerini söyler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT SetJustMyCodeState(
@@ -45,19 +45,19 @@ int SetJustMyCodeState(
 
 ## <a name="parameters"></a>Parametreler
 `fUpdate`\
-[içinde] Nonzero`TRUE`( ) geçerli bilgileri`FALSE`güncelleştirmek için, sıfır ( ) tüm bilgileri sıfırlamak için (daha önce ayarlanmış bir şeyi yok saymak).
+'ndaki `TRUE`Geçerli bilgileri güncelleştirmek için sıfır olmayan () ( `FALSE` daha önce ayarlanmış herhangi bir şey yok sayılıyor).
 
 `dwModules`\
-[içinde] Bilgi yapılarının sayısı`rgJMCSpec.`
+'ndaki İçindeki bilgi yapılarının sayısı `rgJMCSpec.`
 
 `rgJMCSpec`\
-[içinde] Kullanılacak [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) yapıları dizisi.
+'ndaki Kullanılacak [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) yapıları dizisi.
 
 ## <a name="return-value"></a>Dönüş Değeri
- Başarılı olursa, `S_OK`döner; aksi takdirde, hata kodu döndürür.
+ Başarılı olursa, döndürür `S_OK` ; Aksi takdirde hata kodu döndürür.
 
 ## <a name="remarks"></a>Açıklamalar
- JustMyCode, yalnızca kullanıcıya ait kodu hata ayıklama ve sistem kodu gibi tüm ara kodları yok sayma kavramıdır— kaynak kodu bu sistem kodu için kullanılabilir olsa bile.
+ Adammycode, bu sistem kodu için kaynak kodu kullanılabilir olsa bile, yalnızca bir kullanıcıya ait kodu ve sistem kodu gibi tüm ara kodları yok saymanın hata ayıklaması kavramıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 - [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)

@@ -1,5 +1,5 @@
 ---
-title: Düzenle ve devam et iletişim kutusu (C++) | Microsoft Docs
+title: Düzenle ve devam et Iletişim kutusu (C++) | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -21,18 +21,18 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: efd6d9a6628c5d5052d2195e08074e7688a71f92
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65704156"
 ---
-# <a name="edit-and-continue-dialog-box-c"></a>Düzenle ve devam et iletişim kutusu (C++)
+# <a name="edit-and-continue-dialog-box-c"></a>Düzenle ve Devam Et İletişim Kutusu (C++)
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Düzenle ve devam yerel koda yapılan değişiklikleri uygulanamadı. Bu geçici bir durum olabilir. Bazen Düzenle ve devam et yerel kod değişikliklerini hemen uygulanamaz, ancak bunları daha sonra (örneğin, tamamlandıktan sonra artık çalıştırma yordamı için geçerli çağrının) hata ayıklama oturumu sırasında uygulayabilirsiniz. Daha fazla bilgi için [Düzenle ve devam et](../debugger/edit-and-continue.md).  
+Düzenle ve devam et, yerel kodunuzda yaptığınız değişiklikleri uygulayamadı. Bu geçici bir durum olabilir. Bazen Düzenle ve devam et yerel kod değişikliklerini hemen uygulayamaz, ancak hata ayıklama oturumu sırasında daha sonra (örneğin, şu anda yürütülmekte olan yordama yapılan geçerli çağrının tamamlanmasından sonra) uygulanabilir. Daha fazla bilgi için bkz. [Düzenle ve devam et](../debugger/edit-and-continue.md).  
   
- Yine de hata ayıklama sırasında hatayı düzeltin, hata ayıklamayı durdurmak ve kod düzeltmesi veya hatasını görmezden Gel ve hata ayıklamaya devam etmek için kodu düzenleyebilirsiniz. Düzeltmesi yapmadan devam ederseniz, kod değişiklikleriniz hemen uygulanmaz.  
+ Hata ayıklarken hatayı gidermek için kodu düzenleyebilir, hata ayıklamayı durdurup kodu düzeltemedi veya hatayı yoksayıp hata ayıklamaya devam edebilirsiniz. Bu çözümü yapmadan devam ederseniz, kod değişiklikleriniz hemen uygulanmaz.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Düzenle ve devam et, hata ayıklama, Seçenekler iletişim kutusu](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)
+ [Düzenle ve devam et, hata ayıklama, Seçenekler Iletişim kutusu](https://msdn.microsoft.com/library/009d225f-ef65-463f-a146-e4c518f86103)

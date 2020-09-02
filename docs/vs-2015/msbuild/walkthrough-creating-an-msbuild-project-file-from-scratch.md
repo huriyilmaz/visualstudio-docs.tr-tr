@@ -12,55 +12,55 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: eb49e6c51c1e51d002683099797d940cb2d24556
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65682371"
 ---
-# <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>İzlenecek yol: Sıfırdan MSBuild Proje Dosyası Oluşturma
+# <a name="walkthrough-creating-an-msbuild-project-file-from-scratch"></a>İzlenecek Yol: Sıfırdan MSBuild Proje Dosyası Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-.NET Framework'ü hedefleyen programlama dilleri, tanımlamak ve uygulama oluşturma işlemini denetlemek için MSBuild proje dosyaları kullanın. Bir MSBuild proje dosyası oluşturmak için Visual Studio kullandığınızda, uygun XML dosyasına otomatik olarak eklenir. Ancak, XML'in nasıl düzenlendiğini anlamak yararlı ve bunu bir yapıyı denetlemek üzere nasıl değiştirebilirsiniz.  
+.NET Framework hedefleyen programlama dilleri, uygulama derleme sürecini anlatmak ve denetlemek için MSBuild proje dosyalarını kullanır. MSBuild proje dosyası oluşturmak için Visual Studio kullandığınızda, uygun XML dosyaya otomatik olarak eklenir. Ancak, XML 'nin nasıl düzenlendiğini ve bir derlemeyi denetlemek için nasıl değiştirileceğini anlamak yararlı olabilir.  
   
- Bir C++ projesi için proje dosyası oluşturma hakkında daha fazla bilgi için bkz: [MSBuild (Visual C++)](https://msdn.microsoft.com/library/7a1be7ff-0312-4669-adf2-5f5bf507d560).  
+ C++ projesi için proje dosyası oluşturma hakkında daha fazla bilgi için bkz. [MSBuild (Visual C++)](https://msdn.microsoft.com/library/7a1be7ff-0312-4669-adf2-5f5bf507d560).  
   
- Bu izlenecek yol yalnızca bir metin düzenleyicisi kullanarak basit bir proje dosyasının parça parça oluşturma işlemini gösterir. İzlenecek yol aşağıdaki adımları izleyin:  
+ Bu izlenecek yol, yalnızca bir metin Düzenleyicisi kullanılarak nasıl basit bir proje dosyası oluşturulduğunu gösterir. İzlenecek yol aşağıdaki adımları izler:  
   
 - En az uygulama kaynak dosyası oluşturun.  
   
-- Bir minimal MSBuild proje dosyası oluşturun.  
+- En az MSBuild proje dosyası oluşturun.  
   
-- PATH ortam değişkenini, MSBuild öğesini içerecek şekilde genişletin.  
+- PATH ortam değişkenini MSBuild içerecek şekilde genişletin.  
   
-- Proje dosyasını kullanarak uygulama oluşturun.  
+- Proje dosyasını kullanarak uygulamayı oluşturun.  
   
-- Yapıyı denetlemek için özellikler ekleyin.  
+- Derlemeyi denetlemek için özellikler ekleyin.  
   
-- Özellik değerlerini değiştirerek yapıyı denetleyin.  
+- Özellik değerlerini değiştirerek derlemeyi denetleyin.  
   
-- Yapıya hedefler ekleyin.  
+- Yapıya hedef ekleyin.  
   
-- Hedefleri belirleyerek yapıyı denetleyin.  
+- Hedefleri belirterek derlemeyi denetleyin.  
   
-- Artımlı olarak derleyin.  
+- Artımlı olarak oluşturun.  
   
-  Bu izlenecek yol, komut isteminde projeyi oluşturun ve sonuçları inceleyin işlemi gösterilmektedir. MSBuild ve MSBuild komut isteminde çalıştırmak hakkında daha fazla bilgi için bkz. [izlenecek yol: MSBuild kullanarak](../msbuild/walkthrough-using-msbuild.md).  
+  Bu izlenecek yol, komut isteminde projenin nasıl oluşturulacağını gösterir ve sonuçları inceleyin. MSBuild ve MSBuild 'in komut isteminde nasıl çalıştırılacağı hakkında daha fazla bilgi için bkz. [Izlenecek yol: MSBuild kullanma](../msbuild/walkthrough-using-msbuild.md).  
   
-  İzlenecek yolu tamamlamak için gözden geçirme için gerekli olan MSBuild ve Visual C# derleyicisi, içerdiği için yüklü .NET Framework (sürüm 2.0, 3.5, 4.0 veya 4.5) olması gerekir.  
+  İzlenecek yolu tamamlamak için, MSBuild ve Visual C# derleyicisi içerdiğinden .NET Framework (sürüm 2,0, 3,5, 4,0 veya 4,5) yüklü olmalıdır.  
   
-## <a name="creating-a-minimal-application"></a>Minimal uygulama oluşturma  
- Bu bölümde, bir minimal Visual C# uygulama kaynak dosyası bir metin kullanarak düzenleyici oluşturma işlemi gösterilmektedir.  
+## <a name="creating-a-minimal-application"></a>En az uygulama oluşturma  
+ Bu bölümde, bir metin düzenleyicisi kullanarak en az bir Visual C# uygulama kaynak dosyasının nasıl oluşturulacağı gösterilmektedir.  
   
-#### <a name="to-create-the-minimal-application"></a>Minimal uygulamayı oluşturmak için  
+#### <a name="to-create-the-minimal-application"></a>En düşük uygulamayı oluşturmak için  
   
-1. Komut isteminde Documents\ veya \Desktop bu gibi bir durumda uygulamayı oluşturmak istediğiniz klasöre göz atın\\.  
+1. Komut isteminde, uygulamayı oluşturmak istediğiniz klasöre göz atın, örneğin, \Belgelerim \ veya \Desktop \\ .  
   
-2. Tür **md HelloWorld** \HelloWorld adlı bir alt klasör oluşturmak için\\.  
+2. \HelloWorld adlı bir alt klasör oluşturmak için **md HelloWorld** yazın \\ .  
   
-3. Tür **cd HelloWorld** yeni klasöre değiştirmek için.  
+3. Yeni klasöre geçmek için **CD HelloWorld** yazın.  
   
-4. Not Defteri veya başka bir metin düzenleyicisini başlatın ve aşağıdaki kodu yazın.  
+4. Not defteri veya başka bir metin düzenleyicisini başlatın ve ardından aşağıdaki kodu yazın.  
   
     ```  
     using System;  
@@ -78,39 +78,39 @@ ms.locfileid: "65682371"
     }  
     ```  
   
-5. Bu kaynak kodu dosyasını kaydedin ve HelloWorld.cs olarak adlandırın.  
+5. Bu kaynak kodu dosyasını kaydedin ve Helloworld.cs olarak adlandırın.  
   
-6. Yazarak uygulamayı derleyin **csc HelloWorld.cs olarak** komut isteminde.  
+6. Komut istemine **csc helloworld.cs** yazarak uygulamayı derleyin.  
   
-7. Yazarak uygulamayı test **helloworld** komut isteminde.  
+7. Komut isteminde **HelloWorld** yazarak uygulamayı test edin.  
   
-     **Hello, world!** iletisi görüntülenmelidir.  
+     **Merhaba, dünya!** ileti görüntülenmelidir.  
   
-8. Yazarak uygulamayı silin **del helloworld.exe** komut isteminde.  
+8. Komut istemine **del helloworld.exe** yazarak uygulamayı silin.  
   
-## <a name="creating-a-minimal-msbuild-project-file"></a>Bir Minimal MSBuild proje dosyası oluşturma  
- En az uygulama kaynak dosyasına sahip olduğunuza göre uygulamanızı oluşturmak için en az proje dosyasını oluşturabilirsiniz. Bu proje dosyası aşağıdaki öğeleri içerir:  
+## <a name="creating-a-minimal-msbuild-project-file"></a>En az MSBuild proje dosyası oluşturma  
+ Artık en az bir uygulama kaynak dosyanız olduğuna göre, uygulamayı derlemek için en az bir proje dosyası oluşturabilirsiniz. Bu proje dosyası aşağıdaki öğeleri içerir:  
   
-- Gerekli kök `Project` düğümü.  
+- Gerekli kök `Project` düğüm.  
   
-- Bir `ItemGroup` Item öğeleri içermesi düğümü.  
+- `ItemGroup`Öğe öğeleri içeren düğüm.  
   
-- Uygulama kaynak dosyasına başvuruda bulunan bir item öğesi.  
+- Uygulama kaynak dosyasına başvuran bir öğe öğesi.  
   
-- A `Target` uygulamayı oluşturmak için gerekli görevleri içermek amacıyla düğümü.  
+- `Target`Uygulamayı oluşturmak için gereken görevleri içeren bir düğüm.  
   
-- A `Task` uygulamayı oluşturmak için Visual C# derleyicisini başlatmak için öğesi.  
+- `Task`Uygulamayı derlemek Için Visual C# derleyicisini başlatacak bir öğe.  
   
-#### <a name="to-create-a-minimal-msbuild-project-file"></a>Bir minimal MSBuild proje dosyası oluşturmak için  
+#### <a name="to-create-a-minimal-msbuild-project-file"></a>En az MSBuild proje dosyası oluşturmak için  
   
-1. Metin düzenleyicisinde varolan metni bu iki satır kullanarak değiştirin:  
+1. Metin düzenleyicisinde, varolan metni şu iki satırı kullanarak değiştirin:  
   
    ```  
    <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
    </Project>  
    ```  
   
-2. Bu ekleme `ItemGroup` düğümü alt öğesi olarak `Project` düğüm:  
+2. Bu `ItemGroup` düğümü düğümün alt öğesi olarak ekle `Project` :  
   
    ```  
    <ItemGroup>  
@@ -118,24 +118,24 @@ ms.locfileid: "65682371"
    </ItemGroup>  
    ```  
   
-    Bildirim bu `ItemGroup` zaten bir öğe içeriyor.  
+    Bunun `ItemGroup` zaten bir öğe öğesi içerdiğine dikkat edin.  
   
-3. Ekleme bir `Target` düğümü alt öğesi olarak `Project` düğümü. Düğüm adı `Build`.  
+3. Düğümün `Target` alt öğesi olarak bir düğüm ekleyin `Project` . Düğümü adlandırın `Build` .  
   
    ```  
    <Target Name="Build">  
    </Target>  
    ```  
   
-4. Bu görev öğesi bir alt öğesi olarak ekleyin `Target` düğüm:  
+4. Bu görev öğesini düğümün alt öğesi olarak ekle `Target` :  
   
    ```  
    <Csc Sources="@(Compile)"/>  
    ```  
   
-5. Bu proje dosyasını kaydedin ve HelloWorld.csproj olarak adlandırın.  
+5. Bu proje dosyasını kaydedin ve HelloWorld. csproj olarak adlandırın.  
   
-   Minimal proje dosyanız, aşağıdaki koda benzemelidir:  
+   Minimum proje dosyanız aşağıdaki koda benzemelidir:  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -148,56 +148,56 @@ ms.locfileid: "65682371"
 </Project>  
 ```  
   
- Derleme hedefindeki Görevler sırayla yürütülür. Bu durumda, Visual C# derleyicisi `Csc` görevi tek görevdir. Derlenecek kaynak dosyaların listesini bekler ve bu değeri tarafından verilen `Compile` öğesi. `Compile` Öğesi yalnızca bir kaynak dosyasına: HelloWorld.cs'ye başvuruyor.  
+ Yapı hedefi içindeki görevler sırayla yürütülür. Bu durumda, Visual C# derleyici `Csc` görevi tek görevdir. Derlemek için kaynak dosyalarının bir listesini bekler ve bu, öğenin değeri tarafından verilir `Compile` . `Compile`Öğe yalnızca bir kaynak dosyasına (HelloWorld.cs) başvurur.  
   
 > [!NOTE]
-> Öğede, aşağıdaki gibi .cs dosya adı uzantısına sahip tüm dosyalara başvurmak için yıldız işareti joker karakter (*) kullanabilirsiniz:  
+> Öğe öğesinde,. cs dosya adı uzantısına sahip tüm dosyalara şu şekilde başvurmak için yıldız joker karakterini (*) kullanabilirsiniz:  
 >   
 > `<Compile Include="*.cs" />`  
 >   
-> Hata ayıklamayı ve Seçici yaptığından ancak joker karakter kullanımını önermeyiz kaynak dosyalar eklenirse veya silinirse hedeflemeyi daha zor.  
+> Ancak, kaynak dosyalar eklenirse veya silinirse hata ayıklamayı ve seçmeli hedefleri daha zor hale getiren joker karakter karakterlerinin kullanımını önermiyoruz.  
   
-## <a name="extending-the-path-to-include-msbuild"></a>Yolu, Msbuild'i içerecek şekilde genişletme  
- MSBuild'e erişmeden önce PATH ortam değişkenini .NET Framework klasörünü içerecek şekilde genişletmeniz gerekir.  
+## <a name="extending-the-path-to-include-msbuild"></a>Yolu MSBuild 'i Içerecek şekilde genişletme  
+ MSBuild 'e erişebilmek için, PATH ortam değişkenini .NET Framework klasörü içerecek şekilde genişletmeniz gerekir.  
   
-#### <a name="to-add-msbuild-to-your-path"></a>MSBuild yolunuza dosya eklemek için  
+#### <a name="to-add-msbuild-to-your-path"></a>Yolunuza MSBuild eklemek için  
   
-- Visual Studio 2013 itibariyle, MSBuild.exe MSBuild klasöründe bulabilirsiniz (`%ProgramFiles%\MSBuild` bir 32-bit işletim sisteminde veya `%ProgramFiles(x86)%\MSBuild` 64-bit işletim sisteminde).  
+- Visual Studio 2013 başlayarak, MSBuild klasöründe ( `%ProgramFiles%\MSBuild` 32 bit işletim sisteminde veya `%ProgramFiles(x86)%\MSBuild` 64 bit işletim sisteminde) MSBuild.exe bulabilirsiniz.  
   
-     Komut isteminde **PATH=%PATH%;%ProgramFiles%\MSBuild ayarlamak** veya **yolu = % PATH %; % ProgramFiles (x86) %\MSBuild**.  
+     Komut isteminde **set path =% path%;%ProgramFiles%\MSBuild** veya **set PATH =% Path%;% ProgramFiles (x86)% \ MSBuild**yazın.  
   
-     Alternatif olarak, Visual Studio yüklü, kullanabileceğiniz **Visual Studio komut istemi**, MSBuild klasörünü de içeren bir yolu vardır.  
+     Alternatif olarak, Visual Studio yüklüyse, MSBuild klasörünü içeren bir yolu olan **Visual Studio komut istemi**' ni kullanabilirsiniz.  
   
-## <a name="using-the-project-file-to-build-the-application"></a>Uygulamayı oluşturmak için proje dosyasını kullanma  
- Şimdi uygulamayı oluşturmak için yeni oluşturduğunuz proje dosyasını kullanın.  
+## <a name="using-the-project-file-to-build-the-application"></a>Uygulamayı derlemek için proje dosyasını kullanma  
+ Şimdi, uygulamayı derlemek için yeni oluşturduğunuz proje dosyasını kullanın.  
   
-#### <a name="to-build-the-application"></a>Uygulamayı oluşturmak için  
+#### <a name="to-build-the-application"></a>Uygulamayı derlemek için  
   
-1. Komut isteminde **msbuild, helloworld.csproj /t:Build**.  
+1. Komut isteminde **MSBuild HelloWorld. csproj/t: Build**yazın.  
   
-     Bu, Helloworld uygulamasını oluşturmak için Visual C# derleyicisini çağırarak Helloworld proje dosyasının derleme hedefini oluşturur.  
+     Bu, HelloWorld uygulamasını oluşturmak için Visual C# derleyicisini çağırarak HelloWorld proje dosyasının yapı hedefini oluşturur.  
   
-2. Yazarak uygulamayı test **helloworld**.  
+2. **HelloWorld**yazarak uygulamayı test edin.  
   
-     **Hello, world!** iletisi görüntülenmelidir.  
+     **Merhaba, dünya!** ileti görüntülenmelidir.  
   
 > [!NOTE]
-> Ayrıntı düzeyini yükselterek, yapı hakkında daha fazla ayrıntı görebilirsiniz. Ayrıntı düzeyini "ayrıntılı" ayarlamak için komut isteminde aşağıdaki komutlardan birini yazın:  
+> Ayrıntı düzeyini artırarak derleme hakkında daha fazla ayrıntı görebilirsiniz. Ayrıntı düzeyini "ayrıntılı" olarak ayarlamak için, komut isteminde şu komutlardan birini yazın:  
 >   
-> **MSBuild, helloworld.csproj /t:Build /verbosity: ayrıntılı**  
+> **MSBuild HelloWorld. csproj/t: derleme/ayrıntı düzeyi: ayrıntılı**  
   
 ## <a name="adding-build-properties"></a>Derleme özellikleri ekleme  
- Daha fazla denetim derleme proje dosyasına yapı özellikleri ekleyebilirsiniz. Şimdi bu özellikleri ekleyin:  
+ Derlemeyi daha fazla denetleyebilmeniz için proje dosyasına yapı özellikleri ekleyebilirsiniz. Şimdi şu özellikleri ekleyin:  
   
-- Bir `AssemblyName` özelliği uygulamasının adını belirtin.  
+- `AssemblyName`Uygulamanın adını belirtmek için bir özellik.  
   
-- Bir `OutputPath` özelliği uygulamayı içeren klasörü belirtin.  
+- `OutputPath`Uygulamanın bulunduğu klasörü belirtmek için bir özellik.  
   
-#### <a name="to-add-build-properties"></a>Yapı özellikleri eklemek için  
+#### <a name="to-add-build-properties"></a>Derleme özellikleri eklemek için  
   
-1. Yazarak var olan uygulamayı silin **del helloworld.exe** komut isteminde.  
+1. Komut istemine **del helloworld.exe** yazarak mevcut uygulamayı silin.  
   
-2. Bu proje dosyasında, ekleme `PropertyGroup` öğesini hemen açılış `Project` öğesi:  
+2. Proje dosyasında, bu `PropertyGroup` öğeyi açılış öğesinden hemen sonra ekleyin `Project` :  
   
    ```  
    <PropertyGroup>  
@@ -206,25 +206,25 @@ ms.locfileid: "65682371"
    </PropertyGroup>  
    ```  
   
-3. Bu görevi derleme hedefine hemen önüne ekleyin `Csc` görevi:  
+3. Bu görevi, görevden hemen önce derleme hedefine ekleyin `Csc` :  
   
    ```  
    <MakeDir Directories="$(OutputPath)"      Condition="!Exists('$(OutputPath)')" />  
    ```  
   
-    `MakeDir` Görev tarafından adlandırılan bir klasör oluşturur `OutputPath` hiçbir klasör şu anda mevcut sağlanan özelliği.  
+    `MakeDir`Görev, `OutputPath` o ada sahip hiçbir klasör mevcut olmadığından, özelliği tarafından adlandırılan bir klasör oluşturur.  
   
-4. Bu ekleme `OutputAssembly` özniteliğini `Csc` görevi:  
+4. Bu `OutputAssembly` özniteliği `Csc` göreve ekleyin:  
   
    ```  
    <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />  
    ```  
   
-    Bu tarafından adlandırılan bir derleme oluşturmak için Visual C# derleyicisini üretirken `AssemblyName` özelliği tarafından adlandırılan klasöre yerleştirin ve `OutputPath` özelliği.  
+    Bu, Visual C# derleyicisine, özelliği tarafından adlandırılan bir derleme üretmesini `AssemblyName` ve özelliği tarafından adlandırılan klasöre yerleştirmesini sağlar `OutputPath` .  
   
-5. Değişikliklerinizi kaydedin.  
+5. Yaptığınız değişiklikleri kaydedin.  
   
-   Proje dosyanız şimdi aşağıdaki kodu benzemelidir:  
+   Proje dosyanız şimdi aşağıdaki koda benzemelidir:  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -243,45 +243,45 @@ ms.locfileid: "65682371"
 ```  
   
 > [!NOTE]
-> Ters eğik çizgi eklemenizi öneririz (\\) yol sınırlayıcısını öğesinde belirttiğinizde klasör adının sonunda `OutputPath` eklemek yerine öğesi `OutputAssembly` özniteliği `Csc` görev. Bu nedenle,  
+> \\ `OutputPath` Görevin özniteliğinde eklemek yerine, öğe içinde belirttiğinizde, klasör adının sonuna ters eğik çizgi () yol sınırlayıcısı eklemenizi öneririz `OutputAssembly` `Csc` . Yani:  
 >   
 > `<OutputPath>Bin\</OutputPath>`  
 >   
 > `OutputAssembly=="$(OutputPath)$(AssemblyName).exe" />`  
 >   
-> daha iyidir  
+> şundan daha iyidir  
 >   
 > `<OutputPath>Bin</OutputPath>`  
 >   
 > `OutputAssembly=="$(OutputPath)\$(AssemblyName).exe" />`  
   
-## <a name="testing-the-build-properties"></a>Derleme özelliklerini test etme  
- Artık, çıkış klasörünü ve uygulama adını belirtmek için derleme özelliklerini kullandığınız proje dosyasını kullanarak uygulamayı oluşturabilirsiniz.  
+## <a name="testing-the-build-properties"></a>Yapı özelliklerini test etme  
+ Artık, çıkış klasörünü ve uygulama adını belirtmek için yapı özelliklerini kullandığınız proje dosyasını kullanarak uygulamayı oluşturabilirsiniz.  
   
 #### <a name="to-test-the-build-properties"></a>Yapı özelliklerini test etmek için  
   
-1. Komut isteminde **msbuild, helloworld.csproj /t:Build**.  
+1. Komut isteminde **MSBuild HelloWorld. csproj/t: Build**yazın.  
   
-     Bu \Bin\ klasörünü oluşturur ve ardından MSBuildSample uygulaması oluşturmak için Visual C# derleyicisini çağırır ve \Bin\ klasörüne yerleştirir.  
+     Bu, \Bin\ klasörünü oluşturur ve sonra MSBuildSample uygulamasını oluşturmak için Visual C# derleyicisini çağırır ve \Bin\ klasörüne koyar.  
   
-2. \Bin\ klasörünün oluşturulduğunu ve MSBuildSample uygulaması içerdiğini doğrulamak için **dizini depo**.  
+2. \Bin\ klasörünün oluşturulduğunu ve MSBuildSample uygulamasını içerdiğini doğrulamak için, tür **dir bin**.  
   
-3. Yazarak uygulamayı test **Bin\MSBuildSample**.  
+3. Uygulamayı **Bin\msbuildsample**yazarak test edin.  
   
-     **Hello, world!** iletisi görüntülenmelidir.  
+     **Merhaba, dünya!** ileti görüntülenmelidir.  
   
 ## <a name="adding-build-targets"></a>Derleme hedefleri ekleme  
- Ardından, iki daha fazla hedefi gibi proje dosyasına ekleyin:  
+ Daha sonra, proje dosyasına aşağıdaki gibi iki hedef ekleyin:  
   
 - Eski dosyaları silen temiz bir hedef.  
   
-- Kullanan yeniden oluştur hedefi `DependsOnTargets` Oluştur görevinden önce çalıştırılacak temizleme görevini zorlamak için özniteliği.  
+- `DependsOnTargets`Temizleme görevinin, derleme görevinden önce çalıştırılmasını zorlamak için özniteliğini kullanan bir yeniden oluşturma hedefi.  
   
-  Birden çok hedefe sahip olduğunuza göre derleme hedefini varsayılan hedef olarak ayarlayabilirsiniz.  
+  Artık birden çok hedef olduğuna göre, derleme hedefini varsayılan hedef olarak ayarlayabilirsiniz.  
   
-#### <a name="to-add-build-targets"></a>Yapı hedefleri ekleme  
+#### <a name="to-add-build-targets"></a>Derleme hedefleri eklemek için  
   
-1. Proje dosyasında bu iki hedefi hemen yapı hedefinin arkasına ekleyin:  
+1. Proje dosyasında, derleme hedefinden hemen sonra bu iki hedefi ekleyin:  
   
    ```  
    <Target Name="Clean" >  
@@ -290,17 +290,17 @@ ms.locfileid: "65682371"
    <Target Name="Rebuild" DependsOnTargets="Clean;Build" />  
    ```  
   
-    Temiz hedef uygulamayı silmek için Sil görevini çağırır. Yeniden oluşturma hedefi hem temizleme hedefi hem de yapı hedefi çalıştırılmadan çalıştırılamaz. Yeniden oluşturma hedefinin görevi olmasa da temizleme hedefinin yapı hedefinden önce çalışmasına neden olur.  
+    Temizleme hedefi, uygulamayı silmek için silme görevini çağırır. Yeniden oluşturma hedefi, hem Temizleme hedefi hem de derleme hedefi çalıştırılıncaya kadar çalışmaz. Yeniden oluşturma hedefinin hiç görevi olmadığından, bu, temizleme hedefinin derleme hedefinden önce çalışmasına neden olur.  
   
-2. Bu ekleme `DefaultTargets` özniteliğini açılan `Project` öğesi:  
+2. Bu `DefaultTargets` özniteliği açılış `Project` öğesine ekleyin:  
   
    ```  
    <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
    ```  
   
-    Bu derleme hedefini varsayılan hedef olarak ayarlar.  
+    Bu, derleme hedefini varsayılan hedef olarak ayarlar.  
   
-   Proje dosyanız şimdi aşağıdaki kodu benzemelidir:  
+   Proje dosyanız şimdi aşağıdaki koda benzemelidir:  
   
 ```  
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -322,59 +322,59 @@ ms.locfileid: "65682371"
 </Project>  
 ```  
   
-## <a name="testing-the-build-targets"></a>Oluşturulmuş hedefleri test etme  
- Proje dosyasının bu özelliklerini sınamak için yeni yapı hedeflerini çalıştırabilirsiniz:  
+## <a name="testing-the-build-targets"></a>Derleme hedeflerini test etme  
+ Proje dosyasının bu özelliklerini test etmek için yeni derleme hedeflerini kullanabilirsiniz:  
   
-- Varsayılan derlemeyi oluşturma.  
+- Varsayılan derleme oluşturuluyor.  
   
-- Uygulama adını komut isteminde ayarlama.  
+- Uygulama adı komut isteminde ayarlanıyor.  
   
 - Başka bir uygulama oluşturulmadan önce uygulamayı silme.  
   
 - Başka bir uygulama oluşturmadan uygulamayı silme.  
   
-#### <a name="to-test-the-build-targets"></a>Yapı hedeflerini test etmek için  
+#### <a name="to-test-the-build-targets"></a>Derleme hedeflerini test etmek için  
   
-1. Komut isteminde **msbuild, helloworld.csproj /p:AssemblyName Greetings =** .  
+1. Komut isteminde **MSBuild HelloWorld. csproj/p: AssemblyName = Greetings**yazın.  
   
-     Kullanmadığınız **/t** hedefi açıkça ayarlamak için geçiş, MSBuild varsayılan derleme hedefini çalıştırır. **/P** geçiş geçersiz kılmaları `AssemblyName` özelliği ve yeni değeri verir `Greetings`. Bu, \Bin\ klasöründe yeni bir uygulama, Greetings.exe neden olur.  
+     Hedefi açıkça ayarlamak için **/t** anahtarını kullanmadınız, MSBuild varsayılan derleme hedefini çalıştırır. **/P** anahtarı özelliği geçersiz kılar `AssemblyName` ve yeni bir değer verir `Greetings` . Bu, \Bin\ klasöründe yeni bir uygulama Greetings.exe oluşturulmasına neden olur.  
   
-2. \Bin\ klasörünün MSBuildSample uygulaması hem de yeni Greetings uygulaması içerdiğini doğrulamak için şunu yazın **dizini depo**.  
+2. \Bin\ klasörünün hem MSBuildSample uygulamasını hem de yeni Greetings uygulamasını içerdiğini doğrulamak için, **dir bin**yazın.  
   
-3. Yazarak Greetings uygulamasını test **Bin\Greetings**.  
+3. **Bin\Greetings**yazarak Greetings uygulamasını test edin.  
   
-     **Hello, world!** iletisi görüntülenmelidir.  
+     **Merhaba, dünya!** ileti görüntülenmelidir.  
   
-4. Yazarak MSBuildSample uygulamasını silin **msbuild, helloworld.csproj /t: temiz**.  
+4. **MSBuild HelloWorld. csproj/t: Clean**yazarak MSBuildSample uygulamasını silin.  
   
-     Bu varsayılan olan uygulamayı kaldırmak için temizleme görevini çalıştırır `AssemblyName` özellik değeri `MSBuildSample`.  
+     Bu, varsayılan özellik değerine sahip uygulamayı kaldırmak için temizleme görevini çalıştırır `AssemblyName` `MSBuildSample` .  
   
-5. Yazarak Greetings uygulamasını silin **msbuild, helloworld.csproj /t: temiz /p:AssemblyName Greetings =** .  
+5. **MSBuild HelloWorld. csproj/t: Clean/p: AssemblyName = Greetings**yazarak Greetings uygulamasını silin.  
   
-     Bu uygulamanın kaldırmak için temizleme görevini çalıştırır verilen **AssemblyName** özellik değeri `Greetings`.  
+     Bu, belirtilen **AssemblyName** özellik değerine sahip uygulamayı kaldırmak için temizleme görevini çalıştırır `Greetings` .  
   
-6. \Bin\ klasörünün artık boş olduğunu doğrulamak için **dizini depo**.  
+6. \Bin\ klasörünün artık boş olduğunu doğrulamak için, **dir bin**yazın.  
   
-7. Tür **msbuild**.  
+7. **MSBuild**yazın.  
   
-     Bir proje dosyası belirtilmemiş olsa da, geçerli klasörde yalnızca bir proje dosyası olduğundan MSBuild helloworld.csproj dosyasını oluşturur. Bu, \Bin\ klasöründe MSBuildSample uygulamasının neden olur.  
+     Bir proje dosyası belirtilmese de, geçerli klasörde yalnızca bir proje dosyası olduğundan MSBuild HelloWorld. csproj dosyasını oluşturur. Bu, MSBuildSample uygulamasının \Bin\ klasöründe oluşturulmasına neden olur.  
   
-     \Bin\ klasörünün MSBuildSample uygulaması içerdiğini doğrulamak için şunu yazın **dizini depo**.  
+     \Bin\ klasörünün MSBuildSample uygulamasını içerdiğini doğrulamak için **, yazın.**  
   
-## <a name="building-incrementally"></a>Artımlı olarak derleme  
- MSBuild yalnızca kaynak dosyaları veya hedefin bağlı olduğu hedef dosyaları değişmişse bir hedef oluşturmayı söyleyebilirsiniz. MSBuild, zaman damgası bir dosyanın değişip değişmediğini belirlemek için kullanır.  
+## <a name="building-incrementally"></a>Artımlı olarak oluşturma  
+ MSBuild 'i yalnızca hedef dosya veya hedefin bağımlı olduğu hedef dosyalar değiştiyse bir hedef oluşturmak için söyleyebilirsiniz. MSBuild, değiştirilip değiştirilmediğini anlamak için bir dosyanın zaman damgasını kullanır.  
   
-#### <a name="to-build-incrementally"></a>Artımlı olarak oluşturmak için  
+#### <a name="to-build-incrementally"></a>Artımlı olarak derlemek için  
   
-1. Proje dosyasında bu öznitelikleri açılış yapı hedefine ekleyin:  
+1. Proje dosyasında, bu öznitelikleri açma derleme hedefine ekleyin:  
   
     ```  
     Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe"  
     ```  
   
-     Bu yapı hedefi belirtilen giriş dosyaları bağlı olduğunu belirtir `Compile` öğesi grubu ve çıkış hedefinin uygulama dosyası olduğunu.  
+     Bu, derleme hedefinin öğe grubunda belirtilen giriş dosyalarına `Compile` ve çıktı hedefinin uygulama dosyası olduğunu belirtir.  
   
-     Sonuçta oluşan yapı hedefi aşağıdaki koda benzemelidir:  
+     Elde edilen derleme hedefi aşağıdaki koda benzemelidir:  
   
     ```  
     <Target Name="Build" Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe">  
@@ -383,26 +383,26 @@ ms.locfileid: "65682371"
     </Target>  
     ```  
   
-2. Yapı hedefi yazarak test edin **msbuild /v:d** komut isteminde.  
+2. Komut istemine **MSBuild/v: d** yazarak derleme hedefini test edin.  
   
-     HelloWorld.csproj'nin varsayılan proje dosyası olduğunu ve bu yapı varsayılan hedef olduğunu unutmayın.  
+     HelloWorld. csproj ' ın varsayılan proje dosyası olduğunu ve bu derleme varsayılan hedef olduğunu unutmayın.  
   
-     **/V:d** anahtarı derleme işleminin ayrıntılı bir açıklamasını belirtir.  
+     **/V: d** anahtarı yapı işlemi için ayrıntılı bir açıklama belirtir.  
   
-     Bu satırların görüntülenmesi gerekir:  
+     Bu satırlar görüntülenmelidir:  
   
-     **Hedef "Derleme", tüm çıktı dosyalarının göre giriş dosyaları güncel olduğu için atlanıyor.**  
+     **Tüm çıkış dosyaları giriş dosyalarına göre güncel olduğundan "Build" hedefi atlanıyor.**  
   
      **Giriş dosyaları: HelloWorld.cs**  
   
-     **Çıktı dosyaları: BinMSBuildSample.exe**  
+     **Çıkış dosyaları: BinMSBuildSample.exe**  
   
-     Uygulamanın son oluşturulmasında beri kaynak dosyaların hiçbiri değişiklik yapılmadığından MSBuild yapı hedefini atlar.  
+     Uygulama son derlenmesinden bu yana kaynak dosyalardan hiçbiri değişmediğinden MSBuild, derleme hedefini atlar.  
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, bir proje dosyasını derler gösterir. bir [!INCLUDE[csprcs](../includes/csprcs-md.md)] uygulama ve çıktı dosyası adını içeren bir ileti kaydeder.  
+### <a name="description"></a>Description  
+ Aşağıdaki örnek, bir uygulamayı derleyen [!INCLUDE[csprcs](../includes/csprcs-md.md)] ve çıkış dosyası adını içeren bir iletiyi kaydeden bir proje dosyası gösterir.  
   
 ### <a name="code"></a>Kod  
   
@@ -437,12 +437,12 @@ ms.locfileid: "65682371"
 </Project>  
 ```  
   
-### <a name="comments"></a>Açıklamalar  
+### <a name="comments"></a>Yorumlar  
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, bir proje dosyasını derler gösterir. bir [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] uygulama ve çıktı dosyası adını içeren bir ileti kaydeder.  
+### <a name="description"></a>Description  
+ Aşağıdaki örnek, bir uygulamayı derleyen [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ve çıkış dosyası adını içeren bir iletiyi kaydeden bir proje dosyası gösterir.  
   
 ### <a name="code"></a>Kod  
   
@@ -477,9 +477,9 @@ ms.locfileid: "65682371"
 </Project>  
 ```  
   
-## <a name="whats-next"></a>Sırada ne var?  
- Visual Studio otomatik olarak bu izlenecek yolda gösterilen işin çoğunu gerçekleştirebilirsiniz. Oluşturma, düzenleme, derleme ve MSBuild proje dosyaları test etmek için Visual Studio'u kullanmayı öğrenmek için bkz: [izlenecek yol: MSBuild kullanarak](../msbuild/walkthrough-using-msbuild.md).  
+## <a name="whats-next"></a>Sırada Ne Var?  
+ Visual Studio, bu kılavuzda gösterilen çalışmanın çoğunu otomatik olarak yapabilir. MSBuild proje dosyalarını oluşturmak, düzenlemek, derlemek ve test etmek için Visual Studio 'Yu nasıl kullanacağınızı öğrenmek için bkz. [Izlenecek yol: MSBuild kullanma](../msbuild/walkthrough-using-msbuild.md).  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
-[MSBuild'e genel bakış](msbuild.md)  
- [MSBuild Başvurusu](../msbuild/msbuild-reference.md)
+[MSBuild genel bakış](msbuild.md)  
+ [MSBuild başvurusu](../msbuild/msbuild-reference.md)

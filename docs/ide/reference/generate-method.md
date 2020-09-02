@@ -1,5 +1,5 @@
 ---
-title: Bir yöntem oluşturma
+title: Yöntem oluşturma
 ms.date: 01/26/2018
 ms.topic: reference
 author: TerryGLee
@@ -8,15 +8,15 @@ manager: jillfra
 ms.workload:
 - dotnet
 ms.openlocfilehash: f166c31a1615c951170367223a5b19ab93811b5d
-ms.sourcegitcommit: cc841df335d1d22d281871fe41e74238d2fc52a6
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "75595598"
 ---
-# <a name="generate-a-method-in-visual-studio"></a>Visual Studio'da bir yöntem oluşturun
+# <a name="generate-a-method-in-visual-studio"></a>Visual Studio 'da bir yöntem oluşturma
 
-Bu kod oluşturma için geçerlidir:
+Bu kod üretimi için geçerlidir:
 
 - C#
 
@@ -24,49 +24,49 @@ Bu kod oluşturma için geçerlidir:
 
 **Ne:** Bir sınıfa hemen bir yöntem eklemenizi sağlar.
 
-**Ne zaman:** Yeni bir yöntem tanıyın ve otomatik olarak düzgün bir şekilde bildirmek istiyorsunuz.
+**Ne zaman:** Yeni bir yöntem ortaya çıkarabilir ve bunu otomatik olarak doğru bir şekilde bildirmek istiyorsunuz.
 
-**Neden:** Yöntem ve parametreleri kullanmadan önce bildirebilirsiniz, ancak bu özellik bildirimi otomatik olarak oluşturur.
+**Neden:** Yöntemi ve parametreleri kullanmadan önce bildirebilirsiniz, ancak bu özellik bildirimi otomatik olarak oluşturacaktır.
 
 ## <a name="how-to"></a>Nasıl yapılır
 
-1. İmlecinizi kırmızı bir dalganın olduğu çizgiye yerleştirin. Kırmızı dalgalı henüz var olmayan bir yöntemi gösterir.
+1. İmlecinizi kırmızı dalgalı çizgi olan çizgiye yerleştirin. Kırmızı dalgalı çizgi henüz mevcut olmayan bir yöntemi gösterir.
 
    - C#:
 
-       ![Vurgulanan kod C #](media/method-highlight-cs.png)
+       ![Vurgulanmış kod C #](media/method-highlight-cs.png)
 
    - Visual Basic:
 
        ![Vurgulanan kod VB](media/method-highlight-vb.png)
 
-2. Ardından, aşağıdakilerden birini yapın:
+2. Sonra, aşağıdakilerden birini yapın:
 
    - **Klavye**
-      - **Ctrl**+tuşuna**basın.** **Hızlı Eylemler ve Refactorings** menüsünü tetiklemek için.
+      - **CTRL**tuşuna basın + **.** **hızlı eylemleri ve yeniden düzenlemeler** menüsünü tetiklemek için.
    - **Fare**
-      - Hızlı Eylemler ve **Yeniden Faktörler** menüsünü sağ tıklatın ve seçin.
-      - Kırmızı dalgalı üzerinde hover ve tıklayın ![hata ampul](media/error-bulb.png) görünen simge.
-      - &nbsp; ![hata ampul](media/error-bulb.png) metin imleci kırmızı dalgalı çizgide yse sol kenar boşluğunda görünen simge.
+      - Sağ tıklayın ve **Hızlı Eylemler ve yeniden düzenlemeler** menüsünü seçin.
+      - Kırmızı dalgalı çizgi üzerine gelin ve ![ampul hatası](media/error-bulb.png) görüntülenen simge.
+      - Sağ üst köşedeki ![ampul hatası](media/error-bulb.png) Sol kenar boşluğunda, metin imleci kırmızı dalgalı çizgi ile zaten varsa görüntülenen simge.
 
-      ![Yöntem önizlemesi oluşturma](media/method-preview-cs.png)
+      ![Yöntem önizlemesi oluştur](media/method-preview-cs.png)
 
-3. Açılan menüden **Üret yöntemini** seçin.
+3. Açılan menüden **oluşturma yöntemi** ' ni seçin.
 
    > [!TIP]
-   > Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) önizleme penceresinin altındaki Önizleme **değişiklikleri** bağlantısını kullanın.
+   > Seçiminizi yapmadan önce yapılacak [tüm değişiklikleri görmek için](../../ide/preview-changes.md) Önizleme penceresinin altındaki **Değişiklikleri Önizle** bağlantısını kullanın.
 
-   Yöntem, kullanımından kaynaklanan parametrelerle oluşturulur.
+   Yöntemi, kullanımından çıkarılan herhangi bir parametreyle oluşturulur.
 
    - C#:
 
-       ![Yöntem sonucu c oluşturma #](media/method-result-cs.png)
+       ![Yöntem sonuç C oluştur #](media/method-result-cs.png)
 
    - Visual Basic:
 
-       ![Yöntem sonucu vb oluşturma](media/method-result-vb.png)
+       ![Yöntem sonucu oluştur VB](media/method-result-vb.png)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod Oluşturma](../code-generation-in-visual-studio.md)
+- [Kod oluşturma](../code-generation-in-visual-studio.md)
 - [Değişiklikleri Önizleme](../../ide/preview-changes.md)

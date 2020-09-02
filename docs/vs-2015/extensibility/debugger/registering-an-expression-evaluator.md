@@ -1,5 +1,5 @@
 ---
-title: İfade değerlendiricisi kaydetme | Microsoft Docs
+title: Ifade değerlendiricisi kaydetme | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -12,29 +12,29 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 3595daa51fddf5c9c027d5643382918d85f83cc1
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63435683"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64837881"
 ---
 # <a name="registering-an-expression-evaluator"></a>İfade Değerlendiricisi Kaydetme
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
 > [!IMPORTANT]
-> Visual Studio 2015'te, bu şekilde ifade değerlendiricisi uygulama kullanım dışı bırakılmıştır. CLR ifade değerlendiricisi uygulama hakkında daha fazla bilgi için lütfen bkz [CLR ifade Değerlendiricilerini](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendiricisi örnek](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+> Visual Studio 2015 ' de, değerlendiricileri ifadesi uygulama yöntemi kullanım dışıdır. CLR Expression değerlendiricileri 'ı uygulama hakkında daha fazla bilgi için lütfen bkz. [clr Expression değerlendiricileri](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) ve [yönetilen ifade değerlendirici örneği](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- İfade değerlendirici (EE) kendisi Windows COM ortam ve Visual Studio ile bir sınıf üreteci olarak kaydetmeniz gerekir. Böylece, hata ayıklama altyapısı (DE) adres alanı veya varlık EE başlatır, bağlı olarak Visual Studio adres alanı eklenmesi bir EE DLL olarak uygulanır.  
+ İfade değerlendirici (EE), hem Windows COM ortamı hem de Visual Studio ile birlikte bir sınıf fabrikası olarak kaydolmalıdır. Bir EE, bir DLL olarak uygulanır, böylece hangi varlığın EE tarafından örneklenebilir olduğuna bağlı olarak hata ayıklama altyapısı (DE) adres alanına veya Visual Studio adres alanına eklenebilir.  
   
-## <a name="managed-code-expression-evaluator"></a>Yönetilen kod ifade değerlendiricisi  
- EE kendisini genellikle VSIP programı için bir çağrı tarafından başlatılan COM ortamıyla kaydeden bir DLL olan bir sınıf kitaplığı, olarak gerçekleştirilen bir yönetilen kod **regpkg.exe**. COM ortamı için kayıt defteri anahtarlarını yazma gerçek işlemi otomatik olarak gerçekleştirilir.  
+## <a name="managed-code-expression-evaluator"></a>Yönetilen kod Ifade değerlendiricisi  
+ Yönetilen bir kod EE, kendisini COM ortamıyla kaydeden, genellikle VSıP **regpkg.exe**programı çağrısıyla BAŞLATıLAN bir dll olan sınıf kitaplığı olarak uygulanır. COM ortamı için kayıt defteri anahtarları yazma işleminin gerçek işlemi otomatik olarak gerçekleştirilir.  
   
- Ana sınıfının bir yöntem ile işaretlenmiş <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>, DLL com ile kaydedildiğinde çağrılacak yöntem olduğunu belirten Genellikle olarak adlandırılan bu kayıt yöntemi `RegisterClass`, DLL ile Visual Studio'yu kayıt ettirme görevi gerçekleştirir. Karşılık gelen `UnregisterClass` (ile işaretlenen <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>), etkilerini geri alır `RegisterClass` DLL zaman kaldırılır.  
+ Ana sınıfın bir yöntemi ile işaretlenir <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> , bu YÖNTEMIN dll com ile kaydedildiğinde çağrılmakta olduğunu gösterir. Genellikle çağrılan bu kayıt yöntemi, `RegisterClass` Visual Studio Ile dll kaydetme görevini gerçekleştirir. Karşılık gelen `UnregisterClass` (ile işaretli <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> ), dll kaldırıldığında etkilerini geri alır `RegisterClass` .  
   
- Aynı kayıt defteri girdilerini, yönetilmeyen kodda yazılmış bir EE olduğu gibi yapılır; tek fark olduğunu yardımcı bir işlev gibi `SetEEMetric` iş sizin için gerçekleştirmesini istemeniz. Bu kaydolmayı/kaydı kaldırmayı işlemin bir örnek şöyle görünür:  
+ Yönetilmeyen kodda yazılmış bir EE için aynı kayıt defteri girişleri yapılır; Tek fark, `SetEEMetric` çalışmayı sizin için yapmak gibi bir yardımcı işlev değildir. Bu kayıt/kayıt silme işleminin bir örneği şöyle görünür:  
   
 ### <a name="example"></a>Örnek  
- Bu işlev, nasıl bir yönetilen kod EE kaydeder ve kendisi ile Visual Studio kaydını gösterir.  
+ Bu işlev, yönetilen bir kodun, Visual Studio ile kendi kendine nasıl kaydolur ve kaydını silmediğini gösterir.  
   
 ```csharp  
 namespace EEMC  
@@ -100,33 +100,33 @@ namespace EEMC
 }  
 ```  
   
-## <a name="unmanaged-code-expression-evaluator"></a>Yönetilmeyen kod ifade değerlendiricisi  
- EE DLL uygulayan `DllRegisterServer` COM ortam yanı sıra Visual Studio kendisini kaydetmek için işlevi.  
+## <a name="unmanaged-code-expression-evaluator"></a>Yönetilmeyen kod Ifade değerlendiricisi  
+ EE DLL, `DllRegisterServer` kendısını com ortamına ve Visual Studio 'ya kaydetmek için işlevi uygular.  
   
 > [!NOTE]
-> VSIP yükleme EnVSDK\MyCPkgs\MyCEE altında bulunan dosya dllentry.cpp MyCEE kodundan örnek kayıt defteri bulunabilir.  
+> MyCEE kod örneği kayıt defteri kodu, EnVSDK\MyCPkgs\MyCEE. altında VSıP yüklemesinde bulunan dllentry. cpp dosyasında bulunabilir.  
   
-### <a name="dll-server-process"></a>DLL sunucu işlemi  
- EE DLL sunucu kaydı sırasında:  
+### <a name="dll-server-process"></a>DLL sunucusu Işlemi  
+ EE kaydedilirken, DLL sunucusu:  
   
-1. Kendi sınıf üreteci kaydettirir `CLSID` normal COM kurallarına göre.  
+1. Sınıf fabrikasını `CLSID` normal com kurallarına göre kaydeder.  
   
-2. Yardımcı işlevini çağıran `SetEEMetric` aşağıdaki tabloda gösterilen EE ölçümleri Visual Studio ile kaydetmek için. İşlev `SetEEMetric` ve aşağıda belirtilen ölçümleri dbgmetric.lib Kitaplığı'nın bir parçasıdır. Bkz: [hata ayıklama için SDK Yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) Ayrıntılar için.  
+2. `SetEEMetric`Aşağıdaki tabloda GÖSTERILEN Ee ölçümlerine Visual Studio ile kaydolmak için yardımcı işlevini çağırır. Bu işlev `SetEEMetric` ve aşağıda belirtilen ölçümler dbgmetric. lib kitaplığının bir parçasıdır. Ayrıntılar için bkz. [hata ayıklama Için SDK yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) .  
   
     |Ölçüm|Açıklama|  
     |------------|-----------------|  
-    |`metricCLSID`|`CLSID` EE sınıf fabrikası|  
-    |`metricName`|Annotatable dize olarak EE adı|  
-    |`metricLanguage`|EE dil adını değerlendirmek için tasarlanmıştır|  
-    |`metricEngine`|`GUID`Bu EE çalışma hata ayıklama altyapısı (DE) s|  
+    |`metricCLSID`|`CLSID` EE sınıf fabrikasının|  
+    |`metricName`|EE 'ın görüntülenebilen bir dize olarak adı|  
+    |`metricLanguage`|EE 'ın değerlendirmek için tasarlandığı dilin adı|  
+    |`metricEngine`|`GUID`Bu EE ile çalışan hata ayıklama altyapısının (DE) öğeleri|  
   
     > [!NOTE]
-    > `metricLanguage``GUID` Tanımlayan adı, ancak dil olan `guidLang` bağımsız değişkeni `SetEEMetric` , dil seçer. Derleyici hata ayıklama bilgileri dosyası oluşturduğunda, uygun yazmalısınız `guidLang` DE kullanmak için hangi EE bilebilmesi. DE genellikle bu dil için Sembol sağlayıcısı ister `GUID`, hata ayıklama bilgileri dosyasında depolanır.  
+    > , `metricLanguage``GUID` Dili adına göre tanımlar, ancak `guidLang` `SetEEMetric` dilin seçtiği bağımsız değişkendir. Derleyici hata ayıklama bilgileri dosyasını oluşturduğunda, `guidLang` HANGI Ee 'ın kullanılacağını bilmesi için uygun şekilde yazması gerekir. Bu, genellikle sembol sağlayıcısını, `GUID` hata ayıklama bilgileri dosyasında depolanan bu dil için sorar.  
   
-3. Visual Studio ile anahtarları hkey_local_machıne\software\microsoft\visualstudio altında oluşturarak kaydettirir\\*X.Y*burada *X.Y* kaydetmek için Visual Studio sürümüdür.  
+3. HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\VisualStudio X. Y altında anahtarlar oluşturarak Visual Studio ile kaydolur; \\ *X.Y*burada *X. Y* , kayıt yapılacak Visual Studio sürümüdür.  
   
 ### <a name="example"></a>Örnek  
- Bu işlev, nasıl bir yönetilmeyen kod (C++) EE kaydeder ve kendisi ile Visual Studio kaydını gösterir.  
+ Bu işlev, yönetilmeyen kod (C++) EE 'ın Visual Studio ile kendisini nasıl kaydedeceğini ve onun kaydını silmediğini gösterir.  
   
 ```cpp#  
 /*---------------------------------------------------------  
@@ -213,5 +213,5 @@ static HRESULT RegisterMetric( bool registerIt )
 ```  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Bir CLR ifade değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
+ [CLR Ifade Değerlendiricisi yazma](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)   
  [Hata Ayıklama için SDK Yardımcıları](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)

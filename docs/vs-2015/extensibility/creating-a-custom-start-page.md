@@ -1,5 +1,5 @@
 ---
-title: Başlangıç sayfasına özel oluşturma | Microsoft Docs
+title: Özel başlangıç sayfası oluşturma | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -9,40 +9,40 @@ caps.latest.revision: 19
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: acb7922658a5dd7db0839051a42a119733c8b1d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184204"
 ---
 # <a name="creating-a-custom-start-page"></a>Özel Başlangıç Sayfası Oluşturma
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Özel bir başlangıç sayfası başlangıç sayfası proje şablonunu kullanarak açıklandığı oluşturamıyorsanız [başlangıç sayfaları](../misc/creating-your-own-start-page.md), el ile bu belgedeki adımları izleyerek bir tane oluşturabilirsiniz.  
+Başlangıç sayfası proje şablonunu kullanarak özel bir başlangıç sayfası oluştursayamıyor, [Başlangıç sayfaları](../misc/creating-your-own-start-page.md)bölümünde açıklandığı gibi, bu belgedeki adımları izleyerek el ile bir tane oluşturabilirsiniz.  
   
 ## <a name="creating-a-blank-start-page"></a>Boş bir başlangıç sayfası oluşturma  
- İlk olarak, boş bir başlangıç sayfası, Visual Studio tanıyacağınız bir etiket yapısı olan bir .xaml dosyası oluşturarak olun. Ardından, biçimlendirme ve Görünüm ve işlevselliği istediğiniz üretmek için gerideki kod ekleyin.  
+ İlk olarak, Visual Studio 'Nun tanıyacağı bir etiket yapısına sahip bir. xaml dosyası oluşturarak boş bir başlangıç sayfası oluşturun. Ardından, istediğiniz görünüm ve işlevselliği oluşturmak için biçimlendirme ve arka plan kodu ekleyin.  
   
 #### <a name="to-create-a-blank-start-page"></a>Boş bir başlangıç sayfası oluşturmak için  
   
-1. Yeni bir proje türü oluşturma **WPF uygulaması** (**Visual C# / Windows Masaüstü**.  
+1. **WPF uygulaması** türünde yeni bir proje oluşturun (**Visual C#/Windows Masaüstü**.  
   
-2. Bir başvuru ekleyin `Microsoft.VisualStudio.Shell.14.0`.  
+2. Öğesine bir başvuru ekleyin `Microsoft.VisualStudio.Shell.14.0` .  
   
-3. XAML dosyasını XML düzenleyicisinde açın ve üst düzey değiştirme \<penceresi > öğesine bir \<UserControl > öğesi olmadan herhangi bir ad alanı bildirimi kaldırılıyor.  
+3. XML düzenleyicisinde XAML dosyasını açın ve en üst düzey \<Window> öğeyi bir \<UserControl> ad alanı bildiriminin hiçbirini kaldırmadan bir öğe olarak değiştirin.  
   
-4. Kaldırma `x:Class` en üst düzey öğe bildirimden. Bu XAML İçerik başlangıç sayfasını barındıran Visual Studio araç penceresi ile uyumlu hale getirir.  
+4. `x:Class`Bildirimi en üst düzey öğeden kaldırın. Bu, XAML içeriğini başlangıç sayfasını barındıran Visual Studio araç penceresiyle uyumlu hale getirir.  
   
-5. Aşağıdaki ad alanı bildirimi için üst düzey ekleme \<UserControl > öğesi.  
+5. Aşağıdaki ad alanı bildirimlerini en üst düzey \<UserControl> öğeye ekleyin.  
   
     ```  
     xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.14.0"  
     xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"  
     ```  
   
-     Bu ad alanlarında, Visual Studio komutları, denetimleri ve UI ayarlarını erişim sağlar. Daha fazla bilgi için [bir başlangıç sayfası için Visual Studio komutları ekleme](../extensibility/adding-visual-studio-commands-to-a-start-page.md).  
+     Bu ad alanları, Visual Studio komutları, denetimleri ve Kullanıcı arabirimi ayarlarına erişmenizi sağlar. Daha fazla bilgi için, bkz. [bir başlangıç sayfasına Visual Studio komutları ekleme](../extensibility/adding-visual-studio-commands-to-a-start-page.md).  
   
-     Aşağıdaki örnek, boş bir başlangıç sayfası için .xaml dosyasında biçimlendirmeyi gösterir. Herhangi bir özel içerik içinde iç gideceğine <xref:System.Windows.Controls.Grid> öğesi.  
+     Aşağıdaki örnekte, boş bir başlangıç sayfası için. xaml dosyasındaki biçimlendirme gösterilmektedir. Herhangi bir özel içerik iç öğe içine gitmelidir <xref:System.Windows.Controls.Grid> .  
   
     ```vb  
     <UserControl  
@@ -62,32 +62,32 @@ ms.locfileid: "68184204"
     </UserControl>  
     ```  
   
-6. Denetim eklemek için boş \<UserControl > özel başlangıç sayfası doldurmak için öğesi. Visual Studio'da belirli işlevselliği ekleme hakkında daha fazla bilgi için bkz: [bir başlangıç sayfası için Visual Studio komutları ekleme](../extensibility/adding-visual-studio-commands-to-a-start-page.md).  
+6. \<UserControl>Özel Başlangıç sayfanıza doldurulacak boş öğeye denetimler ekleyin. Visual Studio 'ya özgü işlevselliği ekleme hakkında daha fazla bilgi için, bkz. [Visual Studio komutlarını bir başlangıç sayfasına ekleme](../extensibility/adding-visual-studio-commands-to-a-start-page.md).  
   
-## <a name="testing-and-applying-the-custom-start-page"></a>Test ve özel uygulama başlangıç sayfası  
- Özel başlangıç sayfası, Visual Studio kilitlenmez doğrulayana kadar çalıştırmak için Visual Studio'nun birincil örneğine ayarlı değil. Bunun yerine, deneysel örneğinde test edin.  
+## <a name="testing-and-applying-the-custom-start-page"></a>Özel başlangıç sayfasını test etme ve uygulama  
+ Visual Studio 'nun kilitlenmediğinden emin olana kadar, Visual Studio 'nun birincil örneğini özel başlangıç sayfasını çalıştıracak şekilde ayarlamayın. Bunun yerine, deneysel örnekte test edin.  
   
-#### <a name="to-test-a-manually-created-custom-start-page"></a>El ile oluşturulan özel bir başlangıç sayfası test etmek için  
+#### <a name="to-test-a-manually-created-custom-start-page"></a>El ile oluşturulan özel başlangıç sayfasını test etmek için  
   
-1. XAML dosyanızın ve destekleyici metin dosyaları veya biçimlendirme dosyaları, çok kopya **%USERPROFILE%\My Documents\Visual Studio 2015\StartPages\\**  klasör.  
+1. XAML dosyanızı ve destekleyici metin dosyalarını veya biçimlendirme dosyalarını, **%USERPROFILE%\My SiteStudio 2015 \ StartPages \\ ** klasörüne kopyalayın.  
   
-2. Başlangıç sayfanızı herhangi bir denetim veya Visual Studio yüklü olmayan bütünleştirilmiş kodlar içindeki türleri başvuruyorsa, derlemeleri kopyalamak ve ardından bunları yapıştırın _Visual Studio yükleme klasörü_ **\Common7\IDE\ PrivateAssemblies\\** .  
+2. Başlangıç sayfanız, Visual Studio tarafından yüklenmeyen derlemelerdeki herhangi bir denetime veya türe başvuruyorsa, derlemeleri kopyalayın ve sonra _Visual Studio yükleme klasörü_**\Common7\IDE\PrivateAssemblies \\ **' na yapıştırın.  
   
-3. Bir Visual Studio komut isteminde **devenv /rootsuffix Exp** Visual Studio'nun deneysel örneği açın.  
+3. Visual Studio komut isteminde **devenv/rootsuffix exp** yazarak Visual Studio 'nun deneysel bir örneğini açın.  
   
-4. Deneysel örneğinde Git **Araçlar / Seçenekler / ortam / başlangıç** sayfasında ve XAML dosyanızı seçin **başlangıç sayfasını Özelleştir** açılır.  
+4. Deneysel örnekte, **Araçlar/Seçenekler/ortam/başlangıç** sayfasına gidin ve **Başlangıç sayfasını ÖZELLEŞTIR** açılan menüsünden XAML dosyanızı seçin.  
   
-5. Üzerinde **görünümü** menüsünü tıklatın **başlangıç sayfası**.  
+5. **Görünüm** menüsünde, **Başlangıç sayfası**' nı tıklatın.  
   
-     Özel başlangıç sayfanızı görüntülenmesi gerekir. Dosyaları değiştirmek istiyorsanız, size gerekir deneysel örneği kapatın, değişiklik, kopyalayın ve değiştirilen dosyaları yapıştırın ve ardından değişiklikleri görüntülemek için deneysel örneğinde yeniden açın.  
+     Özel başlangıç sayfanız görüntülenmelidir. Herhangi bir dosyayı değiştirmek istiyorsanız, deneysel örneği kapatmanız, değişiklikleri yapmanız, değiştirilen dosyaları kopyalayıp yapıştırmanız ve sonra değişiklikleri görüntülemek için deneysel örneği yeniden açmanız gerekir.  
   
-#### <a name="to-apply-the-custom-start-page-in-the-primary-instance-of-visual-studio"></a>Uygulamaya özel başlangıç sayfasına Visual Studio birincil örneğinde  
+#### <a name="to-apply-the-custom-start-page-in-the-primary-instance-of-visual-studio"></a>Özel başlangıç sayfasını Visual Studio 'nun birincil örneğine uygulamak için  
   
-- Başlangıç sayfası test ve kararlı buldu sonra kullanın **başlangıç sayfasını Özelleştir** seçeneğini **seçenekleri** birincil örneğinde Visual Studio Başlangıç sayfası olarak seçmek için iletişim kutusu  
+- Başlangıç sayfanızı test ettikten ve kararlı olduğunu bulduktan sonra, **Seçenekler** Iletişim kutusundaki başlangıç sayfasını **Özelleştir** seçeneğini kullanarak Visual Studio 'nun birincil örneğindeki başlangıç sayfası olarak seçin  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [İzlenecek yol: Başlangıç sayfasına özel XAML ekleme](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)   
+ [İzlenecek yol: başlangıç sayfasına özel XAML ekleme](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)   
  [Başlangıç sayfasına kullanıcı denetimi ekleme](../extensibility/adding-user-control-to-the-start-page.md)   
- [Bir başlangıç sayfasına Visual Studio komutları ekleme](../extensibility/adding-visual-studio-commands-to-a-start-page.md)   
- [İzlenecek yol: Kullanıcı ayarlarını başlangıç sayfasına kaydetme](../extensibility/walkthrough-saving-user-settings-on-a-start-page.md)   
+ [Başlangıç sayfasına Visual Studio komutları ekleme](../extensibility/adding-visual-studio-commands-to-a-start-page.md)   
+ [İzlenecek yol: bir başlangıç sayfasına kullanıcı ayarlarını kaydetme](../extensibility/walkthrough-saving-user-settings-on-a-start-page.md)   
  [Özel Başlangıç Sayfaları Dağıtma](../extensibility/deploying-custom-start-pages.md)

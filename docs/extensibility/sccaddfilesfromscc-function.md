@@ -1,5 +1,5 @@
 ---
-title: SccAddFilesFromSCC Fonksiyonu | Microsoft Dokümanlar
+title: SccAddFilesFromSCC Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: 1d22527644edbf1697112f5cf8b73b8a3f72b774
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701283"
 ---
-# <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC fonksiyonu
-Bu işlev, kaynak denetiminden şu anda açılan projeye dosyaların bir listesini ekler.
+# <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC işlevi
+Bu işlev, kaynak denetiminden açık olan projeye bir dosya listesi ekler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 SCCRTN SccAddFilesFromSCC(
@@ -39,52 +39,52 @@ SCCRTN SccAddFilesFromSCC(
 ```
 
 ### <a name="parameters"></a>Parametreler
- Pcontext
+ pContext
 
-[içinde] Kaynak denetimi eklentibağlam işaretçisi.
+'ndaki Kaynak denetimi eklentisi bağlam işaretçisi.
 
- Hwnd
+ lendiği
 
-[içinde] Kaynak denetim eklentisinin sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresine bir tanıtıcı.
+'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.
 
  lpUser
 
-[içinde, dışarı] Kullanıcı adı (null terminator dahil SCC_USER_SIZE kadar).
+[in, out] Kullanıcı adı (en fazla SCC_USER_SIZE, null Sonlandırıcı dahil).
 
  lpAuxProjPath
 
-[içinde, dışarı] Projeyi tanımlayan yardımcı dize `SCC_PRJPATH_`(null terminator dahil olmak üzere SIZE'a kadar).
+[in, out] Projeyi tanımlayan yardımcı dize ( `SCC_PRJPATH_` null Sonlandırıcı dahil olmak üzere).
 
- cDosyalar
+ cFiles
 
-[içinde] Tarafından `lpFilePaths`verilen dosya sayısı.
+'ndaki Tarafından verilen dosya sayısı `lpFilePaths` .
 
  lpFilePaths
 
-[içinde, dışarı] Geçerli projeye eklenecek dosya adları dizisi.
+[in, out] Geçerli projeye eklenecek dosya adları dizisi.
 
  lpDestination
 
-[içinde] Dosyaların yazılabilmek için hedef yolu.
+'ndaki Dosyaların yazılacağı hedef yol.
 
- lpYorum yap
+ lpComment açıklaması
 
-[içinde] Eklenen dosyaların her birine uygulanacak açıklama.
+'ndaki Eklenmekte olan her bir dosyaya uygulanacak yorum.
 
- pbSonuçlar
+ pbResults
 
-[içinde, dışarı] Her dosya için başarı (sıfır olmayan veya DOĞRU olmayan) veya hata (sıfır veya FALSE) gösterecek `cFiles` şekilde ayarlanmış bayraklar dizisi (dizinin boyutu en az uzun olmalıdır).
+[in, out] Her dosya için başarı (sıfır olmayan veya doğru) veya hata (sıfır veya yanlış) göstermek için ayarlanan bayrakların dizisi (dizinin boyutu en az bir olmalıdır `cFiles` ).
 
 ## <a name="return-value"></a>Döndürülen değer
- Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_E_PROJNOTOPEN|Proje açık değil.|
-|SCC_E_OPNOTPERFORMED|Bağlantı tarafından belirtilen aynı proje değil`lpAuxProjPath.`|
-|SCC_E_NOTAUTHORIZED|Kullanıcının veritabanını güncelleştirme yetkisi yoktur.|
+|SCC_E_OPNOTPERFORMED|Bağlantı, tarafından belirtilen projede değil `lpAuxProjPath.`|
+|SCC_E_NOTAUTHORIZED|Kullanıcının veritabanını güncelleştirme yetkisi yok.|
 |SCC_E_NONSPECIFICERROR|Bilinmeyen hata.|
-|SCC_I_RELOADFILE|Bir dosyanın veya projenin yeniden yüklenmesi gerekir.|
+|SCC_I_RELOADFILE|Bir dosya veya projenin yeniden yüklenmesi gerekiyor.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)

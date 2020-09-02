@@ -13,10 +13,10 @@ monikerRange: vs-2017
 ms.workload:
 - multiple
 ms.openlocfilehash: cc887c6bcef9f8b7307d9d6aa570d6458d87f377
-ms.sourcegitcommit: b885f26e015d03eafe7c885040644a52bb071fae
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/30/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85541706"
 ---
 # <a name="nameprofile"></a>NameProfile
@@ -50,7 +50,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 
   Performans veri koleksiyonunun uygulanabileceğini gösteren profil düzeyini gösterir. Aşağıdaki **PROFILE_CONTROL_LEVEL** değerleri, performans verileri koleksiyonunun uygulanabileceği üç düzeyden birini göstermek için kullanılabilir:
 
-|Sının|Description|
+|Sının|Açıklama|
 |----------------|-----------------|
 |PROFILE_GLOBALLEVEL|Genel düzey ayarı, profil oluşturma çalıştırmasında tüm işlem ve iş parçacıklarını etkiler.|
 |PROFILE_PROCESSLEVEL|İşlem düzeyi ayarı, belirtilen işlemin parçası olan tüm iş parçacıklarını etkiler.|
@@ -63,7 +63,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 ## <a name="property-valuereturn-value"></a>Özellik değeri/dönüş değeri
  İşlev, **PROFILE_COMMAND_STATUS** numaralandırma kullanılarak başarılı veya başarısız olduğunu gösterir. Dönüş değeri aşağıdakilerden biri olabilir:
 
-|Sının|Description|
+|Sının|Açıklama|
 |----------------|-----------------|
 |NAME_ERROR_ID_NOEXIST|Belirtilen profil oluşturma öğesi yok.|
 |NAME_ERROR_INVALID_NAME|Ad geçersiz.|
@@ -92,7 +92,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 |Öğe|Değer|
 |-|-|
 |**Üst bilgi**|*VSPerf. h* dahil et|
-|**Kitaplık**|*VSPerf. lib* kullanın|
+|**Kitaplığı**|*VSPerf. lib* kullanın|
 |**Unicode**|`NameProfileW`(Unicode) ve `NameProfileA` (ANSI) olarak uygulanır.|
 
 ## <a name="example"></a>Örnek

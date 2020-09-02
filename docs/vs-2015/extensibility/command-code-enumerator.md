@@ -12,18 +12,18 @@ caps.latest.revision: 14
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: 06f1a3f7146125e59d02efc72a4d4fc9ab33be39
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68184383"
 ---
 # <a name="command-code-enumerator"></a>Komut Kodu Numaralandırıcısı
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu Numaralandırıcının seçenekleri kullanılır [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) ve [SccPopulateList](../extensibility/sccpopulatelist-function.md)seçenekler belirtilir komutu belirtmek için.  
+Bu Numaralandırıcı, seçeneklerin belirtilme komutunu göstermek için [Sccgetcommandooptıons](../extensibility/sccgetcommandoptions-function.md) ve [SccPopulateList](../extensibility/sccpopulatelist-function.md)seçeneklerinde kullanılır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum SCCCOMMAND {  
@@ -43,39 +43,39 @@ enum SCCCOMMAND {
   
 ## <a name="members"></a>Üyeler  
  SCC_COMMAND_GET  
- Karşılık gelen [SccGet](../extensibility/sccget-function.md).  
+ [SccGet](../extensibility/sccget-function.md)öğesine karşılık gelir.  
   
  SCC_COMMAND_CHECKOUT  
- Karşılık gelen [SccCheckout](../extensibility/scccheckout-function.md).  
+ [SccCheckout](../extensibility/scccheckout-function.md)'a karşılık gelir.  
   
  SCC_COMMAND_CHECKIN  
- Karşılık gelen [SccCheckin](../extensibility/scccheckin-function.md).  
+ [SccCheckin](../extensibility/scccheckin-function.md)öğesine karşılık gelir.  
   
  SCC_COMMAND_UNCHECKOUT  
- Karşılık gelen [SccUncheckout](../extensibility/sccuncheckout-function.md).  
+ [SccUncheckout](../extensibility/sccuncheckout-function.md)öğesine karşılık gelir.  
   
  SCC_COMMAND_ADD  
- Karşılık gelen [SccAdd](../extensibility/sccadd-function.md).  
+ [SccAdd](../extensibility/sccadd-function.md)öğesine karşılık gelir.  
   
  SCC_COMMAND_REMOVE  
- Karşılık gelen [SccRemove](../extensibility/sccremove-function.md).  
+ [SccRemove](../extensibility/sccremove-function.md)öğesine karşılık gelir.  
   
  SCC_COMMAND_DIFF  
- Karşılık gelen [SccDiff](../extensibility/sccdiff-function.md).  
+ [SccDiff](../extensibility/sccdiff-function.md)öğesine karşılık gelir.  
   
  SCC_COMMAND_HISTORY  
- Karşılık gelen [SccHistory](../extensibility/scchistory-function.md).  
+ [SccHistory](../extensibility/scchistory-function.md)öğesine karşılık gelir.  
   
  SCC_COMMAND_RENAME  
- Karşılık gelen [SccRename](../extensibility/sccrename-function.md).  
+ [SccRename](../extensibility/sccrename-function.md)öğesine karşılık gelir.  
   
  SCC_COMMAND_PROPERTIES  
- Karşılık gelen [SccProperties](../extensibility/sccproperties-function.md).  
+ [SccProperties](../extensibility/sccproperties-function.md)öğesine karşılık gelir.  
   
  SCC_COMMAND_OPTIONS  
- Karşılık gelen [SccSetOption](../extensibility/sccsetoption-function.md).  
+ [SccSetOption](../extensibility/sccsetoption-function.md)öğesine karşılık gelir.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
  [Kaynak denetimi eklentileri](../extensibility/source-control-plug-ins.md)   
- [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)   
+ [Sccgetcommandoseçenekler](../extensibility/sccgetcommandoptions-function.md)   
  [SccPopulateList](../extensibility/sccpopulatelist-function.md)

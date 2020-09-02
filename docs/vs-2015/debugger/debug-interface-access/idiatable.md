@@ -1,5 +1,5 @@
 ---
-title: Idiatable | Microsoft Docs
+title: IDiaTable | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-debug
@@ -14,42 +14,42 @@ author: MikeJo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 5b9c9f85ffbf4eed2fdc305a64bd3f32822dacd6
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "65682785"
 ---
 # <a name="idiatable"></a>IDiaTable
 [!INCLUDE[vs2017banner](../../includes/vs2017banner.md)]
 
-DIA veri kaynağı tablosu numaralandırır.  
+Bir DIA veri kaynağı tablosunu numaralandırır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```  
 IDiaTable : IEnumUnknown  
 ```  
   
-## <a name="methods-in-vtable-order"></a>Vtable sırayla yöntemleri  
- Aşağıdaki tabloda yöntemlerini gösterilmektedir `IDiaTable`.  
+## <a name="methods-in-vtable-order"></a>Vtable sırasındaki Yöntemler  
+ Aşağıdaki tabloda, yöntemleri gösterilmektedir `IDiaTable` .  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[IDiaTable::get__NewEnum](../../debugger/debug-interface-access/idiatable-get-newenum.md)|Alır [IEnumVARIANT arabirimi](https://msdn.microsoft.com/139e3c93-faef-4003-9079-e0e94494db3e) bu Numaralandırıcının sürümü.|  
+|[IDiaTable::get__NewEnum](../../debugger/debug-interface-access/idiatable-get-newenum.md)|Bu Numaralandırıcının [IEnumVARIANT arabirimi](https://msdn.microsoft.com/139e3c93-faef-4003-9079-e0e94494db3e) sürümünü alır.|  
 |[IDiaTable::get_name](../../debugger/debug-interface-access/idiatable-get-name.md)|Tablonun adını alır.|  
-|[IDiaTable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)|Tablodaki öğe sayısını alır.|  
-|[IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)|Belirli bir giriş dizini bir başvuru alır.|  
+|[IDiaTable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md)|Tablodaki öğelerin sayısını alır.|  
+|[IDiaTable::Item](../../debugger/debug-interface-access/idiatable-item.md)|Belirli bir giriş dizinine bir başvuru alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu arabirimi uygulayan `IEnumUnknown` Microsoft.VisualStudio.OLE.Interop ad alanında numaralandırma yöntemlerini. `IEnumUnknown` Numaralandırma arabirimidir İçindekiler üzerinde yineleme için çok daha verimli [Idiatable::get_Count](../../debugger/debug-interface-access/idiatable-get-count.md) ve [Idiatable::Item](../../debugger/debug-interface-access/idiatable-item.md) yöntemleri.  
+ Bu arabirim, `IEnumUnknown` Microsoft. VisualStudio. OLE. Interop ad alanındaki Enumeration yöntemlerini uygular. `IEnumUnknown`Sabit listesi arabirimi, [IDiaTable:: Get_Count](../../debugger/debug-interface-access/idiatable-get-count.md) ve [IDiaTable:: Item](../../debugger/debug-interface-access/idiatable-item.md) metotlarından daha fazla tablo içeriğine yineleme yapmak için çok daha etkilidir.  
   
- Yorumu `IUnknown` arabirimi öğesinden döndürülen `IDiaTable::Item` yöntemi veya `Next` yöntemi (Microsoft.VisualStudio.OLE.Interop uzayında) tablo türüne bağlıdır. Örneğin, varsa `IDiaTable` arabirimi temsil eder, eklenen kaynakları listesini `IUnknown` arabirimi için sorgulanabilir [Idiaınjectedsource](../../debugger/debug-interface-access/idiainjectedsource.md) arabirimi.  
+ `IUnknown` `IDiaTable::Item` Yönteminden ya da `Next` yönteminden (Microsoft. VisualStudio. OLE. Interop ad alanında) döndürülen arabirimin yorumu, tablo türüne bağlıdır. Örneğin, `IDiaTable` arabirim eklenen kaynakların bir listesini temsil ediyorsa, `IUnknown` [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) arabirimi için arabirim sorgulanmalıdır.  
   
 ## <a name="notes-for-callers"></a>Arayanlar İçin Notlar  
- Bu arabirim çağırarak elde [Idiaenumtables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md) veya [Idiaenumtables::Next](../../debugger/debug-interface-access/idiaenumtables-next.md) yöntemleri.  
+ [IDiaEnumTables:: Item](../../debugger/debug-interface-access/idiaenumtables-item.md) veya [IDiaEnumTables:: Next](../../debugger/debug-interface-access/idiaenumtables-next.md) yöntemlerini çağırarak bu arabirimi elde edin.  
   
- Aşağıdaki arabirimlerinden ile uygulanan `IDiaTable` arabirimi (diğer bir deyişle, sorgu `IDiaTable` arabirimi için aşağıdaki arabirimlerinden birini):  
+ Aşağıdaki arabirimler `IDiaTable` arabirimiyle uygulanır (yani, `IDiaTable` arabirimi aşağıdaki arabirimlerden biri için sorgulayabilirsiniz):  
   
 - [IDiaEnumSymbols](../../debugger/debug-interface-access/idiaenumsymbols.md)  
   
@@ -66,10 +66,10 @@ IDiaTable : IEnumUnknown
 - [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)  
   
 ## <a name="example"></a>Örnek  
- İlk işlev `ShowTableNames`, oturumda tüm tabloların adlarını görüntüler. İkinci işlevi `GetTable`, tüm tabloları, belirtilen arabirimi uygulayan bir tablo için arar. Üçüncü işlev `UseTable`, nasıl kullanılacağını gösterir `GetTable` işlevi.  
+ İlk işlev, `ShowTableNames` oturumdaki tüm tabloların adlarını görüntüler. İkinci işlevi, `GetTable` belirtilen bir arabirimi uygulayan bir tablo için tüm tabloları arar. Üçüncü işlevi, `UseTable` işlevinin nasıl kullanılacağını gösterir `GetTable` .  
   
 > [!NOTE]
-> `CDiaBSTR` sarmalayan bir sınıf bir `BSTR` ve dize örnekleme kapsam dışına çıktığında boşaltma otomatik olarak işler.  
+> `CDiaBSTR` , `BSTR` örnekleme kapsam dışına geçtiğinde bir ve otomatik olarak dizeyi serbest bırakma olarak işleyen bir sınıftır.  
   
 ```cpp#  
 void ShowTableNames(IDiaSession *pSession)  
@@ -134,14 +134,14 @@ void UseTable(IDiaSession *pSession)
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üst bilgi: dia2.h  
+ Üstbilgi: dia2. h  
   
- Kitaplık: diaguids.lib  
+ Kitaplık: diaguid. lib  
   
  DLL: msdia80.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Arabirimler (arabirim erişimi SDK'SINDA hata ayıklama)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
- [Idiaenumtables](../../debugger/debug-interface-access/idiaenumtables.md)   
- [Idiaenumtables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md)   
+ [Arabirimler (hata ayıklama arabirimi erişim SDK 'Sı)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+ [IDiaEnumTables](../../debugger/debug-interface-access/idiaenumtables.md)   
+ [IDiaEnumTables:: Item](../../debugger/debug-interface-access/idiaenumtables-item.md)   
  [IDiaEnumTables::Next](../../debugger/debug-interface-access/idiaenumtables-next.md)

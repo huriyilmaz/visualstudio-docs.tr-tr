@@ -25,10 +25,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 51070e06f684c2e873ded76ec8797ed7587745ff
-ms.sourcegitcommit: c076fe12e459f0dbe2cd508e1294af14cb53119f
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "85348333"
 ---
 # <a name="use-the-memory-windows-in-the-visual-studio-debugger-c-c-visual-basic-f"></a>Visual Studio hata ayıklayıcısında bellek pencerelerini kullanma (C#, C++, Visual Basic, F #)
@@ -113,7 +113,7 @@ Yerel kod uygulamalarında, YAZMAÇ adlarını canlı ifadeler olarak kullanabil
 
 1. **Bellek** penceresi **adresi** alanında, geçerli kapsamda olan bir işaretçi ifadesi girin. Dile bağlı olarak, bu değere başvuru yapmanız gerekebilir.
 
-2. **Enter**'a basın.
+2.  **Enter** tuşuna basın.
 
    **Adım**gibi bir hata ayıklama komutu kullandığınızda, **Adres** alanında ve **bellek** penceresinin en üstünde görünen bellek adresi, işaretçi değiştiğinde otomatik olarak değişir.
 

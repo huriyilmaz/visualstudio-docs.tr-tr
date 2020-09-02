@@ -1,5 +1,5 @@
 ---
-title: SccCreateSubProject işlevi | Microsoft Docs
+title: Scccreatealt proje Işlevi | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-sdk
@@ -13,18 +13,18 @@ caps.latest.revision: 20
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: c2f28d8bb9ebc440db69085324becb6a96c19afe
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68200197"
 ---
 # <a name="scccreatesubproject-function"></a>SccCreateSubProject İşlevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Bu işlev tarafından belirtilen var olan bir üst projesi altında verilen ada sahip bir alt proje oluşturur. `lpParentProjPath` bağımsız değişken.  
+Bu işlev, bağımsız değişken tarafından belirtilen mevcut bir üst proje altında verilen ada sahip bir alt proje oluşturur `lpParentProjPath` .  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp#  
 SCCRTN SccCreateSubProject(  
@@ -40,60 +40,60 @@ SCCRTN SccCreateSubProject(
   
 #### <a name="parameters"></a>Parametreler  
  pContext  
- [in] Kaynak Denetimi Eklentisi bağlam işaretçisi.  
+ 'ndaki Kaynak denetimi eklentisi bağlam işaretçisi.  
   
- hWnd  
- [in] Kaynak Denetimi Eklentisi sağladığı herhangi bir iletişim kutusu için bir üst öğe olarak kullanabileceğiniz IDE penceresi için bir tanıtıcı.  
+ lendiği  
+ 'ndaki Kaynak denetimi eklentisinin, sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.  
   
  lpUser  
- [out içinde] Kullanıcı adı (en fazla SCC_USER_SIZE, NULL sonlandırıcıyı da dahil olmak üzere).  
+ [in, out] Kullanıcı adı (en fazla SCC_USER_SIZE, NULL Sonlandırıcı dahil).  
   
  lpParentProjPath  
- [in] (En fazla SCC_PRJPATH_SIZE, NULL sonlandırıcıyı da dahil olmak üzere) üst projesinin yolunu tanımlayan bir dize.  
+ 'ndaki Üst projenin yolunu tanımlayan bir dize (NULL Sonlandırıcı dahil olmak üzere SCC_PRJPATH_SIZE kadar).  
   
  lpSubProjName  
- [in] Önerilen alt proje adı (en fazla SCC_PRJPATH_SIZE, NULL sonlandırıcıyı da dahil olmak üzere).  
+ 'ndaki Önerilen alt proje adı (en fazla SCC_PRJPATH_SIZE, NULL Sonlandırıcı dahil).  
   
  lpAuxProjPath  
- [out içinde] Proje (en fazla SCC_PRJPATH_SIZE, NULL sonlandırıcıyı da dahil olmak üzere) tanımlayan yardımcı dize.  
+ [in, out] Projeyi tanımlayan yardımcı dize (NULL Sonlandırıcı dahil SCC_PRJPATH_SIZE kadar).  
   
  lpSubProjPath  
- [out içinde] Çıkış dizesi (kadar SCC_PRJPATH_SIZE, NULL sonlandırıcıyı da dahil olmak üzere) alt yolu tanımlama.  
+ [in, out] Alt projenin yolunu tanımlayan çıkış dizesi (NULL Sonlandırıcı dahil olmak üzere SCC_PRJPATH_SIZE kadar).  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Kaynak Denetimi Eklentisi uygulanması bu işlev, aşağıdaki değerlerden birini döndürmesi beklenir:  
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|SCC_OK|Alt başarıyla oluşturuldu.|  
-|SCC_E_INITIALIZEFAILED|Ana proje başlatılamadı.|  
-|SCC_E_INVALIDUSER|Kullanıcı için kaynak denetim sistemi oturum açılamadı.|  
+|SCC_OK|Alt proje başarıyla oluşturuldu.|  
+|SCC_E_INITIALIZEFAILED|Üst proje başlatılamadı.|  
+|SCC_E_INVALIDUSER|Kullanıcı, kaynak denetimi sisteminde oturum açamadı.|  
 |SCC_E_COULDNOTCREATEPROJECT|Alt proje oluşturulamıyor.|  
-|SCC_E_PROJSYNTAXERR|Geçersiz proje söz dizimi.|  
-|SCC_E_UNKNOWNPROJECT|Ana proje kaynak denetimi eklentisi bilinmiyor.|  
-|SCC_E_INVALIDFILEPATH|Dosya geçersiz veya kullanılamaz durumda yolu.|  
-|SCC_E_NOTAUTHORIZED|Kullanıcı bu işlemi gerçekleştirmek için izin verilmiyor.|  
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemi, ağ veya çakışma sorunları nedeniyle muhtemelen erişilirken sorun oluştu. Bir yeniden deneme önerilir.|  
-|SCC_E_CONNECTIONFAILURE|Kaynak Denetimi Eklentisi bağlantı sorunu oluştu.|  
-|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Belirli olmayan hata oluştu.|  
+|SCC_E_PROJSYNTAXERR|Geçersiz proje sözdizimi.|  
+|SCC_E_UNKNOWNPROJECT|Ana proje, kaynak denetimi eklentisi için bilinmiyor.|  
+|SCC_E_INVALIDFILEPATH|Geçersiz veya kullanılamayan dosya yolu.|  
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmiyor.|  
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|  
+|SCC_E_CONNECTIONFAILURE|Kaynak denetimi eklentisi bağlantı sorunu vardı.|  
+|SCC_E_NONSPECIFICERROR<br /><br /> SCC_E_UNKNOWNERROR|Özel olmayan hata.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlev ekleyerek örneğin benzersiz bir tane oluşturmak için varsayılan adı değiştirebilirsiniz, bu ada sahip bir alt proje zaten varsa, "_\<number >" ona. Çağıranın değişiklikleri kabul etmek hazırlıklı olmalıdır `lpUser`, `lpSubProjPath`, ve `lpAuxProjPath`. `lpSubProjPath` Ve`lpAuxProjPath` çağrıda ardından bağımsız değişkenlerin [SccOpenProject](../extensibility/sccopenproject-function.md). Bunlar iade sırasında çağıran tarafından değiştirilmemelidir. Bu dizeler için kaynak denetimi eklentisi, bir proje ile ilişkilendirmek için gereken bilgileri izlemek için bir yol sağlar. Eklenti görüntülemek için uygun olmayabilecek bir biçimlendirilmiş dize kullanabileceğinizden arayan IDE üzerinde iade, bu iki parametre görüntülenmez. İşlev başarılı veya başarısız bir kod döndürür ve başarılı olursa, değişken doldurur `lpSubProjPath` tam proje yoluyla yeni bir proje.  
+ Adında bir alt proje zaten varsa, işlev benzersiz bir tane oluşturmak için varsayılan adı değiştirebilir; Örneğin, buna "_ \<number> " ekleyerek. Çağıran,, ve üzerindeki değişiklikleri kabul etmek için hazırlanmalıdır `lpUser` `lpSubProjPath` `lpAuxProjPath` . `lpSubProjPath`Ve `lpAuxProjPath` bağımsız değişkenleri, [SccOpenProject](../extensibility/sccopenproject-function.md)çağrısında kullanılır. Bu, geri dönüş sırasında çağıran tarafından değiştirilmemelidir. Bu dizeler, kaynak denetimi eklentisinin bir projeyle ilişkilendirilmesi gereken bilgileri izlemek için bir yol sağlar. Çağıran IDE, bu iki parametreyi dönüşte görüntülemez, çünkü eklenti görüntülenmek için uygun olmayan bir biçimli dize kullanabilir. İşlev bir başarı veya hata kodu döndürür ve başarılı olursa, değişkeni `lpSubProjPath` yeni projenin tam proje yoluyla doldurur.  
   
- Bu işlev benzer [SccGetProjPath](../extensibility/sccgetprojpath-function.md)dışında sessizce birini seçmek için kullanıcıdan yerine bir proje oluşturur. Zaman `SccCreateSubProject` işlevi çağrıldığında `lpParentProjName` ve `lpAuxProjPath` boş olmaz ve geçerli bir projeye karşılık gelir. Bu dizeler genellikle önceki bir çağrı IDE'den tarafından alınan `SccGetProjPath` işlevi veya [SccGetParentProjectPath](../extensibility/sccgetparentprojectpath-function.md).  
+ Bu işlev, kullanıcının bir tane seçmesini istemek yerine sessizce bir proje oluşturması dışında, [SccGetProjPath](../extensibility/sccgetprojpath-function.md)öğesine benzerdir. `SccCreateSubProject`İşlev çağrıldığında ve boş olmaz ve `lpParentProjName` `lpAuxProjPath` geçerli bir projeye karşılık gelir. Bu dizeler genellikle, önceki `SccGetProjPath` işleve veya [SccGetParentProjectPath](../extensibility/sccgetparentprojectpath-function.md)'e YAPıLAN bir çağrıdan IDE tarafından alınır.  
   
- `lpUser` Bağımsız değişken ise kullanıcı adı. IDE, daha önce gelen almış aynı kullanıcı adı geçer `SccGetProjPath`, ve varsayılan olarak kaynak denetimi Eklentisi adı kullanmanız gerekir. Kullanıcı eklenti ile açık bir bağlantı zaten varsa, ardından eklentiyi işlevi sessiz bir şekilde çalıştığından emin olmak için herhangi bir istemi ortadan kaldırmak denemelisiniz. Oturum açma başarısız olursa, ancak, eklenti için bir oturum açma ve kullanıcı, geçerli bir oturum adı yeniden geçişi aldığında isteyecektir `lpUser`. Bu dize eklenti değişebilir olduğundan, IDE her zaman bir arabellek ayırın (SCC_USER_LEN + 1 ya da null sonlandırıcıyı ortasının içeren SCC_USER_SIZE) boyutu. Dize değiştirilirse, yeni bir dize (eski dize olarak en az geçerli olarak) bir geçerli oturum açma adı olmalıdır.  
+ `lpUser`Bağımsız değişken kullanıcı adıdır. IDE, daha önce aldığı Kullanıcı adına geçecek `SccGetProjPath` ve kaynak denetimi eklentisinin adı varsayılan olarak kullanması gerekir. Kullanıcının eklentiyle zaten açık bağlantısı varsa, eklentinin sessizce çalıştığından emin olmak için eklentinin herhangi bir istemi ortadan kaldırmaya çalışması gerekir. Ancak, oturum açma başarısız olursa, eklenti kullanıcıdan bir oturum açma isteği ister ve geçerli bir oturum açma bilgisi aldığında adı geri geçirin `lpUser` . Eklenti bu dizeyi değiştirebileceğinden, IDE her zaman bir boyut arabelleği ayırır (SCC_USER_LEN + 1 veya SCC_USER_SIZE, null Sonlandırıcı için boşluk içerir). Dize değiştirilirse, yeni dize geçerli bir oturum açma adı olmalıdır (en azından eski dize olarak geçerli olur).  
   
-## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>SccCreateSubProject ve SccGetParentProjectPath teknik notlar  
- Kaynak denetim sistemi konumları seçmek için bir kullanıcıdan sayısını en aza indirmek için Visual Studio'da çözümler ve projeler kaynak denetimine eklemeye basitleştirilmiştir. Yeni İşlevler, her ikisi de kaynak denetimi eklentisi destekliyorsa, bu değişikliklerin Visual Studio tarafından etkinleştirilen `SccCreateSubProject` ve `SccGetParentProjectPath`. Ancak, bu değişiklikleri devre dışı bırakın ve önceki Visual Studio (kaynak denetimi eklentisi API sürüm 1.1) davranışa dönmek için aşağıdaki kayıt defteri girdisini kullanılabilir:  
+## <a name="technical-notes-for-scccreatesubproject-and-sccgetparentprojectpath"></a>Scccreatealt projesi ve SccGetParentProjectPath için teknik notlar  
+ Kaynak denetimine çözüm ve proje ekleme, bir kullanıcının kaynak denetim sisteminde konumları kaç kez seçmesi gerektiğini en aza indirmek için Visual Studio 'da basitleştirilmiştir. Bu değişiklikler, bir kaynak denetimi eklentisi hem yeni işlevleri hem de ' yi destekliyorsa, Visual Studio tarafından etkinleştirilir `SccCreateSubProject` `SccGetParentProjectPath` . Ancak, aşağıdaki kayıt defteri girişi, bu değişiklikleri devre dışı bırakmak ve önceki Visual Studio 'ya geri dönmek için kullanılabilir (kaynak denetimi eklentisi API sürümü 1,1) davranışı:  
   
- [HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl" = dword: 00000001  
+ [HKEY_CURRENT_USER \Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl" = DWORD: 00000001  
   
- Bu kayıt defteri girdisi yok veya için DWORD: 00000000 olarak ayarlayın, Visual Studio yeni işlevlerin kullanımına dener `SccCreateSubProject` ve `SccGetParentProjectPath`.  
+ Bu kayıt defteri girdisi yoksa veya DWORD: 00000000 olarak ayarlandıysa, Visual Studio yeni işlevleri ve ' ı kullanmaya çalışır `SccCreateSubProject` `SccGetParentProjectPath` .  
   
- Kayıt defteri girdisi için DWORD: 00000001 ayarlarsanız, Visual Studio bu yeni işlevleri çalışmaz ve kaynak denetimine ekleme işlemleri Visual Studio'nun önceki sürümlerinde olduğu gibi çalışır.  
+ Kayıt defteri girişi DWORD: 00000001 olarak ayarlandıysa, Visual Studio bu yeni işlevleri kullanmayı denemez ve kaynak denetimine ekleme işlemleri Visual Studio 'nun önceki sürümlerinde olduğu gibi çalışır.  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Kaynak Denetimi Eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)   
+ [Kaynak denetimi eklentisi API Işlevleri](../extensibility/source-control-plug-in-api-functions.md)   
  [SccGetParentProjectPath](../extensibility/sccgetparentprojectpath-function.md)   
  [SccGetProjPath](../extensibility/sccgetprojpath-function.md)

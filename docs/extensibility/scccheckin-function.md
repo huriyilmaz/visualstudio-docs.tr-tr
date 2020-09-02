@@ -1,5 +1,5 @@
 ---
-title: SccCheckin Fonksiyonu | Microsoft Dokümanlar
+title: SccCheckin Işlevi | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -13,16 +13,16 @@ manager: jillfra
 ms.workload:
 - vssdk
 ms.openlocfilehash: a5ba512642e1a63d9d39856f96194d717583d44f
-ms.sourcegitcommit: 16a4a5da4a4fd795b46a0869ca2152f2d36e6db2
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "80701179"
 ---
-# <a name="scccheckin-function"></a>SccCheckin fonksiyonu
-Bu işlev, daha önce kullanıma alınan dosyaları kaynak denetim sistemine denetler, değişiklikleri depolar ve yeni bir sürüm oluşturur. Bu işlev, bir sayım ve iade edilecek dosyaların adlarını bir dizi ile çağrılır.
+# <a name="scccheckin-function"></a>SccCheckin işlevi
+Bu işlev, önceden kullanıma alınmış dosyaları kaynak denetim sistemine iade eder, değişiklikleri depolayarak ve yeni bir sürüm oluşturuyor. Bu işlev bir sayı ve iade edilecek dosyaların bir adı dizisiyle çağrılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 SCCRTN SccCheckin (
@@ -39,54 +39,54 @@ SCCRTN SccCheckin (
 ### <a name="parameters"></a>Parametreler
  pvContext
 
-[içinde] Kaynak denetimi eklentisi bağlam yapısı.
+'ndaki Kaynak denetimi eklentisi bağlam yapısı.
 
- Hwnd
+ lendiği
 
-[içinde] SCC eklentisinin sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresine bir tanıtıcı.
+'ndaki SCC eklentisinin sağladığı tüm iletişim kutuları için üst öğe olarak kullanabileceği IDE penceresi için bir işleyici.
 
- nDosyalar
+ Nkarşıya
 
-[içinde] İade edilecek dosya sayısı.
+'ndaki İade edilecek seçili dosya sayısı.
 
- lpFileNames
+ lpDosyaAdı
 
-[içinde] İade edilecek dosyaların tam nitelikli yerel yol adlarını dizilimi.
+'ndaki İade edilecek dosyaların tam nitelikli yerel yol adları dizisi.
 
- lpYorum yap
+ lpComment açıklaması
 
-[içinde] İade edilen seçili dosyaların her birine uygulanacak açıklama. Bu parametre, kaynak denetim eklentisinin bir yorum için istekte olması durumunda. `NULL`
+'ndaki İşaretlenmiş seçili dosyaların her birine uygulanacak yorum. Bu parametre, `NULL` kaynak denetimi eklentisinin bir yorum sorması durumunda olur.
 
- fSeçenekler
+ fOptions
 
-[içinde] Komut bayrakları, 0 `SCC_KEEP_CHECKEDOUT`veya.
+'ndaki Komut bayrakları, 0 ya da `SCC_KEEP_CHECKEDOUT` .
 
  pvOptions
 
-[içinde] SCC eklentisi özel seçenekler.
+'ndaki SCC eklentisine özgü seçenekler.
 
 ## <a name="return-value"></a>Döndürülen değer
- Bu işlevin kaynak denetim eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
+ Bu işlevin kaynak denetimi eklentisi uygulamasının aşağıdaki değerlerden birini döndürmesi beklenir:
 
 |Değer|Açıklama|
 |-----------|-----------------|
 |SCC_OK|Dosya başarıyla iade edildi.|
-|SCC_E_FILENOTCONTROLLED|Seçili dosya kaynak kodu denetimi altında değildir.|
-|SCC_E_ACCESSFAILURE|Kaynak denetim sistemine erişmede büyük olasılıkla ağ veya çekişme sorunları nedeniyle bir sorun vardı. Yeniden deneme önerilir.|
-|SCC_E_NONSPECIFICERROR|Nonspesifik bir hata. Dosya iade edilmedi.|
-|SCC_E_NOTCHECKEDOUT|Kullanıcı dosyayı kullanıma açmadığı için iade edemez.|
-|SCC_E_CHECKINCONFLICT|İade işlemi yapılamadığı için:<br /><br /> - Başka bir kullanıcı önceden `bAutoReconcile` giriş yaptı ve yanlış oldu.<br /><br /> -veya-<br /><br /> - Otomatik birleştirme yapılamaz (örneğin, dosyalar ikili olduğunda).|
-|SCC_E_VERIFYMERGE|Dosya otomatik olarak birleştirilmiştir, ancak bekleyen kullanıcı doğrulamasında iade edilmemiştir.|
-|SCC_E_FIXMERGE|Dosya otomatik olarak birleştirilmiştir, ancak el ile çözülmesi gereken bir birleştirme çakışması nedeniyle iade edilmemiştir.|
-|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmez.|
-|SCC_I_OPERATIONCANCELED|İşlem tamamlanmadan iptal edildi.|
-|SCC_I_RELOADFILE|Bir dosyanın veya projenin yeniden yüklenmesi gerekir.|
+|SCC_E_FILENOTCONTROLLED|Seçili dosya kaynak kodu denetimi altında değil.|
+|SCC_E_ACCESSFAILURE|Büyük olasılıkla ağ veya çekişme sorunlarından dolayı kaynak denetim sistemine erişirken bir sorun oluştu. Yeniden deneme önerilir.|
+|SCC_E_NONSPECIFICERROR|Özel olmayan hata. Dosya iade edilmedi.|
+|SCC_E_NOTCHECKEDOUT|Kullanıcı dosyayı kullanıma almadı, bu nedenle iade edilemiyor.|
+|SCC_E_CHECKINCONFLICT|İade etme gerçekleştirilemedi çünkü:<br /><br /> -Başka bir kullanıcı iade etti ve `bAutoReconcile` yanlış.<br /><br /> -veya-<br /><br /> -Otomatik birleştirme yapılamaz (örneğin, dosyalar ikili olduğunda).|
+|SCC_E_VERIFYMERGE|Dosya otomatik olarak birleştirildi, ancak bekleyen Kullanıcı doğrulamasında iade edilmedi.|
+|SCC_E_FIXMERGE|Dosya otomatik olarak birleştirildi, ancak el ile çözümlenmesi gereken bir birleştirme çakışması nedeniyle iade edilmedi.|
+|SCC_E_NOTAUTHORIZED|Kullanıcının bu işlemi gerçekleştirmesine izin verilmiyor.|
+|SCC_I_OPERATIONCANCELED|İşlem tamamlanmadan önce iptal edildi.|
+|SCC_I_RELOADFILE|Bir dosya veya projenin yeniden yüklenmesi gerekiyor.|
 |SCC_E_FILENOTEXIST|Yerel dosya bulunamadı.|
 
 ## <a name="remarks"></a>Açıklamalar
- Açıklama, iade edilen tüm dosyalar için geçerlidir. Açıklama bağımsız değişkeni, kaynak denetimi eklentisinin kullanıcıdan her dosya için bir yorum dizesini isteyebilir olduğu bir `null` dize olabilir.
+ Yorum, denetlenen tüm dosyalar için geçerlidir. Yorum bağımsız değişkeni bir dize olabilir `null` , bu durumda kaynak denetimi eklentisi kullanıcıdan her dosya için bir açıklama dizesi isteyebilir.
 
- Bağımsız `fOptions` değişkene, kullanıcının `SCC_KEEP_CHECKEDOUT` dosyayı iade etme ve yeniden kullanıma açma niyetini belirtmek için bayrağın değeri verilebilir.
+ `fOptions`Bağımsız değişkenine `SCC_KEEP_CHECKEDOUT` kullanıcının içinde dosyayı denetleme amacını belirten bir bayrak değeri verilebilir ve yeniden kullanıma alabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
-- [Kaynak kontrol eklentisi API fonksiyonları](../extensibility/source-control-plug-in-api-functions.md)
+- [Kaynak denetimi eklentisi API işlevleri](../extensibility/source-control-plug-in-api-functions.md)

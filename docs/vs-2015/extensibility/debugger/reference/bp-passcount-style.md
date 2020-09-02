@@ -13,18 +13,18 @@ caps.latest.revision: 11
 ms.author: gregvanl
 manager: jillfra
 ms.openlocfilehash: deb4ce7c464e8518faff55957e1873ef1cd92c39
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "68153366"
 ---
-# <a name="bppasscountstyle"></a>BP_PASSCOUNT_STYLE
+# <a name="bp_passcount_style"></a>BP_PASSCOUNT_STYLE
 [!INCLUDE[vs2017banner](../../../includes/vs2017banner.md)]
 
-Kesme noktası ateşlenmesine neden kesme noktası geçişi sayısı ile ilişkilendirilmiş olan koşul belirtir.  
+Kesme noktasının tetiklenmesine neden olan kesme noktası geçiş sayısıyla ilişkili koşulu belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp#  
 enum enum_BP_PASSCOUNT_STYLE {   
@@ -47,29 +47,29 @@ public enum enum_BP_PASSCOUNT_STYLE { 
   
 ## <a name="members"></a>Üyeler  
  BP_PASSCOUNT_NONE  
- Hiçbir kesme noktası geçişi sayısı stilini belirtir.  
+ Kesme noktası geçiş sayısı stilini belirtir.  
   
  BP_PASSCOUNT_EQUAL  
- Eşit olacak şekilde kesme noktası geçişi sayısı stilini ayarlar. Kesme noktası geçişi sayısı kesme noktasına isabet sayısı eşit olduğunda tetiklenir.  
+ Kesme noktası geçiş sayısı stilini eşit olarak ayarlar. Kesme noktası, kesme noktası isabet sayısına eşit olduğunda harekete geçirilir.  
   
  BP_PASSCOUNT_EQUAL_OR_GREATER  
- Eşit veya daha fazla kesme noktası geçişi sayısı stilini ayarlar. Kesme noktasına, kesme noktası isabet sayısını geçişi sayısından büyük veya eşit olduğunda tetiklenir.  
+ Kesme noktası geçiş sayısı stilini eşit veya daha büyük olarak ayarlar. Kesme noktası, kesme noktası isabet sayısı, geçiş sayısına eşit veya ondan daha büyük olduğunda ateşlenir.  
   
  BP_PASSCOUNT_MOD  
- Belirtir bir modül geçiş sayısı. Örneğin, geçiş sayısı türü ise `BP_PASSCOUNT_MOD` ve geçişi sayısı değeri 4, isabet sayısı 4'ün katı her zaman kesme noktası ateşlenir.  
+ Modül geçiş sayısını belirtir. Örneğin, geçiş sayısı tür ise `BP_PASSCOUNT_MOD` ve pass Count değeri 4 ise, her isabet sayısı 4 ' ün katı olduğunda kesme noktası ateşlenir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İçin kullanılan `stylePassCount` üyesi [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) sırayla üyesi yapısı [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) ve [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapıları.  
+ `stylePassCount` [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) ve [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) yapılarının bir üyesini sırayla [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) yapısının üyesi için kullanılır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Üstbilgi: msdbg.h  
+ Üst bilgi: msdbg. h  
   
- Ad alanı: Microsoft.VisualStudio.Debugger.Interop  
+ Ad alanı: Microsoft. VisualStudio. Debugger. Interop  
   
- Derleme: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Bütünleştirilmiş kod: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>Ayrıca Bkz.  
- [Sabit listeleri](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
+ [Numaralandırmalar](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md)   
  [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md)   
  [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md)

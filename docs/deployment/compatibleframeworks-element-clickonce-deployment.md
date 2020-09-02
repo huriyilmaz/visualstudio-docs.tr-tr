@@ -1,5 +1,5 @@
 ---
-title: '&lt;compatibleFrameworks&gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
+title: '&lt;Compatibleçerçeveleri &gt; öğesi (ClickOnce dağıtımı) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -15,19 +15,19 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 99db3d51414197df469aaa2eabe97e0967c31b05
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 09/02/2020
 ms.locfileid: "66746037"
 ---
-# <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;compatibleFrameworks&gt; öğesi (ClickOnce dağıtımı)
-Burada bu uygulamayı yükleyip çalıştırabileceği bir .NET Framework sürümlerini tanımlar.
+# <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;Compatibleçerçeveleri &gt; öğesi (ClickOnce dağıtımı)
+Bu uygulamanın yükleyebildiği ve çalıştırılacağı .NET Framework sürümlerini tanımlar.
 
 > [!NOTE]
-> [*MageUI.exe* ](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client) desteklemediği `compatibleFrameworks` bir uygulama bildirimi kaydedilirken öğesi zaten açtığı kullanarak bir sertifika [ *MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client). Bunun yerine, kullanmalısınız [ *Mage.exe*](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool).
+> [*MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client) , `compatibleFrameworks` [*MageUI.exe*](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)kullanılarak bir sertifikayla imzalanmış bir uygulama bildirimini kaydetme sırasında öğeyi desteklemez. Bunun yerine [*Mage.exe*](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)kullanmanız gerekir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <compatibleFrameworks
@@ -41,27 +41,27 @@ Burada bu uygulamayı yükleyip çalıştırabileceği bir .NET Framework sürü
 ```
 
 ## <a name="elements-and-attributes"></a>Öğeler ve öznitelikler
- `compatibleFrameworks` Hedefleyen dağıtım bildirimleri için öğesi gereklidir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .NET Framework 4 veya daha sonra sağlanan çalışma zamanı. `compatibleFrameworks` Öğesi içeren bir veya daha fazla `framework` belirten .NET Framework sürümleri bu uygulamayı çalıştırabilirsiniz. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Çalışma zamanı, ilk uygulama çalışacak kullanılabilir `framework` bu listede.
+ `compatibleFrameworks`Öğesi, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .NET Framework 4 veya üzeri tarafından belirtilen çalışma zamanını hedefleyen dağıtım bildirimleri için gereklidir. `compatibleFrameworks`Öğesi, `framework` Bu uygulamanın çalıştırılabileceği .NET Framework sürümlerini belirten bir veya daha fazla öğe içeriyor. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Çalışma zamanı, bu listedeki ilk kullanılabilir uygulamayı çalıştırır `framework` .
 
- Aşağıdaki tabloda öznitelikleri listeler, `compatibleFrameworks` öğeyi destekler.
+ Aşağıdaki tabloda, `compatibleFrameworks` öğesinin desteklediği özniteliği listelenmektedir.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`S``upportUrl`|İsteğe bağlı. Tercih edilen uyumlu .NET Framework sürümünü nereden indirilebileceğini bir URL'yi belirtir.|
+|`S` `upportUrl`|İsteğe bağlı. Tercih edilen uyumlu .NET Framework sürümünün indirilebileceği bir URL belirtir.|
 
 ## <a name="framework"></a>çerçeve
- Gerekli. Aşağıdaki tabloda öznitelikleri listeler, `framework` öğeyi destekler.
+ Gereklidir. Aşağıdaki tablo, `framework` öğesinin desteklediği öznitelikleri listeler.
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`targetVersion`|Gerekli. Hedef .NET Framework'ün sürüm numarasını belirtir.|
-|`profile`|Gerekli. Hedef .NET Framework'ü profilini belirtir.|
-|`supportedRuntime`|Gerekli. Hedef .NET Framework ile ilişkili çalışma zamanı sürüm numarasını belirtir.|
+|`targetVersion`|Gereklidir. Hedef .NET Framework sürüm numarasını belirtir.|
+|`profile`|Gereklidir. Hedef .NET Framework profilini belirtir.|
+|`supportedRuntime`|Gereklidir. Hedef .NET Framework ilişkili çalışma zamanının sürüm numarasını belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
 ## <a name="example"></a>Örnek
- Aşağıdaki kod örnekte gösterildiği bir `compatibleFrameworks` öğesinde bir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dağıtım bildirimi. Bu dağıtım üzerinde çalışabilen [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]. Bir alt kümesi olduğu için de .NET Framework 4'te çalıştırabilirsiniz [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)].
+ Aşağıdaki kod örneğinde bir `compatibleFrameworks` dağıtım bildiriminde bir öğe gösterilmektedir [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] . Bu dağıtım üzerinde çalışabilir [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)] . .NET Framework 4 ' te de çalıştırılabilir çünkü bir üst kümesidir [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)] .
 
 ```xml
 <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">

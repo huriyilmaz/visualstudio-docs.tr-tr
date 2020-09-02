@@ -20,37 +20,37 @@ author: mikejo5000
 ms.author: mikejo
 manager: jillfra
 ms.openlocfilehash: 758491a068fe2c2c7318717f5481b41839c49a3f
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.sourcegitcommit: 6cfffa72af599a9d667249caaaa411bb28ea69fd
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63419774"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "64834409"
 ---
 # <a name="createitem-task"></a>CreateItem Görevi
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Öğe koleksiyonlarını girdi öğelerinin ile doldurur. Bu, bir listeden diğerine kopyalanmasına öğeleri sağlar.  
+Öğe koleksiyonlarını giriş öğeleriyle doldurur. Bu, öğelerin bir listeden diğerine kopyalanmasını sağlar.  
   
 > [!NOTE]
-> Bu görevi kullanım dışı bırakılmıştır. İçinde .NET Framework 3.5 ile öğesi grupları başlangıç yerleştirilebilir [hedef](../msbuild/target-element-msbuild.md) öğeleri. Daha fazla bilgi için [öğeleri](../msbuild/msbuild-items.md).  
+> Bu görev kullanım dışıdır. .NET Framework 3,5 ' den başlayarak, öğe grupları [hedef](../msbuild/target-element-msbuild.md) öğelerin içine yerleştirilebilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md).  
   
 ## <a name="attributes"></a>Öznitelikler  
- Parametreleri aşağıdaki tabloda açıklanmıştır `CreateItem` görev.  
+ Aşağıdaki tablo, görevin parametrelerini açıklar `CreateItem` .  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`AdditionalMetadata`|İsteğe bağlı `String` dizi parametresi.<br /><br /> Çıktı öğeleri eklemek için ek meta verileri belirtir.  Meta veri adı ve değeri öğe için şu sözdizimini belirtin:<br /><br /> *Metadataname'in* `=` *MetadataValue*<br /><br /> Birden fazla meta veri adı/değer çiftleri noktalı virgül ile ayrılmalıdır. Adı veya değeri bir noktalı virgül veya diğer özel karakterleri içeriyorsa, bunlar kaçış karakterleri eklenmelidir. Daha fazla bilgi için [nasıl yapılır: MSBuild özel karakterleri kaçış](../msbuild/how-to-escape-special-characters-in-msbuild.md).|  
-|`Exclude`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Çıktı öğesi koleksiyondan hariç tutmak için öğeleri belirtir. Bu parametre joker karakteri belirtimlerine içerebilir. Daha fazla bilgi için [öğeleri](../msbuild/msbuild-items.md) ve [nasıl yapılır: Dosyaları derlemeden dışlama](../msbuild/how-to-exclude-files-from-the-build.md).|  
-|`Include`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> `[]`parametresi.<br /><br /> Çıktı öğesi koleksiyonda eklemek istediğiniz öğeleri belirtir. Bu parametre joker karakteri belirtimlerine içerebilir.|  
-|`PreserveExistingMetadata`|İsteğe bağlı `Boolean` parametresi.<br /><br /> Varsa `True`, zaten mevcut değilse ek meta veriler yalnızca geçerlidir.|  
+|`AdditionalMetadata`|İsteğe bağlı `String` dizi parametresi.<br /><br /> Çıkış öğelerine iliştirilecek ek meta verileri belirtir.  Aşağıdaki sözdizimine sahip öğe için meta veri adını ve değerini belirtin:<br /><br /> *MetadataName* `=` *MetadataValue*<br /><br /> Birden fazla meta veri adı/değer çifti noktalı virgülle ayrılmalıdır. Ad veya değer noktalı virgül ya da başka bir özel karakter içeriyorsa, bunun atlanmaları gerekir. Daha fazla bilgi için bkz. [nasıl yapılır: MSBuild 'Teki özel karakterleri kaçış](../msbuild/how-to-escape-special-characters-in-msbuild.md).|  
+|`Exclude`|İsteğe bağlı <xref:Microsoft.Build.Framework.ITaskItem> `[]` çıkış parametresi.<br /><br /> Çıkış öğesi koleksiyonundan dışlanacak öğeleri belirtir. Bu parametre joker karakter belirtimleri içerebilir. Daha fazla bilgi için bkz. [öğeler](../msbuild/msbuild-items.md) ve [nasıl yapılır: derlemeden dosya çıkarma](../msbuild/how-to-exclude-files-from-the-build.md).|  
+|`Include`|Gerekli <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametre.<br /><br /> Çıkış öğesi koleksiyonuna dahil edilecek öğeleri belirtir. Bu parametre joker karakter belirtimleri içerebilir.|  
+|`PreserveExistingMetadata`|İsteğe bağlı `Boolean` parametre.<br /><br /> `True`Zaten yoksa, yalnızca ek meta verileri uygulayın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yukarıda listelenen parametrelerin yanı sıra, bu görev parametreleri devralan <xref:Microsoft.Build.Tasks.TaskExtension> kendisi sınıfının devraldığı <xref:Microsoft.Build.Utilities.Task> sınıfı. Bu ek parametrelerin ve Tanımlamaların bir listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
+ Yukarıda listelenen parametrelere ek olarak, bu görev sınıfından devralınan parametreleri devralır <xref:Microsoft.Build.Tasks.TaskExtension> <xref:Microsoft.Build.Utilities.Task> . Bu ek parametrelerin ve açıklamalarının listesi için bkz. [TaskExtension temel sınıfı](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde adlı yeni bir öğe koleksiyonu oluşturur `MySourceItemsWithMetadata` öğeyi koleksiyondan `MySourceItems`. `CreateItem` Görev yeni bir öğe koleksiyonu öğeleri ile doldurur `MySourceItems` öğesi. Ardından adlı bir ek meta veri girdisi ekler `MyMetadata` değeriyle `Hello` yeni koleksiyondaki her öğe için.  
+ Aşağıdaki kod örneği, öğe koleksiyonundan adlı yeni bir öğe koleksiyonu oluşturur `MySourceItemsWithMetadata` `MySourceItems` . `CreateItem`Görev, yeni öğe koleksiyonunu öğedeki öğelerle doldurur `MySourceItems` . Daha sonra `MyMetadata` , `Hello` Yeni koleksiyondaki her bir öğeye değeri olan adlı ek bir meta veri girişi ekler.  
   
- Görev yürütüldükten sonra `MySourceItemsWithMetadata` öğe koleksiyonu öğeleri içeren `file1.resx` ve `file2.resx`, hem meta veri girişleriyle `MyMetadata`. `MySourceItems` Öğe koleksiyonu değişmez.  
+ Görev yürütüldükten sonra `MySourceItemsWithMetadata` öğe koleksiyonu, `file1.resx` ve `file2.resx` için meta veri girdileriyle birlikte öğeleri içerir `MyMetadata` . `MySourceItems`Öğe koleksiyonu değiştirilmez.  
   
 ```  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -73,7 +73,7 @@ ms.locfileid: "63419774"
 </Project>  
 ```  
   
- Aşağıdaki tabloda, görev yürütme sonrasında çıkış öğesinin değeri açıklanmaktadır. Öğe meta verileri öğeden sonra parantez içinde gösterilmektedir.  
+ Aşağıdaki tabloda, görev yürütmeden sonra çıkış öğesinin değeri açıklanmaktadır. Öğe meta verileri, öğeden sonra parantez içinde gösterilir.  
   
 |Öğe koleksiyonu|İçindekiler|  
 |---------------------|--------------|  
